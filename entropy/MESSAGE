@@ -1,5 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/07/04 19:32:38 tvierling Exp $
+$NetBSD: MESSAGE,v 1.2 2003/10/16 23:19:20 tvierling Exp $
+
+NOTE:  Entropy is currently a project under rapid development.  Sometimes
+the network protocol changes, requiring an upgrade.  Please keep watch on
+this package and update it whenever a newer version is available.
 
 You will need to copy the contents of
 
@@ -8,11 +12,5 @@ You will need to copy the contents of
 to a new, writable directory, and edit "entropy.conf".  Once done, you
 may run "entropy" to start the daemon, or "entropy -k" to stop it.  
 The option "-v" may be added for verbose start/stop messages.
-
-See the project's homepage at
-
-    http://entropy.stop1984.com/
-
-for further information; currently, there is no bundled documentation.
 
 ===========================================================================
