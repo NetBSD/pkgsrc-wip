@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.949 2004/02/11 01:48:54 bjan2 Exp $
-# $NetBSD: Makefile,v 1.949 2004/02/11 01:48:54 bjan2 Exp $
+# $Id: Makefile,v 1.950 2004/02/11 04:24:19 minskim Exp $
+# $NetBSD: Makefile,v 1.950 2004/02/11 04:24:19 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -97,7 +97,7 @@ SUBDIR+=	darcnes-svgalib
 SUBDIR+=	dasher
 SUBDIR+=	dasm
 SUBDIR+=	dbf
-#SUBDIR+=	dbxml		# depends on libpathan
+SUBDIR+=	dbxml
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dfm
@@ -310,7 +310,7 @@ SUBDIR+=	libmodplug
 SUBDIR+=	libneural
 SUBDIR+=	libogg-nightly
 SUBDIR+=	libol
-#SUBDIR+=	libpathan	# needs xerces-c-2.3.0 in pkg/23861
+SUBDIR+=	libpathan
 SUBDIR+=	libprelude
 SUBDIR+=	libstatgrab
 SUBDIR+=	libtlen
@@ -547,7 +547,7 @@ SUBDIR+=	py-biggles
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-dateutil
-#SUBDIR+=	py-dbxml	# depends on dbxml
+SUBDIR+=	py-dbxml
 SUBDIR+=	py-elementtree
 SUBDIR+=	py-f2py2e
 SUBDIR+=	py-fastaudio
