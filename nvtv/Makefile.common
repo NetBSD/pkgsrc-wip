@@ -1,12 +1,11 @@
-# $NetBSD: Makefile.common,v 1.2 2003/09/28 21:32:24 cubidou Exp $
-
+# $NetBSD: Makefile.common,v 1.3 2003/09/29 04:28:10 cubidou Exp $
 DISTNAME=	nvtv-0.4.5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nv-tv-out/}
 
-MAINTAINER=	cube@NetBSD.net
+MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/nv-tv-out/
-COMMENT=	tool to manipulate TV-Out settings on NVidia cards
+COMMENT=	Tool to manipulate TV-Out settings on NVidia cards
 
 ONLY_FOR_PLATFORM=      *-i386
 
