@@ -1,1 +1,5 @@
-A UML design tool with cognitive support
+A UML domain-oriented design tool environment with cognitive support
+of object-oriented design.  This environment provides some of the
+same automation features of CASE tools, but it focuses on features
+that support cognitive needs like reflection-in-action, opportunistic
+design, and comprehension and problem solving.
