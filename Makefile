@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.51 2003/04/10 13:43:42 jmmv Exp $
-# $NetBSD: Makefile,v 1.51 2003/04/10 13:43:42 jmmv Exp $
+# $Id: Makefile,v 1.52 2003/04/10 17:16:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.52 2003/04/10 17:16:27 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -59,6 +59,5 @@ SUBDIR+=	py-gnome2
 SUBDIR+=	py-gtk2
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	startup-notification
-SUBDIR+=	tcpflow
 SUBDIR+=	tex-foiltex
 SUBDIR+=	vim-gtk2
