@@ -1,3 +1,4 @@
 qADSL is an autologin client and connection keeper for Telia AB ADSL
-and Comhem broadband. It autologins at sytem startup and then "forks"
-a daemon that pings/logins the login host after a chosen delay. 
+and Comhem broadband. It automatically logs in at system startup and 
+then "forks" a daemon that pings and logs into the login host after a 
+chosen delay. 
