@@ -1,0 +1,168 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/28 00:39:13 poppnk Exp $
+bin/gnome-jabber
+lib/gtk-2.0/2.4.0/engines/libcrux-engine.la
+lib/gtk-2.0/2.4.0/engines/libhcengine.la
+lib/gtk-2.0/2.4.0/engines/libindustrial.la
+lib/gtk-2.0/2.4.0/engines/liblighthouseblue.la
+lib/gtk-2.0/2.4.0/engines/libmetal.la
+lib/gtk-2.0/2.4.0/engines/libmist.la
+lib/gtk-2.0/2.4.0/engines/libredmond95.la
+lib/gtk-2.0/2.4.0/engines/libsmooth.la
+lib/gtk-2.0/2.4.0/engines/libthinice.la
+lib/pkgconfig/gtk-engines-2.pc
+share/applications/gnome-jabber.desktop
+share/eazel-engine/arrow_down-spinner.png
+share/eazel-engine/arrow_down.png
+share/eazel-engine/arrow_left.png
+share/eazel-engine/arrow_right.png
+share/eazel-engine/arrow_up-spinner.png
+share/eazel-engine/arrow_up.png
+share/eazel-engine/check-active-default-focus.png
+share/eazel-engine/check-active-default.png
+share/eazel-engine/check-active-hilight-focus.png
+share/eazel-engine/check-active-hilight.png
+share/eazel-engine/check-active-insensitive.png
+share/eazel-engine/check-active-pressed-focus.png
+share/eazel-engine/check-active-pressed.png
+share/eazel-engine/check-default-focus.png
+share/eazel-engine/check-default.png
+share/eazel-engine/check-hilight-focus.png
+share/eazel-engine/check-hilight.png
+share/eazel-engine/check-insensitive.png
+share/eazel-engine/check-pressed-focus.png
+share/eazel-engine/check-pressed.png
+share/eazel-engine/progressbar-left.png
+share/eazel-engine/progressbar-right.png
+share/eazel-engine/progressbar.png
+share/eazel-engine/progressbar_trough.png
+share/eazel-engine/radio-active-default-focus.png
+share/eazel-engine/radio-active-default.png
+share/eazel-engine/radio-active-hilight-focus.png
+share/eazel-engine/radio-active-hilight.png
+share/eazel-engine/radio-active-insensitive.png
+share/eazel-engine/radio-active-pressed-focus.png
+share/eazel-engine/radio-active-pressed.png
+share/eazel-engine/radio-default-focus.png
+share/eazel-engine/radio-default.png
+share/eazel-engine/radio-hilight-focus.png
+share/eazel-engine/radio-hilight.png
+share/eazel-engine/radio-insensitive.png
+share/eazel-engine/radio-pressed-focus.png
+share/eazel-engine/radio-pressed.png
+share/eazel-engine/scroller-arrow-down-hilight.png
+share/eazel-engine/scroller-arrow-down-pressed.png
+share/eazel-engine/scroller-arrow-down.png
+share/eazel-engine/scroller-arrow-left-hilight.png
+share/eazel-engine/scroller-arrow-left-pressed.png
+share/eazel-engine/scroller-arrow-left.png
+share/eazel-engine/scroller-arrow-right-hilight.png
+share/eazel-engine/scroller-arrow-right-pressed.png
+share/eazel-engine/scroller-arrow-right.png
+share/eazel-engine/scroller-arrow-up-hilight.png
+share/eazel-engine/scroller-arrow-up-pressed.png
+share/eazel-engine/scroller-arrow-up.png
+share/eazel-engine/scroller-h-hilight.png
+share/eazel-engine/scroller-h-thumb-hilight.png
+share/eazel-engine/scroller-h-thumb.png
+share/eazel-engine/scroller-h-trough.png
+share/eazel-engine/scroller-h.png
+share/eazel-engine/scroller-v-hilight.png
+share/eazel-engine/scroller-v-thumb-hilight.png
+share/eazel-engine/scroller-v-thumb.png
+share/eazel-engine/scroller-v-trough.png
+share/eazel-engine/scroller-v.png
+share/eazel-engine/slider_h_thumb.png
+share/eazel-engine/slider_h_trough.png
+share/eazel-engine/slider_h_trough_focus.png
+share/eazel-engine/slider_v_thumb.png
+share/eazel-engine/slider_v_trough.png
+share/eazel-engine/slider_v_trough_focus.png
+share/eazel-engine/tab_left-unsel.png
+share/eazel-engine/tab_left.png
+share/eazel-engine/tab_right.png
+share/eazel-engine/tab_sel-bottom.png
+share/eazel-engine/tab_sel.png
+share/eazel-engine/tab_usel-bottom-left.png
+share/eazel-engine/tab_usel-bottom.png
+share/eazel-engine/tab_usel-left.png
+share/eazel-engine/tab_usel.png
+share/gconf/schemas/gnome-jabber.schemas
+share/gnome-jabber/contact.wav
+share/gnome-jabber/gj_emote_biggrin.png
+share/gnome-jabber/gj_emote_confused.png
+share/gnome-jabber/gj_emote_cool.png
+share/gnome-jabber/gj_emote_eek.png
+share/gnome-jabber/gj_emote_frown.png
+share/gnome-jabber/gj_emote_mad.png
+share/gnome-jabber/gj_emote_redface.png
+share/gnome-jabber/gj_emote_rolleyes.png
+share/gnome-jabber/gj_emote_smile.png
+share/gnome-jabber/gj_emote_tongue.png
+share/gnome-jabber/gj_emote_wink.png
+share/gnome-jabber/gj_jsf.png
+share/gnome-jabber/gj_message_chat.png
+share/gnome-jabber/gj_message_error.png
+share/gnome-jabber/gj_message_groupchat.png
+share/gnome-jabber/gj_message_headline.png
+share/gnome-jabber/gj_message_normal.png
+share/gnome-jabber/gj_presence_available.png
+share/gnome-jabber/gj_presence_away.png
+share/gnome-jabber/gj_presence_chat.png
+share/gnome-jabber/gj_presence_dnd.png
+share/gnome-jabber/gj_presence_invisible.png
+share/gnome-jabber/gj_presence_none.png
+share/gnome-jabber/gj_presence_subscribe.png
+share/gnome-jabber/gj_presence_subscribed.png
+share/gnome-jabber/gj_presence_unavailable.png
+share/gnome-jabber/gj_presence_unsubscribe.png
+share/gnome-jabber/gj_presence_unsubscribed.png
+share/gnome-jabber/gj_presence_xa.png
+share/gnome-jabber/gnome-jabber.css
+share/gnome-jabber/gnome-jabber.glade
+share/gnome-jabber/message.wav
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-jabber.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-jabber.mo
+share/themes/Crux/gtk-2.0/gtkrc
+share/themes/Industrial/gtk-2.0/gtkrc
+share/themes/LighthouseBlue/gtk-2.0/gtkrc
+share/themes/Metal/gtk-2.0/gtkrc
+share/themes/Mist/gtk-2.0/gtkrc
+share/themes/Redmond/gtk-2.0/gtkrc
+share/themes/Redmond/gtk/gtkrc
+share/themes/ThinIce/gtk-2.0/gtkrc
+@dirrm share/themes/ThinIce/gtk-2.0
+@dirrm share/themes/ThinIce
+@dirrm share/themes/Redmond/gtk-2.0
+@dirrm share/themes/Redmond/gtk
+@dirrm share/themes/Redmond
+@dirrm share/themes/Mist/gtk-2.0
+@dirrm share/themes/Mist
+@dirrm share/themes/Metal/gtk-2.0
+@dirrm share/themes/Metal
+@dirrm share/themes/LighthouseBlue/gtk-2.0
+@dirrm share/themes/LighthouseBlue
+@dirrm share/themes/Industrial/gtk-2.0
+@dirrm share/themes/Industrial
+@dirrm share/themes/Crux/gtk-2.0
+@dirrm share/themes/Crux
+@dirrm share/gnome-jabber
+@comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/eazel-engine
+@dirrm share/applications
+@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/engines
