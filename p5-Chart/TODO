@@ -1,0 +1,11 @@
+I'm working on a Bugzilla pkg at the moment and it will need this pkg as
+a dependency.
+
+Hold off until I finish the Bugzilla pkg then test and let me know if there
+are any issues.
+
+Tested on NetBSD 1.6 i386.
+
+Ta,
+
+Adrian.
