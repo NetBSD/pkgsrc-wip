@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2003/10/27 03:10:58 atamaniuk Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/27 03:41:19 atamaniuk Exp $
 # created 2003-10-22 Patrick Atamaniuk <atamaniuk-pkgsrc@frobs.net>
+# MAINTAINER_of-previous-lilypond-versions=	rh@NetBSD.org
 
 DISTNAME=	lilypond-2.0.1
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.lilypond.org/pub/LilyPond/v2.0/
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	atamaniuk-ports@frobs.net
 HOMEPAGE=	http://lilypond.org/web/
 COMMENT=	GNU Music Typesetter
-
-#DEPENDS+=	{ghostscript{,-nox11}>=6,ghostscript-esp{,-nox11}>=7,ghostscript-gnu{,-nox11,-x11}>=7}:../../print/ghostscript-gnu
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
