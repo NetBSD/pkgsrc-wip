@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2003/09/01 20:59:02 xtraeme Exp $
+$NetBSD: distinfo,v 1.9 2003/09/02 23:16:18 blef Exp $
 
 SHA1 (X430src-1.tgz) = 3aaf219e8c2d3eb299f150bd4a2554a84a19354b
 Size (X430src-1.tgz) = 10993622 bytes
@@ -20,10 +20,8 @@ SHA1 (patch-ai) = c0596d43675869c4cb7be56a7cd644f4d14817d7
 SHA1 (patch-aj) = 3583c2e81da8511ce1d514fd5609968a9d12c980
 SHA1 (patch-ak) = 5dda86383ad52b506df6ae743773b81773be49d5
 SHA1 (patch-am) = 9df8fb1882fd1ef0fd4b5d0d299cddaa17b65cc0
-SHA1 (patch-an) = 21228e83a69e779b3672b06391af6cedc2ba7ea4
 SHA1 (patch-ao) = 17ede6e7c6c232f9fe2804d7ab4addd85b5cd25c
 SHA1 (patch-ap) = d684198cb6b6822b91612f1f283fe6af316753a2
-SHA1 (patch-aq) = 912f4da4903b7ddfd7381aa42feb781bea3ba389
 SHA1 (patch-ar) = 129171c7ce2bfb08a6fef06e8ed77e7031a29eb0
 SHA1 (patch-as) = 5bfc792b879c859745b5dd1e71ac3e57ea9a7a37
 SHA1 (patch-at) = 89a4bcd4351d7b2967da744619e3912b2efa7138
