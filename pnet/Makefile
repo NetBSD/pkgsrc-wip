@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.2 2003/10/29 15:52:26 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/04 01:54:18 poppnk Exp $
 #
 
-DISTNAME=	pnet-0.6.0
+DISTNAME=	pnet-0.6.2
 CATEGORIES=	lang
 MASTER_SITES=	http://www.southern-storm.com.au/download/
 
@@ -10,8 +10,8 @@ HOMEPAGE=	http://www.dotgnu.org/
 COMMENT=	GNU Freedom for the Internet
 
 # XXX wip dirs must be patched when uploading to official pkgsrc XXX #
-DEPENDS+=	treecc>=0.2.6:../../wip/treecc/
-#DEPENDS+=	pnetlib>=0.6.0:../../wip/pnetlib/
+DEPENDS+=	treecc>=0.2.8:../../wip/treecc/
+#DEPENDS+=	pnetlib>=0.6.2:../../wip/pnetlib/
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes

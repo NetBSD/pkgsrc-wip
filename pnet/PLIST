@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2003/10/29 15:52:29 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/04 01:54:18 poppnk Exp $
 bin/al
 bin/cli-unknown-ar
 bin/cli-unknown-gcc
@@ -18,6 +18,7 @@ bin/ilasm
 bin/ildasm
 bin/ildd
 bin/ilfind
+bin/ilgac
 bin/ilheader
 bin/ilnative
 bin/ilranlib
@@ -36,6 +37,7 @@ include/pnet/il_align.h
 include/pnet/il_bignum.h
 include/pnet/il_coder.h
 include/pnet/il_config.h
+include/pnet/il_console.h
 include/pnet/il_crypt.h
 include/pnet/il_debug.h
 include/pnet/il_decimal.h
@@ -44,13 +46,14 @@ include/pnet/il_engine.h
 include/pnet/il_errno.h
 include/pnet/il_gc.h
 include/pnet/il_image.h
-include/pnet/il_jopcodes.h
+include/pnet/il_jo${LOWER_VENDOR}odes.h
 include/pnet/il_linker.h
 include/pnet/il_meta.h
-include/pnet/il_opcodes.h
+include/pnet/il_o${LOWER_VENDOR}odes.h
 include/pnet/il_profile.h
 include/pnet/il_program.h
 include/pnet/il_regex.h
+include/pnet/il_serial.h
 include/pnet/il_serialize.h
 include/pnet/il_sysio.h
 include/pnet/il_system.h
@@ -61,9 +64,7 @@ include/pnet/il_values.h
 include/pnet/il_writer.h
 include/pnet/il_xml.h
 include/pnet/leak_detector.h
-@unexec install-info --delete
 info/pnettools.info
-@exec install-info
 lib/cscc/plugins/cscc-b
 lib/cscc/plugins/cscc-bf
 lib/cscc/plugins/cscc-c-s
@@ -78,13 +79,12 @@ lib/libILEngine.a
 lib/libILImage.a
 lib/libILLink.a
 lib/libILSupport.a
-lib/pnet/libffi.a
-lib/pnet/libffi.la
+lib/pnet/elf/libffi.a
+lib/pnet/elf/libffi.la
 lib/pnet/libgc.a
 lib/pnet/libgc.la
 lib/pnet/libgc.so
 lib/pnet/libgc.so.1
-lib/pnet/libgc.so.1.2
 man/man1/clrwrap.1
 man/man1/csant.1
 man/man1/cscc.1
@@ -98,6 +98,7 @@ man/man1/ilasm.1
 man/man1/ildasm.1
 man/man1/ildd.1
 man/man1/ilfind.1
+man/man1/ilgac.1
 man/man1/ilheader.1
 man/man1/ilnative.1
 man/man1/ilranlib.1
@@ -106,6 +107,8 @@ man/man1/ilsize.1
 man/man1/ilstrip.1
 man/man1/ilverify.1
 man/man1/resgen.1
+@dirrm lib/pnet/elf
 @dirrm lib/pnet
 @dirrm lib/cscc/plugins
+@dirrm lib/cscc
 @dirrm include/pnet
