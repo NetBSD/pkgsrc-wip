@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/22 21:39:24 tomhensel Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/23 21:11:40 tomhensel Exp $
 
 DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}-cvs
 PKGNAME=	spamassassin-cvs-${_SA_CVS_DATE}
@@ -56,8 +56,8 @@ SPAMASSASSIN_USE_SSL?=			YES
 # Enable MySQL support using p5-DBI/DBD
 SPAMASSASSIN_USE_MYSQL?=		NO
 
-# Enable razor-agents support (builds ok, does not work for now anyway)
-SPAMASSASSIN_USE_RAZOR?=		NO
+# Enable razor-agents support
+SPAMASSASSIN_USE_RAZOR?=		YES
 
 .if !empty(SPAMASSASSIN_USE_SSL:M[yY][eE][sS])
 .  include "../../security/openssl/buildlink3.mk"
