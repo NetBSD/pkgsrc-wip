@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/10/26 14:55:51 imilh Exp $
+$NetBSD: MESSAGE,v 1.2 2004/10/27 13:36:34 xtraeme Exp $
 
-Create the ${LOCALBASE}/etc/pkg_notify.list file containing the package
+Create the ${PKG_SYSCONFDIR}/pkg_notify.list file containing the package
 list you want to be informed on, following this format :
 
-$ cat ${LOCALBASE}/etc/pkg_notify.list
+$ cat ${PKG_SYSCONFDIR}/pkg_notify.list
 wip/foo
 net/bar
 www/foobar-devel
