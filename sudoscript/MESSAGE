@@ -1,3 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2003/12/30 20:13:12 cjep Exp $
+
 To arrange for sudoscriptd to start at boot time, do
 the following as root:
 
@@ -10,4 +13,4 @@ and edit /etc/rc.conf so that it contains the following line:
 Please check ${PREFIX}/share/doc/${DISTNAME}/RELEASENOTES
 for important information regarding this release of sudoscript.
 
-
+===========================================================================

@@ -1,4 +1,4 @@
-@comment <$>NetBSD<$>
+@comment $NetBSD: PLIST,v 1.2 2003/12/30 20:13:12 cjep Exp $
 bin/ss
 bin/sudoshell
 etc/rc.d/sudoscriptd
