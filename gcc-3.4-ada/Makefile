@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/03/01 11:05:31 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.21 2004/03/03 22:09:40 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the developmental gcc 3.4 Ada compiler
 
 GCC_VERSION=	3.4
-SNAPDATE=	20040225
+SNAPDATE=	20040303
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
@@ -30,7 +30,7 @@ USE_GCC3	=# Define to use lang/gcc3-ada
 BUILDLINK_ENV+=PATH=${PREFIX}/gcc3/bin:${PATH}
 .endif
 .if defined(USE_GCC34)
-BUILDLINK_ENV+=PATH=${PREFIX}/gcc-3.4-ada/bin:${PATH}
+BUILDLINK_ENV+=PATH=${GCC_PREFIX}/bin:${PATH}
 .endif
 
 # Make location overridable, to allow ping-pong bootstraps.
