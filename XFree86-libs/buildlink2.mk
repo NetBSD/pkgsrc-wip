@@ -1,5 +1,5 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/07/24 05:00:00 blef Exp $
-# 
+# $NetBSD: buildlink2.mk,v 1.5 2003/12/30 23:37:47 cjep Exp $
+#
 # This Makefile fragment is included by packages that use XFree86-libs.
 #
 # This file was created automatically using createbuildlink 2.6.
