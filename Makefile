@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.449 2003/09/16 10:10:36 moubctez Exp $
-# $NetBSD: Makefile,v 1.449 2003/09/16 10:10:36 moubctez Exp $
+# $Id: Makefile,v 1.450 2003/09/16 16:07:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.450 2003/09/16 16:07:58 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -62,6 +62,7 @@ SUBDIR+=	cawf
 SUBDIR+=	ccrypt
 SUBDIR+=	cdpr
 SUBDIR+=	cgdb
+SUBDIR+=	cgic
 SUBDIR+=	cherokee
 SUBDIR+=	chksniff
 SUBDIR+=	chmlib
