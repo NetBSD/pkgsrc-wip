@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/24 00:56:18 rockpiper Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/12 20:23:06 rockpiper Exp $
 #
 
 DISTNAME=		WMmp-0.10.0
@@ -11,13 +11,14 @@ COMMENT=		Dockable MusicPD client for Window Maker and similar window managers
 
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_BUILDLINK3=		YES
 
 pre-configure:
-	cd ${WRKSRC}; ${AUTOCONF}
+	cd ${WRKSRC};                                           \
+	${AUTOCONF}
 
 .include "../../mk/autoconf.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

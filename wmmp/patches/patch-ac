@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/08/12 20:23:08 rockpiper Exp $
+
+--- configure.ac.orig	2004-03-02 13:51:13.000000000 +0100
++++ configure.ac
+@@ -19,7 +19,7 @@ AC_PROG_LN_S
+ AC_PROG_LIBTOOL
+ 
+ AC_ARG_WITH(default-host,[  --with-default-host=HOST  Use as host when MPD_HOST environment variable is not set], DEFAULT_HOST="$withval",DEFAULT_HOST="localhost")
+-AC_ARG_WITH(default-port,[  --with-default-port=PORT  Use as port when MPD_PORT environment variable is not set], DEFAULT_PORT="$withval",DEFAULT_PORT="2100")
++AC_ARG_WITH(default-port,[  --with-default-port=PORT  Use as port when MPD_PORT environment variable is not set], DEFAULT_PORT="$withval",DEFAULT_PORT="6600")
+                                                                                 
+ DFLAGS="$DFLAGS -DDEFAULT_HOST=\\\"$DEFAULT_HOST\\\""
+ DFLAGS="$DFLAGS -DDEFAULT_PORT=\\\"$DEFAULT_PORT\\\""
