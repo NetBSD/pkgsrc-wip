@@ -13,13 +13,6 @@ jmmv: If anyone is going to import this package into pkgsrc, I feel that our
 Note that gaim 0.59 is now just going to have bug fixes imported, no new
 features.  http://gaim.sf.net/faq.php
 
-- Remove the inclusion of perl5/buildlink2.mk (I'm not completely sure
-  about this, though), and use USE_PERL5 (the variable can be set either
-  to YES or "build", the later if you want a BUILD_DEPENDS only).  I see
-  --enable-perl, what does it do?
-
-- Depend on the latest gnome2-dirs version, that is, 1.1.
-
 - Related to gnome2-dirs, if the PLIST should contain a directory which
   is handled in gnome2-dirs, I think it's good to add a @comment, so
   when updating the package one knows why the directory isn't there, i.e:
