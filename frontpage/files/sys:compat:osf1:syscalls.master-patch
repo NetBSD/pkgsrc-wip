@@ -1,0 +1,18 @@
+Index: syscalls.master
+===================================================================
+RCS file: /cvsroot/src/sys/compat/osf1/syscalls.master,v
+retrieving revision 1.39
+diff -u -b -w -b -u -w -r1.39 syscalls.master
+--- syscalls.master	2001/06/28 04:08:58	1.39
++++ syscalls.master	2003/06/02 03:44:05
+@@ -220,8 +220,8 @@
+ 125	NOARGS		{ int compat_43_sys_recvfrom(int s, caddr_t buf, \
+ 			    size_t len, int flags, caddr_t from, \
+ 			    int *fromlenaddr); }
+-126	UNIMPL		setreuid
+-127	UNIMPL		setregid
++126	NOARGS		{ int sys_setreuid(uid_t ruid, uid_t euid); }
++127	NOARGS		{ int sys_setregid(gid_t rgid, gid_t egid); }
+ 128	NOARGS		{ int sys___posix_rename(const char *from, \
+ 			    const char *to); }
+ 129	STD		{ int osf1_sys_truncate(const char *path, \

@@ -1,0 +1,16 @@
+Sun Jun  1 22:47:37 CDT 2003
+    Items in need of attention:
+	+   Testing on non-alpha platforms (intel and sparc*)
+	+   ?much? sanity checking
+	+   test more than just owsadm.exe.
+
+    Notes:
+	To operate on NetBSD/alpha 1.6.*, (and probably earlier) a small
+	patch needs to be applied to sys/compat/osf1/syscalls.master, to
+	add support for setre[ug]id(2).  Fortunately, NetBSD already has
+	these calls, so it was easy to add support.
+
+	A patch request will be submitted to -current.
+
+	Additional system calls may require emulation once executables
+	other than owsadm.exc have been tried.

@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/06/03 16:37:15 schnoebe Exp $
+
+    This port requires an Frontpage enabled Apache web server.
+
+    ../../www/ap-frontpage provides a replacement (non-Microsoft)
+    loadable module for supporting FrontPage.
+
+===========================================================================
