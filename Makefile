@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1259 2004/05/09 04:45:44 minskim Exp $
-# $NetBSD: Makefile,v 1.1259 2004/05/09 04:45:44 minskim Exp $
+# $Id: Makefile,v 1.1260 2004/05/09 04:50:30 minskim Exp $
+# $NetBSD: Makefile,v 1.1260 2004/05/09 04:50:30 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -749,7 +749,6 @@ SUBDIR+=	xmail
 SUBDIR+=	xmms-dumb
 SUBDIR+=	xmms-infopipe
 SUBDIR+=	xmms-pitch
-SUBDIR+=	xmms-wip
 SUBDIR+=	xpde
 SUBDIR+=	xpdq
 SUBDIR+=	xpilot-ng

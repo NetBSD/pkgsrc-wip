@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.1.1.1 2004/03/09 13:12:33 mpasternak Exp $
-@comment $Id: PLIST.NetBSD,v 1.1.1.1 2004/03/09 13:12:33 mpasternak Exp $
-lib/xmms/Output/libsun.la
-lib/xmms/Output/libsun.so
