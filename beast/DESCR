@@ -1,0 +1,7 @@
+This is a development version of BEAST/BSE, the BEdevilled Audio SysTem
+and the Bedevilled Sound Engine, the BSE API is not considered to be stable.
+The overall goal of this project is to become an audio system that supports
+multiple song and sample formats (besides the project specific .bse format)
+as well as synthesis networks and allows full fledged editing and
+manipulation of those. Sample manipulation includes generation of new
+sounds from module networks, based on various kinds of audio synthesis.

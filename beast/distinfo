@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/27 06:00:45 bencollver Exp $
+
+SHA1 (beast-0.5.4.tar.gz) = 7c1e648ba2dcab8603ed90a837405edc8043c5c2
+Size (beast-0.5.4.tar.gz) = 2581668 bytes
+SHA1 (patch-ag) = 92959dcc9b7b8f5e43e0d91e8533783a65595fc5
