@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/20 07:55:32 moubctez Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/10 13:48:10 moubctez Exp $
 
-GIMP_VER=		1.3.14
 DISTNAME=		gimp-${GIMP_VER}
 PKGNAME=		gimp-current-${GIMP_VER}
 CATEGORIES=		graphics
@@ -9,10 +8,11 @@ MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.3/v${GIMP_VER}/ \
 	ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.3/v${GIMP_VER}/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		hubertf@netbsd.org
+MAINTAINER=		adam@netbsd.org
 HOMEPAGE=		http://www.gimp.org/
 COMMENT=		Image manipulation program similar to Photoshop[tm]
 
+GIMP_VER=		1.3.15
 CONFLICTS+=		gimp<=1.2.3
 
 BUILD_USES_MSGFMT=	yes
