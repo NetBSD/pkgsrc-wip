@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/05 21:42:53 riz Exp $
+include/newt.h
+lib/libnewt.la
+bin/whiptail
