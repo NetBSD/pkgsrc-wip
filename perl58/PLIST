@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/26 10:07:45 jlamwww Exp $
-man/man1/psed.1
-man/man1/pstruct.1
-share/mk/bsd.perl.mk
-@unexec ${RM} -f %D/${PERL5_SITEARCH}/perllocal.pod
-@unexec ${RMDIR} -p %D/${PERL5_SITEARCH} 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/${PERL5_SITEPERL}/man/man3 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/${PERL5_SITEPERL}/man 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/${PERL5_SITEPERL} 2>/dev/null || ${TRUE}
