@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/01/06 11:24:55 imilh Exp $
+$NetBSD: distinfo,v 1.4 2005/01/06 11:46:28 imilh Exp $
 
 SHA1 (ftpd-tls-20031008.tar.gz) = 409facd3d105bd20c82fed06591687375ac2ac1e
 Size (ftpd-tls-20031008.tar.gz) = 202139 bytes
-SHA1 (patch-aa) = 94f1027704fe0231ebe383a933ebba59dcb24b92
-SHA1 (patch-ab) = 081f147aa671bd94964d295fb0aef31df5040b6f
+SHA1 (patch-aa) = 738da533c2dff8ccc64492c7ded566cc31327ae6
+SHA1 (patch-ab) = 46afe2e89c776feb32cee24452bfd37875cab375
