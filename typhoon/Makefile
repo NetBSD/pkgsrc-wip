@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2003/07/21 17:33:20 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/18 15:06:25 ppostma Exp $
 #
 
 DISTNAME=		typhoon-1.11.0
-CATEGORIES=		wip
+CATEGORIES=		databases
 MASTER_SITES=		http://users.footprints.net/~kaz/
 
 MAINTAINER=		adam@monkeybyte.org
