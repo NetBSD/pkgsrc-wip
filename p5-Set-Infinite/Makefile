@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/17 12:05:24 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/02 22:05:34 blef Exp $
 
 DISTNAME=		Set-Infinite-0.49
 PKGNAME=		p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=		cube@cubidou.net
 HOMEPAGE=		http://search.cpan.org/dist/Set-Infinite/
 COMMENT=		Perl module for sets of integers and objects
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Set/Infinite/.packlist
 
 .include "../../lang/perl5/module.mk"
