@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/26 23:56:31 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/27 10:27:24 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -74,7 +74,7 @@ do-build:
 
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
-	  <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.sendmail
+		<${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.sendmail
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
 .if ${USE_DB2} == YES
@@ -91,17 +91,28 @@ pre-install:
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sendmail
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sendmail
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf.sendmail ${PREFIX}/share/examples/sendmail/mailer.conf
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf.sendmail \
+		${PREFIX}/share/examples/sendmail/mailer.conf
 	cd ${WRKSRC}/cf && ${PAX} -rw -pp -pm . ${PREFIX}/share/sendmail
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/sendmail
+
 .if ${USE_DB2} == YES
 	${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
 .endif
+
 	${INSTALL_DATA} ${WRKSRC}/obj.`uname -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsm/libsm.a \
 		${PREFIX}/lib
+
 	${INSTALL_DATA} \
 		${WRKSRC}/obj.`uname -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
 		${PREFIX}/lib
+
+	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKSRC}/cf/README ${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKSRC}/sendmail/SECURITY ${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKSRC}/doc/op/op.me ${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKSRC}/doc/op/op.ps ${PREFIX}/share/doc/sendmail
 
 USE_PKGINSTALL=	yes
 PKG_GROUPS=	smmsp

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/06/26 23:56:31 adrian_p Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/06/27 10:27:24 adrian_p Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -42,6 +42,7 @@ make-sendmail-siteconfig:
 	${CP} ${PKGDIR}/DESCR ${DESCR_SRC}
 	${ECHO} '---' >>${DESCR_SRC}
 	${ECHO} -n 'compiled features:' >>${DESCR_SRC}
+
 .if defined(USE_INET6) && ${USE_INET6} == YES
 	${CAT} ${FILESDIR}/site.config.m4-v6 >>${SITECONFIG}
 .if ${OPSYS} != "SunOS" && ${OPSYS} != "BSDOS"
@@ -49,6 +50,7 @@ make-sendmail-siteconfig:
 .endif
 	${ECHO} -n ' INET6' >>${DESCR_SRC}
 .endif
+
 .if ${OPSYS} == "SunOS"
 	${CAT} ${FILESDIR}/site.config.m4-solaris >>${SITECONFIG}
 .endif
