@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/10 18:51:52 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/11 15:20:28 bubuchka Exp $
 bin/drweb
-bin/drweb-fbsd
+bin/drweb-bin
 bin/drweb-update
 etc/rc.d/drwebd
 sbin/drwebd
-sbin/drwebd-fbsd
+sbin/drwebd-bin
 ${_DOCDIR}/ChangeLog
 ${_DOCDIR}/README
 ${_DOCDIR}/drwebd-api

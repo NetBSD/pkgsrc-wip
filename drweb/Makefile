@@ -1,26 +1,32 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/10 18:51:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/11 15:20:28 bubuchka Exp $
 
+.if defined(OPSYS) && ${OPSYS} == "Linux"
+DISTNAME=	drweb-4.29.5-glibc.2.3
+.else
 DISTNAME=	drweb-4.29.5-freebsd4
+.endif
 PKGNAME=	drweb-4.29.5
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.drweb.ru/pub/unix/4.29.5/			\
+		ftp://ftp.drweb.ru/pub/unix/				\
 		http://drweb.spb.ru/download/unix/
 
 MAINTAINER=	mishka@terabyte.com.ua
 HOMEPAGE=	http://www.drweb.ru/
-COMMENT=	DrWeb antivirus suite, FreeBSD version
+COMMENT=	DrWeb Antivirus Suite
+
+ONLY_FOR_PLATFORM= FreeBSD-4.[0-9]*-i386 Linux-*-i[3-6]86		\
+		NetBSD-1.[6-9]*-i386 NetBSD-2.[0-9]-i386
 
 # The following needed for drweb-update script only
-DEPENDS=	wget>=1.7:../../net/wget
-
-ONLY_FOR_PLATFORM= NetBSD-*-i386
+DEPENDS+=	wget>=1.7:../../net/wget
+USE_PERL5=	YES
 
 NO_BUILD=	YES
 
 PKG_GROUPS=	${DRW_GROUP}
-PKG_USERS=	${DRW_USER}:${PKG_GROUPS}::DrWeb\\ Daemon
-
-RCD_SCRIPTS=	drwebd
+PKG_USERS=	${DRW_USER}:${PKG_GROUPS}::DrWeb\\ AntiVirus
 
 OWN_DIRS_PERMS+= ${DRW_DIR} ${DRW_USER} ${DRW_GROUP} 0755
 OWN_DIRS_PERMS+= ${DRW_BASESDIR} ${DRW_USER} ${DRW_GROUP} 0755
@@ -32,39 +38,42 @@ SUPPORT_FILES+=	${EGDIR}/drwebd.key ${PKG_SYSCONFDIR}/drwebd.key
 SUPPORT_FILES+=	${EGDIR}/drweb32.dll ${DRW_BASESDIR}/drweb32.dll
 SUPPORT_FILES+=	${EGDIR}/drwebase.vdb ${DRW_BASESDIR}/drwebase.vdb
 
+RCD_SCRIPTS=		drwebd
+RCD_SCRIPT_SRC.drwebd=	${FILESDIR}/drwebd-rcd.src
+
 # Note: We'll not use drweb's own configuration / building / installation
 # facilities so as its all are very ugly.
 
 do-configure:
 	@${SED} ${FILES_SUBST_SED}					\
-		${FILESDIR}/drweb32.ini > ${WRKDIR}/drweb32.ini
+		${FILESDIR}/drweb-sh.src > ${WRKDIR}/drweb-sh
 	@${SED} ${FILES_SUBST_SED}					\
-		${FILESDIR}/drweb-nb.sh > ${WRKDIR}/drweb
+		${FILESDIR}/drwebd-sh.src > ${WRKDIR}/drwebd-sh
 	@${SED} ${FILES_SUBST_SED}					\
-		${FILESDIR}/drwebd-nb.sh > ${WRKDIR}/drwebd
+		${FILESDIR}/drweb32-ini.src > ${WRKDIR}/drweb32-ini
 	@${SED} ${FILES_SUBST_SED}					\
 		${WRKSRC}/install/opt/drweb/update/update.pl >		\
 		${WRKDIR}/drweb-update
-	@${SED} ${FILES_SUBST_SED}					\
-		${FILESDIR}/drwebd-rcd.sh > ${WRKDIR}/drwebd.sh
-
-post-configure:
-	${MV} ${WRKSRC}/install/opt/drweb/drweb.static ${WRKDIR}/drweb-fbsd
-	${MV} ${WRKSRC}/install/opt/drweb/drwebd.static ${WRKDIR}/drwebd-fbsd
+.if defined(OPSYS) && ${OPSYS} == "NetBSD"
+	${MV} ${WRKSRC}/install/opt/drweb/drweb.static ${WRKDIR}/drweb-bin
+	${MV} ${WRKSRC}/install/opt/drweb/drwebd.static	${WRKDIR}/drwebd-bin
+.else
+	${MV} ${WRKSRC}/install/opt/drweb/drweb ${WRKDIR}/drweb-bin
+	${MV} ${WRKSRC}/install/opt/drweb/drwebd ${WRKDIR}/drwebd-bin
+.endif
 
 do-install:
 	# --> Executables
-	${INSTALL_SCRIPT} ${WRKDIR}/drweb-fbsd ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKDIR}/drwebd-fbsd ${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKDIR}/drweb ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKDIR}/drwebd ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKDIR}/drweb-bin ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/drwebd-bin ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKDIR}/drweb-sh ${PREFIX}/bin/drweb
+	${INSTALL_SCRIPT} ${WRKDIR}/drwebd-sh ${PREFIX}/sbin/drwebd
 	${INSTALL_SCRIPT} ${WRKDIR}/drweb-update ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKDIR}/drwebd.sh ${PREFIX}/etc/rc.d/drwebd
 
 	${INSTALL_DATA_DIR} ${EGDIR}
 
 	# --> Configuration files
-	${INSTALL_DATA} ${WRKDIR}/drweb32.ini				\
+	${INSTALL_DATA} ${WRKDIR}/drweb32-ini				\
 		${EGDIR}/drweb32.ini
 	${INSTALL_DATA} ${WRKSRC}/install/opt/drweb/drweb.key		\
 		${EGDIR}/drweb.key
@@ -86,6 +95,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/install/opt/drweb/update/readme.update \
 		${DOCDIR}
 
-.include "Makefile.common"
+.include "../../wip/oshavercd.mk"
+.include "../../wip/drweb/Makefile.common"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

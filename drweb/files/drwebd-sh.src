@@ -1,0 +1,6 @@
+#!@SH@
+#
+# $NetBSD: drwebd-sh.src,v 1.1 2003/09/11 15:20:28 bubuchka Exp $
+# This file used for start drweb daemon with default path to ini file.
+
+exec @PREFIX@/sbin/drwebd-bin -ini:@PKG_SYSCONFDIR@/drweb32.ini "$@"

@@ -1,18 +1,16 @@
-#!/bin/sh
+#!@SH@
 #
-# $NetBSD: drwebd-rcd.sh,v 1.1.1.1 2003/04/10 18:51:56 jmmv Exp $
-#
-# To start drwebd at startup, copy this script to /etc/rc.d and set
-# drwebd=YES in /etc/rc.conf.
+# $NetBSD: drwebd-rcd.src,v 1.1 2003/09/11 15:20:28 bubuchka Exp $
 
 # PROVIDE: drwebd
-# REQUIRE: LOGIN
+# REQUIRE: SERVERS
+# BEFORE: DAEMON
 
 . /etc/rc.subr
 
 name="drwebd"
 rcvar=$name
-command="@PREFIX@/sbin/${name}-fbsd"
+command="@PREFIX@/sbin/${name}-bin"
 procname="${command}"
 drw_inifile="@PKG_SYSCONFDIR@/drweb32.ini"
 required_files="${drw_inifile}"

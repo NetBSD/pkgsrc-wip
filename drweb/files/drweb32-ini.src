@@ -1,4 +1,4 @@
-; $NetBSD: drweb32.ini,v 1.1.1.1 2003/04/10 18:51:56 jmmv Exp $
+; $NetBSD: drweb32-ini.src,v 1.1 2003/09/11 15:20:28 bubuchka Exp $
 
 ; Please note: we have placed drweb32.dll into bases dir, so as it
 ; may (and should) be periodically updated
@@ -9,7 +9,7 @@ VirusBase = "@DRW_BASESDIR@/*.vdb", "@DRW_BASESDIR@/*.VDB"
 MoveFilesTo = "@DRW_INFECTDIR@"
 
 Key = "@PKG_SYSCONFDIR@/drweb.key"
-LogFileName = "@DRW_LOGDIR@/drweb.log"
+LogFileName = "@DRW_LOGFILE_SCANNER@"
 RenameFilesTo = #??
 FilesTypes = EXE,COM,SYS,OV?,BAT,BIN,DRV,PRG,BOO,SCR,CMD,VXD,386,DLL,FON,DO?
 FilesTypes = XL?,WIZ,RTF,CL*,HT*,VB*,JS*,INF,AR?,ZIP,R??,PP?,OBJ,LIB,HLP,MD?
@@ -52,12 +52,12 @@ MoveFilesTo = "@DRW_INFECTDIR@"
 Key = "@PKG_SYSCONFDIR@/drwebd.key"
 LogTime = Yes
 ;LogFileName = "syslog"
-LogFileName = "@DRW_LOGDIR@/drwebd.log"
-PidFile = "@DRW_RUNDIR@/drwebd.pid"
+LogFileName = "@DRW_LOGFILE@"
+PidFile = "@DRW_PIDFILE@"
 ;BusyFile = "@DRW_RUNDIR@/drwebd.bsy"
 
-Socket 3000 127.0.0.1
-;Socket = @DRW_RUNDIR@/drwebd 666
+Socket = @DRW_SOCKFILE@ 666
+;Socket = 3000 127.0.0.1
 
 SocketTimeout = 40
 SocketReuseAddr = Yes

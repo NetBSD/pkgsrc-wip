@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/10 18:51:56 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2003/09/11 15:20:28 bubuchka Exp $
 
---- install/opt/drweb/update/update.pl	Mon Jan  6 20:03:01 2003
-+++ install/opt/drweb/update/update.pl.nb	Fri Jan 10 20:59:25 2003
+--- install/opt/drweb/update/update.pl.orig	2003-01-06 20:03:01.000000000 +0200
++++ install/opt/drweb/update/update.pl
 @@ -1,4 +1,4 @@
 -#! /usr/bin/perl
 +#!@PERL5@ -w
  #------------------------------------------------------------------------------
  # drwebd update script, version 1.01
  #------------------------------------------------------------------------------
-@@ -18,7 +18,7 @@
+@@ -18,7 +18,7 @@ my $TEMP = "/tmp";
  
  my $system = '';
  $system = "linux" if( $^O =~ /Linux/i );
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/10 18:51:56 jmmv Exp $
  $system = "solaris" if( $^O =~ /Solaris/i );
  die "Unsupported OS!\n" unless $system;
  
-@@ -33,9 +33,9 @@
+@@ -33,9 +33,9 @@ my @urls = 
  );
  
  my $ini = $ARGV[0];
@@ -29,12 +29,24 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/10 18:51:56 jmmv Exp $
  }
  
  my $fetch = `which fetch 2>&1`;
-@@ -72,7 +72,7 @@
+@@ -72,7 +72,7 @@ my $pidFile = '';
     die "Bases path is not defined!" unless $bases;
     die "Update path is not defined!" unless $update;
     
 -   $pidFile = "/var/drweb/run/drwebd.pid" if( $pidFile eq '' );
-+   $pidFile = "@DRW_RUNDIR@/drwebd.pid" if( $pidFile eq '' );
++   $pidFile = "@DRW_PIDFILE@" if( $pidFile eq '' );
  
  my $version = readVersion( $engine ); 
     die "Engine version error (invalid engine?)" unless $version;
+@@ -157,8 +157,10 @@ my %Paths;
+        $updated++;
+      }
+      
+-     if( $updated > 0 )
++     if( $updated > 0 && -f "$pidFile" )
+      {
++	# There is no error, if pid isn't existent - in this case
++	# daemon isn't running, but scanner may be updated as well.
+         open( FH, "$pidFile" ) || die "Can not open $pidFile: $!\n";
+         my $pid = <FH>;
+         close( FH );

@@ -1,4 +1,6 @@
-This is a well known DrWeb antivirus suite for FreeBSD/i386 machines.
+This is a well known DrWeb antivirus suite for i386 machines running
+one of the following *nix like OS: FreeBSD, NetBSD, Linux (glibc-2.3).
+
 It is much alike traditional DrWeb for DOS, but in addition to
 virus disk scanner it includes DrWeb daemon, which can serve requests
 from network making this suite very flexible for many purposes,

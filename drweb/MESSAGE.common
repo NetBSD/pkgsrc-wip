@@ -1,8 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/04/10 18:51:55 jmmv Exp $
-
-WARNING!!! Be sure having compiled kernel with following option:
-  options	COMPAT_FREEBSD	# binary compatibility with FreeBSD
+$NetBSD: MESSAGE.common,v 1.1 2003/09/11 15:20:28 bubuchka Exp $
 
 Add the similar to following to /etc/services:
   drwebd	3000/tcp	# DrWeb daemon
@@ -10,6 +7,4 @@ Add the similar to following to /etc/services:
 Add the similar to following to crontab(5) file:
   0 2 * * *	${PREFIX}/bin/drweb-update
 
-Add the following to /etc/rc.conf:
-  drwebd=YES
 ===========================================================================

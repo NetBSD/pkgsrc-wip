@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/04/10 18:51:53 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/09/11 15:20:28 bubuchka Exp $
 #
-# This part of Makefile should be used in DrWeb AV companion software
+# This part of Makefile should be also used in DrWeb AV companion software
 
-DRWEB=			drweb
+DRWEB?=			drweb
 
-DRW_USER=		${DRWEB}
-DRW_GROUP=		${DRWEB}
+DRW_USER?=		${DRWEB}
+DRW_GROUP?=		${DRWEB}
 
-DRW_DIR=		/var/${DRWEB}
+DRW_DIR?=		/var/${DRWEB}
 DRW_BASESDIR=		${DRW_DIR}/bases
 DRW_INFECTDIR=		${DRW_DIR}/infected
 DRW_LOGDIR=		${DRW_DIR}
@@ -17,14 +17,25 @@ _DOCDIR=		share/doc/${DRWEB}
 EGDIR=			${PREFIX}/${_EGDIR}
 DOCDIR=			${PREFIX}/${_DOCDIR}
 
+DRW_LOGFILE?=		${DRW_LOGDIR}/drwebd.log
+DRW_LOGFILE_SCANNER?=	${DRW_LOGDIR}/drweb.log
+DRW_PIDFILE?=		${DRW_RUNDIR}/drwebd.pid
+DRW_SOCKFILE?=		${DRW_RUNDIR}/drwebd.sock
+
 PKG_SYSCONFSUBDIR?= 	${DRWEB}
 
 FILES_SUBST+=		DRWEB=${DRWEB}					\
+			DRW_DIR=${DRW_DIR}				\
 			DRW_BASESDIR=${DRW_BASESDIR}			\
 			DRW_INFECTDIR=${DRW_INFECTDIR}			\
 			DRW_LOGDIR=${DRW_LOGDIR}			\
 			DRW_RUNDIR=${DRW_RUNDIR}			\
-			DRW_USER=${DRW_USER}
+			DRW_USER=${DRW_USER}				\
+			DRW_GROUP=${DRW_GROUP}				\
+			DRW_LOGFILE=${DRW_LOGFILE}			\
+			DRW_LOGFILE_SCANNER=${DRW_LOGFILE_SCANNER}	\
+			DRW_PIDFILE=${DRW_PIDFILE}			\
+			DRW_SOCKFILE=${DRW_SOCKFILE}
 
 PLIST_SUBST+=		_EGDIR=${_EGDIR}				\
 			_DOCDIR=${_DOCDIR}
