@@ -1,20 +1,6 @@
 o Make a rc.d script for nvtvd. This one is not simple
   since it requires some code change (read: a call to
   daemon()).
-o nvtv crashes immediately on my Toshiba Satellite 5100:
-	(gdb) run
-	Starting program: /usr/cvs/pkgsrc/wip/nvtv/work.i386/nvtv/src/./nvtv 
-	
-	Program received signal SIGSEGV, Segmentation fault.
-	0x0 in ?? ()
-	(gdb) bt
-	#0  0x0 in ?? ()
-	#1  0x8050047 in NVGetEncRegsPort (pNv=0x8089b60, r=0x80959b4, port=0x8095abc)
-	    at tv_nv.c:1513
-	#2  0x805d238 in bnv_getMode (r=0xbfbff254) at back_nvidia.c:590
-	#3  0x8066c9f in gui_orig_update () at gui.c:1710
-	#4  0x806d564 in gui_main (argc=1, argv=0xbfbff844, card_list=0x8099000)
-	    at gui.c:3555
-	#5  0x806328d in main (argc=1, argv=0xbfbff844) at main.c:990
-	#6  0x804bdb4 in ___start ()
-	(gdb) 
+o nvtv crashes immediately on my Toshiba Satellite 5100
+  --> This is a bug in nvtv code, and also means the encoder
+      is not supported.
