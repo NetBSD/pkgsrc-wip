@@ -1,7 +1,0 @@
-maybe doesn't need
-@exec ${MKDIR} %D/share/doc/xextensions
-@dirrm share/doc/xextensions
-
-also DESCR mentions docs
-
-- anyone want to maintain this?

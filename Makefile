@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1276 2004/05/13 18:17:20 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1276 2004/05/13 18:17:20 adrian_p Exp $
+# $Id: Makefile,v 1.1277 2004/05/14 00:58:37 minskim Exp $
+# $NetBSD: Makefile,v 1.1277 2004/05/14 00:58:37 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -745,7 +745,6 @@ SUBDIR+=	xbelmark
 SUBDIR+=	xbsql
 SUBDIR+=	xdkcal
 SUBDIR+=	xevil
-SUBDIR+=	xextensions
 SUBDIR+=	xlibs
 SUBDIR+=	xmail
 SUBDIR+=	xmms-dumb
