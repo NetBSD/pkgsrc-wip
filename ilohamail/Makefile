@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/31 17:37:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 16:18:18 xtraeme Exp $
 #
 
 DISTNAME=	IlohaMail-0.7.11
@@ -10,7 +10,7 @@ MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://www.ilohamail.org/
 COMMENT=	Light weight yet full featured multilingual webmail
 
-DEPENDS=	ap-php4-[0-9]*:../../www/ap-php4
+DEPENDS+=	{ap-php-4.[0-9]*,ap2-php-4.[0-9]*}:../../www/ap-php4
 
 NO_BUILD=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/05/02 07:44:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/02 16:18:17 xtraeme Exp $
 #
 
 DISTNAME=	geeklog-1.3.7sr1
@@ -10,7 +10,7 @@ MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://www.geeklog.net/
 COMMENT=	Web content management
 
-DEPENDS+=	ap-php-[0-9]*:../../www/ap-php4
+DEPENDS+=       {ap-php-4.[0-9]*,ap2-php-4.[0-9]*}:../../www/ap-php4
 DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql-server
 
 USE_BUILDLINK2=	YES
