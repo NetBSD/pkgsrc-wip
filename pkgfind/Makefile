@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2004/06/15 13:38:12 ppostma Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/22 11:20:37 ppostma Exp $
 
-DISTNAME=	pkgfind-20040615
+DISTNAME=	pkgfind-20040622
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,8 +16,14 @@ NO_CHECKSUM=	yes
 
 INSTALLATION_DIRS=	bin man/cat1 man/man1
 
+NROFF=		nroff -mandoc
+
 do-extract:
 	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+
+do-build:
+	${CC} ${CFLAGS} -o ${WRKSRC}/pkgfind ${WRKSRC}/pkgfind.c
+	${NROFF} ${WRKSRC}/pkgfind.1 > ${WRKSRC}/pkgfind.cat1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pkgfind ${PREFIX}/bin/pkgfind
