@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/22 13:24:08 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/20 18:52:58 minskim Exp $
 ${PYSITELIB}/matplotlib/__init__.py
 ${PYSITELIB}/matplotlib/__init__.pyc
 ${PYSITELIB}/matplotlib/__init__.pyo
@@ -56,8 +56,6 @@ ${PYSITELIB}/matplotlib/patches.pyo
 ${PYSITELIB}/matplotlib/setup.py
 ${PYSITELIB}/matplotlib/setup.pyc
 ${PYSITELIB}/matplotlib/setup.pyo
-@dirrm ${PYSITELIB}/matplotlib/backends
-@dirrm ${PYSITELIB}/matplotlib
 share/matplotlib/Vera.ttf
 share/matplotlib/VeraBI.ttf
 share/matplotlib/VeraBd.ttf
@@ -119,3 +117,5 @@ share/matplotlib/stock_up.xpm
 share/matplotlib/stock_zoom-in.xpm
 share/matplotlib/stock_zoom-out.xpm
 @dirrm share/matplotlib
+@dirrm ${PYSITELIB}/matplotlib/backends
+@dirrm ${PYSITELIB}/matplotlib
