@@ -1,4 +1,4 @@
-VERSION=	2.1.19
+VERSION=	2.1.24
 
 # Path options
 PREFIX?=	/usr/local
@@ -31,7 +31,31 @@ INSTALL_DATA=	$(INSTALL) -c -m $(DATAMODE)
 INSTALL_BIN=	$(INSTALL) -c -m $(BINMODE) -o $(BINOWNER) -g $(BINGROUP)
 
 # Compilation options
-ENABLE_NLS?=	1
+ENABLE_NLS?=	yes
+DEBUG?=		no
+PROFILE?=	no
+NEED_MD5?=	yes
+MD5_LIBS?=
+
+# Vanilla GKrellM compatibility
+ifeq ($(enable_nls),1)
+ENABLE_NLS=	yes
+endif
+ifeq ($(enable_nls),yes)
+ENABLE_NLS=	yes
+endif
+ifeq ($(debug),1)
+DEBUG=		yes
+endif
+ifeq ($(debug),yes)
+DEBUG=		yes
+endif
+ifeq ($(profile),1)
+PROFILE=	yes
+endif
+ifeq ($(profile),yes)
+PROFILE=	yes
+endif
 
 # OS-specific overrides
 SUPPORTED_OSES=	Linux NetBSD FreeBSD OpenBSD Darwin Solaris
@@ -45,6 +69,8 @@ OSREV=		$(shell uname -r)
 ifeq ($(OPSYS),NetBSD)
 SYS_LIBS=	-lkvm
 BINGROUP=	kmem
+NEED_MD5=	no
+MD5_LIBS=
 else
  ifeq ($(OPSYS),OpenBSD)
 SYS_LIBS=	-lkvm -pthread
@@ -52,19 +78,23 @@ BINGROUP=	kmem
  else
   ifeq ($(OPSYS),FreeBSD)
 BINGROUP=	kmem
+NEED_MD5=	no
+MD5_LIBS=	-lmd
    ifeq ($(filter 2.%,$(OSREV)),)
-SYS_LIBS=	-lkvm -ldevstat -lmd
+SYS_LIBS=	-lkvm -ldevstat
    else
-SYS_LIBS=	-lkvm -lmd
+SYS_LIBS=	-lkvm
    endif
   else
    ifeq ($(OPSYS),Darwin)
-SYS_LIBS=	-lkvm -lmd5 -framework IOKit
-LINK_FLAGS+=	-flat_namespace -undefined warning -prebind -Wl,-bind_at_load
+SYS_LIBS=	-lkvm -framework IOKit
+LINK_FLAGS+=	-prebind -Wl,-bind_at_load -framework CoreFoundation -lX11
 GTK_CONFIG=	gtk-config
 STRIP=
+NEED_MD5=	no
+MD5_LIBS=	-lmd5
     ifeq ($(MODULE),src)
-CFLAGS+=	-Ddlsym=dlsym_prepend_underscore
+LINK_FLAGS+=	-lX11
     endif
    else
     ifeq ($(OPSYS),Solaris)

@@ -2,7 +2,7 @@ include ../Makefile.inc
 
 PACKAGE?=	gkrellm
 
-ifeq ($(ENABLE_NLS),1)
+ifeq ($(ENABLE_NLS),yes)
 FILES_PO:=	$(wildcard *.po)
 FILES_MO:=	$(FILES_PO:.po=.mo)
 else

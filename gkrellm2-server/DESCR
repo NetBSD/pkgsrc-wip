@@ -23,5 +23,6 @@ Gtk, or any other theme.
   * GKrellM is plugin capable so special interest monitors can be created.
   * A different theme can be created with the GIMP.
 
-While GKrellM monitors the host it is running on, it can poll a server
-over the network.  The server package is named gkrellm2-server.
+The gkrellm2-server package installs the monitoring part of GKrellM, which
+can be made to run as a daemon to be polled over the network by the GKrellM
+client as found in the gkrellm2 package.

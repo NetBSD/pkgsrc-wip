@@ -8,24 +8,32 @@ PKG_LIB = `$(PKG_CONFIG) --libs glib-2.0 gthread-2.0`
 GLIB12_INCLUDE = `glib-config --cflags gthread`
 GLIB12_LIB = `glib-config --libs gthread`
 
+USE_GLIB12?=	no
+ifeq ($(glib12),1)
+USE_GLIB12=	yes
+endif
+ifeq ($(glib12),yes)
+USE_GLIB12=	yes
+endif
+
 CFLAGS?=	-O2
 FLAGS = -I.. $(PKG_INCLUDE) $(GTOP_INCLUDE)
-ifeq ($(glib12),1)
+ifeq ($(USE_GLIB12),yes)
 FLAGS = -I.. $(GLIB12_INCLUDE) $(GTOP_INCLUDE)
 endif
 
 FLAGS+= $(PTHREAD_INC)
 
 LIBS = $(PKG_LIB) $(GTOP_LIBS_D) $(SYS_LIBS) 
-ifeq ($(glib12),1)
+ifeq ($(USE_GLIB12),yes)
 LIBS = $(GLIB12_LIB) $(GTOP_LIBS_D) $(SYS_LIBS)
 endif
 
-ifeq ($(debug),1)
+ifeq ($(DEBUG),yes)
     FLAGS += -g
 endif
 
-ifeq ($(profile),1)
+ifeq ($(PROFILE),yes)
     FLAGS += -g -pg
 endif
 

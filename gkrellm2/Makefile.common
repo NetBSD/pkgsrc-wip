@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/10/13 07:08:13 cubidou Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/12/31 10:42:03 cubidou Exp $
 
 DISTNAME=	${GKRELLM_DISTBASE}
 PKGNAME=	${GKRELLM_PKGBASE}-${GKRELLM_VERSION}
@@ -16,14 +16,13 @@ USE_PKGLOCALEDIR=	YES
 
 MAKE_ENV+=		LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
-GKRELLM_VERSION=	2.1.21
+GKRELLM_VERSION=	2.1.24
 GKRELLM_DISTBASE=	gkrellm-${GKRELLM_VERSION}
 GKRELLM_SRCDIR=		${WRKDIR}/${GKRELLM_DISTBASE}
 
 FILESDIR=		${.CURDIR}/../gkrellm2/files
 PATCHDIR=		${.CURDIR}/../gkrellm2/patches
 DISTINFO_FILE=		${.CURDIR}/../gkrellm2/distinfo
-DESCR_SRC=		${.CURDIR}/../gkrellm2/DESCR
 
 post-extract:
 	${CP} ${FILESDIR}/top.Makefile ${WRKSRC}/Makefile

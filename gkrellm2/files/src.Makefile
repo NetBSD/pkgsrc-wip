@@ -1,7 +1,6 @@
 include ../Makefile.inc
 
 PACKAGE ?= gkrellm
-EXTRAOBJS ?= md5c.o
 
 SMC_LIBS ?= -L$(X11BASE)/lib -Wl,-R$(X11BASE)/lib -lSM -lICE
 
@@ -14,13 +13,11 @@ CFLAGS?=	-O2
 FLAGS = -I.. $(PKG_INCLUDE) $(GTOP_INCLUDE)
 FLAGS+= $(PTHREAD_INC)
 
-LIBS = $(PKG_LIB) $(GTOP_LIBS) $(SMC_LIBS) $(SYS_LIBS)
-
-ifeq ($(debug),1)
+ifeq ($(debug),yes)
     FLAGS += -g
 endif
 
-ifeq ($(ENABLE_NLS),1)
+ifeq ($(ENABLE_NLS),yes)
     FLAGS += -DENABLE_NLS -DLOCALEDIR=\"$(LOCALEDIR)\"
 endif
 ifneq ($(PACKAGE),gkrellm)
@@ -31,6 +28,29 @@ ifeq ($(HAVE_GETADDRINFO),1)
     FLAGS += -DHAVE_GETADDRINFO
 endif
 
+WITHOUT_SSL?=	no
+ifeq ($(without-ssl),1)
+WITHOUT_SSL=	yes
+endif
+ifeq ($(without-ssl),yes)
+WITHOUT_SSL=	yes
+endif
+ifeq ($(WITHOUT_SSL),no)
+CONFIGURE_ARGS+=	--without-ssl
+endif
+GREP?=		grep
+
+DUMMY_VAR:=	$(shell ./configure $(CONFIGURE_ARGS))
+HAVE_SSL=	$(shell $(GREP) -c HAVE_SSL configure.h)
+
+ifeq ($(HAVE_SSL),1)
+SSL_LIBS?=	-lssl -lcrypto
+NEED_MD5=	no
+MD5_LIBS=
+endif
+
+LIBS = $(PKG_LIB) $(GTOP_LIBS) $(SMC_LIBS) $(SYS_LIBS) $(MD5_LIBS) $(SSL_LIBS)
+
 override CFLAGS += -Wall $(FLAGS)
 
 OBJS =	main.o alerts.o battery.o base64.o clock.o cpu.o disk.o fs.o \
@@ -38,12 +58,16 @@ OBJS =	main.o alerts.o battery.o base64.o clock.o cpu.o disk.o fs.o \
 	chart.o panel.o config.o gui.o krell.o plugins.o pixops.o \
 	client.o utils.o winops-x11.o sysdeps-unix.o deprecated.o
 
+ifeq ($(NEED_MD5),yes)
+OBJS+=	md5c.c
+endif
+
 all:	build
 
 build:	gkrellm
 
-gkrellm static: $(OBJS) $(EXTRAOBJS)
-	$(CC) $(OBJS) $(EXTRAOBJS) -o gkrellm$(if $(findstring static,$@),.static -static) $(LIBS) $(LINK_FLAGS)
+gkrellm static: $(OBJS)
+	$(CC) $(OBJS) -o gkrellm$(if $(findstring static,$@),.static -static) $(LIBS) $(LINK_FLAGS)
 
 install: gkrellm
 	$(INSTALL_DIR) $(INSTALLDIR)
@@ -59,7 +83,7 @@ uninstall:
 	rm -f $(MANDIR)/$(PACKAGE).1
 
 clean:
-	rm -f *.o *~ *.bak gkrellm core
+	rm -f *.o *~ *.bak configure.h configure.log gkrellm core
 
 IMAGES = \
 	../pixmaps/frame_top.xpm \
