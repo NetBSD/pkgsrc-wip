@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/07 17:28:29 marc Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/07 18:30:36 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -65,9 +65,9 @@ BUILD_DEPENDS+=	sun-jdk13>=1:../../lang/sun-jdk13
 MAKE_ENV+=	ALT_BOOTDIR=${LOCALBASE}/java/sun-1.3.1
 .endif
 
-# Build Mozilla plugin if JDK13_WITH_PLUGIN=YES
+# Build Mozilla plugin if JDK_WITH_PLUGIN=YES
 #
-.if defined(JDK13_WITH_PLUGIN) && !empty(JDK13_WITH_PLUGIN:M[Yy][Ee][Ss])
+.if defined(JDK_WITH_PLUGIN) && !empty(JDK_WITH_PLUGIN:M[Yy][Ee][Ss])
 MOZILLA_PLUGINS_DIR= ${LOCALBASE}/lib/mozilla/plugins
 
 ALL_TARGET+=	plugin
@@ -97,13 +97,13 @@ PLIST_SRC+=	${.CURDIR}/PLIST
 MAKE_FLAGS+=	ALT_DEVTOOLS_PATH=${LOCALBASE}/bin # used to find "zip" and "unzipsfx"
 MAKE_ENV+=	ALT_MOTIF_DIR=${MOTIFBASE}
 MAKE_ENV+=	BUILD_CLASSIC=yes
+MAKE_ENV+=	CLASSPATH=
+MAKE_ENV+=	JAVA_COMPILER=NONE
+MAKE_ENV+=	JAVA_HOME=
 MAKE_FLAGS+=	M4=${LOCALBASE}/bin/gm4
 MAKE_ENV+=	OPENWINHOME=${MOTIFBASE}
 MAKE_ENV+=	USE_GNU_M4=1
 MAKE_ENV+=	USE_PTHREADS=false
-MAKE_ENV+=	CLASSPATH=""
-MAKE_ENV+=	JAVA_HOME=""
-MAKE_ENV+=	JAVA_COMPILER=NONE
 
 SFILES=         content-types.properties
 SFILES+=	flavormap.properties
