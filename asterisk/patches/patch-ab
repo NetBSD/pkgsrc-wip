@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2005/01/23 07:02:12 riz Exp $
---- pbx/Makefile.orig	2005-01-05 15:12:44.000000000 -0800
-+++ pbx/Makefile	2005-01-05 15:13:09.000000000 -0800
-@@ -16,7 +16,7 @@
+$NetBSD: patch-ab,v 1.3 2005/03/30 22:14:23 riz Exp $
+--- pbx/Makefile.orig	2003-10-26 10:50:49.000000000 -0800
++++ pbx/Makefile	2005-03-30 14:08:41.000000000 -0800
+@@ -16,9 +16,12 @@
  PBX_LIBS=pbx_config.so pbx_wilcalu.so pbx_spool.so     # pbx_gtkconsole.so pbx_kdeconsole.so
  
  # Add GTK console if appropriate
@@ -9,4 +9,9 @@ $NetBSD: patch-ab,v 1.2 2005/01/23 07:02:12 riz Exp $
 +#PBX_LIBS+=$(shell gtk-config --cflags >/dev/null 2>/dev/null && echo "pbx_gtkconsole.so")
  # Add KDE Console if appropriate
  #PBX_LIBS+=$(shell [ "$$QTDIR" != "" ] && echo "pbx_kdeconsole.so")
++ifdef ASTERISK_USE_GTK
++PBX_LIBS+=pbx_gtkconsole.so
++endif
  
+ 
+ GTK_FLAGS=`gtk-config --cflags gthread`
