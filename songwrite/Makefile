@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/10 17:48:39 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/09 23:40:46 blef Exp $
 #
 
 DISTNAME=		Songwrite-0.12
@@ -10,7 +10,9 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://oomadness.tuxfamily.org/en/songwrite/index.html
 COMMENT=		Tablature (guitar partition) editor
 
-USE_BUILDLINK2=		yes
+DEPENDS+=		${PYPKGPREFIX}-EditObj-[0-9]*:../../wip/py-EditObj
+
+USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
@@ -29,7 +31,6 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$$a ${PREFIX}/share/songwrite/$$a; \
 	done
 
-.include "../../wip/py-EditObj/buildlink2.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
