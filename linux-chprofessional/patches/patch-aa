@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/11/06 05:45:49 mpasternak Exp $
+$NetBSD: patch-aa,v 1.2 2003/11/08 02:09:56 mpasternak Exp $
 
 --- install.sh.orig	Sun Aug 24 19:48:30 2003
 +++ install.sh	Thu Nov  6 06:18:35 2003
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/11/06 05:45:49 mpasternak Exp $
  
  #default installation directory for ch
 -INSTALL_DIR="/usr/local/ch${VERSION}"
-+INSTALL_DIR="/usr/pkg/chprofessional4.0.0"
++INSTALL_DIR="$PREFIX/chprofessional4.0.0"
  
  
  # CHECK FOR root
