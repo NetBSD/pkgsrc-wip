@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/03 15:40:05 cubidou Exp $
+lib/gkrellm2/plugins/gkrellflynn.so
