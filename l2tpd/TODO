@@ -1,7 +1,5 @@
-# $NetBSD: TODO,v 1.1 2003/10/16 20:06:01 hfath Exp $
+# $NetBSD: TODO,v 1.2 2003/10/17 21:06:47 hfath Exp $
 
 # l2tpd pkg issues:
 
 - test in a realistic setup
-- the log() function from misc.h conflicts with some gcc 3 
-  builtin 'log()', i.e. the package does not build under -current

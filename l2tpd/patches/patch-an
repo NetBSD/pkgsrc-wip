@@ -1,10 +1,7 @@
-$NetBSD: patch-an,v 1.1 2003/09/30 08:59:20 hfath Exp $
+$NetBSD: patch-an,v 1.2 2003/10/17 21:06:48 hfath Exp $
 
-
-$FreeBSD: ports/net/l2tpd/files/patch-network.c,v 1.2 2003/04/16 13:53:27 ru Exp $
-
---- network.c.orig	Wed Apr 10 23:09:33 2002
-+++ network.c	Wed Apr 16 16:07:19 2003
+--- network.c.orig	2002-04-10 22:09:33.000000000 +0200
++++ network.c
 @@ -14,9 +14,6 @@
  #include <stdio.h>
  #include <errno.h>
@@ -23,7 +20,7 @@ $FreeBSD: ports/net/l2tpd/files/patch-network.c,v 1.2 2003/04/16 13:53:27 ru Exp
  struct sockaddr_in server, from;        /* Server and transmitter structs */
  int server_socket;              /* Server socket */
  #ifdef USE_KERNEL
-@@ -47,7 +43,7 @@
+@@ -47,7 +43,7 @@ int init_network (void)
      int length = sizeof (server);
      gethostname (hostname, sizeof (hostname));
      server.sin_family = AF_INET;
@@ -32,3 +29,15 @@ $FreeBSD: ports/net/l2tpd/files/patch-network.c,v 1.2 2003/04/16 13:53:27 ru Exp
      server.sin_port = htons (gconfig.port);
      if ((server_socket = socket (PF_INET, SOCK_DGRAM, 0)) < 0)
      {
+@@ -364,8 +360,9 @@ void network_thread ()
+                 extract (buf->start, &tunnel, &call);
+                 if (debug_network)
+                 {
+-                    log (LOG_DEBUG, "%s: recv packet from %s, size = %d,
+-tunnel = %d, call = %d\n", __FUNCTION__, inet_ntoa (from.sin_addr), recvsize, tunnel, call);
++                    log (LOG_DEBUG, "%s: recv packet from %s, size = %d, "
++			"tunnel = %d, call = %d\n", __FUNCTION__, 
++			inet_ntoa (from.sin_addr), recvsize, tunnel, call);
+                 }
+                 if (packet_dump)
+                 {

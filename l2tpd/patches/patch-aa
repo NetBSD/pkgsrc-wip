@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2003/09/30 08:59:20 hfath Exp $
+$NetBSD: patch-aa,v 1.2 2003/10/17 21:06:48 hfath Exp $
 
 --- Makefile.orig	2002-08-10 02:42:22.000000000 +0200
 +++ Makefile
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.1 2003/09/30 08:59:20 hfath Exp $
 +#FFLAGS= -DIP_ALLOCATION 
  
 -CFLAGS= $(DFLAGS) -Wall -DSANITY $(OSFLAGS) $(FFLAGS)
-+CFLAGS+= -Wall -DSANITY $(OSFLAGS) $(FFLAGS)
++CFLAGS+= $(DFLAGS) -Wall -fno-builtin-log -DSANITY $(OSFLAGS)
  HDRS=l2tp.h avp.h misc.h control.h call.h scheduler.h file.h aaa.h md5.h
  OBJS=l2tpd.o pty.o misc.o control.o avp.o call.o network.o avpsend.o scheduler.o file.o aaa.o md5.o
  LIBS= $(OSLIB) # -lefence # efence for malloc checking
@@ -41,4 +41,4 @@ $NetBSD: patch-aa,v 1.1 2003/09/30 08:59:20 hfath Exp $
  
  $(BIN): $(OBJS) $(HDRS) 
 -	$(CC) -o $(BIN) $(DFLAGS) $(OBJS) $(LIBS)
-+	$(CC) -o $(BIN) $(CFLAGS) $(DFLAGS) $(OBJS) $(LIBS)
++	$(CC) -o $(BIN) $(CFLAGS) $(OBJS) $(LIBS)
