@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/12 05:31:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/12 11:06:54 xtraeme Exp $
 #
 
 DISTNAME=	jabberd-2.0.0-a4
@@ -21,14 +21,13 @@ RCD_SCRIPTS=		jabberd
 PKG_SYSCONFSUBDIR=	jabberd
 
 EGDIR=			${PREFIX}/share/examples/jabberd
+SUPPORT_FILES+=         ${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
 
-CONF_FILES=		${EGDIR}/c2s.xml ${PKG_SYSCONFDIR}/c2s.xml
-CONF_FILES+=		${EGDIR}/resolver.xml ${PKG_SYSCONFDIR}/resolver.xml
-CONF_FILES+=    	${EGDIR}/router.xml ${PKG_SYSCONFDIR}/router.xml
-CONF_FILES+=		${EGDIR}/s2s.xml ${PKG_SYSCONFDIR}/s2s.xml
-CONF_FILES+=		${EGDIR}/sm.xml ${PKG_SYSCONFDIR}/sm.xml
+FILES=			c2s resolver router s2s sm
 
-SUPPORT_FILES+= 	${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
+.for f in ${FILES}
+CONF_FILES+=		${EGDIR}/${f}.xml ${PKG_SYSCONFDIR}/${f}.xml
+.endfor
 
 OWN_DIRS=		/var/log/jabberd
 OWN_DIRS+=		/var/db/jabberd
@@ -42,36 +41,21 @@ post-extract:
 	${MV} ${WRKSRC}/etc/sm.xml.dist.in ${WRKSRC}/etc/sm.xml.in
 
 pre-configure:
-	${SED} 	\
-		-e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
-              	< ${WRKSRC}/etc/jabberd.cfg.in > ${WRKSRC}/etc/jabberd.cfg
-	
+
+.for f in ${FILES}
 	${SED}  \
                 -e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
 		-e "s|@@LOGDIR@@|/var/log/jabberd|g " \
 		-e "s|@@BINDIR@@|${PREFIX}/bin|g " \
-                < ${WRKSRC}/etc/c2s.xml.in > ${WRKSRC}/etc/c2s.xml
-	
+		-e "s|@@DBDIR@@|/var/db/jabberd|g " \
+                < ${WRKSRC}/etc/${f}.xml.in > ${WRKSRC}/etc/${f}.xml
+.endfor	
+
+.for f in ${WRKSRC}/etc/jabberd.cfg.in 
 	${SED}  \
-                -e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
-                -e "s|@@LOGDIR@@|/var/log/jabberd|g " \
-		< ${WRKSRC}/etc/resolver.xml.in > ${WRKSRC}/etc/resolver.xml
-        
-	${SED}  \
-                -e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
-                -e "s|@@LOGDIR@@|/var/log/jabberd|g " \
-		< ${WRKSRC}/etc/router.xml.in > ${WRKSRC}/etc/router.xml
-        
-	${SED}  \
-                -e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
-                -e "s|@@LOGDIR@@|/var/log/jabberd|g " \
-		< ${WRKSRC}/etc/s2s.xml.in > ${WRKSRC}/etc/s2s.xml
-        
-	${SED}  \
-                -e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
-                -e "s|@@LOGDIR@@|/var/log/jabberd|g " \
-		-e "s|@@DBDIR@@|/var/db/jabberd|g" \
-		< ${WRKSRC}/etc/sm.xml.in > ${WRKSRC}/etc/sm.xml
+		-e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
+		< ${WRKSRC}/etc/jabberd.cfg.in > ${WRKSRC}/etc/jabberd.cfg
+.endfor
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
