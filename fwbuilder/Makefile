@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/07/27 22:17:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/22 22:12:42 thomasklausner Exp $
 #
 
 DISTNAME=		fwbuilder-1.0.11
@@ -17,7 +17,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 BUILD_USES_MSGFMT=	yes
 BUILD_USES_GETTEXT_M4=	yes
-USE_GCC_SHLIB=		yes
+USE_LANGUAGES=		c c++
 GCC_REQD=		2.95.3
 
 pre-configure:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/11 08:53:48 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/22 22:13:38 thomasklausner Exp $
 #
 
 DISTNAME=		mythtv-0.11
@@ -15,7 +15,7 @@ USE_BUILDLINK3=		yes
 ONLY_FOR_PLATFORM=	Linux-*-*
 
 HAS_CONFIGURE=		YES
-USE_GCC_SHLIB=		# defined
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
