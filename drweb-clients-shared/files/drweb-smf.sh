@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@SH@
 #
-# $NetBSD: drweb-smf.sh,v 1.3 2003/09/14 00:43:09 bubuchka Exp $
+# $NetBSD: drweb-smf.sh,v 1.4 2003/09/16 16:22:25 bubuchka Exp $
 
 # PROVIDE: drwebsmf
 # REQUIRE: DAEMON
