@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/08 05:55:13 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/25 10:07:14 rxg Exp $
 
 DISTNAME=	Chinput-3.0.2
 CATEGORIES=	inputmethod
-MASTER_SITES=	http://www.opencjk.org/~yumj/download/
+MASTER_SITES=	ftp://linux.nctu.edu.tw/dists/gentoo/distfiles/ \
+		http://www.opencjk.org/~yumj/download/
 
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.opencjk.org/~yumj/project-chinput.html
