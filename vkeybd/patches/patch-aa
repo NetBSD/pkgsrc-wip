@@ -1,0 +1,137 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/13 18:44:34 oht Exp $
+--- Makefile.orig	2004-08-31 17:50:11.000000000 +0200
++++ Makefile	2005-02-13 16:56:45.000000000 +0100
+@@ -3,12 +3,14 @@
+ # copyright (c) 1997-2000 by Takashi Iwai
+ #
+ 
+-VERSION = 0.1.16
++VERSION = 0.1.17
+ 
+ #
+ # installation directory
+ #
++.ifndef PREFIX
+ PREFIX = /usr/local
++.endif
+ # binary and Tcl script are put there
+ BIN_DIR = $(PREFIX)/bin
+ # man page
+@@ -27,88 +29,93 @@
+ # device selections -- multiple avaialble
+ # to disable the device, set value 0 (do not comment out!)
+ #
+-USE_AWE = 1
+-USE_MIDI = 1
+-USE_ALSA = 1
++TRUE = 1
++USE_AWE = 0
++USE_MIDI = ${TRUE}
++USE_ALSA = 0
+ USE_LADCCA = 0
+ 
++
+ #
+ # Tcl/Tk library -- depends on your distribution
+ #
+-TCL_VERSION = 8.4
+-TCLLIB = -ltcl$(TCL_VERSION)
++TCL_VERSION = 84
++TCLLIB =  -L$(PREFIX)/lib -ltcl$(TCL_VERSION)
+ TCLINC =
+-TKLIB = -ltk$(TCL_VERSION)
++TKLIB = -L$(PREFIX)/lib -ltk$(TCL_VERSION)
+ TKINC =
+ XLIB = -L/usr/X11R6/lib -lX11
+ XINC = -I/usr/X11R6/include
+-EXTRALIB += -ldl
+ 
+ #----------------------------------------------------------------
+ # device definitions
+ #----------------------------------------------------------------
+ 
+ # AWE device
+-ifeq (1,$(USE_AWE))
++.if  ${USE_AWE} == ${TRUE}
+ DEVICES += -DVKB_USE_AWE
+ DEVOBJS += oper_awe.o
+-endif
++.endif
+ 
+ # MIDI device
+-ifeq (1,$(USE_MIDI))
++.if  ${USE_MIDI} == ${TRUE}
+ DEVICES += -DVKB_USE_MIDI
+ DEVOBJS += oper_midi.o
+-endif
++.endif
+ 
+ # ALSA sequencer
+-ifeq (1,$(USE_ALSA))
++.if  ${USE_ALSA} == ${TRUE}
+ DEVICES += -DVKB_USE_ALSA
+ DEVOBJS += oper_alsa.o
+ EXTRALIB += -lasound
+-endif
++.endif
+ 
+ #
+ # LADCCA stuff
+ #
+-ifeq (1,$(USE_LADCCA))
++.ifdef USE_LADCCA
+ LADCCACFLAGS = $(shell pkg-config --cflags ladcca-1.0) \
+ 	       $(shell pkg-config --exists ladcca-1.0 && echo "-DHAVE_LADCCA" )
+ LADCCALIBS   = $(shell pkg-config --libs ladcca-1.0)
+ DEVICES += $(LADCCACFLAGS)
+ EXTRALIB += $(LADCCALIBS)
+-endif
++.endif
+ 
+ #----------------------------------------------------------------
+ # dependencies
+ #----------------------------------------------------------------
+ 
+-VKB_TCLFILE = $(VKBLIB_DIR)/vkeybd.tcl
++#VKB_TCLFILE =\"$(VKBLIB_DIR)/vkeybd.tcl\"
++
+ 
+-CFLAGS = -Wall -O -DVKB_TCLFILE=\"$(VKB_TCLFILE)\" \
++CFLAGS+=  \
+ 	-DVKBLIB_DIR=\"$(VKBLIB_DIR)\"\
+ 	-DVERSION_STR=\"$(VERSION)\"\
+ 	$(DEVICES) $(XINC) $(TCLINC) $(TKINC) $(LADCCACFLAGS)
+ 
+ TARGETS = vkeybd sftovkb
++vkeybd_OBJECTS = ${DEVOBJS}  vkb.o vkb_device.o
++sftovkb_OBJECTS = sftovkb.o sffile.o malloc.o fskip.o
+ 
+ all: $(TARGETS)
++vkeybd:  $(vkeybd_OBJECTS)
++	$(CC)  -g -O2 -o $@ ${vkeybd_OBJECTS}  -lm  -lpthread $(TKLIB) $(TCLLIB) $(XLIB) $(EXTRALIB) 
+ 
+-vkeybd: vkb.o vkb_device.o $(DEVOBJS) $(EXTRAOBJS)
+-	$(CC) -o $@ $^ $(TKLIB) $(TCLLIB) $(XLIB) $(EXTRALIB) -lm
+-
+-sftovkb: sftovkb.o sffile.o malloc.o fskip.o
+-	$(CC) -o $@ $^ -lm
++sftovkb: $(sftovkb_OBJECTS)
++	$(CC)  -g -O2  -o $@ $(sftovkb_OBJECTS) -lm
+ 
+ install: $(TARGETS) vkeybd.tcl vkeybd.list vkeybdmap*
+ 	mkdir -p $(DESTDIR)$(BIN_DIR)
+ 	install -c -m 755 vkeybd $(DESTDIR)$(BIN_DIR)
+ 	install -c -m 755 sftovkb $(DESTDIR)$(BIN_DIR)
+-	rm -f $(DESTDIR)$(BIN_DIR)/vkeybd.tcl
++	rm -f $(DESTDIR)$(VKBLIB_DIR)/vkeybd.tcl
+ 	mkdir -p $(DESTDIR)$(VKBLIB_DIR)
+ 	install -c -m 444 vkeybd.tcl $(DESTDIR)$(VKBLIB_DIR)
+ 	install -c -m 444 vkeybd.list $(DESTDIR)$(VKBLIB_DIR)
+ 	install -c -m 444 vkeybdmap* $(DESTDIR)$(VKBLIB_DIR)
+-
++	mv vkeybd.man  vkeybd.1
++	install -c -m 444  vkeybd.1 $(PREFIX)/man/man1
++	mv vkeybd.1  vkeybd.man
+ install-man:
+ 	mkdir -p $(DESTDIR)$(MAN_DIR)/man$(MAN_SUFFIX)
+ 	install -c -m 444 vkeybd.man $(DESTDIR)$(MAN_DIR)/man$(MAN_SUFFIX)/vkeybd.$(MAN_SUFFIX)

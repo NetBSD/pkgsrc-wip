@@ -1,0 +1,3 @@
+Provide support for more devices than rmidi.
+Provide interface to Timidity.
+Provide input interface to midi keyboard  (rmidi).

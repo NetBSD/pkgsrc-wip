@@ -1,0 +1,12 @@
+This is a virtual keyboard for AWE, MIDI and ALSA drivers.
+It's a simple fake of a MIDI keyboard on X-windows system.
+Enjoy a music with your mouse and "computer" keyboard :-)
+
+The program requires Tcl7.5/Tk4.1 or newer libraries.
+This program supports:
+  - ALSA sequencer (ver.0.5.x or 0.9.x)
+  - AWE driver on OSS  (ver.0.4.3)
+  - MIDI device on OSS and ALSA
+Since the most of the part is written by Tcl/Tk script, it'll be not
+so difficult to apply this program to other systems.
+http://mitglied.lycos.de/iwai/awedrv.html?#MIDI
