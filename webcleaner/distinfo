@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/27 17:09:31 mpasternak Exp $
+
+SHA1 (webcleaner-2.8.tar.gz) = fcd39cae3b88b13ec29742d68e7f83bdda0aa01e
+Size (webcleaner-2.8.tar.gz) = 1189177 bytes
+SHA1 (patch-aa) = a9c121b33835ad4ef2ddc13f5cf9caeab6398aef
