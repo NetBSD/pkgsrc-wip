@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2003/05/06 21:13:27 lsed Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/06 22:34:55 lsed Exp $
 #
 
 DISTNAME=	dovecot-0.99.9.1
 CATEGORIES=	mail
 MASTER_SITES=	http://dovecot.procontrol.fi/
+
+PATCH_SITES=	${MASTER_SITES}
+PATCHFILES=	freebsd.patch fetch.patch
 
 MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://dovecot.procontrol.fi/
@@ -18,7 +21,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--enable-ssl=openssl
 
-.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
+.if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-ldap
 .include "../../databases/openldap/buildlink2.mk"
 .endif
@@ -29,13 +32,23 @@ CONFIGURE_ARGS+=	--enable-ipv6
 
 RCD_SCRIPTS=	dovecot
 
+DOVECOT_USER?=	dovecot
+DOVECOT_GROUP?=	dovecot
+PKG_GROUPS=	${DOVECOT_GROUP}
+PKG_USERS=	${DOVECOT_USER}:${DOVECOT_GROUP}::Dovecot\\ IMAP/POP3\\ user
+
 EGDIR=		${PREFIX}/share/examples/dovecot
 CONF_FILES=	${EGDIR}/dovecot.conf.default ${PKG_SYSCONFDIR}/dovecot.conf
+
+PLIST_SRC=	${WRKDIR}/PLIST ${PKGDIR}/PLIST
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/dovecot-example.conf	\
 		${EGDIR}/dovecot.conf.default
+	# Generate modules part of PLIST dynamically.  It can be different
+	# depending on OS.
+	cd ${PREFIX} && ${FIND} libexec/dovecot -type f > ${WRKDIR}/PLIST
 
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
