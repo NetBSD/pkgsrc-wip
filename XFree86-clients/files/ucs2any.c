@@ -697,7 +697,7 @@ int main(int argc, char *argv[])
 				zstrcat(&header, "COMMENT ");
 				zstrcat(&header, match(l, 1));
 				zstrcat(&header, "\n");
-			} else if (regex(l, "^COMMENT[[:space:]]+$Id: ucs2any.c,v 1.1 2003/07/25 18:25:21 xtraeme Exp $[[:space:]]*$"))
+			} else if (regex(l, "^COMMENT[[:space:]]+$Id: ucs2any.c,v 1.2 2003/08/08 14:03:22 xtraeme Exp $[[:space:]]*$"))
 			{
 				zstrcat(&header, "COMMENT Derived from ");
 				zstrcat(&header, match(l, 1));
