@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/07/09 17:17:15 xtraeme Exp $
+$NetBSD: MESSAGE,v 1.2 2003/08/08 14:53:07 adrian_p Exp $
 
 The MySQL directory `${MYSQL_DATADIR}' should be owned by the
 user `${MYSQL_USER}' and group `${MYSQL_GROUP}'.  This can be done with:
@@ -13,6 +13,10 @@ the MySQL root user!  This is done by running both:
 (The "Enter password:" prompt is asking for the existing password.
 As there is no existing password, just press Return.)
 
-See the manual for more instructions.
+There is now a script distributed with mysql that can help you lock
+down an installation.  This script has been installed to 
+${PREFIX}/bin/mysql_secure_installation.
+
+See the manual and the mysql web site for more instructions.
 
 ===========================================================================
