@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/06/14 14:07:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/18 17:44:03 ppostma Exp $
 #
 
 DISTNAME=		tcllib-1.6.1
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcllib/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		peter@pointless.nl
 HOMEPAGE=		http://tcllib.sourceforge.net/
 COMMENT=		Collection of utility modules for Tcl
 
