@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.475 2003/09/18 14:51:56 xtraeme Exp $
-# $NetBSD: Makefile,v 1.475 2003/09/18 14:51:56 xtraeme Exp $
+# $Id: Makefile,v 1.476 2003/09/18 18:15:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.476 2003/09/18 18:15:55 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -125,6 +125,8 @@ SUBDIR+=	gift
 SUBDIR+=	giftcurs
 SUBDIR+=	giftui
 SUBDIR+=	gimp-current
+SUBDIR+=	gkrellm-launch
+SUBDIR+=	gkrellm-reminder
 SUBDIR+=	gkrellm2
 SUBDIR+=	gkrellm2-flynn
 SUBDIR+=	gkrellm2-launch
@@ -135,7 +137,6 @@ SUBDIR+=	gkrellm2-share
 SUBDIR+=	gkrellm2-snmp
 SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
-SUBDIR+=	gkrellm-launch
 SUBDIR+=	gl-117
 SUBDIR+=	glaxium
 SUBDIR+=	gnome2-extras
@@ -153,6 +154,7 @@ SUBDIR+=	gtick
 SUBDIR+=	gtk-engines-thinice
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtk2-engines-mist
+SUBDIR+=	gtkpod
 SUBDIR+=	gurlchecker
 SUBDIR+=	hasciicam
 SUBDIR+=	ht
@@ -229,8 +231,8 @@ SUBDIR+=	mhonarc
 SUBDIR+=	mit-krb5
 SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
-SUBDIR+=	mplusfonts
 SUBDIR+=	mopac
+SUBDIR+=	mplusfonts
 SUBDIR+=	mtf
 SUBDIR+=	muse
 SUBDIR+=	mutella
@@ -302,6 +304,7 @@ SUBDIR+=	perltidy
 SUBDIR+=	pgp6
 SUBDIR+=	pgpenvelope
 SUBDIR+=	php-jpgraph
+#SUBDIR+=	php4			# not a package
 SUBDIR+=	php4-exif
 SUBDIR+=	picasm
 SUBDIR+=	picprog
