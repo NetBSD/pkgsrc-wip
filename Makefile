@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.147 2003/05/08 05:10:38 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.147 2003/05/08 05:10:38 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.148 2003/05/08 17:36:09 lsed Exp $
+# $NetBSD: Makefile,v 1.148 2003/05/08 17:36:09 lsed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -17,6 +17,7 @@ SUBDIR+=	billardgl
 SUBDIR+=	bugzilla
 SUBDIR+=	byacc
 SUBDIR+=	celestia
+SUBDIR+=	celestia-kde
 SUBDIR+=	cherokee
 SUBDIR+=	chksniff
 SUBDIR+=	cjk-latex
