@@ -1,5 +1,5 @@
 	# Create compiler driver scripts in ${WRKDIR}.
-	(cd ${BUILDLINK_PREFIX.gccAda-3.4.0}/bin && bin_files=`ls gcc cc cpp` && \
+	(cd ${BUILDLINK_PREFIX.gccAda-3.4.0}/bin && bin_files=`${FIND} . -type f \( -perm -0100 \)` && \
 	cd ${WRKDIR}/.gcc/bin && \
 	for _target_ in $${bin_files} ; do \
 		${ECHO} '#!${TOOLS_SHELL}' > $${_target_} && \

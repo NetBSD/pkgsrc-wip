@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2004/05/19 11:48:20 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2004/05/20 16:58:41 johnrshannon Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCCADA_BUILDLINK3_MK:=  ${GCCADA_BUILDLINK3_MK}+
@@ -14,21 +14,20 @@ BUILDLINK_PACKAGES+=    gccAda
 .if !empty(GCCADA_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gccAda+=      gccAda>=3.4.0
 BUILDLINK_PKGSRCDIR.gccAda?=    ../../wip/gcc-3.4-ada
-BUILDLINK_ENV+= PATH=${PATH}:${LOCALBASE}/gccAda-3.4.0/bin
-BUILDLINK_LDFLAGS.gccAda+=	-Wl,-R${LOCALBASE}/gccAda-3.4.0/lib
+BUILDLINK_ENV+= ADAC=${LOCALBASE}/gccAda-3.4.0/bin/gcc
 _GCC_ARCHDIR!=	${DIRNAME} `${LOCALBASE}/gccAda-3.4.0/bin/gcc --print-libgcc-file-name`
 .  if empty(_GCC_ARCHDIR:M*not_found*)
-BUILDLINK_ENV+=	ADA_INCLUDE_PATH=${_GCC_ARCHDIR}/adainclude
-BUILDLINK_ENV+=	ADA_OBJECT_PATH=${_GCC_ARCHDIR}/adalib
-BUILDLINK_RPATHDIRS.gccAda+=	${_GCC_ARCHDIR}
-BUILDLINK_LDFLAGS.gccAda+=	-Wl,-R${_GCC_ARCHDIR}
+BUILDLINK_RPATHDIRS.gccAda+=       ${LOCALBASE}/gccAda-3.4.0/lib
+BUILDLINK_RPATHDIRS.gccAda+=       ${_GCC_ARCHDIR}/adalib
+BUILDLINK_RPATHDIRS.gccAda+=       ${_GCC_ARCHDIR}
+BUILDLINK_LDFLAGS.gccAda+=	-L${LOCALBASE}/gccAda-3.4.0/lib -Wl,-R${LOCALBASE}/gccAda-3.4.0/lib
+BUILDLINK_LDFLAGS.gccAda+=	-L${_GCC_ARCHDIR} -Wl,-R${_GCC_ARCHDIR}
 .  endif
 .endif  # GCCADA_BUILDLINK3_MK
 
 BUILDLINK_PKGSRCDIR.gccAda?=     ../../wip/gcc-3.4-ada
 BUILDLINK_CONTENTS_FILTER.gccAda= \
-	${EGREP} '(bin.*/|include.*/|\.h$$|\.pc$$|lib.*/lib[^/]*$$)'
-BUILDLINK_TRANSFORM.gccAda=	-e s,/gccAda-3.4.0/bin/gnat,/bin/gnat,
+	${EGREP} '(libexec.*|bin.*/|include.*/|\.h$$|\.pc$$|lib.*/lib[^/]*$$|ada.*path)'
 
 # Packages that link against shared libraries need a full dependency.
 .  if defined(USE_GCC_SHLIB)

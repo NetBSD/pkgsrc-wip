@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2004/05/19 11:48:20 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.43 2004/05/20 16:58:41 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
@@ -13,9 +13,11 @@ COMMENT=	This is the gcc 3.4 Ada compiler
 
 GCC_VERSION=	3.4.0
 
+BUILD_USES_MSGFMT=	YES
+
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
-USE_GNU_TOOLS+=		make
+USE_GNU_TOOLS=		make
 HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=        --enable-languages="c,ada"
@@ -23,7 +25,6 @@ WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 .include "../../mk/bsd.prefs.mk"
-
 
 # Ada bootstrap compiler section
 # An Ada compiler is required to build the Ada compiler. Two
@@ -33,15 +34,15 @@ may be used:
 # You may also specify the path of a gcc/gnat Ada compiler
 # outside of the pkgsrc system by specifying the full path
 # of the compiler (example) below:
-#ALT_GCC=       /usr/pkg.old/gccAda-3.4.0/bin/gcc
+#ALT_GCC=	/usr/pkg/gcc-3.4.0/bin/gcc
 .if defined(ALT_GCC)
-.     if exists(${ALT_GCC})
-ALT_GCC_PREFIX:=        ${ALT_GCC:H}/..
-ALT_GCC_RTS!=   ${FIND} ${ALT_GCC_PREFIX} -name adalib
-RALT_GCC_RTS=   ${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
-.     else
+.  if exists(${ALT_GCC})
+ALT_GCC_PREFIX:=	${ALT_GCC:H}/..
+ALT_GCC_RTS!=	${FIND} ${ALT_GCC_PREFIX} -name adalib
+RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
+.  else
 PKG_SKIP_REASON=	"Missing bootstrap Ada compiler"
-.     endif
+.  endif
 .endif
 .if !defined(USE_GCC3) && !defined(USE_GCC34) && !defined(ALT_GCC)
 PKG_SKIP_REASON=	"An Ada bootstrap compiler must be specified"
@@ -66,8 +67,6 @@ PTHREAD_OPTS+=		require native
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include
 CFLAGS+=	-I${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
-GCC_ARCHSUBDIR=	${GCC_SUBPREFIX}/lib/gcc/${GCC_PLATFORM}/${GCC_VERSION}
-GCC_ARCHDIR=	${PREFIX}/${GCC_ARCHSUBDIR}
 GCC_DIR=	${WRKDIR}/.gcc
 
 post-patch:
@@ -102,7 +101,8 @@ do-configure:
 	 (cd ${WRKDIR}/obj && ${SETENV} ${CONFIGURE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS}))
 
 do-build:
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap)
+	(cd ${WRKDIR}/obj/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib_and_tools)
 
 do-test:
 .if (${MACHINE_GNU_ARCH} == "x86_64")
@@ -113,6 +113,12 @@ do-test:
 do-install:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} ${INSTALL} \
 	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc)
+	(SPECPATH=`${GCC_PREFIX}/bin/gcc -print-file-name=specs` && \
+	for EXPANDEDSPECPATH in $${SPECPATH} ; do \
+		SPECDIR=`${DIRNAME} $${EXPANDEDSPECPATH}`; \
+		${ECHO} $${SPECDIR}/adainclude > $${SPECDIR}/ada_source_path;	\
+		${ECHO} $${SPECDIR}/adalib > $${SPECDIR}/ada_object_path;	\
+        done )
 
 post-install:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/ada > ${WRKDIR}/ada
@@ -127,7 +133,6 @@ post-install:
 		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
 
-.include "../../mk/bsd.prefs.mk"
 .if defined(USE_GCC3)
 .include "../../lang/gcc3-ada/buildlink3.mk"
 .elif defined(USE_GCC34)
