@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/30 20:03:00 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/02 21:39:50 blef Exp $
 #
 
 DISTNAME=	hugov30_unix_source
@@ -14,7 +14,7 @@ COMMENT=	Interactive fiction design system and interpreter
 
 SITES_hugolib.zip=http://www.ifarchive.org/if-archive/programming/hugo/library/
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 # uses halfkey (present since 1.6M)
 INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]* NetBSD-1.5* NetBSD-1.6 NetBSD-1.6.*
@@ -33,5 +33,5 @@ do-install:
 		${INSTALL_DATA} ${WRKDIR}/$$f ${LIBDIR}; \
 	done
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:23:09 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/02 21:34:47 blef Exp $
 #
 
 DISTNAME=		hasciicam-0.9
@@ -11,11 +11,11 @@ MAINTAINER=		benedikt.meurer@unix-ag.uni-siegen.de
 HOMEPAGE=		http://ascii.dyne.org/
 COMMENT=		Live ascii video on the web
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-.include "../../graphics/aalib/buildlink2.mk"
+.include "../../graphics/aalib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/02 21:42:49 blef Exp $
 #
 
 DISTNAME=	Data-TemporaryBag-0.04
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/search?dist=Data-TemporaryBag
 COMMENT=	Handle long size data using temporary file
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Data/TemporaryBag/.packlist
 

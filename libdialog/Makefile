@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/13 07:56:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/02 21:36:40 blef Exp $
 
 DISTNAME=		libdialog-0.4
 CATEGORIES=		devel
@@ -7,7 +7,7 @@ MASTER_SITES=		http://energyhq.homeip.net/files/
 MAINTAINER=		flynn@energyhq.homeip.net
 COMMENT=		Port of FreeBSD's console menu system
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_NCURSES=		YES
 
 do-install:
@@ -25,5 +25,5 @@ do-install:
 		${INSTALL_DATA} $${i} ${PREFIX}/share/examples/libdialog; \
 	done
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
