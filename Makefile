@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1262 2004/05/09 05:42:32 minskim Exp $
-# $NetBSD: Makefile,v 1.1262 2004/05/09 05:42:32 minskim Exp $
+# $Id: Makefile,v 1.1263 2004/05/09 15:15:30 minskim Exp $
+# $NetBSD: Makefile,v 1.1263 2004/05/09 15:15:30 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -445,7 +445,6 @@ SUBDIR+=	p5-Locale-Maketext-Lexicon
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-NetPacket
 SUBDIR+=	p5-Parallel-ForkManager
-SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-Text-Tabs+Wrap
