@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/29 06:01:22 dolecek Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/03 10:18:23 cubidou Exp $
 #
 
 DISTNAME=	nagios-1.2
@@ -13,22 +13,7 @@ COMMENT=	Network monitor
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../wip/nagios-base/Makefile.common"
-
-BUILD_DEFS+=	NAGIOS_USE_MYSQL NAGIOS_USE_POSTGRESQL
-
-.if defined(NAGIOS_USE_MYSQL)
-CONFIGURE_ARGS+=	--with-mysql-lib=${LOCALBASE}/lib/mysql		\
-			--with-mysql-inc=${LOCALBASE}/include/mysql	\
-			--with-mysql-xdata
-.include "../../mk/mysql.buildlink3.mk"
-.endif
-
-.if defined(NAGIOS_USE_POSTGRESQL)
-CONFIGURE_ARGS+=	--with-pgsql-lib=${LOCALBASE}/pgsql \
-			--with-pgsql-inc=${LOCALBASE}/pgsql \
-			--with-pgsql-xdata
-.include "../../mk/pgsql.buildlink3.mk"
-.endif
+.include "options.mk"
 
 CONFIGURE_ARGS+=	--with-gd-lib=${LOCALBASE}/lib		\
 			--with-gd-inc=${LOCALBASE}/include	\
