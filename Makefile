@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1628 2005/01/22 15:48:11 hubertf Exp $
-# $NetBSD: Makefile,v 1.1628 2005/01/22 15:48:11 hubertf Exp $
+# $Id: Makefile,v 1.1629 2005/01/23 17:47:31 ivaniclixx Exp $
+# $NetBSD: Makefile,v 1.1629 2005/01/23 17:47:31 ivaniclixx Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -619,6 +619,7 @@ SUBDIR+=	pam-mysql
 SUBDIR+=	pam-pop3
 SUBDIR+=	panoramixext
 SUBDIR+=	parsifal
+SUBDIR+=	pasmo
 SUBDIR+=	passepartout
 SUBDIR+=	pbl
 SUBDIR+=	pcsx
