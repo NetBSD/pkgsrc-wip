@@ -1,4 +1,12 @@
 later when available, package
-Xdmcp - X Display Manager Control Protocol library
+ Xdmcp - X Display Manager Control Protocol library
+ libXt (not available yet from freedesktop.org)
 
 - any want to maintain this?
+
+Make sure that this uses correct major and minor numbers
+for libraries. Mine installed:
+/usr/lib/libX11.so.0
+/usr/lib/libX11.so.0.0
+My workaround was to create symlink and then I could use xev client
+which also used /usr/lib/libXau.so.0.
