@@ -1,4 +1,4 @@
-$Id: TODO,v 1.1.1.1 2004/01/01 16:58:44 cjep Exp $
+$Id: TODO,v 1.2 2004/01/01 17:08:56 cjep Exp $
 
 Hopefully I'll get to these soon.
 
@@ -15,4 +15,3 @@ Query for A records done, 1 answer, status: no error
 The following answer is not authoritative:
 Answer section contains (1 record):
 www.cisco.com           IN      A       198.133.219.25
-
