@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.459 2003/09/17 16:13:14 xtraeme Exp $
-# $NetBSD: Makefile,v 1.459 2003/09/17 16:13:14 xtraeme Exp $
+# $Id: Makefile,v 1.460 2003/09/17 16:21:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.460 2003/09/17 16:21:51 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -285,6 +285,7 @@ SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-gtk2
+SUBDIR+=	palm-db-tools
 SUBDIR+=	pdns
 SUBDIR+=	pear-Date
 SUBDIR+=	pear-HTML_Common
