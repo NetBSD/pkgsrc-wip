@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/26 23:14:37 jeremy-c-reed Exp $
+include/X11/Xauth.h
+lib/libXau.a
+lib/libXau.la
+lib/libXau.so
+lib/libXau.so.0
+lib/libXau.so.0.0
+lib/pkgconfig/xau.pc
