@@ -1,0 +1,5 @@
+Drow is an ELF linux analyzer coded in C.It is aimed to
+the low-level programmer. It is a console application which
+displays ELF file information in an human readable format,
+providing different options for different parts/aims of
+the file data.
