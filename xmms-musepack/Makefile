@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/01 13:04:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/30 02:45:47 grantbeattie Exp $
 #
 
 DISTNAME=	xmms-musepack-0.94
@@ -13,7 +13,7 @@ COMMENT=	Musepack audio output plugin for XMMS
 USE_BUILDLINK2=	yes
 USE_LIBTOOL=	yes
 
-CFLAGS+=	-DVERSION=\"\\\"${PKGVERSION}\\\"\"
+CFLAGS+=	-DVERSION='"${PKGVERSION}"'
 XMMS_CONFIG=	${BUILDLINK_PREFIX.xmms}/bin/xmms-config
 
 do-build:
