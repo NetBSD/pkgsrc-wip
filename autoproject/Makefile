@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2004/01/22 20:36:05 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/15 12:50:03 jmmv Exp $
 
 DISTNAME=		autoproject-0.17
 CATEGORIES=		devel
 MASTER_SITES=		http://www.mv.com/ipusers/vanzandt/ \
 			http://www.ibiblio.org/pub/Linux/devel/
 
-MAINTAINER=		benedikt.meurer@unix-ag.uni-siegen.de
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.mv.com/ipusers/vanzandt/
 COMMENT=		Creates a skeleton source package for a new program
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/02 21:34:47 blef Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/15 12:50:03 jmmv Exp $
 #
 
 DISTNAME=		hasciicam-0.9
@@ -7,7 +7,7 @@ MASTER_SITES=		http://ascii.dyne.org/ \
 			http://www.autistici.org/dyne/hasciicam/ \
 			http://freesoftware.fsf.org/download/hasciicam/
 
-MAINTAINER=		benedikt.meurer@unix-ag.uni-siegen.de
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ascii.dyne.org/
 COMMENT=		Live ascii video on the web
 

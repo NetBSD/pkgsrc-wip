@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/03 09:42:44 bmeurer Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/15 12:50:03 jmmv Exp $
 
 DISTNAME=	# empty
 PKGNAME=	tex-foiltex-2.1.4a
@@ -6,7 +6,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/supported/foiltex/}
 DISTFILES=	foiltex.dtx foiltex.ins
 
-MAINTAINER=	benedikt.meurer@unix-ag.uni-siegen.de
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.tex.ac.uk/tex-archive/help/Catalogue/entries/foiltex.html
 COMMENT=	LaTeX2e class for overhead transparencies
 
