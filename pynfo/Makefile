@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/11/26 19:31:37 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/02 05:11:34 blef Exp $
 #
 
 DISTNAME=		pynfo-0.6.3
@@ -11,7 +11,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://pynfo.sourceforge.net/
 COMMENT=		Nice, configureable info bot in Python
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 

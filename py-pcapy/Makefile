@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/18 22:52:31 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/02 05:09:39 blef Exp $
 #
 
 DISTNAME=		pcapy-0.10.2
@@ -10,7 +10,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://oss.corest.com/projects/pcapy.html
 COMMENT=		Python interface to pcap library
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
@@ -40,7 +40,7 @@ libpcap-buildlink: _BUILDLINK_USE
 #
 # If the buildlink wasn't broken, I could use this: 
 #
-# .include "../../net/libpcap/buildlink2.mk"
+# .include "../../net/libpcap/buildlink3.mk"
 #
 
 .include "../../mk/bsd.pkg.mk"

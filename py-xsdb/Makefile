@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/15 13:23:24 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/02 05:08:26 blef Exp $
 #
 
 DISTNAME=		xsdb
@@ -11,7 +11,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://xsdb.sourceforge.net/
 COMMENT=		Concurrent database with concurrency control and recovery
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
