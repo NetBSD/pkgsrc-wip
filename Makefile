@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1312 2004/06/07 17:49:05 minskim Exp $
-# $NetBSD: Makefile,v 1.1312 2004/06/07 17:49:05 minskim Exp $
+# $Id: Makefile,v 1.1313 2004/06/07 21:59:24 dillo Exp $
+# $NetBSD: Makefile,v 1.1313 2004/06/07 21:59:24 dillo Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -143,6 +143,7 @@ SUBDIR+=	foomatic-db
 SUBDIR+=	foomatic-db-engine
 SUBDIR+=	foomatic-filters
 SUBDIR+=	foomatic-filters-cups
+SUBDIR+=	freedroid
 SUBDIR+=	freevo
 SUBDIR+=	frontpage
 SUBDIR+=	fsv
