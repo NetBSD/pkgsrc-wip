@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/26 16:58:59 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/26 17:02:13 minskim Exp $
 #
 
 DISTNAME=		lucy-1.18p
@@ -8,6 +8,10 @@ MASTER_SITES=		ftp://ftp.tigr.org/pub/software/Lucy/
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.tigr.org/software
 COMMENT=		Sequence Cleanup Program
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lucy ${PREFIX}/bin
