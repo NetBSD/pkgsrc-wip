@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/09 23:25:43 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/02 20:10:32 minskim Exp $
 #
 
 DISTNAME=		CVSToys-1.0.9
@@ -15,7 +15,7 @@ USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
-DEPENDS+=		${PYPKGPREFIX}-Twisted-[0-9]*:../../wip/py-twisted
+DEPENDS+=		${PYPKGPREFIX}-Twisted-[0-9]*:../../net/py-twisted
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
