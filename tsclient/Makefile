@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 16:40:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/25 07:37:47 xtraeme Exp $
 #
 
 DISTNAME=	tsclient-0.104
@@ -20,4 +20,5 @@ USE_X11=		yes
 USE_PKGLOCALEDIR=	yes
 
 .include "../../x11/gnome-panel/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
