@@ -1,0 +1,5 @@
+- depends on vim-gtk2 but it should depend on any one of the graphical vim
+   packages.
+
+- the install directory string "vim63" is hard coded, it would be better if
+   that could be derived from the vim package somehow
