@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/14 22:00:38 marc Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/29 13:14:52 marc Exp $
 #
 
 DISTNAME=		Twisted-1.0.6
@@ -8,7 +8,7 @@ MASTER_SITES=		http://twisted.sourceforge.net/ \
 			http://twistedmatrix.com/downloads/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		marc@informatik.uni-bremen.de
+MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://www.twistedmatrix.com/
 COMMENT=		Framework for writing networked applications
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/07 12:29:07 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/29 13:14:52 marc Exp $
 #
 
 DISTNAME=	mod_python-3.0.3
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	http://www.apache.org/dist/httpd/modpython/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	marc@informatik.uni-bremen.de
+MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.modpython.org/
 COMMENT=	Module that embeds the Python interpreter within the server
 
