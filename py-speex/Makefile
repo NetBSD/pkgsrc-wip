@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/24 01:41:14 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/26 17:19:09 mpasternak Exp $
 #
 
-DISTNAME=		pySpeex
+DISTNAME=		pySpeex-0
 PKGNAME=		${PYPKGPREFIX}-speex
 WRKSRC=			${WRKDIR}/python/
 CATEGORIES=		audio
@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.freenet.org.nz/python/pySpeex/
 
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.freenet.org.nz/python/pySpeex/
-COMMENT=		speex bindings for Python; see speex package for details
+COMMENT=		Speex bindings for Python; see speex package for details
 
 USE_BUILDLINK2=		yes
 PY_PATCHPLIST=		yes
