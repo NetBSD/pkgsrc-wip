@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/25 14:36:24 marc Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/08 09:59:30 marc Exp $
 #
 
 DISTNAME=	generateDS-1.4b
@@ -10,7 +10,7 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.rexx.com/~dkuhlman/
 COMMENT=	Python XML data binding library
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
