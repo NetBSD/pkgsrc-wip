@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1654 2005/02/15 20:57:35 airhead Exp $
-# $NetBSD: Makefile,v 1.1654 2005/02/15 20:57:35 airhead Exp $
+# $Id: Makefile,v 1.1655 2005/02/15 22:57:53 airhead Exp $
+# $NetBSD: Makefile,v 1.1655 2005/02/15 22:57:53 airhead Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -838,6 +838,7 @@ SUBDIR+=	streamripper
 SUBDIR+=	stunnel3
 SUBDIR+=	sudoscript
 SUBDIR+=	sun-j2me
+SUBDIR+=	sunterlib
 SUBDIR+=	superkaramba
 SUBDIR+=	svgalib
 SUBDIR+=	swami
