@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/28 09:16:46 blef Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/28 09:48:45 xtraeme Exp $
 #
 
 DISTNAME=	gtk-thinice-engine-2.0.2
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-thinice-engine/2.0/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://thinice.sourceforge.net/
 COMMENT=	Simple, clean theme engine
 

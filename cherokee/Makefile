@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/06 20:32:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/28 09:48:43 xtraeme Exp $
 #
 
 DISTNAME=	cherokee-0.4.4-pre3
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/cherokee-0.4.4
 CATEGORIES=	www
 MASTER_SITES=	ftp://alobbs.com/cherokee/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://alobbs.com/cherokee/
 COMMENT=	Extremely fast and tiny web server
 

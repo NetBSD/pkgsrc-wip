@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/31 02:26:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/28 09:48:44 xtraeme Exp $
 #
 
 DISTNAME=	ezbounce-1.04a
@@ -9,7 +9,7 @@ PATCHFILES=	ezb-1.04a-crash-fix-patch
 PATCH_DIST_STRIP=	-p1
 PATCH_SITES=	${MASTER_SITES}
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://druglord.freelsd.org/ezbounce/
 COMMENT=	Highly Configurable IRC Proxy
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/05 02:06:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/28 09:48:43 xtraeme Exp $
 #
 
 DISTNAME=	mod-xslt-1.0.0rc1
@@ -6,7 +6,7 @@ WRKSRC=         ${WRKDIR}/mod-xslt
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mod-xslt/}
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.mod-xslt.com/mod-xslt/
 COMMENT=	Apache2 module which transforms XML documents using XSL
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/18 09:47:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/28 09:48:45 xtraeme Exp $
 #
 
 DISTNAME=	glaxium_0.5
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	games
 MASTER_SITES=	http://xhosxe.free.fr/glaxium/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://xhosxe.free.fr/glaxium/
 COMMENT=	Space-ship OpenGL shoot them up
 

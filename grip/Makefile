@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/05/30 18:22:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/28 09:48:45 xtraeme Exp $
 #
 
 DISTNAME=	grip-3.0.7
 CATEGORIES=	audio
 MASTER_SITES=	http://www.nostatic.org/grip/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.nostatic.org/grip/
 COMMENT=	CD-player and CD-ripper for the GNOME desktop
 

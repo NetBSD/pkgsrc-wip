@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/14 14:38:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/28 09:48:43 xtraeme Exp $
 #
 
 DISTNAME=	dancer-ircd-1.0.31+maint8-fn6
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/+maint8-fn6/m8/}
 CATEGORIES=	chat
 MASTER_SITES=	http://freenode.net/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://freenode.net/dancer_ircd.shtml
 COMMENT=	Irc daemon based on hybrid ircd
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2003/07/02 08:55:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/28 09:48:47 xtraeme Exp $
 #
 
 DISTNAME=	trickle-1.06
 CATEGORIES=	net
 MASTER_SITES=	http://monkey.org/~marius/trickle/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://monkey.org/~marius/trickle/
 COMMENT=	Portable lightweight userspace bandwidth shaper
 

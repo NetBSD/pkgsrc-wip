@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/06/03 16:59:38 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2003/08/28 09:48:47 xtraeme Exp $
 #
 
 DISTNAME=	weewm-0.01
@@ -6,7 +6,7 @@ WRKSRC=         ${WRKDIR}/weewm
 CATEGORIES=	wm
 MASTER_SITES=	http://www.weewm.org/download/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.weewm.org/
 COMMENT=	Fast and ultra light windowmanager with total keyboard control
 

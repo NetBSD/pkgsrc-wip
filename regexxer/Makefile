@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/24 09:35:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/28 09:48:47 xtraeme Exp $
 #
 
 DISTNAME=	regexxer-0.4
 CATEGORIES=	devel gnome2
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=regexxer/}
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://regexxer.sourceforge.net/
 COMMENT=	Interactive tool for performing search and replace operations
 

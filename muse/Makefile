@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/03 05:25:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/28 09:48:46 xtraeme Exp $
 #
 
 DISTNAME=	MuSE-0.8.1
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://muse.dyne.org/releases/ \
 		http://savannah.nongnu.org/download/muse/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://muse.dyne.org/
 COMMENT=	Multiple Streaming Engine
 

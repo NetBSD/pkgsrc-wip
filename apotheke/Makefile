@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/17 07:15:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/28 09:48:43 xtraeme Exp $
 #
 
 DISTNAME=	apotheke-0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/apotheke/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://apotheke.berlios.de/
 COMMENT=	CVS view for Nautilus
 

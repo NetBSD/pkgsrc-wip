@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/27 18:55:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/28 09:48:43 xtraeme Exp $
 #
 
 DISTNAME=	dpkg_1.9.21
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://packages.debian.org/stable/base/dpkg.html
 COMMENT=	Package maintenance system for Debian
 

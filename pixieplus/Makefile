@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/16 16:03:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/28 09:48:46 xtraeme Exp $
 #
 
 DISTNAME=	pixieplus-0.5.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.mosfet.org/pixie/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.mosfet.org/pixie/
 COMMENT=	Free, fast, and feature packed image browse for KDE
 

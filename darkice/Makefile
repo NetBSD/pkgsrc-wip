@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2003/06/25 10:45:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2003/08/28 09:48:43 xtraeme Exp $
 #
 
 DISTNAME=	darkice-0.13.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darkice/}
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://darkice.sourceforge.net/
 COMMENT=	IceCast, IceCast2 and ShoutCast live audio streamer
 
@@ -21,8 +21,7 @@ CONFIGURE_ARGS+=	--with-lame-prefix=${BUILDLINK_PREFIX.lame}
 EGDIR=		${PREFIX}/share/examples/darkice
 HTMLDIR=	${PREFIX}/share/doc/html/darkice
 
-CONF_FILES=	${PREFIX}/share/examples/darkice/darkice.conf.default \
-	    	${PKG_SYSCONFDIR}/darkice.conf
+CONF_FILES=	${EGDIR}/darkice.conf.default ${PKG_SYSCONFDIR}/darkice.conf
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR} ${HTMLDIR}

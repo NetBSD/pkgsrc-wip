@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2003/08/05 03:26:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/28 09:48:47 xtraeme Exp $
 #
 
 DISTNAME=	poedit-1.2.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poedit/}
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://poedit.sourceforge.net/
 COMMENT=	Cross-platform gettext catalogs (.po files) editor
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/08/05 03:21:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2003/08/28 09:48:46 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0.0-a5
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/d-2.0.0-a/d2-2.0rc/}
 CATEGORIES=		chat
 MASTER_SITES=		http://www.jabberstudio.org/files/jabberd2/
 
-MAINTAINER=		jrp@hispabsd.org
+MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.jabberstudio.org/
 COMMENT=		Instant messaging server ( version 2 )
 

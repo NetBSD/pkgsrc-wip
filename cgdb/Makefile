@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/25 22:17:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/28 09:48:43 xtraeme Exp $
 #
 
 DISTNAME=	cgdb-0.3.2
 CATEGORIES=	devel
 MASTER_SITES=	http://66.35.250.221:80/sourceforge/cgdb/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://cgdb.sourceforge/
 COMMENT=	Curses-based interface to the GNU Debugger (GDB)
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/11 12:00:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/28 09:48:42 xtraeme Exp $
 #
 
 DISTNAME=	mod_bunzip2
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.oldach.net/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.oldach.net/
 COMMENT=	Apache module for server-side decompression of bzip2 files
 
