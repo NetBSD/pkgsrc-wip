@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/24 23:58:18 blef Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/25 00:01:44 xtraeme Exp $
 
 DISTNAME=	X430src-4
 PKGNAME=	XFree86-fonts100dpi-${XF_VER}
@@ -14,7 +14,7 @@ COMMENT=	XFree86 bitmap 100dpi fonts
 DEPENDS+=	XFree86-fontsEncodings>=4.3.0:../../wip/XFree86-fontsEncodings
 
 USE_BUILDLINK2=		yes
-NO_XFREE86_TARGETS=	#defined
+NO_XFREE86_TARGETS=	# defined
 
 FILESDIR=	${PKGDIR}/../XFree86-fontsEncodings/files
 
@@ -32,7 +32,7 @@ do-configure:
 	${MAKE} depend)
 
 	(cd ${WRKSRC} && \
-	${IMAKE} -DUseInstalled ${PROJECTROOT} -I${PREFIX}/lib/X11/config \
+	${IMAKE} -DUseInstalled -I${PREFIX}/lib/X11/config \
 		-DTOPDIR=../.. -DCURDIR=.; \
 	${MAKE} Makefiles ; \
 	${MAKE} includes ; \
