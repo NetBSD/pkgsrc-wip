@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/27 23:47:57 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/17 03:53:40 minskim Exp $
 #
 
 DISTNAME=	Geo-IP-1.15
@@ -10,10 +10,12 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.maxmind.com/geoip/api/perl.shtml
 COMMENT=	Gets country name by IP or hostname
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Geo/IP/.packlist
 
 .include "../../lang/perl5/module.mk"
-.include "../../net/GeoIP/buildlink2.mk"
+.include "../../net/GeoIP/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
