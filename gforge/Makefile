@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/13 23:37:50 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/24 14:29:54 poppnk Exp $
 
 DISTNAME=	gforge-3.1
 CATEGORIES=	www
@@ -6,7 +6,6 @@ MASTER_SITES=	http://gforge.org/download.php/44/
 
 MAINTAINER=	david@netbsd-fr.org
 HOMEPAGE=	http://www.gforge.org/
-COMMENT=	Open Source collaborative software development tool
 COMMENT=	Open Source collaborative software development tool
 
 DEPENDS+=	wget>=1.9:../../net/wget
