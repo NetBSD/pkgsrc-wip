@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/06/03 18:16:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2003/06/22 10:38:09 cjep Exp $
 #
 
 DISTNAME=	dancer-ircd-1.0.31+maint8-fn6
@@ -60,7 +60,7 @@ pre-configure:
 		-e "s|@NET_NAME@|${DANCER_IRCD_NETWORK_NAME}|g" \
 		-e "s|@NET_DESCR@|${DANCER_IRCD_NETWORK_DESCR}|g" \
 		-e "s|@NET_RNAME@|${DANCER_IRCD_REALNAME}|g" \
-                < ${WRKSRC}/include/config.h.dist.in > \
+		< ${WRKSRC}/include/config.h.dist.in > \
 		${WRKSRC}/include/config.h.dist
 
 do-install:
