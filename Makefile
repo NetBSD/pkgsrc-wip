@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.490 2003/09/24 22:11:41 cubidou Exp $
-# $NetBSD: Makefile,v 1.490 2003/09/24 22:11:41 cubidou Exp $
+# $Id: Makefile,v 1.491 2003/09/25 04:28:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.491 2003/09/25 04:28:54 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -317,7 +317,6 @@ SUBDIR+=	php4-exif
 SUBDIR+=	picasm
 SUBDIR+=	picprog
 SUBDIR+=	pinball
-SUBDIR+=	pixieplus
 SUBDIR+=	plugger
 SUBDIR+=	pnet
 SUBDIR+=	pnetlib
