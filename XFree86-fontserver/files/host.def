@@ -20,7 +20,7 @@
 #define ForceNormalLib NO
 #define XTrueTypeInstallCConvHeaders NO
 #define SharedLibGLw NO
-#define StandardIncludes -IPREFIX/include
+#define StandardIncludes -IBLNK/include
 
 #define BuildServer YES
 #define BuildFontServer YES
