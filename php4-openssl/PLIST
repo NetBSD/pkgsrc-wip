@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/01 15:14:20 adrian_p Exp $
+lib/php/20020429/openssl.so
