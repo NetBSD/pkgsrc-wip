@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/22 02:44:06 sourceforge_low Exp $
+
+SHA1 (awflwm-0.0.tar.bz2) = ff5863fda669e6c8a19d9264d5a378c5be94350f
+Size (awflwm-0.0.tar.bz2) = 80578 bytes
+SHA1 (patch-aa) = f71ebceef3d4f39963113fbf32d3efddcf489c8f

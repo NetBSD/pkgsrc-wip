@@ -1,0 +1,15 @@
+awflwm is an extension of Bill Spitzak's wonderful Fast Light Window Manager 
+(flwm).  There are a few reasons that this project has been created:
+
+    * flwm has not been updated in quite some time.
+    * flwm does not compile against the 1.1.x branch of fltk (though 
+      it is an easy fix).
+    * I'd personally like to know what the result of moving the configuration 
+      options from a compile-time-only scheme to a configuration file (aside 
+      from a slightly larger executable) would be.
+    * Speaking of executable size, it wouldn't add too much to the code if 
+      guile were embedded into the window manager so that it can be extended 
+      without having to recompile.
+
+Aside from the above listed items, awflwm is more-or-less exactly like flwm 
+(though the newer fltk versions cause it to act slightly differently).
