@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/17 20:17:34 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/17 20:47:57 airhead Exp $
 #
 
 DISTNAME=		cl74unix
@@ -11,7 +11,7 @@ MAINTAINER=		airhead@users.sf.net
 HOMEPAGE=		http://caml.inria.fr/distrib-caml-light-eng.html
 COMMENT=		Libunix from CAML-light contrib dir
 
-DEPENDS+=		caml-light:../../lang/caml-light
+DEPENDS+=		caml-light-[0-9]*:../../lang/caml-light
 
 do-configure:
 	(cd ${WRKDIR}/cl74/src && make configure)
