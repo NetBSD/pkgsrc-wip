@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/06 14:31:58 bencollver Exp $
+lib/libguilerxspencer.la
+share/guile/site/regex/spencer.scm
+@dirrm share/guile/site/regex

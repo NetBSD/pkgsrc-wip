@@ -1,0 +1,3 @@
+guile-scsh is an incomplete port of the Scheme Shell to Guile.
+guile-scsh 2.x is based on scsh 0.5.3 and is compatible with
+the Guile 1.6.x series.  It will not work with Guile 1.4.x.
