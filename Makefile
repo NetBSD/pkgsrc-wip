@@ -1,12 +1,11 @@
-# $Id: Makefile,v 1.1617 2005/01/14 13:40:36 jmmv Exp $
-# $NetBSD: Makefile,v 1.1617 2005/01/14 13:40:36 jmmv Exp $
+# $Id: Makefile,v 1.1618 2005/01/14 16:04:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.1618 2005/01/14 16:04:19 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	4stAttack
 SUBDIR+=	Chinput
 SUBDIR+=	Coin
-SUBDIR+=	CRWInfo
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
 SUBDIR+=	OpenGLUT
