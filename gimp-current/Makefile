@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.27 2004/02/25 11:57:06 moubctez Exp $
+# $NetBSD: Makefile,v 1.28 2004/03/12 09:34:09 moubctez Exp $
 #
 
-DISTNAME=		gimp-${GIMP_VER}
-PKGNAME=		gimp-current-${GIMP_VER}
-CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v2.0/testing/ \
-	ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v2.0/testing/ \
-	ftp://ftp.cs.umn.edu/pub/gimp/gimp/v2.0/testing/ \
-	ftp://ftp.tuwien.ac.at/graphics/gimp/gimp/v2.0/testing/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	gimp-${GIMP_VER}
+PKGNAME=	gimp-current-${GIMP_VER}
+CATEGORIES=	graphics
+MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.0/testing/ \
+		ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v2.0/testing/ \
+		ftp://ftp.cs.umn.edu/pub/gimp/gimp/v2.0/testing/ \
+		ftp://ftp.tuwien.ac.at/graphics/gimp/gimp/v2.0/testing/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		adam@NetBSD.org
-HOMEPAGE=		http://www.gimp.org/
-COMMENT=		Image manipulation program similar to Photoshop[tm]
+MAINTAINER=	adam@NetBSD.org
+HOMEPAGE=	http://www.gimp.org/
+COMMENT=	Image manipulation program similar to Photoshop[tm]
 
 BUILD_USES_MSGFMT=	yes
 
 CONFLICTS+=		gimp<=1.2.3
 
-GIMP_VER=		2.0pre3
+GIMP_VER=		2.0pre4
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes

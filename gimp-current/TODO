@@ -1,5 +1,3 @@
-2.0pre4 out.
-
 Doesn't compile, lots of:
 gimp-composite-mmx.c: In function `gimp_composite_valueonly_rgba8_rgba8_rgba8_mmx':
 gimp-composite-mmx.c:1422: unknown register name `%mm0' in `asm'
@@ -11,5 +9,3 @@ gimp-composite-mmx.c:1441: unknown register name `%mm4' in `asm'
 gimp-composite-mmx.c:1441: unknown register name `%mm3' in `asm'
 gimp-composite-mmx.c:1441: unknown register name `%mm2' in `asm'
 gimp-composite-mmx.c:1441: unknown register name `%mm1' in `asm'
-
-Compiles fine on current/i386 as of December 14, 2003. 
