@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/10/17 09:31:28 johnrshannon Exp $
+$NetBSD: distinfo,v 1.3 2004/10/17 10:13:47 johnrshannon Exp $
 
-SHA1 (librfuncs-1.0.tar.bz2) = 3107426ab966afda787a67d2135799d85766e455
-Size (librfuncs-1.0.tar.bz2) = 497578 bytes
+SHA1 (librfuncs-1.0.tar.bz2) = 2e1df41eeb58cb23d7a5919bf2626cdcf3970db6
+Size (librfuncs-1.0.tar.bz2) = 497533 bytes
