@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.384 2003/08/21 14:29:24 adrian_p Exp $
-# $NetBSD: Makefile,v 1.384 2003/08/21 14:29:24 adrian_p Exp $
+# $Id: Makefile,v 1.385 2003/08/21 18:10:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.385 2003/08/21 18:10:37 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -104,6 +104,7 @@ SUBDIR+=	fwbuilder
 SUBDIR+=	galib
 SUBDIR+=	gdrdao
 SUBDIR+=	geeklog
+SUBDIR+=	gift
 SUBDIR+=	gimp-current
 SUBDIR+=	gkrellm2
 SUBDIR+=	gkrellm2-flynn
