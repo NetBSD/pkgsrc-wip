@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/27 01:53:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/27 19:11:00 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libSM-6.0.1
@@ -16,6 +16,11 @@ GNU_CONFIGURE=		yes
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/sm.pc.in
+
+# XXX does not have an option to disable xthread;
+# XXX it is based on how libX11 was built.
+#PTHREAD_OPTS+=		require
+.include "../../mk/pthread.buildlink2.mk"
 
 .include "../../wip/libICE/buildlink2.mk"
 .include "../../wip/libX11/buildlink2.mk"
