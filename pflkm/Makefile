@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/06/09 09:47:14 ppostma Exp $
+# $NetBSD: Makefile,v 1.10 2004/06/09 17:49:36 ppostma Exp $
 
 DISTNAME=		pf-lkm-20040607
 CATEGORIES=		security ipv6
@@ -14,9 +14,10 @@ USE_PKGINSTALL=		yes
 USE_BUILDLINK3=		yes
 NO_CONFIGURE=		yes
 
-PKG_USERS=		_pflogd:nogroup:60:pflogd\\ pseudo-user:/var/empty:/sbin/nologin
+PKG_USERS=		_pflogd:nogroup::pflogd\\ pseudo-user:/var/empty:/sbin/nologin
 
 RCD_SCRIPTS=		pf pflogd
+CONF_FILES=		${WRKSRC}/etc/pf.conf ${PKG_SYSCONFDIR}/pf.conf
 
 post-patch:
 .for f in sbin/pfctl/pfctl_parser.h usr.sbin/authpf/pathnames.h
@@ -32,16 +33,13 @@ pre-install:
 .if !exists(${PREFIX}/include/net)
 	@${INSTALL_DATA_DIR} ${PREFIX}/include/net
 .endif
-.if !exists(/var/empty)
-	@${INSTALL_DATA_DIR} /var/empty
+.if !exists(${VARBASE}/empty)
+	@${INSTALL_DATA_DIR} ${VARBASE}/empty
 .endif
 
 post-install:
 .if !exists(${PREFIX}/etc/pf.os)
 	${INSTALL_DATA} ${WRKSRC}/etc/pf.os ${PREFIX}/etc
-.endif
-.if !exists(${PREFIX}/etc/pf.conf)
-	${INSTALL_DATA} ${WRKSRC}/etc/pf.conf ${PREFIX}/etc
 .endif
 
 .include "../../mk/bsd.pkg.mk"
