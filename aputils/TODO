@@ -1,0 +1,12 @@
+- Use MASTER_SITE_SOURCEFORGE instead of listing mirrors independantly.
+
+- Use a single space in .include lines, not tabs.
+
+- Set USE_BUILDLINK2.
+
+- Many lines in the DESCR file have trailing whitespace.  Fix it.
+
+- The package installs locale files, so set USE_PKGLOCALEDIR.
+
+- The lib/charset.alias file must not be in the PLIST.  If the package is
+  touching this file, I guess some dependancy is missing...
