@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/29 17:57:27 daprice Exp $
+lib/java/IDL.jar
+lib/java/JacORB.jar
+@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}
