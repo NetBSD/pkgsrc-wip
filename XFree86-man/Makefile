@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/11/25 16:44:03 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/30 20:20:56 cjep Exp $
 
 DISTNAME=	X430src-1
 PKGNAME=	XFree86-man-${XF_VER}
@@ -27,7 +27,7 @@ post-extract:
 
 # XXX please share suggestion on how to do this correctly
 pre-configure:
-.for F in general X11 GL/gl GL/glx GLU GLw Xv Xau Xt Xext Xext/dbe Xi 
+.for F in general X11 GL/gl GL/glx GLU GLw Xv Xau Xt Xext Xext/dbe Xi
 	@${LN} -sf ${WRKSRC}/host.def ${WRKSRC}/${F}/
 .endfor
 .undef F
