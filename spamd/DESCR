@@ -1,4 +1,4 @@
 spamd is a fake sendmail(8)-like daemon which rejects false mail.  If the
 pf packet filter (wip/pflkm) is configured to redirect port 25 (SMTP) to 
 this daemon, it will attempt to waste the time and resources of
-the spam sender.
+the spam sender. Imported from OpenBSD's sources.
