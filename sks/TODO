@@ -1,2 +1,2 @@
-o Actually put something in DESCR
-o Tests
+- Package requires caml 3.08.2 which isn't in pkgsrc . . . yet
+- Add rc.d script with init functionality that incorporates sks_build.sh
