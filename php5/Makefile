@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/05/10 21:21:31 poppnk Exp $
+# $NetBSD: Makefile,v 1.12 2004/05/10 22:47:00 poppnk Exp $
 #
 
 PKGNAME=	php-${PHP5_VERSION}
@@ -21,3 +21,4 @@ post-install:
 		${PREFIX}/etc/php.ini
 
 .include "Makefile.common"
+.include "../../mk/bsd.pkg.mk"
