@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1519 2004/11/01 21:53:28 dolecek Exp $
-# $NetBSD: Makefile,v 1.1519 2004/11/01 21:53:28 dolecek Exp $
+# $Id: Makefile,v 1.1520 2004/11/03 15:34:52 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1520 2004/11/03 15:34:52 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -473,7 +473,6 @@ SUBDIR+=	opera-devel
 SUBDIR+=	oqtplayer
 SUBDIR+=	p5-Apache-Request
 SUBDIR+=	p5-AxKit
-SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Class-Factory-Util
 SUBDIR+=	p5-Class-Singleton
