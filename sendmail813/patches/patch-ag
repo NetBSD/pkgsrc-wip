@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2004/08/01 14:49:30 adrian_p Exp $
+$NetBSD: patch-ag,v 1.3 2004/08/21 16:31:28 adrian_p Exp $
 
 --- include/sm/conf.h.orig	Sun Aug  1 15:38:42 2004
 +++ include/sm/conf.h	Sun Aug  1 15:40:01 2004
@@ -6,7 +6,7 @@ $NetBSD: patch-ag,v 1.2 2004/08/01 14:49:30 adrian_p Exp $
  #  endif
  #  if defined(__NetBSD__)
  #   define USESYSCTL		1	/* use sysctl(3) for getting ncpus */
-+#   define SMRSH_CMDDIR                "/usr/libexec/sm.bin"
++#   define SMRSH_CMDDIR                "@@SMRSH_CMDDIR@@"
  #   include <sys/param.h>
  #   include <sys/sysctl.h>
  #  endif
