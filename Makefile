@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1251 2004/05/02 04:02:57 grantbeattie Exp $
-# $NetBSD: Makefile,v 1.1251 2004/05/02 04:02:57 grantbeattie Exp $
+# $Id: Makefile,v 1.1252 2004/05/02 04:33:34 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.1252 2004/05/02 04:33:34 grantbeattie Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -274,7 +274,6 @@ SUBDIR+=	kahakai
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	kissme
-SUBDIR+=	kmp
 SUBDIR+=	koffice-i18n-de
 SUBDIR+=	koffice-i18n-es
 SUBDIR+=	konversation
