@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/15 18:23:49 tvierling Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/15 18:25:16 tvierling Exp $
 #
 
 DISTNAME=		ASFRecorder
 PKGNAME=		asfrecorder-1.1
 WRKSRC=			${WRKDIR}/ASFRecorder/source
-CATEGORIES=		local
+CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=asfrecorder/}
 EXTRACT_SUFX=		.zip
 
