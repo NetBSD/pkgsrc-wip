@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1425 2004/08/13 05:05:41 ianzag Exp $
-# $NetBSD: Makefile,v 1.1425 2004/08/13 05:05:41 ianzag Exp $
+# $Id: Makefile,v 1.1426 2004/08/13 08:03:54 ianzag Exp $
+# $NetBSD: Makefile,v 1.1426 2004/08/13 08:03:54 ianzag Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -448,6 +448,7 @@ SUBDIR+=	nvidia-freebsd
 SUBDIR+=	octave-nox11
 SUBDIR+=	oops
 SUBDIR+=	opax
+SUBDIR+=	open21xx
 SUBDIR+=	opengaim
 SUBDIR+=	openvpn2
 SUBDIR+=	openvrml
