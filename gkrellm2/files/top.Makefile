@@ -20,9 +20,9 @@ build:		build-rec
 clean:		clean-rec
 
 build-rec install-rec clean-rec uninstall-rec:
-	for subdir in $(MODULES); do			\
-	cd $$subdir && $(MAKE) $(patsubst %-rec,%,$@);	\
-	cd ..;						\
+	for subdir in $(MODULES); do					\
+	cd $$subdir && $(MAKE) $(patsubst %-rec,%,$@) MODULE=$$subdir;	\
+	cd ..;								\
 	done
 
 install_gkrellm.pc:
