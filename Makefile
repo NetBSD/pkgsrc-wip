@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.822 2003/12/29 16:51:12 poppnk Exp $
-# $NetBSD: Makefile,v 1.822 2003/12/29 16:51:12 poppnk Exp $
+# $Id: Makefile,v 1.823 2003/12/30 06:14:41 amigus Exp $
+# $NetBSD: Makefile,v 1.823 2003/12/30 06:14:41 amigus Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -85,8 +85,8 @@ SUBDIR+=	cdpr
 SUBDIR+=	cgdb
 SUBDIR+=	cgic
 SUBDIR+=	cherokee
-SUBDIR+=	chksniff
 SUBDIR+=	chkrootkit
+SUBDIR+=	chksniff
 SUBDIR+=	chmlib
 SUBDIR+=	cjk-latex
 SUBDIR+=	cjk-latex-chinese
@@ -383,6 +383,9 @@ SUBDIR+=	nuppelvideo
 SUBDIR+=	oinkmaster
 SUBDIR+=	opax
 SUBDIR+=	openvpn
+SUBDIR+=	p5-Apache-Request
+SUBDIR+=	p5-Apache-Test
+SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-CDDB
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Class-Factory-Util
@@ -406,6 +409,7 @@ SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-IO-Tee
 SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-Parallel-ForkManager
+SUBDIR+=	p5-Perl-Tidy
 SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Scalar-List-Utils
 SUBDIR+=	p5-Set-Crontab
@@ -413,6 +417,8 @@ SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-String-Approx
 SUBDIR+=	p5-Text-Reform
 SUBDIR+=	p5-Tk-TableMatrix
+SUBDIR+=	p5-XML-LibXSLT
+SUBDIR+=	p5-XML-Sablotron
 SUBDIR+=	p5-gtk2
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pango-devel
