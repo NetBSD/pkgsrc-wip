@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/05 16:57:17 marttikuparinen Exp $
+lib/xfce4/panel-plugins/libsystemload.a
+lib/xfce4/panel-plugins/libsystemload.la
+lib/xfce4/panel-plugins/libsystemload.so
