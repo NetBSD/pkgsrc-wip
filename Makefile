@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.157 2003/05/13 20:28:00 bmeurer Exp $
-# $NetBSD: Makefile,v 1.157 2003/05/13 20:28:00 bmeurer Exp $
+# $Id: Makefile,v 1.158 2003/05/13 21:55:02 ingolf Exp $
+# $NetBSD: Makefile,v 1.158 2003/05/13 21:55:02 ingolf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -74,6 +74,7 @@ SUBDIR+=	jdk13
 SUBDIR+=	jdk13-openjit
 SUBDIR+=	jigdo
 SUBDIR+=	jpgraph
+SUBDIR+=	kgpg
 SUBDIR+=	libdialog
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgsf
