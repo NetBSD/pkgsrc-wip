@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1592 2005/01/02 13:49:44 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1592 2005/01/02 13:49:44 adrian_p Exp $
+# $Id: Makefile,v 1.1593 2005/01/05 11:44:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1593 2005/01/05 11:44:00 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -39,6 +39,7 @@ SUBDIR+=	Redland-rdf
 SUBDIR+=	Siesta
 SUBDIR+=	WEPCrack
 SUBDIR+=	abuse_sdl
+SUBDIR+=	acpid
 SUBDIR+=	afterstep2
 SUBDIR+=	aircrack
 SUBDIR+=	airsnort
@@ -506,6 +507,8 @@ SUBDIR+=	mpq-tools
 SUBDIR+=	mtf
 SUBDIR+=	mtrack
 SUBDIR+=	muine
+SUBDIR+=	multisync
+SUBDIR+=	multisync-syncml
 SUBDIR+=	mupen64
 SUBDIR+=	mupen64-base
 SUBDIR+=	mupen64-plugin-input
@@ -736,6 +739,7 @@ SUBDIR+=	qhacc
 SUBDIR+=	qico
 SUBDIR+=	qinx
 SUBDIR+=	qn-x11
+SUBDIR+=	qnetwalk
 SUBDIR+=	qstat
 SUBDIR+=	quagga-devel
 SUBDIR+=	rar3
@@ -884,6 +888,7 @@ SUBDIR+=	uade
 SUBDIR+=	uclibc
 SUBDIR+=	udhcp
 SUBDIR+=        uebimiau
+SUBDIR+=	ufraw
 SUBDIR+=	umix
 SUBDIR+=	unmo3
 SUBDIR+=	unrealircd
