@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/04 21:14:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/06 19:12:44 jmmv Exp $
 #
 
 DISTNAME=	Unicode-String-2.06
@@ -7,7 +7,7 @@ CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Unicode/}
 
 MAINTAINER=	jrp@hispabsd.org
-HOMEPAGE=	http://www.unicode.org/	
+HOMEPAGE=	http://www.unicode.org/
 COMMENT=	Perl5 modules to handle various Unicode issues
 
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
