@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/07/31 05:34:40 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2004/07/31 05:35:34 tvierling Exp $
 #
 # XXX WIP: only installs parts necessary for client operation.
 # Server parts still in work (need to add informational texts into
@@ -6,6 +6,7 @@
 # ugly interactive "Install" script does).
 
 DISTNAME=		mixmaster-2.9.1
+PKGREVISION=		1
 CATEGORIES=		security mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mixmaster/}
 
