@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/13 13:43:50 imilh Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/18 07:46:27 imilh Exp $
 #
 
 DISTNAME=	wimon-0.3
@@ -16,7 +16,7 @@ ONLY_FOR_PLATFORM=      FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
 WRKSRC=		${WRKDIR}/wimon
 USE_BUILDLINK3=	yes
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin man/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wimon ${PREFIX}/bin
