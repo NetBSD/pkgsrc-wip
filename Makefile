@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.707 2003/11/30 01:09:45 mpasternak Exp $
-# $NetBSD: Makefile,v 1.707 2003/11/30 01:09:45 mpasternak Exp $
+# $Id: Makefile,v 1.708 2003/11/30 01:37:49 mpasternak Exp $
+# $NetBSD: Makefile,v 1.708 2003/11/30 01:37:49 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -436,6 +436,7 @@ SUBDIR+=	pear-Log
 SUBDIR+=	perl58
 SUBDIR+=	perl59
 SUBDIR+=	perltidy
+SUBDIR+=	pgadmin3
 SUBDIR+=	pgp6
 SUBDIR+=	pgpenvelope
 SUBDIR+=	php-jpgraph
