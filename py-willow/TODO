@@ -1,0 +1,9 @@
+Wed Nov 19 13:45:43 CET 2003
+To make it be a fully working package, someone should write startup scripts
+for rc.d
+
+proxyd should be run like:
+
+     proxyd --configdir=/usr/pkg/etc/willow
+
+	-- dotz@irc.pl

@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/11/19 13:14:23 mpasternak Exp $
+
+--- setup.py.orig	Fri Jun  6 21:08:17 2003
++++ setup.py	Wed Nov 19 13:21:28 2003
+@@ -11,6 +11,8 @@
+     if rfiles:
+         return (os.path.join(destpath, dirpath), rfiles)
+ 
++TARGET=os.environ["PREFIX"]
++
+ setup(name='willow',
+       version='1.4',
+       description='Python content-filtering proxy server',
+@@ -21,10 +23,9 @@
+       long_description='Python DNS server',
+       py_modules=['proxy','smb'],
+       scripts=['proxyd'],
+-      data_files=([('/etc/willow',['cfg.proxy','filter.proxy']),
+-                   ('/etc/rc.d/init.d',['willow']),
+-                   ('/var/log/proxy',['request_log','filter_log']),
+-                   getentrytuples('/etc/willow','goodpages'),
+-                   getentrytuples('/etc/willow','badpages')]))
++      data_files=([(os.path.join(TARGET, 'etc/willow'),['cfg.proxy','filter.proxy']),
++                   (os.path.join(TARGET, 'willow'),['request_log','filter_log']),
++                   getentrytuples(os.path.join(TARGET, 'etc/willow'),'goodpages'),
++                   getentrytuples(os.path.join(TARGET, 'etc/willow'),'badpages')]))
+       
+ 
