@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2004/06/01 23:36:07 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/05 22:53:10 rillig Exp $
 bin/darcs
 etc/darcs/bash_completion.d/darcs
 man/man1/darcs.1
+share/doc/darcs/AUTHORS
+share/doc/darcs/ChangeLog
+share/doc/darcs/TODO
 share/doc/darcs/darcs.ps
 share/doc/darcs/examples/zsh_completion_new
 share/doc/darcs/examples/zsh_completion_old
