@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/10 07:24:04 jeremy-c-reed Exp $
+bin/dvcont
+include/libavc1394/avc1394.h
+include/libavc1394/avc1394_vcr.h
+include/libavc1394/rom1394.h
+lib/libavc1394.a
+lib/libavc1394.la
+lib/libavc1394.so
+lib/libavc1394.so.1
+lib/libavc1394.so.1.1
+lib/librom1394.a
+lib/librom1394.la
+lib/librom1394.so
+lib/librom1394.so.1
+lib/librom1394.so.1.1
+man/man1/dvcont.1
+@dirrm include/libavc1394

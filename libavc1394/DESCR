@@ -1,0 +1,9 @@
+libavc1394 is a programming interface to the AV/C (Audio/Video
+Control) specification from the 1394 Trade Assocation. This is used
+to control the tape transport mechanism on DV camcorders. It provides
+the libavc1394 and librom1394 libraries.
+
+This package includes a command-line utility called dvcont that
+lets you send control commands via an IEEE1394 link to a device
+that implements these AV/C specifications. (It is a remote control
+for a DV camera used via Firewire.)
