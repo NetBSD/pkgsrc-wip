@@ -1,6 +1,6 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.5 2003/11/28 22:32:56 mpasternak Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.6 2003/11/29 03:20:56 mpasternak Exp $
 # 
-# $Id: linuxbin.pkg.mk,v 1.5 2003/11/28 22:32:56 mpasternak Exp $
+# $Id: linuxbin.pkg.mk,v 1.6 2003/11/29 03:20:56 mpasternak Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 # Currently supports only RPMs, but should be good enough to make
@@ -14,6 +14,11 @@
 
 .ifndef LINUXBIN_MK
 LINUXBIN_MK=		# defined
+
+# look below for explanation on this:
+.ifdef LINUX_DOWNLOAD
+INTERACTIVE_STAGE=	fetch
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -103,11 +108,16 @@ NO_BUILD?=		YES
 #   distribution
 
 EMULSUBDIR?=		emul/linux
+EMULOPTSUBDIR?=		${EMULSUBDIR}/opt
 EMULDIR?=		${PREFIX}/${EMULSUBDIR}
-EMULOPTDIR?=		${PREFIX}/${EMULSUBDIR}/opt
+EMULOPTDIR?=		${PREFIX}/${EMULOPTSUBDIR}
 
-PLIST_SUBST+=		EMULDIR=${EMULDIR} EMULSUBDIR=${EMULSUBDIR} EMULOPTDIR=${EMULOPTDIR}
-MESSAGE_SUBST+=		EMULDIR=${EMULDIR} EMULSUBDIR=${EMULSUBDIR} EMULOPTDIR=${EMULOPTDIR}
+# little messy, but it makes porting packages easier:
+
+PLIST_SUBST+=		EMULDIR=${EMULDIR} EMULSUBDIR=${EMULSUBDIR} \
+			EMULOPTDIR=${EMULOPTDIR} EMULOPTSUBDIR=${EMULOPTSUBDIR}
+MESSAGE_SUBST+=		EMULDIR=${EMULDIR} EMULOPTDIR=${EMULOPTDIR} \
+			EMULOPTDIR=${EMULOPTDIR} EMULOPTSUBDIR=${EMULOPTSUBDIR}
 
 #
 # now, do the _actual_ work:
@@ -128,7 +138,6 @@ RPM2PKGARGS+=		-i ${TEMP}
 .for TEMP in ${LINUX_BINPKG_FILES}
 RPM2PKGARGS+=		${LINUX_BINPKG_PATH}/${TEMP}
 .endfor
-
 .if !target(do-install)
 do-install:
 	@if [ -f ${PKGDIR}/PLIST ]; then \
@@ -155,5 +164,26 @@ do-install:
 .else
 .error "Please add support for this kind of package!"
 .endif
+.endif
+
+#
+# many Linux commercial packages require some voodoo before actual
+# downloading, so why not put it here... define LINUX_DOWNLOAD
+# in your Makefile and you're off with that step.
+#
+
+.ifdef LINUX_DOWNLOAD
+_FETCH_MESSAGE?= \
+	${ECHO} "======================================================================"; \
+	${ECHO} ; \
+	${ECHO} " Files needed to create this package need to be downloaded from "; \
+	${ECHO} ; \
+	${ECHO} " 	${LINUX_DOWNLOAD}"; \
+	${ECHO} ; \
+	${ECHO} " into:"; \
+	${ECHO} ; \
+	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; \
+	${ECHO} ; \
+	${ECHO} "======================================================================"
 .endif
 .endif
