@@ -1,50 +1,50 @@
-@comment $NetBSD: PLIST,v 1.2 2003/11/30 17:02:50 mpasternak Exp $
-bin/i586-mingw32-cpp
-bin/i586-mingw32-gcc
-bin/i586-mingw32-gcc-3.3.1
-bin/i586-mingw32-gccbug
-bin/i586-mingw32-gcov
-i586-mingw32/bin/gcc
+@comment $NetBSD: PLIST,v 1.3 2003/11/30 20:53:11 mpasternak Exp $
+bin/${MINGWTARGET}-cpp
+bin/${MINGWTARGET}-gcc
+bin/${MINGWTARGET}-gcc-3.3.1
+bin/${MINGWTARGET}-gccbug
+bin/${MINGWTARGET}-gcov
+${MINGWTARGET}/bin/gcc
 info/cpp.info
 info/cppinternals.info
 info/gcc.info
 info/gccint.info
-lib/gcc-lib/i586-mingw32/3.3.1/cc1
-lib/gcc-lib/i586-mingw32/3.3.1/crtbegin.o
-lib/gcc-lib/i586-mingw32/3.3.1/crtend.o
-lib/gcc-lib/i586-mingw32/3.3.1/include/README
-lib/gcc-lib/i586-mingw32/3.3.1/include/float.h
-lib/gcc-lib/i586-mingw32/3.3.1/include/iso646.h
-lib/gcc-lib/i586-mingw32/3.3.1/include/limits.h
-lib/gcc-lib/i586-mingw32/3.3.1/include/mmintrin.h
-lib/gcc-lib/i586-mingw32/3.3.1/include/stdarg.h
-lib/gcc-lib/i586-mingw32/3.3.1/include/stdbool.h
-lib/gcc-lib/i586-mingw32/3.3.1/include/stddef.h
-lib/gcc-lib/i586-mingw32/3.3.1/include/syslimits.h
-lib/gcc-lib/i586-mingw32/3.3.1/include/unwind.h
-lib/gcc-lib/i586-mingw32/3.3.1/include/varargs.h
-lib/gcc-lib/i586-mingw32/3.3.1/include/xmmintrin.h
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/fixinc.sh
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/gsyslimits.h
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/include/README
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/include/float.h
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/include/iso646.h
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/include/limits.h
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/include/mmintrin.h
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/include/stdarg.h
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/include/stdbool.h
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/include/stddef.h
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/include/unwind.h
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/include/varargs.h
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/include/xmmintrin.h
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/mkheaders
-lib/gcc-lib/i586-mingw32/3.3.1/install-tools/mkheaders.conf
-lib/gcc-lib/i586-mingw32/3.3.1/libgcc.a
-lib/gcc-lib/i586-mingw32/3.3.1/specs
+lib/gcc-lib/${MINGWTARGET}/3.3.1/cc1
+lib/gcc-lib/${MINGWTARGET}/3.3.1/crtbegin.o
+lib/gcc-lib/${MINGWTARGET}/3.3.1/crtend.o
+lib/gcc-lib/${MINGWTARGET}/3.3.1/include/README
+lib/gcc-lib/${MINGWTARGET}/3.3.1/include/float.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/include/iso646.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/include/limits.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/include/mmintrin.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/include/stdarg.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/include/stdbool.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/include/stddef.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/include/syslimits.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/include/unwind.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/include/varargs.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/include/xmmintrin.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/fixinc.sh
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/gsyslimits.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/include/README
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/include/float.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/include/iso646.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/include/limits.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/include/mmintrin.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/include/stdarg.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/include/stdbool.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/include/stddef.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/include/unwind.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/include/varargs.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/include/xmmintrin.h
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/mkheaders
+lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/mkheaders.conf
+lib/gcc-lib/${MINGWTARGET}/3.3.1/libgcc.a
+lib/gcc-lib/${MINGWTARGET}/3.3.1/specs
 lib/libiberty.a
 man/man1/cpp.1
 man/man1/gcov.1
-man/man1/i586-mingw32-gcc.1
+man/man1/${MINGWTARGET}-gcc.1
 man/man7/fsf-funding.7
 man/man7/gfdl.7
 man/man7/gpl.7
@@ -58,7 +58,7 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gcc.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gcc.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gcc.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gcc.mo
-@dirrm lib/gcc-lib/i586-mingw32/3.3.1/install-tools/include
-@dirrm lib/gcc-lib/i586-mingw32/3.3.1/install-tools
-@dirrm lib/gcc-lib/i586-mingw32/3.3.1/include
-@dirrm lib/gcc-lib/i586-mingw32/3.3.1
+@dirrm lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/include
+@dirrm lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools
+@dirrm lib/gcc-lib/${MINGWTARGET}/3.3.1/include
+@dirrm lib/gcc-lib/${MINGWTARGET}/3.3.1
