@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/16 20:59:57 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/13 18:20:32 daprice Exp $
 #
-
 
 DISTNAME=		artemis_compiled_v6
 PKGNAME=		artemis-6
@@ -19,10 +18,7 @@ USE_BUILDLINK3=		yes
 NO_BUILD=		#DEFINED
 INSTALL_DIR=		${PREFIX}/share/Artemis
 
-
-
 do-install:
-
 
 	${INSTALL_DATA_DIR} ${INSTALL_DIR}
 
@@ -38,7 +34,6 @@ do-install:
 
 	${INSTALL_SCRIPT} ${WRKSRC}/qwerty/art ${PREFIX}/bin/art
 	${INSTALL_SCRIPT} ${WRKSRC}/qwerty/act ${PREFIX}/bin/act
-
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
