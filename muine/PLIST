@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/06 14:19:02 jmmv Exp $
+bin/muine
+lib/muine/AmazonSearchService.dll
+lib/muine/libmuine.a
+lib/muine/libmuine.la
+lib/muine/libmuine.so
+lib/muine/libmuine.so.0
+lib/muine/libmuine.so.0.0
+lib/muine/muine.exe
+share/application-registry/muine.applications
+share/applications/muine.desktop
+share/gconf/schemas/muine.schemas
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/muine.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/muine.mo
+share/pixmaps/muine.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/application-registry
+@dirrm lib/muine

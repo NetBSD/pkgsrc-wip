@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/06 14:19:01 jmmv Exp $
+
+SHA1 (muine-0.5.2.tar.gz) = a8c3a5c7c97ae9165278ec0698fd16ae5c9c919c
+Size (muine-0.5.2.tar.gz) = 576684 bytes
+SHA1 (patch-aa) = 76ba0b012580abcf03565db2a672ce6307a226ee
