@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.975 2004/02/17 02:47:51 minskim Exp $
-# $NetBSD: Makefile,v 1.975 2004/02/17 02:47:51 minskim Exp $
+# $Id: Makefile,v 1.976 2004/02/17 03:10:40 minskim Exp $
+# $NetBSD: Makefile,v 1.976 2004/02/17 03:10:40 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -427,7 +427,6 @@ SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-IO-Tee
 SUBDIR+=	p5-Net-IP
 SUBDIR+=	p5-Net-Pcap
-SUBDIR+=	p5-Object-Realize-Later
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Perl-Tidy
 SUBDIR+=	p5-SWF-File
