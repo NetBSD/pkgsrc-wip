@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/04 21:00:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/06 19:39:05 jmmv Exp $
 #
 
 DISTNAME=	yasm-0.2.0
@@ -9,11 +9,15 @@ MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://www.tortall.net/projects/yasm/
 COMMENT=	Complete rewrite of the NASM assembler with BSD license
 
+BUILD_USES_MSGFMT=	YES
+
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+USE_PERL5=		build
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../converters/libiconv/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
