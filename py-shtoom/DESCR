@@ -1,0 +1,12 @@
+Shtoom is a open-source, cross-platform VoIP softphone, implemented in
+Python. As well as the basic phone, the package also includes a number of
+other applications - 
+
+ * shtoom - the end-user phone
+ * shtam - a simple answering machine/voicemail application
+ * shmessage - an announcement server
+
+Shtoom should work on Windows, Linux and Mac OS X. It ships with user
+interfaces for Qt/KDE, Gtk/GNOME, Tk and a command line. There will
+hopefully be native user interfaces for Windows and the Mac soon, until
+then, the Tk interface works on those platforms.
