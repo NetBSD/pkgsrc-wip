@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.973 2004/02/16 20:48:53 adrian_p Exp $
-# $NetBSD: Makefile,v 1.973 2004/02/16 20:48:53 adrian_p Exp $
+# $Id: Makefile,v 1.974 2004/02/17 02:26:27 minskim Exp $
+# $NetBSD: Makefile,v 1.974 2004/02/17 02:26:27 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -437,7 +437,6 @@ SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-String-Approx
 SUBDIR+=	p5-Text-Reform
 SUBDIR+=	p5-Tk-TableMatrix
-SUBDIR+=	p5-User-Identity
 SUBDIR+=	p5-XML-LibXSLT
 SUBDIR+=	p5-XML-Sablotron
 SUBDIR+=	p5-gtk2
