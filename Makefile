@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.45 2003/04/07 08:40:08 bmeurer Exp $
-# $NetBSD: Makefile,v 1.45 2003/04/07 08:40:08 bmeurer Exp $
+# $Id: Makefile,v 1.46 2003/04/07 10:13:32 adrian_p Exp $
+# $NetBSD: Makefile,v 1.46 2003/04/07 10:13:32 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -21,6 +21,7 @@ SUBDIR+=	golem
 SUBDIR+=	gtetrinet2
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtkglarea2
+SUBDIR+=	honeyd-arpd
 SUBDIR+=	httrack
 SUBDIR+=	ickle
 SUBDIR+=	ike-scan
