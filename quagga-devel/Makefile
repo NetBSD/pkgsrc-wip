@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/07/06 12:55:23 lexort Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/12 13:27:46 lexort Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
-DISTNAME=	quagga-0.96.5-20040706
-PKGNAME=	quagga-0.96.5.20040706
+DISTNAME=	quagga-0.96.5-20040812
+PKGNAME=	quagga-0.96.5.20040812
 WRKSRC=		${WRKDIR}/quagga-0.96.5
 CATEGORIES=	net
 # Use pkgsrc/ for saved snapshots, cvs/ for current ones

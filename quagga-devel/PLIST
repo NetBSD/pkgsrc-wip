@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/07/06 12:55:23 lexort Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/08/12 13:27:46 lexort Exp $
 include/quagga/buffer.h
 include/quagga/command.h
 include/quagga/debug.h
@@ -8,6 +8,7 @@ include/quagga/getopt.h
 include/quagga/hash.h
 include/quagga/if.h
 include/quagga/if_rmap.h
+include/quagga/jhash.h
 include/quagga/keychain.h
 include/quagga/linklist.h
 include/quagga/log.h
