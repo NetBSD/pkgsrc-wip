@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/30 17:08:55 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/31 05:23:02 jeremy-c-reed Exp $
 bin/compile_et
 bin/gss-client
 bin/kdestroy
@@ -76,7 +76,6 @@ man/man1/ktelnet.1
 man/man1/kv4rcp.1
 man/man1/kvno.1
 man/man1/sclient.1
-man/man1/tmac.doc
 man/man1/v5passwd.1
 man/man5/.k5login.5
 man/man5/kdc.conf.5
