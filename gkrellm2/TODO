@@ -1,3 +1,2 @@
-* pkgsrc-wip'ify the whole thing
 * buildlink2.mk files need clean-ups
-* gkrellm2-share should conflict with gkrellm<=2
+* update to 2.1.9
