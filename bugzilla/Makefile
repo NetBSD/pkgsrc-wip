@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/11/05 17:44:22 adrian_p Exp $
+# $NetBSD: Makefile,v 1.25 2004/11/08 19:35:38 adrian_p Exp $
 #
 
 DISTNAME=	bugzilla-2.18rc3
@@ -37,6 +37,7 @@ BZ_DB_PASS?=	changemeplease
 BZ_WEB_GROUP?=	www
 MYSQL_SOCLOC?=	/tmp/mysql.sock
 SENDMAIL?=	/usr/sbin/sendmail
+APACHE_USER?=	www
 
 BUILD_DEFS+=	BZ_DB_DATABASE BZ_DB_HOST BZ_DB_PORT BZ_DB_USER BZ_DB_PASS \
 		BZ_WEB_GROUP MYSQL_SOCLOC SENDMAIL
@@ -46,14 +47,14 @@ MESSAGE_SUBST+=	BZDIR=${BZDIR} PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 BZDIR=		${PREFIX}/share/bugzilla
 EGDIR=		${PREFIX}/share/examples/bugzilla
 DOCDIR=		${PREFIX}/share/doc/bugzilla
-CONF_FILES=	${EGDIR}/bugzilla.conf ${PKG_SYSCONFDIR}/bugzilla.conf \
-		${WRKSRC}/localconfig.local ${BZDIR}/localconfig
+CONF_FILES=	${EGDIR}/bugzilla.conf ${PKG_SYSCONFDIR}/bugzilla.conf
+SPECIAL_PERMS=	${BZDIR}/localconfig ${APACHE_USER} ${SHAREGRP} 0400
 
 REPLACE_PERL=	*.pl *.cgi
 
 SUBST_CLASSES=		conf
 SUBST_STAGE.conf=	pre-install
-SUBST_FILES.conf=	bugzilla.conf localconfig.local Bugzilla/BugMail.pm
+SUBST_FILES.conf=	bugzilla.conf localconfig Bugzilla/BugMail.pm
 SUBST_SED.conf=		-e "s|@BZ_DB_HOST@|${BZ_DB_HOST}|g" 		\
 			-e "s|@BZ_WEB_GROUP@|${BZ_WEB_GROUP}|g"		\
 			-e "s|@BZ_DB_PORT@|${BZ_DB_PORT}|g" 		\
@@ -72,7 +73,7 @@ post-extract:
 		${RM} -f
 	@${CP} ${FILESDIR}/bugzilla.conf ${WRKSRC}
 	@${CP} ${FILESDIR}/localconfig ${WRKSRC}
-	@${CP} ${FILESDIR}/localconfig ${WRKSRC}/localconfig.local
+	@${CP} ${FILESDIR}/localconfig ${WRKSRC}/localconfig.sample
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -108,7 +109,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ant.jpg ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/padlock.png ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/bugzilla.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/localconfig ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/localconfig.sample ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/bugzilla.dtd ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.js ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/js/*.js ${BZDIR}/js
