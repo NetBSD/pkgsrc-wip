@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2004/05/26 22:00:19 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2004/05/27 16:25:21 johnrshannon Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCCADA_BUILDLINK3_MK:=  ${GCCADA_BUILDLINK3_MK}+
@@ -24,8 +24,9 @@ BUILDLINK_INCDIRS.gccAda-3.4.0+=       include ${_GCC_ARCHDIR:S/^${BUILDLINK_PRE
 .endif  # GCCADA_BUILDLINK3_MK
 
 BUILDLINK_PKGSRCDIR.gccAda-3.4.0?=     ../../wip/gccAda-3.4.0
-BUILDLINK_CONTENTS_FILTER.gccAda-3.4.0= \
-	${EGREP} '(libexec.*|bin.*/|include.*/|\.h$$|\.pc$$|lib.*/lib[^/]*$$|ada.*path)'
+BUILDLINK_FILES_CMD.gccAda-3.4.0=	(cd  ${BUILDLINK_PREFIX.gccAda-3.4.0} && \
+	${FIND} bin libexec lib \( -type file -o -type link \) -print)
+BUILDLINK_TRANSFORM.gccAda-3.4.0=	-e s:\buildlink:buildlink/gccAda-3.4.0:
 
 # Packages that link against shared libraries need a full dependency.
 .  if defined(USE_GCC_SHLIB)
