@@ -1,2 +1,0 @@
-Currently this is the only library in C that provides separation between
-messages, folder and storage with different entities.
