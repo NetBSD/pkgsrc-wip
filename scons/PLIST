@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/28 16:51:06 marc Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/08/15 12:01:06 marc Exp $
 bin/scons
+bin/sconsign
 lib/scons/SCons/Action.py
 lib/scons/SCons/Action.pyc
 lib/scons/SCons/Builder.py
@@ -174,6 +175,8 @@ lib/scons/SCons/Tool/pdflatex.py
 lib/scons/SCons/Tool/pdflatex.pyc
 lib/scons/SCons/Tool/pdftex.py
 lib/scons/SCons/Tool/pdftex.pyc
+lib/scons/SCons/Tool/qt.py
+lib/scons/SCons/Tool/qt.pyc
 lib/scons/SCons/Tool/rmic.py
 lib/scons/SCons/Tool/rmic.pyc
 lib/scons/SCons/Tool/sgiar.py
@@ -188,6 +191,8 @@ lib/scons/SCons/Tool/suncc.py
 lib/scons/SCons/Tool/suncc.pyc
 lib/scons/SCons/Tool/sunlink.py
 lib/scons/SCons/Tool/sunlink.pyc
+lib/scons/SCons/Tool/swig.py
+lib/scons/SCons/Tool/swig.pyc
 lib/scons/SCons/Tool/tar.py
 lib/scons/SCons/Tool/tar.pyc
 lib/scons/SCons/Tool/tex.py
@@ -205,6 +210,7 @@ lib/scons/SCons/__init__.pyc
 lib/scons/SCons/exitfuncs.py
 lib/scons/SCons/exitfuncs.pyc
 man/man1/scons.1
+man/man1/sconsign.1
 @dirrm lib/scons/SCons/Tool
 @dirrm lib/scons/SCons/Sig
 @dirrm lib/scons/SCons/Script
