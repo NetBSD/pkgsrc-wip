@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2004/01/07 21:41:47 tvierling Exp $
+# $NetBSD: Makefile,v 1.49 2004/01/09 15:39:55 tvierling Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -19,7 +19,7 @@ USE_GMAKE=		yes
 
 ENTROPY_VERSION=	0.8.0-401
 
-CONFIGURE_ARGS+=	--enable-verbose --disable-posix-sem --disable-svid-sem
+CONFIGURE_ARGS+=	--enable-verbose --disable-posix-sem
 
 post-patch:
 	${SED} -e '/^# /!s/^#//' <${WRKSRC}/seed.txt-dist >${WRKSRC}/seed.txt
