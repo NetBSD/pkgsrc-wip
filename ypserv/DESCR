@@ -1,0 +1,6 @@
+This is an NIS version 2 (YP) Server for Linux, SunOS 4.1.x, Solaris 2.x,
+AIX, HP-UX, IRIX, Ultrix and OSF1 (alpha). This is not an NIS+ (NIS
+version 3) Server.
+
+This package also provides NIS server utilities, NIS map transfer server,
+netgroup data tools, and other utilities.
