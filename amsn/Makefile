@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/11/01 15:03:16 ppostma Exp $
+# $NetBSD: Makefile,v 1.12 2004/11/01 15:09:15 ppostma Exp $
 #
 
 DISTNAME=		amsn-0_93
@@ -13,14 +13,6 @@ COMMENT=		"Alvaro's MSN messenger client"
 USE_BUILDLINK3=		YES
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
-
-SUBST_CLASSES=		fix
-SUBST_STAGE.fix=	post-patch
-SUBST_FILES.fix=	amsn
-SUBST_SED.fix=		-e 's!@@PREFIX@@!${PREFIX}!g'
-
-post-patch:
-	@${FIND} ${WRKSRC} -name \*.orig | ${XARGS} ${RM}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/amsn
