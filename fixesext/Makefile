@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/29 05:59:18 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/31 22:10:04 minskim Exp $
 #
 
 DISTNAME=		fixesext-2.0.1
@@ -16,4 +16,5 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/fixesext.pc.in
 
 .include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../wip/xextensions/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
