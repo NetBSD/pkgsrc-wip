@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.535 2003/10/11 21:48:17 minskim Exp $
-# $NetBSD: Makefile,v 1.535 2003/10/11 21:48:17 minskim Exp $
+# $Id: Makefile,v 1.536 2003/10/12 17:55:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.536 2003/10/12 17:55:28 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -55,6 +55,7 @@ SUBDIR+=	billardgl
 SUBDIR+=	bin86
 SUBDIR+=	boost-base
 SUBDIR+=	boost-thread
+SUBDIR+=	boson
 SUBDIR+=	bub-n-bros
 SUBDIR+=	bugzilla
 SUBDIR+=	busybox
