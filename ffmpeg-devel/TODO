@@ -1,0 +1,3 @@
+Patch libavcodec/libpostproc/postprocess_template.c in order to compile
+with the MMX options. If someone can look the problem ( just compile with
+the PKG.options mmx).
