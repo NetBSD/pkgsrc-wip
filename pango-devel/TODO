@@ -1,8 +1,4 @@
-$Id: TODO,v 1.2 2004/03/17 14:12:46 mpasternak Exp $
-
-Could it be patched so it doesn't conflict with devel/pango ?
-
-Is the PLIST okay?
+$Id: TODO,v 1.3 2004/03/17 14:13:49 mpasternak Exp $
 
 Does it compile on NetBSD-stable?
 
