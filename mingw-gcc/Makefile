@@ -1,41 +1,44 @@
-# $NetBSD: Makefile,v 1.10 2004/06/20 06:50:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/30 18:10:24 xtraeme Exp $
 #
 
-DISTNAME=		mingw-gcc-3.3.1-20030804
-PKGNAME=		${DISTNAME:S/-20030804//}
-WRKSRC=			${WRKDIR}/gcc-3.3.1-20030804-1
+DISTNAME=		mingw-gcc-${DIST_VERSION}
+PKGNAME=		${DISTNAME:S/-${DIST_VERSION}/-3.4.2/}
+WRKSRC=			${WRKDIR}/gcc-${DIST_VERSION}
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_MINGW}
-DISTFILES=		gcc-core-3.3.1-20030804-1-src.tar.gz \
-			gcc-g++-3.3.1-20030804-1-src.tar.gz \
-			gcc-objc-3.3.1-20030804-1-src.tar.gz
+DISTFILES=		gcc-core-${DIST_VERSION}-src.tar.gz \
+			gcc-g++-${DIST_VERSION}-src.tar.gz \
+			gcc-objc-${DIST_VERSION}-src.tar.gz
 
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://mingw.sf.net/
 COMMENT=		GNU C Compiler ported to win32 platforms
 
 USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=      	yes
 GNU_CONFIGURE=		yes
 USE_CROSSBASE=		yes
 
+DIST_VERSION=		3.4.2-20040916-1
+
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS}
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} \
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		all-target-libobjc
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} \
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		all-target-libstdc++-v3
 
 post-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} \
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} \
 		${MAKE_FLAGS} install-target-libobjc
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} \
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} \
 		${MAKE_FLAGS} install-target-libstdc++-v3
-	${LN} -s ${CROSSBASE}/bin/${MINGW_TARGET}-cpp \
+	${LN} -fs ${CROSSBASE}/bin/${MINGW_TARGET}-cpp \
 		${CROSSBASE}/${MINGW_TARGET}/bin/cpp
-	${LN} -s ${CROSSBASE}/bin/${MINGW_TARGET}-gcc \
+	${LN} -fs ${CROSSBASE}/bin/${MINGW_TARGET}-gcc \
 		${CROSSBASE}/${MINGW_TARGET}/bin/cc
-	cd ${CROSSBASE}/bin/ && ${LN} -s ${MINGW_TARGET}-gcc ${MINGW_TARGET}-cc
+	cd ${CROSSBASE}/bin/ && ${LN} -fs ${MINGW_TARGET}-gcc ${MINGW_TARGET}-cc
 
 .include "../../wip/mingw/Makefile.common"
 .include "../../wip/mingw-binutils/buildlink3.mk"
