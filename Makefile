@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.333 2003/07/19 01:14:39 bubuchka Exp $
-# $NetBSD: Makefile,v 1.333 2003/07/19 01:14:39 bubuchka Exp $
+# $Id: Makefile,v 1.334 2003/07/19 02:16:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.334 2003/07/19 02:16:29 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -42,6 +42,7 @@ SUBDIR+=	cjk-latex
 SUBDIR+=	cjk-latex-chinese
 SUBDIR+=	cjk-latex-japanese
 SUBDIR+=	cjk-latex-korean
+SUBDIR+=	cops
 SUBDIR+=	cvsd
 SUBDIR+=	dancer-ircd
 SUBDIR+=	darkice
@@ -158,6 +159,7 @@ SUBDIR+=	mailman21
 SUBDIR+=	maradns
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
+SUBDIR+=	memtester
 SUBDIR+=	mhonarc
 SUBDIR+=	mixer.tk
 SUBDIR+=	mopac
