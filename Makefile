@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.786 2003/12/21 11:08:14 xtraeme Exp $
-# $NetBSD: Makefile,v 1.786 2003/12/21 11:08:14 xtraeme Exp $
+# $Id: Makefile,v 1.787 2003/12/21 21:03:43 bencollver Exp $
+# $NetBSD: Makefile,v 1.787 2003/12/21 21:03:43 bencollver Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -295,6 +295,7 @@ SUBDIR+=	libfwbuilder
 SUBDIR+=	libgringotts
 SUBDIR+=	libhydrogen
 SUBDIR+=	libic
+SUBDIR+=	libmodplug
 SUBDIR+=	libneural
 SUBDIR+=	libogg-nightly
 SUBDIR+=	libol
