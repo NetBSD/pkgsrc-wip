@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/23 02:01:31 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/25 23:47:32 thomasklausner Exp $
 
 DISTNAME=	tetrinetx-1.13.16+qirc-1.40c
 PKGNAME=	tetrinetx-1.13.16
@@ -11,14 +11,15 @@ COMMENT=	Server for an addictive 6 player tetris game
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 SHAREDIR=	${PREFIX}/share/tetrinetx
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 BINARY=		tetrix.netbsd
 
 LIBS.SunOS=	-lsocket -lnsl -lresolv
 
 do-build:
 	(cd ${WRKSRC}/src && \
-	gcc -O2 -fno-strength-reduce -L${LOCALBASE}/lib -ladns -I${LOCALBASE}/include \
+	gcc -O2 -fno-strength-reduce -Wl,-R${LOCALBASE}/lib \
+		-L${LOCALBASE}/lib -ladns -I${LOCALBASE}/include \
 		-Wall -DSHAREDIR="\"${SHAREDIR}\"" -DPREFIX="\"${PREFIX}\"" \
 		main.c -o ../bin/${BINARY} ${LIBS})
 
@@ -31,5 +32,5 @@ do-install:
 	${INSTALL_DATA} -m 644  ${WRKSRC}/bin/game.pmotd ${SHAREDIR}
 	@${INSTALL_SCRIPT} -m 751 ${FILESDIR}/tetrinetx ${PREFIX}/etc/rc.d
 
-.include "../../net/adns/buildlink2.mk"
+.include "../../net/adns/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

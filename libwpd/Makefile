@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/03/04 15:57:27 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/25 23:40:58 thomasklausner Exp $
 
 DISTNAME=	libwpd-0.7.1
 CATEGORIES=	converters
@@ -8,11 +8,11 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://libwpd.sourceforge.net/
 COMMENT=	Library for importing and exporting WordPerfect(tm) documents
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_GNU_TOOLS+=	make
 
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/libgsf/buildlink2.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libgsf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
