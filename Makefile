@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.332 2003/07/18 16:50:27 poppnk Exp $
-# $NetBSD: Makefile,v 1.332 2003/07/18 16:50:27 poppnk Exp $
+# $Id: Makefile,v 1.333 2003/07/19 01:14:39 bubuchka Exp $
+# $NetBSD: Makefile,v 1.333 2003/07/19 01:14:39 bubuchka Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -222,6 +222,7 @@ SUBDIR+=	picasm
 SUBDIR+=	picprog
 SUBDIR+=	pinball
 SUBDIR+=	pixieplus
+SUBDIR+=	pkg_distclean
 SUBDIR+=	plugger
 SUBDIR+=	pnet
 SUBDIR+=	pnetlib
