@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/11/05 04:10:14 mpasternak Exp $
+
+SHA1 (Soya-0.5.1.tar.gz) = b8fb584c163b64fa394203ee1f4468f657ab1359
+Size (Soya-0.5.1.tar.gz) = 658227 bytes
+SHA1 (patch-aa) = 8a335d2d6894dcb4bb9e86ddafc1ca2a94467281
+SHA1 (patch-ab) = 7950b453dd76fe511a0313b8504e5f5182668a0b

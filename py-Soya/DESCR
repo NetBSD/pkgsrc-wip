@@ -1,0 +1,4 @@
+Soya 3D is a high-level 3D engine for Python, designed with games in mind.
+Soya is written partly in Python and partly in C; our goal is to provide a
+full architecture for making free (GPL) game of professionnal quality
+entirely in Python.

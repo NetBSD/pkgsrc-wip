@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/11/05 04:10:15 mpasternak Exp $
+
+--- c_src/p3_base.h~	Sun Jul 20 20:59:42 2003
++++ c_src/p3_base.h	Fri Oct 17 03:06:04 2003
+@@ -37,7 +37,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
+-#include <values.h>
++// #include <values.h>
+ #include <stdarg.h>
+ #include <GL/gl.h>
+ 
