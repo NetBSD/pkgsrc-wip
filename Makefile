@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.440 2003/09/09 21:57:35 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.440 2003/09/09 21:57:35 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.441 2003/09/10 21:28:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.441 2003/09/10 21:28:42 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -319,6 +319,7 @@ SUBDIR+=	py-libpcap
 SUBDIR+=	py-spark
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-twisted
+SUBDIR+=	q3-urbanterror
 SUBDIR+=	qinx
 SUBDIR+=	qn-x11
 SUBDIR+=	rapidsvn
