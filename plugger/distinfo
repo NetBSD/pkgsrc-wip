@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2003/06/11 12:26:22 airhead Exp $
+$NetBSD: distinfo,v 1.3 2003/06/11 13:04:57 airhead Exp $
 
 SHA1 (plugger-4.0.tar.gz) = 8f9557ec647d322c29e4bb34295b1baa9476768b
 Size (plugger-4.0.tar.gz) = 27711 bytes
 SHA1 (unix-sdk-3.0b5.tar.Z) = f4fcb36820682b161376bc26252064869a6aa6f1
 Size (unix-sdk-3.0b5.tar.Z) = 1644129 bytes
-SHA1 (patch-aa) = fffecd6742ac5fe91264e0f74d976e663f4d5ef4
+SHA1 (patch-aa) = f4e343c55478120ed77bfba74f1c3bcfd955afd9
+SHA1 (patch-ab) = 0db4262a89cbc29d9ae2808c1f7ddbf236fc3d3e
