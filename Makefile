@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.977 2004/02/17 04:31:33 minskim Exp $
-# $NetBSD: Makefile,v 1.977 2004/02/17 04:31:33 minskim Exp $
+# $Id: Makefile,v 1.978 2004/02/17 15:33:20 minskim Exp $
+# $NetBSD: Makefile,v 1.978 2004/02/17 15:33:20 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -72,7 +72,6 @@ SUBDIR+=	cdpr
 SUBDIR+=	cgdb
 SUBDIR+=	cgic
 SUBDIR+=	cherokee
-SUBDIR+=	chkrootkit
 SUBDIR+=	chksniff
 SUBDIR+=	chora
 SUBDIR+=	cjk-latex
