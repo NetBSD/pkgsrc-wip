@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/03/17 12:35:09 mpasternak Exp $
+
+--- configure.orig	Wed Mar 17 13:36:33 2004
++++ configure
+@@ -31714,7 +31714,7 @@ if test x"$have_threads" != xno; then
+     # both CPPFLAG and LIBS.
+     # One of them does for most gcc versions and some other platforms/compilers
+     # too and could be considered as the canonical way to go.
+-    for flag in pthread pthreads; do
++    for flag in "$PTHREAD_CFLAGS"; do
+       glib_save_CFLAGS="$CFLAGS"
+       CFLAGS="$CFLAGS -$flag"
+       if test "$cross_compiling" = yes; then

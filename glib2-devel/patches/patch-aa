@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/29 14:41:07 mpasternak Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/17 12:35:09 mpasternak Exp $
 
---- Makefile.in~	Mon Dec  8 18:05:43 2003
-+++ Makefile.in	Mon Dec 29 12:27:54 2003
-@@ -229,7 +229,7 @@
+--- Makefile.in.orig	Tue Mar 16 18:13:11 2004
++++ Makefile.in
+@@ -226,7 +226,7 @@ target_alias = @target_alias@
  
  AUTOMAKE_OPTIONS = 1.7
  

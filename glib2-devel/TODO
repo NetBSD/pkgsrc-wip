@@ -1,14 +1,8 @@
-$Id: TODO,v 1.1.1.1 2003/12/29 14:41:07 mpasternak Exp $
+$Id: TODO,v 1.2 2004/03/17 12:35:08 mpasternak Exp $
 
 Does it compile on NetBSD-stable and NetBSD-current?
 
 Does it need perl5?
-
-USE_GNU_LIBICONV in Makefile -- perhaps should show like a configureable
-option during a build for systems which allow such kind of selection.
-
-USE_GNU_LIBICONV -- which values should be set for NetBSD-stable and
-NetBSD-current?
 
 "docs" doesn't compile on FreeBSD-STABLE and is hashed out by
 patches/patch-aa in Makefile.in . IMVHO docs should be an optional, extra
@@ -16,11 +10,5 @@ package so I don't think this is an error -- they are available via gtk.org
 in HTML format.
  
 PLIST -- is it complete? Please verify it.
-
-Should we include gettext-lib buildlink unconditionally in buildlink2.mk or
-push GLIB_USE_GNU_ICONV to Makefile.common and then depend on this setting
-in buildlink2.mk?
-
-Could it be patched so it doesn't conflict with devel/glib2 ?
 
 	-- dotz@irc.pl
