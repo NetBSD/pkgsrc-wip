@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: nss-install,v 1.1.1.1 2005/01/19 22:41:10 matthewluckie Exp $
+# $NetBSD: nss-install,v 1.2 2005/01/24 09:53:51 matthewluckie Exp $
 #
 # this script takes care of installing the nspr package, and is based on
 # the moz-install script found in pkgsrc/www/mozilla/
@@ -21,17 +21,18 @@ done
 
 # install the includes
 for i in `${EGREP} ^include/nss ${TMP_PLIST}` ; do
-	${BSD_INSTALL_DATA} ${DIST}/public/$i ${PREFIX}/$i
+	src=`echo $i | ${SED} -e "s@include/nss@public@`;
+	${BSD_INSTALL_DATA} ${DIST}/$src ${PREFIX}/$i
 done
 
 # install the libraries
 for i in `${EGREP} ^lib/ ${TMP_PLIST}` ; do
-	src=`echo $i | ${SED} -e "s@lib@${UNAME}${OS_VERSION}_OPT\.OBJ/lib@"`;
+	src=`echo $i | ${SED} -e "s@lib@${OPSYS}${OS_VERSION}_OPT\.OBJ/lib@"`;
 	${NSS_INSTALL_LIB} ${DIST}/${src} ${PREFIX}/$i
 done
 
 # install the binaries
 for i in `${EGREP} ^bin/ ${TMP_PLIST}` ; do
-	src=`echo $i | ${SED} -e "s@bin@${UNAME}${OS_VERSION}_OPT\.OBJ/bin@"`;
+	src=`echo $i | ${SED} -e "s@bin@${OPSYS}${OS_VERSION}_OPT\.OBJ/bin@"`;
 	${BSD_INSTALL_PROGRAM} ${DIST}/${src} ${PREFIX}/$i
 done

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/23 18:07:25 bencollver Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/24 09:53:50 matthewluckie Exp $
 
 DISTNAME=		nss-3.9.2
 CATEGORIES=		security
@@ -41,7 +41,7 @@ SCRIPTS_ENV+=		SED=${SED:Q}
 SCRIPTS_ENV+=		EGREP=${EGREP:Q}
 SCRIPTS_ENV+=		SO_SUFFIX=${SO_SUFFIX:Q}
 SCRIPTS_ENV+=		DIST=${DIST:Q}
-SCRIPTS_ENV+=		UNAME=${UNAME:Q}
+SCRIPTS_ENV+=		OPSYS=${OPSYS:Q}
 SCRIPTS_ENV+=		OS_VERSION=${OS_VERSION:Q}
 
 do-install:
