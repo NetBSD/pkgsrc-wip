@@ -1,0 +1,132 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/10 19:28:37 poppnk Exp $
+lib/java/asm/asm-attrs.jar
+lib/java/asm/asm-tree.jar
+lib/java/asm/asm-util.jar
+lib/java/asm/asm.jar
+lib/java/asm/kasm.jar
+share/doc/java-asm/allclasses-frame.html
+share/doc/java-asm/allclasses-noframe.html
+share/doc/java-asm/constant-values.html
+share/doc/java-asm/deprecated-list.html
+share/doc/java-asm/help-doc.html
+share/doc/java-asm/index-all.html
+share/doc/java-asm/index.html
+share/doc/java-asm/org/objectweb/asm/Attribute.html
+share/doc/java-asm/org/objectweb/asm/ByteVector.html
+share/doc/java-asm/org/objectweb/asm/ClassAdapter.html
+share/doc/java-asm/org/objectweb/asm/ClassReader.html
+share/doc/java-asm/org/objectweb/asm/ClassVisitor.html
+share/doc/java-asm/org/objectweb/asm/ClassWriter.html
+share/doc/java-asm/org/objectweb/asm/CodeAdapter.html
+share/doc/java-asm/org/objectweb/asm/CodeVisitor.html
+share/doc/java-asm/org/objectweb/asm/CodeWriter.html
+share/doc/java-asm/org/objectweb/asm/Constants.html
+share/doc/java-asm/org/objectweb/asm/Label.html
+share/doc/java-asm/org/objectweb/asm/Type.html
+share/doc/java-asm/org/objectweb/asm/attrs/Annotation.html
+share/doc/java-asm/org/objectweb/asm/attrs/AnnotationDefaultAttribute.html
+share/doc/java-asm/org/objectweb/asm/attrs/AnnotationMemberValue.EnumConstValue.html
+share/doc/java-asm/org/objectweb/asm/attrs/AnnotationMemberValue.html
+share/doc/java-asm/org/objectweb/asm/attrs/Dumpable.html
+share/doc/java-asm/org/objectweb/asm/attrs/EnclosingMethodAttribute.html
+share/doc/java-asm/org/objectweb/asm/attrs/RuntimeInvisibleAnnotations.html
+share/doc/java-asm/org/objectweb/asm/attrs/RuntimeInvisibleParameterAnnotations.html
+share/doc/java-asm/org/objectweb/asm/attrs/RuntimeVisibleAnnotations.html
+share/doc/java-asm/org/objectweb/asm/attrs/RuntimeVisibleParameterAnnotations.html
+share/doc/java-asm/org/objectweb/asm/attrs/SignatureAttribute.html
+share/doc/java-asm/org/objectweb/asm/attrs/SourceDebugExtensionAttribute.html
+share/doc/java-asm/org/objectweb/asm/attrs/StackMapAttribute.html
+share/doc/java-asm/org/objectweb/asm/attrs/StackMapFrame.html
+share/doc/java-asm/org/objectweb/asm/attrs/StackMapType.html
+share/doc/java-asm/org/objectweb/asm/attrs/package-frame.html
+share/doc/java-asm/org/objectweb/asm/attrs/package-summary.html
+share/doc/java-asm/org/objectweb/asm/attrs/package-tree.html
+share/doc/java-asm/org/objectweb/asm/package-frame.html
+share/doc/java-asm/org/objectweb/asm/package-summary.html
+share/doc/java-asm/org/objectweb/asm/package-tree.html
+share/doc/java-asm/org/objectweb/asm/tree/AbstractInsnNode.html
+share/doc/java-asm/org/objectweb/asm/tree/ClassNode.html
+share/doc/java-asm/org/objectweb/asm/tree/FieldInsnNode.html
+share/doc/java-asm/org/objectweb/asm/tree/FieldNode.html
+share/doc/java-asm/org/objectweb/asm/tree/IincInsnNode.html
+share/doc/java-asm/org/objectweb/asm/tree/InnerClassNode.html
+share/doc/java-asm/org/objectweb/asm/tree/InsnNode.html
+share/doc/java-asm/org/objectweb/asm/tree/IntInsnNode.html
+share/doc/java-asm/org/objectweb/asm/tree/JumpInsnNode.html
+share/doc/java-asm/org/objectweb/asm/tree/LdcInsnNode.html
+share/doc/java-asm/org/objectweb/asm/tree/LineNumberNode.html
+share/doc/java-asm/org/objectweb/asm/tree/LocalVariableNode.html
+share/doc/java-asm/org/objectweb/asm/tree/LookupSwitchInsnNode.html
+share/doc/java-asm/org/objectweb/asm/tree/MethodInsnNode.html
+share/doc/java-asm/org/objectweb/asm/tree/MethodNode.html
+share/doc/java-asm/org/objectweb/asm/tree/MultiANewArrayInsnNode.html
+share/doc/java-asm/org/objectweb/asm/tree/TableSwitchInsnNode.html
+share/doc/java-asm/org/objectweb/asm/tree/TreeClassAdapter.html
+share/doc/java-asm/org/objectweb/asm/tree/TreeCodeAdapter.html
+share/doc/java-asm/org/objectweb/asm/tree/TryCatchBlockNode.html
+share/doc/java-asm/org/objectweb/asm/tree/TypeInsnNode.html
+share/doc/java-asm/org/objectweb/asm/tree/VarInsnNode.html
+share/doc/java-asm/org/objectweb/asm/tree/package-frame.html
+share/doc/java-asm/org/objectweb/asm/tree/package-summary.html
+share/doc/java-asm/org/objectweb/asm/tree/package-tree.html
+share/doc/java-asm/org/objectweb/asm/util/CheckClassAdapter.html
+share/doc/java-asm/org/objectweb/asm/util/CheckCodeAdapter.html
+share/doc/java-asm/org/objectweb/asm/util/DumpClassVisitor.html
+share/doc/java-asm/org/objectweb/asm/util/DumpCodeVisitor.html
+share/doc/java-asm/org/objectweb/asm/util/PrintClassVisitor.html
+share/doc/java-asm/org/objectweb/asm/util/PrintCodeVisitor.html
+share/doc/java-asm/org/objectweb/asm/util/TraceClassVisitor.html
+share/doc/java-asm/org/objectweb/asm/util/TraceCodeVisitor.html
+share/doc/java-asm/org/objectweb/asm/util/package-frame.html
+share/doc/java-asm/org/objectweb/asm/util/package-summary.html
+share/doc/java-asm/org/objectweb/asm/util/package-tree.html
+share/doc/java-asm/overview-frame.html
+share/doc/java-asm/overview-summary.html
+share/doc/java-asm/overview-tree.html
+share/doc/java-asm/package-list
+share/doc/java-asm/packages.html
+share/doc/java-asm/resources/inherit.gif
+share/doc/java-asm/serialized-form.html
+share/doc/java-asm/stylesheet.css
+share/examples/java-asm/README.txt
+share/examples/java-asm/adapt/README
+share/examples/java-asm/adapt/build.xml
+share/examples/java-asm/adapt/etc/execute.properties
+share/examples/java-asm/adapt/src/Adapt.java
+share/examples/java-asm/adapt/src/ArraySet.java
+share/examples/java-asm/attributes/build.xml
+share/examples/java-asm/attributes/etc/execute.properties
+share/examples/java-asm/attributes/src/Attributes.java
+share/examples/java-asm/compile/README
+share/examples/java-asm/compile/build.xml
+share/examples/java-asm/compile/etc/execute.properties
+share/examples/java-asm/compile/src/Compile.java
+share/examples/java-asm/compile/src/Expression.java
+share/examples/java-asm/etc/build.properties
+share/examples/java-asm/helloworld/README
+share/examples/java-asm/helloworld/build.xml
+share/examples/java-asm/helloworld/etc/execute.properties
+share/examples/java-asm/helloworld/src/Helloworld.java
+@dirrm share/examples/java-asm/helloworld/src
+@dirrm share/examples/java-asm/helloworld/etc
+@dirrm share/examples/java-asm/helloworld
+@dirrm share/examples/java-asm/etc
+@dirrm share/examples/java-asm/compile/src
+@dirrm share/examples/java-asm/compile/etc
+@dirrm share/examples/java-asm/compile
+@dirrm share/examples/java-asm/attributes/src
+@dirrm share/examples/java-asm/attributes/etc
+@dirrm share/examples/java-asm/attributes
+@dirrm share/examples/java-asm/adapt/src
+@dirrm share/examples/java-asm/adapt/etc
+@dirrm share/examples/java-asm/adapt
+@dirrm share/examples/java-asm
+@dirrm share/doc/java-asm/resources
+@dirrm share/doc/java-asm/org/objectweb/asm/util
+@dirrm share/doc/java-asm/org/objectweb/asm/tree
+@dirrm share/doc/java-asm/org/objectweb/asm/attrs
+@dirrm share/doc/java-asm/org/objectweb/asm
+@dirrm share/doc/java-asm/org/objectweb
+@dirrm share/doc/java-asm/org
+@dirrm share/doc/java-asm
+@dirrm lib/java/asm
