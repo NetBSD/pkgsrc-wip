@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/14 23:18:57 adrian_p Exp $
-sbin/fping
-sbin/fping6
-man/man8/fping.8

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/14 23:18:57 adrian_p Exp $
-
-SHA1 (fping-2.4b2_to-ipv6.tar.gz) = 9b540b5fe81feffa5096f10f011d56f0c4dc0c09
-Size (fping-2.4b2_to-ipv6.tar.gz) = 64063 bytes
-SHA1 (patch-aa) = aa73c5bb9e743ea8c90dfdfa7d3a96a9c13d7443
