@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2004/07/16 15:57:20 ppostma Exp $
+# $NetBSD: Makefile.common,v 1.17 2004/07/16 16:03:57 ppostma Exp $
 #
 
 DISTNAME?=		php-${PHP5_VERSION}
@@ -14,8 +14,6 @@ HOMEPAGE?=		http://www.php.net/
 PHP5_VERSION=		5.0.0
 CONFLICTS+=		php-[34]*
 
-EGDIR=			${PREFIX}/
-CONF_FILES=		${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 BUILD_DEFS=		USE_INET6 PHP5_WITHOUT_NETWORK
 
 USE_LIBTOOL=		YES
