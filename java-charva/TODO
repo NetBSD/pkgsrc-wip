@@ -1,3 +1,0 @@
-It depends on ncurses. but only builds with NO_BUILDLINK :///
-
-Update to 1.0.2, 1.0.1 is gone.

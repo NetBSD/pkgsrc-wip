@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/23 23:34:50 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2004/09/16 21:20:29 poppnk Exp $
 
-SHA1 (charva-1.0.1.tar.gz) = 2e6383f7a82375af25088545b09b187f726ab663
-Size (charva-1.0.1.tar.gz) = 660398 bytes
+SHA1 (charva-1.0.2.tar.gz) = 1a728f4017595d5f49aec19681257256074096fa
+Size (charva-1.0.2.tar.gz) = 996011 bytes
