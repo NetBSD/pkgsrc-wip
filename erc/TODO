@@ -1,0 +1,3 @@
+* Fix some compile issues that are raised
+* Fix the 3 error shown by pkglint. These errors seem to be existant in all
+  packages using emacs.mk ?
