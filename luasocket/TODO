@@ -1,5 +1,0 @@
-- Install files/XXX into correct directory.
-- Modify files/XXX to get the correct libpath.
-- Question...install the rest of .lua files (http,etc.)
-
-- The correct path must be : ${PREFIX}/share/lua50/

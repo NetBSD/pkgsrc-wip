@@ -1,3 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2004/01/26 08:45:44 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/26 16:07:45 poppnk Exp $
 lib/libluasocket.so
 lib/libluasocket.so.2.0
+lib/lua/auxiliar.lua
+lib/lua/code.lua
+lib/lua/concat.lua
+lib/lua/ftp.lua
+lib/lua/http.lua
+lib/lua/select.lua
+lib/lua/smtp.lua
+lib/lua/url.lua
+@dirrm lib/lua

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:32:43 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/26 16:07:45 poppnk Exp $
 #
 
 DISTNAME=		luasocket-2.0-alpha
@@ -14,6 +14,10 @@ MAKEFILE=		${WRKSRC}/makefile
 ALL_TARGET=		dyn
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/lua/
+	${INSTALL_DATA} ${WRKSRC}/*.lua ${PREFIX}/lib/lua/
 
 .include "../../lang/lua/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
