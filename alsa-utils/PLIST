@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/12 22:43:43 jeremy-c-reed Exp $
+bin/aconnect
+bin/alsamixer
+bin/amidi
+bin/amixer
+bin/aplay
+bin/aplaymidi
+bin/arecord
+bin/arecordmidi
+bin/aseqnet
+bin/iecset
+sbin/alsaconf
+sbin/alsactl
+man/man1/aconnect.1
+man/man1/alsactl.1
+man/man1/alsamixer.1
+man/man1/amidi.1
+man/man1/amixer.1
+man/man1/aplay.1
+man/man1/aplaymidi.1
+man/man1/arecord.1
+man/man1/arecordmidi.1
+man/man1/aseqnet.1
+man/man1/iecset.1
+man/man8/alsaconf.8

@@ -1,0 +1,7 @@
+This package contains the command-line utilities for the Advanced
+Linux Sound Architecture (ALSA) project, including the ALSA driver
+configurator script, a utility for soundcard settings management,
+a utility for the playback and capture of .wav, .voc and .au files,
+a command-line mixer, a ncurses mixer, a utility to send/receive
+sysex dumps or other MIDI data, and a utility to show or set the
+IEC958 status bits.
