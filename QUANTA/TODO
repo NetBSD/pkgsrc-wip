@@ -1,2 +1,1 @@
-* Convert to buildlink3
-* Test on ! FreeBSD 5.2
+libquanta_32*.so get built on FreeBSD 5.2 but not NetBSD-current. Why?
