@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/23 02:14:55 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/23 02:27:39 jeremy-c-reed Exp $
 
 DISTNAME=		vorbis_nightly_cvs
 PKGNAME=		libvorbis-${PKGVER}
@@ -28,7 +28,7 @@ pre-configure:
 
 # XXX use latest libogg too
 BUILDLINK_DEPENDS.libogg=	libogg>=20030520
-BUILDLINK_PKGSRCDIR.libogg=	../../audio/libogg-nightly
+BUILDLINK_PKGSRCDIR.libogg=	../../wip/libogg-nightly
 .include "../../audio/libogg/buildlink2.mk"
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

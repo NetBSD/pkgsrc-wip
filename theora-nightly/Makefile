@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/23 02:17:46 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/23 02:28:21 jeremy-c-reed Exp $
 
 DISTNAME=	theora_cvs_snapshot
 PKGNAME=	theora-${PKGVER}
@@ -39,7 +39,7 @@ post-install:
 
 # XXX use the latest libvorbis (and libogg too)
 BUILDLINK_DEPENDS.libvorbis=   libvorbis>=20030520
-BUILDLINK_PKGSRCDIR.libvorbis= ../../audio/libvorbis-nightly
+BUILDLINK_PKGSRCDIR.libvorbis= ../../wip/libvorbis-nightly
 .include "../../audio/libvorbis/buildlink2.mk"
 
 .include "../../mk/automake.mk"
