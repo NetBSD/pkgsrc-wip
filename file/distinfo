@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/11 18:59:30 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2003/04/13 03:14:22 jeremy-c-reed Exp $
 
-SHA1 (file-3.41.tar.gz) = 9e234f10e15877ea013f23b5c438b045748ec727
-Size (file-3.41.tar.gz) = 183928 bytes
+SHA1 (file-4.02.tar.gz) = d224f8d48231271915ba94c3176a266161d69c65
+Size (file-4.02.tar.gz) = 333501 bytes
+SHA1 (patch-aa) = c5a06e33337672f57aad352f1ae05729bfbed2c4

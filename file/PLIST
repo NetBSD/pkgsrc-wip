@@ -1,8 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/11 18:59:30 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/13 03:14:22 jeremy-c-reed Exp $
 bin/file
+include/magic.h
+lib/libmagic.a
+lib/libmagic.la
+lib/libmagic.so
+lib/libmagic.so.1
+lib/libmagic.so.1.0
 man/man1/file.1
+man/man3/libmagic.3
 man/man5/magic.5
-share/misc/magic
-share/misc/magic.mgc
-share/misc/magic.mime
-share/misc/magic.mime.mgc
+share/file/magic
+share/file/magic.mgc
+share/file/magic.mime
+share/file/magic.mime.mgc
+@dirrm share/file

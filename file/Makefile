@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/11 18:59:30 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/13 03:14:22 jeremy-c-reed Exp $
 
-DISTNAME=		file-3.41
+DISTNAME=		file-4.02
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.gw.com/mirrors/pub/unix/file/
 MASTER_SITES+=		ftp://ftp.astron.com/pub/file/
@@ -9,8 +9,10 @@ MAINTAINER=		packages@netbsd.org
 #HOMEPAGE=
 COMMENT=		tool for determining file type
 
-USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-fsect-man5 --datadir=${PREFIX}/share/misc
+CONFIGURE_ARGS+=	--enable-fsect-man5
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.pkg.mk"
