@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 19:08:14 marc Exp $
-include/cairo-xlib.h
+@comment $NetBSD: PLIST,v 1.2 2004/01/19 21:08:46 marc Exp $
+include/cairo-features.h
 include/cairo.h
 lib/libcairo.a
 lib/libcairo.la

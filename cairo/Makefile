@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/11/27 19:17:47 marc Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/19 21:08:46 marc Exp $
 #
 
-DISTNAME=	cairo-0.1.13
+DISTNAME=	cairo-0.1.17
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/snapshots/
 
@@ -21,5 +21,5 @@ BUILDLINK_DEPENDS.freetype2=  freetype2>=2.1.5
 .include "../../graphics/freetype2/buildlink2.mk"
 
 .include "../../fonts/Xft2/buildlink2.mk"
-.include "../../wip/libic/buildlink2.mk"
+.include "../../wip/libpixman/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
