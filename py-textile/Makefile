@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/28 15:08:08 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/28 23:08:08 minskim Exp $
 #
 
 DISTNAME=		textile-2
@@ -11,6 +11,7 @@ HOMEPAGE=		http://dealmeida.net/projects/textile/
 COMMENT=		XHTML generator using a simple markup
 
 PYDISTUTILSPKG=		yes
+NO_CONFIGURE=		yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
