@@ -1,11 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2004/04/01 10:59:29 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/19 20:01:19 jeremy-c-reed Exp $
 
-DISTNAME=	util-linux-2.11z
+# newest version may be util-linux-2.12h but not on mirrors
+DISTNAME=	util-linux-2.12b
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.kernel.org/pub/linux/utils/util-linux/ \
+MASTER_SITES=	ftp://ftp.win.tue.nl/pub/linux-local/utils/util-linux/ \
+		${MASTER_SITE_SUNSITE:=system/misc/} \
+		ftp://ftp.cwi.nl/pub/aeb/util-linux/ \
+		http://www.kernel.org/pub/linux/utils/util-linux/ \
 		ftp://ftp.fr.kernel.org/pub/linux/utils/util-linux/ \
 		ftp://ftp.cn.kernel.org/pub/linux/utils/util-linux/
-EXTRACT_SUFX=	.tar.bz2
+#EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
 #HOMEPAGE
@@ -20,7 +24,9 @@ GNU_CONFIGURE=		YES
 MAKE_ENV+=		DESTDIR=${PREFIX}
 MAKE_ENV+=		ETCDIR=${PREFIX}/share/examples/util-linux
 MAKE_ENV+=		FDPRMFILE=${PKG_SYSCONFDIR}/fdprm
-MAKE_ENV+=		INFODIR=${PREFIX}/${INFO_DIR}
+MAKE_ENV+=		INFO_DIR=/${INFO_DIR}
+PKGMANDIR?=		man
+MAKE_ENV+=		MAN_DIR=/${PKGMANDIR}
 
 INFO_FILES=		ipc.info
 
