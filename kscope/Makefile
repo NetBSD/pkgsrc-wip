@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/27 20:43:29 martijnb Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/28 11:46:50 martijnb Exp $
 #
 
 DISTNAME=		kscope-1.0
@@ -18,8 +18,22 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 
+post-build:
+	@echo '[General]' > ${WRKDIR}/kscoperc
+	@echo "FirstTime=true" >> ${WRKDIR}/kscoperc
+	@echo >> ${WRKDIR}/kscoperc
+	@echo '[Programs]' >> ${WRKDIR}/kscoperc
+	@echo "CScope=${LOCALBASE}/bin/cscope" >> ${WRKDIR}/kscoperc
+	@echo "CTags=${LOCALBASE}/bin/exctags" >> ${WRKDIR}/kscoperc
+	@echo "VerboseCScope=false" >> ${WRKDIR}/kscoperc
+
+pre-install:
+	${INSTALL_DATA_DIR} ${KDEDIR}/share/kde/config
+	${INSTALL_DATA} ${WRKDIR}/kscoperc ${KDEDIR}/share/kde/config
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
