@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2005/03/13 13:10:39 martijnb Exp $
+bin/easytag
+man/man1/easytag.1
+share/applications/easytag.desktop
+share/easytag/ChangeLog
+share/easytag/EasyTAG_logo.xpm
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/easytag.mo
+share/pixmaps/EasyTAG.xpm
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/easytag
+@comment in xdg-dirs: @dirrm share/applications
