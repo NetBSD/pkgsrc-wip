@@ -1,0 +1,26 @@
+
+/*
+ * XFree86 packages for pkgsrc system 
+ *  
+ * $Id: xf86site.def,v 1.1.1.1 2003/07/23 20:30:44 xtraeme Exp $
+ *
+ */ 
+
+#ifndef HasSecureRPC
+#define HasSecureRPC YES
+#endif
+#ifndef BuildAoutLibraries
+#define BuildAoutLibraries NO
+#endif
+#ifndef InstallXdmConfig
+#define InstallXdmConfig YES
+#endif
+#ifndef InstallXinitConfig
+#define InstallXinitConfig YES
+#endif
+#ifndef InstallAppDefFiles
+#define InstallAppDefFiles YES
+#endif
+#define HasXdmAuth YES
+#define BuildXF86Setup NO
+#define NothingOutsideProjectRoot YES
