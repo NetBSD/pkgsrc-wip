@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/11/10 10:14:21 marc Exp $
+
+--- db1-ast/include/mpool.h-	2003-08-24 09:41:47.000000000 +0900
++++ db1-ast/include/mpool.h	2003-08-24 09:42:22.000000000 +0900
+@@ -38,6 +38,10 @@
+ 
+ #include <sys/queue.h>
+ 
++#ifndef __PMT
++#define	__PMT(x)	__P(x)
++#endif
++
+ /*
+  * The memory pool scheme is a simple one.  Each in-memory page is referenced
+  * by a bucket which is threaded in up to two of three ways.  All active pages
