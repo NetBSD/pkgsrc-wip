@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/05 01:24:51 adrian_p Exp $
+# $NetBSD: Makefile,v 1.11 2005/03/05 01:46:14 adrian_p Exp $
 
 DISTNAME=	ettercap-NG-0.7.2
 CATEGORIES=	net
@@ -36,6 +36,8 @@ CONF_FILES=	${PREFIX}/share/examples/ettercap-NG/etter.conf \
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.ettercap-NG
 PKG_SUPPORTED_OPTIONS=	gtk
+
+.include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgtk)
 .	include "../../x11/gtk2/buildlink3.mk"
