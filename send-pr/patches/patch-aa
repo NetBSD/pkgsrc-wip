@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/13 23:23:34 jeremy-c-reed Exp $
+
+--- Makefile.in.orig	2001-05-08 10:22:21.000000000 -0700
++++ Makefile.in	2003-10-13 15:19:01.000000000 -0700
+@@ -67,12 +67,13 @@
+ # Where to find sundry TeX/Texinfo files
+ TEXINPUTS = $(srcdir):$(srcdir)/../gnats:$(srcdir)/../send-pr:$(TEXIDIR)
+ 
+-MAKEINFO = makeinfo
++MAKEINFO ?= makeinfo
+ TEXI2DVI = texi2dvi
+ 
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
++INSTALL_SCRIPT=	@INSTALL_SCRIPT@
+ 
+ CFLAGS = -g
+ LDFLAGS = -g
+@@ -130,14 +131,14 @@
+ send-pr: send-pr.sh Makefile
+ 	sed -e 's,xVERSIONx,$(VERSION),' \
+ 	    -e 's,xGNATS_ROOTx,$(GNATS_ROOT),' \
+-	    -e 's,xGNATS_ADDRx,$(GNATS_ADDR),' \
+-	    -e 's,xGNATS_SITEx,$(GNATS_SITE),' \
++	    -e 's,xGNATS_ADDRx,,' \
++	    -e 's,xGNATS_SITEx,,' \
+ 	    -e 's,xSUBMITTERx,$(SUBMITTER),' \
+ 	    -e 's,xECHONx,$(ECHON),' \
+ 	    -e 's,xMAIL_AGENTx,$(MAIL_AGENT),' \
+ 	    -e 's,xPASSWDx,$(PASSWD),' \
+ 	    -e 's%xDEFAULT_ORGANIZATIONx%$(DEFAULT_ORGANIZATION)%' \
+-	    -e 's,xDEFAULT_RELEASEx,$(DEFAULT_RELEASE),' \
++	    -e 's,xDEFAULT_RELEASEx,,' \
+ 	    -e 's,xDATADIRx,$(datadir),' $(srcdir)/send-pr.sh > $@-t
+ 	mv $@-t $@
+ 	chmod 755 $@
+@@ -266,7 +267,7 @@
+ 	mv $@-t $@
+ 
+ send-pr.info: send-pr.texi version.texi fields.texi s-usage.texi categ.texi
+-	$(MAKEINFO) -I $(srcdir) -o send-pr.info $(srcdir)/send-pr.texi
++	$(MAKEINFO) --no-split -I $(srcdir) -o send-pr.info $(srcdir)/send-pr.texi
+ 
+ send-pr.dvi: version.texi
+ 	TEXINPUTS=$(TEXINPUTS) $(TEXI2DVI) $(srcdir)/send-pr.texi

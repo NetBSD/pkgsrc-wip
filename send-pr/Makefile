@@ -1,0 +1,46 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/10/13 23:23:33 jeremy-c-reed Exp $
+
+# this should use a Makefile.common to share the DISTNAME
+GNATS_VERSION=	3.113.1
+DISTNAME=	gnats-${GNATS_VERSION}
+PKGNAME=	send-pr-${GNATS_VERSION}
+WRKSRC=		${WRKDIR}/gnats-${GNATS_VERSION}/send-pr
+CATEGORIES=	misc
+MASTER_SITES=	${MASTER_SITE_GNU=gnats/}
+
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.gnu.org/software/gnats/
+COMMENT=	GNATS problem reporting tool
+
+CONFLICTS+=	gnats-[0-9]*
+
+GNU_CONFIGURE=	YES
+
+USE_MAKEINFO=	YES
+INFO_FILES=	send-pr.info
+
+CONFIGURE_ARGS=	--with-lispdir=${PREFIX}/share/emacs/site-lisp
+
+# this stops the configuration program from pulling installation
+# information in from the standard NetBSD send-pr program
+CONFIGURE_ENV+=	SEND_PR=/dev/null
+
+post-patch:
+	${SED} -e "s,install-sid,${PREFIX}/bin/install-sid," \
+	  -e "s,send-pr --request-id,${PREFIX}/bin/send-pr --request-id," \
+	  ${WRKSRC}/send-pr.sh > ${WRKSRC}/send-pr.sh.fixed && \
+	${MV} ${WRKSRC}/send-pr.sh.fixed ${WRKSRC}/send-pr.sh
+
+post-build:
+	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} info)
+
+pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
+	${INSTALL_DATA_DIR} ${PREFIX}/share/gnats/dist
+
+post-install:
+	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} install-info)
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/gnats/dist/INSTALL.send-pr
+	${INSTALL_DATA} ${FILESDIR}/netbsd-categories ${PREFIX}/share/gnats/netbsd
+
+.include "../../mk/bsd.pkg.mk"
