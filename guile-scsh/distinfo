@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/06 14:32:53 bencollver Exp $
+
+SHA1 (guile-scsh-2.0.1.tar.gz) = bf9d7e24dbcb5e2a85ad1371b941148b1c1aebae
+Size (guile-scsh-2.0.1.tar.gz) = 184852 bytes
