@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2005/03/26 22:29:33 riz Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/26 22:39:47 riz Exp $
 
-DISTNAME=		${NEWTNAME}-5.src.rpm
-NEWTNAME=		newt-0.51.6
-PKGNAME=		${NEWTNAME}
+DISTNAME=		newt-0.51.6-5.src.rpm
+PKGNAME=		newt-0.51.6
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://download.fedora.redhat.com/pub/fedora/linux/core/3/SRPMS/
 EXTRACT_SUFX=		# empty
-PKGREVISION=		1
 
 MAINTAINER=		riz@NetBSD.org
 HOMEPAGE=		# empty
@@ -19,11 +18,11 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 NO_EXPORT_CPP=		yes
 GNU_CONFIGURE=		yes
-WRKSRC=			${WRKDIR}/${NEWTNAME}
+WRKSRC=			${WRKDIR}/newt-0.51.6
 
 do-extract:
 	rpm2pkg -d ${WRKDIR} ${DISTDIR}/${DISTNAME}
-	cd ${WRKDIR} ; ${GZCAT} ${WRKDIR}/${NEWTNAME}.tar.gz | ${TAR} -xf -
+	cd ${WRKDIR} ; ${GZCAT} ${WRKDIR}/newt-0.51.6.tar.gz | ${TAR} -xf -
 
 do-install:
 	cd ${WRKSRC}; \
