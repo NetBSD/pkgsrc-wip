@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.96 2003/04/18 03:43:35 adrian_p Exp $
-# $NetBSD: Makefile,v 1.96 2003/04/18 03:43:35 adrian_p Exp $
+# $Id: Makefile,v 1.97 2003/04/18 04:18:28 adrian_p Exp $
+# $NetBSD: Makefile,v 1.97 2003/04/18 04:18:28 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -11,6 +11,7 @@ SUBDIR+=	ap-bandwidth
 SUBDIR+=	autoproject
 SUBDIR+=	beaver
 SUBDIR+=	billardgl
+SUBDIR+=	bugzilla
 SUBDIR+=	byacc
 SUBDIR+=	celestia
 SUBDIR+=	chksniff
