@@ -1,0 +1,41 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/06/01 10:24:49 marc Exp $
+
+--- src/xmule.cpp.orig	2003-05-27 00:02:47.000000000 +0200
++++ src/xmule.cpp	2003-06-01 01:54:07.000000000 +0200
+@@ -103,8 +103,13 @@
+   delete clientlist; 
+ #endif
+ 
++  if (hashing_mut.TryLock() == wxMUTEX_NO_ERROR) {
+   hashing_mut.Unlock();
++  }
++
++  if (pendingMutex.TryLock() == wxMUTEX_NO_ERROR) {
+   pendingMutex.Unlock();
++  }
+ 
+   printf("xMule shutdown completed.\n");
+ }
+@@ -641,11 +646,13 @@
+     
+ } //End Added By Bouc7
+ 
+-
++#if defined(linux)
+ #include <execinfo.h>
++#endif
+ 
+ void CxmuleApp::OnFatalException()
+ {
++#if defined(linux)
+     // (stkn) create backtrace
+     void * bt_array[100]; // 100 should be enough ?!?
+     char ** bt_strings;
+@@ -666,6 +673,7 @@
+        fprintf(stderr, "[%d] %s\n", i, bt_strings[i]);
+        
+     free(bt_strings);
++#endif
+ }
+ 
+ #define wxGTK_WINDOW 1
