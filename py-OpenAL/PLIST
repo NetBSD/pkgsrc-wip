@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2004/01/10 17:49:18 cjep Exp $
 ${PYSITELIB}/_openal.so
 ${PYSITELIB}/pyopenal/__init__.py
 ${PYSITELIB}/pyopenal/__init__.pyc
