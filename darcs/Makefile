@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/01/20 18:07:46 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/21 16:46:13 rillig Exp $
 #
 
 DISTNAME=		darcs-1.0.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://abridgegame.org/darcs/
 
