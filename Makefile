@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1260 2004/05/09 04:50:30 minskim Exp $
-# $NetBSD: Makefile,v 1.1260 2004/05/09 04:50:30 minskim Exp $
+# $Id: Makefile,v 1.1261 2004/05/09 05:22:48 minskim Exp $
+# $NetBSD: Makefile,v 1.1261 2004/05/09 05:22:48 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -451,7 +451,6 @@ SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-Text-Tabs+Wrap
 SUBDIR+=	p5-Tk-TableMatrix
-SUBDIR+=	p5-XML-Sablotron
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-mysql
 SUBDIR+=	pam-pop3
