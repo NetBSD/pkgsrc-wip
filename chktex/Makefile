@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 13:25:42 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/06 13:55:19 thomasklausner Exp $
 #
 
 DISTNAME=	chktex-1.6.1
@@ -9,7 +9,7 @@ MAINTAINER=	marc@informatik.uni-bremen.de
 HOMEPAGE=	http://www.nongnu.org/chktex/
 COMMENT=	LaTeX semantic checker
 
-DEPENDS+=	lynx:../../www/lynx
+DEPENDS+=	lynx-[0-9]*:../../www/lynx
 
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
