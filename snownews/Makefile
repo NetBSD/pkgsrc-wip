@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/24 06:42:45 bjan2 Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/24 23:02:22 bjan2 Exp $
 
 DISTNAME=       snownews-1.4.2
 CATEGORIES=     www
@@ -8,11 +8,12 @@ MAINTAINER=     bjan+pkgsrc@bjan.net
 HOMEPAGE=	http://home.kcore.de/~kiza/software/snownews/
 COMMENT=        Small, curses based RSS feed reader
 
+BUILD_USES_MSGFMT=	YES
+
 USE_BUILDLINK2= 	YES
 USE_GMAKE=		YES
 USE_NCURSES=		# missing WA_BOLD, WA_REVERSE, KEY_RESIZE
 USE_PKGLOCALEDIR=	YES
-BUILD_USES_MSGFMT=	YES
 
 MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR} GMAKE=${GMAKE}
 MAKE_ENV+=	EXTRA_CFLAGS="${CFLAGS}" 
