@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.2 2004/02/24 15:40:21 pulahti Exp $
+$NetBSD: distinfo,v 1.2 2004/05/11 11:32:53 pulahti Exp $
 
 SHA1 (smlnj-110.45/MLRISC.tgz) = 0ff9ca7a5b333c012c5b366ced1eb1dddd7c3b74
 Size (smlnj-110.45/MLRISC.tgz) = 1221377 bytes
@@ -48,3 +48,4 @@ SHA1 (patch-an) = d6e1a75d5fb68423ce3181622de919c2337db2e7
 SHA1 (patch-ao) = 1c66024c5949269291cbf6f815baf6162db47d31
 SHA1 (patch-ap) = 8e9e28548b4e58de68a11982a355a010ea96aa29
 SHA1 (patch-aq) = 7d0734b76d778d7f584d2e70d325fd72e6554b01
+SHA1 (patch-at) = 4052922bd4cedeb632d2f4da428d61b6a6de4c5c
