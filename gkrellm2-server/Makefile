@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 15:09:28 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/04 14:20:45 cubidou Exp $
 
 PKGNAME=	gkrellm-server-2.1.8a
-.include "../../sysutils/gkrellm2/Makefile.common"
+.include "../../wip/gkrellm2/Makefile.common"
 
-DEPENDS+=		gkrellm-share-2.1.8a:../../sysutils/gkrellm2-share
+DEPENDS+=		gkrellm-share-2.1.8a:../../wip/gkrellm2-share
 
 USE_BUILDLINK2=		YES
 PTHREAD_OPTS=		require

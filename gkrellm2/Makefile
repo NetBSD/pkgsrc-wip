@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 15:07:55 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/04 14:20:40 cubidou Exp $
 
 PKGNAME=	gkrellm-2.1.8a
 .include "Makefile.common"
 
 COMMENT=	GTK2 based system monitor
 
-DEPENDS+=		gkrellm-share-2.1.8a:../../sysutils/gkrellm2-share
+DEPENDS+=		gkrellm-share-2.1.8a:../../wip/gkrellm2-share
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 15:05:37 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/04 14:20:46 cubidou Exp $
 
 PKGNAME=	gkrellm-share-2.1.8a
-.include "../../sysutils/gkrellm2/Makefile.common"
+.include "../../wip/gkrellm2/Makefile.common"
 
 COMMENT=	gkrellm2 shared files
 

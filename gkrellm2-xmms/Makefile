@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 15:34:54 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/04 14:20:45 cubidou Exp $
 #
 
 DISTNAME=	gkrellmms-2.1.9
@@ -19,6 +19,6 @@ BUILD_USES_MSGFMT=	YES
 MAKE_ENV+=	LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \
 		enable_nls=1
 
-.include "../../sysutils/gkrellm2/buildlink2.mk"
+.include "../../wip/gkrellm2/buildlink2.mk"
 .include "../../audio/xmms/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 15:31:33 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/04 14:20:44 cubidou Exp $
 
 DISTNAME=	gkrellm-volume-2.1.7
 WRKSRC=		${WRKDIR}/gkrellm-volume
@@ -18,7 +18,7 @@ BUILD_USES_MSGFMT=	YES
 MAKE_ENV+=	LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \
 		enable_nls=1
 
-.include "../../sysutils/gkrellm2/buildlink2.mk"
+.include "../../wip/gkrellm2/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"

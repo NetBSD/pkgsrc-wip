@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 15:40:05 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/04 14:20:44 cubidou Exp $
 #
 
 DISTNAME=	gkrellflynn-0.6
@@ -15,5 +15,5 @@ USE_GMAKE=	YES
 ALL_TARGET=	gkrellm2
 INSTALL_TARGET=	installgkrellm2
 
-.include "../../sysutils/gkrellm2/buildlink2.mk"
+.include "../../wip/gkrellm2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
