@@ -1,4 +1,0 @@
-- It works within troubles on NetBSD version prior to 1.6ZD and
-  just halts on NetBSD-stable (using devel/pth). Within
-  devel/{unproven|mit}-pthreads it works like on NetBSD-current.
-  The problem is covered by broken POSIX threads support.

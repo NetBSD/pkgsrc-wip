@@ -1,4 +1,0 @@
-This package contains common parts of various clients to DrWeb
-AntiVirus daemon, shipped by Dialogue Science. It's no any sence
-to install it as standalone package, and normally it should be
-installed by dependency only.

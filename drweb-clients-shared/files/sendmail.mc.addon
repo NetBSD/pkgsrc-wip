@@ -1,4 +1,0 @@
-# DrWeb antivirus sendmail filter
-MAIL_FILTER(`drweb-filter', `S=local:@DRW_SMF_SOCKFILE@, T=S:10m;R:10m;E:1h')
-define(`confINPUT_MAIL_FILTERS', `drweb-filter')
-define(`confMILTER_LOG_LEVEL',`1')

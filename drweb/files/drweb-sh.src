@@ -1,6 +1,0 @@
-#!@SH@
-#
-# $NetBSD: drweb-sh.src,v 1.2 2003/10/17 19:13:29 bubuchka Exp $
-# This file used for start drweb with default path to ini file.
-
-exec @PREFIX@/bin/drweb-bin -ini=@PKG_SYSCONFDIR@/drweb32.ini "$@"
