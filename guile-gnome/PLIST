@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/11 13:35:14 lexort Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/11/16 19:35:59 lexort Exp $
 bin/guile-gnome-0
 include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-generic.h
 include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-primitives.h
@@ -40,7 +40,6 @@ share/guile-gnome-0/gnome/contrib/texinfo-buffer.scm
 share/guile-gnome-0/gnome/corba.scm
 share/guile-gnome-0/gnome/corba/primitives.scm
 share/guile-gnome-0/gnome/corba/types.scm
-share/guile-gnome-0/gnome/defs/Makefile.am
 share/guile-gnome-0/gnome/defs/applet.defs
 share/guile-gnome-0/gnome/defs/art.defs
 share/guile-gnome-0/gnome/defs/atk-types.defs
@@ -65,10 +64,13 @@ share/guile-gnome-0/gnome/defs/gtk-extrafuncs.defs
 share/guile-gnome-0/gnome/defs/gtk-types.defs
 share/guile-gnome-0/gnome/defs/gtk.defs
 share/guile-gnome-0/gnome/defs/gtkhtml2.defs
+share/guile-gnome-0/gnome/defs/gtksourceview-overrides.defs
 share/guile-gnome-0/gnome/defs/gtksourceview.defs
+share/guile-gnome-0/gnome/defs/libgda-overrides.defs
 share/guile-gnome-0/gnome/defs/libgda-types.defs
 share/guile-gnome-0/gnome/defs/libgda.defs
 share/guile-gnome-0/gnome/defs/libglade.defs
+share/guile-gnome-0/gnome/defs/libgnomecanvas-types.defs
 share/guile-gnome-0/gnome/defs/libgnomecanvas.defs
 share/guile-gnome-0/gnome/defs/libwnck-types.defs
 share/guile-gnome-0/gnome/defs/libwnck.defs
@@ -79,6 +81,7 @@ share/guile-gnome-0/gnome/defs/print.defs
 share/guile-gnome-0/gnome/defs/printui.defs
 share/guile-gnome-0/gnome/defs/ui-types.defs
 share/guile-gnome-0/gnome/defs/ui.defs
+share/guile-gnome-0/gnome/defs/vte-overrides.defs
 share/guile-gnome-0/gnome/defs/vte.defs
 share/guile-gnome-0/gnome/gconf.scm
 share/guile-gnome-0/gnome/glade.scm
@@ -149,6 +152,14 @@ share/guile-gnome-0/gnome/overrides/ui.defs
 share/guile-gnome-0/gnome/overrides/ui.defs-type-ignores
 share/guile-gnome-0/gnome/pango.scm
 share/guile-gnome-0/gnome/vfs.scm
+share/guile/site/gnome-0.scm
+@dirrm share/guile/site
+@exec ${MKDIR} %D/share/guile-gnome-platform/examples/gnome-vfs
+@dirrm share/guile-gnome-platform/examples/gnome-vfs
+@exec ${MKDIR} %D/share/guile-gnome-platform/examples/gconf
+@dirrm share/guile-gnome-platform/examples/gconf
+@dirrm share/guile-gnome-platform/examples
+@dirrm share/guile-gnome-platform
 @dirrm share/guile-gnome-0/gnome/overrides
 @dirrm share/guile-gnome-0/gnome/gw/support
 @dirrm share/guile-gnome-0/gnome/gw
