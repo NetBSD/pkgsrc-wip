@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/05 14:45:14 adrian_p Exp $
+$NetBSD: distinfo,v 1.2 2004/03/31 10:31:29 adrian_p Exp $
 
-SHA1 (Chart-1.0.1.tar.gz) = 062b68c2475dad0f29329993c7e57a1e54b4080f
-Size (Chart-1.0.1.tar.gz) = 43709 bytes
+SHA1 (Chart-2.3.tar.gz) = 4fc0badf0f20b1493b319130038f0f80af3a4845
+Size (Chart-2.3.tar.gz) = 516041 bytes
