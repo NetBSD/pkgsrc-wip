@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/25 02:40:13 bjan2 Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/02 14:26:11 bjan2 Exp $
 
 DISTNAME=	foomatic-filters-cups-3.0.1
 CATEGORIES=	print
 MASTER_SITES=	#
 DISTFILES=
 
-MAINTAINER=	bjan+pkgsrc@bjan.net
+MAINTAINER=	pkgsrc@bjan.net
 HOMEPAGE=	http://www.linuxprinting.org/
 COMMENT=	CUPS support for foomatic-filters
 

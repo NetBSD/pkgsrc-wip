@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/23 02:59:21 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/02 14:25:10 bjan2 Exp $
 #
 
 DISTNAME=		am-10.7d
@@ -8,7 +8,7 @@ CATEGORIES=		wip
 MASTER_SITES=		http://bjan.freeshell.org/nb/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		bjan+pkgsrc@bjan.freeshell.org
+MAINTAINER=		pkgsrc@bjan.freeshell.org
 HOMEPAGE=		http://www.panix.com/~gesslein/
 COMMENT=		Small portable symbolic math program
 
