@@ -2,9 +2,9 @@ What package should provide rpcinfo tool?
 maybe for DESCR: (The rpcinfo command included in the **** package can
 tell you what RPC services your system offers.)
 
-add rc.d script
-
 need simple man pages some day
 look at man page include with NetBSD
 
 test under NetBSD and other operating systems
+
+figure out pidfile and location (for rc.d script)
