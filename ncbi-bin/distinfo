@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/29 17:59:15 daprice Exp $
+
+SHA1 (ncbi-bin-20040505/ncbi.tar.Z) = 5011ce5cdbc86fc98199574ef234910179c8e755
+Size (ncbi-bin-20040505/ncbi.tar.Z) = 21067051 bytes
+SHA1 (patch-aa) = 368a4b60d1caa1df7e0385ba8ec73abc6aa6b087
