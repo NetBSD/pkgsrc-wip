@@ -1,0 +1,65 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/08 22:47:19 xtraeme Exp $
+
+--- make_gtk.mak.orig	2004-04-09 00:49:43.000000000 +0200
++++ make_gtk.mak	2004-04-09 00:51:10.000000000 +0200
+@@ -21,10 +21,10 @@
+ # Define the installation directories for various products.
+ # Your system may have these in a different place.
+ #    IVE_HOME   - IBM's version of Java (J9)
+-IVE_HOME   = /bluebird/teamswt/swt-builddir/ive
++IVE_HOME   = @PKG_JVM_HOME@
+ #IVE_HOME   = /opt/IBMvame1.4/ive
+ 
+-JAVA_JNI=$(IVE_HOME)/bin/include
++JAVA_JNI=$(IVE_HOME)/include
+ JAVAH=$(IVE_HOME)/bin/javah
+ LD_LIBRARY_PATH=$(IVE_HOME)/bin
+ 
+@@ -32,8 +32,8 @@
+ GTKTARGET = gtk+-2.0
+ #GTKTARGET = gtk+-linux-fb-2.0
+ 
+-CC = gcc
+-LD = ld
++#CC = gcc
++#LD = ld
+ 
+ # Define the various DLL (shared) libraries to be made.
+ 
+@@ -41,9 +41,9 @@
+ WS_PREFIX    = gtk
+ SWT_DLL      = lib$(SWT_PREFIX)-$(WS_PREFIX)-$(SWT_VERSION).so
+ SWTPI_DLL    = lib$(SWT_PREFIX)-pi-$(WS_PREFIX)-$(SWT_VERSION).so
+-GNOME_PREFIX = swt-gnome
+-GNOME_DLL    = lib$(GNOME_PREFIX)-$(WS_PREFIX)-$(SWT_VERSION).so
+-GNOME_OBJ    = gnome.o 
++#GNOME_PREFIX = swt-gnome
++#GNOME_DLL    = lib$(GNOME_PREFIX)-$(WS_PREFIX)-$(SWT_VERSION).so
++#GNOME_OBJ    = gnome.o 
+ 
+ GNOME_CFLAGS = `pkg-config --cflags gnome-vfs-2.0`
+ GNOME_LIB = -x -shared `pkg-config --libs gnome-vfs-2.0`
+@@ -59,7 +59,7 @@
+ # below was obtained by running pkg-config and removing "-lpangoxft-1.0" from
+ # the result.
+ #
+-GTKLIBS = `pkg-config --libs gthread-2.0` -L/usr/local/lib -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangox-1.0 -lpango-1.0 -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0
++GTKLIBS = `pkg-config --libs gthread-2.0` -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangox-1.0 -lpango-1.0 -lgobject-2.0 -lgmodule-2.0 -lglib-2.0
+ #GTKLIBS = `pkg-config --libs $(GTKTARGET)`
+ 
+ 
+@@ -84,12 +84,11 @@
+ PI_OBJECTS = swt.o structs.o
+ 
+ $(SWT_DLL): callback.o
+-	$(LD) -x -shared \
++	$(LD) -shared $(LDFLAGS) \
+ 	    -o $(SWT_DLL) callback.o
+ 	    
+ $(SWTPI_DLL): $(PI_OBJECTS) structs.o
+-	$(LD) -x -shared \
+-	    $(GTKLIBS) \
++	$(LD) -shared $(LDFLAGS) \
+ 	    -o $(SWTPI_DLL) $(PI_OBJECTS)
+ 
+ #$(GNOME_DLL): gnome.o

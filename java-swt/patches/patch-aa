@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/08 22:47:19 xtraeme Exp $
+
+--- callback.c.orig	2004-04-08 22:44:32.000000000 +0000
++++ callback.c	2004-04-08 22:44:41.000000000 +0000
+@@ -14,6 +14,7 @@
+  */
+ #include "swt.h"
+ #include "callback.h"
++#include <stdio.h>
+ #include <string.h>
+ 
+ /* --------------- callback globals ----------------- */

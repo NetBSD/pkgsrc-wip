@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/04/08 22:47:19 xtraeme Exp $
+
+--- structs.h.orig	2004-04-08 22:52:51.000000000 +0000
++++ structs.h	2004-04-08 22:53:03.000000000 +0000
+@@ -19,7 +19,7 @@
+ #include <gtk/gtk.h>
+ #include <gdk/gdk.h>
+ #include <pango/pango.h>
+-
++#define GtkCombo struct _GtkCombo
+ GdkColor *getGdkColorFields(JNIEnv *env, jobject lpObject, GdkColor *lpStruct);
+ void setGdkColorFields(JNIEnv *env, jobject lpObject, GdkColor *lpStruct);
+ 

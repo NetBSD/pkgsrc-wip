@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/08 22:47:18 xtraeme Exp $
+lib/libswt-gtk-2135.so
+lib/libswt-pi-gtk-2135.so
+share/classpath/swt-pi.jar
+share/classpath/swt.jar
+@dirrm share/classpath
