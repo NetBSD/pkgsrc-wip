@@ -67,6 +67,8 @@
 # define BuildThreadStubLibrary YES
 #endif
 
+#define HasZlib YES
+
 #define HasFreetype2 YES
 #define Freetype2Dir @BLNK@
 
