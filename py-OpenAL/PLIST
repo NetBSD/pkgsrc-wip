@@ -1,0 +1,8 @@
+${PYSITELIB}/_openal.so
+${PYSITELIB}/pyopenal/__init__.py
+${PYSITELIB}/pyopenal/__init__.pyc
+${PYSITELIB}/pyopenal/__init__.pyo
+${PYSITELIB}/pyopenal/openal4soya.py
+${PYSITELIB}/pyopenal/openal4soya.pyc
+${PYSITELIB}/pyopenal/openal4soya.pyo
+@dirrm ${PYSITELIB}/pyopenal
