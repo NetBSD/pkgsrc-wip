@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/04 11:39:34 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/11 05:43:07 marttikuparinen Exp $
 bin/xfce4-tips
 lib/xfce4/panel-plugins/libeyes.a
 lib/xfce4/panel-plugins/libeyes.la
 lib/xfce4/panel-plugins/libeyes.so
+share/locale/ca/LC_MESSAGES/xfce4-toys.mo
+share/locale/de/LC_MESSAGES/xfce4-toys.mo
+share/locale/tr/LC_MESSAGES/xfce4-toys.mo
+share/locale/zh_CN/LC_MESSAGES/xfce4-toys.mo
 share/xfce4/eyes/themes/Bizarre/Bizarre-eye.png
 share/xfce4/eyes/themes/Bizarre/Bizarre-pupil.png
 share/xfce4/eyes/themes/Bizarre/config
