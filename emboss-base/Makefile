@@ -1,23 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/10 22:40:43 daprice Exp $
+#
+# $NetBSD: Makefile,v 1.2 2004/12/10 22:01:41 daprice Exp $
 
 .include "Makefile.common"
-
 DISTNAME=		EMBOSS-2.9.0
-
 PKGNAME=		emboss-base-2.9.0
 
 COMMENT=	 	European Molecular Biology Open Software Suite
-
-DEPENDS+=		gd>=1.7.3:../../graphics/gd
-DEPENDS+=		png>=1.0.5:../../graphics/png
-DEPENDS+=		zlib>=1.1.3:../../devel/zlib
-DEPENDS+=		jpeg>=6bnb1:../../graphics/jpeg
 
 DIST_SUBDIR=		${PKG_DISTFILES_DIR}/emboss-2.9.0
 
 post-extract:
 	${CP} ${FILESDIR}/digestchange ${WRKSRC}/digestchange
-
 post-patch:
 	${SH} ${WRKSRC}/digestchange ${WRKSRC}
 	${MV} ${WRKSRC}/doc/programs/text/digest.txt ${WRKSRC}/doc/programs/text/edigest.txt
