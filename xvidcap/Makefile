@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/09 18:34:27 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/10 13:45:02 thomasklausner Exp $
 #
 
 DISTNAME=		xvidcap-1.1.3
@@ -15,7 +15,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes # needed for ffmpeg/ code
 
-# XXX later use graphics/ffmpeg package
+# XXX later use multimedia/ffmpeg package
 # XXX "bundled for now due to color space conversion problems with 0.4.6."
 CONFIGURE_ARGS+=	--with-forced-embedded-ffmpeg
 
