@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2003/07/23 20:35:16 xtraeme Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2003/07/24 07:40:08 blef Exp $
 bin/X
 bin/XFree86
 bin/Xnest
@@ -202,6 +202,4 @@ lib/modules/v20002d.uc
 @dirrm lib/modules/extensions
 @dirrm lib/modules/drivers
 @dirrm lib/X11/xserver
-@dirrm lib/X11/etc
-@dirrm lib/X11/app-defaults
 @dirrm include/X11/pixmaps
