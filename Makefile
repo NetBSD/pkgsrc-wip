@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1552 2004/11/26 13:08:11 moubctez Exp $
-# $NetBSD: Makefile,v 1.1552 2004/11/26 13:08:11 moubctez Exp $
+# $Id: Makefile,v 1.1553 2004/11/26 19:31:57 kristerw Exp $
+# $NetBSD: Makefile,v 1.1553 2004/11/26 19:31:57 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -26,9 +26,9 @@ SUBDIR+=	amarok
 SUBDIR+=	amsn
 SUBDIR+=	and
 SUBDIR+=	anope
-SUBDIR+=	aols-postgres
 SUBDIR+=	aols-freetds
 SUBDIR+=	aols-openssl
+SUBDIR+=	aols-postgres
 SUBDIR+=	aolserver
 SUBDIR+=	aolserver4
 SUBDIR+=	ap-bunzip2
@@ -199,8 +199,8 @@ SUBDIR+=	gmfsk
 SUBDIR+=	gnome-alsamixer
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnomeicu
-SUBDIR+=	gnump3d
 SUBDIR+=	gnucash
+SUBDIR+=	gnump3d
 SUBDIR+=	gnunet
 SUBDIR+=	gnupg-1.9
 SUBDIR+=	gnupoc-makesis
@@ -228,8 +228,8 @@ SUBDIR+=	gtkada
 SUBDIR+=	gtkglk
 SUBDIR+=	gtklookat
 SUBDIR+=	gtkpod
-SUBDIR+=	guile-gtk-devel
 SUBDIR+=	guile-gnome
+SUBDIR+=	guile-gtk-devel
 SUBDIR+=	guile-lib
 SUBDIR+=	guile-pg
 SUBDIR+=	guile-scsh
@@ -558,8 +558,8 @@ SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postgresql-uniqueidentifier
 SUBDIR+=	postgresql80
-SUBDIR+=	postgresql80-docs
 SUBDIR+=	postgresql80-client
+SUBDIR+=	postgresql80-docs
 SUBDIR+=	postgresql80-lib
 SUBDIR+=	postgresql80-server
 SUBDIR+=	ppp
