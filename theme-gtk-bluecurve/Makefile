@@ -1,7 +1,9 @@
+# $NetBSD: Makefile,v 1.5 2004/09/12 14:28:25 thomasklausner Exp $
 # Port du theme bluecurve de Redhat
 # David Ferlier - dferlier@BonBon.net
 
-DISTNAME=	theme-gtk-bluecurve-${THEMEVERSION}
+DISTNAME=	redhat-artwork-${THEMEVERSION}-${SUBVERSION}.src
+PKGNAME=	theme-gtk-bluecurve-${THEMEVERSION}
 THEMEVERSION=	0.47
 SUBVERSION=	3
 CATEGORIES=	x11
@@ -11,45 +13,44 @@ MASTER_SITES=	ftp://ftp.rutgers.edu/pub/redhat/linux/8.0/en/os/i386/SRPMS/ \
 	        ftp://ftp.mirror.ac.uk/sites/ftp.redhat.com/pub/redhat/linux/8.0/en/os/i386/SRPMS/ \
 		ftp://ftp.riken.go.jp/pub/Linux/redhat/releases/8.0/en/os/i386/SRPMS/ \
 		ftp://ftp.kddlabs.co.jp/pub/Linux/packages/RedHat/redhat/linux/8.0/en/os/i386/SRPMS//
+EXTRACT_SUFX=	.rpm
 
-
-DISTFILES=	redhat-artwork-${THEMEVERSION}-${SUBVERSION}.src.rpm
 MAINTAINER=	dferlier@BonBon.net
+COMMENT=	RedHat bluecurve theme for GTK
 
 BUILD_DEPENDS+=	rpm-[0-9]*:../../misc/rpm
-BUILD_DEPENDS+=	libtool:../..//devel/libtool
 
 WRKSRC= 	${WRKDIR}/redhat-artwork-${THEMEVERSION}
 USE_GNU_TOOLS+=	make
-USE_X11BASE=	YES
+USE_X11=	YES
 THEMES_SUBDIRS= ${WRKSRC}/art/gtk/Bluecurve1
 USE_BUILDLINK3=	YES
+USE_LIBTOOL=	YES
+
+BUILD_DIRS=	${THEMES_SUBDIRS}
+MAKE_FLAGS+=	GTK_CONFIG=${BUILDLINK_PREFIX.gtk}/bin/gtk-config
+MAKE_FLAGS+=	GDK_PIXBUF_CONFIG=${BUILDLINK_PREFIX.gdk-pixbuf}/bin/gdk-pixbuf-config
 
 do-extract:
-	@${RM} -rf ${WRKDIR}
-	@${MKDIR} ${WRKDIR}
 	@if ! (cd ${WRKDIR} && rpm2cpio ${_DISTDIR}/${DISTFILES} | cpio -i 2>/dev/null && ${GZIP_CMD} -dc redhat-artwork-${THEMEVERSION}.tar.gz | tar -xf - && ${RM} redhat-artwork-${THEMEVERSION}.tar.gz);\
 		then \
 			exit 1; \
 		fi
 	@${CP} ${FILESDIR}/Makefile-gtk1 ${WRKSRC}/art/gtk/Bluecurve1/Makefile
 
-post-patch:
+do-configure:
 	@${CAT} ${WRKSRC}/art/gtk/Bluecurve1/Makefile |			\
 		${SED} -e 's#-O2#${CFLAGS}#' >				\
 		${WRKSRC}/art/gtk/Bluecurve1/Makefile
 
-do-build:
-	@for theme_dir in ${THEMES_SUBDIRS};do \
-		(cd $$theme_dir; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET}); \
-	done
-
 do-install:
-	@${MKDIR} ${PREFIX}/share/themes/Bluecurve && ${CHMOD} a+rx ${PREFIX}/share/themes/Bluecurve
-	@${MKDIR} ${PREFIX}/lib/gtk/themes/engines && ${CHMOD} a+rx ${PREFIX}/lib/gtk/themes/engines
-	@${INSTALL_PROGRAM} ${WRKSRC}/art/gtk/Bluecurve1/.libs/libbluecurve.so ${PREFIX}/lib/gtk/themes/engines
-	@${MKDIR} ${PREFIX}/share/themes/Bluecurve/gtk && ${CHMOD} a+rx ${PREFIX}/share/themes/Bluecurve/gtk
-	@${INSTALL_DATA} ${WRKSRC}/art/gtk/Bluecurve1/gtk/gtkrc ${PREFIX}/share/themes/Bluecurve/gtk
+	${INSTALL_DATA_DIR} ${PREFIX}/share/themes/Bluecurve
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk/themes/engines
+	${INSTALL_LIB} ${WRKSRC}/art/gtk/Bluecurve1/.libs/libbluecurve.so \
+		${PREFIX}/lib/gtk/themes/engines
+	${INSTALL_DATA_DIR} ${PREFIX}/share/themes/Bluecurve/gtk
+	${INSTALL_DATA} ${WRKSRC}/art/gtk/Bluecurve1/gtk/gtkrc \
+		${PREFIX}/share/themes/Bluecurve/gtk
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
