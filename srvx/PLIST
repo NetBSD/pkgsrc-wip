@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/25 20:21:43 virtus Exp $
+bin/srvx
+share/srvx/chanserv.help
+share/srvx/global.help
+share/srvx/helpserv.help
+share/srvx/modcmd.help
+share/srvx/nickserv.help
+share/srvx/opserv.help
+share/srvx/saxdb.help
+share/srvx/sendmail.help
+share/srvx/sockcheck.conf.example
+share/srvx/sockcheck.help
+share/srvx/srvx.conf.example
+@dirrm share/srvx
