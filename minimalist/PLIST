@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/11 22:00:14 poppnk Exp $
+bin/minimalist.pl
+bin/minimalist_request.pl
