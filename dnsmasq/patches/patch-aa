@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/24 14:16:32 poppnk Exp $
+
+--- Makefile.orig	2003-06-01 18:45:23.000000000 +0000
++++ Makefile	2003-07-24 16:04:33.000000000 +0000
+@@ -1,6 +1,6 @@
+ OBJS = cache.o rfc1035.o dhcp.o util.o option.o forward.o network.o dnsmasq.o
+-BINDIR = /usr/local/sbin
+-MANDIR = /usr/local/man
++BINDIR = ${PREFIX}/sbin/
++DOCDIR = ${PREFIX}/share/doc/dnsmasq/
+ 
+ CC = gcc
+ CFLAGS = -O2
+@@ -17,8 +17,9 @@
+ 	$(CC) -o $@  $(OBJS) $(LIBS)
+ 
+ install : dnsmasq
+-	install -d $(BINDIR) -d $(MANDIR)/man8
+-	install -m 644 dnsmasq.8 $(MANDIR)/man8 
++	install -d $(BINDIR) -d $(DOCDIR)
++	install -m 644 doc.html $(DOCDIR)
++	install -m 644 setup.html $(DOCDIR)
+ 	install -m 755 dnsmasq $(BINDIR)
+ 
+ 

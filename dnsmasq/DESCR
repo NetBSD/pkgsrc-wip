@@ -1,0 +1,9 @@
+Dnsmasq is lightweight, easy to configure DNS forwarder
+designed to provide DNS (domain name) services to a small
+network where using BIND would be overkill. It can have its
+upstream DNS servers automatically configured by PPP or DHCP,
+and it can serve the names of local machines which are not in
+the global DNS. It can integrate with the ISC DHCP daemon to
+serve the names of local machines which are configured using
+DHCP. Dnsmasq is ideal for networks behind NAT routers and
+connected via modem, ISDN, ADSL, or cable-modem connections.
