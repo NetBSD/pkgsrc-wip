@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/25 20:21:43 virtus Exp $
+$NetBSD: distinfo,v 1.1.1.2 2003/05/17 14:29:33 virtus Exp $
 
-SHA1 (srvx-1.2rc3.tar.gz) = e942d9e789d14271b1a0483475c0b83a8476bfc6
-Size (srvx-1.2rc3.tar.gz) = 537809 bytes
-SHA1 (patch-aa) = 95c26e5224fc2b611c7d9809d6b64f56aa10dc32
+SHA1 (srvx-1.1.3.tar.gz) = ee28969bf49f7fea394f467e8ab18ad91528df3f
+Size (srvx-1.1.3.tar.gz) = 485332 bytes
+SHA1 (patch-aa) = 38e678dd2c34d1ef215e45f763a09955c873385e

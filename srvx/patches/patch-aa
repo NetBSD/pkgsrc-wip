@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/25 20:21:44 virtus Exp $
+$NetBSD: patch-aa,v 1.1.1.2 2003/05/17 14:29:33 virtus Exp $
 
---- Makefile.in.orig	2003-01-06 00:53:48.000000000 +0100
-+++ Makefile.in	2003-04-26 00:07:41.000000000 +0200
-@@ -515,11 +515,19 @@
+--- Makefile.in.orig	2003-05-17 18:07:37.000000000 +0200
++++ Makefile.in	2003-05-17 18:12:07.000000000 +0200
+@@ -414,11 +414,12 @@
  	cp ./src/srvx $(srcdir)/src/*.help .
  
  install-exec-local:
@@ -12,18 +12,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/25 20:21:44 virtus Exp $
 -	$(INSTALL) -m 600 $(srcdir)/srvx.conf.example $(prefix)
 -	$(INSTALL) -m 644 $(srcdir)/sockcheck.conf.example $(prefix)
 +	$(INSTALL) -d -m 755 $(prefix)/share/srvx
++	$(INSTALL) -d -m 755 $(prefix)/share/examples/srvx
 +	$(INSTALL) -m 744 ./src/srvx $(prefix)/bin
-+	$(INSTALL) -m 644 ./chanserv.help $(prefix)/share/srvx/
-+	$(INSTALL) -m 644 ./global.help $(prefix)/share/srvx/
-+	$(INSTALL) -m 644 ./helpserv.help $(prefix)/share/srvx/
-+	$(INSTALL) -m 644 ./modcmd.help $(prefix)/share/srvx/
-+	$(INSTALL) -m 644 ./nickserv.help $(prefix)/share/srvx/
-+	$(INSTALL) -m 644 ./opserv.help $(prefix)/share/srvx/
-+	$(INSTALL) -m 644 ./saxdb.help $(prefix)/share/srvx/
-+	$(INSTALL) -m 644 ./sendmail.help $(prefix)/share/srvx/
-+	$(INSTALL) -m 644 ./sockcheck.help $(prefix)/share/srvx/
-+	$(INSTALL) -m 600 $(srcdir)/srvx.conf.example $(prefix)/share/srvx/
-+	$(INSTALL) -m 644 $(srcdir)/sockcheck.conf.example $(prefix)/share/srvx/
++	$(INSTALL) -m 644 $(srcdir)/src/*.help $(prefix)/share/srvx
++	$(INSTALL) -m 600 $(srcdir)/srvx.conf.example $(prefix)/share/examples/srvx
++	$(INSTALL) -m 644 $(srcdir)/sockcheck.conf.example $(prefix)/share/examples/srvx
  	@echo
  	@echo srvx-$(VERSION) has been installed to $(prefix)
  	@echo Remember to edit srvx.conf.example and sockcheck.conf.example
