@@ -1,6 +1,25 @@
-- Guess why the overlay mode does not work, at least on NetBSD...
+$Id: TODO,v 1.2 2004/01/13 10:27:55 mpasternak Exp $
 
-- Maybe write a more complete DESCR file.
+Serious:
+- Guess why the overlay mode does not work, at least on NetBSD...
 
 - Add `xawtv' to the list of packages which support the USE_MMX variable in
   bsd.pkg.defaults.mk when importing it.
+
+Misc:
+- Maybe write a more complete DESCR file -- half done.
+
+- I think, that this application will have different bin/* set when compiled
+  on Linux, than on BSDs (fbctl -- webpage and DESCR mention it)
+  
+  Someone with linux should have a look at it
+  
+- do we want to build the motif viewer? I personally don't (Motif seems
+  to be a living dead now) -- anyway, the app supports it.
+
+- manpages installed in ${PREFIX}/man/es and ${PREFIX}/man/fr:
+	- do such paths comply with filesystem standards?
+	- do we want to have it installed?
+	
+  I have commented out @dirrm lines in PLIST, that removed
+  man/es and man/fr hierarchy.
