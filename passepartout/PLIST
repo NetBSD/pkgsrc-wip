@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/28 09:50:25 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/24 19:29:21 jeremy-c-reed Exp $
 bin/passepartout
 bin/xml2ps
 man/man1/passepartout.1x
@@ -29,6 +29,5 @@ share/xml/passepartout/docbook.xslt
 share/xml/passepartout/xhtml.xslt
 share/xml/passepartout/xml2ps.dtd
 @dirrm share/xml/passepartout
-@dirrm share/xml
 @dirrm share/doc/passepartout/examples
 @dirrm share/doc/passepartout
