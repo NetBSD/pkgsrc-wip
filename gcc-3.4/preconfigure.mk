@@ -1,4 +1,4 @@
-	# Crgate compiler driver scripts in ${WRKDIR}.
+	# Create compiler driver scripts in ${WRKDIR}.
 	(cd ${WRKDIR}/.gcc/bin && \
 	for _target_ in g++ c++ addr2name.awk cc cpp gcc gprcmd g77 \
 		gnatclean gccbug gcj gcjh gcov gij gnat gnatbind gnatbl \

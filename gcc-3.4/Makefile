@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/23 10:04:17 moubctez Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/25 11:14:12 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -21,12 +21,15 @@ INSTLIBS=	libgcj.la
 INSTLIBS=	lib-org-xml-sax.la
 INSTLIBS=	lib-org-w3c-dom.la
 
+.include "../../mk/bsd.prefs.mk"
+
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=        --enable-languages="c,ada,c++,f77,objc,java"
+PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 # An Ada compiler is required to build this pkg. Two
 may be used:
@@ -80,8 +83,17 @@ do-test:
 	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
 
 do-install:
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install \
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} ${INSTALL} \
 	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc)
+
+post-install:
+	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
+	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print	\
+		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"	\
+		>> ${PLIST_SRC}
+	${FIND} ${GCC_PREFIX} -type d -print	\
+		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
+		>> ${PLIST_SRC}
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_GCC3)
