@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1701 2005/03/26 17:08:46 minskim Exp $
-# $NetBSD: Makefile,v 1.1701 2005/03/26 17:08:46 minskim Exp $
+# $Id: Makefile,v 1.1702 2005/03/27 13:10:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.1702 2005/03/27 13:10:13 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -77,7 +77,6 @@ SUBDIR+=	ap2-python
 SUBDIR+=	apachebench2
 SUBDIR+=	apstget
 SUBDIR+=	argouml
-SUBDIR+=	arka
 SUBDIR+=	artemis
 SUBDIR+=	asfrecorder
 SUBDIR+=	asterisk
