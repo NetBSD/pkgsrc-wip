@@ -1,7 +1,7 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.13 2004/03/14 20:46:04 mpasternak Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.14 2004/03/14 20:57:49 mpasternak Exp $
 ###########################################################################
 # 
-# $Id: linuxbin.pkg.mk,v 1.13 2004/03/14 20:46:04 mpasternak Exp $
+# $Id: linuxbin.pkg.mk,v 1.14 2004/03/14 20:57:49 mpasternak Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 #
@@ -260,11 +260,11 @@ do-install:
 do-install: warn-on-freebsd
 	cd ${WRKSRC} && ${PAX} -rw -pe * ${EMULDIR}
 .if !defined(SLACK_NO_INSTALL)
-.if exists(${EMULDIR}/install/doinst.sh)
-	chroot ${EMULDIR} bin/bash install/doinst.sh
-.endif	
-	${RM} -rf ${EMULDIR}/install
+	if [ -f ${EMULDIR}/install/doinst.sh ]; then \
+		chroot ${EMULDIR} bin/bash install/doinst.sh; \
+	fi
 .endif
+	${RM} -rf ${EMULDIR}/install
 .endif
 .else
 .error "Please add support for this kind of package!"
