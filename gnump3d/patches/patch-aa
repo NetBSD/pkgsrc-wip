@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/18 11:10:39 poppnk Exp $
+--- Makefile.orig	Thu Mar 25 19:49:02 2004
++++ Makefile	Sun Apr 18 13:06:50 2004
+@@ -11,8 +11,8 @@
+ #
+ #  Installation Directories.
+ #
+-PREFIX      = /usr
+-CONFDIR     = /etc/gnump3d
++#PREFIX      = /usr
++CONFDIR     = ${PREFIX}/gnump3d
+ CACHEDIR    = /var/cache/gnump3d
+ SERVEDIR    = /var/cache/gnump3d/serving
+ LOGDIR      = /var/log/gnump3d
