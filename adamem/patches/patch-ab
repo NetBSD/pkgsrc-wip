@@ -1,13 +1,29 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/01/11 19:48:05 xmor61 Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/29 04:57:44 xmor61 Exp $
 
---- dev_dsp.h.orig	Mon Jan 10 20:58:53 2005
-+++ dev_dsp.h	Mon Jan 10 20:59:27 2005
-@@ -22,7 +22,7 @@
- #include <sys/types.h>
- #include <sys/stat.h>
- #include <sys/time.h>
--#include <sys/soundcard.h>
-+#include <soundcard.h>
+--- Makefile.X.orig	1999-02-14 11:45:30.000000000 -0800
++++ Makefile.X	2005-03-28 15:24:37.000000000 -0800
+@@ -26,8 +26,8 @@
+ 	rm -f *.o *~
  
- static pid_t childpid;
+ adamem: $(OBJECTS)
+-	$(LD) -s -Wl,-Map,adamem.map -L/usr/X11R6/lib \
+-              -o adamem $(OBJECTS) -lXext -lX11 -lz
++	$(LD) -s -Wl,-Map,adamem.map -L/usr/X11R6/lib -Wl,-R/usr/X11R6/lib \
++              -o adamem $(OBJECTS) -lXext -lX11 -lz $(LIBOSSAUDIO)
  
+ cvem: adamem
+ 	rm -f cvem
+@@ -37,12 +37,8 @@
+ snapedit: snapedit.o
+ 	$(LD) -s -o snapedit snapedit.o -lz
+ 
+-keys.o: keys.c
+-keys: keys.o
+-	$(LD) -s -o keys keys.o
+-
+ adamem.snd: makedata
+-	makedata
++	./makedata
+ 
+ makedata.o: makedata.c
+ makedata: makedata.o

@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/13 15:38:07 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/03/29 04:57:42 xmor61 Exp $
+bin/adam
 bin/adamem
+bin/coleco
 bin/cvem
 bin/snapedit
 bin/z80dasm

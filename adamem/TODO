@@ -1,5 +1,5 @@
 Installs and runs well for me on i386.  Uses optional in-line i386 asm
-code, and requires ENDIAN-ness to be defined without a configure file, so: 
+code, and requires ENDIAN-ness to be defined without a configure script, so: 
 
 1. Should  be tested to make sure conditionals in Makefile produce good
 working binary packages on non-i386 and BIG_ENDIAN architectures...
