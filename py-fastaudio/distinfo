@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.7 2004/03/20 21:59:32 mpasternak Exp $
+$NetBSD: distinfo,v 1.8 2004/03/31 15:23:26 mpasternak Exp $
 
 SHA1 (fastaudio.tar.gz) = 33fb0d8ca0daf356cacc3cff5ee1674f16d31c98
 Size (fastaudio.tar.gz) = 179086 bytes
 SHA1 (portaudio_v18_1.zip) = a460ac5484137d77df17a95ce844ff7f178305b1
 Size (portaudio_v18_1.zip) = 550130 bytes
-SHA1 (patch-aa) = e522bfbf7f69d6f15fd0a32e01a480db922acc56
-SHA1 (patch-ab) = f2c5e59df34567ff3af51a9665cbed4efd6fc192
-SHA1 (patch-ac) = e6e8e11d7952be8347a6f3289e62b24ca56bf3c6
-SHA1 (patch-ad) = 5a343e721ae183facc58195026c7e5c49536632a
-SHA1 (patch-ae) = c2744f10d80a478ad571fcce82bf301d6c50cb59
-SHA1 (patch-af) = 4dfbc63c44b6ae75b4cf5e6e7c498bc3057c1850
-SHA1 (patch-ag) = 3a958b3ee725115937c8105a81597bc46c719696
+SHA1 (patch-aa) = 1135c0c551e1e99e6a86fa4dcf101564e544ab28
+SHA1 (patch-ab) = 5b5f8de4e7e7eb352e6ff6007c63d0860c4cb176
+SHA1 (patch-ac) = 6741f3e2311034682008dcf64d88ee0c94c4a250
+SHA1 (patch-ad) = 18c92cd9e231f6d775352f38ef3eb24bd09ab456
+SHA1 (patch-ae) = e54dd827b7cf33fd2e2e5c7b1c00f0d133355087
+SHA1 (patch-af) = f501d87b9b0d33007e2274bc7768e7b9d89768a2
+SHA1 (patch-ag) = 2317b1346678e6fd0e06388d92326bdbab9b4280

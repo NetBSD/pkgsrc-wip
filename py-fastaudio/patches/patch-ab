@@ -1,34 +1,11 @@
-$NetBSD: patch-ab,v 1.3 2003/11/26 01:42:51 mpasternak Exp $
+$NetBSD: patch-ab,v 1.4 2004/03/31 15:23:27 mpasternak Exp $
 
---- pa_unix_oss/pa_unix_oss.c.orig	Mon Jun 30 11:05:50 2003
-+++ pa_unix_oss/pa_unix_oss.c	Wed Nov 26 02:28:19 2003
-@@ -44,7 +44,12 @@
- #ifdef __linux__
- #include <linux/soundcard.h>
+--- mysndfile.h.orig	Wed May  7 00:06:01 2003
++++ mysndfile.h
+@@ -1,5 +1,5 @@
+ #ifdef WIN32
+ #include "sndfile-win32.h"
  #else
--#include <machine/soundcard.h> /* JH20010905 */
-+# ifdef __NetBSD__
-+#  include <soundcard.h>
-+#  include <sys/audioio.h>  
-+# else
-+#  include <machine/soundcard.h> /* JH20010905 */
-+# endif
+-#include "sndfile.h"
++#include <sndfile.h>
  #endif
- 
- 
-@@ -237,7 +242,14 @@
-         return paHostError;
-     }
- 
--
-+#ifdef __NetBSD__
-+    tmp = 1;
-+    if ( ioctl(devHandle,AUDIO_SETFD, &tmp) == -1) {
-+        ERR_RPT(("Pa_SetupDeviceFormat: could not AUDIO_SETFD. Fastaudio will properly work on NetBSD only with full-duplex soundcard.\n" ));
-+        return paHostError;
-+    }
-+#endif
-+   
-     /* Set number of channels. */
-     tmp = numChannels;
-     if (ioctl(devHandle, SNDCTL_DSP_CHANNELS, &numChannels) == -1)

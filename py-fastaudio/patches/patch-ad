@@ -1,20 +1,15 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/11/22 17:23:43 mpasternak Exp $
+$NetBSD: patch-ad,v 1.2 2004/03/31 15:23:27 mpasternak Exp $
 
---- pa_tests/patest_record.c.orig	Sat Nov 22 17:26:48 2003
-+++ pa_tests/patest_record.c	Sat Nov 22 17:27:12 2003
-@@ -133,6 +133,7 @@
-                          unsigned long framesPerBuffer,
-                          PaTimestamp outTime, void *userData )
- {
-+    int framesToPlay, samplesToPlay, samplesPerBuffer;
-     paTestData *data = (paTestData*)userData;
-     SAMPLE *rptr = &data->recordedSamples[data->frameIndex * NUM_CHANNELS];
-     SAMPLE *wptr = (SAMPLE*)outputBuffer;
-@@ -141,7 +142,6 @@
-     unsigned int framesLeft = data->maxFrameIndex - data->frameIndex;
-     (void) inputBuffer; /* Prevent unused variable warnings. */
-     (void) outTime;
--    int framesToPlay, samplesToPlay, samplesPerBuffer;
- 
-     if( framesLeft < framesPerBuffer )
-     {
+--- pa_tests/patest_wire.c.orig	Thu Apr 10 16:09:40 2003
++++ pa_tests/patest_wire.c
+@@ -74,9 +74,9 @@ static int wireCallback( void *inputBuff
+     SAMPLE *out = (SAMPLE*)outputBuffer;
+     SAMPLE *in = (SAMPLE*)inputBuffer;
+     unsigned int i;
+-    (void) outTime;
+     int samplesPerFrame;
+     int numSamples;
++    (void) outTime;
+     
+     samplesPerFrame = (int) userData;
+     numSamples =  framesPerBuffer * samplesPerFrame;

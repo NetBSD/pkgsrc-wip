@@ -1,48 +1,38 @@
-$NetBSD: patch-af,v 1.4 2004/03/20 21:59:33 mpasternak Exp $
+$NetBSD: patch-af,v 1.5 2004/03/31 15:23:27 mpasternak Exp $
 
---- setup.py.orig	Wed May  7 02:06:01 2003
-+++ setup.py	Mon Nov 24 02:45:20 2003
-@@ -2,23 +2,37 @@
- from distutils.extension import Extension
- from Pyrex.Distutils import build_ext
+--- pa_unix_oss/pa_unix_oss.c.orig	Mon Jun 30 11:05:50 2003
++++ pa_unix_oss/pa_unix_oss.c
+@@ -44,7 +44,16 @@
+ #ifdef __linux__
+ #include <linux/soundcard.h>
+ #else
+-#include <machine/soundcard.h> /* JH20010905 */
++# ifdef __NetBSD__
++#  include <soundcard.h>
++#  include <sys/audioio.h>  
++# else
++#  ifdef __FreeBSD__ 
++#   include <sys/soundcard.h>
++#  else
++#   include <machine/soundcard.h> /* JH20010905 */
++#  endif
++# endif
+ #endif
  
--import sys
-+import sys, os
-+ROOTDIR = os.path.abspath(os.path.dirname(sys.argv[0]))
-+PREFIX = os.environ['PREFIX']
-+try:
-+    LIBOSSAUDIO = os.environ['LIBOSSAUDIO']
-+except:
-+    LIBOSSAUDIO = None
  
- if sys.platform == 'win32':
--    faSources=['fastaudio.pyx', '../pa_common/pa_lib.c', '../pa_win_wmme/pa_win_wmme.c']
-+    faSources=['fastaudio.pyx', ROOTDIR + '/pa_common/pa_lib.c', ROOTDIR + '/pa_win_wmme/pa_win_wmme.c']
-     defines = [('WIN32', 1)]
-     libs = ['winmm', 'libsndfile']
-     extra_link_args = []
--elif sys.platform.find('linux') != -1:
--    faSources=['fastaudio.pyx', '../pa_common/pa_lib.c', '../pa_unix_oss/pa_unix_oss.c']
-+else: # you can add more sys.platform deps later 
-+    faSources=['fastaudio.pyx', ROOTDIR + '/pa_common/pa_lib.c',
-+               ROOTDIR + '/pa_unix_oss/pa_unix.c',
-+               ROOTDIR + '/pa_unix_oss/pa_unix_oss.c']
-     defines = []
-     libs = ['sndfile']
--    extra_link_args = ['/usr/lib/libsndfile.a']
-+    extra_link_args = [PREFIX + '/lib/libsndfile.a']
-+    if LIBOSSAUDIO is not None:
-+        extra_link_args.append(LIBOSSAUDIO)
-+#    try: # This has been commented out to make it build on -current, please check other OSs, as I can't do that now -- dotz@irc.pl
-+#	extra_link_args.append(os.environ['PTHREAD_LDFLAGS'])
-+#    except KeyError:
-+#	pass
- #faSources=['fastaudio.pyx']
+@@ -237,7 +246,14 @@ PaError Pa_SetupDeviceFormat( int devHan
+         return paHostError;
+     }
  
- ext_fastaudio = [Extension('fastaudio',
-                           faSources,
--                          include_dirs=['../pa_common'],
-+                          include_dirs=[ROOTDIR + '/pa_common', ROOTDIR, os.path.join(PREFIX, 'include')],
-                           define_macros=defines,
-                           libraries=libs,
-                           extra_link_args=extra_link_args
+-
++#ifdef __NetBSD__
++    tmp = 1;
++    if ( ioctl(devHandle,AUDIO_SETFD, &tmp) == -1) {
++        ERR_RPT(("Pa_SetupDeviceFormat: could not AUDIO_SETFD. Fastaudio will properly work on NetBSD only with full-duplex soundcard.\n" ));
++        return paHostError;
++    }
++#endif
++   
+     /* Set number of channels. */
+     tmp = numChannels;
+     if (ioctl(devHandle, SNDCTL_DSP_CHANNELS, &numChannels) == -1)
