@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2005/01/15 15:14:21 domg Exp $
+
+This package only works if your printer use the driver ugen.
+Remove ulpt support into the kernel and umass if you printer have a port
+for memory card.
+
+You can force the kernel to use umass only at uhub3 port 5 for example:
+umass0 at uhub3 port 5 configuration 1 interface 0
+
+===========================================================================
