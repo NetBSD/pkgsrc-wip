@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1639 2005/01/31 14:50:14 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1639 2005/01/31 14:50:14 thomasklausner Exp $
+# $Id: Makefile,v 1.1640 2005/02/01 19:42:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.1640 2005/02/01 19:42:10 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -498,6 +498,7 @@ SUBDIR+=	mozplugger
 SUBDIR+=	mpgedit
 SUBDIR+=	mppdec
 SUBDIR+=	mpq-tools
+SUBDIR+=	mrxvt-devel
 SUBDIR+=	mtf
 SUBDIR+=	mtrack
 SUBDIR+=	muine
