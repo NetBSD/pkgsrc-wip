@@ -1,3 +1,0 @@
-Fix threading issues.
-SpreadModule needs a Python that has been built with support for
-threading.

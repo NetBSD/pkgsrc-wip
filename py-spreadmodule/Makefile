@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/07 06:13:42 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/09 20:38:54 marc Exp $
 #
 
 DISTNAME=	SpreadModule-1.3
@@ -14,8 +14,7 @@ COMMENT=	Python bindings for the Spread messaging service
 WRKSRC=		${WRKDIR}/SpreadModule-1.3
 PYDISTUTILSPKG=	YES
 USE_BUILDLINK2=	YES
-#LDFLAGS+=	-lpthread
-PTHREAD_OPTS+=	require
+PYTHON_VERSION_REQD= 22pth
 
 post-patch:
 	${MV} ${WRKSRC}/setup.py ${WRKSRC}/setup.py.pre
