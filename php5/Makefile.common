@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2004/07/16 16:03:57 ppostma Exp $
+# $NetBSD: Makefile.common,v 1.18 2004/07/16 18:04:10 ppostma Exp $
 #
 
 DISTNAME?=		php-${PHP5_VERSION}
@@ -43,5 +43,11 @@ CONFIGURE_ARGS+=	--enable-ipv6
 
 CONFIGURE_ARGS+=	--enable-xml
 CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
+
+BUILD_DEFS+=		USE_SSL
+.if defined(USE_SSL) && !empty(USE_SSL:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--with-openssl
+.include "../../security/openssl/buildlink3.mk"
+.endif
 
 .include "../../textproc/libxml2/buildlink3.mk"
