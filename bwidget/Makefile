@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/28 18:00:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/25 18:18:56 blef Exp $
 #
 
 DISTNAME=		BWidget-1.6.0
@@ -10,7 +10,7 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://tcllib.sourceforge.net/
 COMMENT=		High-level widget set for Tcl/Tk
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 NO_BUILD=		yes
 
 do-install:
@@ -23,5 +23,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/BWman/*.htm* \
 		${PREFIX}/share/doc/html/bwidget
 
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

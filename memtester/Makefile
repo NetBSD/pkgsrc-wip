@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:32:45 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 18:26:25 blef Exp $
 #
 
 DISTNAME=	memtester-2.93.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.qcc.ca/~charlesc/software/memtester/
 COMMENT=	Utility for testing the memory subsystem
 
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/memtest ${PREFIX}/bin/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/27 22:56:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/25 18:24:15 blef Exp $
 
 DISTNAME=	pam_pop3-1.0
 PKGNAME=	pam-pop3-1.0
@@ -9,7 +9,7 @@ MAINTAINER=	david@netbsd-fr.org
 COMMENT=	This module authenticates a user against a POP3 server
 
 WRKSRC=		${WRKDIR}/pam_pop3
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 do-build:
 	${CC} ${CFLAGS} -fpic -DPIC -Wall -c ${WRKSRC}/pam_pop3.c \
@@ -22,5 +22,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pam-pop3
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/pam-pop3
 
-.include "../../security/PAM/buildlink2.mk"
+.include "../../security/PAM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
