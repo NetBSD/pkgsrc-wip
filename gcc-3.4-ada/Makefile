@@ -1,10 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2004/02/28 14:09:13 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.20 2004/03/01 11:05:31 johnrshannon Exp $
 #
 
-SNAPDATE=	20040225
-GCC_VERSION=	3.4
 DISTNAME=	gcc-${GCC_VERSION}-ada
-WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}-${SNAPDATE}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://gcc.gnu.org/pub/gcc/snapshots/${GCC_VERSION}-${SNAPDATE}/ \
 		ftp://mirrors.rcn.net/pub/sourceware/gcc/snapshots/${GCC_VERSION}-${SNAPDATE}/
@@ -14,12 +11,16 @@ MAINTAINER=	john@johnrshannon.com
 HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the developmental gcc 3.4 Ada compiler
 
+GCC_VERSION=	3.4
+SNAPDATE=	20040225
+
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=        --enable-languages="c,ada"
+WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}-${SNAPDATE}
 
 # An Ada compiler is required to build this pkg. Two
 may be used:
