@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/25 07:24:06 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/23 01:47:35 minskim Exp $
 #
 
 DISTNAME=		cdl3-1.2.4
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		jaapboen@sci.kun.nl
 HOMEPAGE=		http://www.cs.kun.nl/~kees/cdl3
 COMMENT=		Programming language for the development of compilers
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		yes
