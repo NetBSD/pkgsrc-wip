@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/24 22:44:54 marc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/25 01:11:25 marc Exp $
 bin/gapi.pl
 bin/gapi2xml.pl
 bin/gapi_codegen.exe
@@ -22,6 +22,9 @@ lib/libgtksharpglue.la
 lib/libgtksharpglue.so
 lib/pango-sharp.dll
 ${PERL5_SITELIB}/GAPI/Metadata.pm
+lib/pkgconfig/gapi.pc
+lib/pkgconfig/gtk-sharp.pc
+lib/rsvg-sharp.dll
 share/gapi/art-api.xml
 share/gapi/atk-api.xml
 share/gapi/gda-api.xml
@@ -34,5 +37,6 @@ share/gapi/gst-api.xml
 share/gapi/gtk-api.xml
 share/gapi/gtk-symbols.xml
 share/gapi/pango-api.xml
+share/gapi/rsvg-api.xml
 @dirrm share/gapi
 @dirrm ${PERL5_SITELIB}/GAPI
