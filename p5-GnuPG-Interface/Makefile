@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/14 21:26:33 tvierling Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/15 19:25:23 tvierling Exp $
 #
 
 DISTNAME=		GnuPG-Interface-0.34
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnupg-interface/}
 
