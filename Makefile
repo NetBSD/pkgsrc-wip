@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1681 2005/03/10 08:17:49 ianzag Exp $
-# $NetBSD: Makefile,v 1.1681 2005/03/10 08:17:49 ianzag Exp $
+# $Id: Makefile,v 1.1682 2005/03/12 23:43:14 jcflack Exp $
+# $NetBSD: Makefile,v 1.1682 2005/03/12 23:43:14 jcflack Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -769,6 +769,12 @@ SUBDIR+=	pysite
 SUBDIR+=	pywm
 SUBDIR+=	pyzor
 SUBDIR+=	q3-urbanterror
+SUBDIR+=	qcad
+SUBDIR+=	qcad-manual-cs
+SUBDIR+=	qcad-manual-de
+SUBDIR+=	qcad-manual-en
+SUBDIR+=	qcad-manual-hu
+SUBDIR+=	qcad-partlibrary
 SUBDIR+=	qemu-bin
 SUBDIR+=	qhacc
 SUBDIR+=	qico
