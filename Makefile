@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1349 2004/06/26 20:47:52 rillig Exp $
-# $NetBSD: Makefile,v 1.1349 2004/06/26 20:47:52 rillig Exp $
+# $Id: Makefile,v 1.1350 2004/06/26 23:57:41 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1350 2004/06/26 23:57:41 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -671,6 +671,7 @@ SUBDIR+=	scite
 SUBDIR+=	scm
 SUBDIR+=	scponly
 SUBDIR+=	send-pr
+SUBDIR+=	sendmail813
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shadow
 SUBDIR+=	shoutcast
