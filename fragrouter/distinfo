@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/16 17:34:31 ishit Exp $
+
+SHA1 (fragrouter-1.6.tar.gz) = b5fb0e9c2096c92661696686aed630bc0f20ce7e
+Size (fragrouter-1.6.tar.gz) = 277726 bytes
+SHA1 (patch-aa) = fd74576ec659d1d936002fb9042b53a75ccc7f66
+SHA1 (patch-ab) = 8e38dee246ac92897aa01622e9747e41358afde1
+SHA1 (patch-ac) = 8a6d106704cfa55fe7bf496d8a7b5fb0ba4d3a45
+SHA1 (patch-ad) = ebe9ff912b674a3f4ffdca2e2b340e0bcf3225ac
+SHA1 (patch-ae) = 2b0d9e3898642a18c26e29a932706c5c990a52b7
+SHA1 (patch-af) = 128ce0b1043d4bcaf4bbcce4d98cb02f2aa4abf1

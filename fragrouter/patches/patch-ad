@@ -1,0 +1,36 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/01/16 17:34:35 ishit Exp $
+
+--- print.c.orig	1999-07-27 00:08:51.000000000 +0900
++++ print.c
+@@ -93,7 +93,7 @@ print_ip(unsigned char *bp, int length)
+ 
+   iph = (struct ip *)bp;
+ 
+-  if (length < IP_H) {
++  if (length < LIBNET_IP_H) {
+     printf("truncated-ip %d", length);
+     return;
+   }
+@@ -190,7 +190,7 @@ print_tcp(unsigned char *bp, int length)
+   tcph = (struct tcphdr *)(bp + (iph->ip_hl * 4));
+   len = length - (iph->ip_hl * 4);
+ 
+-  if (len < TCP_H) {
++  if (len < LIBNET_TCP_H) {
+     printf("truncated-tcp %d", len);
+     return;
+   }
+@@ -227,11 +227,11 @@ print_tcp(unsigned char *bp, int length)
+   if (tcph->th_flags & TH_URG) printf(" urg %d", urp);
+ 
+   /* Handle options. */
+-  if ((tcp_hl -= TCP_H) > 0) {
++  if ((tcp_hl -= LIBNET_TCP_H) > 0) {
+     register const u_char *cp;
+     register int i, opt, len, datalen;
+     
+-    cp = (const u_char *)tcph + TCP_H;
++    cp = (const u_char *)tcph + LIBNET_TCP_H;
+     putchar(' ');
+     ch = '<';
+ 
