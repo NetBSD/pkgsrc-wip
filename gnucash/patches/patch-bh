@@ -1,0 +1,82 @@
+Andreas Rottmann's patch to support g-wrap 1.9.
+
+	* engine/gw-engine-spec.scm:
+	* gnome-search/dialog-search.h:
+	* report/report-gnome/dialog-column-view.h:
+	  Andreas Rottmann's patch to support g-wrap 1.9.
+	  - don't wrap non-existent objects
+	  - protect headers from multiple inclusion
+	  - include gtk.h header when we use gtk objects.
+
+Tags:
+----
+gnucash-1-8-branch
+
+Modified Files:
+--------------
+    gnucash/src/engine:
+        gw-engine-spec.scm
+    gnucash/src/gnome-search:
+        dialog-search.h
+    gnucash/src/report/report-gnome:
+        dialog-column-view.h
+
+Revision Data
+-------------
+Index: gw-engine-spec.scm
+===================================================================
+RCS file: /home/cvs/cvsroot/gnucash/src/engine/gw-engine-spec.scm,v
+retrieving revision 1.53.2.2
+retrieving revision 1.53.2.3
+diff -Lsrc/engine/gw-engine-spec.scm -Lsrc/engine/gw-engine-spec.scm -u -r1.53.2.2 -r1.53.2.3
+--- src/engine/gw-engine-spec.scm
++++ src/engine/gw-engine-spec.scm
+@@ -95,8 +95,6 @@
+ (gw:wrap-as-wct ws '<gnc:id-type> "GNCIdType" "GNCIdTypeConst")
+ (gw:wrap-as-wct ws '<gnc:Account*> "Account*" "const Account*")
+ (gw:wrap-as-wct ws '<gnc:Account**> "Account**" "const Account**")
+-(gw:wrap-as-wct ws '<gnc:InvAcct*> "InvAcct*" "const InvAcct*")
+-(gw:wrap-as-wct ws '<gnc:AccInfo*> "AccInfo*" "const AccInfo*")
+ (gw:wrap-as-wct ws '<gnc:AccountGroup*> "AccountGroup*" "const AccountGroup*")
+ (gw:wrap-as-wct ws '<gnc:Book*> "GNCBook*" "const GNCBook*")
+ (gw:wrap-as-wct ws '<gnc:Lot*> "GNCLot*" "const GNCLot*")
+Index: dialog-search.h
+===================================================================
+RCS file: /home/cvs/cvsroot/gnucash/src/gnome-search/dialog-search.h,v
+retrieving revision 1.10
+retrieving revision 1.10.2.1
+diff -Lsrc/gnome-search/dialog-search.h -Lsrc/gnome-search/dialog-search.h -u -r1.10 -r1.10.2.1
+--- src/gnome-search/dialog-search.h
++++ src/gnome-search/dialog-search.h
+@@ -7,6 +7,8 @@
+ #ifndef _GNC_DIALOG_SEARCH_H
+ #define _GNC_DIALOG_SEARCH_H
+ 
++#include <gtk/gtk.h>
++
+ #include "GNCId.h"
+ #include "QueryNew.h"
+ 
+Index: dialog-column-view.h
+===================================================================
+RCS file: /home/cvs/cvsroot/gnucash/src/report/report-gnome/dialog-column-view.h,v
+retrieving revision 1.1
+retrieving revision 1.1.2.1
+diff -Lsrc/report/report-gnome/dialog-column-view.h -Lsrc/report/report-gnome/dialog-column-view.h -u -r1.1 -r1.1.2.1
+--- src/report/report-gnome/dialog-column-view.h
++++ src/report/report-gnome/dialog-column-view.h
+@@ -20,8 +20,14 @@
+  * Boston, MA  02111-1307,  USA       gnu@gnu.org                   *
+  ********************************************************************/
+ 
++#ifndef GNC_DIALOG_COLUMN_VIEW_H
++#define GNC_DIALOG_COLUMN_VIEW_H
++
+ #include <guile/gh.h>
++#include <gtk/gtk.h>
+ 
+ typedef struct gncp_column_view_edit gnc_column_view_edit;
+ 
+ GtkWidget * gnc_column_view_edit_options(SCM options, SCM view);
++
++#endif
