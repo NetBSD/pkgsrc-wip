@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2003/09/14 19:08:38 blef Exp $
+# $NetBSD: Makefile,v 1.11 2003/10/31 01:28:13 xtraeme Exp $
 
-DISTNAME=	${DISTFILES}
-PKGNAME=	XFree86-clients-${XF_VER}
-CATEGORIES=	xfree86 x11
-MASTER_SITES=	${MASTER_SITE_XFREE}
-DISTFILES=	X430src-1.tgz X430src-2.tgz \
-		X430src-3.tgz X430src-4.tgz
+DISTNAME=		${DISTFILES}
+PKGNAME=		XFree86-clients-${XF_VER}
+CATEGORIES=		xfree86 x11
+MASTER_SITES=		${MASTER_SITE_XFREE}
+DISTFILES=		X430src-1.tgz X430src-2.tgz \
+			X430src-3.tgz X430src-4.tgz
 
-MAINTAINER=	xfree86@blef.org
-HOMEPAGE=	http://www.xfree86.org/
-COMMENT=	XFree86 client programs and related files
+MAINTAINER=		xfree86@blef.org
+HOMEPAGE=		http://www.xfree86.org/
+COMMENT=		XFree86 client programs and related files
 
 USE_BUILDLINK2=		yes
 DISTINFO_FILE=		${.CURDIR}/../XFree86-libs/distinfo
@@ -20,8 +20,6 @@ XINSTALL_DIRS=		programs fonts/util
 XINSTALL_MAN_DIRS=	programs
 
 .include "../../mk/bsd.prefs.mk"
-
-# XXX PAM support
 
 .if ${OPSYS} == "Linux"
 .include "../../security/PAM/buildlink2.mk"
