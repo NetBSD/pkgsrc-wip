@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2003/08/27 06:13:32 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/09/12 13:08:18 marttikuparinen Exp $
 bin/xfdesktop
 etc/xfce4/menu.xml
 etc/xfce4/menu.xml.ca
 etc/xfce4/menu.xml.de
 etc/xfce4/menu.xml.fr
+etc/xfce4/menu.xml.hu
 etc/xfce4/menu.xml.nl
 etc/xfce4/menu.xml.zh_CN
+etc/xfce4/menu.xml.zh_TW
 lib/xfce4/mcs-plugins/backdrop_settings.a
 lib/xfce4/mcs-plugins/backdrop_settings.la
 lib/xfce4/mcs-plugins/backdrop_settings.so
@@ -29,6 +31,7 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfdesktop.mo
 share/xfce4/backdrops/flower.png
 share/xfce4/backdrops/xfce-in-the-moon.png
 share/xfce4/backdrops/xfce-stellar-tile.png

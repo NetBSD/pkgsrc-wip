@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/08/27 06:13:33 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/09/12 13:08:19 marttikuparinen Exp $
 lib/xfce4/mcs-plugins/keyboard_plugin.a
 lib/xfce4/mcs-plugins/keyboard_plugin.la
 lib/xfce4/mcs-plugins/keyboard_plugin.so
@@ -27,6 +27,7 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfce-mcs-plugins.mo
 share/xfce4/doc/C/images/font_selection.png
 share/xfce4/doc/C/images/keyboard_settings.png
 share/xfce4/doc/C/images/mouse_settings.png

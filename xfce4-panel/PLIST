@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2003/08/27 06:13:33 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/09/12 13:08:19 marttikuparinen Exp $
 bin/xfce4-panel
 etc/xfce4/xfce4rc
 etc/xfce4/xfce4rc.ca
+etc/xfce4/xfce4rc.hu
 etc/xfce4/xfce4rc.nl
 include/xfce4/panel/controls.h
 include/xfce4/panel/global.h
@@ -53,6 +54,7 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce4-panel.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfce4-panel.mo
 share/xfce4/doc/C/images/clock-properties.png
 share/xfce4/doc/C/images/default_panel.png
 share/xfce4/doc/C/images/handle-popup.png

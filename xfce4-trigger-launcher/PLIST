@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/27 06:13:33 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/12 13:08:20 marttikuparinen Exp $
 lib/xfce4/panel-plugins/libtriggerlauncher.a
 lib/xfce4/panel-plugins/libtriggerlauncher.la
 lib/xfce4/panel-plugins/libtriggerlauncher.so
@@ -8,7 +8,9 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfce4-trigger-launcher.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfce4-trigger-launcher.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce4-trigger-launcher.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce4-trigger-launcher.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce4-trigger-launcher.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce4-trigger-launcher.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce4-trigger-launcher.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfce4-trigger-launcher.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce4-trigger-launcher.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfce4-trigger-launcher.mo
