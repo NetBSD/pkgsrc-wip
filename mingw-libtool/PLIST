@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/30 23:54:33 mpasternak Exp $
+${MINGWTARGET}/bin/libtool
