@@ -1,5 +1,5 @@
-# $NetBSD: oshavercd.mk,v 1.2 2003/09/13 17:17:04 bubuchka Exp $
-# $Id: oshavercd.mk,v 1.2 2003/09/13 17:17:04 bubuchka Exp $
+# $NetBSD: oshavercd.mk,v 1.3 2003/09/15 17:41:51 bubuchka Exp $
+# $Id: oshavercd.mk,v 1.3 2003/09/15 17:41:51 bubuchka Exp $
 #
 # This makefile intended to determine is system have rc.d framework,
 # or not. If there is no such one, it will be installed by dependency.
@@ -40,7 +40,7 @@ OS_HAVE_RCD=		YES
 OS_HAVE_RCD?=		NO
 
 .if ${OS_HAVE_RCD} == "NO"
-DEPENDS+=		rc.subr-[0-9]*:../../pkgtools/rc.subr
+DEPENDS+=		rc.subr-[0-9]*:../../wip/rc.subr
 DEPENDS+=		rcorder-[0-9]*:../../wip/rcorder
 .endif
 
