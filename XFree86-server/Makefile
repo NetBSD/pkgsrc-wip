@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/24 04:40:58 blef Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/24 05:04:55 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-server-${XF_VER}
@@ -25,8 +25,8 @@ XINSTALL_MAN_DIRS=	programs/Xserver
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "alpha"
-XBUILD_DIRS+=           lib/XThrStub lib/X11 lib/Xext lib/GL
-XINSTALL_DIRS+=         lib/GL/mesa/src/drv
+XBUILD_DIRS+=		lib/XThrStub lib/X11 lib/Xext lib/GL
+XINSTALL_DIRS+=		lib/GL/mesa/src/drv
 .endif
 
 .endif
