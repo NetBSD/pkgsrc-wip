@@ -1,0 +1,61 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/02 02:14:43 dawszy Exp $
+
+--- Makefile.orig	2001-12-29 16:24:28.000000000 +0100
++++ Makefile
+@@ -1,8 +1,9 @@
+-BINDIR=/usr/bin
+-HELPDIR=/usr/share/mtrack
+-MAPDIR=/usr/share/mtrack
+-RCDIR=/etc
+-VARDIR=/var/mtrack
++PREFIX=@PREFIX@
++BINDIR=$(PREFIX)/bin
++HELPDIR=$(PREFIX)/share/mtrack
++MAPDIR=$(PREFIX)/share/mtrack
++RCDIR=$(PREFIX)/etc
++VARDIR=$(PREFIX)/var/mtrack
+ 
+ CC=gcc
+ 
+@@ -17,7 +18,7 @@ mtrack:		mtrack.o data_ed.o data_list.o 
+ 		$(CC) $(LDFLAGS) mtrack.o data_ed.o data_list.o get_data.o help.o map.o track.o colour.o -o mtrack `gtk-config --libs` $(LIBS)
+ 
+ tle2mtrack:	tle2mtrack.o
+-		$(CC) $(LDFLAGS) tle2mtrack.o -o tle2mtrack -lglib
++		$(CC) $(LDFLAGS) `gtk-config --libs` tle2mtrack.o -o tle2mtrack -lglib
+ 
+ mtrack.o:	mtrack.c global.h
+ 		$(CC) $(CFLAGS) `gtk-config --cflags` -c mtrack.c
+@@ -52,22 +53,22 @@ clean:
+ install:	install-maps install-help install-data install-progs
+ 
+ install-maps:
+-		install -d -g bin -o root -m 0775 $(MAPDIR)
+-		install -g bin -o root -m 0664 *.pbm $(MAPDIR)
++		install -d -g wheel -o root -m 0775 $(MAPDIR)
++		install -g wheel -o root -m 0664 *.pbm $(MAPDIR)
+ 
+ install-help:
+-		install -d -g bin -o root -m 0775 $(HELPDIR)
+-		install -g bin -o root -m 0664 *.help $(HELPDIR)
++		install -d -g wheel -o root -m 0775 $(HELPDIR)
++		install -g wheel -o root -m 0664 *.help $(HELPDIR)
+ 
+ install-data:
+-		install -d -g bin -o root -m 0775 $(VARDIR)
+-		install -g bin -o root -m 0666 satfile $(VARDIR)
+-		install -g bin -o root -m 0666 locfile $(VARDIR)
+-		install -g bin -o root -m 0664 mtrackrc $(RCDIR)
++		install -d -g wheel -o root -m 0775 $(VARDIR)
++		install -g wheel -o root -m 0666 satfile $(VARDIR)
++		install -g wheel -o root -m 0666 locfile $(VARDIR)
++		install -g wheel -o root -m 0664 mtrackrc $(RCDIR)
+ 
+ install-progs:
+-		install -g bin -o root -m 0775 mtrack $(BINDIR)
+-		install -g bin -o root -m 0775 tle2mtrack $(BINDIR)
++		install -g wheel -o root -m 0775 mtrack $(BINDIR)
++		install -g wheel -o root -m 0775 tle2mtrack $(BINDIR)
+ 
+ uninstall:
+ 		rm -f $(BINDIR)/mtrack $(BINDIR)tle2mtrack
