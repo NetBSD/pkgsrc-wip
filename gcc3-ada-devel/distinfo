@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2003/12/16 13:03:16 johnrshannon Exp $
+$NetBSD: distinfo,v 1.4 2003/12/17 18:58:52 johnrshannon Exp $
 
-SHA1 (gcc-3.4-20031210.tar.bz2) = 53323c6f435cc5b06d7d90a4dfadf5ab0b70e863
-Size (gcc-3.4-20031210.tar.bz2) = 24392343 bytes
+SHA1 (gcc-3.4-20031217.tar.bz2) = ddb7cd96053c62d4d02c880625c38997f0120f67
+Size (gcc-3.4-20031217.tar.bz2) = 24621980 bytes
 SHA1 (patch-ad) = d7379ea27e2c7a93815c0f8a1bbe53782f952485
 SHA1 (patch-ae) = 29c87ecf5fbb23035a37e0b4e6e9c4c7bd76c7f2
 SHA1 (patch-af) = cdd6b0d13c557996cb6582d7fa5dc651d37ee0ee
