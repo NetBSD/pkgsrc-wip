@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/02/17 14:43:26 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/17 14:45:24 minskim Exp $
 #
 
 DISTNAME=		chkrootkit
 PKGNAME=		chkrootkit-${VERSION}
-CATEGORIES=		wip
+CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.pangeia.com.br/pub/seg/pac/
 
 MAINTAINER=		pancake@phreaker.net
