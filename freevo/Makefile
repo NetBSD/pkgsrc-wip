@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/04 12:48:44 mpasternak Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/04 12:57:58 mpasternak Exp $
 #
 
 DISTNAME=		freevo-1.4.1
@@ -17,6 +17,7 @@ PYDISTUTILSPKG=		yes
 
 PKG_SYSCONFSUBDIR=	freevo
 CONF_FILES=		${PKG_SYSCONFDIR}/local_conf.py
+PLIST_SUBST=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 # well, this could be propably done better way I can't think of
 # 	-- dotz@irc.pl
@@ -26,7 +27,7 @@ post-patch:
 	sed -e 's|@@PYTHONBIN@@|${PYTHONBIN}|g' < ${WRKSRC}/freevo.pre > \
 		${WRKSRC}/freevo
 	${CP} ${WRKSRC}/freevo ${WRKSRC}/freevo.pre
-	sed -e 's|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g' < ${WRKSRC}/freevo.pre > \
+	sed -e 's|@@PKGSRC_SYSCONF_DIR@@|${PKG_SYSCONFDIR}|g' < ${WRKSRC}/freevo.pre > \
 		${WRKSRC}/freevo
 
 post-install:
