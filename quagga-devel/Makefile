@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2005/02/22 21:13:26 lexort Exp $
+# $NetBSD: Makefile,v 1.17 2005/02/23 22:05:04 lexort Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
 DISTNAME=	quagga-0.99.0-20050222
 PKGNAME=	quagga-0.99.0.20050222
+PKGREVISION=	1
 CATEGORIES=	net
 # Use pkgsrc/ for saved snapshots, cvs/ for current ones
 MASTER_SITES=	http://www.quagga.net/download/cvs/ \
@@ -24,7 +25,9 @@ USE_LIBTOOL=		YES
 PKG_SYSCONFSUBDIR?=	zebra
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-exampledir=${PREFIX}/share/examples/quagga
-CONFIGURE_ARGS+=	--enable-pkgsrcrcdir=${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
+
+# XXX pkgsrc prefers that packages not install RCD_SCRIPTS.
+#CONFIGURE_ARGS+=	--enable-pkgsrcrcdir=${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
 # Note that localstatedir is wired into the rc.d scripts.
 CONFIGURE_ARGS+=	--localstatedir=/var/run/zebra
 
