@@ -1,0 +1,43 @@
+$Id: README,v 1.1.1.1 2003/07/23 20:50:34 xtraeme Exp $
+
+These packages try to stay away from any software that is available
+elsewhere in pkgsrc. So we avoid the included fontconfig, freetype2,
+and expat. We realize that this may lead to rebuilding XFree86
+more than desired (when fontconfig is updated, for instance) but we
+believe that this is the best way to do things.
+
+Before trying to install this meta-package, you will need to do
+a few things:
+
+* x11-links tries to detect if we have ${X11BASE} created and checks
+  if we have the X headers. You will have to create your X11BASE
+  directory, and comment these lines from pkgtools/x11-links/Makefile:
+
+  $ sudo mkdir -p /usr/X11R6/bin
+  $ sudo mkdir /usr/X11R6/lib
+  $ sudo chmod 770 -R /usr/X11R6 ( if you are on the group wheel )
+
+  #.if !exists(${X11BASE}/include/X11/X.h)
+  #PKG_FAIL_REASON= "${PKGNAME} requires X headers to be installed"
+  #.endif
+
+* You will need to add the XFree86-libs buildlink to your bsd.pkg.mk,
+  when the XFree86 has been instaled or if any package requires the
+  headers of X, i.e:
+
+  .if defined(USE_X11)
+  X11_LDFLAGS=            # empty
+  X11_LDFLAGS+=           -Wl,${RPATH_FLAG}${X11BASE}/lib
+  X11_LDFLAGS+=           -L${X11BASE}/lib
+  LDFLAGS+=               ${X11_LDFLAGS}
+  .include "../../wip/XFree86-libs/buildlink2.mk"
+    .endif
+  .endif
+
+After making these changes, you shouldn't have any problems.
+Good luck!
+
+Contributed by:
+
+	* Juan RP 
+	* Soren Jacobsen
