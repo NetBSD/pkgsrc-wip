@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.588 2003/11/02 12:09:38 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.588 2003/11/02 12:09:38 thomasklausner Exp $
+# $Id: Makefile,v 1.589 2003/11/02 15:17:27 tripledes Exp $
+# $NetBSD: Makefile,v 1.589 2003/11/02 15:17:27 tripledes Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -146,6 +146,7 @@ SUBDIR+=	gkrellm2-server
 SUBDIR+=	gkrellm2-share
 SUBDIR+=	gkrellm2-snmp
 SUBDIR+=	gkrellm2-volume
+SUBDIR+=	gkrellm2-weather
 SUBDIR+=	gkrellm2-xmms
 SUBDIR+=	gl-117
 SUBDIR+=	glaxium
