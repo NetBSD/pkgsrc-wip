@@ -18,3 +18,5 @@ VIRTUAL_PASSWORDS_PATH
 $SYSCONFDIR/virtual or /vm-pop3d
 
 provide a pam file that has correct paths and a MESSAGE.PAM
+
+add rc.d (rc.subr) script
