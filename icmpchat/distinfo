@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/05/07 21:42:02 poppnk Exp $
+
+SHA1 (icmpchat-0.6.tar.gz) = bb980081481ba887fea5832a42f99486dc508261
+Size (icmpchat-0.6.tar.gz) = 36782 bytes
+SHA1 (patch-aa) = 428d515447da98d5a61fa0b61855e4b4cdd06b2f
+SHA1 (patch-ab) = dae8949934ad697288b68cd881f27e9ae3d02694

@@ -1,0 +1,29 @@
+# $NetBSD: patch-ab,v 1.1.1.1 2003/05/07 21:42:02 poppnk Exp $
+
+--- Makefile__	2003-04-29 22:22:42.000000000 +0000
++++ Makefile	2003-04-29 22:24:27.000000000 +0000
+@@ -9,6 +9,8 @@
+ .c.o:
+ 		${CC} ${FLAGS} -c $<
+ 
++all:		default
++
+ default: 	${OBJS}
+ 		${CC} ${FLAGS} -o icmpchat ${OBJS} ${LIBS}
+ 		@echo Build icmpchat
+@@ -17,12 +19,12 @@
+ 		${CC} ${FLAGS} -o icmpchat ${OBJS} ${LIBS} -lnsl -lsocket -lresolv
+ 
+ install:
+-		install -c icmpchat /usr/local/bin
+-		@echo Installed icmpchat into /usr/local/bin/
++		install -c icmpchat ${PREFIX}/bin
++		@echo Installed icmpchat into ${PREFIX}/bin/
+ 		@echo Type 'icmpchat' to run
+ 
+ deinstall:	
+-		rm -f /usr/local/bin/icmpchat
++		rm -f ${PREFIX}/bin/icmpchat
+ 		@echo Removed icmpchat
+ clean:
+ 		rm -f icmpchat *.o *~
