@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/25 23:37:02 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/25 23:55:53 marc Exp $
 #
 
 DISTNAME=		scons-0.14
@@ -11,6 +11,9 @@ COMMENT=		build system, written in Python
 
 PYDISTUTILSPKG=		yes
 USE_BUILDLINK2=		yes
+
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/scons.1 ${PREFIX}/man/man1
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/25 23:47:08 marc Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/25 23:55:53 marc Exp $
 bin/scons
 lib/scons/SCons/Action.py
 lib/scons/SCons/Action.pyc
@@ -198,6 +198,7 @@ lib/scons/SCons/__init__.py
 lib/scons/SCons/__init__.pyc
 lib/scons/SCons/exitfuncs.py
 lib/scons/SCons/exitfuncs.pyc
+man/man1/scons.1
 @dirrm lib/scons/SCons/Tool
 @dirrm lib/scons/SCons/Sig
 @dirrm lib/scons/SCons/Script
