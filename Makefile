@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1171 2004/04/05 13:48:58 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1171 2004/04/05 13:48:58 xtraeme Exp $
+# $Id: Makefile,v 1.1172 2004/04/05 14:07:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1172 2004/04/05 14:07:48 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -360,7 +360,6 @@ SUBDIR+=	lletters
 SUBDIR+=	lmarbles
 SUBDIR+=	lsdvd
 SUBDIR+=	lua-pgsql
-SUBDIR+=	lua-sqlite
 SUBDIR+=	luacheia
 SUBDIR+=	luaposix
 SUBDIR+=	luasocket
