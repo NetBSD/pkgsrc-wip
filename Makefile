@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.863 2004/01/08 00:51:57 bjan2 Exp $
-# $NetBSD: Makefile,v 1.863 2004/01/08 00:51:57 bjan2 Exp $
+# $Id: Makefile,v 1.864 2004/01/08 10:56:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.864 2004/01/08 10:56:09 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -269,7 +269,6 @@ SUBDIR+=	kaffe-nox11
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	kgpg
-SUBDIR+=	kmplayer
 SUBDIR+=	koffice-i18n-de
 SUBDIR+=	koffice-i18n-es
 SUBDIR+=	konversation
