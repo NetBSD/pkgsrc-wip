@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/11 23:05:20 johnrshannon Exp $
+$NetBSD: distinfo,v 1.2 2004/06/30 12:39:35 johnrshannon Exp $
 
 SHA1 (GtkAda-2.2.1.tgz) = 1d205865342904e1e126571688940aeed11d1514
 Size (GtkAda-2.2.1.tgz) = 3183988 bytes
@@ -6,4 +6,6 @@ SHA1 (patch-Makefile.in) = dfdbd45dc6408b8da98b90b111c52b9d0464af16
 SHA1 (patch-configure.in) = 2caf2d3e2d3bd16afc6d68e8f30fc9631dc8cbd8
 SHA1 (patch-create_layout) = a294e82ef058ff23a4f22cf4501b2393ba1945a5
 SHA1 (patch-gtkada-canvas) = 78893aec4b3b9ce019558a8a80ac9491f879c15d
+SHA1 (patch-gtkplot3d_c) = 7f94f8216a8b24b5bc01b0684f7e492e94d53480
+SHA1 (patch-misc_extra_c) = 8e30ad9cdc07ed00ebdcdd49ceb16c977ff48628
 SHA1 (patch-testgtk_Makefile.in) = 611b26d0c3df2fbeef727a9057e66c929237f5dc

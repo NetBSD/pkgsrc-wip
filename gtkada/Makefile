@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/24 17:11:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/30 12:39:35 johnrshannon Exp $
 #
 
 DISTNAME=		GtkAda-2.2.1
@@ -10,22 +10,35 @@ MAINTAINER=		john@johnrshannon.com
 HOMEPAGE=		http://libre.act-europe.fr/GtkAda/
 COMMENT=		Ada95 graphical toolkit
 
-BUILD_DEPENDS+=		gcc3-ada-[0-9]*:../../lang/gcc3-ada
-
-export PATH=${LOCALBASE}/gcc-3.3.2/bin:${PATH}
-USE_BUILDLINK3=         yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
-USE_AUTOCONF=           yes
-USE_X11=                yes
-GCC_REQD=		3.3
-GCC3_C=			yes
-GCC3_ADA=		yes
+USE_AUTOCONF=		yes
+USE_X11=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+# This package requires an Ada compiler. Two are available:
+# 1) lang/gcc34-ada and 2) lang/gcc34 built with Ada option
+# If USE_GCC_34=YES this package will use gcc34. Otherwise,
+# it will use gcc34-ada
+BUILD_DEFS=	USE_GCC_34
+USE_GCC_34?=	NO
 
 pre-configure:
 	cd ${WRKSRC}; ${AUTOCONF}
+.if !empty(USE_GCC_34:M[Yy][Ee][Ss])
+.  include "../../lang/gcc34/preconfigure.mk"
+.else
+.  include "../../lang/gcc34-ada/preconfigure.mk"
+.endif
 
+.if !empty(USE_GCC_34:M[Yy][Ee][Ss])
+.  include "../../lang/gcc34/buildlink3.mk"
+.else
+.  include "../../lang/gcc34-ada/buildlink3.mk"
+.endif
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"

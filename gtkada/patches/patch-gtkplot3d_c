@@ -1,0 +1,29 @@
+$NetBSD: patch-gtkplot3d_c,v 1.1 2004/06/30 12:39:36 johnrshannon Exp $
+
+--- src/gtkextra/gtkplot3d.c.orig	2003-03-31 01:17:55.000000000 -0700
++++ src/gtkextra/gtkplot3d.c
+@@ -2089,19 +2089,17 @@ gtk_plot3d_rotate_z(GtkPlot3D *plot, gdo
+   gtk_signal_emit_by_name(GTK_OBJECT(plot), "changed");
+ }
+ 
+-void
+-gtk_plot3d_axis_set_scale       (GtkPlot3D *plot,
+-                                 GtkPlotOrientation axis,
+-                                 GtkPlotScale scale)
++void            gtk_plot3d_axis_set_scale       (GtkPlot3D *plot,
++                                                 GtkPlotAxisPos axis,
++                                                 GtkPlotScale scale)
+ {
+   GtkPlotAxis *ax;
+   ax = gtk_plot3d_get_axis(plot, axis);
+   ax->ticks.scale = scale;
+ }
+ 
+-GtkPlotScale
+-gtk_plot3d_axis_get_scale       (GtkPlot3D *plot,
+-                                 GtkPlotOrientation axis)
++GtkPlotScale    gtk_plot3d_axis_get_scale       (GtkPlot3D *plot,
++                                                 GtkPlotAxisPos axis)
+ {
+   GtkPlotAxis *ax;
+   ax = gtk_plot3d_get_axis(plot, axis);
