@@ -1,0 +1,36 @@
+--- src/connect.c.orig	2001-08-18 01:38:25.000000000 +0200
++++ src/connect.c	2004-06-19 20:53:20.000000000 +0200
+@@ -28,7 +28,6 @@
+ #include <fcntl.h>
+ #include <netdb.h>
+ #include <netinet/in.h>
+-#include <netinet/ip.h>
+ #include <netdb.h>
+ #include <arpa/inet.h>
+ #include <errno.h>
+@@ -37,6 +36,7 @@
+ #include <sys/time.h>
+ #include <ctype.h>
+ #include <assert.h>
++#include <pthread.h>
+ #include "misc.h"
+ #include "connect.h"
+ #include "runtime.h"
+@@ -351,11 +351,15 @@
+     while (( res = 
+ 	     gethostbyname_r(host,hostbuf,*tmphstbuf,*hstbuflen,&hp,&herr))
+ 	   && (errno == ERANGE))
+-#endif
+-#ifdef HAVE_FUNC_GETHOSTBYNAME_R_5
++#elif HAVE_FUNC_GETHOSTBYNAME_R_5
+ 	while ((NULL == ( hp =
+ 			  gethostbyname_r(host,hostbuf,*tmphstbuf,*hstbuflen,&herr)))
+ 	       && (errno == ERANGE))
++#else
++    extern pthread_mutex_t gethostbyname_lock;
++    pthread_mutex_lock(&gethostbyname_lock);
++    res = ((hp = gethostbyname(host)) == NULL);
++    pthread_mutex_unlock(&gethostbyname_lock);
+ #endif
+ 	{
+ 	    /* Enlarge the buffer. */

@@ -1,0 +1,10 @@
+--- src/ftpsearch.c.orig	2001-08-18 01:38:28.000000000 +0200
++++ src/ftpsearch.c	2004-06-19 20:15:55.000000000 +0200
+@@ -26,7 +26,6 @@
+ #include <fcntl.h>
+ #include <netdb.h>
+ #include <netinet/in.h>
+-#include <netinet/ip.h>
+ #include <arpa/inet.h>
+ #include <errno.h>
+ #include <string.h>

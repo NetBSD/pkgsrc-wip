@@ -1,0 +1,71 @@
+--- src/curses.c.orig	2001-08-18 01:38:26.000000000 +0200
++++ src/curses.c	2004-06-20 14:49:41.000000000 +0200
+@@ -25,6 +25,7 @@
+ #include <unistd.h>
+ #include <stdio.h>
+ #include <string.h>
++#include <stdarg.h>
+ #include <pthread.h>
+ 
+ #ifdef HAVE_NCURSES_H
+@@ -498,17 +499,6 @@
+ }
+ 
+ 
+-
+-
+-/* because of different args for different ncurses, I had to write these 
+- * my self 
+- */
+-
+-#define kwattr_get(win,a,p,opts)	  ((void)((a) != 0 && (*(a) = (win)->_attrs)), (void)((p) != 0 && (*(p) = PAIR_NUMBER((win)->_attrs))),OK)
+-
+-#define kwattr_set(win,a,p,opts) ((win)->_attrs = (((a) & ~A_COLOR) | COLOR_PAIR(p)), OK)
+-
+-
+ /* Message: prints a message to the screen */
+ void curses_message(const char *args, ...)
+ {
+@@ -537,7 +527,7 @@
+ 	 * get the cursor position 
+ 	 */
+ 	getyx(stdscr, y, x);
+-	kwattr_get(stdscr, &attrs, &i, NULL);
++	wattr_get(stdscr, &attrs, &i, NULL);
+ 	move(19, 0);
+ 	clrtoeol();
+ 	move(20, 0);
+@@ -551,7 +541,7 @@
+ 	 * Unlock the mutex 
+ 	 */
+ 	refresh();
+-	kwattr_set(stdscr, attrs, i, NULL);
++	wattr_set(stdscr, attrs, i, NULL);
+ 	/*
+ 	 * set the cursor to whhere it was */
+ 
+@@ -569,13 +559,13 @@
+     attr_t attrs;
+     int x, y;
+     int ch;
+-    int i;
++    short i;
+ 
+     va_start(vp, args);
+     vsprintf(p, args, vp);
+     va_end(vp);
+     getyx(stdscr, y, x);
+-    kwattr_get(stdscr, &attrs, &i, NULL);
++    wattr_get(stdscr, &attrs, &i, NULL);
+ 
+     attrset(COLOR_PAIR(PROMPT_PAIR) | A_BOLD);
+     move(19, 0);
+@@ -596,7 +586,7 @@
+ 
+     refresh();
+     noecho();
+-    kwattr_set(stdscr, attrs, i, NULL);
++    wattr_set(stdscr, attrs, i, NULL);
+     /*
+      * set the cursor to where it was 
+      */

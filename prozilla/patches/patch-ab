@@ -1,0 +1,41 @@
+--- src/connection.c.orig	2001-08-18 01:38:25.000000000 +0200
++++ src/connection.c	2004-06-19 20:07:39.000000000 +0200
+@@ -30,7 +30,13 @@
+ #include <assert.h>
+ #include <pthread.h>
+ 
+-#include <sys/vfs.h>
++#include <sys/param.h>
++
++#if (defined(__NetBSD__) &&  __NetBSD_Version__ >= 200040000)
++#include <sys/statvfs.h>
++#else
++#include <sys/statfs.h>
++#endif
+ 
+ #include "connection.h"
+ #include "misc.h"
+@@ -200,7 +206,11 @@
+   long long main_file_size = connections[0].main_file_size;
+ 
+   char *prefixed_file = get_prefixed_file(output_file);
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000)
++  struct statvfs fs_info;
++#else
+   struct statfs fs_info;
++#endif
+   unsigned long long free_space;
+ 
+   buffer = (char *) kmalloc(FILE_CHUNK);
+@@ -219,7 +229,11 @@
+   
+   
+   /* Stat file system */
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000)
++  if(statvfs(prefixed_file, &fs_info)!=0)
++#else
+   if(statfs(prefixed_file, &fs_info)!=0)
++#endif
+     {
+       die("Error: unable to stat the file system for writing-: %s\n",
+ 	  strerror(errno));

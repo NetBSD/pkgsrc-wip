@@ -1,0 +1,9 @@
+ProZilla is a multi-threaded download accelerator for Linux 
+which supports both HTTP and FTP protocols. It makes multiple 
+connections to the server and downloads the file in portions, 
+thus giving a much better speed rate than the conventional 
+download programs which use a single connection. Resuming 
+connections is fully supported and customizable.The new FTPSearch 
+feature enables retrieving of mirrors, and also pings them to 
+select the fastest server available. Both the number of mirrors 
+to retrieve and the number of servers to ping at once are fully customizable. 

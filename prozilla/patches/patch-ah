@@ -1,0 +1,10 @@
+--- src/ping.c.orig	2001-08-18 01:38:33.000000000 +0200
++++ src/ping.c	2004-06-19 20:14:41.000000000 +0200
+@@ -24,7 +24,6 @@
+ #include <fcntl.h>
+ #include <netdb.h>
+ #include <netinet/in.h>
+-#include <netinet/ip.h>
+ #include <arpa/inet.h>
+ #include <errno.h>
+ #include <string.h>

@@ -1,0 +1,11 @@
+--- src/main.c.orig	2001-08-18 01:38:31.000000000 +0200
++++ src/main.c	2004-06-19 20:53:52.000000000 +0200
+@@ -88,6 +88,8 @@
+ /* Mutex for the setting of the throttling of the  rates per connection */
+ pthread_mutex_t compute_throttle_mutex = PTHREAD_MUTEX_INITIALIZER;
+ 
++pthread_mutex_t gethostbyname_lock = PTHREAD_MUTEX_INITIALIZER;
++
+ /* Condition which is broadcast when a thread changes its status 
+  *to connecting 
+  */

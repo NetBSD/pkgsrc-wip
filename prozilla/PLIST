@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/21 07:05:51 sourceforge_low Exp $
+bin/proz
+etc/prozilla.conf
+etc/prozilla.conf-sample
+man/man1/proz.1
+man/man1/prozilla.1
