@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.576 2003/10/28 21:31:42 cubidou Exp $
-# $NetBSD: Makefile,v 1.576 2003/10/28 21:31:42 cubidou Exp $
+# $Id: Makefile,v 1.577 2003/10/29 18:11:32 adrian_p Exp $
+# $NetBSD: Makefile,v 1.577 2003/10/29 18:11:32 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -423,6 +423,7 @@ SUBDIR+=	srvx
 SUBDIR+=	stickynotes-applet
 SUBDIR+=	strace
 SUBDIR+=	streamripper
+SUBDIR+=	stunnel3
 SUBDIR+=	sudoscript
 SUBDIR+=	superkaramba
 SUBDIR+=	svgalib
