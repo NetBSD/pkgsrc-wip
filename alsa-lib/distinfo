@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/12 22:32:24 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2004/10/10 04:59:44 jeremy-c-reed Exp $
 
-SHA1 (alsa-lib-1.0.4.tar.bz2) = 0d48ebe66f3705cefb047e1e7747fca5ed402189
-Size (alsa-lib-1.0.4.tar.bz2) = 573089 bytes
+SHA1 (alsa-lib-1.0.6.tar.bz2) = 1f2f7072d7bc9ac3dae03745f39694b087ae11d9
+Size (alsa-lib-1.0.6.tar.bz2) = 675254 bytes

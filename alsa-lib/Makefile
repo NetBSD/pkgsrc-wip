@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/09/23 05:59:30 jlamwww Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/10 04:59:44 jeremy-c-reed Exp $
 #
 
-DISTNAME=		alsa-lib-1.0.4
+DISTNAME=		alsa-lib-1.0.6
 CATEGORIES=		audio
 MASTER_SITES=		http://www.alsa-project.org/alsa/ftp/lib/	\
 			ftp://ftp.alsa-project.org/pub/lib/		\
@@ -14,6 +14,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.alsa-project.org/
 COMMENT=		Libraries for the Advanced Linux Sound Architecture (ALSA)
+
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
