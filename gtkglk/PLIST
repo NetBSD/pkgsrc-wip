@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/20 13:17:29 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/02 17:08:59 dillo Exp $
 include/gtkglk/Make.gtkglk
 include/gtkglk/gi_blorb.h
 include/gtkglk/gi_dispa.h
 include/gtkglk/glk.h
 include/gtkglk/glkstart.h
-lib/libgtkglk.so
+lib/libgtkglk.la
 @dirrm include/gtkglk

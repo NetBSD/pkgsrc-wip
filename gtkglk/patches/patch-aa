@@ -1,11 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/10/20 13:17:29 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/02 17:08:59 dillo Exp $
 
 --- Makefile.orig	Fri Jun 27 22:28:36 2003
 +++ Makefile
-@@ -1,20 +1,20 @@
+@@ -1,49 +1,47 @@
 -prefix = /usr/local
 +prefix = ${PREFIX}
  libdir = ${prefix}/lib
++incdir = ${prefix}/include/gtkglk
  
  MAJOR = 0
  MINOR = 2
@@ -17,7 +18,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/10/20 13:17:29 dillo Exp $
  GTKLIBS := $(shell pkg-config gtk+-2.0 --libs)
  
 -WARNS = -pedantic -Wall -W -Wpointer-arith -Wmissing-prototypes -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
-+WARNS = -Wall -W -Wpointer-arith -Wmissing-prototypes -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
++WARNS = -Wall -W -Wpointer-arith -Wmissing-prototypes
  
  #CFLAGS  = $(GTKFLAGS) $(WARNS) -pipe -g -fpic
  #LDFLAGS = $(GTKLIBS)
@@ -28,3 +29,47 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/10/20 13:17:29 dillo Exp $
  
  OBJS = gglk.o window.o stream.o lineedit.o style.o misc.o fileref.o sound.o gestalt.o blorb.o dispatch.o gi_blorb.o gi_dispa.o gtkhpaned.o gtkvpaned.o glkpaned.o
  
+-default: Make.gtkglk libgtkglk.so
+-
+-libgtkglk.so: $(OBJS)
+-	gcc -shared -fpic $(LDFLAGS) $(OBJS) -o libgtkglk.so
+-
+-libgtkglk.a: $(OBJS)
+-	ar r libgtkglk.a $(OBJS)
+-	ranlib libgtkglk.a
+-
+-# GTK source can't handle GTK_DISABLE_DEPRECATED !
+-gtkhpaned.o: gtkhpaned.c gtkhpaned.c glkpaned.h
+-	gcc -c $(GTKFLAGS) -pipe -g -fpic gtkhpaned.c 
+-gtkvpaned.o: gtkvpaned.c gtkvpaned.c glkpaned.h
+-	gcc -c $(GTKFLAGS) -pipe -g -fpic gtkvpaned.c 
+-
++default: Make.gtkglk libgtkglk.la
+ 
++libgtkglk.la: $(OBJS)
++	${LIBTOOL} --mode=link ${CC} -o libgtkglk.la $(LDFLAGS) ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info ${MAJOR}:${MINOR}
+ 
+ Make.gtkglk: Makefile
+ 	echo LINKLIBS = $(LDFLAGS) > Make.gtkglk
+-	echo GLKLIB = -L$(libdir) -lgtkglk >> Make.gtkglk
++	echo GLKLIB = -L$(libdir) ${COMPILER_RPATH_FLAG}$(libdir) -lgtkglk >> Make.gtkglk
+ 
+ clean:
+ 	rm -f *~ *.o Make.gtkglk libgtkglk.so glkdudo simpletest
+ 
+-install: Make.gtkglk libgtkglk.so
+-	install -m 644 libgtkglk.so $(libdir)
++install: Make.gtkglk libgtkglk.la
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libgtkglk.la $(libdir)
++	${BSD_INSTALL_DATA_DIR} ${incdir}
++	${BSD_INSTALL_DATA} Make.gtkglk ${incdir}
++	${BSD_INSTALL_DATA} gi_blorb.h ${incdir}
++	${BSD_INSTALL_DATA} gi_dispa.h ${incdir}
++	${BSD_INSTALL_DATA} glk.h ${incdir}
++	${BSD_INSTALL_DATA} glkstart.h ${incdir}
++
++.c.o:
++	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c -o $@ $<
+ 
+ gtkglk-$(MAJOR).$(MINOR).tar.gz:
+ 	mkdir gtkglk-$(MAJOR).$(MINOR)

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/20 13:17:29 dillo Exp $
+$NetBSD: distinfo,v 1.2 2005/03/02 17:08:59 dillo Exp $
 
 SHA1 (gtkglk-0.2.tar.gz) = 96159c9008c43545546521cb1ace520c3fe66a61
+RMD160 (gtkglk-0.2.tar.gz) = 5b143fdb1d88a86870e64984f9927f5d9da11471
 Size (gtkglk-0.2.tar.gz) = 61162 bytes
-SHA1 (patch-aa) = 1c384953cff7178d23a2b109d0bf53512a4a89c6
+SHA1 (patch-aa) = b5b94e2c8f9693479f96bb2f36ba0996ed2bde3c
 SHA1 (patch-ab) = 04237872aa45e90fef55be81c8a85f36837264df
