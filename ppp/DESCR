@@ -1,0 +1,18 @@
+The Point-to-Point Protocol (PPP) provides a standard way to establish
+a network connection over a serial link.
+
+This package includes the PPP daemon (pppd), which negotiates with
+the peer to establish the link and sets up the ppp network interface.
+Pppd includes support for authentication, so you can control which other
+systems may make a PPP connection and what IP addresses they may use. It
+also has multilink support.
+
+It also includes chat, for defining a automated conversational exchange
+with a modem for establising a connection between the ppd and the
+remote's pppd.
+
+And pppstats reports the PPP-related statistics at regular intervals for
+the specified PPP interface, such as properties and volume of packets
+received and transmitted.
+
+Paul Mackerras is the original author of a lot of this pppd code.
