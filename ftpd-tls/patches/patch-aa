@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2004/12/28 12:45:45 imilh Exp $
+
+--- ftpd.c.orig	2003-10-06 16:20:00.000000000 +0200
++++ ftpd.c
+@@ -107,6 +107,9 @@ static char rcsid[] = "$OpenBSD: ftpd.c,
+ #include <fcntl.h>
+ #include <glob.h>
+ #include <limits.h>
++#ifdef __NetBSD__
++#undef HAVE_LOGIN_CAP_H
++#endif
+ #ifdef HAVE_LOGIN_CAP_H
+ #include <login_cap.h>
+ #endif /* HAVE_LOGIN_CAP_H */
