@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/03 23:37:08 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/08 23:24:02 airhead Exp $
+bin/xjump
