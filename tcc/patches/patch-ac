@@ -1,26 +1,88 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/07/27 02:41:04 poppnk Exp $
-
---- Makefile.orig	2003-05-24 18:30:29.000000000 +0000
-+++ Makefile	2003-07-27 04:32:14.000000000 +0000
-@@ -2,9 +2,11 @@
- # Tiny C Compiler Makefile
+--- Makefile.orig	2004-03-17 23:55:38.000000000 +0100
++++ Makefile	2004-03-17 23:59:32.000000000 +0100
+@@ -3,20 +3,17 @@
  #
  include config.mak
-+OS=\`uname\`
  
- CFLAGS=-O2 -g -Wall
+-CFLAGS=-O2 -g -Wall
 -LIBS=-ldl
-+LIBS=`if [ ! "$(OS)" = "NetBSD" ]; then echo "-ldl"; fi`
-+
  CFLAGS_P=$(CFLAGS) -pg -static -DCONFIG_TCC_STATIC
  LIBS_P=
  
-@@ -167,7 +169,7 @@
+ CFLAGS+=-mpreferred-stack-boundary=2
+ ifeq ($(GCC_MAJOR),2)
+-CFLAGS+=-m386 -malign-functions=0
++CFLAGS+=-malign-functions=0
+ else
+-CFLAGS+=-march=i386 -falign-functions=0
++CFLAGS+=-falign-functions=0
+ endif
+ 
+ DISAS=objdump -d
+-INSTALL=install
+ 
+ # run local version of tcc with local libraries and includes
+ TCC=./tcc -B. -I.
+@@ -116,24 +113,24 @@
+ 
+ # TinyCC runtime libraries
+ libtcc1.o: libtcc1.c
+-	$(CC) -O2 -Wall -c -o $@ $<
++	$(CC) -c -o $@ $<
+ 
+ libtcc1.a: libtcc1.o
+ 	$(AR) rcs $@ $^
+ 
+ bcheck.o: bcheck.c
+-	$(CC) -O2 -Wall -c -o $@ $<
++	$(CC) -c -o $@ $<
+ 
+ install: tcc_install libinstall
+ 
+ tcc_install: tcc tcc.1 libtcc1.a bcheck.o
+-	$(INSTALL) -m755 tcc $(bindir)
+-	$(INSTALL) tcc.1 $(mandir)/man1
+-	mkdir -p $(libdir)/tcc
+-	mkdir -p $(libdir)/tcc/include
+-	$(INSTALL) -m644 libtcc1.a bcheck.o $(libdir)/tcc
+-	$(INSTALL) -m644 stdarg.h stddef.h stdbool.h float.h varargs.h \
+-                   tcclib.h $(libdir)/tcc/include
++	$(BSD_INSTALL_PROGRAM) tcc $(bindir)
++	$(BSD_INSTALL_MAN) tcc.1 $(mandir)/man1
++	$(BSD_INSTALL_DATA_DIR) $(libdir)/tcc
++	$(BSD_INSTALL_DATA_DIR) $(prefix)/include/tcc
++	$(BSD_INSTALL_DATA) libtcc1.a bcheck.o $(libdir)/tcc
++	$(BSD_INSTALL_DATA) stdarg.h stddef.h stdbool.h float.h varargs.h \
++	    tcclib.h $(prefix)/include/tcc
+ 
+ clean:
+ 	rm -f *~ *.o tcc tcc1 tcct tcc_g tcctest.ref *.bin *.i ex2 \
+@@ -157,8 +154,8 @@
+ 
+ # libtcc generation and example
+ libinstall: libtcc.a 
+-	$(INSTALL) -m644 libtcc.a $(libdir)
+-	$(INSTALL) -m644 libtcc.h $(includedir)
++	$(BSD_INSTALL_DATA) libtcc.a $(libdir)
++	$(BSD_INSTALL_DATA) libtcc.h $(includedir)/tcc
+ 
+ libtcc.o: tcc.c i386-gen.c bcheck.c Makefile
+ 	$(CC) $(CFLAGS) -DLIBTCC -c -o $@ $<
+@@ -167,7 +164,7 @@
  	$(AR) rcs $@ $^
  
  libtcc_test: libtcc_test.c libtcc.a 
 -	$(CC) $(CFLAGS) -I. -o $@ $< -L. -ltcc -ldl
-+	$(CC) $(CFLAGS) -I. -o $@ $< -L. -ltcc $(LIBS)
++	$(CC) $(CFLAGS) -I. -o $@ $< -L. -ltcc
  
  libtest: libtcc_test
  	./libtcc_test
+@@ -198,7 +195,7 @@
+ 	@if diff -u --ignore-matching-lines="file format" asmtest.ref asmtest.out ; then echo "ASM Auto Test OK"; fi
+ 
+ instr.o: instr.S
+-	$(CC) -O2 -Wall -g -c -o $@ $<
++	$(CC) -c -o $@ $<
+ 
+ cache: tcc_g
+ 	cachegrind ./tcc_g -o /tmp/linpack -lm bench/linpack.c

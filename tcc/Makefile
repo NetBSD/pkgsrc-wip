@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:44 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/17 22:56:05 xtraeme Exp $
 #
 
-DISTNAME=	tcc-0.9.19
+DISTNAME=	tcc-0.9.20
 CATEGORIES=	lang
 MASTER_SITES=	http://fabrice.bellard.free.fr/tcc/
 
@@ -11,7 +11,7 @@ COMMENT=	The Smallest ANSI C compiler
 
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 ONLY_FOR_PLATFORM=	*-*-i386
 

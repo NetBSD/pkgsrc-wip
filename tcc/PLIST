@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/27 02:41:03 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/17 22:56:05 xtraeme Exp $
 bin/tcc
-include/libtcc.h
+include/tcc/libtcc.h
+include/tcc/float.h
+include/tcc/stdarg.h
+include/tcc/stdbool.h
+include/tcc/stddef.h
+include/tcc/tcclib.h
+include/tcc/varargs.h
 lib/libtcc.a
 lib/tcc/bcheck.o
-lib/tcc/include/float.h
-lib/tcc/include/stdarg.h
-lib/tcc/include/stdbool.h
-lib/tcc/include/stddef.h
-lib/tcc/include/tcclib.h
-lib/tcc/include/varargs.h
 lib/tcc/libtcc1.a
 man/man1/tcc.1
-@dirrm lib/tcc/include
 @dirrm lib/tcc
+@dirrm include/tcc
