@@ -1,0 +1,10 @@
+jed (programmer's editor)
+
+JED (by John E. Davis) is an extremely powerful but small emacs-like
+programmer's editor that is extensible in a C-like macro language and
+can do color syntax highlighting.  Among the many features:
+    Emacs, wordstar, EDT emulation;
+    C, Fortran, TeX, text editing modes;  Full undo;
+    GNU Emacs compatible info reader, and lots more.
+
+JED is also 8 bit clean, so you can even edit binary files!
