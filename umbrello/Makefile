@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/05 20:32:25 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/13 14:50:11 marc Exp $
 #
 
 DISTNAME=		umbrello-1.1.1
@@ -11,6 +11,7 @@ HOMEPAGE=		http://uml.sourceforge.net/
 COMMENT=		Unified Modelling Language diagram programme for KDE
 
 USE_GMAKE=		YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
