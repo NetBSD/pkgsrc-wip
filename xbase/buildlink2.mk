@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/11/18 04:51:37 mpasternak Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/30 20:16:12 cjep Exp $
 
 .if !defined(XBASE_BUILDLINK2_MK)
 XBASE_BUILDLINK2_MK=	# defined
@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.xbase?=	../../wip/xbase
 EVAL_PREFIX+=			BUILDLINK_PREFIX.xbase=xbase
 BUILDLINK_PREFIX.xbase_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.xbase=	include/xbase/*
-BUILDLINK_FILES.xbase+=	lib/libxbase* 
+BUILDLINK_FILES.xbase+=	lib/libxbase*
 BUILDLINK_FILES.xbase+=	bin/xbase-config
 
 BUILDLINK_TARGETS+=	xbase-buildlink
