@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/07 23:46:24 bjan2 Exp $
+
+--- Makefile.orig	1999-09-17 00:17:18.000000000 -0700
++++ Makefile
+@@ -1,11 +1,5 @@
+-BINDIR =	/usr/local/sbin
+-MANDIR =	/usr/local/man/man8
+-CC =		gcc
+-CFLAGS =	-O
+-#CFLAGS =	-g
+-#SYSVLIBS =	-lnsl -lsocket
+-LDFLAGS =	-s ${SYSVLIBS}
+-#LDFLAGS =	-g ${SYSVLIBS}
++BINDIR =	${LOCALBASE}/sbin
++MANDIR =	${LOCALBASE}/man/man8
+ 
+ all:		micro_httpd
+ 
