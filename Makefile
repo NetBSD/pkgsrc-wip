@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.519 2003/10/01 22:57:28 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.519 2003/10/01 22:57:28 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.520 2003/10/05 13:22:31 cubidou Exp $
+# $NetBSD: Makefile,v 1.520 2003/10/05 13:22:31 cubidou Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -264,8 +264,6 @@ SUBDIR+=	newsx
 SUBDIR+=	nikto
 SUBDIR+=	noip
 SUBDIR+=	ntp4-dev
-SUBDIR+=	nvtv
-SUBDIR+=	nvtv-gtk2
 SUBDIR+=	obconf
 SUBDIR+=	oinkmaster
 SUBDIR+=	opax
