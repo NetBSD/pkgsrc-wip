@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/02/22 08:29:04 adrian_p Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/25 09:49:05 adrian_p Exp $
 
 DISTNAME=	Unreal3.2.2b
 PKGNAME=	unrealircd-3.2.2b
@@ -14,7 +14,7 @@ USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 WRKSRC=		${WRKDIR}/Unreal3.2
 
-#.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ENV+=	tre_version="0.7.0"
 CONFIGURE_ENV+=	TRELIBS="-L${PREFIX}/lib -ltre"
@@ -85,11 +85,8 @@ OWN_DIRS_PERMS=		${IRCD_HOME} ${IRCD_USER} ${IRCD_GROUP} 0700
 CONFIGURE_ENV+=		ac_cv_ip6=no  
 .endif
 
-# Bad hack as I think there's a bug floating round the place
-# with INSTALL_UNSTRIPPED=yes being ignored in cetain cases.
 .if ${OPSYS} == "Darwin"
-_STRIPFLAG_CC=          
-_STRIPFLAG_INSTALL=     
+INSTALL_UNSTRIPPED=YES
 .endif
 
 do-install:
