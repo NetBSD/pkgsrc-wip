@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+
+STAGE=$2
+
+TEXMFMAIN=@TEXMFMAIN@
+SPECIALMAP=${TEXMFMAIN}/fontname/special.map
+
+case ${STAGE} in
+    PRE-INSTALL)
+	;;
+    POST-INSTALL)
+	echo "Edit ${SPECIALMAP}"
+	echo "@c Korean TrueType fonts by Baekmuk:"     >> ${SPECIALMAP}
+	echo "batang          baekmuk         batang"   >> ${SPECIALMAP}
+	echo "dotum           baekmuk         dotum"    >> ${SPECIALMAP}
+	echo "gulim           baekmuk         gulim"    >> ${SPECIALMAP}
+	echo "hline           baekmuk         hline"    >> ${SPECIALMAP}
+
+	echo "Update ls-R"
+	mktexlsr
+	;;
+    *)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
