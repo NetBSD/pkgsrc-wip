@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/05/31 09:37:30 poppnk Exp $
+
+SHA1 (slocate-2.7.tar.gz) = b5de4668b61b137f3f5fa9f17b334f56b9424f90
+Size (slocate-2.7.tar.gz) = 87240 bytes
+SHA1 (patch-aa) = 43fb7f678ea16aa68709852c2e88adafbf7d8d01
+SHA1 (patch-ab) = f007ae8c388a70859b62f2f68f72b135eebb9d86
+SHA1 (patch-ac) = 8efd4aa191cae7bdf9403d1ee803fbd0da81a762
+SHA1 (patch-ad) = 5f0b4bb8190e3debfe2e618a7c45ce036ddeac1e
