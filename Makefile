@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.417 2003/09/02 06:17:03 xtraeme Exp $
-# $NetBSD: Makefile,v 1.417 2003/09/02 06:17:03 xtraeme Exp $
+# $Id: Makefile,v 1.418 2003/09/02 07:45:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.418 2003/09/02 07:45:06 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -134,7 +134,6 @@ SUBDIR+=	gnome2-userdocs
 SUBDIR+=	gnomeicu
 SUBDIR+=	gnucash-docs
 SUBDIR+=	gnunet
-SUBDIR+=	gossip
 SUBDIR+=	gotmail
 SUBDIR+=	gov2
 SUBDIR+=	grip
@@ -199,7 +198,6 @@ SUBDIR+=	linux-nfs-utils
 SUBDIR+=	liquidwar
 SUBDIR+=	lletters
 SUBDIR+=	lmarbles
-SUBDIR+=	loudmouth
 SUBDIR+=	mailfilter
 SUBDIR+=	mailman21
 SUBDIR+=	man-db
@@ -320,7 +318,7 @@ SUBDIR+=	py-libpcap
 SUBDIR+=	py-spark
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-twisted
-SUBDIR+=	pyRXP
+SUBDIR+=	py-RXP
 SUBDIR+=	qinx
 SUBDIR+=	qn-x11
 SUBDIR+=	rapidsvn
@@ -373,7 +371,6 @@ SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
 SUBDIR+=	vte
 SUBDIR+=	weewm
-SUBDIR+=	windowlab
 SUBDIR+=	wmclockmon
 SUBDIR+=	wmitime
 SUBDIR+=	wmnetload
@@ -407,7 +404,6 @@ SUBDIR+=	xmail
 SUBDIR+=	xml2doc
 SUBDIR+=	xmms-dumb
 SUBDIR+=	xmms-modplug
-SUBDIR+=	xpad
 SUBDIR+=	xplore
 SUBDIR+=	xsh
 SUBDIR+=	yafray
