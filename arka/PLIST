@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 00:13:45 daprice Exp $
+bin/arka
+etc/arkarc
+include/X11/pixmaps/arka_16x16.xpm
+include/X11/pixmaps/arka_32x32.xpm
+man/man1/arka.1.gz
+share/doc/arka/CHANGES.TXT
+share/doc/arka/FILES.TXT
+share/doc/arka/LICENSE.TXT
+share/doc/arka/Makefile
+share/doc/arka/README.TXT
+share/doc/arka/TODO.TXT
+@dirrm share/doc/arka

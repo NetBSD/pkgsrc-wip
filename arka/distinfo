@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/25 00:13:45 daprice Exp $
+
+SHA1 (arka-0.11.tgz) = 7b1e373cb7e74a70da8c2c423dd6d7f3fecd6960
+Size (arka-0.11.tgz) = 280123 bytes
+SHA1 (patch-aa) = 9b04a8f95b82bd906b3b70eacaa61cf4584cb271
