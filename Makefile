@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.250 2003/06/17 02:22:17 mjasm Exp $
-# $NetBSD: Makefile,v 1.250 2003/06/17 02:22:17 mjasm Exp $
+# $Id: Makefile,v 1.251 2003/06/18 18:00:10 cubidou Exp $
+# $NetBSD: Makefile,v 1.251 2003/06/18 18:00:10 cubidou Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -147,13 +147,22 @@ SUBDIR+=	p5-Authen-SASL
 SUBDIR+=	p5-Authen-SASL-Cyrus
 SUBDIR+=	p5-CDDB
 SUBDIR+=	p5-Chart
+SUBDIR+=	p5-Class-Factory-Util
+SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-Compress-Bzip2
 SUBDIR+=	p5-Data-TemporaryBag
+SUBDIR+=	p5-DateTime
+SUBDIR+=	p5-DateTime-Event-Cron
+SUBDIR+=	p5-DateTime-LeapSecond
+SUBDIR+=	p5-DateTime-Set
+SUBDIR+=	p5-DateTime-TimeZone
 SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-GeoIP
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-Net-Gnats
 SUBDIR+=	p5-Net-Jabber
+SUBDIR+=	p5-Set-Crontab
+SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-XML-Stream
