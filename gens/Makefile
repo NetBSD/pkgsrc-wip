@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/26 19:49:04 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/28 16:09:57 dillo Exp $
 #
 
 DISTNAME=		gens-rc3
@@ -10,13 +10,16 @@ MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://gens.consolemul.com/
 COMMENT=		Sega Genesis emulator with Sega CD support
 
-WRKSRC=		${WRKDIR}/GensForLinux
+BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
+
+# contains i386 assembler sources
+ONLY_FOR_PLATFORM=	*-i386
+
+WRKSRC=			${WRKDIR}/GensForLinux
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
-
-BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
