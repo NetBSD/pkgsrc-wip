@@ -1,5 +1,3 @@
-$Id: README,v 1.1.1.1 2003/07/23 20:50:34 xtraeme Exp $
-
 These packages try to stay away from any software that is available
 elsewhere in pkgsrc. So we avoid the included fontconfig, freetype2,
 and expat. We realize that this may lead to rebuilding XFree86
