@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/17 21:04:04 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/18 20:18:11 daprice Exp $
 #
 
 DISTNAME=		qgis-0.6.0
@@ -24,7 +24,7 @@ pre-build:
 	${CHMOD} 755 ${WRKSRC}/create_qm_files.sh
 
 .include "../../wip/grass/buildlink3.mk"
-.include "../../wip/gdal/buildlink3.mk"
+.include "../../wip/gdal-lib/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
