@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1115 2004/03/26 18:41:55 marc Exp $
-# $NetBSD: Makefile,v 1.1115 2004/03/26 18:41:55 marc Exp $
+# $Id: Makefile,v 1.1116 2004/03/27 00:26:09 rockpiper Exp $
+# $NetBSD: Makefile,v 1.1116 2004/03/27 00:26:09 rockpiper Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -582,6 +582,7 @@ SUBDIR+=	py-dateutil
 SUBDIR+=	py-elementtree
 SUBDIR+=	py-f2py2e
 SUBDIR+=	py-fastaudio
+SUBDIR+=	py-fox
 SUBDIR+=	py-game
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gettext-tools
