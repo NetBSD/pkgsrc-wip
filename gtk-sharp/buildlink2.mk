@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/03/26 15:29:46 marc Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/05/12 09:50:54 marc Exp $
 #
 
 .if !defined(GTK_SHARP_BUILDLINK2_MK)
 GTK_SHARP_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gtk-sharp
-BUILDLINK_DEPENDS.gtk-sharp?=		gtk-sharp>=0.8
+BUILDLINK_DEPENDS.gtk-sharp?=		gtk-sharp>=0.9
 BUILDLINK_PKGSRCDIR.gtk-sharp?=		../../wip/gtk-sharp
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gtk-sharp=gtk-sharp
@@ -25,6 +25,7 @@ BUILDLINK_FILES.gtk-sharp+=	lib/libgtksharpglue.*
 BUILDLINK_FILES.gtk-sharp+=	lib/pango-sharp.dll
 
 .include "../../databases/libgnomedb/buildlink2.mk"
+.include "../../graphics/librsvg2/buildlink2.mk"
 .include "../../lang/mono/buildlink2.mk"
 .include "../../www/libgtkhtml/buildlink2.mk"
 

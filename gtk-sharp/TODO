@@ -1,0 +1,5 @@
+needs:
+- pkg/21532: libgda update to 0.11.0
+- pkg/21533: libgnomedb upate to 0.11.0
+
+needs to be tested: doesn't compile on my -current system, because of mono/pthread issues. 

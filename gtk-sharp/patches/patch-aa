@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/03/24 22:44:55 marc Exp $
+$NetBSD: patch-aa,v 1.2 2003/05/12 09:50:54 marc Exp $
 
---- parser/Makefile.in.orig	2003-02-26 23:22:28.000000000 +0100
-+++ parser/Makefile.in	2003-02-26 23:28:12.000000000 +0100
-@@ -30,6 +30,6 @@
+--- parser/Makefile.in.orig	2003-05-11 15:26:56.000000000 +0200
++++ parser/Makefile.in	2003-05-11 15:27:35.000000000 +0200
+@@ -31,8 +31,8 @@
  		cp $$i $(DESTDIR)$(prefix)/bin; \
  	done
  	for i in $(MODULES); do \
@@ -11,3 +11,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/03/24 22:44:55 marc Exp $
 +		../mkinstalldirs %%PERL5_SITELIB%%/GAPI && \
 +		cp $$i %%PERL5_SITELIB%%/GAPI; \
  	done
+ 	../mkinstalldirs $(DESTDIR)$(prefix)/lib/pkgconfig && \
+ 	cp gapi.pc $(DESTDIR)$(prefix)/lib/pkgconfig
