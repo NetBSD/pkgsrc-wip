@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/24 11:59:35 jmmv Exp $
+bin/hydra

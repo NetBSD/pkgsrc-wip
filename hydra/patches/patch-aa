@@ -1,0 +1,11 @@
+--- Makefile.am.oril	2003-05-29 23:09:01.000000000 -0400
++++ Makefile.am	2003-05-29 23:09:17.000000000 -0400
+@@ -2,7 +2,7 @@
+ # Makefile for Hydra - (c) 2001-2002 by van Hauser / THC <vh@reptile.rug.ac.be>
+ #
+ 
+-INSTALL = /usr/local/bin
++INSTALL = /usr/pkg/bin
+ 
+ CC = gcc
+ OPTS = -O2 -I. -Wall
