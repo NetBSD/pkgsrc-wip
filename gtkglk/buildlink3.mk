@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/11 23:22:54 blef Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/04/11 23:27:28 blef Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTKGLK_BUILDLINK3_MK:=	${GTKGLK_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gtkglk
 
 .if !empty(GTKGLK_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gtkglk+=	gtkglk>=0.2
-BUILDLINK_PKGSRCDIR.gtkglk?=	../../graphics/gtkglk
+BUILDLINK_PKGSRCDIR.gtkglk?=	../../wip/gtkglk
 .endif	# GTKGLK_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
