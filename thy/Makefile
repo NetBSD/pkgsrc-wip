@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 15:49:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/17 17:47:09 xtraeme Exp $
 #
 
 DISTNAME=		thy-0.5.2
@@ -50,5 +50,4 @@ post-install:
 .include "../../security/gnutls/buildlink2.mk"
 .include "../../security/PAM/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
