@@ -1,11 +1,12 @@
-# $Id: Makefile,v 1.1294 2004/05/26 04:02:31 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1294 2004/05/26 04:02:31 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1295 2004/05/26 13:43:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1295 2004/05/26 13:43:58 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	4stAttack
 SUBDIR+=	Cg-compiler
 SUBDIR+=	Coin
+SUBDIR+=	OpenGLUT
 SUBDIR+=	PPower4
 SUBDIR+=	PyBabelFish
 SUBDIR+=	Pythonol
@@ -222,7 +223,6 @@ SUBDIR+=	howl
 SUBDIR+=	ht2html
 SUBDIR+=	html2latex
 SUBDIR+=	httrack
-SUBDIR+=	hugo
 SUBDIR+=	hydra
 SUBDIR+=	hydrogen
 SUBDIR+=	iText
@@ -749,7 +749,6 @@ SUBDIR+=	words
 SUBDIR+=	wxGTK-contrib
 SUBDIR+=	wxgtk-devel
 SUBDIR+=	wxgtk-devel-contrib
-SUBDIR+=	wxhugo
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
 SUBDIR+=	xbsql
