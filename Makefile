@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.819 2003/12/29 11:40:52 xtraeme Exp $
-# $NetBSD: Makefile,v 1.819 2003/12/29 11:40:52 xtraeme Exp $
+# $Id: Makefile,v 1.820 2003/12/29 14:11:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.820 2003/12/29 14:11:41 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -47,7 +47,6 @@ SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-macro
 SUBDIR+=	ap2-python
 SUBDIR+=	ap2-xslt
-SUBDIR+=	apotheke
 SUBDIR+=	argouml
 SUBDIR+=	armagetron
 SUBDIR+=	arping
