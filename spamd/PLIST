@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/08 23:07:41 tripledes Exp $
+libexec/spamd
+libexec/spamd-setup
+libexec/spamlogd
+man/cat5/spamd.conf.0
+man/cat8/spamd-setup.0
+man/cat8/spamd.0
+man/cat8/spamdb.0
+man/cat8/spamlogd.0
+man/man5/spamd.conf.5
+man/man8/spamd-setup.8
+man/man8/spamd.8
+man/man8/spamdb.8
+man/man8/spamlogd.8
+sbin/spamdb
+share/examples/spamd/spamd.conf
+@dirrm share/examples/spamd
