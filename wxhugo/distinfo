@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/10/13 01:45:23 dillo Exp $
+
+SHA1 (hugov30_unix_source.tar.gz) = 82c7c2233932dac47e4c6f179895dc299011c669
+Size (hugov30_unix_source.tar.gz) = 212736 bytes
+SHA1 (hugov30_wxwin_source.tar.gz) = d72bbb704d4657667557046eb03524b7fae16df6
+Size (hugov30_wxwin_source.tar.gz) = 68275 bytes
+SHA1 (patch-aa) = 3466407a44ca1820cd44e9e42b2462235afb4fca
+SHA1 (patch-ab) = d8eb602e631143595071eb2d449c15a0bb8860e6

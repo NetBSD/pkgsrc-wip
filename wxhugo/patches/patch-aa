@@ -1,0 +1,54 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/13 01:45:24 dillo Exp $
+
+--- Makefile.orig	Wed Feb 12 07:39:59 2003
++++ Makefile
+@@ -15,12 +15,12 @@
+ # (The wxWindows file locations should really be taken from wx-config.)
+ HUGOSOURCEDIR = ../source
+ MIKMODINCLUDEDIR = /usr/local/include
+-CXXINCLUDEDIR = /usr/include/g++-3
++#CXXINCLUDEDIR = /usr/include/g++-3
+ 
+ # Libraries to be linked:
+ # If a working libmikmod.so has been compiled on the runtime system
+ # and the wxGTK library is installed:
+-LDFLAGS = `wx-config --libs` -lgtk -lgdk -lmikmod
++LDFLAGS = `wx-config --libs` -lmikmod
+ STATICLIBS =
+ # Otherwise, use these LDFLAGS and STATICLIBS:
+ #LDFLAGS = -lwx_gtk -lgtk -lgdk -lpthread -lmikmod
+@@ -34,27 +34,28 @@ MYCODEDIR := .
+ 
+ # Directories to search for header files
+ 
+-SEARCHDIRS := -I- -I${MYCODEDIR} -I${HUGOSOURCEDIR} -I${MIKMODINCLUDEDIR} -I${CXXINCLUDEDIR}
++SEARCHDIRS := -I- -I${MYCODEDIR} -I${HUGOSOURCEDIR} -I${MIKMODINCLUDEDIR}
+ 
+ # makemake variables
+ 
+-LINKER       := gcc
++LINKER       := ${CC}
+ DEPENDFLAGS  := ${SEARCHDIRS}
+ TOUCHHEADERS := ${MYCODEDIR}/*.h
+ 
+ # C
+ 
+-CC     := gcc
++#CC     := gcc
+ # Debugging:
+ #CFLAGS  = ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET -fwritable-strings -fno-rtti -g3 -Wall `wx-config --cflags`
+ # Release build:
+-CFLAGS  = ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET -fwritable-strings -fno-rtti -O2 -Wall `wx-config --cflags`
++MY_CFLAGS  = ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET -fwritable-strings -fno-rtti -O2 -Wall `wx-config --cflags`
++CFLAGS+=${MY_CFLAGS}
+ 
+ # C++
+ 
+-CXX      := g++
++#CXX      := g++
+ #CXXFLAGS  = ${DEPENDFLAGS}
+-CXXFLAGS = ${CFLAGS}
++CXXFLAGS+=${MY_CFLAGS}
+ 
+ %.o : %.cpp
+ 	${CXX} ${CPPFLAGS} -c $< ${CXXFLAGS}
