@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/05/13 00:58:11 marc Exp $
+
+SHA1 (fwbuilder-1.0.9.tar.gz) = 731ea51faf38bf1dd1e8073554ab5d88ec4c538a
+Size (fwbuilder-1.0.9.tar.gz) = 1292062 bytes
+SHA1 (patch-aa) = 555c40fb30b87152d5a29bceb141c414e0eb2acb

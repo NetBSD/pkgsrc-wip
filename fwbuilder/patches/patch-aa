@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/05/13 00:58:11 marc Exp $
+
+--- configure.in.orig	2003-05-13 02:00:22.000000000 +0200
++++ configure.in	2003-05-13 02:01:15.000000000 +0200
+@@ -637,6 +637,12 @@
+     AC_MSG_RESULT(FreeBSD)
+     ;;
+ 
++  *-*-netbsd*)
++    OS=NetBSD
++    MANDIR="${PREFIX}/man"
++    AC_MSG_RESULT(NetBSD)
++    ;;
++
+   *-*-linux*)
+     OS=Linux
+     if test -f /etc/debian_version ; then
