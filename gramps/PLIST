@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/02 02:24:06 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/03/10 03:27:35 jeremy-c-reed Exp $
 bin/gramps
 lib/gramps/grampslib.so
 man/man1/gramps.1
@@ -563,6 +563,8 @@ share/pixmaps/gramps.png
 @dirrm share/gramps/gnome/help/gramps/C/figures
 @dirrm share/gramps/gnome/help/gramps/C
 @dirrm share/gramps/gnome/help/gramps
+@dirrm share/gramps/gnome/help
+@dirrm share/gramps/gnome
 @dirrm share/gramps/filters
 @dirrm share/gramps/example
 @dirrm share/gramps/docgen
