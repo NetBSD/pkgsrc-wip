@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.842 2004/01/04 06:33:23 mpasternak Exp $
-# $NetBSD: Makefile,v 1.842 2004/01/04 06:33:23 mpasternak Exp $
+# $Id: Makefile,v 1.843 2004/01/04 06:52:27 mpasternak Exp $
+# $NetBSD: Makefile,v 1.843 2004/01/04 06:52:27 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -542,6 +542,7 @@ SUBDIR+=	py-scipy_distutils
 SUBDIR+=	py-spambayes
 SUBDIR+=	py-spark
 SUBDIR+=	py-speex
+SUBDIR+=	py-stem
 SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-docs
 SUBDIR+=	py-visionegg
