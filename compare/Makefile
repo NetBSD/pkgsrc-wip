@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:11:49 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/14 21:30:55 poppnk Exp $
 #
 
-DISTNAME=	compare-1.11
-CATEGORIES=	sysutils
+DISTNAME=		compare-1.11
+CATEGORIES=		sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/compare/
 
-MAINTAINER=	pancake@phreaker.net
-HOMEPAGE=	ftp://ftp.berlios.de/pub/compare/AN-1.11
-COMMENT=	Fast binary comparision between two files
+MAINTAINER=		pancake@phreaker.net
+HOMEPAGE=		ftp://ftp.berlios.de/pub/compare/AN-1.11
+COMMENT=		Fast binary comparision between two files
 
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/compare/OBJ/*/compare ${PREFIX}/bin/
