@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/04/03 15:31:33 cubidou Exp $
+
+--- unix_mixer.c.orig	2003-01-18 20:59:09.000000000 +0100
++++ unix_mixer.c
+@@ -30,8 +30,12 @@
+ #if defined(__FreeBSD__) && __FreeBSD_version < 500000
+   #include <machine/soundcard.h>
+ #else
++#ifdef __NetBSD__
++  #include <soundcard.h>
++#else
+   #include <sys/soundcard.h>
+ #endif
++#endif
+ 
+ #include "mixer.h"
+ #include "common_mixer.h"

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/03 15:31:33 cubidou Exp $
+
+SHA1 (gkrellm-volume-2.1.7.tar.gz) = eda9967a294834e715737161a245151dc2e99816
+Size (gkrellm-volume-2.1.7.tar.gz) = 35882 bytes
+SHA1 (patch-aa) = 93c1deb49145538979bc2b16f260cb9b8063a01f
+SHA1 (patch-ab) = 42644a137217bdc8a405b2edd50e431badb0e585
