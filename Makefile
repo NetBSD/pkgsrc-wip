@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.906 2004/01/25 04:27:19 xtraeme Exp $
-# $NetBSD: Makefile,v 1.906 2004/01/25 04:27:19 xtraeme Exp $
+# $Id: Makefile,v 1.907 2004/01/25 07:27:43 blef Exp $
+# $NetBSD: Makefile,v 1.907 2004/01/25 07:27:43 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -141,6 +141,8 @@ SUBDIR+=	frontpage
 SUBDIR+=	fsv
 SUBDIR+=	fvcool
 SUBDIR+=	fwbuilder
+SUBDIR+=	gDesklets
+SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	galib
 SUBDIR+=	gcc-3.4-ada
 SUBDIR+=	gcc3-ada-devel
@@ -149,8 +151,6 @@ SUBDIR+=	gcc3-c-devel
 #SUBDIR+=	gcl		# see TODO
 #SUBDIR+=	gcl-nox11	# see gcl/TODO
 SUBDIR+=	gcompris
-SUBDIR+=	gDesklets
-SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gdbada
 SUBDIR+=	geeklog
 SUBDIR+=	gg2
@@ -236,7 +236,6 @@ SUBDIR+=	iip
 SUBDIR+=	iisemulator
 SUBDIR+=	ike-scan
 SUBDIR+=	ilohamail
-SUBDIR+=	imake
 SUBDIR+=	imhangul
 SUBDIR+=	imhangul_status_applet
 SUBDIR+=	interbase-docs
@@ -322,6 +321,8 @@ SUBDIR+=	liteamp
 SUBDIR+=	lletters
 SUBDIR+=	lmarbles
 SUBDIR+=	lsdvd
+SUBDIR+=	luacheia
+SUBDIR+=	luasocket
 SUBDIR+=	mailfilter
 SUBDIR+=	man-db
 SUBDIR+=	map-browse
@@ -462,7 +463,6 @@ SUBDIR+=	php-doc-ru
 SUBDIR+=	php-doc-sk
 SUBDIR+=	php-doc-sl
 SUBDIR+=	php-doc-sv
-SUBDIR+=	php-jpgraph
 SUBDIR+=	php4-mysql4
 SUBDIR+=	php5
 SUBDIR+=	php5-pgsql
