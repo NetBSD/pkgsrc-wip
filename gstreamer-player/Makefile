@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/15 18:05:53 bmeurer Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/25 12:08:24 rhx Exp $
 
 DISTNAME=		gst-player-0.5.0
 PKGNAME=		gstreamer-player-0.5.0
@@ -27,5 +27,6 @@ GCONF2_SCHEMAS=         gst-player.schemas
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../wip/gstreamer-plugins/buildlink2.mk"
+.include "../../misc/gst-plugins/buildlink2.mk"
+.include "../../misc/gstreamer/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
