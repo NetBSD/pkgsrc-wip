@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.2 2003/07/21 16:23:45 bubuchka Exp $
+$NetBSD: distinfo,v 1.3 2003/07/21 16:33:37 bubuchka Exp $
 
 SHA1 (vMac-0.1.9.3-src.tgz) = e33f6383760814d15ef54bd97574072057928e01
 Size (vMac-0.1.9.3-src.tgz) = 186064 bytes
-SHA1 (patch-nonlinux-aa) = d375d870a22e4e909956097d19a7491ad72e2696
-SHA1 (patch-nonlinux-aa) = 7a67add7e0419461ea5d784d911e9ca46587a92d
 SHA1 (patch-aa) = 8098246d62b4e0f5e085a1e1c9f0767e4e1ffea5
 SHA1 (patch-ab) = 30250039a592b0e399c1a6dea47897a23041f2e7
 SHA1 (patch-ac) = 4660d57dc48cd55642d51feeb5d7d7115efc94b2
