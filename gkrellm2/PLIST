@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/03 15:07:55 cubidou Exp $
+bin/gkrellm
+include/gkrellm2/gkrellm.h
+include/gkrellm2/gkrellm-public-proto.h
+man/man1/gkrellm.1
+@dirrm share/gkrellm2/themes
+@dirrm lib/gkrellm2/plugins
+@dirrm lib/gkrellm2
