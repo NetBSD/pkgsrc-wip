@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/04 15:18:42 poppnk Exp $
-
-SHA1 (lash-0.12.1.tar.gz) = 337e5f290be8c62480631eeea7846ab0a243cc5c
-Size (lash-0.12.1.tar.gz) = 19190 bytes
-SHA1 (patch-aa) = 3d49cfbb9894536e7bd2835a2dc51e78b324decc
