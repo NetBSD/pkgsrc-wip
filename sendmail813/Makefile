@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/08/30 16:03:55 adrian_p Exp $
+# $NetBSD: Makefile,v 1.27 2004/08/30 17:12:04 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -15,7 +15,7 @@ PLIST_SUBST+=	SMRSH_CMDDIR=${SMRSH_CMDDIR}
 
 SUBST_CLASSES=		paths
 SUBST_STAGE.paths=	pre-build
-SUBST_FILES.paths=	${WRKDIR}/mailer.conf include/sm/conf.h 
+SUBST_FILES.paths=	${WRKDIR}/mailer.conf include/sm/conf.h smrsh/smrsh.8
 SUBST_SED.paths=	-e "s|@@PREFIX@@|${PREFIX}|g" \
 			-e "s|@@SMRSH_CMDDIR@@|${SMRSH_CMDDIR}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
