@@ -1,2 +1,1 @@
-* NetBSD patches
-* make print-PLIST
+make install doesn't exists :/ -> Must read 'xmail.spec' and write do-install:

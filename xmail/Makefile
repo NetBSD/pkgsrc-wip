@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/02 14:56:51 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/13 22:03:00 poppnk Exp $
 #
 
 DISTNAME=	xmail-1.15
@@ -9,10 +9,12 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.xmailserver.com/
 COMMENT=	Show png icons on your desktop
 
-USE_BUILDLINK2=	yes
-NOT_FOR_PLATFORM=	NetBSD-*-*   # pthread & readdir_r miss-features :(
+USE_BUILDLINK3=	yes
+USE_GNU_TOOLS+=	make
 
 .include "../../mk/bsd.prefs.mk"
+
+EXT=bsd # Default one :)
 .if ${OPSYS} == "Linux"
 	.if    ${MACHINE_ARCH} == "i86pc"
 		EXT="lnx"
@@ -27,8 +29,6 @@ NOT_FOR_PLATFORM=	NetBSD-*-*   # pthread & readdir_r miss-features :(
 	.elsif ${MACHINE_ARCH} == "i86pc"
 		EXT="ssx"
 	.endif
-.elsif ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
-	EXT="bsd"
 .endif
 
 MAKEFILE=Makefile.${EXT}

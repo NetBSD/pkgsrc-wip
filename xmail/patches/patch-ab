@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1 2004/04/13 22:03:00 poppnk Exp $
+--- Makefile.bsd.orig	2003-04-02 23:40:14.000000000 +0000
++++ Makefile.bsd	2004-04-13 23:06:11.000000000 +0000
+@@ -27,19 +27,23 @@
+ A = a
+ CPP = cpp
+ CC = c++
+-LD = gcc
++LD = g++
+ 
+-ifeq ($(OSTYPE),OpenBSD)
+-	CFLAGS = -O2 -I. -D__UNIX__ -D__BSD__ -D__OPENBSD__ -DXMAIL_X86 -D_REENTRANT=1 -D_THREAD_SAFE=1
+-else
++ifeq ($(OSTYPE),FreeBSD)
+ 	CFLAGS = -O2 -I. -D__UNIX__ -D__BSD__ -D__FREEBSD__ -DXMAIL_X86 -D_REENTRANT=1 -D_THREAD_SAFE=1
++else
++	CFLAGS = -O2 -I. -D__UNIX__ -D__BSD__ -D__OPENBSD__ -DXMAIL_X86 -D_REENTRANT=1 -D_THREAD_SAFE=1
+ endif
+ 
++ifeq ($(OSTYPE),NetBSD)
++	LDFLAGS = -lkvm -pthread
++else
+ ifeq ($(OSTYPE),OpenBSD)
+ 	LDFLAGS = -lkvm -pthread -lc_r
+ else
+ 	LDFLAGS = -lkvm -lcrypt -pthread -lc_r
+ endif
++endif
+ MAILSVR = XMail
+ CRTLCLNT = CtrlClnt
+ XMCRYPT = XMCrypt
