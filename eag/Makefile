@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/09 06:59:28 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/17 18:35:13 minskim Exp $
 #
 
 DISTNAME=		eag-2.3
@@ -7,11 +7,13 @@ MASTER_SITES=		ftp://ftp.cs.kun.nl/pub/eag/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		jaapboen@sci.kun.nl
-HOMEPAGE=		http://www.cs.kun.nl/~kees/eag
+HOMEPAGE=		http://www.cs.kun.nl/~kees/eag/
 COMMENT=		Transducer generator using affix grammars
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
