@@ -1,11 +1,17 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.8 2004/03/12 12:42:54 mpasternak Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.9 2004/03/12 12:59:29 mpasternak Exp $
 ###########################################################################
 # 
-# $Id: linuxbin.pkg.mk,v 1.8 2004/03/12 12:42:54 mpasternak Exp $
+# $Id: linuxbin.pkg.mk,v 1.9 2004/03/12 12:59:29 mpasternak Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
-# Currently supports only RPMs, but should be good enough to make
-# support for .debs.
+#
+# Currently supports:
+#   * rpm
+#   * "plain" -> .tgz, .tbz2, 
+#   * slackware packages (.tgz, but need slackware_compat)
+#
+# TODO:
+#   * deb
 #
 # I have included comments, indents and unneeded spacings, so you can
 # read this file more easily.
