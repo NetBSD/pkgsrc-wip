@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/14 22:45:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/11 20:06:18 blef Exp $
 #
 
 DISTNAME=	ices-0.2.3
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.icecast.org/
 COMMENT=	MP3/Vorbis encoder for icecast servers
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-lame=${BUILDLINK_PREFIX.lame} \
 			--with-perl=${BUILDLINK_PREFIX.perl} \
@@ -17,10 +17,10 @@ CONFIGURE_ARGS+=	--with-lame=${BUILDLINK_PREFIX.lame} \
 			--with-docdir=${LOCALBASE}/share/doc/ices \
 			--with-libshout=${BUILDLINK_PREFIX.libshout}
 
-.include "../../audio/libshout/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../audio/lame/buildlink2.mk"
+.include "../../audio/libshout/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../audio/lame/buildlink3.mk"
 
 # Set USE_VORBIS to optionally include these in ices
 #
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--without-python
 #.endif
 
 .if defined(USE_VORBIS)
-.   include "../../audio/libvorbis/buildlink2.mk"
+.   include "../../audio/libvorbis/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-vorbis=${BUILDINK_PREFIX.libvorbis}
 .else
 CONFIGURE_ARGS+=	--without-vorbis
