@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/07 16:58:48 minskim Exp $
+include/X11/extensions/panoramiXext.h
+include/X11/extensions/panoramiXproto.h
+lib/pkgconfig/panoramixext.pc
