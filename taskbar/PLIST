@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/22 04:56:06 jeremy-c-reed Exp $
+bin/taskbar
+share/doc/taskbar/README
+share/examples/taskbar/example_.taskbar
+share/taskbar/libclock.a
+share/taskbar/libclock.la
+share/taskbar/libclock.so
+share/taskbar/libclock.so.0
+share/taskbar/libclock.so.0.0
+share/taskbar/libsensors.a
+share/taskbar/libsensors.la
+share/taskbar/libsensors.so
+share/taskbar/libsensors.so.0
+share/taskbar/libsensors.so.0.0
+@dirrm share/taskbar
+@dirrm share/examples/taskbar
+@dirrm share/doc/taskbar

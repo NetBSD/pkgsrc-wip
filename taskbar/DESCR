@@ -1,0 +1,11 @@
+taskbar is a small utility for X11 that displays a taskbar. It is used
+with a window manager supporting EWMH (enhanced window manager hints).
+
+It provides a customizable start menu for launching programs. And
+it has a taskbar notification area with tooltip support (via plugins).
+The docking taskbar can be aligned to the bottom or top of screen.
+
+taskbar has the ability to load a set of plugins which will be
+displayed on the right side of the bar (i.e. the 'tray').  It
+includes a clock display plugin and a hardware sensor plugin for
+Linux kernel 2.6 (using the /sys interface).
