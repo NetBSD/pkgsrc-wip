@@ -1,50 +1,42 @@
-$NetBSD: patch-aa,v 1.2 2003/12/08 05:51:25 jcd Exp $
---- amavisd.conf.orig	Sun Nov  9 18:07:53 2003
-+++ amavisd.conf	Mon Dec  8 00:41:07 2003
-@@ -51,7 +51,7 @@
- # $MYHOME serves as a quick default for some other configuration settings.
- # More refined control is available with each individual setting further down.
- # $MYHOME is not used directly by the program. No trailing slash!
--#$MYHOME = '/var/lib/amavis';   # (default is '/var/amavis')
-+$MYHOME = '%%AMAVISDIR%%';   # (default is '/var/amavis')
+$NetBSD: patch-aa,v 1.3 2004/08/06 04:57:03 jcd Exp $
+
+--- amavisd.conf.orig	Thu Jul  1 16:04:36 2004
++++ amavisd.conf
+@@ -9,7 +9,7 @@ use strict;
+ # MUST BE SET (no useful default):
  
- # $mydomain serves as a quick default for some other configuration settings.
- # More refined control is available with each individual setting further down.
-@@ -60,8 +60,8 @@
+ $mydomain = 'example.com';
+-$MYHOME   = '/var/amavis';
++$MYHOME   = '@AMAVIS_DIR@';
+ $TEMPBASE = "$MYHOME/tmp";
  
- # Set the user and group to which the daemon will change if started as root
- # (otherwise just keeps the UID unchanged, and these settings have no effect):
--$daemon_user  = 'vscan';	# (no default;  customary: vscan or amavis)
--$daemon_group = 'sweep';	# (no default;  customary: vscan or amavis)
-+$daemon_user  = '%%AMAVISUSER%%';	# (no default;  customary: vscan or amavis)
-+$daemon_group = '%%AMAVISGROUP%%';	# (no default;  customary: vscan or amavis)
  
- # Runtime working directory (cwd), and a place where
- # temporary directories for unpacking mail are created.
-@@ -274,7 +274,7 @@
- # 3: server, client
- # 4: decompose parts
- # 5: more debug details
--$log_level = 2;		  # (defaults to 0)
-+$log_level = 0;		  # (defaults to 0)
+@@ -19,8 +19,8 @@ $TEMPBASE = "$MYHOME/tmp";
+ # @bypass_spam_checks_maps  = (1);  # uncomment to DISABLE anti-spam code
  
- # Customizable template for the most interesting log file entry (e.g. with
- # $log_level=0) (take care to properly quote Perl special characters like '\')
-@@ -510,7 +510,7 @@
- #   or a directory (no trailing slash)
- #   (the default value is undef, meaning no quarantine)
- #
+ $max_servers = 2;         # number of pre-forked children
+-$daemon_user  = 'vscan';  # (no default;  customary: vscan or amavis)
+-$daemon_group = 'vscan';  # (no default;  customary: vscan or amavis)
++$daemon_user  = '@AMAVIS_USER@';  # (no default;  customary: vscan or amavis)
++$daemon_group = '@AMAVIS_GROUP@';  # (no default;  customary: vscan or amavis)
+ @local_domains_maps = ( [".$mydomain"] );
+ 
+ $log_level = 0;
+@@ -28,7 +28,7 @@ $log_recip_templ = undef;    # disable b
+ $DO_SYSLOG = 1;
+ $SYSLOG_LEVEL = 'mail.info';
+ $ENV{TMPDIR} = $TEMPBASE;
 -$QUARANTINEDIR = '/var/virusmails';
-+$QUARANTINEDIR = '%%AMAVISQUARANTINE%%';
++$QUARANTINEDIR = '@AMAVIS_QUARANTINE@';
+ # $daemon_chroot_dir = $MYHOME;  # (default is undef, meaning: do not chroot)
  
- #$virus_quarantine_method = "local:virus-%i-%n";    # default
- #$spam_quarantine_method  = "local:spam-%b-%i-%n";  # default
-@@ -1032,7 +1032,7 @@
- # NOTE: if $daemon_chroot_dir is nonempty, the directories will be
- #       relative to the chroot directory specified;
+ $inet_socket_port = 10024;   # accept SMTP on this local TCP port(s) (Postfix)
+@@ -55,7 +55,7 @@ $mailfrom_notify_spamadmin = "spam.polic
+ @addr_extension_banned_maps     = ('banned');
+ @addr_extension_bad_header_maps = ('badh');
  
 -$path = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/usr/bin:/bin';
-+$path = '%%LOCALBASE%%/sbin:%%LOCALBASE%%/bin:/usr/sbin:/sbin:/usr/bin:/bin';
- 
- # Specify one string or a search list of strings (first match wins).
- # The string (or: each string in a list) may be an absolute path,
++$path = '@PREFIX@/sbin:@PREFIX@/bin:@LOCALBASE@/sbin:@LOCALBASE@/bin:/usr/sbin:/sbin:/usr/bin:/bin';
+ $file   = 'file';   # file(1) utility; use 3.41 or later to avoid vulnerability
+ $gzip   = 'gzip';
+ $bzip2  = 'bzip2';

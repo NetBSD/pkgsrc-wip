@@ -1,6 +1,5 @@
-- rc.d script could be modeled after /etc/rc.d/nfslocking
-- amavisd-new 20040701 is out
-- amavisd-new 20030616-p10. A patch will need to be written to hack
-  configure to fix this:
-  http://marc.theaimsgroup.com/?l=amavis-user&m=108859127301789&w=2
-  as the milter binary won't compile under sendmail 8.13.x
+Still need to figure out why, when milter is used, the amavismilter
+rc-script does not get copied to the rc.d directory even though
+RCD_SCRIPTS+=	amavismilter.
+
+Milter hasn't been tested yet.

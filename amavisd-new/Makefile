@@ -1,18 +1,20 @@
-# $NetBSD: Makefile,v 1.14 2004/07/08 10:24:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2004/08/06 04:57:03 jcd Exp $
 
-DISTNAME=	amavisd-new-${VERSION}-${PATCHLEVEL}
-PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
+DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
+PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://mirrors.catpipe.net/amavisd-new/ \
 		http://ftp.cfu.net/pub/amavisd-new/ \
 		ftp://ftp.cfu.net/pub/amavisd-new/
 
+VERSION=	20040701
+PATCHLEVEL=	# empty
+
 MAINTAINER=	jdunn@aquezada.com
 HOMEPAGE=	http://www.ijs.si/software/amavisd/
-COMMENT=	Performance-enhanced daemonized version of amavis-perl
+COMMENT=	daemonized interface between MTA and content checkers
 
-DEPENDS+=	spamassassin-[0-9]*:../../mail/spamassassin
 DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
@@ -25,116 +27,109 @@ DEPENDS+=	p5-Net-Server-[0-9]*:../../net/p5-Net-Server
 DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
 
-WRKSRC=         ${WRKDIR}/amavisd-new-${VERSION}
+WRKSRC=		${WRKDIR}/amavisd-new-${VERSION}
 
-CONFLICTS+=     amavis-[0-9]*
-CONFLICTS+=     amavis-perl-[0-9]*
-
-USE_PERL5=	yes
-PERL5_REQD=     5.8
+CONFLICTS+=	amavis-[0-9]*
+CONFLICTS+=	amavis-perl-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
-USE_BUILDLINK3= yes
 
-VERSION=	20030616
-PATCHLEVEL=	p9
+USE_PERL5=		yes
+PERL5_REQD=		5.8.2
+REPLACE_PERL+=		${WRKSRC}/amavisd
 
-USE_PKGINSTALL=		YES
-AMAVISUSER?=    	vscan
-AMAVISGROUP?=   	vscan
-AMAVISDIR?=     	${VARBASE}/amavis
-AMAVISQUARANTINE?=      ${VARBASE}/virusmails
+USE_PKGINSTALL=		yes
+AMAVIS_USER?=		vscan
+AMAVIS_GROUP?=		vscan
+AMAVIS_DIR?=		${VARBASE}/amavis
+AMAVIS_QUARANTINE?=	${VARBASE}/virusmails
+DOCDIR=			${PREFIX}/share/doc/amavisd-new
+EGDIR=			${PREFIX}/share/examples/amavisd-new
+MESSAGE_SRC=		${PKGDIR}/MESSAGE
 
-PKG_GROUPS=	${AMAVISGROUP}
-PKG_USERS=	${AMAVISUSER}:${AMAVISGROUP}::Virus\\ Scanning\\ Account:${AMAVISDIR}:${SH}
+BUILD_DEFS+=		AMAVIS_USER AMAVIS_GROUP AMAVIS_DIR AMAVIS_QUARANTINE
+FILES_SUBST+=		AMAVIS_USER=${AMAVIS_USER}
+FILES_SUBST+=		AMAVIS_GROUP=${AMAVIS_GROUP}
+FILES_SUBST+=		AMAVIS_DIR=${AMAVIS_DIR}
+FILES_SUBST+=		AMAVIS_QUARANTINE=${AMAVIS_QUARANTINE}
+
+PKG_GROUPS=	${AMAVIS_GROUP}
+PKG_USERS=	${AMAVIS_USER}:${AMAVIS_GROUP}::Virus\\ Scanning\\ Account:${AMAVIS_DIR}:${SH}
 RCD_SCRIPTS=	amavisd
-CONF_FILES=	${PREFIX}/share/doc/amavisd-new/amavisd.conf ${PKG_SYSCONFDIR}/amavisd.conf
+CONF_FILES=	${EGDIR}/amavisd.conf-minimal ${PKG_SYSCONFDIR}/amavisd.conf
+OWN_DIRS_PERMS=	${AMAVIS_DIR} ${AMAVIS_USER} ${AMAVIS_GROUP} 0750 \
+		${AMAVIS_QUARANTINE} ${AMAVIS_USER} ${AMAVIS_GROUP} 0750
 
-MESSAGE_SUBST+= AMAVISDIR=${AMAVISDIR}
-
-BUILD_DEFS+=	AMAVISUSER
-BUILD_DEFS+=	AMAVISGROUP
-BUILD_DEFS+=	AMAVISDIR
-BUILD_DEFS+=	AMAVISQUARANTINE
-BUILD_DEFS+=	USE_MILTER
-
-FILES_SUBST+=	AMAVISUSER=${AMAVISUSER}
-FILES_SUBST+=	AMAVISGROUP=${AMAVISGROUP}
-FILES_SUBST+=	AMAVISDIR=${AMAVISDIR}
-FILES_SUBST+=	AMAVISQUARANTINE=${AMAVISQUARANTINE}
-
-REPLACE_PERL+=	${WRKSRC}/amavisd
-
-SUBST_CLASSES+=	amavisd
-SUBST_STAGE.amavisd=	pre-build
-SUBST_FILES.amavisd=	${WRKSRC}/amavisd	${WRKSRC}/amavisd.conf
-SUBST_SED.amavisd=	-e "s|/etc/amavisd.conf|${PKG_SYSCONFDIR}/amavisd.conf|"	\
-			-e "s|%%AMAVISDIR%%|${AMAVISDIR}|g"				\
-			-e "s|%%AMAVISUSER%%|${AMAVISUSER}|g"				\
-			-e "s|%%AMAVISGROUP%%|${AMAVISGROUP}|g"				\
-			-e "s|%%AMAVISQUARANTINE%%|${AMAVISQUARANTINE}|g"		\
-			-e "s|%%LOCALBASE%%|${LOCALBASE}|g"
-
-PLIST_SUBST+=	AMAVIS_MILTER_USED=${AMAVIS_MILTER_USED}
-
-.if defined(USE_MILTER) && !empty(USE_MILTER:M[Yy][Es][Ss])
-GNU_CONFIGURE=  yes
-CONFIGURE_ARGS+=--with-milterinc=${PREFIX}/include
-CONFIGURE_ARGS+=--with-milterlib=${PREFIX}/lib
-CONFIGURE_ARGS+=--with-runtime-dir=${AMAVISDIR}
-CONFIGURE_ARGS+=--with-sockname=${AMAVISDIR}/amavisd.sock
-CONFIGURE_ARGS+=--with-user=${AMAVISUSER}
-CONFIGURE_DIRS=       ${WRKSRC}/helper-progs
-BUILD_DIRS=   ${WRKSRC}/helper-progs
-AMAVIS_MILTER_USED=
-
-# Doesn't work with pth
-PTHREAD_OPTS+=          require native
-
-.else
-do-configure:
-
-do-build:
-	@${ECHO} libmilter not used, not building amavis-milter and amavis
-
-AMAVIS_MILTER_USED=	"@comment "
+# Global and legacy options
+.if defined(USE_MILTER)
+.  if !defined(PKG_OPTIONS.amavisd-new)
+.    if defined(USE_MILTER) && !empty(USE_MILTER:M[Yy][Es][Ss])
+PKG_OPTIONS.amavisd-new+=	milter
+.    endif
+.  endif
 .endif
 
-OWN_DIRS_PERMS=	${AMAVISDIR} ${AMAVISUSER} ${AMAVISGROUP} 0750 \
-		${AMAVISQUARANTINE} ${AMAVISUSER} ${AMAVISGROUP} 0750
+PKG_OPTIONS_VAR=	PKG_OPTIONS.amavisd-new
+PKG_SUPPORTED_OPTIONS=	milter
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mmilter)
+USE_BUILDLINK3= 	yes
+GNU_CONFIGURE=  	yes
+CONFIGURE_ARGS+=	--with-runtime-dir=${AMAVIS_DIR}
+CONFIGURE_ARGS+=	--with-sockname=${AMAVIS_DIR}/amavisd.sock
+CONFIGURE_ARGS+=	--with-user=${AMAVIS_USER}
+CONFIGURE_ARGS+=	--with-milterinc=${BUILDLINK_PREFIX.libmilter}/include
+CONFIGURE_ARGS+=	--with-milterlib=${BUILDLINK_PREFIX.libmilter}/lib
+CONFIGURE_DIRS=		${WRKSRC}/helper-progs
+BUILD_DIRS=		${WRKSRC}/helper-progs
+RCD_SCRIPTS+=		amavismilter
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE.milter
+PLIST_SUBST+=		MILTER=
+
+PTHREAD_OPTS+=          require native	# doesn't work with pth
+.  include "../../mk/pthread.buildlink3.mk"
+.  include "../../mail/libmilter/buildlink3.mk"
+.else
+USE_LANGUAGES=		# empty
+NO_BUILDLINK=		yes
+NO_CONFIGURE=		yes
+PLIST_SUBST+=		MILTER="@comment "
+
+do-build:	# do nothing
+.endif
+
+SUBST_CLASSES+=		amavisd
+SUBST_STAGE.amavisd=	pre-build
+SUBST_FILES.amavisd=	${WRKSRC}/amavisd ${WRKSRC}/amavisd.conf
+SUBST_SED.amavisd=	\
+	-e "s|/etc/amavisd.conf|${PKG_SYSCONFDIR}/amavisd.conf|"	\
+	-e "s|@AMAVIS_DIR@|${AMAVIS_DIR}|g"				\
+	-e "s|@AMAVIS_USER@|${AMAVIS_USER}|g"				\
+	-e "s|@AMAVIS_GROUP@|${AMAVIS_GROUP}|g"				\
+	-e "s|@AMAVIS_QUARANTINE@|${AMAVIS_QUARANTINE}|g"		\
+	-e "s|@LOCALBASE@|${LOCALBASE}|g"				\
+	-e "s|@PREFIX@|${PREFIX}|g"
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/amavisd ${PREFIX}/sbin/amavisd
-.if defined(USE_MILTER) && !empty(USE_MILTER:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Mmilter)
 	${INSTALL_PROGRAM} ${WRKSRC}/helper-progs/amavis ${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/helper-progs/amavis-milter ${PREFIX}/sbin
 .endif
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/AAAREADME.first ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/LDAP.schema ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/MANIFEST ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.chroot ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.contributed ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.customize ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.exim_v3 ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.exim_v4 ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.exim_v4_app ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.exim_v4_app2 ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.lookups ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.milter ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.old.scanners ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.performance ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.postfix ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.sendmail ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.sendmail-dual ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKSRC}/amavisd.conf ${PREFIX}/share/doc/amavisd-new/amavisd.conf
-
-.if defined(USE_MILTER) && !empty(USE_MILTER:M[Yy][Ee][Ss])
-.include "../../mk/pthread.buildlink3.mk"
-.include "../../mail/libmilter/buildlink3.mk"
-.endif
+	${INSTALL_SCRIPT} ${WRKSRC}/amavisd ${PREFIX}/sbin/amavisd
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/AAAREADME.first ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LDAP.schema ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/MANIFEST ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${DOCDIR}
+	for file in README_FILES/README.*; do				\
+		${INSTALL_DATA} ${WRKSRC}/$$file ${DOCDIR};		\
+	done
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/amavisd.conf ${EGDIR}/amavisd.conf-minimal
+	${INSTALL_DATA} ${WRKSRC}/amavisd.conf-default ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/amavisd.conf-sample ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
