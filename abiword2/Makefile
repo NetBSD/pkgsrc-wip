@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/28 16:36:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/28 18:51:23 xtraeme Exp $
 #
 
 DISTNAME=		abiword-2.0.1-2
@@ -40,6 +40,7 @@ CONFIGURE_ARGS+=	--with-libpng=${BUILDLINK_PREFIX.png}
 .include "../../wip/gucharmap/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
+.include "../../textproc/enchant/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
