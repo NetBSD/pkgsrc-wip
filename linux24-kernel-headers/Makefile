@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2004/01/30 13:10:52 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/31 22:50:31 jeremy-c-reed Exp $
 
 .include "../../wip/linux24-kernel/Makefile.common"
 
 PKGNAME=	linux-kernel-headers-${LINUX_VERSION}
 COMMENT=	Linux kernel headers
+
+NO_BUILDLINK=	yes
+USE_LANGUAGES=	# empty
 
 PLIST_SRC+=	${PKGDIR}/PLIST.${LOWER_ARCH}
 PLIST_SRC+=	${PKGDIR}/PLIST.common
