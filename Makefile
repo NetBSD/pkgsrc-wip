@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.106 2003/04/19 17:34:12 lsed Exp $
-# $NetBSD: Makefile,v 1.106 2003/04/19 17:34:12 lsed Exp $
+# $Id: Makefile,v 1.107 2003/04/20 06:28:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.107 2003/04/20 06:28:43 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -26,6 +26,7 @@ SUBDIR+=	directfb
 SUBDIR+=	dovecot
 SUBDIR+=	drweb
 SUBDIR+=	emirror
+SUBDIR+=	ezbounce
 SUBDIR+=	fluxconf
 SUBDIR+=	gdrdao
 SUBDIR+=	geeklog
