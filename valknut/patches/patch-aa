@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/09/03 17:44:45 tnn2 Exp $
+
+--- configure.orig	2004-08-18 22:17:44.000000000 +0200
++++ configure
+@@ -27061,7 +27061,7 @@ done
+ 
+ test "x$jpeg_incdir" = xNO && jpeg_incdir=
+ 
+-if test -n "$jpeg_incdir" && test -n "$LIBJPEG" ; then
++if test 1 = 1 ; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_LIBJPEG 1

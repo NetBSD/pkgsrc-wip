@@ -1,0 +1,5 @@
+Valknut is a program that uses the Direct Connect protocol to connect
+to peer-to-peer filesharing hubs. It is compatible with other DC clients,
+such as the original DC from Neomodus, DC++ and derivatives. Valknut also
+interoperates with all common DC hub software. It uses the QT toolkit
+for user interaction.

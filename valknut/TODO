@@ -1,0 +1,2 @@
+Make it able to shutdown properly without
+PTHREAD_DIAGASSERT=A set in the environment.
