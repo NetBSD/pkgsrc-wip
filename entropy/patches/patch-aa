@@ -1,0 +1,51 @@
+Index: include/unicode.h
+===================================================================
+RCS file: /home/cvs/entropy/include/unicode.h,v
+retrieving revision 1.9
+retrieving revision 1.10
+diff -u -r1.9 -r1.10
+--- include/unicode.h	12 Sep 2003 22:01:46 -0000	1.9
++++ include/unicode.h	19 Oct 2003 14:50:07 -0000	1.10
+@@ -289,7 +289,7 @@
+ #endif
+ 
+ #if	NEED_WCWIDTH
+-int wcwidth(u_int32_t ucs);
++int ucs_wcwidth(u_int32_t ucs);
+ #endif
+ 
+ #if	NEED_WCRANGES
+Index: src/unicode.c
+===================================================================
+RCS file: /home/cvs/entropy/src/unicode.c,v
+retrieving revision 1.20
+retrieving revision 1.21
+diff -u -r1.20 -r1.21
+--- src/unicode.c	26 Sep 2003 15:14:25 -0000	1.20
++++ src/unicode.c	19 Oct 2003 14:50:07 -0000	1.21
+@@ -3890,7 +3890,7 @@
+ #endif
+ 
+ #if	NEED_WCWIDTH
+-int wcwidth(u_int32_t ucs)
++int ucs_wcwidth(u_int32_t ucs)
+ {
+ 	/* sorted list of non-overlapping intervals of non-spacing characters */
+ 	static const struct interval {
+Index: src/vt.c
+===================================================================
+RCS file: /home/cvs/entropy/src/vt.c,v
+retrieving revision 1.15
+retrieving revision 1.16
+diff -u -r1.15 -r1.16
+--- src/vt.c	30 Jul 2003 04:20:49 -0000	1.15
++++ src/vt.c	19 Oct 2003 14:50:07 -0000	1.16
+@@ -1393,7 +1393,7 @@
+ 			break;
+ 
+ 		/* is this a combining character? */
+-		if (0 == wcwidth(tc)) {
++		if (0 == ucs_wcwidth(tc)) {
+ 			vt_att_t chr = vt->screen[vt->cur.y][vt->cur.x];
+ 			chr.comb = (u_int16_t)tc;
+ 			if (vt->bdf.bbx[tc].w > vt->bdf.fw)
