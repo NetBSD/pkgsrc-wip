@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/11 00:41:32 blef Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/16 04:49:11 blef Exp $
 
-DISTNAME=		obconf-1.0
+DISTNAME=		obconf-1.1
 CATEGORIES=		x11 wm
 MASTER_SITES=		http://icculus.org/openbox/releases/
 
