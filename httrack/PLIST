@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/23 05:59:42 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/29 23:28:54 poppnk Exp $
 bin/htsserver
 bin/httrack
 bin/webhttrack
@@ -12,10 +12,191 @@ include/httrack/htsopt.h
 include/httrack/htssystem.h
 include/httrack/htswrap.h
 include/httrack/httrack-library.h
+lib/httrack/libbaselinks.la
+lib/httrack/libcontentfilter.la
+lib/httrack/libdisplayheader.la
+lib/httrack/libfilename.la
+lib/httrack/libfilename${PKGVERSION}.la
+lib/httrack/liblistlinks.la
 lib/libhttrack.la
 man/man1/htsserver.1
 man/man1/httrack.1
 man/man1/webhttrack.1
-@exec ${MKDIR} %D/lib/httrack
+share/applications/WebHTTrack-Websites.desktop
+share/applications/WebHTTrack.desktop
+share/doc/httrack/history.txt
+share/doc/httrack/html/abuse.html
+share/doc/httrack/html/addurl.html
+share/doc/httrack/html/cache.html
+share/doc/httrack/html/cmddoc.html
+share/doc/httrack/html/contact.html
+share/doc/httrack/html/dev.html
+share/doc/httrack/html/div/search.sh
+share/doc/httrack/html/faq.html
+share/doc/httrack/html/fcguide.html
+share/doc/httrack/html/filters.html
+share/doc/httrack/html/greetings.txt
+share/doc/httrack/html/history.txt
+share/doc/httrack/html/httrack.man.html
+share/doc/httrack/html/images/bg_rings.gif
+share/doc/httrack/html/images/header_title_4.gif
+share/doc/httrack/html/images/screenshot_01.jpg
+share/doc/httrack/html/images/screenshot_01b.jpg
+share/doc/httrack/html/img/addurl1.gif
+share/doc/httrack/html/img/addurl${PKGVERSION}.gif
+share/doc/httrack/html/img/addurl3.gif
+share/doc/httrack/html/img/addurl4.gif
+share/doc/httrack/html/img/addurl5.gif
+share/doc/httrack/html/img/backblue.gif
+share/doc/httrack/html/img/fade.gif
+share/doc/httrack/html/img/httrack.gif
+share/doc/httrack/html/img/snap1_a.gif
+share/doc/httrack/html/img/snap1_b.gif
+share/doc/httrack/html/img/snap1_c.gif
+share/doc/httrack/html/img/snap${PKGVERSION}_a.gif
+share/doc/httrack/html/img/snap${PKGVERSION}_b.gif
+share/doc/httrack/html/img/snap3_a.gif
+share/doc/httrack/html/img/snap4_a.gif
+share/doc/httrack/html/img/snap5_a.gif
+share/doc/httrack/html/img/snap9.gif
+share/doc/httrack/html/img/snap9_a.gif
+share/doc/httrack/html/img/snap9_b.gif
+share/doc/httrack/html/img/snap9_c.gif
+share/doc/httrack/html/img/snap9_d.gif
+share/doc/httrack/html/img/snap9_d${PKGVERSION}.gif
+share/doc/httrack/html/img/snap9_d3.gif
+share/doc/httrack/html/img/snap9_d4.gif
+share/doc/httrack/html/img/snap9_d5.gif
+share/doc/httrack/html/img/snap9_d6.gif
+share/doc/httrack/html/img/snap9_d7.gif
+share/doc/httrack/html/img/snap9_d8.gif
+share/doc/httrack/html/img/snap9_e.gif
+share/doc/httrack/html/img/snap9_f.gif
+share/doc/httrack/html/img/snap9_g.gif
+share/doc/httrack/html/img/snap9_g${PKGVERSION}.gif
+share/doc/httrack/html/img/snap9_g3.gif
+share/doc/httrack/html/img/snap9_h.gif
+share/doc/httrack/html/img/snap9_i.gif
+share/doc/httrack/html/img/snap9_j.gif
+share/doc/httrack/html/img/snap9_k.gif
+share/doc/httrack/html/index.html
+share/doc/httrack/html/library.html
+share/doc/httrack/html/license.txt
+share/doc/httrack/html/options.html
+share/doc/httrack/html/overview.html
+share/doc/httrack/html/plug.html
+share/doc/httrack/html/scripting.html
+share/doc/httrack/html/server/about.html
+share/doc/httrack/html/server/addurl.html
+share/doc/httrack/html/server/error.html
+share/doc/httrack/html/server/exit.html
+share/doc/httrack/html/server/file.html
+share/doc/httrack/html/server/finished.html
+share/doc/httrack/html/server/help.html
+share/doc/httrack/html/server/images/bg_rings.gif
+share/doc/httrack/html/server/images/fade.gif
+share/doc/httrack/html/server/images/header_title_4.gif
+share/doc/httrack/html/server/index.html
+share/doc/httrack/html/server/option1.html
+share/doc/httrack/html/server/option10.html
+share/doc/httrack/html/server/option11.html
+share/doc/httrack/html/server/option${PKGVERSION}.html
+share/doc/httrack/html/server/option${PKGVERSION}b.html
+share/doc/httrack/html/server/option3.html
+share/doc/httrack/html/server/option4.html
+share/doc/httrack/html/server/option5.html
+share/doc/httrack/html/server/option6.html
+share/doc/httrack/html/server/option7.html
+share/doc/httrack/html/server/option8.html
+share/doc/httrack/html/server/option9.html
+share/doc/httrack/html/server/refresh.html
+share/doc/httrack/html/server/step${PKGVERSION}.html
+share/doc/httrack/html/server/step3.html
+share/doc/httrack/html/server/step4.html
+share/doc/httrack/html/shelldoc.html
+share/doc/httrack/html/start.html
+share/doc/httrack/html/step.html
+share/doc/httrack/html/step1.html
+share/doc/httrack/html/step${PKGVERSION}.html
+share/doc/httrack/html/step3.html
+share/doc/httrack/html/step4.html
+share/doc/httrack/html/step5.html
+share/doc/httrack/html/step9.html
+share/doc/httrack/html/step9_opt1.html
+share/doc/httrack/html/step9_opt10.html
+share/doc/httrack/html/step9_opt11.html
+share/doc/httrack/html/step9_opt${PKGVERSION}.html
+share/doc/httrack/html/step9_opt3.html
+share/doc/httrack/html/step9_opt4.html
+share/doc/httrack/html/step9_opt5.html
+share/doc/httrack/html/step9_opt6.html
+share/doc/httrack/html/step9_opt7.html
+share/doc/httrack/html/step9_opt8.html
+share/doc/httrack/html/step9_opt9.html
+share/doc/httrack/httrack-doc.html
+share/httrack/icons/webhttrack.xpm
+share/httrack/lang.def
+share/httrack/lang.indexes
+share/httrack/lang/Bulgarian.txt
+share/httrack/lang/Castellano.txt
+share/httrack/lang/Cesky.txt
+share/httrack/lang/Chinese-BIG5.txt
+share/httrack/lang/Chinese-Simplified.txt
+share/httrack/lang/Dansk.txt
+share/httrack/lang/Deutsch.txt
+share/httrack/lang/Eesti.txt
+share/httrack/lang/English.txt
+share/httrack/lang/Francais.txt
+share/httrack/lang/Greek.txt
+share/httrack/lang/Italiano.txt
+share/httrack/lang/Japanese.txt
+share/httrack/lang/Macedonian.txt
+share/httrack/lang/Magyar.txt
+share/httrack/lang/Nederlands.txt
+share/httrack/lang/Norsk.txt
+share/httrack/lang/Polski.txt
+share/httrack/lang/Portugues-Brasil.txt
+share/httrack/lang/Portugues.txt
+share/httrack/lang/Romanian.txt
+share/httrack/lang/Russian.txt
+share/httrack/lang/Slovak.txt
+share/httrack/lang/Slovenian.txt
+share/httrack/lang/Svenska.txt
+share/httrack/lang/Turkish.txt
+share/httrack/lang/Ukrainian.txt
+share/httrack/libtest/callbacks-example-baselinks.c
+share/httrack/libtest/callbacks-example-contentfilter.c
+share/httrack/libtest/callbacks-example-displayheader.c
+share/httrack/libtest/callbacks-example-filename.c
+share/httrack/libtest/callbacks-example-filename${PKGVERSION}.c
+share/httrack/libtest/callbacks-example-listlinks.c
+share/httrack/libtest/example.c
+share/httrack/libtest/example.dsp
+share/httrack/libtest/example.dsw
+share/httrack/libtest/example.h
+share/httrack/libtest/htssystem.h
+share/httrack/libtest/readme.txt
+share/httrack/templates/index-body.html
+share/httrack/templates/index-footer.html
+share/httrack/templates/index-header.html
+share/httrack/templates/topindex-body.html
+share/httrack/templates/topindex-bodycat.html
+share/httrack/templates/topindex-footer.html
+share/httrack/templates/topindex-header.html
+share/pixmaps/httrack.xpm
+@dirrm share/pixmaps
+@dirrm share/httrack/templates
+@dirrm share/httrack/libtest
+@dirrm share/httrack/lang
+@dirrm share/httrack/icons
+@dirrm share/httrack
+@dirrm share/doc/httrack/html/server/images
+@dirrm share/doc/httrack/html/server
+@dirrm share/doc/httrack/html/img
+@dirrm share/doc/httrack/html/images
+@dirrm share/doc/httrack/html/div
+@dirrm share/doc/httrack/html
+@dirrm share/doc/httrack
+@dirrm share/applications
 @dirrm lib/httrack
 @dirrm include/httrack
