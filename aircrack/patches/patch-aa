@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1 2004/11/24 21:09:08 minskim Exp $
+
+--- Makefile.orig	2004-11-24 15:00:53.000000000 -0600
++++ Makefile
+@@ -1,7 +1,6 @@
+-CFLAGS          = -s -W -Wall -O2
+ OPTFLAGS        = -D_FILE_OFFSET_BITS=64
+ 
+-prefix          = /usr/pkg
++prefix          = ${PREFIX}
+ bindir          = $(prefix)/bin
+ datadir         = $(prefix)/share
+ docdir          = $(datadir)/aircrack
+@@ -17,12 +16,12 @@ all:
+ 	$(CC) $(CFLAGS) $(OPTFLAGS) airodump.c -o airodump
+ 
+ install:
+-	install -d $(DESTDIR)$(bindir)
+-	install -m 755 $(BINFILES) $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM} $(BINFILES) $(DESTDIR)$(bindir)
+ 
+ doc:
+-	install -d $(DESTDIR)$(docdir)
+-	install -m 644 $(DOCFILES) $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA} $(DOCFILES) $(DESTDIR)$(docdir)
+ 
+ clean:
+ 	rm -f *.o 802ether aircrack aireplay airodump
