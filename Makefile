@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1374 2004/07/10 05:21:43 blef Exp $
-# $NetBSD: Makefile,v 1.1374 2004/07/10 05:21:43 blef Exp $
+# $Id: Makefile,v 1.1375 2004/07/10 17:08:27 poppnk Exp $
+# $NetBSD: Makefile,v 1.1375 2004/07/10 17:08:27 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -88,6 +88,7 @@ SUBDIR+=	crawl
 SUBDIR+=	cryptopp
 SUBDIR+=	cube
 SUBDIR+=	cvsd
+SUBDIR+=	cvsreport
 SUBDIR+=	d4x
 SUBDIR+=	damageext
 SUBDIR+=	dansguardian
@@ -746,6 +747,7 @@ SUBDIR+=	tleenx3
 SUBDIR+=	tls
 SUBDIR+=	toppler
 SUBDIR+=	totem
+SUBDIR+=	tripwire2
 SUBDIR+=	tsm
 SUBDIR+=	tutos
 SUBDIR+=	tuxtype2
@@ -789,6 +791,7 @@ SUBDIR+=	xbelmark
 SUBDIR+=	xbsql
 SUBDIR+=	xdkcal
 SUBDIR+=	xevil
+SUBDIR+=	xinetd
 SUBDIR+=	xlibs
 SUBDIR+=	xmail
 SUBDIR+=	xmms-dumb
