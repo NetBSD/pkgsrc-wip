@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/07 16:28:59 tvierling Exp $
+
+--- j2sdk1.3.1/make/sun/cmm/Makefile.orig	Fri Mar 28 16:42:08 2003
++++ j2sdk1.3.1/make/sun/cmm/Makefile	Fri Mar 28 16:43:36 2003
+@@ -80,12 +80,10 @@
+ else # PLATFORM
+ ifeq ($(PLATFORM),bsd)
+ JVMLIB =
++endif
+ ifeq ($(TRUE_PLATFORM),FreeBSD)
+ OTHER_LDLIBS = -pthread $(LIBM)
+ CFLAGS += -pthread
+-else
+-OTHER_LDLIBS = -lpthread $(LIBM)
+-endif
+ else
+ OTHER_LDLIBS = $(LIBM)
+ endif
