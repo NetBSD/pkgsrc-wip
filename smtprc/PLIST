@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/05 19:05:55 adrian_p Exp $
+bin/smtprc
+man/man1/smtprc.1
+share/doc/smtprc/FAQ
+share/doc/smtprc/README

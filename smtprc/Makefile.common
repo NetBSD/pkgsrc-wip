@@ -1,0 +1,15 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2003/10/05 19:05:55 adrian_p Exp $
+
+DISTNAME=	smtprc-0.9.7
+PKGNAME=	smtprc-0.9.7b
+WRKSRC=		${WRKDIR}/smtprc
+CATEGORIES=	net mail
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=smtprc/}
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	adrianp@stindustries.net
+HOMEPAGE= 	http://irc.warg.co.uk/smtprc-website/index.html
+
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
+PKG_SYSCONFSUBDIR=	smtprc
