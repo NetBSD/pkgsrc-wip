@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/26 21:22:28 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/26 21:59:09 mpasternak Exp $
 
 DISTNAME=		GTK2-Smooth-Engine
-PKGNAME=		gtk2-smooth-engine-0
+PKGNAME=		gtk2-engines-smooth-0
 WRKSRC=			${WRKDIR}/smooth-engine
 CATEGORIES=		x11
 MASTER_SITES=		http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/themes/gtk2/
