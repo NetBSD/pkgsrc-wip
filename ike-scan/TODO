@@ -1,3 +1,5 @@
-$NetBSD: TODO,v 1.5 2004/02/11 19:09:14 adrian_p Exp $
+$Id: TODO,v 1.6 2004/02/12 02:52:20 minskim Exp $
 
-Ready for pkgsrc
+* PLIST is incomplete.
+* The man page should show the actual paths to data files, not those
+  in /usr/local.
