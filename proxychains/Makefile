@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/08 14:56:37 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/15 10:44:10 poppnk Exp $
 #
 
 DISTNAME=		proxychains-2.1
@@ -20,5 +20,10 @@ SUBST_CLASSES=ooo
 SUBST_STAGE.ooo=pre-build
 SUBST_FILES.ooo=proxychains/Makefile
 SUBST_SED.ooo=-e s!OBJEXT\ =!OBJEXT=o!
+
+SUBST_CLASSES+=pfx
+SUBST_STAGE.pfx=pre-build
+SUBST_FILES.pfx=proxychains/main.c
+SUBST_SED.pfx=-e s!/usr!${PREFIX}!
 
 .include "../../mk/bsd.pkg.mk"
