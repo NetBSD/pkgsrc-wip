@@ -1,0 +1,57 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/11/11 20:57:22 daprice Exp $
+
+--- ajax/Makefile.in.orig	Wed Jul 21 15:43:52 2004
++++ ajax/Makefile.in	Wed Jul 21 15:45:35 2004
+@@ -56,7 +56,7 @@
+ libajax_la_LIBADD =
+ am__libajax_la_SOURCES_DIST = ajacd.c ajalign.c ajarr.c ajassert.c \
+ 	ajbase.c ajcall.c ajcod.c ajdan.c ajdmx.c ajdomain.c \
+-	ajexcept.c ajfeat.c ajfile.c ajfmt.c ajgraphxml.c ajjava.c \
++	ajexcept.c ajfeat.c ajfile.c ajfmt.c ajgraphxml.c \
+ 	ajlist.c ajmath.c ajmatrices.c ajmem.c ajmess.c ajnam.c \
+ 	ajnexus.c ajpdb.c ajpdbio.c ajphylo.c ajrange.c ajreg.c \
+ 	ajreport.c ajseq.c ajseqabi.c ajseqdb.c ajseqread.c \
+@@ -65,7 +65,7 @@
+ 	pcre_study.c pcreposix.c ajgraph.c ajhist.c
+ am__objects_1 = ajacd.lo ajalign.lo ajarr.lo ajassert.lo ajbase.lo \
+ 	ajcall.lo ajcod.lo ajdan.lo ajdmx.lo ajdomain.lo ajexcept.lo \
+-	ajfeat.lo ajfile.lo ajfmt.lo ajgraphxml.lo ajjava.lo ajlist.lo \
++	ajfeat.lo ajfile.lo ajfmt.lo ajgraphxml.lo ajlist.lo \
+ 	ajmath.lo ajmatrices.lo ajmem.lo ajmess.lo ajnam.lo ajnexus.lo \
+ 	ajpdb.lo ajpdbio.lo ajphylo.lo ajrange.lo ajreg.lo ajreport.lo \
+ 	ajseq.lo ajseqabi.lo ajseqdb.lo ajseqread.lo ajseqtype.lo \
+@@ -92,7 +92,7 @@
+ @AMDEP_TRUE@	./$(DEPDIR)/ajexcept.Plo ./$(DEPDIR)/ajfeat.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/ajfile.Plo ./$(DEPDIR)/ajfmt.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/ajgraph.Plo ./$(DEPDIR)/ajgraphxml.Plo \
+-@AMDEP_TRUE@	./$(DEPDIR)/ajhist.Plo ./$(DEPDIR)/ajjava.Plo \
++@AMDEP_TRUE@	./$(DEPDIR)/ajhist.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/ajlist.Plo ./$(DEPDIR)/ajmath.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/ajmatrices.Plo ./$(DEPDIR)/ajmem.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/ajmess.Plo ./$(DEPDIR)/ajnam.Plo \
+@@ -267,7 +267,7 @@
+ ajbase.c \
+ ajcall.c ajcod.c \
+ ajdan.c ajdmx.c ajdomain.c ajexcept.c \
+-ajfeat.c ajfile.c ajfmt.c ajgraphxml.c ajjava.c ajlist.c \
++ajfeat.c ajfile.c ajfmt.c ajgraphxml.c ajlist.c \
+ ajmath.c ajmatrices.c ajmem.c ajmess.c ajnam.c ajnexus.c \
+ ajpdb.c ajpdbio.c ajphylo.c \
+ ajrange.c ajreg.c ajreport.c \
+@@ -282,7 +282,7 @@
+ ajbase.h ajcall.h ajcod.h \
+ ajdan.h ajdmx.h ajdomain.h ajexcept.h \
+ ajfeat.h ajfeatdata.h ajfile.h ajfmt.h \
+-ajgraph.h ajgraphxml.h ajgraphstruct.h ajhist.h ajjava.h ajlist.h \
++ajgraph.h ajgraphxml.h ajgraphstruct.h ajhist.h ajlist.h \
+ ajmath.h ajmatrices.h ajmem.h ajmess.h ajnam.h ajnexus.h \
+ ajpdb.h ajpdbio.h ajphylo.h \
+ ajrange.h ajreg.h ajreport.h \
+@@ -386,7 +386,6 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ajgraph.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ajgraphxml.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ajhist.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ajjava.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ajlist.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ajmath.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ajmatrices.Plo@am__quote@

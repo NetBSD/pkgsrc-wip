@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1.1.1 2004/11/11 20:57:22 daprice Exp $
+
+--- Makefile.in.orig	Wed Jul 21 13:47:50 2004
++++ Makefile.in	Wed Jul 21 13:49:00 2004
+@@ -200,7 +200,7 @@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ AUTOMAKE_OPTIONS = gnits
+-SUBDIRS = plplot ajax nucleus emboss test doc jemboss
++SUBDIRS = plplot ajax nucleus emboss test doc #jemboss
+ 
+ # AJAX_FIXED_ROOT = \"`pwd`/emboss/acd\"
+ 
+@@ -629,7 +629,7 @@
+ 	tar cBf - emboss/data | ( cd $(distdir); tar xBf - ; cd emboss/data; rm -rf CVS */CVS */*/CVS ) 
+ 	tar cBf - plplot/lib | ( cd $(distdir); tar xBf - ; find plplot -name CVS -exec rm -rf {} \; ) 
+ 	tar cBf - doc | ( cd $(distdir); tar xBf - ; find doc -name CVS -exec rm -rf {} \; ) 
+-	tar cBf - jemboss | ( cd $(distdir); tar xBf - ; find jemboss -name CVS -exec rm -rf {} \;; find jemboss -name Makefile -exec rm -rf {} \; )
++#	tar cBf - jemboss | ( cd $(distdir); tar xBf - ; find jemboss -name CVS -exec rm -rf {} \;; find jemboss -name Makefile -exec rm -rf {} \; )
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

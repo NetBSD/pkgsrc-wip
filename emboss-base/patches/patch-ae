@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/11/11 20:57:21 daprice Exp $
+
+--- emboss/Makefile.am.orig	Wed Jul 21 15:08:17 2004
++++ emboss/Makefile.am	Wed Jul 21 15:08:42 2004
+@@ -29,7 +29,7 @@
+ cai chaos charge checktrans chips cirdna codcmp coderet \
+ compseq cons cpgplot cpgreport cusp cutgextract cutseq \
+ dan dbiblast dbifasta dbiflat dbigcg \
+-degapseq descseq diffseq digest distmat \
++degapseq descseq diffseq edigest distmat \
+ dotmatcher dotpath dottup dreg \
+ einverted embossdata embossversion emma emowse entret \
+ epestfind eprimer3 equicktandem est2genome etandem extractfeat extractseq \
+@@ -97,7 +97,7 @@
+ degapseq_SOURCES = degapseq.c
+ descseq_SOURCES = descseq.c
+ diffseq_SOURCES = diffseq.c
+-digest_SOURCES = digest.c
++edigest_SOURCES = edigest.c
+ distmat_SOURCES = distmat.c
+ dotmatcher_SOURCES = dotmatcher.c
+ dotpath_SOURCES = dotpath.c

@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/11/11 20:57:21 daprice Exp $
+
+--- emboss/acd/Makefile.in.orig	Wed Jul 21 13:43:21 2004
++++ emboss/acd/Makefile.in	Wed Jul 21 13:43:39 2004
+@@ -193,7 +193,7 @@
+ 	demoreport.acd demosequence.acd \
+ 	demostring.acd demotable.acd \
+ 	descseq.acd diffseq.acd \
+-	digest.acd distmat.acd \
++	edigest.acd distmat.acd \
+ 	dotmatcher.acd dotpath.acd dottup.acd \
+ 	dreg.acd einverted.acd embossdata.acd embossversion.acd emma.acd \
+ 	emowse.acd entrails.acd entret.acd epestfind.acd eprimer3.acd \

@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/11/11 20:57:22 daprice Exp $
+
+--- ajax/ajax.h.orig	Wed Jul 21 13:25:31 2004
++++ ajax/ajax.h	Wed Jul 21 13:25:39 2004
+@@ -68,7 +68,6 @@
+ #include "ajdmx.h"
+ #include "ajacd.h"
+ #include "ajcall.h"
+-#include "ajjava.h"
+ #include "ajgraphxml.h"
+ #include "ajvector.h"
+ 

@@ -1,0 +1,10 @@
+$NetBSD: patch-ah,v 1.1.1.1 2004/11/11 20:57:21 daprice Exp $
+
+--- emboss/acd/digest.acd.orig	Wed Jul 21 13:44:47 2004
++++ emboss/acd/digest.acd	Wed Jul 21 13:45:07 2004
+@@ -1,4 +1,4 @@
+-application: digest [
++application: edigest [
+   documentation: "Protein proteolytic enzyme or reagent
+                   cleavage digest"
+   groups: "Protein:Motifs"

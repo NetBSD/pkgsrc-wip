@@ -1,0 +1,88 @@
+$NetBSD: patch-al,v 1.1.1.1 2004/11/11 20:57:21 daprice Exp $
+
+--- configure.orig	Thu Jul 15 07:54:41 2004
++++ configure	Mon Aug  9 11:31:48 2004
+@@ -24484,7 +24484,7 @@
+ 
+ 
+ 
+-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ac_config_files="$ac_config_files plplot/Makefile plplot/lib/Makefile nucleus/Makefile ajax/Makefile emboss/Makefile emboss/acd/Makefile test/Makefile test/data/Makefile test/embl/Makefile test/genbank/Makefile test/gb/Makefile test/pir/Makefile test/swiss/Makefile test/swnew/Makefile test/wormpep/Makefile emboss/data/Makefile emboss/data/AAINDEX/Makefile emboss/data/CODONS/Makefile emboss/data/REBASE/Makefile emboss/data/PRINTS/Makefile emboss/data/PROSITE/Makefile doc/Makefile doc/manuals/Makefile doc/tutorials/Makefile doc/programs/Makefile doc/programs/html/Makefile doc/programs/text/Makefile jemboss/Makefile jemboss/api/Makefile jemboss/api/org/Makefile jemboss/api/org/emboss/Makefile jemboss/api/org/emboss/jemboss/Makefile jemboss/api/org/emboss/jemboss/gui/Makefile jemboss/api/org/emboss/jemboss/gui/filetree/Makefile jemboss/api/org/emboss/jemboss/gui/form/Makefile jemboss/api/org/emboss/jemboss/gui/sequenceChooser/Makefile jemboss/api/org/emboss/jemboss/gui/startup/Makefile jemboss/api/org/emboss/jemboss/parser/Makefile jemboss/api/org/emboss/jemboss/parser/acd/Makefile jemboss/api/org/emboss/jemboss/programs/Makefile jemboss/api/org/emboss/jemboss/soap/Makefile jemboss/images/Makefile jemboss/lib/Makefile jemboss/lib/axis/Makefile jemboss/org/Makefile jemboss/org/emboss/Makefile jemboss/org/emboss/jemboss/Makefile jemboss/org/emboss/jemboss/gui/Makefile jemboss/org/emboss/jemboss/gui/filetree/Makefile jemboss/org/emboss/jemboss/gui/form/Makefile jemboss/org/emboss/jemboss/gui/startup/Makefile jemboss/org/emboss/jemboss/gui/sequenceChooser/Makefile jemboss/org/emboss/jemboss/parser/Makefile jemboss/org/emboss/jemboss/parser/acd/Makefile jemboss/org/emboss/jemboss/programs/Makefile jemboss/org/emboss/jemboss/server/Makefile jemboss/org/emboss/jemboss/soap/Makefile jemboss/org/emboss/jemboss/editor/Makefile jemboss/org/emboss/jemboss/draw/Makefile jemboss/resources/Makefile jemboss/utils/Makefile Makefile"
++                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ac_config_files="$ac_config_files plplot/Makefile plplot/lib/Makefile nucleus/Makefile ajax/Makefile emboss/Makefile emboss/acd/Makefile test/Makefile test/data/Makefile test/embl/Makefile test/genbank/Makefile test/gb/Makefile test/pir/Makefile test/swiss/Makefile test/swnew/Makefile test/wormpep/Makefile emboss/data/Makefile emboss/data/AAINDEX/Makefile emboss/data/CODONS/Makefile emboss/data/REBASE/Makefile emboss/data/PRINTS/Makefile emboss/data/PROSITE/Makefile doc/Makefile doc/manuals/Makefile doc/tutorials/Makefile doc/programs/Makefile doc/programs/html/Makefile doc/programs/text/Makefile Makefile"
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+ # tests run on this system so they can be shared between configure
+@@ -25150,40 +25150,40 @@
+   "doc/programs/Makefile" ) CONFIG_FILES="$CONFIG_FILES doc/programs/Makefile" ;;
+   "doc/programs/html/Makefile" ) CONFIG_FILES="$CONFIG_FILES doc/programs/html/Makefile" ;;
+   "doc/programs/text/Makefile" ) CONFIG_FILES="$CONFIG_FILES doc/programs/text/Makefile" ;;
+-  "jemboss/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/Makefile" ;;
+-  "jemboss/api/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/Makefile" ;;
+-  "jemboss/api/org/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/org/Makefile" ;;
+-  "jemboss/api/org/emboss/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/org/emboss/Makefile" ;;
+-  "jemboss/api/org/emboss/jemboss/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/org/emboss/jemboss/Makefile" ;;
+-  "jemboss/api/org/emboss/jemboss/gui/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/org/emboss/jemboss/gui/Makefile" ;;
+-  "jemboss/api/org/emboss/jemboss/gui/filetree/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/org/emboss/jemboss/gui/filetree/Makefile" ;;
+-  "jemboss/api/org/emboss/jemboss/gui/form/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/org/emboss/jemboss/gui/form/Makefile" ;;
+-  "jemboss/api/org/emboss/jemboss/gui/sequenceChooser/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/org/emboss/jemboss/gui/sequenceChooser/Makefile" ;;
+-  "jemboss/api/org/emboss/jemboss/gui/startup/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/org/emboss/jemboss/gui/startup/Makefile" ;;
+-  "jemboss/api/org/emboss/jemboss/parser/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/org/emboss/jemboss/parser/Makefile" ;;
+-  "jemboss/api/org/emboss/jemboss/parser/acd/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/org/emboss/jemboss/parser/acd/Makefile" ;;
+-  "jemboss/api/org/emboss/jemboss/programs/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/org/emboss/jemboss/programs/Makefile" ;;
+-  "jemboss/api/org/emboss/jemboss/soap/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/org/emboss/jemboss/soap/Makefile" ;;
+-  "jemboss/images/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/images/Makefile" ;;
+-  "jemboss/lib/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/lib/Makefile" ;;
+-  "jemboss/lib/axis/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/lib/axis/Makefile" ;;
+-  "jemboss/org/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/Makefile" ;;
+-  "jemboss/org/emboss/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/Makefile" ;;
+-  "jemboss/org/emboss/jemboss/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/jemboss/Makefile" ;;
+-  "jemboss/org/emboss/jemboss/gui/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/jemboss/gui/Makefile" ;;
+-  "jemboss/org/emboss/jemboss/gui/filetree/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/jemboss/gui/filetree/Makefile" ;;
+-  "jemboss/org/emboss/jemboss/gui/form/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/jemboss/gui/form/Makefile" ;;
+-  "jemboss/org/emboss/jemboss/gui/startup/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/jemboss/gui/startup/Makefile" ;;
+-  "jemboss/org/emboss/jemboss/gui/sequenceChooser/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/jemboss/gui/sequenceChooser/Makefile" ;;
+-  "jemboss/org/emboss/jemboss/parser/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/jemboss/parser/Makefile" ;;
+-  "jemboss/org/emboss/jemboss/parser/acd/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/jemboss/parser/acd/Makefile" ;;
+-  "jemboss/org/emboss/jemboss/programs/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/jemboss/programs/Makefile" ;;
+-  "jemboss/org/emboss/jemboss/server/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/jemboss/server/Makefile" ;;
+-  "jemboss/org/emboss/jemboss/soap/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/jemboss/soap/Makefile" ;;
+-  "jemboss/org/emboss/jemboss/editor/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/jemboss/editor/Makefile" ;;
+-  "jemboss/org/emboss/jemboss/draw/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/jemboss/draw/Makefile" ;;
+-  "jemboss/resources/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/resources/Makefile" ;;
+-  "jemboss/utils/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/utils/Makefile" ;;
++  #"jemboss/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/Makefile" ;;
++  #"jemboss/api/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/Makefile" ;;
++  #"jemboss/api/org/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/api/org/Makefile" ;;
++  #"jemboss/api/org/emboss/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/api/org/emboss/Makefile" ;;
++#  "jemboss/api/org/emboss/jemboss/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/api/org/emboss/jemboss/Makefile" ;;
++#  "jemboss/api/org/emboss/jemboss/gui/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/api/org/emboss/jemboss/gui/Makefile" ;;
++#  "jemboss/api/org/emboss/jemboss/gui/filetree/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/api/org/emboss/jemboss/gui/filetree/Makefile" ;;
++#  "jemboss/api/org/emboss/jemboss/gui/form/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/api/org/emboss/jemboss/gui/form/Makefile" ;;
++#  "jemboss/api/org/emboss/jemboss/gui/sequenceChooser/Makefile" ) #CONFIG_FILES="$CONFIG_FILES jemboss/api/org/emboss/jemboss/gui/sequenceChooser/Makefile" ;;
++#  "jemboss/api/org/emboss/jemboss/gui/startup/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/api/org/emboss/jemboss/gui/startup/Makefile" ;;
++#  "jemboss/api/org/emboss/jemboss/parser/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/api/org/emboss/jemboss/parser/Makefile" ;;
++#  "jemboss/api/org/emboss/jemboss/parser/acd/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/api/org/emboss/jemboss/parser/acd/Makefile" ;;
++#  "jemboss/api/org/emboss/jemboss/programs/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/api/org/emboss/jemboss/programs/Makefile" ;;
++#  "jemboss/api/org/emboss/jemboss/soap/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/api/org/emboss/jemboss/soap/Makefile" ;;
++#  "jemboss/images/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/images/Makefile" ;;
++#  "jemboss/lib/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/lib/Makefile" ;;
++#  "jemboss/lib/axis/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/lib/axis/Makefile" ;;
++#  "jemboss/org/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/Makefile" ;;
++#  "jemboss/org/emboss/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/org/emboss/Makefile" #;;
++#  "jemboss/org/emboss/jemboss/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/org/emboss/jemboss/Makefile" ;;
++#  "jemboss/org/emboss/jemboss/gui/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/org/emboss/jemboss/gui/Makefile" ;;
++#  "jemboss/org/emboss/jemboss/gui/filetree/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/org/emboss/jemboss/gui/filetree/Makefile" ;;
++#  "jemboss/org/emboss/jemboss/gui/form/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/org/emboss/jemboss/gui/form/Makefile" ;;
++#  "jemboss/org/emboss/jemboss/gui/startup/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/org/emboss/jemboss/gui/startup/Makefile" ;;
++#  "jemboss/org/emboss/jemboss/gui/sequenceChooser/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/org/emboss/jemboss/gui/sequenceChooser/Makefile" ;;
++#  "jemboss/org/emboss/jemboss/parser/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/org/emboss/jemboss/parser/Makefile" ;;
++#  "jemboss/org/emboss/jemboss/parser/acd/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/org/emboss/jemboss/parser/acd/Makefile" ;;
++#  "jemboss/org/emboss/jemboss/programs/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/org/emboss/jemboss/programs/Makefile" ;;
++#  "jemboss/org/emboss/jemboss/server/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/org/emboss/jemboss/server/Makefile" ;;
++#  "jemboss/org/emboss/jemboss/soap/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/org/emboss/jemboss/soap/Makefile" ;;
++#  "jemboss/org/emboss/jemboss/editor/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/org/emboss/jemboss/editor/Makefile" ;;
++#  "jemboss/org/emboss/jemboss/draw/Makefile" ) CONFIG_FILES="$CONFIG_FILES #jemboss/org/emboss/jemboss/draw/Makefile" ;;
++#  "jemboss/resources/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/resources/Makefile" ;;
++#  "jemboss/utils/Makefile" ) CONFIG_FILES="$CONFIG_FILES jemboss/utils/Makefile" ;;
+   "Makefile" ) CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+   "depfiles" ) CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
+   *) { { echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5

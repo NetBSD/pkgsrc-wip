@@ -1,0 +1,19 @@
+$NetBSD: patch-aj,v 1.1.1.1 2004/11/11 20:57:21 daprice Exp $
+
+--- emboss/digest.c.orig	Wed Jul 21 13:46:26 2004
++++ emboss/digest.c	Wed Jul 21 13:47:10 2004
+@@ -1,4 +1,4 @@
+-/* @source digest application
++/* @source edigest application
+ **
+ ** Calculate protein proteolytic (and CNBr) digest fragments
+ **
+@@ -68,7 +68,7 @@
+     ajint     npart;
+ 
+ 
+-    embInit("digest", argc, argv);
++    embInit("edigest", argc, argv);
+ 
+     a           = ajAcdGetSeq("sequence");
+     menu        = ajAcdGetList("menu");
