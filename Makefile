@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.21 2003/04/03 13:26:49 marc Exp $
-# $NetBSD: Makefile,v 1.21 2003/04/03 13:26:49 marc Exp $
+# $Id: Makefile,v 1.22 2003/04/04 20:44:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.22 2003/04/04 20:44:03 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -18,3 +18,4 @@ SUBDIR+=	pygtk2
 SUBDIR+=	pyorbit
 SUBDIR+=	tex-foiltex
 SUBDIR+=	chktex
+SUBDIR+=	poedit
