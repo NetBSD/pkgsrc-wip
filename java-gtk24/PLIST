@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/26 12:19:04 poppnk Exp $
+lib/libgtkjava2.4.so
+lib/libgtkjava2.4.so.2.4.3
+lib/pkgconfig/gtk2-java.pc
+share/doc/libgtk2.4-java
+share/java/gtk2.4-2.4.3.jar
+share/java/gtk2.4.jar
+share/libgtk-java/macros/ac_prog_jar.m4
+share/libgtk-java/macros/ac_prog_javac.m4
+share/libgtk-java/macros/ac_prog_javac_works.m4
+share/libgtk-java/macros/ac_prog_javadoc.m4
+share/libgtk-java/macros/am_path_docbook.m4
+share/libgtk-java/macros/am_path_gcj.m4
+share/libgtk-java/macros/jg_check_nativecompile.m4
+share/libgtk-java/macros/jg_common.m4
+share/libgtk-java/macros/jg_gnome_java.m4
+share/libgtk-java/macros/jg_gtk_java.m4
+@dirrm share/libgtk-java/macros
+@dirrm share/libgtk-java
+@dirrm share/java
+@exec ${MKDIR} %D/share/doc/libgtk-java
+@dirrm share/doc/libgtk-java
