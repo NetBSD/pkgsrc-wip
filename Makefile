@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.642 2003/11/22 14:10:37 mpasternak Exp $
-# $NetBSD: Makefile,v 1.642 2003/11/22 14:10:37 mpasternak Exp $
+# $Id: Makefile,v 1.643 2003/11/22 15:17:43 mpasternak Exp $
+# $NetBSD: Makefile,v 1.643 2003/11/22 15:17:43 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -429,7 +429,6 @@ SUBDIR+=	py-libpcap
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-oak
 SUBDIR+=	py-ogg
-# SUBDIR+=	py-slune # needs testing 
 SUBDIR+=	py-spambayes
 SUBDIR+=	py-spark
 SUBDIR+=	py-spreadmodule
@@ -464,6 +463,7 @@ SUBDIR+=	shoutcast
 SUBDIR+=	sks
 SUBDIR+=	slocate
 SUBDIR+=	slrn-pl
+SUBDIR+=	slune
 SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
