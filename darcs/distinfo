@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/01/08 00:13:15 thomasklausner Exp $
+$NetBSD: distinfo,v 1.5 2005/01/20 18:07:46 rillig Exp $
 
-SHA1 (darcs-0.9.20.tar.gz) = fa9be6ed37bd5d52f9b8c9f26c7a8c57d52480c6
-Size (darcs-0.9.20.tar.gz) = 347268 bytes
-SHA1 (patch-aa) = e29ad97feffca0303902126574e32f548463f9ba
-SHA1 (patch-ab) = 8498919740a38ba2e2c56d298d1bfb48b4c30b2a
+SHA1 (darcs-1.0.1.tar.gz) = 9f0b346c1cbab8345b38e22a36393714c09c9da2
+Size (darcs-1.0.1.tar.gz) = 732066 bytes
