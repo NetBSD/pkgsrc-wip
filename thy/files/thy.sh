@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: thy.sh,v 1.1.1.1 2003/09/17 15:49:55 xtraeme Exp $
+# $NetBSD: thy.sh,v 1.2 2003/09/30 10:38:27 algernon Exp $
 #
 # PROVIDE: thy
 # REQUIRE: DAEMON
@@ -27,3 +27,5 @@ else
 	@ECHO@ -n " ${name}"
 	eval ${command} ${command_args}
 fi
+
+# arch-tag: cb56d479-9936-4a22-9c62-6d776430dd83
