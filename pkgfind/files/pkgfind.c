@@ -39,7 +39,10 @@
 
 #define PKGSRCDIR	"/usr/pkgsrc"
 
-static const char	skip[] = ".:..:CVS:bootstrap:doc:distfiles:licenses:mk";
+static const char * const skip[] = {
+	".", "..", "CVS", "bootstrap", "doc", "distfiles",
+	"licenses", "mk", "packages", NULL
+};
 
 static void		pkgfind(const char *, const char *);
 static void		showpkg(const char *, const char *, const char *);
@@ -74,16 +77,26 @@ pkgfind(const char *path, const char *pkg)
 	struct stat sb;
 
 	if ((ncat = scandir(path, &cat, checkskip, alphasort)) < 0)
-		err(1, "%s", path);
+		err(EXIT_FAILURE, "%s", path);
 
 	for (i = 0; i < ncat; i++) {
-		(void)snprintf(tmp, sizeof(tmp), "%s/%s", path, cat[i]->d_name);
+		if (snprintf(tmp, sizeof(tmp), "%s/%s", path, cat[i]->d_name)
+		    >= sizeof(tmp)) {
+			warnx("filename too long");
+			continue;
+		}
 		if (stat(tmp, &sb) < 0 || !S_ISDIR(sb.st_mode))
 			continue;
-		nlist = scandir(tmp, &list, checkskip, alphasort);
+		if ((nlist = scandir(tmp, &list, checkskip, alphasort)) < 0) {
+			warn("%s", tmp);
+			continue;
+		}
 		for (j = 0; j < nlist; j++) {
-			(void)snprintf(tmp, sizeof(tmp), "%s/%s/%s", path,
-			    cat[i]->d_name, list[j]->d_name);
+			if (snprintf(tmp, sizeof(tmp), "%s/%s/%s", path,
+			    cat[i]->d_name, list[j]->d_name) >= sizeof(tmp)) {
+				warnx("filename too long");
+				continue;
+			}
 			if (stat(tmp, &sb) < 0 || !S_ISDIR(sb.st_mode))
 				continue;
 			if (subcasestr(list[j]->d_name, pkg))
@@ -103,22 +116,22 @@ showpkg(const char *path, const char *cat, const char *pkg)
 
 	(void)asprintf(&mk, "%s/%s/%s/Makefile", path, cat, pkg);
 	if (mk == NULL)
-		err(1, "asprintf");
+		err(EXIT_FAILURE, "asprintf");
 
 	comment = NULL;
 	if (getcomment(mk, &comment) == 0) {
 		free(mk);
 		(void)asprintf(&mk, "%s/%s/%s/Makefile.common", path, cat, pkg);
 		if (mk == NULL)
-			err(1, "asprintf");
+			err(EXIT_FAILURE, "asprintf");
 		(void)getcomment(mk, &comment);
 	}
 	free(mk);
 
 	if (comment != NULL)
-		printf("%s/%s: %s\n", cat, pkg, comment);
+		(void)printf("%s/%s: %s\n", cat, pkg, comment);
 	else
-		printf("%s/%s: no description\n", cat, pkg);
+		(void)printf("%s/%s: no description\n", cat, pkg);
 }
 
 static int
@@ -132,11 +145,11 @@ getcomment(const char *file, char **comment)
 		return 0;
 	while ((line = fgetln(fp, &len)) != NULL) {
 		line[len - 1] = '\0';
-		if (strncmp(line, "COMMENT", (size_t)7) == 0) {
+		if (strncmp(line, "COMMENT", 7) == 0) {
 			line += 7;	/* skip "COMMENT" */
 			while (*++line == '=')
 				continue;
-			while (*line != '\0' && isblank((unsigned char)*line))
+			while (*line != '\0' && isspace((unsigned char)*line))
 				line++;
 			*comment = line;
 			(void)fclose(fp);
@@ -150,17 +163,11 @@ getcomment(const char *file, char **comment)
 static int
 checkskip(const struct dirent *dp)
 {
-	char *p, *t, *save;
+	const char * const *p;
 
-	if ((save = t = strdup(skip)) == NULL)
-		err(1, "strdup");
-	while ((p = strsep(&t, ":")) != NULL) {
-		if (strcmp(dp->d_name, p) == 0) {
-			free(save);
+	for (p = skip; *p != NULL; p++)
+		if (strcmp(dp->d_name, *p) == 0)
 			return 0;
-		}
-	}
-	free(save);
 	return 1;
 }
 
@@ -186,5 +193,5 @@ static void
 usage(void)
 {
 	(void)fprintf(stderr, "Usage: %s keyword [...]\n", getprogname());
-	exit(1);
+	exit(EXIT_FAILURE);
 }
