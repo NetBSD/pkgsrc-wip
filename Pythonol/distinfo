@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/26 19:10:00 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2003/11/26 19:43:47 mpasternak Exp $
 
 SHA1 (Pythonol-2.0_i586.tar.bz2) = 767a3a3a24a4e6657d461e8cb261038c171d63a6
 Size (Pythonol-2.0_i586.tar.bz2) = 1577205 bytes
+SHA1 (patch-aa) = 83dd6ff583a83365e5d9ebda8960b9ce3bf16e0f

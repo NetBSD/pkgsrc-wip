@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/26 19:10:01 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/26 19:43:47 mpasternak Exp $
 bin/pythonol
 ${PYSITELIB}/Pythonol/INSTALL-ME.sh
 ${PYSITELIB}/Pythonol/PyInstallShield
@@ -30,7 +30,11 @@ ${PYSITELIB}/Pythonol/datafiles/data_comp7.txt
 ${PYSITELIB}/Pythonol/datafiles/data_comp8.txt
 ${PYSITELIB}/Pythonol/datafiles/data_comp9.txt
 ${PYSITELIB}/Pythonol/datafiles/data_eng_verbs.txt
+${PYSITELIB}/Pythonol/datafiles/dictionary-idioms.db
+${PYSITELIB}/Pythonol/datafiles/dictionary-mature.db
+${PYSITELIB}/Pythonol/datafiles/dictionary.db
 ${PYSITELIB}/Pythonol/datafiles/irregular_verbs.txt
+${PYSITELIB}/Pythonol/datafiles/thesaurus-cats.db
 ${PYSITELIB}/Pythonol/datafiles/trans_adv.txt
 ${PYSITELIB}/Pythonol/datafiles/trans_beg.txt
 ${PYSITELIB}/Pythonol/datafiles/trans_mid.txt
@@ -203,13 +207,11 @@ ${PYSITELIB}/Pythonol/pythonol_help.py
 ${PYSITELIB}/Pythonol/pythonol_help_anim.py
 ${PYSITELIB}/Pythonol/pythonol_icon2.ico
 ${PYSITELIB}/Pythonol/pythonol_setup.py
+${PYSITELIB}/Pythonol/pythonol_setup.py.orig
 ${PYSITELIB}/Pythonol/pythonol_sqlite.py
 ${PYSITELIB}/Pythonol/pythonolui.py
 ${PYSITELIB}/Pythonol/pytrans.py
 ${PYSITELIB}/Pythonol/span2eng.py
-${PYSITELIB}/Pythonol/sqlite/__init__.py
-${PYSITELIB}/Pythonol/sqlite/_sqlite.so
-${PYSITELIB}/Pythonol/sqlite/main.py
 ${PYSITELIB}/Pythonol/symbolbar.py
 ${PYSITELIB}/Pythonol/theme/gtk/gtkrc
 ${PYSITELIB}/Pythonol/user-doc/CHANGES.txt
@@ -227,7 +229,6 @@ ${PYSITELIB}/Pythonol/verb_families.py
 @dirrm ${PYSITELIB}/Pythonol/user-doc
 @dirrm ${PYSITELIB}/Pythonol/theme/gtk
 @dirrm ${PYSITELIB}/Pythonol/theme
-@dirrm ${PYSITELIB}/Pythonol/sqlite
 @dirrm ${PYSITELIB}/Pythonol/pixmaps
 @dirrm ${PYSITELIB}/Pythonol/icons
 @dirrm ${PYSITELIB}/Pythonol/festival
