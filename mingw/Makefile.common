@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.3 2003/11/30 23:56:27 mpasternak Exp $
-# $Id: Makefile.common,v 1.3 2003/11/30 23:56:27 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.4 2003/12/01 03:07:00 mpasternak Exp $
+# $Id: Makefile.common,v 1.4 2003/12/01 03:07:00 mpasternak Exp $
 
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw/}
+MASTER_SITES?=		${MASTER_SITE_SOURCEFORGE:=mingw/}
 
 MAINTAINER?=		dotz@irc.pl
 COMMENT?=		GNU C Compiler ported to win32 platforms
