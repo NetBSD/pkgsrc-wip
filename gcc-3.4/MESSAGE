@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2004/05/21 15:05:54 johnrshannon Exp $
+$NetBSD: MESSAGE,v 1.3 2004/05/24 15:07:06 johnrshannon Exp $
 
-cgg-3.4.0 has been installed in ${LOCALBASE}/gcc-3.4.0
+gcc-3.4.0 has been installed in ${LOCALBASE}/gcc-3.4.0
 
 Consider adding ${LOCALBASE}/gcc-3.4.0/lib to your LD_LIBRARY_PATH or
 including it in /etc/ld.so.conf
