@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/14 22:33:15 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/24 13:50:20 poppnk Exp $
 #
 
 DISTNAME=		crimson-1.1.3-bin
@@ -17,6 +17,7 @@ USE_BUILDLINK3=		yes
 do-build:
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/classpath/
 	${INSTALL_DATA} ${WRKSRC}/crimson.jar ${PREFIX}/share/classpath/
 
 .include "../../mk/bsd.pkg.mk"
