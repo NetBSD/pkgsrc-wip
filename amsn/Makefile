@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/15 17:26:22 virtus Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/01 16:35:57 blef Exp $
 #
 
 DISTNAME=	amsn-0_83
@@ -10,8 +10,8 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://amsn.sourceforge.net/
 COMMENT=	Alvaro's MSN messenger client
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
-.include "../../lang/tcl/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
