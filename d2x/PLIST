@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2003/11/04 22:15:17 airhead Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/11/05 12:16:55 airhead Exp $
 bin/d2x-sdl
-@dirrm share/games/d2x
+@unexec ${RMDIR} -p ${D2X_DATA} 2>/dev/null || ${TRUE}
