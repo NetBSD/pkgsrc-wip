@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1290 2004/05/22 04:58:15 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1290 2004/05/22 04:58:15 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1291 2004/05/23 04:06:37 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1291 2004/05/23 04:06:37 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -737,6 +737,7 @@ SUBDIR+=	vtk-docs
 SUBDIR+=	vtk-python
 SUBDIR+=	webcleaner
 SUBDIR+=	weewm
+SUBDIR+=	which
 SUBDIR+=	wmclockmon
 SUBDIR+=	wmitime
 SUBDIR+=	wmmp
