@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/21 09:14:47 moubctez Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/26 09:54:34 moubctez Exp $
 
 DISTNAME=	fuse-utils-0.6.0
 PKGNAME=	${DISTNAME}
@@ -14,5 +14,5 @@ USE_X11=	yes
 GNU_CONFIGURE=	yes
 
 .include "../../devel/glib/buildlink2.mk"
-.include "../../emulators/libspectrum/buildlink2.mk"
+.include "../libspectrum/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
