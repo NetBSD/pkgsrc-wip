@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/14 01:22:35 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/07 23:17:26 minskim Exp $
 #
 
 DISTNAME=		libSM-6.0.3
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://xlibs.freedesktop.org/
 COMMENT=		SM Extension
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
