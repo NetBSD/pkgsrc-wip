@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1095 2004/03/19 18:28:41 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1095 2004/03/19 18:28:41 xtraeme Exp $
+# $Id: Makefile,v 1.1096 2004/03/19 19:19:06 mpasternak Exp $
+# $NetBSD: Makefile,v 1.1096 2004/03/19 19:19:06 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -320,6 +320,7 @@ SUBDIR+=	libogg-nightly
 SUBDIR+=	libol
 SUBDIR+=	libprelude
 SUBDIR+=	libstatgrab
+SUBDIR+=	libtlen2
 SUBDIR+=	libuuid
 SUBDIR+=	libvorbis-nightly
 SUBDIR+=	libwpd
@@ -703,6 +704,7 @@ SUBDIR+=	tinc
 SUBDIR+=	tinylogin
 SUBDIR+=	tkabber
 SUBDIR+=	tleenx2
+SUBDIR+=	tleenx3
 SUBDIR+=	tls
 SUBDIR+=	toppler
 SUBDIR+=	totem
