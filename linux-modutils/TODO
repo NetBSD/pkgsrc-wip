@@ -1,0 +1,22 @@
+maybe use different or more mirrors
+
+build dependencies: ranlib, ar, bison, flex
+
+/lib/modules/ is hard-coded in man pages and code
+
+should linux-kernel and modutils be in same pkgsrc category?
+
+provide better example of modules.conf
+
+It would be nice if pkgsrc would provide an automatically generated
+MESSAGE about how to enable the rc.d script.
+
+Also note that this PLIST doesn't register the rc.d script.
+This needs to be added or the pkgsrc mk files fixed to automate that.
+
+Maybe have a MESSAGE about setting up ${PKG_SYSCONFDIR}/modules
+for boot-time.
+
+maybe a different HOMEPAGE should be used
+
+maybe the package name should just be "modutils"

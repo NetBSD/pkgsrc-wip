@@ -1,0 +1,4 @@
+Modutils is a collection of utilities for managing Linux kernel
+modules. These tools handle loadable Linux kernel module dependencies,
+installing loadable modules in the running Linux kernel, report on Linux
+kernel symbols, etc.
