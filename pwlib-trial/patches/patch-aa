@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/29 18:02:26 daprice Exp $
+
+--- configure.in.orig	Tue Aug  5 15:49:43 2003
++++ configure.in
+@@ -166,6 +166,8 @@ $CC $CFLAGS -Wl,--gc-sections conftest.c
+ if test $? = 0 ; then
+   AC_MSG_RESULT(yes)
+ 
++
++  if $OSTYPE != netbsd ; then
+   AC_MSG_CHECKING(if compiler accepts -ffunction-sections)
+   AC_LANG_CONFTEST([[int main(int ac,char **av) { return 0; }]])
+   $CC $CFLAGS -ffunction-sections -c conftest.c > /dev/null 2>&1
+@@ -176,7 +178,7 @@ if test $? = 0 ; then
+   else
+     AC_MSG_RESULT(no)
+   fi
+-
++ 
+   AC_MSG_CHECKING(if compiler accepts -fdata-sections)
+   AC_LANG_CONFTEST([[int main(int ac,char **av) { return 0; }]])
+   $CC $CFLAGS -fdata-sections -c conftest.c > /dev/null 2>&1
+@@ -186,6 +188,7 @@ if test $? = 0 ; then
+     GCSECTIONS=1
+   else
+     AC_MSG_RESULT(no)
++  fi
+   fi
+ 
+   AC_MSG_CHECKING(if compiler accepts -fvtable-gc)

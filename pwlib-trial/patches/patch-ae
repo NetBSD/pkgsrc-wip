@@ -1,0 +1,66 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/11/29 18:02:26 daprice Exp $
+
+--- make/lib.mak.orig	Tue Jul 29 12:33:34 2003
++++ make/lib.mak
+@@ -110,6 +110,8 @@
+ # Added copyright notice
+ #
+ 
++
++
+ ifneq ($(OSTYPE),Darwin)
+   LIBNAME_MAJ	= $(LIB_FILENAME).$(MAJOR_VERSION)
+   LIBNAME_MIN	= $(LIBNAME_MAJ).$(MINOR_VERSION)
+@@ -135,14 +137,8 @@ CLEAN_FILES += $(LIBDIR)/$(LIBNAME_PAT) 
+ ifneq ($(P_SHAREDLIB),1)
+   STATIC_LIB_FILE = $(LIBDIR)/$(LIB_FILENAME)
+ else
+-  STATIC_LIB_FILE = $(LIBDIR)/$(subst .$(LIB_SUFFIX),_s.$(STATICLIBEXT),$(LIB_FILENAME))
+-endif
++  STATIC_LIB_FILE = $(LIBDIR)/lib$(LIB_BASENAME)_s.a
+ 
+-$(LIBDIR)/$(LIB_FILENAME) : $(TARGETLIB)
+-
+-ifeq ($(P_SHAREDLIB),1)
+-
+-  ENDLDLIBS := $(SYSLIBS) $(ENDLDLIBS)
+   ifeq ($(OSTYPE),beos)
+     # BeOS requires different options when building shared libraries
+     # Also, when building a shared library x that references symbols in libraries y,
+@@ -181,28 +177,22 @@ ifeq ($(P_SHAREDLIB),1)
+     LDSOOPTS = -Bdynamic -G -h $(LIB_SONAMEN)
+     LD = ld
+   else
+-    ifneq ($(OSTYPE),Darwin)
+       LDSOOPTS += -Wl,-soname,$(LIB_SONAME)
+-    endif
+-    LD = $(CPLUS)
++      LD = $(CPLUS)
+   endif
+ 
+-  $(LIBDIR)/$(LIB_FILENAME): $(LIBDIR)/$(LIBNAME_PAT)
+-	cd $(LIBDIR) ; rm -f $(LIB_FILENAME) ; ln -sf $(LIBNAME_PAT) $(LIB_FILENAME)
+-	cd $(LIBDIR) ; rm -f $(LIBNAME_MAJ) ;  ln -sf $(LIBNAME_PAT) $(LIBNAME_MAJ)
+-	cd $(LIBDIR) ; rm -f $(LIBNAME_MIN) ;  ln -sf $(LIBNAME_PAT) $(LIBNAME_MIN)
++  ENDLDLIBS += -L$(PREFIX)/lib -lpthread -lossaudio
+ 
+-  $(LIBDIR)/$(LIBNAME_PAT): $(STATIC_LIB_FILE)
++  $(LIBDIR)/$(LIB_FILENAME): $(OBJS)
+ 	@echo EXTLIBS = $(EXTLIBS)
+ 	@echo SYSLIBS = $(SYSLIBS)
+ 	@if [ ! -d $(LIBDIR) ] ; then mkdir $(LIBDIR) ; fi
+-	$(LD) $(LDSOOPTS) -o $(LIBDIR)/$(LIBNAME_PAT) $(LDFLAGS) $(EXTLIBS) $(OBJS) $(ENDLDLIBS)
++	/usr/pkg/bin/libtool --tag=CXX $(CPLUS) -o $(LIBDIR)/$(LIB_FILENAME) \
++		$(OBJS:.o=.lo) $(ENDLDLIBS) -rpath $(INSTALLLIB_DIR) \
++		-version-info $(MAJOR_VERSION):$(MINOR_VERSION)
+ 
+-  install: $(LIBDIR)/$(LIBNAME_PAT)
+-	$(INSTALL) $(LIBDIR)/$(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIBNAME_PAT)
+-	ln -sf $(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIB_FILENAME)
+-	ln -sf $(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIBNAME_MAJ)
+-	ln -sf $(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIBNAME_MIN)
++  install: $(LIBDIR)/$(LIB_FILENAME)
++	/usr/pkg/bin/libtool $(BSD_INSTALL_DATA) $(LIBDIR)/$(LIB_FILENAME) $(INSTALLLIB_DIR)
+ 
+ endif # P_SHAREDLIB
+ 

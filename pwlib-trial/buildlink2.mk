@@ -1,0 +1,151 @@
+# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/11/29 18:02:26 daprice Exp $
+#
+# This Makefile fragment is included by packages that use pwlib.
+#
+# This file was created automatically using createbuildlink 2.6.
+#
+
+.if !defined(PWLIB_BUILDLINK2_MK)
+PWLIB_BUILDLINK2_MK=	# defined
+
+BUILDLINK_PACKAGES+=			pwlib
+BUILDLINK_DEPENDS.pwlib?=		pwlib>=1.5.2
+BUILDLINK_PKGSRCDIR.pwlib?=		../../local/pwlib-trial
+
+EVAL_PREFIX+=	BUILDLINK_PREFIX.pwlib=pwlib
+BUILDLINK_PREFIX.pwlib_DEFAULT=	${LOCALBASE}
+BUILDLINK_FILES.pwlib+=	include/ptbuildopts.h
+BUILDLINK_FILES.pwlib+=	include/ptbuildopts.h.in
+BUILDLINK_FILES.pwlib+=	include/ptclib/asnber.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/asner.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/asnper.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/asnxer.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/cypher.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/delaychan.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/dtmf.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/ftp.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/html.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/http.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/httpform.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/httpsvc.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/inetmail.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/inetprot.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/ipacl.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/memfile.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/mime.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/modem.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/pasn.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/pdns.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/pils.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/pldap.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/psnmp.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/psoap.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/pssl.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/pstun.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/ptts.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/pwavfile.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/pxml.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/pxmlrpc.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/pxmlrpcs.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/qchannel.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/random.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/shttpsvc.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/socks.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/telnet.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/url.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/vsdl.h
+BUILDLINK_FILES.pwlib+=	include/ptclib/vxml.h
+BUILDLINK_FILES.pwlib+=	include/ptlib.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/MacMainIf.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/args.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/array.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/channel.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/conchan.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/config.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/contain.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/contain.inl
+BUILDLINK_FILES.pwlib+=	include/ptlib/dict.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/dynalink.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/ethsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/file.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/filepath.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/icmpsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/indchan.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/ipdsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/ipsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/ipxsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/lists.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/mail.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/mutex.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/object.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/osutil.inl
+BUILDLINK_FILES.pwlib+=	include/ptlib/pdirect.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/pipechan.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/pprocess.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/pstring.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/ptime.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/remconn.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/safecoll.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/semaphor.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/serchan.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/sfile.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/socket.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/sockets.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/sound.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/spxsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/svcproc.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/syncpoint.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/syncthrd.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/tcpsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/textfile.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/thread.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/timeint.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/timer.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/udpsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/channel.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/conchan.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/config.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/contain.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/dynalink.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/ethsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/file.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/filepath.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/icmpsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/ipdsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/ipsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/mutex.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/pdirect.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/pipechan.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/pmachdep.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/pprocess.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/ptime.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/ptlib.inl
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/remconn.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/semaphor.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/serchan.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/sfile.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/socket.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/sound.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/svcproc.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/syncpoint.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/tcpsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/textfile.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/thread.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/timeint.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/timer.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/udpsock.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/video.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/videoio.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/unix/ptlib/videoio1394avc.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/vconvert.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/vfakeio.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/video.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/videoio.h
+BUILDLINK_FILES.pwlib+=	include/ptlib/videoio1394dc.h
+BUILDLINK_FILES.pwlib+=	lib/libpt.*
+
+BUILDLINK_TARGETS+=	pwlib-buildlink
+
+pwlib-buildlink: _BUILDLINK_USE
+
+.endif	# PWLIB_BUILDLINK2_MK

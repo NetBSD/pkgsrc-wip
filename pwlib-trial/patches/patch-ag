@@ -1,0 +1,20 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/11/29 18:02:26 daprice Exp $
+
+--- make/pwlib.mak.orig	Wed Dec  2 02:39:53 1998
++++ make/pwlib.mak
+@@ -44,11 +44,11 @@
+ #
+ 
+ ifndef PWLIBDIR
+-PWLIBDIR=$(HOME)/pwlib
++PWLIBDIR= @PREFIX@
+ endif
+ 
+-include $(PWLIBDIR)/make/unix.mak
+-include $(PWLIBDIR)/make/gui.mak
+-include $(PWLIBDIR)/make/common.mak
++include $(PWLIBDIR)/share/pwlib/make/unix.mak
++include $(PWLIBDIR)/share/pwlib/make/gui.mak
++include $(PWLIBDIR)/share/pwlib/make/common.mak
+ 
+ # End of pwlib.mak

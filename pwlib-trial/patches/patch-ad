@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/11/29 18:02:26 daprice Exp $
+
+--- make/gui.mak.orig	Fri Jun 15 00:58:00 2001
++++ make/gui.mak
+@@ -64,11 +64,11 @@
+ #
+ 
+ 
+-include $(PWLIBDIR)/make/defaultgui.mak
++include $(PWLIBDIR)/share/pwlib/make/defaultgui.mak
+ 
+ ifneq (,$(GUI_TYPE))
+ 
+-include $(PWLIBDIR)/make/$(GUI_TYPE).mak
++include $(PWLIBDIR)/share/pwlib/make/$(GUI_TYPE).mak
+ 
+ ifndef	GUI_SRC_NAME
+ GUI_SRC_NAME	= $(GUI_TYPE)
