@@ -1,0 +1,4 @@
+Aircrack is a 802.11 WEP key cracker. It implements the so-called Fluhrer
+- Mantin - Shamir (FMS) attack, along with some new attacks by a talented
+hacker named KoreK. When enough encrypted packets have been gathered,
+aircrack can almost instantly recover the WEP key.
