@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/24 22:42:50 marc Exp $
+
+--- libpqmodule.c.orig	2002-12-01 05:59:24.000000000 +0100
++++ libpqmodule.c	2003-02-01 14:30:57.000000000 +0100
+@@ -764,7 +764,7 @@
+         return PgInt8_FromString(s, (char **)NULL, 10);
+     }
+ 
+-    PyErr_SetString(PyExc_TypeError, "a string or numeric is requireed");
++    PyErr_SetString(PyExc_TypeError, "a string or numeric is required");
+     return (PyObject *)NULL;
+ }
+ #endif
+@@ -828,7 +828,7 @@
+         return PgInt2_FromString(s, (char **)NULL, 10);
+     }
+ 
+-    PyErr_SetString(PyExc_TypeError, "a string or numeric is requireed");
++    PyErr_SetString(PyExc_TypeError, "a string or numeric is required");
+     return (PyObject *)NULL;
+ }
+ 
+@@ -880,7 +880,7 @@
+         return libPQbool_FromString(self, args);
+     }
+ 
+-    PyErr_SetString(PyExc_TypeError, "a string or numeric is requireed");
++    PyErr_SetString(PyExc_TypeError, "a string or numeric is required");
+     return (PyObject *)NULL;
+ }
+ 
