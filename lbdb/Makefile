@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/03 07:29:52 drue Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/03 07:37:25 drue Exp $
 #
 
 DISTNAME=	lbdb_0.27
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.spinnaker.de/debian/
 
 MAINTAINER=		drue@users.sf.net
 HOMEPAGE=		http://www.spinnaker.de/debian/
-COMMENT=		adapter to various address db for use in mutt
+COMMENT=		The little brother's database for the mutt mail reader
 
 DEPENDS+=	p5-perl-ldap-[0-9]*:../../databases/p5-perl-ldap
 
