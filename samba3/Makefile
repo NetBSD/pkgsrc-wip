@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/01 21:03:21 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/01 21:15:26 jeremy-c-reed Exp $
 
 DISTNAME=		samba-3.0.0beta3
 WRKSRC?=		${WRKDIR}/${DISTNAME}/source
@@ -113,7 +113,7 @@ SMBPASSWD_FILE=		/dev/null ${SAMBA_PRIVATE}/smbpasswd		\
 SAMBA_USE_ACTIVE_DIRECTORY?=	YES
 .if defined(SAMBA_USE_ACTIVE_DIRECTORY) && ${SAMBA_USE_ACTIVE_DIRECTORY} == "YES"
 .include "../../databases/openldap/buildlink2.mk"
-.include "../../security/mit-krb5/buildlink2.mk"
+.include "../../wip/mit-krb5/buildlink2.mk"
 BUILD_DEFS+=		SAMBA_USE_ACTIVE_DIRECTORY
 CONFIGURE_ARGS+=	--with-ads
 CONFIGURE_ARGS+=	--with-ldap
