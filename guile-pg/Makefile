@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/23 17:35:08 lexort Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/23 18:28:14 thomasklausner Exp $
 #
 
 DISTNAME=	guile-pg-0.23
@@ -17,6 +17,8 @@ USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
+
+TEST_TARGET=	check
 
 INFO_FILES=	guile-pg.info
 
