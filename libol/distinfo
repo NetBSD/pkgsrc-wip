@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/03 11:59:26 adrian_p Exp $
+$NetBSD: distinfo,v 1.2 2004/03/29 00:21:17 minskim Exp $
 
-SHA1 (libol-0.3.11.tar.gz) = f13d7e06a1c0e2f57d31373a008a0b30a335ea23
-Size (libol-0.3.11.tar.gz) = 198221 bytes
+SHA1 (libol-0.3.13.tar.gz) = f2860e9af39a792f27c220ab5616366cd551e1c8
+Size (libol-0.3.13.tar.gz) = 203390 bytes
