@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/03/24 22:42:50 marc Exp $
-
-SHA1 (pyPgSQL-2.3.tar.gz) = 18b346dfea9f73653ceaa97bc25886b5d964881a
-Size (pyPgSQL-2.3.tar.gz) = 151297 bytes
-SHA1 (patch-aa) = 2ea5553702a7a52fc2411c15cd66ce0c6cd666f8
