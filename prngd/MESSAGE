@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2004/07/14 18:39:52 othyro Exp $
+$NetBSD: MESSAGE,v 1.6 2004/07/15 11:19:29 marc Exp $
 
 - Edit the PRNGD configuration file ${PKG_SYSCONFDIR}/prngd.conf
    (see ${PREFIX}/share/doc/prngd). An example conf file was installed in
@@ -25,4 +25,4 @@ fi
 
 - Browse the manual, docs, and the PRNGD home page for more information.
 
-==========================================================================
+===========================================================================
