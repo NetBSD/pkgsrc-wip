@@ -1,0 +1,7 @@
+The main design goals of JFlex are:
+    *  Full unicode support
+    *  Fast generated scanners
+    *  Fast scanner generation
+    *  More convenient specification syntax
+    *  Better platform independence
+    *  JLex compatibility
