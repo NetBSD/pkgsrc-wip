@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/28 22:11:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/26 15:19:50 xtraeme Exp $
 #
 
 DISTNAME=	Net-Gnats-0.04
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnatsperl/}
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://gnatsperl.sourceforge.net/
 COMMENT=	Perl interface to the gnatsd daemon
 

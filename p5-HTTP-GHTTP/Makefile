@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/15 22:12:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/26 15:19:50 xtraeme Exp $
 #
 
 DISTNAME=	HTTP-GHTTP-1.07
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	packages@netbsd.org
 COMMENT=	Perl interface to the gnome ghttp library
 
 USE_BUILDLINK2=	YES
