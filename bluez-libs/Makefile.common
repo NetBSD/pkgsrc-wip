@@ -1,2 +1,3 @@
 ONLY_FOR_PLATFORM=Linux-*-*
+
 .include "../../wip/bluez-libs/buildlink3.mk"

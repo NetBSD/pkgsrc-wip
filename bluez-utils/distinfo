@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/10/22 09:43:15 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2004/11/27 14:03:21 poppnk Exp $
 
-SHA1 (bluez-utils-2.10.tar.gz) = 7dff78d1b4b8e84592085eeb4900f8c7fa9f940d
-Size (bluez-utils-2.10.tar.gz) = 290371 bytes
+SHA1 (bluez-utils-2.11.tar.gz) = 19d8095c764bd487d5a16d89fbd0d81e3085d4a4
+Size (bluez-utils-2.11.tar.gz) = 295351 bytes
