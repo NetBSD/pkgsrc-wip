@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/07/01 09:12:20 drue Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/12 11:21:57 drue Exp $
 #
 
-DISTNAME=	NetBeansIDE-release35
-PKGNAME=	netbeans-ide-3.5
+DISTNAME=	NetBeansIDE-release351
+PKGNAME=	netbeans-ide-3.5.1
 WRKSRC=	${WRKDIR}/netbeans
 CATEGORIES=	editors
-MASTER_SITES=	http://www.netbeans.org/download/release35/night/build200306022350/
+MASTER_SITES=	http://www.netbeans.org/download/release351/night/build200307252351/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	drue@users.sourceforge.net

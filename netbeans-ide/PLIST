@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/01 09:12:20 drue Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/08/12 11:21:57 drue Exp $
 bin/netbeans
 share/doc/html/netbeans-ide/CHANGES.html
 share/doc/html/netbeans-ide/CREDITS.html
@@ -630,17 +630,20 @@ share/netbeans-ide/update_tracking/org-openidex-util.xml
 @dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev/sample/web/WEB-INF
 @dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev/sample/web
 @dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev/sample/src/mypackage
+@dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev/sample/src
 @dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev/sample/docs
 @dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev/sample
 @dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev
 @dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/WEB-INF
 @dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs
 @dirrm share/netbeans-ide/tomcat406/webapps/manager/WEB-INF
+@dirrm share/netbeans-ide/tomcat406/webapps/manager
 @dirrm share/netbeans-ide/tomcat406/webapps/examples/servlets
 @dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/snp
 @dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/simpletag
 @dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/sessions
 @dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/security/protected
+@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/security
 @dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/plugin/applet
 @dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/plugin
 @dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/num
@@ -671,8 +674,10 @@ share/netbeans-ide/update_tracking/org-openidex-util.xml
 @dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes/cal
 @dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes
 @dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF
+@dirrm share/netbeans-ide/tomcat406/webapps/examples
 @dirrm share/netbeans-ide/tomcat406/webapps/ROOT/WEB-INF
 @dirrm share/netbeans-ide/tomcat406/webapps/ROOT
+@dirrm share/netbeans-ide/tomcat406/webapps
 @dirrm share/netbeans-ide/tomcat406/temp
 @dirrm share/netbeans-ide/tomcat406/server/lib
 @dirrm share/netbeans-ide/tomcat406/server/classes
@@ -682,13 +687,16 @@ share/netbeans-ide/update_tracking/org-openidex-util.xml
 @dirrm share/netbeans-ide/tomcat406/conf
 @dirrm share/netbeans-ide/tomcat406/common/lib
 @dirrm share/netbeans-ide/tomcat406/common/classes
+@dirrm share/netbeans-ide/tomcat406/common
 @dirrm share/netbeans-ide/tomcat406/classes
 @dirrm share/netbeans-ide/tomcat406/bin
 @dirrm share/netbeans-ide/tomcat406
 @dirrm share/netbeans-ide/system/ParserDB
 @dirrm share/netbeans-ide/system/Modules
 @dirrm share/netbeans-ide/system/ModuleAutoDeps
+@dirrm share/netbeans-ide/system
 @dirrm share/netbeans-ide/modules/patches/org-apache-tools-ant-module
+@dirrm share/netbeans-ide/modules/patches
 @dirrm share/netbeans-ide/modules/ext/locale
 @dirrm share/netbeans-ide/modules/ext
 @dirrm share/netbeans-ide/modules/eager/ext
@@ -707,4 +715,7 @@ share/netbeans-ide/update_tracking/org-openidex-util.xml
 @dirrm share/netbeans-ide/beans
 @dirrm share/netbeans-ide
 @dirrm share/doc/html/netbeans-ide/org/netbeans/modules/usersguide
+@dirrm share/doc/html/netbeans-ide/org/netbeans/modules
+@dirrm share/doc/html/netbeans-ide/org/netbeans
+@dirrm share/doc/html/netbeans-ide/org
 @dirrm share/doc/html/netbeans-ide
