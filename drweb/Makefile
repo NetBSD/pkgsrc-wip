@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/10/17 19:13:29 bubuchka Exp $
+# $NetBSD: Makefile,v 1.7 2003/10/17 22:23:28 bubuchka Exp $
 #
 # Note: We'll not use drweb's own configuration / building / installation
 # facilities so as its all are very ugly.
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM= FreeBSD-[45].[0-9]*-i386 OpenBSD-[3-9].*-i386	\
 		NetBSD-1.[6-9]*-i386 NetBSD-[2-9].[0-9]-i386		\
 		Linux-*-i[3-6]86 Solaris-*-i386
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../wip/oshavercd.mk"
 
 .if   ${OPSYS} == "FreeBSD" && ${MAJOR_OS_VERSION} >= 5.0
 DISTTYPE=	freebsd5
@@ -137,7 +137,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC_BIN}/doc/readme.eicar ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC_BIN}/update/readme.update ${DOCDIR}
 
-.include "../../wip/oshavercd.mk"
 .include "../../wip/drweb/Makefile.common"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
