@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.228 2003/06/05 08:15:32 marttikuparinen Exp $
-# $NetBSD: Makefile,v 1.228 2003/06/05 08:15:32 marttikuparinen Exp $
+# $Id: Makefile,v 1.229 2003/06/05 14:22:45 poppnk Exp $
+# $NetBSD: Makefile,v 1.229 2003/06/05 14:22:45 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -91,6 +91,7 @@ SUBDIR+=	jpgraph
 SUBDIR+=	kapital
 SUBDIR+=	kgpg
 SUBDIR+=	korelib
+SUBDIR+=	lde
 SUBDIR+=	libdialog
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgsf
@@ -122,6 +123,7 @@ SUBDIR+=	nagios-plugin-pgsql
 SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	navigatrix
+SUBDIR+=	ncps
 SUBDIR+=	net-tools
 SUBDIR+=	netbeans-ide
 SUBDIR+=	netkit-base
@@ -148,6 +150,7 @@ SUBDIR+=	poedit
 SUBDIR+=	portmap
 SUBDIR+=	ppp
 SUBDIR+=	procps
+SUBDIR+=	psh
 SUBDIR+=	pts
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-OpenSSL
