@@ -1,13 +1,32 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/04/28 01:00:21 marc Exp $
+$NetBSD: patch-ac,v 1.2 2004/08/03 13:15:15 marc Exp $
 
---- deploy/make/plugin/common/config.gmk.orig	2004-03-27 14:55:04.000000000 +0100
-+++ deploy/make/plugin/common/config.gmk
-@@ -60,7 +60,7 @@ ifeq ($(PLATFORM), bsd)
+--- deploy/make/plugin/common/config.gmk.orig	2004-08-03 00:22:38.000000000 +0200
++++ deploy/make/plugin/common/config.gmk	2004-08-03 00:29:56.000000000 +0200
+@@ -44,7 +44,7 @@
+ 
+ ifeq ($(PLATFORM), linux)
+   PLUGIN_PLATFORM_SRC := $(PLUGIN_TOP)/src/plugin/src/solaris
+-  OTHER_LDFLAGS = -L/usr/X11R6/lib
++  OTHER_LDFLAGS = -L%%X11BASE%%/lib
+ endif
+ 
+ DEF_SVR4 = -DSVR4
+@@ -52,15 +52,15 @@
+ 
+ ifeq ($(PLATFORM), bsd)
+   PLUGIN_PLATFORM_SRC := $(PLUGIN_TOP)/src/plugin/src/solaris
+-  OTHER_LDFLAGS = -L/usr/X11R6/lib
++  OTHER_LDFLAGS = -L%%X11BASE%%/lib
+   ifeq ($(TRUE_PLATFORM), NetBSD)
+-    OTHER_LDFLAGS += -Wl,-R/usr/X11R6/lib
++    OTHER_LDFLAGS += -Wl,-R%%X11BASE%%/lib
+   endif
+   DEF_SVR4 = 
  
    # include search paths
    # XXXBSD: these should be defined in other place
 -  CPPFLAGS1 += -I/usr/X11R6/include -I/usr/local/include
-+  CPPFLAGS1 += -I/usr/X11R6/include -I${LOCALBASE}/include
++  CPPFLAGS1 += -I%%X11BASE%%/include -I%%LOCALBASE%%/include
  
    ifeq ($(TRUE_PLATFORM), FreeSBD)
      ifeq ($(FREEBSD_4STABLE), true)

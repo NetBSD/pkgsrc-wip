@@ -1,0 +1,17 @@
+$NetBSD: patch-am,v 1.1 2004/08/03 13:15:15 marc Exp $
+
+--- j2se/src/solaris/native/sun/awt/fontpath.c.orig	2004-08-03 00:42:47.000000000 +0200
++++ j2se/src/solaris/native/sun/awt/fontpath.c	2004-08-03 00:42:53.000000000 +0200
+@@ -495,9 +495,9 @@
+     char *ptr;
+ 
+ #if defined(__linux__) || defined(_BSD_SOURCE)
+-    ptr = "/usr/X11R6/lib/X11/fonts/Type1:"
+-          "/usr/X11R6/lib/X11/fonts/TrueType:"
+-          "/usr/X11R6/lib/X11/fonts/tt:"
++    ptr = "%%X11BASE%%/lib/X11/fonts/Type1:"
++          "%%X11BASE%%/lib/X11/fonts/TrueType:"
++          "%%X11BASE%%/lib/X11/fonts/tt:"
+           "/usr/share/fonts/ja/TrueType";
+ #elif defined( HEADLESS )
+     ptr = getSolarisFontLocations(env, (int) (noType1==JNI_TRUE));

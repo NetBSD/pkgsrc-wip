@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2004/08/03 13:15:15 marc Exp $
+
+--- deploy/make/common/Defs-bsd.gmk.orig	2004-08-03 00:36:33.000000000 +0200
++++ deploy/make/common/Defs-bsd.gmk	2004-08-03 00:36:50.000000000 +0200
+@@ -14,7 +14,7 @@
+ JUMP_EXE       = $(PROTO_DIR)/javawsbin$(SUFFIX)
+ CLASSPATH_SEP  = $(CLASSPATH_SEPARATOR)
+ PATH_SEP       = /
+-X11DIR         = /usr/X11R6
++X11DIR         = %%X11BASE%%
+ ifneq ($(TRUE_PLATFORM), NetBSD)
+ LIBS           = -L$(X11DIR)/lib -lX11
+ else

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2004/07/14 18:24:55 absd Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/03 13:15:15 marc Exp $
 
 DISTNAME=	j2sdk-1_4_2-src-scsl
-PKGREVISION=	1
 PKGNAME=	jdk14-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
 CATEGORIES=	lang java
 MASTER_SITES=	# http://www.sun.com/software/java2/download.html
@@ -122,15 +121,22 @@ _FETCH_MESSAGE= \
 	${ECHO} "======================================================================"
 .endif
 
-SUBST_CLASSES+=		lbase jvm-home
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
 
-SUBST_STAGE.lbase=	pre-configure
-SUBST_FILES.lbase=	hotspot/src/os/bsd/vm/os_bsd.cpp
-SUBST_SED.lbase=	-e 's,%%LOCALBASE%%,${LOCALBASE},g'
+SUBST_FILES.paths=	control/make/common/Defs-bsd.gmk
+SUBST_FILES.paths+=	deploy/make/plugin/common/config.gmk
+SUBST_FILES.paths+=	deploy/make/plugin/ns6/Makefile
+SUBST_FILES.paths+=	hotspot/src/os/bsd/vm/os_bsd.cpp
+SUBST_FILES.paths+=	j2se/make/common/Defs-bsd.gmk
+SUBST_FILES.paths+=	deploy/make/common/Defs-bsd.gmk 
+SUBST_FILES.paths+=	motif/lib/Xm/Makefile
+SUBST_FILES.paths+=	motif/lib/Xm/util/Makefile
+SUBST_FILES.paths+=	j2se/src/solaris/native/sun/awt/fontpath.c
 
-SUBST_STAGE.jvm-home=	pre-configure
-SUBST_FILES.jvm-home=	j2se/make/common/Defs-bsd.gmk
-SUBST_SED.jvm-home=	-e 's,%%JVM_HOME%%,${JVM_HOME},g'
+SUBST_SED.paths=	-e 's,%%LOCALBASE%%,${LOCALBASE},g'
+SUBST_SED.paths+=	-e 's,%%X11BASE%%,${X11BASE},g'
+SUBST_SED.paths+=	-e 's,%%JVM_HOME%%,${JVM_HOME},g'
 
 BUILDLINK_PASSTHRU_DIRS+=	${JAVA_HOME}
 
