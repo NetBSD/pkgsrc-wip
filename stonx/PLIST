@@ -1,1 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/12 22:43:06 xmor61 Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/07 02:14:51 thomasklausner Exp $
+bin/stonx
+etc/stonx/keysyms
+etc/stonx/stonxrc
+share/stonx/cartridge.img
+share/stonx/gemdos_c/bench1.prg
+share/stonx/gemdos_c/final.tos
+share/stonx/gemdos_c/mint/stonx.xfs
+share/stonx/tos.img
+@dirrm share/stonx/gemdos_c/mint
+@dirrm share/stonx/gemdos_c
+@dirrm share/stonx
+@dirrm etc/stonx
