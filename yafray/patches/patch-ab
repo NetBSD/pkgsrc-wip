@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/06/04 03:08:46 xtraeme Exp $
+
+--- src/Makefile.in.orig	2003-06-04 04:26:02.000000000 +0200
++++ src/Makefile.in	2003-06-04 04:28:57.000000000 +0200
+@@ -91,7 +91,7 @@
+ 
+ LIBTOOL_DEPS = @LIBTOOL_DEPS@
+ #CXXFLAGS=-pg -fprofile-arcs -O3 -Wall @GTKCFLAGS@ @PIXCFLAGS@
+-CXXFLAGS = -O3 -fomit-frame-pointer -ffast-math -Wall -D_PTHREADS @GTKCFLAGS@ @PIXCFLAGS@
++CXXFLAGS = @CPPFLAGS@ -D_PTHREADS @GTKCFLAGS@ @PIXCFLAGS@
+ 
+ #CXXFLAGS=-ggdb -O3 -Wall -D_PTHREADS @GTKCFLAGS@ @PIXCFLAGS@
+ bin_PROGRAMS = yafray

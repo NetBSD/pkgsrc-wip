@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/04 03:08:45 xtraeme Exp $
+bin/yafray
+share/doc/yafray/doc.html
+share/yafray/gram.yafray
+@dirrm share/doc/yafray
+@dirrm share/yafray

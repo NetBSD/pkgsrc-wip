@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/04 03:08:46 xtraeme Exp $
+
+--- src/loader/loader.cc.in.orig	2003-06-04 04:23:06.000000000 +0200
++++ src/loader/loader.cc.in	2003-06-04 04:24:38.000000000 +0200
+@@ -43,6 +43,8 @@
+ 	"./",
+ #ifdef __CYGWIN__
+ 	"c:/yafray/",
++#elif defined(__NetBSD__)
++	"@@YAFRAYDIR@@",
+ #endif
+ 	"/etc/",
+ 	"/usr/local/etc/",
