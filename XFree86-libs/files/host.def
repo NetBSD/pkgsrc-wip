@@ -33,7 +33,10 @@
 # define BuildThreadStubLibrary YES
 #endif
 
-#define GlxDriverUsesMesa YES
+#ifndef LinuxArchitecture
+#define GlxDriverUsesMesa YE
+#endif
+
 #define HasFreetype2 YES
 #define Freetype2Dir BLNK
 
