@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 16:40:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/03 05:25:58 xtraeme Exp $
 #
 
 DISTNAME=	MuSE-0.8.1
@@ -27,5 +27,6 @@ CPPFLAGS=	-DDEVOSSAUDIO=\"\\\"${DEVOSSAUDIO}\\\"\"
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
