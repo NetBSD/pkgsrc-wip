@@ -13,6 +13,12 @@ USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make lex
 WRKSRC=		${WRKDIR}/${DISTNAME}/src	
 
+.include "../../mk/bsd.prefs.mk"
+BUILD_DEFS+=	USE_INET6
+.if defined (USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
+CPPFLAGS+=	-DINET6
+.endif
+
 INSTALLATION_DIRS=	sbin man/man8
 
 do-install:
