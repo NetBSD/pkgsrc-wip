@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/05 15:49:04 poppnk Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/13 17:43:23 poppnk Exp $
 #
 
 DISTNAME=	php-${PHP5_VERSION}
@@ -20,6 +20,8 @@ PHP5_VERSION=	5.0.0b3
 
 CONFIGURE_ARGS+=--enable-mbstring
 CONFIGURE_ARGS+=--enable-calendar
+## XXX THIS COULD BE VULN (alert?)
+CONFIGURE_ARGS+=--enable-sockets
 
 .if defined(USE_INET6) && ${USE_INET6} == "NO"
 CONFIGURE_ARGS+=--disable-ipv6

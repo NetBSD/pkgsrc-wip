@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/11 23:22:07 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/01/13 17:43:23 poppnk Exp $
 bin/php
 bin/php-config
 bin/phpextdist
@@ -185,6 +185,9 @@ include/php/regex/regex.h
 include/php/regex/regex2.h
 include/php/regex/regex_extra.h
 include/php/regex/utils.h
+lib/php.ini
+lib/php/.filemap
+lib/php/.lock
 lib/php/build/Makefile.global
 lib/php/build/acinclude.m4
 lib/php/build/mkdep.awk
@@ -192,14 +195,22 @@ lib/php/build/phpize.m4
 lib/php/build/scan_makefile_in.awk
 lib/php/build/shtool
 @dirrm lib/php/build
+@exec ${MKDIR} %D/lib/php/.registry
+@dirrm lib/php/.registry
+@dirrm lib/php
 @dirrm include/php/regex
 @dirrm include/php/main/streams
 @dirrm include/php/main
+@exec ${MKDIR} %D/include/php/ext/xml/expat
+@dirrm include/php/ext/xml/expat
 @dirrm include/php/ext/xml
 @dirrm include/php/ext/standard
 @dirrm include/php/ext/sqlite/libsqlite/src
+@dirrm include/php/ext/sqlite/libsqlite
+@dirrm include/php/ext/sqlite
 @dirrm include/php/ext/session
 @dirrm include/php/ext/mbstring
+@dirrm include/php/ext
 @dirrm include/php/Zend
 @dirrm include/php/TSRM
 @dirrm include/php
