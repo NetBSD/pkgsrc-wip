@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/07 16:16:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/07 16:53:03 xtraeme Exp $
 #
 
 DISTNAME=	putty-0.54
@@ -19,7 +19,7 @@ MAKEFILE=	Makefile.gtk
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
-CFLAGS+=	-DOMIT_UTMP -DHAVE_NO_SETRESUID
+CFLAGS+=	-DHAVE_NO_SETRESUID
 .endif
 
 .if !empty(USE_INET6:M[Yy][Ee][Ss])

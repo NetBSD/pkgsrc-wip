@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/06 23:35:33 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/06/07 16:53:03 xtraeme Exp $
 
 SHA1 (putty-0.54.tar.gz) = 6174fb0ebf8adede5e113710ab19590a5252af3c
 Size (putty-0.54.tar.gz) = 901120 bytes
 SHA1 (patch-aa) = 1eaf7fa60d8921813f0ade00c87a10d9cab955af
-SHA1 (patch-ab) = c0ea94ccc88b897647bc1c13f79780f1a1b3436e
+SHA1 (patch-ab) = f8b2128a1a5e59e62e9f3485f571885603b1578a

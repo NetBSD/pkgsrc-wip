@@ -1,4 +1,4 @@
-$Id: TODO,v 1.1.1.1 2004/06/06 23:35:33 xtraeme Exp $
+$Id: TODO,v 1.2 2004/06/07 16:53:03 xtraeme Exp $
 
-	o utmp support in BSD
+	o utmp does not work in BSD yet.
 	o Only tested in NetBSD 2.0, what about IRIX, Solaris, etc?
