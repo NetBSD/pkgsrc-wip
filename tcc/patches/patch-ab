@@ -1,13 +1,35 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/07/27 02:41:03 poppnk Exp $
+$NetBSD: patch-ab,v 1.2 2004/11/23 22:56:57 xtraeme Exp $
 
---- tccelf.c.orig	2003-07-26 21:40:06.000000000 +0000
-+++ tccelf.c	2003-07-26 21:40:16.000000000 +0000
-@@ -378,7 +378,7 @@
+--- tccelf.c.orig	2004-11-23 23:46:18.000000000 +0100
++++ tccelf.c	2004-11-23 23:50:23.000000000 +0100
+@@ -387,7 +387,11 @@
  
  static void *resolve_sym(const char *sym)
  {
--    return dlsym(RTLD_DEFAULT, sym);
++#ifdef __NetBSD__
 +    return dlsym(RTLD_LAZY, sym);
++#else
+     return dlsym(RTLD_DEFAULT, sym);
++#endif
  }
  
  /* relocate symbol table, resolve undefined symbols if do_resolve is
+@@ -1067,6 +1071,8 @@
+ /* name of ELF interpreter */
+ #ifdef __FreeBSD__
+ static char elf_interp[] = "/usr/libexec/ld-elf.so.1";
++#elif defined(__NetBSD__)
++static char elf_interp[] = "/libexec/ld.elf_so";
+ #else
+ static char elf_interp[] = "/lib/ld-linux.so.2";
+ #endif
+@@ -1647,6 +1653,9 @@
+ #ifdef __FreeBSD__
+         ehdr.e_ident[EI_OSABI] = ELFOSABI_FREEBSD;
+ #endif
++#ifdef __NetBSD__
++	ehdr.e_ident[EI_OSABI] = ELFOSABI_SYSV;
++#endif
+ #ifdef TCC_TARGET_ARM
+         ehdr.e_ident[EI_OSABI] = ELFOSABI_ARM;
+ #endif

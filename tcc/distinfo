@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2004/03/17 22:56:42 xtraeme Exp $
+$NetBSD: distinfo,v 1.5 2004/11/23 22:56:55 xtraeme Exp $
 
-SHA1 (tcc-0.9.20.tar.gz) = 6db41cbfc90415b94f2e53c1a1e5db0ef8105eb8
-Size (tcc-0.9.20.tar.gz) = 199391 bytes
-SHA1 (patch-aa) = 0330e802be1cd16b8ec173284fb4e02c7f7b55fb
-SHA1 (patch-ab) = eef3c23a19f195f8bfea1f6b4b1c9f2a789fa2a5
-SHA1 (patch-ac) = 568cfcdf35b080b98fec5cb7addcde361f1696a3
-SHA1 (patch-ad) = 8c6c97bacffe9374a9e33d3566f8f37430120af0
+SHA1 (tcc-0.9.22.tar.gz) = 84100525696af2252e7f0073fd6a9fcc6b2de266
+Size (tcc-0.9.22.tar.gz) = 237210 bytes
+SHA1 (patch-aa) = f1869719d69d3528ddad7ed0ba6368d0cd0e6a59
+SHA1 (patch-ab) = aab414590be63ca16d52ea5ed07209cba0d8da13
+SHA1 (patch-ac) = d90c3d566a5b8bde0be23f26873ae6fc803a62ac
+SHA1 (patch-ad) = a887730b6e070708c9e53ef489a9f0a870012bf9
