@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ezbounce.sh,v 1.2 2003/06/25 15:43:16 xtraeme Exp $
+# $NetBSD: ezbounce.sh,v 1.3 2003/07/14 17:25:33 xtraeme Exp $
 #
 
 # PROVIDE: ezbounce
