@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1440 2004/08/25 10:41:55 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1440 2004/08/25 10:41:55 adrian_p Exp $
+# $Id: Makefile,v 1.1441 2004/08/27 22:51:49 froz Exp $
+# $NetBSD: Makefile,v 1.1441 2004/08/27 22:51:49 froz Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -446,6 +446,7 @@ SUBDIR+=	oops
 SUBDIR+=	opax
 SUBDIR+=	open21xx
 SUBDIR+=	opengaim
+SUBDIR+=	openttd
 SUBDIR+=	openvpn2
 SUBDIR+=	openvrml
 SUBDIR+=	opera-devel
