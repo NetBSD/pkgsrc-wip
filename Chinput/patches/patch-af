@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/01/08 05:55:15 rxg Exp $
+
+--- resource/Chinput.ad.orig	2004-12-28 13:52:28.000000000 +0800
++++ resource/Chinput.ad
+@@ -64,8 +64,8 @@ chinput.inputmethod.big5	=	PY
+ ! 16 point font set
+ !
+ chinput.font			=	8x16
+-chinput.gbfont			=	-*-song-medium-r-normal--16-*-*-*-*-*-gb2312.1980-0
+-chinput.big5font		=	-*-song-medium-r-normal--16-*-*-*-*-*-big5-0
++chinput.gbfont			=	-*-*-medium-r-normal--16-*-*-*-*-*-gb2312.1980-0
++chinput.big5font		=	-*-*-medium-r-normal--16-*-*-*-*-*-big5-0
+ !
+ !
+ ! inputbar width in chars

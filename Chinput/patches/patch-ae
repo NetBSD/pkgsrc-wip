@@ -1,0 +1,73 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/01/08 05:55:15 rxg Exp $
+
+--- src/init.c.orig	2004-12-28 13:45:12.000000000 +0800
++++ src/init.c
+@@ -103,11 +103,11 @@ void HZinitServerGC(void)
+ 	char fontname[256];
+ 
+ 	//create font set
+-	if(strcmp(setlocale(LC_ALL, gb18030locale), gb18030locale) || 	
++	if(strcmp(setlocale(LC_CTYPE, gb18030locale), gb18030locale) || 	
+ 		!XSupportsLocale()){
+-		if(strcmp(setlocale(LC_ALL, gbklocale), gbklocale) ||
++		if(strcmp(setlocale(LC_CTYPE, gbklocale), gbklocale) ||
+ 			!XSupportsLocale()){
+-			if(strcmp(setlocale(LC_ALL, gblocale), gblocale) ||
++			if(strcmp(setlocale(LC_CTYPE, gblocale), gblocale) ||
+ 				!XSupportsLocale()){
+ 				fprintf(stderr, "Error : Chinese Locale not supported!\n");
+ 				exit(1);
+@@ -120,7 +120,7 @@ void HZinitServerGC(void)
+ 		fprintf(stderr, "Error : Create GB FontSet!\n");
+         }
+ 
+-	setlocale(LC_ALL, big5locale);
++	setlocale(LC_CTYPE, big5locale);
+ 	sprintf(fontname, "%s,%s", font_latin, font_big5);
+         if((fontset_big5 = XCreateFontSet(display, fontname, &missing_list,
+                 &missing_count, &def_string)) == NULL) {
+@@ -369,25 +369,25 @@ void HZinitResource(void)
+ 	//enable two locales at the same time
+ 	strcpy(imlocale, IMLOCALE);
+ 
+-	if(getenv("LC_ALL") && strstr(getenv("LC_ALL"), "zh_TW")){
++	if(getenv("LC_CTYPE") && strstr(getenv("LC_CTYPE"), "zh_TW.Big5")){
+ 		strcpy(deflocale, big5locale);
+ 		flag_encoding = HZSERVER_ENCODING_BIG5;
+                	HZServer.encoding = HZSERVER_ENCODING_BIG5;
+-	} else if(getenv("LC_ALL") && 
+-		((strstr(getenv("LC_ALL"), "zh_CN.GB2312")) || 
+-		  strstr(getenv("LC_ALL"), "zh_CN.gb2312"))){
++	} else if(getenv("LC_CTYPE") && 
++		((strstr(getenv("LC_CTYPE"), "zh_CN.GB2312")) || 
++		  strstr(getenv("LC_CTYPE"), "zh_CN.gb2312"))){
+ 		strcpy(deflocale, gblocale);
+ 		flag_encoding = HZSERVER_ENCODING_GB;
+               	HZServer.encoding = HZSERVER_ENCODING_GB;
+-	} else if(getenv("LC_ALL") && 
+-		((strstr(getenv("LC_ALL"), "zh_CN.GBK")) ||
+-		  strstr(getenv("LC_ALL"), "zh_CN.gbk"))){
++	} else if(getenv("LC_CTYPE") && 
++		((strstr(getenv("LC_CTYPE"), "zh_CN.GBK")) ||
++		  strstr(getenv("LC_CTYPE"), "zh_CN.gbk"))){
+ 		strcpy(deflocale, gbklocale);
+ 		flag_encoding = HZSERVER_ENCODING_GBK;
+               	HZServer.encoding = HZSERVER_ENCODING_GBK;
+-	} else if(getenv("LC_ALL") && 
+-		((strstr(getenv("LC_ALL"), "zh_CN.GB18030")) ||
+-		  strstr(getenv("LC_ALL"), "zh_CN.gb18030"))){
++	} else if(getenv("LC_CTYPE") && 
++		((strstr(getenv("LC_CTYPE"), "zh_CN.GB18030")) ||
++		  strstr(getenv("LC_CTYPE"), "zh_CN.gb18030"))){
+ 		strcpy(deflocale, gb18030locale);
+ 		flag_encoding = HZSERVER_ENCODING_GB18030;
+               	HZServer.encoding = HZSERVER_ENCODING_GB18030;
+@@ -616,7 +616,7 @@ void HZloadRCIME(void)
+ 	}
+ 	fclose(fp);
+ 
+-	if(getenv("LC_ALL") && strstr(getenv("LC_ALL"), "zh_TW"))
++	if(getenv("LC_CTYPE") && strstr(getenv("LC_CTYPE"), "zh_TW.Big5"))
+ 		cur_inputmethod = HZgetInputMethod(input_method_big5);
+ 	else
+ 		cur_inputmethod = HZgetInputMethod(input_method_gb);

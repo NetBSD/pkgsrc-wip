@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/08 05:55:13 rxg Exp $
+
+SHA1 (Chinput-3.0.2.tar.gz) = 420a71ac1de4f64d816dc7680d4a1569793006af
+Size (Chinput-3.0.2.tar.gz) = 485221 bytes
+SHA1 (patch-aa) = c014ab66c2e6f32d66b55dec073ad9fccc1c5df0
+SHA1 (patch-ac) = f4d45c2ea45e3e8288cdb0363dc9dba127288990
+SHA1 (patch-ae) = 6c7685869ef7ac09bbcb20476372baf5da56c458
+SHA1 (patch-af) = 1e286e10b9fc754e57d92533165753a3e6d358fa
