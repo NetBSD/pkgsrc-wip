@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/05/07 22:12:54 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2004/04/03 22:47:37 jeremy-c-reed Exp $
 
 SHA1 (net-tools-1.60.tar.bz2) = 944fb70641505d5d1139dba3aeb81ba124574b83
 Size (net-tools-1.60.tar.bz2) = 198520 bytes
 SHA1 (patch-aa) = 83e27bb1e3a6bc05b2daa1068d22259f549cc74c
 SHA1 (patch-ab) = d0f8ba198fcea1b0499151c5ded04806e0ee2713
+SHA1 (patch-ac) = d0d9b4298fb635ec4389a2f6543b5a1d3ca56a61
