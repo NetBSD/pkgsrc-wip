@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.870 2004/01/09 23:31:46 cubidou Exp $
-# $NetBSD: Makefile,v 1.870 2004/01/09 23:31:46 cubidou Exp $
+# $Id: Makefile,v 1.871 2004/01/09 23:34:19 cubidou Exp $
+# $NetBSD: Makefile,v 1.871 2004/01/09 23:34:19 cubidou Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -517,6 +517,7 @@ SUBDIR+=	py-RXP
 SUBDIR+=	py-Reverend
 SUBDIR+=	py-SciPy
 SUBDIR+=	py-Soya
+SUBDIR+=	py-SQLObject
 SUBDIR+=	py-TTFQuery
 SUBDIR+=	py-albatross
 SUBDIR+=	py-ao
@@ -581,7 +582,7 @@ SUBDIR+=	rosegarden-current
 SUBDIR+=	rox-gtk2
 SUBDIR+=	rss2html
 SUBDIR+=	ruby-ming
-SUBDIR+=	suby-syck
+SUBDIR+=	ruby-syck
 SUBDIR+=	rudiments
 SUBDIR+=	samba3
 SUBDIR+=	scew
