@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/11 21:45:01 minskim Exp $
+share/texmf/web2c/xmltex.fmt
+share/texmf/web2c/pdfxmltex.fmt
+@unexec %D/bin/mktexlsr
