@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/04 09:16:12 bmeurer Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/06 20:10:40 bmeurer Exp $
 
 DISTNAME=		startup-notification-0.5
 CATEGORIES=		x11
@@ -24,5 +24,4 @@ post-install:
 		doc/startup-notification.txt \
 		${PREFIX}/share/doc/startup-notification/
 
-.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
