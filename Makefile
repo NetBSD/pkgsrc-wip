@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.143 2003/05/07 23:34:59 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.143 2003/05/07 23:34:59 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.144 2003/05/08 00:01:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.144 2003/05/08 00:01:56 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -9,6 +9,7 @@ SUBDIR+=	adodb
 SUBDIR+=	allegro
 SUBDIR+=	amsn
 SUBDIR+=	aolserver
+SUBDIR+=	aputils
 SUBDIR+=	autoproject
 SUBDIR+=	billardgl
 SUBDIR+=	bugzilla
@@ -56,6 +57,7 @@ SUBDIR+=	gtranslator
 SUBDIR+=	honeyd-arpd
 SUBDIR+=	httrack
 SUBDIR+=	ices
+SUBDIR+=	idesk
 SUBDIR+=	idled
 SUBDIR+=	ike-scan
 SUBDIR+=	ion-devel
@@ -137,5 +139,6 @@ SUBDIR+=	xevil
 SUBDIR+=	xmms-liveice
 SUBDIR+=	xml2doc
 SUBDIR+=	zebra-pj
+SUBDIR+=	WEPCrack
 
 .include "../mk/bsd.pkg.subdir.mk"
