@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.543 2003/10/13 14:02:55 adrian_p Exp $
-# $NetBSD: Makefile,v 1.543 2003/10/13 14:02:55 adrian_p Exp $
+# $Id: Makefile,v 1.544 2003/10/13 14:11:27 adrian_p Exp $
+# $NetBSD: Makefile,v 1.544 2003/10/13 14:11:27 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -425,6 +425,7 @@ SUBDIR+=	uclibc
 SUBDIR+=	udhcp
 SUBDIR+=	umix
 SUBDIR+=	unmo3
+SUBDIR+=	unrealircd
 SUBDIR+=	upx
 SUBDIR+=	util-linux
 SUBDIR+=	vba
