@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2004/08/27 15:38:56 lexort Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/31 15:26:04 lexort Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
 DISTNAME=	quagga-0.96.5-20040812
 PKGNAME=	quagga-0.96.5.20040812
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 # Use pkgsrc/ for saved snapshots, cvs/ for current ones
 MASTER_SITES=	http://www.quagga.net/download/cvs/ \
@@ -18,8 +18,7 @@ WRKSRC=		${WRKDIR}/quagga-0.96.5
 
 .include "../../mk/bsd.prefs.mk"
 
-# XXX Note that quagga itself says 1.6 is required.
-AUTOMAKE_REQD=		1.6.2
+AUTOMAKE_REQD=		1.6
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		YES
@@ -47,6 +46,11 @@ RCD_SCRIPTS=	zebra bgpd ospfd ripd
 PKG_GROUPS=	quagga
 PKG_USERS=	quagga:quagga
 
+.for _file_ in vtysh.conf zebra.conf bgpd.conf ospfd.conf ripd.conf
+CONF_FILES_PERMS+=      ${PREFIX}/share/examples/quagga/log_syslog.conf ${PKG_SYSCONFDIR}/${_file_} quagga quagga 0600
+.endfor
+.undef _file_
+
 BUILD_DEFS+=			USE_ZEBRA_VTYSH USE_ZEBRA_OSPF_OPAQUELSA
 USE_ZEBRA_VTYSH?=		YES
 USE_ZEBRA_OSPF_OPAQUELSA?=	NO
@@ -72,15 +76,16 @@ BUILD_DEFS+=		USE_INET6
 .if defined(USE_INET6) && ${USE_INET6} == YES
 PLIST_CAT+=		${PKGDIR}/PLIST.v6
 RCD_SCRIPTS+=		ospf6d ripngd
+.for _file_ in ospf6d.conf ripngd.conf
+CONF_FILES_PERMS+=      ${PREFIX}/share/examples/quagga/log_syslog.conf ${PKG_SYSCONFDIR}/${_file_} quagga quagga 0600
+.endfor
+.undef _file_
 .else
 CONFIGURE_ARGS+=	--disable-ospf6d
 CONFIGURE_ARGS+=	--disable-ripngd
 .endif
 
 PLIST_CAT+=		${PKGDIR}/PLIST
-
-# Why is this needed?  extract.pl.in finds perl at configure time
-# REPLACE_PERL=		vtysh/extract.pl
 
 LIBS+=			${LDFLAGS}
 
