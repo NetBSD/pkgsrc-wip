@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/10 15:39:05 dmb_ Exp $
+$NetBSD: distinfo,v 1.2 2005/03/29 20:03:00 dmb_ Exp $
 
 SHA1 (php-mode-1.1.0.tgz) = 7abbbe6f9e9744f3d1030dc4d6d74e25a959327a
+RMD160 (php-mode-1.1.0.tgz) = a80e57e61d039f6b8de5f5d2cf2e27d5e293c7d2
 Size (php-mode-1.1.0.tgz) = 12940 bytes
