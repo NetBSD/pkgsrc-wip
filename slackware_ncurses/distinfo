@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/14 20:25:53 mpasternak Exp $
+
+SHA1 (slackware/ncurses-5.4-i486-2.tgz) = 8975da86b1a3d63753519a38226c2ac82b1b6c12
+Size (slackware/ncurses-5.4-i486-2.tgz) = 1688627 bytes
+SHA1 (patch-aa) = 5b1416f0f1f9859c1664585c1d6ecb091054a83b
