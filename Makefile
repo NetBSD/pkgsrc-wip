@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1668 2005/02/28 07:39:26 ianzag Exp $
-# $NetBSD: Makefile,v 1.1668 2005/02/28 07:39:26 ianzag Exp $
+# $Id: Makefile,v 1.1669 2005/03/01 12:46:43 peterih Exp $
+# $NetBSD: Makefile,v 1.1669 2005/03/01 12:46:43 peterih Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -290,6 +290,7 @@ SUBDIR+=	grass-WakeCounty
 SUBDIR+=	grass-gully
 SUBDIR+=	grip
 SUBDIR+=	grisbi
+SUBDIR+=	gromacs
 SUBDIR+=	gsoap
 SUBDIR+=	gstat
 SUBDIR+=	gtick
