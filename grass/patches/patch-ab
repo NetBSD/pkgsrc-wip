@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2005/03/31 20:30:14 daprice Exp $
+
+--- Makefile.orig	2005-03-09 07:08:59.000000000 -0700
++++ Makefile
+@@ -325,7 +325,10 @@ changelog:
+ GISRCFILE = ${ARCH_DISTDIR}/demolocation/.grassrc${GRASS_VERSION_MAJOR}${GRASS_VERSION_MINOR}
+ 
+ builddemolocation:
+-	@ cp -rpf demolocation ${ARCH_DISTDIR}/
++	@ if [ ! -d ${ARCH_DISTDIR} ]; then \
++	 ${MAKE_DIR_CMD} ${ARCH_DISTDIR}; \
++	 fi;
++	@ cp -rpf demolocation ${ARCH_DISTDIR}
+ 	@ echo "GISDBASE: ${ARCH_DISTDIR}" > ${GISRCFILE}
+ 	@ echo "LOCATION_NAME: demolocation" >> ${GISRCFILE}
+ 	@ echo "MAPSET: PERMANENT" >> ${GISRCFILE}
