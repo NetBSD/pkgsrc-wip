@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1178 2004/04/07 13:10:54 lsed Exp $
-# $NetBSD: Makefile,v 1.1178 2004/04/07 13:10:54 lsed Exp $
+# $Id: Makefile,v 1.1179 2004/04/07 13:29:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1179 2004/04/07 13:29:58 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -418,7 +418,6 @@ SUBDIR+=	ncps
 SUBDIR+=	nehe-opengl-tutorials
 SUBDIR+=	net-quanta
 SUBDIR+=	net-tools
-SUBDIR+=	netbeans-ide
 SUBDIR+=	netkit-base
 SUBDIR+=	noip
 SUBDIR+=	noiptun
