@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1345 2004/06/25 23:21:08 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1345 2004/06/25 23:21:08 xtraeme Exp $
+# $Id: Makefile,v 1.1346 2004/06/26 10:14:28 ianzag Exp $
+# $NetBSD: Makefile,v 1.1346 2004/06/26 10:14:28 ianzag Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -286,6 +286,7 @@ SUBDIR+=	kissme
 SUBDIR+=	kkbswitch
 SUBDIR+=	koffice-i18n-de
 SUBDIR+=	koffice-i18n-es
+SUBDIR+=	koffice-i18n-ru
 SUBDIR+=	konversation
 SUBDIR+=	korelib
 SUBDIR+=	kpanta
