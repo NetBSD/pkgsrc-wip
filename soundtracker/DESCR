@@ -1,0 +1,9 @@
+SoundTracker is a music tracking tool for Unix / X11 similar in design to
+the DOS program FastTracker and the Amiga legend ProTracker. 
+
+Samples can be lined up on tracks and patterns which are then arranged to a
+song. Supported module formats are XM and MOD; the player code is the one
+from OpenCP.
+
+A basic sample recorder and editor is also included. SoundTracker is free
+("open source") software, licensed under the GNU GPL.
