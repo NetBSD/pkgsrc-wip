@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.616 2003/11/13 20:28:25 grantbeattie Exp $
-# $NetBSD: Makefile,v 1.616 2003/11/13 20:28:25 grantbeattie Exp $
+# $Id: Makefile,v 1.617 2003/11/14 21:50:14 hfath Exp $
+# $NetBSD: Makefile,v 1.617 2003/11/14 21:50:14 hfath Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -307,6 +307,7 @@ SUBDIR+=	nagios-plugin-mysql
 SUBDIR+=	nagios-plugin-pgsql
 SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
+SUBDIR+=	natali
 SUBDIR+=	nautilus-cd-burner
 SUBDIR+=	nautilus-media
 SUBDIR+=	navigatrix
