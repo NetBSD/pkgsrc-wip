@@ -1,0 +1,10 @@
+$Id: TODO,v 1.1.1.1 2003/11/22 13:04:28 mpasternak Exp $
+
+Sat Nov 22 13:53:53 CET 2003
+
+As py-vorbis doesn't compile yet, this package needs both PLIST and
+Makefile corrected.
+
+And please, someone create a 3d model for Beastie ;)
+
+	-- dotz@irc.pl
