@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/05/10 22:18:35 poppnk Exp $
+--- Zend/zend_hash.h	2004-01-08 17:31:47.000000000 +0000
++++ Zend/zend_hash.h	2004-05-10 23:04:23.000000000 +0000
+@@ -35,7 +35,8 @@
+ 
+ #define HASH_DEL_KEY 0
+ #define HASH_DEL_INDEX 1
+-
++#define uint unsigned int
++#define ulong unsigned long
+ typedef ulong (*hash_func_t)(char *arKey, uint nKeyLength);
+ typedef int  (*compare_func_t)(const void *, const void * TSRMLS_DC);
+ typedef void (*sort_func_t)(void *, size_t, register size_t, compare_func_t TSRMLS_DC);
