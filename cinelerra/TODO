@@ -1,0 +1,28 @@
+configure: WARNING: The following libraries were not found:
+configure: WARNING:     a52dec
+configure: WARNING:     libavcodec
+configure: WARNING:     libfaad 2
+configure: WARNING:     libxvidcore
+configure: WARNING:     libraw1394
+configure: WARNING:     libavc1394
+configure: WARNING:     librom1394
+
+-=-=-
+You need automake version 1.7 to build.  1.4 won't work!
+Autoconf 2.57 is also required to build.
+
+The automake version of the cinelerra source tree needs third-party libraries
+development files installed. Run 'autoreconf -i' to create configure and
+supporting files.
+
+        <x86 CPUs only>
+You probably want to enable MMX support.  To do that, run ./configure with
+the --enable-mmx option.  NB! If you do that, you may have to use the
+--without-pic option, too.  Otherwise, compilation can fail.
+        </x86 CPUs only>
+
+and see the README.BUILD
+
+old version:
+edit build/Makefile.cinelerra and/or cinelerra/Makefile
+to not use libraries here but to use pkgsrc 
