@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/15 04:59:04 cubidou Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/15 05:50:37 cubidou Exp $
 .include "Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm
@@ -24,6 +24,11 @@ MAKE_ENV+=		MODULES=src LINK_FLAGS=${EXPORT_SYMBOLS_LDFLAGS}
 pre-build:
 	${SED} -e s,@@PREFIX@@,${PREFIX}, <${WRKSRC}/src/gkrellm.h >${WRKSRC}/src/gkrellm.h.sed
 	${MV} ${WRKSRC}/src/gkrellm.h.sed ${WRKSRC}/src/gkrellm.h
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm2
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm2/plugins
+	${INSTALL_DATA_DIR} ${PREFIX}/share/gkrellm2/themes
 
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
