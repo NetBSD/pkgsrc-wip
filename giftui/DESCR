@@ -3,7 +3,7 @@ giFTui is a graphical user interface to giFT using GTK+2.
 giFTui was designed to be easily usable, somehow using the same logic 
 as other well-known peer-2-peer clients.
 
-It's features are :
+Its features are :
 
   * multiple browse user and search tabs
   * status tab (gives you information about the network(s))
