@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/25 19:31:42 virtus Exp $
+bin/abook
+man/man1/abook.1
+man/man5/abookrc.5
