@@ -1,2 +1,113 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/18 15:38:17 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/13 09:12:03 poppnk Exp $
 share/classpath/jep.jar
+share/doc/java-jep/html/CustFunc.java
+share/doc/java-jep/html/Half.java
+share/doc/java-jep/html/Library/Docu Menu.lbi
+share/doc/java-jep/html/Library/top bar.lbi
+share/doc/java-jep/html/TMP2b2r37yb10.htm
+share/doc/java-jep/html/Templates/maintemplate.dwt
+share/doc/java-jep/html/_notes/dwSiteColumnsMe.xml
+share/doc/java-jep/html/cust_func.html
+share/doc/java-jep/html/faq.html
+share/doc/java-jep/html/grammar.html
+share/doc/java-jep/html/img/checkmark.gif
+share/doc/java-jep/html/img/spacer.gif
+share/doc/java-jep/html/img/top.gif
+share/doc/java-jep/html/index.html
+share/doc/java-jep/html/log.html
+share/doc/java-jep/html/main.css
+share/doc/java-jep/html/op_and_func.html
+share/doc/java-jep/javadoc/allclasses-frame.html
+share/doc/java-jep/javadoc/allclasses-noframe.html
+share/doc/java-jep/javadoc/constant-values.html
+share/doc/java-jep/javadoc/deprecated-list.html
+share/doc/java-jep/javadoc/help-doc.html
+share/doc/java-jep/javadoc/index-all.html
+share/doc/java-jep/javadoc/index.html
+share/doc/java-jep/javadoc/org/nfunk/jep/ASTConstant.html
+share/doc/java-jep/javadoc/org/nfunk/jep/ASTFunNode.html
+share/doc/java-jep/javadoc/org/nfunk/jep/ASTStart.html
+share/doc/java-jep/javadoc/org/nfunk/jep/ASTVarNode.html
+share/doc/java-jep/javadoc/org/nfunk/jep/EvaluatorVisitor.html
+share/doc/java-jep/javadoc/org/nfunk/jep/FunctionTable.html
+share/doc/java-jep/javadoc/org/nfunk/jep/JEP.html
+share/doc/java-jep/javadoc/org/nfunk/jep/JavaCharStream.html
+share/doc/java-jep/javadoc/org/nfunk/jep/Node.html
+share/doc/java-jep/javadoc/org/nfunk/jep/ParseException.html
+share/doc/java-jep/javadoc/org/nfunk/jep/Parser.html
+share/doc/java-jep/javadoc/org/nfunk/jep/ParserConstants.html
+share/doc/java-jep/javadoc/org/nfunk/jep/ParserDumpVisitor.html
+share/doc/java-jep/javadoc/org/nfunk/jep/ParserTokenManager.html
+share/doc/java-jep/javadoc/org/nfunk/jep/ParserTreeConstants.html
+share/doc/java-jep/javadoc/org/nfunk/jep/ParserVisitor.html
+share/doc/java-jep/javadoc/org/nfunk/jep/SimpleNode.html
+share/doc/java-jep/javadoc/org/nfunk/jep/SymbolTable.html
+share/doc/java-jep/javadoc/org/nfunk/jep/Token.html
+share/doc/java-jep/javadoc/org/nfunk/jep/TokenMgrError.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Abs.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Add.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Angle.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/ArcCosine.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/ArcCosineH.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/ArcSine.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/ArcSineH.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/ArcTanH.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/ArcTangent.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Comparative.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Cosine.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/CosineH.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Divide.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Imaginary.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Logarithm.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Logical.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Modulus.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Multiply.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/NaturalLogarithm.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Not.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/PostfixMathCommand.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/PostfixMathCommandI.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Power.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Random.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Real.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Sine.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/SineH.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/SquareRoot.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Subtract.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Sum.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/TanH.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/Tangent.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/UMinus.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/package-frame.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/package-summary.html
+share/doc/java-jep/javadoc/org/nfunk/jep/function/package-tree.html
+share/doc/java-jep/javadoc/org/nfunk/jep/package-frame.html
+share/doc/java-jep/javadoc/org/nfunk/jep/package-summary.html
+share/doc/java-jep/javadoc/org/nfunk/jep/package-tree.html
+share/doc/java-jep/javadoc/org/nfunk/jep/type/Complex.html
+share/doc/java-jep/javadoc/org/nfunk/jep/type/DoubleNumberFactory.html
+share/doc/java-jep/javadoc/org/nfunk/jep/type/NumberFactory.html
+share/doc/java-jep/javadoc/org/nfunk/jep/type/package-frame.html
+share/doc/java-jep/javadoc/org/nfunk/jep/type/package-summary.html
+share/doc/java-jep/javadoc/org/nfunk/jep/type/package-tree.html
+share/doc/java-jep/javadoc/overview-frame.html
+share/doc/java-jep/javadoc/overview-summary.html
+share/doc/java-jep/javadoc/overview-tree.html
+share/doc/java-jep/javadoc/package-list
+share/doc/java-jep/javadoc/packages.html
+share/doc/java-jep/javadoc/serialized-form.html
+share/doc/java-jep/javadoc/stylesheet.css
+@dirrm share/doc/java-jep/javadoc/org/nfunk/jep/type
+@dirrm share/doc/java-jep/javadoc/org/nfunk/jep/function
+@dirrm share/doc/java-jep/javadoc/org/nfunk/jep
+@dirrm share/doc/java-jep/javadoc/org/nfunk
+@dirrm share/doc/java-jep/javadoc/org
+@dirrm share/doc/java-jep/javadoc
+@dirrm share/doc/java-jep/html/img
+@dirrm share/doc/java-jep/html/_notes
+@dirrm share/doc/java-jep/html/Templates
+@dirrm share/doc/java-jep/html/Library
+@dirrm share/doc/java-jep/html
+@exec ${MKDIR} %D/share/doc/java-jep/grammar
+@dirrm share/doc/java-jep/grammar
+@dirrm share/doc/java-jep
+@dirrm share/classpath
