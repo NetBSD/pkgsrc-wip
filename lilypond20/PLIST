@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/24 14:30:10 atamaniuk Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/10/26 22:15:30 atamaniuk Exp $
 bin/abc2ly
 bin/as2text
 bin/convert-ly
@@ -774,7 +774,6 @@ share/lilypond/${PKGVERSION}/fonts/type1/parmesan19.pfa
 share/lilypond/${PKGVERSION}/fonts/type1/parmesan20.pfa
 share/lilypond/${PKGVERSION}/fonts/type1/parmesan23.pfa
 share/lilypond/${PKGVERSION}/fonts/type1/parmesan26.pfa
-share/lilypond/${PKGVERSION}/ls-R
 share/lilypond/${PKGVERSION}/ly/a3-init.ly
 share/lilypond/${PKGVERSION}/ly/a4-init.ly
 share/lilypond/${PKGVERSION}/ly/accordion-defs-init.ly
@@ -865,7 +864,6 @@ share/lilypond/${PKGVERSION}/make/toplevel-version.make
 share/lilypond/${PKGVERSION}/ps/lilyponddefs.ps
 share/lilypond/${PKGVERSION}/ps/music-drawing-routines.ps
 share/lilypond/${PKGVERSION}/python/lilylib.py
-share/lilypond/${PKGVERSION}/python/lilylib.pyc
 share/lilypond/${PKGVERSION}/scm/auto-beam.scm
 share/lilypond/${PKGVERSION}/scm/bass-figure.scm
 share/lilypond/${PKGVERSION}/scm/beam.scm

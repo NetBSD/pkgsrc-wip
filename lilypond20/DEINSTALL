@@ -8,10 +8,10 @@ PKGBASE="@PKGBASE@"
 PKGVERSION="@PKGVERSION@"
 
 case $2 in
-        VIEW-INSTALL)
-                PATH=${LOCALBASE:-/usr/pkg}/bin:${PATH}
+        DEINSTALL)
                 datadir=${PKG_PREFIX}/share/${PKGBASE}/${PKGVERSION}/
-                export TEXMF="{${datadir},"`kpsexpand  \\$TEXMF`"}"
-                texhash
+                rm -f ${datadir}/ls-R
+		rm -f ${datadir}/python/*.pyo
+		rm -f ${datadir}/python/*.pyc
         ;;
 esac
