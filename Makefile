@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1288 2004/05/21 22:51:40 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1288 2004/05/21 22:51:40 xtraeme Exp $
+# $Id: Makefile,v 1.1289 2004/05/22 02:39:22 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1289 2004/05/22 02:39:22 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -129,6 +129,7 @@ SUBDIR+=	evolution-sharp
 SUBDIR+=	ezbounce
 SUBDIR+=	fakenes
 SUBDIR+=	faster-configure
+SUBDIR+=	fbpanel
 SUBDIR+=	festival-gaim
 SUBDIR+=	firebird
 SUBDIR+=	fixesext
