@@ -924,7 +924,7 @@ msgstr "ChBg preferencias [%s]"
 
 #: setup.c:211
 msgid "ChBg setup"
-msgstr "ChBg préférences"
+msgstr "Preferencias ChBg"
 
 #: setup.c:924 setup.c:1103
 msgid "Unable to load scenario"
