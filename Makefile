@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.306 2003/07/07 14:07:28 xtraeme Exp $
-# $NetBSD: Makefile,v 1.306 2003/07/07 14:07:28 xtraeme Exp $
+# $Id: Makefile,v 1.307 2003/07/08 09:06:00 adrian_p Exp $
+# $NetBSD: Makefile,v 1.307 2003/07/08 09:06:00 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -201,7 +201,6 @@ SUBDIR+=	p5-gtk2
 SUBDIR+=	pag
 SUBDIR+=	pdns
 SUBDIR+=	perltidy
-SUBDIR+=	phplot
 SUBDIR+=	pinball
 SUBDIR+=	pixieplus
 SUBDIR+=	plugger
