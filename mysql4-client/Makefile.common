@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.10 2003/12/10 21:53:01 adrian_p Exp $
+# $NetBSD: Makefile.common,v 1.11 2003/12/20 11:48:15 marttikuparinen Exp $
 
-DISTNAME=		mysql-4.0.16
+DISTNAME=		mysql-4.0.17
 CATEGORIES=		databases
 MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQL-4.0/ \
 			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQL-4.0/ \
