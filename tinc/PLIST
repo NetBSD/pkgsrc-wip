@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/23 18:05:31 minskim Exp $
-man/man5/tinc.conf.5
-man/man8/tincd.8
-sbin/tincd
