@@ -1,1 +1,2 @@
-Parsifal is minimal non-validating XML parser written in ANSI C. Parsifal implements the subset of SAX2 including namespace support.
+Parsifal is minimal non-validating XML parser written in ANSI C. Parsifal 
+implements the subset of SAX2 including namespace support.

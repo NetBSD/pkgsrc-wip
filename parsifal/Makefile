@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/11 22:25:52 ora8_ Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/07 12:20:20 cjep Exp $
 
 DISTNAME=	libparsifal-0.7.3
 CATEGORIES=	textproc
@@ -21,11 +21,11 @@ INC_FILES=`ls ${WRKSRC}/include/libparsifal/*.h`
 pre-build:
 
 	@for f in ${SRC_FILES}; do \
-                ${TR} -d "\r" < $${f} > $${f}; \
+		${TR} -d "\r" < $${f} > $${f}; \
 	done
 
 	@for f in ${INC_FILES}; do \
-                ${TR} -d "\r" < $${f} > $${f}; \
+		${TR} -d "\r" < $${f} > $${f}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
