@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.808 2003/12/26 19:27:22 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.808 2003/12/26 19:27:22 thomasklausner Exp $
+# $Id: Makefile,v 1.809 2003/12/26 21:11:06 mpasternak Exp $
+# $NetBSD: Makefile,v 1.809 2003/12/26 21:11:06 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -576,6 +576,7 @@ SUBDIR+=	sysvinit
 SUBDIR+=	tcc
 SUBDIR+=	tcllib
 SUBDIR+=	tendra
+SUBDIR+=	terminus-font
 SUBDIR+=	tetrinet
 SUBDIR+=	tetrinetx
 SUBDIR+=	tex-foiltex
