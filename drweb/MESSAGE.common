@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE.common,v 1.1 2003/09/11 15:20:28 bubuchka Exp $
+$NetBSD: MESSAGE.common,v 1.2 2003/09/16 16:57:59 bubuchka Exp $
 
 Add the similar to following to /etc/services:
   drwebd	3000/tcp	# DrWeb daemon
 
 Add the similar to following to crontab(5) file:
-  0 2 * * *	${PREFIX}/bin/drweb-update
+  0 2 * * *	${PREFIX}/sbin/drweb-update
 
 ===========================================================================
