@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.933 2004/02/07 21:32:03 minskim Exp $
-# $NetBSD: Makefile,v 1.933 2004/02/07 21:32:03 minskim Exp $
+# $Id: Makefile,v 1.934 2004/02/07 23:34:39 mpasternak Exp $
+# $NetBSD: Makefile,v 1.934 2004/02/07 23:34:39 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -93,6 +93,7 @@ SUBDIR+=	damageext
 SUBDIR+=	dancer-ircd
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	dasm
+SUBDIR+=	dasher
 SUBDIR+=	dbf
 #SUBDIR+=	dbxml		# depends on libpathan
 SUBDIR+=	dfbpoint
