@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/18 08:05:55 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/18 08:32:01 minskim Exp $
 #
 
 DISTNAME=		PyBabelPhish-2.0_All_Platforms
@@ -14,13 +14,18 @@ COMMENT=		Gtk-based frontend for several translation services on web
 
 USE_BUILDLINK2=		yes
 PY_PATCHPLIST=		yes
-NO_BUILD=		# defined
+NO_CONFIGURE=		yes
 
 PYFILES=	URLRead.py pybabelfish.py pyfilter.py pytheme.py \
 		pythonol_festival.py symbolbar.py
 
 TARGET_DIR=	${PREFIX}/${PYSITELIB}/BabelPhish
-SCRIPTNAME=	${PREFIX}/bin/pybabelfish
+SCRIPTNAME=	pybabelfish
+
+do-build:
+	cd ${WRKSRC};							\
+	${ECHO} '#! ${SH}' >${SCRIPTNAME};				\
+	${ECHO} 'exec ${PYTHONBIN} ${PREFIX}/${PYSITELIB}/BabelPhish/pybabelfish.py' >>${SCRIPTNAME};
 
 do-install:
 	${INSTALL_DATA_DIR} ${TARGET_DIR}
@@ -32,9 +37,7 @@ do-install:
 	for a in ${WRKSRC}/pixmaps/*; do \
 		${INSTALL_DATA} $$a ${TARGET_DIR}/pixmaps/`${BASENAME} $$a`; \
 	done
-	printf "#!/bin/sh\nexec ${PYTHONBIN} ${PREFIX}/${PYSITELIB}/BabelPhish/pybabelfish.py" > ${SCRIPTNAME}
-	${CHMOD} ${BINMODE} ${SCRIPTNAME}
-	${CHOWN} ${BINOWN}:${BINGRP} ${SCRIPTNAME}
+	${INSTALL_SCRIPT} ${WRKSRC}/${SCRIPTNAME} ${PREFIX}/bin
 
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gtk2/buildlink2.mk"
