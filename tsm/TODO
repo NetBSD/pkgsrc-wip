@@ -20,3 +20,4 @@
 
 - Add other architectures (linuxppc, solaris, ...)
 - Find a better way of adding library paths to the linux /etc/ld.so.conf
+- Work out installation on rpm-native platforms (Linux, Solaris, AIX)
