@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/11 14:43:18 poppnk Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/11 14:48:41 poppnk Exp $
 #
 
 PKGNAME=		ap-php-${PHP5_VERSION}
@@ -18,7 +18,7 @@ SHLIBTOOL_OVERRIDE=	libtool
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
-pre-install:
+do-install:
 	if [ -f ${WRKSRC}/libs/libphp5.so ]; then		\
 		${INSTALL_DATA} ${WRKSRC}/libs/libphp5.so	\
 			${PREFIX}/lib/httpd/mod_php5.so;        \
