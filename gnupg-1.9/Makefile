@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/02/25 13:29:24 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/25 14:59:41 minskim Exp $
 #
 
 DISTNAME=		gnupg-1.9.5
@@ -17,7 +17,7 @@ LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 GNU_CONFIGURE=          yes
 USE_GNU_TOOLS+=         make
 
-.include "../libgpg-error/buildlink3.mk"
+.include "../../security/libgpg-error/buildlink3.mk"
 .include "../libgcrypt/buildlink3.mk"
 .include "../libassuan/buildlink3.mk"
 .include "../libksba/buildlink3.mk"
