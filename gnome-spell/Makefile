@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/16 07:55:18 bseklecki Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/16 09:12:52 minskim Exp $
 
 DISTNAME=	gnome-spell-1.0.5
 CATEGORIES=	textproc
@@ -9,9 +9,13 @@ MAINTAINER=	bitbucket@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Spell checking as you type like gtkspell
 
-GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
+USE_GMAKE=		YES
+
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/libbonobo/buildlink2.mk"
 .include "../../devel/libbonoboui/buildlink2.mk"
