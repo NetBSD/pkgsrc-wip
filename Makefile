@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.727 2003/12/03 19:29:18 xtraeme Exp $
-# $NetBSD: Makefile,v 1.727 2003/12/03 19:29:18 xtraeme Exp $
+# $Id: Makefile,v 1.728 2003/12/03 23:11:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.728 2003/12/03 23:11:51 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -92,7 +92,6 @@ SUBDIR+=	cmatrix
 SUBDIR+=	compositeext
 SUBDIR+=	cops
 SUBDIR+=	copytape
-SUBDIR+=	crack-attack
 SUBDIR+=	cvsd
 SUBDIR+=	cyrus-imapd22
 SUBDIR+=	d2x
