@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/01 11:23:27 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/01 12:39:24 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -17,9 +17,9 @@ GCC_VERSION=	3.4.0
 # Optional languages
 ADA=	YES
 CXX=	YES
-F77=	YES
-JAVA=	YES
-OBJC=	YES
+F77=	NO
+JAVA=	NO
+OBJC=	NO
 .if ${MACHINE_GNU_ARCH} == "x86_64"
 java=	NO
 .endif
@@ -40,17 +40,6 @@ LANGS+= java
 LANGS+= objc
 .endif
 
-.if ${CXX} == "YES"
-INSTLIBS=	libsupc++.la
-INSTLIBS=	libstdc++.la
-.endif
-.if ${OBJC} == "YES"
-INSTLIBS=	libobjc.la
-.endif
-.if ${JAVA} == "YES"
-INSTLIBS=	libgcj.la
-.endif
-
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
@@ -62,11 +51,11 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 # An Ada compiler is required to build the Ada compiler. Two
 may be used:
 #USE_GCC3	=# Define to use lang/gcc3-ada
-#USE_GCC34ADA	=# Define to use gcc-3.4-ada
+USE_GCC34ADA	=# Define to use gcc-3.4-ada
 # You may also specify the path of a gcc/gnat Ada compiler
 # outside of the pkgsrc system by specifying the full path
 # of the compiler (example) below:
-ALT_GCC=       /usr/pkg/gccAda-3.4.0/bin/gcc
+#ALT_GCC=       /usr/pkg/gccAda-3.4.0/bin/gcc
 .if defined(ALT_GCC)
 ALT_GCC_PREFIX:=        ${ALT_GCC:H}/..
 ALT_GCC_RTS!=   ${FIND} ${ALT_GCC_PREFIX} -name adalib
@@ -122,10 +111,9 @@ do-configure:
 	 (cd ${WRKDIR}/obj && ${SETENV} ${CONFIGURE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS}))
 
 do-build:
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap )
 .if ${ADA} == "YES"
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
-.else
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap)
+	(cd ${WRKDIR}/obj/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib_and_tools )
 .endif
 
 do-test:
