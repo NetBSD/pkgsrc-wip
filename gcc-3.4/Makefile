@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2004/06/05 19:56:36 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.27 2004/06/06 20:01:53 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
+PKGNAME=	gcc3-${GCC_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=   ${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=   .tar.bz2
@@ -63,8 +64,8 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 # Ada bootstrap compiler section
 # An Ada compiler is required to build the Ada compiler. Two
 may be used:
-#USE_GCC3	=# Define to use wip/gcc3-ada
-#USE_GCC34ADA	=# Define to use gccAda-3.4
+#USE_GCC33ADA	=# Define to use gcc-3.3.x-ada
+#USE_GCC34ADA	=# Define to use gcc-3.4.x-ada
 # You may also specify the path of a gcc/gnat Ada compiler
 # outside of the pkgsrc system by specifying the full path
 # of the compiler (example) below:
@@ -78,12 +79,12 @@ RALT_GCC_RTS=   ${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
 PKG_SKIP_REASON=	"Missing bootstrap Ada compiler"
 .     endif
 .  endif
-.  if !defined(USE_GCC3) && !defined(USE_GCC34ADA) && !defined(ALT_GCC)
+.  if !defined(USE_GCC33ADA) && !defined(USE_GCC34ADA) && !defined(ALT_GCC)
 PKG_SKIP_REASON=	"An Ada bootstrap compiler must be specified to BUILD_ADA"
 .  endif
 .endif
 
-GCC_SUBPREFIX=		${PKGNAME_NOREV}
+GCC_SUBPREFIX=		${DISTNAME}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
@@ -115,13 +116,13 @@ post-patch:
 
 .if ${BUILD_ADA} == "YES"
 .  if defined(USE_GCC34ADA)
-# Overide compiler.mk setup to use gccAda-3.4.0
+# Overide compiler.mk setup to use gcc-3.4.x-ada
 pre-configure:
-.include "../../wip/gccAda-3.4/preconfigure.mk"
+.include "../../wip/gcc-3.4-ada/preconfigure.mk"
 .  elif defined(ALT_GCC)
 pre-configure:
 	(cd ${WRKDIR}/.buildlink && ${MKDIR} ${RALT_GCC_RTS} && \
-	cd ${RALT_GCC_RTS} && ${LN} -s ${ALT_GCC_RTS}/libgnat.a .)
+	cd ${RALT_GCC_RTS} && ${LN} -sf ${ALT_GCC_RTS}/libgnat.a .)
 	(cd ${ALT_GCC:H} && \
 	bin_files=`${FIND} . -type f \( -perm -0100 \)` && \
 	cd ${WRKDIR}/.gcc/bin/ && \
@@ -173,11 +174,11 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])
-.  if defined(USE_GCC3)
-.include "../../wip/gcc3-ada/buildlink3.mk"
+.  if defined(USE_GCC33ADA)
+.include "../../wip/gcc33-ada/buildlink3.mk"
 .  elif  defined(USE_GCC34ADA)
-BUILDLINK_DEPMETHOD.gccAda-3.4.0=build
-.include "../../wip/gccAda-3.4/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gcc3-ada=build
+.include "../../wip/gcc-3.4-ada/buildlink3.mk"
 .  endif
 .endif
 .include "../../mk/pthread.buildlink3.mk"
