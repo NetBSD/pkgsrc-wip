@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/19 10:40:44 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/06/07 23:59:42 xtraeme Exp $
 
-SHA1 (libmatchbox-1.1.tar.bz2) = 1dc9e1ea7c8300fb3d7d3edd41217d61c49fbc96
-Size (libmatchbox-1.1.tar.bz2) = 270955 bytes
+SHA1 (libmatchbox-1.2.tar.bz2) = 1f81f5b0babfe7a4f01548a05deafc490ba6bb68
+Size (libmatchbox-1.2.tar.bz2) = 272766 bytes
