@@ -1,11 +1,12 @@
-# $Id: Makefile,v 1.1398 2004/07/19 19:21:41 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1398 2004/07/19 19:21:41 xtraeme Exp $
+# $Id: Makefile,v 1.1399 2004/07/19 19:44:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1399 2004/07/19 19:44:07 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	4stAttack
 SUBDIR+=	Cg-compiler
 SUBDIR+=	Coin
+SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
 SUBDIR+=	OpenGLUT
 SUBDIR+=	PPower4
