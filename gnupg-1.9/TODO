@@ -1,6 +1,8 @@
-Works when tested by itself.
+Works when tested by itself and with gpgsm, however,
+it does not work reliably with Kmail for SMIME.
 
-Need to fix test for pth. As supplied in gnupg,
-it detects pth on NetBSD even though pth is not
-installed. For now, the test is bypassed so pth
-is never found. This need to be changed.
+This package is designed to work with PTH threads. The
+PTH option is currently disabled because the gpgme test
+of gpgsm hangs when PTH threads are enabled. I'm
+modifying gpg-agent to work with the threads package
+detected by pthreads.mk.
