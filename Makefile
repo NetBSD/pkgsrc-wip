@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.899 2004/01/20 21:27:35 marc Exp $
-# $NetBSD: Makefile,v 1.899 2004/01/20 21:27:35 marc Exp $
+# $Id: Makefile,v 1.900 2004/01/22 01:24:11 minskim Exp $
+# $NetBSD: Makefile,v 1.900 2004/01/22 01:24:11 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -163,6 +163,7 @@ SUBDIR+=	gcc3-c-devel
 #SUBDIR+=	gcl-nox11	# see gcl/TODO
 SUBDIR+=	gcompris
 SUBDIR+=	gDesklets
+SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gdbada
 SUBDIR+=	geeklog
 SUBDIR+=	gg2
