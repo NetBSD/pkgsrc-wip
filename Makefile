@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.788 2003/12/21 21:33:39 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.788 2003/12/21 21:33:39 thomasklausner Exp $
+# $Id: Makefile,v 1.789 2003/12/21 21:42:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.789 2003/12/21 21:42:57 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -496,6 +496,7 @@ SUBDIR+=	py-fonttools
 SUBDIR+=	py-game
 SUBDIR+=	py-gdick
 SUBDIR+=	py-generateDS
+SUBDIR+=	py-gettext-tools
 SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-ipython
 SUBDIR+=	py-libpcap
