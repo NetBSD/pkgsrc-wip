@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/07 16:16:07 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/02 00:48:35 tvierling Exp $
 COPYRIGHT
 LICENSE
 README
@@ -6,25 +6,25 @@ README.html
 bin/.java_wrapper
 bin/appletviewer
 bin/extcheck
-bin/i386/green_threads/appletviewer
-bin/i386/green_threads/extcheck
-bin/i386/green_threads/jar
-bin/i386/green_threads/jarsigner
-bin/i386/green_threads/java
-bin/i386/green_threads/javac
-bin/i386/green_threads/javadoc
-bin/i386/green_threads/javah
-bin/i386/green_threads/javap
-bin/i386/green_threads/jdb
-bin/i386/green_threads/keytool
-bin/i386/green_threads/native2ascii
-bin/i386/green_threads/oldjava
-bin/i386/green_threads/policytool
-bin/i386/green_threads/rmic
-bin/i386/green_threads/rmid
-bin/i386/green_threads/rmiregistry
-bin/i386/green_threads/serialver
-bin/i386/green_threads/tnameserv
+bin/${MACHINE_ARCH}/green_threads/appletviewer
+bin/${MACHINE_ARCH}/green_threads/extcheck
+bin/${MACHINE_ARCH}/green_threads/jar
+bin/${MACHINE_ARCH}/green_threads/jarsigner
+bin/${MACHINE_ARCH}/green_threads/java
+bin/${MACHINE_ARCH}/green_threads/javac
+bin/${MACHINE_ARCH}/green_threads/javadoc
+bin/${MACHINE_ARCH}/green_threads/javah
+bin/${MACHINE_ARCH}/green_threads/javap
+bin/${MACHINE_ARCH}/green_threads/jdb
+bin/${MACHINE_ARCH}/green_threads/keytool
+bin/${MACHINE_ARCH}/green_threads/native2ascii
+bin/${MACHINE_ARCH}/green_threads/oldjava
+bin/${MACHINE_ARCH}/green_threads/policytool
+bin/${MACHINE_ARCH}/green_threads/rmic
+bin/${MACHINE_ARCH}/green_threads/rmid
+bin/${MACHINE_ARCH}/green_threads/rmiregistry
+bin/${MACHINE_ARCH}/green_threads/serialver
+bin/${MACHINE_ARCH}/green_threads/tnameserv
 bin/jar
 bin/jarsigner
 bin/java
@@ -548,10 +548,7 @@ demo/jfc/TableExample/src/TableExample3.java
 demo/jfc/TableExample/src/TableExample4.java
 demo/jfc/TableExample/src/TableMap.java
 demo/jfc/TableExample/src/TableSorter.java
-include/jni.h
-include/jvmdi.h
-include/jvmpi.h
-include/netbsd/jni_md.h
+etc/.pkgsrc
 include-old/StubPreamble.h
 include-old/alloc_cache.h
 include-old/bag.h
@@ -581,18 +578,18 @@ include-old/log.h
 include-old/monitor.h
 include-old/monitor_cache.h
 include-old/native.h
-include-old/netbsd/byteorder_md.h
-include-old/netbsd/gc_md.h
-include-old/netbsd/hpi_md.h
-include-old/netbsd/io_md.h
-include-old/netbsd/jmath_md.h
-include-old/netbsd/jni_md.h
-include-old/netbsd/jvm_md.h
-include-old/netbsd/miscdefs_md.h
-include-old/netbsd/path_md.h
-include-old/netbsd/sysmacros_md.h
-include-old/netbsd/timeval_md.h
-include-old/netbsd/typedefs_md.h
+include-old/${LOWER_OPSYS}/byteorder_md.h
+include-old/${LOWER_OPSYS}/gc_md.h
+include-old/${LOWER_OPSYS}/hpi_md.h
+include-old/${LOWER_OPSYS}/io_md.h
+include-old/${LOWER_OPSYS}/jmath_md.h
+include-old/${LOWER_OPSYS}/jni_md.h
+include-old/${LOWER_OPSYS}/jvm_md.h
+include-old/${LOWER_OPSYS}/miscdefs_md.h
+include-old/${LOWER_OPSYS}/path_md.h
+include-old/${LOWER_OPSYS}/sysmacros_md.h
+include-old/${LOWER_OPSYS}/timeval_md.h
+include-old/${LOWER_OPSYS}/typedefs_md.h
 include-old/oldnmi.h
 include-old/oobj.h
 include-old/opcodes.h
@@ -608,13 +605,17 @@ include-old/utf.h
 include-old/util.h
 include-old/vmprofiler.h
 include-old/wrap.h
+include/jni.h
+include/jvmdi.h
+include/jvmpi.h
+include/${LOWER_OPSYS}/jni_md.h
 jre/bin/.java_wrapper
-jre/bin/i386/green_threads/java
-jre/bin/i386/green_threads/keytool
-jre/bin/i386/green_threads/policytool
-jre/bin/i386/green_threads/rmid
-jre/bin/i386/green_threads/rmiregistry
-jre/bin/i386/green_threads/tnameserv
+jre/bin/${MACHINE_ARCH}/green_threads/java
+jre/bin/${MACHINE_ARCH}/green_threads/keytool
+jre/bin/${MACHINE_ARCH}/green_threads/policytool
+jre/bin/${MACHINE_ARCH}/green_threads/rmid
+jre/bin/${MACHINE_ARCH}/green_threads/rmiregistry
+jre/bin/${MACHINE_ARCH}/green_threads/tnameserv
 jre/bin/java
 jre/bin/keytool
 jre/bin/policytool
@@ -627,11 +628,11 @@ jre/lib/cmm/GRAY.pf
 jre/lib/cmm/LINEAR_RGB.pf
 jre/lib/cmm/PYCC.pf
 jre/lib/cmm/sRGB.pf
-jre/lib/content-types.properties
+jre/lib/content-types.properties.default
 jre/lib/ext/iiimp.jar
-jre/lib/flavormap.properties
-jre/lib/font.properties
-jre/lib/font.properties.ja
+jre/lib/flavormap.properties.default
+jre/lib/font.properties.default
+jre/lib/font.properties.ja.default
 jre/lib/fonts/LucidaBrightDemiBold.ttf
 jre/lib/fonts/LucidaBrightDemiItalic.ttf
 jre/lib/fonts/LucidaBrightItalic.ttf
@@ -646,44 +647,44 @@ jre/lib/fonts/LucidaTypewriterOblique.ttf
 jre/lib/fonts/LucidaTypewriterRegular.ttf
 jre/lib/fonts/fonts.dir
 jre/lib/i18n.jar
-jre/lib/i386/classic/Xusage.txt
-jre/lib/i386/classic/libjvm.so
-jre/lib/i386/classic/libjvm.so.1.2.2
-jre/lib/i386/green_threads/libhpi.so
-jre/lib/i386/green_threads/libhpi.so.1.2.2
-jre/lib/i386/libagent.so
-jre/lib/i386/libagent.so.1.2.2
-jre/lib/i386/libaudio.so
-jre/lib/i386/libaudio.so.1.2.2
-jre/lib/i386/libawt.so
-jre/lib/i386/libawt.so.1.2.2
-jre/lib/i386/libcmm.so
-jre/lib/i386/libcmm.so.1.2.2
-jre/lib/i386/libdcpr.so
-jre/lib/i386/libdcpr.so.1.2.2
-jre/lib/i386/libdt_socket.so
-jre/lib/i386/libdt_socket.so.1.2.2
-jre/lib/i386/libfontmanager.so
-jre/lib/i386/libfontmanager.so.1.2.2
-jre/lib/i386/libhprof.so
-jre/lib/i386/libhprof.so.1.2.2
-jre/lib/i386/libjava.so
-jre/lib/i386/libjava.so.1.2.2
-jre/lib/i386/libjdwp.so
-jre/lib/i386/libjdwp.so.1.2.2
-jre/lib/i386/libjpeg.so
-jre/lib/i386/libjpeg.so.1.2.2
-jre/lib/i386/libmath.so
-jre/lib/i386/libmath.so.1.2.2
-jre/lib/i386/libmlib_image.so
-jre/lib/i386/libmlib_image.so.1.2.2
-jre/lib/i386/libnet.so
-jre/lib/i386/libnet.so.1.2.2
-jre/lib/i386/libsunwjdga.so
-jre/lib/i386/libsunwjdga.so.1.2.2
-jre/lib/i386/libzip.so
-jre/lib/i386/libzip.so.1.2.2
-jre/lib/images/cursors/cursors.properties
+jre/lib/${MACHINE_ARCH}/classic/Xusage.txt
+jre/lib/${MACHINE_ARCH}/classic/libjvm.so
+jre/lib/${MACHINE_ARCH}/classic/libjvm.so.1.2.2
+jre/lib/${MACHINE_ARCH}/green_threads/libhpi.so
+jre/lib/${MACHINE_ARCH}/green_threads/libhpi.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libagent.so
+jre/lib/${MACHINE_ARCH}/libagent.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libaudio.so
+jre/lib/${MACHINE_ARCH}/libaudio.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libawt.so
+jre/lib/${MACHINE_ARCH}/libawt.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libcmm.so
+jre/lib/${MACHINE_ARCH}/libcmm.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libdcpr.so
+jre/lib/${MACHINE_ARCH}/libdcpr.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libdt_socket.so
+jre/lib/${MACHINE_ARCH}/libdt_socket.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libfontmanager.so
+jre/lib/${MACHINE_ARCH}/libfontmanager.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libhprof.so
+jre/lib/${MACHINE_ARCH}/libhprof.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libjava.so
+jre/lib/${MACHINE_ARCH}/libjava.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libjdwp.so
+jre/lib/${MACHINE_ARCH}/libjdwp.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libjpeg.so
+jre/lib/${MACHINE_ARCH}/libjpeg.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libmath.so
+jre/lib/${MACHINE_ARCH}/libmath.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libmlib_image.so
+jre/lib/${MACHINE_ARCH}/libmlib_image.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libnet.so
+jre/lib/${MACHINE_ARCH}/libnet.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libsunwjdga.so
+jre/lib/${MACHINE_ARCH}/libsunwjdga.so.1.2.2
+jre/lib/${MACHINE_ARCH}/libzip.so
+jre/lib/${MACHINE_ARCH}/libzip.so.1.2.2
+jre/lib/images/cursors/cursors.properties.default
 jre/lib/images/cursors/invalid32x32.gif
 jre/lib/images/cursors/motif_CopyDrop32x32.gif
 jre/lib/images/cursors/motif_CopyNoDrop32x32.gif
@@ -698,122 +699,118 @@ jre/lib/locale/ja_JP.UTF-8/app-defaults/XApplication
 jre/lib/rt.jar
 jre/lib/security/cacerts
 jre/lib/security/java.policy
-jre/lib/security/java.security
+jre/lib/security/java.security.default
 lib/dt.jar
 lib/jpda.jar
 lib/tools.jar
 src.jar
-@dirrm bin/i386/green_threads
-@dirrm bin/i386
-@dirrm bin
-@dirrm demo/applets/Animator/audio
-@dirrm demo/applets/Animator/images/Beans
-@dirrm demo/applets/Animator/images/SimpleAnimation
-@dirrm demo/applets/Animator/images
-@dirrm demo/applets/Animator
-@dirrm demo/applets/ArcTest
-@dirrm demo/applets/BarChart
-@dirrm demo/applets/Blink
-@dirrm demo/applets/CardTest
-@dirrm demo/applets/Clock
-@dirrm demo/applets/DitherTest
-@dirrm demo/applets/DrawTest
-@dirrm demo/applets/Fractal
-@dirrm demo/applets/GraphLayout/audio
-@dirrm demo/applets/GraphLayout
-@dirrm demo/applets/GraphicsTest
-@dirrm demo/applets/ImageMap/audio
-@dirrm demo/applets/ImageMap/images
-@dirrm demo/applets/ImageMap
-@dirrm demo/applets/JumpingBox/sounds
-@dirrm demo/applets/JumpingBox
-@dirrm demo/applets/MoleculeViewer/models
-@dirrm demo/applets/MoleculeViewer
-@dirrm demo/applets/NervousText
-@dirrm demo/applets/SimpleGraph
-@dirrm demo/applets/SortDemo
-@dirrm demo/applets/SpreadSheet
-@dirrm demo/applets/SymbolTest
-@dirrm demo/applets/TicTacToe/audio
-@dirrm demo/applets/TicTacToe/images
-@dirrm demo/applets/TicTacToe
-@dirrm demo/applets/WireFrame/models
-@dirrm demo/applets/WireFrame
-@dirrm demo/applets
-@dirrm demo/jfc/DBDemos/CreateCoffees/MSAccess
-@dirrm demo/jfc/DBDemos/CreateCoffees/Sybase
-@dirrm demo/jfc/DBDemos/CreateCoffees
-@dirrm demo/jfc/DBDemos/CreateSuppliers/MSAccess
-@dirrm demo/jfc/DBDemos/CreateSuppliers/Sybase
-@dirrm demo/jfc/DBDemos/CreateSuppliers
-@dirrm demo/jfc/DBDemos/InsertCoffees/SQLSrvr
-@dirrm demo/jfc/DBDemos/InsertCoffees/Sybase
-@dirrm demo/jfc/DBDemos/InsertCoffees
-@dirrm demo/jfc/DBDemos/InsertSuppliers/MSAccess
-@dirrm demo/jfc/DBDemos/InsertSuppliers/Sybase
-@dirrm demo/jfc/DBDemos/InsertSuppliers
-@dirrm demo/jfc/DBDemos/JavaDB
-@dirrm demo/jfc/DBDemos
-@dirrm demo/jfc/FileChooserDemo/images
-@dirrm demo/jfc/FileChooserDemo/src
-@dirrm demo/jfc/FileChooserDemo
-@dirrm demo/jfc/Java2D
-@dirrm demo/jfc/Metalworks/HelpFiles
-@dirrm demo/jfc/Metalworks/images
-@dirrm demo/jfc/Metalworks/src
-@dirrm demo/jfc/Metalworks
-@dirrm demo/jfc/Notepad/resources
-@dirrm demo/jfc/Notepad/src
-@dirrm demo/jfc/Notepad
-@dirrm demo/jfc/SampleTree/images
-@dirrm demo/jfc/SampleTree/src
-@dirrm demo/jfc/SampleTree
-@dirrm demo/jfc/SimpleExample/src
-@dirrm demo/jfc/SimpleExample
-@dirrm demo/jfc/Stylepad/resources
-@dirrm demo/jfc/Stylepad/src
-@dirrm demo/jfc/Stylepad
-@dirrm demo/jfc/SwingApplet/src
-@dirrm demo/jfc/SwingApplet
-@dirrm demo/jfc/SwingSet/images/ImageClub/food
-@dirrm demo/jfc/SwingSet/images/ImageClub/misc
-@dirrm demo/jfc/SwingSet/images/ImageClub
-@dirrm demo/jfc/SwingSet/images/WebSpice
-@dirrm demo/jfc/SwingSet/images/layout
-@dirrm demo/jfc/SwingSet/images/list
-@dirrm demo/jfc/SwingSet/images/people
-@dirrm demo/jfc/SwingSet/images/scrollpane
-@dirrm demo/jfc/SwingSet/images
-@dirrm demo/jfc/SwingSet/src
-@dirrm demo/jfc/SwingSet
-@dirrm demo/jfc/TableExample/src
-@dirrm demo/jfc/TableExample
-@dirrm demo/jfc
-@dirrm demo
-@dirrm include/netbsd
-@dirrm include
-@dirrm include-old/netbsd
-@dirrm include-old
-@dirrm jre/bin/i386/green_threads
-@dirrm jre/bin/i386
-@dirrm jre/bin
-@dirrm jre/lib/audio
-@dirrm jre/lib/cmm
-@dirrm jre/lib/ext
-@dirrm jre/lib/fonts
-@dirrm jre/lib/i386/classic
-@dirrm jre/lib/i386/green_threads
-@dirrm jre/lib/i386
-@dirrm jre/lib/images/cursors
-@dirrm jre/lib/images
-@dirrm jre/lib/locale/ja/app-defaults
-@dirrm jre/lib/locale/ja
-@dirrm jre/lib/locale/ja_JP.PCK/app-defaults
-@dirrm jre/lib/locale/ja_JP.PCK
+@dirrm lib
 @dirrm jre/lib/locale/ja_JP.UTF-8/app-defaults
 @dirrm jre/lib/locale/ja_JP.UTF-8
+@dirrm jre/lib/locale/ja_JP.PCK/app-defaults
+@dirrm jre/lib/locale/ja_JP.PCK
+@dirrm jre/lib/locale/ja/app-defaults
+@dirrm jre/lib/locale/ja
 @dirrm jre/lib/locale
-@dirrm jre/lib/security
-@dirrm jre/lib
-@dirrm jre
-@dirrm lib
+@dirrm jre/lib/${MACHINE_ARCH}/green_threads
+@dirrm jre/lib/${MACHINE_ARCH}/classic
+@dirrm jre/lib/${MACHINE_ARCH}
+@dirrm jre/lib/fonts
+@dirrm jre/lib/ext
+@dirrm jre/lib/cmm
+@dirrm jre/lib/audio
+@dirrm jre/bin/${MACHINE_ARCH}/green_threads
+@dirrm jre/bin/${MACHINE_ARCH}
+@dirrm jre/bin
+@dirrm include/${LOWER_OPSYS}
+@dirrm include
+@dirrm include-old/${LOWER_OPSYS}
+@dirrm include-old
+@dirrm etc
+@dirrm demo/jfc/TableExample/src
+@dirrm demo/jfc/TableExample
+@dirrm demo/jfc/SwingSet/src
+@dirrm demo/jfc/SwingSet/images/scrollpane
+@dirrm demo/jfc/SwingSet/images/people
+@dirrm demo/jfc/SwingSet/images/list
+@dirrm demo/jfc/SwingSet/images/layout
+@dirrm demo/jfc/SwingSet/images/WebSpice
+@dirrm demo/jfc/SwingSet/images/ImageClub/misc
+@dirrm demo/jfc/SwingSet/images/ImageClub/food
+@dirrm demo/jfc/SwingSet/images/ImageClub
+@dirrm demo/jfc/SwingSet/images
+@dirrm demo/jfc/SwingSet
+@dirrm demo/jfc/SwingApplet/src
+@dirrm demo/jfc/SwingApplet
+@dirrm demo/jfc/Stylepad/src
+@dirrm demo/jfc/Stylepad/resources
+@dirrm demo/jfc/Stylepad
+@dirrm demo/jfc/SimpleExample/src
+@dirrm demo/jfc/SimpleExample
+@dirrm demo/jfc/SampleTree/src
+@dirrm demo/jfc/SampleTree/images
+@dirrm demo/jfc/SampleTree
+@dirrm demo/jfc/Notepad/src
+@dirrm demo/jfc/Notepad/resources
+@dirrm demo/jfc/Notepad
+@dirrm demo/jfc/Metalworks/src
+@dirrm demo/jfc/Metalworks/images
+@dirrm demo/jfc/Metalworks/HelpFiles
+@dirrm demo/jfc/Metalworks
+@dirrm demo/jfc/Java2D
+@dirrm demo/jfc/FileChooserDemo/src
+@dirrm demo/jfc/FileChooserDemo/images
+@dirrm demo/jfc/FileChooserDemo
+@dirrm demo/jfc/DBDemos/JavaDB
+@dirrm demo/jfc/DBDemos/InsertSuppliers/Sybase
+@dirrm demo/jfc/DBDemos/InsertSuppliers/MSAccess
+@dirrm demo/jfc/DBDemos/InsertSuppliers
+@dirrm demo/jfc/DBDemos/InsertCoffees/Sybase
+@dirrm demo/jfc/DBDemos/InsertCoffees/SQLSrvr
+@dirrm demo/jfc/DBDemos/InsertCoffees
+@dirrm demo/jfc/DBDemos/CreateSuppliers/Sybase
+@dirrm demo/jfc/DBDemos/CreateSuppliers/MSAccess
+@dirrm demo/jfc/DBDemos/CreateSuppliers
+@dirrm demo/jfc/DBDemos/CreateCoffees/Sybase
+@dirrm demo/jfc/DBDemos/CreateCoffees/MSAccess
+@dirrm demo/jfc/DBDemos/CreateCoffees
+@dirrm demo/jfc/DBDemos
+@dirrm demo/jfc
+@dirrm demo/applets/WireFrame/models
+@dirrm demo/applets/WireFrame
+@dirrm demo/applets/TicTacToe/images
+@dirrm demo/applets/TicTacToe/audio
+@dirrm demo/applets/TicTacToe
+@dirrm demo/applets/SymbolTest
+@dirrm demo/applets/SpreadSheet
+@dirrm demo/applets/SortDemo
+@dirrm demo/applets/SimpleGraph
+@dirrm demo/applets/NervousText
+@dirrm demo/applets/MoleculeViewer/models
+@dirrm demo/applets/MoleculeViewer
+@dirrm demo/applets/JumpingBox/sounds
+@dirrm demo/applets/JumpingBox
+@dirrm demo/applets/ImageMap/images
+@dirrm demo/applets/ImageMap/audio
+@dirrm demo/applets/ImageMap
+@dirrm demo/applets/GraphicsTest
+@dirrm demo/applets/GraphLayout/audio
+@dirrm demo/applets/GraphLayout
+@dirrm demo/applets/Fractal
+@dirrm demo/applets/DrawTest
+@dirrm demo/applets/DitherTest
+@dirrm demo/applets/Clock
+@dirrm demo/applets/CardTest
+@dirrm demo/applets/Blink
+@dirrm demo/applets/BarChart
+@dirrm demo/applets/ArcTest
+@dirrm demo/applets/Animator/images/SimpleAnimation
+@dirrm demo/applets/Animator/images/Beans
+@dirrm demo/applets/Animator/images
+@dirrm demo/applets/Animator/audio
+@dirrm demo/applets/Animator
+@dirrm demo/applets
+@dirrm demo
+@dirrm bin/${MACHINE_ARCH}/green_threads
+@dirrm bin/${MACHINE_ARCH}
+@dirrm bin

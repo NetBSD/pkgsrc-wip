@@ -1,14 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/04/11 14:37:04 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/02 00:48:35 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
 # * PKGNAME: 2.0.11 means "1.2.2-FCS, patchset 11" (FCS = Sun patch 0).
-#
-# * Since there isn't a blackdown-jdk12 package, this downloads such
-#   JDK from Sunsite mirrors.  It's modified to run in green_threads
-#   mode for stability's sake, and is used only in the build tree
-#   for bootstrapping.  It may be possible to change to Jikes in the
-#   future, or for later JDKs.
 #
 # * Because this all requires SCSL acceptance, the JRE is not
 #   actually redistributable.  Thus source building is required, and
@@ -21,9 +15,6 @@
 # * The JDBC-ODBC bridge is not supported, because of the fact that
 #   the pkgsrc build of unixodbc needs userland pthreads (which
 #   messes with green_threads).
-#
-# * DPS (and thus printing) is not supported currently, but this
-#   may be possible to add.
 #
 # * Building is indirected through the "release-bundles" target,
 #   which produces wrapped zipfiles.  This is preferred to tarfiles
@@ -59,7 +50,7 @@ USE_PKGINSTALL=	YES
 JVM_HOME=	${LOCALBASE}/java/jdk-1.2.2
 ONLY_FOR_PLATFORM=	NetBSD-1.[4-9]*-i386 NetBSD-[2-9]*-i386
 
-ALL_TARGET=	world release-bundles
+ALL_TARGET=	world release-images
 BUILD_DIRS=	${WRKSRC}/build/bsd
 CHECK_SHLIBS=	NO # scripts set LD_LIBRARY_PATH
 MAKEFILE=	GNUmakefile
@@ -69,6 +60,8 @@ WRKSRC=		${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
+MOTIF_TYPE=	openmotif
+
 MAKE_ARGS+=	LOCALDIR=${LOCALBASE} # used to find "zip" and "unzipsfx"
 MAKE_ARGS+=	M4=${LOCALBASE}/bin/gm4
 MAKE_ENV+=	ALT_BOOTDIR=${WRKSRC}/jdk1.2.2
@@ -77,6 +70,18 @@ MAKE_ENV+=	HAVE_ODBC=no
 MAKE_ENV+=	LD_RUN_PATH=${MOTIFBASE}/lib # substitute for -rpath option
 MAKE_ENV+=	OPENWINHOME=${MOTIFBASE}
 MAKE_ENV+=	USE_GNU_M4=1
+
+SFILES=		content-types.properties
+SFILES+=	flavormap.properties
+SFILES+=	font.properties
+SFILES+=	font.properties.ja
+SFILES+=	images/cursors/cursors.properties
+SFILES+=	security/java.security
+
+SUPPORT_FILES=	# empty
+.for f in ${SFILES}
+SUPPORT_FILES+=	${PREFIX}/jre/lib/$f.default ${PREFIX}/jre/lib/$f
+.endfor
 
 BOOTSTRAP_DF=	j2sdk-1.2.2-FCS-linux-i386-glibc-2.1.3.tar.bz2
 
@@ -120,22 +125,18 @@ pre-patch:
 	@${FIND} ${WRKSRC} -name '*.orig' | ${XARGS} ${RM} -f
 
 post-build:
-	@${ECHO_MSG} '=== Sun-style release bundle ".sh" files are now available'
-	@${ECHO_MSG} '=== in the following directory:'
-	@${ECHO_MSG} '=== ${WRKSRC}/build/bsd'
-
-# Extracts from the .sh file, then flattens one directory, and
-# fixes .so files to be symlinks.
-do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}
-	cd ${PREFIX} && ${ECHO} 'yes' | ${WRKSRC}/build/bsd/jdk-1.2.2-bsd-i386.sh >/dev/null
-	${MV} ${PREFIX}/jdk1.2.2/* ${PREFIX}/
-	${RMDIR} ${PREFIX}/jdk1.2.2
-	@for f in `find ${PREFIX} -name '*.so'`; do \
+	@for f in `find ${BUILD_DIRS}/jdk-image-${MACHINE_ARCH} -name '*.so'`; do \
 		if [ -f $$f.1.2.2 ]; then \
 			${LN} -sf `basename $$f.1.2.2` $$f; \
 		else true; fi; \
 	done
+.for f in ${SFILES}
+	cd ${BUILD_DIRS}/jdk-image-${MACHINE_ARCH}/jre/lib && ${MV} -f $f $f.default
+.endfor
+
+do-install:
+	${INSTALL_PROGRAM_DIR} ${PREFIX}
+	cd ${BUILD_DIRS}/jdk-image-${MACHINE_ARCH} && ${PAX} -rw . ${PREFIX}
 
 .include "../../mk/motif.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
