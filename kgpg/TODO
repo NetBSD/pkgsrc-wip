@@ -1,5 +1,0 @@
-$Id: TODO,v 1.1.1.1 2003/05/13 19:07:18 ingolf Exp $
-
-- Remove @comment @dirrm from PLIST
-- Make i18n work
-- There's a double-free when terminating the program.
