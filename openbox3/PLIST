@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/29 15:50:10 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/29 19:10:23 jmmv Exp $
 bin/kdetrayproxy
 bin/obconf
 bin/openbox
@@ -93,6 +93,6 @@ share/openbox/themes/thebear/themerc
 @dirrm share/openbox/themes/BBstylE
 @dirrm share/openbox/themes
 @dirrm share/openbox
-@dirrm share/gnome/wm-properties
+@comment in gnome2-dirs: @dirrm share/gnome/wm-properties
 @dirrm lib/openbox/plugins
 @dirrm lib/openbox
