@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1682 2005/03/12 23:43:14 jcflack Exp $
-# $NetBSD: Makefile,v 1.1682 2005/03/12 23:43:14 jcflack Exp $
+# $Id: Makefile,v 1.1683 2005/03/13 12:43:52 obache Exp $
+# $NetBSD: Makefile,v 1.1683 2005/03/13 12:43:52 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -451,6 +451,7 @@ SUBDIR+=	libticables
 SUBDIR+=	libticalcs
 SUBDIR+=	libtifiles
 SUBDIR+=	libtlen2
+SUBDIR+=	libupnp
 SUBDIR+=	libuuid
 SUBDIR+=	libvg
 SUBDIR+=	libvncserver
