@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2003/08/07 21:54:48 adrian_p Exp $
+$NetBSD: patch-af,v 1.5 2003/12/20 11:48:18 marttikuparinen Exp $
 
---- configure.orig	Wed May 14 21:24:53 2003
-+++ configure	Thu Jul 10 23:31:59 2003
-@@ -20795,27 +20795,11 @@
+--- configure.orig	2003-12-14 21:24:06.000000000 +0000
++++ configure	2003-12-20 12:09:09.000000000 +0000
+@@ -20886,27 +20886,11 @@
  
  echo "$as_me:$LINENO: checking for ORBit" >&5
  echo $ECHO_N "checking for ORBit... $ECHO_C" >&6
@@ -30,7 +30,7 @@ $NetBSD: patch-af,v 1.4 2003/08/07 21:54:48 adrian_p Exp $
  
  
  
-@@ -20999,7 +20983,6 @@
+@@ -21140,7 +21124,6 @@
  else
    bench_dirs=""
  fi
