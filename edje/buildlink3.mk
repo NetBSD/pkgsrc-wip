@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/09/16 17:41:00 airhead Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/15 14:53:19 tvierling Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EDJE_BUILDLINK3_MK:=	${EDJE_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS.edje+=	edje>=0.5.0
 BUILDLINK_PKGSRCDIR.edje?=	../../wip/edje
 .endif	# EDJE_BUILDLINK3_MK
 
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../wip/eet/buildlink3.mk"

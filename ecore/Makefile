@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/16 15:39:59 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/15 14:53:18 tvierling Exp $
 #
 
 DISTNAME=		ecore-1.0.0_pre7
@@ -16,7 +16,7 @@ USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
 
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../wip/evas/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

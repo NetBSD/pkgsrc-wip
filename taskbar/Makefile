@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/09/23 06:00:03 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/15 14:53:21 tvierling Exp $
 #
 
 DISTNAME=		taskbar-1.0.3
@@ -24,5 +24,5 @@ post-install:
 
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

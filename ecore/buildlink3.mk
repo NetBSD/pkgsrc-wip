@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/09/16 15:42:50 airhead Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/15 14:53:18 tvierling Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ECORE_BUILDLINK3_MK:=	${ECORE_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS.ecore+=	ecore>=1.0.0nb1
 BUILDLINK_PKGSRCDIR.ecore?=	../../wip/ecore
 .endif	# ECORE_BUILDLINK3_MK
 
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../wip/evas/buildlink3.mk"
 

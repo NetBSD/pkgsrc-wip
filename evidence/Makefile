@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/16 22:26:07 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/15 14:53:20 tvierling Exp $
 #
 
 DISTNAME=		evidence-0.9.8
@@ -57,7 +57,7 @@ CONFIGURE_ARGS+=        --disable-${val}
 CONFIGURE_ARGS+=	--disable-${val}
 .endfor
 
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/13 09:01:35 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/15 14:53:20 tvierling Exp $
 #
 
 DISTNAME=		evas-1.0.0_pre13
@@ -16,7 +16,7 @@ USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
 
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../databases/edb/buildlink3.mk"
 .include "../../devel/eet/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

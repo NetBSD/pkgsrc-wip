@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/09/17 10:21:16 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/15 14:53:20 tvierling Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EVAS_BUILDLINK3_MK:=	${EVAS_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS.evas+=	evas>=1.0.0nb1
 BUILDLINK_PKGSRCDIR.evas?=	../../wip/evas
 .endif	# EVAS_BUILDLINK3_MK
 
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../databases/edb/buildlink3.mk"
 .include "../../wip/eet/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/01 05:19:40 blef Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/15 14:53:21 tvierling Exp $
 #
 
 DISTNAME=	palm-db-tools-0_3_4
@@ -20,5 +20,5 @@ CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
 WRKSRC=		${WRKDIR}/palm-db-tools
 
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
