@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.923 2004/02/02 02:20:37 dawszy Exp $
-# $NetBSD: Makefile,v 1.923 2004/02/02 02:20:37 dawszy Exp $
+# $Id: Makefile,v 1.924 2004/02/02 02:41:30 dawszy Exp $
+# $NetBSD: Makefile,v 1.924 2004/02/02 02:41:30 dawszy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -122,6 +122,7 @@ SUBDIR+=	ed2k-gtk-gui
 SUBDIR+=	eic
 SUBDIR+=	emirror
 SUBDIR+=	entropy
+SUBDIR+=	etpan-ng
 SUBDIR+=	ezbounce
 SUBDIR+=	fakenes
 SUBDIR+=	festival-gaim
@@ -293,6 +294,7 @@ SUBDIR+=	libXt
 SUBDIR+=	libXv
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
+SUBDIR+=	libetpan
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgringotts
 SUBDIR+=	libhydrogen
