@@ -1,0 +1,4 @@
+$Id: TODO,v 1.1 2004/02/12 07:30:12 minskim Exp $
+
+* Do not use bash.
+* Use PKG_GROUPS.  See 10.22 in Packages.txt.
