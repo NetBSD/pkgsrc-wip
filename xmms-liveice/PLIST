@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/03 17:28:47 xtraeme Exp $
+lib/xmms/Effect/libliveice.a
+lib/xmms/Effect/libliveice.la
+lib/xmms/Effect/libliveice.so
