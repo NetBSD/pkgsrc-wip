@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/03 15:31:33 cubidou Exp $
+$NetBSD: patch-aa,v 1.2 2003/05/14 10:14:03 cubidou Exp $
 
 --- Makefile.orig	2003-01-18 20:59:09.000000000 +0100
 +++ Makefile
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/03 15:31:33 cubidou Exp $
  
  FLAGS = -O2 -Wall -fPIC $(GTK_CFLAGS) $(GKRELLM_INCLUDE)
 -LIBS = $(GTK_LIB)
-+LIBS = $(GTK_LIB) -lossaudio
++LIBS = $(GTK_LIB) $(LIBOSSAUDIO)
  LFLAGS = -shared
  
  PACKAGE ?= gkrellm-volume
