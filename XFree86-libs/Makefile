@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/09/01 23:57:53 blef Exp $
+# $NetBSD: Makefile,v 1.13 2003/10/22 18:23:18 jeremy-c-reed Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-libs-${XF_VER}
@@ -23,10 +23,6 @@ XINSTALL_DIRS=		include lib nls programs/Xserver/include \
 XINSTALL_MAN_DIRS=	${XINSTALL_DIRS}
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
-PLIST_SRC+=	${.CURDIR}/PLIST.DRI
-.endif
 
 post-patch:
 	${SED} -e 's,@MAKESTRS@,${X11BASE}/bin/makestrs,g' \
