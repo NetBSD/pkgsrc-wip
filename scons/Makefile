@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/02/18 03:33:17 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/09 19:02:56 marc Exp $
 #
 
-DISTNAME=		scons-0.94
+DISTNAME=		scons-0.95
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scons/}
 
