@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/16 07:17:22 ura Exp $
+bin/bsfilter
+share/examples/bsfilter/bsfilter.conf.sample
+share/examples/bsfilter/dot-qmail.sample
+share/examples/bsfilter/mda/maildrop/mailfilter.header
+share/examples/bsfilter/mda/procmail/procmailrc.black_gray
+share/examples/bsfilter/mda/procmail/procmailrc.header
+share/examples/bsfilter/mda/procmail/procmailrc.status
+share/examples/bsfilter/mua/mew3/bs_clean
+share/examples/bsfilter/mua/mew3/bs_mark
+share/examples/bsfilter/mua/mew3/bs_spam
+share/examples/bsfilter/mua/mew3/mew.el
+@dirrm share/examples/bsfilter/mda/maildrop
+@dirrm share/examples/bsfilter/mda/procmail
+@dirrm share/examples/bsfilter/mda
+@dirrm share/examples/bsfilter/mua/mew3
+@dirrm share/examples/bsfilter/mua
+@dirrm share/examples/bsfilter
