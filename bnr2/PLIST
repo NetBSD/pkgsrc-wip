@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/18 17:02:47 tvierling Exp $
+bin/bnr2
+lib/bnr2/BNR2
+lib/bnr2/libborqt-6.9-qt2.3.so
+lib/bnr2/libborqt-6.9.0-qt2.3.so
+share/doc/bnr2/bnr2a.png
+share/doc/bnr2/changes.txt
+share/doc/bnr2/shutdown-readme.txt
+@dirrm share/doc/bnr2
+@dirrm lib/bnr2
