@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/01/23 21:39:28 marc Exp $
+# $NetBSD: Makefile,v 1.7 2005/01/26 16:04:25 thomasklausner Exp $
 
 DISTNAME=	mod_python-3.1.3
 CATEGORIES=	www python
@@ -22,5 +22,5 @@ PYTHON_VERSIONS_ACCEPTED= 23
 .include "../../lang/python/extension.mk"
 .include "../../www/apache2/buildlink3.mk"
 
-.include "../../mk/read.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
