@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/11 16:13:31 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/03 19:12:28 tnn2 Exp $
 #
 
 DISTNAME=	mrxvt-0.3.13
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=materm/}
 
 MAINTAINER=	tnn@netilium.org
 HOMEPAGE=	http://materm.sourceforge.net/
-COMMENT=	Multi-tabbed terminal emulator with Xft support
+COMMENT=	Multi-tabbed terminal emulator (development version)
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
