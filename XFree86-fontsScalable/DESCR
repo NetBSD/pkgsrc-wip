@@ -1,6 +1,2 @@
-This package contains following scalable fonts:
-
-CID fonts
-PEX fonts
-Speedo fonts
-Type1 fonts
+This XFree86-fontsScalable package contains scalable fonts,
+including CID, PEX, Speedo, and Type1 fonts.
