@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/08/19 07:35:48 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/10/07 16:33:03 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use freeglut.
 #
@@ -18,8 +18,6 @@ BUILDLINK_FILES.freeglut+=	include/GL/freeglut.h
 BUILDLINK_FILES.freeglut+=	include/GL/freeglut_ext.h
 BUILDLINK_FILES.freeglut+=	include/GL/glut.h
 BUILDLINK_FILES.freeglut+=	lib/libglut.*
-
-.include "../../graphics/MesaLib/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	freeglut-buildlink
 
