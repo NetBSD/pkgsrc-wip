@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/15 23:18:08 mpasternak Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/01 16:03:29 mpasternak Exp $
 #
 
 DISTNAME=      	gtk2-theme-pack
@@ -121,7 +121,7 @@ DEPENDS+=	gtk2-engines-industrial>=0:../../wip/gtk2-engines-industrial
 DEPENDS+=	gtk2-engines-lighthouseblue>=0.4:../../wip/gtk2-engines-lighthouseblue
 DEPENDS+=	gtk2-engines-magichicken>=1.0.2:../../wip/gtk2-engines-magichicken
 DEPENDS+=	gtk2-engines-mist>=0.10:../../wip/gtk2-engines-mist
-DEPENDS+=	gtk2-engines-smooth>=0:../../wip/gtk2-engines-smooth
+DEPENDS+=	gtk2-engines-smooth>=0.5.6:../../wip/gtk2-engines-smooth
 
 NO_BUILD=      	# defined
 
