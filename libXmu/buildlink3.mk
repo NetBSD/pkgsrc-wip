@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/05/09 04:16:08 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/06/13 15:04:40 minskim Exp $
 #
 # This Makefile fragment is included by packages that use libXmu.
 #
@@ -18,11 +18,8 @@ BUILDLINK_DEPENDS.libXmu+=		libXmu>=6.2.1nb2
 BUILDLINK_PKGSRCDIR.libXmu?=		../../wip/libXmu
 .endif # LIBXMU_BUILDLINK3_MK
 
-.include "../../wip/libXt/buildlink3.mk"
-.include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXext/buildlink3.mk"
-.include "../../x11/xextensions/buildlink3.mk"
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../wip/libXt/buildlink3.mk"
 
 # libXmu uses libXext's XShapeCombineMask()
 LDFLAGS+=	-lXext

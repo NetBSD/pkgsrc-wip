@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2004/06/13 15:04:40 minskim Exp $
+
+--- EditresCom.c.orig	2004-05-06 19:19:04.000000000 -0500
++++ EditresCom.c
+@@ -40,7 +40,6 @@ in this Software without prior written a
+ #include <X11/Xatom.h>
+ #include <X11/Xos.h>		/* for strcpy declaration */
+ #include <X11/Xfuncs.h>
+-#include <X11/Xaw/Cardinals.h>
+ #include <X11/Xmu/EditresP.h>
+ #include <X11/Xmd.h>
+ #include <X11/Xmu/CharSet.h>
