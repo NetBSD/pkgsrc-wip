@@ -1,0 +1,9 @@
+This is an early development version of a set of tools for converting
+between various flat file formats and several common Palm OS database
+files. Currently it creates two tools:
+
+csv2pdb - Convert a comma separated values text file to a Palm DB file
+pdb2csv - Convert a Palm DB file to a comma separated values text file
+
+No man page for these tools yet, but a text description is installed
+in ${LOCALBASE}/share/palm-db-tools/manual.txt
