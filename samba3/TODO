@@ -1,3 +1,6 @@
+When samba version three is in real pksgrc use "samba" as directory
+name (and not samba3). And maybe reimport samba as samba2?
+
 Update to 3.0.1.
 
 pkglint says:
