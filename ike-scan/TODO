@@ -1,5 +1,0 @@
-$Id: TODO,v 1.6 2004/02/12 02:52:20 minskim Exp $
-
-* PLIST is incomplete.
-* The man page should show the actual paths to data files, not those
-  in /usr/local.
