@@ -1,19 +1,7 @@
-1) Install example configuration. Look in contrib/ directory.
+1) Patch man page for paths (use sed in pre-install)
+	I really don't know how to do this. I looked at pkgsrc/mk/subst.mk,
+	but I still don't understand it.
 
-	Been done for awhile. This release was supposed to have
-	the NetBSD config file at http://othyro.freeshell.org/prngd.conf,
-	but for some reason, Lutz neglected to include it in this release.
-
-2) Have MESSAGE about entropy.
-
-	Done. Maybe the word-smiths would want to tweak it up.
-
-3) Is this okay? RANDSAVENAME="/var/db/prngd-seed"
-	
-	Some say that's okay. Maybe use BUILD_DEFS if necessary.
-
-4) Patch man page for paths (use sed in pre-install)
-	I really don't know how to do this. I looked at pkgsrc/mk/subst.mk, but I still don't understand it.
-
-5) The prngd.pod doesn't get converted to prngd.man as in the previous version 0.9.27, so the install of
-	prngd-0.9.28 breaks. It does, however, build fine, as did 0.9.27.
+2) Still waiting for Lutz to `make man' before packaging this release.
+	The Makefile has a commented entry for now,
+	just so this pkg can be installed.
