@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/01 22:22:18 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/01 22:24:15 minskim Exp $
 #
 
 DISTNAME=		libXv-2.2.1
@@ -10,13 +10,15 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://xlibs.freedesktop.org/
 COMMENT=		Xv Extension library
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xv.pc.in
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 
-.include "../../wip/libX11/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../wip/libX11/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
