@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/17 18:07:11 xtraeme Exp $
+bin/qico
+${QCC}bin/qcc
+etc/rc.d/qico
+share/examples/qico/qico.conf
+@dirrm share/examples/qico
