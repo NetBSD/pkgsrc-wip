@@ -1,0 +1,9 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/30 15:10:44 poppnk Exp $
+--- scripts/Makefile.no-setup.orig	2004-09-30 04:53:46.000000000 -0400
++++ scripts/Makefile.no-setup	2004-09-30 04:53:57.000000000 -0400
+@@ -1,5 +1,4 @@
+ SUPPORT_DIRS	=	 \
+-			./support/openal/ \
+ 			./support/glpng/src
+ 
+ CHROMIUM_DIRS	=	\
