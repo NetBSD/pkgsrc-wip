@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/10 14:33:30 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/10 22:06:32 blef Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-carbon-21.3.50
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	Darwin-*-*
 
 CONFLICTS=	mule-[0-9]*
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
