@@ -1,0 +1,28 @@
+--- config/cf/linux.cf.in.orig	2003-07-24 02:01:16.000000000 +0200
++++ config/cf/linux.cf.in	2003-07-24 02:04:38.000000000 +0200
+@@ -555,14 +555,14 @@
+ #  if defined (i386Architecture) && ((GccMajorVersion >3) \
+    || ((GccMajorVersion == 3) &&  (GccMinorVersion >= 1)))
+ #   ifndef CcCmd
+-#    define CcCmd		gcc -m32
++#    define CcCmd		@@PKGSRC_CC@@
+ #   endif
+ #   ifndef CplusplusCmd
+ #    define CplusplusCmd		c++ -m32
+ #   endif
+ #  endif
+ #  ifndef CcCmd
+-#   define CcCmd		gcc
++#   define CcCmd		@@PKGSRC_CC@@
+ #   define CplusplusCmd		c++
+ #  endif
+ #  ifndef AsCmd
+@@ -775,7 +775,7 @@
+ 
+ #ifdef i386Architecture
+ # ifndef OptimizedCDebugFlags
+-#  define OptimizedCDebugFlags	DefaultGcc2i386Opt
++#  define OptimizedCDebugFlags	@@PKGSRC_CFLAGS@@
+ # endif
+ # define LinuxMachineDefines	-D__i386__
+ # define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DPART_NET
