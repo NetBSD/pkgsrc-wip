@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/29 15:31:54 poppnk Exp $
+bin/dnswalk
+bin/makereports
+bin/sendreports
+man/man1/dnswalk.1
