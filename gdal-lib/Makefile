@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/03/28 17:10:06 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/30 17:03:11 daprice Exp $
 #
 
-DISTNAME=		gdal-1.2.5
+DISTNAME=		gdal-lib-1.2.5
 CATEGORIES=		wip
 MASTER_SITES=		http://gdal.org/dl/
 
