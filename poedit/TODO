@@ -1,17 +1,8 @@
-$Id: TODO,v 1.1 2003/04/06 20:55:09 lsed Exp $
+$Id: TODO,v 1.2 2003/04/17 13:17:24 xtraeme Exp $
 
 
 salo@netbsd.org:
 
- 1) remove trailing whitespace from DISTNAME:
- 
-    WARN: ./Makefile 4: whitespace before end of line.
-    FATAL: version number part of PKGNAME, which is derived from
-           DISTNAME, looks illegal. You should modify "-1.2.1
- 
- 2) missing build dependency on archivers/zip
- 
- 3) don't use USE_X11BASE unless you know why you are doing it :)
  
  4) make sure when GNOME and/or KDE is installed (i don't have any of
     them installed), the configure DTRT:
@@ -29,6 +20,3 @@ salo@netbsd.org:
      *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** 
      Cannot find Berkeley DB >= 3.1, poEdit will build w/o translation memory feature!
      *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** 
- 
- 6) i'd sort CATEGORIES, it's still an editor, not matter how specific so
-    i'd say it should go to editors/
