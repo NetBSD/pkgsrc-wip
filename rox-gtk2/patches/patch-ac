@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/12/04 21:33:00 froz Exp $
+
+--- type.c.orig	2003-05-22 14:09:27.000000000 +0100
++++ type.c
+@@ -1196,7 +1196,7 @@ static char **get_xdg_data_dirs(int *n_d
+ 
+ 	env = getenv("XDG_DATA_DIRS");
+ 	if (!env)
+-		env = "/usr/local/share/:/usr/share/";
++		env = "/usr/local/share/:/usr/share/:@PREFIX@/share/";
+ 	dirs = g_strsplit(env, ":", 0);
+ 	g_return_val_if_fail(dirs != NULL, NULL);
+ 	for (n = 0; dirs[n]; n++)
+@@ -1345,6 +1345,12 @@ static void find_comment(MIME_type *type
+ 	if (type->comment)
+ 		return;
+ 
++	path = g_strdup_printf("@PREFIX@/share/mime/%s/%s.xml",
++			type->media_type, type->subtype);
++        get_comment(type, path);
++        if (type->comment)
++		return;
++
+ 	path = g_strdup_printf("/usr/local/share/mime/%s/%s.xml",
+ 			type->media_type, type->subtype);
+ 	get_comment(type, path);
