@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/05/07 21:57:04 poppnk Exp $
+
+--- Makefile	2003-04-27 17:52:39.000000000 +0000
++++ Makefile.old	2003-04-27 17:45:24.000000000 +0000
+@@ -1,6 +1,6 @@
+ cc       = g++
+ #cflags   = -g -O2 -W -Wall
+-cflags	 = -g -O2
++cflags	 = `imlib-config --cflags` `xft-config --cflags` -O3
+ libs	 = `imlib-config --libs` -lXft
+ bin      = idesk
+ 
+@@ -17,7 +17,7 @@
+ 	$(cc) $(cflags) -c $< -o $@
+ 
+ install:
+-	install $(bin) /usr/local/bin
++	install $(bin) ${PREFIX}/bin
+ 
+ clean:
+ 	rm -f $(objs) $(bin) *~ core
