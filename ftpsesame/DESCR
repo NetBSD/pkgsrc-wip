@@ -3,11 +3,11 @@ this by passively analysing FTP control connections and adding rules into a
 pf(4) anchor when an FTP data connection is about to commence.
 
 You might want to try ftpsesame instead of ftp-proxy(8) for the
-following reasons: 
+following reasons:
 
-* it runs on "transparent" (no IP address) bridges 
-* you need packetfilter performance on all data connections 
-* you have to handle lots of simultaneous sessions 
+* it runs on "transparent" (no IP address) bridges
+* you need packetfilter performance on all data connections
+* you have to handle lots of simultaneous sessions
 * you do not want to redirect any traffic to the firewall itself:
   for IP accounting or other reasons
 
