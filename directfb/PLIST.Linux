@@ -1,0 +1,141 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2003/06/03 04:08:04 xtraeme Exp $
+bin/dfbdump
+bin/dfbg
+bin/dfbinfo
+bin/directfb-config
+bin/directfb-csource
+include/directfb/dfb_types.h
+include/directfb/directfb.h
+include/directfb/directfb_keyboard.h
+include/directfb/directfb_keynames.h
+include/directfb/directfb_version.h
+include/directfb-internal/core/clipboard.h
+include/directfb-internal/core/colorhash.h
+include/directfb-internal/core/coredefs.h
+include/directfb-internal/core/core.h
+include/directfb-internal/core/core_parts.h
+include/directfb-internal/core/core_system.h
+include/directfb-internal/core/coretypes.h
+include/directfb-internal/core/fbdev/fbdev.h
+include/directfb-internal/core/fbdev/vt.h
+include/directfb-internal/core/fonts.h
+include/directfb-internal/core/fusion/arena.h
+include/directfb-internal/core/fusion/call.h
+include/directfb-internal/core/fusion/fusion.h
+include/directfb-internal/core/fusion/fusion_types.h
+include/directfb-internal/core/fusion/list.h
+include/directfb-internal/core/fusion/lock.h
+include/directfb-internal/core/fusion/object.h
+include/directfb-internal/core/fusion/property.h
+include/directfb-internal/core/fusion/reactor.h
+include/directfb-internal/core/fusion/ref.h
+include/directfb-internal/core/fusion/shmalloc.h
+include/directfb-internal/core/gfxcard.h
+include/directfb-internal/core/graphics_driver.h
+include/directfb-internal/core/input_driver.h
+include/directfb-internal/core/input.h
+include/directfb-internal/core/layers.h
+include/directfb-internal/core/modules.h
+include/directfb-internal/core/palette.h
+include/directfb-internal/core/sig.h
+include/directfb-internal/core/state.h
+include/directfb-internal/core/surfacemanager.h
+include/directfb-internal/core/surfaces.h
+include/directfb-internal/core/system.h
+include/directfb-internal/core/thread.h
+include/directfb-internal/core/windows.h
+include/directfb-internal/directfb_internals.h
+include/directfb-internal/display/idirectfbdisplaylayer.h
+include/directfb-internal/display/idirectfbpalette.h
+include/directfb-internal/display/idirectfbsurface.h
+include/directfb-internal/display/idirectfbsurface_layer.h
+include/directfb-internal/display/idirectfbsurface_window.h
+include/directfb-internal/gfx/clip.h
+include/directfb-internal/gfx/convert.h
+include/directfb-internal/gfx/util.h
+include/directfb-internal/idirectfb.h
+include/directfb-internal/input/idirectfbinputbuffer.h
+include/directfb-internal/input/idirectfbinputdevice.h
+include/directfb-internal/interface_implementation.h
+include/directfb-internal/media/idirectfbdatabuffer.h
+include/directfb-internal/media/idirectfbfont.h
+include/directfb-internal/media/idirectfbimageprovider.h
+include/directfb-internal/media/idirectfbvideoprovider.h
+include/directfb-internal/misc/conf.h
+include/directfb-internal/misc/cpu_accel.h
+include/directfb-internal/misc/gfx_util.h
+include/directfb-internal/misc/memcpy.h
+include/directfb-internal/misc/mem.h
+include/directfb-internal/misc/tree.h
+include/directfb-internal/misc/utf8.h
+include/directfb-internal/misc/util.h
+include/directfb-internal/windows/idirectfbwindow.h
+lib/${PKGNAME}/gfxdrivers/libdirectfb_ati128.la
+lib/${PKGNAME}/gfxdrivers/libdirectfb_ati128.so
+lib/${PKGNAME}/gfxdrivers/libdirectfb_cyber5k.la
+lib/${PKGNAME}/gfxdrivers/libdirectfb_cyber5k.so
+lib/${PKGNAME}/gfxdrivers/libdirectfb_matrox.la
+lib/${PKGNAME}/gfxdrivers/libdirectfb_matrox.so
+lib/${PKGNAME}/gfxdrivers/libdirectfb_neomagic.la
+lib/${PKGNAME}/gfxdrivers/libdirectfb_neomagic.so
+lib/${PKGNAME}/gfxdrivers/libdirectfb_nsc.la
+lib/${PKGNAME}/gfxdrivers/libdirectfb_nsc.so
+lib/${PKGNAME}/gfxdrivers/libdirectfb_nvidia.la
+lib/${PKGNAME}/gfxdrivers/libdirectfb_nvidia.so
+lib/${PKGNAME}/gfxdrivers/libdirectfb_tdfx.la
+lib/${PKGNAME}/gfxdrivers/libdirectfb_tdfx.so
+lib/${PKGNAME}/inputdrivers/libdirectfb_joystick.la
+lib/${PKGNAME}/inputdrivers/libdirectfb_joystick.so
+lib/${PKGNAME}/inputdrivers/libdirectfb_keyboard.la
+lib/${PKGNAME}/inputdrivers/libdirectfb_keyboard.so
+lib/${PKGNAME}/inputdrivers/libdirectfb_lirc.la
+lib/${PKGNAME}/inputdrivers/libdirectfb_lirc.so
+lib/${PKGNAME}/inputdrivers/libdirectfb_ps2mouse.la
+lib/${PKGNAME}/inputdrivers/libdirectfb_ps2mouse.so
+lib/${PKGNAME}/inputdrivers/libdirectfb_serialmouse.la
+lib/${PKGNAME}/inputdrivers/libdirectfb_serialmouse.so
+lib/${PKGNAME}/inputdrivers/libdirectfb_sonypi.la
+lib/${PKGNAME}/inputdrivers/libdirectfb_sonypi.so
+lib/${PKGNAME}/interfaces/IDirectFBFont/libidirectfbfont_default.la
+lib/${PKGNAME}/interfaces/IDirectFBFont/libidirectfbfont_default.so
+lib/${PKGNAME}/interfaces/IDirectFBFont/libidirectfbfont_ft2.la
+lib/${PKGNAME}/interfaces/IDirectFBFont/libidirectfbfont_ft2.so
+lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_gif.la
+lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_gif.so
+lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_jpeg.la
+lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_jpeg.so
+lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_mpeg2.la
+lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_mpeg2.so
+lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_png.la
+lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_png.so
+lib/${PKGNAME}/interfaces/IDirectFBVideoProvider/libidirectfbvideoprovider_v4l.la
+lib/${PKGNAME}/interfaces/IDirectFBVideoProvider/libidirectfbvideoprovider_v4l.so
+lib/libdirectfb-0.9.so.18
+lib/libdirectfb-0.9.so.18.0.0
+lib/libdirectfb.la
+lib/libdirectfb.so
+lib/pkgconfig/directfb-internal.pc
+lib/pkgconfig/directfb.pc
+man/man1/dfbg.1
+man/man1/directfb-csource.1
+man/man5/directfbrc.5
+share/${PKGNAME}/cursor.dat
+@dirrm share/${PKGNAME}
+@dirrm lib/${PKGNAME}/interfaces/IDirectFBVideoProvider
+@dirrm lib/${PKGNAME}/interfaces/IDirectFBImageProvider
+@dirrm lib/${PKGNAME}/interfaces/IDirectFBFont
+@dirrm lib/${PKGNAME}/interfaces
+@dirrm lib/${PKGNAME}/inputdrivers
+@dirrm lib/${PKGNAME}/gfxdrivers
+@dirrm lib/${PKGNAME}
+@dirrm include/directfb-internal/windows
+@dirrm include/directfb-internal/misc
+@dirrm include/directfb-internal/media
+@dirrm include/directfb-internal/input
+@dirrm include/directfb-internal/gfx
+@dirrm include/directfb-internal/display
+@dirrm include/directfb-internal/core/fusion
+@dirrm include/directfb-internal/core/fbdev
+@dirrm include/directfb-internal/core
+@dirrm include/directfb-internal
+@dirrm include/directfb
