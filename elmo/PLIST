@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/23 01:42:46 rockpiper Exp $
+bin/elmo
+bin/elmoconf.pl
+man/man1/elmo.1
+man/man1/elmoconf.pl.1
+share/elmo/tutorial
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/elmo.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/elmo.mo
+@dirrm share/elmo
