@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: oops.sh,v 1.1 2004/09/22 20:25:22 shattered Exp $
+#	$NetBSD: oops.sh,v 1.2 2004/10/01 18:55:59 shattered Exp $
 #
 # PROVIDE: oops
 # REQUIRE: DAEMON
@@ -14,22 +14,30 @@ ctl_command="@PREFIX@/sbin/${name}ctl"
 pidfile="/var/run/${name}/${name}.pid"
 required_files="@PREFIX@/etc/oops/oops.cfg"
 extra_commands="reload graceful"
+start_cmd=oops_start
+stop_cmd=oops_stop
+reload_cmd=oops_reload
+graceful_cmd=oops_graceful
 
 export PTHREAD_DIAGASSERT=AEl 
 
-start_cmd () {
+oops_start () {
+	if [ ! -d /var/run/${name} ]; then
+		mkdir /var/run/${name}
+		chown oops /var/run/${name}
+	fi
 	$ctl_command start
 }
 
-stop_cmd () {
+oops_stop () {
 	$ctl_command stop
 }
 
-reload_cmd () {
+oops_reload () {
 	$ctl_command reconfigure
 }
 
-graceful_cmd () {
+oops_graceful () {
 	$ctl_command graceful
 }
               
