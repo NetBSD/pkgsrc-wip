@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dovecot.sh,v 1.2 2003/05/06 21:13:27 lsed Exp $
+# $NetBSD: dovecot.sh,v 1.3 2003/05/13 04:16:28 lsed Exp $
 #
 
 # PROVIDE: dovecot
@@ -11,7 +11,6 @@
 name="dovecot"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
-pidfile="/var/run/${name}.pid"
 required_files="@PKG_SYSCONFDIR@/$name.conf"
 
 load_rc_config $name

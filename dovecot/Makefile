@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/06 22:34:55 lsed Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/13 04:16:28 lsed Exp $
 #
 
 DISTNAME=	dovecot-0.99.9.1
@@ -19,14 +19,27 @@ USE_PKGINSTALL= YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--enable-ssl=openssl
 
-.if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
+DOVECOT_USE_LDAP?=	NO
+
+.if !empty(DOVECOT_USE_LDAP:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-ldap
 .include "../../databases/openldap/buildlink2.mk"
 .endif
 
+DOVECOT_USE_PGSQL?=	NO
+
+.if !empty(DOVECOT_USE_PGSQL:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--with-pgsql
+CPPFLAGS=		-I${BUILDLINK_DIR}/include/pgsql
+.include "../../databases/postgresql-lib/buildlink2.mk"
+.endif
+
 .if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
+BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
@@ -42,6 +55,14 @@ CONF_FILES=	${EGDIR}/dovecot.conf.default ${PKG_SYSCONFDIR}/dovecot.conf
 
 PLIST_SRC=	${WRKDIR}/PLIST ${PKGDIR}/PLIST
 
+post-configure:
+	@cd ${WRKSRC} &&						\
+	(								\
+		${MV} dovecot-example.conf dovecot-example.conf.orig;	\
+		${SED} ${FILES_SUBST_SED} dovecot-example.conf.orig >	\
+			dovecot-example.conf;				\
+	)
+
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/dovecot-example.conf	\
@@ -51,4 +72,5 @@ post-install:
 	cd ${PREFIX} && ${FIND} libexec/dovecot -type f > ${WRKDIR}/PLIST
 
 .include "../../security/openssl/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
