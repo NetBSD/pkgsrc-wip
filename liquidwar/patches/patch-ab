@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/04/06 11:33:04 thomasklausner Exp $
+
+--- src/Makefile.in.orig	Mon Dec 16 10:55:47 2002
++++ src/Makefile.in
+@@ -10,7 +10,7 @@ ALCFLAGS =        @ALCFLAGS@
+ ALLIBS =          @ALLIBS@
+ ASM =             @ASM@
+ DEBUG =           @DEBUG@
+-PTHREAD =         @PTHREAD@
++PTHREAD =         -Wl,-R/usr/pkg/lib -L/usr/pkg/lib @PTHREAD@
+ 
+ ifeq ($(TARGET_OPT),yes)
+ 	TARGET =          @target@

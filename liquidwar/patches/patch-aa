@@ -1,0 +1,81 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/06 11:33:04 thomasklausner Exp $
+
+--- Makefile.in.orig	Mon Dec 16 10:55:46 2002
++++ Makefile.in
+@@ -100,8 +100,8 @@ install_nolink: install_bin install_data
+ install_bin: src/liquidwar src/liquidwar-server
+ 	@echo "Installing liquidwar binaries in $(GAMEDIR)."
+ 	@install -d $(DESTDIR)$(GAMEDIR)
+-	@install -s src/liquidwar $(DESTDIR)$(GAMEDIR)
+-	@install -s src/liquidwar-server $(DESTDIR)$(GAMEDIR)
++	@install -c -s src/liquidwar $(DESTDIR)$(GAMEDIR)
++	@install -c -s src/liquidwar-server $(DESTDIR)$(GAMEDIR)
+ 
+ install_link:
+ 	@echo "Installing link in $(BINDIR)."
+@@ -114,50 +114,50 @@ install_link:
+ install_data: data/liquidwar.dat
+ 	@echo "Installing liquidwar datafile in $(DATADIR)."
+ 	@install -d $(DESTDIR)$(DATADIR)
+-	@install -m 0644 data/liquidwar.dat $(DESTDIR)$(DATADIR)
++	@install -c -m 0644 data/liquidwar.dat $(DESTDIR)$(DATADIR)
+ 
+ install_custom_map: 
+ 	@echo "Installing liquidwar custom maps in $(DATADIR)/map."
+ 	@install -d $(DESTDIR)$(DATADIR)
+ 	@install -d $(DESTDIR)$(DATADIR)/map
+-	@install -m 0644 custom/map/*.* $(DESTDIR)$(DATADIR)/map
++	@install -c -m 0644 custom/map/*.* $(DESTDIR)$(DATADIR)/map
+ 
+ install_custom_texture: 
+ 	@echo "Installing liquidwar custom textures in $(DATADIR)/texture."
+ 	@install -d $(DESTDIR)$(DATADIR)
+ 	@install -d $(DESTDIR)$(DATADIR)/texture
+-	@install -m 0644 custom/texture/*.* $(DESTDIR)$(DATADIR)/texture
++	@install -c -m 0644 custom/texture/*.* $(DESTDIR)$(DATADIR)/texture
+ 
+ install_custom_music: 
+ 	@echo "Installing liquidwar custom musics in $(DATADIR)/music."
+ 	@install -d $(DESTDIR)$(DATADIR)
+ 	@install -d $(DESTDIR)$(DATADIR)/music
+-	@install -m 0644 custom/music/*.* $(DESTDIR)$(DATADIR)/music
++	@install -c -m 0644 custom/music/*.* $(DESTDIR)$(DATADIR)/music
+ 
+ install_doc:
+-	@if [ -f $(MAKE_DOC_DIR)/txt/rules.txt ]; then echo "Installing liquidwar plain text doc in $(DOCDIR)/txt."; install -d $(DESTDIR)$(DOCDIR)/txt; install -m 0644 $(MAKE_DOC_DIR)/txt/*.txt $(DESTDIR)$(DOCDIR)/txt; fi
+-	@if [ -f $(MAKE_DOC_DIR)/html/rules.html ]; then echo "Installing liquidwar HTML doc in $(DOCDIR)/html."; install -d $(DESTDIR)$(DOCDIR)/html; install -m 0644 $(MAKE_DOC_DIR)/html/*.html $(DESTDIR)$(DOCDIR)/html; fi
+-	@if [ -f $(MAKE_DOC_DIR)/man/liquidwar.6.gz ]; then echo "Installing liquidwar man page in $(MANDIR)."; install -d $(DESTDIR)$(MANDIR); install -m 0644 $(MAKE_DOC_DIR)/man/*.gz $(DESTDIR)$(MANDIR); fi
+-	@if [ -f $(MAKE_DOC_DIR)/info/liquidwar.info.gz ]; then echo "Installing info page $(INFODIR)/liquidwar.info.gz."; install -d $(DESTDIR)$(INFODIR); install -m 644 $(MAKE_DOC_DIR)/info/liquidwar.info* $(DESTDIR)$(INFODIR); if which install-info; then if test -d $(DESTDIR)$(INFODIRDIR); then if test -f $(DESTDIR)$(INFODIRDIR)/dir; then echo "Installing liquidwar info entry."; install-info --info-dir=$(DESTDIR)$(INFODIRDIR) $(MAKE_DOC_DIR)/info/liquidwar.info.gz; fi; fi; fi; fi
+-	@if [ -f $(MAKE_DOC_DIR)/ps/liquidwar.ps ]; then echo "Installing liquidwar PostScript doc in $(DOCDIR)/ps."; install -d $(DESTDIR)$(DOCDIR)/ps; install -m 0644 $(MAKE_DOC_DIR)/ps/*.ps $(DESTDIR)$(DOCDIR)/ps; fi
+-	@if [ -f $(MAKE_DOC_DIR)/pdf/liquidwar.pdf ]; then echo "Installing liquidwar PDF doc in $(DOCDIR)/pdf."; install -d $(DESTDIR)$(DOCDIR)/pdf; install -m 0644 $(MAKE_DOC_DIR)/pdf/*.pdf $(DESTDIR)$(DOCDIR)/pdf; fi
++	@if [ -f $(MAKE_DOC_DIR)/txt/rules.txt ]; then echo "Installing liquidwar plain text doc in $(DOCDIR)/txt."; install -d $(DESTDIR)$(DOCDIR)/txt; install -c -m 0644 $(MAKE_DOC_DIR)/txt/*.txt $(DESTDIR)$(DOCDIR)/txt; fi
++	@if [ -f $(MAKE_DOC_DIR)/html/rules.html ]; then echo "Installing liquidwar HTML doc in $(DOCDIR)/html."; install -d $(DESTDIR)$(DOCDIR)/html; install -c -m 0644 $(MAKE_DOC_DIR)/html/*.html $(DESTDIR)$(DOCDIR)/html; fi
++	@if [ -f $(MAKE_DOC_DIR)/man/liquidwar.6.gz ]; then echo "Installing liquidwar man page in $(MANDIR)."; install -d $(DESTDIR)$(MANDIR); install -c -m 0644 $(MAKE_DOC_DIR)/man/*.gz $(DESTDIR)$(MANDIR); fi
++	@if [ -f $(MAKE_DOC_DIR)/info/liquidwar.info.gz ]; then echo "Installing info page $(INFODIR)/liquidwar.info.gz."; install -d $(DESTDIR)$(INFODIR); install -c -m 644 $(MAKE_DOC_DIR)/info/liquidwar.info* $(DESTDIR)$(INFODIR); if which install-info; then if test -d $(DESTDIR)$(INFODIRDIR); then if test -f $(DESTDIR)$(INFODIRDIR)/dir; then echo "Installing liquidwar info entry."; install-info --info-dir=$(DESTDIR)$(INFODIRDIR) $(MAKE_DOC_DIR)/info/liquidwar.info.gz; fi; fi; fi; fi
++	@if [ -f $(MAKE_DOC_DIR)/ps/liquidwar.ps ]; then echo "Installing liquidwar PostScript doc in $(DOCDIR)/ps."; install -d $(DESTDIR)$(DOCDIR)/ps; install -c -m 0644 $(MAKE_DOC_DIR)/ps/*.ps $(DESTDIR)$(DOCDIR)/ps; fi
++	@if [ -f $(MAKE_DOC_DIR)/pdf/liquidwar.pdf ]; then echo "Installing liquidwar PDF doc in $(DOCDIR)/pdf."; install -d $(DESTDIR)$(DOCDIR)/pdf; install -c -m 0644 $(MAKE_DOC_DIR)/pdf/*.pdf $(DESTDIR)$(DOCDIR)/pdf; fi
+ 
+ install_icon:
+ 	@echo "Installing liquidwar icon in $(PIXDIR)."
+ 	@install -d $(DESTDIR)$(PIXDIR)
+-	@install -m 0644 misc/liquidwar.xpm $(DESTDIR)$(PIXDIR)
++	@install -c -m 0644 misc/liquidwar.xpm $(DESTDIR)$(PIXDIR)
+ 
+ install_gpl:
+ 	@echo "Installing GPL in $(DOCDIR)."
+ 	@install -d $(DESTDIR)$(DOCDIR)
+-	@install -m 0644 COPYING $(DESTDIR)$(DOCDIR)
++	@install -c -m 0644 COPYING $(DESTDIR)$(DOCDIR)
+ 
+ install_readme:
+ 	@echo "Installing README in $(DOCDIR)."
+ 	@install -d $(DESTDIR)$(DOCDIR)
+-	@install -m 0644 README $(DESTDIR)$(DOCDIR)
+-	@install -m 0644 README.fr $(DESTDIR)$(DOCDIR)
+-	@install -m 0644 README.de $(DESTDIR)$(DOCDIR)
++	@install -c -m 0644 README $(DESTDIR)$(DOCDIR)
++	@install -c -m 0644 README.fr $(DESTDIR)$(DOCDIR)
++	@install -c -m 0644 README.de $(DESTDIR)$(DOCDIR)
+ 
+ uninstall:
+ 	@echo "Removing binary $(GAMEDIR)/liquidwar."
