@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/29 13:56:42 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2004/05/14 13:59:24 thomasklausner Exp $
 
-SHA1 (Tk-TableMatrix-1.01.tar.gz) = 745425ba9099fa79b79982fcc41992ff5c566684
-Size (Tk-TableMatrix-1.01.tar.gz) = 188613 bytes
+SHA1 (Tk-TableMatrix-1.1.tar.gz) = f5f45161fa2180952e36732a2b714eb8d810def7
+Size (Tk-TableMatrix-1.1.tar.gz) = 316467 bytes
