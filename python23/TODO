@@ -1,3 +1,2 @@
 - PLIST.arch for all archs
-- patches for lang/python/*
 - install python2.3 only and pydoc as pydoc2.3 (?)
