@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/28 00:54:00 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/28 10:49:34 johnrshannon Exp $
 #
 
 SNAPDATE=	20040225
@@ -20,7 +20,17 @@ USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=        --enable-languages="c,ada"
+
+# An Ada compiler is required to build this pkg. Two
+may be used:
+#USE_GCC3	=# Define to use lang/gcc3-ada
+USE_GCC34	=# Define to use gcc-3.4-ada
+.if defined(USE_GCC3)
 BUILDLINK_ENV+=PATH=${PREFIX}/gcc3/bin:${PATH}
+.endif
+.if defined(USE_GCC34)
+BUILDLINK_ENV+=PATH=${PREFIX}/gcc-3.4-ada/bin:${PATH}
+.endif
 
 # Make location overridable, to allow ping-pong bootstraps.
 GCC34_DEFAULT_SUBPREFIX=	${PKGNAME_NOREV}
@@ -79,6 +89,11 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${GCC_PREFIX}/mk/ada.mk
 
 .include "../../mk/bsd.prefs.mk"
+.if defined(USE_GCC3)
 .include "../../lang/gcc3-ada/buildlink3.mk"
+.endif
+.if defined(USE_GCC34)
+.include "../../wip/gcc-3.4-ada/buildlink3.mk"
+.endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
