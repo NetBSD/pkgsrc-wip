@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/13 22:45:38 virtus Exp $
+
+--- Makefile.orig	2003-04-14 02:33:06.000000000 +0200
++++ Makefile	2003-04-14 02:34:04.000000000 +0200
+@@ -10,7 +10,7 @@
+ module=msn
+ 
+ # Installation paths
+-prefix=/usr
++prefix=/usr/pkg
+ exec_prefix=${prefix}
+ bindir=${exec_prefix}/bin
+ libdir=${prefix}/share/${name}
+@@ -42,7 +42,7 @@
+ # 2) make tar
+ # Then assuming the spec file & tar file are into the RPM tree
+ # 3)  rpm -bb --target noarch --clean amsn.spec
+-all: install
++all:
+ 
+ mkdirs:
+ 	echo "LIB $(libdir) DATA $(datadir) BIN $(bindir)" 
