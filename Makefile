@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1705 2005/03/27 21:23:57 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1705 2005/03/27 21:23:57 thomasklausner Exp $
+# $Id: Makefile,v 1.1706 2005/03/28 09:25:31 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.1706 2005/03/28 09:25:31 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -632,6 +632,7 @@ SUBDIR+=	p5-Cache-Mmap
 SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Convert-BinHex
 SUBDIR+=	p5-Crypt-SmbHash
+SUBDIR+=	p5-Curses-UI
 SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Devel-Profiler
 SUBDIR+=	p5-Encode-compat
