@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/23 23:36:50 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/25 14:21:34 minskim Exp $
 
 DISTNAME=	libpathan-1.2-2-src
 PKGNAME=	${DISTNAME:S/-2-src/.2/}
@@ -23,8 +23,7 @@ CONFIGURE_ARGS+=	XERCESCROOT=${LOCALBASE}
 CONFIGURE_ARGS+=	YACC=${LOCALBASE}/bin/bison
 
 pre-configure:
-	${CP} ${FILESDIR}/*.hpp \
-		/usr/pkgsrc/wip/libpathan/work/.buildlink/include/xercesc/dom/impl/
+	${CP} ${FILESDIR}/*.hpp ${BUILDLINK_DIR}/include/xercesc/dom/impl/
 
 BUILDLINK_DEPENDS.xerces-c=	xerces-c>=2.3.0
 .include "../../textproc/xerces-c/buildlink2.mk"
