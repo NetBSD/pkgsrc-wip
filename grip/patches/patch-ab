@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/05/28 01:53:14 xtraeme Exp $
+
+--- src/rip.c.orig	2003-05-28 03:14:58.000000000 +0200
++++ src/rip.c	2003-05-28 03:15:27.000000000 +0200
+@@ -27,7 +27,7 @@
+ #elif defined (HAVE_SYS_VFS_H)
+ #include <sys/vfs.h>
+ #endif
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <sys/param.h>
+ #include <sys/mount.h>
+ #endif

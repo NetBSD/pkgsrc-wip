@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/05/28 01:53:14 xtraeme Exp $
+
+--- src/cddev.c.orig	2003-05-28 03:33:34.000000000 +0200
++++ src/cddev.c	2003-05-28 03:37:31.000000000 +0200
+@@ -52,7 +52,7 @@
+ #define NON_BLOCKING
+ #endif
+ 
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+     #define CDIOREADSUBCHANNEL CDIOCREADSUBCHANNEL
+ #endif
+ 
