@@ -1,5 +1,5 @@
-#CONFIGURE_ARGS+=--disable-cgi
-#CONFIGURE_ARGS+=--disable-cli
+CONFIGURE_ARGS+=--disable-cgi
+CONFIGURE_ARGS+=--disable-cli
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/httpd/
