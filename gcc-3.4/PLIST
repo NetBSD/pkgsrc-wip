@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2004/04/18 12:59:10 johnrshannon Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/21 10:05:52 johnrshannon Exp $
 ${PKGNAME}/bin/addr2name.awk
 ${PKGNAME}/bin/c++
 ${PKGNAME}/bin/cc
@@ -2164,8 +2164,6 @@ ${PKGNAME}/info/gcc.info
 ${PKGNAME}/info/gccinstall.info
 ${PKGNAME}/info/gccint.info
 ${PKGNAME}/info/gcj.info
-${PKGNAME}/info/gnat-style.info
-${PKGNAME}/info/gnat_rm.info
 ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/${PKGVERSION}/adainclude/a-intnam.ads
 ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/${PKGVERSION}/adainclude/s-intman.adb
 ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/${PKGVERSION}/adainclude/s-osinte.adb

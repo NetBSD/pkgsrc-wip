@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/04/20 23:24:01 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/04/21 10:06:07 johnrshannon Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCC_BUILDLINK3_MK:=     ${GCC_BUILDLINK3_MK}+
@@ -25,7 +25,7 @@ BUILDLINK_ENV+=$PATH:=${BUILDLINK_PREFIX.gcc-3.4.0}:${PATH}
 
 # Packages that link against shared libraries need a full dependency.
 .  if defined(USE_GCC_SHLIB)
-BUILDLINK_DEPMETHOD.gcc-3.4.0+= full
+BUILDLINK_DEPMETHOD.gcc-3.4.0?= full
 .  else
 BUILDLINK_DEPMETHOD.gcc-3.4.0?= build
 .  endif
