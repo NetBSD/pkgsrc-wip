@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_info.c,v 1.3 2005/02/22 16:16:40 imilh Exp $ 
+ * $Id: pkg_info.c,v 1.4 2005/02/23 10:05:18 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -71,9 +71,18 @@ pkg_popup(WINDOW *win, char *path, char *pkg,
 
 		/* make action */
 		if ((*action == 'i' || *action == 'u' || *action == 'd') && 
-		    (rep != 'r'))
-				PKGSRC_MAKE(action, path);
+		    (rep != 'r')) {
+			if ((env = getenv("PKG_PATH")) != NULL)
+				/* unset PKG_PATH so make <action> 
+				   does not complain */
+				unsetenv("PKG_PATH");
 
+			PKGSRC_MAKE(action, path);
+			
+			/* restore PKG_PATH */
+			if (env != NULL)
+				setenv("PKG_PATH", env, 1);
+		}
 		/* pkg_* action */
 		if (*action == 'a') {
 			env = getenv("PKG_PATH");
@@ -129,7 +138,8 @@ info_win(WINDOW *win, char *pkg, char *path)
 {
 	int ret, c, line_index, msv, len;
 	struct cf *file;
-	char buf[MAXLEN], *homepage, *comment, *distname, *version;
+	char buf[MAXLEN], *homepage, *comment, 
+		*distname, *version, *maintainer;
 	WINDOW *popup;
 
 	snprintf(buf, MAXLEN, "%s/MESSAGE", path);
@@ -153,6 +163,7 @@ info_win(WINDOW *win, char *pkg, char *path)
 		/* get values from Makefile slist */
 		distname = getval(file, "DISTNAME=");
 		homepage = getval(file, "HOMEPAGE=");
+		maintainer = getval(file, "MAINTAINER=");
 		comment = getcomment(file);
 		
 		msv = 0;
@@ -173,6 +184,7 @@ info_win(WINDOW *win, char *pkg, char *path)
 			distname = show_first_var(path, "DISTNAME");
 			homepage = show_first_var(path, "HOMEPAGE");
 			comment = show_first_var(path, "COMMENT");
+			maintainer = show_first_var(path, "MAINTAINER=");
 			/* set make show-var variable */
 			msv = 1;
 
@@ -195,6 +207,13 @@ info_win(WINDOW *win, char *pkg, char *path)
 			wprint_kb(win, "homepage:", "none", line_index, 2);
 		} else
 			wprint_kb(win, "homepage:", homepage, line_index, 2);
+		line_index++;
+
+		if (maintainer == NULL) {
+			wprint_kb(win, "maintainer:", "none", line_index, 2);
+		} else
+			wprint_kb(win, "maintainer:", maintainer, 
+				  line_index, 2);
 		line_index++;
 
 		if (comment == NULL)
@@ -241,6 +260,7 @@ info_win(WINDOW *win, char *pkg, char *path)
 			XFREE(distname);
 			XFREE(homepage);
 			XFREE(comment);
+			XFREE(maintainer);
 		}
 	
 		c = wgetch(win);
