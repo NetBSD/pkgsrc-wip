@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/11/26 23:38:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2003/11/27 00:00:58 xtraeme Exp $
 #
 
 DISTNAME=		libXtrans-0.1
@@ -12,9 +12,9 @@ HOMEPAGE=		http://freedesktop.org/~xlibs/dist/
 COMMENT=		Network API translation layer to insulate X
 
 USE_BUILDLINK2=		yes
-USE_PKGLOCALEDIR=	yes
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/xtrans.pc.in
 GNU_CONFIGURE=		yes
+
+PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xtrans.pc.in
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
