@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/03/08 15:42:53 jcflack Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/12 19:03:09 jcflack Exp $
 #
 
 DISTNAME=		qcad-2.0.4.0-1.src
@@ -27,7 +27,7 @@ BUILD_DIRS=		${CONFIGURE_DIRS}
 BUILD_DIRS+=		${WRKSRC}/qcad
 
 # XXX how to determine the below dynamically?
-MAKE_ENV+=		QMAKESPEC=${QTDIR}/mkspecs/netbsd-g++
+MAKE_ENV+=		QMAKESPEC=${QTDIR}/mkspecs/default
 PREPEND_PATH+=		${QTDIR}/bin
 
 # I really want this to be post-*patch* where it makes sense, but QTDIR
