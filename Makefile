@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.619 2003/11/15 15:27:44 minskim Exp $
-# $NetBSD: Makefile,v 1.619 2003/11/15 15:27:44 minskim Exp $
+# $Id: Makefile,v 1.620 2003/11/16 15:57:40 minskim Exp $
+# $NetBSD: Makefile,v 1.620 2003/11/16 15:57:40 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -89,6 +89,7 @@ SUBDIR+=	dancer-ircd
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darkice
 SUBDIR+=	dasm
+SUBDIR+=	db2latex
 SUBDIR+=	dbf
 SUBDIR+=	dccserver
 SUBDIR+=	devIL
