@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1603 2005/01/08 19:24:43 airhead Exp $
-# $NetBSD: Makefile,v 1.1603 2005/01/08 19:24:43 airhead Exp $
+# $Id: Makefile,v 1.1604 2005/01/09 12:46:57 zul_ Exp $
+# $NetBSD: Makefile,v 1.1604 2005/01/09 12:46:57 zul_ Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -168,6 +168,8 @@ SUBDIR+=	e16menuedit
 SUBDIR+=	e16menuedit2
 SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
+SUBDIR+=	eboard
+SUBDIR+=	eboard-extras
 SUBDIR+=	eciadsl-usermode
 SUBDIR+=	ecl
 SUBDIR+=	ecore
