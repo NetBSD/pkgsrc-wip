@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/14 09:54:32 tripledes Exp $
+--- GNUmakefile.orig	2004-04-14 01:10:14.000000000 +0100
++++ GNUmakefile	2004-04-14 01:12:55.000000000 +0100
+@@ -47,16 +47,16 @@
+ TESTOBJS = bench.o test.o validat1.o validat2.o validat3.o adhoc.o datatest.o regtest.o
+ LIBOBJS = $(filter-out $(TESTOBJS),$(OBJS))
+ 
+-all: cryptest.exe
++all: cryptest
+ 
+ clean:
+-	$(RM) cryptest.exe libcryptopp.a $(LIBOBJS) $(TESTOBJS)
++	$(RM) cryptest libcryptopp.a $(LIBOBJS) $(TESTOBJS)
+ 
+ libcryptopp.a: $(LIBOBJS)
+ 	$(AR) $(ARFLAGS) $@ $(LIBOBJS)
+ 	$(RANLIB) $@
+ 
+-cryptest.exe: libcryptopp.a $(TESTOBJS)
++cryptest: libcryptopp.a $(TESTOBJS)
+ 	$(CXX) -o $@ $(CXXFLAGS) $(TESTOBJS) -L. -lcryptopp $(LDFLAGS) $(LDLIBS)
+ 
+ nolib: $(OBJS)		# makes it faster to test changes

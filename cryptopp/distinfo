@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/14 09:54:31 tripledes Exp $
+
+SHA1 (crypto51.zip) = 95905714c85f6fb563e66edb5478818df787fe2d
+Size (crypto51.zip) = 829560 bytes
+SHA1 (patch-aa) = 2b32109e9e74d43ef5ac241de7c2b0c0bfcd605c
+SHA1 (patch-ab) = e9ec34d4dd5093c021cc27ea6233e87dc6262221
