@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/12/15 21:46:03 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/31 02:55:42 tvierling Exp $
 #
 
-DISTNAME=		BNR2beta-0.12.5
+DISTNAME=		BNR2beta-0.12.7
 PKGNAME=		${DISTNAME:S/BNR2beta/bnr2/}
 WRKSRC=			${WRKDIR}/BNR2
 CATEGORIES=		news
