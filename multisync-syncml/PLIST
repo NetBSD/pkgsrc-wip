@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2005/01/05 10:24:43 mreriksson Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/16 23:03:43 mreriksson Exp $
 lib/multisync/libsyncml_plugin.la
-@dirrm lib/multisync
