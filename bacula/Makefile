@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/11/26 12:35:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/26 20:12:43 shattered Exp $
 #
 
 DISTNAME=		bacula-1.34.6
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 
@@ -21,6 +22,8 @@ BACULA_GROUP?=		bacula
 BACULA_DIR_USER?=	bacula-dir
 BACULA_SD_USER?=	bacula-sd
 BACULA_DB?=		sqlite
+
+.include "../../mk/bsd.prefs.mk"
 
 OWN_DIRS_PERMS=		${BACULA_PIDDIR} root ${BACULA_GROUP} 770
 OWN_DIRS_PERMS+=	${BACULA_WORKINGDIR} root ${BACULA_GROUP} 770
@@ -43,8 +46,14 @@ CONFIGURE_ARGS+=	--with-sd-user=${BACULA_SD_USER}	\
 .if ${BACULA_DB} == "sqlite"
 CONFIGURE_ARGS+=	--with-sqlite=${PREFIX}
 .endif
+.if defined(BACULA_STATIC) && ${BACULA_STATIC} == "YES"
+CONFIGURE_ARGS+=	--enable-static-tools --enable-static-fd --enable-static-sd
+CONFIGURE_ARGS+=	--enable-static-dir --enable-static-cons
+PLIST_SUBST+=		BACULA_STATIC=""
+.else
+PLIST_SUBST+=		BACULA_STATIC="@comment "
+.endif
 
-.include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--enable-smartalloc
 .endif
