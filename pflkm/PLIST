@@ -1,22 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/29 12:18:15 imilh Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/30 14:06:05 imilh Exp $
 lkm/pfmodule.o
-libexec/ftp-proxy
-libexec/spamd
-libexec/spamd-setup
 sbin/pfctl
 sbin/pflogd
 sbin/pfmkdev
 sbin/authpf
-man/cat8/ftp-proxy.0
-man/cat8/spamd.0
-man/cat8/spamd-setup.0
 man/cat8/pfctl.0
 man/cat8/pflogd.0
 man/cat8/authpf.0
 man/cat4/pfmodule.0
-man/man8/ftp-proxy.8
-man/man8/spamd.8
-man/man8/spamd-setup.8
 man/man8/pfctl.8
 man/man8/pflogd.8
 man/man8/authpf.8

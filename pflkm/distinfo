@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/29 12:18:15 imilh Exp $
+$NetBSD: distinfo,v 1.2 2004/04/30 14:06:05 imilh Exp $
 
 SHA1 (pflkm-3.3-current.tar.gz) = 6653a12741be7c76be98cb2f06b646b32d7bc8a4
 Size (pflkm-3.3-current.tar.gz) = 178392 bytes
-SHA1 (patch-aa) = b87dfce7365174f0e411836488c5811f353c8903
+SHA1 (patch-aa) = 49baccd5cef6a2b7ee707cbb4d3736222d398ccf
 SHA1 (patch-ab) = 81ccc65541f066b348eed9a188c8d959ddc726e7
-SHA1 (patch-ac) = 58859c56741c9b732a5b4e0caebf3cf1ae264222
-SHA1 (patch-ad) = fb3bd25723b15936efdbc6a05143fc660ec2f5fe
+SHA1 (patch-ac) = d78cdda496db0b24453b4be2b87ec2792f00c418
+SHA1 (patch-ad) = af494388a37a1f7868c252dbf1bdebb1b5b65808
 SHA1 (patch-ae) = 6b089c30befe1d66c65b994eaa47493057932336
 SHA1 (patch-af) = dff1e40cc684a702646861294fa734effa0fcf13
 SHA1 (patch-ag) = 9cf01fca0489f98ebfbc94afc8b2609bd40a9fe4
