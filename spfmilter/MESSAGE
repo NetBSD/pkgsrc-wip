@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/09/01 16:02:12 adrian_p Exp $
+
+spfmilter is now installed.
+
+Please read the instructions in the man page for setting up spfmilter.
+
+At a minmium you will need to specify:
+
+	spfmilter_flags="socketfile"
+
+in your /etc/rc.conf.
+
+For security you may also wish to investigate the use of "-u userid".
+===========================================================================

@@ -1,0 +1,8 @@
+Spfmilter implements the Sender Policy Framework (SPF) as a milter, using 
+either the libspf or libspf2 libraries. 
+
+The idea of SPF is to prevent email forgery. Each participating site sets up 
+a little definition of which hosts are allowed to send mail claiming to be 
+from that site. When another site receives mail, it checks the 
+permitted-senders definition for the originating site. If the check fails, 
+the mail is rejected. 
