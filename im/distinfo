@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/04/06 19:43:03 ura Exp $
+
+SHA1 (im-147.tar.gz) = 06c2876a7589ecb759921276787cd91bf4bc53c3
+RMD160 (im-147.tar.gz) = f8801507ce763b86acedb9641d7a8bda75919bda
+Size (im-147.tar.gz) = 221546 bytes
+SHA1 (patch-aa) = 66e3353f38f0586aa3a77fcfaf8e60dd7676229c
