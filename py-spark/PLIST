@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/17 02:21:08 mjasm Exp $
-lib/python2p2/site-packages/generic.py
-lib/python2p2/site-packages/spark.py
+@comment $NetBSD: PLIST,v 1.2 2003/12/06 20:22:42 marc Exp $
+${PYSITELIB}/spark.py
 share/py-spark/doc/doc.html
 share/py-spark/doc/doc.tex
 share/py-spark/doc/paper.ps.gz
