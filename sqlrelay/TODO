@@ -1,5 +1,0 @@
-This builds on Slackware Linux 9, but not NetBSD. I haven't tried
-anything except building it, the support for mysql/postgresql may or
-may not work.
-
-Other database connectors should be added, eg. freetds.
