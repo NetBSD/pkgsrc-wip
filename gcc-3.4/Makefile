@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/05/03 10:59:02 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/03 14:23:34 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -25,7 +25,7 @@ BUILD_OBJC=	YES
 
 # Java can't be built on x86_64
 .if ${MACHINE_GNU_ARCH} == "x86_64"
-java=	NO
+BUILD_JAVA=	NO
 .endif
 
 LANGS='c'
@@ -45,6 +45,9 @@ LANGS+='java'
 LANGS+='objc'
 .endif
 CONFIGURE_ARGS+=        --enable-languages="${LANGS}"
+CONFIGURE_ARGS+=        --with-system-zlib
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--enable-__cxa_atexit
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
