@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/09 13:12:33 mpasternak Exp $
-@comment $Id: PLIST,v 1.1.1.1 2004/03/09 13:12:33 mpasternak Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2004/03/15 15:09:18 mpasternak Exp $
+@comment $Id: PLIST.common,v 1.1 2004/03/15 15:09:18 mpasternak Exp $
 bin/wmxmms
 bin/xmms
 bin/xmms-config
