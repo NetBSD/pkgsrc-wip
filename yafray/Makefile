@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2004/11/22 22:13:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2005/02/15 13:23:02 fabinator Exp $
 #
 
-DISTNAME=	yafray-0.0.4
+DISTNAME=	yafray-0.0.7
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.coala.uniovi.es/~jandro/noname/downloads/
+MASTER_SITES= http://yafray.org/sec/2/downloads/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	fab@gnux.info
 HOMEPAGE=	http://www.yafray.org/
 COMMENT=	Yet Another Free Raytracer
 
@@ -19,18 +19,18 @@ DOCDIR=			${PREFIX}/share/doc/yafray
 
 PTHREAD_OPTS=		require
 
-post-extract:
-	${MV} ${WRKSRC}/src/loader/loader.cc ${WRKSRC}/src/loader/loader.cc.in
+SUBST_CLASSES+=     patch
+SUBST_MESSAGE.patch=    "Make yafray search the grammar at the right place."
+SUBST_STAGE.patch=  post-patch
+SUBST_FILES.patch=  src/loader/loader.cc
+SUBST_SED.patch=    -e "s|/usr/local/etc|${YAFRAYDIR}|"
 
-pre-configure:
-	${SED} -e "s|@@YAFRAYDIR@@|${YAFRAYDIR}|g" \
-		${WRKSRC}/src/loader/loader.cc.in \
-		> ${WRKSRC}/src/loader/loader.cc
 do-install:
 	${INSTALL_DATA_DIR} ${YAFRAYDIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/src/gram.yafray ${YAFRAYDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/src/yafray ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/loader/.libs/yafray ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/yafraycore/.libs/libyafraycore.so ${PREFIX}/lib
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

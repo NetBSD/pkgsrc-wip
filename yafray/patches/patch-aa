@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/06/04 03:08:46 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/15 13:23:03 fabinator Exp $
+--- src/loader/Makefile.in    2004-08-05 01:24:02.000000000 +0200
++++ src/loader/Makefile.in    2005-02-14 01:56:28.000000000 +0100
+@@ -156,7 +156,7 @@
+ 
+ 
+ yafray_LDADD = @GTKLIBS@ @PIXLIBS@ @ZLIBS@ @PTLIBS@ @JPEGLIBS@ \
+-../yafraycore/libyafraycore.la -ldl
++../yafraycore/libyafraycore.la
+ 
+ 
+ 
 
---- src/loader/loader.cc.in.orig	2003-06-04 04:23:06.000000000 +0200
-+++ src/loader/loader.cc.in	2003-06-04 04:24:38.000000000 +0200
-@@ -43,6 +43,8 @@
- 	"./",
- #ifdef __CYGWIN__
- 	"c:/yafray/",
-+#elif defined(__NetBSD__)
-+	"@@YAFRAYDIR@@",
- #endif
- 	"/etc/",
- 	"/usr/local/etc/",

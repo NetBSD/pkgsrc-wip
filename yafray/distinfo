@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/04 03:08:45 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/15 13:23:02 fabinator Exp $
 
-SHA1 (yafray-0.0.4.tar.gz) = 9a0887dda559b31ef4ce8cdfe1741f6c4f1d188d
-Size (yafray-0.0.4.tar.gz) = 310875 bytes
-SHA1 (patch-aa) = 883f97461e606e942652f03d236da9c886c688c4
-SHA1 (patch-ab) = ec2ce6da12c396160ebe0f81f899d2ccda133a5c
+SHA1 (yafray-0.0.7.tar.gz) = b61790a60e2c86faf8db68bc343b1628f01c010a
+Size (yafray-0.0.7.tar.gz) = 695231 bytes
+SHA1 (patch-aa) = cbcf5ec3b1861cbabde07a5f96f46f692fc07dd8
+SHA1 (patch-ab) = b973acf7c988c50d1284045e40425f8bc50a8d57

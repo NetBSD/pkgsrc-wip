@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/06/04 03:08:46 xtraeme Exp $
-
---- src/Makefile.in.orig	2003-06-04 04:26:02.000000000 +0200
-+++ src/Makefile.in	2003-06-04 04:28:57.000000000 +0200
-@@ -91,7 +91,7 @@
+$NetBSD: patch-ab,v 1.2 2005/02/15 13:23:03 fabinator Exp $
+--- src/yafraycore/Makefile.in-orig	2005-02-14 02:10:31.000000000 +0100
++++ src/yafraycore/Makefile.in	2005-02-14 02:10:44.000000000 +0100
+@@ -191,7 +191,7 @@
+ 	filter.lo matrix4.lo mesh.lo reference.lo scene.lo \
+ 	threadedscene.lo forkedscene.lo ipc.lo ccthreads.lo noise.lo \
+ 	background.lo sphere.lo texture.lo targaIO.lo triangle.lo \
+-	triangletools.lo vector3d.lo object3d.lo photon.lo params.lo \
++	triangletools.lo vector3d.lo object3d.lo photon.lo params.lo tools.lo \
+ 	yafsystem.lo renderblock.lo
+ libyafraycore_la_OBJECTS = $(am_libyafraycore_la_OBJECTS)
  
- LIBTOOL_DEPS = @LIBTOOL_DEPS@
- #CXXFLAGS=-pg -fprofile-arcs -O3 -Wall @GTKCFLAGS@ @PIXCFLAGS@
--CXXFLAGS = -O3 -fomit-frame-pointer -ffast-math -Wall -D_PTHREADS @GTKCFLAGS@ @PIXCFLAGS@
-+CXXFLAGS = @CPPFLAGS@ -D_PTHREADS @GTKCFLAGS@ @PIXCFLAGS@
- 
- #CXXFLAGS=-ggdb -O3 -Wall -D_PTHREADS @GTKCFLAGS@ @PIXCFLAGS@
- bin_PROGRAMS = yafray
