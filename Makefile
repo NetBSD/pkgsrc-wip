@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.472 2003/09/17 20:33:26 xtraeme Exp $
-# $NetBSD: Makefile,v 1.472 2003/09/17 20:33:26 xtraeme Exp $
+# $Id: Makefile,v 1.473 2003/09/17 23:01:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.473 2003/09/17 23:01:22 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -377,6 +377,7 @@ SUBDIR+=	thaixfonts
 SUBDIR+=	theme-gtk-bluecurve
 SUBDIR+=	theora-nightly
 SUBDIR+=	thy
+SUBDIR+=	tinc
 SUBDIR+=	tinylogin
 SUBDIR+=	toppler
 SUBDIR+=	totem
