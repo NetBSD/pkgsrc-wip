@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/21 18:05:15 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.1.1.2 2004/03/18 23:46:53 alexmayr Exp $
 bin/gift-setup
 bin/giftd
 include/libgift/array.h
@@ -40,10 +40,12 @@ lib/libgiftproto.so.0
 lib/libgiftproto.so.0.0
 lib/pkgconfig/libgift.pc
 man/man1/giftd.1
-man/man5/giftd.conf.5
 share/examples/gift/giftd.conf.template
 share/examples/gift/ui.conf.template
+share/giFT/giftd.conf.template
 share/giFT/mime.types
+share/giFT/ui/ui.conf.template
+@dirrm share/giFT/ui
 @dirrm share/giFT
 @dirrm share/examples/gift
 @dirrm include/libgift/proto

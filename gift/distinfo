@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/21 18:05:16 xtraeme Exp $
+$NetBSD: distinfo,v 1.1.1.2 2004/03/18 23:46:53 alexmayr Exp $
 
-SHA1 (gift-0.11.3.tar.bz2) = 1e72b158cc12945facef6e0b60d94a35cbc01864
-Size (gift-0.11.3.tar.bz2) = 345256 bytes
-SHA1 (patch-aa) = 845c221b843fcb7fe202da9eddf83322375f4fa5
-SHA1 (patch-ab) = 68f120ca64f2a3e7b438076bab8c8de3bd12f881
+SHA1 (gift-0.11.6.tar.bz2) = 22e7ffbfba5d83f72cf12661614997f84e47f3aa
+Size (gift-0.11.6.tar.bz2) = 533799 bytes
