@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/11/03 10:41:03 cubidou Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/03 14:19:57 cubidou Exp $
 #
 
 DISTNAME=	nagios-1.2
@@ -51,14 +51,6 @@ NAGIOS_DIRS=	log/nagios log/nagios/archives run/nagios run/nagios/rw
 OWN_DIRS_PERMS+=	${VARBASE}/${_d_} ${NAGIOS_USER} ${NAGIOS_GROUP} 0775
 .endfor
 .undef _d_
-
-post-build:
-	cd ${WRKDIR}; uudecode ${FILESDIR}/logofullsize.gif.uu
-	cd ${WRKDIR}; uudecode ${FILESDIR}/sblogo.gif.uu
-
-post-install:
-	${INSTALL_DATA} ${WRKDIR}/logofullsize.gif ${PREFIX}/share/nagios/images
-	${INSTALL_DATA} ${WRKDIR}/sblogo.gif ${PREFIX}/share/nagios/images
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
