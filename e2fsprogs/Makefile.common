@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.4 2004/03/03 01:53:40 jeremy-c-reed Exp $
-# $Id: Makefile.common,v 1.4 2004/03/03 01:53:40 jeremy-c-reed Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/03/04 14:53:01 thomasklausner Exp $
+# $Id: Makefile.common,v 1.5 2004/03/04 14:53:01 thomasklausner Exp $
 #
 
 # XXX When changing, be sure to run "make makesum" in libuuid directory too.
@@ -18,6 +18,8 @@ USE_PKGLOCALEDIR=       YES
 
 CONFIGURE_ENV+=         ac_cv_path_MSGFMT=${LOCALBASE}/bin/msgfmt
 CONFIGURE_ARGS+=        --enable-elf-shlibs
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"
 CONFIGURE_ARGS+=	--disable-fsck
