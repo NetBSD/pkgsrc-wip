@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/11/27 01:08:38 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/27 01:57:44 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libX11-6.2.1
@@ -19,6 +19,13 @@ USE_GMAKE=		yes
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/x11.pc.in
+
+.include "../../mk/pthread.buildlink2.mk"
+
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
+# XXX need to test this and see how PLIST changes
+CONFIGURE_ARGS+=	--disable-xthreads
+.endif
 
 .include "../../wip/xextensions/buildlink2.mk"
 .include "../../wip/xproto/buildlink2.mk"
