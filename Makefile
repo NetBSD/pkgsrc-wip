@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.926 2004/02/02 18:37:10 rillig Exp $
-# $NetBSD: Makefile,v 1.926 2004/02/02 18:37:10 rillig Exp $
+# $Id: Makefile,v 1.927 2004/02/03 16:28:41 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.927 2004/02/03 16:28:41 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -289,6 +289,7 @@ SUBDIR+=	libXext
 SUBDIR+=	libXfixes
 SUBDIR+=	libXfont
 SUBDIR+=	libXi
+SUBDIR+=	libXmu
 SUBDIR+=	libXrender
 SUBDIR+=	libXres
 SUBDIR+=	libXt
@@ -354,7 +355,6 @@ SUBDIR+=	mingw-binutils
 SUBDIR+=	mingw-gcc
 SUBDIR+=	mingw-runtime-bin
 SUBDIR+=	mingw-w32api-bin
-SUBDIR+=	mini_httpd
 SUBDIR+=	minimalist
 SUBDIR+=	mit-krb5
 SUBDIR+=	mixer.tk
