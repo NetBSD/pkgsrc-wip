@@ -1,1 +1,2 @@
 - Test some plugins still work o.k. (mainly ldap)
+- Test on Linux as I think there is a problem with the man make installation
