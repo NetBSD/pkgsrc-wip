@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/06/16 02:08:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/16 03:44:11 xtraeme Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -12,6 +12,7 @@ COMMENT=	Extremely scalable and statistical hybrid anti-spam filter
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 
 REPLACE_PERL=		tools/dspam_genaliases.in \
@@ -27,11 +28,21 @@ BUILD_DEFS+=		DSPAM_STORAGE_DRIVER
 BUILD_DEFS+=		DSPAM_SIGNATURE_LIFE
 BUILD_DEFS+=		DSPAM_USE_WEBMAIL
 BUILD_DEFS+=		DSPAM_HOMEDIR_DOTFILES
+BUILD_DEFS+=		DSPAM_USER DSPAM_GROUP
+BUILD_DEFS+=		DSPAM_BINMODE
 
-DSPAM_DELIVERY_AGENT?=	procmail
+DSPAM_DELIVERY_AGENT?=		procmail
+DSPAM_DELIVERY_AGENT_ARGS?=	# empty
+
 DSPAM_HOME?=		${VARBASE}/dspam
 DSPAM_STORAGE_DRIVER?=	${BDB_TYPE}
 DSPAM_SIGNATURE_LIFE?=	15
+
+DSPAM_BINMODE?=		4511
+DSPAM_USER?=		dspam
+DSPAM_GROUP?=		dspam
+PKG_GROUPS=             ${DSPAM_GROUP}
+PKG_USERS=              ${DSPAM_GROUP}:${DSPAM_USER}
 
 # Default options
 CONFIGURE_ARGS+=	--enable-client-compression
@@ -39,11 +50,16 @@ CONFIGURE_ARGS+=	--enable-robinson
 CONFIGURE_ARGS+=	--enable-chi-square
 CONFIGURE_ARGS+=	--enable-robinson-pvalues
 CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
+CONFIGURE_ARGS+=	--with-dspam-home-owner=${DSPAM_USER}		\
+			--with-dspam-home-group=${DSPAM_GROUP}		\
+			--with-dspam-owner=${DSPAM_USER}		\
+			--with-dspam-group=${DSPAM_GROUP}		\
+			--with-dspam-mode=${DSPAM_BINMODE}
 
 .include "../../mk/bsd.prefs.mk"
 
 #
-# Possible: procmail, maildrop or local
+# Possible: procmail, maildrop or custom
 # Default: procmail
 #
 .if !empty(DSPAM_DELIVERY_AGENT:Mprocmail)
@@ -52,6 +68,8 @@ CONFIGURE_ARGS+=	--with-delivery-agent="${LOCALBASE}/bin/procmail"
 .elif !empty(DSPAM_DELIVERY_AGENT:Mmaildrop)
 BUILD_DEPENDS+=		maildrop-[0-9]*:../../mail/maildrop
 CONFIGURE_ARGS+=	--with-delivery-agent="${LOCALBASE}/bin/maildrop"
+.elif !empty(DSPAM_DELIVERY_AGENT:Mcustom)
+CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT_ARGS:Q}
 .endif
 
 #
