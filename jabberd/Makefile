@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/05/10 10:08:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/12 13:13:22 xtraeme Exp $
 #
 
 DISTNAME=	jabber-1.4.2
@@ -34,6 +34,7 @@ pre-configure:
 	${SED} -e "s|@LIBDIR@|${PREFIX}/lib/jabberd|g" \
 		-e "s|@LOG_DIR@|/var/log/jabberd|g" \
 		-e "s|@PID_DIR@|/var/run|g" \
+		-e "s|@SPOOLDIR@|/var/spool/jabberd|g" \
 		< ${WRKSRC}/jabber.xml.in > ${WRKSRC}/jabber.xml
 
 do-install:
