@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1601 2005/01/08 13:21:22 minskim Exp $
-# $NetBSD: Makefile,v 1.1601 2005/01/08 13:21:22 minskim Exp $
+# $Id: Makefile,v 1.1602 2005/01/08 13:43:19 minskim Exp $
+# $NetBSD: Makefile,v 1.1602 2005/01/08 13:43:19 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -593,7 +593,6 @@ SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-Tk-TableMatrix
-SUBDIR+=	p5-Tree-DAG_Node
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-mysql
 SUBDIR+=	pam-pop3
