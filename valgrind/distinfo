@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/28 07:26:09 marttikuparinen Exp $
+
+SHA1 (valgrind-2.2.0.tar.bz2) = 8352499eb80413a8750c9a5eacdfdfff42c02e16
+Size (valgrind-2.2.0.tar.bz2) = 964987 bytes
