@@ -1,0 +1,26 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/06/24 15:09:16 ianzag Exp $
+
+--- src/Plot2DSimple.cc.orig	2004-05-20 23:35:53.000000000 +0700
++++ src/Plot2DSimple.cc
+@@ -64,8 +64,10 @@ void Plot2DSimple::drawCurves(QPainter *
+ 						x = xmin + (d[j].X() - minx) * (xmax-xmin)/(maxx-minx);
+ 					else if (axis[0].Scale() == LOG10)
+ 						x = xmin + (log10(d[j].X()/minx)) * (xmax-xmin)/(log10(maxx/minx));
++					#if 0
+ 					else if (axis[0].Scale() == LOG2)
+ 						x = xmin + (log2(d[j].X()/minx)) * (xmax-xmin)/(log2(maxx/minx));
++					#endif
+ 					else if (axis[0].Scale() == LN)
+ 						x = xmin + (log(d[j].X()/minx)) * (xmax-xmin)/(log(maxx/minx));
+ 					else if (axis[0].Scale() == SQRT)
+@@ -75,8 +77,10 @@ void Plot2DSimple::drawCurves(QPainter *
+ 						y = ymax - (d[j].Y() - miny) * (ymax-ymin)/(maxy-miny);
+ 					else if(axis[1].Scale() == LOG10)
+ 						y = ymax - (log10(d[j].Y()/miny)) * (ymax-ymin)/(log10(maxy/miny));
++					#if 0
+ 					else if(axis[1].Scale() == LOG2)
+ 						y = ymax - (log2(d[j].Y()/miny)) * (ymax-ymin)/(log2(maxy/miny));
++					#endif
+ 					else if(axis[1].Scale() == LN)
+ 						y = ymax - (log(d[j].Y()/miny)) * (ymax-ymin)/(log(maxy/miny));
+ 					else if (axis[1].Scale() == SQRT)

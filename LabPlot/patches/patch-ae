@@ -1,0 +1,54 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/06/24 15:09:16 ianzag Exp $
+
+--- src/Plot2DSurface.cc.orig	2004-05-31 18:20:37.000000000 +0700
++++ src/Plot2DSurface.cc
+@@ -149,9 +149,11 @@ void Plot2DSurface::drawCurves(QPainter 
+ 				case LOG10:
+ 					y = ymax - (int)(log10((NY-i)/miny) * (ymax-ymin)/log10(maxy/miny));
+ 					break;
++				#if 0
+ 				case LOG2:
+ 					y = ymax - (int)((log2((NY-i)/miny)) * (ymax-ymin)/(log2(maxy/miny)));
+ 					break;
++				#endif
+ 				case LN:
+ 					y = ymax - (int)((log((NY-i)/miny)) * (ymax-ymin)/(log(maxy/miny)));
+ 					break;
+@@ -169,9 +171,11 @@ void Plot2DSurface::drawCurves(QPainter 
+ 					case LOG10:
+ 						x = xmin + (int)(log10(j/minx)*(xmax-xmin)/log10(maxx/minx));
+ 						break;
++					#if 0
+ 					case LOG2:
+ 						x = xmin + (int)(log2(j/minx)*(xmax-xmin)/log2(maxx/minx));
+ 						break;
++					#endif
+ 					case LN:
+ 						x = xmin + (int)(log(j/minx)*(xmax-xmin)/log(maxx/minx));
+ 						break;
+@@ -248,10 +252,12 @@ void Plot2DSurface::drawCurves(QPainter 
+ 				for(int i=0;i<NX;i++)
+ 					x[i] = xmin + log10((i+1)/minx)*(xmax-xmin-1)/log10(maxx/minx);
+ 				break;
++			#if 0
+ 			case LOG2:
+ 				for(int i=0;i<NX;i++)
+ 					x[i] = xmin + log2((i+1)/minx)*(xmax-xmin-1)/log2(maxx/minx);
+ 				break;
++			#endif
+ 			case LN:
+ 				for(int i=0;i<NX;i++)
+ 					x[i] = xmin + log((i+1)/minx)*(xmax-xmin-1)/log(maxx/minx);
+@@ -271,10 +277,12 @@ void Plot2DSurface::drawCurves(QPainter 
+ 				for(int j=0;j<NY;j++)
+ 					y[j] = ymax - (log10((NY-j)/miny)) * (ymax-ymin)/(log10(maxy/miny));
+ 				break;
++			#if 0
+ 			case LOG2:
+ 				for(int j=0;j<NY;j++)
+ 					y[j] = ymax - (log2((NY-j)/miny)) * (ymax-ymin)/(log2(maxy/miny));
+ 				break;
++			#endif
+ 			case LN:
+ 				for(int j=0;j<NY;j++)
+ 					y[j] = ymax - (log((NY-j)*miny)) * (ymax-ymin)/(log(maxy/miny));

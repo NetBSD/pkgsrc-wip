@@ -1,0 +1,110 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/06/24 15:09:16 ianzag Exp $
+
+--- src/Plot2D.cc.orig	2004-05-23 23:47:46.000000000 +0700
++++ src/Plot2D.cc
+@@ -324,9 +324,11 @@ void Plot2D::drawAxes(QPainter *p,int w,
+ 				case LOG10:
+ 					t = (int) log10(max/min)+2;
+ 					break;
++				#if 0
+ 				case LOG2:
+ 					t = (int) log2(max/min)+2;
+ 					break;
++				#endif
+ 				case LN:
+ 					t = (int) log(max/min)+2;
+ 					break;
+@@ -352,6 +354,7 @@ void Plot2D::drawAxes(QPainter *p,int w,
+ 						x2 = (int) (x1+decade+ceil(fabs(log10(max))));
+ 						}
+ 						break;
++					#if 0
+ 					case LOG2: {
+ 						double gap = 1.0-log2(pow(2,ceil(log2(min)))/min);	// fragment of decade to shift left
+ 						double decade = (xmax-xmin)/(log2(max/min));		// width of decade
+@@ -359,6 +362,7 @@ void Plot2D::drawAxes(QPainter *p,int w,
+ 						x2 = (int) (x1+decade+ceil(fabs(log2(max))));
+ 						}
+ 						break;
++					#endif
+ 					case LN: {
+ 						double gap = 1.0-log(pow(M_E,ceil(log(min)))/min);	// fragment of decade to shift left
+ 						double decade = (xmax-xmin)/(log(max/min));		// width of decade
+@@ -425,9 +429,11 @@ void Plot2D::drawAxes(QPainter *p,int w,
+ 						case LOG10:
+ 							value = pow(10,ceil(log10(min)))*pow(10.0,i-1);
+ 							break;
++						#if 0
+ 						case LOG2:
+ 							value = pow(2,ceil(log2(min)))*pow(2.0,i-1);
+ 							break;
++						#endif
+ 						case LN:
+ 							value = pow(M_E,ceil(log(min)))*pow(M_E,i-1);
+ 							break;
+@@ -457,10 +463,12 @@ void Plot2D::drawAxes(QPainter *p,int w,
+ 							label = "10<span style=\"vertical-align:super\">"+
+ 								QString::number(log10(value),'g',prec)+"</span>";
+ 							break;
++						#if 0
+ 						case POWER2:
+ 							label = "2<span style=\"vertical-align:super\">"+
+ 								QString::number(log2(value),'g',prec)+"</span>";
+ 							break;
++						#endif
+ 						case POWERE:
+ 							label = "e<span style=\"vertical-align:super\">"+
+ 								QString::number(log(value),'g',prec)+"</span>";
+@@ -643,9 +651,11 @@ void Plot2D::drawAxes(QPainter *p,int w,
+ 				case LOG10:
+ 					t = (int) log10(max/min)+2;	//number of major tics
+ 					break;
++				#if 0
+ 				case LOG2:
+ 					t = (int) log2(max/min)+2;	//number of major tics
+ 					break;
++				#endif
+ 				case LN:
+ 					t = (int) log(max/min)+2;	//number of major tics
+ 					break;
+@@ -671,6 +681,7 @@ void Plot2D::drawAxes(QPainter *p,int w,
+ 						y2 = (int) (y1-decade-ceil(fabs(log10(max))));
+ 						}
+ 						break;
++					#if 0
+ 					case LOG2: {
+ 						double gap = 1.0-log2(pow(2,ceil(log2(min)))/min);	// fragment of decade to shift left
+ 						double decade = (ymax-ymin)/(log2(max/min));		// width of decade
+@@ -678,6 +689,7 @@ void Plot2D::drawAxes(QPainter *p,int w,
+ 						y2 = (int) (y1-decade-ceil(fabs(log2(max))));
+ 						}
+ 						break;
++					#endif
+ 					case LN:{
+ 						double gap = 1.0-log(pow(M_E,ceil(log(min)))/min);	// fragment of decade to shift left
+ 						double decade = (ymax-ymin)/(log(max/min));		// width of decade
+@@ -743,9 +755,11 @@ void Plot2D::drawAxes(QPainter *p,int w,
+ 						case LOG10:
+ 							value = pow(10,ceil(log10(min)))*pow(10.0,i-1);
+ 							break;
++						#if 0
+ 						case LOG2:
+ 							value = pow(2,ceil(log2(min)))*pow(2.0,i-1);
+ 							break;
++						#endif
+ 						case LN:
+ 							value = pow(M_E,ceil(log(min)))*pow(M_E,i-1);
+ 							break;
+@@ -775,10 +789,12 @@ void Plot2D::drawAxes(QPainter *p,int w,
+ 							label = "10<span style=\"vertical-align:super\">"+
+ 								QString::number(log10(value),'g',prec)+"</span>";
+ 							break;
++						#if 0
+ 						case POWER2:
+ 							label = "2<span style=\"vertical-align:super\">"+
+ 								QString::number(log2(value),'g',prec)+"</span>";
+ 							break;
++						#endif
+ 						case POWERE:
+ 							label = "e<span style=\"vertical-align:super\">"+
+ 								QString::number(log(value),'g',prec)+"</span>";

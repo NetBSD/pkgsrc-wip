@@ -1,0 +1,26 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/06/24 15:09:16 ianzag Exp $
+
+--- src/Worksheet.cc.orig	2004-05-30 01:10:13.000000000 +0700
++++ src/Worksheet.cc
+@@ -837,8 +837,10 @@ double Worksheet::getXCoordinate(double 
+ 		xvalue = minx+(maxx-minx)*(x-xmin)/(xmax-xmin);
+ 	else if (xscale == LOG10)
+ 		xvalue = pow(10,log10(minx)+(double)(x-xmin)/(xmax-xmin)*log10(maxx/minx));
++	#if 0
+ 	else if (xscale == LOG2)
+ 		xvalue = pow(2,log2(minx)+(double)(x-xmin)/(xmax-xmin)*log2(maxx/minx));
++	#endif
+ 	else if (xscale == LN)
+ 		xvalue = pow(M_E,log(minx)+(double)(x-xmin)/(xmax-xmin)*log(maxx/minx));
+ 	else if (xscale == SQRT)
+@@ -858,8 +860,10 @@ double Worksheet::getYCoordinate(double 
+ 		yvalue = miny+(maxy-miny)*(double)(y-ymax)/(ymin-ymax);
+ 	else if (yscale == LOG10)
+ 		yvalue = pow(10,log10(miny)+(double)(y-ymax)/(ymin-ymax)*log10(maxy/miny));
++	#if 0
+ 	else if (yscale == LOG2)
+ 		yvalue = pow(2,log2(miny)+(double)(y-ymax)/(ymin-ymax)*log2(maxy/miny));
++	#endif
+ 	else if (yscale == LN)
+ 		yvalue = pow(M_E,log(miny)+(double)(y-ymax)/(ymin-ymax)*log(maxy/miny));
+ 	else if (yscale == SQRT)

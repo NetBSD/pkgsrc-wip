@@ -1,0 +1,65 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/24 15:09:15 ianzag Exp $
+bin/LabPlot
+lib/libLabPlot.a
+lib/libLabPlot.la
+lib/libLabPlotcephes.a
+lib/libLabPlotcephes.la
+lib/libLabPlotcephes.so
+lib/libLabPlotcephes.so.1
+lib/libLabPlotcephes.so.1.0
+share/doc/kde/HTML/de/LabPlot/index.docbook
+share/doc/kde/HTML/de/LabPlot/small_pics
+share/doc/kde/HTML/en/LabPlot/index.docbook
+share/doc/kde/HTML/en/LabPlot/small_pics/3d-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/VTK-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/analysis-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/axeslabel-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/csi-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/exponential_fit-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/fft-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/fit-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/grass-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/hist-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/image-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/konqueror-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/log-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/multiplot-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/objects-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/pie-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/rydberg-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/sfi-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/surface-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/surface2-small.png
+share/kde/applnk/Applications/LabPlot.desktop
+share/kde/apps/LabPlot/3d.lpl
+share/kde/apps/LabPlot/LabPlotui.rc
+share/kde/apps/LabPlot/analysis.lpl
+share/kde/apps/LabPlot/axeslabel.lpl
+share/kde/apps/LabPlot/exponential_fit.lpl
+share/kde/apps/LabPlot/fft.lpl
+share/kde/apps/LabPlot/fit.lpl
+share/kde/apps/LabPlot/grass.lpl
+share/kde/apps/LabPlot/hist.lpl
+share/kde/apps/LabPlot/image.lpl
+share/kde/apps/LabPlot/log.lpl
+share/kde/apps/LabPlot/multiplot.lpl
+share/kde/apps/LabPlot/objects.lpl
+share/kde/apps/LabPlot/penguin.png
+share/kde/apps/LabPlot/pie.lpl
+share/kde/apps/LabPlot/rydberg.lpl
+share/kde/apps/LabPlot/surface.lpl
+share/kde/apps/LabPlot/surface2.lpl
+share/kde/icons/hicolor/48x48/apps/LabPlot.png
+share/kde/icons/hicolor/48x48/mimetypes/lpl.png
+share/kde/icons/hicolor/64x64/mimetypes/lpl.png
+share/kde/icons/locolor/16x16/apps/LabPlot.png
+share/kde/icons/locolor/16x16/mimetypes/lpl.png
+share/kde/icons/locolor/32x32/apps/LabPlot.png
+share/kde/icons/locolor/32x32/mimetypes/lpl.png
+share/kde/locale/de/LC_MESSAGES/LabPlot.mo
+share/kde/locale/fr/LC_MESSAGES/LabPlot.mo
+share/kde/mimelnk/application/x-lpl.desktop
+@dirrm share/kde/apps/LabPlot
+@dirrm share/doc/kde/HTML/en/LabPlot/small_pics
+@dirrm share/doc/kde/HTML/en/LabPlot
+@dirrm share/doc/kde/HTML/de/LabPlot

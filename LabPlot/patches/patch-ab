@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/06/24 15:09:15 ianzag Exp $
+
+--- doc/de/Makefile.in.orig	2004-06-14 03:50:50.000000000 +0700
++++ doc/de/Makefile.in
+@@ -400,7 +400,7 @@ uninstall-am: uninstall-info-am uninstal
+ install-data-local:
+ 	mkdir -p  $(DESTDIR)/$(kde_htmldir)/de/LabPlot
+ 	$(INSTALL_DATA) index.docbook $(DESTDIR)/$(kde_htmldir)/de/LabPlot/index.docbook
+-	ln -s $(kde_htmldir)/en/LabPlot/small_pics/ $(DESTDIR)/$(kde_htmldir)/de/LabPlot/
++	ln -s $(kde_htmldir)/en/LabPlot/small_pics $(DESTDIR)/$(kde_htmldir)/de/LabPlot
+ 
+ uninstall-local:
+ 	rm -f $(kde_htmldir)/de/LabPlot/small_pics

@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/24 15:09:15 ianzag Exp $
+
+SHA1 (LabPlot-1.3.0.tar.gz) = f8143d7d2a6a15eab6211b8681e818a28735ced9
+Size (LabPlot-1.3.0.tar.gz) = 4506737 bytes
+SHA1 (patch-aa) = d3a25236a768a966d8d7af9ac371c90d6ac24146
+SHA1 (patch-ab) = 34a22a36566930a5eb0e00d89d2b36edd5ec3e48
+SHA1 (patch-ac) = 61051006680893d12158380f566eeab84eb719c6
+SHA1 (patch-ad) = 6e4d5adf897a7514f5c41ea0a6fd5ae918b695ad
+SHA1 (patch-ae) = 3138f461e9c8fd859de1653fb7f983c63e84d734
+SHA1 (patch-af) = bc08a1179b4299b87dc673aee27b813f960de328
+SHA1 (patch-ag) = c6a4616f5bbc7631ce3796bbfddf2c4eee25da67
+SHA1 (patch-ah) = f3fc0e6d5e1052a1b454eb1c8e02019649a8ce14
