@@ -8,4 +8,10 @@ beyond that, and a few new features.  As such, it is fairly usable.
 On the other hand, there are major features to be added to the API,
 and plans to deprecate some obsolete, redundant, and inconsistant
 features that OpenGLUT inherited.  It is best to regard OpenGLUT
-as experimental, but seeking feedback.
+as experimental, but seeking feedback.  This paragraph should
+probably be revisited in the DESCR file around when OpenGLUT 1.0
+is released.
+
+See the web site for more information:
+
+    http://OpenGLUT.SourceForge.net/

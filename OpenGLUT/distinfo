@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/26 13:32:23 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2004/08/07 10:23:49 thomasklausner Exp $
 
-SHA1 (openglut-0.6.1.tar.bz2) = 3e0b063ef56d792d1d8b9169c0c242a8add16804
-Size (openglut-0.6.1.tar.bz2) = 424636 bytes
-SHA1 (patch-aa) = cb6cea5d76c3a680466d2e4fa527cd50652ff30b
-SHA1 (patch-ab) = 142b455a1270edf08fd7c52263a43abb3892b5f5
+SHA1 (openglut-0.6.2.tar.bz2) = c288d28508f0de2eb4e8bc07075139ce885653c2
+Size (openglut-0.6.2.tar.bz2) = 429520 bytes
