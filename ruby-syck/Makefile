@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/20 11:35:20 rasputnik Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/28 17:12:38 rasputnik Exp $
 
 DISTNAME=	syck-${VER}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
@@ -6,7 +6,7 @@ WRKSRC=	${WRKDIR}/${DISTNAME}/ext/ruby
 CATEGORIES=	textproc
 MASTER_SITES=   http://heanet.dl.sourceforge.net/sourceforge/yaml4r/
 
-MAINTAINER=	rasputin@idoru.mine.nu
+MAINTAINER=	rasputnik@hellooperator.net
 HOMEPAGE=	http://www.whytheluckystiff.net/syck/
 COMMENT=		Fast YAML reader/writer for Ruby
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2004/01/03 22:27:18 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/28 17:12:38 rasputnik Exp $
 
 DISTNAME=	ming-ruby-${VER}
 PKGNAME=	ruby-ming-${VER}
 CATEGORIES=	graphics
 MASTER_SITES=	http://madscientist.jp/~ikegami/sources/
 
-MAINTAINER=	rasputin@idoru.mine.nu
+MAINTAINER=	rasputnik@hellooperator.net
 HOMEPAGE=	http://madscientist.jp/~ikegami/ruby/ming/
 COMMENT=	Ruby extension to drive the Ming SWF library
 
