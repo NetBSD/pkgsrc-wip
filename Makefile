@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.221 2003/06/04 11:45:50 marttikuparinen Exp $
-# $NetBSD: Makefile,v 1.221 2003/06/04 11:45:50 marttikuparinen Exp $
+# $Id: Makefile,v 1.222 2003/06/04 16:42:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.222 2003/06/04 16:42:12 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -173,6 +173,7 @@ SUBDIR+=	tendra
 SUBDIR+=	tex-foiltex
 SUBDIR+=	theora-nightly
 SUBDIR+=	totem
+SUBDIR+=	trickle
 SUBDIR+=	tsclient
 SUBDIR+=	tuxtype2
 SUBDIR+=	umix
