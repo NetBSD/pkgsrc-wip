@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/05 22:18:54 jeremy-c-reed Exp $
+
+SHA1 (lletters-0.1.9.tar.gz) = 1689cb02d41cac58694efddd3ad49eea0c9dfa1b
+Size (lletters-0.1.9.tar.gz) = 175924 bytes
+SHA1 (lletters-media-0.1.9a.tar.gz) = edff4a39b8490d21c8affdd254ec2b46cdafe604
+Size (lletters-media-0.1.9a.tar.gz) = 1966275 bytes
+SHA1 (patch-aa) = af9e39bf4b846d8f6a67d71d2b8479e295f6e3c6
+SHA1 (patch-ab) = 4c904c7d3869c0ad304de006dc53d9f343027b02
+SHA1 (patch-ac) = a4b3e35685e7bb7fbb4a9c326e5433cedb234fcc
