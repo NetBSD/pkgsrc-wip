@@ -1,7 +1,6 @@
 Works when tested by itself.
 
-When tested with Kmail:
-  OpenPGP/MIME works
-  SMIME signatures work
-  SMIME encryption fails
-    (at least with my DoD PKI certs)
+Need to fix test for pth. As supplied in gnupg,
+it detects pth on NetBSD even though pth is not
+installed. For now, the test is bypassed so pth
+is never found. This need to be changed.
