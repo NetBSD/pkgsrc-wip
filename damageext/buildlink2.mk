@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/11/27 01:30:55 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/30 22:59:07 cjep Exp $
 #
 # This Makefile fragment is included by packages that use damageext.
 #
@@ -16,7 +16,6 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.damageext=damageext
 BUILDLINK_PREFIX.damageext_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.damageext+=	include/X11/extensions/damageproto.h
 BUILDLINK_FILES.damageext+=	include/X11/extensions/damagewire.h
-
 
 BUILDLINK_TARGETS+=	damageext-buildlink
 

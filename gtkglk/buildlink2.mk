@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/10/21 11:59:17 dillo Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/12/30 22:59:09 cjep Exp $
 #
 # This Makefile fragment is included by packages that use gtkglk.
 #
@@ -42,6 +42,5 @@ gtkglk-glk:
 		${ECHO_BUILDLINK_MSG} "Linking libgtkglk.so to libglk.so in ${BUILDLINK_DIR}."; \
 		${LN} -s ${BUILDLINK_DIR}/lib/libgtkglk.so ${BUILDLINK_DIR}/lib/libglk.so; \
 	fi
-
 
 .endif	# GTKGLK_BUILDLINK2_MK

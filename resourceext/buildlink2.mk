@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/11/27 04:09:13 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/30 22:59:11 cjep Exp $
 #
 # This Makefile fragment is included by packages that use resourceext.
 #
@@ -15,7 +15,6 @@ BUILDLINK_PKGSRCDIR.resourceext?=		../../wip/resourceext
 EVAL_PREFIX+=	BUILDLINK_PREFIX.resourceext=resourceext
 BUILDLINK_PREFIX.resourceext_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.resourceext+=	include/X11/extensions/XResproto.h
-
 
 BUILDLINK_TARGETS+=	resourceext-buildlink
 

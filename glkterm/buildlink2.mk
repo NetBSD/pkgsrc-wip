@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/10/21 11:49:05 dillo Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/30 22:59:09 cjep Exp $
 #
 # This Makefile fragment is included by packages that use glkterm.
 #
@@ -45,6 +45,5 @@ glkterm-glk:
 		${ECHO_BUILDLINK_MSG} "Linking libglkterm.a to libglk.so in ${BUILDLINK_DIR}."; \
 		${LN} -s ${BUILDLINK_DIR}/lib/libglkterm.a ${BUILDLINK_DIR}/lib/libglk.so; \
 	fi
-
 
 .endif	# GLKTERM_BUILDLINK2_MK
