@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/08/11 10:49:15 imilh Exp $
+$NetBSD: distinfo,v 1.3 2004/08/11 13:35:07 imilh Exp $
 
 SHA1 (libpcap-0.8.3.tar.gz) = 24de556bf3dc960ad6c9839ad936037a7c8045e5
 Size (libpcap-0.8.3.tar.gz) = 302551 bytes
-SHA1 (patch-aa) = f2633ce8875750ec844a736e0dd173eeba37cdfe
+SHA1 (patch-aa) = 08abc6d55c288a862224aa2268e10431d43ce27c
