@@ -1,10 +1,10 @@
-This is OpenBSD 3.4 pf lkm for NetBSD 2.0, based on Joel Wilsson's original 3.3
-lkm.
-ALTQ and IPv6 support are not, respectively, ported and tested. For the last
-one, very little work would make it work.
-See original pf NetBSD lkm page for more informations :
+Packet Filter (from here on referred to as PF) is OpenBSD's system for
+filtering TCP/IP traffic and doing Network Address Translation.
 
-http://foo.unix.se/joelw/pflkm.html
+This port of PF is from OpenBSD 3.5 to NetBSD 2.0.
 
----
-iMil <imil@gcu.info>
+Information about PF can be found on the website of Daniel Hartmeier, the
+original author of PF: http://www.benzedrine.cx/pf.html
+
+More information about this port to NetBSD can be found here:
+http://nedbsd.nl/~ppostma/pf-lkm.html

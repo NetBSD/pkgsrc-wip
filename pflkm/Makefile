@@ -1,27 +1,39 @@
-# $NetBSD: Makefile,v 1.5 2004/05/04 11:22:34 imilh Exp $
-#
+# $NetBSD: Makefile,v 1.6 2004/06/08 12:31:48 ppostma Exp $
 
-DISTNAME=		pflkm-3.4
-PKGREVISION=		1
-CATEGORIES=		net
-MASTER_SITES=		http://imil.net/NetBSD/
+DISTNAME=		pf-lkm-20040607
+CATEGORIES=		security ipv6
+MASTER_SITES=		http://ipv4.pointless.nl/~peter/
 
-MAINTAINER=		imil@gcu.info
-HOMEPAGE=		http://foo.unix.se/joelw/pflkm.html
-COMMENT=		Pf loadable kernel module for NetBSD
+MAINTAINER=		peter@pointless.nl
+HOMEPAGE=		http://nedbsd.nl/~ppostma/pf-lkm.html
+COMMENT=		OpenBSD PF loadable kernel module for NetBSD
 
 ONLY_FOR_PLATFORM=	NetBSD-2.0*-*
+
+USE_BUILDLINK3=		yes
+NO_CONFIGURE=		yes
+
+post-patch:
+.for f in sbin/pfctl/pfctl_parser.h usr.sbin/authpf/pathnames.h
+	@${MV} ${WRKSRC}/${f} ${WRKSRC}/${f}.orig
+	@${SED} -e 's!@PREFIX@!${PREFIX}!g' < ${WRKSRC}/${f}.orig > \
+	    ${WRKSRC}/${f}
+.endfor
 
 pre-install:
 .if !exists(${PREFIX}/lkm)
 	@${INSTALL_DATA_DIR} ${PREFIX}/lkm
 .endif
-
-post-install:
-.if !exists(${PKG_SYSCONFBASE}/pf.os)
-	${INSTALL_DATA} ${WRKSRC}/etc/pf.os ${PKG_SYSCONFBASE}
+.if !exists(${PREFIX}/include/net)
+	@${INSTALL_DATA_DIR} ${PREFIX}/include/net
 .endif
 
-USE_BUILDLINK3=		yes
+post-install:
+.if !exists(${PREFIX}/etc/pf.os)
+	${INSTALL_DATA} ${WRKSRC}/etc/pf.os ${PREFIX}/etc
+.endif
+.if !exists(${PREFIX}/etc/pf.conf)
+	${INSTALL_DATA} ${WRKSRC}/etc/pf.conf ${PREFIX}/etc
+.endif
 
 .include "../../mk/bsd.pkg.mk"
