@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.689 2003/11/27 16:28:58 mpasternak Exp $
-# $NetBSD: Makefile,v 1.689 2003/11/27 16:28:58 mpasternak Exp $
+# $Id: Makefile,v 1.690 2003/11/27 18:49:50 marc Exp $
+# $NetBSD: Makefile,v 1.690 2003/11/27 18:49:50 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -286,11 +286,13 @@ SUBDIR+=	libfwbuilder
 SUBDIR+=	libgpg-error
 SUBDIR+=	libgringotts
 SUBDIR+=	libhydrogen
+SUBDIR+=	libic
 SUBDIR+=	libidn
 SUBDIR+=	libneural
 SUBDIR+=	libntlm
 SUBDIR+=	libogg-nightly
 SUBDIR+=	libol
+SUBDIR+=	libpixregion
 SUBDIR+=	libprelude
 SUBDIR+=	libshout
 SUBDIR+=	libstatgrab
@@ -519,6 +521,7 @@ SUBDIR+=	send-pr
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shoutcast
 SUBDIR+=	sks
+SUBDIR+=	slim
 SUBDIR+=	slocate
 SUBDIR+=	slrn-pl
 SUBDIR+=	slune
