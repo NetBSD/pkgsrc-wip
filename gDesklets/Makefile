@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2004/02/17 02:55:20 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/20 03:16:45 minskim Exp $
 
 DISTNAME=	gDesklets-0.25.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://www.pycage.de/download/gdesklets/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	minskim@bawi.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://gdesklets.gnomedesktop.org/
 COMMENT=	Advanced architecture for desktop applets
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	YES
@@ -33,9 +33,10 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gdesklets/Displays
 
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libgtop2/buildlink2.mk"
+.include "../../devel/libgtop2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../x11/gtk2/buildlink2.mk"
-.include "../../x11/py-gnome2/buildlink2.mk"
-.include "../../x11/py-gtk2/buildlink2.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/py-gnome2/buildlink3.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
