@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/08/28 09:48:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/27 10:04:34 xtraeme Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -25,15 +25,23 @@ EGDIR=			${PREFIX}/share/examples/jabberd
 LIBDIR=			${PREFIX}/lib/jabberd
 INCDIR=			${PREFIX}/include/jabberd
 
-JABBERD_USER=           jabberd
-JABBERD_GROUP=          jabberd
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		JABBERD_USER JABBERD_GROUP \
+			JABBERD_LOGDIR	JABBERD_SPOOLDIR \
+			JABBERD_PIDDIR
+
+JABBERD_USER?=		jabberd
+JABBERD_GROUP?=		jabberd
 PKG_GROUPS=             ${JABBERD_GROUP}
 PKG_USERS=              ${JABBERD_USER}:${JABBERD_GROUP}::Jabberd\\ user
 
-JABBERD_DIRS=		/var/spool/jabberd /var/log/jabberd
+JABBERD_LOGDIR?=	/var/log/jabberd
+JABBERD_SPOOLDIR?=	/var/spool/jabberd
+JABBERD_PIDDIR?=	/var/run/jabberd
 
-.for f in ${JABBERD_DIRS}
-OWN_DIRS_PERMS+=	${f} jabberd jabberd 750
+.for f in ${JABBERD_LOGDIR} ${JABBERD_SPOOLDIR}
+OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 750
 .endfor
 
 CONF_FILES=		${EGDIR}/jabber.xml ${PKG_SYSCONFDIR}/jabber.xml
@@ -44,9 +52,9 @@ post-extract:
 pre-configure:
 	${SED}	\
 		-e "s|@LIBDIR@|${PREFIX}/lib/jabberd|g" \
-		-e "s|@LOG_DIR@|/var/log/jabberd|g" \
-		-e "s|@PID_DIR@|/var/run|g" \
-		-e "s|@SPOOLDIR@|/var/spool/jabberd|g" \
+		-e "s|@LOG_DIR@|${JABBERD_LOGDIR}|g" \
+		-e "s|@PID_DIR@|${JABBERD_PIDDIR}|g" \
+		-e "s|@SPOOLDIR@|${JABBERD_SPOOLDIR}|g" \
 		< ${WRKSRC}/jabber.xml.in > ${WRKSRC}/jabber.xml
 
 do-install:
