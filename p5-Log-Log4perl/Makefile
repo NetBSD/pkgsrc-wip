@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/27 22:03:12 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/29 04:38:14 jgoamakf Exp $
 
-DISTNAME=	Log-Log4perl-0.48
+DISTNAME=	Log-Log4perl-0.51
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5llp
 CATEGORIES=	devel perl5
