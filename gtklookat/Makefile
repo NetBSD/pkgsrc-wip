@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/21 22:09:12 bjan2 Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/13 18:56:27 thomasklausner Exp $
 
 DISTNAME=	gtklookat-0.13.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openvrml/}
 
-MAINTAINER=	pkgsrc@bjan.freeshell.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.openvrml.org/
 COMMENT=	GTK VRML97 viewer
 

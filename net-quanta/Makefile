@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/11 17:37:42 bjan2 Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/13 18:56:28 thomasklausner Exp $
 
 DISTNAME=		QUANTA-0.3
 PKGNAME=		net-quanta-0.3
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}/QUANTA_0.3
 CATEGORIES=		net
 MASTER_SITES=		http://www.evl.uic.edu/cavern/quanta/downloads/
 
-MAINTAINER=		pkgsrc@bjan.freeshell.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.evl.uic.edu/cavern/quanta/
 COMMENT=		Toolkit for extremely high bandwidth networking
 

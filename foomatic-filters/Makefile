@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2004/03/21 21:00:04 bjan2 Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/13 18:56:26 thomasklausner Exp $
 
 DISTNAME=	foomatic-filters-3.0.1
 CATEGORIES=	print
 MASTER_SITES=	http://www.linuxprinting.org/download/foomatic/
 
-MAINTAINER=	pkgsrc@bjan.freeshell.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.linuxprinting.org/
 COMMENT=	Spooler independent postscript printing filter
 

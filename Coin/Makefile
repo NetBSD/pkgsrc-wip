@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2004/02/11 05:19:35 bjan2 Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/13 18:56:24 thomasklausner Exp $
 
 DISTNAME=		Coin-2.2.1
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.coin3d.org/pub/coin/src/
 
-MAINTAINER=		pkgsrc@bjan.freeshell.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.coin3d.org/
 COMMENT=		Free, portable, Open Inventor API implementation
 
