@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/17 22:56:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/29 21:51:59 bencollver Exp $
 #
 
 DISTNAME=	tcc-0.9.20
@@ -14,5 +14,6 @@ GNU_CONFIGURE=	yes
 USE_BUILDLINK3=	yes
 
 ONLY_FOR_PLATFORM=	*-*-i386
+NOT_FOR_PLATFORM=	NetBSD-1.6.2-*
 
 .include "../../mk/bsd.pkg.mk"
