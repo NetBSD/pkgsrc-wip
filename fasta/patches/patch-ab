@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/02/25 20:22:40 daprice Exp $
+
+--- mm_file.h.orig	Wed Jul 23 15:12:56 2003
++++ mm_file.h
+@@ -22,8 +22,11 @@ typedef off_t fseek_t;
+ #ifdef HAS_INTTYPES
+ #include <inttypes.h>
+ #else
++#include <machine/int_types.h>
++/* The following are defined in above header file    
+ typedef long int64_t;
+ typedef unsigned long uint64_t;
++*/
+ #endif
+ #ifdef BIG_LIB64
+ typedef int64_t MM_OFF;

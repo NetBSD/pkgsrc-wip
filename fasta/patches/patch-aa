@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/25 20:22:40 daprice Exp $
+
+--- Makefile.NetBSD.in.orig	Wed Jul 23 15:12:59 2003
++++ Makefile.NetBSD.in
+@@ -21,8 +21,8 @@ NFLAGS= -o
+ 
+ # for NetBSD
+ THR_SUBS = pthr_subs2
+-THR_LIBS = -L/usr/pkg/pthreads/lib -lpthread
+-THR_CC = -I/usr/pkg/pthreads/include
++THR_LIBS = -Wl,-R/usr/pkg/lib -L/usr/pkg/lib -lpthread
++THR_CC = -I/usr/pkg/include
+ 
+ XDIR = @PREFIX@
+ 

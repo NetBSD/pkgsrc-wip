@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/25 20:22:40 daprice Exp $
+
+SHA1 (fasta3.shar.Z) = aa2c215134a0db68d8457d62be405da7775500ef
+Size (fasta3.shar.Z) = 746165 bytes
+SHA1 (patch-aa) = 01295c76ae75975575080e5711ac9d9b5e525ec2
+SHA1 (patch-ab) = edd3672783cef83dea2d2c8239b6e8d56809a72f

@@ -1,0 +1,3 @@
+The FASTA sequence comaprison programs in this package compares a protein
+sequence to another protein sequence or to a protein database, or a DNA 
+sequence to another DNA sequence or a DNA library. 
