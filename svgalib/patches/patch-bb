@@ -1,0 +1,25 @@
+$NetBSD: patch-bb,v 1.1 2003/07/31 15:13:39 bencollver Exp $
+
+--- src/g400.c.orig	Wed Jul 30 07:06:43 2003
++++ src/g400.c
+@@ -593,9 +593,20 @@ static int g400_test(void)
+ {
+     int found, id;
+     unsigned long buf[64];
++    int _ioperm=0;
++     
++    if (getenv("IOPERM") == NULL) {
++       _ioperm=1;
++        if (iopl(3) < 0) {
++          printf("svgalib: cannot get I/O permissions\n");
++          exit(1);
++        }
++    }
+     
+     found=__svgalib_pci_find_vendor_vga(VENDOR_ID,buf,0);
+     
++    if (_ioperm) iopl(0);
++
+     if(found) return 0;
+     
+     id=(buf[0]>>16)&0xffff;
