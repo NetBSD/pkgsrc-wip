@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/12 12:42:19 virtus Exp $
+include/colors.h
+include/dialog.h
+include/dir.h
+include/rc.h
+include/ui_objects.h
+lib/libdialog.so
+lib/libdialog.so.0
+lib/libdialog.so.0.4
+share/examples/libdialog/Makefile
+share/examples/libdialog/check1.c
+share/examples/libdialog/check2.c
+share/examples/libdialog/check3.c
+share/examples/libdialog/dselect.c
+share/examples/libdialog/fselect.c
+share/examples/libdialog/ftree1.c
+share/examples/libdialog/ftree1.test
+share/examples/libdialog/ftree2.c
+share/examples/libdialog/ftree2.test
+share/examples/libdialog/gauge.c
+share/examples/libdialog/input1.c
+share/examples/libdialog/input2.c
+share/examples/libdialog/menu1.c
+share/examples/libdialog/menu2.c
+share/examples/libdialog/menu3.c
+share/examples/libdialog/msg.c
+share/examples/libdialog/prgbox.c
+share/examples/libdialog/radio1.c
+share/examples/libdialog/radio2.c
+share/examples/libdialog/radio3.c
+share/examples/libdialog/text.c
+share/examples/libdialog/tree.c
+share/examples/libdialog/yesno.c
+@dirrm share/examples/libdialog

@@ -1,0 +1,3 @@
+The dialog library attempts to provide a fairly simplistic set of fixed-
+presentation menus, input boxes, gauges, file requestors and other gen-
+eral purpose GUI (a bit of a stretch, since it uses ncurses) objects.
