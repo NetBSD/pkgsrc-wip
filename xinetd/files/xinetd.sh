@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: xinetd.sh,v 1.1 2004/07/10 17:27:08 poppnk Exp $
+# $NetBSD: xinetd.sh,v 1.2 2004/07/10 18:06:26 poppnk Exp $
 #
 
 # PROVIDE: xinetd
@@ -12,6 +12,7 @@
 name="xinetd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
+command_args="-pidfile /var/run/${name}.pid"
 pidfile="/var/run/${name}.pid"
 required_files="@PKG_SYSCONFDIR@/xinetd.conf"
 
