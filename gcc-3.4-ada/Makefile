@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/04/18 10:22:54 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/20 21:49:32 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
@@ -25,8 +25,8 @@ WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}-${SNAPDATE}
 
 # An Ada compiler is required to build this pkg. Two
 may be used:
-USE_GCC3	=# Define to use lang/gcc3-ada
-#USE_GCC34	=# Define to use gcc-3.4-ada
+#USE_GCC3	=# Define to use lang/gcc3-ada
+USE_GCC34	=# Define to use gcc-3.4-ada
 
 # Make location overridable, to allow ping-pong bootstraps.
 GCC34_DEFAULT_SUBPREFIX=	${PKGNAME_NOREV}
@@ -49,15 +49,29 @@ CFLAGS+=	-I${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
 GCC_ARCHSUBDIR=	${GCC_SUBPREFIX}/lib/gcc/${GCC_PLATFORM}/${GCC_VERSION}
 GCC_ARCHDIR=	${PREFIX}/${GCC_ARCHSUBDIR}
+GCC_DIR=	${WRKDIR}/.gcc
 
 post-patch:
 	(cd files; \
-		${CP} adasignal.c ${WRKSRC}/gcc/ada; \
-		${CP} ada_lwp_self.c ${WRKSRC}/gcc/ada; \
-		${CP} dummy_pthreads.c ${WRKSRC}/gcc/ada; \
-		for i in *.adb *.ads ; do \
+	${CP} adasignal.c ${WRKSRC}/gcc/ada; \
+	${CP} ada_lwp_self.c ${WRKSRC}/gcc/ada; \
+	${CP} dummy_pthreads.c ${WRKSRC}/gcc/ada; \
+	for i in *.adb *.ads ; do \
 		${CP} $$i ${WRKSRC}/gcc/ada; \
 	done )
+
+.if defined(USE_GCC34)
+# Overide compiler.mk setup to use gcc-3.4.0
+pre-configure:
+	(cd ${BUILDLINK_PREFIX.gcc-3.4.0}/bin && files=`ls gnat*` && \
+	cd ${GCC_DIR}/bin/ && \
+	for file in gcc cc cpp $${files} ; do \
+	  $(ECHO) '#!/bin/sh' > $${file}; \
+	  $(ECHO) -n "exec ${BUILDLINK_PREFIX.gcc-3.4.0}/bin/$${file} " >>$${file}; \
+	  $(ECHO) '"$$@"' >>$${file}; \
+	  $(CHMOD) +x $${file}; \
+	done )
+.endif
 
 do-configure:
 	((${TEST} -d  ${WRKDIR}/obj || ${MKDIR} ${WRKDIR}/obj) && \
@@ -74,19 +88,16 @@ do-install:
 	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc)
 
 post-install:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
-	${ECHO} -n 'GCC_EXEC_PREFIX='>> ${WRKDIR}/gcc3.mk
-	${DIRNAME} `${GCC_PREFIX}/bin/gcc -print-prog-name=gnat1` >> ${WRKDIR}/gcc3.mk
-	${ECHO} -n 'ADA_INCLUDE_PATH+='>> ${WRKDIR}/gcc3.mk
-	${FIND} ${GCC_PREFIX} -name adainclude -print >> ${WRKDIR}/gcc3.mk
-	${ECHO} -n 'ADA_OBJECTS_PATH+='>> ${WRKDIR}/gcc3.mk
-	${FIND} ${GCC_PREFIX} -name adalib -print >> ${WRKDIR}/gcc3.mk
-	${INSTALL_DATA_DIR} ${GCC_PREFIX}/mk
-	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${GCC_PREFIX}/mk/ada.mk
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/ada > ${WRKDIR}/ada
+	${ECHO} '"$$@"' >> ${WRKDIR}/ada
+	${INSTALL_DATA} ${WRKDIR}/ada ${LOCALBASE}/bin/ada
+	${CHMOD} +x ${WRKDIR}/ada ${LOCALBASE}/bin/ada
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_GCC3)
 .include "../../lang/gcc3-ada/buildlink3.mk"
+.elif defined(USE_GCC34)
+.include "../../wip/gcc-3.4/buildlink3.mk"
 .endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

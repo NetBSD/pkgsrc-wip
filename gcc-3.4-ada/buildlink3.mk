@@ -1,35 +1,34 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/04/18 11:41:46 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/04/20 21:49:38 johnrshannon Exp $
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH}+
-GCC-3.4-ADA_BUILDLINK3_MK:=   ${GCC-3.4-ADA_BUILDLINK3_MK}+
+BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
+GCCADA_BUILDLINK3_MK:=  ${GCCADA_BUILDLINK3_MK}+
+BUILDLINK_PREFIX.gccAda-3.4.0:=${LOCALBASE}/gccAda-3.4.0
 
 .if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=   gccAda-3.4.0
+BUILDLINK_DEPENDS+=     gccAda
 .endif
 
-BUILDLINK_PACKAGES:=  ${BUILDLINK_PACKAGES:NgccAda-3.4}
-BUILDLINK_PACKAGES+=  gccAda-3.4.0
+BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:NgccAda}
+BUILDLINK_PACKAGES+=    gccAda
 
-.if !empty(GCC-3.4-ADA_BUILDLINK3_MK:M+)
-.  if defined(GCC34_INSTALLTO_SUBPREFIX)
-.    if ${GCC34_INSTALLTO_SUBPREFIX} != "gccAda-3.4.0"
-GCC34_PKGMODIF=			_${GCC34_INSTALLTO_SUBPREFIX}
-.    endif
-.  endif
-BUILDLINK_DEPENDS.gccAda-3.4+=       gccAda-3.4.0
-BUILDLINK_PKGSRCDIR.gccAda-3.4?=     ../../wip/gcc-3.4-ada
-BUILDLINK_CONTENTS_FILTER.gccAda-3.4= \
-	${EGREP} '(gnat1|bin.*/|include.*/|\.h$$|\.pc$$|lib.*/lib[^/]*$$)'
+.if !empty(GCCADA_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.gccAda+=      gccAda>=3.4.0
+BUILDLINK_PKGSRCDIR.gccAda?=    ../../wip/gcc-3.4-ada
+.endif  # GCCADA_BUILDLINK3_MK
+
+BUILDLINK_PKGSRCDIR.gccAda?=     ../../wip/gcc-3.4-ada
+BUILDLINK_CONTENTS_FILTER.gccAda= \
+	${EGREP} '(libexec.*|bin.*/|include.*/|\.h$$|\.pc$$|lib.*/lib[^/]*$$)'
+BUILDLINK_ENV+=$PATH:=${BUILDLINK_PREFIX.gccAda-3.4.0}:${PATH}
 
 # Packages that link against shared libraries need a full dependency.
 .  if defined(USE_GCC_SHLIB)
-BUILDLINK_DEPMETHOD.gccAda-3.4+=	full
+BUILDLINK_DEPMETHOD.gccAda+=	full
 .  else
-BUILDLINK_DEPMETHOD.gccAda-3.4?=	build
+BUILDLINK_DEPMETHOD.gccAda?=	build
 .  endif
 
 .include "../../mk/pthread.buildlink3.mk"
-
-.endif  # GCC-3.4-ADA_BUILDLINK3_MK
+.include "../../converters/libiconv/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

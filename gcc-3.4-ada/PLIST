@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/18 10:22:54 johnrshannon Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/04/20 21:49:33 johnrshannon Exp $
 ${PKGNAME}/bin/cc
 ${PKGNAME}/bin/cpp
 ${PKGNAME}/bin/gcc
@@ -1311,7 +1311,6 @@ ${PKGNAME}/man/man1/gcov.1
 ${PKGNAME}/man/man7/fsf-funding.7
 ${PKGNAME}/man/man7/gfdl.7
 ${PKGNAME}/man/man7/gpl.7
-${PKGNAME}/mk/ada.mk
 ${PKGNAME}/share/gnat/Makefile.generic
 ${PKGNAME}/share/gnat/Makefile.prolog
 ${PKGNAME}/${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gcc.mo
@@ -1325,6 +1324,7 @@ ${PKGNAME}/${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gcc.mo
 ${PKGNAME}/${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gcc.mo
 ${PKGNAME}/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gcc.mo
 ${PKGNAME}/${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gcc.mo
+bin/ada
 @dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/tr/LC_MESSAGES
 @dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/tr
 @dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES
@@ -1350,7 +1350,6 @@ ${PKGNAME}/${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gcc.mo
 @dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale
 @dirrm ${PKGNAME}/share/gnat
 @dirrm ${PKGNAME}/share
-@dirrm ${PKGNAME}/mk
 @dirrm ${PKGNAME}/man/man7
 @dirrm ${PKGNAME}/man/man1
 @dirrm ${PKGNAME}/man
