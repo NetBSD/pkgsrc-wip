@@ -1,6 +1,6 @@
 - Several cleanup.
 
-- Test if it works properly.
+- Test if it works properly (use the wip/drweb-* clients).
 
 - It can works on FreeBSD (natively), and NetBSD, OpenBSD (in
   emulation).  Thus, so as pkgsrc is a cross-platform framework,
@@ -16,14 +16,6 @@
   Please note DrWeb for Linux has been built in two variants - for
   glibc 2.2 and for glibc 2.3. this package will install glibc 2.3
   only.
-
-- There is available (even as sources) some clients for drweb daemon.
-  Create a packages for all of them. Currently on NetBSD have been
-  tried a cmd line client with success, and sendmail filter (milter)
-  with fatal bugs in POSIX threads code. Thus, first step is
-  implement clean installation, and then make it works on NetBSD.
-  Please note that clients for Linux and FreeBSD are in production
-  release.
 
 - Eliminate dependency on wget (?).
 
