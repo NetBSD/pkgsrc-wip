@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/10 17:27:05 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/10 17:47:51 poppnk Exp $
 #
 
 DISTNAME=		xinetd-2.3.13
@@ -17,6 +17,7 @@ USE_GNU_TOOLS+=		make
 ALL_TARGET=		build
 
 RCD_SCRIPTS=		xinetd
+CPPFLAGS+=		-DDEFAULT_CONFIG_FILE=\\\"\"${PREFIX}/etc/xinetd.conf\\\"\"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xinetd/

@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2004/07/10 17:47:52 poppnk Exp $
+--- xinetd/xconfig.h.orig	2004-07-10 18:31:48.000000000 +0000
++++ xinetd/xconfig.h	2004-07-10 18:32:21.000000000 +0000
+@@ -28,8 +28,9 @@
+ #include "customconf.h"
+ #endif
+ 
+-
++#ifndef DEFAULT_CONFIG_FILE
+ #define DEFAULT_CONFIG_FILE			"/etc/xinetd.conf"
++#endif
+ 
+ /*
+  * This is the facility used by xinetd to log syslog messages
