@@ -1,5 +1,0 @@
-* The libraries and apps needs to be linked to its shared libraries
-* The rest of apps and libs need to be added to Makefile and PLIST
-* fails on 2.0_BETA with:
-  ld: cannot find -lglide
-  `find work*/ -name *libglide*` does not find any files.
