@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 16:42:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/06 20:31:55 xtraeme Exp $
 #
 
 DISTNAME=	mod_ometer-1.2.0
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.umich.edu/~umweb/software/mod_ometer.html
 COMMENT=	Web counter apache module
 
 USE_BUILDLINK2=		yes
-USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-freetype=${BUILDLINK_PREFIX.freetype2}
