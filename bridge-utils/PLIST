@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/15 00:22:34 poppnk Exp $
+include/libbridge.h
+lib/libbridge.a
+man/man8/brctl.8
+sbin/brctl
