@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/10 17:47:26 xtraeme Exp $
+lib/libGTKJava.so
+lib/libGTKJava.so.${PKGVERSION}
+share/classpath/gtk-${PKGVERSION}.jar
+share/classpath/gtk.jar
+share/examples/java-gtk2/junit.jar
+share/examples/java-gtk2/org/gnu/gtk/tests/AllTests.java
+share/examples/java-gtk2/org/gnu/gtk/tests/ButtonTest.java
+share/examples/java-gtk2/org/gnu/gtk/tests/ContainerTest.java
+share/examples/java-gtk2/org/gnu/gtk/tests/WidgetTest.java
+share/examples/java-gtk2/org/gnu/javagnome/tests/AllTests.java
+share/examples/java-gtk2/org/gnu/javagnome/tests/JavaGnomeTestCase.java
+@dirrm share/examples/java-gtk2/org/gnu/javagnome/tests
+@dirrm share/examples/java-gtk2/org/gnu/javagnome
+@dirrm share/examples/java-gtk2/org/gnu/gtk/tests
+@dirrm share/examples/java-gtk2/org/gnu/gtk
+@dirrm share/examples/java-gtk2/org/gnu
+@dirrm share/examples/java-gtk2/org
+@exec ${MKDIR} %D/share/examples/java-gtk2/javagnome/tests
+@dirrm share/examples/java-gtk2/javagnome/tests
+@dirrm share/examples/java-gtk2/javagnome
+@exec ${MKDIR} %D/share/examples/java-gtk2/classes
+@dirrm share/examples/java-gtk2/classes
+@dirrm share/examples/java-gtk2
+@dirrm share/classpath

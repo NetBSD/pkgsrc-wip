@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/10 17:47:26 xtraeme Exp $
+
+SHA1 (java-gtk-0.8.1.tar.gz) = 9e0301af7350edb13e60cecd1458ad032ea0aa5a
+Size (java-gtk-0.8.1.tar.gz) = 1344405 bytes
+SHA1 (patch-aa) = 8e293dbeb3b4e5a5f4750bd00d911127d129a4a8
