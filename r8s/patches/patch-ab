@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/01/16 18:54:25 daprice Exp $
+
+--- main.c.orig	Thu Dec 30 06:01:41 2004
++++ main.c	Fri Jan 14 11:43:18 2005
+@@ -8,6 +8,7 @@
+ /*
+ 
+ ********************************************************/
++#include <err.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -94,3 +95,10 @@
+     
+     return;
+     }
++
++				/* XXX - satisfy libg2c */
++int
++MAIN__ ()
++{
++  errx(EXIT_FAILURE, "MAIN__() called.");
++}

@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/16 18:54:25 daprice Exp $
+bin/r8s
+share/doc/r8s/r8s1.7.manual.pdf
+share/examples/r8s/SAMPLE_1.7
+share/examples/r8s/SAMPLE_CONSTRAINTS
+share/examples/r8s/SAMPLE_CROSSVAL
+share/examples/r8s/SAMPLE_FLU
+share/examples/r8s/SAMPLE_LOCAL_CLOCK
+share/examples/r8s/SAMPLE_SIMPLE
+share/examples/r8s/SAMPLE_SUPERTREE
+@dirrm share/examples/r8s
+@dirrm share/doc/r8s
