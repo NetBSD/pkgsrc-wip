@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/06/17 22:46:59 dhowland Exp $
+$NetBSD: distinfo,v 1.3 2004/09/01 03:31:48 dhowland Exp $
 
-SHA1 (noip-duc-linux.tar.gz) = 1ffe0362801d09e332d57d02b29f4ebb372583b8
+SHA1 (noip-duc-linux.tar.gz) = 9b40c2b130aeb6ea173c28b68689ba2a5d1574f0
 Size (noip-duc-linux.tar.gz) = 71210 bytes
