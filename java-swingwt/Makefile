@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/18 15:26:00 ppostma Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/08 18:24:34 kristerw Exp $
 #
 
 DISTNAME=		swingwt-0.82
@@ -11,7 +11,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://swingwt.sourceforge.net/
 COMMENT=		Swing binding to SWT for java
 
-DEPENDS=		java-swt>=2.1.2
+DEPENDS+=		java-swt>=2.1.2:../../wip/java-swt
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/swingwt.jar \
