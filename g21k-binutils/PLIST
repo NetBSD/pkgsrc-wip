@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/13 05:00:32 ianzag Exp $
+21k/etc/a21000
+bin/asm21k
+bin/cdump21k
+bin/ld21k
+bin/mem21k
+man/man1/a21000.1
+man/man1/asm21k.1
+man/man1/ld21k.1
+man/man1/mem21k.1
+@dirrm 21k/etc
