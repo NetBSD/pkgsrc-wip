@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1679 2005/03/07 16:12:40 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1679 2005/03/07 16:12:40 thomasklausner Exp $
+# $Id: Makefile,v 1.1680 2005/03/08 11:53:42 mwdavies Exp $
+# $NetBSD: Makefile,v 1.1680 2005/03/08 11:53:42 mwdavies Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -396,23 +396,6 @@ SUBDIR+=	kazehakase
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	koffice-i18n
-SUBDIR+=	koffice-i18n-ja
-SUBDIR+=	koffice-i18n-lo
-SUBDIR+=	koffice-i18n-mt
-SUBDIR+=	koffice-i18n-nb
-SUBDIR+=	koffice-i18n-nn
-SUBDIR+=	koffice-i18n-pt
-SUBDIR+=	koffice-i18n-pt_BR
-SUBDIR+=	koffice-i18n-sl
-SUBDIR+=	koffice-i18n-sr
-SUBDIR+=	koffice-i18n-tg
-SUBDIR+=	koffice-i18n-th
-SUBDIR+=	koffice-i18n-tr
-SUBDIR+=	koffice-i18n-ven
-SUBDIR+=	koffice-i18n-xh
-SUBDIR+=	koffice-i18n-zh_CN
-SUBDIR+=	koffice-i18n-zh_TW
-SUBDIR+=	koffice-i18n-zu
 SUBDIR+=	konversation
 SUBDIR+=	korelib
 SUBDIR+=	kpanta
