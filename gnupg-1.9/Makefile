@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/25 17:24:56 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/25 19:18:43 minskim Exp $
 #
 
 DISTNAME=		gnupg-1.9.5
@@ -20,5 +20,5 @@ USE_GNU_TOOLS+=         make
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../libassuan/buildlink3.mk"
-.include "../libksba/buildlink3.mk"
+.include "../../security/libksba/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
