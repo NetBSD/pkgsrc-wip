@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.158 2003/05/13 21:55:02 ingolf Exp $
-# $NetBSD: Makefile,v 1.158 2003/05/13 21:55:02 ingolf Exp $
+# $Id: Makefile,v 1.159 2003/05/14 03:55:24 lsed Exp $
+# $NetBSD: Makefile,v 1.159 2003/05/14 03:55:24 lsed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -50,7 +50,6 @@ SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
 SUBDIR+=	gmencoder
 SUBDIR+=	gnomeicu
-SUBDIR+=	gnutls
 SUBDIR+=	golem
 SUBDIR+=	gstreamer-player
 SUBDIR+=	gtetrinet2
@@ -79,8 +78,6 @@ SUBDIR+=	libdialog
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgsf
 SUBDIR+=	libshout
-SUBDIR+=	libtasn1
-SUBDIR+=	libopencdk
 SUBDIR+=	libwpd
 SUBDIR+=	liquidwar
 SUBDIR+=	lpe
