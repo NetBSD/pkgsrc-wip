@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1448 2004/09/01 10:38:03 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1448 2004/09/01 10:38:03 adrian_p Exp $
+# $Id: Makefile,v 1.1449 2004/09/01 16:05:56 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1449 2004/09/01 16:05:56 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -332,6 +332,7 @@ SUBDIR+=	libneural
 SUBDIR+=	libpcap-latest
 SUBDIR+=	libprelude
 SUBDIR+=	libraw1394
+SUBDIR+=	libspf2
 SUBDIR+=	libssh
 SUBDIR+=	libticables
 SUBDIR+=	libticalcs
@@ -716,6 +717,7 @@ SUBDIR+=	spamd
 SUBDIR+=	spamprobe-pbl
 SUBDIR+=	spe
 SUBDIR+=	speedx
+SUBDIR+=	spfmilter
 SUBDIR+=	srvx
 SUBDIR+=	stmpclean
 SUBDIR+=	strace
