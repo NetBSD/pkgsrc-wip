@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/04 04:36:39 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/17 23:35:14 minskim Exp $
 #
 
 DISTNAME=		imhangul_status_applet-0.2
@@ -6,7 +6,7 @@ CATEGORIES=		korean inputmethod
 MASTER_SITES=		http://download.kldp.net/imhangul/
 
 MAINTAINER=		minskim@bawi.org
-HOMEPAGE=		http://imhangul.kldp.net/#APPLET
+HOMEPAGE=		http://imhangul.kldp.net/\#APPLET
 COMMENT=		GNOME2 applet to show imhangul status
 
 DEPENDS=		imhangul>=0.9.6:../imhangul
