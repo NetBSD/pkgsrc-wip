@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1637 2005/01/31 00:13:03 geeohgeegeeoh Exp $
-# $NetBSD: Makefile,v 1.1637 2005/01/31 00:13:03 geeohgeegeeoh Exp $
+# $Id: Makefile,v 1.1638 2005/01/31 14:44:21 tvierling Exp $
+# $NetBSD: Makefile,v 1.1638 2005/01/31 14:44:21 tvierling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -579,7 +579,6 @@ SUBDIR+=	omniORB
 SUBDIR+=	oops
 SUBDIR+=	opax
 SUBDIR+=	open21xx
-SUBDIR+=	opengaim
 SUBDIR+=	openttd
 SUBDIR+=	openvrml
 SUBDIR+=	opera-devel
