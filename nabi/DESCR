@@ -1,0 +1,3 @@
+Nabi is an X Input Method for Korean.  It works with any application
+supporting XIM.  Though Nabi is based on GTK+2, it can be docked into
+both GNOME and KDE panels.
