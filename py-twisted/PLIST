@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/29 17:32:23 marc Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/11/08 11:51:30 mpasternak Exp $
 bin/ckeygen
 bin/conch
 bin/im
 bin/lore
+bin/mailmail
 bin/manhole
 bin/mktap
 bin/t-im
@@ -10,52 +11,30 @@ bin/tap2deb
 bin/tapconvert
 bin/tkconch
 bin/tkmktap
-bin/tktwistd
 bin/trial
 bin/twistd
 bin/websetroot
 ${PYSITELIB}/twisted/__init__.py
 ${PYSITELIB}/twisted/__init__.pyc
 ${PYSITELIB}/twisted/__init__.pyo
-${PYSITELIB}/twisted/coil/__init__.py
-${PYSITELIB}/twisted/coil/__init__.pyc
-${PYSITELIB}/twisted/coil/__init__.pyo
-${PYSITELIB}/twisted/coil/app.py
-${PYSITELIB}/twisted/coil/app.pyc
-${PYSITELIB}/twisted/coil/app.pyo
-${PYSITELIB}/twisted/coil/coil.py
-${PYSITELIB}/twisted/coil/coil.pyc
-${PYSITELIB}/twisted/coil/coil.pyo
-${PYSITELIB}/twisted/coil/plugins/__init__.py
-${PYSITELIB}/twisted/coil/plugins/__init__.pyc
-${PYSITELIB}/twisted/coil/plugins/__init__.pyo
-${PYSITELIB}/twisted/coil/plugins/ftp.py
-${PYSITELIB}/twisted/coil/plugins/ftp.pyc
-${PYSITELIB}/twisted/coil/plugins/ftp.pyo
-${PYSITELIB}/twisted/coil/plugins/mail.py
-${PYSITELIB}/twisted/coil/plugins/mail.pyc
-${PYSITELIB}/twisted/coil/plugins/mail.pyo
-${PYSITELIB}/twisted/coil/plugins/manhole.py
-${PYSITELIB}/twisted/coil/plugins/manhole.pyc
-${PYSITELIB}/twisted/coil/plugins/manhole.pyo
-${PYSITELIB}/twisted/coil/plugins/portforward.py
-${PYSITELIB}/twisted/coil/plugins/portforward.pyc
-${PYSITELIB}/twisted/coil/plugins/portforward.pyo
-${PYSITELIB}/twisted/coil/plugins/socks.py
-${PYSITELIB}/twisted/coil/plugins/socks.pyc
-${PYSITELIB}/twisted/coil/plugins/socks.pyo
-${PYSITELIB}/twisted/coil/plugins/telnet.py
-${PYSITELIB}/twisted/coil/plugins/telnet.pyc
-${PYSITELIB}/twisted/coil/plugins/telnet.pyo
-${PYSITELIB}/twisted/coil/plugins/web.py
-${PYSITELIB}/twisted/coil/plugins/web.pyc
-${PYSITELIB}/twisted/coil/plugins/web.pyo
-${PYSITELIB}/twisted/coil/plugins/words.py
-${PYSITELIB}/twisted/coil/plugins/words.pyc
-${PYSITELIB}/twisted/coil/plugins/words.pyo
-${PYSITELIB}/twisted/coil/web.py
-${PYSITELIB}/twisted/coil/web.pyc
-${PYSITELIB}/twisted/coil/web.pyo
+${PYSITELIB}/twisted/application/__init__.py
+${PYSITELIB}/twisted/application/__init__.pyc
+${PYSITELIB}/twisted/application/__init__.pyo
+${PYSITELIB}/twisted/application/app.py
+${PYSITELIB}/twisted/application/app.pyc
+${PYSITELIB}/twisted/application/app.pyo
+${PYSITELIB}/twisted/application/compat.py
+${PYSITELIB}/twisted/application/compat.pyc
+${PYSITELIB}/twisted/application/compat.pyo
+${PYSITELIB}/twisted/application/internet.py
+${PYSITELIB}/twisted/application/internet.pyc
+${PYSITELIB}/twisted/application/internet.pyo
+${PYSITELIB}/twisted/application/service.py
+${PYSITELIB}/twisted/application/service.pyc
+${PYSITELIB}/twisted/application/service.pyo
+${PYSITELIB}/twisted/application/strports.py
+${PYSITELIB}/twisted/application/strports.pyc
+${PYSITELIB}/twisted/application/strports.pyo
 ${PYSITELIB}/twisted/conch/__init__.py
 ${PYSITELIB}/twisted/conch/__init__.pyc
 ${PYSITELIB}/twisted/conch/__init__.pyo
@@ -83,6 +62,9 @@ ${PYSITELIB}/twisted/conch/insults/client.pyo
 ${PYSITELIB}/twisted/conch/insults/colors.py
 ${PYSITELIB}/twisted/conch/insults/colors.pyc
 ${PYSITELIB}/twisted/conch/insults/colors.pyo
+${PYSITELIB}/twisted/conch/pamauth.py
+${PYSITELIB}/twisted/conch/pamauth.pyc
+${PYSITELIB}/twisted/conch/pamauth.pyo
 ${PYSITELIB}/twisted/conch/realm.py
 ${PYSITELIB}/twisted/conch/realm.pyc
 ${PYSITELIB}/twisted/conch/realm.pyo
@@ -110,9 +92,6 @@ ${PYSITELIB}/twisted/conch/ssh/forwarding.pyo
 ${PYSITELIB}/twisted/conch/ssh/keys.py
 ${PYSITELIB}/twisted/conch/ssh/keys.pyc
 ${PYSITELIB}/twisted/conch/ssh/keys.pyo
-${PYSITELIB}/twisted/conch/ssh/pamauth.py
-${PYSITELIB}/twisted/conch/ssh/pamauth.pyc
-${PYSITELIB}/twisted/conch/ssh/pamauth.pyo
 ${PYSITELIB}/twisted/conch/ssh/primes.py
 ${PYSITELIB}/twisted/conch/ssh/primes.pyc
 ${PYSITELIB}/twisted/conch/ssh/primes.pyo
@@ -188,9 +167,6 @@ ${PYSITELIB}/twisted/enterprise/dbcred.pyo
 ${PYSITELIB}/twisted/enterprise/dbgadgets.py
 ${PYSITELIB}/twisted/enterprise/dbgadgets.pyc
 ${PYSITELIB}/twisted/enterprise/dbgadgets.pyo
-${PYSITELIB}/twisted/enterprise/dbpassport.py
-${PYSITELIB}/twisted/enterprise/dbpassport.pyc
-${PYSITELIB}/twisted/enterprise/dbpassport.pyo
 ${PYSITELIB}/twisted/enterprise/reflector.py
 ${PYSITELIB}/twisted/enterprise/reflector.pyc
 ${PYSITELIB}/twisted/enterprise/reflector.pyo
@@ -218,6 +194,9 @@ ${PYSITELIB}/twisted/flow/controller.pyo
 ${PYSITELIB}/twisted/flow/flow.py
 ${PYSITELIB}/twisted/flow/flow.pyc
 ${PYSITELIB}/twisted/flow/flow.pyo
+${PYSITELIB}/twisted/flow/pipe.py
+${PYSITELIB}/twisted/flow/pipe.pyc
+${PYSITELIB}/twisted/flow/pipe.pyo
 ${PYSITELIB}/twisted/flow/protocol.py
 ${PYSITELIB}/twisted/flow/protocol.pyc
 ${PYSITELIB}/twisted/flow/protocol.pyo
@@ -227,6 +206,9 @@ ${PYSITELIB}/twisted/flow/stage.pyo
 ${PYSITELIB}/twisted/flow/threads.py
 ${PYSITELIB}/twisted/flow/threads.pyc
 ${PYSITELIB}/twisted/flow/threads.pyo
+${PYSITELIB}/twisted/flow/web.py
+${PYSITELIB}/twisted/flow/web.pyc
+${PYSITELIB}/twisted/flow/web.pyo
 ${PYSITELIB}/twisted/flow/wrap.py
 ${PYSITELIB}/twisted/flow/wrap.pyc
 ${PYSITELIB}/twisted/flow/wrap.pyo
@@ -291,7 +273,9 @@ ${PYSITELIB}/twisted/internet/app.pyo
 ${PYSITELIB}/twisted/internet/base.py
 ${PYSITELIB}/twisted/internet/base.pyc
 ${PYSITELIB}/twisted/internet/base.pyo
-${PYSITELIB}/twisted/internet/cReactor.so
+${PYSITELIB}/twisted/internet/cfreactor.py
+${PYSITELIB}/twisted/internet/cfreactor.pyc
+${PYSITELIB}/twisted/internet/cfreactor.pyo
 ${PYSITELIB}/twisted/internet/default.py
 ${PYSITELIB}/twisted/internet/default.pyc
 ${PYSITELIB}/twisted/internet/default.pyo
@@ -431,6 +415,9 @@ ${PYSITELIB}/twisted/lore/tree.pyo
 ${PYSITELIB}/twisted/mail/__init__.py
 ${PYSITELIB}/twisted/mail/__init__.pyc
 ${PYSITELIB}/twisted/mail/__init__.pyo
+${PYSITELIB}/twisted/mail/alias.py
+${PYSITELIB}/twisted/mail/alias.pyc
+${PYSITELIB}/twisted/mail/alias.pyo
 ${PYSITELIB}/twisted/mail/bounce.py
 ${PYSITELIB}/twisted/mail/bounce.pyc
 ${PYSITELIB}/twisted/mail/bounce.pyo
@@ -504,6 +491,9 @@ ${PYSITELIB}/twisted/names/hosts.pyo
 ${PYSITELIB}/twisted/names/resolve.py
 ${PYSITELIB}/twisted/names/resolve.pyc
 ${PYSITELIB}/twisted/names/resolve.pyo
+${PYSITELIB}/twisted/names/root.py
+${PYSITELIB}/twisted/names/root.pyc
+${PYSITELIB}/twisted/names/root.pyo
 ${PYSITELIB}/twisted/names/server.py
 ${PYSITELIB}/twisted/names/server.pyc
 ${PYSITELIB}/twisted/names/server.pyo
@@ -537,9 +527,6 @@ ${PYSITELIB}/twisted/persisted/crefutil.pyo
 ${PYSITELIB}/twisted/persisted/dirdbm.py
 ${PYSITELIB}/twisted/persisted/dirdbm.pyc
 ${PYSITELIB}/twisted/persisted/dirdbm.pyo
-${PYSITELIB}/twisted/persisted/filepile.py
-${PYSITELIB}/twisted/persisted/filepile.pyc
-${PYSITELIB}/twisted/persisted/filepile.pyo
 ${PYSITELIB}/twisted/persisted/journal/__init__.py
 ${PYSITELIB}/twisted/persisted/journal/__init__.pyc
 ${PYSITELIB}/twisted/persisted/journal/__init__.pyo
@@ -555,28 +542,17 @@ ${PYSITELIB}/twisted/persisted/journal/rowjournal.pyo
 ${PYSITELIB}/twisted/persisted/marmalade.py
 ${PYSITELIB}/twisted/persisted/marmalade.pyc
 ${PYSITELIB}/twisted/persisted/marmalade.pyo
+${PYSITELIB}/twisted/persisted/sob.py
+${PYSITELIB}/twisted/persisted/sob.pyc
+${PYSITELIB}/twisted/persisted/sob.pyo
 ${PYSITELIB}/twisted/persisted/styles.py
 ${PYSITELIB}/twisted/persisted/styles.pyc
 ${PYSITELIB}/twisted/persisted/styles.pyo
 ${PYSITELIB}/twisted/plugins.tml
-${PYSITELIB}/twisted/popsicle/__init__.py
-${PYSITELIB}/twisted/popsicle/__init__.pyc
-${PYSITELIB}/twisted/popsicle/__init__.pyo
-${PYSITELIB}/twisted/popsicle/freezer.py
-${PYSITELIB}/twisted/popsicle/freezer.pyc
-${PYSITELIB}/twisted/popsicle/freezer.pyo
-${PYSITELIB}/twisted/popsicle/mailsicle.py
-${PYSITELIB}/twisted/popsicle/mailsicle.pyc
-${PYSITELIB}/twisted/popsicle/mailsicle.pyo
-${PYSITELIB}/twisted/popsicle/picklesicle.py
-${PYSITELIB}/twisted/popsicle/picklesicle.pyc
-${PYSITELIB}/twisted/popsicle/picklesicle.pyo
-${PYSITELIB}/twisted/popsicle/repos.py
-${PYSITELIB}/twisted/popsicle/repos.pyc
-${PYSITELIB}/twisted/popsicle/repos.pyo
 ${PYSITELIB}/twisted/protocols/__init__.py
 ${PYSITELIB}/twisted/protocols/__init__.pyc
 ${PYSITELIB}/twisted/protocols/__init__.pyo
+${PYSITELIB}/twisted/protocols/_c_urlarg.so
 ${PYSITELIB}/twisted/protocols/basic.py
 ${PYSITELIB}/twisted/protocols/basic.pyc
 ${PYSITELIB}/twisted/protocols/basic.pyo
@@ -595,9 +571,6 @@ ${PYSITELIB}/twisted/protocols/finger.pyo
 ${PYSITELIB}/twisted/protocols/ftp.py
 ${PYSITELIB}/twisted/protocols/ftp.pyc
 ${PYSITELIB}/twisted/protocols/ftp.pyo
-${PYSITELIB}/twisted/protocols/gnutella.py
-${PYSITELIB}/twisted/protocols/gnutella.pyc
-${PYSITELIB}/twisted/protocols/gnutella.pyo
 ${PYSITELIB}/twisted/protocols/gps/__init__.py
 ${PYSITELIB}/twisted/protocols/gps/__init__.pyc
 ${PYSITELIB}/twisted/protocols/gps/__init__.pyo
@@ -622,6 +595,21 @@ ${PYSITELIB}/twisted/protocols/ip.pyo
 ${PYSITELIB}/twisted/protocols/irc.py
 ${PYSITELIB}/twisted/protocols/irc.pyc
 ${PYSITELIB}/twisted/protocols/irc.pyo
+${PYSITELIB}/twisted/protocols/jabber/__init__.py
+${PYSITELIB}/twisted/protocols/jabber/__init__.pyc
+${PYSITELIB}/twisted/protocols/jabber/__init__.pyo
+${PYSITELIB}/twisted/protocols/jabber/client.py
+${PYSITELIB}/twisted/protocols/jabber/client.pyc
+${PYSITELIB}/twisted/protocols/jabber/client.pyo
+${PYSITELIB}/twisted/protocols/jabber/component.py
+${PYSITELIB}/twisted/protocols/jabber/component.pyc
+${PYSITELIB}/twisted/protocols/jabber/component.pyo
+${PYSITELIB}/twisted/protocols/jabber/jid.py
+${PYSITELIB}/twisted/protocols/jabber/jid.pyc
+${PYSITELIB}/twisted/protocols/jabber/jid.pyo
+${PYSITELIB}/twisted/protocols/jabber/jstrports.py
+${PYSITELIB}/twisted/protocols/jabber/jstrports.pyc
+${PYSITELIB}/twisted/protocols/jabber/jstrports.pyo
 ${PYSITELIB}/twisted/protocols/loopback.py
 ${PYSITELIB}/twisted/protocols/loopback.pyc
 ${PYSITELIB}/twisted/protocols/loopback.pyo
@@ -652,6 +640,9 @@ ${PYSITELIB}/twisted/protocols/pop3.pyo
 ${PYSITELIB}/twisted/protocols/portforward.py
 ${PYSITELIB}/twisted/protocols/portforward.pyc
 ${PYSITELIB}/twisted/protocols/portforward.pyo
+${PYSITELIB}/twisted/protocols/postfix.py
+${PYSITELIB}/twisted/protocols/postfix.pyc
+${PYSITELIB}/twisted/protocols/postfix.pyo
 ${PYSITELIB}/twisted/protocols/raw.py
 ${PYSITELIB}/twisted/protocols/raw.pyc
 ${PYSITELIB}/twisted/protocols/raw.pyo
@@ -682,6 +673,9 @@ ${PYSITELIB}/twisted/protocols/toc.pyo
 ${PYSITELIB}/twisted/protocols/wire.py
 ${PYSITELIB}/twisted/protocols/wire.pyc
 ${PYSITELIB}/twisted/protocols/wire.pyo
+${PYSITELIB}/twisted/protocols/xmlstream.py
+${PYSITELIB}/twisted/protocols/xmlstream.pyc
+${PYSITELIB}/twisted/protocols/xmlstream.pyo
 ${PYSITELIB}/twisted/python/__init__.py
 ${PYSITELIB}/twisted/python/__init__.pyc
 ${PYSITELIB}/twisted/python/__init__.pyo
@@ -694,6 +688,9 @@ ${PYSITELIB}/twisted/python/components.pyo
 ${PYSITELIB}/twisted/python/context.py
 ${PYSITELIB}/twisted/python/context.pyc
 ${PYSITELIB}/twisted/python/context.pyo
+${PYSITELIB}/twisted/python/dir.py
+${PYSITELIB}/twisted/python/dir.pyc
+${PYSITELIB}/twisted/python/dir.pyo
 ${PYSITELIB}/twisted/python/dispatch.py
 ${PYSITELIB}/twisted/python/dispatch.pyc
 ${PYSITELIB}/twisted/python/dispatch.pyo
@@ -706,6 +703,9 @@ ${PYSITELIB}/twisted/python/dxprofile.pyo
 ${PYSITELIB}/twisted/python/failure.py
 ${PYSITELIB}/twisted/python/failure.pyc
 ${PYSITELIB}/twisted/python/failure.pyo
+${PYSITELIB}/twisted/python/filepath.py
+${PYSITELIB}/twisted/python/filepath.pyc
+${PYSITELIB}/twisted/python/filepath.pyo
 ${PYSITELIB}/twisted/python/finalize.py
 ${PYSITELIB}/twisted/python/finalize.pyc
 ${PYSITELIB}/twisted/python/finalize.pyo
@@ -730,9 +730,6 @@ ${PYSITELIB}/twisted/python/mutablestring.pyo
 ${PYSITELIB}/twisted/python/mvc.py
 ${PYSITELIB}/twisted/python/mvc.pyc
 ${PYSITELIB}/twisted/python/mvc.pyo
-${PYSITELIB}/twisted/python/observable.py
-${PYSITELIB}/twisted/python/observable.pyc
-${PYSITELIB}/twisted/python/observable.pyo
 ${PYSITELIB}/twisted/python/otp.py
 ${PYSITELIB}/twisted/python/otp.pyc
 ${PYSITELIB}/twisted/python/otp.pyo
@@ -772,6 +769,9 @@ ${PYSITELIB}/twisted/python/threadpool.pyo
 ${PYSITELIB}/twisted/python/timeoutqueue.py
 ${PYSITELIB}/twisted/python/timeoutqueue.pyc
 ${PYSITELIB}/twisted/python/timeoutqueue.pyo
+${PYSITELIB}/twisted/python/urlpath.py
+${PYSITELIB}/twisted/python/urlpath.pyc
+${PYSITELIB}/twisted/python/urlpath.pyo
 ${PYSITELIB}/twisted/python/usage.py
 ${PYSITELIB}/twisted/python/usage.pyc
 ${PYSITELIB}/twisted/python/usage.pyo
@@ -781,6 +781,9 @@ ${PYSITELIB}/twisted/python/util.pyo
 ${PYSITELIB}/twisted/python/win32.py
 ${PYSITELIB}/twisted/python/win32.pyc
 ${PYSITELIB}/twisted/python/win32.pyo
+${PYSITELIB}/twisted/python/zipstream.py
+${PYSITELIB}/twisted/python/zipstream.pyc
+${PYSITELIB}/twisted/python/zipstream.pyo
 ${PYSITELIB}/twisted/runner/__init__.py
 ${PYSITELIB}/twisted/runner/__init__.pyc
 ${PYSITELIB}/twisted/runner/__init__.pyo
@@ -797,6 +800,9 @@ ${PYSITELIB}/twisted/runner/portmap.so
 ${PYSITELIB}/twisted/runner/procmon.py
 ${PYSITELIB}/twisted/runner/procmon.pyc
 ${PYSITELIB}/twisted/runner/procmon.pyo
+${PYSITELIB}/twisted/runner/procutils.py
+${PYSITELIB}/twisted/runner/procutils.pyc
+${PYSITELIB}/twisted/runner/procutils.pyo
 ${PYSITELIB}/twisted/scripts/__init__.py
 ${PYSITELIB}/twisted/scripts/__init__.pyc
 ${PYSITELIB}/twisted/scripts/__init__.pyo
@@ -806,9 +812,6 @@ ${PYSITELIB}/twisted/scripts/bookify.pyo
 ${PYSITELIB}/twisted/scripts/ckeygen.py
 ${PYSITELIB}/twisted/scripts/ckeygen.pyc
 ${PYSITELIB}/twisted/scripts/ckeygen.pyo
-${PYSITELIB}/twisted/scripts/coil.py
-${PYSITELIB}/twisted/scripts/coil.pyc
-${PYSITELIB}/twisted/scripts/coil.pyo
 ${PYSITELIB}/twisted/scripts/conch.py
 ${PYSITELIB}/twisted/scripts/conch.pyc
 ${PYSITELIB}/twisted/scripts/conch.pyo
@@ -818,6 +821,9 @@ ${PYSITELIB}/twisted/scripts/im.pyo
 ${PYSITELIB}/twisted/scripts/lore.py
 ${PYSITELIB}/twisted/scripts/lore.pyc
 ${PYSITELIB}/twisted/scripts/lore.pyo
+${PYSITELIB}/twisted/scripts/mailmail.py
+${PYSITELIB}/twisted/scripts/mailmail.pyc
+${PYSITELIB}/twisted/scripts/mailmail.pyo
 ${PYSITELIB}/twisted/scripts/manhole.py
 ${PYSITELIB}/twisted/scripts/manhole.pyc
 ${PYSITELIB}/twisted/scripts/manhole.pyo
@@ -839,39 +845,21 @@ ${PYSITELIB}/twisted/scripts/tkconch.pyo
 ${PYSITELIB}/twisted/scripts/tkmktap.py
 ${PYSITELIB}/twisted/scripts/tkmktap.pyc
 ${PYSITELIB}/twisted/scripts/tkmktap.pyo
-${PYSITELIB}/twisted/scripts/tktwistd.py
-${PYSITELIB}/twisted/scripts/tktwistd.pyc
-${PYSITELIB}/twisted/scripts/tktwistd.pyo
+${PYSITELIB}/twisted/scripts/tkunzip.py
+${PYSITELIB}/twisted/scripts/tkunzip.pyc
+${PYSITELIB}/twisted/scripts/tkunzip.pyo
 ${PYSITELIB}/twisted/scripts/trial.py
 ${PYSITELIB}/twisted/scripts/trial.pyc
 ${PYSITELIB}/twisted/scripts/trial.pyo
 ${PYSITELIB}/twisted/scripts/twistd.py
 ${PYSITELIB}/twisted/scripts/twistd.pyc
 ${PYSITELIB}/twisted/scripts/twistd.pyo
+${PYSITELIB}/twisted/scripts/twistw.py
+${PYSITELIB}/twisted/scripts/twistw.pyc
+${PYSITELIB}/twisted/scripts/twistw.pyo
 ${PYSITELIB}/twisted/scripts/websetroot.py
 ${PYSITELIB}/twisted/scripts/websetroot.pyc
 ${PYSITELIB}/twisted/scripts/websetroot.pyo
-${PYSITELIB}/twisted/sibling/__init__.py
-${PYSITELIB}/twisted/sibling/__init__.pyc
-${PYSITELIB}/twisted/sibling/__init__.pyo
-${PYSITELIB}/twisted/sibling/loginserv.py
-${PYSITELIB}/twisted/sibling/loginserv.pyc
-${PYSITELIB}/twisted/sibling/loginserv.pyo
-${PYSITELIB}/twisted/sibling/motherserv.py
-${PYSITELIB}/twisted/sibling/motherserv.pyc
-${PYSITELIB}/twisted/sibling/motherserv.pyo
-${PYSITELIB}/twisted/sibling/parentap.py
-${PYSITELIB}/twisted/sibling/parentap.pyc
-${PYSITELIB}/twisted/sibling/parentap.pyo
-${PYSITELIB}/twisted/sibling/parentserv.py
-${PYSITELIB}/twisted/sibling/parentserv.pyc
-${PYSITELIB}/twisted/sibling/parentserv.pyo
-${PYSITELIB}/twisted/sibling/siblingserv.py
-${PYSITELIB}/twisted/sibling/siblingserv.pyc
-${PYSITELIB}/twisted/sibling/siblingserv.pyo
-${PYSITELIB}/twisted/sibling/sibtap.py
-${PYSITELIB}/twisted/sibling/sibtap.pyc
-${PYSITELIB}/twisted/sibling/sibtap.pyo
 ${PYSITELIB}/twisted/spread/__init__.py
 ${PYSITELIB}/twisted/spread/__init__.pyc
 ${PYSITELIB}/twisted/spread/__init__.pyo
@@ -925,9 +913,6 @@ ${PYSITELIB}/twisted/spread/util.pyo
 ${PYSITELIB}/twisted/tap/__init__.py
 ${PYSITELIB}/twisted/tap/__init__.pyc
 ${PYSITELIB}/twisted/tap/__init__.pyo
-${PYSITELIB}/twisted/tap/coil.py
-${PYSITELIB}/twisted/tap/coil.pyc
-${PYSITELIB}/twisted/tap/coil.pyo
 ${PYSITELIB}/twisted/tap/conch.py
 ${PYSITELIB}/twisted/tap/conch.pyc
 ${PYSITELIB}/twisted/tap/conch.pyo
@@ -943,15 +928,9 @@ ${PYSITELIB}/twisted/tap/news.pyo
 ${PYSITELIB}/twisted/tap/portforward.py
 ${PYSITELIB}/twisted/tap/portforward.pyc
 ${PYSITELIB}/twisted/tap/portforward.pyo
-${PYSITELIB}/twisted/tap/procmon.py
-${PYSITELIB}/twisted/tap/procmon.pyc
-${PYSITELIB}/twisted/tap/procmon.pyo
 ${PYSITELIB}/twisted/tap/socks.py
 ${PYSITELIB}/twisted/tap/socks.pyc
 ${PYSITELIB}/twisted/tap/socks.pyo
-${PYSITELIB}/twisted/tap/ssh.py
-${PYSITELIB}/twisted/tap/ssh.pyc
-${PYSITELIB}/twisted/tap/ssh.pyo
 ${PYSITELIB}/twisted/tap/telnet.py
 ${PYSITELIB}/twisted/tap/telnet.pyc
 ${PYSITELIB}/twisted/tap/telnet.pyo
@@ -994,20 +973,26 @@ ${PYSITELIB}/twisted/test/process_tester.pyo
 ${PYSITELIB}/twisted/test/process_twisted.py
 ${PYSITELIB}/twisted/test/process_twisted.pyc
 ${PYSITELIB}/twisted/test/process_twisted.pyo
+${PYSITELIB}/twisted/test/proto_helpers.py
+${PYSITELIB}/twisted/test/proto_helpers.pyc
+${PYSITELIB}/twisted/test/proto_helpers.pyo
 ${PYSITELIB}/twisted/test/rfc822.message
 ${PYSITELIB}/twisted/test/server.pem
+${PYSITELIB}/twisted/test/ssl_helpers.py
+${PYSITELIB}/twisted/test/ssl_helpers.pyc
+${PYSITELIB}/twisted/test/ssl_helpers.pyo
 ${PYSITELIB}/twisted/test/test_app.py
 ${PYSITELIB}/twisted/test/test_app.pyc
 ${PYSITELIB}/twisted/test/test_app.pyo
+${PYSITELIB}/twisted/test/test_application.py
+${PYSITELIB}/twisted/test/test_application.pyc
+${PYSITELIB}/twisted/test/test_application.pyo
 ${PYSITELIB}/twisted/test/test_banana.py
 ${PYSITELIB}/twisted/test/test_banana.pyc
 ${PYSITELIB}/twisted/test/test_banana.pyo
 ${PYSITELIB}/twisted/test/test_bounce.py
 ${PYSITELIB}/twisted/test/test_bounce.pyc
 ${PYSITELIB}/twisted/test/test_bounce.pyo
-${PYSITELIB}/twisted/test/test_coil.py
-${PYSITELIB}/twisted/test/test_coil.pyc
-${PYSITELIB}/twisted/test/test_coil.pyo
 ${PYSITELIB}/twisted/test/test_compat.py
 ${PYSITELIB}/twisted/test/test_compat.pyc
 ${PYSITELIB}/twisted/test/test_compat.pyo
@@ -1041,9 +1026,15 @@ ${PYSITELIB}/twisted/test/test_doc.pyo
 ${PYSITELIB}/twisted/test/test_domhelpers.py
 ${PYSITELIB}/twisted/test/test_domhelpers.pyc
 ${PYSITELIB}/twisted/test/test_domhelpers.pyo
+${PYSITELIB}/twisted/test/test_domish.py
+${PYSITELIB}/twisted/test/test_domish.pyc
+${PYSITELIB}/twisted/test/test_domish.pyo
 ${PYSITELIB}/twisted/test/test_enterprise.py
 ${PYSITELIB}/twisted/test/test_enterprise.pyc
 ${PYSITELIB}/twisted/test/test_enterprise.pyo
+${PYSITELIB}/twisted/test/test_error.py
+${PYSITELIB}/twisted/test/test_error.pyc
+${PYSITELIB}/twisted/test/test_error.pyo
 ${PYSITELIB}/twisted/test/test_ethernet.py
 ${PYSITELIB}/twisted/test/test_ethernet.pyc
 ${PYSITELIB}/twisted/test/test_ethernet.pyo
@@ -1056,9 +1047,9 @@ ${PYSITELIB}/twisted/test/test_factories.pyo
 ${PYSITELIB}/twisted/test/test_failure.py
 ${PYSITELIB}/twisted/test/test_failure.pyc
 ${PYSITELIB}/twisted/test/test_failure.pyo
-${PYSITELIB}/twisted/test/test_filepile.py
-${PYSITELIB}/twisted/test/test_filepile.pyc
-${PYSITELIB}/twisted/test/test_filepile.pyo
+${PYSITELIB}/twisted/test/test_finger.py
+${PYSITELIB}/twisted/test/test_finger.pyc
+${PYSITELIB}/twisted/test/test_finger.pyo
 ${PYSITELIB}/twisted/test/test_flow.py
 ${PYSITELIB}/twisted/test/test_flow.pyc
 ${PYSITELIB}/twisted/test/test_flow.pyo
@@ -1068,9 +1059,6 @@ ${PYSITELIB}/twisted/test/test_formmethod.pyo
 ${PYSITELIB}/twisted/test/test_ftp.py
 ${PYSITELIB}/twisted/test/test_ftp.pyc
 ${PYSITELIB}/twisted/test/test_ftp.pyo
-${PYSITELIB}/twisted/test/test_hashless.py
-${PYSITELIB}/twisted/test/test_hashless.pyc
-${PYSITELIB}/twisted/test/test_hashless.pyo
 ${PYSITELIB}/twisted/test/test_hook.py
 ${PYSITELIB}/twisted/test/test_hook.pyc
 ${PYSITELIB}/twisted/test/test_hook.pyo
@@ -1098,6 +1086,12 @@ ${PYSITELIB}/twisted/test/test_irc.pyo
 ${PYSITELIB}/twisted/test/test_iutils.py
 ${PYSITELIB}/twisted/test/test_iutils.pyc
 ${PYSITELIB}/twisted/test/test_iutils.pyo
+${PYSITELIB}/twisted/test/test_jabbercomponent.py
+${PYSITELIB}/twisted/test/test_jabbercomponent.pyc
+${PYSITELIB}/twisted/test/test_jabbercomponent.pyo
+${PYSITELIB}/twisted/test/test_jabberjid.py
+${PYSITELIB}/twisted/test/test_jabberjid.pyc
+${PYSITELIB}/twisted/test/test_jabberjid.pyo
 ${PYSITELIB}/twisted/test/test_jelly.py
 ${PYSITELIB}/twisted/test/test_jelly.pyc
 ${PYSITELIB}/twisted/test/test_jelly.pyo
@@ -1113,6 +1107,9 @@ ${PYSITELIB}/twisted/test/test_logfile.pyo
 ${PYSITELIB}/twisted/test/test_loopback.py
 ${PYSITELIB}/twisted/test/test_loopback.pyc
 ${PYSITELIB}/twisted/test/test_loopback.pyo
+${PYSITELIB}/twisted/test/test_mail.py
+${PYSITELIB}/twisted/test/test_mail.pyc
+${PYSITELIB}/twisted/test/test_mail.pyo
 ${PYSITELIB}/twisted/test/test_manhole.py
 ${PYSITELIB}/twisted/test/test_manhole.pyc
 ${PYSITELIB}/twisted/test/test_manhole.pyo
@@ -1140,9 +1137,9 @@ ${PYSITELIB}/twisted/test/test_nmea.pyo
 ${PYSITELIB}/twisted/test/test_nntp.py
 ${PYSITELIB}/twisted/test/test_nntp.pyc
 ${PYSITELIB}/twisted/test/test_nntp.pyo
-${PYSITELIB}/twisted/test/test_observable.py
-${PYSITELIB}/twisted/test/test_observable.pyc
-${PYSITELIB}/twisted/test/test_observable.pyo
+${PYSITELIB}/twisted/test/test_paths.py
+${PYSITELIB}/twisted/test/test_paths.pyc
+${PYSITELIB}/twisted/test/test_paths.pyo
 ${PYSITELIB}/twisted/test/test_pb.py
 ${PYSITELIB}/twisted/test/test_pb.pyc
 ${PYSITELIB}/twisted/test/test_pb.pyo
@@ -1161,12 +1158,9 @@ ${PYSITELIB}/twisted/test/test_policies.pyo
 ${PYSITELIB}/twisted/test/test_pop3.py
 ${PYSITELIB}/twisted/test/test_pop3.pyc
 ${PYSITELIB}/twisted/test/test_pop3.pyo
-${PYSITELIB}/twisted/test/test_popsicle.py
-${PYSITELIB}/twisted/test/test_popsicle.pyc
-${PYSITELIB}/twisted/test/test_popsicle.pyo
-${PYSITELIB}/twisted/test/test_postinstall.py
-${PYSITELIB}/twisted/test/test_postinstall.pyc
-${PYSITELIB}/twisted/test/test_postinstall.pyo
+${PYSITELIB}/twisted/test/test_postfix.py
+${PYSITELIB}/twisted/test/test_postfix.pyc
+${PYSITELIB}/twisted/test/test_postfix.pyo
 ${PYSITELIB}/twisted/test/test_process.py
 ${PYSITELIB}/twisted/test/test_process.pyc
 ${PYSITELIB}/twisted/test/test_process.pyo
@@ -1182,6 +1176,9 @@ ${PYSITELIB}/twisted/test/test_rebuild.pyo
 ${PYSITELIB}/twisted/test/test_reflect.py
 ${PYSITELIB}/twisted/test/test_reflect.pyc
 ${PYSITELIB}/twisted/test/test_reflect.pyo
+${PYSITELIB}/twisted/test/test_rootresolve.py
+${PYSITELIB}/twisted/test/test_rootresolve.pyc
+${PYSITELIB}/twisted/test/test_rootresolve.pyo
 ${PYSITELIB}/twisted/test/test_roots.py
 ${PYSITELIB}/twisted/test/test_roots.pyc
 ${PYSITELIB}/twisted/test/test_roots.pyo
@@ -1191,21 +1188,24 @@ ${PYSITELIB}/twisted/test/test_setup.pyo
 ${PYSITELIB}/twisted/test/test_shortcut.py
 ${PYSITELIB}/twisted/test/test_shortcut.pyc
 ${PYSITELIB}/twisted/test/test_shortcut.pyo
-${PYSITELIB}/twisted/test/test_sibling.py
-${PYSITELIB}/twisted/test/test_sibling.pyc
-${PYSITELIB}/twisted/test/test_sibling.pyo
 ${PYSITELIB}/twisted/test/test_sip.py
 ${PYSITELIB}/twisted/test/test_sip.pyc
 ${PYSITELIB}/twisted/test/test_sip.pyo
 ${PYSITELIB}/twisted/test/test_smtp.py
 ${PYSITELIB}/twisted/test/test_smtp.pyc
 ${PYSITELIB}/twisted/test/test_smtp.pyo
+${PYSITELIB}/twisted/test/test_sob.py
+${PYSITELIB}/twisted/test/test_sob.pyc
+${PYSITELIB}/twisted/test/test_sob.pyo
 ${PYSITELIB}/twisted/test/test_spread.py
 ${PYSITELIB}/twisted/test/test_spread.pyc
 ${PYSITELIB}/twisted/test/test_spread.pyo
 ${PYSITELIB}/twisted/test/test_ssl.py
 ${PYSITELIB}/twisted/test/test_ssl.pyc
 ${PYSITELIB}/twisted/test/test_ssl.pyo
+${PYSITELIB}/twisted/test/test_strports.py
+${PYSITELIB}/twisted/test/test_strports.pyc
+${PYSITELIB}/twisted/test/test_strports.pyo
 ${PYSITELIB}/twisted/test/test_tcp.py
 ${PYSITELIB}/twisted/test/test_tcp.pyc
 ${PYSITELIB}/twisted/test/test_tcp.pyo
@@ -1248,21 +1248,33 @@ ${PYSITELIB}/twisted/test/test_util.pyo
 ${PYSITELIB}/twisted/test/test_web.py
 ${PYSITELIB}/twisted/test/test_web.pyc
 ${PYSITELIB}/twisted/test/test_web.pyo
+${PYSITELIB}/twisted/test/test_webclient.py
+${PYSITELIB}/twisted/test/test_webclient.pyc
+${PYSITELIB}/twisted/test/test_webclient.pyo
 ${PYSITELIB}/twisted/test/test_words.py
 ${PYSITELIB}/twisted/test/test_words.pyc
 ${PYSITELIB}/twisted/test/test_words.pyo
-${PYSITELIB}/twisted/test/test_world.py
-${PYSITELIB}/twisted/test/test_world.pyc
-${PYSITELIB}/twisted/test/test_world.pyo
 ${PYSITELIB}/twisted/test/test_woven.py
 ${PYSITELIB}/twisted/test/test_woven.pyc
 ${PYSITELIB}/twisted/test/test_woven.pyo
+${PYSITELIB}/twisted/test/test_xishutil.py
+${PYSITELIB}/twisted/test/test_xishutil.pyc
+${PYSITELIB}/twisted/test/test_xishutil.pyo
 ${PYSITELIB}/twisted/test/test_xml.py
 ${PYSITELIB}/twisted/test/test_xml.pyc
 ${PYSITELIB}/twisted/test/test_xml.pyo
 ${PYSITELIB}/twisted/test/test_xmlrpc.py
 ${PYSITELIB}/twisted/test/test_xmlrpc.pyc
 ${PYSITELIB}/twisted/test/test_xmlrpc.pyo
+${PYSITELIB}/twisted/test/test_xmlstream.py
+${PYSITELIB}/twisted/test/test_xmlstream.pyc
+${PYSITELIB}/twisted/test/test_xmlstream.pyo
+${PYSITELIB}/twisted/test/test_xpath.py
+${PYSITELIB}/twisted/test/test_xpath.pyc
+${PYSITELIB}/twisted/test/test_xpath.pyo
+${PYSITELIB}/twisted/test/test_zipstream.py
+${PYSITELIB}/twisted/test/test_zipstream.pyc
+${PYSITELIB}/twisted/test/test_zipstream.pyo
 ${PYSITELIB}/twisted/test/testutils.py
 ${PYSITELIB}/twisted/test/testutils.pyc
 ${PYSITELIB}/twisted/test/testutils.pyo
@@ -1347,9 +1359,6 @@ ${PYSITELIB}/twisted/web/server.pyo
 ${PYSITELIB}/twisted/web/soap.py
 ${PYSITELIB}/twisted/web/soap.pyc
 ${PYSITELIB}/twisted/web/soap.pyo
-${PYSITELIB}/twisted/web/spider.py
-${PYSITELIB}/twisted/web/spider.pyc
-${PYSITELIB}/twisted/web/spider.pyo
 ${PYSITELIB}/twisted/web/static.py
 ${PYSITELIB}/twisted/web/static.pyc
 ${PYSITELIB}/twisted/web/static.pyo
@@ -1386,6 +1395,9 @@ ${PYSITELIB}/twisted/web/woven/__init__.pyo
 ${PYSITELIB}/twisted/web/woven/controller.py
 ${PYSITELIB}/twisted/web/woven/controller.pyc
 ${PYSITELIB}/twisted/web/woven/controller.pyo
+${PYSITELIB}/twisted/web/woven/dirlist.py
+${PYSITELIB}/twisted/web/woven/dirlist.pyc
+${PYSITELIB}/twisted/web/woven/dirlist.pyo
 ${PYSITELIB}/twisted/web/woven/flashconduit.py
 ${PYSITELIB}/twisted/web/woven/flashconduit.pyc
 ${PYSITELIB}/twisted/web/woven/flashconduit.pyo
@@ -1407,6 +1419,9 @@ ${PYSITELIB}/twisted/web/woven/model.pyo
 ${PYSITELIB}/twisted/web/woven/page.py
 ${PYSITELIB}/twisted/web/woven/page.pyc
 ${PYSITELIB}/twisted/web/woven/page.pyo
+${PYSITELIB}/twisted/web/woven/simpleguard.py
+${PYSITELIB}/twisted/web/woven/simpleguard.pyc
+${PYSITELIB}/twisted/web/woven/simpleguard.pyo
 ${PYSITELIB}/twisted/web/woven/tapestry.py
 ${PYSITELIB}/twisted/web/woven/tapestry.pyc
 ${PYSITELIB}/twisted/web/woven/tapestry.pyo
@@ -1443,94 +1458,55 @@ ${PYSITELIB}/twisted/words/tendril.pyo
 ${PYSITELIB}/twisted/words/webwords.py
 ${PYSITELIB}/twisted/words/webwords.pyc
 ${PYSITELIB}/twisted/words/webwords.pyo
-${PYSITELIB}/twisted/world/__init__.py
-${PYSITELIB}/twisted/world/__init__.pyc
-${PYSITELIB}/twisted/world/__init__.pyo
-${PYSITELIB}/twisted/world/allocator.py
-${PYSITELIB}/twisted/world/allocator.pyc
-${PYSITELIB}/twisted/world/allocator.pyo
-${PYSITELIB}/twisted/world/compound.py
-${PYSITELIB}/twisted/world/compound.pyc
-${PYSITELIB}/twisted/world/compound.pyo
-${PYSITELIB}/twisted/world/database.py
-${PYSITELIB}/twisted/world/database.pyc
-${PYSITELIB}/twisted/world/database.pyo
-${PYSITELIB}/twisted/world/fileutils.py
-${PYSITELIB}/twisted/world/fileutils.pyc
-${PYSITELIB}/twisted/world/fileutils.pyo
-${PYSITELIB}/twisted/world/hashless.py
-${PYSITELIB}/twisted/world/hashless.pyc
-${PYSITELIB}/twisted/world/hashless.pyo
-${PYSITELIB}/twisted/world/storable.py
-${PYSITELIB}/twisted/world/storable.pyc
-${PYSITELIB}/twisted/world/storable.pyo
-${PYSITELIB}/twisted/world/structfile.py
-${PYSITELIB}/twisted/world/structfile.pyc
-${PYSITELIB}/twisted/world/structfile.pyo
-${PYSITELIB}/twisted/world/typemap.py
-${PYSITELIB}/twisted/world/typemap.pyc
-${PYSITELIB}/twisted/world/typemap.pyo
-${PYSITELIB}/twisted/world/util.py
-${PYSITELIB}/twisted/world/util.pyc
-${PYSITELIB}/twisted/world/util.pyo
-${PYSITELIB}/twisted/world/wovenhack.py
-${PYSITELIB}/twisted/world/wovenhack.pyc
-${PYSITELIB}/twisted/world/wovenhack.pyo
-${PYSITELIB}/twisted/zoot/AFactory.py
-${PYSITELIB}/twisted/zoot/AFactory.pyc
-${PYSITELIB}/twisted/zoot/AFactory.pyo
-${PYSITELIB}/twisted/zoot/__init__.py
-${PYSITELIB}/twisted/zoot/__init__.pyc
-${PYSITELIB}/twisted/zoot/__init__.pyo
-${PYSITELIB}/twisted/zoot/pingertap.py
-${PYSITELIB}/twisted/zoot/pingertap.pyc
-${PYSITELIB}/twisted/zoot/pingertap.pyo
-${PYSITELIB}/twisted/zoot/pongertap.py
-${PYSITELIB}/twisted/zoot/pongertap.pyc
-${PYSITELIB}/twisted/zoot/pongertap.pyo
-${PYSITELIB}/twisted/zoot/zoot.py
-${PYSITELIB}/twisted/zoot/zoot.pyc
-${PYSITELIB}/twisted/zoot/zoot.pyo
-${PYSITELIB}/twisted/zoot/zoottap.py
-${PYSITELIB}/twisted/zoot/zoottap.pyc
-${PYSITELIB}/twisted/zoot/zoottap.pyo
-@dirrm ${PYSITELIB}/twisted/zoot
-@dirrm ${PYSITELIB}/twisted/world
-@dirrm ${PYSITELIB}/twisted/words
-@dirrm ${PYSITELIB}/twisted/web/woven
-@dirrm ${PYSITELIB}/twisted/web
-@dirrm ${PYSITELIB}/twisted/trial
-@dirrm ${PYSITELIB}/twisted/test
-@dirrm ${PYSITELIB}/twisted/tap
-@dirrm ${PYSITELIB}/twisted/spread/ui
-@dirrm ${PYSITELIB}/twisted/spread
-@dirrm ${PYSITELIB}/twisted/sibling
-@dirrm ${PYSITELIB}/twisted/scripts
-@dirrm ${PYSITELIB}/twisted/runner
-@dirrm ${PYSITELIB}/twisted/python
-@dirrm ${PYSITELIB}/twisted/protocols/mice
-@dirrm ${PYSITELIB}/twisted/protocols/gps
-@dirrm ${PYSITELIB}/twisted/protocols
-@dirrm ${PYSITELIB}/twisted/popsicle
-@dirrm ${PYSITELIB}/twisted/persisted/journal
-@dirrm ${PYSITELIB}/twisted/persisted
-@dirrm ${PYSITELIB}/twisted/pair
-@dirrm ${PYSITELIB}/twisted/news
-@dirrm ${PYSITELIB}/twisted/names
-@dirrm ${PYSITELIB}/twisted/manhole/ui
-@dirrm ${PYSITELIB}/twisted/manhole
-@dirrm ${PYSITELIB}/twisted/mail
-@dirrm ${PYSITELIB}/twisted/lore
+${PYSITELIB}/twisted/xish/__init__.py
+${PYSITELIB}/twisted/xish/__init__.pyc
+${PYSITELIB}/twisted/xish/__init__.pyo
+${PYSITELIB}/twisted/xish/domish.py
+${PYSITELIB}/twisted/xish/domish.pyc
+${PYSITELIB}/twisted/xish/domish.pyo
+${PYSITELIB}/twisted/xish/utility.py
+${PYSITELIB}/twisted/xish/utility.pyc
+${PYSITELIB}/twisted/xish/utility.pyo
+${PYSITELIB}/twisted/xish/xpath.py
+${PYSITELIB}/twisted/xish/xpath.pyc
+${PYSITELIB}/twisted/xish/xpath.pyo
+${PYSITELIB}/twisted/xish/xpathparser.py
+${PYSITELIB}/twisted/xish/xpathparser.pyc
+${PYSITELIB}/twisted/xish/xpathparser.pyo
+@dirrm ${PYSITELIB}/twisted/application
+@dirrm ${PYSITELIB}/twisted/conch/insults
+@dirrm ${PYSITELIB}/twisted/conch/ssh
+@dirrm ${PYSITELIB}/twisted/conch/ui
+@dirrm ${PYSITELIB}/twisted/conch
+@dirrm ${PYSITELIB}/twisted/cred
+@dirrm ${PYSITELIB}/twisted/enterprise
+@dirrm ${PYSITELIB}/twisted/flow
+@dirrm ${PYSITELIB}/twisted/im
 @dirrm ${PYSITELIB}/twisted/internet/serialport
 @dirrm ${PYSITELIB}/twisted/internet
-@dirrm ${PYSITELIB}/twisted/im
-@dirrm ${PYSITELIB}/twisted/flow
-@dirrm ${PYSITELIB}/twisted/enterprise
-@dirrm ${PYSITELIB}/twisted/cred
-@dirrm ${PYSITELIB}/twisted/conch/ui
-@dirrm ${PYSITELIB}/twisted/conch/ssh
-@dirrm ${PYSITELIB}/twisted/conch/insults
-@dirrm ${PYSITELIB}/twisted/conch
-@dirrm ${PYSITELIB}/twisted/coil/plugins
-@dirrm ${PYSITELIB}/twisted/coil
+@dirrm ${PYSITELIB}/twisted/lore
+@dirrm ${PYSITELIB}/twisted/mail
+@dirrm ${PYSITELIB}/twisted/manhole/ui
+@dirrm ${PYSITELIB}/twisted/manhole
+@dirrm ${PYSITELIB}/twisted/names
+@dirrm ${PYSITELIB}/twisted/news
+@dirrm ${PYSITELIB}/twisted/pair
+@dirrm ${PYSITELIB}/twisted/persisted/journal
+@dirrm ${PYSITELIB}/twisted/persisted
+@dirrm ${PYSITELIB}/twisted/protocols/gps
+@dirrm ${PYSITELIB}/twisted/protocols/jabber
+@dirrm ${PYSITELIB}/twisted/protocols/mice
+@dirrm ${PYSITELIB}/twisted/protocols
+@dirrm ${PYSITELIB}/twisted/python
+@dirrm ${PYSITELIB}/twisted/runner
+@dirrm ${PYSITELIB}/twisted/scripts
+@dirrm ${PYSITELIB}/twisted/spread/ui
+@dirrm ${PYSITELIB}/twisted/spread
+@dirrm ${PYSITELIB}/twisted/tap
+@dirrm ${PYSITELIB}/twisted/test
+@dirrm ${PYSITELIB}/twisted/trial
+@dirrm ${PYSITELIB}/twisted/web/woven
+@dirrm ${PYSITELIB}/twisted/web
+@dirrm ${PYSITELIB}/twisted/words
+@dirrm ${PYSITELIB}/twisted/xish
 @dirrm ${PYSITELIB}/twisted
