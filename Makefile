@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.170 2003/05/16 04:48:48 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.170 2003/05/16 04:48:48 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.171 2003/05/16 16:11:48 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.171 2003/05/16 16:11:48 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -147,6 +147,7 @@ SUBDIR+=	vim-gtk2
 SUBDIR+=	vixie-cron
 SUBDIR+=	vmsbackup
 SUBDIR+=	windowlab
+SUBDIR+=	words
 SUBDIR+=	xawtv
 SUBDIR+=	xevil
 SUBDIR+=	xml2doc
