@@ -1,8 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/07/11 21:22:33 othyro Exp $
+$NetBSD: MESSAGE,v 1.2 2004/07/12 03:30:04 othyro Exp $
 
 - Edit the PRNGD configuration file ${PKG_SYSCONFDIR}/prngd.conf
-   (see ${SHAREDIR}/doc/prngd)
+   (see ${SHAREDIR}/doc/prngd). Until the conf file for NetBSD is 
+   incorporated into the current or next PRNGD release, a sample conf file
+   can be found at http://othyro.freeshell.org/prngd.conf
 
 - Add entries to /etc/rc.local for PRNGD to start on system boot.
 
