@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.75 2003/04/13 14:49:07 cjep Exp $
-# $NetBSD: Makefile,v 1.75 2003/04/13 14:49:07 cjep Exp $
+# $Id: Makefile,v 1.76 2003/04/13 15:56:55 cjep Exp $
+# $NetBSD: Makefile,v 1.76 2003/04/13 15:56:55 cjep Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -73,3 +73,5 @@ SUBDIR+=	tex-foiltex
 SUBDIR+=	umix
 SUBDIR+=	vim-gtk2
 SUBDIR+=	xawtv
+
+.include "../mk/bsd.pkg.subdir.mk"
