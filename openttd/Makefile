@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/29 06:38:57 ianzag Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/29 07:42:05 ianzag Exp $
 
 DISTNAME=	openttd-0.3.6-source
 PKGNAME=	openttd-0.3.6
@@ -42,5 +42,4 @@ do-install:
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
