@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/24 13:05:46 adrian_p Exp $
+bin/dk-filter
+lib/libar.a
+man/cat3/ar.0
+man/cat8/dk-filter.0
+share/doc/dk-milter/FEATURES
+share/doc/dk-milter/INSTALL
+share/doc/dk-milter/KNOWNBUGS
+share/doc/dk-milter/README
+share/doc/dk-milter/RELEASE_NOTES
+@dirrm share/doc/dk-milter
