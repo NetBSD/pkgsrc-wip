@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/02 13:41:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/30 20:46:17 minskim Exp $
 #
 
 DISTNAME=		X11-Protocol-0.53
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=X11/}
 
 MAINTAINER=		roland.illig@gmx.de
 COMMENT=		Interface to the X11 protocol
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/X11/Protocol/.packlist
