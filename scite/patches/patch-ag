@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2004/02/15 13:29:13 shattered Exp $
+
+--- scintilla/gtk/makefile.orig	2003-12-24 02:45:12.000000000 +0300
++++ scintilla/gtk/makefile
+@@ -22,7 +22,7 @@ vpath %.h ../src ../include
+ vpath %.cxx ../src
+ 
+ INCLUDEDIRS=-I ../include -I ../src
+-CXXBASEFLAGS=-W -Wall -DGTK -DSCI_LEXER $(INCLUDEDIRS)
++CXXBASEFLAGS=-W -Wall -DGTK -DSCI_LEXER $(CPPFLAGS) $(INCLUDEDIRS)
+ 
+ ifdef NOTHREADS
+ THREADFLAGS=-DG_THREADS_IMPL_NONE

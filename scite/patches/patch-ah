@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1 2004/02/15 13:29:13 shattered Exp $
+
+--- scite/gtk/makefile.orig	2003-12-24 02:44:58.000000000 +0300
++++ scite/gtk/makefile
+@@ -48,7 +48,7 @@ vpath %.cxx ../src
+ 
+ #CXXFLAGS= -g -DGTK -DSCI_LEXER -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" -Wwrite-strings
+ INCLUDEDIRS=-I ../../scintilla/include -I ../src
+-CXXBASEFLAGS=-W -Wall -DGTK -DSCI_LEXER -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" $(INCLUDEDIRS)
++CXXBASEFLAGS=-W -Wall -DGTK -DSCI_LEXER -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" $(CPPFLAGS) $(INCLUDEDIRS)
+ 
+ ifdef DEBUG
+ CXXFLAGS=-DDEBUG -g $(CXXBASEFLAGS)
+@@ -76,7 +76,7 @@ COMPLIB=../../scintilla/bin/scintilla.a
+ 
+ $(PROG): SciTEGTK.o SciTEBase.o SciTEBuffers.o SciTEIO.o Exporters.o \
+ MultiplexExtension.o DirectorExtension.o SciTEProps.o Utf8_16.o $(COMPLIB)
+-	$(CC) `$(CONFIGLIB)` `glib-config --libs gthread` -DGTK $^ -o $@
++	$(CC) -L/usr/lib `$(CONFIGLIB)` -liconv $^ -o $@
+ 
+ # Automatically generate header dependencies with "make deps"
+ include deps.mak
