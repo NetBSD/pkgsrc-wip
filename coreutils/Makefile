@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/06 12:03:28 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/10 13:08:07 thomasklausner Exp $
 #
 
 DISTNAME=	coreutils-5.0
@@ -17,7 +17,6 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 BUILD_USES_MSGFMT=	YES
 USE_PERL5=		build
-CONFIGURE_ENV+=		AUTOHEADER=${AUTOHEADER}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,6 +33,5 @@ BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/autoconf.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
