@@ -1,0 +1,7 @@
+# $NetBSD: TODO,v 1.1 2003/04/06 01:10:28 marmfield Exp $
+#
+
+TODO file for nagios-plugin-ldap:
+	- Makefile structure has been done to handle multiple pkg's from
+the one plugins package.
+	- Untested, not compiled for quite a while. It's literally wip.
