@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/22 23:52:52 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/23 00:22:14 adrian_p Exp $
 
 DISTNAME=	ettercap-NG-0.7.1
 CATEGORIES=	net
@@ -9,12 +9,6 @@ HOMEPAGE=	http://ettercap.sourceforge.net/
 COMMENT=	Multipurpose sniffer/interceptor/logger for switched LAN
 
 CONFLICTS=	ettercap-0*
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=	yes
-.endif
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
@@ -45,6 +39,13 @@ PKG_SUPPORTED_OPTIONS=	gtk
 .if !empty(PKG_OPTIONS:Mgtk)
 .	include "../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gtk
+.endif
+
+# Bad hack as I think there's a bug floating round the place
+# with INSTALL_UNSTRIPPED=yes being ignored in cetain cases.
+.if ${OPSYS} == "Darwin"
+_STRIPFLAG_CC=		
+_STRIPFLAG_INSTALL=	
 .endif
 
 post-install:
