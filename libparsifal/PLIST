@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/09 19:58:09 poppnk Exp $
+include/libparsifal/bistream.h
+include/libparsifal/dtdvalid.h
+include/libparsifal/isrcmem.h
+include/libparsifal/parsifal.h
+include/libparsifal/xmlcfg.h
+include/libparsifal/xmldtd.h
+include/libparsifal/xmlhash.h
+include/libparsifal/xmlpool.h
+include/libparsifal/xmlsbuf.h
+include/libparsifal/xmlvect.h
+lib/libparsifal.la
+@dirrm include/libparsifal
