@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.401 2003/08/30 14:35:56 xtraeme Exp $
-# $NetBSD: Makefile,v 1.401 2003/08/30 14:35:56 xtraeme Exp $
+# $Id: Makefile,v 1.402 2003/08/30 16:15:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.402 2003/08/30 16:15:30 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -392,7 +392,6 @@ SUBDIR+=	xfce4-trigger-launcher
 SUBDIR+=	xfce4-utils
 SUBDIR+=	xfce4-wm
 SUBDIR+=	xfce4-wm-themes
-SUBDIR+=	xfe
 SUBDIR+=	xmail
 SUBDIR+=	xml2doc
 SUBDIR+=	xmms-dumb
