@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1137 2004/03/29 18:22:08 tvierling Exp $
-# $NetBSD: Makefile,v 1.1137 2004/03/29 18:22:08 tvierling Exp $
+# $Id: Makefile,v 1.1138 2004/03/29 18:34:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.1138 2004/03/29 18:34:35 tvierling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -130,7 +130,6 @@ SUBDIR+=	eic
 SUBDIR+=	elmo
 SUBDIR+=	emacs-carbon
 SUBDIR+=	emirror
-SUBDIR+=	entropy
 SUBDIR+=	etpan-ng
 SUBDIR+=	ezbounce
 SUBDIR+=	fakenes
@@ -149,7 +148,6 @@ SUBDIR+=	foomatic-filters
 SUBDIR+=	foomatic-filters-cups
 SUBDIR+=	fragroute
 SUBDIR+=	freeglut
-SUBDIR+=	freenet-tools
 SUBDIR+=	freevo
 SUBDIR+=	frontpage
 SUBDIR+=	fsv
