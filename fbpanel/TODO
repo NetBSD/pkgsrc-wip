@@ -1,11 +1,8 @@
 does it matter to installed compressed manpage?
 
-builds under NetBSD
-but under Linux it fails:
-taskbar.o(.text+0x8cb): In function `display_tk':
-: undefined reference to `_gtk_button_set_depressed'
-taskbar.o(.text+0x6fb): In function `callback_leave':
-: undefined reference to `_gtk_button_set_depressed'
-taskbar.o(.text+0x72f): In function `callback_enter':
-: undefined reference to `_gtk_button_set_depressed'
-collect2: ld returned 1 exit status
+trying with bad blackbox:
+reed@puget:/usr/pkgsrc/wip/fbpanel$ fbpanel 
+Can't load /home/reed/.fbpanel/default
+Using /usr/share/fbpanel/default
+fbpanel: unknown var ShowIconified
+fbpanel: can't start panel
