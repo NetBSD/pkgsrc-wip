@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1414 2004/08/02 18:13:23 marttikuparinen Exp $
-# $NetBSD: Makefile,v 1.1414 2004/08/02 18:13:23 marttikuparinen Exp $
+# $Id: Makefile,v 1.1415 2004/08/04 12:08:54 mwdavies Exp $
+# $NetBSD: Makefile,v 1.1415 2004/08/04 12:08:54 mwdavies Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -217,7 +217,6 @@ SUBDIR+=	gtkpod
 SUBDIR+=	guile-gtk-devel
 SUBDIR+=	gurlchecker
 SUBDIR+=	gwc
-SUBDIR+=	gwenview
 SUBDIR+=	hasciicam
 SUBDIR+=	help2man
 SUBDIR+=	heroes
@@ -287,9 +286,6 @@ SUBDIR+=	koffice-i18n-ru
 SUBDIR+=	konversation
 SUBDIR+=	korelib
 SUBDIR+=	kpanta
-SUBDIR+=	kphotobook
-SUBDIR+=	kphotools
-SUBDIR+=	krusader
 SUBDIR+=	ksambaplugin
 SUBDIR+=	kvirc
 SUBDIR+=	kxmleditor
@@ -669,7 +665,6 @@ SUBDIR+=	serlook
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shadow
 SUBDIR+=	shoutcast
-SUBDIR+=	showimg
 SUBDIR+=	silc-toolkit
 SUBDIR+=	silky
 SUBDIR+=	simage
