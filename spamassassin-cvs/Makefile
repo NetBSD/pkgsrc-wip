@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/25 01:49:34 tomhensel Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/05 00:33:30 thomasklausner Exp $
 
 DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}-cvs
 PKGNAME=	spamassassin-cvs-${_SA_CVS_DATE}
@@ -88,8 +88,8 @@ SPAMASSASSIN_NET_TESTS?=	YES
 .endif
 
 .if !empty(SPAMASSASSIN_USE_PYZOR:M[yY][eE][sS])
-#DEPENDS+=		pyzor>=0.40:../../mail/pyzor
-DEPENDS+=		pyzor>=0.40:../../wip/pyzor
+#DEPENDS+=		pyzor>=0.4.0:../../mail/pyzor
+DEPENDS+=		pyzor>=0.4.0:../../wip/pyzor
 SPAMASSASSIN_NET_TESTS?=	YES
 .endif
 
