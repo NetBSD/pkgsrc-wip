@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/27 21:01:58 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/31 08:12:35 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libICE-6.3.1
@@ -22,4 +22,6 @@ PKGCONFIG_OVERRIDE+=    ${WRKSRC}/ice.pc.in
 .include "../../wip/xproto/buildlink2.mk"
 .include "../../wip/xtrans/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
