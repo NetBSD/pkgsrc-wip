@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/05 19:05:55 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 23:57:35 cjep Exp $
 
 .include "Makefile.common"
 
@@ -26,7 +26,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/smtprc
 	${INSTALL_PROGRAM} ${WRKSRC}/smtprc ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/auto.conf ${PREFIX}/share/examples/smtprc
-	${INSTALL_DATA} ${WRKSRC}/email.tmpl ${PREFIX}/share/examples/smtprc 
+	${INSTALL_DATA} ${WRKSRC}/email.tmpl ${PREFIX}/share/examples/smtprc
 	${INSTALL_DATA} ${WRKSRC}/rcheck.conf ${PREFIX}/share/examples/smtprc
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/smtprc
 	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/smtprc

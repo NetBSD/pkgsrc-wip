@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/05 19:06:39 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 23:57:35 cjep Exp $
 
 .include "../../wip/smtprc/Makefile.common"
 
@@ -23,7 +23,7 @@ pre-install:
 	@${SED} -e 's#@PREFIX@#${PREFIX}#g' \
 		-e 's#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g' \
 		< ${WRKSRC}/gsmtprc > ${WRKSRC}/gsmtprc.new
-	
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/gsmtprc.new ${PREFIX}/bin/gsmtprc
 	${INSTALL_MAN} ${WRKSRC}/gsmtprc.1 ${PREFIX}/man/man1

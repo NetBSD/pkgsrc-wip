@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/19 13:14:22 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 23:57:33 cjep Exp $
 #
 
 DISTNAME=		willow-1.4
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.digitallumber.com/TAR/
 
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.digitallumber.com/
-COMMENT=		Content-filtering proxy server 
+COMMENT=		Content-filtering proxy server
 
 USE_BUILDLINK2=		yes
 PY_PATCHPLIST=		yes

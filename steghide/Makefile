@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/12 02:46:45 mjasm Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 23:57:35 cjep Exp $
 #
 
 DISTNAME=		steghide-0.5.1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=steghide/}
 
 MAINTAINER=		adam@monkeybyte.org
 HOMEPAGE=		http://steghide.sourceforge.net/
-COMMENT=		steganography program that is able to hide data 
+COMMENT=		steganography program that is able to hide data
 
 DEPENDS+=	mcrypt-*:../../security/mcrypt
 
