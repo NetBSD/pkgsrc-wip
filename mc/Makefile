@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2004/12/20 16:33:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2005/01/15 18:36:39 rillig Exp $
 
-DISTNAME=	mc-4.6.1-pre1
-PKGNAME=	mc-4.6.1rc1
+DISTNAME=	mc-4.6.1-pre2b
+PKGNAME=	mc-4.6.1rc2
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.ibiblio.org/pub/Linux/utils/file/managers/mc/ \
-		${MASTER_SITE_SUNSITE:=utils/file/managers/mc/}
+MASTER_SITES=	http://pavelsh.pp.ru/mc/
+#MASTER_SITES=	http://www.ibiblio.org/pub/Linux/utils/file/managers/mc/ \
+#		${MASTER_SITE_SUNSITE:=utils/file/managers/mc/}
 
 MAINTAINER=	pavel.arnost@clnet.cz
 HOMEPAGE=	http://www.ibiblio.org/mc/
@@ -26,9 +27,8 @@ post-install:
 	@${RMDIR} ${PREFIX}/lib/mc 2>/dev/null || ${TRUE}
 
 # we need working e2fsprogs and gpm packages first
-CONFIGURE_ARGS=	--prefix=${PREFIX} \
-		--without-ext2undel \
-		--without-gpm-mouse
+CONFIGURE_ARGS+=	--without-ext2undel
+CONFIGURE_ARGS+=	--without-gpm-mouse
 
 MC_FEATURES=		edit charset largefile samba subshell vfs x11
 MC_DISABLE_FEATURES=	x11 samba
