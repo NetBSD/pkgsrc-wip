@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/25 03:09:09 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.21 2004/04/19 20:53:02 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -32,7 +32,7 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
 EXTRACT_USING_PAX= YES # GNU tar barfs on really deep paths
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_PKGINSTALL=	YES
 
@@ -80,9 +80,9 @@ MAKE_ENV+=	LIBIDL_HDRS="${LOCALBASE}/include"
 post-install:
 	${LN} -f -s ${PREFIX}/jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji.so ${MOZILLA_PLUGINS_DIR}/
 
-.include "../../net/ORBit/buildlink2.mk"
-.include "../../www/mozilla/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../net/ORBit/buildlink3.mk"
+.include "../../www/mozilla/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .endif
 
 ALL_TARGET+=	images
@@ -173,7 +173,7 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}
 	cd ${BUILD_DIRS}/../build/*/jdk-image-${MACHINE_ARCH} && ${PAX} -rw . ${PREFIX}
 
-.include "../../mk/motif.buildlink2.mk"
+.include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # This needs to be after bsd.pkg.mk

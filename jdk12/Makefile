@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/25 03:09:09 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/19 20:53:01 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -30,7 +30,7 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_PKGINSTALL=	YES
 
@@ -131,7 +131,7 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}
 	cd ${BUILD_DIRS}/jdk-image-${MACHINE_ARCH} && ${PAX} -rw . ${PREFIX}
 
-.include "../../mk/motif.buildlink2.mk"
+.include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # This needs to be after bsd.pkg.mk
