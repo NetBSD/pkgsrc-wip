@@ -1,0 +1,36 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/11/22 17:23:43 mpasternak Exp $
+
+--- setup.py.orig	Wed May  7 02:06:01 2003
++++ setup.py	Sat Nov 22 18:19:07 2003
+@@ -2,23 +2,25 @@
+ from distutils.extension import Extension
+ from Pyrex.Distutils import build_ext
+ 
+-import sys
++import sys, os
++ROOTDIR = os.path.abspath(os.path.dirname(sys.argv[0]))
++PREFIX = os.environ['PREFIX']
+ 
+ if sys.platform == 'win32':
+-    faSources=['fastaudio.pyx', '../pa_common/pa_lib.c', '../pa_win_wmme/pa_win_wmme.c']
++    faSources=['fastaudio.pyx', ROOTDIR + '/pa_common/pa_lib.c', ROOTDIR + '/pa_win_wmme/pa_win_wmme.c']
+     defines = [('WIN32', 1)]
+     libs = ['winmm', 'libsndfile']
+     extra_link_args = []
+-elif sys.platform.find('linux') != -1:
+-    faSources=['fastaudio.pyx', '../pa_common/pa_lib.c', '../pa_unix_oss/pa_unix_oss.c']
++else: # you can add more sys.platform deps later 
++    faSources=['fastaudio.pyx', ROOTDIR + '/pa_common/pa_lib.c', ROOTDIR + '/pa_unix_oss/pa_unix_oss.c']
+     defines = []
+     libs = ['sndfile']
+-    extra_link_args = ['/usr/lib/libsndfile.a']
++    extra_link_args = [PREFIX + '/lib/libsndfile.a']
+ #faSources=['fastaudio.pyx']
+ 
+ ext_fastaudio = [Extension('fastaudio',
+                           faSources,
+-                          include_dirs=['../pa_common'],
++                          include_dirs=[ROOTDIR + '/pa_common', ROOTDIR, os.path.join(PREFIX, 'include')],
+                           define_macros=defines,
+                           libraries=libs,
+                           extra_link_args=extra_link_args

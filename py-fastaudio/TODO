@@ -1,0 +1,23 @@
+$Id: TODO,v 1.1.1.1 2003/11/22 17:23:42 mpasternak Exp $
+
+Sat Nov 22 18:07:17 CET 2003
+
+fastaudio 0.1 seems to be very beta at the moment, at least looking at
+soruces, but I need it to do my paid development, so I'm porting it to -wip
+anyway. 
+
+In reality, this package currently is tightly fastened to portaudio,
+whole Makefile is an ugly hack, and so on, so on.
+
+I'm in concatct with fastaudio author, so propably we could make the things
+cleaner with fastaudio 0.2
+
+Currently the package compiles, but doesn't work:
+
+>>> import fastaudio
+Traceback (most recent call last):
+  File "<stdin>", line 1, in ?
+  ImportError: /usr/pkg/lib/python2p3/site-packages/fastaudio.so: Undefined
+PLT symbol "PaHost_Init" (reloc type = 7, symnum = 159)
+
+	-- dotz@irc.pl

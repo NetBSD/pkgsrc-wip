@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/22 17:23:42 mpasternak Exp $
+${PYSITELIB}/fastaudio.so

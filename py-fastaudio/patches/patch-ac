@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/11/22 17:23:43 mpasternak Exp $
+
+--- Makefile.in~	Tue Feb 11 23:24:56 2003
++++ Makefile.in	Sat Nov 22 17:18:08 2003
+@@ -7,7 +7,7 @@
+ PREFIX = @prefix@
+ CC = @CC@
+ CFLAGS = @CFLAGS@ -Ipa_common
+-LIBS = @LIBS@
++LIBS = -lossaudio -L@prefix@/lib -Wl,-R@prefix@/lib @LIBS@
+ AR = @AR@
+ RANLIB = @RANLIB@
+ INSTALL = @INSTALL@

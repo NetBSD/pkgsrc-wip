@@ -1,0 +1,11 @@
+$NetBSD: patch-ag,v 1.1.1.1 2003/11/22 17:23:43 mpasternak Exp $
+
+--- mysndfile.h~	Wed May  7 02:06:01 2003
++++ mysndfile.h	Sat Nov 22 18:16:54 2003
+@@ -1,5 +1,5 @@
+ #ifdef WIN32
+ #include "sndfile-win32.h"
+ #else
+-#include "sndfile.h"
++#include <sndfile.h>
+ #endif

@@ -1,0 +1,2 @@
+A Python interface to the PortAudio multiplatform audio I/O library that
+features convenient non-blocking calls, plus far greater stability.
