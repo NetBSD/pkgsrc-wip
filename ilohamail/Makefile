@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2003/08/28 09:48:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/10 20:39:18 poppnk Exp $
 #
 
-DISTNAME=	IlohaMail-0.7.11
+DISTNAME=	IlohaMail-0.8.11
 PKGNAME=	${DISTNAME:S/IlohaM/iloham/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ilohamail/}
@@ -10,7 +10,13 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.ilohamail.org/
 COMMENT=	Light weight yet full featured multilingual webmail
 
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(ILOHAMAIL_USE_PHP5) && ${ILOHAMAIL_USE_PHP5} == YES
+DEPENDS+=	{ap-php-5.[0-9]*,ap2-php-5.[0-9]*}:../../wip/ap-php5
+.else
 DEPENDS+=	{ap-php-4.[0-9]*,ap2-php-4.[0-9]*}:../../www/ap-php4
+.endif
 
 NO_BUILD=	yes
 
@@ -19,10 +25,6 @@ ILOHADIR=	${APACHE_DOCROOT}/IlohaMail
 
 do-install:
 	@${CP} -r ${WRKSRC}/IlohaMail ${APACHE_DOCROOT}
-	${INSTALL_DATA_DIR} ${ILOHADIR}/users
-	${INSTALL_DATA_DIR} ${ILOHADIR}/sessions
-	${INSTALL_DATA_DIR} ${ILOHADIR}/uploads
-	${INSTALL_DATA_DIR} ${ILOHADIR}/cache
 	${CHMOD} -R 700 ${ILOHADIR}
 	${CHOWN} -R www:www ${ILOHADIR}
 
