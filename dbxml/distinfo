@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/26 21:27:47 minskim Exp $
+
+SHA1 (dbxml-1.2.0.tar.gz) = c693e09be2cb2c21a9c46f37d4c52991346dc719
+Size (dbxml-1.2.0.tar.gz) = 2950707 bytes
+SHA1 (patch-aa) = 24b9e137eeb9d5c123c168738d553ca8f7ed1c61
+SHA1 (patch-ab) = 39612561440760dc353ba471808065b5d48ab51e
