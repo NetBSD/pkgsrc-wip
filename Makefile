@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.793 2003/12/23 09:17:06 xtraeme Exp $
-# $NetBSD: Makefile,v 1.793 2003/12/23 09:17:06 xtraeme Exp $
+# $Id: Makefile,v 1.794 2003/12/23 10:22:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.794 2003/12/23 10:22:00 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -242,7 +242,6 @@ SUBDIR+=	ion-dock
 SUBDIR+=	isc-dhclient
 SUBDIR+=	isc-dhcpd
 SUBDIR+=	ish
-SUBDIR+=	jabberd
 SUBDIR+=	jabberd2
 SUBDIR+=	jakarta-log4j
 SUBDIR+=	javascript-guide
