@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/30 20:17:21 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/18 08:05:55 minskim Exp $
 #
 
 DISTNAME=		PyBabelPhish-2.0_All_Platforms
@@ -37,5 +37,5 @@ do-install:
 	${CHOWN} ${BINOWN}:${BINGRP} ${SCRIPTNAME}
 
 .include "../../lang/python/extension.mk"
-.include "../..//x11/py-gtk2/buildlink2.mk"
+.include "../../x11/py-gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
