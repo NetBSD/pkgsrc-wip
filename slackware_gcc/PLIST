@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/12 12:42:37 mpasternak Exp $
-${EMULSUBDIR}/install/doinst.sh
-${EMULSUBDIR}/install/slack-desc
+@comment $NetBSD: PLIST,v 1.2 2004/03/15 10:09:26 mpasternak Exp $
 ${EMULSUBDIR}/usr/bin/cpp
 ${EMULSUBDIR}/usr/bin/gcc-3.3.3
 ${EMULSUBDIR}/usr/bin/gccbug
