@@ -1,0 +1,29 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2003/09/28 13:02:45 adrian_p Exp $
+
+DISTNAME=	prelude-manager-0.8.8
+CATEGORIES=	net www
+MASTER_SITES=	http://www.prelude-ids.org/download/releases/
+
+MAINTAINER=	adrianp@stindustries.net
+HOMEPAGE= 	http://www.prelude-ids.org/
+COMMENT=	Prelude manager
+
+GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
+USE_GMAKE=		YES
+USE_PKGINSTALL=		YES
+
+PTHREAD_OPTS=		require
+
+PKG_SYSCONFSUBDIR=	prelude-manager
+
+CONF_FILES=		${WRKSRC}/prelude-manager.conf \
+			${PKG_SYSCONFDIR}/prelude-manager.conf
+
+CONFIGURE_ARGS+=        --enable-openssl
+
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../wip/libprelude/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
+.include "../../devel/pcre/buildlink2.mk"

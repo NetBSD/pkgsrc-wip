@@ -1,0 +1,56 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/28 13:01:15 adrian_p Exp $
+bin/libprelude-config
+bin/sensor-adduser
+include/libprelude/common.h
+include/libprelude/config-engine.h
+include/libprelude/daemonize.h
+include/libprelude/extract.h
+include/libprelude/idmef-message-id.h
+include/libprelude/idmef-msg-send.h
+include/libprelude/idmef-tree-func.h
+include/libprelude/idmef-tree.h
+include/libprelude/list.h
+include/libprelude/plugin-common-prv.h
+include/libprelude/plugin-common.h
+include/libprelude/prelude-async.h
+include/libprelude/prelude-auth.h
+include/libprelude/prelude-client-mgr.h
+include/libprelude/prelude-client.h
+include/libprelude/prelude-getopt-wide.h
+include/libprelude/prelude-getopt.h
+include/libprelude/prelude-ident.h
+include/libprelude/prelude-inet.h
+include/libprelude/prelude-io.h
+include/libprelude/prelude-list.h
+include/libprelude/prelude-log.h
+include/libprelude/prelude-message-buffered.h
+include/libprelude/prelude-message-id.h
+include/libprelude/prelude-message.h
+include/libprelude/prelude-path.h
+include/libprelude/sensor.h
+include/libprelude/ssl-gencrypto.h
+include/libprelude/ssl-registration-msg.h
+include/libprelude/ssl-settings.h
+include/libprelude/threads.h
+include/libprelude/timer.h
+include/libprelude/variable.h
+lib/libprelude.la
+lib/libprelude.so
+lib/libprelude.so.0
+lib/libprelude.so.0.0
+libprelude/include/config.h
+share/gtk-doc/html/libprelude/c4.html
+share/gtk-doc/html/libprelude/index.html
+share/gtk-doc/html/libprelude/index.sgml
+share/gtk-doc/html/libprelude/libprelude-prelude-io.html
+@dirrm share/gtk-doc/html/libprelude
+@dirrm share/gtk-doc/html
+@dirrm share/gtk-doc
+@dirrm libprelude/include
+@dirrm libprelude
+@dirrm include/libprelude
+@exec ${MKDIR} %D/etc/prelude-sensors/ssl
+@dirrm etc/prelude-sensors/ssl
+@exec ${MKDIR} %D/etc/prelude-sensors/plaintext
+@dirrm etc/prelude-sensors/plaintext
+@dirrm etc/prelude-sensors
