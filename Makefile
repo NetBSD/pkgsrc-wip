@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1400 2004/07/19 19:50:01 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1400 2004/07/19 19:50:01 thomasklausner Exp $
+# $Id: Makefile,v 1.1401 2004/07/19 20:42:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1401 2004/07/19 20:42:58 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -437,6 +437,7 @@ SUBDIR+=	natali
 SUBDIR+=	navigatrix
 SUBDIR+=	ncps
 SUBDIR+=	nehe-opengl-tutorials
+SUBDIR+=	nestra
 SUBDIR+=	net-quanta
 SUBDIR+=	net-tools
 SUBDIR+=	netkit-base
