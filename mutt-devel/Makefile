@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/09/14 03:57:44 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/03 21:37:03 rillig Exp $
 
 DISTNAME=		mutt-1.5.4i
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
@@ -78,11 +78,6 @@ CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 .else
 CONFIGURE_ARGS+=	--without-ssl
-.endif
-
-.if defined(USE_SASL) && ${USE_SASL} == "YES"
-.include "../../security/cyrus-sasl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 .endif
 
 .if defined(USE_SASL2) && ${USE_SASL2} == "YES"
