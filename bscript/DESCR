@@ -1,0 +1,6 @@
+BScript is a (yet another) BASIC interpreter. 
+
+It is free software and open-sourced, licensed under the terms of the
+GNU General Public License version 2 or later. You can use BScript to
+teach BASIC to your students, write understandable shell scripts
+(good bye, spaghetti code!), automate simple tasks, or even write a game!
