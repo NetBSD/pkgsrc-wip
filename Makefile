@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1256 2004/05/08 00:45:34 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1256 2004/05/08 00:45:34 xtraeme Exp $
+# $Id: Makefile,v 1.1257 2004/05/08 02:20:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1257 2004/05/08 02:20:47 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -169,10 +169,6 @@ SUBDIR+=	gettext-tools
 SUBDIR+=	gforge
 SUBDIR+=	gg2
 SUBDIR+=	ghostpcl
-SUBDIR+=	gift
-SUBDIR+=	gift-openft
-SUBDIR+=	giftcurs
-SUBDIR+=	giftui
 SUBDIR+=	gkrellm-launch
 SUBDIR+=	gkrellm-reminder
 SUBDIR+=	glade2-nognome

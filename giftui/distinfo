@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/21 18:55:20 xtraeme Exp $
-
-SHA1 (giFTui-0.1.1.tar.gz) = 32b3a8f2e1a806de511189bd3dd7f31c48167bb7
-Size (giFTui-0.1.1.tar.gz) = 266465 bytes
-SHA1 (patch-aa) = 9667d19a7a8ff2be41743c51721896c9cffa51f2
