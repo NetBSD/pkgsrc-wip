@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/12 04:01:37 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/03 03:31:27 xtraeme Exp $
 etc/rc.d/jabberd
 bin/c2s
 bin/jabberd
@@ -13,4 +13,3 @@ share/examples/jabberd/router.xml
 share/examples/jabberd/s2s.xml
 share/examples/jabberd/sm.xml
 @dirrm share/examples/jabberd
-@dirrm etc/jabberd

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/07/14 17:03:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/03 03:31:27 xtraeme Exp $
 #
 
-DISTNAME=		jabberd-2.0.0-a4
-PKGNAME=		${DISTNAME:S/d-2.0.0-a/d2-2.0.0alpha/}
+DISTNAME=		jabberd-2.0.0-a5
+PKGNAME=		${DISTNAME:S/d-2.0.0-a/d2-2.0rc/}
 CATEGORIES=		chat
 MASTER_SITES=		http://www.jabberstudio.org/files/jabberd2/
 
@@ -18,6 +18,23 @@ GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(JABBERD2_USES_PGSQL) && !empty(JABBERD2_USES_PGSQL:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--with-pgsql=${BUILDLINK_PREFIX.postgresql-lib}
+.include "../../databases/postgresql-lib/buildlink2.mk"
+.endif
+
+.if defined(JABBERD2_USES_MYSQL) && !empty(JABBERD2_USES_MYSQL:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
+.include "../../databases/mysql-client/buildlink2.mk"
+.endif
+
+.if defined(JABBERD2_USES_PAM) && !empty(JABBERD2_USES_PAM:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.PAM}
+.include "../../security/PAM/buildlink2.mk"
+.endif
 
 RCD_SCRIPTS=		jabberd
 PKG_SYSCONFSUBDIR=	jabberd
@@ -79,5 +96,4 @@ post-install:
 .include "../../databases/openldap/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../security/cyrus-sasl2/buildlink2.mk"
-
 .include "../../mk/bsd.pkg.mk"

@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/06/12 04:01:38 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2003/08/03 03:31:27 xtraeme Exp $
 
---- c2s/authreg_db.c.orig	2003-06-12 03:52:05.000000000 +0200
-+++ c2s/authreg_db.c	2003-06-12 03:52:15.000000000 +0200
-@@ -31,7 +31,7 @@
-  */
- 
- #include "c2s.h"
--#include <db.h>
-+#include <db4/db.h>
- 
- /* internal structure, holds auth credentials for one user */
- typedef struct creds_st
+--- Makefile.in.orig	2003-08-03 04:49:42.000000000 +0200
++++ Makefile.in	2003-08-03 04:50:33.000000000 +0200
+@@ -92,7 +92,7 @@
+ am__include = @am__include@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+-SUBDIRS = etc tools mio sx util expat idn $(JABBERD_SUBDIRS)
++SUBDIRS = tools mio sx util expat idn $(JABBERD_SUBDIRS)
+ EXTRA_DIST = ac-helpers
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4

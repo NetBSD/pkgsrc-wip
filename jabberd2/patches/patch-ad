@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/06/12 04:01:38 xtraeme Exp $
+$NetBSD: patch-ad,v 1.2 2003/08/03 03:31:27 xtraeme Exp $
 
---- Makefile.in.orig	2003-06-12 04:32:42.000000000 +0200
-+++ Makefile.in	2003-06-12 04:32:49.000000000 +0200
-@@ -82,7 +82,7 @@
- SX_DEBUG = @SX_DEBUG@
- VERSION = @VERSION@
+--- c2s/authreg_db.c.orig	2003-08-03 04:59:06.000000000 +0200
++++ c2s/authreg_db.c	2003-08-03 04:59:15.000000000 +0200
+@@ -34,7 +34,7 @@
  
--SUBDIRS = etc tools mio sx util expat idn $(JABBERD_SUBDIRS)
-+SUBDIRS = tools mio sx util expat idn $(JABBERD_SUBDIRS)
- EXTRA_DIST = ac-helpers
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ #ifdef WANT_AUTHREG_DB
+ 
+-#include <db.h>
++#include <db4/db.h>
+ 
+ /* internal structure, holds auth credentials for one user */
+ typedef struct creds_st
