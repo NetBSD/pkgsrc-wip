@@ -1,10 +1,19 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/09/13 13:01:35 bubuchka Exp $
+$NetBSD: MESSAGE,v 1.2 2003/10/28 16:07:01 bubuchka Exp $
 
 To enable this mail filter on your sendmail server, please add the
 contents of the following file to /etc/mail/sendmail.mc, and then
 rebuild last one:
 
 	${EGDIR}/sendmail.mc.addon
+
+If you are doing upgrade from drweb-smf version prior to 4.30, it is
+HIGHLY RECOMMENDED to use the new configuration file. Sample file is
+located on: 
+
+	${EGDIR}/drweb-smf.conf
+
+Please note also, the ${PKGNAME} is NOT compatible with
+DrWeb Daemon version prior to 4.30. Please upgrade it as well.
 
 ===========================================================================

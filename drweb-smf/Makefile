@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/13 13:01:35 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/28 16:07:01 bubuchka Exp $
 
 DRW_CLIENT_NAME=	smf
 
@@ -6,7 +6,6 @@ MAINTAINER=		mishka@terabyte.com.ua
 COMMENT=		Sendmail MTA filter for DrWeb Daemon antivirus
 
 RCD_SCRIPTS=		drweb-smf
-#RCD_SCRIPT_SRC.drweb-smf=	${FILESDIR}/drweb-smf-rcd.src
 
 PKG_GROUPS=		${DRW_GROUP}
 PKG_USERS=		${DRW_USER}:${PKG_GROUPS}::DrWeb\\ AntiVirus

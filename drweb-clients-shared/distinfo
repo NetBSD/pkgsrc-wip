@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/13 12:58:40 bubuchka Exp $
+$NetBSD: distinfo,v 1.2 2003/10/28 16:06:59 bubuchka Exp $
 
-SHA1 (drweb-clients-4.29.12-F-sources.tar.gz) = 3a3c23e64046a44708e6464654548c48a730b718
-Size (drweb-clients-4.29.12-F-sources.tar.gz) = 338133 bytes
-SHA1 (patch-aa) = 58209f96eeff2d9c09ae4fd0ec8782d06024552d
-SHA1 (patch-ab) = 25db0dc607cbec2b1a494035ef8f567fb7c8959b
-SHA1 (patch-ac) = 0c231d3c02e5411856efdab5814152f13ef2ebe0
-SHA1 (patch-ad) = 76b9a31cc636b0678ac8a827c38e573de796acef
-SHA1 (patch-ae) = f98791bc785e2c77748b101412b71e70584a20b1
+SHA1 (drweb-clients-beta-20031020-sources.tar.gz) = 4dab75d9fa97c38e5e1123dd4b9b9f1c4690e091
+Size (drweb-clients-beta-20031020-sources.tar.gz) = 390646 bytes
+SHA1 (patch-aa) = c0ce331a84c6b81cb9c3a2d19d09253cf52cb751
+SHA1 (patch-ab) = f051cb717ecd40ca3972f125d11490783997e9ae
+SHA1 (patch-ac) = 2ed4123966bfe4f98b166055eda3eb1c514c915b
+SHA1 (patch-ad) = f3c234f79d5af828d84fb67e39ef21c671bb7908
+SHA1 (patch-ae) = 56a4641c161b2770aa6e750d0f3c9592a5725b20
+SHA1 (patch-af) = 656c1a29ec3f759533b9b01823bf82cfa472f81d

@@ -1,134 +1,84 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/09/13 12:58:47 bubuchka Exp $
+$NetBSD: patch-ad,v 1.2 2003/10/28 16:07:00 bubuchka Exp $
 
---- etc/drweb_smf.conf.orig	2003-07-30 17:35:23.000000000 +0300
-+++ etc/drweb_smf.conf
-@@ -14,10 +14,10 @@
- # pid - get daemon address from pidfile, then {ADDRESS} is {PIDFILE}
- # Examples:
- #   Address = inet:3000@localhost
--#   Address = local:/usr/local/drweb/run/drwebd.skt
--#   Address = pid:/usr/local/drweb/run/drwebd.pid
--#   Address = pid:/var/drweb/run/drwebd.pid, inet:3000@backup_server.example.com
--Address = inet:3000@localhost
-+#   Address = local:@DRW_SOCKFILE@
-+#   Address = pid:@DRW_PIDFILE@
-+#   Address = pid:@DRW_PIDFILE@, inet:3000@backup_server.example.com
-+Address = local:@DRW_SOCKFILE@
+--- dw_options.c.orig	2003-10-20 20:02:09.000000000 +0300
++++ dw_options.c
+@@ -62,69 +62,61 @@ static const char rcsid[] = "$Id: dw_opt
+ #define PROG_NAME                   "drweb-courier"
+ #define PROG_FULLNAME               "DrWeb Courier-MTA filter"
+ #define PROG_NOTE                   "Note: filter will be started by Courier-MTA automatically after install"
+-#define CONF_FNAME                  "drweb_courier.conf"
++#define CONF_FNAME                  "drweb-courier.conf"
+ #endif /* COURIER */
  
- # Enable/disable caching resolved daemon host 
- # (useful only if daemon uses TCP/IP communications)
-@@ -58,7 +58,7 @@ ReportMaxSize = 8192
- # LocalScan has affect only on connection with first daemon in Address list
- # If enabled then spool directory must be readable (writeable for EVAL key) 
- # for drwebd process (see drweb32.ini option User)
--LocalScan = yes
-+LocalScan = no
+ #if defined(DW_SENDMAIL)
+ #define PROG_NAME                   "drweb-smf"
+ #define PROG_FULLNAME               "DrWeb Sendmail Filter"
+ #define PROG_NOTE                   ""
+-#define CONF_FNAME                  "drweb_smf.conf"
++#define CONF_FNAME                  "drweb-smf.conf"
+ #endif /* SENDMAIL */
  
- # Enable or disable daemon rule filter (on/off)
- RuleFilter = on
-@@ -72,10 +72,10 @@ FilterAccount = drweb 
- DenyOnOne = yes
+ #if defined(DW_CGP)
+ #define PROG_NAME                   "drweb-cgp"
+ #define PROG_FULLNAME               "DrWeb Plug-in for CommuniGate Pro"
+ #define PROG_NOTE                   "Note: plug-in will be started by CommuniGate Pro automatically"
+-#define CONF_FNAME                  "drweb_cgp.conf"
++#define CONF_FNAME                  "drweb-cgp.conf"
+ #endif /* CGP */
  
- # List with rules for users or domains to block scanning 
--DenyList = /etc/drweb/users.conf
-+DenyList = @PKG_SYSCONFDIR@/users.conf
+ #if defined(DW_MIO)
+ #define PROG_NAME                   "drweb-mio"
+ #define PROG_FULLNAME               "DrWeb Plug-in for Mobico MIO Server"
+ #define PROG_NOTE                   "Note: plug-in will be started by MIO automatically"
+-#define CONF_FNAME                  "drweb_mio.conf"
++#define CONF_FNAME                  "drweb-mio.conf"
+ #endif /* MIO */
  
- # Directory used for story temporary files
--Spool = /var/drweb/spool 
-+Spool = /tmp
+ #if defined(DW_ZMAILER)
+ #define PROG_NAME                   "drweb-zmailer"
+ #define PROG_FULLNAME               "DrWeb Filter for ZMailer"
+ #define PROG_NOTE                   "Note: filter will be started by ZMailer automatically"
+-#define CONF_FNAME                  "drweb_zmailer.conf"
++#define CONF_FNAME                  "drweb-zmailer.conf"
+ #endif /* ZMAILER */
  
- # Permissions for created spool files
- SpoolFilesMode = 0600
-@@ -198,25 +198,25 @@ ScanningErrors = quarantine 
- ProcessingErrors = quarantine 
+ #if defined(DW_QMAIL)
+ #define PROG_NAME                   "qmail-queue"
+ #define PROG_FULLNAME               "DrWeb Filter for QMail"
+ #define PROG_NOTE                   "Note: filter will be started by QMail system automatically after install"
+-#define CONF_FNAME                  "drweb_qmail.conf"
++#define CONF_FNAME                  "drweb-qmail.conf"
+ #endif /* QMAIL */
  
- # Admin mail address (may be unix-local address)
--AdminMail = av-master@example.com
-+AdminMail = postmaster@example.com
+ #if defined(DW_POSTFIX)
+ #define PROG_NAME                   "drweb-postfix"
+ #define PROG_FULLNAME               "DrWeb Filter for Postfix"
+ #define PROG_NOTE                   "Note: filter will be started by Postfix system automatically after install"
+-#define CONF_FNAME                  "drweb_postfix.conf"
++#define CONF_FNAME                  "drweb-postfix.conf"
+ #endif /* POSTFIX */
  
- # Mail address for redirect action (may be unix-local address)
--RedirectMail = quarantine@example.com
-+RedirectMail = postmaster@example.com
+ #if defined(DW_EXIM)
+ #define PROG_NAME                   "drweb-exim"
+ #define PROG_FULLNAME               "DrWeb Filter for Exim"
+ #define PROG_NOTE                   "Note: filter will be started by Exim system automatically after install"
+-#define CONF_FNAME                  "drweb_exim.conf"
++#define CONF_FNAME                  "drweb-exim.conf"
+ #endif /* EXIM */
  
- # Filter address, that be used in From: (should be qualified)
--FilterMail = DrWEB-DAEMON@example.com
-+FilterMail = DrWeb-DAEMON@example.com
- 
- # List of unnotificable viruses
--UnnotificableVirusesList = /etc/drweb/viruses.conf
-+UnnotificableVirusesList = @PKG_SYSCONFDIR@/viruses.conf
- 
- # List of unnotificable addresses
--UnnotificableAddressesList = /etc/drweb/addresses.conf
-+UnnotificableAddressesList = @PKG_SYSCONFDIR@/addresses.conf
- 
- # Quarantine directory. 
- # The infected files could be moved in that dir 
- # if you stay this field empty or commented then 
- # infected messages would not been storied
--Quarantine = /var/drweb/infected
-+Quarantine = @DRW_INFECTDIR@
- 
- # Permissions for quarantined files
- QuarantineFilesMode = 0660
-@@ -254,15 +254,15 @@ AdminNotify = yes
- RcptsNotify = yes
- 
- # Files with notification templates
--SenderTemplate = /etc/drweb/templates/en-ru/sendmail/virus-sender.msg
--AdminTemplate = /etc/drweb/templates/en-ru/sendmail/virus-admin.msg
--RcptsTemplate = /etc/drweb/templates/en-ru/sendmail/virus-rcpts.msg
-+SenderTemplate = @PKG_SYSCONFDIR@/sender-virus.msg
-+AdminTemplate = @PKG_SYSCONFDIR@/admin-virus.msg
-+RcptsTemplate = @PKG_SYSCONFDIR@/rcpts-virus.msg
- 
- [SkipNotifications]
- SenderNotify = yes
- AdminNotify = no
- RcptsNotify = no
--SenderTemplate = /etc/drweb/templates/en-ru/sendmail/skip-sender.msg
-+SenderTemplate = @PKG_SYSCONFDIR@/sender-skip.msg
- AdminTemplate = 
- RcptsTemplate = 
- 
-@@ -270,16 +270,16 @@ RcptsTemplate = 
- SenderNotify = yes
- AdminNotify = yes
- RcptsNotify = no
--SenderTemplate = /etc/drweb/templates/en-ru/sendmail/archive-sender.msg
--AdminTemplate = /etc/drweb/templates/en-ru/sendmail/archive-admin.msg
-+SenderTemplate = @PKG_SYSCONFDIR@/sender-archive.msg
-+AdminTemplate = @PKG_SYSCONFDIR@/admin-archive.msg
- RcptsTemplate = 
- 
- [ErrorNotifications]
- SenderNotify = yes
- AdminNotify = yes
- RcptsNotify = no
--SenderTemplate = /etc/drweb/templates/en-ru/sendmail/error-sender.msg
--AdminTemplate = /etc/drweb/templates/en-ru/sendmail/error-admin.msg
-+SenderTemplate = @PKG_SYSCONFDIR@/sender-error.msg
-+AdminTemplate = @PKG_SYSCONFDIR@/admin-error.msg
- RcptsTemplate = 
- 
- [RuleFilterNotifications]
-@@ -287,7 +287,7 @@ SenderNotify = no
- AdminNotify = yes
- RcptsNotify = no
- SenderTemplate = 
--AdminTemplate = /etc/drweb/templates/en-ru/sendmail/rule-admin.msg
-+AdminTemplate = @PKG_SYSCONFDIR@/admin-rule.msg
- RcptsTemplate = 
- 
- ###################
-@@ -315,8 +315,8 @@ Sendmail = /usr/sbin/sendmail
- 
- # Definition of Sendmail Milter Address according to sendmail.cf 
- # Note: FAMILY pid is not valid
--# MilterAddress = local:/usr/local/drweb/run/drweb-smf.skt
--MilterAddress = inet:3001@localhost
-+# MilterAddress = inet:3001@localhost
-+MilterAddress = local:@DRW_SMF_SOCKFILE@
- 
- # Timeout for drweb-smf to sendmail connection
- # (Must be greater that any Timeout. parameter in sendmail.cf)
+ #if defined(__UNIX_DW)
+-#if !defined(EMX_DW)
+-#if defined(FreeBSD_DW)
+-#define OS_SPEC_CONFNAME            "/usr/local/etc/drweb/"CONF_FNAME
+-#else /* FreeBSD */
+-#define OS_SPEC_CONFNAME            "/opt/drweb/"CONF_FNAME
+-#endif /* FreeBSD */
+-#else /* EMX */
+-#define OS_SPEC_CONFNAME            "./"CONF_FNAME
+-#endif /* EMX */
+-#define FHS_SPEC_CONFNAME           "/etc/drweb/"CONF_FNAME
++#define OS_SPEC_CONFNAME            PKG_SYSCONFDIR"/"CONF_FNAME
++#define FHS_SPEC_CONFNAME           "./"CONF_FNAME
+ #endif /* UNIX */
+ #if defined(__WIN32_DW)
+ #define OS_SPEC_CONFNAME            ".\\"CONF_FNAME

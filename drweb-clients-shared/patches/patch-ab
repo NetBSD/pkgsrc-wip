@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/09/13 12:58:44 bubuchka Exp $
+$NetBSD: patch-ab,v 1.2 2003/10/28 16:07:00 bubuchka Exp $
 
---- configure.orig	2003-07-30 17:35:23.000000000 +0300
+--- configure.orig	2003-10-20 20:02:09.000000000 +0300
 +++ configure
 @@ -42,6 +42,10 @@ case "`(uname -sr)2>/dev/null`" in
          OS="FreeBSD"
@@ -13,30 +13,19 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/09/13 12:58:44 bubuchka Exp $
  	"SunOS 5"*)
  		OS="Solaris"
          echo    
-@@ -117,53 +121,6 @@ if [ "$NEED_SM" = "y" ] ; then    
-             MILTER_VER="FIXED"
-         fi    
-     fi    
--    if [ $MILTER_VER = "STD" ] ; then
--        SM_HDR="include/libmilter/mfdef.h"        
--        SM_LIB="lib/libsm.a"
--        SM_LIB_CMD="-lsm"
--    elif [ $MILTER_VER = "FIXED" ] ; then
--        SM_HDR="include/libmilter/mfdef.h"        
--        SM_LIB=""
--        SM_LIB_CMD=""    
--    elif [ $OS = "Linux" ] ; then
--        SM_HDR=""        
--        SM_LIB="lib/libsmutil.a"
--        SM_LIB_CMD="-lsmutil"
--    else
--        SM_HDR=""        
--        SM_LIB=""
--        SM_LIB_CMD=""
--    fi
+@@ -139,42 +143,6 @@ if [ "$NEED_SM" = "y" ] ; then    
+         SM_LIB=""
+         SM_LIB_CMD=""
+     fi
 -    NO_ADD="no"
 -    if [ ! -f include/libmilter/mfapi.h ] ; then
 -        echo "no include/libmilter/mfapi.h"
+-    fi    
+-    if grep smfi_setbacklog include/libmilter/mfapi.h > /dev/null 2>&1 ; then
+-       SM_BACKLOG="-DDW_HAVE_BACKLOG"  
+-    fi
+-    if grep SMFI_DRWEB_PATCHED include/libmilter/mfapi.h > /dev/null 2>&1 ; then
+-       SM_PATCH="yes" 
 -    fi
 -    if [ "x$SM_HDR" != "x" -a ! -f "$SM_HDR" ] ; then
 -        echo "no $SM_HDR"

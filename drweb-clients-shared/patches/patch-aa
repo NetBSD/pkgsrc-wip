@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/09/13 12:58:43 bubuchka Exp $
+$NetBSD: patch-aa,v 1.2 2003/10/28 16:07:00 bubuchka Exp $
 
---- Makefile.nix.tmpl.orig	2003-07-30 17:35:23.000000000 +0300
+--- Makefile.nix.tmpl.orig	2003-10-20 20:02:09.000000000 +0300
 +++ Makefile.nix.tmpl
 @@ -47,6 +47,7 @@ OPTFLAGS        = ___OPT_FLAGS___
  DEFFLAGS        = ___POLL_DEF___ -D__UNIX_DW -D$(OS)_DW -DDW_VERSION="\"___VER___\""
@@ -22,12 +22,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/09/13 12:58:43 bubuchka Exp $
  
  # Milter Library
  # Hack - add threads for drweb-smf under Linux
-@@ -215,7 +219,7 @@ dw_addresses.o: dw_addresses.c
+@@ -225,7 +229,7 @@ dw_addresses.o: dw_addresses.c
  
  # DrWebd command line client rules
- drwebdc : drwebdc.o $(DWLIB)
--	$(CC) drwebdc.o -static -o $@ $(LINKLIB)
-+	$(CC) drwebdc.o -o $@ $(LINKLIB)
+ drwebdc : drwebdc.o dc_files.o $(DWLIB)
+-	$(CC) drwebdc.o dc_files.o -static -o $@ $(LINKLIB)
++	$(CC) drwebdc.o dc_files.o -o $@ $(LINKLIB)
  
  drwebdc.o: drwebdc.c 
  	$(CC) -c $(ADD_CFLAGS) $(DCOPT) ___SOURCE___ -o $@ $(CCOUTPUT)

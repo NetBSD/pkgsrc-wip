@@ -1,76 +1,42 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/09/13 12:58:45 bubuchka Exp $
+$NetBSD: patch-ac,v 1.2 2003/10/28 16:07:00 bubuchka Exp $
 
---- dw_options.c.orig	2003-07-30 17:35:23.000000000 +0300
-+++ dw_options.c
-@@ -66,62 +66,54 @@ static const char rcsid[] = "$Id: dw_opt
- #define PROG_NAME                   "drweb-smf"
- #define PROG_FULLNAME               "DrWeb Sendmail Filter"
- #define PROG_NOTE                   ""
--#define CONF_FNAME                  "drweb_smf.conf"
-+#define CONF_FNAME                  "drweb-smf.conf"
- #endif /* SENDMAIL */
- 
- #if defined(DW_CGP)
- #define PROG_NAME                   "drweb-cgp"
- #define PROG_FULLNAME               "DrWeb Plug-in for CommuniGate Pro"
- #define PROG_NOTE                   "Note: plug-in will be started by CommuniGate Pro automatically"
--#define CONF_FNAME                  "drweb_cgp.conf"
-+#define CONF_FNAME                  "drweb-cgp.conf"
- #endif /* CGP */
- 
- #if defined(DW_MIO)
- #define PROG_NAME                   "drweb-mio"
- #define PROG_FULLNAME               "DrWeb Plug-in for Mobico MIO Server"
- #define PROG_NOTE                   "Note: plug-in will be started by MIO automatically"
--#define CONF_FNAME                  "drweb_mio.conf"
-+#define CONF_FNAME                  "drweb-mio.conf"
- #endif /* MIO */
- 
- #if defined(DW_ZMAILER)
- #define PROG_NAME                   "drweb-zmailer"
- #define PROG_FULLNAME               "DrWeb Filter for ZMailer"
- #define PROG_NOTE                   "Note: filter will be started by ZMailer automatically"
--#define CONF_FNAME                  "drweb_zmailer.conf"
-+#define CONF_FNAME                  "drweb-zmailer.conf"
- #endif /* ZMAILER */
- 
- #if defined(DW_QMAIL)
- #define PROG_NAME                   "qmail-queue"
- #define PROG_FULLNAME               "DrWeb Filter for QMail"
- #define PROG_NOTE                   "Note: filter will be started by QMail system automatically after install"
--#define CONF_FNAME                  "drweb_qmail.conf"
-+#define CONF_FNAME                  "drweb-qmail.conf"
- #endif /* QMAIL */
- 
- #if defined(DW_POSTFIX)
- #define PROG_NAME                   "drweb-postfix"
- #define PROG_FULLNAME               "DrWeb Filter for Postfix"
- #define PROG_NOTE                   "Note: filter will be started by Postfix system automatically after install"
--#define CONF_FNAME                  "drweb_postfix.conf"
-+#define CONF_FNAME                  "drweb-postfix.conf"
- #endif /* POSTFIX */
- 
- #if defined(DW_EXIM)
- #define PROG_NAME                   "drweb-exim"
- #define PROG_FULLNAME               "DrWeb Filter for Exim"
- #define PROG_NOTE                   "Note: filter will be started by Exim system automatically after install"
--#define CONF_FNAME                  "drweb_exim.conf"
-+#define CONF_FNAME                  "drweb-exim.conf"
- #endif /* EXIM */
- 
- #if defined(__UNIX_DW)
--#if !defined(EMX_DW)
--#if defined(FreeBSD_DW)
--#define OS_SPEC_CONFNAME            "/usr/local/drweb/"CONF_FNAME
--#else /* FreeBSD */
--#define OS_SPEC_CONFNAME            "/opt/drweb/"CONF_FNAME
--#endif /* FreeBSD */
--#else /* EMX */
--#define OS_SPEC_CONFNAME            "./"CONF_FNAME
--#endif /* EMX */
--#define FHS_SPEC_CONFNAME           "/etc/drweb/"CONF_FNAME
-+#define OS_SPEC_CONFNAME            PKG_SYSCONFDIR"/"CONF_FNAME
-+#define FHS_SPEC_CONFNAME           "./"CONF_FNAME
- #endif /* UNIX */
- #if defined(__WIN32_DW)
- #define OS_SPEC_CONFNAME            ".\\"CONF_FNAME
+--- dw_files.c.orig	2003-10-20 20:02:09.000000000 +0300
++++ dw_files.c
+@@ -369,22 +369,22 @@ static dwc_bool_t dw_test_spoolfile( con
+     dwc_scan_result_t   scan = NULL;
+     dwc_path_t          scan_path = NULL;
+     char                test_buf1[] = \
+-"Subject: Standard antivirus test file 
+-Mime-Version: 1.0
+-Content-Type: multipart/mixed; boundary=\"test\"
+-Content-Disposition: inline
+-
+---test
+-Content-Type: text/plain; charset=us-ascii
+-Content-Disposition: inline
+-
+-Attachment to this message contains standard antivirus test file. 
+---test
+-Content-Type: application/x-msdos-program
+-Content-Disposition: attachment; filename=\"eicar.com\"
+-
++"Subject: Standard antivirus test file \r\n\
++Mime-Version: 1.0\r\n\
++Content-Type: multipart/mixed; boundary=\"test\"\r\n\
++Content-Disposition: inline\r\n\
++\r\n\
++--test\r\n\
++Content-Type: text/plain; charset=us-ascii\r\n\
++Content-Disposition: inline\r\n\
++\r\n\
++Attachment to this message contains standard antivirus test file. \r\n\
++--test\r\n\
++Content-Type: application/x-msdos-program\r\n\
++Content-Disposition: attachment; filename=\"eicar.com\"\r\n\
++\r\n\
+ X5O!P%@";
+-    char              test_buf2[] = "AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*\r\n--test--\r\n";
++    char              test_buf2[] = "AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*\r\n--test--\r\n";
+     
+     fd = dw_open_tmpfile( tmpl, name );
+     if( fd < 0 )
