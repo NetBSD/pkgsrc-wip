@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/22 16:18:36 xtraeme Exp $
+
+--- src/modules/snd/libkvisnd.cpp.orig	Sat Dec 14 20:30:41 2002
++++ src/modules/snd/libkvisnd.cpp
+@@ -49,7 +49,7 @@
+ 	#ifdef COMPILE_OSS_SUPPORT
+ 		#include <fcntl.h>
+ 		#include <sys/ioctl.h>
+-		#include <linux/soundcard.h>
++		#include <soundcard.h>
+ 		#ifdef COMPILE_AUDIOFILE_SUPPORT
+ 			#include <audiofile.h>
+ 		#endif //COMPILE_AUDIOFILE_SUPPORT
