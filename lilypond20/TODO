@@ -6,7 +6,7 @@
 	  infopages
 	-resolve pyc/pyo deinstall problem (they exist when lilypond was called
 	  as root)
- buildlink2 dependency for ghostscript installs -gnu, thats fine (PA)
+ buildlink3 dependency for ghostscript installs -gnu, thats fine (PA)
 
 20031024 PA test build/install/deinstall/package process
  seems ok on stock 1.6.1 (PA)
