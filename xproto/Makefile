@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/26 23:12:44 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/26 23:38:15 xtraeme Exp $
 #
 
 DISTNAME=		libXtrans-0.1
@@ -16,4 +16,5 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xtrans.pc.in
 GNU_CONFIGURE=		yes
 
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

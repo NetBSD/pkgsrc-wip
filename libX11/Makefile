@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/26 23:15:10 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/26 23:38:14 xtraeme Exp $
 #
 
 DISTNAME=		libX11-6.2.1
@@ -30,4 +30,5 @@ USE_GMAKE=		yes
 
 CONFIGURE_ENV+=		KEYSYMDEF=${X11PREFIX}/include/X11/keysymdef.h
 
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

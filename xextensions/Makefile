@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/26 23:13:32 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/26 23:38:14 xtraeme Exp $
 #
 
 DISTNAME=		xextensions-1.0
@@ -17,4 +17,5 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xextensions.pc.in
 GNU_CONFIGURE=		yes
 
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

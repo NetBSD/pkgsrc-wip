@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/26 23:14:37 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/26 23:38:14 xtraeme Exp $
 #
 
 DISTNAME=		libXau-0.1
@@ -19,4 +19,5 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xau.pc.in
 GNU_CONFIGURE=		yes
 
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
