@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/29 21:52:57 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2004/03/21 16:38:25 mpasternak Exp $
 
-SHA1 (kadu-0.3.6.tar.bz2) = d3dc070c672712ce5d154902f1e8155220f4676f
-Size (kadu-0.3.6.tar.bz2) = 834072 bytes
+SHA1 (kadu-0.3.7.tar.bz2) = c8a451e10f5c6e3798d6a28f1e525ebb2a57901a
+Size (kadu-0.3.7.tar.bz2) = 842030 bytes
