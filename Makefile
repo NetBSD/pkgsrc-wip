@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1173 2004/04/05 14:59:17 marc Exp $
-# $NetBSD: Makefile,v 1.1173 2004/04/05 14:59:17 marc Exp $
+# $Id: Makefile,v 1.1174 2004/04/06 13:49:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.1174 2004/04/06 13:49:25 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -198,7 +198,6 @@ SUBDIR+=	gotmail
 SUBDIR+=	gov2
 SUBDIR+=	grip
 SUBDIR+=	grisbi
-SUBDIR+=	gstreamer-player
 SUBDIR+=	gtick
 SUBDIR+=	gtk-engines-thinice
 SUBDIR+=	gtk-sharp
