@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:23:33 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/09 06:56:20 blef Exp $
 
 DISTNAME=	ldapdns-cvs-snapshot
 PKGNAME=	ldapdns-cvs-0.0.1
@@ -14,7 +14,7 @@ USE_PKGINSTALL=	YES
 USE_GNU_TOOLS+=	make
 ALL_TARGET=	it
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 RCD_SCRIPTS=	ldapdns
 
 do-install:
@@ -25,5 +25,5 @@ do-install:
 	${INSTALL_DATA}    ${WRKSRC}/INSTALL       ${PREFIX}/share/doc/ldapdns/
 	${INSTALL_DATA}    ${WRKSRC}/README*	   ${PREFIX}/share/doc/ldapdns/
 
-.include "../../devel/pth/buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/17 02:55:18 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/09 06:59:28 blef Exp $
 #
 
 DISTNAME=		eag-2.3
@@ -10,7 +10,7 @@ MAINTAINER=		jaapboen@sci.kun.nl
 HOMEPAGE=		http://www.cs.kun.nl/~kees/eag
 COMMENT=		Transducer generator using affix grammars
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
