@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1 2004/07/03 18:33:04 rillig Exp $
+
+--- btree/bt_split.c.orig	1997-01-04 20:38:55.000000000 +0100
++++ btree/bt_split.c	2004-07-03 20:15:46.000000000 +0200
+@@ -673,7 +673,8 @@
+ 		 * where we decide to try and copy too much onto the left page.
+ 		 * Make sure that doesn't happen.
+ 		 */
+-		if (skip <= off && used + nbytes >= full || nxt == top - 1) {
++		if (skip <= off &&
++		    used + nbytes + sizeof(indx_t) >= full || nxt == top - 1) {
+ 			--off;
+ 			break;
+ 		}
+@@ -686,7 +687,7 @@
+ 			memmove((char *)l + l->upper, src, nbytes);
+ 		}
+ 
+-		used += nbytes;
++		used += nbytes + sizeof(indx_t);
+ 		if (used >= half) {
+ 			if (!isbigkey || bigkeycnt == 3)
+ 				break;

@@ -1,1 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/18 22:29:28 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/03 18:33:04 rillig Exp $
+include/compat.h
+include/db.h
+include/mpool.h
+include/ndbm.h
+lib/libdb.a
+man/man3/btree.3
+man/man3/dbopen.3
+man/man3/hash.3
+man/man3/mpool.3
+man/man3/recno.3

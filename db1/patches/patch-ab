@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2004/07/03 18:33:04 rillig Exp $
+
+--- btree/bt_page.c.orig	1997-01-04 20:38:51.000000000 +0100
++++ btree/bt_page.c	2004-07-03 20:17:22.000000000 +0200
+@@ -65,6 +65,7 @@
+ 	h->prevpg = P_INVALID;
+ 	h->nextpg = t->bt_free;
+ 	t->bt_free = h->pgno;
++	F_SET(t, B_METADIRTY);
+ 
+ 	/* Make sure the page gets written back. */
+ 	return (mpool_put(t->bt_mp, h, MPOOL_DIRTY));
+@@ -92,6 +93,7 @@
+ 	    (h = mpool_get(t->bt_mp, t->bt_free, 0)) != NULL) {
+ 		*npg = t->bt_free;
+ 		t->bt_free = h->nextpg;
++		F_SET(t, B_METADIRTY);
+ 		return (h);
+ 	}
+ 	return (mpool_new(t->bt_mp, npg, MPOOL_PAGE_NEXT));

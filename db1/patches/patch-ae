@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2004/07/03 18:33:04 rillig Exp $
+
+--- ./hash/hash.h.orig	1997-01-04 20:27:56.000000000 +0100
++++ ./hash/hash.h	2004-07-03 16:06:11.000000000 +0200
+@@ -98,7 +98,7 @@
+ 	int32_t bigkey_len;	/* Length of bigkey_buf */
+ 	u_int16_t  *split_buf;	/* Temporary buffer for splits */
+ 	CURSOR	*seq_cursor;	/* Cursor used for hash_seq */
+-	int32_t	errno;		/* Error Number -- for DBM compatability */
++	int32_t	err_no;		/* Error Number -- for DBM compatability */
+ 	int32_t	new_file;	/* Indicates if fd is backing store or no */
+ 	int32_t	save_file;	/* Indicates whether we need to flush file at
+ 				 * exit */

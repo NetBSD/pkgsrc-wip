@@ -1,0 +1,50 @@
+$NetBSD: patch-ad,v 1.1 2004/07/03 18:33:04 rillig Exp $
+
+--- ./hash/hash.c.orig	1997-01-04 20:25:41.000000000 +0100
++++ ./hash/hash.c	2004-07-03 16:08:15.000000000 +0200
+@@ -620,7 +620,7 @@
+ 
+ 	hashp = (HTAB *)dbp->internal;
+ 	if (flag) {
+-		hashp->errno = errno = EINVAL;
++		hashp->err_no = errno = EINVAL;
+ 		return (ERROR);
+ 	}
+ 	return (hash_access(hashp, HASH_GET, (DBT *)key, data));
+@@ -637,11 +637,11 @@
+ 
+ 	hashp = (HTAB *)dbp->internal;
+ 	if (flag && flag != R_NOOVERWRITE) {
+-		hashp->errno = errno = EINVAL;
++		hashp->err_no = errno = EINVAL;
+ 		return (ERROR);
+ 	}
+ 	if ((hashp->flags & O_ACCMODE) == O_RDONLY) {
+-		hashp->errno = errno = EPERM;
++		hashp->err_no = errno = EPERM;
+ 		return (ERROR);
+ 	}
+ 	return (hash_access(hashp, flag == R_NOOVERWRITE ?
+@@ -658,11 +658,11 @@
+ 
+ 	hashp = (HTAB *)dbp->internal;
+ 	if (flag) {
+-		hashp->errno = errno = EINVAL;
++		hashp->err_no = errno = EINVAL;
+ 		return (ERROR);
+ 	}
+ 	if ((hashp->flags & O_ACCMODE) == O_RDONLY) {
+-		hashp->errno = errno = EPERM;
++		hashp->err_no = errno = EPERM;
+ 		return (ERROR);
+ 	}
+ 
+@@ -837,7 +837,7 @@
+ 	hashp = (HTAB *)dbp->internal;
+ 
+ 	if (flags && flags != R_FIRST && flags != R_NEXT) {
+-		hashp->errno = errno = EINVAL;
++		hashp->err_no = errno = EINVAL;
+ 		return (ERROR);
+ 	}
+ #ifdef HASH_STATISTICS
