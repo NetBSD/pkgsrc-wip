@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/28 04:46:55 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/08 20:07:40 blef Exp $
 
 DISTNAME=	xevilsrc2.02r2
 PKGNAME=	xevil-2.02
@@ -13,6 +13,7 @@ COMMENT=	Side scrolling, bloody action game
 
 MAKEFILE=	makefile
 
+USE_BUILDLINK3=	yes
 USE_X11BASE=	yes
 ALL_TARGET=	pkgsrc
 
@@ -28,5 +29,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xevil
 	${INSTALL_DATA} ${WRKSRC}/instructions/* ${PREFIX}/share/doc/xevil
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
