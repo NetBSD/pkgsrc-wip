@@ -1,10 +1,9 @@
-# $Id: Makefile,v 1.139 2003/05/05 12:17:51 drue Exp $
-# $NetBSD: Makefile,v 1.139 2003/05/05 12:17:51 drue Exp $
+# $Id: Makefile,v 1.140 2003/05/07 13:57:45 lsed Exp $
+# $NetBSD: Makefile,v 1.140 2003/05/07 13:57:45 lsed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	PPower4
-SUBDIR+=	SDL_mm
 SUBDIR+=	abook
 SUBDIR+=	adodb
 SUBDIR+=	allegro
