@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/06/17 20:12:17 plunky Exp $
+$NetBSD: distinfo,v 1.5 2004/08/12 20:46:31 plunky Exp $
 
-SHA1 (ppp-lzs-1.1.tar.gz) = 32384b54c15a433b1750c5ce0323be5071a784c2
-Size (ppp-lzs-1.1.tar.gz) = 16212 bytes
+SHA1 (ppp-lzs-1.2.tar.gz) = 2d9dfdc30e38c1499acde27adb3ccfd0d6ccb47e
+Size (ppp-lzs-1.2.tar.gz) = 16506 bytes
