@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/09/10 15:48:27 cjep Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/01 16:30:11 blef Exp $
 #
 
 DISTNAME=		Radiator-3.6
@@ -26,7 +26,7 @@ _FETCH_MESSAGE= \
 	${ECHO} 'software from Open System Consultants Pty Ltd.';	\
 	${ECHO} '=============================================='
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Radius/.packlist
 
 .include "../../lang/perl5/module.mk"
