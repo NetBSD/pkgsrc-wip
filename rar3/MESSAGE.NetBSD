@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2004/03/06 06:26:44 mpasternak Exp $
+
+As the package you just installed is available only in a form of FreeBSD
+binary package (no sources!), you need to setup compat_freebsd on your
+machine.
+
+To learn more about compat_freebsd, type:
+
+	man 8 compat_freebsd
+	
+... at the command prompt.
+
+===========================================================================
