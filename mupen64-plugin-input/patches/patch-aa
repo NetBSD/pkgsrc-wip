@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/16 22:29:22 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/16 23:57:28 xtraeme Exp $
 
 --- Makefile.orig	2004-04-16 23:10:06.000000000 +0200
 +++ Makefile	2004-04-16 23:14:22.000000000 +0200
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/16 22:29:22 xtraeme Exp $
  
  mupen64_input.so:	$(OBJ)
 -			$(CC) $(OBJ) -Wl,-Bsymbolic -shared -lSDL `gtk-config --cflags --libs` -o $@
-+			$(CC) $(CFLAGS) $(OBJ) -Wl,-Bsymbolic -shared -lSDL \
++			$(CC) $(CFLAGS) $(OBJ) -Wl,-Bsymbolic -shared `sdl-config --libs` \
 +			    `gtk-config --cflags --libs` -o $@
  			strip --strip-all $@
  

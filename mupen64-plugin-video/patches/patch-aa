@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/16 22:31:33 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/16 23:57:28 xtraeme Exp $
 
 --- Makefile.orig	2004-04-17 00:07:28.000000000 +0200
 +++ Makefile	2004-04-17 00:08:49.000000000 +0200
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/16 22:31:33 xtraeme Exp $
 +#CC = gcc
 +CFLAGS += -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags`
 +#LD = gcc
-+LDFLAGS += -lGL -lGLU -L${X11BASE}/lib -lSDL
++LDFLAGS += -lGL -lGLU -L${X11BASE}/lib `sdl-config --libs`
  
 -OBJECTS = 3dmath.o autodet.o combine1.o debug.o display.o driver.o lighting.o rdp.o rdp_gl.o render.o sdlgl.o texture.o
 +OBJECTS =   3dmath.o autodet.o combine1.o debug.o display.o driver.o \
