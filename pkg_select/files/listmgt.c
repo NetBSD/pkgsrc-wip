@@ -29,10 +29,22 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: listmgt.c,v 1.2 2005/02/22 09:52:39 imilh Exp $ 
+ * $Id: listmgt.c,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
  */
 
 #include "pkg_select.h"
+
+int
+find_value(Etree **etree, char *pattern)
+{
+	int i;
+
+	for (i = 0; etree[i] != NULL; i++)
+		if (strncmp(etree[i]->comment, pattern, strlen(pattern)) == 0)
+			return(i);
+
+	return(-1);
+}
 
 static int
 find_entry(Etree **etree, char *pattern, int skip)
@@ -61,7 +73,7 @@ entry_search(Etree **etree, int cont)
 		/* this is a next search (by fab) */
 		if (key != NULL) {
 			skippy++;
-			i = find_entry(etree, key,skippy);
+			i = find_entry(etree, key, skippy);
 		}
 	} else {
 		if (key) {
@@ -71,8 +83,49 @@ entry_search(Etree **etree, int cont)
 		skippy=0;
 		key = getstr_popup("search", 5, 30, 
 				   (LINES / 2) - 2, (COLS / 2) - 15);
-		i = find_entry(etree, key,skippy);
+		i = find_entry(etree, key, skippy);
 	}
 
 	return(i);
+}
+
+Etree **
+build_tree_from_list(char **list)
+{
+	int i, count, len;
+	char *p;
+	Etree **etree;
+
+	for (i = 0; list[i] != NULL; i++);
+	count = i;
+
+	XMALLOC(etree, (count + 1) * sizeof(Etree *));
+
+	for (i = 0; i < count; i++) {
+		XMALLOC(etree[i], sizeof(Etree));
+		
+		etree[i]->dep_path = NULL;
+		XSTRDUP(etree[i]->entry, list[i]);
+		/* get rid of \n's */
+		trimcr(etree[i]->entry);
+
+		if ((p = strchr(etree[i]->entry, ':')) != NULL) {
+			*p = '\0';
+			p++;
+			
+			XSTRDUP(etree[i]->comment, p);
+			len = strlen(etree[i]->comment) - 1;
+			/* strip any trailing  / */
+			if ((etree[i]->comment)[len] == '/')
+				(etree[i]->comment)[len] = '\0';
+
+		} else {
+			/* there were no comment, invert */
+			etree[i]->comment = etree[i]->entry;
+			etree[i]->entry = NULL;
+		}
+	}
+	etree[i] = NULL;
+
+	return(etree);
 }

@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: file.c,v 1.2 2005/02/22 09:52:38 imilh Exp $ 
+ * $Id: file.c,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
  */
 
 /*
@@ -50,10 +50,9 @@
 #include "file.h"
 
 struct cf *
-loadcf(char *confpath, struct cf *append)
+list_to_cf(char **list, struct cf *append)
 {
-	char value[MAXLEN];
-	FILE *fp;
+	int i;
 	struct cf *chain, *ap;
 
 	SLIST_HEAD(, cf) top;
@@ -66,20 +65,13 @@ loadcf(char *confpath, struct cf *append)
 			append = ap;
 		}
 	}
-		
-	fp=fopen(confpath,"r");
-	if (fp == NULL) {
-#ifdef DEBUG
-		warnx("%s is missing\n", confpath);
-#endif
-		return(NULL);
-	}
-  
-	while(fgets(value,MAXLEN,fp) != NULL) {
 
-		char *k, *v;
+	for (i = 0; list[i] != NULL; i++) {
+		char *k, *v, *value;
 		int len;
  
+		value = list[i];
+		
 		if (*value=='\n' || *value=='#' || 
 		    *value == ' ' || *value == '\t')
 			continue;
@@ -104,10 +96,24 @@ loadcf(char *confpath, struct cf *append)
 		XSTRDUP(chain->value, v);
 
 		SLIST_INSERT_HEAD(&top, chain, next);
-	}	 
-	fclose(fp);
+	} /* for list[i] */
 
 	return(SLIST_FIRST(&top));
+}
+
+struct cf *
+loadcf(const char *confpath, struct cf *append)
+{
+	char **file;
+	struct cf *chain;
+
+	if ((file = loadfile(confpath)) == NULL)
+		return(NULL);
+
+	chain = list_to_cf(file, append);
+	freefile(file);
+
+	return(chain);
 }
 
 
@@ -140,7 +146,7 @@ getval(struct cf *p, const char *key)
 }
 
 char **
-loadfile(char *path)
+loadfile(const char *path)
 {
 	int i, len;
 	FILE *fp;
@@ -182,7 +188,7 @@ freefile(char **lfile)
 }
 
 int
-file_exists(char *path)
+file_exists(const char *path)
 {
 	struct stat sb;
 
@@ -193,7 +199,7 @@ file_exists(char *path)
 }
 
 int
-filelines(char *path)
+filelines(const char *path)
 {
 	int i;
 	FILE *fp;

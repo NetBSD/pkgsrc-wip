@@ -1,3 +1,59 @@
+15 / 03 / 2005
+--------------
+
+. FreeBSD OK
+. preparing for WIP import
+. manpage updated
+. inserted lots of preferences options
+. FTP live installation / deinstall
+
+10 / 03 / 2005
+--------------
+
+. Live pkgsrc over FTP works
+
+07 / 03 / 2005
+--------------
+
+. chybz's great input handling (see curses_input.[c|h])
+. live pkgsrc over FTP 1st tries
+
+06 / 03 / 2005
+--------------
+
+. prefs screen
+
+05 / 03 / 2005
+--------------
+
+. mass-install rework
+. progress bars everywhere !
+
+02 / 03 / 2005
+--------------
+
+. conf file support
+. [o]ther commands option now available
+
+01 / 03 / 2005
+--------------
+
+. CVS update by branch
+
+28 / 02 / 2005
+--------------
+
+. help screen
+. multi-packages install
+
+27 / 02 / 2005
+--------------
+
+. pkgsrc handling firsts works
+. pkgsrc fetch when not present by ftp or cvs with branch support
+. mirror selection on binary install
+. strip "_" from uname for base ftp address building
+
 22 / 02 / 2005
 --------------
 

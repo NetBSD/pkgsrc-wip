@@ -29,51 +29,61 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- *
- * $Id: texts.h,v 1.3 2005/03/15 17:14:26 imilh Exp $ 
+ * $Id: conf.c,v 1.1 2005/03/15 17:14:25 imilh Exp $ 
  */
 
-#ifndef _TEXTS_H_
-#define _TEXTS_H_
+#include "pkg_select.h"
 
-/* ui phrases */
+static struct cf *file;
 
-#define PKG_ADMIN_INFO "Package administration and informations"
-#define PLEASE_WAIT_CALC "please wait while calculating"
-#define INST_PKGS "installed packages"
-#define SEARCH_INFOS "searching infos..."
-#define PKGSRC_NOTFOUND "pkgsrc was not found in %s, download it ? [Y/n]"
-#define DL_METHOD "Download method: (f)tp  / (c)vs ?"
-#define FETCH_FAILED "pkgsrc fetch failed, retry ? [Y/n]"
-#define UPDT_FAILED "pkgsrc update failed, retry ? [Y/n]"
-#define NEXT ">> Next"
-#define PKG_TB_INST "packages to be installed"
-#define PKG_TB_DEINST "packages to be deinstalled"
-#define REALLY_MASS_DELETE "really delete these packages ? [Y/n/r(ecursive)]"
+void
+loadconf()
+{
+	char *rep;
 
-/* shortcuts */
+	conf.elements = 12; /* <---------------------------------
+			     * UPDATE ME WHEN ADDING A CONF VALUE
+			     * <--------------------------------- 
+			     */
 
-typedef const struct Shortcut {
-	const char *icon;
-	const char *descr;
-} Shortcut;
+	if ((file = loadcf(conf.confpath, NULL)) == NULL) {
+		conf.pkgsrcdir = NULL;
+		conf.pkg_dbdir = NULL;
+		conf.cvs_mirror = NULL;
+		conf.ftp_mirror = NULL;
+		conf.pkg_path = NULL;
+		conf.cvs_branch = NULL;
+		conf.live_ftp_pkgsrc = NULL;
+		conf.live_ftp_read_makefiles = T_TRUE;
+		conf.shell_output = T_FALSE;
 
-#define SHORTCUT static Shortcut
+		return;
+	}
 
-SHORTCUT ps_enter = { "[ret]", "enter" };
-SHORTCUT ps_back = { "[<-]", "back" };
-SHORTCUT ps_search = { "[/]", "search" };
-SHORTCUT ps_next = { "[n]", "next" };
-SHORTCUT ps_quit = { "[q]", "quit" };
-SHORTCUT ps_installed = { "[l]", INST_PKGS };
-SHORTCUT ps_up = { "[up]", "scroll up" };
-SHORTCUT ps_down = { "[down]", "scroll down" };
-SHORTCUT ps_find = { "[f]", "pkgfind" };
-SHORTCUT ps_other = { "[o]", "other cmds" };
-SHORTCUT ps_tag = { "[t]", "tag / untag" };
-SHORTCUT ps_install = { "[i]", "install tagged" };
-SHORTCUT ps_deinstall = { "[d]", "de-inst tagged" };
-SHORTCUT ps_update = { "[u]", "update pkgsrc" };
-SHORTCUT ps_prefs = { "[p]", "preferences" };
+	conf.pkgsrcdir = getval(file, "pkgsrcdir");
+	conf.pkg_dbdir = getval(file, "pkg_dbdir");
+	conf.cvs_mirror = getval(file, "cvs_mirror");
+	conf.ftp_mirror = getval(file, "ftp_mirror");
+	conf.pkg_path = getval(file, "pkg_path");
+	conf.cvs_branch = getval(file, "cvs_branch");
+	conf.live_ftp_pkgsrc = getval(file, "live_ftp_pkgsrc");
+	if ((rep = getval(file, "shell_output")) != NULL) {
+		if (*rep == 'y' || *rep == 'Y')
+			conf.shell_output = T_TRUE;
+		else
+			conf.shell_output = T_FALSE;
+	}
+	if ((rep = getval(file, "live_ftp_read_makefiles")) != NULL) {
+		if (*rep == 'y' || *rep == 'Y')
+			conf.live_ftp_read_makefiles = T_TRUE;
+		else
+			conf.live_ftp_read_makefiles = T_FALSE;
+	}
+}
 
-#endif /* _TEXTS_H_ */
+void
+freeconf()
+{
+	XFREE(conf.live_ftp);
+	freecf(file);
+}

@@ -24,56 +24,25 @@
  * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
  * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
  * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+* INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- *
- * $Id: texts.h,v 1.3 2005/03/15 17:14:26 imilh Exp $ 
+ * $Id: live.h,v 1.1 2005/03/15 17:14:25 imilh Exp $ 
  */
 
-#ifndef _TEXTS_H_
-#define _TEXTS_H_
+#include "lib.h"
 
-/* ui phrases */
+#define STORE_EXPECT "store_expect"
+#define TMPDIR "/var/tmp"
 
-#define PKG_ADMIN_INFO "Package administration and informations"
-#define PLEASE_WAIT_CALC "please wait while calculating"
-#define INST_PKGS "installed packages"
-#define SEARCH_INFOS "searching infos..."
-#define PKGSRC_NOTFOUND "pkgsrc was not found in %s, download it ? [Y/n]"
-#define DL_METHOD "Download method: (f)tp  / (c)vs ?"
-#define FETCH_FAILED "pkgsrc fetch failed, retry ? [Y/n]"
-#define UPDT_FAILED "pkgsrc update failed, retry ? [Y/n]"
-#define NEXT ">> Next"
-#define PKG_TB_INST "packages to be installed"
-#define PKG_TB_DEINST "packages to be deinstalled"
-#define REALLY_MASS_DELETE "really delete these packages ? [Y/n/r(ecursive)]"
-
-/* shortcuts */
-
-typedef const struct Shortcut {
-	const char *icon;
-	const char *descr;
-} Shortcut;
-
-#define SHORTCUT static Shortcut
-
-SHORTCUT ps_enter = { "[ret]", "enter" };
-SHORTCUT ps_back = { "[<-]", "back" };
-SHORTCUT ps_search = { "[/]", "search" };
-SHORTCUT ps_next = { "[n]", "next" };
-SHORTCUT ps_quit = { "[q]", "quit" };
-SHORTCUT ps_installed = { "[l]", INST_PKGS };
-SHORTCUT ps_up = { "[up]", "scroll up" };
-SHORTCUT ps_down = { "[down]", "scroll down" };
-SHORTCUT ps_find = { "[f]", "pkgfind" };
-SHORTCUT ps_other = { "[o]", "other cmds" };
-SHORTCUT ps_tag = { "[t]", "tag / untag" };
-SHORTCUT ps_install = { "[i]", "install tagged" };
-SHORTCUT ps_deinstall = { "[d]", "de-inst tagged" };
-SHORTCUT ps_update = { "[u]", "update pkgsrc" };
-SHORTCUT ps_prefs = { "[p]", "preferences" };
-
-#endif /* _TEXTS_H_ */
+/* live ftp */
+extern void pasv_ftp(void);
+extern Etree **live_ftp(const char *);
+extern struct cf *ftp_loadcf(const char *, const char *);
+extern char **ftp_loadfile(const char *, const char *);
+extern void fill_store(char *);
+extern int ftp_connected(void);
+extern int ftp_info_start(char *);
+extern int is_ftpurl(const char *);

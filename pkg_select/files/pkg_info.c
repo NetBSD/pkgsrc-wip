@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_info.c,v 1.4 2005/02/23 10:05:18 imilh Exp $ 
+ * $Id: pkg_info.c,v 1.5 2005/03/15 17:14:25 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -44,6 +44,16 @@ show_pkgfile(WINDOW *win, char *path, const char *file)
 {
 	char buf[MAXLEN];
 
+	if (is_ftpurl(path)) {
+		char **ftpfile, rc;
+
+		if ((ftpfile = ftp_loadfile("./", file)) == NULL)
+			return(-1);
+		rc = more_list(win, ftpfile, LINES - 2, COLS - 2, 1, 1);
+		freefile(ftpfile);
+		return(rc);
+	}
+
 	snprintf(buf, MAXLEN, "%s/%s", path, file);
 	/* if 'q' was pressed, return 0 so we quit */
 	return(more_file(win, buf, LINES - 2, COLS - 2, 1, 1));
@@ -54,7 +64,7 @@ pkg_popup(WINDOW *win, char *path, char *pkg,
 	  const char *label, const char *msg, const char *action)
 {
 	int len;
-	char rep, *env, pkg_path[MAXLEN];
+	char rep;
 
 	len = strlen(msg) + 4;
 	rep = getch_popup(label, msg, 
@@ -62,46 +72,20 @@ pkg_popup(WINDOW *win, char *path, char *pkg,
 			  (LINES / 2) - 2, (COLS / 2) - (len / 2));
 
 	if (rep != 'n') {
-		wclear(win);
-		wrefresh(win);
-
-		/* recursive pkg_delete was asked */
+		/* recursive pkg_delete */
 		if (*action == 'd' && rep == 'r')
-			PKG_TOOL("delete", pkg, "-r");
+			pkg_tool("delete", pkg, "-vr", WAIT_KEY);
 
-		/* make action */
-		if ((*action == 'i' || *action == 'u' || *action == 'd') && 
-		    (rep != 'r')) {
-			if ((env = getenv("PKG_PATH")) != NULL)
-				/* unset PKG_PATH so make <action> 
-				   does not complain */
-				unsetenv("PKG_PATH");
+		/* make action: source install / upgrade */
+		if (*action == 'i' || *action == 'u')
+			pkgsrc_make(action, path, WAIT_KEY);
 
-			PKGSRC_MAKE(action, path);
-			
-			/* restore PKG_PATH */
-			if (env != NULL)
-				setenv("PKG_PATH", env, 1);
-		}
-		/* pkg_* action */
-		if (*action == 'a') {
-			env = getenv("PKG_PATH");
-			if (env == NULL) {
-				build_pkg_path(&pkg_path[0]);
-				mvwprintw(win, 0, 0, 
-					"PKG_PATH variable not set, default to\n%s\n\n", pkg_path);
-				setenv("PKG_PATH", pkg_path, 1);
-			}
-			wprintw(win, "[ %s ]\n%s/%s\n", 
-				label, getenv("PKG_PATH"), pkg);
-
-			wprintw(win, ANY_KEY);
-			(void) wgetch(win);
-
-			wclear(win);
-			wrefresh(win);
-
-			PKG_TOOL(action, "", pkg);
+		/* pkg_(add|delete) */
+		if (*action == 'a' || *action == 'd') {
+			if (*action == 'a')
+				/* adding a package, set PKG_PATH */
+				set_pkg_path(conf.pkg_path);
+			pkg_tool(action, pkg, "-v", WAIT_KEY);
 		} /* answer was yes */
 
 		wclear(win);
@@ -136,10 +120,10 @@ pkg_depends(char *path, const char *varname)
 int
 info_win(WINDOW *win, char *pkg, char *path)
 {
-	int ret, c, line_index, msv, len;
+	int ret, c, line_index, msv, len, in_ftp;
 	struct cf *file;
 	char buf[MAXLEN], *homepage, *comment, 
-		*distname, *version, *maintainer;
+		*distname, *version, *maintainer, *p;
 	WINDOW *popup;
 
 	snprintf(buf, MAXLEN, "%s/MESSAGE", path);
@@ -149,8 +133,27 @@ info_win(WINDOW *win, char *pkg, char *path)
 	
 	for (;;) {
 		/* load Makefile* */
-		file = load_makefile(path, FULL);
+		if (strncmp(path, "ftp://", 6) == 0) {
+			in_ftp = 1;
+			if (ftp_info_start(path) < 0)
+				return(0);
+			else
+				file = ftp_loadcf("./", "Makefile");
 
+			/* clean path for display */
+			p = &path[6];
+			if ((p = strchr(p, '/')) != NULL &&
+			    (p = strchr(p, '.')) != NULL)
+				*p = '\0';
+
+			if ((p = strrchr(pkg, '/')) != NULL)
+				*p = '\0';
+
+			ftp_stop();
+		} else {
+			in_ftp = 0;
+			file = load_makefile(path, FULL);
+		}
 		line_index = 2;
 
 		/* redraw box and title */
@@ -170,7 +173,7 @@ info_win(WINDOW *win, char *pkg, char *path)
 		/* one or more members could not be read from Makefile 
 		 * use make show-var to fill all of them
 		 */
-		if (distname == NULL || comment == NULL) {
+		if (!in_ftp && (distname == NULL || comment == NULL)) {
 			len = strlen(SEARCH_INFOS) + 4;
 
 			/* this cound take a moment, warn user */
@@ -236,16 +239,18 @@ info_win(WINDOW *win, char *pkg, char *path)
 			line_index++;
 		}
 
-		wprint_kb(win, "[e]", "show package dependancies",
-			  line_index, 2);
-		line_index += 2;
+		if (!in_ftp) {
+			wprint_kb(win, "[e]", "show package dependancies",
+				  line_index, 2);
+			line_index += 2;
 
-		wprint_kb(win, "[i]", "build and install package",
-			  line_index, 2);
-		line_index++;
-		wprint_kb(win, "[u]", "build and upgrade package",
-			  line_index, 2);
-		line_index++;
+			wprint_kb(win, "[i]", "build and install package",
+				  line_index, 2);
+			line_index++;
+			wprint_kb(win, "[u]", "build and upgrade package",
+				  line_index, 2);
+			line_index++;
+		}
 
 		wprint_kb(win, "[b]", "install binary package", line_index, 2);
 		line_index++;
@@ -293,7 +298,7 @@ info_win(WINDOW *win, char *pkg, char *path)
 			pkg_popup(win, path, pkg, 
 				  "De-install package", 
 				  "de-install package ? [Y/n/r(ecursive)]",
-				  "deinstall");
+				  "delete");
 			break;
 		case 'b':
 			pkg_popup(win, path, pkg, 

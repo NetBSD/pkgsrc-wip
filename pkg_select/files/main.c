@@ -29,15 +29,15 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: main.c,v 1.2 2005/02/22 09:52:39 imilh Exp $ 
+ * $Id: main.c,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
  */
 
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
-static char *rcsid = "$Id: main.c,v 1.2 2005/02/22 09:52:39 imilh Exp $";
+static char *rcsid = "$Id: main.c,v 1.3 2005/03/15 17:14:25 imilh Exp $";
 #else
-__RCSID("$Id: main.c,v 1.2 2005/02/22 09:52:39 imilh Exp $");
+__RCSID("$Id: main.c,v 1.3 2005/03/15 17:14:25 imilh Exp $");
 #endif
 #endif
 
@@ -45,6 +45,7 @@ __RCSID("$Id: main.c,v 1.2 2005/02/22 09:52:39 imilh Exp $");
 #include <signal.h>
 
 #include "pkg_select.h"
+#include "curses_input.h"
 
 /* reset hl_index and clear screen */
 #define DO_RESET 1
@@ -54,14 +55,10 @@ static void usage(void);
 static void init_curses(void);
 static void init_windows(void);
 static void finish(int);
-static int dcount(Etree **);
 static void clear_tree(Etree ***, int);
-static int toplevel(const char *);
-static int print_entry(Etree *, HL_datas *, char *, int, int);
 static void list_win_refresh(void);
 static int print_list(Etree **, HL_datas *, char *, int);
-static void print_kb(const char *, const char *, int, int);
-static void print_bindings(void);
+static void print_bindings(int);
 
 static int nlines, ncols, top_line;
 static WINDOW *list_win;
@@ -69,9 +66,10 @@ static WINDOW *list_win;
 static void
 usage()
 {
-	(void) fprintf(stderr,
-		       "usage: %s [ -b pkgsrcdir ] [-K pkg_dbdir]\n",
-		       getprogname());
+	(void) fprintf(stderr, "%s\n%s\n",
+		       "usage: pkg_select [-h] [-b pkgsrcdir] [-K pkg_dbdir] [-c conf file]", 
+		       "                  [-l [-m] [-u NetBSD ftp mirror]]");
+
         exit(1);
 }
 
@@ -83,6 +81,7 @@ init_curses()
         cbreak();
         noecho();
 	curs_set(0);
+	init_keymaps();
 }
 
 static void
@@ -104,32 +103,28 @@ finish(int sig)
 		sig &= 0;
 	/* free dir list */
 	free_pkgdb();
+	/* free "to be installed" package list */
+	free_tbi_pkgs();
+	/* free conf file members */
+	freeconf();
+	/* live ftp */
+	ftp_stop();
 
 	curs_set(1);
 	delwin(list_win);
+	reset_shell_mode();
+	free_keymaps();
 	endwin();
 	exit(EXIT_SUCCESS);
 }
 
-static int
+int
 toplevel(const char *path)
 {
 	if (strcmp(path, pkgsrcbase) != 0)
 		return(0);
 	else
 		return(1);
-}
-
-/* count entries */
-static int
-dcount(Etree **etree)
-{
-	int i;
-
-	for (i = 0; etree[i] != NULL; i++);
-	i--;
-
-	return(i);
 }
 
 /* etree's address is passed so we can NULL **etree */
@@ -140,87 +135,6 @@ clear_tree(Etree ***etree, const int where)
 		free_nodir_tree(etree);
 	else
 		free_tree(etree);
-}
-
-/* print item + descr, d_index = y + i (relative / delta index) */
-static int
-print_entry(Etree *item, HL_datas *hl, char *path, int d_index, int y) {
-
-	int i, real_hl;
-	int sb_real, sb_y;
-	static int last_sb = -1;
-	static int delta = 0;
-	char buf[MAXLEN], tmp_entry[MAXLEN], status;
-
-#define PS_ALIGN 20
-
-	/* 9 = 3 dots + [\ ]\ \ + scrollbar */
-	cut_str(item->comment, ncols - PS_ALIGN - 9);
-	/* we don't want to modify pkg name */
-	strcpy(tmp_entry, item->entry);
-	/* -1 : spaces between entry and comment */
-	cut_str(tmp_entry, PS_ALIGN - 8);
-	
-	/* highlight*/
-	real_hl = hl->hl_index + top_line;
-	/* delta between hl and old */
-	delta = hl->old_index - hl->hl_index;
-	
-	/* scroll up */
-	if ((y == 0) && (delta >= nlines)) {
-		hl->old_index--;
-		return(-1);
-	}
-
-	/* hl_index == actual index, highligh the line */
-	if (hl->hl_index == d_index) {
-		wattron(list_win, A_REVERSE);
-		hl->hl_entry = item->entry;
-	}
-	/* reset cursor */
-	wmove(list_win, y + top_line, 1);
-
-	status = ' ';
-	/* build entry */
-	/* if item->dep_path != NULL we are browsing pkgfind */
-	if (!toplevel(path) || item->dep_path != NULL)
-		if (getpkginfo(item->entry, PKG_VERSION) != NULL)
-			status = '*';
-
-	snprintf(buf, MAXLEN, "[ %-15s%c]  %s", 
-			 tmp_entry, status, item->comment);
-
-	/* fill with whitespaces*/
-	for (i = strlen(buf); i < (ncols - 2); i++)
-		buf[i] = ' ';
-
-	/* ensure string is NULL terminated */
-	/* 5 == 2 borders - scrollbar - 2 */
-	buf[ncols - 5] = '\0';
-
-	/* print entry*/
-	wprintw(list_win, "%s", buf);
-
-	/* scrollbar */
-	if (hl->count > 0) {
-		sb_real = (hl->hl_index * 10) / hl->count;
-		sb_y = (y * 10) / (nlines - 1);
-	} else
-		sb_real = sb_y = 0;
-
-	/* display scrollbar */
-	if (hl->count > nlines && sb_y == sb_real && sb_y != last_sb) {
-		wattron(list_win, A_REVERSE);
-		mvwprintw(list_win, y + 1, ncols - 2,  "-");
-	} else {
-		wattroff(list_win, A_REVERSE);
-		mvwprintw(list_win, y + 1, ncols - 2,  " ");
-	}
-	last_sb = sb_y;
-
-	wattroff(list_win, A_REVERSE);
-
-	return(1);
 }
 
 /* refresh and resize screen (coming from info window) */
@@ -236,7 +150,7 @@ list_win_refresh()
 static int
 print_list(Etree **etree, HL_datas *hl, char *path, const int where)
 {
-	int i, y, visible_index, d_index;
+	int i;
 	char buf[MAXLEN], *ppath, *item;
 
 	/* don't show path when listing PKGDB */
@@ -248,11 +162,11 @@ print_list(Etree **etree, HL_datas *hl, char *path, const int where)
 		/* there was no entries, are we in a pkg dir ? */
 		snprintf(buf, MAXLEN, "%s/Makefile", path);
 		if ((item = strrchr(path, '/')) == NULL)
-		/* should never happen */
+			/* should never happen */
 			return(IN_DESCR);
 		item++;
 		
-		if (file_exists(buf)) {
+		if (where == IN_FTP || file_exists(buf)) {
 			/* remember initial path */
 			ppath = path;
 			/* switch to information window */
@@ -295,70 +209,45 @@ print_list(Etree **etree, HL_datas *hl, char *path, const int where)
 
 	} /* etree == NULL */
 
-	/* there were entries */
-	hl->count = dcount(etree);
-	
-	/* if hl < old we are scrolling up, don't update y */
-	if (hl->hl_index < hl->old_index)
-		visible_index = hl->old_index;
-	else {
-		visible_index = hl->hl_index;
-		hl->old_index = hl->hl_index;
-	}
-	
-	y = (visible_index + top_line) - nlines;
-	
-	/* hl + top is > to screen lines */
-	if (y > 0)
-		for (i = 0; i < y; i++);
-	else
-		i = 0;
-	
-	/* loop thru lines */
-	for (y = 0; y < nlines; y++) {
-		d_index = y + i;
-		if (etree[d_index]) {
-			/* print item and directory description */
-			if (print_entry(etree[d_index], hl,
-					path, d_index, y) < 0) {
-				/* scrolling up, old index changed, 
-				   recall me */
-				print_list(etree, hl, path, where);
-				return(0);
-			}
-		}
-		else
-			break;
-	}
-	return(0);
+	/* draw the combo list */
+	return(combo_list(list_win, etree, hl, path));
 }
 
 static void
-print_kb(const char *key, const char *label, int y, int x)
+print_bindings(int page)
 {
-	move(y, x);
-	attron(A_BOLD);
-	printw("%-5s", key);
-	attroff(A_BOLD);
-	printw(" %s", label);
-}
+	int spacing, up, down;
 
-static void
-print_bindings()
-{
-	int spacing;
+#define MAXCMDPAGES 2
 
 	spacing = strlen(ps_installed.descr);
+	up = nlines + 3;
+	down = nlines + 4;
 
-	print_kb(ps_enter.icon, ps_enter.descr, nlines + 3, 2);
-	print_kb(ps_back.icon, ps_back.descr, nlines + 4, 2);
-	print_kb(ps_search.icon, ps_search.descr, nlines + 3, spacing);
-	print_kb(ps_quit.icon, ps_quit.descr, nlines + 4, spacing);
-	print_kb(ps_next.icon, ps_next.descr, nlines + 3, spacing * 2);
-	print_kb(ps_find.icon, ps_find.descr, nlines + 4, spacing * 2);
-	print_kb(ps_installed.icon, ps_installed.descr, 
-		 nlines + 4, spacing * 3);
+	switch (page) {
+	case 1:
+		print_kb(ps_enter.icon, ps_enter.descr, up, 2);
+		print_kb(ps_back.icon, ps_back.descr, down, 2);
+		print_kb(ps_search.icon, ps_search.descr, up, spacing);
+		print_kb(ps_quit.icon, ps_quit.descr, down, spacing);
+		print_kb(ps_next.icon, ps_next.descr, up, spacing * 2);
+		print_kb(ps_find.icon, ps_find.descr, down, spacing * 2);
+		print_kb(ps_other.icon, ps_other.descr, up, spacing * 3);
+		print_kb(ps_installed.icon, ps_installed.descr, 
+			 down, spacing * 3);
+		break;
+	case 2:
+		print_kb(ps_update.icon, ps_update.descr, up, 2);
+		print_kb(ps_tag.icon, ps_tag.descr, down, 2);
+		print_kb(ps_install.icon, ps_install.descr, up, spacing * 1.5);
+		print_kb(ps_deinstall.icon, ps_deinstall.descr, down, 
+			 spacing * 1.5);
+		print_kb(ps_prefs.icon, ps_prefs.descr, down, spacing * 3);
+		print_kb(ps_other.icon, ps_other.descr, up, spacing * 3);
 
+		break;
+	}
+	
 	refresh();
 }
 
@@ -383,12 +272,17 @@ nodir_loop(const char *path, char **list)
 Etree **
 main_loop(Etree **etree, char **list, const char *basepath, const int where)
 {
-	int c, tmp;
+	int c, tmp, page;
+	Etree **etree_sav;
 	HL_datas hl;
-	char wpath[MAXLEN], *p, **pkglist;
+	char wpath[MAXLEN], tstr[MAXLEN], *p, **pkglist;
 
 	/* init highlight index */
 	hl.hl_index = hl.old_index = 0;
+	/* save screen props */
+	hl.nlines = nlines;
+	hl.ncols = ncols;
+	hl.top_line = 1;
 
 	/* init working path */
 	strcpy(wpath, basepath);
@@ -400,6 +294,9 @@ main_loop(Etree **etree, char **list, const char *basepath, const int where)
 	/* redraw box */
 	draw_box(list_win, wpath);
 
+	/* command page */
+	page = 1;
+
 	/* main loop */
 	for (;;) {
 		if (print_list(etree, &hl, wpath, where) == IN_DESCR)
@@ -407,32 +304,30 @@ main_loop(Etree **etree, char **list, const char *basepath, const int where)
 			return(NULL);
 
 		/* print bindings */
-		print_bindings();
+		print_bindings(page);
 
 		c = wgetch(list_win);
 		switch(c) {
-		case KEY_UP:
-			if (hl.hl_index > 0)
-				hl.hl_index--;
-			break;
-		case KEY_DOWN:
-			if (hl.hl_index < hl.count)
-				hl.hl_index++;
-			break;
-		case KEY_PPAGE:
-			if ((hl.hl_index - nlines) > 0)
-				hl.hl_index -= nlines;
-			else
-				hl.hl_index = 0;
-			break;
-		case KEY_NPAGE:
-			if ((hl.hl_index + nlines) < hl.count)
-				hl.hl_index += nlines;
-			else
-				hl.hl_index = hl.count;
-			break;
+			
+			/* macro defining up, down, pgup and pgdown */
+			BASIC_NAV
+
 		case KEY_RIGHT:
-		case '\r':
+		case KEY_ENTER:
+			if (where == IN_FTP) {
+				/* save etree pointer */
+				etree_sav = etree;
+
+				snprintf(wpath, MAXLEN, "%s/%s",
+					 basepath, hl.hl_entry);
+
+				etree = live_ftp(wpath);
+				etree = main_loop(etree, NULL, wpath, IN_FTP);
+				/* restore etree */
+				etree = etree_sav;
+				break;
+			}
+
 			if (where == IN_PKGDB) {
 				/* point to corresponding pkgdb line */
 				p = getpkginfo(hl.hl_entry, PKG_CATEGORY);
@@ -459,15 +354,14 @@ main_loop(Etree **etree, char **list, const char *basepath, const int where)
 			/* back from recursion with NULL etree */
 			break;
 		case KEY_LEFT:
-			clear_tree(&etree, where);
-
-			if (!toplevel(basepath) || where == IN_DEPENDS)
+			if (!toplevel(basepath) || where == IN_DEPENDS) {
+				clear_tree(&etree, where);
 				return(NULL);
+			}
 
-			/* NOTREACHED */
 			break;
 		case 'n':
-			tmp = entry_search(etree,1);
+			tmp= entry_search(etree,1);
 			if (tmp >= 0)
 				hl.hl_index = tmp;
 			break;
@@ -502,6 +396,43 @@ main_loop(Etree **etree, char **list, const char *basepath, const int where)
 						  wpath, IN_PKGDB);
 			}
 			break;
+		case 't':
+			if (!toplevel(basepath)) {
+				snprintf(tstr, MAXLEN, "%s/%s",
+					 basepath, hl.hl_entry);
+				add_pkg(tstr);
+			}
+			break;
+		case 'i':
+			clr_allscr(list_win);
+			process_many(COMBO_INST);
+			/* this overwrites current box, redraw */
+			clr_allscr(list_win);
+			draw_box(list_win, basepath);
+			break;
+		case 'd':
+			clr_allscr(list_win);
+			process_many(COMBO_DEINST);
+			/* this overwrites current box, redraw */
+			clr_allscr(list_win);
+			draw_box(list_win, basepath);
+			break;
+		case 'u':
+			clear_tree(&etree, where);
+			cvs_up(basepath);
+			/* safety clear */
+			break;
+		case 'p':
+			clear_tree(&etree, where);
+			prefs_screen();
+			break;
+		case 'o':
+			clear();
+			if (page < MAXCMDPAGES)
+				page++;
+			else
+				page = 1;
+			break;
 		case 'q':
 			clear_tree(&etree, where);
 			finish(0);
@@ -513,12 +444,14 @@ main_loop(Etree **etree, char **list, const char *basepath, const int where)
 			/* coming from DESCR, show basepath (parent) */
 			if (where == IN_DEPENDS)
 				etree = get_nodir_tree(basepath, list);
+			else if (where == IN_FTP)
+				etree = live_ftp(basepath);
 			else
 				etree = get_tree(basepath, where);
 
-			/* re-init screen */
-			draw_box(list_win, basepath);
 		}
+		/* redraw border */
+		draw_box(list_win, basepath);
 	} /* for (;;) */
 	/* NOTREACHED */
 }
@@ -527,18 +460,15 @@ int
 main(int argc, char *argv[])
 {
 	Etree **etree;
-	char ch, basepath[MAXLEN];
-	
-	if ((pkgsrcbase = getenv("PKGSRCDIR")) == NULL)
-		/* default basepath */
-		pkgsrcbase = PKGSRCBASE;
+	char ch, basepath[MAXLEN], *confpath, *ftp_url;
+	int where, use_live_ftp, read_makefiles;
 
-	if ((pkg_dbdir = getenv("PKG_DBDIR")) == NULL)
-		/* default pkg_dbdir */
-		pkg_dbdir = PKGDB;
+	pkgsrcbase = pkg_dbdir = confpath = ftp_url = NULL;
+	use_live_ftp = 0;
+	read_makefiles = T_TRUE; /* live_ftp option */
 
 	/* command line handling */
-	while ((ch = getopt(argc, argv, "b:K:h")) != -1)
+	while ((ch = getopt(argc, argv, "c:b:K:u:lmh")) != -1)
 		switch(ch) {
 		case 'b':
 			pkgsrcbase = optarg;
@@ -546,10 +476,47 @@ main(int argc, char *argv[])
 		case 'K':
 			pkg_dbdir = optarg;
 			break;
+		case 'c':
+			confpath = optarg;
+			break;
+		case 'l':
+			use_live_ftp = 1;
+		case 'u':
+			XSTRDUP(ftp_url, optarg);
+			break;
+		case 'm':
+			read_makefiles = T_FALSE;
+			break;
 		case 'h':
 			usage();
 			/* NOTREACHED */
 		}
+
+	/* confpath given to command line or NULL*/
+	if (confpath == NULL) {
+		conf.confpath = CONFPATH;
+	} else
+		conf.confpath = confpath;
+
+	loadconf();
+
+	if (pkgsrcbase == NULL) { /* there was no -b flag */
+		if (conf.pkgsrcdir != NULL) /* conf file ? */
+			pkgsrcbase = conf.pkgsrcdir;
+		else
+			/* env variable ? */
+			if ((pkgsrcbase = getenv("PKGSRCDIR")) == NULL)
+				/* default basepath */
+				pkgsrcbase = PKGSRCBASE;
+	}
+	if (pkg_dbdir == NULL) { /* no -K flag */
+		if (conf.pkg_dbdir != NULL)
+			pkg_dbdir = conf.pkg_dbdir;
+		else
+			if ((pkg_dbdir = getenv("PKG_DBDIR")) == NULL)
+				/* default pkg_dbdir */
+				pkg_dbdir = PKGDB;
+	}
 
         argc -= optind;
         argv += optind;
@@ -560,9 +527,6 @@ main(int argc, char *argv[])
 
 	signal(SIGINT, finish);
 
-	/* load installed package list */
-	load_pkgdb();
-
         /* init ncurses */
 	init_curses();
 
@@ -572,12 +536,52 @@ main(int argc, char *argv[])
 	/* enable KEY_* */
 	keypad(list_win, TRUE);
 
-	/* get directory listing */
-	etree = get_tree(basepath, IN_PKGSRC);
+	/* load installed package list */
+	load_pkgdb();
+
+	/* pkg_select was called with -l, entering live FTP mode */
+	if (use_live_ftp) { /* had a -l flag */
+		if (read_makefiles == T_FALSE)
+			/* dont read makefiles (no comments) */
+			conf.live_ftp_read_makefiles = T_FALSE;
+
+		if (ftp_url == NULL) { /* had no -u flag, try conf */
+			if (conf.live_ftp_pkgsrc != NULL)
+				XSTRDUP(ftp_url, conf.live_ftp_pkgsrc);
+			else { /* give mirror list */
+				if ((ftp_url = list_mirrors("ftp")) == NULL)
+					finish(0);
+				snprintf(basepath, MAXLEN,
+					 "%s/NetBSD-current/pkgsrc", ftp_url);
+				XFREE(ftp_url);
+				XSTRDUP(ftp_url, basepath);
+			}
+		}
+		where = IN_FTP;
+		XSTRCPY(basepath, ftp_url);
+
+		conf.live_ftp = ftp_url;
+		if ((etree = live_ftp(basepath)) == NULL) {
+			warn("error while negociating with %s", basepath);
+			finish(0);
+		}
+		/* set pkgsrc base to ftp base */
+		pkgsrcbase = conf.live_ftp;
+	} else {
+		/* check for pkgsrc presence */
+		if (pkgsrc_chk(basepath) < 0)
+			/* pkgsrc fetch failed */
+			finish(0);
+	
+		where = IN_PKGSRC;
+		/* get directory listing */
+		etree = get_tree(basepath, where);
+	}
 
 	/* enter browser */
-	(void) main_loop(etree, NULL, basepath, IN_PKGSRC);
+	(void) main_loop(etree, NULL, basepath, where);
 
+	finish(0);
 	/* NOTREACHED */
 	exit(EXIT_SUCCESS);
 }

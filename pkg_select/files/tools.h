@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: tools.h,v 1.2 2005/02/22 09:52:41 imilh Exp $ 
+ * $Id: tools.h,v 1.3 2005/03/15 17:14:26 imilh Exp $ 
  */
 
 #ifndef _TOOLS_H
@@ -53,6 +53,8 @@
 #include <err.h>
 
 #define MAXLEN LINE_MAX
+#define MIDLEN 256
+#define SMLLEN 32
 #define D_WARN 5
 #define D_INFO 10
 #define T_FALSE 0
@@ -75,6 +77,7 @@
 		elm = malloc(size);					\
 		if (elm == NULL)					\
 			err(1, "can't allocate memory\n");		\
+		memset(elm, 0, size);					\
 	} while (/* CONSTCOND */ 0)
 
 #define XSTRDUP(dest, src)						\
@@ -88,6 +91,42 @@
 		}							\
 	} while (/* CONSTCOND */ 0)
 
+#define XREALLOC(elm, size)						\
+	do {								\
+		void *telm;						\
+		if (elm == NULL)			       		\
+			XMALLOC(elm, size);				\
+		else {							\
+			telm = realloc(elm, size);			\
+			if (telm == NULL)				\
+				err(1, "can't allocate memory\n");	\
+			elm = telm;					\
+	       	}							\
+	} while (/* CONSTCOND */ 0)
+
+#define DSTSRC_CHK(dst, src)						\
+		if (dst == NULL) {					\
+			warn("NULL destination");	      		\
+			break;						\
+		}							\
+		if (src == NULL) {					\
+			warn("NULL source");				\
+			break;						\
+		}
+
+
+#define XSTRCPY(dst, src)						\
+	do {								\
+		DSTSRC_CHK(dst, src);					\
+		strcpy(dst, src);					\
+	} while (/* CONSTCOND */ 0)
+
+#define XSTRCAT(dst, src)						\
+	do {								\
+		DSTSRC_CHK(dst, src);					\
+		strcat(dst, src);					\
+	} while (/* CONSTCOND */ 0)
+
 #define XFREE(elm)							\
 	do {								\
 		if (elm != NULL) {					\
@@ -95,6 +134,8 @@
 			elm = NULL;					\
 		}							\
 	} while (/* CONSTCOND */ 0)
+
+typedef uint8_t T_Bool;
 
 extern int trimcr(char *);
 extern char **splitstr(char *, const char *);
@@ -105,6 +146,9 @@ extern void d_printf(uint8_t, char *, ...);
 extern int min(int, int);
 extern int max(int, int);
 extern void line_padding(char *, char, int);
+extern int listlen(const char **);
+extern char **exec_list(const char *, const char *);
+extern T_Bool is_listed(const char **, const char *);
 /* host, port*/
 extern int tcpclient(char *, int);
 

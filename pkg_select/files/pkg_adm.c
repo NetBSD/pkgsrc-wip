@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_adm.c,v 1.2 2005/02/22 09:52:39 imilh Exp $ 
+ * $Id: pkg_adm.c,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -184,16 +184,45 @@ show_first_var(char *path, const char *varname)
 }
 
 void
-build_pkg_path(char *pkg_path)
+build_pkg_path(char *pkg_path, char *base)
 {
 	struct utsname u;
+	char *p, release[MAXLEN];
 
         if (uname(&u) != 0) {
                 err(EXIT_FAILURE, "uname");
                 /* NOTREACHED */
         }
-	snprintf(pkg_path, MAXLEN, "%s/%s/%s/All", 
-		 DEFAULT_PKG_PATH, u.release, u.machine);
+	strcpy(release, u.release);
+	/* remove any _XX extension */
+	if ((p = strchr(release, '_')) != NULL)
+		*p = '\0';
+	else
+		p = release;
+
+	snprintf(pkg_path, MAXLEN, "%s/packages/%s/%s/All", 
+		 base, release, u.machine);
+}
+
+void
+set_pkg_path(const char *conf_pkg_path)
+{
+	char *env, pkg_path[MAXLEN];
+
+	env = getenv("PKG_PATH");
+	if (env == NULL) {
+		char *base;
+		
+		/* call curses select combo */
+		if (conf_pkg_path == NULL)
+			base = list_mirrors("ftp");
+		else
+			XSTRDUP(base, conf_pkg_path);
+		
+		build_pkg_path(&pkg_path[0], base);
+		XFREE(base);
+		setenv("PKG_PATH", pkg_path, 1);
+	}
 }
 
 static struct pkg_info *
@@ -233,4 +262,63 @@ loadpkginfo(char *pkg)
 	}
 	freefile(file);
 	return(ret);
+}
+
+static const char *make_inst_progress[] = MAKE_INST_PROGRESS;
+static const char *make_updt_progress[] = MAKE_UPDT_PROGRESS;
+static const char *make_deinst_progress[] = MAKE_DEINST_PROGRESS;
+
+void
+pkgsrc_make(const char *action, const char *path, int waitkey)
+{
+	char *env;
+	const char **make_progress;
+
+	switch (*action) {
+	case 'i':
+		make_progress = make_inst_progress;
+		break;
+	case 'd':
+		make_progress = make_deinst_progress;
+		break;
+	case 'u':
+		make_progress = make_updt_progress;
+		break;
+	}
+
+	/* if PKG_PATH exists, unset it for make */
+	if ((env = getenv("PKG_PATH")) != NULL)
+		unsetenv("PKG_PATH");
+
+	(void) cmd_spawn(waitkey, make_progress,
+			 "cd %s && %s %s %s",
+			 path, MAKE, action, "clean");
+
+	/* restore PKG_PATH */
+	if (env != NULL)
+		setenv("PKG_PATH", env, 1);
+	reload_pkgdb();
+}
+
+static const char *pkg_add_progress[] = PKG_ADD_PROGRESS;
+static const char *pkg_del_progress[] = PKG_DEL_PROGRESS;
+
+void
+pkg_tool(const char *action, const char *pkg, const char *option, int waitkey)
+{
+	const char **tool_progress;
+
+	switch (*action) {
+	case 'a':
+		tool_progress = pkg_add_progress;
+		break;
+	case 'd':
+		tool_progress = pkg_del_progress;
+		break;
+	}
+
+	(void) cmd_spawn(waitkey, tool_progress,
+			 "%s/pkg_%s %s %s 2>&1",
+			 PKGTOOLS_PATH, action, option, pkg);
+	reload_pkgdb();
 }

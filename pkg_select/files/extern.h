@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: extern.h,v 1.2 2005/02/22 09:52:37 imilh Exp $ 
+ * $Id: extern.h,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
  */
 
 #ifndef _EXTERN_H_
@@ -39,13 +39,18 @@
 
 extern Etree **main_loop(Etree **, char **, const char *, const int);
 extern void nodir_loop(const char *, char **);
+extern int toplevel(const char *);
 
 extern Etree **get_tree(const char *, int);
 extern Etree **get_nodir_tree(const char *, char **);
 extern void free_tree(Etree ***);
 extern void free_nodir_tree(Etree ***);
 extern int entry_search(Etree **, int);
+
+/* list mgt */
+extern int find_value(Etree **, char *);
 extern char **pkgfind(const char *, const char *, int);
+extern Etree **build_tree_from_list(char **);
 
 extern int info_win(WINDOW *, char *, char *);
 extern int more_file(WINDOW *, char *, int, int, int, int);
@@ -54,7 +59,27 @@ extern int more_list(WINDOW *, char **, int, int, int, int);
 extern struct cf *load_makefile(char *, int);
 extern char *getcomment(struct cf *);
 
+extern char *list_mirrors(const char *);
+extern int pkgsrc_chk(const char *);
+extern int cvs_up(const char *);
+
+/* install_many */
+extern int tb_installed(const char *);
+extern void add_pkg(const char *);
+extern void free_tbi_pkgs(void);
+extern void process_many(int);
+
+/* conf */
+extern void loadconf(void);
+extern void freeconf(void);
+
+/* prefs screen */
+extern void prefs_screen(void);
+
+/* globals */
+
 const char *pkg_dbdir;
 const char *pkgsrcbase;
+Conf conf;
 
 #endif

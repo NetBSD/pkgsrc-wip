@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_select.h,v 1.2 2005/02/22 09:52:41 imilh Exp $ 
+ * $Id: pkg_select.h,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
  */
 
 #ifndef _PKG_SELECT_H_
@@ -43,16 +43,20 @@
 #include "file.h"
 #include "curses_helpers.h"
 #include "texts.h"
+#include "live.h"
 
 #define IN_PKGSRC 1
 #define IN_PKGDB 0
 #define IN_DEPENDS 2
 #define IN_DESCR 3
+#define IN_FTP 4
 #define IN_QUIT -1
 #define FULL 2
 #define PARTIAL 1
 #define ONE_LEVEL 0
 #define NOCOMMENT "no comment."
+#define COMBO_INST 0
+#define COMBO_DEINST 1
 
  /* sub top line and bottom menu */
 #define MAINWIN_LINES LINES - 6
@@ -61,20 +65,6 @@
 
 /* 4 lines from bottom */
 #define BOTTOM_KB 4
-
-typedef struct Etree {
-	char *entry;
-	char *comment;
-	char *dep_path;
-} Etree;
-
- /* highlight / position informations */
-typedef struct HL_datas {
-	int count; /* total items number */
-	int hl_index; /* real highlight position */
-	int old_index; /* last highlight position */
-	char *hl_entry; /* highlighted item name */
-} HL_datas;
 
 #include "extern.h"
 

@@ -29,16 +29,55 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: curses_helpers.h,v 1.2 2005/02/22 09:52:37 imilh Exp $ 
+ * $Id: curses_helpers.h,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
  */
 
 #include <curses.h>
 #include "tools.h"
+#include "datatypes.h"
 
+extern void print_kb(const char *, const char *, int, int);
 extern void wprint_kb(WINDOW *, const char *, const char *, int, int);
+extern void clr_win(WINDOW *);
+extern void clr_del_win(WINDOW *);
+extern void clr_allscr(WINDOW *);
+extern void exit_curses(void);
 extern WINDOW *info_popup(const char *, const char *, int, int, int, int);
 extern char getch_popup(const char *, const char *, int, int, int, int);
+extern char mid_getch_popup(const char *, const char *);
+extern WINDOW *mid_info_popup(const char *, const char *);
+extern char *getstr_ci(WINDOW *, int, int, int);
 extern char *getstr_popup(const char *, int, int, int, int);
-extern void cmd_spawn(const char *, ...);
+extern char *mid_getstr_popup(const char *);
 extern void draw_box(WINDOW *, const char *);
+extern int combo_list(WINDOW *, Etree **, HL_datas *, const char *);
+extern char *combo_select(Etree **, const char *, int, int, int, int, int);
+extern int progress_bar(const char **, char *, int);
+extern void cmd_spawn(int, const char **, const char *, ...);
 #define ANY_KEY "\nPress any key to continue..."
+
+#define CYCLIC 0
+#define INCREMENTAL 1
+
+#define BASIC_NAV							\
+		case KEY_UP:						\
+			if (hl.hl_index > 0)				\
+				hl.hl_index--;				\
+			break;						\
+		case KEY_DOWN:						\
+			if (hl.hl_index < hl.count)			\
+				hl.hl_index++;				\
+			break;						\
+		case KEY_PPAGE:						\
+			if ((hl.hl_index - hl.nlines) > 0)		\
+				hl.hl_index -= hl.nlines;		\
+			else						\
+				hl.hl_index = 0;			\
+			break;						\
+		case ' ':						\
+		case KEY_NPAGE:						\
+			if ((hl.hl_index + hl.nlines) < hl.count)	\
+				hl.hl_index += hl.nlines;		\
+			else						\
+				hl.hl_index = hl.count;			\
+			break;

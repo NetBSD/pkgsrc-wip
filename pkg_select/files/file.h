@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: file.h,v 1.2 2005/02/22 09:52:38 imilh Exp $ 
+ * $Id: file.h,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
  */
 
 struct cf {
@@ -38,10 +38,11 @@ struct cf {
 	char *value;
 };
 
-extern struct cf *loadcf(char *, struct cf *);
+extern struct cf *list_to_cf(char **, struct cf *);
+extern struct cf *loadcf(const char *, struct cf *);
 extern void freecf(struct cf *);
 extern char *getval(struct cf *, const char *);
-extern char **loadfile(char *);
+extern char **loadfile(const char *);
 extern void freefile(char **);
-extern int file_exists(char *);
-extern int filelines(char *);
+extern int file_exists(const char *);
+extern int filelines(const char *);

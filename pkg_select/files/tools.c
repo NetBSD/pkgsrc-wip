@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: tools.c,v 1.2 2005/02/22 09:52:41 imilh Exp $ 
+ * $Id: tools.c,v 1.3 2005/03/15 17:14:26 imilh Exp $ 
  */
 
 #include "tools.h"
@@ -68,8 +68,12 @@ splitstr(char *str, const char *sep)
 	i = 0;
 	for (p = str; p != NULL;)
 		while ((tmp = strsep(&p, sep)) != NULL) {
-			XSTRDUP(split[i], tmp);
-			i++;
+			if (*tmp != '\0') {
+				while (*tmp == ' ' || *tmp == '\t')
+					tmp++;
+				XSTRDUP(split[i], tmp);
+				i++;
+			}
 		}
 
 	split[i] = NULL;
@@ -214,4 +218,56 @@ strreplace(char *str, const char *from, const char *to)
 
 	XSTRDUP(ret, buf);
 	return(ret);
+}
+
+int
+listlen(const char **list)
+{
+	int i;
+
+	for (i = 0; list[i] != NULL; i++);
+	return(i);
+}
+
+/* execute a command and receive result on a char ** */
+char **
+exec_list(const char *cmd, const char *match)
+{
+	FILE *fp;
+	int size;
+	char **res, *rawlist, buf[MAXLEN];
+
+	if ((fp = popen(cmd, "r")) == NULL)
+		return(NULL);
+
+	rawlist = NULL;
+	size = 0;
+
+	while (fgets(buf, MAXLEN, fp) != NULL) {
+		if (match == NULL || strstr(buf, match) != NULL) {
+			size += (strlen(buf) + 1) * sizeof(char);
+			
+			XREALLOC(rawlist,  size);
+			strcat(rawlist, buf);
+		}
+	}
+	pclose(fp);
+
+	if (rawlist == NULL)
+		return(NULL);
+
+	res = splitstr(rawlist, "\n");
+	XFREE(rawlist);
+
+	return(res);
+}
+
+T_Bool
+is_listed(const char **list, const char *item)
+{
+	for (; *list != NULL; list++)
+		if (strcmp(item, *list) == 0)
+			return(T_TRUE);
+
+	return(T_FALSE);
 }

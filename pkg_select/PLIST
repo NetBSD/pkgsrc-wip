@@ -1,3 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/21 10:38:05 imilh Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/15 17:14:24 imilh Exp $
 bin/pkg_select
 man/man1/pkg_select.1
+share/pkg_select/mirrors.ftp
+share/pkg_select/mirrors.cvs
+share/examples/pkg_select/pkg_select.conf.example
+@dirrm share/pkg_select
+@dirrm share/examples/pkg_select

@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_adm.h,v 1.2 2005/02/21 14:19:31 poppnk Exp $ 
+ * $Id: pkg_adm.h,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
  */
 
 extern void free_pkgdb(void);
@@ -37,12 +37,12 @@ extern void load_pkgdb(void);
 extern void reload_pkgdb(void);
 extern char **show_var(char *, const char *, int);
 extern char *show_first_var(char *, const char *);
-extern void build_pkg_path(char *);
+extern void build_pkg_path(char *, char *);
 extern char *getpkginfo(char *, int);
+extern void set_pkg_path(const char *);
 
 /* this is where you may want to port to another port framework */
 
-#define DEFAULT_PKG_PATH "ftp://ftp.netbsd.org/pub/NetBSD/packages"
 #define PKGTOOLS_PATH "/usr/sbin"
 #ifndef MAKE
 #define MAKE "/usr/bin/make"
@@ -50,17 +50,96 @@ extern char *getpkginfo(char *, int);
 
 #define PKG_VERSION 0
 #define PKG_CATEGORY 1
+#define WAIT_KEY 1
+#define DONT_WAIT 0
 
-#define PKGSRC_MAKE(action, path)	       			\
-	do {							\
-		(void) cmd_spawn("cd %s && %s %s %s",       	\
-			  path, MAKE, action, "clean");		\
-		reload_pkgdb();					\
-	} while (/* CONSTCOND*/ 0)
+#define MAKE_INST	"Checksum",			       	\
+			"Extracting",				\
+			"Patching",				\
+			"Applying",				\
+			"Overriding",				\
+			"Creating toolchain wrappers",		\
+			"Building",				\
+			"Unwrapping",				\
+			"Installing",				\
+			"Creating installation directories",	\
+			"Registering installation",		\
+			"Cleaning for"
 
-#define PKG_TOOL(action, pkg, option)			       	\
-	do {							\
-		(void) cmd_spawn("%s/pkg_%s %s %s",		\
-			  PKGTOOLS_PATH, action, option, pkg); 	\
-		reload_pkgdb();					\
-	} while (/* CONSTCOND*/ 0)
+#define MAKE_INST_PROGRESS { MAKE_INST, NULL }
+
+#define MAKE_UPDT_PROGRESS { "Deinstalling",			\
+				MAKE_INST,			\
+				NULL }
+
+#define MAKE_DEINST_PROGRESS { "Deinstalling",			\
+				"Cleaning",			\
+				NULL }
+#define PKG_ADD_PROGRESS { "ftp -detv",				\
+			"ftp> nlist",				\
+			"ftp> get",				\
+			"unpackURL",				\
+			"ftp> close",				\
+			"extract:",				\
+			"Running mtree",			\
+			"Attempting to record",			\
+			"registered in ",			\
+			NULL }
+
+#define PKG_DEL_PROGRESS { "Change working",			\
+			"Delete",				\
+			NULL }
+
+#define PKGSRC_PROGRESS { \
+	"archivers/", \
+		"audio/", \
+		"benchmarks/", \
+		"biology/", \
+		"bootstrap/", \
+		"cad/", \
+		"chat/", \
+		"comms/", \
+		"converters/", \
+		"cross/", \
+		"databases/", \
+		"devel/", \
+		"distfiles/", \
+		"doc/", \
+		"editors/", \
+		"emulators/", \
+		"finance/", \
+		"fonts/", \
+		"games/", \
+		"geography/", \
+		"graphics/", \
+		"ham/", \
+		"inputmethod/", \
+		"lang/", \
+		"licenses/", \
+		"mail/", \
+		"math/", \
+		"mbone/", \
+		"meta-pkgs/", \
+		"misc/", \
+		"mk/", \
+		"multimedia/", \
+		"net/", \
+		"news/", \
+		"packages/", \
+		"parallel/", \
+		"pkgtools/", \
+		"print/", \
+		"regress/", \
+		"security/", \
+		"shells/", \
+		"sysutils/", \
+		"templates/", \
+		"textproc/", \
+		"time/", \
+		"wm/", \
+		"www/", \
+		"x11/", \
+		NULL }
+
+extern void pkgsrc_make(const char *, const char *, int);
+extern void pkg_tool(const char *, const char *, const char *, int);
