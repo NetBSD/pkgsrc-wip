@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/05 16:14:37 virtus Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/28 03:38:59 virtus Exp $
 #
 
 DISTNAME=	mailfilter-0.2.4
+WRKSRC=		${WRKDIR}/*
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailfilter/}
 
 MAINTAINER=	virtus@wanadoo.nl
-HOMEPAGE=	http://mailfilter.sourceforge.net
+HOMEPAGE=	http://mailfilter.sourceforge.net/
 COMMENT=	Filter mail on a pop3 server
 
-WRKSRC=		${WRKDIR}/*
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=  YES
 
