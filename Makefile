@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.634 2003/11/20 20:53:19 blef Exp $
-# $NetBSD: Makefile,v 1.634 2003/11/20 20:53:19 blef Exp $
+# $Id: Makefile,v 1.635 2003/11/20 20:54:21 blef Exp $
+# $NetBSD: Makefile,v 1.635 2003/11/20 20:54:21 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -522,6 +522,7 @@ SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
 SUBDIR+=	vte
 SUBDIR+=	weewm
+SUBDIR+=	wistumbler2
 SUBDIR+=	wmclockmon
 SUBDIR+=	wmitime
 SUBDIR+=	wmnetload
