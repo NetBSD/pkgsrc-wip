@@ -1,6 +1,7 @@
-$NetBSD: TODO,v 1.1 2005/02/15 21:44:01 airhead Exp $
+$NetBSD: TODO,v 1.2 2005/02/15 22:07:17 airhead Exp $
 
 TODO:
 - Fetch the SCSH version from ../../shells/scsh/Makefile.common  (to be done
    when this pkg is moved into pkgsrc) in Makefile.common.
 - Find a way to determine which SCSH is installed (for SCSH_LIB_DIRS).
+- Do something about installation of scheme48
