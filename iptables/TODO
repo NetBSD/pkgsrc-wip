@@ -1,0 +1,2 @@
+fix so uses installed kernel source (maybe depend on
+wip/linux-kernel-sources) and set KERNEL_DIR to that installed location.
