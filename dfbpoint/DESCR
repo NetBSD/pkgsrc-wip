@@ -1,0 +1,2 @@
+DFBPoint is a simple presentation viewer that uses the DirectFB graphics
+library to draw to the Linux framebuffer.
