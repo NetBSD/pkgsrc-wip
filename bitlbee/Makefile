@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/25 15:35:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/25 15:47:31 xtraeme Exp $
 #
 
 DISTNAME=		bitlbee-0.80
@@ -6,7 +6,7 @@ CATEGORIES=		chat
 MASTER_SITES=		http://www.lintux.cx/downloads/
 
 PATCHFILES=		bitlbee-daemon.patch
-PATCH_SITES=		http://Insomnio:81/packages/
+PATCH_SITES=		http://xtraeme.unixbsd.org:81/packages/
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		jrp@hispabsd.org
