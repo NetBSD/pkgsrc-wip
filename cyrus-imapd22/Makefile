@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/16 10:26:02 marc Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/13 20:37:18 marc Exp $
 #
 
 DISTNAME=		cyrus-imapd-2.2.1-BETA
@@ -7,7 +7,7 @@ CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 			ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/
 
-MAINTAINER=		marc@informatik.uni-bremen.de
+MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://asg.web.cmu.edu/cyrus/imapd/
 COMMENT=		Cyrus IMAP server
 
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
 CONFIGURE_ARGS+=	--with-statedir=/var/run
 CONFIGURE_ARGS+=	--with-bdb-libdir=${BUILDLINK_PREFIX.db4}/lib
 CONFIGURE_ARGS+=	--with-bdb-incdir=${BUILDLINK_PREFIX.db4}/include/db4
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 CONFIGURE_ARGS+=	--enable-listext
@@ -96,8 +96,8 @@ post-patch:
 	done
 
 pre-configure:
-	cd ${WRKSRC};		\
-	${ACLOCAL} -I cmulocal; \
+	cd ${WRKSRC}; \
+       	${ACLOCAL} -I cmulocal; \
 	${AUTOHEADER};		\
 	${AUTOCONF}
 
@@ -109,9 +109,13 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/rehash ${PREFIX}/cyrus/bin
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/imapd.conf ${EGDIR}
-	cd ${WRKSRC}/master/conf; ${INSTALL_DATA} *.conf ${EGDIR}
+	cd ${WRKSRC}/master/conf; for file in *.conf; do		\
+		${INSTALL_DATA} $$file ${EGDIR};			\
+	done
 	${INSTALL_DATA_DIR} ${HTMLDIR}
-	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html cyrusv2.mc ${HTMLDIR}
+	cd ${WRKSRC}/doc; for file in *.html cyrusv2.mc; do		\
+		${INSTALL_DATA} $$file ${HTMLDIR};			\
+	done
 
 .include "../../databases/db4/buildlink2.mk"
 .include "../../lang/perl5/module.mk"
