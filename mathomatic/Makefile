@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/22 23:48:23 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/23 02:59:21 rillig Exp $
 #
 
 DISTNAME=		am-10.7d
@@ -14,14 +14,11 @@ COMMENT=		Small portable symbolic math program
 
 MAKEFILE=		makefile
 
+CFLAGS.SunOS+=		-DSOLARIS
+CFLAGS+=		-DUNIX
+
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/am.1 ${PREFIX}/man/man1/
-	${INSTALL_SCRIPT} ${WRKSRC}/am_mathomatic ${PREFIX}/bin/am_mathomatic
+	${INSTALL_PROGRAM} ${WRKSRC}/am_mathomatic ${PREFIX}/bin/am_mathomatic
+	${INSTALL_MAN} ${WRKSRC}/am.1 ${PREFIX}/man/man1/am_mathomatic.1
 
 .include "../../mk/bsd.pkg.mk"
-
-.if ${OPSYS} == "SunOS"
-BUILD_MAKE_FLAGS+=	FEATURES="-DUNIX -DSOLARIS"
-.else
-BUILD_MAKE_FLAGS+=	FEATURES="-DUNIX"
-.endif

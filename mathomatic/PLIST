@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/05 17:20:38 mjasm Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/23 02:59:26 rillig Exp $
 bin/am_mathomatic
-man/man1/am.1
+man/man1/am_mathomatic.1
