@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/29 23:58:08 thomasklausner Exp $
+bin/yabause
+man/man1/yabause.1
+share/doc/yabause/README
+@dirrm share/doc/yabause

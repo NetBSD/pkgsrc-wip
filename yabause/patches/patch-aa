@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/29 23:58:09 thomasklausner Exp $
+
+--- src/intc.cc.orig	2004-06-30 23:58:01.000000000 +0200
++++ src/intc.cc
+@@ -298,9 +298,9 @@ void Intc::run(void) {
+ 
+     SDL_mutexP(mutex_cond);
+ #ifndef _arch_dreamcast
+-    while(interrupts.empty()) SDL_CondWait(cond, mutex);
++    while(interrupts.empty()) SDL_CondWait(cond, mutex_cond);
+ #else
+-    while(int_tree.root == NULL) SDL_CondWait(cond, mutex);
++    while(int_tree.root == NULL) SDL_CondWait(cond, mutex_cond);
+ #endif
+     SDL_mutexV(mutex_cond);
+ 
