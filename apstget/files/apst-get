@@ -50,11 +50,7 @@ if [ "${UPDATE_METHOD}" = "cvs" ]; then
 	UPDATE_ARGS="-z 3"
 	fi
 fi
-case "${QUITE}" in
-"1") QUITE="/dev/null";   QUITE2="/dev/stderr" ;;
-"2") QUITE="/dev/null";   QUITE2="/dev/null"   ;;
-*)   QUITE="/dev/stdout"; QUITE2="/dev/stderr" ;;
-esac
+WRAPPER=_pfx_/libexec/apstget-wrapper
 
 if [ ! -e "/dev/stdin" ]; then
 	echo "/dev/stdin doesn't exist. Please create the device first."
@@ -243,7 +239,7 @@ do_install() {
 	for A in ${REPLACE}; do
 		echo "==> Upgrading ${A}..."
 		cd ${PKGSRC_DIR}/${A}
-		${MAKE} replace ${UD_TARGETS} > ${QUITE} 2>${QUITE2}
+		${MAKE} replace ${UD_TARGETS} | ${WRAPPER} 2>&1
 		if [ ! "$?" = "0" ]; then
 			echo "==> Error occurred at ${DIR}."
 			process_failed
@@ -259,7 +255,7 @@ do_install() {
 	for A in ${INSTALL}; do
 		echo "==> Installing ${A}"
 		cd ${PKGSRC_DIR}/${A}
-		${MAKE} install ${UD_TARGETS} > ${QUITE} 2>${QUITE2}
+		${MAKE} install ${UD_TARGETS} | ${WRAPPER} 2>&1
 		if [ ! "$?" = "0" ]; then
 			echo "==> Error occurred at ${DIR}."
 			process_failed
@@ -420,15 +416,36 @@ case "$1" in
 	fi
 	;;
 "clean")
-	do_clean
+	if [ "$2" = "" ]; then
+		do_clean
+	else
+		while : ; do
+		PKG=$2
+		if [ "`echo $PKG | grep /`" = "" ]; then
+			DIR=`${PKGFIND} -qx $PKG`
+			if [ "${DIR}" = "" ]; then
+				DIR=NOTFOUND
+			fi
+		else
+			PKG=`echo $PKG | awk -F / '{ print $2 }'`
+		fi
+		if [ -d "${PKGSRC_DIR}/${DIR}" ]; then
+			cd ${PKGSRC_DIR}/${DIR}
+			${MAKE} clean
+		else
+			echo "Directory for $2 not found."
+		fi
+		# next one
+		shift;
+		if [ "$2" = "" ]; then break; fi
+		done
+	fi
 	;;
 "relink")
 	while : ; do
 		do_relink $2
 		shift;
-		if [ "$2" = "" ]; then
-		break;
-		fi
+		if [ "$2" = "" ]; then break; fi
 	done
 	;;
 *)

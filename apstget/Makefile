@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2004/10/26 05:25:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/02 14:05:38 poppnk Exp $
 
-DISTNAME=	apstget-20041026
+DISTNAME=	apstget-20041102
 CATEGORIES=	pkgtools wip
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -24,10 +24,11 @@ do-extract:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/apst-get ${PREFIX}/bin/apst-get
+	${INSTALL_SCRIPT} ${WRKSRC}/apstget-wrapper ${PREFIX}/libexec/
 
 SUBST_CLASSES=		etc
 SUBST_STAGE.etc=	post-patch
-SUBST_FILES.etc=	apst-get
+SUBST_FILES.etc=	apst-get apstget-wrapper
 SUBST_SED.etc=		-e "s,_etc_,${PKG_SYSCONFDIR},g" \
 			-e "s,_pfx_,${PREFIX},g" \
 			-e "s,_psd_,${PKGSRCDIR},g" \
