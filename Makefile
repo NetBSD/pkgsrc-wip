@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.942 2004/02/10 11:38:34 rasputnik Exp $
-# $NetBSD: Makefile,v 1.942 2004/02/10 11:38:34 rasputnik Exp $
+# $Id: Makefile,v 1.943 2004/02/10 12:11:36 adrian_p Exp $
+# $NetBSD: Makefile,v 1.943 2004/02/10 12:11:36 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -365,6 +365,7 @@ SUBDIR+=	mixmaster
 #SUBDIR+=	mk 		# not a package
 SUBDIR+=	mkdep
 SUBDIR+=	mlview
+SUBDIR+=	mnogosearch
 SUBDIR+=	monkey-bubble
 SUBDIR+=	mopac
 SUBDIR+=	mpgedit
