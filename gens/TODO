@@ -1,5 +1,0 @@
-- add C-q shortcut to quit
-- fix mp3 playback
-- fix Get_Key joystick handling
-- port cd_aspi to libcdio (or native NetBSD)
-- fix fullscreen when game window is focused
