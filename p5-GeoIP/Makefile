@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/21 09:35:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/01 10:31:10 jmmv Exp $
 #
 
 DISTNAME=	Geo-IP-1.15
@@ -14,6 +14,6 @@ USE_BUILDLINK2=		yes
 
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Geo/IP/.packlist
 
-.include "../../wip/geoip/buildlink2.mk"
 .include "../../lang/perl5/module.mk"
+.include "../../net/GeoIP/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
