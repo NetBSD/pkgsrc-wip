@@ -1,4 +1,12 @@
-$Id: TODO,v 1.1.1.1 2004/04/18 22:29:28 mpasternak Exp $
+$Id: TODO,v 1.2 2004/04/18 22:36:29 mpasternak Exp $
 
-ONLY_FOR_PLATFORM perhaps (no BSDs!), PLIST, make it build.
+ONLY_FOR_PLATFORM perhaps (no BSDs!), PLIST, make it build, perhaps add
+patches:
+http://www.sleepycat.com/webforms/patchdl.php?src=patch.1.86.2
+http://www.sleepycat.com/webforms/patchdl.php?src=patch.1.86.3
+http://www.sleepycat.com/webforms/patchdl.php?src=patch.1.86.4
+
+... and 1.86.1 patch is for irix 5.x, but I don't have a machine to test it.
+
+	-- mpasternak
 
