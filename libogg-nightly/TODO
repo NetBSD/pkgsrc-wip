@@ -1,6 +1,0 @@
-suggest to libogg developers so
-docdir can be set via configure to add "html/"
-
-pkglint complains:
-FATAL: version number part of PKGNAME looks illegal. You should modify "-${PKGVER}"
-WARN: "BUILD_DEPENDS" has to appear earlier in Makefile.
