@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2003/09/24 21:53:11 tvierling Exp $
+# $NetBSD: Makefile,v 1.15 2003/09/25 02:45:18 tvierling Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
 PKGNAME=		entropy-${ENTROPY_VERSION:S/-/./}
 WRKSRC=			${WRKDIR}/entropy-${ENTROPY_VERSION:C/-.*$//}
-CATEGORIES=		wip
+CATEGORIES=		security net
 MASTER_SITES=		http://entropy.stop1984.com/files/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tv@pobox.com
+MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://entropy.stop1984.com/
 COMMENT=		Anonymous peer-to-peer networking node (similar to Freenet)
 

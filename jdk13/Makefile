@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/08/20 20:12:27 tvierling Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/25 02:45:18 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -16,7 +16,7 @@ MASTER_SITES=	# empty
 EXTRACT_SUFX=	.tar.gz # must be explicitly specified for the ".if exists" below
 DISTFILES=	${SCSL_DF} ${PATCH_DF}
 
-MAINTAINER=	tv@pobox.com
+MAINTAINER=	tv@duh.org
 HOMEPAGE=	http://www.eyesbeyond.com/freebsddom/java/
 COMMENT=	Sun's Java(tm) 2 SDK (SCSL+FreeBSDdom 1.3 release)
 

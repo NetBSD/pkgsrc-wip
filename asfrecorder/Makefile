@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/08/15 18:25:16 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2003/09/25 02:45:17 tvierling Exp $
 #
 
 DISTNAME=		ASFRecorder
@@ -8,7 +8,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=asfrecorder/}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		tv@pobox.com
+MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://asfrecorder.sourceforge.net/
 COMMENT=		Static-file downloader for ASF streaming media
 

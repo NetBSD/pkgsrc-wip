@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/08/22 11:19:54 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2003/09/25 02:45:19 tvierling Exp $
 #
 
 DISTNAME=		GnuPG-Interface-0.34
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnupg-interface/}
 
-MAINTAINER=		tv@pobox.com
+MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://gnupg-interface.sourceforge.net/
 COMMENT=		Perl interface to GnuPG
 
