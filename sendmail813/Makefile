@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/08/18 13:36:34 adrian_p Exp $
+# $NetBSD: Makefile,v 1.18 2004/08/18 13:47:35 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -95,8 +95,8 @@ post-build:
 	@${ECHO} "" >>${MESSAGE_SRC}
 	@${ECHO} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all" >>${MESSAGE_SRC}
 	@${ECHO} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"." >>${MESSAGE_SRC}
-	@${ECHO} >>${PLIST_SRC} "@exec mv -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || true"
-	@${ECHO} >>${PLIST_SRC} "@unexec mv -f /usr/sbin/makemap.8.8 /usr/sbin/makemap || true"
+	@${ECHO} >>${WRKDIR}/.PLIST_SRC "@exec mv -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || true"
+	@${ECHO} >>${WRKDIR}/.PLIST_SRC "@unexec mv -f /usr/sbin/makemap.8.8 /usr/sbin/makemap || true"
 .endif
 
 pre-install:
