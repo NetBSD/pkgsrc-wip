@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/25 19:27:57 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/26 21:18:41 poppnk Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -48,7 +48,7 @@ CONFIGURE_ARGS+=	-Dscriptdir="${PREFIX}/bin"
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
 CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
 CONFIGURE_ARGS+=	-Dinstallstyle="lib/perl5"
-CONFIGURE_ARGS+=	-Duseithreads="y"
+CONFIGURE_ARGS+=	-Dusethreads="y"
 CONFIGURE_ARGS+=	-Dusedevel="y"
 CONFIGURE_ARGS+=	-Di_malloc="y"
 CONFIGURE_ARGS+=	-Ui_malloc

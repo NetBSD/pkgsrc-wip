@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/25 19:28:25 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/26 21:18:41 poppnk Exp $
 bin/a2p${PKGVERSION}
 bin/c2ph${PKGVERSION}
 bin/cpan${PKGVERSION}
@@ -405,425 +405,425 @@ lib/perl5/${PKGVERSION}/getcwd.pl
 lib/perl5/${PKGVERSION}/getopt.pl
 lib/perl5/${PKGVERSION}/getopts.pl
 lib/perl5/${PKGVERSION}/hostname.pl
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/.packlist
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Asmdata.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Assembler.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Bblock.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Bytecode.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/C.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/CC.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Concise.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Debug.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Deparse.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Disassembler.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Lint.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Showlex.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Stackobj.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Stash.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Terse.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B/Xref.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/ByteLoader.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/EXTERN.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/INTERN.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/XSUB.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/av.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/cc_runtime.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/config.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/cop.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/cv.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/dosish.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/embed.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/embedvar.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/fakesdio.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/fakethr.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/form.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/gv.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/handy.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/hv.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/intrpvar.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/iperlsys.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/keywords.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/libperl.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/malloc_ctl.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/mg.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/nostdio.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/op.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/opcode.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/opnames.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/pad.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/patchlevel.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/perl.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/perlapi.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/perlio.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/perliol.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/perlsdio.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/perlsfio.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/perlvars.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/perly.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/pp.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/pp_proto.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/proto.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/reentr.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/regcomp.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/regexp.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/regnodes.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/scope.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/sv.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/thrdvar.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/thread.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/uconfig.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/unixish.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/utf8.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/utfebcdic.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/util.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/warnings.h
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Config.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Config.pod
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Cwd.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/DB_File.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Data/Dumper.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Devel/DProf.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Devel/PPPort.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Devel/Peek.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Digest/MD5.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/DynaLoader.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/Alias.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/Byte.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/CJKConstants.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/CN.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/Config.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/EBCDIC.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/Encoder.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/Encoding.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/Guess.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/JP.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/KR.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/Symbol.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/TW.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode/Unicode.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Errno.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Fcntl.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/File/Glob.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Filter/Util/Call.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/I18N/Langinfo.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IO.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IO/Dir.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IO/File.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IO/Handle.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IO/Pipe.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IO/Poll.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IO/Seekable.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IO/Select.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IO/Socket.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IPC/Msg.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IPC/Semaphore.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IPC/SysV.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/MIME/Base64.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/MIME/QuotedPrint.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/NDBM_File.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/O.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Opcode.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/POSIX.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/POSIX.pod
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/PerlIO/encoding.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/PerlIO/scalar.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/PerlIO/via.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/SDBM_File.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Safe.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Socket.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Storable.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Sys/Hostname.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Sys/Syslog.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Time/HiRes.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Unicode/Normalize.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/XS/APItest.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/XS/Typemap.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/XSLoader.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/attrs.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/B/B.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/B/B.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/B/C/C.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/B/C/C.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/ByteLoader/ByteLoader.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/ByteLoader/ByteLoader.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cwd/Cwd.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cwd/Cwd.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DB_File/DB_File.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DB_File/DB_File.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DB_File/autosplit.ix
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Data/Dumper/Dumper.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Data/Dumper/Dumper.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/DProf/DProf.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/DProf/DProf.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/PPPort/PPPort.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/PPPort/PPPort.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/Peek/Peek.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/Peek/Peek.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Digest/MD5/MD5.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Digest/MD5/MD5.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DynaLoader/DynaLoader.a
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DynaLoader/autosplit.ix
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DynaLoader/dl_expandspec.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DynaLoader/dl_find_symbol_anywhere.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DynaLoader/dl_findfile.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DynaLoader/extralibs.ld
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/Byte/Byte.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/Byte/Byte.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/CN/CN.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/CN/CN.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/EBCDIC/EBCDIC.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/EBCDIC/EBCDIC.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/Encode.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/Encode.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/JP/JP.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/JP/JP.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/KR/KR.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/KR/KR.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/Symbol/Symbol.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/Symbol/Symbol.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/TW/TW.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/TW/TW.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/Unicode/Unicode.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/Unicode/Unicode.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Fcntl/Fcntl.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Fcntl/Fcntl.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/File/Glob/Glob.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/File/Glob/Glob.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/Util/Call/Call.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/Util/Call/Call.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/I18N/Langinfo/Langinfo.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/I18N/Langinfo/Langinfo.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/I18N/Langinfo/autosplit.ix
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO/IO.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO/IO.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IPC/SysV/SysV.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IPC/SysV/SysV.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/List/Util/Util.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/List/Util/Util.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/MIME/Base64/Base64.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/MIME/Base64/Base64.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/NDBM_File/NDBM_File.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/NDBM_File/NDBM_File.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Opcode/Opcode.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Opcode/Opcode.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/POSIX.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/POSIX.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/abs.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/alarm.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/assert.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/atan2.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/atexit.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/atof.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/atoi.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/atol.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/autosplit.ix
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/bsearch.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/calloc.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/chdir.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/chmod.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/chown.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/clearerr.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/closedir.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/cos.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/creat.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/div.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/errno.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/execl.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/execle.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/execlp.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/execv.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/execve.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/execvp.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/exit.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/exp.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fabs.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fclose.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fcntl.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fdopen.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/feof.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/ferror.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fflush.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fgetc.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fgetpos.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fgets.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fileno.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fopen.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fork.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fprintf.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fputc.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fputs.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fread.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/free.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/freopen.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fscanf.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fseek.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fsetpos.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fstat.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fsync.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/ftell.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/fwrite.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getc.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getchar.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getegid.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getenv.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/geteuid.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getgid.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getgrgid.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getgrnam.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getgroups.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getlogin.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getpgrp.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getpid.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getppid.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getpwnam.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getpwuid.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/gets.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/getuid.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/gmtime.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/isatty.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/kill.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/labs.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/ldiv.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/link.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/load_imports.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/localtime.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/log.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/longjmp.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/malloc.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/memchr.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/memcmp.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/memcpy.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/memmove.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/memset.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/mkdir.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/offsetof.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/opendir.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/perror.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/pow.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/printf.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/putc.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/putchar.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/puts.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/qsort.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/raise.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/rand.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/readdir.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/realloc.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/redef.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/remove.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/rename.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/rewind.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/rewinddir.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/rmdir.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/scanf.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/setbuf.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/setjmp.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/setvbuf.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/siglongjmp.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/sigsetjmp.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/sin.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/sleep.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/sprintf.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/sqrt.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/srand.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/sscanf.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/stat.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strcat.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strchr.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strcmp.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strcpy.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strcspn.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strerror.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strlen.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strncat.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strncmp.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strncpy.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strpbrk.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strrchr.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strspn.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strstr.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/strtok.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/system.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/time.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/tmpfile.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/tolower.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/toupper.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/umask.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/ungetc.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/unimpl.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/unlink.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/usage.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/utime.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/vfprintf.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/vprintf.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/vsprintf.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/wait.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/waitpid.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/PerlIO/encoding/encoding.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/PerlIO/encoding/encoding.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/PerlIO/scalar/scalar.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/PerlIO/scalar/scalar.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/PerlIO/via/via.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/PerlIO/via/via.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/SDBM_File/SDBM_File.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/SDBM_File/SDBM_File.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Socket/Socket.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Socket/Socket.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/CAN_FLOCK.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/Storable.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/Storable.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/_freeze.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/_retrieve.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/_store.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/_store_fd.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/autosplit.ix
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/fd_retrieve.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/freeze.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/lock_nstore.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/lock_retrieve.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/lock_store.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/logcarp.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/logcroak.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/nfreeze.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/nstore.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/nstore_fd.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/read_magic.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/retrieve.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/show_file_magic.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/store.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/store_fd.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable/thaw.al
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Sys/Hostname/Hostname.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Sys/Hostname/Hostname.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Sys/Hostname/autosplit.ix
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Sys/Syslog/Syslog.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Sys/Syslog/Syslog.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Time/HiRes/HiRes.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Time/HiRes/HiRes.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Unicode/Normalize/Normalize.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Unicode/Normalize/Normalize.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Unicode/Normalize/autosplit.ix
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XS/APItest/APItest.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XS/APItest/APItest.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XS/Typemap/Typemap.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XS/Typemap/Typemap.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/attrs/attrs.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/attrs/attrs.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/re/re.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/re/re.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/sdbm/extralibs.ld
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/threads/shared/shared.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/threads/shared/shared.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/threads/threads.bs
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/threads/threads.so
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/encoding.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/lib.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/ops.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/re.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/threads.pm
-lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/threads/shared.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/.packlist
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Asmdata.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Assembler.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Bblock.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Bytecode.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/C.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/CC.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Concise.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Debug.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Deparse.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Disassembler.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Lint.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Showlex.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Stackobj.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Stash.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Terse.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B/Xref.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/ByteLoader.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/EXTERN.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/INTERN.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/XSUB.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/av.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/cc_runtime.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/config.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/cop.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/cv.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/dosish.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/embed.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/embedvar.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/fakesdio.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/fakethr.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/form.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/gv.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/handy.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/hv.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/intrpvar.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/iperlsys.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/keywords.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/libperl.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/malloc_ctl.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/mg.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/nostdio.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/op.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/opcode.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/opnames.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/pad.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/patchlevel.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/perl.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/perlapi.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/perlio.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/perliol.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/perlsdio.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/perlsfio.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/perlvars.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/perly.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/pp.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/pp_proto.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/proto.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/reentr.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/regcomp.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/regexp.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/regnodes.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/scope.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/sv.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/thrdvar.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/thread.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/uconfig.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/unixish.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/utf8.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/utfebcdic.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/util.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE/warnings.h
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Config.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Config.pod
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Cwd.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/DB_File.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Data/Dumper.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Devel/DProf.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Devel/PPPort.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Devel/Peek.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Digest/MD5.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/DynaLoader.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/Alias.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/Byte.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/CJKConstants.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/CN.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/Config.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/EBCDIC.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/Encoder.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/Encoding.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/Guess.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/JP.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/KR.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/Symbol.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/TW.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode/Unicode.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Errno.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Fcntl.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/File/Glob.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Filter/Util/Call.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/I18N/Langinfo.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IO.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IO/Dir.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IO/File.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IO/Handle.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IO/Pipe.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IO/Poll.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IO/Seekable.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IO/Select.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IO/Socket.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IPC/Msg.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IPC/Semaphore.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IPC/SysV.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/MIME/Base64.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/MIME/QuotedPrint.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/NDBM_File.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/O.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Opcode.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/POSIX.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/POSIX.pod
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/PerlIO/encoding.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/PerlIO/scalar.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/PerlIO/via.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/SDBM_File.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Safe.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Socket.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Storable.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Sys/Hostname.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Sys/Syslog.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Time/HiRes.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Unicode/Normalize.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/XS/APItest.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/XS/Typemap.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/XSLoader.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/attrs.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/B/B.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/B/B.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/B/C/C.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/B/C/C.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/ByteLoader/ByteLoader.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/ByteLoader/ByteLoader.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Cwd/Cwd.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Cwd/Cwd.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/DB_File/DB_File.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/DB_File/DB_File.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/DB_File/autosplit.ix
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Data/Dumper/Dumper.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Data/Dumper/Dumper.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Devel/DProf/DProf.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Devel/DProf/DProf.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Devel/PPPort/PPPort.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Devel/PPPort/PPPort.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Devel/Peek/Peek.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Devel/Peek/Peek.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Digest/MD5/MD5.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Digest/MD5/MD5.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/DynaLoader/DynaLoader.a
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/DynaLoader/autosplit.ix
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/DynaLoader/dl_expandspec.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/DynaLoader/dl_find_symbol_anywhere.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/DynaLoader/dl_findfile.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/DynaLoader/extralibs.ld
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/Byte/Byte.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/Byte/Byte.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/CN/CN.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/CN/CN.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/EBCDIC/EBCDIC.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/EBCDIC/EBCDIC.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/Encode.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/Encode.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/JP/JP.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/JP/JP.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/KR/KR.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/KR/KR.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/Symbol/Symbol.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/Symbol/Symbol.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/TW/TW.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/TW/TW.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/Unicode/Unicode.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/Unicode/Unicode.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Fcntl/Fcntl.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Fcntl/Fcntl.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/File/Glob/Glob.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/File/Glob/Glob.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Filter/Util/Call/Call.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Filter/Util/Call/Call.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/I18N/Langinfo/Langinfo.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/I18N/Langinfo/Langinfo.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/I18N/Langinfo/autosplit.ix
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/IO/IO.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/IO/IO.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/IPC/SysV/SysV.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/IPC/SysV/SysV.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/List/Util/Util.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/List/Util/Util.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/MIME/Base64/Base64.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/MIME/Base64/Base64.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/NDBM_File/NDBM_File.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/NDBM_File/NDBM_File.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Opcode/Opcode.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Opcode/Opcode.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/POSIX.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/POSIX.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/abs.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/alarm.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/assert.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/atan2.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/atexit.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/atof.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/atoi.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/atol.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/autosplit.ix
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/bsearch.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/calloc.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/chdir.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/chmod.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/chown.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/clearerr.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/closedir.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/cos.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/creat.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/div.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/errno.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/execl.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/execle.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/execlp.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/execv.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/execve.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/execvp.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/exit.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/exp.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fabs.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fclose.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fcntl.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fdopen.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/feof.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/ferror.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fflush.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fgetc.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fgetpos.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fgets.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fileno.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fopen.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fork.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fprintf.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fputc.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fputs.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fread.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/free.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/freopen.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fscanf.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fseek.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fsetpos.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fstat.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fsync.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/ftell.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/fwrite.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getc.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getchar.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getegid.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getenv.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/geteuid.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getgid.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getgrgid.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getgrnam.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getgroups.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getlogin.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getpgrp.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getpid.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getppid.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getpwnam.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getpwuid.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/gets.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/getuid.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/gmtime.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/isatty.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/kill.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/labs.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/ldiv.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/link.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/load_imports.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/localtime.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/log.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/longjmp.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/malloc.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/memchr.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/memcmp.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/memcpy.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/memmove.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/memset.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/mkdir.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/offsetof.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/opendir.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/perror.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/pow.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/printf.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/putc.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/putchar.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/puts.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/qsort.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/raise.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/rand.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/readdir.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/realloc.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/redef.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/remove.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/rename.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/rewind.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/rewinddir.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/rmdir.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/scanf.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/setbuf.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/setjmp.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/setvbuf.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/siglongjmp.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/sigsetjmp.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/sin.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/sleep.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/sprintf.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/sqrt.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/srand.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/sscanf.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/stat.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strcat.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strchr.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strcmp.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strcpy.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strcspn.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strerror.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strlen.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strncat.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strncmp.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strncpy.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strpbrk.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strrchr.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strspn.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strstr.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/strtok.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/system.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/time.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/tmpfile.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/tolower.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/toupper.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/umask.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/ungetc.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/unimpl.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/unlink.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/usage.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/utime.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/vfprintf.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/vprintf.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/vsprintf.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/wait.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX/waitpid.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PerlIO/encoding/encoding.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PerlIO/encoding/encoding.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PerlIO/scalar/scalar.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PerlIO/scalar/scalar.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PerlIO/via/via.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PerlIO/via/via.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/SDBM_File/SDBM_File.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/SDBM_File/SDBM_File.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Socket/Socket.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Socket/Socket.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/CAN_FLOCK.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/Storable.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/Storable.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/_freeze.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/_retrieve.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/_store.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/_store_fd.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/autosplit.ix
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/fd_retrieve.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/freeze.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/lock_nstore.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/lock_retrieve.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/lock_store.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/logcarp.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/logcroak.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/nfreeze.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/nstore.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/nstore_fd.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/read_magic.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/retrieve.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/show_file_magic.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/store.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/store_fd.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable/thaw.al
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Sys/Hostname/Hostname.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Sys/Hostname/Hostname.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Sys/Hostname/autosplit.ix
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Sys/Syslog/Syslog.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Sys/Syslog/Syslog.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Time/HiRes/HiRes.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Time/HiRes/HiRes.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Unicode/Normalize/Normalize.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Unicode/Normalize/Normalize.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Unicode/Normalize/autosplit.ix
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/XS/APItest/APItest.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/XS/APItest/APItest.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/XS/Typemap/Typemap.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/XS/Typemap/Typemap.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/attrs/attrs.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/attrs/attrs.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/re/re.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/re/re.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/sdbm/extralibs.ld
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/threads/shared/shared.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/threads/shared/shared.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/threads/threads.bs
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/threads/threads.so
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/encoding.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/lib.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/ops.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/re.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/threads.pm
+lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/threads/shared.pm
 lib/perl5/${PKGVERSION}/if.pm
 lib/perl5/${PKGVERSION}/importenv.pl
 lib/perl5/${PKGVERSION}/integer.pm
@@ -1832,6 +1832,9 @@ share/man/man1/splain.1
 share/man/man1/xsubpp.1
 share/mk/bsd.perl.mk
 @dirrm share/man/man1
+@exec ${MKDIR} %D/lib/perl5/site_perl/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
+@dirrm lib/perl5/site_perl/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
+@dirrm lib/perl5/site_perl/${PKGVERSION}
 @dirrm lib/perl5/site_perl
 @dirrm lib/perl5/${PKGVERSION}/warnings
 @dirrm lib/perl5/${PKGVERSION}/unicore/lib
@@ -1840,90 +1843,90 @@ share/mk/bsd.perl.mk
 @dirrm lib/perl5/${PKGVERSION}/pod
 @dirrm lib/perl5/${PKGVERSION}/man/man3
 @dirrm lib/perl5/${PKGVERSION}/man
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/threads
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/threads/shared
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/threads
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/sdbm
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/re
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/attrs
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XS/Typemap
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XS/APItest
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XS
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Unicode/Normalize
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Unicode
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Time/HiRes
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Time
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Sys/Syslog
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Sys/Hostname
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Sys
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Storable
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Socket
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/SDBM_File
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/PerlIO/via
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/PerlIO/scalar
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/PerlIO/encoding
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/PerlIO
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Opcode
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/NDBM_File
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/MIME/Base64
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/MIME
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/List/Util
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/List
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IPC/SysV
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IPC
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/I18N/Langinfo
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/I18N
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/Util/Call
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/Util
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/File/Glob
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/File
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Fcntl
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/Unicode
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/TW
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/Symbol
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/KR
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/JP
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/EBCDIC
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/CN
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode/Byte
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DynaLoader
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Digest/MD5
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Digest
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/Peek
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/PPPort
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/DProf
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Data/Dumper
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Data
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DB_File
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cwd
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/ByteLoader
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/B/C
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/B
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/XS
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Unicode
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Time
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Sys
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/PerlIO
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/MIME
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IPC
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/IO
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/I18N
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Filter/Util
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Filter
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/File
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Digest
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Devel
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/Data
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/B
-@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/threads
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/threads/shared
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/threads
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/sdbm
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/re
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/attrs
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/XS/Typemap
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/XS/APItest
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/XS
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Unicode/Normalize
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Unicode
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Time/HiRes
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Time
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Sys/Syslog
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Sys/Hostname
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Sys
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Storable
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Socket
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/SDBM_File
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PerlIO/via
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PerlIO/scalar
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PerlIO/encoding
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PerlIO
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/POSIX
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Opcode
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/NDBM_File
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/MIME/Base64
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/MIME
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/List/Util
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/List
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/IPC/SysV
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/IPC
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/IO
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/I18N/Langinfo
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/I18N
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Filter/Util/Call
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Filter/Util
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Filter
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/File/Glob
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/File
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Fcntl
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/Unicode
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/TW
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/Symbol
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/KR
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/JP
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/EBCDIC
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/CN
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode/Byte
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Encode
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/DynaLoader
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Digest/MD5
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Digest
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Devel/Peek
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Devel/PPPort
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Devel/DProf
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Devel
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Data/Dumper
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Data
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/DB_File
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Cwd
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/ByteLoader
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/B/C
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/B
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/XS
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Unicode
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Time
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Sys
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/PerlIO
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/MIME
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IPC
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/IO
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/I18N
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Filter/Util
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Filter
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/File
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Encode
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Digest
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Devel
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Data
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/B
+@dirrm lib/perl5/${PKGVERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
 @dirrm lib/perl5/${PKGVERSION}/auto/POSIX/SigAction
 @dirrm lib/perl5/${PKGVERSION}/auto/POSIX
 @dirrm lib/perl5/${PKGVERSION}/auto
@@ -1997,13 +2000,3 @@ share/mk/bsd.perl.mk
 @dirrm lib/perl5/${PKGVERSION}/Attribute/Handlers
 @dirrm lib/perl5/${PKGVERSION}/Attribute
 @dirrm lib/perl5/${PKGVERSION}
-@dirrm lib/perl5/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Encode
-@dirrm lib/perl5/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Digest/MD5
-@dirrm lib/perl5/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto
-@dirrm lib/perl5/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/Encode
-@dirrm lib/perl5/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}
-@dirrm lib/perl5/5.8.0/Net
-@dirrm lib/perl5/5.8.0/Class
-@dirrm lib/perl5/5.8.0/CPAN
-@dirrm lib/perl5/5.8.0
-@dirrm lib/perl5
