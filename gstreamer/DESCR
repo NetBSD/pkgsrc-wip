@@ -1,0 +1,10 @@
+GStreamer is a framework for creating streaming media applications. The
+fundamental design comes from the video pipeline at Oregon Graduate Institute,
+as well as some ideas from DirectShow.
+
+GStreamer's development framework makes it possible to write any type of
+streaming multimedia application. The GStreamer framework is designed to make
+it easy to write applications that handle either audio or video or both. The
+pipeline design is made to have no extra overhead above what the applied
+filters induce. This makes GStreamer a good framework for designing even
+high-end audio applications which puts high demands on latency.

@@ -1,0 +1,67 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/04/15 18:02:12 bmeurer Exp $
+
+--- tools/gst-launch.c.orig	Sat Feb  1 22:55:38 2003
++++ tools/gst-launch.c
+@@ -1,3 +1,7 @@
++#ifdef HAVE_CONFIG_H
++#include <config.h>
++#endif
++
+ #include <string.h>
+ #include <stdlib.h>
+ #include <signal.h>
+@@ -112,16 +116,23 @@ extern volatile gboolean glib_on_error_h
+ static void fault_restore(void);
+ 
+ static void 
++#ifdef HAVE_SIGINFO_T
+ fault_handler (int signum, siginfo_t *si, void *misc)
++#else
++fault_handler (int signum)
++#endif
+ {
+   int spinning = TRUE;
+ 
++#ifdef HAVE_SIGINFO_T
+   /* dolphy has seen si == NULL;
+    * that doesn't seem like a good idea, does it ? */
+   g_assert (si);
++#endif
+ 
+   fault_restore ();
+ 
++#ifdef HAVE_SIGINFO_T
+   if (si->si_signo == SIGSEGV) {
+     g_print ("Caught SIGSEGV accessing address %p\n", si->si_addr);
+   }
+@@ -133,6 +144,17 @@ fault_handler (int signum, siginfo_t *si
+     g_print ("errno:  %d\n", si->si_errno);
+     g_print ("code:   %d\n", si->si_code);
+   }
++#else
++  if (signum == SIGSEGV) {
++    g_print ("Caught SIGSEGV\n");
++  }
++  else if (signum == SIGQUIT) {
++    g_print ("Caught SIGQUIT\n");
++  }
++  else {
++    g_print ("signo:   %d\n", signum);
++  }
++#endif
+ 
+   glib_on_error_halt = FALSE;
+   g_on_error_stack_trace ("gst-launch");
+@@ -176,8 +198,12 @@ fault_setup (void)
+   struct sigaction action;
+ 
+   memset (&action, 0, sizeof (action));
++#ifdef HAVE_SIGINFO_T
+   action.sa_sigaction = fault_handler;
+   action.sa_flags = SA_SIGINFO;
++#else
++  action.sa_handler = fault_handler;
++#endif
+ 
+   sigaction (SIGSEGV, &action, NULL);
+   sigaction (SIGQUIT, &action, NULL);
