@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/10/31 01:24:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2003/11/25 18:32:32 jeremy-c-reed Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-libs-${XF_VER}
@@ -25,7 +25,7 @@ XINSTALL_MAN_DIRS=	${XINSTALL_DIRS}
 .include "../../mk/bsd.prefs.mk"
 
 post-patch:
-	${SED} -e 's,@MAKESTRS@,${X11BASE}/bin/makestrs,g' \
+	${SED} -e 's,@MAKESTRS@,${X11PREFIX}/bin/makestrs,g' \
 		${WRKSRC}/config/cf/Library.tmpl \
 		> ${WRKSRC}/config/cf/Library.tmpl.tmp && \
 		${MV} ${WRKSRC}/config/cf/Library.tmpl.tmp \
