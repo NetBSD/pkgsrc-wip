@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: nvtvd.sh,v 1.1 2003/05/03 11:20:39 cubidou Exp $
+# $NetBSD: nvtvd.sh,v 1.2 2003/06/07 17:50:21 cubidou Exp $
 #
 
 # PROVIDE: nvtvd
@@ -10,7 +10,7 @@
 
 name="nvtvd"
 rcvar=$name
-command="@PREFIX@/sbin/nvtvd"
+command="@PREFIX@/bin/nvtvd"
 
 load_rc_config $name
 run_rc_command "$1"
