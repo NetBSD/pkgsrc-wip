@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/06/16 05:10:33 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/06/16 06:32:31 adrian_p Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -27,6 +27,7 @@ BUILD_DEFS+=		DSPAM_HOME
 BUILD_DEFS+=		DSPAM_STORAGE_DRIVER
 BUILD_DEFS+=		DSPAM_SIGNATURE_LIFE
 BUILD_DEFS+=		DSPAM_SIGNATURE_ATTACHMENTS
+BUILD_DEFS+=            DSPAM_SIGNATURE_HEADERS
 BUILD_DEFS+=		DSPAM_LARGESCALE
 BUILD_DEFS+=		DSPAM_USE_WEBMAIL
 BUILD_DEFS+=		DSPAM_HOMEDIR_DOTFILES
@@ -104,6 +105,11 @@ CONFIGURE_ARGS+=	--enable-webmail
 .if defined(DSPAM_SIGNATURE_ATTACHMENTS) && \
     !empty(DSPAM_SIGNATURE_ATTACHMENTS:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-signature-attachments
+.endif
+
+.if defined(DSPAM_SIGNATURE_HEADERS) && \
+    !empty(DSPAM_SIGNATURE_HEADERS:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=        --enable-signature-headers
 .endif
 
 .if defined(DSPAM_LARGESCALE) && !empty(DSPAM_LARGESCALE:M[Yy][Ee][Ss])
