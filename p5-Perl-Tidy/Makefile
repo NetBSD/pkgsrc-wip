@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/30 06:27:08 amigus Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/22 01:50:39 minskim Exp $
 #
 
 DISTNAME=	Perl-Tidy-20021130
@@ -11,8 +11,10 @@ MAINTAINER=	adam@migus.org
 HOMEPAGE=	http://perltidy.sourceforge.net/
 COMMENT=	Parses and beautifies perl source
 
-USE_BUILDLINK2=	YES
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Perl/Tidy/.packlist
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	YES
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Perl/Tidy/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
