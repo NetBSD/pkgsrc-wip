@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/05/20 07:55:32 moubctez Exp $
+$NetBSD: distinfo,v 1.2 2003/06/10 13:49:43 moubctez Exp $
 
-SHA1 (gimp-1.3.14.tar.bz2) = 1108d03cd95b384e534e2fc436383a293db72e04
-Size (gimp-1.3.14.tar.bz2) = 10596207 bytes
+SHA1 (gimp-1.3.15.tar.bz2) = 72d8a04e3122b978e67432ceb162cfee996c7f66
+Size (gimp-1.3.15.tar.bz2) = 10564287 bytes
