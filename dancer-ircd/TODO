@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3 2003/05/10 08:26:22 jmmv Exp $
+$NetBSD: TODO,v 1.4 2003/05/10 08:27:19 jmmv Exp $
 
 * Improve DESCR ?
 * Improve the do-install target ?
@@ -11,3 +11,6 @@ $NetBSD: TODO,v 1.3 2003/05/10 08:26:22 jmmv Exp $
     3) The Makefile must not touch PKG_SYSCONFDIR directly (it does with an
        ${INSTALL_DATA}).
     4) Adjust CONF_FILES properly.  It points to an unexistant file.
+
+- There is no need for files/dancer-ircd.sh to have execute permissions.  When
+  importing this package in pkgsrc, fix it.
