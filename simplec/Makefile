@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/04/04 02:30:36 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/18 15:10:48 ppostma Exp $
 #
 
 DISTNAME=		simplec
 PKGNAME=		simplec-0.1.1
-CATEGORIES=		wip
+CATEGORIES=		lang
 MASTER_SITES=		http://retro.tunes.org/simplec/
 
 MAINTAINER=		pancake@phreaker.net
