@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.2 2004/09/05 13:31:11 ivaniclixx Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/16 12:08:04 rillig Exp $
 #
 
 DISTNAME=		aliados-0.1.1
-CATEGORIES=		emuliators wip
+CATEGORIES=		emulators
 MASTER_SITES=		http://www.arrakis.es/~ninsesabe/aliados/
 EXTRACT_SUFX=		.tgz
 
