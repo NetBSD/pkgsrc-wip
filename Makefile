@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.654 2003/11/23 12:16:17 mpasternak Exp $
-# $NetBSD: Makefile,v 1.654 2003/11/23 12:16:17 mpasternak Exp $
+# $Id: Makefile,v 1.655 2003/11/23 13:07:42 mpasternak Exp $
+# $NetBSD: Makefile,v 1.655 2003/11/23 13:07:42 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -433,6 +433,7 @@ SUBDIR+=	py-libpcap
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-oak
 SUBDIR+=	py-ogg
+SUBDIR+=	py-scipy_distutils
 SUBDIR+=	py-spambayes
 SUBDIR+=	py-spark
 SUBDIR+=	py-spreadmodule
