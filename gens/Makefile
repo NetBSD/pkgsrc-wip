@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/28 16:09:57 dillo Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/26 18:18:13 dillo Exp $
 #
 
 DISTNAME=		gens-rc3
@@ -17,7 +17,6 @@ ONLY_FOR_PLATFORM=	*-i386
 
 WRKSRC=			${WRKDIR}/GensForLinux
 USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 
