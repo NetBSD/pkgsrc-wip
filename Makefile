@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1672 2005/03/03 10:05:44 airhead Exp $
-# $NetBSD: Makefile,v 1.1672 2005/03/03 10:05:44 airhead Exp $
+# $Id: Makefile,v 1.1673 2005/03/03 19:05:01 tnn2 Exp $
+# $NetBSD: Makefile,v 1.1673 2005/03/03 19:05:01 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1003,6 +1003,7 @@ SUBDIR+=	xmim
 SUBDIR+=	xmms-dumb
 SUBDIR+=	xmms-infopipe
 SUBDIR+=	xmms-pitch
+SUBDIR+=	xmms-scrobbler
 SUBDIR+=	xmms-status
 SUBDIR+=	xpde
 SUBDIR+=	xpdq
