@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/09/08 23:50:17 cetrox Exp $
+--- po/xfe.pot.orig	2004-09-08 18:39:21.000000000 -0400
++++ po/xfe.pot	2004-09-08 18:39:31.000000000 -0400
+@@ -668,7 +668,6 @@
+ msgstr ""
+ 
+ #: src/File.cc:1105
+-#, c-format
+ msgid "Cannot delete directory %s"
+ msgstr ""
+ 
+@@ -677,7 +676,6 @@
+ msgstr ""
+ 
+ #: src/File.cc:1138
+-#, c-format
+ msgid "Cannot delete file %s"
+ msgstr ""
+ 
