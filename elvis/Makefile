@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/07 10:38:33 airhead Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/07 11:05:56 airhead Exp $
 #
 
 PKGNAME=        elvis-2.1.4
@@ -12,7 +12,8 @@ COMMENT=	vi with regex search, hex editing, HTML and TeX previewing
 
 USE_BUILDLINK2=		yes
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-x=no --bindir=${PREFIX}/bin
+CONFIGURE_ARGS+=	--with-x=no
+CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/elvis
 
 .include "../../mk/bsd.pkg.mk"
