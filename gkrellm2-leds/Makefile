@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/16 09:12:46 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/31 12:42:35 cubidou Exp $
 #
 
 DISTNAME=	gkleds-0.8.1
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/^gk/gkrellm-/}
 CATEGORIES=	misc
 MASTER_SITES=	http://heim.ifi.uio.no/~oyvinha/files/files/
 
-MAINTAINER=	cube@cubidou.net
+MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://heim.ifi.uio.no/~oyvinha/article.php?2.0.0
 COMMENT=	GKrellM plugin that monitors CapsLock, NumLock and ScrollLock keys
 

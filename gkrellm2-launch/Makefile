@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/15 21:51:23 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/31 12:42:35 cubidou Exp $
 #
 
 DISTNAME=	gkrellmlaunch-0.5
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/gkrellm/gkrellm-/}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gkrellmlaunch/}
 
-MAINTAINER=	cube@cubidou.net
+MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://gkrellmlaunch.sourceforge.net/
 COMMENT=	GKrellM plugin to allow quick launch of applications
 
