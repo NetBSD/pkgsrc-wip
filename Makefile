@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.858 2004/01/06 06:13:24 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.858 2004/01/06 06:13:24 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.859 2004/01/06 15:38:36 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.859 2004/01/06 15:38:36 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -88,7 +88,6 @@ SUBDIR+=	cgic
 SUBDIR+=	cherokee
 SUBDIR+=	chkrootkit
 SUBDIR+=	chksniff
-SUBDIR+=	chmlib
 SUBDIR+=	cjk-latex
 SUBDIR+=	cjk-latex-chinese
 SUBDIR+=	cjk-latex-japanese
@@ -676,7 +675,6 @@ SUBDIR+=	xawtv
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
 SUBDIR+=	xbsql
-SUBDIR+=	xchm
 SUBDIR+=	xevil
 SUBDIR+=	xextensions
 SUBDIR+=	xmail
