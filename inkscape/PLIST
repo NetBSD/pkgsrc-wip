@@ -1,14 +1,46 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/13 14:57:03 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/20 22:12:07 jeremy-c-reed Exp $
 bin/inkscape
 bin/inkview
-lib/inkscape/extensions/SpSVG.pm
-lib/inkscape/extensions/dia2svg.sh
-lib/inkscape/extensions/ill2svg.pl
-lib/inkscape/extensions/roundhole
-lib/inkscape/extensions/svg_dropshadow
-lib/inkscape/extensions/txt2svg.pl
+man/man1/inkscape.1
+man/man1/inkview.1
 share/applications/inkscape.desktop
+share/inkscape/clipart/README
+share/inkscape/clipart/README-ribbon.txt
+share/inkscape/clipart/inkscape.logo.svg
+share/inkscape/clipart/orav.svg
+share/inkscape/clipart/ribbon.svg
+share/inkscape/clipart/tux.png
+share/inkscape/clipart/tux.svg
+share/inkscape/examples/README
+share/inkscape/examples/gradient.svg
+share/inkscape/examples/i18n.svg
+share/inkscape/examples/markers.svg
+share/inkscape/examples/stars.svgz
+share/inkscape/examples/tiger.svgz
+share/inkscape/extensions/SpSVG.pm
+share/inkscape/extensions/ai_input.inkmod
+share/inkscape/extensions/ai_output.inkmod
+share/inkscape/extensions/dia.inkmod
+share/inkscape/extensions/dia2svg.sh
+share/inkscape/extensions/dropshadow.inkmod
+share/inkscape/extensions/eps_input.inkmod
+share/inkscape/extensions/epsi_output.inkmod
+share/inkscape/extensions/ill2svg.pl
+share/inkscape/extensions/ps2epsi.sh
+share/inkscape/extensions/ps_input.inkmod
+share/inkscape/extensions/roundhole
+share/inkscape/extensions/roundhole.inkmod
 share/inkscape/extensions/roundhole.xpm
+share/inkscape/extensions/sk2svg.sh
+share/inkscape/extensions/sk_input.inkmod
+share/inkscape/extensions/svg_dropshadow
+share/inkscape/extensions/svgz_input.inkmod
+share/inkscape/extensions/svgz_output.inkmod
+share/inkscape/extensions/txt2svg.inkmod
+share/inkscape/extensions/txt2svg.pl
+share/inkscape/extensions/wmf_input.inkmod
+share/inkscape/fonts/README
+share/inkscape/gradients/README
 share/inkscape/icons/add.xpm
 share/inkscape/icons/add_xml_element_node.xpm
 share/inkscape/icons/add_xml_text_node.xpm
@@ -178,19 +210,24 @@ share/inkscape/icons/zoom_in.xpm
 share/inkscape/icons/zoom_out.xpm
 share/inkscape/icons/zoom_page.xpm
 share/inkscape/icons/zoom_select.xpm
-share/inkscape/modules/ai_input.inkmod
-share/inkscape/modules/dia.inkmod
-share/inkscape/modules/dropshadow.inkmod
-share/inkscape/modules/roundhole.inkmod
-share/inkscape/modules/svgz_input.inkmod
-share/inkscape/modules/svgz_output.inkmod
-share/inkscape/modules/txt2svg.inkmod
+share/inkscape/keyboards/README
+share/inkscape/markers/markers.svg
+share/inkscape/palettes/README
+share/inkscape/patterns/README
 share/inkscape/screens/about.svg
+share/inkscape/screens/keys.sl.svg
 share/inkscape/screens/keys.svg
+share/inkscape/templates/README
+share/inkscape/tutorials/elementsofdesign.sl.svg
 share/inkscape/tutorials/elementsofdesign.svg
+share/inkscape/tutorials/tipsandtricks.sl.svg
 share/inkscape/tutorials/tipsandtricks.svg
+share/inkscape/tutorials/tutorial-advanced.fr.svg
+share/inkscape/tutorials/tutorial-advanced.sl.svg
 share/inkscape/tutorials/tutorial-advanced.svg
+share/inkscape/tutorials/tutorial-basic.fr.svg
 share/inkscape/tutorials/tutorial-basic.ru.svg
+share/inkscape/tutorials/tutorial-basic.sl.svg
 share/inkscape/tutorials/tutorial-basic.svg
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/inkscape.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/inkscape.mo
@@ -223,12 +260,22 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/inkscape.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/inkscape.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/inkscape.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/inkscape.mo
-man/man1/inkscape.1
-man/man1/inkview.1
 share/pixmaps/inkscape.png
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/inkscape/tutorials
+@dirrm share/inkscape/templates
 @dirrm share/inkscape/screens
-@dirrm share/inkscape/modules
+@dirrm share/inkscape/patterns
+@dirrm share/inkscape/palettes
+@dirrm share/inkscape/markers
+@dirrm share/inkscape/keyboards
 @dirrm share/inkscape/icons
+@dirrm share/inkscape/gradients
+@dirrm share/inkscape/fonts
 @dirrm share/inkscape/extensions
-@dirrm lib/inkscape/extensions
+@dirrm share/inkscape/examples
+@dirrm share/inkscape/clipart
+@dirrm share/inkscape
+@comment in xdg-dirs: @dirrm share/applications
+@exec ${MKDIR} %D/lib/inkscape
+@dirrm lib/inkscape
