@@ -1,0 +1,14 @@
+Passepartout is an open source desktop publishing (DTP) application
+for the X Window System environment. The focus is to make it easy to
+create publications, like magazines, brochures and leaflets, with a
+flexible layout.
+
+The goal of the passepartout project is to create a system capable of
+producing pre-press material of professional quality, while also being
+useful for any enthusiast for creating formatted documents.
+
+It features a user-friendly GTK+-based interface, layout templates, an
+XML-based typesetting engine called xml2ps, user-defined text formatting
+with XSLT stylesheets, Unicode support, EPS (Encapsulated PostScript)
+file importing, importing many image formats, text running around image
+or text frames, and printing to PostScript and EPS formats.
