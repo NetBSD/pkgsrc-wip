@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1477 2004/09/27 22:06:11 jgoamakf Exp $
-# $NetBSD: Makefile,v 1.1477 2004/09/27 22:06:11 jgoamakf Exp $
+# $Id: Makefile,v 1.1478 2004/09/28 07:26:27 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.1478 2004/09/28 07:26:27 marttikuparinen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -802,6 +802,7 @@ SUBDIR+=	unshield
 SUBDIR+=	up-imapproxy
 SUBDIR+=	urlgfe
 SUBDIR+=	util-linux
+SUBDIR+=	valgrind
 SUBDIR+=	valknut
 SUBDIR+=	vcdgear
 SUBDIR+=	vche
