@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/18 05:35:03 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/02 22:28:56 blef Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-gettext-tools-0
@@ -8,7 +8,7 @@ MAINTAINER=	dotz@irc.pl
 HOMEPAGE=	http://www.python.org/topics/database/
 COMMENT=	Python tools for development of I18N Python apps
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 NO_BUILD=	# defined
 
 EXTRACT_ELEMENTS=		${PYSUBDIR}/Tools/i18n/*
