@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/01 18:41:30 dolecek Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/01 18:43:13 dolecek Exp $
 
 DISTNAME=	gforge-3.1
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	Open Source collaborative software development tool
 
 DEPENDS+=	wget>=1.9:../../net/wget
 DEPENDS+=	php-jpgraph>=1.12:../../graphics/php-jpgraph
-DEPENDS+=	php-pgsql>=4.3:../../databases/php4-pgsql
+DEPENDS+=	php-pgsql>=4.3:../../databases/php-pgsql
 DEPENDS+=	postgresql-lib>=7.3.1:../../databases/postgresql-lib
 
 USE_PERL5=	YES
