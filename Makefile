@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.857 2004/01/06 02:32:45 mpasternak Exp $
-# $NetBSD: Makefile,v 1.857 2004/01/06 02:32:45 mpasternak Exp $
+# $Id: Makefile,v 1.858 2004/01/06 06:13:24 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.858 2004/01/06 06:13:24 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -486,6 +486,7 @@ SUBDIR+=	prelude-manager-mysql
 SUBDIR+=	prelude-manager-pgsql
 SUBDIR+=	prelude-nids
 SUBDIR+=	premake
+SUBDIR+=	prngd
 SUBDIR+=	procps
 SUBDIR+=	prtunnel
 SUBDIR+=	psh
