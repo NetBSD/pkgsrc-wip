@@ -1,0 +1,6 @@
+Tr2latex converts a document typeset in troff to a LaTeX format.
+It is intended to do the first pass of the conversion before
+manual customization.
+
+This was originally written by Kamal Al-Yahya at Stanford University
+in 1987.  This code was last updated in 1992 by Christian Engel.

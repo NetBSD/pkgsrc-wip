@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/28 00:23:08 jeremy-c-reed Exp $
+bin/tr2latex
+man/man1/tr2latex.1
+share/texmf/tex/latex/misc/troffman.sty
+share/texmf/tex/latex/misc/troffms.sty
+@dirrm share/texmf/tex/latex/misc

@@ -1,0 +1,12 @@
+todo: restricted because of "no profit is made by copying the files"
+see README
+
+The download servers archive this on the fly.
+Probably should make a tarball for this.
+Different ctan servers send slightly different files and
+checksum can't be used and since there are various
+ctan servers one could give compromised files.
+And some of the mirrors don't tar it up.
+Also tar ball has windows executable?
+
+todo: maybe patch Makefile.unix for CC and CFLAGS not overwritten
