@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/04/07 17:54:28 cubidou Exp $
+# $NetBSD: Makefile,v 1.4 2003/04/16 17:36:15 cubidou Exp $
 .include "Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm
@@ -9,7 +9,10 @@ DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}:../../wip/gkrellm2-share
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES
+USE_PKGINSTALL=		YES
 PTHREAD_OPTS=		require
+
+SPECIAL_PERMS+=		${PREFIX}/bin/gkrellm ${ROOT_USER} kmem 2711
 
 OSVERSION_SPECIFIC=	YES
 
