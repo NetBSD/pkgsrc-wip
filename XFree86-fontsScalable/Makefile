@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/25 00:46:32 blef Exp $
+# $NetBSD: Makefile,v 1.10 2003/08/28 06:55:54 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-fontsScalable-${XF_VER}
@@ -34,10 +34,10 @@ do-configure:
 pre-build:
 	@for dir in Type1 TTF ; do \
 		${MV} ${WRKSRC}/scaled/$${dir}/Makefile \
-	       		${WRKSRC}/scaled/$${dir}/Makefile.orig && \
+			${WRKSRC}/scaled/$${dir}/Makefile.orig && \
 		${SED} -e 's|$$(BINDIR)/fc-cache|${LOCALBASE}/bin/fc-cache|' \
 			${WRKSRC}/scaled/$${dir}/Makefile.orig \
-		       	> ${WRKSRC}/scaled/$${dir}/Makefile ; \
+			> ${WRKSRC}/scaled/$${dir}/Makefile ; \
 	done
 	cd ${WRKSRC}/encodings && \
 		${MAKE} all

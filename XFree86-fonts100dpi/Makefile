@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/25 00:01:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/28 06:55:54 blef Exp $
 
 DISTNAME=	X430src-4
 PKGNAME=	XFree86-fonts100dpi-${XF_VER}
@@ -26,7 +26,7 @@ post-extract:
 do-configure:
 	(cd ${WRKDIR}/xc/fonts/encodings && \
 	${IMAKE} -DUseInstalled -I${PREFIX}/lib/X11/config -DTOPDIR=../.. \
-       		-DCURDIR=.; \
+		-DCURDIR=.; \
 	${MAKE} Makefiles ; \
 	${MAKE} includes ; \
 	${MAKE} depend)

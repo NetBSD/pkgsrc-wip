@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/26 22:18:04 blef Exp $
+# $NetBSD: Makefile,v 1.12 2003/08/28 06:55:54 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-server-${XF_VER}
@@ -37,7 +37,7 @@ pre-install:
 		${SED} -e '/$$(INSTALL).*lib$$(LIBNAME).a/ d' \
 		-e '/$$(RANLIB).*lib$$(LIBNAME).a/ d' \
 		-e 's|$$(INSTALL) $$(INSTALLFLAGS) $$(INSTINCFLAGS)|echo|' \
-	       	Makefile.orig > Makefile
+		Makefile.orig > Makefile
 	@cd ${WRKSRC}/lib/font/stubs && \
 		${CP} Makefile Makefile.orig && \
 		${SED} -e '/$$(INSTALL).*libfntstubs.a/ d' \
