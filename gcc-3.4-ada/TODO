@@ -4,3 +4,8 @@ acats is the Ada compiler validation suite:
 # of expected passes            2314
 # of unexpected failures        8
 *** FAILURES: c34005a c34005d c34005g c34005j cc3601a cxb3010 cxb3014 cxb3015
+
+
+- Presently, the package will only build with and installed
+  gcc-3.4-ada. I need to bl3ify lang/gcc3-ada before it can
+  be used to build this pkg.

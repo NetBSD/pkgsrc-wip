@@ -1,1 +1,564 @@
-@comment $NetBSD: PLIST,v 1.3 2004/01/09 23:24:18 johnrshannon Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/02/26 17:04:37 johnrshannon Exp $
+${PKGNAME}/bin/cpp
+${PKGNAME}/bin/gccbug
+${PKGNAME}/bin/gcov
+${PKGNAME}/bin/gnat
+${PKGNAME}/bin/gnatbind
+${PKGNAME}/bin/gnatbl
+${PKGNAME}/bin/gnatchop
+${PKGNAME}/bin/gnatclean
+${PKGNAME}/bin/gnatfind
+${PKGNAME}/bin/gnatkr
+${PKGNAME}/bin/gnatlink
+${PKGNAME}/bin/gnatls
+${PKGNAME}/bin/gnatmake
+${PKGNAME}/bin/gnatname
+${PKGNAME}/bin/gnatprep
+${PKGNAME}/bin/gnatxref
+${PKGNAME}/bin/gpr2make
+${PKGNAME}/bin/gprcmd
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-caldel.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-calend.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-chahan.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-charac.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-chlat1.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-chlat9.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-colien.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-colire.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-comlin.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-cwila1.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-cwila9.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-decima.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-diocst.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-direio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-dynpri.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-einuoc.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-elchha.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-except.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-exctra.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-filico.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-finali.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-flteio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-fwteio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-inteio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-interr.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-intnam.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-intsig.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-ioexce.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-iwteio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-lfteio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-lfwtio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-liteio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-liwtio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-llftio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-llfwti.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-llitio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-lliwti.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-ncelfu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-ngcefu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-ngcoty.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-ngelfu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-nlcefu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-nlcoty.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-nlelfu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-nllcef.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-nllcty.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-nllefu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-nscefu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-nscoty.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-nselfu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-nucoty.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-nudira.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-nuelfu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-nuflra.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-numaux.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-numeri.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-reatim.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-retide.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-sequio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-sfteio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-sfwtio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-siocst.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-siteio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-siwtio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-ssicst.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-ssitio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-ssiwti.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-stmaco.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-storio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-strbou.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-stream.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-strfix.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-string.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-strmap.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-strsea.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-strsup.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-strunb.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-ststio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-stunau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-stwibo.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-stwifi.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-stwima.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-stwise.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-stwisu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-stwiun.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-suteio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-swmwco.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-swuwti.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-sytaco.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-tags.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-tasatt.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-taside.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-teioed.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-textio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-ticoau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-ticoio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-tideau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-tideio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-tienau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-tienio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-tifiio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-tiflau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-tiflio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-tigeau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-tiinau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-tiinio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-timoau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-timoio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-tiocst.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-titest.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-unccon.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-uncdea.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-witeio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtcoau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtcoio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtcstr.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtdeau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtdeio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtedit.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtenau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtenio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtfiio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtflau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtflio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtgeau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtinau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtinio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtmoau.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wtmoio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/a-wttest.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/${PKGVERSION}.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/calendar.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-arrspl.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-awk.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-boubuf.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-boumai.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-bubsor.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-busora.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-busorg.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-calend.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-casuti.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-catiio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-cgi.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-cgicoo.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-cgideb.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-comlin.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-comver.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-crc32.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-ctrl_c.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-curexc.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-debpoo.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-debuti.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-diopit.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-dirope.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-dyntab.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-excact.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-except.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-exctra.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-expect.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-flocon.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-heasor.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-hesora.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-hesorg.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-htable.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-io.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-io_aux.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-locfil.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-md5.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-memdum.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-moreex.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-os_lib.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-pehage.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-perhas.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-regexp.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-regpat.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-semaph.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-sestin.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-signal.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-soccon.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-socket.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-socthi.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-soliop.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-souinf.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-speche.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-spipat.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-spitbo.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-sptabo.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-sptain.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-sptavs.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-string.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-strspl.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-table.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-tasloc.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-thread.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-traceb.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-trasym.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-trasym.o
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/g-wistsp.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/gnat.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/i-c.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/i-cexten.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/i-cobol.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/i-cpoint.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/i-cpp.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/i-cstrea.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/i-cstrin.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/i-fortra.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/i-pacdec.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/interfac.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/ioexcept.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/libgnarl.a
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/libgnat.a
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/machcode.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/memtrack.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-addima.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-arit64.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-assert.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-asthan.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-atacco.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-auxdec.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-bitops.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-boarop.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-carsi8.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-carun8.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-casi16.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-casi32.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-casi64.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-casuti.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-caun16.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-caun32.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-caun64.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-chepoo.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-crc32.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-crtl.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-direio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-errrep.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-except.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-exctab.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-exnint.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-exnllf.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-exnlli.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-expint.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-explli.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-expllu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-expmod.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-expuns.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-fatflt.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-fatgen.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-fatlfl.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-fatllf.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-fatsfl.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-ficobl.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-fileio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-finimp.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-finroo.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-fore.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-geveop.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-gloloc.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-htable.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imgbiu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imgboo.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imgcha.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imgdec.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imgenu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imgint.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imgllb.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imglld.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imglli.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imgllu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imgllw.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imgrea.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imguns.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imgwch.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-imgwiu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-inmaop.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-interr.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-intman.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-io.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-maccod.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-mantis.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-mastop.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-memcop.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-memory.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-osinte.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-osprim.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack03.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack05.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack06.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack07.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack09.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack10.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack11.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack12.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack13.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack14.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack15.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack17.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack18.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack19.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack20.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack21.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack22.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack23.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack24.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack25.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack26.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack27.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack28.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack29.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack30.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack31.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack33.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack34.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack35.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack36.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack37.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack38.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack39.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack40.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack41.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack42.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack43.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack44.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack45.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack46.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack47.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack48.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack49.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack50.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack51.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack52.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack53.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack54.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack55.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack56.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack57.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack58.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack59.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack60.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack61.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack62.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pack63.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-parame.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-parint.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pooglo.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-pooloc.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-poosiz.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-powtab.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-proinf.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-purexc.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-rident.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-rpc.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-scaval.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-secsta.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-sequio.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-shasto.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-soflin.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-sopco3.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-sopco4.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-sopco5.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-stache.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-stalib.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-stoele.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-stopoo.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-stratt.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-strops.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-taasde.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tadeca.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tadert.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-taenca.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-taprob.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-taprop.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tarest.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tasdeb.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tasinf.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tasini.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-taskin.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-taspri.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tasque.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tasren.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tasres.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tassta.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tasuti.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tataat.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tpinop.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tpoben.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tpobop.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tposen.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-traceb.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-traces.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-traent.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-tratas.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-unstyp.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-vaflop.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-valboo.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-valcha.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-valdec.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-valenu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-valint.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-vallld.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-vallli.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-valllu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-valrea.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-valuns.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-valuti.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-valwch.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-veboop.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-vector.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-vercon.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-vmexta.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-wchcnv.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-wchcon.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-wchjis.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-wchstw.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-wchwts.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-widboo.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-widcha.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-widenu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-widlli.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-widllu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-widwch.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-wwdcha.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-wwdenu.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/s-wwdwch.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/system.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib/text_io.ali
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/crtbegin.o
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/crtbeginS.o
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/crtbeginT.o
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/crtend.o
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/crtendS.o
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/README
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/dev/vinum/vinumio.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/emmintrin.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/float.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/iso646.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/limits.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/math.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/mmintrin.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/netinet/ip_fil.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/netinet/ip_nat.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/netinet/ip_state.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/pmmintrin.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/stdarg.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/stdbool.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/stddef.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/stdlib.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/sys/tty.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/sys/types.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/syslimits.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/unwind.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/varargs.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/wchar.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/xmmintrin.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/gsyslimits.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include/README
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include/emmintrin.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include/float.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include/iso646.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include/limits.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include/mmintrin.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include/pmmintrin.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include/stdarg.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include/stdbool.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include/stddef.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include/unwind.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include/varargs.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include/xmmintrin.h
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/mkheaders.conf
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/libgcc.a
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/libgcc_eh.a
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/libgcov.a
+${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/specs
+${PKGNAME}/lib/libgcc_s.so
+${PKGNAME}/lib/libgcc_s.so.1
+${PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/cc1
+${PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/collect2
+${PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/gnat1
+${PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/fixinc.sh
+${PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/fixincl
+${PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/mkheaders
+${PKGNAME}/man/man1/cpp.1
+${PKGNAME}/man/man1/gcc.1
+${PKGNAME}/man/man1/gcov.1
+${PKGNAME}/man/man7/fsf-funding.7
+${PKGNAME}/man/man7/gfdl.7
+${PKGNAME}/man/man7/gpl.7
+${PKGNAME}/mk/${PKGVERSION}.mk
+${PKGNAME}/share/gnat/Makefile.generic
+${PKGNAME}/share/gnat/Makefile.prolog
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/tr/LC_MESSAGES
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/tr
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/sv
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/nl/LC_MESSAGES
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/nl
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/ja/LC_MESSAGES
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/ja
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/fr/LC_MESSAGES
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/fr
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/es/LC_MESSAGES
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/es
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/el/LC_MESSAGES
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/el
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/de/LC_MESSAGES
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/de
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/da/LC_MESSAGES
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/da
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/be/LC_MESSAGES
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale/be
+@dirrm ${PKGNAME}/${PKGLOCALEDIR}/locale
+@dirrm ${PKGNAME}/share/gnat
+@dirrm ${PKGNAME}/share
+@dirrm ${PKGNAME}/mk
+@dirrm ${PKGNAME}/man/man7
+@dirrm ${PKGNAME}/man/man1
+@dirrm ${PKGNAME}/man
+@dirrm ${PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools
+@dirrm ${PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0
+@dirrm ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools/include
+@dirrm ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/install-tools
+@dirrm ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/sys
+@dirrm ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/netinet
+@dirrm ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/dev/vinum
+@dirrm ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include/dev
+@dirrm ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/include
+@dirrm ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}lib
+@dirrm ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0/${PKGVERSION}include
+@dirrm ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0/3.4.0
+@dirrm ${PKGNAME}/lib/gcc/${MACHINE_GNU_PLATFORM}2.0
+@dirrm ${PKGNAME}/lib/gcc
+@dirrm ${PKGNAME}/lib
+@dirrm ${PKGNAME}/info
+@dirrm ${PKGNAME}/include/c++/3.4.0/${MACHINE_GNU_PLATFORM}2.0/bits/stdc++.h.gch
+@dirrm ${PKGNAME}/include/c++/3.4.0/${MACHINE_GNU_PLATFORM}2.0/bits
+@dirrm ${PKGNAME}/include/c++/3.4.0/${MACHINE_GNU_PLATFORM}2.0
+@dirrm ${PKGNAME}/include/c++/3.4.0/ext
+@dirrm ${PKGNAME}/include/c++/3.4.0/debug
+@dirrm ${PKGNAME}/include/c++/3.4.0/bits
+@dirrm ${PKGNAME}/include/c++/3.4.0/backward
+@dirrm ${PKGNAME}/include/c++/3.4.0
+@dirrm ${PKGNAME}/include/c++
+@dirrm ${PKGNAME}/include
+@dirrm ${PKGNAME}/bin
+@dirrm ${PKGNAME}

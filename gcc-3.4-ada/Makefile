@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/26 12:33:29 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/26 17:04:37 johnrshannon Exp $
 #
 
 SNAPDATE=	20040225
@@ -14,7 +14,7 @@ MAINTAINER=	john@johnrshannon.com
 HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the developmental gcc 3.4 Ada compiler
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES
@@ -59,17 +59,18 @@ post-patch:
 		${CP} $$i ${WRKSRC}/gcc/ada; \
 	done )
 
-#post-buildlink:
-#	${LN} -sf ${ADA_BOOT_GNATBIND} ${BUILDLINK_DIR}/bin
-
 do-configure:
-	(${TEST} -d  ${WRKDIR}/obj || ${MKDIR} ${WRKDIR}/obj && cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS})
+	(${TEST} -d  ${WRKDIR}/obj || ${MKDIR} ${WRKDIR}/obj && \
+	 cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} && \
+	 ${SETENV} PATH=${ADA_BOOT_PATH}/bin:${PATH} \
+	 ${SETENV} GCC_EXEC_PREFIX=/usr/pkg/gcc-3.4-ada/libexec/gcc/i386--netbsdelf2.0/3.4.0 \
+	 ${WRKSRC}/configure ${CONFIGURE_ARGS})
 
 do-build:
-	(cd ${WRKDIR}/obj && ${GMAKE} bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
-
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
+	(cd ${WRKDIR}/obj && \
+	 ${SETENV} PATH=${ADA_BOOT_PATH}/bin:${PATH} \
+	 ${SETENV} GCC_EXEC_PREFIX=/usr/pkg/gcc-3.4-ada/libexec/gcc/i386--netbsdelf2.0/3.4.0 \
+	 make bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
 
 do-test:
 	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
@@ -87,14 +88,8 @@ post-install:
 	${FIND} ${GCC_PREFIX} -name adalib -print >> ${WRKDIR}/gcc3.mk
 	${INSTALL_DATA_DIR} ${GCC_PREFIX}/mk
 	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${GCC_PREFIX}/mk/ada.mk
-	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
-	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print		\
-		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
-		>> ${PLIST_SRC}
-	${FIND} ${GCC_PREFIX} -type d -print				\
-		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
-		>> ${PLIST_SRC}
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../wip/gcc-3.4-ada/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
