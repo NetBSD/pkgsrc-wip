@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_adm.h,v 1.1.1.1 2005/02/21 10:38:07 imilh Exp $ 
+ * $Id: pkg_adm.h,v 1.2 2005/02/21 14:19:31 poppnk Exp $ 
  */
 
 extern void free_pkgdb(void);
@@ -44,7 +44,9 @@ extern char *getpkginfo(char *, int);
 
 #define DEFAULT_PKG_PATH "ftp://ftp.netbsd.org/pub/NetBSD/packages"
 #define PKGTOOLS_PATH "/usr/sbin"
+#ifndef MAKE
 #define MAKE "/usr/bin/make"
+#endif
 
 #define PKG_VERSION 0
 #define PKG_CATEGORY 1

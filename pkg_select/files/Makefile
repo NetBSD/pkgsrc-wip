@@ -5,7 +5,7 @@ SRCS=	main.c parsedirs.c tools.c file.c more.c listmgt.c \
 WARNS=	3
 
 CFLAGS+=	-g
-CFLAGS+=	-DPKGSRCBASE=\"/usr/pkgsrc\" -DPKGDB=\"/var/db/pkg\"
+CFLAGS+=	-DPKGSRCBASE=\"/usr/pkgsrc\" -DPKGDB=\"/var/db/pkg\" -DMAKE=\"/usr/bin/make\"
 
 LDADD=	-lcurses
 DPADD=	${LIBCURSES}
