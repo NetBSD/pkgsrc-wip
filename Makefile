@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.225 2003/06/05 06:11:17 mjasm Exp $
-# $NetBSD: Makefile,v 1.225 2003/06/05 06:11:17 mjasm Exp $
+# $Id: Makefile,v 1.226 2003/06/05 06:17:31 mjasm Exp $
+# $NetBSD: Makefile,v 1.226 2003/06/05 06:17:31 mjasm Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -155,6 +155,7 @@ SUBDIR+=	py-adns
 SUBDIR+=	py-elementtree
 SUBDIR+=	py-gnome2
 SUBDIR+=	py-gnosis-utils
+SUBDIR+=	py-libpcap
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-twisted
 SUBDIR+=	qinx
