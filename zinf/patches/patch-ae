@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/07/06 19:52:57 rxg Exp $
+
+--- base/src/thread.cpp.orig	Mon Jul  1 20:22:22 2002
++++ base/src/thread.cpp
+@@ -25,7 +25,7 @@
+ #include "thread.h"
+ 
+ #if defined(__LINUX__) || defined(solaris) || defined(__FreeBSD__) || \
+-    defined(__QNX__) || defined(irix)
++    defined(__QNX__) || defined(irix) || defined(__NetBSD__)
+     #include "pthreadthread.h"
+ #elif WIN32
+     #include "win32thread.h"
+@@ -39,7 +39,7 @@
+ {
+     Thread* thread = NULL;
+ #if defined(__LINUX__) || defined(solaris) || defined(__FreeBSD__) || \
+-    defined(__QNX__) || defined(irix)
++    defined(__QNX__) || defined(irix) || defined(__NetBSD__)
+     thread = new pthreadThread();
+ #elif WIN32
+     thread = new win32Thread();

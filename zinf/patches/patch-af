@@ -1,0 +1,23 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/07/06 19:52:57 rxg Exp $
+
+--- base/src/downloadmanager.cpp.orig	Mon Jul  1 20:23:40 2002
++++ base/src/downloadmanager.cpp
+@@ -35,7 +35,8 @@
+ #include "downloadmanager.h"
+ #include "musiccatalog.h"
+ 
+-#if defined(unix) || defined(__BEOS__) || defined(_BSD_SOURCE)
++#if defined(unix) || defined(__BEOS__) || defined(_BSD_SOURCE) || \
++    defined(__NetBSD__)
+ #define SOCKET int
+ #endif
+ 
+@@ -59,7 +60,7 @@
+ #include <algorithm>
+ #include <fstream>
+ 
+-#if defined (unix) || defined(_BSD_SOURCE)
++#if defined (unix) || defined(_BSD_SOURCE) || defined(__NetBSD__)
+ #include <arpa/inet.h>
+ #define closesocket(x) close(x)
+ #ifndef O_BINARY

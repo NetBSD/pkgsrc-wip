@@ -1,0 +1,32 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/07/06 19:52:57 rxg Exp $
+
+--- Makefile.in.orig	Mon Jun 24 07:44:27 2002
++++ Makefile.in
+@@ -52,6 +52,7 @@
+ ZINFsolarisOBJ = $(ZINFunixOBJ)
+ ZINFlinuxOBJ   = $(ZINFunixOBJ)
+ ZINFfreebsdOBJ = $(ZINFunixOBJ)
++ZINFnetbsdOBJ  = $(ZINFunixOBJ)
+ ZINFqnxOBJ     = $(ZINFunixOBJ)
+ ZINFirixOBJ    = $(ZINFunixOBJ)
+ 
+@@ -73,6 +74,7 @@
+ ZINFlinuxLIBS = -ldl -lpthread 
+ ZINFsolarisLIBS = -ldl -lpthread
+ ZINFfreebsdLIBS = -pthread
++ZINFnetbsdLIBS = -lpthread -lossaudio
+ ZINFqnxLIBS = -lasound
+ ZINFirixLIBS = -lpthread
+ UNIXZINFLIBS = $(ZINF$(HOST_OS)LIBS) $(EXTRALIBS) -lmusicbrainz #-ldmallocthcxx
+@@ -142,9 +144,9 @@
+ install-zinf: zinf
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	$(INSTALL_PROGRAM) zinf $(DESTDIR)$(bindir)
+-	$(mkinstalldirs) /usr/share/pixmaps
++	$(mkinstalldirs) $(GTK_PREFIX)/share/pixmaps
+ 	$(INSTALL_DATA) installer/unix/linux/zinf.png $(GTK_PREFIX)/share/pixmaps
+-	$(mkinstalldirs) /usr/share/gnome/apps/Audio
++	$(mkinstalldirs) $(GTK_PREFIX)/share/gnome/apps/Audio
+ 	$(INSTALL_DATA) installer/unix/linux/Zinf.desktop $(GTK_PREFIX)/share/gnome/apps/Audio
+ 	if test -f "MakeTheme"; then \
+ 		$(INSTALL_PROGRAM) MakeTheme $(DESTDIR)$(bindir);\

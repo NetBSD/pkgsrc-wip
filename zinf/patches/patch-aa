@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/06 19:52:54 rxg Exp $
+
+--- configure.in.orig	Mon Jul  1 20:06:47 2002
++++ configure.in
+@@ -176,9 +176,9 @@
+     LDFLAGS="$LDFLAGS -Wl,-export-dynamic -L/usr/local/lib"
+     ;;
+   netbsd*)
+-    host_os="freebsd"
+-    CFLAGS="$CFLAGS -I/usr/pkg/include -D_THREAD_SAFE -pthread"
+-    LDFLAGS="$LDFLAGS -L/usr/pkg/lib -Wl,-export-dynamic"
++    host_os="netbsd"
++    CFLAGS="$CFLAGS"
++    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
+     ;;
+   irix*)
+     host_os="irix"
+@@ -232,7 +232,7 @@
+ 
+ if test "$host_os" = "beos"; then
+   AC_MSG_WARN([skipping libdl check, using BeOS add-on mechanism])
+-elif test "$host_os" = "freebsd"; then
++elif test "$host_os" = "freebsd" -o "$host_os" = "netbsd"; then
+   AC_CHECK_LIB(c, dlopen, foo="bar",
+     AC_MSG_ERROR([FreeAmp requires the ability to load libraries dynamically (using dlopen)])
+   )
+@@ -615,11 +615,9 @@
+ #AM_CONDITIONAL(AM_ENABLE_CMDLINE, test "$cmdline" = "true")
+ 
+ 
+-AC_CHECK_LIB(ncurses,initscr,curses="ncurses", [
+ 	AC_CHECK_LIB(curses,initscr,curses="curses", [
+ 	  echo "curses/ncurses not found. disabling curses UI."
+ 	])
+-])
+ 
+ if test "$curses" != ""; then
+ 	OSDEPPLUGINS="$OSDEPPLUGINS plugins/ncurses.ui";
+@@ -938,7 +936,7 @@
+     echo "*** Download the library from "
+     echo "***     http://www.musicbrainz.org/download.html"
+     echo "***"
+-  AC_MSG_ERROR(Cannot continue.)],-ldl -lm -lstdc++)
++  AC_MSG_ERROR(Cannot continue.)],-lm -lstdc++)
+ AC_LANG_RESTORE
+ 
+ AC_CONFIG_HEADER(config/config.h)

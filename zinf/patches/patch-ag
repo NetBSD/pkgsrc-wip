@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2003/07/06 19:52:58 rxg Exp $
+
+--- base/src/timer.cpp.orig	Mon Jul  1 20:25:24 2002
++++ base/src/timer.cpp
+@@ -32,7 +32,7 @@
+ #include "timer.h"
+ 
+ #if defined(__linux__) || defined(solaris) || defined(__FreeBSD__) || \
+-    defined(__QNX__) || defined(irix)
++    defined(__QNX__) || defined(irix) || defined(__NetBSD__)
+ #include <unistd.h>
+ #define GoToSleep(x) usleep(x*1000)
+ #elif defined(WIN32)
