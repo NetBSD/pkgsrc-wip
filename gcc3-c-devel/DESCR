@@ -1,0 +1,8 @@
+This directory contains the GNU Compiler Collection (GCC) version 3.4.
+
+The GNU Compiler Collection is free software.  See the file COPYING for copying
+permission.
+
+See the Bugs chapter of the GCC Manual for how to report bugs
+usefully.  An online readable version of the manual is in the files
+gcc.info*.

@@ -1,0 +1,2 @@
+- Fix buildlink problem for additional language
+  front-ends that include buildaddon.mk
