@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.342 2003/07/25 18:51:58 amadeus_z Exp $
-# $NetBSD: Makefile,v 1.342 2003/07/25 18:51:58 amadeus_z Exp $
+# $Id: Makefile,v 1.343 2003/07/26 13:59:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.343 2003/07/26 13:59:13 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -99,7 +99,6 @@ SUBDIR+=	gkrellm2-share
 SUBDIR+=	gkrellm2-snmp
 SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
-SUBDIR+=	gmencoder
 SUBDIR+=	gnome2-extras
 SUBDIR+=	gnome2-pkgview
 SUBDIR+=	gnome2-system-monitor
