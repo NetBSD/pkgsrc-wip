@@ -1,0 +1,9 @@
+Sun Jun  1 22:47:37 CDT 2003
+    Items in need of attention:
+	+   Testing on non-alpha platforms (intel and sparc*)
+	+   ?much? sanity checking
+
+    Notes:
+	Lots of modifications have been made to the provided
+	configuration script, in an effort to make it play better with
+	the NetBSD packaging system.
