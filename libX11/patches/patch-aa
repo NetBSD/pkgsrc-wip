@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/11/26 23:15:10 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.2 2003/11/27 01:08:39 jeremy-c-reed Exp $
 
 --- configure.orig	2003-11-09 21:26:55.000000000 -0800
 +++ configure
-@@ -20541,7 +20541,6 @@ fi
- #
+@@ -20542,7 +20542,7 @@ fi
  # Find keysymdef.h
  #
--KEYSYMDEF=""
- for flag in $X11_CFLAGS; do
+ KEYSYMDEF=""
+-for flag in $X11_CFLAGS; do
++for flag in -I/usr/include $XPROTO_CFLAGS; do
  	echo checking arg "$flag"
  	case "$KEYSYMDEF" in
+ 	"")
