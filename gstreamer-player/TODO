@@ -1,0 +1,3 @@
+- Thread related crashes.
+- the GUI of gst-player hangs while playing media files (most likely Thread
+  related too)
