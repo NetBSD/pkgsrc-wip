@@ -1,4 +1,28 @@
-update to newest version
+add xfs support as a module?
+
+add other sound cards and NIC card modules
+
+should this build a normal vmlinuz or bzImage kernel?
+
+should this use LINUX_VERSION or PKGVERSION in PLIST?
+
+make sure ownership of modules is root (see makefile for -r switch)
+
+why were modules/2.4.22/modules.usbmap
+modules/2.4.22/modules.generic_string
+modules/2.4.22/modules.parportmap
+modules/2.4.22/modules.pnpbiosmap
+modules/2.4.22/modules.isapnpmap
+modules/2.4.22/modules.dep
+modules/2.4.22/modules.ieee1394map
+modules/2.4.22/modules.pcimap
+files touched too? (2.4.22 files touch on a 2.6.x install)
+
+if [ -r System.map ]; then /usr/sbin/depmod -ae -F System.map  2.6.3; fidepmod: *** Unresolved symbols in /lib/modules/2.6.3/kernel/drivers/message/i2o/i2o_config.ko
+
+depmod:         i2o_post_this
+depmod: *** Unresolved symbols in /lib/modules/2.6.3/kernel/drivers/net/ppp_generic.ko
+depmod:         slhc_init
 
 FATAL: ldconfig must be used with "||${TRUE}".
 (that is bug in pkglint.)

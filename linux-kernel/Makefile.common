@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.2 2004/02/03 09:19:58 marttikuparinen Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/03/07 02:29:20 jeremy-c-reed Exp $
 
-LINUX_VERSION=		2.6.1
+LINUX_VERSION=		2.6.3
 
 DISTNAME=		linux-${LINUX_VERSION}
 CATEGORIES=		misc
@@ -17,6 +17,7 @@ ONLY_FOR_PLATFORM=	Linux-*-*
 USE_GNU_TOOLS+=		make
 PLIST_SUBST+=		LINUX_VERSION=${LINUX_VERSION}
 CFLAGS+=		-I${WRKSRC}/include
+MAKE_ENV+=		INSTALL_MOD_PATH=${PREFIX}
 
 DISTINFO_FILE?=		${.CURDIR}/../../wip/linux-kernel/distinfo
 PATCHDIR?=		${.CURDIR}/../../wip/linux-kernel/patches
