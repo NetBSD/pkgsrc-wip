@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/02/05 14:19:31 riz Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/14 21:56:43 riz Exp $
 #
 
 DISTNAME=		asterisk-1.0.5
@@ -6,7 +6,7 @@ CATEGORIES=		wip
 MASTER_SITES=		ftp://ftp.asterisk.org/pub/asterisk/ \
 			ftp://ftp.asterisk.org/pub/asterisk/old-releases/
 
-MAINTAINER=		riz@tastylime.net
+MAINTAINER=		riz@netbsd.org
 HOMEPAGE=		http://www.asterisk.org/
 COMMENT=		The Asterisk Software PBX
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/05 21:42:53 riz Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/14 21:56:46 riz Exp $
 
 DISTNAME=		${PKGNAME}-6.src.rpm
 PKGNAME=		newt-0.51.6
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/
 EXTRACT_SUFX=		# empty
 
-MAINTAINER=		riz@tastylime.net
+MAINTAINER=		riz@netbsd.org
 HOMEPAGE=		# empty
 COMMENT=		Windowing toolkit based on libslang
 
