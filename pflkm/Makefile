@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/06/14 15:33:22 ppostma Exp $
+# $NetBSD: Makefile,v 1.15 2004/06/14 15:36:04 ppostma Exp $
 
 DISTNAME=		pf-lkm-20040607
 CATEGORIES=		security ipv6
@@ -8,7 +8,7 @@ MAINTAINER=		peter@pointless.nl
 HOMEPAGE=		http://nedbsd.nl/~ppostma/pf-lkm.html
 COMMENT=		OpenBSD PF loadable kernel module for NetBSD
 
-ONLY_FOR_PLATFORM=	NetBSD-2.0*-*
+ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-*
 
 USE_PKGINSTALL=		yes
 USE_BUILDLINK3=		yes
