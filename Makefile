@@ -1,11 +1,12 @@
-# $Id: Makefile,v 1.176 2003/05/17 19:12:26 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.176 2003/05/17 19:12:26 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.177 2003/05/19 19:49:48 blef Exp $
+# $NetBSD: Makefile,v 1.177 2003/05/19 19:49:48 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	PPower4
 SUBDIR+=	WEPCrack
 SUBDIR+=	abook
+SUBDIR+=	abuse_sdl
 SUBDIR+=	adodb
 SUBDIR+=	allegro
 SUBDIR+=	amsn
@@ -102,9 +103,9 @@ SUBDIR+=	nagios-plugin-pgsql
 SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	navigatrix
-SUBDIR+=	netkit-base
 SUBDIR+=	net-tools
 SUBDIR+=	netbeans-ide
+SUBDIR+=	netkit-base
 SUBDIR+=	newsx
 SUBDIR+=	nvtv
 SUBDIR+=	p5-Chart
