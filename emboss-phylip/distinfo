@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/15 20:27:50 daprice Exp $
+
+SHA1 (emboss/phylip-3.57c-20041107/PHYLIP-3.57c.tar.gz) = f6d469d4e1931bd8c864168815ddfaf2612d4667
+Size (emboss/phylip-3.57c-20041107/PHYLIP-3.57c.tar.gz) = 856814 bytes
+SHA1 (patch-aa) = 2bdc12ddba3e42d3de93d4ae3647a0334f4d5431
+SHA1 (patch-ab) = b221e8a888a81c85899b8d207cc3be07b7370617

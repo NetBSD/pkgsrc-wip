@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/15 20:27:50 daprice Exp $
+
+--- emboss_acd/Makefile.in.orig	2004-11-09 15:09:42.000000000 -0700
++++ emboss_acd/Makefile.in	2004-11-09 15:11:51.000000000 -0700
+@@ -44,7 +44,7 @@
+ 	$(top_srcdir)/m4/sgi.m4 $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+-mkinstalldirs = $(install_sh) -d
++mkinstalldirs = $(SHELL) ../mkinstalldirs
+ CONFIG_CLEAN_FILES =
+ SOURCES =
+ DIST_SOURCES =
+@@ -191,7 +191,15 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-pkgdata_DATA = *.acd
++pkgdata_DATA = econtrast.acd edollop.acd epenny.acd \
++ednacomp.acd edolpenny.acd eprotdist.acd \
++ednadist.acd efactor.acd eprotpars.acd \
++ednainvar.acd efitch.acd erestml.acd \
++ednaml.acd egendist.acd eseqboot.acd \
++eclique.acd ednamlk.acd ekitsch.acd \
++econsense.acd ednapars.acd emix.acd \
++econtml.acd ednapenny.acd eneighbor.acd
++
+ all: all-am
+ 
+ .SUFFIXES:

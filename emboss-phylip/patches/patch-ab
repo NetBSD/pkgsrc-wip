@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/11/15 20:27:50 daprice Exp $
+
+--- src/Makefile.in.orig	2004-10-01 01:13:52.000000000 -0600
++++ src/Makefile.in	2004-11-09 15:04:45.000000000 -0700
+@@ -55,7 +55,7 @@
+ 	$(top_srcdir)/m4/sgi.m4 $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+-mkinstalldirs = $(install_sh) -d
++mkinstalldirs = $(SHELL) ../mkinstalldirs
+ CONFIG_CLEAN_FILES =
+ am__installdirs = "$(DESTDIR)$(bindir)"
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
+@@ -267,7 +267,7 @@
+ @LOCALLINK_TRUE@	../../../plplot/libplplot.la \
+ @LOCALLINK_TRUE@	$(am__DEPENDENCIES_1)
+ DEFAULT_INCLUDES = -I. -I$(srcdir)
+-depcomp = $(SHELL) $(top_srcdir)/depcomp
++depcomp = $(SHELL) ../depcomp
+ am__depfiles_maybe = depfiles
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+@@ -429,8 +429,8 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-@LOCALLINK_FALSE@INCLUDES = -I../include -I${embprefix}/include
+-@LOCALLINK_TRUE@INCLUDES = -I../include -I../../../ajax
++@LOCALLINK_FALSE@INCLUDES = -I../include -I@INCLUDE@
++@LOCALLINK_TRUE@INCLUDES = -I../include -I@INCLUDE@
+ @ISAIXIA64_FALSE@@ISSHARED_TRUE@AM_CFLAGS = 
+ @ISAIXIA64_TRUE@@ISSHARED_TRUE@@LOCALLINK_FALSE@AM_CFLAGS = -Wl,-bdynamic -Wl,-brtl -L${embprefix}/lib -lajax
+ @ISAIXIA64_TRUE@@ISSHARED_TRUE@@LOCALLINK_TRUE@AM_CFLAGS = -Wl,-bdynamic -Wl,-brtl -L../../../ajax/.libs -lajax
