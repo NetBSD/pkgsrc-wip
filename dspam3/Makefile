@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/06/16 14:48:23 adrian_p Exp $
+# $NetBSD: Makefile,v 1.15 2004/06/17 19:14:44 xtraeme Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.nuclearelephant.com/projects/dspam/
 COMMENT=	Extremely scalable and statistical hybrid anti-spam filter
 
 USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
@@ -56,6 +55,7 @@ CONFIGURE_ARGS+=	--enable-robinson
 CONFIGURE_ARGS+=	--enable-chi-square
 CONFIGURE_ARGS+=	--enable-robinson-pvalues
 CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
+CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME}
 CONFIGURE_ARGS+=	--with-dspam-home-owner=${DSPAM_USER}		\
 			--with-dspam-home-group=${DSPAM_GROUP}		\
 			--with-dspam-owner=${DSPAM_USER}		\
@@ -75,6 +75,7 @@ CONFIGURE_ARGS+=	--with-delivery-agent="${LOCALBASE}/bin/procmail"
 BUILD_DEPENDS+=		maildrop-[0-9]*:../../mail/maildrop
 CONFIGURE_ARGS+=	--with-delivery-agent="${LOCALBASE}/bin/maildrop"
 .elif !empty(DSPAM_DELIVERY_AGENT:Mcustom)
+BUILD_DEFS+=		DSPAM_DELIVERY_AGENT_ARGS
 CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT_ARGS:Q}
 .endif
 
@@ -120,14 +121,21 @@ CONFIGURE_ARGS+=	--enable-large-scale
 .endif
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE} \
-			share/${PKGBASE}/txt share/${PKGBASE}/cgi
+			share/${PKGBASE}/txt share/${PKGBASE}/cgi \
+			share/${PKGBASE}/mysql share/${PKGBASE}/pgsql
 
 post-install:
 .for d in txt cgi
 	cd ${WRKSRC}/${d} && ${PAX} -rwppm '-s|.*/Makefile.*$$||' \
 		. ${PREFIX}/share/${PKGBASE}/${d}
 .endfor
+.undef d
 	${INSTALL_DATA} ${WRKSRC}/RE* ${PREFIX}/share/doc/${PKGBASE}
+.for d in mysql pgsql
+	cd ${WRKSRC}/tools.${d}_drv && ${PAX} -rwppm '-s|.*/Makefile.*$$||' \
+		. ${PREFIX}/share/${PKGBASE}/${d}
+.endfor
+.undef d
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
