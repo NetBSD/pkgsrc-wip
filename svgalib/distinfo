@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
+$NetBSD: distinfo,v 1.2 2003/07/27 11:12:58 blef Exp $
 
 SHA1 (svgalib-1.4.2.tar.gz) = af9d5e3c07c2604b8a170a6aaf07bbb03b3e3d6b
 Size (svgalib-1.4.2.tar.gz) = 929044 bytes
@@ -17,7 +17,7 @@ SHA1 (patch-al) = 90c422bd6e2c8c69dc0298ee18e695724d04351d
 SHA1 (patch-am) = 79bc20dfe841c6fd119a05ef88a87c9f8f3e1406
 SHA1 (patch-an) = 4f4b7de4ccd0493e53ea357b877a876e04cb7d64
 SHA1 (patch-ao) = 9774108a174a67883d62ce1a0c42bdc1c980b6cf
-SHA1 (patch-ap) = 0474a4a2519ff5dc295157a5631f378678d3e0a2
+SHA1 (patch-ap) = 97510179629383e816e841da1c8b06316d72c183
 SHA1 (patch-aq) = 0517ec8602e160fc32f92da78c06ed40782f29f4
 SHA1 (patch-ar) = 066f70e4f9a9603c0ba24f284012e6032ff3982c
 SHA1 (patch-as) = 1125c23facea4fff2db3d1aa0770f7ef8affe301
