@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1068 2004/03/11 22:01:42 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1068 2004/03/11 22:01:42 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1069 2004/03/12 00:09:10 blef Exp $
+# $NetBSD: Makefile,v 1.1069 2004/03/12 00:09:10 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -600,6 +600,7 @@ SUBDIR+=	samba3
 SUBDIR+=	same
 SUBDIR+=	scite
 SUBDIR+=	scm
+SUBDIR+=	scons
 SUBDIR+=	scponly
 SUBDIR+=	send-pr
 SUBDIR+=	sgmltools-lite
@@ -701,7 +702,6 @@ SUBDIR+=	xbelmark
 SUBDIR+=	xbsql
 SUBDIR+=	xevil
 SUBDIR+=	xextensions
-SUBDIR+=	xjump
 SUBDIR+=	xlibs
 SUBDIR+=	xmail
 SUBDIR+=	xmms-dumb
