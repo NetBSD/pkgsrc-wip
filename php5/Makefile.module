@@ -1,11 +1,11 @@
 #CONFIGURE_ARGS+=--disable-cgi
 #CONFIGURE_ARGS+=--disable-cli
 
-.if defined(MODNAME)
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/httpd/
+	if [ ! "${MODNAME}" = "" ]; then \
 	${INSTALL_DATA} ${WRKSRC}/modules/${MODNAME}.so \
-		${PREFIX}/lib/httpd/mod_${MODNAME}.so
-.endif
+		${PREFIX}/lib/httpd/mod_${MODNAME}.so ;\
+	fi
 
 .include "../../wip/php5/Makefile.common"
