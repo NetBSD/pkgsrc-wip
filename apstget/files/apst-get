@@ -3,7 +3,7 @@
 # APST-GET : Yet Another PkgSrc Tool to manage packages.
 #
 # AUTHOR: pancake < pancake@phreaker.net >
-# DATE: 2005/02/20
+# DATE: 2005/02/26
 #
 # depends: pkg_find, pkg_tarup, awk, pkglint, pkg_chk
 #
@@ -663,6 +663,10 @@ case "$1" in
 			echo "Package $1 not found."
 			exit 1
 		fi
+	fi
+	if [ ! -d "${PKGSRC_DIR}/${DIR}" ]; then
+		echo "Package ${PKGSRC_DIR}/${DIR} does not exist."
+		exit 1
 	fi
 	cd ${PKGSRC_DIR}/${DIR}
 	PKGNAM=`${MAKE} show-var VARNAME=PKGNAME`
