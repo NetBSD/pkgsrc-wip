@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/30 18:53:09 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/30 19:06:20 schnoebe Exp $
 #
 
 DISTNAME=	avelsieve-1.9.1
@@ -14,6 +14,9 @@ NO_CONFIGURE=	# defined
 USE_BUILDLINK3=	# defined
 
 WRKSRC=		${WRKDIR}
+
+SMDIR=			${PREFIX}/share/squirrelmail
+MESSAGE_SUBST+=		SMDIR=${SMDIR}
 
 do-build:
 

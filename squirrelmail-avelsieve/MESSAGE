@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2005/01/30 19:06:19 schnoebe Exp $
+
+    To enable this plugin:
+
+    cd ${SMDIR}/config &&./conf.pl
+
+    adding avelsieve to the list of active plugins.
+
+===========================================================================
