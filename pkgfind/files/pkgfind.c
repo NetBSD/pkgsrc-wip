@@ -137,24 +137,26 @@ showpkg(const char *path, const char *cat, const char *pkg)
 static int
 getcomment(const char *file, char **comment)
 {
-	FILE *fp;
-	char *line;
+	char line[120], *p;
 	size_t len;
+	FILE *fp;
 
 	if ((fp = fopen(file, "r")) == NULL)
 		return 0;
-	while ((line = fgetln(fp, &len)) != NULL) {
-		line[len - 1] = '\0';
-		if (strncmp(line, "COMMENT", 7) == 0) {
-			line += 7;	/* skip "COMMENT" */
-			while (*++line == '=')
-				continue;
-			while (*line != '\0' && isspace((unsigned char)*line))
-				line++;
-			*comment = line;
-			(void)fclose(fp);
-			return 1;
-		}
+	while (fgets(line, sizeof(line), fp) != NULL) {
+		if ((p = strchr(line, '\n')) == NULL)
+			continue;
+		*p = '\0';
+		if (strncmp(line, "COMMENT", 7))
+			continue;
+		p = line + 7;
+		if (*++p == '=')
+			p++;
+		while (*p != '\0' && isspace((unsigned char)*p))
+			p++;
+		*comment = strdup(p);
+		(void)fclose(fp);
+		return 1;
 	}
 	(void)fclose(fp);
 	return 0;
