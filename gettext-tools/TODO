@@ -1,0 +1,11 @@
+m4 files needed by meta-pkgs/gnome-devel  ... why??
+
+make a mk/libintl.mk file?
+gettext-runtime provides libintl.so on NetBSD even if NetBSD has native
+
+this package is big ... probably should split libgnuintl (libintl) out?
+
+under NetBSD this conflicts with gettext-runtime -- it should not.
+It should not use libintl again (instead of libgnuintl).
+
+old gettext needed groff to build

@@ -1,0 +1,8 @@
+This package provides the tools, libraries, and documentation for
+developers and translators who want to develop or localize
+internationalized programs.
+
+It includes msgfmt(1) for generating binary message catalogs,
+xgettext(1) for extracting gettext translatable strings, and other
+tools for editing translations of message catalogs and maintaining
+the gettext infrastructure.
