@@ -1,3 +1,6 @@
-Test on ports other than i386.
+Check for restricted export due to encryption.
 
-Licensing/export issues?
+Less patches? There are only 2 needed:
+
+remove make emacs
+change doc/Makefile.am to point to ${PREFIX}/share/doc/html instead

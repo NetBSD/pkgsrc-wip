@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/25 18:42:06 amadeus_z Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/02 18:21:21 amadeus_z Exp $
 bin/ccat
 bin/ccdecrypt
 bin/ccencrypt
 bin/ccrypt
-doc/ccrypt/ccrypt.html
 man/man1/ccat.1
 man/man1/ccdecrypt.1
 man/man1/ccencrypt.1
 man/man1/ccrypt.1
-@dirrm doc/ccrypt
-@dirrm doc
+share/doc/html/ccrypt/ccrypt.html
+@dirrm share/doc/html/ccrypt
