@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/11 05:48:33 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/18 01:51:53 minskim Exp $
 #
 
 DISTNAME=	aget-0.4
@@ -16,17 +16,27 @@ NO_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
+SUBST_CLASSES+=		options
+SUBST_MESSAGE.options=	"Fixing build options."
+SUBST_STAGE.options=	post-patch
+SUBST_FILES.options=	Makefile Makefile.Solaris
+SUBST_SED.options=	-e 's,CFLAGS =,\#CFLAGS =,' \
+			-e 's,LDFLAGS =,\#LDFLAGS =,' \
+			-e 's,CC =,\#CC =,' \
+
+PTHREAD_OPTS+=          require
+CFLAGS+=	${PTHREAD_CFLAGS}
+LDFLAGS+=	${PTHREAD_LDFLAGS}
+
 .if ${OPSYS} == "SunOS"
-post-configure:
-	(cd ${WRKSRC} && ${MV} Makefile.Solaris Makefile)
+CFLAGS+=	-DSOLARIS
+LDFLAGS+=	-lsocket -lnsl -lresolv
 .endif
 
 INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/aget ${PREFIX}/bin/aget
-
-PTHREAD_OPTS+=          require
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
