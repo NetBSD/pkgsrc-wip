@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.487 2003/09/24 08:26:38 xtraeme Exp $
-# $NetBSD: Makefile,v 1.487 2003/09/24 08:26:38 xtraeme Exp $
+# $Id: Makefile,v 1.488 2003/09/24 12:00:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.488 2003/09/24 12:00:18 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -163,6 +163,7 @@ SUBDIR+=	ht
 SUBDIR+=	ht2html
 SUBDIR+=	html2latex
 SUBDIR+=	httrack
+SUBDIR+=	hydra
 SUBDIR+=	hydrogen
 SUBDIR+=	ices
 SUBDIR+=	icmpchat
