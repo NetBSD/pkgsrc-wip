@@ -1,11 +1,12 @@
-# $Id: Makefile,v 1.68 2003/04/13 11:47:22 jmmv Exp $
-# $NetBSD: Makefile,v 1.68 2003/04/13 11:47:22 jmmv Exp $
+# $Id: Makefile,v 1.69 2003/04/13 11:57:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.69 2003/04/13 11:57:54 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	PPower4
 SUBDIR+=	allegro
 SUBDIR+=	aolserver
+SUBDIR+=	ap-bandwidth
 SUBDIR+=	autoproject
 SUBDIR+=	billardgl
 SUBDIR+=	byacc
