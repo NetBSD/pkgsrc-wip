@@ -1,0 +1,100 @@
+Index: cvsd.c
+===================================================================
+RCS file: /arthur/cvsd/cvsd.c,v
+retrieving revision 1.100
+diff -b -u -w -r1.100 cvsd.c
+--- cvsd.c	17 Aug 2003 15:00:03 -0000	1.100
++++ cvsd.c	8 Jan 2004 07:12:23 -0000
+@@ -303,8 +303,11 @@
+ 
+ 
+ /* handle a connection by doing fork() and stuff */
+-static void handleconnection(int csock,struct cvsd_cfg *cfg)
++static void handleconnection(int csock,struct cvsd_cfg *cfg,char *host)
+ {
++  struct cvsd_cfg *ncfg;
++  char arg0[85];
++  char **av;
+   pid_t cpid;
+   int i,m;
+ 
+@@ -317,6 +320,28 @@
+   case 0: /* we are the child */
+     /* set limits */
+     setreslimits();
++
++    /*
++     * build up the new cfg structure in the childs address space.
++     * that way, we don't need to reap it..
++     */
++    ncfg = cfg_new();
++
++    /* build up a new set of arguments.. */
++    av = cfg->cvsargs;
++    av++;
++
++    /*
++     * build up an arg0 of the remote host/cvs, so we can tell who's
++     * connected
++     */
++    snprintf(arg0, 85, "%s/cvs", host);
++    cfg_addcvsarg(ncfg, arg0);
++
++    for (;*av != NULL; av++) {
++      cfg_addcvsarg(ncfg, *av);
++    }
++
+     /* connect socket to stdin/stdout/stderr */
+     if ( (dup2(csock,0)<0) || /* stdin */
+          (dup2(csock,1)<0) || /* stdout */
+@@ -330,9 +355,12 @@
+     for (i=3;i<m;i++)
+       close(i);
+     /* execute cvs */
+-    execve(cfg->cvscmd,cfg->cvsargs,cfg->cvsenv);
++    execve(cfg->cvscmd,ncfg->cvsargs,cfg->cvsenv);
+     /* if we are here there has been an error */
+     /* we can't log since we don't have any useful file descriptors */
++    /* actually, give it a shot, 'cause if we're using syslog() */
++    /* the connection will be reopened */
++    log_log(LOG_ERR, "execve(%s,...) failed: %s", cfg->cvscmd, strerror(errno));
+     close(0);
+     close(1);
+     close(2);
+@@ -346,6 +374,7 @@
+ 
+   /* we are the parent and have a cpid */
+   log_log(LOG_DEBUG,"debug: fork() succeeded (child pid=%d)",(int)cpid);
++  log_log(LOG_INFO, "started process %d for host %s", (int)cpid, host);
+ 
+   /* close the socket to prevent confusion */
+   close(csock);
+@@ -511,7 +540,7 @@
+   int max=0;
+   struct sockaddr_storage addr;
+   socklen_t alen;
+-  char hostbuf[80],serv[40];
++  char hostbuf[NI_MAXHOST],serv[NI_MAXSERV];
+   char *host;
+ #ifdef USE_LIBWRAP
+   struct request_info rinfo;
+@@ -560,8 +589,8 @@
+       /* look up other side of connection and log it */
+       host=hostbuf;
+       switch (j=getnameinfo((struct sockaddr *)&addr,alen,
+-                            host,80,serv,40,
+-                            NI_NUMERICHOST|NI_NUMERICSERV)<0)
++                            host,sizeof(hostbuf),serv,sizeof(serv),
++                            NI_NUMERICSERV))
+       {
+         case 0: break;
+         case EAI_SYSTEM:
+@@ -608,7 +637,7 @@
+       }
+ 
+       /* handle the connection */
+-      handleconnection(csock,cfg);
++      handleconnection(csock,cfg,host);
+ 
+     }
+   }

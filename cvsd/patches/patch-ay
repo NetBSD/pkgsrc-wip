@@ -1,0 +1,50 @@
+Index: cfg.c
+===================================================================
+RCS file: /arthur/cvsd/cfg.c,v
+retrieving revision 1.2
+diff -b -u -w -r1.2 cfg.c
+--- cfg.c	10 Aug 2003 20:40:30 -0000	1.2
++++ cfg.c	8 Jan 2004 05:36:22 -0000
+@@ -63,6 +63,8 @@
+   cfg->addresses  = NULL;
+   cfg->maxconnections = 0;
+   cfg->cvscmd     = NULL; /* default is set according to configured rootjail */
++  cfg->cvsargac   = 0;
++  cfg->cvsargc    = 0;
+   cfg->cvsargs    = NULL; /* autom. allocated by add_cvsarg() */
+   cfg->cvsenv     = default_environment;
+   return cfg;
+@@ -72,26 +74,24 @@
+ /* add a string as a command line argument to the cvs command */
+ void cfg_addcvsarg(struct cvsd_cfg *cfg,char *arg)
+ {
+-  static int sz=0; /* size of array */
+-  static int cn=0; /* number of elements */
+   char **tmp;
+   int nsz;
+   /* first ensure array is large enough */
+-  if ((cn+2)>sz)
++  if ((cfg->cvsargc+2)>cfg->cvsargac)
+   {
+-    if (sz==0)
++    if (cfg->cvsargac==0)
+       nsz=10;
+     else
+-      nsz=sz*2;
++      nsz=cfg->cvsargac*2;
+     tmp=(char **)xmalloc(nsz*sizeof(char *));
+     if (cfg->cvsargs!=NULL)
+-      memcpy(tmp,cfg->cvsargs,sz*sizeof(char *));
++      memcpy(tmp,cfg->cvsargs,cfg->cvsargac*sizeof(char *));
+     cfg->cvsargs=tmp;
+-    sz=nsz;
++    cfg->cvsargac=nsz;
+   }
+   /* add string to end of array */
+-  cfg->cvsargs[cn++]=arg;
+-  cfg->cvsargs[cn]=NULL;
++  cfg->cvsargs[cfg->cvsargc++]=arg;
++  cfg->cvsargs[cfg->cvsargc]=NULL;
+ }
+ 
+ 

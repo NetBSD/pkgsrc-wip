@@ -1,0 +1,19 @@
+Index: cfg.h
+===================================================================
+RCS file: /arthur/cvsd/cfg.h,v
+retrieving revision 1.1
+diff -b -u -w -r1.1 cfg.h
+--- cfg.h	3 Aug 2003 15:33:16 -0000	1.1
++++ cfg.h	8 Jan 2004 05:21:50 -0000
+@@ -100,6 +100,11 @@
+   /* the command that will be run (location of the binary) */
+   char *cvscmd;
+ 
++  /* number of allocated argument pointers in the argument array */
++  int cvsargac;
++  /* number of arguments in the argument array */
++  int cvsargc;
++
+   /* the arguments that will be passed */
+   char **cvsargs;
+ 
