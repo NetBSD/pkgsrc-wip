@@ -1,0 +1,6 @@
+# C News pkg issues
+
+- 'make regression' fails on union mounts. Needs WRKOBJDIR set
+- use USE_PKGINSTALL=YES for /var/news
+- Sync patch list with dinoex.org
+- provide sample cron entries for user 'news' in share/examples/c-news
