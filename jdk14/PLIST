@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/26 16:22:25 marc Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/06/28 18:00:05 absd Exp $
+bin/jdk14-appletviewer
+bin/jdk14-jar
+bin/jdk14-javac
+bin/jdk14-javadoc
+bin/jdk14-javah
+bin/jdk14-javap
 java/jdk-1.4.2/COPYRIGHT
 java/jdk-1.4.2/LICENSE
 java/jdk-1.4.2/README
