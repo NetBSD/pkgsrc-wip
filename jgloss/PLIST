@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/26 16:57:35 thomasklausner Exp $
+bin/jgloss
+libexec/jgloss/jgloss.jar
+share/doc/jgloss/README.txt
+share/doc/jgloss/jgloss.pdf
+@dirrm share/doc/jgloss
+@dirrm libexec/jgloss

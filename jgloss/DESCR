@@ -1,0 +1,21 @@
+JGloss is an application for adding reading and translation
+annotations to words in a Japanese text document. This can be done
+automatically and manually. When a text document is first opened,
+words will be looked up in dictionary files and the first reading
+and translation (if any) is used to annotate the word. The user
+can then edit the annotations: choose among the readings and
+translations found in the dictionaries, enter own readings and
+translations, remove annotations and add new annotations. The
+document can be exported as plain text with annotations, HTML (with
+support for the Ruby Annotation XHTML specification) or LaTeX.
+
+The application is designed as a translation aid for people learning
+Japanese. With some new document, you can first skim the text and
+change the annotations to match the likeliest meaning of the word.
+Then you can print/export the text with annotations and start
+working on the details of understanding the text without having to
+resort to a paper dictionary all the time.
+
+JGloss is written in Java and should work on any computer with
+support for the Java 2 Version 1.3/1.4 platform. It is distributed
+under the terms of the GNU General Public License.
