@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/11 18:59:30 jeremy-c-reed Exp $
+bin/file
+man/man1/file.1
+man/man5/magic.5
+share/misc/magic
+share/misc/magic.mgc
+share/misc/magic.mime
+share/misc/magic.mime.mgc

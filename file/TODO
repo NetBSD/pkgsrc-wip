@@ -1,0 +1,6 @@
+the configuration (not installed) is hard-coded as /etc/magic
+
+build mentions about missing aclocal, automake, and autoheader
+but they aren't needed
+
+somebody should make a homepage
