@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/15 17:02:46 obache Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/30 15:54:16 minskim Exp $
 
-DISTNAME=	RMagick-${VER}
+DISTNAME=	RMagick-1.7.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/2343/
@@ -9,9 +9,6 @@ MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://rmagick.rubyforge.org/
 COMMENT=	Ruby ImageMagick extension
 
-USE_BUILDLINK3=	# defined
-
-VER=		1.7.1
 RUBY_HAS_ARCHLIB=	yes
 GNU_CONFIGURE=		yes
 USE_GHOSTSCRIPT=	build
