@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/17 18:46:58 jeremy-c-reed Exp $
+bin/${GNU_PROGRAM_PREFIX}ed
+bin/${GNU_PROGRAM_PREFIX}red
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ed.info
+info/ed.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ed.info
+man/man1/${GNU_PROGRAM_PREFIX}ed.1
+man/man1/${GNU_PROGRAM_PREFIX}red.1
