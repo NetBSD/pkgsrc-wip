@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/02/27 14:02:41 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/02/28 00:54:00 johnrshannon Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GCC-3.4-ADA_BUILDLINK3_MK:=	${GCC-3.4-ADA_BUILDLINK3_MK}+
@@ -10,13 +10,9 @@ BUILDLINK_DEPENDS+=	gcc-3.4-ada
 .endif
 
 .if !empty(GCC-3.4-ADA_BUILDLINK3_MK:M+)
-.  if defined(GCC3_INSTALLTO_SUBPREFIX)
-#
-# "gcc-3.4-ada" is the directory named in pkgsrc/wip/gcc-3.4-ada/Makefile"
-# as GCC3_DEFAULT_SUBPREFIX.
-#
-.    if ${GCC3_INSTALLTO_SUBPREFIX} != "gcc-3.4-ada"
-GCC3_PKGMODIF=			_${GCC3_INSTALLTO_SUBPREFIX}
+.  if defined(GCC34_INSTALLTO_SUBPREFIX)
+.    if ${GCC34_INSTALLTO_SUBPREFIX} != "gcc-3.4-ada"
+GCC34_PKGMODIF=			_${GCC34_INSTALLTO_SUBPREFIX}
 .    endif
 .  endif
 BUILDLINK_PACKAGES+=		gcc-3.4-ada

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/27 14:02:41 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/28 00:54:00 johnrshannon Exp $
 #
 
 SNAPDATE=	20040225
@@ -20,21 +20,16 @@ USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=        --enable-languages="c,ada"
-ADA_BOOT_PATH=               ${PREFIX}/${PKGNAME_NOREV}
-ADA_BOOT_ADAC?=  ${ADA_BOOT_PATH}/bin/gcc
-ADA_BOOT_GNATBIND=      ${ADA_BOOT_PATH}/bin/gnatbind
-EXTRA_ENV+=     ADAC=${ADA_BOOT_ADAC:Q}
-CONFIGURE_ENV+=	${EXTRA_ENV}
-MAKE_ENV+=	${EXTRA_ENV}
+BUILDLINK_ENV+=PATH=${PREFIX}/gcc3/bin:${PATH}
 
 # Make location overridable, to allow ping-pong bootstraps.
-GCC3_DEFAULT_SUBPREFIX=	${PKGNAME_NOREV}
-GCC3_INSTALLTO_SUBPREFIX?=	${GCC3_DEFAULT_SUBPREFIX}
-.if ${GCC3_INSTALLTO_SUBPREFIX} != ${GCC3_DEFAULT_SUBPREFIX}
-GCC3_PKGMODIF=		_${GCC3_INSTALLTO_SUBPREFIX}
+GCC34_DEFAULT_SUBPREFIX=	${PKGNAME_NOREV}
+GCC34_INSTALLTO_SUBPREFIX?=	${GCC34_DEFAULT_SUBPREFIX}
+.if ${GCC34_INSTALLTO_SUBPREFIX} != ${GCC34_DEFAULT_SUBPREFIX}
+GCC34_PKGMODIF=		_${GCC34_INSTALLTO_SUBPREFIX}
 .endif
 
-GCC_SUBPREFIX=		${GCC3_INSTALLTO_SUBPREFIX}
+GCC_SUBPREFIX=		${GCC34_INSTALLTO_SUBPREFIX}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 PLIST_SUBST+=		GCC_SUBPREFIX=${GCC_SUBPREFIX}
 FILES_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
@@ -48,7 +43,6 @@ CFLAGS+=	-I${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
 GCC_ARCHSUBDIR=	${GCC_SUBPREFIX}/lib/gcc/${GCC_PLATFORM}/${GCC_VERSION}
 GCC_ARCHDIR=	${PREFIX}/${GCC_ARCHSUBDIR}
-GCC_EXEC_PREFIX=${ADA_BOOT_PATH}/libexec/gcc/i386--netbsdelf2.0/3.4.0
 
 post-patch:
 	(cd files; \
@@ -60,17 +54,11 @@ post-patch:
 	done )
 
 do-configure:
-	(${TEST} -d  ${WRKDIR}/obj || ${MKDIR} ${WRKDIR}/obj && \
-	 cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} && \
-	 ${SETENV} PATH=${ADA_BOOT_PATH}/bin:${PATH} \
-	 ${SETENV} GCC_EXEC_PREFIX=${GCC_EXEC_PREFIX} \
-	 ${WRKSRC}/configure ${CONFIGURE_ARGS})
+	((${TEST} -d  ${WRKDIR}/obj || ${MKDIR} ${WRKDIR}/obj) && \
+	 (cd ${WRKDIR}/obj && ${SETENV} ${CONFIGURE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS}))
 
 do-build:
-	(cd ${WRKDIR}/obj && \
-	 ${SETENV} PATH=${ADA_BOOT_PATH}/bin:${PATH} \
-	 ${SETENV} GCC_EXEC_PREFIX=${GCC_EXEC_PREFIX} \
-	 make bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
 
 do-test:
 	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
@@ -91,6 +79,6 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${GCC_PREFIX}/mk/ada.mk
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../wip/gcc-3.4-ada/buildlink3.mk"
+.include "../../lang/gcc3-ada/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
