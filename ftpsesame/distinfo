@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/10 18:33:30 ppostma Exp $
+
+SHA1 (ftpsesame-0.95.tar.gz) = c8fbf8309c6a567a5d4837902e4219e1b266bc04
+Size (ftpsesame-0.95.tar.gz) = 10974 bytes
+SHA1 (patch-aa) = 347dbdd1fafd8e7f22fbe4398742b417fb724e09
+SHA1 (patch-ab) = ecc6ca536a7172ad08f8d6fc16fa274e353fb352
+SHA1 (patch-ac) = 25ff4830198d87646302f1aa04057039e469a3c8

@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/10 18:33:30 ppostma Exp $
+
+--- filter.c.orig	2004-10-05 14:12:22.000000000 +0200
++++ filter.c	2004-11-07 23:26:09.000000000 +0100
+@@ -18,10 +18,12 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ 
+-#include <net/if.h>
+-#include <net/pfvar.h>
+ #include <netinet/in.h>
+ #include <netinet/tcp.h>
++
++#include <net/if.h>
++#include <net/pfvar.h>
++
+ #include <arpa/inet.h>
+ 
+ #include <err.h>

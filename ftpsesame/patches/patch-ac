@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/11/10 18:33:30 ppostma Exp $
+
+--- state.c.orig	2004-10-05 14:07:04.000000000 +0200
++++ state.c	2004-11-07 23:28:47.000000000 +0100
+@@ -18,14 +18,15 @@
+ #include <sys/socket.h>
+ #include <sys/tree.h>
+ 
+-#include <net/if.h>
+-#include <net/pfvar.h>
+ #include <netinet/in.h>
+ #include <netinet/in_systm.h>
+ #include <netinet/ip.h>
+ #include <netinet/tcp.h>
+ #include <netinet/tcp_fsm.h>
+ 
++#include <net/if.h>
++#include <net/pfvar.h>
++
+ #include <stdlib.h>
+ #include <string.h>
+ #include <time.h>

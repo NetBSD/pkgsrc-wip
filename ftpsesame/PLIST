@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/10 18:33:30 ppostma Exp $
+man/cat8/ftpsesame.0
+man/man8/ftpsesame.8
+sbin/ftpsesame
