@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/03 14:29:07 poppnk Exp $
-
-SHA1 (ht-0.7.1.tar.gz) = ea4300e34f975b862751ed6f65c265835db8eb35
-Size (ht-0.7.1.tar.gz) = 739084 bytes
-SHA1 (patch-aa) = 127683e2c51fcb4b6779211516a5021110802135
