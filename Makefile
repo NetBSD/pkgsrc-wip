@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1412 2004/07/31 01:54:21 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1412 2004/07/31 01:54:21 adrian_p Exp $
+# $Id: Makefile,v 1.1413 2004/08/02 04:44:36 bencollver Exp $
+# $NetBSD: Makefile,v 1.1413 2004/08/02 04:44:36 bencollver Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -146,6 +146,7 @@ SUBDIR+=	flash7-player-bin
 SUBDIR+=	flc
 SUBDIR+=	flightgear
 SUBDIR+=	flightgear-base
+SUBDIR+=	fluidsynth
 SUBDIR+=	fluxconf
 SUBDIR+=	fluxspace
 SUBDIR+=	foomatic-db
