@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/04 21:19:19 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/04 22:19:42 airhead Exp $
 #
 
 DISTNAME=	d2x-0.2.5
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--disable-network
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-sharepath=${PREFIX}/share/games/${PKGBASE}
 
-do-install:
+post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/games/${PKGBASE}
 
 .include "../../devel/SDL/buildlink2.mk"
