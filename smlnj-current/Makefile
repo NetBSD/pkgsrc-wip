@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/08 12:55:08 pulahti Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2004/02/24 15:40:21 pulahti Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -26,7 +26,7 @@ MAINTAINER=	pulahti@users.sourceforge.net
 HOMEPAGE=	http://www.smlnj.org/index.html
 COMMENT=	Working version of SML/NJ Standard ML compiler
 
-SML_VERSION=	110.44
+SML_VERSION=	110.45
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	smlnj-${SML_VERSION}
