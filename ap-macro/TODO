@@ -1,3 +1,0 @@
-Probably should try to detect whether the user is trying
-to use Apache 2 and fail (point them towards a to-be-created
-ap2-macro)
