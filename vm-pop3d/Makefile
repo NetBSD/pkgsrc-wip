@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/24 00:46:55 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/24 07:28:06 jeremy-c-reed Exp $
 
 DISTNAME=		vm-pop3d-1.1.6
 PKGNAME=		vm-pop3d-1.1.7e
@@ -14,6 +14,8 @@ HOMEPAGE=		http://www.reedmedia.net/software/virtualmail-pop3d/
 COMMENT=		POP3 server with support for virtual mail accounts
 
 GNU_CONFIGURE=		YES
+
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_PAM)
 .include "../../security/PAM/buildlink2.mk"
