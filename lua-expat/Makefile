@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/29 23:11:59 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/06 21:10:05 blef Exp $
 #
 
 DISTNAME=		luaexpat-1.0a
-PKGNAME=		lua-expat
+PKGNAME=		${DISTNAME:S/lua/lua-/}
 CATEGORIES=		wip
 MASTER_SITES=		http://www.keplerproject.org/luaexpat/
 
