@@ -1,47 +1,18 @@
-$NetBSD: patch-ah,v 1.1.1.1 2004/11/24 17:23:46 imilh Exp $
+$NetBSD: patch-ah,v 1.2 2004/11/25 11:53:13 imilh Exp $
 
---- pppoeci.c.orig	2003-10-15 11:15:32.000000000 +0200
-+++ pppoeci.c
-@@ -136,6 +136,9 @@ Manufacturer: GlobeSpan Inc. Product: US
- #include <linux/if_tun.h>
- #include <linux/if.h>
- #endif
+--- semaphore.c.orig	2003-10-15 11:05:05.000000000 +0200
++++ semaphore.c
+@@ -76,9 +76,13 @@ int semaphore_decr(int sem, int val)
+ 
+ int semaphore_done(int sem)
+ {
 +#ifdef __NetBSD__
-+#include <libgen.h>
++   if (semctl(sem, 0, IPC_RMID, NULL) == -1)
++#else
+    union semun un;
+  
+    if (semctl(sem, 0, IPC_RMID, un) == -1)
 +#endif
+         return(-1);
  
- #include "util.h"
- /* my USB library */
-@@ -1716,7 +1719,10 @@ int main(int argc, char** argv)
- 	{
- 		int sbuf, ss = sizeof(sbuf);
- 
--		if (getsockopt(fdin, SOL_SOCKET, SO_SNDBUF, &sbuf, &ss) == 0)
-+		if (getsockopt(fdin, 
-+				SOL_SOCKET, 
-+				SO_SNDBUF, 
-+				&sbuf, (socklen_t *)&ss) == 0)
- 		{
- 
- 			/* debug message */
-@@ -1738,7 +1744,10 @@ int main(int argc, char** argv)
- 
- 		}
- 
--		if (getsockopt(fdin, SOL_SOCKET, SO_RCVBUF, &sbuf, &ss) == 0)
-+		if (getsockopt(fdin, 
-+				SOL_SOCKET, 
-+				SO_RCVBUF, 
-+				&sbuf, (socklen_t *)&ss) == 0)
- 		{
- 			/* debug message */
- 			if (verbose > 1)
-@@ -1754,7 +1763,7 @@ int main(int argc, char** argv)
- 			if (setsockopt(fdin, SOL_SOCKET, SO_RCVBUF, &sbuf, ss) < 0 && verbose)
- 			{
- 				snprintf(errText, ERR_BUFSIZE,
--						"setsockopt failed",
-+						"setsockopt failed: %d",
- 						this_process);
- 				message(errText);
- 				perror("reason");
+     return 0;

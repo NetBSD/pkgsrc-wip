@@ -1,15 +1,16 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/11/24 17:23:47 imilh Exp $
+$NetBSD: patch-af,v 1.2 2004/11/25 11:53:13 imilh Exp $
 
---- eci-load1.c.orig	2003-10-12 10:31:57.000000000 +0200
-+++ eci-load1.c
-@@ -147,6 +147,10 @@ Manufacturer: GlobeSpan Inc. Product: US
- #include "modem.h"
+--- eci-load2.c.orig	2003-10-10 16:20:41.000000000 +0200
++++ eci-load2.c
+@@ -45,6 +45,11 @@
  #include "util.h"
+ #include "semaphore.h"
  
 +#ifdef __NetBSD__
 +#include <libgen.h>
++#include <signal.h>
 +#endif
 +
- #define TIMEOUT 1000
- #define ECILOAD_TIMEOUT 20
- 
+ #define TIMEOUT 2000
+ #define INFINITE_TIMEOUT 24*60*60*1000 /* 24 hours should be enough */
+ #define ECILOAD_TIMEOUT 60

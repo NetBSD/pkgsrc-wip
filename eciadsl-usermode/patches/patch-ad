@@ -1,49 +1,18 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/11/24 17:23:48 imilh Exp $
+$NetBSD: patch-ad,v 1.2 2004/11/25 11:53:13 imilh Exp $
 
---- check-hdlc.c.orig	2002-06-10 19:49:33.000000000 +0200
-+++ check-hdlc.c
-@@ -9,5 +9,7 @@
- */
- 
-+#if !defined(_XOPEN_SOURCE) && !defined(__osf__) && !defined(__NetBSD__)
- #define _XOPEN_SOURCE /* for grantpt in <stdlib.h> */
-+#endif
- 
- #include <stdio.h>
-@@ -16,4 +18,12 @@
- #include <fcntl.h>
- #include <sys/ioctl.h>
-+#ifdef __NetBSD__
-+#include <util.h>
-+#include <string.h>
-+#include <errno.h>
-+#include <err.h>
-+
-+#define N_HDLC 13
-+#endif
- 
- /* for ident(1) command */
-@@ -22,4 +32,17 @@ static const char id[] = "@(#) $Id: chec
- int get_master_slave_ptmx(int *master, int *slave)
- {
-+#ifdef __NetBSD__
-+        /* openpty(3) exists in OSF/1 and some other os'es */
-+        char buf[64];
-+        int i;
-+
-+        i = openpty(master, slave, buf, NULL, NULL);
-+        if (i < 0) {
-+                err(1, "openpty: %.100s", strerror(errno));
-+                return -1;
-+        }
-+
-+        return 0;
-+#else
- 	const char *pts;
- 
-@@ -40,4 +63,5 @@ int get_master_slave_ptmx(int *master, i
- 	/* gotcha! */
- 	return 0;
-+#endif
- }
- 
+--- config.h.orig	2003-10-10 09:34:18.000000000 +0200
++++ config.h
+@@ -8,10 +8,10 @@
+ #define PRODUCT_ID "ECIADSL"
+ #define PRODUCT_NAME "ECIADSL USB modem driver"
+ #define PRODUCT_VERSION "0.8"
+-#define ETC_PATH "/"
++#define ETC_PATH "/usr/pkg/"
+ #define ETC_DIR "etc"
+-#define CONF_PATH "/"
++#define CONF_PATH "/usr/pkg/"
+ #define CONF_DIR "etc/eciadsl"
+-#define DOC_PATH "/usr/local/"
++#define DOC_PATH "/usr/pkg/share/"
+ #define DOC_DIR "doc/eciadsl"
+ #endif

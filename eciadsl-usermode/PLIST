@@ -1,27 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/24 17:23:46 imilh Exp $
-bin/startmodem
-bin/eci-doctor.sh
-bin/eciconf.sh
-bin/eciconftxt.sh
-bin/probe_device.sh
-bin/probe_synch.sh
-bin/remove_dabusb
-bin/makeconfig
-bin/eci_vendor_device.pl
-bin/eci_data.pl
-bin/eci_uc.pl
-etc/eciadsl/modems.db
-etc/eciadsl/providers.db
-etc/eciadsl/firmware00.bin
-etc/eciadsl/synch01.bin
-etc/eciadsl/modemeci.gif
-share/doc/eciadsl/README
-share/doc/eciadsl/README.fr
-share/doc/eciadsl/INSTALL
-share/doc/eciadsl/INSTALL.fr
-share/doc/eciadsl/BUGS
-share/doc/eciadsl/TODO
-share/doc/eciadsl/TROUBLESHOOTING
-share/doc/eciadsl/TROUBLESHOOTING.fr
-@dirrm etc/eciadsl
-@dirrm share/doc/eciadsl
+@comment $NetBSD: PLIST,v 1.2 2004/11/25 11:53:13 imilh Exp $
+sbin/pppoeci
+sbin/eci-load1
+sbin/eci-load2
+share/${PKGBASE}/modems.db
+share/${PKGBASE}/providers.db
+share/${PKGBASE}/firmware00.bin
+share/${PKGBASE}/synch01.bin
+share/examples/${PKGBASE}/ppp.conf
+@dirrm share/${PKGBASE}
+@dirrm share/examples/${PKGBASE}

@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/11/25 11:54:12 imilh Exp $
+
+Copy ppp.conf from ${PREFIX}/share/examples/${PKGBASE} to 
+${PKG_SYSCONFBASE}/ppp and modify these to suit to your needs :
+
+. vpi/vci
+. login/password
+. vid2/pid2
+
+You will find your vid1, pid1, vid2 and pid2 here :
+
+${PREFIX}/share/${PKGBASE}/modems.db
+
+===========================================================================

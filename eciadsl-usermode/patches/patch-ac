@@ -1,9 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/11/24 17:23:48 imilh Exp $
+$NetBSD: patch-ac,v 1.2 2004/11/25 11:53:13 imilh Exp $
 
---- check-hdlc-bug.c.orig	2002-06-10 19:49:33.000000000 +0200
-+++ check-hdlc-bug.c
-@@ -13,7 +13,9 @@
-     added support for /dev/ptyXX. There was previously only /dev/ptmx
+--- check-hdlc.c.orig	2002-06-10 19:49:33.000000000 +0200
++++ check-hdlc.c
+@@ -9,5 +9,7 @@
  */
  
 +#if !defined(_XOPEN_SOURCE) && !defined(__osf__) && !defined(__NetBSD__)
@@ -11,11 +10,9 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/11/24 17:23:48 imilh Exp $
 +#endif
  
  #include <stdio.h>
- #include <stdlib.h>
-@@ -24,6 +26,14 @@
- #include <unistd.h>
- #include <termios.h>
- #include <signal.h>
+@@ -16,4 +18,12 @@
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
 +#ifdef __NetBSD__
 +#include <util.h>
 +#include <string.h>
@@ -26,9 +23,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/11/24 17:23:48 imilh Exp $
 +#endif
  
  /* for ident(1) command */
- static const char id[] =
-@@ -31,6 +41,19 @@ static const char id[] =
- 
+@@ -22,4 +32,17 @@ static const char id[] = "@(#) $Id: chec
  int get_master_slave_ptmx(int *master, int *slave)
  {
 +#ifdef __NetBSD__
@@ -46,12 +41,9 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/11/24 17:23:48 imilh Exp $
 +#else
  	const char *pts;
  
- 	/* try to open the master side, using /dev/ptmx */
-@@ -49,6 +72,7 @@ int get_master_slave_ptmx(int *master, i
- 
+@@ -40,4 +63,5 @@ int get_master_slave_ptmx(int *master, i
  	/* gotcha! */
  	return 0;
 +#endif
  }
  
- int get_master_slave_pty(int *master, int *slave)

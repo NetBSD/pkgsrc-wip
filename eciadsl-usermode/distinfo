@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/24 17:23:46 imilh Exp $
+$NetBSD: distinfo,v 1.2 2004/11/25 11:53:13 imilh Exp $
 
 SHA1 (eciadsl-usermode-0.10.tar.gz) = cd93ed7719e2a119c86d026890873c4d13115dd8
 Size (eciadsl-usermode-0.10.tar.gz) = 566606 bytes
 SHA1 (patch-aa) = 8decf574b9869e2af05d44f952dfa060f0d87cca
-SHA1 (patch-ab) = 9a3a054b849276d5ae5305e4f93f6e6c40aca5d2
-SHA1 (patch-ac) = 1df32e04952c9179604d18ef77d023da9bf360a6
-SHA1 (patch-ad) = bbd778a7e743ea9bd59502edf37c57320e0bf7d3
-SHA1 (patch-ae) = 4ac2d8cb2f1f9cc8bd912e1c0b27fd1af0293d84
-SHA1 (patch-af) = 4488b09034829f7380b2460be1f99861288abe88
-SHA1 (patch-ag) = 3c008ed07201a057f64a026fb8271400706c60c0
-SHA1 (patch-ah) = 6e155bc41dd97ad5a8aa3fda043147decafba61a
-SHA1 (patch-ai) = ed13ebc550bc01d953cfc7afac662f27cef05e10
+SHA1 (patch-ab) = 1df32e04952c9179604d18ef77d023da9bf360a6
+SHA1 (patch-ac) = bbd778a7e743ea9bd59502edf37c57320e0bf7d3
+SHA1 (patch-ad) = 054bc22e096f8b0e1d10904eb4027d8e9ed5176f
+SHA1 (patch-ae) = 4488b09034829f7380b2460be1f99861288abe88
+SHA1 (patch-af) = 3c008ed07201a057f64a026fb8271400706c60c0
+SHA1 (patch-ag) = 6e155bc41dd97ad5a8aa3fda043147decafba61a
+SHA1 (patch-ah) = ed13ebc550bc01d953cfc7afac662f27cef05e10

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/24 17:23:46 imilh Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/25 11:53:13 imilh Exp $
 #
 
 DISTNAME=		eciadsl-usermode-0.10
@@ -9,32 +9,49 @@ MAINTAINER=		imil@gcu.info
 COMMENT=		Driver for Globespan chipset-based ADSL USB modems
 
 BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=		userppp>=001107:../../net/userppp
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-ONLY_FOR_PLATFORM=      FreeBSD-*-* NetBSD-*-* OpenBSD-*-* Linux-*-*
+ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
-ALL_TARGET=		# defined
+GNU_CONFIGURE=		yes
+ALL_TARGET=		eci-load1 eci-load2 pppoeci
 
 pre-build:
 			cd ${WRKSRC} && ${GMAKE} clean # archive's dirty
 
+do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PKGBASE}
+	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/eci-load1 ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/eci-load2 ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/pppoeci ${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/modems.db ${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/providers.db ${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/firmware00.bin ${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/synch01.bin ${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ppp.conf ${PREFIX}/share/examples/${PKGBASE}
+
 SUBST_CLASSES+=		path
-SUBST_MESSAGE.path=	"Setting up hardcoded path."
-SUBST_FILES.path=	Makefile Makefile.dep 				\
+SUBST_MESSAGE.path=	"Setting up hardcoded path"
+# this archive is really dirty, config.h is not created by configure...
+SUBST_FILES.path=	Makefile.dep config.h				\
 			check-hdlc-bug.c check-hdlc.c eci-load1.c	\
 			eci-load2.c pppoeci.c semaphore.c
 SUBST_STAGE.path=	post-patch
-SUBST_SED.path=		-e 's|/usr/pkg|${LOCALBASE}|'
+SUBST_SED.path=		-e 's|/usr/pkg|${PREFIX}|'
 
-SUBST_CLASSES+=		confpath
-SUBST_FILES.confpath=	Makefile
-SUBST_STAGE.confpath=	post-patch
-SUBST_SED.confpath=	-e 's|^ETC_PREFIX.*|ETC_PREFIX=${LOCALBASE}/|'\
-			-e 's|^CONF_PREFIX.*|CONF_PREFIX=${LOCALBASE}/|'\
-			-e 's|^DOC_PREFIX.*|DOC_PREFIX=${LOCALBASE}/share/|'
+SUBST_CLASSES+=		ppp_conf
+SUBST_FILES.ppp_conf=	ppp.conf
+SUBST_STAGE.ppp_conf=	post-patch
+SUBST_SED.ppp_conf=	-e 's|/root/eciadsl-usermode-0.10|${PREFIX}/sbin|'
+
+MESSAGE_SUBST+=		PKGBASE=${PKGBASE}
+MESSAGE_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
 
 .include "../../wip/libpusb/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
