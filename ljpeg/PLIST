@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/13 06:42:30 thomasklausner Exp $
+bin/ljpgtopnm
+bin/pnmtoljpg
+man/man1/ljpgtopnm.1
+man/man1/pnmtoljpg.1
+share/doc/ljpeg/Copyright
+share/doc/ljpeg/README
+share/examples/ljpeg/F-18.ljpg
+share/examples/ljpeg/F-18.ppm
+@dirrm share/examples/ljpeg
+@dirrm share/doc/ljpeg
