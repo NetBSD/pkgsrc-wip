@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/13 14:01:53 adrian_p Exp $
+$NetBSD: distinfo,v 1.2 2003/12/29 22:05:27 adrian_p Exp $
 
-SHA1 (konversation-0.12.tar.gz) = 6baeab40402fe8edd20ccb694f3052bc52e153d5
-Size (konversation-0.12.tar.gz) = 879671 bytes
+SHA1 (konversation-0.13.tar.bz2) = b0b70e3ea0bb4aeb08eb65293478176073f92edf
+Size (konversation-0.13.tar.bz2) = 718064 bytes
