@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/24 00:44:08 jeremy-c-reed Exp $
+bin/mkdep
+man/man1/mkdep.1
