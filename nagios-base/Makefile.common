@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/05/09 05:04:27 blef Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/06/02 16:02:29 cubidou Exp $
 #
 
 NAGIOS_USER?=		nagios
@@ -7,23 +7,20 @@ NAGIOS_GROUP?=		${NAGIOS_USER}
 NAGIOSADM_USER?=	nagadmin
 NAGIOSADM_GROUP?=	${NAGIOSADM_USER}
 
-PKG_GROUPS+=	${NAGIOS_GROUP}
-PKG_GROUPS+=	${NAGIOSADM_GROUP}
-
-PKG_USERS+=	${NAGIOS_USER}:${NAGIOS_GROUP}::Nagios\\ Runtime\\ User
-PKG_USERS+=	${NAGIOSADM_USER}:${NAGIOSADM_GROUP}::Nagios\\ Administrator:${PREFIX}/etc/nagios:${SH}
-
 USE_BUILDLINK3=		YES
 
 USE_X11=                YES
 GNU_CONFIGURE=          YES
 USE_GNU_TOOLS+=		make
+USE_PKGINSTALL=		YES
+
+PKG_SYSCONFSUBDIR=	nagios
 
 PERL5_REQD=		5.6
 
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/nagios
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/nagios
-CONFIGURE_ARGS+=        --sysconfdir=${PREFIX}/etc/nagios
+CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=        --localstatedir=/var
 
 CONFIGURE_ARGS+=	--with-cgiurl=/nagios/cgi-bin

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/01 08:30:14 cubidou Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/06/02 16:02:29 cubidou Exp $
 bin/nagios
 bin/p1.pl
 etc/nagios/nagios-setup.sh
@@ -294,7 +294,6 @@ share/nagios/stylesheets/statusmap.css
 share/nagios/stylesheets/summary.css
 share/nagios/stylesheets/tac.css
 share/nagios/stylesheets/trends.css
-@dirrm share/nagios/ssi
 @dirrm share/nagios/stylesheets
 @dirrm share/nagios/media
 @dirrm share/nagios/images/logos
@@ -302,8 +301,9 @@ share/nagios/stylesheets/trends.css
 @dirrm share/nagios/docs/images
 @dirrm share/nagios/docs
 @dirrm share/nagios/contexthelp
+@exec ${MKDIR} %D/share/nagios/ssi 2>/dev/null || ${TRUE}
+@dirrm share/nagios/ssi
 @dirrm share/nagios
 @dirrm share/examples/nagios
 @dirrm libexec/nagios/cgi-bin
 @dirrm libexec/nagios
-@dirrm etc/nagios

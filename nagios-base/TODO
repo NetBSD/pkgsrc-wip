@@ -1,8 +1,7 @@
-# $NetBSD: TODO,v 1.4 2004/02/29 15:41:08 anewsmurf Exp $
+# $NetBSD: TODO,v 1.5 2004/06/02 16:02:29 cubidou Exp $
 #
 
 TODO list for nagios-base
 	- Create a rc.d script. I have one already but I don't like it.
 	- A little more testing.
-	- Add apache installation instructions to some post install
-message, instead of always looking at doco.
+	- Convert logos in files/ to Nagios instead of Netsaint.

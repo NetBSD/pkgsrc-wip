@@ -1,4 +1,4 @@
-#!@RCD_SCRIPTS_SHELL@
+#!@@SH@@
 #
 # Run this script as root to create these necessary runtime directories.
 #

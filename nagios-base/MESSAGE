@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/02/29 15:42:26 anewsmurf Exp $
+$NetBSD: MESSAGE,v 1.2 2004/06/02 16:02:28 cubidou Exp $
 
 Apache Configuration:
 You must add this in your httpd.conf file
 
-    ScriptAlias /cgi-bin/nagios/ "/usr/pkg/libexec/nagios/cgi-bin/"
+    ScriptAlias /nagios/cgi-bin/ "/usr/pkg/libexec/nagios/cgi-bin/"
 
     <Directory "/usr/pkg/libexec/nagios/cgi-bin/">
         AllowOverride AuthConfig
