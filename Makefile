@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.311 2003/07/08 14:51:14 adrian_p Exp $
-# $NetBSD: Makefile,v 1.311 2003/07/08 14:51:14 adrian_p Exp $
+# $Id: Makefile,v 1.312 2003/07/08 14:58:30 adrian_p Exp $
+# $NetBSD: Makefile,v 1.312 2003/07/08 14:58:30 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -173,6 +173,7 @@ SUBDIR+=	net-tools
 SUBDIR+=	netbeans-ide
 SUBDIR+=	netkit-base
 SUBDIR+=	newsx
+SUBDIR+=	nikto
 SUBDIR+=	nvtv
 SUBDIR+=	nvtv-gtk2
 SUBDIR+=	opax
