@@ -1,6 +1,0 @@
-ApacheBench is the Apache HTTP server benchmarking tool.  This
-command-line testing tool gives an indication of how many requests
-per second your Apache installation can serve.
-
-This tool (ab) is also available in the regular Apache packages:
-www/apache, www/apache2, and www/apache6.
