@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/06/20 04:38:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/14 17:22:45 xtraeme Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -33,10 +33,8 @@ PKG_USERS=              ${JABBERD_USER}:${JABBERD_GROUP}::Jabberd\\ user
 JABBERD_DIRS=		/var/spool/jabberd /var/log/jabberd
 
 .for f in ${JABBERD_DIRS}
-OWN_DIRS+=		${f}
+OWN_DIRS_PERMS+=	${f} jabberd jabberd 750
 .endfor
-
-OWN_DIRS_PERMS=		/var/spool/jabberd jabberd jabberd 750
 
 CONF_FILES=		${EGDIR}/jabber.xml ${PKG_SYSCONFDIR}/jabber.xml
 
