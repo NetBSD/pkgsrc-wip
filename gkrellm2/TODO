@@ -1,5 +1,4 @@
-o Rewrite Makefiles to avoid hard-coded make targets,
-o Update to 2.1.18.
-
-  Makefile rewriting is about halfway done. Hopefully
-  I'll finish this week-end (September 13/14th).
+o Tests on NetBSD, FreeBSD, OpenBSD and Linux
+o Finish definitions for Darwin and Solaris
+o New makefiles should nclude all features so I can feed
+  them back to the author

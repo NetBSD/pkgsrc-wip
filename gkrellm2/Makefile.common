@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/06/25 20:27:35 cubidou Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/09/15 04:59:04 cubidou Exp $
 
 DISTNAME=	${GKRELLM_DISTBASE}
 PKGNAME=	${GKRELLM_PKGBASE}-${GKRELLM_VERSION}
@@ -12,12 +12,20 @@ HOMEPAGE=	http://gkrellm.net/
 USE_GMAKE=		YES
 USE_PKGLOCALEDIR=	YES
 
-MAKE_ENV+=		LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale	\
-			enable_nls=1					\
-			INSTALLROOT=${PREFIX}				\
-			MANDIR=${PREFIX}/man/man1			\
-			BINGROUP=kmem
+MAKE_ENV+=		LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
-GKRELLM_VERSION=	2.1.14
+GKRELLM_VERSION=	2.1.19
 GKRELLM_DISTBASE=	gkrellm-${GKRELLM_VERSION}
 GKRELLM_SRCDIR=		${WRKDIR}/${GKRELLM_DISTBASE}
+
+FILESDIR=		${PKGDIR}/../gkrellm2/files
+PATCHDIR=		${PKGDIR}/../gkrellm2/patches
+DISTINFO_FILE=		${PKGDIR}/../gkrellm2/distinfo
+DESCR_SRC=		${PKGDIR}/../gkrellm2/DESCR
+
+post-extract:
+	${CP} ${FILESDIR}/top.Makefile ${WRKSRC}/Makefile
+	${CP} ${FILESDIR}/top.Makefile.inc ${WRKSRC}/Makefile.inc
+	${CP} ${FILESDIR}/po.Makefile ${WRKSRC}/po/Makefile
+	${CP} ${FILESDIR}/server.Makefile ${WRKSRC}/server/Makefile
+	${CP} ${FILESDIR}/src.Makefile ${WRKSRC}/src/Makefile

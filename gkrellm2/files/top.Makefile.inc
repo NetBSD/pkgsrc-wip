@@ -1,0 +1,68 @@
+VERSION=	2.1.19
+
+# Path options
+PREFIX?=	/usr/local
+X11BASE?=	/nonexistent
+INSTALLROOT?=	$(DESTDIR)$(PREFIX)
+INSTALLDIR?=	$(INSTALLROOT)/bin
+INCLUDEDIR?=	$(INSTALLROOT)/include
+LOCALEDIR?=	$(INSTALLROOT)/share/locale
+PKGCONFIGDIR?=	$(INSTALLROOT)/lib/pkgconfig
+MANDIR?=	$(INSTALLROOT)/man/man1
+SMANDIR?=	$(INSTALLROOT)/man/man1
+SINSTALLDIR?=	$(INSTALLROOT)/bin
+
+# Ownership and mode options
+DATAMODE?=	0644
+BINMODE?=	0755
+BINOWNER?=	root
+BINGROUP?=	root
+
+# Tools paths
+MSGFMT?=	msgfmt
+MSGFMT_OPT?=	-f -v -o
+INSTALL?=	install
+PKG_CONFIG?=	pkg-config
+
+# Helpers
+INSTALL_DIR=	$(INSTALL) -d
+INSTALL_DATA=	$(INSTALL) -c -m $(DATAMODE)
+INSTALL_BIN=	$(INSTALL) -c -m $(BINMODE) -o $(BINOWNER) -g $(BINGROUP)
+
+# Compilation options
+ENABLE_NLS?=	1
+
+# OS-specific overrides
+SUPPORTED_OSES=	Linux NetBSD FreeBSD OpenBSD Darwin Solaris
+
+REALOPSYS=	$(shell uname -s)
+OPSYS=		$(if $(findstring $(REALOPSYS),$(SUPPORTED_OSES)),$(REALOPSYS),Linux)
+OSREV=		$(shell uname -r)
+
+ifeq ($(OPSYS),NetBSD)
+SYS_LIBS=	"-lkvm"
+BINGROUP=	kmem
+else
+ ifeq ($(OPSYS),OpenBSD)
+SYS_LIBS=	"-lkvm -pthread"
+BINGROUP=	kmem
+ else
+  ifeq ($(OPSYS),FreeBSD)
+BINGROUP=	kmem
+   ifeq ($(patsubst 2.%,$(OSREV)),)
+SYS_LIBS=	"-lkvm -ldevstat -lmd"
+   else
+SYS_LIBS=	"-lkvm -lmd"
+   endif
+  else
+   ifeq ($(OPSYS),Darwin)
+SYS_LIBS=	"-lkvm -lmd5 -framework IOKit"
+LINK_FLAGS+=	"-flat_namespace -undefined warning -prebind -Wl,-bind_at_load"
+   else
+    ifeq ($(OPSYS),Solaris)
+SYS_LIBS=	"-lkstat -lkvm -ldevinfo -lresolv -lsocket -lintl"
+    endif
+   endif
+  endif
+ endif
+endif
