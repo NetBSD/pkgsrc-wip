@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/05 18:28:02 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:23:04 grantbeattie Exp $
 
 DISTNAME=		GTK2-Wonderland-Engine-1.0
 PKGNAME=		gtk2-engines-bluecurve-1.0
@@ -13,7 +13,7 @@ COMMENT=		Port of famous Bluecurve theme, introduced by RedHat
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 

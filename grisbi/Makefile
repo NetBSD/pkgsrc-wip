@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/27 00:10:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:23:01 grantbeattie Exp $
 #
 
 DISTNAME=		grisbi-0.4.2
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.grisbi.org/
 COMMENT=		Personal Finance Manager under Gnome/GTK
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

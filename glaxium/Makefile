@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/08/28 09:48:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:22:40 grantbeattie Exp $
 #
 
 DISTNAME=	glaxium_0.5
@@ -13,7 +13,7 @@ COMMENT=	Space-ship OpenGL shoot them up
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_X11=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 MESA_REQD=		5.0.1
 ALL_TARGET=		glaxium

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/04 17:23:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/25 02:22:49 grantbeattie Exp $
 #
 
 DISTNAME=	gnome-pkgview-1.0.0
@@ -17,7 +17,7 @@ BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
 CONFIGURE_ARGS=		--with-gconf-schema-file-dir=${GCONF_SCHEMA_FILE_DIR}

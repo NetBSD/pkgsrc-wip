@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/12/25 12:19:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/25 02:23:43 grantbeattie Exp $
 # created 2003-10-22 Patrick Atamaniuk <atamaniuk-pkgsrc@frobs.net>
 # MAINTAINER_of-previous-lilypond-versions=	rh@NetBSD.org
 
@@ -13,7 +13,7 @@ COMMENT=	GNU Music Typesetter
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		YES
 MAKEFILE=		GNUmakefile
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/24 12:12:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/25 02:23:10 grantbeattie Exp $
 
 DISTNAME=	hydrogen-0.8.0
 PKGNAME=	${DISTNAME}
@@ -13,7 +13,7 @@ USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-alsa-seq
 CONFIGURE_ARGS+=	--disable-jack-support

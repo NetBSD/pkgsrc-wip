@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/12/31 12:42:35 cubidou Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/25 02:22:39 grantbeattie Exp $
 #
 
 DISTNAME=	gkrellmms-2.1.13
@@ -12,7 +12,7 @@ COMMENT=	GKrellM2 plugin to remotely control XMMS
 
 WRKSRC=			${WRKDIR}/gkrellmms
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
 BUILD_USES_MSGFMT=	YES
 

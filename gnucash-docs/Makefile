@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:12 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:22:57 grantbeattie Exp $
 
 DISTNAME=	gnucash-docs-1.8.1
 CATEGORIES=	finance
@@ -11,7 +11,7 @@ COMMENT=	Help documentation and tutorial guide for gnucash
 
 USE_BUILDLINK2=	# defined
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_PERL5=	# defined
 
 post-build:

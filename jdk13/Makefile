@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/12/07 14:20:09 tvierling Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/25 02:23:27 grantbeattie Exp $
 #
 # Some notes for those working on this package:
 #
@@ -34,7 +34,7 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 
 EXTRACT_USING_PAX= YES # GNU tar barfs on really deep paths
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_PKGINSTALL=	YES
 
 JVM_HOME=	${LOCALBASE}/java/jdk-1.3.1

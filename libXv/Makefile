@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/11/30 08:14:30 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:23:36 grantbeattie Exp $
 #
 
 DISTNAME=		libXv-2.2.1
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xv.pc.in
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 .include "../../wip/libXau/buildlink2.mk"
 .include "../../wip/libX11/buildlink2.mk"

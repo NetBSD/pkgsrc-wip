@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/10/20 08:23:15 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:23:38 grantbeattie Exp $
 
 DISTNAME=	libprelude-0.8.7
 CATEGORIES=	net www
@@ -10,7 +10,7 @@ COMMENT=	Hybrid IDS
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=         YES
 
 PTHREAD_OPTS=		require

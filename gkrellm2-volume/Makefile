@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/26 05:44:59 cubidou Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/25 02:22:38 grantbeattie Exp $
 
 DISTNAME=	gkrellm-volume-2.1.9
 WRKSRC=		${WRKDIR}/gkrellm-volume
@@ -12,7 +12,7 @@ COMMENT=	Gkrellm2 volume mixer plugin
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
 
 MAKE_ENV+=	LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \

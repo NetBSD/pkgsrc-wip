@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/30 03:27:50 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:23:56 grantbeattie Exp $
 
 DISTNAME= 	nfs-utils-1.0.1
 PKGREVISION=	1
@@ -13,7 +13,7 @@ COMMENT=	Linux NFS client and server utilities
 USE_BUILDLINK2=	# defined
 USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 
 # uses linux/version.h and only tested under Linux
 ONLY_FOR_PLATFORM=	Linux-*-*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/01 02:35:00 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:23:39 grantbeattie Exp $
 
 DISTNAME=		lilo-22.5
 PKGREVISION=		1
@@ -20,7 +20,7 @@ USE_PERL5=		YES
 BUILD_DEPENDS+=		bin86>=0.16.9:../../wip/bin86
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 MAKE_ENV+=		ROOT=${PREFIX}
 MAKE_ENV+=		SYSCONFDIR=${PKG_SYSCONFDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/30 17:40:22 blef Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:23:01 grantbeattie Exp $
 
 DISTNAME=	gtk-thinice-theme-1.0.4
 PKGNAME=	gtk-engines-thinice-1.0.4
@@ -12,7 +12,7 @@ COMMENT=	Simple, clean theme engine for gtk+ 1.2.x
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool

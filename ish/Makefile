@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/23 02:37:20 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/25 02:23:20 grantbeattie Exp $
 #
 
 DISTNAME=	ish-v${VERSION}
@@ -13,7 +13,7 @@ COMMENT=	Allow remote shell using ICMP
 
 VERSION=	0.2
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_BUILDLINK2=	yes
 
 MAKE_ENV+=	LIBS="${LIBS}"

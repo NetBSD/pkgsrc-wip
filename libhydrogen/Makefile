@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/09/24 12:33:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:23:37 grantbeattie Exp $
 
 DISTNAME=	libhydrogen-0.8.0
 CATEGORIES=	audio
@@ -12,7 +12,7 @@ USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-alsa-seq
 CONFIGURE_ARGS+=	--disable-jack-support

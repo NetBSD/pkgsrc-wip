@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/14 21:33:53 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/25 02:22:58 grantbeattie Exp $
 #
 
 DISTNAME=	gnumeric-1.2.2
@@ -18,7 +18,7 @@ BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.4
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_PERL5=		YES
 
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:13 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:23:09 grantbeattie Exp $
 #
 
 DISTNAME=	ht-0.7.1
@@ -11,7 +11,7 @@ COMMENT=	File editor/viewer/analyzer for executables
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_NCURSES=	YES
 
 .include "../../devel/ncurses/buildlink2.mk"

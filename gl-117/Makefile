@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/09/04 16:56:38 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:22:40 grantbeattie Exp $
 #
 
 DISTNAME=	gl-117-1.0-src
@@ -11,7 +11,7 @@ HOMEPAGE=	http://home.t-online.de/home/Primetime./gl-117/
 COMMENT=	SDL action flight simulator
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_X11=                yes
 GNU_CONFIGURE=		yes

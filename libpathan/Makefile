@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/25 14:21:34 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:23:38 grantbeattie Exp $
 
 DISTNAME=	libpathan-1.2-2-src
 PKGNAME=	${DISTNAME:S/-2-src/.2/}
@@ -14,7 +14,7 @@ BUILD_DEPENDS=		bison-[0-9]*:../../devel/bison
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BISON=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

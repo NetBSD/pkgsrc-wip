@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/06 22:44:42 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:23:07 grantbeattie Exp $
 #
 
 DISTNAME=		9714-gtk-qt-engine-0.2
@@ -15,7 +15,7 @@ COMMENT=		GTK+ 2.x theme, which looks just like Qt toolkit
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gtk-qt-engine-2.pc.in
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/16 19:21:34 bseklecki Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/25 02:22:47 grantbeattie Exp $
 
 DISTNAME=	gnome-spell-1.0.5
 CATEGORIES=	textproc
@@ -12,7 +12,7 @@ COMMENT=	Spell checking as you type like gtkspell
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

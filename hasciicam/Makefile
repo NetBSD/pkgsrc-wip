@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/03 14:30:19 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:23:09 grantbeattie Exp $
 #
 
 DISTNAME=		hasciicam-0.9
@@ -13,7 +13,7 @@ COMMENT=		Live ascii video on the web
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 

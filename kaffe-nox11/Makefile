@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/27 22:23:44 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:23:28 grantbeattie Exp $
 
 DISTNAME=		kaffe-1.1.2
 PKGNAME=		kaffe-nox11-1.1.2
@@ -13,7 +13,7 @@ COMMENT=		Virtual machine capable of running Java(tm) code
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 TEST_TARGET=		check
 

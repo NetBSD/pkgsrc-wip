@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/03 07:37:25 drue Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/25 02:23:32 grantbeattie Exp $
 #
 
 DISTNAME=	lbdb_0.27
@@ -16,7 +16,7 @@ DEPENDS+=	p5-perl-ldap-[0-9]*:../../databases/p5-perl-ldap
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=  yes
+USE_GNU_TOOLS+=		make
 
 DOCDIR=	${PREFIX}/share/doc/${PKGBASE}
 

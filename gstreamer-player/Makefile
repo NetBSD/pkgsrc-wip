@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/25 12:08:24 rhx Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:23:01 grantbeattie Exp $
 
 DISTNAME=		gst-player-0.5.0
 PKGNAME=		gstreamer-player-0.5.0
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	YES
 DEPENDS=                gnome2-dirs>=1.0:../../misc/gnome2-dirs
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES

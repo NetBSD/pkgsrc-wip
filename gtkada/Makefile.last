@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.last,v 1.1.1.1 2003/12/11 23:05:20 johnrshannon Exp $
+# $NetBSD: Makefile.last,v 1.2 2004/01/25 02:23:08 grantbeattie Exp $
 #
 
 DISTNAME=		GtkAda-2.2.1
@@ -16,7 +16,7 @@ export PATH=${LOCALBASE}/gcc-3.3.2/bin:${PATH}
 USE_BUILDLINK2=         yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_AUTOCONF=           yes
 USE_X11=                yes
 GCC_REQD=		3.3

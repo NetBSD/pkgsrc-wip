@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/11/29 22:49:08 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:23:28 grantbeattie Exp $
 #
 
 DISTNAME=		kadu-0.3.6
@@ -15,7 +15,7 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 # PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgadu/lib/libgadu.pc.in
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 # until pkgsrc will be updated with a new of ekg, that provides 
 # shared library:

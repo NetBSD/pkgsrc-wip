@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/11/28 10:18:14 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:23:35 grantbeattie Exp $
 #
 
 DISTNAME=		libXt-6.0-jcr3
@@ -22,7 +22,7 @@ BUILD_DEPENDS+=		imake-[0-9]*:../../wip/imake
 .endif
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 

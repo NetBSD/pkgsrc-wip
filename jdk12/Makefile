@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/09/25 02:45:18 tvierling Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/25 02:23:23 grantbeattie Exp $
 #
 # Some notes for those working on this package:
 #
@@ -32,7 +32,7 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_PKGINSTALL=	YES
 
 JVM_HOME=	${LOCALBASE}/java/jdk-1.2.2
