@@ -1,0 +1,5 @@
+jschauma:
+    I compiled and installed the package, but it always segfaults on
+    startup, complaining about missing fonts.  Other gtk applications work
+    fine.  What fonts would I be missing, and what dependencies would we
+    need to add?
