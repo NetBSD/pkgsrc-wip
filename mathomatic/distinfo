@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2004/03/28 23:43:28 bjan2 Exp $
-
-SHA1 (am-10.9b.tgz) = 443c1fe9a66c24ea27d93de5c864ab0b83dcd3a2
-Size (am-10.9b.tgz) = 104823 bytes
-SHA1 (patch-aa) = 194e98949804567c125181251b3339fed10b114f

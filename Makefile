@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1151 2004/03/31 16:24:57 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1151 2004/03/31 16:24:57 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1152 2004/03/31 18:05:12 minskim Exp $
+# $NetBSD: Makefile,v 1.1152 2004/03/31 18:05:12 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -377,7 +377,6 @@ SUBDIR+=	matchbox-desktop
 SUBDIR+=	matchbox-panel
 SUBDIR+=	matchbox-panel-manager
 SUBDIR+=	matchbox-wm
-SUBDIR+=	mathomatic
 #SUBDIR+=	maxima		# see TODO
 SUBDIR+=	mc
 SUBDIR+=	mcats

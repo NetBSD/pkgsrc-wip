@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/23 02:59:26 rillig Exp $
-bin/am_mathomatic
-man/man1/am_mathomatic.1
