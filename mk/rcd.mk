@@ -1,4 +1,4 @@
-# $Id: rcd.mk,v 1.1 2003/12/02 13:27:04 bubuchka Exp $
+# $Id: rcd.mk,v 1.2 2004/08/27 07:53:09 bubuchka Exp $
 # from "Id: oshavercd.mk,v 1.4 2003/11/19 21:28:47 bubuchka Exp"
 #
 # This makefile intended to determine is system have rc.d framework,
@@ -47,8 +47,8 @@ OS_HAVE_RCD=		YES
 OS_HAVE_RCD?=		NO
 
 .if ${OS_HAVE_RCD} == "NO"
-DEPENDS+=		rc.subr-[0-9]*:../../wip/rc.subr
-DEPENDS+=		rcorder-[0-9]*:../../wip/rcorder
+DEPENDS+=		rc.subr-[0-9]*:../../pkgtools/rc.subr
+DEPENDS+=		rcorder-[0-9]*:../../pkgtools/rcorder
 .endif
 
 .endif	# OSHAVERCD_MK

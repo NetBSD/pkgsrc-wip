@@ -1,4 +1,4 @@
-$Id: DESC,v 1.4 2004/01/10 19:11:32 mpasternak Exp $
+$Id: DESC,v 1.5 2004/08/27 07:53:04 bubuchka Exp $
 
 Please provide .mk files descriptions and reasons for existence of those
 files here.
@@ -19,9 +19,9 @@ win32.pkg.mk	- this is winpkgsrc base makefile; it is a base of all
 		  use it with normal packages by any means.
 
 rcd.mk          - this file is intended to determine if build system
-		  have an rc.d framework, or not. In case if there is no
-		  such one, it will be installed from pkgsrc-wip by
-		  dependency.
+		  have an rc.d framework, or not. In case if there
+		  is no such one, it will be installed from pkgsrc
+		  by dependency.
 
 postgresql.mk	- improvement for current postgresql-* packages; should reside
 		  in databases/postgresql/ directory and not mk.
