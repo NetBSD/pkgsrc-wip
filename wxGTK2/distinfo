@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/11/30 00:55:30 mpasternak Exp $
+
+SHA1 (wxGTK-2.4.2.tar.bz2) = 3f1ebacaaf8eb5510c14ee10bafbc5f225be842c
+Size (wxGTK-2.4.2.tar.bz2) = 5381935 bytes
+SHA1 (patch-aa) = 5602ed3a9c15eab638f270990b91edc844a1e6e3
