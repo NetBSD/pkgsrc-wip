@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.113 2003/04/23 18:10:38 xtraeme Exp $
-# $NetBSD: Makefile,v 1.113 2003/04/23 18:10:38 xtraeme Exp $
+# $Id: Makefile,v 1.114 2003/04/23 22:11:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.114 2003/04/23 22:11:10 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -7,6 +7,7 @@ SUBDIR+=	PPower4
 SUBDIR+=	SDL_mm
 SUBDIR+=	adodb
 SUBDIR+=	allegro
+SUBDIR+=	amsn
 SUBDIR+=	aolserver
 SUBDIR+=	ap-bandwidth
 SUBDIR+=	autoproject
@@ -65,6 +66,7 @@ SUBDIR+=	jdk12-openjit
 SUBDIR+=	jdk13
 SUBDIR+=	jdk13-openjit
 SUBDIR+=	jpgraph
+SUBDIR+=	libdialog
 SUBDIR+=	liquidwar
 SUBDIR+=	lpe
 SUBDIR+=	mailfilter
@@ -87,6 +89,7 @@ SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	perltidy
 SUBDIR+=	phplot
+SUBDIR+=	pinball
 SUBDIR+=	pixieplus
 SUBDIR+=	poedit
 SUBDIR+=	ppp
@@ -100,6 +103,8 @@ SUBDIR+=	py-gnome2
 SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-gtk2
 SUBDIR+=	py-spreadmodule
+SUBDIR+=	qinx
+SUBDIR+=	qn-x11
 SUBDIR+=	scm
 SUBDIR+=	scponly
 SUBDIR+=	shoutcast
@@ -108,6 +113,7 @@ SUBDIR+=	tex-foiltex
 SUBDIR+=	totem
 SUBDIR+=	tsclient
 SUBDIR+=	umix
+SUBDIR+=	vcdgear
 SUBDIR+=	vim-gtk2
 SUBDIR+=	vixie-cron
 SUBDIR+=	vmsbackup
