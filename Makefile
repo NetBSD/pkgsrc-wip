@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1612 2005/01/13 06:49:44 ishit Exp $
-# $NetBSD: Makefile,v 1.1612 2005/01/13 06:49:44 ishit Exp $
+# $Id: Makefile,v 1.1613 2005/01/13 07:02:50 ishit Exp $
+# $NetBSD: Makefile,v 1.1613 2005/01/13 07:02:50 ishit Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -509,7 +509,6 @@ SUBDIR+=	mopac
 SUBDIR+=	moregroupware
 SUBDIR+=	mozplugger
 SUBDIR+=	mpgedit
-SUBDIR+=	mplusfonts
 SUBDIR+=	mppdec
 SUBDIR+=	mpq-tools
 SUBDIR+=	mtf
