@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/06/17 22:22:59 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2004/06/17 22:44:54 adrian_p Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -21,13 +21,14 @@ REPLACE_PERL=		tools/dspam_genaliases.in \
 
 PKGCONFIG_OVERRIDE+=	dspam.pc.in
 
-SUBST_CLASSES=		cgi
+SUBST_CLASSES=		cgi large
 SUBST_STAGE.cgi=	post-patch
 SUBST_FILES.cgi=	cgi/dspam.cgi cgi/admin.cgi 
 SUBST_SED.cgi=		-e "s|/usr/local/bin/dspam|${PREFIX}/bin/dspam|" \
 			-e "s|/var/dspam|${DSPAM_HOME}|" \
-			-e "s|/usr/local|${PREFIX}|"
-SUBST_MESSAGE.cgi=	"Fixing paths."
+			-e "s|/usr/local|${PREFIX}|" \
+			-e "s|LARGE_SCLAE|LARGE_SCALE|"
+SUBST_MESSAGE.cgi=	"Fixing paths and typos."
 
 BDB_ACCEPTED=		db4 db3
 
@@ -124,6 +125,11 @@ CONFIGURE_ARGS+=        --enable-signature-headers
 
 .if defined(DSPAM_LARGESCALE) && !empty(DSPAM_LARGESCALE:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-large-scale
+SUBST_STAGE.large=	post-patch
+SUBST_FILES.large=	cgi/dspam.cgi cgi/admin.cgi 
+SUBST_SED.large=	\
+	-e "s|CONFIG{'LARGE_SCALE'}  = 0|CONFIG{'LARGE_SCALE'}	= 1|"
+SUBST_MESSAGE.large=	"Fixing config options."
 .endif
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE} \
