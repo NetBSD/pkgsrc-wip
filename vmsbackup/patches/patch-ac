@@ -1,0 +1,45 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/04/20 15:14:16 cjep Exp $
+
+--- vmsbackup.c.orig	Mon Sep 12 18:15:29 1988
++++ vmsbackup.c
+@@ -80,7 +80,7 @@
+ #include    <sys/ioctl.h>
+ #include    <sys/types.h>
+ #ifdef REMOTE
+-#include    <local/rmt.h>
++#include    <rmt.h>
+ #include    <sys/stat.h>
+ #endif
+ #include    <sys/mtio.h>
+@@ -149,7 +149,7 @@ struct bsa {
+ #ifdef    STREAM
+ char    *def_tapefile = "/dev/rts8";
+ #else
+-char    *def_tapefile = "/dev/rmt8";
++char    *def_tapefile = "/dev/st0";
+ #endif
+ char    *tapefile;
+ 
+@@ -219,7 +219,7 @@ openfile(fn)
+ char    *fn;
+ {
+     char    ufn[256];
+-    char    ans[80];
++    int     ans;
+     char    *p, *q, s, *ext;
+     int    procf;
+ 
+@@ -266,10 +266,11 @@ char    *fn;
+     }
+     if(!eflag && procf) procf = typecmp(++ext);
+     if(procf && wflag) {
++        fflush(stdin);
+         printf("extract %s [ny]",filename);
+         fflush(stdout);
+-        gets(ans);
+-        if(*ans != 'y') procf = NULL;
++        ans = fgetc(stdin);
++        if(ans != 'y') procf = NULL;
+     }
+     if(procf)
+         /* open the file for writing */
