@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/09 09:54:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/25 10:45:26 xtraeme Exp $
 #
 
 DISTNAME=	darkice-0.13.1
@@ -21,22 +21,22 @@ CONFIGURE_ARGS+=	--with-lame-prefix=${BUILDLINK_PREFIX.lame}
 EGDIR=		${PREFIX}/share/examples/darkice
 HTMLDIR=	${PREFIX}/share/doc/html/darkice
 
-CONF_FILES=	${PREFIX}/share/examples/darkice.conf.default \
+CONF_FILES=	${PREFIX}/share/examples/darkice/darkice.conf.default \
 	    	${PKG_SYSCONFDIR}/darkice.conf
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/darkice.cfg ${PKG_SYSCONFDIR}/darkice.conf
+	${INSTALL_DATA_DIR} ${EGDIR} ${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/darkice.cfg ${EGDIR}/darkice.conf.default
 	${INSTALL_PROGRAM} ${WRKSRC}/src/darkice ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/darkice.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/man/darkice.cfg.5 ${PREFIX}/man/man5/darkice.conf.5
+	${INSTALL_MAN} ${WRKSRC}/man/darkice.cfg.5 \
+		${PREFIX}/man/man5/darkice.conf.5
 	for f in ${WRKSRC}/kdoc/*.html; do \
 		${INSTALL_DATA} $$f ${HTMLDIR}; \
 	done
 
-.include "../../mk/ossaudio.buildlink2.mk"
 .include "../../audio/lame/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
+
+.include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
