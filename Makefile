@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.371 2003/08/13 10:39:12 marc Exp $
-# $NetBSD: Makefile,v 1.371 2003/08/13 10:39:12 marc Exp $
+# $Id: Makefile,v 1.372 2003/08/14 21:29:58 tvierling Exp $
+# $NetBSD: Makefile,v 1.372 2003/08/14 21:29:58 tvierling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -225,6 +225,7 @@ SUBDIR+=	p5-Authen-SASL-Cyrus
 SUBDIR+=	p5-CDDB
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Class-Factory-Util
+SUBDIR+=	p5-Class-MethodMaker
 SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-Compress-Bzip2
 SUBDIR+=	p5-DBI-Shell
@@ -236,6 +237,7 @@ SUBDIR+=	p5-DateTime-Set
 SUBDIR+=	p5-DateTime-TimeZone
 SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-GeoIP
+SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-IO-Tee
 SUBDIR+=	p5-Net-Gnats
@@ -244,6 +246,7 @@ SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
+SUBDIR+=	p5-String-Approx
 SUBDIR+=	p5-Text-Reform
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-Unicode-String
@@ -251,6 +254,7 @@ SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-gtk2
 SUBDIR+=	pdns
 SUBDIR+=	perltidy
+SUBDIR+=	pgpenvelope
 SUBDIR+=	php-jpgraph
 SUBDIR+=	php4-exif
 SUBDIR+=	picasm
