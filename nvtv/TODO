@@ -1,6 +1,0 @@
-o Make a rc.d script for nvtvd. This one is not simple
-  since it requires some code change (read: a call to
-  daemon()).
-o nvtv crashes immediately on my Toshiba Satellite 5100
-  --> This is a bug in nvtv code, and also means the encoder
-      is not supported.
