@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2005/04/05 05:21:59 jeremy-c-reed Exp $
+lib/preloadable_libintl.so
