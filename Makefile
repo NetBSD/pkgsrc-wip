@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.887 2004/01/16 08:08:08 minskim Exp $
-# $NetBSD: Makefile,v 1.887 2004/01/16 08:08:08 minskim Exp $
+# $Id: Makefile,v 1.888 2004/01/16 09:51:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.888 2004/01/16 09:51:30 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -197,6 +197,7 @@ SUBDIR+=	glulxe
 SUBDIR+=	gnats4
 SUBDIR+=	gnome2-extras
 SUBDIR+=	gnome2-pkgview
+SUBDIR+=	gnome-spell
 SUBDIR+=	gnomeicu
 SUBDIR+=	gnucash-docs
 SUBDIR+=	gnumeric
@@ -673,6 +674,7 @@ SUBDIR+=	vcdgear
 SUBDIR+=	viewcvs
 SUBDIR+=	vixie-cron
 SUBDIR+=	vlc
+SUBDIR+=	vls
 SUBDIR+=	vm-pop3d
 SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
