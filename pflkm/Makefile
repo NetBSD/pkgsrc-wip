@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/10/25 09:54:06 ppostma Exp $
+# $NetBSD: Makefile,v 1.19 2004/10/25 14:26:31 ppostma Exp $
 
 DISTNAME=		pflkm-20041025
 CATEGORIES=		security ipv6
@@ -6,7 +6,7 @@ MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
 
 MAINTAINER=		peter@pointless.nl
 HOMEPAGE=		http://nedbsd.nl/~ppostma/pf/
-COMMENT=		OpenBSD PF loadable kernel module for NetBSD
+COMMENT=		OpenBSD Packet Filter as loadable kernel module for NetBSD
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-*
 
