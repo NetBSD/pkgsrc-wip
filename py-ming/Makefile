@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/10 22:12:32 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/08/27 06:30:33 jlamwww Exp $
 #
 
 DISTNAME=		${MING_DISTNAME}
@@ -20,12 +20,14 @@ REALSRC=		${WRKSRC}/py_ext
 do-build:
 	cd ${REALSRC} && ${MAKE} PYINC=${PREFIX}/${PYINC} \
 		PYLIB=${PREFIX}/${PYLIB} PYSITELIB=${PREFIX}/${PYSITELIB} \
-		PREFIX=${PREFIX} RPATH_FLAG=${RPATH_FLAG} ${ALL_TARGET}
+		PREFIX=${PREFIX} COMPILER_RPATH_FLAG=${COMPILER_RPATH_FLAG} \
+		${ALL_TARGET}
 
 do-install:
 	cd ${REALSRC} && ${MAKE} PYINC=${PREFIX}/${PYINC} \
 		PYLIB=${PREFIX}/${PYLIB} PYSITELIB=${PREFIX}/${PYSITELIB} \
-		PREFIX=${PREFIX} RPATH_FLAG=${RPATH_FLAG} install
+		PREFIX=${PREFIX} COMPILER_RPATH_FLAG=${COMPILER_RPATH_FLAG}
+		${INSTALL_TARGET}
 
 .include "../../wip/ming/buildlink3.mk"
 .include "../../wip/ming/Makefile.common"

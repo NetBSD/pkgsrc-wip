@@ -30,7 +30,7 @@ libdv is still required according to README
 
 was using:
 
-#LDFLAGS+=              -Wl,${RPATH_FLAG}${BUILDLINK_LIBDIRS.XFree86-libs}
+#LDFLAGS+=              ${COMPILER_RPATH_FLAG}${BUILDLINK_LIBDIRS.XFree86-libs}
 # XXX how does the RPATHs for gcc3 not get chopped out by buildlink3?
 # the following one seemed to work
 #BUILDLINK_PASSTHRU_RPATHDIRS+= ${X11BASE}/lib

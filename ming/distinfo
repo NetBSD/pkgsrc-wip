@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/01/03 22:31:36 mpasternak Exp $
+$NetBSD: distinfo,v 1.3 2004/08/27 06:30:30 jlamwww Exp $
 
 SHA1 (ming-0.2a.tgz) = 9f8b4d9afcee51351b326e6f072352cc8ac013f5
 Size (ming-0.2a.tgz) = 316447 bytes
 SHA1 (patch-aa) = ac4794d4d8684475d0166707f112cfb263defacb
-SHA1 (patch-ab) = 1fa437ff8c294667db5b0e4d89626b2d260f57cb
+SHA1 (patch-ab) = d1be532840d1e781b043b381f0a9bb2c6b7af189

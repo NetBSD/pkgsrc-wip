@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/10/21 11:49:05 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2004/08/27 06:30:29 jlamwww Exp $
 
 --- Makefile.orig	Mon Dec 20 01:21:49 1999
 +++ Makefile
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/10/21 11:49:05 dillo Exp $
  # You may need to set directories to pick up the ncurses library.
  #INCLUDEDIRS = -I/usr/5include
 -#LIBDIRS = -L/usr/5lib 
-+LIBDIRS = -L${PREFIX}/lib -Wl,${RPATH_FLAG}${PREFIX}/lib
++LIBDIRS = -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
  LIBS = -lncurses
  
 -OPTIONS = -O

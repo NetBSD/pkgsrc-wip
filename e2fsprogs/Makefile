@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.6 2004/05/12 12:39:46 thomasklausner Exp $
-# $Id: Makefile,v 1.6 2004/05/12 12:39:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/27 06:30:28 jlamwww Exp $
+# $Id: Makefile,v 1.7 2004/08/27 06:30:28 jlamwww Exp $
 
 DISTNAME=	${E2FSPROGS_DISTNAME}
 PKGREVISION=	3
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
 CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
 
-CONFIGURE_ARGS+=	--with-ldopts=-Wl,${RPATH_FLAG}${PREFIX}/lib
+CONFIGURE_ARGS+=	--with-ldopts=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 INSTALL_TARGET=		install install-libs
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.2 2003/07/27 11:12:58 blef Exp $
+$NetBSD: patch-ap,v 1.3 2004/08/27 06:30:33 jlamwww Exp $
 
 --- utils/Makefile.orig	Wed Jul 21 09:41:18 1999
 +++ utils/Makefile	Sun Jul 27 04:03:47 2003
@@ -7,7 +7,7 @@ $NetBSD: patch-ap,v 1.2 2003/07/27 11:12:58 blef Exp $
  CFLAGS = $(WARN) $(OPTIMIZE) -I../include
  #Use the next one for the Alpha/AXP if you need it
 -#LDFLAGS = -L../staticlib 
-+LDFLAGS = -L../sharedlib -Wl,$(RPATH_FLAG)$(PREFIX)/lib
++LDFLAGS = -L../sharedlib $(COMPILER_RPATH_FLAG)$(PREFIX)/lib
  LIBS = -lvga -lm
  
  #----------------------------------------------------------------------

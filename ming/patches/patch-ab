@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/11/26 17:08:13 mpasternak Exp $
+$NetBSD: patch-ab,v 1.2 2004/08/27 06:30:31 jlamwww Exp $
 
 --- py_ext/Makefile.orig	Fri Aug 17 19:05:55 2001
 +++ py_ext/Makefile	Wed Nov 26 17:58:49 2003
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/11/26 17:08:13 mpasternak Exp $
  
  mingcmodule.so: ming_wrap.o
 -	gcc -g -Wall -shared -o mingcmodule.so ming_wrap.o -lming
-+	gcc -g -Wall -Wl,${RPATH_FLAG} -shared -o mingcmodule.so ming_wrap.o -lming
++	gcc -g -Wall ${COMPILER_RPATH_FLAG} -shared -o mingcmodule.so ming_wrap.o -lming
  
  mingc.pyd: ming_wrap.o
  	dllwrap --dllname mingc.pyd --driver-name gcc --def mingc.def \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/20 20:19:14 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/27 06:30:36 jlamwww Exp $
 #
 
 DISTNAME=		xspread3.1.1c
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_HAS_MANDIR=	no
 
 #CONFIGURE_ENV+=		CPPFLAGS="-I${X11BASE}/include"
-MAKE_ENV+=		LOCAL_LDFLAGS="-Wl,${RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib"
+MAKE_ENV+=		LOCAL_LDFLAGS="${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib"
 
 PKGMANDIR?=		man
 

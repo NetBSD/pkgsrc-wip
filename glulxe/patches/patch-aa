@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/05/23 23:19:16 dillo Exp $
+$NetBSD: patch-aa,v 1.3 2004/08/27 06:30:30 jlamwww Exp $
 
 --- Makefile.orig	Tue Jul 11 04:09:06 2000
 +++ Makefile
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.2 2004/05/23 23:19:16 dillo Exp $
  
  CFLAGS = $(OPTIONS) -I$(GLKINCLUDEDIR)
 -LIBS = -L$(GLKLIBDIR) $(GLKLIB) $(LINKLIBS) 
-+LIBS = -L$(GLKLIBDIR) -W,${RPATH_FLAG}${GLKLIBDIR} $(GLKLIB) $(LINKLIBS) 
++LIBS = -L$(GLKLIBDIR) ${COMPILER_RPATH_FLAG}${GLKLIBDIR} $(GLKLIB) $(LINKLIBS) 
  
  OBJS = main.o files.o vm.o exec.o funcs.o operand.o string.o glkop.o \
    serial.o search.o gestalt.o osdepend.o
