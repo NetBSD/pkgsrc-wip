@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/22 03:39:44 jcd Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/25 16:13:11 jcd Exp $
 
 DISTNAME=	mod_macro-1.1.5
 PKGNAME=        ${DISTNAME:S/mod_/ap2-/}
@@ -11,7 +11,7 @@ COMMENT=        Apache module for using macros in config files
 
 CONFLICTS=	ap-macro-[0-9]*
 
-USE_BUILDLINK2=         yes
+USE_BUILDLINK3=         yes
 NO_CONFIGURE=		yes
 
 APACHE_MODULE_NAME=     ${DISTNAME:C|-.*||}.so
@@ -35,5 +35,5 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ${APXS} -i -n ${APACHE_MODULE_NAME} ${APACHE_MODULE_LA}
 
-.include "../../www/apache2/buildlink2.mk"
+.include "../../www/apache2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
