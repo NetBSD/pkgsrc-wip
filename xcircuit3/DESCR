@@ -4,6 +4,9 @@ produce circuit netlists through schematic capture. XCircuit regards
 circuits as inherently hierarchical, and writes both hierarchical
 PostScript output and hierarchical SPICE netlists. Circuit components
 are saved in and retrieved from libraries which are fully editable.
+
 XCircuit does not separate artistic expression from circuit drawing;
 it maintains flexiblity in style without compromising the power of
-schematic capture.
+schematic capture. The XCircuit is useful for creation of many and
+many things from electric circuits to misic sheets, house plans,
+and even to logotypes.
