@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2003/07/25 19:29:39 blef Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2003/07/26 22:09:17 blef Exp $
 bin/Xmark
 bin/appres
 bin/atobm
@@ -828,9 +828,13 @@ lib/X11/xkb/xkbcomp
 lib/X11/xman.help
 lib/X11/xsm/system.xsm
 @dirrm lib/X11/icons/whiteglass/cursors
+@dirrm lib/X11/icons/whiteglass
 @dirrm lib/X11/icons/redglass/cursors 
+@dirrm lib/X11/icons/redglass
 @dirrm lib/X11/icons/handhelds/cursors
+@dirrm lib/X11/icons/handhelds
 @dirrm lib/X11/icons/default
+@dirrm lib/X11/icons
 @dirrm lib/X11/xkb/types
 @dirrm lib/X11/xkb/symbols/xfree68
 @dirrm lib/X11/xkb/symbols/sgi
