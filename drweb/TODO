@@ -1,4 +1,4 @@
-$Id: TODO,v 1.7 2004/01/21 15:30:54 bubuchka Exp $
+$Id: TODO,v 1.8 2004/04/07 07:38:21 bubuchka Exp $
 
 - [jmmv] Several cleanup.
 
@@ -6,11 +6,6 @@ $Id: TODO,v 1.7 2004/01/21 15:30:54 bubuchka Exp $
 
 - Wait until DrWeb 4.30.x for NetBSD will released, then support
   it.  Just at this moment it runs under FreeBSD binary emulation.
-
-- It is possible use both variants of DrWeb/Linux - for glibc 2.2
-  and for glibc 2.3 (customizable with GLIBC_VERSION option).
-  However, user have no assistance on what versions are available
-  to choose. Solve this.
 
 - Eliminate dependency on wget for systems, which have its own
   downloaders.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/07 06:58:45 bubuchka Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/07 07:38:21 bubuchka Exp $
 #
 # Note: We'll not use drweb's own configuration / building / installation
 # facilities so as its all are very ugly.
@@ -35,6 +35,9 @@ DISTTYPE=	freebsd4
 DISTTYPE=	solaris
 .elif ${OPSYS} == "Linux"
 GLIBC_VERSION?=	2.3
+.  if empty(GLIBC_VERSION:tW:M2.[1-3])
+PKG_FAIL_REASON="Unknown glibc version (must be one of 2.[1-3], but set to ${GLIBC_VERSION})."
+.  endif
 BUILD_DEFS+=	GLIBC_VERSION
 DISTTYPE=	glibc.${GLIBC_VERSION}
 .endif
