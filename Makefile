@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.138 2003/05/05 09:23:11 drue Exp $
-# $NetBSD: Makefile,v 1.138 2003/05/05 09:23:11 drue Exp $
+# $Id: Makefile,v 1.139 2003/05/05 12:17:51 drue Exp $
+# $NetBSD: Makefile,v 1.139 2003/05/05 12:17:51 drue Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -86,6 +86,7 @@ SUBDIR+=	nagios-plugin-pgsql
 SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	navigatrix
+SUBDIR+=	netbeans-ide
 SUBDIR+=	nvtv
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-HTTP-GHTTP
