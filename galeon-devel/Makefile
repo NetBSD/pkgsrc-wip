@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/22 00:42:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/23 22:48:10 xtraeme Exp $
 #
 
 DISTNAME=	galeon-1.3.14a
@@ -41,7 +41,7 @@ SUBST_CLASSES=		    glib2
 SUBST_STAGE.glib2=	    post-patch
 SUBST_FILES.glib2=	    utils/galeon-marshal.c
 SUBST_SED.glib2=	    -e s,g_value_take_string,g_value_set_string_take_ownership,g
-SUBST_MESSAGE.glib2=	    "Fixing g_value_take_string()"
+SUBST_MESSAGE.glib2=	    "Fixing g_value_take_string."
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
