@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/07/26 17:46:53 marc Exp $
+
+--- imap/ipurge.c.orig	2003-05-20 17:45:50.000000000 +0200
++++ imap/ipurge.c	2003-07-26 16:29:24.000000000 +0200
+@@ -107,7 +107,7 @@
+ void print_stats(mbox_stats_t *stats);
+ 
+ int main (int argc, char *argv[]) {
+-  char option;
++  int option;
+   char buf[MAX_MAILBOX_PATH+1];
+   char *alt_config = NULL;
+   int r;
