@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2003/11/05 00:31:37 xtraeme Exp $
+$NetBSD: patch-aa,v 1.6 2003/12/29 15:36:35 xtraeme Exp $
 
---- configure.orig	2003-11-05 01:16:10.000000000 +0100
-+++ configure	2003-11-05 01:17:39.000000000 +0100
-@@ -22491,7 +22491,7 @@
- fi;
- 
-     if test "$places" = "search"; then
--      places="std /usr/local/include/db4:/usr/local/lib /usr/local
-+      places="std ${PREFIX}/include/db4:${PREFIX}/lib /usr/local
-               /usr/local/BerkeleyDB.4.1 /usr/include/db4:/usr/lib
-               /sw/include/db4:/sw/lib"
-     fi
-@@ -22564,7 +22564,7 @@
+--- configure.orig	2003-12-29 16:30:09.000000000 +0100
++++ configure	2003-12-29 16:31:04.000000000 +0100
+@@ -23770,7 +23770,7 @@
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -20,16 +11,16 @@ $NetBSD: patch-aa,v 1.5 2003/11/05 00:31:37 xtraeme Exp $
  #include <stdio.h>
  main ()
  {
-@@ -22914,7 +22914,7 @@
+@@ -24101,7 +24101,7 @@
    if test "$places" = "search"; then
      places="std /usr/include/mysql:/usr/lib /usr/local
              /usr/include/mysql:/usr/lib/mysql
--            /usr/local/include/mysql:/usr/local/lib
-+            ${PREFIX}/include/mysql:${PREFIX}/lib
+-            /usr/local/include/mysql:/usr/local/lib/mysql
++            ${PREFIX}/include/mysql:${PREFIX}/lib/mysql
+             /usr/local/include/mysql:/usr/local/lib
              /sw/include/mysql:/sw/lib"
    fi
-   # Now `places' is guaranteed to be a list of place specs we should
-@@ -23087,7 +23087,7 @@
+@@ -24284,7 +24284,7 @@
    if test "$places" = "search"; then
      places="std /usr/include/postgresql:/usr/lib /usr/local
              /sw/include/postgresql:/sw/lib
