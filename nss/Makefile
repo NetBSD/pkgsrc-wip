@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/19 22:41:10 matthewluckie Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/23 18:07:25 bencollver Exp $
 
 DISTNAME=		nss-3.9.2
 CATEGORIES=		security
@@ -19,6 +19,7 @@ CFLAGS+=		-I${LOCALBASE}/include/nspr
 DIST=			${WRKSRC}/../../dist
 BUILD_TARGET=		nss_build_all
 MAKE_ENV=		BSD_LDOPTS="-L${LOCALBASE}/lib" BUILD_OPT=1
+MAKE_ENV+=		LIBRUNPATH=${PREFIX}/lib
 
 .include		"../../mk/bsd.prefs.mk"
 
@@ -46,7 +47,7 @@ SCRIPTS_ENV+=		OS_VERSION=${OS_VERSION:Q}
 do-install:
 	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR}/nss-install
 
-.include "../../devel/nspr/buildlink3.mk"
+.include "../../wip/nspr/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
