@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 2003/07/24 00:41:07 xtraeme Exp $
+
 --- config/cf/linux.cf.in.orig	2003-07-24 02:01:16.000000000 +0200
 +++ config/cf/linux.cf.in	2003-07-24 02:04:38.000000000 +0200
 @@ -555,14 +555,14 @@
