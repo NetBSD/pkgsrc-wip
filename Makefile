@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.124 2003/04/27 04:26:39 xtraeme Exp $
-# $NetBSD: Makefile,v 1.124 2003/04/27 04:26:39 xtraeme Exp $
+# $Id: Makefile,v 1.125 2003/04/27 10:35:05 cjep Exp $
+# $NetBSD: Makefile,v 1.125 2003/04/27 10:35:05 cjep Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -84,12 +84,12 @@ SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	navigatrix
 SUBDIR+=	nvtv
-SUBDIR+=	p5-gtk2
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-Net-Jabber
 SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-XML-Stream
+SUBDIR+=	p5-gtk2
 SUBDIR+=	perltidy
 SUBDIR+=	phplot
 SUBDIR+=	pinball
