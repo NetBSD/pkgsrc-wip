@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/14 21:30:06 poppnk Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/27 22:37:00 blef Exp $
 
 DISTNAME=		WEPCrack-0.0.10
 WRKSRC=			${WRKDIR}
@@ -18,5 +18,4 @@ do-install:
 	${INSTALL_SCRIPT} $$A ${PREFIX}/bin/; \
 	done
 
-.include	"../../lang/perl5/buildlink2.mk"
 .include	"../../mk/bsd.pkg.mk"
