@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/01 16:58:44 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/01 17:37:20 cjep Exp $
 #
 
 DISTNAME=		host-20031203
+PKGREVISION=		1
 CATEGORIES=		wip
 MASTER_SITES=		ftp://ftp.weird.com/pub/local/
 
