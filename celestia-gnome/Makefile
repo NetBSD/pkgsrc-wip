@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/08 21:02:06 lsed Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/08 23:23:35 lsed Exp $
 #
 
 .include "../../wip/celestia/Makefile.common"
@@ -18,7 +18,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/celestia/celestia ${PREFIX}/bin/gcelestia
 
 .include "../../graphics/glut/buildlink2.mk"
-.include "../../x11/gtkglarea/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../x11/gtkglarea/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
