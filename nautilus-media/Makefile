@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/28 09:48:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/19 09:07:48 xtraeme Exp $
 #
 
 DISTNAME=	nautilus-media-0.2.2
@@ -10,7 +10,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GStreamer-based multimedia views for Nautilus
 
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK2=		yes
@@ -21,9 +21,6 @@ USE_GMAKE=		yes
 USE_X11=		yes
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
-
-CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
-MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
 GCONF2_SCHEMAS+=	gst-thumbnail.schemas
 
