@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2004/01/25 22:44:54 minskim Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/05/08 21:30:28 minskim Exp $
 #
 # This Makefile fragment is included by packages that use xproto.
 #
@@ -11,6 +11,7 @@ XPROTO_BUILDLINK2_MK=	# defined
 BUILDLINK_PACKAGES+=			xproto
 BUILDLINK_DEPENDS.xproto?=		xproto>=6.6
 BUILDLINK_PKGSRCDIR.xproto?=		../../wip/xproto
+BUILDLINK_DEPMETHOD.xproto?=		build
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xproto=xproto
 BUILDLINK_PREFIX.xproto_DEFAULT=	${LOCALBASE}
