@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.2 2004/01/25 02:12:05 grantbeattie Exp $
-# $Id: Makefile.common,v 1.2 2004/01/25 02:12:05 grantbeattie Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/02/27 23:42:13 rillig Exp $
+# $Id: Makefile.common,v 1.3 2004/02/27 23:42:13 rillig Exp $
 #
 
 E2FSPROGS_DISTNAME=	e2fsprogs-1.34
@@ -21,22 +21,3 @@ CONFIGURE_ARGS+=        --enable-elf-shlibs
 .if ${OPSYS} != "Linux"
 CONFIGURE_ARGS+=	--disable-fsck
 .endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
