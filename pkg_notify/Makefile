@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/08 10:50:45 imilh Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/08 11:49:31 imilh Exp $
 #
 
 DISTNAME=	pkg_notify-0.2
@@ -21,8 +21,6 @@ NO_BUILD=	yes
 USE_PERL5=	yes
 
 INSTALLATION_DIRS=	bin
-
-pre-patch:
 
 SUBST_CLASSES+=	pkg_notify
 SUBST_MESSAGE.pkg_notify=	"Setting up various path."
