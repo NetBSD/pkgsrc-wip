@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/05/02 21:08:22 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/18 15:14:21 ppostma Exp $
 #
 
 DISTNAME=		phlib-1.20
-CATEGORIES=		wip
+CATEGORIES=		devel
 MASTER_SITES=		http://www.nfluid.com/download/src/
 EXTRACT_SUFX=		.tgz
 
