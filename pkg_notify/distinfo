@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/11/09 09:30:22 imilh Exp $
+$NetBSD: distinfo,v 1.4 2004/11/22 15:37:01 imilh Exp $
 
-SHA1 (pkg_notify-0.2.1.tar.gz) = 0652f116122c53b7361e6436a4593e62db834b26
-Size (pkg_notify-0.2.1.tar.gz) = 4088 bytes
+SHA1 (pkg_notify-0.2.2.tar.gz) = b1b14a70f833b7eb314523be5997fe6be77b2f12
+Size (pkg_notify-0.2.2.tar.gz) = 4214 bytes
