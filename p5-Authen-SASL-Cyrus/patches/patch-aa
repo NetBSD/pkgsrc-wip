@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/16 12:23:01 cubidou Exp $
+
+--- Cyrus.xs.orig	2003-02-03 22:02:03.000000000 +0100
++++ Cyrus.xs
+@@ -10,7 +10,7 @@
+ #include <EXTERN.h>
+ #include <perl.h>
+ #include <XSUB.h>
+-#include <sasl.h>
++#include <sasl/sasl.h>
+ 
+ 
+ 
