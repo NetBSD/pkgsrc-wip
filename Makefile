@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1454 2004/09/06 21:25:18 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1454 2004/09/06 21:25:18 adrian_p Exp $
+# $Id: Makefile,v 1.1455 2004/09/07 22:39:10 cetrox Exp $
+# $NetBSD: Makefile,v 1.1455 2004/09/07 22:39:10 cetrox Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -155,6 +155,7 @@ SUBDIR+=	foomatic-db
 SUBDIR+=	foomatic-db-engine
 SUBDIR+=	foomatic-filters
 SUBDIR+=	foomatic-filters-cups
+SUBDIR+=	fox
 SUBDIR+=	freevo
 SUBDIR+=	frontpage
 SUBDIR+=	fvcool
