@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/27 19:40:17 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/25 23:02:16 blef Exp $
 #
 
 DISTNAME=		scite159
@@ -12,7 +12,7 @@ MAINTAINER=		shattered@users.sourceforge.net
 HOMEPAGE=		http://www.scintilla.org/
 COMMENT=		Editor with facilities for building and running programs
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 do-build:
@@ -23,6 +23,6 @@ do-install:
 	cd ${WRKSRC}/scite/gtk && ${GMAKE} GTK2=1 install
 	${INSTALL_MAN} ${WRKSRC}/scite/doc/scite.1 ${PREFIX}/man/man1
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
