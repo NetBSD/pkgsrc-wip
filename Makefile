@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.911 2004/01/26 04:47:29 minskim Exp $
-# $NetBSD: Makefile,v 1.911 2004/01/26 04:47:29 minskim Exp $
+# $Id: Makefile,v 1.912 2004/01/26 15:12:22 oherrala Exp $
+# $NetBSD: Makefile,v 1.912 2004/01/26 15:12:22 oherrala Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -430,6 +430,7 @@ SUBDIR+=	par2
 SUBDIR+=	parsifal
 SUBDIR+=	passepartout
 SUBDIR+=	patchutils
+SUBDIR+=	pbl
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdns
 SUBDIR+=	pdq
@@ -614,6 +615,7 @@ SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
 SUBDIR+=	socat
 SUBDIR+=	songwrite
+SUBDIR+=	spamprobe-pbl
 SUBDIR+=	speedx
 SUBDIR+=	sqlrelay
 SUBDIR+=	sredird
