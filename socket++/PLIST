@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/29 18:04:43 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/18 19:52:39 daprice Exp $
 include/socket++/echo.h
 include/socket++/fork.h
 include/socket++/ftp.h
@@ -10,9 +10,5 @@ include/socket++/sockinet.h
 include/socket++/sockstream.h
 include/socket++/sockunix.h
 info/socket++.info
-lib/libsocket++.a
 lib/libsocket++.la
-lib/libsocket++.so
-lib/libsocket++.so.1
-lib/libsocket++.so.1.1
 @dirrm include/socket++
