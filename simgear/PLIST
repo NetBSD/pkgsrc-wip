@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/19 02:21:36 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/19 05:22:37 xtraeme Exp $
 include/simgear/bucket/newbucket.hxx
 include/simgear/compiler.h
 include/simgear/constants.h
@@ -73,7 +73,6 @@ include/simgear/scene/tgdb/pt_lights.hxx
 include/simgear/scene/tgdb/userdata.hxx
 include/simgear/screen/colors.hxx
 include/simgear/screen/extensions.hxx
-include/simgear/screen/jpgfactory.hxx
 include/simgear/screen/screen-dump.hxx
 include/simgear/screen/texture.hxx
 include/simgear/screen/tr.h

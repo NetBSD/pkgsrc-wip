@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/19 02:21:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/19 05:22:37 xtraeme Exp $
 #
 
 DISTNAME=		SimGear-0.3.4
@@ -14,8 +14,6 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-
-CONFIGURE_ARGS+=	--with-jpeg-factory
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"
