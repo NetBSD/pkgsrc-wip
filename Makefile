@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1332 2004/06/20 19:45:10 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1332 2004/06/20 19:45:10 xtraeme Exp $
+# $Id: Makefile,v 1.1333 2004/06/21 07:31:47 sourceforge_low Exp $
+# $NetBSD: Makefile,v 1.1333 2004/06/21 07:31:47 sourceforge_low Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -379,6 +379,7 @@ SUBDIR+=	mc
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	memtester
+SUBDIR+=	menumaker
 SUBDIR+=	metatheme
 SUBDIR+=	mftrace
 SUBDIR+=	ming
@@ -546,6 +547,7 @@ SUBDIR+=	premake
 SUBDIR+=	prngd
 SUBDIR+=	procps
 SUBDIR+=	prothon
+SUBDIR+=	prozilla
 SUBDIR+=	prtunnel
 SUBDIR+=	pts
 SUBDIR+=	putty
