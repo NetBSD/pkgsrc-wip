@@ -3,6 +3,6 @@
  *
  */ 
 
-#define ProjectRoot PREFIX
+#define ProjectRoot @PREFIX@
 #define BuildHtmlManPages YES
-#define MakeCmd MAKE
+#define MakeCmd @MAKE@

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/08/28 06:47:43 blef Exp $
+# $NetBSD: Makefile,v 1.15 2003/08/28 15:22:05 jeremy-c-reed Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
@@ -49,11 +49,11 @@ do-build:
 	@${TOUCH} ${WRKSRC}/config/cf/date.def
 	@${CP} ${FILESDIR}/xf86site.def ${WRKSRC}/config/cf
 	@${SED} \
-		-e "s|PREFIX|${PREFIX}|g" \
-		-e "s|BLNK|${BUILDLINK_DIR}|g" \
-		-e "s|LOCALBASE|${LOCALBASE}|g " \
-		-e "s|LDFLAGS|${LDFLAGS}|g" \
-		-e "s|MAKE|${MAKE_PROGRAM}|" \
+		-e "s|@PREFIX@|${PREFIX}|g" \
+		-e "s|@BLNK@|${BUILDLINK_DIR}|g" \
+		-e "s|@LOCALBASE@|${LOCALBASE}|g " \
+		-e "s|@LDFLAGS@|${LDFLAGS}|g" \
+		-e "s|@MAKE@|${MAKE_PROGRAM}|" \
 		${FILESDIR}/host.def > \
 		${WRKSRC}/config/cf/host.def
 	( cd ${WRKSRC} && ${MAKE} Makefile.boot && \
