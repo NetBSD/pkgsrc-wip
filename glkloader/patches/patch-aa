@@ -1,0 +1,68 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/02 17:26:58 dillo Exp $
+
+--- Makefile.orig	Sat Jun 23 23:06:54 2001
++++ Makefile
+@@ -13,22 +13,22 @@ MICRO=2
+ # and glk.h, glkstart.h, and Make.glkloader in the include directory.
+ 
+ GLKNAME = glkloader
+-GLKINCLUDEDIR = /usr/local/include/glk/
+-GLKLIBDIR = /usr/local/lib/
++GLKINCLUDEDIR = /usr/local/include/glkloader
++GLKLIBDIR = /usr/local/lib
+ 
+ # Pick a C compiler.
+ #CC = cc
+-CC = gcc
+-LINK = gcc
++#CC = gcc
++LINK = ${CC}
+ INSTALL = install -g 0 -o 0
+ 
+ OPTIONS = -g -Wall -fPIC -DLINUX
+-INCLUDEDIRS = -I$(GLKINCLUDEDIR)
++INCLUDEDIRS = -I$(GLKINCLUDEDIR) -I.
+ 
+ CFLAGS = $(OPTIONS) $(INCLUDEDIRS)
+ LDFLAGS = -rdynamic
+ LIBDIRS =
+-LIBS = -ldl
++#LIBS = -ldl
+ 
+ XPCONFIG = -Lxpconfig/.libs -lxpconfig
+ 
+@@ -56,23 +56,26 @@ $(GLKLIBSHARED): $(OBJS)
+ 
+ $(GLKMAKEFILE):
+ 	echo LINKLIBS = $(LIBDIRS) $(LIBS) > $(GLKMAKEFILE)
+-	echo GLKLIB = -l$(GLKNAME) >> $(GLKMAKEFILE)
++	echo GLKLIB = -L$(GLKLIBDIR) ${COMPILER_RPATH_FLAG}$(GLKLIBDIR) \
++		-pthread -Wl,--export-dynamic -l$(GLKNAME) >> $(GLKMAKEFILE)
+ 
+ glkfuncs.c: generate_glkfuncs.pl glk.h func.txt
+-	./generate_glkfuncs.pl glk.h func.txt
++	perl generate_glkfuncs.pl glk.h func.txt
+ 
+ $(OBJS): $(HEADERS)
+ 
+ install:
+-	$(INSTALL) -m 2755 -d $(GLKINCLUDEDIR)
+-	$(INSTALL) -m 0644 $(GLKMAKEFILE) $(GLKINCLUDEDIR)
+-	$(INSTALL) -m 2755 -d $(GLKLIBDIR)
+-	$(INSTALL) -m 0644 $(GLKLIBSTATIC) $(GLKLIBDIR)
+-	$(INSTALL) -m 0755 $(GLKLIBSHARED).$(MAJOR).$(MINOR).$(MICRO) $(GLKLIBDIR)
++	$(BSD_INSTALL_DATA_DIR) $(GLKINCLUDEDIR)
++	$(BSD_INSTALL_DATA) $(GLKMAKEFILE) $(GLKINCLUDEDIR)
++	$(BSD_INSTALL_DATA) gi_blorb.h $(GLKINCLUDEDIR)
++	$(BSD_INSTALL_DATA) gi_dispa.h $(GLKINCLUDEDIR)
++	$(BSD_INSTALL_DATA) glk.h $(GLKINCLUDEDIR)
++	$(BSD_INSTALL_DATA_DIR) $(GLKLIBDIR)
++	$(BSD_INSTALL_LIB) $(GLKLIBSTATIC) $(GLKLIBDIR)
++	$(BSD_INSTALL_LIB) $(GLKLIBSHARED).$(MAJOR).$(MINOR).$(MICRO) $(GLKLIBDIR)
+ 	ln -s -f $(GLKLIBDIR)/$(GLKLIBSHARED).$(MAJOR).$(MINOR).$(MICRO) $(GLKLIBDIR)/$(GLKLIBSHARED).$(MAJOR).$(MINOR)
+ 	ln -s -f $(GLKLIBDIR)/$(GLKLIBSHARED).$(MAJOR).$(MINOR).$(MICRO) $(GLKLIBDIR)/$(GLKLIBSHARED).$(MAJOR)
+ 	ln -s -f $(GLKLIBDIR)/$(GLKLIBSHARED).$(MAJOR).$(MINOR).$(MICRO) $(GLKLIBDIR)/$(GLKLIBSHARED)
+-	ldconfig
+ 
+ uninstall:
+ 	rm -f $(GLKINCLUDEDIR)/$(GLKMAKEFILE)

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/02 17:26:58 dillo Exp $
+
+SHA1 (glkloader-0.3.2.tar.gz) = b8de6cfe47c656dbd32ecad79d5253ade6c5cb50
+RMD160 (glkloader-0.3.2.tar.gz) = 7e060fca1ebbbc7154b4077700b74c124a4fa9ca
+Size (glkloader-0.3.2.tar.gz) = 179678 bytes
+SHA1 (patch-aa) = c023b989a2a089a516e8c321bf95c51ecb1766fe
+SHA1 (patch-ab) = f1c7181b7570f9c705579eab0293dc04d867e6fa
+SHA1 (patch-ac) = 9cab3893e1e5d624aa88fbcd76eb9edb27e08293
