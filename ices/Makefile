@@ -1,31 +1,42 @@
-# $NetBSD: Makefile,v 1.1.1.2 2003/04/29 00:53:47 icmp Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/29 01:17:34 icmp Exp $
 #
 
-DISTNAME=	libshout-1.0.9
+DISTNAME=	ices-0.2.3
 CATEGORIES=	audio
-MASTER_SITES=	http://developer.icecast.org/libshout/releases/
+MASTER_SITES=	http://www.icecast.org/releases/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://developer.icecast.org/libshout/
-COMMENT=	Library for using icecast servers
+HOMEPAGE=	http://www.icecast.org/
+COMMENT=	MP3/Vorbis encoder for icecast servers
 
+USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
-REAL_INSTALL=		${INSTALL} -c -o 0 -g 0
+CONFIGURE_ARGS+=	--with-lame=${BUILDLINK_PREFIX.lame} \
+			--with-perl=${BUILDLINK_PREFIX.perl} \
+			--with-xml=${BUILDLINK_PREFIX.libxml2}/bin
 
-# The GNU Makefile in the distribution is stubborn about changing where 
-# docs and examples get installed, so...
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../audio/lame/buildlink2.mk"
 
-.include "../../mk/bsd.prefs.mk"
+# Set USE_VORBIS to optionally include these in ices
+#
 
-do-install:
-	${MKDIR} ${LOCALBASE}/share/examples/${PKGNAME}
-	${MKDIR} ${LOCALBASE}/share/doc/${PKGNAME}
-	${MKDIR} ${LOCALBASE}/include/shout
-	${SH} -c "${REAL_INSTALL} ${WRKSRC}/example/* ${LOCALBASE}/share/examples/${PKGNAME}"
-	${SH} -c "${REAL_INSTALL} ${WRKSRC}/doc/*.html ${LOCALBASE}/share/doc/${PKGNAME}"
-	${SH} -c "${REAL_INSTALL} ${WRKSRC}/shout.h ${LOCALBASE}/include/shout"
-	${SH} -c "${REAL_INSTALL} ${WRKSRC}/.libs/libshout.so* ${LOCALBASE}/lib"
-	${SH} -c "${REAL_INSTALL} ${WRKSRC}/.libs/libshout.la ${LOCALBASE}/lib"
-	${SH} -c "${REAL_INSTALL} ${WRKSRC}/.libs/libshout.a ${LOCALBASE}/lib"
+# For Python support, we need a shared library.. 
+#.if defined(USE_PYTHON)
+#.   include "../../lang/python/application.mk"
+#CONFIGURE_ARGS+=	--with-python
+#CPPFLAGS+=		${BUILDLINK_CPPFLAGS.${PYPACKAGE}}	
+#LDFLAGS+=		${BUILDLINK_LDFLAGS.${PYPACKAGE}}
+#.else
+CONFIGURE_ARGS+=	--without-python
+#.endif
+
+.if defined(USE_VORBIS)
+.   include "../../audio/libvorbis/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-vorbis=${BUILDINK_PREFIX.libvorbis}
+.else
+CONFIGURE_ARGS+=	--without-vorbis
+.endif
 
 .include "../../mk/bsd.pkg.mk"
