@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.210 2003/06/03 09:27:06 jmmv Exp $
-# $NetBSD: Makefile,v 1.210 2003/06/03 09:27:06 jmmv Exp $
+# $Id: Makefile,v 1.211 2003/06/03 13:49:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.211 2003/06/03 13:49:52 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -59,7 +59,6 @@ SUBDIR+=	gnomeicu
 SUBDIR+=	gotmail
 SUBDIR+=	grip
 SUBDIR+=	gstreamer-player
-SUBDIR+=	gtetrinet2
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtk2-engines-mist
 SUBDIR+=	gtk2-engines-xfce
@@ -76,6 +75,7 @@ SUBDIR+=	ion-devel
 SUBDIR+=	ion-dock
 SUBDIR+=	jabberd
 SUBDIR+=	jakarta-log4j
+SUBDIR+=	jazz
 SUBDIR+=	jdk-openjit
 SUBDIR+=	jdk12
 SUBDIR+=	jdk12-openjit
@@ -104,6 +104,7 @@ SUBDIR+=	mopac
 SUBDIR+=	mtf
 SUBDIR+=	multi-aterm
 SUBDIR+=	muse
+SUBDIR+=	mutella
 SUBDIR+=	nagios-base
 SUBDIR+=	nagios-plugin-ldap
 SUBDIR+=	nagios-plugin-mysql
@@ -137,9 +138,9 @@ SUBDIR+=	portmap
 SUBDIR+=	ppp
 SUBDIR+=	procps
 SUBDIR+=	pts
-SUBDIR+=	py-elementtree
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-PgSQL
+SUBDIR+=	py-elementtree
 SUBDIR+=	py-gnome2
 SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-spreadmodule
@@ -165,7 +166,6 @@ SUBDIR+=	tex-foiltex
 SUBDIR+=	theora-nightly
 SUBDIR+=	totem
 SUBDIR+=	tsclient
-SUBDIR+=	tuxmath
 SUBDIR+=	tuxtype2
 SUBDIR+=	umix
 SUBDIR+=	vcdgear
