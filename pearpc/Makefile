@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/06/19 14:57:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/19 18:19:42 xtraeme Exp $
 #
 
 DISTNAME=		pearpc-0.2.0
@@ -26,6 +26,8 @@ CONF_FILES=		${EGDIR}/ppccfg.example ${PKG_SYSCONFDIR}/ppccfg.conf
 BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 CONFIGURE_ARGS+=	--enable-cpu=jitc_x86
 .endif
+
+CONFIGURE_ARGS+=	--disable-debug
 
 INSTALLATION_DIRS=	share/${PKGBASE} bin
 
