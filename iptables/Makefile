@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/27 18:08:12 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/04 19:40:28 jeremy-c-reed Exp $
 
-DISTNAME=		iptables-1.2.8
+DISTNAME=		iptables-1.2.9
 CATEGORIES=		security
 MASTER_SITES=		http://www.netfilter.org/files/
 MASTER_SITES+=		ftp://ftp.netfilter.org/pub/iptables/
@@ -15,18 +15,17 @@ ONLY_FOR_PLATFORM=	Linux-[2-9]*-*
 
 USE_GNU_TOOLS+=		make
 NO_CONFIGURE=		YES
+PKGMANDIR?=		man  # until this in official pkgsrc
 
 do-build:
 	cd ${WRKSRC} && \
 	${GMAKE} BINDIR=${LOCALBASE}/bin LIBDIR=${LOCALBASE}/lib \
-		MANDIR=${LOCALBASE}/man \
- KERNEL_DIR=/tmp/pkgsrc/new/linux-kernel/work.k3/linux-2.4.22/
+		MANDIR=${LOCALBASE}/${PKGMANDIR}
 
 do-install:
 	cd ${WRKSRC} && \
 	${GMAKE} BINDIR=${LOCALBASE}/bin LIBDIR=${LOCALBASE}/lib \
-		MANDIR=${LOCALBASE}/man install \
- KERNEL_DIR=/tmp/pkgsrc/new/linux-kernel/work.k3/linux-2.4.22/
+		MANDIR=${LOCALBASE}/${PKGMANDIR} install
 
 # If you are a developer, you can install the headers, development libraries
 # and associated development man pages, with:

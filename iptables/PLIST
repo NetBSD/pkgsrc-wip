@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/27 18:08:12 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/04 19:40:28 jeremy-c-reed Exp $
 bin/ip6tables
 bin/iptables
 bin/iptables-restore
@@ -6,25 +6,21 @@ bin/iptables-save
 lib/iptables/libip6t_HL.so
 lib/iptables/libip6t_LOG.so
 lib/iptables/libip6t_MARK.so
-lib/iptables/libip6t_ah.so
-lib/iptables/libip6t_dst.so
-lib/iptables/libip6t_esp.so
+lib/iptables/libip6t_TRACE.so
 lib/iptables/libip6t_eui64.so
-lib/iptables/libip6t_frag.so
-lib/iptables/libip6t_hbh.so
 lib/iptables/libip6t_hl.so
 lib/iptables/libip6t_icmpv6.so
-lib/iptables/libip6t_ipv6header.so
 lib/iptables/libip6t_length.so
 lib/iptables/libip6t_limit.so
 lib/iptables/libip6t_mac.so
 lib/iptables/libip6t_mark.so
 lib/iptables/libip6t_multiport.so
 lib/iptables/libip6t_owner.so
-lib/iptables/libip6t_rt.so
 lib/iptables/libip6t_standard.so
 lib/iptables/libip6t_tcp.so
 lib/iptables/libip6t_udp.so
+lib/iptables/libipt_CLASSIFY.so
+lib/iptables/libipt_CONNMARK.so
 lib/iptables/libipt_DNAT.so
 lib/iptables/libipt_DSCP.so
 lib/iptables/libipt_ECN.so
@@ -32,6 +28,8 @@ lib/iptables/libipt_LOG.so
 lib/iptables/libipt_MARK.so
 lib/iptables/libipt_MASQUERADE.so
 lib/iptables/libipt_MIRROR.so
+lib/iptables/libipt_NETMAP.so
+lib/iptables/libipt_NOTRACK.so
 lib/iptables/libipt_REDIRECT.so
 lib/iptables/libipt_REJECT.so
 lib/iptables/libipt_SAME.so
@@ -39,16 +37,19 @@ lib/iptables/libipt_SNAT.so
 lib/iptables/libipt_TARPIT.so
 lib/iptables/libipt_TCPMSS.so
 lib/iptables/libipt_TOS.so
+lib/iptables/libipt_TRACE.so
 lib/iptables/libipt_TTL.so
 lib/iptables/libipt_ULOG.so
 lib/iptables/libipt_ah.so
+lib/iptables/libipt_connlimit.so
+lib/iptables/libipt_connmark.so
 lib/iptables/libipt_conntrack.so
 lib/iptables/libipt_dscp.so
 lib/iptables/libipt_ecn.so
 lib/iptables/libipt_esp.so
 lib/iptables/libipt_helper.so
 lib/iptables/libipt_icmp.so
-lib/iptables/libipt_iplimit.so
+lib/iptables/libipt_iprange.so
 lib/iptables/libipt_length.so
 lib/iptables/libipt_limit.so
 lib/iptables/libipt_mac.so
@@ -57,7 +58,7 @@ lib/iptables/libipt_multiport.so
 lib/iptables/libipt_owner.so
 lib/iptables/libipt_physdev.so
 lib/iptables/libipt_pkttype.so
-lib/iptables/libipt_recent.so
+lib/iptables/libipt_realm.so
 lib/iptables/libipt_rpc.so
 lib/iptables/libipt_standard.so
 lib/iptables/libipt_state.so
