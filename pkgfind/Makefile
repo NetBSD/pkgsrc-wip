@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/14 18:36:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/14 18:42:56 xtraeme Exp $
 
 DISTNAME=	pkgfind-20040614
 CATEGORIES=	pkgtools
@@ -26,7 +26,7 @@ do-install:
 
 SUBST_CLASSES=		path
 SUBST_STAGE.path=	post-patch
-SUBST_FILES.path=	${FILESDIR}/pkgfind.c ${FILESDIR}/pkgfind.1
+SUBST_FILES.path=	pkgfind.c pkgfind.1
 SUBST_SED.path=		-e "s,/usr/pkgsrc,${_PKGSRCDIR},g"
 SUBST_MESSAGE.path=	"Adjusting pkgsrc directory."
 
