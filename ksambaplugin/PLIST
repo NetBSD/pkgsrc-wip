@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/24 15:10:11 ianzag Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/12 17:18:20 kristerw Exp $
+lib/kde3/ksambakonqiplugin.a
 lib/kde3/ksambakonqiplugin.la
 lib/kde3/ksambakonqiplugin.so
+lib/kde3/libkcm_kcmsambaconf.a
 lib/kde3/libkcm_kcmsambaconf.la
 lib/kde3/libkcm_kcmsambaconf.so
 share/kde/applnk/Settings/Network/kcmsambaconf.desktop
