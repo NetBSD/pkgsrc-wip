@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2004/06/08 00:14:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/01 22:45:32 mattd Exp $
 #
 
 DISTNAME=	matchbox-window-manager-0.8.2
 PKGNAME=	${DISTNAME:S/window-manager/wm/}
 CATEGORIES=	wm
-MASTER_SITES=	http://matchbox.handhelds.org/sources/matchbox-window-manager/0.8/
+MASTER_SITES=	ftp://ftp.handhelds.org/projects/matchbox/sources/matchbox-window-manager/0.8/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org

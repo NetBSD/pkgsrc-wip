@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/06/08 00:40:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2005/01/01 22:43:47 mattd Exp $
 #
 
 DISTNAME=	matchbox-panel-manager-0.1
 CATEGORIES=	x11
-MASTER_SITES=	http://matchbox.handhelds.org/sources/matchbox-panel-manager/0.1/
+MASTER_SITES=	ftp://ftp.handhelds.org/projects/matchbox/sources/matchbox-panel-manager/0.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org

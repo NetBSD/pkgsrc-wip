@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/08 00:46:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/01 22:44:33 mattd Exp $
 #
 
 DISTNAME=	matchbox-themes-extra-0.3
 CATEGORIES=	x11
-MASTER_SITES=	http://matchbox.handhelds.org/sources/matchbox-themes-extra/0.3/
+MASTER_SITES=	ftp://ftp.handhelds.org/projects/matchbox/sources/matchbox-themes-extra/0.3/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
