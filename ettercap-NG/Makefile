@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/29 21:49:41 adrian_p Exp $
+# $NetBSD: Makefile,v 1.7 2005/02/04 15:26:32 thomasklausner Exp $
 
 DISTNAME=	ettercap-NG-0.7.2
 CATEGORIES=	net
@@ -56,7 +56,7 @@ post-install:
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../wip/libnet11/buildlink3.mk"
+.include "../../devel/libnet11/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
