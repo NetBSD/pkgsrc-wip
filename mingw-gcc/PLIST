@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/15 19:19:28 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/06/20 06:50:15 xtraeme Exp $
 bin/${MINGW_TARGET}-c++
 bin/${MINGW_TARGET}-cc
 bin/${MINGW_TARGET}-cpp
@@ -12,7 +12,6 @@ ${MINGW_TARGET}/bin/cc
 ${MINGW_TARGET}/bin/cpp
 ${MINGW_TARGET}/bin/g++
 ${MINGW_TARGET}/bin/gcc
-${MINGW_TARGET}/lib/libiberty.a
 ${MINGW_TARGET}/lib/libobjc.a
 ${MINGW_TARGET}/lib/libobjc.la
 ${MINGW_TARGET}/lib/libstdc++.a
@@ -254,7 +253,6 @@ lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/mkheaders
 lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/mkheaders.conf
 lib/gcc-lib/${MINGW_TARGET}/3.3.1/libgcc.a
 lib/gcc-lib/${MINGW_TARGET}/3.3.1/specs
-lib/libiberty.a
 man/man1/cpp.1
 man/man1/gcov.1
 man/man1/${MINGW_TARGET}-g++.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/10 22:04:39 blef Exp $
+# $NetBSD: Makefile,v 1.10 2004/06/20 06:50:15 xtraeme Exp $
 #
 
 DISTNAME=		mingw-gcc-3.3.1-20030804
@@ -18,23 +18,23 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=      	yes
 GNU_CONFIGURE=		yes
 USE_CROSSBASE=		yes
-USE_GNU_TOOLS+=		make
-
-PATH:=			${CROSSBASE}/bin:${PATH}
-
-CONFIGURE_ARGS+=	--prefix=${PREFIX} --exec-prefix=${PREFIX} \
-			--target=${MINGW_TARGET}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS}
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} all-target-libobjc
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} all-target-libstdc++-v3
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} \
+		all-target-libobjc
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} \
+		all-target-libstdc++-v3
 
 post-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} install-target-libobjc
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} install-target-libstdc++-v3
-	${LN} -s ${CROSSBASE}/bin/${MINGW_TARGET}-cpp ${CROSSBASE}/${MINGW_TARGET}/bin/cpp
-	${LN} -s ${CROSSBASE}/bin/${MINGW_TARGET}-gcc ${CROSSBASE}/${MINGW_TARGET}/bin/cc
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} \
+		${MAKE_FLAGS} install-target-libobjc
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} \
+		${MAKE_FLAGS} install-target-libstdc++-v3
+	${LN} -s ${CROSSBASE}/bin/${MINGW_TARGET}-cpp \
+		${CROSSBASE}/${MINGW_TARGET}/bin/cpp
+	${LN} -s ${CROSSBASE}/bin/${MINGW_TARGET}-gcc \
+		${CROSSBASE}/${MINGW_TARGET}/bin/cc
 	cd ${CROSSBASE}/bin/ && ${LN} -s ${MINGW_TARGET}-gcc ${MINGW_TARGET}-cc
 
 .include "../../wip/mingw/Makefile.common"
