@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/08/24 14:29:54 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/01 18:41:30 dolecek Exp $
 
 DISTNAME=	gforge-3.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://gforge.org/download.php/44/
 
@@ -9,7 +10,6 @@ HOMEPAGE=	http://www.gforge.org/
 COMMENT=	Open Source collaborative software development tool
 
 DEPENDS+=	wget>=1.9:../../net/wget
-DEPENDS+=	ap-php>=4.3:../../www/ap-php4
 DEPENDS+=	php-jpgraph>=1.12:../../graphics/php-jpgraph
 DEPENDS+=	php-pgsql>=4.3:../../databases/php4-pgsql
 DEPENDS+=	postgresql-lib>=7.3.1:../../databases/postgresql-lib
