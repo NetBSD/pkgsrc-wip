@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/03 21:10:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/03 21:26:03 jmmv Exp $
 #
 
 DISTNAME=	gtk-sharp-0.18
@@ -40,7 +40,6 @@ pre-configure:
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
-.include "../../graphics/libgdiplus/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
