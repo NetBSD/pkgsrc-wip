@@ -1,0 +1,2 @@
+Tow Python modules (_glibtopmodule.so and _ewmhmodule.so) should be
+built.  Currently, this package builds *.a and *.la instead.
