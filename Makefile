@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1000 2004/02/21 03:22:02 minskim Exp $
-# $NetBSD: Makefile,v 1.1000 2004/02/21 03:22:02 minskim Exp $
+# $Id: Makefile,v 1.1001 2004/02/21 04:25:16 minskim Exp $
+# $NetBSD: Makefile,v 1.1001 2004/02/21 04:25:16 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -143,6 +143,7 @@ SUBDIR+=	fwbuilder
 SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-CornerXMMS
 SUBDIR+=	gDesklets-rssgrab
+SUBDIR+=	gDesklets-starterbar
 SUBDIR+=	galib
 SUBDIR+=	gcc-3.4-ada
 SUBDIR+=	gcc3-ada-devel
