@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/05/26 15:01:21 bmeurer Exp $
+$NetBSD: distinfo,v 1.3 2003/08/02 16:56:59 bmeurer Exp $
 
-SHA1 (devhelp-0.6.0.tar.gz) = b533f748be66b421e6721c4f7d61c81560bd6a42
-Size (devhelp-0.6.0.tar.gz) = 376099 bytes
-SHA1 (patch-ab) = 77d7e4ab36b0a33a4ef50061dafd45528fdb51ff
+SHA1 (devhelp-0.7.tar.gz) = 3a68f8cebfb7698d8b58bccc1fc76e8b6f49563b
+Size (devhelp-0.7.tar.gz) = 485214 bytes
+SHA1 (patch-aa) = 84acab25f3263613a7de6a317b8bcbbe55f0f083

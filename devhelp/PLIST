@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/26 15:01:21 bmeurer Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/08/02 16:56:59 bmeurer Exp $
 bin/devhelp
 lib/devhelp/libdevhelp.a
 lib/devhelp/libdevhelp.la
@@ -41,6 +41,8 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/devhelp.mo
