@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2004/12/14 15:07:33 poppnk Exp $
+# $NetBSD: Makefile,v 1.16 2004/12/23 14:25:00 poppnk Exp $
 
-DISTNAME=	apstget-20041214
+DISTNAME=	apstget-20041223
 CATEGORIES=	pkgtools wip
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -29,6 +29,7 @@ do-install:
 
 .include "../../mk/bsd.prefs.mk"
 
+# AWK compatibilty stuff
 .if ${OPSYS} != "Linux"
 SUBST_SED.etc= -e "s,-W interactive,,"
 .endif

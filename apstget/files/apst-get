@@ -5,9 +5,8 @@
 # AUTHOR: pancake < pancake@phreaker.net >
 # DATE: 2004/12/13
 #
-# depends: pkg_find, pkg_tarup, awk, pkglint
+# depends: pkg_find, pkg_tarup, awk, pkglint, pkg_chk
 #
-# TODO: add xfree/xorg paths into relink
 #
 
 if [ -e "_etc_/apstget.conf" ]; then
@@ -95,7 +94,7 @@ press_any_key () {
 }
 
 do_usage() {
-	echo "Usage $1 [action] [targets...]"
+	echo "Usage $1 [action] [pkgtargets...]"
 	echo "actions:"
 	echo "  install      - install/update selected packages."
 	echo "  upgrade      - update the selected packages and solves dependencies."
@@ -107,6 +106,7 @@ do_usage() {
 	echo "  autoclean    - remove all outdated distfiles."
 	echo "  orphan       - list orphaned packages."
 	echo "  show         - show DESCR of target package."
+	echo "  check        - Checks MD5s of pkg files."
 	echo ""
 	echo "variables (environ|_etc_/apstget.conf):"
 	echo "  CLEAN_BUILD=1, INTERACTIVE=1, QUITE=0, IGNORE_ERRORS=0"
@@ -249,7 +249,22 @@ do_install() {
 	else
 	echo "==> Preparing installation for $DIR"
 	cd ${PKGSRC_DIR}/${DIR}
-	DEPS="${DEPS} `${MAKE} ${MAKEFLAG} show-depends-dirs`"
+	DEPS="`${MAKE} ${MAKEFLAG} show-depends-dirs`"
+	for A in ${DEPS} ; do
+		cd ${PKGSRC_DIR}/${DIR}
+		DEPS2="${DEPS} `${MAKE} ${MAKEFLAG} show-depends-dirs`"
+	done
+	for A in ${DEPS2} ; do
+		FOUND=0
+		for B in ${DEPS}; do
+			if [ "$A" = "$B" ]; then
+				FOUND=1
+			fi
+		done
+		if [ "${FOUND}" = "0" ]; then
+			DEPS="${DEPS} ${A}"
+		fi
+	done
 	DEPS="${DEPS} ${DIR}"
 	REPLACE=""
 	INSTALL=""
@@ -565,6 +580,21 @@ case "$1" in
 	fi
 	echo ">> DESCRIPTION:"
 	cat DESCR
+	;;
+"check")
+	if [ "${2}" = "" ]; then # Check ALL packages
+		echo "==> Checking all packages..."
+		pkg_admin check | grep failed
+	else
+	while : ; do
+		echo "==> Checking md5 of $2"
+		pkg_admin check $2 | grep failed
+		shift;
+		if [ "$2" = "" ]; then
+		break;
+		fi
+	done
+	fi
 	;;
 *)
 	do_usage $0
