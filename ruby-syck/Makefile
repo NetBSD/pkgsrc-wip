@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/13 14:47:51 rasputnik Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/26 15:46:54 rasputnik Exp $
 
 DISTNAME=	syck-${VER}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
@@ -28,5 +28,5 @@ post-install:
 .endfor
 
 .include "../../lang/ruby-base/Makefile.common"
-.include "../../lang/ruby-base/buildlink2.mk"
+.include "../../lang/ruby-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
