@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/01/05 10:24:43 mreriksson Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/05 16:53:20 mreriksson Exp $
 #
 
 PKGNAME=		multisync-syncml-0.82
@@ -8,6 +8,8 @@ COMMENT=		SyncML module for Multisync
 WRKSRC=			${WRKDIR}/multisync-0.82/plugins/syncml_plugin/
 
 DEPENDS+=		multisync>=0.82:../../wip/multisync
+
+BUILD_DEPENDS+=		libtool-base>=1.5.10:../../devel/libtool-base
 
 pre-configure:
 	cd work/multisync-${PKGVERSION} && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/01/05 13:09:45 mreriksson Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/05 16:51:15 mreriksson Exp $
 #
 
 PKGNAME=		multisync-backup-0.82
@@ -8,6 +8,8 @@ COMMENT=		Module for Multisync to backup your PIM data
 WRKSRC=			${WRKDIR}/multisync-0.82/plugins/backup_plugin/
 
 DEPENDS+=		multisync>=0.82:../../wip/multisync
+
+BUILD_DEPENDS+=         libtool-base>=1.5.10:../../devel/libtool-base
 
 pre-configure:
 	cd work/multisync-${PKGVERSION} && \
