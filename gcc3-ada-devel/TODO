@@ -1,5 +1,3 @@
-- Fix buildlink? problem. This pkg is based on
-  lang/gcc3-ada. Like that pkg, it includes
-  "../gcc3-c-devel/buildaddon.mk" to add itself
-  to gcc 3.4. The configure step goes awry quite
-  early.
+- Fix some RTS dependancies
+- Eliminate unnecessary configuration
+- Add ACATS C tests to test suite

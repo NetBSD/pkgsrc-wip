@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/12 10:52:46 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/13 12:06:41 johnrshannon Exp $
 #
 
 PKGNAME=		gcc3${GCC3_PKGMODIF}-ada-${GCC_VERSION}-devel
@@ -9,6 +9,7 @@ COMMENT=		GNU Compiler Collection, version 3-${SNAPDATE}, Ada compiler
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=	--enable-languages="ada"
 CONFIGURE_ARGS+=	--enable-threads=yes
+CONFIGURE_ARGS+=	--disable-nls
 
 #
 # Bootstrap section. Define something to make the pkg usable.
@@ -58,6 +59,8 @@ post-buildlink:
 	${LN} -sf ${ADA_BOOT_GNATBIND} ${BUILDLINK_DIR}/bin
 
 post-configure:
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} configure-host)
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} configure-target)
 	${TEST} -f ${WRKSRC}/gcc/ada/Makefile \
 	  || ${FALSE} # no ada bootstrap found by configure
 	(cd ${WRKSRC}/gcc/ada && ${TOUCH} treeprs.ads [es]info.h nmake.ad[bs])
@@ -75,7 +78,7 @@ post-build:
 	${ECHO} "ADA_INCLUDE_PATH+=${GCC_ARCHDIR}/adainclude" >> ${WRKDIR}/gcc3.mk
 
 do-test:
-	(cd ${WRKSRC}; gmake check-ada)
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} test-ada)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gcc/gnat1 ${GCC_ARCHDIR}
