@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.307 2003/07/08 09:06:00 adrian_p Exp $
-# $NetBSD: Makefile,v 1.307 2003/07/08 09:06:00 adrian_p Exp $
+# $Id: Makefile,v 1.308 2003/07/08 09:38:58 adrian_p Exp $
+# $NetBSD: Makefile,v 1.308 2003/07/08 09:38:58 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -123,7 +123,6 @@ SUBDIR+=	jdk12-openjit
 SUBDIR+=	jdk13
 SUBDIR+=	jdk13-openjit
 SUBDIR+=	jigdo
-SUBDIR+=	jpgraph
 SUBDIR+=	kapital
 SUBDIR+=	kgpg
 SUBDIR+=	korelib
@@ -201,6 +200,7 @@ SUBDIR+=	p5-gtk2
 SUBDIR+=	pag
 SUBDIR+=	pdns
 SUBDIR+=	perltidy
+SUBDIR+=	php-jpgraph
 SUBDIR+=	pinball
 SUBDIR+=	pixieplus
 SUBDIR+=	plugger
