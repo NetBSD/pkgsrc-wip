@@ -1,0 +1,10 @@
+maybe have an option to use libdv versus ffmpeg
+
+checking libdv/dv.h usability... no
+checking libdv/dv.h presence... no
+checking for libdv/dv.h... no
+configure: error: dv.h not found, install libdv-devel
+*** Error code 1
+
+
+see http://packages.debian.org/unstable/graphics/kino.html

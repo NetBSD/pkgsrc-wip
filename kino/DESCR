@@ -1,0 +1,12 @@
+Kino is a non-linear digital video (DV) editor. It can be used to record,
+create, edit, and play movies recorded with DV camcorders.  It features
+integration with IEEE 1394 for capture, VTR control, and recording back
+to the camera. It captures video to disk in AVI format in both type-1
+DV and type-2 DV (separate audio stream) encodings.
+
+You can load multiple video clips into a playlist, cut and paste portions
+of video/audio, and save it to a playlist.  This program uses many
+keyboard commands for fast navigating and editing inside the movie.
+Kino can load playlists and save the composite playlist as a new DV
+AVI file.  Kino can save a single frame of video (a still) in numerous
+file formats.
