@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.904 2004/01/24 19:18:44 ora8_ Exp $
-# $NetBSD: Makefile,v 1.904 2004/01/24 19:18:44 ora8_ Exp $
+# $Id: Makefile,v 1.905 2004/01/24 20:10:05 oherrala Exp $
+# $NetBSD: Makefile,v 1.905 2004/01/24 20:10:05 oherrala Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -600,6 +600,7 @@ SUBDIR+=	shadow
 SUBDIR+=	shared-mime-info
 SUBDIR+=	shoutcast
 SUBDIR+=	silc-toolkit
+SUBDIR+=	silky
 SUBDIR+=	sks
 SUBDIR+=	sleuthkit # READ TODO #
 SUBDIR+=	slocate
