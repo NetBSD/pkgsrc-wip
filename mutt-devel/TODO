@@ -1,2 +1,0 @@
-smime_keys is a perl script, but installed as a program ->
-stripping fails, installation breaks.
