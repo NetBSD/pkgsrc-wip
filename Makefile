@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.87 2003/04/15 10:30:33 xtraeme Exp $
-# $NetBSD: Makefile,v 1.87 2003/04/15 10:30:33 xtraeme Exp $
+# $Id: Makefile,v 1.88 2003/04/15 18:08:42 bmeurer Exp $
+# $NetBSD: Makefile,v 1.88 2003/04/15 18:08:42 bmeurer Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -14,6 +14,7 @@ SUBDIR+=	byacc
 SUBDIR+=	celestia
 SUBDIR+=	chksniff
 SUBDIR+=	cvsd
+SUBDIR+=	devhelp
 SUBDIR+=	drweb
 SUBDIR+=	gkrellm2
 SUBDIR+=	gkrellm2-flynn
@@ -22,6 +23,9 @@ SUBDIR+=	gkrellm2-share
 SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
 SUBDIR+=	golem
+SUBDIR+=	gstreamer
+SUBDIR+=	gstreamer-player
+SUBDIR+=	gstreamer-plugins
 SUBDIR+=	gtetrinet2
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtkglarea2
