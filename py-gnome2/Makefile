@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/25 18:55:28 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2003/05/09 18:03:59 drochner Exp $
 #
 
 DISTNAME=	gnome-python-1.99.16
@@ -19,17 +19,16 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/gnome-python-2.0.pc.in
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 
-PYTHON_VERSION_REQD=	22
+PYTHON_VERSION_REQD=	22pth
+BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
 .include "../../print/libgnomeprintui/buildlink2.mk"
 .include "../../x11/libzvt/buildlink2.mk"
 .include "../../x11/gnome-panel/buildlink2.mk"
 .include "../../www/libgtkhtml/buildlink2.mk"
-
-.include "../../wip/py-ORBit/buildlink2.mk"
-.include "../../wip/py-gtk2/buildlink2.mk"
-
+.include "../../net/py-ORBit/buildlink2.mk"
+.include "../../x11/py-gtk2/buildlink2.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
