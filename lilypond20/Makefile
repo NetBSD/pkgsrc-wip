@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/09 04:09:25 blef Exp $
+# $NetBSD: Makefile,v 1.9 2004/07/03 19:22:02 rillig Exp $
 # created 2003-10-22 Patrick Atamaniuk <atamaniuk-pkgsrc@frobs.net>
 # MAINTAINER_of-previous-lilypond-versions=	rh@NetBSD.org
 
@@ -38,9 +38,9 @@ DOCSDIR?=	${PREFIX}/doc/${DISTNAME}
 CPIO?=/usr/bin/cpio
 
 pre-configure:
-	@ ${SETENV} WRKSRC=${WRKSRC} ${FILESDIR}/pre-configure
+	@ ${SETENV} WRKSRC=${WRKSRC} ${SH} ${FILESDIR}/pre-configure
 post-configure:
-	@ ${SETENV} WRKSRC=${WRKSRC} ${FILESDIR}/post-configure
+	@ ${SETENV} WRKSRC=${WRKSRC} ${SH} ${FILESDIR}/post-configure
 
 post-install:
 	@ ${ECHO} Installing examples to ${EXAMPLES_DIR}
