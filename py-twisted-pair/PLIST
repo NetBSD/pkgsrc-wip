@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/29 05:03:45 sifu Exp $
+${PYSITELIB}/twisted/pair/__init__.py
+${PYSITELIB}/twisted/pair/__init__.pyc
+${PYSITELIB}/twisted/pair/__init__.pyo
+${PYSITELIB}/twisted/pair/ethernet.py
+${PYSITELIB}/twisted/pair/ethernet.pyc
+${PYSITELIB}/twisted/pair/ethernet.pyo
+${PYSITELIB}/twisted/pair/ip.py
+${PYSITELIB}/twisted/pair/ip.pyc
+${PYSITELIB}/twisted/pair/ip.pyo
+${PYSITELIB}/twisted/pair/raw.py
+${PYSITELIB}/twisted/pair/raw.pyc
+${PYSITELIB}/twisted/pair/raw.pyo
+${PYSITELIB}/twisted/pair/rawudp.py
+${PYSITELIB}/twisted/pair/rawudp.pyc
+${PYSITELIB}/twisted/pair/rawudp.pyo
+${PYSITELIB}/twisted/pair/test/__init__.py
+${PYSITELIB}/twisted/pair/test/__init__.pyc
+${PYSITELIB}/twisted/pair/test/__init__.pyo
+${PYSITELIB}/twisted/pair/test/test_ethernet.py
+${PYSITELIB}/twisted/pair/test/test_ethernet.pyc
+${PYSITELIB}/twisted/pair/test/test_ethernet.pyo
+${PYSITELIB}/twisted/pair/test/test_ip.py
+${PYSITELIB}/twisted/pair/test/test_ip.pyc
+${PYSITELIB}/twisted/pair/test/test_ip.pyo
+${PYSITELIB}/twisted/pair/test/test_rawudp.py
+${PYSITELIB}/twisted/pair/test/test_rawudp.pyc
+${PYSITELIB}/twisted/pair/test/test_rawudp.pyo
+${PYSITELIB}/twisted/pair/tuntap.py
+${PYSITELIB}/twisted/pair/tuntap.pyc
+${PYSITELIB}/twisted/pair/tuntap.pyo
+@dirrm ${PYSITELIB}/twisted/pair/test
+@dirrm ${PYSITELIB}/twisted/pair
