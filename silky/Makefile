@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/24 20:04:27 oherrala Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/10 13:12:26 oherrala Exp $
 #
 
-DISTNAME=	silky-0.4.3
+DISTNAME=	silky-0.5.0
 CATEGORIES=	chat security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=silky/}
 
@@ -20,6 +20,7 @@ USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--with-silc-includes=${BUILDLINK_PREFIX.silc-toolkit}/include/silc-toolkit
 CONFIGURE_ARGS+=	--with-silc-libs=${BUILDLINK_PREFIX.silc-toolkit}/lib/silc-toolkit
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silky
+CONFIGURE_ARGS+=	--with-included-gettext
 
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../devel/libglade2/buildlink2.mk"
