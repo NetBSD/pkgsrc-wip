@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1457 2004/09/13 13:22:38 cetrox Exp $
-# $NetBSD: Makefile,v 1.1457 2004/09/13 13:22:38 cetrox Exp $
+# $Id: Makefile,v 1.1458 2004/09/13 15:20:18 cetrox Exp $
+# $NetBSD: Makefile,v 1.1458 2004/09/13 15:20:18 cetrox Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -221,6 +221,7 @@ SUBDIR+=	guile-gtk-devel
 SUBDIR+=	guile16-slib
 SUBDIR+=	gurlchecker
 SUBDIR+=	gwc
+SUBDIR+=	gxmame
 SUBDIR+=	hasciicam
 SUBDIR+=	hdparm
 SUBDIR+=	help2man
