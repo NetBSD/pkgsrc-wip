@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1428 2004/08/16 19:38:58 minskim Exp $
-# $NetBSD: Makefile,v 1.1428 2004/08/16 19:38:58 minskim Exp $
+# $Id: Makefile,v 1.1429 2004/08/16 20:18:28 minskim Exp $
+# $NetBSD: Makefile,v 1.1429 2004/08/16 20:18:28 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -788,7 +788,6 @@ SUBDIR+=	webcleaner
 SUBDIR+=	west
 SUBDIR+=	which
 SUBDIR+=	wimon-devel
-SUBDIR+=	wipe
 SUBDIR+=	wmclockmon
 SUBDIR+=	wmitime
 SUBDIR+=	wmmp
