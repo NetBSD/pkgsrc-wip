@@ -1,0 +1,18 @@
+I'd prefer to use buildink2 for this but libevent and libdnet don't
+support it yet :(
+
+The name of the program also needs to be resolved as there is already an
+arpd package in pkgsrc.  I've emailed the author of this software a few
+times now but have not received a response.  Consider this name
+temporary.
+
+For some reason I can't get the startup script to install properly.  If
+you can see where I'm stuffing up pls email me.
+
+Please test and let me know if there are any other issues.
+
+Tested on NetBSD 1.6 i386.
+
+Ta,
+
+Adrian.
