@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.925 2004/02/02 14:58:48 poppnk Exp $
-# $NetBSD: Makefile,v 1.925 2004/02/02 14:58:48 poppnk Exp $
+# $Id: Makefile,v 1.926 2004/02/02 18:37:10 rillig Exp $
+# $NetBSD: Makefile,v 1.926 2004/02/02 18:37:10 rillig Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -605,6 +605,7 @@ SUBDIR+=	ruby-ming
 SUBDIR+=	ruby-syck
 SUBDIR+=	rudiments
 SUBDIR+=	samba3
+SUBDIR+=	same
 SUBDIR+=	scew
 SUBDIR+=	scite
 SUBDIR+=	scm
