@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/24 05:04:55 blef Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/24 09:55:31 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-server-${XF_VER}
@@ -30,6 +30,13 @@ XINSTALL_DIRS+=		lib/GL/mesa/src/drv
 .endif
 
 .endif
+
+pre-install:
+	@cd ${WRKSRC}/programs/Xserver/hw/xfree86/parser && \
+		${CP} Makefile Makefile.orig && \
+		${SED} -e '/$$(INSTALL).*lib$$(LIBNAME).a/ d' \
+			-e '/$$(RANLIB).*lib$$(LIBNAME).a/ d' Makefile.orig \
+			> Makefile
 
 .include "../../wip/XFree86/Makefile.common"
 .include "../../wip/XFree86-libs/buildlink2.mk"
