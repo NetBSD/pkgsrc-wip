@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.537 2003/10/12 18:42:02 xtraeme Exp $
-# $NetBSD: Makefile,v 1.537 2003/10/12 18:42:02 xtraeme Exp $
+# $Id: Makefile,v 1.538 2003/10/12 19:39:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.538 2003/10/12 19:39:18 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -272,6 +272,7 @@ SUBDIR+=	nikto
 SUBDIR+=	noip
 SUBDIR+=	ntp4-dev
 SUBDIR+=	obconf
+SUBDIR+=	ogre
 SUBDIR+=	oinkmaster
 SUBDIR+=	opax
 SUBDIR+=	openbox3
