@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/21 21:01:16 tomhensel Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2004/02/21 21:24:11 tomhensel Exp $
 
 DISTNAME=	ion-2-${_ION2_VER}
 PKGNAME=	${DISTNAME:S/-2/2/:S/$_ION2_VER//}
@@ -7,11 +7,7 @@ MASTER_SITES=	http://modeemi.fi/~tuomov/dl/
 
 MAINTAINER=	tom@replic8.net
 HOMEPAGE=	http://modeemi.fi/~tuomov/ion/
-COMMENT=	Keyboard friendly tiling window manager
 COMMENT=	Tiling tabbed window manager designed with keyboard users in mind
-
-#BUILDLINK_DEPENDS.ltdl=	libtool-base>=1.4.20010614nb19
-#BUILDLINK_DEPENDS.lua=	lua>=5.0.1
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
