@@ -1,0 +1,45 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/14 21:01:09 mpasternak Exp $
+${EMULSUBDIR}/bin/tar-1.13.25
+${EMULSUBDIR}/bin/tar-1.13
+${EMULSUBDIR}/bin/tar
+${EMULSUBDIR}/etc/rmt
+${EMULSUBDIR}/usr/doc/tar-1.13.25/ABOUT-NLS
+${EMULSUBDIR}/usr/doc/tar-1.13.25/AUTHORS
+${EMULSUBDIR}/usr/doc/tar-1.13.25/COPYING
+${EMULSUBDIR}/usr/doc/tar-1.13.25/NEWS
+${EMULSUBDIR}/usr/doc/tar-1.13.25/PORTS
+${EMULSUBDIR}/usr/doc/tar-1.13.25/README
+${EMULSUBDIR}/usr/doc/tar-1.13.25/README-alpha
+${EMULSUBDIR}/usr/doc/tar-1.13.25/THANKS
+${EMULSUBDIR}/usr/doc/tar-1.13.25/TODO
+${EMULSUBDIR}/usr/doc/tar-1.13.25/scripts/WARNING
+${EMULSUBDIR}/usr/doc/tar-1.13.25/scripts/backup-specs
+${EMULSUBDIR}/usr/doc/tar-1.13.25/scripts/dump-remind
+${EMULSUBDIR}/usr/doc/tar-1.13.25/scripts/level-0
+${EMULSUBDIR}/usr/doc/tar-1.13.25/scripts/level-1
+${EMULSUBDIR}/usr/doc/tar-1.13.25/scripts/weekly.new
+${EMULSUBDIR}/usr/info/tar.info.gz
+${EMULSUBDIR}/usr/libexec/rmt
+${EMULSUBDIR}/usr/man/man1/tar.1.gz
+${EMULSUBDIR}/usr/man/man8/rmt.8.gz
+${EMULSUBDIR}/usr/share/locale/cs/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/da/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/de/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/es/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/et/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/fr/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/id/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/it/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/ja/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/ko/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/nl/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/no/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/pl/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/pt/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/pt_BR/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/ru/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/sl/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/sv/LC_MESSAGES/tar.mo
+${EMULSUBDIR}/usr/share/locale/tr/LC_MESSAGES/tar.mo
+@dirrm ${EMULSUBDIR}/usr/doc/tar-1.13.25/scripts
+@dirrm ${EMULSUBDIR}/usr/doc/tar-1.13.25

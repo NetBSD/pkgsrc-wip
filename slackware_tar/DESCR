@@ -1,0 +1,6 @@
+tar (archiving utility)
+
+This is the GNU version of tar, an archiving program designed to store
+and extract files from an archive file known as a tarfile.  A tarfile
+may be made on a tape drive, however, it is also common to write a
+tarfile to a normal file.

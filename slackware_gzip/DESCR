@@ -1,0 +1,6 @@
+gzip (file compression utility)
+
+Gzip reduces the size of the named files using Lempel-Ziv coding
+(LZ77).  Whenever possible, each file is replaced by one with the
+extension .gz, while keeping the same ownership modes, access and
+modification times.

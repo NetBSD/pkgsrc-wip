@@ -1,0 +1,6 @@
+findutils (utilities to locate files)
+
+This package contains the GNU find and xargs programs.  The find and
+xargs implementations comply with POSIX 1003.2.  They also support
+some additional options, some borrowed from Unix and some unique to
+GNU.

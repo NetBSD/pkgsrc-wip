@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/14 21:01:09 mpasternak Exp $
+${EMULSUBDIR}/usr/bin/bc
+${EMULSUBDIR}/usr/bin/dc
+${EMULSUBDIR}/usr/doc/bc-1.06/AUTHORS
+${EMULSUBDIR}/usr/doc/bc-1.06/COPYING
+${EMULSUBDIR}/usr/doc/bc-1.06/ChangeLog
+${EMULSUBDIR}/usr/doc/bc-1.06/Examples/ckbook.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Examples/pi.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Examples/primes.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Examples/twins.b
+${EMULSUBDIR}/usr/doc/bc-1.06/INSTALL
+${EMULSUBDIR}/usr/doc/bc-1.06/NEWS
+${EMULSUBDIR}/usr/doc/bc-1.06/README
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/BUG.bc
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/array.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/arrayp.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/aryprm.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/atan.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/checklib.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/div.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/exp.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/fact.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/jn.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/ln.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/mul.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/raise.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/signum
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/sine.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/sqrt.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/sqrt1.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/sqrt2.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/testfn.b
+${EMULSUBDIR}/usr/doc/bc-1.06/Test/timetest
+${EMULSUBDIR}/usr/info/dc.info.gz
+${EMULSUBDIR}/usr/man/man1/bc.1.gz
+${EMULSUBDIR}/usr/man/man1/dc.1.gz
+@dirrm ${EMULSUBDIR}/usr/doc/bc-1.06/Test
+@dirrm ${EMULSUBDIR}/usr/doc/bc-1.06/Examples
+@dirrm ${EMULSUBDIR}/usr/doc/bc-1.06
