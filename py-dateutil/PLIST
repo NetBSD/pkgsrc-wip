@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/25 19:43:17 marc Exp $
+${PYSITELIB}/dateutil/__init__.py
+${PYSITELIB}/dateutil/__init__.pyc
+${PYSITELIB}/dateutil/__init__.pyo
+${PYSITELIB}/dateutil/easter.py
+${PYSITELIB}/dateutil/easter.pyc
+${PYSITELIB}/dateutil/easter.pyo
+${PYSITELIB}/dateutil/parser.py
+${PYSITELIB}/dateutil/parser.pyc
+${PYSITELIB}/dateutil/parser.pyo
+${PYSITELIB}/dateutil/relativedelta.py
+${PYSITELIB}/dateutil/relativedelta.pyc
+${PYSITELIB}/dateutil/relativedelta.pyo
+${PYSITELIB}/dateutil/rrule.py
+${PYSITELIB}/dateutil/rrule.pyc
+${PYSITELIB}/dateutil/rrule.pyo
+${PYSITELIB}/dateutil/tz.py
+${PYSITELIB}/dateutil/tz.pyc
+${PYSITELIB}/dateutil/tz.pyo
+@dirrm ${PYSITELIB}/dateutil
