@@ -1,30 +1,30 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/28 18:02:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/28 20:45:02 xtraeme Exp $
 #
 
-DISTNAME=		tkabber-0.9.5beta
-CATEGORIES=		chat
-MASTER_SITES=		http://www.jabberstudio.org/files/tkabber/
+DISTNAME=	tkabber-0.9.5beta
+CATEGORIES=	chat
+MASTER_SITES=	http://www.jabberstudio.org/files/tkabber/
 
-MAINTAINER=		xtraeme@NetBSD.org
-HOMEPAGE=		http://tkabber.jabber.ru/en/
-COMMENT=		Free and Open Source TCL/TK jabber client
+MAINTAINER=	xtraeme@NetBSD.org
+HOMEPAGE=	http://tkabber.jabber.ru/en/
+COMMENT=	Free and Open Source TCL/TK jabber client
 
-DEPENDS+=		tcllib-[0-9]*:../../wip/tcllib
-DEPENDS+=		bwidget-[0-9]*:../../wip/bwidget
+DEPENDS+=	tcllib-[0-9]*:../../wip/tcllib
+DEPENDS+=	bwidget-[0-9]*:../../wip/bwidget
 
-NO_BUILD=		yes
+NO_BUILD=	yes
 
-EGDIR=			${PREFIX}/share/examples/tkabber
-DATADIR=		${PREFIX}/share/tkabber
+EGDIR=		${PREFIX}/share/examples/tkabber
+DATADIR=	${PREFIX}/share/tkabber
 
-SUBDIRS=		emoticons-tkabber \
-			plugins           \
-			jabberlib-tclxml  \
-			pixmaps           \
-			sounds            \
-			textundo          \
-			msgs              \
-			mclistbox-1.02
+SUBDIRS=	emoticons-tkabber \
+		plugins           \
+		jabberlib-tclxml  \
+		pixmaps           \
+		sounds            \
+		textundo          \
+		msgs              \
+		mclistbox-1.02
 
 do-install:
 	${INSTALL_DATA_DIR} ${DATADIR} ${EGDIR}
