@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/07 07:55:13 amadeus_z Exp $
+
+SHA1 (armagetron-0.2.4.tar.bz2) = 0ab6f4356796c35898c951fd5b5d92929da2e89f
+Size (armagetron-0.2.4.tar.bz2) = 1012151 bytes
+SHA1 (patch-aa) = 5c37ad64f3d8ce97e1738b9cc80321e1d25466de

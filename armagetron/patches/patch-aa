@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/07 07:55:14 amadeus_z Exp $
+
+--- batch/starter.in.orig	Mon Aug  4 00:06:04 2003
++++ batch/starter.in
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/ksh
+ #
+ # starts @progtitle@ from the installation directory
+ 

@@ -1,0 +1,89 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/07 07:55:14 amadeus_z Exp $
+bin/armagetron
+games/armagetron/COPYING.txt
+games/armagetron/arenas/basic.aar
+games/armagetron/bin/armagetron
+games/armagetron/bin/astat
+games/armagetron/bin/pushscores
+games/armagetron/bin/rcd_master
+games/armagetron/bin/rcd_server
+games/armagetron/bin/starter.in.orig
+games/armagetron/bin/stat
+games/armagetron/bin/uninstall
+games/armagetron/config/.tag
+games/armagetron/config/aiplayers.cfg
+games/armagetron/config/default.cfg
+games/armagetron/config/master.srv
+games/armagetron/config/settings.cfg
+games/armagetron/doc/COPYING.txt
+games/armagetron/doc/bugs.html
+games/armagetron/doc/changelog.html
+games/armagetron/doc/compile.html
+games/armagetron/doc/config.html
+games/armagetron/doc/faq.html
+games/armagetron/doc/index.html
+games/armagetron/doc/install_linux.html
+games/armagetron/doc/install_windows.html
+games/armagetron/doc/net/index.html
+games/armagetron/doc/net/lower.html
+games/armagetron/doc/net/middle.html
+games/armagetron/doc/net/upper.html
+games/armagetron/doc/network.html
+games/armagetron/doc/readme_linux.html
+games/armagetron/doc/readme_windows.html
+games/armagetron/doc/todo.html
+games/armagetron/install
+games/armagetron/language/.tag
+games/armagetron/language/deutsch.txt
+games/armagetron/language/english.txt
+games/armagetron/language/languages.txt
+games/armagetron/models/cycle_body.mod
+games/armagetron/models/cycle_front.mod
+games/armagetron/models/cycle_rear.mod
+games/armagetron/sound/cyclrun.wav
+games/armagetron/sound/expl.wav
+games/armagetron/textures/KGN_logo.png
+games/armagetron/textures/cycle_body.png
+games/armagetron/textures/cycle_wheel.png
+games/armagetron/textures/dir_wall.png
+games/armagetron/textures/floor.png
+games/armagetron/textures/floor_a.png
+games/armagetron/textures/floor_b.png
+games/armagetron/textures/font.png
+games/armagetron/textures/font_extra.png
+games/armagetron/textures/font_s.png
+games/armagetron/textures/icon.png
+games/armagetron/textures/rim_wall.png
+games/armagetron/textures/shadow.png
+games/armagetron/textures/sky.png
+games/armagetron/textures/wrap.png
+share/docs/html/armagetron/bugs.html
+share/docs/html/armagetron/changelog.html
+share/docs/html/armagetron/compile.html
+share/docs/html/armagetron/config.html
+share/docs/html/armagetron/faq.html
+share/docs/html/armagetron/index.html
+share/docs/html/armagetron/install_linux.html
+share/docs/html/armagetron/install_windows.html
+share/docs/html/armagetron/net/index.html
+share/docs/html/armagetron/net/lower.html
+share/docs/html/armagetron/net/middle.html
+share/docs/html/armagetron/net/upper.html
+share/docs/html/armagetron/network.html
+share/docs/html/armagetron/readme_linux.html
+share/docs/html/armagetron/readme_windows.html
+share/docs/html/armagetron/todo.html
+@dirrm share/docs/html/armagetron/net
+@dirrm share/docs/html/armagetron
+@dirrm share/docs/html
+@dirrm share/docs
+@dirrm games/armagetron/textures
+@dirrm games/armagetron/sound
+@dirrm games/armagetron/models
+@dirrm games/armagetron/language
+@dirrm games/armagetron/doc/net
+@dirrm games/armagetron/doc
+@dirrm games/armagetron/config
+@dirrm games/armagetron/bin
+@dirrm games/armagetron/arenas
+@dirrm games/armagetron
