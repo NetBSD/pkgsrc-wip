@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/11/03 10:40:27 cubidou Exp $
+# $NetBSD: Makefile,v 1.12 2004/11/03 10:41:03 cubidou Exp $
 #
 
 DISTNAME=	nagios-1.2
@@ -51,12 +51,6 @@ NAGIOS_DIRS=	log/nagios log/nagios/archives run/nagios run/nagios/rw
 OWN_DIRS_PERMS+=	${VARBASE}/${_d_} ${NAGIOS_USER} ${NAGIOS_GROUP} 0775
 .endfor
 .undef _d_
-
-post-configure:
-	${SED} < ${FILESDIR}/nagios-setup.sh > ${WRKDIR}/nagios-setup.sh	\
-	-e 's:@@SH@@:${SH}:g'							\
-	-e 's:@@USER@@:${NAGIOS_USER}:g'					\
-	-e 's:@@GROUP@@:${NAGIOS_GROUP}:g'
 
 post-build:
 	cd ${WRKDIR}; uudecode ${FILESDIR}/logofullsize.gif.uu
