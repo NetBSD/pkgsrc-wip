@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/02 06:11:10 xtraeme Exp $
+bin/noip
+etc/no-ip.conf
+etc/rc.d/noip
+share/examples/noip/no-ip.conf.sample
+share/examples/noip/noip.sh
+share/noip/doc/COPYING
+share/noip/doc/README.FIRST
+@dirrm share/noip/doc
+@dirrm share/examples/noip
