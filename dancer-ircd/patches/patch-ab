@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2003/04/21 18:50:38 virtus Exp $
+$NetBSD: patch-ab,v 1.2 2003/05/09 23:10:07 xtraeme Exp $
 
---- include/config.h.dist.orig	2003-04-21 22:38:45.000000000 +0200
-+++ include/config.h.dist	2003-04-21 22:39:27.000000000 +0200
+--- include/config.h.dist.orig	2003-05-10 00:59:48.000000000 +0200
++++ include/config.h.dist	2003-05-10 01:00:25.000000000 +0200
 @@ -125,15 +125,15 @@
   */
  
@@ -15,15 +15,15 @@ $NetBSD: patch-ab,v 1.1 2003/04/21 18:50:38 virtus Exp $
 -#define PPATH   "var/run/dancer-ircd.pid"
 -#define HPATH   "etc/dancer-ircd/ohelp"
 -#define OPATH   "etc/dancer-ircd/omotd"
-+#define SPATH   "/usr/pkg/bin/dancer-ircd"
-+#define CPATH   "/usr/pkg/etc/dancer-ircd/ircd.conf"
-+#define KPATH   "/var/lib/dancer-ircd/kline.conf"
-+#define DLPATH  "/var/lib/dancer-ircd/dline.conf"
-+#define MPATH   "/usr/pkg/etc/dancer-ircd/motd"
-+#define LPATH   "/var/log/dancer-ircd/ircd.log"
-+#define PPATH   "/var/run/dancer-ircd.pid"
-+#define HPATH   "/usr/pkg/etc/dancer-ircd/ohelp"
-+#define OPATH   "/usr/pkg/etc/dancer-ircd/omotd"
++#define SPATH   "@SPATH@"
++#define CPATH   "@CPATH@"
++#define KPATH   "@KPATH@"
++#define DLPATH  "@DLPATH@"
++#define MPATH   "@MPATH@"
++#define LPATH   "@LPATH@"
++#define PPATH   "@PPATH@"
++#define HPATH   "@HPATH@"
++#define OPATH   "@OPATH"
  
  /* HIDE_OPS
   * Define this to prevent non chanops from seeing what ops a channel has
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.1 2003/04/21 18:50:38 virtus Exp $
  #define SAVE_MAXCLIENT
  #ifdef SAVE_MAXCLIENT
 -# define MXPATH "etc/dancer-ircd/ircd.max"
-+# define MXPATH "/usr/pkg/etc/dancer-ircd/ircd.max"
++# define MXPATH "@MXPATH@"
  # define SAVE_TIME 3600
  #endif 
  

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/04/21 17:59:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/09 23:10:06 xtraeme Exp $
 #
 
 DISTNAME=	dancer-ircd-1.0.31+maint8-fn6
@@ -20,11 +20,31 @@ CONFIGURE_ARGS+=	--with-config=dist
 EGDIR=          ${PREFIX}/share/examples/dancer-ircd
 DOCDIR=		${PREFIX}/share/doc/dancer-ircd
 
+OWN_DIRS=	/var/lib/dancer-ircd
+OWN_DIRS+=	/var/log/dancer-ircd
+
 RCD_SCRIPTS=		dancer-ircd
 PKG_SYSCONFSUBDIR=	dancer-ircd
 
 CONF_FILES=	${EGDIR}/ircd.conf.default \
 		${PKG_SYSCONFDIR}/ircd.conf
+
+post-configure:
+	${CP} ${WRKSRC}/doc/example.conf ${WRKSRC}/doc/example.conf.in
+	${RM} ${WRKSRC}/doc/example.conf
+
+pre-build:
+	${SED} -e "s|@SPATH@|${PREFIX}/bin/dancer-ircd|g" \
+		-e "s|@CPATH@|${PKG_SYSCONFDIR}/dancer-ircd|g" \
+	        -e "s|@KPATH@|/var/lib/dancer-ircd/kline.conf|g" \
+		-e "s|@DLPATH@|/var/lib/dancer-ircd/dline.conf|g" \
+		-e "s|@MPATH@|${PKG_SYSCONFDIR}/motd|g" \
+		-e "s|@LPATH@|/var/log/dancer-ircd/ircd.log|g" \
+		-e "s|@PPATH@|/var/run/dancer-ircd.pid|g" \
+		-e "s|@HPATH@|${PKG_SYSCONFDIR}/ohelp|g" \
+		-e "s|@OPATH@|${PKG_SYSCONFDIR}/omotd|g" \
+		-e "s|@MXPATH@|${PKG_SYSCONFDIR}/ircd.max|g" \
+                < ${WRKSRC}/doc/example.conf.in > ${WRKSRC}/doc/example.conf
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
