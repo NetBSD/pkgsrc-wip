@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/21 15:17:34 kibumh Exp $
+
+--- intl/dcigettext.c.orig	2004-06-19 13:58:22.000000000 +0900
++++ intl/dcigettext.c
+@@ -987,11 +987,7 @@ plural_lookup (domain, n, translation, t
+   p = translation;
+   while (index-- > 0)
+     {
+-#ifdef _LIBC
+       p = __rawmemchr (p, '\0');
+-#else
+-      p = strchr (p, '\0');
+-#endif
+       /* And skip over the NUL byte.  */
+       p++;
+ 

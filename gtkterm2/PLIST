@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/21 15:17:34 kibumh Exp $
+bin/gtkterm2
+doc/GTKTerm/ABOUT-NLS
+doc/GTKTerm/AUTHORS
+doc/GTKTerm/COPYING
+doc/GTKTerm/ChangeLog
+doc/GTKTerm/INSTALL
+doc/GTKTerm/NEWS
+doc/GTKTerm/README
+doc/GTKTerm/TODO
+share/gtkterm2/pixmaps/gtkterm2.png
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtkterm2.mo
+@dirrm share/gtkterm2/pixmaps
+@dirrm share/gtkterm2
+@dirrm doc/GTKTerm
+@dirrm doc
