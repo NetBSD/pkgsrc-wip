@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 09:29:50 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/03 11:30:40 cubidou Exp $
 #
 
 DISTNAME=	ion-dock-20030330
@@ -18,5 +18,5 @@ PKG_SYSCONFSUBDIR=	ion
 
 CONF_FILES=		${PREFIX}/share/examples/ion/dock.conf ${PKG_SYSCONFDIR}/dock.conf
 
-.include "../../local/ion-devel/buildlink2.mk"
+.include "../../wip/ion-devel/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
