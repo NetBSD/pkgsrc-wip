@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1172 2004/04/05 14:07:48 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1172 2004/04/05 14:07:48 xtraeme Exp $
+# $Id: Makefile,v 1.1173 2004/04/05 14:59:17 marc Exp $
+# $NetBSD: Makefile,v 1.1173 2004/04/05 14:59:17 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -130,6 +130,7 @@ SUBDIR+=	elmo
 SUBDIR+=	emacs-carbon
 SUBDIR+=	emirror
 SUBDIR+=	etpan-ng
+SUBDIR+=	evolution-sharp
 SUBDIR+=	ezbounce
 SUBDIR+=	fakenes
 SUBDIR+=	faster-configure
@@ -394,6 +395,7 @@ SUBDIR+=	mkdep
 SUBDIR+=	mkvtoolnix
 SUBDIR+=	mnogosearch
 SUBDIR+=	monkey-bubble
+SUBDIR+=	monodoc
 SUBDIR+=	mopac
 SUBDIR+=	moregroupware
 SUBDIR+=	mpc
@@ -690,6 +692,7 @@ SUBDIR+=	spamprobe-pbl
 SUBDIR+=	spe
 SUBDIR+=	speedx
 SUBDIR+=	sqlrelay
+SUBDIR+=	screws
 SUBDIR+=	srvx
 SUBDIR+=	steghide
 SUBDIR+=	stellarium
