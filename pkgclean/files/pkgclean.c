@@ -42,24 +42,27 @@ static const char * const skip[] = {
 	".", "..", "CVS", "bootstrap", "doc", "distfiles", "licenses", "mk", NULL
 };
 
-static void		pkgclean(const char *);
-static int		checkskip(const struct dirent *);
+static void	pkgclean(const char *, const char *);
+static int	checkskip(const struct dirent *);
 
 int
-main(void)
+main(int argc, char *argv[])
 {
-	const char *path;
+	const char *path, *work = "work";
 
 	if ((path = getenv("PKGSRCDIR")) == NULL)
 		path = PKGSRCDIR;
 
-	pkgclean(path);
+	if (argc > 1)
+		work = argv[1];
+
+	pkgclean(path, work);
 
 	return 0;
 }
 
 static void
-pkgclean(const char *path)
+pkgclean(const char *path, const char *work)
 {
 	struct dirent **cat, **list;
 	int ncat, nlist, i, j;
@@ -81,8 +84,8 @@ pkgclean(const char *path)
 			continue;
 		}
 		for (j = 0; j < nlist; j++) {
-			if ((size_t)snprintf(tmp, sizeof(tmp), "%s/%s/%s/work", path,
-			    cat[i]->d_name, list[j]->d_name) >= sizeof(tmp)) {
+			if ((size_t)snprintf(tmp, sizeof(tmp), "%s/%s/%s/%s", path,
+			    cat[i]->d_name, list[j]->d_name, work) >= sizeof(tmp)) {
 				(void)fprintf(stderr, "warning: filename too long: %s\n", tmp);
 				continue;
 			}
