@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/06 17:35:56 marc Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/03/07 02:53:50 minskim Exp $
 bin/metatheme-edit
 bin/metatheme_selector_capplet
 include/mtm/mtm-config-gui.h
@@ -83,7 +83,7 @@ share/pixmaps/settings.png
 @comment in gnome2-control-center: @dirrm share/mime-info
 @dirrm share/metatheme-glade
 @comment in gnome2-control-center: @dirrm share/control-center-2.0/capplets
-@comment in gnome2-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/metatheme/plugins/${PKGVERSION}
 @dirrm lib/metatheme/plugins
 @dirrm lib/metatheme
