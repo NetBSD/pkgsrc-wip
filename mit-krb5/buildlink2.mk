@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/07/30 17:08:55 jeremy-c-reed Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/07/31 05:25:42 jeremy-c-reed Exp $
 
 .if !defined(MITKRB5_BUILDLINK2_MK)
 MITKRB5_BUILDLINK2_MK=   # defined 
@@ -10,10 +10,11 @@ BUILDLINK_PKGSRCDIR.mit-krb5?=	../../security/mit-krb5
 EVAL_PREFIX+=				BUILDLINK_PREFIX.mit-krb5=mit-krb5
 BUILDLINK_PREFIX.mit-krb5_DEFAULT=	${LOCALBASE}
 
-BUILDLINK_FILES.mit-krb5=	include/kerberosIV/*
-BUILDLINK_FILES.mit-krb5=	include/gssapi/*
-BUILDLINK_FILES.mit-krb5=	include/krb5.h
-BUILDLINK_FILES.mit-krb5=	include/profile.h
+BUILDLINK_FILES.mit-krb5=	include/com_err.h
+BUILDLINK_FILES.mit-krb5+=	include/kerberosIV/*
+BUILDLINK_FILES.mit-krb5+=	include/gssapi/*
+BUILDLINK_FILES.mit-krb5+=	include/krb5.h
+BUILDLINK_FILES.mit-krb5+=	include/profile.h
 BUILDLINK_FILES.mit-krb5+=	lib/libcom_err.*
 BUILDLINK_FILES.mit-krb5+=	lib/libdes425.*
 BUILDLINK_FILES.mit-krb5+=	lib/libgssapi_krb5.*
