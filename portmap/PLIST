@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/07 21:36:27 jeremy-c-reed Exp $
+sbin/portmap
+sbin/pmap_dump
+sbin/pmap_set
+share/doc/portmap/README
+@dirrm share/doc/portmap
