@@ -1,0 +1,5 @@
+This provides a script that will create (and update) the devices
+in /dev used to interface with drivers in the Linux kernel.
+
+This MAKEDEV is based on the version maintained by Bdale Garbee
+for the Debian Project.

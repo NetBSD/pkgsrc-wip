@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/01 02:44:33 jeremy-c-reed Exp $
+
+--- MAKEDEV.orig	Tue Aug 19 23:37:45 2003
++++ MAKEDEV
+@@ -3,2 +3,4 @@
+ 
++VERSION='2.3.1-62'
++
+ #---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#
+@@ -78,4 +80,3 @@ if [ "$opt_V" ]
+ then
+-	echo "This is Debian MAKEDEV.  For version info, try 'dpkg --list makedev'"
+-	echo "See /usr/share/doc/makedev/ for more information on Debian MAKEDEV."
++	echo "$VERSION"
+ 	exit 0
+@@ -120,3 +121,3 @@ symlink () {	# usage: symlink name targe
+ 
+-# Debian allows us to assume /bin/sh is a POSIX compliant shell, so go for it!
++# Assume /bin/sh is a POSIX compliant shell, so go for it!
+ 
+@@ -155,3 +156,3 @@ else
+ 	do
+-		device=`echo $device | sed 's#/.*##'`
++		device=${device%/*}
+ 		case "$major" in
+@@ -267,4 +268,3 @@ do
+ 	generic)
+-		# pick the right generic-<arch> using dpkg's knowledge
+-		case `dpkg --print-installation-architecture` in
++		case `uname -m` in
+ 			alpha)
+@@ -278,3 +278,3 @@ do
+ 				;;
+-			i386)
++			i?86)
+ 				$0 $opts generic-i386
+@@ -633,4 +633,3 @@ do
+ 	adb)
+-		# pick the right arch device using dpkg's knowledge
+-		case `dpkg --print-installation-architecture` in
++		case `uname -m` in
+ 			powerpc)
+@@ -1923,3 +1922,3 @@ do
+ 			do
+-				device=`echo $device | sed 's#/.*##'`
++				device=${device%/*}
+ 				case "$major" in

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/10/01 02:44:33 jeremy-c-reed Exp $
+
+SHA1 (makedev_2.3.1.orig.tar.gz) = 4f58570a7e4a34696b383cbef150aed97181b5c2
+Size (makedev_2.3.1.orig.tar.gz) = 9924 bytes
+SHA1 (makedev_2.3.1-62.diff.gz) = 2b7d1020c36222307d353ba3fe097dcf458a6c9d
+Size (makedev_2.3.1-62.diff.gz) = 42700 bytes
+SHA1 (patch-aa) = c34c92bd7367bf467cd96af397b9639cac3198d1

@@ -1,0 +1,30 @@
+This uses uname -m for machine type. Need to check names.
+
+should -V option give ${VERSION:S/-/./} or just ${VERSION} ??
+
+This installs to sbin not /dev. Maybe a MESSAGE should report this?
+
+This can use /proc file system to figure out which devices to make.
+Should that be in MESSAGE too?
+
+It assumes these groups are available:
+kmem   
+tty    
+dialout 
+dip    
+root   
+lp     
+floppy 
+disk   
+cdrom  
+tape   
+audio  
+video
+** make sure all added
+or have variables for these used, like ${ROOT_GROUP}, ${DIALER_GROUP}
+
+maybe last sed expressions can be rewritten to use
+shell suffix (or prefix) pattern removal
+	kern_rev1=${kern_rev%.*.*}
+but maybe a kernel revision has more than 3 parts?
+	kern_rev2=${kern_rev%.*} ; kern_rev2=${kern_rev2#*.*}
