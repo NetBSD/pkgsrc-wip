@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/01/25 02:12:37 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/28 19:07:36 johnrshannon Exp $
 #
 
-SNAPDATE=	20040121
+SNAPDATE=	20040128
 GCC_VERSION=	3.4
 DISTNAME=	gcc-${GCC_VERSION}-ada
 WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}-${SNAPDATE}
