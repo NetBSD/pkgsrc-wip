@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 16:46:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 20:30:55 xtraeme Exp $
 #
 
 DISTNAME=	gkrellmlaunch-0.4
