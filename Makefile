@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1704 2005/03/27 21:20:39 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1704 2005/03/27 21:20:39 thomasklausner Exp $
+# $Id: Makefile,v 1.1705 2005/03/27 21:23:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1705 2005/03/27 21:23:57 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -29,8 +29,8 @@ SUBDIR+=	R-VR
 SUBDIR+=	R-chron
 SUBDIR+=	R-clim.pact
 SUBDIR+=	R-date
-SUBDIR+=	R-geoR
 SUBDIR+=	R-genetics
+SUBDIR+=	R-geoR
 SUBDIR+=	R-gstat
 SUBDIR+=	R-httpRequest
 SUBDIR+=	R-hwde
@@ -105,8 +105,8 @@ SUBDIR+=	bluez-utils
 SUBDIR+=	bnr2
 SUBDIR+=	boa
 SUBDIR+=	bridge-utils
-SUBDIR+=	bsfilter
 SUBDIR+=	bscript
+SUBDIR+=	bsfilter
 SUBDIR+=	bub-n-bros
 SUBDIR+=	busybox
 SUBDIR+=	bwidget
@@ -257,6 +257,8 @@ SUBDIR+=	galib
 #SUBDIR+=	gcl-nox11	# see gcl/TODO
 SUBDIR+=	gcompris
 SUBDIR+=	gdal
+SUBDIR+=	gdal-docs
+SUBDIR+=	gdal-lib
 SUBDIR+=	gdam
 SUBDIR+=	gde
 SUBDIR+=	geeklog
@@ -416,7 +418,6 @@ SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
 SUBDIR+=	lammpi
-SUBDIR+=	latex2rtf
 SUBDIR+=	lbdb
 SUBDIR+=	lcrack
 SUBDIR+=	ldapbrowser
@@ -510,6 +511,7 @@ SUBDIR+=	man
 SUBDIR+=	man-db
 SUBDIR+=	manatee
 SUBDIR+=	map-browse
+SUBDIR+=	mapserver
 SUBDIR+=	matchbox-common
 SUBDIR+=	matchbox-desktop
 SUBDIR+=	matchbox-nest
@@ -554,6 +556,7 @@ SUBDIR+=	mppdec
 SUBDIR+=	mpq-tools
 SUBDIR+=	mrxvt
 SUBDIR+=	mrxvt-devel
+SUBDIR+=	msworkbench
 SUBDIR+=	mtf
 SUBDIR+=	mtrack
 SUBDIR+=	muine
@@ -720,7 +723,6 @@ SUBDIR+=	proxychains
 SUBDIR+=	prozilla
 SUBDIR+=	prtunnel
 SUBDIR+=	pts
-SUBDIR+=	putty
 SUBDIR+=	pxlib
 SUBDIR+=	pxview
 SUBDIR+=	py-Brenda
@@ -800,6 +802,7 @@ SUBDIR+=	qcad-manual-en
 SUBDIR+=	qcad-manual-hu
 SUBDIR+=	qcad-partlibrary
 SUBDIR+=	qemu-bin
+SUBDIR+=	qgis
 SUBDIR+=	qhacc
 SUBDIR+=	qico
 SUBDIR+=	qinx
