@@ -4,6 +4,3 @@ is assuming non-POSIX pthread implementation.
 Also, see what is going on with the readline, and why the patches are necessary.
 I don't have any readline knowledge, so I'd be grateful if someone would take
 a look at it.
-
-Somehow, it can't find pthread.h on an old system with external libpth.
-No idea what causes this.
