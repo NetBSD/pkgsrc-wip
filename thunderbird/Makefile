@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/04 14:23:14 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/20 10:58:47 grantbeattie Exp $
 #
 
+PKGREVISION=	1
 MOZILLA=	thunderbird
 MOZILLA_BIN=	thunderbird-bin
 MOZ_VER=	0.3
