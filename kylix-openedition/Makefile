@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/29 03:22:55 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/29 03:29:32 mpasternak Exp $
 #
 
 DISTNAME=		# defined
@@ -38,7 +38,7 @@ do-install:
 	cd ${EMULOPTDIR} && ${FIND} kylix -type l | \
 		${SED} -e "s|^|\$${EMULOPTSUBDIR}/|" >> ${PLIST_SRC}
 	cd ${EMULOPTDIR} && ${FIND} -d kylix  -type d  | \
-	${SED} -e "s/^/@dirrm \$${EMULOPTSUBDIR}/" >>${PLIST_SRC}
+	${SED} -e "s/^/@dirrm \$${EMULOPTSUBDIR}\//" >>${PLIST_SRC}
 	${CAT} ${PKGDIR}/PLIST.post >${PLIST_SRC}	
 
 .include "../../wip/mk/linuxbin.pkg.mk"
