@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/06/03 18:13:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/11 01:16:41 xtraeme Exp $
 #
 
-DISTNAME=	ezbounce-1.02
+DISTNAME=	ezbounce-1.04a
 CATEGORIES=	chat
 MASTER_SITES=	http://druglord.freelsd.org/ezbounce/ \
 		http://www.shellcentral.com/downloads/files/

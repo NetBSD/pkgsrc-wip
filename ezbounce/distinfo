@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/20 06:27:44 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/06/11 01:16:41 xtraeme Exp $
 
-SHA1 (ezbounce-1.02.tar.gz) = ed28a9081e14a4205323f944cc7ed84ff2a8197c
-Size (ezbounce-1.02.tar.gz) = 188548 bytes
+SHA1 (ezbounce-1.04a.tar.gz) = 673e9ffce7c0e964b2a041b49d2f0d5d69c58ecc
+Size (ezbounce-1.04a.tar.gz) = 189147 bytes
