@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/02 16:39:20 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/02 16:41:19 minskim Exp $
 
 DISTNAME=	syck-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -26,13 +26,13 @@ EXAMPLES=		okayNews-modules.rb okayNews-sample.rb \
 			okayNews-validate.rb okayRpc-client.rb \
 			okayRpc-server.rb yaml-sortHashKeys.rb
 .for f in ${EXAMPLES}
-REPLACE_RUBY+=		samples/$f
+REPLACE_RUBY+=		samples/${f}
 .endfor
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/syck
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/samples/$f ${RUBY_EXAMPLESDIR}/syck
+	${INSTALL_DATA} ${WRKSRC}/samples/${f} ${RUBY_EXAMPLESDIR}/syck
 .endfor
 
 .include "../../lang/ruby/modules.mk"
