@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/08 01:54:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/08 02:17:16 xtraeme Exp $
 #
 
 DISTNAME=	mod_ometer-1.2.0
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
 APACHE_MODULE_NAME=     ${DISTNAME:C|-.*||}.so
 APACHE_MODULE_SRC=	${DISTNAME:C|-.*||}.c
 
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../databases/db4/buildlink2.mk"
 .include "../../graphics/gd/buildlink2.mk"
