@@ -1,2 +1,6 @@
 This package contains library and header files for the ICE
-extension.
+extension for X. This is the Inter Client Exchange library.
+
+This is part of freedesktop.org's X Libraries and Protocol Headers
+Project.
+
