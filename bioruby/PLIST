@@ -1,0 +1,99 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 20:18:24 daprice Exp $
+bin/biofetch
+bin/bioflat
+bin/dbget
+lib/ruby/site_ruby/1.6/bio.rb
+lib/ruby/site_ruby/1.6/bio/appl/blast.rb
+lib/ruby/site_ruby/1.6/bio/appl/blast/format8.rb
+lib/ruby/site_ruby/1.6/bio/appl/blast/rexml.rb
+lib/ruby/site_ruby/1.6/bio/appl/blast/xmlparser.rb
+lib/ruby/site_ruby/1.6/bio/appl/emboss.rb
+lib/ruby/site_ruby/1.6/bio/appl/fasta.rb
+lib/ruby/site_ruby/1.6/bio/appl/fasta/format10.rb
+lib/ruby/site_ruby/1.6/bio/appl/fasta/format6.rb
+lib/ruby/site_ruby/1.6/bio/appl/hmmer.rb
+lib/ruby/site_ruby/1.6/bio/appl/hmmer/report.rb
+lib/ruby/site_ruby/1.6/bio/data/aa.rb
+lib/ruby/site_ruby/1.6/bio/data/codontable.rb
+lib/ruby/site_ruby/1.6/bio/data/keggorg.rb
+lib/ruby/site_ruby/1.6/bio/data/na.rb
+lib/ruby/site_ruby/1.6/bio/db.rb
+lib/ruby/site_ruby/1.6/bio/db/aaindex.rb
+lib/ruby/site_ruby/1.6/bio/db/embl.rb
+lib/ruby/site_ruby/1.6/bio/db/embl/embl.rb
+lib/ruby/site_ruby/1.6/bio/db/embl/sptr.rb
+lib/ruby/site_ruby/1.6/bio/db/embl/swissprot.rb
+lib/ruby/site_ruby/1.6/bio/db/embl/trembl.rb
+lib/ruby/site_ruby/1.6/bio/db/fasta.rb
+lib/ruby/site_ruby/1.6/bio/db/genbank.rb
+lib/ruby/site_ruby/1.6/bio/db/genbank/ddbj.rb
+lib/ruby/site_ruby/1.6/bio/db/genbank/genbank.rb
+lib/ruby/site_ruby/1.6/bio/db/genbank/genpept.rb
+lib/ruby/site_ruby/1.6/bio/db/genbank/refseq.rb
+lib/ruby/site_ruby/1.6/bio/db/kegg/brite.rb
+lib/ruby/site_ruby/1.6/bio/db/kegg/cell.rb
+lib/ruby/site_ruby/1.6/bio/db/kegg/compound.rb
+lib/ruby/site_ruby/1.6/bio/db/kegg/enzyme.rb
+lib/ruby/site_ruby/1.6/bio/db/kegg/genes.rb
+lib/ruby/site_ruby/1.6/bio/db/kegg/genome.rb
+lib/ruby/site_ruby/1.6/bio/db/kegg/keggtab.rb
+lib/ruby/site_ruby/1.6/bio/db/kegg/microarray.rb
+lib/ruby/site_ruby/1.6/bio/db/litdb.rb
+lib/ruby/site_ruby/1.6/bio/db/medline.rb
+lib/ruby/site_ruby/1.6/bio/db/prosite.rb
+lib/ruby/site_ruby/1.6/bio/db/transfac.rb
+lib/ruby/site_ruby/1.6/bio/extend.rb
+lib/ruby/site_ruby/1.6/bio/feature.rb
+lib/ruby/site_ruby/1.6/bio/io/brdb.rb
+lib/ruby/site_ruby/1.6/bio/io/dbget.rb
+lib/ruby/site_ruby/1.6/bio/io/fetch.rb
+lib/ruby/site_ruby/1.6/bio/io/flatfile.rb
+lib/ruby/site_ruby/1.6/bio/io/flatfile/bdb.rb
+lib/ruby/site_ruby/1.6/bio/io/flatfile/index.rb
+lib/ruby/site_ruby/1.6/bio/io/flatfile/indexer.rb
+lib/ruby/site_ruby/1.6/bio/io/pubmed.rb
+lib/ruby/site_ruby/1.6/bio/io/registry.rb
+lib/ruby/site_ruby/1.6/bio/io/sql.rb
+lib/ruby/site_ruby/1.6/bio/location.rb
+lib/ruby/site_ruby/1.6/bio/pathway.rb
+lib/ruby/site_ruby/1.6/bio/reference.rb
+lib/ruby/site_ruby/1.6/bio/sequence.rb
+share/doc/bioruby/BioRuby.rd.ja
+share/doc/bioruby/COPYING
+share/doc/bioruby/COPYING.LIB
+share/doc/bioruby/Design.rd.ja
+share/doc/bioruby/README
+share/doc/bioruby/TODO.rd.ja
+share/doc/bioruby/Tutorial.rd.ja
+share/examples/bioruby/biofetch.rb
+share/examples/bioruby/fasta2tab.rb
+share/examples/bioruby/fsplit.rb
+share/examples/bioruby/gb2fasta.rb
+share/examples/bioruby/gb2tab.rb
+share/examples/bioruby/gbtab2mysql.rb
+share/examples/bioruby/genes2nuc.rb
+share/examples/bioruby/genes2pep.rb
+share/examples/bioruby/genes2tab.rb
+share/examples/bioruby/genome2rb.rb
+share/examples/bioruby/genome2tab.rb
+share/examples/bioruby/gt2fasta.rb
+share/examples/bioruby/pmfetch.rb
+share/examples/bioruby/pmsearch.rb
+share/examples/bioruby/ssearch2tab.rb
+share/examples/bioruby/tfastx2tab.rb
+share/examples/bioruby/vs-genes.rb
+@dirrm share/examples/bioruby
+@dirrm share/doc/bioruby
+@dirrm lib/ruby/site_ruby/1.6/bio/io/flatfile
+@dirrm lib/ruby/site_ruby/1.6/bio/io
+@dirrm lib/ruby/site_ruby/1.6/bio/db/kegg
+@dirrm lib/ruby/site_ruby/1.6/bio/db/genbank
+@dirrm lib/ruby/site_ruby/1.6/bio/db/embl
+@dirrm lib/ruby/site_ruby/1.6/bio/db
+@dirrm lib/ruby/site_ruby/1.6/bio/data
+@dirrm lib/ruby/site_ruby/1.6/bio/appl/hmmer
+@dirrm lib/ruby/site_ruby/1.6/bio/appl/fasta
+@dirrm lib/ruby/site_ruby/1.6/bio/appl/blast
+@dirrm lib/ruby/site_ruby/1.6/bio/appl
+@dirrm lib/ruby/site_ruby/1.6/bio
+@dirrm lib/ruby/site_ruby/1.6
