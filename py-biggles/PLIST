@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/17 16:04:40 xtraeme Exp $
+${PYSITELIB}/biggles/__init__.py
+${PYSITELIB}/biggles/biggles.py
+${PYSITELIB}/biggles/config.py
+${PYSITELIB}/biggles/confit.py
+${PYSITELIB}/biggles/contour.py
+${PYSITELIB}/biggles/func.py
+${PYSITELIB}/biggles/geometry.py
+${PYSITELIB}/biggles/hammer.py
+${PYSITELIB}/biggles/matlab.py
+${PYSITELIB}/biggles/libplot/__init__.py
+${PYSITELIB}/biggles/libplot/renderer.py
+${PYSITELIB}/biggles/libplot/tex2libplot.py
+${PYSITELIB}/biggles/libplot/libplot.so
+${PYSITELIB}/biggles/libplot/__init__.pyc
+${PYSITELIB}/biggles/libplot/renderer.pyc
+${PYSITELIB}/biggles/libplot/tex2libplot.pyc
+${PYSITELIB}/biggles/_biggles.so
+${PYSITELIB}/biggles/__init__.pyc
+${PYSITELIB}/biggles/biggles.pyc
+${PYSITELIB}/biggles/config.pyc
+${PYSITELIB}/biggles/confit.pyc
+${PYSITELIB}/biggles/contour.pyc
+${PYSITELIB}/biggles/func.pyc
+${PYSITELIB}/biggles/geometry.pyc
+${PYSITELIB}/biggles/hammer.pyc
+${PYSITELIB}/biggles/matlab.pyc
+${PYSITELIB}/biggles/config.ini
+@dirrm ${PYSITELIB}/biggles/libplot
+@dirrm ${PYSITELIB}/biggles
