@@ -1,0 +1,30 @@
+# $NetBSD: Makefile,v 1.1.1.1 2004/06/06 23:35:33 xtraeme Exp $
+#
+
+DISTNAME=	putty-0.54
+CATEGORIES=	security
+MASTER_SITES=	http://the.earth.li/~sgtatham/putty/latest/
+
+MAINTAINER=	xtraeme@NetBSD.org
+HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/putty/
+COMMENT=	Free implementation of Telnet and SSH for Win32 and Unix platforms
+
+USE_BUILDLINK3=	yes
+USE_GNU_TOOLS+=	make
+USE_X11=	yes
+WRKSRC=		${WRKDIR}/${DISTNAME}/unix
+
+MAKEFILE=	Makefile.gtk
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
+CFLAGS+=	-DBSD_PTYS -DOMIT_UTMP -DHAVE_NO_SETRESUID
+.endif
+
+.if !empty(USE_INET6:M[Yy][Ee][Ss])
+CFLAGS+=	-DIPV6
+.endif
+
+.include "../../x11/gtk/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

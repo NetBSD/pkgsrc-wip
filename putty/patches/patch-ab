@@ -1,0 +1,46 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/06/06 23:35:34 xtraeme Exp $
+
+--- pty.c.orig	2004-06-07 01:09:18.000000000 +0200
++++ pty.c	2004-06-07 01:13:56.000000000 +0200
+@@ -11,10 +11,13 @@
+  * a null pointer and ignored everywhere.
+  */
+ 
+-#define _XOPEN_SOURCE
+-#define _XOPEN_SOURCE_EXTENDED
++/*#define _XOPEN_SOURCE
++#define _XOPEN_SOURCE_EXTENDED*/
+ #define _GNU_SOURCE
++
++#ifdef __linux__
+ #include <features.h>
++#endif
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+@@ -27,6 +30,7 @@
+ #include <utmp.h>
+ #include <pwd.h>
+ #include <time.h>
++#include <sys/param.h>
+ #include <sys/types.h>
+ #include <sys/wait.h>
+ #include <sys/ioctl.h>
+@@ -567,9 +571,17 @@
+ 	ioctl(slavefd, TIOCSCTTY, 1);
+ 	pgrp = getpid();
+ 	tcsetpgrp(slavefd, pgrp);
++#ifdef BSD
++	setpgrp(pgrp, -1);
++#else
+ 	setpgrp();
++#endif
+ 	close(open(pty_name, O_WRONLY, 0));
++#ifdef BSD
++	setpgrp(pgrp, -1);
++#else
+ 	setpgrp();
++#endif
+ 	/* Close everything _else_, for tidiness. */
+ 	for (i = 3; i < 1024; i++)
+ 	    close(i);

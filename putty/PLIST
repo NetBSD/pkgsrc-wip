@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/06 23:35:33 xtraeme Exp $
+bin/plink
+bin/pscp
+bin/psftp
+bin/pterm
+bin/putty
+bin/puttygen
+bin/puttytel
+man/man1/plink.1
+man/man1/pterm.1
+man/man1/putty.1
+man/man1/puttygen.1
+man/man1/puttytel.1
