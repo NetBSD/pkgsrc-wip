@@ -61,5 +61,14 @@ before it checks for conflicts.
 11) maybe include the db library statically?
     How can I do this with autoconf/automake?
 
+12) at the assert() places do some checks beforehand
+
+13) if no upgrade script then do the install script
+
+14) maybe make sure that if it is a symlink that it is extracting over
+ to remove it first?
+
+15) shouldn't need to use -f force when PKG_PRESERVE is enabled.
+
 also look at http://mail-index.netbsd.org/tech-pkg/2003/03/18/0002.html
 
