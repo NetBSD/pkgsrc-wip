@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/04/05 13:37:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/13 23:52:17 blef Exp $
 #
 
 DISTNAME=		uniqueidentifier-0.2
 PKGNAME=		postgresql-${DISTNAME}
-WRKSRC=			${PGSQL_CONTRIBSRC}/${DISTNAME:S/-0.2//}
 CATEGORIES=		databases
 MASTER_SITES=		ftp://gborg.postgresql.org/pub/uniqueidentifier/stable/ \
 			${PGSQL_MASTER_SITES}
@@ -13,9 +12,10 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://gborg.postgresql.org/project/uniqueidentifier/projdisplay.php
 COMMENT=		Allows PostgreSQL databases to use Global Unique Identifier (GUID)
 
-DEPENDS=		postgresql-server>=7.4.1:../../wip/postgresql74-server
+DEPENDS=		postgresql-server>=7.4.1:../../databases/postgresql74-server
 
-USE_BUILDLINK2=		yes
+WRKSRC=			${PGSQL_CONTRIBSRC}/${DISTNAME:S/-0.2//}
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 post-extract: postgresql-post-extract
@@ -32,5 +32,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/uniqueidentifier.so ${PREFIX}/lib/postgresql/uniqueidentifier.so
 
 .include "../../wip/mk/postgresql.mk"
-.include "../../wip/libuuid/buildlink2.mk"
+.include "../../wip/libuuid/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
