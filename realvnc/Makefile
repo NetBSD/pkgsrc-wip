@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/18 21:49:56 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/19 14:59:37 dhowland Exp $
 #
 
 DISTNAME=		realvnc-4.0
@@ -11,24 +11,29 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://www.realvnc.com/
 COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 
-CONFLICTS+=		vnc-* vncviewer-*
+PKG_SKIP_REASON=	unfinished / fails to install
+
+CONFLICTS+=		vnc-*
+CONFLICTS+=		vncviewer-*
 
 WRKSRC=			${WRKDIR}/vnc-4.0-unixsrc
 DOCSRC=			${WRKDIR}/vnc-4.0-documentation
 
 USE_PERL5=		yes
+REPLACE_PERL=		vncserver
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
-USE_BUILDLINK3=		yes
+
+SUBST_CLASSES=		pl
+SUBST_STAGE.pl=		pre-install
+SUBST_FILES.pl=		vncserver
+SUBST_MESSAGE.pl=	"Fixing paths..."
+SUBST_SED.pl=		-e "s|/usr/local/vnc/classes|${X11PREFIX}/share/vnc/classes|g"
 
 .include "../../mk/bsd.prefs.mk"
 
 do-install:
-	${SED} -e 's|/usr/local/vnc/classes|${X11PREFIX}/share/vnc/classes|g' \
-		-e 's|/usr/bin/perl|${PERL5}|g' \
-		< ${WRKSRC}/vncserver \
-		> ${WRKSRC}/vncserver.local
-	${INSTALL_SCRIPT} ${WRKSRC}/vncserver.local ${PREFIX}/bin/vncserver
+	${INSTALL_SCRIPT} ${WRKSRC}/vncserver ${PREFIX}/bin/vncserver
 	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd ${PREFIX}/bin/vncpasswd
 	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${PREFIX}/bin/vncviewer
 	${INSTALL_PROGRAM} ${WRKSRC}/vncconfig/vncconfig ${PREFIX}/bin/vncconfig
