@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1 2005/01/01 22:34:47 mattd Exp $
+
+--- configure.ac.orig	2004-07-22 12:01:16.000000000 +0000
++++ configure.ac
+@@ -2,13 +2,14 @@ AC_PREREQ(2.53)
+ AC_INIT([matchbox-desktop], 0.8.1, [mallum@handhelds.org])
+ AC_CONFIG_SRCDIR([src/mbdesktop.c])
+ 
++AC_CONFIG_AUX_DIR(.)
+ AM_INIT_AUTOMAKE()
+ AM_MAINTAINER_MODE
+ AM_CONFIG_HEADER([config.h])
+-AC_CONFIG_AUX_DIR(.)
+ 
+ # Checks for programs.
+ AC_PROG_CC
++AC_LIBTOOL_DLOPEN
+ AC_PROG_LIBTOOL
+ 
+ AC_HEADER_DIRENT
+@@ -139,4 +140,4 @@ echo "
+         Building with Startup-Notification: ${enable_startup_notification}
+ 	Building with DNOTIFY:		    ${enable_dnotify}
+ 
+-"
+\ No newline at end of file
++"

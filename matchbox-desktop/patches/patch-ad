@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2005/01/01 22:34:47 mattd Exp $
+
+--- src/Makefile.am.orig	2004-07-22 11:23:26.000000000 +0000
++++ src/Makefile.am
+@@ -7,7 +7,7 @@ INCLUDES = $(GCC_WARNINGS) -DDATADIR=\"$
+ 
+ bin_PROGRAMS = matchbox-desktop
+ 
+-matchbox_desktop_LDADD = $(LIBMB_LIBS) -ldl -lz
++matchbox_desktop_LDADD = $(LIBMB_LIBS) $(LIBADD_DL) -lz
+ matchbox_desktop_LDFLAGS = -export-dynamic
+ 
+ matchbox_desktop_SOURCES = \
