@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/15 16:06:00 ianzag Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/29 07:35:44 ianzag Exp $
 #
 
 DISTNAME=		gwenview-1.1.3
@@ -14,7 +14,7 @@ USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 
-CONFIGURE_ARGS+= --enable-kipi
+#CONFIGURE_ARGS+= --enable-kipi
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
