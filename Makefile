@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1429 2004/08/16 20:18:28 minskim Exp $
-# $NetBSD: Makefile,v 1.1429 2004/08/16 20:18:28 minskim Exp $
+# $Id: Makefile,v 1.1430 2004/08/17 12:57:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1430 2004/08/17 12:57:43 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -718,7 +718,6 @@ SUBDIR+=	speedx
 SUBDIR+=	srvx
 SUBDIR+=	stmpclean
 SUBDIR+=	strace
-SUBDIR+=	stratagus
 SUBDIR+=	stratagus-bos
 SUBDIR+=	streamripper
 SUBDIR+=	stunnel3

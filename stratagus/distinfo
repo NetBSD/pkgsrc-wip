@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/06/01 23:12:17 xtraeme Exp $
-
-SHA1 (stratagus-2.0-src.zip) = 20d88bb050b019626630b0f32306ceb50a32556a
-Size (stratagus-2.0-src.zip) = 1533688 bytes
-SHA1 (patch-aa) = 853623e117e88a3c8330d2c7aa0cd1fc015b533a
