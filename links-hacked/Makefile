@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/31 00:48:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/31 01:18:25 xtraeme Exp $
 #
 
 DISTNAME=	links-hacked-${VER}
@@ -9,7 +9,7 @@ DISTFILES+=     ${DISTNAME}${EXTRACT_SUFX} links-fonts-new${EXTRACT_SUFX}
 
 MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://xray.sai.msu.ru/~karpov/links-hacked/
-COMMENT=        Enhanced version of Links with tabs and more ( text mode )
+COMMENT=        Enhanced version of Links with tabs and more
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
