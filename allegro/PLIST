@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/07/02 05:36:25 blef Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/02 09:43:24 blef Exp $
 bin/allegro-config
 bin/colormap
 bin/dat
@@ -93,9 +93,7 @@ include/allegro/timer.h
 include/allegro/unicode.h
 include/linalleg.h
 include/xalleg.h
-@unexec ${INSTALL_INFO} --delete %D/info/allegro.info %D/info/dir
 info/allegro.info
-@exec ${INSTALL_INFO} %D/info/allegro.info %D/info/dir
 lib/liballd-${PKGVERSION}.so
 lib/liballd.so.4.1
 lib/liballd_unsharable.a
