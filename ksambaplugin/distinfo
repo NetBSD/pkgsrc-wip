@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/24 15:10:11 ianzag Exp $
+$NetBSD: distinfo,v 1.2 2005/03/29 05:00:12 ianzag Exp $
 
 SHA1 (ksambaplugin-0.5.tar.gz) = 8a63d9f5b00a878a117e2ed09ca8fa9a10aab96c
+RMD160 (ksambaplugin-0.5.tar.gz) = 293569d04732f6b3a57777c8b34b8dac2e7ae794
 Size (ksambaplugin-0.5.tar.gz) = 742204 bytes

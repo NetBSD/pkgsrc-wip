@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/08/13 05:00:32 ianzag Exp $
+$NetBSD: distinfo,v 1.2 2005/03/29 05:00:44 ianzag Exp $
 
 SHA1 (g21k-binutils-PL4.tar.gz) = 822150cc2028c6a413ae2998b6f8772c29eccd0a
+RMD160 (g21k-binutils-PL4.tar.gz) = 27b9d4e17d56c2c9ef3d28eb5339a49894838931
 Size (g21k-binutils-PL4.tar.gz) = 271119 bytes
