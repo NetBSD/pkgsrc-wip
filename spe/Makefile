@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/28 13:19:06 mpasternak Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/03 14:21:10 thomasklausner Exp $
 #
 
 DISTNAME=		SPE-0.4.1.d-wx2.4.2.4.-bl2.28
@@ -16,6 +16,6 @@ PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 EXTRACT_CMD_OPTS.zip=	-qo
 
-.include "../../x11/py-wxWindows/buildlink3.mk"
+.include "../../x11/py-wxWidgets/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
