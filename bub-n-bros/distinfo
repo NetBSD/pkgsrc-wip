@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/06/29 20:23:00 marc Exp $
+
+SHA1 (bub-n-bros-1.0.tar.gz) = f3bcaa8e7eddffa213e4b544266bb0977f7ec8e1
+Size (bub-n-bros-1.0.tar.gz) = 9736788 bytes
+SHA1 (patch-aa) = f9d9b5c7f6cc1c016d052e5a2cdd9015eaea0cee
