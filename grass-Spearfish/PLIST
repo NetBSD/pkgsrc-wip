@@ -1,0 +1,583 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/08 17:19:17 daprice Exp $
+share/dataset/geography/spearfish/PERMANENT/COMBINE/test
+share/dataset/geography/spearfish/PERMANENT/Census/spear.140
+share/dataset/geography/spearfish/PERMANENT/DEFAULT_WIND
+share/dataset/geography/spearfish/PERMANENT/HISTORY
+share/dataset/geography/spearfish/PERMANENT/Informix/README
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/area.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/d.r.inf.ex1
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/d.r.inf.ex2
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/d.r.inf.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/d.s.inf.ex1
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/d.v.inf.ex1
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/d.v.inf.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/d.w.r.inf.ex1
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/d.w.r.inf.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/d.w.s.inf.ex1
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/d.w.s.inf.ex2
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/d.w.s.inf.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/d.w.v.inf.ex1
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/d.w.v.inf.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/lines.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/r.recl.inf.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/r.resc.inf.ex1
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/v.recl.inf.ex1
+share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES/v.recl.inf.ex2
+share/dataset/geography/spearfish/PERMANENT/Informix/house1.asc
+share/dataset/geography/spearfish/PERMANENT/Informix/house1.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/house2.asc
+share/dataset/geography/spearfish/PERMANENT/Informix/house2.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/load.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/main.asc
+share/dataset/geography/spearfish/PERMANENT/Informix/main.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/mk_tiger
+share/dataset/geography/spearfish/PERMANENT/Informix/person1.asc
+share/dataset/geography/spearfish/PERMANENT/Informix/person1.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/person2.asc
+share/dataset/geography/spearfish/PERMANENT/Informix/person2.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/person3.asc
+share/dataset/geography/spearfish/PERMANENT/Informix/person3.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/person4.asc
+share/dataset/geography/spearfish/PERMANENT/Informix/person4.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_ho101.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_ho101.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_ho102.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_ho102.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_ma100.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_ma100.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_pe103.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_pe103.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_pe104.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_pe104.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_pe105.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_pe105.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_pe106.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/stf1_pe106.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/syschecks.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/syschecks.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/syscolauth.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/syscolauth.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/syscoldepe.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/syscoldepe.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/syscolumns.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/syscolumns.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysconstra.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysconstra.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysdefault.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysdefault.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysdepend.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysdepend.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysindexes.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysindexes.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysprocaut.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysprocaut.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysprocbod.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysprocbod.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysprocedu.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysprocedu.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysprocpla.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysprocpla.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysreferen.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysreferen.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/syssynonym.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/syssynonym.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/syssyntabl.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/syssyntabl.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/systabauth.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/systabauth.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/systables.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/systables.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysusers.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysusers.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysviews.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/sysviews.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/type1__107.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/type1__107.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/type7__108.dat
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs/type7__108.idx
+share/dataset/geography/spearfish/PERMANENT/Informix/tiger.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/type1.asc
+share/dataset/geography/spearfish/PERMANENT/Informix/type1.sql
+share/dataset/geography/spearfish/PERMANENT/Informix/type7.asc
+share/dataset/geography/spearfish/PERMANENT/Informix/type7.sql
+share/dataset/geography/spearfish/PERMANENT/MYNAME
+share/dataset/geography/spearfish/PERMANENT/PROJ_INFO
+share/dataset/geography/spearfish/PERMANENT/PROJ_UNITS
+share/dataset/geography/spearfish/PERMANENT/TIGER/tgr46081.f41
+share/dataset/geography/spearfish/PERMANENT/TIGER/tgr46081.f42
+share/dataset/geography/spearfish/PERMANENT/TIGER/tgr46081.f43
+share/dataset/geography/spearfish/PERMANENT/TIGER/tgr46081.f44
+share/dataset/geography/spearfish/PERMANENT/TIGER/tgr46081.f45
+share/dataset/geography/spearfish/PERMANENT/TIGER/tgr46081.f47
+share/dataset/geography/spearfish/PERMANENT/TIGER/tgr46081.f48
+share/dataset/geography/spearfish/PERMANENT/TIGER/tgr46081.f4a
+share/dataset/geography/spearfish/PERMANENT/TIGER/tgr46081.f4i
+share/dataset/geography/spearfish/PERMANENT/TIGER/tgr46081.f4p
+share/dataset/geography/spearfish/PERMANENT/TIGER/tgr46081.f4r
+share/dataset/geography/spearfish/PERMANENT/TODO
+share/dataset/geography/spearfish/PERMANENT/WIND
+share/dataset/geography/spearfish/PERMANENT/bdlg/fields.dead
+share/dataset/geography/spearfish/PERMANENT/bdlg/fields.spear
+share/dataset/geography/spearfish/PERMANENT/bdlg/quads
+share/dataset/geography/spearfish/PERMANENT/bdlg/railroads
+share/dataset/geography/spearfish/PERMANENT/bdlg/roads.dead
+share/dataset/geography/spearfish/PERMANENT/bdlg/roads.spear
+share/dataset/geography/spearfish/PERMANENT/bdlg/streams.dead
+share/dataset/geography/spearfish/PERMANENT/bdlg/streams.spear
+share/dataset/geography/spearfish/PERMANENT/bdlg/transport.misc
+share/dataset/geography/spearfish/PERMANENT/cats/aspect
+share/dataset/geography/spearfish/PERMANENT/cats/bugsites
+share/dataset/geography/spearfish/PERMANENT/cats/density
+share/dataset/geography/spearfish/PERMANENT/cats/dwsoils
+share/dataset/geography/spearfish/PERMANENT/cats/elevation.dem
+share/dataset/geography/spearfish/PERMANENT/cats/elevation.dted
+share/dataset/geography/spearfish/PERMANENT/cats/erode.index
+share/dataset/geography/spearfish/PERMANENT/cats/erosion1
+share/dataset/geography/spearfish/PERMANENT/cats/fields
+share/dataset/geography/spearfish/PERMANENT/cats/geology
+share/dataset/geography/spearfish/PERMANENT/cats/landuse
+share/dataset/geography/spearfish/PERMANENT/cats/owner
+share/dataset/geography/spearfish/PERMANENT/cats/quads
+share/dataset/geography/spearfish/PERMANENT/cats/railroads
+share/dataset/geography/spearfish/PERMANENT/cats/roads
+share/dataset/geography/spearfish/PERMANENT/cats/rstrct.areas
+share/dataset/geography/spearfish/PERMANENT/cats/rushmore
+share/dataset/geography/spearfish/PERMANENT/cats/sfsoils
+share/dataset/geography/spearfish/PERMANENT/cats/slope
+share/dataset/geography/spearfish/PERMANENT/cats/soil.br.depth
+share/dataset/geography/spearfish/PERMANENT/cats/soils
+share/dataset/geography/spearfish/PERMANENT/cats/soils.Kfactor
+share/dataset/geography/spearfish/PERMANENT/cats/soils.Tfactor
+share/dataset/geography/spearfish/PERMANENT/cats/soils.ph
+share/dataset/geography/spearfish/PERMANENT/cats/soils.range
+share/dataset/geography/spearfish/PERMANENT/cats/spot.image
+share/dataset/geography/spearfish/PERMANENT/cats/streams
+share/dataset/geography/spearfish/PERMANENT/cats/strm.dist
+share/dataset/geography/spearfish/PERMANENT/cats/texture
+share/dataset/geography/spearfish/PERMANENT/cats/tractids
+share/dataset/geography/spearfish/PERMANENT/cats/transport.misc
+share/dataset/geography/spearfish/PERMANENT/cats/trn.sites
+share/dataset/geography/spearfish/PERMANENT/cats/uparea
+share/dataset/geography/spearfish/PERMANENT/cats/vegcover
+share/dataset/geography/spearfish/PERMANENT/cell/aspect
+share/dataset/geography/spearfish/PERMANENT/cell/bugsites
+share/dataset/geography/spearfish/PERMANENT/cell/density
+share/dataset/geography/spearfish/PERMANENT/cell/elevation.dem
+share/dataset/geography/spearfish/PERMANENT/cell/elevation.dted
+share/dataset/geography/spearfish/PERMANENT/cell/erode.index
+share/dataset/geography/spearfish/PERMANENT/cell/erosion1
+share/dataset/geography/spearfish/PERMANENT/cell/fields
+share/dataset/geography/spearfish/PERMANENT/cell/geology
+share/dataset/geography/spearfish/PERMANENT/cell/landuse
+share/dataset/geography/spearfish/PERMANENT/cell/owner
+share/dataset/geography/spearfish/PERMANENT/cell/quads
+share/dataset/geography/spearfish/PERMANENT/cell/railroads
+share/dataset/geography/spearfish/PERMANENT/cell/roads
+share/dataset/geography/spearfish/PERMANENT/cell/rstrct.areas
+share/dataset/geography/spearfish/PERMANENT/cell/rushmore
+share/dataset/geography/spearfish/PERMANENT/cell/slope
+share/dataset/geography/spearfish/PERMANENT/cell/soil.br.depth
+share/dataset/geography/spearfish/PERMANENT/cell/soils
+share/dataset/geography/spearfish/PERMANENT/cell/soils.Kfactor
+share/dataset/geography/spearfish/PERMANENT/cell/soils.Tfactor
+share/dataset/geography/spearfish/PERMANENT/cell/soils.ph
+share/dataset/geography/spearfish/PERMANENT/cell/soils.range
+share/dataset/geography/spearfish/PERMANENT/cell/spot.image
+share/dataset/geography/spearfish/PERMANENT/cell/streams
+share/dataset/geography/spearfish/PERMANENT/cell/strm.dist
+share/dataset/geography/spearfish/PERMANENT/cell/texture
+share/dataset/geography/spearfish/PERMANENT/cell/tractids
+share/dataset/geography/spearfish/PERMANENT/cell/transport.misc
+share/dataset/geography/spearfish/PERMANENT/cell/trn.sites
+share/dataset/geography/spearfish/PERMANENT/cell/uparea
+share/dataset/geography/spearfish/PERMANENT/cell/vegcover
+share/dataset/geography/spearfish/PERMANENT/cell_misc/aspect/f_format
+share/dataset/geography/spearfish/PERMANENT/cell_misc/aspect/f_quant
+share/dataset/geography/spearfish/PERMANENT/cell_misc/aspect/f_range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/aspect/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/aspect/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/bugsites/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/bugsites/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/density/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/density/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/elevation.dem/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/elevation.dem/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/elevation.dted/histogram
+share/dataset/geography/spearfish/PERMANENT/cell_misc/elevation.dted/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/erode.index/histogram
+share/dataset/geography/spearfish/PERMANENT/cell_misc/erode.index/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/erosion1/f_format
+share/dataset/geography/spearfish/PERMANENT/cell_misc/erosion1/f_quant
+share/dataset/geography/spearfish/PERMANENT/cell_misc/erosion1/f_range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/erosion1/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/fields/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/fields/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/geology/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/geology/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/landuse/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/landuse/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/owner/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/owner/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/quads/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/quads/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/railroads/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/railroads/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/roads/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/roads/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/rstrct.areas/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/rstrct.areas/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/rushmore/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/rushmore/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/slope/f_format
+share/dataset/geography/spearfish/PERMANENT/cell_misc/slope/f_quant
+share/dataset/geography/spearfish/PERMANENT/cell_misc/slope/f_range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/slope/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/slope/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/soil.br.depth/histogram
+share/dataset/geography/spearfish/PERMANENT/cell_misc/soil.br.depth/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/soils.Kfactor/histogram
+share/dataset/geography/spearfish/PERMANENT/cell_misc/soils.Kfactor/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/soils.Tfactor/histogram
+share/dataset/geography/spearfish/PERMANENT/cell_misc/soils.Tfactor/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/soils.ph/histogram
+share/dataset/geography/spearfish/PERMANENT/cell_misc/soils.ph/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/soils.range/histogram
+share/dataset/geography/spearfish/PERMANENT/cell_misc/soils.range/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/soils/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/soils/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/spot.image/histogram
+share/dataset/geography/spearfish/PERMANENT/cell_misc/spot.image/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/streams/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/streams/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/strm.dist/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/strm.dist/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/texture/histogram
+share/dataset/geography/spearfish/PERMANENT/cell_misc/texture/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/tractids/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/tractids/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/transport.misc/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/transport.misc/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/trn.sites/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/trn.sites/range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/uparea/f_format
+share/dataset/geography/spearfish/PERMANENT/cell_misc/uparea/f_quant
+share/dataset/geography/spearfish/PERMANENT/cell_misc/uparea/f_range
+share/dataset/geography/spearfish/PERMANENT/cell_misc/uparea/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/vegcover/null
+share/dataset/geography/spearfish/PERMANENT/cell_misc/vegcover/range
+share/dataset/geography/spearfish/PERMANENT/cellhd/aspect
+share/dataset/geography/spearfish/PERMANENT/cellhd/bugsites
+share/dataset/geography/spearfish/PERMANENT/cellhd/density
+share/dataset/geography/spearfish/PERMANENT/cellhd/elevation.dem
+share/dataset/geography/spearfish/PERMANENT/cellhd/elevation.dted
+share/dataset/geography/spearfish/PERMANENT/cellhd/erode.index
+share/dataset/geography/spearfish/PERMANENT/cellhd/erosion1
+share/dataset/geography/spearfish/PERMANENT/cellhd/fields
+share/dataset/geography/spearfish/PERMANENT/cellhd/geology
+share/dataset/geography/spearfish/PERMANENT/cellhd/landuse
+share/dataset/geography/spearfish/PERMANENT/cellhd/owner
+share/dataset/geography/spearfish/PERMANENT/cellhd/quads
+share/dataset/geography/spearfish/PERMANENT/cellhd/railroads
+share/dataset/geography/spearfish/PERMANENT/cellhd/roads
+share/dataset/geography/spearfish/PERMANENT/cellhd/rstrct.areas
+share/dataset/geography/spearfish/PERMANENT/cellhd/rushmore
+share/dataset/geography/spearfish/PERMANENT/cellhd/slope
+share/dataset/geography/spearfish/PERMANENT/cellhd/soil.br.depth
+share/dataset/geography/spearfish/PERMANENT/cellhd/soils
+share/dataset/geography/spearfish/PERMANENT/cellhd/soils.Kfactor
+share/dataset/geography/spearfish/PERMANENT/cellhd/soils.Tfactor
+share/dataset/geography/spearfish/PERMANENT/cellhd/soils.ph
+share/dataset/geography/spearfish/PERMANENT/cellhd/soils.range
+share/dataset/geography/spearfish/PERMANENT/cellhd/spot.image
+share/dataset/geography/spearfish/PERMANENT/cellhd/streams
+share/dataset/geography/spearfish/PERMANENT/cellhd/strm.dist
+share/dataset/geography/spearfish/PERMANENT/cellhd/texture
+share/dataset/geography/spearfish/PERMANENT/cellhd/tractids
+share/dataset/geography/spearfish/PERMANENT/cellhd/transport.misc
+share/dataset/geography/spearfish/PERMANENT/cellhd/trn.sites
+share/dataset/geography/spearfish/PERMANENT/cellhd/uparea
+share/dataset/geography/spearfish/PERMANENT/cellhd/vegcover
+share/dataset/geography/spearfish/PERMANENT/colr/aspect
+share/dataset/geography/spearfish/PERMANENT/colr/bugsites
+share/dataset/geography/spearfish/PERMANENT/colr/density
+share/dataset/geography/spearfish/PERMANENT/colr/elevation.dem
+share/dataset/geography/spearfish/PERMANENT/colr/elevation.dted
+share/dataset/geography/spearfish/PERMANENT/colr/erode.index
+share/dataset/geography/spearfish/PERMANENT/colr/erosion1
+share/dataset/geography/spearfish/PERMANENT/colr/fields
+share/dataset/geography/spearfish/PERMANENT/colr/geology
+share/dataset/geography/spearfish/PERMANENT/colr/landuse
+share/dataset/geography/spearfish/PERMANENT/colr/map.new
+share/dataset/geography/spearfish/PERMANENT/colr/map2
+share/dataset/geography/spearfish/PERMANENT/colr/owner
+share/dataset/geography/spearfish/PERMANENT/colr/quads
+share/dataset/geography/spearfish/PERMANENT/colr/railroads
+share/dataset/geography/spearfish/PERMANENT/colr/roads
+share/dataset/geography/spearfish/PERMANENT/colr/rstrct.areas
+share/dataset/geography/spearfish/PERMANENT/colr/rushmore
+share/dataset/geography/spearfish/PERMANENT/colr/soil.br.depth
+share/dataset/geography/spearfish/PERMANENT/colr/soils
+share/dataset/geography/spearfish/PERMANENT/colr/soils.Kfactor
+share/dataset/geography/spearfish/PERMANENT/colr/soils.Tfactor
+share/dataset/geography/spearfish/PERMANENT/colr/soils.ph
+share/dataset/geography/spearfish/PERMANENT/colr/spot.image
+share/dataset/geography/spearfish/PERMANENT/colr/streams
+share/dataset/geography/spearfish/PERMANENT/colr/strm.dist
+share/dataset/geography/spearfish/PERMANENT/colr/texture
+share/dataset/geography/spearfish/PERMANENT/colr/tractids
+share/dataset/geography/spearfish/PERMANENT/colr/transport.misc
+share/dataset/geography/spearfish/PERMANENT/colr/trn.sites
+share/dataset/geography/spearfish/PERMANENT/colr/vegcover
+share/dataset/geography/spearfish/PERMANENT/colr2/PERMANENT/soils.ph
+share/dataset/geography/spearfish/PERMANENT/dig/fields
+share/dataset/geography/spearfish/PERMANENT/dig/quads
+share/dataset/geography/spearfish/PERMANENT/dig/railroads
+share/dataset/geography/spearfish/PERMANENT/dig/roads
+share/dataset/geography/spearfish/PERMANENT/dig/rstrct.areas
+share/dataset/geography/spearfish/PERMANENT/dig/sections
+share/dataset/geography/spearfish/PERMANENT/dig/soils
+share/dataset/geography/spearfish/PERMANENT/dig/streams
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.100
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.100.all
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.100.bks
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.200
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.200.all
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.200.bks
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.300
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.300.all
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.300.bks
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.400
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.400.all
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.400.bks
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.500
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.500.all
+share/dataset/geography/spearfish/PERMANENT/dig/t.9961.500.bks
+share/dataset/geography/spearfish/PERMANENT/dig/t.county
+share/dataset/geography/spearfish/PERMANENT/dig/t.hydro
+share/dataset/geography/spearfish/PERMANENT/dig/t.powerlines
+share/dataset/geography/spearfish/PERMANENT/dig/t.rails
+share/dataset/geography/spearfish/PERMANENT/dig/t.roads
+share/dataset/geography/spearfish/PERMANENT/dig/t.roads.inf
+share/dataset/geography/spearfish/PERMANENT/dig/t.roads.prime
+share/dataset/geography/spearfish/PERMANENT/dig/t.roads.second
+share/dataset/geography/spearfish/PERMANENT/dig/t.tracts
+share/dataset/geography/spearfish/PERMANENT/dig/tractids
+share/dataset/geography/spearfish/PERMANENT/dig/tracts
+share/dataset/geography/spearfish/PERMANENT/dig/transport.misc
+share/dataset/geography/spearfish/PERMANENT/dig/trn.sites
+share/dataset/geography/spearfish/PERMANENT/dig/twp.range
+share/dataset/geography/spearfish/PERMANENT/dig_ascii/fields
+share/dataset/geography/spearfish/PERMANENT/dig_ascii/quads
+share/dataset/geography/spearfish/PERMANENT/dig_ascii/quads.test
+share/dataset/geography/spearfish/PERMANENT/dig_ascii/railroads
+share/dataset/geography/spearfish/PERMANENT/dig_ascii/roads
+share/dataset/geography/spearfish/PERMANENT/dig_ascii/rstrct.areas
+share/dataset/geography/spearfish/PERMANENT/dig_ascii/sections
+share/dataset/geography/spearfish/PERMANENT/dig_ascii/streams.dead
+share/dataset/geography/spearfish/PERMANENT/dig_ascii/streams.spear
+share/dataset/geography/spearfish/PERMANENT/dig_ascii/transport.misc
+share/dataset/geography/spearfish/PERMANENT/dig_ascii/trn.sites
+share/dataset/geography/spearfish/PERMANENT/dig_ascii/twp.range
+share/dataset/geography/spearfish/PERMANENT/dig_att/fields
+share/dataset/geography/spearfish/PERMANENT/dig_att/fields.dead
+share/dataset/geography/spearfish/PERMANENT/dig_att/fields.dead2
+share/dataset/geography/spearfish/PERMANENT/dig_att/fields.spear
+share/dataset/geography/spearfish/PERMANENT/dig_att/fields.spear2
+share/dataset/geography/spearfish/PERMANENT/dig_att/quads
+share/dataset/geography/spearfish/PERMANENT/dig_att/railroads
+share/dataset/geography/spearfish/PERMANENT/dig_att/roads
+share/dataset/geography/spearfish/PERMANENT/dig_att/rstrct.areas
+share/dataset/geography/spearfish/PERMANENT/dig_att/sections
+share/dataset/geography/spearfish/PERMANENT/dig_att/soils
+share/dataset/geography/spearfish/PERMANENT/dig_att/streams
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.100
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.100.all
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.100.bks
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.200
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.200.all
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.200.bks
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.300
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.300.all
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.300.bks
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.400
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.400.all
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.400.bks
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.500
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.500.all
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.9961.500.bks
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.county
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.hydro
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.powerlines
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.rails
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.roads
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.roads.inf
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.roads.prime
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.roads.second
+share/dataset/geography/spearfish/PERMANENT/dig_att/t.tracts
+share/dataset/geography/spearfish/PERMANENT/dig_att/tractids
+share/dataset/geography/spearfish/PERMANENT/dig_att/tracts
+share/dataset/geography/spearfish/PERMANENT/dig_att/transport.misc
+share/dataset/geography/spearfish/PERMANENT/dig_att/trn.sites
+share/dataset/geography/spearfish/PERMANENT/dig_att/twp.range
+share/dataset/geography/spearfish/PERMANENT/dig_cats/fields
+share/dataset/geography/spearfish/PERMANENT/dig_cats/roads
+share/dataset/geography/spearfish/PERMANENT/dig_cats/soils
+share/dataset/geography/spearfish/PERMANENT/dig_cats/streams
+share/dataset/geography/spearfish/PERMANENT/dig_plus/fields
+share/dataset/geography/spearfish/PERMANENT/dig_plus/quads
+share/dataset/geography/spearfish/PERMANENT/dig_plus/railroads
+share/dataset/geography/spearfish/PERMANENT/dig_plus/roads
+share/dataset/geography/spearfish/PERMANENT/dig_plus/rstrct.areas
+share/dataset/geography/spearfish/PERMANENT/dig_plus/sections
+share/dataset/geography/spearfish/PERMANENT/dig_plus/soils
+share/dataset/geography/spearfish/PERMANENT/dig_plus/streams
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.100
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.100.all
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.100.bks
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.200
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.200.all
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.200.bks
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.300
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.300.all
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.300.bks
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.400
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.400.all
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.400.bks
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.500
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.500.all
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.9961.500.bks
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.county
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.hydro
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.powerlines
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.rails
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.roads
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.roads.inf
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.roads.prime
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.roads.second
+share/dataset/geography/spearfish/PERMANENT/dig_plus/t.tracts
+share/dataset/geography/spearfish/PERMANENT/dig_plus/tractids
+share/dataset/geography/spearfish/PERMANENT/dig_plus/tracts
+share/dataset/geography/spearfish/PERMANENT/dig_plus/transport.misc
+share/dataset/geography/spearfish/PERMANENT/dig_plus/trn.sites
+share/dataset/geography/spearfish/PERMANENT/dig_plus/twp.range
+share/dataset/geography/spearfish/PERMANENT/dlg/fields.dead
+share/dataset/geography/spearfish/PERMANENT/dlg/fields.spear
+share/dataset/geography/spearfish/PERMANENT/dlg/quads
+share/dataset/geography/spearfish/PERMANENT/dlg/railroads
+share/dataset/geography/spearfish/PERMANENT/dlg/roads.dead
+share/dataset/geography/spearfish/PERMANENT/dlg/streams.dead
+share/dataset/geography/spearfish/PERMANENT/dlg/streams.spear
+share/dataset/geography/spearfish/PERMANENT/dlg/transport.misc
+share/dataset/geography/spearfish/PERMANENT/fcell/aspect
+share/dataset/geography/spearfish/PERMANENT/fcell/erosion1
+share/dataset/geography/spearfish/PERMANENT/fcell/slope
+share/dataset/geography/spearfish/PERMANENT/fcell/uparea
+share/dataset/geography/spearfish/PERMANENT/hist/aspect
+share/dataset/geography/spearfish/PERMANENT/hist/bugsites
+share/dataset/geography/spearfish/PERMANENT/hist/density
+share/dataset/geography/spearfish/PERMANENT/hist/elevation.dem
+share/dataset/geography/spearfish/PERMANENT/hist/elevation.dted
+share/dataset/geography/spearfish/PERMANENT/hist/erode.index
+share/dataset/geography/spearfish/PERMANENT/hist/erosion1
+share/dataset/geography/spearfish/PERMANENT/hist/fields
+share/dataset/geography/spearfish/PERMANENT/hist/fields.dead
+share/dataset/geography/spearfish/PERMANENT/hist/fields.spear
+share/dataset/geography/spearfish/PERMANENT/hist/geology
+share/dataset/geography/spearfish/PERMANENT/hist/landuse
+share/dataset/geography/spearfish/PERMANENT/hist/map.new
+share/dataset/geography/spearfish/PERMANENT/hist/map2
+share/dataset/geography/spearfish/PERMANENT/hist/owner
+share/dataset/geography/spearfish/PERMANENT/hist/quads
+share/dataset/geography/spearfish/PERMANENT/hist/railroads
+share/dataset/geography/spearfish/PERMANENT/hist/roads
+share/dataset/geography/spearfish/PERMANENT/hist/rstrct.areas
+share/dataset/geography/spearfish/PERMANENT/hist/rushmore
+share/dataset/geography/spearfish/PERMANENT/hist/slope
+share/dataset/geography/spearfish/PERMANENT/hist/soil.br.depth
+share/dataset/geography/spearfish/PERMANENT/hist/soils
+share/dataset/geography/spearfish/PERMANENT/hist/soils.Kfactor
+share/dataset/geography/spearfish/PERMANENT/hist/soils.Tfactor
+share/dataset/geography/spearfish/PERMANENT/hist/soils.ph
+share/dataset/geography/spearfish/PERMANENT/hist/soils.range
+share/dataset/geography/spearfish/PERMANENT/hist/spot.image
+share/dataset/geography/spearfish/PERMANENT/hist/streams
+share/dataset/geography/spearfish/PERMANENT/hist/strm.dist
+share/dataset/geography/spearfish/PERMANENT/hist/texture
+share/dataset/geography/spearfish/PERMANENT/hist/tractids
+share/dataset/geography/spearfish/PERMANENT/hist/transport.misc
+share/dataset/geography/spearfish/PERMANENT/hist/trn.sites
+share/dataset/geography/spearfish/PERMANENT/hist/uparea
+share/dataset/geography/spearfish/PERMANENT/hist/vegcover
+share/dataset/geography/spearfish/PERMANENT/paint/labels/rush.lbl
+share/dataset/geography/spearfish/PERMANENT/paint/labels/sample
+share/dataset/geography/spearfish/PERMANENT/site_lists/archsites
+share/dataset/geography/spearfish/PERMANENT/site_lists/bugsites
+share/dataset/geography/spearfish/PERMANENT/windows/9961
+share/dataset/geography/spearfish/PERMANENT/windows/county
+share/dataset/geography/spearfish/PERMANENT/windows/subregion.NW
+share/dataset/geography/spearfish/user1/WIND
+@dirrm share/dataset/geography/spearfish/user1
+@dirrm share/dataset/geography/spearfish/PERMANENT/windows
+@dirrm share/dataset/geography/spearfish/PERMANENT/site_lists
+@dirrm share/dataset/geography/spearfish/PERMANENT/paint/labels
+@dirrm share/dataset/geography/spearfish/PERMANENT/paint
+@dirrm share/dataset/geography/spearfish/PERMANENT/hist
+@exec ${MKDIR} %D/share/dataset/geography/spearfish/PERMANENT/g3dcell
+@dirrm share/dataset/geography/spearfish/PERMANENT/g3dcell
+@dirrm share/dataset/geography/spearfish/PERMANENT/fcell
+@dirrm share/dataset/geography/spearfish/PERMANENT/dlg
+@dirrm share/dataset/geography/spearfish/PERMANENT/dig_plus
+@dirrm share/dataset/geography/spearfish/PERMANENT/dig_cats
+@dirrm share/dataset/geography/spearfish/PERMANENT/dig_att
+@dirrm share/dataset/geography/spearfish/PERMANENT/dig_ascii
+@dirrm share/dataset/geography/spearfish/PERMANENT/dig
+@dirrm share/dataset/geography/spearfish/PERMANENT/colr2/PERMANENT
+@dirrm share/dataset/geography/spearfish/PERMANENT/colr2
+@dirrm share/dataset/geography/spearfish/PERMANENT/colr
+@dirrm share/dataset/geography/spearfish/PERMANENT/cellhd
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/vegcover
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/uparea
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/trn.sites
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/transport.misc
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/tractids
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/texture
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/strm.dist
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/streams
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/spot.image
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/soils.range
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/soils.ph
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/soils.Tfactor
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/soils.Kfactor
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/soils
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/soil.br.depth
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/slope
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/rushmore
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/rstrct.areas
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/roads
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/railroads
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/quads
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/owner
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/landuse
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/geology
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/fields
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/erosion1
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/erode.index
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/elevation.dted
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/elevation.dem
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/density
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/bugsites
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc/aspect
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell_misc
+@dirrm share/dataset/geography/spearfish/PERMANENT/cell
+@dirrm share/dataset/geography/spearfish/PERMANENT/cats
+@dirrm share/dataset/geography/spearfish/PERMANENT/bdlg
+@dirrm share/dataset/geography/spearfish/PERMANENT/TIGER
+@dirrm share/dataset/geography/spearfish/PERMANENT/Informix/tiger.dbs
+@dirrm share/dataset/geography/spearfish/PERMANENT/Informix/dbsql.SAMPLES
+@dirrm share/dataset/geography/spearfish/PERMANENT/Informix
+@dirrm share/dataset/geography/spearfish/PERMANENT/Census
+@dirrm share/dataset/geography/spearfish/PERMANENT/COMBINE
+@dirrm share/dataset/geography/spearfish/PERMANENT
+@dirrm share/dataset/geography/spearfish
+@unexec ${RMDIR} %D/share/dataset/geography 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/dataset 2>/dev/null || ${TRUE}
