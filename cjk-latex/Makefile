@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/09 14:24:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/26 00:43:43 rxg Exp $
 
 DISTNAME=	CJK-4_5.2
 PKGNAME=	cjk-latex-4.5.2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://cjk.ffii.org/
 COMMENT=	The CJK (Chinese, Japanese, Korean) package for LaTeX
 
 DEPENDS+=	teTeX-bin>=2:../../print/teTeX-bin
-DEPENDS+=	ttf2pk>=1.3.1:../../test/ttf2pk
+DEPENDS+=	ttf2pk>=1.3.1:../../fonts/ttf2pk
 
 TEXMFMAIN=	${PREFIX}/share/texmf
 TTFDIR=		${TEXMFMAIN}/fonts/truetype
