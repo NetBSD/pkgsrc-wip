@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/24 04:50:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/25 07:55:01 xtraeme Exp $
 #
 
 DISTNAME=	zenity-1.2
@@ -22,4 +22,5 @@ USE_X11=		yes
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../graphics/libgnomecanvas/buildlink2.mk"
 .include "../../devel/GConf2/schemas.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
