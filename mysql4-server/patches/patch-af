@@ -1,16 +1,7 @@
-$NetBSD: patch-af,v 1.3 2003/07/10 22:49:26 adrian_p Exp $
+$NetBSD: patch-af,v 1.4 2003/08/07 21:54:48 adrian_p Exp $
 
 --- configure.orig	Wed May 14 21:24:53 2003
 +++ configure	Thu Jul 10 23:31:59 2003
-@@ -19778,7 +19778,7 @@
-  tell atod memcpy memmove \
-  setupterm strcasecmp sighold vidattr lrand48 localtime_r \
-  sigset sigthreadmask pthread_sigmask pthread_setprio pthread_setprio_np \
-- pthread_setschedparam pthread_attr_setprio pthread_attr_setschedparam \
-+ pthread_attr_setprio \
-  pthread_attr_create pthread_getsequence_np pthread_attr_setstacksize \
-  pthread_attr_getstacksize \
-  pthread_condattr_create rwlock_init pthread_rwlock_rdlock \
 @@ -20795,27 +20795,11 @@
  
  echo "$as_me:$LINENO: checking for ORBit" >&5
