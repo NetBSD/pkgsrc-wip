@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/03 07:59:18 bmeurer Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/04 09:43:49 bmeurer Exp $
 include/dbh.h
 include/dbh_config.h
 include/dbh_functions.h
@@ -9,3 +9,9 @@ lib/libdbh.a
 lib/libdbh.la
 lib/libdbh.so
 lib/pkgconfig/dbh-1.0.pc
+share/doc/dbh/AUTHORS
+share/doc/dbh/COPYING
+share/doc/dbh/ChangeLog
+share/doc/dbh/html/dbh-hash-tables.html
+@dirrm share/doc/dbh/html
+@dirrm share/doc/dbh
