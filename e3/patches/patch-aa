@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/05 04:36:10 mpasternak Exp $
+
+--- Makefile.orig	2002-10-05 13:53:00.000000000 -0300
++++ Makefile
+@@ -12,7 +12,7 @@ COMPRESS=gzexe
+ 
+ # 2. edit dest dir prefix if you want....
+ 
+-PREFIX='/usr/local'
++#PREFIX='/usr/local'
+ #PREFIX=/boot/home
+ 
+ 
