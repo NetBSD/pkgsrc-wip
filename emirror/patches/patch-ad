@@ -1,0 +1,124 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/04/18 19:22:23 hweiss Exp $
+
+--- man/emirror.1.in.orig	2001-09-10 17:38:16.000000000 +0200
++++ man/emirror.1.in
+@@ -9,11 +9,11 @@ emirror \- a utility for automatic mirro
+ .SH DESCRIPTION
+ .I EMirror
+ is a tool designed for retrieving files from different sites using
+-the 
++the
+ \fIFTP\fP (File Transfer Protocol) and saving them to disk.
+ .I EMirror
+ is non\-interactive, which means it can work in the background, while
+-the user is not logged in. 
++the user is not logged in.
+ 
+ .PP
+ While other programs already have some good functionality,
+@@ -29,7 +29,7 @@ has some things which differentiates it 
+ .fi
+ 
+ .SH AVAILABILITY
+-The latest version of 
++The latest version of
+ .I EMirror
+ can always be found at <http://eclipt.uni-klu.ac.at> and
+ <ftp://ftp.uni-klu.ac.at/pub/projects/emirror>
+@@ -75,7 +75,7 @@ configuration files.
+ .IP "-o --output-file"
+ This names the name of the logfile (e.g. kernel.html).
+ .IP "-O --output-directory"
+-Directory on your local harddrive, where emirror will save 
++Directory on your local harddrive, where emirror will save
+ logfiles. This should be in the tree of your WebServer, if
+ you want to access the log-files via the web (e.g.
+ /home/httpd/htdocs/mirrors).
+@@ -92,7 +92,7 @@ the specific mirrors. For mirroring one 
+ can specify a single file.
+ .IP "-n --index-directory"
+ Build the index page for logfiles. You have to specify
+-the directory, where 
++the directory, where
+ .I EMirror
+ can find the log-files (which is usually the same
+ as specified with --output-directory).
+@@ -120,7 +120,7 @@ when there have been any updates (e.g. m
+ .IP "--mail-users"
+ Specifies a file, which contains a list of valid email-addresses
+ of users, who want to get information about updates
+-(e.g. /usr/local/etc/email-addresses)
++(e.g. @PKG_SYSCONFDIR@/email-addresses)
+ .IP "--info-mailcmd"
+ Command to send mail to users when one spcific mirror has been updated
+ (e.g. mail -s "EMirror - Package updated: %s" user1@host1 user2@host2)
+@@ -146,7 +146,7 @@ are:
+ .PP
+ .IP "-D --download-url"
+ This sets the URL for downloading files locally (usually
+-your hostname plus the last part of --parent, 
++your hostname plus the last part of --parent,
+ e.g. ftp://ftp.uni-klu.ac.at/pub/mirrors/kernel)
+ .IP "-t --tries"
+ Set the number of login-tries (0 unlimits).
+@@ -221,7 +221,7 @@ Run in test mode (do NOT download or del
+ These options change the look and behaviour of log- and
+ configuration files.
+ .IP "--error-mailcmd"
+-Specify a mail command, which will be executed, when 
++Specify a mail command, which will be executed, when
+ errors occur (usually this should be
+ mail -s "EMirror Error Report" preisl@stuco.uni-klu.ac.at
+ .PP
+@@ -290,7 +290,7 @@ the archive.
+ .SH TEMPLATE FILES
+ There are two template files necessary, if you want to use
+ logfiles. One template file is for the logfile itself and
+-one is for the index file. 
++one is for the index file.
+ 
+ .SS Logfile template
+ 
+@@ -298,7 +298,7 @@ The template file for logfiles is a plai
+ document which contains special keywords which will be
+ replace by
+ .I EMirror.
+-These keywords are optional, but the template file 
++These keywords are optional, but the template file
+ has to include those lines:
+ 
+ .nf
+@@ -438,13 +438,13 @@ This the proxyhost and the port (format 
+ .SH REGULAR EXPRESSIONS
+ .PP
+ The regular expressions used for the --include, --exclude
+-and --only-latest 
+-command are perl-style regular expressions. 
++and --only-latest
++command are perl-style regular expressions.
+ A complate description can be found
+ at <http://www.python.org/doc/lib/module-re.html>
+ 
+ It is possible to use filenames including the full
+-path within regular expressions or just the filename 
++path within regular expressions or just the filename
+ itself.
+ 
+ .SH EXAMPLES
+@@ -480,11 +480,11 @@ emirror -v -c general.cfg -d active -n /
+ .IR EMIRRORCFGPATH
+ 
+ .SH FILES
+-\fI/usr/local/lib/emirror/*\fP, 
+-\fI/usr/local/etc/general.cfg\fP, 
+-\fI/usr/local/etc/email-addresses\fP, 
+-\fI/usr/local/etc/active/*\fP, 
+-\fI/usr/local/etc/unused/*\fP
++\fI@PREFIX@/lib/emirror/*\fP,
++\fI@PKG_SYSCONFDIR@/general.cfg\fP,
++\fI@PKG_SYSCONFDIR@/email-addresses\fP,
++\fI@PKG_SYSCONFDIR@/active/*\fP,
++\fI@PKG_SYSCONFDIR@/unused/*\fP
+ 
+ .SH UNRESTRICTIONS
+ .PP

@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/04/18 19:22:23 hweiss Exp $
+
+--- /dev/null	2003-04-18 19:01:21.000000000 +0200
++++ etc/unused/netbsd.cfg
+@@ -0,0 +1,11 @@
++[mirror]
++Title: NetBSD
++Category: Distributions
++Description: NetBSD is a free, secure, and highly portable UNIX-like operating system
++Url: ftp://ftp3.de.netbsd.org/pub/NetBSD/
++Parent: /ftp/pub/NetBSD
++Download-url: ftp://netbsd.ftp.fu-berlin.de/
++Output-file: netbsd.html
++Exclude: MIRROR.LOG
++Recursive: Yes
++

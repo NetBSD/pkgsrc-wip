@@ -1,0 +1,65 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/04/18 19:22:23 hweiss Exp $
+
+--- configure.orig	2002-02-16 08:42:20.000000000 +0100
++++ configure
+@@ -46,7 +46,7 @@ bindir='${exec_prefix}/bin'
+ sbindir='${exec_prefix}/sbin'
+ libexecdir='${exec_prefix}/libexec'
+ datadir='${prefix}/share'
+-sysconfdir='${prefix}/etc'
++sysconfdir=
+ sharedstatedir='${prefix}/com'
+ localstatedir='${prefix}/var'
+ libdir='${exec_prefix}/lib'
+@@ -624,10 +624,12 @@ echo "configure:624: checking for Python
+ # Check whether --with-python or --without-python was given.
+ if test "${with_python+set}" = set; then
+   withval="$with_python"
++  PYTHON="$with_python"
+   :
++else
++  PYTHON=`which python`
+ fi
+ 
+-PYTHON=`which python`
+ if test "$PYTHON" != ""  
+ then
+     echo $PYTHON
+@@ -646,10 +648,13 @@ echo "configure:646: checking for Python
+ # Check whether --with-python or --without-python was given.
+ if test "${with_python+set}" = set; then
+   withval="$with_python"
++  PYTHON="$with_python"
+   :
++else
++  PYTHON=`which python`
+ fi
+ 
+-PYTHONVERSION=`python -c "import sys,string;x=sys.version;print string.split(x)[0]"`
++PYTHONVERSION=`${PYTHON} -c "import sys,string;x=sys.version;print string.split(x)[0]"`
+ echo -n $PYTHONVERSION\ 
+ PYTHONMAJOR=`echo $PYTHONVERSION | awk -F . '{print $1}'`
+ PYTHONMINOR=`echo $PYTHONVERSION | awk -F . '{print $2}'`
+@@ -680,7 +685,7 @@ if test "${with_shutil+set}" = set; then
+   :
+ fi
+ 
+-SHUTILLIB=`python -c "import shutil" 2>&1`
++SHUTILLIB=`${PYTHON} -c "import shutil" 2>&1`
+ SHUTILLIBEXISTS=`echo $SHUTILLIB|grep -i "no module"`
+ if test "$SHUTILLIBEXISTS" != ""
+ then
+@@ -707,10 +712,10 @@ else
+ fi
+ 
+ 
+-if test "x$sysconfdir" = "x${prefix}/etc"; then
+-	SYSCONFDIR=$SYSCONFDEFAULTDIR
+-else
++if test "$sysconfdir"; then
+ 	SYSCONFDIR=$sysconfdir
++else
++	SYSCONFDIR=$SYSCONFDEFAULTDIR
+ fi
+ 
+ 

@@ -1,0 +1,7 @@
+The ECLiPt Mirroring Tool is a full featured FTP mirror script written
+in Python. It supports nice config files, many features for controlling
+the mirror (include, exclude of files, special watermarks for deleting
+files, download just the latest version of some program), as well as
+producing nice HTML or PHP output.
+
+This package depends on Python, version 1.5.2 or higher is required.
