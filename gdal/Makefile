@@ -1,39 +1,33 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 20:26:56 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/16 23:45:53 daprice Exp $
 #
 
-DISTNAME=		gdal-1.1.9
-CATEGORIES=		geography
-MASTER_SITES=           http://dl1.maptools.org/dl/gdal/ \
-			ftp://ftp.remotesensing.org/pub/gdal/
+DISTNAME=		gdal-1.2.5
+CATEGORIES=		wip
+MASTER_SITES=		http://gdal.org/dl/
 
-MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://www.remotesensing.org/gdal/
+MAINTAINER=		pshah@nmsu.edu
+HOMEPAGE=		http://gdal.org/
 COMMENT=		Translator library for raster geospatial data formats
 
-DEPENDS+=		doxygen>=1.2.18:../../devel/doxygen
+USE_BUILDLINK3=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-USE_BUILDLINK3=		YES
-USE_PKGLOCALEDIR=	YES
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
-
-WRKSRC=			${WRKDIR}/gdal-1.1.9
-
-CONFIGURE_ARGS+=	--with-grass=no
-
-CFLAGS+=		-I${PREFIX}/include/postgresql
-LIBS+=			-L${PREFIX}/lib
 
 MAKEFILE=		GNUmakefile
 
-do-build:
-	cd ${WRKSRC} && ${GMAKE} -f ${MAKEFILE}
+CONFIGURE_ARGS+=	--with-pg
+CONFIGURE_ARGS+=	--with-mysql=no
+CONFIGURE_ARGS+=	--with-xerces
+CONFIGURE_ARGS+=	--with-xerces-inc=${PREFIX}/include
+CONFIGURE_ARGS+=	--with-xerces-lib="-L${PREFIX}/lib -lxerces-c"
+CONFIGURE_ARGS+=	--with-geos
 
-do-install:
-	cd ${WRKSRC} && ${GMAKE} -f ${MAKEFILE} ${INSTALL}
-
-.include "../../databases/postgresql74-lib/buildlink3.mk"
-.include "../../lang/python15/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
+.include "../../misc/proj/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
+.include "../../wip/geos2/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
