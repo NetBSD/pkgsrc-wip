@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/22 00:49:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/14 21:41:20 tvierling Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 
-ENTROPY_VERSION=	0.5.0-298
+ENTROPY_VERSION=	0.5.3-321
 
 MAKE_FLAGS+=		QUIET=0
 MAKE_FLAGS+=		LIBEXPAT=-lexpat LIBZ=-lz
@@ -31,6 +31,7 @@ MAKE_FLAGS+=		ARCH=PPC
 
 post-patch:
 	${SED} -e '/^# /!s/^#//' <${WRKSRC}/seed.txt-dist >${WRKSRC}/seed.txt
+	${RM} -f -r ${WRKSRC}/node/my0812.bdf.gz*
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/entropy ${PREFIX}/bin/entropy
