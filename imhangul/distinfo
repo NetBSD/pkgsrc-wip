@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/31 07:19:09 minskim Exp $
+$NetBSD: distinfo,v 1.2 2003/10/21 17:39:12 minskim Exp $
 
-SHA1 (imhangul-0.9.6.tar.bz2) = 51fee0cd9eada7b69ece0e1bfe58c70abf5b7f24
-Size (imhangul-0.9.6.tar.bz2) = 208399 bytes
+SHA1 (imhangul-0.9.7.tar.bz2) = 1ecf977377baf2a047332e90ae1ada58668f121a
+Size (imhangul-0.9.7.tar.bz2) = 207335 bytes
