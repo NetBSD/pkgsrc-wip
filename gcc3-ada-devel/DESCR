@@ -1,0 +1,7 @@
+This pkg builds the GNU Compiler Collection (GCC) version 3.4 Ada compiler.
+This is a devepmental release. 
+
+The pkg works with the other pkgs in the gcc3-*-devel set of packages to
+support a number of languages using multiple language front-ends and a
+common compiler back-end. The gcc3-c-devel pkg provides the common
+components and is required by all the other gcc3-*-devel pkgs.
