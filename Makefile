@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.610 2003/11/13 09:22:08 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.610 2003/11/13 09:22:08 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.611 2003/11/13 19:24:40 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.611 2003/11/13 19:24:40 grantbeattie Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -300,6 +300,7 @@ SUBDIR+=	mutt-vc-query
 SUBDIR+=	mysql4-client
 SUBDIR+=	mysql4-server
 SUBDIR+=	mysqlcc
+SUBDIR+=	mythtv
 SUBDIR+=	nagios-base
 SUBDIR+=	nagios-plugin-ldap
 SUBDIR+=	nagios-plugin-mysql
