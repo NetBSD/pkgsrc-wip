@@ -1,0 +1,38 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/26 18:03:24 thomasklausner Exp $
+bin/lingoteach-gtk
+share/doc/lingoteach/img/first-start.png
+share/doc/lingoteach/img/pref-general.png
+share/doc/lingoteach/img/pref-lesson.png
+share/doc/lingoteach/img/pref-module.png
+share/doc/lingoteach/img/pref-system.png
+share/doc/lingoteach/img/use-filter.png
+share/doc/lingoteach/img/use-multichoice.png
+share/doc/lingoteach/img/use-onebyone.png
+share/doc/lingoteach/img/use-search.png
+share/doc/lingoteach/lingoteach-conf.html
+share/doc/lingoteach/lingoteach-install.html
+share/doc/lingoteach/lingoteach-use.html
+share/doc/lingoteach/lingoteach-user-manual.html
+share/doc/lingoteach/lingoteach.css
+share/doc/lingoteach/ln-legal.html
+share/lingoteach/AUTHORS
+share/lingoteach/COPYING
+share/lingoteach/README
+share/lingoteach/data/basic.xml
+share/lingoteach/data/language.dtd
+share/lingoteach/data/language.xml
+share/lingoteach/data/lingoteach.dtd
+share/lingoteach/data/rules.en.txt
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/lingoteach.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lingoteach.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/lingoteach.mo
+${PKGLOCALEDIR}/locale/es_ES/LC_MESSAGES/lingoteach.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/lingoteach.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/lingoteach.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/lingoteach.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/lingoteach.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/lingoteach.mo
+@dirrm share/lingoteach/data
+@dirrm share/lingoteach
+@dirrm share/doc/lingoteach/img
+@dirrm share/doc/lingoteach

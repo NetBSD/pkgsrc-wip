@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/26 18:03:24 thomasklausner Exp $
+include/lingoteach/lingdefs.h
+include/lingoteach/lingoteach.h
+lib/liblingoteach.la
+lib/pkgconfig/liblingoteach.pc
+share/doc/${PKGNAME}/html/a00010.html
+share/doc/${PKGNAME}/html/a00011.html
+share/doc/${PKGNAME}/html/a00012.html
+share/doc/${PKGNAME}/html/a00013.html
+share/doc/${PKGNAME}/html/a00014.html
+share/doc/${PKGNAME}/html/a00015.html
+share/doc/${PKGNAME}/html/a00016.html
+share/doc/${PKGNAME}/html/a00017.html
+share/doc/${PKGNAME}/html/a00018.html
+share/doc/${PKGNAME}/html/annotated.html
+share/doc/${PKGNAME}/html/classes.html
+share/doc/${PKGNAME}/html/doxygen.css
+share/doc/${PKGNAME}/html/doxygen.png
+share/doc/${PKGNAME}/html/files.html
+share/doc/${PKGNAME}/html/functions.html
+share/doc/${PKGNAME}/html/functions_vars.html
+share/doc/${PKGNAME}/html/globals.html
+share/doc/${PKGNAME}/html/globals_enum.html
+share/doc/${PKGNAME}/html/globals_eval.html
+share/doc/${PKGNAME}/html/globals_func.html
+share/doc/${PKGNAME}/html/globals_type.html
+share/doc/${PKGNAME}/html/index.html
+@dirrm share/doc/${PKGNAME}/html
+@dirrm share/doc/${PKGNAME}
+@dirrm include/lingoteach

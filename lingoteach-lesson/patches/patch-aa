@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/12/26 18:03:24 thomasklausner Exp $
+
+--- Makefile.in.orig	2003-11-26 13:05:11.000000000 +0100
++++ Makefile.in
+@@ -16,9 +16,8 @@ distdir: 
+ 
+ install: 
+ 	-mkdir -p $(datadir)/lingoteach/data
+-	cp -f ./data/*.xml $(datadir)/lingoteach/data/
+-	cp -f ./data/*.dtd $(datadir)/lingoteach/data/
+-	cp -f ./data/*.txt $(datadir)/lingoteach/data/
++	cp -f ./data/countries.xml $(datadir)/lingoteach/data/
++	cp -f ./data/freedict.xml $(datadir)/lingoteach/data/
+ 	cp -f ./AUTHORS	   $(datadir)/lingoteach/AUTHORS.lessons
+ 	cp -f ./COPYING	   $(datadir)/lingoteach/COPYING.lessons
+ 	cp -f ./README	   $(datadir)/lingoteach/README.lessons

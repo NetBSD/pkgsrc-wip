@@ -1,0 +1,28 @@
+LingoTeach is a language teaching program. It allows you to learn
+languages by seeing translations next to each other, and by listening
+to people talking the native languages. At the moment LingoTeach
+supports 16 languages, consisting of various lessons.
+
+LingoTeach's core consists of two parts: An intuitive to use user
+interface and the core library, LibLingoTeach.  Those both were
+made in the hope that they will be useful for people learning
+foreign languages or creating own language teaching applications.
+
+The LingoTeach language teaching application
+currently has the following features:
+  * Multiple lesson support. Use and learn from several different
+    lessons at the same time
+  * Multilanguage supprt. You can learn more than one language at
+    the same time.
+  * Search and browse as well as editing features. Fit existing
+    lessons to your needs, search lessons for specific keywords,
+    languages, etc.
+  * Sound support. Listen to native speakers, create own sound
+    snippets and add them easily to your lessons or share them with
+    other people.
+  * Plugin supprt. Write own extensions and plugins for LingoTeach.
+
+All components, which are shipped with those both packages are free
+software, licensed under the GNU GPL. It can be possible, that
+components (e.g. a plugin) have a different license than the GPL,
+but the components you can download here are proven to be free.
