@@ -1,4 +1,0 @@
-#!/bin/sh
-export LBEROOT=DESTINATION
-cd $LBEROOT
-exec $LBEROOT/lbe.sh
