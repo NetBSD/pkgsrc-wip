@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1011 2004/02/22 21:48:22 minskim Exp $
-# $NetBSD: Makefile,v 1.1011 2004/02/22 21:48:22 minskim Exp $
+# $Id: Makefile,v 1.1012 2004/02/22 22:23:29 tomhensel Exp $
+# $NetBSD: Makefile,v 1.1012 2004/02/22 22:23:29 tomhensel Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -104,6 +104,7 @@ SUBDIR+=	dmidecode
 SUBDIR+=	dnsmasq
 SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
+SUBDIR+=	dovecot-nightly
 SUBDIR+=	dpkg
 SUBDIR+=	drpython
 SUBDIR+=	drweb
@@ -610,6 +611,7 @@ SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
 SUBDIR+=	songwrite
+SUBDIR+=	spamassassin-cvs
 SUBDIR+=	spamprobe-pbl
 SUBDIR+=	speedx
 SUBDIR+=	sqlrelay
