@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.812 2003/12/27 02:02:03 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.812 2003/12/27 02:02:03 thomasklausner Exp $
+# $Id: Makefile,v 1.813 2003/12/27 18:32:34 minskim Exp $
+# $NetBSD: Makefile,v 1.813 2003/12/27 18:32:34 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -492,6 +492,7 @@ SUBDIR+=	py-bsddb
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-cjkcodecs
 SUBDIR+=	py-dateutil
+#SUBDIR+=	py-dbxml	# depends on dbxml
 SUBDIR+=	py-elementtree
 SUBDIR+=	py-f2py2e
 SUBDIR+=	py-fastaudio
