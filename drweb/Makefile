@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/04/07 07:38:21 bubuchka Exp $
+# $NetBSD: Makefile,v 1.16 2004/05/11 11:53:15 bubuchka Exp $
 #
 # Note: We'll not use drweb's own configuration / building / installation
 # facilities so as its all are very ugly.
@@ -13,8 +13,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.sald.com/
 COMMENT=	DrWeb Antivirus Suite
 
-ONLY_FOR_PLATFORM= FreeBSD-[3-5].[0-9]*-i386 OpenBSD-[3-9].*-i386	\
-		NetBSD-1.[6-9]*-i386 NetBSD-[2-9].[0-9]-i386		\
+ONLY_FOR_PLATFORM= FreeBSD-[3-5].*-i386 OpenBSD-[3-9].*-i386		\
+		NetBSD-1.[6-9]*-i386 NetBSD-[2-9].*-i386		\
 		Linux-*-i[3-6]86 Solaris-*-i386
 
 .include "../../wip/mk/rcd.mk"
