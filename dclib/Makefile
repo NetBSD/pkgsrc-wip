@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2004/09/03 12:09:37 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/11 15:27:48 tnn2 Exp $
 #
 
-DISTNAME=	dclib-0.3.3
+DISTNAME=	dclib-0.3.5
 CATEGORIES=	net
 MASTER_SITES=	http://download.berlios.de/dcgui/
 EXTRACT_SUFX=	.tar.bz2
