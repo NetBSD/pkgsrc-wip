@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1191 2004/04/12 22:02:01 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1191 2004/04/12 22:02:01 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1192 2004/04/12 22:44:53 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1192 2004/04/12 22:44:53 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -19,6 +19,8 @@ SUBDIR+=	acid
 SUBDIR+=	adodb
 SUBDIR+=	adtool
 SUBDIR+=	afterstep2
+SUBDIR+=	alsa-lib
+SUBDIR+=	alsa-utils
 SUBDIR+=	amap
 SUBDIR+=	amavisd-new
 SUBDIR+=	amsn
