@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1144 2004/03/29 19:50:35 tvierling Exp $
-# $NetBSD: Makefile,v 1.1144 2004/03/29 19:50:35 tvierling Exp $
+# $Id: Makefile,v 1.1145 2004/03/29 20:23:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1145 2004/03/29 20:23:05 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -757,7 +757,6 @@ SUBDIR+=	vche
 SUBDIR+=	viewcvs
 SUBDIR+=	viewer
 SUBDIR+=	vixie-cron
-SUBDIR+=	vls
 SUBDIR+=	vm-pop3d
 SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
