@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/07/21 15:20:00 marttikuparinen Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/08/25 09:39:09 marttikuparinen Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce4-rc2/src/
 
@@ -10,6 +10,7 @@ XFCE4_VERSION=		3.99.2
 USE_BUILDLINK2=		# defined
 USE_X11BASE=		# defined
 USE_PKGLOCALEDIR=	# defined
+USE_GNU_GETTEXT=	# defined
 
 USE_LIBTOOL=		# defined
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
