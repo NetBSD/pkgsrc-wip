@@ -1,0 +1,4 @@
+KSambaPlugin is a KDE 3 plugin for configuring a SAMBA server.
+It consists of two plugins, a KControl Center module for all SAMBA
+options and a Konqueror properties dialog plugin for quickly
+configuring the SAMBA share options of a directory.
