@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/16 20:41:08 ppostma Exp $
-man/man5/ntpd.conf.5
-man/man8/ntpd.8
-sbin/ntpd
-share/examples/openntpd/ntpd.conf
-@dirrm share/examples/openntpd

@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1397 2004/07/18 15:55:14 cetrox Exp $
-# $NetBSD: Makefile,v 1.1397 2004/07/18 15:55:14 cetrox Exp $
+# $Id: Makefile,v 1.1398 2004/07/19 19:21:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1398 2004/07/19 19:21:41 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -449,7 +449,6 @@ SUBDIR+=	octave-nox11
 SUBDIR+=	oops
 SUBDIR+=	opax
 SUBDIR+=	opengaim
-SUBDIR+=	openntpd
 SUBDIR+=	openvpn2
 SUBDIR+=	openvrml
 SUBDIR+=	opera-devel
