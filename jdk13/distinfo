@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/07/02 16:53:13 tvierling Exp $
+$NetBSD: distinfo,v 1.4 2003/07/02 17:56:00 tvierling Exp $
 
 SHA1 (j2sdk-1_3_1-src.tar.gz) = 90f6f7a7756ca574193ea8f2deaf2d0e095692d1
 Size (j2sdk-1_3_1-src.tar.gz) = 29876595 bytes
@@ -11,3 +11,4 @@ SHA1 (patch-ad) = af44ce04339089ec265c794cfb5a473e9d6558f1
 SHA1 (patch-ae) = a4e30955433256ab36f9b7b09713e40477a7c811
 SHA1 (patch-af) = bbaa905404b85fb28f5f967acee7da01220a80e7
 SHA1 (patch-ag) = 890ad5344504d285437cbd996f1b3e00bed4328d
+SHA1 (patch-ah) = 328de07d3972d48a52b20212c4251f7d195e1a0e
