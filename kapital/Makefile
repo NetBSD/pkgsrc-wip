@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/04 00:22:48 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/04 00:28:46 jeremy-c-reed Exp $
 
 DISTNAME=	kapital-1.1
 CATEGORIES=	devel kde
@@ -36,5 +36,5 @@ _FETCH_MESSAGE= \
 	${ECHO} ; \
 	${ECHO} "======================================================================"
 
-.include "../../new/korelib/buildlink2.mk"
+.include "../../wip/korelib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
