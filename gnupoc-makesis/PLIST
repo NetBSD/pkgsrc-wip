@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/31 21:21:31 poppnk Exp $
+bin/makesis

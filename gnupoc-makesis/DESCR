@@ -1,0 +1,5 @@
+Makesis is the tool used by Symbian to make software installation files
+for deployment on target devices.
+
+More information about the Symbian build and deployment process can be
+found in the new  ''Symbian OS C++ for Mobile Phones''
