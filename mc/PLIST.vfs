@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.vfs,v 1.1.1.1 2003/08/22 14:52:40 id9848949 Exp $
+@comment $NetBSD: PLIST.vfs,v 1.2 2003/10/16 11:59:19 thomasklausner Exp $
 share/mc/extfs/README
 share/mc/extfs/extfs.ini
 share/mc/extfs/sfs.ini
@@ -24,3 +24,4 @@ share/mc/extfs/ulha
 share/mc/extfs/urar
 share/mc/extfs/uzip
 share/mc/extfs/uzoo
+@dirrm share/mc/extfs
