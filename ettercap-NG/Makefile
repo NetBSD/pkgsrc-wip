@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/04 22:35:55 florian_stoehr Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/04 23:52:43 adrian_p Exp $
 
 DISTNAME=	ettercap-NG-0.7.2
 CATEGORIES=	net
@@ -10,12 +10,18 @@ COMMENT=	Multipurpose sniffer/interceptor/logger for switched LAN
 
 CONFLICTS=	ettercap-0*
 
+BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.8.1
+
+.include "../../mk/bsd.prefs.mk"
+
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 PTHREAD_OPTS+=		require
 USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	libtool
+USE_NCURSES=		# ncurses.h menu.h panel.h form.h
+USE_OLD_DES_API=	YES
 
 CONFIGURE_ARGS+=	--with-libnet=${BUILDLINK_PREFIX.libnet}
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
@@ -24,10 +30,6 @@ CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-libncurses=${BUILDLINK_PREFIX.ncurses}
 CONFIGURE_ARGS+=	--enable-plugins
 CONFIGURE_ARGS+=	--disable-gtk
-
-USE_BUILTIN.libpcap=	no
-USE_BUILTIN.ncurses=	no
-USE_BUILTIN.openssl=	no
 
 CONF_FILES=	${PREFIX}/share/examples/ettercap-NG/etter.conf \
 		${PKG_SYSCONFDIR}/etter.conf
