@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/04 07:36:50 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/09 06:30:47 marttikuparinen Exp $
 
 .include "../xfce4/Makefile.common"
 
 PKGNAME=	xfce4-desktop-${XFCE4_VERSION}
+DISTNAME=	xfdesktop-${XFCE4_VERSION}
 COMMENT=	XFce4 desktop background manager
-
-WRKSRC=		${WRKDIR}/xfce-devel/xfdesktop
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"

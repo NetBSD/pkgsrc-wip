@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/04 11:40:45 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/09 06:30:51 marttikuparinen Exp $
 
 .include "../xfce4/Makefile.common"
+
+BROKEN=		No distfile available yet
 
 PKGNAME=	xfce4-trigger-launcher-${XFCE4_VERSION}
 COMMENT=	XFce4 trigger-launcher

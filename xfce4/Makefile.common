@@ -1,14 +1,12 @@
-# $NetBSD: Makefile.common,v 1.3 2003/06/07 04:44:00 marttikuparinen Exp $
+# $NetBSD: Makefile.common,v 1.4 2003/06/09 06:30:47 marttikuparinen Exp $
 
-XFCE4_VERSION=		3.90.20030607
-
-DISTNAME=		xfce4-cvs-snapshot
 CATEGORIES=		x11
-MASTER_SITES=		http://www.xfce.org/archive/
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xfce/}
 
 MAINTAINER=		martti@netbsd.org
 HOMEPAGE=		http://www.xfce.org/
+
+XFCE4_VERSION=		3.90.0
 
 USE_BUILDLINK2=		# defined
 USE_X11BASE=		# defined
@@ -20,8 +18,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
 
-PATCHDIR?=		${.CURDIR}/../xfce4/patches
-DISTINFO_FILE?=		${.CURDIR}/../xfce4/distinfo
+MESSAGE_SRC?=		${.CURDIR}/../../fonts/fontconfig/MESSAGE
 
 PKG_CONFIG_PATH=	${BUILDLINK_DIR}/lib/pkgconfig
 

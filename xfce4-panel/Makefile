@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/04 07:38:49 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/09 06:30:50 marttikuparinen Exp $
 
 .include "../xfce4/Makefile.common"
 
-PKGNAME=	xfce4-panel-${XFCE4_VERSION}
+DISTNAME=	xfce4-panel-${XFCE4_VERSION}
 COMMENT=	XFce4 panel
-
-WRKSRC=		${WRKDIR}/xfce-devel/xfce4
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"

@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/04 07:37:26 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/09 06:30:48 marttikuparinen Exp $
 
 .include "../xfce4/Makefile.common"
 
-PKGNAME=	xfce4-fm-${XFCE4_VERSION}
-COMMENT=	XFce4 filemanager
+XFCE4_VERSION=	3.90.381
 
-WRKSRC=		${WRKDIR}/xfce-devel/xffm
+PKGNAME=	xfce4-fm-${XFCE4_VERSION}
+DISTNAME=	xffm-${XFCE4_VERSION}
+COMMENT=	XFce4 filemanager
 
 .include "../../databases/dbh/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"

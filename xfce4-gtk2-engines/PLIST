@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/05 08:09:41 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/09 06:30:48 marttikuparinen Exp $
 lib/gtk-2.0/2.2.0/engines/libxfce.a
 lib/gtk-2.0/2.2.0/engines/libxfce.la
 lib/gtk-2.0/2.2.0/engines/libxfce.so
@@ -32,6 +32,9 @@ share/themes/Xfce-stellar/gtk-2.0/gtkrc
 share/themes/Xfce/ICON.png
 share/themes/Xfce/README.html
 share/themes/Xfce/gtk-2.0/gtkrc
+@dirrm lib/gtk-2.0/2.2.0/engines
+@dirrm lib/gtk-2.0/2.2.0
+@dirrm lib/gtk-2.0
 @dirrm share/themes/Xfce/gtk-2.0
 @dirrm share/themes/Xfce-stellar/gtk-2.0
 @dirrm share/themes/Xfce-stellar

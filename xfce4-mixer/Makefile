@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/04 11:37:36 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/09 06:30:49 marttikuparinen Exp $
 
 .include "../xfce4/Makefile.common"
 
-PKGNAME=	xfce4-mixer-${XFCE4_VERSION}
+DISTNAME=	xfce4-mixer-0.1
 COMMENT=	XFce4 mixer plugin
-
-WRKSRC=		${WRKDIR}/xfce4-extras/xfce4-mixer
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
