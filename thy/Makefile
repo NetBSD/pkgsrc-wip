@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/25 02:33:45 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/25 18:35:27 minskim Exp $
 # arch-tag: 99a9d5e6-7144-4c79-b540-f70a2b55611b
 
 DISTNAME=		thy-0.7.1
@@ -12,7 +12,7 @@ COMMENT=		Tiny and fast HTTP daemon
 BUILD_DEFS+=		USE_INET6
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 
 PKG_SYSCONFSUBDIR=	thy
@@ -46,6 +46,6 @@ pre-install:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/thy.conf ${EGDIR}/
 
-.include "../../security/gnutls/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../security/gnutls/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
