@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1626 2005/01/20 18:15:59 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1626 2005/01/20 18:15:59 adrian_p Exp $
+# $Id: Makefile,v 1.1627 2005/01/22 13:43:39 ppostma Exp $
+# $NetBSD: Makefile,v 1.1627 2005/01/22 13:43:39 ppostma Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -48,7 +48,6 @@ SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-utils
 SUBDIR+=	amap
 SUBDIR+=	amarok
-SUBDIR+=	amsn
 SUBDIR+=	and
 SUBDIR+=	anope
 SUBDIR+=	aols-freetds
@@ -120,9 +119,7 @@ SUBDIR+=	com_err
 SUBDIR+=	compare
 SUBDIR+=	cops
 SUBDIR+=	copytape
-SUBDIR+=	crawl
 SUBDIR+=	cream
-SUBDIR+=	cube
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvsd
 SUBDIR+=	cvsreport
@@ -763,8 +760,8 @@ SUBDIR+=	qhacc
 SUBDIR+=	qico
 SUBDIR+=	qinx
 SUBDIR+=	qn-x11
-SUBDIR+=	qstat
 SUBDIR+=	quagga-devel
+SUBDIR+=	r8s
 SUBDIR+=	rar3
 SUBDIR+=	rawphoto
 SUBDIR+=	rc.subr
@@ -869,7 +866,6 @@ SUBDIR+=	t-gnus
 SUBDIR+=	taskbar
 SUBDIR+=	tcc
 SUBDIR+=	tcd
-SUBDIR+=	tcllib
 SUBDIR+=	tcoffee
 SUBDIR+=	tcpdump-latest
 SUBDIR+=	tcpspy
@@ -892,7 +888,6 @@ SUBDIR+=	tinylogin
 SUBDIR+=	tkabber
 SUBDIR+=	tleenx2
 SUBDIR+=	tleenx3
-SUBDIR+=	tls
 SUBDIR+=	toppler
 SUBDIR+=	totem
 SUBDIR+=	tr2latex
