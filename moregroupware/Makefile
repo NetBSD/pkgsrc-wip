@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/13 23:54:39 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/19 11:10:55 peterih Exp $
 
 DISTNAME=	moregroupware-0.7.1
 PKGNAME=	${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=moregroupware/}
 DISTFILES=	moregroupware-core-0.7.1${EXTRACT_SUFX} \
 		moregroupware-docs-0.7.1${EXTRACT_SUFX}
 
-MAINTAINER=	david@netbsd-fr.org
+MAINTAINER=	pih@bsdmail.dk
 COMMENT=	A web based GroupWare system
 USE_BUILDLINK3=	YES
 
