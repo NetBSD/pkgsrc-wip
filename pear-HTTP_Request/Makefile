@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/15 16:16:29 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/09 17:25:14 dolecek Exp $
 
 DISTNAME=	HTTP_Request-1.2
 CATEGORIES=	www
 
-MAINTAINER=	tech-kern@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE= 	http://pear.php.net/package/HTTP_Request
 COMMENT=	PHP classes to provides an easy way to perform HTTP requests
 

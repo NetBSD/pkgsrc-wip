@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/15 16:18:15 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/09 17:25:13 dolecek Exp $
 
 DISTNAME=	Net_DIME-0.3
 CATEGORIES=	www
 
-MAINTAINER=	tech-kern@NetBSD.org
-HOMEPAGE= 	http://pear.php.net/package/HTTP_Request
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE= 	http://pear.php.net/package/Net_DIME
 COMMENT=	PHP classes that implements DIME encoding
 
 .include "../../mk/bsd.prefs.mk"

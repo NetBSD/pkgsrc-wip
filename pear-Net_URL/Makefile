@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/15 16:19:29 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/09 17:25:22 dolecek Exp $
 
 DISTNAME=	Net_URL-1.0.10
 CATEGORIES=	www
 
-MAINTAINER=	tech-kern@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE= 	http://pear.php.net/package/Net_URL/
 COMMENT=	PHP classes to easy parsing of Urls
 
