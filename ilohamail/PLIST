@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/05/22 15:15:02 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/30 15:39:09 bubuchka Exp $
 share/httpd/htdocs/IlohaMail/conf-orig/conf.inc
 share/httpd/htdocs/IlohaMail/conf-orig/custom_auth.inc
 share/httpd/htdocs/IlohaMail/conf-orig/db_conf.php
@@ -58,6 +58,7 @@ share/httpd/htdocs/IlohaMail/include/log.syslog.inc
 share/httpd/htdocs/IlohaMail/include/main.inc
 share/httpd/htdocs/IlohaMail/include/main_tools.inc
 share/httpd/htdocs/IlohaMail/include/mime.inc
+share/httpd/htdocs/IlohaMail/include/mod_base64.inc
 share/httpd/htdocs/IlohaMail/include/nocache.inc
 share/httpd/htdocs/IlohaMail/include/pop3.inc
 share/httpd/htdocs/IlohaMail/include/pop3.inc.orig
@@ -101,11 +102,34 @@ share/httpd/htdocs/IlohaMail/lang/EUC-KR.inc
 share/httpd/htdocs/IlohaMail/lang/GB2312.inc
 share/httpd/htdocs/IlohaMail/lang/ISO-8859-1.inc
 share/httpd/htdocs/IlohaMail/lang/ISO-8859-2.inc
+share/httpd/htdocs/IlohaMail/lang/ISO-8859-9.inc
 share/httpd/htdocs/IlohaMail/lang/US-ASCII.inc
 share/httpd/htdocs/IlohaMail/lang/UTF-8.inc
 share/httpd/htdocs/IlohaMail/lang/Windows-1251.inc
 share/httpd/htdocs/IlohaMail/lang/Windows-1255.inc
+share/httpd/htdocs/IlohaMail/lang/Windows-1256.inc
 share/httpd/htdocs/IlohaMail/lang/X-EUC-JP.inc
+share/httpd/htdocs/IlohaMail/lang/ar/bookmarks.inc
+share/httpd/htdocs/IlohaMail/lang/ar/calendar.inc
+share/httpd/htdocs/IlohaMail/lang/ar/compose.inc
+share/httpd/htdocs/IlohaMail/lang/ar/contacts.inc
+share/httpd/htdocs/IlohaMail/lang/ar/cp.inc
+share/httpd/htdocs/IlohaMail/lang/ar/dates.inc
+share/httpd/htdocs/IlohaMail/lang/ar/defaultFolders.inc
+share/httpd/htdocs/IlohaMail/lang/ar/edit_contact.inc
+share/httpd/htdocs/IlohaMail/lang/ar/edit_folders.inc
+share/httpd/htdocs/IlohaMail/lang/ar/folders.inc
+share/httpd/htdocs/IlohaMail/lang/ar/init.inc
+share/httpd/htdocs/IlohaMail/lang/ar/login.inc
+share/httpd/htdocs/IlohaMail/lang/ar/main.inc
+share/httpd/htdocs/IlohaMail/lang/ar/pref_colors.inc
+share/httpd/htdocs/IlohaMail/lang/ar/pref_identities.inc
+share/httpd/htdocs/IlohaMail/lang/ar/prefs.inc
+share/httpd/htdocs/IlohaMail/lang/ar/quota.inc
+share/httpd/htdocs/IlohaMail/lang/ar/read_message.inc
+share/httpd/htdocs/IlohaMail/lang/ar/search.inc
+share/httpd/htdocs/IlohaMail/lang/ar/search_errors.inc
+share/httpd/htdocs/IlohaMail/lang/ar/tool.inc
 share/httpd/htdocs/IlohaMail/lang/bg/bookmarks.inc
 share/httpd/htdocs/IlohaMail/lang/bg/calendar.inc
 share/httpd/htdocs/IlohaMail/lang/bg/compose.inc
@@ -613,6 +637,48 @@ share/httpd/htdocs/IlohaMail/lang/se/read_message.inc
 share/httpd/htdocs/IlohaMail/lang/se/search.inc
 share/httpd/htdocs/IlohaMail/lang/se/search_errors.inc
 share/httpd/htdocs/IlohaMail/lang/se/tool.inc
+share/httpd/htdocs/IlohaMail/lang/si/bookmarks.inc
+share/httpd/htdocs/IlohaMail/lang/si/calendar.inc
+share/httpd/htdocs/IlohaMail/lang/si/compose.inc
+share/httpd/htdocs/IlohaMail/lang/si/contacts.inc
+share/httpd/htdocs/IlohaMail/lang/si/cp.inc
+share/httpd/htdocs/IlohaMail/lang/si/dates.inc
+share/httpd/htdocs/IlohaMail/lang/si/defaultFolders.inc
+share/httpd/htdocs/IlohaMail/lang/si/edit_contact.inc
+share/httpd/htdocs/IlohaMail/lang/si/edit_folders.inc
+share/httpd/htdocs/IlohaMail/lang/si/folders.inc
+share/httpd/htdocs/IlohaMail/lang/si/init.inc
+share/httpd/htdocs/IlohaMail/lang/si/login.inc
+share/httpd/htdocs/IlohaMail/lang/si/main.inc
+share/httpd/htdocs/IlohaMail/lang/si/pref_colors.inc
+share/httpd/htdocs/IlohaMail/lang/si/pref_identities.inc
+share/httpd/htdocs/IlohaMail/lang/si/prefs.inc
+share/httpd/htdocs/IlohaMail/lang/si/quota.inc
+share/httpd/htdocs/IlohaMail/lang/si/read_message.inc
+share/httpd/htdocs/IlohaMail/lang/si/search.inc
+share/httpd/htdocs/IlohaMail/lang/si/search_errors.inc
+share/httpd/htdocs/IlohaMail/lang/si/tool.inc
+share/httpd/htdocs/IlohaMail/lang/tr/bookmarks.inc
+share/httpd/htdocs/IlohaMail/lang/tr/calendar.inc
+share/httpd/htdocs/IlohaMail/lang/tr/compose.inc
+share/httpd/htdocs/IlohaMail/lang/tr/contacts.inc
+share/httpd/htdocs/IlohaMail/lang/tr/cp.inc
+share/httpd/htdocs/IlohaMail/lang/tr/dates.inc
+share/httpd/htdocs/IlohaMail/lang/tr/defaultFolders.inc
+share/httpd/htdocs/IlohaMail/lang/tr/edit_contact.inc
+share/httpd/htdocs/IlohaMail/lang/tr/edit_folders.inc
+share/httpd/htdocs/IlohaMail/lang/tr/folders.inc
+share/httpd/htdocs/IlohaMail/lang/tr/init.inc
+share/httpd/htdocs/IlohaMail/lang/tr/login.inc
+share/httpd/htdocs/IlohaMail/lang/tr/main.inc
+share/httpd/htdocs/IlohaMail/lang/tr/pref_colors.inc
+share/httpd/htdocs/IlohaMail/lang/tr/pref_identities.inc
+share/httpd/htdocs/IlohaMail/lang/tr/prefs.inc
+share/httpd/htdocs/IlohaMail/lang/tr/quota.inc
+share/httpd/htdocs/IlohaMail/lang/tr/read_message.inc
+share/httpd/htdocs/IlohaMail/lang/tr/search.inc
+share/httpd/htdocs/IlohaMail/lang/tr/search_errors.inc
+share/httpd/htdocs/IlohaMail/lang/tr/tool.inc
 share/httpd/htdocs/IlohaMail/lang/tw/bookmarks.inc
 share/httpd/htdocs/IlohaMail/lang/tw/calendar.inc
 share/httpd/htdocs/IlohaMail/lang/tw/compose.inc
@@ -717,6 +783,8 @@ share/httpd/htdocs/IlohaMail/source/view.php
 @dirrm share/httpd/htdocs/IlohaMail/source
 @dirrm share/httpd/htdocs/IlohaMail/lang/vn
 @dirrm share/httpd/htdocs/IlohaMail/lang/tw
+@dirrm share/httpd/htdocs/IlohaMail/lang/tr
+@dirrm share/httpd/htdocs/IlohaMail/lang/si
 @dirrm share/httpd/htdocs/IlohaMail/lang/se
 @dirrm share/httpd/htdocs/IlohaMail/lang/ru
 @dirrm share/httpd/htdocs/IlohaMail/lang/ro
@@ -741,6 +809,7 @@ share/httpd/htdocs/IlohaMail/source/view.php
 @dirrm share/httpd/htdocs/IlohaMail/lang/cat
 @dirrm share/httpd/htdocs/IlohaMail/lang/br
 @dirrm share/httpd/htdocs/IlohaMail/lang/bg
+@dirrm share/httpd/htdocs/IlohaMail/lang/ar
 @dirrm share/httpd/htdocs/IlohaMail/lang
 @dirrm share/httpd/htdocs/IlohaMail/include
 @dirrm share/httpd/htdocs/IlohaMail/data/users
