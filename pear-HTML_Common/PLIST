@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/01 12:52:49 adrian_p Exp $
+lib/php/.registry/html_common.reg
+lib/php/HTML/Common.php
+@dirrm lib/php/HTML
