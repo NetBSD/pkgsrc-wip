@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 2003/06/03 03:29:36 blef Exp $
+
+--- configure.orig	Mon Jun  2 20:20:57 2003
++++ configure	Mon Jun  2 20:21:08 2003
+@@ -1418,9 +1418,6 @@
+ fi
+ 
+ 
+-CFLAGS=" -g -Wall -pedantic -Wunused -O3"
+-
+-
+ if test "`libmikmod-config --version 2>/dev/null`" != ""
+ then
+ 	cat >> confdefs.h <<\EOF

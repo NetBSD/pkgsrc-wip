@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/06/03 02:29:37 blef Exp $
+$NetBSD: distinfo,v 1.4 2003/06/03 03:29:36 blef Exp $
 
 SHA1 (SpeedX-0.1.4d.tar.gz) = 73e89196ea0936db07f6aa9e4c5cc87c2a2005a5
 Size (SpeedX-0.1.4d.tar.gz) = 813322 bytes
@@ -11,3 +11,4 @@ SHA1 (patch-ad) = 7857125fe2defa9984fe6c0e11f1369eae6b9615
 SHA1 (patch-ae) = 4c404b044da5174b63ced6d1f08645630debf221
 SHA1 (patch-af) = 88ece77342fe969016b7ca37fc5dcf12691d5265
 SHA1 (patch-ag) = 4f36b0677c7092ee5b890fb5bd4145861ed57c3a
+SHA1 (patch-ah) = b9a0b1a5523f531aa46dab1bc294ffc09098be34
