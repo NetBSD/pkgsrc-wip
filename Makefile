@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1078 2004/03/13 18:08:46 tomhensel Exp $
-# $NetBSD: Makefile,v 1.1078 2004/03/13 18:08:46 tomhensel Exp $
+# $Id: Makefile,v 1.1079 2004/03/14 01:37:30 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1079 2004/03/14 01:37:30 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -495,6 +495,7 @@ SUBDIR+=	postgresql74-docs
 SUBDIR+=	postgresql74-lib
 SUBDIR+=	postgresql74-server
 SUBDIR+=	ppp
+SUBDIR+=	ppp-lzs
 SUBDIR+=	prelude-lml
 SUBDIR+=	prelude-manager
 SUBDIR+=	prelude-manager-mysql
