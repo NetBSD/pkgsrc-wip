@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/02 12:16:29 ivaniclixx Exp $
+lib/xmms/General/libinfopipe-${PKGVERSION}.so.1
+lib/xmms/General/libinfopipe-${PKGVERSION}.so.1.1
+lib/xmms/General/libinfopipe.a
+lib/xmms/General/libinfopipe.la
+lib/xmms/General/libinfopipe.so
