@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/05 18:42:04 poppnk Exp $
+bin/GWDBridge
+bin/GWNServer
+bin/goldwater
+bin/guardian
+bin/gwci${LOWER_VENDOR}
+bin/gwmkcfg
+lib/Goldwater.dll
+pkgdb/expat-1.95.6nb1/+REQUIRED_BY
+pkgdb/${PKGNAME}/+BUILD_INFO
+pkgdb/${PKGNAME}/+BUILD_VERSION
+pkgdb/${PKGNAME}/+COMMENT
+pkgdb/${PKGNAME}/+CONTENTS
+pkgdb/${PKGNAME}/+DESC
+pkgdb/${PKGNAME}/+SIZE_ALL
+pkgdb/${PKGNAME}/+SIZE_PKG
+pkgdb/phlib-1.20/+REQUIRED_BY
+@dirrm pkgdb/phlib-1.20
+@dirrm pkgdb/${PKGNAME}
+@dirrm pkgdb/expat-1.95.6nb1
+@dirrm pkgdb
