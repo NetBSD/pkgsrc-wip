@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/01 05:18:31 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/01 06:21:05 mpasternak Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 # and now we!
-# $Id: Makefile,v 1.1.1.1 2003/12/01 05:18:31 mpasternak Exp $
+# $Id: Makefile,v 1.2 2003/12/01 06:21:05 mpasternak Exp $
 #
 
 DISTNAME=		gettext-0.11.5
@@ -25,5 +25,7 @@ MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 ALL_TARGET=		all-yes
 INSTALL_TARGET=		install-exec
 BUILD_DIRS=		${WRKSRC}/intl
+
+BUILD_DEPENDS=		${MINGW_PKG_PREFIX}libiconv>=1.9.1:../../wip/mingw32-libiconv
 
 .include "../../wip/mk/win32.pkg.mk"
