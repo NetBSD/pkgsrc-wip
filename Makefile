@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.497 2003/09/25 14:17:04 xtraeme Exp $
-# $NetBSD: Makefile,v 1.497 2003/09/25 14:17:04 xtraeme Exp $
+# $Id: Makefile,v 1.498 2003/09/25 14:24:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.498 2003/09/25 14:24:15 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -391,7 +391,6 @@ SUBDIR+=	tinylogin
 SUBDIR+=	toppler
 SUBDIR+=	totem
 SUBDIR+=	treecc
-SUBDIR+=	trickle
 SUBDIR+=	tsm
 SUBDIR+=	tutos
 SUBDIR+=	tuxtype2
