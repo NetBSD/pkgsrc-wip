@@ -39,7 +39,7 @@ MAXLOGFILES=4
 MONITORFREQ=60
 
 # BROKENCPUTIME is the maximum %cpu usage that is allowed if this is
-# exceeded in two successive checks (seperated by the amount of time
+# exceeded in two successive checks (separated by the amount of time
 # determined by MONITORFREQ) then the server will be restarted.
 # set to 0 to disable, must be below 100; suggested value: 99
 # warning: setting this too low can cause the server to restart a lot
@@ -67,7 +67,7 @@ CANSUID=1
 
 ######################################################
 #
-# no user servicable parts beyond this point.
+# no user serviceable parts beyond this point.
 #
 # if you find that you need to change anything below here,
 # please contact me because i would like to ensure that this
