@@ -1,6 +1,7 @@
 PLIST doesn't have sounds
 
-It hangs a lot -- I was told it was from libgnomecanvas issues.
+It is mostly unusable.  It hangs a lot -- I was told it was from
+libgnomecanvas issues.  Or maybe threading problems.
 
 It doesn't figure out locale correctly by default -- so installed
 sounds aren't used.  (Workaround is to symlink or copy ogg files
@@ -12,7 +13,3 @@ It has problem with tar --exclude when extracting some files.
 
 This version has a known bug where it repeatedly loops when doing
 boards/music/background ogg file.
-
-PLIST needs
-@exec install-info
-@unexec install-info --delete
