@@ -1,8 +1,1 @@
-$NetBSD: TODO,v 1.1.1.1 2003/11/03 12:09:50 adrian_p Exp $
-
-Need to get libwrap support working ?
-
-Need to supply a stub /etc/rc.conf.d file that will run syslog-ng
-instead of the default syslogd.
-
-Need to supply a better sample config as not everyone runs NetBSD 1.6+.
+Need to supply a stub rc.d script that will run syslog-ng.

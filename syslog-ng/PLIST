@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/03 12:09:50 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/06 12:10:35 adrian_p Exp $
 bin/syslog2ng
-etc/syslog-ng/syslog-ng.conf.${LOWER_OPSYS}
 man/man5/syslog-ng.conf.5
 man/man8/syslog-ng.8
 sbin/syslog-ng
@@ -12,17 +11,18 @@ share/doc/html/syslog-ng/msgroute.html
 share/doc/html/syslog-ng/reference.html
 share/doc/html/syslog-ng/tuning.html
 share/doc/html/syslog-ng/x172.html
-share/doc/html/syslog-ng/x354.html
-share/doc/html/syslog-ng/x708.html
-share/doc/html/syslog-ng/x742.html
-share/doc/html/syslog-ng/x874.html
-share/doc/html/syslog-ng/x880.html
+share/doc/html/syslog-ng/x361.html
+share/doc/html/syslog-ng/x728.html
+share/doc/html/syslog-ng/x768.html
+share/doc/html/syslog-ng/x900.html
+share/doc/html/syslog-ng/x906.html
 share/doc/html/syslog-ng/x97.html
 share/doc/syslog-ng/INSTALL
 share/doc/syslog-ng/README
+share/doc/syslog-ng/syslog-ng.conf.doc
 share/examples/syslog-ng/syslog-ng.conf.demo
 share/examples/syslog-ng/syslog-ng.conf.sample
+share/examples/syslog-ng/syslog-ng.conf.solaris
 @dirrm share/examples/syslog-ng
 @dirrm share/doc/syslog-ng
 @dirrm share/doc/html/syslog-ng
-@dirrm etc/syslog-ng
