@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/18 05:13:53 mpasternak Exp $
+bin/xql
+include/xbsql.h
+lib/libxbsql.a
+lib/libxbsql.la
+lib/libxbsql.so
+lib/libxbsql.so.0
+lib/libxbsql.so.0.0
