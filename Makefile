@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.955 2004/02/12 08:54:28 xtraeme Exp $
-# $NetBSD: Makefile,v 1.955 2004/02/12 08:54:28 xtraeme Exp $
+# $Id: Makefile,v 1.956 2004/02/13 06:32:27 minskim Exp $
+# $NetBSD: Makefile,v 1.956 2004/02/13 06:32:27 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -712,7 +712,6 @@ SUBDIR+=	wxhugo
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
 SUBDIR+=	xbsql
-SUBDIR+=	xchat-systray-integration
 SUBDIR+=	xevil
 SUBDIR+=	xextensions
 SUBDIR+=	xlibs
