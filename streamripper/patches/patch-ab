@@ -1,13 +1,109 @@
-$NetBSD: patch-ab,v 1.1 2003/10/11 23:27:32 roelants Exp $
+$NetBSD: patch-ab,v 1.2 2004/07/29 15:48:40 grantbeattie Exp $
 
---- console/Makefile.in.orig	2002-04-13 09:18:04.000000000 +0200
+--- console/Makefile.in.orig	2004-07-30 01:33:37.000000000 +1000
 +++ console/Makefile.in
-@@ -5,7 +5,7 @@ bindir = /usr/local/bin
- SHELL = /bin/sh
- CC = @CC@
- 
+@@ -1,52 +1,52 @@
+-# Generated automatically from Makefile.in by configure.
+-#Makefile for streamripper
+-
+-bindir = /usr/local/bin
+-SHELL = /bin/sh
+-CC = @CC@
+-
 -LDFLAGS = @THREADLIBS@ -lm
+-INCPATHS = -I ../libmad -I ../lib 
+-CFLAGS = @CFLAGS@
+-DEFS = -D_REENTRANT -DUSE_LAYER3 -DHAVE_MPGLIB -DNOANALYSIS -D__DEBUG
+-COMPILE_CFLAGS = $(CFLAGS) $(DEFS) $(INCPATHS)
+-
+-LIBPATH = ../lib
+-INSTALL = /usr/bin/install -c
+-MADLIBPATH= ../libmad
+-MADLIBOBJS = $(MADLIBPATH)/.libs/libmad.a 
+-
+-LIBOBJS =  $(LIBPATH)/cbuffer.o \
+-	$(LIBPATH)/util.o \
+-	$(LIBPATH)/debug.o \
+-	$(LIBPATH)/filelib.o \
+-	$(LIBPATH)/socklib.o \
+-	$(LIBPATH)/http.o \
+-	$(LIBPATH)/inet.o \
+-	$(LIBPATH)/threadlib.o \
+-	$(LIBPATH)/mpeg.o \
+-	$(LIBPATH)/findsep.o \
+-	$(LIBPATH)/ripstream.o \
+-	$(LIBPATH)/ripshout.o \
+-	$(LIBPATH)/relaylib.o \
+-	$(LIBPATH)/rip_manager.o
+-
+-all: madlib libripper console
+-
+-madlib:
+-	@echo "Compiling madlib library"
+-	@cd $(MADLIBPATH); make
+-
+-libripper:
+-	@echo "Compiling streamripper library functions -"
+-	@cd ../lib; make
+-
+-console: streamripper.c 
+-	$(CC) $(COMPILE_CFLAGS) $(LIBOBJS) $(MADLIBOBJS) streamripper.c -o streamripper $(LDFLAGS)
+-
+-test:	test.c libripper mpglib123
+-	$(CC) $(COMPILE_CFLAGS) $(LIBOBJS) $(MADLIBOBJS) test.c -o test $(LDFLAGS)
+-
+-clean:
+-	rm -f streamripper *.o $(LIBPATH)/*.o $(MPGLIBPATH)/*.o *.core core
+-
++# Generated automatically from Makefile.in by configure.
++#Makefile for streamripper
++
++bindir = /usr/local/bin
++SHELL = $(SH)
++CC = @CC@
++
 +LDFLAGS = @LDFLAGS@ @THREADLIBS@ -lm
- INCPATHS = -I ../mpglib -I ../lib
- CFLAGS = @CFLAGS@
- DEFS = -D_REENTRANT -DUSE_LAYER3 -DHAVE_MPGLIB -DNOANALYSIS -D__DEBUG
++INCPATHS = -I ../libmad -I ../lib 
++CFLAGS = @CFLAGS@
++DEFS = -D_REENTRANT -DUSE_LAYER3 -DHAVE_MPGLIB -DNOANALYSIS -D__DEBUG
++COMPILE_CFLAGS = $(CFLAGS) $(DEFS) $(INCPATHS)
++
++LIBPATH = ../lib
++INSTALL = $(BSD_INSTALL)
++MADLIBPATH= ../libmad
++MADLIBOBJS = $(MADLIBPATH)/.libs/libmad.a 
++
++LIBOBJS =  $(LIBPATH)/cbuffer.o \
++	$(LIBPATH)/util.o \
++	$(LIBPATH)/debug.o \
++	$(LIBPATH)/filelib.o \
++	$(LIBPATH)/socklib.o \
++	$(LIBPATH)/http.o \
++	$(LIBPATH)/inet.o \
++	$(LIBPATH)/threadlib.o \
++	$(LIBPATH)/mpeg.o \
++	$(LIBPATH)/findsep.o \
++	$(LIBPATH)/ripstream.o \
++	$(LIBPATH)/ripshout.o \
++	$(LIBPATH)/relaylib.o \
++	$(LIBPATH)/rip_manager.o
++
++all: madlib libripper console
++
++madlib:
++	@echo "Compiling madlib library"
++	@cd $(MADLIBPATH); make
++
++libripper:
++	@echo "Compiling streamripper library functions -"
++	@cd ../lib; make
++
++console: streamripper.c 
++	$(CC) $(COMPILE_CFLAGS) $(LIBOBJS) $(MADLIBOBJS) streamripper.c -o streamripper $(LDFLAGS)
++
++test:	test.c libripper mpglib123
++	$(CC) $(COMPILE_CFLAGS) $(LIBOBJS) $(MADLIBOBJS) test.c -o test $(LDFLAGS)
++
++clean:
++	rm -f streamripper *.o $(LIBPATH)/*.o $(MPGLIBPATH)/*.o *.core core
++

@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2003/10/11 23:27:32 roelants Exp $
+$NetBSD: patch-ad,v 1.2 2004/07/29 15:48:40 grantbeattie Exp $
 
---- lib/compat.h.orig	2002-04-14 00:18:04.000000000 +0200
+--- lib/compat.h.orig	2004-04-05 06:25:34.000000000 +1000
 +++ lib/compat.h
 @@ -10,7 +10,11 @@
  #include <sys/stat.h>
@@ -14,29 +14,3 @@ $NetBSD: patch-ad,v 1.1 2003/10/11 23:27:32 roelants Exp $
  #include <pthread.h>
  #endif
  
-@@ -66,12 +70,25 @@
-                           (void *)callback, (void *)NULL)
- #define WaitForThread(_thandle_)	pthread_join(_thandle_, NULL)
- #define DestroyThread(_thandle_)	// is there one for unix?
-+
-+#ifdef HAVE_SEMAPHORE_H
- #define HSEM		sem_t
- #define	SemInit(_s_)	sem_init(&(_s_), 0, 0)
- #define	SemWait(_s_)	sem_wait(&(_s_))
- #define	SemPost(_s_)	sem_post(&(_s_))
- #define	SemDestroy(_s_)	sem_destroy(&(_s_))
- #define SemIsSignaled(_s_, _b_)	sem_getvalue(&(_s_), _b_)
-+#else
-+#define HSEM int
-+#define SemInit(_s_)	{ _s_ = semget(IPC_PRIVATE, 1, IPC_CREAT); }
-+#define SemWait(_s_)	{ struct sembuf sop[1] = { { 0, -1, SEM_UNDO} }; \
-+			  semop(_s_, sop, 1); }
-+#define SemPost(_s_)	{ struct sembuf sop[1] = { { 0, 1, SEM_UNDO} }; \
-+			  semop(_s_, sop, 1); }
-+#define SemDestroy(_s_)	sem_ctl(_s_, 0, IPC_RMID)
-+#define SemIsSignaled(_s_, _b_) \
-+			{ *(_b_) = semctl(_s_, 0, GETVAL); }
-+#endif
- #define Sleep(x) 	usleep(x)	
- 
- #endif

@@ -1,0 +1,3 @@
+* make it build on NetBSD w/ native threads
+* make it install
+* test on Linux/Solaris/etc.

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2003/10/11 23:27:32 roelants Exp $
+$NetBSD: patch-aa,v 1.2 2004/07/29 15:48:40 grantbeattie Exp $
 
---- configure.orig	2001-08-04 07:00:03.000000000 +0200
+--- configure.orig	2004-04-05 06:25:33.000000000 +1000
 +++ configure
-@@ -1641,6 +1641,24 @@ else
+@@ -1645,6 +1645,24 @@ else
  fi
  done
  
@@ -27,11 +27,3 @@ $NetBSD: patch-aa,v 1.1 2003/10/11 23:27:32 roelants Exp $
  
  trap '' 1 2 15
  cat > confcache <<\EOF
-@@ -1792,6 +1810,7 @@ s%@INSTALL_PROGRAM@%$INSTALL_PROGRAM%g
- s%@INSTALL_SCRIPT@%$INSTALL_SCRIPT%g
- s%@INSTALL_DATA@%$INSTALL_DATA%g
- s%@THREADLIBS@%$THREADLIBS%g
-+s%@SEMDEFS@%$SEMDEFS%g
- s%@CPP@%$CPP%g
- 
- CEOF
