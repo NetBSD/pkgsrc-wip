@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.1.1.1 2003/07/27 06:03:38 bencollver Exp $
+$NetBSD: patch-ay,v 1.2 2003/07/31 15:12:40 bencollver Exp $
 
---- src/laguna.c.orig	Thu Jul  6 09:00:56 2000
+--- src/laguna.c.orig	Wed Oct 11 09:35:46 2000
 +++ src/laguna.c
-@@ -447,9 +447,20 @@ static int laguna_test(void)
+@@ -445,9 +445,20 @@ static int laguna_test(void)
  {
      int found;
      unsigned long buf[64];

@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
+$NetBSD: patch-ae,v 1.2 2003/07/31 15:12:39 bencollver Exp $
 
---- Makefile.orig	Thu Jul  6 09:12:47 2000
+--- Makefile.orig	Wed Apr 18 10:35:51 2001
 +++ Makefile
-@@ -210,7 +210,7 @@ installstaticlib: static
+@@ -187,7 +187,7 @@ installstaticlib: static
  	@$(INSTALL_DATA) staticlib/libvgagl.a $(libdir)/libvgagl.a
  	@chmod a+r $(libdir)/libvgagl.a
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
  	@if [ ! -d $(bindir) ]; then \
  		echo No $(bindir) directory, creating it.; \
  		mkdir $(bindir); \
-@@ -236,8 +236,6 @@ installutils: textutils lrmi
+@@ -213,8 +213,6 @@ installutils: textutils lrmi
  	@cp utils/textmode $(bindir)
  	@echo "savetextmode:     Script that saves textmode information used by 'textmode'."
  	@cp utils/savetextmode $(bindir)

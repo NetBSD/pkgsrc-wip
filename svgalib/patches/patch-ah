@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
+$NetBSD: patch-ah,v 1.2 2003/07/31 15:12:40 bencollver Exp $
 
---- src/keyboard/keyboard.c.orig	Sat Jul 17 23:41:15 1999
+--- src/keyboard/keyboard.c.orig	Sun Oct  8 05:37:40 2000
 +++ src/keyboard/keyboard.c
 @@ -28,12 +28,12 @@
  #include <sys/ioctl.h>

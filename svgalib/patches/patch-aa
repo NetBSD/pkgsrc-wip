@@ -1,30 +1,30 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/31 15:12:39 bencollver Exp $
 
---- Makefile.cfg.orig	Fri Jul 21 11:21:34 2000
+--- Makefile.cfg.orig	Tue May 29 07:39:13 2001
 +++ Makefile.cfg
 @@ -9,8 +9,8 @@
  # to n means yes!
  
  MAJOR_VER = 1
--MINOR_VER = 4.2
+-MINOR_VER = 4.3
 -VERSION = $(MAJOR_VER).$(MINOR_VER)
-+MINOR_VER = 
++MINOR_VER =
 +VERSION = $(MAJOR_VER)
  
  #----------------------------------------------------------------------
  # Configuration Section
-@@ -24,8 +24,8 @@
+@@ -24,8 +24,8 @@ confdir = $(srcdir)/src/config
  
  # Common prefix for installation directories.
  # NOTE: This directory must exist when you start the install.
 -TOPDIR=
 -prefix = $(TOPDIR)/usr/local
-+TOPDIR=$(PREFIX)
++TOPDIR= $(PREFIX)
 +prefix = $(PREFIX)
  exec_prefix = $(prefix)
  
  # Directory where the shared stubs and static library will be installed.
-@@ -82,7 +82,7 @@
+@@ -82,7 +82,7 @@ ROOT_VC_SHORTCUT = y
  # BACKGROUND = y
  
  # Uncomment this if you want to compile and install the static libs.
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
  
  # Comment this out if you don't want to install the shared libs.
  # If you do not install the shared nor the static libs, 'make static'
-@@ -94,7 +94,7 @@
+@@ -94,7 +94,7 @@ INSTALLSHAREDLIB = installsharedlib
  # a.out image is available install it in the first directory named something
  # like *aout/ in /etc/ld.so.conf.
  # If you want this, do not comment out the next line:
@@ -42,8 +42,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
  
  # Comment this out if you want to keep old shared images. Old header files,
  # library stubs and static libraries CANNOT be kept in public locations
-@@ -126,20 +126,20 @@
- #INCLUDE_ET4000_DRIVER = y
+@@ -126,15 +126,15 @@ INSTALLMAN = installman
+ INCLUDE_ET4000_DRIVER = y
  INCLUDE_CIRRUS_DRIVER = y
  INCLUDE_TVGA_DRIVER = y
 -#INCLUDE_OAK_DRIVER = y
@@ -65,14 +65,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
  INCLUDE_CHIPS_DRIVER = y
  INCLUDE_APM_DRIVER = y
  INCLUDE_NV3_DRIVER = y
- INCLUDE_ET6000_DRIVER = y
--INCLUDE_VESA_DRIVER = y
-+#INCLUDE_VESA_DRIVER = y
- INCLUDE_MX_DRIVER = y
- INCLUDE_PARADISE_DRIVER = y
- INCLUDE_RAGE_DRIVER = y
-@@ -154,15 +154,15 @@
- #INCLUDE_ET4000_DRIVER_TEST = y
+@@ -150,7 +150,7 @@ INCLUDE_LAGUNA_DRIVER = y
+ INCLUDE_NEO_DRIVER = y
+ INCLUDE_R128_DRIVER = y
+ INCLUDE_G400_DRIVER = y
+-INCLUDE_FBDEV_DRIVER = y
++#INCLUDE_FBDEV_DRIVER = y
+ INCLUDE_SAVAGE_DRIVER = y
+ #
+ # Comment out any adapter you don't want to autodetect.
+@@ -158,15 +158,15 @@ INCLUDE_SAVAGE_DRIVER = y
+ INCLUDE_ET4000_DRIVER_TEST = y
  INCLUDE_CIRRUS_DRIVER_TEST = y
  INCLUDE_TVGA_DRIVER_TEST = y
 -#INCLUDE_OAK_DRIVER_TEST = y
@@ -94,8 +97,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
  INCLUDE_CHIPS_DRIVER_TEST = y
  INCLUDE_APM_DRIVER_TEST = y
  INCLUDE_NV3_DRIVER_TEST = y
-@@ -177,7 +177,7 @@
- INCLUDE_NEO_DRIVER_TEST = y
+@@ -185,7 +185,7 @@ INCLUDE_R128_DRIVER_TEST = y
+ INCLUDE_SAVAGE_DRIVER_TEST = y
  
  #Might be too dangerous:
 -INCLUDE_VESA_DRIVER_TEST = y

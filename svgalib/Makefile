@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/31 15:12:39 bencollver Exp $
 # FreeBSD: ports/graphics/svgalib/Makefile,v 1.10 2003/03/07 06:04:12 ade Exp
 #
 
-DISTNAME=	svgalib-1.4.2
+DISTNAME=	svgalib-1.4.3
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://www.svgalib.org/
 
@@ -11,7 +11,8 @@ HOMEPAGE=	http://www.svgalib.org/
 COMMENT=	Low level console graphics library
 
 USE_GMAKE=	yes
-CFLAGS+=	-g
+CFLAGS+=	-g -DUSE_LIBC_VM86
+MANCOMPRESSED=	yes
 
 ALL_TARGET=	shared static
 
@@ -23,6 +24,10 @@ pre-patch:
 		${MV} $${i}.new $${i}; \
 	done
 	${MKDIR} ${WRKSRC}/include/linux
+	for i in ${WRKSRC}/utils/?*textmode ${WRKSRC}/demos/svidtune.c; do \
+		${CP} $${i} $${i}.orig; \
+		${SED} -e "s,/etc,${PREFIX}/etc,g" < $${i}.orig > $${i}; \
+	done
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/linux
