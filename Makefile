@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1459 2004/09/13 15:45:49 cetrox Exp $
-# $NetBSD: Makefile,v 1.1459 2004/09/13 15:45:49 cetrox Exp $
+# $Id: Makefile,v 1.1460 2004/09/13 18:45:31 minskim Exp $
+# $NetBSD: Makefile,v 1.1460 2004/09/13 18:45:31 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -480,6 +480,7 @@ SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Net-PcapUtils
+SUBDIR+=	p5-POE
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
