@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/18 11:10:39 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2004/04/18 11:15:46 poppnk Exp $
 
 SHA1 (gnump3d-2.7.tar.bz2) = 01bbabee49d70d64676fea88febfe12c72deb6d1
 Size (gnump3d-2.7.tar.bz2) = 212021 bytes
-SHA1 (patch-aa) = c1e4bc212487c298c51b78778a996bfda64325cb
+SHA1 (patch-aa) = 61d14628e4a08f4091a77711891d576cf16c766e

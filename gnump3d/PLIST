@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/18 11:10:39 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/18 11:15:46 poppnk Exp $
 bin/gnump3d
 bin/gnump3d-index
 bin/gnump3d-top
 bin/gnump3d2
-gnump3d/gnump3d.conf
-gnump3d/gnump3d.conf-orig
-gnump3d/mime.types
+etc/gnump3d/gnump3d.conf
+etc/gnump3d/gnump3d.conf-orig
+etc/gnump3d/mime.types
 lib/perl5/5.8.1/gnump3d/IP.pm
 lib/perl5/5.8.1/gnump3d/MD5.pm
 lib/perl5/5.8.1/gnump3d/base64.pm
@@ -229,4 +229,18 @@ share/gnump3d/redgrey/results.html
 share/gnump3d/redgrey/search.html
 share/gnump3d/redgrey/stats.html
 share/gnump3d/redgrey/tagbrowse.html
-@dirrm gnump3d
+@dirrm share/gnump3d/redgrey
+@dirrm share/gnump3d/nausicaa
+@dirrm share/gnump3d/dotNET/images
+@dirrm share/gnump3d/dotNET
+@dirrm share/gnump3d/default
+@dirrm share/gnump3d/Thexder
+@dirrm share/gnump3d/Tabular
+@dirrm share/gnump3d/SchwartzNGrau
+@dirrm share/gnump3d/LaFrere
+@dirrm share/gnump3d/Clean
+@dirrm share/gnump3d
+@dirrm lib/perl5/5.8.1/gnump3d/plugins
+@dirrm lib/perl5/5.8.1/gnump3d/lang
+@dirrm lib/perl5/5.8.1/gnump3d
+@dirrm etc/gnump3d
