@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/19 16:54:01 lexort Exp $
+
+--- src/guile-lib/doc/Makefile.in.orig	2004-10-19 09:07:09.000000000 -0400
++++ src/guile-lib/doc/Makefile.in
+@@ -15,7 +15,7 @@ texi-files	:= $(wildcard $(srcdir)/*.tex
+ endif
+ 
+ theinfo := guile-library.info
+-info-install-dir := $(destdir)$(prefix)/share/info
++info-install-dir := $(destdir)$(prefix)/info
+ 
+ all: $(theinfo)
+ 
