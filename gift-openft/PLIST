@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/19 00:38:13 alexmayr Exp $
-lib/giFT/libOpenFT.la
-lib/giFT/libOpenFT.so
-share/giFT/OpenFT/OpenFT.conf.template
-share/giFT/OpenFT/nodes
-@dirrm share/giFT/OpenFT
-@dirrm lib/giFT

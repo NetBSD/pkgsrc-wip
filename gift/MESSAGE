@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/03/18 23:46:52 alexmayr Exp $
-
-Your giFT-setup is incomplete, you have to run gift-setup to configure giftd.
-giftd is quite useless without any plugins, you can use '../gift-openft'.
-
-===========================================================================
