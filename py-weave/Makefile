@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/22 18:58:55 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/23 13:18:12 mpasternak Exp $
 #
 
 DISTNAME=		weave-0.2.3
@@ -14,5 +14,8 @@ USE_BUILDLINK2=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
+CONFLICTS=		${PYPKGPREFIX}-SciPy-[0-9]*
+
+.include "../../wip/py-scipy_distutils/buildlink2.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

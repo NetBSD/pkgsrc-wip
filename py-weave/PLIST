@@ -1,82 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/22 18:58:57 mpasternak Exp $
-${PYSITELIB}/scipy_test/__init__.py
-${PYSITELIB}/scipy_test/__init__.pyc
-${PYSITELIB}/scipy_test/__init__.pyo
-${PYSITELIB}/scipy_test/scipy_test.py
-${PYSITELIB}/scipy_test/scipy_test.pyc
-${PYSITELIB}/scipy_test/scipy_test.pyo
-${PYSITELIB}/scipy_test/setup_scipy_test.py
-${PYSITELIB}/scipy_test/setup_scipy_test.pyc
-${PYSITELIB}/scipy_test/setup_scipy_test.pyo
-${PYSITELIB}/scipy_distutils/__init__.py
-${PYSITELIB}/scipy_distutils/__init__.pyc
-${PYSITELIB}/scipy_distutils/__init__.pyo
-${PYSITELIB}/scipy_distutils/__version__.py
-${PYSITELIB}/scipy_distutils/__version__.pyc
-${PYSITELIB}/scipy_distutils/__version__.pyo
-${PYSITELIB}/scipy_distutils/atlas_info.py
-${PYSITELIB}/scipy_distutils/atlas_info.pyc
-${PYSITELIB}/scipy_distutils/atlas_info.pyo
-${PYSITELIB}/scipy_distutils/command/__init__.py
-${PYSITELIB}/scipy_distutils/command/__init__.pyc
-${PYSITELIB}/scipy_distutils/command/__init__.pyo
-${PYSITELIB}/scipy_distutils/command/build.py
-${PYSITELIB}/scipy_distutils/command/build.pyc
-${PYSITELIB}/scipy_distutils/command/build.pyo
-${PYSITELIB}/scipy_distutils/command/build_clib.py
-${PYSITELIB}/scipy_distutils/command/build_clib.pyc
-${PYSITELIB}/scipy_distutils/command/build_clib.pyo
-${PYSITELIB}/scipy_distutils/command/build_ext.py
-${PYSITELIB}/scipy_distutils/command/build_ext.pyc
-${PYSITELIB}/scipy_distutils/command/build_ext.pyo
-${PYSITELIB}/scipy_distutils/command/build_flib.py
-${PYSITELIB}/scipy_distutils/command/build_flib.pyc
-${PYSITELIB}/scipy_distutils/command/build_flib.pyo
-${PYSITELIB}/scipy_distutils/command/build_py.py
-${PYSITELIB}/scipy_distutils/command/build_py.pyc
-${PYSITELIB}/scipy_distutils/command/build_py.pyo
-${PYSITELIB}/scipy_distutils/command/cpuinfo.py
-${PYSITELIB}/scipy_distutils/command/cpuinfo.pyc
-${PYSITELIB}/scipy_distutils/command/cpuinfo.pyo
-${PYSITELIB}/scipy_distutils/command/install.py
-${PYSITELIB}/scipy_distutils/command/install.pyc
-${PYSITELIB}/scipy_distutils/command/install.pyo
-${PYSITELIB}/scipy_distutils/command/install_data.py
-${PYSITELIB}/scipy_distutils/command/install_data.pyc
-${PYSITELIB}/scipy_distutils/command/install_data.pyo
-${PYSITELIB}/scipy_distutils/command/install_headers.py
-${PYSITELIB}/scipy_distutils/command/install_headers.pyc
-${PYSITELIB}/scipy_distutils/command/install_headers.pyo
-${PYSITELIB}/scipy_distutils/command/run_f2py.py
-${PYSITELIB}/scipy_distutils/command/run_f2py.pyc
-${PYSITELIB}/scipy_distutils/command/run_f2py.pyo
-${PYSITELIB}/scipy_distutils/command/sdist.py
-${PYSITELIB}/scipy_distutils/command/sdist.pyc
-${PYSITELIB}/scipy_distutils/command/sdist.pyo
-${PYSITELIB}/scipy_distutils/core.py
-${PYSITELIB}/scipy_distutils/core.pyc
-${PYSITELIB}/scipy_distutils/core.pyo
-${PYSITELIB}/scipy_distutils/dist.py
-${PYSITELIB}/scipy_distutils/dist.pyc
-${PYSITELIB}/scipy_distutils/dist.pyo
-${PYSITELIB}/scipy_distutils/extension.py
-${PYSITELIB}/scipy_distutils/extension.pyc
-${PYSITELIB}/scipy_distutils/extension.pyo
-${PYSITELIB}/scipy_distutils/fftw_info.py
-${PYSITELIB}/scipy_distutils/fftw_info.pyc
-${PYSITELIB}/scipy_distutils/fftw_info.pyo
-${PYSITELIB}/scipy_distutils/line_endings.py
-${PYSITELIB}/scipy_distutils/line_endings.pyc
-${PYSITELIB}/scipy_distutils/line_endings.pyo
-${PYSITELIB}/scipy_distutils/mingw32_support.py
-${PYSITELIB}/scipy_distutils/mingw32_support.pyc
-${PYSITELIB}/scipy_distutils/mingw32_support.pyo
-${PYSITELIB}/scipy_distutils/misc_util.py
-${PYSITELIB}/scipy_distutils/misc_util.pyc
-${PYSITELIB}/scipy_distutils/misc_util.pyo
-${PYSITELIB}/scipy_distutils/setup_scipy_distutils.py
-${PYSITELIB}/scipy_distutils/setup_scipy_distutils.pyc
-${PYSITELIB}/scipy_distutils/setup_scipy_distutils.pyo
+@comment $NetBSD: PLIST,v 1.2 2003/11/23 13:18:12 mpasternak Exp $
 ${PYSITELIB}/weave/CXX/Config.hxx
 ${PYSITELIB}/weave/CXX/Exception.hxx
 ${PYSITELIB}/weave/CXX/Extensions.hxx
@@ -388,9 +310,6 @@ ${PYSITELIB}/weave/wx_info.pyo
 ${PYSITELIB}/weave/wx_spec.py
 ${PYSITELIB}/weave/wx_spec.pyc
 ${PYSITELIB}/weave/wx_spec.pyo
-@dirrm ${PYSITELIB}/scipy_distutils/command
-@dirrm ${PYSITELIB}/scipy_distutils
-@dirrm ${PYSITELIB}/scipy_test
 @dirrm ${PYSITELIB}/weave/tests
 @dirrm ${PYSITELIB}/weave/swig
 @dirrm ${PYSITELIB}/weave/scxx
