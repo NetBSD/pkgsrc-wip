@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/22 01:23:23 minskim Exp $
-share/gdesklets/Displays/rssgrab/rssgrab-lite-dc.display
-share/gdesklets/Displays/rssgrab/rssgrab-lite.display
+@comment $NetBSD: PLIST,v 1.2 2004/03/03 22:04:51 minskim Exp $
+share/gdesklets/Displays/rssgrab/rssgrab-orig.display
 share/gdesklets/Displays/rssgrab/rssgrab-psi.display
 share/gdesklets/Displays/rssgrab/rssgrab.display
 share/gdesklets/Displays/rssgrab/gfx/action.png
