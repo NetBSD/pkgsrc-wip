@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/01 18:18:13 goteki Exp $
+
+SHA1 (pysnmp-3.4.2.tar.gz) = 8350b7fc2366b6e3bc33a555f5017c6a17bdb872
+Size (pysnmp-3.4.2.tar.gz) = 90872 bytes

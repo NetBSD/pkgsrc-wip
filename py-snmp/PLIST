@@ -1,0 +1,146 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/01 18:18:13 goteki Exp $
+${PYSITELIB}/pysnmp/__init__.pyc
+${PYSITELIB}/pysnmp/__init__.py
+${PYSITELIB}/pysnmp/asn1/__init__.pyc
+${PYSITELIB}/pysnmp/asn1/__init__.py
+${PYSITELIB}/pysnmp/asn1/base.pyc
+${PYSITELIB}/pysnmp/asn1/base.py
+${PYSITELIB}/pysnmp/asn1/encoding/__init__.pyc
+${PYSITELIB}/pysnmp/asn1/encoding/__init__.py
+${PYSITELIB}/pysnmp/asn1/encoding/ber/__init__.pyc
+${PYSITELIB}/pysnmp/asn1/encoding/ber/__init__.py
+${PYSITELIB}/pysnmp/asn1/encoding/ber/base.pyc
+${PYSITELIB}/pysnmp/asn1/encoding/ber/base.py
+${PYSITELIB}/pysnmp/asn1/encoding/ber/error.pyc
+${PYSITELIB}/pysnmp/asn1/encoding/ber/error.py
+${PYSITELIB}/pysnmp/asn1/encoding/ber/univ.pyc
+${PYSITELIB}/pysnmp/asn1/encoding/ber/univ.py
+${PYSITELIB}/pysnmp/asn1/encoding/error.pyc
+${PYSITELIB}/pysnmp/asn1/encoding/error.py
+${PYSITELIB}/pysnmp/asn1/error.pyc
+${PYSITELIB}/pysnmp/asn1/error.py
+${PYSITELIB}/pysnmp/asn1/oidtree.pyc
+${PYSITELIB}/pysnmp/asn1/oidtree.py
+${PYSITELIB}/pysnmp/asn1/univ.pyc
+${PYSITELIB}/pysnmp/asn1/univ.py
+${PYSITELIB}/pysnmp/compat/__init__.pyc
+${PYSITELIB}/pysnmp/compat/__init__.py
+${PYSITELIB}/pysnmp/compat/pysnmp1x/__init__.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp1x/__init__.py
+${PYSITELIB}/pysnmp/compat/pysnmp1x/asynsnmp.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp1x/asynsnmp.py
+${PYSITELIB}/pysnmp/compat/pysnmp1x/ber.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp1x/ber.py
+${PYSITELIB}/pysnmp/compat/pysnmp1x/error.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp1x/error.py
+${PYSITELIB}/pysnmp/compat/pysnmp1x/message.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp1x/message.py
+${PYSITELIB}/pysnmp/compat/pysnmp1x/msession.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp1x/msession.py
+${PYSITELIB}/pysnmp/compat/pysnmp1x/session.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp1x/session.py
+${PYSITELIB}/pysnmp/compat/pysnmp1x/wrapexp.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp1x/wrapexp.py
+${PYSITELIB}/pysnmp/compat/pysnmp2x/__init__.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp2x/__init__.py
+${PYSITELIB}/pysnmp/compat/pysnmp2x/asn1.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp2x/asn1.py
+${PYSITELIB}/pysnmp/compat/pysnmp2x/asynrole.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp2x/asynrole.py
+${PYSITELIB}/pysnmp/compat/pysnmp2x/error.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp2x/error.py
+${PYSITELIB}/pysnmp/compat/pysnmp2x/role.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp2x/role.py
+${PYSITELIB}/pysnmp/compat/pysnmp2x/v1.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp2x/v1.py
+${PYSITELIB}/pysnmp/compat/pysnmp2x/v2c.pyc
+${PYSITELIB}/pysnmp/compat/pysnmp2x/v2c.py
+${PYSITELIB}/pysnmp/compat/snmpy/__init__.pyc
+${PYSITELIB}/pysnmp/compat/snmpy/__init__.py
+${PYSITELIB}/pysnmp/compat/snmpy/snmpy.pyc
+${PYSITELIB}/pysnmp/compat/snmpy/snmpy.py
+${PYSITELIB}/pysnmp/error.pyc
+${PYSITELIB}/pysnmp/error.py
+${PYSITELIB}/pysnmp/mapping/__init__.pyc
+${PYSITELIB}/pysnmp/mapping/__init__.py
+${PYSITELIB}/pysnmp/mapping/error.pyc
+${PYSITELIB}/pysnmp/mapping/error.py
+${PYSITELIB}/pysnmp/mapping/udp/__init__.pyc
+${PYSITELIB}/pysnmp/mapping/udp/__init__.py
+${PYSITELIB}/pysnmp/mapping/udp/asynrole.pyc
+${PYSITELIB}/pysnmp/mapping/udp/asynrole.py
+${PYSITELIB}/pysnmp/mapping/udp/error.pyc
+${PYSITELIB}/pysnmp/mapping/udp/error.py
+${PYSITELIB}/pysnmp/mapping/udp/role.pyc
+${PYSITELIB}/pysnmp/mapping/udp/role.py
+${PYSITELIB}/pysnmp/proto/__init__.pyc
+${PYSITELIB}/pysnmp/proto/__init__.py
+${PYSITELIB}/pysnmp/proto/api/__init__.pyc
+${PYSITELIB}/pysnmp/proto/api/__init__.py
+${PYSITELIB}/pysnmp/proto/api/alpha/__init__.pyc
+${PYSITELIB}/pysnmp/proto/api/alpha/__init__.py
+${PYSITELIB}/pysnmp/proto/api/alpha/pdutypes.pyc
+${PYSITELIB}/pysnmp/proto/api/alpha/pdutypes.py
+${PYSITELIB}/pysnmp/proto/api/alpha/rfc1155.pyc
+${PYSITELIB}/pysnmp/proto/api/alpha/rfc1155.py
+${PYSITELIB}/pysnmp/proto/api/alpha/rfc1157.pyc
+${PYSITELIB}/pysnmp/proto/api/alpha/rfc1157.py
+${PYSITELIB}/pysnmp/proto/api/alpha/rfc1905.pyc
+${PYSITELIB}/pysnmp/proto/api/alpha/rfc1905.py
+${PYSITELIB}/pysnmp/proto/api/alpha/v1.pyc
+${PYSITELIB}/pysnmp/proto/api/alpha/v1.py
+${PYSITELIB}/pysnmp/proto/api/alpha/v2c.pyc
+${PYSITELIB}/pysnmp/proto/api/alpha/v2c.py
+${PYSITELIB}/pysnmp/proto/api/alpha/versions.pyc
+${PYSITELIB}/pysnmp/proto/api/alpha/versions.py
+${PYSITELIB}/pysnmp/proto/api/error.pyc
+${PYSITELIB}/pysnmp/proto/api/error.py
+${PYSITELIB}/pysnmp/proto/api/generic/__init__.pyc
+${PYSITELIB}/pysnmp/proto/api/generic/__init__.py
+${PYSITELIB}/pysnmp/proto/api/generic/rfc1157.pyc
+${PYSITELIB}/pysnmp/proto/api/generic/rfc1157.py
+${PYSITELIB}/pysnmp/proto/api/generic/rfc1905.pyc
+${PYSITELIB}/pysnmp/proto/api/generic/rfc1905.py
+${PYSITELIB}/pysnmp/proto/error.pyc
+${PYSITELIB}/pysnmp/proto/error.py
+${PYSITELIB}/pysnmp/proto/rfc1155.pyc
+${PYSITELIB}/pysnmp/proto/rfc1155.py
+${PYSITELIB}/pysnmp/proto/rfc1157.pyc
+${PYSITELIB}/pysnmp/proto/rfc1157.py
+${PYSITELIB}/pysnmp/proto/rfc1902.pyc
+${PYSITELIB}/pysnmp/proto/rfc1902.py
+${PYSITELIB}/pysnmp/proto/rfc1905.pyc
+${PYSITELIB}/pysnmp/proto/rfc1905.py
+${PYSITELIB}/pysnmp/proto/v1.pyc
+${PYSITELIB}/pysnmp/proto/v1.py
+${PYSITELIB}/pysnmp/proto/v2c.pyc
+${PYSITELIB}/pysnmp/proto/v2c.py
+${PYSITELIB}/pysnmp/test/__init__.pyc
+${PYSITELIB}/pysnmp/test/__init__.py
+${PYSITELIB}/pysnmp/test/base.pyc
+${PYSITELIB}/pysnmp/test/base.py
+${PYSITELIB}/pysnmp/test/getset.pyc
+${PYSITELIB}/pysnmp/test/getset.py
+${PYSITELIB}/pysnmp/test/suite.pyc
+${PYSITELIB}/pysnmp/test/suite.py
+${PYSITELIB}/pysnmp/test/trap.pyc
+${PYSITELIB}/pysnmp/test/trap.py
+${PYSITELIB}/pysnmp/test/walk.pyc
+${PYSITELIB}/pysnmp/test/walk.py
+${PYSITELIB}/pysnmp/version.pyc
+${PYSITELIB}/pysnmp/version.py
+@dirrm ${PYSITELIB}/pysnmp/test
+@dirrm ${PYSITELIB}/pysnmp/proto/api/generic
+@dirrm ${PYSITELIB}/pysnmp/proto/api/alpha
+@dirrm ${PYSITELIB}/pysnmp/proto/api
+@dirrm ${PYSITELIB}/pysnmp/proto
+@dirrm ${PYSITELIB}/pysnmp/mapping/udp
+@dirrm ${PYSITELIB}/pysnmp/mapping
+@dirrm ${PYSITELIB}/pysnmp/compat/snmpy
+@dirrm ${PYSITELIB}/pysnmp/compat/pysnmp2x
+@dirrm ${PYSITELIB}/pysnmp/compat/pysnmp1x
+@dirrm ${PYSITELIB}/pysnmp/compat
+@dirrm ${PYSITELIB}/pysnmp/asn1/encoding/ber
+@dirrm ${PYSITELIB}/pysnmp/asn1/encoding
+@dirrm ${PYSITELIB}/pysnmp/asn1
+@dirrm ${PYSITELIB}/pysnmp
