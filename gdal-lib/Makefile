@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/17 21:53:23 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/28 17:10:06 daprice Exp $
 #
 
 DISTNAME=		gdal-1.2.5
@@ -28,6 +28,6 @@ CONFIGURE_ARGS+=	--with-geos
 
 .include "../../misc/proj/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
-.include "../../wip/geos2/buildlink3.mk"
+.include "../../wip/geos/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
