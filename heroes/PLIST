@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/08 05:22:45 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/14 18:59:25 minskim Exp $
 bin/heroes
 bin/heroeslvl
 info/heroes.info
 info/heroes.info-1
 info/heroes.info-2
-lib/charset.alias
 man/man6/heroes.6
 man/man6/heroeslvl.6
 share/heroes/etc/heroesrc
