@@ -1,0 +1,76 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/14 09:41:49 jmmv Exp $
+share/doc/adodb/license.txt
+share/doc/adodb/readme.htm
+share/doc/adodb/readme.txt
+share/doc/adodb/tips_portable_sql.htm
+share/doc/adodb/tute.htm
+share/adodb/adodb-cryptsession.php
+share/adodb/adodb-csvlib.inc.php
+share/adodb/adodb-errorhandler.inc.php
+share/adodb/adodb-errorpear.inc.php
+share/adodb/adodb-lib.inc.php
+share/adodb/adodb-pager.inc.php
+share/adodb/adodb-pear.inc.php
+share/adodb/adodb-session.php
+share/adodb/adodb.inc.php
+share/adodb/crypt.inc.php
+share/adodb/pivottable.inc.php
+share/adodb/rsfilter.inc.php
+share/adodb/server.php
+share/adodb/toexport.inc.php
+share/adodb/tohtml.inc.php
+share/adodb/drivers/adodb-access.inc.php
+share/adodb/drivers/adodb-ado.inc.php
+share/adodb/drivers/adodb-ado_access.inc.php
+share/adodb/drivers/adodb-ado_mssql.inc.php
+share/adodb/drivers/adodb-borland_ibase.inc.php
+share/adodb/drivers/adodb-csv.inc.php
+share/adodb/drivers/adodb-db2.inc.php
+share/adodb/drivers/adodb-fbsql.inc.php
+share/adodb/drivers/adodb-firebird.inc.php
+share/adodb/drivers/adodb-ibase.inc.php
+share/adodb/drivers/adodb-informix.inc.php
+share/adodb/drivers/adodb-informix72.inc.php
+share/adodb/drivers/adodb-mssql.inc.php
+share/adodb/drivers/adodb-mssqlpo.inc.php
+share/adodb/drivers/adodb-mysql.inc.php
+share/adodb/drivers/adodb-mysqlt.inc.php
+share/adodb/drivers/adodb-oci8.inc.php
+share/adodb/drivers/adodb-oci805.inc.php
+share/adodb/drivers/adodb-oci8po.inc.php
+share/adodb/drivers/adodb-odbc.inc.php
+share/adodb/drivers/adodb-odbc_mssql.inc.php
+share/adodb/drivers/adodb-odbc_oracle.inc.php
+share/adodb/drivers/adodb-oracle.inc.php
+share/adodb/drivers/adodb-postgres.inc.php
+share/adodb/drivers/adodb-postgres64.inc.php
+share/adodb/drivers/adodb-postgres7.inc.php
+share/adodb/drivers/adodb-proxy.inc.php
+share/adodb/drivers/adodb-sqlanywhere.inc.php
+share/adodb/drivers/adodb-sybase.inc.php
+share/adodb/drivers/adodb-vfp.inc.php
+share/adodb/tests/benchmark.php
+share/adodb/tests/client.php
+share/adodb/tests/test.php
+share/adodb/tests/test2.php
+share/adodb/tests/test3.php
+share/adodb/tests/test4.php
+share/adodb/tests/test5.php
+share/adodb/tests/testcache.php
+share/adodb/tests/testdatabases.inc.php
+share/adodb/tests/testgenid.php
+share/adodb/tests/testmssql.php
+share/adodb/tests/testoci8.php
+share/adodb/tests/testoci8cursor.php
+share/adodb/tests/testpaging.php
+share/adodb/tests/testpear.php
+share/adodb/tests/testsessions.php
+share/adodb/cute_icons_for_site/adodb.gif
+share/adodb/cute_icons_for_site/adodb.png
+share/adodb/cute_icons_for_site/adodb2.gif
+share/adodb/cute_icons_for_site/adodb2.png
+@dirrm share/adodb/drivers
+@dirrm share/adodb/tests
+@dirrm share/adodb/cute_icons_for_site
+@dirrm share/adodb
+@dirrm share/doc/adodb
