@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.4 2003/04/21 20:30:12 cjep Exp $
 --- ickle/IckleClient.cpp.orig	Fri Apr 11 22:32:26 2003
 +++ ickle/IckleClient.cpp	Fri Apr 11 22:34:32 2003
 @@ -162,7 +162,7 @@

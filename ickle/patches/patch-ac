@@ -1,3 +1,4 @@
+$NetBSD: patch-ac,v 1.2 2003/04/21 20:30:12 cjep Exp $
 --- ickle/SettingsDialog.cpp.orig	Fri Apr 11 21:46:32 2003
 +++ ickle/SettingsDialog.cpp	Fri Apr 11 21:47:03 2003
 @@ -216,7 +216,7 @@

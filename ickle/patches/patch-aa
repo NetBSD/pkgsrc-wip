@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 2003/04/21 20:30:04 cjep Exp $
 --- ickle/History.cpp.orig	Fri Apr 11 21:44:46 2003
 +++ ickle/History.cpp	Fri Apr 11 21:45:52 2003
 @@ -57,7 +57,7 @@
