@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/27 03:21:37 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/13 18:03:19 thomasklausner Exp $
 
 DISTNAME=	ldapdns-cvs-snapshot
-PKGNAME=	ldapdns-cvs
+PKGNAME=	ldapdns-cvs-0.0.1
 WRKSRC=		${WRKDIR}/ldapdns/
 CATEGORIES=	net
 MASTER_SITES=	http://ldapdns.sourceforge.net/
