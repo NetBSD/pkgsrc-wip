@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.444 2003/09/13 00:08:31 marc Exp $
-# $NetBSD: Makefile,v 1.444 2003/09/13 00:08:31 marc Exp $
+# $Id: Makefile,v 1.445 2003/09/13 22:53:18 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.445 2003/09/13 22:53:18 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -321,6 +321,7 @@ SUBDIR+=	q3-urbanterror
 SUBDIR+=	qinx
 SUBDIR+=	qn-x11
 SUBDIR+=	rapidsvn
+SUBDIR+=	rc.subr
 SUBDIR+=	rcorder
 SUBDIR+=	regexxer
 SUBDIR+=	ripmime
