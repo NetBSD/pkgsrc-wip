@@ -1,8 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/09/05 17:20:38 mjasm Exp $
+$NetBSD: patch-aa,v 1.2 2003/12/29 04:30:10 bjan2 Exp $
 
---- makefile.orig	2003-09-05 12:59:15.000000000 -0400
+--- makefile.orig	2003-08-10 12:34:22.000000000 -0700
 +++ makefile
-@@ -8,7 +8,7 @@ LFLAGS		= -s
+@@ -1,6 +1,5 @@
+ # Makefile for compiling Mathomatic for UNIX or Linux.
+ 
+-CC		= cc
+ 
+ CFLAGS		= -c -DUNIX
+ LFLAGS		= -s
+@@ -8,7 +7,7 @@ LFLAGS		= -s
  #CFLAGS		= -c -DUNIX -DREADLINE
  #LFLAGS		= -s -lreadline -lcurses
  
