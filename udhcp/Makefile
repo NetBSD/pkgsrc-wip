@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:47 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/14 21:50:18 poppnk Exp $
 #
 
 DISTNAME=	udhcp-0.9.8
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.busybox.net/
 COMMENT=	Embedded DHCP Client/Server
 
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 ONLY_FOR_PlATFORM=	Linux-*-*
 
