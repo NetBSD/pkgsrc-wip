@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.23 2003/04/04 21:01:26 xtraeme Exp $
-# $NetBSD: Makefile,v 1.23 2003/04/04 21:01:26 xtraeme Exp $
+# $Id: Makefile,v 1.24 2003/04/04 21:23:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.24 2003/04/04 21:23:32 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -21,3 +21,5 @@ SUBDIR+=	chktex
 SUBDIR+=	poedit
 SUBDIR+=	yasm
 SUBDIR+=	httrack
+SUBDIR+=	p5-Unicode-String
+SUBDIR+=	p5-XML-Stream
