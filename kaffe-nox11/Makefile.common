@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2004/01/31 14:57:13 poppnk Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/02/19 16:42:33 poppnk Exp $
 
-DISTNAME=		kaffe-1.1.2
+DISTNAME=		kaffe-1.1.4
 CATEGORIES=		lang java
 MASTER_SITES=		http://www.kaffe.org/ftp/pub/kaffe/v1.1.x-development/\
 			ftp://ftp.kaffe.org/pub/kaffe/v1.1.x-development/

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/01/31 14:57:13 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/19 16:42:33 poppnk Exp $
 
-PKGNAME=		kaffe-nox11-1.1.2
+PKGNAME=		kaffe-nox11-1.1.4
 
 COMMENT=		Virtual machine capable of running Java(tm) code (without X)
 
