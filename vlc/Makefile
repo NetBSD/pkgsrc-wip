@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:33:48 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/06 23:03:16 thomasklausner Exp $
 #
 
 DISTNAME=		vlc-0.7.0
@@ -45,7 +45,7 @@ BUILD_DEFS+=		WITH_DVDCSS
 
 .if !empty(WITH_DVDCSS:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-dvdcss="${BUILDLINK_PREFIX.libdvdcss}"
-.include "../../misc/libdvdcss/buildlink2.mk"
+.include "../../multimedia/libdvdcss/buildlink2.mk"
 PLIST_SUBST+=	DVDCSS=
 .else
 CONFIGURE_ARGS+=	--disable-dvd
@@ -67,12 +67,11 @@ PLIST_SUBST+=	DVDCSS="@comment "
 .include "../../devel/gettext-lib/buildlink2.mk"
 #.include "../../graphics/ffmpeg/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/libdvbpsi/buildlink2.mk"
-.include "../../graphics/libmpeg2/buildlink2.mk"
 .include "../../graphics/libmpeg2/buildlink2.mk"
 .include "../../misc/libcdio/buildlink2.mk"
-.include "../../misc/libdvdplay/buildlink2.mk"
-.include "../../misc/libdvdread/buildlink2.mk"
+.include "../../multimedia/libdvdplay/buildlink2.mk"
+.include "../../multimedia/libdvbpsi/buildlink2.mk"
+.include "../../multimedia/libdvdread/buildlink2.mk"
 .include "../../net/openslp/buildlink2.mk"
 .include "../../x11/wxGTK/buildlink2.mk"
 
