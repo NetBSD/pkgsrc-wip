@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/24 05:11:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/24 14:26:19 tripledes Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-defaultBitmaps-${XF_VER}
@@ -19,6 +19,12 @@ NO_XFREE86_TARGETS=	# defined
 EXTRACT_ONLY=		X430src-4.tgz
 
 FILESDIR=	${PKGDIR}/../XFree86-fontsEncodings/files
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
+PLIST_SRC+=     ${.CURDIR}/PLIST.PERL
+.endif
 
 post-extract:
 	cd ${WRKDIR} && \
