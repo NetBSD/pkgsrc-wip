@@ -1,0 +1,7 @@
+The goal is to have an easy way of exploring your fonts. 
+You point the program to a directory containing font files 
+and it scans it and presents them in a list. At start-up, 
+it will scan some predefined directories for fonts, and, if 
+present, will list them in a combo box, which behaves 
+similarly to the input line of web browsers, including a 
+history of visited directories.

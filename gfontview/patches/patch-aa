@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/13 17:04:31 cetrox Exp $
+--- gfont.h.orig	2001-03-18 13:02:22.000000000 -0400
++++ gfont.h	2004-07-13 12:04:04.000000000 -0400
+@@ -34,10 +34,10 @@
+ #include <gdk/gdkx.h>
+ 
+ #include <t1lib.h>
+-#include <freetype.h>
+-#include <ftxerr18.h>
+-#include <ftxkern.h>
+-#include <ftxpost.h>
++#include <freetype/freetype.h>
++#include <freetype/ftxerr18.h>
++#include <freetype/ftxkern.h>
++#include <freetype/ftxpost.h>
+ #include <locale.h>
+ 
+ 
+@@ -158,4 +158,4 @@
+ void combo_drag_data_received(GtkWidget *entry, GdkDragContext *context,
+ 			      gint x, gint y, GtkSelectionData *data,
+ 			      guint info, guint time);
+-#endif _GFONT_H
++#endif // _GFONT_H

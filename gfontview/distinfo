@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/13 17:04:31 cetrox Exp $
+
+SHA1 (gfontview-0.5.0.tar.gz) = 4b2c9a050a7ca153df51c25326b112bbe9d56c4e
+Size (gfontview-0.5.0.tar.gz) = 207053 bytes
+SHA1 (patch-aa) = c79d29fc6182783cb07d13181addd299b4ecac71
+SHA1 (patch-ab) = f380b72bcb9f1687a6ed0c2ba332a8bacc540b51
