@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.823 2003/12/30 06:14:41 amigus Exp $
-# $NetBSD: Makefile,v 1.823 2003/12/30 06:14:41 amigus Exp $
+# $Id: Makefile,v 1.824 2003/12/30 06:30:17 amigus Exp $
+# $NetBSD: Makefile,v 1.824 2003/12/30 06:30:17 amigus Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -383,6 +383,7 @@ SUBDIR+=	nuppelvideo
 SUBDIR+=	oinkmaster
 SUBDIR+=	opax
 SUBDIR+=	openvpn
+SUBDIR+=	p5-Apache-Reload
 SUBDIR+=	p5-Apache-Request
 SUBDIR+=	p5-Apache-Test
 SUBDIR+=	p5-AxKit
