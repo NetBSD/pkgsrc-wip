@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.467 2003/09/17 18:27:12 xtraeme Exp $
-# $NetBSD: Makefile,v 1.467 2003/09/17 18:27:12 xtraeme Exp $
+# $Id: Makefile,v 1.468 2003/09/17 18:33:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.468 2003/09/17 18:33:08 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -227,6 +227,7 @@ SUBDIR+=	mhonarc
 SUBDIR+=	mit-krb5
 SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
+SUBDIR+=	mplusfonts
 SUBDIR+=	mopac
 SUBDIR+=	mtf
 SUBDIR+=	muse
