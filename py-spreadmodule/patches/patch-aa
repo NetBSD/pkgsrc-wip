@@ -1,16 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/07 06:13:42 marc Exp $
+$NetBSD: patch-aa,v 1.2 2003/10/24 22:28:47 marc Exp $
 
---- setup.py.orig	2002-04-25 21:22:07.000000000 +0200
-+++ setup.py	2003-03-14 20:27:16.000000000 +0100
-@@ -19,9 +19,9 @@
+--- setup.py.orig	2003-10-25 00:24:13.000000000 +0200
++++ setup.py	2003-10-25 00:24:26.000000000 +0200
+@@ -55,7 +55,7 @@
  else:
      SPREAD_DIR = "/usr/local"
      ext = Extension('spread', ['spreadmodule.c'],
 -                include_dirs = [SPREAD_DIR + "/include"],
 +                include_dirs = [SPREAD_DIR + "/include/spread"],
                  library_dirs = [SPREAD_DIR + "/lib"],
--                libraries = ['tsp'],
-+                extra_objects = [SPREAD_DIR + '/lib/libtspread.a'],
+                 libraries = ['tspread'],
                  )
- 
- setup(name = "Spread API for Python",

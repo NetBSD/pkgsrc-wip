@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/07 06:13:42 marc Exp $
+$NetBSD: distinfo,v 1.2 2003/10/24 22:28:47 marc Exp $
 
-SHA1 (SpreadModule-1.3.tgz) = fc7f72735300828ca9710e26b6cf0e4a297df683
-Size (SpreadModule-1.3.tgz) = 15804 bytes
-SHA1 (patch-aa) = d847156d4f7e308c75499e4970e6067feb2fda2d
+SHA1 (SpreadModule-1.4.tgz) = 46474f8b3dfb7a709f479637c67afa95173bc474
+Size (SpreadModule-1.4.tgz) = 17423 bytes
+SHA1 (patch-aa) = b2d8cfb30901db738f803e51a922c98795ee6b73

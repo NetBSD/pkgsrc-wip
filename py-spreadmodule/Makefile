@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/09/14 22:01:45 marc Exp $
+# $NetBSD: Makefile,v 1.6 2003/10/24 22:28:47 marc Exp $
 #
 
-DISTNAME=	SpreadModule-1.3
-PKGNAME=	${PYPKGPREFIX}-spreadmodule-1.3
-WRKSRC=		${WRKDIR}/SpreadModule-1.3
+DISTNAME=	SpreadModule-1.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/SpreadModule/spreadmodule/}
 CATEGORIES=	net
 MASTER_SITES=	http://www.python.org/other/spread/
 EXTRACT_SUFX=	.tgz
@@ -15,7 +14,7 @@ COMMENT=	Python bindings for the Spread messaging service
 PYDISTUTILSPKG=	YES
 USE_BUILDLINK2=	YES
 
-PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
+PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
 
 post-patch:
 	${MV} ${WRKSRC}/setup.py ${WRKSRC}/setup.py.pre
