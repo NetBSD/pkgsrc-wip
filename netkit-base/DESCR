@@ -1,0 +1,18 @@
+The netkit-base package contains inetd and ping for Linux.
+
+inetd is the internet "super-server". inetd listens for network
+connections and transfers to the appropriate daemon.
+
+Note that this version of inetd is not built with internal libwrap
+(TCP Wrappers) support. The separate tcpd software can be used;
+tcpd is available in the security/tcp_wrappers package.
+
+ping is the standard network testing program. ping sends ICMP
+ECHO_REQUEST packets to a host and determines its response time.
+
+This package also includes assorted, sample network config files,
+such hosts.allow, inetd.conf, resolv.conf, services, and many
+others. These are installed to @PREFIX@/share/netkit-base/etc.sample/.
+
+This is the version maintained by David A. Holland. It is derived
+from old BSD code.

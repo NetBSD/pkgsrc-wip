@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/16 04:17:00 jeremy-c-reed Exp $
+bin/ping
+man/man8/inetd.8
+man/man8/ping.8
+sbin/inetd
+share/netkit-base/etc.sample/README
+share/netkit-base/etc.sample/diphosts
+share/netkit-base/etc.sample/exports
+share/netkit-base/etc.sample/ftpusers
+share/netkit-base/etc.sample/host.conf
+share/netkit-base/etc.sample/hosts
+share/netkit-base/etc.sample/hosts.allow
+share/netkit-base/etc.sample/hosts.deny
+share/netkit-base/etc.sample/hosts.equiv
+share/netkit-base/etc.sample/hosts.lpd
+share/netkit-base/etc.sample/inetd.conf
+share/netkit-base/etc.sample/networks
+share/netkit-base/etc.sample/nntpserver
+share/netkit-base/etc.sample/nsswitch.conf
+share/netkit-base/etc.sample/printcap
+share/netkit-base/etc.sample/protocols
+share/netkit-base/etc.sample/resolv.conf
+share/netkit-base/etc.sample/rpc
+share/netkit-base/etc.sample/sample.dip
+share/netkit-base/etc.sample/services
+share/netkit-base/etc.sample/slip.hosts
+share/netkit-base/etc.sample/slip.login
+@dirrm share/netkit-base/etc.sample
+@dirrm share/netkit-base

@@ -1,0 +1,6 @@
+Doesn't build under NetBSD, because uses __environ defined and
+needs #include <rpc/rpc.h> and string.h and included.
+
+This is based on BSD code though.
+
+Can someone test under other operating systems?

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/05/16 04:17:00 jeremy-c-reed Exp $
+
+SHA1 (netkit-base-0.17.tar.gz) = d1f610efa3320ecac75c2f13df8a45c84fc7d448
+Size (netkit-base-0.17.tar.gz) = 56473 bytes
+SHA1 (patch-aa) = ba4be69276f4c3d55aa1bb6b82573b26cc0394be
