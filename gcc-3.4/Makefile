@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/05/13 10:37:35 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.22 2004/05/14 11:52:05 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -64,15 +64,22 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 # An Ada compiler is required to build the Ada compiler. Two
 may be used:
 #USE_GCC3	=# Define to use lang/gcc3-ada
-USE_GCC34ADA	=# Define to use gcc-3.4-ada
+#USE_GCC34ADA	=# Define to use gcc-3.4-ada
 # You may also specify the path of a gcc/gnat Ada compiler
 # outside of the pkgsrc system by specifying the full path
 # of the compiler (example) below:
 #ALT_GCC=       /usr/pkg/gcc3bootstrap/bin/gcc
 .  if defined(ALT_GCC)
+.     if exists(${ALT_GCC})
 ALT_GCC_PREFIX:=        ${ALT_GCC:H}/..
 ALT_GCC_RTS!=   ${FIND} ${ALT_GCC_PREFIX} -name adalib
 RALT_GCC_RTS=   ${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
+.     else
+PKG_SKIP_REASON=	"Missing bootstrap Ada compiler"
+.     endif
+.  endif
+.  if !defined(USE_GCC3) && !defined(USE_GCC34ADA) && !defined(ALT_GCC)
+PKG_SKIP_REASON=	"An Ada bootstrap compiler must be specified to BUILD_ADA"
 .  endif
 .endif
 
