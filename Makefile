@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.437 2003/09/09 13:38:38 marc Exp $
-# $NetBSD: Makefile,v 1.437 2003/09/09 13:38:38 marc Exp $
+# $Id: Makefile,v 1.438 2003/09/09 13:50:28 marc Exp $
+# $NetBSD: Makefile,v 1.438 2003/09/09 13:50:28 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -306,7 +306,6 @@ SUBDIR+=	psh
 SUBDIR+=	pts
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-OpenSSL
-SUBDIR+=	py-PgSQL
 SUBDIR+=	py-RXP
 SUBDIR+=	py-SimpleParse
 SUBDIR+=	py-albatross
