@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/11/27 22:23:45 poppnk Exp $
-
-Before running Kaffe it is necessary to configure the environment.
-
-	PATH=$PATH:${PREFIX}/bin
-	CLASSPATH=${PREFIX}/jre/lib/rt.jar:.
-
-===========================================================================
