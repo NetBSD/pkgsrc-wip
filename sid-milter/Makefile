@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/22 09:36:06 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/22 09:50:29 adrian_p Exp $
 
 DISTNAME=	sid-milter-0.2.5
 CATEGORIES=	mail
@@ -41,18 +41,21 @@ do-build:
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build)
 
 do-install:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build \
-		INCLUDEDIR=${PREFIX}/include \
-		LIBDIR=${PREFIX}/lib \
-		MANROOT=${PREFIX}/man/man \
-		UBINDIR=${PREFIX}/bin \
-		install
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sid-milter
 
-	${INSTALL_DATA_DIR} ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/README ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/README-SenderID ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${SIDDOC}
+	${INSTALL_LIB} ${WRKSRC}/${SIDWORK}/libar/libar.a ${PREFIX}/lib
+	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/libar/ar.0 ${PREFIX}/man/cat3/
+	${INSTALL_PROGRAM} ${WRKSRC}/${SIDWORK}/sid-filter/sid-filter \
+		${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/sid-filter/sid-filter.0 \
+		${PREFIX}/man/cat8/
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/sid-milter
+	${INSTALL_DATA} ${WRKSRC}/README-SenderID ${PREFIX}/share/doc/sid-milter
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/sid-milter
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/sid-milter
+	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/sid-milter
 
 .include "../../mk/bsd.pkg.mk"
+
+# Has to be below include for bsd.pkg.mk, else substition fails
+SIDWORK!=		${ECHO} obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ -`
