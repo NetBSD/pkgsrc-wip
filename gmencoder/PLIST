@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/23 18:08:35 xtraeme Exp $
+bin/gmencoder
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gmencoder.mo
+share/pixmaps/gmencoder/media-pause.png
+share/pixmaps/gmencoder/media-play.png
+@dirrm share/pixmaps/gmencoder

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/23 18:08:35 xtraeme Exp $
+
+SHA1 (gmencoder-0.0.7.tgz) = ed28676d67feb1d0e4493b93b4b9bb1934c43d26
+Size (gmencoder-0.0.7.tgz) = 99785 bytes
+SHA1 (patch-aa) = 989772ed57ae44eb19f7d8f64a0ee20de5355de4
