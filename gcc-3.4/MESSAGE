@@ -1,7 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/04/23 19:47:03 johnrshannon Exp $
+$NetBSD: MESSAGE,v 1.2 2004/05/21 15:05:54 johnrshannon Exp $
 
 cgg-3.4.0 has been installed in ${LOCALBASE}/gcc-3.4.0
+
+Consider adding ${LOCALBASE}/gcc-3.4.0/lib to your LD_LIBRARY_PATH or
+including it in /etc/ld.so.conf
 
 To use this compiler in pkgsrc:
 
