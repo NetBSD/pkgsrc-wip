@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/08/06 04:59:54 jcd Exp $
+# $NetBSD: Makefile,v 1.17 2004/08/06 07:08:53 jlamwww Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -17,6 +17,7 @@ COMMENT=	daemonized interface between MTA and content checkers
 
 DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
+DEPENDS+=	p5-BerkeleyDB-[0-9]*:../../databases/p5-BerkeleyDB
 DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-Convert-TNEF-[0-9]*:../../converters/p5-Convert-TNEF
 DEPENDS+=	p5-Convert-UUlib-[0-9]*:../../converters/p5-Convert-UUlib
