@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2004/02/28 00:29:13 rillig Exp $
+$NetBSD: patch-ab,v 1.1 2004/02/28 00:29:13 rillig Exp $
 
---- work/LighthouseGreen/gtk-2.0/gtkrc	Thu Jul 24 14:45:51 2003
-+++ LighthouseGreen/gtk-2.0/gtkrc	Thu Nov 27 16:37:12 2003
-@@ -50,8 +50,8 @@
+--- work/LighthouseIDEA/gtk-2.0/gtkrc	Sun Feb 16 01:47:05 2003
++++ LighthouseIDEA/gtk-2.0/gtkrc	Thu Nov 27 16:37:08 2003
+@@ -47,8 +47,8 @@
    engine "lighthouseblue"
    {
      has_notebook_patch = FALSE
