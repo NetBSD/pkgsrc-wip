@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1303 2004/05/30 22:50:29 plunky Exp $
-# $NetBSD: Makefile,v 1.1303 2004/05/30 22:50:29 plunky Exp $
+# $Id: Makefile,v 1.1304 2004/06/01 03:03:04 cetrox Exp $
+# $NetBSD: Makefile,v 1.1304 2004/06/01 03:03:04 cetrox Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -133,6 +133,7 @@ SUBDIR+=	fbpanel
 SUBDIR+=	festival-gaim
 SUBDIR+=	firebird
 SUBDIR+=	fixesext
+SUBDIR+=	flash7-player-bin
 SUBDIR+=	flc
 SUBDIR+=	flightgear
 SUBDIR+=	flightgear-base
