@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/08/17 18:32:09 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/08/27 15:34:48 lexort Exp $
 include/quagga/buffer.h
 include/quagga/command.h
 include/quagga/debug.h
@@ -57,6 +57,7 @@ sbin/zebra
 share/examples/quagga/bgpd.conf.sample
 share/examples/quagga/bgpd.conf.sample2
 share/examples/quagga/isisd.conf.sample
+share/examples/quagga/log_syslog.conf
 share/examples/quagga/ospfd.conf.sample
 share/examples/quagga/ripd.conf.sample
 share/examples/quagga/zebra.conf.sample
