@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/06/18 02:05:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.21 2004/06/18 02:47:05 xtraeme Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -59,7 +59,6 @@ PKG_GROUPS=             ${DSPAM_GROUP}
 PKG_USERS=              ${DSPAM_GROUP}:${DSPAM_USER}
 
 # Default options
-CONFIGURE_ARGS+=	--enable-client-compression
 CONFIGURE_ARGS+=	--enable-chi-square
 CONFIGURE_ARGS+=	--enable-robinson-pvalues
 CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
@@ -92,6 +91,11 @@ CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT_ARGS:Q}
 # Default: db3/db4
 #
 .if !empty(DSPAM_STORAGE_DRIVER:Mmysql)
+BUILD_DEFS+=		DSPAM_CLIENT_COMPRESSION
+.  if defined(DSPAM_CLIENT_COMPRESSION) && \
+	!empty(DSPAM_CLIENT_COMPRESSION:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-client-compression
+.   endif
 .  include "../../databases/mysql4-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=mysql_drv
 CONFIGURE_ARGS+=	\
