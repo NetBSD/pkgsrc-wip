@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/04 19:40:28 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/11/15 18:29:45 poppnk Exp $
 bin/ip6tables
 bin/iptables
 bin/iptables-restore
@@ -60,6 +60,7 @@ lib/iptables/libipt_physdev.so
 lib/iptables/libipt_pkttype.so
 lib/iptables/libipt_realm.so
 lib/iptables/libipt_rpc.so
+lib/iptables/libipt_sctp.so
 lib/iptables/libipt_standard.so
 lib/iptables/libipt_state.so
 lib/iptables/libipt_tcp.so
