@@ -1,6 +1,6 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.2 2003/11/28 20:51:04 mpasternak Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.3 2003/11/28 21:22:30 mpasternak Exp $
 # 
-# $Id: linuxbin.pkg.mk,v 1.2 2003/11/28 20:51:04 mpasternak Exp $
+# $Id: linuxbin.pkg.mk,v 1.3 2003/11/28 21:22:30 mpasternak Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 # Currently supports only RPMs, but should be good enough to make
@@ -40,6 +40,8 @@ ONLY_FOR_PLATFORM+=	[NFD]*BSD-*-${LINUX_ARCH_REQD}
 # which linux base (suse/debian?/rh?) do we want:
 LINUX_BASE_REQUIRED?=		suse
 LINUX_BASE_PREFIX.suse?=	suse
+
+# ... and finally:
 LINUX_BASE_PREFIX=		${LINUX_BASE_PREFIX.${LINUX_BASE_REQUIRED}}
 
 # add here in the future more linux bases:
@@ -58,12 +60,13 @@ LINUX_BINPKG_FILES?=    # empty
 
 #
 # enough settings, we'll start working here:
-# first, include base linux files, that this port depends on:
+# first, include base linux files, that this port depends on.
+# of course, pkgsrc working on Linux won't need compat files:
 #
 
 .if ( ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFlyBSD")
 DEPENDS+=	${LINUX_BASE_PREFIX}_compat-[0-9]*:../../emulators/${LINUX_BASE_PREFIX}_compat
-.ifdef LINUX_USE_X11
+.if ${LINUX_USE_X11} == "yes" || ${LINUX_USE_X11} == "YES"
 DEPENDS+=	${LINUX_BASE_PREFIX}-[0-9]*:../../emulators/${LINUX_BASE_PREFIX}_x11
 .endif
 .endif
@@ -72,18 +75,35 @@ DEPENDS+=	${LINUX_BASE_PREFIX}-[0-9]*:../../emulators/${LINUX_BASE_PREFIX}_x11
 # those below are ripoffs of suse_linux/Makefile.common
 #
 
-EXTRACT_ONLY?=		YES
 NO_BUILD?=		YES
 PLIST_SRC?=		${WRKDIR}/PLIST_DYNAMIC
 
+# To EMULSUBDIR or not to EMULSUBDIR... this is a question.
+# In future, the user should be able to:
 #
-# in which directory our linux emulation is installed? linux users could
-# set it as "/" anyway ;)
+# - have different Linux bases on his/hers machine - via changing variable,
+#   say, LINUX_BASE_PREFERED in /etc/mk.conf
 #
+# - some RPMs will work with work with Suse, some other with Redhat. Debs
+#   will work with Debian. 
+# 
+# - we will need different EMULSUBDIR in the future
+#
+# - for now, i'm leaving this as default, but this _should_ be changed to,
+#   say, ${EMULSUBDIR}_${LINUX_BASE_REQUIRED}
+#
+# - Linux pkgsrc users could set this as "/" if LINUX_BASE_REQD equals their
+#   distribution
 
 EMULSUBDIR?=		emul/linux
 EMULDIR?=		${PREFIX}/${EMULSUBDIR}
 
+MESSAGE_SUBST+=		EMULDIR=${EMULDIR}
+
+#
+# now, do the _actual_ work:
+# TODO: pkglint is somehow picky about this, anyone could correct it?
+#
 
 .if ${LINUX_BINPKG_FMT}=="rpm"
 RPM2PKG?=		${PREFIX}/sbin/rpm2pkg
