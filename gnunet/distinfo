@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/18 02:50:08 poppnk Exp $
+
+SHA1 (GNUnet-0.5.4a.tar.bz2) = 782d38ba9a7a7c7f609aa6e3ac27f386f2f8e625
+Size (GNUnet-0.5.4a.tar.bz2) = 796466 bytes
+SHA1 (patch-aa) = 3a502515cfd166150d3701c9dd6f9d9608f8652e
+SHA1 (patch-ab) = 05453693c8cee5770368ea3daea666a8325ba3f2
+SHA1 (patch-ac) = dcd43e24a18982a73e8912b92697823cac15eb62
+SHA1 (patch-ad) = e2a11e4091834729c78033c3862b269bf3cecdcb
+SHA1 (patch-ae) = 8de36e39143cab013ae4dd914cc0157308f7c9e7

@@ -1,0 +1,4 @@
+* Ignores IPv6 flag
+* Non-Posix pthread functions doesn't exist on *BSD
+  ...patch-aa seems to be incorrect
+* Does not compiles under NetBSD

@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/07/18 02:50:09 poppnk Exp $
+
+--- src/transports/tcp.c.orig	2003-07-18 03:45:34.000000000 +0000
++++ src/transports/tcp.c	2003-07-18 03:45:50.000000000 +0000
+@@ -30,9 +30,7 @@
+ #else
+  #include <cygwin/socket.h>
+ #endif
+-#ifdef SOLARIS
+- #include <signal.h>
+-#endif
++#include <signal.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/07/18 02:50:09 poppnk Exp $
+
+--- configure.orig	2003-07-18 03:57:51.000000000 +0000
++++ configure	2003-07-18 03:58:04.000000000 +0000
+@@ -10585,7 +10585,7 @@
+ #define SOMEBSD 1
+ _ACEOF
+ 
+-     CFLAGS="-pthread $CFLAGS"
++     CFLAGS="-lpthread $CFLAGS"
+      ;;
+ *solaris*)
+ 

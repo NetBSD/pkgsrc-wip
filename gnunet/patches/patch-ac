@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/07/18 02:50:09 poppnk Exp $
+
+--- src/transports/http.c.orig	2003-07-18 03:43:00.000000000 +0000
++++ src/transports/http.c	2003-07-18 03:43:11.000000000 +0000
+@@ -70,6 +70,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <unistd.h>
++#include <signal.h>
+ 
+ #include "transports/http.h"
+ #include "util/logging.h"
