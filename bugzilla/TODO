@@ -1,1 +1,2 @@
 - Move to pkgsrc once 2.18.x is released
+- Fix localconfig containing sensitive data in ${EGDIR}
