@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/12 05:29:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/12 05:31:00 xtraeme Exp $
 #
 
 DISTNAME=	jabberd-2.0.0-a4
@@ -22,13 +22,13 @@ PKG_SYSCONFSUBDIR=	jabberd
 
 EGDIR=			${PREFIX}/share/examples/jabberd
 
-CONF_FILES=	${EGDIR}/c2s.xml ${PKG_SYSCONFDIR}/c2s.xml
-CONF_FILES+=	${EGDIR}/resolver.xml ${PKG_SYSCONFDIR}/resolver.xml
-CONF_FILES+=    ${EGDIR}/router.xml ${PKG_SYSCONFDIR}/router.xml
-CONF_FILES+=	${EGDIR}/s2s.xml ${PKG_SYSCONFDIR}/s2s.xml
-CONF_FILES+=	${EGDIR}/sm.xml ${PKG_SYSCONFDIR}/sm.xml
+CONF_FILES=		${EGDIR}/c2s.xml ${PKG_SYSCONFDIR}/c2s.xml
+CONF_FILES+=		${EGDIR}/resolver.xml ${PKG_SYSCONFDIR}/resolver.xml
+CONF_FILES+=    	${EGDIR}/router.xml ${PKG_SYSCONFDIR}/router.xml
+CONF_FILES+=		${EGDIR}/s2s.xml ${PKG_SYSCONFDIR}/s2s.xml
+CONF_FILES+=		${EGDIR}/sm.xml ${PKG_SYSCONFDIR}/sm.xml
 
-SUPPORT_FILES+= ${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
+SUPPORT_FILES+= 	${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
 
 OWN_DIRS=		/var/log/jabberd
 OWN_DIRS+=		/var/db/jabberd
