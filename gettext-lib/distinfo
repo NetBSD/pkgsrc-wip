@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/10/22 19:04:22 johnrshannon Exp $
+
+SHA1 (gettext-0.14.1.tar.gz) = 970a5fa8f2b2623b4a90ae7879565f7463f9c634
+Size (gettext-0.14.1.tar.gz) = 6550874 bytes
+SHA1 (patch-ab) = d156d86a64ebfdfe1c084bfcbc0286b8ef490407
