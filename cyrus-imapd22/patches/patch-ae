@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/07/26 17:46:53 marc Exp $
+$NetBSD: patch-ae,v 1.2 2004/01/15 23:58:11 marc Exp $
 
---- imap/ipurge.c.orig	2003-05-20 17:45:50.000000000 +0200
-+++ imap/ipurge.c	2003-07-26 16:29:24.000000000 +0200
-@@ -107,7 +107,7 @@
+--- imap/ipurge.c~	2003-11-20 19:47:46.000000000 +0100
++++ imap/ipurge.c	2004-01-15 23:04:30.000000000 +0100
+@@ -109,7 +109,7 @@
  void print_stats(mbox_stats_t *stats);
  
  int main (int argc, char *argv[]) {

@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2003/11/20 14:54:06 marc Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/15 23:58:11 marc Exp $
 #
 
-DISTNAME=		cyrus-imapd-2.2.2-BETA
-PKGNAME=		${DISTNAME:S/-BETA/b1/}
-CATEGORIES=		mail
-MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
-			ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/
+DISTNAME=	cyrus-imapd-2.2.3
+CATEGORIES=	mail
+MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
+		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/
 
-MAINTAINER=		recht@NetBSD.org
-HOMEPAGE=		http://asg.web.cmu.edu/cyrus/imapd/
-COMMENT=		Cyrus IMAP server
+MAINTAINER=	recht@NetBSD.org
+HOMEPAGE=	http://asg.web.cmu.edu/cyrus/imapd/
+COMMENT=	Cyrus IMAP server
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
@@ -32,6 +31,7 @@ BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
 FILES_SUBST+=		CYRUS_USER=${CYRUS_USER}
 FILES_SUBST+=		CYRUS_GROUP=${CYRUS_GROUP}
 
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
 CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
 CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
@@ -63,6 +63,8 @@ CONFIGURE_ARGS+=	--with-auth=krb
 CONFIGURE_ARGS+=	--with-auth=unix
 CONFIGURE_ARGS+=	--without-krb
 .endif
+
+MAKEFLAGS+=		PERL=${PERL5}
 
 HTMLDIR=		${PREFIX}/share/doc/html/cyrus-imapd
 EGDIR=			${PREFIX}/share/examples/cyrus-imapd
