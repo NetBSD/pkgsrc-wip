@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2004/02/02 17:30:40 dawszy Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/02/02 18:22:07 dawszy Exp $
 #
 # This Makefile fragment is included by packages that use libetpan.
 #
@@ -117,6 +117,10 @@ BUILDLINK_FILES.libetpan+=	include/libetpan/pop3driver_message.h
 BUILDLINK_FILES.libetpan+=	include/libetpan/pop3driver_types.h
 BUILDLINK_FILES.libetpan+=	include/libetpan/pop3storage.h
 BUILDLINK_FILES.libetpan+=	lib/libetpan.*
+
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../databases/db4/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	libetpan-buildlink
 

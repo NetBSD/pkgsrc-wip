@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/02 17:42:07 dawszy Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/02 18:22:07 dawszy Exp $
 #
 
 DISTNAME=		libetpan-0.32
@@ -17,4 +17,6 @@ GNU_CONFIGURE=		yes
 
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../databases/db4/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
