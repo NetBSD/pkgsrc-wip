@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/04 20:08:00 tvierling Exp $
+$NetBSD: distinfo,v 1.2 2003/08/14 21:42:51 tvierling Exp $
 
-SHA1 (ft-0.2.11.tgz) = a5f8e22378ad616e51d21a2068915ec9d5b19297
-Size (ft-0.2.11.tgz) = 37130 bytes
+SHA1 (ft-0.2.12.tgz) = dac0609b4c3d76a5ffcc0177098a3af73e375552
+Size (ft-0.2.12.tgz) = 561050 bytes

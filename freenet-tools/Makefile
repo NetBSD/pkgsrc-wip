@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/04 20:08:00 tvierling Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/14 21:42:51 tvierling Exp $
 #
 
-DISTNAME=		ft-0.2.11
+DISTNAME=		ft-0.2.12
 PKGNAME=		${DISTNAME:S/ft-/freenet-tools-/}
 WRKSRC=			${WRKDIR}/ft
 CATEGORIES=		wip
