@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.661 2003/11/25 01:34:51 minskim Exp $
-# $NetBSD: Makefile,v 1.661 2003/11/25 01:34:51 minskim Exp $
+# $Id: Makefile,v 1.662 2003/11/25 12:58:33 adrian_p Exp $
+# $NetBSD: Makefile,v 1.662 2003/11/25 12:58:33 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -197,6 +197,7 @@ SUBDIR+=	gxmame
 SUBDIR+=	hasciicam
 SUBDIR+=	hashcash
 SUBDIR+=	heimdal
+SUBDIR+=	honeyd
 SUBDIR+=	ht
 SUBDIR+=	ht2html
 SUBDIR+=	html2latex
