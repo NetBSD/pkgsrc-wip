@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/04/08 22:47:19 xtraeme Exp $
-
---- make_gtk.mak.orig	2004-04-09 00:49:43.000000000 +0200
-+++ make_gtk.mak	2004-04-09 00:51:10.000000000 +0200
+$NetBSD: patch-ab,v 1.2 2004/04/10 15:02:21 poppnk Exp $
+--- make_gtk.mak.orig	2003-03-17 12:30:04.000000000 +0000
++++ make_gtk.mak	2004-04-10 16:10:32.000000000 +0000
 @@ -21,10 +21,10 @@
  # Define the installation directories for various products.
  # Your system may have these in a different place.
  #    IVE_HOME   - IBM's version of Java (J9)
 -IVE_HOME   = /bluebird/teamswt/swt-builddir/ive
-+IVE_HOME   = @PKG_JVM_HOME@
++IVE_HOME   = /usr/pkg/java/kaffe
  #IVE_HOME   = /opt/IBMvame1.4/ive
  
 -JAVA_JNI=$(IVE_HOME)/bin/include
@@ -48,9 +47,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/04/08 22:47:19 xtraeme Exp $
  #GTKLIBS = `pkg-config --libs $(GTKTARGET)`
  
  
-@@ -84,12 +84,11 @@
+@@ -83,13 +83,14 @@
+ 
  PI_OBJECTS = swt.o structs.o
  
++LDFLAGS=`pkg-config --libs gtk+-2.0` `pkg-config --libs pango`
++
  $(SWT_DLL): callback.o
 -	$(LD) -x -shared \
 +	$(LD) -shared $(LDFLAGS) \
