@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.435 2003/09/08 14:30:45 jmmv Exp $
-# $NetBSD: Makefile,v 1.435 2003/09/08 14:30:45 jmmv Exp $
+# $Id: Makefile,v 1.436 2003/09/09 01:14:28 mjasm Exp $
+# $NetBSD: Makefile,v 1.436 2003/09/09 01:14:28 mjasm Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -8,6 +8,7 @@ SUBDIR+=	4stAttack
 SUBDIR+=	PPower4
 SUBDIR+=	Radiator
 SUBDIR+=	Radiator-all
+SUBDIR+=	Redland-rdf
 SUBDIR+=	WEPCrack
 SUBDIR+=	XFree86
 SUBDIR+=	XFree86-clients
