@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/04 21:29:20 roelants Exp $
+
+SHA1 (rt-3.0.10.tar.gz) = 53e09702555a4839fa3e9a11ad0aa437d2b166d9
+Size (rt-3.0.10.tar.gz) = 1068937 bytes
+SHA1 (patch-aa) = a33b77a1ec412c23d39aa8bcebe1d464b85aaac2
