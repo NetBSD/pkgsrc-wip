@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1419 2004/08/10 13:53:40 imilh Exp $
-# $NetBSD: Makefile,v 1.1419 2004/08/10 13:53:40 imilh Exp $
+# $Id: Makefile,v 1.1420 2004/08/10 13:57:44 imilh Exp $
+# $NetBSD: Makefile,v 1.1420 2004/08/10 13:57:44 imilh Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -731,6 +731,7 @@ SUBDIR+=	taskbar
 SUBDIR+=	tcc
 SUBDIR+=	tcd
 SUBDIR+=	tcllib
+SUBDIR+=	tcpdump-latest
 SUBDIR+=	tendra
 SUBDIR+=	tenmado
 SUBDIR+=	terminatorx
