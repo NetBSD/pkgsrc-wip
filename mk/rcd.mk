@@ -1,5 +1,5 @@
-# $NetBSD: oshavercd.mk,v 1.4 2003/11/19 21:28:47 bubuchka Exp $
-# $Id: oshavercd.mk,v 1.4 2003/11/19 21:28:47 bubuchka Exp $
+# $Id: rcd.mk,v 1.1 2003/12/02 13:27:04 bubuchka Exp $
+# from "Id: oshavercd.mk,v 1.4 2003/11/19 21:28:47 bubuchka Exp"
 #
 # This makefile intended to determine is system have rc.d framework,
 # or not. If there is no such one, it will be installed by dependency.

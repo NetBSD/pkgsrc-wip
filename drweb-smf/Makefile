@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/10/28 16:07:01 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2003/12/02 13:27:04 bubuchka Exp $
 
 DRW_CLIENT_NAME=	smf
 
@@ -44,5 +44,5 @@ do-install:
 
 .include "../../wip/drweb-clients-shared/Makefile.common"
 .include "../../mail/libmilter/buildlink2.mk"
-.include "../../wip/oshavercd.mk"
+.include "../../wip/mk/rcd.mk"
 .include "../../mk/bsd.pkg.mk"

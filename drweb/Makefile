@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/10/28 17:00:44 bubuchka Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/02 13:27:04 bubuchka Exp $
 #
 # Note: We'll not use drweb's own configuration / building / installation
 # facilities so as its all are very ugly.
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM= FreeBSD-[45].[0-9]*-i386 OpenBSD-[3-9].*-i386	\
 		NetBSD-1.[6-9]*-i386 NetBSD-[2-9].[0-9]-i386		\
 		Linux-*-i[3-6]86 Solaris-*-i386
 
-.include "../../wip/oshavercd.mk"
+.include "../../wip/mk/rcd.mk"
 
 .if   ${OPSYS} == "FreeBSD" && ${MAJOR_OS_VERSION} >= 5.0
 DISTTYPE=	freebsd5

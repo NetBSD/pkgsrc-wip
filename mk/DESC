@@ -1,4 +1,4 @@
-$Id: DESC,v 1.2 2003/12/01 01:43:29 mpasternak Exp $
+$Id: DESC,v 1.3 2003/12/02 13:27:04 bubuchka Exp $
 
 Please provide .mk files descriptions and reasons for existence of those
 files here.
@@ -17,3 +17,8 @@ linuxbin.pkg.mk	- generalised .mk file for installing Linux binary packages,
 win32.pkg.mk	- this is winpkgsrc base makefile; it is a base of all
 		  packages, that are cross-compiled with mingw32. Do not
 		  use it with normal packages by any means.
+
+rcd.mk          - this file is intended to determine if build system
+		  have an rc.d framework, or not. In case if there is no
+		  such one, it will be installed from pkgsrc-wip by
+		  dependency.
