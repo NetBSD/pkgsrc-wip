@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/18 01:24:43 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/01 02:23:56 minskim Exp $
 #
 
 DISTNAME=	prosper-1.00.4
@@ -12,8 +12,8 @@ MAINTAINER=	minskim@bawi.org
 HOMEPAGE=	http://prosper.sourceforge.net/
 COMMENT=	LaTeX class for writing transparencies
 
-DEPENDS+=	teTeX*-bin-[0-9]*:../../print/teTeX-bin
-DEPENDS+=	teTeX*-share-[0-9]*:../../print/teTeX-share
+DEPENDS+=	teTeX{,2}-bin-[0-9]*:../../print/teTeX-bin
+DEPENDS+=	teTeX{,2}-share-[0-9]*:../../print/teTeX-share
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 NO_CONFIGURE=	yes
