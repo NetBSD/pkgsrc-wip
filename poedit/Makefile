@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/09 03:38:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/03 05:08:01 xtraeme Exp $
 #
 
 DISTNAME=	poedit-1.2.2
@@ -23,4 +23,6 @@ BUILDLINK_DEPENDS.db4=  db4>=4.0
 .endif
 
 .include "../../x11/wxGTK/buildlink2.mk"
+
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
