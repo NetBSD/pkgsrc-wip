@@ -1,0 +1,6 @@
+$Id: TODO,v 1.1 2004/01/16 11:32:22 xtraeme Exp $
+
+    o ffmpeg plugin (our current ffmpeg from pkgsrc is not enough)
+    o VCD support in NetBSD
+    o Looks like current faad library in pkgsrc is not compatible?!
+    o test test test

@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/09/17 18:49:51 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2004/01/16 11:32:22 xtraeme Exp $
 
---- ./src/input/input_ext-dec.c.dist	Thu Nov 14 00:02:30 2002
-+++ ./src/input/input_ext-dec.c	Mon Dec  2 21:13:37 2002
-@@ -136,7 +136,7 @@
-             p_fifo->p_first = p_next;
-             p_fifo->i_depth--;
+--- modules/misc/dummy/decoder.c.orig	2004-01-16 11:56:31.000000000 +0100
++++ modules/misc/dummy/decoder.c	2004-01-16 11:57:22.000000000 +0100
+@@ -42,6 +42,7 @@
+ #   include <fcntl.h>
+ #endif
  
--            if( p_fifo->p_first == NULL )
-+            while( p_fifo->p_first == NULL )
-             {
-                 /* No PES in the FIFO. p_last is no longer valid. */
-                 p_fifo->pp_last = &p_fifo->p_first;
++#include <sys/syslimits.h> /* PATH_MAX */
+ #include <stdio.h> /* sprintf() */
+ 
+ /*****************************************************************************

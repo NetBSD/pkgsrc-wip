@@ -1,57 +1,66 @@
-# $NetBSD: Makefile,v 1.3 2003/11/28 08:29:44 jeremy-c-reed Exp $
-# This is an experimental package, released in the hope that somebody will find
-# why playback is not working properly.
+# $NetBSD: Makefile,v 1.4 2004/01/16 11:32:22 xtraeme Exp $
+#
 
-VLC_VERSION=		0.4.6
-DISTNAME=		vlc-${VLC_VERSION}
+DISTNAME=		vlc-0.7.0
 CATEGORIES=		graphics
-MASTER_SITES=		http://www.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/0.7.0/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/
-COMMENT=		VideoLan Client
+COMMENT=		Video Lan Client 
 
-USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
-HAS_CONFIGURE=		YES
-USE_X11=        	# defined
-PTHREAD_OPTS+=		require
-
-CONFIGURE_ARGS+=	--prefix="${PREFIX}"
-.ifndef notdef
-CONFIGURE_ARGS+=	--with-dvdcss="${PREFIX}"
-.include "../../misc/libdvdcss/buildlink2.mk"
-.else
-CONFIGURE_ARGS+=	--enable-dvdread
-.include "../../misc/libdvdread/buildlink2.mk"
-.endif
-CONFIGURE_ARGS+=	--disable-arts
-#CONFIGURE_ARGS+=	--disable-vcd
-CONFIGURE_ARGS+=	--enable-aa
-CONFIGURE_ARGS+=	--enable-esd
-CONFIGURE_ARGS+=	--enable-gtk
-CONFIGURE_ARGS+=	--enable-gnome
-CONFIGURE_ARGS+=	--enable-familiar
-CONFIGURE_ARGS+=	--enable-release
-CONFIGURE_ARGS+=	--enable-debug
+USE_BUILDLINK2=		yes
+USE_GMAKE=		yes
+USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-#.if ${MACHINE_ARCH} == "i386"
-#.if ${VLC_USE_REALMEDIA} == "YES"
-#CONFIGURE_ARGS+=	--with-reallibdir="${LOCALBASE}/lib/RealPlayer8/Codecs"
-#.endif
-#.endif
+# XXX FIXME
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=        --disable-vcd
+CONFIGURE_ARGS+=	--disable-vcdx
+.endif
 
-# .include "../../audio/arts/buildlink2.mk"
-.include "../../audio/esound/buildlink2.mk"
+CONFIGURE_ARGS+=	--enable-oss
+CONFIGURE_ARGS+=	--enable-dvd
+CONFIGURE_ARGS+=	--enable-dvdread
+CONFIGURE_ARGS+=	--enable-dvdplay
+
+# XXX FIXME
+CONFIGURE_ARGS+=	--disable-libcdio 
+CONFIGURE_ARGS+=	--disable-libcddb
+CONFIGURE_ARGS+=	--disable-mkv 
+CONFIGURE_ARGS+=	--disable-faad
+CONFIGURE_ARGS+=	--disable-ffmpeg
+
+CONFIGURE_ARGS+=	--enable-flac
+CONFIGURE_ARGS+=	--enable-x11
+CONFIGURE_ARGS+=	--disable-qt
+CONFIGURE_ARGS+=	--disable-kde
+CONFIGURE_ARGS+=	--disable-gnome
+CONFIGURE_ARGS+=	--disable-gtk
+
+#.include "../../audio/faad2/buildlink2.mk"
+.include "../../audio/flac/buildlink2.mk"
 .include "../../audio/liba52/buildlink2.mk"
+.include "../../audio/libmad/buildlink2.mk"
 .include "../../audio/libogg/buildlink2.mk"
-.include "../../devel/glib/buildlink2.mk"
+.include "../../audio/libvorbis/buildlink2.mk"
+.include "../../audio/speex/buildlink2.mk"
+.include "../../converters/fribidi/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"
-.include "../../graphics/aalib/buildlink2.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+#.include "../../graphics/ffmpeg/buildlink2.mk"
+.include "../../graphics/libmpeg2/buildlink2.mk"
+.include "../../misc/libdvdcss/buildlink2.mk"
+.include "../../misc/libdvdplay/buildlink2.mk"
+.include "../../misc/libdvdread/buildlink2.mk"
+.include "../../net/openslp/buildlink2.mk"
+.include "../../x11/wxGTK/buildlink2.mk"
+
+.include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

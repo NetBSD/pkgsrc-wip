@@ -1,108 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/09/17 18:49:51 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/16 11:32:22 xtraeme Exp $
 
---- plugins/vcd/cdrom_tools.c	Thu Nov 14 00:02:36 2002
-+++ plugins/vcd/cdrom_tools.c	Tue Nov 26 01:57:36 2002
-@@ -49,6 +49,10 @@
- #   include <IOKit/storage/IOCDTypes.h>
- #   include <IOKit/storage/IOCDMedia.h>
- #   include <IOKit/storage/IOCDMediaBSDClient.h>
-+#elif defined(__NetBSD__)
-+#   include <sys/inttypes.h>
-+#   include <sys/cdio.h>
-+#   include <sys/scsiio.h>
- #elif defined( HAVE_IOC_TOC_HEADER_IN_SYS_CDIO_H )
- #   include <sys/cdio.h>
- #   include <sys/cdrio.h>
-@@ -215,7 +219,23 @@
-     /* Fill the p_sectors structure with the track/sector matches */
-     for( i = 0 ; i <= i_tracks ; i++ )
-     {
-+#if __NetBSD__
-+        p_sectors[ i ] = toc_entries.data[i].addr.lba;
-+#else
-         p_sectors[ i ] = ntohl( toc_entries.data[i].addr.lba );
-+#endif
-+	printf("track %02d:  adr=%d  ctrl=%d  format=%d  %02d:%02d:%02d %d or %d sectors\n",
-+	    (int) i,
-+	    (int) toc_entries.data[i].addr_type,
-+	    (int) toc_entries.data[i].control,
-+	    (int) toc_entries.address_format,
-+	    (int) toc_entries.data[i].addr.msf.minute,
-+	    (int) toc_entries.data[i].addr.msf.second,
-+	    (int) toc_entries.data[i].addr.msf.frame,
-+	    (int) toc_entries.data[i].addr.lba,
-+	    (int) p_sectors[ i ]
-+	);
-+
-     }
- #else
-     struct cdrom_tochdr   tochdr;
-@@ -285,6 +305,55 @@
-         return( -1 );
-     }
+--- modules/gui/wxwindows/wxwindows.cpp.orig	2004-01-16 11:38:47.000000000 +0100
++++ modules/gui/wxwindows/wxwindows.cpp	2004-01-16 11:39:03.000000000 +0100
+@@ -28,6 +28,7 @@
+ #include <errno.h>                                                 /* ENOMEM */
+ #include <string.h>                                            /* strerror() */
+ #include <stdio.h>
++#include <locale.h>
  
-+#elif defined( __NetBSD__ )
-+    struct scsireq  sc;
-+    int             lba = i_sector;
-+    int             blocks;
-+    int             sector_type;
-+    int             sync, header_code, user_data, edc_ecc, error_field;
-+    int             sub_channel;
-+    int             rc;
-+
-+    blocks = 1;
-+    sector_type = 5;              /* mode2/form2 */
-+    sync = 0;
-+    header_code = 0;
-+    user_data = 1;
-+    edc_ecc = 0;
-+    error_field = 0;
-+    sub_channel = 0;
-+
-+    memset(&sc, 0, sizeof(sc));
-+    sc.cmd[0] = 0xBE;
-+    sc.cmd[1] = (sector_type) << 2;
-+    sc.cmd[2] = (lba >> 24) & 0xff;
-+    sc.cmd[3] = (lba >> 16) & 0xff;
-+    sc.cmd[4] = (lba >> 8) & 0xff;
-+    sc.cmd[5] = lba & 0xff;
-+    sc.cmd[6] = (blocks >> 16) & 0xff;
-+    sc.cmd[7] = (blocks >> 8) & 0xff;
-+    sc.cmd[8] = blocks & 0xff;
-+    sc.cmd[9] = (sync << 7) | (header_code << 5) | (user_data << 4) |
-+	(edc_ecc << 3) | (error_field << 1);
-+    sc.cmd[10] = sub_channel;
-+    sc.cmdlen = 12;
-+    sc.databuf = (caddr_t) p_block;
-+    sc.datalen = VCD_SECTOR_SIZE; 	// was 2328 == VCD_DATA_SIZE + 4;
-+    sc.senselen = sizeof(sc.sense);
-+    sc.flags = SCCMD_READ;
-+    sc.timeout = 10000;
-+    rc = ioctl(i_fd, SCIOCCOMMAND, &sc);
-+    if (rc == -1) {
-+	perror("SCIOCCOMMAND");
-+	return -1;
-+    }
-+    if (sc.retsts || sc.error) {
-+	fprintf(stderr, "scsi command failed: status %d error %d\n", sc.retsts,
-+		sc.error);
-+	return -1;
-+    }
-+    fprintf(stderr, "%7d\r", i_sector);
-+
- #elif defined( HAVE_IOC_TOC_HEADER_IN_SYS_CDIO_H )
-     
-     int i_size = VCD_SECTOR_SIZE;
-@@ -324,8 +393,12 @@
-     }
- #endif
- 
-+#ifdef __NetBSD__
-+    FAST_MEMCPY( p_buffer, p_block, VCD_DATA_SIZE );
-+#else
-     /* We don't want to keep the header of the read sector */
-     FAST_MEMCPY( p_buffer, p_block + VCD_DATA_START, VCD_DATA_SIZE );
-+#endif
- 
-     return( 0 );
- }
+ #include <vlc/vlc.h>
+ #include <vlc/intf.h>
