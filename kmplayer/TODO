@@ -1,2 +1,6 @@
 Please test. I have briefly tested this embedded in konquerer for
 looking at some stuff off apple web site and it works.
+
+Known bug... needs to be fixed:
+    If you open a media file from konqueror file explorer, doesn't work.
+    Knoqueror does work for KPart kmplayer though, say when browsing internet.
