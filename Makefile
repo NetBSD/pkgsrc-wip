@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.721 2003/12/03 13:15:39 jmmv Exp $
-# $NetBSD: Makefile,v 1.721 2003/12/03 13:15:39 jmmv Exp $
+# $Id: Makefile,v 1.722 2003/12/03 18:45:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.722 2003/12/03 18:45:09 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -462,7 +462,6 @@ SUBDIR+=	poedit
 SUBDIR+=	pointless
 SUBDIR+=	portaudio
 SUBDIR+=	portmap
-SUBDIR+=	postal
 SUBDIR+=	ppp
 SUBDIR+=	prelude-lml
 SUBDIR+=	prelude-manager
