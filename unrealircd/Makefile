@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/09/29 23:33:29 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/04 17:24:59 adrian_p Exp $
 
-DISTNAME=	Unreal3.2.1
-PKGNAME=	unrealircd-3.2.1
+DISTNAME=	Unreal3.2.2
+PKGNAME=	unrealircd-3.2.2
 CATEGORIES=	chat
 MASTER_SITES=	http://www.tiefighter.org/~unreal/downloads/
 
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/Unreal3.2
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ENV+=	tre_version="0.6.8"
+CONFIGURE_ENV+=	tre_version="0.7.0"
 CONFIGURE_ENV+=	TRELIBS="-L${PREFIX}/lib -ltre"
 
 CONFIGURE_ARGS+=	--with-dpath=${IRCD_HOME}

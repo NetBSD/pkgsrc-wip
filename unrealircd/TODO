@@ -1,3 +1,2 @@
-- Get in contact with developers to get ipv6 support fixed
-- Test runtime setuid/setgid and feedback patches to developers
 - Decide on chrooted/non-chrooted install
+- Look at IPv6 support issues

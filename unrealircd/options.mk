@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2004/09/29 23:59:52 adrian_p Exp $
+# $NetBSD: options.mk,v 1.4 2004/11/04 17:25:00 adrian_p Exp $
 
 .if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
 PKG_DEFAULT_OPTIONS+=   inet6
@@ -43,7 +43,7 @@ CONFIGURE_ARGS+=	--enable-ssl=${SSLBASE}
 ### Enable Anti-Spoofing protection for older OS's with an insecure IPv4 stack
 ###
 .if !empty(PKG_OPTIONS:Mnospoof)
-CONFIGURE_ARGS+=-	--enable-nospoof
+CONFIGURE_ARGS+=	--enable-nospoof
 .endif
 
 ###
