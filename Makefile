@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.368 2003/08/08 17:24:24 xtraeme Exp $
-# $NetBSD: Makefile,v 1.368 2003/08/08 17:24:24 xtraeme Exp $
+# $Id: Makefile,v 1.369 2003/08/12 13:07:55 adrian_p Exp $
+# $NetBSD: Makefile,v 1.369 2003/08/12 13:07:55 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -94,6 +94,7 @@ SUBDIR+=	fspanel
 SUBDIR+=	fuse
 SUBDIR+=	fuse-utils
 SUBDIR+=	fwbuilder
+SUBDIR+=	gCvs
 SUBDIR+=	galib
 SUBDIR+=	gdrdao
 SUBDIR+=	geeklog
