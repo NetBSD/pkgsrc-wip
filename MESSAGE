@@ -1,0 +1,21 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2004/07/11 05:42:04 othyro Exp $
+
+- Edit the PRNGD configuration file ${PKG_SYSCONFDIR}/prngd.conf
+   (see ${SHAREDIR}/doc/prngd)
+
+- Add entries to /etc/rc.local for PRNGD to start on system boot.
+
+-- Regarding entropy gathering commands in prngd.conf:
+
+The "rate" represents the number of bits of usuable entropy per byte of
+command output. Adjust the rates as you see fit, but be conservative.
+
+Depending on the usage of your system, some commands may not produce
+output that varies significantly over time. Keep in mind the usage of
+such commands will not produce considerably random data. Use commands
+whose output will gather decent entropy.
+
+- Please browse the manual and the PRNGD home page for more information.
+
+===========================================================================
