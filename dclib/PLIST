@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:32 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/01/11 18:21:35 tnn2 Exp $
 include/dclib/cclient.h
 include/dclib/cclientssl.h
 include/dclib/cconfig.h
@@ -37,6 +37,7 @@ include/dclib/core/cstring.h
 include/dclib/core/cstringlist.h
 include/dclib/core/cthread.h
 include/dclib/core/cxml.h
+include/dclib/core/czlib.h
 include/dclib/core/filecopy.h
 include/dclib/core/platform.h
 include/dclib/core/types.h

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/11 15:27:48 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/11 18:21:34 tnn2 Exp $
 #
 
 DISTNAME=	dclib-0.3.5
@@ -20,6 +20,7 @@ PKGCONFIG_OVERRIDE+=	dclib.pc.in
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
