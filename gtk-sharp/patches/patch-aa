@@ -1,13 +1,11 @@
-$NetBSD: patch-aa,v 1.4 2004/04/03 21:10:55 jmmv Exp $
-
---- parser/GAPI/Makefile.in.orig	2004-03-31 18:54:40.000000000 +0200
-+++ parser/GAPI/Makefile.in
-@@ -106,7 +106,7 @@ XML_LIBS = @XML_LIBS@
+--- sample/rsvg/Makefile.in.orig	2004-06-28 12:44:39.000000000 +0200
++++ sample/rsvg/Makefile.in	2004-06-28 12:45:00.000000000 +0200
+@@ -119,7 +119,7 @@
  am__include = @am__include@
  am__quote = @am__quote@
  install_sh = @install_sh@
--moduledir = $(datadir)/perl5/GAPI
-+moduledir =  %%PERL5_SITELIB%%/GAPI
- module_SCRIPTS = Metadata.pm
- EXTRA_DIST = Metadata.pm
- subdir = parser/GAPI
+-assemblies = ../../glib/glib-sharp.dll ../../pango/pango-sharp.dll ../../atk/atk-sharp.dll ../../gdk/gdk-sharp.dll ../../gtk/gtk-sharp.dll ../../rsvg/rsvg-sharp.dll
++assemblies = ../../glib/glib-sharp.dll ../../pango/pango-sharp.dll ../../atk/atk-sharp.dll ../../gdk/gdk-sharp.dll ../../gtk/gtk-sharp.dll ../../art/art-sharp.dll ../../rsvg/rsvg-sharp.dll
+ references = $(addprefix /r:, $(assemblies))
+ 
+ @ENABLE_RSVG_TRUE@TARGETS = svghelloworld.exe

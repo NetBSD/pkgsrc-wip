@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/04/03 21:10:54 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/06/28 11:05:33 marc Exp $
 bin/gapi-codegen
 bin/gapi-fixup
 bin/gapi-fixup.exe
@@ -10,18 +10,6 @@ bin/gapi_format_xml
 bin/gapi_pp.pl
 bin/gconfsharp-schemagen
 bin/gconfsharp-schemagen.exe
-lib/art-sharp.dll
-lib/atk-sharp.dll
-lib/gconf-sharp-peditors.dll
-lib/gconf-sharp.dll
-lib/gda-sharp.dll
-lib/gdk-sharp.dll
-lib/glade-sharp.dll
-lib/glib-sharp.dll
-lib/gnome-sharp.dll
-lib/gnomedb-sharp.dll
-lib/gtk-sharp.dll
-lib/gtkhtml-sharp.dll
 lib/libgdksharpglue.a
 lib/libgdksharpglue.la
 lib/libgdksharpglue.so
@@ -37,12 +25,64 @@ lib/libgnomesharpglue.so
 lib/libgtksharpglue.a
 lib/libgtksharpglue.la
 lib/libgtksharpglue.so
-lib/pango-sharp.dll
-${PERL5_SITELIB}/GAPI/Metadata.pm
+lib/libpangosharpglue.a
+lib/libpangosharpglue.la
+lib/libpangosharpglue.so
+lib/mono/gac/art-sharp/1.0.0.0__35e10195dab3c99f/art-sharp.dll
+lib/mono/gac/art-sharp/1.0.0.0__35e10195dab3c99f/art-sharp.dll.config
+lib/mono/gac/atk-sharp/1.0.0.0__35e10195dab3c99f/atk-sharp.dll
+lib/mono/gac/atk-sharp/1.0.0.0__35e10195dab3c99f/atk-sharp.dll.config
+lib/mono/gac/gconf-sharp-peditors/1.0.0.0__35e10195dab3c99f/gconf-sharp-peditors.dll
+lib/mono/gac/gconf-sharp/1.0.0.0__35e10195dab3c99f/gconf-sharp.dll
+lib/mono/gac/gconf-sharp/1.0.0.0__35e10195dab3c99f/gconf-sharp.dll.config
+lib/mono/gac/gda-sharp/1.0.0.0__35e10195dab3c99f/gda-sharp.dll
+lib/mono/gac/gda-sharp/1.0.0.0__35e10195dab3c99f/gda-sharp.dll.config
+lib/mono/gac/gdk-sharp/1.0.0.0__35e10195dab3c99f/gdk-sharp.dll
+lib/mono/gac/gdk-sharp/1.0.0.0__35e10195dab3c99f/gdk-sharp.dll.config
+lib/mono/gac/glade-sharp/1.0.0.0__35e10195dab3c99f/glade-sharp.dll
+lib/mono/gac/glade-sharp/1.0.0.0__35e10195dab3c99f/glade-sharp.dll.config
+lib/mono/gac/glib-sharp/1.0.0.0__35e10195dab3c99f/glib-sharp.dll
+lib/mono/gac/glib-sharp/1.0.0.0__35e10195dab3c99f/glib-sharp.dll.config
+lib/mono/gac/gnome-sharp/1.0.0.0__35e10195dab3c99f/gnome-sharp.dll
+lib/mono/gac/gnome-sharp/1.0.0.0__35e10195dab3c99f/gnome-sharp.dll.config
+lib/mono/gac/gnomedb-sharp/1.0.0.0__35e10195dab3c99f/gnomedb-sharp.dll
+lib/mono/gac/gnomedb-sharp/1.0.0.0__35e10195dab3c99f/gnomedb-sharp.dll.config
+lib/mono/gac/gtk-sharp/1.0.0.0__35e10195dab3c99f/gtk-sharp.dll
+lib/mono/gac/gtk-sharp/1.0.0.0__35e10195dab3c99f/gtk-sharp.dll.config
+lib/mono/gac/gtkhtml-sharp/1.0.0.0__35e10195dab3c99f/gtkhtml-sharp.dll
+lib/mono/gac/gtkhtml-sharp/1.0.0.0__35e10195dab3c99f/gtkhtml-sharp.dll.config
+lib/mono/gac/pango-sharp/1.0.0.0__35e10195dab3c99f/pango-sharp.dll
+lib/mono/gac/pango-sharp/1.0.0.0__35e10195dab3c99f/pango-sharp.dll.config
+lib/mono/gac/rsvg-sharp/1.0.0.0__35e10195dab3c99f/rsvg-sharp.dll
+lib/mono/gac/rsvg-sharp/1.0.0.0__35e10195dab3c99f/rsvg-sharp.dll.config
+lib/mono/gac/vte-sharp/1.0.0.0__35e10195dab3c99f/vte-sharp.dll
+lib/mono/gac/vte-sharp/1.0.0.0__35e10195dab3c99f/vte-sharp.dll.config
+lib/mono/gtk-sharp/art-sharp.dll
+lib/mono/gtk-sharp/atk-sharp.dll
+lib/mono/gtk-sharp/gconf-sharp-peditors.dll
+lib/mono/gtk-sharp/gconf-sharp.dll
+lib/mono/gtk-sharp/gda-sharp.dll
+lib/mono/gtk-sharp/gdk-sharp.dll
+lib/mono/gtk-sharp/glade-sharp.dll
+lib/mono/gtk-sharp/glib-sharp.dll
+lib/mono/gtk-sharp/gnome-sharp.dll
+lib/mono/gtk-sharp/gnomedb-sharp.dll
+lib/mono/gtk-sharp/gtk-sharp.dll
+lib/mono/gtk-sharp/gtkhtml-sharp.dll
+lib/mono/gtk-sharp/pango-sharp.dll
+lib/mono/gtk-sharp/rsvg-sharp.dll
+lib/mono/gtk-sharp/vte-sharp.dll
+lib/pkgconfig/art-sharp.pc
 lib/pkgconfig/gapi.pc
+lib/pkgconfig/gconf-sharp.pc
+lib/pkgconfig/gda-sharp.pc
+lib/pkgconfig/glade-sharp.pc
+lib/pkgconfig/gnome-sharp.pc
+lib/pkgconfig/gnomedb-sharp.pc
 lib/pkgconfig/gtk-sharp.pc
-lib/rsvg-sharp.dll
-lib/vte-sharp.dll
+lib/pkgconfig/gtkhtml-sharp.pc
+lib/pkgconfig/rsvg-sharp.pc
+lib/pkgconfig/vte-sharp.pc
 share/gapi/art-api.xml
 share/gapi/art-symbols.xml
 share/gapi/atk-api.xml
@@ -59,4 +99,36 @@ share/gapi/pango-api.xml
 share/gapi/rsvg-api.xml
 share/gapi/vte-api.xml
 @dirrm share/gapi
-@dirrm ${PERL5_SITELIB}/GAPI
+@dirrm lib/mono/gtk-sharp
+@dirrm lib/mono/gac/vte-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/vte-sharp
+@dirrm lib/mono/gac/rsvg-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/rsvg-sharp
+@dirrm lib/mono/gac/pango-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/pango-sharp
+@dirrm lib/mono/gac/gtkhtml-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/gtkhtml-sharp
+@dirrm lib/mono/gac/gtk-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/gtk-sharp
+@dirrm lib/mono/gac/gnomedb-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/gnomedb-sharp
+@dirrm lib/mono/gac/gnome-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/gnome-sharp
+@dirrm lib/mono/gac/glib-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/glib-sharp
+@dirrm lib/mono/gac/glade-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/glade-sharp
+@dirrm lib/mono/gac/gdk-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/gdk-sharp
+@dirrm lib/mono/gac/gda-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/gda-sharp
+@dirrm lib/mono/gac/gconf-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/gconf-sharp-peditors/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/gconf-sharp-peditors
+@dirrm lib/mono/gac/gconf-sharp
+@dirrm lib/mono/gac/atk-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/atk-sharp
+@dirrm lib/mono/gac/art-sharp/1.0.0.0__35e10195dab3c99f
+@dirrm lib/mono/gac/art-sharp
+@comment in mono: @dirrm lib/mono/gac
+@comment in mono: @dirrm lib/mono

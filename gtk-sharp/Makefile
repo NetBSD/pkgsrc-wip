@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2004/04/04 18:43:13 marc Exp $
+# $NetBSD: Makefile,v 1.17 2004/06/28 11:05:33 marc Exp $
 #
 
-DISTNAME=	gtk-sharp-0.18
+DISTNAME=	gtk-sharp-0.99
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-sharp/}
+MASTER_SITES=	http://www.go-mono.com/archive/rc/
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://gtk-sharp.sourceforge.net/
@@ -20,12 +20,21 @@ GNU_CONFIGURE=	yes
 PERL5_SITELIB=	yes
 
 PKGCONFIG_OVERRIDE=	gtk-sharp.pc.in
+PKGCONFIG_OVERRIDE+=	art/art-sharp.pc.in
+PKGCONFIG_OVERRIDE+=	gconf/GConf/gconf-sharp.pc.in
+PKGCONFIG_OVERRIDE+=	gda/gda-sharp.pc.in
+PKGCONFIG_OVERRIDE+=	glade/glade-sharp.pc.in
+PKGCONFIG_OVERRIDE+=	gnome/gnome-sharp.pc.in
+PKGCONFIG_OVERRIDE+=	gnomedb/gnomedb-sharp.pc.in
+PKGCONFIG_OVERRIDE+=	gtkhtml/gtkhtml-sharp.pc.in
 PKGCONFIG_OVERRIDE+=	parser/gapi.pc.in
+PKGCONFIG_OVERRIDE+=	rsvg/rsvg-sharp.pc.in
+PKGCONFIG_OVERRIDE+=	vte/vte-sharp.pc.in
 
-REPLACE_PERL=	mapdllnames.pl
-REPLACE_PERL+=	bin/gapi.pl
-REPLACE_PERL+=	bin/gapi2xml.pl
-REPLACE_PERL+=	bin/gapi_pp.pl
+REPLACE_PERL+=	parser/gapi-parser
+REPLACE_PERL+=	parser/gapi.pl
+REPLACE_PERL+=	parser/gapi2xml.pl
+REPLACE_PERL+=	parser/gapi_pp.pl
 
 PARSER_MK=	${WRKSRC}/parser/GAPI/Makefile.in
 
@@ -34,12 +43,17 @@ SUBST_STAGE.gapi=	pre-configure
 SUBST_FILES.gapi=	parser/GAPI/Makefile.in
 SUBST_SED.gapi=		-e 's,%%PERL5_SITELIB%%,${PERL5_SITELIB},'
 
+# XXX work around a known mono bug
+MONO=		${BUILDLINK_PREFIX.mono}/bin/mono --optimize=loop
+MAKE_FLAGS+=	RUNTIME=${MONO:Q}
+
 .include "../../databases/libgda/buildlink3.mk"
 .include "../../databases/libgnomedb/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libgdiplus/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
