@@ -1,4 +1,8 @@
-$NetBSD: patch-af,v 1.1 2003/11/30 02:25:10 grantbeattie Exp $
+$NetBSD: patch-af,v 1.2 2003/11/30 02:39:38 grantbeattie Exp $
+
+This patch is from:
+
+	http://www.exim.org/pipermail/exim-announce/2003q3/000094.html
 
 --- src/smtp_in.c.orig	2002-04-04 22:56:20.000000000 +1000
 +++ src/smtp_in.c
