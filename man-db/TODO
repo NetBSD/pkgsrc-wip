@@ -2,7 +2,21 @@ security fixes are available in Debian diff man-db_2.4.1-13.diff
 http://packages.qa.debian.org/m/man-db.html
 Jul 29 Vade 79             (7611) man-db[] multiple(4) vulnerabilities
 
-This uses /var/cache/man
+It would be nice to have some pkgsrc-wide VARDIR (or VARBASE)
+then use it for setting MAN_DB_CAT_DIR.
+
+The config file should use settings used in install, like
+MAN_DB_CAT_DIR.
+
+MESSAGE mentions recreating cache indexes. Maybe this should be done
+via INSTALL script?
+
+MESSAGE did have:
+  su ${MAN_DB_USER} -c "${LOCALBASE}/bin/mandb -c"
+but this needs a shell (Linux su has no -m)
+should I have a shell or who cares?
+
+bin/mandb -c can be done by any user. Should it really be setuid man-db?
 
 This needs to be patched to support .0 suffix in preformatted cat files;
 I already discussed with developer.
@@ -18,8 +32,6 @@ I have also used with gdbm
 
 man.1 = $(DESTDIR)$(manroot)/$(nlspath)/$(man1dir)/$(man)$(man1ext)
 GNU/./man1/man.1
-
-Linux may need -lintl for LDLIBS in src/Makefile.in
 
 man < 1.5l has vulnerability -- make sure this doesn't have same
  I couldn't repeat it

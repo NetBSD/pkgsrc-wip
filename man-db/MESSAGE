@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2003/08/21 07:33:42 jeremy-c-reed Exp $
+
+You may want to create or update your manual page index
+caches for ${PKGNAME} by running as root:
+
+  ${LOCALBASE}/bin/mandb -c
+
+===========================================================================

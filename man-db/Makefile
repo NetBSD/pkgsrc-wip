@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/20 08:55:21 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/21 07:33:42 jeremy-c-reed Exp $
 
 DISTNAME=		man-db-${VERSION}
 CATEGORIES=		misc
@@ -18,9 +18,11 @@ BUILD_DEPENDS+=         bison-[0-9]*:../../devel/bison
 
 VERSION=		2.4.1
 
+MAN_DB_CAT_DIR?=	/var/cache/man
+
 # for modifying cat and database files
 MAN_DB_USER?=		man-db
-PKG_USERS=		${MAN_DB_USER}:${ROOT_GROUP}::man-db\\ user
+PKG_USERS=		${MAN_DB_USER}:${ROOT_GROUP}::man-db\\ user:${MAN_DB_CAT_DIR}
 USE_PKGINSTALL=		YES
 
 USE_BUILDLINK2=		YES
@@ -33,6 +35,10 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--enable-setuid=${MAN_DB_USER}
 
 CONF_FILES=		${PREFIX}/share/examples/man-db/man_db.conf ${PKG_SYSCONFDIR}/man_db.conf
+
+OWN_DIRS_PERMS=	${MAN_DB_CAT_DIR} ${MAN_DB_USER} ${ROOT_GROUP} 2755
+
+MESSAGE_SUBST+=		MAN_DB_USER=${MAN_DB_USER}
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/man-db
