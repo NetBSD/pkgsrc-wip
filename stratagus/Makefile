@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/01 23:12:17 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/01 23:18:53 xtraeme Exp $
 #
 
 DISTNAME=	stratagus-2.0-src
@@ -17,12 +17,14 @@ GNU_CONFIGURE=	yes
 
 USE_GNU_TOOLS+=	make
 
-#.if ${OPSYS} != "Linux"
-SUBST_CLASSES+=	ldl
-SUBST_STAGE.ldl= post-patch
-SUBST_FILES.ldl=configure configure.in
-SUBST_SED.ldl= -e 's,-ldl,,g'
-#.endif
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Linux"
+SUBST_CLASSES+=		ldl
+SUBST_STAGE.ldl=	post-patch
+SUBST_FILES.ldl=	configure
+SUBST_SED.ldl=		-e 's,-ldl,,g'
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/stratagus ${PREFIX}/bin/
