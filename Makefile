@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1496 2004/10/15 22:41:42 minskim Exp $
-# $NetBSD: Makefile,v 1.1496 2004/10/15 22:41:42 minskim Exp $
+# $Id: Makefile,v 1.1497 2004/10/17 17:33:43 imilh Exp $
+# $NetBSD: Makefile,v 1.1497 2004/10/17 17:33:43 imilh Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -458,6 +458,7 @@ SUBDIR+=	netwox
 SUBDIR+=	ninvaders
 SUBDIR+=	noip
 SUBDIR+=	noiptun
+SUBDIR+=	nos-tun
 SUBDIR+=	nsd
 SUBDIR+=	nuppelvideo
 SUBDIR+=	nvidia-freebsd
