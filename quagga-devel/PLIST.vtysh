@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST.vtysh,v 1.1.1.1 2003/12/23 15:10:07 lexort Exp $
+@comment $NetBSD: PLIST.vtysh,v 1.2 2004/07/01 18:11:33 lexort Exp $
 bin/vtysh
+share/examples/quagga/vtysh.conf.sample

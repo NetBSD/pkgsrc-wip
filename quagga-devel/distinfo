@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/23 15:10:07 lexort Exp $
+$NetBSD: distinfo,v 1.2 2004/07/01 18:11:33 lexort Exp $
 
-SHA1 (quagga-0.96.4-20031223.tar.gz) = d1011e7006af7dd14d7f96908793c228a234898e
-Size (quagga-0.96.4-20031223.tar.gz) = 1404972 bytes
-SHA1 (patch-aa) = 53f3b09591840933b9f7e5f6f00fbb17552c5544
+SHA1 (quagga-0.96.5-20040701.tar.gz) = a7b07ee09611b7c81347569966501e1c0b9fd446
+Size (quagga-0.96.5-20040701.tar.gz) = 1645574 bytes

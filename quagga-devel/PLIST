@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/08 19:02:49 blef Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/07/01 18:11:33 lexort Exp $
 include/quagga/buffer.h
 include/quagga/command.h
 include/quagga/debug.h
@@ -24,9 +24,11 @@ include/quagga/ospfd/ospf_nsm.h
 include/quagga/ospfd/ospf_opaque.h
 include/quagga/ospfd/ospfd.h
 include/quagga/plist.h
+include/quagga/pqueue.h
 include/quagga/prefix.h
 include/quagga/privs.h
 include/quagga/routemap.h
+include/quagga/sigevent.h
 include/quagga/smux.h
 include/quagga/sockopt.h
 include/quagga/sockunion.h
@@ -39,24 +41,27 @@ include/quagga/version.h
 include/quagga/vty.h
 include/quagga/zclient.h
 include/quagga/zebra.h
-info/quagga.info
-info/quagga.info-1
-info/quagga.info-2
-info/quagga.info-3
-info/quagga.info-4
 lib/libospf.a
+lib/libzebra
+lib/libzebra.0
+lib/libzebra.0.0
 lib/libzebra.a
+lib/libzebra.la
 man/man1/vtysh.1
 man/man8/bgpd.8
 man/man8/ospfd.8
+man/man8/ospf6d.8
 man/man8/ripd.8
+man/man8/ripngd.8
 man/man8/zebra.8
 sbin/bgpd
+sbin/isisd
 sbin/ospfd
 sbin/ripd
 sbin/zebra
 share/examples/quagga/bgpd.conf.sample
 share/examples/quagga/bgpd.conf.sample2
+share/examples/quagga/isisd.conf.sample
 share/examples/quagga/ospfd.conf.sample
 share/examples/quagga/ripd.conf.sample
 share/examples/quagga/zebra.conf.sample
