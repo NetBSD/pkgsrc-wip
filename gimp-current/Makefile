@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/02/17 02:55:32 blef Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/25 11:57:06 moubctez Exp $
 #
 
 DISTNAME=		gimp-${GIMP_VER}
@@ -15,18 +15,16 @@ HOMEPAGE=		http://www.gimp.org/
 COMMENT=		Image manipulation program similar to Photoshop[tm]
 
 BUILD_USES_MSGFMT=	yes
-BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.4
 
 CONFLICTS+=		gimp<=1.2.3
 
 GIMP_VER=		2.0pre3
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
-
-USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	gimp-1.3.pc.in
 PKGCONFIG_OVERRIDE+=	gimpthumb-1.3.pc.in
@@ -48,16 +46,16 @@ post-install:
 		${LN} -fs ${PREFIX}/share/aclocal/gimp.m4		\
 			${LOCALBASE}/share/aclocal/gimp.m4
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/libart2/buildlink2.mk"
-.include "../../graphics/libexif/buildlink2.mk"
-.include "../../graphics/librsvg2/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/libwmf/buildlink2.mk"
-.include "../../www/libgtkhtml/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
+.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/libwmf/buildlink3.mk"
+.include "../../www/libgtkhtml/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
