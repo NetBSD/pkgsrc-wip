@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1 2005/01/12 22:27:53 adrian_p Exp $
+
+--- doc/Makefile.in.orig	2004-12-01 13:08:09.000000000 +0000
++++ doc/Makefile.in	2005-01-12 19:49:34.000000000 +0000
+@@ -622,16 +622,16 @@
+ docs-am: index.cache.bz2
+ 
+ install-docs: docs-am install-nls
+-	$(mkinstalldirs) $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc
++	$(mkinstalldirs) $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/
+ 	@if test -f index.cache.bz2; then \
+-	echo $(INSTALL_DATA) index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/; \
+-	$(INSTALL_DATA) index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/; \
++	echo $(INSTALL_DATA) index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/; \
++	$(INSTALL_DATA) index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/; \
+ 	elif test -f  $(srcdir)/index.cache.bz2; then \
+-	echo $(INSTALL_DATA) $(srcdir)/index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/; \
+-	$(INSTALL_DATA) $(srcdir)/index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/; \
++	echo $(INSTALL_DATA) $(srcdir)/index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/; \
++	$(INSTALL_DATA) $(srcdir)/index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/; \
+ 	fi
+-	-rm -f $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/common
+-	$(LN_S) $(kde_libs_htmldir)/$(KDE_LANG)/common $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/common
++	-rm -f $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/common
++	$(LN_S) $(kde_libs_htmldir)/$(KDE_LANG)/common $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/common
+ 
+ uninstall-docs:
+ 	-rm -rf $(kde_htmldir)/$(KDE_LANG)/doc
+@@ -642,10 +642,10 @@
+ 
+ #>+ 13
+ install-nls:
+-	$(mkinstalldirs) $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc
++	$(mkinstalldirs) $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation
+ 	@for base in addchannel.png addnetwork_co.png addserver_co.png channel_screen_co.png channel_screen_tour_co.png channellist_screen_co.png checkidentities.png colorchooser_screen.png colorize.png configure.png cr16-action-irc_admin.png cr16-action-irc_away.png cr16-action-irc_halfop.png cr16-action-irc_normal.png cr16-action-irc_op.png cr16-action-irc_owner.png cr16-action-irc_voice.png dccstatus_screen_co.png editserver_screen_co.png first_channel_co.png first_serverlist_co.png identities_adv_co.png identities_away_co.png identities_gen_co.png index.docbook kaddressbook.png kimproxy_create_screen2.png kimproxy_create_screen_co.png led_blue_off.png led_blue_on.png led_green_off.png led_green_on.png led_red_off.png led_red_on.png led_yellow_off.png led_yellow_on.png logviewer_co.png nicksonline_co.png notification_screen_co.png notifylist_screen_co.png osd_demo.png osd_screen_co.png prefs_identity_screen_co.png quickbuttons_screen.png quickconnect_screen.png serverlist_co.png serverlist_screen_co.png urlcatcher_screen_co.png webbrowser_screen_co.png ; do \
+-	  echo $(INSTALL_DATA) $$base $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/$$base ;\
+-	  $(INSTALL_DATA) $(srcdir)/$$base $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/$$base ;\
++	  echo $(INSTALL_DATA) $$base $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/$$base ;\
++	  $(INSTALL_DATA) $(srcdir)/$$base $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/$$base ;\
+ 	done
+ 
+ uninstall-nls:

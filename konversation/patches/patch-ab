@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.1 2005/01/12 22:27:53 adrian_p Exp $
+
+--- translations/da/doc/Makefile.in.orig	2004-12-01 13:08:11.000000000 +0000
++++ translations/da/doc/Makefile.in	2005-01-12 21:56:31.000000000 +0000
+@@ -461,16 +461,16 @@
+ docs-am: index.cache.bz2
+ 
+ install-docs: docs-am install-nls
+-	$(mkinstalldirs) $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc
++	$(mkinstalldirs) $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation
+ 	@if test -f index.cache.bz2; then \
+-	echo $(INSTALL_DATA) index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/; \
+-	$(INSTALL_DATA) index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/; \
++	echo $(INSTALL_DATA) index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/; \
++	$(INSTALL_DATA) index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/; \
+ 	elif test -f  $(srcdir)/index.cache.bz2; then \
+-	echo $(INSTALL_DATA) $(srcdir)/index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/; \
+-	$(INSTALL_DATA) $(srcdir)/index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/; \
++	echo $(INSTALL_DATA) $(srcdir)/index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/; \
++	$(INSTALL_DATA) $(srcdir)/index.cache.bz2 $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/; \
+ 	fi
+-	-rm -f $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/common
+-	$(LN_S) $(kde_libs_htmldir)/$(KDE_LANG)/common $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/common
++	-rm -f $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/common
++	$(LN_S) $(kde_libs_htmldir)/$(KDE_LANG)/common $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/common
+ 
+ uninstall-docs:
+ 	-rm -rf $(kde_htmldir)/$(KDE_LANG)/doc
+@@ -481,10 +481,10 @@
+ 
+ #>+ 13
+ install-nls:
+-	$(mkinstalldirs) $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc
++	$(mkinstalldirs) $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation
+ 	@for base in index.docbook ; do \
+-	  echo $(INSTALL_DATA) $$base $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/$$base ;\
+-	  $(INSTALL_DATA) $(srcdir)/$$base $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/doc/$$base ;\
++	  echo $(INSTALL_DATA) $$base $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/kconversation/$$base ;\
++	  $(INSTALL_DATA) $(srcdir)/$$base $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/konversation/$$base ;\
+ 	done
+ 
+ uninstall-nls:
