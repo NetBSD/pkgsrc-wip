@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1167 2004/04/05 04:58:15 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1167 2004/04/05 04:58:15 xtraeme Exp $
+# $Id: Makefile,v 1.1168 2004/04/05 11:38:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1168 2004/04/05 11:38:28 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -734,7 +734,6 @@ SUBDIR+=	tutos
 SUBDIR+=	tuxnes
 SUBDIR+=	tuxtype2
 SUBDIR+=	typhoon
-SUBDIR+=	ubs
 SUBDIR+=	uclibc
 SUBDIR+=	udhcp
 SUBDIR+=	umix
