@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.4 2003/09/06 11:30:04 cjep Exp $
+$NetBSD: patch-an,v 1.5 2003/10/22 13:21:28 jeremy-c-reed Exp $
 Index: lib/FS/FSFontInfo.c
 ===================================================================
 RCS file: /home/ncvs/xfree/xc/lib/FS/FSFontInfo.c,v
@@ -299,25 +299,6 @@ diff -u -u -r3.7 -r3.8
  
  typedef int (* FSIOErrorHandler)(FSServer *);
  typedef int (* FSErrorHandler)(FSServer *, FSErrorEvent *);
-Index: lib/font/fc/fsconvert.c
-===================================================================
-RCS file: /home/ncvs/xfree/xc/lib/font/fc/fsconvert.c,v
-retrieving revision 1.12
-retrieving revision 1.13
-diff -u -u -r1.12 -r1.13
---- lib/font/fc/fsconvert.c	27 May 2003 22:26:48 -0000	1.12
-+++ lib/font/fc/fsconvert.c	29 Aug 2003 18:01:13 -0000	1.13
-@@ -102,6 +102,10 @@
- 
-     nprops = pfi->nprops = pi->num_offsets;
- 
-+    if (nprops < 0 
-+	|| nprops > SIZE_T_MAX/(sizeof(FontPropRec) + sizeof(char))) 
-+	return -1;
-+	   
-     dprop = (FontPropPtr) xalloc(sizeof(FontPropRec) * nprops +
- 				 sizeof (char) * nprops);
-     if (!dprop)
 Index: lib/font/fc/fserve.c
 ===================================================================
 RCS file: /home/ncvs/xfree/xc/lib/font/fc/fserve.c,v
