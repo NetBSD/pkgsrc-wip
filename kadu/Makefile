@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/21 16:38:25 mpasternak Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/26 02:28:42 blef Exp $
 #
 
 DISTNAME=		kadu-0.3.7
@@ -11,7 +11,7 @@ HOMEPAGE=		http://kadu.net/releases/
 COMMENT=		KDE client for polish IM system, called GaduGadu
 
 WRKSRC=			${WRKDIR}/kadu
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 # PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgadu/lib/libgadu.pc.in
 GNU_CONFIGURE=		yes
@@ -23,5 +23,6 @@ USE_GNU_TOOLS+=		make
 # .include "../../chat/ekg/buildlink2.mk"
 CONFLICTS=		ekg-[0-9]*
 
-.include "../../x11/kdelibs3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
