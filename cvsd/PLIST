@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/22 04:08:39 schnoebe Exp $
-etc/rc.d/cvsd
-etc/rc.d/cvsd
+@comment $NetBSD: PLIST,v 1.4 2004/04/24 04:13:33 jeremy-c-reed Exp $
 sbin/cvsd
 sbin/cvsd-buildroot
 sbin/cvsd-passwd

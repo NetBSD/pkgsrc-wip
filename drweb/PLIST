@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/06 15:19:35 bubuchka Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/24 04:13:34 jeremy-c-reed Exp $
 bin/drweb
 bin/drweb-bin
-etc/rc.d/drwebd
 sbin/drweb-update
 sbin/drwebd
 sbin/drwebd-bin

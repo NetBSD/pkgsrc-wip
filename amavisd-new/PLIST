@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/15 17:19:15 cubidou Exp $
-etc/rc.d/amavisd
+@comment $NetBSD: PLIST,v 1.3 2004/04/24 04:13:18 jeremy-c-reed Exp $
 ${AMAVIS_MILTER_USED}sbin/amavis
 ${AMAVIS_MILTER_USED}sbin/amavis-milter
 sbin/amavisd

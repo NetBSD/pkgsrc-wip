@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/27 22:49:30 xtraeme Exp $
-etc/rc.d/dansguardian
+@comment $NetBSD: PLIST,v 1.2 2004/04/24 04:13:33 jeremy-c-reed Exp $
 etc/dansguardian/bannedextensionlist
 etc/dansguardian/bannediplist
 etc/dansguardian/bannedmimetypelist
@@ -41,7 +40,6 @@ etc/dansguardian/phraselists/weapons/weighted
 etc/dansguardian/pics
 etc/dansguardian/template.html
 etc/dansguardian/weightedphraselist
-etc/rc.d/dansguardian.sh
 libexec/cgi-bin/dansguardian.pl
 man/man8/dansguardian.8.gz
 sbin/dansguardian

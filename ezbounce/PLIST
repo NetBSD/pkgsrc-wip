@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/11 01:24:36 xtraeme Exp $
-etc/rc.d/ezbounce
+@comment $NetBSD: PLIST,v 1.3 2004/04/24 04:13:34 jeremy-c-reed Exp $
 man/man1/ezbounce.1
 sbin/ezbchk
 sbin/ezbounce

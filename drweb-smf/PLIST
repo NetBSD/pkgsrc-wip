@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/13 13:01:33 bubuchka Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/24 04:13:34 jeremy-c-reed Exp $
 sbin/drweb-smf
-etc/rc.d/drweb-smf
 ${DRW_DOCDIR}/addresses_list.txt
 ${DRW_DOCDIR}/conf_file.txt
 ${DRW_DOCDIR}/notify.txt
