@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/05 06:10:02 mjasm Exp $
-lib/python2p2/site-packages/OpenSSL/SSL.so
-lib/python2p2/site-packages/OpenSSL/__init__.pyc
-lib/python2p2/site-packages/OpenSSL/__init__.py
-lib/python2p2/site-packages/OpenSSL/crypto.so
-lib/python2p2/site-packages/OpenSSL/rand.so
-lib/python2p2/site-packages/OpenSSL/tsafe.pyc
-lib/python2p2/site-packages/OpenSSL/tsafe.py
-@dirrm lib/python2p2/site-packages/OpenSSL
-@dirrm lib/python2p2/site-packages
+@comment $NetBSD: PLIST,v 1.2 2003/08/07 18:39:23 adrian_p Exp $
+${PYSITELIB}/OpenSSL/SSL.so
+${PYSITELIB}/OpenSSL/__init__.pyc
+${PYSITELIB}/OpenSSL/__init__.py
+${PYSITELIB}/OpenSSL/crypto.so
+${PYSITELIB}/OpenSSL/rand.so
+${PYSITELIB}/OpenSSL/tsafe.pyc
+${PYSITELIB}/OpenSSL/tsafe.py
+@dirrm ${PYSITELIB}/OpenSSL
