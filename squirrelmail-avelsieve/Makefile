@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/30 19:06:20 schnoebe Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/30 19:07:03 schnoebe Exp $
 #
 
 DISTNAME=	avelsieve-1.9.1
@@ -22,7 +22,7 @@ do-build:
 
 do-install:
 	cd ${WRKDIR} && ${TAR} -cf - ${DISTNAME:C/-.*$//} | \
-		${TAR} -xf - -C ${PREFIX}/share/squirrelmail/plugins
+		${TAR} -xf - -C ${SMDIR}/plugins
 
 .include "../../mail/squirrelmail/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
