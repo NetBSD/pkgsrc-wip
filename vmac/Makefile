@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/02 21:12:47 blef Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/13 07:43:36 bubuchka Exp $
 
 DISTNAME=	vMac-${VMAC_VERSION}-src
 PKGNAME=	vmac-${VMAC_VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://www.leb.net/vmac/download/XWindows/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	mishka@terabyte.com.ua
+MAINTAINER=	mishka@apk.od.ua
 HOMEPAGE=	http://www.vmac.org/
 COMMENT=	Macintosh Plus Emulator
 
@@ -24,6 +24,8 @@ CONFIGURE_ARGS=	--with-x
 .if ${VMAC_MOTIFGUI} == "yes"
 CONFIGURE_ARGS+= --enable-motifgui
 .endif
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 post-extract:
 		${RM} -f ${WRKSRC}/config.cache
