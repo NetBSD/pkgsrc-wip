@@ -1,7 +1,7 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.16 2004/03/27 11:35:05 thomasklausner Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.17 2004/09/22 11:07:51 airhead Exp $
 ###########################################################################
 # 
-# $Id: linuxbin.pkg.mk,v 1.16 2004/03/27 11:35:05 thomasklausner Exp $
+# $Id: linuxbin.pkg.mk,v 1.17 2004/09/22 11:07:51 airhead Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 #
@@ -63,11 +63,11 @@ ONLY_FOR_PLATFORM+=	[DFNO]*BSD-*-${LINUX_ARCH_REQD}
 #
 
 #
-# LINUX_BASE_PREFERED should be set in mk/defaults or /etc/mk.conf
+# LINUX_BASE_PREFERRED should be set in mk/defaults or /etc/mk.conf
 # This setting show us the user / sysadmin preference for a given linux base
 #
 
-LINUX_BASE_PREFERED?=		suse
+LINUX_BASE_PREFERRED?=		suse
 
 #
 # LINUX_BASE_REQUIRED is *per package* setting (SuSE-only apps set this to
@@ -78,7 +78,7 @@ LINUX_BASE_PREFERED?=		suse
 # and make a given package require at least x.x.x version of linux_base
 #
 
-LINUX_BASE_REQUIRED?=		${LINUX_BASE_PREFERED}
+LINUX_BASE_REQUIRED?=		${LINUX_BASE_PREFERRED}
 
 LINUX_BASE_PREFIX.suse?=	suse
 LINUX_BASE_VERSION.suse=	7.3
@@ -160,7 +160,7 @@ NO_BUILD?=		YES
 # In future, the user should be able to:
 #
 # - have different Linux bases on his/hers machine - via changing variable,
-#   say, LINUX_BASE_PREFERED in /etc/mk.conf
+#   say, LINUX_BASE_PREFERRED in /etc/mk.conf
 #
 # - some RPMs will work with work with Suse, some other with Redhat. Debs
 #   will work with Debian. 
