@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/06 17:15:52 mpasternak Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/07/27 22:10:33 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_GAME_BUILDLINK3_MK:=	${PY_GAME_BUILDLINK3_MK}+
@@ -18,8 +18,8 @@ BUILDLINK_PKGSRCDIR.${PYPKGPREFIX}-game?=	../../wip/py-game
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
-.include "../../devel/smpeg/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../multimedia/smpeg/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 
 .endif	# PY_GAME_BUILDLINK3_MK
