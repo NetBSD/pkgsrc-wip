@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/05 13:08:44 cubidou Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/05 15:00:15 cubidou Exp $
 #
 
 DISTNAME=	ion-devel-dock-20031221
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://www.dsv.su.se/~pelle/ion-dock/
-COMMENT=	ion module that enables docking
+COMMENT=	Ion module that enables docking
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
