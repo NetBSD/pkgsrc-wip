@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/26 14:45:01 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/02 16:39:05 thomasklausner Exp $
 
 DISTNAME=	prtunnel-0.2.0
 CATEGORIES=	net
@@ -9,7 +9,7 @@ HOMEPAGE= 	http://joshbeam.com/software/prtunnel.html
 COMMENT=	Tunnels TCP connections through an HTTP or SOCKS5 proxy
 
 USE_BUILDLINK3=	YES
-ALL_TARGET=	# defined
+BUILD_TARGET=	# defined
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/prtunnel ${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/28 00:23:08 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/02 16:39:08 thomasklausner Exp $
 
 DISTNAME=	tr2latex
 PKGNAME=	${DISTNAME}-2.2
@@ -25,7 +25,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 
 # todo: maybe patch Makefile.unix for CC and CFLAGS not overwritten
 MAKEFILE=	Makefile.unix
-ALL_TARGET=	tr2latex
+BUILD_TARGET=	tr2latex
 PKGMANDIR?=	man  # until in pkgsrc
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/texmf/tex/latex/misc
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/08 20:07:40 blef Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/02 16:39:10 thomasklausner Exp $
 
 DISTNAME=	xevilsrc2.02r2
 PKGNAME=	xevil-2.02
@@ -15,7 +15,7 @@ MAKEFILE=	makefile
 
 USE_BUILDLINK3=	yes
 USE_X11BASE=	yes
-ALL_TARGET=	pkgsrc
+BUILD_TARGET=	pkgsrc
 
 MAKE_ENV+=	HOSTTYPE="pkgsrc"
 

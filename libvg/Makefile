@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/15 16:00:03 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/02 16:39:02 thomasklausner Exp $
 #
 
 DISTNAME=		libvg-0.2.0
@@ -11,7 +11,7 @@ COMMENT=		High-level ptrace library
 
 WRKSRC=		${WRKDIR}/libvg/src
 USE_BUILDLINK3=		yes
-ALL_TARGET= ${LOWER_OPSYS}
+BUILD_TARGET= ${LOWER_OPSYS}
 ONLY_FOR_PLATFORM= FreeBSD-*-* NetBSD-*-* OpenBSD-*-* Linux-*-*
 
 do-install:

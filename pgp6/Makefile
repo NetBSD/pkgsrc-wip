@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/20 20:47:02 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/02 16:39:04 thomasklausner Exp $
 #
 
 DISTNAME=		pgpsrc658unix
@@ -19,7 +19,7 @@ USE_GNU_TOOLS+=		make
 
 buildDIRS=		libs/pfl libs/pgpcdk clients/pgp/shared clients/pgp/cmdline
 
-ALL_TARGET=		headers all
+BUILD_TARGET=		headers all
 CONFIGURE_DIRS=		${buildDIRS:C|^|${WRKSRC}/|}
 BUILD_DIRS=		${buildDIRS:C|^|${WRKSRC}/|}
 MAKE_FLAGS+=		DEBUG=0 LDAP_DEBUG=

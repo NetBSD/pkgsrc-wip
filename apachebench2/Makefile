@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/11 13:19:54 bubuchka Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/02 16:38:57 thomasklausner Exp $
 
 # XXX This uses the version of apache2 distfile instead of
 # XXX the AP_AB_BASEREVISION from the support/ab.c source.
@@ -14,7 +14,7 @@ USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 #USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-ALL_TARGET=		ab
+BUILD_TARGET=		ab
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--enable-static-ab

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/19 20:41:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/02 16:39:04 thomasklausner Exp $
 #
 
 DISTNAME=		nestra-0.66
@@ -15,7 +15,7 @@ WRKSRC=			${WRKDIR}/nestra
 USE_BUILDLINK3=		yes
 USE_X11=		yes
 
-ALL_TARGET=		nestra
+BUILD_TARGET=		nestra
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nestra ${PREFIX}/bin

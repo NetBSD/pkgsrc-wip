@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/18 15:25:58 ppostma Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/02 16:39:02 thomasklausner Exp $
 #
 
 DISTNAME=		luasocket-2.0-alpha
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.tecgraf.puc-rio.br/~diego/luasocket/new/
 COMMENT=		Gives socket capabilities to lua50
 
 MAKEFILE=		${WRKSRC}/makefile
-ALL_TARGET=		dyn
+BUILD_TARGET=		dyn
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/02 21:46:32 poppnk Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/02 16:39:10 thomasklausner Exp $
 #
 
 DISTNAME=		xinetd-2.3.13
@@ -14,7 +14,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
-ALL_TARGET=		build
+BUILD_TARGET=		build
 CONFIGURE_ARGS+=	--with-loadavg
 
 .include "../../mk/bsd.prefs.mk"

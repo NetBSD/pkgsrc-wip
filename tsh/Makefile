@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/10 10:03:46 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/02 16:39:09 thomasklausner Exp $
 #
 
 DISTNAME=		tsh-0.6
@@ -12,7 +12,7 @@ COMMENT=		Lightweight remote shel wity 128AES and file transfers
 
 USE_BUILDLINK3=		yes
 
-ALL_TARGET=${LOWER_OPSYS}
+BUILD_TARGET=${LOWER_OPSYS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tsh ${PREFIX}/bin

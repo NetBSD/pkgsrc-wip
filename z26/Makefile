@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/16 17:05:44 xmor61 Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/02 16:39:10 thomasklausner Exp $
 #
 
 DISTNAME=		z26v213
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/z26_snapshot-20040523
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_PERL5+=		build
-ALL_TARGET=		netbsd
+BUILD_TARGET=		netbsd
 MAKE_ENV+=		"INSTALL_BINDIR=${PREFIX}/bin"
 MAKE_ENV+=		"INSTALL_MANDIR=${PREFIX}/man/man1"
 

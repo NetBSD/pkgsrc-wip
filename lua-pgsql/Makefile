@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/19 21:41:42 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/02 16:39:02 thomasklausner Exp $
 #
 
 DISTNAME=		luasql-2.0b
@@ -12,7 +12,7 @@ COMMENT=		PostgreSQL bindings for LUA
 
 USE_BUILDLINK3=		yes
 
-ALL_TARGET=		pglinux
+BUILD_TARGET=		pglinux
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libluasqlpostgres.2.0b.so \

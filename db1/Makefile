@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/03 18:33:03 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/02 16:38:58 thomasklausner Exp $
 #
 
 DISTNAME=		db.1.86
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.sleepycat.com/
 COMMENT=		Berkeley DB 1.86
 
 BUILD_DIRS=		${WRKSRC}/PORT/linux
-ALL_TARGET=		libdb.a
+BUILD_TARGET=		libdb.a
 
 do-install:
 	${INSTALL_DATA} ${BUILD_DIRS}/libdb.a ${PREFIX}/lib

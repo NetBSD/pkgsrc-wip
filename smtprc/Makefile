@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2004/05/09 21:44:18 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/02 16:39:07 thomasklausner Exp $
 
 .include "Makefile.common"
 
 COMMENT=	Open relay scanner
 
-ALL_TARGET=	freebsd
+BUILD_TARGET=	freebsd
 
 PTHREAD_OPTS=	require
 

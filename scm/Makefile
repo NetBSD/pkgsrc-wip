@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/14 12:53:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/02 16:39:06 thomasklausner Exp $
 #
 
 DISTNAME=	scm5d6
@@ -21,7 +21,7 @@ DEPENDS+=	slib>=2.4.4:../../devel/slib
 USE_BUILDLINK3=	# defined
 USE_GNU_TOOLS+=	make
 
-ALL_TARGET=	scmlit
+BUILD_TARGET=	scmlit
 
 SCM_DATA=	scm.info hobbit.info
 INFO_FILES=	${SCM_INFO}

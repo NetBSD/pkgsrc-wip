@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/18 22:17:57 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/02 16:38:55 thomasklausner Exp $
 #
 
 DISTNAME=		and-1.2.0
@@ -11,7 +11,7 @@ COMMENT=		auto nice daemon
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=	make
-ALL_TARGET=	default
+BUILD_TARGET=	default
 
 USE_BUILDLINK3=		yes
 MYARCH=${OPSYS}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/14 17:37:24 aolcarton Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/02 16:39:08 thomasklausner Exp $
 
 DISTNAME=	t-gnus-6.17.2.00
 CATEGORIES=	mail
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-lispdir=${EMACS_LISPPREFIX}/gnus
 CONFIGURE_ARGS+=	--with-etcdir=${PREFIX}/share/gnus
 
-ALL_TARGET=		all-ja
+BUILD_TARGET=		all-ja
 INSTALL_TARGET=		install-ja
 
 USE_MAKEINFO=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/02 07:36:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/02 16:38:56 thomasklausner Exp $
 #
 
 DISTNAME=	jakarta-tomcat-connectors-jk2-${AP_JK_VER}-src
@@ -17,7 +17,7 @@ USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 
 AP_JK_VER=	2.0.4
-ALL_TARGET=	jk2-build-apxs
+BUILD_TARGET=	jk2-build-apxs
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 do-install:

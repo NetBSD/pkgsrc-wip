@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/29 18:04:07 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/02 16:39:07 thomasklausner Exp $
 #
 
 DISTNAME=		shapelib-1.2.10
@@ -14,7 +14,7 @@ USE_LIBTOOL=		YES
 
 NO_CONFIGURE=		YES
 
-ALL_TARGET=		lib
+BUILD_TARGET=		lib
 INSTALL_TARGET=		lib_install
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/12 02:43:56 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/02 16:39:07 thomasklausner Exp $
 # FreeBSD: ports/graphics/svgalib/Makefile,v 1.10 2003/03/07 06:04:12 ade Exp
 #
 
@@ -15,7 +15,7 @@ USE_BUILDLINK3=	yes
 CFLAGS+=	-g -DUSE_LIBC_VM86
 MANCOMPRESSED=	yes
 
-ALL_TARGET=	shared static
+BUILD_TARGET=	shared static
 
 #ONLY_FOR_ARCHS=	i386
 

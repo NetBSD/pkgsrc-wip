@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/14 21:42:16 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/02 16:39:05 thomasklausner Exp $
 #
 
 DISTNAME=	picasm105
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.iki.fi/hyvatti/pic/picasm105/
 COMMENT=	Assembler for Microchip PIC16Cxx microcontrollers
 
 MAKEFILE=	makefile.uni
-ALL_TARGET=	picasm
+BUILD_TARGET=	picasm
 
 USE_GNU_TOOLS+=	make
 USE_BUILDLINK3=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/10 22:06:32 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/02 16:38:59 thomasklausner Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-carbon-21.3.50
@@ -47,7 +47,7 @@ INFO_FILES+=	reftex sc speedbar vip viper widget woman
 
 REPLACE_PERL=	lib-src/grep-changelog
 
-ALL_TARGET=	bootstrap
+BUILD_TARGET=	bootstrap
 
 pre-install:
 	@${FIND} ${WRKSRC} -type f -name "*.orig" | ${XARGS} ${RM} -f

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/02 04:47:39 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/02 16:38:59 thomasklausner Exp $
 #
 
 DISTNAME=		ghostpcl_1.38p1
@@ -14,7 +14,7 @@ COMMENT=		PCL-5 and PCL-XL interpreter
 USE_BUILDLINK3=		yes
 
 USE_GNU_TOOLS+=make
-ALL_TARGET=pcl6
+BUILD_TARGET=pcl6
 
 .if defined(GHOSTPCL_USE_X11)
 .  if ${GHOSTPCL_USE_X11} == "YES" || ${GHOSTPCL_USE_X11} == "yes"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/08/22 04:05:33 schnoebe Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/02 16:38:57 thomasklausner Exp $
 # FreeBSD Id: ports/sysutils/copytape/Makefile,v 1.10 2003/02/20 19:00:46 knu Exp
 
 DISTNAME=		copytape
@@ -14,7 +14,7 @@ COMMENT=	Copytape duplicates magnetic tapes, with only one drive
 BUILD_DEPENDS+=	gsharutils>=4.2.1nb2:../../archivers/gsharutils
 
 WRKSRC=			${WRKDIR}
-ALL_TARGET=		copytape
+BUILD_TARGET=		copytape
 
 # MASTER_SITES=		${MASTER_SITE_COMP_SOURCES}
 # DISTNAME=		copytape

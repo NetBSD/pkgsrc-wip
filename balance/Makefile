@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/16 17:47:36 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/02 16:38:57 thomasklausner Exp $
 #
 
 DISTNAME=		balance-3.15
@@ -11,7 +11,7 @@ COMMENT=		TCP loadbalancer with roundrobin and failover
 
 USE_BUILDLINK3=		yes
 
-ALL_TARGET=balance
+BUILD_TARGET=balance
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/balance ${PREFIX}/sbin/

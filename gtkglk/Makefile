@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/11 23:22:54 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/02 16:39:00 thomasklausner Exp $
 #
 
 DISTNAME=	gtkglk-0.2
@@ -11,7 +11,7 @@ COMMENT=	Gtk+ 2 port of Glk interface for text adventures
 
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
-ALL_TARGET=	default
+BUILD_TARGET=	default
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/gtkglk

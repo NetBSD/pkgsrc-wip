@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/09/21 14:27:33 dillo Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/02 16:39:11 thomasklausner Exp $
 #
 
 DISTNAME=		ZSNESS_0920
@@ -18,7 +18,7 @@ USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 USE_GNU_TOOLS+=		make
 ONLY_FOR_PLATFORM=	*-*-i386
-ALL_TARGET=		zsnes
+BUILD_TARGET=		zsnes
 USE_X11=		# defined
 
 .include "../../devel/SDL/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/09/23 05:59:53 jlamwww Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/02 16:39:11 thomasklausner Exp $
 #
 
 DISTNAME=	mcats-0.1.0
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--enable-iodbc
 
 do-build:
 	cd ${WRKSRC}/src/modules/iodbc &&			\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}
 
 do-install:
 	cd ${WRKSRC}/src/modules/iodbc &&			\

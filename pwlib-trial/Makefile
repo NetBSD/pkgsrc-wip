@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/29 18:02:26 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/02 16:39:06 thomasklausner Exp $
 #
 
 DISTNAME=		pwlib_1.5.2
@@ -24,7 +24,7 @@ PTHREAD_OPTS+=          require
 MAKE_ENV+=              PWLIBDIR="${WRKSRC}"
 MAKE_ENV+=              CC="${CC}"
 MAKE_ENV+=              CPLUS="${CXX}"
-ALL_TARGET=             opt
+BUILD_TARGET=             opt
 
 FILES_SUBST+=           LIBTOOL="${LIBTOOL}"
 FILES_SUBST+=           PTHREADS_PREFIX="${BUILDLINK_PREFIX.pthread}"
