@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/12/06 08:46:33 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/27 23:38:01 jeremy-c-reed Exp $
 #
 
 DISTNAME=		ypserv-2.9
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.kernel.org/pub/linux/utils/net/NIS/
 EXTRACT_SUFX=		.tar.bz2
@@ -11,9 +12,14 @@ HOMEPAGE=		http://www.linux-nis.org/nis/ypserv/
 COMMENT=		NIS (YP) Server
 
 DEPENDS+=		portmap>=4:../../wip/portmap
+# rc.d scripts use domainname from yp-tools or net-tools
+#DEPENDS+=		yp-tools-[0-9]*:../../wip/yp-tools
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
+USE_PKGINSTALL=		yes
+
+RCD_SCRIPTS=		yppasswdd ypserv
 
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
