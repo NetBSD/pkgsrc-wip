@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/02 06:22:46 xtraeme Exp $
-lib/python2p2/site-packages/pyRXP.so
+@comment $NetBSD: PLIST,v 1.2 2004/05/02 21:51:10 blef Exp $
+${PYSITELIB}/pyRXP.so
