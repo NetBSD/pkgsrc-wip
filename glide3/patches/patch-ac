@@ -1,0 +1,28 @@
+--- swlibs/include/make/3dfx.mak.orig	Fri Aug  9 11:03:46 2002
++++ swlibs/include/make/3dfx.mak	Fri Mar 19 13:18:07 2004
+@@ -107,7 +107,7 @@
+ GCINCS	       = -I. -I$(BUILD_ROOT_SWLIBS)/include -I$(BUILD_ROOT_HW)/include -I/usr/X11R6/include
+ GCOPTS	       = -Wall
+ 
+-CNODEBUG       = -O6 -m486 -fomit-frame-pointer -funroll-loops \
++CNODEBUG       = -O -m486 -fomit-frame-pointer -funroll-loops \
+ 	-fexpensive-optimizations -ffast-math -DBIG_OPT
+ 
+ CDEBUG	       = -g -O
+@@ -148,7 +148,7 @@
+ LCFLAGS	= $(LCINCS) $(LCDEFS) $(LCOPTS)
+ VCFLAGS	= $(VCINCS) $(VCDEFS) $(VCOPTS)
+ 
+-CFLAGS	= $(CDEBUG) $(GCFLAGS) $(LCFLAGS) $(VCFLAGS)
++CFLAGS	= $(GCFLAGS) $(LCFLAGS) $(VCFLAGS)
+ 
+ #--------------------------------------------------------------------------
+ # build up global linker flags (LDFLAGS) and libraries (LDLIBS)
+@@ -251,6 +251,7 @@
+ 
+ $(SHARED_LIBRARY): $(LIBPARTS) $(SUBLIBRARIES)
+ 	$(LINK) $(LDFLAGS) -shared -Wl,-soname,$(SONAME) -o $(SHARED_LIBRARY) \
++		-Wl,-R/usr/X11R6/lib -L/usr -L/usr/X11R6/lib \
+ 		-Xlinker --whole-archive \
+ 		$(LIBRARIES) $(SUBLIBRARIES) \
+ 		-Xlinker --no-whole-archive \

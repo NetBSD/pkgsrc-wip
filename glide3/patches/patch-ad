@@ -1,0 +1,10 @@
+--- swlibs/texus/Makefile.orig	Sun Feb 29 22:22:34 2004
++++ swlibs/texus/Makefile	Sun Feb 29 22:22:50 2004
+@@ -19,6 +19,6 @@
+ #
+ 
+ THISDIR = texus
+-SUBDIRS = lib cmd tests examples
++SUBDIRS = lib
+ 
+ include $(BUILD_ROOT_SWLIBS)/include/make/3dfx.mak

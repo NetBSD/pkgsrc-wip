@@ -1,0 +1,20 @@
+--- swlibs/fxmisc/fxdll.h.orig	Thu Apr 20 17:26:42 2000
++++ swlibs/fxmisc/fxdll.h	Wed Mar  3 09:57:50 2004
+@@ -57,6 +57,8 @@
+ #undef FX_CSTYLE
+ #endif
+ 
++#undef FX_DLL_DEFINITION
++
+ #if defined(FX_DLL_DEFINITION)
+   #if defined(FX_DLL_ENABLE)
+     #if defined(__MSC__)
+@@ -98,7 +100,7 @@
+  * We don't want any of this DLL junk for DJGPP or UNIX
+  * so undo what is done above.
+  */
+-#if defined(__DJGPP__) || defined(__unix__)
++#if defined(__DJGPP__) || defined(__unix__) || defined(__NetBSD__)
+   #ifdef FX_CALL
+     #undef FX_CALL
+   #endif
