@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1286 2004/05/19 02:39:20 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1286 2004/05/19 02:39:20 adrian_p Exp $
+# $Id: Makefile,v 1.1287 2004/05/20 21:11:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1287 2004/05/20 21:11:22 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -319,7 +319,6 @@ SUBDIR+=	libmatchbox
 SUBDIR+=	libneural
 SUBDIR+=	libprelude
 SUBDIR+=	libssh
-SUBDIR+=	libstatgrab
 SUBDIR+=	libticables
 SUBDIR+=	libticalcs
 SUBDIR+=	libtifiles
