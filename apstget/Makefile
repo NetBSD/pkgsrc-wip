@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2004/12/23 15:14:32 poppnk Exp $
+# $NetBSD: Makefile,v 1.18 2004/12/28 00:31:38 xtraeme Exp $
 
-DISTNAME=	apstget-20041223
-PKGREVISION=	1
-CATEGORIES=	pkgtools wip
+DISTNAME=	apstget-20041227
+CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
@@ -25,7 +24,7 @@ do-extract:
 	@${CP} -Rp ${FILESDIR} ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/apst-get ${PREFIX}/bin/apst-get
+	${INSTALL_SCRIPT} ${WRKSRC}/apst-get ${PREFIX}/bin/apstget
 	${INSTALL_SCRIPT} ${WRKSRC}/apstget-wrapper ${PREFIX}/libexec/
 
 .include "../../mk/bsd.prefs.mk"
