@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/13 11:57:03 jmmv Exp $
-
-SHA1 (ap-bandwidth-2.0.3/mod_bandwidth.c) = b85949f10b23d609b662482364b9acf5f2a8401b
-Size (ap-bandwidth-2.0.3/mod_bandwidth.c) = 41129 bytes
-SHA1 (ap-bandwidth-2.0.3/doc-en.html) = 23e01698d6a3621c0f1b8ec5bfe54e43d5148c17
-Size (ap-bandwidth-2.0.3/doc-en.html) = 23766 bytes
