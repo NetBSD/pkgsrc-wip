@@ -1,0 +1,8 @@
+# $NetBSD: TODO,v 1.1 2003/04/06 00:59:02 marmfield Exp $
+#
+
+TODO list for nagios-base
+	- Create a rc.d script. I have one already but I don't like it.
+	- A little more testing.
+	- Add apache installation instructions to some post install
+message, instead of always looking at doco.
