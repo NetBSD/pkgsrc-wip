@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/27 18:31:22 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/12 02:43:37 minskim Exp $
 
 DISTNAME=	dbxml-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +20,6 @@ PYSETUPBUILDARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4} \
 			--with-pathan=${BUILDLINK_PREFIX.libpathan}
 
 .include "../../wip/dbxml/buildlink2.mk"
-.include "../../wip/libpathan/buildlink2.mk"
+.include "../../textproc/libpathan/buildlink2.mk"
 .include "../../textproc/xerces-c/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

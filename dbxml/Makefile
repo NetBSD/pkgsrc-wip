@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/26 21:27:47 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/12 02:43:36 minskim Exp $
 
 DISTNAME=	dbxml-1.2.0
 WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
@@ -20,6 +20,6 @@ CONFIGURE_ARGS+=	--with-xerces=${BUILDLINK_PREFIX.xerces-c}
 CONFIGURE_ARGS+=	--with-pathan=${BUILDLINK_PREFIX.libpathan}
 
 .include "../../databases/db4/buildlink2.mk"
-.include "../../wip/libpathan/buildlink2.mk"
+.include "../../textproc/libpathan/buildlink2.mk"
 .include "../../textproc/xerces-c/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
