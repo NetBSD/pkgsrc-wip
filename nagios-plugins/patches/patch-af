@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2004/06/10 08:26:07 cubidou Exp $
+
+--- plugins/Makefile.in.orig	Fri Jul 11 08:30:59 2003
++++ plugins/Makefile.in
+@@ -165,8 +165,8 @@ TESTS_ENVIRONMENT = perl -I $(top_buildd
+ 
+ TESTS = @PLUGIN_TEST@
+ 
+-AM_INSTALL_PROGRAM_FLAGS = @INSTALL_OPTS@
+ 
++#AM_INSTALL_PROGRAM_FLAGS = @INSTALL_OPTS@
+ 
+ ##############################################################################
+ # the actual targets

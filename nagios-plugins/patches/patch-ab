@@ -1,13 +1,130 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/04/06 00:33:12 marmfield Exp $
+$NetBSD: patch-ab,v 1.2 2004/06/10 08:26:07 cubidou Exp $
 
---- plugins/Makefile.am.orig	2003-02-19 18:15:52.000000000 +1100
-+++ plugins/Makefile.am
-@@ -32,7 +32,7 @@ TESTS = @PLUGIN_TEST@
- test:
- 	perl -I $(top_builddir) -I $(top_srcdir) ../test.pl
+--- configure.orig	Fri Jul 11 08:30:56 2003
++++ configure
+@@ -6091,7 +6091,7 @@ _ACEOF
  
--AM_INSTALL_PROGRAM_FLAGS = @INSTALL_OPTS@
-+#AM_INSTALL_PROGRAM_FLAGS = @INSTALL_OPTS@
+ fi
  
- ##############################################################################
- # the actual targets
+-if test "$ac_cv_lib_crypt_main" = "yes"; then
++if false; then
+   if test -n "$PGSQL"; then
+     LDFLAGS="$LDFLAGS -L$PGSQL/lib"
+     CPPFLAGS="$CPPFLAGS -I$PGSQL/include"
+@@ -6692,7 +6692,7 @@ _ACEOF
+ 
+ fi
+ 
+-if test "$ac_cv_lib_radiusclient_rc_read_config" = "yes"; then
++if false; then
+   EXTRAS="$EXTRAS check_radius"
+ 	RADIUSLIBS="-lradiusclient"
+ 
+@@ -6763,7 +6763,7 @@ _ACEOF
+ 
+ fi
+ 
+-if test "$ac_cv_lib_ldap_main" = "yes"; then
++if false; then
+   LDAPLIBS="-lldap -llber"\
+   LDAPINCLUDE="-I/usr/include/ldap"
+ 
+@@ -6786,7 +6786,7 @@ if test "${with_mysql+set}" = set; then
+   withval="$with_mysql"
+   MYSQL=$withval
+ fi;
+-if test -n "$MYSQL"; then
++if false; then
+   MYSQLLIBDIR=$MYSQL/lib/mysql
+   CPPFLAGS="-I$MYSQL/include"
+   echo "$as_me:$LINENO: checking for mysql_init in -lmysqlclient" >&5
+@@ -7374,7 +7374,7 @@ if test $ac_cv_lib_mysqlclient_mysql_clo
+ fi
+ 
+ fi
+-if test "$ac_cv_lib_mysqlclient_mysql_init" = "yes" -o "$ac_cv_lib_mysqlclient_mysql_close" = "yes"; then
++if false; then
+ 
+ 
+ for ac_header in mysql/mysql.h mysql/errmsg.h
+@@ -12477,7 +12477,7 @@ fi
+ 
+ if test -n "$ac_cv_path_PATH_TO_NSLOOKUP"
+ then
+-	if nslookup -sil 127.0.0.1 2>&1 | grep "Invalid option: sil" >/dev/null
++	if nslookup -sil 127.0.0.1 2>&1 | fgrep "Invalid option: sil" >/dev/null
+ 	then
+ 		echo "$as_me:$LINENO: result:       nslookup syntax... $PATH_TO_NSLOOKUP" >&5
+ echo "${ECHO_T}      nslookup syntax... $PATH_TO_NSLOOKUP" >&6
+@@ -12817,7 +12817,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-if test -x "$PATH_TO_LMSTAT"
++if false
+ then
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -12867,7 +12867,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-if test -x "$PATH_TO_SMBCLIENT"
++if false
+ then
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -12972,7 +12972,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-if test -x "$PATH_TO_SNMPGET"
++if false
+ then
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -13023,7 +13023,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-if test -x "$PATH_TO_SNMPGETNEXT"
++if false
+ then
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -13032,7 +13032,7 @@ _ACEOF
+ 
+ fi
+ 
+-if ( $PERL -M"Net::SNMP 3.6" -e 'exit' 2>/dev/null  )
++if false
+ then
+ 	echo "Found Net::SNMP perl module"
+ else
+@@ -13118,7 +13118,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-if test -x "$PATH_TO_QUAKESTAT"
++if false
+ then
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -13177,7 +13177,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-if test -x "$PATH_TO_FPING"
++if false
+ then
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -13554,7 +13554,7 @@ if test -n "$PATH_TO_DIG"; then
+ 	EXTRAS="$EXTRAS check_dig"
+ fi
+ 
+-if test -f plugins/check_nt.c ; then
++if false ; then
+   EXTRAS="$EXTRAS check_nt"
+ elif test -f ../plugins/check_nt.c ; then
+   EXTRAS="$EXTRAS check_nt"

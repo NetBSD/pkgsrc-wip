@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2004/05/09 05:04:26 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/10 08:26:07 cubidou Exp $
 #
 
-DISTNAME=	nagios-plugins-${PLUGINSVERSION}
 PKGREVISION=	# not defined
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagiosplug/}

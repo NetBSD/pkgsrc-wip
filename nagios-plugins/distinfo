@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.2 2004/02/29 15:48:25 anewsmurf Exp $
+$NetBSD: distinfo,v 1.3 2004/06/10 08:26:07 cubidou Exp $
 
 SHA1 (nagios-plugins-1.3.1.tar.gz) = dccbb84473533040830ad574e9eaa76c108f52a2
 Size (nagios-plugins-1.3.1.tar.gz) = 532516 bytes
-SHA1 (patch-aa) = 46f4feb01963fe039bb54773ecdbe955e0fb63f6
-SHA1 (patch-ab) = fab95efc557a1584fca698ca7248fa8caf524c77
-SHA1 (patch-ac) = f712e210359a2ae7167515b3931da3db8e089739
+SHA1 (patch-aa) = 265830ee4da79cb4cc7f208bb00c3a00ccafbf25
+SHA1 (patch-ab) = ba309552a17d2b79d8480b0126da7fba40c53e33
+SHA1 (patch-ac) = 61932d6aee37a33957e1ed8370c54a8896fc82b4
+SHA1 (patch-ad) = 4d0670c19d7fb94f00c1bcbbacb6326ea000517f
+SHA1 (patch-ae) = df35396bb9fa1e61faf3c0067bb0b82ba6d0847d
+SHA1 (patch-af) = 3c4daf788e06f31d148cbb0bc57c625166702e8d
