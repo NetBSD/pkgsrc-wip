@@ -1,3 +1,13 @@
+TEMPORARY REVISION: This pkg requires an installed
+version of itself; gcc3-ada will not work because
+of buildlink environment variable interactions. For
+Intel hardware, a pre-built version of this pkg may
+be downloaded from:
+
+https://www.johnrshannon.com/NetBSD/ix86/gcc-3.4-ada.tgz
+
+-----------------------------------------------
+
 In order to build this Ada compiler, you need
 a working GNAT compiler (GNAT version 3.14 or
 later, or GCC version 3.1 or later), including

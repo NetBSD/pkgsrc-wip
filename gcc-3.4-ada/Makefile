@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/26 17:04:37 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/27 14:02:41 johnrshannon Exp $
 #
 
 SNAPDATE=	20040225
@@ -36,7 +36,6 @@ GCC3_PKGMODIF=		_${GCC3_INSTALLTO_SUBPREFIX}
 
 GCC_SUBPREFIX=		${GCC3_INSTALLTO_SUBPREFIX}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 PLIST_SUBST+=		GCC_SUBPREFIX=${GCC_SUBPREFIX}
 FILES_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME}
@@ -49,6 +48,7 @@ CFLAGS+=	-I${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
 GCC_ARCHSUBDIR=	${GCC_SUBPREFIX}/lib/gcc/${GCC_PLATFORM}/${GCC_VERSION}
 GCC_ARCHDIR=	${PREFIX}/${GCC_ARCHSUBDIR}
+GCC_EXEC_PREFIX=${ADA_BOOT_PATH}/libexec/gcc/i386--netbsdelf2.0/3.4.0
 
 post-patch:
 	(cd files; \
@@ -63,13 +63,13 @@ do-configure:
 	(${TEST} -d  ${WRKDIR}/obj || ${MKDIR} ${WRKDIR}/obj && \
 	 cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} && \
 	 ${SETENV} PATH=${ADA_BOOT_PATH}/bin:${PATH} \
-	 ${SETENV} GCC_EXEC_PREFIX=/usr/pkg/gcc-3.4-ada/libexec/gcc/i386--netbsdelf2.0/3.4.0 \
+	 ${SETENV} GCC_EXEC_PREFIX=${GCC_EXEC_PREFIX} \
 	 ${WRKSRC}/configure ${CONFIGURE_ARGS})
 
 do-build:
 	(cd ${WRKDIR}/obj && \
 	 ${SETENV} PATH=${ADA_BOOT_PATH}/bin:${PATH} \
-	 ${SETENV} GCC_EXEC_PREFIX=/usr/pkg/gcc-3.4-ada/libexec/gcc/i386--netbsdelf2.0/3.4.0 \
+	 ${SETENV} GCC_EXEC_PREFIX=${GCC_EXEC_PREFIX} \
 	 make bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
 
 do-test:
@@ -80,6 +80,7 @@ do-install:
 	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc)
 
 post-install:
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
 	${ECHO} -n 'GCC_EXEC_PREFIX='>> ${WRKDIR}/gcc3.mk
 	${DIRNAME} `${GCC_PREFIX}/bin/gcc -print-prog-name=gnat1` >> ${WRKDIR}/gcc3.mk
 	${ECHO} -n 'ADA_INCLUDE_PATH+='>> ${WRKDIR}/gcc3.mk
