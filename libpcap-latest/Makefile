@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/09/13 14:27:38 ppostma Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/26 23:13:52 ppostma Exp $
 
 DISTNAME=		libpcap-0.8.3
 SVR4_PKGNAME=		lpcap
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		lex yacc
+USE_GNU_TOOLS+=		lex yacc m4
 USE_LIBTOOL=		yes
 
 .include "../../mk/bsd.prefs.mk"
