@@ -1,12 +1,12 @@
 #!@SH@
 #
-# $NetBSD: drwebd-rcd.src,v 1.1 2003/09/11 15:20:28 bubuchka Exp $
+# $NetBSD: drwebd-rcd.src,v 1.2 2003/09/13 17:21:21 bubuchka Exp $
 
 # PROVIDE: drwebd
 # REQUIRE: SERVERS
 # BEFORE: DAEMON
 
-. /etc/rc.subr
+. @RCD_SUBR@
 
 name="drwebd"
 rcvar=$name
