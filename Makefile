@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1377 2004/07/12 16:07:19 ianzag Exp $
-# $NetBSD: Makefile,v 1.1377 2004/07/12 16:07:19 ianzag Exp $
+# $Id: Makefile,v 1.1378 2004/07/13 01:49:58 cetrox Exp $
+# $NetBSD: Makefile,v 1.1378 2004/07/13 01:49:58 cetrox Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -581,6 +581,7 @@ SUBDIR+=	py-RXP
 SUBDIR+=	py-SQLObject
 SUBDIR+=	py-SciPy
 SUBDIR+=	py-Soya
+SUBDIR+=	py-Xlib
 SUBDIR+=	py-albatross
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-buildbot
