@@ -1,5 +1,5 @@
 
-# $NetBSD: Makefile,v 1.2 2005/01/09 14:34:24 zul_ Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/04 14:30:34 thomasklausner Exp $
 #
 
 DISTNAME=		eboard-0.9.5
@@ -10,7 +10,7 @@ MAINTAINER=	 	zul@netbsd-fr.org
 HOMEPAGE=		http://eboard.sourceforge.net/
 COMMENT=		Chess Inteface for Unix chess engines
 
-DEPENDS+=	sox*:../../audio/sox
+DEPENDS+=		sox-[0-9]*:../../audio/sox
 
 USE_BUILDLINK3=		yes
 USE_PERL5=		yes
