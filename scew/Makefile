@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/12/11 18:36:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/08 21:13:04 thorman Exp $
 #
 
 DISTNAME=	scew-0.3.1
 CATEGORIES=	devel
-MASTER_SITES=	http://savannah.nongnu.org/download/scew/scew.pkg/0.3.1/
+MASTER_SITES=	http://www.ccd.uab.es/~aleix/scew/
 
 MAINTAINER=	thorbjorn@jemander.net
 HOMEPAGE=	http://www.nongnu.org/scew/
