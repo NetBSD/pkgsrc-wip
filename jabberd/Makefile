@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2003/06/12 21:43:33 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2003/06/13 03:36:07 xtraeme Exp $
 #
 
-DISTNAME=	jabber-1.4.2
-CATEGORIES=	net
-MASTER_SITES=	http://jabberd.jabberstudio.org/downloads/
+DISTNAME=		jabber-1.4.2
+CATEGORIES=		net
+MASTER_SITES=		http://jabberd.jabberstudio.org/downloads/
 
-MAINTAINER=	jrp@hispabsd.org
-HOMEPAGE=	http://jabberd.jabberstudio.org/downloads/
-COMMENT=	Instant messaging server
+MAINTAINER=		jrp@hispabsd.org
+HOMEPAGE=		http://jabberd.jabberstudio.org/downloads/
+COMMENT=		Instant messaging server
 
 CONFLICTS=		jabberd2-[0-9]*:../../wip/jabberd2
 
@@ -23,16 +23,18 @@ RCD_SCRIPTS=		jabberd
 EGDIR=			${PREFIX}/share/examples/jabberd
 LIBDIR=			${PREFIX}/lib/jabberd
 INCDIR=			${PREFIX}/include/jabberd
+
 OWN_DIRS=		/var/spool/jabberd
 OWN_DIRS+=		/var/log/jabberd
 
-CONF_FILES=	${EGDIR}/jabber.xml ${PKG_SYSCONFDIR}/jabber.xml
+CONF_FILES=		${EGDIR}/jabber.xml ${PKG_SYSCONFDIR}/jabber.xml
 
 post-extract:
 	${MV} ${WRKSRC}/jabber.xml ${WRKSRC}/jabber.xml.in
 
 pre-configure:
-	${SED} -e "s|@LIBDIR@|${PREFIX}/lib/jabberd|g" \
+	${SED}	\
+		-e "s|@LIBDIR@|${PREFIX}/lib/jabberd|g" \
 		-e "s|@LOG_DIR@|/var/log/jabberd|g" \
 		-e "s|@PID_DIR@|/var/run|g" \
 		-e "s|@SPOOLDIR@|/var/spool/jabberd|g" \
