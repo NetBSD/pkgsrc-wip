@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/14 22:17:17 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/14 21:49:46 poppnk Exp $
 #
 
 DISTNAME=		vche-1.7.2
 CATEGORIES=		wip editors
-MASTER_SITES=		http://www.grigna.com/diego/linux/vche/
+MASTER_SITES=	http://www.grigna.com/diego/linux/vche/
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.grigna.com/diego/linux/vche/
 COMMENT=		Hex Editor for console
 
-GNU_TOOLS+=	make
-USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=	make
+USE_BUILDLINK3=	YES
+
+NOT_FOR_PLATFORM=	NetBSD-*-*
 
 do-build:
 	cd ${WRKSRC}/src &&\
