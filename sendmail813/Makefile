@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/08/21 16:31:23 adrian_p Exp $
+# $NetBSD: Makefile,v 1.22 2004/08/21 17:55:17 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -9,16 +9,6 @@ CONFLICTS+=	postfix-[0-9]* fastforward>=0.51nb2
 
 MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
-
-.if ${OPSYS} != "Linux" 
-PLIST_SUBST+=  CAT1=0
-PLIST_SUBST+=  CAT5=0
-PLIST_SUBST+=  CAT8=0
-.else
-PLIST_SUBST+=  CAT1=1
-PLIST_SUBST+=  CAT5=5
-PLIST_SUBST+=  CAT8=8
-.endif
 
 SMRSH_CMDDIR?=	${PREFIX}/libexec/sm.bin
 PLIST_SUBST+=	SMRSH_CMDDIR=${SMRSH_CMDDIR}
