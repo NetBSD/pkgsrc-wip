@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/24 00:08:47 rockpiper Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/15 02:34:20 rockpiper Exp $
 #
 
-DISTNAME=		gmpc-0.10.1
+DISTNAME=		gmpc-0.10.2
 CATEGORIES=		audio
 MASTER_SITES=		http://download.qballcow.nl/programs/gmpc/
 

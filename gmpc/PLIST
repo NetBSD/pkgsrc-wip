@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/24 00:08:47 rockpiper Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/15 02:34:20 rockpiper Exp $
 bin/gmpc
+share/applications/gmpc.desktop
 share/gmpc/gmpc-tray.png
 share/gmpc/gmpc.glade
 share/gmpc/media-next.png
@@ -8,4 +9,7 @@ share/gmpc/media-play.png
 share/gmpc/media-prev.png
 share/gmpc/media-stop.png
 share/gmpc/tray.png
+share/pixmaps/gmpc.png
+@dirrm share/pixmaps
 @dirrm share/gmpc
+@dirrm share/applications
