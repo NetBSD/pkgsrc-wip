@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/09/27 23:47:57 shattered Exp $
+# $NetBSD: Makefile,v 1.20 2003/10/06 14:11:41 tvierling Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -76,5 +76,6 @@ post-install:
 post-deinstall:
 	${RM} ${PKG_SYSCONFDIR}/platform-settings
 
+.include "../../devel/pth/buildlink2.mk" # uses pth.h, not pthread.h
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
