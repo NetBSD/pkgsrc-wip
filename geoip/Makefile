@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/09 12:20:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/27 12:00:19 xtraeme Exp $
 #
 
 DISTNAME=	GeoIP-1.1.9
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/GeoIP/geoip/}
 CATEGORIES=	net
 MASTER_SITES=	http://www.maxmind.com/download/geoip/api/c/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.maxmind.com/download/geoip/api/c/
 COMMENT=	Find the country from any IP address
 

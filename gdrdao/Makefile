@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/14 11:27:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/27 12:00:18 xtraeme Exp $
 #
 
 DISTNAME=	gdrdao-0.4.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gdrdao/}
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://gdrdao.sourceforge.net/
 COMMENT=	GTK-based GUI frontend for cdrdao
 

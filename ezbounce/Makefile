@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/20 06:27:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/27 12:00:15 xtraeme Exp $
 #
 
 DISTNAME=	ezbounce-1.02
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://druglord.freelsd.org/ezbounce/ \
 		http://www.shellcentral.com/downloads/files/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://druglord.freelsd.org/ezbounce/
 COMMENT=	Highly Configurable IRC Proxy
 
