@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/06/08 21:06:52 ianharding Exp $
+
+You will have to modify the aolserver configuration file "nsd.tcl" 
+which is installed at ${PKGSYSCONFDIR}/nsd.tcl
+in order to use nspostgres.  See www.aolserver.com for more info.
+
+===========================================================================

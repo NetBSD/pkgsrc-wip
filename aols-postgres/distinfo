@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/08 21:06:52 ianharding Exp $
+
+SHA1 (nspostgres-4.0.tar.gz) = 3018b9dca24a3d9c2958e7baea4654fb93f0aa7d
+Size (nspostgres-4.0.tar.gz) = 20960 bytes
+SHA1 (patch-aa) = 95c16707b90119b49b4c92f5fcb93f9f0ad03315
