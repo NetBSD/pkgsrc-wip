@@ -3,9 +3,9 @@
 # APST-GET : Yet Another PkgSrc Tool to manage packages.
 #
 # AUTHOR: pancake < pancake@phreaker.net >
-# DATE: 2004/10/25
+# DATE: 2004/11/10
 #
-# depends: pkg_find, pkg_tarup, awk
+# depends: pkg_find, pkg_tarup, awk, pkglint
 #
 
 if [ -e "_etc_/apstget.conf" ]; then
@@ -83,6 +83,7 @@ do_usage() {
 	echo "  relink       - try to solve all broken libs."
 	echo "  clean        - clean all build directories."
 	echo "  autoclean    - remove all outdated distfiles."
+	echo "  orphan       - list orphaned packages."
 	echo ""
 	echo "variables (environ|_etc_/apstget.conf):"
 	echo "  MAKE_TARGET, INTERACTIVE, QUITE, IGNORE_ERRORS"
@@ -452,6 +453,15 @@ case "$1" in
 		do_relink $2
 		shift;
 		if [ "$2" = "" ]; then break; fi
+	done
+	;;
+"orphan")
+	PKG=`pkg_info -a| awk '{ print $1 }' | grep -e lib `
+	for A in $PKG ; do
+		COW=`pkg_delete -nRr ${A}| grep deinstalling`
+		if [ "${COW}" = "" ]; then
+			echo $A
+		fi
 	done
 	;;
 *)
