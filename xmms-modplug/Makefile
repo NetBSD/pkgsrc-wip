@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/17 02:56:56 blef Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/05 22:17:01 bencollver Exp $
 #
 
 DISTNAME=		modplugxmms-2.05
@@ -14,15 +14,17 @@ DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
 LDFLAGS+=		-lm -lossaudio
 USE_X11=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool-disable-static
 
 CFLAGS+=		-DDEVICE_NAME="\"\\\"${DEVOSSSOUND}\\\"\""
 
-.include "../../wip/libmodplug/buildlink2.mk"
-.include "../../audio/xmms/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+.include "../../wip/libmodplug/buildlink3.mk"
+.include "../../audio/xmms/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

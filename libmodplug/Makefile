@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/17 02:56:00 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/05 22:16:27 bencollver Exp $
 #
 
 DISTNAME=		libmodplug-0.7
@@ -9,9 +9,11 @@ MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://modplug-xmms.sourceforge.net/
 COMMENT=		Library for decoding mod-like music formats
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
-.include "../../mk/ossaudio.buildlink2.mk"
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
