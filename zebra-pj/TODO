@@ -1,3 +1,5 @@
-1. Test more.
-
-2. Ask Paul to put the snap in use in the 'pkgsrc' subdir.
+1. Perhaps test more:
+   vtysh
+   no v6 (platform without support)
+   other than NetBSD
+   BGP, RIPv2, OSPFv3
