@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/29 21:18:42 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2003/11/29 21:40:49 mpasternak Exp $
 
 SHA1 (gg2-2.0pre3.tar.gz) = ded70e1799045aa4768b239a6dcc6551d8c83d84
 Size (gg2-2.0pre3.tar.gz) = 854082 bytes
+SHA1 (patch-aa) = 019de238db4789c44eb02ede98b642ab42a1f9a7

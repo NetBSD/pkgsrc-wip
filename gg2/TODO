@@ -1,8 +1,7 @@
-$Id: TODO,v 1.1.1.1 2003/11/29 21:18:42 mpasternak Exp $
+$Id: TODO,v 1.2 2003/11/29 21:40:49 mpasternak Exp $
 
-Add extra options for it:
+Add extra configurable options for it:
 
-Build plugin Gadu-Gadu......... : no
 Build plugin Jabber............ : no
 Build plugin docklet........... : no
 Build plugin sound ESD......... : no
@@ -11,3 +10,6 @@ Build plugin sound external.... : no
 Build plugin remote............ : no
 Build plugin update............ : no
 Build perl support............. : no
+
+patches/patch-aa should be written in a different way (it won't work
+on Linux now, propably)

@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2003/11/29 21:40:49 mpasternak Exp $
+
+--- lib/Makefile.in~	Tue Jun 10 00:04:24 2003
++++ lib/Makefile.in	Sat Nov 29 22:34:05 2003
+@@ -244,7 +244,8 @@
+ 
+ libgg2_core_la_HEADERS = gg2_core.h
+ 
+-libgg2_core_la_LIBADD = $(PERL_OPTION_LDFLAGS) -ldl 
++libgg2_core_la_LIBADD = $(PERL_OPTION_LDFLAGS) 
++# -ldl TODO! Include it on systems, that need it (Linux)
+ libgg2_core_la_LDFLAGS = -version-info 2:0:0
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
