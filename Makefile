@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.272 2003/06/25 15:39:10 xtraeme Exp $
-# $NetBSD: Makefile,v 1.272 2003/06/25 15:39:10 xtraeme Exp $
+# $Id: Makefile,v 1.273 2003/06/25 22:18:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.273 2003/06/25 22:18:29 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -27,6 +27,7 @@ SUBDIR+=	bitlbee
 SUBDIR+=	bugzilla
 SUBDIR+=	byacc
 SUBDIR+=	cdpr
+SUBDIR+=	cgdb
 SUBDIR+=	cherokee
 SUBDIR+=	chksniff
 SUBDIR+=	cjk-latex
