@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/11/15 19:45:00 daprice Exp $
+
+--- src/Makefile.in.orig	Thu Jul 15 09:42:02 2004
++++ src/Makefile.in	Tue Jul 27 14:25:14 2004
+@@ -55,7 +55,7 @@
+ 	$(top_srcdir)/m4/sgi.m4 $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+-mkinstalldirs = $(mkdir_p)
++mkinstalldirs = $(SHELL) ../mkinstalldirs
+ CONFIG_CLEAN_FILES =
+ am__installdirs = "$(DESTDIR)$(bindir)"
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
+@@ -503,7 +503,7 @@
+ @ISCYGWIN_TRUE@@LOCALLINK_TRUE@	../../../ajax/libajax.la \
+ @ISCYGWIN_TRUE@@LOCALLINK_TRUE@	../../../plplot/libplplot.la \
+ @ISCYGWIN_TRUE@@LOCALLINK_TRUE@	$(am__DEPENDENCIES_1)
+-DEFAULT_INCLUDES = -I. -I$(srcdir)
++DEFAULT_INCLUDES = -I.
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/contacts.Po \
+@@ -638,7 +638,7 @@
+ SHELL = @SHELL@
+ STRIP = @STRIP@
+ VERSION = @VERSION@
+-XLIB = @XLIB@
++XLIB = @X116@ @XLIB@
+ X_CFLAGS = @X_CFLAGS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_LIBS = @X_LIBS@
+@@ -687,8 +687,8 @@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ SUBDIRS = 
+-@LOCALLINK_FALSE@INCLUDES = -I${embprefix}/include
+-@LOCALLINK_TRUE@INCLUDES = -I../../../plplot -I../../../ajax -I../../../nucleus
++@LOCALLINK_FALSE@INCLUDES = -I@INCLUDE@
++@LOCALLINK_TRUE@INCLUDES = -I@INCLUDE@
+ @ISAIXIA64_FALSE@@ISSHARED_TRUE@AM_CFLAGS = 
+ @ISAIXIA64_TRUE@@ISSHARED_TRUE@@LOCALLINK_FALSE@AM_CFLAGS = -Wl,-bdynamic -Wl,-brtl -L${embprefix}/lib -lajax -lnucleus
+ @ISAIXIA64_TRUE@@ISSHARED_TRUE@@LOCALLINK_TRUE@AM_CFLAGS = -Wl,-bdynamic -Wl,-brtl -L../../../plplot/.libs -L../../../ajax/.libs -L../../../nucleus/.libs -lajax -lnucleus

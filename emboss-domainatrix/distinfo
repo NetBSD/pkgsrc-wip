@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/15 19:45:00 daprice Exp $
+
+SHA1 (emboss/domainatrix-1.0.0-20040715/DOMAINATRIX-1.0.0.tar.gz) = 07e819e1884f406200edef2922cf0bd4d32fd45d
+Size (emboss/domainatrix-1.0.0-20040715/DOMAINATRIX-1.0.0.tar.gz) = 551090 bytes
+SHA1 (patch-aa) = cabe38402d2da8b447c53b820059c2eaed4db7bd
+SHA1 (patch-ab) = e72d544c796489d4b441a21147af9a125c4f370f
