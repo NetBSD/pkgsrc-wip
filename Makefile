@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.445 2003/09/13 22:53:18 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.445 2003/09/13 22:53:18 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.446 2003/09/14 17:04:31 jcd Exp $
+# $NetBSD: Makefile,v 1.446 2003/09/14 17:04:31 jcd Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -30,6 +30,7 @@ SUBDIR+=	afterstep2
 SUBDIR+=	aget
 SUBDIR+=	allegro
 SUBDIR+=	amap
+SUBDIR+=	amavisd-new
 SUBDIR+=	amsn
 SUBDIR+=	aolserver
 SUBDIR+=	ap-bunzip2
