@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/19 19:23:31 daprice Exp $
+
+SHA1 (gstat-2.4.3.tar.gz) = 8402201685dfc034eb1cce2039d350762343371b
+Size (gstat-2.4.3.tar.gz) = 1518844 bytes
+SHA1 (patch-aa) = a929a9c2549898741d162788e2d9ed06f8cfb383

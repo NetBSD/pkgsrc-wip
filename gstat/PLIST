@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/19 19:23:31 daprice Exp $
+bin/gstat
