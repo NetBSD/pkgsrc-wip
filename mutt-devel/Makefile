@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2003/07/21 17:33:18 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.4 2003/08/13 21:41:20 shattered Exp $
 
 DISTNAME=		mutt-1.5.4i
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
 CATEGORIES=		mail
-MASTER_SITES=		ftp://ftp.mutt.org/mutt/ \
-			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
-			ftp://gd.tuwien.ac.at/infosys/mail/mutt/ \
-			ftp://ftp.fu-berlin.de/pub/unix/mail/mutt/
+MASTER_SITES=		ftp://ftp.mutt.org/mutt/devel/ \
+			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/devel/ \
+			ftp://gd.tuwien.ac.at/infosys/mail/mutt/devel/ \
+			ftp://ftp.fu-berlin.de/pub/unix/mail/mutt/devel/
 
 MAINTAINER=		charlie@rubberduck.com
 HOMEPAGE=		http://www.mutt.org/
