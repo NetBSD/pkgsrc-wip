@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/04 07:19:19 jeremy-c-reed Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/05/09 05:45:44 blef Exp $
 #
 
 DISTNAME=		pdq-2.2.1
@@ -13,7 +13,7 @@ HOMEPAGE=		http://pdq.sourceforge.net/
 DISTINFO_FILE=		${.CURDIR}/../../wip/pdq/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/pdq/patches
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR=	pdq

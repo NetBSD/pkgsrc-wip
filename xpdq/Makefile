@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/04 07:19:54 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/09 05:45:44 blef Exp $
 #
 
 PKGNAME=	x${DISTNAME}
@@ -19,5 +19,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/xpdq.1 ${PREFIX}/man/man1/xpdq.1
 
 .include "../../wip/pdq/Makefile.common"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
