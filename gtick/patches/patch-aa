@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/16 18:48:52 bencollver Exp $
+
+--- about.c.orig	Sun Jun 15 22:20:38 2003
++++ about.c
+@@ -30,7 +30,11 @@
+ #ifdef FREEBSD
+ #include <machine/soundcard.h>
+ #else
++#ifdef __NetBSD__
++#include <soundcard.h>
++#else
+ #include <linux/soundcard.h>
++#endif
+ #endif
+ 
+ #include "gtick.h"

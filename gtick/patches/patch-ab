@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/06/16 18:48:52 bencollver Exp $
+
+--- dsp.c.orig	Sun Jun 15 22:19:16 2003
++++ dsp.c
+@@ -31,8 +31,12 @@
+ #ifdef FREEBSD
+ #include <machine/soundcard.h>
+ #else
++#ifdef __NetBSD__
++#include <soundcard.h>
++#else
+ #include <linux/soundcard.h>
+ #endif
++#endif
+ #include <glib.h>
+ 
+ #include "gtick.h"
+@@ -54,13 +58,13 @@ int gtInitDSP (TikTok *ticker)
+ 	fragmentsize = 0x7fff000E;
+ 
+ #ifdef DEBUG
+-	g_print ("gtInitDSP: Initialising /dev/dsp..\n");
++	g_print ("gtInitDSP: Initialising /dev/audio..\n");
+ #endif
+ 
+ 	/* Initialise /dev/dsp */
+-	if ((dsp = open ("/dev/dsp", O_WRONLY)) == -1)
++	if ((dsp = open ("/dev/audio", O_WRONLY)) == -1)
+ 	  {
+-	    perror ("/dev/dsp");
++	    perror ("/dev/audio");
+ 	    return -1;
+ 	  }
+ 
