@@ -36,9 +36,11 @@
 #include <string.h>
 #include <unistd.h>
 
-#define PKGSRCDIR	"/usr/pkgsrc"
+#define PKGSRCDIR	"@PKGSRCDIR@"
 
-static const char	skip[][] = { ".", "..", "CVS", "bootstrap", "doc", "distfiles", "licenses", "mk" };
+static const char * const skip[] = {
+	".", "..", "CVS", "bootstrap", "doc", "distfiles", "licenses", "mk", NULL
+};
 
 static void		pkgclean(const char *);
 static int		checkskip(const struct dirent *);
@@ -68,18 +70,26 @@ pkgclean(const char *path)
 		err(1, "%s", path);
 
 	for (i = 0; i < ncat; i++) {
-		(void)snprintf(tmp, sizeof(tmp), "%s/%s", path, cat[i]->d_name);
+		if ((size_t)snprintf(tmp, sizeof(tmp), "%s/%s", path, cat[i]->d_name) > sizeof(tmp)) {
+			warn("filename too long: %s\n", tmp);
+			continue;
+		}
 		if (stat(tmp, &sb) < 0 || !S_ISDIR(sb.st_mode))
 			continue;
 		nlist = scandir(tmp, &list, checkskip, alphasort);
 		for (j = 0; j < nlist; j++) {
-			(void)snprintf(tmp, sizeof(tmp), "%s/%s/%s/work", path,
-			    cat[i]->d_name, list[j]->d_name);
+			if ((size_t)snprintf(tmp, sizeof(tmp), "%s/%s/%s/work", path,
+			    cat[i]->d_name, list[j]->d_name) > sizeof(tmp)) {
+			    	warn("filename too long: %s\n", tmp);
+				continue;
+			}
 			if (stat(tmp, &sb) < 0 || !S_ISDIR(sb.st_mode))
 				continue;
 			printf("Deleting %s\n", tmp);
 			if (fork() == 0) {
 				(void)execl("/bin/rm", "-rf", tmp, NULL);
+				perror(tmp);
+				exit(EXIT_FAILURE);
 			}
 			free(list[j]);
 		}
@@ -92,16 +102,12 @@ pkgclean(const char *path)
 static int
 checkskip(const struct dirent *dp)
 {
-	char *p, *t, *save;
+	const char * const *p;
 
-	if ((save = t = strdup(skip)) == NULL)
-		err(1, "strdup");
-	while ((p = strsep(&t, ":")) != NULL) {
-		if (strcmp(dp->d_name, p) == 0) {
-			free(save);
+	for (p = skip; *p != NULL; p++) {
+		if (strcmp(dp->d_name, *p) == 0) {
 			return 0;
 		}
 	}
-	free(save);
 	return 1;
 }
