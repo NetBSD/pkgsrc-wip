@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/04 03:08:46 poppnk Exp $
+bin/xsh
+lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XML/XSH/.packlist
+lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/perllocal.pod
+@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XML/XSH
+@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/XML
+@dirrm lib/perl5/site_perl/5.8.0/XML/XSH
+@dirrm lib/perl5/site_perl/5.8.0/XML
