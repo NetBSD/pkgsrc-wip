@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/09 23:10:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/10 07:45:48 xtraeme Exp $
 #
 
 DISTNAME=	dancer-ircd-1.0.31+maint8-fn6
@@ -29,11 +29,11 @@ PKG_SYSCONFSUBDIR=	dancer-ircd
 CONF_FILES=	${EGDIR}/ircd.conf.default \
 		${PKG_SYSCONFDIR}/ircd.conf
 
-post-configure:
-	${CP} ${WRKSRC}/doc/example.conf ${WRKSRC}/doc/example.conf.in
-	${RM} ${WRKSRC}/doc/example.conf
+post-extract:
+	${MV} ${WRKSRC}/doc/example.conf ${WRKSRC}/doc/example.conf.in
+	#${RM} ${WRKSRC}/doc/example.conf
 
-pre-build:
+pre-configure:
 	${SED} -e "s|@SPATH@|${PREFIX}/bin/dancer-ircd|g" \
 		-e "s|@CPATH@|${PKG_SYSCONFDIR}/dancer-ircd|g" \
 	        -e "s|@KPATH@|/var/lib/dancer-ircd/kline.conf|g" \
