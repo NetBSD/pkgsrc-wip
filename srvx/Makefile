@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/17 02:56:50 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/25 08:48:54 blef Exp $
 #
 
 DISTNAME=	srvx-1.1.3
@@ -9,7 +9,7 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://srvx.sourceforge.net/
 COMMENT=	Srvx IRC services
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
