@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/08/29 13:27:22 moubctez Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/09/09 12:48:41 moubctez Exp $
 bin/gimp-1.3
 bin/gimp-remote-1.3
 bin/gimptool-1.3
@@ -8,7 +8,6 @@ etc/gimp/1.3/ps-menurc
 etc/gimp/1.3/sessionrc
 etc/gimp/1.3/templaterc
 etc/gimp/1.3/unitrc
-include/gimp-1.3/gck/gck.h
 include/gimp-1.3/libgimp/gimp.h
 include/gimp-1.3/libgimp/gimp_pdb.h
 include/gimp-1.3/libgimp/gimpbrushes_pdb.h
@@ -29,6 +28,7 @@ include/gimp-1.3/libgimp/gimpexport.h
 include/gimp-1.3/libgimp/gimpfileops_pdb.h
 include/gimp-1.3/libgimp/gimpfloatingsel_pdb.h
 include/gimp-1.3/libgimp/gimpfontmenu.h
+include/gimp-1.3/libgimp/gimpfonts_pdb.h
 include/gimp-1.3/libgimp/gimpfontselect.h
 include/gimp-1.3/libgimp/gimpfontselect_pdb.h
 include/gimp-1.3/libgimp/gimpgimprc_pdb.h
@@ -297,46 +297,41 @@ lib/gimp/1.3/plug-ins/xjt
 lib/gimp/1.3/plug-ins/xpm
 lib/gimp/1.3/plug-ins/xwd
 lib/gimp/1.3/plug-ins/zealouscrop
-lib/libgck-1.3.a
-lib/libgck-1.3.la
-lib/libgck-1.3.so
-lib/libgck-1.3.so.19
-lib/libgck-1.3.so.19.0
 lib/libgimp-1.3.a
 lib/libgimp-1.3.la
 lib/libgimp-1.3.so
-lib/libgimp-1.3.so.19
-lib/libgimp-1.3.so.19.0
+lib/libgimp-1.3.so.20
+lib/libgimp-1.3.so.20.0
 lib/libgimpbase-1.3.a
 lib/libgimpbase-1.3.la
 lib/libgimpbase-1.3.so
-lib/libgimpbase-1.3.so.19
-lib/libgimpbase-1.3.so.19.0
+lib/libgimpbase-1.3.so.20
+lib/libgimpbase-1.3.so.20.0
 lib/libgimpcolor-1.3.a
 lib/libgimpcolor-1.3.la
 lib/libgimpcolor-1.3.so
-lib/libgimpcolor-1.3.so.19
-lib/libgimpcolor-1.3.so.19.0
+lib/libgimpcolor-1.3.so.20
+lib/libgimpcolor-1.3.so.20.0
 lib/libgimpmath-1.3.a
 lib/libgimpmath-1.3.la
 lib/libgimpmath-1.3.so
-lib/libgimpmath-1.3.so.19
-lib/libgimpmath-1.3.so.19.0
+lib/libgimpmath-1.3.so.20
+lib/libgimpmath-1.3.so.20.0
 lib/libgimpmodule-1.3.a
 lib/libgimpmodule-1.3.la
 lib/libgimpmodule-1.3.so
-lib/libgimpmodule-1.3.so.19
-lib/libgimpmodule-1.3.so.19.0
+lib/libgimpmodule-1.3.so.20
+lib/libgimpmodule-1.3.so.20.0
 lib/libgimpui-1.3.a
 lib/libgimpui-1.3.la
 lib/libgimpui-1.3.so
-lib/libgimpui-1.3.so.19
-lib/libgimpui-1.3.so.19.0
+lib/libgimpui-1.3.so.20
+lib/libgimpui-1.3.so.20.0
 lib/libgimpwidgets-1.3.a
 lib/libgimpwidgets-1.3.la
 lib/libgimpwidgets-1.3.so
-lib/libgimpwidgets-1.3.so.19
-lib/libgimpwidgets-1.3.so.19.0
+lib/libgimpwidgets-1.3.so.20
+lib/libgimpwidgets-1.3.so.20.0
 lib/pkgconfig/gimp-1.3.pc
 lib/pkgconfig/gimpui-1.3.pc
 man/man1/gimp-1.3.1
@@ -366,6 +361,7 @@ share/doc/html/${PKGNAME}/libgimp/libgimp-gimpexport.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpfileops.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpfloatingsel.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpfontmenu.html
+share/doc/html/${PKGNAME}/libgimp/libgimp-gimpfonts.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpfontselect.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpgimprc.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpgradientmenu.html
@@ -531,6 +527,10 @@ share/doc/html/${PKGNAME}/libgimpwidgets/stock-eye-12.png
 share/doc/html/${PKGNAME}/libgimpwidgets/stock-eye-20.png
 share/doc/html/${PKGNAME}/libgimpwidgets/stock-flip-horizontal-16.png
 share/doc/html/${PKGNAME}/libgimpwidgets/stock-flip-vertical-16.png
+share/doc/html/${PKGNAME}/libgimpwidgets/stock-floating-selection-16.png
+share/doc/html/${PKGNAME}/libgimpwidgets/stock-floating-selection-24.png
+share/doc/html/${PKGNAME}/libgimpwidgets/stock-floating-selection-32.png
+share/doc/html/${PKGNAME}/libgimpwidgets/stock-floating-selection-48.png
 share/doc/html/${PKGNAME}/libgimpwidgets/stock-gradient-bilinear-16.png
 share/doc/html/${PKGNAME}/libgimpwidgets/stock-gradient-conical-asymmetric-16.png
 share/doc/html/${PKGNAME}/libgimpwidgets/stock-gradient-conical-symmetric-16.png
@@ -1016,7 +1016,7 @@ share/gimp/1.3/palettes/Grayblue.gpl
 share/gimp/1.3/palettes/Grays.gpl
 share/gimp/1.3/palettes/Greens.gpl
 share/gimp/1.3/palettes/Hilite.gpl
-share/gimp/1.3/palettes/Kahki.gpl
+share/gimp/1.3/palettes/Khaki.gpl
 share/gimp/1.3/palettes/Lights.gpl
 share/gimp/1.3/palettes/Muted.gpl
 share/gimp/1.3/palettes/Named_Colors.gpl
@@ -1197,6 +1197,7 @@ share/gimp/1.3/themes/Default/images/preferences/display.png
 share/gimp/1.3/themes/Default/images/preferences/environment.png
 share/gimp/1.3/themes/Default/images/preferences/folders-brushes.png
 share/gimp/1.3/themes/Default/images/preferences/folders-environ.png
+share/gimp/1.3/themes/Default/images/preferences/folders-fonts.png
 share/gimp/1.3/themes/Default/images/preferences/folders-gradients.png
 share/gimp/1.3/themes/Default/images/preferences/folders-modules.png
 share/gimp/1.3/themes/Default/images/preferences/folders-palettes.png
@@ -1258,6 +1259,10 @@ share/gimp/1.3/themes/Default/images/stock-edit-16.png
 share/gimp/1.3/themes/Default/images/stock-error-64.png
 share/gimp/1.3/themes/Default/images/stock-eye-12.png
 share/gimp/1.3/themes/Default/images/stock-eye-20.png
+share/gimp/1.3/themes/Default/images/stock-floating-selection-16.png
+share/gimp/1.3/themes/Default/images/stock-floating-selection-24.png
+share/gimp/1.3/themes/Default/images/stock-floating-selection-32.png
+share/gimp/1.3/themes/Default/images/stock-floating-selection-48.png
 share/gimp/1.3/themes/Default/images/stock-flip-horizontal-16.png
 share/gimp/1.3/themes/Default/images/stock-flip-vertical-16.png
 share/gimp/1.3/themes/Default/images/stock-gradient-bilinear-16.png
@@ -1548,6 +1553,14 @@ ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp20-libgimp.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp20-std-plug-ins.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp20.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gimp20-libgimp.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gimp20-script-fu.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gimp20-std-plug-ins.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gimp20.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gimp20-libgimp.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gimp20-script-fu.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gimp20-std-plug-ins.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gimp20.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gimp20-libgimp.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gimp20-std-plug-ins.mo
@@ -1595,6 +1608,7 @@ share/mime-info/gimp-1.3.keys
 @dirrm share/gimp/1.3/gimpressionist
 @dirrm share/gimp/1.3/gflare
 @dirrm share/gimp/1.3/gfig
+@dirrm share/gimp/1.3/fonts
 @dirrm share/gimp/1.3/fractalexplorer
 @dirrm share/gimp/1.3/brushes
 @dirrm share/gimp/1.3
@@ -1619,7 +1633,6 @@ share/mime-info/gimp-1.3.keys
 @dirrm include/gimp-1.3/libgimpcolor
 @dirrm include/gimp-1.3/libgimpbase
 @dirrm include/gimp-1.3/libgimp
-@dirrm include/gimp-1.3/gck
 @dirrm include/gimp-1.3
 @dirrm etc/gimp/1.3
 @dirrm etc/gimp
