@@ -1,0 +1,12 @@
+$Id: TODO,v 1.1.1.1 2004/04/19 19:06:57 mpasternak Exp $
+
+license issues (take license.txt from WRKSRC perhaps)
+
+src/ directory - could we use it to compile a native version? I haven't
+looked at it too close.
+
+is ${install_data_dir} emul/usr/src needed in Makefile?
+
+sort plist ;)
+
+	-- dotz@irc.pl

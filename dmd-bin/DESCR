@@ -1,0 +1,15 @@
+D Programming Language
+
+Quotes from webpage of project:
+
+""It seems to me that most of the "new" programming languages fall into one
+of two categories: Those from academia with radical new paradigms and those
+from large corporations with a focus on RAD and the web. Maybe its time for
+a new language born out of practical experience implementing compilers.""
+-- Michael
+
+D was conceived in December 1999 as a successor to C and C++, and has grown
+and evolved with helpful suggestions and critiques by author'sfriends and
+colleagues.  Take a look at the document and decide for yourself - the quick
+comparison of D with C, C++, C# and Java at 
+http://www.digitalmars.com/d/comparison.html 
