@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/11/25 18:32:32 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.16 2003/11/26 23:33:37 jeremy-c-reed Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-libs-${XF_VER}
@@ -13,6 +13,15 @@ COMMENT=		XFree86 Libraries
 
 DEPENDS=		imake>=4.3.0:../../wip/imake
 
+.include "../../mk/bsd.prefs.mk"
+
+# XXX later should add CONFLICTS with XFree86-libs to these packages too
+.if ${X11PREFIX} == ${LOCALBASE}
+CONFLICTS+=		render-[0-9]*
+CONFLICTS+=		Xrender-[0-9]*
+CONFLICTS+=		MesaLibs-[0-9]*
+.endif
+
 USE_BUILDLINK2=		YES
 
 XBUILD_DIRS=		lib nls programs/Xserver/include \
@@ -21,8 +30,6 @@ XINCLUDE_DIRS=		programs/proxymngr
 XINSTALL_DIRS=		include lib nls programs/Xserver/include \
 			programs/Xserver/hw/xfree86/parser
 XINSTALL_MAN_DIRS=	${XINSTALL_DIRS}
-
-.include "../../mk/bsd.prefs.mk"
 
 post-patch:
 	${SED} -e 's,@MAKESTRS@,${X11PREFIX}/bin/makestrs,g' \
