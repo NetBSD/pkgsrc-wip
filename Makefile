@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.314 2003/07/09 14:37:47 adrian_p Exp $
-# $NetBSD: Makefile,v 1.314 2003/07/09 14:37:47 adrian_p Exp $
+# $Id: Makefile,v 1.315 2003/07/09 15:02:09 adrian_p Exp $
+# $NetBSD: Makefile,v 1.315 2003/07/09 15:02:09 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -169,6 +169,7 @@ SUBDIR+=	nagios-plugins
 SUBDIR+=	nautilus-media
 SUBDIR+=	navigatrix
 SUBDIR+=	ncps
+SUBDIR+=	nemesis
 SUBDIR+=	net-tools
 SUBDIR+=	netbeans-ide
 SUBDIR+=	netkit-base
