@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/05/02 07:23:15 drue Exp $
+$NetBSD: distinfo,v 1.3 2003/05/02 07:59:20 jmmv Exp $
 
 SHA1 (sigrot_1.2-1.tar.gz) = 7cec808e44b00831d196f2e6677e852596baafab
 Size (sigrot_1.2-1.tar.gz) = 7908 bytes
-SHA1 (patch-aa) = b055e1fef9cde11f640ecc88b7744da8f33bbbf2

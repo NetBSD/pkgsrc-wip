@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/30 15:32:42 drue Exp $
-man/man1/sigrot.1
+@comment $NetBSD: PLIST,v 1.2 2003/05/02 07:59:20 jmmv Exp $
 bin/sigrot
-share/doc/sigrot/INSTALL
+man/man1/sigrot.1
 share/doc/sigrot/COPYRIGHT
-share/sigrot/prefix
-share/sigrot/sig_archive
-share/sigrot/suffix
-@dirrm share/sigrot
+share/doc/sigrot/INSTALL
+share/examples/sigrot/prefix
+share/examples/sigrot/sig_archive
+share/examples/sigrot/suffix
+@dirrm share/examples/sigrot
 @dirrm share/doc/sigrot
