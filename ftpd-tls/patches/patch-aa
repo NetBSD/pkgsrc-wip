@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2005/01/06 11:46:28 imilh Exp $
+$NetBSD: patch-aa,v 1.4 2005/01/06 12:56:25 imilh Exp $
 
 --- ftpd.8.TLS.orig	2002-05-16 15:07:51.000000000 +0200
 +++ ftpd.8.TLS
@@ -11,6 +11,24 @@ $NetBSD: patch-aa,v 1.3 2005/01/06 11:46:28 imilh Exp $
  .Op Fl T Ar maxtimeout
  .Op Fl t Ar timeout
  .Op Fl u Ar mask
+@@ -62,7 +62,7 @@ The options are as follows:
+ .Bl -tag -width Ds
+ .It Fl A
+ Permit only anonymous ftp connections, accounts listed in
+-.Pa /etc/ftpchroot
++.Pa /usr/pkg/etc/ftpchroot
+ or users in a login class with the
+ .Dq ftp-chroot
+ variable set (see below).
+@@ -116,7 +116,7 @@ machine and other local machines.
+ With this option set,
+ .Nm
+ logs all anonymous downloads to the file
+-.Pa /var/log/ftpd
++.Pa /var/log/ftpd-tls
+ when this file exists.
+ .It Fl U
+ Each concurrent
 @@ -137,6 +137,8 @@ When
  is specified, forces
  .Nm
@@ -20,3 +38,121 @@ $NetBSD: patch-aa,v 1.3 2005/01/06 11:46:28 imilh Exp $
  .It Fl T Ar maxtimeout
  A client may also request a different timeout period;
  the maximum period allowed may be set to
+@@ -153,7 +155,7 @@ seconds (the default is 15 minutes).
+ Force the umask to
+ .Ar mask
+ instead of the default specified in
+-.Pa /etc/login.conf
++.Pa /usr/pkg/etc/login.conf
+ (usually 022).
+ Also disallows chmod.
+ .It Fl z Ic rsacert=\fIFILE\fR
+@@ -176,20 +178,20 @@ without client certs, you must use this 
+ .El
+ .Pp
+ The file
+-.Pa /etc/nologin
++.Pa /usr/pkg/etc/nologin
+ can be used to disable ftp access.
+ If the file exists,
+ .Nm
+ displays it and exits.
+ If the file
+-.Pa /etc/ftpwelcome
++.Pa /usr/pkg/etc/ftpwelcome
+ exists,
+ .Nm
+ prints it before issuing the
+ .Dq ready
+ message.
+ If the welcome file exists
+-.Pa ( /etc/motd
++.Pa ( /usr/pkg/etc/motd
+ by default),
+ .Nm
+ prints it after a successful login.
+@@ -292,7 +294,7 @@ This allows users to utilize the metacha
+ authenticates users by using the service and type of
+ .Ar ftp ,
+ as defined in the
+-.Pa /etc/login.conf
++.Pa /usr/pkg/etc/login.conf
+ file (see
+ .Xr login.conf 5 ) .
+ An authentication style
+@@ -308,7 +310,7 @@ The allowed authentication styles for
+ may be explicitly specified by the
+ .Dq auth-ftpd
+ entry in
+-.Pa /etc/login.conf .
++.Pa /usr/pkg/etc/login.conf .
+ .Pp
+ .Nm
+ authenticates users according to five rules.
+@@ -320,13 +322,13 @@ In this case a password must be provided
+ file operations may be performed.
+ .It
+ The login name must not appear in the file
+-.Pa /etc/ftpusers .
++.Pa /usr/pkg/etc/ftpusers .
+ .It
+ The user must have a standard shell as described by
+ .Xr shells 5 .
+ .It
+ If the user name appears in the file
+-.Pa /etc/ftpchroot
++.Pa /usr/pkg/etc/ftpchroot
+ the session's root will be changed to the user's login directory by
+ .Xr chroot 2
+ as for an
+@@ -406,7 +408,7 @@ the anonymous ftp user to be able to run
+ .Xr ls 1
+ command exists as a builtin).
+ Any programs in this directory should be mode 111 (executable only).
+-.It Pa ~ftp/etc
++.It Pa ~ftp/usr/pkg/etc
+ Make this directory owned by
+ .Dq root
+ and unwritable by anyone (mode 511).
+@@ -432,7 +434,7 @@ stored for download.
+ .El
+ .Pp
+ If logging to the
+-.Pa /var/log/ftpd
++.Pa /var/log/ftpd-tls
+ file is enabled, information will be written in the following format:
+ .Pp
+ .Bl -tag -width XXXXXXXXXXXXXX -offset indent -compact
+@@ -514,24 +516,24 @@ contents of the password database.
+ .It Pa welcome
+ The path of the file containing the welcome message.
+ If this variable is not set,
+-.Pa /etc/motd
++.Pa /usr/pkg/etc/motd
+ is used.
+ .El
+ .Sh FILES
+-.Bl -tag -width /var/run/ftpd.pid -compact
+-.It Pa /etc/ftpusers
++.Bl -tag -width /var/run/ftpd-tls.pid -compact
++.It Pa /usr/pkg/etc/ftpusers
+ list of unwelcome/restricted users
+-.It Pa /etc/ftpchroot
++.It Pa /usr/pkg/etc/ftpchroot
+ list of normal users who should be chrooted
+-.It Pa /etc/ftpwelcome
++.It Pa /usr/pkg/etc/ftpwelcome
+ welcome notice
+-.It Pa /etc/nologin
++.It Pa /usr/pkg/etc/nologin
+ displayed and access refused
+ .It Pa /var/run/utmp
+ list of users on the system
+-.It Pa /var/run/ftpd.pid
++.It Pa /var/run/ftpd-tls.pid
+ process ID if running in daemon mode
+-.It Pa /var/log/ftpd
++.It Pa /var/log/ftpd-tls
+ log file for anonymous downloads
+ .El
+ .Sh SEE ALSO

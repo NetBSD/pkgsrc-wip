@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2005/01/06 11:46:28 imilh Exp $
+$NetBSD: patch-ab,v 1.3 2005/01/06 12:56:25 imilh Exp $
 
 --- ftpd.c.orig	2003-10-06 16:20:00.000000000 +0200
 +++ ftpd.c
@@ -48,25 +48,15 @@ $NetBSD: patch-ab,v 1.2 2005/01/06 11:46:28 imilh Exp $
  #endif /* TLS */
  
  		case '4':
-@@ -1166,12 +1173,20 @@ pass(passwd)
- 	    tls_pass_passthrough = 0;
- 	    reply_code = 232;
- 	    authok = 1;
--	} else
-+	} else {
-+		/* forbid non TLS connection if -o switch set */
-+		if (!guest && (tls_auth_only && !tls_on_ctrl)) {
-+			reply(503, "Non TLS login refused on this server.");
-+			return;
-+		}
- #endif /* TLS */
- 	if (logged_in || askpasswd == 0) {
- 		reply(503, "Login with USER first.");
- 		return;
+@@ -1003,6 +1010,11 @@ user(name)
+ 		}
  	}
-+#ifdef TLS
-+	} /* end the tls_auth_only case */
-+#endif
- 	askpasswd = 0;
- 	if (!guest) {		/* "ftp" is only account allowed no password */
- 		if (pw == NULL) {
+ #ifdef TLS
++	/* forbid non TLS connection if -o switch set */
++	if (!guest && (tls_auth_only && !tls_on_ctrl)) {
++		reply(503, "Non TLS login refused on this server.");
++		return;
++	}
+ {
+ /* Try TLS/X509 client authentication according to this:
+  *
