@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1451 2004/09/03 10:16:31 tnn2 Exp $
-# $NetBSD: Makefile,v 1.1451 2004/09/03 10:16:31 tnn2 Exp $
+# $Id: Makefile,v 1.1452 2004/09/03 17:50:30 tnn2 Exp $
+# $NetBSD: Makefile,v 1.1452 2004/09/03 17:50:30 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -98,6 +98,7 @@ SUBDIR+=	darcs
 SUBDIR+=	dasm
 SUBDIR+=	db1
 SUBDIR+=	dbf
+SUBDIR+=	dclib
 SUBDIR+=	debian_base
 SUBDIR+=	debian_glib
 SUBDIR+=	debian_gtk
@@ -773,6 +774,7 @@ SUBDIR+=	unrealtournament-server
 SUBDIR+=	unshield
 SUBDIR+=	up-imapproxy
 SUBDIR+=	util-linux
+SUBDIR+=	valknut
 SUBDIR+=	vcdgear
 SUBDIR+=	vche
 SUBDIR+=	viewcvs
