@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/21 23:21:04 bjan2 Exp $
+
+SHA1 (viewer-0.7.3.tar.gz) = d190f54bddedb98ee147063d22438f590f1287b7
+Size (viewer-0.7.3.tar.gz) = 44622 bytes
+SHA1 (patch-aa) = 60aab69c6d1224545db91c9491c6e611f503f2b9

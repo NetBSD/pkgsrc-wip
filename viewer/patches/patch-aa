@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/21 23:21:04 bjan2 Exp $
+
+--- configure.orig	2002-06-05 12:33:55.000000000 -0700
++++ configure
+@@ -1357,10 +1357,8 @@ echo "configure:1356: checking machine a
+ ARCH_TYPE=`uname -m | sed -e 's/ /_/g'`
+ echo "$ac_t""$ARCH_TYPE" 1>&6
+ 
+-CFLAGS=
+ LIBS=
+ LIBDIRS=
+-LDFLAGS=
+ INCDIRS=
+ EXTRALIBS=
+ 
+@@ -1374,7 +1372,8 @@ EXTRALIBS=
+ 
+ 
+ case "$OS_TYPE" in
+-  Linux|FreeBSD|OpenBSD|NetBSD)
++  NetBSD) LIBS="-lglut -lGLU -lGL -lXi -lXmu -lXext -lXt -lX11 -lICE -lSM -lm";;
++  Linux|FreeBSD|OpenBSD)
+     LIBS="-lglut -lGLU -lGL -lXi -lXmu -lXext -lXt -lX11 -lICE -lSM -lm"
+     LDFLAGS="-O2"
+     LIBDIRS="-L/usr/X11R6/lib"

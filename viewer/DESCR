@@ -1,0 +1,7 @@
+viewer  is an OpenGL based stereo pair viewer and aligner.  At present it
+only accepts images in the PPM image  format but work is in progress to
+allow use of other image types.  viewer is known to  work  on  various
+systems,  including Linux and OSX, but should work on anything with OpenGL
+and a compiler. Besides being useful as a stereo  pair  viewer it  is
+also  possible  to  view  a  mono image and easliy pan/drag around within
+the image.
