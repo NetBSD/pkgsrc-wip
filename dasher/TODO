@@ -1,0 +1,7 @@
+$Id: TODO,v 1.1.1.1 2004/02/07 23:31:35 mpasternak Exp $
+
+Please grep @comments PLIST and see my notes.
+
+Builds on: FreeBSD-4.9, NetBSD-1.6.1
+
+	-- dotz@irc.pl
