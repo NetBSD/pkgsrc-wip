@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2005/01/05 22:50:05 mreriksson Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/05 23:12:48 mreriksson Exp $
 bin/wbxml2xml
 bin/xml2wbxml
 include/wbxml.h
@@ -18,20 +18,53 @@ include/wbxml_tree.h
 include/wbxml_tree_clb_wbxml.h
 include/wbxml_tree_clb_xml.h
 lib/libwbxml2.la
-share/doc/wbxml2-0.9.0/AUTHORS
-share/doc/wbxml2-0.9.0/BUGS
-share/doc/wbxml2-0.9.0/COPYING
-share/doc/wbxml2-0.9.0/ChangeLog
-share/doc/wbxml2-0.9.0/GNU-GPL
-share/doc/wbxml2-0.9.0/INSTALL
-share/doc/wbxml2-0.9.0/NEWS
-share/doc/wbxml2-0.9.0/README
-share/doc/wbxml2-0.9.0/References
-share/doc/wbxml2-0.9.0/THANKS
-share/doc/wbxml2-0.9.0/TODO
-share/doc/wbxml2-0.9.0/bootstrap
-share/doc/wbxml2-0.9.0/doxygen.h
-@dirrm share/doc/wbxml2-0.9.0/manual/images/callouts
-@dirrm share/doc/wbxml2-0.9.0/manual/images
-@dirrm share/doc/wbxml2-0.9.0/manual
-@dirrm share/doc/wbxml2-0.9.0
+share/doc/wbxml2-${PKGVERSION}/AUTHORS
+share/doc/wbxml2-${PKGVERSION}/BUGS
+share/doc/wbxml2-${PKGVERSION}/COPYING
+share/doc/wbxml2-${PKGVERSION}/ChangeLog
+share/doc/wbxml2-${PKGVERSION}/GNU-GPL
+share/doc/wbxml2-${PKGVERSION}/INSTALL
+share/doc/wbxml2-${PKGVERSION}/NEWS
+share/doc/wbxml2-${PKGVERSION}/README
+share/doc/wbxml2-${PKGVERSION}/References
+share/doc/wbxml2-${PKGVERSION}/THANKS
+share/doc/wbxml2-${PKGVERSION}/TODO
+share/doc/wbxml2-${PKGVERSION}/bootstrap
+share/doc/wbxml2-${PKGVERSION}/doxygen.h
+share/doc/wbxml2-${PKGVERSION}/manual/README
+share/doc/wbxml2-${PKGVERSION}/manual/e-novative.css
+share/doc/wbxml2-${PKGVERSION}/manual/images/blank.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/1.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/10.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/11.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/12.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/13.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/14.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/15.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/2.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/3.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/4.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/5.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/6.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/7.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/8.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/callouts/9.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/caution.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/draft.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/home.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/important.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/next.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/note.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/prev.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/tip.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/toc-blank.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/toc-minus.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/toc-plus.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/up.png
+share/doc/wbxml2-${PKGVERSION}/manual/images/warning.png
+share/doc/wbxml2-${PKGVERSION}/manual/wbxml2.html
+share/doc/wbxml2-${PKGVERSION}/manual/wbxml2.xml
+@dirrm share/doc/wbxml2-${PKGVERSION}/manual/images/callouts
+@dirrm share/doc/wbxml2-${PKGVERSION}/manual/images
+@dirrm share/doc/wbxml2-${PKGVERSION}/manual
+@dirrm share/doc/wbxml2-${PKGVERSION}
