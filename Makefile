@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.293 2003/07/02 16:43:52 poppnk Exp $
-# $NetBSD: Makefile,v 1.293 2003/07/02 16:43:52 poppnk Exp $
+# $Id: Makefile,v 1.294 2003/07/02 23:05:58 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.294 2003/07/02 23:05:58 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -30,6 +30,7 @@ SUBDIR+=	boost-thread
 SUBDIR+=	bub-n-bros
 SUBDIR+=	bugzilla
 SUBDIR+=	byacc
+SUBDIR+=	cawf
 SUBDIR+=	cdpr
 SUBDIR+=	cgdb
 SUBDIR+=	cherokee
