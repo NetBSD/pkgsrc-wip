@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2003/06/03 21:22:07 xtraeme Exp $
+$NetBSD: patch-aa,v 1.3 2003/06/03 21:41:47 xtraeme Exp $
 
 --- Makefile.orig	2003-06-04 18:02:50.000000000 +0200
 +++ Makefile	2003-06-04 18:07:51.000000000 +0200
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.2 2003/06/03 21:22:07 xtraeme Exp $
 -INCLUDES=-I/usr/X11R6/include
 -LIBS=-L/usr/X11R6/lib -lX11
 +INCLUDES=-I${X11BASE}/include
-+LIBS= -L${X11BASE}/lib -Wl,${RPATH_FLAG}${X11BASE}/lib -lX11
++LIBS= ${LDFLAGS} -lX11
  
  OUTPUT=weewm
  OBJS=weewm.o client.o events.o screen.o info.o config.o
