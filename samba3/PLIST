@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/10/14 07:34:04 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/11/10 17:01:08 tripledes Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -18,6 +18,9 @@ bin/smbtree
 bin/tdbbackup
 bin/testparm
 bin/testprns
+etc/rc.d/nmbd
+etc/rc.d/samba
+etc/rc.d/smbd
 include/libsmbclient.h
 lib/libsmbclient.so
 lib/samba/charset/CP437.so
@@ -28,7 +31,6 @@ lib/samba/fr.msg
 lib/samba/it.msg
 lib/samba/ja.msg
 lib/samba/lowcase.dat
-lib/samba/nl.msg
 lib/samba/pl.msg
 lib/samba/tr.msg
 lib/samba/upcase.dat
@@ -307,6 +309,14 @@ share/samba/swat/images/wizard.gif
 share/samba/swat/include/footer.html
 share/samba/swat/include/header.html
 share/samba/swat/lang/ja/help/welcome.html
+share/samba/swat/lang/ja/images/globals.gif
+share/samba/swat/lang/ja/images/home.gif
+share/samba/swat/lang/ja/images/passwd.gif
+share/samba/swat/lang/ja/images/printers.gif
+share/samba/swat/lang/ja/images/samba.gif
+share/samba/swat/lang/ja/images/shares.gif
+share/samba/swat/lang/ja/images/status.gif
+share/samba/swat/lang/ja/images/viewconfig.gif
 share/samba/swat/lang/ja/include/footer.html
 share/samba/swat/lang/ja/include/header.html
 share/samba/swat/lang/ja/include/header.nocss.html
@@ -491,7 +501,6 @@ share/samba/swat/using_samba/toc.html
 @dirrm share/samba/swat/lang/tr/help
 @dirrm share/samba/swat/lang/tr
 @dirrm share/samba/swat/lang/ja/include
-@exec ${MKDIR} %D/share/samba/swat/lang/ja/images
 @dirrm share/samba/swat/lang/ja/images
 @dirrm share/samba/swat/lang/ja/help
 @dirrm share/samba/swat/lang/ja
@@ -537,3 +546,5 @@ share/samba/swat/using_samba/toc.html
 @exec ${MKDIR} %D/lib/samba/auth
 @dirrm lib/samba/auth
 @dirrm lib/samba
+@dirrm etc/samba/private
+@dirrm etc/samba

@@ -1,7 +1,5 @@
-$NetBSD: patch-ab,v 1.2 2003/10/14 07:34:04 jeremy-c-reed Exp $
-
---- script/installscripts.sh.orig	2003-10-13 23:11:22.000000000 -0700
-+++ script/installscripts.sh	2003-10-13 23:11:37.000000000 -0700
+--- script/installscripts.sh.orig	2003-11-10 16:47:53.000000000 +0000
++++ script/installscripts.sh	2003-11-10 16:48:55.000000000 +0000
 @@ -24,10 +24,10 @@
  for p in $*; do
    p2=`basename $p`
