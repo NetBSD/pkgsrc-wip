@@ -1,3 +1,1 @@
-$Id: TODO,v 1.9 2003/12/09 20:03:44 airhead Exp $
-- Perhaps the documentation directory should be ${PREFIX}/share/doc/elvis in
-   stead of ${PREFIX}/share/elvis/doc
+$Id: TODO,v 1.10 2004/01/20 19:24:08 airhead Exp $

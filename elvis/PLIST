@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/09 20:03:42 airhead Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/01/20 19:24:08 airhead Exp $
 bin/elvfmt
 bin/elvis
 bin/elvtags
@@ -12,35 +12,35 @@ man/manl/elvis.1
 man/manl/elvtags.1
 man/manl/ref.1
 share/elvis/README
-share/elvis/doc/bugs.txt
-share/elvis/doc/ctags.man
-share/elvis/doc/doexec.txt
-share/elvis/doc/elvfmt.man
-share/elvis/doc/elvis.html
-share/elvis/doc/elvis.man
-share/elvis/doc/elviscut.html
-share/elvis/doc/elvisdm.html
-share/elvis/doc/elvisex.html
-share/elvis/doc/elvisexp.html
-share/elvis/doc/elvisgui.html
-share/elvis/doc/elvisinp.html
-share/elvis/doc/elvismsg.html
-share/elvis/doc/elvisnet.html
-share/elvis/doc/elvisopt.html
-share/elvis/doc/elvisos.html
-share/elvis/doc/elvisqr.html
-share/elvis/doc/elvisre.html
-share/elvis/doc/elvisses.html
-share/elvis/doc/elvistag.html
-share/elvis/doc/elvistip.html
-share/elvis/doc/elvistrs.msg
-share/elvis/doc/elvisvi.html
-share/elvis/doc/elvtags.man
-share/elvis/doc/fmt.man
-share/elvis/doc/howto.html
-share/elvis/doc/license.html
-share/elvis/doc/printdoc.bat
-share/elvis/doc/ref.man
+share/doc/elvis/bugs.txt
+share/doc/elvis/ctags.man
+share/doc/elvis/doexec.txt
+share/doc/elvis/elvfmt.man
+share/doc/elvis/elvis.html
+share/doc/elvis/elvis.man
+share/doc/elvis/elviscut.html
+share/doc/elvis/elvisdm.html
+share/doc/elvis/elvisex.html
+share/doc/elvis/elvisexp.html
+share/doc/elvis/elvisgui.html
+share/doc/elvis/elvisinp.html
+share/doc/elvis/elvismsg.html
+share/doc/elvis/elvisnet.html
+share/doc/elvis/elvisopt.html
+share/doc/elvis/elvisos.html
+share/doc/elvis/elvisqr.html
+share/doc/elvis/elvisre.html
+share/doc/elvis/elvisses.html
+share/doc/elvis/elvistag.html
+share/doc/elvis/elvistip.html
+share/doc/elvis/elvistrs.msg
+share/doc/elvis/elvisvi.html
+share/doc/elvis/elvtags.man
+share/doc/elvis/fmt.man
+share/doc/elvis/howto.html
+share/doc/elvis/license.html
+share/doc/elvis/printdoc.bat
+share/doc/elvis/ref.man
 share/elvis/elvis.ali
 share/elvis/elvis.arf
 share/elvis/elvis.awf
@@ -115,5 +115,5 @@ share/elvis/themes/sand.xpm
 @dirrm share/elvis/stubs
 @dirrm share/elvis/scripts
 @dirrm share/elvis/icons
-@dirrm share/elvis/doc
+@dirrm share/doc/elvis
 @dirrm share/elvis
