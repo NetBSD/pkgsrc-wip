@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 20:48:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/09 14:43:29 hubertf Exp $
 
 DISTNAME=	cjk-latex-korean-20020721
 WRKSRC=		${WRKDIR}
@@ -10,8 +10,9 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://cjk.ffii.org/
 COMMENT=	Korean support for CJK-LaTeX
 
-#DEPENDS+=	cjk-latex>=4.5.1:../../print/cjk-latex
-DEPENDS+=	cjk-latex>=4.5.1:../../wip/cjk-latex
+#DEPENDS+=	cjk-latex>=4.5.2:../../print/cjk-latex
+DEPENDS+=	cjk-latex>=4.5.2:../../wip/cjk-latex
+DEPENDS+=	ttf2pk>=1.3.1:../../fonts/ttf2pk
 DEPENDS+=	baekmuk-ttf-[0-9]*:../../fonts/baekmuk-ttf
 
 FONT_FILES=	batang dotum gulim hline
@@ -22,6 +23,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 TEXMFMAIN=	${PREFIX}/share/texmf
+SFDDIR=		${TEXMFMAIN}/ttf2tfm/base
 TFMDIR=		${TEXMFMAIN}/fonts/tfm
 TTFDIR=		${TEXMFMAIN}/fonts/truetype
 
@@ -44,7 +46,7 @@ do-install:
 	${LN} -fs ${X11TTFDIR}/${f}.ttf ${TTFDIR}/baekmuk/${f}.ttf
 	${INSTALL_DATA_DIR} ${TFMDIR}/baekmuk/${f}
 	@(cd ${TFMDIR}/baekmuk/${f}; \
-		ttf2tfm ${TTFDIR}/baekmuk/${f} -P 3 -E 1 ${f}@UKS@)
+		ttf2tfm ${TTFDIR}/baekmuk/${f} -P 3 -E 1 ${f}@${SFDDIR}/UKS@)
 .endfor
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/25 20:48:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/09 14:43:29 hubertf Exp $
 
 DISTNAME=	cjk-latex-japanese-20020721
 WRKSRC=		${WRKDIR}
@@ -10,8 +10,9 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://cjk.ffii.org/
 COMMENT=	Japanese support for CJK-LaTeX
 
-#DEPENDS+=	cjk-latex>=4.5.1:../../print/cjk-latex
-DEPENDS+=	cjk-latex>=4.5.1:../../wip/cjk-latex
+#DEPENDS+=	cjk-latex>=4.5.2:../../print/cjk-latex
+DEPENDS+=	cjk-latex>=4.5.2:../../wip/cjk-latex
+DEPENDS++	ttf2pk>=1.3.1:../../fonts/ttf2pk
 DEPENDS+=	kochi-ttf-[0-9]*:../../fonts/kochi-ttf
 
 FONT_FILES=	gothic mincho
@@ -22,6 +23,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 TEXMFMAIN=	${PREFIX}/share/texmf
+SFDDIR=		${TEXMFMAIN}/ttf2tfm/base
 TFMDIR=		${TEXMFMAIN}/fonts/tfm
 TTFDIR=		${TEXMFMAIN}/fonts/truetype
 
@@ -43,8 +45,8 @@ do-install:
 .for f in ${FONT_FILES}
 	${LN} -fs ${X11TTFDIR}/kochi-${f}.ttf ${TTFDIR}/kochi/${f}.ttf
 	${INSTALL_DATA_DIR} ${TFMDIR}/kochi/${f}
-	@(cd ${TFMDIR}/kochi/${f}; \
-		ttf2tfm ${TTFDIR}/kochi/${f} -P 3 -E 1 ${f}@UJIS@)
+	(cd ${TFMDIR}/kochi/${f}; \
+		ttf2tfm ${TTFDIR}/kochi/${f} -P 3 -E 1 ${f}@${SFDDIR}/UJIS@)
 .endfor
 
 post-install:

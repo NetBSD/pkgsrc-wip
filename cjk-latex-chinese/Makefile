@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/25 20:48:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/09 14:43:29 hubertf Exp $
 
 DISTNAME=	cjk-latex-chinese-20020721
 WRKSRC=		${WRKDIR}
@@ -10,8 +10,9 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://cjk.ffii.org/
 COMMENT=	Chinese BIG5/GB support for CJK-LaTeX
 
-#DEPENDS+=	cjk-latex>=4.5.1:../../print/cjk-latex
-DEPENDS+=	cjk-latex>=4.5.1:../../wip/cjk-latex
+#DEPENDS+=	cjk-latex>=4.5.2:../../print/cjk-latex
+DEPENDS+=	cjk-latex>=4.5.2:../../wip/cjk-latex
+DEPENDS+=	ttf2pk>=1.3.1:../../fonts/ttf2pk
 DEPENDS+=	arphic-ttf-[0-9]*:../../fonts/arphic-ttf
 
 FONT_FILES=	bkai00mp bsmi00lp gbsn00lp gkai00mp
@@ -22,6 +23,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 TEXMFMAIN=	${PREFIX}/share/texmf
+SFDDIR=		${TEXMFMAIN}/ttf2tfm/base
 TFMDIR=		${TEXMFMAIN}/fonts/tfm
 TTFDIR=		${TEXMFMAIN}/fonts/truetype
 
@@ -45,9 +47,9 @@ do-install:
 	${INSTALL_DATA_DIR} ${TFMDIR}/arphic/${f}
 	@(cd ${TFMDIR}/arphic/${f}; \
 	  if [ ${f} = bkai00mp ] || [ ${f} = bsmi00lp ]; then \
-		ttf2tfm ${TTFDIR}/arphic/${f} -P 3 -E 1 ${f}@UBig5@; \
+		ttf2tfm ${TTFDIR}/arphic/${f} -P 3 -E 1 ${f}@${SFDDIR}/UBig5@; \
 	  else \
-		ttf2tfm ${TTFDIR}/arphic/${f} -P 3 -E 1 ${f}@UGB@; \
+		ttf2tfm ${TTFDIR}/arphic/${f} -P 3 -E 1 ${f}@${SFDDIR}/UGB@; \
 	  fi)
 .endfor
 
