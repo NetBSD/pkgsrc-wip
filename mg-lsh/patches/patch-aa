@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/12/05 16:45:04 bencollver Exp $
+
+--- Makefile.orig	Sat Jan  8 09:22:53 2000
++++ Makefile
+@@ -5,10 +5,10 @@
+ #   make clean ; make
+ # Some newer systems provide a termcap interface via terminfo, 
+ # so you might want to try that.
+-CC      = gcc
+-CFLAGS  = -Wall -O2 -fomit-frame-pointer -DUSE_TERMCAP
+-LIBS    = -lncurses
+-OBJ     = inp.o built.o parse.o map.o lex.o misc.o prompt.o exp.o alias.o main.o 
++CC?=		gcc
++CFLAGS+=	-Wall -O0 -g -DUSE_TERMCAP
++LIBS=		-lcurses
++OBJ=	inp.o built.o parse.o map.o lex.o misc.o prompt.o exp.o alias.o main.o 
+ 
+ # Compile the shell (dynamically linked).
+ lsh: $(OBJ)
+@@ -20,9 +20,11 @@ static: $(OBJ)
+ 
+ # Install. Attempts to compile from source.
+ install: lsh
+-	install -m 755 -o root -s lsh /bin/lsh
+-	install -m 644 -o root sample.etc.autoexec /etc/autoexec
+-	install -m 644 -o root lsh.1 /usr/man/man1
++	${BSD_INSTALL_PROGRAM} lsh ${PREFIX}/bin/
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/examples/mg-lsh
++	${BSD_INSTALL_DATA} sample.etc.autoexec \
++		${PREFIX}/share/examples/mg-lsh/autoexec
++	${BSD_INSTALL_MAN} lsh.1 ${PREFIX}/man/man1/
+ 
+ # Install. Installs precompiled binaries.
+ install-precompiled: 

@@ -1,0 +1,86 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/12/05 16:45:04 bencollver Exp $
+
+--- built.c.orig	Sat Jan  8 09:22:53 2000
++++ built.c
+@@ -11,7 +11,12 @@
+ #include <sys/wait.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#include <sys/mount.h>
++#else
+ #include <sys/vfs.h>
++#endif
+ #include "defs.h"
+ 
+ int
+@@ -1105,6 +1110,8 @@ lcd (int tc, int tk, int *tks, FILE * in
+ 			  plerr (PLIND);
+ 			}
+ 		      chdir (drivetab[drivecur].path);
++		      /* change the current drive too */
++		      drivecur = nd;
+ 		    }
+ 		  else
+ 		    {
+@@ -1275,7 +1282,7 @@ int
+ cbf (char *ptr)
+ {
+   int retval = 0;
+-  int j = 0, k;
++  int j = 0, k = 0;
+   struct stat fst;
+ 
+   j = strlen (ptr);
+@@ -1353,7 +1360,7 @@ cbf (char *ptr)
+ int
+ ldir (int tc, int tk, int *tks, FILE * in, FILE * out)
+ {
+-  static m = 12;
++  static int m = 12;
+   int i = 0;
+   int ltot = 0;
+   int lcn = 1;
+@@ -1523,7 +1530,11 @@ ldir (int tc, int tk, int *tks, FILE * i
+ 	    {
+ 	      fprintf (out, "\n Volume in drive %c is too loud\n", dcw + 'A');
+ 	      fprintf (out, " Volume Serial Number is %04X-%04X\n", sfs.f_type,
++#if defined(__NetBSD__)
++		       MFSNAMELEN);
++#else
+ 		       sfs.f_namelen);
++#endif
+ 	      fprintf (out, " Directory List\n\n");
+ 	    }
+ 	  if (!donlist)
+@@ -1579,7 +1590,7 @@ ldir (int tc, int tk, int *tks, FILE * i
+ 			      m = j;
+ 			      if (S_IFREG & fst.st_mode)
+ 				{
+-				  fprintf (out, "%9ld", fst.st_size);
++				  fprintf (out, "%9ld", (long int)fst.st_size);
+ 				  count += fst.st_size;
+ 				}
+ 			      else
+@@ -1633,7 +1644,7 @@ ldir (int tc, int tk, int *tks, FILE * i
+ 					   (ts->tm_hour) % 12,
+ 					   ts->tm_min,
+ 					   ((ts->tm_hour) / 12) * 15 + 'a');
+-				  fprintf (out, "  %ld", fst.st_blocks);
++				  fprintf (out, "  %ld", (long int)fst.st_blocks);
+ 				  bliks += (fst.st_blocks);
+ 				}
+ 			      lcn++;
+@@ -1690,9 +1701,9 @@ ldir (int tc, int tk, int *tks, FILE * i
+ 		    }
+ 		  if (!statok)
+ 		    {
+-		      fprintf (out, "                  %10u bytes free\n", sfs.f_bavail * sfs.f_bsize);
++		      fprintf (out, "                  %10u bytes free\n", (unsigned int)(sfs.f_bavail * sfs.f_bsize));
+ 		      if (optcomp)
+-			fprintf (out, "                  %10d file nodes free\n", sfs.f_ffree);
++			fprintf (out, "                  %10d file nodes free\n", (int)(sfs.f_ffree));
+ 
+ 		    }
+ 		}

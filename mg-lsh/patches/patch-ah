@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1.1.1 2004/12/05 16:45:04 bencollver Exp $
+
+--- prompt.c.orig	Sat Jan  8 09:22:53 2000
++++ prompt.c
+@@ -45,7 +45,11 @@ printprompt (int drive, char *promtstr, 
+ 	    {
+ 	    case 'W':
+ 	    case 'w':
++#if defined(__NetBSD__)
++	      if (!stat (_PATH_UTMP, &fs))
++#else
+ 	      if (!stat (UTMP_FILE, &fs))
++#endif
+ 		{
+ 		  if (wtmpy < fs.st_mtime)
+ 		    {

@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/12/05 16:45:04 bencollver Exp $
+
+SHA1 (lsh_0.70.orig.tar.gz) = e04ba4fa74bfd31a76fa3126e9a0bf9b05b7535e
+Size (lsh_0.70.orig.tar.gz) = 149474 bytes
+SHA1 (patch-aa) = 79c7af1dad0916c71883dd632165909fb5fdfcd1
+SHA1 (patch-ab) = 4614267504b4183e01b970c801ac74d997e8bd6e
+SHA1 (patch-ac) = 985f3be71e1f83174d2b6d71683b897f78b9cdb3
+SHA1 (patch-ad) = 63cd7e148d68fcb044c338a05084c545c4afd1e9
+SHA1 (patch-ae) = 644000763a7f7a2fbd11d4849d6aa3f6e16186a0
+SHA1 (patch-af) = 1aa03b115003d75a4b5d0fcaab7349e8d170248e
+SHA1 (patch-ag) = a0dd191d715df4e5da04539eeadb5a95b0250ff8
+SHA1 (patch-ah) = 99bc79026477e29ef7ee021a75eef9273ef8b906
+SHA1 (patch-ai) = cedc4a2d31f2dba89c35950d99585fc0e5a48776

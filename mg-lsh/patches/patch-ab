@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/12/05 16:45:04 bencollver Exp $
+
+--- inp.c.orig	Sat Jan  8 09:22:53 2000
++++ inp.c
+@@ -118,7 +118,7 @@ readl (char *buf, int len)
+   int base = 0;
+   int dispindex = 0;
+ 
+-  static previous = 0;
++  static int previous = 0;
+ 
+   char quit = 0;
+   char tbuf[2 * INBUF];
+@@ -402,7 +402,7 @@ readl (char *buf, int len)
+ int
+ readl (char *buf, int len)
+ {
+-  static oldc = 0;
++  static int oldc = 0;
+   int retval = 0;
+   int count = 0;
+   int quit = 0;
