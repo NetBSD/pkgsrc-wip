@@ -1,0 +1,27 @@
+$Id: TODO,v 1.1.1.1 2004/04/19 15:46:14 mpasternak Exp $
+
+I expect this not to build anywhere except my FreeBSD box. The code has a
+lot of portability defines anyway, so please help with patching it.
+
+Linux makefile uses -lesd unconditionally.
+
+Perhaps make USE_ESD_AUDIO configureable, currently it is turned off by
+default.
+
+HTTP support disabled unconditionally, doesn't compile on FreeBSD.
+
+nasm support would be definetley *worth* doing, currently disabled (nasm is
+not used in Makefile.nol; it is used in Makefile, but on the other hand,
+that Makefile has some other trouble). I am leaving out nasm for the sake of
+portability... and I need that decoder just to recode some MPC files to OGG
+or MP3, so why should I bother ;)
+
+do-install could perhaps install some extra files (is there a manpage in
+WRKSRC?)
+
+Basically, mppdec should use some other makefile (or some kind of configure
+script) to be more portable. Please help developing it, if you have skills
+to do such thing, e-mail author or at least MAINTAINER of this package with
+some code.
+
+	-- mpasternak

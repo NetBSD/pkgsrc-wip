@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/19 15:46:14 mpasternak Exp $
+
+SHA1 (mppdec-1.1.tar.bz2) = 559ef9c78b954547c2800ada44d7a71c47cc80c9
+Size (mppdec-1.1.tar.bz2) = 134037 bytes
+SHA1 (patch-aa) = 1180a1f856ef7effe9b413d8c2e78c6a9cebd8c2
+SHA1 (patch-ab) = cd65f78ca4c7d5f4f74466fb3464f4817999766a

@@ -1,0 +1,16 @@
+MPC (MusePack) is a new format for compressing audio data, like mp3 or ogg.
+  
+This package contains a MPC decoder, that allows you to listen or uncompress
+MPC audio data.
+
+Advantages of this decoder (from project's WWW page):
+  * really fast!
+  * direct support of Audio devices under UNIX, Solaris and Windows!
+  * realtime support on Unix and POSIX 1.b
+  * support of AMDs 3DNow! and Intels SSE
+  * support of reading ID3 tags (version 1 and 1.1)
+  * multiple files support
+  * runs also on 16 and 64 bit CPUs, not only on 32 bit
+  * needs less memory
+  * 32 bit, dithering and noise shaping support, (explanation)
+  * Microsoft WAVE, Apple AIFF and Raw PCM support

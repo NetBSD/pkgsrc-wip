@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/19 15:46:14 mpasternak Exp $
+
+--- mpp.h.orig	Tue Jul 30 22:19:57 2002
++++ mpp.h
+@@ -8,7 +8,7 @@
+ // use optimized assembler routines for Pentium III/K6-2/Athlon (only 32 bit OS, Intel x86 and no MAKE_xxBITS)
+ // you need the NASM assembler on your system, the program becomes a little bit larger and decoding
+ // on AMD K6-2 (x3), AMD K6-III (x3), AMD Duron (x1.7), AMD Athlon (x1.7), Pentium III (x2) and Pentium 4 (x1.8) becomes faster
+-#define USE_ASM
++/* #define USE_ASM */
+ 
+ // Open Sound System support (only Unix with OSS support)
+ // If your Operating System supports the Open Sound System, you can output to /dev/dsp* and
+@@ -20,7 +20,7 @@
+ // If your Operating System supports the Enlightenment Sound Daemon you can output to /dev/esd and
+ // instead of writing a file the program plays the file via this sound device.
+ // you also must link the libesd library, so maybe you also must edit the Makefile
+-#define USE_ESD_AUDIO
++/* #define USE_ESD_AUDIO */
+ 
+ // native Sun Onboard-Audio support (only SunOS)
+ // If you have a Sun Workstation with Onboard-Audio, you can output to /dev/audio and
+@@ -134,7 +134,7 @@
+ //#define MUST_ALIGNED
+ 
+ // Experimental: use http/ftp streaming
+-#define USE_HTTP
++/* #define USE_HTTP */
+ 
+ // _use setargv module
+ #define USE_ARGV
