@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/08/27 21:56:10 froz Exp $
+
+To run openttd you need data files provided by the original Transport
+Tychoon Deluxe.
+
+The following files should be copied to ${PREFIX}/share/openttd/data/
+in order to play:
+	
+	sample.cat
+	trg1r.grf
+	trgcr.grf
+	trghr.grf
+	trgir.grf
+	trgtr.grf
+
+===========================================================================

@@ -1,0 +1,4 @@
+#!/bin/sh
+test -d ~/.openttd/ || mkdir -p ~/.openttd
+cd ~/.openttd/
+exec @PREFIX@/bin/ttd 

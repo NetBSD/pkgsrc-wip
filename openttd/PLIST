@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/27 21:56:11 froz Exp $
+bin/ttd
+share/openttd/lang/norwegian.lng
+share/openttd/lang/italian.lng
+share/openttd/lang/french.lng
+share/openttd/lang/danish.lng
+share/openttd/lang/swedish.lng
+share/openttd/lang/galician.lng
+share/openttd/lang/english.lng
+share/openttd/lang/german.lng
+share/openttd/lang/hungarian.lng
+share/openttd/lang/czech.lng
+share/openttd/lang/polish.lng
+share/openttd/lang/slovak.lng
+share/openttd/data/canalsw.grf
+share/openttd/data/openttd.grf
+share/openttd/data/opntitle.dat
+share/openttd/data/signalsw.grf
+share/openttd/docs/Manual.txt
+share/openttd/docs/readme.txt
+share/openttd/docs/changelog.txt
+@dirrm share/openttd/lang
+@dirrm share/openttd/docs
+@comment next dir may contain data files
+@unexec ${RMDIR} -p %D/share/openttd/data/ 2>/dev/null || ${TRUE}
