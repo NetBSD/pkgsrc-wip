@@ -36,6 +36,8 @@ DEBUG?=		no
 PROFILE?=	no
 NEED_MD5?=	yes
 MD5_LIBS?=
+GKRELLM_CFLAGS?=
+GTOP?=
 
 # Vanilla GKrellM compatibility
 ifeq ($(enable_nls),1)
@@ -57,6 +59,7 @@ ifeq ($(profile),yes)
 PROFILE=	yes
 endif
 
+ifeq ($(GTOP),)
 # OS-specific overrides
 SUPPORTED_OSES=	Linux NetBSD FreeBSD OpenBSD Darwin Solaris
 
@@ -100,7 +103,7 @@ LINK_FLAGS+=	-lX11
     ifeq ($(OPSYS),Solaris)
 MSGFMT_OPT=	-v 
 CC?=		gcc
-CFLAGS+=	-Wno-implicit-int
+GKRELLM_CFLAGS=	-Wno-implicit-int
 SYS_LIBS=	-lkstat -lkvm -ldevinfo
      ifeq ($(OSREV),5.8)
 LINK_FLAGS=
@@ -109,7 +112,7 @@ SYS_LIBS+=	-lsocket -lintl
 SYS_LIBS+=	-lresolv -lX11
       else # Well, we don't really care about po
 SYS_LIBS+=	-lnsl
-CFLAGS+=	-DSOLARIS_8
+GKRELLM_CFLAGS=	-DSOLARIS_8
       endif
      else
       ifeq ($(MODULE),src)
@@ -123,3 +126,25 @@ SYS_LIBS+=	-lsocket -lnsl
   endif
  endif
 endif
+else	# GTOP
+LINK_FLAGS=
+MD5_LIBS=
+ ifeq ($(GTOP), gnome-gtop)
+SYS_LIBS=	`gnome-config --libs libgtop`
+GKRELLM_CFLAGS=	`gnome-config --cflags libgtop`
+ else
+  ifeq ($(GTOP), gtop)
+SYS_LIBS=	`libgtop-config --libs`
+GKRELLM_CFLAGS=	`libgtop-config --cflags`
+  else	# gtop1.0 by default
+GTOP_PREFIX?=	/usr
+GKRELLM_CFLAGS=	-I$(GTOP_PREFIX)/include
+SYS_LIBS=	-L$(GTOP_PREFIX)/lib -lgtop -lgtop_common -lgtop_sysdeps
+   ifeq ($(MODULE),src)
+SYS_LIBS+=	-lXau
+   endif
+  endif
+ endif
+endif
+
+CFLAGS+=	$(GKRELLM_CFLAGS)

@@ -20,10 +20,10 @@ build:		build-rec
 clean:		clean-rec
 
 build-rec install-rec clean-rec uninstall-rec:
-	for subdir in $(MODULES); do					\
-	cd $$subdir && 							\
-	$(MAKE) $(patsubst %-rec,%,$@) MODULE=$$subdir || exit 1	\
-	cd ..;								\
+	for subdir in $(MODULES); do						\
+	cd $$subdir && 								\
+	$(MAKE) $(patsubst %-rec,%,$@) MODULE=$$subdir GTOP=$(GTOP) || exit 1;	\
+	cd ..;									\
 	done
 
 install_gkrellm.pc:
@@ -37,5 +37,9 @@ ifneq ($(findstring src,$(MODULES)),)
 	rm -f $(PKGCONFIGDIR)/gkrellm.pc
 endif
 
+gtop gnome-gtop gtop-1.0:
+	$(MAKE) build MODULES="$(MODULES)" GTOP=$@
+
 .PHONY: all build intall install_mod install_gkrellm.pc clean	\
-	install-rec build-rec clean-rec uninstall uninstall-rec
+	install-rec build-rec clean-rec uninstall uninstall-rec	\
+	gtop gnome-gtop gtop-1.0

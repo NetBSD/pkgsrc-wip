@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/02 10:41:50 cubidou Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/18 08:40:49 cubidou Exp $
 .include "Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm
@@ -8,7 +8,7 @@ COMMENT=		GTK2 based system monitor
 
 DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}:../../wip/gkrellm2-share
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 USE_PKGINSTALL=		YES
 
@@ -31,8 +31,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm2/plugins
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gkrellm2/themes
 
-.include "../../x11/gtk2/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
