@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1180 2004/04/07 15:43:05 ura Exp $
-# $NetBSD: Makefile,v 1.1180 2004/04/07 15:43:05 ura Exp $
+# $Id: Makefile,v 1.1181 2004/04/08 15:08:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1181 2004/04/08 15:08:12 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -639,6 +639,7 @@ SUBDIR+=	same
 SUBDIR+=	scite
 SUBDIR+=	scm
 SUBDIR+=	scponly
+SUBDIR+=	screws
 SUBDIR+=	send-pr
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shadow
@@ -689,7 +690,6 @@ SUBDIR+=	spamprobe-pbl
 SUBDIR+=	spe
 SUBDIR+=	speedx
 SUBDIR+=	sqlrelay
-SUBDIR+=	screws
 SUBDIR+=	srvx
 SUBDIR+=	steghide
 SUBDIR+=	stellarium
