@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/09/27 18:27:29 marc Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/27 19:20:06 marc Exp $
 #
 
 DISTNAME=		libfwbuilder-1.0.1
@@ -9,11 +9,12 @@ MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://www.fwbuilder.org/
 COMMENT=		Firewall configuration and management tool
 
-USE_CXX=		yes
 USE_GMAKE=		yes
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+USE_GCC_SHLIB=		yes
+GCC_REQD=		2.95.3
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--with-openssl-prefix=${BUILDLINK_PREFIX.openssl}
