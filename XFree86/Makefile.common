@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2003/08/28 22:10:46 blef Exp $
+# $NetBSD: Makefile.common,v 1.17 2003/09/01 20:59:01 xtraeme Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -47,7 +47,7 @@ USE_GNU_TOOLS+=	make
 
 # Operating Systems to pass our compiler options (CC, CXX, CPP, CFLAGS)
 
-SYSTEMS=	NetBSD FreeBSD linux
+SYSTEMS=	FreeBSD linux NetBSD
 
 .if !defined(NO_XFREE86_TARGETS)
 
@@ -95,6 +95,7 @@ pre-configure:
 		-e "s|@@PKGSRC_CXX@@|${CXX}|g" \
 		-e "s|@@PKGSRC_CPP@@|${CPP}|g" \
 		-e "s|@@PKGSRC_CFLAGS@@|${CFLAGS}|g" \
+		-e "s|@LOCALBASE@|${LOCALBASE}|g" \
 		-e "s|-I${LOCALBASE}/include||" \
 		-e "s|-I${X11BASE}/include||" \
 		${WRKSRC}/config/cf/${F}.cf.in > \
@@ -102,6 +103,24 @@ pre-configure:
 .endfor
 .undef F
 
+# Check if we have a native threads implementation 
+
+.if ${OPSYS} == "NetBSD" && !exists(/usr/include/pthread.h)
+	${ECHO} "#define TheadedX NO" >> ${WRKSRC}/config/cf/NetBSD.cf
+.else
+	@( \
+	cd ${WRKSRC}/config/cf && \
+	${ECHO} "#define HasPosixThreads YES" >> NetBSD.cf; \
+	${ECHO} "#define ThreadedX YES" >> NetBSD.cf; \
+	${ECHO} "#define HasThreadSafeAPI YES" >> NetBSD.cf; \
+	${ECHO} "#define ThreadsLibraries -lpthread" >> NetBSD.cf; \
+	${ECHO} "#define LibraryMTDefines -DUSE_NBSD_THREADLIB" >> NetBSD.cf; \
+	${ECHO} "#define SystemMTDefines -D_REENTRANT" >> NetBSD.cf; \
+	${ECHO} "#define MTSafeAPIDefines -DXUSE_MTSAFE_API -DXNO_MTSAFE_PWDAPI" \
+		>> NetBSD.cf \
+	)
+
+.endif
 .endif
 
 .if !target(do-configure)
