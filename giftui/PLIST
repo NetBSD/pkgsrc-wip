@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/21 18:55:20 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/21 19:44:59 xtraeme Exp $
 bin/giFTui
 share/doc/giFTui/AUTHORS
 share/doc/giFTui/COPYING
@@ -24,4 +24,3 @@ share/giFTui/icons/openft-search.png
 share/giFTui/icons/openft-up.png
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/giFTui.mo
 @dirrm share/giFTui/icons
-@dirrm doc/giFTui
