@@ -1,0 +1,8 @@
+I have not tested this.
+
+It needs a distinfo.
+
+I removed the kde dependencies.
+
+pkglint says:
+WARN: use of INTERACTIVE_STAGE discouraged. provide batch mode by using BATCH and/or FOR_CDROM.
