@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/16 00:07:52 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/28 15:25:37 airhead Exp $
 bin/orion
-share/doc/${PKGNAME}/html/user.html
 share/${PKGNAME}/scheme/button.scm
 share/${PKGNAME}/scheme/config.scm
 share/${PKGNAME}/scheme/drag-window.scm
@@ -19,6 +18,7 @@ share/${PKGNAME}/scheme/split-wm.scm
 share/${PKGNAME}/scheme/switch-wm.scm
 share/${PKGNAME}/scheme/titlebar.scm
 share/${PKGNAME}/scheme/utils.scm
+share/doc/${PKGNAME}/html/user.html
 @dirrm share/${PKGNAME}/scheme
 @dirrm share/${PKGNAME}
 @dirrm share/doc/${PKGNAME}/html
