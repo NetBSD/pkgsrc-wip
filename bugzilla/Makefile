@@ -1,25 +1,30 @@
-# $NetBSD: Makefile,v 1.4 2004/02/27 03:17:08 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/01 17:58:23 adrian_p Exp $
 #
 
-DISTNAME=	bugzilla-2.16.2
+DISTNAME=	bugzilla-2.16.4
 CATEGORIES=	www
-MASTER_SITES=	http://ftp.mozilla.org/pub/webtools/
+MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/webtools/
 
 MAINTAINER=	adrianp@stindustries.net
 HOMEPAGE=	http://www.bugzilla.org/
 COMMENT=	Web based bug tracking system
 
-DEPENDS+=	p5-Template-Toolkit>=2.07:../../www/p5-Template-Toolkit
-#DEPENDS+=	gd>=1.19:../../graphics/gd
-DEPENDS+=	p5-AppConfig>=1.52:../../devel/p5-AppConfig
-DEPENDS+=       p5-DBI>=1.13:../../databases/p5-DBI
+DEPENDS+=	p5-DBI>=1.13:../../databases/p5-DBI
 DEPENDS+=	p5-DBD-mysql>=1.2209:../../databases/p5-DBD-mysql
+DEPENDS+=	p5-AppConfig>=1.52:../../devel/p5-AppConfig
+DEPENDS+=	p5-Template-Toolkit>=2.07:../../www/p5-Template-Toolkit
+DEPENDS+=	p5-Text-Tabs+Wrap>=2001.0131:../../wip/p5-Text-Tabs+Wrap
+DEPENDS+=	p5-File-Spec>=0.82:../../devel/p5-File-Spec
+DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 DEPENDS+=       {p5-Data-Dumper-[0-9]*,perl>=5.6.1nb2}:${PERL5_PKGSRCDIR}
-DEPENDS+=       p5-TimeDate-[0-9]*:../../time/p5-TimeDate
-DEPENDS+=       p5-CGI-[0-9]*:../../www/p5-CGI
-DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
-DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
+DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
+DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
+#
+# these are optional
+#
+DEPENDS+=	gd>=1.19:../../graphics/gd
 DEPENDS+=	p5-Chart-[0-9]*:../../wip/p5-Chart
+DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 BZDIR?=		${PREFIX}/share/bugzilla
 
