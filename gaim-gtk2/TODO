@@ -1,0 +1,9 @@
+Examine my use of locale in PLIST - it is currently consistent with the
+existing gaim port but doesn't feel right.
+
+Decide if we want chat/gaim and chat/gaim-gnome and chat/gaim-gtk2, or just
+this version of gaim (0.60).  We'll need to adjust the Makefile's CONFLICTS
+accordingly once that has been decided.
+
+Note that gaim 0.59 is now just going to have bug fixes imported, no new
+features.  http://gaim.sf.net/faq.php
