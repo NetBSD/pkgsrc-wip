@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/15 07:36:28 marttikuparinen Exp $
+bin/corkscrew
+share/doc/corkscrew/README
+@dirrm share/doc/corkscrew
