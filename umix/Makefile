@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/17 18:32:50 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2004/09/27 14:50:47 tvierling Exp $
 
 DISTNAME=	umix-1.0
 CATEGORIES=	audio
@@ -10,7 +10,6 @@ COMMENT=	Replacement for aumix
 
 USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
-LIBTOOL_LA_FILES+=	${GTK}lib/umix/libuigtk.la
 
 GNU_CONFIGURE=          yes
 USE_GNU_TOOLS+=		make
