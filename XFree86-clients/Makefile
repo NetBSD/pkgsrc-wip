@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/09/01 23:57:52 blef Exp $
+# $NetBSD: Makefile,v 1.10 2003/09/14 19:08:38 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-clients-${XF_VER}
@@ -35,7 +35,7 @@ post-configure:
 	done
 
 .include "../../wip/XFree86/Makefile.common"
+.include "../../wip/XFree86-libs/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../fonts/Xft2/buildlink2.mk"
-.include "../../wip/XFree86-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
