@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/04 09:48:49 bjan2 Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/08 04:11:30 bjan2 Exp $
 
 DISTNAME=		elinks-0.9.0
 CATEGORIES=		www
@@ -16,6 +16,10 @@ GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 
+PKG_SYSCONFSUBDIR=	elinks
+EGDIR=			share/examples/${PKGBASE}
+PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR} EGDIR=${EGDIR}
+
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 
@@ -23,5 +27,11 @@ CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../lang/lua/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
+
+post-install:
+	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
+	${TOUCH} ${PKG_SYSCONFDIR}/hooks.lua
+	${INSTALL_DATA_DIR} ${PREFIX}/${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/contrib/lua/hooks.lua ${PREFIX}/${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
