@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/05 13:37:05 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/25 11:28:02 adrian_p Exp $
 bin/ike-scan
+man/man1/ike-scan.1
 share/doc/ike-scan/README
 share/doc/ike-scan/udp-backoff-fingerprinting-paper.txt
 share/ike-scan/ike-backoff-patterns
