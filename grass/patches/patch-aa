@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1 2005/03/31 20:29:32 daprice Exp $
+
+--- configure.orig	2004-12-17 13:22:04.000000000 -0700
++++ configure
+@@ -8207,7 +8207,7 @@ echo "configure:8207: checking for Tcl_I
+ ac_lib_var=`echo tcl'_'Tcl_Init | sed 'y%./+-%__p_%'`
+ 
+ ac_save_LIBS="$LIBS"
+-LIBS="-ltcl $MATHLIB $LIBS"
++LIBS="-lpthread -ltcl $MATHLIB $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 8213 "configure"
+ #include "confdefs.h"
+@@ -8234,7 +8234,7 @@ LIBS="$ac_save_LIBS"
+ 
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  TCLLIB="$TCLLIB -ltcl $MATHLIB"
++  TCLLIB="$TCLLIB -lpthread -ltcl $MATHLIB"
+ else
+   echo "$ac_t""no" 1>&6
+ 
+@@ -8498,7 +8498,7 @@ echo "configure:8498: checking for Tk_Ma
+ ac_lib_var=`echo tk'_'Tk_MainWindow | sed 'y%./+-%__p_%'`
+ 
+ ac_save_LIBS="$LIBS"
+-LIBS="-ltk $TCLLIB $MATHLIB $LIBS"
++LIBS="-lX11 -lpthread -ltk $TCLLIB $MATHLIB $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 8504 "configure"
+ #include "confdefs.h"
+@@ -8525,7 +8525,7 @@ LIBS="$ac_save_LIBS"
+ 
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  TKLIB="$TKLIB -ltk $MATHLIB"
++  TKLIB="$TKLIB -lX11 -lpthread -ltk $MATHLIB"
+ else
+   echo "$ac_t""no" 1>&6
+ 
