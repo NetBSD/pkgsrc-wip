@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 08:12:37 bmeurer Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/03 16:00:53 bmeurer Exp $
 
 DISTNAME=	# empty
 PKGNAME=	PPower4-0.9.4
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www-sp.iti.informatik.tu-darmstadt.de/software/ppower4/
 COMMENT=	PDF presentation post processor
 
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
-DEPENDS+=	teTeX-bin>=1.0.2:../../print/teTeX-bin
+DEPENDS+=	{teTeX-bin>=1.0.6,teTeX2-bin-[0-9]*}:../../print/teTeX-bin
 
 # This requires Java 1.2 or better
 USE_JAVA=	run
