@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/01 22:38:26 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/26 02:40:21 blef Exp $
 #
 
 DISTNAME=		kpanta_1_0
@@ -12,6 +12,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.geocities.com/anil_rvce/kpanta.html
 COMMENT=		AntiChess - like ordinary chess, but the objective is to loose pieces
 
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 
 # propably ${TAR} options include extraction to a specified dir
@@ -20,5 +21,5 @@ GNU_CONFIGURE=		# defined
 post-extract:
 	${MV} "${WRKDIR}/kpanta - 1.0/" ${WRKDIR}/kpanta
 
-.include "../../x11/kdelibs3/buildlink2.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
