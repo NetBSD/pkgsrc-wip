@@ -5,3 +5,4 @@
 
 #define ProjectRoot PREFIX
 #define BuildHtmlManPages YES
+#define MakeCmd MAKE
