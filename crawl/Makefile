@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/12 11:02:52 ppostma Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/14 13:00:16 ppostma Exp $
 
 DISTNAME=	crawl-0.4
 CATEGORIES=	www
@@ -15,14 +15,15 @@ USE_DB185=	yes
 
 CONF_FILES=	${PREFIX}/share/examples/${PKGBASE}/crawl.conf ${PKG_SYSCONFDIR}/crawl.conf
 
-post-patch:
-	@${MV} ${WRKSRC}/cfg.h ${WRKSRC}/cfg.h.orig
-	@${SED} -e 's!@@PREFIX@@!${PREFIX}!g' < ${WRKSRC}/cfg.h.orig > \
-	   ${WRKSRC}/cfg.h
-
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/crawl.conf ${PREFIX}/share/examples/${PKGBASE}/crawl.conf
+
+SUBST_CLASSES=		path
+SUBST_STAGE.path=	post-patch
+SUBST_FILES.path=	cfg.h
+SUBST_SED.path=		-e 's,crawl.conf,${PKG_SYSCONFDIR}/crawl.conf,g'
+SUBST_MESSAGE.path=	"Fixing hardcoded path."
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
