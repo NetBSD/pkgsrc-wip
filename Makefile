@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1497 2004/10/17 17:33:43 imilh Exp $
-# $NetBSD: Makefile,v 1.1497 2004/10/17 17:33:43 imilh Exp $
+# $Id: Makefile,v 1.1498 2004/10/19 16:50:40 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1498 2004/10/19 16:50:40 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -422,7 +422,6 @@ SUBDIR+=	mozplugger
 SUBDIR+=	mpgedit
 SUBDIR+=	mplusfonts
 SUBDIR+=	mppdec
-SUBDIR+=	msf
 SUBDIR+=	mtf
 SUBDIR+=	mtrack
 SUBDIR+=	muine
@@ -599,7 +598,6 @@ SUBDIR+=	py-Fnorb
 SUBDIR+=	py-Fnorb-docs
 SUBDIR+=	py-Genetic
 SUBDIR+=	py-Impacket
-SUBDIR+=	py-InlineEgg
 SUBDIR+=	py-MayaVi
 SUBDIR+=	py-OpenAL
 SUBDIR+=	py-OpenGL
