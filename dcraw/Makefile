@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/23 23:44:56 lexort Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/23 23:47:05 lexort Exp $
 
 DISTNAME=	dcraw-1.212
 CATEGORIES=	graphics
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}
 
 do-extract:
 	for f in ${DISTFILES}; do					\
-		${CP} ${DISTDIR}/${DIST_SUBDIR}/$$f ${WRKDIR};		\
+		${CP} ${_DISTDIR}//$$f ${WRKDIR};			\
 	done
 
 do-build:
