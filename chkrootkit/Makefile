@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:11:48 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/17 14:37:18 minskim Exp $
 #
 
 DISTNAME=		chkrootkit
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.chkrootkit.org/
 COMMENT=		Locally checks for signs of a rootkit
 
 VERSION=		0.43
+DIST_SUBDIR=		${PKGNAME}
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		yes
 
