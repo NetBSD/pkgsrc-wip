@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/01 12:52:06 adrian_p Exp $
+lib/php/.registry/log.reg
+lib/php/Log.php
+lib/php/Log/composite.php
+lib/php/Log/console.php
+lib/php/Log/error_log.php
+lib/php/Log/file.php
+lib/php/Log/mail.php
+lib/php/Log/mcal.php
+lib/php/Log/observer.php
+lib/php/Log/sql.php
+lib/php/Log/syslog.php
+lib/php/Log/win.php
+@dirrm lib/php/Log
