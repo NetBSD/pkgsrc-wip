@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/08/31 13:41:20 airhead Exp $
+
+--- viewer.c.orig	2000-04-16 22:40:03.000000000 +0200
++++ viewer.c
+@@ -1,4 +1,4 @@
+-#include <gdk_imlib.h>
++#include <gdk/gdk.h>
+ #include <gdk/gdkkeysyms.h>
+ #include <gtk/gtk.h>
+ #include <glib.h>
