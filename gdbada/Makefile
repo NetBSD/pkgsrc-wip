@@ -1,0 +1,86 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 15:02:39 xtraeme Exp $
+CVS_DATE=	Fri Aug 15 09:09:37 UTC 2003
+
+DISTNAME=	gdbada-5.3
+CATEGORIES=	devel
+
+MAINTAINER=	john@johnrshannon.com
+HOMEPAGE=	http://libre.act-europe.fr/GDB/
+COMMENT=        GNAT GDB : An Ada 95 Debugger
+
+GDB_SUBPREFIX=	gdbada
+GDB_PREFIX=	${PREFIX}/${GDB_SUBPREFIX}
+#USE_GCC3=		YES
+GNU_CONFIGURE=          YES
+USE_BUILDLINK2=         YES
+USE_PKGLOCALEDIR=       YES
+USE_PKGINSTALL=		YES
+USE_GMAKE=              YES
+REPLACE_LOCALEDIR_PATTERNS+=    Make-in
+TEST_TARGET=    	check
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+LIBTOOL_OVERRIDE+=       ${WRKSRC}/bfd/libtool ${WRKSRC}/opcodes/libtool
+HAS_CONFIGURE=		YES
+INFO_DIR=		${GDB_PREFIX}/info
+LIB_DIR=		${GDB_PREFIX}/lib
+CONFIGURE_ARGS+=	--prefix=${GDB_PREFIX}
+CONFIGURE_ARGS+=	--exec-prefix=${GDB_PREFIX}
+CONFIGURE_ARGS+=	--infodir=${INFO_DIR}
+CONFIGURE_ARGS+=	--libdir=${LIB_DIR}
+CONFIGURE_ARGS+=	--includedir=${GDB_PREFIX}/include
+CONFIGURE_ARGS+=	--mandir=${GDB_PREFIX}/man
+CONFIGURE_ARGS+=	--datadir=${GDB_PREFIX}/share
+# We don't seem to be able to control where locale data goes, so:
+CONFIGURE_ARGS+=	--disable-nls
+USE_MAKEINFO=		YES
+USE_NEW_TEXINFO=	YES
+CPPFLAGS+=	-I${BUILDLINK_DIR}/include
+CFLAGS+=	-I${BUILDLINK_DIR}/include
+NO_CHECKSUM=	yes
+DIST_SUBDIR=	${PKGNAME}
+CVS_CMD?=	cvs -z3 -q
+CVSROOT=	:pserver:anoncvs@libre.act-europe.fr:/anoncvs
+STAMPFILE=	${DISTDIR}/${DIST_SUBDIR}/.timestamp
+do-fetch:
+	@if [ ! -e ${WRKDIR}/.extract_done ] ; then \
+		if [ ! -e ${STAMPFILE} ] ; then \
+			${MKDIR} ${DISTDIR}/${DIST_SUBDIR} && \
+			cd ${DISTDIR}/${DIST_SUBDIR} ; \
+			unset CVS_RSH CVS_SERVER || ${TRUE} ; \
+			${ECHO_MSG} ">> Attempting to CVS checkout from ${CVSROOT}." ;\
+			if ${CVS_CMD} -d ${CVSROOT} co -P gdb-5.3 ; \
+			then \
+				( ${ECHO} -n "${CVS_DATE}" > ${STAMPFILE} ) ; \
+				exit ; \
+			fi ; \
+			${ECHO_MSG} ">> Couldn't CVS checkout ${PKGNAME}." ; \
+			${ECHO_MSG} ">> Please try again later."; \
+			exit 1; \
+		else \
+			if [ "X${CVS_DATE}" != "X$$(${CAT} ${STAMPFILE})" ]; then \
+			cd ${DISTDIR}/${DIST_SUBDIR} ; \
+			unset CVS_RSH CVS_SERVER || ${TRUE} ; \
+			${ECHO_MSG} ">> Attempting to CVS update from ${CVSROOT}." ;\
+			if ${CVS_CMD} -d ${CVSROOT} up -Pd gdb-5.3 ; \
+			then \
+				( ${ECHO} -n "${CVS_DATE}" > ${STAMPFILE} ) ; \
+				exit ; \
+			fi ; \
+			${ECHO_MSG} ">> Couldn't CVS checkout ${PKGNAME}." ; \
+			${ECHO_MSG} ">> Please try again later."; \
+			exit 1; \
+			fi; \
+		fi; \
+	fi;
+
+do-extract:
+	${MKDIR} ${WRKSRC}
+	cd ${DISTDIR}/${DIST_SUBDIR}/gdb-5.3 ; ${PAX} -pe -rwt . ${WRKSRC}
+
+.include "../../mk/bsd.prefs.mk"
+.include "../../mk/pthread.buildlink2.mk"
+.include "../../devel/libtool/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../mk/compiler.mk"
+.include "../../mk/bsd.pkg.mk"
