@@ -1,0 +1,72 @@
+$NetBSD: patch-ab,v 1.1 2005/01/06 11:24:56 imilh Exp $
+
+--- ftpd.c.orig	2005-01-06 10:33:20.000000000 +0100
++++ ftpd.c
+@@ -107,6 +107,9 @@ static char rcsid[] = "$OpenBSD: ftpd.c,
+ #include <fcntl.h>
+ #include <glob.h>
+ #include <limits.h>
++#ifdef __NetBSD__
++#undef HAVE_LOGIN_CAP_H
++#endif
+ #ifdef HAVE_LOGIN_CAP_H
+ #include <login_cap.h>
+ #endif /* HAVE_LOGIN_CAP_H */
+@@ -371,7 +374,8 @@ curdir()
+ 
+ #ifdef INET6
+ # ifdef TLS
+-char *argstr = "AdDhlMSt:T:u:UvPz:46";
++char *argstr = "AdDhlMSt:T:u:UvPz:46o";
++int tls_auth_only = 0;
+ # else
+ char *argstr = "AdDhlMSt:T:u:UvP46";
+ # endif /* !TLS */
+@@ -389,13 +393,13 @@ usage()
+ 	syslog(LOG_ERR,
+ #ifdef INET6
+ # ifdef TLS
+-	    "usage: ftpd [-AdDhlMSU46] [-t timeout] [-T maxtimeout] [-u mask] [-z TLS option]");
++	    "usage: ftpd [-AdDhlMSU46o] [-t timeout] [-T maxtimeout] [-u mask] [-z TLS option]");
+ # else
+ 	    "usage: ftpd [-AdDhlMSU46] [-t timeout] [-T maxtimeout] [-u mask]");
+ # endif /* !TLS */
+ #else
+ # ifdef TLS
+-	    "usage: ftpd [-AdDhlMSU4] [-t timeout] [-T maxtimeout] [-u mask] [-z TLS option]");
++	    "usage: ftpd [-AdDhlMSU4o] [-t timeout] [-T maxtimeout] [-u mask] [-z TLS option]");
+ # else
+ 	    "usage: ftpd [-AdDhlMSU4] [-t timeout] [-T maxtimeout] [-u mask]");
+ # endif /* !TLS */
+@@ -497,6 +501,9 @@ main(argc, argv, envp)
+ 			if (tls_optarg(optarg))
+ 			    usage();
+ 			break;
++		case 'o':
++			tls_auth_only = 1;
++			break;
+ #endif /* TLS */
+ 
+ 		case '4':
+@@ -1166,12 +1173,20 @@ pass(passwd)
+ 	    tls_pass_passthrough = 0;
+ 	    reply_code = 232;
+ 	    authok = 1;
+-	} else
++	} else {
++		/* forbid non TLS connection if -o switch set */
++		if (!guest && (tls_auth_only && !tls_on_ctrl)) {
++			reply(503, "Non TLS login refused on this server.");
++			return;
++		}
+ #endif /* TLS */
+ 	if (logged_in || askpasswd == 0) {
+ 		reply(503, "Login with USER first.");
+ 		return;
+ 	}
++#ifdef TLS
++	} /* end the tls_auth_only case */
++#endif
+ 	askpasswd = 0;
+ 	if (!guest) {		/* "ftp" is only account allowed no password */
+ 		if (pw == NULL) {
