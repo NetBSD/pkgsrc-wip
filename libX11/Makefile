@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/02/01 18:52:01 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/01 19:12:46 minskim Exp $
 #
 
 DISTNAME=		libX11-6.2.1
@@ -12,7 +12,9 @@ COMMENT=		Base X libraries from freedesktop.org
 
 CONFLICTS+=		XFree86-libs-[0-9]*
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
@@ -20,16 +22,16 @@ USE_GNU_TOOLS+=		make
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/x11.pc.in
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
 # XXX need to test this and see how PLIST changes
 CONFIGURE_ARGS+=	--disable-xthreads
 .endif
 
-.include "../../wip/xextensions/buildlink2.mk"
-.include "../../wip/xproto/buildlink2.mk"
-.include "../../wip/xtrans/buildlink2.mk"
-.include "../../wip/libXau/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../wip/xextensions/buildlink3.mk"
+.include "../../wip/xproto/buildlink3.mk"
+.include "../../wip/xtrans/buildlink3.mk"
+.include "../../wip/libXau/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
