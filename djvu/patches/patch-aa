@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/14 06:01:31 oht Exp $
+
+--- gui/nsdejavu/nsdejavu.c.orig	2005-02-06 11:46:43.000000000 +0100
++++ gui/nsdejavu/nsdejavu.c	2005-02-06 11:44:52.000000000 +0100
+@@ -58,7 +58,6 @@
+ 
+ #include "names.h"
+ #include "version.h"
+-
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <stdarg.h>
+@@ -102,7 +101,7 @@
+ #endif
+ 
+ #define XP_UNIX 1
+-#include "npapi.h"
++#include "../npsdk/npapi.h"
+ 
+ #include <X11/Intrinsic.h>
+ #include <X11/IntrinsicP.h>

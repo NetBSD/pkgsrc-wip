@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/02/14 06:01:31 oht Exp $
+--- libdjvu/DjVuDocEditor.cpp.orig	2003-11-07 23:08:20.000000000 +0100
++++ libdjvu/DjVuDocEditor.cpp	2005-02-07 19:25:50.000000000 +0100
+@@ -192,7 +192,7 @@
+          // Suxx. I need to convert it NOW.
+          // We will unlink this file in the destructor
+ #ifndef UNDER_CE
+-      tmp_doc_url=GURL::Filename::Native(tmpnam(0));
++      tmp_doc_url=GURL::Filename::Native(mkstemp(0));
+ #else
+       tmp_doc_url=GURL::Filename::UTF8("tempFileForDjVu");
+ #endif
