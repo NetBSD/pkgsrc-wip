@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/22 15:43:21 ianzag Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/13 11:38:44 ianzag Exp $
 share/doc/kde/HTML/et/kchart/common
 share/doc/kde/HTML/et/kchart/index.cache.bz2
 share/doc/kde/HTML/et/kchart/index.docbook
@@ -91,56 +91,56 @@ share/doc/kde/HTML/et/kword/tutorial.docbook
 share/doc/kde/HTML/et/thesaurus/common
 share/doc/kde/HTML/et/thesaurus/index.cache.bz2
 share/doc/kde/HTML/et/thesaurus/index.docbook
-share/kde/locale/et/LC_MESSAGES/csvfilter.mo
-share/kde/locale/et/LC_MESSAGES/desktop_koffice.mo
-share/kde/locale/et/LC_MESSAGES/example.mo
-share/kde/locale/et/LC_MESSAGES/karbon.mo
-share/kde/locale/et/LC_MESSAGES/karbonepsfilter.mo
-share/kde/locale/et/LC_MESSAGES/kchart.mo
-share/kde/locale/et/LC_MESSAGES/kdgantt.mo
-share/kde/locale/et/LC_MESSAGES/kexi.mo
-share/kde/locale/et/LC_MESSAGES/kfile_koffice.mo
-share/kde/locale/et/LC_MESSAGES/kfile_ooo.mo
-share/kde/locale/et/LC_MESSAGES/kformdesigner.mo
-share/kde/locale/et/LC_MESSAGES/kformula.mo
-share/kde/locale/et/LC_MESSAGES/kformulalatexfilter.mo
-share/kde/locale/et/LC_MESSAGES/kformulamathmlfilter.mo
-share/kde/locale/et/LC_MESSAGES/kformulapngfilter.mo
-share/kde/locale/et/LC_MESSAGES/kivio.mo
-share/kde/locale/et/LC_MESSAGES/koconverter.mo
-share/kde/locale/et/LC_MESSAGES/koffice.mo
-share/kde/locale/et/LC_MESSAGES/koshell.mo
-share/kde/locale/et/LC_MESSAGES/kounavail.mo
-share/kde/locale/et/LC_MESSAGES/kplato.mo
-share/kde/locale/et/LC_MESSAGES/kpresenter.mo
-share/kde/locale/et/LC_MESSAGES/kpresenterkwordfilter.mo
-share/kde/locale/et/LC_MESSAGES/krita.mo
-share/kde/locale/et/LC_MESSAGES/kscan_plugin.mo
-share/kde/locale/et/LC_MESSAGES/kspread.mo
-share/kde/locale/et/LC_MESSAGES/kspreadcalc_calc.mo
-share/kde/locale/et/LC_MESSAGES/kspreaddbasefilter.mo
-share/kde/locale/et/LC_MESSAGES/kspreadexcelimportfilter.mo
-share/kde/locale/et/LC_MESSAGES/kspreadlatexexportfilter.mo
-share/kde/locale/et/LC_MESSAGES/kspreadopencalcfilter.mo
-share/kde/locale/et/LC_MESSAGES/kspreadqprofilter.mo
-share/kde/locale/et/LC_MESSAGES/kthesaurus.mo
-share/kde/locale/et/LC_MESSAGES/kugar.mo
-share/kde/locale/et/LC_MESSAGES/kword.mo
-share/kde/locale/et/LC_MESSAGES/kwordabiwordfilter.mo
-share/kde/locale/et/LC_MESSAGES/kwordasciifilter.mo
-share/kde/locale/et/LC_MESSAGES/kwordhtmlexportfilter.mo
-share/kde/locale/et/LC_MESSAGES/kwordhtmlimportfilter.mo
-share/kde/locale/et/LC_MESSAGES/kwordlatexexportfilter.mo
-share/kde/locale/et/LC_MESSAGES/kwordlatexfilter.mo
-share/kde/locale/et/LC_MESSAGES/kwordlateximportfilter.mo
-share/kde/locale/et/LC_MESSAGES/kwordmswordfilter.mo
-share/kde/locale/et/LC_MESSAGES/kwordmswritefilter.mo
-share/kde/locale/et/LC_MESSAGES/kwordoowriterfilter.mo
-share/kde/locale/et/LC_MESSAGES/kwordpdfimport.mo
-share/kde/locale/et/LC_MESSAGES/olefilterswinword97filter.mo
-share/kde/locale/et/LC_MESSAGES/thesaurus_tool.mo
-share/kde/locale/et/LC_MESSAGES/xsltexportfilter.mo
-share/kde/locale/et/LC_MESSAGES/xsltimportfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/csvfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/desktop_koffice.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/example.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/karbon.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/karbonepsfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kchart.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kdgantt.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kexi.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kfile_koffice.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kfile_ooo.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kformdesigner.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kformula.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kformulalatexfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kformulamathmlfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kformulapngfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kivio.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/koconverter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/koffice.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/koshell.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kounavail.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kplato.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kpresenter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kpresenterkwordfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/krita.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kscan_plugin.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kspread.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kspreadcalc_calc.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kspreaddbasefilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kspreadexcelimportfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kspreadlatexexportfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kspreadopencalcfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kspreadqprofilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kthesaurus.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kugar.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kword.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kwordabiwordfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kwordasciifilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kwordhtmlexportfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kwordhtmlimportfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kwordlatexexportfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kwordlatexfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kwordlateximportfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kwordmswordfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kwordmswritefilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kwordoowriterfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kwordpdfimport.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/olefilterswinword97filter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/thesaurus_tool.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xsltexportfilter.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xsltimportfilter.mo
 @dirrm share/doc/kde/HTML/et/thesaurus
 @dirrm share/doc/kde/HTML/et/kword
 @dirrm share/doc/kde/HTML/et/kugar
@@ -151,3 +151,4 @@ share/kde/locale/et/LC_MESSAGES/xsltimportfilter.mo
 @dirrm share/doc/kde/HTML/et/kivio
 @dirrm share/doc/kde/HTML/et/kformula
 @dirrm share/doc/kde/HTML/et/kchart
+@comment in kde: @dirrm share/doc/kde/HTML/et
