@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/12 11:33:38 lsed Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/21 13:20:51 adrian_p Exp $
 #
 
-DISTNAME=       amap-2.1
+DISTNAME=       amap-4.5
 CATEGORIES=     net security
 MASTER_SITES=   http://www.thc.org/releases/
 
@@ -11,6 +11,26 @@ COMMENT=        Applications and Services scanner
 
 USE_BUILDLINK2=	YES
 HAS_CONFIGURE=	YES
+
+pre-configure:
+	@${CP} ${WRKSRC}/configure ${WRKSRC}/configure.patched
+	@${CP} ${WRKSRC}/amap.h ${WRKSRC}/amap.h.patched
+
+	@${SED} -e 's|@PREFIX@|${PREFIX}|g' -e 's|@MANDIR@|${PREFIX}/man|g' \
+		< ${WRKSRC}/configure.patched > ${WRKSRC}/configure
+
+	@${SED} -e 's|@PREFIX@|${PREFIX}|g' \
+		< ${WRKSRC}/amap.h.patched > ${WRKSRC}/amap.h
+
+do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/amap
+
+	${INSTALL_PROGRAM} ${WRKSRC}/amap ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/amapcrap ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/amap.1 ${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/appdefs.trig ${PREFIX}/share/amap
+	${INSTALL_DATA} ${WRKSRC}/appdefs.resp ${PREFIX}/share/amap
+	${INSTALL_DATA} ${WRKSRC}/appdefs.rpc ${PREFIX}/share/amap
 
 .include "../../security/openssl/buildlink2.mk"
 

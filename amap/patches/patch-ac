@@ -1,36 +1,18 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/07/12 11:33:38 lsed Exp $
+$NetBSD: patch-ac,v 1.2 2003/11/21 13:20:51 adrian_p Exp $
 
---- Makefile.am.orig	Sat May  3 17:30:00 2003
-+++ Makefile.am	Sat Jul 12 12:56:19 2003
-@@ -1,11 +1,12 @@
+--- Makefile.am.orig	Fri Nov 21 12:43:19 2003
++++ Makefile.am	Fri Nov 21 12:45:49 2003
+@@ -1,8 +1,9 @@
 -CC=gcc
--OPT=-O2
--OPT_DEBUG=-ggdb -Wall
--DIR=/usr/local/bin
 +#CC=gcc
+ LIB=-lpcre -L./pcre-3.9/ -I./pcre-3.9/
+-OPT=-O2
+-OPT_DEBUG=-ggdb -Wall -lefence
+-DIR=/bin
 +OPT= -g ${CFLAGS} -DSHAREDIR="\"$(SHAREDIR)/\""
-+#OPT_DEBUG=-ggdb -Wall
++#OPT_DEBUG=-ggdb -Wall -lefence
 +DIR=${PREFIX}/bin
 +SHAREDIR=${PREFIX}/share/amap
- SCRIPTS=appdefs.trig appdefs.resp
--MANDIR=/usr/local/man/man1
-+MANDIR=${PREFIX}/man/man1
+ SCRIPTS=appdefs.trig appdefs.resp appdefs.rpc
  MANPAGE=amap.1
--all:	strip
-+all:	amap amapcrap
- 
- amap:	amap.c
- 	@echo
-@@ -24,8 +25,10 @@
- 	$(CC) $(OPT_DEBUG) -o amapcrap amapcrap.c $(XLIBS) $(XLIBPATHS)
- 
- install:	all
--	cp amap amapcrap $(SCRIPTS) $(DIR)
--	cp $(MANPAGE) $(MANDIR)
-+	${BSD_INSTALL_DATA_DIR} $(SHAREDIR)
-+	${BSD_INSTALL_PROGRAM} amap amapcrap $(DIR)
-+	${BSD_INSTALL_SCRIPT} $(SCRIPTS) $(SHAREDIR)
-+	${BSD_INSTALL_MAN} $(MANPAGE) $(MANDIR)
- 
- clean:	
- 	rm -f amap amapcrap core *~
+ all:	pcre strip
