@@ -1,7 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/02 05:53:56 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/10/25 06:48:06 xtraeme Exp $
 
-SHA1 (postal-0.61.tgz) = 8c4c870fc7248a3c1c20033e3d85ae14617d7ee7
-Size (postal-0.61.tgz) = 59675 bytes
-SHA1 (patch-aa) = 8a216ecfe7d54ae9d8e5b4fd69dfea36af6c3d5f
-SHA1 (patch-ab) = f938f0465a09373cade44e3bd3c5f1c37442b2a6
-SHA1 (patch-ac) = c6ef82df14d0431dd506fb71c692a88239c7a5ca
+SHA1 (postal-0.62.tgz) = 6379ac223964921963389c8c600a1ba4b24a6ab3
+Size (postal-0.62.tgz) = 84506 bytes
