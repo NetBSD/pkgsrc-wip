@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/06/22 10:38:09 cjep Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/14 14:37:05 xtraeme Exp $
 #
 
 DISTNAME=	dancer-ircd-1.0.31+maint8-fn6
@@ -20,8 +20,18 @@ CONFIGURE_ARGS+=	--with-config=dist
 EGDIR=          ${PREFIX}/share/examples/dancer-ircd
 DOCDIR=		${PREFIX}/share/doc/dancer-ircd
 
-OWN_DIRS=	/var/lib/dancer-ircd
-OWN_DIRS+=	/var/log/dancer-ircd
+DANCER_IRCD_USER=	dancer_ircd
+DANCER_IRCD_GROUP=	dancer_ircd
+PKG_GROUPS=             ${DANCER_IRCD_GROUP}
+PKG_USERS=              ${DANCER_IRCD_USER}:${DANCER_IRCD_GROUP}::dancer_ircd\\ user
+
+DIRS=	/var/lib/dancer-ircd /var/log/dancer-ircd
+
+.for f in ${DIR}
+OWN_DIRS_PERMS+=	${f} dancer_ircd dancer_ircd 750
+.endfor
+
+.undef f
 
 RCD_SCRIPTS=		dancer-ircd
 PKG_SYSCONFSUBDIR=	dancer-ircd
@@ -47,9 +57,10 @@ post-extract:
 	${MV} ${WRKSRC}/include/config.h.dist ${WRKSRC}/include/config.h.dist.in
 
 pre-configure:
-	${SED} -e "s|@SPATH@|${PREFIX}/sbin/dancer-ircd|g" \
+	${SED} \
+		-e "s|@SPATH@|${PREFIX}/sbin/dancer-ircd|g" \
 		-e "s|@CPATH@|${DANCER_IRCD_CONFDIR}/dancer-ircd|g" \
-	        -e "s|@KPATH@|${DANCER_IRCD_CONFDIR}/kline.conf|g" \
+		-e "s|@KPATH@|${DANCER_IRCD_CONFDIR}/kline.conf|g" \
 		-e "s|@DLPATH@|${DANCER_IRCD_CONFDIR}/dline.conf|g" \
 		-e "s|@MPATH@|${DANCER_IRCD_CONFDIR}/motd|g" \
 		-e "s|@LPATH@|${DANCER_IRCD_LOGDIR}/ircd.log|g" \
@@ -70,10 +81,10 @@ do-install:
 	( cd ${WRKSRC}/doc/hybrid/ && \
 		for f in *; do ${INSTALL_DATA} $$f ${DOCDIR}/hybrid; done )
 	${INSTALL_PROGRAM} ${WRKSRC}/src/dancer-ircd ${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkconf ${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/install_ircd ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/viconf ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/mkpasswd ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkconf ${WRKSRC}/tools/install_ircd \
+		${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/viconf ${WRKSRC}/tools/mkpasswd \
+		${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/doc/ircd.8 ${PREFIX}/man/man8
 	${INSTALL_DATA} ${WRKSRC}/doc/example.conf ${EGDIR}/ircd.conf.default
 
