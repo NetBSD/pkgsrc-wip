@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.530 2003/10/10 02:56:03 minskim Exp $
-# $NetBSD: Makefile,v 1.530 2003/10/10 02:56:03 minskim Exp $
+# $Id: Makefile,v 1.531 2003/10/10 15:26:51 dillo Exp $
+# $NetBSD: Makefile,v 1.531 2003/10/10 15:26:51 dillo Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -164,6 +164,7 @@ SUBDIR+=	ht
 SUBDIR+=	ht2html
 SUBDIR+=	html2latex
 SUBDIR+=	httrack
+SUBDIR+=	hugo
 SUBDIR+=	hydra
 SUBDIR+=	hydrogen
 SUBDIR+=	ices
