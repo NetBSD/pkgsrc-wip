@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1725 2005/04/06 00:49:55 jgoamakf Exp $
-# $NetBSD: Makefile,v 1.1725 2005/04/06 00:49:55 jgoamakf Exp $
+# $Id: Makefile,v 1.1726 2005/04/06 11:11:02 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.1726 2005/04/06 11:11:02 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -628,6 +628,7 @@ SUBDIR+=	orpie
 SUBDIR+=	p3nfs
 SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-AxKit
+SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-Cache-Mmap
 SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Convert-BinHex
@@ -649,6 +650,7 @@ SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Mail-Webmail-Gmail
 SUBDIR+=	p5-MasonX-Apache2Handler
+SUBDIR+=	p5-Module-Pluggable-Fast
 SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-PcapUtils
 SUBDIR+=	p5-News-Newsrc
