@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/09/29 13:17:01 marc Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/11 23:37:43 blef Exp $
 #
 
 DISTNAME=		bub-n-bros-1.1
@@ -12,7 +12,7 @@ COMMENT=		Multiplayer crazy clone of Bubble Bobble
 WRKSRC=			${WRKDIR}/bub-n-bros
 USE_X11=		yes
 PY_PATCHPLIST=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 MAKE_ENV=		CFLAGS="${CFLAGS}"
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
@@ -48,6 +48,6 @@ do-install:
 		-rwpe . ${PREFIX}/games/${PKGBASE}
 
 .include "../../lang/python/application.mk"
-.include "../../wip/py-game/buildlink2.mk"
+.include "../../wip/py-game/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:32:52 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/11 23:43:51 blef Exp $
 #
 
 DISTNAME=	nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}-0
@@ -24,7 +24,7 @@ COMMENT=		OpenGL tutorials from NeHe.gamedev.net - ${NEHE_OPENGL_TUT_FLAVOUR} ve
 DIST_SUBDIR=   		nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 RESTRICTED=		"I am not sure if we can redistribute it"
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -43,8 +43,8 @@ NEHE_OPENGL_TUT_DIR?=		share/${DISTNAME}
 # lesson13.tar.gz
 # lesson43.tar.gz
 # 
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../audio/SDL_mixer/buildlink2.mk" # for lesson 21
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk" # for lesson 21
 .else
 .error "Flavour ${NEHE_OPENGL_TUT_FLAVOUR} unknown!"
 # 
@@ -73,5 +73,5 @@ do-install:
 	cd ${PREFIX} && ${FIND} -d ${NEHE_OPENGL_TUT_DIR} -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 
-.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
