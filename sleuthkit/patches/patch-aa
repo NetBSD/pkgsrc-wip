@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/29 16:41:17 poppnk Exp $
+--- src/mmtools/mm_tools.h.orig	2003-09-03 00:44:33.000000000 +0000
++++ src/mmtools/mm_tools.h	2003-12-29 16:28:34.000000000 +0000
+@@ -65,7 +65,7 @@
+  /*
+   * FreeBSD can handle filesystems > 2GB.
+   */
+-#if defined(FREEBSD2) || defined(FREEBSD3) || defined(FREEBSD4) || defined(FREEBSD5)
++#if defined(FREEBSD2) || defined(FREEBSD3) || defined(FREEBSD4) || defined(FREEBSD5)||defined __NetBSD__
+ #include <sys/uio.h>
+ #define SUPPORTED
+ #define STRTOUL		strtoul
