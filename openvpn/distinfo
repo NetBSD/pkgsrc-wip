@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/07/21 23:50:20 tripledes Exp $
+$NetBSD: distinfo,v 1.4 2004/01/15 22:11:12 dawszy Exp $
 
-SHA1 (openvpn-1.4.2.tar.gz) = 5047c2acb78d235f77fb8c51ba3049d327fe17e0
-Size (openvpn-1.4.2.tar.gz) = 277351 bytes
+SHA1 (openvpn-1.5.0.tar.gz) = 13f443adbff5c657cfd8400011e8df804b57f7ff
+Size (openvpn-1.5.0.tar.gz) = 403792 bytes

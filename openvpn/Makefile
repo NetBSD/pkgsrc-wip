@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/09/17 16:04:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/15 22:11:12 dawszy Exp $
 #
 
-DISTNAME=		openvpn-1.4.2
+DISTNAME=		openvpn-1.5.0
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openvpn/}
 
