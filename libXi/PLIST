@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 03:50:59 xtraeme Exp $
+lib/libXi.a
+lib/libXi.la
+lib/libXi.so
+lib/libXi.so.6
+lib/libXi.so.6.1
+lib/pkgconfig/xi.pc
