@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/10/20 21:26:53 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/27 03:12:45 minskim Exp $
 #
 
 DISTNAME=	acid-0.9.6b23
@@ -13,7 +13,7 @@ COMMENT=	Database class library for PHP4
 DEPENDS+=       ap-php>=4.0.4:../../www/ap-php4
 DEPENDS+=	apache>=1.3:../../www/apache
 DEPENDS+=	adodb>=1.2:../../wip/adodb
-DEPENDS+=	php-jpgraph>=1.8:../../wip/php-jpgraph
+DEPENDS+=	php-jpgraph>=1.8:../../graphics/php-jpgraph
 DEPENDS+=	php-gd>=4.0.4:../../graphics/php4-gd
 DEPENDS+=	php-sockets>=4.0.4:../../net/php4-sockets
 
