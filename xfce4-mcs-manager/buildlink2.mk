@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/06/09 06:30:49 marttikuparinen Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/06/25 06:52:46 marttikuparinen Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-mcs-manager.
 #
@@ -9,7 +9,7 @@
 XFCE4_MCS_MANAGER_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-mcs-manager
-BUILDLINK_DEPENDS.xfce4-mcs-manager?=		xfce4-mcs-manager>=3.90.0
+BUILDLINK_DEPENDS.xfce4-mcs-manager?=		xfce4-mcs-manager>=3.91.0
 BUILDLINK_PKGSRCDIR.xfce4-mcs-manager?=		../../wip/xfce4-mcs-manager
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-mcs-manager=xfce4-mcs-manager

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2003/06/09 06:30:51 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.2 2003/06/25 06:52:46 marttikuparinen Exp $
 
-SHA1 (xfce-utils-3.90.0.tar.gz) = c84ea511b11d74ee659c856b6ecfa62a0250c074
-Size (xfce-utils-3.90.0.tar.gz) = 566597 bytes
+SHA1 (xfce-utils-3.91.0.tar.gz) = 8536f4ef0600f2072384f4645ee27aa704d0f58b
+Size (xfce-utils-3.91.0.tar.gz) = 575269 bytes

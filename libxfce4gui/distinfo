@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2003/06/09 06:30:47 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.2 2003/06/25 06:52:45 marttikuparinen Exp $
 
-SHA1 (libxfcegui4-3.90.0.tar.gz) = 5ad5ea4a3a3be6667a7f1fbc51fff92f8682964a
-Size (libxfcegui4-3.90.0.tar.gz) = 320218 bytes
+SHA1 (libxfcegui4-3.91.0.tar.gz) = e2e6ccd5a943276eb5e79e0ac788c94e7a60f507
+Size (libxfcegui4-3.91.0.tar.gz) = 325851 bytes

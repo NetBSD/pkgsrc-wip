@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/04 07:38:49 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/25 06:52:46 marttikuparinen Exp $
 bin/xfce4-panel
 etc/xfce4/xfce4rc
 include/xfce4/panel/controls.h
@@ -41,6 +41,7 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfce4-panel.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce4-panel.mo

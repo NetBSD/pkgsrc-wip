@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/06/09 06:30:48 marttikuparinen Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/06/25 06:52:45 marttikuparinen Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-fm.
 #
@@ -9,7 +9,7 @@
 XFCE4_FM_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-fm
-BUILDLINK_DEPENDS.xfce4-fm?=		xfce4-fm>=3.90.381
+BUILDLINK_DEPENDS.xfce4-fm?=		xfce4-fm>=3.91.410
 BUILDLINK_PKGSRCDIR.xfce4-fm?=		../../wip/xfce4-fm
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-fm=xfce4-fm

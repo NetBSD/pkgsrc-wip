@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/06/09 06:30:46 marttikuparinen Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/06/25 06:52:45 marttikuparinen Exp $
 #
 # This Makefile fragment is included by packages that use libxfce4gui.
 #
@@ -9,7 +9,7 @@
 LIBXFCE4GUI_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libxfce4gui
-BUILDLINK_DEPENDS.libxfce4gui?=		libxfce4gui>=3.90.0
+BUILDLINK_DEPENDS.libxfce4gui?=		libxfce4gui>=3.91.0
 BUILDLINK_PKGSRCDIR.libxfce4gui?=		../../wip/libxfce4gui
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libxfce4gui=libxfce4gui
@@ -36,6 +36,7 @@ BUILDLINK_FILES.libxfce4gui+=	include/xfce4/libxfcegui4/session-client.h
 BUILDLINK_FILES.libxfce4gui+=	include/xfce4/libxfcegui4/xfce_clock.h
 BUILDLINK_FILES.libxfce4gui+=	include/xfce4/libxfcegui4/xfce_decorbutton.h
 BUILDLINK_FILES.libxfce4gui+=	include/xfce4/libxfcegui4/xfce_decortoggle.h
+BUILDLINK_FILES.libxfce4gui+=	include/xfce4/libxfcegui4/xfce_framebox.h
 BUILDLINK_FILES.libxfce4gui+=	include/xfce4/libxfcegui4/xfce_iconbutton.h
 BUILDLINK_FILES.libxfce4gui+=	include/xfce4/libxfcegui4/xfce_marshal.h
 BUILDLINK_FILES.libxfce4gui+=	include/xfce4/libxfcegui4/xfce_menubutton.h

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/04 07:36:50 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/25 06:52:45 marttikuparinen Exp $
 bin/xfdesktop
 etc/xfce4/menu.xml
 lib/xfce4/mcs-plugins/backdrop_settings.a
@@ -16,6 +16,7 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfdesktop.mo

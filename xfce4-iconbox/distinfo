@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2003/06/09 06:30:49 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.2 2003/06/25 06:52:46 marttikuparinen Exp $
 
-SHA1 (xfce4-iconbox-3.90.0.tar.gz) = 34ce4aabeabb2e24ba51505f2fd71ed3282b63ec
-Size (xfce4-iconbox-3.90.0.tar.gz) = 221246 bytes
+SHA1 (xfce4-iconbox-3.91.0.tar.gz) = 61c2cf9299bee47bfac72b5c8f2b12aae9344965
+Size (xfce4-iconbox-3.91.0.tar.gz) = 236554 bytes
