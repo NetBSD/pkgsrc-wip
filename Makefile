@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.636 2003/11/20 21:50:26 adrian_p Exp $
-# $NetBSD: Makefile,v 1.636 2003/11/20 21:50:26 adrian_p Exp $
+# $Id: Makefile,v 1.637 2003/11/22 08:07:30 blef Exp $
+# $NetBSD: Makefile,v 1.637 2003/11/22 08:07:30 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -82,6 +82,7 @@ SUBDIR+=	cjk-latex-japanese
 SUBDIR+=	cjk-latex-korean
 SUBDIR+=	cmatrix
 SUBDIR+=	cops
+SUBDIR+=	crack-attack
 SUBDIR+=	cvsd
 SUBDIR+=	cyrus-imapd22
 SUBDIR+=	d2x
