@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.410 2003/09/01 17:09:22 adrian_p Exp $
-# $NetBSD: Makefile,v 1.410 2003/09/01 17:09:22 adrian_p Exp $
+# $Id: Makefile,v 1.411 2003/09/02 00:30:28 blef Exp $
+# $NetBSD: Makefile,v 1.411 2003/09/02 00:30:28 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -11,12 +11,12 @@ SUBDIR+=	Radiator-all
 SUBDIR+=	WEPCrack
 SUBDIR+=	XFree86
 SUBDIR+=	XFree86-clients
-SUBDIR+=	XFree86-defaultBitmaps
 SUBDIR+=	XFree86-docs
 SUBDIR+=	XFree86-fonts100dpi
 SUBDIR+=	XFree86-fonts75dpi
 SUBDIR+=	XFree86-fontsCyrillic
 SUBDIR+=	XFree86-fontsEncodings
+SUBDIR+=	XFree86-fontsMisc
 SUBDIR+=	XFree86-fontsScalable
 SUBDIR+=	XFree86-fontserver
 SUBDIR+=	XFree86-libs
