@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.927 2004/02/03 16:28:41 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.927 2004/02/03 16:28:41 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.928 2004/02/03 16:36:34 marc Exp $
+# $NetBSD: Makefile,v 1.928 2004/02/03 16:36:34 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -63,7 +63,6 @@ SUBDIR+=	busybox
 SUBDIR+=	bwidget
 SUBDIR+=	byacc
 SUBDIR+=	c-news
-SUBDIR+=	cairo
 SUBDIR+=	cal3d
 SUBDIR+=	cal3d_cally
 SUBDIR+=	cawf
@@ -305,7 +304,6 @@ SUBDIR+=	libneural
 SUBDIR+=	libogg-nightly
 SUBDIR+=	libol
 #SUBDIR+=	libpathan	# needs xerces-c-2.3.0 in pkg/23861
-SUBDIR+=	libpixman
 SUBDIR+=	libprelude
 SUBDIR+=	libstatgrab
 SUBDIR+=	libtlen
