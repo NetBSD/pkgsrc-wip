@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.150 2003/05/08 23:58:48 lsed Exp $
-# $NetBSD: Makefile,v 1.150 2003/05/08 23:58:48 lsed Exp $
+# $Id: Makefile,v 1.151 2003/05/09 09:56:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.151 2003/05/09 09:56:52 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -23,6 +23,7 @@ SUBDIR+=	cjk-latex-chinese
 SUBDIR+=	cjk-latex-japanese
 SUBDIR+=	cjk-latex-korean
 SUBDIR+=	cvsd
+SUBDIR+=	darkice
 SUBDIR+=	dancer-ircd
 SUBDIR+=	devhelp
 SUBDIR+=	dircproxy
