@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1715 2005/03/30 15:45:01 minskim Exp $
-# $NetBSD: Makefile,v 1.1715 2005/03/30 15:45:01 minskim Exp $
+# $Id: Makefile,v 1.1716 2005/03/31 18:28:50 airhead Exp $
+# $NetBSD: Makefile,v 1.1716 2005/03/31 18:28:50 airhead Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -402,6 +402,7 @@ SUBDIR+=	jcr-yahoo
 SUBDIR+=	jdk14
 SUBDIR+=	jemboss-standalone
 SUBDIR+=	jgloss
+SUBDIR+=	jumpnbump
 SUBDIR+=	kahakai
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
