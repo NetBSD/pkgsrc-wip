@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.2 2003/11/30 20:53:03 mpasternak Exp $
-# $Id: Makefile.common,v 1.2 2003/11/30 20:53:03 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.3 2003/11/30 23:56:27 mpasternak Exp $
+# $Id: Makefile.common,v 1.3 2003/11/30 23:56:27 mpasternak Exp $
 
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw/}
 
@@ -13,6 +13,7 @@ USE_BUILDLINK2?=	yes
 USE_PKGLOCALE?=		yes
 GNU_CONFIGURE?=		yes
 USE_CROSSBASE=		yes
+USE_GMAKE?=		yes
 
 PLIST_SUBST+=		MINGWTARGET=${MINGWTARGET}
 
@@ -27,5 +28,3 @@ MINGWTARGET=		i586-pc-mingw32
 MINGWCCOREDISTFILE=	gcc-core-3.3.1-20030804-1-src
 
 PATH:=			${CROSSBASE}/bin:${PATH}
-
-.include "../../mk/bsd.pkg.mk"
