@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/26 14:55:51 imilh Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/05 15:12:05 imilh Exp $
 bin/pkg_notify
+share/examples/${PKGBASE}/${PKGBASE}.list
+@dirrm share/examples/${PKGBASE}
