@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/02/25 16:10:17 bubuchka Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/12 16:45:10 minskim Exp $
 
 DRW_CLIENT_NAME=	smf
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Sendmail MTA filter for DrWeb Daemon antivirus
 
 RCD_SCRIPTS=		drweb-smf
