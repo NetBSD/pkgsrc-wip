@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/09/27 09:34:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/27 10:10:50 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0b1
@@ -112,7 +112,7 @@ JABBERD_DBDIR?=		/var/db/jabberd
 # Directory to store the pid files
 JABBERD_PIDDIR?=	/var/run/jabberd
 
-.for f in ${JABBERD_LOGDIR} ${JABBERD_DBDIR}
+.for f in ${JABBERD_LOGDIR} ${JABBERD_DBDIR} ${JABBERD_PIDDIR}
 OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 750
 .endfor
 .undef f
