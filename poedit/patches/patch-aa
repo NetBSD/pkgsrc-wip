@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1 2003/04/19 18:12:02 lsed Exp $
+
+--- configure.orig	2003-02-06 17:31:14.000000000 +0100
++++ configure	2003-04-19 13:31:58.000000000 +0200
+@@ -1817,13 +1817,13 @@
+   
+   
+ 
+-if test x$GNOME_DATA_DIR != x; then
+-  USE_GNOME_TRUE=
+-  USE_GNOME_FALSE='#'
+-else
++#if test x$GNOME_DATA_DIR != x; then
++#  USE_GNOME_TRUE=
++#  USE_GNOME_FALSE='#'
++#else
+   USE_GNOME_TRUE='#'
+   USE_GNOME_FALSE=
+-fi
++#fi
+ 
+     if test x$USE_TRANSMEM != xno ; then
+         echo $ac_n "checking how to run the C preprocessor""... $ac_c" 1>&6
+@@ -1938,7 +1938,7 @@
+   cat conftest.$ac_ext >&5
+ fi
+ rm -f conftest*
+-test "$ac_cv_search_db_create" = "no" && for i in db db-4.5 db-4.4 db-4.3 db-4.2 db-4.1 db-4.0 db-3.6 db-3.5 db-3.4 db-3.3 db-3.2 db-3.1; do
++test "$ac_cv_search_db_create" = "no" && for i in db3 db-4.5 db-4.4 db-4.3 db-4.2 db-4.1 db-4.0 db-3.6 db-3.5 db-3.4 db-3.3 db-3.2 db-3.1; do
+ LIBS="-l$i  $ac_func_search_save_LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 1945 "configure"
+@@ -2066,7 +2066,7 @@
+ 
+ 
+       if test x$USE_TRANSMEM != x0 ; then
+-          CXXFLAGS="$CXXFLAGS -DUSE_TRANSMEM -DDB_HEADER=\\\"$DB_HEADER\\\""
++          CXXFLAGS="$CXXFLAGS -DUSE_TRANSMEM -DDB_HEADER=\\<db3/db.h\\>"
+       fi
+    fi
+ 
