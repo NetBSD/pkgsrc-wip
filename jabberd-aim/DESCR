@@ -1,0 +1,3 @@
+The Jabber server (jabberd) is a daemon for Jabber clients to connect
+and communicate with.  The AIM Transport module allows clients to
+communicate with user's of AOL Instant Messenger.
