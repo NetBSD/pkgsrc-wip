@@ -1,0 +1,6 @@
+Mpc is a command line client for the Music Player Daemon.
+It connects to the server specified in environment variables
+MPD_HOST and MPD_PORT and is shipped with a ready-to-use bash
+tab completion configuration.
+
+For more information see http://www.musicpd.org/
