@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/17 12:20:08 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/23 08:35:20 cubidou Exp $
 
 DISTNAME=		DateTime-TimeZone-0.19
 PKGNAME=		p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=		cube@cubidou.net
 HOMEPAGE=		http://search.cpan.org/dist/DateTime-TimeZone/
 COMMENT=		Perl module to handle time zone manipulation
 
-DEPENDS+=		p5-Class-Singleton-[0-9]*:../../local/p5-Class-Singleton
+DEPENDS+=		p5-Class-Singleton-[0-9]*:../../wip/p5-Class-Singleton
 DEPENDS+=		p5-Params-Validate-[0-9]*:../../devel/p5-Params-Validate
 
 USE_BUILDLINK2=	YES
