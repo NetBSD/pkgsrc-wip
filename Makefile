@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1655 2005/02/15 22:57:53 airhead Exp $
-# $NetBSD: Makefile,v 1.1655 2005/02/15 22:57:53 airhead Exp $
+# $Id: Makefile,v 1.1656 2005/02/15 23:26:28 airhead Exp $
+# $NetBSD: Makefile,v 1.1656 2005/02/15 23:26:28 airhead Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -765,6 +765,7 @@ SUBDIR+=	sawfish-gtk2
 SUBDIR+=	scare
 SUBDIR+=	scite
 SUBDIR+=	scm
+SUBDIR+=	scx
 SUBDIR+=	scourge
 SUBDIR+=	scponly
 SUBDIR+=	scribus
