@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/07/25 16:22:57 marc Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/29 06:01:22 dolecek Exp $
 #
 
 DISTNAME=	nagios-1.2
@@ -20,7 +20,7 @@ BUILD_DEFS+=	NAGIOS_USE_MYSQL NAGIOS_USE_POSTGRESQL
 CONFIGURE_ARGS+=	--with-mysql-lib=${LOCALBASE}/lib/mysql		\
 			--with-mysql-inc=${LOCALBASE}/include/mysql	\
 			--with-mysql-xdata
-.include "../../databases/mysql-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .endif
 
 .if defined(NAGIOS_USE_POSTGRESQL)

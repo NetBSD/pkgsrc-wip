@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/09 20:57:59 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/29 06:01:23 dolecek Exp $
 
 DISTNAME=	pam_mysql-0.5
 PKGNAME=	pam-mysql-0.5
@@ -29,5 +29,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/Readme ${DOCDIR}
 
 .include "../../security/PAM/buildlink3.mk"
-.include "../../databases/mysql-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
