@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.166 2003/05/15 21:40:24 lsed Exp $
-# $NetBSD: Makefile,v 1.166 2003/05/15 21:40:24 lsed Exp $
+# $Id: Makefile,v 1.167 2003/05/16 03:24:16 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.167 2003/05/16 03:24:16 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -114,6 +114,7 @@ SUBDIR+=	pixieplus
 SUBDIR+=	poedit
 SUBDIR+=	portmap
 SUBDIR+=	ppp
+SUBDIR+=	procps
 SUBDIR+=	pts
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-PgSQL
