@@ -1,2 +1,1 @@
-* Install configuration in ${PREFIX}/share/${PKGBASE}, not in ${PREFIX}/etc
 * Install Documentation and examples
