@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.625 2003/11/18 08:04:26 mpasternak Exp $
-# $NetBSD: Makefile,v 1.625 2003/11/18 08:04:26 mpasternak Exp $
+# $Id: Makefile,v 1.626 2003/11/18 14:40:56 mpasternak Exp $
+# $NetBSD: Makefile,v 1.626 2003/11/18 14:40:56 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -81,6 +81,7 @@ SUBDIR+=	cjk-latex
 SUBDIR+=	cjk-latex-chinese
 SUBDIR+=	cjk-latex-japanese
 SUBDIR+=	cjk-latex-korean
+SUBDIR+=	cmatrix
 SUBDIR+=	cops
 SUBDIR+=	cvsd
 SUBDIR+=	cyrus-imapd22
