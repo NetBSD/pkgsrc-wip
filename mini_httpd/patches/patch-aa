@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/08 00:51:10 bjan2 Exp $
+$NetBSD: patch-aa,v 1.2 2004/02/03 05:16:02 bjan2 Exp $
 
 --- Makefile.orig	2002-11-01 16:02:57.000000000 -0700
 +++ Makefile
@@ -15,8 +15,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/08 00:51:10 bjan2 Exp $
 -BINDIR =	/usr/local/sbin
 -MANDIR =	/usr/local/man
 -CC =		gcc
-+BINDIR =	${LOCALBASE}/sbin
-+MANDIR =	${LOCALBASE}/man
++BINDIR =	${PREFIX}/sbin
++MANDIR =	${PREFIX}/man
  CDEFS =		${SSL_DEFS} ${SSL_INC}
 -CFLAGS =	-O ${CDEFS}
 -#CFLAGS =	-g ${CDEFS}
