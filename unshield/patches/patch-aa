@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/11 19:06:45 plunky Exp $
+
+--- src/Makefile.in.orig	Thu Jun 10 22:57:07 2004
++++ src/Makefile.in	Thu Jun 10 22:57:19 2004
+@@ -92,7 +92,7 @@
+ am__include = @am__include@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+-AM_CFLAGS = -g -ansi -Wall -Wsign-compare -Wno-long-long -Werror @APPLE_CFLAGS@ -I../lib
++AM_CFLAGS = -g -ansi -Wall -Wsign-compare -Wno-long-long @APPLE_CFLAGS@ -I../lib
+ LDADD = ../lib/libunshield.la
+ 
+ bin_PROGRAMS = unshield

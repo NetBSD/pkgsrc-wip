@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/11 19:06:45 plunky Exp $
+bin/unshield
+include/libunshield.h
+lib/libunshield.a
+lib/libunshield.la
+lib/libunshield.so
+lib/libunshield.so.0
+lib/libunshield.so.0.0
+share/aclocal/unshield.m4
