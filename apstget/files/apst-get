@@ -21,6 +21,7 @@ fi
 # UPDATE_METHOD="cvs" # cvsync|cvs|sup|cvsup
 # UPDATE_ARGS=""      # UPDATE_METHOD flags
 # GET_FIRST="0"       # Always get first pkg on dup packages found
+# PREFERED=""         # space-separated list of prefered packages (for dup)
 
 #----->8--------------#
 PREFIX=_pfx_
@@ -88,7 +89,7 @@ do_usage() {
 	echo ""
 	echo "variables (environ|_etc_/apstget.conf):"
 	echo "  MAKE_TARGET, INTERACTIVE, QUITE, IGNORE_ERRORS"
-	echo "  UPDATE_METHOD, UPDATE_ARGS, GET_FIRST"
+	echo "  UPDATE_METHOD, UPDATE_ARGS, GET_FIRST, PREFERED"
 }
 
 do_install() {
@@ -103,12 +104,23 @@ do_install() {
 
 	if [ "${GET_FIRST}" = "1" ]; then
 		DIR=`echo ${DIR} | awk '{print $1}'`
+	else 
+		for A in `echo ${PREFERED}`; do
+			for B in ${DIR} ; do
+			if [ "${A}" = "${B}" ]; then
+				DIR=${A}
+				echo "==> Using prefered ${A}"
+				break;
+			fi
+			done
+		done
 	fi
 	if [ ! -e "${PKGSRC_DIR}/${DIR}" ]; then
 		if [ "`echo ${DIR}|awk '{print $2}'`" = "" ]; then
 			echo "==> Error! The package $PKG was not found!"
 		else
 			echo "==> ${PKG} is in more than one category. Specify it:"
+			echo "==> You can also use GET_FIRST or PREFERED"
 			echo "==> Found at: `echo ${DIR}`"
 		fi
 	else
