@@ -4,7 +4,7 @@
 STAGE=$2
 
 TEXMFMAIN=@TEXMFMAIN@
-TTFONTSMAP=${TEXMFMAIN}/ttf2pk/ttfonts.map
+TTFONTSMAP=${TEXMFMAIN}/ttf2tfm/base/ttfonts.map
 TEXMFCNF=${TEXMFMAIN}/web2c/texmf.cnf
 
 case ${STAGE} in
@@ -27,10 +27,10 @@ case ${STAGE} in
 	echo "hline@UKS@       hline.ttf     Pid = 3 Eid = 1" >> ${TTFONTSMAP}
 
 	echo "Edit ${TEXMFCNF}"
-	echo "% ttf2pk data directory"        >> ${TEXMFCNF}
-	echo "TTF2PKINPUTS = \$TEXMF/ttf2pk"  >> ${TEXMFCNF}
-	echo "% ttf2tfm data directory"       >> ${TEXMFCNF}
-	echo "TTF2TFMINPUTS = \$TEXMF/ttf2pk" >> ${TEXMFCNF}
+	echo "% ttf2pk data directory"              >> ${TEXMFCNF}
+	echo "TTF2PKINPUTS = \$TEXMF/ttf2tfm/base"  >> ${TEXMFCNF}
+	echo "% ttf2tfm data directory"             >> ${TEXMFCNF}
+	echo "TTF2TFMINPUTS = \$TEXMF/ttf2tfm/base" >> ${TEXMFCNF}
 
 	echo "Update ls-R"
 	mktexlsr
