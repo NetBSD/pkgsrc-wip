@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/05/09 09:54:30 xtraeme Exp $
+$NetBSD: patch-ae,v 1.2 2003/05/14 08:06:07 xtraeme Exp $
 
 --- src/Makefile.in.orig	2003-05-09 10:56:50.000000000 +0200
 +++ src/Makefile.in	2003-05-09 10:58:22.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2003/05/09 09:54:30 xtraeme Exp $
  CXXFLAGS = -O2 -pedantic -Wall @PTHREAD_CFLAGS@
  INCLUDES = @LAME_INCFLAGS@ @VORBIS_INCFLAGS@
 -LDADD = @PTHREAD_LIBS@ @LAME_LDFLAGS@ @VORBIS_LDFLAGS@
-+LDADD = @PTHREAD_LIBS@ @LAME_LDFLAGS@ @VORBIS_LDFLAGS@ -lossaudio
++LDADD = @PTHREAD_LIBS@ @LAME_LDFLAGS@ @VORBIS_LDFLAGS@ ${LIBOSSAUDIO}
  
  darkice_SOURCES = AudioEncoder.h\
                      AudioSource.h\
