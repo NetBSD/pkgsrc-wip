@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1482 2004/10/02 04:09:56 jgoamakf Exp $
-# $NetBSD: Makefile,v 1.1482 2004/10/02 04:09:56 jgoamakf Exp $
+# $Id: Makefile,v 1.1483 2004/10/05 16:12:43 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.1483 2004/10/05 16:12:43 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -495,9 +495,11 @@ SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-IO-Multiplex
+SUBDIR+=	p5-IO-Util
 SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Net-PcapUtils
+SUBDIR+=	p5-OOTools
 SUBDIR+=	p5-POE
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Set-Crontab
