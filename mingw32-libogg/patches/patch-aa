@@ -1,0 +1,23 @@
+--- include/ogg/os_types.h~	Fri Jul 19 10:25:51 2002
++++ include/ogg/os_types.h	Mon Dec  8 18:41:42 2003
+@@ -33,12 +33,20 @@
+    typedef unsigned __int32 ogg_uint32_t;
+    typedef __int16 ogg_int16_t;
+ #  else
++#   ifndef __MINGW32__
+    /* Cygwin */
+    #include <_G_config.h>
+    typedef _G_int64_t ogg_int64_t;
+    typedef _G_int32_t ogg_int32_t;
+    typedef _G_uint32_t ogg_uint32_t;
+    typedef _G_int16_t ogg_int16_t;
++#   else
++   /* Mingw32 - same as Borland/MSVC */
++   typedef __int64 ogg_int64_t;
++   typedef __int32 ogg_int32_t;
++   typedef unsigned __int32 ogg_uint32_t;
++   typedef __int16 ogg_int16_t;
++# endif
+ #  endif
+ 
+ #elif defined(__MACOS__)
