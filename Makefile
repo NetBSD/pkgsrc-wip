@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.266 2003/06/24 05:06:19 xtraeme Exp $
-# $NetBSD: Makefile,v 1.266 2003/06/24 05:06:19 xtraeme Exp $
+# $Id: Makefile,v 1.267 2003/06/24 05:43:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.267 2003/06/24 05:43:34 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -72,6 +72,7 @@ SUBDIR+=	gnomeicu
 SUBDIR+=	gnome2-pkgview
 SUBDIR+=	gnome2-system-monitor
 SUBDIR+=	gnome2-userdocs
+SUBDIR+=	gob2
 SUBDIR+=	gotmail
 SUBDIR+=	grip
 SUBDIR+=	gstreamer-player
