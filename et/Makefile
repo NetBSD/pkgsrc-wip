@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/17 04:03:43 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/17 15:01:19 dhowland Exp $
 #
 
 DISTNAME=       et-linux-2.56-2.x86
@@ -14,7 +14,7 @@ COMMENT=        Wolfenstein: Enemy Territory for Linux
 NO_BUILD=	yes
 USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
-ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
 ETDIR=		${PREFIX}/lib/lokigames/et
 ETSRC=		${WRKSRC}/${DISTNAME}
 EXTRACT_CMD=	${TAIL} +356 ${DOWNLOADED_DISTFILE} | ${GTAR} xzf - \
