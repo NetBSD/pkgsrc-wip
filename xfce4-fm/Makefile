@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/29 10:26:31 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/02 19:00:25 marttikuparinen Exp $
 
 .include "../xfce4/Makefile.common"
 
@@ -8,9 +8,7 @@ PKGNAME=	xfce4-fm-${XFCE4_VERSION}
 DISTNAME=	xffm-${XFCE4_VERSION}
 COMMENT=	XFce4 filemanager
 
-.if defined(XFCE4_USE_SAMBA) && ${XFCE4_USE_SAMBA} == "YES"
-.include "../../net/samba/buildlink2.mk"
-.endif
+MESSAGE_SRC+=	${.CURDIR}/MESSAGE
 
 .include "../../databases/dbh/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
