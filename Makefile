@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1267 2004/05/10 02:00:58 minskim Exp $
-# $NetBSD: Makefile,v 1.1267 2004/05/10 02:00:58 minskim Exp $
+# $Id: Makefile,v 1.1268 2004/05/10 05:34:21 mpasternak Exp $
+# $NetBSD: Makefile,v 1.1268 2004/05/10 05:34:21 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -464,6 +464,7 @@ SUBDIR+=	pear-Mail_Mime
 SUBDIR+=	pear-Net_Socket
 SUBDIR+=	pear-Net_URL
 SUBDIR+=	pear-SOAP
+SUBDIR+=	pearpc
 SUBDIR+=	pekwm-nightly
 SUBDIR+=	perl59
 SUBDIR+=	perltidy
