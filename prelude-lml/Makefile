@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/28 13:01:54 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/20 08:37:43 adrian_p Exp $
 
-DISTNAME=	prelude-lml-0.8.4
+DISTNAME=	prelude-lml-0.8.5
 CATEGORIES=	net www
 MASTER_SITES=	http://www.prelude-ids.org/download/releases/
 
