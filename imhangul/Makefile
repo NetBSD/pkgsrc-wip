@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/31 07:19:09 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/31 15:39:27 minskim Exp $
 #
 
 DISTNAME=	imhangul-0.9.6
@@ -6,7 +6,7 @@ CATEGORIES=	inputmethod
 MASTER_SITES=	http://download.kldp.net/imhangul/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	minskim@bawi.org
 HOMEPAGE=	http://imhangul.kldp.net/
 COMMENT=	GTK+-2.0 Hangul Input Module
 
