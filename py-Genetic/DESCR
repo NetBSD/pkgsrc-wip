@@ -1,0 +1,4 @@
+A package for genetic algorithms in Python. Genetic can typically solve ANY
+problem that consists to minimize a function. It also includes several demos
+/ examples, like the TSP (traveling saleman problem). Enjoy, and don't be
+surprised if your genetic organisms disobey to you.
