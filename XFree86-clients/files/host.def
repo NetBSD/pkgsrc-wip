@@ -38,7 +38,7 @@
 #define InstallXinitConfig YES
 #define InstallAppDefFiles YES
 
-#define ExtraLoadFlags @LDFLAGS@
+#define ExtraLoadFlags LDFLAGS
 #define LibInstallBuild  YES
 #define StandardIncludes -IBLNK/include
 #define DontUseLibPathVar YES
