@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.49 2003/04/09 16:02:00 jmmv Exp $
-# $NetBSD: Makefile,v 1.49 2003/04/09 16:02:00 jmmv Exp $
+# $Id: Makefile,v 1.50 2003/04/10 13:28:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.50 2003/04/10 13:28:38 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -9,7 +9,6 @@ SUBDIR+=	aolserver
 SUBDIR+=	autoproject
 SUBDIR+=	byacc
 SUBDIR+=	chksniff
-SUBDIR+=	coreutils
 SUBDIR+=	cvsd
 SUBDIR+=	gaim-gtk2
 SUBDIR+=	gkrellm2
@@ -29,12 +28,12 @@ SUBDIR+=	ike-scan
 SUBDIR+=	ion-devel
 SUBDIR+=	ion-dock
 SUBDIR+=	ircservices
-SUBDIR+=	liquidwar
 SUBDIR+=	jdk-openjit
 SUBDIR+=	jdk12
 SUBDIR+=	jdk12-openjit
 SUBDIR+=	jdk13
 SUBDIR+=	jdk13-openjit
+SUBDIR+=	liquidwar
 SUBDIR+=	mailfilter
 SUBDIR+=	nagios-base
 SUBDIR+=	nagios-plugin-ldap
@@ -52,6 +51,7 @@ SUBDIR+=	p5-XML-Stream
 SUBDIR+=	perltidy
 SUBDIR+=	poedit
 SUBDIR+=	py-ORBit
+SUBDIR+=	py-OpenGL
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-csv
 SUBDIR+=	py-gnome2
