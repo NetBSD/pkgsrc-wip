@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.964 2004/02/15 21:49:25 minskim Exp $
-# $NetBSD: Makefile,v 1.964 2004/02/15 21:49:25 minskim Exp $
+# $Id: Makefile,v 1.965 2004/02/15 22:23:52 minskim Exp $
+# $NetBSD: Makefile,v 1.965 2004/02/15 22:23:52 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -553,7 +553,6 @@ SUBDIR+=	py-gtk2-docs
 SUBDIR+=	py-ipython
 SUBDIR+=	py-kyra
 SUBDIR+=	py-libpcap
-SUBDIR+=	py-mad
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-ming
 SUBDIR+=	py-mmpython
