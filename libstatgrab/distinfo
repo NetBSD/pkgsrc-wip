@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/02/10 21:50:20 timbishop Exp $
+$NetBSD: distinfo,v 1.5 2004/03/10 10:23:56 timbishop Exp $
 
-SHA1 (i-scream/libstatgrab-0.8.2.tar.gz) = cf65b8c726685b1a4464547f409b4dc0194cddde
-Size (i-scream/libstatgrab-0.8.2.tar.gz) = 384775 bytes
+SHA1 (i-scream/libstatgrab-0.9.tar.gz) = 03cc50e03e4711629b27f771cfec708c8832a6ed
+Size (i-scream/libstatgrab-0.9.tar.gz) = 396709 bytes
