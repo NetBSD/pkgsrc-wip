@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/10 17:06:34 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/10 17:11:25 jeremy-c-reed Exp $
 
 DISTNAME=		krb5-1.3.1
 PKGNAME=		mit-${DISTNAME}
@@ -15,6 +15,8 @@ MASTER_SITES+=	http://www.mirrors.wiretapped.net/security/cryptography/apps/kerb
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://web.mit.edu/kerberos/www/
 COMMENT=		MIT Kerberos 5 authentication system
+
+CONFLICTS=		heimdal-[0-9]*
 
 .if !exists(/usr/bin/yacc)
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
