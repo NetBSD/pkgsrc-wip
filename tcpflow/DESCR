@@ -12,5 +12,4 @@ not be recorded properly.
 
 tcpflow is based on the LBL Packet Capture Library (available from LBL) and 
 therefore supports the same rich filtering expressions that programs like 
-'tcpdump' support. It should compile under most popular versions of UNIX; see 
-the INSTALL file for details. 
+'tcpdump' support.
