@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: al_session_daemon.sh,v 1.1.1.1 2003/07/12 15:23:43 marc Exp $
+# $NetBSD: al_session_daemon.sh,v 1.2 2003/07/30 17:39:54 marc Exp $
 #
 # PROVIDE: al_session_daemon
 # REQUIRE: DAEMON
@@ -34,6 +34,12 @@ al_session_daemon_precmd()
                 @MKDIR@ @RUNTIME_DIR@
                 @CHMOD@ 0750 @RUNTIME_DIR@
                 @CHOWN@ @PKG_USERS@ @RUNTIME_DIR@
+        fi
+        if [ ! -d @LOGDIR@ ]
+        then
+                @MKDIR@ @LOGDIR@
+                @CHMOD@ 0750 @LOGDIR@
+                @CHOWN@ @PKG_USERS@ @LOGDIR@
         fi
 }
 
