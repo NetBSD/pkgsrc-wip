@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2003/04/11 15:07:02 jmmv Exp $
 bin/BillardGL
 share/doc/BillardGL.README
 share/BillardGL/Texturen/1/volle.bmp
@@ -99,3 +100,10 @@ share/BillardGL/lang/900.lang
 share/BillardGL/lang/901.lang
 share/BillardGL/lang/904.lang
 share/BillardGL/lang/999.lang
+@dirrm share/BillardGL/Texturen/8
+@dirrm share/BillardGL/Texturen/4
+@dirrm share/BillardGL/Texturen/2
+@dirrm share/BillardGL/Texturen/1
+@dirrm share/BillardGL/Texturen
+@dirrm share/BillardGL/lang
+@dirrm share/BillardGL

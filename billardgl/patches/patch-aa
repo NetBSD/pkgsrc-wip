@@ -1,5 +1,7 @@
---- src/Makefile.orig	Mon Apr 29 13:26:46 2002
-+++ src/Makefile	Tue Oct 15 21:25:58 2002
+$NetBSD: patch-aa,v 1.2 2003/04/11 15:07:09 jmmv Exp $
+
+--- Makefile.orig	Mon Apr 29 13:26:46 2002
++++ Makefile	Tue Oct 15 21:25:58 2002
 @@ -7,11 +7,11 @@
  
  CC	=	gcc
