@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/25 01:33:31 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/28 21:40:17 minskim Exp $
 
 DISTNAME=	dtd
-PKGNAME=	tei-p4
+PKGNAME=	tei-4
 WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.tei-c.org/P4X/DTD/
