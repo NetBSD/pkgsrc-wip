@@ -1,1 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/29 18:18:59 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/01 04:51:20 xtraeme Exp $
+${MINGWTARGET}/lib/libobjc.a
+${MINGWTARGET}/lib/libobjc.la
+lib/gcc-lib/i586-pc-mingw32/${PKGVERSION}/include/objc/NXConstStr.h
+lib/gcc-lib/i586-pc-mingw32/${PKGVERSION}/include/objc/Object.h
+lib/gcc-lib/i586-pc-mingw32/${PKGVERSION}/include/objc/Protocol.h
+lib/gcc-lib/i586-pc-mingw32/${PKGVERSION}/include/objc/encoding.h
+lib/gcc-lib/i586-pc-mingw32/${PKGVERSION}/include/objc/hash.h
+lib/gcc-lib/i586-pc-mingw32/${PKGVERSION}/include/objc/objc-api.h
+lib/gcc-lib/i586-pc-mingw32/${PKGVERSION}/include/objc/objc-list.h
+lib/gcc-lib/i586-pc-mingw32/${PKGVERSION}/include/objc/objc.h
+lib/gcc-lib/i586-pc-mingw32/${PKGVERSION}/include/objc/sarray.h
+lib/gcc-lib/i586-pc-mingw32/${PKGVERSION}/include/objc/thr.h
+lib/gcc-lib/i586-pc-mingw32/${PKGVERSION}/include/objc/typedstream.h
+lib/gcc-lib/${MINGWTARGET}/${PKGVERSION}/cc1obj
+@dirrm lib/gcc-lib/${MINGWTARGET}/${PKGVERSION}/include/objc
