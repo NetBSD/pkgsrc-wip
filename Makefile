@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.807 2003/12/25 23:16:15 shattered Exp $
-# $NetBSD: Makefile,v 1.807 2003/12/25 23:16:15 shattered Exp $
+# $Id: Makefile,v 1.808 2003/12/26 19:27:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.808 2003/12/26 19:27:22 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -92,6 +92,7 @@ SUBDIR+=	cjk-latex-chinese
 SUBDIR+=	cjk-latex-japanese
 SUBDIR+=	cjk-latex-korean
 SUBDIR+=	cmatrix
+SUBDIR+=	compare
 SUBDIR+=	compositeext
 SUBDIR+=	cops
 SUBDIR+=	copytape
@@ -520,10 +521,10 @@ SUBDIR+=	pynfo
 SUBDIR+=	pysite
 SUBDIR+=	pywm
 SUBDIR+=	q3-urbanterror
-SUBDIR+=	quagga-devel
 SUBDIR+=	qico
 SUBDIR+=	qinx
 SUBDIR+=	qn-x11
+SUBDIR+=	quagga-devel
 SUBDIR+=	rc.subr
 SUBDIR+=	rcorder
 SUBDIR+=	regexxer
@@ -533,6 +534,7 @@ SUBDIR+=	rlpr
 SUBDIR+=	rolo
 SUBDIR+=	rosegarden-current
 SUBDIR+=	rox-gtk2
+SUBDIR+=	rss2html
 SUBDIR+=	rudiments
 SUBDIR+=	samba3
 SUBDIR+=	scew
