@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/11/03 12:50:28 marc Exp $
+# $NetBSD: Makefile,v 1.7 2003/11/20 14:54:06 marc Exp $
 #
 
 DISTNAME=		cyrus-imapd-2.2.2-BETA
@@ -120,4 +120,5 @@ post-install:
 .include "../../security/openssl/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"
 
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
