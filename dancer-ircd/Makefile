@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/14 14:37:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/14 14:38:45 xtraeme Exp $
 #
 
 DISTNAME=	dancer-ircd-1.0.31+maint8-fn6
@@ -27,7 +27,7 @@ PKG_USERS=              ${DANCER_IRCD_USER}:${DANCER_IRCD_GROUP}::dancer_ircd\\ 
 
 DIRS=	/var/lib/dancer-ircd /var/log/dancer-ircd
 
-.for f in ${DIR}
+.for f in ${DIRS}
 OWN_DIRS_PERMS+=	${f} dancer_ircd dancer_ircd 750
 .endfor
 
