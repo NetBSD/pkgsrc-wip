@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.552 2003/10/16 14:13:01 marc Exp $
-# $NetBSD: Makefile,v 1.552 2003/10/16 14:13:01 marc Exp $
+# $Id: Makefile,v 1.553 2003/10/16 16:35:52 adrian_p Exp $
+# $NetBSD: Makefile,v 1.553 2003/10/16 16:35:52 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -146,6 +146,7 @@ SUBDIR+=	gl-117
 SUBDIR+=	glaxium
 SUBDIR+=	glide3
 SUBDIR+=	gnats4
+SUBDIR+=	gnetcat
 SUBDIR+=	gnome2-extras
 SUBDIR+=	gnome2-pkgview
 SUBDIR+=	gnome2-system-monitor
