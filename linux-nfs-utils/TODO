@@ -2,6 +2,10 @@ Need to update to new version because of security issue.
 
 is my DESCR too long?
 
+use PKG_SYSCONFDIR
+
+set a VARDIR config for /var/lib/nfs (and use in mountd script)
+
 # the readme says: Proper NFS operation requires a 'mount' program
 from util-linux 2.11f or later.
 
