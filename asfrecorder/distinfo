@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/15 18:23:49 tvierling Exp $
+$NetBSD: distinfo,v 1.2 2005/03/28 13:19:41 tvierling Exp $
 
 SHA1 (ASFRecorder.zip) = 6e33c06b4a0f0959c86e86f69d96d2067cc80d64
+RMD160 (ASFRecorder.zip) = a943294e1935215a322dbe3e08565cb2326a07b1
 Size (ASFRecorder.zip) = 377571 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/14 00:59:20 tvierling Exp $
+$NetBSD: distinfo,v 1.2 2005/03/28 13:19:04 tvierling Exp $
 
 SHA1 (iip-1.1.0.tgz) = 722ce551c3d330aad04729a4c9b729b10a0ca960
+RMD160 (iip-1.1.0.tgz) = 5acc5e33bd060bbdc79e819ade9e5ef07ed7299c
 Size (iip-1.1.0.tgz) = 139021 bytes
