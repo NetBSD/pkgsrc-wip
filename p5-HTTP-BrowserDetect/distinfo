@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/01/30 11:24:04 jgoamakf Exp $
+$NetBSD: distinfo,v 1.3 2005/03/29 01:50:57 jgoamakf Exp $
 
 SHA1 (HTTP-BrowserDetect-0.98.tar.gz) = 0de137d0a7604442af93a27deafc47d41ef1cb2a
+RMD160 (HTTP-BrowserDetect-0.98.tar.gz) = dee6b18114fac91b1559819c895c8ff4fe48faa2
 Size (HTTP-BrowserDetect-0.98.tar.gz) = 11178 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/01/30 11:25:03 jgoamakf Exp $
+$NetBSD: distinfo,v 1.3 2005/03/29 01:50:08 jgoamakf Exp $
 
 SHA1 (Devel-Profiler-0.04.tar.gz) = 01d6cf85c3a33eb1e187d0b2c81d60af972a21ce
+RMD160 (Devel-Profiler-0.04.tar.gz) = 36a3ecb763776c2564790052fe0dae8406b86eeb
 Size (Devel-Profiler-0.04.tar.gz) = 16395 bytes
