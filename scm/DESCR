@@ -1,20 +1,11 @@
-Scm is a portable Scheme implementation written in C.
-
-Features
-
+Scm is a portable Scheme implementation written in C including the
+following features:
     * Conforms to Revised^5 Report on the Algorithmic Language Scheme and 
 	the IEEE P1178 specification.
     * Support for SICP, R2RS, R3RS, and R5RS scheme code.
-    * Runs under Amiga, Atari-ST, MacOS, MS-DOS, OS/2, NOS/VE, Unicos, VMS, 
-	Unix and similar systems. Supports ASCII and EBCDIC character sets.
-    * Is fully documented in TeXinfo form, allowing documentation to be 		generated in info, TeX, html, nroff, and troff formats.
     * Supports inexact real and complex numbers, 30 bit immediate integers 
 	and large precision integers.
-    * Many Common Lisp functions: logand, logor, logxor, lognot, ash, 
-	logcount, integer-length, bit-extract, defmacro, macroexpand, 
-	macroexpand1, gentemp, defvar, force-output, software-type, 
-	get-decoded-time, get-internal-run-time, get-internal-real-time, 
-	delete-file, rename-file, copy-tree, acons, and eval.
+    * Supports many Common Lisp functions.
     * Char-code-limit, most-positive-fixnum, most-negative-fixnum, and 
 	internal-time-units-per-second constants. *Features* and 
 	*load-pathname* variables.
