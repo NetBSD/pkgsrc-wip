@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/25 02:12:39 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/09 14:55:55 moubctez Exp $
 #
 
 DISTNAME=		gimp-${GIMP_VER}
@@ -19,7 +19,7 @@ BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.4
 
 CONFLICTS+=		gimp<=1.2.3
 
-GIMP_VER=		2.0pre2
+GIMP_VER=		2.0pre3
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
