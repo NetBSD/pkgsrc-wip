@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/06/10 13:50:23 moubctez Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/06/30 08:28:20 moubctez Exp $
 
 .if !defined(GIMP_CURRENT_BUILDLINK2_MK)
 GIMP_CURRENT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gimp-current
-BUILDLINK_DEPENDS.gimp-current?=	gimp-current>=1.3.15
+BUILDLINK_DEPENDS.gimp-current?=	gimp-current>=1.3.16
 BUILDLINK_PKGSRCDIR.gimp-current?=	../../wip/gimp-current
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gimp-current=gimp-current
