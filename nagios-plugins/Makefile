@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2003/04/09 01:23:05 marmfield Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/29 15:48:25 anewsmurf Exp $
 #
 
-PKGNAME=	nagios-plugins-${PLUGINSVERSION}
+DISTNAME=	nagios-plugins-${PLUGINSVERSION}
 PKGREVISION=	# not defined
+CATEGORIES=	net sysutils
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagiosplug/}
 
 MAINTAINER=     murray@river-styx.org
+HOMEPAGE=       http://sourceforge.net/projects/nagiosplug/
 COMMENT=	Nagios plugins
 
 .include "../../wip/nagios-plugins/Makefile.common"
