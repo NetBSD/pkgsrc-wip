@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/24 04:02:16 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/10/03 10:32:48 xtraeme Exp $
 bin/vte
 include/vte/pty.h
 include/vte/reaper.h
@@ -7,8 +7,8 @@ include/vte/vteaccess.h
 lib/libvte.a
 lib/libvte.la
 lib/libvte.so
-lib/libvte.so.4
-lib/libvte.so.4.0
+lib/libvte.so.5
+lib/libvte.so.5.1
 lib/pkgconfig/vte.pc
 lib/vte/decset
 lib/vte/interpret
@@ -18,7 +18,9 @@ lib/vte/osc
 lib/vte/slowcat
 lib/vte/utf8echo
 lib/vte/utf8mode
+lib/vte/vterdb
 lib/vte/window
+libexec/gnome-pty-helper
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/vte.mo
@@ -41,7 +43,9 @@ ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/li/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/vte.mo

@@ -1,23 +1,20 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/06/24 04:02:17 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/10/03 10:32:48 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use vte.
 #
-# This file was created automatically using createbuildlink 2.6.
+# This file was created automatically using createbuildlink 2.7.
 #
 
 .if !defined(VTE_BUILDLINK2_MK)
 VTE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			vte
-BUILDLINK_DEPENDS.vte?=		vte>=0.10.29
+BUILDLINK_DEPENDS.vte?=		vte>=0.11.10
 BUILDLINK_PKGSRCDIR.vte?=		../../wip/vte
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.vte=vte
 BUILDLINK_PREFIX.vte_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.vte+=	include/vte/pty.h
-BUILDLINK_FILES.vte+=	include/vte/reaper.h
-BUILDLINK_FILES.vte+=	include/vte/vte.h
-BUILDLINK_FILES.vte+=	include/vte/vteaccess.h
+BUILDLINK_FILES.vte+=	include/vte/*.h
 BUILDLINK_FILES.vte+=	lib/libvte.*
 BUILDLINK_FILES.vte+=	lib/pkgconfig/vte.pc
 BUILDLINK_FILES.vte+=	lib/vte/decset
@@ -28,6 +25,7 @@ BUILDLINK_FILES.vte+=	lib/vte/osc
 BUILDLINK_FILES.vte+=	lib/vte/slowcat
 BUILDLINK_FILES.vte+=	lib/vte/utf8echo
 BUILDLINK_FILES.vte+=	lib/vte/utf8mode
+BUILDLINK_FILES.vte+=	lib/vte/vterdb
 BUILDLINK_FILES.vte+=	lib/vte/window
 
 .include "../../x11/gtk2/buildlink2.mk"
