@@ -1,0 +1,24 @@
+# $NetBSD: Makefile,v 1.1.1.1 2004/03/03 22:38:45 jeremy-c-reed Exp $
+
+DISTNAME=	${E2FSPROGS_DISTNAME}
+# what should the version be?
+PKGNAME=	com_err-${E2FSPROGS_VERSION}
+WRKSRC=		${WRKDIR}/${DISTNAME}/lib/et
+CATEGORIES=	devel
+# probably MASTER_SITES should be defined in the e2fsprogs/Makefile.common
+MASTER_SITES=	${E2FSPROGS_MASTER_SITES}
+
+MAINTAINER=	reed@reedmedia.net
+#HOMEPAGE=	http://e2fsprogs.sourceforge.net/
+COMMENT=	Common Error Description Library
+
+CONFLICTS+=	e2fsprogs<=1.35
+
+TEST_TARGET=	check
+
+do-configure:
+	cd ${WRKSRC}/../../ && \
+		${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
+
+.include "../../wip/e2fsprogs/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

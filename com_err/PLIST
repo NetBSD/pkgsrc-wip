@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/03 22:38:45 jeremy-c-reed Exp $
+bin/compile_et
+include/et/com_err.h
+lib/libcom_err.a
+lib/libcom_err.so
+lib/libcom_err.so.2
+lib/libcom_err.so.2.1
+man/man1/compile_et.1
+man/man3/com_err.3
+share/et/et_c.awk
+share/et/et_h.awk
+@dirrm share/et
+@dirrm include/et
