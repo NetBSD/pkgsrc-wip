@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/12/27 14:26:58 thomasklausner Exp $
+
+SHA1 (ncc-2.1.tar.gz) = 5992ec4cec3ba28bf8d05ff542350859a3804de0
+Size (ncc-2.1.tar.gz) = 84991 bytes
+SHA1 (patch-aa) = 615105a09d5ebbbfec6c6163bc9c7bfe050011b0
+SHA1 (patch-ab) = d9e3b00c83e3e222c9bf5dc12d9cc2bfba658a19
