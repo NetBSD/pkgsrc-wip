@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/15 16:53:59 thomasklausner Exp $
+
+SHA1 (MasonX-Apache2Handler-0.05.tar.gz) = 4e6e9872921af62db078906a94f4f1a75fafb825
+Size (MasonX-Apache2Handler-0.05.tar.gz) = 74113 bytes
+SHA1 (patch-aa) = 589d4fc96413430022c04a008a789a215e56cad8

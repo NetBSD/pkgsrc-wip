@@ -1,0 +1,5 @@
+MasonX::Apache2Handler is experimental (beta) and should only be
+used in a test environment. The MasonX::Apache2Handler module itself
+is a simple clone of Mason's HTML::Mason::ApacheHandler, and, as
+such, seems to be solid. However the components used, mod_perl 2
+and libapreq2, are currently under development.
