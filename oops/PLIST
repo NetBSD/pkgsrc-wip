@@ -1,13 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/19 22:21:11 shattered Exp $
-etc/oops/accel_maps
-etc/oops/acl_local_networks
-etc/oops/auth_template.html
-etc/oops/err_template.html
-etc/oops/oops.cfg.sample
-etc/oops/passwd
-etc/oops/redir_rules
-etc/oops/redir_template.html
-etc/oops/select.sql
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 20:24:02 shattered Exp $
 etc/oops/tables/koi-alt.tab
 etc/oops/tables/koi-iso.tab
 etc/oops/tables/koi-win.tab
@@ -23,6 +14,7 @@ libexec/oops/netflow.so
 libexec/oops/oopsctl_mod.so
 libexec/oops/pam.so
 libexec/oops/passwd_file.so
+${OOPS_CURRENT}libexec/oops/passwd_ldap.so
 libexec/oops/passwd_mysql.so
 libexec/oops/passwd_pgsql.so
 libexec/oops/redir.so
@@ -33,6 +25,16 @@ man/man8/oops.8
 man/man8/oopsctl.8
 sbin/oops
 sbin/oopsctl
+share/examples/oops/oops.cfg
+share/examples/oops/accel_maps
+share/examples/oops/acl_local_networks
+share/examples/oops/passwd
+share/examples/oops/redir_rules
+share/examples/oops/select.sql
+share/examples/oops/auth_template.html
+share/examples/oops/err_template.html
+share/examples/oops/redir_template.html
+@dirrm share/examples/oops
 @dirrm etc/oops/tables
 @dirrm etc/oops
 @dirrm libexec/oops

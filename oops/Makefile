@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2004/09/09 21:46:37 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/22 20:24:01 shattered Exp $
 #
 
 DISTNAME=	oops-1.5.23
 PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://zipper.paco.net/~igor/oops/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} diff_from_1.5.23.patch.gz
 
 MAINTAINER=	shattered@users.sourceforge.net
 HOMEPAGE=	http://oops-cache.org/
@@ -17,41 +16,65 @@ COMMENT=	Multithreaded caching HTTP proxy server
 # with PTHREAD_DIAGASSERT=AEL.
 NOT_FOR_PLATFORM=	NetBSD-1.6[M-Z]-*
 
-EXTRACT_ONLY=		${DISTFILES:N*.patch.gz}
-USE_BUILDLINK3=	YES
-USE_LANGUAGES=	c c++
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--enable-oops-user=oops
+USE_BUILDLINK3=		YES
+USE_PKGINSTALL=		YES
+USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--enable-oops-user=${OOPSUSER}
 CONFIGURE_ARGS+=	--enable-large-files
 CONFIGURE_ARGS+=	--with-DB=${PREFIX}
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
-CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc/oops
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${OOPSVAR}
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec/oops
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(OOPS_CURRENT) && ${OOPS_CURRENT} == YES
+PATCHFILES+=	diff_from_1.5.23.patch.gz
+PATCH_DIST_STRIP= -p1
+PLIST_SUBST+=	OOPS_CURRENT=""
+.else
+PLIST_SUBST+=	OOPS_CURRENT="@comment "
+.endif
 
 OOPSVAR?=	/var/run/oops
 OOPSUSER?=	oops
 OOPSGROUP?=	oops
 PKG_GROUPS=	${OOPSGROUP}
-PKG_USERS=	${OOPSUSER}:${OOPSGROUP}::Oops\\ proxy\\ server\\ user
+PKG_USERS=	${OOPSUSER}:${OOPSGROUP}::Oops\\ proxy\\ server
 OWN_DIRS_PERMS+=	${OOPSVAR} ${OOPSUSER} ${OOPSGROUP} 755
 MAKE_DIRS_PERMS+=	${PREFIX}/oops/storages ${OOPSUSER} ${OOPSGROUP} 700
 MAKE_DIRS_PERMS+=	${PREFIX}/oops/DB ${OOPSUSER} ${OOPSGROUP} 700
 MAKE_DIRS_PERMS+=	${PREFIX}/oops/logs ${OOPSUSER} ${OOPSGROUP} 700
 
+PKG_SYSCONFSUBDIR=	oops
+EGDIR=	${PREFIX}/share/examples/oops
+CONF_FILES=	${EGDIR}/oops.cfg ${PKG_SYSCONFDIR}/oops.cfg
+CONF_FILES+=	${EGDIR}/accel_maps ${PKG_SYSCONFDIR}/accel_maps
+CONF_FILES+=	${EGDIR}/acl_local_networks ${PKG_SYSCONFDIR}/acl_local_networks
+CONF_FILES+=	${EGDIR}/passwd ${PKG_SYSCONFDIR}/passwd
+CONF_FILES+=	${EGDIR}/redir_rules ${PKG_SYSCONFDIR}/redir_rules
+CONF_FILES+=	${EGDIR}/select.sql ${PKG_SYSCONFDIR}/select.sql
+CONF_FILES+=	${EGDIR}/auth_template.html ${PKG_SYSCONFDIR}/auth_template.html
+CONF_FILES+=	${EGDIR}/err_template.html ${PKG_SYSCONFDIR}/err_template.html
+CONF_FILES+=	${EGDIR}/redir_template.html ${PKG_SYSCONFDIR}/redir_template.html
+
+RCD_SCRIPTS=	oops
+
 BDB_DEFAULT=	db2
 BDB_ACCEPTED=	db2
 
-.include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == NetBSD
 PTHREAD_OPTS+=	require native
 .endif
 
-pre-patch:
-	@cd ${WRKSRC} && \
-	(${GZIP_CMD} -dc ${_DISTDIR}/diff_from_1.5.23.patch.gz | ${PATCH} -p1) > /dev/null
-
 post-install:
+	@${MKDIR} ${EGDIR}
+	for m in oops.cfg accel_maps acl_local_networks passwd redir_rules \
+		select.sql auth_template.html err_template.html \
+		redir_template.html; \
+		do ${INSTALL_DATA} ${WRKSRC}/src/$$m ${EGDIR}; done
 	${INSTALL_MAN} ${WRKSRC}/doc/oops.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/doc/oopsctl.8 ${PREFIX}/man/man8
 
