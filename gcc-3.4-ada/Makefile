@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.26 2004/04/20 21:49:32 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.27 2004/04/21 10:01:01 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
 PKGNAME=	gccAda-${GCC_VERSION}
 CATEGORIES=	lang
-MASTER_SITES=	ftp://gcc.gnu.org/pub/gcc/prerelease-${GCC_VERSION}-${SNAPDATE}/ \
-		ftp://mirrors.rcn.net/pub/sourceware/gcc/prerelease-${GCC_VERSION}-${SNAPDATE}/
-DISTFILES=	gcc-${GCC_VERSION}-${SNAPDATE}.tar.bz2
+MASTER_SITES=   ${MASTER_SITE_GNU:=gcc/releases/gcc-${GCC_VERSION}/}
+DISTFILES=	gcc-${GCC_VERSION}.tar.bz2
 
 MAINTAINER=	john@johnrshannon.com
 HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
-COMMENT=	This is the gcc 3.4 RC2 Ada compiler
+COMMENT=	This is the gcc 3.4 Ada compiler
 
 GCC_VERSION=	3.4.0
-SNAPDATE=	20040416
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
@@ -21,7 +19,7 @@ USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=        --enable-languages="c,ada"
-WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}-${SNAPDATE}
+WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}
 
 # An Ada compiler is required to build this pkg. Two
 may be used:
@@ -97,6 +95,7 @@ post-install:
 .if defined(USE_GCC3)
 .include "../../lang/gcc3-ada/buildlink3.mk"
 .elif defined(USE_GCC34)
+BUILDLINK_DEPMETHOD.gcc-3.4.0= build
 .include "../../wip/gcc-3.4/buildlink3.mk"
 .endif
 .include "../../mk/pthread.buildlink3.mk"
