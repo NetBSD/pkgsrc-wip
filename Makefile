@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.859 2004/01/06 15:38:36 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.859 2004/01/06 15:38:36 thomasklausner Exp $
+# $Id: Makefile,v 1.860 2004/01/06 22:47:14 mpasternak Exp $
+# $NetBSD: Makefile,v 1.860 2004/01/06 22:47:14 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -215,6 +215,7 @@ SUBDIR+=	gtk2-engines-industrial
 SUBDIR+=	gtk2-engines-lighthouseblue
 SUBDIR+=	gtk2-engines-magichicken
 SUBDIR+=	gtk2-engines-mist
+SUBDIR+=	gtk2-engines-qt
 SUBDIR+=	gtk2-engines-smooth
 SUBDIR+=	gtk2-theme-pack
 SUBDIR+=	gtkada
