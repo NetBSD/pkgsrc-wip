@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/25 23:43:00 jeremy-c-reed Exp $
+
+--- src/Makefile.in.orig	2003-10-25 09:09:25.000000000 -0700
++++ src/Makefile.in	2003-10-25 09:11:04.000000000 -0700
+@@ -11,11 +11,11 @@
+ 
+ # Maybe we want to use a qwertz keyboard before /usr is mounted
+ ifndef LOADKEYS_BINDIR
+-ifeq ($(DESTDIR), /usr)
+-  LOADKEYS_BINDIR = /bin
+-else
++#ifeq ($(DESTDIR), /usr)
++#  LOADKEYS_BINDIR = /bin
++#else
+   LOADKEYS_BINDIR = $(DESTDIR)/bin
+-endif
++#endif
+ endif
+ 
+ PROGS   = dumpkeys loadkeys showkey setfont showconsolefont \
+@@ -45,12 +45,12 @@
+ 
+ WARN	= -Wall -Wmissing-prototypes -Wstrict-prototypes
+ DEFS	= -DDATADIR=\"$(DATA_DIR)\"
+-CFLAGS  = -O2
+-LDFLAGS = -s
++CFLAGS  += -O2
++LDFLAGS += -s
+ 
+-CC	= gcc
+-YACC	= bison -y
+-LEX	= flex -8
++CC	?= gcc
++YACC	?= bison -y
++LEX	?= flex -8
+ 
+ .c.o:
+ 	$(CC) -c $(WARN) $(CFLAGS) $(DEFS) $<

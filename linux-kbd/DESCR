@@ -1,0 +1,7 @@
+The linux-kbd ("kbd") package provides keytable files, and keyboard,
+console, and virtual terminal utilities for Linux. It is maintained by
+Andries E. Brouwer.
+
+It includes loadkeys, dumpkeys, setfont, chvt, openvt, kbdrate, and
+several other tools. It also provides keymaps, Unicode mapping, console
+fonts, and screen mapping data.
