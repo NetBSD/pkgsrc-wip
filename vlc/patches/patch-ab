@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/09/17 18:49:51 xtraeme Exp $
+
+--- ./src/input/input_ext-dec.c.dist	Thu Nov 14 00:02:30 2002
++++ ./src/input/input_ext-dec.c	Mon Dec  2 21:13:37 2002
+@@ -136,7 +136,7 @@
+             p_fifo->p_first = p_next;
+             p_fifo->i_depth--;
+ 
+-            if( p_fifo->p_first == NULL )
++            while( p_fifo->p_first == NULL )
+             {
+                 /* No PES in the FIFO. p_last is no longer valid. */
+                 p_fifo->pp_last = &p_fifo->p_first;
