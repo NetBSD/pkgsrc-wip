@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1331 2004/06/20 19:39:45 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1331 2004/06/20 19:39:45 xtraeme Exp $
+# $Id: Makefile,v 1.1332 2004/06/20 19:45:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1332 2004/06/20 19:45:10 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -118,8 +118,6 @@ SUBDIR+=	drweb
 SUBDIR+=	drweb-clients-shared
 SUBDIR+=	drweb-dc
 SUBDIR+=	drweb-smf
-SUBDIR+=	dspam
-SUBDIR+=	dspam3
 SUBDIR+=	dumb
 SUBDIR+=	dvdauthor
 SUBDIR+=	dxmake
