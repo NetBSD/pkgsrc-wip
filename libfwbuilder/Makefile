@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 17:33:18 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/12 21:45:03 xtraeme Exp $
 #
 
 DISTNAME=		libfwbuilder-1.0.0
@@ -35,5 +35,5 @@ pre-configure:
 .include "../../textproc/libxslt/buildlink2.mk"
 
 .include "../../mk/automake.mk"
-.include "../../mk/gcc.buildlink2.mk"
+.include "../../mk/compiler.mk"
 .include "../../mk/bsd.pkg.mk"
