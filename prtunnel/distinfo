@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/23 20:03:21 adrian_p Exp $
+$NetBSD: distinfo,v 1.2 2003/08/23 20:19:43 adrian_p Exp $
 
 SHA1 (prtunnel-0.2.0.tar.gz) = 3a23e8e56a1eb0226015760fba4c214e9fd5829a
 Size (prtunnel-0.2.0.tar.gz) = 17633 bytes
-SHA1 (patch-aa) = f4e9483b1c40646591386effff965ca82d0a011f
+SHA1 (patch-aa) = bfd8d6b85634d63528cc10975d6a49d1f78916ed
