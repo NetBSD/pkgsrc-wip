@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/04 16:05:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/04 16:56:38 xtraeme Exp $
 #
 
 DISTNAME=	gl-117-1.0-src
@@ -16,7 +16,11 @@ USE_PKGLOCALEDIR=	yes
 USE_X11=                yes
 GNU_CONFIGURE=		yes
 
-.include "../../devel/SDL/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-sdl-dir=${BUILDLINK_PREFIX.SDL}
+CONFIGURE_ARGS+=	--with-opengl-dir=${BUILDLINK_PREFIX.MesaLib}
+
 .include "../../audio/SDL_mixer/buildlink2.mk"
+.include "../../devel/SDL/buildlink2.mk"
+.include "../../graphics/glut/buildlink2.mk"
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
