@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/06 00:30:40 marmfield Exp $
+
+SHA1 (nagios-1.0.tar.gz) = 30a2400a47c314f9e22bbd2a0aa973a8fb7f919f
+Size (nagios-1.0.tar.gz) = 1616233 bytes
+SHA1 (patch-aa) = c4c36cb8817a14b4966402145f48f8ae98e0f9a9
+SHA1 (patch-ab) = d175285f454ad9b6b696671e8bad0c9078911f2e
+SHA1 (patch-ac) = 9d4c302c1b8b70a83ad1c5ab300392711c56266b
+SHA1 (patch-ad) = 74a791708f9963be1db4b2d3e47d5f6d4c868cf6
+SHA1 (patch-ae) = 4da670bd3b4768cf5964ebe0ec9a405e617dd167
+SHA1 (patch-af) = bf763c435f40b01bcf47f46b57d1907fc8974ef6
+SHA1 (patch-ag) = 0691cfa1adcc130b2a89753dc0fea2713992d6e4

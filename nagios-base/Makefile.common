@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2003/04/06 00:30:40 marmfield Exp $
+#
+
+CATEGORIES=		net sysutils
+
+NAGIOS_USER?=		nagios
+NAGIOS_GROUP?=		${NAGIOS_USER}
+
+NAGIOSADM_USER?=	nagadmin
+NAGIOSADM_GROUP?=	${NAGIOSADM_USER}
+
+PKG_GROUPS+=	${NAGIOS_GROUP}
+PKG_GROUPS+=	${NAGIOSADM_GROUP}
+
+PKG_USERS+=	${NAGIOS_USER}:${NAGIOS_GROUP}::Nagios\\ Runtime\\ User
+PKG_USERS+=	${NAGIOSADM_USER}:${NAGIOSADM_GROUP}::Nagios\\ Administrator:${PREFIX}/etc/nagios:${SH}
+
+USE_BUILDLINK2=		YES
+
+USE_X11=                YES
+GNU_CONFIGURE=          YES
+USE_GMAKE=              YES
+
+PERL5_REQD=		5.6
+
+CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/nagios
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/nagios
+CONFIGURE_ARGS+=        --sysconfdir=${PREFIX}/etc/nagios
+CONFIGURE_ARGS+=        --localstatedir=/var
+
+CONFIGURE_ARGS+=	--with-cgiurl=/nagios/cgi-bin
+CONFIGURE_ARGS+=	--with-htmurl=/nagios
