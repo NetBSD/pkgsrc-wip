@@ -1,3 +1,0 @@
-metacity-setup is simply a much easier way to configure Metacity than having
-to use gconftool or gconf-editor.  It allows you to change themes, focus
-settings, the number of workspaces, etc.
