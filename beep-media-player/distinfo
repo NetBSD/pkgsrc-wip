@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/11/26 16:31:25 xtraeme Exp $
+
+SHA1 (beep-media-player-1.0.0-pre5.tar.gz) = cc209e0cf77f66e20e35c883681c904a1be6ff18
+Size (beep-media-player-1.0.0-pre5.tar.gz) = 1372059 bytes
+SHA1 (patch-aa) = 4dce0e5405d854ff0220cc493a0f5fa5187f8937
+SHA1 (patch-ab) = 6e66107fa5fb997644ab97dffeba60aaacb5a41f
