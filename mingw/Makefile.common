@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/12/15 14:30:58 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/12/15 20:26:17 mpasternak Exp $
 #
 
 .if !defined(MINGW_MAKEFILECOMMON)
@@ -7,4 +7,6 @@ MINGW_MAKEFILECOMMON=	# defined
 MASTER_SITE_MINGW=    	${MASTER_SITE_SOURCEFORGE:=mingw/}
 MINGW_TARGET?=		i586-pc-mingw32
 PLIST_SUBST+=		MINGW_TARGET=${MINGW_TARGET}
+MAKE_ENV+=		MINGW_TARGET=${MINGW_TARGET}
+CONFIGURE_ENV+=		MINGW_TARGET=${MINGW_TARGET}
 .endif
