@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/04 21:29:20 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/05 07:25:46 roelants Exp $
 #
 
 DISTNAME=		rt-3.0.10
+DISTNAME=		rt-pgsql-3.0.10
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
