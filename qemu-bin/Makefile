@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/09/02 01:35:50 dhowland Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/27 18:55:08 dhowland Exp $
 #
 
-DISTNAME=		qemu-0.6.0-i386
-PKGNAME=		qemu-bin-0.6.0
+DISTNAME=		qemu-0.6.1-i386
+PKGNAME=		qemu-bin-0.6.1
 CATEGORIES=		emulators
 MASTER_SITES=		http://fabrice.bellard.free.fr/qemu/
 
