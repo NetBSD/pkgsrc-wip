@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/20 22:13:04 lexort Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/03 16:53:52 thomasklausner Exp $
 
 DISTNAME=	g-wrap-1.9.3
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://www.nongnu.org/g-wrap/
 COMMENT=	Tool for generating guile wrappers for C code
 
-DEPENDS+=	guile-lib>=0.1.2:../../wip/guile-lib
+DEPENDS+=	guile-lib>=0.1.2:../../devel/guile-lib
 
 USE_BUILDLINK3=		YES
 

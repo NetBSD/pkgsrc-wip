@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1566 2004/12/03 15:53:04 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1566 2004/12/03 15:53:04 thomasklausner Exp $
+# $Id: Makefile,v 1.1567 2004/12/03 16:53:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1567 2004/12/03 16:53:51 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -277,7 +277,6 @@ SUBDIR+=	gtkglk
 SUBDIR+=	gtklookat
 SUBDIR+=	gtkpod
 SUBDIR+=	guile-gnome
-SUBDIR+=	guile-lib
 SUBDIR+=	guile-scsh
 SUBDIR+=	guilerxspencer
 SUBDIR+=	gurlchecker
