@@ -1,9 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/02 04:39:02 tvierling Exp $
-#
-## XXX PKGSRC-WIP:
-## This is not ready for prime time.  The still work-in-progress issues:
-##
-## * The package does not build on -current (tar-pax issues, and others).
+# $NetBSD: Makefile,v 1.4 2003/07/02 16:53:13 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -38,7 +33,7 @@ BUILD_DEPENDS+=	m4-[0-9]*:../../devel/m4
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
-RESTRICTED=	"Redistribution of source or binaries not permitted"
+RESTRICTED=	"Redistribution of source or binaries permitted only by license terms"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
@@ -55,16 +50,18 @@ ONLY_FOR_PLATFORM=	NetBSD-1.[4-9]*-i386 NetBSD-[2-9]*-i386
 ALL_TARGET=	all # added to below
 BUILD_DIRS=	${WRKSRC}/j2sdk1.3.1/make
 CHECK_SHLIBS=	NO # scripts set LD_LIBRARY_PATH
+MESSAGE_SRC=	${WRKDIR}/LegalReadme.txt
 NO_MTREE=	YES # since we change PREFIX below
 OWN_DIRS=	${PREFIX} ${PREFIX}/jre ${PREFIX}/jre/lib \
 		${PREFIX}/jre/lib/images ${PREFIX}/jre/lib/images/cursors \
 		${PREFIX}/jre/lib/security
+PLIST_SRC=	# added to below
 
 .include "../../mk/bsd.prefs.mk"
 
-# XXX needs PLIST fragment factored out in order to be conditional
-#.if defined(JDK13_USE_OJI) && !empty(JDK13_USE_OJI:M[Yy][Ee][Ss])
+.if defined(JDK13_WITH_PLUGIN) && !empty(JDK13_WITH_PLUGIN:M[Yy][Ee][Ss])
 ALL_TARGET+=	plugin
+PLIST_SRC+=	${.CURDIR}/PLIST.plugin
 
 MAKE_ENV+=	LIBG_HDRS="${LOCALBASE}/include/glib/glib-1.2 -I${LOCALBASE}/lib/glib/include"
 MAKE_ENV+=	GTK_HDRS="${LOCALBASE}/include/gtk-1.2"
@@ -73,10 +70,11 @@ MAKE_ENV+=	LIBIDL_HDRS="${LOCALBASE}/include"
 .include "../../net/ORBit/buildlink2.mk"
 .include "../../www/mozilla/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
-#.endif
+.endif
 
 ALL_TARGET+=	images
 MOTIF_TYPE=	openmotif
+PLIST_SRC+=	${.CURDIR}/PLIST
 
 MAKE_ENV+=	ALT_BOOTDIR=${LOCALBASE}/java/sun-1.3.1
 MAKE_ARGS+=	ALT_DEVTOOLS_PATH=${LOCALBASE} # used to find "zip" and "unzipsfx"
@@ -85,6 +83,7 @@ MAKE_ENV+=	BUILD_CLASSIC=yes
 MAKE_ARGS+=	M4=${LOCALBASE}/bin/gm4
 MAKE_ENV+=	OPENWINHOME=${MOTIFBASE}
 MAKE_ENV+=	USE_GNU_M4=1
+MAKE_ENV+=	USE_PTHREADS=false
 
 SFILES=         content-types.properties
 SFILES+=	flavormap.properties
