@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/03 04:29:57 bjan2 Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/03 04:35:46 bjan2 Exp $
 
 DISTNAME=	mini_httpd-1.19
 CATEGORIES=	www
@@ -14,9 +14,10 @@ MAKE_ENV+=	PKG_CFLAGS="${CFLAGS}"
 LDFLAGS+=	-lssl -lcrypto -lcrypt -lutil
 
 do-install:
-	${INSTALL_PROGRAM} ${WORKSRC}/mini_httpd ${WORKSRC}/htpasswd ${BINDIR}
-	${INSTALL_MAN} ${WORKSRC}/mini_httpd.8 ${PREFIX}/man/man8/
-	${INSTALL_MAN} ${WORKSRC}/htpasswd.1 ${PREFIX}/man/man1/
+	${INSTALL_PROGRAM} ${WRKSRC}/mini_httpd ${PREFIX}/sbin/
+	${INSTALL_PROGRAM} ${WRKSRC}/htpasswd ${PREFIX}/sbin/
+	${INSTALL_MAN} ${WRKSRC}/mini_httpd.8 ${PREFIX}/man/man8/
+	${INSTALL_MAN} ${WRKSRC}/htpasswd.1 ${PREFIX}/man/man1/
 
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
