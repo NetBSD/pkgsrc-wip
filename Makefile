@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1101 2004/03/21 01:32:03 poppnk Exp $
-# $NetBSD: Makefile,v 1.1101 2004/03/21 01:32:03 poppnk Exp $
+# $Id: Makefile,v 1.1102 2004/03/21 02:38:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1102 2004/03/21 02:38:37 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -469,6 +469,7 @@ SUBDIR+=	pbl
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdns
 SUBDIR+=	pdq
+SUBDIR+=	pekwm-nightly
 SUBDIR+=	pear-DIME
 SUBDIR+=	pear-HTTP_Request
 SUBDIR+=	pear-Mail_Mime
