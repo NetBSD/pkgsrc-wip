@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/01/04 11:48:51 mpasternak Exp $
+
+Installation done. To finish the setup, type:
+
+	freevo setup
+	
+at the command prompt.	
+
+===========================================================================
