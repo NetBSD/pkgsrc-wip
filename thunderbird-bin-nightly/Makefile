@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/13 20:28:04 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/14 00:05:40 grantbeattie Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -42,13 +42,27 @@ post-install:
 # this build wants exactly 'libgtk-1.2.so.0', etc.
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
 	@cd ${MOZILLA_LIB} && \
-	${LN} -s ${PREFIX}/lib/libglib.*so* .;				\
-	${LN} -s ${PREFIX}/lib/libgmodule.*so* .;			\
-	${LN} -s ${X11PREFIX}/lib/libgdk.*so* .;			\
-	${LN} -s ${X11PREFIX}/lib/libgtk.*so* .;			\
-	${LN} -s libgtk.so libgtk-1.2.so.0;				\
-	${LN} -s libgdk.so libgdk-1.2.so.0;				\
-	${LN} -s libglib.so libglib-1.2.so.0
+	${LN} -s ${PREFIX}/lib/libatk-1.0.*so* .;			\
+	${LN} -s ${X11PREFIX}/lib/libgdk-x11-2.0.*so* .;		\
+	${LN} -s ${PREFIX}/lib/libgdk_pixbuf-2.0.*so* .;		\
+	${LN} -s ${PREFIX}/lib/libglib-2.0.*so* .;			\
+	${LN} -s ${PREFIX}/lib/libgmodule-2.0.*so* .;			\
+	${LN} -s ${PREFIX}/lib/libgobject-2.0.*so* .;			\
+	${LN} -s ${X11PREFIX}/lib/libgtk-x11-2.0.*so* .;		\
+	${LN} -s ${PREFIX}/lib/libpango-1.0.*so* .;			\
+	${LN} -s ${PREFIX}/lib/libpangox-1.0.*so* .;			\
+	${LN} -s ${PREFIX}/lib/libpangoxft-1.0.*so* .;			\
+	\
+	${LN} -s libatk-1.0.so libatk-1.0.so.0;				\
+	${LN} -s libgdk-x11-2.0.so libgdk-x11-2.0.so.0;			\
+	${LN} -s libgdk_pixbuf-2.0.so libgdk_pixbuf-2.0.so.0;		\
+	${LN} -s libglib-2.0.so libglib-2.0.so.0;			\
+	${LN} -s libgmodule-2.0.so libgmodule-2.0.so.0;			\
+	${LN} -s libgobject-2.0.so libgobject-2.0.so.0;			\
+	${LN} -s libgtk-x11-2.0.so libgtk-x11-2.0.so.0;			\
+	${LN} -s libpango-1.0.so libpango-1.0.so.0;			\
+	${LN} -s libpangox-1.0.so libpangox-1.0.so.0;			\
+	${LN} -s libpangoxft-1.0.so libpangoxft-1.0.so.0
 .endif
 	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${ECHO} bin/thunderbird-${PLATFORM} >> ${PLIST_SRC}
