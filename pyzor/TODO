@@ -1,5 +1,4 @@
-- overall testing (!)
-- pyzord testing
-- pyzord rc.d script
+- overall testing
+- PYZOR_USE_PYZORD testing
+- optional pyzord rc.d script
 - config file examples?
-- does all documentation get installed?

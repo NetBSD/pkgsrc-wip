@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/23 20:36:32 tomhensel Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/24 02:01:48 tomhensel Exp $
 
 DISTNAME=	pyzor-0.4.0
+PKGREVISION=    # empty
 CATEGORIES=	mail
 MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=pyzor/)
 EXTRACT_SUFX=	.tar.bz2
@@ -9,28 +10,20 @@ MAINTAINER=	tom@replic8.net
 HOMEPAGE=	http://pyzor.sourceforge.net/
 COMMENT=	Collaborative, networked system to detect and block spam
 
-# Pyzord depends on py-gdbm
-#DEPENDS+=	py23-gdbm>=0nb1:../../databases/py-gdbm
-
-#.include "../../mk/bsd.prefs.mk"
-
-# Pyzord depends on python with threads
-#PYTHON_VERSIONS_ACCEPTED=	23pth
+.if defined(PYZOR_USE_PYZORD) && !empty(PYZOR_USE_PYZORD:M[Yy][Ee][Ss])
+DEPENDS+=	py23-gdbm>=0nb1:../../databases/py-gdbm
+# pyzords needs python with threading support
+PYTHON_VERSIONS_ACCEPTED=	23pth
+.else
 PYTHON_VERSIONS_ACCEPTED=	23 23pth
+.endif
 
-post-patch:
-	@${MV} ${WRKSRC}/scripts/pyzor ${WRKSRC}/scripts/pyzor.tmp
-	@${SED} "s,/usr/bin/python2,${PYTHONBIN}," ${WRKSRC}/scripts/pyzor.tmp	\
-		> ${WRKSRC}/scripts/pyzor
-	@${MV} ${WRKSRC}/scripts/pyzord ${WRKSRC}/scripts/pyzord.tmp
-	@${SED} "s,/usr/bin/python2,${PYTHONBIN}," ${WRKSRC}/scripts/pyzord.tmp	\
-		> ${WRKSRC}/scripts/pyzord
+PYDISTUTILSPKG=			YES
 
-do-build:
-	(cd ${WRKSRC}; ${PYTHONBIN} ${WRKSRC}/setup.py build)
+PYTHON_PATCH_SCRIPTS=		scripts/pyzor	\
+				scripts/pyzord
 
-do-install:
-	(cd ${WRKSRC}; ${PYTHONBIN} ${WRKSRC}/setup.py install)
-
+.include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
+
 .include "../../mk/bsd.pkg.mk"
