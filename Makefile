@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.439 2003/09/09 14:22:15 marc Exp $
-# $NetBSD: Makefile,v 1.439 2003/09/09 14:22:15 marc Exp $
+# $Id: Makefile,v 1.440 2003/09/09 21:57:35 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.440 2003/09/09 21:57:35 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -149,6 +149,7 @@ SUBDIR+=	gurlchecker
 SUBDIR+=	hasciicam
 SUBDIR+=	ht
 SUBDIR+=	ht2html
+SUBDIR+=	html2latex
 SUBDIR+=	httrack
 SUBDIR+=	ices
 SUBDIR+=	icmpchat
@@ -264,6 +265,7 @@ SUBDIR+=	p5-DateTime-TimeZone
 SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-GeoIP
 SUBDIR+=	p5-GnuPG-Interface
+SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-IO-Tee
 SUBDIR+=	p5-Net-Pcap
