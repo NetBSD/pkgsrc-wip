@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/02/11 13:10:38 airhead Exp $
+
+--- fpe.c.orig	1999-12-17 17:01:06.000000000 +0100
++++ fpe.c
+@@ -186,13 +186,16 @@ setup_fpe_handling ()
+ /*****************************************************************************/
+ #else  /* HAVE_IEEE_HANDLER */
+ 
++#ifndef HAVE_FPSETMASK
++
+ void
+ setup_fpe_handling ()
+ {
+   ; /* Do nothing */
+ }
++#endif /* HAVE_FPSETMASK */ 
+ 
+-#endif
++#endif /* HAVE_IEEE_HANDLER */
+ 
+ #else  /* SETUP_FPE */
+ 

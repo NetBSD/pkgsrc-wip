@@ -1,0 +1,8 @@
+Rlab is an interactive, interpreted scientific programming environment.
+Rlab is a very high level language intended to provide fast prototyping and
+program development, as well as easy data-visualization, and processing.
+Rlab is not a clone of languages such as those used by tools like Matlab or
+Matrix-X/Xmath. However, as Rlab focuses on creating a good experimental
+environment (or laboratory) in which to do matrix math, it can be called
+``Matlab-like''; since the programming language possesses similar operators
+and concepts.
