@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1228 2004/04/20 10:06:11 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1228 2004/04/20 10:06:11 xtraeme Exp $
+# $Id: Makefile,v 1.1229 2004/04/20 18:36:10 bencollver Exp $
+# $NetBSD: Makefile,v 1.1229 2004/04/20 18:36:10 bencollver Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -40,7 +40,6 @@ SUBDIR+=	arping
 SUBDIR+=	asfrecorder
 SUBDIR+=	asterisk
 SUBDIR+=	atk-devel
-SUBDIR+=	audacity12
 SUBDIR+=	autoproject
 SUBDIR+=	avida2
 SUBDIR+=	axe
@@ -516,7 +515,6 @@ SUBDIR+=	pizza
 SUBDIR+=	pkg_install-testing
 SUBDIR+=	plugger
 SUBDIR+=	pointless
-SUBDIR+=	portaudio
 SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postgresql-uniqueidentifier
