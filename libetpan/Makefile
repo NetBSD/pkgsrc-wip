@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/02 02:39:46 dawszy Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/02 17:42:07 dawszy Exp $
 #
 
 DISTNAME=		libetpan-0.32
@@ -15,4 +15,6 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
+.include "../../mk/pthread.buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
