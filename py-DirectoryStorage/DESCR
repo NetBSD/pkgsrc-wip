@@ -1,0 +1,14 @@
+DirectoryStorage is a Storage for ZODB, the object database used by Zope. It
+uses ordinary files and directories to store revisions of ZODB objects; one
+file per revision per object.
+
+The following features differentiate DirectoryStorage from other storages:
+ * A very simple file format; one file per revision per object. Your data is
+   not locked away inside an unfamiliar, opaque database.
+ * Designed for disaster-preparedness. Restore service after a disaster faster
+   and with greater confidence.
+ * Storage Replication. Efficiently and robustly keep an online backup copy of
+   your storage up to date with the latest changes from the master.
+ * Designed for fault tolerance. Any bugs (in DirectoryStorage, or elsewhere)
+   are less likely to irretrievably destroy your data.
+ * Many more.
