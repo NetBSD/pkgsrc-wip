@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.248 2003/06/16 18:53:55 bencollver Exp $
-# $NetBSD: Makefile,v 1.248 2003/06/16 18:53:55 bencollver Exp $
+# $Id: Makefile,v 1.249 2003/06/16 19:29:35 virtus Exp $
+# $NetBSD: Makefile,v 1.249 2003/06/16 19:29:35 virtus Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -187,6 +187,7 @@ SUBDIR+=	qn-x11
 SUBDIR+=	raptor
 SUBDIR+=	rcorder
 SUBDIR+=	rlpr
+SUBDIR+=	rosegarden-current
 SUBDIR+=	scm
 SUBDIR+=	scons
 SUBDIR+=	scponly
