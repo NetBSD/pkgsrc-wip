@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/09/11 16:03:39 marc Exp $
+$NetBSD: distinfo,v 1.3 2003/09/17 22:20:09 marc Exp $
 
-SHA1 (generateDS-1.3b.tar.gz) = 82793d7e5bb07d08caae3d9df5b0b66f52779196
-Size (generateDS-1.3b.tar.gz) = 68564 bytes
+SHA1 (generateDS-1.4a.tar.gz) = dac6b6ac79e9fc3c0bac3bdb5ee37c5a8a78a65b
+Size (generateDS-1.4a.tar.gz) = 70853 bytes
