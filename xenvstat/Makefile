@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/27 13:55:36 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/18 04:50:24 rxg Exp $
 
 DISTNAME=	xenvstat-20041127
 CATEGORIES=	sysutils
@@ -23,7 +23,7 @@ do-build:
 	${CC} ${CFLAGS} ${LDFLAGS} -o ${WRKSRC}/xenvstat ${WRKSRC}/xenvstat.c ${LIBS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pkgclean ${PREFIX}/bin/pkgclean
+	${INSTALL_PROGRAM} ${WRKSRC}/xenvstat ${PREFIX}/bin/xenvstat
 	${INSTALL_DATA} ${WRKSRC}/Xenvstat ${PREFIX}/lib/X11/app-defaults
 
 .include "../../mk/bsd.pkg.mk"
