@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: thy.sh,v 1.2 2003/09/30 10:38:27 algernon Exp $
+# $NetBSD: thy.sh,v 1.3 2004/03/21 14:19:02 algernon Exp $
 #
 # PROVIDE: thy
 # REQUIRE: DAEMON
@@ -9,8 +9,8 @@ if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
-if [ -f @PKG_SYSCONFDIR@/thy.conf ]; then
-	. @PKG_SYSCONFDIR@/thy.conf
+if [ -f @PKG_SYSCONFDIR@/thyrc ]; then
+	. @PKG_SYSCONFDIR@/thyrc
 fi
 
 name="thy"
