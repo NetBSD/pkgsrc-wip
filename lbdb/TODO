@@ -1,2 +1,2 @@
-* Install configuration in /usr/pkg/share, not in /usr/pkg/etc
+* Install configuration in ${PREFIX}/share/${PKGBASE}, not in ${PREFIX}/etc
 * Install Documentation and examples
