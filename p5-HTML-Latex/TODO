@@ -1,0 +1,9 @@
+DESCR says "downloading of URLs" but I didn't DEPEND on 
+ LWP::Simple (called libwwwperl too)
+ URI (libwww or Bundle::LWP)
+because I don't need
+
+Also Image::Magik perl module is used for convert images to PNG
+which I don't use.
+
+Should I depend on these?
