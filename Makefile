@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1106 2004/03/21 22:11:14 bjan2 Exp $
-# $NetBSD: Makefile,v 1.1106 2004/03/21 22:11:14 bjan2 Exp $
+# $Id: Makefile,v 1.1107 2004/03/23 01:07:54 rockpiper Exp $
+# $NetBSD: Makefile,v 1.1107 2004/03/23 01:07:54 rockpiper Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -395,6 +395,7 @@ SUBDIR+=	mplusfonts
 SUBDIR+=	mtf
 SUBDIR+=	mtrack
 SUBDIR+=	muse
+SUBDIR+=	musicpd
 SUBDIR+=	mutella
 SUBDIR+=	mutt-devel
 SUBDIR+=	mysql-docs
