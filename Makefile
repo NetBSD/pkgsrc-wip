@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.814 2003/12/27 23:06:57 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.814 2003/12/27 23:06:57 thomasklausner Exp $
+# $Id: Makefile,v 1.815 2003/12/28 14:55:25 minskim Exp $
+# $NetBSD: Makefile,v 1.815 2003/12/28 14:55:25 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -504,6 +504,7 @@ SUBDIR+=	py-gettext-tools
 SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-ipython
 SUBDIR+=	py-libpcap
+SUBDIR+=	py-libxml2
 SUBDIR+=	py-mad
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-ming
