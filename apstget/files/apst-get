@@ -287,10 +287,10 @@ do_relink() {
 		for B in ${LIB}; do
 		#--
 		echo "==> Relinking ${B}..."
-		COW="`echo ${B} |awk -F . '{ print $1 }'`.so"
+		COW="`echo ${B} |awk -F so '{ print $1 }'`so"
 		TARGET="`ls -l ${PREFIX}/lib/${COW}.* 2>/dev/null | grep -e ^- `"
 		if [ "${TARGET}" = "" ]; then
-			echo " * Unable to resolved"
+			echo " * Unable to be resolved"
 		else
 			TARGET=`echo ${TARGET} | awk '{ print $9 }'`
 			echo " * Solved against ${TARGET}"
