@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1157 2004/04/01 12:50:19 bubuchka Exp $
-# $NetBSD: Makefile,v 1.1157 2004/04/01 12:50:19 bubuchka Exp $
+# $Id: Makefile,v 1.1158 2004/04/02 00:33:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1158 2004/04/02 00:33:46 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -250,7 +250,6 @@ SUBDIR+=	iip
 SUBDIR+=	iisemulator
 SUBDIR+=	ile
 SUBDIR+=	ilohamail
-SUBDIR+=	imposter
 SUBDIR+=	interbase-docs
 SUBDIR+=	interchange
 SUBDIR+=	iptables
@@ -419,7 +418,6 @@ SUBDIR+=	nagios-plugin-pgsql
 SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	natali
-SUBDIR+=	nautilus-cd-burner
 SUBDIR+=	navigatrix
 SUBDIR+=	ncps
 SUBDIR+=	nehe-opengl-tutorials
