@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/29 17:12:37 jgoamakf Exp $
+$NetBSD: distinfo,v 1.2 2005/01/30 11:24:33 jgoamakf Exp $
 
 SHA1 (Cache-Mmap-0.081.tar.gz) = 04a3e21d3290db9eb5a9aec5b6817f16ad3027c2
 Size (Cache-Mmap-0.081.tar.gz) = 21879 bytes
