@@ -1,7 +1,5 @@
 o Rewrite Makefiles to avoid hard-coded make targets,
-o Update to 2.1.16.
+o Update to 2.1.18.
 
-  I'll solve *both* issues in one shot. 2.1.16 is not
-  a security update as 2.1.14 was.
-
-  I'll do this during the last week-end of august.
+  Makefile rewriting is about halfway done. Hopefully
+  I'll finish this week-end (September 13/14th).
