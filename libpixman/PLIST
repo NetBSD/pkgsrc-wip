@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/19 20:55:02 marc Exp $
-include/pixman.h
-lib/libpixman.a
-lib/libpixman.la
-lib/libpixman.so
-lib/libpixman.so.1
-lib/libpixman.so.1.0
-lib/pkgconfig/libpixman.pc
