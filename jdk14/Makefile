@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/06/28 18:00:05 absd Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/01 13:15:06 thomasklausner Exp $
 
 DISTNAME=	j2sdk-1_4_2-src-scsl
 PKGREVISION=	1
@@ -36,7 +36,6 @@ ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 ALL_TARGET=		all # added to below
 BUILD_DIRS=		${WRKSRC}/control/make
 CHECK_SHLIBS=		no # scripts set LD_LIBRARY_PATH
-NO_MTREE=		yes # since we change PREFIX below
 
 .include "../../mk/bsd.prefs.mk"
 
