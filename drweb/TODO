@@ -6,12 +6,12 @@
   emulation).  Thus, so as pkgsrc is a cross-platform framework,
   this package must be available on that systems too.  (Please note
   both scanner and daemon was compiled to ran natively on NetBSD
-  and OpenBSD, but both are in "double-beta" stage.)
+  and OpenBSD, but both are in experimental and beta stage at once.)
 
-- There is existent DrWeb for Linux and Solaris. Made it work from
-  pkgsrc, as well as for xBSD variants.
+- There is existent DrWeb for Linux and Solaris/i386. Made it work
+  from pkgsrc, as well as for xBSD variants.
 
-- There is available (even in souces) some clients for drweb daemon.
+- There is available (even as sources) some clients for drweb daemon.
   Create a packages for all of them. Currently on NetBSD have been
   tried a cmd line client with success, and sendmail filter (milter)
   with fatal bugs in POSIX threads code. Thus, first step is
@@ -19,5 +19,12 @@
   Please note that clients for Linux and FreeBSD are in production
   release.
 
-Please also note that all software available (it least tested) on
-i386 only.
+- Eliminate dependency on wget.
+
+- After all, upgrade to DrWeb 4.30 (developers are promised make
+  a native release for NetBSD as well as for other platforms).
+
+Please also note that all precomplied software available (at least
+tested) for i386 only. The sources (clients) had all chances to
+work on other architectures (someone has reported running sendmail
+filter on Solaris/UltraSPARC)
