@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/05 04:10:14 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/02 03:06:31 mpasternak Exp $
 bin/soya_editor
 ${PYSITELIB}/soya/__init__.py
 ${PYSITELIB}/soya/animation.py
+${PYSITELIB}/soya/blender2soya.py
+${PYSITELIB}/soya/blender2soya.pyc
+${PYSITELIB}/soya/blender2soya.pyo
 ${PYSITELIB}/soya/cal3d.py
 ${PYSITELIB}/soya/config.py
 ${PYSITELIB}/soya/cube.py
@@ -77,6 +80,9 @@ ${PYSITELIB}/soya/model.pyo
 ${PYSITELIB}/soya/particle.pyo
 ${PYSITELIB}/soya/soya3d.pyo
 ${PYSITELIB}/soya/sphere.pyo
+${PYSITELIB}/soya/watercube.py
+${PYSITELIB}/soya/watercube.pyc
+${PYSITELIB}/soya/watercube.pyo
 ${PYSITELIB}/soya/widget.pyo
 ${PYSITELIB}/soya/data/font_16.tga
 ${PYSITELIB}/soya/data/font_8.data

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/11/29 05:59:58 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/01/02 03:11:26 mpasternak Exp $
 ${PYSITELIB}/slune/__init__.py
 ${PYSITELIB}/slune/character.py
 ${PYSITELIB}/slune/circuit_generator.py
@@ -26,10 +26,12 @@ share/slune/images/slune.32.png
 share/slune/images/slune.48.png
 share/slune/locale/en/LC_MESSAGES/slune.mo
 share/slune/locale/en/LC_MESSAGES/slune.po
+share/slune/locale/es/LC_MESSAGES/slune.po
 share/slune/locale/fr/LC_MESSAGES/slune.mo
 share/slune/locale/fr/LC_MESSAGES/slune.po
 share/slune/locale/nb/LC_MESSAGES/slune.mo
 share/slune/locale/nb/LC_MESSAGES/slune.po
+share/slune/locale/pt/LC_MESSAGES/slune.po
 share/slune/materials/ball1.data
 share/slune/materials/bark1.data
 share/slune/materials/bark2.data
@@ -37,15 +39,26 @@ share/slune/materials/bloc1.data
 share/slune/materials/bloc1door.data
 share/slune/materials/bloc1win.data
 share/slune/materials/bloc2.data
+share/slune/materials/bloc3.data
+share/slune/materials/bloc3win.data
+share/slune/materials/bonus1.data
+share/slune/materials/bonus2.data
 share/slune/materials/booling-wall2.data
 share/slune/materials/boolingwall1.data
 share/slune/materials/brick1.data
 share/slune/materials/brick1win.data
+share/slune/materials/building1.data
+share/slune/materials/building2.data
+share/slune/materials/building3.data
+share/slune/materials/building4.data
+share/slune/materials/building5.data
+share/slune/materials/building6.data
 share/slune/materials/clouds1.data
 share/slune/materials/clouds2.data
 share/slune/materials/column2a.data
 share/slune/materials/column2b.data
 share/slune/materials/column2c.data
+share/slune/materials/druglab1.data
 share/slune/materials/drugstore1.data
 share/slune/materials/flag1.data
 share/slune/materials/fx.data
@@ -54,6 +67,7 @@ share/slune/materials/gate2.data
 share/slune/materials/gate3.data
 share/slune/materials/gate4.data
 share/slune/materials/glace1.data
+share/slune/materials/glass1.data
 share/slune/materials/gnu.data
 share/slune/materials/gnu1.data
 share/slune/materials/grass1.data
@@ -62,6 +76,7 @@ share/slune/materials/green.data
 share/slune/materials/ground1.data
 share/slune/materials/ground2.data
 share/slune/materials/ground3.data
+share/slune/materials/ground4.data
 share/slune/materials/ground5.data
 share/slune/materials/ground6.data
 share/slune/materials/ground7.data
@@ -78,24 +93,33 @@ share/slune/materials/house1.data
 share/slune/materials/house1win.data
 share/slune/materials/house2a.data
 share/slune/materials/house2b.data
+share/slune/materials/house3.data
+share/slune/materials/house3b.data
 share/slune/materials/inde_1.data
 share/slune/materials/inde_2.data
 share/slune/materials/inde_3.data
 share/slune/materials/inde_4.data
+share/slune/materials/inde_5.data
+share/slune/materials/inde_6.data
 share/slune/materials/jungle1.data
 share/slune/materials/killer1.data
 share/slune/materials/lamp1.data
 share/slune/materials/life1.data
 share/slune/materials/monk1.data
 share/slune/materials/moon1.data
+share/slune/materials/nekemeban.data
+share/slune/materials/palmtree1.data
 share/slune/materials/phone1.data
 share/slune/materials/planches1.data
 share/slune/materials/python1.data
 share/slune/materials/quille_1.data
 share/slune/materials/red.data
 share/slune/materials/rocks1.data
+share/slune/materials/rocks3.data
 share/slune/materials/rustydoor1.data
 share/slune/materials/sand1.data
+share/slune/materials/shader1.data
+share/slune/materials/shader2.data
 share/slune/materials/shark1.data
 share/slune/materials/shark2.data
 share/slune/materials/shop1.data
@@ -117,6 +141,7 @@ share/slune/materials/tole2.data
 share/slune/materials/trail1.data
 share/slune/materials/tree1.data
 share/slune/materials/tree2.data
+share/slune/materials/tube1.data
 share/slune/materials/tux1.data
 share/slune/materials/vehicle0.data
 share/slune/materials/vehicle1.data
@@ -130,35 +155,66 @@ share/slune/materials/wood1.data
 share/slune/materials/wood2.data
 share/slune/materials/yellowroad1.data
 share/slune/shapes/ball1.data
+share/slune/shapes/bonus_blue.data
+share/slune/shapes/bonus_green.data
 share/slune/shapes/bonus_life.data
 share/slune/shapes/booling-piste-cut.data
 share/slune/shapes/booling-piste.data
+share/slune/shapes/colonne_1.data
+share/slune/shapes/colonne_2.data
+share/slune/shapes/crashfunkel.data
+share/slune/shapes/crashfunkel_level.data
+share/slune/shapes/crashfunkel_tree.data
 share/slune/shapes/door1.data
+share/slune/shapes/engine1.data
 share/slune/shapes/flag.data
+share/slune/shapes/flag.data.bonus
+share/slune/shapes/freestylepark-shape.data
 share/slune/shapes/gate3.data
 share/slune/shapes/gate4.data
 share/slune/shapes/gnu-eye.data
 share/slune/shapes/gnu1.data
+share/slune/shapes/indusmeeting.data
 share/slune/shapes/killer1.data
+share/slune/shapes/level-at_the_mountain.data
+share/slune/shapes/level-crashfunkel-fight-1.data
+share/slune/shapes/level-crashfunkel-hunt-1.data
+share/slune/shapes/level-divinghill-freestyle-1.data
+share/slune/shapes/level-mission-1.data
+share/slune/shapes/medoc.data
+share/slune/shapes/medoc2.data
 share/slune/shapes/monk1.data
+share/slune/shapes/pagode_1.data
+share/slune/shapes/pagode_2.data
 share/slune/shapes/python1.data
 share/slune/shapes/quille-1.data
 share/slune/shapes/secretpassage1-c.data
+share/slune/shapes/secretpassage1.data
 share/slune/shapes/shape-at_the_mountain.data
 share/slune/shapes/shape-booling-cut.data
 share/slune/shapes/shape-crashfunkel.data
+share/slune/shapes/shape-cyberbombay-1.data
+share/slune/shapes/shape-cyberbombay-2.data
 share/slune/shapes/shape-indusmeeting.data
 share/slune/shapes/shape-racinde.data
 share/slune/shapes/shape-ridepark.data
+share/slune/shapes/shape-urbancall.data
 share/slune/shapes/shark1.data
 share/slune/shapes/sphericalscript.data
+share/slune/shapes/taj_1.data
+share/slune/shapes/taj_2.data
+share/slune/shapes/test.data
+share/slune/shapes/test2.data
+share/slune/shapes/tree1.data
 share/slune/shapes/tree_trunc.data
 share/slune/shapes/tux1.data
 share/slune/shapes/vehicle0.data
 share/slune/shapes/vehicle1.data
 share/slune/shapes/vehicle2.data
+share/slune/shapes/vehicle2open.data
 share/slune/shapes/vehicle3.data
 share/slune/shapes/webcam1.data
+share/slune/shapes/woodcutter-house.data
 share/slune/shapes/world-booling.data
 share/slune/sounds/bonus-1.wav
 share/slune/sounds/cool_prophet_call.ogg
@@ -179,6 +235,7 @@ share/slune/worlds/booling-piste.data
 share/slune/worlds/colonne_1.data
 share/slune/worlds/colonne_2.data
 share/slune/worlds/door1.data
+share/slune/worlds/engine1.data
 share/slune/worlds/gate3.data
 share/slune/worlds/gate4.data
 share/slune/worlds/gnu-eye.data
@@ -188,26 +245,36 @@ share/slune/worlds/lampadaire.data
 share/slune/worlds/land-ridepark.data
 share/slune/worlds/level-at-the-mountain-night-race-1.data
 share/slune/worlds/level-at-the-mountain-race-1.data
+share/slune/worlds/level-bowling-1.data
+share/slune/worlds/level-bowling-2.data
+share/slune/worlds/level-bowling-3.data
 share/slune/worlds/level-canion-race-1.data
 share/slune/worlds/level-canion-race-2.data
 share/slune/worlds/level-canion-race-3.data
 share/slune/worlds/level-crashfunkel-duel.data
 share/slune/worlds/level-crashfunkel-race-1.data
 share/slune/worlds/level-crashfunkel-race-2.data
+share/slune/worlds/level-cyberbombay-race-1.data
 share/slune/worlds/level-indusmeeting-race-1.data
 share/slune/worlds/level-indusmeeting-shoot-1.data
 share/slune/worlds/level-mission-1.data
+share/slune/worlds/level-mission-10.data
 share/slune/worlds/level-mission-2.data
 share/slune/worlds/level-mission-3.data
 share/slune/worlds/level-mission-4.data
 share/slune/worlds/level-mission-5.data
+share/slune/worlds/level-mission-5.data-0
 share/slune/worlds/level-mission-6.data
 share/slune/worlds/level-mission-7.data
+share/slune/worlds/level-mission-8.data
+share/slune/worlds/level-mission-9.data
 share/slune/worlds/level-raceinde-race-1.data
 share/slune/worlds/level-raceinde-race-2.data
 share/slune/worlds/level-ridepark-clock-1.data
+share/slune/worlds/level-urbancall-race-1.data
 share/slune/worlds/maison_1.data
 share/slune/worlds/medoc.data
+share/slune/worlds/medoc2.data
 share/slune/worlds/monk1.data
 share/slune/worlds/pagode_1.data
 share/slune/worlds/pagode_2.data
@@ -219,15 +286,22 @@ share/slune/worlds/shape-at_the_mountain.data
 share/slune/worlds/shape-booling-cut.data
 share/slune/worlds/shape-booling.data
 share/slune/worlds/shape-crashfunkel.data
+share/slune/worlds/shape-cyberbombay-1.data
+share/slune/worlds/shape-cyberbombay-2.data
 share/slune/worlds/shape-indusmeeting.data
 share/slune/worlds/shape-racinde.data
 share/slune/worlds/shape-ridepark.data
+share/slune/worlds/shape-urbancall.data
 share/slune/worlds/shark1.data
 share/slune/worlds/sphericalscript.data
 share/slune/worlds/taj_1.data
 share/slune/worlds/taj_2.data
+share/slune/worlds/test.data
+share/slune/worlds/test2.data
+share/slune/worlds/testjiba.data
 share/slune/worlds/tree1.data
 share/slune/worlds/tree_trunc.data
+share/slune/worlds/tux.data
 share/slune/worlds/tux1.data
 share/slune/worlds/vehicle0.data
 share/slune/worlds/vehicle1.data
@@ -241,18 +315,24 @@ share/slune/worlds/world-booling.data
 share/slune/worlds/world-canion.data
 share/slune/worlds/world-crashfunkel-night.data
 share/slune/worlds/world-crashfunkel.data
+share/slune/worlds/world-cyberbombay.data
 share/slune/worlds/world-indusmeeting.data
 share/slune/worlds/world-racinde.data
 share/slune/worlds/world-ridepark.data
+share/slune/worlds/world-urbancall.data
 @dirrm ${PYSITELIB}/slune
 @dirrm share/slune/worlds
 @dirrm share/slune/sounds
 @dirrm share/slune/shapes
 @dirrm share/slune/materials
+@dirrm share/slune/locale/pt/LC_MESSAGES
+@dirrm share/slune/locale/pt
 @dirrm share/slune/locale/nb/LC_MESSAGES
 @dirrm share/slune/locale/nb
 @dirrm share/slune/locale/fr/LC_MESSAGES
 @dirrm share/slune/locale/fr
+@dirrm share/slune/locale/es/LC_MESSAGES
+@dirrm share/slune/locale/es
 @dirrm share/slune/locale/en/LC_MESSAGES
 @dirrm share/slune/locale/en
 @dirrm share/slune/locale

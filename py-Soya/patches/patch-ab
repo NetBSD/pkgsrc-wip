@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/11/05 04:10:15 mpasternak Exp $
+$NetBSD: patch-ab,v 1.2 2004/01/02 03:06:32 mpasternak Exp $
 
---- c_src/cal3d_wrapper.h~	Mon May 12 22:07:23 2003
-+++ c_src/cal3d_wrapper.h	Wed Nov  5 04:10:21 2003
-@@ -47,7 +47,7 @@
- // Defines for Linux, Cygwin, FreeBSD Sun and Mips                            //
- //****************************************************************************//
- 
--#if defined(__linux__) || (__CYGWIN__) || (sun) || (mips) || (__FreeBSD__)
-+#if defined(__linux__) || (__CYGWIN__) || (sun) || (mips) || (__FreeBSD__) || (__NetBSD__)
+--- c_src/cal3d_wrapper.h~	Fri Jan  2 02:57:42 2004
++++ c_src/cal3d_wrapper.h	Fri Jan  2 02:58:29 2004
+@@ -50,6 +50,7 @@
+ 	|| (sun) \
+ 	|| (mips) \
+ 	|| (__FreeBSD__) \
++	|| (__NetBSD__) \
+ 	|| defined(__APPLE__)
  
  #define CAL3D_WRAPPER_API
- 
