@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/12 15:46:05 ianharding Exp $
+bin/nsopenssl.so
+lib/libnsopenssl.so
+share/nsd/modules/tcl/https.tcl
+@dirrm share/nsd/modules/tcl

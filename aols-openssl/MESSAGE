@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/10/12 15:46:05 ianharding Exp $
+
+You will have to modify the aolserver configuration file "nsd.tcl" 
+which is installed at ${PKGSYSCONFDIR}/nsd.tcl and install certificate
+and key files to use this module.  See www.scottg.net and 
+www.aolserver.com for more information.
+
+===========================================================================
