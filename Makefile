@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.614 2003/11/13 20:10:13 grantbeattie Exp $
-# $NetBSD: Makefile,v 1.614 2003/11/13 20:10:13 grantbeattie Exp $
+# $Id: Makefile,v 1.615 2003/11/13 20:16:10 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.615 2003/11/13 20:16:10 grantbeattie Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -450,6 +450,7 @@ SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
 SUBDIR+=	socat
 SUBDIR+=	speedx
+SUBDIR+=	sqlrelay
 SUBDIR+=	sredird
 SUBDIR+=	srvx
 SUBDIR+=	stickynotes-applet
