@@ -1,3 +1,4 @@
-pkglint complains about BUILD_DEPENDS/DEPENDS have to appear earlier.
-
-PLIST contains @exec/@unexec mktexlsr. This is probably bad.
+ * pkglint complains about BUILD_DEPENDS/DEPENDS have to appear earlier.
+ * @RCD_SCRIPTS_SHELL@ doesn't get replaced
+ * Java not pulled in (missing dependency?)
+ * Path to java binary not adjusted/set
