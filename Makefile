@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.501 2003/09/26 05:46:25 xtraeme Exp $
-# $NetBSD: Makefile,v 1.501 2003/09/26 05:46:25 xtraeme Exp $
+# $Id: Makefile,v 1.502 2003/09/26 06:42:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.502 2003/09/26 06:42:26 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -155,6 +155,7 @@ SUBDIR+=	gtk2-engines-mist
 SUBDIR+=	gtkpod
 SUBDIR+=	gurlchecker
 SUBDIR+=	hasciicam
+SUBDIR+=	heimdal
 SUBDIR+=	ht
 SUBDIR+=	ht2html
 SUBDIR+=	html2latex
@@ -231,6 +232,7 @@ SUBDIR+=	mhonarc
 SUBDIR+=	mit-krb5
 SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
+SUBDIR+=	mkdep
 SUBDIR+=	mlview
 SUBDIR+=	monkey-bubble
 SUBDIR+=	mopac
@@ -325,7 +327,6 @@ SUBDIR+=	procps
 SUBDIR+=	prtunnel
 SUBDIR+=	psh
 SUBDIR+=	pts
-SUBDIR+=	py23-html-docs
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-RXP
@@ -341,6 +342,7 @@ SUBDIR+=	py-psyco
 SUBDIR+=	py-spark
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-twisted
+SUBDIR+=	py23-html-docs
 SUBDIR+=	q3-urbanterror
 SUBDIR+=	qico
 SUBDIR+=	qinx
@@ -440,10 +442,10 @@ SUBDIR+=	xfce4-wm
 SUBDIR+=	xfce4-wm-themes
 SUBDIR+=	xmail
 SUBDIR+=	xml2doc
-SUBDIR+=	xmmsctrl
 SUBDIR+=	xmms-dumb
 SUBDIR+=	xmms-modplug
 SUBDIR+=	xmms-pitch
+SUBDIR+=	xmmsctrl
 SUBDIR+=	xplore
 SUBDIR+=	xsh
 SUBDIR+=	yafray
