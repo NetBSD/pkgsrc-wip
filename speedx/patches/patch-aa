@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/02 15:45:28 jeremy-c-reed Exp $
+
+--- src/Makefile.in.orig	Sat Apr 21 06:09:22 2001
++++ src/Makefile.in
+@@ -66,11 +66,11 @@ RANLIB = @RANLIB@
+ VERSION = @VERSION@
+ 
+ SUBDIRS = background cars num road scene
+-pkgdatadir = $(datadir)/@PACKAGE@-@VERSION@
++pkgdatadir = $(datadir)/speedx
+ 
+-CFLAGS = -Wall -Wunused -O3 -I/usr/local/include/ -I/usr/X11R6/include/
++CFLAGS = @CFLAGS@
+ DEFS = -DPKGDATADIR=\"$(pkgdatadir)/\" @DEFS@
+-LDFLAGS = -L/usr/local/lib/ -L/usr/X11R6/lib/
++LDFLAGS = @LDFLAGS@
+ LDADD = -lz -lpng -lX11 -lXext -lm
+ 
+ bin_PROGRAMS = speedx
+@@ -438,13 +438,6 @@ install-data-local:
+ 	$(INSTALL) -d $(pkgdatadir)/num/
+ 	$(INSTALL) -d $(pkgdatadir)/road/
+ 	$(INSTALL) -d $(pkgdatadir)/scene/
+-	cp -Rf $(srcdir)/background/* $(pkgdatadir)/background/ 
+-	cp -Rf $(srcdir)/cars/* $(pkgdatadir)/cars/ 
+-	cp -Rf $(srcdir)/music/* $(pkgdatadir)/music/ 
+-	cp -Rf $(srcdir)/num/* $(pkgdatadir)/num/ 
+-	cp -Rf $(srcdir)/road/* $(pkgdatadir)/road/ 
+-	cp -Rf $(srcdir)/scene/* $(pkgdatadir)/scene/ 
+-	rm -f $(pkgdatadir)/music/Makefile
+ 
+ maintainer-clean-hook:
+ 	rm -Rf .deps

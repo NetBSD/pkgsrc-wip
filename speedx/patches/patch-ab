@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/06/02 15:45:28 jeremy-c-reed Exp $
+
+--- src/music.c.orig	Sat Mar 24 01:54:50 2001
++++ src/music.c
+@@ -64,9 +64,11 @@ void init_music(void)
+ 
+ 	MikMod_RegisterDriver(&drv_alsa);
+ 	MikMod_RegisterDriver(&drv_esd);
+-	*/
+ 
+ 	MikMod_RegisterDriver(&drv_oss);
++	*/
++
++	MikMod_RegisterDriver(&drv_sun);
+ 
+ 
+ 	MikMod_RegisterAllLoaders();

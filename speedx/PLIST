@@ -1,0 +1,77 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/02 15:45:28 jeremy-c-reed Exp $
+bin/speedx
+share/doc/speedx/README
+share/speedx/background/sky0.png
+share/speedx/background/sky1.png
+share/speedx/cars/camion/camion_0.png
+share/speedx/cars/camion/camion_0_mask.png
+share/speedx/cars/camion/camion_1.png
+share/speedx/cars/camion/camion_1_mask.png
+share/speedx/cars/camion/camion_1a.png
+share/speedx/cars/camion/camion_1a_mask.png
+share/speedx/cars/camion/camion_2.png
+share/speedx/cars/camion/camion_2_mask.png
+share/speedx/cars/camion/camion_2a.png
+share/speedx/cars/camion/camion_2a_mask.png
+share/speedx/cars/camion/camion_3.png
+share/speedx/cars/camion/camion_3_mask.png
+share/speedx/cars/camion/camion_3a.png
+share/speedx/cars/camion/camion_3a_mask.png
+share/speedx/cars/f1_1/f1_1_0.png
+share/speedx/cars/f1_1/f1_1_0_mask.png
+share/speedx/cars/f1_1/f1_1_1.png
+share/speedx/cars/f1_1/f1_1_1_mask.png
+share/speedx/cars/f1_1/f1_1_1a.png
+share/speedx/cars/f1_1/f1_1_1a_mask.png
+share/speedx/cars/f1_1/f1_1_2.png
+share/speedx/cars/f1_1/f1_1_2_mask.png
+share/speedx/cars/f1_1/f1_1_2a.png
+share/speedx/cars/f1_1/f1_1_2a_mask.png
+share/speedx/cars/f1_1/f1_1_3.png
+share/speedx/cars/f1_1/f1_1_3_mask.png
+share/speedx/cars/f1_1/f1_1_3a.png
+share/speedx/cars/f1_1/f1_1_3a_mask.png
+share/speedx/cars/jeep/jeep_0.png
+share/speedx/cars/jeep/jeep_0_mask.png
+share/speedx/cars/jeep/jeep_1.png
+share/speedx/cars/jeep/jeep_1_mask.png
+share/speedx/cars/jeep/jeep_1a.png
+share/speedx/cars/jeep/jeep_1a_mask.png
+share/speedx/cars/jeep/jeep_2.png
+share/speedx/cars/jeep/jeep_2_mask.png
+share/speedx/cars/jeep/jeep_2a.png
+share/speedx/cars/jeep/jeep_2a_mask.png
+share/speedx/cars/jeep/jeep_3.png
+share/speedx/cars/jeep/jeep_3_mask.png
+share/speedx/cars/jeep/jeep_3a.png
+share/speedx/cars/jeep/jeep_3a_mask.png
+share/speedx/music/mercrain.s3m
+share/speedx/num/0.png
+share/speedx/num/1.png
+share/speedx/num/2.png
+share/speedx/num/3.png
+share/speedx/num/4.png
+share/speedx/num/5.png
+share/speedx/num/6.png
+share/speedx/num/7.png
+share/speedx/num/8.png
+share/speedx/num/9.png
+share/speedx/road/border.png
+share/speedx/road/depart.png
+share/speedx/road/menu.png
+share/speedx/road/road1.png
+share/speedx/road/road2.png
+share/speedx/road/road3.png
+share/speedx/scene/arrivee.png
+@dirrm share/speedx/scene
+@dirrm share/speedx/road
+@dirrm share/speedx/num
+@dirrm share/speedx/music
+@dirrm share/speedx/cars/jeep
+@dirrm share/speedx/cars/f1_1
+@dirrm share/speedx/cars/camion
+@dirrm share/speedx/cars/Panorama
+@dirrm share/speedx/cars
+@dirrm share/speedx/background
+@dirrm share/speedx
+@dirrm share/doc/speedx

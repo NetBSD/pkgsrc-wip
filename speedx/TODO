@@ -1,0 +1,22 @@
+test multiplayer:
+Multiplayer on the same screen is deprecated ..: Undefined error: 0
+
+pkglint complains:
+FATAL: extra item "SITES_mercrain.s3m.zip" placed in the DISTNAME section.
+
+post-install should just use cpio ??
+but cpio may not exist? and no CPIO is defined
+
+sometimes crashes at startup with:
+. World Initialisation ...
+speedx in free(): warning: junk pointer, too high to make sense.
+Error (Bad Attached memory shared)
+
+should honor USE_OSS
+
+getopt (or whatever) is broken
+speedx --help # doesn't work, but -h says it does
+
+I am still trying to find out license for that sound file download
+
+test over network
