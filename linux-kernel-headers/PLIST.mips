@@ -1,0 +1,264 @@
+@comment $NetBSD: PLIST.mips,v 1.1 2004/02/03 09:20:16 marttikuparinen Exp $
+include/asm/addrspace.h
+include/asm/arc/hinv.h
+include/asm/arc/types.h
+include/asm/asm.h
+include/asm/asmmacro-32.h
+include/asm/asmmacro-64.h
+include/asm/asmmacro.h
+include/asm/au1000.h
+include/asm/au1000_dma.h
+include/asm/au1000_gpio.h
+include/asm/au1000_pcmcia.h
+include/asm/au1000_usbdev.h
+include/asm/baget/baget.h
+include/asm/baget/vac.h
+include/asm/baget/vic.h
+include/asm/bcache.h
+include/asm/bootinfo.h
+include/asm/branch.h
+include/asm/break.h
+include/asm/cachectl.h
+include/asm/cacheops.h
+include/asm/cobalt/cobalt.h
+include/asm/compat.h
+include/asm/cpu.h
+include/asm/db1x00.h
+include/asm/ddb5074.h
+include/asm/ddb5xxx/ddb5074.h
+include/asm/ddb5xxx/ddb5476.h
+include/asm/ddb5xxx/ddb5477.h
+include/asm/ddb5xxx/ddb5xxx.h
+include/asm/debug.h
+include/asm/dec/ecc.h
+include/asm/dec/interrupts.h
+include/asm/dec/ioasic.h
+include/asm/dec/ioasic_addrs.h
+include/asm/dec/ioasic_ints.h
+include/asm/dec/kn01.h
+include/asm/dec/kn02.h
+include/asm/dec/kn02ba.h
+include/asm/dec/kn02ca.h
+include/asm/dec/kn02xa.h
+include/asm/dec/kn03.h
+include/asm/dec/kn05.h
+include/asm/dec/kn230.h
+include/asm/dec/machtype.h
+include/asm/dec/prom.h
+include/asm/dec/rtc-dec.h
+include/asm/dec/tc.h
+include/asm/dec/tcinfo.h
+include/asm/dec/tcmodule.h
+include/asm/ds1286.h
+include/asm/fixmap.h
+include/asm/floppy.h
+include/asm/fpregdef.h
+include/asm/fpu.h
+include/asm/fpu_emulator.h
+include/asm/galileo-boards/ev64120.h
+include/asm/galileo-boards/ev64120int.h
+include/asm/galileo-boards/ev96100.h
+include/asm/galileo-boards/ev96100int.h
+include/asm/galileo-boards/gt96100.h
+include/asm/gcc/sgidefs.h
+include/asm/gdb-stub.h
+include/asm/gfx.h
+include/asm/gt64120.h
+include/asm/gt64120/gt64120.h
+include/asm/gt64120/momenco_ocelot/gt64120_dep.h
+include/asm/hdreg.h
+include/asm/highmem.h
+include/asm/hp-lj/asic.h
+include/asm/hw_irq.h
+include/asm/i8259.h
+include/asm/ide.h
+include/asm/init.h
+include/asm/inst.h
+include/asm/inventory.h
+include/asm/ip32/crime.h
+include/asm/ip32/ip32_ints.h
+include/asm/ip32/mace.h
+include/asm/ip32/machine.h
+include/asm/ipc.h
+include/asm/irq_cpu.h
+include/asm/isadep.h
+include/asm/it8172/it8172.h
+include/asm/it8172/it8172_cir.h
+include/asm/it8172/it8172_dbg.h
+include/asm/it8172/it8172_int.h
+include/asm/it8172/it8172_lpc.h
+include/asm/it8172/it8172_pci.h
+include/asm/it8712.h
+include/asm/jazz.h
+include/asm/jazzdma.h
+include/asm/jmr3927/ds1742rtc.h
+include/asm/jmr3927/irq.h
+include/asm/jmr3927/jmr3927.h
+include/asm/jmr3927/pci.h
+include/asm/jmr3927/tx3927.h
+include/asm/jmr3927/txx927.h
+include/asm/keyboard.h
+include/asm/lasat/ds1603.h
+include/asm/lasat/eeprom.h
+include/asm/lasat/head.h
+include/asm/lasat/lasat.h
+include/asm/lasat/lasatint.h
+include/asm/lasat/picvue.h
+include/asm/lasat/serial.h
+include/asm/m48t35.h
+include/asm/mc146818rtc.h
+include/asm/mips-boards/atlas.h
+include/asm/mips-boards/atlasint.h
+include/asm/mips-boards/bonito64.h
+include/asm/mips-boards/generic.h
+include/asm/mips-boards/malta.h
+include/asm/mips-boards/maltaint.h
+include/asm/mips-boards/msc01_pci.h
+include/asm/mips-boards/piix4.h
+include/asm/mips-boards/prom.h
+include/asm/mips-boards/saa9730_uart.h
+include/asm/mips-boards/sead.h
+include/asm/mips-boards/seadint.h
+include/asm/mipsprom.h
+include/asm/mipsregs.h
+include/asm/mmzone.h
+include/asm/mv64340.h
+include/asm/mv64340_dep.h
+include/asm/ng1.h
+include/asm/ng1hw.h
+include/asm/nile4.h
+include/asm/paccess.h
+include/asm/page-32.h
+include/asm/page-64.h
+include/asm/parport.h
+include/asm/pb1000.h
+include/asm/pb1100.h
+include/asm/pb1500.h
+include/asm/pci/bridge.h
+include/asm/pci_channel.h
+include/asm/pgtable-32.h
+include/asm/pgtable-64.h
+include/asm/pgtable-bits.h
+include/asm/prctl.h
+include/asm/processor.h
+include/asm/ptrace.h
+include/asm/r4kcache.h
+include/asm/reboot.h
+include/asm/regdef.h
+include/asm/riscos-syscall.h
+include/asm/segment.h
+include/asm/semaphore-helper.h
+include/asm/serial.h
+include/asm/sgi/gio.h
+include/asm/sgi/hpc3.h
+include/asm/sgi/ioc.h
+include/asm/sgi/ip22.h
+include/asm/sgi/mc.h
+include/asm/sgi/sgi.h
+include/asm/sgialib.h
+include/asm/sgiarcs.h
+include/asm/sgidefs.h
+include/asm/sibyte/board.h
+include/asm/sibyte/carmel.h
+include/asm/sibyte/sb1250.h
+include/asm/sibyte/sb1250_defs.h
+include/asm/sibyte/sb1250_dma.h
+include/asm/sibyte/sb1250_genbus.h
+include/asm/sibyte/sb1250_int.h
+include/asm/sibyte/sb1250_l2c.h
+include/asm/sibyte/sb1250_ldt.h
+include/asm/sibyte/sb1250_mac.h
+include/asm/sibyte/sb1250_mc.h
+include/asm/sibyte/sb1250_regs.h
+include/asm/sibyte/sb1250_scd.h
+include/asm/sibyte/sb1250_smbus.h
+include/asm/sibyte/sb1250_syncser.h
+include/asm/sibyte/sb1250_uart.h
+include/asm/sibyte/sentosa.h
+include/asm/sibyte/swarm.h
+include/asm/sibyte/trace_prof.h
+include/asm/sigcontext.h
+include/asm/sim.h
+include/asm/smp.h
+include/asm/smplock.h
+include/asm/sn/addrs.h
+include/asm/sn/agent.h
+include/asm/sn/arch.h
+include/asm/sn/gda.h
+include/asm/sn/intr.h
+include/asm/sn/intr_public.h
+include/asm/sn/io.h
+include/asm/sn/ioc3.h
+include/asm/sn/klconfig.h
+include/asm/sn/kldir.h
+include/asm/sn/klkernvars.h
+include/asm/sn/launch.h
+include/asm/sn/mapped_kernel.h
+include/asm/sn/nmi.h
+include/asm/sn/sn0/addrs.h
+include/asm/sn/sn0/arch.h
+include/asm/sn/sn0/hub.h
+include/asm/sn/sn0/hubio.h
+include/asm/sn/sn0/hubmd.h
+include/asm/sn/sn0/hubni.h
+include/asm/sn/sn0/hubpi.h
+include/asm/sn/sn0/ip27.h
+include/asm/sn/sn0/sn0_fru.h
+include/asm/sn/sn_private.h
+include/asm/sn/types.h
+include/asm/sni.h
+include/asm/spinlock.h
+include/asm/stackframe.h
+include/asm/suspend.h
+include/asm/sysmips.h
+include/asm/system.h
+include/asm/time.h
+include/asm/tlbdebug.h
+include/asm/traps.h
+include/asm/tx3912.h
+include/asm/tx4927/toshiba_rbtx4927.h
+include/asm/tx4927/tx4927.h
+include/asm/tx4927/tx4927_mips.h
+include/asm/tx4927/tx4927_pci.h
+include/asm/ucontext.h
+include/asm/vga.h
+include/asm/vr4181/irq.h
+include/asm/vr4181/vr4181.h
+include/asm/vr41xx/capcella.h
+include/asm/vr41xx/e55.h
+include/asm/vr41xx/eagle.h
+include/asm/vr41xx/mpc30x.h
+include/asm/vr41xx/tb0226.h
+include/asm/vr41xx/tb0229.h
+include/asm/vr41xx/vr41xx.h
+include/asm/vr41xx/vrc4173.h
+include/asm/vr41xx/workpad.h
+include/asm/war.h
+include/asm/watch.h
+include/asm/wbflush.h
+include/asm/xtalk/xtalk.h
+include/asm/xtalk/xwidget.h
+@dirrm include/asm/arc
+@dirrm include/asm/baget
+@dirrm include/asm/cobalt
+@dirrm include/asm/ddb5xxx
+@dirrm include/asm/dec
+@dirrm include/asm/galileo-boards
+@dirrm include/asm/gcc
+@dirrm include/asm/gt64120
+@dirrm include/asm/gt64120/momenco_ocelot
+@dirrm include/asm/hp-lj
+@dirrm include/asm/ip32
+@dirrm include/asm/it8172
+@dirrm include/asm/jmr3927
+@dirrm include/asm/lasat
+@dirrm include/asm/mips-boards
+@dirrm include/asm/pci
+@dirrm include/asm/sgi
+@dirrm include/asm/sibyte
+@dirrm include/asm/sn
+@dirrm include/asm/sn/sn0
+@dirrm include/asm/tx4927
+@dirrm include/asm/vr4181
+@dirrm include/asm/vr41xx
+@dirrm include/asm/xtalk

@@ -1,0 +1,46 @@
+@comment $NetBSD: PLIST.h8300,v 1.1 2004/02/03 09:20:15 marttikuparinen Exp $
+include/asm/aki3068net/machine-depend.h
+include/asm/bootinfo.h
+include/asm/cachectl.h
+include/asm/dbg.h
+include/asm/edosk2674/machine-depend.h
+include/asm/flat.h
+include/asm/fpu.h
+include/asm/generic/machine-depend.h
+include/asm/generic/timer_rate.h
+include/asm/gpio.h
+include/asm/h8300_ne.h
+include/asm/h8300_smsc.h
+include/asm/h8max/machine-depend.h
+include/asm/hdreg.h
+include/asm/hw_irq.h
+include/asm/ide.h
+include/asm/init.h
+include/asm/ipc.h
+include/asm/keyboard.h
+include/asm/linux_logo.h
+include/asm/mc146818rtc.h
+include/asm/md.h
+include/asm/page_offset.h
+include/asm/processor.h
+include/asm/ptrace.h
+include/asm/regs267x.h
+include/asm/regs306x.h
+include/asm/segment.h
+include/asm/semaphore-helper.h
+include/asm/setup.h
+include/asm/sh_bios.h
+include/asm/shm.h
+include/asm/sigcontext.h
+include/asm/smp.h
+include/asm/softirq.h
+include/asm/spinlock.h
+include/asm/system.h
+include/asm/target_time.h
+include/asm/traps.h
+include/asm/ucontext.h
+include/asm/virtconvert.h
+@dirrm include/asm/aki3068net
+@dirrm include/asm/edosk2674
+@dirrm include/asm/generic
+@dirrm include/asm/h8max
