@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.612 2003/11/13 19:31:18 grantbeattie Exp $
-# $NetBSD: Makefile,v 1.612 2003/11/13 19:31:18 grantbeattie Exp $
+# $Id: Makefile,v 1.613 2003/11/13 20:05:58 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.613 2003/11/13 20:05:58 grantbeattie Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -492,6 +492,7 @@ SUBDIR+=	udhcp
 SUBDIR+=	umix
 SUBDIR+=	unmo3
 SUBDIR+=	unrealircd
+SUBDIR+=	unrealtournament-server
 SUBDIR+=	upx
 SUBDIR+=	util-linux
 SUBDIR+=	vba
