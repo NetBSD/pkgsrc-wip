@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/18 23:12:51 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/31 20:18:02 daprice Exp $
 #
 
 VERSION=		1.0.0-rc2
@@ -59,7 +59,7 @@ do-install:
 	${INSTALL_DATA} ${BUILD_DIRS}/doc/postgis.xml ${DOCDIR}
 	${CP} -r ${BUILD_DIRS}/doc/html/* ${HTMLDIR}
 
-.include "../../wip/geos2/buildlink3.mk"
+.include "../../wip/geos/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

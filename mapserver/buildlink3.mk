@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/03/18 20:34:30 daprice Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/03/31 20:24:47 daprice Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -38,6 +38,6 @@ BUILDLINK_PKGSRCDIR.mapserver?=	../../wip/mapserver-4.4.1
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../wip/geos2/buildlink3.mk"
+.include "../../wip/geos/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
