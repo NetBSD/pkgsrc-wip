@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/19 19:26:01 daprice Exp $
+
+SHA1 (jalview_1.8.tgz) = b30afab6e4ddcf165e494b4baf69398151059289
+Size (jalview_1.8.tgz) = 478565 bytes
+SHA1 (patch-aa) = 4465ae1b52ac6708d71522e3f8d314964f0b3967

@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/19 19:26:01 daprice Exp $
+lib/java/jalview.jar
+lib/java/jalview_1.8.jar
+share/jalview/examples/1hdc.pfam
+share/jalview/README.jalview
+share/jalview/jalview.sh
+@dirrm share/jalview/examples
+@dirrm share/jalview
+@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}

@@ -1,0 +1,18 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/11/19 19:26:01 daprice Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+JALVIEW_BINARY_BUILDLINK3_MK:=	${JALVIEW_BINARY_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	jalview_binary
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Njalview_binary}
+BUILDLINK_PACKAGES+=	jalview_binary
+
+.if !empty(JALVIEW_BINARY_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.jalview_binary+=	jalview_binary>=1.8
+BUILDLINK_PKGSRCDIR.jalview_binary?=	../../wip/jalview
+.endif	# JALVIEW_BINARY_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
