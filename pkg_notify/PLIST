@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/26 14:55:51 imilh Exp $
+bin/pkg_notify
