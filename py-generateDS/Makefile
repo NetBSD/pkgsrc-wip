@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/07/06 21:58:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/22 14:34:19 marc Exp $
 #
 
-DISTNAME=	generateDS-1.4b
+DISTNAME=	generateDS-1.6a
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.rexx.com/~dkuhlman/
