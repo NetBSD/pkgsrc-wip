@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/08 14:56:44 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/06 18:22:13 adrian_p Exp $
 bin/nikto
 share/doc/nikto/CHANGES.txt
+share/nikto/CHANGES.txt
 share/doc/nikto/LICENSE.txt
 share/doc/nikto/README_plugins.txt
 share/doc/nikto/nikto_usage.html
