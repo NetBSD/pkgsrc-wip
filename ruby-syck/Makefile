@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2004/01/28 17:12:38 rasputnik Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/13 14:47:51 rasputnik Exp $
 
 DISTNAME=	syck-${VER}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 WRKSRC=	${WRKDIR}/${DISTNAME}/ext/ruby
 CATEGORIES=	textproc
-MASTER_SITES=   http://heanet.dl.sourceforge.net/sourceforge/yaml4r/
+MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=yaml4r/}
 
 MAINTAINER=	rasputnik@hellooperator.net
 HOMEPAGE=	http://www.whytheluckystiff.net/syck/
