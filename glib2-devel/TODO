@@ -1,14 +1,12 @@
-$Id: TODO,v 1.2 2004/03/17 12:35:08 mpasternak Exp $
+$Id: TODO,v 1.3 2004/03/17 13:55:08 mpasternak Exp $
 
-Does it compile on NetBSD-stable and NetBSD-current?
+FreeBSD-4.9 build confirmed
 
-Does it need perl5?
+NetBSD-current (1.6ZI) build confirmed.
 
 "docs" doesn't compile on FreeBSD-STABLE and is hashed out by
 patches/patch-aa in Makefile.in . IMVHO docs should be an optional, extra
 package so I don't think this is an error -- they are available via gtk.org
 in HTML format.
- 
-PLIST -- is it complete? Please verify it.
 
 	-- dotz@irc.pl
