@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/11 00:41:32 blef Exp $
+bin/obconf
+share/obconf/obconf.glade
+@dirrm share/obconf
