@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/22 20:59:30 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/24 18:41:50 minskim Exp $
 bin/gdesklets
 bin/gdesklets-display-thumbnailer
 lib/pkgconfig/gdesklets-core.pc
@@ -24,6 +24,7 @@ share/gdesklets/display/Display.py
 share/gdesklets/display/DisplayConfigurator.py
 share/gdesklets/display/DisplayContainer.py
 share/gdesklets/display/DisplayTarget.py
+share/gdesklets/display/Plug.py
 share/gdesklets/display/TargetAlignment.py
 share/gdesklets/display/TargetArray.py
 share/gdesklets/display/TargetBonoboControl.py
@@ -61,18 +62,21 @@ share/gdesklets/libdesklets/polling.py
 share/gdesklets/locale/ar/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/az/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/ca/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/cs/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/de/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/el/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/es/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/eu/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/fr/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/he/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/hr/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/it/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/ja/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/ko/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/lt/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/ms/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/nl/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/no/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/pl/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/pt/LC_MESSAGES/gdesklets.mo
 share/gdesklets/locale/pt_BR/LC_MESSAGES/gdesklets.mo
@@ -103,6 +107,9 @@ share/gdesklets/utils/__init__.py
 share/gdesklets/utils/_ewmhmodule.a
 share/gdesklets/utils/_ewmhmodule.la
 share/gdesklets/utils/_ewmhmodule.so
+share/gdesklets/utils/_systraymodule.a
+share/gdesklets/utils/_systraymodule.la
+share/gdesklets/utils/_systraymodule.so
 share/gdesklets/utils/actionparser.py
 share/gdesklets/utils/datatypes.py
 share/gdesklets/utils/dialog.py
@@ -110,6 +117,7 @@ share/gdesklets/utils/i18n.py
 share/gdesklets/utils/installer.py
 share/gdesklets/utils/pwstore.py
 share/gdesklets/utils/singleton.py
+share/gdesklets/utils/systray.py
 share/gdesklets/utils/vfs.py
 share/icons/gnome/48x48/mimetypes/x-gdesklets-display.png
 share/mime-info/gdesklets.keys
@@ -138,6 +146,8 @@ share/pixmaps/gdesklets.png
 @dirrm share/gdesklets/locale/pt
 @dirrm share/gdesklets/locale/pl/LC_MESSAGES
 @dirrm share/gdesklets/locale/pl
+@dirrm share/gdesklets/locale/no/LC_MESSAGES
+@dirrm share/gdesklets/locale/no
 @dirrm share/gdesklets/locale/nl/LC_MESSAGES
 @dirrm share/gdesklets/locale/nl
 @dirrm share/gdesklets/locale/ms/LC_MESSAGES
@@ -150,6 +160,8 @@ share/pixmaps/gdesklets.png
 @dirrm share/gdesklets/locale/ja
 @dirrm share/gdesklets/locale/it/LC_MESSAGES
 @dirrm share/gdesklets/locale/it
+@dirrm share/gdesklets/locale/hr/LC_MESSAGES
+@dirrm share/gdesklets/locale/hr
 @dirrm share/gdesklets/locale/he/LC_MESSAGES
 @dirrm share/gdesklets/locale/he
 @dirrm share/gdesklets/locale/fr/LC_MESSAGES
@@ -162,6 +174,8 @@ share/pixmaps/gdesklets.png
 @dirrm share/gdesklets/locale/el
 @dirrm share/gdesklets/locale/de/LC_MESSAGES
 @dirrm share/gdesklets/locale/de
+@dirrm share/gdesklets/locale/cs/LC_MESSAGES
+@dirrm share/gdesklets/locale/cs
 @dirrm share/gdesklets/locale/ca/LC_MESSAGES
 @dirrm share/gdesklets/locale/ca
 @dirrm share/gdesklets/locale/az/LC_MESSAGES
@@ -182,5 +196,5 @@ share/pixmaps/gdesklets.png
 @dirrm share/gdesklets/Displays
 @dirrm share/gdesklets
 @comment in GConf2: @dirrm share/gconf/schemas
-@comment in gnome2-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/applications
 @comment in gnome2-dirs: @dirrm share/application-registry

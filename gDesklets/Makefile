@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2004/02/22 20:59:30 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/24 18:41:50 minskim Exp $
 
-DISTNAME=	gDesklets-0.25.1
+DISTNAME=	gDesklets-0.26
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://www.pycage.de/download/gdesklets/
 EXTRACT_SUFX=	.tar.bz2
