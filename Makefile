@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1249 2004/04/30 10:52:01 grantbeattie Exp $
-# $NetBSD: Makefile,v 1.1249 2004/04/30 10:52:01 grantbeattie Exp $
+# $Id: Makefile,v 1.1250 2004/04/30 19:36:09 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1250 2004/04/30 19:36:09 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -702,6 +702,7 @@ SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
 SUBDIR+=	thunderbird
 SUBDIR+=	tilp
+SUBDIR+=	time
 SUBDIR+=	tinylogin
 SUBDIR+=	tkabber
 SUBDIR+=	tleenx2
