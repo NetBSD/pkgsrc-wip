@@ -4,36 +4,23 @@ and expat. We realize that this may lead to rebuilding XFree86
 more than desired (when fontconfig is updated, for instance) but we
 believe that this is the best way to do things.
 
-Before trying to install this meta-package, you will need to do
-a few things:
-
-* You will not be able to install these packages if ${X11BASE} does
-  not exist. To work around this you could just create the directory
-  yourself, but for a more automated solution, find the block
+You will not be able to install these packages if ${X11BASE} does
+not exist. To work around this you could just create the directory
+yourself, but for a more automated solution, find the block
 
   .  if defined(USE_X11) && !exists(${X11BASE})
   PKG_FAIL_REASON+= "${PKGNAME} uses X11, but ${X11BASE} not found"
   .  endif
 
-  in bsd.pkg.mk, delete the PKG_FAIL_REASON line, and replace it with
+in bsd.pkg.mk, delete the PKG_FAIL_REASON line, and replace it with
 
   @${MKDIR} ${X11BASE}
   @${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${X11BASE}
   @${CHMOD} ${PKGDIRMODE} ${X11BASE}
 
-  Note that those need to have a tab character in front of them.
+Note that those need to have a tab character in front of them.
 
-* x11-links checks if we have the X headers, so you will have to
-  comment out the following lines from pkgtools/x11-links/Makefile:
-
-  #.if !exists(${X11BASE}/include/X11/X.h)
-  #PKG_FAIL_REASON= "${PKGNAME} requires X headers to be installed"
-  #.endif
-
-* You will need to reinstall the x11-links package when the XFree86
-  package has been installed succesfully.
-
-After making these changes, you shouldn't have any (infrastructure)
+After making that change, you shouldn't have any (infrastructure)
 problems.
 
 Good luck!
