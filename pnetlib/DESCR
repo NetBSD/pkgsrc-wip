@@ -1,0 +1,7 @@
+This distribution contains an implementation of the C# library, for use
+with .NET-capable runtime engines and applications.  Originally designed
+for DotGNU Portable.NET (http://www.southern-storm.com.au/portable_net.html),
+this library can be used by other .NET development efforts also.
+
+DotGNU Portable.NET Library is part of the GNU project, developed
+as part of the DotGNU (http://www.dotgnu.org/) meta-project.

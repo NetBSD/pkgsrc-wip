@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/07/18 16:46:01 poppnk Exp $
+
+--- JScript/Makefile.in.orig	2003-07-18 18:41:14.000000000 +0000
++++ JScript/Makefile.in	2003-07-18 18:40:57.000000000 +0000
+@@ -242,7 +242,7 @@
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	$(INSTALL_PROGRAM) jsrun.exe $(DESTDIR)$(bindir)/jsrun.exe
+-	$(INSTALL_PROGRAM) $(srcdir)/jsrun.sh $(DESTDIR)$(bindir)/jsrun
++	$(INSTALL_SCRIPT) $(srcdir)/jsrun.sh $(DESTDIR)$(bindir)/jsrun
+ 
+ uninstall-local:
+ 	@$(NORMALL_UNINSTALL)
