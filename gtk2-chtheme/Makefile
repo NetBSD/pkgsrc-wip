@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/26 23:11:04 kirtai Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/28 01:38:32 kirtai Exp $
 #
 
 DISTNAME=		gtk-chtheme-0.3.1
@@ -12,9 +12,10 @@ HOMEPAGE=		http://plasmasturm.org/programs/gtk-chtheme/
 COMMENT=		GTK+2 theme changer with preview
 
 USE_BUILDLINK3=		yes
-USE_X11=                yes
 USE_GNU_TOOLS+=         make
 REPLACE_PERL=		replace
+USE_PERL5=		build
 
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
