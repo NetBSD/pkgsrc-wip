@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.101 2003/04/18 21:47:51 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.101 2003/04/18 21:47:51 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.102 2003/04/19 07:39:38 lsed Exp $
+# $NetBSD: Makefile,v 1.102 2003/04/19 07:39:38 lsed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -94,7 +94,6 @@ SUBDIR+=	xevil
 SUBDIR+=	puf
 SUBDIR+=	SDL_mm
 SUBDIR+=	fluxconf
-SUBDIR+=	mplayerplugin
 SUBDIR+=	streamripper
 SUBDIR+=	tsclient
 SUBDIR+=	dovecot
