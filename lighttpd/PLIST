@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/14 11:41:49 socrtp Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/03/02 16:28:24 socrtp Exp $
 bin/spawn-fcgi
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
@@ -63,11 +63,6 @@ share/examples/lighttpd/lighttpd.conf
 share/examples/lighttpd/lighttpd.user
 share/examples/lighttpd/rrdtool-graph.sh
 share/examples/lighttpd/spawn-php.sh
-share/examples/lighttpd/tests/fastcgi-10.conf
-share/examples/lighttpd/tests/fastcgi-11.conf
-share/examples/lighttpd/tests/fastcgi-12.conf
-share/examples/lighttpd/tests/lighttpd.conf
 @dirrm lib/lighttpd
 @dirrm share/doc/lighttpd
-@dirrm share/examples/lighttpd/tests
 @dirrm share/examples/lighttpd

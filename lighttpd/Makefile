@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2005/02/22 14:02:07 socrtp Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/02 16:28:24 socrtp Exp $
 
-DISTNAME=		lighttpd-1.3.11
-# PKGNAME=		lighttpd-1.3.10
+DISTNAME=		lighttpd-1.3.12
 CATEGORIES=		www
 MASTER_SITES=		http://lighttpd.net/download/
 
@@ -57,7 +56,6 @@ post-patch:
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}/tests
 	for i in ${WRKSRC}/doc/*.txt ${WRKSRC}/doc/*.ps.gz ${WRKSRC}/doc/*.dot; do	\
 		${INSTALL_DATA} $${i} ${DOCDIR};					\
 	done
@@ -67,9 +65,10 @@ post-install:
 	for i in lighttpd.conf lighttpd.user rrdtool-graph.sh spawn-php.sh; do	\
 		${INSTALL_DATA} ${WRKSRC}/doc/$${i} ${EGDIR};			\
 	done
-	for i in lighttpd.conf fastcgi-10.conf fastcgi-11.conf fastcgi-12.conf; do	\
-		${INSTALL_DATA} ${WRKSRC}/tests/$${i} ${EGDIR}/tests;			\
-	done
+#	${INSTALL_DATA_DIR} ${EGDIR}/tests
+#	for i in lighttpd.conf fastcgi-10.conf fastcgi-11.conf fastcgi-12.conf; do	\
+#		${INSTALL_DATA} ${WRKSRC}/tests/$${i} ${EGDIR}/tests;			\
+#	done
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

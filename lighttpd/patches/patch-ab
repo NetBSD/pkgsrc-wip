@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1 2005/03/02 16:28:24 socrtp Exp $
+
+--- src/server.c.orig	2005-03-02 14:07:11.000000000 +0100
++++ src/server.c	2005-03-02 16:59:49.000000000 +0100
+@@ -71,7 +71,7 @@
+ 	case SIGTERM: srv_shutdown = 1; break;
+ 	case SIGALRM: handle_sig_alarm = 1; break;
+ 	case SIGHUP:  handle_sig_hup = 1; break;
+-	case SIGCLD: break;
++	case SIGCHLD: break;
+ 	}
+ }
+ #elif defined(HAVE_SIGNAL) || defined(HAVE_SIGACTION)
+@@ -80,7 +80,7 @@
+ 	case SIGTERM: srv_shutdown = 1; break;
+ 	case SIGALRM: handle_sig_alarm = 1; break;
+ 	case SIGHUP:  handle_sig_hup = 1; break;
+-	case SIGCLD:  break;
++	case SIGCHLD:  break;
+ 	}
+ }
+ #endif
+@@ -686,7 +686,7 @@
+ 	sigaction(SIGTERM, &act, NULL);
+ 	sigaction(SIGHUP,  &act, NULL);
+ 	sigaction(SIGALRM, &act, NULL);
+-	sigaction(SIGCLD, &act, NULL);
++	sigaction(SIGCHLD, &act, NULL);
+ 	
+ #elif defined(HAVE_SIGNAL)
+ 	/* ignore the SIGPIPE from sendfile() */
+@@ -695,7 +695,7 @@
+ 	signal(SIGALRM, signal_handler);
+ 	signal(SIGTERM, signal_handler);
+ 	signal(SIGHUP,  signal_handler);
+-	signal(SIGCLD,  signal_handler);
++	signal(SIGCHLD,  signal_handler);
+ #endif
+ 	
+ #ifdef USE_ALARM
