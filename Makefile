@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.160 2003/05/14 04:29:18 lsed Exp $
-# $NetBSD: Makefile,v 1.160 2003/05/14 04:29:18 lsed Exp $
+# $Id: Makefile,v 1.161 2003/05/14 06:40:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.161 2003/05/14 06:40:18 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -86,6 +86,7 @@ SUBDIR+=	mcats-iodbc
 SUBDIR+=	mixer.tk
 SUBDIR+=	mopac
 SUBDIR+=	mtf
+SUBDIR+=	muse
 SUBDIR+=	nagios-base
 SUBDIR+=	nagios-plugin-ldap
 SUBDIR+=	nagios-plugin-mysql
