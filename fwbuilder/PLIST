@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/13 00:58:11 marc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/10 21:36:30 marc Exp $
 bin/fwb_install
 bin/fwb_ipf
+bin/fwb_ipfw
 bin/fwb_ipt
 bin/fwb_pf
 bin/fwblookup
 bin/fwbuilder
+man/man1/fwb_install.1
 man/man1/fwb_ipf.1
+man/man1/fwb_ipfw.1
 man/man1/fwb_ipt.1
 man/man1/fwb_pf.1
 man/man1/fwblookup.1
@@ -16,6 +19,8 @@ share/bug-buddy/fwbuilder-packages
 share/bug-buddy/fwbuilder.appmap
 share/bug-buddy/xml/fwbuilder.bts
 share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/Build
+share/doc/${PKGNAME}/Build.html
 share/doc/${PKGNAME}/COPYING
 share/doc/${PKGNAME}/ChangeLog
 share/doc/${PKGNAME}/Credits
@@ -49,6 +54,8 @@ share/doc/${PKGNAME}/ReleaseNotes_1.0.0
 share/doc/${PKGNAME}/ReleaseNotes_1.0.0.html
 share/doc/${PKGNAME}/ReleaseNotes_1.0.1
 share/doc/${PKGNAME}/ReleaseNotes_1.0.1.html
+share/doc/${PKGNAME}/ReleaseNotes_${PKGVERSION}
+share/doc/${PKGNAME}/ReleaseNotes_${PKGVERSION}.html
 share/doc/${PKGNAME}/ReleaseNotes_1.0.2
 share/doc/${PKGNAME}/ReleaseNotes_1.0.2.html
 share/doc/${PKGNAME}/ReleaseNotes_1.0.3
@@ -63,13 +70,10 @@ share/doc/${PKGNAME}/ReleaseNotes_1.0.7
 share/doc/${PKGNAME}/ReleaseNotes_1.0.7.html
 share/doc/${PKGNAME}/ReleaseNotes_1.0.8
 share/doc/${PKGNAME}/ReleaseNotes_1.0.8.html
-share/doc/${PKGNAME}/ReleaseNotes_${PKGVERSION}
-share/doc/${PKGNAME}/ReleaseNotes_${PKGVERSION}.html
-share/doc/${PKGNAME}/Requirements
-share/doc/${PKGNAME}/Requirements.html
+share/doc/${PKGNAME}/ReleaseNotes_1.0.9
+share/doc/${PKGNAME}/ReleaseNotes_1.0.9.html
 share/doc/${PKGNAME}/examples/README.examples
 share/doc/${PKGNAME}/examples/objects.xml
-share/doc/${PKGNAME}/feedback.html
 share/fwbuilder/filters/policy-html.xsl
 share/fwbuilder/filters/policy-text.xsl
 share/fwbuilder/filters/print-nat.xs1
@@ -97,39 +101,46 @@ share/fwbuilder/migration/1.0.5/FWBuilderPreferences.xslt
 share/fwbuilder/migration/1.0.6/FWBuilderPreferences.xslt
 share/fwbuilder/migration/1.0.7/FWBuilderPreferences.xslt
 share/fwbuilder/migration/1.0.8/FWBuilderPreferences.xslt
+share/fwbuilder/migration/1.0.9/FWBuilderPreferences.xslt
 share/fwbuilder/modules/gui/lib_freebsd_dlg.a
-share/fwbuilder/modules/gui/lib_freebsd_dlg.la
 share/fwbuilder/modules/gui/lib_freebsd_dlg.so
 share/fwbuilder/modules/gui/lib_ipf_dlg.a
-share/fwbuilder/modules/gui/lib_ipf_dlg.la
 share/fwbuilder/modules/gui/lib_ipf_dlg.so
+share/fwbuilder/modules/gui/lib_ipfw_dlg.a
+share/fwbuilder/modules/gui/lib_ipfw_dlg.so
 share/fwbuilder/modules/gui/lib_iptables_dlg.a
-share/fwbuilder/modules/gui/lib_iptables_dlg.la
 share/fwbuilder/modules/gui/lib_iptables_dlg.so
 share/fwbuilder/modules/gui/lib_linux24_dlg.a
-share/fwbuilder/modules/gui/lib_linux24_dlg.la
 share/fwbuilder/modules/gui/lib_linux24_dlg.so
+share/fwbuilder/modules/gui/lib_macosx_dlg.a
+share/fwbuilder/modules/gui/lib_macosx_dlg.so
 share/fwbuilder/modules/gui/lib_openbsd_dlg.a
-share/fwbuilder/modules/gui/lib_openbsd_dlg.la
 share/fwbuilder/modules/gui/lib_openbsd_dlg.so
 share/fwbuilder/modules/gui/lib_pf_dlg.a
-share/fwbuilder/modules/gui/lib_pf_dlg.la
 share/fwbuilder/modules/gui/lib_pf_dlg.so
 share/fwbuilder/modules/gui/lib_pix_dlg.a
-share/fwbuilder/modules/gui/lib_pix_dlg.la
 share/fwbuilder/modules/gui/lib_pix_dlg.so
 share/fwbuilder/modules/gui/lib_pix_os_dlg.a
-share/fwbuilder/modules/gui/lib_pix_os_dlg.la
 share/fwbuilder/modules/gui/lib_pix_os_dlg.so
 share/fwbuilder/modules/gui/lib_solaris_dlg.a
-share/fwbuilder/modules/gui/lib_solaris_dlg.la
 share/fwbuilder/modules/gui/lib_solaris_dlg.so
 share/fwbuilder/objects_init.xml
+share/fwbuilder/os/freebsd.xml
+share/fwbuilder/os/linux24.xml
+share/fwbuilder/os/macosx.xml
+share/fwbuilder/os/openbsd.xml
+share/fwbuilder/os/pix_os.xml
+share/fwbuilder/os/solaris.xml
+share/fwbuilder/os/unknown_os.xml
+share/fwbuilder/platform/ipf.xml
+share/fwbuilder/platform/ipfw.xml
+share/fwbuilder/platform/iptables.xml
+share/fwbuilder/platform/pf.xml
+share/fwbuilder/platform/pix.xml
+share/fwbuilder/platform/unknown.xml
 share/fwbuilder/resources.xml
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/fwbuilder.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/fwbuilder.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/fwbuilder.mo
 share/pixmaps/fwbuilder/accept.png
+share/pixmaps/fwbuilder/accounting.png
 share/pixmaps/fwbuilder/address-neg.png
 share/pixmaps/fwbuilder/address-ref.png
 share/pixmaps/fwbuilder/address.png
@@ -224,8 +235,11 @@ share/pixmaps/fwbuilder/up-arrow.png
 share/pixmaps/fwbuilder/warning.png
 share/pixmaps/fwbuilder/yes.png
 @dirrm share/pixmaps/fwbuilder
+@dirrm share/fwbuilder/platform
+@dirrm share/fwbuilder/os
 @dirrm share/fwbuilder/modules/gui
 @dirrm share/fwbuilder/modules
+@dirrm share/fwbuilder/migration/1.0.9
 @dirrm share/fwbuilder/migration/1.0.8
 @dirrm share/fwbuilder/migration/1.0.7
 @dirrm share/fwbuilder/migration/1.0.6
@@ -251,8 +265,9 @@ share/pixmaps/fwbuilder/yes.png
 @dirrm share/fwbuilder
 @dirrm share/doc/${PKGNAME}/examples
 @dirrm share/doc/${PKGNAME}
+@dirrm share/bug-buddy/xml
 @exec ${MKDIR} %D/share/bug-buddy/bugzilla/fwbuilder
 @dirrm share/bug-buddy/bugzilla/fwbuilder
-@unexec ${RMDIR} %D/share/bug-buddy/bugzilla 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/bug-buddy/xml 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/bug-buddy/bugzilla 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/bug-buddy 2>/dev/null || ${TRUE}

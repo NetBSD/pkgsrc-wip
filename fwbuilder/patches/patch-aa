@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/05/13 00:58:11 marc Exp $
+$NetBSD: patch-aa,v 1.2 2003/06/10 21:36:30 marc Exp $
 
---- configure.in.orig	2003-05-13 02:00:22.000000000 +0200
-+++ configure.in	2003-05-13 02:01:15.000000000 +0200
-@@ -637,6 +637,12 @@
-     AC_MSG_RESULT(FreeBSD)
+--- configure.in.orig	2003-05-14 08:55:29.000000000 +0200
++++ configure.in	2003-06-10 21:23:30.000000000 +0200
+@@ -648,6 +648,12 @@
+     AC_MSG_RESULT(OpenBSD)
      ;;
  
 +  *-*-netbsd*)

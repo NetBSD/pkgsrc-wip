@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/13 00:58:10 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/10 21:36:30 marc Exp $
 #
 
-DISTNAME=		fwbuilder-1.0.9
+DISTNAME=		fwbuilder-1.0.10
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fwbuilder/}
 
@@ -28,5 +28,6 @@ pre-configure:
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../x11/gtk--/buildlink2.mk"
 .include "../../wip/libfwbuilder/buildlink2.mk"
+
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
