@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2003/07/30 21:34:42 marc Exp $
-bin/pydoc23
+@comment $NetBSD: PLIST.common,v 1.2 2003/07/31 17:56:35 marc Exp $
+bin/idle
+bin/pydoc
 bin/python
 bin/python${PKGVERSION}
 include/python${PKGVERSION}/Python.h

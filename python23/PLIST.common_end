@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.common_end,v 1.2 2003/07/31 17:56:35 marc Exp $
 @dirrm lib/python${PKGVERSION}/xml/sax
 @dirrm lib/python${PKGVERSION}/xml/parsers
 @dirrm lib/python${PKGVERSION}/xml/dom

@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/07/30 21:34:42 marc Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/31 17:56:35 marc Exp $
 
 --- setup.py.orig	2003-07-10 14:48:39.000000000 +0200
-+++ setup.py	2003-07-30 20:18:41.000000000 +0200
++++ setup.py	2003-07-31 18:11:46.000000000 +0200
+@@ -15,7 +15,7 @@
+ from distutils.command.install_lib import install_lib
+ 
+ # This global variable is used to hold the list of modules to be disabled.
+-disabled_module_list = []
++disabled_module_list = ["_curses", "_tkinter", "gdbm", "mpz", "pyexpat", "readline"]
+ 
+ def add_dir_to_list(dirlist, dir):
+     """Add the directory 'dir' to the list 'dirlist' (at the front) if
 @@ -240,9 +240,15 @@
          return sys.platform
  
@@ -21,7 +30,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/30 21:34:42 marc Exp $
  
          # fink installs lots of goodies in /sw/... - make sure we
          # check there
-@@ -396,16 +402,16 @@
+@@ -396,13 +402,13 @@
          # These represent audio samples or images as strings:
  
          # Disabled on 64-bit platforms
@@ -38,11 +47,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/30 21:34:42 marc Exp $
 +#            exts.append( Extension('rgbimg', ['rgbimgmodule.c']) )
  
          # readline
--        if self.compiler.find_library_file(lib_dirs, 'readline'):
-+        if 0 and self.compiler.find_library_file(lib_dirs, 'readline'):
-             readline_libs = ['readline']
-             if self.compiler.find_library_file(lib_dirs,
-                                                  'ncurses'):
+         if self.compiler.find_library_file(lib_dirs, 'readline'):
 @@ -436,9 +442,7 @@
                                 depends = ['socketmodule.h']) )
          # Detect SSL support for the socket module (via _ssl)
@@ -65,107 +70,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/30 21:34:42 marc Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -608,9 +610,9 @@
-                                        libraries=dblibs))
- 
-         # Anthony Baxter's gdbm module.  GNU dbm(3) will require -lgdbm:
--        if (self.compiler.find_library_file(lib_dirs, 'gdbm')):
--            exts.append( Extension('gdbm', ['gdbmmodule.c'],
--                                   libraries = ['gdbm'] ) )
-+        #if (self.compiler.find_library_file(lib_dirs, 'gdbm')):
-+        #    exts.append( Extension('gdbm', ['gdbmmodule.c'],
-+        #                           libraries = ['gdbm'] ) )
- 
-         # The mpz module interfaces to the GNU Multiple Precision library.
-         # You need to ftp the GNU MP library.
-@@ -626,9 +628,9 @@
-         # FTP archive sites. One URL for it is:
-         # ftp://gatekeeper.dec.com/.b/usenet/comp.sources.misc/volume40/fgmp/part01.Z
- 
--        if (self.compiler.find_library_file(lib_dirs, 'gmp')):
--            exts.append( Extension('mpz', ['mpzmodule.c'],
--                                   libraries = ['gmp'] ) )
-+        #if (self.compiler.find_library_file(lib_dirs, 'gmp')):
-+        #    exts.append( Extension('mpz', ['mpzmodule.c'],
-+        #                           libraries = ['gmp'] ) )
- 
- 
-         # Unix-only modules
-@@ -656,8 +658,8 @@
- 
-         if (self.compiler.find_library_file(lib_dirs, 'ncurses')):
-             curses_libs = ['ncurses']
--            exts.append( Extension('_curses', ['_cursesmodule.c'],
--                                   libraries = curses_libs) )
-+#            exts.append( Extension('_curses', ['_cursesmodule.c'],
-+#                                   libraries = curses_libs) )
-         elif (self.compiler.find_library_file(lib_dirs, 'curses')
-               and platform != 'darwin'):
-                 # OSX has an old Berkeley curses, not good enough for
-@@ -669,8 +671,8 @@
-             else:
-                 curses_libs = ['curses']
- 
--            exts.append( Extension('_curses', ['_cursesmodule.c'],
--                                   libraries = curses_libs) )
-+#            exts.append( Extension('_curses', ['_cursesmodule.c'],
-+#                                   libraries = curses_libs) )
- 
-         # If the curses module is enabled, check for the panel module
-         if (module_enabled(exts, '_curses') and
-@@ -725,26 +727,26 @@
-         #
-         # More information on Expat can be found at www.libexpat.org.
-         #
--        if sys.byteorder == "little":
--            xmlbo = "1234"
--        else:
--            xmlbo = "4321"
--        expatinc = os.path.join(os.getcwd(), srcdir, 'Modules', 'expat')
--        exts.append(Extension('pyexpat',
--                              sources = [
--            'pyexpat.c',
--            'expat/xmlparse.c',
--            'expat/xmlrole.c',
--            'expat/xmltok.c',
--            ],
--                              define_macros = [
--            ('XML_NS', '1'),
--            ('XML_DTD', '1'),
--            ('BYTEORDER', xmlbo),
--            ('XML_CONTEXT_BYTES','1024'),
--            ],
--                              include_dirs = [expatinc]
--                               ))
-+        #if sys.byteorder == "little":
-+        #    xmlbo = "1234"
-+        #else:
-+        #    xmlbo = "4321"
-+        #expatinc = os.path.join(os.getcwd(), srcdir, 'Modules', 'expat')
-+        #exts.append(Extension('pyexpat',
-+        #                      sources = [
-+        #    'pyexpat.c',
-+        #    'expat/xmlparse.c',
-+        #    'expat/xmlrole.c',
-+        #    'expat/xmltok.c',
-+        #    ],
-+        #                      define_macros = [
-+        #    ('XML_NS', '1'),
-+        #    ('XML_DTD', '1'),
-+        #    ('BYTEORDER', xmlbo),
-+        #    ('XML_CONTEXT_BYTES','1024'),
-+        #    ],
-+        #                      include_dirs = [expatinc]
-+        #                       ))
- 
-         # Dynamic loading module
-         if sys.maxint == 0x7fffffff:
-@@ -1128,7 +1130,7 @@
-           ext_modules=[Extension('struct', ['structmodule.c'])],
- 
-           # Scripts to install
--          scripts = ['Tools/scripts/pydoc', 'Tools/scripts/idle']
-+          scripts = ['Tools/scripts/pydoc23']
-         )
- 
- # --install-platlib

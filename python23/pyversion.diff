@@ -1,5 +1,5 @@
 --- pyversion.mk.orig	2003-07-31 15:20:10.000000000 +0200
-+++ pyversion.mk	2003-07-31 15:44:52.000000000 +0200
++++ pyversion.mk	2003-07-31 19:34:43.000000000 +0200
 @@ -5,11 +5,11 @@
  
  .include "../../mk/bsd.prefs.mk"
@@ -33,17 +33,24 @@
  .if exists(${LOCALBASE}/bin/python2.2)
  _PYTHON_VERSION_22_INSTALLED=	yes
  .endif
-@@ -89,7 +93,13 @@
+@@ -89,7 +93,20 @@
  #  PYPKGPREFIX: prefix to use in PKGNAME for extensions which can install
  #               to multiple Python versions
  #
 -.if ${_PYTHON_VERSION} == "22"
 +.if ${_PYTHON_VERSION} == "23"
 +PYPKGSRCDIR=	../../wip/python23
-+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python22}:${PYPKGSRCDIR}
++PYDEPENDENCY=	${BUILDLINK_DEPENDS.python23}:${PYPKGSRCDIR}
 +PYPACKAGE=	python23
 +PYVERSSUFFIX=	2.3
 +PYPKGPREFIX=	py23
++.  if defined(USE_BUILDLINK2)
++PTHREAD_OPTS=	require
++.    include "../../mk/pthread.buildlink2.mk"
++.    if ${PTHREAD_TYPE} == "pth"
++.        include "../../devel/pth/buildlink2.mk"
++.    endif
++.  endif
 +.elif ${_PYTHON_VERSION} == "22"
  PYPKGSRCDIR=	../../lang/python22
  PYDEPENDENCY=	${BUILDLINK_DEPENDS.python22}:${PYPKGSRCDIR}
