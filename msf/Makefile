@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/13 13:37:05 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/26 14:41:22 adrian_p Exp $
 #
 
 DISTNAME=	framework-2.0
@@ -22,6 +22,7 @@ USE_PERL5=	YES
 PERL_FILES=	msfcli msfconsole msfdldebug msfencode msflogdump msfpayload \
 		msfpayload.cgi msfpescan msfweb
 REPLACE_PERL+=	${PERL_FILES}
+NO_BUILDLINK=	YES
 
 NO_BUILD=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/14 20:16:33 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/26 14:40:08 adrian_p Exp $
 
 DISTNAME=	bitchbot-1.0.2
 CATEGORIES=	chat
@@ -10,6 +10,7 @@ COMMENT=	Bitchbot is a perl-based IRC bot
 
 USE_PERL5=	YES
 USE_PKGINSTALL=	YES
+NO_BUILDLINK=	YES
 
 REPLACE_PERL=	bitch.pl genstats.pl
 
