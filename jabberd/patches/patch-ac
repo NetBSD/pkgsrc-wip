@@ -1,13 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2003/11/17 10:18:40 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2003/12/02 16:26:17 xtraeme Exp $
 
---- jsm/modules/mod_auth_crypt.c.orig	2003-11-17 11:10:07.000000000 +0100
-+++ jsm/modules/mod_auth_crypt.c	2003-11-17 11:10:27.000000000 +0100
-@@ -28,7 +28,7 @@
+--- jsm/modules/mod_auth_crypt.c.orig	2003-12-02 17:23:00.000000000 +0100
++++ jsm/modules/mod_auth_crypt.c	2003-12-02 17:23:23.000000000 +0100
+@@ -28,7 +28,11 @@
   * 
   * --------------------------------------------------------------------------*/
  #include "jsm.h"
--#include "crypt.h"
-+#include <stdlib.h>
++#ifdef BSD
++#include "unistd.h"
++#else
+ #include "crypt.h"
++#endif
  
  #define HASH_CRYPT 1
  #define HASH_SHA1  2
