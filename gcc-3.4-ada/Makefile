@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/03/06 08:35:03 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.23 2004/03/10 18:33:14 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the developmental gcc 3.4 Ada compiler
 
 GCC_VERSION=	3.4
-SNAPDATE=	20040303
+SNAPDATE=	20040310
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
