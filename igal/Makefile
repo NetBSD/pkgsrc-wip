@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/28 11:52:26 drue Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 18:59:32 blef Exp $
 #
 
 DISTNAME=	igal-1.4
@@ -11,11 +11,12 @@ COMMENT=	Online image gallery generator
 
 DEPENDS+=	ImageMagick>=5.0:../../graphics/ImageMagick
 
-USE_BUILDLINK2=		YES
+NO_CONFIGURE=		YES
+NO_BUILD=		YES
+NO_BUILDLINK=		YES
+REPLACE_PERL=		igal
+USE_PERL5=		# defined
 USE_PKGLOCALEDIR=	YES
-NO_CONFIGURE=	YES
-NO_BUILD=	YES
-REPLACE_PERL=	igal
 
 post-patch:
 	${MV} ${WRKSRC}/igal ${WRKSRC}/igal.bak
@@ -33,5 +34,4 @@ do-install:
 	cd ${WRKSRC} && \
 	${INSTALL_DATA} README THANKS ChangeLog COPYING ${PREFIX}/share/doc/igal
 
-.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
