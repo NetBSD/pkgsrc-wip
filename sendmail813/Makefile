@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.19 2004/08/18 14:33:40 adrian_p Exp $
+# $NetBSD: Makefile,v 1.20 2004/08/19 20:04:04 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
 PKGNAME=	sendmail-${DIST_VERS}
 COMMENT=	The well known Mail Transport Agent
 
-CONFLICTS+=	postfix-[0-9]* fastforward-[0-9]*
+CONFLICTS+=	postfix-[0-9]* fastforward>=0.51nb2
 
 MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
-.if ${OPSYS} != "Linux"
+.if ${OPSYS} != "Linux" 
 PLIST_SUBST+=  CAT1=0
 PLIST_SUBST+=  CAT5=0
 PLIST_SUBST+=  CAT8=0
@@ -84,9 +84,11 @@ REPLACE_PERL=	contrib/socketmapClient.pl contrib/socketmapServer.pl
 PLIST_SRC+=	${PKGDIR}/PLIST.socketmap
 .endif
 
+post-extract:
+	@${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
+
 do-build:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
-	@${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 post-build:
 	@${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
