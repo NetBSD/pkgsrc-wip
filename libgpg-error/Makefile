@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/17 08:15:18 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/05 04:04:04 minskim Exp $
 #
 
-DISTNAME=	libgpg-error-0.5
+DISTNAME=	libgpg-error-0.6
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnupg.org/GnuPG/alpha/libgpg-error/
 
@@ -14,5 +14,7 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+.include "../../devel/gettext-lib/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
