@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1057 2004/03/07 05:35:06 minskim Exp $
-# $NetBSD: Makefile,v 1.1057 2004/03/07 05:35:06 minskim Exp $
+# $Id: Makefile,v 1.1058 2004/03/07 12:47:19 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.1058 2004/03/07 12:47:19 marttikuparinen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -170,6 +170,7 @@ SUBDIR+=	gkrellm-reminder
 SUBDIR+=	gl-117
 SUBDIR+=	glaxium
 SUBDIR+=	glib2-devel
+SUBDIR+=	glibc
 SUBDIR+=	glide3
 SUBDIR+=	glkterm
 SUBDIR+=	glulxe
