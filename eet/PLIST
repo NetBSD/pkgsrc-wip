@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/16 12:33:43 airhead Exp $
+bin/eet
+bin/eet-config
+include/Eet.h
+lib/libeet.a
+lib/libeet.la
+lib/libeet.so
+lib/libeet.so.9
+lib/libeet.so.9.9
+lib/pkgconfig/eet.pc
