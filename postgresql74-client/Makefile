@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/20 22:26:51 marc Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/25 18:34:20 marc Exp $
 
 PKGNAME=		postgresql-client-${BASE_VERS}
 SVR4_PKGNAME=		pstgc
@@ -33,8 +33,8 @@ post-install:
 USE_GNU_READLINE=yes
 .endif
 
-.include "../../wip/postgresql74-lib/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../wip/postgresql74-lib/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/03/20 22:22:27 marc Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/03/25 18:34:18 marc Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -40,9 +40,13 @@ BASE_VERS?=		${DIST_VERS}
 BUILDLINK_DEPENDS.postgresql-lib?=	postgresql-lib>=${BASE_VERS}
 BUILDLINK_DEPENDS.tcl-postgresql?=	tcl-postgresql>=${BASE_VERS}
 
-USE_BUILDLINK2=		YES
-USE_GNU_TOOLS+=		make
-GNU_CONFIGURE=		YES
+BUILD_DEPENDS+=		bison>=1.875:../../devel/bison
+
+YACC=			${LOCALBASE}/bin/bison -y
+
+USE_BUILDLINK3=		yes
+GNU_CONFIGURE=		yes
+USE_GNU_TOOLS+=		make yacc
 PKG_SYSCONFSUBDIR=	postgresql
 
 .include "../../mk/bsd.prefs.mk"
@@ -85,8 +89,8 @@ post-extract:
 			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
 	fi
 
-pre-configure:
-	cd ${WRKSRC} && ${AUTOCONF}
+#pre-configure:
+#	cd ${WRKSRC} && ${AUTOCONF}
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../mk/autoconf.mk"
+.include "../../devel/zlib/buildlink3.mk"
+#.include "../../mk/autoconf.mk"

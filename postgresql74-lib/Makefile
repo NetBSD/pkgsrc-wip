@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/20 22:26:52 marc Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/25 18:34:20 marc Exp $
 
 PKGNAME=		postgresql-lib-${BASE_VERS}
 SVR4_PKGNAME=		pstgl
@@ -32,5 +32,5 @@ post-install:
 	${RM} -f ${PREFIX}/include/pgsql
 	${LN} -sf postgresql ${PREFIX}/include/pgsql
 
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
