@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/10 13:55:50 imilh Exp $
+man/man1/tcpdump.1
+sbin/tcpdump
