@@ -1,0 +1,4 @@
+Improve description.
+
+pkglint complains:
+WARN: extra item placed in the *_DEPENDS section, for example, "DEPENDS".
