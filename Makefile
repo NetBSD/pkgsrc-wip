@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1325 2004/06/11 19:10:03 plunky Exp $
-# $NetBSD: Makefile,v 1.1325 2004/06/11 19:10:03 plunky Exp $
+# $Id: Makefile,v 1.1326 2004/06/12 11:03:52 ppostma Exp $
+# $NetBSD: Makefile,v 1.1326 2004/06/12 11:03:52 ppostma Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -84,6 +84,7 @@ SUBDIR+=	compare
 SUBDIR+=	compositeext
 SUBDIR+=	cops
 SUBDIR+=	copytape
+SUBDIR+=	crawl
 SUBDIR+=	cryptopp
 SUBDIR+=	cube
 SUBDIR+=	cvsd
