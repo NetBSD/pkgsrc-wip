@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/06/06 10:17:25 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.48 2004/06/06 20:03:32 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -27,8 +27,8 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 # Ada bootstrap compiler section
 # An Ada compiler is required to build the Ada compiler. Two
 may be used:
-#USE_GCC33	=# Define to use lang/gcc33-ada
-#USE_GCC34	=# Define to use lang/gcc3
+#USE_GCC33	=# Define to use gcc-3.3.x-ada
+#USE_GCC34	=# Define to use gcc-3.4.x-ada
 # You may also specify the path of a gcc/gnat Ada compiler
 # outside of the pkgsrc system by specifying the full path
 # of the compiler (example) below:
@@ -47,7 +47,7 @@ PKG_SKIP_REASON=	"An Ada bootstrap compiler must be specified"
 .endif
 
 # Make location overridable, to allow ping-pong bootstraps.
-GCC34_DEFAULT_SUBPREFIX=	${PKGNAME_NOREV}
+GCC34_DEFAULT_SUBPREFIX=	${DISTNAME}-ada
 GCC34_INSTALLTO_SUBPREFIX?=	${GCC34_DEFAULT_SUBPREFIX}
 .if ${GCC34_INSTALLTO_SUBPREFIX} != ${GCC34_DEFAULT_SUBPREFIX}
 GCC34_PKGMODIF=		${GCC34_INSTALLTO_SUBPREFIX}
@@ -79,11 +79,11 @@ post-patch:
 
 .if defined(USE_GCC34)
 pre-configure:
-.include "../../lang/gcc3/preconfigure.mk"
+.include "../../wip/gcc-3.4/preconfigure.mk"
 .elif defined(ALT_GCC)
 pre-configure:
 	(cd ${WRKDIR}/.buildlink && ${MKDIR} ${RALT_GCC_RTS} && \
-	cd ${RALT_GCC_RTS} && ${LN} -s ${ALT_GCC_RTS}/libgnat.a .)
+	cd ${RALT_GCC_RTS} && ${LN} -sf ${ALT_GCC_RTS}/libgnat.a .)
 	(cd ${ALT_GCC:H} && \
 	files=`${FIND} . -type f \( -perm -0100 \)` && \
 	cd ${GCC_DIR}/bin/ && \
@@ -133,10 +133,10 @@ post-install:
 		>> ${PLIST_SRC}
 
 .if defined(USE_GCC33)
-.include "../../lang/gcc33-ada/buildlink3.mk"
+.include "../../wip/gcc33-ada/buildlink3.mk"
 .elif defined(USE_GCC34)
 BUILDLINK_DEPMETHOD.gcc3=	build
-.include "../../lang/gcc3/buildlink3.mk"
+.include "../../wip/gcc-3.4/buildlink3.mk"
 .endif
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
