@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.socketmap,v 1.1 2004/08/07 18:31:38 adrian_p Exp $
-share/examples/sendmail/socketmapClient.pl
-share/examples/sendmail/socketmapServer.pl

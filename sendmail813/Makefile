@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/08/07 18:31:38 adrian_p Exp $
+# $NetBSD: Makefile,v 1.15 2004/08/07 21:12:00 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -20,11 +20,16 @@ PLIST_SUBST+=  CAT5=5
 PLIST_SUBST+=  CAT8=8
 .endif
 
-SUBST_CLASSES=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_CLASSES=		paths perl
+SUBST_STAGE.paths=	pre-build
 SUBST_FILES.paths=	${WRKDIR}/mailer.conf
 SUBST_SED.paths=	-e "s|@@PREFIX@@|${PREFIX}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
+
+SUBST_STAGE.perl=	pre-build
+SUBST_FILES.perl=	contrib/socketmapClient.pl contrib/socketmapServer.pl
+SUBST_SED.perl=		-e "s|/usr/bin/perl|${PREFIX}/bin/perl|g"
+SUBST_MESSAGE.perl=	Fixing perl path.
 
 .if ${OPSYS} == "SunOS"
 USE_DB2?=	YES
@@ -56,9 +61,6 @@ USE_TCPWRAPPERS?=	YES
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .endif
 
-post-extract:
-	@${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
-
 post-patch: make-sendmail-siteconfig
 .if ${USE_TCPWRAPPERS} == YES
 	@${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
@@ -82,12 +84,11 @@ post-patch: make-sendmail-siteconfig
 .if defined(USE_SOCKETMAP) && ${USE_SOCKETMAP} == YES
 	@${CAT} ${FILESDIR}/site.config.m4-socketmap >>${SITECONFIG}
 	USE_PERL5=	YES
-	REPLACE_PERL=	contrib/socketmapClient.pl contrib/socketmapServer.pl
-	PLIST_SRC=	${WRKDIR}/.PLIST_SRC PLIST.socketmap
 .endif
 
 do-build:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
+	@${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 post-build:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
