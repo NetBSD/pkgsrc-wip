@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2005/03/06 12:11:59 adrian_p Exp $
+
+There is a lot of work done by the standard NetBSD rc.d scripts
+to setup daemons in chroot environments.  Due to the way that
+syslog-ng deals with chroot programs this work is effectively by-passed.
+If you have any chroot daemons please ensure that syslog-ng is setup
+to work correctly with them.
+
+See the manual for more details.
+
+===========================================================================
