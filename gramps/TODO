@@ -32,11 +32,6 @@ then you are probably better off with ZODB.
 -=-=-=
 preferences -- you have to click on the arrow itself not just the name
 
--=-=-=-
-maybe should delete in PLIST:
-@dirrm share/gnome/apps/Applications
-@dirrm share/gnome/apps
-
 -=-=-=
 
 part of patch-aa is for this.  so maybe not needed if msgconv worked right.
