@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/08/07 21:18:37 adrian_p Exp $
+# $NetBSD: Makefile,v 1.17 2004/08/18 13:36:34 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -20,16 +20,11 @@ PLIST_SUBST+=  CAT5=5
 PLIST_SUBST+=  CAT8=8
 .endif
 
-SUBST_CLASSES=		paths perl
+SUBST_CLASSES=		paths
 SUBST_STAGE.paths=	pre-build
 SUBST_FILES.paths=	${WRKDIR}/mailer.conf
 SUBST_SED.paths=	-e "s|@@PREFIX@@|${PREFIX}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
-
-SUBST_STAGE.perl=	pre-build
-SUBST_FILES.perl=	contrib/socketmapClient.pl contrib/socketmapServer.pl
-SUBST_SED.perl=		-e "s|/usr/bin/perl|${PREFIX}/bin/perl|g"
-SUBST_MESSAGE.perl=	Fixing perl path.
 
 .if ${OPSYS} == "SunOS"
 USE_DB2?=	YES
@@ -61,11 +56,6 @@ USE_TCPWRAPPERS?=	YES
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .endif
 
-USE_SOCKETMAP?=	YES
-.if ${USE_SOCKETMAP} == YES
-USE_PERL5= YES
-.endif
-
 post-patch: make-sendmail-siteconfig
 .if ${USE_TCPWRAPPERS} == YES
 	@${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
@@ -88,6 +78,9 @@ post-patch: make-sendmail-siteconfig
 .endif
 .if defined(USE_SOCKETMAP) && ${USE_SOCKETMAP} == YES
 	@${CAT} ${FILESDIR}/site.config.m4-socketmap >>${SITECONFIG}
+USE_PERL5=	YES
+REPLACE_PERL=	contrib/socketmapClient.pl contrib/socketmapServer.pl
+PLIST_SRC+=	${PKGDIR}/PLIST.socketmap
 .endif
 
 do-build:
@@ -95,7 +88,7 @@ do-build:
 	@${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 post-build:
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	@${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 	@${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
 
 .if ${USE_DB2} == YES
@@ -129,10 +122,12 @@ post-install:
 		${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
 		${PREFIX}/lib
 
+.if defined(USE_SOCKETMAP) && ${USE_SOCKETMAP} == YES
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmapClient.pl \
 		${PREFIX}/share/examples/sendmail
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmapServer.pl \
 		${PREFIX}/share/examples/sendmail
+.endif
 
 	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/sendmail
 	${INSTALL_DATA} ${WRKSRC}/cf/README ${PREFIX}/share/doc/sendmail
