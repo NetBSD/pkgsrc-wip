@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/05/10 07:45:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/10 08:23:45 jmmv Exp $
 #
 
 DISTNAME=	dancer-ircd-1.0.31+maint8-fn6
@@ -26,12 +26,10 @@ OWN_DIRS+=	/var/log/dancer-ircd
 RCD_SCRIPTS=		dancer-ircd
 PKG_SYSCONFSUBDIR=	dancer-ircd
 
-CONF_FILES=	${EGDIR}/ircd.conf.default \
-		${PKG_SYSCONFDIR}/ircd.conf
+CONF_FILES=	${EGDIR}/ircd.conf.default ${PKG_SYSCONFDIR}/ircd.conf
 
 post-extract:
 	${MV} ${WRKSRC}/doc/example.conf ${WRKSRC}/doc/example.conf.in
-	#${RM} ${WRKSRC}/doc/example.conf
 
 pre-configure:
 	${SED} -e "s|@SPATH@|${PREFIX}/bin/dancer-ircd|g" \
@@ -51,24 +49,15 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}/hybrid
 	(cd ${WRKSRC}/doc && \
-	for f in RE* *.txt; do \
-		${INSTALL_DATA} $$f ${DOCDIR}; done )
+	    for f in RE* *.txt; do ${INSTALL_DATA} $$f ${DOCDIR}; done )
 	( cd ${WRKSRC}/doc/hybrid/ && \
-	for f in *; do \
-		${INSTALL_DATA} $$f ${DOCDIR}/hybrid; done )
-	${INSTALL_PROGRAM} ${WRKSRC}/src/dancer-ircd \
-		${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkconf \
-		${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/install_ircd \
-		${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/viconf \
-		${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/mkpasswd \
-		${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/doc/ircd.8 \
-		${PREFIX}/man/man8
-	${INSTALL_DATA} ${WRKSRC}/doc/example.conf \
-		${PKG_SYSCONFDIR}/ircd.conf
+	    for f in *; do ${INSTALL_DATA} $$f ${DOCDIR}/hybrid; done )
+	${INSTALL_PROGRAM} ${WRKSRC}/src/dancer-ircd ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkconf ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/install_ircd ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/viconf ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/mkpasswd ${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/doc/ircd.8 ${PREFIX}/man/man8
+	${INSTALL_DATA} ${WRKSRC}/doc/example.conf ${PKG_SYSCONFDIR}/ircd.conf
 
 .include "../../mk/bsd.pkg.mk"
