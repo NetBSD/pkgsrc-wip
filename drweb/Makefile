@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/06 15:19:35 bubuchka Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/06 16:50:23 bubuchka Exp $
 #
 # Note: We'll not use drweb's own configuration / building / installation
 # facilities so as its all are very ugly.
@@ -63,7 +63,7 @@ SUPPORT_FILES=	${EGDIR}/drweb.key ${PKG_SYSCONFDIR}/drweb.key		\
 		${EGDIR}/drwebd.key ${PKG_SYSCONFDIR}/drwebd.key	\
 		${EGDIR}/drweb32.dll ${DRW_BASESDIR}/drweb32.dll	\
 		${EGDIR}/drwebase.vdb ${DRW_BASESDIR}/drwebase.vdb	\
-		${EGDIR}/drw43101.vdb ${DRW_BASESDIR}/drw43001.vdb
+		${EGDIR}/drw43101.vdb ${DRW_BASESDIR}/drw43101.vdb
 
 RCD_SCRIPTS=		drwebd
 RCD_SCRIPT_SRC.drwebd=	${FILESDIR}/drwebd-rcd.src
