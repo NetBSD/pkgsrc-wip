@@ -109,7 +109,7 @@ package body System.OS_Interface is
       end if;
 
       return struct_timeval'(tv_sec => S,
-        tv_usec => time_t (Long_Long_Integer (F * 10#1#E6)));
+        tv_usec => suseconds_t (Long_Long_Integer (F * 10#1#E6)));
    end To_Timeval;
 
 end System.OS_Interface;
