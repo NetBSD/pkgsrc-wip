@@ -1,3 +1,5 @@
 New version out. This one will need more work, since now
 it depends on lua-devel, which I have to package as
 well.
+
+Update to 20030814.
