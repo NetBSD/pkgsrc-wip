@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.244 2003/06/14 01:33:31 mjasm Exp $
-# $NetBSD: Makefile,v 1.244 2003/06/14 01:33:31 mjasm Exp $
+# $Id: Makefile,v 1.245 2003/06/15 01:12:28 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.245 2003/06/15 01:12:28 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -138,6 +138,7 @@ SUBDIR+=	netbeans-ide
 SUBDIR+=	netkit-base
 SUBDIR+=	newsx
 SUBDIR+=	nvtv
+SUBDIR+=	opax
 SUBDIR+=	p5-CDDB
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Compress-Bzip2
