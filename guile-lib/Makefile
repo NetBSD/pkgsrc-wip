@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/19 16:54:01 lexort Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/20 14:40:10 lexort Exp $
 
 DISTNAME=	guile-lib-0.1.2
 CATEGORIES=	devel
@@ -7,6 +7,10 @@ MASTER_SITES=	http://download.gna.org/guile-lib/
 MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://home.gna.org/guile-lib/
 COMMENT=	Library functions for Guile, implemented in Scheme
+
+# Because the distribution does not specify a version, accept anything
+# from 1.6 onwards.
+DEPENDS+=	guile>=1.6:../../lang/guile
 
 HAS_CONFIGURE=	yes
 #CONFIGURE_SCRIPT=	../src/configure
@@ -32,5 +36,4 @@ do-build:
 do-install:
 	cd ${WRKSRC}/build && ${MAKE_PROGRAM} install
 
-.include "../../lang/guile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
