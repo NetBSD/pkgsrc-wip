@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1102 2004/03/21 02:38:37 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1102 2004/03/21 02:38:37 xtraeme Exp $
+# $Id: Makefile,v 1.1103 2004/03/21 19:11:00 mpasternak Exp $
+# $NetBSD: Makefile,v 1.1103 2004/03/21 19:11:00 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -45,6 +45,7 @@ SUBDIR+=	audacity12
 SUBDIR+=	autoproject
 SUBDIR+=	avida2
 SUBDIR+=	axe
+SUBDIR+=	backplane
 SUBDIR+=	bacula
 SUBDIR+=	bacula-docs
 SUBDIR+=	barnyard
@@ -117,6 +118,7 @@ SUBDIR+=	drweb-dc
 SUBDIR+=	drweb-smf
 SUBDIR+=	dspam
 SUBDIR+=	dumb
+SUBDIR+=	dxmake
 SUBDIR+=	dzt
 SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
