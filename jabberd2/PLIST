@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/27 13:20:09 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/10/08 00:59:51 xtraeme Exp $
 etc/rc.d/jabberd
 bin/c2s
 bin/jabberd
+bin/pipe-auth.pl
 bin/resolver
 bin/router
 bin/s2s
@@ -13,6 +14,8 @@ man/man8/router.8
 man/man8/s2s.8
 man/man8/sm.8
 share/examples/jabberd/c2s.xml
+share/examples/jabberd/db-setup.mysql
+share/examples/jabberd/db-setup.pgsql
 share/examples/jabberd/jabberd.cfg
 share/examples/jabberd/resolver.xml
 share/examples/jabberd/roster.xml

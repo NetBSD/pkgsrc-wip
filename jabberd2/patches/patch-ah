@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.3 2003/09/27 13:20:09 xtraeme Exp $
+$NetBSD: patch-ah,v 1.4 2003/10/08 00:59:51 xtraeme Exp $
 
---- etc/s2s.xml.in.orig	2003-09-27 14:54:13.000000000 +0200
-+++ etc/s2s.xml.in	2003-09-27 14:54:59.000000000 +0200
+--- etc/s2s.xml.in.orig	2003-10-08 02:31:16.000000000 +0200
++++ etc/s2s.xml.in	2003-10-08 02:31:56.000000000 +0200
 @@ -6,7 +6,7 @@
    <!-- The process ID file. comment this out if you don't need to know
         to know the process ID from outside the process (eg for control
@@ -18,14 +18,14 @@ $NetBSD: patch-ah,v 1.3 2003/09/27 13:20:09 xtraeme Exp $
 -    <pemfile>@sysconfdir@/server.pem</pemfile>
 +    <pemfile>@@SSLCERTS@@/server.pem</pemfile>
      -->
-   </router>
  
-@@ -44,7 +44,7 @@
+     <!-- Router connection retry -->
+@@ -62,7 +62,7 @@
  
      <!-- if logging to file, this is the filename of the logfile -->
      <!--
 -    <file>@localstatedir@/jabberd/log/s2s.log</file>
-+    <file>@@LOGDIR@@/s2s.log</file>
++    <file>@@LOGDIR@/s2s.log</file>
      -->
    </log>
  

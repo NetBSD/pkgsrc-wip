@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.3 2003/09/27 09:34:23 xtraeme Exp $
+$NetBSD: patch-aa,v 1.4 2003/10/08 00:59:51 xtraeme Exp $
 
---- configure.orig	2003-09-27 11:05:58.000000000 +0200
-+++ configure	2003-09-27 11:09:13.000000000 +0200
-@@ -22443,7 +22443,7 @@
+--- configure.orig	2003-10-08 02:22:43.000000000 +0200
++++ configure	2003-10-08 02:26:01.000000000 +0200
+@@ -22466,7 +22466,7 @@
  fi;
  
      if test "$places" = "search"; then
 -      places="std /usr/local/include/db4:/usr/local/lib /usr/local
-+      places="std ${PREFIX}/include/db4:/${PREFIX}/lib /usr/local
-               /usr/local/BerkeleyDB.4.1 /usr/include/db4:/usr/lib"
++      places="std ${PREFIX}/include/db4:${PREFIX}/lib /usr/local
+               /usr/local/BerkeleyDB.4.1 /usr/include/db4:/usr/lib
+               /sw/include/db4:/sw/lib"
      fi
-     # Now `places' is guaranteed to be a list of place specs we should
-@@ -22515,7 +22515,7 @@
+@@ -22539,7 +22539,7 @@
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -20,25 +20,25 @@ $NetBSD: patch-aa,v 1.3 2003/09/27 09:34:23 xtraeme Exp $
  #include <stdio.h>
  main ()
  {
-@@ -22863,7 +22863,7 @@
+@@ -22887,7 +22887,7 @@
  fi;
  
    if test "$places" = "search"; then
 -    places="std /usr/include/mysql:/usr/lib /usr/local
-+    places="std ${PREFIX}/include/mysql:${PREFIX}/lib /usr/local
++    places="std ${PREFIX}/mysql:${PREFIX}/lib /usr/local
              /usr/include/mysql:/usr/lib/mysql
-             /usr/local/include/mysql:/usr/local/lib"
-   fi
-@@ -23035,7 +23035,7 @@
+             /usr/local/include/mysql:/usr/local/lib
+             /sw/include/mysql:/sw/lib"
+@@ -23060,7 +23060,7 @@
  fi;
  
    if test "$places" = "search"; then
 -    places="std /usr/include/postgresql:/usr/lib /usr/local
-+    places="std ${PREFIX}/include/postgresql:${PREFIX}/lib /usr/local
++    places="std ${PREFIX}/postgresql:${PREFIX}/lib /usr/local
+             /sw/include/postgresql:/sw/lib
              /usr/local/include/postgresql:/usr/local/lib"
    fi
-   # Now `places' is guaranteed to be a list of place specs we should
-@@ -23433,7 +23433,7 @@
+@@ -23481,7 +23481,7 @@
  
  
  

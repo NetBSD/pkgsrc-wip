@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.24 2003/09/29 07:22:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2003/10/08 00:59:51 xtraeme Exp $
 #
 
-DISTNAME=		jabberd-2.0b1
-PKGNAME=		${DISTNAME:S/d-2.0b1/d2-2.0beta1/}
+DISTNAME=		jabberd-2.0b2
+PKGNAME=		${DISTNAME:S/d-2.0b1/d2-2.0beta2/}
 CATEGORIES=		chat
 MASTER_SITES=		http://www.jabberstudio.org/files/jabberd2/
 
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://jabberd.jabberstudio.org/2/
-COMMENT=		Instant messaging server ( version 2 )
+COMMENT=		Instant messaging server (version 2)
 
 CONFLICTS=		jabberd-[0-9]*:../../wip/jabberd
 
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-debug
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
+
+REPLACE_PERL=		tools/pipe-auth.pl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -104,11 +106,15 @@ FILES_SUBST+=		JABBERD_USER=${JABBERD_USER}
 FILES_SUBST+=		JABBERD_GROUP=${JABBERD_GROUP}
 PKG_GROUPS=             ${JABBERD_GROUP}
 PKG_USERS=              ${JABBERD_USER}:${JABBERD_GROUP}::Jabberd\\ user
+
+BINDIR=			${PREFIX}/bin
 EGDIR=			${PREFIX}/share/examples/jabberd
 SUPPORT_FILES=          ${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
 
 FILES=			c2s.xml resolver.xml router.xml \
 			router-users.xml s2s.xml sm.xml
+DBFILES=		db-setup.mysql db-setup.pgsql
+
 .for f in ${FILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
@@ -154,13 +160,18 @@ pre-configure:
 
 post-install:
 
-	@${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
 	@${MV} ${WRKSRC}/etc/templates/roster.xml.dist.in \
 		${WRKSRC}/etc/roster.xml
-	@${INSTALL_DATA} ${WRKSRC}/etc/roster.xml ${EGDIR}
-.for f in jabberd.cfg ${FILES}
-	@${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/pipe-auth.pl ${BINDIR}	
+.for f in ${DBFILES}
+	${INSTALL_DATA} ${WRKSRC}/tools/${f} ${EGDIR}
 .endfor
+.undef f
+.for f in jabberd.cfg roster.xml ${FILES}
+	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
+.endfor
+.undef f
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"

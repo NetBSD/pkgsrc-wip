@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.2 2003/08/03 03:31:27 xtraeme Exp $
+$NetBSD: patch-ad,v 1.3 2003/10/08 00:59:51 xtraeme Exp $
 
---- c2s/authreg_db.c.orig	2003-08-03 04:59:06.000000000 +0200
-+++ c2s/authreg_db.c	2003-08-03 04:59:15.000000000 +0200
+--- c2s/authreg_db.c.orig	2003-10-08 02:27:17.000000000 +0200
++++ c2s/authreg_db.c	2003-10-08 02:27:26.000000000 +0200
 @@ -34,7 +34,7 @@
  
  #ifdef WANT_AUTHREG_DB
@@ -9,5 +9,5 @@ $NetBSD: patch-ad,v 1.2 2003/08/03 03:31:27 xtraeme Exp $
 -#include <db.h>
 +#include <db4/db.h>
  
- /* internal structure, holds auth credentials for one user */
+ /** internal structure, holds auth credentials for one user */
  typedef struct creds_st
