@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/22 23:17:15 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/23 02:37:20 rillig Exp $
 #
 
 DISTNAME=	ish-v${VERSION}
@@ -16,22 +16,7 @@ VERSION=	0.2
 USE_GMAKE=	yes
 USE_BUILDLINK2=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux"
-ALL_TARGET=linux
-.elsif ${OPSYS} == "Solaris"
-ALL_TARGET=solaris
-.else
-ALL_TARGET=bsd
-.endif
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ish  ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/ishd ${PREFIX}/sbin
+MAKE_ENV+=	LIBS="${LIBS}"
+LIBS.SunOS+=	-lsocket
 
 .include "../../mk/bsd.pkg.mk"
-
-.if ${OPSYS} == "SunOS"
-ALL_TARGET=	solaris
-.endif
