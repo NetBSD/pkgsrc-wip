@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/13 15:03:03 rasputnik Exp $
-${RUBY_SITELIBDIR}/redcloth.rb
-${RUBY_DOCDIR}/redcloth/README
-@dirrm ${RUBY_DOCDIR}/redcloth

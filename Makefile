@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1699 2005/03/23 11:18:57 obache Exp $
-# $NetBSD: Makefile,v 1.1699 2005/03/23 11:18:57 obache Exp $
+# $Id: Makefile,v 1.1700 2005/03/26 16:22:27 minskim Exp $
+# $NetBSD: Makefile,v 1.1700 2005/03/26 16:22:27 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -830,7 +830,6 @@ SUBDIR+=	ruby-ming
 SUBDIR+=	ruby-misen
 SUBDIR+=	ruby-ncurses
 SUBDIR+=	ruby-raggle
-SUBDIR+=	ruby-redcloth
 SUBDIR+=	ruby-syck
 SUBDIR+=	ruby-xmlscan
 SUBDIR+=	sara
