@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/09/23 05:59:30 jlamwww Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/08 22:33:56 thomasklausner Exp $
 #
 
-DISTNAME=	openglut-0.6.2
-PKGNAME=	OpenGLUT-0.6.2
+DISTNAME=	openglut-0.6.3
+PKGNAME=	OpenGLUT-0.6.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openglut/}
 EXTRACT_SUFX=	.tar.bz2

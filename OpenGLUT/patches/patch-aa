@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.3 2004/10/08 22:33:56 thomasklausner Exp $
+
+--- doc/dox.awk.orig	2004-09-11 05:11:07.000000000 +0200
++++ doc/dox.awk
+@@ -405,8 +405,8 @@ function just_symbol(s) {
+         print ".Sh SYNOPSIS"                                    >>file;
+         print ".In openglut.h"                                  >>file;
+         printf( ".Ft" )                                         >>file;
+-        for( i = 0;
+-            (i < func_words) && ("OGAPIENTRY" != just_symbol(func_word[i]));
++        for( i = 0; \
++            (i < func_words) && ("OGAPIENTRY" != just_symbol(func_word[i])); \
+             ++i )
+             printf( " %s", func_word [i] )                      >>file;
+         print ""                                                >>file;
