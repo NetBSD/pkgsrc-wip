@@ -1,0 +1,9 @@
+n0t should be run on network routers/servers. It is useful to get info
+about machines that are connected to you. You can use n0t to:
+  - watch traffic on your server (+ verbose output & packet dump),
+  - identify remote OS (also ACK + ...),
+  - sniff packets in your network,
+  - detect SYN, XMAS, NULL scan (including NMap),
+  - detect NAT (Network Address Translation),
+  - print distance to the remote machine (hops),
+  - much more.

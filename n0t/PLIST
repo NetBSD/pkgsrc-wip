@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/08 14:47:40 poppnk Exp $
+sbin/n0t
+share/doc/n0t/LICENSE
+share/doc/n0t/README
+share/doc/n0t/README-polish
+share/man/man1/n0t.1
+@dirrm share/man/man1
+@dirrm share/doc/n0t
