@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/02 15:00:41 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/02 23:57:18 bencollver Exp $
 #
 
 DISTNAME=		swami-0.9.2
@@ -15,6 +15,8 @@ USE_BUILDLINK3=		YES
 USE_LOCALEDIR=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
