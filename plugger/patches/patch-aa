@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/11 09:38:02 airhead Exp $
+--- Makefile.orig	2003-06-11 11:15:34.000000000 +0200
++++ Makefile	2003-06-11 11:15:14.000000000 +0200
+@@ -1,8 +1,8 @@
+ # Where is your Plugin Source Development Kit from Netscape?
+-SDK=/home/hubbe/src/PluginSDK30b5
++SDK=../PluginSDK30b5
+ 
+ # Where is your Xwindows located?
+-X11=/usr/X11/
++X11=${X11BASE}
+ 
+ #
+ # For building rpms
+@@ -10,7 +10,7 @@
+ 
+ # You may want to change this to /usr/ on
+ # some installations.
+-prefix=/usr/local
++prefix=${PREFIX}
+ 
+ #
+ #
+@@ -64,6 +64,9 @@
+ freebsd-elf:
+ 	make all CC=gcc XCFLAGS=-fpic LD=gcc XLDFLAGS=-shared X11=/usr/X11R6/
+ 
++netbsd:
++	make all XLDFLAGS=-shared XLIBS="-R${X11}/lib -L${X11}/lib -lX11"
++
+ auto:
+ 	@case "x`uname`" in \
+ 	  xLinux) make linux ;; \
+@@ -72,6 +75,7 @@
+ 	  xOSF1) make du ;;\
+ 	  xIRIX) make irix ;;\
+ 	  xAIX) make aix ;;\
++	  xNetBSD) make netbsd ;;\
+ 	esac
+ 
+ # For other systems, look at the example makefiles in the
