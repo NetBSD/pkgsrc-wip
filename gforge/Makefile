@@ -1,21 +1,22 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/27 22:53:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/13 23:37:50 blef Exp $
 
 DISTNAME=	gforge-3.1
 CATEGORIES=	www
 MASTER_SITES=	http://gforge.org/download.php/44/
 
 MAINTAINER=	david@netbsd-fr.org
-COMMENT=	Open Source collaborative software development tool
 HOMEPAGE=	http://www.gforge.org/
-
-USE_PERL5=	YES
-NO_BUILD=	YES
+COMMENT=	Open Source collaborative software development tool
+COMMENT=	Open Source collaborative software development tool
 
 DEPENDS+=	wget>=1.9:../../net/wget
 DEPENDS+=	ap-php>=4.3:../../www/ap-php4
-DEPENDS+=	php-jpgraph>=1.12:../../wip/php-jpgraph
+DEPENDS+=	php-jpgraph>=1.12:../../graphics/php-jpgraph
 DEPENDS+=	php-pgsql>=4.3:../../databases/php4-pgsql
-USE_BUILDLINK2=	YES
+DEPENDS+=	postgresql-lib>=7.3.1:../../databases/postgresql-lib
+
+USE_PERL5=	YES
+NO_BUILD=	YES
 
 ETCDIR=		${PKG_SYSCONFDIR}/gforge
 DATADIR=	${PREFIX}/share/gforge
@@ -97,5 +98,4 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${CP} -R ${WRKSRC}/docs/* ${DOCDIR}
 
-.include "../../databases/postgresql-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
