@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/05/20 19:44:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 17:24:39 airhead Exp $
 #
 
 DISTNAME=	mutella-0.4.3
 CATEGORIES=	net www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mutella/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	Peter.Bex@student.kun.nl
 HOMEPAGE=	http://mutella.sourceforge.net
 COMMENT=	Console mode Gnutella client with optional HTTP interface
 
