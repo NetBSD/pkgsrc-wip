@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.5 2003/10/08 00:59:51 xtraeme Exp $
+$NetBSD: patch-af,v 1.6 2004/02/12 06:14:59 xtraeme Exp $
 
 --- etc/resolver.xml.in.orig	2003-10-08 02:27:59.000000000 +0200
 +++ etc/resolver.xml.in	2003-10-08 02:28:49.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-af,v 1.5 2003/10/08 00:59:51 xtraeme Exp $
         to know the process ID from outside the process (eg for control
         scripts) -->
 -  <pidfile>@localstatedir@/jabberd/pid/resolver.pid</pidfile>
-+  <pidfile>@@PIDDIR@@/resolver.pid</pidfile>
++  <pidfile>@PIDDIR@/resolver.pid</pidfile>
  
    <!-- Router connection configuration -->
    <router>
@@ -16,7 +16,7 @@ $NetBSD: patch-af,v 1.5 2003/10/08 00:59:51 xtraeme Exp $
           made to establish an encrypted channel with the router. -->
      <!--
 -    <pemfile>@sysconfdir@/server.pem</pemfile>
-+    <pemfile>@@SSLCERTS@@/server.pem</pemfile>
++    <pemfile>@SSLCERTS@/server.pem</pemfile>
      -->
  
      <!-- Router connection retry -->
@@ -25,7 +25,7 @@ $NetBSD: patch-af,v 1.5 2003/10/08 00:59:51 xtraeme Exp $
      <!-- If logging to file, this is the filename of the logfile -->
      <!--
 -    <file>@localstatedir@/jabberd/log/resolver.log</file>
-+    <file>@@LOGDIR@@/resolver.log</file>
++    <file>@LOGDIR@/resolver.log</file>
      -->
    </log>
  

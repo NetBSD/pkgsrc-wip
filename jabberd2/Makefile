@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2003/12/30 23:49:31 cjep Exp $
+# $NetBSD: Makefile,v 1.30 2004/02/12 06:14:58 xtraeme Exp $
 #
 
-DISTNAME=		jabberd-2.0s1
+DISTNAME=		jabberd-2.0s2
 CATEGORIES=		chat
 MASTER_SITES=		http://www.jabberstudio.org/files/jabberd2/
 
@@ -9,27 +9,31 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://jabberd.jabberstudio.org/2/
 COMMENT=		Instant messaging server (version 2)
 
-CONFLICTS=		jabberd-[0-9]*:../../wip/jabberd
+CONFLICTS=		jabberd-[0-9]*:../../chat/jabberd
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
-USE_PERL5=		run
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 
-BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6b
+BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.6b
+
+SUBST_CLASSES=		foo
+SUBST_STAGE.foo=	post-patch
+SUBST_FILES.foo=	configure
+SUBST_MESSAGE.foo=	"Fixing configure script"
+SUBST_SED.foo=		-e "s,/usr/local,${PREFIX},g"			\
+			-e "s,$sysconfdir/jabberd,$sysconfdir,g"
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--enable-debug
-
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 REPLACE_PERL=		tools/pipe-auth.pl
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	JABBERD_USER JABBERD_GROUP JABBERD_STATIC \
-		JABBERD_AUTH_METHOD JABBERD_STORAGE_METHOD \
+BUILD_DEFS+=	JABBERD_USER JABBERD_STATIC				\
+		JABBERD_AUTH_METHOD JABBERD_STORAGE_METHOD		\
 		JABBERD_LOGDIR JABBERD_DBDIR JABBERD_PIDDIR
 
 # This specify the actual method which will be used for authenticate
@@ -48,23 +52,23 @@ JABBERD_AUTH_METHOD?=		db
 .if !empty(JABBERD_AUTH_METHOD:Mdb)
 CONFIGURE_ARGS+=	--enable-authreg=db
 CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_PREFIX.db4}/include/db4
-.include "../../databases/db4/buildlink2.mk"
+.include "../../databases/db4/buildlink3.mk"
 .elif !empty(JABBERD_AUTH_METHOD:Mopenldap)
 CONFIGURE_ARGS+=	--enable-authreg=ldap
 CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap}
-.include "../../databases/openldap/buildlink2.mk"
+.include "../../databases/openldap/buildlink3.mk"
 .elif !empty(JABBERD_AUTH_METHOD:Mpgsql)
 CONFIGURE_ARGS+=	--enable-authreg=pgsql
 CONFIGURE_ARGS+=	--with-pgsql=${BUILDLINK_PREFIX.postgresql-lib}
-.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../../databases/postgresql-lib/buildlink3.mk"
 .elif !empty(JABBERD_AUTH_METHOD:Mmysql)
 CONFIGURE_ARGS+=	--enable-authreg=mysql
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-server}
-.include "../../databases/mysql-client/buildlink2.mk"
+.include "../../databases/mysql-client/buildlink3.mk"
 .elif !empty(JABBERD_AUTH_METHOD:Mpam)
 CONFIGURE_ARGS+=	--enable-authreg=pam
 CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.PAM}
-.include "../../security/PAM/buildlink2.mk"
+.include "../../security/PAM/buildlink3.mk"
 .endif
 
 # This specify the actual method which will be used to store the accounts
@@ -81,24 +85,23 @@ JABBERD_STORAGE_METHOD?=	db
 .if !empty(JABBERD_STORAGE_METHOD:Mdb)
 CONFIGURE_ARGS+=	--enable-storage=db
 CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_PREFIX.db4}/include/db4
-.include "../../databases/db4/buildlink2.mk"
+.include "../../databases/db4/buildlink3.mk"
 .elif !empty(JABBERD_STORAGE_METHOD:Mmysql)
 CONFIGURE_ARGS+=	--enable-storage=mysql
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-server}
-.include "../../databases/mysql-client/buildlink2.mk"
+.include "../../databases/mysql-client/buildlink3.mk"
 .elif !empty(JABBERD_STORAGE_METHOD:Mpgsql)
 CONFIGURE_ARGS+=	--enable-storage=pgsql
 CONFIGURE_ARGS+=	--with-pgsql=${BUILDLINK_PREFIX.postgresql-lib}
-.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../../databases/postgresql-lib/buildlink3.mk"
 .endif
 
 .if defined(JABBERD_STATIC) && !empty(JABBERD_STATIC:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-all-static
 .endif
 
-RCD_SCRIPTS=		jabberd
 PKG_SYSCONFSUBDIR=	jabberd
-
+RCD_SCRIPTS=		jabberd
 JABBERD_USER?=		jabberd
 JABBERD_GROUP?=		jabberd
 FILES_SUBST+=		JABBERD_USER=${JABBERD_USER}
@@ -110,7 +113,7 @@ BINDIR=			${PREFIX}/bin
 EGDIR=			${PREFIX}/share/examples/jabberd
 SUPPORT_FILES=          ${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
 
-FILES=			c2s.xml resolver.xml router.xml \
+FILES=			c2s.xml resolver.xml router.xml			\
 			router-users.xml s2s.xml sm.xml
 DBFILES=		db-setup.mysql db-setup.pgsql
 
@@ -133,35 +136,32 @@ OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 750
 .undef f
 
 post-extract:
-
 .for f in jabberd.cfg ${FILES}
 	@${MV} ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
 .endfor
 .undef f
 
 pre-configure:
-
 .for f in ${FILES}
-	@${SED}  \
-		-e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
-		-e "s|@@PIDDIR@@|${JABBERD_PIDDIR}|g" \
-		-e "s|@@LOGDIR@@|${JABBERD_LOGDIR}|g" \
-		-e "s|@@SSLCERTS@@|${SSLCERTS}|g" \
-		-e "s|@@BINDIR@@|${PREFIX}/bin|g" \
-		-e "s|@@DBDIR@@|${JABBERD_DBDIR}|g" \
+	@${SED}								\
+		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"		\
+		-e "s|@PIDDIR@|${JABBERD_PIDDIR}|g"			\
+		-e "s|@LOGDIR@|${JABBERD_LOGDIR}|g"			\
+		-e "s|@SSLCERTS@|${SSLCERTS}|g"				\
+		-e "s|@BINDIR@|${PREFIX}/bin|g"				\
+		-e "s|@DBDIR@|${JABBERD_DBDIR}|g"			\
 		${WRKSRC}/etc/${f}.in > ${WRKSRC}/etc/${f}
 .endfor
 .undef f
-	@${SED}  \
-		-e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
-		-e "s|@@BINDIR@@|${PREFIX}/bin|g " \
+	@${SED}								\
+		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"		\
+		-e "s|@BINDIR@|${PREFIX}/bin|g "			\
 		${WRKSRC}/etc/jabberd.cfg.in > ${WRKSRC}/etc/jabberd.cfg
 
 post-install:
-
 	${INSTALL_DATA_DIR} ${EGDIR}
-	@${MV} ${WRKSRC}/etc/templates/roster.xml.dist.in \
-		${WRKSRC}/etc/roster.xml
+	${INSTALL_DATA} ${WRKSRC}/etc/templates/roster.xml.dist.in	\
+	    ${EGDIR}/roxter.xml
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/pipe-auth.pl ${BINDIR}
 .for f in ${DBFILES}
 	${INSTALL_DATA} ${WRKSRC}/tools/${f} ${EGDIR}
@@ -172,7 +172,6 @@ post-install:
 .endfor
 .undef f
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

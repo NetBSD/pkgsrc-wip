@@ -1,13 +1,49 @@
-$NetBSD: patch-ac,v 1.3 2003/10/08 00:59:51 xtraeme Exp $
+$NetBSD: patch-ac,v 1.4 2004/02/12 06:14:59 xtraeme Exp $
 
---- sm/storage_db.c.orig	2003-10-08 02:26:37.000000000 +0200
-+++ sm/storage_db.c	2003-10-08 02:26:48.000000000 +0200
-@@ -34,7 +34,7 @@
+--- etc/sm.xml.in.orig	2003-10-08 02:32:20.000000000 +0200
++++ etc/sm.xml.in	2003-10-08 02:33:37.000000000 +0200
+@@ -9,7 +9,7 @@
+   <!-- The process ID file. comment this out if you don't need to know
+        to know the process ID from outside the process (eg for control
+        scripts) -->
+-  <pidfile>@localstatedir@/jabberd/pid/sm.pid</pidfile>
++  <pidfile>@PIDDIR@/sm.pid</pidfile>
  
- #ifdef WANT_STORAGE_DB
+   <!-- Router connection configuration -->
+   <router>
+@@ -26,7 +26,7 @@
+          commented out, or the file can't be read, no attempt will be
+          made to establish an encrypted channel with the router. -->
+     <!--
+-    <pemfile>@sysconfdir@/server.pem</pemfile>
++    <pemfile>@SSLCERTS@/server.pem</pemfile>
+     -->
  
--#include <db.h>
-+#include <db4/db.h>
+     <!-- Router connection retry -->
+@@ -55,7 +55,7 @@
  
- /** internal structure, holds our data */
- typedef struct drvdata_st {
+     <!-- If logging to file, this is the filename of the logfile -->
+     <!--
+-    <file>@localstatedir@/jabberd/log/sm.log</file>
++    <file>@LOGDIR@/sm.log</file>
+     -->
+   </log>
+ 
+@@ -116,7 +116,7 @@
+     <!-- Berkeley DB driver configuration -->
+     <db>
+       <!-- Directory to store database files under -->
+-      <path>@localstatedir@/jabberd/db</path>
++      <path>@DBDIR@</path>
+ 
+       <!-- Synchronize the database to disk after each write. If you
+            disable this, database accesses may be faster, but data may
+@@ -371,7 +371,7 @@
+          stored in the users data store when they are created. -->
+     <template>
+       <!--
+-      <roster>@sysconfdir@/templates/roster.xml</roster>
++      <roster>@PKG_SYSCONFDIR@/roster.xml</roster>
+       -->
+     </template>
+   </user>

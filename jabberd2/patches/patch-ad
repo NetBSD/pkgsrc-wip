@@ -1,13 +1,31 @@
-$NetBSD: patch-ad,v 1.3 2003/10/08 00:59:51 xtraeme Exp $
+$NetBSD: patch-ad,v 1.4 2004/02/12 06:14:59 xtraeme Exp $
 
---- c2s/authreg_db.c.orig	2003-10-08 02:27:17.000000000 +0200
-+++ c2s/authreg_db.c	2003-10-08 02:27:26.000000000 +0200
-@@ -34,7 +34,7 @@
+--- etc/s2s.xml.in.orig	2003-10-08 02:31:16.000000000 +0200
++++ etc/s2s.xml.in	2003-10-08 02:31:56.000000000 +0200
+@@ -6,7 +6,7 @@
+   <!-- The process ID file. comment this out if you don't need to know
+        to know the process ID from outside the process (eg for control
+        scripts) -->
+-  <pidfile>@localstatedir@/jabberd/pid/s2s.pid</pidfile>
++  <pidfile>@PIDDIR@/s2s.pid</pidfile>
  
- #ifdef WANT_AUTHREG_DB
+   <!-- Router connection configuration -->
+   <router>
+@@ -33,7 +33,7 @@
+          commented out, or the file can't be read, no attempt will be
+          made to establish an encrypted channel with the router. -->
+     <!--
+-    <pemfile>@sysconfdir@/server.pem</pemfile>
++    <pemfile>@SSLCERTS@/server.pem</pemfile>
+     -->
  
--#include <db.h>
-+#include <db4/db.h>
+     <!-- Router connection retry -->
+@@ -62,7 +62,7 @@
  
- /** internal structure, holds auth credentials for one user */
- typedef struct creds_st
+     <!-- if logging to file, this is the filename of the logfile -->
+     <!--
+-    <file>@localstatedir@/jabberd/log/s2s.log</file>
++    <file>@LOGDIR@/s2s.log</file>
+     -->
+   </log>
+ 
