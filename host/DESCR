@@ -16,7 +16,7 @@ that is included in the BIND-4 and BIND-8 distributions, including:
  - Implement timeout handling during connect and read.
  - Write resource record output to optional log file.
  - Special MB tracing by recursively expanding MR and MG records.
- - Special modes to check SOA records at each nameserver for a zone.
+ - Special modes to check SOA records at each name server for a zone.
  - Special mode to check reverse mappings of host addresses.
  - Configurable default options in HOST_DEFAULTS environment variable.
  - Basic experimental NSAP support as defined in RFC 1637.
