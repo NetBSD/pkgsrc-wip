@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1417 2004/08/08 17:58:32 kristerw Exp $
-# $NetBSD: Makefile,v 1.1417 2004/08/08 17:58:32 kristerw Exp $
+# $Id: Makefile,v 1.1418 2004/08/10 09:39:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1418 2004/08/10 09:39:32 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -214,9 +214,11 @@ SUBDIR+=	gtkglk
 SUBDIR+=	gtklookat
 SUBDIR+=	gtkpod
 SUBDIR+=	guile-gtk-devel
+SUBDIR+=	guile16-slib
 SUBDIR+=	gurlchecker
 SUBDIR+=	gwc
 SUBDIR+=	hasciicam
+SUBDIR+=	hdparm
 SUBDIR+=	help2man
 SUBDIR+=	heroes
 SUBDIR+=	hol-light
@@ -430,6 +432,8 @@ SUBDIR+=	nestra
 SUBDIR+=	net-quanta
 SUBDIR+=	net-tools
 SUBDIR+=	netkit-base
+SUBDIR+=	netkit-routed
+SUBDIR+=	netkit-telnet
 SUBDIR+=	netwib
 SUBDIR+=	netwox
 SUBDIR+=	ninvaders
@@ -718,6 +722,7 @@ SUBDIR+=	stunnel3
 SUBDIR+=	sudoscript
 SUBDIR+=	superkaramba
 SUBDIR+=	svgalib
+SUBDIR+=	swami
 SUBDIR+=	sysklogd
 SUBDIR+=	syslog-ng
 SUBDIR+=	sysvinit
@@ -739,6 +744,7 @@ SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
 SUBDIR+=	tilp
+SUBDIR+=	tinycobol
 SUBDIR+=	tinylogin
 SUBDIR+=	tkabber
 SUBDIR+=	tleenx2
@@ -776,8 +782,10 @@ SUBDIR+=	vtk-docs
 SUBDIR+=	vtk-python
 SUBDIR+=	webcleaner
 SUBDIR+=	weewm
+SUBDIR+=	west
 SUBDIR+=	which
 SUBDIR+=	wimon-devel
+SUBDIR+=	wipe
 SUBDIR+=	wmclockmon
 SUBDIR+=	wmitime
 SUBDIR+=	wmmp
