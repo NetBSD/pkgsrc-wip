@@ -1,0 +1,16 @@
+0) fix undefined symbols in modules
+
+swami_samplelib_get_type() and g__instp_voice_lock_lock are defined symbols
+in the swami binary.  Why don't the dlopen()ed modules use them?
+
+
+sanctum $ swami
+
+** WARNING **: Error loading plugin /usr/pkg/lib/swami/wavetbl_fluidsynth.so, reason: /usr/pkg/lib/swami/wavetbl_fluidsynth.so: Undefined symbol "g__instp_voice_lock_lock" (reloc type = 6, symnum = 163)
+
+Message: Loading plugin "/usr/pkg/lib/swami/samplelib_libsndfile.so"...
+/usr/pkg/lib/swami/samplelib_libsndfile.so: Undefined PLT symbol "swami_samplelib_get_type" (reloc type = 7, symnum = 36)
+
+
+1) upgrade to swami 1.0.x
+2) make sure GnomeCanvas/GTK2 work, in order to get envelope editing

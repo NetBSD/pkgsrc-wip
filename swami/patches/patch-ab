@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/08/02 15:00:41 bencollver Exp $
+
+--- configure.orig	Sun Nov 16 02:23:11 2003
++++ configure
+@@ -12804,23 +12804,23 @@ fi
+   else
+      PKG_CONFIG_MIN_VERSION=0.9.0
+      if $PKG_CONFIG --atleast-pkgconfig-version $PKG_CONFIG_MIN_VERSION; then
+-        echo "$as_me:$LINENO: checking for libpng" >&5
+-echo $ECHO_N "checking for libpng... $ECHO_C" >&6
++        echo "$as_me:$LINENO: checking for libpng12" >&5
++echo $ECHO_N "checking for libpng12... $ECHO_C" >&6
+ 
+-        if $PKG_CONFIG --exists "libpng" ; then
++        if $PKG_CONFIG --exists "libpng12" ; then
+             echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+             succeeded=yes
+ 
+             echo "$as_me:$LINENO: checking PNG_CFLAGS" >&5
+ echo $ECHO_N "checking PNG_CFLAGS... $ECHO_C" >&6
+-            PNG_CFLAGS=`$PKG_CONFIG --cflags "libpng"`
++            PNG_CFLAGS=`$PKG_CONFIG --cflags "libpng12"`
+             echo "$as_me:$LINENO: result: $PNG_CFLAGS" >&5
+ echo "${ECHO_T}$PNG_CFLAGS" >&6
+ 
+             echo "$as_me:$LINENO: checking PNG_LIBS" >&5
+ echo $ECHO_N "checking PNG_LIBS... $ECHO_C" >&6
+-            PNG_LIBS=`$PKG_CONFIG --libs "libpng"`
++            PNG_LIBS=`$PKG_CONFIG --libs "libpng12"`
+             echo "$as_me:$LINENO: result: $PNG_LIBS" >&5
+ echo "${ECHO_T}$PNG_LIBS" >&6
+         else
+@@ -12828,7 +12828,7 @@ echo "${ECHO_T}$PNG_LIBS" >&6
+             PNG_LIBS=""
+             ## If we have a custom action on failure, don't print errors, but
+             ## do set a variable so people can do so.
+-            PNG_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libpng"`
++            PNG_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libpng12"`
+ 
+         fi
+ 

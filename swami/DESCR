@@ -1,0 +1,5 @@
+Sampled Waveforms and And Musical Instruments - is an advanced
+instrument editor for MIDI music composition and a sampler frontend.
+Currently SoundFont(R) files can be browsed, edited and saved.  Swami
+uses FluidSynth for software synthesis, so almost any sound card can be
+used.

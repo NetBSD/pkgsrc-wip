@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/08/02 15:00:41 bencollver Exp $
+
+--- src/libswami/SwamiConfig.c.orig	Thu Mar 13 13:22:37 2003
++++ src/libswami/SwamiConfig.c
+@@ -790,8 +790,7 @@ swami_config_save (gboolean changed_only
+   int i;
+ #ifndef MINGW32
+   struct stat st;
+-  dirstr = g_strconcat (g_get_home_dir (), G_DIR_SEPARATOR_S, ".swami",
+-			G_DIR_SEPARATOR_S, NULL);
++  dirstr = g_strconcat (g_get_home_dir (), G_DIR_SEPARATOR_S, ".swami", NULL);
+ 
+   if (stat (dirstr, &st) == -1)	/* check if config directory exists */
+     {				/* nope: make the directory */
+@@ -803,6 +802,9 @@ swami_config_save (gboolean changed_only
+ 	  return;
+ 	}
+     }
++
++  dirstr = g_strconcat (g_get_home_dir (), G_DIR_SEPARATOR_S, ".swami",
++			G_DIR_SEPARATOR_S, NULL);
+ #else
+   /* FIXME: Should use application directory */
+   dirstr = g_strconcat (".", G_DIR_SEPARATOR_S, NULL);
