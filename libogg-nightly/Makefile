@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/04 15:39:49 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/04 15:47:54 jeremy-c-reed Exp $
 
 DISTNAME=	vorbis_nightly_cvs
 PKGNAME=	libogg-${PKGVER}
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.xiph.org/ogg/
 COMMENT=	Ogg project codecs library (nightly source)
 
 CONFLICTS=	libogg-[0-9]*
+
+.include "../../mk/bsd.prefs.mk"
 
 PKGVER!=	${DATE} +%Y%m%d
 DIST_SUBDIR=	${PKGNAME}
