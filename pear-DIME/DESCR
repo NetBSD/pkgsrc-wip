@@ -1,3 +1,5 @@
 This is the initial independent release of the Net_DIME package.
-Provides an implementation of DIME as defined at
-http://search.ietf.org/internet-drafts/draft-nielsen-dime-02.txt
+
+Provides an implementation of DIME encoding of binary attachments
+for SOAP, pushed by Microsoft as a more efficient alternative to
+base64/MIME-based SOAP Messages with Attachments (SwA).
