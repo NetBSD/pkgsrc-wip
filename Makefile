@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.862 2004/01/07 23:47:52 bjan2 Exp $
-# $NetBSD: Makefile,v 1.862 2004/01/07 23:47:52 bjan2 Exp $
+# $Id: Makefile,v 1.863 2004/01/08 00:51:57 bjan2 Exp $
+# $NetBSD: Makefile,v 1.863 2004/01/08 00:51:57 bjan2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -349,6 +349,7 @@ SUBDIR+=	metatheme
 SUBDIR+=	mftrace
 SUBDIR+=	mhonarc
 SUBDIR+=	micro_httpd
+SUBDIR+=	mini_httpd
 SUBDIR+=	ming
 SUBDIR+=	mingw
 SUBDIR+=	mingw-binutils
