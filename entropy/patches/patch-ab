@@ -1,0 +1,61 @@
+$NetBSD: patch-ab,v 1.1 2003/10/11 21:13:15 tvierling Exp $
+
+--- src/store_mysql.c.orig	Wed Oct  8 15:54:14 2003
++++ src/store_mysql.c
+@@ -7,7 +7,9 @@
+  *          end in 00 (19 columns) or 0000 (18 cols) */
+ /* TODO: integrate into entropy.conf */
+ 
+-#include <stdbool.h>
++/* fake a <stdbool.h> that works everywhere */
++typedef enum { false, true } bool;
++
+ #if STORE_TYPE == 2  /* squelch mysql.h warnings from gmake .depend */
+ #include <mysql.h>
+ #endif
+@@ -50,6 +52,16 @@ static void stamp_key(sha1_digest_t *sha
+ #define STORE_LOCK()	osd_sem_wait(&g_store->sem)
+ #define STORE_UNLOCK()	osd_sem_post(&g_store->sem)
+ 
++#ifdef __NetBSD__
++static char *stpcpy(char *dest, const char *src)
++{
++	do {
++		*dest++ = *src;
++	} while (*src++);
++
++	return --dest;
++}
++#endif
+ 
+ /* Delete the row with a name that is derived from the sha1 values
+  * Takes sha1 (name), size of the data column
+@@ -243,9 +255,9 @@ static int sort_age_dist(const void *p1,
+ {
+ 	const fileage_t *a1 = (const fileage_t *)p1;
+ 	const fileage_t *a2 = (const fileage_t *)p2;
++	int ad1, ad2;
+ 	FUN("sort_age_dist");
+ 
+-	int ad1, ad2;
+ 	/* For keys younger than a week, don't consider the distance */
+ 	if (a1->age < 7 * 86400 || a2->age < 7 * 86400) {
+ 		ad1 = a1->age;
+@@ -1227,6 +1239,7 @@ int store_put(sha1_digest_t *sha1, const
+ 	size_t size;  /* the size of buff */
+ 	size_t idx;
+ 	u_int8_t fpr = 0;
++	int x;
+ 	FUN("store_put");
+ 
+ 	if (sha1 == NULL || buff == NULL) {
+@@ -1257,8 +1270,7 @@ int store_put(sha1_digest_t *sha1, const
+ 		sha1_hexstr(sha1), size));
+ 	end = stpcpy(query, "insert into store(sha1,data) values(");
+ 	*end++ = '\'';
+-	int x = 0;
+-	x += mysql_real_escape_string(dbconn, end, sha1->digest, SHA1SIZE);
++	x = mysql_real_escape_string(dbconn, end, sha1->digest, SHA1SIZE);
+ 	end += x;
+ 	*end++ = '\'';
+ 	*end++ = ',';

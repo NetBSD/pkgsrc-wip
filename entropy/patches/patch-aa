@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2003/07/06 18:33:04 tvierling Exp $
+$NetBSD: patch-aa,v 1.3 2003/10/11 21:13:15 tvierling Exp $
 
---- Makefile.orig	Sun Jul  6 11:11:03 2003
+--- Makefile.orig	Wed Oct  8 15:54:14 2003
 +++ Makefile
-@@ -86,7 +86,7 @@ CDEFS+=-DSTORE_MONO=$(STORE_MONO)
+@@ -129,7 +129,7 @@ endif
  INC=include
  
  # Specifying includes for C-Compiler 
 -INCLUDES=-I$(INC) -I/usr/local/include
 +INCLUDES=-I$(INC)
  
- # Setting verbosity
- ifeq ($(QUIET),1)
-@@ -107,7 +107,7 @@ FONT_MSG=
+ # Defining MySQL header file location (only for STORE_TYPE 2)
+ ifeq ($(STORE_TYPE),2)
+@@ -163,7 +163,7 @@ FONT_MSG=
  endif
  
  # Defining C-Compiler CFLAGS
@@ -19,13 +19,41 @@ $NetBSD: patch-aa,v 1.2 2003/07/06 18:33:04 tvierling Exp $
 +CFLAGS+=$(CPPFLAGS) $(CDEFS) $(INCLUDES)
  
  # Setting additional optimizations for C-Compiler
- ifeq ($(PPC),1)
-@@ -173,8 +173,6 @@ endif
+ ifeq ($(PPC_G5),1)
+@@ -208,6 +208,7 @@ endif
  endif
  endif
-  
+ endif
++endif
+ 
+ # Defining Expat Libraries (do not change)
+ ifneq ($(LIBEXPAT),)
+@@ -236,7 +237,6 @@ endif
+ endif
+ endif
+ endif
+-endif
+ 
+ # Defining MySQL client library (only for STORE_TYPE 2)
+ ifeq ($(STORE_TYPE),2)
+@@ -252,8 +252,6 @@ endif
+ endif
+ endif
+ 
 -LDFLAGS=
 -
  OBJ=obj
  
  PROG1=entropy
+@@ -403,9 +401,9 @@ $(SRC)/%.c: $(SRC)/%.txt
+ 	$(FONT_MSG)
+ 	$(FONT) $< $@
+ 
+-$(PROG1):	$(OBJS1) $(LIBS)
++$(PROG1):	$(OBJS1)
+ 	$(LD_MSG)
+-	$(LD) $(LDFLAGS) -o $@ $^
++	$(LD) $(LDFLAGS) -o $@ $^ $(LIBS)
+ 
+ $(PROG2):	$(OBJS2) $(LIBS)
+ 	$(LD_MSG)

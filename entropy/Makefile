@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/09/29 15:50:59 tvierling Exp $
+# $NetBSD: Makefile,v 1.17 2003/10/11 21:13:15 tvierling Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 
-ENTROPY_VERSION=	0.5.6-334
+ENTROPY_VERSION=	0.5.7-342
 
 MAKE_FLAGS+=		QUIET=0
 MAKE_FLAGS+=		LIBEXPAT=-lexpat LIBZ=-lz
@@ -41,6 +41,21 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/entropy.conf-dist ${PREFIX}/share/examples/entropy/entropy.conf
 	${INSTALL_DATA} ${WRKSRC}/seed.txt ${PREFIX}/share/examples/entropy/
 	${INSTALL_DATA} ${WRKSRC}/node/[0-9a-z]* ${PREFIX}/share/examples/entropy/node/
+
+.include "../../mk/bsd.prefs.mk"
+
+ENTROPY_STORE_TYPE?=	file
+
+.if ${ENTROPY_STORE_TYPE} == "directory"
+MAKE_FLAGS+=		STORE_TYPE=1
+.elif ${ENTROPY_STORE_TYPE} == "mysql"
+MAKE_FLAGS+=		STORE_TYPE=2
+MAKE_FLAGS+=		INCMYSQL=${PREFIX}/include/mysql LIBMYSQL=-lmysqlclient
+LDFLAGS+=		${BUILDLINK_LDFLAGS.mysql-client}
+.include "../../databases/mysql-client/buildlink2.mk"
+.elif ${ENTROPY_STORE_TYPE} != "file"
+.error unknown ENTROPY_STORE_TYPE: ${ENTROPY_STORE_TYPE}
+.endif
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
