@@ -1,19 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/23 22:55:59 bjan2 Exp $
-
---- ../snownews-1.4.2.orig/Makefile.inc	2003-12-23 04:10:35.000000000 -0700
-+++ Makefile.inc	2003-12-23 14:54:08.000000000 -0700
-@@ -1,8 +1,9 @@
+--- Makefile.inc.orig	2003-12-23 19:19:57.000000000 -0700
++++ Makefile.inc	2003-12-23 19:20:55.000000000 -0700
+@@ -1,8 +1,7 @@
 -CC = gcc
 -MAKE = make
 -INSTALL = install
 -PREFIX = /usr/local
 -LOCALEPATH = $(PREFIX)/share/locale
-+CC = cc
-+MAKE = gmake
-+INSTALL = install -c
++MAKE = $(GMAKE)
++INSTALL = $(INSTALL) -c
 +PREFIX = $(LOCALBASE)
 +LOCALEPATH = $(PREFIX)/$(PKGLOCALEDIR)/locale
-+EXTRA_LDFLAGS=-lintl -liconv -Wl,-rpath,$(PREFIX)/lib
  DISTFILES = AUTHOR COPYING CREDITS Changelog README README.de README.colors INSTALL INSTALL.solaris INSTALL.FreeOpenNetBSD TODO opml2snow \
  	Makefile Makefile.inc Makefile.solaris \
  	doc po \
