@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/14 21:46:39 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/11 22:07:30 blef Exp $
 
 DISTNAME=	natali-1.25
 CATEGORIES=	net
@@ -8,7 +8,7 @@ MAINTAINER=	hauke@Espresso.Rhein-Neckar.DE
 HOMEPAGE=	http://ppr.trincoll.edu/
 COMMENT=	AT&T/Apple AppleTalk Library Interface for Netatalk
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
@@ -26,7 +26,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pap.h ${PREFIX}/include/at
 	${INSTALL_DATA} ${WRKSRC}/libnatali.a ${PREFIX}/lib
 
-.include "../../net/netatalk/buildlink2.mk"
+.include "../../net/netatalk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
