@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/11/28 07:37:32 blef Exp $
+# $NetBSD: Makefile,v 1.5 2003/11/28 20:00:56 blef Exp $
 #
 
 DISTNAME=	armagetron-0.2.5.2
@@ -39,6 +39,7 @@ do-install:
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/SDL_image/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 
