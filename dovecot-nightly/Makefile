@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/24 01:49:19 tomhensel Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/05 06:40:47 xtraeme Exp $
 
 DISTNAME=		dovecot-${_DOVECOT_VER}
 PKGNAME=		dovecot-nightly-${_DOVECOT_VER}
@@ -31,7 +31,7 @@ _DOVECOT_VER!=		${DATE} +%Y%m%d
 BUILD_DEFS+=		DOVECOT_USE_GNUTLS DOVECOT_USE_PGSQL	\
 			USE_INET6 USE_OPENLDAP USE_SASL2
 
-.if defined(DOVECOT_USE_MBOX) && !empty(DOVECOT_USE_MBOX:M[Yy][Ee][Ss] && defined(DOVECOT_USE_MAILDIR) && !empty(DOVECOT_USE_MAILDIR:M[Yy][Ee][Ss])
+.if defined(DOVECOT_USE_MBOX) && !empty(DOVECOT_USE_MBOX:M[Yy][Ee][Ss]) && defined(DOVECOT_USE_MAILDIR) && !empty(DOVECOT_USE_MAILDIR:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-storages=maildir,mbox
 .elif defined(DOVECOT_USE_MBOX) && !empty(DOVECOT_USE_MBOX:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-storages=mbox
