@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2003/12/16 22:51:25 adrian_p Exp $
+$NetBSD: distinfo,v 1.5 2004/04/22 21:00:42 adrian_p Exp $
 
-SHA1 (hydra-2.6.tar.gz) = e2ff1dd68284c55f7fc6fe63a66dbd9f3480a82d
-Size (hydra-2.6.tar.gz) = 48954 bytes
-SHA1 (patch-aa) = 7d38687f39def66c12410605531a7facca529ad0
-SHA1 (patch-ab) = 4ed6a379282313695d354c4a0424f1145610ffbd
+SHA1 (hydra-3.1.tar.gz) = 4b63b66b02eb28b355fd526cc7b30ff62cb6a88b
+Size (hydra-3.1.tar.gz) = 53937 bytes
+SHA1 (patch-aa) = 329255db454c04bbe0749982534482693ed0c264
+SHA1 (patch-ab) = 8aca85df83d7625c97799f54168e8e89266c00b8

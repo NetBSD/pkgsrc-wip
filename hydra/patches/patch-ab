@@ -1,13 +1,21 @@
-$NetBSD: patch-ab,v 1.1 2003/12/16 22:51:25 adrian_p Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/22 21:00:44 adrian_p Exp $
 
---- configure.orig	Tue Dec 16 22:44:05 2003
-+++ configure	Tue Dec 16 22:44:40 2003
-@@ -141,7 +141,7 @@
- fi
+--- hydra-smbnt.c.orig	Thu Apr 22 21:51:59 2004
++++ hydra-smbnt.c	Thu Apr 22 21:52:26 2004
+@@ -243,6 +243,7 @@
+ int
+ SMBNegProt(int s)
+ {
++  int i;
+   char buf[168] = { 0x00, 0x00, 0x00, 0xa4, 0xff, 0x53, 0x4d, 0x42,
+     0x72, 0x00, 0x00, 0x00, 0x00, 0x08, 0x01, 0x40,
+     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+@@ -278,7 +279,7 @@
  
- echo
--XDEFINES=""
-+XDEFINES="-I/usr/include/openssl"
- XLIBS=""
- XLIBPATHS=""
- XIPATHS=""
+   /* find the primary domain/workgroup name */
+   memset(workgroup, 0, 16);
+-  int i = 0;
++  i = 0;
+   while ((rbuf[81+i*2] != 0) && (i<16)) {
+     workgroup[i] = rbuf[81+i*2];
+     i++;

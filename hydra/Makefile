@@ -1,21 +1,18 @@
-# $NetBSD: Makefile,v 1.4 2003/12/16 22:51:25 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/22 21:00:40 adrian_p Exp $
 #
 
-DISTNAME=	hydra-2.6
+DISTNAME=	hydra-3.1
 CATEGORIES=	security
 MASTER_SITES=	http://www.thc.org/releases/
 
-MAINTAINER=	adam@monkeybyte.org
+MAINTAINER=	adrianp@stindustries.net
 HOMEPAGE=	http://www.thc.org/
 COMMENT=	Login password cracker
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
-post-extract:
-	@${CHMOD} 0755 ${WRKSRC}
-
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2003/11/14 17:15:16 adrian_p Exp $
+$NetBSD: patch-aa,v 1.4 2004/04/22 21:00:42 adrian_p Exp $
 
---- Makefile.am.orig	2003-11-14 17:10:29.000000000 +0000
-+++ Makefile.am	2003-11-14 17:10:43.000000000 +0000
-@@ -4,7 +4,7 @@
+--- Makefile.am.orig	Thu Apr 22 20:49:08 2004
++++ Makefile.am	Thu Apr 22 20:49:27 2004
+@@ -3,7 +3,7 @@
+ #
  
  CC = gcc
- OPTS = -O2 -I. -Wall
--LIBS = 
-+LIBS = -lm
+-OPTS = -O2 -I. -Wall
++OPTS = ${CFLAGS} -I/usr/pkg/include/openssl
+ LIBS = 
  DIR = /bin
  
- SRC = hydra-vnc.c hydra-pcnfs.c hydra-rexec.c hydra-nntp.c hydra-socks5.c \

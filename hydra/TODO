@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1 2003/12/16 22:51:25 adrian_p Exp $
+$NetBSD: TODO,v 1.2 2004/04/22 21:00:41 adrian_p Exp $
 
 Not tested on -current
-patch-ab needs work as it should follow ${SSLBASE}
+patch-aa needs work as it should follow ${SSLBASE}
