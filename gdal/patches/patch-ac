@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/02/25 20:26:56 daprice Exp $
+
+--- frmts/iso8211/GNUmakefile.orig	2003-05-01 08:17:07.000000000 -0600
++++ frmts/iso8211/GNUmakefile
+@@ -90,6 +90,9 @@ test:	8211dump
+ 	    diff t1.out teststream.out; \
+ 	fi
+ 
++install:
++	cp $(ISOLIB) ${prefix}/lib
++	cp iso8211.h ${prefix}/include
+ 
+ install-obj:	$(ISOLIB) $(foreach file,$(OBJ),../o/$(file))
+ 

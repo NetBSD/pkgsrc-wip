@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/25 20:26:56 daprice Exp $
+
+SHA1 (gdal-1.1.9.tar.gz) = 060600745adeb0932c86b742c3121c7fbcb38563
+Size (gdal-1.1.9.tar.gz) = 3231989 bytes
+SHA1 (patch-aa) = dd1e5de2b372568d9d6eb8e79cf57d542c803b55
+SHA1 (patch-ab) = 5c0a1b10a04d7a9db3072c5abfecdd88871b7cef
+SHA1 (patch-ac) = 4735f87fb1684513b76bbc7e569cd444fd719011
+SHA1 (patch-ad) = 3b10c1582eeedf0458e0f63d63857f9b9cdebc4e

@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/02/25 20:26:56 daprice Exp $
+
+--- frmts/GNUmakefile.orig	2004-03-30 10:37:10.000000000 -0700
++++ frmts/GNUmakefile
+@@ -5,6 +5,8 @@ include ../GDALmake.opt
+ 
+ OBJ	=	o/gdalallregister.o
+ 
++FRMT_BUILT=	iso8211 sdts
++
+ FRMT_FLAGS	=	$(foreach FRMT, $(GDAL_FORMATS), -DFRMT_$(FRMT))
+ 
+ default:	$(OBJ) sub-libs
+@@ -46,3 +48,14 @@ o/gdalallregister.o:	gdalallregister.cpp
+ 
+ # We might want to add dynamically generated drivers here eventually.
+ install:
++	@for dir in $(FRMT_BUILT) ; do \
++          if test -d $$dir ; then \
++            if (cd $$dir; $(MAKE) install) || exit 1 ; then \
++              echo; \
++            else \
++              break; \
++            fi \
++          else \
++            echo "Can't find:" $$dir; \
++          fi; \
++        done

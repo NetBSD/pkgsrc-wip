@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/02/25 20:26:56 daprice Exp $
+
+--- frmts/sdts/GNUmakefile.orig	2003-02-09 16:50:21.000000000 -0700
++++ frmts/sdts/GNUmakefile
+@@ -42,6 +42,10 @@ sdts2shp:	sdts2shp.cpp $(SDTSLIB)
+ 		$(SHPDIR)/shpopen.o $(SHPDIR)/dbfopen.o \
+ 		$(LIBS) -o sdts2shp
+ 
++install:
++	cp $(SDTSLIB) ${prefix}/lib
++	cp sdts_al.h ${prefix}/include
++
+ install-obj:	$(SDTSLIB) $(foreach file,$(OBJ),../o/$(file)) ../o/sdtsdataset.o
+ 
+ ../o/%.o:	%.o
