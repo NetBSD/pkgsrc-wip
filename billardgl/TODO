@@ -1,0 +1,6 @@
+- A lot of cleanup...
+
+- Empty DESCR?
+
+- Test if OpenGL hardware acceleration works under NetBSD (at least), and
+  set BROKEN (or whatever) accordingly (won't work without it).
