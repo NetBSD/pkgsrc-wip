@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.188 2003/05/23 17:05:22 xtraeme Exp $
-# $NetBSD: Makefile,v 1.188 2003/05/23 17:05:22 xtraeme Exp $
+# $Id: Makefile,v 1.189 2003/05/23 23:33:39 bubuchka Exp $
+# $NetBSD: Makefile,v 1.189 2003/05/23 23:33:39 bubuchka Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -93,9 +93,9 @@ SUBDIR+=	libshout
 SUBDIR+=	libspectrum
 SUBDIR+=	libvorbis-nightly
 SUBDIR+=	libwpd
-SUBDIR+=	linuxsms
 SUBDIR+=	linux-modutils
 SUBDIR+=	linux-nfs-utils
+SUBDIR+=	linuxsms
 SUBDIR+=	liquidwar
 SUBDIR+=	mailfilter
 SUBDIR+=	mcats
@@ -118,9 +118,9 @@ SUBDIR+=	netbeans-ide
 SUBDIR+=	netkit-base
 SUBDIR+=	newsx
 SUBDIR+=	nvtv
+SUBDIR+=	p5-CDDB
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Compress-Bzip2
-SUBDIR+=	p5-CDDB
 SUBDIR+=	p5-Data-TemporaryBag
 SUBDIR+=	p5-GeoIP
 SUBDIR+=	p5-HTTP-GHTTP
@@ -167,6 +167,8 @@ SUBDIR+=	umix
 SUBDIR+=	vcdgear
 SUBDIR+=	vim-gtk2
 SUBDIR+=	vixie-cron
+SUBDIR+=	vmac
+SUBDIR+=	vms-empire
 SUBDIR+=	vmsbackup
 SUBDIR+=	windowlab
 SUBDIR+=	words
@@ -176,6 +178,5 @@ SUBDIR+=	xml2doc
 SUBDIR+=	xmms-liveice
 SUBDIR+=	xplore
 SUBDIR+=	zebra-pj
-SUBDIR+=	vms-empire
 
 .include "../mk/bsd.pkg.subdir.mk"
