@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/22 21:49:17 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/22 23:47:16 mpasternak Exp $
 include/vtk/expat.h
 include/vtk/expatDllConfig.h
 include/vtk/png.h
@@ -751,20 +751,12 @@ lib/vtk/doxygen/header.html
 lib/vtk/doxygen/paper-clip.gif
 lib/vtk/doxygen/pic.gif
 lib/vtk/doxygen/vtk-logo.gif
-lib/vtk/hints
 lib/vtk/libvtkCommon.so
-lib/vtk/libvtkCommonPython.so
 lib/vtk/libvtkFiltering.so
-lib/vtk/libvtkFilteringPython.so
 lib/vtk/libvtkGraphics.so
-lib/vtk/libvtkGraphicsPython.so
 lib/vtk/libvtkIO.so
-lib/vtk/libvtkIOPython.so
 lib/vtk/libvtkImaging.so
-lib/vtk/libvtkImagingPython.so
 lib/vtk/libvtkRendering.so
-lib/vtk/libvtkRenderingPython.so
-lib/vtk/libvtkRenderingPythonTkWidgets.so
 lib/vtk/libvtkexpat.so
 lib/vtk/libvtkfreetype.so
 lib/vtk/libvtkftgl.so
