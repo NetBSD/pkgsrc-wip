@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2004/07/28 20:55:53 tvierling Exp $
+$NetBSD: patch-af,v 1.2 2004/07/28 21:00:34 tvierling Exp $
 
---- build/bsd/makefiles/objformat.orig	Wed Jul 28 15:17:49 2004
+--- build/bsd/makefiles/objformat.orig	Wed Jul 28 16:57:53 2004
 +++ build/bsd/makefiles/objformat
-@@ -9,15 +9,7 @@ FreeBSD) 
+@@ -9,15 +9,11 @@ FreeBSD) 
      ;;
  
  NetBSD)
@@ -15,7 +15,11 @@ $NetBSD: patch-af,v 1.1 2004/07/28 20:55:53 tvierling Exp $
 -             echo AOUT
 -             ;;
 -    esac
-+    echo ELF
++    if echo __ELF__ | ${CC-cc} -E - | grep -q __ELF__; then
++        echo AOUT
++    else
++        echo ELF
++    fi
      ;;
  
  OpenBSD)
