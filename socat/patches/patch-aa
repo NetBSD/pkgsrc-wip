@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/10/17 10:57:18 adrian_p Exp $
+
+--- Makefile.in.orig	Fri Oct 17 12:01:35 2003
++++ Makefile.in	Fri Oct 17 12:01:49 2003
+@@ -25,7 +25,7 @@
+ 
+ INCLS = -I. @V_INCL@
+ DEFS = @DEFS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -Wl,-R${prefix}/lib -L${prefix}/lib
+ 
+ INSTALL = @INSTALL@
+ 
