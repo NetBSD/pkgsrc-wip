@@ -1,0 +1,16 @@
+$Id: README,v 1.1 2003/11/28 20:50:02 mpasternak Exp $
+
+Fri Nov 28 21:34:44 CET 2003
+
+This directory is a testbed for new .mk files, that could propably be
+introduced to pkgsrc/mk/ after testing/development/reviewing/quarantine.
+
+Please have in mind, that files you put here must be really well-documented,
+Doing this you raise the chance the file will be reviewed.
+
+The need for their existance must be also important.
+
+For settings, that are shared between only a few packages, create
+"Makefile.common" (see pkgsrc/databases/postgresql for example)
+
+	-- dotz@irc.pl

@@ -1,0 +1,14 @@
+$Id: DESC,v 1.1 2003/11/28 20:50:02 mpasternak Exp $
+
+Please provide .mk files descriptions and reasons for existence of those
+files here.
+
+linuxbin.pkg.mk	- generalised .mk file for installing Linux binary packages,
+		  for various architectures, no matter - deb or rpm.
+		  Introduced by Michal Pasternak <dotz@irc.pl>
+		  
+		  Why:
+		  - pkgsrc contains many packages, that use RPM files
+		  - current emul/suse_linux/ layer provided by Makefile.common
+		    is no good (can't override path for RPMFILES, for example)
+		  - could be used by emul/linux base packages as well
