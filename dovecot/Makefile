@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/05/13 04:16:28 lsed Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/13 05:29:14 xtraeme Exp $
 #
 
 DISTNAME=	dovecot-0.99.9.1
@@ -21,13 +21,23 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var
-CONFIGURE_ARGS+=	--enable-ssl=openssl
+CONFIGURE_ARGS+=	--with-storages=maildir
 
 DOVECOT_USE_LDAP?=	NO
 
 .if !empty(DOVECOT_USE_LDAP:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-ldap
 .include "../../databases/openldap/buildlink2.mk"
+.endif
+
+DOVECOT_USE_OPENSSL?=	NO
+
+.if !empty(DOVECOT_USE_OPENSSL:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-ssl=openssl
+.include "../../security/openssl/buildlink2.mk"
+.else
+CONFIGURE_ARGS+=        --enable-ssl=gnutls
+.include "../../wip/gnutls/buildlink2.mk"
 .endif
 
 DOVECOT_USE_PGSQL?=	NO
@@ -70,7 +80,5 @@ post-install:
 	# Generate modules part of PLIST dynamically.  It can be different
 	# depending on OS.
 	cd ${PREFIX} && ${FIND} libexec/dovecot -type f > ${WRKDIR}/PLIST
-
-.include "../../security/openssl/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
