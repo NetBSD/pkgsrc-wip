@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/16 11:14:14 ianzag Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/01/16 11:55:23 ianzag Exp $
 share/doc/kde/HTML/fr/kchart/common
 share/doc/kde/HTML/fr/kchart/index.cache.bz2
 share/doc/kde/HTML/fr/kchart/index.docbook
@@ -324,7 +324,7 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/olefilterswinword97filter.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/thesaurus_tool.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xsltexportfilter.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xsltimportfilter.mo
-@dirrm share/kde/apps/koffice/autocorrect
+@comment in koffice: dirrm share/kde/apps/koffice/autocorrect
 @dirrm share/doc/kde/HTML/fr/thesaurus
 @dirrm share/doc/kde/HTML/fr/kword
 @dirrm share/doc/kde/HTML/fr/kugar
