@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/10/06 12:14:24 thomasklausner Exp $
+
+--- src/sheet-object-graphic.c.orig	Wed Sep 10 20:11:05 2003
++++ src/sheet-object-graphic.c
+@@ -6,6 +6,9 @@
+  * Author:
+  *   Miguel de Icaza (miguel@kernel.org)
+  */
++#ifndef _XOPEN_SOURCE
++#define _XOPEN_SOURCE 1
++#endif
+ #include <gnumeric-config.h>
+ #include <gnumeric-i18n.h>
+ #include "gnumeric.h"

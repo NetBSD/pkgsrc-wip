@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/10/06 12:14:24 thomasklausner Exp $
+
+--- src/cut-n-paste-code/foocanvas/libfoocanvas/foo-canvas-util.c.orig	Sun May 18 22:20:31 2003
++++ src/cut-n-paste-code/foocanvas/libfoocanvas/foo-canvas-util.c
+@@ -46,6 +46,9 @@
+ #include <sys/types.h>
+ 
+ #include <glib.h>
++#ifndef _XOPEN_SOURCE
++#define _XOPEN_SOURCE 1
++#endif
+ #include <math.h>
+ #include "foo-canvas.h"
+ #include "foo-canvas-util.h"

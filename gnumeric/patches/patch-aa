@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/06 12:14:24 thomasklausner Exp $
+
+--- plugins/fn-math/functions.c.orig	Thu Aug 21 07:19:14 2003
++++ plugins/fn-math/functions.c
+@@ -21,6 +21,9 @@
+  * along with this program; if not, write to the Free Software
+  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+  */
++#ifndef _XOPEN_SOURCE
++#define _XOPEN_SOURCE 1
++#endif
+ #include <gnumeric-config.h>
+ #include <gnumeric-i18n.h>
+ #include <gnumeric.h>

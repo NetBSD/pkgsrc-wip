@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/10/06 12:14:24 thomasklausner Exp $
+
+--- src/mathfunc.c.orig	Mon Jul  7 23:29:42 2003
++++ src/mathfunc.c
+@@ -32,6 +32,7 @@
+ /* for random() */
+ #define _SVID_SOURCE 1
+ #define _BSD_SOURCE 1
++#define _XOPEN_SOURCE 1
+ 
+ #include <gnumeric-config.h>
+ #include "gnumeric.h"
