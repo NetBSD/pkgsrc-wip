@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/08 15:04:48 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/26 14:46:03 adrian_p Exp $
 
 DISTNAME=	smtpscan-${SSVERSION}
 WRKSRC=         ${WRKDIR}/smtpscan
@@ -12,6 +12,7 @@ COMMENT=	Remote SMTP version checker
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 
 USE_PERL5=	YES
+NO_BUILDLINK=	YES
 REPLACE_PERL=	src/smtpscan
 
 SSVERSION?=	0.5
