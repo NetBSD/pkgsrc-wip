@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.803 2003/12/25 02:41:31 bjan2 Exp $
-# $NetBSD: Makefile,v 1.803 2003/12/25 02:41:31 bjan2 Exp $
+# $Id: Makefile,v 1.804 2003/12/25 13:28:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.804 2003/12/25 13:28:50 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -577,7 +577,6 @@ SUBDIR+=	tetrinetx
 SUBDIR+=	tex-foiltex
 SUBDIR+=	tex-hlatex
 SUBDIR+=	tex-passivetex
-SUBDIR+=	tex-prosper
 SUBDIR+=	tex-xmltex
 SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
