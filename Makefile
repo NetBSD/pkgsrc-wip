@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.723 2003/12/03 18:50:53 xtraeme Exp $
-# $NetBSD: Makefile,v 1.723 2003/12/03 18:50:53 xtraeme Exp $
+# $Id: Makefile,v 1.724 2003/12/03 18:55:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.724 2003/12/03 18:55:39 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -398,7 +398,6 @@ SUBDIR+=	ogre
 SUBDIR+=	oinkmaster
 SUBDIR+=	opax
 SUBDIR+=	openbox3
-SUBDIR+=	openmortal
 SUBDIR+=	openvpn
 SUBDIR+=	p5-CDDB
 SUBDIR+=	p5-Chart
