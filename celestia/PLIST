@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/13 13:12:37 cjep Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/07 22:18:22 lsed Exp $
 bin/celestia
 share/celestia/COPYING
 share/celestia/celestia.cfg
 share/celestia/controls.txt
 share/celestia/data/asterisms.dat
+share/celestia/data/boundaries.dat
+share/celestia/data/deepsky.dsc
 share/celestia/data/extrasolar.ssc
 share/celestia/data/galaxies.dat
+share/celestia/data/galileo.xyz
 share/celestia/data/hdnames.dat
 share/celestia/data/solarsys.ssc
 share/celestia/data/starnames.dat
@@ -13,8 +16,8 @@ share/celestia/data/stars.dat
 share/celestia/demo.cel
 share/celestia/extras/apollo.ssc
 share/celestia/extras/comets.ssc
-share/celestia/extras/imagined.ssc
 share/celestia/extras/minormoons.ssc
+share/celestia/extras/numberedmoons.ssc
 share/celestia/extras/shroxclassic.ssc
 share/celestia/extras/shroxmars.ssc
 share/celestia/extras/skylab.ssc
@@ -30,44 +33,71 @@ share/celestia/fonts/helv24.txf
 share/celestia/fonts/helvbold12.txf
 share/celestia/fonts/helvbold18.txf
 share/celestia/fonts/helvbold24.txf
+share/celestia/fonts/sansbold20.txf
 share/celestia/guide.cel
-share/celestia/manual/celestia.html
-share/celestia/manual/manual.css
-share/celestia/manual/movement.html
-share/celestia/manual/starting.html
 share/celestia/models/amalthea.3ds
+share/celestia/models/apollo.3ds
 share/celestia/models/asteroid.cms
 share/celestia/models/bacchus.3ds
 share/celestia/models/borrelly.cms
 share/celestia/models/castalia.3ds
 share/celestia/models/deimos.3ds
+share/celestia/models/epimetheus.3ds
 share/celestia/models/eros.3ds
+share/celestia/models/eros.cms
 share/celestia/models/galileo.3ds
 share/celestia/models/gaspra.3ds
+share/celestia/models/gemini.3ds
 share/celestia/models/geographos.3ds
 share/celestia/models/golevka.3ds
 share/celestia/models/hubble.3ds
 share/celestia/models/hyperion.3ds
+share/celestia/models/hyperion.cms
 share/celestia/models/ida.3ds
 share/celestia/models/iss.3ds
 share/celestia/models/janus.3ds
 share/celestia/models/kleopatra.3ds
 share/celestia/models/ky26.3ds
+share/celestia/models/marsglobalsurvr.3ds
+share/celestia/models/marsodyssey.3ds
+share/celestia/models/mercury7.3ds
 share/celestia/models/mir.3ds
 share/celestia/models/phobos.3ds
+share/celestia/models/prometheus.3ds
 share/celestia/models/proteus.3ds
+share/celestia/models/proteus.cms
 share/celestia/models/roughsphere.cms
+share/celestia/models/skylab.3ds
 share/celestia/models/toutatis.3ds
 share/celestia/models/vesta.3ds
 share/celestia/shaders/bumpdiffuse.vp
+share/celestia/shaders/bumpdiffuse_arb.vp
 share/celestia/shaders/bumphaze.vp
+share/celestia/shaders/bumphaze_arb.vp
 share/celestia/shaders/diffuse.vp
+share/celestia/shaders/diffuse_arb.vp
+share/celestia/shaders/diffuse_texoff.vp
+share/celestia/shaders/diffuse_texoff_arb.vp
+share/celestia/shaders/glossmap_arb.vp
 share/celestia/shaders/haze.vp
+share/celestia/shaders/haze_arb.vp
+share/celestia/shaders/night.vp
+share/celestia/shaders/night_arb.vp
+share/celestia/shaders/rings.vp
+share/celestia/shaders/rings_arb.vp
+share/celestia/shaders/ringshadow.vp
+share/celestia/shaders/ringshadow_arb.vp
 share/celestia/shaders/shadowtex.vp
+share/celestia/shaders/shadowtex_arb.vp
 share/celestia/shaders/simple.vp
+share/celestia/shaders/simple_arb.vp
 share/celestia/shaders/specular.vp
+share/celestia/shaders/specular_arb.vp
 share/celestia/start.cel
+share/celestia/textures/astar.jpg
+share/celestia/textures/bstar.jpg
 share/celestia/textures/flare.jpg
+share/celestia/textures/gstar.jpg
 share/celestia/textures/logo.png
 share/celestia/textures/lores/ariel.jpg
 share/celestia/textures/lores/astar.jpg
@@ -81,11 +111,15 @@ share/celestia/textures/lores/dione.jpg
 share/celestia/textures/lores/earth-clouds.png
 share/celestia/textures/lores/earth.png
 share/celestia/textures/lores/earthnight.jpg
+share/celestia/textures/lores/enceladus.jpg
+share/celestia/textures/lores/eros.jpg
 share/celestia/textures/lores/europa.jpg
 share/celestia/textures/lores/ganymede.jpg
 share/celestia/textures/lores/gasgiant.jpg
+share/celestia/textures/lores/gaspramosaic.jpg
 share/celestia/textures/lores/gstar.jpg
 share/celestia/textures/lores/iapetus.jpg
+share/celestia/textures/lores/idamosaic.jpg
 share/celestia/textures/lores/io.jpg
 share/celestia/textures/lores/jupiter.jpg
 share/celestia/textures/lores/jupiterlike.jpg
@@ -115,6 +149,7 @@ share/celestia/textures/lores/uranus-rings.png
 share/celestia/textures/lores/uranus.jpg
 share/celestia/textures/lores/venus.jpg
 share/celestia/textures/lores/venuslike.jpg
+share/celestia/textures/lores/venussurface.jpg
 share/celestia/textures/medres/ariel.jpg
 share/celestia/textures/medres/astar.jpg
 share/celestia/textures/medres/asteroid.jpg
@@ -124,13 +159,18 @@ share/celestia/textures/medres/callisto.jpg
 share/celestia/textures/medres/deimos.jpg
 share/celestia/textures/medres/dione.jpg
 share/celestia/textures/medres/earth-clouds.png
+share/celestia/textures/medres/earth.jpg
 share/celestia/textures/medres/earth.png
 share/celestia/textures/medres/earthnight.jpg
+share/celestia/textures/medres/enceladus.jpg
+share/celestia/textures/medres/eros.jpg
 share/celestia/textures/medres/europa.jpg
 share/celestia/textures/medres/ganymede.jpg
 share/celestia/textures/medres/gasgiant.jpg
+share/celestia/textures/medres/gaspramosaic.jpg
 share/celestia/textures/medres/gstar.jpg
 share/celestia/textures/medres/iapetus.jpg
+share/celestia/textures/medres/idamosaic.jpg
 share/celestia/textures/medres/io.jpg
 share/celestia/textures/medres/iss-cap1.jpg
 share/celestia/textures/medres/iss-mc1.jpg
@@ -151,6 +191,7 @@ share/celestia/textures/medres/oberon.jpg
 share/celestia/textures/medres/phobos.jpg
 share/celestia/textures/medres/pluto.jpg
 share/celestia/textures/medres/plutobump1k.jpg
+share/celestia/textures/medres/renova.jpg
 share/celestia/textures/medres/rhea.jpg
 share/celestia/textures/medres/saturn.jpg
 share/celestia/textures/medres/tethys.jpg
@@ -159,13 +200,21 @@ share/celestia/textures/medres/triton.jpg
 share/celestia/textures/medres/umbriel.jpg
 share/celestia/textures/medres/venus.jpg
 share/celestia/textures/medres/venuslike.jpg
+share/celestia/textures/medres/venussurface.jpg
+share/celestia/textures/mstar.jpg
+share/doc/html/celestia/manual/celestia.html
+share/doc/html/celestia/manual/manual.css
+share/doc/html/celestia/manual/movement.html
+share/doc/html/celestia/manual/starting.html
+@dirrm share/doc/html/celestia/manual
+@dirrm share/doc/html/celestia
 @dirrm share/celestia/textures/medres
-@dirrm share/celestia/textures/hires
 @dirrm share/celestia/textures/lores
+@exec ${MKDIR} %D/share/celestia/textures/hires
+@dirrm share/celestia/textures/hires
 @dirrm share/celestia/textures
 @dirrm share/celestia/shaders
 @dirrm share/celestia/models
-@dirrm share/celestia/manual
 @dirrm share/celestia/fonts
 @dirrm share/celestia/extras
 @dirrm share/celestia/data

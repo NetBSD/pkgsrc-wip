@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2003/05/07 17:37:39 lsed Exp $
+$NetBSD: distinfo,v 1.3 2003/05/07 22:18:22 lsed Exp $
 
 SHA1 (celestia-1.3.0.tar.gz) = 1ec0c5520f9ca44d76df8828afe6cd2f3d361894
 Size (celestia-1.3.0.tar.gz) = 15935711 bytes
 SHA1 (patch-aa) = b38854452df58a4391e4b172ba21b31bcc3e8364
+SHA1 (patch-ab) = 8e452ab8d693d0b79c89805adb6b876708285ec1
