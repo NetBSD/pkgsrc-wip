@@ -1,22 +1,49 @@
-$NetBSD: patch-aa,v 1.2 2003/08/03 03:31:27 xtraeme Exp $
+$NetBSD: patch-aa,v 1.3 2003/09/27 09:34:23 xtraeme Exp $
 
---- configure.orig	2003-08-03 04:47:58.000000000 +0200
-+++ configure	2003-08-03 04:48:39.000000000 +0200
-@@ -9893,7 +9893,7 @@
+--- configure.orig	2003-09-27 11:05:58.000000000 +0200
++++ configure	2003-09-27 11:09:13.000000000 +0200
+@@ -22443,7 +22443,7 @@
+ fi;
  
      if test "$places" = "search"; then
-       places="std /usr/local/include/db4:/usr/local/lib /usr/local
--              /usr/local/BerkeleyDB.4.1 /usr/include/db4:/usr/lib"
-+              /usr/local/BerkeleyDB.4.1 ${PREFIX}/include/db4:${PREFIX}/lib"
+-      places="std /usr/local/include/db4:/usr/local/lib /usr/local
++      places="std ${PREFIX}/include/db4:/${PREFIX}/lib /usr/local
+               /usr/local/BerkeleyDB.4.1 /usr/include/db4:/usr/lib"
      fi
      # Now `places' is guaranteed to be a list of place specs we should
-     # search, no matter what flags the user passed.
-@@ -9965,7 +9965,7 @@
+@@ -22515,7 +22515,7 @@
+ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
- #include <stdio.h>
 -#include "db.h"
 +#include <db4/db.h>
+ #include <stdio.h>
  main ()
  {
-   int major, minor, patch;
+@@ -22863,7 +22863,7 @@
+ fi;
+ 
+   if test "$places" = "search"; then
+-    places="std /usr/include/mysql:/usr/lib /usr/local
++    places="std ${PREFIX}/include/mysql:${PREFIX}/lib /usr/local
+             /usr/include/mysql:/usr/lib/mysql
+             /usr/local/include/mysql:/usr/local/lib"
+   fi
+@@ -23035,7 +23035,7 @@
+ fi;
+ 
+   if test "$places" = "search"; then
+-    places="std /usr/include/postgresql:/usr/lib /usr/local
++    places="std ${PREFIX}/include/postgresql:${PREFIX}/lib /usr/local
+             /usr/local/include/postgresql:/usr/local/lib"
+   fi
+   # Now `places' is guaranteed to be a list of place specs we should
+@@ -23433,7 +23433,7 @@
+ 
+ 
+ 
+-sysconfdir="$sysconfdir/jabberd"
++sysconfdir="$sysconfdir"
+ 
+                                                                                                                                                                           ac_config_files="$ac_config_files Makefile ac-helpers/Makefile etc/Makefile etc/templates/Makefile tools/Makefile man/Makefile sx/Makefile mio/Makefile util/Makefile expat/Makefile idn/Makefile scod/Makefile c2s/Makefile resolver/Makefile router/Makefile s2s/Makefile sm/Makefile"
+ cat >confcache <<\_ACEOF

@@ -1,13 +1,15 @@
-$NetBSD: patch-ab,v 1.2 2003/08/03 03:31:27 xtraeme Exp $
+$NetBSD: patch-ab,v 1.3 2003/09/27 09:34:23 xtraeme Exp $
 
---- Makefile.in.orig	2003-08-03 04:49:42.000000000 +0200
-+++ Makefile.in	2003-08-03 04:50:33.000000000 +0200
-@@ -92,7 +92,7 @@
+--- Makefile.in.orig	2003-09-27 10:30:31.000000000 +0200
++++ Makefile.in	2003-09-27 10:30:52.000000000 +0200
+@@ -100,8 +100,8 @@
  am__include = @am__include@
  am__quote = @am__quote@
  install_sh = @install_sh@
--SUBDIRS = etc tools mio sx util expat idn $(JABBERD_SUBDIRS)
-+SUBDIRS = tools mio sx util expat idn $(JABBERD_SUBDIRS)
- EXTRA_DIST = ac-helpers
+-SUBDIRS = ac-helpers etc tools man mio sx util expat idn scod $(JABBERD_SUBDIRS)
+-DIST_SUBDIRS = ac-helpers etc tools man mio sx util expat idn scod c2s resolver router s2s sm
++SUBDIRS = ac-helpers tools man mio sx util expat idn scod $(JABBERD_SUBDIRS)
++DIST_SUBDIRS = ac-helpers tools man mio sx util expat idn scod c2s resolver router s2s sm
  subdir = .
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
