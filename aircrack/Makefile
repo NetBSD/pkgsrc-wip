@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/09 19:41:53 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/24 21:09:50 minskim Exp $
 #
 
 DISTNAME=		aircrack-2.1
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.cr0.net:8040/code/network/aircrack/
 COMMENT=		802.11 WEP key cracker
 
 USE_BUILDLINK3=		yes
+NO_CONFIGURE=		yes
 
 SUBST_CLASSES=pfx
 SUBST_STAGE.pfx=patch
