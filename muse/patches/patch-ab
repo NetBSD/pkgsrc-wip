@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/05/14 06:39:29 xtraeme Exp $
+
+--- jmixer.cpp.orig	2003-05-14 08:22:12.000000000 +0200
++++ jmixer.cpp	2003-05-14 08:23:04.000000000 +0200
+@@ -29,7 +29,11 @@
+ #include <sys/stat.h>
+ #include <errno.h>
+ #include <fcntl.h>
++#ifdef _HAVE_SYS_SOUNDCARD_H
+ #include <sys/soundcard.h>
++#else
++#include <soundcard.h>
++#endif
+ #include <string.h>
+ #include <signal.h>
+ #include <sys/types.h>
