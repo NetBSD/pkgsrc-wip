@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/10/01 22:53:38 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/01 10:19:12 jeremy-c-reed Exp $
 
 --- MCONFIG.orig	2002-11-25 02:29:48.000000000 -0800
-+++ MCONFIG	2003-04-19 15:20:35.000000000 -0700
-@@ -88,7 +88,7 @@
++++ MCONFIG
+@@ -88,7 +88,7 @@ HAVE_RESET=yes
  # If HAVE_SLN is set to "yes", then sln won't be installed
  # (but the man page sln.8 will be installed anyway).
  # sln also comes with libc and glibc.
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/10/01 22:53:38 jeremy-c-reed Exp $
  
  # If HAVE_FDUTILS is set to "yes", then setfdprm won't be installed.
  HAVE_FDUTILS=no
-@@ -100,7 +100,7 @@
+@@ -100,7 +100,7 @@ SILENT_PG=no
  # If configure decides that Native Language Support (NLS) is available,
  # it sets MAY_ENABLE_NLS in defines.h. If you don't want NLS, set
  # DISABLE_NLS to "yes".
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/10/01 22:53:38 jeremy-c-reed Exp $
  
  # Different optimizations for different cpus.
  # gcc 3.0 likes options -mcpu=i486 instead of -m486
-@@ -146,23 +146,23 @@
+@@ -146,23 +146,23 @@ LIBSLANG=-lslang
  DEV_DIR=	/dev
  ETC_DIR=	/etc
  SBIN_DIR=	/sbin
@@ -53,7 +53,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/10/01 22:53:38 jeremy-c-reed Exp $
  SBINDIR=	$(DESTDIR)$(SBIN_DIR)
  USRSBINDIR=	$(DESTDIR)$(USRSBIN_DIR)
  USRLIBDIR=      $(DESTDIR)$(USRLIB_DIR)
-@@ -212,6 +212,7 @@
+@@ -179,7 +179,7 @@ MAN3DIR=	$(MANDIR)/man3
+ MAN5DIR=	$(MANDIR)/man5
+ MAN6DIR=	$(MANDIR)/man6
+ MAN8DIR=	$(MANDIR)/man8
+-INFODIR=	$(DESTDIR)$(INFO_DIR)
++#INFODIR=	$(DESTDIR)$(INFO_DIR)
+ 
+ # Directory for shutdown, halt, reboot, etc.
+ SHUTDOWNDIR=	$(SBINDIR)
+@@ -212,6 +212,7 @@ CFLAGS := $(OPT) -I$(LIB) $(WARNFLAGS) \
  			-DLOGDIR=\"$(LOG_DIR)\" \
  			-DVARPATH=\"$(VAR_PATH)\" \
  			-DLOCALEDIR=\"$(LOCALE_DIR)\" \
@@ -61,7 +70,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/10/01 22:53:38 jeremy-c-reed Exp $
  			$(CFLAGS)
  
  
-@@ -219,5 +220,5 @@
+@@ -219,5 +220,5 @@ CFLAGS := $(OPT) -I$(LIB) $(WARNFLAGS) \
  	$(CC) -c $(CFLAGS) $< -o $@
  
  %: %.cc

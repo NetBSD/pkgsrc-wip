@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:33:48 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/01 10:19:11 jeremy-c-reed Exp $
 
 DISTNAME=	util-linux-2.11z
 CATEGORIES=	sysutils
@@ -20,12 +20,17 @@ GNU_CONFIGURE=	YES
 MAKE_ENV+=	DESTDIR=${PREFIX}
 MAKE_ENV+=	ETCDIR=${PREFIX}/share/examples/util-linux
 MAKE_ENV+=	FDPRMFILE=${PKG_SYSCONFDIR}/fdprm
+MAKE_ENV+=	INFODIR=${INFO_DIR}
 
 INFO_FILES=	ipc.info
 
 CONF_FILES=	${PREFIX}/share/examples/util-linux/fdprm ${PKG_SYSCONFDIR}/fdprm
 
-#.include "../../devel/gettext-lib/buildlink2.mk"
+PLIST_SRC=	${PKGDIR}/PLIST
+# XXX let maintainer know of your architecture if this breaks
+PLIST_SRC+=	${PKGDIR}/PLIST.${MACHINE_ARCH}
+
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
 # zlib used for cramfs
 .include "../../devel/zlib/buildlink2.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/01 22:53:38 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/01 10:19:11 jeremy-c-reed Exp $
 bin/arch
 bin/cal
 bin/chkdupexe
@@ -36,8 +36,6 @@ bin/ul
 bin/umount
 bin/whereis
 bin/write
-etc/fdprm
-info/ipc.info
 man/man1/arch.1
 man/man1/cal.1
 man/man1/chkdupexe.1
@@ -87,11 +85,8 @@ man/man8/mkfs.minix.8
 man/man8/mkswap.8
 man/man8/mount.8
 man/man8/pivot_root.8
-man/man8/ramsize.8
 man/man8/raw.8
-man/man8/rdev.8
 man/man8/renice.8
-man/man8/rootflags.8
 man/man8/setfdprm.8
 man/man8/setsid.8
 man/man8/sfdisk.8
@@ -100,7 +95,6 @@ man/man8/swapoff.8
 man/man8/swapon.8
 man/man8/tunelp.8
 man/man8/umount.8
-man/man8/vidmode.8
 sbin/agetty
 sbin/blockdev
 sbin/cfdisk
@@ -117,15 +111,11 @@ sbin/mkfs.cramfs
 sbin/mkfs.minix
 sbin/mkswap
 sbin/pivot_root
-sbin/ramsize
-sbin/rdev
 sbin/readprofile
-sbin/rootflags
 sbin/sfdisk
 sbin/swapoff
 sbin/swapon
 sbin/tunelp
-sbin/vidmode
 share/misc/getopt/getopt-parse.bash
 share/misc/getopt/getopt-parse.tcsh
 share/misc/getopt/getopt-test.bash
