@@ -494,21 +494,48 @@ case "$1" in
 	;;
 "dist-upgrade")
 	echo "==> Generating the update list..."
-	LIST=`${PKGCHK} -i | grep mismatch | \
-		awk -F '([.\-]*)-[0-9]' '{print $1 }'|grep -v WARNING`
-		
+	LIST=`${PKGCHK} -i`
+
+	if [ "$?" = "1" ]; then
+		echo ""
+		echo "WARNING: Your pkgsrc seems to be broken."
+		echo "WARNING: Please check this manually."
+		echo "WARNING: Not all packages will be showed here :("
+		echo ""
+	fi
+
+	NAME=""
+	OLDNAME=""
+	LIST2=""
+	for A in ${LIST}; do
+		NAME=`echo ${A} | awk -F '([.\-]*)-[0-9]' '{print $1 }'`
+		case ${NAME} in
+		"version"|"mismatch"|"-"|"(binary"|"available)"|"package") 
+			NAME="" ; ;;
+		*)
+
+		if [ "${NAME}" = "${OLDNAME}" ]; then
+			LIST2="${LIST2} ${NAME}"
+			NAME=""
+		fi
+		OLDNAME=${NAME}
+		;;
+		esac
+	done
+	LIST=${LIST2}
+
 	if [ "${LIST}" = "" ]; then
 		echo "Your system is completely updated"
 	else
-	echo "Upgrade list:"
-	echo ${LIST}
+		echo "Upgrade list:"
+		echo ${LIST}
 
-	press_any_key
+		press_any_key
 
-	for A in ${LIST}; do
-		echo "==> Updating ${A}..."
-		do_install ${A} 1
-	done
+		for A in ${LIST}; do
+			echo "==> Updating ${A}..."
+			do_install ${A} 1
+		done
 	fi
 	;;
 "clean")
