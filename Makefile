@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1369 2004/07/08 11:07:52 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1369 2004/07/08 11:07:52 xtraeme Exp $
+# $Id: Makefile,v 1.1370 2004/07/08 14:33:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1370 2004/07/08 14:33:00 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -131,7 +131,6 @@ SUBDIR+=	ecl
 SUBDIR+=	eic
 SUBDIR+=	emacs-carbon
 SUBDIR+=	emirror
-SUBDIR+=	et
 SUBDIR+=	etpan-ng
 SUBDIR+=	evolution-sharp
 SUBDIR+=	ezbounce

@@ -1,5 +1,0 @@
-#!/bin/sh
-# $NetBSD: et,v 1.1.1.1 2004/06/17 04:03:43 dhowland Exp $
-
-cd @PREFIX@/lib/lokigames/et
-exec ./et.x86 "$@"

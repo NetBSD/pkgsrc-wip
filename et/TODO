@@ -1,5 +1,0 @@
-* Needs to be tested on Linux.  ATM I don't have a Linux install or
-  any spare boxes to put it on.  Need to test that it gets installed
-  correctly and also need to test network play, since NetBSD has no
-  DRI support.  This requires a fairly new 3D video card (GeForce or
-  Radeon)
