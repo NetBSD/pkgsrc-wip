@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/07/27 02:41:03 poppnk Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/27 17:22:20 xtraeme Exp $
 
 --- tcc.c.orig	2003-05-24 18:30:29.000000000 +0000
-+++ tcc.c	2003-07-26 21:58:09.000000000 +0000
++++ tcc.c	2003-07-27 04:52:05.000000000 +0000
 @@ -2926,6 +2926,22 @@
      }
  }
@@ -41,12 +41,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/27 02:41:03 poppnk Exp $
  
  /* return the PC at frame level 'level'. Return non zero if not found */
  static int rt_get_caller_pc(unsigned long *paddr, 
-@@ -8969,14 +8991,14 @@
+@@ -8969,14 +8991,22 @@
  #ifdef __FreeBSD__
          *paddr = uc->uc_mcontext.mc_eip;
  #else
 -        *paddr = uc->uc_mcontext.gregs[REG_EIP];
++#ifdef __NetBSD__
 +        *paddr = uc->uc_mcontext.__gregs[REG_EIP];
++#else
++	*paddr = uc->uc_mcontext.gregs[REG_EIP];
++#endif
  #endif
          return 0;
      } else {
@@ -54,16 +58,24 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/27 02:41:03 poppnk Exp $
          fp = uc->uc_mcontext.mc_ebp;
  #else
 -        fp = uc->uc_mcontext.gregs[REG_EBP];
++#ifdef __NetBSD__
 +        fp = uc->uc_mcontext.__gregs[REG_EBP];
++#else
++	fp = uc->uc_mcontext.gregs[REG_EBP];
++#endif
  #endif
          for(i=1;i<level;i++) {
              /* XXX: check address validity with program info */
-@@ -9108,7 +9130,7 @@
+@@ -9108,7 +9138,11 @@
          struct sigaction sigact;
          /* install TCC signal handlers to print debug info on fatal
             runtime errors */
 -        sigact.sa_flags = SA_SIGINFO | SA_RESETHAND;
++#if __NetBSD__
 +        sigact.sa_flags = SA_RESETHAND;
++#else
++	sigact.sa_flags = SA_SIGINFO | SA_RESETHAND;
++#endif
          sigact.sa_sigaction = sig_error;
          sigemptyset(&sigact.sa_mask);
          sigaction(SIGFPE, &sigact, NULL);
