@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1 2004/02/28 00:51:24 rillig Exp $
+
+--- configure	Sun Sep 22 18:43:37 2002
++++ configure.new	Sun Sep 22 18:43:16 2002
+@@ -1649,6 +1649,7 @@
+ 
+ 
+ 
++
+ #--------------------------------------------------------------------
+ # Set the default compiler switches based on the --enable-symbols 
+ # option.
+@@ -1665,7 +1666,7 @@
+     esac
+ 
+     echo $ac_n "checking for build with symbols""... $ac_c" 1>&6
+-echo "configure:1669: checking for build with symbols" >&5
++echo "configure:1670: checking for build with symbols" >&5
+     # Check whether --enable-symbols or --disable-symbols was given.
+ if test "${enable_symbols+set}" = set; then
+   enableval="$enable_symbols"
+@@ -1814,7 +1815,7 @@
+ 
+ 
+     echo $ac_n "checking for tclsh""... $ac_c" 1>&6
+-echo "configure:1818: checking for tclsh" >&5
++echo "configure:1819: checking for tclsh" >&5
+ 
+     if eval "test \"`echo '$''{'ac_cv_path_tclsh'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -2035,6 +2036,7 @@
+ s%@TCL_PLATFORM_DIR_NATIVE@%$TCL_PLATFORM_DIR_NATIVE%g
+ s%@TCL_INCLUDES@%$TCL_INCLUDES%g
+ s%@CLEANFILES@%$CLEANFILES%g
++s%@TCL_CC@%$TCL_CC%g
+ s%@CFLAGS_DEBUG@%$CFLAGS_DEBUG%g
+ s%@CFLAGS_OPTIMIZE@%$CFLAGS_OPTIMIZE%g
+ s%@STLIB_LD@%$STLIB_LD%g

@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2004/02/28 00:51:24 rillig Exp $
+
+--- Makefile.in~	Sun Sep 22 18:39:11 2002
++++ Makefile.in	Sun Sep 22 18:41:23 2002
+@@ -120,6 +120,7 @@
+ PACKAGE = @PACKAGE@
+ VERSION = @VERSION@
+ CC = @CC@
++TCL_CC = @TCL_CC@
+ CFLAGS_DEBUG = @CFLAGS_DEBUG@
+ CFLAGS_DEFAULT = @CFLAGS_DEFAULT@
+ CFLAGS_OPTIMIZE = @CFLAGS_OPTIMIZE@
