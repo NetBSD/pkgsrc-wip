@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/04 15:47:54 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/04 16:11:23 jeremy-c-reed Exp $
 
 DISTNAME=	vorbis_nightly_cvs
 PKGNAME=	libogg-${PKGVER}
@@ -16,7 +16,8 @@ CONFLICTS=	libogg-[0-9]*
 .include "../../mk/bsd.prefs.mk"
 
 PKGVER!=	${DATE} +%Y%m%d
-DIST_SUBDIR=	${PKGNAME}
+# This distfile is shared with libvorbis-nightly
+DIST_SUBDIR=	 ${DISTNAME}-${PKGVER}
 NO_CHECKSUM=	YES
 NO_SRC_ON_FTP=	# defined
 
