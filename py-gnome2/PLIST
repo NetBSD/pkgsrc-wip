@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/07 06:07:56 marc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/03 21:02:31 marc Exp $
 lib/pkgconfig/gnome-python-2.0.pc
 ${PYSITELIB}/gtk-2.0/bonobo/__init__.py
 ${PYSITELIB}/gtk-2.0/bonobo/__init__.pyc
@@ -27,6 +27,9 @@ ${PYSITELIB}/gtk-2.0/gnome/appletmodule.so
 ${PYSITELIB}/gtk-2.0/gnome/canvasmodule.a
 ${PYSITELIB}/gtk-2.0/gnome/canvasmodule.la
 ${PYSITELIB}/gtk-2.0/gnome/canvasmodule.so
+${PYSITELIB}/gtk-2.0/gnome/nautilusmodule.a
+${PYSITELIB}/gtk-2.0/gnome/nautilusmodule.la
+${PYSITELIB}/gtk-2.0/gnome/nautilusmodule.so
 ${PYSITELIB}/gtk-2.0/gnome/uimodule.a
 ${PYSITELIB}/gtk-2.0/gnome/uimodule.la
 ${PYSITELIB}/gtk-2.0/gnome/uimodule.so
@@ -63,6 +66,8 @@ share/pygtk/2.0/defs/print.defs
 share/pygtk/2.0/defs/printui.defs
 share/pygtk/2.0/defs/ui.defs
 share/pygtk/2.0/defs/zvt.defs
+@comment in py-gtk2: @dirrm share/pygtk/2.0/defs
 @dirrm ${PYSITELIB}/gtk-2.0/gnomeprint
 @dirrm ${PYSITELIB}/gtk-2.0/gnome
 @dirrm ${PYSITELIB}/gtk-2.0/bonobo
+@comment in py-gtk2: @dirrm ${PYSITELIB}/gtk-2.0

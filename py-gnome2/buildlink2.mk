@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/04/07 06:07:56 marc Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/06/03 21:02:31 marc Exp $
 
 .if !defined(PYGNOME2_BUILDLINK2_MK)
 PYGNOME2_BUILDLINK2_MK=	# defined
@@ -13,12 +13,13 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.pygnome2=${PYPKGPREFIX}-gnome2
 BUILDLINK_PREFIX.pygnome2_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.pygnome2+=	lib/pkgconfig/gnome-python-2.0.pc
 
+.include "../../www/libgtkhtml/buildlink2.mk"
+.include "../../net/py-ORBit/buildlink2.mk"
 .include "../../print/libgnomeprintui/buildlink2.mk"
+.include "../../sysutils/nautilus/buildlink2.mk"
 .include "../../x11/libzvt/buildlink2.mk"
 .include "../../x11/gnome-panel/buildlink2.mk"
-.include "../../www/libgtkhtml/buildlink2.mk"
-.include "../../wip/py-ORBit/buildlink2.mk"
-.include "../../wip/py-gtk2/buildlink2.mk"
+.include "../../x11/py-gtk2/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	pygnome2-buildlink
 
