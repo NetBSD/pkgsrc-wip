@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/28 11:48:26 drue Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/28 11:52:26 drue Exp $
 #
 
 DISTNAME=	igal-1.4
 CATEGORIES=	www graphics
-MASTER_SITES=	http://jsautret.free.fr/BINS/
+MASTER_SITES=	http://www.stanford.edu/~epop/igal/
 
 MAINTAINER=	drue@users.sf.net
-HOMEPAGE=	http://bins.sautret.org/
+HOMEPAGE=	http://www.stanford.edu/~epop/igal/
 COMMENT=	Online image gallery generator
 
 DEPENDS+=	ImageMagick>=5.0:../../graphics/ImageMagick
