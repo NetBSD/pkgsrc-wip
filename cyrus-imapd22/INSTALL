@@ -1,6 +1,4 @@
-#!/bin/sh
-#
-# $NetBSD: INSTALL,v 1.1.1.1 2003/07/26 17:46:53 marc Exp $
+# $NetBSD: INSTALL,v 1.2 2003/11/03 12:50:28 marc Exp $
 
 case ${STAGE} in
 POST-INSTALL)

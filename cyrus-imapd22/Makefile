@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/09/13 20:37:18 marc Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/03 12:50:28 marc Exp $
 #
 
-DISTNAME=		cyrus-imapd-2.2.1-BETA
+DISTNAME=		cyrus-imapd-2.2.2-BETA
 PKGNAME=		${DISTNAME:S/-BETA/b1/}
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
@@ -13,9 +13,12 @@ COMMENT=		Cyrus IMAP server
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
-USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
+
+USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -95,12 +98,6 @@ post-patch:
 		${MV} -f $${file}.fixed $${file};			\
 	done
 
-pre-configure:
-	cd ${WRKSRC}; \
-       	${ACLOCAL} -I cmulocal; \
-	${AUTOHEADER};		\
-	${AUTOCONF}
-
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/masssievec ${PREFIX}/cyrus/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${PREFIX}/cyrus/bin
@@ -123,5 +120,4 @@ post-install:
 .include "../../security/openssl/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"
 
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

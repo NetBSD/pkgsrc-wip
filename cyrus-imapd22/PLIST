@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/16 10:26:02 marc Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/11/03 12:50:28 marc Exp $
 bin/imtest
 bin/installsieve
 bin/lmtptest
@@ -8,6 +8,7 @@ bin/pop3test
 bin/sieveshell
 bin/sivtest
 bin/smtptest
+cyrus/bin/arbitron
 cyrus/bin/chk_cyrus
 cyrus/bin/ctl_cyrusdb
 cyrus/bin/ctl_deliver

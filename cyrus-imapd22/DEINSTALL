@@ -1,22 +1,21 @@
-#!/bin/sh
-#
-# $NetBSD: DEINSTALL,v 1.1.1.1 2003/07/26 17:46:53 marc Exp $
+# $NetBSD: DEINSTALL,v 1.2 2003/11/03 12:50:27 marc Exp $
 
 IMAPDCONF=@IMAPDCONF@
 
-if [ -f ${IMAPDCONF} ]
-then
-	imap_dirs=`							\
-		${AWK} '/configdirectory:/      { print $2 };		\
-			/partition-.*:/         { print $2 };		\
-			/sievedir:/             { print $2 }'		\
-			${IMAPDCONF}					\
-	`
-	for dir in ${imap_dirs}
-	do
-		if [ -d ${dir} ]
-		then
-			ALL_DIRS="${ALL_DIRS} ${dir}"
-		fi
-	done
-fi
+case ${STAGE} in
+DEINSTALL)
+	if [ -f ${IMAPDCONF} ]; then
+		imap_dirs=`						\
+			${AWK} '/configdirectory:/      { print $2 };	\
+				/partition-.*:/         { print $2 };	\
+				/sievedir:/             { print $2 }'	\
+				${IMAPDCONF}				\
+		`
+		for dir in ${imap_dirs}; do
+			if [ -d ${dir} ]; then
+				ALL_DIRS="${ALL_DIRS} ${dir}"
+			fi
+		done
+	fi
+	;;
+esac
