@@ -49,7 +49,7 @@
 
 #define UseInstalledPrograms YES
 
-#if !defined(FreeBSDArchitecture)
+#ifndef FreeBSDArchitecture
 # define BuildThreadStubLibrary YES
 #endif
 
