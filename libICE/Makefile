@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/05/14 01:16:02 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2004/06/07 17:31:38 minskim Exp $
 #
 
 DISTNAME=		libICE-6.3.3
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://xlibs.freedesktop.org/
 COMMENT=		Inter Client Exchange (ICE) library for X
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
