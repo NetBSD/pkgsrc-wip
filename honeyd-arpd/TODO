@@ -1,4 +1,0 @@
-The name of the program needs to be resolved as there is already an
-arpd package in pkgsrc,  so I've called this package honeyd-arpd.  
-I've emailed the author of this software a few times now but have not 
-received a definite response.  Consider this name temporary.
