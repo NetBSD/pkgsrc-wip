@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.205 2003/06/02 15:26:04 jmmv Exp $
-# $NetBSD: Makefile,v 1.205 2003/06/02 15:26:04 jmmv Exp $
+# $Id: Makefile,v 1.206 2003/06/02 15:47:29 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.206 2003/06/02 15:47:29 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -153,6 +153,7 @@ SUBDIR+=	scons
 SUBDIR+=	scponly
 SUBDIR+=	shoutcast
 SUBDIR+=	slocate
+SUBDIR+=	speedx
 SUBDIR+=	srvx
 SUBDIR+=	strace
 SUBDIR+=	streamripper
