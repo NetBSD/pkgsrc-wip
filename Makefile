@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1521 2004/11/03 21:06:33 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1521 2004/11/03 21:06:33 adrian_p Exp $
+# $Id: Makefile,v 1.1522 2004/11/05 15:17:41 ppostma Exp $
+# $NetBSD: Makefile,v 1.1522 2004/11/05 15:17:41 ppostma Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -516,9 +516,6 @@ SUBDIR+=	pdq
 SUBDIR+=	pekwm-nightly
 SUBDIR+=	perl59
 SUBDIR+=	perltidy
-SUBDIR+=	pflkm
-SUBDIR+=	pfstat
-SUBDIR+=	pftop
 SUBDIR+=	pgadmin3
 SUBDIR+=	pgp6
 SUBDIR+=	pgpenvelope
