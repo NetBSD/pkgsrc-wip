@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/13 09:53:34 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/14 12:53:05 johnrshannon Exp $
 #
 
 DISTNAME=		gdb-6.1
@@ -31,6 +31,13 @@ USE_GCC_34?=	NO
 
 pre-patch:
 	${CP} ${FILESDIR}/nbsd-nat.c ${WRKSRC}/gdb
+
+do-test:
+	if `${PKG_INFO} -qe dejagnu` ;then		\
+		(cd ${WRKSRC} && ${GMAKE} check);	\
+	else						\
+		${ECHO} dejagnu is required for the test target;	\
+	fi
 
 .if !empty(USE_GCC_34:M[Yy][Ee][Ss])
 .  include "../../wip/gcc-3.4/buildlink3.mk"
