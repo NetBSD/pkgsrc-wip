@@ -9,7 +9,7 @@
 
 name="cron"
 rcvar=$name
-command="/usr/sbin/${name}"
+command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
 
 load_rc_config $name
