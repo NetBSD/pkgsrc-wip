@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1297 2004/05/27 16:03:23 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1297 2004/05/27 16:03:23 xtraeme Exp $
+# $Id: Makefile,v 1.1298 2004/05/27 21:58:38 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1298 2004/05/27 21:58:38 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -709,7 +709,6 @@ SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
 SUBDIR+=	tilp
-SUBDIR+=	time
 SUBDIR+=	tinylogin
 SUBDIR+=	tkabber
 SUBDIR+=	tleenx2
