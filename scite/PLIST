@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/15 05:38:11 shattered Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/27 19:40:17 shattered Exp $
 bin/SciTE
+man/man1/scite.1
 share/pixmaps/Sci48M.png
 share/scite/Embedded.properties
 share/scite/PrintHi.png
