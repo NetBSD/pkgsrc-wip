@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.319 2003/07/12 02:43:53 bencollver Exp $
-# $NetBSD: Makefile,v 1.319 2003/07/12 02:43:53 bencollver Exp $
+# $Id: Makefile,v 1.320 2003/07/12 12:30:58 lsed Exp $
+# $NetBSD: Makefile,v 1.320 2003/07/12 12:30:58 lsed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -13,6 +13,7 @@ SUBDIR+=	abuse_sdl
 SUBDIR+=	acid
 SUBDIR+=	adodb
 SUBDIR+=	allegro
+SUBDIR+=	amap
 SUBDIR+=	amsn
 SUBDIR+=	aolserver
 SUBDIR+=	ap-bunzip2
