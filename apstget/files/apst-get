@@ -27,7 +27,7 @@ fi
 # PREFERED=""         # space-separated list of prefered packages (for dup)
 
 #----->8--------------#
-PKG_RESUME_TRANSFERS=YES # make this as default
+MAKEFLAG="PKG_RESUME_TRANSFERS=YES" # make this as default
 PREFIX=_pfx_
 MAKE=_makebin_
 PKGFIND=${PREFIX}/bin/pkgfind
@@ -73,7 +73,7 @@ do_make_clean () {
 do_make_package () {
 	if [ "${PACKAGE_BUILD}" = "1" ]; then
 		echo "==> Generating package..."
-		env PACKAGE_NOINSTALL=YES ${MAKE} package
+		env PACKAGE_NOINSTALL=YES ${MAKE} ${MAKEFLAG} package
 	fi
 }
 
@@ -232,7 +232,7 @@ do_install() {
 	else
 	echo "==> Preparing installation for $DIR"
 	cd ${PKGSRC_DIR}/${DIR}
-	DEPS=`${MAKE} show-depends-dirs`
+	DEPS=`${MAKE} ${MAKEFLAG} show-depends-dirs`
 	DEPS="${DEPS} ${DIR}"
 	REPLACE=""
 	INSTALL=""
@@ -257,11 +257,12 @@ do_install() {
 		# Add new deps
 		cd ${PKGSRC_DIR}/${A}
 		if [ "${SKIP_LICENSES}" = "1" ];then
-		ACCEPTABLE_LICENSES="`cat Makefile | grep "LICENSE" \
+		ACCEPTABLE_LICENSES="`cat Makefile | grep LICENSE \
 			|awk -F = '{ print $2 }'`"
+			MAKEFLAG="${MAKEFLAG} ACCEPTABLE_LICENSES=${ACCEPTABLE_LICENSES}"
 		echo "==> Skipping license: ${ACCEPTABLE_LICENSE}"
 		fi
-		DEPS2=`${MAKE} show-depends-dirs`
+		DEPS2=`${MAKE} ${MAKEFLAG} show-depends-dirs`
 		for B in ${DEPS2} ; do
 			if [ "`echo ${DEPS} | grep ${B}`" = "" ]; then
 				DEPS="${DEPS} ${B}"
@@ -275,9 +276,9 @@ do_install() {
 	for A in ${REPLACE}; do
 		echo "==> Upgrading ${A}..."
 		cd ${PKGSRC_DIR}/${A}
-		${MAKE} fetch
+		${MAKE} ${MAKEFLAG} fetch
 		do_make_clean
-		${MAKE} replace ${UD_TARGETS} | ${WRAPPER} 2>&1
+		${MAKE} ${MAKEFLAG} replace ${UD_TARGETS} | ${WRAPPER} 2>&1
 		do_make_package
 		do_make_clean
 		if [ ! "$?" = "0" ]; then
@@ -295,9 +296,9 @@ do_install() {
 	for A in ${INSTALL}; do
 		echo "==> Installing ${A}"
 		cd ${PKGSRC_DIR}/${A}
-		${MAKE} fetch
+		${MAKE} ${MAKEFLAG} fetch
 		do_make_clean
-		${MAKE} install ${UD_TARGETS} | ${WRAPPER} 2>&1
+		${MAKE} ${MAKEFLAG} install ${UD_TARGETS} | ${WRAPPER} 2>&1
 		do_make_package
 		do_make_clean
 		if [ ! "$?" = "0" ]; then
