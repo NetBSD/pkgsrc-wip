@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/11 22:42:56 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/12 19:38:44 johnrshannon Exp $
 #
 
 SNAPDATE=	20040211
@@ -20,7 +20,7 @@ USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=        --enable-languages="c,ada"
-ADA_BOOT_PATH=               /usr/pkg/gcc3.4
+ADA_BOOT_PATH=               ${PREFIX}/${PKGNAME_NOREV}
 ADA_BOOT_ADAC?=  ${ADA_BOOT_PATH}/bin/gcc
 ADA_BOOT_GNATBIND=      ${ADA_BOOT_PATH}/bin/gnatbind
 EXTRA_ENV+=     ADAC=${ADA_BOOT_ADAC:Q}
@@ -28,7 +28,7 @@ CONFIGURE_ENV+=	${EXTRA_ENV}
 MAKE_ENV+=	${EXTRA_ENV}
 
 # Make location overridable, to allow ping-pong bootstraps.
-GCC3_DEFAULT_SUBPREFIX=	gcc3.4
+GCC3_DEFAULT_SUBPREFIX=	${PKGNAME_NOREV}
 GCC3_INSTALLTO_SUBPREFIX?=	${GCC3_DEFAULT_SUBPREFIX}
 .if ${GCC3_INSTALLTO_SUBPREFIX} != ${GCC3_DEFAULT_SUBPREFIX}
 GCC3_PKGMODIF=		_${GCC3_INSTALLTO_SUBPREFIX}
