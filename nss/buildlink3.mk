@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/01/25 00:15:36 matthewluckie Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/01/25 19:47:15 matthewluckie Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NSS_BUILDLINK3_MK:=	${NSS_BUILDLINK3_MK}+
@@ -16,6 +16,6 @@ BUILDLINK_RECOMMENDED.nss+=	nss>=3.9.2
 BUILDLINK_PKGSRCDIR.nss?=	../../wip/nss
 .endif  # NSS_BUILDLINK3_MK
 
-.include "../../wip/nspr/buildlink3.mk"
+.include "../../devel/nspr/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

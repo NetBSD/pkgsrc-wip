@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/24 09:53:50 matthewluckie Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/25 19:47:15 matthewluckie Exp $
 
 DISTNAME=		nss-3.9.2
 CATEGORIES=		security
@@ -47,7 +47,7 @@ SCRIPTS_ENV+=		OS_VERSION=${OS_VERSION:Q}
 do-install:
 	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR}/nss-install
 
-.include "../../wip/nspr/buildlink3.mk"
+.include "../../devel/nspr/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
