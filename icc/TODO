@@ -1,4 +1,6 @@
-$Id: TODO,v 1.1.1.1 2003/11/28 21:19:44 mpasternak Exp $
+$Id: TODO,v 1.2 2003/11/28 21:28:50 mpasternak Exp $
+
+ICC .sh scripts needs to have subsituted <INSTALDIR>!
 
 Someone with IA64 - please check if this is useable there.
 
