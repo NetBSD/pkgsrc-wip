@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/04/16 22:28:41 xtraeme Exp $
+$NetBSD: patch-af,v 1.2 2004/04/16 23:36:28 xtraeme Exp $
 
 --- Makefile.orig	2004-04-16 22:31:22.000000000 +0200
 +++ Makefile	2004-04-16 22:33:02.000000000 +0200
@@ -29,7 +29,7 @@ $NetBSD: patch-af,v 1.1.1.1 2004/04/16 22:28:41 xtraeme Exp $
  
  mupen64:	$(OBJ) $(OBJ_X86) $(OBJ_GTK_GUI)
 -		$(CC) $^ $(LIB) -Wl,-export-dynamic `gtk-config --libs` -L/usr/X11R6/lib -lSDL -lGL -lpthread -ldl -o $@
-+		$(CC) $^ $(LIB) @LDFLAGS@ `gtk-config --libs` -lSDL -lGL -o $@
++		$(CC) $^ $(LIB) @LDFLAGS@ `gtk-config --libs` `sdl-config --libs` -lGL -o $@
  		strip --strip-all $@
  
  mupen64_oldgui:	$(OBJ) $(OBJ_X86) main/main_gtk.o
