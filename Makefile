@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1169 2004/04/05 11:40:10 poppnk Exp $
-# $NetBSD: Makefile,v 1.1169 2004/04/05 11:40:10 poppnk Exp $
+# $Id: Makefile,v 1.1170 2004/04/05 12:31:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1170 2004/04/05 12:31:39 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -179,7 +179,6 @@ SUBDIR+=	giftui
 SUBDIR+=	gkrellm-launch
 SUBDIR+=	gkrellm-reminder
 SUBDIR+=	gl-117
-SUBDIR+=	glaxium
 SUBDIR+=	glib2-devel
 SUBDIR+=	glibc
 SUBDIR+=	glide3
