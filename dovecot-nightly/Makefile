@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/05 06:43:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/31 09:37:54 tomhensel Exp $
 
 DISTNAME=		dovecot-${_DOVECOT_VER}
 PKGNAME=		dovecot-nightly-${_DOVECOT_VER}
@@ -18,26 +18,22 @@ USE_LIBTOOL=		YES
 USE_PKGINSTALL= 	YES
 GNU_CONFIGURE=		YES
 
+.include "../../mk/bsd.prefs.mk"
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--localstatedir=/var \
-			--with-ssldir=${SSLCERTS}
+			--with-ssldir=${SSLCERTS} \
+			--without-shadow \
+			--with-passwd \
+			--without-passwd-file \
+			--without-bsdauth \
 
 WRKSRC=			${WRKDIR}/dovecot-0.99.11-test4
-
-.include "../../mk/bsd.prefs.mk"
 
 _DOVECOT_VER!=		${DATE} +%Y%m%d
 
 BUILD_DEFS+=		DOVECOT_USE_GNUTLS DOVECOT_USE_PGSQL	\
-			USE_INET6 USE_OPENLDAP USE_SASL2
-
-.if defined(DOVECOT_USE_MBOX) && !empty(DOVECOT_USE_MBOX:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--with-storages=mbox
-.elif defined(DOVECOT_USE_MAILDIR) && !empty(DOVECOT_USE_MAILDIR:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--with-storages=maildir
-.else
-CONFIGURE_ARGS+=	--with-storages=maildir,mbox
-.endif
+			USE_PAM USE_INET6 USE_OPENLDAP
 
 .if defined(USE_PAM) && !empty(USE_PAM:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-pam
@@ -52,11 +48,6 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .if !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-ldap
 .  include "../../databases/openldap/buildlink3.mk"
-.endif
-
-.if defined(USE_SASL2) && !empty(USE_SASL2:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--with-cyrus-sasl2
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
 .endif
 
 .if defined(DOVECOT_USE_POP3D) && !empty(DOVECOT_USE_POP3D:M[Yy][Ee][Ss])
@@ -90,11 +81,9 @@ EGDIR=		${PREFIX}/share/examples/dovecot
 CONF_FILES=	${EGDIR}/dovecot.conf.default ${PKG_SYSCONFDIR}/dovecot.conf
 
 post-configure:
-	@cd ${WRKSRC};							\
-	for ${FILE} in dovecot-example.conf; do				\
-		${SED} ${FILES_SUBST_SED} $$file > $$file.new;		\
-		${MV} -f $$file.new $$file;				\
-	done
+	@${SED} ${FILES_SUBST_SED} ${WRKSRC}/dovecot-example.conf	\
+		> ${WRKSRC}/dovecot-example.conf-new
+	${MV} -f ${WRKSRC}/dovecot-example.conf-new ${WRKSRC}/dovecot-example.conf
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
