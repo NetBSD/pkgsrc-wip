@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/02 10:49:01 cubidou Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/02 04:55:24 blef Exp $
 
 DISTNAME=	Class-Factory-Util-1.6
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-Factory-Util/
 COMMENT=	Perl module to help factory classes
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Class/Factory/Util/.packlist
 
 .include "../../lang/perl5/module.mk"

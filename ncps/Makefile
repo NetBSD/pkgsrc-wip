@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:32:52 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/02 04:48:44 blef Exp $
 
 DISTNAME=	ncps-0.55
 CATEGORIES=	sysutils
@@ -10,11 +10,11 @@ COMMENT=	ncurses based process-killer
 
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_NCURSES=		YES
 
 # It uses /proc...could be emulated, but not tested
 ONLY_FOR_PLATORM=	Linux-*-*
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

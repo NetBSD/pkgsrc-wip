@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/29 18:40:05 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/02 04:47:39 blef Exp $
 #
 
 DISTNAME=		ghostpcl_1.38p1
@@ -11,7 +11,7 @@ MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://www.artifex.com/downloads/
 COMMENT=		PCL-5 and PCL-XL interpreter
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 USE_GNU_TOOLS+=make
 ALL_TARGET=pcl6
@@ -28,5 +28,5 @@ do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/ghostpcl/fonts
 	${INSTALL_DATA} ${WRKSRC}/urwfonts/* ${PREFIX}/share/ghostpcl/fonts
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
