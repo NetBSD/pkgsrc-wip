@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/13 12:25:37 moubctez Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/19 17:53:28 thomasklausner Exp $
 #
 
 DISTNAME=	libtlen-20040112
@@ -9,7 +9,7 @@ MAINTAINER=	dotz@irc.pl
 HOMEPAGE=	http://www.libtlen.eu.org/
 COMMENT=	Library to access tlen.pl IM system
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
