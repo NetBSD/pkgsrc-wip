@@ -1,22 +1,43 @@
-$NetBSD: patch-ah,v 1.1 2004/02/15 13:29:13 shattered Exp $
+$NetBSD: patch-ah,v 1.2 2004/07/22 18:04:42 shattered Exp $
 
---- scite/gtk/makefile.orig	2003-12-24 02:44:58.000000000 +0300
+--- scite/gtk/makefile.orig	2004-05-09 12:11:22.000000000 +0400
 +++ scite/gtk/makefile
-@@ -48,7 +48,7 @@ vpath %.cxx ../src
+@@ -45,7 +45,7 @@ pixmapdir=$(datadir)/pixmaps
+ bindir=$(prefix)/bin
+ SYSCONF_PATH=$(prefix)/share/scite
+ 
+-INSTALL=install -o root -g root
++INSTALL=install -o 0 -g 0 -c
+ 
+ PROG	= ../bin/SciTE
+ 
+@@ -56,7 +56,7 @@ vpath %.cxx ../src
  
  #CXXFLAGS= -g -DGTK -DSCI_LEXER -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" -Wwrite-strings
  INCLUDEDIRS=-I ../../scintilla/include -I ../src
--CXXBASEFLAGS=-W -Wall -DGTK -DSCI_LEXER -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" $(INCLUDEDIRS)
-+CXXBASEFLAGS=-W -Wall -DGTK -DSCI_LEXER -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" $(CPPFLAGS) $(INCLUDEDIRS)
+-CXXBASEFLAGS=-W -Wall -DGTK -DSCI_LEXER -DPIXMAP_PATH=\"$(pixmapdir)\" -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" $(INCLUDEDIRS)
++CXXBASEFLAGS=-W -Wall -DGTK -DSCI_LEXER -DPIXMAP_PATH=\"$(pixmapdir)\" -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" $(CPPFLAGS) $(INCLUDEDIRS)
  
  ifdef DEBUG
- CXXFLAGS=-DDEBUG -g $(CXXBASEFLAGS)
-@@ -76,7 +76,7 @@ COMPLIB=../../scintilla/bin/scintilla.a
- 
+ CXXTFLAGS=-DDEBUG -g $(CXXBASEFLAGS)
+@@ -103,7 +103,7 @@ COMPLIB=../../scintilla/bin/scintilla.a
  $(PROG): SciTEGTK.o SciTEBase.o SciTEBuffers.o SciTEIO.o Exporters.o \
- MultiplexExtension.o DirectorExtension.o SciTEProps.o Utf8_16.o $(COMPLIB)
--	$(CC) `$(CONFIGLIB)` `glib-config --libs gthread` -DGTK $^ -o $@
-+	$(CC) -L/usr/lib `$(CONFIGLIB)` -liconv $^ -o $@
+ MultiplexExtension.o DirectorExtension.o SciTEProps.o Utf8_16.o \
+ 	$(COMPLIB) $(LUA_OBJS)
+-	$(CC) `$(CONFIGLIB)` `$(CONFIGTHREADS)` -DGTK $^ -o $@
++	$(CC) -L/usr/lib `$(CONFIGLIB)` `$(CONFIGTHREADS)` -DGTK $^ -o $@
  
  # Automatically generate header dependencies with "make deps"
  include deps.mak
+@@ -123,9 +123,9 @@ install:
+ 
+ ifdef gnomeprefix
+ ifndef GTK2
+-	$(INSTALL) -m 644 -D SciTE.desktop $(DESTDIR)$(datadir)/gnome/apps/Applications/SciTE.desktop
++	$(INSTALL) -m 644 SciTE.desktop $(DESTDIR)$(datadir)/gnome/apps/Applications/SciTE.desktop
+ endif
+-	$(INSTALL) -m 644 -D Sci48M.png $(DESTDIR)$(pixmapdir)/Sci48M.png
++	$(INSTALL) -m 644 Sci48M.png $(DESTDIR)$(pixmapdir)/Sci48M.png
+ endif
+ 
+ uninstall:
