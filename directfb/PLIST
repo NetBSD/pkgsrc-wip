@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/14 05:29:56 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/03 02:45:28 xtraeme Exp $
 bin/dfbdump
 bin/dfbg
 bin/dfbinfo
@@ -13,6 +13,7 @@ include/directfb-internal/core/coredefs.h
 include/directfb-internal/core/coretypes.h
 include/directfb-internal/core/fonts.h
 include/directfb-internal/core/fusion/arena.h
+include/directfb-internal/core/fusion/call.h
 include/directfb-internal/core/fusion/fusion.h
 include/directfb-internal/core/fusion/fusion_types.h
 include/directfb-internal/core/fusion/list.h
@@ -37,7 +38,6 @@ include/directfb-internal/core/system.h
 include/directfb-internal/core/thread.h
 include/directfb-internal/core/windows.h
 include/directfb-internal/directfb_internals.h
-include/directfb-internal/directfb_version.h
 include/directfb-internal/display/idirectfbdisplaylayer.h
 include/directfb-internal/display/idirectfbpalette.h
 include/directfb-internal/display/idirectfbsurface.h
@@ -67,6 +67,7 @@ include/directfb/dfb_types.h
 include/directfb/directfb.h
 include/directfb/directfb_keyboard.h
 include/directfb/directfb_keynames.h
+include/directfb/directfb_version.h
 lib/${PKGNAME}/interfaces/IDirectFBFont/libidirectfbfont_default.la
 lib/${PKGNAME}/interfaces/IDirectFBFont/libidirectfbfont_default.so
 lib/${PKGNAME}/interfaces/IDirectFBFont/libidirectfbfont_ft2.la
@@ -80,8 +81,8 @@ lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_mpeg2
 lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_png.la
 lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_png.so
 lib/libdirectfb-0.9.so
-lib/libdirectfb-0.9.so.17
-lib/libdirectfb-0.9.so.17.0
+lib/libdirectfb-0.9.so.18
+lib/libdirectfb-0.9.so.18.0
 lib/libdirectfb.la
 lib/libdirectfb.so
 lib/pkgconfig/directfb-internal.pc
