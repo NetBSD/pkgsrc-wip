@@ -1,4 +1,0 @@
-$NetBSD: distinfo,v 1.1 2004/02/25 13:29:25 johnrshannon Exp $
-
-SHA1 (libgcrypt-1.1.92.tar.gz) = 30bbc674bf965ca29142074c5cf4cdd80a0a7ea1
-Size (libgcrypt-1.1.92.tar.gz) = 847112 bytes
