@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/02 21:43:38 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/09 05:42:33 minskim Exp $
 #
 
 DISTNAME=	SWF-File-0.22
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/SWF-File/
 COMMENT=	Manipulating Flash movie (SWF) files
 
-DEPENDS+=       p5-Data-TemporaryBag-[0-9]*:../../wip/p5-Data-TemporaryBag
+DEPENDS+=       p5-Data-TemporaryBag-[0-9]*:../../devel/p5-Data-TemporaryBag
 
 USE_BUILDLINK3=		yes
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SWF/File/.packlist
