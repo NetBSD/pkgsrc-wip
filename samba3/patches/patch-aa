@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2003/12/30 20:15:16 cjep Exp $
---- script/installbin.sh.orig	2003-11-10 16:44:40.000000000 +0000
-+++ script/installbin.sh	2003-11-10 16:46:09.000000000 +0000
-@@ -14,26 +14,23 @@
+$NetBSD: patch-aa,v 1.5 2004/01/11 01:12:01 jeremy-c-reed Exp $
+
+--- script/installbin.sh.orig	Fri Oct 10 11:08:36 2003
++++ script/installbin.sh
+@@ -16,29 +16,26 @@ shift
  for p in $*; do
   p2=`basename $p`
   echo Installing $p as $BINDIR/$p2
@@ -16,13 +17,18 @@ $NetBSD: patch-aa,v 1.4 2003/12/30 20:15:16 cjep Exp $
   cp $p $BINDIR/
   chmod $INSTALLPERMS $BINDIR/$p2
  
-- # this is a special case, mount needs this in a specific location
+  # this is a special case, mount needs this in a specific location
 - if [ $p2 = smbmount ]; then
--   ln -sf $BINDIR/$p2 /sbin/mount.smbfs
+-   if [ ! -d $DESTDIR/sbin ]; then
+-      mkdir $DESTDIR/sbin
+-   fi 
+-   ln -sf $BINDIR/$p2 $DESTDIR/sbin/mount.smbfs
 - fi
-+# this is a special case, mount needs this in a specific location
 +# if [ $p2 = smbmount ]; then
-+#   ln -sf $BINDIR/$p2 /sbin/mount.smbfs
++#   if [ ! -d $DESTDIR/sbin ]; then
++#      mkdir $DESTDIR/sbin
++#   fi 
++#   ln -sf $BINDIR/$p2 $DESTDIR/sbin/mount.smbfs
 +# fi
  done
  
