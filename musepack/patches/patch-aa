@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/13 18:57:19 bencollver Exp $
+
+--- Makefile.bsd.orig	2004-03-17 14:17:54.000000000 -0800
++++ Makefile.bsd
+@@ -5,16 +5,17 @@
+ 
+ CC       = cc
+ RM_F     = rm -f
+-LDADD    = -lm `esd-config --libs`
++LDADD	= -lm ${LIBOSSAUDIO}
++#LDADD    = -lm `esd-config --libs`
+ #LDADD  += -lesd
+ #LDADD  += -lossaudio
+ 
+ include version
+-OPTIM    = -O3 -march=pentiumpro -ffast-math -s
++#OPTIM    = -O3 -march=pentiumpro -ffast-math -s
+ 
+ WARN     =
+ 
+-CFLAGS   = $(OPTIM) $(WARN) -DMPPDEC_VERSION=\"$(MPPDEC_VERSION)\" -DMPP_DECODER `esd-config --cflags`
++CFLAGS   = $(OPTIM) $(WARN) -DMPPDEC_VERSION=\"$(MPPDEC_VERSION)\" -DMPP_DECODER
+ 
+ TARGETS  = mppdec
+ 
+@@ -91,4 +92,4 @@ mrproper:
+ 
+ install:
+ 	@strip mppdec
+-	@cp mppdec /usr/local/bin
++	@cp mppdec ${PREFIX}/bin

@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/13 18:57:19 bencollver Exp $
+bin/mppdec

@@ -1,0 +1,2 @@
+* this supports SunOS, IRIX, and Windows.  However, the pkgsrc-wip build
+  will probably only work on BSD and Linux.  Fix this.
