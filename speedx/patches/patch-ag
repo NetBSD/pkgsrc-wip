@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1 2003/06/03 02:29:38 blef Exp $
+
+--- README.orig	Mon Jun  2 19:21:28 2003
++++ README	Mon Jun  2 19:20:57 2003
+@@ -86,7 +86,10 @@
+   8
+ 4   6 (On the Numeric Keypad)
+   2
+-
++or if you don't have a keypad:
++  i
++j   l
++  k
+ 
+ The screen :
+ The first  line is the speed.
