@@ -1,0 +1,5 @@
+binutils (GNU binary development tools)
+
+Binutils is a collection of binary utilities.  It includes "as" (the 
+portable GNU assembler), "ld" (the GNU linker), and other utilities
+for creating and working with binary programs.
