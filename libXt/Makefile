@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/28 05:20:59 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/28 10:18:14 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXt-6.0-jcr3
@@ -14,6 +14,12 @@ MAINTAINER=		reed@reedmedia.net
 COMMENT=		X Toolkit Intrinsics library
 
 CONFLICTS+=		XFree86-libs-[0-9]*
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !exists(${X11BASE}/bin/makestrs) && !exists(/usr/bin/makestrs)
+BUILD_DEPENDS+=		imake-[0-9]*:../../wip/imake
+.endif
 
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
