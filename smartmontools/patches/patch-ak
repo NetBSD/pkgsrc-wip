@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1 2004/07/13 20:20:41 shattered Exp $
+
+Official post-5.32 patch.
+
+--- configure.orig	2004-07-05 12:10:34.000000000 +0400
++++ configure
+@@ -4872,7 +4872,7 @@ _ACEOF
+ 
+ 		os_libs=''
+  ;;
+-	pc-*-solaris*)
++	*-pc-solaris*)
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define DEFAULT_MAILER "mailx"
