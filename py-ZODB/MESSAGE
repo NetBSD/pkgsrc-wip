@@ -1,10 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/11/20 04:10:26 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.2 2003/11/20 04:20:35 mpasternak Exp $
 
-To start-up, run:
-   ${PREFIX}/bin/mkzeoinst.py
-   
-then:
-  ${PREFIX}/bin/runzeo.py
+To start the server, bound to port 9999:
+
+	${PREFIX}/bin/runzeo.py -f DBNAME -a 9999
 
 ===========================================================================
