@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/16 03:38:22 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/22 20:50:16 rillig Exp $
 #
 
 DISTNAME=		aget-0.4
@@ -14,6 +14,11 @@ USE_BUILDLINK2=		yes
 PTHREAD_OPTS+=          require
 
 .include "../../mk/pthread.buildlink2.mk"
+
+.if ${OPSYS} == "SunOS"
+post-configure:
+	(cd ${WRKDIR}/${DISTNAME} && ${MV} Makefile.Solaris Makefile)
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/aget ${PREFIX}/bin/aget
