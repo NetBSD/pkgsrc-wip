@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/08/08 14:50:34 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/10/13 16:15:43 adrian_p Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
@@ -17,30 +17,6 @@ bin/replace
 bin/resolve_stack_dump
 bin/resolveip
 etc/rc.d/mysqld
-include/mysql/errmsg.h
-include/mysql/m_ctype.h
-include/mysql/m_string.h
-include/mysql/my_alloc.h
-include/mysql/my_config.h
-include/mysql/my_dbug.h
-include/mysql/my_dir.h
-include/mysql/my_getopt.h
-include/mysql/my_global.h
-include/mysql/my_list.h
-include/mysql/my_net.h
-include/mysql/my_no_pthread.h
-include/mysql/my_pthread.h
-include/mysql/my_semaphore.h
-include/mysql/my_sys.h
-include/mysql/mysql.h
-include/mysql/mysql_com.h
-include/mysql/mysql_embed.h
-include/mysql/mysql_version.h
-include/mysql/mysqld_error.h
-include/mysql/raid.h
-include/mysql/sslopt-case.h
-include/mysql/sslopt-longopts.h
-include/mysql/sslopt-vars.h
 lib/mysql/libdbug.a
 lib/mysql/libheap.a
 lib/mysql/libmerge.a
@@ -52,12 +28,6 @@ lib/mysql/libnisam.a
 lib/mysql/libvio.a
 libexec/mysqld
 man/man1/mysqld.1
-man/man1/mysqld_safe.1
-share/mysql/Description.plist
-share/mysql/Info.plist
-share/mysql/MySQL-shared-compat.spec
-share/mysql/StartupParameters.plist
-share/mysql/binary-configure
 share/mysql/charsets/Index
 share/mysql/charsets/README
 share/mysql/charsets/cp1251.conf
@@ -108,12 +78,6 @@ share/mysql/korean/errmsg.sys
 share/mysql/korean/errmsg.txt
 share/mysql/mi_test_all
 share/mysql/mi_test_all.res
-share/mysql/my-huge.cnf
-share/mysql/my-large.cnf
-share/mysql/my-medium.cnf
-share/mysql/my-small.cnf
-share/mysql/mysql-${PKGVERSION}.spec
-share/mysql/mysql-log-rotate
 share/mysql/mysql.server
 share/mysql/norwegian-ny/errmsg.sys
 share/mysql/norwegian-ny/errmsg.txt
@@ -123,8 +87,6 @@ share/mysql/polish/errmsg.sys
 share/mysql/polish/errmsg.txt
 share/mysql/portuguese/errmsg.sys
 share/mysql/portuguese/errmsg.txt
-share/mysql/postinstall
-share/mysql/preinstall
 share/mysql/romanian/errmsg.sys
 share/mysql/romanian/errmsg.txt
 share/mysql/russian/errmsg.sys
@@ -160,6 +122,3 @@ share/mysql/ukrainian/errmsg.txt
 @dirrm share/mysql/danish
 @dirrm share/mysql/czech
 @dirrm share/mysql/charsets
-@dirrm share/mysql
-@dirrm lib/mysql
-@dirrm include/mysql
