@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 18:17:39 daprice Exp $
+gde/bin/Consto01mask
+gde/bin/DotPlotTool
+gde/bin/MakeCons
+gde/bin/PrintStrat
+gde/bin/Translate
+gde/bin/crna
+gde/bin/gde
+gde/bin/heapsortHGL
+gde/bin/lrna
+gde/bin/mapview
+gde/db/HCVCG.fasta
+gde/db/HIV1POLDNA.fasta
+gde/db/structprot.fasta
+gde/doc/GDE2.0_manual.ps
+gde/doc/GDEtutorial-setup.pdf
+gde/scripts/.GDEmenus
+gde/scripts/ZUKERGDE.sh
+gde/scripts/fasta2VESPA.pl
+gde/scripts/fasta2snap.pl
+gde/scripts/installBLASTDB.pl
+gde/scripts/installBLASTDBPROT.pl
+gde/scripts/newDATASET.pl
+gde/scripts/newURL.pl
+@dirrm gde/scripts
+@dirrm gde/doc
+@dirrm gde/db
+@dirrm gde/bin
+@dirrm gde

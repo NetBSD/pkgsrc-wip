@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/02/25 18:17:39 daprice Exp $
+
+--- HGL_SRC/HGLfuncs.c.orig	2002-02-01 10:40:01.000000000 -0700
++++ HGL_SRC/HGLfuncs.c
+@@ -2807,7 +2807,7 @@ Sequence *seq_set;
+ }
+ 
+ 
+-heapsort(seq_set, seq_size, Pkey, Skey, order)
++heapsort_new(seq_set, seq_size, Pkey, Skey, order)
+ int seq_size, **order;
+ char Pkey[], Skey[]; 
+ Sequence *seq_set;

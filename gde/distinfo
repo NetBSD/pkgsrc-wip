@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/25 18:17:39 daprice Exp $
+
+SHA1 (GDElinux.tar.gz) = 3e12b1cdcd24d58df61c8cb1aa638b5890a7a5f2
+Size (GDElinux.tar.gz) = 5770919 bytes
+SHA1 (patch-aa) = e8406eec692d3b1c6642a9454883e782fa469cbb
+SHA1 (patch-ab) = d31f3bbb7aff83e9263989d5ae2ce854c0c375b3
+SHA1 (patch-ac) = ed06ef5fccaa861b152ccfaa69477974948d2a51
+SHA1 (patch-ad) = 450735e5ce21f393102d1902ac639e02d9bb0589
+SHA1 (patch-ae) = 78e46d6eb7d8fa848d09de19e36d9a46280cd23c
+SHA1 (patch-af) = b948a1b5b0bf2fa69eee97f05948bc80e0ee6077

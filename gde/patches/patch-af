@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/02/25 18:17:39 daprice Exp $
+
+--- CORE/Makefile.orig	2002-02-01 10:39:57.000000000 -0700
++++ CORE/Makefile
+@@ -5,8 +5,8 @@ SRCS= ParseMenu.c main.c BasicDisplay.c 
+ DrawNA.c Free.c BuiltIn.c Edit.c Genbank.c Scroll.c ChooseFile.c \
+ CutCopyPaste.c HGLfile.c
+ 
+-LIBS= -lm -lxview -lolgx -lX11
+-CFLAGS= -g -L/usr/openwin/lib -I/usr/openwin/include
++LIBS= -lm -lxview -lolgx -lX11 -lgnumalloc
++CFLAGS= -g -L/usr/openwin/lib -Wl,-R$(PREFIX)/lib -Wl,-R$(X11BASE)/lib -I$(PREFIX)/include -I/usr/openwin/include
+ CC = cc
+ #	Possible defines, SUN4 SGI DEC HGL
+ DEFINES =  -DLINUX

@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/02/25 18:17:39 daprice Exp $
+
+--- HGL_SRC/MAP_ChooseFile.c.orig	2002-02-01 10:40:01.000000000 -0700
++++ HGL_SRC/MAP_ChooseFile.c
+@@ -16,6 +16,7 @@ Woese.
+ **  will be shown.
+ */
+ 
++#include <stdio.h>
+ #include <sys/types.h>
+ #include <dirent.h>
+ #include <xview/textsw.h>
