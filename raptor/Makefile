@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/28 01:34:17 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/27 22:30:59 xtraeme Exp $
 #
 
 DISTNAME=	raptor-0.9.10
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.redland.opensource.ac.uk/dist/source/
 
 MAINTAINER=	jrp@hispabsd.org
-HOMEPAGE=	http://www.redland.opensource.ac.uk/dist/source/
+HOMEPAGE=	http://www.redland.opensource.ac.uk/raptor/
 COMMENT=	RDF Parser Toolkit written in C
 
 USE_BUILDLINK2=		yes
