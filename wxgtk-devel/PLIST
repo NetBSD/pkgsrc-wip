@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/25 17:12:28 marc Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/26 18:44:06 marc Exp $
 bin/wx-config
 bin/wxgtk${GTKVER}${UNICODE}-2.5-config
 include/wx/accel.h
@@ -405,6 +405,7 @@ lib/libwx_gtk${GTKVER}${UNICODE}_adv-2.5.so
 lib/libwx_gtk${GTKVER}${UNICODE}_core-2.5.so
 lib/libwx_gtk${GTKVER}${UNICODE}_gl-2.5.so
 lib/libwx_gtk${GTKVER}${UNICODE}_html-2.5.so
+${WXREGEX}lib/libwxregex${UNICODE}.a
 lib/wx/include/gtk${GTKVER}${UNICODE}-2.5/wx/setup.h
 share/aclocal/wxwin.m4
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/wxstd.mo
