@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1186 2004/04/11 18:03:42 jmmv Exp $
-# $NetBSD: Makefile,v 1.1186 2004/04/11 18:03:42 jmmv Exp $
+# $Id: Makefile,v 1.1187 2004/04/11 23:19:57 blef Exp $
+# $NetBSD: Makefile,v 1.1187 2004/04/11 23:19:57 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -178,7 +178,6 @@ SUBDIR+=	giftcurs
 SUBDIR+=	giftui
 SUBDIR+=	gkrellm-launch
 SUBDIR+=	gkrellm-reminder
-SUBDIR+=	gl-117
 SUBDIR+=	glade2-nognome
 SUBDIR+=	glib2-devel
 SUBDIR+=	glibc
@@ -336,7 +335,6 @@ SUBDIR+=	libuuid
 SUBDIR+=	libvorbis-nightly
 SUBDIR+=	libwpd
 SUBDIR+=	libxml++
-SUBDIR+=	liferea
 SUBDIR+=	lilo
 SUBDIR+=	lilypond20
 SUBDIR+=	lincvs
