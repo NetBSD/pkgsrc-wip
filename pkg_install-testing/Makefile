@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/02 05:57:35 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/22 19:56:24 jeremy-c-reed Exp $
 
 # Notes to package maintainers:
 #
@@ -50,9 +50,11 @@ PLIST_SUBST+=		PKG_TOOLS_BIN=${PKG_TOOLS_BIN}
 LIBNBCOMPAT_FILESDIR=	${.CURDIR}/../../pkgtools/libnbcompat/files
 LIBNBCOMPAT_SRCDIR=	${WRKDIR}/libnbcompat
 
-CFLAGS+=		-I${LIBNBCOMPAT_SRCDIR}
+CPPFLAGS+=		-I${LIBNBCOMPAT_SRCDIR}
 LDFLAGS+=		-L${LIBNBCOMPAT_SRCDIR}
 LIBS+=			-lnbcompat
+
+CPPFLAGS+=		-DDEF_UMASK=${DEF_UMASK}
 
 MAKE_ENV+=		MACHINE_ARCH="${MACHINE_ARCH}"
 MAKE_ENV+=		OPSYS="${OPSYS}"
@@ -73,9 +75,8 @@ do-extract:
 	@${CP} -Rp ${FILESDIR} ${WRKSRC}
 
 pre-configure:
-	cd ${LIBNBCOMPAT_SRCDIR} && ${SETENV}				\
-		CC="${CC}" CPPFLAGS="${CPPFLAGS:M*}" ./configure &&	\
-		${MAKE_PROGRAM}
+	@cd ${LIBNBCOMPAT_SRCDIR} && ${SETENV} ${CONFIGURE_ENV:NLIBS=*}	\
+		CC="${CC}" CPPFLAGS=${CPPFLAGS:Q} ./configure && ${MAKE_PROGRAM}
 
 post-install:
 	if [ ! -f ${PKG_DBDIR}/pkgdb.byfile.db ]; then			\

@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.1.1.1 2004/04/02 05:58:07 jeremy-c-reed Exp $ */
+/* $NetBSD: lib.h,v 1.2 2004/05/22 19:56:27 jeremy-c-reed Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -80,6 +80,10 @@
 
 #ifndef OPSYS_NAME
 #define OPSYS_NAME "NetBSD"
+#endif
+
+#ifndef DEF_UMASK
+#define DEF_UMASK 022
 #endif
 
 /* Usually "rm", but often "echo" during debugging! */
@@ -194,7 +198,8 @@ typedef enum bi_ent_t {
 	BI_OPSYS,		/*  0 */
 	BI_OS_VERSION,		/*  1 */
 	BI_MACHINE_ARCH,	/*  2 */
-	BI_ENUM_COUNT,		/*  3 */
+	BI_IGNORE_RECOMMENDED,	/*  3 */
+	BI_ENUM_COUNT,		/*  4 */
 }	bi_ent_t;
 
 /* Types */

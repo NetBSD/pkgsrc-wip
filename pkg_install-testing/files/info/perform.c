@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.1.1.1 2004/04/02 05:58:23 jeremy-c-reed Exp $	*/
+/*	$NetBSD: perform.c,v 1.2 2004/05/22 19:56:26 jeremy-c-reed Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.1.1.1 2004/04/02 05:58:23 jeremy-c-reed Exp $");
+__RCSID("$NetBSD: perform.c,v 1.2 2004/05/22 19:56:26 jeremy-c-reed Exp $");
 #endif
 #endif
 
@@ -171,6 +171,8 @@ pkg_do(char *pkg)
 
 		(void) snprintf(tmp, sizeof(tmp), "%-19s ", pkg);
 		show_index(tmp, COMMENT_FNAME);
+	} else if (Flags & SHOW_BI_VAR) {
+		show_var(BUILD_INFO_FNAME, BuildInfoVariable);
 	} else {
 		FILE   *fp;
 		package_t plist;

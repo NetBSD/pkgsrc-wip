@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.1.1.1 2004/04/02 05:57:59 jeremy-c-reed Exp $
+.\" $NetBSD: pkg_add.1,v 1.2 2004/05/22 19:56:25 jeremy-c-reed Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -392,6 +392,18 @@ that of the host, installation is aborted.
 This behavior is overridable with the
 .Fl f
 flag.
+.It
+The package build information from
+.Pa +BUILD_INFO
+is then checked for
+.Ev IGNORE_RECOMMENDED .
+If the package was built with dependency recommendations ignored,
+installation will be aborted.
+This behavior is overridable with the
+.Fl f
+flag and the
+.Ev PKG_IGNORE_RECOMMENDED
+environment variable.
 .It
 If the package contains a
 .Ar require

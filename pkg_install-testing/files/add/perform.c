@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.1.1.1 2004/04/02 05:57:58 jeremy-c-reed Exp $	*/
+/*	$NetBSD: perform.c,v 1.2 2004/05/22 19:56:25 jeremy-c-reed Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.1.1.1 2004/04/02 05:57:58 jeremy-c-reed Exp $");
+__RCSID("$NetBSD: perform.c,v 1.2 2004/05/22 19:56:25 jeremy-c-reed Exp $");
 #endif
 #endif
 
@@ -50,6 +50,9 @@ __RCSID("$NetBSD: perform.c,v 1.1.1.1 2004/04/02 05:57:58 jeremy-c-reed Exp $");
 #endif
 #if HAVE_STRING_H
 #include <string.h>
+#endif
+#if HAVE_STDLIB_H
+#include <stdlib.h>
 #endif
 #if HAVE_SYS_UTSNAME_H
 #include <sys/utsname.h>
@@ -142,7 +145,10 @@ pkg_do(const char *pkg)
 	zapLogDir = 0;
 	LogDir[0] = '\0';
 	strlcpy(playpen, FirstPen, sizeof(playpen));
+	memset(buildinfo, '\0', sizeof(buildinfo));
 	inPlace = 0;
+
+	umask(DEF_UMASK);
 
 	/* Are we coming in for a second pass, everything already extracted?
 	 * (Slave mode) */
@@ -330,6 +336,23 @@ pkg_do(const char *pkg)
 		}
 	}
 
+	/* Check if IGNORE_RECOMMENDED was set when this package was built. */
+
+	if (buildinfo[BI_IGNORE_RECOMMENDED] != NULL &&
+	    strcasecmp(buildinfo[BI_IGNORE_RECOMMENDED], "NO") != 0) {
+		warnx("Package `%s' has", pkg);
+		warnx("IGNORE_RECOMMENDED set: This package was built with");
+		warnx("dependency recommendations ignored.  It may have been");
+		warnx("built against a set of installed packages that is");
+		warnx("different from the recommended set of pre-requisites.");
+		warnx("As a consequence, this package may not work on this");
+		warnx("or other systems with a different set of packages.");
+		if (!Force && !getenv("PKG_IGNORE_RECOMMENDED")) {
+			    warnx("aborting.");
+			    goto bomb;
+		}
+	}
+
 	/*
          * If we have a prefix, delete the first one we see and add this
          * one in place of it.
@@ -361,7 +384,7 @@ pkg_do(const char *pkg)
 
 	/* make sure dbdir actually exists! */
 	if (!(isdir(dbdir) || islinktodir(dbdir))) {
-		if (fexec("mkdir", "-m", "755", "-p", dbdir, NULL)) {
+		if (fexec("mkdir", "-p", dbdir, NULL)) {
 			errx(EXIT_FAILURE,
 			    "Database-dir %s cannot be generated, aborting.",
 			    dbdir);
@@ -1099,7 +1122,10 @@ read_buildinfo(char **buildinfo)
 		if (line[0] == ' ')
 			line += sizeof(char);
 
-		/* we only care about opsys, arch and version */
+		/*
+		 * we only care about opsys, arch, version, and
+		 * dependency recommendations
+		 */
 		if (line[0] != '\0') {
 			if (strcmp(key, "OPSYS") == 0)
 			    buildinfo[BI_OPSYS] = strdup(line);
@@ -1107,6 +1133,8 @@ read_buildinfo(char **buildinfo)
 			    buildinfo[BI_OS_VERSION] = strdup(line);
 			else if (strcmp(key, "MACHINE_ARCH") == 0)
 			    buildinfo[BI_MACHINE_ARCH] = strdup(line);
+			else if (strcmp(key, "IGNORE_RECOMMENDED") == 0)
+			    buildinfo[BI_IGNORE_RECOMMENDED] = strdup(line);
 		}
 	}
 	if (buildinfo[BI_OPSYS] == NULL ||
