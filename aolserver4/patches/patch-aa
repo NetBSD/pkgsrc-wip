@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1 2004/06/08 20:53:37 ianharding Exp $
+
+--- include/Makefile.global.in.orig	2003-06-03 12:08:20.000000000 +0000
++++ include/Makefile.global.in
+@@ -40,6 +40,7 @@
+ AOLSERVER	= @AOLSERVER@
+ srcdir		= @SRCDIR@
+ 
++CP		= /bin/cp
+ RM           	= /bin/rm -f
+ MKDIR		= /bin/mkdir -p
+ 
+@@ -72,7 +73,7 @@ CFLAGS		+= @CFLAGS_DEFAULT@ $(CFLAGS_WAR
+ ifndef NSBUILD
+     LDFLAGS	+= -L$(AOLSERVER)/lib
+     LIBS	+= -lnsthread -lnsd
+-    INCDIR	= $(AOLSERVER)/include
++    INCDIR	= $(AOLSERVER)/include/nsd/include
+ else
+     LDFLAGS	+= -L../nsthread -L../nsd
+     INCDIR	= ../include
+@@ -92,9 +93,9 @@ CCLIBS		= $(LIBS) @TCL_LD_FLAGS@
+ # Install directories
+ INSTBIN		= $(AOLSERVER)/bin
+ INSTLIB		= $(AOLSERVER)/lib
+-INSTMOD		= $(AOLSERVER)/modules
+-INSTTCL		= $(AOLSERVER)/modules/tcl
+-INSTSRV		= $(AOLSERVER)/servers/server1
++INSTMOD		= $(AOLSERVER)/share/nsd/modules
++INSTTCL		= $(AOLSERVER)/share/nsd/modules/tcl
++INSTSRV		= $(AOLSERVER)/share/nsd/servers/server1
+ INSTSRVMOD	= $(INSTSRV)/modules
+ INSTSRVPAG	= $(INSTSRV)/pages
+ 

@@ -1,0 +1,87 @@
+$NetBSD: patch-ac,v 1.1 2004/06/08 20:53:37 ianharding Exp $
+
+--- sample-config.tcl.orig	2003-08-08 14:52:17.000000000 +0000
++++ sample-config.tcl
+@@ -52,16 +52,16 @@ set httpport               8000
+ set httpsport              8443
+ 
+ # The hostname and address should be set to actual values.
+-set hostname               [ns_info hostname]
+-set address                [ns_info address]
++set hostname               localhost
++set address                127.0.0.1
+ 
+ set servername             "server1"
+ set serverdesc             "Server Name"
+ 
+-set homedir                [file dirname [ns_info config]]
+-set bindir                 [file dirname [ns_info nsd]]
++set homedir                /usr/pkg
++set bindir                 ${homedir}/bin
+ 
+-set pageroot               ${homedir}/servers/${servername}/pages
++set pageroot               ${homedir}/share/nsd/servers/${servername}/pages
+ set directoryfile          index.adp,index.html,index.htm,index.xhtml,index.xht
+ 
+ # nsssl: Only loads if keyfile.pem and certfile.pem exist.
+@@ -90,7 +90,8 @@ ns_param  URLCharset     iso8859-1    ;#
+                                        # is performed.
+ #ns_param  PreferredCharsets { utf-8 iso8859-1 } ;# This parameter supports output
+                                        # encoding arbitration.
+-
++ns_param pidfile	"/var/run/nsd/${servername}.pid"
++ns_param serverlog	"/var/log/nsd/${servername}.log"
+ #
+ # MIME types.
+ #
+@@ -202,6 +203,27 @@ ns_param   enabledebug     false     ;# 
+ # ADP special pages
+ #ns_param   errorpage      ${pageroot}/errorpage.adp ;# ADP error page.
+ 
++# Database drivers
++#
++# Uncomment these sections to use nspostgres to 
++# access Postgresql databases.
++
++#ns_section "ns/db/drivers"
++#ns_param        pgsql   nspostgres.so
++
++#ns_section "ns/db/pools"
++#ns_param        pgpool  postgres_pool
++ 
++#ns_section "ns/db/pool/pgpool"
++#ns_param        driver  pgsql
++#ns_param        datasource      localhost:5432:database
++#ns_param        user            user
++#ns_param        password        password
++
++#ns_section "ns/server/${servername}/db"
++#ns_param        pools   * 
++#ns_param        defaultpool     pgpool
++  
+ 
+ #
+ # Socket driver module (HTTP)  -- nssock
+@@ -321,8 +343,10 @@ ns_param   rollonsignal    true      ;# 
+ ns_param   rollhour        0         ;# Time to roll log.
+ ns_param   maxbackup       5         ;# Max number to keep around when rolling.
+ ns_param   logreqtime      true      ;# Log the execution time of request
++ns_param   file		"/var/log/nsd/${servername}access.log"
+ 
+-
++ns_section "ns/server/${servername}/tcl"
++ns_param	library 	${homedir}/share/nsd/modules/tcl
+ #
+ # CGI interface -- nscgi
+ #
+@@ -342,7 +366,10 @@ ns_section "ns/server/${servername}/modu
+     ns_param nslog ${bindir}/nslog.so
+     #ns_param nscgi ${bindir}/nscgi.so
+     #ns_param nsperm ${bindir}/nsperm.so
++    
++    # Uncomment this line for database access.
+ 
++    #ns_param nsdb ${bindir}/nsdb.so
+ #
+ # nsssl: Only loads if sslcertfile and sslkeyfile exist (see above).
+ #
