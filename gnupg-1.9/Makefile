@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/20 21:01:28 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/20 22:32:50 johnrshannon Exp $
 #
 
 DISTNAME=		gnupg-1.9.11
@@ -25,6 +25,7 @@ USE_GNU_TOOLS+=         make
 CRYPTO=                 yes
 CONFIGURE_ARGS+=        --with-static-rnd=auto
 CONFIGURE_ARGS+=        --without-included-gettext
+CONFIGURE_ARGS+=	--disable-threads
 
 TEST_TARGET=            check
 
@@ -47,5 +48,4 @@ CONFIGURE_ARGS+=	--disable-nls
 .include "../../wip/pinentry/buildlink3.mk"
 .include "../../wip/dirmngr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/pth/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
