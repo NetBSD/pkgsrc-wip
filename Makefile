@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1247 2004/04/29 21:00:39 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1247 2004/04/29 21:00:39 xtraeme Exp $
+# $Id: Makefile,v 1.1248 2004/04/29 23:59:49 minskim Exp $
+# $NetBSD: Makefile,v 1.1248 2004/04/29 23:59:49 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -458,7 +458,6 @@ SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
-SUBDIR+=	p5-Text-Quoted
 SUBDIR+=	p5-Text-Tabs+Wrap
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-XML-Sablotron
