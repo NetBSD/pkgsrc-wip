@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.227 2003/06/05 06:39:26 bradv Exp $
-# $NetBSD: Makefile,v 1.227 2003/06/05 06:39:26 bradv Exp $
+# $Id: Makefile,v 1.228 2003/06/05 08:15:32 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.228 2003/06/05 08:15:32 marttikuparinen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -196,6 +196,7 @@ SUBDIR+=	xfce4
 SUBDIR+=	xfce4-desktop
 SUBDIR+=	xfce4-fm
 SUBDIR+=	xfce4-fm-icons
+SUBDIR+=	xfce4-gtk2-engines
 SUBDIR+=	xfce4-iconbox
 SUBDIR+=	xfce4-mcs-manager
 SUBDIR+=	xfce4-mcs-plugins
