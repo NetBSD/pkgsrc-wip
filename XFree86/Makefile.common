@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/07/25 18:25:20 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/07/25 19:10:37 blef Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -43,56 +43,6 @@ _XINCLUDE_DIRS=	include ${XBUILD_DIRS} ${XINCLUDE_DIRS}
 # Operating Systems to pass our compiler options (CC, CXX, CPP, CFLAGS)
 
 SYSTEMS=	NetBSD FreeBSD linux
-
-.if defined(FAKE_XFREE86_DEPS)
-
-.if !target(post-extract)
-post-extract:
-.for F in ${SYSTEMS}
-	@${MV} ${WRKSRC}/config/cf/${F}.cf \
-		${WRKSRC}/config/cf/${F}.cf.in
-.endfor
-.undef F
-
-.endif
-
-.if !target(pre-configure)
-pre-configure:
-.for F in ${SYSTEMS}
-	@${SED} -e "s|@@PKGSRC_CC@@|${CC}|g" \
-		-e "s|@@PKGSRC_CPP@@|${CPP}|g" \
-		-e "s|@@PKGSRC_CXX@@|${CXX}|g" \
-		-e "s|@@PKGSRC_CFLAGS@@|${CFLAGS}|g" \
-		${WRKSRC}/config/cf/${F}.cf.in > \
-		${WRKSRC}/config/cf/${F}.cf
-.endfor
-.undef F
-
-.endif
-
-.if !target(pre-build)
-pre-build:
-	@${TOUCH} ${WRKSRC}/config/cf/version.def
-	@${TOUCH} ${WRKSRC}/config/cf/date.def
-	@${CP} ${FILESDIR}/xf86site.def ${WRKSRC}/config/cf
-	@${SED} \
-		-e "s|PREFIX|${PREFIX}|g" \
-		-e "s|BLNK|${BUILDLINK_DIR}|g" \
-		-e "s|LOCALBASE|${LOCALBASE}|g " \
-		-e "s|LDFLAGS|${LDFLAGS}|g" \
-		${FILESDIR}/host.def > \
-		${WRKSRC}/config/cf/host.def
-.endif
-
-.if !target(do-build)
-do-build:
-	( cd ${WRKSRC} && ${MAKE} Makefile.boot && \
-	${MAKE} -f xmakefile VerifyOS version.def \
-		Makefiles includes )
-
-.endif
-
-.endif # ! FAKE_XFREE86_DEPS
 
 .if !defined(NO_XFREE86_TARGETS)
 
