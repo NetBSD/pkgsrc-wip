@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/02/19 22:21:11 shattered Exp $
+$NetBSD: patch-ac,v 1.2 2004/09/09 21:46:38 shattered Exp $
 
 --- src/Makefile.in.orig	2004-02-19 23:57:43.000000000 +0300
 +++ src/Makefile.in
-@@ -63,11 +63,7 @@ mkinstalldirs:
+@@ -63,11 +63,7 @@
  install: all mkinstalldirs
  	$(INSTALL) -d ${OOPS_SBINDIR}
  	$(INSTALL) oops ${OOPS_SBINDIR}

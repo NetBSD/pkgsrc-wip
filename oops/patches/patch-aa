@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/19 22:21:11 shattered Exp $
+$NetBSD: patch-aa,v 1.2 2004/09/09 21:46:38 shattered Exp $
 
 --- src/oops.c.orig	Mon Feb  4 10:22:07 2002
 +++ src/oops.c
-@@ -803,7 +803,7 @@ run:
+@@ -803,7 +803,7 @@
  
      if ( pidfile[0] != 0 && (pid_d == -1) ) {
  	char	pid[11];

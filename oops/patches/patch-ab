@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/02/19 22:21:11 shattered Exp $
+$NetBSD: patch-ab,v 1.2 2004/09/09 21:46:38 shattered Exp $
 
 --- configure.orig	2003-11-21 13:02:08.000000000 +0300
 +++ configure
-@@ -3991,7 +3991,6 @@ EOF
+@@ -3991,7 +3991,6 @@
  	fi
  fi
  
@@ -10,16 +10,13 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/02/19 22:21:11 shattered Exp $
  CXXCOMPFLAGS=-c
  CXXSOFLAGS=$SOFLAGS
  
-@@ -4028,6 +4027,20 @@ freebsd*) CFLAGS="$CFLAGS -D_REENTRANT -
+@@ -4028,6 +4027,17 @@
            esac
  	  RPATH_OPTION="-rpath"
  	  ;;
-+netbsd*)  CFLAGS="$CFLAGS -D_REENTRANT -DNETBSD -D_THREAD_SAFE"
-+	  CXX=g++
-+	  CXXSOFLAGS="-shared -Xlinker -Bstatic"
++netbsd*)  CFLAGS="$CFLAGS -D_REENTRANT -DNETBSD"
 +	  LIBS="$LDFLAGS -lpthread $LEXLIB $LIBS $LIBDB_PATH $LIBDB_NAME"
 +	  if test "$large_files" = "yes" ; then
-+		## NetBSD needs no special flags for 64bit files
 +		CFLAGS="$CFLAGS -DWITH_LARGE_FILES"
 +	  fi
 +	  if test "X$LIBGB_NAME" != "X" ; then
