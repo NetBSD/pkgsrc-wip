@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/27 21:58:01 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/29 14:56:41 jeremy-c-reed Exp $
 
 DISTNAME=		procps-3.0.5
 CATEGORIES=		sysutils
@@ -17,5 +17,5 @@ USE_GMAKE=		YES
 USE_BUILDLINK2=		YES
 MAKE_ENV+=		DESTDIR=${PREFIX}
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

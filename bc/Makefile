@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/27 21:58:00 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/29 14:56:41 jeremy-c-reed Exp $
 
 DISTNAME=	bc-1.06
 CATEGORIES=	math
@@ -19,6 +19,6 @@ INFO_FILES=	bc.info dc.info
 BUILD_DEPENDS+=	flex-[0-9]*:../../devel/flex
 .endif
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

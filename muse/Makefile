@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/09/27 22:28:20 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/29 14:56:41 jeremy-c-reed Exp $
 #
 
 DISTNAME=	MuSE-0.8.1
@@ -24,7 +24,7 @@ BUILD_DEFS+=	MUSE_USES_RUBIK
 .if defined(MUSE_USES_RUBIK) && !empty(MUSE_USES_RUBIK:M[yY][eE][sS])
 USE_NCURSES=    YES
 CONFIGURE_ARGS=	--with-rubik
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .endif
 
 CPPFLAGS=	-DDEVOSSAUDIO=\"\\\"${DEVOSSAUDIO}\\\"\"
