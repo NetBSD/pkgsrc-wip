@@ -1,0 +1,8 @@
+$Id: TODO,v 1.1.1.1 2003/12/29 14:41:05 mpasternak Exp $
+
+Achtung! This is _only_ a copycat of devel/atk, which buildlinks against
+glib2-devel package! If pkgsrc contains some generic mechanisms to choose a
+version of glib2 which the package is build agains, we could use them and
+integrate it in devel/atk
+
+	-- dotz@irc.pl

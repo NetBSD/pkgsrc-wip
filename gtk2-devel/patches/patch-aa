@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/29 14:41:05 mpasternak Exp $
+
+--- Makefile.in~	Mon Dec  8 17:39:54 2003
++++ Makefile.in	Mon Dec 29 14:00:49 2003
+@@ -287,7 +287,7 @@
+ target_alias = @target_alias@
+ 
+ SRC_SUBDIRS = gdk-pixbuf gdk gtk modules demos tests contrib
+-SUBDIRS = po $(SRC_SUBDIRS) docs build m4macros
++SUBDIRS = po $(SRC_SUBDIRS) build m4macros
+ 
+ # require automake 1.4
+ AUTOMAKE_OPTIONS = 1.7

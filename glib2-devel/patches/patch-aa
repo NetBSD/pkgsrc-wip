@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/29 14:41:07 mpasternak Exp $
+
+--- Makefile.in~	Mon Dec  8 18:05:43 2003
++++ Makefile.in	Mon Dec 29 12:27:54 2003
+@@ -229,7 +229,7 @@
+ 
+ AUTOMAKE_OPTIONS = 1.7
+ 
+-SUBDIRS = . m4macros glib gobject gmodule gthread tests build po docs
++SUBDIRS = . m4macros glib gobject gmodule gthread tests build po
+ 
+ bin_SCRIPTS = glib-gettextize
+ 

@@ -1,0 +1,9 @@
+$Id: TODO,v 1.1.1.1 2003/12/29 14:41:05 mpasternak Exp $
+
+Could it be patched so it doesn't conflict with devel/pango ?
+
+Is the PLIST okay?
+
+Does it compile on NetBSD-stable and NetBSD-current?
+
+	-- dotz@irc.pl
