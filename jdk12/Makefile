@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/06 01:40:56 tvierling Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/06 20:37:00 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -49,6 +49,10 @@ OWN_DIRS=	${PREFIX} ${PREFIX}/jre ${PREFIX}/jre/lib \
 WRKSRC=		${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(JDK_WITH_BUNDLES) && !empty(JDK_WITH_BUNDLES:M[Yy][Ee][Ss])
+ALL_TARGET+=	release-bundles
+.endif
 
 MOTIF_TYPE=	openmotif
 
