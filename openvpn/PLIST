@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/29 05:55:52 tripledes Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/09/17 16:04:40 jmmv Exp $
 man/man8/openvpn.8
 sbin/openvpn
 share/doc/openvpn/AUTHORS
@@ -32,4 +32,5 @@ share/examples/openvpn/keys/tmp-ca.crt
 share/examples/openvpn/keys/tmp-ca.key
 @dirrm share/examples/openvpn/keys
 @dirrm share/examples/openvpn/config
+@dirrm share/examples/openvpn
 @dirrm share/doc/openvpn
