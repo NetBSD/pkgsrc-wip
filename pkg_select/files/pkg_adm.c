@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_adm.c,v 1.4 2005/03/18 10:50:04 imilh Exp $ 
+ * $Id: pkg_adm.c,v 1.5 2005/03/25 14:15:20 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -291,7 +291,7 @@ pkgsrc_make(const char *action, const char *path, int waitkey)
 		unsetenv("PKG_PATH");
 
 	(void) cmd_spawn(waitkey, make_progress, CYCLIC,
-			 "cd %s && %s %s %s",
+			 "cd %s && %s %s %s 2>&1",
 			 path, MAKE, action, "clean");
 
 	/* restore PKG_PATH */
