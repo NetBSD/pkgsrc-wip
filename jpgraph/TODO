@@ -10,3 +10,7 @@ Give it a go and let me know if there are any problems.
 Ta,
 
 Adrian.
+
+
+XXX this is a php-lib file (no php binary module). Should it still be
+	renamed to php-jpgraph? - hubertf
