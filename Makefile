@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.651 2003/11/23 01:08:17 mpasternak Exp $
-# $NetBSD: Makefile,v 1.651 2003/11/23 01:08:17 mpasternak Exp $
+# $Id: Makefile,v 1.652 2003/11/23 01:36:25 mpasternak Exp $
+# $NetBSD: Makefile,v 1.652 2003/11/23 01:36:25 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -404,6 +404,7 @@ SUBDIR+=	py-CVSTools
 SUBDIR+=	py-EditObj
 SUBDIR+=	py-Genetic
 SUBDIR+=	py-Lupy
+SUBDIR+=	py-MayaVi
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-Py2Play
