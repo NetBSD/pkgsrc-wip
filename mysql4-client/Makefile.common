@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/12/10 21:50:40 adrian_p Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/12/10 21:53:01 adrian_p Exp $
 
 DISTNAME=		mysql-4.0.16
 CATEGORIES=		databases
@@ -44,8 +44,6 @@ CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--without-bench
 CONFIGURE_ARGS+=	--with-low-memory
 CONFIGURE_ARGS+=        --with-openssl
-CONFIGURE_ARGS+=        --with-openssl-includes=${SSLBASE}/include
-CONFIGURE_ARGS+=        --with-openssl-libs=${SSLBASE}/lib
 CONFIGURE_ARGS+=	--with-vio
 
 CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET}
