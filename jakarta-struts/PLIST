@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/08 18:11:50 poppnk Exp $
+lib/java/jakarta-struts/commons-beanutils.jar
+lib/java/jakarta-struts/commons-collections.jar
+lib/java/jakarta-struts/commons-digester.jar
+lib/java/jakarta-struts/commons-fileupload.jar
+lib/java/jakarta-struts/commons-lang.jar
+lib/java/jakarta-struts/commons-logging.jar
+lib/java/jakarta-struts/commons-validator.jar
+lib/java/jakarta-struts/jakarta-oro.jar
+lib/java/jakarta-struts/struts-bean.tld
+lib/java/jakarta-struts/struts-config_1_0.dtd
+lib/java/jakarta-struts/struts-config_1_1.dtd
+lib/java/jakarta-struts/struts-html.tld
+lib/java/jakarta-struts/struts-legacy.jar
+lib/java/jakarta-struts/struts-logic.tld
+lib/java/jakarta-struts/struts-nested.tld
+lib/java/jakarta-struts/struts-template.tld
+lib/java/jakarta-struts/struts-tiles.tld
+lib/java/jakarta-struts/struts.jar
+lib/java/jakarta-struts/tiles-config.dtd
+lib/java/jakarta-struts/tiles-config_1_1.dtd
+lib/java/jakarta-struts/validation_1_1.dtd
+lib/java/jakarta-struts/validator-rules.xml
+lib/java/jakarta-struts/validator-rules_1_1.dtd
+lib/java/jakarta-struts/web-app_2_2.dtd
+lib/java/jakarta-struts/web-app_2_3.dtd
+@dirrm lib/java/jakarta-struts
