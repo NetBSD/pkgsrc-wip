@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/11 15:10:06 poppnk Exp $
+include/libbtctl/btctl-discovery-source.h
+include/libbtctl/btctl.h
+include/libbtctl/bthelper.h
+include/libbtctl/btobex-client.h
+include/libbtctl/btobex.h
+include/libbtctl/obex-client-source.h
+include/libbtctl/obex-server-source.h
+lib/libbtctl.la
+lib/pkgconfig/libbtctl.pc
+share/gtk-doc/html/libbtctl/BtctlController.html
+share/gtk-doc/html/libbtctl/BtctlObex.html
+share/gtk-doc/html/libbtctl/ch01.html
+share/gtk-doc/html/libbtctl/ch02.html
+share/gtk-doc/html/libbtctl/ch03.html
+share/gtk-doc/html/libbtctl/index.html
+share/gtk-doc/html/libbtctl/index.sgml
+share/gtk-doc/html/libbtctl/libbtctl-BtctlController.html
+share/gtk-doc/html/libbtctl/libbtctl-BtctlDiscoverySource.html
+share/gtk-doc/html/libbtctl/libbtctl-BtctlObexserverSource.html
+share/gtk-doc/html/libbtctl/libbtctl-btctl-discovery-source.html
+share/gtk-doc/html/libbtctl/libbtctl-obex-server-source.html
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libbtctl.mo
+@dirrm share/gtk-doc/html/libbtctl
+@dirrm share/gtk-doc/html
+@dirrm share/gtk-doc
+@dirrm include/libbtctl

@@ -1,0 +1,7 @@
+This library is intended to provide convenient GObject-style access to
+common platform bluetooth functions.
+
+The idea of this library is to stand alone and not to require GNOME.
+
+If you have Mono and GTK# installed it will build Mono .NET bindings.
+If you have Python and pygtk installed it will build Python bindings.
