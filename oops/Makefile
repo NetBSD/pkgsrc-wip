@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/09/22 20:24:01 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/27 21:20:05 shattered Exp $
 #
 
 DISTNAME=	oops-1.5.23
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec/oops
 
 .if defined(OOPS_CURRENT) && ${OOPS_CURRENT} == YES
 PATCHFILES+=	diff_from_1.5.23.patch.gz
+PATCH_SITES=	${MASTER_SITES}
 PATCH_DIST_STRIP= -p1
 PLIST_SUBST+=	OOPS_CURRENT=""
 .else
