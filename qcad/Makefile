@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/12 19:03:09 jcflack Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/12 20:39:31 jcflack Exp $
 #
 
 DISTNAME=		qcad-2.0.4.0-1.src
@@ -16,8 +16,6 @@ USE_X11=		# defined
 GNU_CONFIGURE=		# defined
 USE_GNU_TOOLS+= 	make
 
-ED?=			ed
-
 CONFIGURE_DIRS= 	${WRKSRC}/fparser ${WRKSRC}/dxflib
 
 BUILD_DIRS=		${CONFIGURE_DIRS}
@@ -30,20 +28,32 @@ BUILD_DIRS+=		${WRKSRC}/qcad
 MAKE_ENV+=		QMAKESPEC=${QTDIR}/mkspecs/default
 PREPEND_PATH+=		${QTDIR}/bin
 
-# I really want this to be post-*patch* where it makes sense, but QTDIR
-# isn't available until PHASES_AFTER_WRAPPER because it depends on
-# BUILDLINK_PREFIX.qt3-libs, which buildlink3 sets.  Nothing is easy.  :)
-# The patches have replaced old hardcoded paths with fixed cookies @PREFIX@
-# and @QTDIR@.  Here a single ed process will expand the cookies in all
-# affected files in place.
-post-wrapper:
-	for f in qcadlib/src/engine/rs_system.cpp \
-		 qcad/src/qc_applicationwindow.cpp ; do \
-		${ECHO} "e ${WRKSRC}/$$f" ; \
-		${ECHO} ",g:@PREFIX@:s:@PREFIX@:${PREFIX}:g" ; \
-		${ECHO} ",g:@QTDIR@:s:@QTDIR@:${QTDIR}:g" ; \
-		${ECHO} w ; \
-	done | ${ED}
+# I really want this to be post-*patch* where it makes sense, but QTDIR isn't
+# available until PHASES_AFTER_WRAPPER because it depends on
+# BUILDLINK_PREFIX.qt3-libs, which buildlink3 sets.  Nothing is easy.  :) The
+# patches have replaced old hardcoded paths with fixed cookies @PREFIX@ and
+# @QTDIR@.  The SUBST framework will replace the cookies with the proper
+# values.  Quoting invariants: the SUBST framework adds no quoting to the
+# SUBST_SED value (not documented but can be gleaned from mk/subst.mk); quoting
+# is provided here as follows: the escaped-newline real-newline escaped-newline
+# sequence separating individual sed commands is enclosed in ""s so it is not a
+# word separator for the shell; sed sees a single trailing blank on the first
+# command and a single leading blank on the second, neither of which matters. 
+# The constant portions of the sed commands are (by inspection) free of shell
+# metacharacters; the variable portions ${PREFIX} and ${QTDIR} are subject to
+# two layers of quoting: S/=/\=/g ensures that any = in their values will be
+# \-escaped (because = has been chosen for the delimiter in the sed s command),
+# and then Q ensures that all of that is quoted as necessary to survive the
+# shell.
+
+SUBST_CLASSES+= 	paths
+SUBST_STAGE.paths=	post-wrapper
+SUBST_MESSAGE.paths=	"Attending to hard-coded paths."
+SUBST_FILES.paths+=	qcadlib/src/engine/rs_system.cpp
+SUBST_FILES.paths+=	qcad/src/qc_applicationwindow.cpp
+SUBST_SED.paths=	s=@PREFIX@=${PREFIX:S/=/\=/g:Q}=g"\
+			${.newline}\
+			"s=@QTDIR@=${QTDIR:S/=/\=/g:Q}=g
 
 # Just setting BUILD_DIRS would be adequate if qcad could be built with
 # "prepare all" in each module, one by one.  But qcad needs all modules to
