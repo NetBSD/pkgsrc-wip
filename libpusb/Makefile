@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/22 16:54:30 imilh Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/22 17:10:29 imilh Exp $
 #
 
 DISTNAME=		libpusb
@@ -29,5 +29,7 @@ pre-build:
 do-install:
 			${LIBTOOL} --mode=install ${INSTALL_LIB} 	\
 				${WRKSRC}/libpusb.so ${PREFIX}/lib
+			${INSTALL_DATA} ${WRKSRC}/pusb.h 		\
+				${PREFIX}/include
 
 .include "../../mk/bsd.pkg.mk"
