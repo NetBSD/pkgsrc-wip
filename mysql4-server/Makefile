@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/09/17 20:53:21 adrian_p Exp $
+# $NetBSD: Makefile,v 1.11 2003/12/10 21:51:14 adrian_p Exp $
 
 PKGNAME=		${DISTNAME:S/-/4-server-/}
 SVR4_PKGNAME=		mysqs
@@ -44,6 +44,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/mysqld.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/man/mysqld_safe.1 ${PREFIX}/man/man1
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+	#${CHOWN} -R ${MYSQL_USER}:${MYSQL_GROUP} ${MYSQL_DATADIR}
 
 .include "../../wip/mysql4-client/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"
