@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.669 2003/11/26 16:32:11 mpasternak Exp $
-# $NetBSD: Makefile,v 1.669 2003/11/26 16:32:11 mpasternak Exp $
+# $Id: Makefile,v 1.670 2003/11/26 16:33:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.670 2003/11/26 16:33:47 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -55,6 +55,7 @@ SUBDIR+=	axe
 SUBDIR+=	barnyard
 SUBDIR+=	bastard
 SUBDIR+=	beast
+SUBDIR+=	beep-media-player
 SUBDIR+=	billardgl
 SUBDIR+=	bin86
 SUBDIR+=	bitchbot
