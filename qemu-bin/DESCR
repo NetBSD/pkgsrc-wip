@@ -1,0 +1,4 @@
+QEMU is a FAST! processor emulator using dynamic translation to achieve
+good emulation speed.
+
+This is the precompiled linux binary version.

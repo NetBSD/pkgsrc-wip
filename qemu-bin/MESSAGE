@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/09/02 01:24:56 dhowland Exp $
+
+This precomiled binary version is hard-coded to look for its BIOS
+image files in /usr/local/share/qemu/.  However, if your prefix is
+not "/usr/local/" then you will have to run the program with the -L
+option to specify the proper location. (eg. -L /usr/pkg/share/qemu)
+
+===========================================================================
