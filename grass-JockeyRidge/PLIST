@@ -1,0 +1,109 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/08 17:11:12 daprice Exp $
+share/dataset/geography/${PKGNAME}/PERMANENT/DEFAULT_WIND
+share/dataset/geography/${PKGNAME}/PERMANENT/MYNAME
+share/dataset/geography/${PKGNAME}/PERMANENT/PROJ_INFO
+share/dataset/geography/${PKGNAME}/PERMANENT/PROJ_UNITS
+share/dataset/geography/${PKGNAME}/PERMANENT/WIND
+share/dataset/geography/${PKGNAME}/helena/.bash_history
+share/dataset/geography/${PKGNAME}/helena/.bashrc
+share/dataset/geography/${PKGNAME}/helena/SEARCH_PATH
+share/dataset/geography/${PKGNAME}/helena/WIND
+share/dataset/geography/${PKGNAME}/helena/cats/dem.30m
+share/dataset/geography/${PKGNAME}/helena/cats/lidar99.def
+share/dataset/geography/${PKGNAME}/helena/cats/lidar99.sites.1m
+share/dataset/geography/${PKGNAME}/helena/cats/lidar99.sites.3m
+share/dataset/geography/${PKGNAME}/helena/cats/manteo1m.20k
+share/dataset/geography/${PKGNAME}/helena/cell/dem.30m
+share/dataset/geography/${PKGNAME}/helena/cell/lidar99.def
+share/dataset/geography/${PKGNAME}/helena/cell/lidar99.sites.1m
+share/dataset/geography/${PKGNAME}/helena/cell/lidar99.sites.3m
+share/dataset/geography/${PKGNAME}/helena/cell/manteo1m.20k
+share/dataset/geography/${PKGNAME}/helena/cell_misc/dem.30m/f_format
+share/dataset/geography/${PKGNAME}/helena/cell_misc/dem.30m/f_quant
+share/dataset/geography/${PKGNAME}/helena/cell_misc/dem.30m/f_range
+share/dataset/geography/${PKGNAME}/helena/cell_misc/dem.30m/null
+share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.def/f_format
+share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.def/f_quant
+share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.def/f_range
+share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.def/null
+share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.sites.1m/f_format
+share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.sites.1m/f_quant
+share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.sites.1m/f_range
+share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.sites.1m/null
+share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.sites.3m/f_format
+share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.sites.3m/f_quant
+share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.sites.3m/f_range
+share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.sites.3m/null
+share/dataset/geography/${PKGNAME}/helena/cell_misc/manteo1m.20k/f_format
+share/dataset/geography/${PKGNAME}/helena/cell_misc/manteo1m.20k/f_quant
+share/dataset/geography/${PKGNAME}/helena/cell_misc/manteo1m.20k/f_range
+share/dataset/geography/${PKGNAME}/helena/cell_misc/manteo1m.20k/null
+share/dataset/geography/${PKGNAME}/helena/cellhd/dem.30m
+share/dataset/geography/${PKGNAME}/helena/cellhd/lidar99.def
+share/dataset/geography/${PKGNAME}/helena/cellhd/lidar99.sites.1m
+share/dataset/geography/${PKGNAME}/helena/cellhd/lidar99.sites.3m
+share/dataset/geography/${PKGNAME}/helena/cellhd/manteo1m.20k
+share/dataset/geography/${PKGNAME}/helena/colr/dem.30m
+share/dataset/geography/${PKGNAME}/helena/colr/lidar99.def
+share/dataset/geography/${PKGNAME}/helena/colr/manteo1m.20k
+share/dataset/geography/${PKGNAME}/helena/dig_ascii/test
+share/dataset/geography/${PKGNAME}/helena/dig_ascii/test.ascii
+share/dataset/geography/${PKGNAME}/helena/dig_att/test.ascii
+share/dataset/geography/${PKGNAME}/helena/fcell/dem.30m
+share/dataset/geography/${PKGNAME}/helena/fcell/lidar99.def
+share/dataset/geography/${PKGNAME}/helena/fcell/lidar99.sites.1m
+share/dataset/geography/${PKGNAME}/helena/fcell/lidar99.sites.3m
+share/dataset/geography/${PKGNAME}/helena/fcell/manteo1m.20k
+share/dataset/geography/${PKGNAME}/helena/hist/dem.30m
+share/dataset/geography/${PKGNAME}/helena/hist/lidar99.def
+share/dataset/geography/${PKGNAME}/helena/hist/lidar99.sites.1m
+share/dataset/geography/${PKGNAME}/helena/hist/lidar99.sites.3m
+share/dataset/geography/${PKGNAME}/helena/hist/manteo1m.20k
+share/dataset/geography/${PKGNAME}/helena/site_lists/jr12april02.3d
+share/dataset/geography/${PKGNAME}/helena/site_lists/lidar99
+share/dataset/geography/${PKGNAME}/helena/windows/clookout.2m
+share/dataset/geography/${PKGNAME}/helena/windows/frftolookout
+share/dataset/geography/${PKGNAME}/helena/windows/jockey.1mtif
+share/dataset/geography/${PKGNAME}/helena/windows/jockey.lidar.2m
+share/dataset/geography/${PKGNAME}/helena/windows/lookout.2m.big
+share/dataset/geography/${PKGNAME}/helena/windows/lookout.2ma
+share/dataset/geography/${PKGNAME}/helena/windows/meas02
+share/dataset/geography/${PKGNAME}/helena/windows/meas02.1m
+share/dataset/geography/${PKGNAME}/helena/windows/seg.1m.dmin05
+@dirrm share/dataset/geography/${PKGNAME}/helena/windows
+@dirrm share/dataset/geography/${PKGNAME}/helena/site_lists
+@dirrm share/dataset/geography/${PKGNAME}/helena/hist
+@exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/helena/g3dcell
+@dirrm share/dataset/geography/${PKGNAME}/helena/g3dcell
+@dirrm share/dataset/geography/${PKGNAME}/helena/fcell
+@exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/helena/dig_plus
+@dirrm share/dataset/geography/${PKGNAME}/helena/dig_plus
+@exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/helena/dig_cats
+@dirrm share/dataset/geography/${PKGNAME}/helena/dig_cats
+@dirrm share/dataset/geography/${PKGNAME}/helena/dig_att
+@dirrm share/dataset/geography/${PKGNAME}/helena/dig_ascii
+@exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/helena/dig
+@dirrm share/dataset/geography/${PKGNAME}/helena/dig
+@dirrm share/dataset/geography/${PKGNAME}/helena/colr
+@dirrm share/dataset/geography/${PKGNAME}/helena/cellhd
+@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc/manteo1m.20k
+@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.sites.3m
+@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.sites.1m
+@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.def
+@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc/dem.30m
+@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc
+@dirrm share/dataset/geography/${PKGNAME}/helena/cell
+@dirrm share/dataset/geography/${PKGNAME}/helena/cats
+@exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/helena/.tmp/bathy.meas.ncsu.edu
+@dirrm share/dataset/geography/${PKGNAME}/helena/.tmp/bathy.meas.ncsu.edu
+@dirrm share/dataset/geography/${PKGNAME}/helena/.tmp
+@dirrm share/dataset/geography/${PKGNAME}/helena
+@exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/PERMANENT/.tmp/bathy.meas.ncsu.edu
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/.tmp/bathy.meas.ncsu.edu
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/.tmp
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT
+@dirrm share/dataset/geography/${PKGNAME}
+@exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}
+@exec ${MKDIR} %D/share/dataset/geography/
+@dirrm share/dataset/geography
+@dirrm share/dataset
