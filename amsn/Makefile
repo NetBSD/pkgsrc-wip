@@ -1,26 +1,28 @@
-# $NetBSD: Makefile,v 1.9 2004/06/13 18:26:54 ppostma Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/19 15:24:19 ppostma Exp $
 #
 
-DISTNAME=	amsn-0_92
-PKGNAME=	${DISTNAME:S/_/./}
-CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=amsn/}
+DISTNAME=		amsn-0_92
+PKGNAME=		${DISTNAME:S/_/./}
+CATEGORIES=		chat
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amsn/}
 
-MAINTAINER=	virtus@wanadoo.nl
-HOMEPAGE=	http://amsn.sourceforge.net/
-COMMENT=	Alvaro's MSN messenger client
+MAINTAINER=		virtus@wanadoo.nl
+HOMEPAGE=		http://amsn.sourceforge.net/
+COMMENT=		"Alvaro's MSN messenger client"
 
-USE_BUILDLINK3=	YES
-NO_CONFIGURE=	YES
-NO_BUILD=	YES
+USE_BUILDLINK3=		YES
+NO_CONFIGURE=		YES
+NO_BUILD=		YES
 
-WRKSRC=		${WRKDIR}/msn
+WRKSRC=			${WRKDIR}/msn
+
+SUBST_CLASSES=		fix
+SUBST_STAGE.fix=	post-patch
+SUBST_FILES.fix=	amsn
+SUBST_SED.fix=		-e 's!@@PREFIX@@!${PREFIX}!g'
 
 post-patch:
-	@${MV} ${WRKSRC}/amsn ${WRKSRC}/amsn.orig
-	@${SED} -e 's!@@PREFIX@@!${PREFIX}!g' < ${WRKSRC}/amsn.orig > \
-	    ${WRKSRC}/amsn
-	@${RM} -f ${WRKSRC}/amsn.orig
+	@${FIND} ${WRKSRC} -name \*.orig | ${XARGS} ${RM}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/amsn
