@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/02 11:10:25 drue Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/05 08:24:22 drue Exp $
 
 DISTNAME=		jakarta-log4j-1.2.8
 WRKSRC=			${WRKDIR}/${DISTNAME}
@@ -9,51 +9,39 @@ MAINTAINER=		drue@users.sourceforge.net
 HOMEPAGE=		http://jakarta.apache.org/log4j/docs/index.html
 COMMENT=		Logging facility for Java
 
+USE_BUILDLINK2= yes
 USE_JAVA=       run
 NO_CONFIGURE=
 NO_BUILD=
 
 PLIST_SRC=      ${WRKDIR}/PLIST
 
-EXAMPLEDIR=		share/examples/java/jakarta-log4j
-DOCDIR=			share/doc/java/jakarta-log4j
-
-#EDIRS!=         cd ${WRKSRC}/examples && ${FIND} . -type d
-#EFILES!=        cd ${WRKSRC}/examples &&  ${FIND} . -type f
-#DDIRS!=         cd ${WRKSRC}/docs && ${FIND} . -type d
-#DFILES!=        cd ${WRKSRC}/docs && ${FIND} . -type f
+DOCDIR=         share/doc/java/jakarta-log4j
+EGDIR=          share/examples/java/jakarta-log4j
 
 pre-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-#	@(cd ${WRKSRC};                                               \
-#	  ${FIND} examples -type f |                                  \
-#		${SED} -e 's|^examples|${EXAMPLEDIR}|' | sort >> ${PLIST_SRC}; \
-#	  ${FIND} docs -type f |                                      \
-#		${SED} -e 's|^docs|${DOCDIR}|' | sort >> ${PLIST_SRC};    \
-#	  ${FIND} examples -type d |                                  \
-#		${SED} -e 's|^examples|@dirrm ${EXAMPLEDIR}|' | sort -r >> ${PLIST_SRC}; \
-#	  ${FIND} docs -type d |                                      \
-#		${SED} -e 's|^docs|@dirrm ${DOCDIR}|' | sort -r >> ${PLIST_SRC};    \
-#	  ${ECHO} '@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}' >> ${PLIST_SRC})
+	@(cd ${WRKSRC};                                               \
+	${FIND} examples -type f |                                  \
+		${SED} -e 's|^examples|${EGDIR}|' | ${SORT} >> ${PLIST_SRC}; \
+	${FIND} docs -type f |                                      \
+		${SED} -e 's|^docs|${DOCDIR}|' | ${SORT} >> ${PLIST_SRC};    \
+	${FIND} examples -type d |                                  \
+		${SED} -e 's|^examples|@dirrm ${EGDIR}|' | ${SORT} -r >> ${PLIST_SRC}; \
+	${FIND} docs -type d |                                      \
+		${SED} -e 's|^docs|@dirrm ${DOCDIR}|' | ${SORT} -r >> ${PLIST_SRC};    \
+	${ECHO} '@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}' >> ${PLIST_SRC})
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/dist/lib/log4j-1.2.8.jar ${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
+	${INSTALL_DATA_DIR} ${PREFIX}/${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE.txt ${PREFIX}/${DOCDIR}/COPYRIGHT
-#.for i in ${DDIRS}
-#	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}/$i
-#.endfor
-#.for i in ${DFILES}
-#	${INSTALL_DATA} ${PREFIX}/${DOCDIR}/$i
-#.endfor
-#	${INSTALL_DATA_DIR} ${PREFIX}/${EXAMPLEDIR}
-#.for i in ${EDIRS}
-#	${INSTALL_DATA_DIR} ${PREFIX}/${EXAMPLEDIR}/$i
-#.endfor
-#.for i in ${EFILES}
-#	${INSTALL_DATA} ${PREFIX}/${EXAMPLEDIR}/$i
-#.endfor
+	${CHMOD} -R ugo-w ${WRKSRC}/examples
+	cd ${WRKSRC}/examples && ${PAX} -rw . ${PREFIX}/${EGDIR}
+	${CHMOD} -R ugo-w ${WRKSRC}/docs
+	cd ${WRKSRC}/docs && ${PAX} -rw . ${PREFIX}/${DOCDIR}
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
