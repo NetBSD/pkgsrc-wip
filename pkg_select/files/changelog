@@ -1,0 +1,87 @@
+20 / 02 / 2005
+--------------
+
+. various fixes
+. revamped all recursion code and made it more re-usable
+
+19 / 02 / 2005
+--------------
+
+. added pkgfind and made it browsable
+
+17 / 02 / 2005
+--------------
+
+. many fixes
+. dependencies browsing finally working
+. manpage
+. env. variable PKG_DBDIR added
+
+13 / 02 / 2005
+--------------
+
+. changed global highlight variables to local variables to allow recursion
+
+12 / 02 / 2005
+--------------
+
+. scrollbar added
+. pushed texts to texts.h
+
+08 / 02 / 2005
+--------------
+
+. added a -K pkg_dbdir flag
+
+06 / 02 / 2005
+--------------
+
+. added a make show-var fallback when no info found (ex. ap-php)
+
+05 / 02 / 2005
+--------------
+
+. changed <- from installed packages behaviour
+. variable substitution 1st works
+
+03 / 02 / 2005
+--------------
+
+. added [l]ist installed packages, work still needed
+. revamped pkgdb listing so it can handle more infos
+
+31 / 01 / 2005
+--------------
+
+. fixed top-right item refresh when coming from pkg_info
+. added info popup when calculating varname, CRITICAL ! ;)
+. fixed memory leak in file.c
+. now compiles with WARNS=2
+. now compiles with WARNS=3
+
+30 / 01 / 2005
+--------------
+
+. added a show dependencies item
+. added -b <basepath>
+. changed popen() behaviour so we have control on stdout
+. Press any key... added at action's end
+. added recursive deletion with pkg_delete -r
+. added item's path when seeing descr
+. PKG_PATH now defaults to current arch / release
+. added PKGSRCDIR env variable handling
+. "next search" contributed by Fabien Devaux
+. Peter's hint on re-read made us gain speed / cpu on scrolling
+. included Makefiles handling
+
+29 / 01 / 2005
+--------------
+
+. License added
+. Name changed to pkg_select
+. Corrected right side border flickering
+. Exctacted as much as possible box display and window refresh
+. Changed right arrow to enter for browsing
+. Added infos to pager, like shortcuts and % of displayed text
+. [v] does not show anymore when no MESSAGE present
+. pkg actions now defaults to Y
