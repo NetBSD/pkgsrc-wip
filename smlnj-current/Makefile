@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2004/02/24 15:40:21 pulahti Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/03 20:49:21 pulahti Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -22,7 +22,7 @@ DISTFILES=	MLRISC.tgz			\
 		smlnj-lib.tgz			\
 		system.tgz
 
-MAINTAINER=	pulahti@users.sourceforge.net
+MAINTAINER=	vnorrman@cc.hut.fi
 HOMEPAGE=	http://www.smlnj.org/index.html
 COMMENT=	Working version of SML/NJ Standard ML compiler
 
@@ -83,6 +83,15 @@ do-build:
 	cd ${WRKDIR} && unset PWD && \
 	FILESDIR="${FILESDIR}" PATCH="${PATCH}" PATCH_ARGS="${PATCH_ARGS}" \
 		SMLNJ_HOME="${WRKDIR}" ./config/install.sh
+
+# This is a work around of a bug in 110.45
+post-build:
+	cd ${WRKDIR}/bin;		\
+	${LN} -sf .run-sml ml-burg;	\
+	${LN} -sf .run-sml ml-lex;	\
+	${LN} -sf .run-sml ml-nlffigen;	\
+	${LN} -sf .run-sml ml-yacc;	\
+	${LN} -sf .run-sml nowhere
 
 # install target
 # (see ftp://ftp.research.bell-labs.com/dist/smlnj/working/110.38/INSTALL)
