@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 18:26:07 marc Exp $
+include/ic.h
+lib/libic.a
+lib/libic.la
+lib/libic.so
+lib/libic.so.1
+lib/libic.so.1.0
+lib/pkgconfig/libic.pc
