@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2004/07/13 07:43:36 bubuchka Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/14 06:11:26 bubuchka Exp $
 
 DISTNAME=	vMac-${VMAC_VERSION}-src
 PKGNAME=	vmac-${VMAC_VERSION}
 PKGREVISION=	1
 WRKSRC=		${WRKDIR}/vMac-${VMAC_VERSION}
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.leb.net/vmac/download/XWindows/
+MASTER_SITES=	http://www.vmac.org/download/XWindows/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	mishka@apk.od.ua
