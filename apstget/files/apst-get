@@ -270,6 +270,9 @@ case "$1" in
 	else
 	echo "Upgrade list:"
 	echo ${LIST}
+
+	press_any_key
+
 	for A in ${LIST}; do
 		echo "==> Updating ${A}..."
 		do_install ${A} 1
