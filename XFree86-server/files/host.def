@@ -19,6 +19,8 @@
 #define UseInstalledPrograms YES
 #define StandardIncludes -IBLNK/include
 
+#define XTrueTypeInstallCConvHeaders NO
+
 /* Don't build with SecureRPC, we need to fix this ... */
 
 #if defined(NetBSDArchitecture)
