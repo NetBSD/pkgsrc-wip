@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1634 2005/01/29 13:56:48 airhead Exp $
-# $NetBSD: Makefile,v 1.1634 2005/01/29 13:56:48 airhead Exp $
+# $Id: Makefile,v 1.1635 2005/01/29 17:20:47 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.1635 2005/01/29 17:20:47 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -587,15 +587,18 @@ SUBDIR+=	p3nfs
 SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-Apache-Request
 SUBDIR+=	p5-AxKit
+SUBDIR+=	p5-Cache-Mmap
 SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Convert-BinHex
 SUBDIR+=	p5-Crypt-SmbHash
 SUBDIR+=	p5-Data-Properties
+SUBDIR+=	p5-Devel-Profiler
 SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-HTML-Latex
+SUBDIR+=	p5-HTTP-BrowserDetect
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-IO-Multiplex
 SUBDIR+=	p5-Log-Log4perl
