@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.4 2003/07/25 04:20:41 xtraeme Exp $
+@comment $NetBSD: PLIST.FreeBSD,v 1.5 2003/10/22 13:01:26 jeremy-c-reed Exp $
+bin/kbd_mode
 lib/modules/extensions/libdri.a
 lib/modules/${LOWER_OPSYS}/libdrm.a
 man/man1/XFree86.1.gz

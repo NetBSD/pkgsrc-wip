@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2003/09/02 23:44:57 blef Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2003/10/22 13:01:26 jeremy-c-reed Exp $
 bin/X
 bin/XFree86
 bin/Xnest
@@ -9,7 +9,6 @@ bin/inb
 bin/inl
 bin/inw
 bin/ioport
-bin/kbd_mode
 bin/mmapr
 bin/mmapw
 bin/outb
