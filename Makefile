@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.891 2004/01/17 21:02:38 minskim Exp $
-# $NetBSD: Makefile,v 1.891 2004/01/17 21:02:38 minskim Exp $
+# $Id: Makefile,v 1.892 2004/01/18 12:46:39 marc Exp $
+# $NetBSD: Makefile,v 1.892 2004/01/18 12:46:39 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -100,7 +100,6 @@ SUBDIR+=	compositeext
 SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	cvsd
-SUBDIR+=	cyrus-imapd22
 SUBDIR+=	d2x
 SUBDIR+=	d4x
 SUBDIR+=	damageext
