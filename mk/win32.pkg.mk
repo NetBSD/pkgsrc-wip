@@ -1,4 +1,4 @@
-# $Id: win32.pkg.mk,v 1.15 2003/12/01 23:24:22 mpasternak Exp $
+# $Id: win32.pkg.mk,v 1.16 2003/12/02 05:52:20 mpasternak Exp $
 # (C) 2003 Michal Pasternak <dotz@irc.pl>
 #
 #
@@ -47,6 +47,14 @@ SHLIBTOOL:=		${LIBTOOL}
 CONFIGURE_ARGS+=	--enable-shared --disable-static
 LIBTOOL=		${CROSSBASE}/${MINGWTARGET}/bin/libtool
 SHLIBTOOL:=		${LIBTOOL}
+.endif
+
+.ifdef USE_PEACE
+BUILD_DEPENDS+=		peace>=20030919:../../emulators/peace
+.endif
+
+.ifdef USE_WINE
+BUILD_DEPENDS+=		wine>=20031016:../../emulators/wine
 .endif
 
 BUILD_DEPENDS+=	mingw-c>=3.1.1:../../wip/mingw-c
