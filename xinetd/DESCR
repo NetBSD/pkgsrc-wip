@@ -1,0 +1,7 @@
+xinetd is a secure replacement for inetd with new features:
+ * access control
+ * DoS prevention
+ * extensive logging abilities
+ * offload services to a remote host
+ * ipv6 support
+ * user interaction with banners

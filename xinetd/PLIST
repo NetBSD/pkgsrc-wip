@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/10 16:11:39 poppnk Exp $
+man/man5/xinetd.conf.5
+man/man8/itox.8
+man/man8/xconv.pl.8
+man/man8/xinetd.8
+man/man8/xinetd.log.8
+sbin/itox
+sbin/xconv.pl
+sbin/xinetd
