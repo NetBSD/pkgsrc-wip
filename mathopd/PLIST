@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/13 06:45:32 ishit Exp $
+sbin/mathopd
+share/doc/mathopd/CHANGES
+share/doc/mathopd/COPYING
+share/doc/mathopd/README
+share/doc/mathopd/cgi.txt
+share/doc/mathopd/config.txt
+share/doc/mathopd/running.txt
+share/doc/mathopd/sample.cfg
+share/doc/mathopd/syntax.txt
+share/examples/mathopd/mathopd.conf
+@dirrm share/examples/mathopd
+@dirrm share/doc/mathopd

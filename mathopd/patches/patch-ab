@@ -1,0 +1,101 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/01/13 06:45:32 ishit Exp $
+
+--- ../doc/sample.cfg.orig	2003-11-18 08:07:12.000000000 +0900
++++ ../doc/sample.cfg
+@@ -1,3 +1,9 @@
++#
++# mathopd.conf - sample
++#
++# If you need more infomation for this file,
++# see http://www.mathopd.org/config.txt
++#
+ Umask 026
+ 
+ Tuning {
+@@ -10,12 +16,12 @@ Tuning {
+ 	ScriptTimeout 60
+ }
+ 
+-User daemon
++User www
+ StayRoot On
+ 
+-PIDFile /var/mathopd/pid
+-Log /var/mathopd/log.%Y%m%d
+-ErrorLog /var/mathopd/errorlog
++PIDFile /var/run/mathopd.pid
++Log /var/log/mathopd/access_log.%Y%m%d
++ErrorLog /var/log/mathopd/error_log
+ 
+ LogFormat {
+ 	Ctime
+@@ -36,13 +42,15 @@ LogGMT On
+ 
+ Control {
+ 	RunScriptsAsOwner On
+-	ChildLog /var/mathopd/childlog
++#	ChildLog /var/log/mathopd/child_log
+ 	Types {
+ 		text/html { html }
+ 		text/plain { txt }
+ 		image/gif { gif }
+ 		image/jpeg { jpg }
++		image/png { png }
+ 		text/css { css }
++		application/pdf { pdf }
+ 		application/octet-stream { * }
+ 	}
+ 	Specials {
+@@ -51,10 +59,10 @@ Control {
+ 		Imagemap { map }
+ 		Redirect { url }
+ 	}
+-	External {
+-		/usr/local/bin/php { php }
+-	}
+-	IndexNames { index.html }
++#	External {
++#		/usr/pkg/bin/php { php php4 }
++#	}
++	IndexNames { index.html index.htm }
+ }
+ 
+ Server {
+@@ -74,14 +82,14 @@ Server {
+ #
+ 		Control {
+ 			Alias /
+-			Location /home/boland/*
++			Location /usr/pkg/share/mathopd/*
+ 		}
+ #
+ # Here is an example of an old-fashioned 'cgi-bin' directory.
+ #
+ 		Control {
+ 			Alias /cgi-bin
+-			Location /home/boland/cgi-bin
++			Location /usr/pkg/libexec/cgi-bin
+ 			Specials {
+ 				CGI { * }
+ 			}
+@@ -115,15 +123,15 @@ Server {
+ 		}
+ 		Control {
+ 			Alias /doc
+-			Location /usr/share/doc/handbook
++			Location /usr/share/doc/html
+ 		}
+ #
+ # Example of a redirect
+ #
+-		Control {
+-			Alias /secure
+-			Location https://an.example
+-		}
++#		Control {
++#			Alias /secure
++#			Location https://an.example
++#		}
+ 	}
+ }
+ 
