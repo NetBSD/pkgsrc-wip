@@ -1,12 +1,39 @@
+Still frame export uses Imlib1 and maybe ImageMagick
+
+MP3 export uses lame
+
+Ogg Vorbis export uses oggenc (vorbis-tools)
+
+MPEG-1, MPEG-2, and DivX require mjpegtools
+
+clicking on Help->Contents:
+/usr/share/kino/scripts/help.sh: line 1: gconftool: command not found
+should be "gconftool-2"
+
+should this be done?
+lib/hotplug/kino/usb.usermap
+should have an option or check if linux before installing hotplug stuff
+use CONF_FILES for etc/hotplug/usb/kino-jogshuttle
+
+require XFree86 4.x for building Kino, but if you have an older version, then
+simply edit src/Makefile.am and remove "-lXv" from the line beginning with
+"kino_LDADD=".
+
 maybe have an option to use libdv versus ffmpeg
+--with-avcodec       Use FFMPEG libavcodec for DV video decoding instead of libdv.
+libdv is still required according to README
 
-checking libdv/dv.h usability... no
-checking libdv/dv.h presence... no
-checking for libdv/dv.h... no
-configure: error: dv.h not found, install libdv-devel
-*** Error code 1
+  --with-quicktime        Support Quicktime DV files using Quicktime4Linux or libquicktime.
+  --with-x                use the X Window System
+  --with-hotplug-script-dir=PATH Where to install hotplug scripts PREFIX/etc/hotplug/usb
+  --with-hotplug-usermap-dir=PATH Where to install hotplug usermaps PREFIX/lib/hotplug/kino
 
-libdv is in pkgsrc-wip
+was using:
 
+#LDFLAGS+=              -Wl,${RPATH_FLAG}${BUILDLINK_LIBDIRS.XFree86-libs}
+# XXX how does the RPATHs for gcc3 not get chopped out by buildlink3?
+# the following one seemed to work
+#BUILDLINK_PASSTHRU_RPATHDIRS+= ${X11BASE}/lib
+# the following is not set yet
+#BUILDLINK_PASSTHRU_RPATHDIRS+= ${BUILDLINK_LIBDIRS.XFree86-libs}
 
-see http://packages.debian.org/unstable/graphics/kino.html
