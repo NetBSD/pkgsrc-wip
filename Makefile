@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1595 2005/01/05 14:40:43 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1595 2005/01/05 14:40:43 thomasklausner Exp $
+# $Id: Makefile,v 1.1596 2005/01/07 11:22:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1596 2005/01/07 11:22:41 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -738,7 +738,6 @@ SUBDIR+=	qhacc
 SUBDIR+=	qico
 SUBDIR+=	qinx
 SUBDIR+=	qn-x11
-SUBDIR+=	qnetwalk
 SUBDIR+=	qstat
 SUBDIR+=	quagga-devel
 SUBDIR+=	rar3
