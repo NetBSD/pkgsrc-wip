@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1023 2004/02/25 00:25:35 cubidou Exp $
-# $NetBSD: Makefile,v 1.1023 2004/02/25 00:25:35 cubidou Exp $
+# $Id: Makefile,v 1.1024 2004/02/25 21:51:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1024 2004/02/25 21:51:19 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -379,6 +379,7 @@ SUBDIR+=	netbeans-ide
 SUBDIR+=	netkit-base
 SUBDIR+=	noip
 SUBDIR+=	noiptun
+SUBDIR+=	nosefart
 SUBDIR+=	nuppelvideo
 SUBDIR+=	oinkmaster
 SUBDIR+=	oops
