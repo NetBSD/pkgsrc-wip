@@ -29,15 +29,15 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: main.c,v 1.4 2005/03/15 19:05:12 imilh Exp $ 
+ * $Id: main.c,v 1.5 2005/03/16 08:26:10 imilh Exp $ 
  */
 
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
-static char *rcsid = "$Id: main.c,v 1.4 2005/03/15 19:05:12 imilh Exp $";
+static char *rcsid = "$Id: main.c,v 1.5 2005/03/16 08:26:10 imilh Exp $";
 #else
-__RCSID("$Id: main.c,v 1.4 2005/03/15 19:05:12 imilh Exp $");
+__RCSID("$Id: main.c,v 1.5 2005/03/16 08:26:10 imilh Exp $");
 #endif
 #endif
 
@@ -431,6 +431,7 @@ main_loop(Etree **etree, char **list, const char *basepath, const int where)
 		case 'p':
 			clear_tree(&etree, where);
 			prefs_screen();
+			clr_allscr(list_win);
 			break;
 		case 'o':
 			clear();
