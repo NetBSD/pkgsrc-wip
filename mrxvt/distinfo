@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/03 19:07:32 tnn2 Exp $
+
+SHA1 (mrxvt-0.4.0.tar.gz) = ba268e54f873fecbc23714ac5f3f4ab2935bf054
+RMD160 (mrxvt-0.4.0.tar.gz) = b6627de3907895a4df681630c163bbdc663d64b4
+Size (mrxvt-0.4.0.tar.gz) = 500525 bytes
