@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/24 05:05:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/24 23:04:46 blef Exp $
 
 DISTNAME=	X430src-4
 PKGNAME=	XFree86-fontsEncodings-${XF_VER}
@@ -18,7 +18,6 @@ NO_XFREE86_TARGETS=	# defined
 
 post-extract:
 	@${LN} -sf ${FILESDIR}/host.def ${WRKSRC}
-	@${LN} -sf ${LOCALBASE}/bin/fc-cache ${X11BASE}/bin
 
 do-configure:
 	(cd ${WRKSRC} && \
