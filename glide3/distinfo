@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/08/19 19:03:48 cetrox Exp $
+$NetBSD: distinfo,v 1.5 2004/08/19 19:10:37 cetrox Exp $
 
 SHA1 (Glide_V3-2.60-18.tar.bz2) = 087af3f102330881098e538b3c5f2bfa60bd6286
 Size (Glide_V3-2.60-18.tar.bz2) = 1720026 bytes
@@ -9,4 +9,4 @@ SHA1 (patch-ad) = c25bd415c2d55a25d67acf655d3591927ecd7a75
 SHA1 (patch-ae) = 405c6a8b1c18f5b38b2564cedcdf96ba8547c16e
 SHA1 (patch-af) = eece37238aa867f1b5087761757a3f1771127222
 SHA1 (patch-ag) = fa63defddbea5eddfd49fa70dff279dbacacb52c
-SHA1 (patch-ah) = e017902f1b1de855c659fcdc9261d9266e5665b3
+SHA1 (patch-ah) = 5e725a2220583d3ba3ea595d68594ead22656701
