@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/28 15:08:08 mpasternak Exp $
+${PYSITELIB}/textile.py
+${PYSITELIB}/textile.pyc
+${PYSITELIB}/textile.pyo
