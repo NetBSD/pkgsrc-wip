@@ -1,4 +1,3 @@
-o Tests on FreeBSD, and OpenBSD
-o Finish definitions for Darwin and Solaris
+o Tests on OpenBSD, Solaris and Darwin
 o New makefiles should include all features so I can feed
   them back to the author
