@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/25 03:07:15 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/11/07 17:46:06 tvierling Exp $
 bin/fcpchk
 bin/fcpdel
 bin/fcpget
 bin/fcpgetsite
 bin/fcphello
+bin/fcpinv
 bin/fcpkey
 bin/fcpput
 bin/fcpputsite
