@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/07/02 18:49:08 shattered Exp $
+
+--- utils/mgnokiidev.c.orig	2004-04-14 01:27:39.000000000 +0400
++++ utils/mgnokiidev.c
+@@ -39,7 +39,7 @@
+ #endif
+ 
+ /* See common/data/virtmodem.c for explanation */
+-#ifdef	__FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #  include <sys/types.h>
+ #  undef	__BSD_VISIBLE
+ #  define	__BSD_VISIBLE	1

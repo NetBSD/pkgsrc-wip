@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/07/02 18:49:18 shattered Exp $
+
+--- include/gnokii.h.orig	2004-04-14 01:27:41.000000000 +0400
++++ include/gnokii.h
+@@ -39,7 +39,7 @@ extern "C" {
+ #if defined(__linux__)
+ #  include <stdint.h>
+ #  include <sys/time.h>
+-#elif defined(__svr4__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__bsdi__) || defined(__MACH__)
++#elif defined(__svr4__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__bsdi__) || defined(__MACH__) || defined(__NetBSD__)
+ #  include <inttypes.h>
+ #  include <sys/time.h>
+ #elif defined(_MSC_VER) && defined(WIN32)
