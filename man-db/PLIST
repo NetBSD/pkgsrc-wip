@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/20 08:55:21 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.1.1.2 2003/10/01 23:37:01 jeremy-c-reed Exp $
 bin/apropos
 bin/catman
 bin/lexgrog
@@ -82,3 +82,5 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/man-db.mo
 @dirrm man/de_DE.88591/man5
 @dirrm man/de_DE.88591/man1
 @dirrm man/de_DE.88591
+@exec ${MKDIR} %D/lib/man-db
+@dirrm lib/man-db
