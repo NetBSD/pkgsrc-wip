@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1556 2004/11/26 20:02:41 kristerw Exp $
-# $NetBSD: Makefile,v 1.1556 2004/11/26 20:02:41 kristerw Exp $
+# $Id: Makefile,v 1.1557 2004/11/27 14:03:33 rxg Exp $
+# $NetBSD: Makefile,v 1.1557 2004/11/27 14:03:33 rxg Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -888,6 +888,7 @@ SUBDIR+=	wxgtk-devel-contrib
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
 SUBDIR+=	xbsql
+SUBDIR+=	xenvstat
 SUBDIR+=	xevil
 SUBDIR+=	xfe
 SUBDIR+=	xinetd
