@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/23 12:04:19 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/23 12:19:31 rillig Exp $
 #
 
 DISTNAME=		tcd-2.2.0
@@ -15,4 +15,5 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/ncurses.mk"
 .include "../../mk/bsd.pkg.mk"
