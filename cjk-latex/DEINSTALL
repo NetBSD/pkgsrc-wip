@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+
+STAGE=$2
+
+TEXMFMAIN=@TEXMFMAIN@
+TEXMFCNF=${TEXMFMAIN}/web2c/texmf.cnf
+
+case ${STAGE} in
+    DEINSTALL)
+	;;
+    POST-DEINSTALL)
+	echo "Edit ${TEXMFCNF}"
+	sed -e "/ttf2pk/d" ${TEXMFCNF} > ${TEXMFCNF}.tmp
+	sed -e "/ttf2tfm/d" ${TEXMFCNF}.tmp > ${TEXMFCNF}
+	rm -f ${TEXMFCNF}.tmp
+
+	echo "Update ls-R"
+	mktexlsr
+	;;
+    *)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/18 09:40:00 cjep Exp $
+
+SHA1 (cjk-4.5.1.tar.gz) = ae8236d6407f1bd123dbb6c382549c5fbfa3caef
+Size (cjk-4.5.1.tar.gz) = 424457 bytes
+SHA1 (patch-aa) = cb03ae89d46c452f0e936aef87217fe638185f94
+SHA1 (patch-ab) = 10b2a6d812f2af6e954e9deba5a042079d66cef1
+SHA1 (patch-ac) = 7615acc6a17ea0640cc1601fbdecb185bfa488a4
+SHA1 (patch-ad) = da4875fc6fe36986f16fc9f428ae073329a54899
+SHA1 (patch-ae) = d57a3feaee3b5b90bea9fefbd73acb391e6ba243
+SHA1 (patch-af) = 15bce57ccda93fd4bee6b65959a15b414e26b0ed

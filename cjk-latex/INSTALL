@@ -1,0 +1,43 @@
+#!/bin/sh
+#
+
+STAGE=$2
+
+TEXMFMAIN=@TEXMFMAIN@
+TTFONTSMAP=${TEXMFMAIN}/ttf2pk/ttfonts.map
+TEXMFCNF=${TEXMFMAIN}/web2c/texmf.cnf
+
+case ${STAGE} in
+    PRE-INSTALL)
+	;;
+    POST-INSTALL)
+	echo "Edit ${TTFONTSMAP}"
+	echo "% Chinese TrueType fonts by Arphic:"            >> ${TTFONTSMAP}
+	echo "bkai00mp@UBig5@  bkai00mp.ttf  Pid = 3 Eid = 1" >> ${TTFONTSMAP}
+	echo "bsmi00lp@UBig5@  bsmi00lp.ttf  Pid = 3 Eid = 1" >> ${TTFONTSMAP}
+	echo "gbsn00lp@UGB@    gbsn00lp.ttf  Pid = 3 Eid = 1" >> ${TTFONTSMAP}
+	echo "gkai00mp@UGB@    gkai00mp.ttf  Pid = 3 Eid = 1" >> ${TTFONTSMAP}
+	echo "% Japanese TrueType fonts by Kochi:"            >> ${TTFONTSMAP}
+	echo "gothic@UJIS@     gothic.ttf    Pid = 3 Eid = 1" >> ${TTFONTSMAP}
+	echo "mincho@UJIS@     mincho.ttf    Pid = 3 Eid = 1" >> ${TTFONTSMAP}
+	echo "% Korean TrueType fonts by Baekmuk:"            >> ${TTFONTSMAP}
+	echo "batang@UKS@      batang.ttf    Pid = 3 Eid = 1" >> ${TTFONTSMAP}
+	echo "dotum@UKS@       dotum.ttf     Pid = 3 Eid = 1" >> ${TTFONTSMAP}
+	echo "gulim@UKS@       gulim.ttf     Pid = 3 Eid = 1" >> ${TTFONTSMAP}
+	echo "hline@UKS@       hline.ttf     Pid = 3 Eid = 1" >> ${TTFONTSMAP}
+
+	echo "Edit ${TEXMFCNF}"
+	echo "% ttf2pk data directory"        >> ${TEXMFCNF}
+	echo "TTF2PKINPUTS = \$TEXMF/ttf2pk"  >> ${TEXMFCNF}
+	echo "% ttf2tfm data directory"       >> ${TEXMFCNF}
+	echo "TTF2TFMINPUTS = \$TEXMF/ttf2pk" >> ${TEXMFCNF}
+
+	echo "Update ls-R"
+	mktexlsr
+	;;
+    *)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

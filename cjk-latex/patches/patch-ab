@@ -1,0 +1,94 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/04/18 09:40:00 cjep Exp $
+
+--- utils/Bg5conv/Makefile.orig	Thu Jan  1 08:00:00 1970
++++ utils/Bg5conv/Makefile	Sat Feb 20 07:17:29 1999
+@@ -0,0 +1,14 @@
++bg5conv:
++	$(CC) $(CFLAGS) -o $@ bg5conv.c
++
++build: bg5conv
++
++all: build
++
++install: all
++	$(BSD_INSTALL_PROGRAM) bg5conv $(PREFIX)/bin
++	$(BSD_INSTALL_SCRIPT) bg5latex $(PREFIX)/bin
++	$(BSD_INSTALL_MAN) bg5conv.1 $(PREFIX)/man/man1
++
++clean:
++	rm -f bg5conv
+--- utils/CEFconv/Makefile.orig	Thu Jan  1 08:00:00 1970
++++ utils/CEFconv/Makefile	Sat Feb 20 07:26:46 1999
+@@ -0,0 +1,20 @@
++cef5conv:
++	$(CC) $(CFLAGS) -o $@ cef5conv.c
++
++cefconv:
++	$(CC) $(CFLAGS) -o $@ cefconv.c
++
++cefsconv:
++	$(CC) $(CFLAGS) -o $@ cefsconv.c
++
++build: cef5conv cefconv cefsconv
++
++all: build
++
++install: all
++	$(BSD_INSTALL_PROGRAM) *conv $(PREFIX)/bin
++	$(BSD_INSTALL_SCRIPT) *latex $(PREFIX)/bin
++	$(BSD_INSTALL_MAN) *.1 $(PREFIX)/man/man1
++
++clean:
++	rm -f *conv
+--- utils/SJISconv/Makefile.orig	Thu Jan  1 08:00:00 1970
++++ utils/SJISconv/Makefile	Sat Feb 20 07:29:10 1999
+@@ -0,0 +1,14 @@
++sjisconv:
++	$(CC) $(CFLAGS) -o $@ sjisconv.c
++
++build: sjisconv
++
++all: build
++
++install: all
++	$(BSD_INSTALL_PROGRAM) sjisconv $(PREFIX)/bin
++	$(BSD_INSTALL_SCRIPT) sjislatex $(PREFIX)/bin
++	$(BSD_INSTALL_MAN) sjisconv.1 $(PREFIX)/man/man1
++
++clean:
++	rm -f sjisconv
+--- utils/extconv/Makefile.orig	Wed Sep  8 00:22:41 1999
++++ utils/extconv/Makefile	Mon Sep  6 15:12:14 1999
+@@ -0,0 +1,15 @@
++extconv:
++	$(CC) $(CFLAGS) -o $@ extconv.c
++
++build: extconv
++
++all: build
++
++install: all
++	$(BSD_INSTALL_PROGRAM) extconv $(PREFIX)/bin
++	$(BSD_INSTALL_MAN) extconv.1 $(PREFIX)/man/man1
++	$(BSD_INSTALL_SCRIPT) bg5+latex $(PREFIX)/bin
++	$(BSD_INSTALL_SCRIPT) gbklatex $(PREFIX)/bin
++
++clean:
++	rm -f extconv
+--- utils/pyhyphen/Makefile.orig	Mon Jan 10 15:07:11 2000
++++ utils/pyhyphen/Makefile	Mon Jan 10 15:15:06 2000
+@@ -0,0 +1,14 @@
++pinyin:
++	$(CC) $(CFLAGS) -o $@ pinyin.c
++
++build: pinyin
++
++all: build
++
++install: all
++	$(BSD_INSTALL_PROGRAM) pinyin $(PREFIX)/bin
++	$(BSD_INSTALL_DATA) pinyin.ldf $(TEXMFMAIN)/tex/generic/babel
++	$(BSD_INSTALL_DATA) pyhyph.tex $(TEXMFMAIN)/tex/generic/hyphen
++
++clean:
++	rm -f pinyin
