@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/23 17:57:33 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/24 02:28:34 xtraeme Exp $
 #
 
 DISTNAME=	gnome2-user-docs-2.0.6
@@ -18,8 +18,10 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
+USE_X11=		yes
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
