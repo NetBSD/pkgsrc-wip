@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/19 13:15:02 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/19 19:25:17 mpasternak Exp $
 #
 
 DISTNAME=		oak-1.2
@@ -10,7 +10,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.digitallumber.com/TAR/
 COMMENT=		Authoritative/recursive DNS server
 
-USE_BUILDLINK2=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
