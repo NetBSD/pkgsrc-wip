@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.546 2003/10/14 00:59:43 tvierling Exp $
-# $NetBSD: Makefile,v 1.546 2003/10/14 00:59:43 tvierling Exp $
+# $Id: Makefile,v 1.547 2003/10/14 20:17:31 adrian_p Exp $
+# $NetBSD: Makefile,v 1.547 2003/10/14 20:17:31 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -53,6 +53,7 @@ SUBDIR+=	bastard
 SUBDIR+=	beast
 SUBDIR+=	billardgl
 SUBDIR+=	bin86
+SUBDIR+=	bitchbot
 SUBDIR+=	boost-base
 SUBDIR+=	boost-thread
 SUBDIR+=	boson
