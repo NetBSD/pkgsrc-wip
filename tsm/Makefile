@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/09/10 12:53:28 hfath Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/13 15:52:24 hfath Exp $
 
 DISTNAME=	tsm-5.2.2
 CATEGORIES=     sysutils
@@ -62,6 +62,6 @@ show-shlib-type:
 	@${ECHO} linux-${MACHINE_ARCH}
 
 post-install:
-	${RM} -f ${EMULDIR}/etc/mtab && ${LN} -s /etc/fstab ${EMULDIR}/etc/mtab
+	${TEST} -f ${EMULDIR}/etc/mtab || ${LN} -s /etc/fstab ${EMULDIR}/etc/mtab
 
 .include "../../mk/bsd.pkg.mk"
