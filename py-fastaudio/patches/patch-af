@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2003/11/22 17:23:43 mpasternak Exp $
+$NetBSD: patch-af,v 1.2 2003/11/24 01:01:42 marc Exp $
 
---- setup.py.orig	Wed May  7 02:06:01 2003
-+++ setup.py	Sat Nov 22 18:19:07 2003
-@@ -2,23 +2,25 @@
+--- setup.py.orig	2003-05-07 02:06:01.000000000 +0200
++++ setup.py	2003-11-24 01:57:49.000000000 +0100
+@@ -2,23 +2,33 @@
  from distutils.extension import Extension
  from Pyrex.Distutils import build_ext
  
@@ -10,6 +10,10 @@ $NetBSD: patch-af,v 1.1.1.1 2003/11/22 17:23:43 mpasternak Exp $
 +import sys, os
 +ROOTDIR = os.path.abspath(os.path.dirname(sys.argv[0]))
 +PREFIX = os.environ['PREFIX']
++try:
++    LIBOSSAUDIO = os.environ['LIBOSSAUDIO']
++except:
++    LIBOSSAUDIO = None
  
  if sys.platform == 'win32':
 -    faSources=['fastaudio.pyx', '../pa_common/pa_lib.c', '../pa_win_wmme/pa_win_wmme.c']
@@ -20,11 +24,15 @@ $NetBSD: patch-af,v 1.1.1.1 2003/11/22 17:23:43 mpasternak Exp $
 -elif sys.platform.find('linux') != -1:
 -    faSources=['fastaudio.pyx', '../pa_common/pa_lib.c', '../pa_unix_oss/pa_unix_oss.c']
 +else: # you can add more sys.platform deps later 
-+    faSources=['fastaudio.pyx', ROOTDIR + '/pa_common/pa_lib.c', ROOTDIR + '/pa_unix_oss/pa_unix_oss.c']
++    faSources=['fastaudio.pyx', ROOTDIR + '/pa_common/pa_lib.c',
++               ROOTDIR + '/pa_unix_oss/pa_unix.c',
++               ROOTDIR + '/pa_unix_oss/pa_unix_oss.c']
      defines = []
      libs = ['sndfile']
 -    extra_link_args = ['/usr/lib/libsndfile.a']
 +    extra_link_args = [PREFIX + '/lib/libsndfile.a']
++    if LIBOSSAUDIO is not None:
++        extra_link_args.append(LIBOSSAUDIO)
  #faSources=['fastaudio.pyx']
  
  ext_fastaudio = [Extension('fastaudio',
