@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/10/20 13:17:29 dillo Exp $
+
+--- window.c.orig	Fri Jun 27 22:28:36 2003
++++ window.c
+@@ -94,7 +94,9 @@ static gboolean gglk_win_can_scroll(wini
+ static void gglk_set_focus_win(winid_t win)
+ {
+     if(win->view) {
++#if 0
+ 	win->view->disable_scroll_on_focus = TRUE;
++#endif
+ 	gtk_widget_grab_focus(GTK_WIDGET(win->view));
+     }
+ }

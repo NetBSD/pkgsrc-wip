@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/20 13:17:29 dillo Exp $
+
+--- Makefile.orig	Fri Jun 27 22:28:36 2003
++++ Makefile
+@@ -1,20 +1,20 @@
+-prefix = /usr/local
++prefix = ${PREFIX}
+ libdir = ${prefix}/lib
+ 
+ MAJOR = 0
+ MINOR = 2
+ 
+-CC = gcc
++#CC = gcc
+ 
+ GTKFLAGS := $(shell pkg-config gtk+-2.0 --cflags)
+ GTKLIBS := $(shell pkg-config gtk+-2.0 --libs)
+ 
+-WARNS = -pedantic -Wall -W -Wpointer-arith -Wmissing-prototypes -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
++WARNS = -Wall -W -Wpointer-arith -Wmissing-prototypes -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
+ 
+ #CFLAGS  = $(GTKFLAGS) $(WARNS) -pipe -g -fpic
+ #LDFLAGS = $(GTKLIBS)
+-CFLAGS  = $(GTKFLAGS) $(WARNS) -pipe -g -fpic -DGGLK_SOUND_SDL
+-LDFLAGS = $(GTKLIBS) -lSDL -lSDL_mixer -g
++CFLAGS  += $(GTKFLAGS) $(WARNS) -DGGLK_SOUND_SDL
++LDFLAGS = $(GTKLIBS) -lSDL -lSDL_mixer
+ 
+ OBJS = gglk.o window.o stream.o lineedit.o style.o misc.o fileref.o sound.o gestalt.o blorb.o dispatch.o gi_blorb.o gi_dispa.o gtkhpaned.o gtkvpaned.o glkpaned.o
+ 
