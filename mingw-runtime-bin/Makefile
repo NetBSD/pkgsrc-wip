@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/11/30 17:10:50 xtraeme Exp $
-# $Id: Makefile,v 1.5 2004/11/30 17:10:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2005/02/13 20:11:12 rillig Exp $
+# $Id: Makefile,v 1.6 2005/02/13 20:11:12 rillig Exp $
 
 DISTNAME=	mingw-runtime-3.5
 PKGNAME=	mingw-runtime-bin-3.5
-WRKSRC=		${WRKDIR}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_MINGW}
 
@@ -14,6 +13,7 @@ COMMENT=	GNU C Compiler for win32 cross development
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 USE_CROSSBASE=	yes
+WRKSRC=		${WRKDIR}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${MINGW_TARGET}
