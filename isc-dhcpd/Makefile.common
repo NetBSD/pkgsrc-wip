@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/04/18 17:22:12 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/04/18 17:26:35 mpasternak Exp $
 #
 
 DISTNAME=		dhcp-3.0pl2
@@ -24,7 +24,6 @@ FILESDIR=		${.CURDIR}/../isc-dhcpd/files
 VAR_DIR?=		/var
 
 USE_PKGINSTALL=			YES
-PKG_RCD_SCRIPTS=		YES
 RCD_SCRIPTS=			isc_${ISC_DHCP_TYPE}
 
 pre-configure:
