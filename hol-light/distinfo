@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/17 22:28:24 airhead Exp $
+
+SHA1 (holl-1.0.tar.gz) = 0eaa733afebf9a95b45fa05e26f73eba0148ac2e
+Size (holl-1.0.tar.gz) = 263914 bytes
+SHA1 (patch-aa) = 4621dc3221085703595cda44a49d9843739431ea

@@ -1,0 +1,7 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/17 22:28:24 airhead Exp $
+
+--- caml.orig	2004-03-17 18:11:27.000000000 +0100
++++ caml	2004-03-17 18:11:45.000000000 +0100
+@@ -1 +1 @@
+-filter.$ARCH | camllight my_little_caml.$ARCH
++hol-filter | camllight hol-caml
