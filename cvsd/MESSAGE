@@ -1,6 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2003/04/20 16:14:35 virtus Exp $
+$NetBSD: MESSAGE,v 1.1.1.1 2003/06/22 03:58:15 schnoebe Exp $
 
-Make sure you edit cvsd.conf or that you add the user 'cvsd' with group 'cvsd'.
+    You should set up user and group ids for cvsd, create a
+    chrooted filesystem and create repositories.
+
+    Read the README file in ${PREFIX}/share/doc/cvsd for more
+    details on setting up the environment.
 
 ===========================================================================
