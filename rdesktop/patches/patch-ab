@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/11/15 05:33:59 grantbeattie Exp $
+$NetBSD: patch-ab,v 1.2 2003/11/15 06:34:13 grantbeattie Exp $
 
 --- configure.orig	2003-10-29 23:49:52.000000000 +1100
 +++ configure
@@ -38,32 +38,19 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/11/15 05:33:59 grantbeattie Exp $
      echo Sound support enabled: Open Sound System
      echo
      echo "SOUNDOBJ    = rdpsnd.o rdpsnd_oss.o" >>Makeconf
-@@ -270,29 +257,13 @@ elif [ -f /usr/include/sys/audioio.h ]; 
-     echo "SOUNDOBJ    = rdpsnd.o rdpsnd_sun.o" >>Makeconf
-     cflags="$cflags -DWITH_RDPSND"
- else
--    echo "WARNING: sound support disabled (no /usr/include/sys/soundcard.h or /usr/include/sys/audio.h)"
-+    echo "WARNING: sound support disabled (no soundcard.h or /usr/include/sys/audioio.h)"
-     echo "Currently supported systems are Open Sound System and Sun"
-     echo
- fi
+@@ -283,16 +270,13 @@ rpath=`echo $rpath |sed 's/^://'`
  
--
--# Platform-specific options
--
--# strip leading colon from rpath
--rpath=`echo $rpath |sed 's/^://'`
--
--case `uname -s` in
--  SunOS)
+ case `uname -s` in
+   SunOS)
 -    ldflags="$ldflags -lsocket -lnsl -R$rpath"
 -    ;;
 -  OSF1)
 -    ldflags="$ldflags -Wl,-rpath,$rpath"
--    ;;
--esac
--
--
++    ldflags="$ldflags -lsocket -lnsl"
+     ;;
+ esac
+ 
+ 
 -echo "CFLAGS      = $cflags" >>Makeconf
 -echo "LDFLAGS     = $ldflags" >>Makeconf
 +echo "CFLAGS      = $CFLAGS $cflags" >>Makeconf
