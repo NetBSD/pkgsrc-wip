@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/05 05:20:53 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/02 02:52:08 mpasternak Exp $
 #
 
-DISTNAME=		Py2Play-0.1.5
+DISTNAME=		Py2Play-0.1.6
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel
 MASTER_SITES=		http://oomadness.tuxfamily.org/downloads/
