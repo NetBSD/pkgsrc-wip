@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/09/27 20:30:00 virtus Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 06:54:06 blef Exp $
 #
 
 DISTNAME=	axe-0.2.0
@@ -11,6 +11,6 @@ COMMENT=	Manipulate contents of Atari 8bit disk image files (.ATR, .XFD)
 
 NO_CONFIGURE=  YES
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 .include "../../mk/bsd.pkg.mk"

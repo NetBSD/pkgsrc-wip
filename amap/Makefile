@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/11/21 13:20:51 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 07:08:27 blef Exp $
 #
 
 DISTNAME=       amap-4.5
@@ -9,7 +9,7 @@ MAINTAINER=     adam@monkeybyte.org
 HOMEPAGE=       http://www.thc.org/
 COMMENT=        Applications and Services scanner
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 HAS_CONFIGURE=	YES
 
 pre-configure:
@@ -32,6 +32,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/appdefs.resp ${PREFIX}/share/amap
 	${INSTALL_DATA} ${WRKSRC}/appdefs.rpc ${PREFIX}/share/amap
 
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/09/16 16:10:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 07:11:57 blef Exp $
 #
 
 DISTNAME=	cgic202
@@ -10,7 +10,7 @@ MAINTAINER=	cinnion@ka8zrt.com
 HOMEPAGE=	http://www.boutell.com/cgic/
 COMMENT=	Thomas Boutell's ANSI C library for CGI Programming
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:11:43 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/25 07:10:55 blef Exp $
 #
 
 DISTNAME=	ccze-0.2.1
@@ -10,9 +10,9 @@ HOMEPAGE=	http://bonehunter.rulez.org/CCZE.phtml
 COMMENT=	Log coloriser, fast and light on resources
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../devel/pcre/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.3 2004/02/22 22:45:05 ivaniclixx Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/25 07:03:59 blef Exp $
 #
 
 DISTNAME=		blassic-0.8.1
@@ -10,7 +10,7 @@ MAINTAINER=		ivaniclixx@terra.es
 HOMEPAGE=		http://www.arrakis.es/~ninsesabe/blassic/
 COMMENT=		Blassic is a classic Basic interpreter
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_X11=                yes
 

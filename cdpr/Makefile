@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/08 11:05:57 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/25 07:13:35 blef Exp $
 #
 
 DISTNAME=	cdpr-1.0.8
@@ -10,11 +10,11 @@ MAINTAINER=	adam@monkeybyte.org
 HOMEPAGE=	http://www.monkeymental.com/
 COMMENT=	Cisco Discovery Protocol Reporter
 
-USE_BUILDLINK2=         yes
+USE_BUILDLINK3=         yes
 ALL_TARGET=		cdpr
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cdpr ${PREFIX}/bin
 
-.include "../../net/libpcap/buildlink2.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/02/27 23:44:18 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/25 07:25:32 blef Exp $
 #
 
 DISTNAME=	ezbounce-1.04a
@@ -14,7 +14,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://druglord.freelsd.org/ezbounce/
 COMMENT=	Highly Configurable IRC Proxy
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 
@@ -44,5 +44,5 @@ do-install:
 		${INSTALL_DATA} $$f ${DOCDIR}; \
 	done )
 
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
