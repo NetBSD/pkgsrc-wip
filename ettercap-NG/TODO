@@ -1,3 +1,2 @@
 - NetBSD i386 support is not working
-- Need to add support for the GTK interface
 - Not sure if INSTALL_UNSTRIPPED is just required on Darwin or other/all OS'es
