@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/12 06:13:30 marttikuparinen Exp $
-bin/dvdbackup
-share/doc/dvdbackup/README
-@dirrm share/doc/dvdbackup

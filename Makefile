@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.879 2004/01/12 06:13:53 marttikuparinen Exp $
-# $NetBSD: Makefile,v 1.879 2004/01/12 06:13:53 marttikuparinen Exp $
+# $Id: Makefile,v 1.880 2004/01/12 16:25:04 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.880 2004/01/12 16:25:04 marttikuparinen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -126,7 +126,6 @@ SUBDIR+=	drweb-clients-shared
 SUBDIR+=	drweb-dc
 SUBDIR+=	drweb-smf
 SUBDIR+=	drwright
-SUBDIR+=	dvdbackup
 SUBDIR+=	dumb
 SUBDIR+=	dzt
 SUBDIR+=	e2fsprogs
