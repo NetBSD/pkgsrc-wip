@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1 2003/10/11 23:27:32 roelants Exp $
+
+--- configure.orig	2001-08-04 07:00:03.000000000 +0200
++++ configure
+@@ -1641,6 +1641,24 @@ else
+ fi
+ done
+ 
++ac_inc=semaphore.h
++echo $ac_n "checking for $ac_inc""... $ac_c" 1>&6
++echo "configure:1646: checking for $ac_inc" >&5
++cat > conftest.$ac_ext <<EOF
++#line 1648 "configure"
++
++#include <semaphore.h>
++EOF
++
++if { (eval echo configure:1653: \"$ac_cpp conftest.$ac_ext\") 1>&5; (eval $ac_cpp conftest.$ac_ext >/dev/null) 2>&5; }; then
++  echo "$ac_t""yes" 1>&6
++  SEMDEFS='-DHAVE_SEMAPHORE_H'
++else
++  echo "$ac_t""no" 1>&6
++  SEMDEFS=''
++fi
++rm -f conftest*
++
+ 
+ trap '' 1 2 15
+ cat > confcache <<\EOF
+@@ -1792,6 +1810,7 @@ s%@INSTALL_PROGRAM@%$INSTALL_PROGRAM%g
+ s%@INSTALL_SCRIPT@%$INSTALL_SCRIPT%g
+ s%@INSTALL_DATA@%$INSTALL_DATA%g
+ s%@THREADLIBS@%$THREADLIBS%g
++s%@SEMDEFS@%$SEMDEFS%g
+ s%@CPP@%$CPP%g
+ 
+ CEOF

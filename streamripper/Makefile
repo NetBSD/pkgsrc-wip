@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/28 09:48:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/11 23:27:31 roelants Exp $
 #
 
 DISTNAME=	streamripper-1.32
@@ -14,5 +14,14 @@ GNU_CONFIGURE=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/streamripper ${PREFIX}/bin
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/streamripper
+	${INSTALL_DATA} ${WRKSRC}/CHANGES ${PREFIX}/share/doc/streamripper
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/streamripper
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/streamripper
+	${INSTALL_DATA} ${WRKSRC}/THANKS ${PREFIX}/share/doc/streamripper
+	${INSTALL_DATA} ${WRKSRC}/TODO ${PREFIX}/share/doc/streamripper
 
+PTHREAD_OPTS+=	require
+
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

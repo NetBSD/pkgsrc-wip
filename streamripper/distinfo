@@ -1,4 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/14 04:07:33 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/10/11 23:27:31 roelants Exp $
 
 SHA1 (streamripper-1.32.tar.gz) = 465eb79b55b2698f83bc15180a97a7845e849366
 Size (streamripper-1.32.tar.gz) = 98092 bytes
+SHA1 (patch-aa) = 1c70f27676039e87d5d5c48d91850df18ce866ce
+SHA1 (patch-ab) = 8c43fb204bcbb42943b2dbdc1a7c31fa655cddca
+SHA1 (patch-ac) = ebd4962055aa48099cd9608ce374d30d2c1761dd
+SHA1 (patch-ad) = e3d2b36bf49e4d6a15418d22094b7b93055c3293
