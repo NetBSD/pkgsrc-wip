@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1225 2004/04/20 09:21:18 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1225 2004/04/20 09:21:18 xtraeme Exp $
+# $Id: Makefile,v 1.1226 2004/04/20 09:39:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1226 2004/04/20 09:39:03 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -428,7 +428,6 @@ SUBDIR+=	nsd
 SUBDIR+=	nuppelvideo
 SUBDIR+=	nvidia-freebsd
 SUBDIR+=	octave-nox11
-SUBDIR+=	oinkmaster
 SUBDIR+=	oops
 SUBDIR+=	opax
 SUBDIR+=	opengaim

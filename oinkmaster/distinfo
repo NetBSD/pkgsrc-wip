@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/22 19:49:30 adrian_p Exp $
-
-SHA1 (oinkmaster-0.8.tar.gz) = 48895c46392f7ac7d5ced26ccb9fb9776e7b6ce4
-Size (oinkmaster-0.8.tar.gz) = 31725 bytes
-SHA1 (patch-aa) = ca913cb2c125bf285d1efbac1987f1c6df991809
-SHA1 (patch-ab) = c1608d752cf0ab702bad9a21b7a8a097c0c4bec0
