@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/23 00:51:48 rockpiper Exp $
-bin/mpd
-man/man1/mpd.1
-share/doc/mpd/COMMANDS
-share/doc/mpd/README
-share/doc/mpd/UPGRADING
-@dirrm share/doc/mpd
