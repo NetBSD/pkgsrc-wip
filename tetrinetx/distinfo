@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/02 06:06:25 xtraeme Exp $
+
+SHA1 (tetrinetx-1.13.16+qirc-1.40c.tar.gz) = 3bc0a8ce53bef3ef68b028834689d6fe85c8150a
+Size (tetrinetx-1.13.16+qirc-1.40c.tar.gz) = 81447 bytes
+SHA1 (patch-aa) = c703d34da066c382698eaaf009c6cd6f280c7453
+SHA1 (patch-ab) = 10136812d7d20e6c961463c3fa6973d2b23d195e

@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/02 06:06:26 xtraeme Exp $
+
+--- src/config.h.orig	Tue Apr 24 04:31:29 2001
++++ src/config.h	Sun Jan 26 17:58:07 2003
+@@ -7,16 +7,16 @@
+ */
+ 
+ /* Location of the various external files */
+-#define FILE_MOTD    "game.motd"	/* Message of the Day File */
+-#define FILE_PMOTD    "game.pmotd"	/* Playback motd */
+-#define FILE_CONF    "game.conf"	/* Game configuration File */
+-#define FILE_WINLIST "game.winlist"	/* Winlist storage file */
+-#define FILE_WINLIST2 "game.winlist2"	/* Winlist storage file */
+-#define FILE_WINLIST3 "game.winlist3"	/* Winlist storage file */
++#define FILE_MOTD    "/usr/pkg/share/tetrinetx/game.motd"	/* Message of the Day File */
++#define FILE_PMOTD    "/usr/pkg/share/tetrinetx/game.pmotd"	/* Playback motd */
++#define FILE_CONF    "/usr/pkg/share/tetrinetx/game.conf"	/* Game configuration File */
++#define FILE_WINLIST "/usr/pkg/share/tetrinetx/game.winlist"	/* Winlist storage file */
++#define FILE_WINLIST2 "/usr/pkg/share/tetrinetx/game.winlist2"	/* Winlist storage file */
++#define FILE_WINLIST3 "/usr/pkg/share/tetrinetx/game.winlist3"	/* Winlist storage file */
+ 
+-#define FILE_BAN     "game.ban"		/* List of Banned IP's */
+-#define FILE_BAN_COMPROMISE     "game.ban.compromise"	/* List of Banned IP's */
+-#define FILE_ALLOW   "game.allow"	/* List of allow IP's */
+-#define FILE_LOG     "game.log"		/* Logfile */
+-#define FILE_PID     "game.pid"		/* Default PID */
+-#define FILE_SECURE  "game.secure"	/* Security file */
++#define FILE_BAN     "/usr/pkg/share/tetrinetx/game.ban"		/* List of Banned IP's */
++#define FILE_BAN_COMPROMISE     "/usr/pkg/share/tetrinetx/game.ban.compromise"	/* List of Banned IP's */
++#define FILE_ALLOW   "/usr/pkg/share/tetrinetx/game.allow"	/* List of allow IP's */
++#define FILE_LOG     "/usr/pkg/share/tetrinetx/game.log"		/* Logfile */
++#define FILE_PID     "/var/run/tetrinetx.pid"			/* Default PID */
++#define FILE_SECURE  "/usr/pkg/share/tetrinetx/game.secure"	/* Security file */
