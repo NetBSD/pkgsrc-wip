@@ -1,3 +1,25 @@
-pkglint complains about absolute pathname "/dev/null" in Makefile.
+ * pkglint complains about absolute pathname "/dev/null" in Makefile.
+ * there are some obscure problems w/ teTeX 3.0 in this pkg running
+   "latex foiltex.ins":
 
-PLIST contains @exec/@unexec mktexlsr. This is probably bad.
+	...
+	Generating file(s) ./sampfoil.tex 
+
+	Processing file foiltex.dtx (sample) -> sampfoil.tex
+	File foiltex.dtx ended by \endinput.
+	Lines  processed: 4241
+	Comments removed: 2523
+	Comments  passed: 23
+	Codelines passed: 1655
+
+	Runaway argument?
+	\iispc {\space \space } \newcommand {\vspc }{\iispc \iispc \space } \Msg \ETC.
+	! Paragraph ended before \@newcommand was complete.
+	<to be read again> 
+			   \par 
+	l.137 
+	      
+	? 
+
+   This problem disappears when removing the two \newcommand statements
+   and the \Msg lines at the end of the foiltex.ins file - strange.
