@@ -1,0 +1,56 @@
+$NetBSD: patch-aa,v 1.1 2004/11/24 14:38:21 imilh Exp $
+
+--- Makefile.orig	2003-10-15 12:30:11.000000000 +0200
++++ Makefile
+@@ -1,40 +1,17 @@
+-# Author : Benoit PAPILLAULT <benoit.papillault@free.fr>
+-# Creation : 07/10/2003
++LIB=		pusb
+ 
+-prefix = /usr/local/
+-exec_prefix = ${prefix}
+-libdir = ${exec_prefix}/lib
+-includedir = ${prefix}/include
++SRCS=		pusb.c pusb-common.c
++LIBDIR=		/usr/pkg/lib
+ 
+-CC=gcc
+-PACKAGE_VERSION=0.1
++INCS=		pusb.h
++INCSDIR=	/usr/pkg/include
+ 
+-CFLAGS  += -Wall -O2
+-LDFLAGS += -s
++NOMAN=		# defined
++NOLINT=		# defined
+ 
+-PUSB_SRC = pusb.c pusb-common.c
+-PUSB_OBJ = $(PUSB_SRC:.c=.o)
+-
+-DEP = Makefile.dep
+-
+-default: libpusb.so
+-
+-libpusb.so: $(PUSB_OBJ)
+-	$(CC) -shared -o $@ $^
+-
+-clean:
+-	$(RM) pusb.o libpusb.so $(DEP)
+-
+-$(DEP): $(PUSB_SRC)
+-	$(CC) $(CFLAGS) -MM $^ > $@
+-
+--include $(DEP)
+-
+-install: libpusb.so pusb.h
+-	install -d $(includedir)
+-	install pusb.h $(includedir)
+-	install -d $(libdir)
+-	install libpusb.so $(libdir)/libpusb.so.$(PACKAGE_VERSION)
+-	ln -sf libpusb.so.$(PACKAGE_VERSION) $(libdir)/libpusb.so
++SHLIB_MAJOR=	0
++SHLIB_MINOR=	1
+ 
++LIBMODE=	${BINMODE}
+ 
++.include <bsd.lib.mk>
