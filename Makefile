@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.751 2003/12/08 19:27:21 anielski Exp $
-# $NetBSD: Makefile,v 1.751 2003/12/08 19:27:21 anielski Exp $
+# $Id: Makefile,v 1.752 2003/12/11 20:07:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.752 2003/12/11 20:07:04 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -92,6 +92,7 @@ SUBDIR+=	cmatrix
 SUBDIR+=	compositeext
 SUBDIR+=	cops
 SUBDIR+=	copytape
+SUBDIR+=	crack-attack
 SUBDIR+=	cvsd
 SUBDIR+=	cyrus-imapd22
 SUBDIR+=	d2x
@@ -143,8 +144,8 @@ SUBDIR+=	frontpage
 SUBDIR+=	fsv
 SUBDIR+=	fwbuilder
 SUBDIR+=	galib
-# SUBDIR+=	gcl		# see TODO
-# SUBDIR+=	gcl-nox11	# see gcl/TODO
+#SUBDIR+=	gcl		# see TODO
+#SUBDIR+=	gcl-nox11	# see gcl/TODO
 SUBDIR+=	gcompris
 SUBDIR+=	gdbada
 SUBDIR+=	gdrdao
@@ -236,6 +237,8 @@ SUBDIR+=	imhangul
 SUBDIR+=	imhangul_status_applet
 SUBDIR+=	ion-devel
 SUBDIR+=	ion-dock
+SUBDIR+=	isc-dhclient
+SUBDIR+=	isc-dhcpd
 SUBDIR+=	ish
 SUBDIR+=	jabberd
 SUBDIR+=	jabberd2
@@ -281,6 +284,7 @@ SUBDIR+=	libXi
 SUBDIR+=	libXrender
 SUBDIR+=	libXres
 SUBDIR+=	libXt
+SUBDIR+=	libXv
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libfwbuilder
@@ -320,7 +324,7 @@ SUBDIR+=	mailman
 SUBDIR+=	man-db
 SUBDIR+=	map-browse
 SUBDIR+=	mathomatic
-# SUBDIR+=	maxima		# see TODO
+#SUBDIR+=	maxima		# see TODO
 SUBDIR+=	mc
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
@@ -331,6 +335,7 @@ SUBDIR+=	mhonarc
 SUBDIR+=	ming
 SUBDIR+=	mingw
 SUBDIR+=	mingw-binutils
+SUBDIR+=	mingw-c
 SUBDIR+=	mingw-g++
 SUBDIR+=	mingw-libtool
 SUBDIR+=	mingw-objc
@@ -461,7 +466,6 @@ SUBDIR+=	pxview
 SUBDIR+=	py-CVSTools
 SUBDIR+=	py-EditObj
 SUBDIR+=	py-Genetic
-SUBDIR+=	py-Lupy
 SUBDIR+=	py-MayaVi
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-OpenSSL
@@ -473,7 +477,6 @@ SUBDIR+=	py-Reverend
 SUBDIR+=	py-SciPy
 SUBDIR+=	py-Soya
 SUBDIR+=	py-TTFQuery
-SUBDIR+=	py-ZODB
 SUBDIR+=	py-albatross
 SUBDIR+=	py-ao
 SUBDIR+=	py-biggles
@@ -518,8 +521,8 @@ SUBDIR+=	qn-x11
 SUBDIR+=	rc.subr
 SUBDIR+=	rcorder
 SUBDIR+=	regexxer
+#SUBDIR+=	rekall # doesn't compile yet; see TODO
 SUBDIR+=	resourceext
-# SUBDIR+=	rekall # doesn't compile yet; see TODO
 SUBDIR+=	rlpr
 SUBDIR+=	rolo
 SUBDIR+=	rosegarden-current
@@ -637,7 +640,56 @@ SUBDIR+=	xsh
 SUBDIR+=	xtrans
 SUBDIR+=	xwpe
 SUBDIR+=	yafray
+SUBDIR+=	yp-tools
+SUBDIR+=	ypbind-mt
+SUBDIR+=	ypserv
 SUBDIR+=	zebra-pj
 SUBDIR+=	zinf
+
+${.CURDIR}/PKGDB:
+	@${RM} -f ${.CURDIR}/PKGDB
+	@${ECHO_MSG} "Extracting complete dependency database.  This may take a while..."
+	@DB=${.CURDIR}/PKGDB ; \
+	PKGSRCDIR=${.CURDIR} ; \
+	npkg=1; \
+	list=`${GREP} '^[[:space:]]*'SUBDIR Makefile | ${SED} 's,.*=[[:space:]]*,,'` ; \
+	for pkgdir in $$list ; do \
+		if [ ! -d $$pkgdir ]; then  \
+			echo " " ; \
+			echo "WARNING:  the package directory $$pkgdir is listed in" > /dev/stderr ; \
+			echo $$pkgdir | ${SED} 's;/.*;/Makefile;g' > /dev/stderr ; \
+			echo "but the directory does not exist.  Please fix this!" > /dev/stderr ; \
+		else \
+			cd $$pkgdir ; \
+			l=`${MAKE} print-summary-data`  ; \
+			if [ $$? != 0 ]; then \
+				echo "WARNING (printdepends):  the package in $$pkgdir had problem with" \
+					> /dev/stderr ; \
+				echo "    ${MAKE} print-summary-data" > /dev/stderr ; \
+				echo "    database information for this package" > /dev/stderr ; \
+				echo "    will be dropped." > /dev/stderr ; \
+				${MAKE} print-summary-data  2>&1 > /dev/stderr ; \
+			else \
+				echo "$$l" >> $$DB ; \
+			fi ; \
+		fi ; \
+		echo -n "." ; \
+		if [ `${EXPR} $$npkg % 100 = 0` -eq 1 ]; then \
+			echo " " ; \
+			echo "$$npkg" ; \
+		fi ; \
+		npkg=`${EXPR} $$npkg + 1` ; \
+		cd $$PKGSRCDIR  ; \
+	done
+
+.PHONY: index
+index: ${.CURDIR}/INDEX
+
+${.CURDIR}/INDEX: ${.CURDIR}/PKGDB
+	@${RM} -f ${.CURDIR}/INDEX
+	@${AWK} -f ../mk/scripts/genindex.awk PKGSRCDIR=${.CURDIR} SORT=${SORT} ${.CURDIR}/PKGDB
+	@${RM} -f ${.CURDIR}/PKGDB
+	@${GREP} -v '||||||||||$$' ${.CURDIR}/INDEX > ${.CURDIR}/INDEX.tmp && \
+		${MV} ${.CURDIR}/INDEX.tmp ${.CURDIR}/INDEX
 
 .include "../mk/bsd.pkg.subdir.mk"
