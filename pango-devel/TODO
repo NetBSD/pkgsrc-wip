@@ -1,9 +1,13 @@
-$Id: TODO,v 1.1.1.1 2003/12/29 14:41:05 mpasternak Exp $
+$Id: TODO,v 1.2 2004/03/17 14:12:46 mpasternak Exp $
 
 Could it be patched so it doesn't conflict with devel/pango ?
 
 Is the PLIST okay?
 
-Does it compile on NetBSD-stable and NetBSD-current?
+Does it compile on NetBSD-stable?
+
+NetBSD-current build confirmed.
+
+FreeBSD-4.9-STABLE build confirmed.
 
 	-- dotz@irc.pl
