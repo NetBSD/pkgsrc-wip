@@ -117,6 +117,53 @@ check_version() {
 	fi
 }
 
+do_relink() {
+	if [ "$1" = "" ]; then
+	echo "==> Looking for broken libs on ${PREFIX}[/bin|/sbin|/lib]"
+		FILES=`find ${PREFIX}/bin ${PREFIX}/sbin ${PREFIX}/lib -type f`
+	else
+	echo "==> Looking for unlinked binaries of package ${1}"
+		FILES=`pkg_info -L $1 | grep -e bin -e lib`
+	fi
+
+	for A in ${FILES}; do
+		LIB=`ldd ${A} 2>/dev/null |grep found|awk -F = '{ print $1 }'`
+		for B in ${LIB}; do
+		#--
+		OK="1"
+		for C in ${UNRESOLVED} ; do
+			if [ "${C}" = "${B}" ]; then
+				OK="0"
+			fi
+		done
+		if [ "${OK}" = "1" ]; then
+		echo "==> Relinking ${B}..."
+		COW="`echo ${B} |awk -F so '{ print $1 }'`so"
+		TARGET="`ls -l ${PREFIX}/lib/${COW}.* 2>/dev/null | grep -e ^- `"
+		if [ "${TARGET}" = "" ]; then
+			echo " * Unable to be resolved"
+			UNRESOLVED="${UNRESOLVED} ${B}"
+		else
+			TARGET=`echo ${TARGET} | awk '{ print $9 }'`
+			echo " * Solved against ${TARGET}"
+			ln -s ${TARGET} ${PREFIX}/lib/$B
+		fi
+		#--		
+		fi
+		done
+	done
+}
+
+
+do_auto_relink() {
+	rPKG=$1
+	rPKGS=`pkg_info -qR ${rPKG}`
+	echo "==> Doing automatic relink for inverse deps of ${rPKG}"
+	for A in ${rPKGS} ; do
+		do_relink ${A}
+	done
+}
+
 do_install() {
 	PKG=$1
 	DIR=$1
@@ -154,7 +201,6 @@ do_install() {
 		fi
 	else
 
-	#STAT="`echo $DIR | ${PKGCHK} -C /dev/stdin -c`"
 	STAT="`check_version $DIR`"
 	if [ "${STAT}" = "" ]; then
 		echo "==> Package ${DIR} is at the latest version"
@@ -166,7 +212,6 @@ do_install() {
 	INSTALL=""
 	for A in ${DEPS} ; do
 		CHK=`check_version ${A}`
-		#CHK=`echo ${A} | ${PKGCHK} -C /dev/stdin -c`
 		if [ ! "${CHK}" = "" ]; then
 		if [ ! "`echo ${CHK}|grep missing`" = "" ]; then
 			echo " [i] Enqueueing for install ${A}"
@@ -196,6 +241,7 @@ do_install() {
 			process_failed
 		else
 			echo "==> Process finished."
+			do_auto_relink ${A}
 		fi
 	done
 	fi
@@ -305,34 +351,6 @@ do_clean() {
 	done
 	echo "DONE"
 
-}
-
-do_relink() {
-	if [ "$1" = "" ]; then
-	echo "==> Looking for broken libs on ${PREFIX}[/bin|/sbin|/lib]"
-		FILES=`find ${PREFIX}/bin ${PREFIX}/sbin ${PREFIX}/lib -type f`
-	else
-	echo "==> Looking for unlinked binaries of package ${1}"
-		FILES=`pkg_info -L $1 | grep bin`
-	fi
-
-	for A in ${FILES}; do
-		LIB=`ldd ${A} 2>/dev/null |grep found|awk -F = '{ print $1 }'`
-		for B in ${LIB}; do
-		#--
-		echo "==> Relinking ${B}..."
-		COW="`echo ${B} |awk -F so '{ print $1 }'`so"
-		TARGET="`ls -l ${PREFIX}/lib/${COW}.* 2>/dev/null | grep -e ^- `"
-		if [ "${TARGET}" = "" ]; then
-			echo " * Unable to be resolved"
-		else
-			TARGET=`echo ${TARGET} | awk '{ print $9 }'`
-			echo " * Solved against ${TARGET}"
-			ln -s ${TARGET} ${PREFIX}/lib/$B
-		fi
-		#--		
-		done
-	done
 }
 
 # Main procedure
