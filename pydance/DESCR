@@ -1,0 +1,8 @@
+pydance lets you play Dance Dance Revolution and similar games on your
+computer, either with the keyboard or with a custom controller. What you
+do is watch the screen as colored arrows move up the screen. As soon
+as they cover up stationary arrows at the top, you step (or press) the
+corresponding direction, in time with the beat of the music.
+
+You don't need a dance mat to play pydance! It's a lot more fun if you
+do, but you can also use your keyboard or gamepad.
