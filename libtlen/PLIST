@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/29 20:52:47 mpasternak Exp $
-include/libtlen
+@comment $NetBSD: PLIST,v 1.2 2004/01/13 12:25:37 moubctez Exp $
 include/libtlen/asciitab.h
 include/libtlen/hashtable.h
 include/libtlen/iasciitab.h
@@ -14,7 +13,9 @@ include/libtlen/xmlparse.h
 include/libtlen/xmlrole.h
 include/libtlen/xmltok.h
 include/libtlen/xmltok_impl.h
-lib/libtlen.so.1.5
-lib/libtlen.so.1
-lib/libtlen.so
 lib/libtlen.a
+lib/libtlen.la
+lib/libtlen.so
+lib/libtlen.so.1
+lib/libtlen.so.1.5
+@dirrm include/libtlen

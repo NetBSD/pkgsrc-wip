@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/11/29 20:52:47 mpasternak Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/01/13 12:25:37 moubctez Exp $
 #
 # This Makefile fragment is included by packages that use libtlen.
 #
@@ -17,8 +17,6 @@ BUILDLINK_PREFIX.libtlen_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libtlen+=	include/libtlen
 BUILDLINK_FILES.libtlen+=	include/libtlen/*.h
 BUILDLINK_FILES.libtlen+=	lib/libtlen.*
-
-.include "../../textproc/expat/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	libtlen-buildlink
 

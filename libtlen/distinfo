@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/29 20:52:47 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2004/01/13 12:25:37 moubctez Exp $
 
-SHA1 (libtlen-20031128.tar.gz) = ea3982c65f0baa75a51e00966c67d37c91056a39
-Size (libtlen-20031128.tar.gz) = 183132 bytes
+SHA1 (libtlen-20040112.tar.gz) = cb4afb9808dd39c9162b61a86f15b46e3f3baf45
+Size (libtlen-20040112.tar.gz) = 183206 bytes
+SHA1 (patch-aa) = e1ce28c5ec1f494a9bc3f438d4bd468e680cfc9b
