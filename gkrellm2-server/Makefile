@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2003/09/25 20:06:51 uid117197 Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/18 08:41:51 cubidou Exp $
 .include "../../wip/gkrellm2/Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm-server
 COMMENT=		Monitoring daemon remotely accessible by a GKrellM client
 DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}:../../wip/gkrellm2-share
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 PTHREAD_OPTS=		require
 RCD_SCRIPTS=		gkrellmd
@@ -21,6 +21,9 @@ NOT_FOR_PLATFORM=	IRIX-*
 
 MAKE_ENV+=		MODULES=server
 
+# Define this to use glib-1.2 instead of glib-2
+BUILD_DEFS+=		GKRELLMSERVER_USE_GLIB12
+
 pre-build:
 	${SED} -e s,@@PREFIX@@,${PREFIX}, \
 	    <${WRKSRC}/server/gkrellmd.h >${WRKSRC}/server/gkrellmd.h.sed
@@ -30,6 +33,11 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gkrellm-server
 	${INSTALL_DATA} ${WRKSRC}/server/gkrellmd.conf ${PREFIX}/share/examples/gkrellm-server
 
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.if defined(GKRELLMSERVER_USE_GLIB12)
+MAKE_ENV+=		USE_GLIB12=yes
+.include "../../devel/glib/buildlink3.mk"
+.else
+.include "../../devel/glib2/buildlink3.mk"
+.endif
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
