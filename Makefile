@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1635 2005/01/29 17:20:47 jgoamakf Exp $
-# $NetBSD: Makefile,v 1.1635 2005/01/29 17:20:47 jgoamakf Exp $
+# $Id: Makefile,v 1.1636 2005/01/30 05:22:51 tnn2 Exp $
+# $NetBSD: Makefile,v 1.1636 2005/01/30 05:22:51 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -583,6 +583,7 @@ SUBDIR+=	openttd
 SUBDIR+=	openvrml
 SUBDIR+=	opera-devel
 SUBDIR+=	oqtplayer
+SUBDIR+=	orpie
 SUBDIR+=	p3nfs
 SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-Apache-Request
