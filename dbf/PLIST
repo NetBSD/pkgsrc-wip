@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/17 16:11:55 xtraeme Exp $
+bin/dbf
+share/dbf/CHANGELOG
+share/dbf/CREDITS
+share/dbf/FAQ
+share/dbf/INSTALL
+share/dbf/MANIFEST
+share/dbf/README
+@dirrm share/dbf

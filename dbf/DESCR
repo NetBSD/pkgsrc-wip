@@ -1,0 +1,5 @@
+dbf takes a dBASE III, IV, or 5.0 (dbf) file and dumps its table
+contents to either the screen or a comma separated values (csv) text
+file.  There is no man page with this package but a README file is
+installed in ${LOCALBASE}/share/dbf.  You can also run dbf --help for
+usage instructions.

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/17 16:11:55 xtraeme Exp $
+
+SHA1 (dbf-0.5.1.src.tar.gz) = 53c216ddf17b74e8fff4f04d6d163e71335791e7
+Size (dbf-0.5.1.src.tar.gz) = 16869 bytes
+SHA1 (patch-aa) = da023ad38f066f0331e21c95a43e88f0fa839111
+SHA1 (patch-ab) = 67ca9452e442b64d6f5290ab41931374b5b32677
