@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/28 00:10:18 minskim Exp $
+lib/xchat/plugins/perl.la
+share/examples/xchat/sample_script.pl
+share/examples/xchat/ignore.pl
+share/doc/xchat/xchat2-perl.html
+share/doc/xchat/xchat2-perldocs.html
+@dirrm share/examples/xchat
+@dirrm share/doc/xchat
