@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/01/07 22:49:46 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/08 13:34:42 johnrshannon Exp $
 #
 
 SNAPDATE=	20040107
@@ -19,13 +19,13 @@ USE_PKGINSTALL=		YES
 USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=  require native
-CONFIGURE_ARGS+=        --enable-languages=ada
+CONFIGURE_ARGS+=        --enable-languages="c,ada"
 EXTRA_ENV+=     ADAC=/usr/pkg/gcc3/bin/gcc
 CONFIGURE_ENV+= ${EXTRA_ENV}
 MAKE_ENV+=      ${EXTRA_ENV}
 
 # Make location overridable, to allow ping-pong bootstraps.
-GCC3_DEFAULT_SUBPREFIX=	gcc3devel
+GCC3_DEFAULT_SUBPREFIX=	gcc3
 GCC3_INSTALLTO_SUBPREFIX?=	${GCC3_DEFAULT_SUBPREFIX}
 .if ${GCC3_INSTALLTO_SUBPREFIX} != ${GCC3_DEFAULT_SUBPREFIX}
 GCC3_PKGMODIF=		_${GCC3_INSTALLTO_SUBPREFIX}
@@ -55,9 +55,6 @@ post-patch:
 		${CP} $$i ${WRKSRC}/gcc/ada; \
 	done )
 
-post-buildlink:
-	${LN} -sf ${ADA_BOOT_GNATBIND} ${BUILDLINK_DIR}/bin
-
 do-configure:
 	(test -d  ${WRKDIR}/obj || mkdir ${WRKDIR}/obj && cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS})
 
@@ -68,7 +65,9 @@ do-test:
 	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
 
 do-install:
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install && test -f ${GCC_PREFIX}/bin/gcc || ln -s ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc)
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install \
+	 && test -f ${GCC_PREFIX}/bin/cc || ln -s ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc \
+	 && test -f ${GCC_PREFIX}/bin/gnat1 || ln -s ${GCC_ARCHDIR}/3.4.0/gnat1 ${GCC_PREFIX}/bin/gnat1)
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/pthread.buildlink2.mk"
