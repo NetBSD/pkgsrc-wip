@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/05 02:06:03 xtraeme Exp $
-lib/httpd/mod-xslt.so
-share/httpd/htdocs/mod-xslt/index.xml
-share/httpd/htdocs/mod-xslt/index.xsl
-@dirrm share/httpd/htdocs/mod-xslt

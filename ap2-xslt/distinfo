@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/05 02:06:03 xtraeme Exp $
-
-SHA1 (mod-xslt-1.0.0rc1.tar.gz) = 72cb892112eed776a4e5d661843c4ad5a5ec80a3
-Size (mod-xslt-1.0.0rc1.tar.gz) = 66892 bytes
-SHA1 (patch-aa) = 77eaac82ed988514df962c48c3c26cb1f6d2fe80

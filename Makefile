@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1301 2004/05/29 02:09:11 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1301 2004/05/29 02:09:11 xtraeme Exp $
+# $Id: Makefile,v 1.1302 2004/05/30 13:37:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1302 2004/05/30 13:37:18 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -35,7 +35,6 @@ SUBDIR+=	ap-php5
 SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-macro
 SUBDIR+=	ap2-python
-SUBDIR+=	ap2-xslt
 SUBDIR+=	apachebench2
 SUBDIR+=	argouml
 SUBDIR+=	arping
