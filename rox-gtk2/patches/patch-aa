@@ -1,14 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/04 21:33:00 froz Exp $
+$NetBSD: patch-aa,v 1.2 2004/07/09 15:02:47 froz Exp $
 
---- Makefile.in.orig	Thu Apr 11 18:53:01 2002
-+++ Makefile.in
-@@ -36,6 +36,9 @@
- 
+--- Makefile.in.orig	2004-04-30 19:11:27.000000000 +0200
++++ Makefile.in	2004-07-01 19:16:02.000000000 +0200
+@@ -42,4 +42,7 @@
  ############ Things to keep the same
  
 +all: ${OBJECTS}
 +	${CC} -o ${PROG} ${OBJECTS} ${LDFLAGS}
 +
- ${EXEC}: ${PLATFORM_DIR} ${OBJECTS}
- 	${CC} -o ${EXEC} ${OBJECTS} ${LDFLAGS}
- 
+ ${PROG}: ${OBJECTS}
+ 	${CC} -o "${PROG}" ${OBJECTS} ${LDFLAGS}

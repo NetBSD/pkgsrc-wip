@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/05/09 21:27:16 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/09 15:02:46 froz Exp $
 
-DISTNAME=	rox-2.0.1
+DISTNAME=	rox-2.1.2
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Filer/src
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
@@ -37,8 +37,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/${DISTNAME}/src/ROX-Filer  \
     		${PREFIX}/libexec/rox
 	${INSTALL_DATA_DIR} ${PREFIX}/share/rox/ROX-Filer
-	${INSTALL_DATA_DIR} ${PREFIX}/share/rox/Choices/MIME-icons
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/Choices/MIME-icons/* ${PREFIX}/share/rox/Choices/MIME-icons
 	${INSTALL_DATA_DIR} ${PREFIX}/share/rox/Choices/MIME-types
 	${INSTALL_SCRIPT} ${WRKDIR}/${DISTNAME}/Choices/MIME-types/* ${PREFIX}/share/rox/Choices/MIME-types
 	cd ${WRKDIR}/${DISTNAME}/ROX-Filer && ${PAX} -rw . ${PREFIX}/share/rox/ROX-Filer

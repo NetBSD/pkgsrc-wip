@@ -1,26 +1,22 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/12/04 21:33:00 froz Exp $
+$NetBSD: patch-ac,v 1.2 2004/07/09 15:02:47 froz Exp $
 
---- type.c.orig	2003-05-22 14:09:27.000000000 +0100
-+++ type.c
-@@ -1196,7 +1196,7 @@ static char **get_xdg_data_dirs(int *n_d
- 
+--- type.c.orig	2004-03-18 18:46:17.000000000 +0100
++++ type.c	2004-07-01 19:21:37.000000000 +0200
+@@ -1278,5 +1278,5 @@
  	env = getenv("XDG_DATA_DIRS");
  	if (!env)
 -		env = "/usr/local/share/:/usr/share/";
 +		env = "/usr/local/share/:/usr/share/:@PREFIX@/share/";
  	dirs = g_strsplit(env, ":", 0);
  	g_return_val_if_fail(dirs != NULL, NULL);
- 	for (n = 0; dirs[n]; n++)
-@@ -1345,6 +1345,12 @@ static void find_comment(MIME_type *type
- 	if (type->comment)
- 		return;
- 
-+	path = g_strdup_printf("@PREFIX@/share/mime/%s/%s.xml",
-+			type->media_type, type->subtype);
-+        get_comment(type, path);
-+        if (type->comment)
-+		return;
+@@ -1423,4 +1423,10 @@
+ 		guchar *path;
+ 		
++		path = g_strdup_printf("@PREFIX@/share/mime/%s/%s.xml",
++				type->media_type, type->subtype);
++		get_comment(type, path);
++		if (type->comment)
++			return;
 +
- 	path = g_strdup_printf("/usr/local/share/mime/%s/%s.xml",
- 			type->media_type, type->subtype);
- 	get_comment(type, path);
+ 		path = g_strdup_printf("%s/mime/%s/%s.xml", dirs[i],
+ 				type->media_type, type->subtype);

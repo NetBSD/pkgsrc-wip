@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/04 21:33:00 froz Exp $
+$NetBSD: distinfo,v 1.2 2004/07/09 15:02:46 froz Exp $
 
-SHA1 (rox-2.0.1.tgz) = eefb0767fb8f03e040c330010621e441580bf5eb
-Size (rox-2.0.1.tgz) = 1539675 bytes
-SHA1 (patch-aa) = dc9d4996b383563b8a5776f86fff1e8e97569f12
-SHA1 (patch-ab) = 0a857eae9a4092114ae46790e8e8ec6c280fb60b
-SHA1 (patch-ac) = 35899f96f26899adf66b456077d6d4a911618b28
+SHA1 (rox-2.1.2.tgz) = 8c6d2e63f353e8e76f154a863ab764c85e38a5b4
+Size (rox-2.1.2.tgz) = 1758210 bytes
+SHA1 (patch-aa) = f0b7511066cb3904c98509c63b722b5a5611c1ff
+SHA1 (patch-ab) = feab6cc2acb426a1f64aca1209106b70f6f440f5
+SHA1 (patch-ac) = 8bf74543ab19b77e473143eb66619a8c954dab05
