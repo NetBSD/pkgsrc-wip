@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/06/17 22:44:54 adrian_p Exp $
+# $NetBSD: Makefile,v 1.19 2004/06/17 23:43:43 xtraeme Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -24,10 +24,10 @@ PKGCONFIG_OVERRIDE+=	dspam.pc.in
 SUBST_CLASSES=		cgi large
 SUBST_STAGE.cgi=	post-patch
 SUBST_FILES.cgi=	cgi/dspam.cgi cgi/admin.cgi 
-SUBST_SED.cgi=		-e "s|/usr/local/bin/dspam|${PREFIX}/bin/dspam|" \
-			-e "s|/var/dspam|${DSPAM_HOME}|" \
-			-e "s|/usr/local|${PREFIX}|" \
-			-e "s|LARGE_SCLAE|LARGE_SCALE|"
+SUBST_SED.cgi=		-e "s|/usr/local/bin/dspam|${PREFIX}/bin/dspam|g" \
+			-e "s|/var/dspam|${DSPAM_HOME}|g" \
+			-e "s|/usr/local|${PREFIX}|g" \
+			-e "s|LARGE_SCLAE|LARGE_SCALE|g"
 SUBST_MESSAGE.cgi=	"Fixing paths and typos."
 
 BDB_ACCEPTED=		db4 db3
@@ -128,7 +128,7 @@ CONFIGURE_ARGS+=	--enable-large-scale
 SUBST_STAGE.large=	post-patch
 SUBST_FILES.large=	cgi/dspam.cgi cgi/admin.cgi 
 SUBST_SED.large=	\
-	-e "s|CONFIG{'LARGE_SCALE'}  = 0|CONFIG{'LARGE_SCALE'}	= 1|"
+	-e "s|CONFIG{'LARGE_SCALE'}.*=.*0|CONFIG{'LARGE_SCALE'}	= 1|"
 SUBST_MESSAGE.large=	"Fixing config options."
 .endif
 
