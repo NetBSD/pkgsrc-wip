@@ -1,0 +1,3 @@
+* PLIST depends on perl version. I have 5.9 installed and it's broken to 5.8
+* Not tested yet
+* You must specify the path in instalation process.

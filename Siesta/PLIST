@@ -1,0 +1,45 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/05 12:59:35 poppnk Exp $
+lib/perl5/site_perl/5.9.0/Module/Build.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Base.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Compat.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Cookbook.pm
+lib/perl5/site_perl/5.9.0/Module/Build/PPMMaker.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/Amiga.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/Default.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/EBCDIC.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/MPEiX.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/MacOS.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/RiscOS.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/Unix.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/VMS.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/VOS.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/Windows.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/aix.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/cygwin.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/darwin.pm
+lib/perl5/site_perl/5.9.0/Module/Build/Platform/os2.pm
+lib/perl5/site_perl/5.9.0/Module/Build/PodParser.pm
+lib/perl5/site_perl/man/man3/Module::Build.3
+lib/perl5/site_perl/man/man3/Module::Build::Base.3
+lib/perl5/site_perl/man/man3/Module::Build::Compat.3
+lib/perl5/site_perl/man/man3/Module::Build::Cookbook.3
+lib/perl5/site_perl/man/man3/Module::Build::PPMMaker.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::Amiga.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::Default.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::EBCDIC.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::MPEiX.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::MacOS.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::RiscOS.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::Unix.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::VMS.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::VOS.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::Windows.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::aix.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::cygwin.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::darwin.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::os2.3
+@dirrm lib/perl5/site_perl/man/man3
+@dirrm lib/perl5/site_perl/5.9.0/Module/Build/Platform
+@dirrm lib/perl5/site_perl/5.9.0/Module/Build
+@dirrm lib/perl5/site_perl/5.9.0/Module
+@dirrm lib/perl5/site_perl/5.9.0
