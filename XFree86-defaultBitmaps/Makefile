@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/07/24 04:27:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/24 04:30:45 blef Exp $
 
 DISTNAME=	${DISTFILES}
-PKGNAME=	XFree86-defaultBitmaps-${XFREE86_VERSION}
+PKGNAME=	XFree86-defaultBitmaps-${XF_VER}
 WRKSRC=		${WRKDIR}/xc/fonts/bdf/misc
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
