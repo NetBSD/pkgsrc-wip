@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/07/16 14:24:00 ppostma Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/07/16 16:05:51 ppostma Exp $
 bin/pear
 bin/php
 bin/php-config
@@ -248,7 +248,6 @@ lib/php/pearcmd.php
 @dirrm lib/php/Console
 @dirrm lib/php/Archive
 @dirrm lib/php/.registry
-@dirrm lib/php
 @dirrm include/php/regex
 @dirrm include/php/main/streams
 @dirrm include/php/main
