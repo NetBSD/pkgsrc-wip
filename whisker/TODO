@@ -1,0 +1,10 @@
+I think there could be a licensing issue with this pkg.  This probably
+needs to be confirmed before it gets committed.
+
+Please test and let me know if there are any issues.
+
+Tested on NetBSD 1.6 i386.
+
+Ta,
+
+Adrian.
