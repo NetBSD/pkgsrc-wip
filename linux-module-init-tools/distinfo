@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/07 01:58:49 jeremy-c-reed Exp $
+
+SHA1 (module-init-tools-3.0.tar.bz2) = 33c5d30b96601c528a1cc2258db41a0962a09974
+Size (module-init-tools-3.0.tar.bz2) = 120768 bytes
+SHA1 (patch-aa) = 9da9edeecca3298a797187e7a1ee387b1ebd857f

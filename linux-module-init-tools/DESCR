@@ -1,0 +1,4 @@
+The linux-module-init-tools are utilities for loading, inserting,
+and removing Linux kernel modules (Linux versions 2.5.48 and above).
+
+(The linux-modutils package is for older kernels.)

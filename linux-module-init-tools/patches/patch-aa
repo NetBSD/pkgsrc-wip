@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/07 01:58:49 jeremy-c-reed Exp $
+
+--- Makefile.in.orig	2004-02-23 16:49:35.000000000 -0800
++++ Makefile.in
+@@ -67,7 +67,8 @@ target_triplet = @target@
+ EXEEXT = @EXEEXT@
+ OBJEXT = @OBJEXT@
+ PATH_SEPARATOR = @PATH_SEPARATOR@
+-mandir = $(shell if [ `echo $(prefix)/ | tr -s /` = / ]; then echo /usr/share/man; else echo $(prefix)/man; fi)
++mandir = @mandir@
++#mandir = $(shell if [ `echo $(prefix)/ | tr -s /` = / ]; then echo /usr/share/man; else echo $(prefix)/man; fi)
+ INSTALL = $(SHELL) $(top_srcdir)/install-with-care
+ AMTAR = @AMTAR@
+ AWK = @AWK@

@@ -1,0 +1,16 @@
+New linux kernel needs these newer module utilities, but if system also
+has old kernel, it will need modutils. So maybe have an old-modutils
+package too with everything with .old suffix??
+
+is it okay to share same rc.d script name as modutils package?
+
+3) If running for the first time, you might want to convert your old
+   modules.conf to modprobe.conf:
+
+        ./generate-modprobe.conf /etc/modprobe.conf
+
+4) If you are using devfs, copy modprobe.devfs to /etc
+
+5) You will need to run "depmod" for your new kernel, eg:
+
+        depmod 2.5.50

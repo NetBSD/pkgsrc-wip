@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/07 01:58:49 jeremy-c-reed Exp $
+bin/lsmod
+man/man5/modprobe.conf.5
+man/man5/modules.dep.5
+man/man8/depmod.8
+man/man8/insmod.8
+man/man8/lsmod.8
+man/man8/modinfo.8
+man/man8/modprobe.8
+man/man8/rmmod.8
+sbin/depmod
+sbin/generate-modprobe.conf
+sbin/insmod
+sbin/insmod.static
+sbin/modinfo
+sbin/modprobe
+sbin/rmmod
+share/examples/linux-module-init-tools/modprobe.devfs.example
+@dirrm share/examples/linux-module-init-tools
