@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2004/05/07 01:57:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/18 21:09:36 minskim Exp $
 #
 
-DISTNAME=	Cg-${DIST_VER}
+DISTNAME=	Cg-${DIST_VER}-Linux
 PKGNAME=	Cg-compiler-${DIST_VER}
 CATEGORIES=	lang
-MASTER_SITES=	ftp://download.nvidia.com/developer/cg/Cg_1.2/Linux/
+MASTER_SITES=	ftp://download.nvidia.com/developer/cg/Cg_1.2.1/Linux/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://developer.nvidia.com/object/cg_toolkit.html
 COMMENT=	NVIDIA Cg Compiler for Linux
 
@@ -17,7 +17,7 @@ CHECK_SHLIBS=	no
 NO_BUILD=	yes
 NO_BUILDLINK=	yes
 
-DIST_VER=	1.2.0402-1900
+DIST_VER=	1.2.1
 
 .include "../../mk/bsd.prefs.mk"
 

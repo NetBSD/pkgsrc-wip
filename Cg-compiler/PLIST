@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/27 09:30:42 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/18 21:09:37 minskim Exp $
 bin/cgc
 include/Cg/cg.h
 include/Cg/cgContextManager.h
@@ -722,6 +722,14 @@ share/NVIDIA-Cg-linux/Cg/docs/runtime/txt/cgSetParameter4f.txt
 share/NVIDIA-Cg-linux/Cg/docs/runtime/txt/cgSetParameter4fv.txt
 share/NVIDIA-Cg-linux/Cg/docs/runtime/txt/cgSetParameterVariability.txt
 share/NVIDIA-Cg-linux/Cg/examples/README.examples
+share/NVIDIA-Cg-linux/Cg/examples/cgfx_runtime/Art/DiffuseMap0.dds
+share/NVIDIA-Cg-linux/Cg/examples/cgfx_runtime/Art/DiffuseMap1.dds
+share/NVIDIA-Cg-linux/Cg/examples/cgfx_runtime/Art/DiffuseSpecular.fx
+share/NVIDIA-Cg-linux/Cg/examples/cgfx_runtime/Art/NormalizationMap.dds
+share/NVIDIA-Cg-linux/Cg/examples/cgfx_runtime/CgFXOpenGLSimple.cpp
+share/NVIDIA-Cg-linux/Cg/examples/cgfx_runtime/GNUmakefile
+share/NVIDIA-Cg-linux/Cg/examples/cgfx_runtime/nv_dds.cpp
+share/NVIDIA-Cg-linux/Cg/examples/cgfx_runtime/nv_dds.h
 share/NVIDIA-Cg-linux/Cg/examples/common/cg_noise.c
 share/NVIDIA-Cg-linux/Cg/examples/common/cg_noise.h
 share/NVIDIA-Cg-linux/Cg/examples/interfaces_ogl/GNUmakefile
@@ -760,6 +768,8 @@ share/NVIDIA-Cg-linux/Cg/include/GL/glext.h
 @dirrm share/NVIDIA-Cg-linux/Cg/examples/runtime_ogl
 @dirrm share/NVIDIA-Cg-linux/Cg/examples/interfaces_ogl
 @dirrm share/NVIDIA-Cg-linux/Cg/examples/common
+@dirrm share/NVIDIA-Cg-linux/Cg/examples/cgfx_runtime/Art
+@dirrm share/NVIDIA-Cg-linux/Cg/examples/cgfx_runtime
 @dirrm share/NVIDIA-Cg-linux/Cg/examples
 @dirrm share/NVIDIA-Cg-linux/Cg/docs/runtime/txt
 @dirrm share/NVIDIA-Cg-linux/Cg/docs/runtime/html
