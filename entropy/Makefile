@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2004/02/20 19:37:48 tvierling Exp $
+# $NetBSD: Makefile,v 1.56 2004/02/20 20:15:47 tvierling Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -14,7 +14,7 @@ HOMEPAGE=		http://entropy.stop1984.com/
 COMMENT=		Anonymous peer-to-peer networking node (similar to Freenet)
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 ENTROPY_VERSION=	0.8.2-411
@@ -53,6 +53,6 @@ CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE}
 CONFIGURE_ARGS+=	--enable-max-peers=${ENTROPY_MAX_PEERS}
 .endif
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../textproc/expat/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
