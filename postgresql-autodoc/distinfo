@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/27 22:39:49 marc Exp $
+$NetBSD: distinfo,v 1.2 2003/08/04 22:00:19 marc Exp $
 
-SHA1 (postgresql_autodoc-1.10.tar.gz) = d591905157c77c24130b552e5f7d34df31c3423e
-Size (postgresql_autodoc-1.10.tar.gz) = 39230 bytes
+SHA1 (postgresql_autodoc-1.11.tar.gz) = d8d477158198cd5f9f5789a091bcd30aa0228c59
+Size (postgresql_autodoc-1.11.tar.gz) = 40282 bytes
