@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/04/27 00:19:20 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2004/05/09 12:13:26 johnrshannon Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCCADA_BUILDLINK3_MK:=  ${GCCADA_BUILDLINK3_MK}+
@@ -14,6 +14,7 @@ BUILDLINK_PACKAGES+=    gccAda
 .if !empty(GCCADA_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gccAda+=      gccAda>=3.4.0
 BUILDLINK_PKGSRCDIR.gccAda?=    ../../wip/gcc-3.4-ada
+BUILDLINK_ENV+= PATH=${PATH}:${LOCALBASE}/gccAda-3.4.0/bin
 .endif  # GCCADA_BUILDLINK3_MK
 
 BUILDLINK_PKGSRCDIR.gccAda?=     ../../wip/gcc-3.4-ada
