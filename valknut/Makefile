@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/11 18:40:41 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/01 18:54:34 tnn2 Exp $
 #
 
 DISTNAME=	valknut-0.3.5
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=         qt3-tools-3.*:../../x11/qt3-tools
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
-USE_X11BASE=		YES
+USE_X11=		YES
 USE_GNU_TOOLS+=		make
 
 .include "../../mk/bsd.prefs.mk"
