@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/05/13 05:29:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/13 20:09:09 xtraeme Exp $
 #
 
 DISTNAME=	dovecot-0.99.9.1
@@ -30,14 +30,14 @@ CONFIGURE_ARGS+=	--with-ldap
 .include "../../databases/openldap/buildlink2.mk"
 .endif
 
-DOVECOT_USE_OPENSSL?=	NO
+DOVECOT_USE_GNUTLS?=	NO
 
-.if !empty(DOVECOT_USE_OPENSSL:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ssl=openssl
-.include "../../security/openssl/buildlink2.mk"
-.else
-CONFIGURE_ARGS+=        --enable-ssl=gnutls
+.if !empty(DOVECOT_USE_GNUTLS:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-ssl=gnutls
 .include "../../wip/gnutls/buildlink2.mk"
+.else
+CONFIGURE_ARGS+=        --enable-ssl=openssl
+.include "../../security/openssl/buildlink2.mk"
 .endif
 
 DOVECOT_USE_PGSQL?=	NO
