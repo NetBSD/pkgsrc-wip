@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/12/11 22:14:51 johnrshannon Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/12/12 10:55:43 johnrshannon Exp $
 #
 
-SNAPDATE=	20031203
+SNAPDATE=	20031210
 GCC_VERSION=	3.4
 DISTNAME=	gcc-${GCC_VERSION}-${SNAPDATE}
 CATEGORIES=	lang
-MASTER_SITES=	ftp://mirrors.rcn.net/pub/sourceware/gcc/snapshots/3.4-20031203/
+MASTER_SITES=	ftp://mirrors.rcn.net/pub/sourceware/gcc/snapshots/${GCC_VERSION}-${SNAPDATE}/
 DISTFILES=	gcc-${GCC_VERSION}-${SNAPDATE}.tar.bz2
 
 MAINTAINER=	john@johnrshannon.com
