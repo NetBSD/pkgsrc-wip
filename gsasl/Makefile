@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/30 09:52:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/30 10:07:42 xtraeme Exp $
 #
 
 DISTNAME=		gsasl-0.0.8
@@ -29,6 +29,7 @@ PKGCONFIG_OVERRIDE+=    ${WRKSRC}/libgsasl.pc.in
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../security/libgcrypt/buildlink2.mk"
+.include "../../wip/gss/buildlink2.mk"
 .include "../../wip/libidn/buildlink2.mk"
 .include "../../wip/libntlm/buildlink2.mk"
 

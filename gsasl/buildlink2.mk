@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/10/30 09:52:28 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/10/30 10:07:43 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use gsasl.
 #
@@ -20,6 +20,7 @@ BUILDLINK_FILES.gsasl+=	lib/libgsasl.*
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../security/libgcrypt/buildlink2.mk"
+.include "../../wip/gss/buildlink2.mk"
 .include "../../wip/libidn/buildlink2.mk"
 .include "../../wip/libntlm/buildlink2.mk"
 
