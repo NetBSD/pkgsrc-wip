@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/29 13:06:04 cjep Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/01 10:07:38 xtraeme Exp $
 #
 
 DISTNAME=		bitlbee-0.80
@@ -20,11 +20,8 @@ USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/sbin
-CONFIGURE_ARGS+=	--etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--confdir=/var/lib/bitlbee
-
-PKG_SYSCONFSUBDIR=	bitlbee
 
 DATADIR=	${PREFIX}/share/bitlbee/data
 DOCDIR=		${PREFIX}/share/doc/bitlbee
