@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/28 09:48:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/04 17:23:40 xtraeme Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.0.5
@@ -11,7 +11,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME 2.0 system monitor program
 
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK2=		yes

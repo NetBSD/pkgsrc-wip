@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/28 09:48:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/04 17:23:41 xtraeme Exp $
 #
 
 DISTNAME=	gnome2-user-docs-2.0.6
@@ -11,7 +11,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	The GNOME 2 users guide
 
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
