@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/05 07:58:47 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/28 14:41:04 thomasklausner Exp $
 
 DISTNAME=	wang-ttf-1.3
+PKGREVISION=	1
 CATEGORIES=	fonts chinese
 MASTER_SITES=	ftp://cle.linux.org.tw/pub/fonts/wangfonts/ \
 		ftp://cle.linux.org.tw/pub/fonts/wangfonts/WCL/
