@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1105 2004/03/21 21:30:56 bjan2 Exp $
-# $NetBSD: Makefile,v 1.1105 2004/03/21 21:30:56 bjan2 Exp $
+# $Id: Makefile,v 1.1106 2004/03/21 22:11:14 bjan2 Exp $
+# $NetBSD: Makefile,v 1.1106 2004/03/21 22:11:14 bjan2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -216,6 +216,7 @@ SUBDIR+=	gtk2-engines-smooth
 SUBDIR+=	gtk2-theme-pack
 SUBDIR+=	gtkada
 SUBDIR+=	gtkglk
+SUBDIR+=	gtklookat
 SUBDIR+=	gtkmagnetic
 SUBDIR+=	gtkpod
 SUBDIR+=	gurlchecker
