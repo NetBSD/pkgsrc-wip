@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/16 23:15:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 13:54:35 xtraeme Exp $
 #
 
 DISTNAME=	rapidsvn-0.1.3
@@ -8,6 +8,8 @@ MASTER_SITES=	http://rapidsvn.tigris.org/files/documents/341/5143/
 MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://rapidsvn.tigris.org/
 COMMENT=	Cross-platform GUI front-end for the Subversion
+
+DEPENDS+=               docbook-xsl>=1.61.2:../../textproc/docbook-xsl
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
@@ -20,7 +22,10 @@ LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--with-svn-include=${PREFIX}/include
 CONFIGURE_ARGS+=	--with-svn-lib=${PREFIX}/lib
+CONFIGURE_ARGS+=	--with-xsltproc
+CONFIGURE_ARGS+=	--with-docbook-xsl=${PREFIX}/share/xsl/docbook
 
 .include "../../devel/subversion/buildlink2.mk"
 .include "../../x11/wxGTK/buildlink2.mk"
+.include "../../textproc/libxslt/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
