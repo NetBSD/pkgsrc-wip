@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/03/06 15:38:33 mpasternak Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/18 15:04:05 ppostma Exp $
 #
 
 DISTNAME=		xbase-2.0.0
-CATEGORIES=		wip
+CATEGORIES=		databases
 MASTER_SITES=		http://www.rekallrevealed.org/packages/
 EXTRACT_SUFX=		.tgz
 
