@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/08/21 21:19:55 adrian_p Exp $
+# $NetBSD: Makefile,v 1.25 2004/08/23 20:11:36 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -20,56 +20,30 @@ SUBST_SED.paths=	-e "s|@@PREFIX@@|${PREFIX}|g" \
 			-e "s|@@SMRSH_CMDDIR@@|${SMRSH_CMDDIR}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
-.if defined(USE_DB4) && ${USE_DB4} == YES
-.include "../../databases/db4/buildlink3.mk"
-.elif ${USE_DB2} == YES
-.include "../../databases/db/buildlink3.mk"
-.endif
-
-.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
-.include "../../databases/openldap/buildlink3.mk"
-.endif
-
-.if defined(USE_SASL2) && ${USE_SASL2} == YES
-.include "../../security/cyrus-sasl2/buildlink3.mk"
-.elif defined(USE_SASL) && ${USE_SASL} == YES
-.include "../../security/cyrus-sasl/buildlink3.mk"
-.endif
-
-.if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
-.include "../../security/openssl/buildlink3.mk"
-.endif
-
-USE_TCPWRAPPERS?=	YES
-.if ${USE_TCPWRAPPERS} == YES
-.include "../../security/tcp_wrappers/buildlink3.mk"
-.endif
-
 post-patch: make-sendmail-siteconfig
-.if ${USE_TCPWRAPPERS} == YES
+.if !empty(PKG_OPTIONS:Mtcpwrappers)
 	@${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
 .endif
-.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
+.if !empty(PKG_OPTIONS:Mldap)
 	@${CAT} ${FILESDIR}/site.config.m4-ldap >>${SITECONFIG}
 .endif
-.if defined(USE_DB4) && ${USE_DB4} == YES
-	@${CAT} ${FILESDIR}/site.config.m4-db4 >>${SITECONFIG}
-.elif ${USE_DB2} == YES
+.if !empty(PKG_OPTIONS:Mdb2)
 	@${CAT} ${FILESDIR}/site.config.m4-db2 >>${SITECONFIG}
 .endif
-.if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
+.if !empty(PKG_OPTIONS:Mdb4)
+	@${CAT} ${FILESDIR}/site.config.m4-db4 >>${SITECONFIG}
+.endif
+.if !empty(PKG_OPTIONS:Mstarttls)
 	@${CAT} ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
 .endif
-.if defined(USE_SASL2) && ${USE_SASL2} == YES
-	@${CAT} ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
-.elif defined(USE_SASL) && ${USE_SASL} == YES
+.if !empty(PKG_OPTIONS:Msasl)
 	@${CAT} ${FILESDIR}/site.config.m4-sasl >>${SITECONFIG}
 .endif
-.if defined(USE_SOCKETMAP) && ${USE_SOCKETMAP} == YES
+.if !empty(PKG_OPTIONS:Msasl2)
+	@${CAT} ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
+.endif
+.if !empty(PKG_OPTIONS:Msocketmap)
 	@${CAT} ${FILESDIR}/site.config.m4-socketmap >>${SITECONFIG}
-USE_PERL5=	YES
-REPLACE_PERL=	contrib/socketmapClient.pl contrib/socketmapServer.pl
-PLIST_SRC+=	${PKGDIR}/PLIST.socketmap
 .endif
 
 post-extract:
