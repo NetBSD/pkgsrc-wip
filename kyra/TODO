@@ -1,0 +1,10 @@
+$Id: TODO,v 1.1 2004/03/07 02:38:00 mpasternak Exp $
+
+please check lib/libkyra.so.0.0 symlink on nbsd - does it exists?
+
+if it does, please remove "@comment " from PLIST and let me know,
+
+fbsd and nbsd libtools seem to have some so-library naming incompatibility,
+I haven't yet enough time to investigate this
+
+	-- dotz@irc.pl
