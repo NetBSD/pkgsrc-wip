@@ -1,46 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/25 00:13:45 daprice Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/27 12:59:45 jmmv Exp $
 
---- Makefile.orig	Wed May  9 14:02:25 2001
-+++ Makefile
-@@ -1,9 +1,9 @@
- # Makefile for the program arka
- # edit below to suit your needs
--PROGRAM_DIR=/usr/X11R6/bin
--MAN_DIR=/usr/X11R6/man
--DOC_DIR=/usr/doc/packages
--ICONS_DIR=/usr/X11R6/include/X11/pixmaps
-+PROGRAM_DIR=${PREFIX}/bin
-+MAN_DIR=${PREFIX}/man
-+DOC_DIR=${PREFIX}/share/doc
-+ICONS_DIR=${PREFIX}/include/X11/pixmaps
+--- src/Makefile.orig	2001-05-09 22:28:41.000000000 +0200
++++ src/Makefile
+@@ -1,5 +1,5 @@
+ CC=gcc
+-CFLAGS=`gtk-config --cflags` -Wall
++CFLAGS+=$(CPPFLAGS) `gtk-config --cflags`
  
+ objects = komunikat.o main.o file.o interface.o genpak.o rcfile.o \
+ 	graph.o graph3d.o help.o programs.o options.o misc.o seqed.o search.o \
+@@ -10,7 +10,7 @@ all: arka
+ 	mv arka ..
  
- # -----------------------------------------------------------------------------------
-@@ -25,7 +25,7 @@ programs: 
- 	cd src/ ; make 
- 	@echo ; echo type \'make install\' to install arka ; echo
+ arka:	$(objects)
+-	gcc -o arka $(objects)  `gtk-config --libs` -lm
++	gcc $(LDFLAGS) -o arka $(objects)  `gtk-config --libs` -lm
  
--install: all arka.1.gz
-+install: all
- 	@echo installing arka in $(PROGRAMDIR), documentation in $(DOCDIR)
- 	@echo manual page in $(MANDIR)
- 	@echo
-@@ -35,7 +35,8 @@ install: all arka.1.gz
- 	cd icons ; cp $(ICONS) $(ICONSDIR)
- 	cp  $(DOCFILES) $(DOCINSTDIR)/
- 	cp arka.1.gz $(MANDIR)/man1/
--	cp arkarc /etc/arkarc
-+	cp arkarc ${PREFIX}/etc/arkarc
-+	cd $(MANDIR)/man1/; gunzip arka.1.gz
+ $(objects): main.h
  
- 	@echo ; echo Arka is installed. If you wish to deinstall the program later,
- 	@echo type \'make unistall\' 
-@@ -58,7 +59,7 @@ uninstall:
- 	-rm $(PROGRAMDIR)/arka
- 	-rm $(ICONSDIR)/arka_*
- 	-rm $(MANDIR)/man1/arka.1.gz
--	-rm /etc/arkarc
-+	-rm ${PREFIX}/etc/arkarc
- 	@echo
- 	@echo arka uninstalled. Mail january@bioinformatics.org and tell him why.
- 	@echo
