@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/27 23:02:39 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/05/19 11:47:22 peterih Exp $
 share/moregroupware/.cvsignore
 share/moregroupware/ChangeLog
 share/moregroupware/INSTALL
@@ -9,6 +9,7 @@ share/moregroupware/docs/NEWS-0.6.7
 share/moregroupware/docs/NEWS-0.6.8
 share/moregroupware/docs/NEWS-0.6.9
 share/moregroupware/docs/NEWS-0.7.0
+share/moregroupware/docs/NEWS-0.7.1
 share/moregroupware/docs/NEWS-${PKGVERSION}
 share/moregroupware/docs/TODO
 share/moregroupware/docs/convert.sh
@@ -326,14 +327,11 @@ share/moregroupware/docs/html/en/appendix_licenses.html
 share/moregroupware/docs/html/en/appendix_licenses_fdl.html
 share/moregroupware/docs/html/en/appendix_licenses_gpl.html
 share/moregroupware/docs/html/en/appendix_upgrade.html
-share/moregroupware/docs/html/en/appendix_upgrade_064.html
-share/moregroupware/docs/html/en/appendix_upgrade_065.html
-share/moregroupware/docs/html/en/appendix_upgrade_066.html
-share/moregroupware/docs/html/en/appendix_upgrade_067.html
 share/moregroupware/docs/html/en/appendix_upgrade_068.html
 share/moregroupware/docs/html/en/appendix_upgrade_069.html
 share/moregroupware/docs/html/en/appendix_upgrade_070.html
 share/moregroupware/docs/html/en/appendix_upgrade_071.html
+share/moregroupware/docs/html/en/appendix_upgrade_072.html
 share/moregroupware/docs/html/en/appendix_wamp.html
 share/moregroupware/docs/html/en/appendix_wamp_apache.html
 share/moregroupware/docs/html/en/appendix_wamp_download.html
@@ -831,7 +829,6 @@ share/moregroupware/docs/mgw-manual.xsl
 share/moregroupware/include/Auth/http.inc.php
 share/moregroupware/include/Auth/ldap.inc.php
 share/moregroupware/include/Auth/sql.inc.php
-share/moregroupware/include/adodb/adodb-cryptsession.php
 share/moregroupware/include/adodb/adodb-csvlib.inc.php
 share/moregroupware/include/adodb/adodb-datadict.inc.php
 share/moregroupware/include/adodb/adodb-error.inc.php
@@ -844,12 +841,9 @@ share/moregroupware/include/adodb/adodb-pager.inc.php
 share/moregroupware/include/adodb/adodb-pear.inc.php
 share/moregroupware/include/adodb/adodb-perf.inc.php
 share/moregroupware/include/adodb/adodb-php4.inc.php
-share/moregroupware/include/adodb/adodb-session-clob.php
-share/moregroupware/include/adodb/adodb-session.php
 share/moregroupware/include/adodb/adodb-time.inc.php
 share/moregroupware/include/adodb/adodb-xmlschema.inc.php
 share/moregroupware/include/adodb/adodb.inc.php
-share/moregroupware/include/adodb/crypt.inc.php
 share/moregroupware/include/adodb/datadict/datadict-access.inc.php
 share/moregroupware/include/adodb/datadict/datadict-db2.inc.php
 share/moregroupware/include/adodb/datadict/datadict-generic.inc.php
@@ -875,6 +869,7 @@ share/moregroupware/include/adodb/drivers/adodb-informix72.inc.php
 share/moregroupware/include/adodb/drivers/adodb-mssql.inc.php
 share/moregroupware/include/adodb/drivers/adodb-mssqlpo.inc.php
 share/moregroupware/include/adodb/drivers/adodb-mysql.inc.php
+share/moregroupware/include/adodb/drivers/adodb-mysqli.inc.php
 share/moregroupware/include/adodb/drivers/adodb-mysqlt.inc.php
 share/moregroupware/include/adodb/drivers/adodb-oci8.inc.php
 share/moregroupware/include/adodb/drivers/adodb-oci805.inc.php
@@ -882,6 +877,7 @@ share/moregroupware/include/adodb/drivers/adodb-oci8po.inc.php
 share/moregroupware/include/adodb/drivers/adodb-odbc.inc.php
 share/moregroupware/include/adodb/drivers/adodb-odbc_mssql.inc.php
 share/moregroupware/include/adodb/drivers/adodb-odbc_oracle.inc.php
+share/moregroupware/include/adodb/drivers/adodb-odbtp.inc.php
 share/moregroupware/include/adodb/drivers/adodb-oracle.inc.php
 share/moregroupware/include/adodb/drivers/adodb-postgres.inc.php
 share/moregroupware/include/adodb/drivers/adodb-postgres64.inc.php
@@ -892,12 +888,15 @@ share/moregroupware/include/adodb/drivers/adodb-sqlanywhere.inc.php
 share/moregroupware/include/adodb/drivers/adodb-sqlite.inc.php
 share/moregroupware/include/adodb/drivers/adodb-sybase.inc.php
 share/moregroupware/include/adodb/drivers/adodb-vfp.inc.php
+share/moregroupware/include/adodb/lang/adodb-ca.inc.php
+share/moregroupware/include/adodb/lang/adodb-cn.inc.php
 share/moregroupware/include/adodb/lang/adodb-cz.inc.php
 share/moregroupware/include/adodb/lang/adodb-de.inc.php
 share/moregroupware/include/adodb/lang/adodb-en.inc.php
 share/moregroupware/include/adodb/lang/adodb-es.inc.php
 share/moregroupware/include/adodb/lang/adodb-fr.inc.php
 share/moregroupware/include/adodb/lang/adodb-it.inc.php
+share/moregroupware/include/adodb/lang/adodb-nl.inc.php
 share/moregroupware/include/adodb/lang/adodb-pt-br.inc.php
 share/moregroupware/include/adodb/lang/adodb-ru1251.inc.php
 share/moregroupware/include/adodb/lang/adodb-sv.inc.php
@@ -910,9 +909,20 @@ share/moregroupware/include/adodb/perf/perf-oci8.inc.php
 share/moregroupware/include/adodb/perf/perf-postgres.inc.php
 share/moregroupware/include/adodb/pivottable.inc.php
 share/moregroupware/include/adodb/rsfilter.inc.php
+share/moregroupware/include/adodb/session/adodb-compress-bzip2.php
+share/moregroupware/include/adodb/session/adodb-compress-gzip.php
+share/moregroupware/include/adodb/session/adodb-cryptsession.php
+share/moregroupware/include/adodb/session/adodb-encrypt-mcrypt.php
+share/moregroupware/include/adodb/session/adodb-encrypt-md5.php
+share/moregroupware/include/adodb/session/adodb-encrypt-secret.php
+share/moregroupware/include/adodb/session/adodb-session-clob.php
+share/moregroupware/include/adodb/session/adodb-session.php
+share/moregroupware/include/adodb/session/crypt.inc.php
 share/moregroupware/include/adodb/toexport.inc.php
 share/moregroupware/include/adodb/tohtml.inc.php
 share/moregroupware/include/adodb/xmlschema.dtd
+share/moregroupware/include/adodb/xsl/convert-0.1-0.2.xsl
+share/moregroupware/include/adodb/xsl/convert-0.2-0.1.xsl
 share/moregroupware/include/appconfig.inc.php
 share/moregroupware/include/container.inc.php
 share/moregroupware/include/crypt.inc.php
@@ -957,6 +967,7 @@ share/moregroupware/include/jpgraph/jpgraph_error.php
 share/moregroupware/include/jpgraph/jpgraph_gantt.php
 share/moregroupware/include/jpgraph/jpgraph_gb2312.php
 share/moregroupware/include/jpgraph/jpgraph_gradient.php
+share/moregroupware/include/jpgraph/jpgraph_imgtrans.php
 share/moregroupware/include/jpgraph/jpgraph_line.php
 share/moregroupware/include/jpgraph/jpgraph_log.php
 share/moregroupware/include/jpgraph/jpgraph_pie.php
@@ -1002,7 +1013,7 @@ share/moregroupware/include/smarty/core/core.write_compiled_resource.php
 share/moregroupware/include/smarty/core/core.write_file.php
 share/moregroupware/include/smarty/debug.tpl
 share/moregroupware/include/smarty/plugins/block.textformat.php
-share/moregroupware/include/smarty/plugins/function.assign.php
+share/moregroupware/include/smarty/plugins/compiler.assign.php
 share/moregroupware/include/smarty/plugins/function.assign_debug_info.php
 share/moregroupware/include/smarty/plugins/function.config_load.php
 share/moregroupware/include/smarty/plugins/function.counter.php
@@ -1079,6 +1090,7 @@ share/moregroupware/modules/admin/lang/admin.nb.lang
 share/moregroupware/modules/admin/lang/admin.nl.lang
 share/moregroupware/modules/admin/lang/admin.pt_br.lang
 share/moregroupware/modules/admin/lang/admin.pt_pt.lang
+share/moregroupware/modules/admin/lang/admin.ro.lang
 share/moregroupware/modules/admin/lang/admin.ru.lang
 share/moregroupware/modules/admin/lang/admin.sk.lang
 share/moregroupware/modules/admin/lang/admin.tr.lang
@@ -1135,6 +1147,7 @@ share/moregroupware/modules/admin2/lang/admin2.nb.lang
 share/moregroupware/modules/admin2/lang/admin2.nl.lang
 share/moregroupware/modules/admin2/lang/admin2.pt_br.lang
 share/moregroupware/modules/admin2/lang/admin2.pt_pt.lang
+share/moregroupware/modules/admin2/lang/admin2.ro.lang
 share/moregroupware/modules/admin2/lang/admin2.sk.lang
 share/moregroupware/modules/admin2/lang/admin2.tr.lang
 share/moregroupware/modules/admin2/lang/admin2.zh_cn.lang
@@ -1175,6 +1188,149 @@ share/moregroupware/modules/admin2/templates/default/tree/trashfolderopen.gif
 share/moregroupware/modules/admin2/templates/default/tree/ua.js
 share/moregroupware/modules/admin2/templates/default/tree/userfolderclosed.gif
 share/moregroupware/modules/admin2/tree.php
+share/moregroupware/modules/admin3/debug.php
+share/moregroupware/modules/admin3/definition2.xml
+share/moregroupware/modules/admin3/doc/README
+share/moregroupware/modules/admin3/inc/general.inc.php
+share/moregroupware/modules/admin3/inc/modrights.inc.php
+share/moregroupware/modules/admin3/inc/rights.inc.php
+share/moregroupware/modules/admin3/inc/smenu.php
+share/moregroupware/modules/admin3/index.php
+share/moregroupware/modules/admin3/lang/admin3.en.lang
+share/moregroupware/modules/admin3/templates/default/html/overview.tpl
+share/moregroupware/modules/calendar/calendar_all.php
+share/moregroupware/modules/calendar/choose_week.php
+share/moregroupware/modules/calendar/collisions.php
+share/moregroupware/modules/calendar/definition2.xml
+share/moregroupware/modules/calendar/details.php
+share/moregroupware/modules/calendar/inc/calendar_func.inc.php
+share/moregroupware/modules/calendar/inc/date_lang.inc.php
+share/moregroupware/modules/calendar/inc/date_lang.infos.html
+share/moregroupware/modules/calendar/inc/date_lang.php
+share/moregroupware/modules/calendar/inc/dayview.inc.php
+share/moregroupware/modules/calendar/inc/holidays.at.inc.php
+share/moregroupware/modules/calendar/inc/holidays.br.inc.php
+share/moregroupware/modules/calendar/inc/holidays.ca.inc.php
+share/moregroupware/modules/calendar/inc/holidays.ch.inc.php
+share/moregroupware/modules/calendar/inc/holidays.cs.inc.php
+share/moregroupware/modules/calendar/inc/holidays.de.inc.php
+share/moregroupware/modules/calendar/inc/holidays.fr.inc.php
+share/moregroupware/modules/calendar/inc/holidays.nl.inc.php
+share/moregroupware/modules/calendar/inc/holidays.no.inc.php
+share/moregroupware/modules/calendar/inc/holidays.none.inc.php
+share/moregroupware/modules/calendar/inc/holidays.nz.inc.php
+share/moregroupware/modules/calendar/inc/holidays.ru.inc.php
+share/moregroupware/modules/calendar/inc/holidays.us.inc.php
+share/moregroupware/modules/calendar/inc/holidays.za.inc.php
+share/moregroupware/modules/calendar/inc/overview.inc.php
+share/moregroupware/modules/calendar/inc/rights.inc.php
+share/moregroupware/modules/calendar/inc/settings.inc.php
+share/moregroupware/modules/calendar/inc/smenu.php
+share/moregroupware/modules/calendar/inc/user_list.inc.php
+share/moregroupware/modules/calendar/index.php
+share/moregroupware/modules/calendar/js/appointment_alert.js
+share/moregroupware/modules/calendar/lang/calendar.bg.lang
+share/moregroupware/modules/calendar/lang/calendar.cs.lang
+share/moregroupware/modules/calendar/lang/calendar.da.lang
+share/moregroupware/modules/calendar/lang/calendar.de.lang
+share/moregroupware/modules/calendar/lang/calendar.en.lang
+share/moregroupware/modules/calendar/lang/calendar.es.lang
+share/moregroupware/modules/calendar/lang/calendar.fi.lang
+share/moregroupware/modules/calendar/lang/calendar.fr.lang
+share/moregroupware/modules/calendar/lang/calendar.it.lang
+share/moregroupware/modules/calendar/lang/calendar.ja.lang
+share/moregroupware/modules/calendar/lang/calendar.lt.lang
+share/moregroupware/modules/calendar/lang/calendar.nb.lang
+share/moregroupware/modules/calendar/lang/calendar.nl.lang
+share/moregroupware/modules/calendar/lang/calendar.pt_br.lang
+share/moregroupware/modules/calendar/lang/calendar.pt_pt.lang
+share/moregroupware/modules/calendar/lang/calendar.ru.lang
+share/moregroupware/modules/calendar/lang/calendar.sk.lang
+share/moregroupware/modules/calendar/lang/calendar.tr.lang
+share/moregroupware/modules/calendar/lang/calendar.zh_cn.lang
+share/moregroupware/modules/calendar/lang/calendar.zh_tw.lang
+share/moregroupware/modules/calendar/lang/date.bg.lang
+share/moregroupware/modules/calendar/lang/date.cs.lang
+share/moregroupware/modules/calendar/lang/date.da.lang
+share/moregroupware/modules/calendar/lang/date.de.lang
+share/moregroupware/modules/calendar/lang/date.es.lang
+share/moregroupware/modules/calendar/lang/date.fi.lang
+share/moregroupware/modules/calendar/lang/date.fr.lang
+share/moregroupware/modules/calendar/lang/date.it.lang
+share/moregroupware/modules/calendar/lang/date.ja.lang
+share/moregroupware/modules/calendar/lang/date.nb.lang
+share/moregroupware/modules/calendar/lang/date.nl.lang
+share/moregroupware/modules/calendar/lang/date.pt_br.lang
+share/moregroupware/modules/calendar/lang/date.pt_pt.lang
+share/moregroupware/modules/calendar/lang/date.ru.lang
+share/moregroupware/modules/calendar/lang/date.sk.lang
+share/moregroupware/modules/calendar/lang/date.tr.lang
+share/moregroupware/modules/calendar/lang/date.zh_cn.lang
+share/moregroupware/modules/calendar/lang/date.zh_tw.lang
+share/moregroupware/modules/calendar/month.php
+share/moregroupware/modules/calendar/rights_manage.php
+share/moregroupware/modules/calendar/setup/install.php
+share/moregroupware/modules/calendar/subj_followup.php
+share/moregroupware/modules/calendar/templates/default/html/_actual_calendar_owner.tpl
+share/moregroupware/modules/calendar/templates/default/html/_cal_contentheader.tpl
+share/moregroupware/modules/calendar/templates/default/html/_calendar_all_h.tpl
+share/moregroupware/modules/calendar/templates/default/html/_calendar_appt_type_legend.tpl
+share/moregroupware/modules/calendar/templates/default/html/_calendar_day_row.tpl
+share/moregroupware/modules/calendar/templates/default/html/_calendar_month_h.tpl
+share/moregroupware/modules/calendar/templates/default/html/_calendar_month_row.tpl
+share/moregroupware/modules/calendar/templates/default/html/_calendar_subj_followup_row.tpl
+share/moregroupware/modules/calendar/templates/default/html/_calendar_week_h.tpl
+share/moregroupware/modules/calendar/templates/default/html/_calendar_week_h_a5.tpl
+share/moregroupware/modules/calendar/templates/default/html/_calendar_week_row.tpl
+share/moregroupware/modules/calendar/templates/default/html/_calendar_week_row_a5.tpl
+share/moregroupware/modules/calendar/templates/default/html/_header_print.tpl
+share/moregroupware/modules/calendar/templates/default/html/_select_calendar_multiple_owners.tpl
+share/moregroupware/modules/calendar/templates/default/html/_select_calendar_owner.tpl
+share/moregroupware/modules/calendar/templates/default/html/_th8_cal.tpl
+share/moregroupware/modules/calendar/templates/default/html/_th9_subj_followup.tpl
+share/moregroupware/modules/calendar/templates/default/html/availability_legend.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_all.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_choose_avail.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_date_conflict.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_date_delete.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_date_details.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_date_edit.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_date_edit_natys.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_dateserie_edit.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_day.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_legend.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_month.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_overview.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_rights_manage.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_select_date.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_subj_followup.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_view_avail.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_week.tpl
+share/moregroupware/modules/calendar/templates/default/html/calendar_week_a5.tpl
+share/moregroupware/modules/calendar/templates/default/html/choose_week.tpl
+share/moregroupware/modules/calendar/templates/default/html/collision2.tpl
+share/moregroupware/modules/calendar/templates/default/html/holiday_list.tpl
+share/moregroupware/modules/calendar/templates/default/html/jump_to.tpl
+share/moregroupware/modules/calendar/templates/default/html/part_list.tpl
+share/moregroupware/modules/calendar/templates/default/js/overdiv_style.js
+share/moregroupware/modules/calendar/templates/default/media/abort.png
+share/moregroupware/modules/calendar/templates/default/media/avail.png
+share/moregroupware/modules/calendar/templates/default/media/black.gif
+share/moregroupware/modules/calendar/templates/default/media/cal_mini.gif
+share/moregroupware/modules/calendar/templates/default/media/editserial.png
+share/moregroupware/modules/calendar/templates/default/media/not_avail.png
+share/moregroupware/modules/calendar/templates/default/media/part.png
+share/moregroupware/modules/calendar/templates/default/media/print_2.png
+share/moregroupware/modules/calendar/templates/default/media/private.png
+share/moregroupware/modules/calendar/templates/default/media/validate.png
+share/moregroupware/modules/calendar/templates/default/media/validateforall.png
+share/moregroupware/modules/calendar/templates/default/media/vcal.png
+share/moregroupware/modules/calendar/templates/default/wml/calendar_day.tpl
+share/moregroupware/modules/calendar/templates/default/wml/calendar_week.tpl
+share/moregroupware/modules/calendar/urlaub.php
+share/moregroupware/modules/calendar/view_avail.php
+share/moregroupware/modules/calendar/week.php
+share/moregroupware/modules/calendar/week_a5.php
 share/moregroupware/modules/calendar2/AUTHORS
 share/moregroupware/modules/calendar2/COPYING
 share/moregroupware/modules/calendar2/cal_manager.php
@@ -1207,6 +1363,7 @@ share/moregroupware/modules/calendar2/inc/error.php
 share/moregroupware/modules/calendar2/inc/ical_parser.php
 share/moregroupware/modules/calendar2/inc/init.inc.php
 share/moregroupware/modules/calendar2/inc/init2.inc.php
+share/moregroupware/modules/calendar2/inc/month_cal.inc.php
 share/moregroupware/modules/calendar2/inc/overview.inc.php
 share/moregroupware/modules/calendar2/inc/rights.inc.php
 share/moregroupware/modules/calendar2/inc/settings.inc.php
@@ -1229,6 +1386,7 @@ share/moregroupware/modules/calendar2/lang/calendar2.nb.lang
 share/moregroupware/modules/calendar2/lang/calendar2.nl.lang
 share/moregroupware/modules/calendar2/lang/calendar2.pt_br.lang
 share/moregroupware/modules/calendar2/lang/calendar2.pt_pt.lang
+share/moregroupware/modules/calendar2/lang/calendar2.ro.lang
 share/moregroupware/modules/calendar2/lang/calendar2.sk.lang
 share/moregroupware/modules/calendar2/lang/calendar2.tr.lang
 share/moregroupware/modules/calendar2/lang/calendar2.zh_cn.lang
@@ -1237,7 +1395,6 @@ share/moregroupware/modules/calendar2/month.php
 share/moregroupware/modules/calendar2/month_gantt.php
 share/moregroupware/modules/calendar2/month_list.php
 share/moregroupware/modules/calendar2/norefer.php
-share/moregroupware/modules/calendar2/search.php
 share/moregroupware/modules/calendar2/setup/install.php
 share/moregroupware/modules/calendar2/setup/update_post.php
 share/moregroupware/modules/calendar2/templates/default/css/default.css
@@ -1411,6 +1568,7 @@ share/moregroupware/modules/contact/lang/contact.nb.lang
 share/moregroupware/modules/contact/lang/contact.nl.lang
 share/moregroupware/modules/contact/lang/contact.pt_br.lang
 share/moregroupware/modules/contact/lang/contact.pt_pt.lang
+share/moregroupware/modules/contact/lang/contact.ro.lang
 share/moregroupware/modules/contact/lang/contact.ru.lang
 share/moregroupware/modules/contact/lang/contact.sk.lang
 share/moregroupware/modules/contact/lang/contact.tr.lang
@@ -1444,6 +1602,216 @@ share/moregroupware/modules/contact/templates/default/media/mgw_logo.png
 share/moregroupware/modules/contact/templates/default/media/module.css
 share/moregroupware/modules/contact/templates/default/wml/contact_details.tpl
 share/moregroupware/modules/contact/templates/default/wml/contact_list.tpl
+share/moregroupware/modules/faq/add.php
+share/moregroupware/modules/faq/admin/adminlog.php
+share/moregroupware/modules/faq/admin/attachment.php
+share/moregroupware/modules/faq/admin/backup.import.php
+share/moregroupware/modules/faq/admin/backup.main.php
+share/moregroupware/modules/faq/admin/backup.xml.php
+share/moregroupware/modules/faq/admin/category.php
+share/moregroupware/modules/faq/admin/config.edit.php
+share/moregroupware/modules/faq/admin/config.save.php
+share/moregroupware/modules/faq/admin/cookie.check.php
+share/moregroupware/modules/faq/admin/export.main.php
+share/moregroupware/modules/faq/admin/footer.php
+share/moregroupware/modules/faq/admin/header.php
+share/moregroupware/modules/faq/admin/images/arrow.gif
+share/moregroupware/modules/faq/admin/images/button_bold.gif
+share/moregroupware/modules/faq/admin/images/button_center.gif
+share/moregroupware/modules/faq/admin/images/button_code.gif
+share/moregroupware/modules/faq/admin/images/button_email.gif
+share/moregroupware/modules/faq/admin/images/button_image.gif
+share/moregroupware/modules/faq/admin/images/button_internal_link.gif
+share/moregroupware/modules/faq/admin/images/button_italic.gif
+share/moregroupware/modules/faq/admin/images/button_justify.gif
+share/moregroupware/modules/faq/admin/images/button_left.gif
+share/moregroupware/modules/faq/admin/images/button_list.gif
+share/moregroupware/modules/faq/admin/images/button_list_item.gif
+share/moregroupware/modules/faq/admin/images/button_php.gif
+share/moregroupware/modules/faq/admin/images/button_quote.gif
+share/moregroupware/modules/faq/admin/images/button_right.gif
+share/moregroupware/modules/faq/admin/images/button_underlined.gif
+share/moregroupware/modules/faq/admin/images/button_url.gif
+share/moregroupware/modules/faq/admin/images/down.gif
+share/moregroupware/modules/faq/admin/images/edit.gif
+share/moregroupware/modules/faq/admin/images/trash.gif
+share/moregroupware/modules/faq/admin/images/waste.gif
+share/moregroupware/modules/faq/admin/index.php
+share/moregroupware/modules/faq/admin/menue.php
+share/moregroupware/modules/faq/admin/news.php
+share/moregroupware/modules/faq/admin/pwd.change.php
+share/moregroupware/modules/faq/admin/pwd.save.php
+share/moregroupware/modules/faq/admin/record.add.php
+share/moregroupware/modules/faq/admin/record.delatt.php
+share/moregroupware/modules/faq/admin/record.delcomment.php
+share/moregroupware/modules/faq/admin/record.delcommentform.php
+share/moregroupware/modules/faq/admin/record.delete.php
+share/moregroupware/modules/faq/admin/record.delquestion.php
+share/moregroupware/modules/faq/admin/record.edit.php
+share/moregroupware/modules/faq/admin/record.save.php
+share/moregroupware/modules/faq/admin/record.show.php
+share/moregroupware/modules/faq/admin/stat.bar.php
+share/moregroupware/modules/faq/admin/stat.browser.php
+share/moregroupware/modules/faq/admin/stat.form.php
+share/moregroupware/modules/faq/admin/stat.main.php
+share/moregroupware/modules/faq/admin/stat.query.php
+share/moregroupware/modules/faq/admin/stat.ratings.php
+share/moregroupware/modules/faq/admin/stat.show.php
+share/moregroupware/modules/faq/admin/user.add.php
+share/moregroupware/modules/faq/admin/user.addsave.php
+share/moregroupware/modules/faq/admin/user.delete.php
+share/moregroupware/modules/faq/admin/user.edit.php
+share/moregroupware/modules/faq/admin/user.list.php
+share/moregroupware/modules/faq/admin/user.question.php
+share/moregroupware/modules/faq/admin/user.save.php
+share/moregroupware/modules/faq/anzeigen.php
+share/moregroupware/modules/faq/artikel.php
+share/moregroupware/modules/faq/ask.php
+share/moregroupware/modules/faq/definition2.xml
+share/moregroupware/modules/faq/faq.class.php
+share/moregroupware/modules/faq/font/courier.php
+share/moregroupware/modules/faq/font/helvetica.php
+share/moregroupware/modules/faq/font/helveticab.php
+share/moregroupware/modules/faq/font/helveticabi.php
+share/moregroupware/modules/faq/font/helveticai.php
+share/moregroupware/modules/faq/font/makefont/cp1250.map
+share/moregroupware/modules/faq/font/makefont/cp1251.map
+share/moregroupware/modules/faq/font/makefont/cp1252.map
+share/moregroupware/modules/faq/font/makefont/cp1253.map
+share/moregroupware/modules/faq/font/makefont/cp1254.map
+share/moregroupware/modules/faq/font/makefont/cp1255.map
+share/moregroupware/modules/faq/font/makefont/cp1257.map
+share/moregroupware/modules/faq/font/makefont/cp1258.map
+share/moregroupware/modules/faq/font/makefont/cp874.map
+share/moregroupware/modules/faq/font/makefont/iso-8859-1.map
+share/moregroupware/modules/faq/font/makefont/iso-8859-11.map
+share/moregroupware/modules/faq/font/makefont/iso-8859-15.map
+share/moregroupware/modules/faq/font/makefont/iso-8859-16.map
+share/moregroupware/modules/faq/font/makefont/iso-8859-2.map
+share/moregroupware/modules/faq/font/makefont/iso-8859-4.map
+share/moregroupware/modules/faq/font/makefont/iso-8859-5.map
+share/moregroupware/modules/faq/font/makefont/iso-8859-7.map
+share/moregroupware/modules/faq/font/makefont/iso-8859-9.map
+share/moregroupware/modules/faq/font/makefont/koi8-r.map
+share/moregroupware/modules/faq/font/makefont/koi8-u.map
+share/moregroupware/modules/faq/font/makefont/makefont.php
+share/moregroupware/modules/faq/font/symbol.php
+share/moregroupware/modules/faq/font/times.php
+share/moregroupware/modules/faq/font/timesb.php
+share/moregroupware/modules/faq/font/timesbi.php
+share/moregroupware/modules/faq/font/timesi.php
+share/moregroupware/modules/faq/font/zapfdingbats.php
+share/moregroupware/modules/faq/help/README.de.txt
+share/moregroupware/modules/faq/help/README.en.txt
+share/moregroupware/modules/faq/help/dokumentation.de.html
+share/moregroupware/modules/faq/help/dokumentation.en.html
+share/moregroupware/modules/faq/help/ubbcode.php
+share/moregroupware/modules/faq/hilfe.php
+share/moregroupware/modules/faq/images/.cvsignore
+share/moregroupware/modules/faq/images/email.gif
+share/moregroupware/modules/faq/images/header.jpg
+share/moregroupware/modules/faq/images/pdf.gif
+share/moregroupware/modules/faq/images/printer.gif
+share/moregroupware/modules/faq/images/xml.gif
+share/moregroupware/modules/faq/inc/config.php
+share/moregroupware/modules/faq/inc/data.php
+share/moregroupware/modules/faq/inc/database.php
+share/moregroupware/modules/faq/inc/fpdf.php
+share/moregroupware/modules/faq/inc/functions.php
+share/moregroupware/modules/faq/inc/parser.php
+share/moregroupware/modules/faq/inc/rights.inc.php
+share/moregroupware/modules/faq/inc/smenu.php
+share/moregroupware/modules/faq/index.php
+share/moregroupware/modules/faq/install.txt
+share/moregroupware/modules/faq/kontakt.php
+share/moregroupware/modules/faq/lang/arabic.php
+share/moregroupware/modules/faq/lang/config_arabic.dat
+share/moregroupware/modules/faq/lang/config_english.dat
+share/moregroupware/modules/faq/lang/config_french.dat
+share/moregroupware/modules/faq/lang/config_german.dat
+share/moregroupware/modules/faq/lang/config_italian.dat
+share/moregroupware/modules/faq/lang/config_latvian.dat
+share/moregroupware/modules/faq/lang/config_nederlands.dat
+share/moregroupware/modules/faq/lang/config_polish.dat
+share/moregroupware/modules/faq/lang/config_portugues.dat
+share/moregroupware/modules/faq/lang/config_russian.dat
+share/moregroupware/modules/faq/lang/config_spanish.dat
+share/moregroupware/modules/faq/lang/config_vietnamese.dat
+share/moregroupware/modules/faq/lang/english.php
+share/moregroupware/modules/faq/lang/faq.fr.lang
+share/moregroupware/modules/faq/lang/french.php
+share/moregroupware/modules/faq/lang/german.php
+share/moregroupware/modules/faq/lang/italian.php
+share/moregroupware/modules/faq/lang/latvian.php
+share/moregroupware/modules/faq/lang/nederlands.php
+share/moregroupware/modules/faq/lang/polish.php
+share/moregroupware/modules/faq/lang/portugues.php
+share/moregroupware/modules/faq/lang/russian.php
+share/moregroupware/modules/faq/lang/spanish.php
+share/moregroupware/modules/faq/lang/vietnamese.php
+share/moregroupware/modules/faq/mailsend2friend.php
+share/moregroupware/modules/faq/main.php
+share/moregroupware/modules/faq/open.php
+share/moregroupware/modules/faq/pdf.php
+share/moregroupware/modules/faq/pdf/faq.pdf
+share/moregroupware/modules/faq/printing.php
+share/moregroupware/modules/faq/save.php
+share/moregroupware/modules/faq/savecomment.php
+share/moregroupware/modules/faq/savequestion.php
+share/moregroupware/modules/faq/savevoting.php
+share/moregroupware/modules/faq/search.php
+share/moregroupware/modules/faq/send2friend.php
+share/moregroupware/modules/faq/sendmail.php
+share/moregroupware/modules/faq/sql.txt
+share/moregroupware/modules/faq/template/add.html
+share/moregroupware/modules/faq/template/anzeigen.html
+share/moregroupware/modules/faq/template/artikel.html
+share/moregroupware/modules/faq/template/ask.html
+share/moregroupware/modules/faq/template/hilfe.html
+share/moregroupware/modules/faq/template/index.html
+share/moregroupware/modules/faq/template/kontakt.html
+share/moregroupware/modules/faq/template/mailsend2friend.html
+share/moregroupware/modules/faq/template/main.html
+share/moregroupware/modules/faq/template/open.html
+share/moregroupware/modules/faq/template/save.html
+share/moregroupware/modules/faq/template/savecomment.html
+share/moregroupware/modules/faq/template/savequestion.html
+share/moregroupware/modules/faq/template/savevoting.html
+share/moregroupware/modules/faq/template/search.html
+share/moregroupware/modules/faq/template/send2friend.html
+share/moregroupware/modules/faq/template/sendmail.html
+share/moregroupware/modules/faq/template/style.css
+share/moregroupware/modules/faq/template/writecomment.html
+share/moregroupware/modules/faq/template/xml.html
+share/moregroupware/modules/faq/templates/default/html/faq.tpl
+share/moregroupware/modules/faq/writecomment.php
+share/moregroupware/modules/faq/xml.php
+share/moregroupware/modules/faq/xml/cron4rss.php
+share/moregroupware/modules/faqfrenzy/admin.php
+share/moregroupware/modules/faqfrenzy/definition2.xml
+share/moregroupware/modules/faqfrenzy/docs/README
+share/moregroupware/modules/faqfrenzy/inc/rights.inc.php
+share/moregroupware/modules/faqfrenzy/inc/setup.inc.php
+share/moregroupware/modules/faqfrenzy/inc/smarty_plugins/modifier.highlightsearch.php
+share/moregroupware/modules/faqfrenzy/inc/smarty_plugins/prefilter.tr.php
+share/moregroupware/modules/faqfrenzy/inc/smenu.php
+share/moregroupware/modules/faqfrenzy/index.php
+share/moregroupware/modules/faqfrenzy/lang/faqfrenzy.en.lang
+share/moregroupware/modules/faqfrenzy/lang/faqfrenzy.nl.lang
+share/moregroupware/modules/faqfrenzy/templates/default/html/faqfrenzy_admin_addrelationshipform.tpl
+share/moregroupware/modules/faqfrenzy/templates/default/html/faqfrenzy_admin_catform.tpl
+share/moregroupware/modules/faqfrenzy/templates/default/html/faqfrenzy_admin_delcatselect.tpl
+share/moregroupware/modules/faqfrenzy/templates/default/html/faqfrenzy_admin_editcalselect.tpl
+share/moregroupware/modules/faqfrenzy/templates/default/html/faqfrenzy_admin_faqform.tpl
+share/moregroupware/modules/faqfrenzy/templates/default/html/faqfrenzy_admin_faqselect.tpl
+share/moregroupware/modules/faqfrenzy/templates/default/html/faqfrenzy_admin_front.tpl
+share/moregroupware/modules/faqfrenzy/templates/default/html/faqfrenzy_categories.tpl
+share/moregroupware/modules/faqfrenzy/templates/default/html/faqfrenzy_error.tpl
+share/moregroupware/modules/faqfrenzy/templates/default/html/faqfrenzy_faqentry.tpl
+share/moregroupware/modules/faqfrenzy/templates/default/html/faqfrenzy_footer.tpl
+share/moregroupware/modules/faqfrenzy/templates/default/html/faqfrenzy_header.tpl
+share/moregroupware/modules/faqfrenzy/templates/default/html/faqfrenzy_search_results.tpl
+share/moregroupware/modules/faqfrenzy/templates/default/media/module.css
 share/moregroupware/modules/files/README.txt
 share/moregroupware/modules/files/definition2.xml
 share/moregroupware/modules/files/inc/category.class.php
@@ -1486,6 +1854,7 @@ share/moregroupware/modules/files/lang/files.nb.lang
 share/moregroupware/modules/files/lang/files.nl.lang
 share/moregroupware/modules/files/lang/files.pt_br.lang
 share/moregroupware/modules/files/lang/files.pt_pt.lang
+share/moregroupware/modules/files/lang/files.ro.lang
 share/moregroupware/modules/files/lang/files.ru.lang
 share/moregroupware/modules/files/lang/files.sk.lang
 share/moregroupware/modules/files/lang/files.tr.lang
@@ -1536,6 +1905,103 @@ share/moregroupware/modules/files/templates/default/media/unknown.gif
 share/moregroupware/modules/files/templates/default/media/vcard.gif
 share/moregroupware/modules/files/templates/default/media/video.gif
 share/moregroupware/modules/files/templates/default/media/xml.gif
+share/moregroupware/modules/forum/admin.php
+share/moregroupware/modules/forum/bild.php
+share/moregroupware/modules/forum/definition2.xml
+share/moregroupware/modules/forum/inc/CObject.class.inc
+share/moregroupware/modules/forum/inc/Error.class.inc
+share/moregroupware/modules/forum/inc/Mail.class.inc
+share/moregroupware/modules/forum/inc/forum.admin.class.inc
+share/moregroupware/modules/forum/inc/forum.class.inc
+share/moregroupware/modules/forum/inc/forum.forum.class.inc
+share/moregroupware/modules/forum/inc/forum.group.class.inc
+share/moregroupware/modules/forum/inc/forum.page.class.inc
+share/moregroupware/modules/forum/inc/forum.settings.class.inc
+share/moregroupware/modules/forum/inc/forum.thread.class.inc
+share/moregroupware/modules/forum/inc/forum.user.class.inc
+share/moregroupware/modules/forum/inc/forum_func.inc.php
+share/moregroupware/modules/forum/inc/rights.inc.php
+share/moregroupware/modules/forum/inc/settings.inc.php
+share/moregroupware/modules/forum/inc/smenu.php
+share/moregroupware/modules/forum/index.php
+share/moregroupware/modules/forum/lang/forum.bg.lang
+share/moregroupware/modules/forum/lang/forum.cs.lang
+share/moregroupware/modules/forum/lang/forum.da.lang
+share/moregroupware/modules/forum/lang/forum.de.lang
+share/moregroupware/modules/forum/lang/forum.en.lang
+share/moregroupware/modules/forum/lang/forum.es.lang
+share/moregroupware/modules/forum/lang/forum.fi.lang
+share/moregroupware/modules/forum/lang/forum.fr.lang
+share/moregroupware/modules/forum/lang/forum.it.lang
+share/moregroupware/modules/forum/lang/forum.ja.lang
+share/moregroupware/modules/forum/lang/forum.lt.lang
+share/moregroupware/modules/forum/lang/forum.nb.lang
+share/moregroupware/modules/forum/lang/forum.nl.lang
+share/moregroupware/modules/forum/lang/forum.pt_br.lang
+share/moregroupware/modules/forum/lang/forum.pt_pt.lang
+share/moregroupware/modules/forum/lang/forum.ro.lang
+share/moregroupware/modules/forum/lang/forum.ru.lang
+share/moregroupware/modules/forum/lang/forum.sk.lang
+share/moregroupware/modules/forum/lang/forum.tr.lang
+share/moregroupware/modules/forum/lang/forum.zh_cn.lang
+share/moregroupware/modules/forum/lang/forum.zh_tw.lang
+share/moregroupware/modules/forum/media/delete_0.gif
+share/moregroupware/modules/forum/media/delete_1.gif
+share/moregroupware/modules/forum/media/edit_0.gif
+share/moregroupware/modules/forum/media/edit_1.gif
+share/moregroupware/modules/forum/media/forum_line.gif
+share/moregroupware/modules/forum/media/grp_lockedMsg_0.gif
+share/moregroupware/modules/forum/media/grp_lockedMsg_1.gif
+share/moregroupware/modules/forum/media/grp_newMsg_0.gif
+share/moregroupware/modules/forum/media/grp_newMsg_1.gif
+share/moregroupware/modules/forum/media/grp_newMsg_plain_0.gif
+share/moregroupware/modules/forum/media/grp_newMsg_plain_1.gif
+share/moregroupware/modules/forum/media/grp_noNewMsg_0.gif
+share/moregroupware/modules/forum/media/grp_noNewMsg_1.gif
+share/moregroupware/modules/forum/media/msg_notViewed_0.gif
+share/moregroupware/modules/forum/media/msg_notViewed_1.gif
+share/moregroupware/modules/forum/media/msg_viewed_0.gif
+share/moregroupware/modules/forum/media/msg_viewed_1.gif
+share/moregroupware/modules/forum/media/reply_0.gif
+share/moregroupware/modules/forum/media/reply_1.gif
+share/moregroupware/modules/forum/media/smileys/icon_biggrin.gif
+share/moregroupware/modules/forum/media/smileys/icon_confused.gif
+share/moregroupware/modules/forum/media/smileys/icon_cool.gif
+share/moregroupware/modules/forum/media/smileys/icon_cry.gif
+share/moregroupware/modules/forum/media/smileys/icon_eek.gif
+share/moregroupware/modules/forum/media/smileys/icon_evil.gif
+share/moregroupware/modules/forum/media/smileys/icon_exclaim.gif
+share/moregroupware/modules/forum/media/smileys/icon_frown.gif
+share/moregroupware/modules/forum/media/smileys/icon_idea.gif
+share/moregroupware/modules/forum/media/smileys/icon_lol.gif
+share/moregroupware/modules/forum/media/smileys/icon_mad.gif
+share/moregroupware/modules/forum/media/smileys/icon_mrgreen.gif
+share/moregroupware/modules/forum/media/smileys/icon_neutral.gif
+share/moregroupware/modules/forum/media/smileys/icon_question.gif
+share/moregroupware/modules/forum/media/smileys/icon_razz.gif
+share/moregroupware/modules/forum/media/smileys/icon_redface.gif
+share/moregroupware/modules/forum/media/smileys/icon_rolleyes.gif
+share/moregroupware/modules/forum/media/smileys/icon_sad.gif
+share/moregroupware/modules/forum/media/smileys/icon_smile.gif
+share/moregroupware/modules/forum/media/smileys/icon_surprised.gif
+share/moregroupware/modules/forum/media/smileys/icon_twisted.gif
+share/moregroupware/modules/forum/media/smileys/icon_wink.gif
+share/moregroupware/modules/forum/setup/sample.en.sql
+share/moregroupware/modules/forum/setup/sample.ja.sql
+share/moregroupware/modules/forum/templates/default/html/admin_frm_categories.tpl
+share/moregroupware/modules/forum/templates/default/html/admin_frm_forums.tpl
+share/moregroupware/modules/forum/templates/default/html/admin_frm_moderators.tpl
+share/moregroupware/modules/forum/templates/default/html/admin_frm_records_found.tpl
+share/moregroupware/modules/forum/templates/default/html/admin_options.tpl
+share/moregroupware/modules/forum/templates/default/html/delete_thread.tpl
+share/moregroupware/modules/forum/templates/default/html/edit_denied.tpl
+share/moregroupware/modules/forum/templates/default/html/list_groups.tpl
+share/moregroupware/modules/forum/templates/default/html/list_replies.tpl
+share/moregroupware/modules/forum/templates/default/html/list_threads.tpl
+share/moregroupware/modules/forum/templates/default/html/new_preview.tpl
+share/moregroupware/modules/forum/templates/default/html/new_thread.tpl
+share/moregroupware/modules/forum/templates/default/html/permission_denied.tpl
+share/moregroupware/modules/forum/templates/default/html/thread_saved.tpl
 share/moregroupware/modules/general/definition2.xml
 share/moregroupware/modules/general/diagnostics.php
 share/moregroupware/modules/general/inc/settings.inc.php
@@ -1553,6 +2019,7 @@ share/moregroupware/modules/general/lang/_footer.nb.lang
 share/moregroupware/modules/general/lang/_footer.nl.lang
 share/moregroupware/modules/general/lang/_footer.pt_br.lang
 share/moregroupware/modules/general/lang/_footer.pt_pt.lang
+share/moregroupware/modules/general/lang/_footer.ro.lang
 share/moregroupware/modules/general/lang/_footer.ru.lang
 share/moregroupware/modules/general/lang/_footer.sk.lang
 share/moregroupware/modules/general/lang/_footer.tr.lang
@@ -1572,6 +2039,7 @@ share/moregroupware/modules/general/lang/_navi.nb.lang
 share/moregroupware/modules/general/lang/_navi.nl.lang
 share/moregroupware/modules/general/lang/_navi.pt_br.lang
 share/moregroupware/modules/general/lang/_navi.pt_pt.lang
+share/moregroupware/modules/general/lang/_navi.ro.lang
 share/moregroupware/modules/general/lang/_navi.ru.lang
 share/moregroupware/modules/general/lang/_navi.sk.lang
 share/moregroupware/modules/general/lang/_navi.tr.lang
@@ -1592,6 +2060,7 @@ share/moregroupware/modules/general/lang/general.nb.lang
 share/moregroupware/modules/general/lang/general.nl.lang
 share/moregroupware/modules/general/lang/general.pt_br.lang
 share/moregroupware/modules/general/lang/general.pt_pt.lang
+share/moregroupware/modules/general/lang/general.ro.lang
 share/moregroupware/modules/general/lang/general.ru.lang
 share/moregroupware/modules/general/lang/general.sk.lang
 share/moregroupware/modules/general/lang/general.tr.lang
@@ -1647,6 +2116,167 @@ share/moregroupware/modules/general/templates/default/html/mim_new.tpl
 share/moregroupware/modules/general/templates/default/html/mim_read.tpl
 share/moregroupware/modules/general/templates/default/html/mim_status.tpl
 share/moregroupware/modules/general/templates/default/html/perm_errors.tpl
+share/moregroupware/modules/general/templates/default/htmlarea/dialog.js
+share/moregroupware/modules/general/templates/default/htmlarea/htmlarea.css
+share/moregroupware/modules/general/templates/default/htmlarea/htmlarea.js
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_about.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_align_center.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_align_justify.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_align_left.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_align_right.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_blank.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_charmap.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_color_bg.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_color_fg.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_copy.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_custom.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_cut.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_delete.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_format_bold.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_format_italic.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_format_strike.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_format_sub.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_format_sup.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_format_underline.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_help.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_hr.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_html.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_image.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_indent_less.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_indent_more.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_left_to_right.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_link.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_list_bullet.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_list_num.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_paste.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_redo.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_right_to_left.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_save.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_save.png
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_show_border.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_splitcel.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/ed_undo.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/fullscreen_maximize.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/fullscreen_minimize.gif
+share/moregroupware/modules/general/templates/default/htmlarea/images/insert_table.gif
+share/moregroupware/modules/general/templates/default/htmlarea/lang/b5.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/ch.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/cz.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/da.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/de.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/ee.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/el.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/en.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/es.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/fi.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/fr.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/gb.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/he.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/hu.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/it.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/ja-euc.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/ja-jis.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/ja-sjis.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/ja-utf8.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/lt.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/lv.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/nb.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/nl.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/no.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/pl.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/pt_br.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/ro.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/ru.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/se.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/si.js
+share/moregroupware/modules/general/templates/default/htmlarea/lang/vn.js
+share/moregroupware/modules/general/templates/default/htmlarea/license.txt
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/CSS/css.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/CSS/lang/en.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/ContextMenu/1.pl
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/ContextMenu/context-menu.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/ContextMenu/lang/de.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/ContextMenu/lang/el.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/ContextMenu/lang/en.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/ContextMenu/lang/he.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/ContextMenu/lang/nl.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/ContextMenu/menu.css
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/EnterParagraphs/enter-paragraphs.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/FullPage/full-page.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/FullPage/img/docprop.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/FullPage/lang/en.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/FullPage/lang/he.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/FullPage/lang/ro.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/FullPage/popups/docprop.html
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/FullPage/test.html
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/HtmlTidy/README
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/HtmlTidy/html-tidy-config.cfg
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/HtmlTidy/html-tidy-logic.php
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/HtmlTidy/html-tidy.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/HtmlTidy/img/html-tidy.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/HtmlTidy/lang/en.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/ListType/lang/en.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/ListType/list-type.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/img/he-spell-check.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/img/spell-check.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/lang/cz.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/lang/da.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/lang/de.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/lang/en.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/lang/he.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/lang/hu.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/lang/it.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/lang/ro.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/readme-tech.html
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/spell-check-logic.cgi
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/spell-check-style.css
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/spell-check-ui.html
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/spell-check-ui.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/spell-checker.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/cell-delete.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/cell-insert-after.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/cell-insert-before.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/cell-merge.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/cell-prop.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/cell-split.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/col-delete.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/col-insert-after.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/col-insert-before.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/col-split.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/row-delete.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/row-insert-above.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/row-insert-under.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/row-prop.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/row-split.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img/table-prop.gif
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/lang/cz.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/lang/da.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/lang/de.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/lang/el.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/lang/en.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/lang/fi.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/lang/he.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/lang/hu.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/lang/it.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/lang/nl.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/lang/no.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/lang/ro.js
+share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/table-operations.js
+share/moregroupware/modules/general/templates/default/htmlarea/popupdiv.js
+share/moregroupware/modules/general/templates/default/htmlarea/popups/about.html
+share/moregroupware/modules/general/templates/default/htmlarea/popups/blank.html
+share/moregroupware/modules/general/templates/default/htmlarea/popups/custom2.html
+share/moregroupware/modules/general/templates/default/htmlarea/popups/editor_help.html
+share/moregroupware/modules/general/templates/default/htmlarea/popups/fullscreen.html
+share/moregroupware/modules/general/templates/default/htmlarea/popups/insert_image.html
+share/moregroupware/modules/general/templates/default/htmlarea/popups/insert_table.html
+share/moregroupware/modules/general/templates/default/htmlarea/popups/link.html
+share/moregroupware/modules/general/templates/default/htmlarea/popups/old-fullscreen.html
+share/moregroupware/modules/general/templates/default/htmlarea/popups/old_insert_image.html
+share/moregroupware/modules/general/templates/default/htmlarea/popups/popup.js
+share/moregroupware/modules/general/templates/default/htmlarea/popups/select_color.html
+share/moregroupware/modules/general/templates/default/htmlarea/popupwin.js
+share/moregroupware/modules/general/templates/default/htmlarea/reference.html
 share/moregroupware/modules/general/templates/default/js/datepick.js
 share/moregroupware/modules/general/templates/default/js/md5.js
 share/moregroupware/modules/general/templates/default/js/overlib.js
@@ -1695,6 +2325,8 @@ share/moregroupware/modules/general/templates/default/media/modules/admin1.gif
 share/moregroupware/modules/general/templates/default/media/modules/admin2.gif
 share/moregroupware/modules/general/templates/default/media/modules/admin2.png
 share/moregroupware/modules/general/templates/default/media/modules/admin2_mini.png
+share/moregroupware/modules/general/templates/default/media/modules/admin3.png
+share/moregroupware/modules/general/templates/default/media/modules/admin3_mini.png
 share/moregroupware/modules/general/templates/default/media/modules/calendar.png
 share/moregroupware/modules/general/templates/default/media/modules/calendar2.png
 share/moregroupware/modules/general/templates/default/media/modules/calendar2_mini.png
@@ -1705,6 +2337,10 @@ share/moregroupware/modules/general/templates/default/media/modules/contacts1_mi
 share/moregroupware/modules/general/templates/default/media/modules/download.png
 share/moregroupware/modules/general/templates/default/media/modules/download_mini.png
 share/moregroupware/modules/general/templates/default/media/modules/exit.png
+share/moregroupware/modules/general/templates/default/media/modules/faq.png
+share/moregroupware/modules/general/templates/default/media/modules/faq_mini.png
+share/moregroupware/modules/general/templates/default/media/modules/faqfrenzy.png
+share/moregroupware/modules/general/templates/default/media/modules/faqfrenzy_mini.png
 share/moregroupware/modules/general/templates/default/media/modules/feature.png
 share/moregroupware/modules/general/templates/default/media/modules/feature_mini.png
 share/moregroupware/modules/general/templates/default/media/modules/feedback.png
@@ -1726,6 +2362,10 @@ share/moregroupware/modules/general/templates/default/media/modules/help_mini.pn
 share/moregroupware/modules/general/templates/default/media/modules/homepage.png
 share/moregroupware/modules/general/templates/default/media/modules/homepage_mini.png
 share/moregroupware/modules/general/templates/default/media/modules/info.png
+share/moregroupware/modules/general/templates/default/media/modules/inventory.png
+share/moregroupware/modules/general/templates/default/media/modules/inventory_mini.png
+share/moregroupware/modules/general/templates/default/media/modules/links.png
+share/moregroupware/modules/general/templates/default/media/modules/links_mini.png
 share/moregroupware/modules/general/templates/default/media/modules/logout1.gif
 share/moregroupware/modules/general/templates/default/media/modules/logout2.gif
 share/moregroupware/modules/general/templates/default/media/modules/manual.png
@@ -1752,6 +2392,8 @@ share/moregroupware/modules/general/templates/default/media/modules/phpbb.png
 share/moregroupware/modules/general/templates/default/media/modules/phpbb_mini.png
 share/moregroupware/modules/general/templates/default/media/modules/projects.png
 share/moregroupware/modules/general/templates/default/media/modules/projects_mini.png
+share/moregroupware/modules/general/templates/default/media/modules/quoting.png
+share/moregroupware/modules/general/templates/default/media/modules/quoting_mini.png
 share/moregroupware/modules/general/templates/default/media/modules/settings.png
 share/moregroupware/modules/general/templates/default/media/modules/settings1.gif
 share/moregroupware/modules/general/templates/default/media/modules/settings2.gif
@@ -1760,9 +2402,13 @@ share/moregroupware/modules/general/templates/default/media/modules/support_mini
 share/moregroupware/modules/general/templates/default/media/modules/todo.png
 share/moregroupware/modules/general/templates/default/media/modules/todo_mini.png
 share/moregroupware/modules/general/templates/default/media/modules/tts.png
+share/moregroupware/modules/general/templates/default/media/modules/tts2.png
+share/moregroupware/modules/general/templates/default/media/modules/tts2_mini.png
 share/moregroupware/modules/general/templates/default/media/modules/tts_mini.png
 share/moregroupware/modules/general/templates/default/media/modules/webmail2.png
 share/moregroupware/modules/general/templates/default/media/modules/webmail2_mini.png
+share/moregroupware/modules/general/templates/default/media/modules/workflow.png
+share/moregroupware/modules/general/templates/default/media/modules/workflow_mini.png
 share/moregroupware/modules/general/templates/default/media/moregw_logo.wbmp
 share/moregroupware/modules/general/templates/default/media/new_0.gif
 share/moregroupware/modules/general/templates/default/media/new_1.gif
@@ -1806,6 +2452,63 @@ share/moregroupware/modules/general/templates/default/wml/_week_h.tpl
 share/moregroupware/modules/general/templates/default/wml/login.tpl
 share/moregroupware/modules/general/templates/default/wml/main_wml.tpl
 share/moregroupware/modules/general/templates/default/wml/menu.tpl
+share/moregroupware/modules/headline/definition2.xml
+share/moregroupware/modules/headline/inc/HeadlineConfig.inc.php
+share/moregroupware/modules/headline/inc/config/01net.mcf
+share/moregroupware/modules/headline/inc/config/bebits.mcf
+share/moregroupware/modules/headline/inc/config/bsdtoday.mcf
+share/moregroupware/modules/headline/inc/config/freshmeat.mcf
+share/moregroupware/modules/headline/inc/config/hardware-fr.mcf
+share/moregroupware/modules/headline/inc/config/linuxfr.mcf
+share/moregroupware/modules/headline/inc/config/lou_portail.mcf
+share/moregroupware/modules/headline/inc/config/mandrake-fr.mcf
+share/moregroupware/modules/headline/inc/config/mgwfr.mcf
+share/moregroupware/modules/headline/inc/config/moregroupware.mcf
+share/moregroupware/modules/headline/inc/config/namodro-cz.mcf
+share/moregroupware/modules/headline/inc/config/newsforge.mcf
+share/moregroupware/modules/headline/inc/config/osnews.mcf
+share/moregroupware/modules/headline/inc/config/phpindex.mcf
+share/moregroupware/modules/headline/inc/config/root-cz.mcf
+share/moregroupware/modules/headline/inc/config/rss.mdf
+share/moregroupware/modules/headline/inc/config/slashdot.mcf
+share/moregroupware/modules/headline/inc/config/underground-cz.mcf
+share/moregroupware/modules/headline/inc/config/yahoodemi.mcf
+share/moregroupware/modules/headline/inc/config/yahoofrmi.mcf
+share/moregroupware/modules/headline/inc/headline.inc.php
+share/moregroupware/modules/headline/inc/headline_func.inc.php
+share/moregroupware/modules/headline/inc/plugins/kadinews.snn
+share/moregroupware/modules/headline/inc/rights.inc.php
+share/moregroupware/modules/headline/inc/settings.inc.php
+share/moregroupware/modules/headline/inc/smenu.php
+share/moregroupware/modules/headline/index.php
+share/moregroupware/modules/headline/lang/headline.bg.lang
+share/moregroupware/modules/headline/lang/headline.cs.lang
+share/moregroupware/modules/headline/lang/headline.da.lang
+share/moregroupware/modules/headline/lang/headline.de.lang
+share/moregroupware/modules/headline/lang/headline.en.lang
+share/moregroupware/modules/headline/lang/headline.es.lang
+share/moregroupware/modules/headline/lang/headline.fi.lang
+share/moregroupware/modules/headline/lang/headline.fr.lang
+share/moregroupware/modules/headline/lang/headline.it.lang
+share/moregroupware/modules/headline/lang/headline.ja.lang
+share/moregroupware/modules/headline/lang/headline.lt.lang
+share/moregroupware/modules/headline/lang/headline.nb.lang
+share/moregroupware/modules/headline/lang/headline.nl.lang
+share/moregroupware/modules/headline/lang/headline.pt_br.lang
+share/moregroupware/modules/headline/lang/headline.pt_pt.lang
+share/moregroupware/modules/headline/lang/headline.ro.lang
+share/moregroupware/modules/headline/lang/headline.ru.lang
+share/moregroupware/modules/headline/lang/headline.sk.lang
+share/moregroupware/modules/headline/lang/headline.tr.lang
+share/moregroupware/modules/headline/lang/headline.zh_cn.lang
+share/moregroupware/modules/headline/lang/headline.zh_tw.lang
+share/moregroupware/modules/headline/setup/sample.en.sql
+share/moregroupware/modules/headline/setup/sample.ja.sql
+share/moregroupware/modules/headline/templates/default/html/headl_channel_add.tpl
+share/moregroupware/modules/headline/templates/default/html/headl_channel_add_rss.tpl
+share/moregroupware/modules/headline/templates/default/html/headl_channel_remove.tpl
+share/moregroupware/modules/headline/templates/default/html/headline_list.tpl
+share/moregroupware/modules/headline/templates/default/html/headline_mngmt.tpl
 share/moregroupware/modules/help/help.php
 share/moregroupware/modules/help/helpfeedback.php
 share/moregroupware/modules/help/helponline.php
@@ -1833,6 +2536,102 @@ share/moregroupware/modules/help/lang/help.tr.lang
 share/moregroupware/modules/help/lang/help.zh_cn.lang
 share/moregroupware/modules/help/lang/help.zh_tw.lang
 share/moregroupware/modules/help/templates/default/html/help.tpl
+share/moregroupware/modules/inventory/admin.php
+share/moregroupware/modules/inventory/definition2.xml
+share/moregroupware/modules/inventory/docs/LICENSE
+share/moregroupware/modules/inventory/docs/README
+share/moregroupware/modules/inventory/inc/config.inc.php
+share/moregroupware/modules/inventory/inc/functions.inc.php
+share/moregroupware/modules/inventory/inc/inventory.class.php
+share/moregroupware/modules/inventory/inc/rights.inc.php
+share/moregroupware/modules/inventory/inc/setup.inc.php
+share/moregroupware/modules/inventory/inc/smarty_plugins/block.tr.php
+share/moregroupware/modules/inventory/inc/smarty_plugins/function.sameurl.php
+share/moregroupware/modules/inventory/inc/smarty_plugins/prefilter.tr.php
+share/moregroupware/modules/inventory/inc/smenu.php
+share/moregroupware/modules/inventory/index.php
+share/moregroupware/modules/inventory/lang/inventory.cs.lang
+share/moregroupware/modules/inventory/lang/inventory.en.lang
+share/moregroupware/modules/inventory/setup-base.php
+share/moregroupware/modules/inventory/templates/default/html/error.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_admin_category_list.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_admin_category_modify.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_admin_category_view.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_admin_column_list.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_admin_column_modify.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_admin_column_view.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_admin_location_list.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_admin_location_modify.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_admin_location_view.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_admin_product_list.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_admin_product_modify.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_admin_product_view.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_category_list.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_item.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_item_formdata.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_item_list.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_location_list.tpl
+share/moregroupware/modules/inventory/templates/default/html/inventory_product_list.tpl
+share/moregroupware/modules/links/action/add_item.action.php
+share/moregroupware/modules/links/action/add_wing.action.php
+share/moregroupware/modules/links/action/delete_item.action.php
+share/moregroupware/modules/links/action/delete_wing.action.php
+share/moregroupware/modules/links/action/move_item.action.php
+share/moregroupware/modules/links/action/move_wing.action.php
+share/moregroupware/modules/links/action/subscribe.action.php
+share/moregroupware/modules/links/action/update_item.action.php
+share/moregroupware/modules/links/action/update_wing.action.php
+share/moregroupware/modules/links/definition2.xml
+share/moregroupware/modules/links/inc/about.inc.php
+share/moregroupware/modules/links/inc/add_item.inc.php
+share/moregroupware/modules/links/inc/add_wing.inc.php
+share/moregroupware/modules/links/inc/dump.inc.php
+share/moregroupware/modules/links/inc/edit_item.inc.php
+share/moregroupware/modules/links/inc/edit_wing.inc.php
+share/moregroupware/modules/links/inc/getWingContents.inc.php
+share/moregroupware/modules/links/inc/global_settings.inc.php
+share/moregroupware/modules/links/inc/last10.inc.php
+share/moregroupware/modules/links/inc/links_func.inc.php
+share/moregroupware/modules/links/inc/mail.inc.php
+share/moregroupware/modules/links/inc/move_item.inc.php
+share/moregroupware/modules/links/inc/move_wing.inc.php
+share/moregroupware/modules/links/inc/random.inc.php
+share/moregroupware/modules/links/inc/rights.inc.php
+share/moregroupware/modules/links/inc/search.inc.php
+share/moregroupware/modules/links/inc/smenu.php
+share/moregroupware/modules/links/inc/stroll.inc.php
+share/moregroupware/modules/links/inc/suggest.inc.php
+share/moregroupware/modules/links/inc/tidy.inc.php
+share/moregroupware/modules/links/inc/top10.inc.php
+share/moregroupware/modules/links/index.php
+share/moregroupware/modules/links/install.txt
+share/moregroupware/modules/links/lang/links.cs.lang
+share/moregroupware/modules/links/lang/links.en.lang
+share/moregroupware/modules/links/lang/links.fr.lang
+share/moregroupware/modules/links/location.php
+share/moregroupware/modules/links/setup/install.sql
+share/moregroupware/modules/links/templates/default/html/links.tpl
+share/moregroupware/modules/minicalendar/actions.php
+share/moregroupware/modules/minicalendar/cal_ajoute.php
+share/moregroupware/modules/minicalendar/cal_showevent.php
+share/moregroupware/modules/minicalendar/calendar.config.php
+share/moregroupware/modules/minicalendar/definition2.xml
+share/moregroupware/modules/minicalendar/images/delete.gif
+share/moregroupware/modules/minicalendar/images/edit.gif
+share/moregroupware/modules/minicalendar/images/events0.gif
+share/moregroupware/modules/minicalendar/images/new.gif
+share/moregroupware/modules/minicalendar/inc/minicalendar_func.inc.php
+share/moregroupware/modules/minicalendar/inc/rights.inc.php
+share/moregroupware/modules/minicalendar/inc/settings.inc.php
+share/moregroupware/modules/minicalendar/index.php
+share/moregroupware/modules/minicalendar/lang/minicalendar.fr.lang
+share/moregroupware/modules/minicalendar/nicelooking.inc.php
+share/moregroupware/modules/minicalendar/settings.inc.php
+share/moregroupware/modules/minicalendar/setup/install.sql
+share/moregroupware/modules/minicalendar/templates/default/html/cal_ajoute.tpl
+share/moregroupware/modules/minicalendar/templates/default/html/parameters.tpl
+share/moregroupware/modules/minicalendar/templates/default/html/sbcal.tpl
+share/moregroupware/modules/minicalendar/templates/default/js/minicalendar.js
 share/moregroupware/modules/news/channels.php
 share/moregroupware/modules/news/definition2.xml
 share/moregroupware/modules/news/inc/news_func.inc.php
@@ -1856,6 +2655,7 @@ share/moregroupware/modules/news/lang/news.nb.lang
 share/moregroupware/modules/news/lang/news.nl.lang
 share/moregroupware/modules/news/lang/news.pt_br.lang
 share/moregroupware/modules/news/lang/news.pt_pt.lang
+share/moregroupware/modules/news/lang/news.ro.lang
 share/moregroupware/modules/news/lang/news.ru.lang
 share/moregroupware/modules/news/lang/news.sk.lang
 share/moregroupware/modules/news/lang/news.tr.lang
@@ -1894,6 +2694,7 @@ share/moregroupware/modules/notes/lang/notes.nb.lang
 share/moregroupware/modules/notes/lang/notes.nl.lang
 share/moregroupware/modules/notes/lang/notes.pt_br.lang
 share/moregroupware/modules/notes/lang/notes.pt_pt.lang
+share/moregroupware/modules/notes/lang/notes.ro.lang
 share/moregroupware/modules/notes/lang/notes.ru.lang
 share/moregroupware/modules/notes/lang/notes.sk.lang
 share/moregroupware/modules/notes/lang/notes.tr.lang
@@ -1928,6 +2729,7 @@ share/moregroupware/modules/outboard/lang/outboard.nb.lang
 share/moregroupware/modules/outboard/lang/outboard.nl.lang
 share/moregroupware/modules/outboard/lang/outboard.pt_br.lang
 share/moregroupware/modules/outboard/lang/outboard.pt_pt.lang
+share/moregroupware/modules/outboard/lang/outboard.ro.lang
 share/moregroupware/modules/outboard/lang/outboard.ru.lang
 share/moregroupware/modules/outboard/lang/outboard.sk.lang
 share/moregroupware/modules/outboard/lang/outboard.tr.lang
@@ -1955,6 +2757,7 @@ share/moregroupware/modules/overview/lang/overview.nb.lang
 share/moregroupware/modules/overview/lang/overview.nl.lang
 share/moregroupware/modules/overview/lang/overview.pt_br.lang
 share/moregroupware/modules/overview/lang/overview.pt_pt.lang
+share/moregroupware/modules/overview/lang/overview.ro.lang
 share/moregroupware/modules/overview/lang/overview.ru.lang
 share/moregroupware/modules/overview/lang/overview.sk.lang
 share/moregroupware/modules/overview/lang/overview.tr.lang
@@ -1980,6 +2783,7 @@ share/moregroupware/modules/partprog/lang/partprog.nb.lang
 share/moregroupware/modules/partprog/lang/partprog.nl.lang
 share/moregroupware/modules/partprog/lang/partprog.pt_br.lang
 share/moregroupware/modules/partprog/lang/partprog.pt_pt.lang
+share/moregroupware/modules/partprog/lang/partprog.ro.lang
 share/moregroupware/modules/partprog/lang/partprog.ru.lang
 share/moregroupware/modules/partprog/lang/partprog.sk.lang
 share/moregroupware/modules/partprog/lang/partprog.tr.lang
@@ -1988,6 +2792,79 @@ share/moregroupware/modules/partprog/lang/partprog.zh_tw.lang
 share/moregroupware/modules/partprog/templates/default/html/partprog_details.tpl
 share/moregroupware/modules/partprog/templates/default/html/partprog_edit.tpl
 share/moregroupware/modules/partprog/templates/default/html/partprog_list.tpl
+share/moregroupware/modules/projects/definition2.xml
+share/moregroupware/modules/projects/inc/overview.inc.php
+share/moregroupware/modules/projects/inc/projects_func.inc.php
+share/moregroupware/modules/projects/inc/rights.inc.php
+share/moregroupware/modules/projects/inc/settings.inc.php
+share/moregroupware/modules/projects/inc/smenu.php
+share/moregroupware/modules/projects/index.php
+share/moregroupware/modules/projects/lang/projects.bg.lang
+share/moregroupware/modules/projects/lang/projects.cs.lang
+share/moregroupware/modules/projects/lang/projects.da.lang
+share/moregroupware/modules/projects/lang/projects.de.lang
+share/moregroupware/modules/projects/lang/projects.en.lang
+share/moregroupware/modules/projects/lang/projects.es.lang
+share/moregroupware/modules/projects/lang/projects.fi.lang
+share/moregroupware/modules/projects/lang/projects.fr.lang
+share/moregroupware/modules/projects/lang/projects.it.lang
+share/moregroupware/modules/projects/lang/projects.ja.lang
+share/moregroupware/modules/projects/lang/projects.lt.lang
+share/moregroupware/modules/projects/lang/projects.nb.lang
+share/moregroupware/modules/projects/lang/projects.nl.lang
+share/moregroupware/modules/projects/lang/projects.pt_br.lang
+share/moregroupware/modules/projects/lang/projects.pt_pt.lang
+share/moregroupware/modules/projects/lang/projects.ro.lang
+share/moregroupware/modules/projects/lang/projects.ru.lang
+share/moregroupware/modules/projects/lang/projects.sk.lang
+share/moregroupware/modules/projects/lang/projects.tr.lang
+share/moregroupware/modules/projects/lang/projects.zh_cn.lang
+share/moregroupware/modules/projects/lang/projects.zh_tw.lang
+share/moregroupware/modules/projects/setup/update_post.php
+share/moregroupware/modules/projects/templates/default/html/projects_details.tpl
+share/moregroupware/modules/projects/templates/default/html/projects_edit.tpl
+share/moregroupware/modules/projects/templates/default/html/projects_gantt.tpl
+share/moregroupware/modules/projects/templates/default/html/projects_list.tpl
+share/moregroupware/modules/projects/templates/default/html/projects_mytasks.tpl
+share/moregroupware/modules/projects/templates/default/html/projects_overview.tpl
+share/moregroupware/modules/projects/templates/default/html/projects_taskedit.tpl
+share/moregroupware/modules/projects/templates/default/html/projects_tasklist.tpl
+share/moregroupware/modules/projects/templates/default/html/projects_tp_bar.tpl
+share/moregroupware/modules/projects/templates/default/media/bars/bar-left-green.gif
+share/moregroupware/modules/projects/templates/default/media/bars/bar-left-grey.gif
+share/moregroupware/modules/projects/templates/default/media/bars/bar-left-red.gif
+share/moregroupware/modules/projects/templates/default/media/bars/bar-left-yellow.gif
+share/moregroupware/modules/projects/templates/default/media/bars/bar-right-green.gif
+share/moregroupware/modules/projects/templates/default/media/bars/bar-right-grey.gif
+share/moregroupware/modules/projects/templates/default/media/bars/bar-right-red.gif
+share/moregroupware/modules/projects/templates/default/media/bars/bar-right-yellow.gif
+share/moregroupware/modules/projects/templates/default/media/bars/bar-tile-green.gif
+share/moregroupware/modules/projects/templates/default/media/bars/bar-tile-grey.gif
+share/moregroupware/modules/projects/templates/default/media/bars/bar-tile-red.gif
+share/moregroupware/modules/projects/templates/default/media/bars/bar-tile-yellow.gif
+share/moregroupware/modules/projects/templates/default/media/calc_0.gif
+share/moregroupware/modules/projects/templates/default/media/calc_1.gif
+share/moregroupware/modules/projects/templates/default/media/comment-off.gif
+share/moregroupware/modules/projects/templates/default/media/comment-on.gif
+share/moregroupware/modules/projects/templates/default/media/d-off.gif
+share/moregroupware/modules/projects/templates/default/media/d-on.gif
+share/moregroupware/modules/projects/templates/default/media/e-off.gif
+share/moregroupware/modules/projects/templates/default/media/e-on.gif
+share/moregroupware/modules/projects/templates/default/media/f-off.gif
+share/moregroupware/modules/projects/templates/default/media/f-on.gif
+share/moregroupware/modules/projects/templates/default/media/r-off.gif
+share/moregroupware/modules/projects/templates/default/media/r-on.gif
+share/moregroupware/modules/quoting/COPYING
+share/moregroupware/modules/quoting/definition2.xml
+share/moregroupware/modules/quoting/inc/quoting.class.php
+share/moregroupware/modules/quoting/inc/rights.inc.php
+share/moregroupware/modules/quoting/inc/smenu.php
+share/moregroupware/modules/quoting/index.php
+share/moregroupware/modules/quoting/lang/quoting.en.lang
+share/moregroupware/modules/quoting/templates/default/html/quoting_addtask.tpl
+share/moregroupware/modules/quoting/templates/default/html/quoting_details.tpl
+share/moregroupware/modules/quoting/templates/default/html/quoting_edit.tpl
+share/moregroupware/modules/quoting/templates/default/html/quoting_overview.tpl
 share/moregroupware/modules/settings/definition2.xml
 share/moregroupware/modules/settings/inc/rights.inc.php
 share/moregroupware/modules/settings/inc/settings_func.inc.php
@@ -2007,6 +2884,7 @@ share/moregroupware/modules/settings/lang/settings.nb.lang
 share/moregroupware/modules/settings/lang/settings.nl.lang
 share/moregroupware/modules/settings/lang/settings.pt_br.lang
 share/moregroupware/modules/settings/lang/settings.pt_pt.lang
+share/moregroupware/modules/settings/lang/settings.ro.lang
 share/moregroupware/modules/settings/lang/settings.ru.lang
 share/moregroupware/modules/settings/lang/settings.sk.lang
 share/moregroupware/modules/settings/lang/settings.tr.lang
@@ -2037,6 +2915,7 @@ share/moregroupware/modules/todo/lang/todo.nb.lang
 share/moregroupware/modules/todo/lang/todo.nl.lang
 share/moregroupware/modules/todo/lang/todo.pt_br.lang
 share/moregroupware/modules/todo/lang/todo.pt_pt.lang
+share/moregroupware/modules/todo/lang/todo.ro.lang
 share/moregroupware/modules/todo/lang/todo.ru.lang
 share/moregroupware/modules/todo/lang/todo.sk.lang
 share/moregroupware/modules/todo/lang/todo.tr.lang
@@ -2071,6 +2950,7 @@ share/moregroupware/modules/tts/lang/tts.nb.lang
 share/moregroupware/modules/tts/lang/tts.nl.lang
 share/moregroupware/modules/tts/lang/tts.pt_br.lang
 share/moregroupware/modules/tts/lang/tts.pt_pt.lang
+share/moregroupware/modules/tts/lang/tts.ro.lang
 share/moregroupware/modules/tts/lang/tts.ru.lang
 share/moregroupware/modules/tts/lang/tts.sk.lang
 share/moregroupware/modules/tts/lang/tts.tr.lang
@@ -2084,6 +2964,43 @@ share/moregroupware/modules/tts/templates/default/html/tts_inter.tpl
 share/moregroupware/modules/tts/templates/default/html/tts_list.tpl
 share/moregroupware/modules/tts/templates/default/html/tts_summary.tpl
 share/moregroupware/modules/tts/templates/default/html/tts_ticket.tpl
+share/moregroupware/modules/tts2/definition2.xml
+share/moregroupware/modules/tts2/docs/README
+share/moregroupware/modules/tts2/inc/repository.inc.php
+share/moregroupware/modules/tts2/inc/rights.inc.php
+share/moregroupware/modules/tts2/inc/smenu.php
+share/moregroupware/modules/tts2/inc/ticket.class.php
+share/moregroupware/modules/tts2/index.php
+share/moregroupware/modules/tts2/lang/tts2.en.lang
+share/moregroupware/modules/tts2/templates/default/html/tts2_comment.tpl
+share/moregroupware/modules/tts2/templates/default/html/tts2_list.tpl
+share/moregroupware/modules/tts2/templates/default/html/tts2_summary.tpl
+share/moregroupware/modules/tts2/templates/default/html/tts2_ticket.tpl
+share/moregroupware/modules/useralbum/definition2.xml
+share/moregroupware/modules/useralbum/inc/rights.inc.php
+share/moregroupware/modules/useralbum/inc/useralbum_func.inc.php
+share/moregroupware/modules/useralbum/index.php
+share/moregroupware/modules/useralbum/lang/useralbum.bg.lang
+share/moregroupware/modules/useralbum/lang/useralbum.cs.lang
+share/moregroupware/modules/useralbum/lang/useralbum.da.lang
+share/moregroupware/modules/useralbum/lang/useralbum.de.lang
+share/moregroupware/modules/useralbum/lang/useralbum.en.lang
+share/moregroupware/modules/useralbum/lang/useralbum.es.lang
+share/moregroupware/modules/useralbum/lang/useralbum.fi.lang
+share/moregroupware/modules/useralbum/lang/useralbum.fr.lang
+share/moregroupware/modules/useralbum/lang/useralbum.it.lang
+share/moregroupware/modules/useralbum/lang/useralbum.ja.lang
+share/moregroupware/modules/useralbum/lang/useralbum.lt.lang
+share/moregroupware/modules/useralbum/lang/useralbum.nb.lang
+share/moregroupware/modules/useralbum/lang/useralbum.nl.lang
+share/moregroupware/modules/useralbum/lang/useralbum.pt_br.lang
+share/moregroupware/modules/useralbum/lang/useralbum.pt_pt.lang
+share/moregroupware/modules/useralbum/lang/useralbum.sk.lang
+share/moregroupware/modules/useralbum/lang/useralbum.tr.lang
+share/moregroupware/modules/useralbum/lang/useralbum.zh_cn.lang
+share/moregroupware/modules/useralbum/lang/useralbum.zh_tw.lang
+share/moregroupware/modules/useralbum/templates/default/html/useralbum_details.tpl
+share/moregroupware/modules/useralbum/templates/default/html/useralbum_list.tpl
 share/moregroupware/modules/webmail2/LICENSE
 share/moregroupware/modules/webmail2/attachments.php
 share/moregroupware/modules/webmail2/attachments_funcs.php
@@ -2097,7 +3014,6 @@ share/moregroupware/modules/webmail2/download2.php
 share/moregroupware/modules/webmail2/download3.php
 share/moregroupware/modules/webmail2/fetchmail.php
 share/moregroupware/modules/webmail2/fetchmail_small.php
-share/moregroupware/modules/webmail2/filters.php
 share/moregroupware/modules/webmail2/folders.php
 share/moregroupware/modules/webmail2/imap_trace.php
 share/moregroupware/modules/webmail2/imap_tree.php
@@ -2168,6 +3084,7 @@ share/moregroupware/modules/webmail2/lang/webmail2.nb.lang
 share/moregroupware/modules/webmail2/lang/webmail2.nl.lang
 share/moregroupware/modules/webmail2/lang/webmail2.pt_br.lang
 share/moregroupware/modules/webmail2/lang/webmail2.pt_pt.lang
+share/moregroupware/modules/webmail2/lang/webmail2.ro.lang
 share/moregroupware/modules/webmail2/lang/webmail2.ru.lang
 share/moregroupware/modules/webmail2/lang/webmail2.sk.lang
 share/moregroupware/modules/webmail2/lang/webmail2.tr.lang
@@ -2216,7 +3133,6 @@ share/moregroupware/modules/webmail2/templates/default/html/sendmail.tpl
 share/moregroupware/modules/webmail2/templates/default/html/sendmail_post.tpl
 share/moregroupware/modules/webmail2/templates/default/html/smtp_trace.tpl
 share/moregroupware/modules/webmail2/templates/default/html/tree.tpl
-share/moregroupware/modules/webmail2/templates/default/html/webmail2_filters.tpl
 share/moregroupware/modules/webmail2/templates/default/html/webmail2_settings_editaccount.tpl
 share/moregroupware/modules/webmail2/templates/default/html/webmail2_settings_listaccounts.tpl
 share/moregroupware/modules/webmail2/templates/default/htmlarea/dialog.js
@@ -2451,7 +3367,476 @@ share/moregroupware/modules/webmail2/templates/default/tree/ua.js
 share/moregroupware/modules/webmail2/templates/default/tree/userfolderclosed.gif
 share/moregroupware/modules/webmail2/tree.php
 share/moregroupware/modules/webmail2/virusscan.php
+share/moregroupware/modules/wiki/admin.php
+share/moregroupware/modules/wiki/admin/dumpserial.php
+share/moregroupware/modules/wiki/admin/loadserial.php
+share/moregroupware/modules/wiki/admin/lockpage.php
+share/moregroupware/modules/wiki/admin/shrinkdbm.pl
+share/moregroupware/modules/wiki/admin/translate_mysql.pl
+share/moregroupware/modules/wiki/admin/wiki_dumpHTML.php
+share/moregroupware/modules/wiki/admin/wiki_port1_0.php
+share/moregroupware/modules/wiki/admin/wiki_rebuilddbms.php
+share/moregroupware/modules/wiki/admin/zip.php
+share/moregroupware/modules/wiki/definition2.xml
+share/moregroupware/modules/wiki/images/png.png
+share/moregroupware/modules/wiki/images/signature.png
+share/moregroupware/modules/wiki/images/wikibase.png
+share/moregroupware/modules/wiki/inc/rights.inc.php
+share/moregroupware/modules/wiki/inc/smenu.php
+share/moregroupware/modules/wiki/index.php
+share/moregroupware/modules/wiki/install.txt
+share/moregroupware/modules/wiki/lang/wiki.fr.lang
+share/moregroupware/modules/wiki/lib/backlinks.php
+share/moregroupware/modules/wiki/lib/config.php
+share/moregroupware/modules/wiki/lib/db_filesystem.php
+share/moregroupware/modules/wiki/lib/dbalib.php
+share/moregroupware/modules/wiki/lib/dbmlib.php
+share/moregroupware/modules/wiki/lib/diff.php
+share/moregroupware/modules/wiki/lib/display.php
+share/moregroupware/modules/wiki/lib/editlinks.php
+share/moregroupware/modules/wiki/lib/editpage.php
+share/moregroupware/modules/wiki/lib/fullsearch.php
+share/moregroupware/modules/wiki/lib/msql.php
+share/moregroupware/modules/wiki/lib/mssql.php
+share/moregroupware/modules/wiki/lib/mysql.php
+share/moregroupware/modules/wiki/lib/pageinfo.php
+share/moregroupware/modules/wiki/lib/pgsql.php
+share/moregroupware/modules/wiki/lib/savepage.php
+share/moregroupware/modules/wiki/lib/search.php
+share/moregroupware/modules/wiki/lib/setupwiki.php
+share/moregroupware/modules/wiki/lib/stdlib.php
+share/moregroupware/modules/wiki/lib/transform.php
+share/moregroupware/modules/wiki/lib/ziplib.php
+share/moregroupware/modules/wiki/locale/README
+share/moregroupware/modules/wiki/locale/de/LC_MESSAGES/phpwiki.mo
+share/moregroupware/modules/wiki/locale/de/LC_MESSAGES/phpwiki.php
+share/moregroupware/modules/wiki/locale/de/pgsrc/EditiereText
+share/moregroupware/modules/wiki/locale/de/pgsrc/FrischeSeiten
+share/moregroupware/modules/wiki/locale/de/pgsrc/GaesteBuch
+share/moregroupware/modules/wiki/locale/de/pgsrc/GuterStil
+share/moregroupware/modules/wiki/locale/de/pgsrc/KonvertiereLeerzeichenZuTabs
+share/moregroupware/modules/wiki/locale/de/pgsrc/MeistBesucht
+share/moregroupware/modules/wiki/locale/de/pgsrc/PhpWiki
+share/moregroupware/modules/wiki/locale/de/pgsrc/PhpWikiAdministration
+share/moregroupware/modules/wiki/locale/de/pgsrc/SandKiste
+share/moregroupware/modules/wiki/locale/de/pgsrc/SeiteFinden
+share/moregroupware/modules/wiki/locale/de/pgsrc/SeitenErzeugen
+share/moregroupware/modules/wiki/locale/de/pgsrc/StartSeite
+share/moregroupware/modules/wiki/locale/de/pgsrc/TextFormatierungsRegeln
+share/moregroupware/modules/wiki/locale/de/pgsrc/WabiSabi
+share/moregroupware/modules/wiki/locale/de/pgsrc/WieManWikiBenutzt
+share/moregroupware/modules/wiki/locale/de/pgsrc/WikiTechnik
+share/moregroupware/modules/wiki/locale/de/pgsrc/WikiWikiWeb
+share/moregroupware/modules/wiki/locale/de/templates/browse.html
+share/moregroupware/modules/wiki/locale/de/templates/editlinks.html
+share/moregroupware/modules/wiki/locale/de/templates/editpage.html
+share/moregroupware/modules/wiki/locale/de/templates/message.html
+share/moregroupware/modules/wiki/locale/es/LC_MESSAGES/phpwiki.mo
+share/moregroupware/modules/wiki/locale/es/LC_MESSAGES/phpwiki.php
+share/moregroupware/modules/wiki/locale/es/pgsrc/AgregarPaginas
+share/moregroupware/modules/wiki/locale/es/pgsrc/BuenEstilo
+share/moregroupware/modules/wiki/locale/es/pgsrc/BuscarPagina
+share/moregroupware/modules/wiki/locale/es/pgsrc/CajaDeArena
+share/moregroupware/modules/wiki/locale/es/pgsrc/CambiosRecientes
+share/moregroupware/modules/wiki/locale/es/pgsrc/ComoUsarWiki
+share/moregroupware/modules/wiki/locale/es/pgsrc/ConvierteEspaciosEnTabs
+share/moregroupware/modules/wiki/locale/es/pgsrc/EditarElTexto
+share/moregroupware/modules/wiki/locale/es/pgsrc/KBrown
+share/moregroupware/modules/wiki/locale/es/pgsrc/MasAcercadeLaMecanica
+share/moregroupware/modules/wiki/locale/es/pgsrc/MasPopulares
+share/moregroupware/modules/wiki/locale/es/pgsrc/NotasDeLiberacion
+share/moregroupware/modules/wiki/locale/es/pgsrc/PaginaPrincipal
+share/moregroupware/modules/wiki/locale/es/pgsrc/PhpWiki
+share/moregroupware/modules/wiki/locale/es/pgsrc/ReglasDeFormatoDeTexto
+share/moregroupware/modules/wiki/locale/es/pgsrc/VisitantesRecientes
+share/moregroupware/modules/wiki/locale/es/pgsrc/WabiSabi
+share/moregroupware/modules/wiki/locale/es/pgsrc/WikiWikiWeb
+share/moregroupware/modules/wiki/locale/es/templates/browse.html
+share/moregroupware/modules/wiki/locale/es/templates/editlinks.html
+share/moregroupware/modules/wiki/locale/es/templates/editpage.html
+share/moregroupware/modules/wiki/locale/es/templates/message.html
+share/moregroupware/modules/wiki/locale/it/LC_MESSAGES/phpwiki.mo
+share/moregroupware/modules/wiki/locale/it/LC_MESSAGES/phpwiki.php
+share/moregroupware/modules/wiki/locale/it/pgsrc/AggiungerePagine
+share/moregroupware/modules/wiki/locale/it/pgsrc/AmministrazioneDiPhpWiki
+share/moregroupware/modules/wiki/locale/it/pgsrc/BuonStile
+share/moregroupware/modules/wiki/locale/it/pgsrc/CambiamentiRecenti
+share/moregroupware/modules/wiki/locale/it/pgsrc/ComeUsareWiki
+share/moregroupware/modules/wiki/locale/it/pgsrc/ConvertiGliSpaziInTab
+share/moregroupware/modules/wiki/locale/it/pgsrc/ModificaIlTesto
+share/moregroupware/modules/wiki/locale/it/pgsrc/NoteDiRilascio
+share/moregroupware/modules/wiki/locale/it/pgsrc/PaginaDiProva
+share/moregroupware/modules/wiki/locale/it/pgsrc/PaginaPrincipale
+share/moregroupware/modules/wiki/locale/it/pgsrc/PhpWiki
+share/moregroupware/modules/wiki/locale/it/pgsrc/PiuPopolari
+share/moregroupware/modules/wiki/locale/it/pgsrc/RegoleDiFormattazioneDelTesto
+share/moregroupware/modules/wiki/locale/it/pgsrc/ScatolaDiSabbia
+share/moregroupware/modules/wiki/locale/it/pgsrc/SteveWainstead
+share/moregroupware/modules/wiki/locale/it/pgsrc/TrovaPagina
+share/moregroupware/modules/wiki/locale/it/pgsrc/VarieSulFunzionamento
+share/moregroupware/modules/wiki/locale/it/pgsrc/VisitatoriRecenti
+share/moregroupware/modules/wiki/locale/it/pgsrc/WabiSabi
+share/moregroupware/modules/wiki/locale/it/pgsrc/WikiWikiWeb
+share/moregroupware/modules/wiki/locale/it/templates/browse.html
+share/moregroupware/modules/wiki/locale/it/templates/editlinks.html
+share/moregroupware/modules/wiki/locale/it/templates/editpage.html
+share/moregroupware/modules/wiki/locale/it/templates/message.html
+share/moregroupware/modules/wiki/locale/nl/LC_MESSAGES/phpwiki.mo
+share/moregroupware/modules/wiki/locale/nl/LC_MESSAGES/phpwiki.php
+share/moregroupware/modules/wiki/locale/nl/pgsrc/GoedeStijl
+share/moregroupware/modules/wiki/locale/nl/pgsrc/HoeWikiTeGebruiken
+share/moregroupware/modules/wiki/locale/nl/pgsrc/JanNieuwenhuizen
+share/moregroupware/modules/wiki/locale/nl/pgsrc/MeerOverTechnieken
+share/moregroupware/modules/wiki/locale/nl/pgsrc/MeestBezocht
+share/moregroupware/modules/wiki/locale/nl/pgsrc/PaginasToevoegen
+share/moregroupware/modules/wiki/locale/nl/pgsrc/RecenteBezoekers
+share/moregroupware/modules/wiki/locale/nl/pgsrc/RecenteVeranderingen
+share/moregroupware/modules/wiki/locale/nl/pgsrc/TekstFormatteringsRegels
+share/moregroupware/modules/wiki/locale/nl/pgsrc/UitgaveNoten
+share/moregroupware/modules/wiki/locale/nl/pgsrc/VeranderTekst
+share/moregroupware/modules/wiki/locale/nl/pgsrc/VertaalSpatiesNaarTabs
+share/moregroupware/modules/wiki/locale/nl/pgsrc/VoorPagina
+share/moregroupware/modules/wiki/locale/nl/pgsrc/WabiSabi
+share/moregroupware/modules/wiki/locale/nl/pgsrc/WikiWikiWeb
+share/moregroupware/modules/wiki/locale/nl/pgsrc/ZandBak
+share/moregroupware/modules/wiki/locale/nl/pgsrc/ZoekPagina
+share/moregroupware/modules/wiki/locale/nl/templates/browse.html
+share/moregroupware/modules/wiki/locale/nl/templates/editlinks.html
+share/moregroupware/modules/wiki/locale/nl/templates/editpage.html
+share/moregroupware/modules/wiki/locale/nl/templates/message.html
+share/moregroupware/modules/wiki/locale/po/de.po
+share/moregroupware/modules/wiki/locale/po/es.po
+share/moregroupware/modules/wiki/locale/po/it.po
+share/moregroupware/modules/wiki/locale/po/nl.po
+share/moregroupware/modules/wiki/locale/po/phpwiki.pot
+share/moregroupware/modules/wiki/locale/po/sv.po
+share/moregroupware/modules/wiki/locale/sv/LC_MESSAGES/phpwiki.mo
+share/moregroupware/modules/wiki/locale/sv/LC_MESSAGES/phpwiki.php
+share/moregroupware/modules/wiki/locale/sv/pgsrc/BraStil
+share/moregroupware/modules/wiki/locale/sv/pgsrc/Framsida
+share/moregroupware/modules/wiki/locale/sv/pgsrc/G%e4stboken
+share/moregroupware/modules/wiki/locale/sv/pgsrc/HurManAnv%e4nderWiki
+share/moregroupware/modules/wiki/locale/sv/pgsrc/KonverteraMellanslagTillTabbar
+share/moregroupware/modules/wiki/locale/sv/pgsrc/L%e4ggaTillSidor
+share/moregroupware/modules/wiki/locale/sv/pgsrc/MerOmMekanismerna
+share/moregroupware/modules/wiki/locale/sv/pgsrc/MestPopul%e4r
+share/moregroupware/modules/wiki/locale/sv/pgsrc/PhpWiki
+share/moregroupware/modules/wiki/locale/sv/pgsrc/PhpWikiAdministration
+share/moregroupware/modules/wiki/locale/sv/pgsrc/RedigeraText
+share/moregroupware/modules/wiki/locale/sv/pgsrc/S%f6kEfterSida
+share/moregroupware/modules/wiki/locale/sv/pgsrc/Sandl%e5dan
+share/moregroupware/modules/wiki/locale/sv/pgsrc/Senaste%c4ndringar
+share/moregroupware/modules/wiki/locale/sv/pgsrc/Textformateringsregler
+share/moregroupware/modules/wiki/locale/sv/pgsrc/WabiSabi
+share/moregroupware/modules/wiki/locale/sv/pgsrc/WikiWikiWeb
+share/moregroupware/modules/wiki/locale/sv/templates/browse.html
+share/moregroupware/modules/wiki/locale/sv/templates/editlinks.html
+share/moregroupware/modules/wiki/locale/sv/templates/editpage.html
+share/moregroupware/modules/wiki/locale/sv/templates/message.html
+share/moregroupware/modules/wiki/locale/translate.sh
+share/moregroupware/modules/wiki/pgsrc/AddingPages
+share/moregroupware/modules/wiki/pgsrc/ConvertSpacesToTabs
+share/moregroupware/modules/wiki/pgsrc/EditText
+share/moregroupware/modules/wiki/pgsrc/FindPage
+share/moregroupware/modules/wiki/pgsrc/FrontPage
+share/moregroupware/modules/wiki/pgsrc/GoodStyle
+share/moregroupware/modules/wiki/pgsrc/HowToUseWiki
+share/moregroupware/modules/wiki/pgsrc/MoreAboutMechanics
+share/moregroupware/modules/wiki/pgsrc/MostPopular
+share/moregroupware/modules/wiki/pgsrc/PhpWiki
+share/moregroupware/modules/wiki/pgsrc/PhpWikiAdministration
+share/moregroupware/modules/wiki/pgsrc/RecentChanges
+share/moregroupware/modules/wiki/pgsrc/RecentVisitors
+share/moregroupware/modules/wiki/pgsrc/ReleaseNotes
+share/moregroupware/modules/wiki/pgsrc/SandBox
+share/moregroupware/modules/wiki/pgsrc/SteveWainstead
+share/moregroupware/modules/wiki/pgsrc/TestPage
+share/moregroupware/modules/wiki/pgsrc/TextFormattingRules
+share/moregroupware/modules/wiki/pgsrc/WabiSabi
+share/moregroupware/modules/wiki/pgsrc/WikiWikiWeb
+share/moregroupware/modules/wiki/templates/default/html/wiki.tpl
+share/moregroupware/modules/wiki/wiki_templates/README
+share/moregroupware/modules/wiki/wiki_templates/browse.html
+share/moregroupware/modules/wiki/wiki_templates/editlinks.html
+share/moregroupware/modules/wiki/wiki_templates/editpage.html
+share/moregroupware/modules/wiki/wiki_templates/message.html
+share/moregroupware/modules/workflow/autorun_activity.php
+share/moregroupware/modules/workflow/db/cdcollection2.sql
+share/moregroupware/modules/workflow/db/cdcollection2.xml
+share/moregroupware/modules/workflow/definition2.xml
+share/moregroupware/modules/workflow/docs/INSTALL
+share/moregroupware/modules/workflow/docs/LICENSE
+share/moregroupware/modules/workflow/docs/README
+share/moregroupware/modules/workflow/inc/Galaxia/API.php
+share/moregroupware/modules/workflow/inc/Galaxia/GUI.php
+share/moregroupware/modules/workflow/inc/Galaxia/ProcessManager.php
+share/moregroupware/modules/workflow/inc/Galaxia/ProcessMonitor.php
+share/moregroupware/modules/workflow/inc/Galaxia/README
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/_shared_pos.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/_shared_pre.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/activity_pos.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/activity_pre.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/end_pos.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/end_pre.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/join_pos.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/join_pre.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/split_pos.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/split_pre.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/standalone_pos.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/standalone_pre.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/start_pos.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/start_pre.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/switch_pos.php
+share/moregroupware/modules/workflow/inc/Galaxia/compiler/switch_pre.php
+share/moregroupware/modules/workflow/inc/Galaxia/config.php
+share/moregroupware/modules/workflow/inc/Galaxia/config.tikiwiki.php
+share/moregroupware/modules/workflow/inc/Galaxia/config.xaraya.php
+share/moregroupware/modules/workflow/inc/Galaxia/docs/doxygen
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/Activity.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/Archive.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/FallOut.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/Instance.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/Openflow.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/Process.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/Token.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/Transaction.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/Transition.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/Workflow.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/add.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/addressbook.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/auto_focus.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/back.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/bk.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/bk_gap.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/bkr.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/bksort.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/book.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/book2.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/calendar.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/change.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/char_a.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/clear.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/clipboard.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/close.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/collapse.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/color4.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/comment.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/config.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/config2.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/desc_length.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/dispurl.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/etc.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/exit.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/expand.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/explorer.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/export.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/expression.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/fix.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/float.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/fo.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/fo_gap.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/fontfamily.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/fontsize.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/footprint.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/for.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/global.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/gradient.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/green_dot.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/hbk.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/help.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/hfo.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/history_layer.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/hofo.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/home.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/home_url.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/icon_name.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/icon_row.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/icon_size.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/iconalign.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/import.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/import2.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/inc_head.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/index.php
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/key.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/linkpage.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/linkto.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/memo.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_blue_circle.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_blue_dbl_circle.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_blue_diamond.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_blue_hexagon.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_blue_inv_triangle.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_blue_rectangle.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_blue_triangle.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_circle.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_dbl_circle.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_diamond.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_hexagon.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_inv_triangle.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_rectangle.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_square.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mini_triangle.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mode_desc.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/mode_tree.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/move.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/myinfo.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/netscape.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/new.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/new_3day.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/new_week.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/next.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/ofo.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/opera.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/prio1.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/prio2.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/prio3.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/prio4.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/prio5.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/question.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/red_cross.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/red_dot.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/refresh.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/refresh2.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/resize.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/root_name.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/rotate.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/s_red.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/search_path.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/select.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/star.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/stop.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/theme.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/timer.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/timer2.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/today.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/toleft.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/toright.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/trash.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/trdot.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/up.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/url.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/url_length.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/urlcheck.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/visit.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/visit_info.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/visited_path.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/weather.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/xclipboard.gif
+share/moregroupware/modules/workflow/inc/Galaxia/img/icons/zoom.gif
+share/moregroupware/modules/workflow/inc/Galaxia/log/README
+share/moregroupware/modules/workflow/inc/Galaxia/processes/README
+share/moregroupware/modules/workflow/inc/Galaxia/src/API/BaseActivity.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/API/Instance.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/API/Process.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/API/Role.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/API/Workitem.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/API/activities/Activity.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/API/activities/End.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/API/activities/Join.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/API/activities/Split.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/API/activities/Standalone.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/API/activities/Start.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/API/activities/SwitchActivity.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/GUI/GUI.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/Observers/Logger.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/ProcessManager/ActivityManager.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/ProcessManager/BaseManager.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/ProcessManager/GraphViz.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/ProcessManager/InstanceManager.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/ProcessManager/ProcessManager.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/ProcessManager/RoleManager.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/ProcessMonitor/ProcessMonitor.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/common/Base.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/common/Observable.php
+share/moregroupware/modules/workflow/inc/Galaxia/src/common/Observer.php
+share/moregroupware/modules/workflow/inc/g-userlib.php
+share/moregroupware/modules/workflow/inc/osr.class.php
+share/moregroupware/modules/workflow/inc/repository.inc.php
+share/moregroupware/modules/workflow/inc/rights.inc.php
+share/moregroupware/modules/workflow/inc/setup.inc.php
+share/moregroupware/modules/workflow/inc/smarty_workflow_plugins/block.tr.php
+share/moregroupware/modules/workflow/inc/smarty_workflow_plugins/function.sameurl.php
+share/moregroupware/modules/workflow/inc/smarty_workflow_plugins/modifier.act_icon.php
+share/moregroupware/modules/workflow/inc/smarty_workflow_plugins/modifier.adjust.php
+share/moregroupware/modules/workflow/inc/smarty_workflow_plugins/modifier.div.php
+share/moregroupware/modules/workflow/inc/smarty_workflow_plugins/modifier.duration.php
+share/moregroupware/modules/workflow/inc/smarty_workflow_plugins/modifier.times.php
+share/moregroupware/modules/workflow/inc/smarty_workflow_plugins/prefilter.tr.php
+share/moregroupware/modules/workflow/inc/smenu.php
+share/moregroupware/modules/workflow/inc/webmail/htmlMimeMail.php
+share/moregroupware/modules/workflow/index.php
+share/moregroupware/modules/workflow/lang/workflow.cn.lang
+share/moregroupware/modules/workflow/lang/workflow.cs.lang
+share/moregroupware/modules/workflow/lang/workflow.da.lang
+share/moregroupware/modules/workflow/lang/workflow.de.lang
+share/moregroupware/modules/workflow/lang/workflow.en.lang
+share/moregroupware/modules/workflow/lang/workflow.es.lang
+share/moregroupware/modules/workflow/lang/workflow.fr.lang
+share/moregroupware/modules/workflow/lang/workflow.he.lang
+share/moregroupware/modules/workflow/lang/workflow.it.lang
+share/moregroupware/modules/workflow/lang/workflow.ja.lang
+share/moregroupware/modules/workflow/lang/workflow.nl.lang
+share/moregroupware/modules/workflow/lang/workflow.no.lang
+share/moregroupware/modules/workflow/lang/workflow.pl.lang
+share/moregroupware/modules/workflow/lang/workflow.ru.lang
+share/moregroupware/modules/workflow/lang/workflow.sk.lang
+share/moregroupware/modules/workflow/lang/workflow.sr.lang
+share/moregroupware/modules/workflow/lang/workflow.sv.lang
+share/moregroupware/modules/workflow/lang/workflow.tw.lang
+share/moregroupware/modules/workflow/setup-base.php
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-activity_completed.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-admin_activities.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-admin_graph.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-admin_instance.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-admin_processes.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-admin_roles.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-admin_shared_source.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-map_roles.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-monitor_activities.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-monitor_bar.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-monitor_instances.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-monitor_processes.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-monitor_stats.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-monitor_workitems.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-proc_bar.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-user_activities.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-user_bar.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-user_instances.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-user_processes.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki-g-view_workitem.tpl
+share/moregroupware/modules/workflow/templates/default/html/tiki.tpl
+share/moregroupware/modules/workflow/templates/default/html/workflow_error.tpl
+share/moregroupware/modules/workflow/templates/default/media/module.css
+share/moregroupware/modules/workflow/tiki-g-admin_activities.php
+share/moregroupware/modules/workflow/tiki-g-admin_graph.php
+share/moregroupware/modules/workflow/tiki-g-admin_instance.php
+share/moregroupware/modules/workflow/tiki-g-admin_processes.php
+share/moregroupware/modules/workflow/tiki-g-admin_roles.php
+share/moregroupware/modules/workflow/tiki-g-admin_shared_source.php
+share/moregroupware/modules/workflow/tiki-g-monitor_activities.php
+share/moregroupware/modules/workflow/tiki-g-monitor_instances.php
+share/moregroupware/modules/workflow/tiki-g-monitor_processes.php
+share/moregroupware/modules/workflow/tiki-g-monitor_workitems.php
+share/moregroupware/modules/workflow/tiki-g-run_activity.php
+share/moregroupware/modules/workflow/tiki-g-save_process.php
+share/moregroupware/modules/workflow/tiki-g-user_activities.php
+share/moregroupware/modules/workflow/tiki-g-user_instances.php
+share/moregroupware/modules/workflow/tiki-g-user_processes.php
+share/moregroupware/modules/workflow/tiki-g-view_workitem.php
 share/moregroupware/norefer.php
+share/moregroupware/scripts/date_reminder.php
+share/moregroupware/scripts/date_reminder2.php
+share/moregroupware/scripts/findlang.php
+share/moregroupware/scripts/makelang.pl
+share/moregroupware/scripts/makemd5.php
+share/moregroupware/scripts/makeschema.pl
+share/moregroupware/scripts/mgwquery.sh
+share/moregroupware/scripts/migrate.bat
+share/moregroupware/scripts/mvcontacts.php
+share/moregroupware/scripts/readConfig.pl
+share/moregroupware/scripts/readconfig.php
+share/moregroupware/scripts/synclang.php
+share/moregroupware/scripts/systeminfo.php
 share/moregroupware/setup/inc/save_ldap.inc.php
 share/moregroupware/setup/inc/save_settings.inc.php
 share/moregroupware/setup/inc/step_1.inc.php
@@ -2476,6 +3861,7 @@ share/moregroupware/setup/lang/setup.nb.lang
 share/moregroupware/setup/lang/setup.nl.lang
 share/moregroupware/setup/lang/setup.pt_br.lang
 share/moregroupware/setup/lang/setup.pt_pt.lang
+share/moregroupware/setup/lang/setup.ro.lang
 share/moregroupware/setup/lang/setup.sk.lang
 share/moregroupware/setup/lang/setup.tr.lang
 share/moregroupware/setup/lang/setup.zh_cn.lang
@@ -2496,3 +3882,438 @@ share/moregroupware/setup/templates/default/media/status_help.gif
 share/moregroupware/setup/templates/default/media/status_note.gif
 share/moregroupware/setup/templates/default/media/status_ok.gif
 share/moregroupware/setup/templates/default/media/status_warning.gif
+@dirrm share/moregroupware/setup/templates/default/media
+@dirrm share/moregroupware/setup/templates/default/html
+@dirrm share/moregroupware/setup/templates/default/css
+@dirrm share/moregroupware/setup/templates/default
+@dirrm share/moregroupware/setup/templates
+@dirrm share/moregroupware/setup/lang
+@dirrm share/moregroupware/setup/inc
+@dirrm share/moregroupware/setup
+@dirrm share/moregroupware/scripts
+@dirrm share/moregroupware/modules/workflow/templates/default/media
+@dirrm share/moregroupware/modules/workflow/templates/default/html
+@dirrm share/moregroupware/modules/workflow/templates/default
+@dirrm share/moregroupware/modules/workflow/templates
+@dirrm share/moregroupware/modules/workflow/lang
+@dirrm share/moregroupware/modules/workflow/inc/webmail
+@dirrm share/moregroupware/modules/workflow/inc/smarty_workflow_plugins
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/src/common
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/src/ProcessMonitor
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/src/ProcessManager
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/src/Observers
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/src/GUI
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/src/API/activities
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/src/API
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/src
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/processes
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/log
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/img/icons
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/img
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/docs
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia/compiler
+@dirrm share/moregroupware/modules/workflow/inc/Galaxia
+@dirrm share/moregroupware/modules/workflow/inc
+@dirrm share/moregroupware/modules/workflow/docs
+@dirrm share/moregroupware/modules/workflow/db
+@dirrm share/moregroupware/modules/workflow
+@dirrm share/moregroupware/modules/wiki/wiki_templates
+@dirrm share/moregroupware/modules/wiki/templates/default/html
+@dirrm share/moregroupware/modules/wiki/templates/default
+@dirrm share/moregroupware/modules/wiki/templates
+@dirrm share/moregroupware/modules/wiki/pgsrc
+@dirrm share/moregroupware/modules/wiki/locale/sv/templates
+@dirrm share/moregroupware/modules/wiki/locale/sv/pgsrc
+@dirrm share/moregroupware/modules/wiki/locale/sv/LC_MESSAGES
+@dirrm share/moregroupware/modules/wiki/locale/sv
+@dirrm share/moregroupware/modules/wiki/locale/po
+@dirrm share/moregroupware/modules/wiki/locale/nl/templates
+@dirrm share/moregroupware/modules/wiki/locale/nl/pgsrc
+@dirrm share/moregroupware/modules/wiki/locale/nl/LC_MESSAGES
+@dirrm share/moregroupware/modules/wiki/locale/nl
+@dirrm share/moregroupware/modules/wiki/locale/it/templates
+@dirrm share/moregroupware/modules/wiki/locale/it/pgsrc
+@dirrm share/moregroupware/modules/wiki/locale/it/LC_MESSAGES
+@dirrm share/moregroupware/modules/wiki/locale/it
+@dirrm share/moregroupware/modules/wiki/locale/es/templates
+@dirrm share/moregroupware/modules/wiki/locale/es/pgsrc
+@dirrm share/moregroupware/modules/wiki/locale/es/LC_MESSAGES
+@dirrm share/moregroupware/modules/wiki/locale/es
+@dirrm share/moregroupware/modules/wiki/locale/de/templates
+@dirrm share/moregroupware/modules/wiki/locale/de/pgsrc
+@dirrm share/moregroupware/modules/wiki/locale/de/LC_MESSAGES
+@dirrm share/moregroupware/modules/wiki/locale/de
+@dirrm share/moregroupware/modules/wiki/locale
+@dirrm share/moregroupware/modules/wiki/lib
+@dirrm share/moregroupware/modules/wiki/lang
+@dirrm share/moregroupware/modules/wiki/inc
+@dirrm share/moregroupware/modules/wiki/images
+@dirrm share/moregroupware/modules/wiki/admin
+@dirrm share/moregroupware/modules/wiki
+@dirrm share/moregroupware/modules/webmail2/templates/default/tree
+@dirrm share/moregroupware/modules/webmail2/templates/default/media/wiki_smiles
+@dirrm share/moregroupware/modules/webmail2/templates/default/media
+@dirrm share/moregroupware/modules/webmail2/templates/default/js
+@dirrm share/moregroupware/modules/webmail2/templates/default/htmlarea/popups
+@dirrm share/moregroupware/modules/webmail2/templates/default/htmlarea/images
+@dirrm share/moregroupware/modules/webmail2/templates/default/htmlarea
+@dirrm share/moregroupware/modules/webmail2/templates/default/html
+@dirrm share/moregroupware/modules/webmail2/templates/default/css
+@dirrm share/moregroupware/modules/webmail2/templates/default/bar
+@dirrm share/moregroupware/modules/webmail2/templates/default
+@dirrm share/moregroupware/modules/webmail2/templates
+@dirrm share/moregroupware/modules/webmail2/setup
+@dirrm share/moregroupware/modules/webmail2/lang
+@dirrm share/moregroupware/modules/webmail2/inc/oo_xml
+@dirrm share/moregroupware/modules/webmail2/inc/mime_2-51
+@dirrm share/moregroupware/modules/webmail2/inc/imap
+@dirrm share/moregroupware/modules/webmail2/inc
+@dirrm share/moregroupware/modules/webmail2/docu/img
+@dirrm share/moregroupware/modules/webmail2/docu
+@dirrm share/moregroupware/modules/webmail2
+@dirrm share/moregroupware/modules/useralbum/templates/default/html
+@dirrm share/moregroupware/modules/useralbum/templates/default
+@dirrm share/moregroupware/modules/useralbum/templates
+@dirrm share/moregroupware/modules/useralbum/lang
+@dirrm share/moregroupware/modules/useralbum/inc
+@dirrm share/moregroupware/modules/useralbum
+@dirrm share/moregroupware/modules/tts2/templates/default/html
+@dirrm share/moregroupware/modules/tts2/templates/default
+@dirrm share/moregroupware/modules/tts2/templates
+@dirrm share/moregroupware/modules/tts2/lang
+@dirrm share/moregroupware/modules/tts2/inc
+@dirrm share/moregroupware/modules/tts2/docs
+@dirrm share/moregroupware/modules/tts2
+@dirrm share/moregroupware/modules/tts/templates/default/html
+@dirrm share/moregroupware/modules/tts/templates/default
+@dirrm share/moregroupware/modules/tts/templates
+@dirrm share/moregroupware/modules/tts/lang
+@dirrm share/moregroupware/modules/tts/inc
+@dirrm share/moregroupware/modules/tts
+@dirrm share/moregroupware/modules/todo/templates/default/html
+@dirrm share/moregroupware/modules/todo/templates/default
+@dirrm share/moregroupware/modules/todo/templates
+@dirrm share/moregroupware/modules/todo/setup
+@dirrm share/moregroupware/modules/todo/lang
+@dirrm share/moregroupware/modules/todo/inc
+@dirrm share/moregroupware/modules/todo
+@dirrm share/moregroupware/modules/settings/templates/default/html
+@dirrm share/moregroupware/modules/settings/templates/default
+@dirrm share/moregroupware/modules/settings/templates
+@dirrm share/moregroupware/modules/settings/lang
+@dirrm share/moregroupware/modules/settings/inc
+@dirrm share/moregroupware/modules/settings
+@dirrm share/moregroupware/modules/quoting/templates/default/html
+@dirrm share/moregroupware/modules/quoting/templates/default
+@dirrm share/moregroupware/modules/quoting/templates
+@dirrm share/moregroupware/modules/quoting/lang
+@dirrm share/moregroupware/modules/quoting/inc
+@dirrm share/moregroupware/modules/quoting
+@dirrm share/moregroupware/modules/projects/templates/default/media/bars
+@dirrm share/moregroupware/modules/projects/templates/default/media
+@dirrm share/moregroupware/modules/projects/templates/default/html
+@dirrm share/moregroupware/modules/projects/templates/default
+@dirrm share/moregroupware/modules/projects/templates
+@dirrm share/moregroupware/modules/projects/setup
+@dirrm share/moregroupware/modules/projects/lang
+@dirrm share/moregroupware/modules/projects/inc
+@dirrm share/moregroupware/modules/projects
+@dirrm share/moregroupware/modules/partprog/templates/default/html
+@dirrm share/moregroupware/modules/partprog/templates/default
+@dirrm share/moregroupware/modules/partprog/templates
+@dirrm share/moregroupware/modules/partprog/lang
+@dirrm share/moregroupware/modules/partprog/inc
+@dirrm share/moregroupware/modules/partprog
+@dirrm share/moregroupware/modules/overview/templates/default/html
+@dirrm share/moregroupware/modules/overview/templates/default
+@dirrm share/moregroupware/modules/overview/templates
+@dirrm share/moregroupware/modules/overview/lang
+@dirrm share/moregroupware/modules/overview/inc
+@dirrm share/moregroupware/modules/overview
+@dirrm share/moregroupware/modules/outboard/templates/default/html
+@dirrm share/moregroupware/modules/outboard/templates/default
+@dirrm share/moregroupware/modules/outboard/templates
+@dirrm share/moregroupware/modules/outboard/lang
+@dirrm share/moregroupware/modules/outboard/inc
+@dirrm share/moregroupware/modules/outboard
+@dirrm share/moregroupware/modules/notes/templates/default/html
+@dirrm share/moregroupware/modules/notes/templates/default
+@dirrm share/moregroupware/modules/notes/templates
+@dirrm share/moregroupware/modules/notes/setup
+@dirrm share/moregroupware/modules/notes/lang
+@dirrm share/moregroupware/modules/notes/inc
+@dirrm share/moregroupware/modules/notes
+@dirrm share/moregroupware/modules/news/templates/default/media
+@dirrm share/moregroupware/modules/news/templates/default/html
+@dirrm share/moregroupware/modules/news/templates/default
+@dirrm share/moregroupware/modules/news/templates
+@dirrm share/moregroupware/modules/news/setup
+@dirrm share/moregroupware/modules/news/lang
+@dirrm share/moregroupware/modules/news/inc
+@dirrm share/moregroupware/modules/news
+@dirrm share/moregroupware/modules/minicalendar/templates/default/js
+@dirrm share/moregroupware/modules/minicalendar/templates/default/html
+@dirrm share/moregroupware/modules/minicalendar/templates/default
+@dirrm share/moregroupware/modules/minicalendar/templates
+@dirrm share/moregroupware/modules/minicalendar/setup
+@dirrm share/moregroupware/modules/minicalendar/lang
+@dirrm share/moregroupware/modules/minicalendar/inc
+@dirrm share/moregroupware/modules/minicalendar/images
+@dirrm share/moregroupware/modules/minicalendar
+@dirrm share/moregroupware/modules/links/templates/default/html
+@dirrm share/moregroupware/modules/links/templates/default
+@dirrm share/moregroupware/modules/links/templates
+@dirrm share/moregroupware/modules/links/setup
+@dirrm share/moregroupware/modules/links/lang
+@dirrm share/moregroupware/modules/links/inc
+@dirrm share/moregroupware/modules/links/action
+@dirrm share/moregroupware/modules/links
+@dirrm share/moregroupware/modules/inventory/templates/default/html
+@dirrm share/moregroupware/modules/inventory/templates/default
+@dirrm share/moregroupware/modules/inventory/templates
+@dirrm share/moregroupware/modules/inventory/lang
+@dirrm share/moregroupware/modules/inventory/inc/smarty_plugins
+@dirrm share/moregroupware/modules/inventory/inc
+@dirrm share/moregroupware/modules/inventory/docs
+@dirrm share/moregroupware/modules/inventory
+@dirrm share/moregroupware/modules/help/templates/default/html
+@dirrm share/moregroupware/modules/help/templates/default
+@dirrm share/moregroupware/modules/help/templates
+@dirrm share/moregroupware/modules/help/lang
+@dirrm share/moregroupware/modules/help/inc
+@dirrm share/moregroupware/modules/help
+@dirrm share/moregroupware/modules/headline/templates/default/html
+@dirrm share/moregroupware/modules/headline/templates/default
+@dirrm share/moregroupware/modules/headline/templates
+@dirrm share/moregroupware/modules/headline/setup
+@dirrm share/moregroupware/modules/headline/lang
+@dirrm share/moregroupware/modules/headline/inc/plugins
+@dirrm share/moregroupware/modules/headline/inc/config
+@dirrm share/moregroupware/modules/headline/inc
+@dirrm share/moregroupware/modules/headline
+@dirrm share/moregroupware/modules/general/templates/default/wml
+@dirrm share/moregroupware/modules/general/templates/default/media/modules
+@dirrm share/moregroupware/modules/general/templates/default/media/menutheme
+@dirrm share/moregroupware/modules/general/templates/default/media
+@dirrm share/moregroupware/modules/general/templates/default/js
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/popups
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/lang
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations/img
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/TableOperations
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/lang
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker/img
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/SpellChecker
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/ListType/lang
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/ListType
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/HtmlTidy/lang
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/HtmlTidy/img
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/HtmlTidy
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/FullPage/popups
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/FullPage/lang
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/FullPage/img
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/FullPage
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/EnterParagraphs
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/ContextMenu/lang
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/ContextMenu
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/CSS/lang
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins/CSS
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/plugins
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/lang
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea/images
+@dirrm share/moregroupware/modules/general/templates/default/htmlarea
+@dirrm share/moregroupware/modules/general/templates/default/html
+@dirrm share/moregroupware/modules/general/templates/default/css
+@dirrm share/moregroupware/modules/general/templates/default
+@dirrm share/moregroupware/modules/general/templates
+@dirrm share/moregroupware/modules/general/setup
+@dirrm share/moregroupware/modules/general/lang
+@dirrm share/moregroupware/modules/general/inc
+@dirrm share/moregroupware/modules/general
+@dirrm share/moregroupware/modules/forum/templates/default/html
+@dirrm share/moregroupware/modules/forum/templates/default
+@dirrm share/moregroupware/modules/forum/templates
+@dirrm share/moregroupware/modules/forum/setup
+@dirrm share/moregroupware/modules/forum/media/smileys
+@dirrm share/moregroupware/modules/forum/media
+@dirrm share/moregroupware/modules/forum/lang
+@dirrm share/moregroupware/modules/forum/inc
+@dirrm share/moregroupware/modules/forum
+@dirrm share/moregroupware/modules/files/templates/default/media
+@dirrm share/moregroupware/modules/files/templates/default/html
+@dirrm share/moregroupware/modules/files/templates/default
+@dirrm share/moregroupware/modules/files/templates
+@dirrm share/moregroupware/modules/files/lang
+@dirrm share/moregroupware/modules/files/inc/mime/Viewer
+@dirrm share/moregroupware/modules/files/inc/mime
+@dirrm share/moregroupware/modules/files/inc
+@dirrm share/moregroupware/modules/files
+@dirrm share/moregroupware/modules/faqfrenzy/templates/default/media
+@dirrm share/moregroupware/modules/faqfrenzy/templates/default/html
+@dirrm share/moregroupware/modules/faqfrenzy/templates/default
+@dirrm share/moregroupware/modules/faqfrenzy/templates
+@dirrm share/moregroupware/modules/faqfrenzy/lang
+@dirrm share/moregroupware/modules/faqfrenzy/inc/smarty_plugins
+@dirrm share/moregroupware/modules/faqfrenzy/inc
+@dirrm share/moregroupware/modules/faqfrenzy/docs
+@dirrm share/moregroupware/modules/faqfrenzy
+@dirrm share/moregroupware/modules/faq/xml
+@dirrm share/moregroupware/modules/faq/templates/default/html
+@dirrm share/moregroupware/modules/faq/templates/default
+@dirrm share/moregroupware/modules/faq/templates
+@dirrm share/moregroupware/modules/faq/template
+@dirrm share/moregroupware/modules/faq/pdf
+@dirrm share/moregroupware/modules/faq/lang
+@dirrm share/moregroupware/modules/faq/inc
+@dirrm share/moregroupware/modules/faq/images
+@dirrm share/moregroupware/modules/faq/help
+@dirrm share/moregroupware/modules/faq/font/makefont
+@dirrm share/moregroupware/modules/faq/font
+@dirrm share/moregroupware/modules/faq/admin/images
+@dirrm share/moregroupware/modules/faq/admin
+@dirrm share/moregroupware/modules/faq
+@dirrm share/moregroupware/modules/contact/templates/default/wml
+@dirrm share/moregroupware/modules/contact/templates/default/media
+@dirrm share/moregroupware/modules/contact/templates/default/js
+@dirrm share/moregroupware/modules/contact/templates/default/html
+@dirrm share/moregroupware/modules/contact/templates/default
+@dirrm share/moregroupware/modules/contact/templates
+@dirrm share/moregroupware/modules/contact/setup
+@dirrm share/moregroupware/modules/contact/lang
+@dirrm share/moregroupware/modules/contact/inc
+@dirrm share/moregroupware/modules/contact
+@dirrm share/moregroupware/modules/calendar2/templates/default/media
+@dirrm share/moregroupware/modules/calendar2/templates/default/jscalendar/lang
+@dirrm share/moregroupware/modules/calendar2/templates/default/jscalendar/doc/html
+@dirrm share/moregroupware/modules/calendar2/templates/default/jscalendar/doc
+@dirrm share/moregroupware/modules/calendar2/templates/default/jscalendar
+@dirrm share/moregroupware/modules/calendar2/templates/default/js
+@dirrm share/moregroupware/modules/calendar2/templates/default/htmlarea/popups
+@dirrm share/moregroupware/modules/calendar2/templates/default/htmlarea/images
+@dirrm share/moregroupware/modules/calendar2/templates/default/htmlarea
+@dirrm share/moregroupware/modules/calendar2/templates/default/html
+@dirrm share/moregroupware/modules/calendar2/templates/default/css
+@dirrm share/moregroupware/modules/calendar2/templates/default
+@dirrm share/moregroupware/modules/calendar2/templates
+@dirrm share/moregroupware/modules/calendar2/setup
+@dirrm share/moregroupware/modules/calendar2/lang
+@dirrm share/moregroupware/modules/calendar2/inc
+@dirrm share/moregroupware/modules/calendar2/holidays
+@dirrm share/moregroupware/modules/calendar2
+@dirrm share/moregroupware/modules/calendar/templates/default/wml
+@dirrm share/moregroupware/modules/calendar/templates/default/media
+@dirrm share/moregroupware/modules/calendar/templates/default/js
+@dirrm share/moregroupware/modules/calendar/templates/default/html
+@dirrm share/moregroupware/modules/calendar/templates/default
+@dirrm share/moregroupware/modules/calendar/templates
+@dirrm share/moregroupware/modules/calendar/setup
+@dirrm share/moregroupware/modules/calendar/lang
+@dirrm share/moregroupware/modules/calendar/js
+@dirrm share/moregroupware/modules/calendar/inc
+@dirrm share/moregroupware/modules/calendar
+@dirrm share/moregroupware/modules/admin3/templates/default/html
+@dirrm share/moregroupware/modules/admin3/templates/default
+@dirrm share/moregroupware/modules/admin3/templates
+@dirrm share/moregroupware/modules/admin3/lang
+@dirrm share/moregroupware/modules/admin3/inc
+@dirrm share/moregroupware/modules/admin3/doc
+@dirrm share/moregroupware/modules/admin3
+@dirrm share/moregroupware/modules/admin2/templates/default/tree
+@dirrm share/moregroupware/modules/admin2/templates/default/media
+@dirrm share/moregroupware/modules/admin2/templates/default/html
+@dirrm share/moregroupware/modules/admin2/templates/default/css
+@dirrm share/moregroupware/modules/admin2/templates/default
+@dirrm share/moregroupware/modules/admin2/templates
+@dirrm share/moregroupware/modules/admin2/lang
+@dirrm share/moregroupware/modules/admin2/inc
+@dirrm share/moregroupware/modules/admin2
+@dirrm share/moregroupware/modules/admin/templates/default/media
+@dirrm share/moregroupware/modules/admin/templates/default/html
+@dirrm share/moregroupware/modules/admin/templates/default
+@dirrm share/moregroupware/modules/admin/templates
+@dirrm share/moregroupware/modules/admin/lang
+@dirrm share/moregroupware/modules/admin/inc
+@dirrm share/moregroupware/modules/admin
+@dirrm share/moregroupware/modules
+@dirrm share/moregroupware/include/vcard
+@dirrm share/moregroupware/include/tar
+@dirrm share/moregroupware/include/smarty/plugins
+@dirrm share/moregroupware/include/smarty/core
+@dirrm share/moregroupware/include/smarty
+@dirrm share/moregroupware/include/pear/Date
+@dirrm share/moregroupware/include/pear
+@dirrm share/moregroupware/include/jpgraph
+@dirrm share/moregroupware/include/fpdf/font
+@dirrm share/moregroupware/include/fpdf
+@dirrm share/moregroupware/include/fonts
+@dirrm share/moregroupware/include/adodb/xsl
+@dirrm share/moregroupware/include/adodb/session
+@dirrm share/moregroupware/include/adodb/perf
+@dirrm share/moregroupware/include/adodb/lang
+@dirrm share/moregroupware/include/adodb/drivers
+@dirrm share/moregroupware/include/adodb/datadict
+@dirrm share/moregroupware/include/adodb
+@dirrm share/moregroupware/include/Auth
+@dirrm share/moregroupware/include
+@dirrm share/moregroupware/docs/images/setup
+@dirrm share/moregroupware/docs/images/modules/webmail2
+@dirrm share/moregroupware/docs/images/modules/projects
+@dirrm share/moregroupware/docs/images/modules/notes
+@dirrm share/moregroupware/docs/images/modules/calendar
+@dirrm share/moregroupware/docs/images/modules
+@dirrm share/moregroupware/docs/images/coding_translating
+@dirrm share/moregroupware/docs/images/coding_cvs
+@dirrm share/moregroupware/docs/images/coding_addmodule
+@dirrm share/moregroupware/docs/images/admonitions
+@dirrm share/moregroupware/docs/images
+@dirrm share/moregroupware/docs/html/pt_br/images/setup
+@dirrm share/moregroupware/docs/html/pt_br/images/modules/webmail2
+@dirrm share/moregroupware/docs/html/pt_br/images/modules/projects
+@dirrm share/moregroupware/docs/html/pt_br/images/modules/notes
+@dirrm share/moregroupware/docs/html/pt_br/images/modules/calendar
+@dirrm share/moregroupware/docs/html/pt_br/images/modules
+@dirrm share/moregroupware/docs/html/pt_br/images/coding_translating
+@dirrm share/moregroupware/docs/html/pt_br/images/coding_cvs
+@dirrm share/moregroupware/docs/html/pt_br/images/coding_addmodule
+@dirrm share/moregroupware/docs/html/pt_br/images/admonitions
+@dirrm share/moregroupware/docs/html/pt_br/images
+@dirrm share/moregroupware/docs/html/pt_br
+@dirrm share/moregroupware/docs/html/en/images/setup
+@dirrm share/moregroupware/docs/html/en/images/modules/webmail2
+@dirrm share/moregroupware/docs/html/en/images/modules/projects
+@dirrm share/moregroupware/docs/html/en/images/modules/notes
+@dirrm share/moregroupware/docs/html/en/images/modules/calendar
+@dirrm share/moregroupware/docs/html/en/images/modules
+@dirrm share/moregroupware/docs/html/en/images/coding_translating
+@dirrm share/moregroupware/docs/html/en/images/coding_cvs
+@dirrm share/moregroupware/docs/html/en/images/coding_addmodule
+@dirrm share/moregroupware/docs/html/en/images/admonitions
+@dirrm share/moregroupware/docs/html/en/images
+@dirrm share/moregroupware/docs/html/en
+@dirrm share/moregroupware/docs/html/de/images/setup
+@dirrm share/moregroupware/docs/html/de/images/modules/webmail2
+@dirrm share/moregroupware/docs/html/de/images/modules/projects
+@dirrm share/moregroupware/docs/html/de/images/modules/notes
+@dirrm share/moregroupware/docs/html/de/images/modules/calendar
+@dirrm share/moregroupware/docs/html/de/images/modules
+@dirrm share/moregroupware/docs/html/de/images/coding_translating
+@dirrm share/moregroupware/docs/html/de/images/coding_cvs
+@dirrm share/moregroupware/docs/html/de/images/coding_addmodule
+@dirrm share/moregroupware/docs/html/de/images/admonitions
+@dirrm share/moregroupware/docs/html/de/images
+@dirrm share/moregroupware/docs/html/de
+@dirrm share/moregroupware/docs/html
+@dirrm share/moregroupware/docs/docbook/pt_br/modules
+@dirrm share/moregroupware/docs/docbook/pt_br/chapters
+@dirrm share/moregroupware/docs/docbook/pt_br/appendices
+@dirrm share/moregroupware/docs/docbook/pt_br
+@dirrm share/moregroupware/docs/docbook/en/modules
+@dirrm share/moregroupware/docs/docbook/en/chapters
+@dirrm share/moregroupware/docs/docbook/en/appendices
+@dirrm share/moregroupware/docs/docbook/en
+@dirrm share/moregroupware/docs/docbook/de/modules
+@dirrm share/moregroupware/docs/docbook/de/chapters
+@dirrm share/moregroupware/docs/docbook/de/appendices
+@dirrm share/moregroupware/docs/docbook/de
+@dirrm share/moregroupware/docs/docbook
+@dirrm share/moregroupware/docs
+@dirrm share/moregroupware
