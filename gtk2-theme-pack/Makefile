@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/08/02 19:53:29 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/02 19:55:00 minskim Exp $
 #
 
 DISTNAME=      	gtk2-theme-pack
 PKGNAME=       	gtk2-theme-pack-0.1
-WRKSRC=		${WRKDIR}
 CATEGORIES=    	x11
 MASTER_SITES=	http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/themes/gtk2/
 DISTFILES=	GKT2-Quantumcurve.tar.gz \
@@ -124,6 +123,7 @@ DEPENDS+=	gtk2-engines-magichicken>=1.0.2:../../wip/gtk2-engines-magichicken
 DEPENDS+=	gtk2-engines-mist>=0.10:../../wip/gtk2-engines-mist
 DEPENDS+=	gtk2-engines-smooth>=0.5.6:../../wip/gtk2-engines-smooth
 
+WRKSRC=		${WRKDIR}
 NO_BUILD=      	# defined
 
 # clean up a bit. remove .xvpics (GIMP and xv thumbnail directories) and
