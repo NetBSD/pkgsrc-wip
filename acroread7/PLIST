@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/30 14:30:01 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/31 13:24:46 mwdavies Exp $
 Acrobat7/Browser/Browser_Plugin_HowTo.txt
 Acrobat7/Browser/install_browser_plugin
 Acrobat7/Browser/${PLATFORM}/nppdf.so
@@ -172,7 +172,7 @@ Acrobat7/Reader/${PLATFORM}/plug_ins/EScript.api
 Acrobat7/Reader/${PLATFORM}/plug_ins/LegalPDF.api
 Acrobat7/Reader/${PLATFORM}/plug_ins/MakeAccessible.api
 Acrobat7/Reader/${PLATFORM}/plug_ins/PDDom.api
-Acrobat7/Reader/${PLATFORM}/plug_ins/PPKLite.api
+@comment Acrobat7/Reader/${PLATFORM}/plug_ins/PPKLite.api
 Acrobat7/Reader/${PLATFORM}/plug_ins/SOAP.api
 Acrobat7/Reader/${PLATFORM}/plug_ins/SaveAsRTF.api
 Acrobat7/Reader/${PLATFORM}/plug_ins/SearchFind.api

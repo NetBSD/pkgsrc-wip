@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/30 14:29:59 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/31 13:24:45 mwdavies Exp $
 
 DISTNAME=	acroread7	# Overridden below
 PKGNAME=	acroread7-7.0
@@ -61,6 +61,7 @@ post-install:
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${PREFIX}/Acrobat7/Reader/Legal/ENU/License.html"
 	${LN} -sf ${PREFIX}/bin/acroread7 ${PREFIX}/bin/acroread
+	${RM} ${PREFIX}/Acrobat7/Reader/${PLATFORM}/plug_ins/PPKLite.api
 
 # do not include the linux stuff if we are, for example, on a Solaris box
 . if (${MACHINE_ARCH} == "i386")
