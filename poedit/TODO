@@ -1,0 +1,18 @@
+$Id: TODO,v 1.4 2003/04/29 14:45:44 lsed Exp $
+
+missing features:
+
+- make db3 support optional (POEDIT_USE_DB3, default YES)
+- package could use db4 as well, so it might be good to allow it's use instead
+  of db3 (POEDIT_USE_DB4, default NO)
+
+remaining issues:
+
+- idle running poedit eats ~10%(!) cpu on my machine
+- poedit can't start on -current at all for me at this moment:
+
+  Error detected, file "/usr/src/lib/libpthread/pthread_mutex.c", line 338,
+  function "pthread_mutex_unlock": Unlocking mutex owned by another thread.
+
+  /usr/src/lib/libpthread/pthread_mutex.c:
+     $NetBSD: TODO,v 1.4 2003/04/29 14:45:44 lsed Exp $
