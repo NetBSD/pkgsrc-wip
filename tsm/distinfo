@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1 2003/06/19 20:26:48 sfberry Exp $
+$NetBSD: distinfo,v 1.2 2004/04/06 15:15:52 hfath Exp $
 
-SHA1 (TIVsm-BA.i386.rpm) = 8f0d38e5ccb2bf7adc7063283a873fada66ba5e3
-Size (TIVsm-BA.i386.rpm) = 7357963 bytes
+SHA1 (TIVsm-BA.i386.rpm) = 2f083dee16ac87e9683e8caf63fd95548ea0e26f
+Size (TIVsm-BA.i386.rpm) = 14515561 bytes
+SHA1 (TIVsm-API.i386.rpm) = 079846fa44894b6db96944f9beb4a7dbf009d08b
+Size (TIVsm-API.i386.rpm) = 1957315 bytes

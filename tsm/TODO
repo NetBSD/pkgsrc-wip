@@ -1,3 +1,19 @@
-Get some testing.
-Figure out if there's a way to extract Solaris pkg-type file
-Split off tsm-x11
+
+## Urgent
+
+- Get some testing.
+- Copy dsm.{sys,opt}.smp to share/examples/tivoli.
+- tsm aborts with weird error if the DSM_CONFIG file is not found.
+- tsm wants /etc/mtab as a link to native /etc/fstab. Document that.
+- Populate etc/tivoli (dsm.{sys,opt}, and don't forget the 
+  en_US -> /emul/linux/opt/tivoli/tsm/client/ba/bin/en_US/ symlink)
+- Notify the admin that the environment variables DSM_DIR, DSM_CONFIG, DSM_LOG 
+  have to be set properly. DSM_LOG may end up in the emul shadow hierarchy.
+- Notify the admin that she needs a construct like 'ln -s / /.mymachine' 
+  to break out of the emul shadow hierarchy.
+
+
+## Less urgent
+
+- Add other architectures (linuxppc, solaris, ...)
+- Find a better way of adding library paths to the linux /etc/ld.so.conf

@@ -1,36 +1,67 @@
-# $NetBSD: Makefile,v 1.1 2003/06/19 20:26:48 sfberry Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/06 15:15:52 hfath Exp $
 
-DISTNAME=	TIVsm-BA.i386
-PKGNAME=	tsm-5.16
+DISTNAME=	tsm-5.2.2
 CATEGORIES=     sysutils
-MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v5r1/Linux/Linux86/v516/
-EXTRACT_SUFX=	.rpm
+MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v5r2/Linux/Linux86/v522/
+DISTFILES=	${RPMFILES}
 
 MAINTAINER=	strawberry@toth.org.uk
 HOMEPAGE=	http://www-3.ibm.com/software/tivoli/products/storage-mgr/
 COMMENT=        IBM Tivoli Storage Manager Client
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} != "Linux") && (${MACHINE_ARCH} == "i386")
-DEPENDS+=	suse_compat>=6.4:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=	suse_x11>6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
-.endif
-
-BUILD_DEPENDS+= rpm2pkg>=1.3:../../pkgtools/rpm2pkg
-
-ONLY_FOR_PLATFORM= *-*-i386
-RPM2PKG=    	${PREFIX}/sbin/rpm2pkg
-LDD?=		${TRUE}
-
 EXTRACT_ONLY=	# empty
 NO_BUILD=	YES
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
-RPM_FILES=	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+RPMFILES=	TIVsm-BA.i386.rpm TIVsm-API.i386.rpm
 
-# dsm tools will abort if the config file is not found
+.include "../../emulators/suse_linux/arch.mk"
+.include "../../mk/bsd.prefs.mk"
+
+MANCOMPRESSED?=		yes
+
+EMULSUBDIR=		emul/linux
+EMULDIR=		${PREFIX}/${EMULSUBDIR}
+
+ONLY_FOR_PLATFORM= 	*-*-i386
+.if (${OPSYS} != "Linux") && (${MACHINE_ARCH} == "i386")
+DEPENDS+=		suse_compat>=6.4:../../emulators/suse_compat
+DEPENDS+=		suse_x11>6.4:../../emulators/suse_x11
+.endif
+
+RPM2PKG=		${PREFIX}/sbin/rpm2pkg
+BUILD_DEPENDS+=		rpm2pkg>=1.3:../../pkgtools/rpm2pkg
+
+BUILD_DEFS+=		RPMFILES
+.if defined(RPMIGNOREPATH)
+BUILD_DEFS+=		RPMIGNOREPATH
+.endif
+
+# The SuSE Linux packages have circular dependencies.
+LDD?=			${TRUE}
+
+RPM2PKGARGS=		-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
+.for TEMP in ${RPMIGNOREPATH}
+RPM2PKGARGS+=		-i ${TEMP}
+.endfor
+.for TEMP in ${RPMFILES}
+RPM2PKGARGS+=		${DISTDIR}/${TEMP}
+.endfor
+
 do-install:
-	${RPM2PKG} -d ${PREFIX} -f ${PLIST_SRC} -p emul/linux ${RPM_FILES}
-	${TOUCH} ${PREFIX}/emul/linux/opt/tivoli/tsm/client/ba/bin/dsm.sys
+	${RPM2PKG} ${RPM2PKGARGS}
+	@if ${GREP} -q 'lib.*\.so' ${PLIST_SRC}; then \
+	  ${ECHO_MSG} "===> [Automatic Linux shared object handling]"; \
+	  ${ECHO} "/opt/tivoli/tsm/client/ba/bin" >> ${EMULDIR}/etc/ld.so.conf; \
+	  ${ECHO} "/opt/tivoli/tsm/client/api/bin" >> ${EMULDIR}/etc/ld.so.conf; \
+	  ${EMULDIR}/sbin/ldconfig -r ${EMULDIR}; \
+	  ${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" >>${PLIST_SRC}; \
+	  ${ECHO} "@unexec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR} 2>/dev/null" >>${PLIST_SRC}; \
+	fi
+
+show-shlib-type:
+	@${ECHO} linux-${MACHINE_ARCH}
+
+post-install:
+	${RM} ${EMULDIR}/etc/mtab && ${LN} -s /etc/fstab ${EMULDIR}/etc/mtab
 
 .include "../../mk/bsd.pkg.mk"
