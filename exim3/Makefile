@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/01 10:03:29 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.10 2003/12/01 10:34:41 grantbeattie Exp $
 
 DISTNAME=	exim-3.36
 CATEGORIES=	mail net
@@ -10,10 +10,12 @@ MAINTAINER=	ad@NetBSD.org
 HOMEPAGE=	http://www.exim.org/
 COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
+USE_BUILDLINK2=	YES
 USE_PERL5=	YES
 USE_PKGINSTALL=	YES
 
 BUILD_DEFS+=		EXIM_USER EXIM_GROUP
+BUILD_DEFS+=		EXIM_DB.mysql EXIM_DB.pgsql
 
 PKG_SYSCONFSUBDIR?=	exim
 EGDIR=			${PREFIX}/share/examples/exim
@@ -35,6 +37,21 @@ _GZIP_CMD!=		${ECHO} ${GZIP_CMD} | ${SED} -e 's/ .*//'
 FILES_SUBST+=		GZIP_CMD="${_GZIP_CMD}"
 FILES_SUBST+=		GZCAT="${GZCAT}"
 
+_LOOKUP_LIBS+=		${LDFLAGS}
+
+.if defined(EXIM_DB.mysql) && ${EXIM_DB.mysql} == "YES"
+_EXIM_DB+=		mysql
+_LOOKUP_INCLUDE+=	-I${BUILDLINK_PREFIX.mysql-client}/include
+_LOOKUP_LIBS+=		${BUILDLINK_LDFLAGS.mysql-client} -lmysqlclient
+.  include "../../databases/mysql-client/buildlink2.mk"
+.endif
+.if defined(EXIM_DB.pgsql) && ${EXIM_DB.pgsql} == "YES"
+_EXIM_DB+=		pgsql
+_LOOKUP_INCLUDE+=	-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
+_LOOKUP_LIBS+=		-lpq
+.  include "../../databases/postgresql-lib/buildlink2.mk"
+.endif
+
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
 	${CP} ${WRKSRC}/src/EDITME ${WRKSRC}/Local/Makefile.netbsd
@@ -42,6 +59,16 @@ pre-patch:
 pre-configure:
 	@${SED} ${FILES_SUBST_SED} ${WRKSRC}/Local/Makefile.netbsd \
 		> ${WRKSRC}/Local/Makefile
+.if defined(_EXIM_DB)
+	@${ECHO} LOOKUP_INCLUDE=${_LOOKUP_INCLUDE} >> ${WRKSRC}/Local/Makefile
+	@${ECHO} LOOKUP_LIBS=${_LOOKUP_LIBS} >> ${WRKSRC}/Local/Makefile
+.  if !empty(_EXIM_DB:Mmysql)
+	@${ECHO} LOOKUP_MYSQL=yes >> ${WRKSRC}/Local/Makefile
+.  endif
+.  if !empty(_EXIM_DB:Mpgsql)
+	@${ECHO} LOOKUP_PGSQL=yes >> ${WRKSRC}/Local/Makefile
+.  endif
+.endif
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
