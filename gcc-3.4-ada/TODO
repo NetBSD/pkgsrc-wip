@@ -1,0 +1,6 @@
+acats is the Ada compiler validation suite:
+
+                === acats Summary ===
+# of expected passes            2314
+# of unexpected failures        8
+*** FAILURES: c34005a c34005d c34005g c34005j cc3601a cxb3010 cxb3014 cxb3015
