@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1231 2004/04/22 16:48:23 mpasternak Exp $
-# $NetBSD: Makefile,v 1.1231 2004/04/22 16:48:23 mpasternak Exp $
+# $Id: Makefile,v 1.1232 2004/04/22 23:46:28 mpasternak Exp $
+# $NetBSD: Makefile,v 1.1232 2004/04/22 23:46:28 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -577,6 +577,7 @@ SUBDIR+=	py-mmpython
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-oak
 SUBDIR+=	py-pcapy
+SUBDIR+=	py-rlcompleter2
 SUBDIR+=	py-scapy
 SUBDIR+=	py-scipy_distutils
 SUBDIR+=	py-spambayes
