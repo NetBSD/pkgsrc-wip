@@ -1,0 +1,28 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/04/04 09:16:12 bmeurer Exp $
+
+DISTNAME=		startup-notification-0.5
+CATEGORIES=		x11
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/startup-notification/0.5/}
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		benedikt.meurer@unix-ag.uni-siegen.de
+HOMEPAGE=		http://www.gnome.org/
+COMMENT=		X11 application startup notification library
+
+GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		yes
+USE_X11=		yes
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/libstartup-notification-1.0.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/startup-notification/
+	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS COPYING ChangeLog NEWS \
+		doc/startup-notification.txt \
+		${PREFIX}/share/doc/startup-notification/
+
+.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../mk/bsd.pkg.mk"
