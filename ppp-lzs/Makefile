@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/31 22:28:15 plunky Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/02 20:32:22 plunky Exp $
 
 DISTNAME=	ppp-lzs-1.0
 CATEGORIES=	net
@@ -30,7 +30,7 @@ do-install:
 		${WRKDIR}/pppd/pppd ${PREFIX}/sbin/pppd
 	${INSTALL_MAN} ${WRKDIR}/pppd/pppd.cat8 ${PREFIX}/man/cat8/pppd.0
 	${INSTALL_MAN} ${WRKDIR}/pppd/pppd.8 ${PREFIX}/man/man8/pppd.8
-	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m 444 \
+	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m 444 \
 		${WRKDIR}/lkm/lzs.o ${PREFIX}/lkm/lzs.o
 
 .include "../../mk/bsd.pkg.mk"
