@@ -1,0 +1,12 @@
+===> Installing for tcl-8.4.6nb5
+===> tcl-8.3.4 is already installed - perhaps an older version?
+*** If so, you may use either of:
+***  - "pkg_delete tcl-8.3.4" and "/usr/bin/make reinstall" to upgrade properly
+***  - "/usr/bin/make update" to rebuild the package and all of its dependencies
+***  - "/usr/bin/make replace" to replace only the package without re-linking
+***    dependencies, risking various problems.
+*** Error code 1
+
+Stop.
+make: stopped in /home/dprice/cvs/pkgsrc/lang/tcl
+*** Error code 1

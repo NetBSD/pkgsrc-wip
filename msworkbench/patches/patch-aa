@@ -1,0 +1,75 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/17 20:56:59 daprice Exp $
+
+--- install.sh.orig	2001-01-04 08:58:48.000000000 -0700
++++ install.sh
+@@ -1,26 +1,32 @@
+ #!/bin/sh
+ 
+ defdir=/usr/local/bin
+-
++dir=$1
++wish_path=$2
+ pgms="msappwiz.tcl msedit.tcl msexplorer.tcl msshapex.tcl"
+ 
+ echo "MapServer Workbench Installation"
+ echo ""
+ echo "Looking for a good wish executable..."
+ 
+-PATH=/usr/bin:/usr/local/bin:$PATH
++PATH=$wish_path:/usr/bin:/usr/local/bin:$PATH
+ IFSSAVE=$IFS
+ IFS=:
+ eval set -- $PATH
+ IFS=$IFSSAVE
+ 
+-wish=""
++wish="wish"
+ for p in $* 
+ do
+     for f in $p/wish*
+     do
+         if test ! "$wish" ; then
+ 	    case $f in
++		*wish)
++		    if test -z "$wish" ; then
++			wish=$f
++		    fi
++		    ;;
+ 		*wish8.3)
+ 		    if test -z "$wish" ; then
+ 			wish=$f
+@@ -53,8 +59,8 @@ else
+     echo "Please install Tcl/Tk 8.3.2 or higher."
+     echo ""
+     echo "Enter the name for your wish executable:"
+-    read wish
+-    if test -z "$wish" ; then
++    #read wish
++    if test -z "$wish_path" ; then
+         echo "MapServer Workbench not installed."
+ 	exit
+     fi
+@@ -62,7 +68,8 @@ fi
+ 
+ echo ""
+ echo "Which directory should the programs be installed? [$defdir]"
+-read dir
++echo "$dir"
++#read dir
+ echo
+ if test -z "$dir" ; then
+     dir=$defdir
+@@ -78,8 +85,12 @@ if test -d $dir ; then
+ 	if test -f $pgm.in ; then
+ 	    echo "installing $pgm"
+ 	    sed -e "s%@WISH_EXE@%$wish%g" <$pgm.in >$pgm
++	    sed '1i\
++		#! /home/mchittur/pkg\/bin\/wish\
++		' $pgm > $pgm.temp
++	    mv $pgm.temp $pgm
+ 	    chmod 755 $pgm
+-	    ln -sf `pwd`/$pgm   $dir/$pgm
++	    cp `pwd`/$pgm   $dir/$pgm
+ 	fi
+     done
+     echo ""

@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/17 20:56:59 daprice Exp $
+bin/msworkbench-0.3/msappwiz.tcl
+bin/msworkbench-0.3/msedit.tcl
+bin/msworkbench-0.3/msexplorer.tcl
+bin/msworkbench-0.3/msshapex.tcl
+share/examples/msworkbench-0.3/demo_012.map
+share/examples/msworkbench-0.3/empty.map
+share/examples/msworkbench-0.3/newsym.sym
+share/examples/msworkbench-0.3/testparser.tcl
+@dirrm bin/msworkbench-0.3/
+@dirrm share/examples/msworkbench-0.3/
