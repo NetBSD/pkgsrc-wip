@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1.1.1 2005/02/25 20:51:42 daprice Exp $
+
+--- treetool/size.c.orig	1994-05-02 14:35:24.000000000 -0600
++++ treetool/size.c
+@@ -419,7 +419,8 @@ treenode n;
+ 			a=0.0;
+ 		else
+ 			a=atan2(dy,dx);
+-		sincos(a,&s,&c); /* s=sin, c=cos */
++		s=sin(a);
++		c=cos(a);
+ 
+ 		/* find vector from center of text to an edge, in the same direction
+ 			as the branch vector */

@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/25 20:51:42 daprice Exp $
+
+--- Makefile.orig	1995-06-01 12:30:36.000000000 -0600
++++ Makefile
+@@ -8,16 +8,16 @@ OBJDIR=${PWD}/obj
+ BINDIR=${PWD}/bin
+ INCDIR=${PWD}/include
+ # Change this to reflect path of openwin/include in Solaris
+-XVDIR=/usr/openwin/include
+-INC=-I${PWD}/include -I${XVDIR}
++XVDIR=${PREFIX}/include
++INC=-I${PWD}/include -I${XVDIR} -I/usr/X11R6/include
+ THISDIR=${PWD}
+ 
+ all:
+-	(cd tree;make "CC=${CC}" "INC=${INC}" "INCDIR=${INCDIR}" \
++	(cd tree;${MAKE} "CC=${CC}" "INC=${INC}" "INCDIR=${INCDIR}" \
+                  "OBJDIR=${OBJDIR}" "BINDIR=${BINDIR}")
+-	(cd graphics;make "CC=${CC}" "INC=${INC}" "INCDIR=${INCDIR}" \
++	(cd graphics;${MAKE} "CC=${CC}" "INC=${INC}" "INCDIR=${INCDIR}" \
+                  "OBJDIR=${OBJDIR}" "BINDIR=${BINDIR}")
+-	(cd treetool;make "CC=${CC}" "INC=${INC}" "INCDIR=${INCDIR}" \
++	(cd treetool;${MAKE} "CC=${CC}" "INC=${INC}" "INCDIR=${INCDIR}" \
+                  "OBJDIR=${OBJDIR}" "BINDIR=${BINDIR}")
+ 	mv treetool/t treetool_release/treetool
+ 	cp graphics/font_map treetool_release
+@@ -25,9 +25,9 @@ all:
+ 	cp treetool/README treetool_release
+ 
+ clean:
+-	(cd graphics;make clean)
+-	(cd tree;make clean)
+-	(cd treetool;make clean)
++	(cd graphics;${MAKE} clean)
++	(cd tree;${MAKE} clean)
++	(cd treetool;${MAKE} clean)
+ 	rm -f treetool_release/*
+ 	rm treetool.tar.Z
+ 

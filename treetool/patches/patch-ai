@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2005/02/25 20:51:42 daprice Exp $
+
+--- treetool/treetool.c.orig	2005-02-10 14:20:27.000000000 -0700
++++ treetool/treetool.c
+@@ -225,7 +225,7 @@ char **envp;
+ 
+ 	globals->sel_type=NoSel;
+ 	globals->selection=NULL;
+-	globals->clip_type=NULL;
++	globals->clip_type=(selection_type)NULL;
+ 	globals->clipboard=NULL;
+ 	globals->filename=(char *)strdup("Untitled");
+ 	globals->filenames=newlist();

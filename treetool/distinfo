@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/25 20:51:42 daprice Exp $
+
+SHA1 (treetool2.0.2.tar.gz) = 2403c493ff8fc30693847da7ee2610cae242d84f
+Size (treetool2.0.2.tar.gz) = 940657 bytes
+SHA1 (patch-aa) = 60c3825ba4f648261ae6b67e10b3b9d333668e75
+SHA1 (patch-ab) = 82749045a790037df340876afe35c3872e3c2c94
+SHA1 (patch-ac) = 4c0a3c66f0d0fcdffcdb36c52a656d9d80577668
+SHA1 (patch-ad) = c86616abaf230b941f99f1d70b73912db11ccf3a
+SHA1 (patch-ae) = f5462eb59fb8a0adf371f4c14d007b8d27df033a
+SHA1 (patch-af) = 3a5e5fcd89ea1592d675023d792631132403f439
+SHA1 (patch-ag) = f8cc8d9a03be780457ffa33e0a42d5a1833e4a7a
+SHA1 (patch-ah) = 1b75c333f7560e97ec0bfec5251bdefb16595a54
+SHA1 (patch-ai) = c6ac544b7baeb729483a2e4c5e0285e2c945c2dd

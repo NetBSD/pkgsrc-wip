@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2005/02/25 20:51:42 daprice Exp $
+
+--- treetool/saveframe.c.orig	1994-05-02 14:35:24.000000000 -0600
++++ treetool/saveframe.c
+@@ -40,7 +40,7 @@ char *s;
+ {
+     struct stat buf;
+ 
+-    if(stat(s, buf)==0)
++    if(stat(s, &buf)==0)
+ 		return(1);
+     else
+ 		return(0);

@@ -1,0 +1,53 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/02/25 20:51:42 daprice Exp $
+
+--- tree/findnode.c.orig	1994-05-02 13:36:26.000000000 -0600
++++ tree/findnode.c
+@@ -12,7 +12,9 @@
+ #define UNGETC(c) (--sp)
+ #define RETURN(c) return(c)
+ #define ERROR(c) {regerr(c);return(ep);}
+-#include <regexp.h>
++
++#include <sys/types.h>
++#include <regex.h>
+ 
+ int reg_error;
+ char expbuf[1000];
+@@ -31,16 +33,14 @@ treenode *n;	/* node found, passes in la
+ {
+ 	list old;
+ 	treenode c, start, found;
++	regex_t regex;
+ 
+ 	if(str==NULL)
+ 		return(3);
+ 	if(nottree(t))
+ 		return(3);
+ 	
+-	compile(str, expbuf, &expbuf[1000+1], '\0');
+-	circf=1;
+-
+-	if(reg_error!=0)
++	if (regcomp(&regex, str, REG_EXTENDED | REG_NOSUB) != 0)
+ 		return(2);
+ 	
+ 	old=listnode(t->nodes);
+@@ -60,15 +60,17 @@ treenode *n;	/* node found, passes in la
+ 			startlist(t->nodes);
+ 		else
+ 			if(c->name!=NULL)
+-				if(step(c->name, expbuf))
++				if(regexec(&regex, c->name, 0, NULL, 0) == 0)
+ 				{
+ 					found=c;
+ 					break;
+ 				}
+ 	}
++	regfree(&regex);
+ 	*n=found;
+ 	if(found==NULL)
+ 		return(1);
+ 	else
+ 		return(0);
+ }
++

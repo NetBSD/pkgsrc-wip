@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 20:51:42 daprice Exp $
+bin/treetool
+share/doc/treetool/README
+share/doc/treetool/user.manual
+share/misc/treetool/font_map
+@dirrm share/misc/treetool
+@dirrm share/doc/treetool

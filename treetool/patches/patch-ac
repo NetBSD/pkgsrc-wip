@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/02/25 20:51:42 daprice Exp $
+
+--- graphics/font.c.orig	1994-05-02 14:34:56.000000000 -0600
++++ graphics/font.c
+@@ -373,7 +373,7 @@ list *names, *styles, *sizes;
+ 			}
+ 		}
+ 		if(font_map==NULL)
+-			font_map=fopen("/usr/lib/font_map", "r");
++			font_map=fopen("/usr/pkg/share/misc/treetool/font_map", "r");
+ 	}
+     if(font_map==NULL)
+     {
