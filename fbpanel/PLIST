@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/22 02:38:01 jeremy-c-reed Exp $
+bin/fbpanel
+man/man1/fbpanel.1.gz
+share/fbpanel/default
+share/fbpanel/images/Desktop2.png
+share/fbpanel/images/Editor.png
+share/fbpanel/images/Emacs.png
+share/fbpanel/images/GNOME-Terminal.png
+share/fbpanel/images/Menu.png
+share/fbpanel/images/Networking.png
+share/fbpanel/images/bottom-left.xpm
+share/fbpanel/images/bottom-right.xpm
+share/fbpanel/images/top-left.xpm
+share/fbpanel/images/top-right.xpm
+share/fbpanel/pager
+@dirrm share/fbpanel/images
+@dirrm share/fbpanel

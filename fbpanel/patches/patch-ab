@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/05/22 02:38:01 jeremy-c-reed Exp $
+
+--- config/default.cfg.orig	Thu Apr 15 00:25:34 2004
++++ config/default.cfg
+@@ -116,7 +116,7 @@ Plugin {
+         image = PREFIX/share/fbpanel/images/Menu.png
+         
+         menu {
+-            name = Netorking
++            name = Networking
+             image = PREFIX/share/fbpanel/images/Networking.png
+             item {
+ #                image = 

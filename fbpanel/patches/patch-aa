@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/05/22 02:38:01 jeremy-c-reed Exp $
+
+--- configure.orig	Mon Mar 29 00:52:25 2004
++++ configure
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ #echo "fbpanel configuration script"
+ 

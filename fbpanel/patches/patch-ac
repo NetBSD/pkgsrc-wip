@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/05/22 02:38:01 jeremy-c-reed Exp $
+
+--- man/Makefile.orig	2004-04-16 12:34:50.000000000 -0700
++++ man/Makefile
+@@ -20,8 +20,8 @@ clean:
+ 
+ 
+ install: all
+-	install -d  $(PREFIX)/share/man/man1
+-	install -m 644 $(TARGET) $(PREFIX)/share/man/man1
++	install -d  $(PREFIX)/${PKGMANDIR}/man1
++	install -m 644 $(TARGET) $(PREFIX)/${PKGMANDIR}/man1
+ 
+ uninstall:
+ 	rm -f $(PREFIX)/share/man/man1/$(TARGET)

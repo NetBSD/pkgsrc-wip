@@ -1,0 +1,6 @@
+fbpanel is lightweight GTK2-based, customizable desktop panel which
+provides graphical information and feedback about desktop activity
+and allows interaction with a NETWM-compliant window manager.
+
+It includes a taskbar, pager, buttons for launching applications,
+clock, system tray and more.

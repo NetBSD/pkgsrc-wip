@@ -1,0 +1,11 @@
+does it matter to installed compressed manpage?
+
+builds under NetBSD
+but under Linux it fails:
+taskbar.o(.text+0x8cb): In function `display_tk':
+: undefined reference to `_gtk_button_set_depressed'
+taskbar.o(.text+0x6fb): In function `callback_leave':
+: undefined reference to `_gtk_button_set_depressed'
+taskbar.o(.text+0x72f): In function `callback_enter':
+: undefined reference to `_gtk_button_set_depressed'
+collect2: ld returned 1 exit status

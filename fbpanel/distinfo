@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/05/22 02:38:01 jeremy-c-reed Exp $
+
+SHA1 (fbpanel-3.7.tgz) = fba173e40cd04b56fe958d3d0b815789a8e37772
+Size (fbpanel-3.7.tgz) = 69581 bytes
+SHA1 (patch-aa) = e0790b87a64abdba806db024f40300058c94db76
+SHA1 (patch-ab) = c0f22cb0eeb90873c7839c6fcaee68bfb2e3fad3
+SHA1 (patch-ac) = 0580ab292b1dd0909f53f43f7c9d87dc4246e91c
