@@ -1,11 +1,2 @@
-Can't figure out how to build with NLS
-enabled. I get undefined reference to
-libintl_fprintf and libintl_vfprintf.
-
-Works when tested by itself.
-
-When tested with Kmail:
-  OpenPGP/MIME works
-  SMIME signatures work
-  SMIME encryption fails
-    (at least with my DoD PKI certs)
+Works, but, NLS depends on uncommited update
+to gettext-libs.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/15 11:54:28 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/15 22:23:27 johnrshannon Exp $
 #
 
 DISTNAME=		dirmngr-0.5.6
@@ -27,7 +27,7 @@ pre-configure:
 #			cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${SH} autogen.sh
 			cd ${WRKSRC} && ${AUTOCONF}
 
-.include "../../wip/libgpg-error/buildlink3.mk"
+.include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libksba/buildlink3.mk"
 .include "../../wip/libassuan/buildlink3.mk"
