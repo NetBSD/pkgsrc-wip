@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:50 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/30 18:24:19 minskim Exp $
 #
 
 DISTNAME=	xml2doc-20030424
@@ -8,7 +8,7 @@ MASTER_SITES=	http://xml2doc.sourceforge.net/src/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pancake@phreaker.net
-HOMEPAGE=	http://xml2doc.sourceforge.net/src/
+HOMEPAGE=	http://xml2doc.sourceforge.net/
 COMMENT=	Xml to document formats converter
 
 USE_BUILDLINK2=		yes
