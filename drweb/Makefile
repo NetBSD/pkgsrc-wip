@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/16 16:57:59 bubuchka Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/13 18:19:44 bubuchka Exp $
 
 .if defined(OPSYS) && ${OPSYS} == "Linux"
 DISTNAME=	drweb-4.29.5-glibc.2.3
@@ -25,18 +25,24 @@ USE_PERL5=	YES
 
 NO_BUILD=	YES
 
+BUILD_DEFS=	DRW_DIR	DRW_BASESDIR DRW_INFECTDIR			\
+		DRW_LOGDIR DRW_RUNDIR					\
+		DRW_PIDFILE DRW_SOCKFILE
+
 PKG_GROUPS=	${DRW_GROUP}
 PKG_USERS=	${DRW_USER}:${PKG_GROUPS}::DrWeb\\ AntiVirus
 
-OWN_DIRS_PERMS+= ${DRW_DIR} ${DRW_USER} ${DRW_GROUP} 0755
-OWN_DIRS_PERMS+= ${DRW_BASESDIR} ${DRW_USER} ${DRW_GROUP} 0755
-OWN_DIRS_PERMS+= ${DRW_INFECTDIR} ${DRW_USER} ${DRW_GROUP} 0700
+OWN_DIRS_PERMS=	${DRW_DIR} ${DRW_USER} ${DRW_GROUP} 0755		\
+		${DRW_BASESDIR} ${DRW_USER} ${DRW_GROUP} 0755		\
+		${DRW_INFECTDIR} ${DRW_USER} ${DRW_GROUP} 0700		\
+		${DRW_LOGDIR} ${DRW_USER} ${DRW_GROUP} 0755		\
+		${DRW_RUNDIR} ${DRW_USER} ${DRW_GROUP} 0755
 
 CONF_FILES=	${EGDIR}/drweb32.ini ${PKG_SYSCONFDIR}/drweb32.ini
-SUPPORT_FILES=	${EGDIR}/drweb.key ${PKG_SYSCONFDIR}/drweb.key
-SUPPORT_FILES+=	${EGDIR}/drwebd.key ${PKG_SYSCONFDIR}/drwebd.key
-SUPPORT_FILES+=	${EGDIR}/drweb32.dll ${DRW_BASESDIR}/drweb32.dll
-SUPPORT_FILES+=	${EGDIR}/drwebase.vdb ${DRW_BASESDIR}/drwebase.vdb
+SUPPORT_FILES=	${EGDIR}/drweb.key ${PKG_SYSCONFDIR}/drweb.key		\
+		${EGDIR}/drwebd.key ${PKG_SYSCONFDIR}/drwebd.key	\
+		${EGDIR}/drweb32.dll ${DRW_BASESDIR}/drweb32.dll	\
+		${EGDIR}/drwebase.vdb ${DRW_BASESDIR}/drwebase.vdb
 
 RCD_SCRIPTS=		drwebd
 RCD_SCRIPT_SRC.drwebd=	${FILESDIR}/drwebd-rcd.src
