@@ -1,9 +1,3 @@
-$NetBSD: TODO,v 1.2 2003/07/09 15:15:44 adrian_p Exp $
+$NetBSD: TODO,v 1.3 2003/12/05 12:00:59 adrian_p Exp $
 
-Done. Please test and let me know if there are any issues.
-
-Tested on NetBSD 1.6 i386.
-
-Ta,
-
-Adrian.
+Ready for pkgsrc.
