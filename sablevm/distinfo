@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/23 23:43:56 poppnk Exp $
-
-SHA1 (sablevm-1.1.0.tar.gz) = 413c7a4b56faa9f7f4750110eee948a193c1a986
-Size (sablevm-1.1.0.tar.gz) = 655848 bytes
-SHA1 (patch-aa) = 5d647a8f8908f3d025195e9e72465d3d5223f05a

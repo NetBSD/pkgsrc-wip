@@ -1,9 +1,0 @@
-A lot of work :(((
-
-I don't know why using gmake it builds, and using pkgsrc it does not.
-
-Will be nice to bl3ize the libffi that doesn't builds on freebsd.
-
-It needs a sablevm-lib, that it's in the same sources. build with it?
-
-etc...
