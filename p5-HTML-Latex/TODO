@@ -1,16 +1,3 @@
-Hmmm... sourceforge version may be out-of-date
-I see at  http://fresh.t-systems-sfr.com/unix/src/www/
-a new version is available
- html2latex-1.1.tar.gz (25 Sep 2000, 48439 Bytes)
-
-Also, I read
-in Latex.pm, line 793
-change the line from                              
-     return "\\$command\{" . texify($html_element) . "\}\n";
-to read:
-     return "\\$command\{" . texify($html_element) . "\}";
-
-
 DESCR says "downloading of URLs" but I didn't DEPEND on 
  LWP::Simple (called libwwwperl too)
  URI (libwww or Bundle::LWP)
