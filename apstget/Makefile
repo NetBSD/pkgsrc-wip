@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2004/10/20 22:52:19 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/21 11:31:06 poppnk Exp $
 
-DISTNAME=	apstget-20041021
+DISTNAME=	apstget-20041022
 CATEGORIES=	pkgtools wip
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,6 +16,8 @@ NO_BUILDLINK=	yes
 NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
 NO_BUILD=	yes
+
+CONF_FILES=	${PKG_SYSCONFDIR}/apstget.conf
 
 do-extract:
 	@${CP} -Rp ${FILESDIR} ${WRKSRC}

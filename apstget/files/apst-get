@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# APST-GET : Another PkgSrc Tool to manage packages.
+# APST-GET : Yet Another PkgSrc Tool to manage packages.
 #
 # AUTHOR: pancake < pancake@phreaker.net >
 # DATE: 2004/10/20
@@ -15,8 +15,11 @@ fi
 # apstget.conf looks like:
 #
 # MAKE_TARGET="clean" # package
-# INTERACTIVE="1"
-# QUITE="1"
+# INTERACTIVE="1"     # wait user for confirmations
+# QUITE="1"           # Be silent in builds
+# IGNORE_ERRORS="0"   # Don't stop on failed build
+# UPDATE_METHOD="cvs" # cvsync|cvs|sup|cvsup
+# UPDATE_ARGS=""      # UPDATE_METHOD flags
 
 #----->8--------------#
 PREFIX=_pfx_
@@ -31,14 +34,39 @@ fi
 if [ "${INTERACTIVE}" = "" ]; then
 	INTERACTIVE="1"
 fi
+if [ "${IGNORE_ERRORS}" = "" ]; then
+	IGNORE_ERRORS="0"
+fi
+if [ "${UPDATE_METHOD}" = "" ]; then
+	UPDATE_METHOD="cvs"
+fi
+if [ "${UPDATE_METHOD}" = "cvs" ]; then
+	if [ "${UPDATE_ARGS}" = "" ]; then
+	UPDATE_ARGS="-z 3"
+	fi
+fi
 case "${QUITE}" in
-"1") QUITE=">/dev/null" ;;
-"2") QUITE=">/dev/null 2>&1" ;;
+"1") QUITE="/dev/null";   QUITE2="/dev/stderr" ;;
+"2") QUITE="/dev/null";   QUITE2="/dev/null"   ;;
+*)   QUITE="/dev/stdout"; QUITE2="/dev/stderr" ;;
 esac
 
-press_any_key() {
+if [ ! -e "/dev/stdin" ]; then
+	echo "/dev/stdin doesn't exist. Please create the device first."
+fi
+if [ ! -e "/dev/stderr" ]; then
+	echo "/dev/stderr doesn't exist. Please create the device first."
+fi
+
+process_failed () {
+	if [ "${IGNORE_ERRORS}" = "0" ]; then
+		exit 1;
+	fi
+}
+
+press_any_key () {
 	if [ "${INTERACTIVE}" = "1" ]; then
-		echo "==> Press Control-C if you are not agree else any key."
+		echo "==> Press Ctrl-C to cancel, any other key to proceed."
 		read ME
 	fi
 }
@@ -46,15 +74,15 @@ press_any_key() {
 do_usage() {
 	echo "Usage $1 [action] [targets...]"
 	echo "actions:"
-	echo "  install      - installs/updates selected packages."
-	echo "  upgrade      - updates selected packages and dependencies."
-	echo "  dist-upgrade - updates entire system."
-	echo "  remove       - removes selected packages."
-	echo "  update       - updates pkgsrc/-wip tree."
-	echo "  relink       - tries to solve all broken libs."
-	echo "  clean        - cleans all build directories."
+	echo "  install      - install/update selected packages."
+	echo "  upgrade      - update the selected packages and solves dependencies."
+	echo "  dist-upgrade - update the entire system."
+	echo "  remove       - remove the selected packages."
+	echo "  update       - update the pkgsrc/-wip tree."
+	echo "  relink       - try to solve all broken libs."
+	echo "  clean        - clean all build directories."
 	echo ""
-	echo "variables (environ|_etc/apstget.conf):"
+	echo "variables (environ|_etc_/apstget.conf):"
 	echo "  MAKE_TARGET,INTERACTIVE,QUITE"
 }
 
@@ -68,7 +96,7 @@ do_install() {
 		PKG=`echo $PKG | awk -F / '{ print $2 }'`
 	fi
 	if [ ! -e "${PKGSRC_DIR}/${DIR}" ]; then
-	echo "==> Error! package $PKG not found!"
+	echo "==> Error! The package $PKG was not found!"
 	else
 	STAT="`echo $DIR | ${PKGCHK} -C /dev/stdin -c`"
 	if [ "${STAT}" = "" ]; then
@@ -82,7 +110,7 @@ do_install() {
 	for A in ${DEPS} ; do
 		CHK=`echo ${A} | ${PKGCHK} -C /dev/stdin -c`
 		if [ ! "`echo ${CHK}|grep missing`" = "" ]; then
-			echo " [i] Enqueueing for install ${A}"
+			echo " [i] Dequeueing for install ${A}"
 			INSTALL="${INSTALL} ${A}"
 		else
 		if [ ! "`echo ${CHK}| grep mismatch`" = "" ]; then
@@ -100,12 +128,14 @@ do_install() {
 	# replace list
 	if [ ! "${REPLACE}" = "" ]; then
 	for A in ${REPLACE}; do
-		echo "==> Upgrading ${REPLACE}..."
-		sleep 1
+		echo "==> Upgrading ${A}..."
 		cd ${PKGSRC_DIR}/${A}
-		${MAKE} replace ${UD_TARGETS} ${QUITE}
+		${MAKE} replace ${UD_TARGETS} > ${QUITE} 2>${QUITE2}
 		if [ ! "$?" = "0" ]; then
-			exit 1 # TODO allow ignore errors?
+			echo "==> Error occurred at ${DIR}."
+			process_failed
+		else
+			echo "==> Process finished."
 		fi
 	done
 	fi
@@ -115,9 +145,12 @@ do_install() {
 	for A in ${INSTALL}; do
 		echo "==> Installing ${A}"
 		cd ${PKGSRC_DIR}/${A}
-		${MAKE} install ${UD_TARGETS} ${QUITE}
+		${MAKE} install ${UD_TARGETS} > ${QUITE} 2>${QUITE2}
 		if [ ! "$?" = "0" ]; then
-			exit 1 # TODO allow ignore errors?
+			echo "==> Error occurred at ${DIR}."
+			process_failed
+		else
+			echo "==> Process finished."
 		fi
 	done
 	fi
@@ -155,15 +188,36 @@ do_remove() {
 }
 
 do_update() {
-	# TODO check cvs/cvsup first
-	echo "==> Updating pkgsrc tree..."
-	cd ${PKGSRC_DIR}
-	cvs -z 3 -q update -dP
+	PKS=""
+	WIP=""
+	for A in $1 $2 ; do
+		case $A in
+		"pkgsrc") PKS="1";;
+		"wip")    WIP="1";;
+		esac
+	done
+	if [ "${PKS}${WIP}" = "" ]; then
+		PKS="1"
+		WIP="1"
+	fi
 
-	if [ -e "${PKGSRC_DIR}/wip" ]; then
-	echo "==> Updating pkgsrc-wip tree..."
-	cd ${PKGSRC_DIR}/wip
-	cvs -z 3 -q update -dP
+	if [ "$PKS" = "1" ]; then
+		CMD="${UPDATE_METHOD} ${UPDATE_ARGS}"
+		echo "==> Updating pkgsrc tree using ${CMD}..."
+		cd ${PKGSRC_DIR}
+		if [ "${UPDATE_METHOD}" = "cvs" ]; then
+			cvs ${UPDATE_ARGS} -q update -dP
+		else
+			${UPDATE_METHOD} ${UPDATE_ARGS}
+		fi
+	fi
+
+	if [ "$WIP" = "1" ]; then
+		if [ -e "${PKGSRC_DIR}/wip" ]; then
+		echo "==> Updating pkgsrc-wip tree..."
+		cd ${PKGSRC_DIR}/wip
+		cvs -z 3 -q update -dP
+		fi
 	fi
 }
 
@@ -210,7 +264,7 @@ do_relink() {
 		COW="`echo ${B} |awk -F . '{ print $1 }'`.so"
 		TARGET="`ls -l ${PREFIX}/lib/${COW}.* 2>/dev/null | grep -e ^- `"
 		if [ "${TARGET}" = "" ]; then
-			echo " * Cannot be resolved"
+			echo " * Unable to resolved"
 		else
 			TARGET=`echo ${TARGET} | awk '{ print $9 }'`
 			echo " * Solved against ${TARGET}"
@@ -230,7 +284,7 @@ case "$1" in
 "install"|"upgrade")
 	FLAG=0
 	if [ "${2}" = "" ]; then
-		echo "You must give me at least one target"
+		echo "You must give me at least one package"
 		exit 1
 	fi
 	if [ "$1" = "upgrade" ]; then
@@ -246,7 +300,7 @@ case "$1" in
 	;;
 "remove")
 	if [ "${2}" = "" ]; then
-		echo "You must give me at least one target"
+		echo "You must give me at least one package"
 		exit 1
 	fi
 	while : ; do
@@ -261,12 +315,12 @@ case "$1" in
 	do_update
 	;;
 "dist-upgrade")
-	echo "==> Generating updated list..."
+	echo "==> Generating the updated list..."
 	LIST=`${PKGCHK} -i | grep mismatch | \
 		awk -F '([.\-]*)-[0-9]' '{print $1 }'|grep -v WARNING`
 		
 	if [ "${LIST}" = "" ]; then
-		echo "Your system is completily updated"
+		echo "Your system is completely updated"
 	else
 	echo "Upgrade list:"
 	echo ${LIST}
