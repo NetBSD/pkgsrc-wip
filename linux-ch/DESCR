@@ -1,0 +1,12 @@
+From the WWW page:
+
+Ch is the most complete C interpreter in existence. Ch is embeddable in
+other application programs and hardware. 
+
+Ch supports ISO C standard (C90), major new features in C99, classes in
+C++, POSIX, X/Motif, Windows, OpenGL, ODBC, GTK+, C LAPACK, CGI, 2D/3D
+graphical plotting, advanced numerical computing, and shell programming.
+Moreover, Ch has many salient features from other languages and software
+packages.
+
+This is standard edition of Ch. It is free for commercial and personal use.

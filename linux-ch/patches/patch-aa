@@ -1,0 +1,76 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/11/08 02:05:34 mpasternak Exp $
+
+--- install.sh.orig	Sun Aug 24 19:19:00 2003
++++ install.sh	Thu Nov  6 06:18:35 2003
+@@ -76,10 +76,10 @@
+ 
+ echo ""
+ echo ""
+-more ./license.txt
++cat ./license.txt
+ 
+ ${ECHO} "Do you agree to the license terms? (y/n)[n] ${ENDER}"
+-read check
++check="y"
+ if test "${check}" = "y" -o "${check}" = "Y" 
+ then
+   echo ""
+@@ -100,7 +100,7 @@
+ 
+ 
+ #default installation directory for ch
+-INSTALL_DIR="/usr/local/ch${VERSION}"
++INSTALL_DIR="$PREFIX/ch4.0.0"
+ 
+ 
+ # CHECK FOR root
+@@ -152,7 +152,7 @@
+ 
+    # To be 100% sure we can find the executable awk to extract the file.
+    # We use the way different from gzip here because similar way does't work here.
+-   AWK=/bin/awk
++   AWK=/usr/bin/awk
+    flag=1
+    while test ${flag} -eq 1
+    do
+@@ -192,7 +192,9 @@
+ echo " You may install Ch to anywhere you want to."
+ echo " The default directory is ${INSTALL_DIR}, you can hit Return to continue"
+ echo " or specify the directory path under which the software will be installed."
+-flag=1
++flag=0
++TARGET="${INSTALL_DIR}"
++mkdir -p "${TARGET}"
+ while test ${flag} -eq 1
+ do
+         echo ""
+@@ -410,23 +412,16 @@
+    /bin/ln -s ${TARGET}/bin/ch /bin/ch
+    /bin/ln -s ${TARGET}/bin/chs /bin/chs
+ 
+-if test "`uname`" != "Darwin" 
+-then
+-   /bin/cp  ${TARGET}/config/.chrc       /etc/skel/.chrc 
+-   /bin/cp  ${TARGET}/config/.chlogin    /etc/skel/.chlogin 
+-   /bin/cp  ${TARGET}/config/.chlogout   /etc/skel/.chlogout
+-fi
++#if test "`uname`" != "Darwin" 
++#then
++#   /bin/cp  ${TARGET}/config/.chrc       /etc/skel/.chrc 
++#   /bin/cp  ${TARGET}/config/.chlogin    /etc/skel/.chlogin 
++#   /bin/cp  ${TARGET}/config/.chlogout   /etc/skel/.chlogout
++#fi
+ 
+ # if /etc/shells exists and /etc/shells doesn't contain /bin/ch or /bin/chs
+ 
+     ch_add_shell=false;
+-    if test -f /etc/shells
+-    then
+-        if test "`${AWK} '/\/bin\/ch$/ { print}' /etc/shells`" != "/bin/ch" -a " `${AWK} '/\/bin\/chs$/ { print}' /etc/shells`" != "/bin/chs"
+-        then
+-            ch_add_shell=true;   
+-        fi
+-    fi
+ 
+    # Add /bin/ch, /bin/chs to the /etc/shells
+    if test ${ch_add_shell} = "true"
