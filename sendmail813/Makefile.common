@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/08/21 16:31:23 adrian_p Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/08/21 17:08:40 adrian_p Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -48,6 +48,6 @@ make-sendmail-siteconfig:
 .endif
 
 .if ${OPSYS} == "SunOS"
-	#@${CAT} ${FILESDIR}/site.config.m4-solaris >>${SITECONFIG}
+	@${CAT} ${FILESDIR}/site.config.m4-solaris >>${SITECONFIG}
 .endif
 	@${CAT} ${FILESDIR}/site.config.m4-milter >>${SITECONFIG}
