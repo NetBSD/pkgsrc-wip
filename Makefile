@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1329 2004/06/17 23:05:07 dillo Exp $
-# $NetBSD: Makefile,v 1.1329 2004/06/17 23:05:07 dillo Exp $
+# $Id: Makefile,v 1.1330 2004/06/18 21:30:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1330 2004/06/18 21:30:31 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -318,6 +318,7 @@ SUBDIR+=	libXres
 SUBDIR+=	libXt
 SUBDIR+=	libXv
 SUBDIR+=	libassuan
+SUBDIR+=	libavc1394
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdv
@@ -327,7 +328,6 @@ SUBDIR+=	libhydrogen
 SUBDIR+=	libmatchbox
 SUBDIR+=	libneural
 SUBDIR+=	libprelude
-SUBDIR+=	libavc1394
 SUBDIR+=	libraw1394
 SUBDIR+=	libssh
 SUBDIR+=	libticables
@@ -418,6 +418,7 @@ SUBDIR+=	mutella
 SUBDIR+=	mutt-devel
 SUBDIR+=	mysql-docs
 SUBDIR+=	mythtv
+SUBDIR+=	n0t
 SUBDIR+=	nagios-base
 SUBDIR+=	nagios-plugin-ldap
 SUBDIR+=	nagios-plugin-mysql
@@ -434,7 +435,6 @@ SUBDIR+=	netkit-base
 SUBDIR+=	netwib
 SUBDIR+=	netwox
 SUBDIR+=	ninvaders
-SUBDIR+=	n0t
 SUBDIR+=	noip
 SUBDIR+=	noiptun
 SUBDIR+=	nsd
@@ -763,6 +763,7 @@ SUBDIR+=	vixie-cron
 SUBDIR+=	vm-pop3d
 SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
+SUBDIR+=	vpnc
 SUBDIR+=	vtk
 SUBDIR+=	vtk-data
 SUBDIR+=	vtk-docs

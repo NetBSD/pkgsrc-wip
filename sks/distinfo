@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/28 21:27:14 cubidou Exp $
+$NetBSD: distinfo,v 1.2 2004/06/18 21:30:32 thomasklausner Exp $
 
-SHA1 (sks-1.0.4.tgz) = da87c28e757473fd105933eadcbdfa099581801f
-Size (sks-1.0.4.tgz) = 890232 bytes
+SHA1 (sks-1.0.7.tgz) = b79bb43dd720bd8e1fae88244323a239c7778d6f
+Size (sks-1.0.7.tgz) = 897646 bytes
 SHA1 (patch-aa) = 1e3854f1be32bf39a85940ec779ad857a49d786d
 SHA1 (patch-ab) = 919846f9c31a89f23430081dbad853d088dcb7e5
