@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/11 13:03:08 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/11 15:05:55 minskim Exp $
 #
 
 DISTNAME=	gob2-2.0.11
@@ -13,4 +13,5 @@ USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
