@@ -29,15 +29,15 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: main.c,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
+ * $Id: main.c,v 1.4 2005/03/15 19:05:12 imilh Exp $ 
  */
 
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
-static char *rcsid = "$Id: main.c,v 1.3 2005/03/15 17:14:25 imilh Exp $";
+static char *rcsid = "$Id: main.c,v 1.4 2005/03/15 19:05:12 imilh Exp $";
 #else
-__RCSID("$Id: main.c,v 1.3 2005/03/15 17:14:25 imilh Exp $");
+__RCSID("$Id: main.c,v 1.4 2005/03/15 19:05:12 imilh Exp $");
 #endif
 #endif
 
@@ -217,12 +217,17 @@ static void
 print_bindings(int page)
 {
 	int spacing, up, down;
+	static int last_page = 1;
 
 #define MAXCMDPAGES 2
 
 	spacing = strlen(ps_installed.descr);
 	up = nlines + 3;
 	down = nlines + 4;
+
+	if (page != last_page) {
+		clear(); refresh();
+	}
 
 	switch (page) {
 	case 1:
@@ -249,6 +254,7 @@ print_bindings(int page)
 	}
 	
 	refresh();
+	last_page = page;
 }
 
 /*
