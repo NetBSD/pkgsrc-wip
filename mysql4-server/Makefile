@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/08/31 09:28:34 adrian_p Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/01 11:49:22 adrian_p Exp $
 
 PKGNAME=		${DISTNAME:S/-/4-server-/}
 SVR4_PKGNAME=		mysqs
@@ -12,7 +12,6 @@ CONFIGURE_ARGS+=	--without-mysqlfs
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 CONFLICTS=		{mysql-server-[0-9]*,mysql3-server-[0-9]*}

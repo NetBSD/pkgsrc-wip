@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/31 09:27:19 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/01 11:48:58 adrian_p Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
@@ -11,7 +11,6 @@ CONFIGURE_ARGS+=	--without-berkeley-db
 USE_BUILDLINK2=		YES
 
 USE_PKGINSTALL=		YES
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 PTHREAD_OPTS=		require
