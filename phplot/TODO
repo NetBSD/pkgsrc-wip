@@ -1,0 +1,11 @@
+I'm working on a ACID pkg at the moment and it will need this pkg as
+a dependency. However, this is still useful as a stand alone package if
+you want to generate graphs in PHP.
+
+Tested on NetBSD 1.6 i386.
+
+Give it a go and let me know if there are any problems.
+
+Ta,
+
+Adrian.

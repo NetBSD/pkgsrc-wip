@@ -1,0 +1,43 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/18 03:42:16 adrian_p Exp $
+share/doc/phplot/README.txt
+share/doc/phplot/examples.html
+share/doc/phplot/function_reference.html
+share/doc/phplot/index.html
+share/doc/phplot/internal_functions.html
+share/doc/phplot/quick_start.php
+share/doc/phplot/user_functions.html
+share/doc/phplot/user_internal_functions.html
+share/examples/phplot/0cars.jpg
+share/examples/phplot/benjamingothic.ttf
+share/examples/phplot/create_chart.php
+share/examples/phplot/data.php
+share/examples/phplot/data_date.php
+share/examples/phplot/data_date2.php
+share/examples/phplot/data_sample1.php
+share/examples/phplot/data_sample2.php
+share/examples/phplot/data_sample3.php
+share/examples/phplot/data_sample4.php
+share/examples/phplot/example1.php
+share/examples/phplot/example10.php
+share/examples/phplot/example11.php
+share/examples/phplot/example12.php
+share/examples/phplot/example13.php
+share/examples/phplot/example2.php
+share/examples/phplot/example3.php
+share/examples/phplot/example4.php
+share/examples/phplot/example5.php
+share/examples/phplot/example6.php
+share/examples/phplot/example7.php
+share/examples/phplot/example8.php
+share/examples/phplot/example9.php
+share/examples/phplot/format_chart.php
+share/examples/phplot/inline_image.php
+share/examples/phplot/rgb.inc.php
+share/examples/phplot/test1.php
+share/examples/phplot/test_setup.php
+share/phplot/phplot.php
+share/phplot/phplot_data.php
+share/phplot/rgb.inc.php
+@dirrm share/phplot
+@dirrm share/examples/phplot
+@dirrm share/doc/phplot
