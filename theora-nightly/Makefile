@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/04 15:27:32 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/04 15:39:50 jeremy-c-reed Exp $
 
 DISTNAME=	theora_cvs_snapshot
 PKGNAME=	theora-${PKGVER}
@@ -11,8 +11,7 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.theora.org/
 COMMENT=	Video codec for Ogg multimedia streaming (nightly source)
 
-PKGVER!=	date +%Y%m%d
-
+PKGVER!=	${DATE} +%Y%m%d
 NO_SRC_ON_FTP=	# defined
 DIST_SUBDIR=	${PKGNAME}
 NO_CHECKSUM=	# defined
