@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1210 2004/04/17 13:25:24 minskim Exp $
-# $NetBSD: Makefile,v 1.1210 2004/04/17 13:25:24 minskim Exp $
+# $Id: Makefile,v 1.1211 2004/04/18 05:46:22 blef Exp $
+# $NetBSD: Makefile,v 1.1211 2004/04/18 05:46:22 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -38,7 +38,6 @@ SUBDIR+=	ap2-python
 SUBDIR+=	ap2-xslt
 SUBDIR+=	apachebench2
 SUBDIR+=	argouml
-SUBDIR+=	armagetron
 SUBDIR+=	arping
 SUBDIR+=	asfrecorder
 SUBDIR+=	asterisk
