@@ -1,0 +1,5 @@
+$Id: TODO,v 1.1.1.1 2004/03/19 05:15:53 xtraeme Exp $
+
+    o Does not work under NetBSD/i386 -current and XFree86 4.4.0 ?!
+      Looks like this is a problem with libglut? gdb says so...
+
