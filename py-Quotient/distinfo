@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/11/20 04:23:11 mpasternak Exp $
+$NetBSD: distinfo,v 1.3 2003/11/20 16:48:15 mpasternak Exp $
 
 SHA1 (Quotient-0.8.1.tar.gz) = 4deacc6671e44236d9fac74755f6356d91eb6eb3
 Size (Quotient-0.8.1.tar.gz) = 462706 bytes
+SHA1 (patch-aa) = c81caacd6a57272dcdac880ef93511983a21b34d
