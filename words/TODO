@@ -1,0 +1,15 @@
+also consider other word lists like
+ or ftp://ftp.gnu.org/gnu/aspell/aspell-en-0.51-0.tar.bz2
+ or SCOWL from  http://wordlist.sourceforge.net/
+
+or NetBSD's word list has 234964 words
+
+should this have:
+.if exists(/usr/share/dict/words)
+PKG_FAIL_REASON=	"Your platform already has the word list installed."
+.endif
+I don't think so, because when installed to /usr/pkg there is no conflict.
+
+should this be called linux-words?
+an idea would be to just install linux.words file
+and then have a pkgsrc option to choose which package makes symlink for words
