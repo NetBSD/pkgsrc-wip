@@ -1,0 +1,12 @@
+--- src/config.c.orig	2001-08-02 17:18:20.000000000 -0400
++++ src/config.c	2005-01-02 09:51:37.000000000 -0300
+@@ -140,7 +140,8 @@
+ char *inpath;
+ {
+ 	char *p, *path = NULL;
+-	char res[2048];
++/* res must be >= than PATH_MAX */
++	char res[PATH_MAX];
+ 	int l;
+ 
+ 	if (inpath[0] != '/')

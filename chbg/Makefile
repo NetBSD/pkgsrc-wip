@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/07/18 16:19:50 cetrox Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/02 15:21:01 cetrox Exp $
 #
 
 DISTNAME=		chbg-1.5
-CATEGORIES=		sysutils x11
+PKGREVISION=		1
+CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=chbg/}
 EXTRACT_SUFX=		.tgz
 
