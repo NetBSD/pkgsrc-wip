@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2003/08/28 09:48:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/04 00:53:18 xtraeme Exp $
 #
 
-DISTNAME=		gtranslator-0.99
+DISTNAME=		gtranslator-1.0
 CATEGORIES=		devel
-MASTER_SITES=		http://www.gtranslator.org/download/releases/0.99/
+MASTER_SITES=		http://www.gtranslator.org/download/releases/1.0/
 
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.gtranslator.org/
 COMMENT=		Gettext po file editor for the GNOME desktop environment
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
@@ -23,9 +23,10 @@ MANCOMPRESSED=		gtranslator.1.gz pozilla.sh.1.gz
 CONFIGURE_ARGS+=	--disable-debug
 
 .include "../../converters/libiconv/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../sysutils/gnome-vfs2/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
+
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

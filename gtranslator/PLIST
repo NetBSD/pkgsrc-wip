@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/13 23:21:53 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/09/04 00:53:18 xtraeme Exp $
 bin/gtranslator
 bin/pozilla.sh
 man/man1/gtranslator.1.gz
 man/man1/pozilla.sh.1.gz
-share/gnome/apps/Development/gtranslator.desktop
+share/applications/gtranslator.desktop
 share/gnome/help/gtranslator/C/figures/mainwindow.png
 share/gnome/help/gtranslator/C/figures/prefs.png
 share/gnome/help/gtranslator/C/figures/toolbar.png
-share/gnome/help/gtranslator/C/gtranslator.sgml
-share/gnome/help/gtranslator/ja/gtranslator.sgml
+share/gnome/help/gtranslator/C/gtranslator.xml
+share/gnome/help/gtranslator/C/legal.xml
 share/gtranslator/colorschemes/arek.xml
 share/gtranslator/colorschemes/boom-boom.xml
 share/gtranslator/colorschemes/clean.xml
@@ -31,12 +31,12 @@ share/gtranslator/colorschemes/waliays.xml
 share/gtranslator/colorschemes/yef.xml
 share/gtranslator/colorschemes/zuper.xml
 share/gtranslator/dtd/umtf.dtd
-share/gtranslator/etspecs/messages-table.etspec
 share/gtranslator/scripts/build-gtranslator-learn-buffer.sh
 share/gtranslator/scripts/cleanup-gtranslator-settings.sh
 share/gtranslator/scripts/my-update.sh
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtranslator.mo
@@ -47,8 +47,10 @@ ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gtranslator.mo
@@ -62,6 +64,9 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gtranslator.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gtranslator.mo
@@ -73,7 +78,6 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gtranslator.mo
 share/mime-info/gtranslator.keys
 share/mime-info/gtranslator.mime
 share/omf/gtranslator/gtranslator-C.omf
-share/omf/gtranslator/gtranslator-ja.omf
 share/pixmaps/gnome-application-x-gmo.png
 share/pixmaps/gnome-application-x-po.png
 share/pixmaps/gtranslator.png
@@ -84,9 +88,6 @@ share/pixmaps/gtranslator/untranslated_small.png
 @dirrm share/pixmaps/gtranslator
 @dirrm share/omf/gtranslator
 @dirrm share/gtranslator/scripts
-@dirrm share/gtranslator/etspecs
 @dirrm share/gtranslator/dtd
 @dirrm share/gtranslator/colorschemes
-@dirrm share/gnome/help/gtranslator/ja
-@dirrm share/gnome/help/gtranslator/C/figures
-@dirrm share/gnome/help/gtranslator/C
+@dirrm share/gtranslator
