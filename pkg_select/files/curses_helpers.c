@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: curses_helpers.c,v 1.2 2005/02/22 09:52:33 imilh Exp $ 
+ * $Id: curses_helpers.c,v 1.3 2005/02/22 16:16:39 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -124,6 +124,7 @@ cmd_spawn(const char *command, ...)
 	shell = newwin(LINES, COLS, 0, 0);
 	
 	wclear(shell);
+	wprintw(shell, "executing: %s\n", buf);
 	wrefresh(shell);
 	nl();
 	echo();

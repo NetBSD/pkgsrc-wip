@@ -1,6 +1,7 @@
 22 / 02 / 2005
 --------------
 
+. changed binary install look'n'feel
 . deep depends recursion now allowed
 . title rewriting
 

@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_info.c,v 1.2 2005/02/22 09:52:41 imilh Exp $ 
+ * $Id: pkg_info.c,v 1.3 2005/02/22 16:16:40 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -80,14 +80,18 @@ pkg_popup(WINDOW *win, char *path, char *pkg,
 			if (env == NULL) {
 				build_pkg_path(&pkg_path[0]);
 				mvwprintw(win, 0, 0, 
-					"PKG_PATH variable not set, default to\n%s\n", pkg_path);
+					"PKG_PATH variable not set, default to\n%s\n\n", pkg_path);
 				setenv("PKG_PATH", pkg_path, 1);
-				wprintw(win, ANY_KEY);
-				(void) wgetch(win);
-
-				wclear(win);
-				wrefresh(win);
 			}
+			wprintw(win, "[ %s ]\n%s/%s\n", 
+				label, getenv("PKG_PATH"), pkg);
+
+			wprintw(win, ANY_KEY);
+			(void) wgetch(win);
+
+			wclear(win);
+			wrefresh(win);
+
 			PKG_TOOL(action, "", pkg);
 		} /* answer was yes */
 
