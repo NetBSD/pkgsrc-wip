@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/08/28 09:48:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2003/10/07 18:30:36 xtraeme Exp $
 
 DISTNAME=	gnome2-extras-2.2.3
 CATEGORIES=	meta-pkgs x11 gnome2
@@ -15,12 +15,12 @@ DEPENDS+=	gnome2-themes-extra>=0.1:../../wip/gnome2-themes-extra
 DEPENDS+=	regexxer>=0.4:../../wip/regexxer
 DEPENDS+=	stickynotes-applet>=1.2.0:../../wip/stickynotes-applet
 DEPENDS+=	zenity>=1.2:../../wip/zenity
-DEPENDS+=	gtranslator>=0.99:../../wip/gtranslator
-DEPENDS+=	tsclient>=0.104:../../wip/tsclient
-DEPENDS+=	gmencoder>=0.0.7:../../wip/gmencoder
+DEPENDS+=	gtranslator>=0.99:../../devel/gtranslator
+DEPENDS+=	tsclient>=0.104:../../net/tsclient
+DEPENDS+=	gmencoder>=0.0.7:../../graphics/gmencoder
 DEPENDS+=	gimp-current>=1.3.5:../../wip/gimp-current
 DEPENDS+=	xchat>=2.0.1:../../chat/xchat2
-DEPENDS+=	gossip>=0.5:../../wip/gossip
+DEPENDS+=	gossip>=0.5:../../chat/gossip
 DEPENDS+=	apotheke>=0.2:../../wip/apotheke
 
 USE_X11=	yes
