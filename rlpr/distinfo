@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/05/03 13:31:25 takasan-tt Exp $
+
+SHA1 (rlpr-2.04.tar.gz) = 2b1aa5f4918585240e6d07a4f5a6cf188e01ce8e
+Size (rlpr-2.04.tar.gz) = 158637 bytes
+SHA1 (patch-aa) = afcecd07f644f3920ca5e5403034d348e23c0136
+SHA1 (patch-ab) = 71ba955c112875b1d071cecc08af122ba03e2e7c
+SHA1 (patch-ac) = 1e316622f86ca8993606369e35ae83f35f37255f
