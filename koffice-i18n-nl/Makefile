@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/22 15:19:22 ianzag Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/01 10:47:52 ianzag Exp $
 
-DISTNAME=		koffice-i18n-nl-1.3.3
+DISTNAME=		koffice-i18n-nl-1.3.4
 CATEGORIES=		x11 kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.3.3/src/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.3.4/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=		ianzag@mail.ru
