@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/06/25 20:02:41 plunky Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/06/25 20:43:11 plunky Exp $
 
-DISTNAME=		icewm-1.2.13
+DISTNAME=		icewm-1.2.14
 CATEGORIES=		x11 wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icewm/}
 
@@ -15,9 +15,9 @@ USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	# defined
 BUILD_USES_MSGFMT=	# defined
 
-DISTINFO_FILE=		${.CURDIR}/../../wm/icewm/distinfo
-FILESDIR=		${.CURDIR}/../../wm/icewm/files
-PATCHDIR=		${.CURDIR}/../../wm/icewm/patches
+DISTINFO_FILE=		${.CURDIR}/../icewm/distinfo
+FILESDIR=		${.CURDIR}/../icewm/files
+PATCHDIR=		${.CURDIR}/../icewm/patches
 
 .include "../../mk/bsd.prefs.mk"
 
