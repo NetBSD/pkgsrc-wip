@@ -1,0 +1,25 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2003/04/06 00:33:12 marmfield Exp $
+#
+
+PLUGINSVERSION=	1.3.0
+
+DISTNAME=	nagios-plugins-${PLUGINSVERSION}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagiosplug/}
+
+HOMEPAGE=	http://sourceforge.net/projects/nagiosplug/
+
+.include "../../net/nagios-base/Makefile.common"
+
+CONFIGURE_ARGS+=	--with-nagios-user=${NAGIOS_USER}
+CONFIGURE_ARGS+=	--with-nagios-group=${NAGIOS_GROUP}
+
+AUTOMAKE_REQD=	1.4
+
+pre-configure:
+	cd ${WRKSRC};	\
+	${ACLOCAL} -I lib;      \
+	${AUTOCONF};    \
+	${AUTOHEADER};  \
+	${AUTOMAKE} -a --foreign -i
+
+.include "../../mk/automake.mk"

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/06 00:33:12 marmfield Exp $
+
+SHA1 (nagios-plugins-1.3.0.tar.gz) = fc841c1342e8ee28883a07918045f40fdd353a1e
+Size (nagios-plugins-1.3.0.tar.gz) = 489070 bytes
+SHA1 (patch-aa) = 46f4feb01963fe039bb54773ecdbe955e0fb63f6
+SHA1 (patch-ab) = fab95efc557a1584fca698ca7248fa8caf524c77
+SHA1 (patch-ac) = f712e210359a2ae7167515b3931da3db8e089739
