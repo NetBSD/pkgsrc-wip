@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.730 2003/12/03 23:28:35 xtraeme Exp $
-# $NetBSD: Makefile,v 1.730 2003/12/03 23:28:35 xtraeme Exp $
+# $Id: Makefile,v 1.731 2003/12/03 23:38:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.731 2003/12/03 23:38:18 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -605,7 +605,6 @@ SUBDIR+=	unrealircd
 SUBDIR+=	unrealtournament-server
 SUBDIR+=	upx
 SUBDIR+=	util-linux
-SUBDIR+=	vba
 SUBDIR+=	vcdgear
 SUBDIR+=	viewcvs
 SUBDIR+=	vixie-cron
