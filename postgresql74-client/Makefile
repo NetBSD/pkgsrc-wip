@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/20 00:24:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/17 18:13:13 mpasternak Exp $
 
 PKGNAME=		postgresql74-client-${BASE_VERS}
 SVR4_PKGNAME=		pstgc
@@ -27,6 +27,11 @@ pre-build:
 post-install:
 	cd ${PREFIX}/man && 						\
 		${PAX} -O -crzf ${WRKSRC}/doc/man.tar.gz
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "FreeBSD" && ${LOWER_OPSYS_VERSUFFIX} == "4"
+USE_GNU_READLINE=yes
+.endif
 
 .include "../../wip/postgresql74-lib/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
