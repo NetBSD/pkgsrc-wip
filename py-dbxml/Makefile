@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2004/02/13 19:52:31 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/13 21:11:23 minskim Exp $
 
-DISTNAME=	dbxml-1.2.0
+DISTNAME=	dbxml-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 WRKSRC=		${WRKDIR}/${DISTNAME}/src/python
 CATEGORIES=	databases
