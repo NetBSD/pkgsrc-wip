@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.796 2003/12/23 11:07:44 xtraeme Exp $
-# $NetBSD: Makefile,v 1.796 2003/12/23 11:07:44 xtraeme Exp $
+# $Id: Makefile,v 1.797 2003/12/23 15:11:18 lexort Exp $
+# $NetBSD: Makefile,v 1.797 2003/12/23 15:11:18 lexort Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -520,6 +520,7 @@ SUBDIR+=	pynfo
 SUBDIR+=	pysite
 SUBDIR+=	pywm
 SUBDIR+=	q3-urbanterror
+SUBDIR+=	quagga-devel
 SUBDIR+=	qico
 SUBDIR+=	qinx
 SUBDIR+=	qn-x11
