@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/09/02 05:05:16 dhowland Exp $
+
+--- vl.c.orig	Sat Jul 10 14:20:09 2004
++++ vl.c
+@@ -40,9 +40,9 @@
+ #include <sys/socket.h>
+ #ifdef _BSD
+ #include <sys/stat.h>
+-#ifndef __APPLE__
+-#include <libutil.h>
+-#endif
++//#ifndef __APPLE__
++//#include <libutil.h>
++//#endif
+ #else
+ #include <linux/if.h>
+ #include <linux/if_tun.h>

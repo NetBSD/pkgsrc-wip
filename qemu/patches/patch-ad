@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/09/02 05:05:16 dhowland Exp $
+
+--- oss.c.orig	Sat Jul 10 14:20:09 2004
++++ oss.c
+@@ -23,7 +23,7 @@
+  */
+ #include "vl.h"
+ 
+-#if !defined(_WIN32) && !defined(__APPLE__)
++#if !defined(_WIN32) && !defined(__APPLE__) && !defined(_BSD)
+ #include <ctype.h>
+ #include <fcntl.h>
+ #include <errno.h>
