@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/05/09 08:53:06 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.21 2004/05/13 10:37:35 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -17,6 +17,8 @@ GCC_VERSION=	3.4.0
 # Optional languages - change as required
 #   If BUILD_ADA is YES, then you'll need to specify
 #   an Ada in the "Ada bootstrap compiler section"
+BUILD_DEFS=	BUILD_ADA BUILD_CXX BUILD_F77 \
+		BUILD_JAVA BUILD_OBJC
 BUILD_ADA?=	NO
 BUILD_CXX?=	YES
 BUILD_F77?=	YES
@@ -24,19 +26,19 @@ BUILD_JAVA?=	NO
 BUILD_OBJC?=	YES
 
 LANGS='c'
-.if ${BUILD_ADA} == "YES"
+.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
 LANGS+='ada'
 .endif
-.if ${BUILD_CXX} == "YES"
+.if !empty(BUILD_CXX:M[Yy][Ee][Ss])
 LANGS+='c++'
 .endif
-.if ${BUILD_F77} == "YES"
+.if !empty(BUILD_F77:M[Yy][Ee][Ss])
 LANGS+='f77'
 .endif
-.if ${BUILD_JAVA} == "YES"
+.if !empty(BUILD_JAVA:M[Yy][Ee][Ss])
 LANGS+='java'
 .endif
-.if ${BUILD_OBJC} == "YES"
+.if !empty(BUILD_OBJC:M[Yy][Ee][Ss])
 LANGS+='objc'
 .endif
 CONFIGURE_ARGS+=        --enable-languages="${LANGS}"
@@ -57,21 +59,21 @@ USE_NEW_TEXINFO=	YES
 PTHREAD_OPTS+=  require native
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
-.if ${BUILD_ADA} == "YES"
+.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
 # Ada bootstrap compiler section
 # An Ada compiler is required to build the Ada compiler. Two
 may be used:
 #USE_GCC3	=# Define to use lang/gcc3-ada
-#USE_GCC34ADA	=# Define to use gcc-3.4-ada
+USE_GCC34ADA	=# Define to use gcc-3.4-ada
 # You may also specify the path of a gcc/gnat Ada compiler
 # outside of the pkgsrc system by specifying the full path
 # of the compiler (example) below:
-ALT_GCC=       /usr/pkg/gccAda-3.4.0/bin/gcc
-.if defined(ALT_GCC)
+#ALT_GCC=       /usr/pkg/gcc3bootstrap/bin/gcc
+.  if defined(ALT_GCC)
 ALT_GCC_PREFIX:=        ${ALT_GCC:H}/..
 ALT_GCC_RTS!=   ${FIND} ${ALT_GCC_PREFIX} -name adalib
 RALT_GCC_RTS=   ${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
-.endif
+.  endif
 .endif
 
 GCC_SUBPREFIX=		${PKGNAME_NOREV}
@@ -90,14 +92,14 @@ GCC_ARCHDIR=	${PREFIX}/${GCC_ARCHSUBDIR}
 post-patch:
 .if (${MACHINE_GNU_ARCH} == "x86_64")
 	(${TEST} -d ${WRKSRC}/libstdc++-v3/config/abi/x86_64-netbsdelf2.0 || \
-         ${MKDIR} ${WRKSRC}/libstdc++-v3/config/abi/x86_64-netbsdelf2.0 )
-	${CP} files/baseline_symbols64.txt ${WRKSRC}/libstdc++-v3/config/abi/x86_64-netbsdelf2.0/baseline_symbols.txt
+	${MKDIR} ${WRKSRC}/libstdc++-v3/config/abi/x86_64-netbsdelf2.0 )
+	${CP} ${FILESDIR}/baseline_symbols64.txt ${WRKSRC}/libstdc++-v3/config/abi/x86_64-netbsdelf2.0/baseline_symbols.txt
 .else
 	(${TEST} -d ${WRKSRC}/libstdc++-v3/config/abi/i386-netbsdelf2.0 || \
-         ${MKDIR} ${WRKSRC}/libstdc++-v3/config/abi/i386-netbsdelf2.0 )
-	${CP} files/baseline_symbols.txt ${WRKSRC}/libstdc++-v3/config/abi/i386-netbsdelf2.0
+	${MKDIR} ${WRKSRC}/libstdc++-v3/config/abi/i386-netbsdelf2.0 )
+	${CP} ${FILESDIR}/baseline_symbols.txt ${WRKSRC}/libstdc++-v3/config/abi/i386-netbsdelf2.0
 .endif
-	(cd files; \
+	(cd ${FILESDIR}; \
 		${CP} adasignal.c ${WRKSRC}/gcc/ada; \
 		${CP} ada_lwp_self.c ${WRKSRC}/gcc/ada; \
 		${CP} dummy_pthreads.c ${WRKSRC}/gcc/ada; \
@@ -106,24 +108,24 @@ post-patch:
 	done )
 
 .if ${BUILD_ADA} == "YES"
-.if defined(USE_GCC34ADA)
+.  if defined(USE_GCC34ADA)
 # Overide compiler.mk setup to use gccAda-3.4.0
 pre-configure:
 .include "../../wip/gcc-3.4-ada/preconfigure.mk"
-.elif defined(ALT_GCC)
+.  elif defined(ALT_GCC)
 pre-configure:
 	(cd ${WRKDIR}/.buildlink && ${MKDIR} ${RALT_GCC_RTS} && \
 	cd ${RALT_GCC_RTS} && ${LN} -s ${ALT_GCC_RTS}/libgnat.a .)
 	(cd ${ALT_GCC:H} && \
 	bin_files=`${FIND} . -type f \( -perm -0100 \)` && \
 	cd ${WRKDIR}/.gcc/bin/ && \
-	for file in ${ALT_GCC:T} $${bin_files} ; do \
-	  $(ECHO) '#!/bin/sh' > $${file}; \
-	  $(ECHO) -n "exec ${ALT_GCC:H}/$${file} " >>$${file}; \
-	  $(ECHO) '"$$@"' >>$${file}; \
-	  $(CHMOD) +x $${file}; \
+	for filename in ${ALT_GCC:T} $${bin_files} ; do \
+	  $(ECHO) '#!/bin/sh' > $${filename}; \
+	  $(ECHO) -n "exec ${ALT_GCC:H}/$${filename} " >>$${filename}; \
+	  $(ECHO) '"$$@"' >>$${filename}; \
+	  $(CHMOD) +x $${filename}; \
 	done )
-.endif
+.  endif
 .endif
 
 do-configure:
@@ -131,7 +133,7 @@ do-configure:
 	 (cd ${WRKDIR}/obj && ${SETENV} ${CONFIGURE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS}))
 
 do-build:
-.if ${BUILD_ADA} == "YES"
+.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
 .else
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap)
@@ -139,7 +141,7 @@ do-build:
 
 do-test:
 .if (${MACHINE_GNU_ARCH} == "x86_64")
-	(cd files && cp netbsd64macro.dfs ${WRKSRC}/gcc/testsuite/ada/acats/support/macro.dfs)
+	(cd files && ${CP} netbsd64macro.dfs ${WRKSRC}/gcc/testsuite/ada/acats/support/macro.dfs)
 .endif
 	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
 
@@ -157,11 +159,13 @@ post-install:
 		>> ${PLIST_SRC}
 
 .include "../../mk/bsd.prefs.mk"
-.if defined(USE_GCC3)
+.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
+.  if defined(USE_GCC3)
 .include "../../lang/gcc3-ada/buildlink3.mk"
-.elif  defined(USE_GCC34ADA)
+.  elif  defined(USE_GCC34ADA)
 BUILDLINK_DEPMETHOD.gccAda-3.4.0=build
 .include "../../wip/gcc-3.4-ada/buildlink3.mk"
+.  endif
 .endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
