@@ -1,0 +1,147 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/08 17:21:32 daprice Exp $
+share/dataset/geography/${PKGNAME}/PERMANENT/DEFAULT_WIND
+share/dataset/geography/${PKGNAME}/PERMANENT/MYNAME
+share/dataset/geography/${PKGNAME}/PERMANENT/SEARCH_PATH
+share/dataset/geography/${PKGNAME}/PERMANENT/WIND
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/gs13.1
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/gs14.1
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/nhap.1
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/nhap.2
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/nhap.3
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/nhap.enh
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/spot.comp
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/spot.ms.1
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/spot.ms.2
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/spot.ms.3
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/spot.p
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/gs13.1
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/gs14.1
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/nhap.1
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/nhap.2
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/nhap.3
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/nhap.enh
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/spot.comp
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/spot.ms.1
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/spot.ms.2
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/spot.ms.3
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/spot.p
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/gs13.1/histogram
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/gs13.1/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/gs14.1/histogram
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/gs14.1/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.1/hist.test
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.1/histogram
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.1/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.1/tmp
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.2/histogram
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.2/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.3/histogram
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.3/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.enh/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.cluster
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.comp/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.ms.1/histogram
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.ms.1/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.ms.2/histogram
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.ms.2/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.ms.3/histogram
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.ms.3/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.p/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/gs13.1
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/gs14.1
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/nhap.1
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/nhap.2
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/nhap.3
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/nhap.enh
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/spot.comp
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/spot.ms.1
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/spot.ms.2
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/spot.ms.3
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/spot.p
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/gs13.1
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/gs14.1
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/nhap.1
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/nhap.2
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/nhap.3
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/nhap.enh
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/spot.comp
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/spot.ms.1
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/spot.ms.2
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/spot.ms.3
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/spot.p
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/gs13.1
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/gs14.1
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/nhap.1
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/nhap.2
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/nhap.3
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/nhap.enh
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/spot.comp
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/spot.ms.1
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/spot.ms.2
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/spot.ms.3
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/spot.p
+share/dataset/geography/${PKGNAME}/user1/GROUP
+share/dataset/geography/${PKGNAME}/user1/SEARCH_PATH
+share/dataset/geography/${PKGNAME}/user1/WIND
+share/dataset/geography/${PKGNAME}/user1/group/demo/REF
+share/dataset/geography/${PKGNAME}/user1/group/demo/TARGET
+share/dataset/geography/${PKGNAME}/user1/group/gs/REF
+share/dataset/geography/${PKGNAME}/user1/group/gs/TARGET
+share/dataset/geography/${PKGNAME}/user1/group/nhap/POINTS
+share/dataset/geography/${PKGNAME}/user1/group/nhap/REF
+share/dataset/geography/${PKGNAME}/user1/group/nhap/SUBGROUP
+share/dataset/geography/${PKGNAME}/user1/group/nhap/TARGET
+share/dataset/geography/${PKGNAME}/user1/group/nhap/TITLE
+share/dataset/geography/${PKGNAME}/user1/group/nhap/subgroup/nhap.123/REF
+share/dataset/geography/${PKGNAME}/user1/group/spotspear/REF
+share/dataset/geography/${PKGNAME}/user1/group/spotspear/SUBGROUP
+share/dataset/geography/${PKGNAME}/user1/group/spotspear/TARGET
+share/dataset/geography/${PKGNAME}/user1/group/spotspear/subgroup/spot.test/REF
+share/dataset/geography/${PKGNAME}/user1/group/spotspear/subgroup/spot.test/sig/sig.1
+share/dataset/geography/${PKGNAME}/user1/group/spotspear/subgroup/spot.test/sig/test
+share/dataset/geography/${PKGNAME}/user1/group/spotxy/POINTS
+share/dataset/geography/${PKGNAME}/user1/group/spotxy/REF
+share/dataset/geography/${PKGNAME}/user1/group/spotxy/SUBGROUP
+share/dataset/geography/${PKGNAME}/user1/group/spotxy/TARGET
+share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup/spot.test/REF
+share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup/spot.test/sig/sig.1
+share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup/spot.test/sig/test
+share/dataset/geography/${PKGNAME}/user1/gscam
+@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup/spot.test/sig
+@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup/spot.test
+@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup
+@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotxy
+@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotspear/subgroup/spot.test/sig
+@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotspear/subgroup/spot.test
+@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotspear/subgroup
+@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotspear
+@dirrm share/dataset/geography/${PKGNAME}/user1/group/nhap/subgroup/nhap.123
+@dirrm share/dataset/geography/${PKGNAME}/user1/group/nhap/subgroup
+@dirrm share/dataset/geography/${PKGNAME}/user1/group/nhap
+@dirrm share/dataset/geography/${PKGNAME}/user1/group/gs
+@dirrm share/dataset/geography/${PKGNAME}/user1/group/demo
+@dirrm share/dataset/geography/${PKGNAME}/user1/group
+@dirrm share/dataset/geography/${PKGNAME}/user1
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/hist
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/colr
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cellhd
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.p
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.ms.3
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.ms.2
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.ms.1
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.comp
+@exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap1.orig
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap1.orig
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.enh
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.3
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.2
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.1
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/gs14.1
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/gs13.1
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cats
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT
+@dirrm share/dataset/geography/${PKGNAME}
+@exec ${MKDIR} %D/share/dataset/geography/
+@dirrm share/dataset/geography
