@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1692 2005/03/16 23:41:21 daprice Exp $
-# $NetBSD: Makefile,v 1.1692 2005/03/16 23:41:21 daprice Exp $
+# $Id: Makefile,v 1.1693 2005/03/18 12:18:54 obache Exp $
+# $NetBSD: Makefile,v 1.1693 2005/03/18 12:18:54 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -824,6 +824,7 @@ SUBDIR+=	ruby-ncurses
 SUBDIR+=	ruby-raggle
 SUBDIR+=	ruby-redcloth
 SUBDIR+=	ruby-syck
+SUBDIR+=	ruby-xmlscan
 SUBDIR+=	sara
 SUBDIR+=	sarg
 SUBDIR+=	sawfish-gtk2
