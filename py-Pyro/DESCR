@@ -6,9 +6,9 @@ language independent Distributed Object Technology and has much more to
 offer than Pyro or RMI. But Pyro is small, simple and free (MIT software
 license).
 
-Get the manual
+Get the manual from
 
-	from http://pyro.sourceforge.net/pyro-manual/PyroManual.html
+	http://pyro.sourceforge.net/pyro-manual/PyroManual.html
 
 Check quite impressive success stories on
 
