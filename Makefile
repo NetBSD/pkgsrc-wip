@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.351 2003/07/29 15:37:56 bencollver Exp $
-# $NetBSD: Makefile,v 1.351 2003/07/29 15:37:56 bencollver Exp $
+# $Id: Makefile,v 1.352 2003/07/30 17:47:04 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.352 2003/07/30 17:47:04 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -183,6 +183,7 @@ SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	memtester
 SUBDIR+=	mhonarc
+SUBDIR+=	mit-krb5
 SUBDIR+=	mixer.tk
 SUBDIR+=	mopac
 SUBDIR+=	mtf
