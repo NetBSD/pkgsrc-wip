@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/13 12:35:56 ppostma Exp $
+
+--- Makefile.in.orig	2002-10-06 18:39:42.000000000 +0200
++++ Makefile.in	2005-01-19 02:50:21.000000000 +0100
+@@ -17,9 +17,6 @@
+ install: all
+ 	$(INSTALL) -d -m 755 $(SBINDIR)
+ 	$(INSTALL) -m 555 source/ipfm $(SBINDIR)/ipfm
+-	$(INSTALL) -d -m 755 $(ETCDIR)
+-	[ -f $(CONFIGFILE) ] || \
+-	  $(INSTALL) -m 644 ipfm.conf.sample $(CONFIGFILE)
+ 	$(INSTALL) -d -m 755 $(MANDIR)/man5
+ 	$(INSTALL) -d -m 755 $(MANDIR)/man8
+ 	$(INSTALL) -m 444 doc/ipfm.conf.5 $(MANDIR)/man5/ipfm.conf.5

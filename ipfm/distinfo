@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/13 12:35:56 ppostma Exp $
+
+SHA1 (ipfm-0.11.5.tgz) = a42837383793e5abb0c5d299001831247b7d26c9
+Size (ipfm-0.11.5.tgz) = 51742 bytes
+SHA1 (patch-aa) = fc15d775b5f9c308606d2dcfdd685b3ad94b04ed

@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/13 12:35:56 ppostma Exp $
+man/man5/ipfm.conf.5
+man/man8/ipfm.8
+sbin/ipfm
+share/examples/ipfm/ipfm.conf
+@exec ${MKDIR} %D/var/run
+@dirrm var/run
+@exec ${MKDIR} %D/var/log/ipfm
+@dirrm var/log/ipfm
+@dirrm var/log
+@dirrm var
+@dirrm share/examples/ipfm
