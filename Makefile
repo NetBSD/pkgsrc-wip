@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1596 2005/01/07 11:22:41 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1596 2005/01/07 11:22:41 thomasklausner Exp $
+# $Id: Makefile,v 1.1597 2005/01/07 11:27:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1597 2005/01/07 11:27:43 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -429,6 +429,7 @@ SUBDIR+=	libtlen2
 SUBDIR+=	libuuid
 SUBDIR+=	libvg
 SUBDIR+=	libvncserver
+SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libwhisker2
 SUBDIR+=	libwpd
 SUBDIR+=	libxml++
@@ -507,6 +508,7 @@ SUBDIR+=	mtf
 SUBDIR+=	mtrack
 SUBDIR+=	muine
 SUBDIR+=	multisync
+SUBDIR+=	multisync-backup
 SUBDIR+=	multisync-syncml
 SUBDIR+=	mupen64
 SUBDIR+=	mupen64-base
