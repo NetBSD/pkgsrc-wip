@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+
+STAGE=$2
+
+TEXMFMAIN=@TEXMFMAIN@
+SPECIALMAP=${TEXMFMAIN}/fontname/special.map
+
+case ${STAGE} in
+    PRE-INSTALL)
+	;;
+    POST-INSTALL)
+	echo "Edit ${SPECIALMAP}"
+	echo "@c Japanese TrueType fonts by Kochi:"     >> ${SPECIALMAP}
+	echo "gothic          kochi           gothic"   >> ${SPECIALMAP}
+	echo "mincho          kochi           mincho"   >> ${SPECIALMAP}
+
+	echo "Update ls-R"
+	mktexlsr
+	;;
+    *)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+
+STAGE=$2
+
+TEXMFMAIN=@TEXMFMAIN@
+SPECIALMAP=${TEXMFMAIN}/fontname/special.map
+
+case ${STAGE} in
+    DEINSTALL)
+	;;
+    POST-DEINSTALL)
+	echo "Edit ${SPECIALMAP}"
+	sed -e "/ochi/d" ${SPECIALMAP} > ${SPECIALMAP}.tmp
+	mv -f ${SPECIALMAP}.tmp ${SPECIALMAP}
+
+	echo "Update ls-R"
+	mktexlsr
+	;;
+    *)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
