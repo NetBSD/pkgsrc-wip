@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.550 2003/10/16 10:01:27 marc Exp $
-# $NetBSD: Makefile,v 1.550 2003/10/16 10:01:27 marc Exp $
+# $Id: Makefile,v 1.551 2003/10/16 10:49:18 cubidou Exp $
+# $NetBSD: Makefile,v 1.551 2003/10/16 10:49:18 cubidou Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -43,6 +43,7 @@ SUBDIR+=	ap2-xslt
 SUBDIR+=	apotheke
 SUBDIR+=	argouml
 SUBDIR+=	armagetron
+SUBDIR+=	arping
 SUBDIR+=	asfrecorder
 SUBDIR+=	atasm
 SUBDIR+=	autoproject
@@ -164,6 +165,7 @@ SUBDIR+=	gtk2-engines-mist
 SUBDIR+=	gtkmagnetic
 SUBDIR+=	gtkpod
 SUBDIR+=	gurlchecker
+SUBDIR+=	gwc
 SUBDIR+=	hasciicam
 SUBDIR+=	hashcash
 SUBDIR+=	heimdal
