@@ -17,3 +17,6 @@ When I got rid of the LIBTOOL_OVERRIDE, the library versions were correct:
 
 So maybe we need to fix the libtool or maybe don't use LIBTOOL_OVERRIDE.
 I believe this is the same for all these freedesktop.org xlibs packages.
+
+The fd.o xlibs packages use --version-number, which is not supported
+by libtool-1.4.x.  libtool-1.5.2 (PR 24291) has --version-number.
