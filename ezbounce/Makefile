@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/11 01:24:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/25 15:43:16 xtraeme Exp $
 #
 
 DISTNAME=	ezbounce-1.04a
@@ -18,6 +18,12 @@ CONFIGURE_ARGS+=	--with-ssl
 
 EGDIR=		${PREFIX}/share/examples/ezbounce
 DOCDIR=		${PREFIX}/share/doc/ezbounce
+
+EZBOUNCE_USER=		ezbounce
+EZBOUNCE_GROUP=		ezbounce
+
+PKG_GROUPS=             ${EZBOUNCE_GROUP}
+PKG_USERS=		${EZBOUNCE_USER}:${EZBOUNCE_GROUP}::Ezbounce\\ user
 
 RCD_SCRIPTS=            ezbounce
 
