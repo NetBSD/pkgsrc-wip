@@ -1,5 +1,5 @@
-=============================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/04/13 11:57:03 jmmv Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2003/04/27 10:41:39 cjep Exp $
 
 In order to use this module in your Apache installation, you need to
 add the following line to your httpd.conf file:
@@ -10,4 +10,4 @@ For more information, see:
 
 	${PREFIX}/share/doc/mod_bandwidth.html
 
-=============================================================================
+===========================================================================
