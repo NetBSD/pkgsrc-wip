@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1394 2004/07/16 18:31:18 ppostma Exp $
-# $NetBSD: Makefile,v 1.1394 2004/07/16 18:31:18 ppostma Exp $
+# $Id: Makefile,v 1.1395 2004/07/16 19:18:55 ppostma Exp $
+# $NetBSD: Makefile,v 1.1395 2004/07/16 19:18:55 ppostma Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -530,9 +530,12 @@ SUBDIR+=	php-doc-sk
 SUBDIR+=	php-doc-sl
 SUBDIR+=	php-doc-sv
 SUBDIR+=	php5
+SUBDIR+=	php5-calendar
 SUBDIR+=	php5-ftp
+SUBDIR+=	php5-mbstring
 SUBDIR+=	php5-mysql
 SUBDIR+=	php5-pgsql
+SUBDIR+=	php5-posix
 SUBDIR+=	php5-sockets
 SUBDIR+=	picasm
 SUBDIR+=	picprog
