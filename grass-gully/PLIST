@@ -1,1 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/08 17:26:16 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/18 21:11:23 daprice Exp $
+share/dataset/geography/${PKGNAME}/gully.dat
+@dirrm share/dataset/geography/${PKGNAME}
