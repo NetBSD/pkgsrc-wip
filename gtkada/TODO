@@ -1,0 +1,8 @@
+- The software library builds, however, I'm encountering
+  an error I can't deciper while linking the test driver:
+
+> /usr/bin/ld: gate-in.exe: hidden symbol `__enable_execute_stack' in 
+> /lib/gcc-lib/i386--netbsdelf2.0/3.3.2/libgcc.a(_trampoline.oS) is referenced 
+> by DSO
+
+
