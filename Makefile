@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1298 2004/05/27 21:58:38 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1298 2004/05/27 21:58:38 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1299 2004/05/29 00:34:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1299 2004/05/29 00:34:22 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -770,7 +770,6 @@ SUBDIR+=	xrestop
 SUBDIR+=	xscribble-fs
 SUBDIR+=	xsh
 SUBDIR+=	xtrans
-SUBDIR+=	xvidcap
 SUBDIR+=	xwpe
 SUBDIR+=	yafray
 SUBDIR+=	yp-tools
