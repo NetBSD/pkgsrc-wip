@@ -1,0 +1,12 @@
+Links is a text-based browser with support for HTML tables and
+frames.
+Links provides:
+  * a light and stable alternative to the big GUI browsers
+  * a colour terminal (X11/GUI or console)
+  * lightning-fast loading and rendering of pages
+  * bookmarks, rebindable keys, multi-language support, multiple
+    character sets
+  * background downloads (with multiple simultaneous connections)
+  * support for FTP (not passive FTP) and LOCALFILE protocols, HTTP
+    and FTP proxies
+  * SSL support
