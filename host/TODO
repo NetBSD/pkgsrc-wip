@@ -1,0 +1,18 @@
+$Id: TODO,v 1.1.1.1 2004/01/01 16:58:44 cjep Exp $
+
+Hopefully I'll get to these soon.
+
+1. Fix command line handling. e.g. use getopt_long. The current handling
+is complicated and there is at least one core dump situation:
+
+tubbs% /usr/pkg/bin/host 
+Segmentation fault (core dumped)
+tubbs% /usr/pkg/bin/host -v
+Segmentation fault (core dumped)
+tubbs% /usr/pkg/bin/host -v www.cisco.com
+Query about www.cisco.com for record types A
+Query for A records done, 1 answer, status: no error
+The following answer is not authoritative:
+Answer section contains (1 record):
+www.cisco.com           IN      A       198.133.219.25
+
