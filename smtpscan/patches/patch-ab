@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/07/08 15:04:48 adrian_p Exp $
+
+--- src/smtpscan.orig	Mon May  5 23:49:07 2003
++++ src/smtpscan	Thu Jun 19 11:46:45 2003
+@@ -32,9 +32,9 @@
+                                     # characters
+ my $mail_user   = '';
+ 
+-$LOCAL_SHARE    = '/usr/local/share';
++$LOCAL_SHARE    = '@PREFIX@/share';
+ 
+-$VERSION        = '@VERSION@';
++$VERSION        = '@SSVERSION@';
+ 
+ @VALID_CHARS    = ( 'A' .. 'Z', 'a' .. 'z', '0' .. '9', '_');
+ 

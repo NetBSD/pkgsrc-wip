@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/08 15:04:48 adrian_p Exp $
+
+--- docs/man/smtpscan.1.orig	Thu Jun 19 11:27:53 2003
++++ docs/man/smtpscan.1	Thu Jun 19 11:28:31 2003
+@@ -1,6 +1,6 @@
+-.TH SMTPSCAN "1" "20020821" "smtpscan @VERSION@"
++.TH SMTPSCAN "1" "20020821" "smtpscan @SSVERSION@"
+ .SH NAME
+-.B smtpscan @VERSION@
++.B smtpscan @SSVERSION@
+ 
+ .SH SYNOPSIS
+ .B smtpscan
+@@ -88,10 +88,10 @@
+ at 15 seconds
+ 
+ .SH FILES
+-.I @prefix@/smtpscan/fingerprints
++.I @SSSHARE@/fingerprints
+ - fingerprints file
+ 
+-.I @prefix@/smtpscan/tests
++.I @SSSHARE@/tests
+ - tests file
+ 
+ .SH AUTHOR

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/08 15:04:48 adrian_p Exp $
+
+SHA1 (smtpscan-0.5.tar.gz) = 958bbc5fdf6932fae40ea6e8258fc5c3fa91bc49
+Size (smtpscan-0.5.tar.gz) = 162643 bytes
+SHA1 (patch-aa) = 353e7966cc221dc8ec62f0e34c5d77f1aa63ba4b
+SHA1 (patch-ab) = ddaf1fff98d29136cb53f6006e0045ac69009a52

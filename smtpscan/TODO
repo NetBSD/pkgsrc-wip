@@ -1,0 +1,12 @@
+$NetBSD: TODO,v 1.1.1.1 2003/07/08 15:04:48 adrian_p Exp $
+
+This package uses a database of SMTP server signatures to identify remote SMTP
+servers.
+
+Please test and let me know if there are any issues.
+
+Tested on NetBSD 1.6 i386.
+
+Regards,
+
+Adrian.
