@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/22 16:18:36 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/09/26 06:26:48 xtraeme Exp $
 
 SHA1 (kvirc-3.0.0-beta2.tar.bz2) = cf2c348598ba15fdcc2e471cbbeb026339db64dc
 Size (kvirc-3.0.0-beta2.tar.bz2) = 2197822 bytes
-SHA1 (patch-aa) = 16f9ec2561e602270ec6b559396b1729f939478e
+SHA1 (patch-aa) = 96680d7694a9e3f9313a15b3aa8d5c95342ef3f6

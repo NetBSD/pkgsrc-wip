@@ -1,13 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/09/22 16:18:36 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2003/09/26 06:26:48 xtraeme Exp $
 
---- src/modules/snd/libkvisnd.cpp.orig	Sat Dec 14 20:30:41 2002
-+++ src/modules/snd/libkvisnd.cpp
-@@ -49,7 +49,7 @@
+--- src/modules/snd/libkvisnd.cpp.orig	2003-09-25 19:57:14.000000000 +0200
++++ src/modules/snd/libkvisnd.cpp	2003-09-25 19:58:19.000000000 +0200
+@@ -49,7 +49,13 @@
  	#ifdef COMPILE_OSS_SUPPORT
  		#include <fcntl.h>
  		#include <sys/ioctl.h>
--		#include <linux/soundcard.h>
++#ifdef __Linux__
+ 		#include <linux/soundcard.h>
++#elif defined(__FreeBSD__) && (__FreeBSD_version >= 500000)
++		#include <sys/soundcard.h>
++#else
 +		#include <soundcard.h>
++#endif
  		#ifdef COMPILE_AUDIOFILE_SUPPORT
  			#include <audiofile.h>
  		#endif //COMPILE_AUDIOFILE_SUPPORT
