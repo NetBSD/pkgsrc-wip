@@ -1,12 +1,8 @@
 - Cleanup the Makefile.
 
-- Depend on gnome1-dirs and change the PLIST to behave properly.
-
 - Test the package... I don't have the time to build all GNOME1 stuff now.
 
 - Review dependancies, just to be sure they are all ok WRT versions.
-
-- Check if it works fine without USE_GNU_GETTEXT.
 
 - Try to replace USE_X11BASE with USE_X11, and see if the program behaves
   properly (without xpkgwedge)... I don't know if this is possible, as
