@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/29 20:52:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/13 19:57:42 ppostma Exp $
 #
 
-DISTNAME=		ucarp-0.6
+DISTNAME=		ucarp-0.8
 CATEGORIES=		net
 MASTER_SITES=		http://www.pureftpd.org/ucarp/
 EXTRACT_SUFX=		.tar.bz2

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/06/13 19:57:43 ppostma Exp $
+
+--- src/ucarp.h.orig	2004-05-08 19:38:18.000000000 +0200
++++ src/ucarp.h	2004-06-13 21:47:27.000000000 +0200
+@@ -51,6 +51,8 @@
+ #include <poll.h>
+ #include <pcap.h>
+ 
++#include <limits.h>
++
+ #include "mysnprintf.h"
+ #include "crypto.h"
+ #ifndef USE_SYSTEM_CRYPT_SHA1
