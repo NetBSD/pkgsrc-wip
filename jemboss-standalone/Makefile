@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/18 22:29:18 daprice Exp $
 #
 
 DISTNAME=		EMBOSS-2.9.0
@@ -10,7 +10,6 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.emboss.org/
 COMMENT=	  	Standalone Interface for EMBOSS
 
-DEPENDS+=               emboss-base-2.9.0:../../wip/emboss-base
 DEPENDS+=		emboss-java>=0.0.3:../../wip/emboss-java
 DEPENDS+=       	jakarta-servletapi-[0-9]*:../../www/jakarta-servletapi
 DEPENDS+=	 	xerces-j>=1.2.0:../../textproc/xerces-j
@@ -39,7 +38,6 @@ CONFIGURE_ARGS+=	--with-thread=linux
 
 post-extract:
 	${CP} ${FILESDIR}/jemboss ${WRKSRC}/jemboss/
-
 
 pre-configure:
 	${SED} -e 's:@PKG_JAVA_HOME@:${PKG_JAVA_HOME}:' \
@@ -72,7 +70,7 @@ pre-configure:
 		${WRKSRC}/jemboss/jemboss > \
 		${WRKSRC}/jemboss/jemboss.bak
 	${MV}	${WRKSRC}/jemboss/jemboss.bak \
-		${WRKSRC}/jemboss/jemboss		
+		${WRKSRC}/jemboss/jemboss
 	${MV} ${WRKSRC}/jemboss/Makefile.in.bak ${WRKSRC}/jemboss/Makefile.in
 	${SED} -e 's|@LIB@|-Wl,-R${PREFIX}/lib|' \
 		${WRKSRC}/configure > ${WRKSRC}/configure.bak
@@ -87,7 +85,6 @@ post-install:
 #	${MV} ${WRKSRC}/jemboss/lib/axis/axis.jar ${PREFIX}/lib/java/axis.jar
 #	${MV} ${WRKSRC}/jemboss/lib/jsse.jar ${PKG_JAVA_HOME}/lib/jsse.jar
 #	${MV} ${WRKSRC}/jemboss/lib/jalview.jar ${PKG}/share/EMBOSS/jemboss/lib/jalview.jar
-
 
 .include "../../wip/emboss-base/buildlink3.mk"
 .include "../../wip/jalview/buildlink3.mk"
