@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/07 02:29:20 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/07 06:46:17 jeremy-c-reed Exp $
 
 .include "Makefile.common"
 
@@ -8,15 +8,6 @@ COMMENT=	The Linux kernel
 BUILD_DEPENDS+=		linux-module-init-tools-[0-9]*:../../wip/linux-module-init-tools
 # This means that old linux-modutils aren't available for other kernel
 #BUILD_DEPENDS+=	linux-modutils-[0-9]*:../../wip/linux-modutils
-
-# oldconfig is for regenerating after is appended too
-do-configure:
-	cd ${WRKSRC} && \
-	yes "" | ${GMAKE} config && \
-	${CAT} ${FILESDIR}/extra-configs >> .config && \
-	yes "" | ${GMAKE} oldconfig && \
-	${MV} ${WRKSRC}/.config ${WRKSRC}/.config.moved && \
-	${SED} -e '2c# Linux kernel .config configuration used for the ${PKGNAME} package.' ${WRKSRC}/.config.moved > ${WRKSRC}/.config
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} bzImage && \
