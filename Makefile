@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1620 2005/01/15 21:18:56 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1620 2005/01/15 21:18:56 thomasklausner Exp $
+# $Id: Makefile,v 1.1621 2005/01/15 21:35:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1621 2005/01/15 21:35:58 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -202,7 +202,7 @@ SUBDIR+=	ezbounce
 SUBDIR+=	fakenes
 SUBDIR+=	fbpanel
 SUBDIR+=	festival-gaim
-SUBDIR+=	ffmepg-devel
+SUBDIR+=	ffmpeg-devel
 SUBDIR+=	firebird
 SUBDIR+=	firefox-wrapper
 SUBDIR+=	firehose
@@ -337,6 +337,7 @@ SUBDIR+=	java-asm
 SUBDIR+=	java-bcel
 SUBDIR+=	java-charva
 SUBDIR+=	java-crimson
+SUBDIR+=	java-frozenbubble
 SUBDIR+=	java-getopt
 SUBDIR+=	java-gnucrypto
 SUBDIR+=	java-gnujaf
@@ -515,6 +516,9 @@ SUBDIR+=	mtrack
 SUBDIR+=	muine
 SUBDIR+=	multisync
 SUBDIR+=	multisync-backup
+SUBDIR+=	multisync-ldap
+SUBDIR+=	multisync-opie
+SUBDIR+=	multisync-palm
 SUBDIR+=	multisync-syncml
 SUBDIR+=	mupen64
 SUBDIR+=	mupen64-base
@@ -821,6 +825,7 @@ SUBDIR+=	smlnj-current
 SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
+SUBDIR+=	snark
 SUBDIR+=	snes9express
 SUBDIR+=	socket++
 SUBDIR+=	songwrite
