@@ -1,2 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/21 18:28:38 cjep Exp $
-sbin/scponly
+@comment $NetBSD: PLIST,v 1.2 2004/01/10 17:28:31 cjep Exp $
+bin/scponly
+etc/scponly/debuglevel
+man/man8/scponly.8
+@dirrm etc/scponly

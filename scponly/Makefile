@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/10 17:28:31 cjep Exp $
 # FreeBSD Id: ports/shells/scponly/Makefile,v 1.1 2002/09/10 22:18:46 obraun Exp
 
-DISTNAME=	scponly-3.7
+DISTNAME=	scponly-3.9
 CATEGORIES=	shells
 MASTER_SITES=	http://www.sublimation.org/scponly/
 EXTRACT_SUFX=	.tgz
@@ -12,10 +12,7 @@ COMMENT=	Tiny shell which only permits scp and sftp
 
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
-PKG_SHELL=	${PREFIX}/sbin/scponly
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/scponly ${PREFIX}/sbin
+PKG_SHELL=	${PREFIX}/bin/scponly
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
