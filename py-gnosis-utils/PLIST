@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/27 17:24:50 marc Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/02/23 12:34:29 marc Exp $
 ${PYSITELIB}/MANIFEST
 ${PYSITELIB}/README
 ${PYSITELIB}/gnosis/README
@@ -128,9 +128,16 @@ ${PYSITELIB}/gnosis/util/sql2dtd.pyc
 ${PYSITELIB}/gnosis/util/sql2dtd.pyo
 ${PYSITELIB}/gnosis/util/sql2xml_sample.xml.txt
 ${PYSITELIB}/gnosis/util/test.xml
+${PYSITELIB}/gnosis/util/test/funcs.py
+${PYSITELIB}/gnosis/util/test/funcs.pyc
+${PYSITELIB}/gnosis/util/test/funcs.pyo
+${PYSITELIB}/gnosis/util/test/mixed.xml
 ${PYSITELIB}/gnosis/util/test/test_data2attr.py
 ${PYSITELIB}/gnosis/util/test/test_data2attr.pyc
 ${PYSITELIB}/gnosis/util/test/test_data2attr.pyo
+${PYSITELIB}/gnosis/util/test/test_introspect.py
+${PYSITELIB}/gnosis/util/test/test_introspect.pyc
+${PYSITELIB}/gnosis/util/test/test_introspect.pyo
 ${PYSITELIB}/gnosis/util/test/test_noinit.py
 ${PYSITELIB}/gnosis/util/test/test_noinit.pyc
 ${PYSITELIB}/gnosis/util/test/test_noinit.pyo
@@ -160,6 +167,7 @@ ${PYSITELIB}/gnosis/xml/objectify/_printer.pyc
 ${PYSITELIB}/gnosis/xml/objectify/_printer.pyo
 ${PYSITELIB}/gnosis/xml/objectify/doc/AUTHOR
 ${PYSITELIB}/gnosis/xml/objectify/doc/COPYRIGHT
+${PYSITELIB}/gnosis/xml/objectify/doc/GOTCHAS
 ${PYSITELIB}/gnosis/xml/objectify/doc/HISTORY
 ${PYSITELIB}/gnosis/xml/objectify/doc/HOWTO
 ${PYSITELIB}/gnosis/xml/objectify/doc/THANKS_TO
@@ -185,7 +193,7 @@ ${PYSITELIB}/gnosis/xml/objectify/test/test_inject.py
 ${PYSITELIB}/gnosis/xml/objectify/test/test_inject.pyc
 ${PYSITELIB}/gnosis/xml/objectify/test/test_inject.pyo
 ${PYSITELIB}/gnosis/xml/objectify/test/testns.xml
-${PYSITELIB}/gnosis/xml/pickle/PyObjects.dtd
+${PYSITELIB}/gnosis/xml/pickle/PyObject.dtd
 ${PYSITELIB}/gnosis/xml/pickle/__init__.py
 ${PYSITELIB}/gnosis/xml/pickle/__init__.pyc
 ${PYSITELIB}/gnosis/xml/pickle/__init__.pyo
@@ -270,6 +278,9 @@ ${PYSITELIB}/gnosis/xml/pickle/test/test_gzfile.pyo
 ${PYSITELIB}/gnosis/xml/pickle/test/test_init.py
 ${PYSITELIB}/gnosis/xml/pickle/test/test_init.pyc
 ${PYSITELIB}/gnosis/xml/pickle/test/test_init.pyo
+${PYSITELIB}/gnosis/xml/pickle/test/test_misc.py
+${PYSITELIB}/gnosis/xml/pickle/test/test_misc.pyc
+${PYSITELIB}/gnosis/xml/pickle/test/test_misc.pyo
 ${PYSITELIB}/gnosis/xml/pickle/test/test_mixin.py
 ${PYSITELIB}/gnosis/xml/pickle/test/test_mixin.pyc
 ${PYSITELIB}/gnosis/xml/pickle/test/test_mixin.pyo
@@ -333,6 +344,50 @@ ${PYSITELIB}/gnosis/xml/pickle/util/_flags.pyo
 ${PYSITELIB}/gnosis/xml/pickle/util/_util.py
 ${PYSITELIB}/gnosis/xml/pickle/util/_util.pyc
 ${PYSITELIB}/gnosis/xml/pickle/util/_util.pyo
+${PYSITELIB}/gnosis/xml/relax/README
+${PYSITELIB}/gnosis/xml/relax/__init__.py
+${PYSITELIB}/gnosis/xml/relax/__init__.pyc
+${PYSITELIB}/gnosis/xml/relax/__init__.pyo
+${PYSITELIB}/gnosis/xml/relax/cardinality.rnc
+${PYSITELIB}/gnosis/xml/relax/cardinality.rng
+${PYSITELIB}/gnosis/xml/relax/clark.html
+${PYSITELIB}/gnosis/xml/relax/conv08.rnc
+${PYSITELIB}/gnosis/xml/relax/conv08.rng
+${PYSITELIB}/gnosis/xml/relax/conv09.rng
+${PYSITELIB}/gnosis/xml/relax/curious.dtd
+${PYSITELIB}/gnosis/xml/relax/curious.xml
+${PYSITELIB}/gnosis/xml/relax/lex.py
+${PYSITELIB}/gnosis/xml/relax/lex.pyc
+${PYSITELIB}/gnosis/xml/relax/lex.pyo
+${PYSITELIB}/gnosis/xml/relax/patron-2.rng
+${PYSITELIB}/gnosis/xml/relax/patron-i1.xml
+${PYSITELIB}/gnosis/xml/relax/patron-i2.xml
+${PYSITELIB}/gnosis/xml/relax/patron-i3.xml
+${PYSITELIB}/gnosis/xml/relax/patron-v1.xml
+${PYSITELIB}/gnosis/xml/relax/patron-v2.xml
+${PYSITELIB}/gnosis/xml/relax/patron.rnc
+${PYSITELIB}/gnosis/xml/relax/patron.rng
+${PYSITELIB}/gnosis/xml/relax/patron.xsd
+${PYSITELIB}/gnosis/xml/relax/regextest.rnc
+${PYSITELIB}/gnosis/xml/relax/regextest.xml
+${PYSITELIB}/gnosis/xml/relax/res08.rnc
+${PYSITELIB}/gnosis/xml/relax/res08.rng
+${PYSITELIB}/gnosis/xml/relax/res09.rng
+${PYSITELIB}/gnosis/xml/relax/rnc2rng
+${PYSITELIB}/gnosis/xml/relax/rnc_tokenize.py
+${PYSITELIB}/gnosis/xml/relax/rnc_tokenize.pyc
+${PYSITELIB}/gnosis/xml/relax/rnc_tokenize.pyo
+${PYSITELIB}/gnosis/xml/relax/rnctree.py
+${PYSITELIB}/gnosis/xml/relax/rnctree.pyc
+${PYSITELIB}/gnosis/xml/relax/rnctree.pyo
+${PYSITELIB}/gnosis/xml/relax/spectest.xml
+${PYSITELIB}/gnosis/xml/relax/split.xsl
+${PYSITELIB}/gnosis/xml/relax/testSuite.rng
+${PYSITELIB}/gnosis/xml/relax/xmlcat
+${PYSITELIB}/gnosis/xml/relax/xsdtest.rnc
+${PYSITELIB}/gnosis/xml/relax/xsdtest.rng
+${PYSITELIB}/gnosis/xml/relax/xsdtest.xml
+${PYSITELIB}/gnosis/xml/relax/xsdtest.xsl
 ${PYSITELIB}/gnosis/xml/validity/__init__.py
 ${PYSITELIB}/gnosis/xml/validity/__init__.pyc
 ${PYSITELIB}/gnosis/xml/validity/__init__.pyo
@@ -352,6 +407,7 @@ ${PYSITELIB}/gnosis/xml/xmlcat.py
 ${PYSITELIB}/gnosis/xml/xmlcat.pyc
 ${PYSITELIB}/gnosis/xml/xmlcat.pyo
 @dirrm ${PYSITELIB}/gnosis/xml/validity
+@dirrm ${PYSITELIB}/gnosis/xml/relax
 @dirrm ${PYSITELIB}/gnosis/xml/pickle/util
 @dirrm ${PYSITELIB}/gnosis/xml/pickle/test
 @dirrm ${PYSITELIB}/gnosis/xml/pickle/parsers
