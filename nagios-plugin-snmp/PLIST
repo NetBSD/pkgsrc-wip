@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 00:34:23 marmfield Exp $
+libexec/nagios/check_hpjd
+libexec/nagios/check_ifoperstatus
+libexec/nagios/check_ifstatus
+libexec/nagios/check_snmp
