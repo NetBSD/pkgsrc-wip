@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2004/01/25 02:23:34 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/01 18:52:01 minskim Exp $
 #
 
 DISTNAME=		libX11-6.2.1
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://freedesktop.org/~xlibs/dist/
+MASTER_SITES=		http://freedesktop.org/~xlibs/release/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://www.freedesktop.org/Software/X11
+HOMEPAGE=		http://xlibs.freedesktop.org/Software/X11
 COMMENT=		Base X libraries from freedesktop.org
 
 CONFLICTS+=		XFree86-libs-[0-9]*
