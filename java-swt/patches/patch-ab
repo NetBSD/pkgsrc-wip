@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2004/04/10 15:02:21 poppnk Exp $
+$NetBSD: patch-ab,v 1.3 2005/01/15 18:45:46 poppnk Exp $
 --- make_gtk.mak.orig	2003-03-17 12:30:04.000000000 +0000
 +++ make_gtk.mak	2004-04-10 16:10:32.000000000 +0000
 @@ -21,10 +21,10 @@
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.2 2004/04/10 15:02:21 poppnk Exp $
  # Your system may have these in a different place.
  #    IVE_HOME   - IBM's version of Java (J9)
 -IVE_HOME   = /bluebird/teamswt/swt-builddir/ive
-+IVE_HOME   = /usr/pkg/java/kaffe
++IVE_HOME   = @PKG_JVM_HOME@
  #IVE_HOME   = /opt/IBMvame1.4/ive
  
 -JAVA_JNI=$(IVE_HOME)/bin/include

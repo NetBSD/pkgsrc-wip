@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/04/10 15:03:19 poppnk Exp $
+$NetBSD: distinfo,v 1.3 2005/01/15 18:45:45 poppnk Exp $
 
-SHA1 (swt-2.1.2-linux-gtk.zip) = 519e45a712cbf56f6dbd586a4674cfb8473a915e
-Size (swt-2.1.2-linux-gtk.zip) = 1622215 bytes
+SHA1 (swt-2.1.3-linux-gtk.zip) = 27ff6de84be3e15db180103b06e28b24799194ec
+Size (swt-2.1.3-linux-gtk.zip) = 1624024 bytes
 SHA1 (patch-aa) = 23616c17c0bbe9a0953e0a4102d5c03ccafbbdc6
-SHA1 (patch-ab) = d4213a5711015a5845e4bec159394507842d8ca6
+SHA1 (patch-ab) = 0fb926a4f59d3f50ee01af03a43c4f504b3ee460
 SHA1 (patch-ac) = 07adedd016b323ab52e4dedfa945d5007498ae87

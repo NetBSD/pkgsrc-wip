@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2004/05/08 13:57:55 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/15 18:45:45 poppnk Exp $
 #
 
-DISTNAME=	swt-2.1.2-linux-gtk
-PKGNAME=	java-swt-2.1.2
+DISTNAME=	swt-2.1.3-linux-gtk
+PKGNAME=	java-swt-2.1.3
 CATEGORIES=	lang
-MASTER_SITES=	http://download2.eclipse.org/downloads/drops/R-2.1.2-200311030802/
+MASTER_SITES=	http://download.eclipse.org/downloads/drops/R-2.1.3-200403101828/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pancake@phreaker.net
