@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1511 2004/10/23 23:43:54 lexort Exp $
-# $NetBSD: Makefile,v 1.1511 2004/10/23 23:43:54 lexort Exp $
+# $Id: Makefile,v 1.1512 2004/10/24 14:22:48 lexort Exp $
+# $NetBSD: Makefile,v 1.1512 2004/10/24 14:22:48 lexort Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -103,7 +103,6 @@ SUBDIR+=	dasm
 SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dclib
-SUBDIR+=	dcraw
 SUBDIR+=	debian_base
 SUBDIR+=	debian_glib
 SUBDIR+=	debian_gtk
@@ -668,6 +667,7 @@ SUBDIR+=	qn-x11
 SUBDIR+=	qstat
 SUBDIR+=	quagga-devel
 SUBDIR+=	rar3
+SUBDIR+=	rawphoto
 SUBDIR+=	rc.subr
 SUBDIR+=	realvnc
 SUBDIR+=	regexxer
