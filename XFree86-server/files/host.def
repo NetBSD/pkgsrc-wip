@@ -1,9 +1,6 @@
 
 /*
  * XFree86 packages for pkgsrc system
- *
- * $Id: host.def,v 1.2 2003/07/23 21:47:30 xtraeme Exp $
- *
  */
 
 #define ProjectRoot PREFIX
