@@ -1,16 +1,23 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/15 20:26:18 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/14 19:42:24 daprice Exp $
 #
 
-.include "../emboss/Makefile.common"
 .include "../emboss-base/Makefile.common"
+.include "../emboss/Makefile.common"
 
 DISTNAME=	MSE-1.0.0
 PKGNAME=	emboss-mse-1.0.0
-COMMENT=	Multiple Sequence Editor for EMBOSS
-USE_NCURSES=    yes
-DIST_SUBDIR=		emboss-2.9.0/mse-1.0.0-20041107
 
-DIST_SUBDIR=		${PKG_DISTFILES_DIR}/mse-1.0.0-20041107
+COMMENT=	Multiple Sequence Editor for EMBOSS
+
+#ncurses required because:
+#mse.c: In function `Initscr':
+#mse.c:148: dereferencing pointer to incomplete type
+#mse.c:149: dereferencing pointer to incomplete type
+#mse.c 148  __Cols=Display->_maxx;
+#mse.c 149  __Rows=Display->_maxy;
+USE_NCURSES=    	yes
+DIST_SUBDIR=		emboss/mse-1.0.0-20041107
+BUILD_TARGET=		#empty
 
 pre-configure:
 	${SED} -e 's|@EMBOSSLIB@|${PREFIX}/lib|' \
@@ -21,9 +28,6 @@ pre-configure:
 	${SED} -e 's|@NCURSES@|-L${PREFIX}/lib -lncurses|' \
 		${WRKSRC}/h/Makefile.in > ${WRKSRC}/h/Makefile.in.bak
 	${MV} ${WRKSRC}/h/Makefile.in.bak ${WRKSRC}/h/Makefile.in
-
-do-build:
-	cd ${WRKSRC} && ${MAKE}
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
