@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/10 10:23:56 timbishop Exp $
-#
+# $NetBSD: Makefile,v 1.6 2004/03/14 16:02:30 timbishop Exp $
 
 DISTNAME=	libstatgrab-0.9
 CATEGORIES=	devel
@@ -16,8 +15,11 @@ DIST_SUBDIR=	i-scream
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libstatgrab.pc.in
+USE_BUILDLINK3=	yes
 
 CONFIGURE_ARGS+=	--disable-examples
+
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(WITHOUT_STATGRAB)
 CONFIGURE_ARGS+=	--disable-statgrab
@@ -25,6 +27,7 @@ PLIST_SUBST+=		STATGRAB="@comment "
 .else
 PLIST_SUBST+=		STATGRAB=""
 .endif
+BUILD_DEFS+=		WITHOUT_STATGRAB
 
 .if defined(WITHOUT_SAIDAR)
 CONFIGURE_ARGS+=	--disable-saidar
@@ -32,5 +35,6 @@ PLIST_SUBST+=		SAIDAR="@comment "
 .else
 PLIST_SUBST+=		SAIDAR=""
 .endif
+BUILD_DEFS+=		WITHOUT_SAIDAR
 
 .include "../../mk/bsd.pkg.mk"
