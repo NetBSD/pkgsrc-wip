@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/26 14:26:22 hfath Exp $
+lib/stunnel.so
+man/man8/stunnel.8
+sbin/stunnel
