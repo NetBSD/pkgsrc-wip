@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/03 02:46:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/03 03:18:25 xtraeme Exp $
 #
 
 DISTNAME=	DirectFB-0.9.18
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www.directfb.org/download/DirectFB/
 MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://www.directfb.org/
 COMMENT=	Thin library that provides hardware graphics acceleration
+
+#XXX DirectFB doesn't work on NetBSD yet at least with Nvidia ...
+ONLY_FOR_PLATFORM=     Linux-*-*
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
