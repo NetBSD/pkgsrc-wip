@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/27 22:39:49 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/29 17:33:40 marc Exp $
 #
 
 DISTNAME=		postgresql_autodoc-1.10
@@ -13,7 +13,6 @@ COMMENT=		Documentation system for PostgreSQL
 
 DEPENDS=		p5-DBD-postgresql-*:../../databases/p5-DBD-postgresql
 DEPENDS+=		p5-HTML-Template-*:../../www/p5-HTML-Template
-DEPENDS+=		docbook-4*:../../textproc/docbook
 
 USE_PERL5=		yes
 USE_GMAKE=		yes
@@ -21,7 +20,5 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--datadir=${PREFIX}/share/${PKGBASE}
-
-.include "../../graphics/graphviz/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
