@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/08 12:55:08 pulahti Exp $
+$NetBSD: patch-aa,v 1.2 2004/09/18 08:25:37 pulahti Exp $
 
---- config/targets	4 Nov 2003 17:50:53 -0000	1.17
-+++ config/targets	27 Dec 2003 13:37:52 -0000
-@@ -38,7 +38,7 @@
+--- config/targets.orig	2004-08-04 22:05:00.000000000 +0000
++++ config/targets	2004-08-05 19:30:22.000000000 +0000
+@@ -39,7 +39,7 @@
  
  # build ML-Burg
  #
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/08 12:55:08 pulahti Exp $
  
  # pre-compile and install the remaining components of the SML/NJ library
  # (everything except smlnj-lib.cm, aka Util, itself)
-@@ -47,7 +47,7 @@
+@@ -48,7 +48,7 @@
  
  # pre-compile and install CM "portable graph" utility library
  #
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/08 12:55:08 pulahti Exp $
  
  # pre-compile and install Concurrent ML, which is a library for message-passing
  # concurrency.
-@@ -62,7 +62,7 @@
+@@ -63,7 +63,7 @@
  # pre-compile and install eXene, which is a library for X-Windows programming.
  # EXene requires CML.
  #
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/08 12:55:08 pulahti Exp $
  
  # pre-compile (certain) parts of MLRISC that are not already part of the SML/NJ
  # compiler itself
-@@ -72,7 +72,7 @@
+@@ -73,7 +73,7 @@
  # pre-compile and install the C-Kit, which is a library for parsing and
  # type-checking C programs
  #
@@ -38,18 +38,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/08 12:55:08 pulahti Exp $
  
  # pre-compile and install the ML-NLFFI Library, which is the core of
  # a new foreign function interface (where "foreign" functions are
-@@ -81,7 +81,7 @@
- # the new FFI.
- # This preview release currently works only under X86/Linux.
+@@ -83,7 +83,7 @@
+ # This preview release currently works under X86/Linux, Sparc/Solaris,
+ # PPC/MacOSX, and X86/Win32.
  #
 -#request ml-nlffi-lib
 +request ml-nlffi-lib
  
  # build ML-NLFFI-Gen, a program generator tool used in conjunction with
  # the new "NLFFI" foreign function interface.  The tool generates ML
-@@ -89,13 +89,13 @@
- # (Requires ckit!)
- # This preview release currently works only under X86/Linux.
+@@ -92,13 +92,13 @@
+ # This preview release currently works under X86/Linux, Sparc/Solaris,
+ # PPC/MacOSX, and X86/Win32.
  #
 -#request ml-nlffigen
 +request ml-nlffigen
@@ -63,7 +63,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/08 12:55:08 pulahti Exp $
  
  # Build and install the 'nowhere' program translator.
  # This tool translates programs with conditional patterns (where clauses) 
-@@ -103,7 +103,7 @@
+@@ -106,7 +106,7 @@
  # (bad) documentation.
  # (Requires the mlrisc-tools library!)
  #
