@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/27 03:21:37 poppnk Exp $
+sbin/${PKGNAME}-dg
+sbin/${PKGNAME}-hosts
+sbin/${PKGNAME}-vc
+share/doc/${PKGNAME}/INSTALL
+share/doc/${PKGNAME}/README.axfr
+share/doc/${PKGNAME}/README.charset
+share/doc/${PKGNAME}/README.generic-rr
+@dirrm share/doc/${PKGNAME}
