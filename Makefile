@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1472 2004/09/18 10:44:57 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1472 2004/09/18 10:44:57 xtraeme Exp $
+# $Id: Makefile,v 1.1473 2004/09/20 23:01:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1473 2004/09/20 23:01:52 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -813,7 +813,6 @@ SUBDIR+=	vm-pop3d
 SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
 SUBDIR+=	vorbisgain
-SUBDIR+=	vpnc
 SUBDIR+=	vtk
 SUBDIR+=	vtk-data
 SUBDIR+=	vtk-docs
