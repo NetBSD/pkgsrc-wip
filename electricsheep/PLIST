@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2004/12/26 08:25:52 dyeske Exp $
+bin/electricsheep
+bin/convert-flame
+bin/mpeg2dec_onroot
+bin/hqi-flame
+bin/anim-flame
+bin/pick-flame
+share/electricsheep/electricsheep-frown.tif
+share/electricsheep/electricsheep-smile.tif
+share/electricsheep/electricsheep-splash-0.tif
+share/electricsheep/electricsheep-splash-1.tif
+@dirrm share/electricsheep

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2004/12/26 08:25:52 dyeske Exp $
+
+SHA1 (electricsheep-2.5.tar.gz) = 409b5b26288bb8f742858980239001034e6862bd
+Size (electricsheep-2.5.tar.gz) = 618906 bytes
+SHA1 (patch-aa) = 5acffcd5953ef7db01b5c50408569559bde65b9c
