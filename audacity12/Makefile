@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/06 14:58:55 mpasternak Exp $
-# $Id: Makefile,v 1.1.1.1 2004/03/06 14:58:55 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/06 16:23:09 mpasternak Exp $
+# $Id: Makefile,v 1.2 2004/03/06 16:23:09 mpasternak Exp $
 
 DISTNAME=	audacity-src-1.2.0
 PKGNAME=	audacity-1.2.0
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audacity/}
 MAINTAINER=	dotz@irc.pl
 HOMEPAGE=	http://audacity.sourceforge.net/
 COMMENT=	Audio editor
+
+DEPENDS+=	zip>=0.0:../../archivers/zip
 
 WRKSRC=			${WRKDIR}/audacity-src-1.2.0
 USE_BUILDLINK3=		# defined
