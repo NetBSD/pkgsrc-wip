@@ -1,2 +1,1 @@
 Convert the legacy amavisd.sh to proper rc.d-style script.
-amavisd-new 20030616-p9 is out.
