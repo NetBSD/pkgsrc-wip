@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.549 2003/10/16 02:27:00 cetrox Exp $
-# $NetBSD: Makefile,v 1.549 2003/10/16 02:27:00 cetrox Exp $
+# $Id: Makefile,v 1.550 2003/10/16 10:01:27 marc Exp $
+# $NetBSD: Makefile,v 1.550 2003/10/16 10:01:27 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -367,6 +367,7 @@ SUBDIR+=	py-libpcap
 SUBDIR+=	py-spark
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-twisted
+SUBDIR+=	py-zsi
 SUBDIR+=	py23-html-docs
 SUBDIR+=	pysite
 SUBDIR+=	q3-urbanterror
