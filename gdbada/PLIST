@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/17 15:02:39 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/28 11:38:39 johnrshannon Exp $
 gdbada/bin/gdb
 gdbada/include/ansidecl.h
 gdbada/include/bfd.h
@@ -16,22 +16,6 @@ gdbada/info/bfd.info-7
 gdbada/info/bfd.info-8
 gdbada/info/bfd.info-9
 gdbada/info/gdb.info
-gdbada/info/gdb.info-1
-gdbada/info/gdb.info-10
-gdbada/info/gdb.info-11
-gdbada/info/gdb.info-12
-gdbada/info/gdb.info-13
-gdbada/info/gdb.info-14
-gdbada/info/gdb.info-15
-gdbada/info/gdb.info-16
-gdbada/info/gdb.info-2
-gdbada/info/gdb.info-3
-gdbada/info/gdb.info-4
-gdbada/info/gdb.info-5
-gdbada/info/gdb.info-6
-gdbada/info/gdb.info-7
-gdbada/info/gdb.info-8
-gdbada/info/gdb.info-9
 gdbada/info/gdbint.info
 gdbada/info/gdbint.info-1
 gdbada/info/gdbint.info-2
@@ -58,7 +42,9 @@ gdbada/lib/libopcodes.la
 gdbada/lib/libopcodes.so
 gdbada/man/man1/gdb.1
 @dirrm gdbada/man/man1
+@dirrm gdbada/man
 @dirrm gdbada/lib
 @dirrm gdbada/info
 @dirrm gdbada/include
 @dirrm gdbada/bin
+@dirrm gdbada

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/17 02:55:22 blef Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/28 11:38:39 johnrshannon Exp $
 CVS_DATE=	Thu Nov 20 01:28:29 UTC 2003
 
 DISTNAME=	gdbada-5.3
@@ -10,9 +10,8 @@ COMMENT=        GNAT GDB : An Ada 95 Debugger
 
 GDB_SUBPREFIX=	gdbada
 GDB_PREFIX=	${PREFIX}/${GDB_SUBPREFIX}
-#USE_GCC3=		YES
 GNU_CONFIGURE=          YES
-USE_BUILDLINK2=         YES
+USE_BUILDLINK3=         YES
 USE_PKGLOCALEDIR=       YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
@@ -77,7 +76,6 @@ do-extract:
 	cd ${DISTDIR}/${DIST_SUBDIR}/gdb-5.3 ; ${PAX} -pe -rwt . ${WRKSRC}
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/pthread.buildlink2.mk"
-.include "../../devel/libtool/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
