@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1289 2004/05/22 02:39:22 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1289 2004/05/22 02:39:22 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1290 2004/05/22 04:58:15 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1290 2004/05/22 04:58:15 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -686,6 +686,7 @@ SUBDIR+=	svgalib
 SUBDIR+=	sysklogd
 SUBDIR+=	syslog-ng
 SUBDIR+=	sysvinit
+SUBDIR+=	taskbar
 SUBDIR+=	tcc
 SUBDIR+=	tcllib
 SUBDIR+=	tendra
