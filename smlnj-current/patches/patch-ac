@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/02/08 12:55:08 pulahti Exp $
+
+--- config/_arch-n-opsys.orig
++++ config/_arch-n-opsys
+@@ -106,11 +106,13 @@
+   NetBSD)
+     OPSYS=netbsd
+     HEAP_OPSYS=bsd
+-    case `uname -m` in
++    case `uname -p` in
+       i386) ARCH=x86;;
+       i486) ARCH=x86;;
+       i586) ARCH=x86;;
+       i686) ARCH=x86;;
++      powerpc) ARCH=ppc;;
++      sparc) ARCH=sparc;;
+       *) exit 1;;
+     esac
+     ;;

@@ -1,0 +1,15 @@
+$NetBSD: patch-as,v 1.1.1.1 2004/02/08 12:55:08 pulahti Exp $
+
+--- src/runtime/include/asm-base.h	16 May 2003 16:59:29 -0000	1.8
++++ src/runtime/include/asm-base.h	25 Nov 2003 17:46:32 -0000
+@@ -138,8 +138,8 @@
+ #    define WORD(W)     WORD32(W)
+ #  else
+ #    define CGLOBAL(ID)	  GLOBAL CSYM(ID)
+-#    define LABEL(ID)	  CONCAT(ID,:)
+-#    define IMMED(ID)	  CONCAT($,ID)
++#    define LABEL(ID)	  ID:
++#    define IMMED(ID)	  $ID
+ #    define ALIGN4        .align 2
+ #    define WORD(W)       .word W
+ #    define TEXT          .text
