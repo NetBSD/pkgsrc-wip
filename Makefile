@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.582 2003/10/30 10:09:07 xtraeme Exp $
-# $NetBSD: Makefile,v 1.582 2003/10/30 10:09:07 xtraeme Exp $
+# $Id: Makefile,v 1.583 2003/10/30 11:12:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.583 2003/10/30 11:12:19 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -79,6 +79,7 @@ SUBDIR+=	cjk-latex-japanese
 SUBDIR+=	cjk-latex-korean
 SUBDIR+=	cops
 SUBDIR+=	cvsd
+SUBDIR+=	ccze
 SUBDIR+=	cyrus-imapd22
 SUBDIR+=	dancer-ircd
 SUBDIR+=	darcnes-svgalib
