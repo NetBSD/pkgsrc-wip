@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2003/11/29 19:39:13 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/30 17:02:50 mpasternak Exp $
 bin/i586-mingw32-cpp
 bin/i586-mingw32-gcc
 bin/i586-mingw32-gcc-3.3.1
@@ -62,4 +62,3 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gcc.mo
 @dirrm lib/gcc-lib/i586-mingw32/3.3.1/install-tools
 @dirrm lib/gcc-lib/i586-mingw32/3.3.1/include
 @dirrm lib/gcc-lib/i586-mingw32/3.3.1
-@dirrm i586-mingw32/bin
