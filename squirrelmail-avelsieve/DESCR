@@ -1,0 +1,4 @@
+Sieve script management plugin for SquirrelMail.  Allows the user to
+edit sieve scripts for placement on the server. (sieve is a mail
+processing language specified by RFC and provided as part of the Cyrus
+Imap suite.)
