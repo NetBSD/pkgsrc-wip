@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1491 2004/10/11 15:58:02 minskim Exp $
-# $NetBSD: Makefile,v 1.1491 2004/10/11 15:58:02 minskim Exp $
+# $Id: Makefile,v 1.1492 2004/10/12 16:03:04 ianharding Exp $
+# $NetBSD: Makefile,v 1.1492 2004/10/12 16:03:04 ianharding Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -28,6 +28,8 @@ SUBDIR+=	amarok
 SUBDIR+=	amsn
 SUBDIR+=	and
 SUBDIR+=	aols-postgres
+SUBDIR+=	aols-freetds
+SUBDIR+=	aols-openssl
 SUBDIR+=	aolserver
 SUBDIR+=	aolserver4
 SUBDIR+=	ap-bunzip2
