@@ -1,4 +1,4 @@
-# $Id: win32.pkg.mk,v 1.3 2003/12/01 02:26:12 mpasternak Exp $
+# $Id: win32.pkg.mk,v 1.4 2003/12/01 03:33:20 mpasternak Exp $
 # (C) 2003 Michal Pasternak <dotz@irc.pl>
 #
 #
@@ -21,6 +21,10 @@ GNU_CONFIGURE_PREFIX=	${CROSSBASE}/i586-pc-mingw32
 ## MACHINE_GNU_PLATFORM=i586-pc-mingw32
 # here, because of trouble "C compiler cannot execute test executable"
 CONFIGURE_ARGS+=	--build=i586-pc-mingw32
+CONFIGURE_ARGS+=	--program-transform-name="s|$$|.exe"
+
+USE_CROSSBASE=	yes
+PLIST_SUBST=	MINGWTARGET=${MINGWTARGET}
 
 PATH:=		${CROSSBASE}/i586-pc-mingw32/bin/:${PATH}
 CC=		${CROSSBASE}/i586-pc-mingw32/bin/gcc
@@ -29,7 +33,12 @@ LD=		${CROSSBASE}/i586-pc-mingw32/bin/ld
 AR=		${CROSSBASE}/i586-pc-mingw32/bin/ar
 AS=		${CROSSBASE}/i586-pc-mingw32/bin/as
 NM=		${CROSSBASE}/i586-pc-mingw32/bin/nm
+
+.ifdef MINGW_STATIC
+LIBTOOL=	${CROSSBASE}/i586-pc-mingw32/bin/libtool-static
+.else
 LIBTOOL=	${CROSSBASE}/i586-pc-mingw32/bin/libtool
+.endif
 
 BUILD_DEPENDS+=	mingw-c>=3.1.1:../../wip/mingw-c
 BUILD_DEPENDS+=	mingw-binutils>=2.14.90:../../wip/mingw-binutils
