@@ -1,14 +1,11 @@
-$Id: TODO,v 1.1.1.1 2003/05/23 23:23:00 bubuchka Exp $
+$Id: TODO,v 1.2 2003/11/13 11:12:18 bubuchka Exp $
 
-- The vmac.1.gz file just a preformatted plain text, not a roff(1)
-  source. Thus, it installed into man/man1 as vmac.0, not vmac.1,
-  so as call manpage from latter one causes to overprocessing by
-  roff.
+- The vMac may be built using Motif GUI, GTK GUI, or even without
+  any GUI, but GTK at this moment have broken support in ./configure
+  script.
 
 - The Gemuator ROM Board doesn't supported yet on all platforms
   due to missing libc5 or glibc (both have an ioperm() and some
   other functions called from Gemulator_LoadROM() in gemulator.c).
   Moreover, on some systems it's not really needed.  I feel the
   #if directives (in patch-aa) should be exacted.
-
-- Remove dependency on Motif GUI or import it as vmac-motifgui.
