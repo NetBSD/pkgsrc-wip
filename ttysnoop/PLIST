@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/24 13:56:07 poppnk Exp $
+sbin/ttysnoop
+sbin/ttysnoops
+share/examples/ttysnoop/snooptab.dist
+share/man/man8/ttysnoop.8
+@dirrm share/examples/ttysnoop

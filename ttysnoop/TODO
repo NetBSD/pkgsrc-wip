@@ -1,0 +1,3 @@
+set perms to /var/spool/ttysnoop
+
+test if it works. I was unable to set up a telnet daemon with ttysnoop inside :/

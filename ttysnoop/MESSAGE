@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/11/24 13:56:07 poppnk Exp $
+
+You must edit ${PKG_SYSCONFDIR} adding this line:
+
+	"*   socket    login    /bin/login"
+
+After that, modify the inetd.conf adding the 
+'-L ${PREFIX}/ttysnoops' to the telnet daemon.
+
+===========================================================================
