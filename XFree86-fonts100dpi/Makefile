@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/07/24 04:30:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/24 04:34:33 blef Exp $
 
 DISTNAME=	X430src-4
-PKGNAME=	XFree86-fonts100dpi-${XFREE86_VERSION}
+PKGNAME=	XFree86-fonts100dpi-${XF_VER}
 WRKSRC=		${WRKDIR}/xc/fonts/bdf/100dpi
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
