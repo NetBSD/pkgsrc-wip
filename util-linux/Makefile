@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/01 10:19:11 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/01 10:59:29 jeremy-c-reed Exp $
 
 DISTNAME=	util-linux-2.11z
 CATEGORIES=	sysutils
@@ -13,25 +13,25 @@ COMMENT=	Miscellaneous essential utilities for Linux systems
 
 ONLY_FOR_PLATFORM=	Linux-*-* # Uses Linux kernel headers
 
-USE_BUILDLINK2=	YES
-USE_PKGINSTALL=	YES
-USE_GNU_TOOLS+=	make
-GNU_CONFIGURE=	YES
-MAKE_ENV+=	DESTDIR=${PREFIX}
-MAKE_ENV+=	ETCDIR=${PREFIX}/share/examples/util-linux
-MAKE_ENV+=	FDPRMFILE=${PKG_SYSCONFDIR}/fdprm
-MAKE_ENV+=	INFODIR=${INFO_DIR}
+USE_BUILDLINK3=		YES
+USE_PKGINSTALL=		YES
+USE_GNU_TOOLS+=		make
+GNU_CONFIGURE=		YES
+MAKE_ENV+=		DESTDIR=${PREFIX}
+MAKE_ENV+=		ETCDIR=${PREFIX}/share/examples/util-linux
+MAKE_ENV+=		FDPRMFILE=${PKG_SYSCONFDIR}/fdprm
+MAKE_ENV+=		INFODIR=${PREFIX}/${INFO_DIR}
 
-INFO_FILES=	ipc.info
+INFO_FILES=		ipc.info
 
 CONF_FILES=	${PREFIX}/share/examples/util-linux/fdprm ${PKG_SYSCONFDIR}/fdprm
 
-PLIST_SRC=	${PKGDIR}/PLIST
+PLIST_SRC=		${PKGDIR}/PLIST
 # XXX let maintainer know of your architecture if this breaks
-PLIST_SRC+=	${PKGDIR}/PLIST.${MACHINE_ARCH}
+PLIST_SRC+=		${PKGDIR}/PLIST.${MACHINE_ARCH}
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 # zlib used for cramfs
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
