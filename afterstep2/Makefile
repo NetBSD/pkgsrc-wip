@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 11:36:46 hsaliak Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/03 14:01:32 hsaliak Exp $
 #
 
 DISTNAME=	AfterStep-2.00.00
@@ -18,8 +18,6 @@ USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_PERL5=		run
 USE_X11=		YES
-
-INSTALLATION_DIRS=	bin include man/man1 man/man3 share
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
