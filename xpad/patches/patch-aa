@@ -1,19 +1,12 @@
-$NetBSD: patch-aa,v 1.2 2003/07/15 22:57:45 blef Exp $
+$NetBSD: patch-aa,v 1.3 2003/09/02 02:20:28 xtraeme Exp $
 
---- src/sm.c.orig	Wed Mar 26 11:11:23 2003
-+++ src/sm.c	Tue Jul 15 15:51:36 2003
-@@ -25,12 +25,13 @@
+--- src/sm.c.orig	2003-09-02 04:09:39.000000000 +0200
++++ src/sm.c	2003-09-02 04:10:05.000000000 +0200
+@@ -25,6 +25,7 @@
  #include "main.h"
  #include <X11/SM/SMlib.h>
  #include <stdio.h>	/* only for printf */
-+#include <sys/types.h>	/* for getuid and getpwuid */
++#include <sys/types.h> /* for getuid and getpwuid */
  #include <sys/select.h>	/* for select */
  #include <stdlib.h>	/* for free */
  #include <string.h>	/* for strlen */
- #include <unistd.h>	/* for getuid */
- #include <pwd.h>	/* for getpwuid */
--#include <sys/types.h>	/* for getuid and getpwuid */
-+#include <sys/time.h>
- 
- static SmcConn xpad_sm_conn = NULL;
- static int xpad_interact_style;
