@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/04/03 15:09:28 cubidou Exp $
+
+--- server/Makefile.orig	2003-02-21 22:11:27.000000000 +0100
++++ server/Makefile
+@@ -93,7 +93,7 @@ else
+ endif
+ 
+ install:
+-	$(INSTALL) -c $(STRIP) -m $(BINMODE) gkrellmd $(SINSTALLDIR)/$(PACKAGE_D)
++	$(INSTALL) -c $(STRIP) -m $(BINMODE) -g $(BINGROUP) gkrellmd $(SINSTALLDIR)/$(PACKAGE_D)
+ 	$(INSTALL) -d -m $(MANDIRMODE) $(SMANDIR)
+ 	$(INSTALL) -c -m $(MANMODE) ../gkrellmd.1 $(SMANDIR)/$(PACKAGE_D).1
+ 
+@@ -102,8 +102,8 @@ install_darwin:
+ 
+ install_netbsd:
+ 	$(MAKE) install
+-	chgrp kmem $(SINSTALLDIR)/$(PACKAGE_D)
+-	chmod g+s $(SINSTALLDIR)/$(PACKAGE_D)
++#	chgrp kmem $(SINSTALLDIR)/$(PACKAGE_D)
++#	chmod g+s $(SINSTALLDIR)/$(PACKAGE_D)
+ 
+ install_openbsd:
+ 	$(MAKE) install

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/03 15:09:28 cubidou Exp $
+bin/gkrellmd
+etc/rc.d/gkrellmd
+man/man1/gkrellmd.1
