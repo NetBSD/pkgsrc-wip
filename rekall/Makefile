@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/17 02:56:48 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/26 02:19:06 blef Exp $
 #
 
 DISTNAME=		rekall-2.2.0-beta0
@@ -11,15 +11,16 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.rekallrevealed.org/packages/
 COMMENT=		KDE database frontend
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV=		"PYTHONBIN=${PYTHONBIN}"
 
-.include "../../wip/xbsql/buildlink2.mk"
-.include "../../databases/mysql4-client/buildlink2.mk"
-.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../../wip/xbsql/buildlink3.mk"
+.include "../../databases/mysql4-client/buildlink3.mk"
+.include "../../databases/postgresql-lib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../x11/kdelibs3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:23:30 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/26 02:20:35 blef Exp $
 
 DISTNAME=	koffice-i18n-de-1.2.1
 WRKSRC=         ${WRKDIR}/koffice-i18n-de
@@ -10,9 +10,9 @@ MAINTAINER=     recht@NetBSD.org
 HOMEPAGE=       http://www.koffice.org/
 COMMENT=	Language pack for KOffice
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 
-.include "../../misc/koffice/buildlink2.mk"
+.include "../../misc/koffice/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
