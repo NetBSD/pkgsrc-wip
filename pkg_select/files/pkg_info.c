@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_info.c,v 1.7 2005/03/18 10:50:04 imilh Exp $ 
+ * $Id: pkg_info.c,v 1.8 2005/04/03 09:05:30 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -246,6 +246,9 @@ info_win(WINDOW *win, char *pkg, char *path)
 				  "view package message", line_index, 2);
 			line_index++;
 		}
+		wprint_kb(win, "[p]", "view package files list", 
+			  line_index, 2);
+		line_index++;
 
 		if (!in_ftp) {
 			wprint_kb(win, "[e]", "show package dependancies",
@@ -286,6 +289,12 @@ info_win(WINDOW *win, char *pkg, char *path)
 			break;
 		case 'v':
 			ret = show_pkgfile(win, path, "MESSAGE");
+			if (!ret)
+				/* quit was asked */
+				return(ret);
+			break;
+		case 'p':
+			ret = show_pkgfile(win, path, "PLIST");
 			if (!ret)
 				/* quit was asked */
 				return(ret);

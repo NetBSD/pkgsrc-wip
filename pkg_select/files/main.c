@@ -29,15 +29,15 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: main.c,v 1.6 2005/03/18 10:50:04 imilh Exp $ 
+ * $Id: main.c,v 1.7 2005/04/03 09:05:30 imilh Exp $ 
  */
 
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
-static char *rcsid = "$Id: main.c,v 1.6 2005/03/18 10:50:04 imilh Exp $";
+static char *rcsid = "$Id: main.c,v 1.7 2005/04/03 09:05:30 imilh Exp $";
 #else
-__RCSID("$Id: main.c,v 1.6 2005/03/18 10:50:04 imilh Exp $");
+__RCSID("$Id: main.c,v 1.7 2005/04/03 09:05:30 imilh Exp $");
 #endif
 #endif
 
@@ -281,6 +281,7 @@ main_loop(Etree **etree, char **list, const char *basepath, const int where)
 	int c, tmp, page;
 	Etree **etree_sav;
 	HL_datas hl;
+	WINDOW *popup;
 	char wpath[MAXLEN], tstr[MAXLEN], *p, **pkglist;
 
 	/* init highlight index */
@@ -380,11 +381,18 @@ main_loop(Etree **etree, char **list, const char *basepath, const int where)
 			/* show popup, p gets result */
 			p = getstr_popup("pkgfind", 5, 30, 
 					   (LINES / 2) - 2, (COLS / 2) - 15);
+			/* show waiting popup */
+			popup = mid_info_popup("pkgfind", "searching...");
+			wrefresh(popup);
 			/* split p into malloc'ed char * pieces */
 			pkglist = pkgfind(pkgsrcbase, p, 0);
+			/* destroy wait popup */
+			clr_del_win(popup);
 			XFREE(p);
-			if (pkglist == NULL)
+			if (pkglist == NULL) {
+				(void) mid_getch_popup("pkgfind", NO_PKG_FOUND);
 				break;
+			}
 			/* non dir-listing loop */
 			nodir_loop(pkgsrcbase, pkglist);
 			/* back from pkgfind browsing, free the pkglist */
@@ -505,6 +513,10 @@ main(int argc, char *argv[])
 			/* NOTREACHED */
 		}
 
+        argc -= optind;
+        argv += optind;
+	/* end of command line handlig */
+
 	/* confpath given to command line or NULL*/
 	if (confpath == NULL) {
 		conf.confpath = CONFPATH;
@@ -533,10 +545,6 @@ main(int argc, char *argv[])
 
 	if (console_output == T_TRUE)
 		conf.shell_output = T_TRUE;
-
-        argc -= optind;
-        argv += optind;
-	/* end of command line handlig */
 
 	/* default basepath */
 	strncpy(basepath, pkgsrcbase, MAXLEN);
