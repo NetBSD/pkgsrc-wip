@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/11/08 11:51:30 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/11/23 00:19:42 mpasternak Exp $
 bin/ckeygen
 bin/conch
 bin/im
@@ -71,6 +71,9 @@ ${PYSITELIB}/twisted/conch/realm.pyo
 ${PYSITELIB}/twisted/conch/ssh/__init__.py
 ${PYSITELIB}/twisted/conch/ssh/__init__.pyc
 ${PYSITELIB}/twisted/conch/ssh/__init__.pyo
+${PYSITELIB}/twisted/conch/ssh/agent.py
+${PYSITELIB}/twisted/conch/ssh/agent.pyc
+${PYSITELIB}/twisted/conch/ssh/agent.pyo
 ${PYSITELIB}/twisted/conch/ssh/asn1.py
 ${PYSITELIB}/twisted/conch/ssh/asn1.pyc
 ${PYSITELIB}/twisted/conch/ssh/asn1.pyo
@@ -86,6 +89,9 @@ ${PYSITELIB}/twisted/conch/ssh/connection.pyo
 ${PYSITELIB}/twisted/conch/ssh/factory.py
 ${PYSITELIB}/twisted/conch/ssh/factory.pyc
 ${PYSITELIB}/twisted/conch/ssh/factory.pyo
+${PYSITELIB}/twisted/conch/ssh/filetransfer.py
+${PYSITELIB}/twisted/conch/ssh/filetransfer.pyc
+${PYSITELIB}/twisted/conch/ssh/filetransfer.pyo
 ${PYSITELIB}/twisted/conch/ssh/forwarding.py
 ${PYSITELIB}/twisted/conch/ssh/forwarding.pyc
 ${PYSITELIB}/twisted/conch/ssh/forwarding.pyo
@@ -99,6 +105,7 @@ ${PYSITELIB}/twisted/conch/ssh/service.py
 ${PYSITELIB}/twisted/conch/ssh/service.pyc
 ${PYSITELIB}/twisted/conch/ssh/service.pyo
 ${PYSITELIB}/twisted/conch/ssh/session.py
+${PYSITELIB}/twisted/conch/ssh/session.py.orig
 ${PYSITELIB}/twisted/conch/ssh/session.pyc
 ${PYSITELIB}/twisted/conch/ssh/session.pyo
 ${PYSITELIB}/twisted/conch/ssh/sexpy.py
@@ -107,6 +114,7 @@ ${PYSITELIB}/twisted/conch/ssh/sexpy.pyo
 ${PYSITELIB}/twisted/conch/ssh/transport.py
 ${PYSITELIB}/twisted/conch/ssh/transport.pyc
 ${PYSITELIB}/twisted/conch/ssh/transport.pyo
+${PYSITELIB}/twisted/conch/ssh/transport.py~
 ${PYSITELIB}/twisted/conch/ssh/ttymodes.py
 ${PYSITELIB}/twisted/conch/ssh/ttymodes.pyc
 ${PYSITELIB}/twisted/conch/ssh/ttymodes.pyo
@@ -1041,6 +1049,9 @@ ${PYSITELIB}/twisted/test/test_ethernet.pyo
 ${PYSITELIB}/twisted/test/test_explorer.py
 ${PYSITELIB}/twisted/test/test_explorer.pyc
 ${PYSITELIB}/twisted/test/test_explorer.pyo
+${PYSITELIB}/twisted/test/test_extensions.py
+${PYSITELIB}/twisted/test/test_extensions.pyc
+${PYSITELIB}/twisted/test/test_extensions.pyo
 ${PYSITELIB}/twisted/test/test_factories.py
 ${PYSITELIB}/twisted/test/test_factories.pyc
 ${PYSITELIB}/twisted/test/test_factories.pyo
@@ -1206,6 +1217,9 @@ ${PYSITELIB}/twisted/test/test_ssl.pyo
 ${PYSITELIB}/twisted/test/test_strports.py
 ${PYSITELIB}/twisted/test/test_strports.pyc
 ${PYSITELIB}/twisted/test/test_strports.pyo
+${PYSITELIB}/twisted/test/test_task.py
+${PYSITELIB}/twisted/test/test_task.pyc
+${PYSITELIB}/twisted/test/test_task.pyo
 ${PYSITELIB}/twisted/test/test_tcp.py
 ${PYSITELIB}/twisted/test/test_tcp.pyc
 ${PYSITELIB}/twisted/test/test_tcp.pyo
@@ -1371,6 +1385,7 @@ ${PYSITELIB}/twisted/web/trp.pyo
 ${PYSITELIB}/twisted/web/twcgi.py
 ${PYSITELIB}/twisted/web/twcgi.pyc
 ${PYSITELIB}/twisted/web/twcgi.pyo
+${PYSITELIB}/twisted/web/twcgi.py~
 ${PYSITELIB}/twisted/web/util.py
 ${PYSITELIB}/twisted/web/util.pyc
 ${PYSITELIB}/twisted/web/util.pyo
@@ -1473,40 +1488,40 @@ ${PYSITELIB}/twisted/xish/xpath.pyo
 ${PYSITELIB}/twisted/xish/xpathparser.py
 ${PYSITELIB}/twisted/xish/xpathparser.pyc
 ${PYSITELIB}/twisted/xish/xpathparser.pyo
-@dirrm ${PYSITELIB}/twisted/application
-@dirrm ${PYSITELIB}/twisted/conch/insults
-@dirrm ${PYSITELIB}/twisted/conch/ssh
-@dirrm ${PYSITELIB}/twisted/conch/ui
-@dirrm ${PYSITELIB}/twisted/conch
-@dirrm ${PYSITELIB}/twisted/cred
-@dirrm ${PYSITELIB}/twisted/enterprise
-@dirrm ${PYSITELIB}/twisted/flow
-@dirrm ${PYSITELIB}/twisted/im
-@dirrm ${PYSITELIB}/twisted/internet/serialport
-@dirrm ${PYSITELIB}/twisted/internet
-@dirrm ${PYSITELIB}/twisted/lore
-@dirrm ${PYSITELIB}/twisted/mail
-@dirrm ${PYSITELIB}/twisted/manhole/ui
-@dirrm ${PYSITELIB}/twisted/manhole
-@dirrm ${PYSITELIB}/twisted/names
-@dirrm ${PYSITELIB}/twisted/news
-@dirrm ${PYSITELIB}/twisted/pair
-@dirrm ${PYSITELIB}/twisted/persisted/journal
-@dirrm ${PYSITELIB}/twisted/persisted
-@dirrm ${PYSITELIB}/twisted/protocols/gps
-@dirrm ${PYSITELIB}/twisted/protocols/jabber
-@dirrm ${PYSITELIB}/twisted/protocols/mice
-@dirrm ${PYSITELIB}/twisted/protocols
-@dirrm ${PYSITELIB}/twisted/python
-@dirrm ${PYSITELIB}/twisted/runner
-@dirrm ${PYSITELIB}/twisted/scripts
-@dirrm ${PYSITELIB}/twisted/spread/ui
-@dirrm ${PYSITELIB}/twisted/spread
-@dirrm ${PYSITELIB}/twisted/tap
-@dirrm ${PYSITELIB}/twisted/test
-@dirrm ${PYSITELIB}/twisted/trial
+@dirrm ${PYSITELIB}/twisted/xish
+@dirrm ${PYSITELIB}/twisted/words
 @dirrm ${PYSITELIB}/twisted/web/woven
 @dirrm ${PYSITELIB}/twisted/web
-@dirrm ${PYSITELIB}/twisted/words
-@dirrm ${PYSITELIB}/twisted/xish
+@dirrm ${PYSITELIB}/twisted/trial
+@dirrm ${PYSITELIB}/twisted/test
+@dirrm ${PYSITELIB}/twisted/tap
+@dirrm ${PYSITELIB}/twisted/spread/ui
+@dirrm ${PYSITELIB}/twisted/spread
+@dirrm ${PYSITELIB}/twisted/scripts
+@dirrm ${PYSITELIB}/twisted/runner
+@dirrm ${PYSITELIB}/twisted/python
+@dirrm ${PYSITELIB}/twisted/protocols/mice
+@dirrm ${PYSITELIB}/twisted/protocols/jabber
+@dirrm ${PYSITELIB}/twisted/protocols/gps
+@dirrm ${PYSITELIB}/twisted/protocols
+@dirrm ${PYSITELIB}/twisted/persisted/journal
+@dirrm ${PYSITELIB}/twisted/persisted
+@dirrm ${PYSITELIB}/twisted/pair
+@dirrm ${PYSITELIB}/twisted/news
+@dirrm ${PYSITELIB}/twisted/names
+@dirrm ${PYSITELIB}/twisted/manhole/ui
+@dirrm ${PYSITELIB}/twisted/manhole
+@dirrm ${PYSITELIB}/twisted/mail
+@dirrm ${PYSITELIB}/twisted/lore
+@dirrm ${PYSITELIB}/twisted/internet/serialport
+@dirrm ${PYSITELIB}/twisted/internet
+@dirrm ${PYSITELIB}/twisted/im
+@dirrm ${PYSITELIB}/twisted/flow
+@dirrm ${PYSITELIB}/twisted/enterprise
+@dirrm ${PYSITELIB}/twisted/cred
+@dirrm ${PYSITELIB}/twisted/conch/ui
+@dirrm ${PYSITELIB}/twisted/conch/ssh
+@dirrm ${PYSITELIB}/twisted/conch/insults
+@dirrm ${PYSITELIB}/twisted/conch
+@dirrm ${PYSITELIB}/twisted/application
 @dirrm ${PYSITELIB}/twisted

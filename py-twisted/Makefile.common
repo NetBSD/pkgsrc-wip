@@ -1,0 +1,18 @@
+# $NetBSD: Makefile.common,v 1.1 2003/11/23 00:19:42 mpasternak Exp $
+#
+
+TWISTED_VERSION=	1.1.1rc1
+
+DISTNAME?=		Twisted-${TWISTED_VERSION}
+CATEGORIES?=		devel net
+MASTER_SITES?=		http://twisted.sourceforge.net/ \
+			http://twistedmatrix.com/downloads/
+EXTRACT_SUFX?=		.tar.bz2
+
+MAINTAINER?=		dotz@irc.pl
+HOMEPAGE?=		http://www.twistedmatrix.com/
+COMMENT?=		Framework for writing networked applications
+
+DISTINFO_FILE?=		${.CURDIR}/../py-twisted/distinfo
+COMMON_FILESDIR?=	${.CURDIR}/../py-twisted/files
+PATCHDIR?=		${.CURDIR}/../py-twisted/patches
