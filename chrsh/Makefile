@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/19 18:07:42 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/13 20:02:54 daprice Exp $
 #
 
 DISTNAME=	chrsh
 PKGNAME=	chrsh-1.0.2
-WRKSRC=         ${WRKDIR}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.aarongifford.com/computers/
 EXTRACT_SUFX=	.c
 
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://www.aarongifford.com/computers/chrsh.html
-COMMENT=	chroot jail wrapper for ordinary Unix shells
+COMMENT=	Chroot jail wrapper for ordinary Unix shells
 
+WRKSRC=         ${WRKDIR}
 USE_BUILDLINK3=	YES
 EXTRACT_CMD=	${CP} $${extract_file} .
 
-RCS_HEAD=	$$NetBSD: Makefile,v 1.1.1.1 2004/11/19 18:07:42 daprice Exp $$
+RCS_HEAD=	$$NetBSD: Makefile,v 1.2 2004/12/13 20:02:54 daprice Exp $$
 
 do-build:
 	cd ${WRKSRC} && \
