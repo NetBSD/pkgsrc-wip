@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/01 16:40:26 ianharding Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/08 21:01:00 ianharding Exp $
 #
 
 DISTNAME=		aolserver-4.01-src
@@ -10,7 +10,7 @@ MAINTAINER=		iharding@destinydata.com
 HOMEPAGE=		http://www.aolserver.com/
 COMMENT=		America Online's open source web server
 
-MAKE_FLAGS=		NSHOME=${WRKSRC}
+MAKE_FLAGS=		NSHOME=${WRKSRC} TCL_CC="gcc -nostartfiles"
 CONFIGURE_ARGS+=	--with-tcl=${LOCALBASE}/lib
 
 WRKSRC=			${WRKDIR}/${PKGNAME}
@@ -18,24 +18,24 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
-OWN_DIRS=		?
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 PTHREAD_OPTS+=  	require
 
-EGDIR=                  ${PREFIX}/share/examples/nsd
-PKG_SYSCONFSUBDIR=      nsd
 NSD_LOGDIR=		/var/log/nsd
+NSD_PIDDIR=		/var/run/nsd
 NSD_USER?=		nsadmin
 NSD_GROUP?=		nsadmin
 
 PKG_GROUPS=		${NSD_GROUP}
-PKG_USERS=		${NSD_USER} ${NSD_GROUP}::AOLServer\\ User::${SH}
+PKG_USERS=		${NSD_USER} ${NSD_GROUP}
 
-CONF_FILES=		${EGDIR}/nsd.tcl ${PKG_SYSCONFDIR}/nsd.tcl
+EGDIR=                  ${PREFIX}/share/examples/nsd
+CONF_FILES=		${EGDIR}/sample-config.tcl ${PKG_SYSCONFDIR}/nsd.tcl
 RCD_SCRIPTS=		nsd
 
-OWN_DIRS=		${NSD_LOGDIR}
+OWN_DIRS_PERMS=		${NSD_LOGDIR} ${NSD_USER} ${NSD_GROUP} 740
+OWN_DIRS_PERMS+=	${NSD_PIDDIR} ${NSD_USER} ${NSD_GROUP} 740
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
