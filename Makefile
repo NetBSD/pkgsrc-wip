@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1091 2004/03/19 02:22:40 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1091 2004/03/19 02:22:40 xtraeme Exp $
+# $Id: Makefile,v 1.1092 2004/03/19 05:16:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1092 2004/03/19 05:16:54 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -131,6 +131,8 @@ SUBDIR+=	faster-configure
 SUBDIR+=	festival-gaim
 SUBDIR+=	firebird
 SUBDIR+=	fixesext
+SUBDIR+=	flightgear
+SUBDIR+=	flightgear-base
 SUBDIR+=	florist
 SUBDIR+=	fluxconf
 SUBDIR+=	fluxspace
