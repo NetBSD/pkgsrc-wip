@@ -1,0 +1,4 @@
+$NetBSD: TODO,v 1.1 2003/12/16 22:51:25 adrian_p Exp $
+
+Not tested on -current
+patch-ab needs work as it should follow ${SSLBASE}

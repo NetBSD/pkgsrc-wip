@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2003/12/16 22:51:25 adrian_p Exp $
+
+--- configure.orig	Tue Dec 16 22:44:05 2003
++++ configure	Tue Dec 16 22:44:40 2003
+@@ -141,7 +141,7 @@
+ fi
+ 
+ echo
+-XDEFINES=""
++XDEFINES="-I/usr/include/openssl"
+ XLIBS=""
+ XLIBPATHS=""
+ XIPATHS=""
