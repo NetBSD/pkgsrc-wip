@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 18:32:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/28 08:29:44 jeremy-c-reed Exp $
 # FreeBSD Id: ports/japanese/mplusfonts/Makefile,v 1.2 2003/01/15 14:42:22 nobutaka Exp
 
 DISTNAME=	mplus_fonts_J-1.0.4
@@ -7,7 +7,7 @@ CATEGORIES=	fonts japanese
 MASTER_SITES=	http://downloads.sourceforge.jp/mplus-fonts/2050/ \
 		http://wids.net/archive/mplusfonts/distfiles/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mplus-fonts.sourceforge.jp/
 COMMENT=	12x13 dots X11 kanji fonts with simple and readable design
 

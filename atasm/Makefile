@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 15:16:17 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/28 08:29:44 jeremy-c-reed Exp $
 #
 
 DISTNAME=	atasm103
@@ -7,7 +7,7 @@ CATEGORIES=	devel cross emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atasm/}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/atasm/
 COMMENT=	Cross-assembler for 6502 optimized to code for Atari 8 bit computers
 

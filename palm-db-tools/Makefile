@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 16:21:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/28 08:29:44 jeremy-c-reed Exp $
 #
 
 DISTNAME=	palm-db-tools-0_3_4
@@ -6,7 +6,7 @@ PKGNAME=	palm-db-tools-0.3.4
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=palm-db-tools/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://palm-db-tools.sourceforge.net
 COMMENT=	Tools to convert to/from Palm OS databases
 
