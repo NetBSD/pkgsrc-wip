@@ -1,0 +1,22 @@
+libGenome is a development library written in ANSI C++.
+It is known to compile on the following platforms:
+
+1. Linux using the gcc compiler
+2. Solaris using the gcc compiler
+3. Windows using Metrowerks CodeWarrior
+4. MacOS 9 using Metrowerks CodeWarrior
+5. OpenBSD using the gcc compiler
+6. Cygwin using the gcc compiler
+
+libGenome can access sequence data in several different file formats:
+
+1. Reads and writes Multi-FastA files, designated by a '.fas' file extension
+2. Reads and writes GenBank flat file database entries
+3. Reads DNAStar '.SEQ' file format
+4. Reads and writes raw sequence data
+5. Reads ABI file format
+ 
+libGenome can manipulate sequence data in the following ways: 
+Append, Truncate, Erase subsequences, Insert subsequences, Reverse, Complement,
+Ambiguity sensitive and insensitive comparison, Translate DNA to RNA, DNA to 
+Protein, RNA to DNA, RNA to Protein, and vice versa.

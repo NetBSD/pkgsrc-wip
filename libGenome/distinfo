@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/19 21:49:17 daprice Exp $
+
+SHA1 (libGenome-0.5.2.tar.gz) = eae372dd3970aef1e29220dca853a85264d53d7b
+Size (libGenome-0.5.2.tar.gz) = 981986 bytes
+SHA1 (patch-aa) = 8e930f7b0e1bea3c425f002c8c8ed1d38de6f82a

@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/19 21:49:17 daprice Exp $
+
+--- configure.orig	Thu Jun 12 16:50:50 2003
++++ configure
+@@ -409,7 +409,7 @@ exec 6>&1
+ #
+ # Initializations.
+ #
+-ac_default_prefix=/usr/local
++ac_default_prefix=${PREFIX}
+ ac_config_libobj_dir=.
+ cross_compiling=no
+ subdirs=
+@@ -429,7 +429,7 @@ PACKAGE_VERSION='0.5.2'
+ PACKAGE_STRING='libGenome 0.5.2'
+ PACKAGE_BUGREPORT=''
+ 
+-ac_default_prefix=/usr/local
++ac_default_prefix=${PREFIX}
+ # Factoring default headers for most tests.
+ ac_includes_default="\
+ #include <stdio.h>
