@@ -1,0 +1,12 @@
+This package does not build.
+
+- ${WRKSRC}/include/Makefile.global has a variable named TCL_CC that 
+  seems to be undefined so when a "module" tries to build, there is 
+  no compiler in the command line.  
+
+- Even after kludging that, there seems to be a thread library 
+  conflict.  I have pth installed, but even then, I thought it
+  was all supposed to Just Work now.
+
+- There are undoubtedly tons of mistakes here, but I want to get
+  it out there so someone smarter than me can work on it.
