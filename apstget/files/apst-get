@@ -305,11 +305,11 @@ do_install() {
 		fi
 		# Add new deps
 		cd ${PKGSRC_DIR}/${A}
-		if [ "${SKIP_LICENSES}" = "1" ];then
+		if [ "${SKIP_LICENSES}" = "1" ]; then
 		ACCEPTABLE_LICENSES="`cat Makefile | grep LICENSE \
-			|awk -F = '{ print $2 }'`"
+			| awk -F = '{ print $2 }' | awk '{ print $1 }'`"
 			MAKEFLAG="${MAKEFLAG} ACCEPTABLE_LICENSES=${ACCEPTABLE_LICENSES}"
-		echo "==> Skipping license: ${ACCEPTABLE_LICENSE}"
+		echo "==> Skipping license: ${ACCEPTABLE_LICENSES}"
 		fi
 		DEPS2=`${MAKE} ${MAKEFLAG} show-depends-dirs`
 		for B in ${DEPS2} ; do
