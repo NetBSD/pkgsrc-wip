@@ -3,13 +3,13 @@
 
 STAGE=$2
 
-TEXMFMAIN=@TEXMFMAIN@
+MAPDIR=@MAPDIR@
 
 case ${STAGE} in
     PRE-INSTALL)
 	;;
     POST-INSTALL)
-	updmap --enable Map wadalab.map
+	updmap --enable Map ${MAPDIR}/wadalab.map
 	;;
     *)
 	echo "Unexpected argument: ${STAGE}"
