@@ -1,1 +1,3 @@
 * Why isn't keyboard_plugin.so installed?
+
+  => We may have to create libXxf86misc.so
