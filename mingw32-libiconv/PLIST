@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/01 06:44:03 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/12/01 22:18:45 mpasternak Exp $
 ${MINGWTARGET}/bin/iconv.exe
 ${MINGWTARGET}/include/iconv.h
 ${MINGWTARGET}/include/libcharset.h
 ${MINGWTARGET}/include/localcharset.h
 ${MINGWTARGET}/lib/charset.alias
 ${MINGWTARGET}/lib/libcharset-1.dll
+${MINGWTARGET}/lib/libcharset.a
 ${MINGWTARGET}/lib/libcharset.la
 ${MINGWTARGET}/lib/libiconv-2.dll
+${MINGWTARGET}/lib/libiconv.a
 ${MINGWTARGET}/lib/libiconv.la
 ${MINGWTARGET}/share/doc/libiconv/iconv.1.html
 ${MINGWTARGET}/share/doc/libiconv/iconv.3.html
