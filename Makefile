@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.359 2003/08/03 16:53:46 amadeus_z Exp $
-# $NetBSD: Makefile,v 1.359 2003/08/03 16:53:46 amadeus_z Exp $
+# $Id: Makefile,v 1.360 2003/08/05 02:08:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.360 2003/08/05 02:08:20 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -33,6 +33,7 @@ SUBDIR+=	aolserver
 SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-frontpage
 SUBDIR+=	ap-ometer
+SUBDIR+=	ap2-xslt
 SUBDIR+=	argouml
 SUBDIR+=	artwiz-fonts
 SUBDIR+=	autoproject
