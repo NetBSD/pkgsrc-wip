@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/28 09:48:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/25 04:36:57 xtraeme Exp $
 #
 
 DISTNAME=	foobillard-2.8
@@ -17,12 +17,12 @@ USE_X11=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--enable-nvidia=no
-.include "../../devel/SDL/buildlink2.mk"
-.else
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--enable-glut
 .include "../../graphics/glut/buildlink2.mk"
+.else
+CONFIGURE_ARGS+=	--enable-nvidia=no
+.include "../../devel/SDL/buildlink2.mk"
 .endif
 
 .include "../../graphics/MesaLib/buildlink2.mk"
