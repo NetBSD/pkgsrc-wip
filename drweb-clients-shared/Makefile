@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/12 00:20:16 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/07 10:01:03 bubuchka Exp $
 
 DRW_CLIENT_NAME=	clients-shared
 
@@ -8,6 +8,9 @@ COMMENT=		Shared files of clients to DrWeb Daemon antivirus
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
+DRW_TEMPL_DIR=		${WRKSRC}/etc/templates/en
+
+# ATTENTION: the MIO (etc/mio) have it's own notification templates
 CONF_FILES=								\
 	${EGDIR}/admin-archive.msg ${PKG_SYSCONFDIR}/admin-archive.msg	\
 	${EGDIR}/admin-error.msg ${PKG_SYSCONFDIR}/admin-error.msg	\
@@ -32,15 +35,24 @@ do-install:
 
 	# --> Common configuration files
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/admin-archive.msg ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/admin-error.msg ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/admin-rule.msg ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/admin-virus.msg ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/rcpts-virus.msg ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/sender-archive.msg ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/sender-error.msg ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/sender-skip.msg ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/sender-virus.msg ${EGDIR}
+	${INSTALL_DATA} ${DRW_TEMPL_DIR}/admin_archive.msg		\
+		${EGDIR}/admin-archive.msg
+	${INSTALL_DATA} ${DRW_TEMPL_DIR}/admin_error.msg		\
+		${EGDIR}/admin-error.msg
+	${INSTALL_DATA} ${DRW_TEMPL_DIR}/admin_rule.msg			\
+		${EGDIR}/admin-rule.msg
+	${INSTALL_DATA} ${DRW_TEMPL_DIR}/admin_virus.msg		\
+		${EGDIR}/admin-virus.msg
+	${INSTALL_DATA} ${DRW_TEMPL_DIR}/rcpts_virus.msg		\
+		${EGDIR}/rcpts-virus.msg
+	${INSTALL_DATA} ${DRW_TEMPL_DIR}/sender_archive.msg		\
+		${EGDIR}/sender-archive.msg
+	${INSTALL_DATA} ${DRW_TEMPL_DIR}/sender_error.msg		\
+		${EGDIR}/sender-error.msg
+	${INSTALL_DATA} ${DRW_TEMPL_DIR}/sender_skip.msg		\
+		${EGDIR}/sender-skip.msg
+	${INSTALL_DATA} ${DRW_TEMPL_DIR}/sender_virus.msg		\
+		${EGDIR}/sender-virus.msg
 	${INSTALL_DATA} ${WRKSRC}/etc/addresses.conf ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/users.conf ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/viruses.conf ${EGDIR}

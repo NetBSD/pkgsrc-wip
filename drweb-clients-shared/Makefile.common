@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/01/27 03:42:38 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/04/07 10:01:03 bubuchka Exp $
 #
 # This is installation framework to various clients to DrWeb daemon
 # antivirus shiped by Dialogue Science
@@ -16,7 +16,7 @@
 #	.include "../../mk/bsd.pkg.mk"
 #    Note: the bsd.pkg.install.mk is already included by this file.
 
-DRW_CLMVER=		4.30.1
+DRW_CLMVER=		4.31
 #DRW_CLSUBVER=		# is not defined
 #DRW_CLSUBVERN=		# is not defined
 DRW_CLVER=		${DRW_CLMVER} # ${DRW_CLSUBVER:D-${DRW_CLSUBVER}}
@@ -28,11 +28,10 @@ PKG_FAIL_REASON= \
 	"The package (${PKGNAME}) in the following directory is"	\
 	"improperly configured or damaged:"				\
 	"    ${.CURDIR}"						\
-	"Please define DRW_CLIENT_NAME variable before and see the"	\
+	"Please define DRW_CLIENT_NAME variable before and look to the"	\
 	"drweb-clients-shared/Makefile.common and drweb/Makefile.common files."
 .endif
 
-# The DISTNAME must be changed when 4.30 will be released (again)
 DISTNAME=		drweb-clients-${DRW_CLVER}-sources
 PKGNAME=		drweb-${DRW_CLIENT_NAME}-${DRW_CLVERN}
 CATEGORIES=		wip security

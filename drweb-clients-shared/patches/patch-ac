@@ -1,16 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2003/11/22 23:24:37 bubuchka Exp $
+$NetBSD: patch-ac,v 1.4 2004/04/07 10:01:04 bubuchka Exp $
 
---- dw_options.c.orig	Fri Nov 21 14:27:17 2003
+--- dw_options.c.orig	2004-02-27 15:21:38.000000000 +0200
 +++ dw_options.c
-@@ -62,69 +62,61 @@
- #define PROG_NAME                   "drweb-courier"
- #define PROG_FULLNAME               "DrWeb Courier-MTA filter"
- #define PROG_NOTE                   "Note: filter will be started by Courier-MTA automatically after install"
--#define CONF_FNAME                  "drweb_courier.conf"
-+#define CONF_FNAME                  "drweb-courier.conf"
- #endif /* COURIER */
- 
- #if defined(DW_SENDMAIL)
+@@ -76,7 +76,7 @@ static const char rcsid[] = "$Id: dw_opt
  #define PROG_NAME                   "drweb-smf"
  #define PROG_FULLNAME               "DrWeb Sendmail Filter"
  #define PROG_NOTE                   ""
@@ -19,14 +11,16 @@ $NetBSD: patch-ac,v 1.3 2003/11/22 23:24:37 bubuchka Exp $
  #endif /* SENDMAIL */
  
  #if defined(DW_CGP)
- #define PROG_NAME                   "drweb-cgp"
- #define PROG_FULLNAME               "DrWeb Plug-in for CommuniGate Pro"
+@@ -84,7 +84,7 @@ static const char rcsid[] = "$Id: dw_opt
  #define PROG_NOTE                   "Note: plug-in will be started by CommuniGate Pro automatically"
+ #if defined(__UNIX_DW)
+ #define PROG_NAME                   "drweb-cgp"
 -#define CONF_FNAME                  "drweb_cgp.conf"
 +#define CONF_FNAME                  "drweb-cgp.conf"
- #endif /* CGP */
- 
- #if defined(DW_MIO)
+ #endif /* UNIX */
+ #if defined(__WIN32_DW)
+ #define PROG_NAME                   "drweb-cgp.exe"
+@@ -96,48 +96,40 @@ static const char rcsid[] = "$Id: dw_opt
  #define PROG_NAME                   "drweb-mio"
  #define PROG_FULLNAME               "DrWeb Plug-in for Mobico MIO Server"
  #define PROG_NOTE                   "Note: plug-in will be started by MIO automatically"
@@ -74,11 +68,20 @@ $NetBSD: patch-ac,v 1.3 2003/11/22 23:24:37 bubuchka Exp $
 -#define OS_SPEC_CONFNAME            "/opt/drweb/"CONF_FNAME
 -#endif /* FreeBSD */
 -#else /* EMX */
--#define OS_SPEC_CONFNAME            "./"CONF_FNAME
+-#define OS_SPEC_CONFNAME            "/emx/opt/drweb/etc/"CONF_FNAME
 -#endif /* EMX */
 -#define FHS_SPEC_CONFNAME           "/etc/drweb/"CONF_FNAME
 +#define OS_SPEC_CONFNAME            PKG_SYSCONFDIR"/"CONF_FNAME
 +#define FHS_SPEC_CONFNAME           "./"CONF_FNAME
  #endif /* UNIX */
- #if defined(__WIN32_DW)
- #define OS_SPEC_CONFNAME            ".\\"CONF_FNAME
+ 
+ #if !defined(SMFI_DRWEB_PATCHED)
+@@ -148,7 +140,7 @@ static const char rcsid[] = "$Id: dw_opt
+ 
+ #else /* SAMBA */
+ 
+-#define SMB_CONF_FILE               "/etc/drweb/smb_spider.conf"
++#define SMB_CONF_FILE               "/etc/drweb/smb-spider.conf"
+ 
+ #endif /* not SAMBA */
+ 
