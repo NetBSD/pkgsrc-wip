@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/30 14:30:01 mwdavies Exp $
+
+SHA1 (AdbeRdr70_linux_enu.tar.gz) = bb69e23971cff0a88874de425f3794881b1ca028
+RMD160 (AdbeRdr70_linux_enu.tar.gz) = 77a72ff1cf20e6e4de29f96d785ae9dc40908ab9
+Size (AdbeRdr70_linux_enu.tar.gz) = 40104508 bytes
+SHA1 (patch-aa) = ba20e9e2e8b7670d11466a9586774fd8c5e6bb6b

@@ -1,0 +1,2 @@
+Both this package and acroread5 install a bin/acroread.  Presumably this
+should be handled with the ALTERNATIVES stuff.
