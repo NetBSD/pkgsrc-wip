@@ -1,0 +1,93 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/12 15:08:53 mpasternak Exp $
+
+Remove stuff, that already has been done by slackware_glibc_solibs
+
+--- install/doinst.sh.orig	Fri Mar 12 15:53:46 2004
++++ install/doinst.sh
+@@ -16,37 +16,6 @@
+ # If we're on a running system we have to handle this _very_ carefully.  :-)
+ # The tricks involved here get trickier every time...
+ 
+-if [ -x /sbin/ldconfig -a -d /lib/incoming ]; then # swap on the fly
+-  # First create copies of the incoming libraries:
+-  ( cd lib/incoming
+-    for file in * ; do
+-      if [ ! -r ../${file}.incoming ]; then
+-        cp -a $file ../${file}.incoming
+-      fi
+-    done
+-  )
+-  # Then switch to them all at once:
+-  /sbin/ldconfig -l /lib/*.incoming 2> /dev/null
+-  # Finally, rename them and clean up:
+-  ( cd lib
+-    for file in *.incoming ; do
+-      rm -f `basename $file .incoming`
+-      cp -a $file `basename $file .incoming`
+-      /sbin/ldconfig -l `basename $file .incoming`
+-      rm -f $file
+-    done
+-  )
+-else # no ldconfig?  Good, it's safe to just jam it on home (and make links below):
+-  ( cd lib/incoming
+-    for file in * ; do
+-      cp -a $file ..
+-    done
+-  )
+-fi
+-
+-# Now, get rid of the temporary directory:
+-rm -rf lib/incoming
+-
+ # Add the default localtime link in /etc, if none exists:
+ if [ ! -L etc/localtime ]; then
+  ( cd etc ; rm -rf localtime )
+@@ -74,48 +43,6 @@ config() {
+ }
+ config etc/nscd.conf.new
+ 
+-# In case there's no ldconfig, make the links manually:
+-if [ ! -x /sbin/ldconfig ]; then
+-( cd lib ; rm -rf libnss_nis.so.2 )
+-( cd lib ; ln -sf libnss_nis-2.3.2.so libnss_nis.so.2 )
+-( cd lib ; rm -rf libm.so.6 )
+-( cd lib ; ln -sf libm-2.3.2.so libm.so.6 )
+-( cd lib ; rm -rf libnss_files.so.2 )
+-( cd lib ; ln -sf libnss_files-2.3.2.so libnss_files.so.2 )
+-( cd lib ; rm -rf libresolv.so.2 )
+-( cd lib ; ln -sf libresolv-2.3.2.so libresolv.so.2 )
+-( cd lib ; rm -rf libnsl.so.1 )
+-( cd lib ; ln -sf libnsl-2.3.2.so libnsl.so.1 )
+-( cd lib ; rm -rf libutil.so.1 )
+-( cd lib ; ln -sf libutil-2.3.2.so libutil.so.1 )
+-( cd lib ; rm -rf libnss_compat.so.2 )
+-( cd lib ; ln -sf libnss_compat-2.3.2.so libnss_compat.so.2 )
+-( cd lib ; rm -rf libthread_db.so.1 )
+-( cd lib ; ln -sf libthread_db-1.0.so libthread_db.so.1 )
+-( cd lib ; rm -rf libnss_hesiod.so.2 )
+-( cd lib ; ln -sf libnss_hesiod-2.3.2.so libnss_hesiod.so.2 )
+-( cd lib ; rm -rf libanl.so.1 )
+-( cd lib ; ln -sf libanl-2.3.2.so libanl.so.1 )
+-( cd lib ; rm -rf libcrypt.so.1 )
+-( cd lib ; ln -sf libcrypt-2.3.2.so libcrypt.so.1 )
+-( cd lib ; rm -rf libBrokenLocale.so.1 )
+-( cd lib ; ln -sf libBrokenLocale-2.3.2.so libBrokenLocale.so.1 )
+-( cd lib ; rm -rf ld-linux.so.2 )
+-( cd lib ; ln -sf ld-2.3.2.so ld-linux.so.2 )
+-( cd lib ; rm -rf libdl.so.2 )
+-( cd lib ; ln -sf libdl-2.3.2.so libdl.so.2 )
+-( cd lib ; rm -rf libnss_dns.so.2 )
+-( cd lib ; ln -sf libnss_dns-2.3.2.so libnss_dns.so.2 )
+-( cd lib ; rm -rf libpthread.so.0 )
+-( cd lib ; ln -sf libpthread-0.10.so libpthread.so.0 )
+-( cd lib ; rm -rf libnss_nisplus.so.2 )
+-( cd lib ; ln -sf libnss_nisplus-2.3.2.so libnss_nisplus.so.2 )
+-( cd lib ; rm -rf libc.so.6 )
+-( cd lib ; ln -sf libc-2.3.2.so libc.so.6 )
+-( cd lib ; rm -rf librt.so.1 )
+-( cd lib ; ln -sf librt-2.3.2.so librt.so.1 )
+-fi
+-
+ # More links:
+ ( cd usr/lib ; rm -rf libnss_nisplus.so )
+ ( cd usr/lib ; ln -sf ../../lib/libnss_nisplus.so.2 libnss_nisplus.so )
