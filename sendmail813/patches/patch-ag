@@ -1,14 +1,12 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/06/26 23:56:31 adrian_p Exp $
+$NetBSD: patch-ag,v 1.2 2004/08/01 14:49:30 adrian_p Exp $
 
---- include/sm/conf.h.orig	Sun Jun 27 00:28:32 2004
-+++ include/sm/conf.h	Sun Jun 27 00:30:40 2004
-@@ -911,6 +911,9 @@
- #  if defined(__NetBSD__) && defined(__NetBSD_Version__) && __NetBSD_Version__ >= 104170000
- #   define HASSETUSERCONTEXT	1	/* BSDI-style login classes */
+--- include/sm/conf.h.orig	Sun Aug  1 15:38:42 2004
++++ include/sm/conf.h	Sun Aug  1 15:40:01 2004
+@@ -916,6 +916,7 @@
  #  endif
-+#  if defined(__NetBSD__)
+ #  if defined(__NetBSD__)
+ #   define USESYSCTL		1	/* use sysctl(3) for getting ncpus */
 +#   define SMRSH_CMDDIR                "/usr/libexec/sm.bin"
-+#  endif /* defined(__NetBSD__) */
- #  if defined(__FreeBSD__)
- #   define HASSETLOGIN	1	/* has setlogin(2) */
- #   if __FreeBSD_version >= 227001
+ #   include <sys/param.h>
+ #   include <sys/sysctl.h>
+ #  endif
