@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.613 2003/11/13 20:05:58 grantbeattie Exp $
-# $NetBSD: Makefile,v 1.613 2003/11/13 20:05:58 grantbeattie Exp $
+# $Id: Makefile,v 1.614 2003/11/13 20:10:13 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.614 2003/11/13 20:10:13 grantbeattie Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -432,6 +432,7 @@ SUBDIR+=	regexxer
 SUBDIR+=	rlpr
 SUBDIR+=	rolo
 SUBDIR+=	rosegarden-current
+SUBDIR+=	rudiments
 SUBDIR+=	samba3
 SUBDIR+=	sarg
 SUBDIR+=	scew
