@@ -1,4 +1,4 @@
-GlkLoader is an implementation of the the Glk specification which
-simply loads another Glk library and passes all Glk calls through
-to it.  The purpose is to allow a single executable to choose which
-Glk library to use at run-time, instead of at compile-time.
+GlkLoader is an implementation of the Glk specification which simply
+loads another Glk library and passes all Glk calls through to it.
+The purpose is to allow a single executable to choose which Glk
+library to use at run-time, instead of at compile-time.
