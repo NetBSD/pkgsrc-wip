@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2004/03/27 18:43:59 roelants Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/16 14:53:49 roelants Exp $
 
---- Makefile.PL.orig	2004-01-12 03:22:13.000000000 +0100
+--- Makefile.PL.orig	2004-03-28 06:51:10.000000000 +0200
 +++ Makefile.PL
 @@ -6,6 +6,11 @@ use strict;
  
@@ -12,5 +12,5 @@ $NetBSD: patch-aa,v 1.1 2004/03/27 18:43:59 roelants Exp $
 +}
 +
  # Much logic stolen fromm libwww-perl's Makefile.PL
- my $skiplive = 0;
- 
+ my $skiplive = grep /--nolive/i, @ARGV;
+ my $skiplocal = grep /--nolocal/i, @ARGV;
