@@ -1,0 +1,16 @@
+lib/python${PKGVERSION}/lib-dynload/_bsddb.so
+lib/python${PKGVERSION}/lib-dynload/${LOWER_OPSYS}audiodev.so
+lib/python${PKGVERSION}/lib-dynload/ossaudiodev.so
+lib/python${PKGVERSION}/plat-${LOWER_OPSYS}2/CDROM.py
+lib/python${PKGVERSION}/plat-${LOWER_OPSYS}2/CDROM.pyc
+lib/python${PKGVERSION}/plat-${LOWER_OPSYS}2/CDROM.pyo
+lib/python${PKGVERSION}/plat-${LOWER_OPSYS}2/DLFCN.py
+lib/python${PKGVERSION}/plat-${LOWER_OPSYS}2/DLFCN.pyc
+lib/python${PKGVERSION}/plat-${LOWER_OPSYS}2/DLFCN.pyo
+lib/python${PKGVERSION}/plat-${LOWER_OPSYS}2/TYPES.py
+lib/python${PKGVERSION}/plat-${LOWER_OPSYS}2/TYPES.pyc
+lib/python${PKGVERSION}/plat-${LOWER_OPSYS}2/TYPES.pyo
+lib/python${PKGVERSION}/test/output/test_${LOWER_OPSYS}audiodev
+lib/python${PKGVERSION}/test/test_${LOWER_OPSYS}audiodev.py
+lib/python${PKGVERSION}/test/test_${LOWER_OPSYS}audiodev.pyc
+lib/python${PKGVERSION}/test/test_${LOWER_OPSYS}audiodev.pyo

@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/07/30 21:34:42 marc Exp $
+
+--- Tools/scripts/pydoc23.orig	2003-07-30 20:20:26.000000000 +0200
++++ Tools/scripts/pydoc23	2003-07-30 20:20:35.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python23
+ 
+ import pydoc
+ pydoc.cli()

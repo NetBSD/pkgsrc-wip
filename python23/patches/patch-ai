@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1.1.1 2003/07/30 21:34:42 marc Exp $
+
+--- Makefile.pre.in.orig	2003-07-30 20:25:22.000000000 +0200
++++ Makefile.pre.in	2003-07-30 20:26:59.000000000 +0200
+@@ -56,7 +56,7 @@
+ OPT=		@OPT@
+ BASECFLAGS=	@BASECFLAGS@
+ CFLAGS=		$(BASECFLAGS) $(OPT)
+-CPPFLAGS=	-I. -I$(srcdir)/Include
++CPPFLAGS+=	-I. -I$(srcdir)/Include
+ LDFLAGS=	@LDFLAGS@
+ LDLAST=		@LDLAST@
+ SGI_ABI=	@SGI_ABI@
+@@ -305,7 +305,7 @@
+ $(BUILDPYTHON):	Modules/$(MAINOBJ) $(LIBRARY) $(LDLIBRARY)
+ 		$(LINKCC) $(LDFLAGS) $(LINKFORSHARED) -o $@ \
+ 			Modules/$(MAINOBJ) \
+-			$(BLDLIBRARY) $(LIBS) $(MODLIBS) $(SYSLIBS) $(LDLAST)
++			$(BLDLIBRARY) $(LIBS) $(MODLIBS) $(SYSLIBS) $(LDLAST) ${LINK_ALL_LIBGCC_HACK}
+ 
+ platform: $(BUILDPYTHON)
+ 	$(RUNSHARED) ./$(BUILDPYTHON) -E -c 'import sys ; from distutils.util import get_platform ; print get_platform()+"-"+sys.version[0:3]' >platform
