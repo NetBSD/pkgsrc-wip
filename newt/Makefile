@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/31 01:12:36 riz Exp $
+# $NetBSD: Makefile,v 1.7 2005/03/31 01:25:23 riz Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-5.src.rpm
 PKGNAME=		newt-0.51.6
@@ -28,7 +28,7 @@ do-install:
 	cd ${WRKSRC}; \
 	 ${LIBTOOL} --mode=install ${INSTALL_PROGRAM} libnewt.la ${PREFIX}/lib;\
 	 ${INSTALL_DATA} newt.h ${PREFIX}/include; \
-	 ${INSTALL_PROGRAM} .libs/whiptail ${PREFIX}/bin
+	 ${LIBTOOL} --mode=install ${INSTALL} whiptail ${PREFIX}/bin
 
 .include "../../devel/libslang/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"

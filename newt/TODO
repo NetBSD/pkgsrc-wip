@@ -1,3 +1,1 @@
 - Add Python and TCL support options
-- deal a bit better with libtool - shouldn't have to install whiptail from
-  ${WRKSRC}/.libs
