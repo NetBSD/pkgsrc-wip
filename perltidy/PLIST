@@ -1,14 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/05 15:40:15 virtus Exp $
-bin/perltidy
-lib/perl5/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/perllocal.pod
-lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Perl/Tidy/.packlist
-man/man1/perltidy.1
-@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Perl/Tidy
-@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Perl
-@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto
-@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}
-@dirrm lib/perl5/site_perl/5.6.1/Perl
-@dirrm lib/perl5/site_perl/5.6.1
-@dirrm lib/perl5/site_perl
-@dirrm lib/perl5/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}
-@dirrm lib/perl5
+@comment $NetBSD: PLIST,v 1.2 2004/05/02 22:53:41 blef Exp $
