@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/10/07 16:33:03 xtraeme Exp $
-
-SHA1 (freeglut-2.0.0.tar.gz) = 6ca609cd68c124c87cd20d606d16ae95a1c9b7a1
-Size (freeglut-2.0.0.tar.gz) = 373635 bytes
-SHA1 (patch-aa) = da426df5507f2f3a670ce1f5cf0c22685bf4afa4
