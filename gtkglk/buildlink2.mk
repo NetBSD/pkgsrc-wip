@@ -1,14 +1,14 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/10/20 13:26:04 dillo Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/10/21 11:59:17 dillo Exp $
 #
 # This Makefile fragment is included by packages that use gtkglk.
 #
 
-.if !defined(XGLK_BUILDLINK2_MK)
-XGLK_BUILDLINK2_MK=	# defined
+.if !defined(GTKGLK_BUILDLINK2_MK)
+GTKGLK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gtkglk
 BUILDLINK_DEPENDS.gtkglk?=		gtkglk>=0.2
-BUILDLINK_PKGSRCDIR.gtkglk?=		../../devel/gtkglk
+BUILDLINK_PKGSRCDIR.gtkglk?=		../../wip/gtkglk
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gtkglk=gtkglk
 BUILDLINK_PREFIX.gtkglk_DEFAULT=	${LOCALBASE}
@@ -44,4 +44,4 @@ gtkglk-glk:
 	fi
 
 
-.endif	# XGLK_BUILDLINK2_MK
+.endif	# GTKGLK_BUILDLINK2_MK
