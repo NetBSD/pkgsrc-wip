@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/05 02:34:33 xtraeme Exp $
+
+SHA1 (chmlib-0.31.tbz) = 4d6be22cb408695c7e8ef6933b46e5cd46d13048
+Size (chmlib-0.31.tbz) = 40810 bytes
+SHA1 (patch-aa) = a76776c05e95c09e455556bdb6d6dbda97d677ac
