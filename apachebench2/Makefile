@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2004/05/02 22:01:54 blef Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/11 13:19:54 bubuchka Exp $
 
 # XXX This uses the version of apache2 distfile instead of
 # XXX the AP_AB_BASEREVISION from the support/ab.c source.
 PKGNAME=		apachebench2-${APACHE_VERSION}
 CATEGORIES=		benchmarks www
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://httpd.apache.org/
 COMMENT=		Apache HTTP (Web) server benchmarking tool
 

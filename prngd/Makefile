@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/06 05:51:28 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/11 13:19:58 bubuchka Exp $
 #
 
 DISTNAME=		prngd-0.9.27
@@ -11,7 +11,7 @@ MASTER_SITES=		ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/related/prngd/ \
 			http://planetmirror.com/pub/solaris-random/prngd/ \
 			ftp://planetmirror.com/pub/solaris-random/prngd/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.aet.tu-cottbus.de/personen/jaenicke/postfix_tls/prngd.html
 COMMENT=		Pseudo Random Number Generator Daemon
 
