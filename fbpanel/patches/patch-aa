@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2005/04/06 00:16:18 jeremy-c-reed Exp $
+
+--- Makefile.common.orig	Fri Jan 21 11:40:36 2005
++++ Makefile.common
+@@ -18,7 +18,7 @@ endif
+ CC = gcc
+ LIBS = $(shell pkg-config --libs gtk+-2.0 gdk-pixbuf-2.0 gdk-pixbuf-xlib-2.0) -L/usr/X11R6/lib  -lXmu
+ INCS2 = $(shell pkg-config --cflags gtk+-2.0 gdk-pixbuf-2.0 gdk-pixbuf-xlib-2.0)
+-INCS := $(INCS2:-I%=-isystem%)
++INCS := $(INCS2:-I%=-isystem %)
+ # first = may be overwriten by command line or env. variable	
+ CFLAGS = -O2
+ # this one always applays

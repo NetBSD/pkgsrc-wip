@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/22 02:38:01 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/06 00:16:19 jeremy-c-reed Exp $
 bin/fbpanel
-man/man1/fbpanel.1.gz
+man/man1/fbpanel.1
 share/fbpanel/default
 share/fbpanel/images/Desktop2.png
 share/fbpanel/images/Editor.png
