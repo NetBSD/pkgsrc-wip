@@ -1,0 +1,11 @@
+$NetBSD: TODO,v 1.1.1.1 2003/05/09 18:44:35 xtraeme Exp $
+
+Juan RP:
+
+* Improve MESSAGE and DEINSTALL ( my english sucks )
+* Provide another way to /var/log/jabberd and
+  /var/spool/jabberd maybe ?
+* Include pthread buildlink too ? 
+
+Any help/comment will be appreciated.
+

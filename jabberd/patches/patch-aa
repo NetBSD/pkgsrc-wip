@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/05/09 18:44:36 xtraeme Exp $
+
+--- jabber.xml.orig	2003-05-09 20:14:32.000000000 +0200
++++ jabber.xml	2003-05-09 20:16:09.000000000 +0200
+@@ -298,7 +298,7 @@
+       <xdb_file>./xdb_file/xdb_file.so</xdb_file>
+     </load>
+     <xdb_file xmlns="jabber:config:xdb_file">
+-      <spool><jabberd:cmdline flag='s'>./spool</jabberd:cmdline></spool>
++	    <spool><jabberd:cmdline flag='s'>/var/spool/jabberd</jabberd:cmdline></spool>
+     </xdb_file>
+   </xdb>
+ 
+@@ -359,7 +359,7 @@
+     <host/>
+     <logtype/>
+     <format>%d: [%t] (%h): %s</format>
+-    <file>error.log</file>
++    <file>/var/log/jabberd/error.log</file>
+     <stderr/>
+   </log>
+ 
+@@ -372,7 +372,7 @@
+     <host/>
+     <logtype>record</logtype>
+     <format>%d %h %s</format>
+-    <file>record.log</file>
++    <file>/var/log/jabberd/record.log</file>
+   </log>
+ 
+   <!-- The following two services are for handling server-to-server traffic. -->
+@@ -596,7 +596,7 @@
+   <!--
+   This specifies the file to store the pid of the process in.
+   -->
+-  <pidfile>./jabber.pid</pidfile>
++  <pidfile>/var/run/jabber.pid</pidfile>
+ 
+ 
+ </jabber>

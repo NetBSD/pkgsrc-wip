@@ -1,0 +1,8 @@
+===============================================================================
+
+If you any longer use jabberd, maybe you need remove the directories:
+
+  /var/log/jabberd
+  /var/spool/jabberd
+
+===============================================================================
