@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.28 2003/04/05 14:21:42 virtus Exp $
-# $NetBSD: Makefile,v 1.28 2003/04/05 14:21:42 virtus Exp $
+# $Id: Makefile,v 1.29 2003/04/05 15:31:11 adrian_p Exp $
+# $NetBSD: Makefile,v 1.29 2003/04/05 15:31:11 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -13,9 +13,11 @@ SUBDIR+=	dbh
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtkglarea2
 SUBDIR+=	httrack
+SUBDIR+=	ike-scan
 SUBDIR+=	ion-devel
 SUBDIR+=	ion-dock
 SUBDIR+=	nvtv
+SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Net-Jabber
 SUBDIR+=	p5-Time
 SUBDIR+=	p5-Unicode-String
@@ -25,5 +27,7 @@ SUBDIR+=	py-csv
 SUBDIR+=	pyPgSQL
 SUBDIR+=	pygtk2
 SUBDIR+=	pyorbit
+SUBDIR+=	tcpflow
 SUBDIR+=	tex-foiltex
+SUBDIR+=	whisker
 SUBDIR+=	yasm
