@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/26 18:44:06 marc Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/26 23:26:55 marc Exp $
 
 .include "Makefile.common"
 
@@ -7,9 +7,7 @@ COMMENT=	GTK-based implementation of the wxWidgets GUI library
 LIBWXREGEX=	${WRKSRC}/lib/libwxregex${UNICODE}.a
 
 post-install:
-.if exists(${LIBWXREGEX})
-	${INSTALL_DATA} ${LIBWXREGEX} ${PREFIX}/lib
-.endif
+	@-${INSTALL_DATA} ${LIBWXREGEX} ${PREFIX}/lib
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
