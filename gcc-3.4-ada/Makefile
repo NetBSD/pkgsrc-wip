@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/04/30 23:09:32 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.36 2004/05/07 08:26:36 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
@@ -125,5 +125,6 @@ post-install:
 BUILDLINK_DEPMETHOD.gcc-3.4.0=	build
 .include "../../wip/gcc-3.4/buildlink3.mk"
 .endif
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
