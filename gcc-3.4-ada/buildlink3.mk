@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2004/05/09 12:13:26 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2004/05/12 22:13:38 johnrshannon Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCCADA_BUILDLINK3_MK:=  ${GCCADA_BUILDLINK3_MK}+
@@ -15,11 +15,16 @@ BUILDLINK_PACKAGES+=    gccAda
 BUILDLINK_DEPENDS.gccAda+=      gccAda>=3.4.0
 BUILDLINK_PKGSRCDIR.gccAda?=    ../../wip/gcc-3.4-ada
 BUILDLINK_ENV+= PATH=${PATH}:${LOCALBASE}/gccAda-3.4.0/bin
+_GCC_ARCHDIR!=	${DIRNAME} `${LOCALBASE}/gccAda-3.4.0/bin/gcc --print-libgcc-file-name`
+BUILDLINK_ENV+=	ADA_INCLUDE_PATH=${_GCC_ARCHDIR}/adainclude
+BUILDLINK_ENV+=	ADA_OBJECT_PATH=${_GCC_ARCHDIR}/adalib
+BUILDLINK_RPATHDIRS.gcc+=	${_GCC_ARCHDIR}
 .endif  # GCCADA_BUILDLINK3_MK
 
 BUILDLINK_PKGSRCDIR.gccAda?=     ../../wip/gcc-3.4-ada
 BUILDLINK_CONTENTS_FILTER.gccAda= \
-	${EGREP} '(libexec.*|bin.*/|include.*/|\.h$$|\.pc$$|lib.*/lib[^/]*$$)'
+	${EGREP} '(bin.*/|include.*/|\.h$$|\.pc$$|lib.*/lib[^/]*$$)'
+BUILDLINK_TRANSFORM.gcc34=	-e s,/gccAda-3.4.0/bin/gnat,/bin/gnat,
 
 # Packages that link against shared libraries need a full dependency.
 .  if defined(USE_GCC_SHLIB)
