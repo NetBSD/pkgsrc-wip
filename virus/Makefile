@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/04/25 08:29:31 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/18 15:05:50 ppostma Exp $
 #
 
 DISTNAME=	virus-0.0.6
-CATEGORIES=	wip
+CATEGORIES=	sysutils
 MASTER_SITES=	http://www.rocklinux.net/people/ripclaw/projects/software/virus/
 EXTRACT_SUFX=	.tar.bz2
 
