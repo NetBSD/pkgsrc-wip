@@ -1,2 +1,3 @@
 - Test if there are issues wrt to py-gnome1.
 - Fix DESCR
+- needs pkg/21769 (nautilus buildlink2.mk is missing) to compile
