@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.323 2003/07/12 15:28:22 marc Exp $
-# $NetBSD: Makefile,v 1.323 2003/07/12 15:28:22 marc Exp $
+# $Id: Makefile,v 1.324 2003/07/13 03:47:52 schnoebe Exp $
+# $NetBSD: Makefile,v 1.324 2003/07/13 03:47:52 schnoebe Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -192,6 +192,7 @@ SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Class-Factory-Util
 SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-Compress-Bzip2
+SUBDIR+=	p5-DBI-Shell
 SUBDIR+=	p5-Data-TemporaryBag
 SUBDIR+=	p5-DateTime
 SUBDIR+=	p5-DateTime-Event-Cron
@@ -201,11 +202,13 @@ SUBDIR+=	p5-DateTime-TimeZone
 SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-GeoIP
 SUBDIR+=	p5-HTTP-GHTTP
+SUBDIR+=	p5-IO-Tee
 SUBDIR+=	p5-Net-Gnats
 SUBDIR+=	p5-Net-Jabber
 SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
+SUBDIR+=	p5-Text-Reform
 SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-gtk2
