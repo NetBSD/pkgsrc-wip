@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1181 2004/04/08 15:08:12 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1181 2004/04/08 15:08:12 thomasklausner Exp $
+# $Id: Makefile,v 1.1182 2004/04/09 10:11:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1182 2004/04/09 10:11:10 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -265,6 +265,7 @@ SUBDIR+=	java-gnujaxp
 SUBDIR+=	java-jep
 SUBDIR+=	java-jflex
 SUBDIR+=	java-muse
+SUBDIR+=	java-swt
 SUBDIR+=	java-xmlrpc
 SUBDIR+=	javascript-guide
 SUBDIR+=	javascript-reference
