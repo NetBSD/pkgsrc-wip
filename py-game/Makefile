@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/19 20:29:55 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/13 09:29:45 marc Exp $
 #
 
 DISTNAME=		pygame-1.5.6
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=		devel
-MASTER_SITES=		http://pygame.seul.org/ftp/
+MASTER_SITES=		http://pygam.org/ftp/
 
 MAINTAINER=		marc@informatik.uni-bremen.de
-HOMEPAGE=		http://pygame.seul.org/
+HOMEPAGE=		http://pygame.org/
 COMMENT=		Set of Python modules designed for writing games
 
 PY_PATCHPLIST=		yes

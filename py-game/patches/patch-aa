@@ -1,0 +1,12 @@
+--- src/draw.c.orig	2003-07-13 11:22:50.000000000 +0200
++++ src/draw.c	2003-07-13 11:23:43.000000000 +0200
+@@ -28,7 +28,9 @@
+ 
+ #ifdef _MSC_VER
+ #pragma warning (disable:4244)
++#endif
+ 
++#if defined(_MSC_VER) || defined(__NetBSD__)
+ float trunc(float d)
+ {
+     if (d >= 0)
