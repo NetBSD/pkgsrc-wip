@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/10 20:42:21 bjan2 Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/10 20:59:55 bjan2 Exp $
 #
 
 DISTNAME=		simage-1.6.0
@@ -6,7 +6,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.coin3d.org/pub/coin/src/
 
 MAINTAINER=		pkgsrc@bjan.freeshell.org
-HOMEPAGE=		http://www.coin3d.org
+HOMEPAGE=		http://www.coin3d.org/
 COMMENT=		Library for importing audio and image files
 
 GNU_CONFIGURE=		yes
