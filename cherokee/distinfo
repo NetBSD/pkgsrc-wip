@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/25 17:00:18 xtraeme Exp $
+
+SHA1 (cherokee-0.4.3-pre9.tar.gz) = 0b6779904831c2cbd19c51026d28c3dcd45e9152
+Size (cherokee-0.4.3-pre9.tar.gz) = 235640 bytes
+SHA1 (patch-aa) = 3dd1f53bba7472c3c079bc667434f5c5c6e75dc8
