@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/31 00:48:53 xtraeme Exp $
+
+SHA1 (links-hacked-030709.tgz) = 6141fcb9bddafda8257b5473adcf4a028cc82ba3
+Size (links-hacked-030709.tgz) = 1026817 bytes
+SHA1 (links-fonts-new.tgz) = 7aee7e9242db4cdb55852ded42a6fde12dbe880b
+Size (links-fonts-new.tgz) = 2118813 bytes
+SHA1 (patch-aa) = 54cf62ff32f30f265a7eba728b92e289fbd7326b
+SHA1 (patch-ab) = c384172eea2a4dcab8e0b9fa67998fd9b78a96c2

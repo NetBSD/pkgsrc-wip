@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/31 00:48:55 xtraeme Exp $
+
+--- configure.in.orig	2003-07-31 00:15:48.000000000 +0200
++++ configure.in	2003-07-31 00:17:30.000000000 +0200
+@@ -86,36 +86,6 @@
+ AC_CHECK_SIZEOF(unsigned, "$default_int")
+ AC_CHECK_SIZEOF(long, "$default_int")
+ AC_CHECK_SIZEOF(unsigned long, "$default_int")
+-AC_CACHE_CHECK([for big endian], ac_cv_big_endian,
+-	AC_TRY_RUN([
+-	long l;
+-	char *c = (char *)&l;
+-	int main()
+-	{
+-		l = 0x12345678L;
+-		return !(c[[sizeof(long) - 1]] == 0x78 && c[[sizeof(long) - 2]] == 0x56 && c[[sizeof(long) - 3]] == 0x34 && c[[sizeof(long) - 4]] == 0x12);
+-	}
+-	], ac_cv_big_endian=yes, ac_cv_big_endian=no, ac_cv_big_endian=no)
+-)
+-AC_CACHE_CHECK([for little endian], ac_cv_little_endian,
+-	AC_TRY_RUN([
+-	long l;
+-	char *c = (char *)&l;
+-	int main()
+-	{
+-		l = 0x12345678L;
+-		return !(c[[0]] == 0x78 && c[[1]] == 0x56 && c[[2]] == 0x34 && c[[3]] == 0x12);
+-	}
+-	], ac_cv_little_endian=yes, ac_cv_little_endian=no, ac_cv_little_endian="$ac_cv_have_emx")
+-)
+-
+-if test "$ac_cv_big_endian" = yes; then
+-	AC_DEFINE(AC_BIG_ENDIAN)
+-else if test "$ac_cv_little_endian" = yes; then
+-	AC_DEFINE(AC_LITTLE_ENDIAN)
+-fi
+-fi
+-
+ dnl Checks for library functions.
+ AC_PROG_GCC_TRADITIONAL
+ AC_FUNC_MEMCMP
