@@ -6,4 +6,3 @@ Simply make the appropriate filter entries in one's Pine
 configuration, and run Pine as normal.  When sending mail,
 choose the pgpenvelope_encrypt filter.  Additionally, one
 can use it as a procmail filter.
-
