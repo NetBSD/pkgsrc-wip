@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.415 2003/09/02 06:07:10 xtraeme Exp $
-# $NetBSD: Makefile,v 1.415 2003/09/02 06:07:10 xtraeme Exp $
+# $Id: Makefile,v 1.416 2003/09/02 06:11:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.416 2003/09/02 06:11:52 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -237,6 +237,7 @@ SUBDIR+=	netbeans-ide
 SUBDIR+=	netkit-base
 SUBDIR+=	newsx
 SUBDIR+=	nikto
+SUBDIR+=	noip
 SUBDIR+=	ntp4-dev
 SUBDIR+=	nvtv
 SUBDIR+=	nvtv-gtk2
