@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/19 19:42:21 thomasklausner Exp $
+bin/InfoNES
+share/doc/InfoNES/keys.txt
+@dirrm share/doc/InfoNES

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/19 19:42:21 thomasklausner Exp $
+
+--- linux/Makefile.orig	2003-06-18 19:07:38.000000000 +0200
++++ linux/Makefile
+@@ -16,7 +16,7 @@ LDFILGS = `gtk-config --libs gthread` -l
+ all: InfoNES
+ 
+ InfoNES: $(.OFILES)
+-	$(CC) $(INCLUDES) -o $@ $(.OFILES) $(LDFILGS) -lm -lz
++	$(CC) $(INCLUDES) -o $@ $(.OFILES) $(LDFILGS) -lm -lz ${LIBOSSAUDIO}
+ 
+ .cpp.o:
+ 	$(CC) $(INCLUDES) -c $(CCFLAGS) $*.cpp  -o $@

@@ -1,0 +1,14 @@
+Cursor Keys - Movement
+SELECT - A
+START - S
+A - Z
+B - X
+
+Sound off/on - M [Attention: disables all throttling!]
+Exit - Q
+Reset - R
+
+Information about the ROM - I
+Information about the emulator - V
+
+? - C
