@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/24 12:50:32 cubidou Exp $
+
+--- Makefile.in.orig	2003-09-22 17:17:10.000000000 +0200
++++ Makefile.in
+@@ -464,31 +464,31 @@ uninstall-info: uninstall-info-recursive
+ 
+ install-data-local:
+ 	@$(NORMAL_INSTALL)
+-	function strlen_diasce {\
++	strlen_diasce () {\
+ 		eval echo "\$${#$${1}}"; \
+ 	}; \
+-	function es_cvs_diasce {\
++	es_cvs_diasce () {\
+ 		temporal=$$1; \
+ 		longitud="$$(strlen_diasce temporal)"; \
+-		let longitud=longitud-4; \
+-		cadena=$${temporal:longitud}; \
++		longitud=$$(($$longitud-4)); \
++		cadena=`expr $$temporal : \(.{1,$$longitud}\).*`; \
+ 		if [ "x$$cadena" = "x/CVS" ] ; then \
+ 			return 0; \
+ 		else \
+ 			return 1; \
+ 		fi; \
+ 	}; \
+-	function subdirs_diasce {\
++	subdirs_diasce () {\
+ 		temporal=$$3; \
+ 		longitud="$$(strlen_diasce temporal)"; \
+ 		for doc in $$1/*; do \
+ 			if test -f $$doc; then \
+-				destino="$$2$${1:longitud}"; \
++				destino="$$2"`expr $$1 : \(.{1,$$longitud}\).*`; \
+ 				$(INSTALL_DATA) $$doc $$destino; \
+ 			fi; \
+ 			if test -d $$doc; then \
+ 				if ! (es_cvs_diasce $$doc); then \
+-					destino="$$2$${doc:longitud}"; \
++					destino="$$2"`expr $$doc : \(.{1,$$longitud}\).*`; \
+ 					$(mkinstalldirs) $$destino; \
+ 					subdirs_diasce $$doc $$2 $$3; \
+ 				fi \
+@@ -548,6 +548,7 @@ dist-hook:
+ 		longitud="$$(strlen_diasce temporal)"; \
+ 		let longitud=longitud-4; \
+ 		cadena=$${temporal:longitud}; \
++		cadena=`expr $$temporal : \(.
+ 		if [ "x$$cadena" = "x/CVS" ] ; then \
+ 			return 0; \
+ 		else \

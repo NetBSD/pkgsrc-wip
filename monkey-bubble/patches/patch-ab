@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/09/24 12:50:32 cubidou Exp $
+
+--- src/monkey/board.c.orig	2003-09-22 17:12:56.000000000 +0200
++++ src/monkey/board.c
+@@ -502,14 +502,14 @@ static void recursive_tag_fallen(Board *
+ 				 gint cell_y) {
+ 
+   Point cell;
+-
++  Bubble *bubble;
+   gint quadrant;
+ 
+ 
+   cell.x = cell_x;
+   cell.y = cell_y;
+ 
+-  Bubble * bubble = board_get_bubble( board,cell.x,cell.y);
++  bubble = board_get_bubble( board,cell.x,cell.y);
+ 
+ 
+   if( (bubble != NULL) &&
+@@ -599,11 +599,12 @@ static gint recursive_tag_exploded(Board
+   gint quadrant;
+   gint count;
+   Point cell;
++  Bubble *bubble;
+   
+   cell.x = cell_x;
+   cell.y = cell_y;
+ 
+-  Bubble * bubble = board_get_bubble( board,cell.x,cell.y);
++  bubble = board_get_bubble( board,cell.x,cell.y);
+ 
+   if( (bubble != NULL) &&
+       (color == bubble_get_color( bubble ))) {

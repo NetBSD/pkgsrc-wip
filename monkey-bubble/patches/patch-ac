@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/09/24 12:50:32 cubidou Exp $
+
+--- src/util/clock.c.orig	2003-09-22 17:13:05.000000000 +0200
++++ src/util/clock.c
+@@ -108,10 +108,10 @@ void clock_start(Clock * clock) {  
+ }
+ 
+ void clock_pause(Clock * clock,gboolean paused) {
+-  g_assert( IS_CLOCK(clock));
+   GTimeVal c;
+   GTimeVal p;
+   GTimeVal r;
++  g_assert( IS_CLOCK(clock));
+ 
+   if( paused ) {
+ 
