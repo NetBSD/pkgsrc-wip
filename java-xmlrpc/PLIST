@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/08 16:38:02 poppnk Exp $
+share/classpath/xmlr${LOWER_VENDOR}-1.2-${PKGVERSION}-applet.jar
+share/classpath/xmlr${LOWER_VENDOR}-1.2-${PKGVERSION}.jar
+@dirrm share/classpath
