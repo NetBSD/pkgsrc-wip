@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/08/27 06:30:29 jlamwww Exp $
+$NetBSD: distinfo,v 1.4 2005/03/07 15:25:26 dillo Exp $
 
 SHA1 (glulxe-035.tar.Z) = 27a36ccab73fa78d8ad7d52e4ae3912f805dc092
+RMD160 (glulxe-035.tar.Z) = afa459f69dc52a0e223fc64741213831eba7e278
 Size (glulxe-035.tar.Z) = 63015 bytes
 SHA1 (patch-aa) = 3bdd26495b49f962a9571f3e66b3febea8df035e

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/03/02 17:10:00 dillo Exp $
+$NetBSD: distinfo,v 1.4 2005/03/07 15:25:29 dillo Exp $
 
 SHA1 (glkterm-078.tar.Z) = 813bdd8e6c03ffc18ef3714edd5fcb52e0829e76
+RMD160 (glkterm-078.tar.Z) = b96bf5fdc102cc35188bef5e1da316a85174c831
 Size (glkterm-078.tar.Z) = 98911 bytes
 SHA1 (patch-aa) = e2b04877cb645a54ff4a2daeb5743321d29c0d58
