@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.640 2003/11/22 13:05:13 mpasternak Exp $
-# $NetBSD: Makefile,v 1.640 2003/11/22 13:05:13 mpasternak Exp $
+# $Id: Makefile,v 1.641 2003/11/22 13:52:58 mpasternak Exp $
+# $NetBSD: Makefile,v 1.641 2003/11/22 13:52:58 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -411,6 +411,7 @@ SUBDIR+=	py-Quotient
 SUBDIR+=	py-RXP
 SUBDIR+=	py-Reverend
 SUBDIR+=	py-Soya
+SUBDIR+=	py-TTFQuery
 SUBDIR+=	py-ZODB
 SUBDIR+=	py-albatross
 SUBDIR+=	py-ao
@@ -418,12 +419,14 @@ SUBDIR+=	py-biggles
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-cjkcodecs
 SUBDIR+=	py-elementtree
+SUBDIR+=	py-fonttools
 SUBDIR+=	py-game
 SUBDIR+=	py-gdick
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-ipython
 SUBDIR+=	py-libpcap
+SUBDIR+=	py-matplotlib
 SUBDIR+=	py-oak
 SUBDIR+=	py-ogg
 # SUBDIR+=	py-slune # depends on py-vorbis; py-vorbis defunct yet
