@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.308 2003/07/08 09:38:58 adrian_p Exp $
-# $NetBSD: Makefile,v 1.308 2003/07/08 09:38:58 adrian_p Exp $
+# $Id: Makefile,v 1.309 2003/07/08 11:05:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.309 2003/07/08 11:05:57 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -90,6 +90,7 @@ SUBDIR+=	gnome2-themes-extra
 SUBDIR+=	gnome2-userdocs
 SUBDIR+=	gnomeicu
 SUBDIR+=	gnucash-docs
+SUBDIR+=	gossip
 SUBDIR+=	gotmail
 SUBDIR+=	gov2
 SUBDIR+=	grip
@@ -145,6 +146,7 @@ SUBDIR+=	linux-modutils
 SUBDIR+=	linux-nfs-utils
 SUBDIR+=	liquidwar
 SUBDIR+=	lmarbles
+SUBDIR+=	loudmouth
 SUBDIR+=	mailfilter
 SUBDIR+=	maradns
 SUBDIR+=	mcats
