@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.247 2003/06/16 12:36:56 cubidou Exp $
-# $NetBSD: Makefile,v 1.247 2003/06/16 12:36:56 cubidou Exp $
+# $Id: Makefile,v 1.248 2003/06/16 18:53:55 bencollver Exp $
+# $NetBSD: Makefile,v 1.248 2003/06/16 18:53:55 bencollver Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -69,6 +69,7 @@ SUBDIR+=	gnomeicu
 SUBDIR+=	gotmail
 SUBDIR+=	grip
 SUBDIR+=	gstreamer-player
+SUBDIR+=	gtick
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtk2-engines-mist
 SUBDIR+=	gtranslator
