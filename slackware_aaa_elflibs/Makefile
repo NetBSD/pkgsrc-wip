@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/12 12:42:34 mpasternak Exp $
-# $Id: Makefile,v 1.1.1.1 2004/03/12 12:42:34 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/15 17:37:03 mpasternak Exp $
+# $Id: Makefile,v 1.2 2004/03/15 17:37:03 mpasternak Exp $
 #
 
-DISTNAME=		slackware_aaa_elflibs-9.1.2
+DISTNAME=		aaa_elflibs-9.1.2-i486-1
+PKGNAME=		slackware_aaa_elflibs-9.1.2
 CATEGORIES=		emulators
 MASTER_SITES=		${SLACKWARE_MASTER_SITES}
-DISTFILES=		aaa_elflibs-9.1.2-i486-1.tgz
 
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://slackware.com
