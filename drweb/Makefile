@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/05/11 11:53:15 bubuchka Exp $
+# $NetBSD: Makefile,v 1.17 2004/06/30 07:16:53 bubuchka Exp $
 #
 # Note: We'll not use drweb's own configuration / building / installation
 # facilities so as its all are very ugly.
@@ -6,8 +6,10 @@
 DISTNAME=	drweb-4.31.3-${DISTTYPE}
 PKGNAME=	drweb-4.31.3
 CATEGORIES=	wip security
-MASTER_SITES=	ftp://ftp.drweb.ru/pub/unix/				\
-		ftp://ftp.drweb.ru/pub/unix/betas/
+MASTER_SITES=	ftp://ftp.drweb.ru/pub/unix/generic/			\
+		ftp://ftp.drweb.ru/pub/unix/				\
+		ftp://ftp.drweb.ru/pub/unix/archive/${PKGNAME}/		\
+		ftp://ftp.drweb.ru/pub/unix/archive/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.sald.com/

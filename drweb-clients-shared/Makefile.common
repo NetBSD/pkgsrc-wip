@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/05/11 12:24:36 bubuchka Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/06/30 07:16:54 bubuchka Exp $
 #
 # This is installation framework to various clients to DrWeb daemon
 # antivirus shiped by Dialogue Science
@@ -36,7 +36,8 @@ DISTNAME=		drweb-clients-${DRW_CLVER}-sources
 PKGNAME=		drweb-${DRW_CLIENT_NAME}-${DRW_CLVERN}
 CATEGORIES=		wip security
 MASTER_SITES=		ftp://ftp.drweb.ru/pub/unix/			\
-			ftp://ftp.drweb.ru/pub/unix/betas/
+			ftp://ftp.drweb.ru/pub/unix/archive/drweb-clients-${DRW_CLVER}/ \
+			ftp://ftp.drweb.ru/pub/unix/archive/
 
 HOMEPAGE=		http://www.sald.com/
 
