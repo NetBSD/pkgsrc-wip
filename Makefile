@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.776 2003/12/18 00:20:10 blef Exp $
-# $NetBSD: Makefile,v 1.776 2003/12/18 00:20:10 blef Exp $
+# $Id: Makefile,v 1.777 2003/12/18 22:55:21 mpasternak Exp $
+# $NetBSD: Makefile,v 1.777 2003/12/18 22:55:21 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -470,6 +470,8 @@ SUBDIR+=	pxview
 SUBDIR+=	py-CVSTools
 SUBDIR+=	py-EditObj
 SUBDIR+=	py-Genetic
+SUBDIR+=	py-Impacket
+SUBDIR+=	py-InlineEgg
 SUBDIR+=	py-MayaVi
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-OpenSSL
@@ -503,6 +505,7 @@ SUBDIR+=	py-matplotlib
 SUBDIR+=	py-ming
 SUBDIR+=	py-oak
 SUBDIR+=	py-ogg
+SUBDIR+=	py-pcapy
 SUBDIR+=	py-scipy_distutils
 SUBDIR+=	py-spambayes
 SUBDIR+=	py-spark
