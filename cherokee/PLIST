@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/25 17:00:18 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/27 11:49:19 xtraeme Exp $
 etc/rc.d/cherokee
 include/cherokee/avl.h
 include/cherokee/buffer.h
 include/cherokee/cherokee.h
 include/cherokee/common.h
 include/cherokee/connection.h
+include/cherokee/encoder.h
 include/cherokee/fdpoll.h
 include/cherokee/handler.h
 include/cherokee/http.h
@@ -20,6 +21,11 @@ lib/cherokee/libcherokee_common.la
 lib/cherokee/libcherokee_common.so
 lib/cherokee/libcherokee_common.so.0
 lib/cherokee/libcherokee_common.so.0.0
+lib/cherokee/libcherokee_gzip.a
+lib/cherokee/libcherokee_gzip.la
+lib/cherokee/libcherokee_gzip.so
+lib/cherokee/libcherokee_gzip.so.0
+lib/cherokee/libcherokee_gzip.so.0.0
 lib/cherokee/libcherokee_dirlist.a
 lib/cherokee/libcherokee_dirlist.la
 lib/cherokee/libcherokee_dirlist.so
