@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/04/28 01:00:24 marc Exp $
+$NetBSD: patch-ag,v 1.2 2004/05/26 16:22:26 marc Exp $
 
 --- j2se/make/common/Defs-bsd.gmk.orig	2004-04-27 23:58:06.000000000 +0200
 +++ j2se/make/common/Defs-bsd.gmk	2004-04-27 23:59:30.000000000 +0200
@@ -19,7 +19,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2004/04/28 01:00:24 marc Exp $
  LDFLAGS_COMMON += -L$(LIBDIR)/$(LIBARCH)
  ifeq ($(TRUE_PLATFORM), NetBSD)
 -LDFLAGS_COMMON += -Wl,-R $(LIBDIR)/$(LIBARCH)
-+LDFLAGS_COMMON += -Wl,-rpath-link $(LIBDIR)/$(LIBARCH)
++LDFLAGS_COMMON += -Wl,-rpath $(LIBDIR)/$(LIBARCH)
 +LDFLAGS_COMMON += -Wl,-rpath %%JVM_HOME%%/jre/lib/$(LIBARCH)
  endif
  LDFLAGS_OPT     =
@@ -29,7 +29,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2004/04/28 01:00:24 marc Exp $
  JVMLIB          = -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME)
  ifeq ($(TRUE_PLATFORM), NetBSD)
 -LDFLAGS_COMMON += -Wl,-R $(LIBDIR)/$(LIBARCH)/$(VM_NAME)
-+LDFLAGS_COMMON += -Wl,-rpath-link $(LIBDIR)/$(LIBARCH)/$(VM_NAME)
++LDFLAGS_COMMON += -Wl,-rpath $(LIBDIR)/$(LIBARCH)/$(VM_NAME)
 +LDFLAGS_COMMON += -Wl,-rpath %%JVM_HOME%%/jre/lib/$(LIBARCH)/$(VM_NAME)
  endif
  JVMLIB         += -ljvm$(SUFFIX)
