@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/03/01 11:05:31 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/03/03 22:39:58 johnrshannon Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GCC-3.4-ADA_BUILDLINK3_MK:=	${GCC-3.4-ADA_BUILDLINK3_MK}+
@@ -16,7 +16,7 @@ GCC34_PKGMODIF=			_${GCC34_INSTALLTO_SUBPREFIX}
 .    endif
 .  endif
 BUILDLINK_PACKAGES+=		gcc-3.4-ada
-BUILDLINK_DEPENDS.gcc-3.4-ada+=	gcc-${GCC_VERSION}-ada
+BUILDLINK_DEPENDS.gcc-3.4-ada+=	gcc-3.4-ada
 BUILDLINK_PKGSRCDIR.gcc-3.4-ada?=	../../wip/gcc-3.4-ada
 BUILDLINK_LIBDIRS.gcc-3.4-ada?=	\
 	lib ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc-3.4-ada}\///}
