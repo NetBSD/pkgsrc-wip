@@ -1,14 +1,25 @@
 #
-# $NetBSD: Makefile.common,v 1.1 2005/02/15 21:09:53 airhead Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/02/15 21:43:13 airhead Exp $
 #
 # Common Makefile for packages that are installed using scsh-install-lib
 #
+
+#
+# XXX: This should actually be moved to shells/scsh/Makefile.common or
+#       something
+#
+SCSH_VERSION?=		0.6
+
+BUILD_DEPENDS+=		scsh=${SCSH_VERSION}:../../shells/scsh
+BUILD_DEPENDS+=		scsh-install-lib>=1:../../wip/scsh-install-lib
+
+SCSH_LIBPATH=		${PREFIX}/lib/scsh/share/scsh-${SCSH_VERSION}/modules
 
 NO_BUILD=		yes
 
 do-install:
 	cd ${WRKSRC}; \
-	scsh-install-pkg --bindir ${PREFIX}/bin	\
-			 --prefix=${PREFIX}/lib/scsh \
-			 --layout fhs \
-			 --verbose
+	env SCSH_LIB_DIRS=\"${SCSH_LIBPATH}\" \
+	    scsh-install-pkg --prefix=${PREFIX}/lib/scsh \
+			     --layout fhs \
+			     --verbose
