@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2003/11/12 01:25:00 blef Exp $
+$NetBSD: MESSAGE,v 1.2 2003/11/12 01:42:15 blef Exp $
 
 There are no default system-wide configuration files for this package.
 
@@ -15,6 +15,6 @@ to go, then you would set XDG_CONFIG_DIRS to /usr/pkg/etc.
 See http://www.freedesktop.org/standards/basedir-spec/basedir-spec-0.6.html
 for more information.
 
-If you are not concerned with system-wide configuration, simply run obconf
-before you start openbox for the first time.
+If you are not concerned with system-wide configuration, install wip/obconf
+and run it before you start openbox for the first time.
 ===========================================================================
