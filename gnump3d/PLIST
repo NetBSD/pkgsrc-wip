@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/18 11:15:46 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/18 14:58:17 poppnk Exp $
 bin/gnump3d
 bin/gnump3d-index
 bin/gnump3d-top
 bin/gnump3d2
 etc/gnump3d/gnump3d.conf
-etc/gnump3d/gnump3d.conf-orig
 etc/gnump3d/mime.types
 lib/perl5/5.8.1/gnump3d/IP.pm
 lib/perl5/5.8.1/gnump3d/MD5.pm
@@ -240,7 +239,4 @@ share/gnump3d/redgrey/tagbrowse.html
 @dirrm share/gnump3d/LaFrere
 @dirrm share/gnump3d/Clean
 @dirrm share/gnump3d
-@dirrm lib/perl5/5.8.1/gnump3d/plugins
-@dirrm lib/perl5/5.8.1/gnump3d/lang
-@dirrm lib/perl5/5.8.1/gnump3d
 @dirrm etc/gnump3d
