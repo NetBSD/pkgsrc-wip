@@ -1,6 +1,6 @@
-Doesn't work. Probably a threading problem in liballegro?
+Doesn't work. Probably a threading problem in liballegro? (Works fine in
+current, and sort of in 1.6.1 -Soren)
+
 Help welcome.
 
 patch-ab is a hack and needs to be fixed before import.
-
-5.5.9 is out.

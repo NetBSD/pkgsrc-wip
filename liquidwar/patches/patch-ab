@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/04/06 11:33:04 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.2 2003/07/02 08:45:01 blef Exp $
 
---- src/Makefile.in.orig	Mon Dec 16 10:55:47 2002
-+++ src/Makefile.in
-@@ -10,7 +10,7 @@ ALCFLAGS =        @ALCFLAGS@
- ALLIBS =          @ALLIBS@
+--- src/Makefile.in.orig	Wed Jul  2 01:19:42 2003
++++ src/Makefile.in	Wed Jul  2 01:20:03 2003
+@@ -12,7 +12,7 @@
  ASM =             @ASM@
  DEBUG =           @DEBUG@
+ EFENCE =          @EFENCE@
 -PTHREAD =         @PTHREAD@
 +PTHREAD =         -Wl,-R/usr/pkg/lib -L/usr/pkg/lib @PTHREAD@
  

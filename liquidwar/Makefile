@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/06 11:33:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/02 08:45:01 blef Exp $
 #
 
-DISTNAME=	liquidwar-5.5.8
+DISTNAME=	liquidwar-5.5.9
 CATEGORIES=	games
-MASTER_SITES=	http://freesoftware.fsf.org/download/liquidwar/
+MASTER_SITES=	http://savannah.nongnu.org/download/liquidwar/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ufoot.org/liquidwar/
