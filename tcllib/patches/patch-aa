@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/11/26 16:24:30 xtraeme Exp $
+
+--- modules/doctools/mpformats/_html.tcl.orig	2003-11-25 16:53:37.000000000 +0100
++++ modules/doctools/mpformats/_html.tcl	2003-11-25 16:54:44.000000000 +0100
+@@ -86,7 +86,7 @@
+ 
+ 
+ proc tcl_cmd {cmd} {return "[markup <b>]\[$cmd][markup </b>]"}
+-proc wget    {url} {exec /usr/bin/wget -q -O - $url 2>/dev/null}
++proc wget    {url} {exec @PREFIX@/bin/ftp -q -O - $url 2>/dev/null}
+ 
+ proc url {tag text url} {
+     set body {
