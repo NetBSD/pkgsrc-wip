@@ -1,0 +1,13 @@
+To arrange for sudoscriptd to start at boot time, do
+the following as root:
+
+	cp ${PREFIX}/etc/rc.d/sudoscriptd /etc/rc.d 
+
+and edit /etc/rc.conf so that it contains the following line:
+
+	sudoscriptd=YES
+
+Please check ${PREFIX}/share/doc/${DISTNAME}/RELEASENOTES
+for important information regarding this release of sudoscript.
+
+
