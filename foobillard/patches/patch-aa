@@ -1,14 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/08/18 13:38:09 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2003/08/19 04:14:23 xtraeme Exp $
 
---- src/billard3d.c.orig	Mon Aug 18 15:25:06 2003
-+++ src/billard3d.c	Mon Aug 18 15:27:04 2003
-@@ -24,7 +24,13 @@
+--- src/billard3d.c.orig	2003-08-19 06:04:36.000000000 +0200
++++ src/billard3d.c	2003-08-19 06:07:00.000000000 +0200
+@@ -24,7 +24,14 @@
  #include <string.h>
  #include <math.h>
  #include <unistd.h>
 +#include <sys/param.h>
-+
 +#ifdef __FreeBSD__ && __FreeBSD_version >= 500000
++#include <sys/endian.h>a
++#elif defined __NetBSD__
 +#include <sys/endian.h>
 +#else
  #include <endian.h>
@@ -16,16 +17,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/08/18 13:38:09 xtraeme Exp $
  
  #ifndef USE_SDL
  #include <GL/glut.h>
-@@ -4934,7 +4940,7 @@
+@@ -4934,7 +4941,7 @@
  
     /* config file */
     load_config( &confv, &confc, argv, argc );
 -   while( ( act_option = getopt_long_only(confc, confv, "+", long_options, &option_index) ) >= 0){
-+while( ( act_option = getopt_long(confc, confv, "+", long_options, &option_index) ) >= 0){
++   while( ( act_option = getopt_long(confc, confv, "+", long_options, &option_index) ) >= 0){
         DPRINTF("processing option %d=%s\n",act_option,optarg);
         process_option(act_option);
     }
-@@ -5032,7 +5038,7 @@
+@@ -5032,7 +5039,7 @@
         fread( &ball_ball_snd.data[SOUND_NULLOFFS*2], 1, ball_ball_snd.len-SOUND_NULLOFFS*2*2 , f );
         fclose(f);
  
