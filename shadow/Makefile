@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/04 00:20:47 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 20:01:08 cjep Exp $
 
 DISTNAME=		shadow-4.0.3
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils devel
 MASTER_SITES=		ftp://ftp.pld.org.pl/software/shadow/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://shadow.pld.org.pl/
 COMMENT=		User administration and passwd database tools for Linux
 
