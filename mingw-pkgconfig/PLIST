@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/15 15:58:24 mpasternak Exp $
-${MINGW_TARGET}/bin/pkg-config
-${MINGW_TARGET}/man/man1/pkg-config.1
-${MINGW_TARGET}/share/aclocal/pkg.m4
-bin/${MINGW_TARGET}-pkg-config
