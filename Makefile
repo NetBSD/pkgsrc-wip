@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1104 2004/03/21 21:07:19 bjan2 Exp $
-# $NetBSD: Makefile,v 1.1104 2004/03/21 21:07:19 bjan2 Exp $
+# $Id: Makefile,v 1.1105 2004/03/21 21:30:56 bjan2 Exp $
+# $NetBSD: Makefile,v 1.1105 2004/03/21 21:30:56 bjan2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -139,6 +139,7 @@ SUBDIR+=	flightgear-base
 SUBDIR+=	florist
 SUBDIR+=	fluxconf
 SUBDIR+=	fluxspace
+SUBDIR+=	foomatic-db-engine
 SUBDIR+=	foomatic-filters
 SUBDIR+=	foomatic-filters-cups
 SUBDIR+=	fragroute
