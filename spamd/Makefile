@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/06/09 21:27:01 tripledes Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/10 00:08:34 tripledes Exp $
 
 DISTNAME=       spamd-20040609
 CATEGORIES=     mail
@@ -8,7 +8,7 @@ MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=       http://nedbsd.nl/~ppostma/pf-lkm.html
 COMMENT=        OpenBSD spamd daemon which rejects false mail
 
-ONLY_FOR_PLATFORM=      NetBSD-2.[0-9]*-*
+ONLY_FOR_PLATFORM=      NetBSD-2*-*
 
 USE_PKGINSTALL=         YES
 
