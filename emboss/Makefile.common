@@ -1,0 +1,7 @@
+DEPENDS+=               emboss-base-2.9.0:../../wip/emboss-base
+
+
+post-extract:
+	${CP} ${PREFIX}/share/EMBOSS/scripts/* ${WRKSRC}
+
+.include "../../wip/emboss-base/buildlink3.mk"
