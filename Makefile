@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1071 2004/03/12 04:41:36 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1071 2004/03/12 04:41:36 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1072 2004/03/12 12:46:07 mpasternak Exp $
+# $NetBSD: Makefile,v 1.1072 2004/03/12 12:46:07 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -609,6 +609,13 @@ SUBDIR+=	silc-toolkit
 SUBDIR+=	silky
 SUBDIR+=	simage
 SUBDIR+=	sks
+SUBDIR+=	slackware_aaa_base
+SUBDIR+=	slackware_aaa_elflibs
+SUBDIR+=	slackware_bash
+SUBDIR+=	slackware_compat
+SUBDIR+=	slackware_gcc
+SUBDIR+=	slackware_glibc_solibs
+SUBDIR+=	slackware_tcsh
 SUBDIR+=	sleuthkit # READ TODO #
 SUBDIR+=	slocate
 SUBDIR+=	slrn-pl
