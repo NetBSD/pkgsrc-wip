@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+#	$NetBSD: smartd,v 1.1.1.1 2003/12/25 23:03:54 shattered Exp $
+#
+# PROVIDE: smartd
+# REQUIRE: DAEMON
+
+. /etc/rc.subr
+
+name="smartd"                      
+rcvar=$name         
+command="/usr/pkg/sbin/${name}"
+pidfile="/var/run/${name}.pid"
+smartd_flags="-p $pidfile"
+              
+load_rc_config $name
+run_rc_command "$1"
