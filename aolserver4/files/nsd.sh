@@ -16,6 +16,7 @@ command="@PREFIX@/bin/${name}"
 required_files="@PKG_SYSCONFDIR@/nsd.tcl"
 nsd_flags="-t @PKG_SYSCONFDIR@/nsd.tcl -u nsadmin -g nsadmin"
 nsd_user="root"
+pidfile="/var/run/nsd/server1.pid"
 
 # set defaults
 if [ -r /etc/rc.conf ]
@@ -29,9 +30,31 @@ nsd_doit ()
 {
 
 	case $1 in
-	start)		@ECHO@ "Starting ${name}." ;;
-	stop)		@ECHO@ "Stopping ${name}." ;;
-	restart)	@ECHO@ "Restarting ${name}." ;;
+	start)	
+		if [ -f ${pidfile} ]
+		then
+			@ECHO@ "${name} already running as `cat ${pidfile}`"
+		else
+			@ECHO@ "Starting ${name}." 
+			${command} ${nsd_flags}
+		fi;;
+
+	stop)		
+		if [ -f ${pidfile} ]
+		then  
+			echo "Stopping ${name}."
+			kill -TERM `cat ${pidfile}`
+		fi;;
+	restart)	
+		if [ -f ${pidfile} ]
+		then
+			echo "Restarting ${name}."
+			kill -TERM `cat ${pidfile}`
+			sleep 5
+			${command} ${nsd_flags}
+		else
+			echo "${name} not running?"
+		fi;;
 	esac
 
 	${command} ${nsd_flags}
