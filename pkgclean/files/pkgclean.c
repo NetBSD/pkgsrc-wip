@@ -39,7 +39,8 @@
 #define PKGSRCDIR	"@PKGSRCDIR@"
 
 static const char * const skip[] = {
-	".", "..", "CVS", "bootstrap", "doc", "distfiles", "licenses", "mk", NULL
+	".", "..", "CVS", "bootstrap", "doc", "distfiles",
+	"licenses", "mk", "packages", NULL
 };
 
 static void	pkgclean(const char *, const char *);
@@ -70,32 +71,32 @@ pkgclean(const char *path, const char *work)
 	struct stat sb;
 
 	if ((ncat = scandir(path, &cat, checkskip, alphasort)) < 0)
-		err(EXIT_FAILURE, "%s", path);
+		err(EXIT_FAILURE, "scandir: %s", path);
 
 	for (i = 0; i < ncat; i++) {
-		if ((size_t)snprintf(tmp, sizeof(tmp), "%s/%s", path, cat[i]->d_name) >= sizeof(tmp)) {
-			(void)fprintf(stderr, "warning: filename too long: %s\n", tmp);
+		if (snprintf(tmp, sizeof(tmp), "%s/%s", path, cat[i]->d_name)
+		    >= sizeof(tmp)) {
+			warnx("filename too long: %s", tmp);
 			continue;
 		}
 		if (stat(tmp, &sb) < 0 || !S_ISDIR(sb.st_mode))
 			continue;
 		if ((nlist = scandir(tmp, &list, checkskip, alphasort)) < 0) {
-			warn("%s", tmp);
+			warn("scandir: %s", tmp);
 			continue;
 		}
 		for (j = 0; j < nlist; j++) {
-			if ((size_t)snprintf(tmp, sizeof(tmp), "%s/%s/%s/%s", path,
+			if (snprintf(tmp, sizeof(tmp), "%s/%s/%s/%s", path,
 			    cat[i]->d_name, list[j]->d_name, work) >= sizeof(tmp)) {
-				(void)fprintf(stderr, "warning: filename too long: %s\n", tmp);
+				warnx("filename too long: %s", tmp);
 				continue;
 			}
 			if (stat(tmp, &sb) < 0 || !S_ISDIR(sb.st_mode))
 				continue;
 			(void)printf("Deleting %s\n", tmp);
 			if (fork() == 0) {
-				(void)execl("/bin/rm", "/bin/rm", "-rf", tmp, NULL);
-				perror(tmp);
-				exit(EXIT_FAILURE);
+				(void)execl("/bin/rm", "rm", "-rf", tmp, NULL);
+				err(EXIT_FAILURE, "Failed to exec /bin/rm"); 
 			}
 			free(list[j]);
 		}
@@ -110,10 +111,8 @@ checkskip(const struct dirent *dp)
 {
 	const char * const *p;
 
-	for (p = skip; *p != NULL; p++) {
-		if (strcmp(dp->d_name, *p) == 0) {
+	for (p = skip; *p != NULL; p++)
+		if (strcmp(dp->d_name, *p) == 0)
 			return 0;
-		}
-	}
 	return 1;
 }
