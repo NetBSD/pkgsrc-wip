@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/03/30 21:39:34 riz Exp $
+# $NetBSD: Makefile,v 1.13 2005/03/31 02:30:30 riz Exp $
 #
 
 DISTNAME=		asterisk-1.0.7
@@ -9,8 +9,6 @@ MASTER_SITES=		ftp://ftp.asterisk.org/pub/asterisk/ \
 MAINTAINER=		riz@NetBSD.org
 HOMEPAGE=		http://www.asterisk.org/
 COMMENT=		The Asterisk Software PBX
-
-USE_BUILDLINK3=		yes
 
 USE_GNU_TOOLS+= 	make yacc
 

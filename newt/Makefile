@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/03/31 01:25:23 riz Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/31 02:30:32 riz Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-5.src.rpm
 PKGNAME=		newt-0.51.6
@@ -13,7 +13,6 @@ COMMENT=		Windowing toolkit based on libslang
 
 BUILD_DEPENDS+=		rpm2pkg>=2.0:../../pkgtools/rpm2pkg
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 NO_EXPORT_CPP=		yes
