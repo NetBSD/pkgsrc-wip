@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/11/23 22:56:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/24 15:47:35 poppnk Exp $
 #
 
 DISTNAME=	tcc-0.9.22
@@ -15,6 +15,15 @@ NOT_FOR_PLATFORM=       NetBSD-1.6.2-*
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 HAS_CONFIGURE=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Linux"
+SUBST_CLASSES=ldl
+SUBST_FILES.ldl=Makefile
+SUBST_STAGE.ldl=post-patch
+SUBST_SED.ldl=-e 's,LIBS=,\#LIBS,'
+.endif
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
