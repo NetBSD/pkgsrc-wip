@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/16 09:12:52 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/16 09:25:49 minskim Exp $
 
 DISTNAME=	gnome-spell-1.0.5
 CATEGORIES=	textproc
@@ -17,9 +17,12 @@ USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+.include "../../net/ORBit2/buildlink2.mk"
 .include "../../devel/libbonobo/buildlink2.mk"
 .include "../../devel/libbonoboui/buildlink2.mk"
+.include "../../devel/libglade2/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../textproc/aspell/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
