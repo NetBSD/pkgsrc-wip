@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1273 2004/05/12 16:21:51 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1273 2004/05/12 16:21:51 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1274 2004/05/12 19:14:10 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1274 2004/05/12 19:14:10 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -321,6 +321,7 @@ SUBDIR+=	libticalcs
 SUBDIR+=	libtifiles
 SUBDIR+=	libtlen2
 SUBDIR+=	libuuid
+SUBDIR+=	libwhisker2
 SUBDIR+=	libwpd
 SUBDIR+=	libxml++
 SUBDIR+=	lilo
