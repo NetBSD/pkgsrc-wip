@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/16 16:03:50 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/16 16:06:39 bencollver Exp $
 #
 
 DISTNAME=		uqm-0.3-source
@@ -17,6 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_X11=		YES
+USE_GNU_TOOLS=		make
 WRKSRC=			${WRKDIR}/${PKGNAME}
 DIST_SUBDIR=		uqm
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
