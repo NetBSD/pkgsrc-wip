@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/10/23 00:02:29 lexort Exp $
+
+SHA1 (libgeotiff-1.2.2.tar.gz) = 6fcf26c43b88c6bc5a157ed8a9eba5133270f053
+Size (libgeotiff-1.2.2.tar.gz) = 821750 bytes
+SHA1 (patch-aa) = 09dadd3b7809545d493d584c9b7e9c96e9dea41a
+SHA1 (patch-ab) = 34cc9c925534ded2f7575e744d3f6a3f6f628c3d
