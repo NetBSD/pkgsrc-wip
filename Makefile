@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1353 2004/06/29 05:48:43 rillig Exp $
-# $NetBSD: Makefile,v 1.1353 2004/06/29 05:48:43 rillig Exp $
+# $Id: Makefile,v 1.1354 2004/06/29 16:45:45 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1354 2004/06/29 16:45:45 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -476,6 +476,7 @@ SUBDIR+=	p5-DateTime-TimeZone
 SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-Frontier-RPC
+SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-GeoIP
 SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-HTML-Latex
