@@ -1,0 +1,21 @@
+i don't know what i'm doing with the buildlink3.mk file.
+
+the compile currently stops with: 
+
+gmake[3]: Leaving directory `/usr/pkgsrc/security/nss/work/nss-3.9.2/mozilla/security/nss/cmd/shlibsign/mangle'
+NetBSD1.6.1_RC2_OPT.OBJ/shlibsign -v -i ../../../../dist/NetBSD1.6.1_RC2_OPT.OBJ/lib/libsoftokn3.so
+Shared object "libplc4.so" not found
+gmake[2]: *** [../../../../dist/NetBSD1.6.1_RC2_OPT.OBJ/lib/libsoftokn3.chk] Error 1
+gmake[2]: Leaving directory `/usr/pkgsrc/security/nss/work/nss-3.9.2/mozilla/security/nss/cmd/shlibsign'
+gmake[1]: *** [libs] Error 2
+gmake[1]: Leaving directory `/usr/pkgsrc/security/nss/work/nss-3.9.2/mozilla/security/nss/cmd'
+gmake: *** [libs] Error 2
+*** Error code 2
+
+Stop.
+make: stopped in /usr/pkgsrc/security/nss
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/security/nss
+
