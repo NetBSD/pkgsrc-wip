@@ -1,0 +1,36 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/11/02 14:57:52 tripledes Exp $
+
+DISTNAME=       gkrellweather-2.0.6
+PKGNAME=        gkrellm-weather-2.0.6
+CATEGORIES=	misc
+MASTER_SITES=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	tripledes@eslack.org
+HOMEPAGE=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/
+COMMENT=	Gkrellm2 weather plugin
+
+DEPENDS+=       wget>=1.8:../../net/wget
+BUILD_USES_MSGFMT=      YES
+
+USE_BUILDLINK2=		YES
+USE_GMAKE=		YES
+USE_PKGLOCALEDIR=	YES
+ALL_TARGET=		gkrellweather.so
+
+MAKE_ENV+=	LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \
+		enable_nls=1
+
+pre-build:
+	${MV} ${WRKSRC}/GrabWeather ${WRKSRC}/GrabWeather.orig
+	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.orig
+	${SED} -e "s|/usr/local|${PREFIX}|" \
+	${WRKSRC}/Makefile.orig > ${WRKSRC}/Makefile
+	${SED}  -e "s|/usr/bin/perl|${PERL5}|" \
+	${WRKSRC}/GrabWeather.orig > ${WRKSRC}/GrabWeather
+
+.include "../../wip/gkrellm2/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
+
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/02 14:57:52 tripledes Exp $
+bin/GrabWeather
+lib/gkrellm2/plugins/gkrellweather.so
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gkrellweather.mo
+@dirrm lib/gkrellm2/plugins
