@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/05 15:33:54 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 16:09:38 bubuchka Exp $
 
-DISTNAME=	xcircuit-3.1.15
+DISTNAME=	xcircuit-3.1.17
 CATEGORIES=	cad graphics
 MASTER_SITES=	http://xcircuit.ece.jhu.edu/archive/	\
 		http://bach.ece.jhu.edu/~tim/programs/xcircuit/archive/
