@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/16 00:07:52 airhead Exp $
+$NetBSD: distinfo,v 1.2 2005/02/16 22:24:27 airhead Exp $
 
 SHA1 (orion-0.2.tar.gz) = e409dc6800f6dde2531837240967cd74a40acd42
 Size (orion-0.2.tar.gz) = 40281 bytes
+SHA1 (patch-aa) = f4306c3d142429f0364f18fd36a9cea4fdcc94df

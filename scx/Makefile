@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.3 2005/02/16 21:39:47 airhead Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/16 22:24:26 airhead Exp $
 #
 
 DISTNAME=		scx-0.2
@@ -16,21 +16,16 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-scsh-includes=${PREFIX}/include
 
-SCSH_VERSION?=		0.6
-
 #
 # XXX Nasty quick hack. so sue me for wanting to get orion to work asap ;)
 #
-BUILD_DEPENDS+=		scsh-${SCSH_VERSION}.[0-9]:../../shells/scsh
+BUILD_DEPENDS+=		scsh>=0.6:../../shells/scsh
 BUILD_DEPENDS+=		scsh-install-lib>=1:../../wip/scsh-install-lib
-
-SCSH_LIBPATH=		${PREFIX}/share/scsh-${SCSH_VERSION}/modules
 
 do-install:
 	cd ${WRKSRC}; \
-	env SCSH_LIB_DIRS=\"${SCSH_LIBPATH}\" \
-	    scsh-install-pkg --prefix=${PREFIX} \
-			     --layout fhs \
-			     --verbose
+	scsh-install-pkg --prefix=${PREFIX} \
+			 --layout fhs \
+			 --verbose
 
 .include "../../mk/bsd.pkg.mk"
