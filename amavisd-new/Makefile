@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/15 17:19:15 cubidou Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/08 16:58:12 jcd Exp $
 
 DISTNAME=	amavisd-new-${VERSION}-${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
@@ -87,6 +87,10 @@ CONFIGURE_ARGS+=--with-user=${AMAVISUSER}
 CONFIGURE_DIRS=       ${WRKSRC}/helper-progs
 BUILD_DIRS=   ${WRKSRC}/helper-progs
 AMAVIS_MILTER_USED=
+
+# Doesn't work with pth
+PTHREAD_OPTS+=          require native
+
 .else
 do-configure:
 
