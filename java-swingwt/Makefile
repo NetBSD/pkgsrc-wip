@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/29 23:28:03 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/18 15:26:00 ppostma Exp $
 #
 
 DISTNAME=		swingwt-0.82
 PKGNAME=		java-swingswt-0.82
 WRKSRC=			${WRKDIR}/SwingWT
-CATEGORIES=		wip
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swingwt/}
+CATEGORIES=		sysutils
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swingwt/}
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://swingwt.sourceforge.net/

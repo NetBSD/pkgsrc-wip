@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/04/12 02:38:39 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/18 15:25:59 ppostma Exp $
 #
 
 DISTNAME=		luacheia5-5.0.1a4
-CATEGORIES=		wip
+CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=/luacheia/}
 
 MAINTAINER=		pancake@phreaker.net

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/04/15 11:04:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/18 15:25:59 ppostma Exp $
 #
 
 DISTNAME=	libdisasm-0.17pre2
-CATEGORIES=	wip
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bastard/}
 EXTRACT_SUFX=	.tgz
 

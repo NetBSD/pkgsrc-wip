@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/05/09 02:39:45 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/18 15:25:57 ppostma Exp $
 #
 
 DISTNAME=		pango-1.4.0
-CATEGORIES=		wip
+CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.4/
 EXTRACT_SUFX=		.tar.bz2
 

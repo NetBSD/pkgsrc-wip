@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/05/09 19:38:37 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/18 15:25:58 ppostma Exp $
 #
 
 DISTNAME=		luasocket-2.0-alpha
 PKGNAME=		luasocket-2.0alpha
-CATEGORIES=		wip
+CATEGORIES=		net
 MASTER_SITES=		http://www.tecgraf.puc-rio.br/~diego/luasocket/new/
 
 MAINTAINER=		pancake@phreaker.net

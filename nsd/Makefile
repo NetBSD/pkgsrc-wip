@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/04/26 00:39:23 rockpiper Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/18 15:25:58 ppostma Exp $
 #
 
 DISTNAME=		nsd-2.0.2
-CATEGORIES=		wip
+CATEGORIES=		net
 MASTER_SITES=		http://www.nlnetlabs.nl/downloads/nsd/
 
 MAINTAINER=		pancake@phreaker.net

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2004/05/09 19:34:21 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/18 15:25:58 ppostma Exp $
 #
 
 DISTNAME=		lposix
 PKGNAME=		luaposix-1.0
 WRKSRC=			${WRKDIR}/posix/
-CATEGORIES=		wip
+CATEGORIES=		devel
 MASTER_SITES=		http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/
 
 MAINTAINER=		pancake@phreaker.net

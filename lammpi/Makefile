@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/07/02 19:42:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/18 15:25:59 ppostma Exp $
 #
 
-DISTNAME=		lam-7.0.2
-CATEGORIES=		wip
+DISTNAME=	lam-7.0.2
+CATEGORIES=	net
 MASTER_SITES=	http://www.lam-mpi.org/download/files/
 
 MAINTAINER=	adam@monkeybyte.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/05/02 22:03:41 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/18 15:26:00 ppostma Exp $
 #
 
 DISTNAME=		gateway-1.2.1
-CATEGORIES=		wip
-MASTER_SITES=	http://www.kannel.org/download/1.2.1/
+CATEGORIES=		net
+MASTER_SITES=		http://www.kannel.org/download/1.2.1/
 
 MAINTAINER=		adam@monkeybyte.org
 HOMEPAGE=		http://www.kannel.org/download/1.2.1/

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/03 20:11:50 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/18 15:25:59 ppostma Exp $
 #
 
 DISTNAME=		kissme-0.0.32
-CATEGORIES=		wip
+CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kissme/}
 
 MAINTAINER=		pancake@phreaker.net

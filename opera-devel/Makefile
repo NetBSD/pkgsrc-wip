@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/28 22:41:41 kheinz Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/18 15:25:57 ppostma Exp $
 
 DISTNAME=	opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
 PKGNAME=	opera-${OPERA_PKG_VERSION}beta${OPERA_VER_DATE}
 PKGREVISION=	# empty
-CATEGORIES=	wip
+CATEGORIES=	www
 MASTER_SITES=	http://www.panix.com/opera/files/${OPERA_DIR}/ \
 		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/ \
 		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/ \
