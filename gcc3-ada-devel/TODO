@@ -1,3 +1,5 @@
+- Build does not complete. Path to Ada compiler is
+  forgotten when building RTS.
 - Fix some RTS dependancies
 - Eliminate unnecessary configuration
 - Add ACATS C tests to test suite
