@@ -1,0 +1,3 @@
+This package is here at the moment only for its buildlink.mk file.
+Nothing else has been done. The buildlink.mk file is not complete
+but works for using samba3 on NetBSD. It is here purely for samba3 testing.
