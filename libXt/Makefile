@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/13 23:32:18 blef Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/14 00:54:04 minskim Exp $
 #
 
 DISTNAME=		libXt-0.1.4
@@ -34,7 +34,7 @@ post-extract:
 .include "../../wip/libSM/buildlink3.mk"
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/xproto/buildlink3.mk"
-.include "../../wip/xextensions/buildlink3.mk"
+.include "../../x11/xextensions/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
