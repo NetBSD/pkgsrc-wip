@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.943 2004/02/10 12:11:36 adrian_p Exp $
-# $NetBSD: Makefile,v 1.943 2004/02/10 12:11:36 adrian_p Exp $
+# $Id: Makefile,v 1.944 2004/02/10 18:50:11 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.944 2004/02/10 18:50:11 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -714,6 +714,7 @@ SUBDIR+=	xbsql
 SUBDIR+=	xchat-systray-integration
 SUBDIR+=	xevil
 SUBDIR+=	xextensions
+SUBDIR+=	xlibs
 SUBDIR+=	xmail
 SUBDIR+=	xml2doc
 SUBDIR+=	xmms-dumb
