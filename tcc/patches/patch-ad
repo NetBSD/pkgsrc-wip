@@ -1,0 +1,30 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/07/27 02:41:04 poppnk Exp $
+
+--- bcheck.c.orig	2003-07-27 04:13:21.000000000 +0000
++++ bcheck.c	2003-07-27 04:14:34.000000000 +0000
+@@ -21,6 +21,7 @@
+ #include <stdio.h>
+ #include <stdarg.h>
+ #include <string.h>
++#include <sys/param.h>
+ #ifndef __FreeBSD__
+ #include <malloc.h>
+ #endif
+@@ -36,7 +37,7 @@
+ 
+ #define HAVE_MEMALIGN
+ 
+-#ifdef __FreeBSD__
++#ifdef BSD
+ #warning Bound checking not fully supported on FreeBSD
+ #undef CONFIG_TCC_MALLOC_HOOKS
+ #undef HAVE_MEMALIGN
+@@ -782,7 +783,7 @@
+ {
+     void *ptr;
+     size = size * nmemb;
+-    ptr = __bound_malloc(size);
++    ptr = __bound_malloc(size,0);
+     if (!ptr)
+         return NULL;
+     memset(ptr, 0, size);

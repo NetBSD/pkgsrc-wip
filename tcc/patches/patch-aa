@@ -1,0 +1,69 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/27 02:41:03 poppnk Exp $
+
+--- tcc.c.orig	2003-05-24 18:30:29.000000000 +0000
++++ tcc.c	2003-07-26 21:58:09.000000000 +0000
+@@ -2926,6 +2926,22 @@
+     }
+ }
+ 
++#if __NetBSD__
++float strtof(const char *nptr, char **endptr)
++{
++	float n=0;
++	sscanf(nptr,"%f",&n);
++	return n;
++}
++
++long double strtold(const char *nptr, char **endptr)
++{
++	long double n=0;
++	sscanf(nptr,"%Lf",&n);
++	return n;
++}
++#endif
++
+ /* parse number in null terminated string 'p' and return it in the
+    current token */
+ void parse_number(const char *p)
+@@ -8954,9 +8970,15 @@
+ 
+ /* fix for glibc 2.1 */
+ #ifndef REG_EIP
++#include <sys/param.h>
++#if BSD
++#define REG_EIP _REG_EIP
++#define REG_EBP _REG_EBP
++#else
+ #define REG_EIP EIP
+ #define REG_EBP EBP
+ #endif
++#endif
+ 
+ /* return the PC at frame level 'level'. Return non zero if not found */
+ static int rt_get_caller_pc(unsigned long *paddr, 
+@@ -8969,14 +8991,14 @@
+ #ifdef __FreeBSD__
+         *paddr = uc->uc_mcontext.mc_eip;
+ #else
+-        *paddr = uc->uc_mcontext.gregs[REG_EIP];
++        *paddr = uc->uc_mcontext.__gregs[REG_EIP];
+ #endif
+         return 0;
+     } else {
+ #ifdef __FreeBSD__
+         fp = uc->uc_mcontext.mc_ebp;
+ #else
+-        fp = uc->uc_mcontext.gregs[REG_EBP];
++        fp = uc->uc_mcontext.__gregs[REG_EBP];
+ #endif
+         for(i=1;i<level;i++) {
+             /* XXX: check address validity with program info */
+@@ -9108,7 +9130,7 @@
+         struct sigaction sigact;
+         /* install TCC signal handlers to print debug info on fatal
+            runtime errors */
+-        sigact.sa_flags = SA_SIGINFO | SA_RESETHAND;
++        sigact.sa_flags = SA_RESETHAND;
+         sigact.sa_sigaction = sig_error;
+         sigemptyset(&sigact.sa_mask);
+         sigaction(SIGFPE, &sigact, NULL);

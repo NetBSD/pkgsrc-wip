@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/07/27 02:41:03 poppnk Exp $
+
+--- tccelf.c.orig	2003-07-26 21:40:06.000000000 +0000
++++ tccelf.c	2003-07-26 21:40:16.000000000 +0000
+@@ -378,7 +378,7 @@
+ 
+ static void *resolve_sym(const char *sym)
+ {
+-    return dlsym(RTLD_DEFAULT, sym);
++    return dlsym(RTLD_LAZY, sym);
+ }
+ 
+ /* relocate symbol table, resolve undefined symbols if do_resolve is

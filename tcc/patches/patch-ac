@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/07/27 02:41:04 poppnk Exp $
+
+--- Makefile.orig	2003-05-24 18:30:29.000000000 +0000
++++ Makefile	2003-07-27 04:32:14.000000000 +0000
+@@ -2,9 +2,11 @@
+ # Tiny C Compiler Makefile
+ #
+ include config.mak
++OS=\`uname\`
+ 
+ CFLAGS=-O2 -g -Wall
+-LIBS=-ldl
++LIBS=`if [ ! "$(OS)" = "NetBSD" ]; then echo "-ldl"; fi`
++
+ CFLAGS_P=$(CFLAGS) -pg -static -DCONFIG_TCC_STATIC
+ LIBS_P=
+ 
+@@ -167,7 +169,7 @@
+ 	$(AR) rcs $@ $^
+ 
+ libtcc_test: libtcc_test.c libtcc.a 
+-	$(CC) $(CFLAGS) -I. -o $@ $< -L. -ltcc -ldl
++	$(CC) $(CFLAGS) -I. -o $@ $< -L. -ltcc $(LIBS)
+ 
+ libtest: libtcc_test
+ 	./libtcc_test

@@ -1,0 +1,4 @@
+* Original pkg seems to work under Linux and FreeBSD
+  I patch a little bit FreeBSD #ifs and compiles under
+  NetBSD, but doesn't works fine.
+* Could be a freebsd bug also, I doesn't test it :/
