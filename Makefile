@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1299 2004/05/29 00:34:22 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1299 2004/05/29 00:34:22 xtraeme Exp $
+# $Id: Makefile,v 1.1300 2004/05/29 01:06:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1300 2004/05/29 01:06:34 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -87,7 +87,6 @@ SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	cryptopp
 SUBDIR+=	cvsd
-SUBDIR+=	d2x
 SUBDIR+=	d4x
 SUBDIR+=	damageext
 SUBDIR+=	dansguardian
