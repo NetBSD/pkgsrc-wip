@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/09/01 10:35:53 adrian_p Exp $
+$NetBSD: MESSAGE,v 1.2 2005/02/22 09:36:05 adrian_p Exp $
 
 sid-milter is now installed.
 The documentation can be found at ${PREFIX}/share/doc/sid-milter/
@@ -14,7 +14,4 @@ At a minmium you will need to specify:
 in your /etc/rc.conf.
 
 For security you may also wish to investigate the use of "-u userid".
-
-THIS IS PRE-RELEASE SOFTWARE, and should not be used in any critical 
-production environments.
 ===========================================================================

@@ -1,3 +1,2 @@
 - Needs testing 
-- Clarify that it's only for sendmail/libmilter in the MESSAGE/DESCR
 - Find out what options are required for the rc.d script
