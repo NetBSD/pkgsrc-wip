@@ -1,24 +1,10 @@
-From pflkm homepage <http://foo.unix.se/joelw/pflkm.html> :
+This is OpenBSD 3.4 pf lkm for NetBSD 2.0, based on Joel Wilsson's original 3.3
+lkm.
+ALTQ and IPv6 support are not, respectively, ported and tested. For the last
+one, very little work would make it work.
+See original pf NetBSD lkm page for more informations :
 
-The OpenBSD packet filter (or pf, for short) replaced Darren Reed's IP Filter
-in OpenBSD 3.0, due to problems with IP Filter's license. Since then, pf has 
-evolved quickly, and now has several advantages over IP Filter.
+http://foo.unix.se/joelw/pflkm.html
 
-Here is a port of the pf code found in OpenBSD 3.3 to NetBSD 1.6.1.  In my
-opinion, the biggest advantage is the integration with ALTQ, a QoS framework
-for various packet scheduling algorithms, but there's also work on adding
-support for things like stateful failover between pf firewalls. Considering
-how much work is being done on pf, the advantages over IP Filter will only
-increase.
-
-Therefore, I believe NetBSD will eventually want to integrate pf into NetBSD.
-Until then, you can use this loadable kernel module to get pf going, although
-it unfortunately does not support ALTQ (that would require many changes to the
-kernel, not possible for a mere LKM).
-
-So why isn't it already in NetBSD-current? Well, core@netbsd.org is of the
-opinion that pf is not yet mature enough, so they decided to leave it out (at
-least that's what they thought in January, 2003). I will update this LKM once
-for every OpenBSD release, until they change their mind, and I also hope to
-create a set of patches against NetBSD-current with full support for IPv6 and
-ALTQ.
+---
+iMil <imil@gcu.info>
