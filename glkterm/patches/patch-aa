@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/21 11:49:05 dillo Exp $
+
+--- Makefile.orig	Mon Dec 20 01:21:49 1999
++++ Makefile
+@@ -10,16 +10,16 @@
+ 
+ # Pick a C compiler.
+ #CC = cc
+-CC = gcc -ansi
++#CC = gcc -ansi
+ 
+ # You may need to set directories to pick up the ncurses library.
+ #INCLUDEDIRS = -I/usr/5include
+-#LIBDIRS = -L/usr/5lib 
++LIBDIRS = -L${PREFIX}/lib -Wl,${RPATH_FLAG}${PREFIX}/lib
+ LIBS = -lncurses
+ 
+-OPTIONS = -O
++#OPTIONS = -O
+ 
+-CFLAGS = $(OPTIONS) $(INCLUDEDIRS)
++#CFLAGS = $(OPTIONS) $(INCLUDEDIRS)
+ 
+ GLKLIB = libglkterm.a
+ 
