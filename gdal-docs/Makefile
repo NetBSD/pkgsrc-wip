@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/17 21:16:52 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/26 01:08:31 lexort Exp $
 #
 
 DISTNAME=		gdal-1.2.5
@@ -10,7 +10,7 @@ MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://gdal.org/
 COMMENT=		Documentation for GDAL
 
-EPENDS+=		doxygen>=1.4.1:../../devel/doxygen/
+DEPENDS+=		doxygen>=1.4.1:../../devel/doxygen/
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
