@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/05/29 09:06:23 airhead Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/05/29 09:14:12 airhead Exp $
 bin/mutella
 man/man1/mutella.1
 share/mutella/remote/template/connections.html
@@ -66,3 +66,5 @@ share/mutella/remote/template/images/transfers-64x64.gif
 @dirrm share/mutella/remote/template/images
 @dirrm share/mutella/remote/template/modules
 @dirrm share/mutella/remote/template
+@dirrm share/mutella/remote
+@dirrm share/mutella
