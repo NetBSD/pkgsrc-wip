@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/28 15:41:51 airhead Exp $
-
-SHA1 (latex2rtf-1.9.15.tar.gz) = ad1c9c899a0cfa1666a0fccef3ef45216e0ba4ad
-Size (latex2rtf-1.9.15.tar.gz) = 605467 bytes
-SHA1 (patch-aa) = bb54d9fb8c7a9980c6a99263de078cd756749889
