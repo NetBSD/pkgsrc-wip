@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/05/10 14:07:40 cubidou Exp $
+$NetBSD: distinfo,v 1.3 2003/06/25 20:28:36 cubidou Exp $
 
-SHA1 (gkrellmms-2.1.10.tar.gz) = 9981a2688bd61c73876433de3929919694143131
-Size (gkrellmms-2.1.10.tar.gz) = 43977 bytes
+SHA1 (gkrellmms-2.1.12.tar.gz) = bda1dde61574abc63f139f5822674c58f8d1d412
+Size (gkrellmms-2.1.12.tar.gz) = 46723 bytes
 SHA1 (patch-aa) = 27f8e60da4cbdb31cdb78fc2508565aa17eec430

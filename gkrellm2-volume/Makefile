@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2003/04/07 18:02:20 cubidou Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/25 20:28:35 cubidou Exp $
 
-DISTNAME=	gkrellm-volume-2.1.7
+DISTNAME=	gkrellm-volume-2.1.8
 WRKSRC=		${WRKDIR}/gkrellm-volume
 CATEGORIES=	audio
 MASTER_SITES=	http://gkrellm.luon.net/files/
