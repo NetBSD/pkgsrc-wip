@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/09/27 12:06:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/27 12:15:43 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0b1
@@ -40,7 +40,7 @@ BUILD_DEFS+=	JABBERD_USER JABBERD_GROUP \
 # pam (Pluggable Authentication Module)
 # pgsql (PostgreSQL)
 
-JABBERD_AUTH_METOD?=		db
+JABBERD_AUTH_METHOD?=		db
 
 .if defined(JABBERD_AUTH_METHOD) && ${JABBERD_AUTH_METHOD} == "db"
 CONFIGURE_ARGS+=	--enable-authreg=db
