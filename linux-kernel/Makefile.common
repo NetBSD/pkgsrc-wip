@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.4 2004/03/07 06:46:17 jeremy-c-reed Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/06/12 22:44:24 jeremy-c-reed Exp $
 
-LINUX_VERSION=		2.6.3
+LINUX_VERSION=		2.6.6
 
 DISTNAME=		linux-${LINUX_VERSION}
 CATEGORIES=		misc
@@ -17,11 +17,14 @@ ONLY_FOR_PLATFORM=	Linux-*-*
 USE_GNU_TOOLS+=		make
 PLIST_SUBST+=		LINUX_VERSION=${LINUX_VERSION}
 CFLAGS+=		-I${WRKSRC}/include
-MAKE_ENV+=		INSTALL_MOD_PATH=${PREFIX}
+MAKE_ENV+=		INSTALL_MOD_PATH=${LINUXBASE}
 
 DISTINFO_FILE?=		${.CURDIR}/../../wip/linux-kernel/distinfo
 PATCHDIR?=		${.CURDIR}/../../wip/linux-kernel/patches
 FILESDIR=		${.CURDIR}/../../wip/linux-kernel/files
+
+.include "../../mk/bsd.prefs.mk"
+BUILD_DEFS+=	USE_INET6
 
 # This configure is also needed for the linux-kernel-headers package
 # so that include/linux/autoconf.h is generated.
@@ -29,7 +32,10 @@ FILESDIR=		${.CURDIR}/../../wip/linux-kernel/files
 do-configure:
 	cd ${WRKSRC} && \
 	yes "" | ${GMAKE} config && \
-	${CAT} ${FILESDIR}/extra-configs >> .config && \
-	yes "" | ${GMAKE} oldconfig && \
+	${CAT} ${FILESDIR}/extra-configs >> .config
+.if defined(USE_INET6) && (${USE_INET6} == "YES")
+	echo "CONFIG_IPV6=y" >> ${WRKSRC}/.config
+.endif
+	cd ${WRKSRC} && yes "" | ${GMAKE} oldconfig && \
 	${MV} ${WRKSRC}/.config ${WRKSRC}/.config.moved && \
 	${SED} -e '2c# Linux kernel .config configuration used for the ${PKGNAME} package.' ${WRKSRC}/.config.moved > ${WRKSRC}/.config

@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/06/12 22:44:24 jeremy-c-reed Exp $
+
+The ${PKGBASE} package can be installed simultaneously with
+other Linux kernel packages at the same time. You can manually remove
+older versions with pkg_delete(8) when they aren't needed anymore.
+
+Be sure to adjust your grub.conf and/or lilo.conf (and re-run lilo)
+boot loader configuration as necessary for your system.
+
+===========================================================================

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/31 22:54:07 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/06/12 22:44:24 jeremy-c-reed Exp $
 boot/System.map-${PKGVERSION}
 boot/bzImage-${PKGVERSION}
 boot/${PKGNAME}.config
@@ -15,6 +15,7 @@ lib/modules/${PKGVERSION}/kernel/drivers/char/agp/sworks-agp.ko
 lib/modules/${PKGVERSION}/kernel/drivers/char/agp/via-agp.ko
 lib/modules/${PKGVERSION}/kernel/drivers/char/drm/gamma.ko
 lib/modules/${PKGVERSION}/kernel/drivers/char/drm/i810.ko
+lib/modules/${PKGVERSION}/kernel/drivers/char/drm/i830.ko
 lib/modules/${PKGVERSION}/kernel/drivers/char/drm/mga.ko
 lib/modules/${PKGVERSION}/kernel/drivers/char/drm/r128.ko
 lib/modules/${PKGVERSION}/kernel/drivers/char/drm/radeon.ko
@@ -30,18 +31,22 @@ lib/modules/${PKGVERSION}/kernel/drivers/net/plip.ko
 lib/modules/${PKGVERSION}/kernel/drivers/net/ppp_generic.ko
 lib/modules/${PKGVERSION}/kernel/drivers/net/slhc.ko
 lib/modules/${PKGVERSION}/kernel/drivers/net/slip.ko
+lib/modules/${PKGVERSION}/kernel/drivers/usb/class/audio.ko
 lib/modules/${PKGVERSION}/kernel/fs/ntfs/ntfs.ko
 lib/modules/${PKGVERSION}/kernel/net/bluetooth/bluetooth.ko
 lib/modules/${PKGVERSION}/kernel/net/irda/irda.ko
 lib/modules/${PKGVERSION}/kernel/sound/drivers/mpu401/snd-mpu401.ko
+lib/modules/${PKGVERSION}/kernel/sound/usb/snd-usb-audio.ko
+lib/modules/${PKGVERSION}/modules.alias
+lib/modules/${PKGVERSION}/modules.ccwmap
 lib/modules/${PKGVERSION}/modules.dep
-lib/modules/${PKGVERSION}/modules.generic_string
 lib/modules/${PKGVERSION}/modules.ieee1394map
+lib/modules/${PKGVERSION}/modules.inputmap
 lib/modules/${PKGVERSION}/modules.isapnpmap
-lib/modules/${PKGVERSION}/modules.parportmap
 lib/modules/${PKGVERSION}/modules.pcimap
-lib/modules/${PKGVERSION}/modules.pnpbiosmap
+lib/modules/${PKGVERSION}/modules.symbols
 lib/modules/${PKGVERSION}/modules.usbmap
+@dirrm lib/modules/${PKGVERSION}/kernel/sound/usb
 @dirrm lib/modules/${PKGVERSION}/kernel/sound/drivers/mpu401
 @dirrm lib/modules/${PKGVERSION}/kernel/sound/drivers
 @dirrm lib/modules/${PKGVERSION}/kernel/sound
@@ -50,6 +55,8 @@ lib/modules/${PKGVERSION}/modules.usbmap
 @dirrm lib/modules/${PKGVERSION}/kernel/net
 @dirrm lib/modules/${PKGVERSION}/kernel/fs/ntfs
 @dirrm lib/modules/${PKGVERSION}/kernel/fs
+@dirrm lib/modules/${PKGVERSION}/kernel/drivers/usb/class
+@dirrm lib/modules/${PKGVERSION}/kernel/drivers/usb
 @dirrm lib/modules/${PKGVERSION}/kernel/drivers/net
 @dirrm lib/modules/${PKGVERSION}/kernel/drivers/message/i2o
 @dirrm lib/modules/${PKGVERSION}/kernel/drivers/message
@@ -62,5 +69,3 @@ lib/modules/${PKGVERSION}/modules.usbmap
 @dirrm lib/modules/${PKGVERSION}/kernel/drivers
 @dirrm lib/modules/${PKGVERSION}/kernel
 @dirrm lib/modules/${PKGVERSION}
-@dirrm lib/modules
-@dirrm boot
