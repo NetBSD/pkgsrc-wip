@@ -1,15 +1,9 @@
-@comment $NetBSD: PLIST.X,v 1.1.1.1 2003/04/13 11:02:10 jmmv Exp $
+@comment $NetBSD: PLIST.X,v 1.2 2003/08/22 16:39:15 xtraeme Exp $
 bin/scm
 bin/scmlit
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/Xlibscm.info
 info/Xlibscm.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/Xlibscm.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/hobbit.info
 info/hobbit.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/hobbit.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/scm.info
 info/scm.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/scm.info
 man/man1/scm.1
 share/scm/COPYING
 share/scm/Iedline.scm

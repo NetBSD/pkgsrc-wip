@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/17 18:46:58 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/22 16:39:14 xtraeme Exp $
 
 DISTNAME=		ed-0.2
 CATEGORIES=		editors
@@ -9,6 +9,7 @@ HOMEPAGE=		http://www.gnu.org/software/ed/ed.html
 COMMENT=		GNU version of line-oriented text editor
 
 GNU_CONFIGURE=		YES
+INFO_FILES=		ed.info
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -19,5 +20,4 @@ MAKE_ENV+=		binprefix="${GNU_PROGRAM_PREFIX}"
 PLIST_SUBST+=           GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=            GNU_PROGRAM_PREFIX
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

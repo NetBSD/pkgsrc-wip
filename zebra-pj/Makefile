@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/04/29 17:25:36 lexort Exp $
+# $NetBSD: Makefile,v 1.4 2003/08/22 16:39:15 xtraeme Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 
 DISTNAME=	zebra-pj-20030428
@@ -16,6 +16,8 @@ AUTOCONF_REQD=		2.13
 AUTOMAKE_REQD=		1.4
 GNU_CONFIGURE=		# defined
 USE_GMAKE=		# defined
+INFO_FILES=	zebra.info zebra.info-1 zebra.info-2 \
+		zebra.info-3 zebra.info-4
 
 # for INET6
 .include "../../mk/bsd.prefs.mk"
@@ -63,5 +65,4 @@ post-install:
 	@${CHMOD} a+r ${PREFIX}/share/examples/zebra/*
 
 .include "../../mk/automake.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:19 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2003/08/22 16:39:15 xtraeme Exp $
 #
 
 DISTNAME=	scm5d6
@@ -27,6 +27,7 @@ ALL_TARGET=	scmlit
 SLIB_VER=	2.4.4
 
 SCM_DATA=	scm.info hobbit.info
+INFO_FILES=	${SCM_DATA}
 
 .if defined(USE_X) && defined(USE_NCURSES)
 .include "../../mk/x11.buildlink.mk"
@@ -68,6 +69,5 @@ post-install:
 	${INSTALL_INFO} ${PREFIX}/info/${file} ${PREFIX}/info/dir
 .endfor
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
 

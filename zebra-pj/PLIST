@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/29 14:36:53 lexort Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/22 16:39:15 xtraeme Exp $
 include/ospfd/ospf_api.h
 include/ospfd/ospf_asbr.h
 include/ospfd/ospf_dump.h
@@ -8,13 +8,11 @@ include/ospfd/ospf_lsdb.h
 include/ospfd/ospf_nsm.h
 include/ospfd/ospf_opaque.h
 include/ospfd/ospfd.h
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/zebra.info
 info/zebra.info
 info/zebra.info-1
 info/zebra.info-2
 info/zebra.info-3
 info/zebra.info-4
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/zebra.info
 lib/libospf.a
 lib/libzebra.a
 man/man1/vtysh.1

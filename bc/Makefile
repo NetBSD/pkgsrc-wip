@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:11 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2003/08/22 16:39:14 xtraeme Exp $
 
 DISTNAME=	bc-1.06
 CATEGORIES=	math
@@ -11,6 +11,7 @@ COMMENT=	Arbitrary precision calculator language
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
+INFO_FILES=	bc.info dc.info
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -20,5 +21,4 @@ BUILD_DEPENDS+=	flex-*:../../devel/flex
 
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
