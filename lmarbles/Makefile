@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/12 05:50:36 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/13 14:28:33 thomasklausner Exp $
 #
 
 DISTNAME=	lmarbles-1.0.6
@@ -23,7 +23,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/manual/marbles.jpg ${PREFIX}/share/doc/html/lmarbles
 	${INSTALL_DATA} ${WRKSRC}/src/manual/teleport.jpg ${PREFIX}/share/doc/html/lmarbles
 
-.include "../../audio/SDL-mixer/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
