@@ -1,4 +1,0 @@
-$Id: TODO,v 1.1.1.1 2004/02/28 17:46:05 xtraeme Exp $
-
-    o Enable realtime scheduler priority, uses non-known
-      NetBSD functions: pthread_attr_setschedparam, etc.

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/28 17:46:05 xtraeme Exp $
-
-SHA1 (terminatorX-3.81.tar.bz2) = b36b9460c7e58eb17a07717b5f6616f0e0d1ea47
-Size (terminatorX-3.81.tar.bz2) = 425688 bytes
-SHA1 (patch-aa) = dda22a7c4b6ff451a0b7924fabab96fb4ff159ac

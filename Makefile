@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1609 2005/01/12 13:44:33 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1609 2005/01/12 13:44:33 xtraeme Exp $
+# $Id: Makefile,v 1.1610 2005/01/12 14:09:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1610 2005/01/12 14:09:00 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -385,7 +385,6 @@ SUBDIR+=	kylix-openedition
 SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
-SUBDIR+=	ladspa
 SUBDIR+=	lammpi
 SUBDIR+=	latex2rtf
 SUBDIR+=	lbdb
@@ -856,7 +855,6 @@ SUBDIR+=	tcpspy
 SUBDIR+=	tcptrack
 SUBDIR+=	tendra
 SUBDIR+=	tenmado
-SUBDIR+=	terminatorx
 SUBDIR+=	terminus-font
 SUBDIR+=	tetrinet
 SUBDIR+=	tetrinetx
