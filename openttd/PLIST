@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/27 21:56:11 froz Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/27 22:42:22 thomasklausner Exp $
 bin/ttd
 share/openttd/lang/norwegian.lng
 share/openttd/lang/italian.lng
@@ -22,4 +22,4 @@ share/openttd/docs/changelog.txt
 @dirrm share/openttd/lang
 @dirrm share/openttd/docs
 @comment next dir may contain data files
-@unexec ${RMDIR} -p %D/share/openttd/data/ 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} -p %D/share/openttd/data 2>/dev/null || ${TRUE}

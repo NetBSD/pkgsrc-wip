@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/08/27 21:56:10 froz Exp $
+$NetBSD: MESSAGE,v 1.2 2004/08/27 22:42:22 thomasklausner Exp $
 
 To run openttd you need data files provided by the original Transport
-Tychoon Deluxe.
+Tycoon Deluxe.
 
-The following files should be copied to ${PREFIX}/share/openttd/data/
+The following files should be copied to ${PREFIX}/share/openttd/data
 in order to play:
 	
 	sample.cat
