@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/06/11 08:19:01 xtraeme Exp $
+
+SHA1 (directory_administrator-1.5.tar.gz) = ee4e6f846268687828d18faf9c4b3fe5639d2a58
+Size (directory_administrator-1.5.tar.gz) = 457829 bytes
+SHA1 (patch-aa) = df6bb5ed4f049ba2aa8398c7f73a07a051b18324

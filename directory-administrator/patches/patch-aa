@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/11 08:19:01 xtraeme Exp $
+
+--- src/users.c.orig	2003-06-11 09:44:20.000000000 +0200
++++ src/users.c	2003-06-11 09:45:33.000000000 +0200
+@@ -25,7 +25,7 @@
+ #include "charset.h"
+ #include "mkntpwd.h"
+ 
+-#ifdef FREEBSD
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+ #include <des.h>
+ #else
+ #include <crypt.h>
