@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/29 11:18:24 adrian_p Exp $
+lib/httpd/mod_security.so
