@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/03 21:45:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/18 20:38:56 thomasklausner Exp $
 #
 
 DISTNAME=	scm5d6
@@ -7,6 +7,7 @@ DISTNAME=	scm5d6
 # changed to a 4, representing the 4th letter.
 #
 PKGNAME=	scm-5.4.6
+WRKSRC=		${WRKDIR}/scm
 CATEGORIES=	lang
 MASTER_SITES=	http://swissnet.ai.mit.edu/ftpdir/scm/
 EXTRACT_SUFX=	.zip
@@ -15,23 +16,19 @@ MAINTAINER=	davids@idiom.com
 HOMEPAGE=	http://www.swiss.ai.mit.edu/~jaffer/SCM.html
 COMMENT=	Portable scheme interpreter
 
-BUILD_DEPENDS+=	slib-${SLIB_VER}:../../devel/slib
-DEPENDS+=	${BUILD_DEPENDS}
+DEPENDS+=	slib>=2.4.4:../../devel/slib
 
+USE_BUILDLINK2=	# defined
 USE_GMAKE=	# defined
-
-WRKSRC=		${WRKDIR}/scm
 
 ALL_TARGET=	scmlit
 
-SLIB_VER=	2.4.4
-
 SCM_DATA=	scm.info hobbit.info
-INFO_FILES=	${SCM_DATA}
+INFO_FILES=	${SCM_INFO}
 
 .if defined(USE_X) && defined(USE_NCURSES)
 USE_X11=	yes
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 PLIST_SRC=	${PKGDIR}/PLIST.X_ncurses
 SCM_INFO=	${SCM_DATA} Xlibscm.info
 BUILD_SCRIPT=	${FILESDIR}/buildscm_X_ncurses.sh
@@ -41,7 +38,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.X
 SCM_INFO=	${SCM_DATA} Xlibscm.info
 BUILD_SCRIPT=	${FILESDIR}/buildscm_X.sh
 .elif defined(USE_NCURSES)
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 PLIST_SRC=	${PKGDIR}/PLIST.ncurses
 SCM_INFO=	${SCM_DATA}
 BUILD_SCRIPT=	${FILESDIR}/buildscm_ncurses.sh
@@ -70,4 +67,3 @@ post-install:
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
-
