@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/07/27 10:48:39 blef Exp $
 #
 # This Makefile fragment is included by packages that use svgalib.
 #
@@ -10,7 +10,7 @@ SVGALIB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			svgalib
 BUILDLINK_DEPENDS.svgalib?=		svgalib>=1.4.2
-BUILDLINK_PKGSRCDIR.svgalib?=		../../graphics/svgalib
+BUILDLINK_PKGSRCDIR.svgalib?=		../../wip/svgalib
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.svgalib=svgalib
 BUILDLINK_PREFIX.svgalib_DEFAULT=	${LOCALBASE}
