@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/28 23:38:15 mpasternak Exp $
+bin/lincvs
