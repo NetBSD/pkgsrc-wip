@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/26 12:51:19 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/26 13:12:04 minskim Exp $
 #
 
 DISTNAME=		crypto51
@@ -13,10 +13,14 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.cryptopp.com/
 COMMENT=		Free C++ class library of Cryptographic Primitives
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_GNU_TOOLS+=		make
 MAKEFILE=		GNUmakefile
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c++
+
+INSTALLATION_DIRS=	bin lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cryptest ${PREFIX}/bin
