@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/29 00:03:16 schnoebe Exp $
+
+SHA1 (yahoo-transport-2.3.2.tar.gz) = a124a59d3b264dce32412fea70ea605a28e5de91
+Size (yahoo-transport-2.3.2.tar.gz) = 117944 bytes
+SHA1 (jcr-0.2.4.tar.gz) = 48f9a2a1ef3de7360c5b44381c15c526812ff997
+Size (jcr-0.2.4.tar.gz) = 128939 bytes
