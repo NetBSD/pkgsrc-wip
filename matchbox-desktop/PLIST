@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/19 10:44:49 xtraeme Exp $
+bin/matchbox-desktop
+include/matchbox-desktop/mbdesktop.h
+include/matchbox-desktop/mbdesktop_item.h
+include/matchbox-desktop/mbdesktop_module.h
+include/matchbox-desktop/mbdesktop_view.h
+lib/pkgconfig/matchbox-desktop.pc
+share/applications/mb-show-desktop.desktop
+share/matchbox-desktop/mbdesktop_modules
+share/matchbox/desktop/modules/dotdesktop.a
+share/matchbox/desktop/modules/dotdesktop.la
+share/matchbox/desktop/modules/dotdesktop.so
+share/matchbox/desktop/modules/simplefilebrowser.a
+share/matchbox/desktop/modules/simplefilebrowser.la
+share/matchbox/desktop/modules/simplefilebrowser.so
+share/matchbox/desktop/modules/tasks.a
+share/matchbox/desktop/modules/tasks.la
+share/matchbox/desktop/modules/tasks.so
+share/pixmaps/mbdesktop.png
+@dirrm share/matchbox/desktop/modules
+@dirrm share/matchbox/desktop
+@dirrm share/matchbox-desktop
+@dirrm include/matchbox-desktop
