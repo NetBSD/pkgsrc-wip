@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 19:33:01 bmeurer Exp $
+bin/gtetrinet
+etc/gconf/schemas/gtetrinet.schemas
+man/man6/gtetrinet.6
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gtetrinet.mo
+share/gtetrinet/themes/default/blocks.png
+share/gtetrinet/themes/default/theme.cfg
+@dirrm share/gtetrinet/themes/default
+share/gtetrinet/themes/small/blocks.png
+share/gtetrinet/themes/small/theme.cfg
+@dirrm share/gtetrinet/themes/small
+@dirrm share/gtetrinet/themes
+@dirrm share/gtetrinet
+share/pixmaps/gtetrinet.png
+share/gnome/apps/Games/gtetrinet.desktop
