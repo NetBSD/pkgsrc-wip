@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.337 2003/07/23 13:14:30 tripledes Exp $
-# $NetBSD: Makefile,v 1.337 2003/07/23 13:14:30 tripledes Exp $
+# $Id: Makefile,v 1.338 2003/07/23 21:13:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.338 2003/07/23 21:13:07 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -117,6 +117,7 @@ SUBDIR+=	idesk
 SUBDIR+=	idled
 SUBDIR+=	iisemulator
 SUBDIR+=	ike-scan
+SUBDIR+=	imake
 SUBDIR+=	ilohamail
 SUBDIR+=	ion-devel
 SUBDIR+=	ion-dock
@@ -336,5 +337,18 @@ SUBDIR+=	yelp
 SUBDIR+=	zebra-pj
 SUBDIR+=	zenity
 SUBDIR+=	zinf
+SUBDIR+=        XFree86
+SUBDIR+=        XFree86-clients
+SUBDIR+=        XFree86-defaultBitmaps
+SUBDIR+=        XFree86-docs
+SUBDIR+=        XFree86-fonts100dpi
+SUBDIR+=        XFree86-fonts75dpi
+SUBDIR+=        XFree86-fontsCyrillic
+SUBDIR+=        XFree86-fontsEncodings
+SUBDIR+=        XFree86-fontsScalable
+SUBDIR+=        XFree86-fontserver
+SUBDIR+=        XFree86-libs
+SUBDIR+=        XFree86-man
+SUBDIR+=        XFree86-server
 
 .include "../mk/bsd.pkg.subdir.mk"
