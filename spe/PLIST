@@ -1,599 +1,599 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/28 00:35:31 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/28 13:19:06 mpasternak Exp $
 bin/spe
-${PYSITELIB}/site-packages/blenpy/__init__.pyc
-${PYSITELIB}/site-packages/blenpy/__init__.pyo
-${PYSITELIB}/site-packages/blenpy/gui.pyc
-${PYSITELIB}/site-packages/blenpy/gui.pyo
-${PYSITELIB}/site-packages/blenpy/plugins/__init__.pyc
-${PYSITELIB}/site-packages/blenpy/plugins/__init__.pyo
-${PYSITELIB}/site-packages/blenpy/plugins/all.pyc
-${PYSITELIB}/site-packages/blenpy/plugins/all.pyo
-${PYSITELIB}/site-packages/blenpy/plugins/editors.pyc
-${PYSITELIB}/site-packages/blenpy/plugins/editors.pyo
-${PYSITELIB}/site-packages/blenpy/plugins/mouse.pyc
-${PYSITELIB}/site-packages/blenpy/plugins/mouse.pyo
-${PYSITELIB}/site-packages/blenpy/plugins/settings.pyc
-${PYSITELIB}/site-packages/blenpy/plugins/settings.pyo
-${PYSITELIB}/site-packages/blenpy/plugins/tools.pyc
-${PYSITELIB}/site-packages/blenpy/plugins/tools.pyo
-${PYSITELIB}/site-packages/blenpy/pyGui.pyc
-${PYSITELIB}/site-packages/blenpy/pyGui.pyo
-${PYSITELIB}/site-packages/sm/__init__.pyc
-${PYSITELIB}/site-packages/sm/__init__.pyo
-${PYSITELIB}/site-packages/sm/images.pyc
-${PYSITELIB}/site-packages/sm/images.pyo
-${PYSITELIB}/site-packages/sm/osx.pyc
-${PYSITELIB}/site-packages/sm/osx.pyo
-${PYSITELIB}/site-packages/sm/python.pyc
-${PYSITELIB}/site-packages/sm/python.pyo
-${PYSITELIB}/site-packages/sm/scriptutils.pyc
-${PYSITELIB}/site-packages/sm/scriptutils.pyo
-${PYSITELIB}/site-packages/sm/tk.pyc
-${PYSITELIB}/site-packages/sm/tk.pyo
-${PYSITELIB}/site-packages/sm/win.pyc
-${PYSITELIB}/site-packages/sm/win.pyo
-${PYSITELIB}/site-packages/sm/wxPyEdit.pyc
-${PYSITELIB}/site-packages/sm/wxPyEdit.pyo
-${PYSITELIB}/site-packages/sm/wxp.pyc
-${PYSITELIB}/site-packages/sm/wxp.pyo
-${PYSITELIB}/site-packages/sm/wxpPyCrustApp.pyc
-${PYSITELIB}/site-packages/sm/wxpPyCrustApp.pyo
-${PYSITELIB}/site-packages/sm_idle/AutoExpand.pyc
-${PYSITELIB}/site-packages/sm_idle/AutoExpand.pyo
-${PYSITELIB}/site-packages/sm_idle/AutoIndent.pyc
-${PYSITELIB}/site-packages/sm_idle/AutoIndent.pyo
-${PYSITELIB}/site-packages/sm_idle/Bindings.pyc
-${PYSITELIB}/site-packages/sm_idle/Bindings.pyo
-${PYSITELIB}/site-packages/sm_idle/CallTipWindow.pyc
-${PYSITELIB}/site-packages/sm_idle/CallTipWindow.pyo
-${PYSITELIB}/site-packages/sm_idle/CallTips.pyc
-${PYSITELIB}/site-packages/sm_idle/CallTips.pyo
-${PYSITELIB}/site-packages/sm_idle/ClassBrowser.pyc
-${PYSITELIB}/site-packages/sm_idle/ClassBrowser.pyo
-${PYSITELIB}/site-packages/sm_idle/ColorDelegator.pyc
-${PYSITELIB}/site-packages/sm_idle/ColorDelegator.pyo
-${PYSITELIB}/site-packages/sm_idle/Debugger.pyc
-${PYSITELIB}/site-packages/sm_idle/Debugger.pyo
-${PYSITELIB}/site-packages/sm_idle/Delegator.pyc
-${PYSITELIB}/site-packages/sm_idle/Delegator.pyo
-${PYSITELIB}/site-packages/sm_idle/EditorWindow.pyc
-${PYSITELIB}/site-packages/sm_idle/EditorWindow.pyo
-${PYSITELIB}/site-packages/sm_idle/FileList.pyc
-${PYSITELIB}/site-packages/sm_idle/FileList.pyo
-${PYSITELIB}/site-packages/sm_idle/FormatParagraph.pyc
-${PYSITELIB}/site-packages/sm_idle/FormatParagraph.pyo
-${PYSITELIB}/site-packages/sm_idle/FrameViewer.pyc
-${PYSITELIB}/site-packages/sm_idle/FrameViewer.pyo
-${PYSITELIB}/site-packages/sm_idle/GrepDialog.pyc
-${PYSITELIB}/site-packages/sm_idle/GrepDialog.pyo
-${PYSITELIB}/site-packages/sm_idle/IOBinding.pyc
-${PYSITELIB}/site-packages/sm_idle/IOBinding.pyo
-${PYSITELIB}/site-packages/sm_idle/IdleConf.pyc
-${PYSITELIB}/site-packages/sm_idle/IdleConf.pyo
-${PYSITELIB}/site-packages/sm_idle/IdleHistory.pyc
-${PYSITELIB}/site-packages/sm_idle/IdleHistory.pyo
-${PYSITELIB}/site-packages/sm_idle/MultiScrolledLists.pyc
-${PYSITELIB}/site-packages/sm_idle/MultiScrolledLists.pyo
-${PYSITELIB}/site-packages/sm_idle/MultiStatusBar.pyc
-${PYSITELIB}/site-packages/sm_idle/MultiStatusBar.pyo
-${PYSITELIB}/site-packages/sm_idle/ObjectBrowser.pyc
-${PYSITELIB}/site-packages/sm_idle/ObjectBrowser.pyo
-${PYSITELIB}/site-packages/sm_idle/OldStackViewer.pyc
-${PYSITELIB}/site-packages/sm_idle/OldStackViewer.pyo
-${PYSITELIB}/site-packages/sm_idle/OutputWindow.pyc
-${PYSITELIB}/site-packages/sm_idle/OutputWindow.pyo
-${PYSITELIB}/site-packages/sm_idle/ParenMatch.pyc
-${PYSITELIB}/site-packages/sm_idle/ParenMatch.pyo
-${PYSITELIB}/site-packages/sm_idle/PathBrowser.pyc
-${PYSITELIB}/site-packages/sm_idle/PathBrowser.pyo
-${PYSITELIB}/site-packages/sm_idle/Percolator.pyc
-${PYSITELIB}/site-packages/sm_idle/Percolator.pyo
-${PYSITELIB}/site-packages/sm_idle/PyParse.pyc
-${PYSITELIB}/site-packages/sm_idle/PyParse.pyo
-${PYSITELIB}/site-packages/sm_idle/PyShell.pyc
-${PYSITELIB}/site-packages/sm_idle/PyShell.pyo
-${PYSITELIB}/site-packages/sm_idle/RemoteInterp.pyc
-${PYSITELIB}/site-packages/sm_idle/RemoteInterp.pyo
-${PYSITELIB}/site-packages/sm_idle/ReplaceDialog.pyc
-${PYSITELIB}/site-packages/sm_idle/ReplaceDialog.pyo
-${PYSITELIB}/site-packages/sm_idle/ScriptBinding.pyc
-${PYSITELIB}/site-packages/sm_idle/ScriptBinding.pyo
-${PYSITELIB}/site-packages/sm_idle/ScrolledList.pyc
-${PYSITELIB}/site-packages/sm_idle/ScrolledList.pyo
-${PYSITELIB}/site-packages/sm_idle/SearchBinding.pyc
-${PYSITELIB}/site-packages/sm_idle/SearchBinding.pyo
-${PYSITELIB}/site-packages/sm_idle/SearchDialog.pyc
-${PYSITELIB}/site-packages/sm_idle/SearchDialog.pyo
-${PYSITELIB}/site-packages/sm_idle/SearchDialogBase.pyc
-${PYSITELIB}/site-packages/sm_idle/SearchDialogBase.pyo
-${PYSITELIB}/site-packages/sm_idle/SearchEngine.pyc
-${PYSITELIB}/site-packages/sm_idle/SearchEngine.pyo
-${PYSITELIB}/site-packages/sm_idle/Separator.pyc
-${PYSITELIB}/site-packages/sm_idle/Separator.pyo
-${PYSITELIB}/site-packages/sm_idle/StackViewer.pyc
-${PYSITELIB}/site-packages/sm_idle/StackViewer.pyo
-${PYSITELIB}/site-packages/sm_idle/ToolTip.pyc
-${PYSITELIB}/site-packages/sm_idle/ToolTip.pyo
-${PYSITELIB}/site-packages/sm_idle/TreeWidget.pyc
-${PYSITELIB}/site-packages/sm_idle/TreeWidget.pyo
-${PYSITELIB}/site-packages/sm_idle/UndoDelegator.pyc
-${PYSITELIB}/site-packages/sm_idle/UndoDelegator.pyo
-${PYSITELIB}/site-packages/sm_idle/WidgetRedirector.pyc
-${PYSITELIB}/site-packages/sm_idle/WidgetRedirector.pyo
-${PYSITELIB}/site-packages/sm_idle/WindowList.pyc
-${PYSITELIB}/site-packages/sm_idle/WindowList.pyo
-${PYSITELIB}/site-packages/sm_idle/ZoomHeight.pyc
-${PYSITELIB}/site-packages/sm_idle/ZoomHeight.pyo
-${PYSITELIB}/site-packages/sm_idle/__init__.pyc
-${PYSITELIB}/site-packages/sm_idle/__init__.pyo
-${PYSITELIB}/site-packages/sm_idle/eventparse.pyc
-${PYSITELIB}/site-packages/sm_idle/eventparse.pyo
-${PYSITELIB}/site-packages/sm_idle/idle.pyc
-${PYSITELIB}/site-packages/sm_idle/idle.pyo
-${PYSITELIB}/site-packages/sm_idle/idlever.pyc
-${PYSITELIB}/site-packages/sm_idle/idlever.pyo
-${PYSITELIB}/site-packages/sm_idle/keydefs.pyc
-${PYSITELIB}/site-packages/sm_idle/keydefs.pyo
-${PYSITELIB}/site-packages/sm_idle/setup.pyc
-${PYSITELIB}/site-packages/sm_idle/setup.pyo
-${PYSITELIB}/site-packages/sm_idle/testcode.pyc
-${PYSITELIB}/site-packages/sm_idle/testcode.pyo
-${PYSITELIB}/site-packages/spe/SPE_.pyc
-${PYSITELIB}/site-packages/spe/SPE_.pyo
-${PYSITELIB}/site-packages/spe/__init__.pyc
-${PYSITELIB}/site-packages/spe/__init__.pyo
-${PYSITELIB}/site-packages/spe/examples/example.pyc
-${PYSITELIB}/site-packages/spe/examples/example.pyo
-${PYSITELIB}/site-packages/spe/framework/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/dialogs/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/dialogs/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/dialogs/helpDialog.pyc
-${PYSITELIB}/site-packages/spe/framework/dialogs/helpDialog.pyo
-${PYSITELIB}/site-packages/spe/framework/dialogs/helpShortcutsDialog.pyc
-${PYSITELIB}/site-packages/spe/framework/dialogs/helpShortcutsDialog.pyo
-${PYSITELIB}/site-packages/spe/framework/dialogs/optionsDialog.pyc
-${PYSITELIB}/site-packages/spe/framework/dialogs/optionsDialog.pyo
-${PYSITELIB}/site-packages/spe/framework/dialogs/preferencesDialog.pyc
-${PYSITELIB}/site-packages/spe/framework/dialogs/preferencesDialog.pyo
-${PYSITELIB}/site-packages/spe/framework/dialogs/separatorDialog.pyc
-${PYSITELIB}/site-packages/spe/framework/dialogs/separatorDialog.pyo
-${PYSITELIB}/site-packages/spe/framework/dialogs/speDialog.pyc
-${PYSITELIB}/site-packages/spe/framework/dialogs/speDialog.pyo
-${PYSITELIB}/site-packages/spe/framework/dialogs/splashScreen.pyc
-${PYSITELIB}/site-packages/spe/framework/dialogs/splashScreen.pyo
-${PYSITELIB}/site-packages/spe/framework/dropTarget.pyc
-${PYSITELIB}/site-packages/spe/framework/dropTarget.pyo
-${PYSITELIB}/site-packages/spe/framework/help.pyc
-${PYSITELIB}/site-packages/spe/framework/help.pyo
-${PYSITELIB}/site-packages/spe/framework/images/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/images/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/menus/Extra.pyc
-${PYSITELIB}/site-packages/spe/framework/menus/Extra.pyo
-${PYSITELIB}/site-packages/spe/framework/menus/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/menus/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/parentInit.pyc
-${PYSITELIB}/site-packages/spe/framework/parentInit.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/kiki/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/kiki/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/kiki/kiki.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/kiki/kiki.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/CodeChecks.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/CodeChecks.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/Config.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/Config.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/OP.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/OP.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/OptionTypes.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/OptionTypes.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/Stack.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/Stack.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/Warning.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/Warning.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/checker.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/checker.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/function.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/function.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/msgs.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/msgs.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/options.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/options.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/printer.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/printer.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/python.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/python.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/utils.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/utils.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/warn.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/pychecker/warn.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/XRCed.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/XRCed.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/about.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/about.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/application.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/application.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/clipboard.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/clipboard.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/codegen/cpp_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/codegen/cpp_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/codegen/pl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/codegen/pl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/codegen/py_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/codegen/py_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/codegen/xrc_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/codegen/xrc_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/color_dialog.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/color_dialog.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/common.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/common.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/config.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/config.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/edit_sizers/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/edit_sizers/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/edit_sizers/edit_sizers.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/edit_sizers/edit_sizers.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/edit_sizers/perl_sizers_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/edit_sizers/perl_sizers_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/edit_sizers/sizers_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/edit_sizers/sizers_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/edit_widget.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/edit_widget.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/edit_windows.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/edit_windows.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/font_dialog.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/font_dialog.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/main.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/main.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/misc.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/misc.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/tree.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/tree.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widget_properties.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widget_properties.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/ChoicesCodeHandler.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/ChoicesCodeHandler.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/ChoicesProperty.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/ChoicesProperty.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/MenuTree.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/MenuTree.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/bitmap_button/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/bitmap_button/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/bitmap_button/bitmap_button.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/bitmap_button/bitmap_button.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/bitmap_button/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/bitmap_button/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/bitmap_button/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/bitmap_button/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/button/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/button/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/button/button.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/button/button.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/button/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/button/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/button/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/button/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/checkbox/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/checkbox/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/checkbox/checkbox.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/checkbox/checkbox.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/checkbox/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/checkbox/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/checkbox/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/checkbox/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/choice/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/choice/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/choice/choice.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/choice/choice.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/choice/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/choice/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/choice/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/choice/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/combo_box/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/combo_box/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/combo_box/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/combo_box/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/combo_box/combo_box.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/combo_box/combo_box.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/combo_box/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/combo_box/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/custom_widget/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/custom_widget/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/custom_widget/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/custom_widget/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/custom_widget/custom_widget.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/custom_widget/custom_widget.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/custom_widget/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/custom_widget/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/dialog/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/dialog/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/dialog/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/dialog/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/dialog/dialog.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/dialog/dialog.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/dialog/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/dialog/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/frame/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/frame/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/frame/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/frame/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/frame/frame.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/frame/frame.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/frame/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/frame/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/gauge/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/gauge/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/gauge/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/gauge/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/gauge/gauge.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/gauge/gauge.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/gauge/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/gauge/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/grid/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/grid/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/grid/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/grid/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/grid/grid.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/grid/grid.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/grid/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/grid/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_box/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_box/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_box/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_box/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_box/list_box.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_box/list_box.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_box/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_box/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_ctrl/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_ctrl/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_ctrl/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_ctrl/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_ctrl/list_ctrl.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_ctrl/list_ctrl.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_ctrl/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_ctrl/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/menubar/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/menubar/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/menubar/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/menubar/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/menubar/menubar.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/menubar/menubar.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/menubar/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/menubar/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/notebook/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/notebook/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/notebook/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/notebook/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/notebook/notebook.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/notebook/notebook.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/notebook/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/notebook/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/panel/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/panel/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/panel/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/panel/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/panel/panel.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/panel/panel.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/panel/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/panel/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_box/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_box/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_box/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_box/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_box/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_box/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_box/radio_box.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_box/radio_box.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_button/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_button/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_button/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_button/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_button/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_button/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_button/radio_button.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_button/radio_button.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/slider/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/slider/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/slider/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/slider/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/slider/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/slider/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/slider/slider.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/slider/slider.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spacer/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spacer/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spacer/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spacer/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spacer/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spacer/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spacer/spacer.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spacer/spacer.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spin_ctrl/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spin_ctrl/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spin_ctrl/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spin_ctrl/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spin_ctrl/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spin_ctrl/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spin_ctrl/spin_ctrl.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spin_ctrl/spin_ctrl.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/splitter_window/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/splitter_window/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/splitter_window/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/splitter_window/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/splitter_window/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/splitter_window/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/splitter_window/splitter_window.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/splitter_window/splitter_window.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_bitmap/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_bitmap/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_bitmap/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_bitmap/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_bitmap/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_bitmap/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_bitmap/static_bitmap.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_bitmap/static_bitmap.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_line/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_line/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_line/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_line/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_line/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_line/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_line/static_line.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_line/static_line.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_text/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_text/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_text/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_text/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_text/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_text/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_text/static_text.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_text/static_text.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/text_ctrl/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/text_ctrl/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/text_ctrl/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/text_ctrl/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/text_ctrl/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/text_ctrl/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/text_ctrl/text_ctrl.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/text_ctrl/text_ctrl.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toggle_button/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toggle_button/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toggle_button/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toggle_button/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toggle_button/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toggle_button/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toggle_button/toggle_button.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toggle_button/toggle_button.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toolbar/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toolbar/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toolbar/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toolbar/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toolbar/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toolbar/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toolbar/tool.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toolbar/tool.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toolbar/toolbar.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toolbar/toolbar.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/tree_ctrl/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/tree_ctrl/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/tree_ctrl/codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/tree_ctrl/codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/tree_ctrl/perl_codegen.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/tree_ctrl/perl_codegen.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/tree_ctrl/tree_ctrl.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/tree_ctrl/tree_ctrl.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/canvas.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/canvas.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/intl.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/intl.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/pycolourbox.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/pycolourbox.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/pycolourchooser.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/pycolourchooser.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/pycolourslider.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/pycolourslider.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/pypalette.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/pypalette.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxglade.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxglade.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/xml_parse.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/xml_parse.pyo
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/xrc2wxg.pyc
-${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/xrc2wxg.pyo
-${PYSITELIB}/site-packages/spe/framework/settings.pyc
-${PYSITELIB}/site-packages/spe/framework/settings.pyo
-${PYSITELIB}/site-packages/spe/framework/shell.pyc
-${PYSITELIB}/site-packages/spe/framework/shell.pyo
-${PYSITELIB}/site-packages/spe/framework/shortcuts.pyc
-${PYSITELIB}/site-packages/spe/framework/shortcuts.pyo
-${PYSITELIB}/site-packages/spe/framework/tabs/BlenderTab.pyc
-${PYSITELIB}/site-packages/spe/framework/tabs/BlenderTab.pyo
-${PYSITELIB}/site-packages/spe/framework/tabs/BrowserTab.pyc
-${PYSITELIB}/site-packages/spe/framework/tabs/BrowserTab.pyo
-${PYSITELIB}/site-packages/spe/framework/tabs/FindReplaceEngine.pyc
-${PYSITELIB}/site-packages/spe/framework/tabs/FindReplaceEngine.pyo
-${PYSITELIB}/site-packages/spe/framework/tabs/FindTab.pyc
-${PYSITELIB}/site-packages/spe/framework/tabs/FindTab.pyo
-${PYSITELIB}/site-packages/spe/framework/tabs/__init__.pyc
-${PYSITELIB}/site-packages/spe/framework/tabs/__init__.pyo
-${PYSITELIB}/site-packages/spe/framework/wxMDIChildFrame1.pyc
-${PYSITELIB}/site-packages/spe/framework/wxMDIChildFrame1.pyo
-${PYSITELIB}/site-packages/spe/framework/wxMDIParentFrame1.pyc
-${PYSITELIB}/site-packages/spe/framework/wxMDIParentFrame1.pyo
-${PYSITELIB}/site-packages/spe/info.pyc
-${PYSITELIB}/site-packages/spe/info.pyo
-${PYSITELIB}/site-packages/spe/unixUninstall.pyc
-${PYSITELIB}/site-packages/spe/unixUninstall.pyo
-${PYSITELIB}/site-packages/spe/winInstall.pyc
-${PYSITELIB}/site-packages/spe/winInstall.pyo
-${PYSITELIB}/site-packages/spe/winUninstall.pyc
-${PYSITELIB}/site-packages/spe/winUninstall.pyo
-@dirrm ${PYSITELIB}/site-packages/spe/framework/tabs
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser/license
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/wxPyColourChooser
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/tree_ctrl
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toolbar
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/toggle_button
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/text_ctrl
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_text
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_line
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/static_bitmap
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/splitter_window
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spin_ctrl
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/spacer
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/slider
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_button
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/radio_box
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/panel
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/notebook
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/menubar
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_ctrl
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/list_box
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/grid
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/gauge
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/frame
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/dialog
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/custom_widget
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/combo_box
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/choice
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/checkbox
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/button
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets/bitmap_button
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/widgets
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/icons/msw
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/icons/gtk
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/icons
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/examples
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/edit_sizers
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/docs/img
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/docs
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade/codegen
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/wxGlade
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/pychecker
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/kiki/docs
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins/kiki
-@dirrm ${PYSITELIB}/site-packages/spe/framework/plugins
-@dirrm ${PYSITELIB}/site-packages/spe/framework/menus
-@dirrm ${PYSITELIB}/site-packages/spe/framework/images
-@dirrm ${PYSITELIB}/site-packages/spe/framework/dialogs
-@dirrm ${PYSITELIB}/site-packages/spe/framework
-@dirrm ${PYSITELIB}/site-packages/spe/examples
-@dirrm ${PYSITELIB}/site-packages/spe/doc/blender_python_API
-@dirrm ${PYSITELIB}/site-packages/spe/doc
-@dirrm ${PYSITELIB}/site-packages/spe
-@dirrm ${PYSITELIB}/site-packages/sm_idle/Icons
-@dirrm ${PYSITELIB}/site-packages/sm_idle
-@dirrm ${PYSITELIB}/site-packages/sm
-@dirrm ${PYSITELIB}/site-packages/blenpy/plugins
-@dirrm ${PYSITELIB}/site-packages/blenpy/icons
-@dirrm ${PYSITELIB}/site-packages/blenpy/doc/screenshots
-@dirrm ${PYSITELIB}/site-packages/blenpy/doc
-@dirrm ${PYSITELIB}/site-packages/blenpy
+${PYSITELIB}/blenpy/__init__.pyc
+${PYSITELIB}/blenpy/__init__.pyo
+${PYSITELIB}/blenpy/gui.pyc
+${PYSITELIB}/blenpy/gui.pyo
+${PYSITELIB}/blenpy/plugins/__init__.pyc
+${PYSITELIB}/blenpy/plugins/__init__.pyo
+${PYSITELIB}/blenpy/plugins/all.pyc
+${PYSITELIB}/blenpy/plugins/all.pyo
+${PYSITELIB}/blenpy/plugins/editors.pyc
+${PYSITELIB}/blenpy/plugins/editors.pyo
+${PYSITELIB}/blenpy/plugins/mouse.pyc
+${PYSITELIB}/blenpy/plugins/mouse.pyo
+${PYSITELIB}/blenpy/plugins/settings.pyc
+${PYSITELIB}/blenpy/plugins/settings.pyo
+${PYSITELIB}/blenpy/plugins/tools.pyc
+${PYSITELIB}/blenpy/plugins/tools.pyo
+${PYSITELIB}/blenpy/pyGui.pyc
+${PYSITELIB}/blenpy/pyGui.pyo
+${PYSITELIB}/sm/__init__.pyc
+${PYSITELIB}/sm/__init__.pyo
+${PYSITELIB}/sm/images.pyc
+${PYSITELIB}/sm/images.pyo
+${PYSITELIB}/sm/osx.pyc
+${PYSITELIB}/sm/osx.pyo
+${PYSITELIB}/sm/python.pyc
+${PYSITELIB}/sm/python.pyo
+${PYSITELIB}/sm/scriptutils.pyc
+${PYSITELIB}/sm/scriptutils.pyo
+${PYSITELIB}/sm/tk.pyc
+${PYSITELIB}/sm/tk.pyo
+${PYSITELIB}/sm/win.pyc
+${PYSITELIB}/sm/win.pyo
+${PYSITELIB}/sm/wxPyEdit.pyc
+${PYSITELIB}/sm/wxPyEdit.pyo
+${PYSITELIB}/sm/wxp.pyc
+${PYSITELIB}/sm/wxp.pyo
+${PYSITELIB}/sm/wxpPyCrustApp.pyc
+${PYSITELIB}/sm/wxpPyCrustApp.pyo
+${PYSITELIB}/sm_idle/AutoExpand.pyc
+${PYSITELIB}/sm_idle/AutoExpand.pyo
+${PYSITELIB}/sm_idle/AutoIndent.pyc
+${PYSITELIB}/sm_idle/AutoIndent.pyo
+${PYSITELIB}/sm_idle/Bindings.pyc
+${PYSITELIB}/sm_idle/Bindings.pyo
+${PYSITELIB}/sm_idle/CallTipWindow.pyc
+${PYSITELIB}/sm_idle/CallTipWindow.pyo
+${PYSITELIB}/sm_idle/CallTips.pyc
+${PYSITELIB}/sm_idle/CallTips.pyo
+${PYSITELIB}/sm_idle/ClassBrowser.pyc
+${PYSITELIB}/sm_idle/ClassBrowser.pyo
+${PYSITELIB}/sm_idle/ColorDelegator.pyc
+${PYSITELIB}/sm_idle/ColorDelegator.pyo
+${PYSITELIB}/sm_idle/Debugger.pyc
+${PYSITELIB}/sm_idle/Debugger.pyo
+${PYSITELIB}/sm_idle/Delegator.pyc
+${PYSITELIB}/sm_idle/Delegator.pyo
+${PYSITELIB}/sm_idle/EditorWindow.pyc
+${PYSITELIB}/sm_idle/EditorWindow.pyo
+${PYSITELIB}/sm_idle/FileList.pyc
+${PYSITELIB}/sm_idle/FileList.pyo
+${PYSITELIB}/sm_idle/FormatParagraph.pyc
+${PYSITELIB}/sm_idle/FormatParagraph.pyo
+${PYSITELIB}/sm_idle/FrameViewer.pyc
+${PYSITELIB}/sm_idle/FrameViewer.pyo
+${PYSITELIB}/sm_idle/GrepDialog.pyc
+${PYSITELIB}/sm_idle/GrepDialog.pyo
+${PYSITELIB}/sm_idle/IOBinding.pyc
+${PYSITELIB}/sm_idle/IOBinding.pyo
+${PYSITELIB}/sm_idle/IdleConf.pyc
+${PYSITELIB}/sm_idle/IdleConf.pyo
+${PYSITELIB}/sm_idle/IdleHistory.pyc
+${PYSITELIB}/sm_idle/IdleHistory.pyo
+${PYSITELIB}/sm_idle/MultiScrolledLists.pyc
+${PYSITELIB}/sm_idle/MultiScrolledLists.pyo
+${PYSITELIB}/sm_idle/MultiStatusBar.pyc
+${PYSITELIB}/sm_idle/MultiStatusBar.pyo
+${PYSITELIB}/sm_idle/ObjectBrowser.pyc
+${PYSITELIB}/sm_idle/ObjectBrowser.pyo
+${PYSITELIB}/sm_idle/OldStackViewer.pyc
+${PYSITELIB}/sm_idle/OldStackViewer.pyo
+${PYSITELIB}/sm_idle/OutputWindow.pyc
+${PYSITELIB}/sm_idle/OutputWindow.pyo
+${PYSITELIB}/sm_idle/ParenMatch.pyc
+${PYSITELIB}/sm_idle/ParenMatch.pyo
+${PYSITELIB}/sm_idle/PathBrowser.pyc
+${PYSITELIB}/sm_idle/PathBrowser.pyo
+${PYSITELIB}/sm_idle/Percolator.pyc
+${PYSITELIB}/sm_idle/Percolator.pyo
+${PYSITELIB}/sm_idle/PyParse.pyc
+${PYSITELIB}/sm_idle/PyParse.pyo
+${PYSITELIB}/sm_idle/PyShell.pyc
+${PYSITELIB}/sm_idle/PyShell.pyo
+${PYSITELIB}/sm_idle/RemoteInterp.pyc
+${PYSITELIB}/sm_idle/RemoteInterp.pyo
+${PYSITELIB}/sm_idle/ReplaceDialog.pyc
+${PYSITELIB}/sm_idle/ReplaceDialog.pyo
+${PYSITELIB}/sm_idle/ScriptBinding.pyc
+${PYSITELIB}/sm_idle/ScriptBinding.pyo
+${PYSITELIB}/sm_idle/ScrolledList.pyc
+${PYSITELIB}/sm_idle/ScrolledList.pyo
+${PYSITELIB}/sm_idle/SearchBinding.pyc
+${PYSITELIB}/sm_idle/SearchBinding.pyo
+${PYSITELIB}/sm_idle/SearchDialog.pyc
+${PYSITELIB}/sm_idle/SearchDialog.pyo
+${PYSITELIB}/sm_idle/SearchDialogBase.pyc
+${PYSITELIB}/sm_idle/SearchDialogBase.pyo
+${PYSITELIB}/sm_idle/SearchEngine.pyc
+${PYSITELIB}/sm_idle/SearchEngine.pyo
+${PYSITELIB}/sm_idle/Separator.pyc
+${PYSITELIB}/sm_idle/Separator.pyo
+${PYSITELIB}/sm_idle/StackViewer.pyc
+${PYSITELIB}/sm_idle/StackViewer.pyo
+${PYSITELIB}/sm_idle/ToolTip.pyc
+${PYSITELIB}/sm_idle/ToolTip.pyo
+${PYSITELIB}/sm_idle/TreeWidget.pyc
+${PYSITELIB}/sm_idle/TreeWidget.pyo
+${PYSITELIB}/sm_idle/UndoDelegator.pyc
+${PYSITELIB}/sm_idle/UndoDelegator.pyo
+${PYSITELIB}/sm_idle/WidgetRedirector.pyc
+${PYSITELIB}/sm_idle/WidgetRedirector.pyo
+${PYSITELIB}/sm_idle/WindowList.pyc
+${PYSITELIB}/sm_idle/WindowList.pyo
+${PYSITELIB}/sm_idle/ZoomHeight.pyc
+${PYSITELIB}/sm_idle/ZoomHeight.pyo
+${PYSITELIB}/sm_idle/__init__.pyc
+${PYSITELIB}/sm_idle/__init__.pyo
+${PYSITELIB}/sm_idle/eventparse.pyc
+${PYSITELIB}/sm_idle/eventparse.pyo
+${PYSITELIB}/sm_idle/idle.pyc
+${PYSITELIB}/sm_idle/idle.pyo
+${PYSITELIB}/sm_idle/idlever.pyc
+${PYSITELIB}/sm_idle/idlever.pyo
+${PYSITELIB}/sm_idle/keydefs.pyc
+${PYSITELIB}/sm_idle/keydefs.pyo
+${PYSITELIB}/sm_idle/setup.pyc
+${PYSITELIB}/sm_idle/setup.pyo
+${PYSITELIB}/sm_idle/testcode.pyc
+${PYSITELIB}/sm_idle/testcode.pyo
+${PYSITELIB}/spe/SPE_.pyc
+${PYSITELIB}/spe/SPE_.pyo
+${PYSITELIB}/spe/__init__.pyc
+${PYSITELIB}/spe/__init__.pyo
+${PYSITELIB}/spe/examples/example.pyc
+${PYSITELIB}/spe/examples/example.pyo
+${PYSITELIB}/spe/framework/__init__.pyc
+${PYSITELIB}/spe/framework/__init__.pyo
+${PYSITELIB}/spe/framework/dialogs/__init__.pyc
+${PYSITELIB}/spe/framework/dialogs/__init__.pyo
+${PYSITELIB}/spe/framework/dialogs/helpDialog.pyc
+${PYSITELIB}/spe/framework/dialogs/helpDialog.pyo
+${PYSITELIB}/spe/framework/dialogs/helpShortcutsDialog.pyc
+${PYSITELIB}/spe/framework/dialogs/helpShortcutsDialog.pyo
+${PYSITELIB}/spe/framework/dialogs/optionsDialog.pyc
+${PYSITELIB}/spe/framework/dialogs/optionsDialog.pyo
+${PYSITELIB}/spe/framework/dialogs/preferencesDialog.pyc
+${PYSITELIB}/spe/framework/dialogs/preferencesDialog.pyo
+${PYSITELIB}/spe/framework/dialogs/separatorDialog.pyc
+${PYSITELIB}/spe/framework/dialogs/separatorDialog.pyo
+${PYSITELIB}/spe/framework/dialogs/speDialog.pyc
+${PYSITELIB}/spe/framework/dialogs/speDialog.pyo
+${PYSITELIB}/spe/framework/dialogs/splashScreen.pyc
+${PYSITELIB}/spe/framework/dialogs/splashScreen.pyo
+${PYSITELIB}/spe/framework/dropTarget.pyc
+${PYSITELIB}/spe/framework/dropTarget.pyo
+${PYSITELIB}/spe/framework/help.pyc
+${PYSITELIB}/spe/framework/help.pyo
+${PYSITELIB}/spe/framework/images/__init__.pyc
+${PYSITELIB}/spe/framework/images/__init__.pyo
+${PYSITELIB}/spe/framework/menus/Extra.pyc
+${PYSITELIB}/spe/framework/menus/Extra.pyo
+${PYSITELIB}/spe/framework/menus/__init__.pyc
+${PYSITELIB}/spe/framework/menus/__init__.pyo
+${PYSITELIB}/spe/framework/parentInit.pyc
+${PYSITELIB}/spe/framework/parentInit.pyo
+${PYSITELIB}/spe/framework/plugins/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/kiki/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/kiki/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/kiki/kiki.pyc
+${PYSITELIB}/spe/framework/plugins/kiki/kiki.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/CodeChecks.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/CodeChecks.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/Config.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/Config.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/OP.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/OP.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/OptionTypes.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/OptionTypes.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/Stack.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/Stack.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/Warning.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/Warning.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/checker.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/checker.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/function.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/function.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/msgs.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/msgs.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/options.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/options.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/printer.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/printer.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/python.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/python.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/utils.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/utils.pyo
+${PYSITELIB}/spe/framework/plugins/pychecker/warn.pyc
+${PYSITELIB}/spe/framework/plugins/pychecker/warn.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/XRCed.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/XRCed.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/about.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/about.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/application.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/application.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/clipboard.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/clipboard.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/codegen/cpp_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/codegen/cpp_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/codegen/pl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/codegen/pl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/codegen/py_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/codegen/py_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/codegen/xrc_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/codegen/xrc_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/color_dialog.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/color_dialog.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/common.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/common.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/config.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/config.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/edit_sizers/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/edit_sizers/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/edit_sizers/edit_sizers.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/edit_sizers/edit_sizers.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/edit_sizers/perl_sizers_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/edit_sizers/perl_sizers_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/edit_sizers/sizers_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/edit_sizers/sizers_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/edit_widget.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/edit_widget.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/edit_windows.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/edit_windows.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/font_dialog.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/font_dialog.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/main.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/main.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/misc.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/misc.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/tree.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/tree.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widget_properties.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widget_properties.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/ChoicesCodeHandler.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/ChoicesCodeHandler.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/ChoicesProperty.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/ChoicesProperty.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/MenuTree.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/MenuTree.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/bitmap_button/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/bitmap_button/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/bitmap_button/bitmap_button.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/bitmap_button/bitmap_button.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/bitmap_button/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/bitmap_button/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/bitmap_button/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/bitmap_button/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/button/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/button/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/button/button.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/button/button.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/button/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/button/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/button/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/button/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/checkbox/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/checkbox/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/checkbox/checkbox.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/checkbox/checkbox.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/checkbox/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/checkbox/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/checkbox/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/checkbox/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/choice/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/choice/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/choice/choice.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/choice/choice.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/choice/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/choice/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/choice/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/choice/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/combo_box/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/combo_box/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/combo_box/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/combo_box/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/combo_box/combo_box.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/combo_box/combo_box.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/combo_box/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/combo_box/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/custom_widget/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/custom_widget/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/custom_widget/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/custom_widget/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/custom_widget/custom_widget.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/custom_widget/custom_widget.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/custom_widget/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/custom_widget/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/dialog/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/dialog/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/dialog/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/dialog/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/dialog/dialog.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/dialog/dialog.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/dialog/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/dialog/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/frame/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/frame/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/frame/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/frame/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/frame/frame.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/frame/frame.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/frame/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/frame/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/gauge/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/gauge/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/gauge/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/gauge/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/gauge/gauge.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/gauge/gauge.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/gauge/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/gauge/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/grid/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/grid/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/grid/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/grid/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/grid/grid.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/grid/grid.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/grid/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/grid/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_box/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_box/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_box/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_box/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_box/list_box.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_box/list_box.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_box/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_box/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_ctrl/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_ctrl/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_ctrl/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_ctrl/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_ctrl/list_ctrl.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_ctrl/list_ctrl.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_ctrl/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_ctrl/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/menubar/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/menubar/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/menubar/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/menubar/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/menubar/menubar.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/menubar/menubar.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/menubar/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/menubar/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/notebook/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/notebook/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/notebook/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/notebook/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/notebook/notebook.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/notebook/notebook.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/notebook/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/notebook/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/panel/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/panel/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/panel/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/panel/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/panel/panel.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/panel/panel.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/panel/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/panel/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_box/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_box/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_box/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_box/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_box/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_box/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_box/radio_box.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_box/radio_box.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_button/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_button/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_button/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_button/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_button/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_button/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_button/radio_button.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_button/radio_button.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/slider/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/slider/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/slider/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/slider/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/slider/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/slider/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/slider/slider.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/slider/slider.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spacer/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spacer/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spacer/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spacer/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spacer/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spacer/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spacer/spacer.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spacer/spacer.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spin_ctrl/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spin_ctrl/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spin_ctrl/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spin_ctrl/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spin_ctrl/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spin_ctrl/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spin_ctrl/spin_ctrl.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spin_ctrl/spin_ctrl.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/splitter_window/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/splitter_window/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/splitter_window/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/splitter_window/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/splitter_window/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/splitter_window/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/splitter_window/splitter_window.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/splitter_window/splitter_window.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_bitmap/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_bitmap/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_bitmap/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_bitmap/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_bitmap/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_bitmap/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_bitmap/static_bitmap.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_bitmap/static_bitmap.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_line/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_line/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_line/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_line/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_line/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_line/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_line/static_line.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_line/static_line.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_text/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_text/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_text/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_text/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_text/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_text/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_text/static_text.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_text/static_text.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/text_ctrl/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/text_ctrl/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/text_ctrl/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/text_ctrl/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/text_ctrl/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/text_ctrl/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/text_ctrl/text_ctrl.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/text_ctrl/text_ctrl.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toggle_button/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toggle_button/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toggle_button/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toggle_button/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toggle_button/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toggle_button/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toggle_button/toggle_button.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toggle_button/toggle_button.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toolbar/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toolbar/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toolbar/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toolbar/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toolbar/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toolbar/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toolbar/tool.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toolbar/tool.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toolbar/toolbar.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toolbar/toolbar.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/tree_ctrl/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/tree_ctrl/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/tree_ctrl/codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/tree_ctrl/codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/tree_ctrl/perl_codegen.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/tree_ctrl/perl_codegen.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/tree_ctrl/tree_ctrl.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/tree_ctrl/tree_ctrl.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/__init__.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/__init__.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/canvas.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/canvas.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/intl.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/intl.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/pycolourbox.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/pycolourbox.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/pycolourchooser.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/pycolourchooser.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/pycolourslider.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/pycolourslider.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/pypalette.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/pypalette.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxglade.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/wxglade.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/xml_parse.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/xml_parse.pyo
+${PYSITELIB}/spe/framework/plugins/wxGlade/xrc2wxg.pyc
+${PYSITELIB}/spe/framework/plugins/wxGlade/xrc2wxg.pyo
+${PYSITELIB}/spe/framework/settings.pyc
+${PYSITELIB}/spe/framework/settings.pyo
+${PYSITELIB}/spe/framework/shell.pyc
+${PYSITELIB}/spe/framework/shell.pyo
+${PYSITELIB}/spe/framework/shortcuts.pyc
+${PYSITELIB}/spe/framework/shortcuts.pyo
+${PYSITELIB}/spe/framework/tabs/BlenderTab.pyc
+${PYSITELIB}/spe/framework/tabs/BlenderTab.pyo
+${PYSITELIB}/spe/framework/tabs/BrowserTab.pyc
+${PYSITELIB}/spe/framework/tabs/BrowserTab.pyo
+${PYSITELIB}/spe/framework/tabs/FindReplaceEngine.pyc
+${PYSITELIB}/spe/framework/tabs/FindReplaceEngine.pyo
+${PYSITELIB}/spe/framework/tabs/FindTab.pyc
+${PYSITELIB}/spe/framework/tabs/FindTab.pyo
+${PYSITELIB}/spe/framework/tabs/__init__.pyc
+${PYSITELIB}/spe/framework/tabs/__init__.pyo
+${PYSITELIB}/spe/framework/wxMDIChildFrame1.pyc
+${PYSITELIB}/spe/framework/wxMDIChildFrame1.pyo
+${PYSITELIB}/spe/framework/wxMDIParentFrame1.pyc
+${PYSITELIB}/spe/framework/wxMDIParentFrame1.pyo
+${PYSITELIB}/spe/info.pyc
+${PYSITELIB}/spe/info.pyo
+${PYSITELIB}/spe/unixUninstall.pyc
+${PYSITELIB}/spe/unixUninstall.pyo
+${PYSITELIB}/spe/winInstall.pyc
+${PYSITELIB}/spe/winInstall.pyo
+${PYSITELIB}/spe/winUninstall.pyc
+${PYSITELIB}/spe/winUninstall.pyo
+@dirrm ${PYSITELIB}/spe/framework/tabs
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/license
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/tree_ctrl
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toolbar
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toggle_button
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/text_ctrl
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_text
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_line
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_bitmap
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/splitter_window
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spin_ctrl
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spacer
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/slider
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_button
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_box
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/panel
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/notebook
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/menubar
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_ctrl
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_box
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/grid
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/gauge
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/frame
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/dialog
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/custom_widget
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/combo_box
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/choice
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/checkbox
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/button
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/bitmap_button
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/icons/msw
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/icons/gtk
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/icons
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/examples
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/edit_sizers
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/docs/img
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/docs
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/codegen
+@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade
+@dirrm ${PYSITELIB}/spe/framework/plugins/pychecker
+@dirrm ${PYSITELIB}/spe/framework/plugins/kiki/docs
+@dirrm ${PYSITELIB}/spe/framework/plugins/kiki
+@dirrm ${PYSITELIB}/spe/framework/plugins
+@dirrm ${PYSITELIB}/spe/framework/menus
+@dirrm ${PYSITELIB}/spe/framework/images
+@dirrm ${PYSITELIB}/spe/framework/dialogs
+@dirrm ${PYSITELIB}/spe/framework
+@dirrm ${PYSITELIB}/spe/examples
+@dirrm ${PYSITELIB}/spe/doc/blender_python_API
+@dirrm ${PYSITELIB}/spe/doc
+@dirrm ${PYSITELIB}/spe
+@dirrm ${PYSITELIB}/sm_idle/Icons
+@dirrm ${PYSITELIB}/sm_idle
+@dirrm ${PYSITELIB}/sm
+@dirrm ${PYSITELIB}/blenpy/plugins
+@dirrm ${PYSITELIB}/blenpy/icons
+@dirrm ${PYSITELIB}/blenpy/doc/screenshots
+@dirrm ${PYSITELIB}/blenpy/doc
+@dirrm ${PYSITELIB}/blenpy
