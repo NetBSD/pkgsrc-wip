@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2004/04/16 23:36:28 xtraeme Exp $
+$NetBSD: patch-af,v 1.3 2004/04/16 23:38:22 xtraeme Exp $
 
 --- Makefile.orig	2004-04-16 22:31:22.000000000 +0200
 +++ Makefile	2004-04-16 22:33:02.000000000 +0200
@@ -24,7 +24,7 @@ $NetBSD: patch-af,v 1.2 2004/04/16 23:36:28 xtraeme Exp $
  
  mupen64_nogui:	$(OBJ) $(OBJ_X86) main/main.o
 -		$(CC) $^ $(LIB) -Wl,-export-dynamic -L/usr/X11R6/lib -lSDL -lGL -lpthread -ldl -o $@
-+		$(CC) $^ $(LIB) @LDFLAGS@ -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -lSDL -lGL -o $@
++		$(CC) $^ $(LIB) @LDFLAGS@ -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib `sdl-config --libs` -lGL -o $@
  		strip --strip-all $@
  
  mupen64:	$(OBJ) $(OBJ_X86) $(OBJ_GTK_GUI)
