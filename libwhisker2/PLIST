@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/12 19:12:27 adrian_p Exp $
+share/doc/libwhisker2/KNOWNBUGS
+share/doc/libwhisker2/README
+share/doc/libwhisker2/crawler.txt
+share/doc/libwhisker2/logo-builton.gif
+share/doc/libwhisker2/logo-name.gif
+share/doc/libwhisker2/logo-plain.gif
+share/doc/libwhisker2/whisker_hash.txt
+share/examples/libwhisker2/api_demo.pl
+share/examples/libwhisker2/crawl_demo.pl
+share/examples/libwhisker2/simple_demo.pl
+${PERL5_SITELIB}/LW2.pm
+@dirrm share/examples/libwhisker2
+@dirrm share/doc/libwhisker2
