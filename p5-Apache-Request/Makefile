@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/30 06:22:07 amigus Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/09 06:38:32 blef Exp $
 #
 
 DISTNAME=		libapreq-1.3
@@ -11,9 +11,9 @@ MAINTAINER=		adam@migus.org
 HOMEPAGE=		http://httpd.apache.org/apreq/
 COMMENT=		Methods for dealing with client request data
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/libapreq/.packlist
 
-.include "../../www/ap-perl/buildlink2.mk"
 .include "../../lang/perl5/module.mk"
+.include "../../www/ap-perl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
