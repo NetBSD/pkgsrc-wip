@@ -1,8 +1,8 @@
-/*	$NetBSD: ftpio.c,v 1.1 2005/03/15 17:14:25 imilh Exp $	*/
+/*	$NetBSD: ftpio.c,v 1.2 2005/03/17 08:45:29 imilh Exp $	*/
 
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: ftpio.c,v 1.1 2005/03/15 17:14:25 imilh Exp $");
+__RCSID("$NetBSD: ftpio.c,v 1.2 2005/03/17 08:45:29 imilh Exp $");
 #endif
 
 /* slightly modified version of ftpio.c with pkg_select integration */
@@ -350,7 +350,8 @@ expect(int fd, const char *str, int *ftprc)
 				fflush(stdout);
 #endif /* EXPECT_DEBUG */
 
-				if (ftprc && isdigit(buf[match.rm_so+1])) 
+				if (ftprc && 
+				    isdigit((unsigned char)buf[match.rm_so+1])) 
 					*ftprc = atoi(buf+match.rm_so+1);
 
 				done=1;

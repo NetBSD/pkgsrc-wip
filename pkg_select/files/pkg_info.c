@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_info.c,v 1.5 2005/03/15 17:14:25 imilh Exp $ 
+ * $Id: pkg_info.c,v 1.6 2005/03/17 08:45:29 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -47,10 +47,18 @@ show_pkgfile(WINDOW *win, char *path, const char *file)
 	if (is_ftpurl(path)) {
 		char **ftpfile, rc;
 
-		if ((ftpfile = ftp_loadfile("./", file)) == NULL)
+		/* build full path */
+		snprintf(buf, MAXLEN, "%s/", path);
+		if (ftp_info_start(buf) < 0)
 			return(-1);
-		rc = more_list(win, ftpfile, LINES - 2, COLS - 2, 1, 1);
-		freefile(ftpfile);
+
+		if ((ftpfile = ftp_loadfile("./", file)) != NULL) {
+			rc = more_list(win, ftpfile, 
+				       LINES - 2, COLS - 2, 1, 1);
+			freefile(ftpfile);
+		}
+
+		ftp_stop();
 		return(rc);
 	}
 
