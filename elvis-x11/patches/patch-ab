@@ -1,0 +1,63 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/06/10 13:43:56 airhead Exp $
+--- configure.orig	2003-06-10 15:20:17.000000000 +0200
++++ configure	2003-06-10 15:19:12.000000000 +0200
+@@ -33,6 +33,7 @@
+ #	 bsd			typical BSD implementations
+ #	 freebsd		FreeBSD is a specific BSD implementation
+ #	 openbsd		OpenBSD is a specific BSD implementation
++#	 netbsd			NetBSD is a specific BSD implementation
+ #	 posix			generic POSIX implementations
+ #	 cygwin			GNU utilities under Windows95/98/NT
+ #        (anything else)	generic UNIX, including SysV
+@@ -111,7 +112,7 @@
+ 	echo "       --libs=STRING      non-X11 part of the LIBS= string in Makefile"
+ 	echo "       --ioctl=VARIETY    type of tty ioctl to use: termios, termio, or sgtty"
+ 	echo "       --verbose          explain any decisions made during configuration"
+-	echo "system: linux, sunos, solaris, solaris2, freebsd, openbsd, bsd, posix,"
++	echo "system: linux, sunos, solaris, solaris2, freebsd, openbsd, netbsd, bsd, posix,"
+ 	echo "        aix, osf-1, hp-ux, ultrix, qnx, irix, cygwin, xenix,"
+ 	echo "        sco (meaning SCO Unix or OpenDesktop)"
+ 	if [ "$*" ]
+@@ -213,7 +214,7 @@
+ 		why "   This is really '$SYS'"
+ 		;;
+ 
+-	  linux|solaris|solaris2|aix|osf-1|ultrix|hp-ux|qnx|irix*|xenix|sco|bsd|freebsd|openbsd|posix|cygwin*)
++	  linux|solaris|solaris2|aix|osf-1|ultrix|hp-ux|qnx|irix*|xenix|sco|bsd|freebsd|openbsd|netbsd|posix|cygwin*)
+ 		why "   I know '$SYS' -- This should be easy!"
+ 		;;
+ 
+@@ -590,11 +591,24 @@
+   *freebsd*)
+ 	why "For FreeBSD, we ignore the <sys/select.h> file"
+ 	NEED_SELECT_H="undef"
++	why "   To support X11, it also requires -lipc"
++	XLIBS=" -lipc"
+ 	;;
+   *openbsd*)
+ 	why "For OpenBSD, we ignore the <sys/select.h> file"
+ 	NEED_SELECT_H="undef"
+ 	TLIBS="-lcurses"
++	why "   To support X11, it also requires -lipc"
++	XLIBS=" -lipc"
++	;;
++  *netbsd*)
++	why "For NetBSD, we need to specify the -R flag for X11."
++	why "   The use of LD_LIBRARY_PATH is not encouraged unless it is really necessary"
++	if [ "$GUI_X11" = "define" ]
++	then
++		xlibdir=`dirname "$xlib"`
++		XLIBS=" -R$xlibdir$XLIBS"
++	fi
+ 	;;
+   *bsd*)
+ 	why "For BSD we like to use shlicc2 because it supports shared libraries"
+@@ -609,8 +623,6 @@
+ 	fi
+ 	if [ "$GUI_X11" = "define" ]
+ 	then
+-		why "   To support X11, it also requires -lipc"
+-		XLIBS=" -lipc"
+ 		why "FreeBSD requires -I/usr/X11R6/include.  Should be harmless for other BSDs"
+ 		CC="$CC -I/usr/X11R6/include"
+ 	fi
