@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:33:16 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/27 03:05:20 minskim Exp $
 
 DISTNAME=	ppp-2.4.1
 CATEGORIES=	net
-MASTER_SITES=	http://ftp.samba.org/ftp/ppp/
+MASTER_SITES=	ftp://ftp.samba.org/pub/ppp/
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.samba.org/ppp/
