@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2004/09/29 23:25:56 adrian_p Exp $
+# $NetBSD: options.mk,v 1.2 2004/09/29 23:53:06 adrian_p Exp $
 
 .if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
 PKG_DEFAULT_OPTIONS+=   inet6
@@ -11,7 +11,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
 PKG_SUPPORTED_OPTIONS=	inet6 nospoof hub leaf ziplinks remoteinc ssl
 
 .if !defined(PKG_OPTIONS.unrealircd)
-PKG_DEFAULT_OPTIONS+=	hub
+PKG_DEFAULT_OPTIONS+=	hub nospoof
 .endif
 
 .include "../../mk/bsd.options.mk"
