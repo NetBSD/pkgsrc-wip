@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/19 19:17:46 mpasternak Exp $
+bin/tleenx3
+share/tleenx3/pixmaps/away.png
+share/tleenx3/pixmaps/beback.png
+share/tleenx3/pixmaps/button_profiles.png
+share/tleenx3/pixmaps/chat.png
+share/tleenx3/pixmaps/dodaj.png
+share/tleenx3/pixmaps/export.png
+share/tleenx3/pixmaps/import.png
+share/tleenx3/pixmaps/info.png
+share/tleenx3/pixmaps/invisible.png
+share/tleenx3/pixmaps/logo_2.png
+share/tleenx3/pixmaps/menu-edycja.png
+share/tleenx3/pixmaps/menu-katalog.png
+share/tleenx3/pixmaps/menu-rozmowa.png
+share/tleenx3/pixmaps/menu-sendfile.png
+share/tleenx3/pixmaps/menu-usun.png
+share/tleenx3/pixmaps/menu-wiadomosc.png
+share/tleenx3/pixmaps/occupied.png
+share/tleenx3/pixmaps/offline.png
+share/tleenx3/pixmaps/online.png
+share/tleenx3/pixmaps/profile.png
+share/tleenx3/pixmaps/sendmsg.png
+share/tleenx3/pixmaps/szukaj.png
+share/tleenx3/pixmaps/thobber.gif
+share/tleenx3/pixmaps/tleenx-logo.png
+share/tleenx3/pixmaps/tleenx.png
+share/tleenx3/pixmaps/tleenx_dol.png
+share/tleenx3/pixmaps/wizytowka.png
+@dirrm share/tleenx3/pixmaps
+@dirrm share/tleenx3
