@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.890 2004/01/17 17:58:15 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.890 2004/01/17 17:58:15 thomasklausner Exp $
+# $Id: Makefile,v 1.891 2004/01/17 21:02:38 minskim Exp $
+# $NetBSD: Makefile,v 1.891 2004/01/17 21:02:38 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -335,6 +335,7 @@ SUBDIR+=	linux-makedev
 SUBDIR+=	linux-modutils
 SUBDIR+=	linux-nfs-utils
 SUBDIR+=	liquidwar
+SUBDIR+=	liteamp
 SUBDIR+=	lletters
 SUBDIR+=	lmarbles
 SUBDIR+=	lsdvd
