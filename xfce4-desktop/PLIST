@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/04 07:36:50 marttikuparinen Exp $
+bin/xfdesktop
+etc/xfce4/menu.xml
+lib/xfce4/mcs-plugins/backdrop_settings.a
+lib/xfce4/mcs-plugins/backdrop_settings.la
+lib/xfce4/mcs-plugins/backdrop_settings.so
+lib/xfce4/mcs-plugins/workspaces_settings.a
+lib/xfce4/mcs-plugins/workspaces_settings.la
+lib/xfce4/mcs-plugins/workspaces_settings.so
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfdesktop.mo
+share/xfce4/backdrops/flower.png
+share/xfce4/backdrops/xfce-in-the-moon.png
+share/xfce4/backdrops/xfce-turbulence.png
+share/xfce4/backdrops/xfce4gradientcurve.png
+share/xfce4/backdrops/xfce4logo.png
+share/xfce4/doc/C/images/root_menu.png
+share/xfce4/doc/C/images/root_menu2.png
+share/xfce4/doc/C/images/select_bg_color.png
+share/xfce4/doc/C/images/xfdesktop-background.png
+share/xfce4/doc/C/images/xfdesktop-list.png
+share/xfce4/doc/C/images/xfdesktop-workspace.png
+share/xfce4/doc/C/xfdesktop.html
+@dirrm share/xfce4/backdrops
