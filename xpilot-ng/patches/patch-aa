@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/06/17 13:52:35 pulahti Exp $
+
+--- configure.orig	2004-06-16 23:31:28.000000000 +0000
++++ configure	2004-06-16 23:32:01.000000000 +0000
+@@ -5344,7 +5344,7 @@
+ 
+ fi
+ 
+-if test x$no_x == xyes; then
++if test x$no_x = xyes; then
+ 	{ { echo "$as_me:$LINENO: error: *** Couldn't find X headers or libraries!" >&5
+ echo "$as_me: error: *** Couldn't find X headers or libraries!" >&2;}
+    { (exit 1); exit 1; }; }
