@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/19 18:04:50 xtraeme Exp $
+
+--- applets/mb-applet-menu-launcher.c.orig	2004-03-19 12:10:48.000000000 +0100
++++ applets/mb-applet-menu-launcher.c	2004-03-19 12:16:04.000000000 +0100
+@@ -716,11 +716,14 @@
+   if (is_released) app_data->button_is_down = False;
+ 
+   sigemptyset(&block_sigset);
++#ifdef USE_DNOTIFY
+   sigaddset(&block_sigset, SIGRTMIN);
+-
++#endif
+   if (is_released && !next_cancels)
+     {
++#ifdef USE_DNOTIFY
+       sigaddset(&block_sigset, SIGRTMIN);
++#endif
+       menu_get_popup_pos (app, &abs_x, &abs_y);
+       mb_menu_activate (app_data->mbmenu, abs_x, abs_y);
+ 
+@@ -817,8 +820,9 @@
+ 	  && ev->xclient.data.l[0] == MB_CMD_SHOW_EXT_MENU )
+ 	{
+ 	  sigemptyset(&block_sigset);
++#ifdef USE_DNOTIFY
+ 	  sigaddset(&block_sigset, SIGRTMIN);
+-
++#endif
+ 	  if (!mb_menu_is_active(app_data->mbmenu)) 
+ 	    {
+ 	      int abs_x, abs_y;

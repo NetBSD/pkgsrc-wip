@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/03/19 18:04:50 xtraeme Exp $
+
+--- applets/Makefile.in.orig	2004-03-19 19:08:23.000000000 +0100
++++ applets/Makefile.in	2004-03-19 19:09:00.000000000 +0100
+@@ -148,7 +148,7 @@
+ 
+ mb_applet_clock_SOURCES = mb-applet-clock.c
+ mb_applet_menu_launcher_SOURCES = mb-applet-menu-launcher.c
+-mb_applet_wireless_SOURCES = mb-applet-wireless.c
++mb_applet_wireless_SOURCES =
+ mb_applet_launcher_SOURCES = mb-applet-launcher.c  
+ mb_applet_system_monitor_SOURCES = mb-applet-system-monitor.c 
+ 
+@@ -160,13 +160,11 @@
+ CONFIG_CLEAN_FILES =
+ @WANT_APM_TRUE@bin_PROGRAMS = mb-applet-clock$(EXEEXT) \
+ @WANT_APM_TRUE@	mb-applet-menu-launcher$(EXEEXT) \
+-@WANT_APM_TRUE@	mb-applet-wireless$(EXEEXT) \
+ @WANT_APM_TRUE@	mb-applet-launcher$(EXEEXT) \
+ @WANT_APM_TRUE@	mb-applet-system-monitor$(EXEEXT) \
+ @WANT_APM_TRUE@	mb-applet-battery$(EXEEXT)
+ @WANT_APM_FALSE@bin_PROGRAMS = mb-applet-clock$(EXEEXT) \
+ @WANT_APM_FALSE@	mb-applet-menu-launcher$(EXEEXT) \
+-@WANT_APM_FALSE@	mb-applet-wireless$(EXEEXT) \
+ @WANT_APM_FALSE@	mb-applet-launcher$(EXEEXT) \
+ @WANT_APM_FALSE@	mb-applet-system-monitor$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
