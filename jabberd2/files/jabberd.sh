@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: jabberd.sh,v 1.4 2003/09/28 18:13:51 xtraeme Exp $
+# $NetBSD: jabberd.sh,v 1.5 2003/09/29 07:22:58 xtraeme Exp $
 #
 
 # PROVIDE: jabberd
@@ -13,8 +13,8 @@ rcvar=$name
 command="@PREFIX@/bin/${name}"
 command_args="-D"
 required_files="@PKG_SYSCONFDIR@/jabberd.cfg"
-jabberd_user="jabberd"
-jabberd_group="jabberd"
+jabberd_user="@JABBERD_USER@"
+jabberd_group="@JABBERD_GROUP@"
 
 load_rc_config $name
 run_rc_command "$1"

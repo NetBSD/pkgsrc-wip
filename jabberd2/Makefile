@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/09/28 18:13:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.24 2003/09/29 07:22:58 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0b1
@@ -100,6 +100,8 @@ PKG_SYSCONFSUBDIR=	jabberd
 
 JABBERD_USER?=		jabberd
 JABBERD_GROUP?=		jabberd
+FILES_SUBST+=		JABBERD_USER=${JABBERD_USER}
+FILES_SUBST+=		JABBERD_GROUP=${JABBERD_GROUP}
 PKG_GROUPS=             ${JABBERD_GROUP}
 PKG_USERS=              ${JABBERD_USER}:${JABBERD_GROUP}::Jabberd\\ user
 EGDIR=			${PREFIX}/share/examples/jabberd
