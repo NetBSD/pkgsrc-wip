@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/09/12 21:38:57 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/09/24 21:54:14 tvierling Exp $
 #
 
 .if !defined(BOOST_BUILDLINK2_MK)
@@ -21,7 +21,6 @@ BUILDLINK_TARGETS+=				boost-base-buildlink
 
 boost-base-buildlink: _BUILDLINK_USE
 
-. include "../../mk/compiler.mk"
 . include "../../mk/pthread.buildlink2.mk"
 
 .endif # BOOST_BUILDLINK2_MK

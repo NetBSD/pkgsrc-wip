@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/12 21:50:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/24 21:54:14 tvierling Exp $
 
 DISTNAME=		VisualBoyAdvance-1.5.1-src
 PKGNAME=		vba-1.5.1
@@ -27,5 +27,4 @@ do-install:
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 
-.include "../../mk/compiler.mk"
 .include "../../mk/bsd.pkg.mk"

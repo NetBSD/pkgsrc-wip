@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 15:02:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/24 21:54:14 tvierling Exp $
 CVS_DATE=	Fri Aug 15 09:09:37 UTC 2003
 
 DISTNAME=	gdbada-5.3
@@ -82,5 +82,4 @@ do-extract:
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../devel/libtool/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/compiler.mk"
 .include "../../mk/bsd.pkg.mk"
