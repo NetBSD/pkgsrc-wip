@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/12 15:02:05 ianharding Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/12 17:14:59 ianharding Exp $
+bin/nsfreetds.so
