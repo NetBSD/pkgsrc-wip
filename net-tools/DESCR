@@ -1,0 +1,3 @@
+net-tools is a suite of standard tools for Linux networking. This
+includes ifconfig, route, netstat, hostname, arp, and several other
+utilities.

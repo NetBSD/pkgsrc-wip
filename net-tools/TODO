@@ -1,0 +1,11 @@
+this uses default configs (like no GNU gettexti
+and no mii tools)
+should instead preset some of this.
+
+hostname conflicts with sh-utils
+
+maybe make sure iptunnel is installed
+
+maybe make sure ipmaddr is installed
+
+add a HOMEPAGE

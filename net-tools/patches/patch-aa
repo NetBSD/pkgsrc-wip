@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/05/07 22:12:54 jeremy-c-reed Exp $
+
+--- man/Makefile.orig	2002-10-30 17:44:35.000000000 -0800
++++ man/Makefile	2002-10-30 17:44:57.000000000 -0800
+@@ -25,7 +25,7 @@
+ #
+ 
+ INSTALL=install
+-mandir=/usr/share/man
++mandir=/man
+ 
+ -include ../config.make
+ ifeq ($(I18N),1)
