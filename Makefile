@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.600 2003/11/06 05:48:12 mpasternak Exp $
-# $NetBSD: Makefile,v 1.600 2003/11/06 05:48:12 mpasternak Exp $
+# $Id: Makefile,v 1.601 2003/11/06 17:03:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.601 2003/11/06 17:03:59 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -472,6 +472,7 @@ SUBDIR+=	toppler
 SUBDIR+=	totem
 SUBDIR+=	treecc
 SUBDIR+=	tsm
+SUBDIR+=	tsocks
 SUBDIR+=	tutos
 SUBDIR+=	tuxtype2
 SUBDIR+=	typhoon
