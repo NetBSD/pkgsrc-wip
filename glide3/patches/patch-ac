@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.4 2004/06/26 23:32:13 rillig Exp $
+
 --- swlibs/include/make/3dfx.mak.orig	Fri Aug  9 11:03:46 2002
 +++ swlibs/include/make/3dfx.mak	Fri Mar 19 13:18:07 2004
 @@ -107,7 +107,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.4 2004/06/26 23:32:13 rillig Exp $
+
 --- glide2x/h3/glide/Makefile.orig	Sun Feb 29 22:27:31 2004
 +++ glide2x/h3/glide/Makefile	Sun Feb 29 22:27:46 2004
 @@ -22,6 +22,6 @@
