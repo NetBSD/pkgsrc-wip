@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/16 00:47:15 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/16 00:51:12 minskim Exp $
 #
 
 DISTNAME=	scew-0.3.1
@@ -13,4 +13,6 @@ USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
