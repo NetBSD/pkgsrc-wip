@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/02 17:42:08 dawszy Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/02 18:24:28 dawszy Exp $
 #
 
 DISTNAME=		etpan-ng-0.3
@@ -13,8 +13,8 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+.include "../../wip/libetpan/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
-.include "../../wip/libetpan/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
