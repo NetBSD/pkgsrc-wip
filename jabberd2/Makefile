@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/03/17 02:51:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.34 2004/03/17 02:56:38 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0s2
@@ -55,23 +55,23 @@ AUTHREG_MODS="anon pipe ${JABBERD_AUTH_METHOD}"
 .if !empty(JABBERD_AUTH_METHOD:Mdb)
 CONFIGURE_ARGS+=	--enable-authreg=${AUTHREG_MODS}
 CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_DIR}/include
-.include "../../mk/bdb.buildlink3.mk"
-.elif !empty(JABBERD_AUTH_METHOD:Mopenldap)
+.    include "../../mk/bdb.buildlink3.mk"
+.  elif !empty(JABBERD_AUTH_METHOD:Mopenldap)
 CONFIGURE_ARGS+=	--enable-authreg=${AUTHREG_MODS}
 CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap}
-.include "../../databases/openldap/buildlink3.mk"
-.elif !empty(JABBERD_AUTH_METHOD:Mpgsql)
+.    include "../../databases/openldap/buildlink3.mk"
+.  elif !empty(JABBERD_AUTH_METHOD:Mpgsql)
 CONFIGURE_ARGS+=	--enable-authreg=${AUTHREG_MODS}
 CONFIGURE_ARGS+=	--with-pgsql=${BUILDLINK_PREFIX.postgresql-lib}
-.include "../../databases/postgresql-lib/buildlink3.mk"
-.elif !empty(JABBERD_AUTH_METHOD:Mmysql)
+.    include "../../databases/postgresql-lib/buildlink3.mk"
+.  elif !empty(JABBERD_AUTH_METHOD:Mmysql)
 CONFIGURE_ARGS+=	--enable-authreg=${AUTHREG_MODS}
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-server}
-.include "../../databases/mysql-client/buildlink3.mk"
-.elif !empty(JABBERD_AUTH_METHOD:Mpam)
+.    include "../../databases/mysql-client/buildlink3.mk"
+.  elif !empty(JABBERD_AUTH_METHOD:Mpam)
 CONFIGURE_ARGS+=	--enable-authreg=${AUTHREG_MODS}
 CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.PAM}
-.include "../../security/PAM/buildlink3.mk"
+.    include "../../security/PAM/buildlink3.mk"
 .endif
 
 # This specify the actual method which will be used to store the accounts
@@ -88,15 +88,15 @@ JABBERD_STORAGE_METHOD?=	db
 .if !empty(JABBERD_STORAGE_METHOD:Mdb)
 CONFIGURE_ARGS+=	--enable-storage=db
 CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_DIR}/include
-.include "../../mk/bdb.buildlink3.mk"
-.elif !empty(JABBERD_STORAGE_METHOD:Mmysql)
+.    include "../../mk/bdb.buildlink3.mk"
+.  elif !empty(JABBERD_STORAGE_METHOD:Mmysql)
 CONFIGURE_ARGS+=	--enable-storage=mysql
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-server}
-.include "../../databases/mysql-client/buildlink3.mk"
-.elif !empty(JABBERD_STORAGE_METHOD:Mpgsql)
+.    include "../../databases/mysql-client/buildlink3.mk"
+.  elif !empty(JABBERD_STORAGE_METHOD:Mpgsql)
 CONFIGURE_ARGS+=	--enable-storage=pgsql
 CONFIGURE_ARGS+=	--with-pgsql=${BUILDLINK_PREFIX.postgresql-lib}
-.include "../../databases/postgresql-lib/buildlink3.mk"
+.    include "../../databases/postgresql-lib/buildlink3.mk"
 .endif
 
 .if defined(JABBERD_STATIC) && !empty(JABBERD_STATIC:M[Yy][Ee][Ss])
