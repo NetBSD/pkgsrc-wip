@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.484 2003/09/22 19:50:59 adrian_p Exp $
-# $NetBSD: Makefile,v 1.484 2003/09/22 19:50:59 adrian_p Exp $
+# $Id: Makefile,v 1.485 2003/09/22 23:39:28 mpasternak Exp $
+# $NetBSD: Makefile,v 1.485 2003/09/22 23:39:28 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -327,6 +327,7 @@ SUBDIR+=	procps
 SUBDIR+=	prtunnel
 SUBDIR+=	psh
 SUBDIR+=	pts
+SUBDIR+=	py23-html-docs
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-RXP
