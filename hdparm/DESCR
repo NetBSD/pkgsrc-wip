@@ -1,0 +1,3 @@
+hdparm is a Linux shell utility for viewing and manipulating various
+IDE drive and driver parameters. Most drives can benefit from improved
+performance using a command similar to "hdparm -qm8 -qu1 -qc1 -qd1 /dev/hda".

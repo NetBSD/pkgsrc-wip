@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/02 22:08:52 poppnk Exp $
+man/cat8/hdparm.8.gz
+man/man8/hdparm.8
+sbin/hdparm
