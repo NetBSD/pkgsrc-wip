@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/03 16:39:03 schnoebe Exp $
+sbin/fpexec
+sbin/fpstatic
+lib/httpd/mod_frontpage.so
