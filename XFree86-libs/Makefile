@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/24 11:08:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/25 01:28:50 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-libs-${XF_VER}
@@ -32,5 +32,4 @@ PLIST_SRC+=	${.CURDIR}/PLIST.DRI
 .include "../../fonts/fontconfig/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
-.include "../../x11/Xrender/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
