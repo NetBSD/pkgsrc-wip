@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/05/08 16:58:12 jcd Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/08 10:24:26 xtraeme Exp $
 
 DISTNAME=	amavisd-new-${VERSION}-${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
@@ -39,11 +39,11 @@ USE_BUILDLINK3= yes
 VERSION=	20030616
 PATCHLEVEL=	p9
 
-USE_PKGINSTALL=	YES
-AMAVISUSER?=    vscan
-AMAVISGROUP?=   vscan
-AMAVISDIR?=     /var/amavis
-AMAVISQUARANTINE?=      /var/virusmails
+USE_PKGINSTALL=		YES
+AMAVISUSER?=    	vscan
+AMAVISGROUP?=   	vscan
+AMAVISDIR?=     	${VARBASE}/amavis
+AMAVISQUARANTINE?=      ${VARBASE}/virusmails
 
 PKG_GROUPS=	${AMAVISGROUP}
 PKG_USERS=	${AMAVISUSER}:${AMAVISGROUP}::Virus\\ Scanning\\ Account:${AMAVISDIR}:${SH}
@@ -77,7 +77,7 @@ SUBST_SED.amavisd=	-e "s|/etc/amavisd.conf|${PKG_SYSCONFDIR}/amavisd.conf|"	\
 
 PLIST_SUBST+=	AMAVIS_MILTER_USED=${AMAVIS_MILTER_USED}
 
-.if defined(USE_MILTER) && ${USE_MILTER} == "YES"
+.if defined(USE_MILTER) && !empty(USE_MILTER:M[Yy][Es][Ss])
 GNU_CONFIGURE=  yes
 CONFIGURE_ARGS+=--with-milterinc=${PREFIX}/include
 CONFIGURE_ARGS+=--with-milterlib=${PREFIX}/lib
@@ -105,7 +105,7 @@ OWN_DIRS_PERMS=	${AMAVISDIR} ${AMAVISUSER} ${AMAVISGROUP} 0750 \
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/amavisd ${PREFIX}/sbin/amavisd
-.if defined(USE_MILTER) && ${USE_MILTER} == "YES"
+.if defined(USE_MILTER) && !empty(USE_MILTER:M[Yy][Ee][Ss])
 	${INSTALL_PROGRAM} ${WRKSRC}/helper-progs/amavis ${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/helper-progs/amavis-milter ${PREFIX}/sbin
 .endif
@@ -132,7 +132,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/amavisd-new
 	${INSTALL_DATA} ${WRKSRC}/amavisd.conf ${PREFIX}/share/doc/amavisd-new/amavisd.conf
 
-.if defined(USE_MILTER) && ${USE_MILTER} == "YES"
+.if defined(USE_MILTER) && !empty(USE_MILTER:M[Yy][Ee][Ss])
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mail/libmilter/buildlink3.mk"
 .endif
