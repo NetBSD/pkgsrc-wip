@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/07 15:41:29 ura Exp $
+sbin/logrotate
+man/man8/logrotate.8
+share/examples/logrotate/logrotate.conf.sample
+share/examples/logrotate/logrotate.d/syslog.sample
+@dirrm share/examples/logrotate/logrotate.d
+@dirrm share/examples/logrotate

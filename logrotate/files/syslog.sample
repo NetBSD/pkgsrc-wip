@@ -1,0 +1,13 @@
+/var/log/messages
+/var/log/authlog
+/var/cron/log
+/var/log/xferlog
+/var/log/lpd-errs
+/var/log/maillog
+/var/spool/uucp/ERRORS
+{
+    sharedscripts
+    postrotate
+	/bin/kill -HUP `cat /var/run/syslogd.pid 2> /dev/null` 2> /dev/null || true
+    endscript
+}
