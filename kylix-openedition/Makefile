@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/11/29 03:29:32 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2003/11/29 03:30:37 mpasternak Exp $
 #
 
 DISTNAME=		# defined
@@ -15,6 +15,7 @@ COMMENT=		ANSI/ISO C++, Delphi and IDE in one
 DEPENDS+=		${LINUX_BASE_PREFIX}_gtk-[0-9]*:../../emulators/${LINUX_BASE_PREFIX}_gtk
 
 LINUX_BINPKG_FMT=	plain
+LINUX_USE_X11=		yes
 
 NO_SRC_ON_CDROM=	"I'm not sure if we can redistribute it"
 NO_BIN_ON_CDROM=	${NO_SRC_ON_CDROM}
