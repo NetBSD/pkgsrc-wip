@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/11/04 15:32:41 adrian_p Exp $
+# $NetBSD: Makefile,v 1.20 2004/11/04 22:22:18 adrian_p Exp $
 #
 
 DISTNAME=	bugzilla-2.18rc3
@@ -16,17 +16,18 @@ DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 DEPENDS+=	p5-Template-Toolkit>=2.08:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Text-Tabs+Wrap>=2001.0131:../../textproc/p5-Text-Tabs+Wrap
 DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
-DEPENDS+=	mysql-client>=3.23.41:../../databases/mysql3-client
-DEPENDS+=	p5-DBI>=1.36:../../databases/p5-DBI
 DEPENDS+=	p5-DBD-mysql>=2.1010:../../databases/p5-DBD-mysql
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-NO_BUILDLINK=	YES
+USE_BUILDLINK3=	YES
 NO_BUILD=	YES
 USE_PKGINSTALL=	YES
 PERL5_REQD+=	5.6.0
+
+BUILDLINK_DEPENDS.p5-DBI+=		p5-DBI>=1.36
+BUILDLINK_DEPENDS.mysql-client+=	mysql-client>=3.23.41
 
 BZ_DB_DATABASE?=bugs
 BZ_DB_HOST?=	localhost
@@ -59,7 +60,8 @@ SUBST_SED.conf=		-e "s|@BZ_DB_HOST@|${BZ_DB_HOST}|g" 		\
 			-e "s|@BZ_DB_USER@|${BZ_DB_USER}|g" 		\
 			-e "s|@BZ_DB_PASS@|${BZ_DB_PASS}|g"		\
 			-e "s|@MYSQL_SOCLOC@|${MYSQL_SOCLOC}|g"		\
-			-e "s|@PREFIX@|${PREFIX}|g"
+			-e "s|@PREFIX@|${PREFIX}|g"			\
+			-e "s|@BZDIR@|${BZDIR}|g"
 SUBST_MESSAGE.conf=	"Fixing configuration files."
 
 post-extract:
@@ -116,4 +118,6 @@ do-install:
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${BZDIR}/template
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${BZDIR}/skins
 
+.include "../../databases/p5-DBI/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

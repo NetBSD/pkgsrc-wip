@@ -1,14 +1,14 @@
-# $NetBSD: options.mk,v 1.1 2004/11/04 15:32:42 adrian_p Exp $
+# $NetBSD: options.mk,v 1.2 2004/11/04 22:22:19 adrian_p Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bugzilla
-PKG_SUPPORTED_OPTIONS=	ldapauth charts patchviewer xmlimportbugs
+PKG_SUPPORTED_OPTIONS=	ldap charts patchviewer xmlimportbugs
 
 .include "../../mk/bsd.options.mk"
 
 ###
 ### Use OpenLDAP for authentication
 ###
-.if !empty(PKG_OPTIONS:Mldapauth)
+.if !empty(PKG_OPTIONS:Mldap)
 DEPENDS+=	p5-perl-ldap-[0-9]*:../../databases/p5-perl-ldap
 .endif
 
