@@ -1,0 +1,7 @@
+$Id: TODO,v 1.1 2003/12/15 15:23:37 mpasternak Exp $
+
+1) objc is not built
+2) g++ is not(?) built
+3) verify if PLIST is okay
+
+	-- dotz@irc.pl

@@ -1,1 +1,69 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/15 14:49:42 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/15 15:23:37 mpasternak Exp $
+bin/${MINGW_TARGET}-cc
+bin/${MINGW_TARGET}-cpp
+bin/${MINGW_TARGET}-gcc
+bin/${MINGW_TARGET}-gcc-3.3.1
+bin/${MINGW_TARGET}-gccbug
+bin/${MINGW_TARGET}-gcov
+${MINGW_TARGET}/bin/cc
+${MINGW_TARGET}/bin/cpp
+${MINGW_TARGET}/bin/gcc
+info/cpp.info
+info/cppinternals.info
+info/gcc.info
+info/gccint.info
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/cc1
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/crtbegin.o
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/crtend.o
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/include/README
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/include/float.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/include/iso646.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/include/limits.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/include/mmintrin.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/include/stdarg.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/include/stdbool.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/include/stddef.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/include/syslimits.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/include/unwind.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/include/varargs.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/include/xmmintrin.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/fixinc.sh
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/gsyslimits.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/include/README
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/include/float.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/include/iso646.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/include/limits.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/include/mmintrin.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/include/stdarg.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/include/stdbool.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/include/stddef.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/include/unwind.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/include/varargs.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/include/xmmintrin.h
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/mkheaders
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/mkheaders.conf
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/libgcc.a
+lib/gcc-lib/${MINGW_TARGET}/3.3.1/specs
+lib/libiberty.a
+man/man1/cpp.1
+man/man1/gcov.1
+man/man1/${MINGW_TARGET}-gcc.1
+man/man7/fsf-funding.7
+man/man7/gfdl.7
+man/man7/gpl.7
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gcc.mo
+@dirrm lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools/include
+@dirrm lib/gcc-lib/${MINGW_TARGET}/3.3.1/install-tools
+@dirrm lib/gcc-lib/${MINGW_TARGET}/3.3.1/include
+@dirrm lib/gcc-lib/${MINGW_TARGET}/3.3.1
+@dirrm lib/gcc-lib/${MINGW_TARGET}
+@dirrm lib/gcc-lib
