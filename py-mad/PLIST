@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/12 16:08:34 froz Exp $
+${PYSITELIB}/madmodule.so
