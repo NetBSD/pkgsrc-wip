@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1452 2004/09/03 17:50:30 tnn2 Exp $
-# $NetBSD: Makefile,v 1.1452 2004/09/03 17:50:30 tnn2 Exp $
+# $Id: Makefile,v 1.1453 2004/09/06 21:24:31 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1453 2004/09/06 21:24:31 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -329,6 +329,7 @@ SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libmatchbox
 SUBDIR+=	libmilter813
+SUBDIR+=	libnet11
 SUBDIR+=	libneural
 SUBDIR+=	libpcap-latest
 SUBDIR+=	libprelude
