@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/07/09 16:56:08 xtraeme Exp $
+
+--- configure.orig	Thu Feb 14 18:30:42 2002
++++ configure	Mon Mar 18 14:34:47 2002
+@@ -9509,7 +9509,6 @@
+ else
+   bench_dirs=""
+ fi
+-bench_dirs="$bench_dirs mysql-test"
+ 
+ 
+ # Don't build readline, i have it already
