@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/12/30 11:27:07 mpasternak Exp $
+
+Game has been installed. You can run it via 
+
+	cd ${PREFIX}/emul/linux/usr/games/postal/System && ./postal2-bin
+
+** WIP-ONLY HACKERS NOTE ***
+
+Read TODO.
+
+Create symlink for your suse_glx-7.4 libGL.so.1 before running:
+
+	cd ${PREFIX}/emul/linux/usr/i486-linux-libc5/lib/
+	ln -s libGL.so libGL.so.1
+
+Feel free to update this pkg.
+
+===========================================================================

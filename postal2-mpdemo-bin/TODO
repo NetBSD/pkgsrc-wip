@@ -1,0 +1,28 @@
+$Id: TODO,v 1.1.1.1 2003/12/30 11:27:07 mpasternak Exp $
+
+1) does it work on NetBSD systems?
+
+2) add EULA to pkgsrc/licenses in case this package leaves -wip (?)
+
+3) on FreeBSD-4-STABLE with 4.3.0 XFree86:
+
+	Xlib:  extension "XiG-SUNDRY-NONSTANDARD" missing on display ":0.0".
+	GL_EXT_bgra not supported - bailing out.
+
+   As I found out, this is quite known problem:
+   
+	http://lists.suse.com/archive/suse-xfree86/2003-Sep/0001.html
+	
+   ... but I have no time to investigate / patch it now, sorry.
+   
+   It is said, that XiG-extension error can be ignored. The problem is the
+   lack of GL_EXT_bgra .
+   
+4) is the libGL symlink a good hack or does Postal need other linux-base / newer
+   GLX?
+   
+5) create a startup shell script
+
+6) needs about 1 GB to extract/install from pkgsrc. Could we warn about it?
+   
+	-- dotz@irc.pl
