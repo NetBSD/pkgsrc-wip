@@ -1,0 +1,31 @@
+# $NetBSD: turba.conf.dist,v 1.1.1.1 2004/07/31 01:52:56 adrian_p Exp $
+#
+# Turba configuration file fragment for Apache
+
+# For security, don't serve pages from the Turba configuration and library
+# directories.
+#
+<Directory "/usr/pkg/share/horde/turba/config">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "/usr/pkg/share/horde/turba/lib">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "/usr/pkg/share/horde/turba/locale">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "/usr/pkg/share/horde/turba/po">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "/usr/pkg/share/horde/turba/scripts">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "/usr/pkg/share/horde/turba/templates">
+    Order deny,allow
+    Deny from all
+</Directory>
