@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/03/26 20:40:42 cubidou Exp $
+$NetBSD: patch-ad,v 1.2 2003/05/03 11:20:39 cubidou Exp $
 
 --- src/card_direct.c.orig	2003-02-03 22:53:29.000000000 +0100
 +++ src/card_direct.c
-@@ -43,10 +43,9 @@
+@@ -43,10 +43,13 @@
  #include <errno.h>
  #include <fcntl.h>
  
@@ -11,10 +11,14 @@ $NetBSD: patch-ad,v 1.1.1.1 2003/03/26 20:40:42 cubidou Exp $
  #include <sys/mman.h>
  #include <sys/ioctl.h>
 -#include <sys/io.h>
++
++#ifdef __NetBSD__
++#include <machine/sysarch.h>
++#endif
  
  #include "backend.h"
  #include "card_direct.h"
-@@ -114,6 +113,56 @@ void unmapDevMem (unsigned long Base, un
+@@ -114,6 +117,56 @@ void unmapDevMem (unsigned long Base, un
  
  /* -------- Common -------- */
  
@@ -71,7 +75,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2003/03/26 20:40:42 cubidou Exp $
  /*
   * Test if card is supported, and create entry for it if it is.
   */
-@@ -142,7 +191,7 @@ void test_card (CardPtr *card_list, char
+@@ -142,7 +195,7 @@ void test_card (CardPtr *card_list, char
  	type = CARD_XBOX;
  	/* FIXME get PIO base from device w/ id 01B4 (SMBus controller) */
  	pio_base = 0xC000;

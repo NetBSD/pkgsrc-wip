@@ -1,0 +1,36 @@
+$NetBSD: patch-ag,v 1.1 2003/05/03 11:20:39 cubidou Exp $
+
+--- src/tv_null.c.orig	2003-02-03 22:55:39.000000000 +0100
++++ src/tv_null.c
+@@ -51,11 +51,21 @@ void TVNullSetRegs (TVEncoderObj *this, 
+   ERROR ("Null chip: SetRegs\n");
+ }
+ 
++void TVNullGetRegs (TVEncoderObj *this, TVEncoderRegs *r)
++{
++  ERROR("Null chip: GetRegs\n");
++}
++
+ void TVNullSetPort (TVEncoderObj *this, int port)
+ {
+   ERROR ("Null chip: SetPort\n");
+ }
+ 
++void TVNullGetPort (TVEncoderObj *this, int *port)
++{
++  ERROR("Null chip: GetPort\n");
++}
++
+ void TVNullSetState (TVEncoderObj *this, TVEncoderRegs *r, TVState state)
+ {
+   ERROR ("Null chip: SetState\n");
+@@ -78,7 +88,9 @@ TVEncoderObj tvNullTemplate = {
+   Create:     TVNullCreate,
+   InitRegs:   TVNullInitRegs, 
+   SetRegs:    TVNullSetRegs, 
++  GetRegs:    TVNullGetRegs, 
+   SetPort:    TVNullSetPort,
++  GetPort:    TVNullGetPort,
+   SetState:   TVNullSetState,
+   GetConnect: TVNullGetConnect, 
+   GetStatus:  TVNullGetStatus
