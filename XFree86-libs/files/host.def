@@ -2,7 +2,16 @@
  * XFree86 packages for pkgsrc system
  */
 
-#define ProjectRoot PREFIX
+#define ProjectRoot @PREFIX@
+
+#define MakeCmd @MAKE@
+#define HasGnuMake	NO
+#define ImakeCmd @IMAKE@
+#define RmanCmd @RMAN@
+#define HtmlIndexCmd @MKHTMLINDEX@
+#define DependDir @GCCMAKEDEP@
+#define DependCmd @MAKEDEPEND@
+#define RevPathCmd @REVPATH@
 
 #define NothingOutsideProjectRoot YES
 
@@ -23,7 +32,7 @@
 #define	BuildPlugin NO
 #define DebuggableLibraries NO
 #define StandardIncludes \
-	-IBLNK/include \
+	-I@BLNK@/include \
 	-IPREFIX/include \
 	-ILOCALBASE/include
 
@@ -55,12 +64,12 @@
 #endif
 
 #define HasFreetype2 YES
-#define Freetype2Dir BLNK
+#define Freetype2Dir @BLNK@
 
 #define HasExpat YES
-#define ExpatDir BLNK
+#define ExpatDir @BLNK@
 
 #define HasFontconfig YES
-#define FontconfigDir BLNK
+#define FontconfigDir @BLNK@
 
 #define BuildHtmlManPages YES

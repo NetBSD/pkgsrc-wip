@@ -2,8 +2,17 @@
  * XFree86 packages for pkgsrc system
  */ 
 
-#define ProjectRoot PREFIX
+#define ProjectRoot @PREFIX@
 #define BuildHtmlManPages YES
+
+#define MakeCmd @MAKE@
+#define HasGnuMake      NO
+#define ImakeCmd @IMAKE@
+#define RmanCmd @RMAN@
+#define HtmlIndexCmd @MKHTMLINDEX@
+#define DependDir @GCCMAKEDEP@
+#define DependCmd @MAKEDEPEND@
+#define RevPathCmd @REVPATH@
 
 #define NothingOutsideProjectRoot YES
 #define InstallFSConfig NO
@@ -38,18 +47,18 @@
 #define InstallXinitConfig YES
 #define InstallAppDefFiles YES
 
-#define ExtraLoadFlags LDFLAGS
+#define ExtraLoadFlags @LDFLAGS@
 #define LibInstallBuild  YES
-#define StandardIncludes -IBLNK/include
+#define StandardIncludes -I@BLNK@/include
 #define DontUseLibPathVar YES
 #define PreloadSetup
 #define UseInstalledPrograms YES
 
 #define HasFreetype2 YES
-#define Freetype2Dir BLNK
+#define Freetype2Dir @BLNK@
 
 #define HasExpat YES
-#define ExpatDir BLNK
+#define ExpatDir @BLNK@
 
 #define HasFontconfig YES
-#define FontconfigDir BLNK
+#define FontconfigDir @BLNK@

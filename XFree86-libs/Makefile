@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/26 15:53:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2003/08/28 14:23:39 jeremy-c-reed Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-libs-${XF_VER}
@@ -27,6 +27,11 @@ XINSTALL_MAN_DIRS=	${XINSTALL_DIRS}
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
 PLIST_SRC+=	${.CURDIR}/PLIST.DRI
 .endif
+
+post-patch:
+	${SED} -e 's,@MAKESTRS@,${X11BASE}/bin/makestrs,g' < ${WRKSRC}/config/cf/Library.tmpl \
+		> ${WRKSRC}/config/cf/Library.tmpl.tmp \
+		&& ${MV} ${WRKSRC}/config/cf/Library.tmpl.tmp ${WRKSRC}/config/cf/Library.tmpl
 
 .include "../../wip/XFree86/Makefile.common"
 .include "../../fonts/fontconfig/buildlink2.mk"

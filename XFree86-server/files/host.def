@@ -3,8 +3,17 @@
  * XFree86 packages for pkgsrc system
  */
 
-#define ProjectRoot PREFIX
+#define ProjectRoot @PREFIX@
 #define BuildHtmlManPages YES
+
+#define MakeCmd @MAKE@
+#define HasGnuMake      NO
+#define ImakeCmd @IMAKE@
+#define RmanCmd @RMAN@
+#define HtmlIndexCmd @MKHTMLINDEX@
+#define DependDir @GCCMAKEDEP@
+#define DependCmd @MAKEDEPEND@
+#define RevPathCmd @REVPATH@
 
 #define NothingOutsideProjectRoot YES
 #define InstallXserverSetUID YES
@@ -18,11 +27,11 @@
 #define BuildGLXLibrary YES
 #define BuildXFree86ConfigTools YES
 #define UseInstalledPrograms YES
-#define StandardIncludes -IBLNK/include
+#define StandardIncludes -I@BLNK@/include
 
 #ifdef LinuxArchitecture
 #define InstallAppDefFiles YES
-#define LdPostLib LDFLAGS
+#define LdPostLib @LDFLAGS@
 #endif
 
 #define XTrueTypeInstallCConvHeaders NO

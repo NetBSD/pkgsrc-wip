@@ -2,7 +2,7 @@
  * XFree86 packages for pkgsrc system
  */
 
-#define ProjectRoot PREFIX
+#define ProjectRoot @PREFIX@
 #define NothingOutsideProjectRoot YES
 #define BuildFonts NO
 #define Build75DpiFonts NO
@@ -20,7 +20,7 @@
 #define ForceNormalLib NO
 #define XTrueTypeInstallCConvHeaders NO
 #define SharedLibGLw NO
-#define StandardIncludes -IBLNK/include
+#define StandardIncludes -I@BLNK@/include
 #define BuildHtmlManPages YES
 
 #define BuildServer YES
