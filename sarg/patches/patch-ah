@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2004/10/06 16:24:26 bubuchka Exp $
+
+--- usage.c.orig	2004-10-04 00:37:03.000000000 +0300
++++ usage.c
+@@ -30,7 +30,7 @@ void usage(char *prog)
+   fprintf(stderr, "%5s-c %s\n"," ",text[69]);
+   fprintf(stderr, "%5s-d %s dd/mm/yyyy-dd/mm/yyyy\n"," ",text[24]);
+   fprintf(stderr, "%5s-e %s (%s)\n"," ",text[41],text[42]);
+-  fprintf(stderr, "%5s-f %s (%s/sarg.conf)\n"," ",text[70],SYSCONFDIR);
++  fprintf(stderr, "%5s-f %s (@PKG_SYSCONFDIR@/sarg.conf)\n"," ",text[70]);
+   fprintf(stderr, "%5s-g %s [e=%s -> dd/mm/yy, u=%s -> mm/dd/yy]\n"," ",text[25],text[26],text[27]);
+   fprintf(stderr, "%5s-h Help (this...)\n"," ");
+   fprintf(stderr, "%5s-i %s\n"," ",text[43]);

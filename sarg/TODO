@@ -1,9 +1,6 @@
-$Id: TODO,v 1.1.1.1 2004/10/06 15:33:26 bubuchka Exp $
+$Id: TODO,v 1.2 2004/10/06 16:24:25 bubuchka Exp $
 
 - Test, if it works with SquidGuard (I haven't installed this software).
-
-- On my own system (NetBSD 2.0 and 2.99) it can't ran if it was
-  linked aginst gd library (runpath is not passed when linking).
 
 - SARG doesn't sort index entries correctly in case if date format
   is an European. This is completely SARG issue (see index.c file

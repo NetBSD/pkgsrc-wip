@@ -1,10 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2004/10/06 15:49:00 bubuchka Exp $
+$NetBSD: patch-ab,v 1.4 2004/10/06 16:24:26 bubuchka Exp $
 
---- htaccess.orig	2004-10-04 00:37:03.000000000 +0300
-+++ htaccess
-@@ -1,4 +1,4 @@
--AuthUserFile /usr/local/sarg/passwd
-+AuthUserFile @PKG_SYSCONFDIR@/passwd
- AuthName "SARG, Squid Analysis Report Generator"
- AuthType Basic
- <Limit GET POST>
+--- convlog.c.orig	2004-10-04 00:37:03.000000000 +0300
++++ convlog.c
+@@ -36,7 +36,7 @@ void convlog(char *arq, char *df, int df
+    struct tm *t;
+ 
+    if(arq[0] == '\0')
+-      strcpy(arq,"/usr/local/squid/logs/access.log");
++      strcpy(arq,"@SQUID_ACCESSLOG@");
+ 
+    if((fp_in=fopen(arq,"r"))==NULL) {
+       fprintf(stderr, "SARG: (convlog) %s: %s\n",text[8],arq);
