@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/30 05:32:32 minskim Exp $
+bin/gdick
+bin/gdick_applet
+lib/python2p3/site-packages/gdick/DictResult.py
+lib/python2p3/site-packages/gdick/DictResult.pyc
+lib/python2p3/site-packages/gdick/DictResult.pyo
+lib/python2p3/site-packages/gdick/Utils.py
+lib/python2p3/site-packages/gdick/Utils.pyc
+lib/python2p3/site-packages/gdick/Utils.pyo
+lib/python2p3/site-packages/gdick/YahooDict.py
+lib/python2p3/site-packages/gdick/YahooDict.pyc
+lib/python2p3/site-packages/gdick/YahooDict.pyo
+lib/python2p3/site-packages/gdick/YahooView.py
+lib/python2p3/site-packages/gdick/YahooView.pyc
+lib/python2p3/site-packages/gdick/YahooView.pyo
+lib/python2p3/site-packages/gdick/__init__.py
+lib/python2p3/site-packages/gdick/__init__.pyc
+lib/python2p3/site-packages/gdick/__init__.pyo
+lib/python2p3/site-packages/gdick/gdick.py
+lib/python2p3/site-packages/gdick/gdick.pyc
+lib/python2p3/site-packages/gdick/gdick.pyo
+share/gdick/gdick.glade
+share/gdick/gdick.png
+share/gdick/gdick_icon.png
+@dirrm share/gdick
+@dirrm lib/python2p3/site-packages/gdick
