@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.130 2003/04/28 22:28:00 tvierling Exp $
-# $NetBSD: Makefile,v 1.130 2003/04/28 22:28:00 tvierling Exp $
+# $Id: Makefile,v 1.131 2003/04/29 01:36:28 icmp Exp $
+# $NetBSD: Makefile,v 1.131 2003/04/29 01:36:28 icmp Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -130,5 +130,6 @@ SUBDIR+=	windowlab
 SUBDIR+=	xawtv
 SUBDIR+=	xevil
 SUBDIR+=	xml2doc
+SUBDIR+=	libshout
 
 .include "../mk/bsd.pkg.subdir.mk"
