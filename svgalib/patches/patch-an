@@ -1,0 +1,35 @@
+$NetBSD: patch-an,v 1.1.1.1 2003/07/27 06:03:38 bencollver Exp $
+
+--- src/vgamisc.c.orig	Tue Jul 27 09:36:19 1999
++++ src/vgamisc.c
+@@ -73,8 +73,9 @@ unsigned char *
+     return __svgalib_graph_mem;
+ }
+ 
+-#include <syscall.h>
+-#include <linux/kernel.h>
++#include <sys/types.h>
++#include <sys/param.h>
++#include <sys/sysctl.h>
+ 
+ int __svgalib_physmem(void)
+ {
+@@ -82,10 +83,14 @@ int __svgalib_physmem(void)
+     printf("__svgalib_physmem: are you sure you wanna do this??\n");
+     return -1;
+ #else
+-    struct sysinfo si;
+-    si.totalram = 0;
+-    syscall(SYS_sysinfo, &si);
+-    return si.totalram;
++    int mem;
++    int smem;
++    int mib[2];
++    mib[0] = CTL_HW;
++    mib[1] = HW_PHYSMEM;
++    smem = sizeof(mem);
++    sysctl(mib, 2, &mem, &smem, NULL, 0);
++    return mem;
+ #endif
+ }
+ 

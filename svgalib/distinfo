@@ -1,0 +1,30 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
+
+SHA1 (svgalib-1.4.2.tar.gz) = af9d5e3c07c2604b8a170a6aaf07bbb03b3e3d6b
+Size (svgalib-1.4.2.tar.gz) = 929044 bytes
+SHA1 (patch-aa) = d1f2d4b42b482d3ab743437373507ed42cbc6782
+SHA1 (patch-ab) = 7dedeb345138d5187a8d997e1dffc77e8f656dcd
+SHA1 (patch-ac) = fbcdde262d76a192610b0cf08e74145e9ea900bc
+SHA1 (patch-ad) = 54db5ec72e350f04182ad46e009baef716bba473
+SHA1 (patch-ae) = ba5b8eb5074319ddaa3b86e7cb87b1c243e807bb
+SHA1 (patch-af) = ec5ae6101648e1e8609d8991e64e44b5fb466cdb
+SHA1 (patch-ag) = 03877bfd80f7d7240faf6ac80d79d0ce487d301e
+SHA1 (patch-ah) = 04dbfa863c1df8366beda0d702be364f511d57aa
+SHA1 (patch-ai) = 8fa4a76c24d138b199836fc2f492aeff4d609fdb
+SHA1 (patch-aj) = 9608dbfd81b896649c47019e9e3ef30174c1a15e
+SHA1 (patch-ak) = 2108e3c5ad412a5712cabeca1bb5cfd71843a731
+SHA1 (patch-al) = 90c422bd6e2c8c69dc0298ee18e695724d04351d
+SHA1 (patch-am) = 79bc20dfe841c6fd119a05ef88a87c9f8f3e1406
+SHA1 (patch-an) = 4f4b7de4ccd0493e53ea357b877a876e04cb7d64
+SHA1 (patch-ao) = 9774108a174a67883d62ce1a0c42bdc1c980b6cf
+SHA1 (patch-ap) = 0474a4a2519ff5dc295157a5631f378678d3e0a2
+SHA1 (patch-aq) = 0517ec8602e160fc32f92da78c06ed40782f29f4
+SHA1 (patch-ar) = 066f70e4f9a9603c0ba24f284012e6032ff3982c
+SHA1 (patch-as) = 1125c23facea4fff2db3d1aa0770f7ef8affe301
+SHA1 (patch-at) = 2c4c86c4716e96f356d944a445cfec12032896ad
+SHA1 (patch-au) = 5406878e0cbf32fbd3d1e9e3d0fcafc77a24ff14
+SHA1 (patch-av) = ddd9492d620536c48e649ebcc3f7a70d6b94a5ad
+SHA1 (patch-aw) = c5b9de2342354f818c2af0e80ddb1f8deda03062
+SHA1 (patch-ax) = 5e00564cff2888608b337855fd338326aacd045b
+SHA1 (patch-ay) = e23e192497c48d1bf2dd671612c0b11bb7a775c0
+SHA1 (patch-az) = 0be31c37baa5fa5bfbbdf4fffc694ccf589edbdd

@@ -1,0 +1,12 @@
+$NetBSD: patch-aq,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
+
+--- gl/Makefile.orig	Sun Jul 18 16:14:45 1999
++++ gl/Makefile
+@@ -31,6 +31,7 @@
+ libvgagl.so.$(VERSION): $(MODULES)
+ 	$(CC) -s -shared -Wl,-soname,libvgagl.so.$(MAJOR_VER) -o libvgagl.so.$(VERSION) \
+ 	  $(MODULES)
++	/bin/ln -sf libvgagl.so.$(MAJOR_VER) libvgagl.so
+ 
+ libvgagl.a: $(MODULES)
+ 	rm -f libvgagl.a

@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
+
+--- src/mouse/ms.c.orig	Fri Aug 25 04:39:39 2000
++++ src/mouse/ms.c
+@@ -116,7 +116,7 @@
+     tty.c_iflag = IGNBRK | IGNPAR;
+     tty.c_oflag = 0;
+     tty.c_lflag = 0;
+-    tty.c_line  = 0;
++/*    tty.c_line  = 0;*/
+     tty.c_cc[VTIME] = 0;
+     tty.c_cc[VMIN]  = 1;
+ 
+@@ -509,7 +509,7 @@
+ 	tty.c_iflag = IGNBRK | IGNPAR;
+ 	tty.c_oflag = 0;
+ 	tty.c_lflag = 0;
+-	tty.c_line = 0;
++/*	tty.c_line = 0;*/
+ 	tty.c_cc[VTIME] = 0;
+ 	tty.c_cc[VMIN] = 1;
+ 	tty.c_cflag = cflag[m_type] | B1200;
