@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/06/12 04:01:38 xtraeme Exp $
+
+--- sm/storage_db.c.orig	2003-06-12 03:53:30.000000000 +0200
++++ sm/storage_db.c	2003-06-12 03:53:39.000000000 +0200
+@@ -31,7 +31,7 @@
+  */
+ 
+ #include "sm.h"
+-#include <db.h>
++#include <db4/db.h>
+ 
+ /* internal structure, holds our data */
+ typedef struct drvdata_st

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/06/12 04:01:38 xtraeme Exp $
+
+--- Makefile.in.orig	2003-06-12 04:32:42.000000000 +0200
++++ Makefile.in	2003-06-12 04:32:49.000000000 +0200
+@@ -82,7 +82,7 @@
+ SX_DEBUG = @SX_DEBUG@
+ VERSION = @VERSION@
+ 
+-SUBDIRS = etc tools mio sx util expat idn $(JABBERD_SUBDIRS)
++SUBDIRS = tools mio sx util expat idn $(JABBERD_SUBDIRS)
+ EXTRA_DIST = ac-helpers
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

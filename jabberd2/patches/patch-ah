@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1.1.1 2003/06/12 04:01:38 xtraeme Exp $
+
+--- etc/router.xml.in.orig	2003-06-12 05:10:07.000000000 +0200
++++ etc/router.xml.in	2003-06-12 05:11:07.000000000 +0200
+@@ -11,7 +11,7 @@
+ 
+     <!-- if logging to file, this is the filename of the logfile           -->
+     <!--
+-    <file>@localstatedir@/jabberd/log/router.log</file>
++    <file>@@LOGDIR@@/router.log</file>
+     -->
+   </log>
+ 
+@@ -33,7 +33,7 @@
+          commented out, or the file can't be read, connecting components
+          will not be able to request a SSL-encrypted channel -->
+     <!--
+-    <pemfile>@sysconfdir@/server.pem</pemfile>
++    <pemfile>@@PKG_SYSCONFDIR@@/server.pem</pemfile>
+     -->
+   </local>
+ 

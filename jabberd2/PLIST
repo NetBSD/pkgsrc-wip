@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/12 04:01:37 xtraeme Exp $
+etc/rc.d/jabberd
+bin/c2s
+bin/jabberd
+bin/resolver
+bin/router
+bin/s2s
+bin/sm
+share/examples/jabberd/c2s.xml
+share/examples/jabberd/jabberd.cfg
+share/examples/jabberd/resolver.xml
+share/examples/jabberd/router.xml
+share/examples/jabberd/s2s.xml
+share/examples/jabberd/sm.xml
+@dirrm share/examples/jabberd
+@dirrm etc/jabberd

@@ -1,0 +1,31 @@
+$NetBSD: patch-aj,v 1.1.1.1 2003/06/12 04:01:38 xtraeme Exp $
+
+--- etc/sm.xml.in.orig	2003-06-12 05:12:22.000000000 +0200
++++ etc/sm.xml.in	2003-06-12 05:13:23.000000000 +0200
+@@ -18,7 +18,7 @@
+          commented out, or the file can't be read, no attempt will be
+          made to establish an encrypted channel with the router -->
+     <!--
+-    <pemfile>@sysconfdir@/server.pem</pemfile>
++    <pemfile>@@PKG_SYSCONFDIR@@/server.pem</pemfile>
+     -->
+   </router>
+ 
+@@ -29,7 +29,7 @@
+ 
+     <!-- if logging to file, this is the filename of the logfile           -->
+     <!--
+-    <file>@localstatedir@/jabberd/log/sm.log</file>
++    <file>@@LOGDIR@@/sm.log</file>
+     -->
+   </log>
+ 
+@@ -46,7 +46,7 @@
+     <!-- configuration for the Berkeley DB driver                          -->
+     <db>
+       <!-- directory to store database files under                         -->
+-      <path>@localstatedir@/jabberd/db</path>
++      <path>@@DBDIR@@</path>
+ 
+       <!-- synchronise the database to disk after each write               -->
+       <sync/>

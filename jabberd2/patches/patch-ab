@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/06/12 04:01:38 xtraeme Exp $
+
+--- c2s/authreg_db.c.orig	2003-06-12 03:52:05.000000000 +0200
++++ c2s/authreg_db.c	2003-06-12 03:52:15.000000000 +0200
+@@ -31,7 +31,7 @@
+  */
+ 
+ #include "c2s.h"
+-#include <db.h>
++#include <db4/db.h>
+ 
+ /* internal structure, holds auth credentials for one user */
+ typedef struct creds_st

@@ -1,0 +1,49 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/06/12 04:01:38 xtraeme Exp $
+
+--- etc/c2s.xml.in.orig	2003-06-12 05:05:49.000000000 +0200
++++ etc/c2s.xml.in	2003-06-12 05:07:02.000000000 +0200
+@@ -18,7 +18,7 @@
+          commented out, or the file can't be read, no attempt will be
+          made to establish an encrypted channel with the router -->
+     <!--
+-    <pemfile>@sysconfdir@/server.pem</pemfile>
++    <pemfile>@@PKG_SYSCONFDIR@@/server.pem</pemfile>
+     -->
+   </router>
+ 
+@@ -29,7 +29,7 @@
+ 
+     <!-- if logging to file, this is the filename of the logfile           -->
+     <!--
+-    <file>@localstatedir@/jabberd/log/c2s.log</file>
++    <file>@@LOGDIR@@/c2s.log</file>
+     -->
+   </log>
+ 
+@@ -58,7 +58,7 @@
+          connections. if this is commented out, clients will not be
+          offered the STARTTLS stream extension -->
+     <!--
+-    <pemfile>@sysconfdir@/server.pem</pemfile>
++    <pemfile>@@PKG_SYSCONFDIR@@/server.pem</pemfile>
+     -->
+ 
+     <!-- older versions of jabberd support encrypted client connections
+@@ -139,7 +139,7 @@
+     <!-- Berkeley DB module -->
+     <db>
+       <!-- directory to store database files under                      -->
+-      <path>@localstatedir@/jabberd/db</path>
++      <path>@@LOGDIR@@</path>
+       
+       <!--  synchronize the database to disk after each write           -->
+       <sync/>
+@@ -148,7 +148,7 @@
+     <!-- Pipe module -->
+     <pipe>
+       <!-- program to execute -->
+-      <exec>@bindir@/pipe-auth.pl</exec>
++      <exec>@@BINDIR@@/pipe-auth.pl</exec>
+     </pipe>
+ 
+     <!-- LDAP module -->

@@ -1,0 +1,18 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/06/12 04:01:38 xtraeme Exp $
+
+--- etc/jabberd.cfg.in.orig	2003-06-12 05:07:26.000000000 +0200
++++ etc/jabberd.cfg.in	2003-06-12 05:08:12.000000000 +0200
+@@ -12,8 +12,8 @@
+ # program   [ path to config file ]
+ #
+ 
+-router     @sysconfdir@/router.xml
+-resolver   @sysconfdir@/resolver.xml
+-sm         @sysconfdir@/sm.xml
+-c2s        @sysconfdir@/c2s.xml
+-s2s        @sysconfdir@/s2s.xml
++router     @@PKG_SYSCONFDIR@@/router.xml
++resolver   @@PKG_SYSCONFDIR@@/resolver.xml
++sm         @@PKG_SYSCONFDIR@@/sm.xml
++c2s        @@PKG_SYSCONFDIR@@/c2s.xml
++s2s        @@PKG_SYSCONFDIR@@/s2s.xml

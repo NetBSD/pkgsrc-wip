@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/12 04:01:38 xtraeme Exp $
+
+--- configure.orig	2003-06-12 03:46:17.000000000 +0200
++++ configure	2003-06-12 03:50:49.000000000 +0200
+@@ -9099,7 +9099,7 @@
+ 
+     if test "$places" = "search"; then
+       places="std /usr/local/include/db4:/usr/local/lib /usr/local
+-              /usr/local/BerkeleyDB.4.1 /usr/include/db4:/usr/lib"
++              /usr/local/BerkeleyDB.4.1 ${PREFIX}/include/db4:${PREFIX}/lib"
+     fi
+     # Now `places' is guaranteed to be a list of place specs we should
+     # search, no matter what flags the user passed.
+@@ -9171,7 +9171,7 @@
+ /* end confdefs.h.  */
+ 
+ #include <stdio.h>
+-#include "db.h"
++#include "db4/db.h"
+ main ()
+ {
+   int major, minor, patch;
+@@ -9528,7 +9528,7 @@
+ fi;
+ 
+   if test "$places" = "search"; then
+-    places="std /usr/local/openssl /usr/local/ssl"
++    places="std /usr/include/openssl /usr/local/ssl ${PREFIX}/include/openssl"
+   fi
+   # Now `places' is guaranteed to be a list of place specs we should
+   # search, no matter what flags the user passed.
+@@ -9581,8 +9581,8 @@
+ 
+     j2_check_openssl_major=0
+     j2_check_openssl_minor=9
+-    j2_check_openssl_fix=7
+-    j2_check_openssl_patch=1
++    j2_check_openssl_fix=6
++    j2_check_openssl_patch=0
+ 
+     LIBS="$LIBS -lcrypto -lssl"
+ 
