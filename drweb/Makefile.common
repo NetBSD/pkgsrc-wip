@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2003/09/12 11:08:13 bubuchka Exp $
+# $NetBSD: Makefile.common,v 1.4 2003/09/13 12:28:23 bubuchka Exp $
 #
 # This part of Makefile should be also used in DrWeb AV companion software
 
@@ -26,9 +26,11 @@ DRW_SOCKFILE?=		${DRW_RUNDIR}/drwebd.sock
 
 PKG_SYSCONFSUBDIR?= 	${DRWEB}
 
-FILES_SUBST+=		DRWEB=${DRWEB}					\
+DRW_SUBST+=		DRWEB=${DRWEB}					\
 			DRW_DIR=${DRW_DIR}				\
 			DRW_BASESDIR=${DRW_BASESDIR}			\
+			DRW_DOCDIR=${DRW_DOCDIR}			\
+			DRW_EGDIR=${DRW_EGDIR}				\
 			DRW_INFECTDIR=${DRW_INFECTDIR}			\
 			DRW_LOGDIR=${DRW_LOGDIR}			\
 			DRW_RUNDIR=${DRW_RUNDIR}			\
@@ -37,7 +39,10 @@ FILES_SUBST+=		DRWEB=${DRWEB}					\
 			DRW_LOGFILE=${DRW_LOGFILE}			\
 			DRW_LOGFILE_SCANNER=${DRW_LOGFILE_SCANNER}	\
 			DRW_PIDFILE=${DRW_PIDFILE}			\
-			DRW_SOCKFILE=${DRW_SOCKFILE}
+			DRW_SOCKFILE=${DRW_SOCKFILE}			\
+			EGDIR=${EGDIR}					\
+			DOCDIR=${DOCDIR}
 
-PLIST_SUBST+=		DRW_EGDIR=${DRW_EGDIR}				\
-			DRW_DOCDIR=${DRW_DOCDIR}
+FILES_SUBST+=		${DRW_SUBST}
+PLIST_SUBST+=		${DRW_SUBST}
+MESSAGE_SUBST+=		${DRW_SUBST}
