@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.317 2003/07/09 17:18:37 xtraeme Exp $
-# $NetBSD: Makefile,v 1.317 2003/07/09 17:18:37 xtraeme Exp $
+# $Id: Makefile,v 1.318 2003/07/09 18:02:53 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.318 2003/07/09 18:02:53 marttikuparinen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -161,6 +161,8 @@ SUBDIR+=	mtf
 SUBDIR+=	muse
 SUBDIR+=	mutella
 SUBDIR+=	mutt-devel
+SUBDIR+=	mysql3-client
+SUBDIR+=	mysql3-server
 SUBDIR+=	mysql4-client
 SUBDIR+=	mysql4-server
 SUBDIR+=	nagios-base
