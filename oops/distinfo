@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/19 22:21:11 shattered Exp $
+
+SHA1 (oops-1.5.23.tar.gz) = 6eb9b77a5e4ef67896f46d5e1452506f2dff34de
+Size (oops-1.5.23.tar.gz) = 473290 bytes
+SHA1 (diff_from_1.5.23.patch.gz) = ccf031d78623ae46c3487a171b59e15e32da2e3e
+Size (diff_from_1.5.23.patch.gz) = 118504 bytes
+SHA1 (patch-aa) = caf3217698526cd0de1a763ac6611338f978a97c
+SHA1 (patch-ab) = e00bb93ed3916ab6485f7a55cdfa7ea894dd39c8
+SHA1 (patch-ac) = 715427bf824cd9038c5b7827c12a2a205305ea93

@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/19 22:21:11 shattered Exp $
+etc/oops/accel_maps
+etc/oops/acl_local_networks
+etc/oops/auth_template.html
+etc/oops/err_template.html
+etc/oops/oops.cfg.sample
+etc/oops/passwd
+etc/oops/redir_rules
+etc/oops/redir_template.html
+etc/oops/select.sql
+etc/oops/tables/koi-alt.tab
+etc/oops/tables/koi-iso.tab
+etc/oops/tables/koi-win.tab
+libexec/oops/accel.so
+libexec/oops/berkeley_db_api.so
+libexec/oops/custom_log.so
+libexec/oops/err.so
+libexec/oops/fastredir.so
+libexec/oops/gigabase_db_api.so
+libexec/oops/lang.so
+libexec/oops/log_dummy.so
+libexec/oops/netflow.so
+libexec/oops/oopsctl_mod.so
+libexec/oops/pam.so
+libexec/oops/passwd_file.so
+libexec/oops/passwd_mysql.so
+libexec/oops/passwd_pgsql.so
+libexec/oops/redir.so
+libexec/oops/transparent.so
+libexec/oops/vary_header.so
+libexec/oops/wccp2.so
+man/man8/oops.8
+man/man8/oopsctl.8
+sbin/oops
+sbin/oopsctl
+@dirrm etc/oops/tables
+@dirrm etc/oops
+@dirrm libexec/oops
+@dirrm oops

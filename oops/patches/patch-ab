@@ -1,0 +1,43 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/02/19 22:21:11 shattered Exp $
+
+--- configure.orig	2003-11-21 13:02:08.000000000 +0300
++++ configure
+@@ -3991,7 +3991,6 @@ EOF
+ 	fi
+ fi
+ 
+-LDFLAGS="$LDFLAGS $LIBDB_PATH"
+ CXXCOMPFLAGS=-c
+ CXXSOFLAGS=$SOFLAGS
+ 
+@@ -4028,6 +4027,20 @@ freebsd*) CFLAGS="$CFLAGS -D_REENTRANT -
+           esac
+ 	  RPATH_OPTION="-rpath"
+ 	  ;;
++netbsd*)  CFLAGS="$CFLAGS -D_REENTRANT -DNETBSD -D_THREAD_SAFE"
++	  CXX=g++
++	  CXXSOFLAGS="-shared -Xlinker -Bstatic"
++	  LIBS="$LDFLAGS -lpthread $LEXLIB $LIBS $LIBDB_PATH $LIBDB_NAME"
++	  if test "$large_files" = "yes" ; then
++		## NetBSD needs no special flags for 64bit files
++		CFLAGS="$CFLAGS -DWITH_LARGE_FILES"
++	  fi
++	  if test "X$LIBGB_NAME" != "X" ; then
++		LIBGB_NAME="$LIBGB_NAME -lstdc++"
++	  fi
++	  RPATH_OPTION="-rpath"
++	  unset LDFLAGS
++	  ;;
+ bsdi*)	  CFLAGS="$CFLAGS -pthread -DBSDOS"
+           rel=`uname -r`
+           case "$rel" in
+@@ -4827,6 +4840,9 @@ echo "$as_me:4826: checking for libdb.a"
+ echo $ECHO_N "checking for libdb.a... $ECHO_C" >&6
+ if test "X$LIBDB_PATH" != "X" ; then
+     LIBDB_PATH=$LIBDB_PATH
++    if test -r "$LIBDB_PATH/lib/libdb2.a"; then
++	LIBDB_NAME=-ldb2
++    fi
+ elif test -r "/usr/local/BerkeleyDB/lib/libdb.a"; then
+     LIBDB_PATH="/usr/local/BerkeleyDB"
+ elif test -r "/usr/local/BerkeleyDB.3.1/lib/libdb.a"; then
