@@ -1,33 +1,23 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/05/07 21:57:04 poppnk Exp $
+$NetBSD: patch-aa,v 1.1.1.2 2003/07/25 16:02:38 poppnk Exp $
 
-*** Desk.cc	Sat Nov  9 19:06:16 2002
---- Desk2.cc	Sun Apr 27 15:44:47 2003
-***************
-*** 1,5 ****
-  #include "Desk.h"
-- 
-    Desk::Desk() {
-       Dpy  = XOpenDisplay( NULL );
-       Root = DefaultRootWindow( Dpy );
---- 1,4 ----
-***************
-*** 119,125 ****
-  
-        DirName += "/.idesktop/";
-        FileCount = scandir( DirName.c_str(), &Files, 0, alphasort );
-! 
-        for(int i=0; i<FileCount; i++) {
-          FileName = DirName + Files[i]->d_name;
-          IconDb = new Database(FileName);
---- 118,128 ----
-  
-        DirName += "/.idesktop/";
-        FileCount = scandir( DirName.c_str(), &Files, 0, alphasort );
-!       if( FileCount < 0  ) {
-! 	      printf("No %s exist please create it and put your *.lnk files\n"
-! 			      , DirName.c_str() );
-! 	      exit(-1);
-!       }
-        for(int i=0; i<FileCount; i++) {
-          FileName = DirName + Files[i]->d_name;
-          IconDb = new Database(FileName);
+--- Desk.cc.orig	2002-11-09 18:06:16.000000000 +0000
++++ Desk.cc	2003-07-25 17:58:09.000000000 +0000
+@@ -1,5 +1,4 @@
+ #include "Desk.h"
+-
+   Desk::Desk() {
+      Dpy  = XOpenDisplay( NULL );
+      Root = DefaultRootWindow( Dpy );
+@@ -119,7 +118,11 @@
+ 
+       DirName += "/.idesktop/";
+       FileCount = scandir( DirName.c_str(), &Files, 0, alphasort );
+-
++      if( FileCount < 0  ) {
++	      printf("No %s exist please create it and put your *.lnk files\n"
++			      , DirName.c_str() );
++	      exit(-1);
++      }
+       for(int i=0; i<FileCount; i++) {
+         FileName = DirName + Files[i]->d_name;
+         IconDb = new Database(FileName);

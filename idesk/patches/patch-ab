@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/05/07 21:57:04 poppnk Exp $
+$NetBSD: patch-ab,v 1.1.1.2 2003/07/25 16:02:38 poppnk Exp $
 
 --- Makefile	2003-04-27 17:52:39.000000000 +0000
 +++ Makefile.old	2003-04-27 17:45:24.000000000 +0000
