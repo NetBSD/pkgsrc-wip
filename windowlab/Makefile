@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 16:42:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/04 16:53:39 xtraeme Exp $
 #
 
-DISTNAME=	windowlab-1.09
+DISTNAME=	windowlab-1.10
 CATEGORIES=	wm
 MASTER_SITES=	http://www.nickgravgaard.com/windowlab/
 EXTRACT_SUFX=	.tar
