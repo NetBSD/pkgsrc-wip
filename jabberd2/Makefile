@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2003/06/12 21:35:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/14 04:59:31 xtraeme Exp $
 #
 
-DISTNAME=	jabberd-2.0.0-a4
-PKGNAME=	${DISTNAME:S/d-2.0.0-a/d2-2.0.0alpha/}
-CATEGORIES=	chat
-MASTER_SITES=	http://www.jabberstudio.org/files/jabberd2/
+DISTNAME=		jabberd-2.0.0-a4
+PKGNAME=		${DISTNAME:S/d-2.0.0-a/d2-2.0.0alpha/}
+CATEGORIES=		chat
+MASTER_SITES=		http://www.jabberstudio.org/files/jabberd2/
 
-MAINTAINER=	jrp@hispabsd.org
-HOMEPAGE=	http://www.jabberstudio.org/
-COMMENT=	Instant messaging server ( version 2 )
+MAINTAINER=		jrp@hispabsd.org
+HOMEPAGE=		http://www.jabberstudio.org/
+COMMENT=		Instant messaging server ( version 2 )
 
 CONFLICTS=		jabberd-[0-9]*:../../wip/jabberd
 
@@ -54,12 +54,9 @@ pre-configure:
 .endfor
 .undef f
 
-.for f in ${WRKSRC}/etc/jabberd.cfg.in
 	${SED}  \
 		-e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
 		< ${WRKSRC}/etc/jabberd.cfg.in > ${WRKSRC}/etc/jabberd.cfg
-.endfor
-.undef f
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
