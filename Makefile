@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1567 2004/12/03 16:53:51 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1567 2004/12/03 16:53:51 thomasklausner Exp $
+# $Id: Makefile,v 1.1568 2004/12/03 17:26:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1568 2004/12/03 17:26:28 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -216,7 +216,6 @@ SUBDIR+=	frontpage
 SUBDIR+=	ftpsesame
 SUBDIR+=	fvcool
 SUBDIR+=	fwbuilder
-SUBDIR+=	g-wrap2
 SUBDIR+=	g21k-binutils
 SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-CornerXMMS
