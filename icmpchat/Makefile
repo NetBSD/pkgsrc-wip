@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/07 21:42:02 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/03 03:43:03 blef Exp $
 
 DISTNAME=	icmpchat-0.6
 CATEGORIES=	chat
-MASTER_SITES=	http://switch.dl.sourceforge.net/sourceforge/icmpchat/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=icmpchat/}
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://icmpchat.sourceforge.net/

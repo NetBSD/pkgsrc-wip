@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/07 21:52:11 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/03 03:43:02 blef Exp $
 
 DISTNAME=	WEPCrack-0.0.10
 WRKSRC=		${WRKDIR}/
 CATEGORIES=	security
-MASTER_SITES=	http://belnet.dl.sourceforge.net/sourceforge/wepcrack/ \
-		http://heanet.dl.sourceforge.net/sourceforge/ap-utils/ \
-		http://twtelecom.dl.sourceforge.net/sourceforge/ap-utils/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wepcrack/}
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://wepcrack.sourceforge.net/
