@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/10 19:28:36 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/10 19:39:54 poppnk Exp $
 #
 
 DISTNAME=		asm-1.4.2-bin
@@ -25,4 +25,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java-asm/
 	${CP} -rf ${WRKSRC}/doc/javadoc/user/* ${PREFIX}/share/doc/java-asm/
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
