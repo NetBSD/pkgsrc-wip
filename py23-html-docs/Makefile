@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/22 23:34:24 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/23 23:04:21 minskim Exp $
 #
 
-DISTNAME=	html-2.3
-PKGNAME=	py23-html-docs-2.3
-WRKSRC=		${WRKDIR}/Python-Docs-2.3/
+DISTNAME=	html-2.3.3
+PKGNAME=	py23-html-docs-2.3.3
+WRKSRC=		${WRKDIR}/Python-Docs-2.3.3/
 CATEGORIES=	lang
-MASTER_SITES=	http://www.python.org/ftp/python/doc/2.3/
+MASTER_SITES=	http://www.python.org/ftp/python/doc/2.3.3/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dotz@irc.pl
