@@ -1,15 +1,14 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/07/18 02:50:09 poppnk Exp $
+$NetBSD: patch-ad,v 1.2 2004/11/06 03:35:19 tvierling Exp $
 
---- src/transports/tcp.c.orig	2003-07-18 03:45:34.000000000 +0000
-+++ src/transports/tcp.c	2003-07-18 03:45:50.000000000 +0000
-@@ -30,9 +30,7 @@
- #else
-  #include <cygwin/socket.h>
- #endif
--#ifdef SOLARIS
-- #include <signal.h>
--#endif
-+#include <signal.h>
- #include <sys/types.h>
- #include <sys/stat.h>
- 
+--- src/transports/tcp.c.orig	2004-11-05 16:00:42.000000000 -0500
++++ src/transports/tcp.c
+@@ -807,7 +807,8 @@ static int tcpDirectSend(TCPSession * tc
+   }
+   if (ret < 0) {
+     if ( (errno == EAGAIN) ||
+-	 (errno == EWOULDBLOCK)) {
++	 (errno == EWOULDBLOCK) ||
++	 (errno == ENOTCONN) ) {
+       ret = 0;
+     } else {
+       LOG_STRERROR(LOG_INFO, "send");

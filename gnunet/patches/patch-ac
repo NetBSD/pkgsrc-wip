@@ -1,12 +1,18 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/07/18 02:50:09 poppnk Exp $
+$NetBSD: patch-ac,v 1.2 2004/11/06 03:35:19 tvierling Exp $
 
---- src/transports/http.c.orig	2003-07-18 03:43:00.000000000 +0000
-+++ src/transports/http.c	2003-07-18 03:43:11.000000000 +0000
-@@ -70,6 +70,7 @@
- #include <stdio.h>
- #include <string.h>
- #include <unistd.h>
-+#include <signal.h>
+--- contrib/gnunet.root.orig	2004-11-05 14:22:42.000000000 -0500
++++ contrib/gnunet.root
+@@ -457,10 +457,10 @@ DISKQUOTA 	= 1024
+ # systems but typically uses more space and can also be slower.  mysql
+ # will require some additional setup of the database.
+ #
+-# Note that if you change the databaset type, you need to run
++# Note that if you change the database type, you need to run
+ # gnunet-convert, otherwise your databases will be
+-# inconsistent (and gnunetd will refuse to work).  Default is gdbm.
+-DATABASETYPE    = "gdbm"
++# inconsistent (and gnunetd will refuse to work).  Default is directory.
++DATABASETYPE    = "directory"
  
- #include "transports/http.h"
- #include "util/logging.h"
+ # What degree of receiver anonymity is required?  If set to 0, GNUnet
+ # will try to download the file as fast as possible without any
