@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1557 2004/11/27 14:03:33 rxg Exp $
-# $NetBSD: Makefile,v 1.1557 2004/11/27 14:03:33 rxg Exp $
+# $Id: Makefile,v 1.1558 2004/11/27 15:19:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1558 2004/11/27 15:19:32 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -794,7 +794,6 @@ SUBDIR+=	spfmilter
 SUBDIR+=	srvx
 SUBDIR+=	stmpclean
 SUBDIR+=	stonx
-SUBDIR+=	strace
 SUBDIR+=	streamripper
 SUBDIR+=	stunnel3
 SUBDIR+=	sudoscript
