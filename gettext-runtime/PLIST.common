@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2004/03/06 07:20:12 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2004/03/09 20:28:42 jeremy-c-reed Exp $
 bin/envsubst
 bin/gettext
 bin/gettext.sh
 bin/ngettext
 include/autosprintf.h
-info/autosprintf.info
 lib/libasprintf.a
 lib/libasprintf.la
 lib/libasprintf.so
