@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/18 21:02:38 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/08 11:40:44 thomasklausner Exp $
 #
 
 DISTNAME=		biopython-1.30
@@ -10,8 +10,8 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://biopython.org
 COMMENT=		Python libraries for computational molecular biology
 
-DEPENDS+=		py-egenix-mx-base-2.0.4:../../wip/py-egenix-mx-base
-DEPENDS+=		py22-Numeric-23.3:../../math/py-Numeric
+DEPENDS+=		py22-mxDateTime>=2.0.4:../../time/py-mxDateTime
+DEPENDS+=		py22-Numeric>=23.3:../../math/py-Numeric
 
 USE_BUILDLINK3=		yes
 NO_CONFIGURE=		yes
