@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/11/26 23:57:36 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/11/28 04:54:33 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXau.
 #
@@ -16,7 +16,6 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.libXau=libXau
 BUILDLINK_PREFIX.libXau_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libXau+=	include/X11/Xauth.h
 BUILDLINK_FILES.libXau+=	lib/libXau.*
-
 
 BUILDLINK_TARGETS+=	libXau-buildlink
 

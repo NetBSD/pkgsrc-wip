@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/11/26 23:56:47 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/11/28 04:54:33 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libX11.
 #
@@ -25,7 +25,6 @@ BUILDLINK_FILES.libX11+=	include/X11/Xutil.h
 BUILDLINK_FILES.libX11+=	include/X11/cursorfont.h
 BUILDLINK_FILES.libX11+=	include/X11/region.h
 BUILDLINK_FILES.libX11+=	lib/libX11.*
-
 
 BUILDLINK_TARGETS+=	libX11-buildlink
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/11/27 00:05:34 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/11/28 04:54:33 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use xproto.
 #
@@ -30,7 +30,6 @@ BUILDLINK_FILES.xproto+=	include/X11/Xprotostr.h
 BUILDLINK_FILES.xproto+=	include/X11/Xthreads.h
 BUILDLINK_FILES.xproto+=	include/X11/keysym.h
 BUILDLINK_FILES.xproto+=	include/X11/keysymdef.h
-
 
 BUILDLINK_TARGETS+=	xproto-buildlink
 
