@@ -1,0 +1,58 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/06/14 01:28:30 mjasm Exp $
+
+--- man/Makefile.orig	1999-10-01 23:38:13.000000000 -0400
++++ man/Makefile
+@@ -1,13 +1,9 @@
+ # Makefile for:  man - manual pages for typhoon
+ 
+-ROFF		= nroff
+-RFLAGS		= -man
+-MANEXT		= l
+-PREFIX		= /usr/local
++MANEXT		= 3
+ DESTMAN		= $(PREFIX)/man/man$(MANEXT)
+-DESTCAT		= $(PREFIX)/man/cat$(MANEXT)
+ DESTOWN		= root
+-DESTGRP		= local
++DESTGRP		= wheel
+ SHELL		= /bin/sh
+ MANPAGES	= d_close.3 d_crget.3 d_crread.3 d_crset.3 d_dbdpath.3 \
+ 		  d_dbfpath.3 d_dbget.3 d_dbset.3 d_delete.3 d_fillnew.3 \
+@@ -23,32 +19,13 @@ CATPAGES	= d_close.cat d_crget.cat d_crr
+ 		  d_recprev.cat d_recread.cat d_recwrite.cat d_setfiles.cat \
+ 		  d_getsequence.cat ddlp.cat
+ 
+-.DEFAULT:
+-		co $@
+ 
+-.PHONY:		all install uninstall clean
+-
+-.3.cat:
+-		$(ROFF) $(RFLAGS) $< | col > $@
+-
+-.SUFFIXES:	.cat .3
+-
+-all:		$(CATPAGES)
+-
+-$(CATPAGES):	$(MANPAGES)
+-
+-install:	$(CATPAGES)
++install:	$(MANPAGES)
+ 		-for manpage in $(MANPAGES); do \
+-			basepage=`expr $$manpage : '\(.*\)\.[^.]*'`; \
+-:			cp $$manpage $(DESTMAN)/$$basepage.$(MANEXT); \
+-:			chmod 644 $(DESTMAN)/$$basepage.$(MANEXT); \
+-:			chown $(DESTOWN) $(DESTMAN)/$$basepage.$(MANEXT); \
+-:			chgrp $(DESTGRP) $(DESTMAN)/$$basepage.$(MANEXT); \
+-			compress -c $$basepage.cat \
+-				>$(DESTCAT)/$$basepage.$(MANEXT).Z; \
+-			chmod 644 $(DESTCAT)/$$basepage.$(MANEXT)*; \
+-			chown $(DESTOWN) $(DESTCAT)/$$basepage.$(MANEXT)*; \
+-			chgrp $(DESTGRP) $(DESTCAT)/$$basepage.$(MANEXT)*; \
++			cp $$manpage $(DESTMAN)/;	\
++			chmod 644 $(DESTMAN)/$$manpage;	\
++			chown $(DESTOWN) $(DESTMAN)/$$manpage;	\
++			chgrp $(DESTGRP) $(DESTMAN)/$$manpage;	\
+ 		done
+ 
+ uninstall:
