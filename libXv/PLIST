@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/30 07:20:11 jeremy-c-reed Exp $
+include/X11/extensions/Xvlib.h
+lib/libXv.a
+lib/libXv.la
+lib/libXv.so
+lib/libXv.so.2
+lib/libXv.so.2.2.1
+lib/pkgconfig/xv.pc
