@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/10 14:01:10 oherrala Exp $
+# $NetBSD: Makefile,v 1.4 2004/08/28 19:59:52 thomasklausner Exp $
 #
 
 DISTNAME=	silky-0.5.0
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--with-included-gettext
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/silc-toolkit/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../wip/silc-toolkit/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
