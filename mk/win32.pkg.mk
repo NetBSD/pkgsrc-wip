@@ -1,4 +1,4 @@
-# $Id: win32.pkg.mk,v 1.14 2003/12/01 06:17:53 xtraeme Exp $
+# $Id: win32.pkg.mk,v 1.15 2003/12/01 23:24:22 mpasternak Exp $
 # (C) 2003 Michal Pasternak <dotz@irc.pl>
 #
 #
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--build=${MINGWTARGET}
 CONFIGURE_ARGS+=	--program-transform-name="s|$$|.exe"
 
 USE_CROSSBASE=	yes
-PLIST_SUBST=	MINGWTARGET=${MINGWTARGET}
+PLIST_SUBST+=	MINGWTARGET=${MINGWTARGET}
 
 PATH:=		${CROSSBASE}/${MINGWTARGET}/bin/:${PATH}
 CC=		${CROSSBASE}/${MINGWTARGET}/bin/gcc
@@ -44,6 +44,7 @@ LIBTOOL=		${CROSSBASE}/${MINGWTARGET}/bin/libtool-static
 CONFIGURE_ARGS+=	--enable-static --disable-shared
 SHLIBTOOL:=		${LIBTOOL}
 .else
+CONFIGURE_ARGS+=	--enable-shared --disable-static
 LIBTOOL=		${CROSSBASE}/${MINGWTARGET}/bin/libtool
 SHLIBTOOL:=		${LIBTOOL}
 .endif
