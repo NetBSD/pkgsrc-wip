@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.960 2004/02/14 21:44:15 minskim Exp $
-# $NetBSD: Makefile,v 1.960 2004/02/14 21:44:15 minskim Exp $
+# $Id: Makefile,v 1.961 2004/02/14 22:44:09 minskim Exp $
+# $NetBSD: Makefile,v 1.961 2004/02/14 22:44:09 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -632,7 +632,6 @@ SUBDIR+=	smlnj-current
 SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
-SUBDIR+=	socat
 SUBDIR+=	songwrite
 SUBDIR+=	spamprobe-pbl
 SUBDIR+=	speedx
