@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/08 08:50:58 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/10/20 21:41:59 adrian_p Exp $
 share/adodb/adodb-cryptsession.php
 share/adodb/adodb-csvlib.inc.php
 share/adodb/adodb-datadict.inc.php
@@ -8,6 +8,7 @@ share/adodb/adodb-errorpear.inc.php
 share/adodb/adodb-lib.inc.php
 share/adodb/adodb-pager.inc.php
 share/adodb/adodb-pear.inc.php
+share/adodb/adodb-perf.inc.php
 share/adodb/adodb-session-clob.php
 share/adodb/adodb-session.php
 share/adodb/adodb-time.inc.php
@@ -27,6 +28,7 @@ share/adodb/datadict/datadict-mssql.inc.php
 share/adodb/datadict/datadict-mysql.inc.php
 share/adodb/datadict/datadict-oci8.inc.php
 share/adodb/datadict/datadict-postgres.inc.php
+share/adodb/datadict/datadict-sybase.inc.php
 share/adodb/drivers/adodb-access.inc.php
 share/adodb/drivers/adodb-ado.inc.php
 share/adodb/drivers/adodb-ado_access.inc.php
@@ -54,17 +56,33 @@ share/adodb/drivers/adodb-postgres.inc.php
 share/adodb/drivers/adodb-postgres64.inc.php
 share/adodb/drivers/adodb-postgres7.inc.php
 share/adodb/drivers/adodb-proxy.inc.php
+share/adodb/drivers/adodb-sapdb.inc.php
 share/adodb/drivers/adodb-sqlanywhere.inc.php
+share/adodb/drivers/adodb-sqlite.inc.php
 share/adodb/drivers/adodb-sybase.inc.php
 share/adodb/drivers/adodb-vfp.inc.php
+share/adodb/lang/adodb-cz.inc.php
 share/adodb/lang/adodb-en.inc.php
+share/adodb/lang/adodb-es.inc.php
 share/adodb/lang/adodb-fr.inc.php
+share/adodb/lang/adodb-it.inc.php
+share/adodb/lang/adodb-pt-br.inc.php
+share/adodb/lang/adodb-ru1251.inc.php
+share/adodb/lang/adodb-sv.inc.php
+share/adodb/perf/perf-db2.inc.php
+share/adodb/perf/perf-informix.inc.php
+share/adodb/perf/perf-mssql.inc.php
+share/adodb/perf/perf-mysql.inc.php
+share/adodb/perf/perf-oci8.inc.php
+share/adodb/perf/perf-postgres.inc.php
 share/adodb/pivottable.inc.php
 share/adodb/rsfilter.inc.php
 share/adodb/server.php
 share/adodb/tests/benchmark.php
 share/adodb/tests/client.php
 share/adodb/tests/test-datadict.php
+share/adodb/tests/test-perf.php
+share/adodb/tests/test-xmlschema.php
 share/adodb/tests/test.php
 share/adodb/tests/test2.php
 share/adodb/tests/test3.php
@@ -81,10 +99,12 @@ share/adodb/tests/testpear.php
 share/adodb/tests/testsessions.php
 share/adodb/tests/time.php
 share/adodb/tests/tmssql.php
+share/adodb/tests/xmlschema.xml
 share/adodb/toexport.inc.php
 share/adodb/tohtml.inc.php
 share/doc/adodb/docs-adodb.htm
 share/doc/adodb/docs-datadict.htm
+share/doc/adodb/docs-perf.htm
 share/doc/adodb/docs-session.htm
 share/doc/adodb/license.txt
 share/doc/adodb/old-changelog.htm
@@ -94,6 +114,7 @@ share/doc/adodb/tips_portable_sql.htm
 share/doc/adodb/tute.htm
 @dirrm share/doc/adodb
 @dirrm share/adodb/tests
+@dirrm share/adodb/perf
 @dirrm share/adodb/lang
 @dirrm share/adodb/drivers
 @dirrm share/adodb/datadict

@@ -1,16 +1,3 @@
-$NetBSD: TODO,v 1.2 2003/07/08 08:50:58 adrian_p Exp $
+$NetBSD: TODO,v 1.3 2003/10/20 21:41:59 adrian_p Exp $
 
-I'm working on a ACID pkg at the moment and it will need this pkg as
-a dependency.
-
-Hold off until I finish the ACID pkg then test and let me know if there
-are any issues.
-
-XXX This is a php-lib file (no php binary module). Should it still be
-        renamed to php-adodb? - hubertf
-
-Tested on NetBSD 1.6 i386.
-
-Ta,
-
-Adrian.
+Ready for pkgsrc.
