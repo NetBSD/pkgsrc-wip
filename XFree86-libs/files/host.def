@@ -33,8 +33,8 @@
 #define DebuggableLibraries NO
 #define StandardIncludes \
 	-I@BLNK@/include \
-	-IPREFIX/include \
-	-ILOCALBASE/include
+	-I@PREFIX@/include \
+	-I@LOCALBASE@/include
 
 /* Common build of libs */
 
