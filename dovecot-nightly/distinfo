@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/22 19:18:51 tomhensel Exp $
+
+SHA1 (dovecot-20040222.tar.gz) = 1127e88b6a76e33c00d81e434a0d2c6ccb97a868
+Size (dovecot-20040222.tar.gz) = 894824 bytes
+SHA1 (patch-aa) = f8b435e510e917f025ce003a0980cfa2739a95ec
+SHA1 (patch-ab) = e164623ae086679f65cc445e32cab81308e49787
