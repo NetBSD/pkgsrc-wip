@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/03 21:45:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/11 04:36:22 blef Exp $
 #
 
 DISTNAME=		jazz-src-4.1.3
@@ -10,7 +10,7 @@ MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.jazzware.com/
 COMMENT=		MIDI sequencer
 
-BUILD_DEPENDS+=		tex2rtf-*:../../converters/tex2rtf
+BUILD_DEPENDS+=		tex2rtf-[0-9]*:../../converters/tex2rtf
 
 USE_GMAKE=		yes
 USE_BUILDLINK2=		yes

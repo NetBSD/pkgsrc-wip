@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/29 15:34:31 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/11 04:36:22 blef Exp $
 
 DISTNAME=	bc-1.06
 CATEGORIES=	math
@@ -16,7 +16,7 @@ INFO_FILES=	bc.info dc.info
 .include "../../mk/bsd.prefs.mk"
 
 .if !exists(/usr/bin/flex)
-BUILD_DEPENDS+=	flex-*:../../devel/flex
+BUILD_DEPENDS+=	flex-[0-9]*:../../devel/flex
 .endif
 
 .include "../../devel/ncurses/buildlink2.mk"

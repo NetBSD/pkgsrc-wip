@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/08/29 11:49:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2003/09/11 04:36:22 blef Exp $
 
 DISTNAME=	cjk-latex-japanese-20020721
 WRKSRC=		${WRKDIR}
@@ -12,7 +12,7 @@ COMMENT=	Japanese support for CJK-LaTeX
 
 #DEPENDS+=	cjk-latex>=4.5.1:../../print/cjk-latex
 DEPENDS+=	cjk-latex>=4.5.1:../../wip/cjk-latex
-DEPENDS+=	kochi-ttf-*:../../fonts/kochi-ttf
+DEPENDS+=	kochi-ttf-[0-9]*:../../fonts/kochi-ttf
 
 FONT_FILES=	gothic mincho
 
