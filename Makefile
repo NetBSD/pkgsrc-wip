@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.629 2003/11/19 13:32:40 mpasternak Exp $
-# $NetBSD: Makefile,v 1.629 2003/11/19 13:32:40 mpasternak Exp $
+# $Id: Makefile,v 1.630 2003/11/20 04:12:43 mpasternak Exp $
+# $NetBSD: Makefile,v 1.630 2003/11/20 04:12:43 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -409,6 +409,7 @@ SUBDIR+=	py-PythonDirector
 SUBDIR+=	py-Quotient
 SUBDIR+=	py-RXP
 SUBDIR+=	py-Soya
+SUBDIR+=	py-ZODB
 SUBDIR+=	py-albatross
 SUBDIR+=	py-biggles
 SUBDIR+=	py-buildbot
