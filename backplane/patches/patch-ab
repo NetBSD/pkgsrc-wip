@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/03/21 19:05:25 mpasternak Exp $
+
+--- replicator/DMakefile.orig	2003-05-09 18:42:57.000000000 +0200
++++ replicator/DMakefile
+@@ -9,7 +9,10 @@ EXTRALIBS= crypt
+ .ifos darwin
+ EXTRALIBS= crypto
+ .endif
+-EXTRALIBS ?= crypto md
++.ifos netbsd
++EXTRALIBS= crypto
++.endif
++EXTRALIBS ?= crypto md
+ SRCS= main.c dbmanage.c sysctl.c globals.c link.c dbinfo.c hello.c pkt.c \
+ 	replicate.c client.c vcinstance.c vcmanager.c status.c \
+ 	synchronize.c linkmaint.c linkenable.c

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/21 19:05:25 mpasternak Exp $
+
+SHA1 (backplane-1.05.tar.gz) = c4ea5c4d0c47849a47196a5e5987a5bde361ac81
+Size (backplane-1.05.tar.gz) = 361707 bytes
+SHA1 (patch-aa) = f719c0625f5c56576d0f92862951efc4d426b1aa
+SHA1 (patch-ab) = 3f7d40ef2ba4ba59d99891aa1933a7a3d7dc4897

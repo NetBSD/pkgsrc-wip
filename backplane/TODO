@@ -1,0 +1,6 @@
+$Id: TODO,v 1.1.1.1 2004/03/21 19:05:25 mpasternak Exp $
+
+MAKE_PROGRAM cannot be overriden and this makefile is ugly; tech-pkg@
+emailed...
+
+	-- dotz@irc.pl

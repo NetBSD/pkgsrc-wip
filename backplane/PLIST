@@ -1,0 +1,85 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/21 19:05:25 mpasternak Exp $
+backplane/README
+backplane/COPYRIGHT
+backplane/lib/libsupport.a
+backplane/lib/libthreads.a
+backplane/lib/libdbtypes.a
+backplane/lib/libdbcore.a
+backplane/lib/libnclient.a
+backplane/lib/libclient.a
+backplane/lib/libpclient.a
+backplane/include/libsupport/support-exports.h
+backplane/include/libsupport/export.h
+backplane/include/libsupport/log.h
+backplane/include/libsupport/lists.h
+backplane/include/libsupport/lock.h
+backplane/include/libsupport/simplehash.h
+backplane/include/libsupport/charflags.h
+backplane/include/libsupport/debug.h
+backplane/include/libsupport/version.h
+backplane/include/libsupport/cache.h
+backplane/include/libsupport/varlist.h
+backplane/include/libsupport/stamp.h
+backplane/include/libsupport/align.h
+backplane/include/libthreads/threads-exports.h
+backplane/include/libthreads/export.h
+backplane/include/libdbtypes/dbtypes-exports.h
+backplane/include/libdbcore/dbcore-exports.h
+backplane/include/libdbcore/types.h
+backplane/include/libnclient/nclient-exports.h
+backplane/include/libnclient/nexport.h
+backplane/include/libnclient/clientmsg.h
+backplane/include/libclient/client-exports.h
+backplane/include/libclient/export.h
+backplane/include/libclient/clientmsg.h
+backplane/include/libpclient/pclient-exports.h
+backplane/include/libpclient/pexport.h
+backplane/include/libpclient/clientmsg.h
+backplane/include/rdbms/errors.h
+backplane/etc/initdb.llq
+backplane/bin/drd_database
+backplane/bin/drd_cursor
+backplane/bin/replicator
+backplane/bin/drd
+backplane/bin/llquery
+backplane/bin/mlquery
+backplane/bin/dsql
+backplane/bin/drd_link
+backplane/bin/ddump
+backplane/bin/drd_vacuum
+backplane/bin/dcreatedb
+backplane/bin/drecover
+backplane/bin/test
+backplane/bin/dbdate
+backplane/bin/dwait
+backplane/bin/dhistory
+backplane/bin/dbrawinfo
+backplane/bin/dblog
+backplane/docs/cinterface.html
+backplane/docs/reference.html
+backplane/docs/drdbms1.html
+backplane/docs/threading.txt
+backplane/man/man1/ddump.1
+backplane/man/man1/dhistory.1
+backplane/man/man1/replicator.1
+backplane/man/man7/backplane.7
+backplane/man/man8/drd_cursor.8
+backplane/man/man8/drd_database.8
+@dirrm backplane/man/man8
+@dirrm backplane/man/man7
+@dirrm backplane/man/man1
+@dirrm backplane/man
+@dirrm backplane/log
+@dirrm backplane/lib
+@dirrm backplane/include/rdbms
+@dirrm backplane/include/libthreads
+@dirrm backplane/include/libsupport
+@dirrm backplane/include/libpclient
+@dirrm backplane/include/libnclient
+@dirrm backplane/include/libdbtypes
+@dirrm backplane/include/libdbcore
+@dirrm backplane/include/libclient
+@dirrm backplane/include
+@dirrm backplane/etc
+@dirrm backplane/docs
+@dirrm backplane/bin
