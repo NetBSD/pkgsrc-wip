@@ -1,5 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/22 11:58:59 cjep Exp $
-bin/builddbm
-bin/buildsql
-bin/radiusd
-bin/radpwtst
+@comment $NetBSD: PLIST,v 1.2 2003/09/10 15:48:27 cjep Exp $
