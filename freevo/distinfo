@@ -1,6 +1,12 @@
-$NetBSD: distinfo,v 1.3 2004/01/04 11:45:04 mpasternak Exp $
+$NetBSD: distinfo,v 1.4 2004/01/04 11:55:15 mpasternak Exp $
 
 SHA1 (freevo-1.4.1.tar.gz) = a1fc8b767cc63625e440b381f37f78c8a3bd3349
 Size (freevo-1.4.1.tar.gz) = 3107468 bytes
 SHA1 (patch-aa) = e223a1d2ec32ff8cb5e4281daa13d8ed8707c10f
-SHA1 (patch-ab) = 47ef7ae46bb38213e947a9529d3cef293808a75a
+SHA1 (patch-ab) = 114288a54f6de5485a0addf2c99bc191d457679c
+SHA1 (patch-ac) = a25bc4af003b8b2c7616f0a096d840416f4f53c9
+SHA1 (patch-ad) = 8ce9e7db4fb2b1730cfcc81cb60af3ffab5076af
+SHA1 (patch-ae) = d857ca9409764ea57b7836b2d45f8849e04b57ed
+SHA1 (patch-af) = 1cc713b5940417109de22e91e698fcb4db6016fc
+SHA1 (patch-ag) = 49edd3b3a4a3b493abd1a07582913b2ef89cac32
+SHA1 (patch-ah) = 0a9d2a9ea7fda7a268232008dcf911aacfae3a2b
