@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/01/23 07:01:56 riz Exp $
+$NetBSD: distinfo,v 1.4 2005/01/31 05:38:01 riz Exp $
 
-SHA1 (asterisk-1.0.4.tar.gz) = 15e4c0684918f7059773f5baf93c2968d62ec677
-Size (asterisk-1.0.4.tar.gz) = 9582822 bytes
+SHA1 (asterisk-1.0.5.tar.gz) = 2e7b70bd2071d5b45304bb5be431a285964b69f8
+Size (asterisk-1.0.5.tar.gz) = 9586778 bytes
 SHA1 (patch-aa) = e3603c8683383c9cc90bcaf2e17a69bb69433cf9
 SHA1 (patch-ab) = 0e159997f9765d631affecc0a300606ee78f6c25

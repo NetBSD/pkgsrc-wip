@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/23 07:01:56 riz Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/01/31 05:38:01 riz Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -473,11 +473,13 @@ libdata/asterisk/sounds/voicemail
 man/man8/asterisk.8
 sbin/asterisk
 sbin/astgenkey
+sbin/safe_asterisk
 share/examples/asterisk/adsi.conf
 share/examples/asterisk/adtranvofr.conf
 share/examples/asterisk/agents.conf
 share/examples/asterisk/alarmreceiver.conf
 share/examples/asterisk/alsa.conf
+share/examples/asterisk/asterisk.adsi
 share/examples/asterisk/asterisk.conf
 share/examples/asterisk/cdr_manager.conf
 share/examples/asterisk/cdr_odbc.conf
@@ -509,11 +511,10 @@ share/examples/asterisk/rpt.conf
 share/examples/asterisk/rtp.conf
 share/examples/asterisk/sip.conf
 share/examples/asterisk/skinny.conf
+share/examples/asterisk/telcordia-1.adsi
 share/examples/asterisk/voicemail.conf
 share/examples/asterisk/vpb.conf
 share/examples/asterisk/zapata.conf
-share/examples/asterisk/asterisk.adsi
-share/examples/asterisk/telcordia-1.adsi
 @dirrm share/examples/asterisk
 @dirrm libdata/asterisk/sounds/phonetic
 @dirrm libdata/asterisk/sounds/letters
@@ -529,4 +530,3 @@ share/examples/asterisk/telcordia-1.adsi
 @dirrm lib/asterisk/modules
 @dirrm lib/asterisk
 @dirrm include/asterisk
-@dirrm etc/asterisk
