@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/06/14 01:32:24 mjasm Exp $
+
+SHA1 (bastard-0.17-pre.tgz) = d01333882bc1706fbc74da86703bb3cb8c8ebc91
+Size (bastard-0.17-pre.tgz) = 1679793 bytes
+SHA1 (patch-aa) = c07e6c5cda342fb75b8a235f64d2ef5b098814fb
+SHA1 (patch-ab) = 851ef82e523dc3e1a46c4f998c43068434d64696
+SHA1 (patch-ac) = 6e66253ce4e348e119bc906ddadddd6b56b46915
