@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/11/05 21:40:44 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/12/01 05:33:18 tvierling Exp $
 bin/entropy
 bin/entropy-storechg
 share/examples/entropy/entropy.conf
@@ -8,6 +8,8 @@ share/examples/entropy/node/favicon.ico
 share/examples/entropy/node/font8x13.txt
 share/examples/entropy/node/gateway.de.html
 share/examples/entropy/node/gateway.en.html
+share/examples/entropy/node/hedgehog_de.png
+share/examples/entropy/node/hedgehog_en.png
 share/examples/entropy/node/logo_small.png
 share/examples/entropy/node/mime.types
 share/examples/entropy/node/my0812.bdf.lzw
