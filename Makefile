@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1426 2004/08/13 08:03:54 ianzag Exp $
-# $NetBSD: Makefile,v 1.1426 2004/08/13 08:03:54 ianzag Exp $
+# $Id: Makefile,v 1.1427 2004/08/13 14:08:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1427 2004/08/13 14:08:50 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -141,7 +141,6 @@ SUBDIR+=	faster-configure
 SUBDIR+=	fbpanel
 SUBDIR+=	festival-gaim
 SUBDIR+=	firebird
-SUBDIR+=	fixesext
 SUBDIR+=	flash7-player-bin
 SUBDIR+=	flc
 SUBDIR+=	flightgear
