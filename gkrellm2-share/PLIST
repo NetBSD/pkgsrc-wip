@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/03 15:05:37 cubidou Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/07 12:54:58 cubidou Exp $
 share/gkrellm2/README
+share/gkrellm2/COPYRIGHT
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gkrellm.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gkrellm.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gkrellm.mo
