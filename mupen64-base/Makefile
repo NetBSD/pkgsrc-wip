@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2004/05/07 01:58:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/13 23:02:47 xtraeme Exp $
 #
 
-DISTNAME=	mupen64_src-0.3
+DISTNAME=	mupen64_src-0.4
 PKGNAME=	${DISTNAME:S/_src/-base/}
 CATEGORIES=	emulators
-MASTER_SITES=	http://mupen64.emulation64.com/files/src/
+MASTER_SITES=	http://mupen64.emulation64.com/files/0.4/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -17,7 +17,7 @@ USE_X11=	yes
 WRKSRC=		${WRKDIR}/emu64
 
 # Ensure we export symbols in the linked shared object.
-LDFLAGS=	${EXPORT_SYMBOLS_LDFLAGS}
+LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
 SUBST_CLASSES=	    fixme
 SUBST_STAGE.fixme=  post-patch
@@ -36,7 +36,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${SHAREDIR}/save
 	${INSTALL_DATA_DIR} ${SHAREDIR}/plugins
 	${INSTALL_PROGRAM} ${WRKSRC}/mupen64 ${SHAREDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/mupen64_nogui ${SHAREDIR}
 	${INSTALL_DATA} ${WRKSRC}/lang/* ${SHAREDIR}/lang
 	${INSTALL_DATA} ${WRKSRC}/mupen64.ini ${SHAREDIR}
 	${INSTALL_DATA} ${WRKSRC}/logo.xpm ${SHAREDIR}

@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.2 2004/04/17 01:19:52 minskim Exp $
+$NetBSD: distinfo,v 1.3 2004/07/13 23:02:48 xtraeme Exp $
 
-SHA1 (mupen64_src-0.3.tar.bz2) = c393e2949a099f7d3a679b2c2f3582cefec2d530
-Size (mupen64_src-0.3.tar.bz2) = 1058587 bytes
+SHA1 (mupen64_src-0.4.tar.bz2) = b42ff1eb2b896bf38986522bbd341e0ba94e7532
+Size (mupen64_src-0.4.tar.bz2) = 1871148 bytes
 SHA1 (patch-aa) = 71dad4af4c8c1289aaa5058e32954975914e58b1
 SHA1 (patch-ab) = e9767bf17ea1910f6db63e70e2160e4d56119f54
 SHA1 (patch-ac) = 76c2fde7d157d7aa59d44c43a0dd4524e4dcd721
 SHA1 (patch-ad) = 3056fb30a88367ef5e2050932c1c0c837981dcb7
 SHA1 (patch-ae) = 1d98ff965e67932366952ca4aa447016cd5cb4fc
-SHA1 (patch-af) = 2770b8c83458710132d10908f3c8afc8040d437b
-SHA1 (patch-ag) = 56e699d19e8d22ff902feaf627332183f82163bf
+SHA1 (patch-af) = 83aa0b54f181459c82cf903d0f0aad17ed15bbad
