@@ -1,4 +1,4 @@
-/*	$NetBSD: pl.c,v 1.1.1.1 2004/04/02 05:58:19 jeremy-c-reed Exp $	*/
+/*	$NetBSD: pl.c,v 1.2 2004/07/24 01:24:06 jeremy-c-reed Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: pl.c,v 1.11 1997/10/08 07:46:35 charnier Exp";
 #else
-__RCSID("$NetBSD: pl.c,v 1.1.1.1 2004/04/02 05:58:19 jeremy-c-reed Exp $");
+__RCSID("$NetBSD: pl.c,v 1.2 2004/07/24 01:24:06 jeremy-c-reed Exp $");
 #endif
 #endif
 
@@ -173,12 +173,10 @@ check_list(char *home, package_t *pkg, const char *PkgName)
 				if (s && PlistOnly)
 					warnx("Overwriting %s - "
 					    "pkg %s bogus/conflicting?", t, s);
-				else {
-					pkgdb_store(t, PkgName);
+				pkgdb_store(t, PkgName);
 #ifdef PKGDB_DEBUG
-					fprintf(stderr, "pkgdb_store(\"%s\", \"%s\")\n", t, PkgName);	/* pkgdb-debug - HF */
+				fprintf(stderr, "pkgdb_store(\"%s\", \"%s\")\n", t, PkgName);	/* pkgdb-debug - HF */
 #endif
-				}
 			}
 
 			if (cwd == home) {

@@ -1,4 +1,4 @@
-/*	$NetBSD: pkgdb.c,v 1.1.1.1 2004/04/02 05:58:08 jeremy-c-reed Exp $	*/
+/*	$NetBSD: pkgdb.c,v 1.2 2004/07/24 01:24:06 jeremy-c-reed Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: pkgdb.c,v 1.1.1.1 2004/04/02 05:58:08 jeremy-c-reed Exp $");
+__RCSID("$NetBSD: pkgdb.c,v 1.2 2004/07/24 01:24:06 jeremy-c-reed Exp $");
 #endif
 
 /*
@@ -134,7 +134,7 @@ pkgdb_close(void)
  * Store value "val" with key "key" in database
  * Return value is as from ypdb_store:
  *  0: ok
- *  1: key already present
+ *  1: key already present  -- not any longer now it overwrites it
  * -1: some other error, see errno
  */
 int
@@ -153,7 +153,8 @@ pkgdb_store(const char *key, const char *val)
 	if (keyd.size > FILENAME_MAX || vald.size > FILENAME_MAX)
 		return -1;
 
-	return (*pkgdbp->put) (pkgdbp, &keyd, &vald, R_NOOVERWRITE);
+/* 	return (*pkgdbp->put) (pkgdbp, &keyd, &vald, R_NOOVERWRITE); */
+	return (*pkgdbp->put) (pkgdbp, &keyd, &vald, 0);
 }
 
 /*

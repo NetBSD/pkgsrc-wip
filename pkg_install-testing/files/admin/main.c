@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.1.1.1 2004/04/02 05:58:12 jeremy-c-reed Exp $	*/
+/*	$NetBSD: main.c,v 1.2 2004/07/24 01:24:06 jeremy-c-reed Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.1.1.1 2004/04/02 05:58:12 jeremy-c-reed Exp $");
+__RCSID("$NetBSD: main.c,v 1.2 2004/07/24 01:24:06 jeremy-c-reed Exp $");
 #endif
 
 /*
@@ -706,6 +706,7 @@ main(int argc, char *argv[])
 			perror("pkgdb_store");
 			break;
 		case 1:
+/* reed: this won't happen because now R_NOOVERWRITE flag is not used */
 			printf("Key already present.\n");
 			break;
 		default:

@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.2 2004/05/22 19:56:25 jeremy-c-reed Exp $	*/
+/*	$NetBSD: perform.c,v 1.3 2004/07/24 01:24:05 jeremy-c-reed Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.2 2004/05/22 19:56:25 jeremy-c-reed Exp $");
+__RCSID("$NetBSD: perform.c,v 1.3 2004/07/24 01:24:05 jeremy-c-reed Exp $");
 #endif
 #endif
 
@@ -925,15 +925,15 @@ ignore_replace_depends_check:
 #ifdef PKGDB_DEBUG
 								printf("pkgdb_retrieve(\"%s\")=\"%s\"\n", t, s);	/* pkgdb-debug - HF */
 #endif
-								/* file exists */
-								if (!s) {
+								if (0 == strcmp(s, old_installed)) {
 									if (Verbose)
-										printf("%s is not in pkgdb; deleting.\n", t);
+										printf("%s belongs to older %s; deleting.\n", t, s);
 
 									/* TODO: this needs to be tested with pkgviews */
 									if (!Fake) 
 					/*					unlink(t); */
 printf ("Unlink of %s would be done here.\n", t);
+/* todo: and probably remove from pkgdb too **/
 								}
 							}
 						}

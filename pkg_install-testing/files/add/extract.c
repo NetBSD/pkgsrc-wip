@@ -1,4 +1,4 @@
-/*	$NetBSD: extract.c,v 1.1.1.1 2004/04/02 05:57:54 jeremy-c-reed Exp $	*/
+/*	$NetBSD: extract.c,v 1.2 2004/07/24 01:24:05 jeremy-c-reed Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "FreeBSD - Id: extract.c,v 1.17 1997/10/08 07:45:35 charnier Exp";
 #else
-__RCSID("$NetBSD: extract.c,v 1.1.1.1 2004/04/02 05:57:54 jeremy-c-reed Exp $");
+__RCSID("$NetBSD: extract.c,v 1.2 2004/07/24 01:24:05 jeremy-c-reed Exp $");
 #endif
 #endif
 
@@ -216,13 +216,11 @@ extract_plist(char *home, package_t *pkg)
 #endif
 						if (s && !Overwrite)
 							warnx("Overwriting %s - pkg %s bogus/conflicting?", t, s);
-						else {
-							rc = pkgdb_store(t, PkgName);
+						rc = pkgdb_store(t, PkgName);
 #ifdef PKGDB_DEBUG
-							printf("pkgdb_store(\"%s\", \"%s\") = %d\n", t, PkgName, rc);	/* pkgdb-debug - HF */
+						printf("pkgdb_store(\"%s\", \"%s\") = %d\n", t, PkgName, rc);	/* pkgdb-debug - HF */
 #endif
 
-						}
 					}
 
 					/* try to add to list of perms to be changed and run in bulk. */
@@ -282,12 +280,10 @@ extract_plist(char *home, package_t *pkg)
 #endif
 						if (s && !Overwrite)
 							warnx("Overwriting %s - pkg %s bogus/conflicting?", t, s);
-						else {
-							rc = pkgdb_store(t, PkgName);
+						rc = pkgdb_store(t, PkgName);
 #ifdef PKGDB_DEBUG
-							printf("pkgdb_store(\"%s\", \"%s\") = %d\n", t, PkgName, rc);	/* pkgdb-debug - HF */
+						printf("pkgdb_store(\"%s\", \"%s\") = %d\n", t, PkgName, rc);	/* pkgdb-debug - HF */
 #endif
-						}
 					}
 				}
 			}
