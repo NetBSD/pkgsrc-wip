@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/27 03:50:59 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/27 21:03:36 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXi-6.0.1
@@ -7,8 +7,8 @@ MASTER_SITES=		http://freedesktop.org/~xlibs/dist/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		xtraeme@NetBSD.org
-HOMEPAGE=		http://freedesktop.org/
-COMMENT=		Xi extension (Library)
+HOMEPAGE=		http://www.freedesktop.org/software/xlibs
+COMMENT=		X Input extension library
 
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
