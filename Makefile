@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.354 2003/07/31 00:49:55 xtraeme Exp $
-# $NetBSD: Makefile,v 1.354 2003/07/31 00:49:55 xtraeme Exp $
+# $Id: Makefile,v 1.355 2003/07/31 07:23:06 minskim Exp $
+# $NetBSD: Makefile,v 1.355 2003/07/31 07:23:06 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -139,6 +139,7 @@ SUBDIR+=	iisemulator
 SUBDIR+=	ike-scan
 SUBDIR+=	ilohamail
 SUBDIR+=	imake
+SUBDIR+=	imhangul
 SUBDIR+=	ion-devel
 SUBDIR+=	ion-dock
 SUBDIR+=	ish
