@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/17 02:55:41 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/09 07:28:48 blef Exp $
 
 DISTNAME=		GTK2-Industrial
 PKGNAME=		gtk2-engines-industrial-0
@@ -10,11 +10,11 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://art.gnome.org/
 COMMENT=		Black and white theme for GTK+ 2.x
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS=		--prefix=${PREFIX}
 
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

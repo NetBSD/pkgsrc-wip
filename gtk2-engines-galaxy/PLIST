@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 03:01:46 mpasternak Exp $
-lib/gtk-2.0/2.2.0/engines/libgalaxy.so
-lib/gtk-2.0/2.2.0/engines/libgalaxy.la
-lib/gtk-2.0/2.2.0/engines/libgalaxy.a
+@comment $NetBSD: PLIST,v 1.2 2004/05/09 07:27:01 blef Exp $
+lib/gtk-2.0/2.4.0/engines/libgalaxy.a
+lib/gtk-2.0/2.4.0/engines/libgalaxy.la
+lib/gtk-2.0/2.4.0/engines/libgalaxy.so
 share/themes/Galaxy/gtk-2.0/gtkrc
 @dirrm share/themes/Galaxy/gtk-2.0
 @dirrm share/themes/Galaxy
+@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/engines
