@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2003/07/02 05:36:25 blef Exp $
+$NetBSD: patch-aa,v 1.3 2003/11/27 22:20:09 blef Exp $
 
---- configure.orig	Tue Jul  1 21:33:57 2003
-+++ configure	Tue Jul  1 21:36:51 2003
-@@ -3892,7 +3892,7 @@
-   COMPILE_PROGRAM=COMPILE_NORMAL
+--- configure.orig	2003-11-27 05:59:16.000000000 -0800
++++ configure	2003-11-27 06:01:17.000000000 -0800
+@@ -4043,7 +4043,7 @@
+   COMPILE_CXX_PROGRAM=COMPILE_CXX_NORMAL
    COMPILE_S_PROGRAM=COMPILE_S_NORMAL
    if test "X$allegro_cv_prog_ld_s" = "Xyes"; then
 -    PROG_LDFLAGS="-s \$(LDFLAGS)"
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2003/07/02 05:36:25 blef Exp $
    else
      PROG_LDFLAGS="\$(LDFLAGS)"
    fi
-@@ -9608,7 +9608,7 @@
+@@ -9861,7 +9861,7 @@
  s,@ECHO_T@,$ECHO_T,;t t
  s,@LIBS@,$LIBS,;t t
  s,@CC@,$CC,;t t
