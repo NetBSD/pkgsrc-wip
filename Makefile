@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.705 2003/11/29 19:41:36 mpasternak Exp $
-# $NetBSD: Makefile,v 1.705 2003/11/29 19:41:36 mpasternak Exp $
+# $Id: Makefile,v 1.706 2003/11/29 21:54:45 mpasternak Exp $
+# $NetBSD: Makefile,v 1.706 2003/11/29 21:54:45 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -152,6 +152,7 @@ SUBDIR+=	gcompris
 SUBDIR+=	gdbada
 SUBDIR+=	gdrdao
 SUBDIR+=	geeklog
+SUBDIR+=	gg2
 SUBDIR+=	ghostpcl
 SUBDIR+=	gift
 SUBDIR+=	giftcurs
@@ -255,6 +256,7 @@ SUBDIR+=	jdk13
 SUBDIR+=	jdk13-openjit
 SUBDIR+=	jigdo
 SUBDIR+=	jpeg_ls
+SUBDIR+=	kadu
 SUBDIR+=	kaffe-nox11
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
@@ -306,6 +308,7 @@ SUBDIR+=	libprelude
 SUBDIR+=	libshout
 SUBDIR+=	libsoup
 SUBDIR+=	libstatgrab
+SUBDIR+=	libtlen
 SUBDIR+=	libvc
 SUBDIR+=	libvorbis-nightly
 SUBDIR+=	libwpd
@@ -586,6 +589,7 @@ SUBDIR+=	thy
 SUBDIR+=	tinc
 SUBDIR+=	tinylogin
 SUBDIR+=	tkabber
+SUBDIR+=	tleenx2
 SUBDIR+=	tls
 SUBDIR+=	toppler
 SUBDIR+=	totem
