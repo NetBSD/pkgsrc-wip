@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/07/12 11:33:38 lsed Exp $
+
+--- Makefile.orig	Tue May  6 10:43:00 2003
++++ Makefile	Sat Jul 12 12:29:19 2003
+@@ -3,7 +3,6 @@
+ #
+ 
+ all:
+-	./configure
+ 	make -f Makefile.amap
+ 
+ debug:
+@@ -11,7 +10,6 @@
+ 	make -f Makefile.amap debug
+ 
+ install:
+-	./configure
+ 	make -f Makefile.amap install
+ 
+ amap:

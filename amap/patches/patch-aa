@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/12 11:33:38 lsed Exp $
+
+--- configure.orig	Tue Apr 29 16:37:48 2003
++++ configure	Sat Jul 12 12:20:18 2003
+@@ -11,7 +11,7 @@
+ echo
+ 
+ echo "Checking for openssl ..."
+-for i in  /lib  /usr/lib /usr/local/lib /ssl /openssl /opt/openssl \
++for i in  ${BUILDLINK_DIR}/lib /lib  /usr/lib /usr/local/lib /ssl /openssl /opt/openssl \
+ /opt/ssl /usr/ssl /usr/openssl /usr/local/ssl /usr/local/openssl \
+ /openssl/lib /ssl/lib /opt/ssl/lib /opt/openssl/lib /usr/ssl/lib \
+ /usr/openssl/lib /usr/local/ssl/lib /usr/local/openssl/lib
+@@ -40,7 +40,7 @@
+     fi
+ done
+ 
+-for i in /usr/include /usr/local/include /openssl/include /ssl/include \
++for i in ${BUILDLINK_DIR}/include /usr/include /usr/local/include /openssl/include /ssl/include \
+ /opt/ssl/include /opt/openssl/include /usr/openssl/include \
+ /usr/ssl/include /usr/local/openssl/include /usr/local/ssl/include
+ do
+@@ -68,7 +68,7 @@
+ fi
+ 
+ SYS=`uname`
+-if [ "$SYS" = "Solaris" ]; then
++if [ "$SYS" = "SunOS" ]; then
+     echo "Checking for Solaris libraries ..."
+     for i in  /lib /usr/lib /usr/local/lib
+     do

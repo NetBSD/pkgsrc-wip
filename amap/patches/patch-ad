@@ -1,0 +1,69 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/07/12 11:33:38 lsed Exp $
+
+--- amap.c.orig	Tue May  6 09:41:13 2003
++++ amap.c	Sat Jul 12 12:54:20 2003
+@@ -62,7 +62,7 @@
+ unsigned char banner_string[256];
+ 
+ // where are my appdefs files? all entries must end with a slash!
+-char *searchpath[14] = { "./", "/etc/", "/usr/etc/", "/usr/local/etc/",
++char *searchpath[15] = { "./", SHAREDIR, "/etc/", "/usr/etc/", "/usr/local/etc/",
+   "/opt/etc/", "/usr/local/amap/", "/opt/amap/",
+   "/usr/local/lib/", "/usr/local/lib/amap/",
+   "/usr/lib/amap/", "/usr/local/bin/",
+@@ -136,31 +136,30 @@
+ 
+ void help()
+ {
+-  printf("%s %s (c) 2003 by %s - <%s>
+-Syntax: %s [-SHbdmruv]1 [-s<T|U>] [-o <file>] [-D <file>] [-t sec] 
+-             [-T cons] [-p PROTO ] [-i <file>] [TARGET PORT [PORT] [PORT] ...]
+-Options:
+-    -i FILE   Nmap machine readable outputfile to read ports from
+-    -S        Try SSL connect first (recommended if you've got the time)
+-    -1        Only send triggers to a port until 1st identification. Speeeeed!
+-    -v        verbose mode (not recommended :-), use twice for debug
+-    -d        Dump hex traffic (only if a response is received)
+-    -u        Do not dump unrecognised responses (better for scripting)
+-    -b        If an ascii banner is received as a response, print it
+-    -H        Skip app trigs marked as potentially harmful (may crash server)
+-    -T CONS   Amount of parallel connections to make (default %d, max %d)
+-    -p PROTO  Only test for applicational protocol PROTO (i.e.: ftp)
+-    -t SEC    Response timeout, wait longer on slow connections (default %d)
+-    -o FILE   Write output to file FILE
+-    -m        Make output to file (-o) machine-readable (colon-separated list)
+-    -D FILE   Read from Definitions FILE[.trig|.resp] instead of default
+-    -s T|U    Port specified on commandline is TCP/UDP - this is mandatory!
+-    -h        Print this shit
+-    TARGET PORT   The target address and port(s) to scan (additional to -i)
+-
+-%s is a tool to identify application protocols on a target.
+-You can always find the newest version at %s
+-", PROGRAM, VERSION, AUTHOR, EMAIL, PROGRAM, TASKS, MAX_TASKS, TIMEOUT_T, PROGRAM, RESOURCE);
++  printf("%s %s (c) 2003 by %s - <%s>\n\
++Syntax: %s [-SHbdmruv]1 [-s<T|U>] [-o <file>] [-D <file>] [-t sec]\n\
++             [-T cons] [-p PROTO ] [-i <file>] [TARGET PORT [PORT] [PORT] ...]\n\
++Options:\n\
++    -i FILE   Nmap machine readable outputfile to read ports from\n\
++    -S        Try SSL connect first (recommended if you've got the time)\n\
++    -1        Only send triggers to a port until 1st identification. Speeeeed!\n\
++    -v        verbose mode (not recommended :-), use twice for debug\n\
++    -d        Dump hex traffic (only if a response is received)\n\
++    -u        Do not dump unrecognised responses (better for scripting)\n\
++    -b        If an ascii banner is received as a response, print it\n\
++    -H        Skip app trigs marked as potentially harmful (may crash server)\n\
++    -T CONS   Amount of parallel connections to make (default %d, max %d)\n\
++    -p PROTO  Only test for applicational protocol PROTO (i.e.: ftp)\n\
++    -t SEC    Response timeout, wait longer on slow connections (default %d)\n\
++    -o FILE   Write output to file FILE\n\
++    -m        Make output to file (-o) machine-readable (colon-separated list)\n\
++    -D FILE   Read from Definitions FILE[.trig|.resp] instead of default\n\
++    -s T|U    Port specified on commandline is TCP/UDP - this is mandatory!\n\
++    -h        Print this shit\n\
++    TARGET PORT   The target address and port(s) to scan (additional to -i)\n\
++\n\
++%s is a tool to identify application protocols on a target.\n\
++You can always find the newest version at %s\n", PROGRAM, VERSION, AUTHOR, EMAIL, PROGRAM, TASKS, MAX_TASKS, TIMEOUT_T, PROGRAM, RESOURCE);
+   exit(-1);
+ }
+ 

@@ -1,0 +1,36 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/07/12 11:33:38 lsed Exp $
+
+--- Makefile.am.orig	Sat May  3 17:30:00 2003
++++ Makefile.am	Sat Jul 12 12:56:19 2003
+@@ -1,11 +1,12 @@
+-CC=gcc
+-OPT=-O2
+-OPT_DEBUG=-ggdb -Wall
+-DIR=/usr/local/bin
++#CC=gcc
++OPT= -g ${CFLAGS} -DSHAREDIR="\"$(SHAREDIR)/\""
++#OPT_DEBUG=-ggdb -Wall
++DIR=${PREFIX}/bin
++SHAREDIR=${PREFIX}/share/amap
+ SCRIPTS=appdefs.trig appdefs.resp
+-MANDIR=/usr/local/man/man1
++MANDIR=${PREFIX}/man/man1
+ MANPAGE=amap.1
+-all:	strip
++all:	amap amapcrap
+ 
+ amap:	amap.c
+ 	@echo
+@@ -24,8 +25,10 @@
+ 	$(CC) $(OPT_DEBUG) -o amapcrap amapcrap.c $(XLIBS) $(XLIBPATHS)
+ 
+ install:	all
+-	cp amap amapcrap $(SCRIPTS) $(DIR)
+-	cp $(MANPAGE) $(MANDIR)
++	${BSD_INSTALL_DATA_DIR} $(SHAREDIR)
++	${BSD_INSTALL_PROGRAM} amap amapcrap $(DIR)
++	${BSD_INSTALL_SCRIPT} $(SCRIPTS) $(SHAREDIR)
++	${BSD_INSTALL_MAN} $(MANPAGE) $(MANDIR)
+ 
+ clean:	
+ 	rm -f amap amapcrap core *~

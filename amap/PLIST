@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/12 11:33:38 lsed Exp $
+bin/amap
+bin/amapcrap
+man/man1/amap.1
+share/amap/appdefs.resp
+share/amap/appdefs.trig
+@dirrm share/amap
