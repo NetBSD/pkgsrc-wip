@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/22 14:12:36 cubidou Exp $
+
+--- Makefile.orig	2003-12-06 14:19:55.000000000 +0100
++++ Makefile
+@@ -16,15 +16,15 @@ endif
+ GTK_CFLAGS = `$(GTK_CONFIG) --cflags` 
+ GTK_LIB = `$(GTK_CONFIG) --libs`
+ 
+-FLAGS = -O2 -Wall -fPIC $(GTK_CFLAGS) $(GKRELLM_INCLUDE)
++CFLAGS += -O2 -Wall -fPIC $(GTK_CFLAGS) $(GKRELLM_INCLUDE)
+ LIBS = $(GTK_LIB)
+ LFLAGS = -shared
+ 
+-CC = gcc $(CFLAGS) $(FLAGS)
++#CC = gcc $(CFLAGS) $(FLAGS)
+ 
+ OBJS = wireless.o
+ 
+-PLUGIN_DIR = /usr/lib/gkrellm2/plugins
++PLUGIN_DIR = ${PREFIX}/lib/gkrellm2/plugins
+ 
+ INSTALL = install -c
+ INSTALL_PROGRAM = $(INSTALL) -s
+@@ -32,12 +32,12 @@ INSTALL_PROGRAM = $(INSTALL) -s
+ all:	wireless.so
+ 
+ wireless.so: $(OBJS)
+-	$(CC) $(OBJS) -o wireless.so $(LFLAGS) $(LIBS)
++	$(CC) $(CFLAGS) $(OBJS) -o wireless.so $(LFLAGS) $(LIBS)
+ 
+ clean:
+ 	rm -f *.o core *.so* *.bak *~
+ 
+ install :
+-	$(INSTALL) $(INSTALL_PERMS) wireless.so $(PLUGIN_DIR)
++	$(BSD_INSTALL_DATA) wireless.so $(PLUGIN_DIR)
+ wireless.o: wireless.c
+ 
