@@ -1,0 +1,4 @@
+$Id: TODO,v 1.1 2004/02/27 09:53:19 xtraeme Exp $
+
+    o Remove duplicated do-install target.
+    o Use pkglint to see the errors... (pkgsrc/pkgtools/pkglint).
