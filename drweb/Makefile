@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/10/17 22:23:28 bubuchka Exp $
+# $NetBSD: Makefile,v 1.8 2003/10/28 17:00:44 bubuchka Exp $
 #
 # Note: We'll not use drweb's own configuration / building / installation
 # facilities so as its all are very ugly.
@@ -36,7 +36,9 @@ DISTTYPE=	glibc.${GLIBC_VERSION}
 .endif
 
 # The following used by drweb-update script only
+.if ${OPSYS} != "FreeBSD"	# FreeBSD have a fetch(1)
 DEPENDS=	wget>=1.7:../../net/wget
+.endif
 USE_PERL5=	YES
 
 NO_BUILD=	YES
