@@ -58,5 +58,8 @@ before it checks for conflicts.
 
 10) add a pkg_upgrade symlink
 
+11) maybe include the db library statically?
+    How can I do this with autoconf/automake?
+
 also look at http://mail-index.netbsd.org/tech-pkg/2003/03/18/0002.html
 
