@@ -1,0 +1,10 @@
+Gotmail is a script to download mail from hotmail.com without user 
+interaction. It's probably best run from a cron job. It can delete messages,
+download only-new messages, mark messages read (or not), forward to procmail, 
+to another address, or send through SMTP.
+
+Hotmail periodically makes small changes in the way its site works, and 
+corresponding changes are made to gotmail as expeditiously as possible. 
+However, there will be periods of time during which gotmail will not work, 
+due to these changes. Please be patient, and don't rely on gotmail being in 
+working condition at all times.
