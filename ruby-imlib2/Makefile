@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/15 01:01:55 obache Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/29 14:11:51 minskim Exp $
 
 DISTNAME=	imlib2-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-imlib2-${VER}
@@ -9,23 +9,23 @@ MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://www.pablotron.org/software/imlib2-ruby/
 COMMENT=	Imlib2 bindings for Ruby
 
-USE_BUILDLINK3=	yes
-USE_X11= yes
-
 VER=		0.5.0
-RUBY_HAS_ARCHLIB=	yes
-USE_RUBY_EXTCONF=	yes
-RUBY_REQD=      1.8.0
 
-BUILDLINK_DEPENDS.imlib2+=      imlib2>=1.2.0nb2
+PLIST_SRC=		${WRKDIR}/PLIST
+REPLACE_RUBY_DIRS=	${WRKSRC}/examples
+RUBY_HAS_ARCHLIB=	yes
+RUBY_REQD=		1.8.0
+USE_RUBY_EXTCONF=	yes
+USE_X11= 		yes
 
 INSTALL_TARGET=	site-install
 
-REPLACE_RUBY_DIRS=	${WRKSRC}/examples
+BUILDLINK_DEPENDS.imlib2+=      imlib2>=1.2.0nb2
+
+.include "../../graphics/imlib2/buildlink3.mk"
+.include "../../lang/ruby/modules.mk"
 
 DOCS=		AUTHORS COPYING ChangeLog README TODO
-
-PLIST_SRC=	${WRKDIR}/PLIST
 
 post-install:
 	cd ${WRKSRC}/examples && ${PAX} -rw -pp -pm . ${RUBY_EXAMPLESDIR}/imlib2
@@ -45,6 +45,4 @@ post-install:
 	  ${ECHO} "@dirrm \$${RUBY_DOCDIR}/$${DIR}"; \
 	done >> ${PLIST_SRC}
 
-.include "../../graphics/imlib2/buildlink3.mk"
-.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
