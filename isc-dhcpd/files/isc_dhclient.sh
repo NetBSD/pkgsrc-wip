@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-# $NetBSD: isc_dhclient.sh,v 1.1 2004/04/18 17:22:13 mpasternak Exp $
-# $Id: isc_dhclient.sh,v 1.1 2004/04/18 17:22:13 mpasternak Exp $
+# $NetBSD: isc_dhclient.sh,v 1.2 2004/07/08 15:03:16 jeremy-c-reed Exp $
+# $Id: isc_dhclient.sh,v 1.2 2004/07/08 15:03:16 jeremy-c-reed Exp $
 
 # PROVIDE: dhclient
 # REQUIRE: network mountcritlocal
@@ -16,7 +16,7 @@
 name="dhclient"
 rcvar="isc_dhclient"
 command="@PREFIX@/sbin/${name}"
-pidfile="/var/run/${name}.pid"
+pidfile="@VARBASE@/run/${name}.pid"
 
 load_rc_config $name
 run_rc_command "$1"
