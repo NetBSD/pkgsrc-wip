@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/04 06:33:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/25 16:22:59 marc Exp $
 #
 
 DISTNAME=	tutos-php-1.1.20030404
@@ -29,7 +29,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/htdocs/tutos
 	cd ${WRKSRC}; ${PAX} -rwpe . ${PREFIX}/share/httpd/htdocs/tutos
 
-.include "../../databases/postgresql-lib/buildlink3.mk"
 .include "../../www/php4/buildlink3.mk"
 .include "../../www/apache2/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/31 09:37:54 tomhensel Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/25 16:22:57 marc Exp $
 
 DISTNAME=		dovecot-${_DOVECOT_VER}
 PKGNAME=		dovecot-nightly-${_DOVECOT_VER}
@@ -67,7 +67,7 @@ CONFIGURE_ARGS+=        --enable-ssl=openssl
 .if !empty(DOVECOT_USE_PGSQL:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-pgsql
 CPPFLAGS=		-I${BUILDLINK_DIR}/include/pgsql
-.  include "../../databases/postgresql-lib/buildlink3.mk"
+.  include "../../mk/pgsql.buildlink3.mk"
 .endif
 
 RCD_SCRIPTS=	dovecot

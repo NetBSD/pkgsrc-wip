@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/09 21:03:29 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/25 16:22:58 marc Exp $
 #
 
 .include "../../wip/nagios-plugins/Makefile.common"
@@ -11,11 +11,11 @@ COMMENT=	Nagios pgsql plugin
 
 BINARY_TARGET=	utils.o check_pgsql
 
-CONFIGURE_ARGS+=	--with-pgsql=${BUILDLINK_PREFIX.postgresql-lib}
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql
+CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX}
+CPPFLAGS+=		-I${PGSQL_PREFIX}/include/pgsql
 
 .include "../../wip/nagios-plugins/Makefile.plugin"
 
-.include "../../databases/postgresql-lib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

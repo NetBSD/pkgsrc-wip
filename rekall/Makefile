@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/26 02:19:06 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/25 16:22:58 marc Exp $
 #
 
 DISTNAME=		rekall-2.2.0-beta0
@@ -19,8 +19,8 @@ CONFIGURE_ENV=		"PYTHONBIN=${PYTHONBIN}"
 
 .include "../../wip/xbsql/buildlink3.mk"
 .include "../../databases/mysql4-client/buildlink3.mk"
-.include "../../databases/postgresql-lib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

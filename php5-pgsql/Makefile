@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/16 17:22:10 ppostma Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/25 16:22:59 marc Exp $
 
 MODNAME=		pgsql
 CATEGORIES+=		databases
@@ -8,7 +8,7 @@ USE_BUILDLINK3=		YES
 
 .include "../../wip/php5/Makefile.module"
 
-CONFIGURE_ARGS+=	--with-pgsql=shared,${BUILDLINK_PREFIX.postgresql-lib}
+CONFIGURE_ARGS+=	--with-pgsql=shared,${PGSQL_PREFIX}
 
-.include "../../databases/postgresql-lib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

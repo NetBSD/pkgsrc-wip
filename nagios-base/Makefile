@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/06/02 16:02:29 cubidou Exp $
+# $NetBSD: Makefile,v 1.8 2004/07/25 16:22:57 marc Exp $
 #
 
 DISTNAME=	nagios-1.2
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--with-mysql-lib=${LOCALBASE}/lib/mysql		\
 CONFIGURE_ARGS+=	--with-pgsql-lib=${LOCALBASE}/pgsql \
 			--with-pgsql-inc=${LOCALBASE}/pgsql \
 			--with-pgsql-xdata
-.include "../../databases/postgresql-lib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .endif
 
 CONFIGURE_ARGS+=	--with-gd-lib=${LOCALBASE}/lib		\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/26 14:42:22 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/25 16:22:58 marc Exp $
 
 DISTNAME=	mnogosearch-3.1.21
 CATEGORIES=	www databases
@@ -38,9 +38,9 @@ DB_TYPE=		--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 .endif
 
 .if defined(USE_PGSQL) && ${USE_PGSQL} == YES
-.include "../../databases/postgresql-lib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 LIBS=			-Wl,-R${PREFIX}/lib/postgresql
-DB_TYPE=		--with-pgsql=${BUILDLINK_PREFIX.postgresql-lib}
+DB_TYPE=		--with-pgsql=${PGSQL_PREFIX}
 .endif
 
 CONFIGURE_ARGS+=	${DB_TYPE}
