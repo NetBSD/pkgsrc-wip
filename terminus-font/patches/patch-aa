@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/26 21:09:23 mpasternak Exp $
+
+--- Makefile~	Tue Dec  9 16:52:11 2003
++++ Makefile	Fri Dec 26 21:04:10 2003
+@@ -60,7 +60,7 @@
+ PCF_28N	= ter-128n.pcf ter-228n.pcf ter-528n.pcf ter-928n.pcf ter-c28n.pcf ter-d28n.pcf ter-f28n.pcf ter-g28n.pcf ter-k28n.pcf ter-p28n.pcf ter-x28n.pcf
+ PCF	= $(PCF_14N) $(PCF_14B) $(PCF_16N) $(PCF_16B) $(PCF_20N) $(PCF_20B) $(PCF_24N) $(PCF_24B) $(PCF_28N)
+ 
+-all: $(PSF) $(PCF)
++all: $(PCF)
+ psf: $(PSF)
+ psfx: $(PSFX)
+ raw: $(RAW)
+@@ -71,9 +71,7 @@
+ psfdir	= $(prefix)/share/consolefonts
+ x11dir	= $(prefix)/X11R6/lib/X11/fonts/local
+ 
+-install: $(PSF) $(PCF)
+-	mkdir -p $(psfdir)
+-	for i in $(PSF) ; do gzip -c $$i > $(psfdir)/$$i.gz ; done
++install: $(PCF)
+ 	mkdir -p $(x11dir)
+ 	for i in $(PCF) ; do gzip -c $$i > $(x11dir)/$$i.gz ; done
+ 

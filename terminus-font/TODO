@@ -1,0 +1,10 @@
+$Id: TODO,v 1.1.1.1 2003/12/26 21:09:23 mpasternak Exp $
+
+Fri Dec 26 21:07:16 CET 2003
+- this font can do Linux console fonts. Anyone willing to create support
+  for it?
+  (eg. installation, PLIST.Linux and testing) ?
+- make it include fonts.mk -- anyone for it? I don't quite understand,
+  what fonts.mk is for.
+
+	-- dotz@irc.pl
