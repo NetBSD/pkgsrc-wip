@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/24 06:23:00 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/07 15:00:17 bencollver Exp $
 #
 
 DISTNAME=		unmo318
@@ -13,7 +13,7 @@ MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.un4seen.com/mo3.html
 COMMENT=		MO3 decoder
 
-BUILD_DEPENDS+=		upx>=1.24:../../wip/upx
+BUILD_DEPENDS+=		upx>=1.24:../../archivers/upx
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86
