@@ -1,2 +1,2 @@
 - apply IPv6 patch
-- add SSL support
+- fix slrnface's core dump
