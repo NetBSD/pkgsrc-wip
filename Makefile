@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.209 2003/06/03 04:44:46 xtraeme Exp $
-# $NetBSD: Makefile,v 1.209 2003/06/03 04:44:46 xtraeme Exp $
+# $Id: Makefile,v 1.210 2003/06/03 09:27:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.210 2003/06/03 09:27:06 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -177,7 +177,6 @@ SUBDIR+=	words
 SUBDIR+=	xawtv
 SUBDIR+=	xevil
 SUBDIR+=	xml2doc
-SUBDIR+=	xmule
 SUBDIR+=	xplore
 SUBDIR+=	zebra-pj
 

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/01 10:24:49 marc Exp $
-
-SHA1 (xmule-1.4.0.tar.gz) = c42971babe4f771c512b53324b5bff64209d0de2
-Size (xmule-1.4.0.tar.gz) = 1773772 bytes
-SHA1 (patch-aa) = 3cc3631e7259e759df8d685a473586da82025837
-SHA1 (patch-ab) = dfa3b579fcd17f7768369a7b7abb84e4da64adff
-SHA1 (patch-ac) = 81c53bbe3cb585351892f19c64d410a251285fdc
-SHA1 (patch-ad) = 3a14fc689adc2a9f46958bc6d881b8d14163dbc8
