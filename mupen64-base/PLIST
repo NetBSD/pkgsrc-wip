@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/17 00:03:17 xtraeme Exp $
+bin/mupen64
+share/doc/mupen64/readme.pdf
+share/mupen64/lang/dutch.lng
+share/mupen64/lang/english.lng
+share/mupen64/lang/french.lng
+share/mupen64/lang/german.lng
+share/mupen64/lang/italian.lng
+share/mupen64/lang/spanish.lng
+share/mupen64/logo.xpm
+share/mupen64/mupen64
+share/mupen64/mupen64_nogui
+share/mupen64/mupen64.ini
+share/mupen64/roms/pong.v64.gz
+share/mupen64/roms/fire.bin.gz
+@dirrm share/mupen64/lang
+@dirrm share/mupen64/roms
+@dirrm share/mupen64/save
+@dirrm share/mupen64/scripts
+@dirrm share/mupen64/plugins
+@dirrm share/mupen64
+@dirrm share/doc/mupen64

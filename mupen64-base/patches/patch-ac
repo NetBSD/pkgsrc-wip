@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/04/17 00:03:18 xtraeme Exp $
+
+--- main/plugin.c.orig	2004-04-16 22:23:52.000000000 +0200
++++ main/plugin.c	2004-04-16 22:24:30.000000000 +0200
+@@ -33,6 +33,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
++#include <sys/syslimits.h>
+ 
+ #include "winlnxdefs.h"
+ #include "plugin.h"

@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/04/17 00:03:20 xtraeme Exp $
+
+--- main/gui_gtk/config.h.orig	2004-04-16 22:39:37.000000000 +0200
++++ main/gui_gtk/config.h	2004-04-16 22:40:01.000000000 +0200
+@@ -18,7 +18,11 @@
+ #ifndef __CONFIG_H__
+ #define __CONFIG_H__
+ 
++#ifdef __Linux__
+ #include <linux/limits.h>
++#else
++#include <sys/syslimits.h>
++#endif
+ 
+ #define MAX_ROMDIRS	100
+ 
