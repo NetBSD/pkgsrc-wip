@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/09 13:52:42 poppnk Exp $
+
+--- configure.orig	2004-02-20 21:17:41.000000000 +0000
++++ configure
+@@ -7977,7 +7977,7 @@ if $have_fortran_compiler; then
+ %.c : %.f
+ 
+ %.o : %.f
+-	$(FC) -c $(ALL_FFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile --tag=CC $(FC) -c $(ALL_FFLAGS) $<
+ 
+ pic/%.o : %.f
+ 	$(FC) -c $(FPICFLAG) $(ALL_FFLAGS) $< -o $@
+@@ -18764,19 +18764,19 @@ case "$canonical_host_type" in
+     cat << \EOF > $bsd_gcc_kluge_targets_frag
+ 
+ lex.o: lex.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
+ 
+ pt-plot.o: pt-plot.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
+ 
+ symtab.o: symtab.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
+ 
+ toplev.o: toplev.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
+ 
+ unwind-prot.o: unwind-prot.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
+ 
+ EOF
+   ;;

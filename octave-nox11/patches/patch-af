@@ -1,0 +1,28 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/03/09 13:52:42 poppnk Exp $
+
+--- liboctave/Makefile.in.orig	2004-02-16 19:57:21.000000000 +0000
++++ liboctave/Makefile.in
+@@ -201,8 +201,9 @@ endif
+ 
+ liboctave.$(LIBEXT): $(LIBOCTAVE_OBJECTS)
+ 	rm -f $@
+-	$(TEMPLATE_AR) $(TEMPLATE_ARFLAGS) $@ $(LIBOCTAVE_OBJECTS)
+-	$(RANLIB) $@
++	${LIBTOOL} --mode=link ${CC} -o liboctave.$(LIBEXT) \
++		$(LIBOCTAVE_OBJECTS:.o=.lo) -rpath ${PREFIX}/lib \
++		-version-info ${version:2.1.%=2:%}
+ 
+ liboctave.$(SHLEXT_VER): liboctave.$(SHLEXT)
+ 	rm -f $@
+@@ -229,9 +230,8 @@ install-lib:
+ 	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(octlibdir)
+ 	if $(STATIC_LIBS); then \
+ 	  rm -f $(DESTDIR)$(octlibdir)/liboctave.$(LIBEXT); \
+-	  $(INSTALL_DATA) liboctave.$(LIBEXT) \
+-	    $(DESTDIR)$(octlibdir)/liboctave.$(LIBEXT); \
+-	  $(RANLIB) $(DESTDIR)$(octlibdir)/liboctave.$(LIBEXT); \
++	  ${LIBTOOL} --mode=install $(INSTALL_DATA) liboctave.$(LIBEXT) \
++	    ${PREFIX}/lib; \
+ 	fi
+ 	if $(SHARED_LIBS); then \
+ 	  rm -f $(DESTDIR)$(octlibdir)/liboctave.$(SHLLIB_VER); \
