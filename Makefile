@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1346 2004/06/26 10:14:28 ianzag Exp $
-# $NetBSD: Makefile,v 1.1346 2004/06/26 10:14:28 ianzag Exp $
+# $Id: Makefile,v 1.1347 2004/06/26 18:19:15 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.1347 2004/06/26 18:19:15 grantbeattie Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -326,7 +326,6 @@ SUBDIR+=	libassuan
 SUBDIR+=	libavc1394
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
-SUBDIR+=	libdv
 SUBDIR+=	libetpan
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libhydrogen
