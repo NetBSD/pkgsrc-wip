@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.380 2003/08/18 13:38:48 xtraeme Exp $
-# $NetBSD: Makefile,v 1.380 2003/08/18 13:38:48 xtraeme Exp $
+# $Id: Makefile,v 1.381 2003/08/19 06:48:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.381 2003/08/19 06:48:48 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -95,6 +95,7 @@ SUBDIR+=	foobillard
 SUBDIR+=	freenet-tools
 SUBDIR+=	frontpage
 SUBDIR+=	fspanel
+SUBDIR+=	fsv
 SUBDIR+=	fuse
 SUBDIR+=	fuse-utils
 SUBDIR+=	fwbuilder
