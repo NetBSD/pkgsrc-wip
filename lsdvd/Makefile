@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/06 23:00:12 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.3 2004/03/29 02:57:01 blef Exp $
 
 DISTNAME=	lsdvd-0.10
 CATEGORIES=	graphics
@@ -9,8 +8,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://acidrip.thirtythreeandathird.net/lsdvd.html
 COMMENT=	C application for reading the contents of a DVD
 
-USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
+USE_BUILDLINK3=		yes
 
-.include "../../multimedia/libdvdread/buildlink2.mk"
+.include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
