@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/08/07 11:27:57 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/20 16:31:54 thomasklausner Exp $
 
-DISTNAME=	mc-4.6.0
+DISTNAME=	mc-4.6.1-pre1
+PKGNAME=	mc-4.6.1rc1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ibiblio.org/pub/Linux/utils/file/managers/mc/ \
 		${MASTER_SITE_SUNSITE:=utils/file/managers/mc/}
@@ -32,7 +33,7 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 MC_FEATURES=		edit charset largefile samba subshell vfs x11
 MC_DISABLE_FEATURES=	x11 samba
 
-MC_SCREEN_LIBRARY= mcslang
+MC_SCREEN_LIBRARY= slang
 
 .for feature in ${MC_FEATURES}
 

@@ -1,22 +1,23 @@
-@comment $NetBSD: PLIST.vfs,v 1.2 2003/10/16 11:59:19 thomasklausner Exp $
+@comment $NetBSD: PLIST.vfs,v 1.3 2004/12/20 16:31:54 thomasklausner Exp $
 share/mc/extfs/README
-share/mc/extfs/extfs.ini
-share/mc/extfs/sfs.ini
-share/mc/extfs/bpp
-share/mc/extfs/rpm
-share/mc/extfs/trpm
 share/mc/extfs/a
 share/mc/extfs/apt
 share/mc/extfs/audio
+share/mc/extfs/bpp
 share/mc/extfs/deb
 share/mc/extfs/deba
 share/mc/extfs/debd
 share/mc/extfs/dpkg
+share/mc/extfs/extfs.ini
 share/mc/extfs/hp48
+share/mc/extfs/iso9660
 share/mc/extfs/lslR
 share/mc/extfs/mailfs
 share/mc/extfs/patchfs
+share/mc/extfs/rpm
 share/mc/extfs/rpms
+share/mc/extfs/sfs.ini
+share/mc/extfs/trpm
 share/mc/extfs/uar
 share/mc/extfs/uarj
 share/mc/extfs/uha
