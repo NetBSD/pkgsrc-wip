@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/15 16:44:56 moubctez Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/26 09:23:33 moubctez Exp $
 bin/gg2
 include/gg2_core.h
 lib/gg2/libGUI_plugin.a
@@ -231,7 +231,6 @@ share/gg2/pixmaps/icons/rozgwiazda/gadu-gadu-offline-descr.png
 share/gg2/pixmaps/icons/rozgwiazda/gadu-gadu-offline.png
 share/gg2/pixmaps/icons/rozgwiazda/gadu-gadu-online-descr.png
 share/gg2/pixmaps/icons/rozgwiazda/gadu-gadu-online.png
-share/gg2/pixmaps/icons/rozgwiazda/gadu-gadu.png
 share/gg2/pixmaps/icons/rozgwiazda/icon.png
 share/gg2/pixmaps/icons/rozgwiazda/jabber.png
 share/gg2/pixmaps/icons/rozgwiazda/license.txt
@@ -264,6 +263,7 @@ share/gg2/pixmaps/jabber.png
 share/gg2/pixmaps/new-msg.png
 share/gg2/pixmaps/offline.png
 share/gg2/pixmaps/online.png
+share/gg2/pixmaps/send-im.png
 share/gg2/pixmaps/show-hide-inactive.png
 share/gg2/pixmaps/sms.png
 share/gg2/pixmaps/sms_i.png
@@ -292,6 +292,7 @@ share/gg2/themes/vgreen2.theme
 share/gg2/themes/vred2.theme
 share/gg2/themes/white2.theme
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gg2.mo
+share/pixmaps/gg2.png
 @dirrm share/gg2/themes
 @dirrm share/gg2/sounds
 @dirrm share/gg2/pixmaps/icons/tlen-3d
