@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/11/13 09:14:00 jeremy-c-reed Exp $
+
+--- xbelmark.py.orig	2003-11-13 00:57:56.000000000 -0800
++++ xbelmark.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.1
++#!/usr/bin/python
+ 
+ ## This program is free software; you can redistribute it and/or modify
+ ## it under the terms of the GNU General Public License as published by
+@@ -196,7 +196,7 @@ class MyHandler(handler.ContentHandler):
+ 		return s
+ 		
+ def usage():
+-	print "%s [-e] [-i] [-h] [-t]\n  -e Extract mode (disables HTML headers)\n  -i No index mode\n  -h Help mode\n  -t No top links" % sys.argv[0]
++	print "%s [-e] [-i] [-h] [-t] [file]\n  -e Extract mode (disables HTML headers)\n  -i No index mode\n  -h Help mode\n  -t No top links\n  file defaults to ~/.galeon/bookmarks.xbel" % sys.argv[0]
+ 
+ def main():
+ 	global extractMode, noIndexMode, noTopLinksMode

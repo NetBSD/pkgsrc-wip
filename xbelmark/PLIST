@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/13 09:14:00 jeremy-c-reed Exp $
+bin/xbelmark.py
+share/doc/xbelmark/README
+@dirrm share/doc/xbelmark

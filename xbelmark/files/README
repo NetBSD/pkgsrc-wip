@@ -1,0 +1,18 @@
+xbelmark.py is a short script written in python2 for converting              
+Galeon/XBEL XML bookmarks into readable HTML. It is compatible with         
+Galeon version >= 1.2.
+
+Author:
+  Lennart Poettering
+
+Homepage:
+  http://www.stud.uni-hamburg.de/users/lennart/projects/xbelmark/
+
+Usage:
+
+  xbelmark.py [-e] [-i] [-h] [-t] [file]
+    -e Extract mode (disables HTML headers)
+    -i No index mode
+    -h Help mode
+    -t No top links
+    file defaults to ~/.galeon/bookmarks.xbel
