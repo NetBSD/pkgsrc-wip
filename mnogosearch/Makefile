@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/10 12:09:32 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/10 23:36:06 adrian_p Exp $
 
 DISTNAME=	mnogosearch-3.1.21
 CATEGORIES=	www databases
@@ -15,6 +15,7 @@ USE_PKGINSTALL=         YES
 PKG_SYSCONFSUBDIR=	mnogosearch
 MNOGOSEARCH_DATADIR?=	/var/mnogosearch
 EGDIR=			${PREFIX}/share/examples/mnogosearch
+DOCDIR=			${PREFIX}/share/doc/mnogosearch
 BUILD_DEFS+=		MNOGOSEARCH_DATADIR USE_PGSQL USE_MYSQL
 OWN_DIRS+=		${MNOGOSEARCH_DATADIR}
 DB_TYPE=		--with-built-in
@@ -43,6 +44,14 @@ DB_TYPE=		--with-pgsql=${BUILDLINK_PREFIX.postgresql-lib}
 .endif
 
 CONFIGURE_ARGS+=	${DB_TYPE}
+
+post-install:
+
+	${INSTALL_DATA_DIR} ${DOCDIR}/create
+	${INSTALL_DATA}	${WRKSRC}/INSTALL ${DOCDIR}
+	${INSTALL_DATA}	${WRKSRC}/README ${DOCDIR}
+	@${FIND} ${WRKSRC}/create -name CVS -type d | ${XARGS} ${RM} -rf
+	cd ${WRKSRC}/create && ${PAX} -rw . ${DOCDIR}/create
 
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
