@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2004/05/05 12:26:02 johnrshannon Exp $
+
+SHA1 (gdb-6.1.tar.bz2) = 588c967d164f226ed33eb966e765c046bac066a5
+Size (gdb-6.1.tar.bz2) = 12571495 bytes
