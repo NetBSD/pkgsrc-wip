@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2003/12/31 10:52:16 cubidou Exp $
+$NetBSD: patch-aa,v 1.4 2004/02/18 08:48:42 cubidou Exp $
 
---- Makefile.orig	2003-11-09 12:33:31.000000000 +0100
+--- Makefile.orig	2004-01-16 08:48:09.000000000 +0100
 +++ Makefile
-@@ -1,27 +1,28 @@
+@@ -1,26 +1,27 @@
 -INSTALLDIR = /usr/local/lib/gkrellm2/plugins
 +INSTALLDIR = $(PREFIX)/lib/gkrellm2/plugins
- VERSION = 2.0.6
+ VERSION = 2.0.8
  PKGNAME = gkrellm-multiping
  #OPT = -march=athlon -O2
--OPT=-ggdb
-+#OPT=-ggdb
  #CC = gcc-3.0
 -CC = gcc
 +#CC = gcc
@@ -18,8 +16,8 @@ $NetBSD: patch-aa,v 1.3 2003/12/31 10:52:16 cubidou Exp $
  all: pinger multiping.so
  
  pinger: pinger.c
--	$(CC) `pkg-config glib-2.0 --cflags` $(OPT) -lpthread `pkg-config glib-2.0 gthread-2.0 --libs` -Wall -o pinger pinger.c
-+	$(CC) $(CFLAGS) `pkg-config glib-2.0 --cflags` $(OPT) -lpthread `pkg-config glib-2.0 gthread-2.0 --libs` -Wall -o pinger pinger.c
+-	$(CC) `pkg-config glib-2.0 --cflags` $(OPT) -lpthread `pkg-config glib-2.0 --libs` -Wall -o pinger pinger.c
++	$(CC) $(PTHREAD_CFLAGS) $(CFLAGS) `pkg-config glib-2.0 --cflags` $(OPT) $(PTHREAD_DFLAGS) `pkg-config glib-2.0 --libs` -Wall -o pinger pinger.c
  
  multiping.o: multiping.c decal_multiping_status.xpm
 -	$(CC) -Wall -fPIC -Wall `pkg-config gtk+-2.0 --cflags` $(OPT) -DVERSION=\"$(VERSION)\" -c multiping.c
@@ -27,7 +25,7 @@ $NetBSD: patch-aa,v 1.3 2003/12/31 10:52:16 cubidou Exp $
  
  multiping.so: multiping.o
 -	$(CC) -shared -Wl -ggdb `pkg-config gtk+-2.0 --libs`-o multiping.so multiping.o
-+	$(CC) $(CFLAGS) -shared -Wl `pkg-config gtk+-2.0 --libs` $(OPT) -o multiping.so multiping.o
++	$(CC) $(CFLAGS) -shared -Wl `pkg-config gtk+-2.0 --libs`-o multiping.so multiping.o
  
  clean:
  	rm -f *.o *.so core
