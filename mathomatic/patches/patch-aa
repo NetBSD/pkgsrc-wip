@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/05 17:20:38 mjasm Exp $
+
+--- makefile.orig	2003-09-05 12:59:15.000000000 -0400
++++ makefile
+@@ -8,7 +8,7 @@ LFLAGS		= -s
+ #CFLAGS		= -c -DUNIX -DREADLINE
+ #LFLAGS		= -s -lreadline -lcurses
+ 
+-AOUT	=ac
++AOUT	=am_mathomatic
+ OBJECTS	=main.o am.o parse.o cmds.o simplify.o factor.o super.o \
+ 	unfactor.o diff.o complex.o list.o
+ 
