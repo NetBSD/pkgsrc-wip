@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/03/03 20:11:53 poppnk Exp $
+--- vm/sys_linux_host/locks.c.orig	2004-03-03 19:17:45.000000000 +0000
++++ vm/sys_linux_host/locks.c	2004-03-03 19:17:56.000000000 +0000
+@@ -42,7 +42,9 @@
+       (pthread_mutexattr_t *) sys_malloc(sizeof(pthread_mutexattr_t));
+     
+     pthread_mutexattr_init (kind);
++#if __linux__
+     pthread_mutexattr_setkind_np(kind, PTHREAD_MUTEX_RECURSIVE_NP);
++#endif
+     pthread_mutex_init(ret, kind);
+   }
+   else {

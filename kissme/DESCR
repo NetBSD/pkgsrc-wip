@@ -1,0 +1,20 @@
+kissme is Java Virtual Machine (JVM) freely available under the GPL.
+
+It is currently still under development but can run many console java
+applications. The Kissme JVM has the following properties:
+
+    * It runs on UNIX, particularly GNU/Linux.
+    * It is written in C (although the JIT is being written in Java)
+    * It uses native (Operating System) threads, as opposed to user or
+	'green' threads.
+    * It uses a conservative Mark and Sweep garbage collector. (Hopefully
+	this will change in the future.)
+    * It interprets java bytecodes. (A JIT compiler that compiles bytecode
+	to native i386 code is under development, though this project has
+	been inactive for some time.)
+    * It supports an extension to the JVM that implements orthogonal
+	persistence. This is a mechanism in which the JVM transparently
+	migrates Java data structures between memory and a persistent store.
+    * It uses the GNU Classpath runtime libraries. Classpath is a
+	clean-room, open source reimplementation of the standard Java
+	runtime libraries.

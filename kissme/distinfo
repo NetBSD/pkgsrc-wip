@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/03 20:11:50 poppnk Exp $
+
+SHA1 (kissme-0.0.32.tar.gz) = df3e55782d3c8a3e3ee6e219eaa5a339aa1ae1b4
+Size (kissme-0.0.32.tar.gz) = 440456 bytes
+SHA1 (patch-aa) = 6824cfb3473cd4cae6e1eb23e672ddf91eb7ff28
+SHA1 (patch-ab) = e5511fc53eaf941aa5730724bbc7fb07ca273d55
+SHA1 (patch-ac) = 1170735b7698db4cbb970ba8835cc6808945cf22
+SHA1 (patch-ad) = b382fedc43d52dd664c7deb32d748d95c0e37518
+SHA1 (patch-ae) = a4df1d853a53da00807e88cf98625c8886247ecf
+SHA1 (patch-af) = 853187ba0214f48deab494fb19341963f6808fee
+SHA1 (patch-ag) = 78d9a826fdfb020f176e5f7f51b1373cdd15d6ad
+SHA1 (patch-ah) = e8f5ec52fad97f92205adb184602ae54b91ec700
