@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2003/07/23 20:49:06 xtraeme Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2003/07/24 07:02:19 blef Exp $
 bin/Xmark
 bin/appres
 bin/atobm
@@ -108,6 +108,25 @@ bin/xvinfo
 bin/xwd
 bin/xwininfo
 bin/xwud
+include/X11/PM/PM.h
+include/X11/PM/PMproto.h
+include/X11/bitmaps/Dashes
+include/X11/bitmaps/Down
+include/X11/bitmaps/Excl
+include/X11/bitmaps/FlipHoriz
+include/X11/bitmaps/FlipVert
+include/X11/bitmaps/Fold
+include/X11/bitmaps/Left
+include/X11/bitmaps/Right
+include/X11/bitmaps/RotateLeft
+include/X11/bitmaps/RotateRight
+include/X11/bitmaps/Stipple
+include/X11/bitmaps/Term
+include/X11/bitmaps/Up
+include/X11/bitmaps/black6
+include/X11/bitmaps/box6
+include/X11/bitmaps/ldblarrow
+include/X11/bitmaps/rdblarrow
 lib/X11/app-defaults/Beforelight
 lib/X11/app-defaults/Bitmap
 lib/X11/app-defaults/Bitmap-color
@@ -549,45 +568,14 @@ lib/X11/xkb/types/pc
 lib/X11/xkb/xkbcomp
 lib/X11/xman.help
 lib/X11/xsm/system.xsm
-@dirrm lib/X11/xsm
 @dirrm lib/X11/xkb/types
 @dirrm lib/X11/xkb/symbols/xfree68
-@dirrm lib/X11/xkb/symbols/sun
-@dirrm lib/X11/xkb/symbols/sony
 @dirrm lib/X11/xkb/symbols/sgi
 @dirrm lib/X11/xkb/symbols/pc
-@dirrm lib/X11/xkb/symbols/nec
 @dirrm lib/X11/xkb/symbols/macintosh
 @dirrm lib/X11/xkb/symbols/hp
-@dirrm lib/X11/xkb/symbols/fujitsu
-@dirrm lib/X11/xkb/symbols/digital
-@dirrm lib/X11/xkb/symbols
-@dirrm lib/X11/xkb/semantics
-@dirrm lib/X11/xkb/rules
-@dirrm lib/X11/xkb/keymap/sun
-@dirrm lib/X11/xkb/keymap/sgi
-@dirrm lib/X11/xkb/keymap/digital
-@dirrm lib/X11/xkb/keymap
-@dirrm lib/X11/xkb/keycodes/sgi
-@dirrm lib/X11/xkb/keycodes/digital
-@dirrm lib/X11/xkb/keycodes
-@dirrm lib/X11/xkb/geometry/sgi
-@dirrm lib/X11/xkb/geometry/digital
-@dirrm lib/X11/xkb/geometry
-@dirrm lib/X11/xkb/compiled
-@dirrm lib/X11/xkb/compat
-@dirrm lib/X11/xkb
-@dirrm lib/X11/xinit
 @dirrm lib/X11/xedit/lisp/progmodes
 @dirrm lib/X11/xedit/lisp
 @dirrm lib/X11/xedit
 @dirrm lib/X11/xdm/pixmaps
-@dirrm lib/X11/xdm
-@dirrm lib/X11/x11perfcomp
-@dirrm lib/X11/twm
-@dirrm lib/X11/rstart/contexts
-@dirrm lib/X11/rstart/commands/x11r6
-@dirrm lib/X11/rstart/commands
-@dirrm lib/X11/rstart
-@dirrm lib/X11/proxymngr
-@dirrm lib/X11/lbxproxy
+@dirrm lib/X11/fonts/util
