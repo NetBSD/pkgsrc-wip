@@ -1,0 +1,15 @@
+$Id: TODO,v 1.1.1.1 2004/01/01 22:38:26 mpasternak Exp $
+
+Doesn't compile at the time of the writing from standard pkgsrc.  
+**** FIX: Update libnet to 1.1.1 . At the time of the writing it 
+was unavailable from pkgsrc. 
+
+This program is propably now Linux-only, but it could be ported to *BSD and
+patches sent back to author (he has BSD port in plans)
+
+Create PLIST when it compiles.
+
+Use ONLY_FOR_PLATFORM=Linux-*-* propably if porting to NetBSD won't be
+easy/possible (but it seems it _could_ be done, so I'm leaving it now)
+
+	-- dotz@irc.pl

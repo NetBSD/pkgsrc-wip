@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/01 22:38:26 mpasternak Exp $
+etc/bacula/bacula
+etc/bacula/bacula-dir.conf
+etc/bacula/bacula-fd.conf
+etc/bacula/bacula-sd.conf
+etc/bacula/console
+etc/bacula/console.conf
+etc/bacula/create_bdb_database
+etc/bacula/delete_catalog_backup
+etc/bacula/drop_bacula_tables
+etc/bacula/drop_bdb_tables
+etc/bacula/fd
+etc/bacula/gconsole
+etc/bacula/grant_mysql_privileges
+etc/bacula/make_bacula_tables
+etc/bacula/make_bdb_tables
+etc/bacula/make_catalog_backup
+etc/bacula/mtx-changer
+etc/bacula/query.sql
+etc/bacula/startmysql
+etc/bacula/stopmysql
+sbin/bacula-dir
+sbin/bacula-fd
+sbin/bacula-sd
+sbin/bcopy
+sbin/bextract
+sbin/bls
+sbin/bscan
+sbin/btape
+sbin/btraceback
+sbin/btraceback.gdb
+sbin/console
+sbin/dbcheck
+sbin/smtp
+@exec ${MKDIR} %D/etc/bacula/working
+@dirrm etc/bacula/working
+@dirrm etc/bacula

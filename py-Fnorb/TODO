@@ -1,0 +1,6 @@
+$Id: TODO,v 1.1.1.1 2004/01/01 22:38:26 mpasternak Exp $
+
+Make bin/ scripts install with PYPKGSUFX to allow instalation on more than
+one python version on single machine (same as py-twisted and py-Pyro)
+
+	-- dotz@irc.pl

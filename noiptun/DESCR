@@ -1,0 +1,5 @@
+Noiptun is a client-server based application that allows secure
+communication with computers that do not have an IP address. It was started
+as an effort to port the control functionality of Hogwash to the newest
+version but grew into its own project since it doesn't need Hogwash to
+function.
