@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.985 2004/02/19 00:21:23 minskim Exp $
-# $NetBSD: Makefile,v 1.985 2004/02/19 00:21:23 minskim Exp $
+# $Id: Makefile,v 1.986 2004/02/19 00:41:31 minskim Exp $
+# $NetBSD: Makefile,v 1.986 2004/02/19 00:41:31 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -529,7 +529,6 @@ SUBDIR+=	py-Reverend
 SUBDIR+=	py-SQLObject
 SUBDIR+=	py-SciPy
 SUBDIR+=	py-Soya
-SUBDIR+=	py-TTFQuery
 SUBDIR+=	py-albatross
 SUBDIR+=	py-biggles
 SUBDIR+=	py-bsddb
