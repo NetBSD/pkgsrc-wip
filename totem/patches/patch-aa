@@ -1,13 +1,15 @@
-$NetBSD: patch-aa,v 1.1 2003/04/15 18:44:27 bmeurer Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/11 20:29:35 jmmv Exp $
 
---- data/Makefile.in.orig	Tue Apr 15 20:37:32 2003
+http://bugzilla.gnome.org/show_bug.cgi?id=135415
+
+--- data/Makefile.in.orig	2004-02-13 12:22:57.000000000 +0100
 +++ data/Makefile.in
-@@ -124,7 +124,7 @@ app_DATA = totem.applications
- appdir = $(datadir)/application-registry
+@@ -169,7 +169,7 @@ server_DATA = Totem_properties.server
+ server_in_files = Totem_properties.server.in.in._1 Totem_properties.server.in.in._3 servers.sh
  
  schema_in_files = totem.schemas.in totem-video-thumbnail.schemas.in
 -schemadir = $(sysconfdir)/gconf/schemas
-+schemadir = @GCONF_SCHEMA_FILE_DIR@
++schemadir = $(GCONF_SCHEMA_FILE_DIR)
  schema_DATA = $(schema_in_files:.schemas.in=.schemas)
  
- EXTRA_DIST = $(stuff_DATA) $(desktop_in_files) $(keys_DATA) $(app_DATA) $(schema_in_files) lirc_example schemas.sh
+ EXTRA_DIST = $(stuff_DATA) $(desktop_in_files_all) $(keys_DATA) $(app_DATA) $(server_in_files) totem.schemas.in lirc_example schemas.sh totem-random.pl
