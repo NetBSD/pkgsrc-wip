@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/25 02:12:00 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/12 02:47:02 blef Exp $
 #
 
 DISTNAME=	DirectFB-0.9.19
@@ -14,7 +14,7 @@ ONLY_FOR_PLATFORM=     Linux-*-* NetBSD-*-*
 
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 
 CONFIGURE_ARGS+=	--with-gfxdrivers=all
@@ -22,13 +22,13 @@ CONFIGURE_ARGS+=	--with-gfxdrivers=all
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"
-.include "../../devel/SDL/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .endif
 
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
