@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/08/29 15:34:32 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/03 09:39:52 jeremy-c-reed Exp $
 
 DISTNAME=		ed-0.2
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GNU:=ed/}
 
