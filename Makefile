@@ -1,10 +1,9 @@
-# $Id: Makefile,v 1.828 2003/12/30 22:56:22 grantbeattie Exp $
-# $NetBSD: Makefile,v 1.828 2003/12/30 22:56:22 grantbeattie Exp $
+# $Id: Makefile,v 1.829 2004/01/01 03:59:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.829 2004/01/01 03:59:10 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	4stAttack
-SUBDIR+=	NeoPop-SDL
 SUBDIR+=	PPower4
 SUBDIR+=	PyBabelFish
 SUBDIR+=	Pythonol
