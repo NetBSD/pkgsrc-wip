@@ -1,13 +1,8 @@
-Index: cfg.h
-===================================================================
-RCS file: /arthur/cvsd/cfg.h,v
-retrieving revision 1.1
-diff -b -u -w -r1.1 cfg.h
---- cfg.h	3 Aug 2003 15:33:16 -0000	1.1
-+++ cfg.h	8 Jan 2004 05:21:50 -0000
-@@ -100,6 +100,11 @@
-   /* the command that will be run (location of the binary) */
-   char *cvscmd;
+$NetBSD: patch-ax,v 1.2 2004/09/13 11:36:25 marttikuparinen Exp $
+
+--- cfg.h.orig	2004-08-06 20:24:37.000000000 +0300
++++ cfg.h	2004-09-13 14:26:45.000000000 +0300
+@@ -111,2 +111,7 @@
  
 +  /* number of allocated argument pointers in the argument array */
 +  int cvsargac;
@@ -15,5 +10,3 @@ diff -b -u -w -r1.1 cfg.h
 +  int cvsargc;
 +
    /* the arguments that will be passed */
-   char **cvsargs;
- 

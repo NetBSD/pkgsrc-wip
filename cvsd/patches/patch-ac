@@ -1,19 +1,13 @@
-$NetBSD: patch-ac,v 1.3 2004/07/28 21:50:53 schnoebe Exp $
+$NetBSD: patch-ac,v 1.4 2004/09/13 11:36:25 marttikuparinen Exp $
 
---- Makefile.in.orig	2003-09-28 14:10:50.000000000 +0000
-+++ Makefile.in	2004-01-05 16:17:41.000000000 +0000
-@@ -122,6 +122,8 @@
- libexecdir = @libexecdir@
- localstatedir = @localstatedir@
+--- Makefile.in.orig	2004-08-07 23:11:19.000000000 +0300
++++ Makefile.in	2004-09-13 14:25:57.000000000 +0300
+@@ -190,2 +190,4 @@
  mandir = @mandir@
 +exampledir = $(prefix)/share/examples/@PACKAGE@
 +docdir = $(prefix)/share/doc/@PACKAGE@
  mkdir_p = @mkdir_p@
- oldincludedir = @oldincludedir@
- prefix = @prefix@
-@@ -722,17 +724,19 @@
- 
- 
+@@ -769,13 +771,15 @@
  #  install configuration files
 -install-data-local: install-configfile install-initscript
 +install-data-local: install-configfile install-readme
@@ -37,5 +31,3 @@ $NetBSD: patch-ac,v 1.3 2004/07/28 21:50:53 schnoebe Exp $
  	fi
 +	$(INSTALL_DATA) cvsd.conf-dist $(DESTDIR)$(exampledir)/cvsd.conf.example
  
- install-initscript:
- 	if [ ! -d $(DESTDIR)$(sysconfdir)/init.d ]; then \
