@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/13 11:46:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/22 08:28:47 thomasklausner Exp $
 #
 #
 
@@ -35,5 +35,5 @@ post-install:
 
 # "g77" can not be used for external function 
 
-.include "../../lang/f2c/buildlink.mk"
+.include "../../lang/f2c/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
