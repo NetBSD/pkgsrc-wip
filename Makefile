@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.836 2004/01/02 03:40:41 mpasternak Exp $
-# $NetBSD: Makefile,v 1.836 2004/01/02 03:40:41 mpasternak Exp $
+# $Id: Makefile,v 1.837 2004/01/02 03:52:44 mpasternak Exp $
+# $NetBSD: Makefile,v 1.837 2004/01/02 03:52:44 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -587,6 +587,7 @@ SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
 SUBDIR+=	socat
+SUBDIR+=	songwrite
 SUBDIR+=	speedx
 SUBDIR+=	sqlrelay
 SUBDIR+=	sredird
