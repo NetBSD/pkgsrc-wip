@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/02 22:15:55 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2004/02/04 19:44:12 jeremy-c-reed Exp $
 
-SHA1 (gotmail_0.7.9.tar.gz) = 7e8dae74c07a229dd710aae34e9180ed9d86f39b
-Size (gotmail_0.7.9.tar.gz) = 23658 bytes
+SHA1 (gotmail-0.8.1.tar.gz) = 9781f2de29dcb96ba9a52ccbf0f9aa06df2210c8
+Size (gotmail-0.8.1.tar.gz) = 25029 bytes

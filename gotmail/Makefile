@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/02 22:15:55 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/04 19:44:12 jeremy-c-reed Exp $
 #
 
-DISTNAME=		gotmail_${VERSION}
-PKGNAME=		gotmail-${VERSION}
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+DISTNAME=		gotmail-0.8.1
 CATEGORIES=		mail
-MASTER_SITES=		http://savannah.nongnu.org/download/gotmail/stable.pkg/${VERSION}/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gotmail/}
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://www.nongnu.org/gotmail/
+HOMEPAGE=		http://sourceforge.net/projects/gotmail
 COMMENT=		Script to download mail from hotmail.com
 
-VERSION=		0.7.9
+DEPENDS+=		p5-URI>=1.03:../../www/p5-URI
+DEPENDS+=		curl>=7.10.4:../../www/curl
+DEPENDS+=		p5-Net-[0-9]*:../../net/p5-Net
 
+NO_BUILD=		YES
 USE_BUILDLINK2=		YES
 USE_PERL5=		YES
 REPLACE_PERL=		${WRKSRC}/gotmail

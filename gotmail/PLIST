@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/02 22:15:55 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/04 19:44:12 jeremy-c-reed Exp $
 bin/gotmail
-man/man1/gotmail.1.gz
+man/man1/gotmail.1
 share/examples/gotmail/README
 share/examples/gotmail/sample.gotmailrc
 @dirrm share/examples/gotmail
