@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/11/13 11:12:18 bubuchka Exp $
+# $NetBSD: Makefile,v 1.4 2003/11/13 18:40:20 bubuchka Exp $
 
 DISTNAME=	vMac-${VMAC_VERSION}-src
 PKGNAME=	vmac-${VMAC_VERSION}
@@ -14,14 +14,16 @@ COMMENT=	Macintosh Plus Emulator
 
 VMAC_VERSION=	0.1.9.3
 
-# VMAC_GUI may be "motif", "gtk", or "no"
-VMAC_GUI=	motif
-BUILD_DEFS=	VMAC_GUI
+VMAC_MOTIFGUI?=	yes
+BUILD_DEFS=	VMAC_MOTIFGUI
 
-USE_X11BASE=	YES
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS=	--with-x --enable-${VMAC_GUI}gui
+USE_X11BASE=	YES
+CONFIGURE_ARGS=	--with-x
+.if ${VMAC_MOTIFGUI} == "yes"
+CONFIGURE_ARGS+= --enable-motifgui
+.endif
 
 post-extract:
 		${RM} -f ${WRKSRC}/config.cache
@@ -37,9 +39,7 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/CREDITS ${PREFIX}/share/doc/vMac
 		${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/vMac
 
-.if ${VMAC_GUI} == "motif"
-.  include "../../mk/motif.buildlink2.mk"
-.elif ${VMAC_GUI} == "gtk"
-.  include "../../x11/gtk/buildlink2.mk"
+.if ${VMAC_MOTIFGUI} == "yes"
+.include "../../mk/motif.buildlink2.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"

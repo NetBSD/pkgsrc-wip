@@ -1,8 +1,4 @@
-$Id: TODO,v 1.2 2003/11/13 11:12:18 bubuchka Exp $
-
-- The vMac may be built using Motif GUI, GTK GUI, or even without
-  any GUI, but GTK at this moment have broken support in ./configure
-  script.
+$Id: TODO,v 1.3 2003/11/13 18:40:21 bubuchka Exp $
 
 - The Gemuator ROM Board doesn't supported yet on all platforms
   due to missing libc5 or glibc (both have an ioperm() and some
