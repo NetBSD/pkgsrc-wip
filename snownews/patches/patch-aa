@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2003/12/24 22:42:02 bjan2 Exp $
---- Makefile.inc.orig	2003-12-23 19:19:57.000000000 -0700
-+++ Makefile.inc	2003-12-23 19:20:55.000000000 -0700
+$NetBSD: patch-aa,v 1.4 2003/12/27 03:42:01 thomasklausner Exp $
+
+--- Makefile.inc.orig	Tue Dec 23 19:28:09 2003
++++ Makefile.inc
 @@ -1,8 +1,7 @@
 -CC = gcc
 -MAKE = make
@@ -8,7 +9,7 @@ $NetBSD: patch-aa,v 1.3 2003/12/24 22:42:02 bjan2 Exp $
 -PREFIX = /usr/local
 -LOCALEPATH = $(PREFIX)/share/locale
 +MAKE = $(GMAKE)
-+INSTALL = $(INSTALL) -c
++INSTALL = ${BSD_INSTALL_DATA} -c
 +PREFIX = $(LOCALBASE)
 +LOCALEPATH = $(PREFIX)/$(PKGLOCALEDIR)/locale
  DISTFILES = AUTHOR COPYING CREDITS Changelog README README.de README.colors INSTALL INSTALL.solaris INSTALL.FreeOpenNetBSD TODO opml2snow \
