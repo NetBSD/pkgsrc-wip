@@ -1,6 +1,6 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.4 2003/11/28 22:02:45 mpasternak Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.5 2003/11/28 22:32:56 mpasternak Exp $
 # 
-# $Id: linuxbin.pkg.mk,v 1.4 2003/11/28 22:02:45 mpasternak Exp $
+# $Id: linuxbin.pkg.mk,v 1.5 2003/11/28 22:32:56 mpasternak Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 # Currently supports only RPMs, but should be good enough to make
@@ -37,8 +37,6 @@ ONLY_FOR_PLATFORM+=	[NFD]*BSD-*-${LINUX_ARCH_REQD}
 .endif
 
 # PLEASE ADD MORE .if ${LINUX_ARCH_REQD} ifdefs !
-
-
 
 # which linux base (suse/debian?/rh?) do we want:
 LINUX_BASE_REQUIRED?=		suse
@@ -106,16 +104,17 @@ NO_BUILD?=		YES
 
 EMULSUBDIR?=		emul/linux
 EMULDIR?=		${PREFIX}/${EMULSUBDIR}
+EMULOPTDIR?=		${PREFIX}/${EMULSUBDIR}/opt
 
-PLIST_SUBST+=		EMULDIR=${EMULDIR} EMULSUBDIR=${EMULSUBDIR}
-MESSAGE_SUBST+=		EMULDIR=${EMULDIR} EMULSUBDIR=${EMULSUBDIR}
+PLIST_SUBST+=		EMULDIR=${EMULDIR} EMULSUBDIR=${EMULSUBDIR} EMULOPTDIR=${EMULOPTDIR}
+MESSAGE_SUBST+=		EMULDIR=${EMULDIR} EMULSUBDIR=${EMULSUBDIR} EMULOPTDIR=${EMULOPTDIR}
 
 #
 # now, do the _actual_ work:
 #
 # TODO: pkglint is somehow picky about this, anyone could correct it?
 #
-# TODO: add automatic ldconfig for "plain" type
+# TODO: add automatic ldconfig for "plain" packages
 #
 
 .if ${LINUX_BINPKG_FMT}=="rpm"
@@ -141,7 +140,7 @@ do-install:
 	${RPM2PKG} ${RPM2PKGARGS}
 	@if ${GREP} -q 'lib.*\.so' ${PLIST_SRC}; then \
 	  ${ECHO_MSG} "===> [Automatic Linux shared object handling]"; \
-	  ${EMULDIR}/sbin/ldconfig -r ${EMULDIR}; \
+	  ${EMULDIR}/sbin/ldconfig -r ${EMULDIR} || ${TRUE}; \
 	  ${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" >> ${PLIST_SRC}; \
 	  ${ECHO} "@unexec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR} 2>/dev/null" >> ${PLIST_SRC}; \
 	fi
@@ -150,11 +149,11 @@ do-install:
 .if ${LINUX_BINPKG_FMT}=="plain"
 .if !target(do-install)
 do-install:
-	@echo "Please provide do-install target for plain binaries!"
-	@exit -1       	
+	@${ECHO} "Please provide do-install target for plain binaries!"
+	@exit -1
 .endif
 .else
-.error "Please add support for this type of packages!"
+.error "Please add support for this kind of package!"
 .endif
 .endif
 .endif
