@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/07/05 17:12:00 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/12 19:35:05 marttikuparinen Exp $
 
 .include "../xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.2.6
+XFCE4_VERSION=	0.2.8
 
 DISTNAME=	xfce4-systemload-plugin-${XFCE4_VERSION}
 CATEGORIES=	sysutils
