@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/08/17 15:21:11 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/08/17 15:23:04 minskim Exp $
 
 DISTNAME=	python-xlib-0.12
 PKGNAME=	${PYPKGPREFIX}-Xlib-0.12
@@ -12,7 +12,6 @@ COMMENT=	Functional X client library for Python
 USE_BUILDLINK3=	yes
 
 PYDISTUTILSPKG= yes
-PYBINMODULE=    yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
