@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1610 2005/01/12 14:09:00 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1610 2005/01/12 14:09:00 xtraeme Exp $
+# $Id: Makefile,v 1.1611 2005/01/12 19:30:34 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1611 2005/01/12 19:30:34 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -174,6 +174,7 @@ SUBDIR+=	eboard-extras
 SUBDIR+=	eciadsl-usermode
 SUBDIR+=	ecl
 SUBDIR+=	ecore
+SUBDIR+=	editline
 SUBDIR+=	edje
 SUBDIR+=	eic
 SUBDIR+=	electricsheep
