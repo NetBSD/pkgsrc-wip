@@ -1,7 +1,9 @@
-$Id: TODO,v 1.2 2004/01/17 20:15:45 blef Exp $
+$Id: TODO,v 1.3 2004/02/29 21:39:04 marc Exp $
 
 py-twisted should install its binaries (bin/*) with
 ${PYVERSSUFFIX} appended. Like eg. devel/py-checker does. That way
 py-twisted could be installed for different python versions at the same
 time.
 (suggested by recht@netbsd.org)
+
+- Twisted 1.2.0
