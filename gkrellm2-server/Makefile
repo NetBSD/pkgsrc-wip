@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/09/15 15:08:59 cubidou Exp $
+# $NetBSD: Makefile,v 1.10 2003/09/25 20:06:51 uid117197 Exp $
 .include "../../wip/gkrellm2/Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm-server
@@ -16,6 +16,8 @@ CONF_FILES=		${PREFIX}/share/examples/gkrellm-server/gkrellmd.conf ${PREFIX}/etc
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD")
 SPECIAL_PERMS+=         ${PREFIX}/bin/gkrellmd ${ROOT_USER} kmem 2711
 .endif
+
+NOT_FOR_PLATFORM=	IRIX-*
 
 MAKE_ENV+=		MODULES=server
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/09/15 15:08:58 cubidou Exp $
+# $NetBSD: Makefile,v 1.10 2003/09/25 20:06:51 uid117197 Exp $
 .include "Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm
@@ -19,7 +19,7 @@ PTHREAD_OPTS=		require
 SPECIAL_PERMS+=		${PREFIX}/bin/gkrellm ${ROOT_USER} kmem 2711
 .endif
 
-ONLY_FOR_PLATFORM=	NetBSD-* FreeBSD-* OpenBSD-* Linux-*
+NOT_FOR_PLATFORM=	IRIX-*
 
 .include "../../mk/bsd.prefs.mk"
 
