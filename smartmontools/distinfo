@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/07/13 20:20:41 shattered Exp $
-
-SHA1 (smartmontools-5.32.tar.gz) = 2af09136578ea59565ad00b3638afe9700ed26a2
-Size (smartmontools-5.32.tar.gz) = 408224 bytes
-SHA1 (patch-ai) = 33a4d52446688dbb10e029de7794609bb0eea326
-SHA1 (patch-aj) = 4648f5217d33fc10836df4f60393163548cc554f
-SHA1 (patch-ak) = 416afdab68d5785db58d7f05d8e6f914012b9768
