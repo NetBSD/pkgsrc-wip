@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/06/16 04:01:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2004/06/16 04:39:04 xtraeme Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -20,7 +20,7 @@ REPLACE_PERL=		tools/dspam_genaliases.in \
 
 PKGCONFIG_OVERRIDE+=	dspam.pc.in
 
-BDB_ACCEPTED=		db3 db4
+BDB_ACCEPTED=		db4 db3
 
 BUILD_DEFS+=		DSPAM_DELIVERY_AGENT
 BUILD_DEFS+=		DSPAM_HOME
