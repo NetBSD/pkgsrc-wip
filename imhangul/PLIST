@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/31 07:19:09 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/26 05:02:50 minskim Exp $
+lib/gtk-2.0/immodules/im-hangul.a
 lib/gtk-2.0/immodules/im-hangul.la
 lib/gtk-2.0/immodules/im-hangul.so
 @dirrm lib/gtk-2.0/immodules
-@unexec %D/bin/gtk-query-immodules-2.0 > %D/etc/gtk-2.0/gtk.immodules

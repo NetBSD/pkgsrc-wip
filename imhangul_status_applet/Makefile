@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/25 02:23:16 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/26 05:02:50 minskim Exp $
 #
 
 DISTNAME=		imhangul_status_applet-0.2
@@ -15,6 +15,8 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
