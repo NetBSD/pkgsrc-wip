@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.718 2003/12/02 19:25:43 froz Exp $
-# $NetBSD: Makefile,v 1.718 2003/12/02 19:25:43 froz Exp $
+# $Id: Makefile,v 1.719 2003/12/03 05:42:07 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.719 2003/12/03 05:42:07 marttikuparinen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -648,7 +648,6 @@ SUBDIR+=	xbsql
 SUBDIR+=	xchm
 SUBDIR+=	xevil
 SUBDIR+=	xextensions
-SUBDIR+=	xfce4-diskperf-plugin
 SUBDIR+=	xmail
 SUBDIR+=	xml2doc
 SUBDIR+=	xmms-dumb
