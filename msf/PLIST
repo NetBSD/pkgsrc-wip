@@ -1,25 +1,26 @@
-@comment $NetBSD: PLIST,v 1.5 2004/10/19 14:32:01 adrian_p Exp $
-share/doc/msf/7f8d5320.0
-share/doc/msf/BUGS
-share/doc/msf/COPYING
-share/doc/msf/COPYING.Artistic
-share/doc/msf/COPYING.GNU
-share/doc/msf/COPYING.InlineEgg
-share/doc/msf/CrashCourse.doc
-share/doc/msf/CrashCourse.html
-share/doc/msf/CrashCourse.pdf
-share/doc/msf/CrashCourse.sxw
-share/doc/msf/Environment.txt
-share/doc/msf/QUICKSTART.cygwin
-share/doc/msf/QUICKSTART.impurity
-share/doc/msf/QUICKSTART.msfcli
-share/doc/msf/QUICKSTART.msfconsole
-share/doc/msf/QUICKSTART.msfweb
-share/doc/msf/QUICKSTART.ssl
-share/doc/msf/QUICKSTART.tabcompletion
-share/doc/msf/SECURITY
-share/doc/msf/VERSION
-share/doc/msf/cacert.pem
+@comment $NetBSD: PLIST,v 1.6 2004/10/19 15:00:06 adrian_p Exp $
+share/msf/docs/7f8d5320.0
+share/msf/docs/BUGS
+share/msf/docs/COPYING
+share/msf/docs/COPYING.Artistic
+share/msf/docs/COPYING.GNU
+share/msf/docs/COPYING.InlineEgg
+share/msf/docs/CrashCourse.doc
+share/msf/docs/CrashCourse.html
+share/msf/docs/CrashCourse.pdf
+share/msf/docs/CrashCourse.sxw
+share/msf/docs/Environment.txt
+share/msf/docs/QUICKSTART.cygwin
+share/msf/docs/QUICKSTART.impurity
+share/msf/docs/QUICKSTART.msfcli
+share/msf/docs/QUICKSTART.msfconsole
+share/msf/docs/QUICKSTART.msfweb
+share/msf/docs/QUICKSTART.ssl
+share/msf/docs/QUICKSTART.tabcompletion
+share/msf/docs/SECURITY
+share/msf/docs/VERSION
+share/msf/docs/cacert.pem
+share/doc/msf
 share/msf/data/shelldemo
 share/msf/data/vncdll.dll
 share/msf/encoders/None.pm
@@ -527,5 +528,5 @@ share/msf/src/shellcode/hexify.sh
 @dirrm share/msf/sdk/docs             
 @dirrm share/msf/sdk                  
 @dirrm share/msf/data                 
-@dirrm share/msf      
-@dirrm share/doc/msf
+@dirrm share/msf/docs
+@dirrm share/msf
