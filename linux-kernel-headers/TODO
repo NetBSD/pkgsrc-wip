@@ -1,3 +1,11 @@
+gcc-3.3.3 doesn't allow syntax used in files asm/byteorder.h and
+linux/byteorder/swab.h, which is included by the previous one.
+for example:
+http://lkml.org/lkml/2004/2/23/117
+http://securityfocus.com/archive/89/355405/2004-02-22/2004-02-28/0
+http://archives.linuxfromscratch.org/mail-archives/lfs-hackers/2004-February/000541.html
+need to patch this
+
 should this install include/linux/config/* ?
 
 should this install include/linux/compile.h ?
