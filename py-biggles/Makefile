@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 16:04:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/21 03:14:12 minskim Exp $
 #
 
 DISTNAME=	python-biggles-1.6.3
-PKGNAME=        ${PYPKGPREFIX}-biggles-1.6.3
+PKGNAME=        ${PYPKGPREFIX}${DISTNAME:S/python//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=biggles/}
 
@@ -13,9 +13,9 @@ COMMENT= 	Python module for creating 2D scientific plots
 USE_X11=	yes
 PYDISTUTILSPKG= yes
 PYBINMODULE=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 .include "../../lang/python/extension.mk"
-.include "../../math/py-Numeric/buildlink2.mk"
-.include "../../graphics/plotutils/buildlink2.mk"
+.include "../../math/py-Numeric/buildlink3.mk"
+.include "../../graphics/plotutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
