@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1568 2004/12/03 17:26:28 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1568 2004/12/03 17:26:28 thomasklausner Exp $
+# $Id: Makefile,v 1.1569 2004/12/05 08:01:19 rxg Exp $
+# $NetBSD: Makefile,v 1.1569 2004/12/05 08:01:19 rxg Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -900,6 +900,7 @@ SUBDIR+=	vtk
 SUBDIR+=	vtk-data
 SUBDIR+=	vtk-docs
 SUBDIR+=	vtk-python
+SUBDIR+=	wang-ttf
 SUBDIR+=	webcleaner
 SUBDIR+=	west
 SUBDIR+=	which
