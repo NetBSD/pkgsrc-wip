@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1008 2004/02/22 01:36:21 minskim Exp $
-# $NetBSD: Makefile,v 1.1008 2004/02/22 01:36:21 minskim Exp $
+# $Id: Makefile,v 1.1009 2004/02/22 01:55:23 minskim Exp $
+# $NetBSD: Makefile,v 1.1009 2004/02/22 01:55:23 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -420,7 +420,6 @@ SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-Parallel-ForkManager
-SUBDIR+=	p5-Perl-Tidy
 SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Sendmail-PMilter
 SUBDIR+=	p5-Set-Crontab
