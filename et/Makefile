@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/17 15:01:19 dhowland Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/23 14:48:57 dhowland Exp $
 #
 
 DISTNAME=       et-linux-2.56-2.x86
@@ -15,8 +15,8 @@ NO_BUILD=	yes
 USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 ONLY_FOR_PLATFORM=	*-*-i386
+
 ETDIR=		${PREFIX}/lib/lokigames/et
-ETSRC=		${WRKSRC}/${DISTNAME}
 EXTRACT_CMD=	${TAIL} +356 ${DOWNLOADED_DISTFILE} | ${GTAR} xzf - \
 		-C ${WRKSRC}
 
