@@ -1,0 +1,16 @@
+Gnus is a flexible message reader running under GNU Emacs. It supports
+reading and composing both news and mail. In addition, it is able to
+use a number of web-based sources as inputs for its groups.
+
+The main Gnus goal is to provide the user with an efficient and
+extensible interface towards dealing with large numbers of messages,
+no matter the form they may have or wherever they may come from.
+
+Major Gnus milestones are named like hurricanes, only backwards, with an 
+odd pronounceable word the first letter of which advances toward the 
+beginning of the alphabet.
+
+T-Gnus (gnu with T-Shirt) is a fork of Oort Gnus that uses SEMI for its MIME 
+support rather than the MIME stuff built into regular Gnus.  It's most 
+important feechur is the printing of an annoyingly long User-agent: 
+header so that everyone can tell you are running an obscure Gnus variant.
