@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2004/02/18 08:58:01 cubidou Exp $
-
-SHA1 (gkrellmms-2.1.14.tar.gz) = 0dde0a65a861aa92566f96ca93fa504e460c6f15
-Size (gkrellmms-2.1.14.tar.gz) = 45043 bytes
-SHA1 (patch-aa) = 27f8e60da4cbdb31cdb78fc2508565aa17eec430
