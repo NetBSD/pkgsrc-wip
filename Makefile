@@ -1,8 +1,9 @@
-# $Id: Makefile,v 1.239 2003/06/12 22:13:59 xtraeme Exp $
-# $NetBSD: Makefile,v 1.239 2003/06/12 22:13:59 xtraeme Exp $
+# $Id: Makefile,v 1.240 2003/06/13 13:46:55 cjep Exp $
+# $NetBSD: Makefile,v 1.240 2003/06/13 13:46:55 cjep Exp $
 
 COMMENT=	WIP pkgsrc packages
 
+SUBDIR+=	3ddesktop
 SUBDIR+=	PPower4
 SUBDIR+=	WEPCrack
 SUBDIR+=	abook
@@ -37,10 +38,10 @@ SUBDIR+=	directfb
 SUBDIR+=	directory-administrator
 SUBDIR+=	drweb
 SUBDIR+=	ed
-SUBDIR+=	emirror
-SUBDIR+=	ezbounce
 SUBDIR+=	elvis
 SUBDIR+=	elvis-x11
+SUBDIR+=	emirror
+SUBDIR+=	ezbounce
 SUBDIR+=	fluxconf
 SUBDIR+=	frontpage
 SUBDIR+=	fuse
@@ -226,7 +227,6 @@ SUBDIR+=	xml2doc
 SUBDIR+=	xplore
 SUBDIR+=	yafray
 SUBDIR+=	zebra-pj
-SUBDIR+=	3ddesktop
 
 
 .include "../mk/bsd.pkg.subdir.mk"
