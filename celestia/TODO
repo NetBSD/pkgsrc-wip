@@ -1,3 +1,3 @@
 - create separate celestia-gtk (or -gnome, since it currently
-  requires GNOME) packages
+  requires GNOME) package
 - honour PKG_SYSCONFDIR
