@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2004/08/03 15:06:34 ppostma Exp $
+# $NetBSD: Makefile,v 1.18 2004/10/25 09:54:06 ppostma Exp $
 
-DISTNAME=		pf-lkm-20040803
+DISTNAME=		pflkm-20041025
 CATEGORIES=		security ipv6
 MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
 
 MAINTAINER=		peter@pointless.nl
-HOMEPAGE=		http://nedbsd.nl/~ppostma/pf-lkm.html
+HOMEPAGE=		http://nedbsd.nl/~ppostma/pf/
 COMMENT=		OpenBSD PF loadable kernel module for NetBSD
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-*
@@ -27,16 +27,60 @@ OWN_DIRS=		${PREFIX}/lkm ${VARBASE}/chroot/pflogd
 OWN_DIRS+=		${PREFIX}/share/examples/${PKGBASE}
 MAKE_DIRS=		${PREFIX}/include/net
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.pf
+PKG_SUPPORTED_OPTIONS=	ifevents
+
+.include "../../mk/bsd.options.mk"
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKG_OPTIONS:Mifevents)
+MAKE_ENV+=		IFEVENTS=yes
+.endif
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/pf.conf \
 		${PREFIX}/share/examples/${PKGBASE}/pf.conf
 	${INSTALL_DATA} ${WRKSRC}/etc/pf.os \
 		${PREFIX}/share/examples/${PKGBASE}/pf.os
 
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/include/net/if_pflog.h ${PREFIX}/include/net/if_pflog.h
+	${INSTALL_DATA} ${WRKSRC}/include/net/if_pfsync.h ${PREFIX}/include/net/if_pfsync.h
+	${INSTALL_DATA} ${WRKSRC}/include/net/pfvar.h ${PREFIX}/include/net/pfvar.h
+	${INSTALL_PROGRAM} ${WRKSRC}/libexec/ftp-proxy/ftp-proxy ${PREFIX}/libexec/ftp-proxy
+	${INSTALL_MAN} ${WRKSRC}/libexec/ftp-proxy/ftp-proxy.cat8 ${PREFIX}/man/cat8/ftp-proxy.0
+	${INSTALL_MAN} ${WRKSRC}/libexec/ftp-proxy/ftp-proxy.8 ${PREFIX}/man/man8/ftp-proxy.8
+	${INSTALL_DATA} ${WRKSRC}/lkm/pf.o ${PREFIX}/lkm/pf.o
+	${INSTALL_MAN} ${WRKSRC}/man/pf.cat4 ${PREFIX}/man/cat4/pf.0
+	${INSTALL_MAN} ${WRKSRC}/man/pflog.cat4 ${PREFIX}/man/cat4/pflog.0
+	${INSTALL_MAN} ${WRKSRC}/man/pfsync.cat4 ${PREFIX}/man/cat4/pfsync.0
+	${INSTALL_MAN} ${WRKSRC}/man/pf.conf.cat5 ${PREFIX}/man/cat5/pf.conf.0
+	${INSTALL_MAN} ${WRKSRC}/man/pf.os.cat5 ${PREFIX}/man/cat5/pf.os.0
+	${INSTALL_MAN} ${WRKSRC}/man/pf.4 ${PREFIX}/man/man4/pf.4
+	${INSTALL_MAN} ${WRKSRC}/man/pflog.4 ${PREFIX}/man/man4/pflog.4
+	${INSTALL_MAN} ${WRKSRC}/man/pfsync.4 ${PREFIX}/man/man4/pfsync.4
+	${INSTALL_MAN} ${WRKSRC}/man/pf.conf.5 ${PREFIX}/man/man5/pf.conf.5
+	${INSTALL_MAN} ${WRKSRC}/man/pf.os.5 ${PREFIX}/man/man5/pf.os.5
+	${INSTALL_PROGRAM} ${WRKSRC}/sbin/pfctl/pfctl ${PREFIX}/sbin/pfctl
+	${INSTALL_MAN} ${WRKSRC}/sbin/pfctl/pfctl.cat8 ${PREFIX}/man/cat8/pfctl.0
+	${INSTALL_MAN} ${WRKSRC}/sbin/pfctl/pfctl.8 ${PREFIX}/man/man8/pfctl.8
+	${INSTALL_PROGRAM} ${WRKSRC}/sbin/pflogd/pflogd ${PREFIX}/sbin/pflogd
+	${INSTALL_MAN} ${WRKSRC}/sbin/pflogd/pflogd.cat8 ${PREFIX}/man/cat8/pflogd.0
+	${INSTALL_MAN} ${WRKSRC}/sbin/pflogd/pflogd.8 ${PREFIX}/man/man8/pflogd.8
+	${INSTALL_PROGRAM} ${WRKSRC}/usr.sbin/authpf/authpf ${PREFIX}/sbin/authpf
+	${INSTALL_MAN} ${WRKSRC}/usr.sbin/authpf/authpf.cat8 ${PREFIX}/man/cat8/authpf.0
+	${INSTALL_MAN} ${WRKSRC}/usr.sbin/authpf/authpf.8 ${PREFIX}/man/man8/authpf.8
+	${INSTALL_PROGRAM} ${WRKSRC}/usr.sbin/tcpdump/pftcpdump ${PREFIX}/sbin/pftcpdump
+	${INSTALL_MAN} ${WRKSRC}/usr.sbin/tcpdump/pftcpdump.cat8 ${PREFIX}/man/cat8/pftcpdump.0
+	${INSTALL_MAN} ${WRKSRC}/usr.sbin/tcpdump/pftcpdump.8 ${PREFIX}/man/man8/pftcpdump.8
+
 SUBST_CLASSES=		path
 SUBST_STAGE.path=	post-patch
-SUBST_FILES.path=	sbin/pfctl/pfctl_parser.h usr.sbin/authpf/pathnames.h
+SUBST_FILES.path=	man/pfsync.4 man/pf.conf.5
+SUBST_FILES.path+=	sbin/pfctl/pfctl.8 sbin/pfctl/pfctl_parser.h
+SUBST_FILES.path+=	usr.sbin/authpf/authpf.8 usr.sbin/authpf/pathnames.h
 SUBST_SED.path=		-e 's,/etc/pf.os,${PKG_SYSCONFDIR}/pf.os,g'
+SUBST_SED.path+=	-e 's,/etc/pf.conf,${PKG_SYSCONFDIR}/pf.conf,g'
 SUBST_SED.path+=	-e 's,/etc/authpf/authpf.conf,${PKG_SYSCONFDIR}/authpf.conf,g'
 SUBST_SED.path+=	-e 's,/etc/authpf/authpf.allow,${PKG_SYSCONFDIR}/authpf.allow,g'
 SUBST_SED.path+=	-e 's,/etc/authpf/authpf.rules,${PKG_SYSCONFDIR}/authpf.rules,g'

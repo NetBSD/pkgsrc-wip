@@ -1,10 +1,10 @@
 Packet Filter (from here on referred to as PF) is OpenBSD's system for
 filtering TCP/IP traffic and doing Network Address Translation.
 
-This port of PF is from OpenBSD 3.5 to NetBSD 2.0.
+This port of PF is from OpenBSD 3.6 to NetBSD 2.0.
 
 Information about PF can be found on the website of Daniel Hartmeier, the
 original author of PF: http://www.benzedrine.cx/pf.html
 
 More information about this port to NetBSD can be found here:
-http://nedbsd.nl/~ppostma/pf-lkm.html
+http://nedbsd.nl/~ppostma/pf/

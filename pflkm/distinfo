@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2004/08/03 15:06:35 ppostma Exp $
+$NetBSD: distinfo,v 1.8 2004/10/25 09:54:06 ppostma Exp $
 
-SHA1 (pf-lkm-20040803.tar.gz) = b5b7d95ce3e83f28a05e4cb307d4a6daac9cfe7a
-Size (pf-lkm-20040803.tar.gz) = 771207 bytes
+SHA1 (pflkm-20041025.tar.gz) = 4f0720bb8fab1d4bde0d68e6927970d98c3628ad
+Size (pflkm-20041025.tar.gz) = 792281 bytes
