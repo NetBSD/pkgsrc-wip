@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.754 2003/12/12 02:48:06 mjasm Exp $
-# $NetBSD: Makefile,v 1.754 2003/12/12 02:48:06 mjasm Exp $
+# $Id: Makefile,v 1.755 2003/12/12 16:13:41 froz Exp $
+# $NetBSD: Makefile,v 1.755 2003/12/12 16:13:41 froz Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -493,6 +493,7 @@ SUBDIR+=	py-generateDS
 SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-ipython
 SUBDIR+=	py-libpcap
+SUBDIR+=	py-mad
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-ming
 SUBDIR+=	py-oak
