@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/07/23 20:30:44 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2003/07/24 01:42:50 xtraeme Exp $
 
 --- config/cf/FreeBSD.cf.in.orig	2003-07-21 09:25:49.000000000 +0000
 +++ config/cf/FreeBSD.cf.in	2003-07-21 09:28:10.000000000 +0000
@@ -14,7 +14,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2003/07/23 20:30:44 xtraeme Exp $
 -# define CplusplusCmd		c++
 -#endif
 +# define CcCmd			@@PKGSRC_CC@@
-+# define CplusplusCmd		@@PKGSRC_CPP@@
++# define CplusplusCmd		@@PKGSRC_CXX@@
  
 -#define CppCmd			/usr/bin/cpp
 +#define CppCmd			@@PKGSRC_CPP@@
