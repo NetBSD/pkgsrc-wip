@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.33 2003/04/05 22:07:05 freyr Exp $
-# $NetBSD: Makefile,v 1.33 2003/04/05 22:07:05 freyr Exp $
+# $Id: Makefile,v 1.34 2003/04/06 00:52:44 marmfield Exp $
+# $NetBSD: Makefile,v 1.34 2003/04/06 00:52:44 marmfield Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -18,6 +18,8 @@ SUBDIR+=	ike-scan
 SUBDIR+=	ion-devel
 SUBDIR+=	ion-dock
 SUBDIR+=	ircservices
+SUBDIR+=	nagios-base
+SUBDIR+=	nagios-plugins
 SUBDIR+=	nvtv
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Net-Jabber
