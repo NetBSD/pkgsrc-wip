@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/18 15:50:17 ppostma Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/17 15:35:55 minskim Exp $
 #
 
 DISTNAME=		PyPanel-1.2
@@ -17,5 +17,5 @@ USE_X11=		yes
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
-.include "../../wip/py-Xlib/buildlink3.mk"
+.include "../../x11/py-Xlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
