@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/30 08:28:20 moubctez Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/30 13:48:29 moubctez Exp $
 #
 
 DISTNAME=		gimp-${GIMP_VER}
@@ -14,10 +14,11 @@ HOMEPAGE=		http://www.gimp.org/
 COMMENT=		Image manipulation program similar to Photoshop[tm]
 
 BUILD_USES_MSGFMT=	yes
+BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.4
 
 CONFLICTS+=		gimp<=1.2.3
 
-GIMP_VER=		1.3.16
+GIMP_VER=		1.3.17
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
@@ -67,10 +68,12 @@ PLIST_SUBST+=	HELPBROWSER=""
 .include "../../x11/gnome-libs/buildlink2.mk"
 .else
 PLIST_SUBST+=	HELPBROWSER="@comment "
+.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/libart2/buildlink2.mk"
+.include "../../graphics/libexif/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/libart2/buildlink2.mk"
 .include "../../www/libgtkhtml/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .endif
