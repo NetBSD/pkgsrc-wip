@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.455 2003/09/17 15:26:15 xtraeme Exp $
-# $NetBSD: Makefile,v 1.455 2003/09/17 15:26:15 xtraeme Exp $
+# $Id: Makefile,v 1.456 2003/09/17 15:34:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.456 2003/09/17 15:34:41 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -155,6 +155,7 @@ SUBDIR+=	ht
 SUBDIR+=	ht2html
 SUBDIR+=	html2latex
 SUBDIR+=	httrack
+SUBDIR+=	hydrogen
 SUBDIR+=	ices
 SUBDIR+=	icmpchat
 SUBDIR+=	idled
@@ -192,6 +193,7 @@ SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgringotts
+SUBDIR+=	libhydrogen
 SUBDIR+=	libogg-nightly
 SUBDIR+=	libshout
 SUBDIR+=	libvc
