@@ -1,1 +1,5 @@
-- NetBSD i386 support is not working
+- Thread bug fixed for curses version only, GTK still buggy.
+- Does not support PlugIns under NetBSD yet. I assume this is
+because ettercap doesn't see that we don't need a library for dlopen()
+under NetBSD.
+

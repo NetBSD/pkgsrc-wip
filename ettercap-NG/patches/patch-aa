@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/12/29 21:49:41 adrian_p Exp $
+$NetBSD: patch-aa,v 1.3 2005/03/04 22:35:55 florian_stoehr Exp $
 
---- share/Makefile.in.orig	Wed Dec 29 17:13:00 2004
-+++ share/Makefile.in	Wed Dec 29 17:13:36 2004
-@@ -329,8 +329,6 @@
+--- share/Makefile.in.orig	2004-12-17 09:50:34.000000000 +0100
++++ share/Makefile.in
+@@ -329,8 +329,6 @@ install-sysconfDATA: $(sysconf_DATA)
  	@list='$(sysconf_DATA)'; for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
  	  f=$(am__strip_dir) \
