@@ -4,3 +4,4 @@
  */ 
 
 #define ProjectRoot PREFIX
+#define BuildHtmlManPages YES
