@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/07 17:54:32 cubidou Exp $
-bin/gkrellmd
-etc/rc.d/gkrellmd
-man/man1/gkrellmd.1
-share/examples/gkrellm-server/gkrellmd.conf
-@dirrm share/examples/gkrellm-server
