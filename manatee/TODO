@@ -1,0 +1,10 @@
+The following packages should be deleted before installing this one. Because the building process will
+be stopped if one of the below packages had been installed.
+	p5-CGI-2.98
+	p5-XML-Simple-2.07
+	p5-XML-Parser-2.31
+	p5-GDGraph-1.43
+	p5-GDTextUtil-0.80
+	p5-GD-2.07
+	p5-Storable-2.09                                          
+- This package should be installed by root

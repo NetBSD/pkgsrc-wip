@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/25 20:27:56 daprice Exp $
+
+SHA1 (manatee-1.8.4.1.tar.gz) = 5e8461d8240561a6d5d5ef6e51c640f5113a62e3
+Size (manatee-1.8.4.1.tar.gz) = 1221043 bytes
+SHA1 (patch-aa) = 67fc8d55a6a61da5d3c5c7bbdf58ec2a0342da5a
