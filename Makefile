@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.648 2003/11/22 21:50:31 mpasternak Exp $
-# $NetBSD: Makefile,v 1.648 2003/11/22 21:50:31 mpasternak Exp $
+# $Id: Makefile,v 1.649 2003/11/23 00:28:13 mpasternak Exp $
+# $NetBSD: Makefile,v 1.649 2003/11/23 00:28:13 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -435,6 +435,7 @@ SUBDIR+=	py-spambayes
 SUBDIR+=	py-spark
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-twisted
+SUBDIR+=	py-twisted-docs
 SUBDIR+=	py-vorbis
 SUBDIR+=	py-willow
 SUBDIR+=	py-weave
