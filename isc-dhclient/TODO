@@ -1,4 +1,4 @@
-$Id: TODO,v 1.3 2004/04/18 17:22:12 mpasternak Exp $
+$Id: TODO,v 1.4 2004/07/07 19:55:04 jeremy-c-reed Exp $
 
 make this build under NetBSD:
 includes/cf/netbsd.h
@@ -18,3 +18,7 @@ patch the Makefile.dist files to change all target to use SEDMANPAGES instead
 
 about rc.d script comments, see TODO of wip/isc-dhcpd, as there are the same
 questions/issues (mpasternak)
+
+maybe modify dhclient-script to not hard-code /etc/ directory for dhclient
+related scripts
+
