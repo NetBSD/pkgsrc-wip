@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.409 2003/09/01 15:15:12 adrian_p Exp $
-# $NetBSD: Makefile,v 1.409 2003/09/01 15:15:12 adrian_p Exp $
+# $Id: Makefile,v 1.410 2003/09/01 17:09:22 adrian_p Exp $
+# $NetBSD: Makefile,v 1.410 2003/09/01 17:09:22 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -286,7 +286,6 @@ SUBDIR+=	pgp6
 SUBDIR+=	pgpenvelope
 SUBDIR+=	php-jpgraph
 SUBDIR+=	php4-exif
-SUBDIR+=	php4-openssl
 SUBDIR+=	picasm
 SUBDIR+=	picprog
 SUBDIR+=	pinball
