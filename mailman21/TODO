@@ -1,0 +1,16 @@
+$NetBSD: TODO,v 1.1.1.1 2003/07/08 14:49:25 adrian_p Exp $
+
+This is a new package of the mailman 2.1.x tree. mailman 2.0.x is already in
+pkgsrc.  The only thing I'd like to clean up is the "${CHMOD} -R a+w ${WRKSRC}"
+but I have to do this or else make clean won't work unless the user does an
+su to root. I tried to capture the build uid so I could do a chown, which I'd
+prefer, but I could not get it working.  If you can think of anything to get
+round this pls email me.
+
+PLEASE NOTE: The package it's self works file - this is just a build issue.
+
+Tested on NetBSD 1.6 i386.
+
+Regards,
+
+Adrian.
