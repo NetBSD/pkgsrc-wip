@@ -1,14 +1,0 @@
-$Id: TODO,v 1.1.1.1 2003/12/23 04:01:53 mpasternak Exp $
-
-Wto 23 Gru 03:59:05 2003 CET
-
-	This package was not tested on NetBSD.
-	
-	This package acts quite strange on FreeBSD:
-	
-Making all in glpng
-/usr/libexec/elf/ar: pngread.o: No such file or directory
-
-	I don't know why. cd ${WRKSRC} && ${GMAKE} works anyway.
-	
-		-- dotz@irc.pl
