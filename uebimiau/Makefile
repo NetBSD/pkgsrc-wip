@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/03 21:45:28 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/03 21:46:52 rillig Exp $
 #
 
 DISTNAME=		uebimiau-2.7.2
@@ -11,7 +11,6 @@ COMMENT=		Web based email client
 
 DEPENDS+=      		ap{,2}-php>=4.3.0:../../www/ap-php
 
-WRKSRC=			${WRKDIR}/uebimiau-2.7.2
 NO_BUILD=		yes
 
 do-install:
