@@ -1,0 +1,7 @@
+$NetBSD: TODO,v 1.1 2003/08/29 11:27:12 adrian_p Exp $
+
+Needs more testing.
+
+In addition this package WILL NOT BUILD unless you copy the module.mk file in
+this directory to pkgsrc/apache2.  This issue is noted in pkg/22637 and you
+will need to do this until, if and when, it ends up in the main pkgsrc tree.
