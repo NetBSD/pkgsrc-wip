@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/30 00:41:15 felix9x Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/10 21:34:52 blef Exp $
 #
 
 DISTNAME=		boost_1_30_0
@@ -11,7 +11,7 @@ MAINTAINER=		felix@students.poly.edu
 HOMEPAGE=		http://www.boost.org/
 COMMENT=	 	Portable C++ multi-threading library
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 BOOST_HDRS= 		${BUILDLINK_PREFIX.boost-base}/include
 BJAM=				${BUILDLINK_PREFIX.boost-base)/bin/bjam
 
@@ -30,5 +30,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/libs/thread/build/bin-stage/$f ${PREFIX}/lib
 .endfor
 
-.include "../../wip/boost-base/buildlink2.mk"
+.include "../../wip/boost-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
