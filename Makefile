@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.485 2003/09/22 23:39:28 mpasternak Exp $
-# $NetBSD: Makefile,v 1.485 2003/09/22 23:39:28 mpasternak Exp $
+# $Id: Makefile,v 1.486 2003/09/24 06:24:30 bencollver Exp $
+# $NetBSD: Makefile,v 1.486 2003/09/24 06:24:30 bencollver Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -400,6 +400,8 @@ SUBDIR+=	typhoon
 SUBDIR+=	uclibc
 SUBDIR+=	udhcp
 SUBDIR+=	umix
+SUBDIR+=	unmo3
+SUBDIR+=	upx
 SUBDIR+=	vba
 SUBDIR+=	vcdgear
 SUBDIR+=	viewcvs
