@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/29 18:04:07 daprice Exp $
+
+--- Makefile.orig	2003-04-07 07:03:22.000000000 -0600
++++ Makefile
+@@ -128,15 +128,15 @@ lib:
+ 
+ lib_install:
+ 	cp .libs/libshp.la .libs/libshp.lai
+-	/bin/sh ./mkinstalldirs /usr/local/lib
+-	/bin/sh ./libtool  --mode=install /usr/bin/install -c libshp.la /usr/local/lib/libshp.la
+-	/usr/bin/install -c .libs/libshp.so.$(LIBSHP_VERSION) /usr/local/lib/libshp.so.$(LIBSHP_VERSION)
+-	(cd /usr/local/lib && rm -f libshp.so.1 && ln -s libshp.so.$(LIBSHP_VERSION) libshp.so.1)
+-	(cd /usr/local/lib && rm -f libshp.so && ln -s libshp.so.$(LIBSHP_VERSION) libshp.so)
+-	chmod +x /usr/local/lib/libshp.so.$(LIBSHP_VERSION)
+-	/usr/bin/install -c .libs/libshp.la /usr/local/lib/libshp.la
+-	/usr/bin/install -c .libs/libshp.a /usr/local/lib/libshp.a
+-	ranlib /usr/local/lib/libshp.a
+-	chmod 644 /usr/local/lib/libshp.a
+-	/bin/sh ./mkinstalldirs /usr/local/include/libshp
+-	/usr/bin/install -c -m 644 shapefil.h /usr/local/include/libshp/shapefil.h
++	/bin/sh ./mkinstalldirs ${PREFIX}/lib
++	/bin/sh ./libtool  --mode=install /usr/bin/install -c libshp.la ${PREFIX}/lib/libshp.la
++	/usr/bin/install -c .libs/libshp.so.$(LIBSHP_VERSION) ${PREFIX}/lib/libshp.so.$(LIBSHP_VERSION)
++	(cd ${PREFIX}/lib && rm -f libshp.so.1 && ln -s libshp.so.$(LIBSHP_VERSION) libshp.so.1)
++	(cd ${PREFIX}/lib && rm -f libshp.so && ln -s libshp.so.$(LIBSHP_VERSION) libshp.so)
++	chmod +x ${PREFIX}/lib/libshp.so.$(LIBSHP_VERSION)
++	/usr/bin/install -c .libs/libshp.la ${PREFIX}/libshp.la
++	/usr/bin/install -c .libs/libshp.a ${PREFIX}/lib/libshp.a
++	ranlib ${PREFIX}/lib/libshp.a
++	chmod 644 ${PREFIX}/lib/libshp.a
++	/bin/sh ./mkinstalldirs ${PREFIX}/include/libshp
++	/usr/bin/install -c -m 644 shapefil.h ${PREFIX}/include/libshp/shapefil.h

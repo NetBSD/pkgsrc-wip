@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/29 18:04:07 daprice Exp $
+
+SHA1 (shapelib-1.2.10.tar.gz) = 436b09b6a90f403e4568460d67560d5730725651
+Size (shapelib-1.2.10.tar.gz) = 167219 bytes
+SHA1 (patch-aa) = 6720587df7a7e467aed2f561c7f3f20091fff4a9
