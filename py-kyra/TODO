@@ -1,0 +1,9 @@
+$Id: TODO,v 1.1.1.1 2004/01/04 06:32:15 mpasternak Exp $
+
+Doesn't configure on my FreeBSD because libSDL is not linked with pthreads.
+
+Add PLIST if you are able to compile it on NetBSD-*
+
+Needs more work.
+
+	-- dotz@irc.pl
