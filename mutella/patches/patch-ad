@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2003/05/20 18:43:44 xtraeme Exp $
+
+--- share/remote/template/modules/Makefile.in.orig	2003-05-20 20:28:04.000000000 +0200
++++ share/remote/template/modules/Makefile.in	2003-05-20 20:28:20.000000000 +0200
+@@ -90,7 +90,7 @@
+ ####### kdevelop will overwrite this part!!! (end)############
+ modules_DATA = connections.html header-start.html sortby.html downloads.html searchcriteria.html uploads.html filter.html searchlist.html addsearch.html footer.html results-detail.html results-grouped-body.html results-grouped-head.html results-ungrouped-body.html results-ungrouped-head.html shortdownloads.html connectioninfo.html header-end.html shortuploads.html
+ 
+-modulesdir = $(datadir)/mutella/remote/template/modules/
++modulesdir = $(datadir)/doc/html/mutella/remote/template/modules/
+ 
+ EXTRA_DIST = $(modules_DATA)
+ subdir = share/remote/template/modules
