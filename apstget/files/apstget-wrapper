@@ -13,6 +13,10 @@ fi
 env QUITE=${QUITE} \
 awk -W interactive '
 {
+	if ( /MAKESUM/ ) {
+		print "INVALID SUM";
+		exit
+	} else
 	if ( ENVIRON["QUITE"] < "1" ) {
 		print $0;
 	} else 

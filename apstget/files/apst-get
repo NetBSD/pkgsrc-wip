@@ -19,6 +19,7 @@ fi
 # PACKAGE_BUILD="0"   # build packages
 # INTERACTIVE="1"     # wait user for confirmations
 # QUITE="1"           # Be silent in builds
+# SKIP_LICENSES="0"   # Ignore LICENSES
 # IGNORE_ERRORS="0"   # Don't stop on failed build
 # UPDATE_METHOD="cvs" # cvsync|cvs|sup|cvsup
 # UPDATE_ARGS=""      # UPDATE_METHOD flags
@@ -26,6 +27,7 @@ fi
 # PREFERED=""         # space-separated list of prefered packages (for dup)
 
 #----->8--------------#
+PKG_RESUME_TRANSFERS=YES # make this as default
 PREFIX=_pfx_
 MAKE=_makebin_
 PKGFIND=${PREFIX}/bin/pkgfind
@@ -104,7 +106,7 @@ do_usage() {
 	echo "variables (environ|_etc_/apstget.conf):"
 	echo "  CLEAN_BUILD=1, INTERACTIVE=1, QUITE=0, IGNORE_ERRORS=0"
 	echo "  UPDATE_METHOD=cvs, UPDATE_ARGS, GET_FIRST=0, PREFERED"
-	echo "  BUILD_PACKAGES=0"
+	echo "  BUILD_PACKAGES=0, SKIP_LICENSES=0"
 }
 
 check_version() {
@@ -254,6 +256,11 @@ do_install() {
 		fi
 		# Add new deps
 		cd ${PKGSRC_DIR}/${A}
+		if [ "${SKIP_LICENSES}" = "1" ];then
+		ACCEPTABLE_LICENSES="`cat Makefile | grep "LICENSE" \
+			|awk -F = '{ print $2 }'`"
+		echo "==> Skipping license: ${ACCEPTABLE_LICENSE}"
+		fi
 		DEPS2=`${MAKE} show-depends-dirs`
 		for B in ${DEPS2} ; do
 			if [ "`echo ${DEPS} | grep ${B}`" = "" ]; then
