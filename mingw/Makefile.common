@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/11/29 18:15:41 mpasternak Exp $
-# $Id: Makefile.common,v 1.1.1.1 2003/11/29 18:15:41 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/11/30 20:53:03 mpasternak Exp $
+# $Id: Makefile.common,v 1.2 2003/11/30 20:53:03 mpasternak Exp $
 
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw/}
 
@@ -23,7 +23,9 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} --exec-prefix=${PREFIX} \
 # buildlink.mk2 files in dependent packages. Unfortunatley, buildlinks
 # don't support them yet :/
 
-MINGWTARGET=		i586-mingw32
+MINGWTARGET=		i586-pc-mingw32
 MINGWCCOREDISTFILE=	gcc-core-3.3.1-20030804-1-src
+
+PATH:=			${CROSSBASE}/bin:${PATH}
 
 .include "../../mk/bsd.pkg.mk"
