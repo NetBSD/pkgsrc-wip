@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.2 2003/07/25 16:02:38 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2003/09/08 14:24:49 jmmv Exp $
 
 SHA1 (idesk-0.3.5.tar.gz) = 63c34874bdfe640908e1329955d2ec266589cc27
 Size (idesk-0.3.5.tar.gz) = 7966 bytes
-SHA1 (patch-aa) = e5dcc40a75814faea2d93676e51d5b23d4b72e6a
-SHA1 (patch-ab) = 5b33e9fe8d9d5faff5eb51a0ae9b782c2bab2683
+SHA1 (patch-ab) = 6a37e76734e24d7f301ffd1ff12f9ffe2612185e

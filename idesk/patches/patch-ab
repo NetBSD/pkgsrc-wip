@@ -1,21 +1,14 @@
-$NetBSD: patch-ab,v 1.1.1.2 2003/07/25 16:02:38 poppnk Exp $
+$NetBSD: patch-ab,v 1.2 2003/09/08 14:24:49 jmmv Exp $
 
---- Makefile	2003-04-27 17:52:39.000000000 +0000
-+++ Makefile.old	2003-04-27 17:45:24.000000000 +0000
-@@ -1,6 +1,6 @@
+--- Makefile.orig	2002-11-09 19:06:52.000000000 +0100
++++ Makefile
+@@ -1,7 +1,7 @@
  cc       = g++
  #cflags   = -g -O2 -W -Wall
 -cflags	 = -g -O2
-+cflags	 = `imlib-config --cflags` `xft-config --cflags` -O3
- libs	 = `imlib-config --libs` -lXft
+-libs	 = `imlib-config --libs` -lXft
++cflags	 = ${CPPFLAGS} ${CFLAGS} `imlib-config --cflags` `xft-config --cflags`
++libs	 = ${LDFLAGS} `imlib-config --libs` -lXft
  bin      = idesk
  
-@@ -17,7 +17,7 @@
- 	$(cc) $(cflags) -c $< -o $@
- 
- install:
--	install $(bin) /usr/local/bin
-+	install $(bin) ${PREFIX}/bin
- 
- clean:
- 	rm -f $(objs) $(bin) *~ core
+ objs     = Desk.o Icon.o Database.o Main.o
