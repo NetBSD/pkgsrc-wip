@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/10/21 11:31:06 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/25 17:14:19 poppnk Exp $
 
-DISTNAME=	apstget-20041022
+DISTNAME=	apstget-20041025
 CATEGORIES=	pkgtools wip
 MASTER_SITES=	# empty
 DISTFILES=	# empty

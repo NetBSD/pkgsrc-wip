@@ -3,9 +3,9 @@
 # APST-GET : Yet Another PkgSrc Tool to manage packages.
 #
 # AUTHOR: pancake < pancake@phreaker.net >
-# DATE: 2004/10/20
+# DATE: 2004/10/25
 #
-# depends: pkg_find, pkg_chk, pkg_tarup, awk
+# depends: pkg_find, pkg_tarup, awk
 #
 
 if [ -e "_etc_/apstget.conf" ]; then
@@ -25,10 +25,13 @@ fi
 
 #----->8--------------#
 PREFIX=_pfx_
+PREFIX=/usr/pkg
 MAKE=${PREFIX}/bin/bmake
-PKGCHK=${PREFIX}/sbin/pkg_chk
 PKGFIND=${PREFIX}/bin/pkgfind
+PKGCHK=${PREFIX}/sbin/pkg_chk
 PKGSRC_DIR=_psd_
+PKGSRC_DIR=/usr/pkgsrc/
+DBDIR=/var/db/pkg/
 DEFAULT_TARGETS="${DEFAULT_TARGETS}"
 if [ "${MAKE_TARGET}" = "" ]; then
 	MAKE_TARGET="clean"
@@ -92,12 +95,38 @@ do_usage() {
 	echo "  UPDATE_METHOD, UPDATE_ARGS, GET_FIRST, PREFERED"
 }
 
+check_version() {
+	cPKG=$1
+	cDIR=$1
+	if [ ! "${cDIR}" = "" ]; then
+	if [ "`echo $cPKG | grep /`" = "" ]; then
+		cDIR=`${PKGFIND} -qx $cPKG`
+	else
+		cPKG=`echo $cPKG | awk -F / '{ print $2 }'`
+	fi
+        IVER=`pkg_info -e $cPKG`
+        if [ "$?" = "1" ]; then
+                echo "missing"
+        else
+                cd ${PKGSRC_DIR}/${cDIR}
+                DVER=`${MAKE} show-var VARNAME=PKGNAME 2> /dev/null`
+                if [ ! "${DVER}" = "${IVER}" ]; then
+                        echo "from ${IVER} to ${DVER}"
+                fi
+        fi
+
+	fi
+}
+
 do_install() {
 	PKG=$1
 	DIR=$1
 	UPD=$2 # Update flag
 	if [ "`echo $PKG | grep /`" = "" ]; then
 		DIR=`${PKGFIND} -qx $PKG`
+		if [ "${DIR}" = "" ]; then
+			DIR=NOTFOUND
+		fi
 	else
 		PKG=`echo $PKG | awk -F / '{ print $2 }'`
 	fi
@@ -115,6 +144,7 @@ do_install() {
 			done
 		done
 	fi
+
 	if [ ! -e "${PKGSRC_DIR}/${DIR}" ]; then
 		if [ "`echo ${DIR}|awk '{print $2}'`" = "" ]; then
 			echo "==> Error! The package $PKG was not found!"
@@ -124,7 +154,9 @@ do_install() {
 			echo "==> Found at: `echo ${DIR}`"
 		fi
 	else
-	STAT="`echo $DIR | ${PKGCHK} -C /dev/stdin -c`"
+
+	#STAT="`echo $DIR | ${PKGCHK} -C /dev/stdin -c`"
+	STAT="`check_version $DIR`"
 	if [ "${STAT}" = "" ]; then
 		echo "==> Package ${DIR} is at the latest version"
 	else
@@ -134,13 +166,14 @@ do_install() {
 	REPLACE=""
 	INSTALL=""
 	for A in ${DEPS} ; do
-		CHK=`echo ${A} | ${PKGCHK} -C /dev/stdin -c`
+		CHK=`check_version ${A}`
+		#CHK=`echo ${A} | ${PKGCHK} -C /dev/stdin -c`
 		if [ ! "`echo ${CHK}|grep missing`" = "" ]; then
 			echo " [i] Enqueueing for install ${A}"
 			INSTALL="${INSTALL} ${A}"
 		else
-		if [ ! "`echo ${CHK}| grep mismatch`" = "" ]; then
-			echo " [u] Need to update ${A}"
+		if [ ! "`echo ${CHK}| grep from`" = "" ]; then
+			echo " [u] Need to update ${A} ${CHK}"
 			if [ "${UPD}" = "1" ]; then
 				REPLACE="${REPLACE} ${A}"
 			else
