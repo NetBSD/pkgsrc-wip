@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.464 2003/09/17 18:08:40 xtraeme Exp $
-# $NetBSD: Makefile,v 1.464 2003/09/17 18:08:40 xtraeme Exp $
+# $Id: Makefile,v 1.465 2003/09/17 18:13:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.465 2003/09/17 18:13:46 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -216,6 +216,7 @@ SUBDIR+=	lmarbles
 SUBDIR+=	mailfilter
 SUBDIR+=	mailman
 SUBDIR+=	man-db
+SUBDIR+=	map-browse
 SUBDIR+=	maradns
 SUBDIR+=	mathomatic
 SUBDIR+=	mc
