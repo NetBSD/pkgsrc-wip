@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/09 02:38:57 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/17 18:26:13 tvierling Exp $
 #
 
 DISTNAME=		atk-1.6.0
@@ -15,6 +15,7 @@ USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libatk-1.0.la
 LIBTOOL_OVERRIDE=	${WRKSRC}/ltmain.sh ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	atk.pc.in
 

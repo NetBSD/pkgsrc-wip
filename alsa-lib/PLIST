@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/12 22:32:24 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:26:12 tvierling Exp $
 bin/alsalisp
 bin/aserver
 include/alsa/alisp.h
@@ -34,11 +34,6 @@ include/alsa/sound/sscape_ioctl.h
 include/alsa/timer.h
 include/alsa/version.h
 include/sys/asoundlib.h
-lib/libasound.a
-lib/libasound.la
-lib/libasound.so
-lib/libasound.so.2
-lib/libasound.so.2.0
 lib/pkgconfig/alsa.pc
 share/aclocal/alsa.m4
 share/alsa/alsa.conf

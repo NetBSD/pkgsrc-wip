@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/05/07 01:57:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/17 18:26:19 tvierling Exp $
 #
 
 DISTNAME=	cherokee-0.4.4-pre3
@@ -13,6 +13,14 @@ COMMENT=	Extremely fast and tiny web server
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/cherokee/libcherokee_common.la
+LIBTOOL_LA_FILES+=	lib/cherokee/libcherokee_gzip.la
+LIBTOOL_LA_FILES+=	lib/cherokee/libcherokee_dirlist.la
+LIBTOOL_LA_FILES+=	lib/cherokee/libcherokee_file.la
+LIBTOOL_LA_FILES+=	lib/cherokee/libcherokee_gnomevfs.la
+LIBTOOL_LA_FILES+=	lib/cherokee/libcherokee_nn.la
+LIBTOOL_LA_FILES+=	lib/cherokee/libcherokee_redir.la
+LIBTOOL_LA_FILES+=	lib/libcherokee.la
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 

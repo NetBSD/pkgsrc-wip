@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/10 18:32:25 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/08/17 18:29:26 tvierling Exp $
 include/X11/Xmu/Atoms.h
 include/X11/Xmu/CharSet.h
 include/X11/Xmu/CloseHook.h
@@ -21,16 +21,6 @@ include/X11/Xmu/WidgetNode.h
 include/X11/Xmu/WinUtil.h
 include/X11/Xmu/Xct.h
 include/X11/Xmu/Xmu.h
-lib/libXmu.a
-lib/libXmu.la
-lib/libXmu.so
-lib/libXmu.so.6
-lib/libXmu.so.6.2
-lib/libXmuu.a
-lib/libXmuu.la
-lib/libXmuu.so
-lib/libXmuu.so.1
-lib/libXmuu.so.1.0
 lib/pkgconfig/xmu.pc
 lib/pkgconfig/xmuu.pc
 @dirrm include/X11/Xmu

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/09 02:39:46 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/08/17 18:31:49 tvierling Exp $
 #
 
 DISTNAME=		pxlib_0.2.0.orig
@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}/pxlib-0.2.0
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libpx.la
 PKGCONFIG_OVERRIDE+=	pxlib.pc.in
 GNU_CONFIGURE=		yes
 

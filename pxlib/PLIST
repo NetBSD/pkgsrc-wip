@@ -1,10 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/04 05:04:31 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:32:05 tvierling Exp $
 include/paradox.h
 include/paradox-gsf.h
 include/pxversion.h
-lib/libpx.a
-lib/libpx.la
-lib/libpx.so.2.0
-lib/libpx.so.2
-lib/libpx.so
 lib/pkgconfig/pxlib.pc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 03:33:49 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:29:19 tvierling Exp $
 include/X11/fonts/FS.h
 include/X11/fonts/FSproto.h
 include/X11/fonts/font.h
@@ -7,10 +7,5 @@ include/X11/fonts/fontenc.h
 include/X11/fonts/fontproto.h
 include/X11/fonts/fontstruct.h
 include/X11/fonts/fsmasks.h
-lib/libXfont.a
-lib/libXfont.la
-lib/libXfont.so
-lib/libXfont.so.0
-lib/libXfont.so.0.0
 lib/pkgconfig/xfont.pc
 @dirrm include/X11/fonts

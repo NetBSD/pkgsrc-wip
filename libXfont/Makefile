@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/13 23:23:30 blef Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/17 18:29:19 tvierling Exp $
 #
 
 DISTNAME=		libXfont-1.4.1
@@ -12,6 +12,7 @@ COMMENT=		Xfont extension (Library)
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libXfont.la
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	xfont.pc.in

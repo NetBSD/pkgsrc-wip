@@ -1,8 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 04:16:03 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:29:32 tvierling Exp $
 include/X11/extensions/XRes.h
-lib/libXRes.a
-lib/libXRes.la
-lib/libXRes.so
-lib/libXRes.so.0
-lib/libXRes.so.0.0
 lib/pkgconfig/xres.pc

@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 18:59:32 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:31:25 tvierling Exp $
 bin/navigatrix
 include/giscoordinate.h
 include/gisdegrees.h
 include/gislocation.h
-lib/libgis.a
-lib/libgis.la
 share/kde/applnk/Applications/navigatrix.desktop
 share/kde/apps/navigatrix/navigatrixui.rc
 share/kde/icons/hicolor/16x16/actions/crosshairs.png

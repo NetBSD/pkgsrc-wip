@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/09 07:22:15 blef Exp $
-lib/gtk-2.0/2.4.0/engines/libflat.a
-lib/gtk-2.0/2.4.0/engines/libflat.la
-lib/gtk-2.0/2.4.0/engines/libflat.so
+@comment $NetBSD: PLIST,v 1.3 2004/08/17 18:27:21 tvierling Exp $
 share/themes/Flat/ICON.png
 share/themes/Flat/README.html
 share/themes/Flat/gtk-2.0/gtkrc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/08/11 13:35:07 imilh Exp $
+# $NetBSD: Makefile,v 1.4 2004/08/17 18:29:59 tvierling Exp $
 
 DISTNAME=		libpcap-0.8.3
 PKGREVISION=		1
@@ -15,6 +15,7 @@ USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		lex yacc
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libpcap.la
 
 .include "../../mk/bsd.prefs.mk"
 

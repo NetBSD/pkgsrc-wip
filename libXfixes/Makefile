@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/09 02:39:09 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2004/08/17 18:29:00 tvierling Exp $
 #
 
 DISTNAME=		libXfixes-2.0.1
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libXfixes.la
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	xfixes.pc.in

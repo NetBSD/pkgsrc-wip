@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/25 06:44:53 blef Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/17 18:32:08 tvierling Exp $
 
 DISTNAME=	qnx11__-1.2.x
 PKGNAME=	qn-x11-0.1
@@ -13,6 +13,7 @@ COMMENT=	GTK theme-engine to yield a QNX look and feel
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
+LIBTOOL_LA_FILES+=	lib/gtk/themes/engines/libqnx.la
 USE_X11BASE=		YES
 
 .include "../../x11/gtk/buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/22 20:00:30 oherrala Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:32:15 tvierling Exp $
 include/silc-toolkit/aes.h
 include/silc-toolkit/blowfish.h
 include/silc-toolkit/cast.h
@@ -80,18 +80,6 @@ include/silc-toolkit/silcwin32.h
 include/silc-toolkit/stacktrace.h
 include/silc-toolkit/twofish.h
 include/silc-toolkit/version_internal.h
-lib/silc-toolkit/libsilc-1.0.so
-lib/silc-toolkit/libsilc-1.0.so.3
-lib/silc-toolkit/libsilc-1.0.so.3.0
-lib/silc-toolkit/libsilc.a
-lib/silc-toolkit/libsilc.la
-lib/silc-toolkit/libsilc.so
-lib/silc-toolkit/libsilcclient-1.0.so
-lib/silc-toolkit/libsilcclient-1.0.so.2
-lib/silc-toolkit/libsilcclient-1.0.so.2.0
-lib/silc-toolkit/libsilcclient.a
-lib/silc-toolkit/libsilcclient.la
-lib/silc-toolkit/libsilcclient.so
 lib/silc-toolkit/modules/aes.sim.so
 lib/silc-toolkit/modules/blowfish.sim.so
 lib/silc-toolkit/modules/cast.sim.so

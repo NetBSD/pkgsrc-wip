@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/04 15:57:27 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/08/17 18:30:26 tvierling Exp $
 bin/wpd2html
 bin/wpd2raw
 bin/wpd2text
@@ -6,11 +6,6 @@ include/libwpd-1/libwpd/WPDocument.h
 include/libwpd-1/libwpd/WPXHLListenerImpl.h
 include/libwpd-1/libwpd/libwpd.h
 include/libwpd-1/libwpd/libwpd_support.h
-lib/libwpd-1.a
-lib/libwpd-1.la
-lib/libwpd-1.so
-lib/libwpd-1.so.7
-lib/libwpd-1.so.7.1
 lib/pkgconfig/libwpd-1.pc
 @dirrm include/libwpd-1/libwpd
 @dirrm include/libwpd-1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/26 04:00:43 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/17 18:32:06 tvierling Exp $
 #
 
 DISTNAME=		qhacc-3.0
@@ -11,6 +11,36 @@ COMMENT=		The Q Home Accountant for personal bookkeeping
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/qhacc/libacct.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libarcio.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libaves.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libbalances.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libbudget.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libcliimpio.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libdbbase.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libdeltas.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libdoublebargraph.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libdoublelinegraph.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libextprgio.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libfiledbio.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libgraphbase.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libjournal.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libmbudget.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libmonthlygraph.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libnativedbio.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libpayee.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libpiegraph.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libprofitloss.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libqhacc.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libqhaccext.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libqhaccutils.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libqifio.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libsinglebargraph.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libsinglelinegraph.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libtbal.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libtrans.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libupgradeio.la
+LIBTOOL_LA_FILES+=	lib/qhacc/libxmlio.la
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS=		make

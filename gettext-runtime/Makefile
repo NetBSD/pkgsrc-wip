@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/06 07:20:11 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/17 18:26:27 tvierling Exp $
 
 .include "Makefile.common"
 
@@ -15,13 +15,15 @@ CONFLICTS=	gettext-[0-9]*
 
 # maybe should be !Linux
 .if ${OPSYS} == "NetBSD"
-CONFLICTS+=	gettext-lib-[0-9]*
+CONFLICTS+=		gettext-lib-[0-9]*
+LIBTOOL_LA_FILES+=	lib/libintl.la
 .endif
 
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libasprintf.la
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
 
 INFO_FILES=		autosprintf.info

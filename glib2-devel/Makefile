@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/07/18 15:50:20 ppostma Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/17 18:26:47 tvierling Exp $
 #
 
 DISTNAME=		glib-2.4.0
@@ -13,6 +13,10 @@ COMMENT=		pkgsrc-wip version of devel/glib2
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libglib-2.0.la
+LIBTOOL_LA_FILES+=	lib/libgmodule-2.0.la
+LIBTOOL_LA_FILES+=	lib/libgobject-2.0.la
+LIBTOOL_LA_FILES+=	lib/libgthread-2.0.la
 TEST_TARGET=		check
 GNU_CONFIGURE=		yes
 BUILD_USES_MSGFMT=	yes

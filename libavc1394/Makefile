@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/10 07:24:04 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/17 18:29:48 tvierling Exp $
 #
 
 DISTNAME=		libavc1394-0.4.1
@@ -12,6 +12,8 @@ COMMENT=		Interface for the 1394 Audio/Video Controls
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libavc1394.la
+LIBTOOL_LA_FILES+=	lib/librom1394.la
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 

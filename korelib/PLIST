@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/07 21:32:15 greyskyy Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/08/17 18:27:57 tvierling Exp $
 bin/korelib_demo
 include/kore/componentproxy.h
 include/kore/componentref.h
@@ -12,14 +12,4 @@ include/kore/metainfo.h
 include/kore/robackend.h
 include/kore/rwbackend.h
 include/kore/wrbackend.h
-lib/libkore.a
-lib/libkore.la
-lib/libkore.so
-lib/libkore.so.8
-lib/libkore.so.8.0
-lib/libkoretest.a
-lib/libkoretest.la
-lib/libkoretest.so
-lib/libkoretest.so.8
-lib/libkoretest.so.8.0
 @dirrm include/kore

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/08/07 10:23:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/17 18:26:11 tvierling Exp $
 #
 
 DISTNAME=	openglut-0.6.2
@@ -15,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
+LIBTOOL_LA_FILES+=	lib/libopenglut.la
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 

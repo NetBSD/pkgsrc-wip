@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/09 02:39:32 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/17 18:29:31 tvierling Exp $
 #
 
 DISTNAME=		libXrender-0.8.3
@@ -12,6 +12,7 @@ COMMENT=		Xrender extension (Library)
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libXrender.la
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	xrender.pc.in

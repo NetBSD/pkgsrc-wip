@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/02/24 18:41:50 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/08/17 18:26:26 tvierling Exp $
 bin/gdesklets
 bin/gdesklets-display-thumbnailer
 lib/pkgconfig/gdesklets-core.pc
@@ -54,9 +54,6 @@ share/gdesklets/libdesklets/Memory.py
 share/gdesklets/libdesklets/Network.py
 share/gdesklets/libdesklets/Sys.py
 share/gdesklets/libdesklets/__init__.py
-share/gdesklets/libdesklets/_glibtopmodule.a
-share/gdesklets/libdesklets/_glibtopmodule.la
-share/gdesklets/libdesklets/_glibtopmodule.so
 share/gdesklets/libdesklets/glibtop.py
 share/gdesklets/libdesklets/polling.py
 share/gdesklets/locale/ar/LC_MESSAGES/gdesklets.mo
@@ -104,12 +101,6 @@ share/gdesklets/utils/TargetSettings.py
 share/gdesklets/utils/TilingImage.py
 share/gdesklets/utils/TypeConverter.py
 share/gdesklets/utils/__init__.py
-share/gdesklets/utils/_ewmhmodule.a
-share/gdesklets/utils/_ewmhmodule.la
-share/gdesklets/utils/_ewmhmodule.so
-share/gdesklets/utils/_systraymodule.a
-share/gdesklets/utils/_systraymodule.la
-share/gdesklets/utils/_systraymodule.so
 share/gdesklets/utils/actionparser.py
 share/gdesklets/utils/datatypes.py
 share/gdesklets/utils/dialog.py

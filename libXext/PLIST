@@ -1,7 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 03:27:08 xtraeme Exp $
-lib/libXext.a
-lib/libXext.la
-lib/libXext.so
-lib/libXext.so.0
-lib/libXext.so.0.0
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:28:54 tvierling Exp $
 lib/pkgconfig/xext.pc

@@ -1,20 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/13 14:47:42 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:30:55 tvierling Exp $
 bin/mcats
-lib/mcats/libcdinput.a
-lib/mcats/libcdinput.la
-lib/mcats/libcdinput.so
-lib/mcats/libcdinput.so.1
-lib/mcats/libcdinput.so.1.0
-lib/mcats/libstdout.a
-lib/mcats/libstdout.la
-lib/mcats/libstdout.so
-lib/mcats/libstdout.so.1
-lib/mcats/libstdout.so.1.0
-lib/mcats/libwii.a
-lib/mcats/libwii.la
-lib/mcats/libwii.so
-lib/mcats/libwii.so.1
-lib/mcats/libwii.so.1.0
 man/man1/mcats.1
 man/man1/mcats_cdinput.1
 man/man1/mcats_iodbc.1

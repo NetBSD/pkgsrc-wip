@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/16 12:37:59 lexort Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/17 18:27:50 tvierling Exp $
 #
 
 DISTNAME=		guile-gtk-0.40.90
@@ -16,6 +16,8 @@ COMMENT=		Library to make GTK 1.2 accessible from guile
 USE_BUILDLINK3=		# defined
 USE_X11=		# defined
 USE_LIBTOOL=		# defined
+LIBTOOL_LA_FILES+=	lib/libguilegdkpixbuf-1.2.la
+LIBTOOL_LA_FILES+=	lib/libguilegtk-1.2.la
 
 GNU_CONFIGURE=		# defined
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}

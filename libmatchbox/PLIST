@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/19 10:40:44 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:29:53 tvierling Exp $
 include/libmb/hash.h
 include/libmb/mb.h
 include/libmb/mbconfig.h
@@ -8,10 +8,5 @@ include/libmb/mbmenu.h
 include/libmb/mbpixbuf.h
 include/libmb/mbtray.h
 include/libmb/mbutil.h
-lib/libmb.a
-lib/libmb.la
-lib/libmb.so
-lib/libmb.so.1
-lib/libmb.so.${PKGVERSION}
 lib/pkgconfig/libmb.pc
 @dirrm include/libmb

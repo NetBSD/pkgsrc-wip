@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/06/13 15:04:40 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2004/08/17 18:29:26 tvierling Exp $
 #
 
 DISTNAME=		libXmu-6.2.3
@@ -14,6 +14,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libXmu.la
+LIBTOOL_LA_FILES+=	lib/libXmuu.la
 PKGCONFIG_OVERRIDE+=	xmu.pc.in
 PKGCONFIG_OVERRIDE+=	xmuu.pc.in
 GNU_CONFIGURE=		yes

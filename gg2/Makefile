@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/08/05 08:43:51 moubctez Exp $
+# $NetBSD: Makefile,v 1.12 2004/08/17 18:26:33 tvierling Exp $
 
 DISTNAME=	gg2-2.0.4
 CATEGORIES=	chat
@@ -12,6 +12,13 @@ COMMENT=	Instant messenger software for Poland; Jabber plugin included
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/gg2/libGUI_plugin.la
+LIBTOOL_LA_FILES+=	lib/gg2/libgadu_gadu_plugin.la
+LIBTOOL_LA_FILES+=	lib/gg2/libsms_plugin.la
+LIBTOOL_LA_FILES+=	lib/gg2/libsound_oss_plugin.la
+LIBTOOL_LA_FILES+=	lib/gg2/libtlen_plugin.la
+LIBTOOL_LA_FILES+=	lib/gg2/libxosd_plugin.la
+LIBTOOL_LA_FILES+=	lib/libgg2_core.la
 USE_GNU_TOOLS+=		make
 PKGCONFIG_OVERRIDE+=	lib/gg2_core.pc.in
 GNU_CONFIGURE=		yes

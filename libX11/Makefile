@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/05/09 04:16:06 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2004/08/17 18:28:41 tvierling Exp $
 #
 
 DISTNAME=		libX11-6.2.1
@@ -16,6 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libX11.la
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 

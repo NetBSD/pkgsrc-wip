@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/07 02:53:50 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/08/17 18:31:02 tvierling Exp $
 bin/metatheme-edit
 bin/metatheme_selector_capplet
 include/mtm/mtm-config-gui.h
@@ -13,11 +13,6 @@ include/mtm/mtm-stateful.h
 include/mtm/mtm-theme.h
 include/mtm/mtm-util.h
 include/mtm/mtm.h
-lib/libmtm.a
-lib/libmtm.la
-lib/libmtm.so
-lib/libmtm.so.0
-lib/libmtm.so.0.0
 lib/metatheme/plugins/${PKGVERSION}/libbgplugin.a
 lib/metatheme/plugins/${PKGVERSION}/libbgplugin.la
 lib/metatheme/plugins/${PKGVERSION}/libbgplugin.so

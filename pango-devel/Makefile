@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/07/18 15:25:57 ppostma Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/17 18:31:37 tvierling Exp $
 #
 
 DISTNAME=		pango-1.4.0
@@ -13,6 +13,17 @@ COMMENT=		Development (unstable) version of devel/pango
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libpango-1.0.la
+LIBTOOL_LA_FILES+=	lib/libpangoft2-1.0.la
+LIBTOOL_LA_FILES+=	lib/libpangox-1.0.la
+LIBTOOL_LA_FILES+=	lib/libpangoxft-1.0.la
+LIBTOOL_LA_FILES+=	lib/pango/1.4.0/modules/pango-arabic-fc.la
+LIBTOOL_LA_FILES+=	lib/pango/1.4.0/modules/pango-basic-fc.la
+LIBTOOL_LA_FILES+=	lib/pango/1.4.0/modules/pango-basic-x.la
+LIBTOOL_LA_FILES+=	lib/pango/1.4.0/modules/pango-hangul-fc.la
+LIBTOOL_LA_FILES+=	lib/pango/1.4.0/modules/pango-hebrew-fc.la
+LIBTOOL_LA_FILES+=	lib/pango/1.4.0/modules/pango-indic-fc.la
+LIBTOOL_LA_FILES+=	lib/pango/1.4.0/modules/pango-thai-fc.la
 LIBTOOL_OVERRIDE=	${WRKSRC}/ltmain.sh ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	pango.pc.in
 PKGCONFIG_OVERRIDE+=	pangoft2.pc.in

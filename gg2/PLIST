@@ -1,29 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2004/08/05 08:43:51 moubctez Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/08/17 18:26:33 tvierling Exp $
 bin/gg2
 include/gg2_core.h
-lib/gg2/libGUI_plugin.a
-lib/gg2/libGUI_plugin.la
-lib/gg2/libGUI_plugin.so
-lib/gg2/libgadu_gadu_plugin.a
-lib/gg2/libgadu_gadu_plugin.la
-lib/gg2/libgadu_gadu_plugin.so
-lib/gg2/libsms_plugin.a
-lib/gg2/libsms_plugin.la
-lib/gg2/libsms_plugin.so
-lib/gg2/libsound_oss_plugin.a
-lib/gg2/libsound_oss_plugin.la
-lib/gg2/libsound_oss_plugin.so
-lib/gg2/libtlen_plugin.a
-lib/gg2/libtlen_plugin.la
-lib/gg2/libtlen_plugin.so
-lib/gg2/libxosd_plugin.a
-lib/gg2/libxosd_plugin.la
-lib/gg2/libxosd_plugin.so
-lib/libgg2_core.a
-lib/libgg2_core.la
-lib/libgg2_core.so
-lib/libgg2_core.so.2
-lib/libgg2_core.so.2.0
 lib/pkgconfig/gg2_core.pc
 share/gg2/pixmaps/arrow.png
 share/gg2/pixmaps/away.png

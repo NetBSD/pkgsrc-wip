@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/06 08:15:27 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/08/17 18:26:33 tvierling Exp $
 bin/autopoint
 bin/gettextize
 bin/msgattrib
@@ -22,22 +22,6 @@ lib/gettext/hostname
 lib/gettext/project-id
 lib/gettext/urlget
 lib/gettext/user-email
-lib/libgettextlib-${PKGVERSION}.so
-lib/libgettextlib.la
-lib/libgettextlib.so
-lib/libgettextpo.a
-lib/libgettextpo.la
-lib/libgettextpo.so
-lib/libgettextpo.so.1
-lib/libgettextpo.so.1.0
-lib/libgettextsrc-${PKGVERSION}.so
-lib/libgettextsrc.la
-lib/libgettextsrc.so
-lib/libgnuintl.a
-lib/libgnuintl.la
-lib/libgnuintl.so
-lib/libgnuintl.so.7
-lib/libgnuintl.so.7.0
 lib/preloadable_libintl.so
 share/aclocal/codeset.m4
 share/aclocal/gettext.m4

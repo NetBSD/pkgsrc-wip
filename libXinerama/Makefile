@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/07 17:47:55 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/17 18:29:20 tvierling Exp $
 
 DISTNAME=	libXinerama-1.0.2
 CATEGORIES=	x11
@@ -15,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
+LIBTOOL_LA_FILES+=	lib/libXinerama.la
 GNU_CONFIGURE=	yes
 
 PKGCONFIG_OVERRIDE+=	xinerama.pc.in

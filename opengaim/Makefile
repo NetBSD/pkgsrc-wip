@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/15 11:03:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/08/17 18:31:36 tvierling Exp $
 #
 
 DISTNAME=	opengaim-0.76a
@@ -18,6 +18,31 @@ USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
+LIBTOOL_LA_FILES+=	lib/gaim/autorecon.la
+LIBTOOL_LA_FILES+=	lib/gaim/docklet.la
+LIBTOOL_LA_FILES+=	lib/gaim/gaim-remote.la
+LIBTOOL_LA_FILES+=	lib/gaim/gestures.la
+LIBTOOL_LA_FILES+=	lib/gaim/history.la
+LIBTOOL_LA_FILES+=	lib/gaim/iconaway.la
+LIBTOOL_LA_FILES+=	lib/gaim/idle.la
+LIBTOOL_LA_FILES+=	lib/gaim/libgg.la
+LIBTOOL_LA_FILES+=	lib/gaim/libirc.la
+LIBTOOL_LA_FILES+=	lib/gaim/libjabber.la
+LIBTOOL_LA_FILES+=	lib/gaim/libmsn.la
+LIBTOOL_LA_FILES+=	lib/gaim/libnapster.la
+LIBTOOL_LA_FILES+=	lib/gaim/liboscar.la
+LIBTOOL_LA_FILES+=	lib/gaim/libtoc.la
+LIBTOOL_LA_FILES+=	lib/gaim/libyahoo.la
+LIBTOOL_LA_FILES+=	lib/gaim/libzephyr.la
+LIBTOOL_LA_FILES+=	lib/gaim/notify.la
+LIBTOOL_LA_FILES+=	lib/gaim/spellchk.la
+LIBTOOL_LA_FILES+=	lib/gaim/ssl-gnutls.la
+LIBTOOL_LA_FILES+=	lib/gaim/ssl-nss.la
+LIBTOOL_LA_FILES+=	lib/gaim/ssl.la
+LIBTOOL_LA_FILES+=	lib/gaim/statenotify.la
+LIBTOOL_LA_FILES+=	lib/gaim/ticker.la
+LIBTOOL_LA_FILES+=	lib/gaim/timestamp.la
+LIBTOOL_LA_FILES+=	lib/libgaim-remote.la
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 

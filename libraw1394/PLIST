@@ -1,15 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/10 07:17:04 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:30:04 tvierling Exp $
 bin/dumpiso
 bin/sendiso
 bin/testlibraw
 include/libraw1394/csr.h
 include/libraw1394/ieee1394.h
 include/libraw1394/raw1394.h
-lib/libraw1394.a
-lib/libraw1394.la
-lib/libraw1394.so
-lib/libraw1394.so.7
-lib/libraw1394.so.7.0
 lib/pkgconfig/libraw1394.pc
 man/man1/dumpiso.1
 man/man1/sendiso.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/18 15:03:07 ppostma Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/17 18:33:07 tvierling Exp $
 #
 
 DISTNAME=		xbsql-0.11
@@ -15,6 +15,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libxbsql.la
 GNU_CONFIGURE=		yes
 
 .include "../../wip/xbase/buildlink3.mk"

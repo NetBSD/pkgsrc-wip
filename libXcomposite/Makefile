@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/13 23:10:29 blef Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/17 18:28:43 tvierling Exp $
 #
 
 DISTNAME=		libXcomposite-1.0.0
@@ -12,6 +12,7 @@ COMMENT=		Xcomposite extension (library)
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libXcomposite.la
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	xcomposite.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/09 04:16:07 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/17 18:28:54 tvierling Exp $
 #
 
 DISTNAME=		libXext-6.4.2
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libXext.la
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	xext.pc.in

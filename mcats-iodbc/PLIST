@@ -1,6 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/13 14:48:23 cjep Exp $
-lib/mcats/libmiodbc.a
-lib/mcats/libmiodbc.la
-lib/mcats/libmiodbc.so
-lib/mcats/libmiodbc.so.1
-lib/mcats/libmiodbc.so.1.0
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:30:56 tvierling Exp $

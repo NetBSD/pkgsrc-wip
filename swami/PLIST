@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/02 15:00:41 bencollver Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:32:26 tvierling Exp $
 bin/swami
-lib/swami/samplelib_libsndfile.a
-lib/swami/samplelib_libsndfile.la
-lib/swami/samplelib_libsndfile.so
-lib/swami/wavetbl_fluidsynth.a
-lib/swami/wavetbl_fluidsynth.la
-lib/swami/wavetbl_fluidsynth.so
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/swami.mo
 @dirrm lib/swami

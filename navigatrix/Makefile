@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/25 22:58:16 blef Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/17 18:31:25 tvierling Exp $
 #
 
 DISTNAME=	navigatrix-0.5
@@ -13,6 +13,7 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libgis.la
 USE_X11BASE=		yes
 
 CONFIGURE_ARGS+=	--with-extra-includes=${LOCALBASE}/include

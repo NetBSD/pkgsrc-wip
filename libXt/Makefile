@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/06/13 06:53:59 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2004/08/17 18:29:37 tvierling Exp $
 #
 
 DISTNAME=		libXt-0.1.5
@@ -25,6 +25,7 @@ USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+LIBTOOL_LA_FILES+=	lib/libXt.la
 
 PKGCONFIG_OVERRIDE+=	xt.pc.in
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/28 05:27:46 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:30:37 tvierling Exp $
 include/libxml++-1.0/libxml++/attribute.h
 include/libxml++-1.0/libxml++/document.h
 include/libxml++-1.0/libxml++/dtd.h
@@ -22,11 +22,6 @@ include/libxml++-1.0/libxml++/noncopyable.h
 include/libxml++-1.0/libxml++/parsers/domparser.h
 include/libxml++-1.0/libxml++/parsers/parser.h
 include/libxml++-1.0/libxml++/parsers/saxparser.h
-lib/libio.a
-lib/libio.la
-lib/libio.so
-lib/libio.so.0
-lib/libio.so.0.0
 lib/libxml++-0.1.a
 lib/libxml++-0.1.la
 lib/libxml++-0.1.so

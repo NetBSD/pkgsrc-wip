@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/06 15:38:33 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/08/17 18:33:02 tvierling Exp $
 bin/checkndx
 bin/copydbf
 bin/dbfutil1
@@ -26,9 +26,4 @@ include/xbase/xbstring.h
 include/xbase/xdate.h
 include/xbase/xstack.h
 include/xbase/xtypes.h
-lib/libxbase-2.0.so.0
-lib/libxbase-2.0.so.0.0
-lib/libxbase.a
-lib/libxbase.la
-lib/libxbase.so
 @dirrm include/xbase

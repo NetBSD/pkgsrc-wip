@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/09 07:19:01 blef Exp $
-lib/gtk-2.0/2.4.0/engines/libdwerg.a
-lib/gtk-2.0/2.4.0/engines/libdwerg.la
-lib/gtk-2.0/2.4.0/engines/libdwerg.so
+@comment $NetBSD: PLIST,v 1.3 2004/08/17 18:27:15 tvierling Exp $
 share/themes/dwerg/README
 share/themes/dwerg/gtk-2.0/gtkrc
 @dirrm share/themes/dwerg/gtk-2.0

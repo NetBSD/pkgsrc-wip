@@ -1,33 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2003/10/16 15:07:00 cubidou Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/08/17 18:31:08 tvierling Exp $
 bin/gsttest
 bin/monkey-bubble
 bin/monkey-srv
 etc/gconf/schemas/monkey-bubble.schemas
-lib/libgdkview.a
-lib/libgdkview.la
-lib/libgdkview.so
-lib/libgdkview.so.0
-lib/libgdkview.so.0.0
-lib/libgstaudio.a
-lib/libgstaudio.la
-lib/libgstaudio.so
-lib/libgstaudio.so.0
-lib/libgstaudio.so.0.0
-lib/libmonkey.a
-lib/libmonkey.la
-lib/libmonkey.so
-lib/libmonkey.so.0
-lib/libmonkey.so.0.0
-lib/libmonkeyutil.a
-lib/libmonkeyutil.la
-lib/libmonkeyutil.so
-lib/libmonkeyutil.so.0
-lib/libmonkeyutil.so.0.0
-lib/libnetcltmonkey.a
-lib/libnetcltmonkey.la
-lib/libnetcltmonkey.so
-lib/libnetcltmonkey.so.0
-lib/libnetcltmonkey.so.0.0
 share/applications/monkey-bubble.desktop
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/monkey-bubble.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/monkey-bubble.mo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/08/12 13:27:46 lexort Exp $
+# $NetBSD: Makefile,v 1.8 2004/08/17 18:32:09 tvierling Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -19,6 +19,8 @@ AUTOMAKE_REQD=		1.6
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		YES
+LIBTOOL_LA_FILES+=	lib/libospf.la
+LIBTOOL_LA_FILES+=	lib/libzebra.la
 
 PKG_SYSCONFSUBDIR?=	zebra
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/12 12:28:01 virtus Exp $
-lib/gtk/themes/engines/libqnx.so
-lib/gtk/themes/engines/libqnx.la
-lib/gtk/themes/engines/libqnx.a
+@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:32:08 tvierling Exp $
 share/themes/QN-X11/gtk/gtkrc
 share/themes/QN-X11/ICON.png
 share/themes/QN-X11/README.html
