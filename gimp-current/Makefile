@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/12 03:45:29 blef Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/12 03:57:14 blef Exp $
 #
 
 DISTNAME=		gimp-${GIMP_VER}
@@ -37,14 +37,6 @@ CONFIGURE_ARGS+=	--disable-print
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/${PKGNAME}
 
-# Add settings for MPEG, LIBMPEG, and GAP_DECODE_MPEG to properly support
-# the MPEG library from graphics/mpeg-lib that changed its name, as the
-# configure script will default to searching from -lmpeg.
-#
-CONFIGURE_ENV+=		MPEG="mpeg"
-CONFIGURE_ENV+=		LIBMPEG="-lmpeg_lib"
-CONFIGURE_ENV+=		GAP_DECODE_MPEG="gap_decode_mpeg"
-
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
@@ -61,7 +53,6 @@ post-install:
 			${LOCALBASE}/share/aclocal/gimp.m4
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/mpeg-lib/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"
