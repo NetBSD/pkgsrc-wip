@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/05/13 20:50:27 lsed Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/13 21:00:13 xtraeme Exp $
 #
 
 DISTNAME=	dovecot-0.99.9.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://dovecot.procontrol.fi/
 PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	freebsd.patch fetch.patch
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://dovecot.procontrol.fi/
 COMMENT=	Secure IMAP and POP3 server
 
@@ -21,7 +21,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var
-CONFIGURE_ARGS+=	--with-storages=maildir
 
 DOVECOT_USE_LDAP?=	NO
 
