@@ -1,9 +1,9 @@
-$Id: TODO,v 1.3 2004/05/21 11:11:13 thomasklausner Exp $
+$Id: TODO,v 1.4 2004/05/22 02:29:47 xtraeme Exp $
 
- * PLIST when it compiles
- 
- * USE_X11 perhaps
- 
- 	-- dotz@irc.pl
+xtraeme says:
 
-0.1.2 out.
+	o Finish port of src/io/3c90x/if_posix.cc in *BSD, I've
+	  disabled some functions for now, so we can test it but
+	  without network support, still have to find out what's
+	  the equivalent of Linux netlink.h.
+
