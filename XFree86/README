@@ -1,5 +1,5 @@
 These packages try to stay away from any software that is available
-elsewhere in pkgsrc. So we avoid the included fontconfig, freetype2,
+elsewhere in pkgsrc. So we don't use the included fontconfig, freetype2,
 and expat. We realize that this may lead to rebuilding XFree86
 more than desired (when fontconfig is updated, for instance) but we
 believe that this is the best way to do things.
@@ -7,13 +7,22 @@ believe that this is the best way to do things.
 Before trying to install this meta-package, you will need to do
 a few things:
 
-* x11-links tries to detect if we have ${X11BASE} created and checks
-  if we have the X headers. You will have to create your X11BASE
-  directory, and comment these lines from pkgtools/x11-links/Makefile:
+* You will not be able to install these packages if ${X11BASE} does
+  not exist. To work around this you could just create the directory
+  yourself, but for a more automated solution, find the block
 
-  $ sudo mkdir -p /usr/X11R6/bin
-  $ sudo mkdir /usr/X11R6/lib
-  $ sudo chmod 770 -R /usr/X11R6 ( if you are on the group wheel )
+  .  if defined(USE_X11) && !exists(${X11BASE})
+  PKG_FAIL_REASON+= "${PKGNAME} uses X11, but ${X11BASE} not found"
+  .  endif
+
+  in bsd.pkg.mk, delete the PKG_FAIL_REASON line, and replace it with
+
+  @${MKDIR} ${X11BASE}
+  @${CHOWN} ${ROOT_USER}:${ROOT_GROUP}l ${X11BASE}
+  @${CHMOD} ${PKGDIRMODE} ${X11BASE}
+
+* x11-links checks if we have the X headers, so you will have to
+  comment out the following lines from pkgtools/x11-links/Makefile:
 
   #.if !exists(${X11BASE}/include/X11/X.h)
   #PKG_FAIL_REASON= "${PKGNAME} requires X headers to be installed"
@@ -32,7 +41,9 @@ a few things:
     .endif
   .endif
 
-After making these changes, you shouldn't have any problems.
+After making these changes, you shouldn't have any (infrastructure)
+problems.
+
 Good luck!
 
 This meta package has been tested and reported that works
