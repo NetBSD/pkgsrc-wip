@@ -3,7 +3,7 @@
 # APST-GET : Yet Another PkgSrc Tool to manage packages.
 #
 # AUTHOR: pancake < pancake@phreaker.net >
-# DATE: 2004/11/10
+# DATE: 2004/11/26
 #
 # depends: pkg_find, pkg_tarup, awk, pkglint
 #
@@ -232,19 +232,36 @@ do_install() {
 	else
 	echo "==> Preparing installation for $DIR"
 	cd ${PKGSRC_DIR}/${DIR}
-	DEPS=`${MAKE} ${MAKEFLAG} show-depends-dirs`
+	DEPS="${DEPS} `${MAKE} ${MAKEFLAG} show-depends-dirs`"
 	DEPS="${DEPS} ${DIR}"
 	REPLACE=""
 	INSTALL=""
 	for A in ${DEPS} ; do
 		CHK=`check_version ${A}`
+		cd ${PKGSRC_DIR}/${A}/
+		PVAR=`${MAKE} show-var VARNAME=PKG_OPTIONS_VAR`
+		SPOP=`${MAKE} show-var VARNAME=${PVAR}`
+		POPT="`${MAKE} show-var VARNAME=PKG_SUPPORTED_OPTIONS`"
+		for X in ${POPT}; do
+			if [ "`echo ${SPOP}|grep ${X}`" = "" ]; then
+			PKGO="${PKGO} -${X}"
+			else
+			PKGO="${PKGO} ${X}"
+			fi
+		done
 		if [ ! "${CHK}" = "" ]; then
 		if [ ! "`echo ${CHK}|grep missing`" = "" ]; then
 			echo " [i] Enqueueing for install ${A}"
 			INSTALL="${INSTALL} ${A}"
+			if [ ! "${POPT}" = "" ]; then
+				echo "   <options> ${PKGO}"
+			fi
 		else
 		if [ ! "`echo ${CHK}| grep from`" = "" ]; then
 			echo " [u] Need to update ${A} ${CHK}"
+			if [ ! "${POPT}" = "" ]; then
+				echo "   <options> ${POPT}"
+			fi
 			if [ "${UPD}" = "1" ]; then
 				REPLACE="${REPLACE} ${A}"
 			else
@@ -270,6 +287,8 @@ do_install() {
 		done
 	done
 	fi
+
+	press_any_key
 
 	# replace list
 	if [ ! "${REPLACE}" = "" ]; then
