@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2003/09/29 14:56:41 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/14 07:34:03 jeremy-c-reed Exp $
 
-DISTNAME=		samba-3.0.0beta3
+DISTNAME=		samba-3.0.1pre1
 WRKSRC?=		${WRKDIR}/${DISTNAME}/source
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.samba.org/pub/samba/beta/ \
-			ftp://ring.asahi-net.or.jp/pub/net/samba/beta/ \
-			ftp://samba.anu.edu.au/pub/samba/beta/ \
-			ftp://ftp.sunet.se/pub/unix/utilities/samba/beta/
+MASTER_SITES=		ftp://ftp.samba.org/pub/samba/pre/ \
+			ftp://ring.asahi-net.or.jp/pub/net/samba/pre/ \
+			ftp://samba.anu.edu.au/pub/samba/pre/ \
+			ftp://ftp.sunet.se/pub/unix/utilities/samba/pre/
 COUNTRY_MIRRORS=	au1 ca fi fr de it pl ru sg se us1 us6
 .for COUNTRY in ${COUNTRY_MIRRORS}
-MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/beta/
+MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/pre/
 .endfor
 EXTRACT_SUFX=		.tar.bz2
 
@@ -18,7 +18,6 @@ HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX (v3)
 
 CONFLICTS=		samba-[0-9]*
-CONFLICTS+=		samba20-[0-9]*
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
@@ -145,7 +144,7 @@ post-install:
 	# Install Samba documentation.
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKDIR}/${DISTNAME}/docs;					\
-	for file in textdocs/* Registry/*.reg; do			\
+	for file in Registry/*.reg; do					\
 		${INSTALL_DATA} $$file ${DOCDIR};			\
 	done
 
