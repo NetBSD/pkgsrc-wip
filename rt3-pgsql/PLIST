@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/04 21:29:20 roelants Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/02 21:08:41 roelants Exp $
 bin/mason_handler.fcgi
 bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -6,18 +6,17 @@ bin/rt
 bin/rt-crontool
 bin/rt-mailgate
 bin/webmux.pl
-etc/rt3/RT_Config.pm
-etc/rt3/RT_SiteConfig.pm
-etc/rt3/acl.Informix
-etc/rt3/acl.Oracle
-etc/rt3/acl.Pg
-etc/rt3/acl.mysql
-etc/rt3/initialdata
-etc/rt3/schema.Informix
-etc/rt3/schema.Oracle
-etc/rt3/schema.Pg
-etc/rt3/schema.SQLite
-etc/rt3/schema.mysql
+${PKG_SYSCONFDIR}/rt3/RT_Config.pm
+${PKG_SYSCONFDIR}/rt3/acl.Informix
+${PKG_SYSCONFDIR}/rt3/acl.Oracle
+${PKG_SYSCONFDIR}/rt3/acl.Pg
+${PKG_SYSCONFDIR}/rt3/acl.mysql
+${PKG_SYSCONFDIR}/rt3/initialdata
+${PKG_SYSCONFDIR}/rt3/schema.Informix
+${PKG_SYSCONFDIR}/rt3/schema.Oracle
+${PKG_SYSCONFDIR}/rt3/schema.Pg
+${PKG_SYSCONFDIR}/rt3/schema.SQLite
+${PKG_SYSCONFDIR}/rt3/schema.mysql
 lib/rt3/RT.pm
 lib/rt3/RT.pm.in
 lib/rt3/RT/ACE.pm
@@ -178,6 +177,7 @@ lib/rt3/t/data/nested-rfc-822
 lib/rt3/t/data/new-ticket-from-iso-8859-1
 lib/rt3/t/data/new-ticket-from-iso-8859-1-full
 lib/rt3/t/data/notes-uuencoded
+lib/rt3/t/data/rt-send-cc
 lib/rt3/t/data/russian-subject-no-content-type
 lib/rt3/t/data/text-html-in-russian
 lib/rt3/t/data/text-html-with-umlaut
@@ -273,6 +273,7 @@ share/rt3/html/Elements/MessageBox
 share/rt3/html/Elements/MyRequests
 share/rt3/html/Elements/MyTickets
 share/rt3/html/Elements/PageLayout
+share/rt3/html/Elements/QueryString
 share/rt3/html/Elements/Quicksearch
 share/rt3/html/Elements/Refresh
 share/rt3/html/Elements/Section
@@ -453,4 +454,3 @@ share/rt3/html/l
 @dirrm lib/rt3/RT/Action
 @dirrm lib/rt3/RT
 @dirrm lib/rt3
-@dirrm etc/rt3

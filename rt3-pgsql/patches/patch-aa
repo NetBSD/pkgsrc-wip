@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/04 21:29:20 roelants Exp $
+$NetBSD: patch-aa,v 1.2 2004/07/02 21:08:41 roelants Exp $
 
 --- config.layout.orig	2004-01-02 23:55:55.000000000 +0100
 +++ config.layout
@@ -7,11 +7,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/04 21:29:20 roelants Exp $
  </Layout>
  
 +<Layout pkgsrc>
-+  prefix:		/usr/pkg
++  prefix:		${PREFIX}
 +  exec_prefix:		${prefix}
 +  bindir:		${exec_prefix}/bin
 +  sbindir:		${exec_prefix}/sbin
-+  sysconfdir:		${prefix}/etc+
++  sysconfdir:		${PKG_SYSCONFDIR}
 +  mandir:		${prefix}/man
 +  libdir:		${prefix}/lib+
 +  datadir:		${prefix}/share+
