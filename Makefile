@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1456 2004/09/09 01:48:42 cetrox Exp $
-# $NetBSD: Makefile,v 1.1456 2004/09/09 01:48:42 cetrox Exp $
+# $Id: Makefile,v 1.1457 2004/09/13 13:22:38 cetrox Exp $
+# $NetBSD: Makefile,v 1.1457 2004/09/13 13:22:38 cetrox Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -712,6 +712,7 @@ SUBDIR+=	smlnj-current
 SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
+SUBDIR+=	snes9express
 SUBDIR+=	songwrite
 SUBDIR+=	soundtracker
 SUBDIR+=	spamassassin-cvs
