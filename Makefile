@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1581 2004/12/27 14:27:25 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1581 2004/12/27 14:27:25 thomasklausner Exp $
+# $Id: Makefile,v 1.1582 2004/12/27 19:55:37 chriswareham Exp $
+# $NetBSD: Makefile,v 1.1582 2004/12/27 19:55:37 chriswareham Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -165,6 +165,7 @@ SUBDIR+=	dxmake
 SUBDIR+=	e00pg
 SUBDIR+=	e16keyedit
 SUBDIR+=	e16menuedit
+SUBDIR+=	e16menuedit2
 SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
 SUBDIR+=	eciadsl-usermode
