@@ -1,0 +1,24 @@
+$NetBSD: patch-af,v 1.1 2003/07/02 09:21:41 blef Exp $
+
+--- setup/setup.c.orig	Wed Jul  2 02:07:04 2003
++++ setup/setup.c	Wed Jul  2 02:10:35 2003
+@@ -20,6 +20,7 @@
+ 
+ #include <stdio.h>
+ #include <string.h>
++#include <sys/param.h>
+ 
+ #include "allegro.h"
+ #include "allegro/internal/aintern.h"
+@@ -211,7 +212,11 @@
+  #endif
+ 
+  #ifdef DIGI_OSS
++ #  if defined(BSD)
+    { "oss_driver",         param_str,     "",      "/dev/dsp", NULL,             "Drv:",     "",         NULL,    "Name of the driver (e.g. /dev/dsp)" },
++ #  else
++   { "oss_driver",         param_str,     "",      "/dev/dsp", NULL,             "Drv:",     "",         NULL,    "Name of the driver (e.g. /dev/dsp)" },
++ #  endif
+    { "oss_numfrags",       param_int,     "",      "-1",       &_oss_numfrags,   "NumFr:",   NULL,       NULL,    "Number of fragments (use 2, other values make little difference)" },
+    { "oss_fragsize",       param_num,     "",      "-1",       &_oss_fragsize,   "Siz:",     NULL,       NULL,    "Size of fragment (small values -- choppy sound, large values -- delayed sound)" },
+  #endif
