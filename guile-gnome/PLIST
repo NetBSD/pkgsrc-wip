@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/11/16 19:35:59 lexort Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/12/04 18:27:51 thomasklausner Exp $
 bin/guile-gnome-0
 include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-generic.h
 include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-primitives.h
@@ -153,7 +153,6 @@ share/guile-gnome-0/gnome/overrides/ui.defs-type-ignores
 share/guile-gnome-0/gnome/pango.scm
 share/guile-gnome-0/gnome/vfs.scm
 share/guile/site/gnome-0.scm
-@dirrm share/guile/site
 @exec ${MKDIR} %D/share/guile-gnome-platform/examples/gnome-vfs
 @dirrm share/guile-gnome-platform/examples/gnome-vfs
 @exec ${MKDIR} %D/share/guile-gnome-platform/examples/gconf
