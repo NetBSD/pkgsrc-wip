@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/04/03 09:27:17 cubidou Exp $
+
+--- etc/Makefile.orig	2003-03-27 20:40:15.000000000 +0100
++++ etc/Makefile
+@@ -8,7 +8,7 @@ include $(TOPDIR)/system-inc.mk
+ 
+ ######################################
+ 
+-IONETCDIR = $(ETCDIR)/ion-devel
++IONETCDIR = $(EXDIR)/ion
+ 
+ ETC = common-frame-bindings.conf floatws.conf ioncore-bindings.conf \
+       ionws.conf kludges.conf look-blackwheat.conf look-brownsteel.conf \

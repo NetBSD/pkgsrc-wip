@@ -1,0 +1,27 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/04/03 09:27:17 cubidou Exp $
+
+--- man/Makefile.orig	2003-03-27 20:40:15.000000000 +0100
++++ man/Makefile
+@@ -8,7 +8,7 @@ include $(TOPDIR)/system-inc.mk
+ 
+ ######################################
+ 
+-TARGETS=ion.1x
++TARGETS=ion.1
+ 
+ ######################################
+ 
+@@ -16,9 +16,10 @@ include $(TOPDIR)/rules.mk
+ 
+ ######################################
+ 
+-ion.1x: ion.1x.in
+-	sed 's#PREFIX#$(PREFIX)#g' ion.1x.in > ion.1x
++ion.1: ion.1x.in
++	sed -e 's#ETCDIR#$(ETCDIR)#g' -e 's#DOCDIR#$(DOCDIR)#g' \
++	    ion.1x.in > ion.1
+ 
+ _install:
+ 	$(INSTALLDIR) $(MANDIR)/man1
+-	$(INSTALL) -m $(DATA_MODE) ion.1x $(MANDIR)/man1
++	$(INSTALL) -m $(DATA_MODE) ion.1 $(MANDIR)/man1

@@ -1,0 +1,70 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/03 09:27:17 cubidou Exp $
+
+--- system.mk.orig	2003-03-17 19:49:26.000000000 +0100
++++ system.mk
+@@ -7,13 +7,14 @@
+ ## Installation paths
+ ##
+ 
+-PREFIX=/usr/local/ion-devel
++#PREFIX=/usr/local/ion-devel
+ 
+ # No need to modify these usually
+ BINDIR=$(PREFIX)/bin
+ ETCDIR=$(PREFIX)/etc
+ MANDIR=$(PREFIX)/man
+-DOCDIR=$(PREFIX)/doc
++DOCDIR=$(PREFIX)/share/doc
++EXDIR=$(PREFIX)/share/examples
+ LIBDIR=$(PREFIX)/lib
+ INCDIR=$(PREFIX)/include
+ 
+@@ -25,7 +26,7 @@ INCDIR=$(PREFIX)/include
+ MODULE_LIST=ionws floatws query
+ 
+ # For dynamically loaded modules
+-MODULE_SUPPORT_LDFLAGS=-export-dynamic -ldl
++MODULE_SUPPORT_LDFLAGS=-export-dynamic
+ MODULE_LDFLAGS=-shared
+ MODULE_CFLAGS=-shared
+ 
+@@ -45,7 +46,7 @@ MODULE_SUPPORT_CFLAGS=
+ ## X libraries, includes and options
+ ##
+ 
+-X11_PREFIX=/usr/X11R6
++X11_PREFIX=$(BUILDLINK_X11_DIR)
+ # SunOS/Solaris
+ #X11_PREFIX=/usr/openwin
+ 
+@@ -91,7 +92,6 @@ XINERAMA_LIBS=-lXinerama
+ ## C compiler
+ ##
+ 
+-CC=gcc
+ 
+ # The POSIX_SOURCE, XOPEN_SOURCE and WARN options should not be necessary,
+ # they're mainly for development use. So, if they cause trouble (not
+@@ -118,8 +118,8 @@ WARN=	-W -Wimplicit -Wreturn-type -Wswit
+ 	-Wparentheses -pedantic -Wuninitialized
+ 
+ 
+-CFLAGS=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
+-LDFLAGS=-g $(LIBS) $(EXTRA_LIBS)
++CFLAGS+=$(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
++LDFLAGS+=$(LIBS) $(EXTRA_LIBS)
+ 
+ 
+ ##
+@@ -144,9 +144,9 @@ RANLIB=ranlib
+ ##
+ 
+ # Should work almost everywhere
+-INSTALL=install
++#INSTALL=install
+ # On a system with pure BSD install, -c might be preferred
+-#INSTALL=install -c
++INSTALL=install -c
+ 
+ INSTALLDIR=mkdir -p
+ 
