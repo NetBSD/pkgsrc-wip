@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/09 05:11:50 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/09 05:15:11 minskim Exp $
 
 DISTNAME=	XML-Sablotron-0.98
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,8 @@ DEPENDS+=	p5-XML-Parser>=2.23:../../textproc/p5-XML-Parser
 
 EXPATLIBPATH=	${BUILDLINK_PREFIX.expat}/lib
 EXPATINCPATH=	${BUILDLINK_PREFIX.expat}/include
-SABLOTLIBPATH=	${PREFIX}/lib
-SABLOTINCPATH=	${PREFIX}/include
+SABLOTLIBPATH=	${BUILDLINK_PREFIX.sablotron}/lib
+SABLOTINCPATH=	${BUILDLINK_PREFIX.sablotron}/include
 
 USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/Sablotron/.packlist
