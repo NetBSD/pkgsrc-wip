@@ -1,0 +1,9 @@
+neb-cd512  is specifically designed for NetBSD. Due to some limitations
+in the system, FFS filesystems will not work on disk layouts other than
+512  bytes/sector.   It  is not possible to access an FFS filesystem on
+media layouted in other  units  (e.g.  CD-ROM,  2048  b/s).   neb-cd512
+recalculates  a  disklabel of a non-512-medium to be in 512 b/s format.
+The purpose of it is the possibility to access CDs/DVDs with FFS or FFS
+inside cgd(4) filesystems.
+
+See the homepage at http://neb-stoehr.sourceforge.net/
