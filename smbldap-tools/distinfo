@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/18 04:44:33 marmfield Exp $
+$NetBSD: distinfo,v 1.2 2004/05/20 01:54:39 marmfield Exp $
 
 SHA1 (smbldap-tools-0.8.4.tgz) = 8404ec5dc2045650418c35ddfd6f7ba3eee547a1
 Size (smbldap-tools-0.8.4.tgz) = 286290 bytes
@@ -7,3 +7,4 @@ SHA1 (patch-ab) = ecdeea906f251f41fe00a4b267f3152e28da26dc
 SHA1 (patch-ac) = 2aa54f2ad8504eca51b81eb80f940f8b566556da
 SHA1 (patch-ad) = e93fedfa5bdd5a603b2b1357bbb3f70f807a4558
 SHA1 (patch-ae) = 800cf879dab3dfafcd0533b2fbea7210bfc74130
+SHA1 (patch-af) = 3ecf1778814efacc6c629ecdf9c00b80fd86eab1

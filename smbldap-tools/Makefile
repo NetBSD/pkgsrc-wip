@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/18 04:44:33 marmfield Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/20 01:54:39 marmfield Exp $
 #
 
 DISTNAME=		smbldap-tools-0.8.4
@@ -34,6 +34,7 @@ SUBST_CLASSES+=		scripts
 SUBST_MESSAGE.scripts=	"Fixing directory locations."
 SUBST_STAGE.scripts=	do-build
 SUBST_FILES.scripts=	configure.pl smbldap_tools.pm smbldap.conf
+SUBST_FILES.scripts+=	smbldap-passwd
 SUBST_SED.scripts=	-e 's|@PREFIX@|${PREFIX}|g'
 
 SCRIPT_TARGET=		smbldap-groupadd smbldap-groupdel smbldap-groupmod

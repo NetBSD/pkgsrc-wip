@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2004/05/20 01:54:40 marmfield Exp $
+
+--- smbldap-passwd.orig	2004-02-10 06:05:33.000000000 +1100
++++ smbldap-passwd
+@@ -170,7 +170,7 @@ EOF
+ }
+ 
+ # change unix password
+-my $hash_password = `/usr/sbin/slappasswd -h {$config{hash_encrypt}} -s '$pass'`;
++my $hash_password = `@PREFIX@/sbin/slappasswd -h {$config{hash_encrypt}} -s '$pass'`;
+ chomp($hash_password);
+ my $modify = $ldap_master->modify ( "$dn",
+ 									changes => [
