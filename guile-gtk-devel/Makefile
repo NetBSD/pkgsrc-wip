@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/09/23 05:59:42 jlamwww Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/17 00:13:19 lexort Exp $
 #
 
-DISTNAME=		guile-gtk-0.40.90
+DISTNAME=		guile-gtk-0.40.91
 CATEGORIES=		devel x11
 MASTER_SITES=		http://www.ir.bbn.com/~gdt/pkgsrc-wip/
 
