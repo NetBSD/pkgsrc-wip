@@ -1,21 +1,22 @@
-$NetBSD: patch-ad,v 1.1.1.1 2005/02/11 13:10:38 airhead Exp $
+$NetBSD: patch-ad,v 1.2 2005/03/31 19:37:25 airhead Exp $
 
---- Makefile.in.orig	1999-04-30 16:32:04.000000000 +0200
-+++ Makefile.in
-@@ -54,6 +54,7 @@ TAR = 		tar
- # The name of an install program, either install(1), or cp(1)
- INSTALL = 	@INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
-+INSTALL_SCRIPT = @INSTALL_SCRIPT@
+--- fpe.c.orig	1999-12-17 17:01:06.000000000 +0100
++++ fpe.c
+@@ -186,13 +186,16 @@ setup_fpe_handling ()
+ /*****************************************************************************/
+ #else  /* HAVE_IEEE_HANDLER */
  
- # File name extension used for archive library files (DON'T include leading ".")
- A = 		a
-@@ -330,7 +331,7 @@ install:	rlab mkdir
- 		sed 's@plot_dir@$(PLOT_DIR)@' ./misc/rlab.tmp.1 > ./misc/rlab.tmp.2
- 		sed 's@plot_prog@$(PLOT_PROG)@' ./misc/rlab.tmp.2 > ./misc/rlab2
- 		rm -f ./misc/rlab.tmp.0 ./misc/rlab.tmp.1 ./misc/rlab.tmp.2
--		$(INSTALL_PROGRAM) ./misc/rlab2 $(bindir)/rlab2
-+		$(INSTALL_SCRIPT) ./misc/rlab2 $(bindir)/rlab2
- 		if test "$(LN)" = "ln" ; then\
- 		  @echo "RECOMMENDED YOU MV $(TOPDIR) to $(libdir)/rlab2";\
- 		fi
++#ifndef HAVE_FPSETMASK
++
+ void
+ setup_fpe_handling ()
+ {
+   ; /* Do nothing */
+ }
++#endif /* HAVE_FPSETMASK */ 
+ 
+-#endif
++#endif /* HAVE_IEEE_HANDLER */
+ 
+ #else  /* SETUP_FPE */
+ 

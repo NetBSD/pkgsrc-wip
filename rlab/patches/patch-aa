@@ -1,21 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/11 13:10:38 airhead Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/31 19:37:25 airhead Exp $
 
---- gc/mark.c.orig	1999-05-09 15:16:49.000000000 +0200
-+++ gc/mark.c
-@@ -674,6 +674,16 @@ word p;
-     GC_PUSH_ONE_STACK(p, 0);
- }
+--- Makefile.in.orig	1999-04-30 16:32:04.000000000 +0200
++++ Makefile.in
+@@ -54,6 +54,7 @@ TAR = 		tar
+ # The name of an install program, either install(1), or cp(1)
+ INSTALL = 	@INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
  
-+# ifdef MSWIN32
-+  void __cdecl _GC_push_one(p)
-+# else
-+  void _GC_push_one(p)
-+# endif
-+word p;
-+{
-+    GC_PUSH_ONE_STACK(p, 0);
-+}
-+
- # ifdef __STDC__
- #   define BASE(p) (word)GC_base((void *)(p))
- # else
+ # File name extension used for archive library files (DON'T include leading ".")
+ A = 		a
+@@ -330,7 +331,7 @@ install:	rlab mkdir
+ 		sed 's@plot_dir@$(PLOT_DIR)@' ./misc/rlab.tmp.1 > ./misc/rlab.tmp.2
+ 		sed 's@plot_prog@$(PLOT_PROG)@' ./misc/rlab.tmp.2 > ./misc/rlab2
+ 		rm -f ./misc/rlab.tmp.0 ./misc/rlab.tmp.1 ./misc/rlab.tmp.2
+-		$(INSTALL_PROGRAM) ./misc/rlab2 $(bindir)/rlab2
++		$(INSTALL_SCRIPT) ./misc/rlab2 $(bindir)/rlab2
+ 		if test "$(LN)" = "ln" ; then\
+ 		  @echo "RECOMMENDED YOU MV $(TOPDIR) to $(libdir)/rlab2";\
+ 		fi
