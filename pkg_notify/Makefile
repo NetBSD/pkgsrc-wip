@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/11/09 09:30:22 imilh Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/22 15:20:08 imilh Exp $
 #
 
-DISTNAME=	pkg_notify-0.2.1
+DISTNAME=	pkg_notify-0.2.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://imil.net/NetBSD/
 
