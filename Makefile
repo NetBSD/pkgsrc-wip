@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1403 2004/07/21 03:11:09 blef Exp $
-# $NetBSD: Makefile,v 1.1403 2004/07/21 03:11:09 blef Exp $
+# $Id: Makefile,v 1.1404 2004/07/21 03:20:00 blef Exp $
+# $NetBSD: Makefile,v 1.1404 2004/07/21 03:20:00 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -546,7 +546,6 @@ SUBDIR+=	picprog
 SUBDIR+=	pinball
 SUBDIR+=	pizza
 SUBDIR+=	pkg_install-testing
-SUBDIR+=	pkgse
 SUBDIR+=	plugger
 SUBDIR+=	pointless
 SUBDIR+=	portmap
