@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/29 00:24:59 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/15 14:46:47 mpasternak Exp $
 #
 
 DISTNAME=		manual-split
-PKGNAME=		mysql-doc-0
+PKGNAME=		mysql-docs-0
 WRKSRC=			${WRKDIR}
 CATEGORIES=		misc
 MASTER_SITES=		http://mysql.belnet.be/Downloads/Manual/
