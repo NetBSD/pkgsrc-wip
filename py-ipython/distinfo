@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/05 02:54:41 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/03/01 02:21:02 sifu Exp $
 
-SHA1 (IPython-0.5.0.tar.gz) = 813cefa3d162a81bea2c8a22ea594b6f98909246
-Size (IPython-0.5.0.tar.gz) = 656727 bytes
+SHA1 (ipython-0.6.11.tar.gz) = fdf67275e625c93a658a234696e1fabc52a2ea1c
+RMD160 (ipython-0.6.11.tar.gz) = ecc8b6ad4a7f08ed12fb68c1566b68bedb16183f
+Size (ipython-0.6.11.tar.gz) = 862138 bytes

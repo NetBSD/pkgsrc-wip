@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/05 02:54:41 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/01 02:21:02 sifu Exp $
 bin/ipython
 bin/pycolor
 ${PYSITELIB}/IPython/ColorANSI.py
@@ -16,20 +16,23 @@ ${PYSITELIB}/IPython/DPyGetOpt.pyo
 ${PYSITELIB}/IPython/Debugger.py
 ${PYSITELIB}/IPython/Debugger.pyc
 ${PYSITELIB}/IPython/Debugger.pyo
+${PYSITELIB}/IPython/Extensions/InterpreterExec.py
+${PYSITELIB}/IPython/Extensions/InterpreterExec.pyc
+${PYSITELIB}/IPython/Extensions/InterpreterExec.pyo
 ${PYSITELIB}/IPython/Extensions/InterpreterPasteInput.py
-${PYSITELIB}/IPython/Extensions/PhysicalQInput.py
-${PYSITELIB}/IPython/Extensions/PhysicalQInteractive.py
-${PYSITELIB}/IPython/Extensions/__init__.py
-${PYSITELIB}/IPython/Extensions/numeric_formats.py
 ${PYSITELIB}/IPython/Extensions/InterpreterPasteInput.pyc
-${PYSITELIB}/IPython/Extensions/PhysicalQInput.pyc
-${PYSITELIB}/IPython/Extensions/PhysicalQInteractive.pyc
-${PYSITELIB}/IPython/Extensions/__init__.pyc
-${PYSITELIB}/IPython/Extensions/numeric_formats.pyc
 ${PYSITELIB}/IPython/Extensions/InterpreterPasteInput.pyo
+${PYSITELIB}/IPython/Extensions/PhysicalQInput.py
+${PYSITELIB}/IPython/Extensions/PhysicalQInput.pyc
 ${PYSITELIB}/IPython/Extensions/PhysicalQInput.pyo
+${PYSITELIB}/IPython/Extensions/PhysicalQInteractive.py
+${PYSITELIB}/IPython/Extensions/PhysicalQInteractive.pyc
 ${PYSITELIB}/IPython/Extensions/PhysicalQInteractive.pyo
+${PYSITELIB}/IPython/Extensions/__init__.py
+${PYSITELIB}/IPython/Extensions/__init__.pyc
 ${PYSITELIB}/IPython/Extensions/__init__.pyo
+${PYSITELIB}/IPython/Extensions/numeric_formats.py
+${PYSITELIB}/IPython/Extensions/numeric_formats.pyc
 ${PYSITELIB}/IPython/Extensions/numeric_formats.pyo
 ${PYSITELIB}/IPython/FakeModule.py
 ${PYSITELIB}/IPython/FakeModule.pyc
@@ -76,15 +79,12 @@ ${PYSITELIB}/IPython/Shell.pyo
 ${PYSITELIB}/IPython/Struct.py
 ${PYSITELIB}/IPython/Struct.pyc
 ${PYSITELIB}/IPython/Struct.pyo
-${PYSITELIB}/IPython/UserConfig/ipythonrc
-${PYSITELIB}/IPython/UserConfig/ipythonrc-math
-${PYSITELIB}/IPython/UserConfig/ipythonrc-numeric
-${PYSITELIB}/IPython/UserConfig/ipythonrc-physics
-${PYSITELIB}/IPython/UserConfig/ipythonrc-scipy
-${PYSITELIB}/IPython/UserConfig/ipythonrc-tutorial
 ${PYSITELIB}/IPython/__init__.py
 ${PYSITELIB}/IPython/__init__.pyc
 ${PYSITELIB}/IPython/__init__.pyo
+${PYSITELIB}/IPython/background_jobs.py
+${PYSITELIB}/IPython/background_jobs.pyc
+${PYSITELIB}/IPython/background_jobs.pyo
 ${PYSITELIB}/IPython/deep_reload.py
 ${PYSITELIB}/IPython/deep_reload.pyc
 ${PYSITELIB}/IPython/deep_reload.pyo
@@ -94,9 +94,6 @@ ${PYSITELIB}/IPython/genutils.pyo
 ${PYSITELIB}/IPython/iplib.py
 ${PYSITELIB}/IPython/iplib.pyc
 ${PYSITELIB}/IPython/iplib.pyo
-${PYSITELIB}/IPython/iplib_ori.py
-${PYSITELIB}/IPython/iplib_ori.pyc
-${PYSITELIB}/IPython/iplib_ori.pyo
 ${PYSITELIB}/IPython/ipmaker.py
 ${PYSITELIB}/IPython/ipmaker.pyc
 ${PYSITELIB}/IPython/ipmaker.pyo
@@ -109,6 +106,14 @@ ${PYSITELIB}/IPython/ultraTB.pyo
 ${PYSITELIB}/IPython/usage.py
 ${PYSITELIB}/IPython/usage.pyc
 ${PYSITELIB}/IPython/usage.pyo
-@dirrm ${PYSITELIB}/IPython/Extensions
+${PYSITELIB}/IPython/UserConfig/ipythonrc
+${PYSITELIB}/IPython/UserConfig/ipythonrc-math
+${PYSITELIB}/IPython/UserConfig/ipythonrc-numeric
+${PYSITELIB}/IPython/UserConfig/ipythonrc-physics
+${PYSITELIB}/IPython/UserConfig/ipythonrc-pysh
+${PYSITELIB}/IPython/UserConfig/ipythonrc-scipy
+${PYSITELIB}/IPython/UserConfig/ipythonrc-tutorial
+${PYSITELIB}/IPython/UserConfig/pysh.py
 @dirrm ${PYSITELIB}/IPython/UserConfig
-@dirrm ${PYSITELIB}/IPython/
+@dirrm ${PYSITELIB}/IPython/Extensions
+@dirrm ${PYSITELIB}/IPython
