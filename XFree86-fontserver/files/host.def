@@ -3,7 +3,7 @@
  */
 
 #define ProjectRoot @PREFIX@
-#define NothingOutsideProjectRoot YES
+#define NothingOutsideProjectRoot NO
 #define BuildFonts NO
 #define Build75DpiFonts NO
 #define Build100DpiFonts NO

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2003/07/26 21:53:22 blef Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2003/09/02 23:36:26 blef Exp $
 bin/xcursor-config
 include/DPS/ColorSB.h
 include/DPS/ColorSBP.h
@@ -644,9 +644,6 @@ lib/libpsres.so.1.0
 lib/libxf86config.a
 lib/libxkbfile.a
 lib/libxkbui.a
-lib/X11/doc/html/Xaw.3.html
-lib/X11/doc/html/Xcursor.3.html
-lib/X11/doc/html/Xrandr.3.html
 @dirrm include/DPS
 @dirrm include/GL
 @dirrm include/X11/Xcursor

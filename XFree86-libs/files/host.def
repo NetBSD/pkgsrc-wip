@@ -72,4 +72,4 @@
 #define HasFontconfig YES
 #define FontconfigDir @BLNK@
 
-#define BuildHtmlManPages YES
+#define BuildHtmlManPages NO
