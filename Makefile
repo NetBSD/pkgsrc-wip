@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1713 2005/03/30 14:32:00 mwdavies Exp $
-# $NetBSD: Makefile,v 1.1713 2005/03/30 14:32:00 mwdavies Exp $
+# $Id: Makefile,v 1.1714 2005/03/30 15:14:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1714 2005/03/30 15:14:55 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -619,7 +619,6 @@ SUBDIR+=	omniORB
 SUBDIR+=	oops
 SUBDIR+=	opax
 SUBDIR+=	open21xx
-SUBDIR+=	openttd
 SUBDIR+=	openvrml
 SUBDIR+=	opera-devel
 SUBDIR+=	oqtplayer
