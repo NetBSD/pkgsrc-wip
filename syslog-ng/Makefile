@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/06 12:10:35 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/06 23:19:43 adrian_p Exp $
 
 DISTNAME=	syslog-ng-1.6.6
 CATEGORIES=	sysutils
@@ -10,6 +10,9 @@ COMMENT=	Syslog-ng tries to fill the gaps original syslogd's were lacking
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_PKGINSTALL=		YES
+RCD_SCRIPTS=		syslogng
+PKG_SYSCONFSUBDIR=	syslog-ng
 
 CONFIGURE_ARGS+=	--enable-tcp-wrapper
 
@@ -19,7 +22,7 @@ DOCDIR=			${PREFIX}/share/doc/syslog-ng
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
 SUBST_FILES.conf=	doc/syslog-ng.8 doc/syslog-ng.conf.5 contrib/syslog2ng
-SUBST_SED.conf=		-e "s|/etc/syslog-ng|${PREFIX}/etc/syslog-ng|g" \
+SUBST_SED.conf=		-e "s|/etc/syslog-ng|${PKG_SYSCONFDIR}|g" \
 			-e "s|/usr/bin/awk|${AWK}|g"
 SUBST_MESSAGE.conf=	"Fixing configuration file paths."
 
@@ -34,7 +37,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/syslog-ng
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/syslog-ng
+	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
 
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
