@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.433 2003/09/06 21:25:27 mjasm Exp $
-# $NetBSD: Makefile,v 1.433 2003/09/06 21:25:27 mjasm Exp $
+# $Id: Makefile,v 1.434 2003/09/08 13:51:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.434 2003/09/08 13:51:23 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -190,6 +190,7 @@ SUBDIR+=	libgringotts
 SUBDIR+=	libogg-nightly
 SUBDIR+=	libshout
 SUBDIR+=	libspectrum
+SUBDIR+=	libvc
 SUBDIR+=	libvorbis-nightly
 SUBDIR+=	libwpd
 SUBDIR+=	libxfce4gui
@@ -221,6 +222,7 @@ SUBDIR+=	mtf
 SUBDIR+=	muse
 SUBDIR+=	mutella
 SUBDIR+=	mutt-devel
+SUBDIR+=	mutt-vc-query
 SUBDIR+=	mysql3-client
 SUBDIR+=	mysql3-server
 SUBDIR+=	mysql4-client
@@ -326,6 +328,7 @@ SUBDIR+=	rcorder
 SUBDIR+=	regexxer
 SUBDIR+=	ripmime
 SUBDIR+=	rlpr
+SUBDIR+=	rolo
 SUBDIR+=	rosegarden-current
 SUBDIR+=	samba3
 SUBDIR+=	scm
