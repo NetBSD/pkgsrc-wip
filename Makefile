@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.624 2003/11/18 07:32:29 mpasternak Exp $
-# $NetBSD: Makefile,v 1.624 2003/11/18 07:32:29 mpasternak Exp $
+# $Id: Makefile,v 1.625 2003/11/18 08:04:26 mpasternak Exp $
+# $NetBSD: Makefile,v 1.625 2003/11/18 08:04:26 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -403,6 +403,7 @@ SUBDIR+=	py-OpenGL
 SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-Py2Play
 SUBDIR+=	py-PythonDirector
+SUBDIR+=	py-Quotient
 SUBDIR+=	py-RXP
 SUBDIR+=	py-Soya
 SUBDIR+=	py-albatross
