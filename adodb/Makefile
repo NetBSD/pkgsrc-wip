@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/10/20 21:41:59 adrian_p Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/28 23:47:25 minskim Exp $
 #
 
 DISTNAME=	adodb400
 PKGNAME=	adodb-4.00
-WRKSRC=		${WRKDIR}/adodb
 CATEGORIES=	databases www
 MASTER_SITES=	http://phplens.com/lens/dl/
 EXTRACT_SUFX=	.tgz
@@ -14,6 +13,8 @@ COMMENT=	Database class library for PHP4
 
 DEPENDS+=       php>=4.0.5:../../www/php4
 
+WRKSRC=		${WRKDIR}/adodb
+NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
 DOC_FILES=	license.txt readme.htm readme.txt tips_portable_sql.htm \
