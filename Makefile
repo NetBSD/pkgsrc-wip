@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1724 2005/04/04 08:51:57 jgoamakf Exp $
-# $NetBSD: Makefile,v 1.1724 2005/04/04 08:51:57 jgoamakf Exp $
+# $Id: Makefile,v 1.1725 2005/04/06 00:49:55 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.1725 2005/04/06 00:49:55 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -627,7 +627,6 @@ SUBDIR+=	orion
 SUBDIR+=	orpie
 SUBDIR+=	p3nfs
 SUBDIR+=	p5-Aceperl
-SUBDIR+=	p5-Apache-Request
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-Cache-Mmap
 SUBDIR+=	p5-Class-Date
