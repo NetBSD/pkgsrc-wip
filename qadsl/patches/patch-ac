@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/04/13 12:34:15 cjep Exp $
+$NetBSD: patch-ac,v 1.2 2003/04/13 12:44:41 cjep Exp $
 
---- main.c.orig	Sat Oct 20 16:29:16 2001
+--- main.c.orig	2001-10-20 15:29:16.000000000 +0100
 +++ main.c
-@@ -32,7 +32,7 @@
+@@ -32,7 +32,7 @@ int login_sw=0,sockfd,i;
  char send_msg[MAXDATASIZE], get_msg[MAXDATASIZE];
  char user[MAXLEN], pass[MAXLEN], serv[MAXLEN], deamon_s[MAXLEN], deamon_t[MAXLEN], deamon_d[MAXLEN];
  

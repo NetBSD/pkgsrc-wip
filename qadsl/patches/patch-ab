@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/04/13 12:34:15 cjep Exp $
+$NetBSD: patch-ab,v 1.2 2003/04/13 12:44:41 cjep Exp $
 
---- func.c.orig	Sat Oct 20 12:52:18 2001
+--- func.c.orig	2001-10-20 11:52:18.000000000 +0100
 +++ func.c
-@@ -48,6 +48,6 @@
+@@ -48,6 +48,6 @@ void url_encode(const char *in, char *ou
  
  void usage(char *argv) {
  	printf("Usage: %s [ -h ] [ -c file ] [ -l ] [ -o ]\n", argv);
