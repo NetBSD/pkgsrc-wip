@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.280 2003/06/28 00:47:25 tripledes Exp $
-# $NetBSD: Makefile,v 1.280 2003/06/28 00:47:25 tripledes Exp $
+# $Id: Makefile,v 1.281 2003/06/29 11:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.281 2003/06/29 11:53:17 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -71,15 +71,15 @@ SUBDIR+=	gkrellm2-snmp
 SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
 SUBDIR+=	gmencoder
-SUBDIR+=	gnomeicu
 SUBDIR+=	gnome2-extras
 SUBDIR+=	gnome2-pkgview
 SUBDIR+=	gnome2-system-monitor
 SUBDIR+=	gnome2-themes
 SUBDIR+=	gnome2-themes-extra
 SUBDIR+=	gnome2-userdocs
-SUBDIR+=	gob2
+SUBDIR+=	gnomeicu
 SUBDIR+=	gotmail
+SUBDIR+=	gov2
 SUBDIR+=	grip
 SUBDIR+=	gstreamer-player
 SUBDIR+=	gtick
@@ -240,6 +240,7 @@ SUBDIR+=	totem
 SUBDIR+=	trickle
 SUBDIR+=	tsclient
 SUBDIR+=	tsm
+SUBDIR+=	tutos
 SUBDIR+=	tuxtype2
 SUBDIR+=	typhoon
 SUBDIR+=	umbrello
