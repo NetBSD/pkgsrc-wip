@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2004/05/20 16:58:41 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2004/05/26 17:13:42 johnrshannon Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCCADA_BUILDLINK3_MK:=  ${GCCADA_BUILDLINK3_MK}+
@@ -16,12 +16,10 @@ BUILDLINK_DEPENDS.gccAda+=      gccAda>=3.4.0
 BUILDLINK_PKGSRCDIR.gccAda?=    ../../wip/gcc-3.4-ada
 BUILDLINK_ENV+= ADAC=${LOCALBASE}/gccAda-3.4.0/bin/gcc
 _GCC_ARCHDIR!=	${DIRNAME} `${LOCALBASE}/gccAda-3.4.0/bin/gcc --print-libgcc-file-name`
+BUILDLINK_LIBDIRS.gccAda+=       lib
 .  if empty(_GCC_ARCHDIR:M*not_found*)
-BUILDLINK_RPATHDIRS.gccAda+=       ${LOCALBASE}/gccAda-3.4.0/lib
-BUILDLINK_RPATHDIRS.gccAda+=       ${_GCC_ARCHDIR}/adalib
-BUILDLINK_RPATHDIRS.gccAda+=       ${_GCC_ARCHDIR}
-BUILDLINK_LDFLAGS.gccAda+=	-L${LOCALBASE}/gccAda-3.4.0/lib -Wl,-R${LOCALBASE}/gccAda-3.4.0/lib
-BUILDLINK_LDFLAGS.gccAda+=	-L${_GCC_ARCHDIR} -Wl,-R${_GCC_ARCHDIR}
+BUILDLINK_LIBDIRS.gccAda+=       ${_GCC_ARCHDIR:N${BUILDLINK_PREFIX.gcc-3.4.0}}/adalib
+BUILDLINK_LIBDIRS.gccAda+=       ${_GCC_ARCHDIR:N${BUILDLINK_PREFIX.gcc-3.4.0}}
 .  endif
 .endif  # GCCADA_BUILDLINK3_MK
 

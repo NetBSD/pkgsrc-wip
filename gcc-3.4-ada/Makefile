@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/05/20 16:58:41 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.44 2004/05/26 17:13:42 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
@@ -34,7 +34,7 @@ may be used:
 # You may also specify the path of a gcc/gnat Ada compiler
 # outside of the pkgsrc system by specifying the full path
 # of the compiler (example) below:
-#ALT_GCC=	/usr/pkg/gcc-3.4.0/bin/gcc
+#ALT_GCC=	/usr/pkg/gcc3bootstrap/bin/gcc
 .if defined(ALT_GCC)
 .  if exists(${ALT_GCC})
 ALT_GCC_PREFIX:=	${ALT_GCC:H}/..
@@ -67,6 +67,7 @@ PTHREAD_OPTS+=		require native
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include
 CFLAGS+=	-I${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
+CONFIGURE_ARGS+=	--enable-threads=gnat
 GCC_DIR=	${WRKDIR}/.gcc
 
 post-patch:
