@@ -1,0 +1,45 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/18 23:07:32 daprice Exp $
+bin/pgsql2shp
+bin/shp2pgsql
+lib/postgresql/libpostgis.a
+lib/postgresql/libpostgis.so
+lib/postgresql/libpostgis.so.0
+lib/postgresql/libpostgis.so.0.7
+share/doc/html/postgis/c18.html
+share/doc/html/postgis/c191.html
+share/doc/html/postgis/c282.html
+share/doc/html/postgis/c59.html
+share/doc/html/postgis/c664.html
+share/doc/html/postgis/index.html
+share/doc/html/postgis/style.css
+share/doc/html/postgis/x168.html
+share/doc/html/postgis/x184.html
+share/doc/html/postgis/x314.html
+share/doc/html/postgis/x398.html
+share/doc/html/postgis/x40.html
+share/doc/html/postgis/x439.html
+share/doc/html/postgis/x504.html
+share/doc/html/postgis/x534.html
+share/doc/html/postgis/x549.html
+share/doc/html/postgis/x648.html
+share/doc/html/postgis/x655.html
+share/doc/html/postgis/x777.html
+share/doc/html/postgis/x83.html
+share/doc/postgis/README.postgis
+share/doc/postgis/postgis.xml
+share/examples/postgis/ogc_test_suite/1_schema.sql
+share/examples/postgis/ogc_test_suite/2_queries.sql
+share/examples/postgis/ogc_test_suite/3_cleanup.sql
+share/examples/postgis/wkb_reader/Makefile
+share/examples/postgis/wkb_reader/README
+share/examples/postgis/wkb_reader/printwkb.inc
+share/examples/postgis/wkb_reader/readwkb.c
+share/postgresql/postgis.sql
+share/postgresql/postgis_undef.sql
+share/postgresql/spatial_ref_sys.sql
+@dirrm share/examples/postgis/wkb_reader
+@dirrm share/examples/postgis/ogc_test_suite
+@dirrm share/examples/postgis
+@dirrm share/doc/postgis
+@dirrm share/doc/html/postgis
+@unexec ${RMDIR} %D/share/postgresql 2>/dev/null || ${TRUE}

@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/18 23:12:50 daprice Exp $
+
+SHA1 (postgis-1.0.0-rc2.tar.gz) = 20803fa5f21f88942054ccc42ca359652f3a004d
+RMD160 (postgis-1.0.0-rc2.tar.gz) = 70c50888acf60e1a308b98a3bddd414db09e1505
+Size (postgis-1.0.0-rc2.tar.gz) = 1270939 bytes
+SHA1 (postgresql-8.0.1.tar.bz2) = 42a16fe13a6271b1612fb0a9f41f7da0a2e307b6
+RMD160 (postgresql-8.0.1.tar.bz2) = 8aca3b38d2e37efe5ed1ff16e942daad2e486e1f
+Size (postgresql-8.0.1.tar.bz2) = 11049626 bytes
+SHA1 (patch-aa) = 20492216de0e5238a02b4cdd18c297731cf6462a
