@@ -1,0 +1,6 @@
+#! @SH@
+
+basedir="@PREFIX@/lib/@PKGNAME@"
+
+LD_LIBRARY_PATH="${basedir}:/emul/linux/usr/lib" \
+"${basedir}/TeamSpeak.bin" "$@"
