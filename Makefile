@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1283 2004/05/17 09:30:36 minskim Exp $
-# $NetBSD: Makefile,v 1.1283 2004/05/17 09:30:36 minskim Exp $
+# $Id: Makefile,v 1.1284 2004/05/17 18:41:45 minskim Exp $
+# $NetBSD: Makefile,v 1.1284 2004/05/17 18:41:45 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -119,7 +119,6 @@ SUBDIR+=	dumb
 SUBDIR+=	dxmake
 SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
-SUBDIR+=	eag
 SUBDIR+=	ecl
 SUBDIR+=	eic
 SUBDIR+=	elmo
