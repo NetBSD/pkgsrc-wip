@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/27 00:51:20 xtraeme Exp $
-
-SHA1 (nautilus-cd-burner-0.5.3.tar.bz2) = 53e08eca047de14edc6620db94d75883e93aaa18
-Size (nautilus-cd-burner-0.5.3.tar.bz2) = 311289 bytes
-SHA1 (patch-aa) = a651a81b8699aa0403fedbdbb441d27a1ee3d56e
-SHA1 (patch-ab) = f3929145229b746903cc00d7dbfca1bae636b0b9
