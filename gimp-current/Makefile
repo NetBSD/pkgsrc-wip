@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/06/10 13:48:10 moubctez Exp $
+# $NetBSD: Makefile,v 1.3 2003/06/16 09:09:40 xtraeme Exp $
 
 DISTNAME=		gimp-${GIMP_VER}
 PKGNAME=		gimp-current-${GIMP_VER}
@@ -27,7 +27,10 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-perl --disable-print --disable-python
+CONFIGURE_ARGS+=	--disable-perl 
+CONFIGURE_ARGS+=	--disable-print 
+CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/${PKGNAME}
 
 # Add settings for MPEG, LIBMPEG, and GAP_DECODE_MPEG to properly support
 # the MPEG library from graphics/mpeg-lib that changed it's name, as the
@@ -65,6 +68,7 @@ PLIST_SUBST+=	HELPBROWSER="@comment "
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"
+.include "../../www/libgtkhtml/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .endif
 
