@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/29 18:03:02 daprice Exp $
+
+--- Makefile.orig	Thu Dec 11 16:42:48 2003
++++ Makefile
+@@ -36,7 +36,7 @@ NLDFLAGS=-I$(INCPATH) -L$(LIBPATH)
+ NLIBS=$(LIB1) $(LIB2) $(OTHERLIBS)
+ 
+ 
+-all: build test
++all: build
+ 
+ build: $(SOURCES)
+ 	@echo "Compiling readseq..."

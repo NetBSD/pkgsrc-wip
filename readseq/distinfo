@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/29 18:03:02 daprice Exp $
+
+SHA1 (readseq.tar.Z) = 0b11dc201698e9b11d03d5358951389f3c2da59f
+Size (readseq.tar.Z) = 75281 bytes
+SHA1 (patch-aa) = 16af1514f15dc612886dac68262e09d6031083fb
