@@ -1,0 +1,29 @@
+#!/bin/sh
+
+CONFIGFILE=_etc_/apstget.conf
+
+if [ -e "${CONFIGFILE}" ]; then
+. ${CONFIGFILE}
+fi
+
+if [ "${QUITE}" = "" ]; then
+	QUITE="0"
+fi
+
+env QUITE=${QUITE} \
+awk -W interactive '
+{
+	if ( ENVIRON["QUITE"] < "1" ) {
+		print $0;
+	} else 
+	if ( ENVIRON["QUITE"] == "1" ) {
+		if (/==>/ || /=> Attempting/ || /ETA/) print $0;
+	} else
+	if ( ENVIRON["QUITE"] == "2" ) {
+		if ( /=> Attempting/   ||
+			/==> Configuring/   ||
+			/==> Building/      ||
+			/==> Installing/    ||
+			/ETA/) print $0;
+	}
+}'
