@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/14 10:56:47 imilh Exp $
+bin/pkg_notify
+share/examples/${PKGBASE}/${PKGBASE}.list
+share/doc/${PKGBASE}/README
+@dirrm share/examples/${PKGBASE}
+@dirrm share/doc/${PKGBASE}
