@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.52 2003/04/10 17:16:27 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.52 2003/04/10 17:16:27 thomasklausner Exp $
+# $Id: Makefile,v 1.53 2003/04/10 17:28:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.53 2003/04/10 17:28:06 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -46,7 +46,6 @@ SUBDIR+=	navigatrix
 SUBDIR+=	nvtv
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Net-Jabber
-SUBDIR+=	p5-Time
 SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	perltidy
