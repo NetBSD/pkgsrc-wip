@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/11/04 22:22:18 adrian_p Exp $
+# $NetBSD: Makefile,v 1.21 2004/11/04 23:28:15 adrian_p Exp $
 #
 
 DISTNAME=	bugzilla-2.18rc3
@@ -36,9 +36,10 @@ BZ_DB_USER?=	bugs
 BZ_DB_PASS?=	changemeplease
 BZ_WEB_GROUP?=	www
 MYSQL_SOCLOC?=	/tmp/mysql.sock
+SENDMAIL?=	/usr/sbin/sendmail
 
 BUILD_DEFS+=	BZ_DB_DATABASE BZ_DB_HOST BZ_DB_PORT BZ_DB_USER BZ_DB_PASS \
-		BZ_WEB_GROUP MYSQL_SOCLOC
+		BZ_WEB_GROUP MYSQL_SOCLOC SENDMAIL
 
 MESSAGE_SUBST+=	BZDIR=${BZDIR} PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
@@ -52,7 +53,7 @@ REPLACE_PERL=	*.pl *.cgi
 
 SUBST_CLASSES=		conf
 SUBST_STAGE.conf=	pre-install
-SUBST_FILES.conf=	bugzilla.conf localconfig
+SUBST_FILES.conf=	bugzilla.conf localconfig Bugzilla/BugMail.pm
 SUBST_SED.conf=		-e "s|@BZ_DB_HOST@|${BZ_DB_HOST}|g" 		\
 			-e "s|@BZ_WEB_GROUP@|${BZ_WEB_GROUP}|g"		\
 			-e "s|@BZ_DB_PORT@|${BZ_DB_PORT}|g" 		\
@@ -61,13 +62,12 @@ SUBST_SED.conf=		-e "s|@BZ_DB_HOST@|${BZ_DB_HOST}|g" 		\
 			-e "s|@BZ_DB_PASS@|${BZ_DB_PASS}|g"		\
 			-e "s|@MYSQL_SOCLOC@|${MYSQL_SOCLOC}|g"		\
 			-e "s|@PREFIX@|${PREFIX}|g"			\
-			-e "s|@BZDIR@|${BZDIR}|g"
+			-e "s|@BZDIR@|${BZDIR}|g"			\
+			-e "s|/usr/lib/sendmail|${SENDMAIL}|g"
 SUBST_MESSAGE.conf=	"Fixing configuration files."
 
 post-extract:
-	@${FIND} ${WRKSRC}/docs/images -type d -name CVS | ${XARGS} ${RM} -rf
 	@${FIND} ${WRKSRC}/template -type d -name CVS | ${XARGS} ${RM} -rf
-	@${FIND} ${WRKSRC}/skins -type d -name CVS | ${XARGS} ${RM} -rf
 	@${FIND} ${WRKSRC}/template -type f -name ".cvsignore" | ${XARGS} \
 		${RM} -f
 	@${CP} ${FILESDIR}/bugzilla.conf ${WRKSRC}
@@ -84,8 +84,10 @@ do-install:
 	${INSTALL_DATA_DIR} ${BZDIR}/js
 	${INSTALL_DATA_DIR} ${BZDIR}/template
 	${INSTALL_DATA_DIR} ${BZDIR}/skins
+	${INSTALL_DATA_DIR} ${BZDIR}/skins/standard
 	${INSTALL_DATA_DIR} ${BZDIR}/docs/html
 	${INSTALL_DATA_DIR} ${BZDIR}/docs/images
+	${INSTALL_DATA_DIR} ${BZDIR}/docs/images/callouts
 	${INSTALL_DATA} ${WRKSRC}/docs/txt/Bugzilla-Guide.txt ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/rel_notes.txt ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/QUICKSTART ${DOCDIR}
@@ -113,10 +115,14 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/css/*.css ${BZDIR}/css
 	${INSTALL_DATA} ${WRKSRC}/docs/html/*.html ${BZDIR}/docs/html
 	cd ${WRKSRC}/template && ${PAX} -rw . ${BZDIR}/template
-	cd ${WRKSRC}/skins && ${PAX} -rw . ${BZDIR}/skins
-	cd ${WRKSRC}/docs/images && ${PAX} -rw . ${BZDIR}/docs/images
-	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${BZDIR}/template
-	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${BZDIR}/skins
+	${FIND} ${BZDIR}/template -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
+	${FIND} ${BZDIR}/template -type d | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${CHMOD} ${BINMODE} ${BZDIR}/template/en/default/filterexceptions.pl
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${BZDIR}/template
+	${INSTALL_DATA} ${WRKSRC}/skins/standard/*.css ${BZDIR}/skins/standard
+	${INSTALL_DATA} ${WRKSRC}/docs/images/*.gif ${BZDIR}/docs/images
+	${INSTALL_DATA} ${WRKSRC}/docs/images/callouts/*.gif \
+		${BZDIR}/docs/images/callouts
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"

@@ -1,19 +1,18 @@
-Bugzilla is one example of a class of programs called "Defect Tracking
-Systems", or, more commonly, "Bug-Tracking Systems". Defect Tracking
-Systems allow individual or groups of developers to keep track of
-outstanding bugs in their product effectively.
+Bugzilla is a "Defect Tracking System" or "Bug-Tracking System". Defect 
+Tracking Systems allow individual or groups of developers to keep track of 
+outstanding bugs in their product effectively. Most commercial defect-tracking 
+software vendors charge enormous licensing fees. Despite being "free", Bugzilla
+has many features its expensive counterparts lack. Consequently, Bugzilla has 
+quickly become a favorite of hundreds of organizations across the globe.
 
-Bugzilla has matured immensely, and now boasts many advanced features.
-These include:
+What Does Bugzilla Do?
 
-- integrated, product-based granular security schema
-- inter-bug dependencies and dependency graphing
-- advanced reporting capabilities
-- a robust, stable RDBMS back-end
-- extensive configurability
-- a very well-understood and well-thought-out natural bug resolution protocol
-- email, XML, console, and HTTP APIs
-- available integration with automated software configuration management
-systems, including Perforce and CVS (through the Bugzilla email interface
-and checkin/checkout scripts)
-- too many more features to list
+- Track bugs and code changes 
+- Communicate with teammates 
+- Submit and review patches 
+- Manage quality assurance (QA) 
+
+Bugzilla can help you get a handle on the software development process. 
+Successful projects often are the result of successful organization and 
+communication. Bugzilla is a powerful tool that will help your team get 
+organized and communicate effectively.
