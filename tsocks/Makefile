@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/06 17:02:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/06 18:18:36 jmmv Exp $
 #
 
 DISTNAME=	tsocks-1.7
@@ -17,10 +17,20 @@ CONFIGURE_ARGS+=	--with-conf=${PKG_SYSCONFDIR}/tsocks.conf
 
 EGDIR=			${PREFIX}/share/examples/tsocks
 
+SUBST_CLASSES+=		tsocks
+SUBST_STAGE.tsocks=	post-configure
+SUBST_MESSAGE.tsocks=	"Generating tsocks wrapper script."
+SUBST_FILES.tsocks=	tsocks
+SUBST_SED.tsocks=	-e "s|@SH@|${SH}|g" -e "s|@PREFIX@|${PREFIX}|g"
+
 post-extract:
 	${RM} -f ${WRKSRC}/config.cache
+	${CP} ${FILESDIR}/tsocks.sh ${WRKSRC}/tsocks
+
+post-configure: subst-tsocks
 
 post-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/tsocks ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/tsocks.conf.complex.example \
 		${EGDIR}/tsocks.conf.complex
