@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/23 15:10:07 lexort Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 19:47:56 lexort Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -6,7 +6,8 @@ DISTNAME=	quagga-0.96.4-20031223
 PKGNAME=	quagga-0.96.4.20031223
 WRKSRC=		${WRKDIR}/quagga-0.96.4
 CATEGORIES=	net
-MASTER_SITES=	http://www.quagga.net/download/cvs/
+# Use pkgsrc/ for saved snapshots, cvs/ for current ones
+MASTER_SITES=	http://www.quagga.net/download/pkgsrc/
 
 MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://www.quagga.net/
