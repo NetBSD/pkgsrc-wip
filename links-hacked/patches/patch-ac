@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1 2003/09/02 01:41:12 xtraeme Exp $
+
+--- lua.c.orig	2003-09-02 03:28:18.000000000 +0200
++++ lua.c	2003-09-02 03:37:01.000000000 +0200
+@@ -137,10 +137,10 @@
+ 
+ void init_lua()
+ {
+-	L = lua_open(0);
++	L = lua_open();
+ 	lua_baselibopen(L);
+ 	lua_strlibopen(L);
+-	lua_register(L, LUA_ALERT, l_alert);
++	lua_register(L, LUA_TNIL, l_alert);
+ 	lua_register(L, "current_url", l_current_url);
+ 	lua_register(L, "current_link", l_current_link);
+ 	lua_register(L, "current_document", l_current_document);
+@@ -227,9 +227,7 @@
+ 	}
+ 	lua_pushstring(L, expr);
+ 	if (prepare_lua(ses)) return;
+-	err = lua_call(L, 1, 2);
+ 	finish_lua();
+-	if (err) return;
+ 	
+ 	if ((act = lua_tostring(L, -2))) {
+ 		if (!strcmp(act, "eval")) lua_console_eval(ses);

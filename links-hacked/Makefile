@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/08/28 09:48:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2003/09/02 01:41:11 xtraeme Exp $
 #
 
 DISTNAME=	links-hacked-${VER}
@@ -20,11 +20,38 @@ VER=			030709
 
 CONFLICTS+=	links-[0-9]* links-gui-[0-9]* elinks-[0-9]*
 
-LDFLAGS+=		-lpng
+LIBS+=			-lpng
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--enable-javascript
 CONFIGURE_ARGS+=	--enable-form-saving
 CONFIGURE_ARGS+=	--enable-graphics
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=	LINKS_HACKED_STATIC LINKS_HACKED_USES_DIRECTFB \
+		LINKS_HACKED_USES_SVGALIB LINKS_HACKED_USES_LUA
+
+.if defined(LINKS_HACKED_STATIC) && \
+	!empty(LINKS_HACKED_STATIC:M[yY][eE][sS])
+CONFIGURE_ARGS+=	--enable-static
+.endif
+
+.if defined(LINKS_HACKED_USES_DIRECTFB) && \
+	!empty(LINKS_HACKED_USES_DIRECTFB:M[yY][eE][sS])
+CONFIGURE_ARGS+=	--without-x
+.include "../../wip/directfb/buildlink2.mk"
+.endif
+
+.if defined(LINKS_HACKED_USES_SVGALIB) && \
+	!empty(LINKS_HACKED_USES_SVGALIB:M[yY][eE][sS])
+CONFIGURE_ARGS+=        --without-x
+.include "../../wip/svgalib/buildlink2.mk"
+.endif
+
+.if defined(LINKS_HACKED_USES_LUA) && \
+	!empty(LINKS_HACKED_USES_LUA:M[yY][eE][sS])
+.include "../../lang/lua/buildlink2.mk"
+.endif
 
 post-extract:
 	@${MV} ${WRKDIR}/font ${WRKSRC}

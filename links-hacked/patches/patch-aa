@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/07/31 00:48:55 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2003/09/02 01:41:12 xtraeme Exp $
 
---- configure.in.orig	2003-07-31 00:15:48.000000000 +0200
-+++ configure.in	2003-07-31 00:17:30.000000000 +0200
+--- configure.in.orig	2003-09-02 03:22:21.000000000 +0200
++++ configure.in	2003-09-02 03:23:46.000000000 +0200
 @@ -86,36 +86,6 @@
  AC_CHECK_SIZEOF(unsigned, "$default_int")
  AC_CHECK_SIZEOF(long, "$default_int")
@@ -39,3 +39,21 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/31 00:48:55 xtraeme Exp $
  dnl Checks for library functions.
  AC_PROG_GCC_TRADITIONAL
  AC_FUNC_MEMCMP
+@@ -281,7 +251,7 @@
+ if test -z "$disable_lua"; then
+ 	# It's double here in order to have the piggyswitch hack working
+ 	# Hack, indeed. Guess why? Yes, it's Debian!
+-	for luadir in "" /usr /usr /usr/local /usr/local; do
++	for luadir in "${PREFIX}"; do
+ 		if test "$cf_result" = no; then
+ 			if test "$xyz_piggyswitch" = "cow"; then
+ 				LIBS="-llua40 -llualib40 -lm $LIBS_X"
+@@ -302,7 +272,7 @@
+ 			fi
+ 
+ 			AC_TRY_LINK([#include <lua.h>],
+-				    [lua_open(0)],
++				    [lua_open();],
+ 				    cf_result=yes, cf_result=no)
+ 		fi
+ 	done
