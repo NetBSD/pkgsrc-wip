@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/05/12 21:48:02 jeremy-c-reed Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/06/11 08:25:41 thomasklausner Exp $
 
 .if !defined(LIBGSF_BUILDLINK2_MK)
 LIBGSF_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libgsf
 BUILDLINK_DEPENDS.libgsf?=	libgsf>=1.8.0
-BUILDLINK_PKGSRCDIR.libgsf?=	../../devel/libgsf
+BUILDLINK_PKGSRCDIR.libgsf?=	../../wip/libgsf
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libgsf=libgsf
 BUILDLINK_PREFIX.libgsf_DEFAULT=	${LOCALBASE}
