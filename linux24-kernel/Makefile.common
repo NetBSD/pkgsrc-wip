@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/29 07:32:04 marttikuparinen Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/03/31 22:49:54 jeremy-c-reed Exp $
 
-LINUX_VERSION=		2.4.24
+LINUX_VERSION=		2.4.25
 
 DISTNAME=		linux-${LINUX_VERSION}
 CATEGORIES=		misc
