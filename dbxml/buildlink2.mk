@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/12/26 21:27:48 minskim Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/02/12 22:28:48 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use dbxml.
 #
@@ -20,8 +20,8 @@ BUILDLINK_FILES.dbxml+=	lib/libdbxml-1.2.*
 BUILDLINK_FILES.dbxml+=	lib/libdbxml.*
 
 .include "../../databases/db4/buildlink2.mk"
+.include "../../textproc/libpathan/buildlink2.mk"
 .include "../../textproc/xerces-c/buildlink2.mk"
-.include "../../wip/libpathan/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	dbxml-buildlink
 
