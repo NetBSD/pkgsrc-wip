@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.108 2003/04/20 15:11:49 cjep Exp $
-# $NetBSD: Makefile,v 1.108 2003/04/20 15:11:49 cjep Exp $
+# $Id: Makefile,v 1.109 2003/04/20 15:14:37 cjep Exp $
+# $NetBSD: Makefile,v 1.109 2003/04/20 15:14:37 cjep Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -107,6 +107,7 @@ SUBDIR+=	tsclient
 SUBDIR+=	umix
 SUBDIR+=	vim-gtk2
 SUBDIR+=	vixie-cron
+SUBDIR+=	vmsbackup
 SUBDIR+=	xawtv
 SUBDIR+=	xevil
 
