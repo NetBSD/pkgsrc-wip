@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/30 19:07:03 schnoebe Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/30 19:17:19 schnoebe Exp $
 #
 
 DISTNAME=	avelsieve-1.9.1
@@ -6,7 +6,7 @@ PKGNAME=	squirrelmail-${DISTNAME}
 CATEGORIES=	mail
 MASTER_SITES=	http://www.squirrelmail.org/plugins/
 
-MAINTAINER=	martti@NetBSD.org
+MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://www.squirrelmail.org/
 COMMENT=	Sieve Script editing plugin for SquirrelMail
 
