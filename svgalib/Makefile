@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:42 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/12 02:43:56 blef Exp $
 # FreeBSD: ports/graphics/svgalib/Makefile,v 1.10 2003/03/07 06:04:12 ade Exp
 #
 
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.svgalib.org/
 COMMENT=	Low level console graphics library
 
 USE_GNU_TOOLS+=	make
+USE_BUILDLINK3=	yes
 CFLAGS+=	-g -DUSE_LIBC_VM86
 MANCOMPRESSED=	yes
 
