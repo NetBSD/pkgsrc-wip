@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/17 18:58:36 xtraeme Exp $
+bin/pdb2ldif

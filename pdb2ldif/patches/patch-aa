@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/17 18:58:36 xtraeme Exp $
+
+--- pdb2ldif.orig	Fri Apr 20 21:05:21 2001
++++ pdb2ldif
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/pkg/bin/perl
+ #
+ # pdb2ldif
+ #
