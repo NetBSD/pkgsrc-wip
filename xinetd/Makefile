@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/10 22:49:25 poppnk Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/11 10:52:09 poppnk Exp $
 #
 
 DISTNAME=		xinetd-2.3.13
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}/lib
 .endif
 
 RCD_SCRIPTS=		xinetd
-CPPFLAGS+=		-DDEFAULT_CONFIG_FILE=\\\"\"${PREFIX}/etc/xinetd.conf\\\"\"
+CPPFLAGS+=	-DDEFAULT_CONFIG_FILE=\\\"\"${PKG_SYSCONFDIR}/etc/xinetd.conf\\\"\"
 
 USE_PERL5=YES
 REPLACE_PERL+=	${WRKSRC}/xinetd/xconv.pl
