@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/18 19:13:16 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/19 18:50:43 shattered Exp $
 
 DISTNAME=		mutt-1.5.4i
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--without-included-gettext \
 			--enable-pop --enable-imap
 
-REPLACE_PERL=		${WRKSRC}/smime_keys
+REPLACE_PERL=		${WRKSRC}/smime_keys.pl
 
 LDFLAGS+=		${_STRIPFLAG_CC}
 
