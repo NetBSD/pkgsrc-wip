@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1 2003/06/11 10:01:19 cubidou Exp $
+
+--- src/prefs.c.orig	2003-06-06 22:23:28.000000000 +0200
++++ src/prefs.c
+@@ -115,11 +115,11 @@ load_prefs (void)
+ 	{
+ 	  while (fgets (buf, sizeof (buf), fd))
+ 	    {
++	      gint tls;
+ 	      if (*buf == '\n' || *buf == '#')
+ 		continue;
+ 	      buf[strlen (buf) - 1] = '\0';
+ 	      split = g_strsplit (buf, "|", 0);
+-	      gint tls;
+ 	      if ( (!(strcmp(split[4],"Y"))) || (!(strcmp(split[4],"N"))) )
+ 	      {
+ 	        if (!(strcmp(split[4],"Y")))

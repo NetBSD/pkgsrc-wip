@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/11 08:19:01 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/06/11 10:01:18 cubidou Exp $
 
 SHA1 (directory_administrator-1.5.tar.gz) = ee4e6f846268687828d18faf9c4b3fe5639d2a58
 Size (directory_administrator-1.5.tar.gz) = 457829 bytes
-SHA1 (patch-aa) = df6bb5ed4f049ba2aa8398c7f73a07a051b18324
+SHA1 (patch-aa) = a740e190227c0fa556f5de0f0e166528b869c1b1
+SHA1 (patch-ab) = 40057dbe4952201fa73736b9a194104b0609b17e
+SHA1 (patch-ac) = 0771aab890bbe7b02c92bc20340982d426846442
+SHA1 (patch-ad) = e7ff170b2ae26f83771d2fe6e5ad7173f86bfd52
+SHA1 (patch-ae) = ef388dbbfd7105a7118d92d5be63009b16995d6a
