@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/04/25 08:33:45 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/18 15:08:35 ppostma Exp $
 #
 
 DISTNAME=		steghide-0.5.1
-CATEGORIES=		wip
+CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=steghide/}
 
 MAINTAINER=		adam@monkeybyte.org
