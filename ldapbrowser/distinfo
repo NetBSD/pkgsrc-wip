@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/09/20 06:15:58 marmfield Exp $
+$NetBSD: distinfo,v 1.3 2003/09/20 06:31:52 marmfield Exp $
 
 SHA1 (Browser282b2.tar.gz) = b0d6b22c31fa40b184c11eca415830d9433c91e4
 Size (Browser282b2.tar.gz) = 651283 bytes
-SHA1 (patch-aa) = ecb54e8e92ae104ff1efeaeb30655dda4b4c3179
+SHA1 (patch-aa) = 590b5e3655a5533549078b0ac31a4fe2866e0c87
