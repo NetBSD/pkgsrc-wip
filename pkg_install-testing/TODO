@@ -1,6 +1,7 @@
 This is a custom pkg_install:
 
 1) configures for more db versions.
+also look at http://mail-index.netbsd.org/tech-pkg/2003/03/18/0002.html
 
 2) integrates a new package upgrade routine where it overwrites
    instead of pkg_delete'ing first (see pkg_add man page)
@@ -68,7 +69,21 @@ before it checks for conflicts.
 14) maybe make sure that if it is a symlink that it is extracting over
  to remove it first?
 
-15) shouldn't need to use -f force when PKG_PRESERVE is enabled.
+15) shouldn't need to use -f force when PKG_PRESERVE is enabled when using
+    -u switch.  *this seems to work now
 
-also look at http://mail-index.netbsd.org/tech-pkg/2003/03/18/0002.html
+16) it seems that when downgrading to an old version, the package database
+is not registered correct, so extra files may be unlinked
 
+17) make sure when doing an upgrade that after the unlink, the entry is
+removed from the pkgdb
+
+18) also make sure that when installing a package if the entry previously
+exists to overwrite it. For example, pkg_admin dump tells me:
+file: /usr/bin/gnutls-cli-debug pkg: gnutls-1.0.8
+even when I have gnutls-1.0.13 installed.
+
+19) after removing files, check for directory entries and remove
+directories not in old contents?
+
+20) what about unexec options? should they be reported about?
