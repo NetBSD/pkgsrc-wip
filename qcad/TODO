@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1 2005/03/08 15:42:54 jcflack Exp $
+$NetBSD: TODO,v 1.2 2005/03/12 23:28:05 jcflack Exp $
 
 I think this package is essentially done, but it's my learn-pkgsrc package
 so it's possible there are better ways to do things.  Think of this TODO
@@ -7,16 +7,6 @@ as my unanswered-questions file; I'd be happy to hear of better approaches.
 This passed pkglint just fine until I factored out Makefile.common ... but
 I see the qt3 stuff is factored the same way (and also annoys pkglint).
 I assume that means it's ok....
-
-QMAKESPEC is set unconditionally to netbsd-g++ but is this really the
-right thing to do for a portable pkgsrc?  Is there a good way to get it
-set dynamically?  Can the Qt makefiles arrange it?
-
-The whole post-patch, er, I mean, post-wrapper target is just to arrange
-to patch some fixed paths in sourcefiles to the dynamically determined
-values.  Surely this comes up often enough there's just a way to say I want
-these tokens changed in these files, like the way interpreters are
-handled?  I didn't find one....
 
 I have left tech-pkg@NetBSD.org as the maintainer because I am hoping to
 rework shells/ast-ksh (and probably will set myself as maintainer for that
