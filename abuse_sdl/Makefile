@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/19 19:47:18 blef Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/01 20:25:54 blef Exp $
 
 DISTNAME=		abuse_sdl-0.7.0
 CATEGORIES=		games
-MASTER_SITES=		http://www.labyrinth.net.au/~trandor/abuse/files/
+MASTER_SITES=		http://www.labyrinth.net.au/~trandor/abuse/files/	\
+       			http://www.cs.uidaho.edu/~cass0664/fRaBs/
 EXTRACT_SUFX=		.tar.bz2
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} abuse_datafiles.tar.gz
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} frabs210_unix.src.tar.bz2
 
 MAINTAINER=		soren@blef.org
 HOMEPAGE=		http://www.labyrinth.net.au/~trandor/abuse/
-COMMENT=		port of the Abuse game to SDL
-
-EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+COMMENT=		Port of the Abuse side scroller to SDL
 
 USE_GMAKE=		yes
 USE_BUILDLINK2=		yes
@@ -21,17 +20,15 @@ GNU_CONFIGURE=		yes
 post-patch:
 	${SED} -e "s|/usr/local/share/games/abuse|${PREFIX}/share/abuse_sdl|"  \
        	${WRKSRC}/src/sdlport/setup.cpp > ${WRKSRC}/src/sdlport/setup.cpp.new
-	${MV} ${WRKSRC}/src/sdlport/setup.cpp.new \
-		${WRKSRC}/src/sdlport/setup.cpp
+	${MV} ${WRKSRC}/src/sdlport/setup.cpp.new ${WRKSRC}/src/sdlport/setup.cpp
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/abuse_sdl
 	cd ${PREFIX}/share/abuse_sdl && \
-	${GZCAT} ${DISTDIR}/abuse_datafiles.tar.gz | ${GTAR} xf - && \
-	${CHOWN} -R ${SHAREOWN} . && \
-	${CHGRP} -R ${SHAREGRP} . && \
-	${FIND} . -type f -exec ${CHMOD} ${SHAREMODE} '{}' ';' && \
-	${FIND} . -type d -exec ${CHMOD} ${BINMODE} '{}' ';'
+		(${MV} ${WRKDIR}/frabs210_unix.src/* . && \
+		${CHOWN} -R ${SHAREOWN} . && ${CHGRP} -R ${SHAREGRP} . && \
+		${FIND} . -type f -exec ${CHMOD} ${SHAREMODE} '{}' ';' && \
+		${FIND} . -type d -exec ${CHMOD} ${BINMODE} '{}' ';')
 
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
