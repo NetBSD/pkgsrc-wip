@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1710 2005/03/29 14:19:54 minskim Exp $
-# $NetBSD: Makefile,v 1.1710 2005/03/29 14:19:54 minskim Exp $
+# $Id: Makefile,v 1.1711 2005/03/30 09:15:24 ianzag Exp $
+# $NetBSD: Makefile,v 1.1711 2005/03/30 09:15:24 ianzag Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -405,6 +405,7 @@ SUBDIR+=	kahakai
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	kazehakase
+SUBDIR+=	kchm
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	konversation
