@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/04 03:08:46 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/04 09:50:21 jmmv Exp $
 #
 
-DISTNAME=	XML-XSH-${VERSION}
-PKGNAME=	xsh-${VERSION}
+DISTNAME=	XML-XSH-1.6
+PKGNAME=	${DISTNAME:S/XML-XSH/xsh/}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xsh/}
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://xsh.sourceforge.net/
 COMMENT=	XML Editing Shell
-
-VERSION=	1.6
 
 USE_PERL5=	yes
 USE_GMAKE=	yes
