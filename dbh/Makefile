@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/04/04 09:43:49 bmeurer Exp $
+# $NetBSD: Makefile,v 1.4 2003/04/05 12:01:17 bmeurer Exp $
 
 DISTNAME=		dbh_1.0-14
 PKGNAME=		dbh-1.0.14
@@ -15,8 +15,6 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/src/dbh-1.0.pc.in
-
-.include "../../mk/bsd.prefs.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dbh/
