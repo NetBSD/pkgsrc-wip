@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1410 2004/07/29 14:45:08 tvierling Exp $
-# $NetBSD: Makefile,v 1.1410 2004/07/29 14:45:08 tvierling Exp $
+# $Id: Makefile,v 1.1411 2004/07/30 00:00:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1411 2004/07/30 00:00:09 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -161,8 +161,6 @@ SUBDIR+=	gDesklets-CornerXMMS
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
 SUBDIR+=	galib
-SUBDIR+=	gcc-3.4
-SUBDIR+=	gcc-3.4-ada
 #SUBDIR+=	gcl		# see TODO
 #SUBDIR+=	gcl-nox11	# see gcl/TODO
 SUBDIR+=	gcompris
@@ -277,6 +275,7 @@ SUBDIR+=	jdk14
 SUBDIR+=	kahakai
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
+SUBDIR+=	kazehakase
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	kkbswitch
@@ -811,6 +810,7 @@ SUBDIR+=	xproto
 SUBDIR+=	xrestop
 SUBDIR+=	xscribble-fs
 SUBDIR+=	xtrans
+SUBDIR+=	yabause
 SUBDIR+=	yafray
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
