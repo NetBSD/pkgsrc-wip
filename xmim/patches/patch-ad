@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/02/25 20:59:06 daprice Exp $
+
+--- xmim/help_button_clicked.c.orig	2004-06-04 10:09:56.000000000 -0600
++++ xmim/help_button_clicked.c
+@@ -24,9 +24,9 @@
+ void help_button_clicked(GtkWidget *w,gpointer data){
+   GtkWidget *dialog, *label, *dismiss_button;
+   
+-  char message[]={"\nHelp Menu not yet implemented.\n
+-        Please email: mim-devel@lists.uoregon.edu\nfor support.\n\n
+-        Developed by: Hoang M. Tran, Abiel Reinhart, and the University of Oregon Multicast Group\n
++  char message[]={"\nHelp Menu not yet implemented.\n \
++        Please email: mim-devel@lists.uoregon.edu\nfor support.\n\n \
++        Developed by: Hoang M. Tran, Abiel Reinhart, and the University of Oregon Multicast Group\n \
+         Inspired by Cisco's IPTV Viewer and Berkeley's rsdr tool.\n\n"};
+  
+   dialog = gtk_dialog_new();

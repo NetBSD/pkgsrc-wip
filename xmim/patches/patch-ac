@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/02/25 20:59:06 daprice Exp $
+
+--- xmim/Makefile.in.orig	2001-04-25 17:47:13.000000000 -0600
++++ xmim/Makefile.in
+@@ -83,7 +83,7 @@ OBJ = ${SRC:.c=.o}
+ HDRS = *.h
+ 
+ CC = gcc -DLIL_ENDIAN -DRTP_LITTLE_ENDIAN -DREENTRANT -Wall
+-CFLAGS = -pthread `gtk-config --cflags` `glib-config --cflags` 
++CFLAGS =`gtk-config --cflags` `glib-config --cflags` 
+ LIBS = -lpthread -lgthread `gtk-config --libs` `glib-config --libs`
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_CLEAN_FILES = 
