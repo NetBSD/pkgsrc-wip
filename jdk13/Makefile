@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/04/27 12:27:09 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/02 04:39:02 tvierling Exp $
 #
 ## XXX PKGSRC-WIP:
 ## This is not ready for prime time.  The still work-in-progress issues:
 ##
-## * The plugin is not built.
-## * HotSpot is not built on -current.
 ## * The package does not build on -current (tar-pax issues, and others).
-## * A minor patch from FreeBSD ports is missing and will be added.
 #
 # Some notes for those working on this package:
 #
@@ -20,22 +17,12 @@
 # * There is no LICENSE setting, since obtaining the source tarball
 #   already requires having a SCSL-accepted login name and password.
 #
-# * The Mozilla/OJI plugin is not yet built; conditional framework
-#   for this could be added, but making it an unconditional build
-#   dependency would put heavy stress on this package at build time
-#   for those who don't wish to build it.
-#
 # * The HotSpot JVM is not yet built, and likely won't work until
-#   NetBSD pre-2.0-current pthreads changes settle.
-#
-# * Building is indirected through the "bundles" special target,
-#   which produces wrapped zipfiles.  This is preferred to tarfiles
-#   as they *don't* have file ownership information (and will thus
-#   re-extract as root) and this is Sun's current preferred
-#   distribution format.
+#   NetBSD pre-2.0-current pthreads changes settle.  (This requires
+#   implementing some lower level threads glue, as well.)
 
 DISTNAME=	j2sdk-1_3_1-src
-PKGNAME=	jdk13-1.0.8
+PKGNAME=	jdk13-1.0.8.20030423
 WRKSRC=		${WRKDIR}
 CATEGORIES=	lang
 MASTER_SITES=	# empty
@@ -65,13 +52,31 @@ USE_PKGINSTALL=	YES
 JVM_HOME=	${LOCALBASE}/java/jdk-1.3.1
 ONLY_FOR_PLATFORM=	NetBSD-1.[4-9]*-i386 NetBSD-[2-9]*-i386
 
-ALL_TARGET=	all images bundles
+ALL_TARGET=	all # added to below
 BUILD_DIRS=	${WRKSRC}/j2sdk1.3.1/make
 CHECK_SHLIBS=	NO # scripts set LD_LIBRARY_PATH
 NO_MTREE=	YES # since we change PREFIX below
-OWN_DIRS=	${PREFIX}
+OWN_DIRS=	${PREFIX} ${PREFIX}/jre ${PREFIX}/jre/lib \
+		${PREFIX}/jre/lib/images ${PREFIX}/jre/lib/images/cursors \
+		${PREFIX}/jre/lib/security
 
 .include "../../mk/bsd.prefs.mk"
+
+# XXX needs PLIST fragment factored out in order to be conditional
+#.if defined(JDK13_USE_OJI) && !empty(JDK13_USE_OJI:M[Yy][Ee][Ss])
+ALL_TARGET+=	plugin
+
+MAKE_ENV+=	LIBG_HDRS="${LOCALBASE}/include/glib/glib-1.2 -I${LOCALBASE}/lib/glib/include"
+MAKE_ENV+=	GTK_HDRS="${LOCALBASE}/include/gtk-1.2"
+MAKE_ENV+=	LIBIDL_HDRS="${LOCALBASE}/include"
+
+.include "../../net/ORBit/buildlink2.mk"
+.include "../../www/mozilla/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+#.endif
+
+ALL_TARGET+=	images
+MOTIF_TYPE=	openmotif
 
 MAKE_ENV+=	ALT_BOOTDIR=${LOCALBASE}/java/sun-1.3.1
 MAKE_ARGS+=	ALT_DEVTOOLS_PATH=${LOCALBASE} # used to find "zip" and "unzipsfx"
@@ -81,7 +86,28 @@ MAKE_ARGS+=	M4=${LOCALBASE}/bin/gm4
 MAKE_ENV+=	OPENWINHOME=${MOTIFBASE}
 MAKE_ENV+=	USE_GNU_M4=1
 
-PATCH_DF=	bsd-jdk131-patches-8.tar.gz
+SFILES=         content-types.properties
+SFILES+=	flavormap.properties
+SFILES+=	font.properties
+SFILES+=	font.properties.ja
+SFILES+=	font.properties.ru
+SFILES+=	font.properties.uk
+SFILES+=	font.properties.zh
+SFILES+=	font.properties.zh_CN
+SFILES+=	font.properties.zh_TW
+SFILES+=	images/cursors/cursors.properties
+SFILES+=	jvm.cfg
+SFILES+=	psfont.properties.ja
+SFILES+=	psfontj2d.properties
+SFILES+=	security/java.policy
+SFILES+=	security/java.security
+
+SUPPORT_FILES=	# empty
+.for f in ${SFILES}
+SUPPORT_FILES+=	${PREFIX}/jre/lib/$f.default ${PREFIX}/jre/lib/$f
+.endfor
+
+PATCH_DF=	bsd-jdk131-patches-current.tar.gz
 PATCH_DOWNLOAD=	http://www.eyesbeyond.com/freebsddom/java/JDK13SCSLConfirm.html
 
 SCSL_DF=	${DISTNAME}${EXTRACT_SUFX}
@@ -103,7 +129,7 @@ _FETCH_MESSAGE= \
 	${ECHO} ; \
 	${ECHO} " Also, the file ${PATCH_DF} must be fetched into:"; \
 	${ECHO} "	${DISTDIR}/${PATCH_DF}"; \
-	${ECHO} " from (choose Patchset 8):"; \
+	${ECHO} " from (choose Experimental patchset):"; \
 	${ECHO} "	${PATCH_DOWNLOAD}"; \
 	${ECHO} ; \
 	${ECHO} "======================================================================"
@@ -114,24 +140,20 @@ post-extract:
 	@cd ${WRKSRC} && ${GREP} '^mkdir -p ' BUILD | while read line; do \
 		${ECHO} $$line; $$line; \
 	done
+	${MKDIR} ${WRKSRC}/j2sdk1.3.1/src/bsd/include
 
 pre-patch:
 	cd ${WRKSRC} && ${PATCH} -s <jdk131.patches
 	@${FIND} ${WRKSRC} -name '*.orig' | ${XARGS} ${RM} -f
 
-# the * wildcard (third line) pulls out the platform name automatically
 post-build:
-	@${ECHO_MSG} '=== Sun-style release bundle ".sh" files are now available'
-	@${ECHO_MSG} '=== in the following directory:'
-	@${ECHO_MSG} '=== ${WRKSRC}/j2sdk1.3.1/build/bsd-i386'
+.for f in ${SFILES}
+	cd ${BUILD_DIRS}/../build/*/jdk-image-${MACHINE_ARCH}/jre/lib && ${MV} -f $f $f.default
+.endfor
 
-# Extracts from the .sh file, then flattens one directory, and
-# fixes .so files to be symlinks.
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}
-	cd ${PREFIX} && ${ECHO} 'yes' | ${WRKSRC}/j2sdk1.3.1/build/bsd-i386/jdk-1.3.1-*-bsd-i386.sh >/dev/null
-	${MV} ${PREFIX}/jdk1.3.1/* ${PREFIX}/
-	${RMDIR} ${PREFIX}/jdk1.3.1
+	cd ${BUILD_DIRS}/../build/*/jdk-image-${MACHINE_ARCH} && ${PAX} -rw . ${PREFIX}
 
 .include "../../mk/motif.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
