@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2004/11/02 15:36:12 poppnk Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/03 19:23:08 poppnk Exp $
 
-DISTNAME=	apstget-20041102
+DISTNAME=	apstget-20041103
 CATEGORIES=	pkgtools wip
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,6 +11,7 @@ COMMENT=	apt-get like tool for pkgsrc
 DEPENDS+=	pkgfind>=20041020:../../pkgtools/pkgfind
 DEPENDS+=	pkg_tarup>=1.6.3:../../pkgtools/pkg_tarup
 DEPENDS+=	pkg_chk>=1.51:../../pkgtools/pkg_chk
+DEPENDS+=	pkglint>=3.94:../../pkgtools/pkglint
 
 NO_BUILDLINK=	yes
 NO_CONFIGURE=	yes

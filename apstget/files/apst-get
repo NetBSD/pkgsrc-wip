@@ -82,6 +82,7 @@ do_usage() {
 	echo "  update       - update the pkgsrc/-wip tree."
 	echo "  relink       - try to solve all broken libs."
 	echo "  clean        - clean all build directories."
+	echo "  autoclean    - remove all outdated distfiles."
 	echo ""
 	echo "variables (environ|_etc_/apstget.conf):"
 	echo "  MAKE_TARGET, INTERACTIVE, QUITE, IGNORE_ERRORS"
@@ -239,6 +240,7 @@ do_install() {
 	for A in ${REPLACE}; do
 		echo "==> Upgrading ${A}..."
 		cd ${PKGSRC_DIR}/${A}
+		${MAKE} fetch
 		${MAKE} replace ${UD_TARGETS} | ${WRAPPER} 2>&1
 		if [ ! "$?" = "0" ]; then
 			echo "==> Error occurred at ${DIR}."
@@ -255,6 +257,7 @@ do_install() {
 	for A in ${INSTALL}; do
 		echo "==> Installing ${A}"
 		cd ${PKGSRC_DIR}/${A}
+		${MAKE} fetch
 		${MAKE} install ${UD_TARGETS} | ${WRAPPER} 2>&1
 		if [ ! "$?" = "0" ]; then
 			echo "==> Error occurred at ${DIR}."
@@ -440,6 +443,9 @@ case "$1" in
 		if [ "$2" = "" ]; then break; fi
 		done
 	fi
+	;;
+"autoclean")
+	lintpkgsrc -r
 	;;
 "relink")
 	while : ; do
