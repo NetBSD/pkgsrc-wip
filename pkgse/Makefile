@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/29 13:26:45 imilh Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/04 13:41:24 imilh Exp $
 #
 
 DISTNAME=		pkgse-0.1
 CATEGORIES=		pkgtools
-MASTER_SITES=		http://imil.net/stuff/
+MASTER_SITES=		http://imil.net/NetBSD/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		imil@gcu.info
