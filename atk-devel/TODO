@@ -1,8 +1,9 @@
-$Id: TODO,v 1.1.1.1 2003/12/29 14:41:05 mpasternak Exp $
+$Id: TODO,v 1.2 2004/03/17 14:18:49 mpasternak Exp $
 
-Achtung! This is _only_ a copycat of devel/atk, which buildlinks against
-glib2-devel package! If pkgsrc contains some generic mechanisms to choose a
-version of glib2 which the package is build agains, we could use them and
-integrate it in devel/atk
+NetBSD-current 1.6ZI build confirmed.
+
+FreeBSD-4.9-STABLE build confirmed.
+
+Does it build on NetBSD-stable?
 
 	-- dotz@irc.pl
