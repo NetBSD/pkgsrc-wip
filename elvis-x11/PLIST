@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/09 17:16:52 airhead Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/09 20:07:44 airhead Exp $
 bin/elvfmt
 bin/elvis
 bin/elvtags
 bin/ref
-man/cat1/elvfmt.1
-man/cat1/elvis.1
-man/cat1/elvtags.1
-man/cat1/ref.1
+man/cat1/elvfmt.0
+man/cat1/elvis.0
+man/cat1/elvtags.0
+man/cat1/ref.0
 man/manl/elvfmt.1
 man/manl/elvis.1
 man/manl/elvtags.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/09 17:26:28 airhead Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/09 20:07:44 airhead Exp $
 #
 
 DISTNAME=	elvis-2.2_0
@@ -14,8 +14,7 @@ CONFLICTS=	elvis-[0-9]*
 
 HAS_CONFIGURE=		YES
 USE_X11=		YES
-USE_X11BASE=		YES
 CONFIGURE_ARGS+=	--with-x=yes
-CONFIGURE_ARGS+=	--prefix=${X11PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"
