@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1334 2004/06/21 15:20:16 kibumh Exp $
-# $NetBSD: Makefile,v 1.1334 2004/06/21 15:20:16 kibumh Exp $
+# $Id: Makefile,v 1.1335 2004/06/21 20:39:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1335 2004/06/21 20:39:35 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -390,7 +390,6 @@ SUBDIR+=	mingw-gcc
 SUBDIR+=	mingw-runtime-bin
 SUBDIR+=	mingw-w32api-bin
 SUBDIR+=	minimalist
-SUBDIR+=	mips64emul
 SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
 #SUBDIR+=	mk 		# not a package
