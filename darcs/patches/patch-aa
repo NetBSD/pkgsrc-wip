@@ -1,0 +1,56 @@
+--- GNUmakefile.orig	2004-05-14 12:40:18.000000000 +0200
++++ GNUmakefile	2004-06-02 01:31:24.000000000 +0200
+@@ -85,34 +85,34 @@
+ config: configure autoconf.mk
+ 
+ installbin:	all
+-	$(INSTALL) -d $(DESTDIR)/$(bindir)
+-	$(INSTALL) darcs $(DESTDIR)/$(bindir)
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)/$(bindir)
++	${BSD_INSTALL_PROGRAM} darcs $(DESTDIR)/$(bindir)
+ 
+-	$(INSTALL) -d $(DESTDIR)/$(sysconfdir)/bash_completion.d/
+-	$(INSTALL) -m 0644 darcs_completion $(DESTDIR)/$(sysconfdir)/bash_completion.d/darcs
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)/$(sysconfdir)/bash_completion.d
++	${BSD_INSTALL_DATA} darcs_completion $(DESTDIR)/$(sysconfdir)/bash_completion.d/darcs
+ 
+-	$(INSTALL) -d $(DESTDIR)/$(mandir)/man1
+-	$(INSTALL) -m 0644 darcs.1 $(DESTDIR)/$(mandir)/man1/
++	${BSD_INSTALL_MAN_DIR} $(DESTDIR)/$(mandir)/man1
++	${BSD_INSTALL_MAN} darcs.1 $(DESTDIR)/$(mandir)/man1/
+ 
+ installdocs:	darcs.ps manual/index.html
+-	$(INSTALL) -d $(DESTDIR)/$(datadir)/doc/darcs/manual
+-	$(INSTALL) -m 0644 darcs.ps $(DESTDIR)/$(datadir)/doc/darcs
+-	$(INSTALL) -m 0644 manual/* $(DESTDIR)/$(datadir)/doc/darcs/manual
+-
+-	$(INSTALL) -d $(DESTDIR)/$(datadir)/doc/darcs/examples
+-	$(INSTALL) -m 0644 zsh_completion_new $(DESTDIR)/$(datadir)/doc/darcs/examples/
+-	$(INSTALL) -m 0644 zsh_completion_old $(DESTDIR)/$(datadir)/doc/darcs/examples/
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)/$(datadir)/doc/darcs/manual
++	${BSD_INSTALL_DATA} darcs.ps $(DESTDIR)/$(datadir)/doc/darcs
++	${BSD_INSTALL_DATA} manual/* $(DESTDIR)/$(datadir)/doc/darcs/manual
++
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)/$(datadir)/doc/darcs/examples
++	${BSD_INSTALL_DATA} zsh_completion_new $(DESTDIR)/$(datadir)/doc/darcs/examples/
++	${BSD_INSTALL_DATA} zsh_completion_old $(DESTDIR)/$(datadir)/doc/darcs/examples/
+ 
+ installserver:	darcs_cgi darcs-createrepo
+-	$(INSTALL) -d $(DESTDIR)/$(libexecdir)/cgi-bin
+-	$(INSTALL) darcs_cgi $(DESTDIR)/$(libexecdir)/cgi-bin/darcs
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)/$(libexecdir)/cgi-bin
++	${BSD_INSTALL_PROGRAM} darcs_cgi $(DESTDIR)/$(libexecdir)/cgi-bin/darcs
+ 
+-	$(INSTALL) -d $(DESTDIR)/$(sbindir)
+-	$(INSTALL) darcs-createrepo $(DESTDIR)/$(sbindir)
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)/$(sbindir)
++	${BSD_INSTALL_PROGRAM} darcs-createrepo $(DESTDIR)/$(sbindir)
+ 
+-	$(INSTALL) -d $(DESTDIR)/$(sysconfdir)/darcs
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)/$(sysconfdir)/darcs
+ 	test -e $(DESTDIR)/$(sysconfdir)/darcs/cgi.conf || \
+-	    $(INSTALL) -m 0644 cgi.conf $(DESTDIR)/$(sysconfdir)/darcs/cgi.conf
++	    ${BSD_INSTALL_DATA} cgi.conf $(DESTDIR)/$(sysconfdir)/darcs/cgi.conf
+ 
+ dist:		darcs
+ 	./darcs dist --dist-name darcs-`./darcs --version`

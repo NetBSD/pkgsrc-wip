@@ -1,0 +1,5 @@
+* make buildlink3 work
+* create the build dependency on ghc
+* make ghc work on Debian GNU/Linux
+* after all: delete this file
+-- rillig, 2004-06-02
