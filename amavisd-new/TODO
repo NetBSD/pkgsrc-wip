@@ -1,4 +1,5 @@
 - rc.d script could be modeled after /etc/rc.d/nfslocking
+- amavisd-new 20040701 is out
 - amavisd-new 20030616-p10. A patch will need to be written to hack
   configure to fix this:
   http://marc.theaimsgroup.com/?l=amavis-user&m=108859127301789&w=2
