@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.104 2003/04/19 12:59:58 bmeurer Exp $
-# $NetBSD: Makefile,v 1.104 2003/04/19 12:59:58 bmeurer Exp $
+# $Id: Makefile,v 1.105 2003/04/19 17:28:08 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.105 2003/04/19 17:28:08 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -89,6 +89,7 @@ SUBDIR+=	shoutcast
 SUBDIR+=	tex-foiltex
 SUBDIR+=	umix
 SUBDIR+=	vim-gtk2
+SUBDIR+=	vixie-cron
 SUBDIR+=	xawtv
 SUBDIR+=	xevil
 SUBDIR+=	puf
