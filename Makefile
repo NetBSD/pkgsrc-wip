@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.346 2003/07/27 06:04:31 bencollver Exp $
-# $NetBSD: Makefile,v 1.346 2003/07/27 06:04:31 bencollver Exp $
+# $Id: Makefile,v 1.347 2003/07/27 06:06:03 bencollver Exp $
+# $NetBSD: Makefile,v 1.347 2003/07/27 06:06:03 bencollver Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -279,6 +279,7 @@ SUBDIR+=	rosegarden-current
 SUBDIR+=	scm
 SUBDIR+=	scons
 SUBDIR+=	scponly
+SUBDIR+=	sdarcnes
 SUBDIR+=	shoutcast
 SUBDIR+=	slocate
 SUBDIR+=	slrn-pl
