@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/13 13:37:05 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/29 15:49:14 adrian_p Exp $
 share/doc/msf/BUGS
 share/doc/msf/COPYING
 share/doc/msf/COPYING.Artistic
@@ -14,6 +14,7 @@ share/doc/msf/QUICKSTART.msfconsole
 share/doc/msf/QUICKSTART.msfweb
 share/doc/msf/QUICKSTART.ssl
 share/doc/msf/QUICKSTART.tabcompletion
+share/doc/msf/TODO
 share/doc/msf/VERSION
 share/msf/encoders/None.pm
 share/msf/encoders/Pex.pm
@@ -21,6 +22,7 @@ share/msf/encoders/PexAlphaNum.pm
 share/msf/encoders/PexFnstenvMov.pm
 share/msf/encoders/PexFnstenvSub.pm
 share/msf/exploits/Tester.pm
+share/msf/exploits/Win32Tester.pm
 share/msf/exploits/apache_chunked_win32.pm
 share/msf/exploits/blackice_pam_icq.pm
 share/msf/exploits/exchange2000_xexch50.pm
@@ -34,11 +36,14 @@ share/msf/exploits/msrpc_dcom_ms03_026.pm
 share/msf/exploits/mssql2000_resolution.pm
 share/msf/exploits/poptop_negative_read.pm
 share/msf/exploits/realserver_describe_linux.pm
+share/msf/exploits/samba_nttrans.pm
 share/msf/exploits/samba_trans2open.pm
 share/msf/exploits/sambar6_search_results.pm
 share/msf/exploits/servu_mdtm_overflow.pm
 share/msf/exploits/solaris_sadmind_exec.pm
+share/msf/exploits/svnserve_date.pm
 share/msf/exploits/warftpd_165_pass.pm
+share/msf/exploits/windows_ssl_pct.pm
 share/msf/msfcli
 share/msf/msfconsole
 share/msf/msfdldebug
@@ -62,7 +67,6 @@ share/msf/payloads/external/WindowsSyscall.py
 share/msf/payloads/external/bsdx86bind_ie.py
 share/msf/payloads/external/bsdx86reverse_ie.py
 share/msf/payloads/external/inlineegg.py
-share/msf/payloads/external/inlineegg.pyc
 share/msf/payloads/external/linx86bind_ie.py
 share/msf/payloads/external/linx86reverse_ie.py
 share/msf/payloads/external/linx86reverse_xor.py

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/05/27 09:44:51 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/29 15:49:14 adrian_p Exp $
 #
 
-DISTNAME=	framework-2.0
-PKGNAME=	msf-2.0
+DISTNAME=	framework-2.1
+PKGNAME=	msf-2.1
 CATEGORIES=	security
 MASTER_SITES=	http://www.metasploit.com/tools/
 
@@ -39,12 +39,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/* ${MSFDOC}
 	${INSTALL_DATA} ${WRKSRC}/encoders/*.pm ${MSFDIR}/encoders
 	${INSTALL_DATA} ${WRKSRC}/exploits/*.pm ${MSFDIR}/exploits
+
 	cd ${WRKSRC}/lib && ${PAX} -rw . ${MSFDIR}/lib
+
 	${INSTALL_DATA} ${WRKSRC}/nops/*.pm ${MSFDIR}/nops
 	${INSTALL_DATA} ${WRKSRC}/payloads/*.pm ${MSFDIR}/payloads
 	${INSTALL_DATA} ${WRKSRC}/payloads/external/*.py \
-		${MSFDIR}/payloads/external
-	${INSTALL_DATA} ${WRKSRC}/payloads/external/*.pyc \
 		${MSFDIR}/payloads/external
 
 	cd ${WRKSRC}; for file in ${PERL_FILES}; do \
