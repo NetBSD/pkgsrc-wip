@@ -1,30 +1,23 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/09/17 16:11:55 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2003/11/21 15:07:30 thomasklausner Exp $
 
---- dbf.c.orig	Tue Mar 11 01:35:10 2003
-+++ dbf.c
-@@ -190,20 +190,20 @@ void show_help(char *pname) {
-     /*printf("\n  --sql [sql-file] \t converts dBASE File to sql (tested with Postgres)");*/
- 	printf("\n  --view-info \t\t displays statistics about current dbf file");
- 	/*printf("\n  --ppc \t\t force dbf not to check the system architecture");*/
--	printf("\n\nPlease note that the current version automatically detects\n\
--the codepage used in the dbf file.\n\
--At the moment only english, american and western european codepages are supported.\n");				 
-+	printf("\n\nPlease note that the current version automatically detects\n"
-+               "the codepage used in the dbf file.\n"
-+               "At the moment only english, american and western european codepages are supported.\n");				 
- }
+--- Makefile.rules.orig	Thu Nov 20 13:48:35 2003
++++ Makefile.rules
+@@ -11,15 +11,15 @@
+ #
  
- /* - - - THE MAIN PROGRAM - - -*/
- /* the part of Joachim Astel was completely re-written and adopted for version 0.2 */
- int main (int argc, char *argv[])
- {	
--	int dbfhandle, handle;
-+	int dbfhandle, handle = 0;
- 	int header_length, i;
- 	char *filename;
- 	int ppc_override; // Big Endian Check Override
--	int type;
-+	int type = 0;
- 	char *foo, *p;
- 	int k;
- 	ppc_override = 0;
+ # Compiler flags
+-CC = gcc
+-CFLAGS = -Wall
++#CC = gcc
++CFLAGS += -Wall
+ 
+ # Settings
+ LOG = make.log
+ DIRS = src
+ BIN = dbf
+ VERSION = 0.8.1
+-PREFIX = /usr/local
++#PREFIX = /usr/local
+ 
+ # Compiler settings - do not change
+ # erased dbfversion.o

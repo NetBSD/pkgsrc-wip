@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/17 16:11:55 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/11/21 15:07:30 thomasklausner Exp $
 
-SHA1 (dbf-0.5.1.src.tar.gz) = 53c216ddf17b74e8fff4f04d6d163e71335791e7
-Size (dbf-0.5.1.src.tar.gz) = 16869 bytes
-SHA1 (patch-aa) = da023ad38f066f0331e21c95a43e88f0fa839111
-SHA1 (patch-ab) = 67ca9452e442b64d6f5290ab41931374b5b32677
+SHA1 (dbf-0.8.1.src.tar.gz) = 89dc6813e6b238280ec7011c508dbdb1d44a51be
+Size (dbf-0.8.1.src.tar.gz) = 26217 bytes
+SHA1 (patch-aa) = 3351a802ad75132b9c20ce28e21fe7a7e73424db
+SHA1 (patch-ab) = f7a1538815890a1459da707f6e98fd5239a0a3ac
+SHA1 (patch-ac) = 88c598a88b5ea9a3ae4e23eaec56e36a93914ed2

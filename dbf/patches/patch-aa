@@ -1,41 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/09/17 16:11:55 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2003/11/21 15:07:30 thomasklausner Exp $
 
---- Makefile.orig	Tue Mar 11 10:32:08 2003
+--- Makefile.orig	Wed Nov 12 13:36:13 2003
 +++ Makefile
-@@ -7,7 +7,6 @@
- # Do not change the lines between START and END
- # START - Configuration
- # ROOTDIR has to be set to the current development version directory
--CC = /usr/bin/gcc
- 
- SRC = dbf.c
- HDR = iodbf.h tables.h an_string.h codepages.h statistic.h congraph.h dbfversion.h endian.h
-@@ -24,12 +23,12 @@ RM = /bin/rm -f
- #END
- 
- # Change this line to install dbf anywhere you want
--PREFIX = /usr/local/bin
-+PREFIX = ${LOCALBASE}
- 
- dbf: $(SRC) $(HDR)
- 	@(echo "")
- 	@(echo "Compiling dbf:")
--	$(CC) -Wall -o $(BIN) $(SRC)
-+	$(CC) -O2 -Wall -o $(BIN) $(SRC)
- 	@(echo "")
- 	@(echo "Now install with 'make install'")
- 	@(echo "source will installed to: $(PREFIX)")
-@@ -41,8 +40,11 @@ dbf: $(SRC) $(HDR)
- all: dbf
- 
+@@ -18,8 +18,10 @@ all: 
  install:
--	cp $(BIN) $(PREFIX)
--	
-+	if [ ! -d $(PREFIX)/bin ]; then install -d $(PREFIX)/bin; fi
-+	install -c -m 755 -g wheel -o root $(BIN) $(PREFIX)/bin
-+	if [ ! -d $(PREFIX)/share/dbf ]; then install -d $(PREFIX)/share/dbf; fi
-+	install -c -m 644 -g wheel -o root $(DOC) $(PREFIX)/share/dbf
-+
- uninstall: 
- 	@(echo "Uninstall dbf: "; rm -f $(PREFIX)/$(BIN))	
- 
+ 	@(echo "");
+ 	@(echo -en "Copying dbf to $(PREFIX)... ");
+-	@(install -d $(PREFIX)/bin)
+-	cp $(DIRS)/$(BIN) $(PREFIX)/bin
++	${BSD_INSTALL_DATA_DIR} $(PREFIX)/bin
++	${BSD_INSTALL_PROGRAM} $(DIRS)/$(BIN) $(PREFIX)/bin
++	${BSD_INSTALL_DATA_DIR} $(PREFIX)/share/doc/dbf
++	${BSD_INSTALL_DATA} $(DOC) $(PREFIX)/share/doc/dbf/
+ 	
+ uninstall:
+ 	@(echo "");
