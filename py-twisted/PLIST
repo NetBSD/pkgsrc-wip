@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/12/15 03:23:16 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/02/29 22:30:46 mpasternak Exp $
 bin/ckeygen
 bin/conch
 bin/im
@@ -294,9 +294,6 @@ ${PYSITELIB}/twisted/internet/error.pyo
 ${PYSITELIB}/twisted/internet/fdesc.py
 ${PYSITELIB}/twisted/internet/fdesc.pyc
 ${PYSITELIB}/twisted/internet/fdesc.pyo
-${PYSITELIB}/twisted/internet/gladereactor.py
-${PYSITELIB}/twisted/internet/gladereactor.pyc
-${PYSITELIB}/twisted/internet/gladereactor.pyo
 ${PYSITELIB}/twisted/internet/gtk2reactor.py
 ${PYSITELIB}/twisted/internet/gtk2reactor.pyc
 ${PYSITELIB}/twisted/internet/gtk2reactor.pyo
@@ -748,9 +745,6 @@ ${PYSITELIB}/twisted/python/rebuild.pyo
 ${PYSITELIB}/twisted/python/reflect.py
 ${PYSITELIB}/twisted/python/reflect.pyc
 ${PYSITELIB}/twisted/python/reflect.pyo
-${PYSITELIB}/twisted/python/register.py
-${PYSITELIB}/twisted/python/register.pyc
-${PYSITELIB}/twisted/python/register.pyo
 ${PYSITELIB}/twisted/python/roots.py
 ${PYSITELIB}/twisted/python/roots.pyc
 ${PYSITELIB}/twisted/python/roots.pyo
@@ -1485,6 +1479,39 @@ ${PYSITELIB}/twisted/xish/xpath.pyo
 ${PYSITELIB}/twisted/xish/xpathparser.py
 ${PYSITELIB}/twisted/xish/xpathparser.pyc
 ${PYSITELIB}/twisted/xish/xpathparser.pyo
+${PYSITELIB}/twisted/internet/wxreactor.py
+${PYSITELIB}/twisted/internet/wxreactor.pyc
+${PYSITELIB}/twisted/internet/wxreactor.pyo
+${PYSITELIB}/twisted/manhole/_inspectro.py
+${PYSITELIB}/twisted/manhole/gladereactor.py
+${PYSITELIB}/twisted/manhole/_inspectro.pyc
+${PYSITELIB}/twisted/manhole/gladereactor.pyc
+${PYSITELIB}/twisted/manhole/_inspectro.pyo
+${PYSITELIB}/twisted/manhole/gladereactor.pyo
+${PYSITELIB}/twisted/manhole/gladereactor.glade
+${PYSITELIB}/twisted/manhole/inspectro.glade
+${PYSITELIB}/twisted/manhole/logview.glade
+${PYSITELIB}/twisted/names/secondary.py
+${PYSITELIB}/twisted/names/secondary.pyc
+${PYSITELIB}/twisted/names/secondary.pyo
+${PYSITELIB}/twisted/protocols/ident.py
+${PYSITELIB}/twisted/protocols/stateful.py
+${PYSITELIB}/twisted/protocols/ident.pyc
+${PYSITELIB}/twisted/protocols/stateful.pyc
+${PYSITELIB}/twisted/protocols/ident.pyo
+${PYSITELIB}/twisted/protocols/stateful.pyo
+${PYSITELIB}/twisted/test/process_fds.py
+${PYSITELIB}/twisted/test/test_ident.py
+${PYSITELIB}/twisted/test/test_soap.py
+${PYSITELIB}/twisted/test/test_stateful.py
+${PYSITELIB}/twisted/test/process_fds.pyc
+${PYSITELIB}/twisted/test/test_ident.pyc
+${PYSITELIB}/twisted/test/test_soap.pyc
+${PYSITELIB}/twisted/test/test_stateful.pyc
+${PYSITELIB}/twisted/test/process_fds.pyo
+${PYSITELIB}/twisted/test/test_ident.pyo
+${PYSITELIB}/twisted/test/test_soap.pyo
+${PYSITELIB}/twisted/test/test_stateful.pyo
 @dirrm ${PYSITELIB}/twisted/xish
 @dirrm ${PYSITELIB}/twisted/words
 @dirrm ${PYSITELIB}/twisted/web/woven

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.3 2004/01/04 10:26:08 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/02/29 22:30:46 mpasternak Exp $
 #
 
-TWISTED_VERSION=	1.1.1
+TWISTED_VERSION=	1.2.0
 TWISTED_DISTNAME=	Twisted-${TWISTED_VERSION}
 TWISTED_PKGNAME=	${TWISTED_DISTNAME:S/T/t/}
 TWISTED_MASTER_SITES=  	http://twisted.sourceforge.net/ \

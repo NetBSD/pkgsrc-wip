@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/12/15 03:23:16 mpasternak Exp $
+$NetBSD: distinfo,v 1.6 2004/02/29 22:30:46 mpasternak Exp $
 
-SHA1 (Twisted-1.1.1.tar.bz2) = a3f182e716e1ac307572ed6fb032ba57f2c0ab9b
-Size (Twisted-1.1.1.tar.bz2) = 5367067 bytes
+SHA1 (Twisted-1.2.0.tar.bz2) = a8112e8d6a78f7f984913f7ca445e96b5dcc796a
+Size (Twisted-1.2.0.tar.bz2) = 5533436 bytes
