@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/05/12 13:13:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/05 14:03:17 xtraeme Exp $
 #
 
 DISTNAME=	jabber-1.4.2
@@ -17,7 +17,7 @@ USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--enable-ssl
 
-RCD_SCRIPTS=		jabber
+RCD_SCRIPTS=		jabberd
 
 EGDIR=			${PREFIX}/share/examples/jabberd
 LIBDIR=			${PREFIX}/lib/jabberd
@@ -38,9 +38,7 @@ pre-configure:
 		< ${WRKSRC}/jabber.xml.in > ${WRKSRC}/jabber.xml
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${LIBDIR}
-	${INSTALL_DATA_DIR} ${INCDIR}
+	${INSTALL_DATA_DIR} ${EGDIR} ${LIBDIR} ${INCDIR}
 	${INSTALL_DATA} ${WRKSRC}/jabber.xml ${EGDIR}/jabber.xml
 	${INSTALL_PROGRAM} ${WRKSRC}/jabberd/jabberd ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/jsm/jsm.so ${LIBDIR}
