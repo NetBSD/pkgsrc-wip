@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.72 2003/04/13 12:52:03 cjep Exp $
-# $NetBSD: Makefile,v 1.72 2003/04/13 12:52:03 cjep Exp $
+# $Id: Makefile,v 1.73 2003/04/13 12:58:26 marc Exp $
+# $NetBSD: Makefile,v 1.73 2003/04/13 12:58:26 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -61,6 +61,7 @@ SUBDIR+=	py-OpenGL
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-csv
 SUBDIR+=	py-gnome2
+SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-gtk2
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	qadsl
