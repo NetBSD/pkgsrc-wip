@@ -1,2 +1,6 @@
 Mature SourceForge project.  Compiles and runs fine for me,
 though I don't have much ST software to really test it out...
+
+. fix config file handling to use pkgsrc infrastructure
+  (see mk/bsd.pkg.install.mk)
+. test sound
