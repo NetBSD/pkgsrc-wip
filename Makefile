@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.185 2003/05/22 12:20:38 xtraeme Exp $
-# $NetBSD: Makefile,v 1.185 2003/05/22 12:20:38 xtraeme Exp $
+# $Id: Makefile,v 1.186 2003/05/23 02:26:07 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.186 2003/05/23 02:26:07 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -88,8 +88,10 @@ SUBDIR+=	kgpg
 SUBDIR+=	libdialog
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgsf
+SUBDIR+=	libogg-nightly
 SUBDIR+=	libshout
 SUBDIR+=	libspectrum
+SUBDIR+=	libvorbis-nightly
 SUBDIR+=	libwpd
 SUBDIR+=	linux-modutils
 SUBDIR+=	linux-nfs-utils
@@ -156,6 +158,7 @@ SUBDIR+=	sysklogd
 SUBDIR+=	sysvinit
 SUBDIR+=	tendra
 SUBDIR+=	tex-foiltex
+SUBDIR+=	theora-nightly
 SUBDIR+=	totem
 SUBDIR+=	tsclient
 SUBDIR+=	umix
