@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/09 12:42:52 zul_ Exp $
+$NetBSD: patch-aa,v 1.2 2005/01/09 14:34:25 zul_ Exp $
 
 --- configure.orig	2003-11-27 00:48:49.000000000 +0100
 +++ configure	2005-01-08 01:19:46.000000000 +0100
@@ -13,11 +13,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/01/09 12:42:52 zul_ Exp $
      if ($_ eq '-h' || $_ eq '--help') {
  	usage();
  	exit 1;
-@@ -506,6 +510,7 @@
- 
- print CONFIGH "\n#endif\n";
- close CONFIGH;
-+    
- print "wrote $configh\n";
- 
- print CONFIGMAKE "CXX       = $cxx\n";

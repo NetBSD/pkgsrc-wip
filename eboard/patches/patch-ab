@@ -1,0 +1,11 @@
+--- sound.cc.orig	2005-01-09 14:49:54.000000000 +0100
++++ sound.cc	2005-01-09 14:50:52.000000000 +0100
+@@ -201,7 +201,7 @@
+     switch(type) {
+     case EXT_WAVE:
+       execlp("play","play","-d",Device,ExtraData,0);
+-      execlp("sox",ExtraData,"-t","ossdsp",Device,0);
++      execlp("sox",ExtraData,"-t","sunau",Device,0);
+       break;
+     case EXT_PROGRAM:
+       execlp("/bin/sh","/bin/sh","-c",ExtraData,0);

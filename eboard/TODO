@@ -2,6 +2,5 @@ It seems to run well but I have to do some bad hack in order that the perl
 configure understands that we need an extra libs for oss. Maybe there is
 another way smarter.
 
-Patch the source to solve the /dev/dsp hardcoded sound using ${DEVOSSAUDIO}
-or ${DEVOSSSOUND}. Maybe there is a proper way to do it using
-ossaudio.buildlink3.mk
+I have patch the sound.cc but it seems there is other thing hardcoded
+related to sound.
