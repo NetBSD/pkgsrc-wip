@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/06/13 18:21:24 ppostma Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/14 14:07:42 xtraeme Exp $
 #
 
 DISTNAME=		tcllib-1.6.1
@@ -16,13 +16,13 @@ NO_BUILD=		yes
 
 PKGVERSION=		1.6 # XXX
 
+SUBST_CLASSES=		fix
+SUBST_STAGE.fix=	post-patch
+SUBST_FILES.fix=	modules/doctools/mpformats/_html.tcl
+SUBST_SED.fix=		-e "s,@FETCH_CMD@,${FETCH_CMD},g"
+SUBST_MESSAGE.fix=	"Fixing harcoded ftp binary"
+
 post-patch:
-	@${MV} ${WRKSRC}/modules/doctools/mpformats/_html.tcl \
-		${WRKSRC}/modules/doctools/mpformats/_html.sed
-	@${SED} -e "s,@FETCH_CMD@,${FETCH_CMD}," \
-		${WRKSRC}/modules/doctools/mpformats/_html.sed > \
-		${WRKSRC}/modules/doctools/mpformats/_html.tcl
-	@${RM} ${WRKSRC}/modules/doctools/mpformats/_html.sed
 	@${FIND} ${WRKSRC} -name \*.orig | ${XARGS} ${RM}
 
 .include "../../lang/tcl/buildlink3.mk"
