@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/19 15:15:19 chriswareham Exp $
+bin/soapcpp2
+bin/wsdl2h
+include/stdsoap2.h
+lib/libgsoap++.a
+lib/libgsoap.a
+lib/libgsoapck++.a
+lib/libgsoapck.a
+lib/pkgconfig/gsoap++.pc
+lib/pkgconfig/gsoap.pc
+lib/pkgconfig/gsoapck++.pc
+lib/pkgconfig/gsoapck.pc
