@@ -1,5 +1,0 @@
-Still need to figure out why, when milter is used, the amavismilter
-rc-script does not get copied to the rc.d directory even though
-RCD_SCRIPTS+=	amavismilter.
-
-Milter hasn't been tested yet.
