@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1351 2004/06/27 00:07:25 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1351 2004/06/27 00:07:25 xtraeme Exp $
+# $Id: Makefile,v 1.1352 2004/06/27 09:47:58 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1352 2004/06/27 09:47:58 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -338,6 +338,7 @@ SUBDIR+=	libetpan
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libhydrogen
 SUBDIR+=	libmatchbox
+SUBDIR+=	libmilter813
 SUBDIR+=	libneural
 SUBDIR+=	libprelude
 SUBDIR+=	libraw1394
