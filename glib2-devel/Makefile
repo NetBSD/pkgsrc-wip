@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/17 13:55:08 mpasternak Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/09 02:39:01 minskim Exp $
 #
 
 DISTNAME=		glib-2.4.0
@@ -18,10 +18,10 @@ GNU_CONFIGURE=		yes
 BUILD_USES_MSGFMT=	yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/ltmain.sh ${WRKSRC}/libtool
 
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/glib-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/gmodule-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/gobject-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/gthread-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	glib-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gmodule-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gobject-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gthread-2.0.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/07 01:57:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/09 02:39:00 minskim Exp $
 #
 
 DISTNAME=		fixesext-2.0.1
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/fixesext.pc.in
+PKGCONFIG_OVERRIDE+=	fixesext.pc.in
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../wip/xextensions/buildlink3.mk"

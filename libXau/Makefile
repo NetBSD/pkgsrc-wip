@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/17 02:55:49 blef Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/09 02:39:05 minskim Exp $
 #
 
 DISTNAME=		libXau-0.1.1
@@ -18,7 +18,7 @@ USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xau.pc.in
+PKGCONFIG_OVERRIDE+=	xau.pc.in
 
 .include "../../wip/xproto/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"

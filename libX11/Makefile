@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/17 02:55:48 blef Exp $
+# $NetBSD: Makefile,v 1.12 2004/05/09 02:39:05 minskim Exp $
 #
 
 DISTNAME=		libX11-6.2.1
@@ -19,7 +19,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/x11.pc.in
+PKGCONFIG_OVERRIDE+=	x11.pc.in
 
 .include "../../mk/pthread.buildlink3.mk"
 

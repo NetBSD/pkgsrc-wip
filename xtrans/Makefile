@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/31 18:41:01 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/09 02:39:49 minskim Exp $
 #
 
 DISTNAME=		libXtrans-0.1
@@ -16,6 +16,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xtrans.pc.in
+PKGCONFIG_OVERRIDE+=	xtrans.pc.in
 
 .include "../../mk/bsd.pkg.mk"

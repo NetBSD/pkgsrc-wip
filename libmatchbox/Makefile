@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/07 01:58:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/09 02:39:37 minskim Exp $
 #
 
 DISTNAME=	libmatchbox-1.1
@@ -15,7 +15,7 @@ USE_LIBTOOL=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
-PKGCONFIG_OVERRIDE=    ${WRKSRC}/libmb.pc.in
+PKGCONFIG_OVERRIDE=	libmb.pc.in
 
 CONFIGURE_ARGS+=	--enable-jpeg
 

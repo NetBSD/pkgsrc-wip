@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/07 01:57:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/09 02:38:58 minskim Exp $
 #
 
 DISTNAME=		damageext-1.0
@@ -13,7 +13,7 @@ COMMENT=		X Damage extension headers and specification
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/damageext.pc.in
+PKGCONFIG_OVERRIDE+=	damageext.pc.in
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

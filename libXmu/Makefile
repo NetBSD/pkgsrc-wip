@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/17 02:55:53 blef Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/09 02:39:31 minskim Exp $
 #
 
 DISTNAME=		libXmu-6.2.1
@@ -13,8 +13,8 @@ COMMENT=		X Miscellaneous Utilities library
 
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmu.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmuu.pc.in
+PKGCONFIG_OVERRIDE+=	xmu.pc.in
+PKGCONFIG_OVERRIDE+=	xmuu.pc.in
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 

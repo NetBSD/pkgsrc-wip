@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/07 01:58:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/09 02:39:04 minskim Exp $
 #
 
 DISTNAME=		libICE-6.3.1
@@ -15,7 +15,7 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/ice.pc.in
+PKGCONFIG_OVERRIDE+=	ice.pc.in
 
 .include "../../wip/libX11/buildlink2.mk"
 .include "../../wip/libXau/buildlink2.mk"

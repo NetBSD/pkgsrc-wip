@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/07 01:58:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/09 02:39:31 minskim Exp $
 #
 
 DISTNAME=		libXi-6.0.1
@@ -15,7 +15,7 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xi.pc.in
+PKGCONFIG_OVERRIDE+=	xi.pc.in
 
 .include "../../wip/libX11/buildlink2.mk"
 .include "../../wip/libXau/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/02 22:41:29 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/09 02:39:40 minskim Exp $
 #
 
 DISTNAME=		libxml++-0.27.0
@@ -13,7 +13,7 @@ COMMENT=		C++ wrapper for the libxml2 XML parser library
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/libxml++-1.0.pc.in
+PKGCONFIG_OVERRIDE+=	libxml++-1.0.pc.in
 GNU_CONFIGURE=		yes
 
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libxml2}/include/libxml2

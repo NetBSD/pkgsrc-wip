@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/12 01:37:13 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/09 02:39:46 minskim Exp $
 #
 
 DISTNAME=		pxlib_0.2.0.orig
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/pxlib-0.2.0
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/pxlib.pc.in
+PKGCONFIG_OVERRIDE+=	pxlib.pc.in
 GNU_CONFIGURE=		yes
 
 .include "../../converters/libiconv/buildlink3.mk"

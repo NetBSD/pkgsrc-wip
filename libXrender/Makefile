@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/07 01:58:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/09 02:39:32 minskim Exp $
 #
 
 DISTNAME=		libXrender-0.8.3
@@ -14,7 +14,7 @@ USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xrender.pc.in
+PKGCONFIG_OVERRIDE+=	xrender.pc.in
 
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXau/buildlink3.mk"

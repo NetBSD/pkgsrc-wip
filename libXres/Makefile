@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/07 01:58:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/09 02:39:34 minskim Exp $
 #
 
 DISTNAME=		libXres-1.0.1
@@ -15,7 +15,7 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xres.pc.in
+PKGCONFIG_OVERRIDE+=	xres.pc.in
 
 .include "../../wip/libX11/buildlink2.mk"
 .include "../../wip/libXau/buildlink2.mk"

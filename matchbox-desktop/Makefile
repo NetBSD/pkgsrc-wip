@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/07 01:58:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/09 02:39:41 minskim Exp $
 #
 
 DISTNAME=	matchbox-desktop-0.8
@@ -15,7 +15,7 @@ USE_LIBTOOL=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
-PKGCONFIG_OVERRIDE=     ${WRKSRC}/matchbox-desktop.pc.in
+PKGCONFIG_OVERRIDE=	matchbox-desktop.pc.in
 
 CONFIGURE_ARGS+=	--enable-startup-notification
 

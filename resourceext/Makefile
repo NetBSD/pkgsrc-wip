@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/07 01:58:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/09 02:39:47 minskim Exp $
 #
 
 DISTNAME=		resourceext-1.0
@@ -13,6 +13,6 @@ COMMENT=		X Resource usage extension headers
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/resourceext.pc.in
+PKGCONFIG_OVERRIDE+=	resourceext.pc.in
 
 .include "../../mk/bsd.pkg.mk"
