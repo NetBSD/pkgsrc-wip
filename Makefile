@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.226 2003/06/05 06:17:31 mjasm Exp $
-# $NetBSD: Makefile,v 1.226 2003/06/05 06:17:31 mjasm Exp $
+# $Id: Makefile,v 1.227 2003/06/05 06:39:26 bradv Exp $
+# $NetBSD: Makefile,v 1.227 2003/06/05 06:39:26 bradv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -131,6 +131,7 @@ SUBDIR+=	p5-CDDB
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Compress-Bzip2
 SUBDIR+=	p5-Data-TemporaryBag
+SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-GeoIP
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-Net-Gnats
