@@ -1,0 +1,7 @@
+# $NetBSD: Makefile.version,v 1.1.1.1 2004/11/19 20:36:32 larnor Exp $
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !defined(GTK_GNUTELLA_VER) || empty(GTK_GNUTELLA_VER)
+GTK_GNUTELLA_VER!=	${DATE}	+%Y%m%d
+.endif
