@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1585 2004/12/28 00:05:59 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1585 2004/12/28 00:05:59 xtraeme Exp $
+# $Id: Makefile,v 1.1586 2004/12/28 03:32:50 minskim Exp $
+# $NetBSD: Makefile,v 1.1586 2004/12/28 03:32:50 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -265,7 +265,6 @@ SUBDIR+=	gtk-engines-thinice
 SUBDIR+=	gtk-gnutella-current
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtk-theme-switch
-SUBDIR+=	gtk2-chtheme
 SUBDIR+=	gtk2-engines-dwerg
 SUBDIR+=	gtk2-engines-dwerg
 SUBDIR+=	gtk2-engines-flat
@@ -932,6 +931,9 @@ SUBDIR+=	wxgtk-devel-contrib
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
 SUBDIR+=	xbsql
+SUBDIR+=	xchat2-perl
+SUBDIR+=	xchat2-python
+SUBDIR+=	xchat2-tcl
 SUBDIR+=	xevil
 SUBDIR+=	xfe
 SUBDIR+=	xgobi
