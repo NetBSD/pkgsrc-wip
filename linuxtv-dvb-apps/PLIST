@@ -1,0 +1,56 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/28 20:27:49 poppnk Exp $
+bin/av7110_loadkeys
+bin/czap
+bin/dvbdate
+bin/dvbnet
+bin/dvbtraffic
+bin/femon
+bin/scan
+bin/szap
+bin/tzap
+share/doc/linuxtv-dvb/av7110_loadkeys
+share/doc/linuxtv-dvb/scan
+share/doc/linuxtv-dvb/szap
+share/linuxtv-dvb/dvb-c/at-Vienna
+share/linuxtv-dvb/dvb-c/ch-unknown
+share/linuxtv-dvb/dvb-c/de-Berlin
+share/linuxtv-dvb/dvb-c/de-iesy
+share/linuxtv-dvb/dvb-c/fi-3ktv
+share/linuxtv-dvb/dvb-c/fi-vaasa-oncable
+share/linuxtv-dvb/dvb-s/Astra-19.2E
+share/linuxtv-dvb/dvb-s/Hispasat-30.0W
+share/linuxtv-dvb/dvb-s/Hotbird-13.0E
+share/linuxtv-dvb/dvb-s/PAS-43.0W
+share/linuxtv-dvb/dvb-s/Sirius-5.0E
+share/linuxtv-dvb/dvb-s/Telecom2-8.0W
+share/linuxtv-dvb/dvb-s/Telstar12-15.0W
+share/linuxtv-dvb/dvb-s/Thor-1.0W
+share/linuxtv-dvb/dvb-s/Turksat-42.0E
+share/linuxtv-dvb/dvb-t/au-Darwin
+share/linuxtv-dvb/dvb-t/au-canberra
+share/linuxtv-dvb/dvb-t/au-sydney_north_shore
+share/linuxtv-dvb/dvb-t/au-unknown
+share/linuxtv-dvb/dvb-t/de-Berlin
+share/linuxtv-dvb/dvb-t/es-Collserola
+share/linuxtv-dvb/dvb-t/fi-Espoo
+share/linuxtv-dvb/dvb-t/fi-Tampere
+share/linuxtv-dvb/dvb-t/fi-Turku
+share/linuxtv-dvb/dvb-t/nl-AlphenaandenRijn
+share/linuxtv-dvb/dvb-t/nl-Randstad
+share/linuxtv-dvb/dvb-t/se-Gavle
+share/linuxtv-dvb/dvb-t/uk-BlackHill
+share/linuxtv-dvb/dvb-t/uk-CrystalPalace
+share/linuxtv-dvb/dvb-t/uk-Hannington
+share/linuxtv-dvb/dvb-t/uk-Oxford
+share/linuxtv-dvb/dvb-t/uk-PontopPike
+share/linuxtv-dvb/dvb-t/uk-Redruth
+share/linuxtv-dvb/dvb-t/uk-Reigate
+share/linuxtv-dvb/dvb-t/uk-Rowridge
+share/linuxtv-dvb/dvb-t/uk-SandyHeath
+share/linuxtv-dvb/dvb-t/uk-Storeton
+share/linuxtv-dvb/dvb-t/uk-WinterHill
+@dirrm share/linuxtv-dvb/dvb-t
+@dirrm share/linuxtv-dvb/dvb-s
+@dirrm share/linuxtv-dvb/dvb-c
+@dirrm share/linuxtv-dvb
+@dirrm share/doc/linuxtv-dvb
