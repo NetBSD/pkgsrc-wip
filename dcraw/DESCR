@@ -1,0 +1,2 @@
+Program to convert digital camera "raw" files to ppm.  dcraw reads
+Nikon, Canon, and other formats.
