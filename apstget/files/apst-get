@@ -153,8 +153,36 @@ do_relink() {
 			cd ${PKGSRC_DIR}/$1
 			lPKG="`${MAKE} show-var VARNAME=PKGNAME`"
 		fi
+
 		echo "==> Looking for unlinked binaries in package ${lPKG}"
-		FILES=`pkg_info -L $lPKG | grep -e bin -e lib`
+		FILES=`pkg_info -L $lPKG 2> /dev/null | grep -e bin -e lib`
+		if [ "$?" = "1" ]; then
+			# pkgname not found, find by dirname
+			echo "==> pkgname mismatch, walking thru the tree..."
+			##
+			DIR=${lPKG}
+			if [ -z "`echo $lPKG | grep /`" ]; then
+				DIR=`${PKGFIND} -qx $lPKG`
+			fi
+			# checks
+			if [ -z "${DIR}" ]; then
+				echo "==> Package not found"
+				return
+			fi
+			if [ ! -d "${PKGSRC_DIR}/${DIR}" ]; then
+				echo "==> Directory not found"
+				return
+			fi
+			cd ${PKGSRC_DIR}/${DIR}
+			lPKG="`${MAKE} show-var VARNAME=PKGBASE`"
+			echo "==> Using ${lPKG}"
+			##
+			FILES=`pkg_info -L $lPKG 2> /dev/null | grep -e bin -e lib`
+			if [ "$?" = "1" ]; then
+				echo "==> Package ${lPKG} is not installed."
+				return
+			fi
+		fi
 	fi
 	X11_TYPE=`grep -e X11_TYPE /etc/mk.conf | awk -F = '{ print $2; }'`
 	if [ "${X11_TYPE}" = "" ]; then X11_TYPE=XxZzYy; fi # invalid directory

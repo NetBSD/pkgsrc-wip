@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2005/03/01 17:06:36 poppnk Exp $
+# $NetBSD: Makefile,v 1.28 2005/03/02 13:24:37 poppnk Exp $
 
-DISTNAME=	apstget-20050301
+DISTNAME=	apstget-20050302
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
-PKGREVISION=1
 
 MAINTAINER=	pancake@phreaker.net
 COMMENT=	apt-get like tool for pkgsrc
