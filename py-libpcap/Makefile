@@ -1,14 +1,17 @@
-DISTNAME=		pylibpcap-0.4       
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=     net
+# $NetBSD: Makefile,v 1.2 2003/06/07 14:26:08 cjep Exp $
+#
 
-MASTER_SITES=  	${MASTER_SITE_SOURCEFORGE:=pylibpcap/} 
-MAINTAINER=		adam@monkeybyte.org
-HOMEPAGE=       http://pylibpcap.sourceforge.net/
-COMMENT=        A Python module for libpcap
+DISTNAME=	pylibpcap-0.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	net
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pylibpcap/}
 
-PY_PATCHPLIST= 	yes
-USE_BUILDLINK2= yes
+MAINTAINER=	adam@monkeybyte.org
+HOMEPAGE=	http://pylibpcap.sourceforge.net/
+COMMENT=	Python module for libpcap
+
+PY_PATCHPLIST=	yes
+USE_BUILDLINK2=	yes
 
 do-build:
 	(cd ${WRKSRC} && ${PYTHONBIN} setup.py build)

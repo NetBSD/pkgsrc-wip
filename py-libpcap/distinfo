@@ -1,2 +1,5 @@
-MD5 (pylibpcap-0.4.tar.gz) = 38c9a47db4113594b57aa0944b1ebdcf
-MD5 (patch-aa) = 736ef2541a72b632d358f68053d748a1
+$NetBSD: distinfo,v 1.2 2003/06/07 14:26:08 cjep Exp $
+
+SHA1 (pylibpcap-0.4.tar.gz) = 9ee5dcc8e5fd5b4f6a903aedec756ae4b4d67b9a
+Size (pylibpcap-0.4.tar.gz) = 19370 bytes
+SHA1 (patch-aa) = 239986b0457d2ede2cc9d1e428034706244c4331
