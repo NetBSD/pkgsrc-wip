@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/29 17:23:14 marc Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/27 17:24:50 marc Exp $
 ${PYSITELIB}/MANIFEST
 ${PYSITELIB}/README
 ${PYSITELIB}/gnosis/README
@@ -21,6 +21,8 @@ ${PYSITELIB}/gnosis/anon/huffman
 ${PYSITELIB}/gnosis/anon/new_day_key.sh
 ${PYSITELIB}/gnosis/anon/new_month_key.sh
 ${PYSITELIB}/gnosis/anon/new_week_key.sh
+${PYSITELIB}/gnosis/doc/GETTING_HELP
+${PYSITELIB}/gnosis/doc/Gnosis_Utils.ANNOUNCE
 ${PYSITELIB}/gnosis/doc/LICENSE
 ${PYSITELIB}/gnosis/doc/__init__.py
 ${PYSITELIB}/gnosis/doc/__init__.pyc
@@ -28,7 +30,6 @@ ${PYSITELIB}/gnosis/doc/__init__.pyo
 ${PYSITELIB}/gnosis/doc/charming_python_b11.txt
 ${PYSITELIB}/gnosis/doc/charming_python_b12.txt
 ${PYSITELIB}/gnosis/doc/filtering-spam.txt
-${PYSITELIB}/gnosis/doc/gnosis_utils.announce
 ${PYSITELIB}/gnosis/doc/metaclass.txt
 ${PYSITELIB}/gnosis/doc/oop_for_validity.txt
 ${PYSITELIB}/gnosis/doc/xml_matters_1.txt

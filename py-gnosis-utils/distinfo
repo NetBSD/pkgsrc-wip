@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/06/29 17:23:14 marc Exp $
+$NetBSD: distinfo,v 1.3 2003/07/27 17:24:50 marc Exp $
 
-SHA1 (Gnosis_Utils-1.0.7.tar.gz) = 28d136681c136dc72907ab1d0dca3181d5c2d161
-Size (Gnosis_Utils-1.0.7.tar.gz) = 187309 bytes
+SHA1 (Gnosis_Utils-1.1.0.tar.gz) = 9d52b7bbf247e206c4c1003f2218364390ea737e
+Size (Gnosis_Utils-1.1.0.tar.gz) = 191038 bytes
