@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/10/13 08:11:46 cubidou Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/02 10:41:50 cubidou Exp $
 .include "Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm
@@ -33,4 +33,6 @@ post-install:
 
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -35,7 +35,7 @@ endif
 ifeq ($(without-ssl),yes)
 WITHOUT_SSL=	yes
 endif
-ifeq ($(WITHOUT_SSL),no)
+ifeq ($(WITHOUT_SSL),yes)
 CONFIGURE_ARGS+=	--without-ssl
 endif
 GREP?=		grep
