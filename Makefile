@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.302 2003/07/04 20:08:50 tvierling Exp $
-# $NetBSD: Makefile,v 1.302 2003/07/04 20:08:50 tvierling Exp $
+# $Id: Makefile,v 1.303 2003/07/05 17:06:49 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.303 2003/07/05 17:06:49 marttikuparinen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -285,6 +285,7 @@ SUBDIR+=	xfce4-mcs-plugins
 SUBDIR+=	xfce4-mixer
 SUBDIR+=	xfce4-panel
 SUBDIR+=	xfce4-print
+SUBDIR+=	xfce4-systemload-plugin
 SUBDIR+=	xfce4-systray
 SUBDIR+=	xfce4-themes
 SUBDIR+=	xfce4-toys
