@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/11/15 18:29:45 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/15 13:21:10 poppnk Exp $
 
-DISTNAME=		iptables-1.2.11
+DISTNAME=		iptables-1.3.0
 CATEGORIES=		security
 MASTER_SITES=		http://www.netfilter.org/files/
 MASTER_SITES+=		ftp://ftp.netfilter.org/pub/iptables/
