@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2003/06/12 12:10:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/12 21:35:00 xtraeme Exp $
 #
 
 DISTNAME=	jabberd-2.0.0-a4
-PKGNAME=	${DISTNAME:S/d-2.0.0-a/d2-2.0.0-alpha/}
+PKGNAME=	${DISTNAME:S/d-2.0.0-a/d2-2.0.0alpha/}
 CATEGORIES=	chat
 MASTER_SITES=	http://www.jabberstudio.org/files/jabberd2/
 
 MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://www.jabberstudio.org/
 COMMENT=	Instant messaging server ( version 2 )
+
+CONFLICTS=		jabberd-[0-9]*:../../wip/jabberd
 
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
@@ -44,15 +46,15 @@ pre-configure:
 
 .for f in ${FILES}
 	${SED}  \
-                -e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
+		-e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
 		-e "s|@@LOGDIR@@|/var/log/jabberd|g " \
 		-e "s|@@BINDIR@@|${PREFIX}/bin|g " \
 		-e "s|@@DBDIR@@|/var/db/jabberd|g " \
-                < ${WRKSRC}/etc/${f}.in > ${WRKSRC}/etc/${f}
-.endfor	
+		< ${WRKSRC}/etc/${f}.in > ${WRKSRC}/etc/${f}
+.endfor
 .undef f
 
-.for f in ${WRKSRC}/etc/jabberd.cfg.in 
+.for f in ${WRKSRC}/etc/jabberd.cfg.in
 	${SED}  \
 		-e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
 		< ${WRKSRC}/etc/jabberd.cfg.in > ${WRKSRC}/etc/jabberd.cfg
