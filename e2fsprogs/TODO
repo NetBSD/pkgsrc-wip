@@ -1,0 +1,9 @@
+use libtool to properly build so executables are linked correctly
+/usr/pkg/sbin/debugfs:
+         -lext2fs.2 => not found
+         -le2p.2 => not found
+         -lss.2 => not found
+         -lcom_err.2 => not found
+         -lblkid.1 => not found
+         -luuid.1 => not found
+         -lc.12 => /usr/lib/libc.so.12

@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.Linux,v 1.1.1.1 2003/12/04 18:15:40 jeremy-c-reed Exp $
+lib/evms/libe2fsim.1.2.1.so
+man/man8/fsck.8
+sbin/fsck
+@dirrm lib/evms
