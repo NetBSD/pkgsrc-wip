@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/07/01 18:11:33 lexort Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/07/06 12:55:23 lexort Exp $
 include/quagga/buffer.h
 include/quagga/command.h
 include/quagga/debug.h
@@ -42,15 +42,19 @@ include/quagga/vty.h
 include/quagga/zclient.h
 include/quagga/zebra.h
 lib/libospf.a
-lib/libzebra
-lib/libzebra.0
-lib/libzebra.0.0
+lib/libospf.la
+lib/libospf.so
+lib/libospf.so.0
+lib/libospf.so.0.0
 lib/libzebra.a
 lib/libzebra.la
+lib/libzebra.so
+lib/libzebra.so.0
+lib/libzebra.so.0.0
 man/man1/vtysh.1
 man/man8/bgpd.8
-man/man8/ospfd.8
 man/man8/ospf6d.8
+man/man8/ospfd.8
 man/man8/ripd.8
 man/man8/ripngd.8
 man/man8/zebra.8

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/07/01 18:11:33 lexort Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/06 12:55:23 lexort Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
-DISTNAME=	quagga-0.96.5-20040701
-PKGNAME=	quagga-0.96.5.20040701
+DISTNAME=	quagga-0.96.5-20040706
+PKGNAME=	quagga-0.96.5.20040706
 WRKSRC=		${WRKDIR}/quagga-0.96.5
 CATEGORIES=	net
 # Use pkgsrc/ for saved snapshots, cvs/ for current ones
@@ -18,6 +18,8 @@ COMMENT=	Free multithreaded routing daemon software (fork of zebra)
 AUTOMAKE_REQD=		1.6
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
+USE_LIBTOOL=		YES
+
 PKG_SYSCONFSUBDIR?=	zebra
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-exampledir=${PREFIX}/share/examples/quagga
