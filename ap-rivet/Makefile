@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/11 03:49:46 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/11 04:15:22 minskim Exp $
 
 DISTNAME=	rivet_0.4.0-1
 PKGNAME=	ap-rivet-0.4.0.1
@@ -8,9 +8,6 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=tcl/rivet/}
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://tcl.apache.org/rivet/
 COMMENT=	System for creating dynamic web content via Tcl
-
-DEPENDS+=	apache-1.3.*:../../www/apache
-DEPENDS+=	tcl-[0-9]*:../../lang/tcl
 
 WRKSRC=		${WRKDIR}/tcl-rivet/src
 HAS_CONFIGURE=	yes
