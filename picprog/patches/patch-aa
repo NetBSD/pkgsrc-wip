@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/12 13:54:34 poppnk Exp $
+
+--- Makefile.orig	2003-07-12 14:09:20.000000000 +0000
++++ Makefile	2003-07-12 14:10:07.000000000 +0000
+@@ -53,8 +53,8 @@
+ 		$(PROG)-$$VERSION/[a-zA-Z]*.{html,gif,1,h,cc}
+ 
+ install: all
+-	install -c -o 0 -g 0 -m 755 $(PROG) /usr/local/bin/
+-	install -c -o 0 -g 0 -m 644 *.1 /usr/local/man/man1/
++	install -c -o 0 -g 0 -m 755 $(PROG) ${PREFIX}/bin/
++	install -c -o 0 -g 0 -m 644 *.1 ${PREFIX}/man/man1/
+ 
+ #
+ # include a dependency file if one exists

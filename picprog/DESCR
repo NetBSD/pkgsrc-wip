@@ -1,0 +1,3 @@
+This is Picprog, a pic16xxx series microcontroller programmer software
+for the simple serial port device.  Copyright (C) 1997,2002 Jaakko Hyv:atti.
+It may also work for serial eeproms and such with modifications.
