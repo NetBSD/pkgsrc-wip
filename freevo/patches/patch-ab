@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1 2004/01/04 11:45:04 mpasternak Exp $
+
+--- src/config.py.orig	Sun Dec 14 16:54:14 2003
++++ src/config.py	Sun Jan  4 11:44:45 2004
+@@ -95,7 +95,8 @@
+ import __builtin__
+ import version
+ 
+-if float(sys.version[0:3]) >= 2.3:
++PYTHON_VERSION = float(sys.version[0:3].replace("p", "."))
++if PYTHON_VERSION >= 2.3:
+     import warnings
+     warnings.simplefilter("ignore", category=FutureWarning)
+ 
+@@ -112,7 +113,7 @@
+ 
+ 
+ # add True and False to __builtin__ for older python versions
+-if float(sys.version[0:3]) < 2.3:
++if PYTHON_VERSION < 2.3:
+     __builtin__.__dict__['True']  = 1
+     __builtin__.__dict__['False'] = 0
+ 
