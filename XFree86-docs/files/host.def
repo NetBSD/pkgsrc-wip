@@ -2,6 +2,11 @@
  * XFree86 packages for pkgsrc system
  */
 
+#define ProjectRoot @PREFIX@
+
+#define MakeCmd @MAKE@
+#define ImakeCmd @IMAKE@
+
 #define BuildMiscDocs YES
 #define BuildSpecsDocs YES
 #define BuildLinuxDocPS NO
