@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/05/17 19:08:43 jeremy-c-reed Exp $
+
+--- doc/dc.texi.orig	Fri Nov 15 18:09:59 2002
++++ doc/dc.texi	Fri Nov 15 18:15:47 2002
+@@ -4,6 +4,11 @@
+ @settitle dc, an arbitrary precision calculator
+ @c %**end of header
+ 
++@dircategory Mathematics
++@direntry
++* dc: (dc).             A reverse-polish arbitrary precision calculator.
++@end direntry
++
+ @c This file has the new style title page commands.
+ @c Run `makeinfo' rather than `texinfo-format-buffer'.
+ 
