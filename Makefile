@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1321 2004/06/11 09:44:39 grantbeattie Exp $
-# $NetBSD: Makefile,v 1.1321 2004/06/11 09:44:39 grantbeattie Exp $
+# $Id: Makefile,v 1.1322 2004/06/11 11:18:14 ppostma Exp $
+# $NetBSD: Makefile,v 1.1322 2004/06/11 11:18:14 ppostma Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -85,6 +85,7 @@ SUBDIR+=	compositeext
 SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	cryptopp
+SUBDIR+=	cube
 SUBDIR+=	cvsd
 SUBDIR+=	d4x
 SUBDIR+=	damageext
