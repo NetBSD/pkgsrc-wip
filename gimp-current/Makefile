@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/11/24 14:10:53 moubctez Exp $
+# $NetBSD: Makefile,v 1.16 2003/12/17 23:08:03 thomasklausner Exp $
 #
 
 DISTNAME=		gimp-${GIMP_VER}
@@ -6,7 +6,8 @@ PKGNAME=		gimp-current-${GIMP_VER}
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.3/v${GIMP_VER}/ \
 	ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.3/v${GIMP_VER}/ \
-	ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.3/v${GIMP_VER}/
+	ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.3/v${GIMP_VER}/ \
+	ftp://ftp.tuwien.ac.at/graphics/gimp/gimp/v1.3/v${GIMP_VER}/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		adam@NetBSD.org
