@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/06 00:16:14 jeremy-c-reed Exp $
+
+--- configure.orig	2002-12-05 05:43:17.000000000 -0800
++++ configure
+@@ -1697,13 +1697,7 @@ then
+   libexecdir='${exec_prefix}/lib/yp'
+ fi
+ 
+-if test x"$ac_default_prefix" = x"/usr"
+-then
+-   rootbindir="/bin"
+-else
+    rootbindir=$ac_default_prefix"/bin"
+-fi
+-
+ 
+ # Check whether --enable-domainname or --disable-domainname was given.
+ if test "${enable_domainname+set}" = set; then

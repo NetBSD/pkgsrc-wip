@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/06 00:16:14 jeremy-c-reed Exp $
+bin/domainname
+bin/nisdomainname
+bin/ypcat
+bin/ypchfn
+bin/ypchsh
+bin/ypdomainname
+bin/ypmatch
+bin/yppasswd
+bin/ypwhich
+sbin/yppoll
+sbin/ypset
+sbin/yptest
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/yp-tools.mo
+share/man/man1/ypcat.1
+share/man/man1/ypchfn.1
+share/man/man1/ypchsh.1
+share/man/man1/ypmatch.1
+share/man/man1/yppasswd.1
+share/man/man1/ypwhich.1
+share/man/man5/nicknames.5
+share/man/man8/domainname.8
+share/man/man8/nisdomainname.8
+share/man/man8/ypdomainname.8
+share/man/man8/yppoll.8
+share/man/man8/ypset.8
+share/man/man8/yptest.8
