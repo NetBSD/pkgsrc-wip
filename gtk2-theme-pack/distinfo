@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/11/27 15:47:49 mpasternak Exp $
+$NetBSD: distinfo,v 1.4 2003/12/20 00:15:58 mpasternak Exp $
 
 SHA1 (GKT2-Quantumcurve.tar.gz) = 95812eb59ba2a41c3b01221f05f15c8e4bf6cbf0
 Size (GKT2-Quantumcurve.tar.gz) = 1276 bytes
@@ -190,8 +190,8 @@ SHA1 (GTK2-Yattacier.tar.gz) = d210015656f3ab1548cf4ed696de6dac49411e61
 Size (GTK2-Yattacier.tar.gz) = 97949 bytes
 SHA1 (GTK2-Yattacier2.tar.gz) = 82353c9715c788cf69c75da5873412346f917e40
 Size (GTK2-Yattacier2.tar.gz) = 115567 bytes
-SHA1 (GTK2-eMaCs.tar.gz) = daf703ac264bd11016ae7fb6e3e08bde5e8c1ca1
-Size (GTK2-eMaCs.tar.gz) = 786 bytes
+SHA1 (GTK2-eMaCs.tar.gz) = 689f2a0b08f8e990111aeadc7832330403d2b480
+Size (GTK2-eMaCs.tar.gz) = 818 bytes
 SHA1 (GTK2-m8Blue.tar.gz) = 4ad6469fdcc131d9a726cb1af33e6124c593f2bf
 Size (GTK2-m8Blue.tar.gz) = 393435 bytes
 SHA1 (GTK2-m8darker-default-1.0.tar.gz) = fb8e6d557a8bb388c2571020758c87f093bb07f6
