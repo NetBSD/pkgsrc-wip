@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1690 2005/03/16 07:30:41 ura Exp $
-# $NetBSD: Makefile,v 1.1690 2005/03/16 07:30:41 ura Exp $
+# $Id: Makefile,v 1.1691 2005/03/16 23:37:39 daprice Exp $
+# $NetBSD: Makefile,v 1.1691 2005/03/16 23:37:39 daprice Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -29,6 +29,7 @@ SUBDIR+=	R-VR
 SUBDIR+=	R-chron
 SUBDIR+=	R-clim.pact
 SUBDIR+=	R-date
+SUBDIR+=	R-geos
 SUBDIR+=	R-genetics
 SUBDIR+=	R-gstat
 SUBDIR+=	R-httpRequest
@@ -37,6 +38,7 @@ SUBDIR+=	R-lmm
 SUBDIR+=	R-mapproj
 SUBDIR+=	R-maps
 SUBDIR+=	R-pixmap
+SUBDIR+=	R-rgdal
 SUBDIR+=	R-sgeostat
 SUBDIR+=	R-shapefiles
 SUBDIR+=	R-statmod
