@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.389 2003/08/23 20:04:48 adrian_p Exp $
-# $NetBSD: Makefile,v 1.389 2003/08/23 20:04:48 adrian_p Exp $
+# $Id: Makefile,v 1.390 2003/08/23 20:15:59 cjep Exp $
+# $NetBSD: Makefile,v 1.390 2003/08/23 20:15:59 cjep Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -220,6 +220,7 @@ SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	nautilus-media
 SUBDIR+=	navigatrix
+SUBDIR+=	nbgrep
 SUBDIR+=	ncps
 SUBDIR+=	nemesis
 SUBDIR+=	net-tools
