@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/16 16:03:50 bencollver Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/18 16:46:37 thomasklausner Exp $
 bin/uqm
 lib/uqm/uqm
+share/doc/uqm/manual.txt
+share/uqm/content/packages/uqm-0.3-content.zip
 share/uqm/content/version
+@exec ${MKDIR} %D/share/uqm/content/packages/addons
 @dirrm share/uqm/content/packages/addons
 @dirrm share/uqm/content/packages
 @dirrm share/uqm/content
 @dirrm share/uqm
+@dirrm share/doc/uqm
 @dirrm lib/uqm

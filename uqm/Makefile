@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/16 16:06:39 bencollver Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/18 16:46:37 thomasklausner Exp $
 #
 
 DISTNAME=		uqm-0.3-source
@@ -33,6 +33,8 @@ do-install:
 	cd ${WRKSRC} && ./build.sh uqm install
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/uqm-0.3-content.zip \
 		${PREFIX}/share/uqm/content/packages
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uqm
+	${INSTALL_DATA} ${WRKSRC}/doc/users/manual.txt ${PREFIX}/share/doc/uqm
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal/buildlink3.mk"
