@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/04 00:01:23 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/11/04 00:21:21 adrian_p Exp $
 share/examples/bugzilla/bugzilla.conf
 share/examples/bugzilla/localconfig
 share/bugzilla/1x1.gif
@@ -22,6 +22,12 @@ share/bugzilla/Bugzilla/Template.pm
 share/bugzilla/Bugzilla/Token.pm
 share/bugzilla/Bugzilla/User.pm
 share/bugzilla/Bugzilla/Util.pm
+share/bugzilla/Bugzilla/Auth/CGI.pm
+share/bugzilla/Bugzilla/Auth/Cookie.pm
+share/bugzilla/Bugzilla/Auth/DB.pm
+share/bugzilla/Bugzilla/Auth/LDAP.pm
+share/bugzilla/Bugzilla/Template/Plugin/Bugzilla.pm
+share/bugzilla/Bugzilla/Template/Plugin/Hook.pm
 share/bugzilla/CGI.pl
 share/bugzilla/ant.jpg
 share/bugzilla/attachment.cgi
@@ -353,6 +359,9 @@ share/bugzilla/template/en/default/sidebar.xul.tmpl
 @dirrm share/bugzilla/docs/images
 @dirrm share/bugzilla/docs
 @dirrm share/bugzilla/css
+@dirrm share/bugzilla/Bugzilla/Auth
+@dirrm share/bugzilla/Bugzilla/Template/Plugin
+@dirrm share/bugzilla/Bugzilla/Template
 @dirrm share/bugzilla/Bugzilla
 @dirrm share/bugzilla/skins/standard
 @dirrm share/bugzilla/skins

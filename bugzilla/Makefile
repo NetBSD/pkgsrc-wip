@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/11/04 00:07:58 adrian_p Exp $
+# $NetBSD: Makefile,v 1.15 2004/11/04 00:21:22 adrian_p Exp $
 #
 
 DISTNAME=	bugzilla-2.18rc3
@@ -83,6 +83,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${BZDIR}
 	${INSTALL_DATA_DIR} ${BZDIR}/Bugzilla
+	${INSTALL_DATA_DIR} ${BZDIR}/Bugzilla/Auth
+	${INSTALL_DATA_DIR} ${BZDIR}/Bugzilla/Template/Plugin
 	${INSTALL_DATA_DIR} ${BZDIR}/css
 	${INSTALL_DATA_DIR} ${BZDIR}/js
 	${INSTALL_DATA_DIR} ${BZDIR}/template
@@ -100,6 +102,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.html ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/Bugzilla.pm ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/Bugzilla/*.pm ${BZDIR}/Bugzilla
+	${INSTALL_DATA} ${WRKSRC}/Bugzilla/Auth/*.pm ${BZDIR}/Bugzilla/Auth
+	${INSTALL_DATA} ${WRKSRC}/Bugzilla/Template/Plugin/*.pm \
+		${BZDIR}/Bugzilla/Template/Plugin
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/1x1.gif ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/ant.jpg ${BZDIR}
