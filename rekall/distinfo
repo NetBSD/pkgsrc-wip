@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/11/18 07:31:23 mpasternak Exp $
+
+SHA1 (rekall-2.2.0-beta0.tgz) = dc23b1094945ff0bf11fddb4d5fd8d3e40139d86
+Size (rekall-2.2.0-beta0.tgz) = 4294575 bytes
+SHA1 (patch-aa) = 0032cf2102237218a44ef74a0b0cf987020c1efb
+SHA1 (patch-ab) = 4cb7e6dd7771becec34b6ad67ff3c7b08b97cb3a
+SHA1 (patch-ac) = 824cf62f4d5227cf14e3c170b5d226e272ed8485
