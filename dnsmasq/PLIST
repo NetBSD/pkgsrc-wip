@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/24 14:16:32 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.1.1.2 2003/10/13 20:09:43 poppnk Exp $
 etc/rc.d/dnsmasq
+man/man8/dnsmasq.8
 sbin/dnsmasq
-share/doc/dnsmasq/doc.html
-share/doc/dnsmasq/setup.html
-@dirrm share/doc/dnsmasq
