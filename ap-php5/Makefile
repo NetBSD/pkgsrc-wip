@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/05 15:50:25 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/12 22:22:53 xtraeme Exp $
 #
 
 PKGNAME=		ap-php-${PHP5_VERSION}
@@ -27,5 +27,3 @@ do-install:
 
 
 .include "../../mk/apache.mk"
-
-.include "../../mk/bsd.pkg.mk"
