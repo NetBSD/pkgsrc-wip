@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1117 2004/03/27 18:27:33 shattered Exp $
-# $NetBSD: Makefile,v 1.1117 2004/03/27 18:27:33 shattered Exp $
+# $Id: Makefile,v 1.1118 2004/03/27 23:40:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1118 2004/03/27 23:40:07 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -93,6 +93,7 @@ SUBDIR+=	d2x
 SUBDIR+=	d4x
 SUBDIR+=	damageext
 SUBDIR+=	dancer-ircd
+SUBDIR+=	dansguardian
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	dasm
 SUBDIR+=	dbf
@@ -171,6 +172,7 @@ SUBDIR+=	gdbada
 SUBDIR+=	geeklog
 SUBDIR+=	gettext-runtime
 SUBDIR+=	gettext-tools
+SUBDIR+=	gforge
 SUBDIR+=	gg2
 SUBDIR+=	ghostpcl
 SUBDIR+=	gift
@@ -260,6 +262,8 @@ SUBDIR+=	iptables
 SUBDIR+=	isc-dhclient
 SUBDIR+=	isc-dhcpd
 SUBDIR+=	ish
+SUBDIR+=	jabberd-aim
+SUBDIR+=	jabberd-msn
 SUBDIR+=	jabberd2
 SUBDIR+=	jakarta-log4j
 SUBDIR+=	java-BigDecimal
@@ -324,6 +328,7 @@ SUBDIR+=	libXv
 SUBDIR+=	libassuan
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
+SUBDIR+=	libdv
 SUBDIR+=	libebml
 SUBDIR+=	libetpan
 SUBDIR+=	libfwbuilder
@@ -400,6 +405,7 @@ SUBDIR+=	mkvtoolnix
 SUBDIR+=	mnogosearch
 SUBDIR+=	monkey-bubble
 SUBDIR+=	mopac
+SUBDIR+=	moregroupware
 SUBDIR+=	mpc
 SUBDIR+=	mpgedit
 SUBDIR+=	mplusfonts
@@ -464,6 +470,7 @@ SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Mail-Milter
 SUBDIR+=	p5-Mail-SRS
 SUBDIR+=	p5-Net-Pcap
+SUBDIR+=	p5-NetPacket
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Sendmail-PMilter
@@ -477,6 +484,8 @@ SUBDIR+=	p5-WWW-Mechanize
 SUBDIR+=	p5-XML-Sablotron
 SUBDIR+=	p5-gtk2
 SUBDIR+=	palm-db-tools
+SUBDIR+=	pam-mysql
+SUBDIR+=	pam-pop3
 SUBDIR+=	pango-devel
 SUBDIR+=	par2
 SUBDIR+=	parsifal
