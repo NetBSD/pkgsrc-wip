@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/11 22:28:09 cetrox Exp $
+bin/speedtouch-setup
+bin/speedtouch-start
+bin/speedtouch-stop
+libdata/alcaudsl.sys
+man/man1/speedtouch-setup.1
+man/man1/speedtouch-start.1
+man/man1/speedtouch-stop.1
+man/man8/modem_run.8
+man/man8/pppoa2.8
+man/man8/pppoa3.8
+sbin/modem_run
+sbin/pppoa2
+share/doc/speedtouch/FAQ
+share/doc/speedtouch/FAQ-fr
+share/doc/speedtouch/INSTALL
+share/doc/speedtouch/INSTALL-de
+share/doc/speedtouch/INSTALL-fr
+share/doc/speedtouch/INSTALL-it
+share/doc/speedtouch/INSTALL-nl
+share/doc/speedtouch/ppp.conf.sample
+share/speedtouch/boot.v123.bin
+@dirrm share/speedtouch
+@dirrm share/doc/speedtouch
