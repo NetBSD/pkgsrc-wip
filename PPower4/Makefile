@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/06/03 16:00:53 bmeurer Exp $
+# $NetBSD: Makefile,v 1.3 2003/11/27 17:19:05 mpasternak Exp $
 
 DISTNAME=	# empty
 PKGNAME=	PPower4-0.9.4
@@ -25,7 +25,7 @@ EVAL_PREFIX+=	MKTEXLSR_PREFIX=mktexlsr
 UNZIP_PREFIX_DEFAULT=${LOCALBASE}
 MKTEXLSR_PREFIX_DEFAULT=${LOCALBASE}
 
-EXTRACT_CMD=	${UNZIP_PREFIX}/bin/unzip $${extract_file}
+EXTRACT_CMD_OPTS.zip=	# empty
 EXTRACT_ONLY=	pp4sty.zip
 
 JARDIR=		${PREFIX}/share/texmf/java/ppower4
