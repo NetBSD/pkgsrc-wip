@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2004/06/25 16:59:42 rillig Exp $
+bin/${PKGNAME}
+share/${PKGNAME}/grain.bmp
+share/${PKGNAME}/${PKGNAME}.exe
+share/${PKGNAME}/${PKGNAME}.hlp
+share/${PKGNAME}/readme.txt
+share/${PKGNAME}/tutor.hlp
+@dirrm share/${PKGNAME}
