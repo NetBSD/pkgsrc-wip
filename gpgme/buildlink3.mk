@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/10/22 19:34:57 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/22 20:09:20 johnrshannon Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GPGME_BUILDLINK3_MK:=	${GPGME_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gpgme
 
 .if !empty(GPGME_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gpgme+=	gpgme>=0.9.0
-BUILDLINK_RECOMMENDED.gpgme+=	gpgme>=0.9.0nb1
+BUILDLINK_RECOMMENDED.gpgme+=	gpgme>=1.0.1
 BUILDLINK_PKGSRCDIR.gpgme?=	../../wip/gpgme
 .endif	# GPGME_BUILDLINK3_MK
 
