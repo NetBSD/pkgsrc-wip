@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/11/15 14:08:13 marc Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/25 14:36:24 marc Exp $
 #
 
 DISTNAME=	generateDS-1.4b
@@ -26,6 +26,6 @@ post-install:
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
-#.include "../../textproc/pyxml/buildlink2.mk"
+#.include "../../textproc/py-xml/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

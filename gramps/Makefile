@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/19 02:13:40 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 14:36:25 marc Exp $
 #
 
 DISTNAME=		gramps-0.9.5
@@ -33,7 +33,7 @@ PYTHON_VERSION_REQD=	23pth
 # WITHOUT either PIL or ImageMagick *YOU WILL NOT BE ABLE TO USE THUMBNAILS*
 
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../textproc/pyxml/buildlink2.mk"
+.include "../../textproc/py-xml/buildlink2.mk"
 .include "../../x11/py-gtk2/buildlink2.mk"
 .include "../../x11/py-gnome2/buildlink2.mk"
 .include "../../lang/python/application.mk"
