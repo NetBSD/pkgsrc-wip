@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/14 21:33:53 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/01/14 21:35:23 minskim Exp $
 bin/gnumeric
 bin/ssconvert
 lib/bonobo/servers/GNOME_Gnumeric.server
@@ -726,7 +726,7 @@ share/pixmaps/gnumeric/stock.xpm
 share/pixmaps/gnumeric/surface.xpm
 @dirrm share/pixmaps/gnumeric
 @dirrm share/omf/gnumeric
-@unexec ${RMDIR} %D/share/omf 2>/dev/null || ${TRUE}
+@comment in scrollkeeper @dirrm share/omf
 @unexec ${RMDIR}  %D/share/mc/templates 2>/dev/null || ${TRUE}
 @unexec ${RMDIR}  %D/share/mc 2>/dev/null || ${TRUE}
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/templates
