@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/29 15:49:14 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/08/18 17:50:03 adrian_p Exp $
+share/doc/msf/7f8d5320.0
 share/doc/msf/BUGS
 share/doc/msf/COPYING
 share/doc/msf/COPYING.Artistic
 share/doc/msf/COPYING.GNU
 share/doc/msf/COPYING.InlineEgg
+share/doc/msf/CrashCourse.doc
 share/doc/msf/CrashCourse.html
 share/doc/msf/CrashCourse.pdf
 share/doc/msf/CrashCourse.sxw
+share/doc/msf/Environment.txt
 share/doc/msf/QUICKSTART.cygwin
 share/doc/msf/QUICKSTART.impurity
 share/doc/msf/QUICKSTART.msfcli
@@ -14,17 +17,26 @@ share/doc/msf/QUICKSTART.msfconsole
 share/doc/msf/QUICKSTART.msfweb
 share/doc/msf/QUICKSTART.ssl
 share/doc/msf/QUICKSTART.tabcompletion
-share/doc/msf/TODO
+share/doc/msf/SECURITY
 share/doc/msf/VERSION
+share/doc/msf/cacert.pem
+share/msf/data/shelldemo
+share/msf/data/vncdll.dll
 share/msf/encoders/None.pm
 share/msf/encoders/Pex.pm
 share/msf/encoders/PexAlphaNum.pm
 share/msf/encoders/PexFnstenvMov.pm
 share/msf/encoders/PexFnstenvSub.pm
+share/msf/encoders/QuackQuack.pm
+share/msf/encoders/ShikataGaNai.pm
+share/msf/encoders/Sparc.pm
+share/msf/exploits/Credits.pm
 share/msf/exploits/Tester.pm
 share/msf/exploits/Win32Tester.pm
+share/msf/exploits/afp_loginext.pm
 share/msf/exploits/apache_chunked_win32.pm
 share/msf/exploits/blackice_pam_icq.pm
+share/msf/exploits/distcc_exec.pm
 share/msf/exploits/exchange2000_xexch50.pm
 share/msf/exploits/frontpage_fp30reg_chunked.pm
 share/msf/exploits/ia_webmail.pm
@@ -32,6 +44,8 @@ share/msf/exploits/iis50_nsiislog_post.pm
 share/msf/exploits/iis50_printer_overflow.pm
 share/msf/exploits/iis50_webdav_ntdll.pm
 share/msf/exploits/imail_ldap.pm
+share/msf/exploits/lsass_ms04_011.pm
+share/msf/exploits/mercantec_softcart.pm
 share/msf/exploits/msrpc_dcom_ms03_026.pm
 share/msf/exploits/mssql2000_resolution.pm
 share/msf/exploits/poptop_negative_read.pm
@@ -40,103 +54,94 @@ share/msf/exploits/samba_nttrans.pm
 share/msf/exploits/samba_trans2open.pm
 share/msf/exploits/sambar6_search_results.pm
 share/msf/exploits/servu_mdtm_overflow.pm
+share/msf/exploits/smb_sniffer.pm
 share/msf/exploits/solaris_sadmind_exec.pm
+share/msf/exploits/squid_ntlm_authenticate.pm
 share/msf/exploits/svnserve_date.pm
+share/msf/exploits/ut2004_secure_linux.pm
+share/msf/exploits/ut2004_secure_win32.pm
 share/msf/exploits/warftpd_165_pass.pm
 share/msf/exploits/windows_ssl_pct.pm
-share/msf/msfcli
-share/msf/msfconsole
-share/msf/msfdldebug
-share/msf/msfencode
-share/msf/msflogdump
-share/msf/msfpayload
-share/msf/msfpayload.cgi
-share/msf/msfpescan
-share/msf/msfweb
-share/msf/nops/Pex.pm
-share/msf/payloads/Empty.pm
-share/msf/payloads/bsdx86_bind.pm
-share/msf/payloads/bsdx86_bind_ie.pm
-share/msf/payloads/bsdx86_findsock.pm
-share/msf/payloads/bsdx86_reverse.pm
-share/msf/payloads/bsdx86_reverse_ie.pm
-share/msf/payloads/cmd_generic.pm
-share/msf/payloads/cmd_sol_bind.pm
-share/msf/payloads/cmd_unix_reverse.pm
-share/msf/payloads/external/WindowsSyscall.py
-share/msf/payloads/external/bsdx86bind_ie.py
-share/msf/payloads/external/bsdx86reverse_ie.py
-share/msf/payloads/external/inlineegg.py
-share/msf/payloads/external/linx86bind_ie.py
-share/msf/payloads/external/linx86reverse_ie.py
-share/msf/payloads/external/linx86reverse_xor.py
-share/msf/payloads/external/win32_stg_winexec.py
-share/msf/payloads/linx86_bind.pm
-share/msf/payloads/linx86_bind_ie.pm
-share/msf/payloads/linx86_findsock.pm
-share/msf/payloads/linx86_reverse.pm
-share/msf/payloads/linx86_reverse_ie.pm
-share/msf/payloads/linx86_reverse_impurity.pm
-share/msf/payloads/linx86_reverse_xor.pm
-share/msf/payloads/solx86_bind.pm
-share/msf/payloads/solx86_findsock.pm
-share/msf/payloads/solx86_reverse.pm
-share/msf/payloads/win32_adduser.pm
-share/msf/payloads/win32_bind.pm
-share/msf/payloads/win32_bind_stg.pm
-share/msf/payloads/win32_bind_stg_upexec.pm
-share/msf/payloads/win32_exec.pm
-share/msf/payloads/win32_reverse.pm
-share/msf/payloads/win32_reverse_stg.pm
-share/msf/payloads/win32_reverse_stg_ie.pm
-share/msf/payloads/win32_reverse_stg_upexec.pm
+share/msf/lib/Msf/PayloadComponent/InlineEggPayload.pm
 share/msf/lib/Msf/PayloadComponent/CommandPayload.pm
 share/msf/lib/Msf/PayloadComponent/Win32Execute.pm
 share/msf/lib/Msf/PayloadComponent/Win32StagePayload.pm
+share/msf/lib/Msf/PayloadComponent/SolarisShellStage.pm
 share/msf/lib/Msf/PayloadComponent/ReverseConnection.pm
+share/msf/lib/Msf/PayloadComponent/SolarisStagePayload.pm
 share/msf/lib/Msf/PayloadComponent/DoubleReverseConnection.pm
 share/msf/lib/Msf/PayloadComponent/Console.pm
 share/msf/lib/Msf/PayloadComponent/Win32ShellStage.pm
 share/msf/lib/Msf/PayloadComponent/ConnectionHandler.pm
+share/msf/lib/Msf/PayloadComponent/SolarisPayload.pm
 share/msf/lib/Msf/PayloadComponent/NoConnection.pm
 share/msf/lib/Msf/PayloadComponent/TextConsole.pm
 share/msf/lib/Msf/PayloadComponent/Win32StagePayloadIE.pm
 share/msf/lib/Msf/PayloadComponent/ExternalPayload.pm
 share/msf/lib/Msf/PayloadComponent/BindConnection.pm
+share/msf/lib/Msf/PayloadComponent/FindRecvConnection.pm
 share/msf/lib/Msf/PayloadComponent/Win32UploadExecStage.pm
 share/msf/lib/Msf/PayloadComponent/Win32ReverseStagerIE.pm
+share/msf/lib/Msf/PayloadComponent/SolarisFindStager.pm
+share/msf/lib/Msf/PayloadComponent/SolarisBindStager.pm
 share/msf/lib/Msf/PayloadComponent/Win32BindStagerIE.pm
-share/msf/lib/Msf/PayloadComponent/Win32Payload.pm
 share/msf/lib/Msf/PayloadComponent/FindConnection.pm
 share/msf/lib/Msf/PayloadComponent/Win32BindStager.pm
+share/msf/lib/Msf/PayloadComponent/SolarisReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/Win32InjectLibStage.pm
 share/msf/lib/Msf/PayloadComponent/Win32ReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/Win32Payload.pm
 share/msf/lib/Msf/PayloadComponent/WebConsole.pm
 share/msf/lib/Msf/Base.pm
 share/msf/lib/Msf/UI.pm
 share/msf/lib/Msf/Nop.pm
+share/msf/lib/Msf/Socket/SSLTcp.pm
+share/msf/lib/Msf/Socket/SSLTcpBase.pm
+share/msf/lib/Msf/Socket/RawUdp.pm
+share/msf/lib/Msf/Socket/Tcp.pm
+share/msf/lib/Msf/Socket/Udp.pm
+share/msf/lib/Msf/Socket/Socket.pm
+share/msf/lib/Msf/Socket/UdpBase.pm
+share/msf/lib/Msf/Socket/SocketBase.pm
+share/msf/lib/Msf/Socket/TcpBase.pm
+share/msf/lib/Msf/Socket/RawUdpBase.pm
 share/msf/lib/Msf/TextUI.pm
 share/msf/lib/Msf/Exploit.pm
 share/msf/lib/Msf/Payload.pm
 share/msf/lib/Msf/Module.pm
 share/msf/lib/Msf/ColPrint.pm
-share/msf/lib/Msf/Socket.pm
 share/msf/lib/Msf/EncodedPayload.pm
 share/msf/lib/Msf/Logging.pm
 share/msf/lib/Msf/WebUI.pm
 share/msf/lib/Msf/Config.pm
 share/msf/lib/Msf/Encoder.pm
+share/msf/lib/Pex/Nasm/Instruction.pm
+share/msf/lib/Pex/Nasm/Ndisasm.pm
+share/msf/lib/Pex/Nasm/Nasm.pm
+share/msf/lib/Pex/Poly/BlockMaster.pm
+share/msf/lib/Pex/Poly/DeltaKing.pm
+share/msf/lib/Pex/Poly/RegAssassin.pm
+share/msf/lib/Pex/Poly/BlockMaster/Block.pm
+share/msf/lib/Pex/Poly/WannaCracker.pm
 share/msf/lib/Pex/RawPackets.pm
-share/msf/lib/Pex/Socket.pm
+share/msf/lib/Pex/SMB.pm
+share/msf/lib/Pex/Socket/SSLTcp.pm
+share/msf/lib/Pex/Socket/RawUdp.pm
+share/msf/lib/Pex/Socket/Tcp.pm
+share/msf/lib/Pex/Socket/Udp.pm
+share/msf/lib/Pex/Socket/Socket.pm
 share/msf/lib/Pex/Searcher.pm
 share/msf/lib/Pex/x86.pm
 share/msf/lib/Pex/DCERPC.pm
 share/msf/lib/Pex/MSSQL.pm
 share/msf/lib/Pex/Utils.pm
+share/msf/lib/Pex/Text.pm
 share/msf/lib/Pex/PEInfo.pm
 share/msf/lib/Pex/RawSocket.pm
 share/msf/lib/Pex/Struct.pm
 share/msf/lib/Pex/Encoder.pm
 share/msf/lib/Pex/PsuedoShell.pm
+share/msf/lib/Digest/Perl/MD5.pm
 share/msf/lib/NetPacket.pm
 share/msf/lib/Pex.pm
 share/msf/lib/NetPacket/IP.pm
@@ -146,15 +151,104 @@ share/msf/lib/NetPacket/Ethernet.pm
 share/msf/lib/NetPacket/ICMP.pm
 share/msf/lib/NetPacket/IGMP.pm
 share/msf/lib/NetPacket/ARP.pm
+share/msf/nops/PPC.pm
+share/msf/nops/Pex.pm
+share/msf/nops/SPARC.pm
+share/msf/payloads/external/WindowsSyscall.py
+share/msf/payloads/external/bsdx86bind_ie.py
+share/msf/payloads/external/bsdx86reverse_ie.py
+share/msf/payloads/external/inlineegg.py
+share/msf/payloads/external/linx86bind_ie.py
+share/msf/payloads/external/linx86reverse_ie.py
+share/msf/payloads/external/linx86reverse_xor.py
+share/msf/payloads/external/win32_stg_winexec.py
+share/msf/payloads/Empty.pm
+share/msf/payloads/bsdix86_bind.pm
+share/msf/payloads/bsdix86_findsock.pm
+share/msf/payloads/bsdix86_reverse.pm
+share/msf/payloads/bsdx86_bind.pm
+share/msf/payloads/bsdx86_bind_ie.pm
+share/msf/payloads/bsdx86_findsock.pm
+share/msf/payloads/bsdx86_reverse.pm
+share/msf/payloads/bsdx86_reverse_ie.pm
+share/msf/payloads/cmd_generic.pm
+share/msf/payloads/cmd_sol_bind.pm
+share/msf/payloads/cmd_unix_reverse.pm
+share/msf/payloads/cmd_unix_reverse_nss.pm
+share/msf/payloads/linx86_bind.pm
+share/msf/payloads/linx86_bind_ie.pm
+share/msf/payloads/linx86_findrecv.pm
+share/msf/payloads/linx86_findsock.pm
+share/msf/payloads/linx86_reverse.pm
+share/msf/payloads/linx86_reverse_ie.pm
+share/msf/payloads/linx86_reverse_impurity.pm
+share/msf/payloads/linx86_reverse_xor.pm
+share/msf/payloads/osx_bind.pm
+share/msf/payloads/osx_reverse.pm
+share/msf/payloads/solsparc_bind.pm
+share/msf/payloads/solsparc_findsock.pm
+share/msf/payloads/solsparc_reverse.pm
+share/msf/payloads/solx86_bind.pm
+share/msf/payloads/solx86_findsock.pm
+share/msf/payloads/solx86_reverse.pm
+share/msf/payloads/win32_adduser.pm
+share/msf/payloads/win32_bind.pm
+share/msf/payloads/win32_bind_dllinject.pm
+share/msf/payloads/win32_bind_stg.pm
+share/msf/payloads/win32_bind_stg_upexec.pm
+share/msf/payloads/win32_exec.pm
+share/msf/payloads/win32_bind_vncinject.pm
+share/msf/payloads/win32_reverse.pm
+share/msf/payloads/win32_reverse_dllinject.pm
+share/msf/payloads/win32_reverse_stg.pm
+share/msf/payloads/win32_reverse_stg_ie.pm
+share/msf/payloads/win32_reverse_stg_upexec.pm
+share/msf/payloads/win32_reverse_vncinject.pm
+share/msf/tools/README.socketNinja
+share/msf/tools/README.memdump
+share/msf/tools/memdump.exe
+share/msf/tools/memdump.c
+share/msf/tools/socketNinja.pl
+share/msf/sdk/docs/exploitTutorial.txt
+share/msf/sdk/docs/svnserve_date.pm
+share/msf/sdk/docs/vuln1_osx.pm
+share/msf/sdk/docs/exploitReference.txt
+share/msf/sdk/docs/vuln1.c
+share/msf/sdk/docs/vuln1_1.pm
+share/msf/sdk/docs/vuln1_2.pm
+share/msf/sdk/docs/vuln1_3.pm
+share/msf/sdk/formatGen.pl
+share/msf/sdk/patternOffset.pl
+share/msf/sdk/spitCode.pl
+share/msf/msfcli
+share/msf/msfconsole
+share/msf/msfdldebug
+share/msf/msfencode
+share/msf/msflogdump
+share/msf/msfpayload
+share/msf/msfpayload.cgi
+share/msf/msfpescan
+share/msf/msfweb
+@dirrm share/msf/encoders
+@dirrm share/msf/exploits
+@dirrm share/msf/lib/Msf/PayloadComponent
+@dirrm share/msf/lib/Msf/Socket
+@dirrm share/msf/lib/Msf
+@dirrm share/msf/lib/Pex/Nasm
+@dirrm share/msf/lib/Pex/Poly/BlockMaster
+@dirrm share/msf/lib/Pex/Poly
+@dirrm share/msf/lib/Pex/Socket
+@dirrm share/msf/lib/Pex
+@dirrm share/msf/lib/Digest/Perl
+@dirrm share/msf/lib/Digest
+@dirrm share/msf/lib/NetPacket
+@dirrm share/msf/lib
+@dirrm share/msf/nops
 @dirrm share/msf/payloads/external
 @dirrm share/msf/payloads
-@dirrm share/msf/nops
-@dirrm share/msf/exploits
-@dirrm share/msf/encoders
-@dirrm share/msf/lib/Pex
-@dirrm share/msf/lib/NetPacket
-@dirrm share/msf/lib/Msf/PayloadComponent
-@dirrm share/msf/lib/Msf
-@dirrm share/msf/lib
+@dirrm share/msf/tools
+@dirrm share/msf/sdk/docs
+@dirrm share/msf/sdk
+@dirrm share/msf/data
 @dirrm share/msf
 @dirrm share/doc/msf
