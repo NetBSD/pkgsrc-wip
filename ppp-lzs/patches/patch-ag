@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 2004/05/09 18:56:17 plunky Exp $
+
 --- pppd/ccp.h.orig	Tue Apr 15 23:20:03 2003
 +++ pppd/ccp.h	Tue Apr 15 23:20:39 2003
 @@ -33,4 +33,5 @@

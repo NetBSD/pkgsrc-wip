@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 2004/05/09 18:56:17 plunky Exp $
+
 --- pppd/pppd.8.orig	Tue Apr 15 23:20:09 2003
 +++ pppd/pppd.8	Tue Apr 15 23:20:52 2003
 @@ -556,4 +556,17 @@

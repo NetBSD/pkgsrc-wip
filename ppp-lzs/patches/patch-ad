@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 2004/05/09 18:56:17 plunky Exp $
+
 --- net/ppp-comp.h.orig	Tue Apr 15 23:06:42 2003
 +++ net/ppp-comp.h	Tue Apr 15 23:12:26 2003
 @@ -43,8 +43,18 @@

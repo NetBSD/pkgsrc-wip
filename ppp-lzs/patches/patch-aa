@@ -1,8 +1,8 @@
---- /dev/null	Tue Apr 15 22:48:31 2003
-+++ Makefile	Tue Apr 15 23:09:43 2003
-@@ -0,0 +1,5 @@
-+# $NetBSD: patch-aa,v 1.1.1.1 2004/03/14 01:33:48 jeremy-c-reed Exp $
-+
+$NetBSD: patch-aa,v 1.2 2004/05/09 18:56:16 plunky Exp $
+
+--- /dev/null   Mon Mar 15 23:51:49 2004
++++ Makefile    Mon Mar 15 23:52:15 2004
+@@ -0,0 +1,3 @@
 +SUBDIR=lkm pppd
 +
 +.include <bsd.subdir.mk>

@@ -1,8 +1,9 @@
+$NetBSD: patch-ae,v 1.2 2004/05/09 18:56:17 plunky Exp $
+
 --- pppd/Makefile.orig	Thu Apr 17 07:17:56 2003
 +++ pppd/Makefile	Thu Apr 17 10:30:18 2003
-@@ -1,13 +1,14 @@
- #	$NetBSD: patch-ae,v 1.1.1.1 2004/03/14 01:33:48 jeremy-c-reed Exp $
- 
+@@ -2,12 +2,13 @@
+
 -PCAPDIR=${.CURDIR}/../../../lib/libpcap
 +PCAPDIR=${BSDSRCDIR}/lib/libpcap
 +PPPDDIR=${BSDSRCDIR}/usr.sbin/pppd/pppd

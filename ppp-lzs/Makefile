@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/14 01:33:47 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/09 18:56:16 plunky Exp $
 
 DISTNAME=	ppp-lzs-1.0
-MASTER_SITES=	http://homepages.rya-online.net/plunky/
+WRKSRC=		${WRKDIR}
 CATEGORIES=	net
-MAINTAINER=	packages@netbsd.org
+MASTER_SITES=	http://homepages.rya-online.net/plunky/
+
+MAINTAINER=	plunky@rya-online.net
 HOMEPAGE=	http://homepages.rya-online.net/plunky/lzs.html
 COMMENT=	PPP daemon and LKM with Stac LZS decompression
 
-CONFLICTS+=	ppp-mppe-*
+CONFLICTS+=		ppp-mppe-*
+ONLY_FOR_PLATFORM= 	NetBSD-*-*
 
-WRKSRC=		${WRKDIR}
 MAKE_ENV+=	BSDSRCDIR="${BSDSRCDIR}"
 MESSAGE_SUBST+= PREFIX="${PREFIX}"
 
 pre-patch:
-	@${MKDIR} -p ${WRKDIR}/lkm ${WRKDIR}/net ${WRKDIR}/pppd
+	@${MKDIR} ${WRKDIR}/lkm ${WRKDIR}/net ${WRKDIR}/pppd
 	@${CP} ${BSDSRCDIR}/sys/net/ppp-comp.h ${WRKDIR}/net/ppp-comp.h
 	@${CP} ${BSDSRCDIR}/usr.sbin/pppd/pppd/Makefile ${WRKDIR}/pppd/Makefile
 	@${CP} ${BSDSRCDIR}/usr.sbin/pppd/pppd/ccp.c ${WRKDIR}/pppd/ccp.c
