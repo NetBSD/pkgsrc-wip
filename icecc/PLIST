@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/28 10:05:43 plunky Exp $
+bin/icecc
+bin/icebgset
+bin/iceked
+bin/icemc
+bin/icesndcfg
+bin/icets
+bin/icewoed
+bin/icecurcfg.py
+bin/iceiconcvt.py
+bin/icemergeprefs.py
+bin/icerrrun.py
+bin/icerrun.py
+share/icecc/help/default/icecc_desk.png
+share/icecc/help/default/index.html
+share/icecc/help/default/index.sgml
+share/icecc/help/default/index-1.html
+share/icecc/help/default/index-2.html
+share/icecc/help/default/index-3.html
+share/icecc/help/default/index-4.html
+share/icecc/help/default/index-5.html
+share/icecc/help/default/index-6.html
+share/icecc/themes/Control Panel/bgimg.jpg
+share/icecc/themes/Control Panel/theme
+share/icecc/themes/Control Panel/README
+share/icecc/themes/Simple/theme
+share/icecc/themes/Simple/icecc_desk.png
+@dirrm share/icecc/help/default
+@dirrm share/icecc/help
+@dirrm share/icecc/themes/Control Panel
+@dirrm share/icecc/themes/Simple
+@dirrm share/icecc/themes
+@dirrm share/icecc
