@@ -1,0 +1,3 @@
+- Does not work, at least under NetBSD current; crashes after showing the
+  main window.  (If it hangs for you before the main window is shown,
+  update your X).
