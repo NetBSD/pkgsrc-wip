@@ -1,5 +1,5 @@
-$NetBSD: TODO,v 1.1.1.1 2003/04/20 15:14:26 xtraeme Exp $
+$NetBSD: TODO,v 1.2 2003/05/06 17:46:06 jmmv Exp $
 
-* Improve DESCR ? 
-* Improve the do-install target ? 
+* Improve DESCR ?
+* Improve the do-install target ?
 * Would we apply the patch of freenode ?

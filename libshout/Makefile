@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/29 01:35:08 icmp Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/06 17:46:08 jmmv Exp $
 #
 
 DISTNAME=	libshout-1.0.9
@@ -12,7 +12,7 @@ COMMENT=	Library for using icecast servers
 GNU_CONFIGURE=		# defined
 REAL_INSTALL=		${INSTALL} -c -o 0 -g 0
 
-# The GNU Makefile in the distribution is stubborn about changing where 
+# The GNU Makefile in the distribution is stubborn about changing where
 # docs and examples get installed, so...
 
 .include "../../mk/bsd.prefs.mk"

@@ -7,6 +7,6 @@ Tsclient is a frontend for rdesktop
    and the M$ client)
 # looks and functions very much like the M$ client
 # is written in C
-# features an "rdp picker" which lists .rdp files in ~/.tsclient/ 
+# features an "rdp picker" which lists .rdp files in ~/.tsclient/
   and launches rdesktop from the rdp file when selected
 # VNC support as a client only (vncviewer)

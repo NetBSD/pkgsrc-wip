@@ -1,8 +1,8 @@
-$NetBSD: TODO,v 1.1.1.1 2003/04/14 10:19:22 xtraeme Exp $
+$NetBSD: TODO,v 1.2 2003/05/06 17:46:06 jmmv Exp $
 
 Juan RP:
 
-* Maybe improve the MESSAGE. 
+* Maybe improve the MESSAGE.
 * Test the package and verify if it works right, any
   suggestion will be appreciated.
 * This package will need apache 1 or apache 2 ? my package

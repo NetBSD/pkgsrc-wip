@@ -1,11 +1,11 @@
-$NetBSD: TODO,v 1.1.1.1 2003/04/14 05:29:56 xtraeme Exp $
+$NetBSD: TODO,v 1.2 2003/05/06 17:46:06 jmmv Exp $
 
 Juan RP:
 
 * I can't test this package because only I've got a nvidia
-  graphics card, the suppport is very bad. 
+  graphics card, the suppport is very bad.
 
 * In the documentation, it says that works on BSD with SDL.
 
 * Test it and report any problem to the mailing list.
-  Thank you. 
+  Thank you.
