@@ -2,7 +2,7 @@
 /*
  * XFree86 packages for pkgsrc system
  *
- * $Id: host.def,v 1.1.1.1 2003/07/23 20:35:19 xtraeme Exp $
+ * $Id: host.def,v 1.2 2003/07/23 21:47:30 xtraeme Exp $
  *
  */
 
@@ -28,17 +28,16 @@
 # define HasSecureRPC NO
 #endif
 
-/* DRI/DRM Support only in FreeBSD/Linux at this moment ... 
+/* DRI/DRM Support only in FreeBSD/Linux at this moment */
 
-#define BuildXF86DRIDriverSupport YES
-
-#if defined(FreeBSDArchitecture) || defined(LinuxArchitecture)
+#if defined(FreeBSDArchitecture)
+# define BuildXF86DRI YES
+# define BuildXF86DRM NO
+# define HasSecureRPC YES
+#elif defined(LinuxArchitecture)
 # define BuildXF86DRI YES
 # define BuildXF86DRM YES
-# define HasSecureRPC YES
 #endif
-
-*/
 
 #if defined(i386Architecture)
 # define XF86CardDrivers	mga glint nv tga s3 s3virge sis rendition \
