@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/12 15:23:43 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/12 15:26:54 marc Exp $
 #
 
 DISTNAME=	albatross-1.10pre2
@@ -15,10 +15,10 @@ PY_PATCHPLIST=	yes
 USE_BUILDLINK2=	yes
 
 RUNTIME_DIR?=	/var/run/albatross
-EXAMPLEDIR=	${PREFIX}/share/examples/albatross
 LOGDIR?=	/var/log/albatross
+EXAMPLEDIR=	${PREFIX}/share/examples/albatross
 LOGFILE?=	${LOGDIR}/al-session-daemon.log
-PIDFILE?=	/var/run/albatross/session-daemon.pid
+PIDFILE?=	${RUNTIME_DIR}/session-daemon.pid
 
 ALBATROSS_USER=	albatross
 ALBATROSS_GROUP=albatross
