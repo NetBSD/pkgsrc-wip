@@ -21,6 +21,8 @@ a few things:
   @${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${X11BASE}
   @${CHMOD} ${PKGDIRMODE} ${X11BASE}
 
+  Note that those need to have a tab character in front of them.
+
 * x11-links checks if we have the X headers, so you will have to
   comment out the following lines from pkgtools/x11-links/Makefile:
 
