@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/11/18 05:13:53 mpasternak Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/11/18 05:16:06 mpasternak Exp $
 
 .if !defined(XBSQL_BUILDLINK2_MK)
 XBSQL_BUILDLINK2_MK=	# defined
@@ -12,6 +12,8 @@ BUILDLINK_PREFIX.xbsql_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.xbsql=	include/xbsql.h
 BUILDLINK_FILES.xbsql+=	lib/libxbsql* 
 BUILDLINK_FILES.xbsql+=	bin/xql
+
+.include "../../wip/xbase/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	xbsql-buildlink
 
