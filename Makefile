@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.958 2004/02/13 21:29:29 minskim Exp $
-# $NetBSD: Makefile,v 1.958 2004/02/13 21:29:29 minskim Exp $
+# $Id: Makefile,v 1.959 2004/02/13 23:00:09 minskim Exp $
+# $NetBSD: Makefile,v 1.959 2004/02/13 23:00:09 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -40,7 +40,6 @@ SUBDIR+=	armagetron
 SUBDIR+=	arping
 SUBDIR+=	asfrecorder
 SUBDIR+=	asterisk
-SUBDIR+=	atasm
 SUBDIR+=	atk-devel
 SUBDIR+=	autoproject
 SUBDIR+=	avida2
