@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1602 2005/01/08 13:43:19 minskim Exp $
-# $NetBSD: Makefile,v 1.1602 2005/01/08 13:43:19 minskim Exp $
+# $Id: Makefile,v 1.1603 2005/01/08 19:24:43 airhead Exp $
+# $NetBSD: Makefile,v 1.1603 2005/01/08 19:24:43 airhead Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -290,6 +290,7 @@ SUBDIR+=	heroes
 SUBDIR+=	hol-light
 SUBDIR+=	host
 SUBDIR+=	hping3
+SUBDIR+=	hpoj
 SUBDIR+=	ht2html
 SUBDIR+=	html2latex
 SUBDIR+=	httrack
