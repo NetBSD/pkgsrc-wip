@@ -1,16 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/09/17 15:16:17 xtraeme Exp $
---- Makefile.orig	Fri Jul 18 23:55:03 2003
-+++ Makefile	Fri Jul 18 23:51:25 2003
-@@ -16,10 +16,10 @@
+$NetBSD: patch-aa,v 1.2 2004/02/13 22:47:11 minskim Exp $
+
+--- Makefile.orig	2003-08-22 19:53:29.000000000 -0500
++++ Makefile
+@@ -16,10 +16,10 @@ ZLIB    = -lz
  UNIX    = -DUNIX
  
  # Compiler flags, if you are using egcs, pgcs, or gcc >2.8.1 use:
--CFLAGS  = -Wall -O3 -fomit-frame-pointer -march=pentiumpro $(USEZ) $(DOS) $(UNIX)
-+#CFLAGS  = -Wall -O3 -fomit-frame-pointer -march=pentiumpro $(USEZ) $(DOS) $(UNIX)
- 
- # For those people out there with only a 386
--#CFLAGS =  -Wall -O3 -fomit-frame-pointer $(USEZ) $(DOS) $(UNIX)
-+CFLAGS =  -Wall -O3 -fomit-frame-pointer $(USEZ) $(DOS) $(UNIX)
+-CFLAGS  = -Wall $(USEZ) $(DOS) $(UNIX) -O3 -fomit-frame-pointer -march=pentiumpro 
++CFLAGS  += $(USEZ) $(DOS) $(UNIX)
  
  L       =  $(ZLIB) 
- CC      = gcc
+-CC      = gcc
++#CC      = gcc
+ DESTDIR	= /usr/local/bin
+ MANDIR	= /usr/local/man/man1
+ DOCDIR	= /usr/local/doc/atasm
