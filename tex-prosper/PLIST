@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/18 01:24:43 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/16 16:23:28 hubertf Exp $
 share/doc/prosper/AUTHORS
 share/doc/prosper/ChangeLog
 share/doc/prosper/FAQ
@@ -87,4 +87,5 @@ share/texmf/tex/latex/misc/prosper/prosper.cls
 @dirrm share/texmf/tex/latex/misc/prosper/designer
 @dirrm share/texmf/tex/latex/misc/prosper/img
 @dirrm share/texmf/tex/latex/misc/prosper
+@exec %D/bin/mktexlsr
 @unexec %D/bin/mktexlsr
