@@ -1,0 +1,5 @@
+$Id: TODO,v 1.1 2003/11/28 22:52:48 mpasternak Exp $
+
+Webpage claims, that there are ports for Solaris, HP-UX, MacOS
+and Windows. Unfortunatley, I can't test on those, so until someone
+does this...

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/11/08 02:23:40 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2003/11/28 22:52:48 mpasternak Exp $
 
 DISTNAME=	chstandard-4.0.0.linux2.2.5.intel
 PKGNAME=	linux-ch-4.0.0
@@ -9,37 +9,24 @@ MAINTAINER=	dotz@irc.pl
 HOMEPAGE=	http://www.softintegration.com/products/
 COMMENT=	Ch is an interactive C development environment
 
-NO_BUILD=	# defined
-
-#
 # I have included chstandard-license for pkgsrc-wip purposes as
 # linux-ch/licenses/chstandard-license. Basically,
 # this tool is free for personal and commercial use.
-#
 
-LICENSE=	chstandard-license
+LICENSE=		chstandard-license
 
-#
-# Webpage claims, that there are ports for Solaris, HP-UX, MacOS
-# and Windows. Unfortunatley, I can't test on those, so until someone
-# does this... :
-# 
-
-ONLY_FOR_PLATFORM=	*-i386
+LINUX_BINPKG_FMT=	plain
+LINUX_USE_X11=		yes
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} PREFIX="${PREFIX}" ./install.sh
+	cd ${WRKSRC} && ${SETENV} PREFIX="${EMULOPTDIR}" ./install.sh
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	cd ${PREFIX} && ${FIND} ch4.0.0 -type f -print >>${PLIST_SRC}
-	cd ${PREFIX} && ${FIND} ch4.0.0 -type l -print >>${PLIST_SRC}	
-	cd ${PREFIX} && ${FIND} -d ch4.0.0  -type d -print | \
-	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
+	cd ${EMULOPTDIR} && ${FIND} ch4.0.0 -type f | \
+		${SED} -e "s|^|\$${EMULOPTSUBDIR}/|" >> ${PLIST_SRC}
+	cd ${EMULOPTDIR} && ${FIND} ch4.0.0 -type l | \
+		${SED} -e "s|^|\$${EMULOPTSUBDIR}/|" >> ${PLIST_SRC}
+	cd ${EMULOPTDIR} && ${FIND} -d ch4.0.0  -type d  | \
+	${SED} -e "s/^/@dirrm \$${EMULOPTSUBDIR}/" >>${PLIST_SRC}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
-.endif
-
+.include "../../wip/mk/linuxbin.pkg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/11/08 02:05:34 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.2 2003/11/28 22:52:48 mpasternak Exp $
  
  You can use ch or chs (Ch interpreters: normal and safe variant) 
  as login shells.
@@ -10,7 +10,17 @@ $NetBSD: MESSAGE,v 1.1.1.1 2003/11/08 02:05:34 mpasternak Exp $
  Online documentation for more information. 
  
  Getting started in Ch, type
-  ch
+ 
+  setenv CHHOME ${EMULOPTDIR}/ch4.0.0/
+  
+ if you use csh, or
+ 
+  export CHHOME="${EMULOPTDIR}/ch4.0.0/"
+  
+ if you use (ba)sh. Then execute:
+  
+  ${EMULOPTDIR}/ch4.0.0/bin/ch
+  
   help
 				       
 ===========================================================================
