@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/30 23:56:40 jeremy-c-reed Exp $
-
-SHA1 (gnucash-docs-1.8.1.tar.gz) = eb7bc4e264cf96b8bb90fc278cdcfd4e357b8bd0
-Size (gnucash-docs-1.8.1.tar.gz) = 1256883 bytes
-SHA1 (patch-aa) = 5f289ce90b9717e7d053ffe208dbd9e5742a4386
