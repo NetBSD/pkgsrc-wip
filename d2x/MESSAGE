@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/11/04 21:19:19 airhead Exp $
+
+Place the datafiles to your Descent version in
+	${PREFIX}/share/games/${PKGBASE}
+
+or in the .d2x directory in your home directory.
+
+For Descent 2, these datafiles can be extracted from the  descent2.sow
+file in the d2data directory in the root of your CD. This can be done with
+any ARJ tool.
+
+If you also want movies, also copy the *.mvl files from that same
+directory.
+
+===========================================================================

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/04 21:19:19 airhead Exp $
+bin/d2x-sdl
+@dirrm games/d2x
