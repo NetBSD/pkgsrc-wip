@@ -1,5 +1,6 @@
-$NetBSD: TODO,v 1.3 2005/02/10 21:22:15 riz Exp $
+$NetBSD: TODO,v 1.4 2005/03/14 16:32:12 riz Exp $
 
+- Update to 1.0.6
 - add options for zaptel support.  This will require a separate package for
   the drivers.
 - add option for graphic console support.  Haven't looked at this yet, not
