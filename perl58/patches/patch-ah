@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1.1.1 2003/08/26 10:07:45 jlamwww Exp $
+$NetBSD: patch-ah,v 1.2 2003/09/30 08:37:51 jlamwww Exp $
 
---- perl.c.orig	Wed Jul 30 12:33:15 2003
-+++ perl.c	Tue Aug 26 01:58:05 2003
-@@ -3925,12 +3925,33 @@
+--- perl.c.orig	Thu Sep 11 14:42:33 2003
++++ perl.c	Tue Sep 30 01:16:04 2003
+@@ -3943,12 +3943,33 @@
      }
  
  /* Use the ~-expanded versions of APPLLIB (undocumented),
@@ -37,7 +37,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2003/08/26 10:07:45 jlamwww Exp $
  #ifdef ARCHLIB_EXP
      incpush(ARCHLIB_EXP, FALSE, FALSE, TRUE);
  #endif
-@@ -3962,27 +3983,6 @@
+@@ -3980,27 +4001,6 @@
      incpush(PRIVLIB_EXP, TRUE, FALSE, TRUE);
  #else
      incpush(PRIVLIB_EXP, FALSE, FALSE, TRUE);

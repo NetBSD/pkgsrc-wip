@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/26 10:07:45 jlamwww Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/30 08:37:51 jlamwww Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
 #
 PERL5_SNAPSHOT=	# empty
-PERL5_RC_VERS=	4
+PERL5_RC_VERS=	# empty
 
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
@@ -27,6 +27,7 @@ SNAPSHOT_SITES=	http://www.cpan.org/authors/id/J/JH/JHI/
 PERL5_VERS=	5.8.1
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	${SNAPSHOT_SITES} \
+		${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,} \
 		ftp://ftp.funet.fi/pub/languages/perl/CPAN/src/ \
 		ftp://ftp.ruhr-uni-bochum.de/mirrors/ftp.funet.fi/pub/languages/perl/CPAN/src/
 
@@ -40,9 +41,9 @@ CONFLICTS=	perl-5.00* perl-base-[0-9]* \
 		p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
 		perl-mk-[0-9]*
 
-.include "../../mk/bsd.prefs.mk"
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
@@ -50,7 +51,6 @@ CONFIGURE_ARGS+=	-Dprefix="${PREFIX}"
 CONFIGURE_ARGS+=	-Dscriptdir="${PREFIX}/bin"
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
 CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
-CONFIGURE_ARGS+=	-Dcc="${CC:T}"
 CONFIGURE_ARGS+=	-Dinstallstyle="lib/perl5"
 CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uusemymalloc
@@ -67,9 +67,9 @@ CONFIGURE_ARGS+=	-Dman3ext="3"
 CONFIGURE_ARGS+=	-Dman3dir="${PERL5_PRIVLIB}/man/man3"
 CONFIGURE_ARGS+=	-Dsiteman3dir="${PERL5_SITEPERL}/man/man3"
 
-.if ${MACHINE_ARCH} == "alpha"
-.  include "../../mk/gcc.buildlink2.mk"
-.endif
+# The site directories are all relative to the perl view.
+CONFIGURE_ARGS+=	-Dsiteprefix="${VIEWBASE}"
+CONFIGURE_ARGS+=	-Dinstallsiteman1dir="${VIEWBASE}/man/man1"
 
 .if !empty(PERL5_SNAPSHOT)
 #
@@ -83,7 +83,21 @@ CONFIGURE_ARGS+=        -Duseithreads
 .  endif
 .endif	# !PERL5_SNAPSHOT
 
+.include "../../mk/bsd.prefs.mk"
+
 MKPIC?=		yes
+
+.if ${OPSYS} == "IRIX"
+.  if ${ABI} == "32"
+PERL5_CC=		${CC:T} -n32
+.  elif ${ABI} == "64"
+PERL5_CC=		${CC:T} -64
+CONFIGURE_ARGS+=	-Duse64bitint
+.  endif
+.else
+PERL5_CC=		${CC:T}
+.endif
+CONFIGURE_ARGS+=	-Dcc="${PERL5_CC}"
 
 .if ${OPSYS} == "Darwin"
 #
@@ -111,6 +125,7 @@ PERL5_SITEARCH=	${PREFIX}/lib/perl5/site_perl/${PERL5_VERS}/${LOWER_OPSYS}
 #
 LIBSWANTED.Darwin=	m c
 LIBSWANTED.FreeBSD=	m crypt
+LIBSWANTED.IRIX=	m crypt
 LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
 
@@ -169,8 +184,9 @@ CONFIGURE_ARGS+=	-Duseshrplib
 PERL5=			${PREFIX}/bin/perl${PERL5_VERS}
 PERL5_PRIVLIB?=		${PREFIX}/lib/perl5/${PERL5_VERS}
 PERL5_ARCHLIB?=		${PREFIX}/lib/perl5/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
-PERL5_SITEPERL?=	${PREFIX}/lib/perl5/site_perl
-PERL5_SITEARCH?=	${PREFIX}/lib/perl5/site_perl/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
+PERL5_SITEPERL?=	${VIEWBASE}/lib/perl5/site_perl
+PERL5_SITELIB?=		${VIEWBASE}/lib/perl5/site_perl/${PERL5_VERS}
+PERL5_SITEARCH?=	${VIEWBASE}/lib/perl5/site_perl/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
 PLIST_SUBST+=		PERL5_SITEPERL=${PERL5_SITEPERL:S/^${PREFIX}\///}
 
@@ -215,24 +231,23 @@ STATIC_PERL?=		NO
 .endif
 STATIC_PERL?=		YES
 
+WRKSRC_PERL5=		${WRKSRC}/perl
+
 .if defined(STATIC_PERL) && ${STATIC_PERL} == "YES"
 STATIC_WRKDIR=		${WRKDIR}/static
 STATIC_MAKEFLAGS=	MKPIC=no STATIC_PERL=NO
 STATIC_MAKEFLAGS+=	WRKDIR=${STATIC_WRKDIR}
 STATIC_MAKEFLAGS+=	ALL_TARGET=perl
+WRKSRC_PERL5=		${STATIC_WRKDIR}/${WRKSRC:T}/perl
 
 post-build:
 	cd ${.CURDIR} && ${MAKE} build ${STATIC_MAKEFLAGS}
 .endif
 
 post-install:
-.if defined(STATIC_PERL) && ${STATIC_PERL} == "YES"
-	${RM} -f ${PERL5}
-	${INSTALL_PROGRAM} ${STATIC_WRKDIR}/${WRKSRC:T}/perl ${PERL5}
-.endif
-	${RM} -f ${PREFIX}/bin/perl
-	${LN} -f ${PERL5} ${PREFIX}/bin/perl
-	strip ${PERL5}
+	${RM} -f ${PREFIX}/bin/perl ${PREFIX}/bin/perl${PERL5_VERS}
+	${INSTALL_PROGRAM} ${WRKSRC_PERL5} ${PREFIX}/bin/perl${PERL5_VERS}
+	${LN} -f ${PREFIX}/bin/perl${PERL5_VERS} ${PREFIX}/bin/perl
 	if [ -x ${PREFIX}/bin/a2p ]; then				\
 		strip ${PREFIX}/bin/a2p;				\
 	fi
