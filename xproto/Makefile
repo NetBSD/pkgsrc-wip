@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/31 17:56:11 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/29 00:27:46 minskim Exp $
 #
 
 DISTNAME=		xproto-6.6.1
@@ -15,7 +15,7 @@ CONFLICTS+=		XFree86-libs-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/xproto.pc.in
+PKGCONFIG_OVERRIDE+=	xproto.pc.in
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.pkg.mk"
