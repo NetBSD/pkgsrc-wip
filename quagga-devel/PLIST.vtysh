@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.vtysh,v 1.1.1.1 2003/12/23 15:10:07 lexort Exp $
+bin/vtysh
