@@ -1,4 +1,5 @@
-EciAdsl is a GNU/Linux driver for Globespan chipset-based ADSL USB modems.
+EciAdsl is a NetBSD port of the GNU/Linux driver for Globespan chipset-based
+ADSL USB modems.
 The driver is known to work in many countries, for different kinds of ADSL
 USB modems, using different kinds of PPP encapsulation layers modes (see the
 supported modems list at http://eciadsl.flashtux.org/modems.php).

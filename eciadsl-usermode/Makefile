@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/25 11:53:13 imilh Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/25 12:18:26 imilh Exp $
 #
 
 DISTNAME=		eciadsl-usermode-0.10
@@ -23,6 +23,9 @@ ALL_TARGET=		eci-load1 eci-load2 pppoeci
 pre-build:
 			cd ${WRKSRC} && ${GMAKE} clean # archive's dirty
 
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES=		${EGDIR}/ppp.conf ${PKG_SYSCONFDIR}/ppp/ppp.conf
+
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/${PKGBASE}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PKGBASE}
@@ -34,7 +37,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/providers.db ${PREFIX}/share/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/firmware00.bin ${PREFIX}/share/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/synch01.bin ${PREFIX}/share/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/ppp.conf ${PREFIX}/share/examples/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ppp.conf ${EGDIR}
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	"Setting up hardcoded path"
@@ -51,7 +54,6 @@ SUBST_STAGE.ppp_conf=	post-patch
 SUBST_SED.ppp_conf=	-e 's|/root/eciadsl-usermode-0.10|${PREFIX}/sbin|'
 
 MESSAGE_SUBST+=		PKGBASE=${PKGBASE}
-MESSAGE_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
 
 .include "../../wip/libpusb/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
