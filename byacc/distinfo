@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/08/01 21:18:25 poppnk Exp $
-
-SHA1 (byacc-20001120.tgz) = befda9543deb4e7c2db07161cf22a6997404667c
-Size (byacc-20001120.tgz) = 56467 bytes
-SHA1 (patch-aa) = eecc26e2985c6532fc2bea9300a997e98c3bae03
