@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/26 21:02:43 pulahti Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/26 21:15:23 minskim Exp $
+bin/xp-replay
 bin/xpilot
 bin/xpilots
-bin/xp-replay
 lib/xpilot/defaults
 lib/xpilot/maps/polybloods.xp2
 lib/xpilot/maps/teamcup.xp
@@ -68,7 +68,7 @@ man/man6/xp-replay.6
 man/man6/xpilot.6
 man/man6/xpilots.6
 share/xpilot/mapconvert.py
-@dirrm lib/xpilot/maps
-@dirrm lib/xpilot/textures
-@dirrm lib/xpilot
 @dirrm share/xpilot
+@dirrm lib/xpilot/textures
+@dirrm lib/xpilot/maps
+@dirrm lib/xpilot
