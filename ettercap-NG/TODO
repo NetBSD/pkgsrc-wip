@@ -2,4 +2,9 @@
 - Does not support PlugIns under NetBSD yet. I assume this is
 because ettercap doesn't see that we don't need a library for dlopen()
 under NetBSD.
-
+- The following should not be set by a package: Instead, depend on
+appropriate versions, or for ncurses, set USE_NCURSES to the missing
+function/symbol in NetBSD curses.
+USE_BUILTIN.libpcap=    no
+USE_BUILTIN.ncurses=    no
+USE_BUILTIN.openssl=    no
