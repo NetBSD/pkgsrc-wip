@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/02 22:33:07 amadeus_z Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/15 13:57:14 amadeus_z Exp $
 #
 
 DISTNAME=	wmitime-0.3
@@ -13,5 +13,6 @@ WRKSRC=         ${WRKDIR}/wmitime/wmitime
 
 USE_GMAKE=	YES
 USE_X11=	YES
+USE_BUILDLINK2=	YES
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/08/02 22:33:08 amadeus_z Exp $
+$NetBSD: patch-aa,v 1.2 2003/08/15 13:57:14 amadeus_z Exp $
 
 --- Makefile.orig	Mon Mar 29 03:51:39 1999
 +++ Makefile
@@ -6,10 +6,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/08/02 22:33:08 amadeus_z Exp $
 -#LANG = fr
 -LIBDIR = -L/usr/X11R6/lib
 +LANG = en 
-+LIBDIR = -L/usr/X11R6/lib -Wl,-R/usr/pkg/lib -L/usr/pkg/lib  -Wl,-R/usr/X11R6/lib
++LIBDIR = ${LDFLAGS} 
  LIBS   = -lXpm -lXext -lX11 -lm
 -FLAGS = -O2
-+FLAGS = -O2 -I/usr/pkg/include -I/usr/X11R6/include
++FLAGS = -O2 ${BUILDLINK_CPPFLAGS} 
  OBJS =	wmitime.o \
  		../wmgeneral/wmgeneral.o \
  		../wmgeneral/misc.o \

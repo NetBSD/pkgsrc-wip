@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/02 22:33:07 amadeus_z Exp $
+$NetBSD: distinfo,v 1.2 2003/08/15 13:57:14 amadeus_z Exp $
 
 SHA1 (wmitime-0.3.tar.gz) = 64bb07c5eccce5592088cfccc87836f66695e07c
 Size (wmitime-0.3.tar.gz) = 21442 bytes
-SHA1 (patch-aa) = 68f8f0f1b0a9d2af5164f10df6d4a939522c5334
+SHA1 (patch-aa) = f72e902319b85564237fea023831c3e513e8afcf
