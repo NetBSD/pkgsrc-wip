@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.761 2003/12/13 21:27:44 xtraeme Exp $
-# $NetBSD: Makefile,v 1.761 2003/12/13 21:27:44 xtraeme Exp $
+# $Id: Makefile,v 1.762 2003/12/13 23:49:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.762 2003/12/13 23:49:08 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -611,7 +611,6 @@ SUBDIR+=	wmclockmon
 SUBDIR+=	wmitime
 SUBDIR+=	wmnetload
 SUBDIR+=	words
-SUBDIR+=	wv
 SUBDIR+=	wxGTK2
 SUBDIR+=	wxhugo
 SUBDIR+=	xawtv
