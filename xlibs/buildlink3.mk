@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/02/10 18:49:42 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 15:40:57 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use xlibs.
 #
@@ -10,10 +10,13 @@ XLIBS_BUILDLINK3_MK:=	${XLIBS_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	xlibs
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxlibs}
+BUILDLINK_PACKAGES+=	xlibs
+
 .if !empty(XLIBS_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			xlibs
 BUILDLINK_DEPENDS.xlibs+=		xlibs>=1.0
 BUILDLINK_PKGSRCDIR.xlibs?=		../../wip/xlibs
+.endif # XLIBS_BUILDLINK3_MK
 
 .include "../../wip/xextensions/buildlink3.mk"
 .include "../../wip/xproto/buildlink3.mk"
@@ -26,7 +29,5 @@ BUILDLINK_PKGSRCDIR.xlibs?=		../../wip/xlibs
 .include "../../wip/libXv/buildlink3.mk"
 .include "../../wip/libXfont/buildlink3.mk"
 .include "../../wip/libXres/buildlink3.mk"
-
-.endif # XLIBS_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

@@ -1,8 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/02/11 04:26:20 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 15:40:56 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXmu.
-#
-# This file was created automatically using createbuildlink-3.0.
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -12,10 +10,13 @@ LIBXMU_BUILDLINK3_MK:=	${LIBXMU_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	libXmu
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibXmu}
+BUILDLINK_PACKAGES+=	libXmu
+
 .if !empty(LIBXMU_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			libXmu
 BUILDLINK_DEPENDS.libXmu+=		libXmu>=6.2.1nb2
 BUILDLINK_PKGSRCDIR.libXmu?=		../../wip/libXmu
+.endif # LIBXMU_BUILDLINK3_MK
 
 .include "../../wip/libXt/buildlink3.mk"
 .include "../../wip/libX11/buildlink3.mk"
@@ -29,7 +30,5 @@ LDFLAGS+=	-lXext
 .include "../../mk/pthread.buildlink3.mk"
 LIBS+=		${BUILDLINK_LDADD.pthread}
 LDFLAGS+=	${BUILDLINK_LDADD.pthread}
-
-.endif # LIBXMU_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

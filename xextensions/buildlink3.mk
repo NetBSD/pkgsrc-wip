@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/31 18:12:18 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/18 15:40:56 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use xextensions.
 #
@@ -10,11 +10,12 @@ XEXTENSIONS_BUILDLINK3_MK:=	${XEXTENSIONS_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	xextensions
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxextensions}
+BUILDLINK_PACKAGES+=	xextensions
+
 .if !empty(XEXTENSIONS_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			xextensions
 BUILDLINK_DEPENDS.xextensions?=		xextensions>=1.0
 BUILDLINK_PKGSRCDIR.xextensions?=		../../wip/xextensions
-
 .endif # XEXTENSIONS_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
