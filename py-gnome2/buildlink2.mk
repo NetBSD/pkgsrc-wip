@@ -1,12 +1,13 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/06/03 21:02:31 marc Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/08/25 22:54:17 marc Exp $
 
 .if !defined(PYGNOME2_BUILDLINK2_MK)
 PYGNOME2_BUILDLINK2_MK=	# defined
 
+PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_PACKAGES+=			pygnome2
-BUILDLINK_DEPENDS.pygnome2?=		${PYPKGPREFIX}-gnome2>=1.99.16
+BUILDLINK_DEPENDS.pygnome2?=		${PYPKGPREFIX}-gnome2>=1.99.18
 BUILDLINK_PKGSRCDIR.pygnome2?=		../../wip/py-gnome2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.pygnome2=${PYPKGPREFIX}-gnome2

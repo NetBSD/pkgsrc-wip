@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/06/03 21:02:31 marc Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/25 22:54:17 marc Exp $
 #
 
-DISTNAME=	gnome-python-1.99.16
+DISTNAME=	gnome-python-1.99.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python/1.99/}
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/gnome-python-2.0.pc.in
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 
-PYTHON_VERSION_REQD=	22pth
+PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
 BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 
 .include "../../www/libgtkhtml/buildlink2.mk"
