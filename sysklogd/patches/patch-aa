@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2004/04/09 07:50:26 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.5 2004/05/10 23:39:42 jeremy-c-reed Exp $
 
 --- Makefile.orig	1998-10-12 13:25:15.000000000 -0700
 +++ Makefile
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.4 2004/04/09 07:50:26 jeremy-c-reed Exp $
 -BINDIR = /usr/sbin
 -MANDIR = /usr/man
 +BINDIR = ${DESTDIR}/sbin
-+MANDIR = ${DESTDIR}/man
++MANDIR = ${DESTDIR}/${PKGMANDIR}
  
  # There is one report that under an all ELF system there may be a need to
  # explicilty link with libresolv.a.  If linking syslogd fails you may wish

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/04/09 07:50:22 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/10 23:39:42 jeremy-c-reed Exp $
 
 DISTNAME=		sysklogd-1.4.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/daemons/}
 MASTER_SITES+=		http://www.infodrom.org/projects/sysklogd/download/
@@ -16,6 +16,8 @@ USE_GNU_TOOLS+=		make
 CFLAGS+=		-D_PATH_LOGCONF='\"${PKG_SYSCONFBASE}/syslog.conf\"'
 MAKE_ENV+=		DESTDIR=${PREFIX} ROOT_GROUP=${ROOT_GROUP} \
 			ROOT_USER=${ROOT_USER}
+PKGMANDIR?=		man
+MAKE_ENV+=		PKGMANDIR=${PKGMANDIR}
 
 USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		syslogd klogd
