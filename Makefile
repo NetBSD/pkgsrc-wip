@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.292 2003/07/02 13:31:07 jmmv Exp $
-# $NetBSD: Makefile,v 1.292 2003/07/02 13:31:07 jmmv Exp $
+# $Id: Makefile,v 1.293 2003/07/02 16:43:52 poppnk Exp $
+# $NetBSD: Makefile,v 1.293 2003/07/02 16:43:52 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -280,6 +280,7 @@ SUBDIR+=	xfce4-trigger-launcher
 SUBDIR+=	xfce4-utils
 SUBDIR+=	xfce4-wm
 SUBDIR+=	xfce4-wm-themes
+SUBDIR+=	xmail
 SUBDIR+=	xml2doc
 SUBDIR+=	xplore
 SUBDIR+=	yafray
