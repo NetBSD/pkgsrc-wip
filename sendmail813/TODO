@@ -1,3 +1,5 @@
 - Test all plugins still work o.k. (sasl, sasl2, ldap, starttls etc.)
 - Test on 2.0/-current
 - Check all m4 directives to make sure they are still o.k.
+- Need to decide if SOCKETMAP should be used as USE_SOCKETMAP or default option
+- Should add SOCKETMAP sample scripts as well
