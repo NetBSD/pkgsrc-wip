@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.483 2003/09/22 16:22:34 xtraeme Exp $
-# $NetBSD: Makefile,v 1.483 2003/09/22 16:22:34 xtraeme Exp $
+# $Id: Makefile,v 1.484 2003/09/22 19:50:59 adrian_p Exp $
+# $NetBSD: Makefile,v 1.484 2003/09/22 19:50:59 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -266,6 +266,7 @@ SUBDIR+=	ntp4-dev
 SUBDIR+=	nvtv
 SUBDIR+=	nvtv-gtk2
 SUBDIR+=	obconf
+SUBDIR+=	oinkmaster
 SUBDIR+=	opax
 SUBDIR+=	openbox3
 SUBDIR+=	openvpn
