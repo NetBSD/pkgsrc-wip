@@ -7,7 +7,7 @@ grouping, and more.
 The goal is to be a fully XML, SVG, and CSS2 compliant extensible
 drawing tool. It has a GNOME-style interface.
 
-Inkspace can be used for slideshows, printing, converting image
+Inkscape can be used for slideshows, printing, converting image
 formats, and can be used without a GUI for some features.
 
 This package also includes inkview, a slideshow program which uses
