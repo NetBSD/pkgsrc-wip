@@ -1,20 +1,4 @@
-$Id: TODO,v 1.3 2004/01/10 21:13:17 jeremy-c-reed Exp $
+$Id: TODO,v 1.4 2004/03/04 19:13:41 jeremy-c-reed Exp $
 
-This conflicts with mit-krb5 and heimdal (but didn't add CONFLICTS 
-yet because I need both).  Need to figure out a way to split out
-bin/compile_et, lib/libcom_err.a, and compile_et.1.
-
-use libtool to properly build so executables are linked correctly
-/usr/pkg/sbin/debugfs:
-         -lext2fs.2 => not found
-         -le2p.2 => not found
-         -lss.2 => not found
-         -lcom_err.2 => not found
-         -lblkid.1 => not found
-         -luuid.1 => not found
-         -lc.12 => /usr/lib/libc.so.12
-
->> Sat 10 Jan 18:01:58 2004 CET
-As libuuid is available as separate package in pkgsrc-wip, make it neither
-build nor install its own libuuid.
-	-- dotz@irc.pl
+I split out com_err related files to a wip/com_err package.
+That package still conflicts with kerberos packages.

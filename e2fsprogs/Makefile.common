@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.5 2004/03/04 14:53:01 thomasklausner Exp $
-# $Id: Makefile.common,v 1.5 2004/03/04 14:53:01 thomasklausner Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/03/04 19:13:41 jeremy-c-reed Exp $
+# $Id: Makefile.common,v 1.6 2004/03/04 19:13:41 jeremy-c-reed Exp $
 #
 
 # XXX When changing, be sure to run "make makesum" in libuuid directory too.
-E2FSPROGS_DISTNAME=	e2fsprogs-1.35
+E2FSPROGS_VERSION=	1.35
+E2FSPROGS_DISTNAME=	e2fsprogs-${E2FSPROGS_VERSION}
 E2FSPROGS_MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/} \
 			ftp://ftp.dei.uc.pt/.d4/linuxberg/files/console/system/ \
 			ftp://tsx-11.mit.edu/pub/linux/packages/ext2fs/ \
@@ -18,9 +19,3 @@ USE_PKGLOCALEDIR=       YES
 
 CONFIGURE_ENV+=         ac_cv_path_MSGFMT=${LOCALBASE}/bin/msgfmt
 CONFIGURE_ARGS+=        --enable-elf-shlibs
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Linux"
-CONFIGURE_ARGS+=	--disable-fsck
-.endif
