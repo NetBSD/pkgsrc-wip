@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/28 16:50:04 poppnk Exp $
+# $NetBSD: Makefile,v 1.5 2005/02/28 16:52:01 poppnk Exp $
 #
 
 DISTNAME=		bluez-hcidump-1.18
@@ -12,8 +12,6 @@ COMMENT=		Bluetooth packet analyzer
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-
-DEPENDS+=	bluez-libs>=2.15:../../wip/bluez-libs
 
 .include "../../wip/bluez-libs/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
