@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/06/16 18:48:52 bencollver Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/18 15:11:09 mpasternak Exp $
 
---- about.c.orig	Sun Jun 15 22:20:38 2003
-+++ about.c
-@@ -30,7 +30,11 @@
- #ifdef FREEBSD
+--- src/dsp.c~	Mon Dec  8 11:45:37 2003
++++ src/dsp.c	Sun Jan 18 14:42:27 2004
+@@ -44,7 +44,11 @@
+ #ifdef __FreeBSD__
  #include <machine/soundcard.h>
  #else
 +#ifdef __NetBSD__
@@ -13,4 +13,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/06/16 18:48:52 bencollver Exp $
 +#endif
  #endif
  
- #include "gtick.h"
+ /* GTK+ headers */

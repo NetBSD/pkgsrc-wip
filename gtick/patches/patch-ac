@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/06/16 18:48:52 bencollver Exp $
+$NetBSD: patch-ac,v 1.2 2004/01/18 15:11:09 mpasternak Exp $
 
---- Makefile.orig	Tue May 13 14:32:03 2003
-+++ Makefile
-@@ -1,7 +1,7 @@
- VERSION = 0.2.0
- CC = gcc
- CFLAGS = -O3 -Wall -g -I. `gtk-config --cflags` -DVERSION=\"$(VERSION)\"
--LDFLAGS = `gtk-config --libs`
-+LDFLAGS = `gtk-config --libs` -lossaudio
- DISTRO = gtick-$(VERSION)
- OBJS = main.o dsp.o about.o mixer.o
- 
+--- src/Makefile.in~	Fri Jan  9 20:42:56 2004
++++ src/Makefile.in	Sun Jan 18 14:45:16 2004
+@@ -83,7 +83,7 @@
+ LIBICONV = @LIBICONV@
+ LIBINTL = @LIBINTL@
+ LIBOBJS = @LIBOBJS@
+-LIBS = @LIBINTL@ @LIBS@
++LIBS = @LIBINTL@ @LIBS@ ${LIBOSSAUDIO} -lgetopt
+ LTLIBICONV = @LTLIBICONV@
+ LTLIBINTL = @LTLIBINTL@
+ LTLIBOBJS = @LTLIBOBJS@

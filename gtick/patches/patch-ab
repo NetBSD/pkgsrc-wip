@@ -1,34 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/06/16 18:48:52 bencollver Exp $
+$NetBSD: patch-ab,v 1.2 2004/01/18 15:11:09 mpasternak Exp $
 
---- dsp.c.orig	Sun Jun 15 22:19:16 2003
-+++ dsp.c
-@@ -31,8 +31,12 @@
- #ifdef FREEBSD
- #include <machine/soundcard.h>
- #else
+--- src/globals.h~	Mon Dec  1 23:31:51 2003
++++ src/globals.h	Sun Jan 18 14:44:13 2004
+@@ -44,7 +44,11 @@
+ #define VOLUME_MIN 0
+ #define VOLUME_MAX 100
+ #define MAX_METER 100
 +#ifdef __NetBSD__
-+#include <soundcard.h>
++#define DEFAULT_SOUND_DEVICE_FILENAME "/dev/audio"
 +#else
- #include <linux/soundcard.h>
- #endif
+ #define DEFAULT_SOUND_DEVICE_FILENAME "/dev/dsp"
 +#endif
- #include <glib.h>
- 
- #include "gtick.h"
-@@ -54,13 +58,13 @@ int gtInitDSP (TikTok *ticker)
- 	fragmentsize = 0x7fff000E;
- 
- #ifdef DEBUG
--	g_print ("gtInitDSP: Initialising /dev/dsp..\n");
-+	g_print ("gtInitDSP: Initialising /dev/audio..\n");
- #endif
- 
- 	/* Initialise /dev/dsp */
--	if ((dsp = open ("/dev/dsp", O_WRONLY)) == -1)
-+	if ((dsp = open ("/dev/audio", O_WRONLY)) == -1)
- 	  {
--	    perror ("/dev/dsp");
-+	    perror ("/dev/audio");
- 	    return -1;
- 	  }
- 
+ #define DEFAULT_SAMPLE_FILENAME "<default>"
+ #define DEFAULT_SPEED 75.0
+ #define DEFAULT_METER 1

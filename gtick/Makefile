@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.2 2003/07/18 03:37:43 bencollver Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/18 15:11:09 mpasternak Exp $
 #
 
-DISTNAME=		gtick-0.2.0
+DISTNAME=		gtick-0.2.13
 CATEGORIES=		audio
-MASTER_SITES=		http://www.antcom.de/download/gtick/
+MASTER_SITES=		http://www.antcom.de/gtick/download/
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		collver1@comcast.net
+MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.antcom.de/gtick/
 COMMENT=		GTK+ metronome
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gtick ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/gtick.1x ${PREFIX}/man/man1/
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
+GNU_CONFIGURE=		YES
 
+.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/libgetopt/buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
