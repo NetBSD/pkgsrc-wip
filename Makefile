@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1537 2004/11/15 00:24:58 lexort Exp $
-# $NetBSD: Makefile,v 1.1537 2004/11/15 00:24:58 lexort Exp $
+# $Id: Makefile,v 1.1538 2004/11/15 07:07:14 xmor61 Exp $
+# $NetBSD: Makefile,v 1.1538 2004/11/15 07:07:14 xmor61 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -845,6 +845,7 @@ SUBDIR+=	yafray
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
+SUBDIR+=	z26
 SUBDIR+=	zinf
 SUBDIR+=	zsnes-devel
 
