@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/22 01:23:23 minskim Exp $
+share/gdesklets/Displays/rssgrab/rssgrab-lite-dc.display
+share/gdesklets/Displays/rssgrab/rssgrab-lite.display
+share/gdesklets/Displays/rssgrab/rssgrab-psi.display
+share/gdesklets/Displays/rssgrab/rssgrab.display
+share/gdesklets/Displays/rssgrab/gfx/action.png
+share/gdesklets/Displays/rssgrab/gfx/bg.png
+share/gdesklets/Displays/rssgrab/gfx/frame.png
+share/gdesklets/Displays/rssgrab/gfx/logo.png
+share/gdesklets/Displays/rssgrab/gfx/preview.png
+share/gdesklets/Sensors/rssgrab/__init__.py
+share/gdesklets/Sensors/rssgrab/feedparser.py
+@dirrm share/gdesklets/Sensors/rssgrab
+@dirrm share/gdesklets/Displays/rssgrab/gfx
+@dirrm share/gdesklets/Displays/rssgrab
