@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/22 09:52:25 imilh Exp $
+# $NetBSD: Makefile,v 1.5 2005/02/23 01:21:24 minskim Exp $
 #
 
 DISTNAME=		pkg_select-20050222
@@ -11,7 +11,7 @@ COMMENT=	Curses based pkg system browser / manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-ONLY_FOR_PLATFORM=      NetBSD-*-* FreeBSD-*-*
+ONLY_FOR_PLATFORM=      NetBSD-*-* FreeBSD-*-* Darwin-*-*
 
 USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
