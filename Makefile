@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.787 2003/12/21 21:03:43 bencollver Exp $
-# $NetBSD: Makefile,v 1.787 2003/12/21 21:03:43 bencollver Exp $
+# $Id: Makefile,v 1.788 2003/12/21 21:33:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.788 2003/12/21 21:33:39 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -253,7 +253,6 @@ SUBDIR+=	jdk12-openjit
 SUBDIR+=	jdk13
 SUBDIR+=	jdk13-openjit
 SUBDIR+=	jigdo
-SUBDIR+=	jpeg_ls
 SUBDIR+=	kadu
 SUBDIR+=	kaffe-nox11
 SUBDIR+=	kannel-gateway
@@ -320,7 +319,6 @@ SUBDIR+=	linux-makedev
 SUBDIR+=	linux-modutils
 SUBDIR+=	linux-nfs-utils
 SUBDIR+=	liquidwar
-SUBDIR+=	ljpeg
 SUBDIR+=	lletters
 SUBDIR+=	lmarbles
 SUBDIR+=	lsdvd
