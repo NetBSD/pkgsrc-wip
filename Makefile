@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.969 2004/02/16 01:58:45 minskim Exp $
-# $NetBSD: Makefile,v 1.969 2004/02/16 01:58:45 minskim Exp $
+# $Id: Makefile,v 1.970 2004/02/16 17:51:28 minskim Exp $
+# $NetBSD: Makefile,v 1.970 2004/02/16 17:51:28 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -430,7 +430,6 @@ SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Perl-Tidy
 SUBDIR+=	p5-SWF-File
-SUBDIR+=	p5-Scalar-List-Utils
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-String-Approx
