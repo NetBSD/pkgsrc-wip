@@ -1,1 +1,90 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/26 18:35:45 marc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/06 17:35:56 marc Exp $
+bin/metatheme-edit
+bin/metatheme_selector_capplet
+include/mtm/mtm-config-gui.h
+include/mtm/mtm-env.h
+include/mtm/mtm-ext-handler.h
+include/mtm/mtm-ext.h
+include/mtm/mtm-gui-handler.h
+include/mtm/mtm-handler.h
+include/mtm/mtm-init.h
+include/mtm/mtm-plugin.h
+include/mtm/mtm-stateful.h
+include/mtm/mtm-theme.h
+include/mtm/mtm-util.h
+include/mtm/mtm.h
+lib/libmtm.a
+lib/libmtm.la
+lib/libmtm.so
+lib/libmtm.so.0
+lib/libmtm.so.0.0
+lib/metatheme/plugins/${PKGVERSION}/libbgplugin.a
+lib/metatheme/plugins/${PKGVERSION}/libbgplugin.la
+lib/metatheme/plugins/${PKGVERSION}/libbgplugin.so
+lib/metatheme/plugins/${PKGVERSION}/libbgplugin.so.0
+lib/metatheme/plugins/${PKGVERSION}/libbgplugin.so.0.0
+lib/metatheme/plugins/${PKGVERSION}/libgtkplugin1.a
+lib/metatheme/plugins/${PKGVERSION}/libgtkplugin1.la
+lib/metatheme/plugins/${PKGVERSION}/libgtkplugin1.so
+lib/metatheme/plugins/${PKGVERSION}/libgtkplugin1.so.0
+lib/metatheme/plugins/${PKGVERSION}/libgtkplugin1.so.0.0
+lib/metatheme/plugins/${PKGVERSION}/libgtkplugin2.a
+lib/metatheme/plugins/${PKGVERSION}/libgtkplugin2.la
+lib/metatheme/plugins/${PKGVERSION}/libgtkplugin2.so
+lib/metatheme/plugins/${PKGVERSION}/libgtkplugin2.so.0
+lib/metatheme/plugins/${PKGVERSION}/libgtkplugin2.so.0.0
+lib/metatheme/plugins/${PKGVERSION}/libnautilus.a
+lib/metatheme/plugins/${PKGVERSION}/libnautilus.la
+lib/metatheme/plugins/${PKGVERSION}/libnautilus.so
+lib/metatheme/plugins/${PKGVERSION}/libnautilus.so.0
+lib/metatheme/plugins/${PKGVERSION}/libnautilus.so.0.0
+lib/metatheme/plugins/${PKGVERSION}/libsawfish.a
+lib/metatheme/plugins/${PKGVERSION}/libsawfish.la
+lib/metatheme/plugins/${PKGVERSION}/libsawfish.so
+lib/metatheme/plugins/${PKGVERSION}/libsawfish.so.0
+lib/metatheme/plugins/${PKGVERSION}/libsawfish.so.0.0
+share/applications/metatheme-edit.desktop
+share/control-center-2.0/capplets/metatheme_selector.desktop
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/metatheme.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/metatheme.mo
+share/metatheme-glade/bg-config-gui.glade
+share/metatheme-glade/metatheme-edit.glade
+share/metatheme-glade/mtm-sel.glade
+share/metatheme-glade/mtm-selector.glade
+share/mime-info/metatheme-edit.keys
+share/mime-info/metatheme.keys
+share/mime-info/metatheme.mime
+share/pixmaps/32_butteflylogo.png
+share/pixmaps/gnome-application-x-metatheme.png
+share/pixmaps/settings.png
+@comment in gnome2-control-center: @dirrm share/mime-info
+@dirrm share/metatheme-glade
+@comment in gnome2-control-center: @dirrm share/control-center-2.0/capplets
+@comment in gnome2-dirs: @dirrm share/applications
+@dirrm lib/metatheme/plugins/${PKGVERSION}
+@dirrm lib/metatheme/plugins
+@dirrm lib/metatheme
+@dirrm include/mtm

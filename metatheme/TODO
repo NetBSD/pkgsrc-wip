@@ -1,3 +1,0 @@
-Needs PLIST and DESCR.
-Hangs on my system while running this:
-/usr/pkg/bin/glib-genmarshal  --header --prefix=capplet_marshal > capplet-marshal.h
