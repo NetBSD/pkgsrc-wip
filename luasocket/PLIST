@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/24 23:56:42 poppnk Exp $
+lib/luasocket/libluasocket.so
+lib/luasocket/libluasocket.so.2.0
+@dirrm lib/luasocket
