@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/07 01:57:59 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/02 17:48:17 blef Exp $
 #
 
 DISTNAME=	java-gtk-0.8.1
@@ -13,7 +13,7 @@ COMMENT=	JAVA Bindings for GTK+2
 DEPENDS+=	apache-ant>=1.6.1:../../devel/apache-ant
 DEPENDS+=	jikes-[0-9]*:../../lang/jikes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -56,8 +56,9 @@ do-install:
 	${FIND} ${WRKSRC}/test -name CVS | ${XARGS} ${RM} -rf
 	cd ${WRKSRC}/test && ${PAX} -rwppm . ${EGDIR}
 
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/java-vm.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
