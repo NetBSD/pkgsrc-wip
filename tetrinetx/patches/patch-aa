@@ -1,7 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2004/01/22 19:41:47 rillig Exp $
-
---- src/config.h.orig	Tue Apr 24 04:31:29 2001
-+++ src/config.h	Sun Jan 26 17:58:07 2003
+$NetBSD: patch-aa,v 1.3 2004/01/23 02:01:38 rillig Exp $
+--- src/config.h.orig	2001-04-24 04:31:29.000000000 +0200
++++ src/config.h	2004-01-23 02:55:51.745142400 +0100
 @@ -7,16 +7,16 @@
  */
  
@@ -29,5 +28,5 @@ $NetBSD: patch-aa,v 1.2 2004/01/22 19:41:47 rillig Exp $
 +#define FILE_BAN_COMPROMISE     SHAREDIR "/game.ban.compromise"	/* List of Banned IP's */
 +#define FILE_ALLOW   SHAREDIR "/game.allow"	/* List of allow IP's */
 +#define FILE_LOG     SHAREDIR "/game.log"		/* Logfile */
-+#define FILE_PID     LOCALBASE "/tetrinetx.pid"			/* Default PID */
++#define FILE_PID     PREFIX "/tetrinetx.pid"			/* Default PID */
 +#define FILE_SECURE  SHAREDIR "/game.secure"	/* Security file */
