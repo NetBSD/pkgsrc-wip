@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/07 16:28:59 tvierling Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/27 12:27:09 cjep Exp $
 #
 ## XXX PKGSRC-WIP:
 ## This is not ready for prime time.  The still work-in-progress issues:
@@ -36,6 +36,7 @@
 
 DISTNAME=	j2sdk-1_3_1-src
 PKGNAME=	jdk13-1.0.8
+WRKSRC=		${WRKDIR}
 CATEGORIES=	lang
 MASTER_SITES=	# empty
 EXTRACT_SUFX=	.tar.gz # must be explicitly specified for the ".if exists" below
@@ -69,7 +70,6 @@ BUILD_DIRS=	${WRKSRC}/j2sdk1.3.1/make
 CHECK_SHLIBS=	NO # scripts set LD_LIBRARY_PATH
 NO_MTREE=	YES # since we change PREFIX below
 OWN_DIRS=	${PREFIX}
-WRKSRC=		${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -110,9 +110,9 @@ _FETCH_MESSAGE= \
 .endif
 
 post-extract:
-	chmod -R u+w ${WRKSRC}
-	@cd ${WRKSRC} && grep '^mkdir -p ' BUILD | while read line; do \
-		echo $$line; $$line; \
+	${CHMOD} -R u+w ${WRKSRC}
+	@cd ${WRKSRC} && ${GREP} '^mkdir -p ' BUILD | while read line; do \
+		${ECHO} $$line; $$line; \
 	done
 
 pre-patch:
