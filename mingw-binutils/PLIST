@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/06/20 05:28:26 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/11/30 17:32:52 xtraeme Exp $
 bin/${MINGW_TARGET}-addr2line
 bin/${MINGW_TARGET}-ar
 bin/${MINGW_TARGET}-as
@@ -23,6 +23,7 @@ ${MINGW_TARGET}/bin/nm
 ${MINGW_TARGET}/bin/ranlib
 ${MINGW_TARGET}/bin/strip
 ${MINGW_TARGET}/bin/windres
+${MINGW_TARGET}/bin/dllwrap
 ${MINGW_TARGET}/lib/ldscripts/i386pe.x
 ${MINGW_TARGET}/lib/ldscripts/i386pe.xbn
 ${MINGW_TARGET}/lib/ldscripts/i386pe.xn
@@ -44,6 +45,7 @@ man/man1/${MINGW_TARGET}-size.1
 man/man1/${MINGW_TARGET}-strings.1
 man/man1/${MINGW_TARGET}-strip.1
 man/man1/${MINGW_TARGET}-windres.1
+man/man1/${MINGW_TARGET}-as.1
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/bfd.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/binutils.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/ld.mo
@@ -76,4 +78,6 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/ld.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/opcodes.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/bfd.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/binutils.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/bfd.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/binutils.mo
 @dirrm ${MINGW_TARGET}/lib/ldscripts
