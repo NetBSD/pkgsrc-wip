@@ -1,0 +1,9 @@
+o Test if it actually works
+o Fix issues with py-Tk: when it's installed, py-OpenGL
+seems to detect it somehow and fails to build if Tcl isn't
+buildlinked.
+
+NOTE: I can't test it on my system, with the NVidia GLX
+driver, because of pthreads issues, so I leave it here
+for someone with more experience in Python module
+packaging.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/06 21:40:34 cubidou Exp $
+
+SHA1 (PyOpenGL-2.0.0.44.tar.gz) = 14bdf4f134c54fad245dae6647f9c6554c49c82a
+Size (PyOpenGL-2.0.0.44.tar.gz) = 1281640 bytes
+SHA1 (patch-aa) = 2f670b77d40b8d53e85fba906a08885e085e7da6
