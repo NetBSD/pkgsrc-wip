@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/10 17:11:25 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/10 17:19:04 jeremy-c-reed Exp $
 
 DISTNAME=		krb5-1.3.1
 PKGNAME=		mit-${DISTNAME}
@@ -48,8 +48,10 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 #	    ${ECHO} "  ${DOWNLOAD}."; \
 #	    ${ECHO} "==============================================================="
 
-post-extract:
-	cd ${WRKDIR} && ${PAX} -O -rzf ${WRKDIR}/${DISTNAME}.tar.gz
+# XXX Only need this post-extract target when using the download
+# XXX from the interactive fetch.
+#post-extract:
+#	cd ${WRKDIR} && ${PAX} -O -rzf ${WRKDIR}/${DISTNAME}.tar.gz
 
 #.include "../../mk/yacc.mk"
 
