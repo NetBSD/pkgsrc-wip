@@ -1,30 +1,33 @@
-# $NetBSD: Makefile,v 1.9 2004/09/13 11:36:25 marttikuparinen Exp $
-# FreeBSD Id: ports/devel/cvsd/Makefile,v 1.18 2003/04/26 22:38:53 nork Exp
+# $NetBSD: Makefile,v 1.10 2004/09/13 12:11:21 marttikuparinen Exp $
 
-DISTNAME=	cvsd-1.0.3
-CATEGORIES=	devel
-MASTER_SITES=	http://tiefighter.et.tudelft.nl/~arthur/cvsd/
+DISTNAME=		cvsd-1.0.3
+CATEGORIES=		devel
+MASTER_SITES=		http://tiefighter.et.tudelft.nl/~arthur/cvsd/
 
-MAINTAINER=	eric@cirr.com
-HOMEPAGE=	http://tiefighter.et.tudelft.nl/~arthur/cvsd/
-COMMENT=	Run CVS pserver in a chroot-ed environment
+MAINTAINER=		eric@cirr.com
+HOMEPAGE=		http://tiefighter.et.tudelft.nl/~arthur/cvsd/
+COMMENT=		Run CVS pserver in a chroot-ed environment
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK3=	YES
-USE_PERL5=	YES
-USE_GNU_TOOLS+=	make
-USE_PKGINSTALL=	YES
-
-GNU_CONFIGURE=	YES
+USE_BUILDLINK3=		YES
+USE_PERL5=		YES
+USE_GNU_TOOLS+=		make
+USE_PKGINSTALL=		YES
+GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libwrap
 
-RCD_SCRIPTS=	cvsd
+RCD_SCRIPTS=		cvsd
 
-EGDIR=          ${PREFIX}/share/examples/cvsd
-CONF_FILES=     ${EGDIR}/cvsd.conf.example ${PKG_SYSCONFDIR}/cvsd.conf
+EGDIR=			${PREFIX}/share/examples/cvsd
+CONF_FILES=		${EGDIR}/cvsd.conf.example ${PKG_SYSCONFDIR}/cvsd.conf
+
+CVSD_USER?=		cvsd
+CVSD_GROUP?=		cvsd
+PKG_USERS=		${CVSD_USER}:${CVSD_GROUP}::CVS\\ wrapper:
+PKG_GROUPS=		${CVSD_GROUP}
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
