@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/23 19:11:09 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/10/26 22:37:18 xtraeme Exp $
 
-SHA1 (gnome-system-monitor-2.0.5.tar.bz2) = df991362a309f2f501facbba9c40d90cd343c6a6
-Size (gnome-system-monitor-2.0.5.tar.bz2) = 527689 bytes
+SHA1 (gnome-system-monitor-2.4.0.tar.bz2) = 3442308452ed9f180aaf2406a015f1cc000c4a35
+Size (gnome-system-monitor-2.4.0.tar.bz2) = 546873 bytes
 SHA1 (patch-aa) = d29dc4abc6fe8568e4892b6925790f6d4f84e051
