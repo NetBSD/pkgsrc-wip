@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/18 09:40:00 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/13 17:51:25 thomasklausner Exp $
 
 DISTNAME=	cjk-4.5.1
 PKGNAME=	cjk-latex-4.5.1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://cjk.ffii.org/
 COMMENT=	The CJK package for LaTeX
 
 DEPENDS+=	teTeX-bin>=1.0.7nb1:../../print/teTeX-bin
-DEPENDS+=	freetype-lib-1.3.1:../../graphics/freetype-lib
+DEPENDS+=	freetype-lib>=1.3.1:../../graphics/freetype-lib
 
 TEXMFMAIN=	${PREFIX}/share/texmf
 TTFDIR=		${TEXMFMAIN}/fonts/truetype
