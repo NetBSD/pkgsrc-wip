@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/14 05:54:36 jcd Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/11 03:30:56 jcd Exp $
 
 DISTNAME=	amavisd-new-${VERSION}-${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
@@ -37,7 +37,7 @@ PERL5_REQD=     5.8
 USE_BUILDLINK2= yes
 
 VERSION=	20030616
-PATCHLEVEL=	p8
+PATCHLEVEL=	p9
 
 USE_PKGINSTALL=	YES
 AMAVISUSER?=    vscan

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2004/03/14 01:43:25 jcd Exp $
+$NetBSD: distinfo,v 1.5 2004/04/11 03:30:55 jcd Exp $
 
-SHA1 (amavisd-new-20030616-p8.tar.gz) = 7c874855fb8ad84a97c5f6e43bb89f363266473d
-Size (amavisd-new-20030616-p8.tar.gz) = 328420 bytes
+SHA1 (amavisd-new-20030616-p9.tar.gz) = 8d44167b9d1bbf1344fcf45696dd295785894d0f
+Size (amavisd-new-20030616-p9.tar.gz) = 363756 bytes
 SHA1 (patch-aa) = 2e8dc74a3103de395719237471233b2e370c0e2d
 SHA1 (patch-ab) = d3e868575034c8157a26d184893732884c56e39d
