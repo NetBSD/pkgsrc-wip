@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/26 05:45:33 xtraeme Exp $
+bin/gmlview
+bin/gnome-mlview
+bin/mlv
+bin/mlview
+lib/libmlview.a
+lib/libmlview.la
+lib/libmlview.so
+lib/libmlview.so.3
+lib/libmlview.so.3.0
+share/gnome-mlview/glade/mlview-dtd-choice.glade
+share/gnome-mlview/glade/mlview-preferences.glade
+share/gnome-mlview/glade/tree-view-find-dialog.glade
+share/gnome-mlview/pixmaps/control-center2.png
+share/gnome-mlview/pixmaps/mlview-app-icon.png
+share/gnome-mlview/pixmaps/mlview-app-icon.xpm
+share/gnome-mlview/pixmaps/xml-element-node-open.xpm
+share/gnome-mlview/pixmaps/xml-element-node.xpm
+share/gnome-mlview/pixmaps/xml-text-node.xpm
+share/gnome/apps/Applications/mlview.desktop
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/mlview.mo
+@dirrm share/gnome-mlview/pixmaps
+@dirrm share/gnome-mlview/glade

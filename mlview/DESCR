@@ -1,0 +1,22 @@
+The MlView project is an on going effort to develop an xml editor for 
+GNOME environment. It is written in C and uses the gnome libraries (libxml2, 
+gtk+, libgnome*, etc).
+
+Some features ...
+
+ * cut/copy/paste as child/paste as prev/paste as next/ of xml elements
+ * xml element/attributes search
+ * multi docs edition
+ * Several editing views can be opened on the same document
+ * drag and drop based copy/cut/past of xml elements
+ * edition of xml elements and attributes can be made directly on the tree
+ * namespace support
+ * on-demand validation
+ * graphical error reporting. Parse/validation time errors reported graphically.
+   This feature is new so it may be buggy or not well polished ...
+ * when validation is switched on, MlView proposes an elements/attributes 
+   completion feature. When an element is added to the tree, MlView also adds the 
+   children elements required by the DTD for the document to be valid.
+ * Validation can be switched off. The xml document editon can then be done 
+   without any constraint.
+ * a clean code ;)
