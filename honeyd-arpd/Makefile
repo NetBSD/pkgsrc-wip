@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/07 10:11:55 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/09 15:40:11 adrian_p Exp $
 #
 
 DISTNAME=	arpd-0.2
@@ -11,12 +11,21 @@ MAINTAINER=	adrianp@stindustries.net
 HOMEPAGE=	http://niels.xtdnet.nl/honeyd/index.php
 COMMENT=	arp daemon for honeyd
 
-DEPENDS+=	libevent-[0-9]*:../../devel/libevent
-DEPENDS+=	libdnet-[0-9]*:../../net/libdnet
-
 USE_PKGINSTALL= YES
-RCD_SCRIPTS=	arpd
+RCD_SCRIPTS=	honeydarpd
 
 GNU_CONFIGURE=	YES
+USE_BUILDLINK2=	YES
 
+do-install:
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/sbin
+	${INSTALL_MAN_DIR} ${PREFIX}/man/man8
+	${CP} ${WRKSRC}/arpd ${WRKSRC}/honeyd-arpd
+	${CP} ${WRKSRC}/arpd.8 ${WRKSRC}/honeyd-arpd.8
+	${INSTALL_PROGRAM} ${WRKSRC}/honeyd-arpd ${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/honeyd-arpd.8 ${PREFIX}/man/man8
+
+.include "../../devel/libevent/buildlink2.mk"
+.include "../../net/libdnet/buildlink2.mk"
+.include "../../net/libpcap/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
