@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.773 2003/12/16 19:50:08 marttikuparinen Exp $
-# $NetBSD: Makefile,v 1.773 2003/12/16 19:50:08 marttikuparinen Exp $
+# $Id: Makefile,v 1.774 2003/12/17 19:31:52 dolecek Exp $
+# $NetBSD: Makefile,v 1.774 2003/12/17 19:31:52 dolecek Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -410,9 +410,6 @@ SUBDIR+=	patchutils
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdns
 SUBDIR+=	pear-Date
-SUBDIR+=	pear-HTML_Common
-SUBDIR+=	pear-HTML_Select
-SUBDIR+=	pear-Log
 SUBDIR+=	perl58
 SUBDIR+=	perl59
 SUBDIR+=	perltidy
@@ -420,7 +417,6 @@ SUBDIR+=	pgadmin3
 SUBDIR+=	pgp6
 SUBDIR+=	pgpenvelope
 SUBDIR+=	php-jpgraph
-#SUBDIR+=	php4			# not a package
 SUBDIR+=	php4-mysql4
 # SUBDIR+=	php-doc			# not a package
 SUBDIR+=	php-doc-ar
