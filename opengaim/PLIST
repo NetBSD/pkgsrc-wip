@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/04 14:31:08 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/05 21:22:38 jmmv Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim-remote/remote-socket.h
@@ -341,7 +341,7 @@ share/sounds/gaim/receive.wav
 share/sounds/gaim/redalert.wav
 share/sounds/gaim/send.wav
 @dirrm share/sounds/gaim
-@comment in gnome2-dirs: @dirrm share/sounds
+@comment in xdg-dirs: @dirrm share/sounds
 @dirrm share/pixmaps/gaim/status/default
 @dirrm share/pixmaps/gaim/status
 @dirrm share/pixmaps/gaim/smileys/default
@@ -350,7 +350,7 @@ share/sounds/gaim/send.wav
 @dirrm share/pixmaps/gaim/dialogs
 @dirrm share/pixmaps/gaim/buttons
 @dirrm share/pixmaps/gaim
-@comment in gnome2-dirs: @dirrm share/pixmaps
-@comment in gnome2-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/gaim
 @dirrm include/gaim-remote
