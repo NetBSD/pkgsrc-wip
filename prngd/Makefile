@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/07/13 07:36:03 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/14 18:40:41 othyro Exp $
 
 DISTNAME=		prngd-0.9.29
 CATEGORIES=		security
@@ -14,10 +14,23 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.aet.tu-cottbus.de/personen/jaenicke/postfix_tls/prngd.html
 COMMENT=		Pseudo Random Number Generator Daemon
 
-MAKE_ENV+=		DEFS="-DRANDSAVENAME=\\\"/var/db/prngd-seed\\\" -DCONFIGFILE=\\\"${PKG_SYSCONFDIR}/prngd.conf\\\""
+MAKE_ENV+=		DEFS="-DRANDSAVENAME=\\\"${VARBASE}/db/prngd-seed\\\" -DCONFIGFILE=\\\"${PKG_SYSCONFDIR}/prngd.conf\\\""
+
+EGDIR=          ${PREFIX}/share/examples/prngd
+CONF_FILES=     ${EGDIR}/prngd.conf.netbsd ${PKG_SYSCONFDIR}/prngd.conf
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE}
+
+#pre-install:
+#	SUBST_CLASSES=          path
+#	SUBST_STAGE.path=       pre-install
+#	SUBST_FILES.path=       prngd.man
+#	SUBST_SED.path=         -e 's,/usr/local,${PREFIX},g'
+#	SUBST_SED.path=		-e 's,/var,${VARBASE}.g'
+#	SUBST_MESSAGE.path=     "Fixing paths in man page."
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/prngd ${PREFIX}/bin/prngd
