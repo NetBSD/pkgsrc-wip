@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2003/11/16 05:14:35 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2003/11/18 04:44:33 minskim Exp $
 
-DISTNAME=	gdick-0.9
+DISTNAME=	gdick-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gdick/}
