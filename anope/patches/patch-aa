@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/17 16:19:13 adrian_p Exp $
+
+--- src/Makefile.orig	2004-11-17 16:04:26.000000000 +0000
++++ src/Makefile	2004-11-17 16:04:38.000000000 +0000
+@@ -100,7 +100,6 @@
+ 	ln $(BINDEST)/services $(BINDEST)/listnicks
+ 	ln $(BINDEST)/services $(BINDEST)/listchans
+ 	(cd ../lang ; $(MAKE) install)
+-	$(CP) ../data/* $(DATDEST)
+ 	test -d $(DATDEST)/backups || mkdir $(DATDEST)/backups
+ 	test -d $(DATDEST)/logs || mkdir $(DATDEST)/logs
+ 	@if [ "$(MODULE_PATH)" ] ; then \

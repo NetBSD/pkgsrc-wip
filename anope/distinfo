@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/17 16:19:13 adrian_p Exp $
+
+SHA1 (anope-1.7.6.tar.gz) = e0ceb19d494146b99bb8a9186aa8c9e08a9b2e58
+Size (anope-1.7.6.tar.gz) = 1169153 bytes
+SHA1 (patch-aa) = c711b61b2dfac97b2bdeb4a6c62edf04bad80946

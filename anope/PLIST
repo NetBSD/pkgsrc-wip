@@ -1,0 +1,45 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/17 16:19:13 adrian_p Exp $
+share/anope/anoperc
+share/examples/anope/example.chk
+share/examples/anope/example.conf
+share/anope/languages/cat
+share/anope/languages/de
+share/anope/languages/en_us
+share/anope/languages/es
+share/anope/languages/fr
+share/anope/languages/gr
+share/anope/languages/hun
+share/anope/languages/it
+share/anope/languages/nl
+share/anope/languages/pl
+share/anope/languages/pt
+share/anope/languages/ru
+share/anope/languages/tr
+share/anope/listchans
+share/anope/listnicks
+share/anope/modules/hs_moo.so
+share/anope/modules/ircd_catserv.so
+share/anope/services
+share/examples/anope/tables.sql
+share/doc/anope/BUGS
+share/doc/anope/COPYING
+share/doc/anope/DEFCON
+share/doc/anope/FAQ
+share/doc/anope/INSTALL
+share/doc/anope/IRCD
+share/doc/anope/MODULES
+share/doc/anope/MYSQL
+share/doc/anope/NEWS
+share/doc/anope/OLDCHANGES
+share/doc/anope/README
+@dirrm share/doc/anope
+@dirrm share/examples/anope
+@exec ${MKDIR} %D/share/anope/modules/runtime
+@dirrm share/anope/modules/runtime
+@dirrm share/anope/modules
+@exec ${MKDIR} %D/share/anope/logs
+@dirrm share/anope/logs
+@dirrm share/anope/languages
+@exec ${MKDIR} %D/share/anope/backups
+@dirrm share/anope/backups
+@dirrm share/anope
