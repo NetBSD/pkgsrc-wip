@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/07/18 17:22:04 poppnk Exp $
+# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/10/29 17:27:47 poppnk Exp $
 #
 # This Makefile fragment is included by packages that use pnetlib.
 #
