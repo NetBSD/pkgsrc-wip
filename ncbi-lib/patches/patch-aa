@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/29 17:59:55 daprice Exp $
+
+--- platform/netbsd.ncbi.mk.orig	2003-11-17 09:05:41.000000000 -0700
++++ platform/netbsd.ncbi.mk
+@@ -19,11 +19,11 @@ NCBI_ALTLIB = /home/coremake/ncbi/altlib
+ #will work only when you have Motif installed!
+ NCBI_VIBFLAG = -I/usr/X11R6/include -L/usr/X11R6/lib -DWIN_MOTIF
+ NCBI_VIBLIBS = -lXm -lXmu -lXp -lXpm -lXt -lX11 -lXext 
+-NCBI_DISTVIBLIBS = -L/usr/X11R6/lib /usr/X11R6/lib/libXm.a /usr/X11R6/lib/libXp.a /usr/X11R6/lib/libXpm.a -lXmu -lXt -lX11 -lXext
++NCBI_DISTVIBLIBS = -L/usr/X11R6/lib /usr/X11R6/lib/libXm.a /usr/X11R6/lib/libXp.a /usr/X11R6/lib/libXpm.a -lXm -lXmu -lXt -lX11 -lXext
+ NCBI_OTHERLIBS = -lm
+ NCBI_RANLIB = ranlib
+ # Used by makedis.csh
+-NCBI_MT_OTHERLIBS = 
++NCBI_MT_OTHERLIBS = -lpthread
+ NCBI_THREAD_OBJ = ncbithr.o
+ NETENTREZVERSION = 2.02c2ASN1SPEC6 
+ 
