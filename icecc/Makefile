@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/13 13:48:11 plunky Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/13 16:13:47 plunky Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
@@ -23,20 +23,13 @@ MAINTAINER=		plunky@rya-online.net
 HOMEPAGE=		http://icecc.sourceforge.net/
 COMMENT=		IceWM Control Centre
 
+DEPENDS+=		vim-{gtk,gtk2,kde,motif,xaw}>=6.3.0:../../editors/vim-xaw
+
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 
 .include "../../mk/bsd.prefs.mk"
-
-# If gvim is already installed, we cannot tell which flavour.. so
-# we depend only on vim-share.
-.include "../../editors/vim-share/version.mk"
-.if exists(${PREFIX}/bin/gvim)
-DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}:../../editors/vim-share
-.else
-DEPENDS+=		vim-gtk2-${VIM_VERSION}.${VIM_PATCHLEVEL}:../../editors/vim-gtk2
-.endif
 
 WRKSRC=			${WRKDIR}
 
@@ -61,6 +54,8 @@ SUBST_MESSAGE.path=	"Fixing hardcoded paths."
 
 BUILD_DIRS=		${QSRC:S/^/${WRKSRC}\//}
 
+# This should really come from "../../editors/vim-share" automagically
+VIM_SUBDIR?=		vim63
 PLIST_SUBST+=		VIM_SUBDIR=${VIM_SUBDIR}
 
 do-configure:

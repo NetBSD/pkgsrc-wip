@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.1 2005/03/13 13:49:51 plunky Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/13 16:13:49 plunky Exp $
 
 the font descriptor strings have * in them, they need to be quoted
 
---- icewm.vim.orig	2005-03-13 13:21:06.000000000 +0000
-+++ icewm.vim	2005-03-13 13:21:28.000000000 +0000
+--- icewm4vim/icewm.vim.orig	2005-03-13 13:21:06.000000000 +0000
++++ icewm4vim/icewm.vim	2005-03-13 13:21:28.000000000 +0000
 @@ -20,7 +20,7 @@
  	if stridx(font, "Font") != -1
  		let font = substitute(font, "\"", "", "g")

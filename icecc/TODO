@@ -1,5 +1,0 @@
-icewm4vim
-	the Makefile should patch ${PREFIX}/share/vim/${VIM_SUBDIR}/filetypes.vim so that
-	vim will recognise icewm preferences file. I could make a patch that would do this,
-	but if we uninstall and re-install then it gets re-patched, or fails and kills
-	the install. Hmm. Maybe a MESSAGE?
