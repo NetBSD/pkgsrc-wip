@@ -1,0 +1,2 @@
+The mail filter for DrWeb Daemon antivirus using Milter library
+from sendmail-8.12.2 or greater.

@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/13 13:01:33 bubuchka Exp $
+sbin/drweb-smf
+etc/rc.d/drweb-smf
+${DRW_DOCDIR}/addresses_list.txt
+${DRW_DOCDIR}/conf_file.txt
+${DRW_DOCDIR}/notify.txt
+${DRW_DOCDIR}/readme
+${DRW_DOCDIR}/users_list.txt
+${DRW_DOCDIR}/viruses_list.txt
+${DRW_EGDIR}/drweb-smf.conf
+${DRW_EGDIR}/sendmail.mc.addon
+@dirrm ${DRW_DOCDIR}
+@dirrm ${DRW_EGDIR}
