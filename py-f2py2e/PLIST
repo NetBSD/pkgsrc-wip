@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/23 12:07:30 mpasternak Exp $
-bin/f2py2p3
+@comment $NetBSD: PLIST,v 1.2 2003/11/23 13:08:21 mpasternak Exp $
 ${PYSITELIB}/f2py2e/__cvs_version__.py
 ${PYSITELIB}/f2py2e/__cvs_version__.pyc
 ${PYSITELIB}/f2py2e/__cvs_version__.pyo
