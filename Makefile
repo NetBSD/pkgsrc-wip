@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.276 2003/06/27 11:17:01 drue Exp $
-# $NetBSD: Makefile,v 1.276 2003/06/27 11:17:01 drue Exp $
+# $Id: Makefile,v 1.277 2003/06/27 18:58:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.277 2003/06/27 18:58:24 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -43,6 +43,7 @@ SUBDIR+=	dfbsee
 SUBDIR+=	dfm
 SUBDIR+=	directfb
 SUBDIR+=	directory-administrator
+SUBDIR+=	dpkg
 SUBDIR+=	drweb
 SUBDIR+=	ed
 SUBDIR+=	eic
