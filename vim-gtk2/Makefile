@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/04 10:03:43 bmeurer Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/04 16:22:52 bmeurer Exp $
 
 PATCHDIR=		${.CURDIR}/../../editors/vim-share/patches
 DISTINFO_FILE=		${.CURDIR}/distinfo
@@ -10,7 +10,7 @@ PKGNAME=		vim-gtk2-${VIM_VERSION}.${VIM_PATCHLEVEL}
 COMMENT=		Vim editor (vi clone) with X11 GTK+ 2.0 GUI
 MAINTAINER=		benedikt.meurer@unix-ag.uni-siegen.de
 
-DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}:../vim-share
+DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}:../../editors/vim-share
 CONFLICTS+=		vim-[0-9]* vim-gtk-[0-9]* vim-motif-[0-9]* vim-xaw-[0-9]*
 
 PATCH_SITES+=		http://regexxer.sourceforge.net/vim/
