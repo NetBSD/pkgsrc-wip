@@ -1,9 +1,9 @@
-security fixes are available in Debian diff man-db_2.4.1-13.diff
-http://packages.qa.debian.org/m/man-db.html
-Jul 29 Vade 79             (7611) man-db[] multiple(4) vulnerabilities
+yeah!! the developer used my patches/patch-ad and patch-ae and patch-af :)
 
 It would be nice to have some pkgsrc-wide VARDIR (or VARBASE)
 then use it for setting MAN_DB_CAT_DIR.
+
+does this man check for /man/cat? pages before /var/cache ??
 
 The config file should use settings used in install, like
 MAN_DB_CAT_DIR.
@@ -18,11 +18,13 @@ should I have a shell or who cares?
 
 bin/mandb -c can be done by any user. Should it really be setuid man-db?
 
+what is lib/man-db used for?
+
+This uses /var/cache/man
+
 This needs to be patched to support .0 suffix in preformatted cat files;
 I already discussed with developer.
-
-Apr  7 Conectiva Updates   (4559) [CLA-2003:620] Conectiva Security An
-does this matter?
+this appears to work, test some more
 
 need to test different tools this provides
 
@@ -33,8 +35,7 @@ I have also used with gdbm
 man.1 = $(DESTDIR)$(manroot)/$(nlspath)/$(man1dir)/$(man)$(man1ext)
 GNU/./man1/man.1
 
-man < 1.5l has vulnerability -- make sure this doesn't have same
- I couldn't repeat it
+Linux may need -lintl for LDLIBS in src/Makefile.in
 
 make sure it reads the installed etc/man_db.conf
 

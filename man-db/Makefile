@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/29 15:34:32 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/01 23:52:50 jeremy-c-reed Exp $
 
 DISTNAME=		man-db-${VERSION}
 CATEGORIES=		misc
@@ -6,7 +6,7 @@ MASTER_SITES=		http://savannah.nongnu.org/download/man-db/stable.pkg/${VERSION}/
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.chiark.greenend.org.uk/~cjwatson/code/man-db/
-COMMENT=		man pager and related man page utilities
+COMMENT=		Manual pager and related man page utilities
 
 .if !exists(/usr/bin/nroff)
 DEPENDS+=		groff-[0-9]*:../../textproc/groff
@@ -16,7 +16,7 @@ DEPENDS+=		groff-[0-9]*:../../textproc/groff
 BUILD_DEPENDS+=         bison-[0-9]*:../../devel/bison
 .endif
 
-VERSION=		2.4.1
+VERSION=		2.4.2
 
 MAN_DB_CAT_DIR?=	/var/cache/man
 
@@ -31,12 +31,12 @@ GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 MAKEFILE=		GNUmakefile
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-setuid=${MAN_DB_USER}
 
 CONF_FILES=		${PREFIX}/share/examples/man-db/man_db.conf ${PKG_SYSCONFDIR}/man_db.conf
 
-OWN_DIRS_PERMS=	${MAN_DB_CAT_DIR} ${MAN_DB_USER} ${ROOT_GROUP} 2755
+OWN_DIRS_PERMS=		${MAN_DB_CAT_DIR} ${MAN_DB_USER} ${ROOT_GROUP} 2755
 
 MESSAGE_SUBST+=		MAN_DB_USER=${MAN_DB_USER}
 
