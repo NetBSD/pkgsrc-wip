@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/08/05 03:32:19 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/08/05 03:32:44 minskim Exp $
 
 DISTNAME=	bmon-1.2.1
-CATEGORIES=	wip net
+CATEGORIES=	net
 MASTER_SITES=	http://trash.net/~reeler/bmon/files/
 
 MAINTAINER=	hsaliak@gmail.com
