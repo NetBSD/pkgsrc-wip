@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/25 20:43:11 plunky Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/06/25 20:57:12 plunky Exp $
 bin/icehelp
 bin/icesh
 bin/icewm
@@ -6,26 +6,26 @@ bin/icewm-session
 bin/icewmbg
 bin/icewmhint
 bin/icewmtray
-share/doc/html/icewm/icewm-1.html
-share/doc/html/icewm/icewm-10.html
-share/doc/html/icewm/icewm-11.html
-share/doc/html/icewm/icewm-12.html
-share/doc/html/icewm/icewm-13.html
-share/doc/html/icewm/icewm-14.html
-share/doc/html/icewm/icewm-15.html
-share/doc/html/icewm/icewm-16.html
-share/doc/html/icewm/icewm-17.html
-share/doc/html/icewm/icewm-18.html
-share/doc/html/icewm/icewm-19.html
-share/doc/html/icewm/icewm-2.html
-share/doc/html/icewm/icewm-3.html
-share/doc/html/icewm/icewm-4.html
-share/doc/html/icewm/icewm-5.html
-share/doc/html/icewm/icewm-6.html
-share/doc/html/icewm/icewm-7.html
-share/doc/html/icewm/icewm-8.html
-share/doc/html/icewm/icewm-9.html
-share/doc/html/icewm/icewm.html
+share/doc/icewm/html/icewm-1.html
+share/doc/icewm/html/icewm-10.html
+share/doc/icewm/html/icewm-11.html
+share/doc/icewm/html/icewm-12.html
+share/doc/icewm/html/icewm-13.html
+share/doc/icewm/html/icewm-14.html
+share/doc/icewm/html/icewm-15.html
+share/doc/icewm/html/icewm-16.html
+share/doc/icewm/html/icewm-17.html
+share/doc/icewm/html/icewm-18.html
+share/doc/icewm/html/icewm-19.html
+share/doc/icewm/html/icewm-2.html
+share/doc/icewm/html/icewm-3.html
+share/doc/icewm/html/icewm-4.html
+share/doc/icewm/html/icewm-5.html
+share/doc/icewm/html/icewm-6.html
+share/doc/icewm/html/icewm-7.html
+share/doc/icewm/html/icewm-8.html
+share/doc/icewm/html/icewm-9.html
+share/doc/icewm/html/icewm.html
 share/doc/icewm/BUGS
 share/doc/icewm/CHANGES
 share/doc/icewm/COPYING
@@ -379,5 +379,5 @@ ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/icewm.mo
 @dirrm share/icewm/ledclock
 @dirrm share/icewm/icons
 @dirrm share/icewm
+@dirrm share/doc/icewm/html
 @dirrm share/doc/icewm
-@dirrm share/doc/html/icewm
