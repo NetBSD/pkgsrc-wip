@@ -1,0 +1,47 @@
+$NetBSD: patch-ac,v 1.3 2004/10/06 15:49:00 bubuchka Exp $
+
+--- log.c.orig	2004-10-04 00:37:03.000000000 +0300
++++ log.c
+@@ -128,8 +128,8 @@ int main(argc,argv)
+    BlockIt[0]='\0';
+    ExternalCSSFile[0]='\0';
+ 
+-   strcpy(AccessLog,"/usr/local/squid/var/logs/access.log");
+-   sprintf(ExcludeCodes,"%s/exclude_codes",SYSCONFDIR);
++   strcpy(AccessLog,"@SQUID_ACCESSLOG@");
++   strcpy(ExcludeCodes,"@PKG_SYSCONFDIR@/exclude_codes");
+    strcpy(GraphDaysBytesBarColor,"orange");
+    strcpy(BgColor,"#FFFFFF");
+    strcpy(TxColor,"#000000");
+@@ -142,7 +142,7 @@ int main(argc,argv)
+    strcpy(HeaderBgColor,"#DDDDDD");
+    strcpy(FontSize,"9px");
+    strcpy(TempDir,"/tmp");
+-   strcpy(OutputDir,"/usr/local/etc/httpd/htdocs/squid-reports");
++   strcpy(OutputDir,"@SARG_REPORTSDIR@");
+    strcpy(Ip2Name,"no");
+    strcpy(DateFormat,"u");
+    strcpy(OverwriteReport,"no");
+@@ -179,11 +179,11 @@ int main(argc,argv)
+    strcpy(ShowSargInfo,"yes");
+    strcpy(ShowSargLogo,"yes");
+    strcpy(ParsedOutputLog,"no");
+-   strcpy(ParsedOutputLogCompress,"/bin/gzip");
++   strcpy(ParsedOutputLogCompress,"gzip");
+    strcpy(DisplayedValues,"abbreviation");
+    strcpy(HeaderFontSize,"9px");
+    strcpy(TitleFontSize,"11px");
+-   strcpy(AuthUserFile,"/usr/local/sarg/passwd");
++   strcpy(AuthUserFile,"@PKG_SYSCONFDIR@/passwd");
+    strcpy(AuthName,"SARG, Restricted Access");
+    strcpy(AuthType,"basic");
+    strcpy(Require,"require user admin %u");
+@@ -336,7 +336,7 @@ int main(argc,argv)
+       debuga("Init");
+ 
+    if(ConfigFile[0] == '\0')
+-      sprintf(ConfigFile,"%s/sarg.conf",SYSCONFDIR);
++      strcpy(ConfigFile,"@PKG_SYSCONFDIR@/sarg.conf");
+     else {
+       if(access(ConfigFile, R_OK) != 0) {
+          sprintf(msg,"Cannot open config file: %s",ConfigFile);

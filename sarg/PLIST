@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.3 2004/10/06 15:49:00 bubuchka Exp $
+man/man1/sarg.1
+sbin/sarg
+share/examples/sarg/css.tpl
+share/examples/sarg/exclude_codes
+share/examples/sarg/sarg.conf
+share/sarg/fonts/Verdana.TTF
+share/sarg/images/datetime.png
+share/sarg/images/graph.png
+share/sarg/images/sarg-squidguard-block.png
+share/sarg/images/sarg.png
+share/sarg/languages/Bulgarian_windows1251
+share/sarg/languages/Catalan
+share/sarg/languages/Czech
+share/sarg/languages/Dutch
+share/sarg/languages/English
+share/sarg/languages/French
+share/sarg/languages/German
+share/sarg/languages/Hungarian
+share/sarg/languages/Indonesian
+share/sarg/languages/Italian
+share/sarg/languages/Japanese
+share/sarg/languages/Latvian
+share/sarg/languages/Polish
+share/sarg/languages/Portuguese
+share/sarg/languages/Romanian
+share/sarg/languages/Russian_koi8
+share/sarg/languages/Russian_windows1251
+share/sarg/languages/Serbian
+share/sarg/languages/Spanish
+share/sarg/languages/Turkish
+share/sarg/languages/Ukrainian_windows1251
+@dirrm share/sarg/languages
+@dirrm share/sarg/images
+@dirrm share/sarg/fonts
+@dirrm share/sarg
+@dirrm share/examples/sarg

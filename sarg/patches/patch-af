@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.3 2004/10/06 15:49:00 bubuchka Exp $
+
+--- splitlog.c.orig	2004-10-04 00:37:03.000000000 +0300
++++ splitlog.c
+@@ -36,7 +36,7 @@ void splitlog(char *arq, char *df, int d
+    struct tm *t;
+ 
+    if(arq[0] == '\0')
+-      strcpy(arq,"/usr/local/squid/logs/access.log");
++      strcpy(arq,"@SQUID_ACCESSLOG@");
+ 
+    if((fp_in=fopen(arq,"r"))==NULL) {
+       fprintf(stderr, "SARG: (splitlog) %s: %s\n",text[8],arq);
