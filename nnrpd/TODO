@@ -10,3 +10,5 @@ don't know if we actually have it?!
 allow installing INN and C News at the same time?
 
 - Fix rc.d script installation
+
+- FIXME -- With Perl 5.8, nnrpd dumps core when you send an article.
