@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/24 04:33:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/25 07:30:21 xtraeme Exp $
 #
 
 DISTNAME=	gnome-pkgview-1.0.0
+PKGNAME=	${DISTNAME:S/gnome/gnome2/}
 CATEGORIES=	sysutils gnome2
 MASTER_SITES=	http://www.greatnorthern.demon.co.uk/packages/gnome-pkgview/
 EXTRACT_SUFX=	.tar.bz2
