@@ -1,0 +1,22 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/29 07:32:04 marttikuparinen Exp $
+
+LINUX_VERSION=		2.4.24
+
+DISTNAME=		linux-${LINUX_VERSION}
+CATEGORIES=		misc
+MASTER_SITES=		http://www.kernel.org/pub/linux/kernel/v2.4/	\
+			http://www.de.kernel.org/pub/linux/kernel/v2.4/	\
+			ftp://ftp.jp.kernel.org/pub/linux/kernel/v2.4/
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		reed@reedmedia.net
+HOMEPAGE=		http://www.kernel.org/
+
+ONLY_FOR_PLATFORM=	Linux-*-*
+
+USE_GNU_TOOLS+=		make
+PLIST_SUBST+=		LINUX_VERSION=${LINUX_VERSION}
+CFLAGS+=		-I${WRKSRC}/include
+
+DISTINFO_FILE?=		${.CURDIR}/../../wip/linux24-kernel/distinfo
+PATCHDIR?=		${.CURDIR}/../../wip/linux24-kernel/patches

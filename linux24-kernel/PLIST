@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/29 07:32:04 marttikuparinen Exp $
+boot/bzImage-${LINUX_VERSION}
+boot/System.map-${LINUX_VERSION}

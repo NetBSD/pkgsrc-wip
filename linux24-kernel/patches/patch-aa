@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/29 07:32:04 marttikuparinen Exp $
+
+--- Makefile.orig	2004-01-05 15:53:56.000000000 +0200
++++ Makefile	2004-01-28 11:11:01.000000000 +0200
+@@ -18,4 +18,4 @@
+ 
+-HOSTCC  	= gcc
+-HOSTCFLAGS	= -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer
++HOSTCC  	= $(CC)
++HOSTCFLAGS	= -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I$(TOPDIR)/include
+ 
+@@ -29,3 +29,3 @@
+ LD		= $(CROSS_COMPILE)ld
+-CC		= $(CROSS_COMPILE)gcc
++#CC		= $(CROSS_COMPILE)gcc
+ CPP		= $(CC) -E
+@@ -37,4 +37,4 @@
+ MAKEFILES	= $(TOPDIR)/.config
+-GENKSYMS	= /sbin/genksyms
+-DEPMOD		= /sbin/depmod
++GENKSYMS	= $(PREFIX)/sbin/genksyms
++DEPMOD		= $(PREFIX)/sbin/depmod
+ MODFLAGS	= -DMODULE

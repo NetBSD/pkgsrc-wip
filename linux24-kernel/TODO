@@ -1,0 +1,37 @@
+update to newest version
+
+FATAL: ldconfig must be used with "||${TRUE}".
+(that is bug in pkglint.)
+
+make sure gcc exists (see very bottom of Makefile)
+
+thread about missing stdarg.h
+ http://www.ussg.iu.edu/hypermail/linux/kernel/0209.3/1015.html 
+For time being I run kernel make like this:
+   GCC_EXEC_PREFIX=/usr/app/gcc/lib/gcc-lib/ make
+
+make package for linux-kernel-headers too
+ ${MAKE} include/linux/version.h
+glibc provides its own <net/*> and <scsi/*> header files to replace them
+so just include/asm and include/linux
+
+message to suggest running lilo if using LILO
+
+maybe dynamically figure out modules for PLIST
+
+LOCALBASE should be / for PLIST to be right
+(need to use LOCLABASE for the install part too.)
+
+should install .config file too; for example:
+Knoppix kernel-headers-2.4.22-xfs_10.00.Custom_i386.deb
+ar p ../kernel-headers-2.4.22-xfs_10.00.Custom_i386.deb data.tar.gz | tar zxf -
+and found usr/src/kernel-headers-2.4.22-xfs/.config
+
+try to just install headers with make config followed by make include/linux/version.h
+
+copy certain directories from include to /usr/include
+
+look at default /boot/config-2.2.20-idepci
+
+# cp -i arch/i386/boot/bzImage /bzImage.-- with kernel-version- or other name
+#   maybe copy to boot directory (as lilo also knows it)
