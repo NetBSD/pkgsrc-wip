@@ -41,9 +41,14 @@ Good luck!
 This meta package has been tested and reported that works
 perfectly on:
 
-	* FreeBSD 5.1-CURRENT ( x86 )
-	* NetBSD 1.6U -current ( x86 )
-	* Debian sid with gcc-3.3.1 ( x86 )
+x86 (gcc 2.xx.x/3.x):
+
+	* FreeBSD -current
+	* NetBSD -current 
+	* Debian sid 
+
+At this moment, this meta package doesn't work on NetBSD
+1.6.x, we are working on it yet.
 
 Contributed by:
 
