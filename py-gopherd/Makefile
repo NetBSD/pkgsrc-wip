@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/28 20:22:43 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/28 20:59:47 marc Exp $
 #
 
 DISTNAME=	pygopherd_2.0.3
@@ -41,7 +41,7 @@ PYTHON_PATCH_SCRIPTS+=	pygopherd/gopherentryTest.py
 PYTHON_PATCH_SCRIPTS+=	pygopherd/initializationTest.py
 PYTHON_PATCH_SCRIPTS+=	pygopherd/testutil.py
 
-PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
+PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth
 
 post-patch:
 	for sedfile in ${SEDFILES}; do \
