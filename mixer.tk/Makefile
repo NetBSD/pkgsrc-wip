@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/05/16 23:53:35 jejcic Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/12 03:26:07 blef Exp $
 #
 
 DISTNAME=	mixer.tk-0.3
@@ -11,11 +11,11 @@ COMMENT=	Tcl/Tk audio mixer using mixerctl utility
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mixer.tk ${PREFIX}/bin
 
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
