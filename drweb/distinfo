@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/10 18:51:53 jmmv Exp $
+
+SHA1 (drweb-4.29.5-freebsd4.tar.gz) = ce32345c74492ce0abcafaebbb1e7c8842448123
+Size (drweb-4.29.5-freebsd4.tar.gz) = 1715558 bytes
+SHA1 (patch-aa) = cdc8a32a98c8741bbca588a603731dcb9a29ea7e
