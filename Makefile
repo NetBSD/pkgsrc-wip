@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1239 2004/04/26 17:08:14 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1239 2004/04/26 17:08:14 adrian_p Exp $
+# $Id: Makefile,v 1.1240 2004/04/27 06:12:25 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1240 2004/04/27 06:12:25 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -341,6 +341,7 @@ SUBDIR+=	linux-kernel-headers
 SUBDIR+=	linux-makedev
 SUBDIR+=	linux-module-init-tools
 SUBDIR+=	linux-modutils
+SUBDIR+=	linux-modutils-old
 SUBDIR+=	linux-nfs-utils
 SUBDIR+=	linux24-kernel
 SUBDIR+=	linux24-kernel-headers
