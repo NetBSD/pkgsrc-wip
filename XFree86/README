@@ -18,7 +18,7 @@ a few things:
   in bsd.pkg.mk, delete the PKG_FAIL_REASON line, and replace it with
 
   @${MKDIR} ${X11BASE}
-  @${CHOWN} ${ROOT_USER}:${ROOT_GROUP}l ${X11BASE}
+  @${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${X11BASE}
   @${CHMOD} ${PKGDIRMODE} ${X11BASE}
 
 * x11-links checks if we have the X headers, so you will have to
