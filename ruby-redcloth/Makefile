@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/13 15:03:03 rasputnik Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/15 21:30:36 rasputnik Exp $
 
 DISTNAME=	redcloth-${VER}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	rasputnik@hellooperator.net
 HOMEPAGE=	http://www.whytheluckystiff.net/ruby/redcloth/
 COMMENT=		Textile library for Ruby
 
-VER=	2.0.1
+VER=	2.0.2
 USE_RUBY_SETUP=	yes
 RUBY_SETUP=	install.rb
 
