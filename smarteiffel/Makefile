@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/30 21:30:12 larnor Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/10 15:45:30 thomasklausner Exp $
 
 DISTNAME=	se
 PKGNAME=	SmartEiffel-2.0
@@ -12,8 +12,9 @@ COMMENT=	The GNU Eiffel Compiler
 
 WRKSRC=		${WRKDIR}/SmartEiffel
 
+DIST_SUBDIR=	${PKGNAME_NOREV}
+
 MAKE_ENV=	SmartEiffel=${WRKSRC}/sys/system.se
-ALL_TARGET=	all
 
 post-patch:
 	${SED} "s:XXXWORKDIRXXX:${WRKDIR}:g" ${FILESDIR}/system.se \
@@ -28,7 +29,5 @@ post-build:
 
 do-install:
 	${CP} -r ${WRKSRC} ${LOCALBASE}
-
-#post-install:
 
 .include "../../mk/bsd.pkg.mk"
