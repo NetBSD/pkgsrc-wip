@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.175 2003/05/17 18:49:54 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.175 2003/05/17 18:49:54 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.176 2003/05/17 19:12:26 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.176 2003/05/17 19:12:26 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -14,6 +14,7 @@ SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-ometer
 SUBDIR+=	aputils
 SUBDIR+=	autoproject
+SUBDIR+=	bc
 SUBDIR+=	bftpd
 SUBDIR+=	billardgl
 SUBDIR+=	bin86
