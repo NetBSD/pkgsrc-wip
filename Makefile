@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.273 2003/06/25 22:18:29 xtraeme Exp $
-# $NetBSD: Makefile,v 1.273 2003/06/25 22:18:29 xtraeme Exp $
+# $Id: Makefile,v 1.274 2003/06/27 02:48:56 poppnk Exp $
+# $NetBSD: Makefile,v 1.274 2003/06/27 02:48:56 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -183,6 +183,7 @@ SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-gtk2
+SUBDIR+=	pdns
 SUBDIR+=	perltidy
 SUBDIR+=	phplot
 SUBDIR+=	pinball
