@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/27 14:23:15 ianzag Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/29 06:38:57 ianzag Exp $
 
 DISTNAME=	openttd-0.3.6-source
 PKGNAME=	openttd-0.3.6
@@ -40,6 +40,7 @@ do-install:
 	${INSTALL_DATA} -m 644 ${WRKSRC}/docs/Manual.txt ${DATA_DIR}/docs
 	${INSTALL_DATA} -m 644 ${WRKSRC}/docs/multiplayer.txt ${DATA_DIR}/docs
 
-#.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,0 @@
-
-* Once again review Makefile* for NetBSD.
-* Fix libpng detection/support.
-* Add MIDI audio output.
-* Libtool (does it worth it?).
