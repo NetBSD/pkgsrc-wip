@@ -1,0 +1,19 @@
+Documentation for GDAL. GDAL is a library for raster geospatial data
+formats that is released under an X/MIT style Open Source
+license. As a library, it presents a single abstract data
+model to the calling application for all supported formats.
+The related OGR library (which lives within the GDAL source
+tree) provides a similar capability for simple features
+vector data. It includes roughly 40 format drivers. Current
+translators include:
+	* GeoTIFF 		(read/write)
+	* Erdas Imagine		(read/write)
+	* ESRI .BIL 		(read)
+	* .aux labelled raw	(read/write)
+	* DTED 			(read)
+	* SDTS DEM 		(read)
+	* CEOS 			(read)
+	* JPEG 			(read/write)
+	* PNG 			(read/write)
+	* Geosoft GXF		(read)
+	* Arc/Info Binary Grid 	(read)
