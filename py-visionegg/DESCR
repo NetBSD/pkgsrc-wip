@@ -1,0 +1,7 @@
+The Vision Egg is a high level interface between Python and OpenGL. In
+addition to methods for automatic generation of traditional visual stimuli
+such as sinusoidal gratings and random dot patterns, it has a number of
+functions for moving numeric data, images, movies, text, and 3D objects to
+and from your video card and allowing use of some of its features like
+perspective distortion. Therefore, it is also useful for anyone wishing to
+make use of the features of today's graphics cards.

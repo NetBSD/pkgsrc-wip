@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/01/02 00:15:34 mpasternak Exp $
+
+SHA1 (visionegg-0.9.9.tar.gz) = f184a64d27a2f8b73ee2a8e6943c3432ec504098
+Size (visionegg-0.9.9.tar.gz) = 990678 bytes
+SHA1 (patch-aa) = fb3489be05fef0e613b2072ff9980ef2756996c3
