@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.390 2003/08/23 20:15:59 cjep Exp $
-# $NetBSD: Makefile,v 1.390 2003/08/23 20:15:59 cjep Exp $
+# $Id: Makefile,v 1.391 2003/08/24 23:59:19 poppnk Exp $
+# $NetBSD: Makefile,v 1.391 2003/08/24 23:59:19 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -70,7 +70,9 @@ SUBDIR+=	cyrus-imapd22
 SUBDIR+=	dancer-ircd
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darkice
+SUBDIR+=	dega
 SUBDIR+=	devhelp
+SUBDIR+=	dgen
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dfm
@@ -93,6 +95,7 @@ SUBDIR+=	festival-gaim
 SUBDIR+=	fluxconf
 SUBDIR+=	fluxspace
 SUBDIR+=	foobillard
+SUBDIR+=	fragroute
 SUBDIR+=	freeglut
 SUBDIR+=	freenet-tools
 SUBDIR+=	frontpage
