@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/13 19:07:16 ingolf Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 19:51:12 ingolf Exp $
 #
 
 DISTNAME=	kgpg-1.1
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/kgpg
 CATEGORIES=	security
 MASTER_SITES=	http://devel-home.kde.org/~kgpg/src/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	ingolf@users.sourceforge.net
 HOMEPAGE=	http://devel-home.kde.org/~kgpg/
 COMMENT=	Simple, free, open source KDE frontend for gpg
 
