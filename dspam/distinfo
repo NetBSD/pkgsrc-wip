@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/13 16:11:15 tomhensel Exp $
+$NetBSD: distinfo,v 1.2 2004/04/15 14:40:12 tomhensel Exp $
 
-SHA1 (dspam-2.8.3.tar.gz) = 4613fdf717f62dc21e561a5505568f3ebafd0f1c
-Size (dspam-2.8.3.tar.gz) = 462004 bytes
+SHA1 (dspam-2.10.3.tar.gz) = f50640bb94fa2de35eeafd8afc8af62632d099fd
+Size (dspam-2.10.3.tar.gz) = 485053 bytes
 SHA1 (patch-aa) = a63c3ee56ece496a05a10c88cd695887b2f5529e

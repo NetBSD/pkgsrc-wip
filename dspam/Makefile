@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/13 16:11:15 tomhensel Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/15 14:40:12 tomhensel Exp $
 # FreeBSD Id: ports/mail/dspam/Makefile,v 1.9 2004/01/31 22:51:09 sergei Exp
 
 DISTNAME=	dspam-${_DSPAM_VER}
@@ -27,7 +27,7 @@ PLIST_SUBST+=	DOCSDIR=${DOCSDIR:S/${PREFIX}\///} \
 MESSAGE_SUBST+=	DOCSDIR=${DOCSDIR} \
 		EXAMPLESDIR=${EXAMPLESDIR}
 
-_DSPAM_VER=	2.8.3
+_DSPAM_VER=	2.10.3
 
 BUILD_DEFS+=		USE_MYSQL \
 			DSPAM_USE_MAILDROP DSPAM_USE_PROCMAIL DSPAM_USE_MAILLOCAL \
