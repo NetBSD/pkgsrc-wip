@@ -1,0 +1,27 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/12/14 22:34:32 mpasternak Exp $
+#
+
+DISTNAME=		CoreGuideJS15
+PKGNAME=		javascript-guide-1.5
+CATEGORIES=		misc
+MASTER_SITES=		http://devedge.netscape.com/library/manuals/2000/javascript/1.5/guide/
+EXTRACT_SUFX=		.zip
+
+MAINTAINER=		dotz@irc.pl
+HOMEPAGE=		http://devedge.netscape.com/
+COMMENT=		JavaScript Guide from Netscape Devedge
+
+HTMLDIR=		share/doc/${PKGNAME}
+NO_BIN_ON_CDROM=	"I am not sure if we can redistribute it"
+NO_SRC_ON_CDROM=	"I am not sure if we can redistribute it"
+NO_BUILD=		# defined
+
+do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
+	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
+	cd ${WRKDIR} && ${PAX} -rw -pe [a-z]* ${PREFIX}/${HTMLDIR}
+	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
+	cd ${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
+	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
+
+.include "../../mk/bsd.pkg.mk"
