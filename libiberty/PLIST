@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2004/06/01 11:49:20 johnrshannon Exp $
-include/libiberty.h
-lib/libiberty.a
