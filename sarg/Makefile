@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/26 16:41:31 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/05 21:03:50 bubuchka Exp $
 
 DISTNAME=		sarg-1.4.1
 CATEGORIES=		wip www
@@ -19,6 +19,7 @@ CONFIGURE_ARGS+=	--with-gcc					\
 
 USE_PKGINSTALL=		yes
 
+DIST_SUBDIR=		${DISTNAME}
 PKG_SYSCONFSUBDIR=	sarg
 EGDIR=			${PREFIX}/share/examples/sarg
 EGLNG=			${EGDIR}/languages
