@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/10/21 21:06:13 tvierling Exp $
+# $NetBSD: Makefile,v 1.24 2003/10/25 22:36:08 tvierling Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -12,14 +12,13 @@ MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://entropy.stop1984.com/
 COMMENT=		Anonymous peer-to-peer networking node (similar to Freenet)
 
-NOT_FOR_PLATFORM=	NetBSD-1.6Z*-*
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 
-ENTROPY_VERSION=	0.5.9-347
+ENTROPY_VERSION=	0.5.9-353
 
 CONFIGURE_ARGS+=	--enable-verbose
 
