@@ -1,0 +1,10 @@
+Kahakai is a window manager.
+
+Features:
+* Window/edge snapping
+* Transparent window titles and menus with anti-aliased fonts
+* Python scripting (Ruby/Perl support planned) used for configuration
+* Dockapp support
+* Pixmap styles, compatible with Blackbox/Fluxbox/Openbox & Waimea styles
+* Viewports, multiple desktops
+* KDE and GNOME support
