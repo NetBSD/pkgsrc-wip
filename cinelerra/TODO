@@ -1,11 +1,18 @@
-configure: WARNING: The following libraries were not found:
-configure: WARNING:     a52dec
-configure: WARNING:     libavcodec
-configure: WARNING:     libfaad 2
-configure: WARNING:     libxvidcore
-configure: WARNING:     libraw1394
-configure: WARNING:     libavc1394
-configure: WARNING:     librom1394
+this should not be installed: lib/pkgconfig/sndfile.pc
+
+some build options:
+ --disable-firewire      disable support for firewire (default=enabled)
+  --disable-css           disable support for css in libmpeg3
+                          (default=enabled)
+  --disable-oss           disable support for oss (default=enabled)
+  --enable-alsa           enable support for alsa (default=autodetect)
+  --disable-esound        disable support for esound (default=enabled)
+  --disable-alsatest      Do not try to compile and run a test Alsa program
+  --disable-esdtest       Do not try to compile and run a test ESD program
+  --enable-x86            enables x86 specific features autodetection in
+                          libmpeg3 and mpeg2enc (default is disabled)
+  --enable-mmx            enables support for mmx (default is disabled)
+  --enable-3dnow          enables support for 3dnow (default is disabled)
 
 -=-=-
 You need automake version 1.7 to build.  1.4 won't work!
