@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/13 13:17:48 cetrox Exp $
+bin/snes9express
+share/snes9express/snes.s9xskin
+share/snes9express/snsp.s9xskin
+@dirrm share/snes9express
