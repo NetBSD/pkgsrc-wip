@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/08 01:15:10 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/12 04:58:21 tvierling Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 
-ENTROPY_VERSION=	0.4.2-287
+ENTROPY_VERSION=	0.4.3-289
 
 MAKE_FLAGS+=		QUIET=0
 MAKE_FLAGS+=		LIBEXPAT=-lexpat LIBZ=-lz
@@ -36,7 +36,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/entropy/node
 	${INSTALL_DATA} ${WRKSRC}/entropy.conf-dist ${PREFIX}/share/examples/entropy/entropy.conf
 	${INSTALL_DATA} ${WRKSRC}/seed.txt-dist ${PREFIX}/share/examples/entropy/seed.txt
-	${INSTALL_DATA} ${WRKSRC}/node/[0-9]* ${WRKSRC}/node/[a-z]* ${PREFIX}/share/examples/entropy/node/
+	${INSTALL_DATA} ${WRKSRC}/node/[0-9a-z]* ${PREFIX}/share/examples/entropy/node/
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
