@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 18:40:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/22 02:11:32 minskim Exp $
 #
 
 DISTNAME=	distella
@@ -7,7 +7,7 @@ CATEGORIES=	devel games cross emulators
 MASTER_SITES=	http://members.cox.net/rcolbert/zip/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	mor@linex.com
+MAINTAINER=	xmor61@users.sourceforge.net
 HOMEPAGE=	http://members.cox.net/rcolbert/index.htm
 COMMENT=	6502 Disassembler with Atari 2600 headers and cycle counting info
 
