@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/16 00:07:52 airhead Exp $
+bin/orion
+share/doc/${PKGNAME}/html/user.html
+share/${PKGNAME}/scheme/button.scm
+share/${PKGNAME}/scheme/config.scm
+share/${PKGNAME}/scheme/drag-window.scm
+share/${PKGNAME}/scheme/file-name-completion.scm
+share/${PKGNAME}/scheme/key-grab.scm
+share/${PKGNAME}/scheme/main.scm
+share/${PKGNAME}/scheme/manager.scm
+share/${PKGNAME}/scheme/motif.scm
+share/${PKGNAME}/scheme/move-wm-icon.scm
+share/${PKGNAME}/scheme/move-wm-resizer.scm
+share/${PKGNAME}/scheme/move-wm.scm
+share/${PKGNAME}/scheme/packages.scm
+share/${PKGNAME}/scheme/prompt.scm
+share/${PKGNAME}/scheme/root-manager.scm
+share/${PKGNAME}/scheme/split-wm.scm
+share/${PKGNAME}/scheme/switch-wm.scm
+share/${PKGNAME}/scheme/titlebar.scm
+share/${PKGNAME}/scheme/utils.scm
+@dirrm share/${PKGNAME}/scheme
+@dirrm share/${PKGNAME}
+@dirrm share/doc/${PKGNAME}/html
+@dirrm share/doc/${PKGNAME}
