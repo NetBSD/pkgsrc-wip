@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/09 06:39:57 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/26 22:21:57 kristerw Exp $
 #
 
 DISTNAME=	AxKit-1.6.2
@@ -17,12 +17,12 @@ DEPENDS+=	p5-Digest-MD5>=2.09:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Error>=0.14:../../devel/p5-Error
 DEPENDS+=	p5-libapreq>=0.32:../../wip/p5-Apache-Request
 DEPENDS+=	p5-File-Spec>=0.82:../../devel/p5-File-Spec
-DEPENDS+=	p5-Apache-Test>=1.00:../../wip/p5-Apache-Test
+DEPENDS+=	p5-Apache-Test>=1.00:../../www/p5-Apache-Test
 DEPENDS+=	p5-XML-Parser>=2.27:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-XML-XPath>=1.00:../../textproc/p5-XML-XPath
 DEPENDS+=	p5-XML-LibXML>=1.51:../../textproc/p5-XML-LibXML
-DEPENDS+=	p5-XML-LibXSLT>=1.49:../../wip/p5-XML-LibXSLT
-DEPENDS+=	p5-XML-Sablotron>=0.40:../../wip/p5-XML-Sablotron
+DEPENDS+=	p5-XML-LibXSLT>=1.49:../../textproc/p5-XML-LibXSLT
+DEPENDS+=	p5-XML-Sablotron>=0.40:../../textproc/p5-XML-Sablotron
 DEPENDS+=	p5-Perl-Tidy>=20031021:../../devel/p5-Perl-Tidy
 
 .include "../../lang/perl5/module.mk"
