@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/06/25 15:35:55 xtraeme Exp $
+
+SHA1 (bitlbee-0.80.tar.gz) = 5d02e6013ec42df3f5b495d9884c1f391be154f3
+Size (bitlbee-0.80.tar.gz) = 351775 bytes
+SHA1 (bitlbee-daemon.patch) = 5eaf45d19c729be91731052918c491f5a7f5d700
+Size (bitlbee-daemon.patch) = 15207 bytes

@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/25 15:35:55 xtraeme Exp $
+etc/rc.d/bitlbee
+man/man8/bitlbee.8
+sbin/bitlbee
+share/doc/bitlbee/FAQ
+share/doc/bitlbee/README
+share/doc/bitlbee/TODO
+share/examples/bitlbee/motd.txt
+@dirrm share/examples/bitlbee
+@dirrm share/doc/bitlbee
