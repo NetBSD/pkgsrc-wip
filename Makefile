@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.895 2004/01/19 21:35:24 minskim Exp $
-# $NetBSD: Makefile,v 1.895 2004/01/19 21:35:24 minskim Exp $
+# $Id: Makefile,v 1.896 2004/01/20 00:33:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.896 2004/01/20 00:33:44 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -494,6 +494,11 @@ SUBDIR+=	portaudio
 SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postgresql-uniqueidentifier
+SUBDIR+=	postgresql74
+SUBDIR+=	postgresql74-client
+SUBDIR+=	postgresql74-docs
+SUBDIR+=	postgresql74-lib
+SUBDIR+=	postgresql74-server
 SUBDIR+=	ppp
 SUBDIR+=	prelude-lml
 SUBDIR+=	prelude-manager
