@@ -136,7 +136,7 @@ do_install() {
 	for A in ${DEPS} ; do
 		CHK=`echo ${A} | ${PKGCHK} -C /dev/stdin -c`
 		if [ ! "`echo ${CHK}|grep missing`" = "" ]; then
-			echo " [i] Dequeueing for install ${A}"
+			echo " [i] Enqueueing for install ${A}"
 			INSTALL="${INSTALL} ${A}"
 		else
 		if [ ! "`echo ${CHK}| grep mismatch`" = "" ]; then
