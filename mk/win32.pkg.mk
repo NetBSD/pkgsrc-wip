@@ -1,4 +1,4 @@
-# $Id: win32.pkg.mk,v 1.13 2003/12/01 06:12:38 mpasternak Exp $
+# $Id: win32.pkg.mk,v 1.14 2003/12/01 06:17:53 xtraeme Exp $
 # (C) 2003 Michal Pasternak <dotz@irc.pl>
 #
 #
@@ -16,36 +16,36 @@
 
 MINGWTARGET=		i586-pc-mingw32
 MINGW_PKG_PREFIX=	mingw32-
-GNU_CONFIGURE_PREFIX=	${CROSSBASE}/i586-pc-mingw32
+GNU_CONFIGURE_PREFIX=	${CROSSBASE}/${MINGWTARGET}
 # note, that we don't override this:
-## MACHINE_GNU_PLATFORM=i586-pc-mingw32
+## MACHINE_GNU_PLATFORM=${MINGWTARGET}
 # here, because of trouble "C compiler cannot execute test executable"
-CONFIGURE_ARGS+=	--build=i586-pc-mingw32
+CONFIGURE_ARGS+=	--build=${MINGWTARGET}
 CONFIGURE_ARGS+=	--program-transform-name="s|$$|.exe"
 
 USE_CROSSBASE=	yes
 PLIST_SUBST=	MINGWTARGET=${MINGWTARGET}
 
-PATH:=		${CROSSBASE}/i586-pc-mingw32/bin/:${PATH}
-CC=		${CROSSBASE}/i586-pc-mingw32/bin/gcc
-CXX=		${CROSSBASE}/i586-pc-mingw32/bin/g++
-CPP=		${CROSSBASE}/i586-pc-mingw32/bin/cpp
-LD=		${CROSSBASE}/i586-pc-mingw32/bin/ld
-AR=		${CROSSBASE}/i586-pc-mingw32/bin/ar
-AS=		${CROSSBASE}/i586-pc-mingw32/bin/as
-NM=		${CROSSBASE}/i586-pc-mingw32/bin/nm
-LDFLAGS=	-L${CROSSBASE}/i586-pc-mingw32/lib
+PATH:=		${CROSSBASE}/${MINGWTARGET}/bin/:${PATH}
+CC=		${CROSSBASE}/${MINGWTARGET}/bin/gcc
+CXX=		${CROSSBASE}/${MINGWTARGET}/bin/g++
+CPP=		${CROSSBASE}/${MINGWTARGET}/bin/cpp
+LD=		${CROSSBASE}/${MINGWTARGET}/bin/ld
+AR=		${CROSSBASE}/${MINGWTARGET}/bin/ar
+AS=		${CROSSBASE}/${MINGWTARGET}/bin/as
+NM=		${CROSSBASE}/${MINGWTARGET}/bin/nm
+LDFLAGS=	-L${CROSSBASE}/${MINGWTARGET}/lib
 CFLAGS=		-I${CROSSBASE}/include
 CPPFLAGS=	-I${CROSSBASE}/include
 CXXFLAGS=	-I${CROSSBASE}/include
 
 .ifdef MINGW_STATIC
-LIBTOOL=		${CROSSBASE}/i586-pc-mingw32/bin/libtool-static
+LIBTOOL=		${CROSSBASE}/${MINGWTARGET}/bin/libtool-static
 CONFIGURE_ARGS+=	--enable-static --disable-shared
 SHLIBTOOL:=		${LIBTOOL}
 .else
-LIBTOOL=	${CROSSBASE}/i586-pc-mingw32/bin/libtool
-SHLIBTOOL:=	${LIBTOOL}
+LIBTOOL=		${CROSSBASE}/${MINGWTARGET}/bin/libtool
+SHLIBTOOL:=		${LIBTOOL}
 .endif
 
 BUILD_DEPENDS+=	mingw-c>=3.1.1:../../wip/mingw-c
