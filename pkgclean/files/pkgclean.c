@@ -67,25 +67,28 @@ pkgclean(const char *path)
 	struct stat sb;
 
 	if ((ncat = scandir(path, &cat, checkskip, alphasort)) < 0)
-		err(1, "%s", path);
+		err(EXIT_FAILURE, "%s", path);
 
 	for (i = 0; i < ncat; i++) {
 		if ((size_t)snprintf(tmp, sizeof(tmp), "%s/%s", path, cat[i]->d_name) > sizeof(tmp)) {
-			warn("filename too long: %s\n", tmp);
+			(void)fprintf(stderr, "warning: filename too long: %s\n", tmp);
 			continue;
 		}
 		if (stat(tmp, &sb) < 0 || !S_ISDIR(sb.st_mode))
 			continue;
-		nlist = scandir(tmp, &list, checkskip, alphasort);
+		if ((nlist = scandir(tmp, &list, checkskip, alphasort)) < 0) {
+			warn("%s", tmp);
+			continue;
+		}
 		for (j = 0; j < nlist; j++) {
 			if ((size_t)snprintf(tmp, sizeof(tmp), "%s/%s/%s/work", path,
 			    cat[i]->d_name, list[j]->d_name) > sizeof(tmp)) {
-			    	warn("filename too long: %s\n", tmp);
+				(void)fprintf(stderr, "warning: filename too long: %s\n", tmp);
 				continue;
 			}
 			if (stat(tmp, &sb) < 0 || !S_ISDIR(sb.st_mode))
 				continue;
-			printf("Deleting %s\n", tmp);
+			(void)printf("Deleting %s\n", tmp);
 			if (fork() == 0) {
 				(void)execl("/bin/rm", "-rf", tmp, NULL);
 				perror(tmp);
