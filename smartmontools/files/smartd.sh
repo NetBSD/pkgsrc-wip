@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: smartd,v 1.1.1.1 2003/12/25 23:03:54 shattered Exp $
+#	$NetBSD: smartd.sh,v 1.1 2004/05/10 23:25:35 shattered Exp $
 #
 # PROVIDE: smartd
 # REQUIRE: DAEMON
