@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2004/04/14 22:37:19 poppnk Exp $
+--- src/makedefs.orig	2004-04-14 23:01:01.000000000 +0000
++++ src/makedefs	2004-04-14 23:01:04.000000000 +0000
+@@ -10,7 +10,7 @@
+                 ;;
+   FreeBSD.5*)   DEFS="-DFREEBSD5"
+                 ;;
+-  NetBSD.1.6*)   DEFS="-DNETBSD16"
++  NetBSD.*)   DEFS="-DNETBSD16"
+                 ;;
+   OpenBSD.2*)   DEFS="-DOPENBSD2"
+                 ;;

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/29 16:41:17 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2004/04/14 22:37:19 poppnk Exp $
 
 SHA1 (sleuthkit-1.66.tar.gz) = 9ab27e46dce2e98e39e273638a05dc68b194de21
 Size (sleuthkit-1.66.tar.gz) = 521488 bytes
 SHA1 (patch-aa) = 3c9ef54032b12baad014b69c46f4fb6e975f4541
+SHA1 (patch-ab) = 9b6c759ccaf57508c29457408061d67a60fd91a1
