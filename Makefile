@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1022 2004/02/24 21:37:24 jmmv Exp $
-# $NetBSD: Makefile,v 1.1022 2004/02/24 21:37:24 jmmv Exp $
+# $Id: Makefile,v 1.1023 2004/02/25 00:25:35 cubidou Exp $
+# $NetBSD: Makefile,v 1.1023 2004/02/25 00:25:35 cubidou Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -161,17 +161,9 @@ SUBDIR+=	giftui
 SUBDIR+=	gimp-current
 SUBDIR+=	gkrellm-launch
 SUBDIR+=	gkrellm-reminder
-SUBDIR+=	gkrellm2
 SUBDIR+=	gkrellm2-flynn
 SUBDIR+=	gkrellm2-launch
 SUBDIR+=	gkrellm2-leds
-SUBDIR+=	gkrellm2-multiping
-SUBDIR+=	gkrellm2-server
-SUBDIR+=	gkrellm2-share
-SUBDIR+=	gkrellm2-snmp
-SUBDIR+=	gkrellm2-volume
-SUBDIR+=	gkrellm2-weather
-SUBDIR+=	gkrellm2-xmms
 SUBDIR+=	gl-117
 SUBDIR+=	glaxium
 SUBDIR+=	glib2-devel
