@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/20 20:12:18 xtraeme Exp $
+
+SHA1 (galeon-1.3.13a.tar.bz2) = 71476ee08504024f7da97cf77430512e7aa7925e
+Size (galeon-1.3.13a.tar.bz2) = 3335211 bytes
+SHA1 (patch-aa) = 4e3c77e7c888d7655d2be194f0ecd2c29117c6d4
