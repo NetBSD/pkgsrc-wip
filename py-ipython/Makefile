@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/06 21:08:09 marc Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/02 22:12:01 blef Exp $
 #
 
 DISTNAME=		IPython-0.5.0
@@ -12,7 +12,7 @@ COMMENT=		Interactive, enhanced Python shell
 
 DEPENDS+=		${PYPKGPREFIX}-readline>=0:../../devel/py-readline
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
