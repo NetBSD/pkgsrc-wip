@@ -1,0 +1,12 @@
+#!/bin/sh
+case $2 in
+        POST-INSTALL)
+                PATH=${LOCALBASE:-/usr/pkg}/bin:${PATH}
+                datadir=${PKG_PREFIX}/share/lilypond/2.0.1/
+                export TEXMF="{${datadir},"`kpsexpand  \\$TEXMF`"}"
+echo $1
+echo ${datadir}
+echo ${TEXMF}
+                texhash
+        ;;
+esac
