@@ -22,6 +22,7 @@
 #define	ForceNormalLib NO
 #define	ModInstall NO 
 #define	XTrueTypeInstallCConvHeaders NO
+#define BuildXcursorgen YES
 
 #ifndef LinuxArchitecture
 #define HasShadowPasswd NO
