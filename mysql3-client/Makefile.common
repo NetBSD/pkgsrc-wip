@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/07/09 18:01:22 marttikuparinen Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/08/28 11:12:02 adrian_p Exp $
 
 DISTNAME=		mysql-3.23.57
 CATEGORIES=		databases
@@ -21,12 +21,20 @@ MYSQL_USER?=		mysql
 MYSQL_GROUP?=		mysql
 MYSQL_DATADIR?=		/var/mysql
 
+# MYSQL_CHARSET         default character set 
+# MYSQL_EXTRA_CHARSET   additonal character set to be compiled in. 
+# 
+MYSQL_CHARSET?=		latin1 
+MYSQL_EXTRA_CHARSET?=	all 
+
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR}
 CONFIGURE_ARGS+=	--with-named-z-libs=z
 CONFIGURE_ARGS+=	--without-libwrap
 CONFIGURE_ARGS+=	--with-named-curses-libs="-lcurses -ltermcap"
+CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET}
+CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET}
 
 # We always use our own readline, either system- or pkgsrc-supplied.
 CONFIGURE_ARGS+=	--without-readline
