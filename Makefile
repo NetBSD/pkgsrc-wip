@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1641 2005/02/02 07:10:26 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1641 2005/02/02 07:10:26 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1642 2005/02/02 18:06:07 jsrocket Exp $
+# $NetBSD: Makefile,v 1.1642 2005/02/02 18:06:07 jsrocket Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -91,6 +91,7 @@ SUBDIR+=	bluez-utils
 SUBDIR+=	bnr2
 SUBDIR+=	bridge-utils
 SUBDIR+=	bscript
+SUBDIR+=	bsflite
 SUBDIR+=	bub-n-bros
 SUBDIR+=	busybox
 SUBDIR+=	bwidget
