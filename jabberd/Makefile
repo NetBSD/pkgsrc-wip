@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/06/06 20:40:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/12 21:43:33 xtraeme Exp $
 #
 
 DISTNAME=	jabber-1.4.2
@@ -8,6 +8,8 @@ MASTER_SITES=	http://jabberd.jabberstudio.org/downloads/
 MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://jabberd.jabberstudio.org/downloads/
 COMMENT=	Instant messaging server
+
+CONFLICTS=		jabberd2-[0-9]*:../../wip/jabberd2
 
 USE_BUILDLINK2=		yes
 HAS_CONFIGURE=		yes
