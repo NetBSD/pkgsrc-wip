@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/15 21:08:43 xtraeme Exp $
+
+--- src/sm.c.orig	2003-07-15 23:01:14.000000000 +0200
++++ src/sm.c	2003-07-15 23:01:32.000000000 +0200
+@@ -31,6 +31,7 @@
+ #include <unistd.h>	/* for getuid */
+ #include <pwd.h>	/* for getpwuid */
+ #include <sys/types.h>	/* for getuid and getpwuid */
++#include <sys/time.h>
+ 
+ static SmcConn xpad_sm_conn = NULL;
+ static int xpad_interact_style;
