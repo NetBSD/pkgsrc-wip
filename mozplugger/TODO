@@ -1,0 +1,9 @@
+define a MOZILLA_PLUGINS definition like ${PREFIX}/lib/mozilla/plugins
+
+in MESSAGE list packages that could be installed as a suggestion
+
+for firefox-gtk2 to use, I create symlink for a new
+lib/firefox-gtk2/plugins directory to lib/mozilla/plugins
+maybe that should be in a MESSAGE?
+
+need to test (firefox showed the plugin, but not needed since gxine was used)
