@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/09/02 05:05:16 dhowland Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/08 16:23:08 dhowland Exp $
 
---- bswap.h.orig	Sat Jul 10 14:20:09 2004
+--- bswap.h.orig	2004-07-10 21:20:09.000000000 +0300
 +++ bswap.h
 @@ -4,11 +4,13 @@
  #include "config-host.h"
