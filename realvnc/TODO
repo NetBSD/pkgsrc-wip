@@ -1,0 +1,35 @@
+** This package is not functional at this time.
+
+RealVNC is the continuation of the original VNC project.  The old VNC
+version in pkgsrc (3.3.3) is awfully outdated.  I made this package
+to get the new version (4.0) on my machine.  RealVNC is a different
+project than TightVNC.  The pkgsrc version is a much better package
+than I could probably manage, so this is more just a standin.
+
+The old version came with a customized Xfree tree to build Xvnc, the
+VNC server that acts as a real X server with a virtual frambuffer.  The
+new version does not.  It now requires the user to provide an entire 
+XFree tree which is then patched and built.  It produces the VNC server
+(Xvnc) and a regular X server that has VNC ablities built in.
+
+I could have made a package that downloads the Xfree sources, and builds
+everything, but I'm not sure this is appropriate, so I left it out,
+which is why the package does not work at this time.
+
+As it stands right now, the package will work if you "make" it.  It
+will fail if you try to "make install" because the Xvnc executable is
+not built.
+
+If all you need is the viewer, the package will build fine, just go
+into the makefile and remove the line that installs Xvnc.  If you want
+to build the VNC server (I have done it), you have to "make" the package,
+then go in and follow the directions in the README file.  Once Xvnc is
+built, then do a "make install" and "make clean".
+
+I can send you the Xvnc compiled for i386 NetBSD 1.6.2 if you have a
+similar system and would like to save yourself the trouble.
+email: dhowland@users.sourceforge.net
+
+** There is no IPv6 support like the pkgsrc version.
+
+** It doesn't install any documentation, but it does download it.

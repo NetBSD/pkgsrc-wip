@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/18 21:49:56 dhowland Exp $
+bin/vncserver
+bin/vncpasswd
+bin/vncviewer
+bin/vncconfig
+bin/x0vncserver
+bin/Xvnc

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/18 21:49:56 dhowland Exp $
+
+SHA1 (vnc-4.0-unixsrc.tar.gz) = f3b7f3e67d4554d53c37b8805b357f84563428b7
+Size (vnc-4.0-unixsrc.tar.gz) = 482518 bytes
+SHA1 (vnc-4.0-documentation.tar.gz) = b5b2cfdc4527a969427ba43975d7bf7645eadd50
+Size (vnc-4.0-documentation.tar.gz) = 270833 bytes
