@@ -1,3 +1,5 @@
 
 (1) Create a sample client-side crontab entry?
 
+(2) Binary package doesn't have $VARBASE/radmind/{client,cert}?
+
