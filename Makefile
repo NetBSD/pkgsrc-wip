@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1322 2004/06/11 11:18:14 ppostma Exp $
-# $NetBSD: Makefile,v 1.1322 2004/06/11 11:18:14 ppostma Exp $
+# $Id: Makefile,v 1.1323 2004/06/11 11:26:11 lsed Exp $
+# $NetBSD: Makefile,v 1.1323 2004/06/11 11:26:11 lsed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -119,6 +119,7 @@ SUBDIR+=	drweb-smf
 SUBDIR+=	dspam
 SUBDIR+=	dspam3
 SUBDIR+=	dumb
+SUBDIR+=	dvdauthor
 SUBDIR+=	dxmake
 SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
