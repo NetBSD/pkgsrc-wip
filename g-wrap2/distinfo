@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/10/20 18:16:03 lexort Exp $
+$NetBSD: distinfo,v 1.2 2004/10/20 22:13:04 lexort Exp $
 
 SHA1 (g-wrap-1.9.3.tar.gz) = d7b50b3d8d4c97df20141a831f9855119154aba0
 Size (g-wrap-1.9.3.tar.gz) = 813945 bytes
 SHA1 (patch-aa) = 620c1357a05eb39792c98b1819cbf3d18e542363
+SHA1 (patch-ab) = 68ff165ef35d10055dcfb0792c149f92f8638962
