@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/11/05 05:29:37 blef Exp $
+$NetBSD: distinfo,v 1.3 2004/03/07 05:39:32 blef Exp $
 
-SHA1 (toppler-1.0.3.tar.gz) = 44a67339bea24121908914f5ccc6c20bd3c97243
-Size (toppler-1.0.3.tar.gz) = 1082563 bytes
+SHA1 (toppler-1.0.6.tar.gz) = 19a34398da10b2c7188e868bc5043fc05a30d48e
+Size (toppler-1.0.6.tar.gz) = 1189880 bytes
