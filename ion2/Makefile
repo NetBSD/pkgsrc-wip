@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/22 16:48:17 tomhensel Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/22 17:09:54 tomhensel Exp $
 
 DISTNAME=	ion-2-${_ION2_VER}
 PKGNAME=	${DISTNAME:S/-2/2/:S/$_ION2_VER//}
@@ -55,6 +55,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ioncore/*.h ${ION_INCLUDE_DIR}/ioncore
 	${INSTALL_DATA} ${WRKSRC}/libtu/include/libtu/*.h ${ION_INCLUDE_DIR}/libtu
 	${INSTALL_DATA} ${WRKSRC}/luaextl/luaextl.h ${ION_INCLUDE_DIR}/luaextl/
+	${INSTALL_MAN} ${WRKSRC}/man/ion.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man/pwm.1 ${PREFIX}/man/man1
 
 .include "../../lang/lua/buildlink2.mk"
 .include "../../devel/libtool/buildlink2.mk"
