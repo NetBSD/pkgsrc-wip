@@ -1,64 +1,15 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/11/27 22:54:50 blef Exp $
+$NetBSD: patch-ab,v 1.2 2004/07/19 19:17:08 thomasklausner Exp $
 
---- src/main.c.orig	2003-11-27 06:30:31.000000000 -0800
-+++ src/main.c	2003-11-27 06:39:41.000000000 -0800
-@@ -101,7 +101,7 @@
- UINT8 * confdir = NULL;
+--- src/support/unzip.h.orig	2002-07-18 20:12:09.000000000 +0200
++++ src/support/unzip.h
+@@ -57,6 +57,10 @@ extern "C" {
+ #include "zlib.h"
+ #endif
  
- 
--UINT8 * datfile = NULL;
-+UINT8 * datfile = PREFIX "/share/fakenes/fakenes.dat";
- 
- 
- static DIR * tmpdir = NULL;
-@@ -414,49 +414,7 @@
- 
- #ifdef POSIX
- 
--    if (confdir)
--    {
--        const UINT8 datfile_base [] = "/fakenes.dat";
--
--
--        datfile = malloc (strlen (confdir) + sizeof (datfile_base));
--
--        if (! datfile)
--        {
--            fprintf (stderr, "Error when generating datafile path, trying cwd.\n");
--
--
--            datfile = "fakenes.dat";
--
--            data = load_datafile ("fakenes.dat");
--        }
--        else
--        {
--            strcpy (datfile, confdir);
--
--            strcat (datfile, datfile_base);
--
--
--            data = load_datafile (datfile);
--
--
--            if (! data)
--            {
--                fprintf (stderr, "Datafile not found in configuration path, trying cwd.\n");
--
--
--                datfile = "fakenes.dat";
--
--                data = load_datafile (datfile);
--            }
--        }
--    }
--    else    /* confdir unset, try cwd. */
--    {
--        datfile = "fakenes.dat";
--
--        data = load_datafile (datfile);
--    }
-+    data = load_datafile (datfile);
- 
- #else
- 
++#ifndef OF
++#define OF(a)	a
++#endif
++
+ #if defined(STRICTUNZIP) || defined(STRICTZIPUNZIP)
+ /* like the STRICT of WIN32, we define a pointer that cannot be converted
+     from (void*) without cast */

@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 22:54:50 blef Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/19 19:17:08 thomasklausner Exp $
 bin/fakenes
-share/fakenes/fakenes.dat
-@dirrm share/fakenes
+share/doc/fakenes/LICENSE
+share/doc/fakenes/README
+@dirrm share/doc/fakenes

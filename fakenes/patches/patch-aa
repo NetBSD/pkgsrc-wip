@@ -1,23 +1,51 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/11/27 22:54:50 blef Exp $
+$NetBSD: patch-aa,v 1.2 2004/07/19 19:17:08 thomasklausner Exp $
 
---- src/Makefile.in.orig	2002-05-03 23:33:02.000000000 -0700
-+++ src/Makefile.in	2003-11-27 06:46:15.000000000 -0800
-@@ -39,15 +39,9 @@
- 
- 
- install : ${BINARY} ${DATAFILE}
--
--	${MKDIR} ${HOME}/bin
--
--	${MKDIR} ${HOME}/.fakenes
+--- src/include/config.h.in.orig	2002-10-29 23:32:39.000000000 +0100
++++ src/include/config.h.in
+@@ -1,23 +1,23 @@
 -
 -
--	${INSTALL} -m 0755 ${BINARY} ${HOME}/bin
+-#ifndef CONFIG_H_INCLUDED
 -
--	${INSTALL} -m 0644 ${DATAFILE} ${HOME}/.fakenes
-+	${BSD_INSTALL_PROGRAM} ${BINARY} ${PREFIX}/bin
-+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/fakenes
-+	${BSD_INSTALL_DATA} ${DATAFILE} ${PREFIX}/share/fakenes
- 
- 
- .SUFFIXES : .c
+-#define CONFIG_H_INCLUDED
+-
+-
+-/* The number of bytes in a short int.  */
+-
+-#undef SIZEOF_SHORT_INT
+-
+-
+-/* The number of bytes in a int.  */
+-
+-#undef SIZEOF_INT
+-
+-
+-/* The number of bytes in a long int.  */
+-
+-#undef SIZEOF_LONG_INT
+-
+-
+-#endif /* ! CONFIG_H_INCLUDED */
++
++
++#ifndef CONFIG_H_INCLUDED
++
++#define CONFIG_H_INCLUDED
++
++
++/* The number of bytes in a short int.  */
++
++#undef SIZEOF_SHORT_INT
++
++
++/* The number of bytes in a int.  */
++
++#undef SIZEOF_INT
++
++
++/* The number of bytes in a long int.  */
++
++#undef SIZEOF_LONG_INT
++
++
++#endif /* ! CONFIG_H_INCLUDED */
