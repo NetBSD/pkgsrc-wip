@@ -1,0 +1,15 @@
+The SpamBayes project is working on developing a Bayesian anti-spam filter,
+initially based on the work of Paul Graham. The major difference between
+this and other, similar projects is the emphasis on testing newer approaches
+to scoring messages. While most anti-spam projects are still working with
+the original graham algorithm, we found that a number of alternate methods
+yielded a more useful response. This is documented on the background page.
+
+SpamBayes is not a single application. The core code is a message
+classifier, however there are several applications available as part of the
+SpamBayes project which use the classifier in specific contexts. For the
+most part, the current crop of applications all operate on the client side
+of things, however, a number of people have experimented with using
+SpamBayes on mail servers to classify incoming mail for multiple users. The
+table below outlines the main applications which are part of the SpamBayes
+distribution.
