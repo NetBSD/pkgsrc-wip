@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 18:49:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/19 21:30:47 thomasklausner Exp $
 # This is an experimental package, released in the hope that somebody will find
 # why playback is not working properly.
 
 VLC_VERSION=		0.4.6
 DISTNAME=		vlc-${VLC_VERSION}
-PKGNAME=		vlc
-COMMENT=		VideoLan Client
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.videolan.org/
+COMMENT=		VideoLan Client
 
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
