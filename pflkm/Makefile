@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/06/09 09:21:25 ppostma Exp $
+# $NetBSD: Makefile,v 1.9 2004/06/09 09:47:14 ppostma Exp $
 
 DISTNAME=		pf-lkm-20040607
 CATEGORIES=		security ipv6
@@ -15,6 +15,8 @@ USE_BUILDLINK3=		yes
 NO_CONFIGURE=		yes
 
 PKG_USERS=		_pflogd:nogroup:60:pflogd\\ pseudo-user:/var/empty:/sbin/nologin
+
+RCD_SCRIPTS=		pf pflogd
 
 post-patch:
 .for f in sbin/pfctl/pfctl_parser.h usr.sbin/authpf/pathnames.h
