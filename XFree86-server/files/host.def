@@ -4,6 +4,7 @@
  */
 
 #define ProjectRoot PREFIX
+#define BuildHtmlManPages YES
 
 #define NothingOutsideProjectRoot YES
 #define InstallXserverSetUID YES

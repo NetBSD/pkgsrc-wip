@@ -21,6 +21,7 @@
 #define XTrueTypeInstallCConvHeaders NO
 #define SharedLibGLw NO
 #define StandardIncludes -IBLNK/include
+#define BuildHtmlManPages YES
 
 #define BuildServer YES
 #define BuildFontServer YES
