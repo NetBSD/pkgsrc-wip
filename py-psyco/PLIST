@@ -1,21 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/21 19:27:48 mpasternak Exp $
-${PYSITELIB}/psyco/core.py
-${PYSITELIB}/psyco/logger.py
-${PYSITELIB}/psyco/profiler.py
-${PYSITELIB}/psyco/support.py
+@comment $NetBSD: PLIST,v 1.2 2003/10/01 17:19:32 marc Exp $
 ${PYSITELIB}/psyco/__init__.py
-${PYSITELIB}/psyco/classes.py
-${PYSITELIB}/psyco/_psyco.so
-${PYSITELIB}/psyco/core.pyc
-${PYSITELIB}/psyco/logger.pyc
-${PYSITELIB}/psyco/profiler.pyc
-${PYSITELIB}/psyco/support.pyc
 ${PYSITELIB}/psyco/__init__.pyc
-${PYSITELIB}/psyco/classes.pyc
-${PYSITELIB}/psyco/core.pyo
-${PYSITELIB}/psyco/logger.pyo
-${PYSITELIB}/psyco/profiler.pyo
-${PYSITELIB}/psyco/support.pyo
 ${PYSITELIB}/psyco/__init__.pyo
+${PYSITELIB}/psyco/_psyco.so
+${PYSITELIB}/psyco/classes.py
+${PYSITELIB}/psyco/classes.pyc
 ${PYSITELIB}/psyco/classes.pyo
+${PYSITELIB}/psyco/core.py
+${PYSITELIB}/psyco/core.pyc
+${PYSITELIB}/psyco/core.pyo
+${PYSITELIB}/psyco/logger.py
+${PYSITELIB}/psyco/logger.pyc
+${PYSITELIB}/psyco/logger.pyo
+${PYSITELIB}/psyco/profiler.py
+${PYSITELIB}/psyco/profiler.pyc
+${PYSITELIB}/psyco/profiler.pyo
+${PYSITELIB}/psyco/support.py
+${PYSITELIB}/psyco/support.pyc
+${PYSITELIB}/psyco/support.pyo
 @dirrm ${PYSITELIB}/psyco
