@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/30 05:19:13 tnn2 Exp $
+bin/orpie
+bin/orpie-curses-keys
+man/man1/orpie-curses-keys.1
+man/man1/orpie.1
+man/man5/orpierc.5

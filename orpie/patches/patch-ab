@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/01/30 05:19:13 tnn2 Exp $
+
+--- Makefile.in.orig	2005-01-30 06:05:20.000000000 +0100
++++ Makefile.in
+@@ -155,13 +155,13 @@ install-indep: 
+ 		mkdir -p $(DESTDIR)/$(prefix)/etc; \
+ 		install -m 644 orpierc $(DESTDIR)/$(prefix)/etc; \
+ 	fi
+-	install -m 644 -D doc/orpie.1 $(MANDIR)/man1/orpie.1
+-	install -m 644 -D doc/orpie-curses-keys.1 $(MANDIR)/man1/orpie-curses-keys.1
+-	install -m 644 -D doc/orpierc.5 $(MANDIR)/man5/orpierc.5
++	install -m 644 doc/orpie.1 $(MANDIR)/man1/orpie.1
++	install -m 644 doc/orpie-curses-keys.1 $(MANDIR)/man1/orpie-curses-keys.1
++	install -m 644 doc/orpierc.5 $(MANDIR)/man5/orpierc.5
+ 
+ install: install-indep
+-	install -m 755 -D $(NAME).$(OCAMLBEST) $(BINDIR)/$(NAME)$(EXE)
+-	install -m 755 -D $(NAME2).$(OCAMLBEST) $(BINDIR)/$(NAME2)$(EXE)
++	install -m 755 $(NAME).$(OCAMLBEST) $(BINDIR)/$(NAME)$(EXE)
++	install -m 755 $(NAME2).$(OCAMLBEST) $(BINDIR)/$(NAME2)$(EXE)
+ 
+ install-byte: install-indep
+ 	install -m 755 -D $(NAME).byte $(BINDIR)/$(NAME)$(EXE)
