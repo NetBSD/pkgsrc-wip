@@ -5,5 +5,36 @@ Decide if we want chat/gaim and chat/gaim-gnome and chat/gaim-gtk2, or just
 this version of gaim (0.60).  We'll need to adjust the Makefile's CONFLICTS
 accordingly once that has been decided.
 
+jmmv: If anyone is going to import this package into pkgsrc, I feel that our
+      actual gaim{,-gnome} packages should be renamed to gaim-gtk1 or whatever
+      and make the new one become just "gaim".  This way it will be easier for
+      us to get rid of the older version in the future, if we need to.
+
 Note that gaim 0.59 is now just going to have bug fixes imported, no new
 features.  http://gaim.sf.net/faq.php
+
+- Replace USE_X11BASE with USE_X11.  Do not use the former if you don't
+  know what you are doing.  Then rebuild and check if everything works.
+
+- You USE_LIBTOOL, but there is no LIBTOOL_OVERRIDE...
+
+- The gtkspell thing is bad.  Either enable it or not.  Do not try
+  to see if it's installed to adjust the behavior of the package.  So the
+  maintainer decides... anyway, what does it do?
+
+- Remove the inclusion of perl5/buildlink2.mk (I'm not completely sure
+  about this, though), and use USE_PERL5 (the variable can be set either
+  to YES or "build", the later if you want a BUILD_DEPENDS only).  I see
+  --enable-perl, what does it do?
+
+- Remove the blank line at the end of Makefile.
+
+- Could you reformat the COMMENT so it doesn't include an apostrophe?
+  vim doesn't know how to colorize it properly ;)
+
+- Depend on the latest gnome2-dirs version, that is, 1.1.
+
+- Related to gnome2-dirs, if the PLIST should contain a directory which
+  is handled in gnome2-dirs, I think it's good to add a @comment, so
+  when updating the package one knows why the directory isn't there, i.e:
+    @comment in gnome2-dirs: @dirrm whatever
