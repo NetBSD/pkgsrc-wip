@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/27 02:10:39 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/27 02:17:00 minskim Exp $
 #
 
 DISTNAME=		Reverend-0.2.4
@@ -13,7 +13,9 @@ COMMENT=		General purpose Bayesian classifier
 NO_BUILDLINK=		yes
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		# empty
-PYDISTUTILSPKG=		yes
+
+PYDISTUTILSPKG=			yes
+PYTHON_VERSIONS_ACCEPTED=	23 23pth
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
