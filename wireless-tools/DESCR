@@ -1,0 +1,4 @@
+This package contains the Wireless tools, used to manipulate
+the Linux Wireless Extensions. The Wireless Extension is an interface
+allowing you to set Wireless LAN specific parameters and get the
+specific stats.
