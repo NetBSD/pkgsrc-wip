@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/09/27 10:10:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/27 12:06:49 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0b1
@@ -16,6 +16,8 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
+
+BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6b
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
