@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/11 01:16:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/11 01:24:35 xtraeme Exp $
 #
 
 DISTNAME=	ezbounce-1.04a
@@ -25,13 +25,12 @@ CONF_FILES=	${EGDIR}/ezbounce.conf.default ${PKG_SYSCONFDIR}/ezbounce.conf
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR} ${DOCDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/ezbounce ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/ezbounce ${WRKSRC}/mdidentd/mdidentd \
+		${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/ezbchk ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/sample.conf ${EGDIR}/ezbounce.conf.default
-	${INSTALL_DATA} ${WRKSRC}/ezb.conf ${PKG_SYSCONFDIR}/ezbounce.conf
-	${INSTALL_PROGRAM} ${WRKSRC}/mdidentd/mdidentd ${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/ezb.conf ${EGDIR}/ezbounce.conf.default
 	${INSTALL_DATA} ${WRKSRC}/misc/ezbounce.1 ${PREFIX}/man/man1
-	( cd ${WRKSRC} && for f in README* TODO CHANGES; do \
+	( cd ${WRKSRC} && for f in README* TODO CHANGES sample.conf sample.MOTD; do \
 		${INSTALL_DATA} $$f ${DOCDIR}; \
 	done )
 

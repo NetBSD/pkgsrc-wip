@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/20 06:27:44 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/11 01:24:36 xtraeme Exp $
+etc/rc.d/ezbounce
 man/man1/ezbounce.1
 sbin/ezbchk
 sbin/ezbounce
@@ -7,6 +8,8 @@ share/doc/ezbounce/CHANGES
 share/doc/ezbounce/README
 share/doc/ezbounce/README.SSL
 share/doc/ezbounce/TODO
+share/doc/ezbounce/sample.MOTD
+share/doc/ezbounce/sample.conf
 share/examples/ezbounce/ezbounce.conf.default
 @dirrm share/examples/ezbounce
 @dirrm share/doc/ezbounce
