@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/10/06 14:11:41 tvierling Exp $
+# $NetBSD: Makefile,v 1.21 2003/10/06 14:25:42 xtraeme Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -20,6 +20,7 @@ USE_PKGINSTALL=		yes
 CONFIGURE_ARGS+=	--enable-ssl
 
 RCD_SCRIPTS=		jabberd
+PKG_SYSCONFSUBDIR=	jabberd
 
 EGDIR=			${PREFIX}/share/examples/jabberd
 LIBDIR=			${PREFIX}/lib/jabberd
@@ -45,7 +46,8 @@ OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 750
 .endfor
 
 CONF_FILES=		${EGDIR}/jabber.xml ${PKG_SYSCONFDIR}/jabber.xml
-
+SUPPORT_FILES=		${EGDIR}/platform-settings \
+			${PKG_SYSCONFDIR}/platform-settings
 post-extract:
 	${MV} ${WRKSRC}/jabber.xml ${WRKSRC}/jabber.xml.in
 
@@ -55,11 +57,12 @@ pre-configure:
 		-e "s|@LOG_DIR@|${JABBERD_LOGDIR}|g" \
 		-e "s|@PID_DIR@|${JABBERD_PIDDIR}|g" \
 		-e "s|@SPOOLDIR@|${JABBERD_SPOOLDIR}|g" \
-		< ${WRKSRC}/jabber.xml.in > ${WRKSRC}/jabber.xml
+		${WRKSRC}/jabber.xml.in > ${WRKSRC}/jabber.xml
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR} ${LIBDIR} ${INCDIR}
-	${INSTALL_DATA} ${WRKSRC}/jabber.xml ${EGDIR}/jabber.xml
+	${INSTALL_DATA} ${WRKSRC}/jabber.xml ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/platform-settings ${EGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/jabberd/jabberd ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/jsm/jsm.so ${LIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/xdb_file/xdb_file.so ${LIBDIR}
@@ -69,12 +72,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/jabberd/jabberd.h ${INCDIR}
 	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/lib.h ${INCDIR}
 	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/xmlparse.h ${INCDIR}
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/platform-settings ${PKG_SYSCONFDIR}
-
-post-deinstall:
-	${RM} ${PKG_SYSCONFDIR}/platform-settings
 
 .include "../../devel/pth/buildlink2.mk" # uses pth.h, not pthread.h
 .include "../../security/openssl/buildlink2.mk"
