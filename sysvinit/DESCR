@@ -1,0 +1,6 @@
+Sysvinit is probably the most widely-used init package for Linux.
+This collection of tools is developed by Miquel van Smoorenburg.
+
+It includes a Linux System V init (the parent of all processes),
+halt, poweroff and reboot, killall5 and pidof, last and lastb,
+mesg, runlevel, shutdown, sulogin, telinit, utmpdump, and wall.

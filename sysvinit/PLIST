@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/08 05:07:53 jeremy-c-reed Exp $
+bin/last
+bin/lastb
+bin/mesg
+bin/pidof
+bin/utmpdump
+bin/wall
+include/initreq.h
+man/man1/last.1
+man/man1/lastb.1
+man/man1/mesg.1
+man/man1/wall.1
+man/man5/initscript.5
+man/man5/inittab.5
+man/man8/halt.8
+man/man8/init.8
+man/man8/killall5.8
+man/man8/pidof.8
+man/man8/poweroff.8
+man/man8/reboot.8
+man/man8/runlevel.8
+man/man8/shutdown.8
+man/man8/sulogin.8
+man/man8/telinit.8
+sbin/halt
+sbin/init
+sbin/killall5
+sbin/poweroff
+sbin/reboot
+sbin/runlevel
+sbin/shutdown
+sbin/sulogin
+sbin/telinit
+share/sysvinit/initscript.sample
+@dirrm share/sysvinit

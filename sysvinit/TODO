@@ -1,0 +1,8 @@
+check if sunsite has this version
+
+provide example inittab
+
+note that this installs to $PREFIX/sbin
+
+it uses hard-coded /etc/inittab
+maybe should be patched to use sysconf directory
