@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/08/08 16:12:56 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2003/09/11 13:27:10 marc Exp $
 
 PKGNAME=		${DISTNAME:S/-/4-client-/}
 SVR4_PKGNAME=		mysqc
@@ -9,7 +9,6 @@ CONFLICTS=		{mysql-client-[0-9]*,mysql3-client-[0-9]*}
 .include "Makefile.common"
 
 CONFIGURE_ARGS+=	--without-server
-CONFIGURE_ARGS+=        --with-openssl
 USE_BUILDLINK2=		YES
 
 USE_NEW_TEXINFO=	YES
@@ -21,5 +20,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/Docs/mysql.info ${PREFIX}/info
 
 .include "../../devel/readline/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

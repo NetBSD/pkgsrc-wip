@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2003/08/08 14:50:34 adrian_p Exp $
+$NetBSD: distinfo,v 1.10 2003/09/11 13:27:10 marc Exp $
 
 SHA1 (mysql-4.0.14.tar.gz) = ce6730f9b9539c1face062b1a92b5f621c1163e6
 Size (mysql-4.0.14.tar.gz) = 12712324 bytes
@@ -7,3 +7,6 @@ SHA1 (patch-ae) = 7ab8175196f9cf01566db52e79218398c9cedce7
 SHA1 (patch-af) = ea56c95406543eec673834d50add33aa0b8016f6
 SHA1 (patch-al) = 0af2ef3aacc4bae8227c7f40a75a2b9f6565409e
 SHA1 (patch-am) = ea8d41e90871c7434705e39098f3df77322bf604
+SHA1 (patch-an) = ba04ea1343a972b10dc562da99f6536ce982f2dd
+SHA1 (patch-ao) = f21de256c43e43693e846444ed0c4d2641cc6f8d
+SHA1 (patch-ap) = 1706b2fc111a97ec24919ddfea01087fbe633efd

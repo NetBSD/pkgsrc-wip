@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/08/31 09:50:20 adrian_p Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/09/11 13:27:10 marc Exp $
 
 DISTNAME=		mysql-4.0.14
 CATEGORIES=		databases
@@ -43,6 +43,7 @@ CONFIGURE_ARGS+=	--without-docs
 CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--without-bench
 CONFIGURE_ARGS+=	--with-low-memory
+CONFIGURE_ARGS+=        --with-openssl
 CONFIGURE_ARGS+=	--with-vio
 
 CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET}
@@ -78,4 +79,5 @@ post-extract:
 		${RM} $${file}.orig;					\
 	done
 
+.include "../../security/openssl/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
