@@ -1,0 +1,13 @@
+#!/bin/sh
+# $NetBSD: argouml,v 1.1.1.1 2003/06/30 14:45:34 drue Exp $
+#
+# start script for argouml
+
+CLASSPATH=$CLASSPATH:@PREFIX@/lib/java/log4j-1.2.8.jar:@PREFIX@/lib/java/xerces.jar
+for f in antlrall argouml gef i18n nsuml ocl-argo
+do
+    CLASSPATH=$CLASSPATH:@PREFIX@/lib/java/${f}.jar
+done
+export CLASSPATH
+
+java -jar @PREFIX@/lib/java/argouml.jar

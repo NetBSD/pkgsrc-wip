@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/30 14:45:34 drue Exp $
+bin/argouml
+lib/java/antlrall.jar
+lib/java/argouml.jar
+lib/java/gef.jar
+lib/java/i18n.jar
+lib/java/nsuml.jar
+lib/java/ocl-argo.jar
