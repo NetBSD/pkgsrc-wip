@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/13 06:45:32 ishit Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/20 06:47:54 ishit Exp $
 # FreeBSD Id: ports/www/mathopd/Makefile,v 1.16 2004/11/29 08:58:58 tobez Exp
 
 DISTNAME=	mathopd-1.5p4
@@ -50,8 +50,14 @@ CPPFLAGS+=	-DHAVE_CRYPT_H
 
 pre-configure:
 .if ${OPSYS} == "SunOS"
-	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.patched
-	${SED} -e 's!LDADD=	-lcrypt!LDADD=	-lsocket -lnsl!' \
+	@${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.patched
+	@${SED} -e 's!LDADD=	-lcrypt!LDADD=	-lsocket -lnsl!' \
+	< ${WRKSRC}/Makefile.patched \
+	> ${WRKSRC}/Makefile
+.endif
+.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
+	@${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.patched
+	@${SED} -e 's!util.c stub.c!util.c sendfile.c stub.c!' \
 	< ${WRKSRC}/Makefile.patched \
 	> ${WRKSRC}/Makefile
 .endif
