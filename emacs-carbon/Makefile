@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/07 19:36:37 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/10 14:33:30 jgoamakf Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-carbon-21.3.50
@@ -26,17 +26,17 @@ CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
 
 MAKE_ENV+=	"MAKEINFO=${LOCALBASE}/bin/makeinfo"
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-xpm
-.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-jpeg
-.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-tiff
 # need 4.1.0b1 or higher (a bug in 4.1.0 can crash Emacs)
 BUILDLINK_DEPENDS.libungif=	libungif>=4.1.0.1
-.include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/libungif/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gif
-.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-png
 
 .include "../../mk/bsd.prefs.mk"
