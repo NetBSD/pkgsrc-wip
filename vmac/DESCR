@@ -1,0 +1,9 @@
+vMac is a multiplatform Macintosh emulator that currently emulates
+a Motorola 68000 based Apple Macintosh Plus.
+
+Currently System 7.5.5 is the latest vMac can boot, which is the
+latest System a real MacPlus can boot. vMac runs in black an white,
+a larger screen and color is the next thing we are working on.
+
+On some systems (at least NetBSD) it lacks support of Gemulator
+ROM board (yet).
