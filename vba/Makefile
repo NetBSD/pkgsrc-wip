@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/09/24 21:54:14 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/20 18:46:12 thomasklausner Exp $
 
-DISTNAME=		VisualBoyAdvance-1.5.1-src
-PKGNAME=		vba-1.5.1
-WRKSRC=			${WRKDIR}/VisualBoyAdvance-1.5
+DISTNAME=		VisualBoyAdvance-src-1.6a
+PKGNAME=		vba-1.6.0.1
+WRKSRC=			${WRKDIR}/VisualBoyAdvance-1.6a
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vba/}
 EXTRACT_SUFX=		.zip
@@ -18,11 +18,13 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-c-core
 CONFIGURE_ARGS+=	--without-mmx
 
-USE_GCC3=		# defined
+GCC_REQD=		3.0.0
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/TestEmu ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src/VisualBoyAdvance ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vba
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/vba
 
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
