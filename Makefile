@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.532 2003/10/10 16:03:27 dillo Exp $
-# $NetBSD: Makefile,v 1.532 2003/10/10 16:03:27 dillo Exp $
+# $Id: Makefile,v 1.533 2003/10/11 01:29:38 blef Exp $
+# $NetBSD: Makefile,v 1.533 2003/10/11 01:29:38 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -318,6 +318,7 @@ SUBDIR+=	pgp6
 SUBDIR+=	pgpenvelope
 SUBDIR+=	php-jpgraph
 #SUBDIR+=	php4			# not a package
+SUBDIR+=	php4-mssql
 SUBDIR+=	php4-mysql4
 SUBDIR+=	picasm
 SUBDIR+=	picprog
