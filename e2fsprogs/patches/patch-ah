@@ -1,0 +1,29 @@
+$NetBSD: patch-ah,v 1.1 2004/03/04 16:17:56 jeremy-c-reed Exp $
+
+--- lib/ss/Makefile.in.orig	Sun Dec  7 09:11:38 2003
++++ lib/ss/Makefile.in	Wed Mar  3 12:26:30 2004
+@@ -30,7 +30,7 @@
+ ELF_IMAGE = libss
+ ELF_MYDIR = ss
+ ELF_INSTALL_DIR = $(root_libdir)
+-ELF_OTHER_LIBS = -L../.. -lcom_err $(DLOPEN_LIB)
++ELF_OTHER_LIBS = -L$(PREFIX)/lib -lcom_err $(DLOPEN_LIB)
+ 
+ BSDLIB_VERSION = 1.0
+ BSDLIB_IMAGE = libss
+@@ -38,13 +38,13 @@
+ BSDLIB_INSTALL_DIR = $(root_libdir)
+ 
+ TAGS=etags
+-COMPILE_ET=../et/compile_et --build-tree
++COMPILE_ET=$(PREFIX)/bin/compile_et --build-tree
+ MK_CMDS=_SS_DIR_OVERRIDE=. ./mk_cmds
+ 
+ # -I.. is so that ss/ss_err.h works
+ # -I$(srcdir)/.. is so that ss/ss.h works
+ # -I$(srcdir)/../et is so com_err.h works
+-XTRA_CFLAGS= -I$(srcdir)/../et
++XTRA_CFLAGS= -I$(PREFIX)/include/et
+ 
+ .c.o:
+ 	$(CC) $(ALL_CFLAGS) -c $<
