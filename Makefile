@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1405 2004/07/23 02:07:13 minskim Exp $
-# $NetBSD: Makefile,v 1.1405 2004/07/23 02:07:13 minskim Exp $
+# $Id: Makefile,v 1.1406 2004/07/24 08:57:51 marc Exp $
+# $NetBSD: Makefile,v 1.1406 2004/07/24 08:57:51 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -491,7 +491,6 @@ SUBDIR+=	pango-devel
 SUBDIR+=	panoramixext
 SUBDIR+=	parsifal
 SUBDIR+=	passepartout
-SUBDIR+=	patchutils
 SUBDIR+=	pbl
 SUBDIR+=	pcsx
 SUBDIR+=	pdb2ldif
