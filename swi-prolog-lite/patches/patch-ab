@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/22 16:46:04 mpasternak Exp $
+
+--- packages/xpce/Makefile.in.orig	Mon Oct  6 08:15:06 2003
++++ packages/xpce/Makefile.in
+@@ -4,7 +4,7 @@
+ # See also ./configure
+ ################################################################
+ 
+-MAKE=@MAKE@
++MAKE=gmake
+ BUILDARCH=@BUILDARCH@
+ 
+ all::

@@ -1,0 +1,33 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/04/22 16:46:04 mpasternak Exp $
+
+SWIPLVERS=		5.2.9
+DISTNAME=		pl-${SWIPLVERS}
+CATEGORIES=		lang
+MASTER_SITES=		ftp://ftp.swi.psy.uva.nl/SWI-Prolog/
+
+HOMEPAGE=		http://www.swi-prolog.org/
+
+DIST_SUBDIR=		swi-prolog
+DISTINFO_FILE=		${.CURDIR}/../../wip/swi-prolog-lite/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/swi-prolog-lite/patches
+
+SWIPLLIBDIR=		${PKGNAME:S,-lite,,}
+
+PLIST_SUBST+=		APPEND_ELF=${APPEND_ELF}
+PLIST_SUBST+=		SWIPLLIBDIR=${SWIPLLIBDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+# move SWIPL_OPSYS setting from PLIST to here to make it more configureable,
+# perhaps on some OS it will be different, so you can rely on prefs.mk and
+# change it
+
+PLIST_SUBST+=		SWIPL_OPSYS=${MACHINE_ARCH}-${LOWER_OPSYS}${LOWER_OPSYS_VERSUFFIX}${APPEND_ELF}
+
+.if ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == sparc64 || \
+	${MACHINE_ARCH} == x86_64
+PLIST_SUBST+=		BITS=64
+.else
+PLIST_SUBST+=		BITS=32
+.endif
+

@@ -1,0 +1,94 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/22 16:46:04 mpasternak Exp $
+bin/plld
+bin/plrc
+bin/swi-prolog
+include/SWI-Prolog.h
+include/SWI-Stream.h
+lib/${SWIPLLIBDIR}/bin/${SWIPL_OPSYS}/plld
+lib/${SWIPLLIBDIR}/bin/${SWIPL_OPSYS}/plrc
+lib/${SWIPLLIBDIR}/bin/${SWIPL_OPSYS}/swi-prolog
+lib/${SWIPLLIBDIR}/bin/swipl
+lib/${SWIPLLIBDIR}/boot/apply.pl
+lib/${SWIPLLIBDIR}/boot/autoload.pl
+lib/${SWIPLLIBDIR}/boot/bags.pl
+lib/${SWIPLLIBDIR}/boot/dwim.pl
+lib/${SWIPLLIBDIR}/boot/history.pl
+lib/${SWIPLLIBDIR}/boot/init.pl
+lib/${SWIPLLIBDIR}/boot/license.pl
+lib/${SWIPLLIBDIR}/boot/load.pl
+lib/${SWIPLLIBDIR}/boot/menu.pl
+lib/${SWIPLLIBDIR}/boot/messages.pl
+lib/${SWIPLLIBDIR}/boot/parms.pl
+lib/${SWIPLLIBDIR}/boot/qlf.pl
+lib/${SWIPLLIBDIR}/boot/rc.pl
+lib/${SWIPLLIBDIR}/boot/sort.pl
+lib/${SWIPLLIBDIR}/boot/syspred.pl
+lib/${SWIPLLIBDIR}/boot/toplevel.pl
+lib/${SWIPLLIBDIR}/boot/topvars.pl
+lib/${SWIPLLIBDIR}/boot/writef.pl
+lib/${SWIPLLIBDIR}/boot${BITS}.prc
+lib/${SWIPLLIBDIR}/dotfiles/README
+lib/${SWIPLLIBDIR}/dotfiles/dotplrc
+lib/${SWIPLLIBDIR}/dotfiles/dotxpcerc
+lib/${SWIPLLIBDIR}/dotfiles/edit
+lib/${SWIPLLIBDIR}/include/SWI-Prolog.h
+lib/${SWIPLLIBDIR}/include/SWI-Stream.h
+lib/${SWIPLLIBDIR}/include/stub.c
+lib/${SWIPLLIBDIR}/library/INDEX.pl
+lib/${SWIPLLIBDIR}/library/MANUAL
+lib/${SWIPLLIBDIR}/library/am_match.pl
+lib/${SWIPLLIBDIR}/library/backcomp.pl
+lib/${SWIPLLIBDIR}/library/bim.pl
+lib/${SWIPLLIBDIR}/library/check.pl
+lib/${SWIPLLIBDIR}/library/checklast.pl
+lib/${SWIPLLIBDIR}/library/checkselect.pl
+lib/${SWIPLLIBDIR}/library/ctypes.pl
+lib/${SWIPLLIBDIR}/library/debug.pl
+lib/${SWIPLLIBDIR}/library/edinburgh.pl
+lib/${SWIPLLIBDIR}/library/edit.pl
+lib/${SWIPLLIBDIR}/library/emacs_interface.pl
+lib/${SWIPLLIBDIR}/library/explain.pl
+lib/${SWIPLLIBDIR}/library/files.pl
+lib/${SWIPLLIBDIR}/library/gensym.pl
+lib/${SWIPLLIBDIR}/library/help.pl
+lib/${SWIPLLIBDIR}/library/helpidx.pl
+lib/${SWIPLLIBDIR}/library/listing.pl
+lib/${SWIPLLIBDIR}/library/lists.pl
+lib/${SWIPLLIBDIR}/library/main.pl
+lib/${SWIPLLIBDIR}/library/make.pl
+lib/${SWIPLLIBDIR}/library/netscape.pl
+lib/${SWIPLLIBDIR}/library/occurs.pl
+lib/${SWIPLLIBDIR}/library/option.pl
+lib/${SWIPLLIBDIR}/library/ordsets.pl
+lib/${SWIPLLIBDIR}/library/oset.pl
+lib/${SWIPLLIBDIR}/library/qpforeign.pl
+lib/${SWIPLLIBDIR}/library/qsave.pl
+lib/${SWIPLLIBDIR}/library/quintus.pl
+lib/${SWIPLLIBDIR}/library/readln.pl
+lib/${SWIPLLIBDIR}/library/readutil.pl
+lib/${SWIPLLIBDIR}/library/shell.pl
+lib/${SWIPLLIBDIR}/library/shlib.pl
+lib/${SWIPLLIBDIR}/library/statistics.pl
+lib/${SWIPLLIBDIR}/library/system.pl
+lib/${SWIPLLIBDIR}/library/threadutil.pl
+lib/${SWIPLLIBDIR}/library/tty.pl
+lib/${SWIPLLIBDIR}/library/url.pl
+lib/${SWIPLLIBDIR}/runtime/${SWIPL_OPSYS}/libplmt.a
+lib/${SWIPLLIBDIR}/swipl
+man/man1/plld.1
+man/man1/plrc.1
+man/man1/swi-prolog.1
+@dirrm lib/${SWIPLLIBDIR}/runtime/${SWIPL_OPSYS}
+@dirrm lib/${SWIPLLIBDIR}/runtime
+@exec ${MKDIR} %D/lib/${SWIPLLIBDIR}/man
+@dirrm lib/${SWIPLLIBDIR}/man
+@dirrm lib/${SWIPLLIBDIR}/library
+@exec ${MKDIR} %D/lib/${SWIPLLIBDIR}/lib/${SWIPL_OPSYS}
+@dirrm lib/${SWIPLLIBDIR}/lib/${SWIPL_OPSYS}
+@dirrm lib/${SWIPLLIBDIR}/lib
+@dirrm lib/${SWIPLLIBDIR}/include
+@dirrm lib/${SWIPLLIBDIR}/dotfiles
+@dirrm lib/${SWIPLLIBDIR}/boot
+@dirrm lib/${SWIPLLIBDIR}/bin/${SWIPL_OPSYS}
+@dirrm lib/${SWIPLLIBDIR}/bin
+@dirrm lib/${SWIPLLIBDIR}

@@ -1,0 +1,6 @@
+$Id: TODO,v 1.1.1.1 2004/04/22 16:46:04 mpasternak Exp $
+
+Makefile: CPPFLAGS -D__unix__=1 -- will that be correct on Interix or Cygnus
+or other win32?
+
+	-- dotz@irc.pl

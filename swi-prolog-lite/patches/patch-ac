@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/04/22 16:46:04 mpasternak Exp $
+
+--- packages/xpce/pl/src/Makefile.orig	Fri Oct 10 10:13:32 2003
++++ packages/xpce/pl/src/Makefile
+@@ -33,7 +33,7 @@ BINDIR=		../../$(builddir)
+ OBJDIR=		../../$(builddir)/pl
+ CONFIG=		../../$(builddir)/config.h
+ 
+-CPLIFLAGS=	-I$(PLINCL) -I../../$(builddir) -I../../src
++CPLIFLAGS=	-I$(PLINCL) -I../../$(builddir) -I../../src -I${X11BASE}/include
+ PL=     	pl
+ PLLD=		plld -pl $(PL)
+ ITFOBJ= 	$(addprefix $(OBJDIR)/, interface.o link.o pcecall.o)
