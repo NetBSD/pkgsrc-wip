@@ -1,5 +1,5 @@
-$Id: TODO,v 1.1.1.1 2003/12/18 22:52:31 mpasternak Exp $
+$Id: TODO,v 1.2 2004/07/06 22:02:06 thomasklausner Exp $
 
-See Makefile (no, I'm not ashamed of this hack; libpcap's buildlink2 author should be)
+See Makefile (no, I'm not ashamed of this hack; libpcap's buildlink3 author should be)
 
 	-- dotz@irc.pl
