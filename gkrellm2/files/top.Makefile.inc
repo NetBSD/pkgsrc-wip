@@ -1,4 +1,4 @@
-VERSION=	2.1.24
+VERSION=	2.1.25
 
 # Path options
 PREFIX?=	/usr/local

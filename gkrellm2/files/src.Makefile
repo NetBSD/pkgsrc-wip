@@ -56,6 +56,7 @@ override CFLAGS += -Wall $(FLAGS)
 OBJS =	main.o alerts.o battery.o base64.o clock.o cpu.o disk.o fs.o \
 	hostname.o inet.o mail.o mem.o net.o proc.o sensors.o uptime.o \
 	chart.o panel.o config.o gui.o krell.o plugins.o pixops.o \
+	smbdes.o smbencrypt.o smbmd4.o smbutil.o \
 	client.o utils.o winops-x11.o sysdeps-unix.o deprecated.o
 
 ifeq ($(NEED_MD5),yes)
@@ -155,8 +156,12 @@ disk.o:      disk.c $(GKRELLM_H_SYS)
 fs.o:        fs.c $(GKRELLM_H_SYS)
 hostname.o:  hostname.c $(GKRELLM_H_SYS)
 inet.o:      inet.c $(GKRELLM_H_SYS)
-mail.o:      mail.c md5.h md5global.h $(GKRELLM_H_SYS)
+mail.o:      mail.c md5.h md5global.h ntlm.h $(GKRELLM_H_SYS)
 md5c.o:      md5.h md5global.h
+smbdes.o:    smbdes.h
+smbencrypt.o: smbbyteorder.h smbdes.h smbmd4.h
+smbmd4.o:    smbmd4.h
+smbutil.o:   ntlm.h smbencrypt.h smbbyteorder.h
 mem.o:       mem.c  $(GKRELLM_H_SYS)
 net.o:	     net.c  $(GKRELLM_H_SYS)
 proc.o:      proc.c  $(GKRELLM_H_SYS)
