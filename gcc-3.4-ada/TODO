@@ -1,4 +1,1 @@
 - Need to address architectures other than NetBSD with native pthreads.
-
-- Need to modify PLIST to account for different architctures
-

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/04/25 07:43:35 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.31 2004/04/27 00:19:20 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
@@ -22,6 +22,8 @@ CONFIGURE_ARGS+=        --enable-languages="c,ada"
 WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
+.include "../../mk/bsd.prefs.mk"
+
 # An Ada compiler is required to build this pkg. Two
 may be used:
 #USE_GCC3	=# Define to use lang/gcc3-ada
@@ -32,7 +34,7 @@ USE_GCC34	=# Define to use gcc-3.4
 #ALT_GCC=	/usr/pkg/gcc3bootstrap/bin/gcc
 .if defined(ALT_GCC)
 ALT_GCC_PREFIX:=	${ALT_GCC:H}/..
-ALT_GCC_RTS!=	find ${ALT_GCC_PREFIX} -name adalib
+ALT_GCC_RTS!=	${FIND} ${ALT_GCC_PREFIX} -name adalib
 RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
 .endif
 
@@ -74,7 +76,7 @@ pre-configure:
 .elif defined(ALT_GCC)
 pre-configure:
 	(cd ${WRKDIR}/.buildlink && ${MKDIR} ${RALT_GCC_RTS} && \
-	cd ${RALT_GCC_RTS} && ln -s ${ALT_GCC_RTS}/libgnat.a .) 
+	cd ${RALT_GCC_RTS} && ${LN} -s ${ALT_GCC_RTS}/libgnat.a .) 
 	(cd ${ALT_GCC:H} && \
 	files=`${FIND} . -type f \( -perm -0100 \)` && \
 	cd ${GCC_DIR}/bin/ && \
@@ -97,7 +99,7 @@ do-test:
 	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
 
 do-install:
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install \
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} ${INSTALL} \
 	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc)
 
 post-install:
@@ -112,7 +114,6 @@ post-install:
 	${FIND} ${GCC_PREFIX} -type d -print	\
 		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
-
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_GCC3)
