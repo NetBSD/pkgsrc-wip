@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1359 2004/07/06 08:03:34 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1359 2004/07/06 08:03:34 xtraeme Exp $
+# $Id: Makefile,v 1.1360 2004/07/06 08:10:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1360 2004/07/06 08:10:45 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -192,7 +192,6 @@ SUBDIR+=	gnome-alsamixer
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnomeicu
 SUBDIR+=	gnucash-docs
-SUBDIR+=	gnumeric
 SUBDIR+=	gnump3d
 SUBDIR+=	gnunet
 SUBDIR+=	gnupg-1.9

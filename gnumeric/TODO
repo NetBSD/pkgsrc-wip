@@ -1,4 +1,0 @@
-. list of functions nearly empty
-. 'schema missing' errors
-. patches unclean -- defining _XOPEN_SOURCE just to get
-  all math symbols from the math.h can't be right

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2004/05/05 19:48:46 jmmv Exp $
-
-SHA1 (gnumeric-1.2.12.tar.bz2) = 51f37ff5579980ff4177f6bb7cd24cb9dee8b861
-Size (gnumeric-1.2.12.tar.bz2) = 14284997 bytes
-SHA1 (patch-aa) = 3bf1a6bc8b8ba7532fa5b61a6c2ef37c15bb028f
-SHA1 (patch-ab) = 3d33e25b2ebaa78cdaad1c554264de33b5a2b8b0
-SHA1 (patch-ac) = 52a00c4cd92062776756894d049ed6431f00c1a5
-SHA1 (patch-ad) = cd1dc03c2d8e1e0728aed570bad0d9c9874471f6
-SHA1 (patch-ae) = 75ed2653f38bd87304fbd1e8e43dfec74ab5f3e8
