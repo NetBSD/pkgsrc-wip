@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1111 2004/03/24 01:10:35 rockpiper Exp $
-# $NetBSD: Makefile,v 1.1111 2004/03/24 01:10:35 rockpiper Exp $
+# $Id: Makefile,v 1.1112 2004/03/25 15:10:34 poppnk Exp $
+# $NetBSD: Makefile,v 1.1112 2004/03/25 15:10:34 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -87,6 +87,7 @@ SUBDIR+=	compare
 SUBDIR+=	compositeext
 SUBDIR+=	cops
 SUBDIR+=	copytape
+SUBDIR+=	classpath-nox11
 SUBDIR+=	cvsd
 SUBDIR+=	d2x
 SUBDIR+=	d4x
