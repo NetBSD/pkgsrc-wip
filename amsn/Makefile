@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/07/19 15:24:19 ppostma Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/01 15:03:16 ppostma Exp $
 #
 
-DISTNAME=		amsn-0_92
+DISTNAME=		amsn-0_93
 PKGNAME=		${DISTNAME:S/_/./}
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amsn/}
@@ -13,8 +13,6 @@ COMMENT=		"Alvaro's MSN messenger client"
 USE_BUILDLINK3=		YES
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
-
-WRKSRC=			${WRKDIR}/msn
 
 SUBST_CLASSES=		fix
 SUBST_STAGE.fix=	post-patch

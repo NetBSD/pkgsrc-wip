@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/06/13 18:26:54 ppostma Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/11/01 15:03:16 ppostma Exp $
 bin/amsn
 share/amsn/AppMain.tcl
 share/amsn/CREDITS
@@ -12,6 +12,7 @@ share/amsn/abook.tcl
 share/amsn/alarm.tcl
 share/amsn/amsn
 share/amsn/amsn-remote
+share/amsn/amsn-remote-CLI
 share/amsn/amsn.debianmenu
 share/amsn/amsn.desktop
 share/amsn/amsn.spec
@@ -23,6 +24,7 @@ share/amsn/combobox.tcl
 share/amsn/config.tcl
 share/amsn/ctadverts.tcl
 share/amsn/ctthemes.tcl
+share/amsn/cvs_date
 share/amsn/des.tcl
 share/amsn/dock.tcl
 share/amsn/docs/FAQbs
@@ -30,17 +32,20 @@ share/amsn/docs/FAQde
 share/amsn/docs/FAQdu
 share/amsn/docs/FAQes
 share/amsn/docs/FAQfr
+share/amsn/docs/FAQfr.html
 share/amsn/docs/FAQfr_ca
 share/amsn/docs/FAQfur
 share/amsn/docs/FAQgr
 share/amsn/docs/FAQit
 share/amsn/docs/FAQmn
+share/amsn/docs/FAQnl
 share/amsn/docs/FAQno
 share/amsn/docs/FAQpt
 share/amsn/docs/FAQpt_BR
-share/amsn/docs/FAQsi
-share/amsn/docs/FAQsw
+share/amsn/docs/FAQsl
+share/amsn/docs/FAQsv
 share/amsn/docs/FAQtr
+share/amsn/docs/FAQva
 share/amsn/docs/HELPda
 share/amsn/docs/HELPde
 share/amsn/docs/HELPes
@@ -49,22 +54,31 @@ share/amsn/docs/HELPfr_ca
 share/amsn/docs/HELPfur
 share/amsn/docs/HELPgr
 share/amsn/docs/HELPit
+share/amsn/docs/HELPnl
 share/amsn/docs/HELPno
 share/amsn/docs/HELPpt
 share/amsn/docs/HELPpt_BR
 share/amsn/docs/HELPro
 share/amsn/docs/HELPru
 share/amsn/docs/HELPtr
+share/amsn/docs/HELPva
+share/amsn/docs/HELPzh-TW
 share/amsn/docs/READMEda
 share/amsn/docs/READMEde
 share/amsn/docs/READMEes
 share/amsn/docs/READMEfr
+share/amsn/docs/READMEfur
+share/amsn/docs/READMEit
 share/amsn/docs/READMEmn
+share/amsn/docs/READMEnl
 share/amsn/docs/READMEpt
 share/amsn/docs/READMEpt_BR
+share/amsn/docs/READMEro
 share/amsn/docs/READMEru
-share/amsn/docs/READMEsw
+share/amsn/docs/READMEsv
 share/amsn/docs/READMEtr
+share/amsn/docs/READMEva
+share/amsn/docs/READMEzh-TW
 share/amsn/docs/helpmn
 share/amsn/groups.tcl
 share/amsn/gui.tcl
@@ -86,19 +100,6 @@ share/amsn/icons/64x64/amsn.png
 share/amsn/icons/64x64/tux-64x64.png
 share/amsn/icons/96x96/aMSN_96.png
 share/amsn/icons/96x96/tux-96x96.png
-share/amsn/icons/winicons/away.ico
-share/amsn/icons/winicons/brb.ico
-share/amsn/icons/winicons/busy.ico
-share/amsn/icons/winicons/hidden.ico
-share/amsn/icons/winicons/inactive.ico
-share/amsn/icons/winicons/lunch.ico
-share/amsn/icons/winicons/msn.ico
-share/amsn/icons/winicons/offline.ico
-share/amsn/icons/winicons/online.ico
-share/amsn/icons/winicons/phone.ico
-share/amsn/icons/winicons/unread.ico
-share/amsn/itunes.tcl
-share/amsn/jwakeup
 share/amsn/lang.tcl
 share/amsn/lang/LANG-HOWTO
 share/amsn/lang/addkey.tcl
@@ -132,7 +133,7 @@ share/amsn/lang/langfr
 share/amsn/lang/langfr_CA
 share/amsn/lang/langfri
 share/amsn/lang/langfur
-share/amsn/lang/langga
+share/amsn/lang/langglg
 share/amsn/lang/langgr
 share/amsn/lang/langgr2
 share/amsn/lang/langhu
@@ -150,10 +151,10 @@ share/amsn/lang/langpt
 share/amsn/lang/langpt_BR
 share/amsn/lang/langro
 share/amsn/lang/langru
-share/amsn/lang/langsi
 share/amsn/lang/langsk
+share/amsn/lang/langsl
 share/amsn/lang/langsr
-share/amsn/lang/langsw
+share/amsn/lang/langsv
 share/amsn/lang/langswa
 share/amsn/lang/langta
 share/amsn/lang/langtr
@@ -162,10 +163,12 @@ share/amsn/lang/langzh-CN
 share/amsn/lang/langzh-TW
 share/amsn/lang/missing.py
 share/amsn/lang/sortlang
+share/amsn/lang/untranslated.py
 share/amsn/langlist
 share/amsn/loging.tcl
 share/amsn/migmd5.tcl
 share/amsn/mutex.tcl
+share/amsn/notes.tcl
 share/amsn/plugins.tcl
 share/amsn/plugins/BWidget-1.7.0/CHANGES.txt
 share/amsn/plugins/BWidget-1.7.0/ChangeLog
@@ -247,6 +250,9 @@ share/amsn/plugins/Makefile
 share/amsn/plugins/QuickTimeTcl3.1/QuickTimeTcl3.1.dylib
 share/amsn/plugins/QuickTimeTcl3.1/movie.tcl
 share/amsn/plugins/QuickTimeTcl3.1/pkgIndex.tcl
+share/amsn/plugins/applescript/display_and_send.scpt
+share/amsn/plugins/applescript/itunes.tcl
+share/amsn/plugins/applescript/mail-bugreport.scpt
 share/amsn/plugins/base64/base64.tcl
 share/amsn/plugins/base64/pkgIndex.tcl
 share/amsn/plugins/base64/uuencode.tcl
@@ -265,9 +271,26 @@ share/amsn/plugins/icons/noact.xpm
 share/amsn/plugins/icons/offline.xpm
 share/amsn/plugins/icons/online.xpm
 share/amsn/plugins/icons/onphone.xpm
+share/amsn/plugins/linphone/Makefile.in
+share/amsn/plugins/linphone/configure.in
+share/amsn/plugins/linphone/linphonewrap.c
+share/amsn/plugins/linphone/linphonewrap.h
+share/amsn/plugins/linphone/mkIndex.tcl
+share/amsn/plugins/linphone/mkIndex.tcl.in
+share/amsn/plugins/linphone/tcl.m4
 share/amsn/plugins/plugins.txt
 share/amsn/plugins/sha1/pkgIndex.tcl
 share/amsn/plugins/sha1/sha1.tcl
+share/amsn/plugins/tclAE2.0/Contents/Info.plist
+share/amsn/plugins/tclAE2.0/Contents/MacOS/tclAE2.0.dylib
+share/amsn/plugins/tclAE2.0/Contents/Resources/InfoPlist.strings
+share/amsn/plugins/tclAE2.0/Contents/Resources/aebuild.tcl
+share/amsn/plugins/tclAE2.0/Contents/Resources/aelegacy.tcl
+share/amsn/plugins/tclAE2.0/Contents/Resources/aete.tcl
+share/amsn/plugins/tclAE2.0/Contents/Resources/oserrors.tcl
+share/amsn/plugins/tclAE2.0/Contents/Resources/tclAE.icns
+share/amsn/plugins/tclAE2.0/pkgIndex.tcl
+share/amsn/plugins/tclAE2.0/tclAE2.0
 share/amsn/plugins/tclCarbonNotification/Darwin-ppc/critcl.tcl
 share/amsn/plugins/tclCarbonNotification/Darwin-ppc/tclCarbonNotification.dylib
 share/amsn/plugins/tclCarbonNotification/critcl.tcl
@@ -283,7 +306,7 @@ share/amsn/plugins/winflash/README
 share/amsn/plugins/winflash/flash.cpp
 share/amsn/plugins/winflash/flash.dll
 share/amsn/plugins/winflash/flash.h
-share/amsn/plugins/winico03.dll
+share/amsn/plugins/winico05.dll
 share/amsn/png.tcl
 share/amsn/preferences.tcl
 share/amsn/progressbar.tcl
@@ -367,6 +390,7 @@ share/amsn/skins/Tux/pixmaps/prefprofile.gif
 share/amsn/skins/Tux/pixmaps/prefproxy.gif
 share/amsn/skins/Tux/pixmaps/prefstatus.gif
 share/amsn/skins/Tux/pixmaps/read.gif
+share/amsn/skins/Tux/pixmaps/sendbut.gif
 share/amsn/skins/Tux/pixmaps/typing.gif
 share/amsn/skins/Tux/pixmaps/unread.gif
 share/amsn/skins/Tux/settings.xml
@@ -505,13 +529,11 @@ share/amsn/skins/default/pixmaps/bbusy.gif
 share/amsn/skins/default/pixmaps/bell.gif
 share/amsn/skins/default/pixmaps/belloff.gif
 share/amsn/skins/default/pixmaps/blocked.gif
-share/amsn/skins/default/pixmaps/blockedme.gif
 share/amsn/skins/default/pixmaps/boffline.gif
 share/amsn/skins/default/pixmaps/bonline.gif
 share/amsn/skins/default/pixmaps/busy.gif
 share/amsn/skins/default/pixmaps/butblock.gif
 share/amsn/skins/default/pixmaps/butfont.gif
-share/amsn/skins/default/pixmaps/buthide.gif
 share/amsn/skins/default/pixmaps/butinvite.gif
 share/amsn/skins/default/pixmaps/butsend.gif
 share/amsn/skins/default/pixmaps/butsend2.gif
@@ -544,6 +566,7 @@ share/amsn/skins/default/pixmaps/minijoins.gif
 share/amsn/skins/default/pixmaps/minileaves.gif
 share/amsn/skins/default/pixmaps/miniwarn.gif
 share/amsn/skins/default/pixmaps/msnbot.gif
+share/amsn/skins/default/pixmaps/newline.gif
 share/amsn/skins/default/pixmaps/notifclose.gif
 share/amsn/skins/default/pixmaps/notifico.gif
 share/amsn/skins/default/pixmaps/notifyoffline.gif
@@ -572,6 +595,7 @@ share/amsn/skins/default/pixmaps/prefprofile.gif
 share/amsn/skins/default/pixmaps/prefproxy.gif
 share/amsn/skins/default/pixmaps/prefstatus.gif
 share/amsn/skins/default/pixmaps/sendbut.gif
+share/amsn/skins/default/pixmaps/smile.gif
 share/amsn/skins/default/pixmaps/typing.gif
 share/amsn/skins/default/pixmaps/unread.gif
 share/amsn/skins/default/pixmaps/warning.gif
@@ -663,13 +687,25 @@ share/amsn/skins/default/sounds/null
 share/amsn/skins/default/sounds/offline.wav
 share/amsn/skins/default/sounds/online.wav
 share/amsn/skins/default/sounds/type.wav
+share/amsn/skins/default/winicons/away.ico
+share/amsn/skins/default/winicons/bossmode.ico
+share/amsn/skins/default/winicons/brb.ico
+share/amsn/skins/default/winicons/busy.ico
+share/amsn/skins/default/winicons/hidden.ico
+share/amsn/skins/default/winicons/inactive.ico
+share/amsn/skins/default/winicons/lunch.ico
+share/amsn/skins/default/winicons/msn.ico
+share/amsn/skins/default/winicons/offline.ico
+share/amsn/skins/default/winicons/online.ico
+share/amsn/skins/default/winicons/phone.ico
+share/amsn/skins/default/winicons/unread.ico
 share/amsn/smileys.tcl
 share/amsn/sndplay
 share/amsn/socks.tcl
 share/amsn/sxml.tcl
 share/amsn/trayicon.tcl
 share/amsn/utils/amsn-installer
-share/amsn/utils/itunes.scpt
+share/amsn/utils/amsnctl.pl
 share/amsn/utils/plwav.exe
 share/amsn/utils/qtplay
 share/amsn/utils/update-amsn.sh
@@ -680,6 +716,7 @@ share/pixmaps/crystal.png
 share/pixmaps/msn.png
 share/pixmaps/tux-32x32.png
 @dirrm share/amsn/utils
+@dirrm share/amsn/skins/default/winicons
 @dirrm share/amsn/skins/default/sounds
 @dirrm share/amsn/skins/default/smileys
 @dirrm share/amsn/skins/default/pixmaps
@@ -695,7 +732,12 @@ share/pixmaps/tux-32x32.png
 @dirrm share/amsn/plugins/tclzlib
 @dirrm share/amsn/plugins/tclCarbonNotification/Darwin-ppc
 @dirrm share/amsn/plugins/tclCarbonNotification
+@dirrm share/amsn/plugins/tclAE2.0/Contents/Resources
+@dirrm share/amsn/plugins/tclAE2.0/Contents/MacOS
+@dirrm share/amsn/plugins/tclAE2.0/Contents
+@dirrm share/amsn/plugins/tclAE2.0
 @dirrm share/amsn/plugins/sha1
+@dirrm share/amsn/plugins/linphone
 @dirrm share/amsn/plugins/icons
 @dirrm share/amsn/plugins/http2.4
 @dirrm share/amsn/plugins/base64
@@ -703,9 +745,9 @@ share/pixmaps/tux-32x32.png
 @dirrm share/amsn/plugins/BWidget-1.7.0/lang
 @dirrm share/amsn/plugins/BWidget-1.7.0/images
 @dirrm share/amsn/plugins/BWidget-1.7.0
+@dirrm share/amsn/plugins/applescript
 @dirrm share/amsn/plugins
 @dirrm share/amsn/lang
-@dirrm share/amsn/icons/winicons
 @dirrm share/amsn/icons/96x96
 @dirrm share/amsn/icons/64x64
 @dirrm share/amsn/icons/48x48
