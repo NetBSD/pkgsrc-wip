@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/03 14:51:28 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/06 01:40:56 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -52,8 +52,8 @@ WRKSRC=		${WRKDIR}
 
 MOTIF_TYPE=	openmotif
 
-MAKE_ARGS+=	LOCALDIR=${LOCALBASE} # used to find "zip" and "unzipsfx"
-MAKE_ARGS+=	M4=${LOCALBASE}/bin/gm4
+MAKE_FLAGS+=	LOCALDIR=${LOCALBASE} # used to find "zip" and "unzipsfx"
+MAKE_FLAGS+=	M4=${LOCALBASE}/bin/gm4
 MAKE_ENV+=	ALT_BOOTDIR=${WRKSRC}/jdk1.2.2
 MAKE_ENV+=	ALT_MOTIF_DIR=${MOTIFBASE}
 MAKE_ENV+=	HAVE_ODBC=no
