@@ -1,8 +1,11 @@
-This directory contains the GNU Compiler Collection (GCC) version 3.4.
+This pkg builds the base, C compiler, from the 
+GNU Compiler Collection (GCC) version 3.4. It is
+one of a set of gcc3-*-devel pkgs, and is required
+by all others.
 
-The GNU Compiler Collection is free software.  See the file COPYING for copying
-permission.
+Version 3.4 of gcc is the developmental release. This
+package builds the compiler from the ${SNAPDATE}
+snaphot.
 
-See the Bugs chapter of the GCC Manual for how to report bugs
-usefully.  An online readable version of the manual is in the files
-gcc.info*.
+This set of packages is based on the lang/gcc3-* set
+of packages.
