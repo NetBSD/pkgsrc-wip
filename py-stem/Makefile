@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/04 06:52:00 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/02 21:16:24 blef Exp $
 #
 
 DISTNAME=		PyStem-1.0.4
@@ -10,7 +10,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.alobbs.com//pystem/
 COMMENT=		Binding of the Porter stemming algorithm to Python
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		# defined
 # How the heck do I get Python include directory?!
 CFLAGS+=		-I. -I${PREFIX}/include/python${PYVERSSUFFIX}

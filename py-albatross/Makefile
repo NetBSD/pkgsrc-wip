@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/09/14 22:00:37 marc Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/02 21:16:51 blef Exp $
 #
 
 DISTNAME=	albatross-1.10
@@ -12,7 +12,7 @@ COMMENT=	Toolkit for Stateful Web Applications
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 
 RUNTIME_DIR?=	/var/run/albatross

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/30 20:03:00 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/02 21:10:01 blef Exp $
 #
 
 DISTNAME=	hugov30_unix_source
@@ -15,7 +15,7 @@ COMMENT=	Interactive fiction interpreter with sound and graphics support
 DISTFILE_WX=	hugov30_wxwin_source${EXTRACT_SUFX}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 
 LIBDIR=		${PREFIX}/share/hugo
@@ -37,6 +37,6 @@ post-extract:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hewx ${PREFIX}/bin
 
-.include "../../audio/libmikmod/buildlink2.mk"
-.include "../../x11/wxGTK/buildlink2.mk"
+.include "../../audio/libmikmod/buildlink3.mk"
+.include "../../x11/wxGTK/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

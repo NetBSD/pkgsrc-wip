@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:33:12 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/02 21:08:22 blef Exp $
 #
 
 DISTNAME=		phlib-1.20
@@ -10,7 +10,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.nfluid.com/download/src/
 COMMENT=		API for secure io/net/mem/str functions
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
