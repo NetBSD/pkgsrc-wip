@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1631 2005/01/25 19:46:21 matthewluckie Exp $
-# $NetBSD: Makefile,v 1.1631 2005/01/25 19:46:21 matthewluckie Exp $
+# $Id: Makefile,v 1.1632 2005/01/26 16:52:16 cubidou Exp $
+# $NetBSD: Makefile,v 1.1632 2005/01/26 16:52:16 cubidou Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -586,16 +586,9 @@ SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-Apache-Request
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-Class-Date
-SUBDIR+=	p5-Class-Factory-Util
-SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-Convert-BinHex
 SUBDIR+=	p5-Crypt-SmbHash
 SUBDIR+=	p5-Data-Properties
-SUBDIR+=	p5-DateTime
-SUBDIR+=	p5-DateTime-Event-Cron
-SUBDIR+=	p5-DateTime-Locale
-SUBDIR+=	p5-DateTime-Set
-SUBDIR+=	p5-DateTime-TimeZone
 SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-Frontier-RPC
@@ -610,8 +603,6 @@ SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-PcapUtils
 SUBDIR+=	p5-News-Newsrc
 SUBDIR+=	p5-Parallel-ForkManager
-SUBDIR+=	p5-Set-Crontab
-SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-mysql
