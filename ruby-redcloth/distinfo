@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/04/03 21:26:51 rasputnik Exp $
+$NetBSD: distinfo,v 1.4 2004/04/08 18:49:04 rasputnik Exp $
 
-SHA1 (redcloth-2.0.3.tar.gz) = 24bc37af52f0cd40bee1fb5c208062ce9ec4180d
-Size (redcloth-2.0.3.tar.gz) = 17173 bytes
+SHA1 (redcloth-2.0.4.tar.gz) = d02ced56ef15b7d946ef21f722b8e7480b8a02a8
+Size (redcloth-2.0.4.tar.gz) = 17484 bytes
