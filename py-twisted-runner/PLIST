@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/29 05:02:30 sifu Exp $
+${PYSITELIB}/twisted/runner/__init__.py
+${PYSITELIB}/twisted/runner/__init__.pyc
+${PYSITELIB}/twisted/runner/__init__.pyo
+${PYSITELIB}/twisted/runner/inetd.py
+${PYSITELIB}/twisted/runner/inetd.pyc
+${PYSITELIB}/twisted/runner/inetd.pyo
+${PYSITELIB}/twisted/runner/inetdconf.py
+${PYSITELIB}/twisted/runner/inetdconf.pyc
+${PYSITELIB}/twisted/runner/inetdconf.pyo
+${PYSITELIB}/twisted/runner/inetdtap.py
+${PYSITELIB}/twisted/runner/inetdtap.pyc
+${PYSITELIB}/twisted/runner/inetdtap.pyo
+${PYSITELIB}/twisted/runner/portmap.so
+${PYSITELIB}/twisted/runner/procmon.py
+${PYSITELIB}/twisted/runner/procmon.pyc
+${PYSITELIB}/twisted/runner/procmon.pyo
+${PYSITELIB}/twisted/runner/procutils.py
+${PYSITELIB}/twisted/runner/procutils.pyc
+${PYSITELIB}/twisted/runner/procutils.pyo
+${PYSITELIB}/twisted/runner/portmap.c
+@dirrm ${PYSITELIB}/twisted/runner
