@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/22 09:55:38 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/22 14:22:18 poppnk Exp $
 #
 
 DISTNAME=		bluez-hcidump-1.12
@@ -6,7 +6,7 @@ CATEGORIES=		wip net
 MASTER_SITES=		http://bluez.sf.net/download/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://bluez.sf.net/download/
+HOMEPAGE=		http://www.bluez.org/
 COMMENT=		Bluetooth packet analyzer
 
 USE_BUILDLINK3=		yes
