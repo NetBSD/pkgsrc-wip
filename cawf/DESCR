@@ -1,0 +1,11 @@
+Cawf is a nroff-like text formatter. Cawf provides a usable subset
+of raw nroff capabilities and the styles of the man, me(7), and
+ms(7) macro sets.  New macro files can be added.  And it has some
+rudimentary output device support via a device configuration file
+(and new devices can be added).
+
+Written by Vic Abell, Cawf is a C version of awf, Henry Spencer's
+Amazingly Workable (text) Formatter.
+
+This package also includes a companion output filter, bsfilt(1),
+which is a colcrt-like backspace filter.

@@ -1,0 +1,16 @@
+Is there a make variable expansion for removing like:
+CAWFLIB=${CAWFLIB:S/${PREFIX}\///}
+(for the PLIST)
+
+The macros need a lot of help to be able to support
+NetBSD's -mdoc and even -man. I started working on a 
+new -mandoc but didn't include with this.
+
+This uses its own getopt and regexp. Probably should
+attempt to use the operating system's own.
+
+man.mac needs to be a lot smarter, for example
+.ds CH "Unix Programmer's Manual
+should be set depending on section number,
+like if 9 then: Kernel Manual
+and Unix replaced with operating system name
