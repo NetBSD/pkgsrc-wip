@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/11/29 20:03:09 mpasternak Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/11/29 20:04:22 mpasternak Exp $
 #
 # This Makefile fragment is included by packages that use mingw-w32api-bin.
 
@@ -7,7 +7,7 @@ MINGW_W32API_BIN_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			mingw-w32api-bin
 BUILDLINK_DEPENDS.mingw-w32api-bin?=		mingw-w32api-bin>=2.4
-BUILDLINK_PKGSRCDIR.mingw-w32api-bin?=		../../wip/mingw-w32api-bin-bin
+BUILDLINK_PKGSRCDIR.mingw-w32api-bin?=		../../wip/mingw-w32api-bin
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.mingw-w32api-bin=mingw-w32api-bin
 BUILDLINK_PREFIX.mingw-w32api-bin_DEFAULT=	${CROSSBASE}/i586-mingw
