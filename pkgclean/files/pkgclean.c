@@ -38,7 +38,7 @@
 
 #define PKGSRCDIR	"/usr/pkgsrc"
 
-static const char	skip[] = ".:..:CVS:bootstrap:doc:distfiles:licenses:mk";
+static const char	skip[][] = { ".", "..", "CVS", "bootstrap", "doc", "distfiles", "licenses", "mk" };
 
 static void		pkgclean(const char *);
 static int		checkskip(const struct dirent *);
@@ -61,7 +61,7 @@ pkgclean(const char *path)
 {
 	struct dirent **cat, **list;
 	int ncat, nlist, i, j;
-	char tmp[PATH_MAX], *cmd;
+	char tmp[PATH_MAX];
 	struct stat sb;
 
 	if ((ncat = scandir(path, &cat, checkskip, alphasort)) < 0)
@@ -77,11 +77,9 @@ pkgclean(const char *path)
 			    cat[i]->d_name, list[j]->d_name);
 			if (stat(tmp, &sb) < 0 || !S_ISDIR(sb.st_mode))
 				continue;
-			(void)asprintf(&cmd, "/bin/rm -rf %s", tmp);
-			if (cmd != NULL) {
-				printf("Deleting %s\n", tmp);
-				(void)system(cmd);
-				free(cmd);
+			printf("Deleting %s\n", tmp);
+			if (fork() == 0) {
+				(void)execl("/bin/rm", "-rf", tmp, NULL);
 			}
 			free(list[j]);
 		}
