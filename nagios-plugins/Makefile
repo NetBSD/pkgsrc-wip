@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/29 15:48:25 anewsmurf Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/09 05:04:26 blef Exp $
 #
 
 DISTNAME=	nagios-plugins-${PLUGINSVERSION}
@@ -23,5 +23,5 @@ DEPENDS+=	nagios-base>=1.0:../../wip/nagios-base
 DEPENDS+=	{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/ssh
 .endif
 
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

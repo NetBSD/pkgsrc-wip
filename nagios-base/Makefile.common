@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2004/01/25 02:32:50 grantbeattie Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/05/09 05:04:27 blef Exp $
 #
 
 NAGIOS_USER?=		nagios
@@ -13,7 +13,7 @@ PKG_GROUPS+=	${NAGIOSADM_GROUP}
 PKG_USERS+=	${NAGIOS_USER}:${NAGIOS_GROUP}::Nagios\\ Runtime\\ User
 PKG_USERS+=	${NAGIOSADM_USER}:${NAGIOSADM_GROUP}::Nagios\\ Administrator:${PREFIX}/etc/nagios:${SH}
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 USE_X11=                YES
 GNU_CONFIGURE=          YES
