@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/08 21:13:04 thorman Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/16 00:47:15 minskim Exp $
 #
 
 DISTNAME=	scew-0.3.1
@@ -9,8 +9,8 @@ MAINTAINER=	thorbjorn@jemander.net
 HOMEPAGE=	http://www.nongnu.org/scew/
 COMMENT=	Light-weight DOM-like object model API for Expat
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
-.include "../../textproc/expat/buildlink2.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
