@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/04/23 12:33:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/05 19:48:46 jmmv Exp $
 #
 
-DISTNAME=	gnumeric-1.2.8
+DISTNAME=	gnumeric-1.2.12
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/1.2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,7 +22,7 @@ USE_PERL5=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN:T}
-CONFIGURE_ARGS+=	--with-bonobo --with-gnome-db
+CONFIGURE_ARGS+=	--without-bonobo --with-gnome-db
 CONFIGURE_ARGS+=	--without-psiconv --without-guile
 LIBS+=      		-lunicode
 
