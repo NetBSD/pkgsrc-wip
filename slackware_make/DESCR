@@ -1,0 +1,9 @@
+make (GNU make utility to maintain groups of programs)
+
+This is the GNU implementation of make, which was written by Richard
+Stallman and Roland McGrath.  The purpose of the make utility is to
+determine automatically which pieces of a large program need to be 
+recompiled, and issue the commands to recompile them.  
+
+This is needed to compile just about any major C program, including
+the Linux kernel.
