@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/04 14:23:16 jgoamakf Exp $
+$NetBSD: distinfo,v 1.2 2003/12/20 11:03:44 grantbeattie Exp $
 
-SHA1 (thunderbird-source-0.3.tar.bz2) = 44eeddfec409738266b7df7bd91010a14089241e
-Size (thunderbird-source-0.3.tar.bz2) = 30518769 bytes
-SHA1 (libart_lgpl.tar.gz) = 8677b826eec871ee6737e24ce3fb61555d3ff3ef
-Size (libart_lgpl.tar.gz) = 124493 bytes
+SHA1 (thunderbird-source-0.4.tar.bz2) = e84fab22248c8052e110272204214ff3a3ad0690
+Size (thunderbird-source-0.4.tar.bz2) = 30968925 bytes
 SHA1 (patch-ab) = 36fa52e9d31e596fac3ff797a6299c5a71c34550
 SHA1 (patch-ac) = ec539828930a98d813f783458bb8b7fabfaa24b3
 SHA1 (patch-ad) = 80e873748f5fcb9fbf1f179d1f68c4e9568aece9
