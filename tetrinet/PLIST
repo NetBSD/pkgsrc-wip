@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/02 06:01:01 xtraeme Exp $
+bin/tetrinet
+bin/tetrinet-server
+share/tetrinet/doc/README
+share/tetrinet/doc/tetrinet.txt
+@dirrm share/tetrinet/doc
+@dirrm share/tetrinet
