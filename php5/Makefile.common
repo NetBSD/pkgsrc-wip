@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2004/05/11 14:06:34 poppnk Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/05/22 15:17:21 poppnk Exp $
 #
 
 DISTNAME?=		php-${PHP5_VERSION}
@@ -12,12 +12,9 @@ USE_GNU_TOOLS+=	make
 PHP5_VERSION=	5.0.0RC2
 CONFLICTS+=		php-[34]*
 
-CONF_FILES=	${PREFIX}/etc/
+EGDIR=		${PREFIX}/
+CONF_FILES=	${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 BUILD_DEFS=	USE_INET6 PHP5_WITHOUT_NETWORK
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/php.ini-recommended \
-		${PREFIX}/etc/php.ini
 
 .include "../../mk/bsd.prefs.mk"
 
