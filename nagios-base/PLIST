@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 00:30:40 marmfield Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/01 08:30:14 cubidou Exp $
 bin/nagios
 bin/p1.pl
 etc/nagios/nagios-setup.sh
@@ -202,8 +202,6 @@ share/nagios/docs/xoddefault.html
 share/nagios/docs/xodtemplate.html
 share/nagios/docs/xpddefault.html
 share/nagios/docs/xpdfile.html
-share/nagios/images/logofullsize.gif
-share/nagios/images/sblogo.gif
 share/nagios/images/ack.gif
 share/nagios/images/command.png
 share/nagios/images/comment.gif
@@ -225,6 +223,7 @@ share/nagios/images/history.gif
 share/nagios/images/hostevent.gif
 share/nagios/images/info.png
 share/nagios/images/left.gif
+share/nagios/images/logofullsize.gif
 share/nagios/images/logofullsize.jpg
 share/nagios/images/logos/nagios.gd2
 share/nagios/images/logos/nagios.gif
@@ -245,6 +244,7 @@ share/nagios/images/restart.gif
 share/nagios/images/right.gif
 share/nagios/images/sbconfig.png
 share/nagios/images/sbgeneral.png
+share/nagios/images/sblogo.gif
 share/nagios/images/sblogo.jpg
 share/nagios/images/sbmonitor.png
 share/nagios/images/sbreport.png
