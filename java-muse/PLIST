@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/21 00:22:53 poppnk Exp $
+share/classpath/muse/bsh.jar
+share/classpath/muse/commons-logging.jar
+share/classpath/muse/crimson-1.1.3.jar
+share/classpath/muse/jakarta-oro.jar
+share/classpath/muse/jdom.jar
+share/classpath/muse/jsse.jar
+share/classpath/muse/log4j.jar
+share/classpath/muse/muse-examples.jar
+share/classpath/muse/muse.jar
+share/classpath/muse/xml-apis.jar
+share/classpath/muse/xpp3.jar
