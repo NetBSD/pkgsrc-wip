@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.54 2003/04/10 18:53:53 jmmv Exp $
-# $NetBSD: Makefile,v 1.54 2003/04/10 18:53:53 jmmv Exp $
+# $Id: Makefile,v 1.55 2003/04/10 19:21:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.55 2003/04/10 19:21:18 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -7,6 +7,7 @@ SUBDIR+=	PPower4
 SUBDIR+=	allegro
 SUBDIR+=	aolserver
 SUBDIR+=	autoproject
+SUBDIR+=	billardgl
 SUBDIR+=	byacc
 SUBDIR+=	chksniff
 SUBDIR+=	cvsd
