@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/27 22:56:58 xtraeme Exp $
+
+SHA1 (pam_pop3-1.0.tar.gz) = 4037106153d4c498a8e82ab3e2916fe21e9b1c5e
+Size (pam_pop3-1.0.tar.gz) = 5271 bytes
+SHA1 (patch-aa) = 7bd0d682c83871844d38ebb69fa7da649a13c7cc
