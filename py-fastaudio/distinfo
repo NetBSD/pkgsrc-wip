@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/11/24 01:10:46 mpasternak Exp $
+$NetBSD: distinfo,v 1.4 2003/11/24 01:47:23 mpasternak Exp $
 
 SHA1 (fastaudio.tar.gz) = 33fb0d8ca0daf356cacc3cff5ee1674f16d31c98
 Size (fastaudio.tar.gz) = 179086 bytes
@@ -9,5 +9,5 @@ SHA1 (patch-ab) = 8c0dadc11ebe6c3558e5b88ba68b85859674b7c5
 SHA1 (patch-ac) = e6e8e11d7952be8347a6f3289e62b24ca56bf3c6
 SHA1 (patch-ad) = 5a343e721ae183facc58195026c7e5c49536632a
 SHA1 (patch-ae) = c2744f10d80a478ad571fcce82bf301d6c50cb59
-SHA1 (patch-af) = 302d757bb210f929adba3e326a0807e9e8bad053
+SHA1 (patch-af) = 1aee5e79bced170a70899bd636bdc99a14b1e717
 SHA1 (patch-ag) = 3a958b3ee725115937c8105a81597bc46c719696
