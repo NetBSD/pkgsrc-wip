@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/04/05 13:30:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/02/13 20:46:49 rillig Exp $
 #
 
 DISTNAME=	pinball-0.2.0a
-WRKSRC=		${WRKDIR}/pinball-0.2.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pinball/}
 
@@ -13,6 +12,7 @@ COMMENT=	Pinball using the Allegro game library
 USE_BUILDLINK3= YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=  YES
+WRKSRC=		${WRKDIR}/pinball-0.2.0
 
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
