@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/11/29 03:22:56 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.2 2003/11/29 03:37:32 mpasternak Exp $
 
 License key for OpenEdition can be obtained from:
 
@@ -8,5 +8,11 @@ License key for OpenEdition can be obtained from:
 Binaries have been installed in:
 
 	${EMULOPTDIR}/kylix/bin/
+
+After obtaining license key, do as the registration e-mail says and run:
+
+	${EMULOPTDIR}/kylix/bin/kreg
+
+[TODO: kreg currently doesn't seem to work on my NetBSD-stable box]
 
 ===========================================================================
