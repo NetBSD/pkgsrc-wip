@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/13 15:38:19 cetrox Exp $
+
+SHA1 (urlgfe-0.7.1.tar.gz) = c72ad9ba3e63dfe9a20637536b92d9b4bb819169
+Size (urlgfe-0.7.1.tar.gz) = 464100 bytes
+SHA1 (patch-aa) = e1e59224e9e2b6c8844972b0156e2d9363b70459
+SHA1 (patch-ab) = aa7c39a16027dbf7a07ecfce5a04b6bb81f942e1
