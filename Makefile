@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1152 2004/03/31 18:05:12 minskim Exp $
-# $NetBSD: Makefile,v 1.1152 2004/03/31 18:05:12 minskim Exp $
+# $Id: Makefile,v 1.1153 2004/04/01 04:54:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1153 2004/04/01 04:54:37 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -253,7 +253,6 @@ SUBDIR+=	ilohamail
 SUBDIR+=	imposter
 SUBDIR+=	interbase-docs
 SUBDIR+=	interchange
-SUBDIR+=	ion2
 SUBDIR+=	iptables
 SUBDIR+=	isc-dhclient
 SUBDIR+=	isc-dhcpd
