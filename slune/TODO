@@ -1,5 +1,13 @@
-$Id: TODO,v 1.3 2003/11/22 15:14:53 mpasternak Exp $
+$Id: TODO,v 1.4 2003/11/29 05:59:58 mpasternak Exp $
 
-This package has a bit borked setup.py script and it doesn't install
-"slune" module in ${PYSITELIB}
+doc@mainframe:~> slune
+* Slune * Slune lives in /usr/pkg/share
+Traceback (most recent call last):
+  File "/usr/pkg/bin/slune", line 36, in ?
+    import slune.globdef as globdef
+  File "/usr/pkg/lib/python2p3/site-packages/slune/globdef.py", line 51, in ?
+    gettext.translation("slune", LOCALEDIR, ("en",)).install(1)
+  File "/usr/pkg/lib/python2p3/gettext.py", line 407, in translation
+    raise IOError(ENOENT, 'No translation file found for domain', domain)
+IOError: [Errno 2] No translation file found for domain: 'slune'
 

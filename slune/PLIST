@@ -1,4 +1,24 @@
-@comment $NetBSD: PLIST,v 1.2 2003/11/22 15:14:11 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/11/29 05:59:58 mpasternak Exp $
+${PYSITELIB}/slune/__init__.py
+${PYSITELIB}/slune/character.py
+${PYSITELIB}/slune/circuit_generator.py
+${PYSITELIB}/slune/controler.py
+${PYSITELIB}/slune/fight.py
+${PYSITELIB}/slune/freestyle.py
+${PYSITELIB}/slune/globdef.py
+${PYSITELIB}/slune/gui.py
+${PYSITELIB}/slune/gui_gl.py
+${PYSITELIB}/slune/gui_option.py
+${PYSITELIB}/slune/hunt.py
+${PYSITELIB}/slune/ia_algogen.py
+${PYSITELIB}/slune/init_editobj.py
+${PYSITELIB}/slune/level.py
+${PYSITELIB}/slune/player.py
+${PYSITELIB}/slune/race.py
+${PYSITELIB}/slune/race_algogen.py
+${PYSITELIB}/slune/race_algogen2.py
+${PYSITELIB}/slune/sound.py
+${PYSITELIB}/slune/videosequence.py
 bin/slune
 share/slune/images/slune-splash.pgm
 share/slune/images/slune.16.png
@@ -224,6 +244,7 @@ share/slune/worlds/world-crashfunkel.data
 share/slune/worlds/world-indusmeeting.data
 share/slune/worlds/world-racinde.data
 share/slune/worlds/world-ridepark.data
+@dirrm ${PYSITELIB}/slune
 @dirrm share/slune/worlds
 @dirrm share/slune/sounds
 @dirrm share/slune/shapes
