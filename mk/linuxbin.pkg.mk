@@ -1,6 +1,6 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.3 2003/11/28 21:22:30 mpasternak Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.4 2003/11/28 22:02:45 mpasternak Exp $
 # 
-# $Id: linuxbin.pkg.mk,v 1.3 2003/11/28 21:22:30 mpasternak Exp $
+# $Id: linuxbin.pkg.mk,v 1.4 2003/11/28 22:02:45 mpasternak Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 # Currently supports only RPMs, but should be good enough to make
@@ -11,6 +11,9 @@
 #
 #
 # (C) 2003 Michal Pasternak <dotz@irc.pl>
+
+.ifndef LINUXBIN_MK
+LINUXBIN_MK=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -54,6 +57,12 @@ LINUX_USE_X11?=			NO
 # could try adding more
 LINUX_BINPKG_FMT?=		rpm
 
+# in the future:
+# LINUX_BINPKG_FMT?=		deb
+
+# for packages, that only copy binary files and don't need rpm/deb pre-parsing
+# LINUX_BINPKG_FMT?=		plain
+
 # insert paths to binary Linux files you want to install
 LINUX_BINPKG_PATH?=	${WRKSRC}
 LINUX_BINPKG_FILES?=    # empty
@@ -67,7 +76,7 @@ LINUX_BINPKG_FILES?=    # empty
 .if ( ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFlyBSD")
 DEPENDS+=	${LINUX_BASE_PREFIX}_compat-[0-9]*:../../emulators/${LINUX_BASE_PREFIX}_compat
 .if ${LINUX_USE_X11} == "yes" || ${LINUX_USE_X11} == "YES"
-DEPENDS+=	${LINUX_BASE_PREFIX}-[0-9]*:../../emulators/${LINUX_BASE_PREFIX}_x11
+DEPENDS+=	${LINUX_BASE_PREFIX}_x11-[0-9]*:../../emulators/${LINUX_BASE_PREFIX}_x11
 .endif
 .endif
 
@@ -76,9 +85,9 @@ DEPENDS+=	${LINUX_BASE_PREFIX}-[0-9]*:../../emulators/${LINUX_BASE_PREFIX}_x11
 #
 
 NO_BUILD?=		YES
-PLIST_SRC?=		${WRKDIR}/PLIST_DYNAMIC
 
 # To EMULSUBDIR or not to EMULSUBDIR... this is a question.
+#
 # In future, the user should be able to:
 #
 # - have different Linux bases on his/hers machine - via changing variable,
@@ -98,14 +107,19 @@ PLIST_SRC?=		${WRKDIR}/PLIST_DYNAMIC
 EMULSUBDIR?=		emul/linux
 EMULDIR?=		${PREFIX}/${EMULSUBDIR}
 
-MESSAGE_SUBST+=		EMULDIR=${EMULDIR}
+PLIST_SUBST+=		EMULDIR=${EMULDIR} EMULSUBDIR=${EMULSUBDIR}
+MESSAGE_SUBST+=		EMULDIR=${EMULDIR} EMULSUBDIR=${EMULSUBDIR}
 
 #
 # now, do the _actual_ work:
+#
 # TODO: pkglint is somehow picky about this, anyone could correct it?
+#
+# TODO: add automatic ldconfig for "plain" type
 #
 
 .if ${LINUX_BINPKG_FMT}=="rpm"
+PLIST_SRC?=		${WRKDIR}/PLIST_DYNAMIC
 RPM2PKG?=		${PREFIX}/sbin/rpm2pkg
 BUILD_DEPENDS+=		rpm2pkg>=1.3:../../pkgtools/rpm2pkg
 RPM2PKGARGS=		-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
@@ -128,11 +142,19 @@ do-install:
 	@if ${GREP} -q 'lib.*\.so' ${PLIST_SRC}; then \
 	  ${ECHO_MSG} "===> [Automatic Linux shared object handling]"; \
 	  ${EMULDIR}/sbin/ldconfig -r ${EMULDIR}; \
-	  ${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" >>${PLIST_SRC}; \
-	  ${ECHO} "@unexec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR} 2>/dev/null" >>${PLIST_SRC}; \
+	  ${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" >> ${PLIST_SRC}; \
+	  ${ECHO} "@unexec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR} 2>/dev/null" >> ${PLIST_SRC}; \
 	fi
 .endif
-
 .else
-.error "Please add support for this binaries"!
+.if ${LINUX_BINPKG_FMT}=="plain"
+.if !target(do-install)
+do-install:
+	@echo "Please provide do-install target for plain binaries!"
+	@exit -1       	
+.endif
+.else
+.error "Please add support for this type of packages!"
+.endif
+.endif
 .endif
