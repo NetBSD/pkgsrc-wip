@@ -1,2 +1,7 @@
-About to be added as security/libassuan to pkgsrc.
-wip is not current.
+Works when tested by itself.
+
+When tested with Kmail:
+  OpenPGP/MIME works
+  SMIME signatures work
+  SMIME encryption fails
+    (at least with my DoD PKI certs)
