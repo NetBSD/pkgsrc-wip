@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2005/01/09 09:30:29 mreriksson Exp $
+
+--- configure.in.orig	2004-04-12 23:03:13.000000000 +0200
++++ configure.in
+@@ -17,7 +17,7 @@ AC_DISABLE_STATIC
+ AC_PROG_LIBTOOL
+ 
+ AC_CHECK_LIB(ldap,ldap_init,,AC_MSG_ERROR(You must have openldap libraries installed.))
+-AC_CHECK_HEADER(sasl/sasl.h,, AC_MSG_ERROR(You must have the libsasl2-dev package installed))
++AC_CHECK_HEADER(sasl.h,, AC_MSG_ERROR(You must have the libsasl2-dev package installed))
+ 
+ dnl Info for the RPM
+ MULTISYNC_TOP="../.."
+@@ -29,5 +29,5 @@ AC_SUBST(MULTISYNC_VERSION)
+ AC_OUTPUT([
+ Makefile
+ src/Makefile
+-${MULTISYNC_TOP}/specs/multisync-ldap.spec
++../../specs/multisync-ldap.spec
+ ])

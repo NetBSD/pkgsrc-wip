@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2005/01/09 09:30:29 mreriksson Exp $
+
+SHA1 (multisync-0.82-1.tar.bz2) = 2960618ff1ebf62513854394f0b397c5e2066c62
+Size (multisync-0.82-1.tar.bz2) = 1432107 bytes
+SHA1 (patch-aa) = aabc027e8da80ab93a52a2da2a0c42493a59efd9
+SHA1 (patch-ab) = eff9d18965363b7bf3fc97cc38e85869e49d0c6c
+SHA1 (patch-ac) = 6a77a992795a6f7eb8f1e90ebd5df6b9e8f93145
