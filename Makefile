@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.60 2003/04/11 15:46:51 jmmv Exp $
-# $NetBSD: Makefile,v 1.60 2003/04/11 15:46:51 jmmv Exp $
+# $Id: Makefile,v 1.61 2003/04/11 16:06:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.61 2003/04/11 16:06:04 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -29,7 +29,6 @@ SUBDIR+=	ickle
 SUBDIR+=	ike-scan
 SUBDIR+=	ion-devel
 SUBDIR+=	ion-dock
-SUBDIR+=	ircservices
 SUBDIR+=	jdk-openjit
 SUBDIR+=	jdk12
 SUBDIR+=	jdk12-openjit
