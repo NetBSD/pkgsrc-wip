@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/10/19 15:00:06 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/10/19 15:19:27 adrian_p Exp $
 share/msf/docs/7f8d5320.0
 share/msf/docs/BUGS
 share/msf/docs/COPYING
@@ -63,6 +63,8 @@ share/msf/exploits/ut2004_secure_linux.pm
 share/msf/exploits/ut2004_secure_win32.pm
 share/msf/exploits/warftpd_165_pass.pm
 share/msf/exploits/windows_ssl_pct.pm
+share/msf/extras/Net_SSLeay.pm-1.23.tar.gz
+share/msf/extras/Term-ReadLine-Gnu-1.14.tar.gz
 share/msf/lib/Msf/PayloadComponent/InlineEggPayload.pm
 share/msf/lib/Msf/PayloadComponent/CommandPayload.pm
 share/msf/lib/Msf/PayloadComponent/Win32Execute.pm
@@ -507,8 +509,9 @@ share/msf/src/shellcode/hexify.sh
 @dirrm share/msf/src/shellcode/bsdi
 @dirrm share/msf/src/shellcode
 @dirrm share/msf/src
-@dirrm share/msf/encoders             
-@dirrm share/msf/exploits             
+@dirrm share/msf/encoders
+@dirrm share/msf/exploits
+@dirrm share/msf/extras
 @dirrm share/msf/lib/Msf/PayloadComponent  
 @dirrm share/msf/lib/Msf/Socket       
 @dirrm share/msf/lib/Msf              

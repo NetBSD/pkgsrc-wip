@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2004/10/19 15:00:06 adrian_p Exp $
+$NetBSD: MESSAGE,v 1.4 2004/10/19 15:19:28 adrian_p Exp $
 
 The Metasploit Framework and associated scripts are now installed in:
 
@@ -7,5 +7,9 @@ The Metasploit Framework and associated scripts are now installed in:
 
 You may now wish to run ${MSFDIR}/msfupdate to get the latest 
 updates to the package from metasploit.com.
+
+NOTE: If scripts are updated from metasploit.com the path to perl in
+the scripts will be overwritten with the default value of "/usr/bin/perl".
+Please be aware of this after downloading updates.
 
 ===========================================================================

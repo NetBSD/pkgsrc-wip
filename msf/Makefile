@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/19 15:00:06 adrian_p Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/19 15:19:28 adrian_p Exp $
 #
 
 DISTNAME=	framework-2.2
@@ -51,6 +51,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${MSFDIR}/data
 	${INSTALL_DATA_DIR} ${MSFDIR}/encoders
 	${INSTALL_DATA_DIR} ${MSFDIR}/exploits
+	${INSTALL_DATA_DIR} ${MSFDIR}/extras
 	${INSTALL_DATA_DIR} ${MSFDIR}/lib
 	${INSTALL_DATA_DIR} ${MSFDIR}/nops
 	${INSTALL_DATA_DIR} ${MSFDIR}/payloads
@@ -63,6 +64,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/data/* ${MSFDIR}/data
 	${INSTALL_DATA} ${WRKSRC}/encoders/*.pm ${MSFDIR}/encoders
 	${INSTALL_DATA} ${WRKSRC}/exploits/*.pm ${MSFDIR}/exploits
+	${INSTALL_DATA} ${WRKSRC}/extras/*.tar.gz ${MSFDIR}/extras
 
 	cd ${PREFIX}/share/doc && ${LN} -s ${MSFDIR}/docs msf
 	cd ${WRKSRC}/lib && ${PAX} -rw . ${MSFDIR}/lib
