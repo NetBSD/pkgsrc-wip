@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/09/07 22:36:15 cetrox Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/20 02:28:59 cetrox Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FOX_BUILDLINK3_MK:=	${FOX_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	fox
 
 .if !empty(FOX_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.fox+=	fox>=1.2.9
-BUILDLINK_PKGSRCDIR.fox?=	../../wip/fox.import
+BUILDLINK_PKGSRCDIR.fox?=	../../wip/fox
 .endif	# FOX_BUILDLINK3_MK
 
 .include "../../graphics/jpeg/buildlink3.mk"
