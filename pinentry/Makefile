@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/15 22:02:48 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/17 10:09:19 johnrshannon Exp $
 #
 
 DISTNAME=		pinentry-0.7.1
@@ -37,4 +37,5 @@ post-install:
 .if !empty(PKG_OPTIONS:Mgtk)
 .include "../../x11/gtk/buildlink3.mk"
 .endif
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
