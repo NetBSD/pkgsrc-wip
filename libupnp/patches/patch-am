@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+$NetBSD: patch-am,v 1.2 2005/03/16 12:15:28 obache Exp $
 
 --- src/genlib/timer_thread/Makefile.orig	2001-06-15 09:21:34.000000000 +0900
 +++ src/genlib/timer_thread/Makefile
@@ -7,7 +7,19 @@ $NetBSD: patch-am,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
  TARGET = $(lib_dir)/timer_thread.o
  
 -CFLAGS = -c -I $(upnp_src_inc_dir) -I$(upnp_inc_dir) 
-+CFLAGS = -c -I $(upnp_src_inc_dir) -I$(upnp_inc_dir) $(PTHREAD_CFLAGS)
++CFLAGS = -c -I $(upnp_src_inc_dir) -I$(upnp_inc_dir)
  
  ifeq ($(WEB),1)
  CFLAGS += -DINTERNAL_WEB_SERVER
+@@ -59,9 +59,9 @@ CFLAGS += -DINCLUDE_DEVICE_APIS
+ endif
+ 
+ ifeq ($(DEBUG),1)
+-CFLAGS += -g -O -D_REENTRANT -DDEBUG -fpic -Wall
++CFLAGS += -g -O $(PTHREAD_CFLAGS) -DDEBUG -fpic -Wall
+ else
+-CFLAGS += -O2 -D_REENTRANT -DNO_DEBUG -fpic -Wall
++CFLAGS += -O2 $(PTHREAD_CFLAGS) -DNO_DEBUG -fpic -Wall
+ endif
+ 
+ all: $(TARGET)

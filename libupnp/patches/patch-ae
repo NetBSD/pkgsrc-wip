@@ -1,13 +1,16 @@
-$NetBSD: patch-ae,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+$NetBSD: patch-ae,v 1.2 2005/03/16 12:15:28 obache Exp $
 
 --- src/genlib/client_table/Makefile.orig	2001-06-15 09:21:34.000000000 +0900
 +++ src/genlib/client_table/Makefile
-@@ -55,7 +55,7 @@ lib_dir = $(upnp_src_dir)/lib
+@@ -70,9 +70,9 @@ CFLAGS += -DINCLUDE_DEVICE_APIS
+ endif
  
- TARGET = $(lib_dir)/client_table.o
+ ifeq ($(DEBUG),1)
+-CFLAGS += -g -O -D_REENTRANT -DDEBUG
++CFLAGS += -g -O  $(PTHREAD_CFLAGS) -DDEBUG
+ else
+-CFLAGS += -O2 -D_REENTRANT -DNO_DEBUG
++CFLAGS += -O2  $(PTHREAD_CFLAGS) -DNO_DEBUG
+ endif
  
--CFLAGS = -I$(upnp_src_inc_dir) -I$(upnp_inc_dir) -I$(xerces_install)/include -fpic -Wall -c
-+CFLAGS = -I$(upnp_src_inc_dir) -I$(upnp_inc_dir) -I$(xerces_install)/include -fpic -Wall -c $(PTHREAD_CFLAGS)
- 
- ifeq ($(WEB),1)
- CFLAGS += -DINTERNAL_WEB_SERVER
+ all: $(TARGET)
