@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.434 2003/09/08 13:51:23 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.434 2003/09/08 13:51:23 thomasklausner Exp $
+# $Id: Makefile,v 1.435 2003/09/08 14:30:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.435 2003/09/08 14:30:45 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -151,7 +151,6 @@ SUBDIR+=	ht2html
 SUBDIR+=	httrack
 SUBDIR+=	ices
 SUBDIR+=	icmpchat
-SUBDIR+=	idesk
 SUBDIR+=	idled
 SUBDIR+=	igal
 SUBDIR+=	iisemulator

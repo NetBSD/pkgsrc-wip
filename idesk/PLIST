@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/08 14:24:49 jmmv Exp $
-bin/idesk
-share/doc/idesk/README
-@dirrm share/doc/idesk
