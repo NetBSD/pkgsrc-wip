@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.447 2003/09/14 19:15:21 jmmv Exp $
-# $NetBSD: Makefile,v 1.447 2003/09/14 19:15:21 jmmv Exp $
+# $Id: Makefile,v 1.448 2003/09/16 04:53:46 blef Exp $
+# $NetBSD: Makefile,v 1.448 2003/09/16 04:53:46 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -85,6 +85,9 @@ SUBDIR+=	directory-administrator
 SUBDIR+=	dnsmasq
 SUBDIR+=	dpkg
 SUBDIR+=	drweb
+SUBDIR+=	drweb-clients-shared
+SUBDIR+=	drweb-dc
+SUBDIR+=	drweb-smf
 SUBDIR+=	drwright
 SUBDIR+=	dumb
 SUBDIR+=	dzt
@@ -379,7 +382,6 @@ SUBDIR+=	wmnetload
 SUBDIR+=	words
 SUBDIR+=	xawtv
 SUBDIR+=	xchm
-SUBDIR+=	xcircuit3
 SUBDIR+=	xevil
 SUBDIR+=	xfce4
 SUBDIR+=	xfce4-artwork
