@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1.1.1 2004/08/05 05:33:25 dillo Exp $
+
+--- unzip.h.orig	2003-03-25 22:30:06.000000000 +0100
++++ unzip.h
+@@ -49,6 +49,10 @@ extern "C" {
+ #include "zlib.h"
+ #endif
+ 
++#ifndef OF
++#define OF(X)	X
++#endif
++
+ #if defined(STRICTUNZIP) || defined(STRICTZIPUNZIP)
+ /* like the STRICT of WIN32, we define a pointer that cannot be converted
+     from (void*) without cast */

@@ -1,0 +1,60 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/08/05 05:33:25 dillo Exp $
+
+--- Makefile.in.orig	2004-06-15 22:02:26.000000000 +0200
++++ Makefile.in
+@@ -48,7 +48,8 @@ host_triplet = @host@
+ @ALLEGRO_WIN32_TRUE@am__append_10 = osd_win_cd.c osd_win_snd.c osd_keyboard.c osd_win_allegro_gfx.c osd_win_allegro_machine.c
+ @ALLEGRO_DJGPP_TRUE@am__append_11 = osd_dos_cd.c osd_dos_snd.c osd_keyboard.c osd_dos_gfx.c osd_dos_machine.c
+ @SDL_FREEBSD_TRUE@am__append_12 = osd_freebsd_cd.c osd_linux_snd.c osd_keyboard.c osd_sdl_gfx.c osd_linux_sdl_machine.c 
+-@SDL_SOLARIS_TRUE@am__append_13 = osd_solaris_cd.c osd_linux_snd.c osd_keyboard.c osd_sdl_gfx.c osd_unix_sdl_machine.c
++@SDL_NETBSD_TRUE@am__append_13 = osd_freebsd_cd.c osd_linux_snd.c osd_keyboard.c osd_sdl_gfx.c osd_linux_sdl_machine.c 
++@SDL_SOLARIS_TRUE@am__append_14 = osd_solaris_cd.c osd_linux_snd.c osd_keyboard.c osd_sdl_gfx.c osd_unix_sdl_machine.c
+ ACLOCAL = @ACLOCAL@
+ ALLEGRO_DJGPP_FALSE = @ALLEGRO_DJGPP_FALSE@
+ ALLEGRO_DJGPP_TRUE = @ALLEGRO_DJGPP_TRUE@
+@@ -112,6 +113,8 @@ SDL_CFLAGS = @SDL_CFLAGS@
+ SDL_CONFIG = @SDL_CONFIG@
+ SDL_FREEBSD_FALSE = @SDL_FREEBSD_FALSE@
+ SDL_FREEBSD_TRUE = @SDL_FREEBSD_TRUE@
++SDL_NETBSD_FALSE = @SDL_NETBSD_FALSE@
++SDL_NETBSD_TRUE = @SDL_NETBSD_TRUE@
+ SDL_LIBS = @SDL_LIBS@
+ SDL_LINUX_FALSE = @SDL_LINUX_FALSE@
+ SDL_LINUX_TRUE = @SDL_LINUX_TRUE@
+@@ -177,7 +180,7 @@ hugo_SOURCES = pce.c hard_pce.c sprite.c
+   subs_eagle.c cd.c hcd.c lsmp3.c sound.c mix.c followop.c dis.c optable.c \
+   view_inf.c lang.c list_rom.c iniconfig.c trans_fx.c cheat.c gfx.c bp.c bios.c \
+   hugo.c pcecd.c utils.c\
+-$(am__append_1) $(am__append_2) $(am__append_3) $(am__append_5) $(am__append_6) $(am__append_7) $(am__append_8) $(am__append_9) $(am__append_10) $(am__append_11) $(am__append_12) $(am__append_13)
++$(am__append_1) $(am__append_2) $(am__append_3) $(am__append_5) $(am__append_6) $(am__append_7) $(am__append_8) $(am__append_9) $(am__append_10) $(am__append_11) $(am__append_12) $(am__append_13) $(am__append_13) $(am__append_14)
+ 
+ @GTK_TRUE@hugo_LDADD = @GTK_LIBS@
+ @GTK_TRUE@hugod_LDADD = @GTK_LIBS@
+@@ -263,7 +266,11 @@ am__hugo_SOURCES_DIST = pce.c hard_pce.c
+ @SDL_FREEBSD_TRUE@	osd_linux_snd.$(OBJEXT) \
+ @SDL_FREEBSD_TRUE@	osd_keyboard.$(OBJEXT) osd_sdl_gfx.$(OBJEXT) \
+ @SDL_FREEBSD_TRUE@	osd_linux_sdl_machine.$(OBJEXT)
+-@SDL_SOLARIS_TRUE@am__objects_12 = osd_solaris_cd.$(OBJEXT) \
++@SDL_NETBSD_TRUE@am__objects_12 = osd_freebsd_cd.$(OBJEXT) \
++@SDL_NETBSD_TRUE@	osd_linux_snd.$(OBJEXT) \
++@SDL_NETBSD_TRUE@	osd_keyboard.$(OBJEXT) osd_sdl_gfx.$(OBJEXT) \
++@SDL_NETBSD_TRUE@	osd_linux_sdl_machine.$(OBJEXT)
++@SDL_SOLARIS_TRUE@am__objects_14 = osd_solaris_cd.$(OBJEXT) \
+ @SDL_SOLARIS_TRUE@	osd_linux_snd.$(OBJEXT) \
+ @SDL_SOLARIS_TRUE@	osd_keyboard.$(OBJEXT) osd_sdl_gfx.$(OBJEXT) \
+ @SDL_SOLARIS_TRUE@	osd_unix_sdl_machine.$(OBJEXT)
+@@ -279,13 +286,13 @@ am_hugo_OBJECTS = pce.$(OBJEXT) hard_pce
+ 	$(am__objects_2) $(am__objects_3) $(am__objects_4) \
+ 	$(am__objects_5) $(am__objects_6) $(am__objects_7) \
+ 	$(am__objects_8) $(am__objects_9) $(am__objects_10) \
+-	$(am__objects_11) $(am__objects_12)
++	$(am__objects_11) $(am__objects_12) $(am__objects_14)
+ hugo_OBJECTS = $(am_hugo_OBJECTS)
+ @GTK_TRUE@hugo_DEPENDENCIES =
+ @GTK_FALSE@hugo_DEPENDENCIES =
+ am__hugod_SOURCES_DIST = hugod.c netplay.c support.c interface-server.c \
+ 	callbacks-server.c gtk_main-server.c
+ @GTK_TRUE@am__objects_13 = support.$(OBJEXT) interface-server.$(OBJEXT) \
+ @GTK_TRUE@	callbacks-server.$(OBJEXT) gtk_main-server.$(OBJEXT)
+ am_hugod_OBJECTS = hugod.$(OBJEXT) netplay.$(OBJEXT) $(am__objects_13)
+ hugod_OBJECTS = $(am_hugod_OBJECTS)

@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/05 05:33:24 dillo Exp $
+bin/hugo
+bin/hugod
+share/hugo/pixmaps/cdrom.png
+share/hugo/pixmaps/gnome-fs-network-24.png
+share/hugo/pixmaps/gnome-fs-network.png
+share/hugo/pixmaps/joystick.png
+share/hugo/pixmaps/keyboard.png
+share/hugo/pixmaps/pce.xpm
+@dirrm share/hugo/pixmaps
+@dirrm share/hugo

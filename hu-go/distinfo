@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/05 05:33:24 dillo Exp $
+
+SHA1 (hugo-2.11-preview.tar.gz) = 3c3831ceac84ae759978d30d76f1ea051cf03079
+Size (hugo-2.11-preview.tar.gz) = 435310 bytes
+SHA1 (patch-ab) = e3399cc8f398dbf2b8fa76da39b137a82a58f43e
+SHA1 (patch-ac) = 82f34fdfd0491b6d1469b92845aa4c3a224aa006
+SHA1 (patch-ad) = 2f89171788e498117af962c0a0069082e4434dda
+SHA1 (patch-ae) = 30e64367e0661b8cb9ca6205809bc31d0d55e5e1
+SHA1 (patch-af) = 1f33551afd2931b86cc76d2a88841643895a9e7c
+SHA1 (patch-ag) = adc4205e2752c418237b8f3e02fbb23910a1ffaa
+SHA1 (patch-ah) = 4b9e14bdb7fcda13c2cb5a0149f55e186bde0a68
+SHA1 (patch-ai) = f03220b596bbd1497d36b9ba3ae3af972b103eab

@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/08/05 05:33:25 dillo Exp $
+
+--- mix.c.orig	2003-11-12 22:39:40.000000000 +0100
++++ mix.c
+@@ -3,7 +3,7 @@
+ #if defined(SDL)
+ #include <SDL_audio.h>
+ 
+-#if defined(LINUX) || defined(FREEBSD)
++#if defined(LINUX) || defined(FREEBSD) || defined(NETBSD)
+   #include "osd_linux_sdl_machine.h"
+ #elif defined(SOLARIS)
+   #include "osd_unix_sdl_machine.h"
