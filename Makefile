@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.388 2003/08/22 14:59:22 id9848949 Exp $
-# $NetBSD: Makefile,v 1.388 2003/08/22 14:59:22 id9848949 Exp $
+# $Id: Makefile,v 1.389 2003/08/23 20:04:48 adrian_p Exp $
+# $NetBSD: Makefile,v 1.389 2003/08/23 20:04:48 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -283,6 +283,7 @@ SUBDIR+=	postgresql-autodoc
 SUBDIR+=	ppp
 SUBDIR+=	premake
 SUBDIR+=	procps
+SUBDIR+=	prtunnel
 SUBDIR+=	psh
 SUBDIR+=	pts
 SUBDIR+=	py-OpenGL
