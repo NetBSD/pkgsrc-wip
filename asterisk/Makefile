@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/01/31 05:38:01 riz Exp $
+# $NetBSD: Makefile,v 1.7 2005/02/05 14:19:31 riz Exp $
 #
 
 DISTNAME=		asterisk-1.0.5
@@ -41,7 +41,7 @@ ASTEXAMPLEDIR?=${PREFIX}/share/examples/asterisk
 
 # Override default paths in Makefile
 SUBST_CLASSES+= 	asterisk
-SUBST_STAGE.asterisk= 	post-patch
+SUBST_STAGE.asterisk= 	pre-configure
 SUBST_FILES.asterisk=	Makefile
 SUBST_SED.asterisk= 	\
 	-e "s|^\(ASTLIBDIR\)=.*|\1 = ${ASTLIBDIR}|"		\
