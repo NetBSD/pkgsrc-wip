@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/19 13:15:02 mpasternak Exp $
+sbin/dnsd
+${PYSITELIB}/bindparse.py
+${PYSITELIB}/bindparse.pyc
+${PYSITELIB}/bindparse.pyo
+${PYSITELIB}/nameserver.py
+${PYSITELIB}/nameserver.pyc
+${PYSITELIB}/nameserver.pyo
