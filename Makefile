@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.321 2003/07/12 12:39:36 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.321 2003/07/12 12:39:36 thomasklausner Exp $
+# $Id: Makefile,v 1.322 2003/07/12 13:56:43 poppnk Exp $
+# $NetBSD: Makefile,v 1.322 2003/07/12 13:56:43 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -212,6 +212,8 @@ SUBDIR+=	p5-gtk2
 SUBDIR+=	pdns
 SUBDIR+=	perltidy
 SUBDIR+=	php-jpgraph
+SUBDIR+=	picasm
+SUBDIR+=	picprog
 SUBDIR+=	pinball
 SUBDIR+=	pixieplus
 SUBDIR+=	plugger
