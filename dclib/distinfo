@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1 2004/09/03 12:09:37 tnn2 Exp $
+$NetBSD: distinfo,v 1.2 2004/11/11 23:44:14 tnn2 Exp $
 
 SHA1 (dclib-0.3.3.tar.bz2) = 7158edf4abae3c83df9799fc021e03e84da9676f
 Size (dclib-0.3.3.tar.bz2) = 541976 bytes
+SHA1 (patch-aa) = 75f945cbe1a64b938c7970b5dfb3ecdbb78cb774
+SHA1 (patch-ab) = 31589e849b572f2dd599341700ce161e7fb2237c

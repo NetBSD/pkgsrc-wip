@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2004/11/11 23:44:15 tnn2 Exp $
+
+--- dclib/core/fsusage.h.orig	2004-11-12 00:33:57.000000000 +0100
++++ dclib/core/fsusage.h
+@@ -52,8 +52,8 @@ struct fs_usage
+ # endif
+ 
+ extern "C" {
+-int get_fs_usage PARAMS ((const char *path, const char *disk,
+-			  struct fs_usage *fsp));
++int get_fs_usage (const char *path, const char *disk,
++			  struct fs_usage *fsp);
+ }
+ 
+ #endif

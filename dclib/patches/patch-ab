@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2004/11/11 23:44:15 tnn2 Exp $
+
+--- dclib/dclib.h.orig	2004-08-18 16:15:05.000000000 +0200
++++ dclib/dclib.h
+@@ -39,7 +39,11 @@ DLL_EXPORT int dclibVerbose();
+ /**  set dclib verbose */
+ DLL_EXPORT void setdclibVerbose( int n );
+ 
++#ifdef __GNUC__
+ #define DPRINTF(...) if (dclibVerbose()) printf(__VA_ARGS__)
++#else
++#define DPRINTF printf
++#endif
+ 
+ #ifdef __cplusplus
+ }
