@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/24 04:30:45 blef Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/24 04:56:54 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-defaultBitmaps-${XF_VER}
@@ -16,15 +16,15 @@ DEPENDS+=	XFree86-fontsEncodings>=4.3.0:../../wip/XFree86-fontsEncodings
 
 USE_BUILDLINK2=		yes
 NO_XFREE86_TARGETS=	#defined
-PROJECTROOT=            -DProjectRoot=${PREFIX}
-EXTRACT_ONLY=   	X430src-4.tgz
+PROJECTROOT=		-DProjectRoot=${PREFIX}
+EXTRACT_ONLY=		X430src-4.tgz
 
-FILESDIR=       ${PKGDIR}/../XFree86-fontsEncodings/files
+FILESDIR=	${PKGDIR}/../XFree86-fontsEncodings/files
 
 post-extract:
 	cd ${WRKDIR} && \
 		${GUNZIP_CMD} -c ${DISTDIR}/X430src-1.tgz | ${GTAR} -xf - \
-	       	xc/extras/fonts/arabic24 xc/extras/fonts/ClearlyU;
+		xc/extras/fonts/arabic24 xc/extras/fonts/ClearlyU;
 	@${LN} -sf ${FILESDIR}/host.def ${WRKSRC}
 	@${LN} -sf ${FILESDIR}/host.def ${WRKDIR}/xc/fonts/encodings
 	@${LN} -sf ${FILESDIR}/host.def ${WRKDIR}/xc/fonts/encodings/large

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/24 04:38:30 blef Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/24 04:58:59 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-fontsScalable-${XF_VER}
@@ -15,7 +15,7 @@ DEPENDS+=	XFree86-fontsEncodings>=4.3.0:../../wip/XFree86-fontsEncodings
 
 USE_BUILDLINK2=		yes
 NO_XFREE86_TARGETS=	#defined
-PROJECTROOT=            -DProjectRoot=${PREFIX}
+PROJECTROOT=		-DProjectRoot=${PREFIX}
 
 do-configure:
 	(cd ${WRKDIR}/xc/fonts/encodings && \

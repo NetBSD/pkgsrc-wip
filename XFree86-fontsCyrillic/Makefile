@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/24 04:36:11 blef Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/24 04:58:31 blef Exp $
 
 DISTNAME=	X430src-4
 PKGNAME=	XFree86-fontsCyrillic-${XF_VER}
@@ -17,7 +17,7 @@ USE_BUILDLINK2=		yes
 PROJECTROOT=		-DProjectRoot=${PREFIX}
 NO_XFREE86_TARGETS=	#defined
 
-FILESDIR=       ${PKGDIR}/../XFree86-fontsEncodings/files
+FILESDIR=	${PKGDIR}/../XFree86-fontsEncodings/files
 
 post-extract:
 	@${LN} -sf ${FILESDIR}/host.def ${WRKSRC}
