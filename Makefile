@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1589 2004/12/29 01:23:51 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1589 2004/12/29 01:23:51 thomasklausner Exp $
+# $Id: Makefile,v 1.1590 2004/12/29 20:08:44 kristerw Exp $
+# $NetBSD: Makefile,v 1.1590 2004/12/29 20:08:44 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -216,8 +216,8 @@ SUBDIR+=	foomatic-filters-cups
 SUBDIR+=	fox
 SUBDIR+=	freevo
 SUBDIR+=	frontpage
-SUBDIR+=	ftpsesame
 SUBDIR+=	ftpd-tls
+SUBDIR+=	ftpsesame
 SUBDIR+=	fvcool
 SUBDIR+=	fwbuilder
 SUBDIR+=	g21k-binutils
@@ -266,7 +266,6 @@ SUBDIR+=	gtk-engines-thinice
 SUBDIR+=	gtk-gnutella-current
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtk-theme-switch
-SUBDIR+=	gtk2-engines-dwerg
 SUBDIR+=	gtk2-engines-dwerg
 SUBDIR+=	gtk2-engines-flat
 SUBDIR+=	gtk2-engines-galaxy
@@ -527,9 +526,9 @@ SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	natali
 SUBDIR+=	navigatrix
-SUBDIR+=	ncc
 SUBDIR+=	ncbi-bin
 SUBDIR+=	ncbi-lib
+SUBDIR+=	ncc
 SUBDIR+=	ncps
 SUBDIR+=	nehe-opengl-tutorials
 SUBDIR+=	nestra
