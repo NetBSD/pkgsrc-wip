@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1466 2004/09/16 15:41:09 airhead Exp $
-# $NetBSD: Makefile,v 1.1466 2004/09/16 15:41:09 airhead Exp $
+# $Id: Makefile,v 1.1467 2004/09/16 15:58:57 airhead Exp $
+# $NetBSD: Makefile,v 1.1467 2004/09/16 15:58:57 airhead Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -141,6 +141,7 @@ SUBDIR+=	eet
 SUBDIR+=	eic
 SUBDIR+=	emacs-carbon
 SUBDIR+=	emirror
+SUBDIR+=	epeg
 SUBDIR+=	epplets
 SUBDIR+=	etpan-ng
 SUBDIR+=	evas
