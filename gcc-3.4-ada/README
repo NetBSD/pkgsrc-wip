@@ -1,0 +1,33 @@
+In order to build this Ada compiler, you need
+a working GNAT compiler (GNAT version 3.14 or
+later, or GCC version 3.1 or later), including
+GNAT tools such as gnatmake and gnatlink, since
+the Ada front end is written in Ada.
+
+pkgsrc/lang/gcc3-ada will work as will this pkg
+
+To build:
+
+1. Change ADA_BOOT_PATH in the pkg Makefile
+   to the directory for you Ada compiler.
+2. Make sure ${ADA_BOOT_PATH}/bin is on your
+   search path and GCC_EXEC_PREFIX is defined
+   as the directory in which 'gnat1' is found.
+3. If your gcc compiler front-end that understands
+   Ada is named something other than gcc, define
+   the environment variable ADA_BOOT_ADAC as the 
+   full path of your gcc compiler front-end.
+4. make
+5. (OPTIONAL) Make test. This step requires
+   dejagnu. As part of test, acats, the Ada
+   compiler validation suite is run.
+6. make install
+
+
+NOTES:
+1. This pkg can buid itself. You can run
+   make && make update to rebuild it.
+2. On NetBSD systems with native pthreads, you
+   will have a full implementation of the Ada
+   language. On other platforms, you will not
+   have a tasking runtime.
