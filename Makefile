@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1514 2004/10/29 23:03:45 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1514 2004/10/29 23:03:45 xtraeme Exp $
+# $Id: Makefile,v 1.1515 2004/10/30 20:54:39 minskim Exp $
+# $NetBSD: Makefile,v 1.1515 2004/10/30 20:54:39 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -506,7 +506,6 @@ SUBDIR+=	p5-Term-ProgressBar
 SUBDIR+=	p5-Text-Tabs+Wrap
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-WWW-Curl
-SUBDIR+=	p5-X11-Protocol
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-mysql
 SUBDIR+=	pam-pop3
