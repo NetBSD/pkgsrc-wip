@@ -1,0 +1,51 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/02/22 21:39:25 tomhensel Exp $
+
+--- spamd/spamd.raw.orig	2004-02-12 08:55:05.000000000 +0000
++++ spamd/spamd.raw	2004-02-22 20:22:21.000000000 +0000
+@@ -219,8 +219,8 @@
+ }
+ 
+ # Check for server certs
+-$opt{'server-key'}  ||= "$LOCAL_RULES_DIR/certs/server-key.pem";
+-$opt{'server-cert'} ||= "$LOCAL_RULES_DIR/certs/server-cert.pem";
++$opt{'server-key'}  ||= "@SA_SSLCERTS@/server-key.pem";
++$opt{'server-cert'} ||= "@SA_SSLCERTS@/server-cert.pem";
+ if ($opt{'ssl'}) {
+   eval { require IO::Socket::SSL };
+   die "fatal: SSL encryption requested, but IO::Socket::SSL is unavailable\n" if ($@);
+@@ -1417,8 +1417,9 @@
+ use POSIX 'setsid';
+ sub daemonize
+ {
+-    # Pretty command line in ps
+-    $0 = join(' ', $ORIG_ARG0, @ORIG_ARGV) unless($opt{'debug'});
++    # no pretty 'ps' command line (easier for NetBSD rc script)
++    # # Pretty command line in ps
++    # $0 = join(' ', $ORIG_ARG0, @ORIG_ARGV) unless($opt{'debug'});
+ 
+     # Be a nice daemon and chdir() to the root so we don't block any unmount attempts
+     chdir '/' or die "Can't chdir to /: $!\n";
+@@ -1536,7 +1537,7 @@
+ 
+  -c, --create-prefs                 Create user preferences files
+  -C path, --configpath=path         Path for default config files
+- --siteconfigpath=path              Path for site configs (def: /etc/mail/spamassassin)
++ --siteconfigpath=path              Path for site configs (def: @@LOCAL_RULES_DIR@@)
+  -d, --daemonize                    Daemonize
+  -h, --help                         Print usage message.
+  -i ipaddr, --listen-ip=ipaddr,...  Listen on the IP ipaddr (default: 127.0.0.1)
+@@ -1606,12 +1607,12 @@
+ =item B<-C> I<path>, B<--configpath>=I<path>
+ 
+ Use the specified path for locating the distributed configuration files.
+-Ignore the default directories (usually C</usr/share/spamassassin> or similar).
++Ignore the default directories (usually C<@@DEF_RULES_DIR@@> or similar).
+ 
+ =item B<--siteconfigpath>=I<path>
+ 
+ Use the specified path for locating site-specific configuration files.  Ignore
+-the default directories (usually C</etc/mail/spamassassin> or similar).
++the default directories (usually C<@@LOCAL_RULES_DIR@@> or similar).
+ 
+ =item B<-d>, B<--daemonize>
+ 

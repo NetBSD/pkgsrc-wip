@@ -1,0 +1,32 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/02/22 21:39:24 tomhensel Exp $
+
+Note For Users Upgrading From SpamAssassin 2.5x
+-----------------------------------------------
+
+Due to the database library change, and the change to the database format
+itself, you will want to do something like this when upgrading:
+
+- stop running spamassassin/spamd (ie: you don't want it to be running
+  during the upgrade)
+- run "sa-learn --rebuild", this will sync your journal.  if you skip this
+  step, any data from the journal will be lost when the DB is upgraded.
+- install DB_File module if necessary
+- upgrade SA to 2.6x
+- if you were using another database module previously, run
+  "sa-learn --import" to migrate the data into new DB_File files
+- run "sa-learn --rebuild", this will cause the db format to be upgraded.
+  if you want to make sure everything runs correctly, you can add the "-D"
+  option.
+- test the new database by running some sample mails through SpamAssassin,
+  and/or at least running "sa-learn --dump" to make sure the data looks
+  valid.
+- start running spamassassin/spamd again
+
+More information can be found in the man pages for 'spamassassin',
+'sa-learn', 'spamc' and 'spamd', with 'perldoc Mail::SpamAssassin::Conf'
+and in
+
+	${PREFIX}/share/doc/spamassassin/
+
+===========================================================================

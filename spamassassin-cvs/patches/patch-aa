@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/22 21:39:25 tomhensel Exp $
+
+--- Makefile.PL.orig	2004-02-14 08:55:02.000000000 +0000
++++ Makefile.PL	2004-02-22 20:19:10.000000000 +0000
+@@ -96,7 +96,7 @@
+ 
+ my %opt = (
+   'enable_ssl'      => undef,
+-  'contact_address' => undef,
++  'contact_address' => '@SA_CONTACT_ADDRESS@',
+   'run_net_tests'   => undef,
+   'destdir'         => undef,
+   '__cruft'         => undef,
+@@ -813,7 +813,7 @@
+ 
+   return q{} if $path =~ m{
+                   (^|/)(CVS|\.svn)(/|$)|
+-                  [/.](orig|old|rej|r\d+|diff|patch|bak|backup|mine|my)$
++                  [/.](orig|old|rej|r\d+|diff|patch|bak|backup|mine|my|subst.sav)$
+                 }ix;
+ 
+   clean_MY_globals($self);
+@@ -1062,15 +1062,16 @@
+ 
+ 
+ conf__install:
+-	-$(MKPATH) $(B_CONFDIR)
+-	$(PERL) -MFile::Spec -MFile::Copy \
++	-$(BSD_INSTALL_DATA_DIR) $(B_CONFDIR)
++	@ # manage local.cf through pkgsrc .mk files
++	@ # $(PERL) -MFile::Spec -MFile::Copy \
+ 	  -e "copy(q{rules/local.cf}, q{$(B_CONFDIR)/local.cf}) unless -f q{$(B_CONFDIR)/local.cf};"
+ 
+ data__install:
+-	-$(MKPATH) $(B_DATADIR)
++	-$(BSD_INSTALL_DATA_DIR) $(B_DATADIR)
+ 	$(PERL) -e "map unlink, <$(B_DATADIR)/*>"
+ 	$(PREPROCESS) $(FIXVARS) -m$(PERM_RW) -Irules -O$(B_DATADIR) $(DATAFILES)
+-	$(CHMOD) $(PERM_RWX) $(B_DATADIR)
++	@ # $(CHMOD) $(PERM_RWX) $(B_DATADIR)
+ 
+ text_html_doc: made-doc-stamp
+ 	$(NOOP)
