@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1 2005/02/06 00:30:43 mreriksson Exp $
+
+--- src/Makefile.tmpl.orig	2005-02-06 00:59:19.000000000 +0100
++++ src/Makefile.tmpl
+@@ -1,3 +1,3 @@
+ !library_unix libhttpd.a protocol.c,api.c,version.c,ip_acl.c,ember.c
+-!libinstall libhttpd.a /usr/local/lib/libhttpd.a 744 $(ROOT)
+-!install httpd.h /usr/local/include/httpd.h 744 $(ROOT)
++!libinstall libhttpd.a ${PREFIX}/lib/libhttpd.a 744 $(ROOT)
++!install httpd.h ${PREFIX}/include/httpd.h 744 $(ROOT)
