@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/06 01:40:57 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/06 18:44:56 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -22,7 +22,6 @@ COMMENT=	Sun's Java(tm) 2 SDK (SCSL+FreeBSDdom 1.3 release)
 
 LICENSE=	scsl-2.3-license
 
-BUILD_DEPENDS+=	sun-jdk13>=1:../../lang/sun-jdk13
 BUILD_DEPENDS+=	m4-[0-9]*:../../devel/m4
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
@@ -55,6 +54,19 @@ PLIST_SRC=	# added to below
 
 .include "../../mk/bsd.prefs.mk"
 
+# Let an installed version of this package bootstrap a later version
+# (skips having to reinstall sun-jdk13 again)
+#
+.if exists(${JVM_HOME}/LICENSE)
+BUILD_DEPENDS+=	jdk13>=1
+MAKE_ENV+=	ALT_BOOTDIR=${JVM_HOME}
+.else
+BUILD_DEPENDS+=	sun-jdk13>=1:../../lang/sun-jdk13
+MAKE_ENV+=	ALT_BOOTDIR=${LOCALBASE}/java/sun-1.3.1
+.endif
+
+# Build Mozilla plugin if JDK13_WITH_PLUGIN=YES
+#
 .if defined(JDK13_WITH_PLUGIN) && !empty(JDK13_WITH_PLUGIN:M[Yy][Ee][Ss])
 MOZILLA_PLUGINS_DIR= ${LOCALBASE}/lib/mozilla/plugins
 
@@ -78,7 +90,6 @@ ALL_TARGET+=	images
 MOTIF_TYPE=	openmotif
 PLIST_SRC+=	${.CURDIR}/PLIST
 
-MAKE_ENV+=	ALT_BOOTDIR=${LOCALBASE}/java/sun-1.3.1
 MAKE_FLAGS+=	ALT_DEVTOOLS_PATH=${LOCALBASE} # used to find "zip" and "unzipsfx"
 MAKE_ENV+=	ALT_MOTIF_DIR=${MOTIFBASE}
 MAKE_ENV+=	BUILD_CLASSIC=yes
