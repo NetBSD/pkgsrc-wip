@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/03 13:31:25 takasan-tt Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 11:12:03 takasan-tt Exp $
 # FreeBSD Id: ports/print/rlpr/Makefile,v 1.12 2003/03/07 06:09:06 ade Exp
 
 DISTNAME=	rlpr-2.04
 CATEGORIES=	print net
 MASTER_SITES=	ftp://www.truffula.com/pub/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	pkg@pop.707.to
 HOMEPAGE=	http://truffula.com/rlpr/
 COMMENT=	Send print jobs to lpd servers anywhere on a network
 
