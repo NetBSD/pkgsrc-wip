@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.515 2003/10/01 02:50:58 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.515 2003/10/01 02:50:58 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.516 2003/10/01 04:06:33 blef Exp $
+# $NetBSD: Makefile,v 1.516 2003/10/01 04:06:33 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -59,6 +59,7 @@ SUBDIR+=	bub-n-bros
 SUBDIR+=	bugzilla
 SUBDIR+=	busybox
 SUBDIR+=	byacc
+SUBDIR+=	c-news
 SUBDIR+=	cawf
 SUBDIR+=	ccrypt
 SUBDIR+=	cdl3
@@ -192,6 +193,7 @@ SUBDIR+=	koffice-i18n-de
 SUBDIR+=	koffice-i18n-es
 SUBDIR+=	korelib
 SUBDIR+=	kvirc
+SUBDIR+=	l2tpd
 SUBDIR+=	lash
 SUBDIR+=	lbdb
 SUBDIR+=	ldapbrowser
