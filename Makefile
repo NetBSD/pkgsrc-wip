@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.726 2003/12/03 19:14:47 xtraeme Exp $
-# $NetBSD: Makefile,v 1.726 2003/12/03 19:14:47 xtraeme Exp $
+# $Id: Makefile,v 1.727 2003/12/03 19:29:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.727 2003/12/03 19:29:18 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -192,8 +192,6 @@ SUBDIR+=	gpdf
 SUBDIR+=	gramps
 SUBDIR+=	grdc
 SUBDIR+=	grip
-SUBDIR+=	gsasl
-SUBDIR+=	gss
 SUBDIR+=	gstreamer-player
 SUBDIR+=	gtick
 SUBDIR+=	gtk-engines-thinice
@@ -297,9 +295,7 @@ SUBDIR+=	libgpg-error
 SUBDIR+=	libgringotts
 SUBDIR+=	libhydrogen
 SUBDIR+=	libic
-SUBDIR+=	libidn
 SUBDIR+=	libneural
-SUBDIR+=	libntlm
 SUBDIR+=	libogg-nightly
 SUBDIR+=	libol
 SUBDIR+=	libpixregion
