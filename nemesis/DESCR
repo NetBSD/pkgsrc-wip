@@ -1,0 +1,13 @@
+The Nemesis Project is designed to be a commandline-based, portable human IP
+stack for UNIX/Linux.  The suite is broken down by protocol, and should allow
+for useful scripting of injected packet streams from simple shell scripts.
+
+Key Features:
+
++ ARP/RARP, DNS, ICMP, IGMP, OSPF, RIP, TCP, UDP protocol support
++ Layer 2 or Layer 3 injection (by presence/absence of -d <dev> switch)
++ Packet Payload from file
++ tested on OpenBSD, NetBSD, FreeBSD, Solaris/Trusted Solaris, Linux,
+  and Mac OS X
++ Supplied with OpenBSD 2.9 kernel patch (./openbsd/RAW4ALL-2.9.patch)
+  with Nemesis modifications to launch packets as a normal user.

@@ -1,0 +1,12 @@
+$NetBSD: TODO,v 1.1.1.1 2003/07/09 15:00:52 adrian_p Exp $
+
+I know there's a later version but it requires too may other library updates 
+(eg. libnet) that will affect other pkgsrc programs.
+
+Please test and let me know if there are any issues.
+
+Sort of tested on NetBSD 1.6 i386.
+
+Ta,
+
+Adrian.

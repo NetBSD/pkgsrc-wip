@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/09 15:00:52 adrian_p Exp $
+
+SHA1 (nemesis-1.32.tar.gz) = 48ca109bf7a7bff01a00b56c00158120cb49d87a
+Size (nemesis-1.32.tar.gz) = 57993 bytes
+SHA1 (patch-aa) = 7921707f2cde9a191177a5a29be9212ef536ebe6

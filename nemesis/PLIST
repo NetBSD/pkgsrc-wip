@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/09 15:00:52 adrian_p Exp $
+man/man1/nemesis-arp.1
+man/man1/nemesis-dns.1
+man/man1/nemesis-icmp.1
+man/man1/nemesis-igmp.1
+man/man1/nemesis-ospf.1
+man/man1/nemesis-rip.1
+man/man1/nemesis-tcp.1
+man/man1/nemesis-udp.1
+sbin/nemesis-arp
+sbin/nemesis-dns
+sbin/nemesis-icmp
+sbin/nemesis-igmp
+sbin/nemesis-ospf
+sbin/nemesis-rip
+sbin/nemesis-tcp
+sbin/nemesis-udp
+share/doc/nemesis/CHANGELOG
+share/doc/nemesis/COPYING
+share/doc/nemesis/README
+@dirrm share/doc/nemesis

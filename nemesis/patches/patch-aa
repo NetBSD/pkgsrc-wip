@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/09 15:00:52 adrian_p Exp $
+
+--- Makefile.in.orig	Wed Jul  9 15:45:00 2003
++++ Makefile.in	Wed Jul  9 15:46:45 2003
+@@ -39,7 +39,7 @@
+ #
+ DEFINES += @OS_S_DEFINES@ `libnet-config --defines`
+ CFLAGS = @CFLAGS@ -I@prefix@/include
+-LIBS = -L@prefix@/lib -lnet -lpcap @ADDITIONAL_LIBS@
++LIBS = -L@prefix@/lib -lnet -lpcap -Wl,-R${PREFIX}/lib @ADDITIONAL_LIBS@
+ 
+ ARP_OBJ =  nemesis-arp.o nemesis-proto_arp.o
+ DNS_OBJ =  nemesis-dns.o nemesis-proto_dns.o
