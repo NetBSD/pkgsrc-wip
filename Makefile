@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.524 2003/10/05 21:41:17 adrian_p Exp $
-# $NetBSD: Makefile,v 1.524 2003/10/05 21:41:17 adrian_p Exp $
+# $Id: Makefile,v 1.525 2003/10/05 22:14:03 dillo Exp $
+# $NetBSD: Makefile,v 1.525 2003/10/05 22:14:03 dillo Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -380,7 +380,6 @@ SUBDIR+=	superkaramba
 SUBDIR+=	svgalib
 SUBDIR+=	sysklogd
 SUBDIR+=	sysvinit
-SUBDIR+=	tads
 SUBDIR+=	tcc
 SUBDIR+=	tendra
 SUBDIR+=	tetrinet
