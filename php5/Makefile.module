@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.module,v 1.8 2004/07/16 17:21:09 ppostma Exp $
+# $NetBSD: Makefile.module,v 1.9 2004/09/04 23:40:53 thomasklausner Exp $
 
 .include "../../wip/php5/Makefile.common"
 
 PKGNAME?=		php-${MODNAME}-${PHP5_VERSION}
 PKGREVISION?=		# empty
 
-AUTOMAKE_REQD?=	1.7
 .include "../../mk/automake.mk"
 
 PKGMODNAME?=		${MODNAME:S/-/_/}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/08/17 18:28:09 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2004/09/04 23:40:52 thomasklausner Exp $
 #
 
 DISTNAME=		kvirc-3.0.0-beta2
@@ -75,7 +75,6 @@ CONFIGURE_ARGS+=	--without-arts-support
 CONFIGURE_ARGS+=	--with-aa-fonts
 
 PTHREAD_OPTS+=		require
-AUTOMAKE_REQD=		1.5
 
 pre-configure:
 	cd ${WRKSRC};			\
