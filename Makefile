@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1539 2004/11/15 16:11:13 bubuchka Exp $
-# $NetBSD: Makefile,v 1.1539 2004/11/15 16:11:13 bubuchka Exp $
+# $Id: Makefile,v 1.1540 2004/11/15 20:32:35 daprice Exp $
+# $NetBSD: Makefile,v 1.1540 2004/11/15 20:32:35 daprice Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -132,6 +132,13 @@ SUBDIR+=	edje
 SUBDIR+=	eic
 SUBDIR+=	emacs-carbon
 SUBDIR+=	emboss-base
+SUBDIR+=	emboss-domainatrix
+SUBDIR+=	emboss-emnu
+SUBDIR+=	emboss-hmmer
+SUBDIR+=	emboss-meme
+SUBDIR+=	emboss-mse
+SUBDIR+=	emboss-phylip
+SUBDIR+=	emboss-topo
 SUBDIR+=	embryo
 SUBDIR+=	emirror
 SUBDIR+=	epeg
