@@ -1,0 +1,3 @@
+$NetBSD: DESCR,v 1.1.1.1 2004/10/12 15:02:05 ianharding Exp $
+nsfreetds is a module allowing direct access to Sybase and MSSQL 
+Server databases from aolserver using the freetds library.

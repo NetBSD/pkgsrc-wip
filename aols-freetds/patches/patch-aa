@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/12 15:02:05 ianharding Exp $
+
+--- Makefile.orig	2003-11-07 02:53:08.000000000 +0000
++++ Makefile
+@@ -19,7 +19,7 @@ OBJS      =  nsfreetds.o
+ #
+ # Set this to be the installation prefix of your FreeTDS installation.
+ #
+-FREETDS_HOME := /usr/local
++FREETDS_HOME := ${PREFIX}
+ 
+ #
+ # Header files in THIS directory
