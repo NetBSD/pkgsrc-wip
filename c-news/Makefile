@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/27 23:13:27 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/13 13:04:10 hfath Exp $
 # FreeBSD Id: ports/news/cnews/Makefile,v 1.43 2001/06/24 04:28:36 dinoex Exp
 
 DISTNAME=	c-news
@@ -31,6 +31,7 @@ MAINTAINER=	hauke@Espresso.Rhein-Neckar.DE
 HOMEPAGE=	http://www.dinoex.net/c-news.html
 COMMENT=	The 3rd generation USENET news server
 
+USE_BUILDLINK3= YES
 CONFLICTS+=	nntpclnt-[0-9]* inn*
 
 WRKSRC=		${WRKDIR}
@@ -38,16 +39,21 @@ USE_PKGINSTALL=	YES
 PKG_USERS=	news:news::Internet\\ News:${CNEWSDATA}:${SH}
 PKG_GROUPS=	news
 
+PKG_SYSCONFDIR.c-news=     ${CNEWSDATA}/etc
+
+EGDIR=		${PREFIX}/share/examples/c-news
+
+
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "SunOS")
 # groff & pic
 BUILD_DEPENDS+=	groff:../../textproc/groff
 PIC?=		gpic
-NROFF?=		"groff -Tascii -mtty-char"
+NROFF?=		groff -Tascii -mtty-char
 .else
 PIC?=		pic
-NROFF?=		nroff
+NROFF?=		nroff -Tascii
 .endif
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
@@ -87,7 +93,9 @@ pre-configure:
 	${CP}  ${FILESDIR}/makeinc ${WRKDIR}/conf/makeinc
 	${CP}  ${FILESDIR}/makefile.notebook ${WRKDIR}/notebook/makefile
 
-post-build:	build-doc regression
+# One of the tests does not work correctly if we are in a union-mounted
+# directory.
+post-build:     build-doc # regression
 
 regression:
 	cd ${WRKSRC} && ${MAKE} ${MAKEFLAGS} r
