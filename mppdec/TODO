@@ -1,4 +1,4 @@
-$Id: TODO,v 1.1.1.1 2004/04/19 15:46:14 mpasternak Exp $
+$Id: TODO,v 1.2 2004/04/19 15:56:56 mpasternak Exp $
 
 I expect this not to build anywhere except my FreeBSD box. The code has a
 lot of portability defines anyway, so please help with patching it.
@@ -23,5 +23,10 @@ Basically, mppdec should use some other makefile (or some kind of configure
 script) to be more portable. Please help developing it, if you have skills
 to do such thing, e-mail author or at least MAINTAINER of this package with
 some code.
+
+Sounds and decodes lousy on my host. Are MPCs that incompatible, or is it
+somehow borked? Could anyone make some patches?
+
+And, finally, package mppenc (MPC encoder) from the same author/site.
 
 	-- mpasternak
