@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/18 17:22:12 mpasternak Exp $
-etc/rc.d/isc_dhclient
+@comment $NetBSD: PLIST,v 1.3 2004/07/07 19:37:50 jeremy-c-reed Exp $
 man/man5/dhclient.conf.5
 man/man5/dhclient.leases.5
 man/man8/dhclient-script.8
