@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/07/14 18:40:41 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2004/07/15 00:29:59 othyro Exp $
 
 DISTNAME=		prngd-0.9.29
 CATEGORIES=		security
@@ -24,13 +24,12 @@ INSTALLATION_DIRS=	bin man/man1
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE}
 
-#pre-install:
-#	SUBST_CLASSES=          path
-#	SUBST_STAGE.path=       pre-install
-#	SUBST_FILES.path=       prngd.man
-#	SUBST_SED.path=         -e 's,/usr/local,${PREFIX},g'
-#	SUBST_SED.path=		-e 's,/var,${VARBASE}.g'
-#	SUBST_MESSAGE.path=     "Fixing paths in man page."
+SUBST_CLASSES=          path
+SUBST_STAGE.path=       pre-install
+SUBST_FILES.path=       prngd.man
+SUBST_SED.path=         -e 's,/usr/local,${PREFIX},g'
+SUBST_SED.path+=	-e 's,/var,${VARBASE},g'
+SUBST_MESSAGE.path=     "Fixing paths in man page."
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/prngd ${PREFIX}/bin/prngd
