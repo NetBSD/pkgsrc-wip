@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/19 18:28:00 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/06/08 00:14:29 xtraeme Exp $
 
-SHA1 (matchbox-window-manager-0.8.tar.bz2) = ffe1b5e0eb6e0e2ab470c4dbfc55b3a77b051fe4
-Size (matchbox-window-manager-0.8.tar.bz2) = 160079 bytes
+SHA1 (matchbox-window-manager-0.8.2.tar.bz2) = bee2202cce96035968fcad3dfcbd1b52b2b270dd
+Size (matchbox-window-manager-0.8.2.tar.bz2) = 167160 bytes
