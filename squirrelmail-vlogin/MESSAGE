@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/02/04 23:03:11 schnoebe Exp $
+
+    To enable this plugin:
+
+    cd ${SMDIR}/config &&./conf.pl
+
+    adding vlogin to the list of active plugins.
+
+    Please read ${SMDIR}/plugins/vlogin/README for details 
+    on configuration.
+
+===========================================================================

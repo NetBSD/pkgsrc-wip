@@ -1,0 +1,3 @@
+A virtual domain login management plugin for SquirrelMail, allowing the 
+site administrator to customize SquirrelMail for each domain accessed
+through the SquirrelMail instance.
