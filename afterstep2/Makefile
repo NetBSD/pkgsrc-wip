@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/01/14 13:33:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/14 13:34:30 jmmv Exp $
 #
 
 DISTNAME=	AfterStep-2.00.01
@@ -6,11 +6,11 @@ PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
 CATEGORIES=	wm
 MASTER_SITES=	ftp://ftp.afterstep.org/stable/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.afterstep.org/
 COMMENT=	Window manager based on the look and feel of the NeXTStep interface
 
-PKG_INSTALLATION_TYPES=	 overwrite pkgviews
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
