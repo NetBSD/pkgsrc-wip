@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/23 23:15:20 xtraeme Exp $
+
+--- configure.orig	Thu Oct 23 17:47:35 2003
++++ configure	Thu Oct 23 17:47:51 2003
+@@ -19584,7 +19584,7 @@
+ 
+ 	LINKFLAGS="-lkvm -ldevstat"
+ 	;;
+-netbsdelf1.*)
++netbsdelf*)
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define ALLBSD
