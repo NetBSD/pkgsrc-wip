@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:18 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/07 14:32:58 adrian_p Exp $
 
-DISTNAME=	prelude-nids-0.8.4
+DISTNAME=	prelude-nids-0.8.6
 CATEGORIES=	net www
 MASTER_SITES=	http://www.prelude-ids.org/download/releases/
 
