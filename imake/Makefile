@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/09/01 23:57:53 blef Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/02 23:20:24 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
@@ -59,12 +59,5 @@ do-build:
 	( cd ${WRKSRC} && ${MAKE} Makefile.boot && \
 	${MAKE_PROGRAM} -f xmakefile VerifyOS version.def \
 		Makefiles includes )
-
-#pre-install:
-#.if !exists(${X11BASE})
-#	@${MKDIR} ${X11BASE}
-#	@${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${X11BASE}
-#	@${CHMOD} ${PKGDIRMODE} ${X11BASE}
-#.endif
 
 .include "../../mk/bsd.pkg.mk"
