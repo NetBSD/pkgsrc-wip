@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/07/21 08:26:57 marttikuparinen Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/08/27 06:13:33 marttikuparinen Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-mixer.
 #
@@ -9,7 +9,7 @@
 XFCE4_MIXER_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-mixer
-BUILDLINK_DEPENDS.xfce4-mixer?=		xfce4-mixer>=3.99.2
+BUILDLINK_DEPENDS.xfce4-mixer?=		xfce4-mixer>=3.99.3
 BUILDLINK_PKGSRCDIR.xfce4-mixer?=		../../wip/xfce4-mixer
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-mixer=xfce4-mixer

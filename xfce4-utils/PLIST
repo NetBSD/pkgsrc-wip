@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/21 08:26:58 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/08/27 06:13:33 marttikuparinen Exp $
 bin/startxfce4
 bin/xfce4-about
 bin/xfhelp4
@@ -20,6 +20,8 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce-utils.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce-utils.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfce-utils.mo
@@ -30,9 +32,14 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce-utils.mo
 share/xfce4/AUTHORS
 share/xfce4/AUTHORS.ca
 share/xfce4/AUTHORS.de
+share/xfce4/AUTHORS.fr
 share/xfce4/AUTHORS.html
 share/xfce4/AUTHORS.html.ca
 share/xfce4/AUTHORS.html.de
+share/xfce4/AUTHORS.html.fr
+share/xfce4/INFO.ca
+share/xfce4/INFO.fr
+share/xfce4/INFO.html.fr
 share/xfce4/BSD
 share/xfce4/COPYING
 share/xfce4/GPL

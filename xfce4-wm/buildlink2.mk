@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/07/21 08:26:58 marttikuparinen Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/08/27 06:13:34 marttikuparinen Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-wm.
 #
@@ -9,7 +9,7 @@
 XFCE4_WM_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-wm
-BUILDLINK_DEPENDS.xfce4-wm?=		xfce4-wm>=3.99.2
+BUILDLINK_DEPENDS.xfce4-wm?=		xfce4-wm>=3.99.3
 BUILDLINK_PKGSRCDIR.xfce4-wm?=		../../wip/xfce4-wm
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-wm=xfce4-wm
@@ -18,6 +18,7 @@ BUILDLINK_FILES.xfce4-wm+=	lib/xfce4/mcs-plugins/margins_plugin.*
 BUILDLINK_FILES.xfce4-wm+=	lib/xfce4/mcs-plugins/xfwm4_plugin.*
 
 .include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../wip/xfce4-mcs-plugins/buildlink2.mk"
 .include "../../x11/startup-notification/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"

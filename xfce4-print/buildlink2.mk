@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/07/21 08:26:57 marttikuparinen Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/08/27 06:13:33 marttikuparinen Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-print.
 #
@@ -9,7 +9,7 @@
 XFCE4_PRINT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-print
-BUILDLINK_DEPENDS.xfce4-print?=		xfce4-print>=3.99.2
+BUILDLINK_DEPENDS.xfce4-print?=		xfce4-print>=3.99.3
 BUILDLINK_PKGSRCDIR.xfce4-print?=		../../wip/xfce4-print
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-print=xfce4-print

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/07/21 08:26:56 marttikuparinen Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/08/27 06:13:32 marttikuparinen Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-fm-icons.
 #
@@ -9,7 +9,7 @@
 XFCE4_FM_ICONS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-fm-icons
-BUILDLINK_DEPENDS.xfce4-fm-icons?=		xfce4-fm-icons>=3.99.2
+BUILDLINK_DEPENDS.xfce4-fm-icons?=		xfce4-fm-icons>=3.99.3
 BUILDLINK_PKGSRCDIR.xfce4-fm-icons?=		../../wip/xfce4-fm-icons
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-fm-icons=xfce4-fm-icons

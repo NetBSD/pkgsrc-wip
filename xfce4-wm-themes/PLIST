@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/16 06:19:43 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/08/27 06:13:34 marttikuparinen Exp $
 share/xfwm4/themes/adept/README
 share/xfwm4/themes/adept/bottom-active.xpm
 share/xfwm4/themes/adept/bottom-inactive.xpm
@@ -2105,6 +2105,50 @@ share/xfwm4/themes/slimline/top-left-active.xpm
 share/xfwm4/themes/slimline/top-left-inactive.xpm
 share/xfwm4/themes/slimline/top-right-active.xpm
 share/xfwm4/themes/slimline/top-right-inactive.xpm
+share/xfwm4/themes/smallscreen/README
+share/xfwm4/themes/smallscreen/bottom-active.xpm
+share/xfwm4/themes/smallscreen/bottom-inactive.xpm
+share/xfwm4/themes/smallscreen/bottom-left-active.xpm
+share/xfwm4/themes/smallscreen/bottom-left-inactive.xpm
+share/xfwm4/themes/smallscreen/bottom-right-active.xpm
+share/xfwm4/themes/smallscreen/bottom-right-inactive.xpm
+share/xfwm4/themes/smallscreen/close-active.xpm
+share/xfwm4/themes/smallscreen/close-inactive.xpm
+share/xfwm4/themes/smallscreen/close-pressed.xpm
+share/xfwm4/themes/smallscreen/hide-active.xpm
+share/xfwm4/themes/smallscreen/hide-inactive.xpm
+share/xfwm4/themes/smallscreen/hide-pressed.xpm
+share/xfwm4/themes/smallscreen/left-active.xpm
+share/xfwm4/themes/smallscreen/left-inactive.xpm
+share/xfwm4/themes/smallscreen/maximize-active.xpm
+share/xfwm4/themes/smallscreen/maximize-inactive.xpm
+share/xfwm4/themes/smallscreen/maximize-pressed.xpm
+share/xfwm4/themes/smallscreen/menu-active.xpm
+share/xfwm4/themes/smallscreen/menu-inactive.xpm
+share/xfwm4/themes/smallscreen/menu-pressed.xpm
+share/xfwm4/themes/smallscreen/right-active.xpm
+share/xfwm4/themes/smallscreen/right-inactive.xpm
+share/xfwm4/themes/smallscreen/shade-active.xpm
+share/xfwm4/themes/smallscreen/shade-inactive.xpm
+share/xfwm4/themes/smallscreen/shade-pressed.xpm
+share/xfwm4/themes/smallscreen/stick-active.xpm
+share/xfwm4/themes/smallscreen/stick-inactive.xpm
+share/xfwm4/themes/smallscreen/stick-pressed.xpm
+share/xfwm4/themes/smallscreen/themerc
+share/xfwm4/themes/smallscreen/title-1-active.xpm
+share/xfwm4/themes/smallscreen/title-1-inactive.xpm
+share/xfwm4/themes/smallscreen/title-2-active.xpm
+share/xfwm4/themes/smallscreen/title-2-inactive.xpm
+share/xfwm4/themes/smallscreen/title-3-active.xpm
+share/xfwm4/themes/smallscreen/title-3-inactive.xpm
+share/xfwm4/themes/smallscreen/title-4-active.xpm
+share/xfwm4/themes/smallscreen/title-4-inactive.xpm
+share/xfwm4/themes/smallscreen/title-5-active.xpm
+share/xfwm4/themes/smallscreen/title-5-inactive.xpm
+share/xfwm4/themes/smallscreen/top-left-active.xpm
+share/xfwm4/themes/smallscreen/top-left-inactive.xpm
+share/xfwm4/themes/smallscreen/top-right-active.xpm
+share/xfwm4/themes/smallscreen/top-right-inactive.xpm
 share/xfwm4/themes/tabs/README
 share/xfwm4/themes/tabs/bottom-active.xpm
 share/xfwm4/themes/tabs/bottom-inactive.xpm
@@ -2471,6 +2515,7 @@ share/xfwm4/themes/xfce/top-right-inactive.xpm
 @dirrm share/xfwm4/themes/totem
 @dirrm share/xfwm4/themes/today
 @dirrm share/xfwm4/themes/tabs
+@dirrm share/xfwm4/themes/smallscreen
 @dirrm share/xfwm4/themes/slimline
 @dirrm share/xfwm4/themes/slick
 @dirrm share/xfwm4/themes/silverado
