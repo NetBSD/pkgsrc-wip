@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/16 16:53:35 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/27 23:03:20 dillo Exp $
 #
 
 DISTNAME=	tads23-unix
@@ -16,5 +16,5 @@ NO_CONFIGURE=	yes
 BUILD_DIRS=	${WRKSRC}/tads2 ${WRKSRC}/tads3
 MAKEFILE=	makefile
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
