@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/19 19:17:46 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/18 15:58:29 ppostma Exp $
 #
 
 DISTNAME=		TleenX3-0.1
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tleenx/}
 
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://tleenx.sourceforge.net/
-COMMENT=		Polish IM communication client.
+COMMENT=		Polish IM communication client
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes

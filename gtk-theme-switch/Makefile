@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/18 15:50:21 ppostma Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/18 15:58:28 ppostma Exp $
 #
 
 DISTNAME=		gtk-theme-switch-1.0.1
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.muhri.net/
 
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.muhri.net/
-COMMENT=		Allows quick & easy switching of GTK1 themes.
+COMMENT=		Allows quick & easy switching of GTK1 themes
 
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make

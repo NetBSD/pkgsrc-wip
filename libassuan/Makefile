@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/18 15:25:59 ppostma Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/18 15:58:28 ppostma Exp $
 #
 
 DISTNAME=		libassuan-0.6.4
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/alpha/libassuan/
 
 MAINTAINER=		john@johnrshannon.com
 HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/alpha/libassuan/
-COMMENT=		The IPC library used by some GnuPG related software.
+COMMENT=		The IPC library used by some GnuPG related software
 
 USE_BUILDLINK3=		yes
 PKG_INSTALLATION_TYPES= overwrite pkgviews
