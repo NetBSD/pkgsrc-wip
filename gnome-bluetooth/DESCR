@@ -1,0 +1,9 @@
+Gnome Bluetooth Manager
+
+Current features include:
+    * Controller object to manage the discovery of nearby Bluetooth devices
+    * Controller will create serial (RFCOMM) connections for clients to devices
+    * libbtcl, a GObject wrapper for Bluetooth functionality
+    * An OBEX server, so you can "beam" files such as pictures, addresses or contacts from other Bluetooth devices to your computer
+    * An OBEX push send tool, so you can beam files from your computer to remote devices.
+    * Nautilus menu integration

@@ -1,0 +1,48 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/11 15:09:19 poppnk Exp $
+bin/gnome-bluetooth-manager
+bin/gnome-obex-send
+bin/gnome-obex-server
+include/gnome-bluetooth/gnomebt-chooser.h
+include/gnome-bluetooth/gnomebt-controller.h
+include/gnome-bluetooth/gnomebt-fileactiondialog.h
+include/gnome-bluetooth/gnomebt-icons.h
+include/gnome-bluetooth/gnomebt-permissiondialog.h
+include/gnome-bluetooth/gnomebt-spinner.h
+lib/bonobo/libgnome-bluetooth-component.la
+lib/bonobo/servers/GNOME_Bluetooth_Component.server
+lib/libgnomebt.la
+lib/pkgconfig/gnome-bluetooth.pc
+lib/python/site-packages/gnomebt/__init__.py
+lib/python/site-packages/gnomebt/chooser.la
+lib/python/site-packages/gnomebt/controller.la
+lib/python/site-packages/gnomebt/defs.py
+lib/python/site-packages/gnomebt/hig_alert.py
+lib/python/site-packages/gnomebt/iconlist.la
+lib/python/site-packages/gnomebt/manager.py
+share/applications/gnome-bluetooth-manager.desktop
+share/applications/gnome-obex-server.desktop
+share/gnome-bluetooth/gnome-obex-send.glade
+share/gnome-bluetooth/pixmaps/blueradio-48.png
+share/gnome-bluetooth/pixmaps/blueradio.png
+share/gnome-bluetooth/pixmaps/btdevice-audiovideo.png
+share/gnome-bluetooth/pixmaps/btdevice-computer.png
+share/gnome-bluetooth/pixmaps/btdevice-imaging.png
+share/gnome-bluetooth/pixmaps/btdevice-lan.png
+share/gnome-bluetooth/pixmaps/btdevice-misc.png
+share/gnome-bluetooth/pixmaps/btdevice-peripheral.png
+share/gnome-bluetooth/pixmaps/btdevice-phone.png
+share/gnome-bluetooth/pixmaps/frame1.png
+share/gnome-bluetooth/pixmaps/frame2.png
+share/gnome-bluetooth/pixmaps/frame3.png
+share/gnome-bluetooth/pixmaps/frame4.png
+share/gnome-bluetooth/pixmaps/frame5.png
+share/gnome-bluetooth/pixmaps/frame6.png
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-bluetooth.mo
+@dirrm share/gnome-bluetooth/pixmaps
+@dirrm share/gnome-bluetooth
+@dirrm share/applications
+@dirrm lib/python/site-packages/gnomebt
+@dirrm lib/python/site-packages
+@dirrm lib/python
+@comment in libbonobo: @dirrm lib/bonobo/servers
+@dirrm include/gnome-bluetooth
