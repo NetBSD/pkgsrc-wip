@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST.PERL,v 1.1 2003/07/24 14:18:30 tripledes Exp $
+@comment $NetBSD: PLIST,v 1.1 2003/07/24 23:59:42 xtraeme Exp $
+lib/X11/fonts/75dpi/UTBI__10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTBI__10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTBI__10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTBI__10-ISO8859-14.pcf.gz
@@ -7,6 +8,8 @@ lib/X11/fonts/75dpi/UTBI__10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTBI__10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTBI__10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTBI__10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTBI__10.pcf.gz
+lib/X11/fonts/75dpi/UTBI__12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTBI__12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTBI__12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTBI__12-ISO8859-14.pcf.gz
@@ -15,6 +18,8 @@ lib/X11/fonts/75dpi/UTBI__12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTBI__12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTBI__12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTBI__12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTBI__12.pcf.gz
+lib/X11/fonts/75dpi/UTBI__14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTBI__14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTBI__14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTBI__14-ISO8859-14.pcf.gz
@@ -23,6 +28,8 @@ lib/X11/fonts/75dpi/UTBI__14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTBI__14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTBI__14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTBI__14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTBI__14.pcf.gz
+lib/X11/fonts/75dpi/UTBI__18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTBI__18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTBI__18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTBI__18-ISO8859-14.pcf.gz
@@ -31,6 +38,8 @@ lib/X11/fonts/75dpi/UTBI__18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTBI__18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTBI__18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTBI__18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTBI__18.pcf.gz
+lib/X11/fonts/75dpi/UTBI__24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTBI__24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTBI__24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTBI__24-ISO8859-14.pcf.gz
@@ -39,6 +48,8 @@ lib/X11/fonts/75dpi/UTBI__24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTBI__24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTBI__24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTBI__24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTBI__24.pcf.gz
+lib/X11/fonts/75dpi/UTB___10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTB___10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTB___10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTB___10-ISO8859-14.pcf.gz
@@ -47,6 +58,8 @@ lib/X11/fonts/75dpi/UTB___10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTB___10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTB___10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTB___10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTB___10.pcf.gz
+lib/X11/fonts/75dpi/UTB___12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTB___12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTB___12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTB___12-ISO8859-14.pcf.gz
@@ -55,6 +68,8 @@ lib/X11/fonts/75dpi/UTB___12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTB___12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTB___12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTB___12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTB___12.pcf.gz
+lib/X11/fonts/75dpi/UTB___14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTB___14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTB___14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTB___14-ISO8859-14.pcf.gz
@@ -63,6 +78,8 @@ lib/X11/fonts/75dpi/UTB___14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTB___14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTB___14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTB___14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTB___14.pcf.gz
+lib/X11/fonts/75dpi/UTB___18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTB___18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTB___18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTB___18-ISO8859-14.pcf.gz
@@ -71,6 +88,8 @@ lib/X11/fonts/75dpi/UTB___18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTB___18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTB___18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTB___18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTB___18.pcf.gz
+lib/X11/fonts/75dpi/UTB___24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTB___24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTB___24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTB___24-ISO8859-14.pcf.gz
@@ -79,6 +98,8 @@ lib/X11/fonts/75dpi/UTB___24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTB___24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTB___24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTB___24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTB___24.pcf.gz
+lib/X11/fonts/75dpi/UTI___10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTI___10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTI___10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTI___10-ISO8859-14.pcf.gz
@@ -87,6 +108,8 @@ lib/X11/fonts/75dpi/UTI___10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTI___10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTI___10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTI___10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTI___10.pcf.gz
+lib/X11/fonts/75dpi/UTI___12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTI___12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTI___12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTI___12-ISO8859-14.pcf.gz
@@ -95,6 +118,8 @@ lib/X11/fonts/75dpi/UTI___12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTI___12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTI___12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTI___12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTI___12.pcf.gz
+lib/X11/fonts/75dpi/UTI___14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTI___14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTI___14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTI___14-ISO8859-14.pcf.gz
@@ -103,6 +128,8 @@ lib/X11/fonts/75dpi/UTI___14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTI___14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTI___14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTI___14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTI___14.pcf.gz
+lib/X11/fonts/75dpi/UTI___18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTI___18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTI___18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTI___18-ISO8859-14.pcf.gz
@@ -111,6 +138,8 @@ lib/X11/fonts/75dpi/UTI___18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTI___18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTI___18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTI___18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTI___18.pcf.gz
+lib/X11/fonts/75dpi/UTI___24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTI___24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTI___24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTI___24-ISO8859-14.pcf.gz
@@ -119,6 +148,8 @@ lib/X11/fonts/75dpi/UTI___24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTI___24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTI___24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTI___24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTI___24.pcf.gz
+lib/X11/fonts/75dpi/UTRG__10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTRG__10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTRG__10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTRG__10-ISO8859-14.pcf.gz
@@ -127,6 +158,8 @@ lib/X11/fonts/75dpi/UTRG__10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTRG__10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTRG__10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTRG__10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTRG__10.pcf.gz
+lib/X11/fonts/75dpi/UTRG__12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTRG__12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTRG__12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTRG__12-ISO8859-14.pcf.gz
@@ -135,6 +168,8 @@ lib/X11/fonts/75dpi/UTRG__12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTRG__12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTRG__12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTRG__12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTRG__12.pcf.gz
+lib/X11/fonts/75dpi/UTRG__14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTRG__14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTRG__14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTRG__14-ISO8859-14.pcf.gz
@@ -143,6 +178,8 @@ lib/X11/fonts/75dpi/UTRG__14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTRG__14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTRG__14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTRG__14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTRG__14.pcf.gz
+lib/X11/fonts/75dpi/UTRG__18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTRG__18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTRG__18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTRG__18-ISO8859-14.pcf.gz
@@ -151,6 +188,8 @@ lib/X11/fonts/75dpi/UTRG__18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTRG__18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTRG__18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTRG__18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTRG__18.pcf.gz
+lib/X11/fonts/75dpi/UTRG__24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTRG__24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTRG__24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/UTRG__24-ISO8859-14.pcf.gz
@@ -159,6 +198,32 @@ lib/X11/fonts/75dpi/UTRG__24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/UTRG__24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/UTRG__24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTRG__24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/UTRG__24.pcf.gz
+lib/X11/fonts/75dpi/charB08.pcf.gz
+lib/X11/fonts/75dpi/charB10.pcf.gz
+lib/X11/fonts/75dpi/charB12.pcf.gz
+lib/X11/fonts/75dpi/charB14.pcf.gz
+lib/X11/fonts/75dpi/charB18.pcf.gz
+lib/X11/fonts/75dpi/charB24.pcf.gz
+lib/X11/fonts/75dpi/charBI08.pcf.gz
+lib/X11/fonts/75dpi/charBI10.pcf.gz
+lib/X11/fonts/75dpi/charBI12.pcf.gz
+lib/X11/fonts/75dpi/charBI14.pcf.gz
+lib/X11/fonts/75dpi/charBI18.pcf.gz
+lib/X11/fonts/75dpi/charBI24.pcf.gz
+lib/X11/fonts/75dpi/charI08.pcf.gz
+lib/X11/fonts/75dpi/charI10.pcf.gz
+lib/X11/fonts/75dpi/charI12.pcf.gz
+lib/X11/fonts/75dpi/charI14.pcf.gz
+lib/X11/fonts/75dpi/charI18.pcf.gz
+lib/X11/fonts/75dpi/charI24.pcf.gz
+lib/X11/fonts/75dpi/charR08.pcf.gz
+lib/X11/fonts/75dpi/charR10.pcf.gz
+lib/X11/fonts/75dpi/charR12.pcf.gz
+lib/X11/fonts/75dpi/charR14.pcf.gz
+lib/X11/fonts/75dpi/charR18.pcf.gz
+lib/X11/fonts/75dpi/charR24.pcf.gz
+lib/X11/fonts/75dpi/courB08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courB08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courB08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courB08-ISO8859-14.pcf.gz
@@ -167,6 +232,8 @@ lib/X11/fonts/75dpi/courB08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courB08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courB08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courB08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courB08.pcf.gz
+lib/X11/fonts/75dpi/courB10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courB10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courB10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courB10-ISO8859-14.pcf.gz
@@ -175,6 +242,8 @@ lib/X11/fonts/75dpi/courB10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courB10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courB10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courB10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courB10.pcf.gz
+lib/X11/fonts/75dpi/courB12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courB12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courB12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courB12-ISO8859-14.pcf.gz
@@ -183,6 +252,8 @@ lib/X11/fonts/75dpi/courB12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courB12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courB12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courB12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courB12.pcf.gz
+lib/X11/fonts/75dpi/courB14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courB14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courB14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courB14-ISO8859-14.pcf.gz
@@ -191,6 +262,8 @@ lib/X11/fonts/75dpi/courB14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courB14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courB14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courB14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courB14.pcf.gz
+lib/X11/fonts/75dpi/courB18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courB18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courB18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courB18-ISO8859-14.pcf.gz
@@ -199,6 +272,8 @@ lib/X11/fonts/75dpi/courB18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courB18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courB18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courB18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courB18.pcf.gz
+lib/X11/fonts/75dpi/courB24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courB24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courB24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courB24-ISO8859-14.pcf.gz
@@ -207,6 +282,8 @@ lib/X11/fonts/75dpi/courB24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courB24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courB24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courB24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courB24.pcf.gz
+lib/X11/fonts/75dpi/courBO08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courBO08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courBO08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courBO08-ISO8859-14.pcf.gz
@@ -215,6 +292,8 @@ lib/X11/fonts/75dpi/courBO08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courBO08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courBO08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courBO08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courBO08.pcf.gz
+lib/X11/fonts/75dpi/courBO10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courBO10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courBO10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courBO10-ISO8859-14.pcf.gz
@@ -223,6 +302,8 @@ lib/X11/fonts/75dpi/courBO10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courBO10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courBO10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courBO10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courBO10.pcf.gz
+lib/X11/fonts/75dpi/courBO12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courBO12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courBO12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courBO12-ISO8859-14.pcf.gz
@@ -231,6 +312,8 @@ lib/X11/fonts/75dpi/courBO12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courBO12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courBO12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courBO12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courBO12.pcf.gz
+lib/X11/fonts/75dpi/courBO14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courBO14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courBO14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courBO14-ISO8859-14.pcf.gz
@@ -239,6 +322,8 @@ lib/X11/fonts/75dpi/courBO14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courBO14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courBO14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courBO14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courBO14.pcf.gz
+lib/X11/fonts/75dpi/courBO18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courBO18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courBO18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courBO18-ISO8859-14.pcf.gz
@@ -247,6 +332,8 @@ lib/X11/fonts/75dpi/courBO18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courBO18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courBO18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courBO18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courBO18.pcf.gz
+lib/X11/fonts/75dpi/courBO24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courBO24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courBO24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courBO24-ISO8859-14.pcf.gz
@@ -255,6 +342,8 @@ lib/X11/fonts/75dpi/courBO24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courBO24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courBO24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courBO24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courBO24.pcf.gz
+lib/X11/fonts/75dpi/courO08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courO08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courO08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courO08-ISO8859-14.pcf.gz
@@ -263,6 +352,8 @@ lib/X11/fonts/75dpi/courO08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courO08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courO08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courO08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courO08.pcf.gz
+lib/X11/fonts/75dpi/courO10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courO10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courO10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courO10-ISO8859-14.pcf.gz
@@ -271,6 +362,8 @@ lib/X11/fonts/75dpi/courO10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courO10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courO10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courO10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courO10.pcf.gz
+lib/X11/fonts/75dpi/courO12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courO12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courO12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courO12-ISO8859-14.pcf.gz
@@ -279,6 +372,8 @@ lib/X11/fonts/75dpi/courO12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courO12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courO12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courO12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courO12.pcf.gz
+lib/X11/fonts/75dpi/courO14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courO14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courO14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courO14-ISO8859-14.pcf.gz
@@ -287,6 +382,8 @@ lib/X11/fonts/75dpi/courO14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courO14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courO14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courO14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courO14.pcf.gz
+lib/X11/fonts/75dpi/courO18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courO18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courO18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courO18-ISO8859-14.pcf.gz
@@ -295,6 +392,8 @@ lib/X11/fonts/75dpi/courO18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courO18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courO18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courO18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courO18.pcf.gz
+lib/X11/fonts/75dpi/courO24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courO24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courO24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courO24-ISO8859-14.pcf.gz
@@ -303,6 +402,8 @@ lib/X11/fonts/75dpi/courO24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courO24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courO24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courO24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courO24.pcf.gz
+lib/X11/fonts/75dpi/courR08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courR08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courR08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courR08-ISO8859-14.pcf.gz
@@ -311,6 +412,8 @@ lib/X11/fonts/75dpi/courR08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courR08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courR08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courR08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courR08.pcf.gz
+lib/X11/fonts/75dpi/courR10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courR10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courR10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courR10-ISO8859-14.pcf.gz
@@ -319,6 +422,8 @@ lib/X11/fonts/75dpi/courR10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courR10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courR10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courR10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courR10.pcf.gz
+lib/X11/fonts/75dpi/courR12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courR12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courR12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courR12-ISO8859-14.pcf.gz
@@ -327,6 +432,8 @@ lib/X11/fonts/75dpi/courR12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courR12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courR12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courR12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courR12.pcf.gz
+lib/X11/fonts/75dpi/courR14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courR14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courR14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courR14-ISO8859-14.pcf.gz
@@ -335,6 +442,8 @@ lib/X11/fonts/75dpi/courR14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courR14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courR14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courR14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courR14.pcf.gz
+lib/X11/fonts/75dpi/courR18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courR18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courR18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courR18-ISO8859-14.pcf.gz
@@ -343,6 +452,8 @@ lib/X11/fonts/75dpi/courR18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courR18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courR18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courR18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courR18.pcf.gz
+lib/X11/fonts/75dpi/courR24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/courR24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/courR24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/courR24-ISO8859-14.pcf.gz
@@ -351,6 +462,11 @@ lib/X11/fonts/75dpi/courR24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/courR24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/courR24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/courR24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/courR24.pcf.gz
+lib/X11/fonts/75dpi/encodings.dir
+lib/X11/fonts/75dpi/fonts.alias
+lib/X11/fonts/75dpi/fonts.dir
+lib/X11/fonts/75dpi/helvB08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvB08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvB08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvB08-ISO8859-14.pcf.gz
@@ -359,6 +475,8 @@ lib/X11/fonts/75dpi/helvB08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvB08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvB08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvB08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvB08.pcf.gz
+lib/X11/fonts/75dpi/helvB10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvB10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvB10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvB10-ISO8859-14.pcf.gz
@@ -367,6 +485,8 @@ lib/X11/fonts/75dpi/helvB10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvB10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvB10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvB10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvB10.pcf.gz
+lib/X11/fonts/75dpi/helvB12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvB12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvB12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvB12-ISO8859-14.pcf.gz
@@ -375,6 +495,8 @@ lib/X11/fonts/75dpi/helvB12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvB12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvB12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvB12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvB12.pcf.gz
+lib/X11/fonts/75dpi/helvB14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvB14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvB14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvB14-ISO8859-14.pcf.gz
@@ -383,6 +505,8 @@ lib/X11/fonts/75dpi/helvB14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvB14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvB14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvB14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvB14.pcf.gz
+lib/X11/fonts/75dpi/helvB18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvB18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvB18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvB18-ISO8859-14.pcf.gz
@@ -391,6 +515,8 @@ lib/X11/fonts/75dpi/helvB18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvB18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvB18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvB18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvB18.pcf.gz
+lib/X11/fonts/75dpi/helvB24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvB24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvB24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvB24-ISO8859-14.pcf.gz
@@ -399,6 +525,8 @@ lib/X11/fonts/75dpi/helvB24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvB24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvB24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvB24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvB24.pcf.gz
+lib/X11/fonts/75dpi/helvBO08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvBO08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvBO08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvBO08-ISO8859-14.pcf.gz
@@ -407,6 +535,8 @@ lib/X11/fonts/75dpi/helvBO08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvBO08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvBO08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvBO08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvBO08.pcf.gz
+lib/X11/fonts/75dpi/helvBO10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvBO10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvBO10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvBO10-ISO8859-14.pcf.gz
@@ -415,6 +545,8 @@ lib/X11/fonts/75dpi/helvBO10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvBO10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvBO10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvBO10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvBO10.pcf.gz
+lib/X11/fonts/75dpi/helvBO12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvBO12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvBO12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvBO12-ISO8859-14.pcf.gz
@@ -423,6 +555,8 @@ lib/X11/fonts/75dpi/helvBO12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvBO12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvBO12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvBO12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvBO12.pcf.gz
+lib/X11/fonts/75dpi/helvBO14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvBO14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvBO14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvBO14-ISO8859-14.pcf.gz
@@ -431,6 +565,8 @@ lib/X11/fonts/75dpi/helvBO14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvBO14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvBO14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvBO14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvBO14.pcf.gz
+lib/X11/fonts/75dpi/helvBO18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvBO18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvBO18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvBO18-ISO8859-14.pcf.gz
@@ -439,6 +575,8 @@ lib/X11/fonts/75dpi/helvBO18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvBO18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvBO18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvBO18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvBO18.pcf.gz
+lib/X11/fonts/75dpi/helvBO24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvBO24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvBO24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvBO24-ISO8859-14.pcf.gz
@@ -447,6 +585,8 @@ lib/X11/fonts/75dpi/helvBO24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvBO24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvBO24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvBO24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvBO24.pcf.gz
+lib/X11/fonts/75dpi/helvO08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvO08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvO08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvO08-ISO8859-14.pcf.gz
@@ -455,6 +595,8 @@ lib/X11/fonts/75dpi/helvO08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvO08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvO08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvO08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvO08.pcf.gz
+lib/X11/fonts/75dpi/helvO10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvO10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvO10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvO10-ISO8859-14.pcf.gz
@@ -463,6 +605,8 @@ lib/X11/fonts/75dpi/helvO10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvO10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvO10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvO10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvO10.pcf.gz
+lib/X11/fonts/75dpi/helvO12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvO12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvO12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvO12-ISO8859-14.pcf.gz
@@ -471,6 +615,8 @@ lib/X11/fonts/75dpi/helvO12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvO12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvO12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvO12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvO12.pcf.gz
+lib/X11/fonts/75dpi/helvO14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvO14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvO14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvO14-ISO8859-14.pcf.gz
@@ -479,6 +625,8 @@ lib/X11/fonts/75dpi/helvO14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvO14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvO14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvO14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvO14.pcf.gz
+lib/X11/fonts/75dpi/helvO18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvO18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvO18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvO18-ISO8859-14.pcf.gz
@@ -487,6 +635,8 @@ lib/X11/fonts/75dpi/helvO18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvO18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvO18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvO18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvO18.pcf.gz
+lib/X11/fonts/75dpi/helvO24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvO24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvO24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvO24-ISO8859-14.pcf.gz
@@ -495,6 +645,8 @@ lib/X11/fonts/75dpi/helvO24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvO24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvO24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvO24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvO24.pcf.gz
+lib/X11/fonts/75dpi/helvR08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvR08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvR08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvR08-ISO8859-14.pcf.gz
@@ -503,6 +655,8 @@ lib/X11/fonts/75dpi/helvR08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvR08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvR08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvR08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvR08.pcf.gz
+lib/X11/fonts/75dpi/helvR10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvR10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvR10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvR10-ISO8859-14.pcf.gz
@@ -511,6 +665,8 @@ lib/X11/fonts/75dpi/helvR10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvR10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvR10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvR10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvR10.pcf.gz
+lib/X11/fonts/75dpi/helvR12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvR12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvR12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvR12-ISO8859-14.pcf.gz
@@ -519,6 +675,8 @@ lib/X11/fonts/75dpi/helvR12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvR12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvR12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvR12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvR12.pcf.gz
+lib/X11/fonts/75dpi/helvR14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvR14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvR14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvR14-ISO8859-14.pcf.gz
@@ -527,6 +685,8 @@ lib/X11/fonts/75dpi/helvR14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvR14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvR14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvR14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvR14.pcf.gz
+lib/X11/fonts/75dpi/helvR18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvR18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvR18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvR18-ISO8859-14.pcf.gz
@@ -535,6 +695,8 @@ lib/X11/fonts/75dpi/helvR18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvR18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvR18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvR18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvR18.pcf.gz
+lib/X11/fonts/75dpi/helvR24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/helvR24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/helvR24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/helvR24-ISO8859-14.pcf.gz
@@ -543,6 +705,8 @@ lib/X11/fonts/75dpi/helvR24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/helvR24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/helvR24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/helvR24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/helvR24.pcf.gz
+lib/X11/fonts/75dpi/luBIS08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBIS08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBIS08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBIS08-ISO8859-14.pcf.gz
@@ -551,6 +715,8 @@ lib/X11/fonts/75dpi/luBIS08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBIS08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBIS08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBIS08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBIS08.pcf.gz
+lib/X11/fonts/75dpi/luBIS10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBIS10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBIS10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBIS10-ISO8859-14.pcf.gz
@@ -559,6 +725,8 @@ lib/X11/fonts/75dpi/luBIS10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBIS10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBIS10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBIS10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBIS10.pcf.gz
+lib/X11/fonts/75dpi/luBIS12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBIS12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBIS12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBIS12-ISO8859-14.pcf.gz
@@ -567,6 +735,8 @@ lib/X11/fonts/75dpi/luBIS12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBIS12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBIS12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBIS12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBIS12.pcf.gz
+lib/X11/fonts/75dpi/luBIS14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBIS14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBIS14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBIS14-ISO8859-14.pcf.gz
@@ -575,6 +745,8 @@ lib/X11/fonts/75dpi/luBIS14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBIS14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBIS14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBIS14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBIS14.pcf.gz
+lib/X11/fonts/75dpi/luBIS18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBIS18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBIS18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBIS18-ISO8859-14.pcf.gz
@@ -583,6 +755,8 @@ lib/X11/fonts/75dpi/luBIS18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBIS18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBIS18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBIS18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBIS18.pcf.gz
+lib/X11/fonts/75dpi/luBIS19-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBIS19-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBIS19-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBIS19-ISO8859-14.pcf.gz
@@ -591,6 +765,8 @@ lib/X11/fonts/75dpi/luBIS19-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBIS19-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBIS19-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBIS19-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBIS19.pcf.gz
+lib/X11/fonts/75dpi/luBIS24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBIS24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBIS24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBIS24-ISO8859-14.pcf.gz
@@ -599,6 +775,8 @@ lib/X11/fonts/75dpi/luBIS24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBIS24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBIS24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBIS24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBIS24.pcf.gz
+lib/X11/fonts/75dpi/luBS08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBS08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBS08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBS08-ISO8859-14.pcf.gz
@@ -607,6 +785,8 @@ lib/X11/fonts/75dpi/luBS08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBS08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBS08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBS08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBS08.pcf.gz
+lib/X11/fonts/75dpi/luBS10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBS10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBS10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBS10-ISO8859-14.pcf.gz
@@ -615,6 +795,8 @@ lib/X11/fonts/75dpi/luBS10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBS10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBS10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBS10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBS10.pcf.gz
+lib/X11/fonts/75dpi/luBS12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBS12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBS12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBS12-ISO8859-14.pcf.gz
@@ -623,6 +805,8 @@ lib/X11/fonts/75dpi/luBS12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBS12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBS12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBS12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBS12.pcf.gz
+lib/X11/fonts/75dpi/luBS14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBS14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBS14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBS14-ISO8859-14.pcf.gz
@@ -631,6 +815,8 @@ lib/X11/fonts/75dpi/luBS14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBS14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBS14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBS14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBS14.pcf.gz
+lib/X11/fonts/75dpi/luBS18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBS18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBS18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBS18-ISO8859-14.pcf.gz
@@ -639,6 +825,8 @@ lib/X11/fonts/75dpi/luBS18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBS18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBS18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBS18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBS18.pcf.gz
+lib/X11/fonts/75dpi/luBS19-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBS19-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBS19-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBS19-ISO8859-14.pcf.gz
@@ -647,6 +835,8 @@ lib/X11/fonts/75dpi/luBS19-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBS19-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBS19-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBS19-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBS19.pcf.gz
+lib/X11/fonts/75dpi/luBS24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBS24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBS24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luBS24-ISO8859-14.pcf.gz
@@ -655,6 +845,8 @@ lib/X11/fonts/75dpi/luBS24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luBS24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luBS24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luBS24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luBS24.pcf.gz
+lib/X11/fonts/75dpi/luIS08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luIS08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luIS08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luIS08-ISO8859-14.pcf.gz
@@ -663,6 +855,8 @@ lib/X11/fonts/75dpi/luIS08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luIS08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luIS08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luIS08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luIS08.pcf.gz
+lib/X11/fonts/75dpi/luIS10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luIS10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luIS10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luIS10-ISO8859-14.pcf.gz
@@ -671,6 +865,8 @@ lib/X11/fonts/75dpi/luIS10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luIS10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luIS10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luIS10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luIS10.pcf.gz
+lib/X11/fonts/75dpi/luIS12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luIS12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luIS12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luIS12-ISO8859-14.pcf.gz
@@ -679,6 +875,8 @@ lib/X11/fonts/75dpi/luIS12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luIS12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luIS12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luIS12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luIS12.pcf.gz
+lib/X11/fonts/75dpi/luIS14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luIS14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luIS14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luIS14-ISO8859-14.pcf.gz
@@ -687,6 +885,8 @@ lib/X11/fonts/75dpi/luIS14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luIS14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luIS14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luIS14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luIS14.pcf.gz
+lib/X11/fonts/75dpi/luIS18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luIS18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luIS18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luIS18-ISO8859-14.pcf.gz
@@ -695,6 +895,8 @@ lib/X11/fonts/75dpi/luIS18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luIS18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luIS18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luIS18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luIS18.pcf.gz
+lib/X11/fonts/75dpi/luIS19-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luIS19-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luIS19-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luIS19-ISO8859-14.pcf.gz
@@ -703,6 +905,8 @@ lib/X11/fonts/75dpi/luIS19-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luIS19-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luIS19-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luIS19-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luIS19.pcf.gz
+lib/X11/fonts/75dpi/luIS24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luIS24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luIS24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luIS24-ISO8859-14.pcf.gz
@@ -711,6 +915,8 @@ lib/X11/fonts/75dpi/luIS24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luIS24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luIS24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luIS24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luIS24.pcf.gz
+lib/X11/fonts/75dpi/luRS08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luRS08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luRS08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luRS08-ISO8859-14.pcf.gz
@@ -719,6 +925,8 @@ lib/X11/fonts/75dpi/luRS08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luRS08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luRS08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luRS08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luRS08.pcf.gz
+lib/X11/fonts/75dpi/luRS10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luRS10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luRS10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luRS10-ISO8859-14.pcf.gz
@@ -727,6 +935,8 @@ lib/X11/fonts/75dpi/luRS10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luRS10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luRS10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luRS10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luRS10.pcf.gz
+lib/X11/fonts/75dpi/luRS12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luRS12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luRS12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luRS12-ISO8859-14.pcf.gz
@@ -735,6 +945,8 @@ lib/X11/fonts/75dpi/luRS12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luRS12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luRS12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luRS12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luRS12.pcf.gz
+lib/X11/fonts/75dpi/luRS14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luRS14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luRS14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luRS14-ISO8859-14.pcf.gz
@@ -743,6 +955,8 @@ lib/X11/fonts/75dpi/luRS14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luRS14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luRS14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luRS14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luRS14.pcf.gz
+lib/X11/fonts/75dpi/luRS18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luRS18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luRS18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luRS18-ISO8859-14.pcf.gz
@@ -751,6 +965,8 @@ lib/X11/fonts/75dpi/luRS18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luRS18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luRS18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luRS18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luRS18.pcf.gz
+lib/X11/fonts/75dpi/luRS19-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luRS19-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luRS19-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luRS19-ISO8859-14.pcf.gz
@@ -759,6 +975,8 @@ lib/X11/fonts/75dpi/luRS19-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luRS19-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luRS19-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luRS19-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luRS19.pcf.gz
+lib/X11/fonts/75dpi/luRS24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luRS24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luRS24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/luRS24-ISO8859-14.pcf.gz
@@ -767,6 +985,8 @@ lib/X11/fonts/75dpi/luRS24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/luRS24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/luRS24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/luRS24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/luRS24.pcf.gz
+lib/X11/fonts/75dpi/lubB08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubB08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubB08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubB08-ISO8859-14.pcf.gz
@@ -775,6 +995,8 @@ lib/X11/fonts/75dpi/lubB08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubB08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubB08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubB08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubB08.pcf.gz
+lib/X11/fonts/75dpi/lubB10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubB10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubB10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubB10-ISO8859-14.pcf.gz
@@ -783,6 +1005,8 @@ lib/X11/fonts/75dpi/lubB10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubB10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubB10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubB10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubB10.pcf.gz
+lib/X11/fonts/75dpi/lubB12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubB12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubB12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubB12-ISO8859-14.pcf.gz
@@ -791,6 +1015,8 @@ lib/X11/fonts/75dpi/lubB12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubB12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubB12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubB12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubB12.pcf.gz
+lib/X11/fonts/75dpi/lubB14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubB14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubB14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubB14-ISO8859-14.pcf.gz
@@ -799,6 +1025,8 @@ lib/X11/fonts/75dpi/lubB14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubB14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubB14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubB14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubB14.pcf.gz
+lib/X11/fonts/75dpi/lubB18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubB18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubB18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubB18-ISO8859-14.pcf.gz
@@ -807,6 +1035,9 @@ lib/X11/fonts/75dpi/lubB18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubB18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubB18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubB18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubB18.pcf.gz
+lib/X11/fonts/75dpi/lubB19.pcf.gz
+lib/X11/fonts/75dpi/lubB24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubB24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubB24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubB24-ISO8859-14.pcf.gz
@@ -815,6 +1046,8 @@ lib/X11/fonts/75dpi/lubB24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubB24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubB24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubB24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubB24.pcf.gz
+lib/X11/fonts/75dpi/lubBI08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubBI08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubBI08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubBI08-ISO8859-14.pcf.gz
@@ -823,6 +1056,8 @@ lib/X11/fonts/75dpi/lubBI08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubBI08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubBI08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubBI08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubBI08.pcf.gz
+lib/X11/fonts/75dpi/lubBI10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubBI10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubBI10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubBI10-ISO8859-14.pcf.gz
@@ -831,6 +1066,8 @@ lib/X11/fonts/75dpi/lubBI10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubBI10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubBI10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubBI10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubBI10.pcf.gz
+lib/X11/fonts/75dpi/lubBI12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubBI12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubBI12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubBI12-ISO8859-14.pcf.gz
@@ -839,6 +1076,8 @@ lib/X11/fonts/75dpi/lubBI12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubBI12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubBI12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubBI12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubBI12.pcf.gz
+lib/X11/fonts/75dpi/lubBI14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubBI14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubBI14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubBI14-ISO8859-14.pcf.gz
@@ -847,6 +1086,8 @@ lib/X11/fonts/75dpi/lubBI14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubBI14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubBI14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubBI14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubBI14.pcf.gz
+lib/X11/fonts/75dpi/lubBI18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubBI18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubBI18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubBI18-ISO8859-14.pcf.gz
@@ -855,6 +1096,8 @@ lib/X11/fonts/75dpi/lubBI18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubBI18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubBI18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubBI18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubBI18.pcf.gz
+lib/X11/fonts/75dpi/lubBI19-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubBI19-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubBI19-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubBI19-ISO8859-14.pcf.gz
@@ -863,6 +1106,8 @@ lib/X11/fonts/75dpi/lubBI19-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubBI19-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubBI19-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubBI19-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubBI19.pcf.gz
+lib/X11/fonts/75dpi/lubBI24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubBI24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubBI24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubBI24-ISO8859-14.pcf.gz
@@ -871,6 +1116,8 @@ lib/X11/fonts/75dpi/lubBI24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubBI24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubBI24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubBI24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubBI24.pcf.gz
+lib/X11/fonts/75dpi/lubI08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubI08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubI08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubI08-ISO8859-14.pcf.gz
@@ -879,6 +1126,8 @@ lib/X11/fonts/75dpi/lubI08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubI08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubI08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubI08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubI08.pcf.gz
+lib/X11/fonts/75dpi/lubI10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubI10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubI10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubI10-ISO8859-14.pcf.gz
@@ -887,6 +1136,8 @@ lib/X11/fonts/75dpi/lubI10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubI10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubI10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubI10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubI10.pcf.gz
+lib/X11/fonts/75dpi/lubI12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubI12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubI12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubI12-ISO8859-14.pcf.gz
@@ -895,6 +1146,8 @@ lib/X11/fonts/75dpi/lubI12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubI12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubI12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubI12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubI12.pcf.gz
+lib/X11/fonts/75dpi/lubI14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubI14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubI14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubI14-ISO8859-14.pcf.gz
@@ -903,6 +1156,8 @@ lib/X11/fonts/75dpi/lubI14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubI14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubI14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubI14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubI14.pcf.gz
+lib/X11/fonts/75dpi/lubI18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubI18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubI18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubI18-ISO8859-14.pcf.gz
@@ -911,6 +1166,8 @@ lib/X11/fonts/75dpi/lubI18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubI18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubI18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubI18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubI18.pcf.gz
+lib/X11/fonts/75dpi/lubI19-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubI19-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubI19-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubI19-ISO8859-14.pcf.gz
@@ -919,6 +1176,8 @@ lib/X11/fonts/75dpi/lubI19-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubI19-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubI19-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubI19-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubI19.pcf.gz
+lib/X11/fonts/75dpi/lubI24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubI24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubI24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubI24-ISO8859-14.pcf.gz
@@ -927,6 +1186,8 @@ lib/X11/fonts/75dpi/lubI24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubI24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubI24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubI24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubI24.pcf.gz
+lib/X11/fonts/75dpi/lubR08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubR08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubR08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubR08-ISO8859-14.pcf.gz
@@ -935,6 +1196,8 @@ lib/X11/fonts/75dpi/lubR08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubR08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubR08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubR08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubR08.pcf.gz
+lib/X11/fonts/75dpi/lubR10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubR10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubR10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubR10-ISO8859-14.pcf.gz
@@ -943,6 +1206,8 @@ lib/X11/fonts/75dpi/lubR10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubR10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubR10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubR10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubR10.pcf.gz
+lib/X11/fonts/75dpi/lubR12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubR12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubR12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubR12-ISO8859-14.pcf.gz
@@ -951,6 +1216,8 @@ lib/X11/fonts/75dpi/lubR12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubR12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubR12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubR12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubR12.pcf.gz
+lib/X11/fonts/75dpi/lubR14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubR14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubR14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubR14-ISO8859-14.pcf.gz
@@ -959,6 +1226,8 @@ lib/X11/fonts/75dpi/lubR14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubR14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubR14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubR14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubR14.pcf.gz
+lib/X11/fonts/75dpi/lubR18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubR18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubR18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubR18-ISO8859-14.pcf.gz
@@ -967,6 +1236,8 @@ lib/X11/fonts/75dpi/lubR18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubR18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubR18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubR18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubR18.pcf.gz
+lib/X11/fonts/75dpi/lubR19-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubR19-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubR19-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubR19-ISO8859-14.pcf.gz
@@ -975,6 +1246,8 @@ lib/X11/fonts/75dpi/lubR19-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubR19-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubR19-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubR19-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubR19.pcf.gz
+lib/X11/fonts/75dpi/lubR24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lubR24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lubR24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lubR24-ISO8859-14.pcf.gz
@@ -983,6 +1256,8 @@ lib/X11/fonts/75dpi/lubR24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lubR24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lubR24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubR24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lubR24.pcf.gz
+lib/X11/fonts/75dpi/lutBS08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutBS08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutBS08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutBS08-ISO8859-14.pcf.gz
@@ -991,6 +1266,8 @@ lib/X11/fonts/75dpi/lutBS08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutBS08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutBS08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutBS08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutBS08.pcf.gz
+lib/X11/fonts/75dpi/lutBS10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutBS10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutBS10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutBS10-ISO8859-14.pcf.gz
@@ -999,6 +1276,8 @@ lib/X11/fonts/75dpi/lutBS10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutBS10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutBS10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutBS10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutBS10.pcf.gz
+lib/X11/fonts/75dpi/lutBS12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutBS12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutBS12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutBS12-ISO8859-14.pcf.gz
@@ -1007,6 +1286,8 @@ lib/X11/fonts/75dpi/lutBS12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutBS12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutBS12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutBS12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutBS12.pcf.gz
+lib/X11/fonts/75dpi/lutBS14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutBS14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutBS14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutBS14-ISO8859-14.pcf.gz
@@ -1015,6 +1296,8 @@ lib/X11/fonts/75dpi/lutBS14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutBS14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutBS14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutBS14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutBS14.pcf.gz
+lib/X11/fonts/75dpi/lutBS18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutBS18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutBS18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutBS18-ISO8859-14.pcf.gz
@@ -1023,6 +1306,8 @@ lib/X11/fonts/75dpi/lutBS18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutBS18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutBS18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutBS18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutBS18.pcf.gz
+lib/X11/fonts/75dpi/lutBS19-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutBS19-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutBS19-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutBS19-ISO8859-14.pcf.gz
@@ -1031,6 +1316,8 @@ lib/X11/fonts/75dpi/lutBS19-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutBS19-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutBS19-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutBS19-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutBS19.pcf.gz
+lib/X11/fonts/75dpi/lutBS24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutBS24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutBS24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutBS24-ISO8859-14.pcf.gz
@@ -1039,6 +1326,8 @@ lib/X11/fonts/75dpi/lutBS24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutBS24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutBS24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutBS24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutBS24.pcf.gz
+lib/X11/fonts/75dpi/lutRS08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutRS08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutRS08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutRS08-ISO8859-14.pcf.gz
@@ -1047,6 +1336,8 @@ lib/X11/fonts/75dpi/lutRS08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutRS08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutRS08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutRS08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutRS08.pcf.gz
+lib/X11/fonts/75dpi/lutRS10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutRS10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutRS10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutRS10-ISO8859-14.pcf.gz
@@ -1055,6 +1346,8 @@ lib/X11/fonts/75dpi/lutRS10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutRS10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutRS10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutRS10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutRS10.pcf.gz
+lib/X11/fonts/75dpi/lutRS12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutRS12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutRS12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutRS12-ISO8859-14.pcf.gz
@@ -1063,6 +1356,8 @@ lib/X11/fonts/75dpi/lutRS12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutRS12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutRS12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutRS12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutRS12.pcf.gz
+lib/X11/fonts/75dpi/lutRS14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutRS14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutRS14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutRS14-ISO8859-14.pcf.gz
@@ -1071,6 +1366,8 @@ lib/X11/fonts/75dpi/lutRS14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutRS14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutRS14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutRS14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutRS14.pcf.gz
+lib/X11/fonts/75dpi/lutRS18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutRS18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutRS18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutRS18-ISO8859-14.pcf.gz
@@ -1079,6 +1376,8 @@ lib/X11/fonts/75dpi/lutRS18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutRS18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutRS18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutRS18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutRS18.pcf.gz
+lib/X11/fonts/75dpi/lutRS19-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutRS19-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutRS19-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutRS19-ISO8859-14.pcf.gz
@@ -1087,6 +1386,8 @@ lib/X11/fonts/75dpi/lutRS19-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutRS19-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutRS19-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutRS19-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutRS19.pcf.gz
+lib/X11/fonts/75dpi/lutRS24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/lutRS24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/lutRS24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/lutRS24-ISO8859-14.pcf.gz
@@ -1095,6 +1396,8 @@ lib/X11/fonts/75dpi/lutRS24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/lutRS24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/lutRS24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lutRS24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/lutRS24.pcf.gz
+lib/X11/fonts/75dpi/ncenB08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenB08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenB08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenB08-ISO8859-14.pcf.gz
@@ -1103,6 +1406,8 @@ lib/X11/fonts/75dpi/ncenB08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenB08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenB08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenB08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenB08.pcf.gz
+lib/X11/fonts/75dpi/ncenB10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenB10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenB10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenB10-ISO8859-14.pcf.gz
@@ -1111,6 +1416,8 @@ lib/X11/fonts/75dpi/ncenB10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenB10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenB10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenB10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenB10.pcf.gz
+lib/X11/fonts/75dpi/ncenB12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenB12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenB12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenB12-ISO8859-14.pcf.gz
@@ -1119,6 +1426,8 @@ lib/X11/fonts/75dpi/ncenB12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenB12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenB12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenB12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenB12.pcf.gz
+lib/X11/fonts/75dpi/ncenB14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenB14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenB14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenB14-ISO8859-14.pcf.gz
@@ -1127,6 +1436,8 @@ lib/X11/fonts/75dpi/ncenB14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenB14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenB14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenB14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenB14.pcf.gz
+lib/X11/fonts/75dpi/ncenB18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenB18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenB18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenB18-ISO8859-14.pcf.gz
@@ -1135,6 +1446,8 @@ lib/X11/fonts/75dpi/ncenB18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenB18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenB18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenB18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenB18.pcf.gz
+lib/X11/fonts/75dpi/ncenB24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenB24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenB24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenB24-ISO8859-14.pcf.gz
@@ -1143,6 +1456,8 @@ lib/X11/fonts/75dpi/ncenB24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenB24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenB24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenB24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenB24.pcf.gz
+lib/X11/fonts/75dpi/ncenBI08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenBI08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenBI08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenBI08-ISO8859-14.pcf.gz
@@ -1151,6 +1466,8 @@ lib/X11/fonts/75dpi/ncenBI08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenBI08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenBI08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenBI08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenBI08.pcf.gz
+lib/X11/fonts/75dpi/ncenBI10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenBI10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenBI10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenBI10-ISO8859-14.pcf.gz
@@ -1159,6 +1476,8 @@ lib/X11/fonts/75dpi/ncenBI10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenBI10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenBI10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenBI10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenBI10.pcf.gz
+lib/X11/fonts/75dpi/ncenBI12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenBI12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenBI12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenBI12-ISO8859-14.pcf.gz
@@ -1167,6 +1486,8 @@ lib/X11/fonts/75dpi/ncenBI12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenBI12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenBI12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenBI12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenBI12.pcf.gz
+lib/X11/fonts/75dpi/ncenBI14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenBI14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenBI14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenBI14-ISO8859-14.pcf.gz
@@ -1175,6 +1496,8 @@ lib/X11/fonts/75dpi/ncenBI14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenBI14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenBI14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenBI14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenBI14.pcf.gz
+lib/X11/fonts/75dpi/ncenBI18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenBI18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenBI18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenBI18-ISO8859-14.pcf.gz
@@ -1183,6 +1506,8 @@ lib/X11/fonts/75dpi/ncenBI18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenBI18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenBI18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenBI18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenBI18.pcf.gz
+lib/X11/fonts/75dpi/ncenBI24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenBI24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenBI24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenBI24-ISO8859-14.pcf.gz
@@ -1191,6 +1516,8 @@ lib/X11/fonts/75dpi/ncenBI24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenBI24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenBI24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenBI24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenBI24.pcf.gz
+lib/X11/fonts/75dpi/ncenI08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenI08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenI08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenI08-ISO8859-14.pcf.gz
@@ -1199,6 +1526,8 @@ lib/X11/fonts/75dpi/ncenI08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenI08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenI08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenI08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenI08.pcf.gz
+lib/X11/fonts/75dpi/ncenI10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenI10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenI10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenI10-ISO8859-14.pcf.gz
@@ -1207,6 +1536,8 @@ lib/X11/fonts/75dpi/ncenI10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenI10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenI10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenI10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenI10.pcf.gz
+lib/X11/fonts/75dpi/ncenI12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenI12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenI12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenI12-ISO8859-14.pcf.gz
@@ -1215,6 +1546,8 @@ lib/X11/fonts/75dpi/ncenI12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenI12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenI12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenI12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenI12.pcf.gz
+lib/X11/fonts/75dpi/ncenI14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenI14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenI14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenI14-ISO8859-14.pcf.gz
@@ -1223,6 +1556,8 @@ lib/X11/fonts/75dpi/ncenI14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenI14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenI14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenI14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenI14.pcf.gz
+lib/X11/fonts/75dpi/ncenI18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenI18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenI18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenI18-ISO8859-14.pcf.gz
@@ -1231,6 +1566,8 @@ lib/X11/fonts/75dpi/ncenI18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenI18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenI18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenI18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenI18.pcf.gz
+lib/X11/fonts/75dpi/ncenI24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenI24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenI24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenI24-ISO8859-14.pcf.gz
@@ -1239,6 +1576,8 @@ lib/X11/fonts/75dpi/ncenI24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenI24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenI24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenI24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenI24.pcf.gz
+lib/X11/fonts/75dpi/ncenR08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenR08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenR08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenR08-ISO8859-14.pcf.gz
@@ -1247,6 +1586,8 @@ lib/X11/fonts/75dpi/ncenR08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenR08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenR08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenR08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenR08.pcf.gz
+lib/X11/fonts/75dpi/ncenR10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenR10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenR10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenR10-ISO8859-14.pcf.gz
@@ -1255,6 +1596,8 @@ lib/X11/fonts/75dpi/ncenR10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenR10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenR10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenR10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenR10.pcf.gz
+lib/X11/fonts/75dpi/ncenR12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenR12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenR12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenR12-ISO8859-14.pcf.gz
@@ -1263,6 +1606,8 @@ lib/X11/fonts/75dpi/ncenR12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenR12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenR12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenR12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenR12.pcf.gz
+lib/X11/fonts/75dpi/ncenR14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenR14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenR14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenR14-ISO8859-14.pcf.gz
@@ -1271,6 +1616,8 @@ lib/X11/fonts/75dpi/ncenR14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenR14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenR14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenR14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenR14.pcf.gz
+lib/X11/fonts/75dpi/ncenR18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenR18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenR18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenR18-ISO8859-14.pcf.gz
@@ -1279,6 +1626,8 @@ lib/X11/fonts/75dpi/ncenR18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenR18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenR18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenR18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenR18.pcf.gz
+lib/X11/fonts/75dpi/ncenR24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/ncenR24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/ncenR24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/ncenR24-ISO8859-14.pcf.gz
@@ -1287,6 +1636,18 @@ lib/X11/fonts/75dpi/ncenR24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/ncenR24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/ncenR24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/ncenR24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/ncenR24.pcf.gz
+lib/X11/fonts/75dpi/symb08.pcf.gz
+lib/X11/fonts/75dpi/symb10.pcf.gz
+lib/X11/fonts/75dpi/symb12.pcf.gz
+lib/X11/fonts/75dpi/symb14.pcf.gz
+lib/X11/fonts/75dpi/symb18.pcf.gz
+lib/X11/fonts/75dpi/symb24.pcf.gz
+lib/X11/fonts/75dpi/tech14.pcf.gz
+lib/X11/fonts/75dpi/techB14.pcf.gz
+lib/X11/fonts/75dpi/term14.pcf.gz
+lib/X11/fonts/75dpi/termB14.pcf.gz
+lib/X11/fonts/75dpi/timB08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timB08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timB08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timB08-ISO8859-14.pcf.gz
@@ -1295,6 +1656,8 @@ lib/X11/fonts/75dpi/timB08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timB08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timB08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timB08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timB08.pcf.gz
+lib/X11/fonts/75dpi/timB10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timB10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timB10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timB10-ISO8859-14.pcf.gz
@@ -1303,6 +1666,8 @@ lib/X11/fonts/75dpi/timB10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timB10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timB10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timB10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timB10.pcf.gz
+lib/X11/fonts/75dpi/timB12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timB12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timB12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timB12-ISO8859-14.pcf.gz
@@ -1311,6 +1676,8 @@ lib/X11/fonts/75dpi/timB12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timB12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timB12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timB12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timB12.pcf.gz
+lib/X11/fonts/75dpi/timB14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timB14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timB14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timB14-ISO8859-14.pcf.gz
@@ -1319,6 +1686,8 @@ lib/X11/fonts/75dpi/timB14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timB14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timB14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timB14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timB14.pcf.gz
+lib/X11/fonts/75dpi/timB18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timB18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timB18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timB18-ISO8859-14.pcf.gz
@@ -1327,6 +1696,8 @@ lib/X11/fonts/75dpi/timB18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timB18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timB18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timB18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timB18.pcf.gz
+lib/X11/fonts/75dpi/timB24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timB24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timB24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timB24-ISO8859-14.pcf.gz
@@ -1335,6 +1706,8 @@ lib/X11/fonts/75dpi/timB24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timB24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timB24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timB24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timB24.pcf.gz
+lib/X11/fonts/75dpi/timBI08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timBI08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timBI08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timBI08-ISO8859-14.pcf.gz
@@ -1343,6 +1716,8 @@ lib/X11/fonts/75dpi/timBI08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timBI08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timBI08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timBI08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timBI08.pcf.gz
+lib/X11/fonts/75dpi/timBI10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timBI10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timBI10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timBI10-ISO8859-14.pcf.gz
@@ -1351,6 +1726,8 @@ lib/X11/fonts/75dpi/timBI10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timBI10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timBI10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timBI10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timBI10.pcf.gz
+lib/X11/fonts/75dpi/timBI12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timBI12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timBI12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timBI12-ISO8859-14.pcf.gz
@@ -1359,6 +1736,8 @@ lib/X11/fonts/75dpi/timBI12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timBI12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timBI12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timBI12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timBI12.pcf.gz
+lib/X11/fonts/75dpi/timBI14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timBI14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timBI14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timBI14-ISO8859-14.pcf.gz
@@ -1367,6 +1746,8 @@ lib/X11/fonts/75dpi/timBI14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timBI14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timBI14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timBI14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timBI14.pcf.gz
+lib/X11/fonts/75dpi/timBI18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timBI18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timBI18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timBI18-ISO8859-14.pcf.gz
@@ -1375,6 +1756,8 @@ lib/X11/fonts/75dpi/timBI18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timBI18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timBI18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timBI18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timBI18.pcf.gz
+lib/X11/fonts/75dpi/timBI24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timBI24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timBI24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timBI24-ISO8859-14.pcf.gz
@@ -1383,6 +1766,8 @@ lib/X11/fonts/75dpi/timBI24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timBI24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timBI24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timBI24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timBI24.pcf.gz
+lib/X11/fonts/75dpi/timI08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timI08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timI08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timI08-ISO8859-14.pcf.gz
@@ -1391,6 +1776,8 @@ lib/X11/fonts/75dpi/timI08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timI08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timI08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timI08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timI08.pcf.gz
+lib/X11/fonts/75dpi/timI10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timI10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timI10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timI10-ISO8859-14.pcf.gz
@@ -1399,6 +1786,8 @@ lib/X11/fonts/75dpi/timI10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timI10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timI10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timI10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timI10.pcf.gz
+lib/X11/fonts/75dpi/timI12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timI12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timI12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timI12-ISO8859-14.pcf.gz
@@ -1407,6 +1796,8 @@ lib/X11/fonts/75dpi/timI12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timI12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timI12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timI12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timI12.pcf.gz
+lib/X11/fonts/75dpi/timI14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timI14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timI14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timI14-ISO8859-14.pcf.gz
@@ -1415,6 +1806,8 @@ lib/X11/fonts/75dpi/timI14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timI14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timI14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timI14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timI14.pcf.gz
+lib/X11/fonts/75dpi/timI18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timI18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timI18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timI18-ISO8859-14.pcf.gz
@@ -1423,6 +1816,8 @@ lib/X11/fonts/75dpi/timI18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timI18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timI18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timI18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timI18.pcf.gz
+lib/X11/fonts/75dpi/timI24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timI24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timI24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timI24-ISO8859-14.pcf.gz
@@ -1431,6 +1826,8 @@ lib/X11/fonts/75dpi/timI24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timI24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timI24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timI24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timI24.pcf.gz
+lib/X11/fonts/75dpi/timR08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timR08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timR08-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timR08-ISO8859-14.pcf.gz
@@ -1439,6 +1836,8 @@ lib/X11/fonts/75dpi/timR08-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timR08-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timR08-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timR08-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timR08.pcf.gz
+lib/X11/fonts/75dpi/timR10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timR10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timR10-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timR10-ISO8859-14.pcf.gz
@@ -1447,6 +1846,8 @@ lib/X11/fonts/75dpi/timR10-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timR10-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timR10-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timR10-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timR10.pcf.gz
+lib/X11/fonts/75dpi/timR12-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timR12-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timR12-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timR12-ISO8859-14.pcf.gz
@@ -1455,6 +1856,8 @@ lib/X11/fonts/75dpi/timR12-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timR12-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timR12-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timR12-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timR12.pcf.gz
+lib/X11/fonts/75dpi/timR14-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timR14-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timR14-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timR14-ISO8859-14.pcf.gz
@@ -1463,6 +1866,8 @@ lib/X11/fonts/75dpi/timR14-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timR14-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timR14-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timR14-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timR14.pcf.gz
+lib/X11/fonts/75dpi/timR18-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timR18-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timR18-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timR18-ISO8859-14.pcf.gz
@@ -1471,6 +1876,8 @@ lib/X11/fonts/75dpi/timR18-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timR18-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timR18-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timR18-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timR18.pcf.gz
+lib/X11/fonts/75dpi/timR24-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/timR24-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/timR24-ISO8859-13.pcf.gz
 lib/X11/fonts/75dpi/timR24-ISO8859-14.pcf.gz
@@ -1479,3 +1886,4 @@ lib/X11/fonts/75dpi/timR24-ISO8859-2.pcf.gz
 lib/X11/fonts/75dpi/timR24-ISO8859-3.pcf.gz
 lib/X11/fonts/75dpi/timR24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/timR24-ISO8859-9.pcf.gz
+lib/X11/fonts/75dpi/timR24.pcf.gz
