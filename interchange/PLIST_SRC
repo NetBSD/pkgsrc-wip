@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST_SRC,v 1.2 2004/01/27 05:08:07 schnoebe Exp $
+@comment $NetBSD: PLIST_SRC,v 1.3 2004/04/06 20:44:40 schnoebe Exp $
 interchange/_session_storable
 interchange/_uid
 interchange/catalog_after.cfg
@@ -1190,38 +1190,6 @@ man/man1/makecat.1
 man/man1/offline.1
 man/man1/restart.1
 man/man1/update.1
-man/man8/Business::Fedex.0
-man/man8/IniConf.0
-man/man8/Tie::ShadowHash.0
-man/man8/Vend::Accounting::SQL_Ledger.0
-man/man8/Vend::CounterFile.0
-man/man8/Vend::Form.0
-man/man8/Vend::Interpolate.0
-man/man8/Vend::Options::Matrix.0
-man/man8/Vend::Options::Old48.0
-man/man8/Vend::Options::Simple.0
-man/man8/Vend::Parser.0
-man/man8/Vend::Payment::AuthorizeNet.0
-man/man8/Vend::Payment::BoA.0
-man/man8/Vend::Payment::CyberCash.0
-man/man8/Vend::Payment::ECHO.0
-man/man8/Vend::Payment::Linkpoint.0
-man/man8/Vend::Payment::MCVE.0
-man/man8/Vend::Payment::PSiGate.0
-man/man8/Vend::Payment::Signio.0
-man/man8/Vend::Payment::Skipjack.0
-man/man8/Vend::Payment::TCLink.0
-man/man8/Vend::Payment::TestPayment.0
-man/man8/Vend::Payment::WellsFargo.0
-man/man8/Vend::Payment::iTransact.0
-man/man8/Vend::SOAP::Transport.0
-man/man8/Vend::SQL_Parser.0
-man/man8/Vend::Ship.0
-man/man8/Vend::Ship::Postal.0
-man/man8/Vend::Ship::QueryUPS.0
-man/man8/Vend::Table::Editor.0
-man/man8/Vend::UserControl.0
-man/man8/Vend::UserDB.0
 @dirrm interchange/src/mod_interchange
 @dirrm interchange/src
 @dirrm interchange/lib/UI/vars
