@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/28 15:26:49 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/20 04:13:52 minskim Exp $
 #
 
 DISTNAME=	Class-Trigger-0.08
@@ -11,7 +11,9 @@ MAINTAINER=	hiramatu@boreas.dti.ne.jp
 HOMEPAGE=	http://search.cpan.org/dist/Class-Trigger/
 COMMENT=	Mixin to add / call inheritable triggers
 
-USE_BUILDLINK2=	YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Class/Trigger/.packlist
 
 .include "../../lang/perl5/module.mk"
