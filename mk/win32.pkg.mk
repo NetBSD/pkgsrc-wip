@@ -1,4 +1,4 @@
-# $Id: win32.pkg.mk,v 1.10 2003/12/01 05:26:59 mpasternak Exp $
+# $Id: win32.pkg.mk,v 1.11 2003/12/01 05:34:42 mpasternak Exp $
 # (C) 2003 Michal Pasternak <dotz@irc.pl>
 #
 #
@@ -28,12 +28,17 @@ PLIST_SUBST=	MINGWTARGET=${MINGWTARGET}
 
 PATH:=		${CROSSBASE}/i586-pc-mingw32/bin/:${PATH}
 CC=		${CROSSBASE}/i586-pc-mingw32/bin/gcc
+CXX=		${CROSSBASE}/i586-pc-mingw32/bin/g++
 CPP=		${CROSSBASE}/i586-pc-mingw32/bin/cpp
 LD=		${CROSSBASE}/i586-pc-mingw32/bin/ld
 AR=		${CROSSBASE}/i586-pc-mingw32/bin/ar
 AS=		${CROSSBASE}/i586-pc-mingw32/bin/as
 NM=		${CROSSBASE}/i586-pc-mingw32/bin/nm
 LDFLAGS=	-L${CROSSBASE}/i586-pc-mingw32/lib
+CFLAGS=		-I${CROSSBASE}/include
+CPPFLAGS=	-I${CROSSBASE}/include
+CXXFLAGS=	-I${CROSSBASE}/include
+
 .ifdef MINGW_STATIC
 LIBTOOL=		${CROSSBASE}/i586-pc-mingw32/bin/libtool-static
 CONFIGURE_ARGS+=	--enable-static --disable-shared
@@ -44,6 +49,7 @@ SHLIBTOOL:=	${LIBTOOL}
 .endif
 
 BUILD_DEPENDS+=	mingw-c>=3.1.1:../../wip/mingw-c
+# BUILD_DEPENDS+=	mingw-g++>=3.1.1:../../wip/mingw-g++
 BUILD_DEPENDS+=	mingw-binutils>=2.14.90:../../wip/mingw-binutils
 BUILD_DEPENDS+=	mingw-runtime-bin>=3.2:../../wip/mingw-runtime-bin
 BUILD_DEPENDS+=	mingw-w32api-bin>=2.2:../../wip/mingw-w32api-bin
