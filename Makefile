@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.274 2003/06/27 02:48:56 poppnk Exp $
-# $NetBSD: Makefile,v 1.274 2003/06/27 02:48:56 poppnk Exp $
+# $Id: Makefile,v 1.275 2003/06/27 03:26:29 poppnk Exp $
+# $NetBSD: Makefile,v 1.275 2003/06/27 03:26:29 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -114,6 +114,7 @@ SUBDIR+=	jpgraph
 SUBDIR+=	kapital
 SUBDIR+=	kgpg
 SUBDIR+=	korelib
+SUBDIR+=	ldapdns
 SUBDIR+=	lde
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
