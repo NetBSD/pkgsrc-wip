@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/08 10:39:46 bjan2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/09 04:43:04 bjan2 Exp $
 bin/rolo
 man/man1/rolo.1
+share/doc/rolo/rfc2426.txt
+@dirrm share/doc/rolo
