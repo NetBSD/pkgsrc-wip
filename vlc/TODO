@@ -1,8 +1,6 @@
-$Id: TODO,v 1.2 2004/01/17 16:34:12 marc Exp $
+$Id: TODO,v 1.3 2004/03/29 10:12:09 grantbeattie Exp $
 
     o ffmpeg plugin (our current ffmpeg from pkgsrc is not enough)
     o VCD support in NetBSD (test)
     o Looks like current faad library in pkgsrc is not compatible?!
-    o remove hard-coded "/dev/dsp"'s with DEVOSSAUDIO from
-      ossaudio.buildlink2.mk 
     o test test test
