@@ -1,4 +1,4 @@
-# $Id: win32.pkg.mk,v 1.7 2003/12/01 04:31:15 mpasternak Exp $
+# $Id: win32.pkg.mk,v 1.8 2003/12/01 05:03:01 mpasternak Exp $
 # (C) 2003 Michal Pasternak <dotz@irc.pl>
 #
 #
@@ -37,8 +37,12 @@ LDFLAGS=	-L${CROSSBASE}/i586-pc-mingw32/lib
 .ifdef MINGW_STATIC
 LIBTOOL=		${CROSSBASE}/i586-pc-mingw32/bin/libtool-static
 CONFIGURE_ARGS+=	--enable-static --disable-shared
+PKGLIBTOOL=		${LIBTOOL}
+PKGSHLIBTOOL=		${LIBTOOL}
 .else
 LIBTOOL=	${CROSSBASE}/i586-pc-mingw32/bin/libtool
+PKGLIBTOOL=	${LIBTOOL}
+PKGSHLIBTOOL=	${LIBTOOL}
 .endif
 
 BUILD_DEPENDS+=	mingw-c>=3.1.1:../../wip/mingw-c
