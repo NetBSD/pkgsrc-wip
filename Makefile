@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1517 2004/10/30 21:34:19 larnor Exp $
-# $NetBSD: Makefile,v 1.1517 2004/10/30 21:34:19 larnor Exp $
+# $Id: Makefile,v 1.1518 2004/10/31 22:02:08 dolecek Exp $
+# $NetBSD: Makefile,v 1.1518 2004/10/31 22:02:08 dolecek Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -35,7 +35,6 @@ SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-frontpage
 SUBDIR+=	ap-macro
 SUBDIR+=	ap-ometer
-SUBDIR+=	ap-php5
 SUBDIR+=	ap2-jk2
 SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-macro
@@ -551,14 +550,6 @@ SUBDIR+=	php-doc-ru
 SUBDIR+=	php-doc-sk
 SUBDIR+=	php-doc-sl
 SUBDIR+=	php-doc-sv
-SUBDIR+=	php5
-SUBDIR+=	php5-calendar
-SUBDIR+=	php5-ftp
-SUBDIR+=	php5-mbstring
-SUBDIR+=	php5-mysql
-SUBDIR+=	php5-pgsql
-SUBDIR+=	php5-posix
-SUBDIR+=	php5-sockets
 SUBDIR+=	picasm
 SUBDIR+=	picprog
 SUBDIR+=	pinball
