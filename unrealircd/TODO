@@ -1,0 +1,7 @@
+$NetBSD: TODO,v 1.1.1.1 2003/10/13 14:10:25 adrian_p Exp $
+
+Enable and test chroot() code
+Test SSL connections
+Test IPv6 connections
+Extra options in rc.d script
+Better inform user of setup in MESSAGE
