@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/02 04:41:08 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/02 21:05:58 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -31,7 +31,7 @@ BUILD_DEPENDS+=	m4-[0-9]*:../../devel/m4
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
-RESTRICTED=	"Redistribution of source or binaries not permitted"
+RESTRICTED=	"Redistribution of source or binaries permitted only by SCSL license terms"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
@@ -48,6 +48,7 @@ ALL_TARGET=	world release-images
 BUILD_DIRS=	${WRKSRC}/build/bsd
 CHECK_SHLIBS=	NO # scripts set LD_LIBRARY_PATH
 MAKEFILE=	GNUmakefile
+MESSAGE_SRC=	
 NO_MTREE=	YES # since we change PREFIX below
 OWN_DIRS=	${PREFIX} ${PREFIX}/jre ${PREFIX}/jre/lib \
 		${PREFIX}/jre/lib/images ${PREFIX}/jre/lib/images/cursors \
