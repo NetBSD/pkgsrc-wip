@@ -47,9 +47,6 @@ x86 (gcc 2.xx.x/3.x):
 	* NetBSD 1.6.1 and -current
 	* Debian sid 
 
-At this moment, this meta package doesn't work on NetBSD
-1.6.x, we are working on it yet.
-
 Contributed by:
 
 	* Juan RP 
