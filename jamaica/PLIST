@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/10 19:36:41 poppnk Exp $
+bin/jamaica
+lib/java/jamaica.jar
+share/examples/jamaica/arraytest.ja
+share/examples/jamaica/constanttest.ja
+share/examples/jamaica/exceptiontest.ja
+share/examples/jamaica/gototest.ja
+share/examples/jamaica/iftest.ja
+share/examples/jamaica/inputtest.ja
+share/examples/jamaica/interfacetest.ja
+share/examples/jamaica/invokespecialtest.ja
+share/examples/jamaica/iteratetest.ja
+share/examples/jamaica/jat.bat
+share/examples/jamaica/jatbcel.bat
+share/examples/jamaica/jcctest.java
+share/examples/jamaica/mybaseclass.java
+share/examples/jamaica/settest.ja
+share/examples/jamaica/staticfinaltest.ja
+share/examples/jamaica/switchtest.ja
+share/examples/jamaica/valuegetsettest.ja
+@dirrm share/examples/jamaica

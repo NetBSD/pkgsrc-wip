@@ -1,0 +1,8 @@
+Jamaica, the JVM Macro Assembler, is an easy-to-learn and easy-to-use
+assembly language for JVM bytecode programming. It uses Java syntax to
+define a JVM class except for the method body that takes bytecode
+instructions, including Jamaica's built-in macros. In Jamaica, bytecode
+instructions use mnemonics and symbolic names for all variables, parameters,
+data fields, constants and labels. Jamaica is a simplified JVM assembly
+language. It does not support inner classes. Variables are all method-wide
+and are strongly-typed.
