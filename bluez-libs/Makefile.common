@@ -1,3 +1,5 @@
 ONLY_FOR_PLATFORM=Linux-*-*
 
+DEPENDS+=	bluez-libs>=2.15:../../wip/bluez-libs
+
 .include "../../wip/bluez-libs/buildlink3.mk"
