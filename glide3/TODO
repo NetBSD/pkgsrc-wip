@@ -1,0 +1,2 @@
+* The libraries and apps needs to be linked to its shared libraries
+* The rest of apps and libs need to be added to Makefile and PLIST
