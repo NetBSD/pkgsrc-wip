@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.267 2003/06/24 05:43:34 xtraeme Exp $
-# $NetBSD: Makefile,v 1.267 2003/06/24 05:43:34 xtraeme Exp $
+# $Id: Makefile,v 1.268 2003/06/24 08:02:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.268 2003/06/24 08:02:57 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -71,6 +71,8 @@ SUBDIR+=	gmencoder
 SUBDIR+=	gnomeicu
 SUBDIR+=	gnome2-pkgview
 SUBDIR+=	gnome2-system-monitor
+SUBDIR+=	gnome2-themes
+SUBDIR+=	gnome2-themes-extra
 SUBDIR+=	gnome2-userdocs
 SUBDIR+=	gob2
 SUBDIR+=	gotmail
