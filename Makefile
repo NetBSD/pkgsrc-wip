@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1492 2004/10/12 16:03:04 ianharding Exp $
-# $NetBSD: Makefile,v 1.1492 2004/10/12 16:03:04 ianharding Exp $
+# $Id: Makefile,v 1.1493 2004/10/13 09:01:32 minskim Exp $
+# $NetBSD: Makefile,v 1.1493 2004/10/13 09:01:32 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -139,7 +139,6 @@ SUBDIR+=	e3
 SUBDIR+=	ecl
 SUBDIR+=	ecore
 SUBDIR+=	edje
-SUBDIR+=	eet
 SUBDIR+=	eic
 SUBDIR+=	emacs-carbon
 SUBDIR+=	embryo

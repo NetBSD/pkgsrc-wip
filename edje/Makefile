@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/16 17:41:00 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/13 09:01:35 minskim Exp $
 #
 
 DISTNAME=		edje-0.5.0
@@ -17,7 +17,7 @@ USE_X11=		YES
 .include "../../devel/libtool/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
-.include "../../wip/eet/buildlink3.mk"
+.include "../../devel/eet/buildlink3.mk"
 .include "../../wip/embryo/buildlink3.mk"
 .include "../../wip/ecore/buildlink3.mk"
 .include "../../wip/evas/buildlink3.mk"
