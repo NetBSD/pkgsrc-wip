@@ -3,3 +3,5 @@
 
 (2) Binary package doesn't have $VARBASE/radmind/{client,cert}?
 
+(3) Have the radmind script test for $VARBASE/radmind/config, and
+notify after install that you need to create this file.
