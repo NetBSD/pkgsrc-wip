@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1677 2005/03/04 19:07:58 oht Exp $
-# $NetBSD: Makefile,v 1.1677 2005/03/04 19:07:58 oht Exp $
+# $Id: Makefile,v 1.1678 2005/03/07 09:23:14 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1678 2005/03/07 09:23:14 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -697,6 +697,7 @@ SUBDIR+=	planner
 SUBDIR+=	plugger
 SUBDIR+=	pngnq
 SUBDIR+=	pointless
+SUBDIR+=	poppler
 SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postgresql-uniqueidentifier
