@@ -4,3 +4,5 @@ needs #include <rpc/rpc.h> and string.h and included.
 This is based on BSD code though.
 
 Can someone test under other operating systems?
+
+Maybe have custom /var directory for pid file

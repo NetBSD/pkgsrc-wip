@@ -1,29 +1,30 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/16 04:17:00 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/18 03:03:50 jeremy-c-reed Exp $
 bin/ping
 man/man8/inetd.8
 man/man8/ping.8
 sbin/inetd
-share/netkit-base/etc.sample/README
-share/netkit-base/etc.sample/diphosts
-share/netkit-base/etc.sample/exports
-share/netkit-base/etc.sample/ftpusers
-share/netkit-base/etc.sample/host.conf
-share/netkit-base/etc.sample/hosts
-share/netkit-base/etc.sample/hosts.allow
-share/netkit-base/etc.sample/hosts.deny
-share/netkit-base/etc.sample/hosts.equiv
-share/netkit-base/etc.sample/hosts.lpd
-share/netkit-base/etc.sample/inetd.conf
-share/netkit-base/etc.sample/networks
-share/netkit-base/etc.sample/nntpserver
-share/netkit-base/etc.sample/nsswitch.conf
-share/netkit-base/etc.sample/printcap
-share/netkit-base/etc.sample/protocols
-share/netkit-base/etc.sample/resolv.conf
-share/netkit-base/etc.sample/rpc
-share/netkit-base/etc.sample/sample.dip
-share/netkit-base/etc.sample/services
-share/netkit-base/etc.sample/slip.hosts
-share/netkit-base/etc.sample/slip.login
-@dirrm share/netkit-base/etc.sample
-@dirrm share/netkit-base
+share/examples/${PKGBASE}/etc.sample/README
+share/examples/${PKGBASE}/etc.sample/diphosts
+share/examples/${PKGBASE}/etc.sample/exports
+share/examples/${PKGBASE}/etc.sample/ftpusers
+share/examples/${PKGBASE}/etc.sample/host.conf
+share/examples/${PKGBASE}/etc.sample/hosts
+share/examples/${PKGBASE}/etc.sample/hosts.allow
+share/examples/${PKGBASE}/etc.sample/hosts.deny
+share/examples/${PKGBASE}/etc.sample/hosts.equiv
+share/examples/${PKGBASE}/etc.sample/hosts.lpd
+share/examples/${PKGBASE}/etc.sample/inetd.conf
+share/examples/${PKGBASE}/etc.sample/networks
+share/examples/${PKGBASE}/etc.sample/nntpserver
+share/examples/${PKGBASE}/etc.sample/nsswitch.conf
+share/examples/${PKGBASE}/etc.sample/printcap
+share/examples/${PKGBASE}/etc.sample/protocols
+share/examples/${PKGBASE}/etc.sample/resolv.conf
+share/examples/${PKGBASE}/etc.sample/rpc
+share/examples/${PKGBASE}/etc.sample/sample.dip
+share/examples/${PKGBASE}/etc.sample/services
+share/examples/${PKGBASE}/etc.sample/slip.hosts
+share/examples/${PKGBASE}/etc.sample/slip.login
+share/examples/${PKGBASE}/inetd.conf
+@dirrm share/examples/${PKGBASE}/etc.sample
+@dirrm share/examples/${PKGBASE}

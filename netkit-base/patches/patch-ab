@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2003/12/18 03:03:50 jeremy-c-reed Exp $
+
+--- inetd/pathnames.h.orig	2000-07-22 16:00:05.000000000 -0700
++++ inetd/pathnames.h
+@@ -36,6 +36,10 @@
+ 
+ #include <paths.h>
+ 
++#ifndef _PATH_INETDCONF
+ #define	_PATH_INETDCONF	"/etc/inetd.conf"
++#endif
+ #define _PATH_INETDPID	"/var/run/inetd.pid"
++#ifndef _PATH_INETD
+ #define _PATH_INETD     "/usr/sbin/inetd"
++#endif
