@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2003/05/20 18:43:44 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2003/05/27 18:47:02 airhead Exp $
 
---- share/remote/template/Makefile.in.orig	2003-05-20 20:23:45.000000000 +0200
-+++ share/remote/template/Makefile.in	2003-05-20 20:24:21.000000000 +0200
-@@ -93,7 +93,7 @@
+--- mutella/event.cpp.orig	Fri Nov 29 21:26:21 2002
++++ mutella/event.cpp
+@@ -150,7 +150,7 @@ MEventReceiver::~MEventReceiver()
+ 	ED().RemoveReceiver(this);
+ }
  
- template_DATA = connections.html edit.html index.html log.html message.html move.html mutella-remote.css results.html searches.html transfers.html
- 
--templatedir = $(datadir)/mutella/remote/template/
-+templatedir = $(datadir)/doc/html/mutella/remote/template/
- 
- EXTRA_DIST = $(template_DATA)
- subdir = share/remote/template
+-MAsyncEventReceiver::MAsyncEventReceiver(int nMaxTime, int nMaxMem /*=INT_MAX*/) : m_nMaxTime(nMaxTime), m_nMaxMem(nMaxMem)
++MAsyncEventReceiver::MAsyncEventReceiver(int nMaxTime, int nMaxMem /*=INT_MAX*/) : m_nMaxTime(nMaxTime), m_nMaxMem(nMaxMem), m_mutex(TRUE)
+ {
+ 	m_nMemUsed = 0;
+ 	m_nMissedEvents = 0;
