@@ -1,11 +1,12 @@
-# $Id: Makefile,v 1.34 2003/04/06 00:52:44 marmfield Exp $
-# $NetBSD: Makefile,v 1.34 2003/04/06 00:52:44 marmfield Exp $
+# $Id: Makefile,v 1.35 2003/04/06 02:23:13 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.35 2003/04/06 02:23:13 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	PPower4
 SUBDIR+=	aolserver
 SUBDIR+=	autoproject
+SUBDIR+=	byacc
 SUBDIR+=	chksniff
 SUBDIR+=	chktex
 SUBDIR+=	cvsd
