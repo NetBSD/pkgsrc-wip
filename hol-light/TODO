@@ -1,0 +1,3 @@
+$NetBSD: TODO,v 1.1 2004/03/17 23:45:02 airhead Exp $
+- Get the toplevel system to work without quitting with an error of
+   `Unknown option -stdlib.'
