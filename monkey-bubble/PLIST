@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2003/10/02 11:47:53 cubidou Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/10/16 15:07:00 cubidou Exp $
 bin/gsttest
 bin/monkey-bubble
 bin/monkey-srv
+etc/gconf/schemas/monkey-bubble.schemas
 lib/libgdkview.a
 lib/libgdkview.la
 lib/libgdkview.so
@@ -27,24 +28,27 @@ lib/libnetcltmonkey.la
 lib/libnetcltmonkey.so
 lib/libnetcltmonkey.so.0
 lib/libnetcltmonkey.so.0.0
-share/monkey-bubble/data/levels
-share/monkey-bubble/gfx/banane.svg
-share/monkey-bubble/gfx/bubbles/boule_01.svg
-share/monkey-bubble/gfx/bubbles/boule_02.svg
-share/monkey-bubble/gfx/bubbles/boule_03.svg
-share/monkey-bubble/gfx/bubbles/boule_04.svg
-share/monkey-bubble/gfx/bubbles/boule_05.svg
-share/monkey-bubble/gfx/bubbles/boule_06.svg
-share/monkey-bubble/gfx/bubbles/boule_07.svg
-share/monkey-bubble/gfx/bubbles/boule_08.svg
-share/monkey-bubble/gfx/decor_1_player.svg
-share/monkey-bubble/gfx/decor_2_players.svg
+share/applications/monkey-bubble.desktop
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/monkey-bubble.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/monkey-bubble.mo
+share/monkey-bubble/gfx/banana.svg
+share/monkey-bubble/gfx/bubbles/bubble_01.svg
+share/monkey-bubble/gfx/bubbles/bubble_02.svg
+share/monkey-bubble/gfx/bubbles/bubble_03.svg
+share/monkey-bubble/gfx/bubbles/bubble_04.svg
+share/monkey-bubble/gfx/bubbles/bubble_05.svg
+share/monkey-bubble/gfx/bubbles/bubble_06.svg
+share/monkey-bubble/gfx/bubbles/bubble_07.svg
+share/monkey-bubble/gfx/bubbles/bubble_08.svg
 share/monkey-bubble/gfx/frozen-bubble/back_hiscores.png
 share/monkey-bubble/gfx/frozen-bubble/data
 share/monkey-bubble/gfx/harm.svg
+share/monkey-bubble/gfx/layout_1_player.svg
+share/monkey-bubble/gfx/layout_2_players.svg
 share/monkey-bubble/gfx/looser.svg
 share/monkey-bubble/gfx/lost.svg
 share/monkey-bubble/gfx/monkey-bubble-icon.xpm
+share/monkey-bubble/gfx/monkey.png
 share/monkey-bubble/gfx/monkeys.svg
 share/monkey-bubble/gfx/number/0.svg
 share/monkey-bubble/gfx/number/1.svg
@@ -56,7 +60,7 @@ share/monkey-bubble/gfx/number/6.svg
 share/monkey-bubble/gfx/number/7.svg
 share/monkey-bubble/gfx/number/8.svg
 share/monkey-bubble/gfx/number/9.svg
-share/monkey-bubble/gfx/panneau.svg
+share/monkey-bubble/gfx/pane.svg
 share/monkey-bubble/gfx/pause.svg
 share/monkey-bubble/gfx/snake-body.svg
 share/monkey-bubble/gfx/snake/snake.svg
@@ -142,12 +146,15 @@ share/monkey-bubble/gfx/snake/snake_6.svg
 share/monkey-bubble/gfx/snake/snake_7.svg
 share/monkey-bubble/gfx/snake/snake_8.svg
 share/monkey-bubble/gfx/snake/snake_9.svg
-share/monkey-bubble/gfx/tomate.svg
+share/monkey-bubble/gfx/tomato.svg
 share/monkey-bubble/gfx/win.svg
+share/monkey-bubble/glade/keybinding.glade
+share/monkey-bubble/glade/monkey-bubble.glade
+share/monkey-bubble/levels
+@dirrm share/monkey-bubble/glade
 @dirrm share/monkey-bubble/gfx/snake
 @dirrm share/monkey-bubble/gfx/number
 @dirrm share/monkey-bubble/gfx/frozen-bubble
 @dirrm share/monkey-bubble/gfx/bubbles
 @dirrm share/monkey-bubble/gfx
-@dirrm share/monkey-bubble/data
 @dirrm share/monkey-bubble
