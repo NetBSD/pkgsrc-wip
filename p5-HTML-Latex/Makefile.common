@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2003/09/09 21:54:57 jeremy-c-reed Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/03/11 23:33:41 jeremy-c-reed Exp $
 #
-# common file because latex2html tool comes from same source download
+# common file because html2latex tool comes from same source download
 
 HTML2LATEX_VERSION=	1.1
 DISTNAME=		html2latex-${HTML2LATEX_VERSION}
