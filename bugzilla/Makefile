@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/11/05 17:20:09 adrian_p Exp $
+# $NetBSD: Makefile,v 1.24 2004/11/05 17:44:22 adrian_p Exp $
 #
 
 DISTNAME=	bugzilla-2.18rc3
@@ -47,13 +47,13 @@ BZDIR=		${PREFIX}/share/bugzilla
 EGDIR=		${PREFIX}/share/examples/bugzilla
 DOCDIR=		${PREFIX}/share/doc/bugzilla
 CONF_FILES=	${EGDIR}/bugzilla.conf ${PKG_SYSCONFDIR}/bugzilla.conf \
-		${EGDIR}/localconfig ${BZDIR}/localconfig
+		${WRKSRC}/localconfig.local ${BZDIR}/localconfig
 
 REPLACE_PERL=	*.pl *.cgi
 
 SUBST_CLASSES=		conf
 SUBST_STAGE.conf=	pre-install
-SUBST_FILES.conf=	bugzilla.conf localconfig Bugzilla/BugMail.pm
+SUBST_FILES.conf=	bugzilla.conf localconfig.local Bugzilla/BugMail.pm
 SUBST_SED.conf=		-e "s|@BZ_DB_HOST@|${BZ_DB_HOST}|g" 		\
 			-e "s|@BZ_WEB_GROUP@|${BZ_WEB_GROUP}|g"		\
 			-e "s|@BZ_DB_PORT@|${BZ_DB_PORT}|g" 		\
@@ -72,6 +72,7 @@ post-extract:
 		${RM} -f
 	@${CP} ${FILESDIR}/bugzilla.conf ${WRKSRC}
 	@${CP} ${FILESDIR}/localconfig ${WRKSRC}
+	@${CP} ${FILESDIR}/localconfig ${WRKSRC}/localconfig.local
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
