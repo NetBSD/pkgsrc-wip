@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/15 14:53:20 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/03 14:19:32 thomasklausner Exp $
 #
 
 DISTNAME=		evidence-0.9.8
@@ -69,7 +69,7 @@ CONFIGURE_ARGS+=	--disable-${val}
 # means users can simply remove a dependency and get into trouble. (?)
 #
 .include "../../sysutils/fam/buildlink3.mk"
-.include "../../wip/epeg/buildlink3.mk"
+.include "../../graphics/epeg/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
