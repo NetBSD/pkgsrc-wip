@@ -29,12 +29,18 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: parsedirs.c,v 1.2 2005/02/21 12:09:50 imilh Exp $ 
+ * $Id: parsedirs.c,v 1.3 2005/02/21 14:11:26 poppnk Exp $ 
  */
 
 #include "pkg_select.h"
 
-static int checkskip(const struct dirent *);
+#if __NetBSD__
+#define DIRENT const struct dirent
+#else
+#define DIRENT struct dirent
+#endif
+
+static int checkskip(DIRENT *);
 static int partialmatch(const char *, const char *);
 
 /* from pkgfind */
@@ -47,7 +53,7 @@ static struct dirent **dlist;
 static int count;
 
 static int
-checkskip(const struct dirent *dp)
+checkskip(DIRENT *dp)
 {
         const char **p;
 
