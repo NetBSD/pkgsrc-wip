@@ -1,0 +1,31 @@
+# $NetBSD: Makefile,v 1.1.1.1 2004/02/26 21:19:55 mpasternak Exp $
+#
+
+DISTNAME=		PyProtocols-0.9.2
+PKGNAME=		py-Protocols-docs-0.9.2
+CATEGORIES=		devel
+MASTER_SITES=		http://peak.telecommunity.com/dist/
+EXTRACT_SUFX=		.zip
+
+MAINTAINER=		dotz@irc.pl
+HOMEPAGE=		http://peak.telecommunity.com/PyProtocols.html
+COMMENT=		HTML docs for devel/py-Protocols
+
+NO_CONFIGURE=	# defined
+NO_BUILD=	# defined
+EXTRACT_CMD_OPTS.zip=   -aqo
+
+HTMLDIR=	share/doc/py-Protocols-0.9.2
+DOC_SRCDIR=	${WRKSRC}/docs/html/reference/
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+
+do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
+	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
+	cd ${DOC_SRCDIR} && ${PAX} -rw -pe * ${PREFIX}/${HTMLDIR}
+	cd ${DOC_SRCDIR}/../../ref/ && ${PAX} -rw -pe ref ${PREFIX}/${HTMLDIR}
+	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
+	cd ${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
+	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
+
+.include "../../mk/bsd.pkg.mk"
