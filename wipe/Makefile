@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/08/02 17:19:05 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/02 17:21:32 minskim Exp $
 #
 
 DISTNAME=		wipe-2.2.0
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://wipe.sourceforge.net/
 COMMENT=		Secure data destruction
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
