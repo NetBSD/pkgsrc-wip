@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2003/12/02 00:15:31 mpasternak Exp $
+
+--- makefile.mingw~	Thu Aug 30 07:09:08 2001
++++ makefile.mingw	Tue Dec  2 00:57:38 2003
+@@ -3,7 +3,10 @@
+ 
+ ## Use: make -f makefile.mingw
+ 
+-PARTS=glib gmodule gthread gobject tests
++PARTS=glib gmodule gthread gobject
++
++# we don't run tests because they fail on non-installed glib
++# tests
+ 
+ all :
+ 	for D in $(PARTS); do (cd $$D && $(MAKE) -f makefile.mingw all); done

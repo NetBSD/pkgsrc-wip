@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.1 2003/12/02 00:15:31 mpasternak Exp $
+
+--- build/win32/build-dll.orig	Wed Dec  5 21:56:46 2001
++++ build/win32/build-dll	Tue Dec  2 01:09:05 2003
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ # Wrapper script to build a DLL with gcc.
+ 
+@@ -83,7 +83,7 @@
+     fi
+     current=$1
+     age=$2
+-    dllfile=lib$library-$[current-age]
++    dllfile=lib$library # -$current.$age
+ fi
+ dllfile=$dllfile.dll
+ 
+@@ -107,8 +107,8 @@
+ 
+ # Finally, also build import libraries for the Microsoft linker.
+ 
+-if type -p lib.exe && [ -n "$deffile" ]; then
+-    lib -name:$dllfile -def:$deffile -out:$library.lib
+-fi
++#if type -p lib.exe && [ -n "$deffile" ]; then
++#    lib -name:$dllfile -def:$deffile -out:$library.lib
++#fi
+ 
+ exit 0
