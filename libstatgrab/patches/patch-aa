@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2004/05/19 21:37:04 timbishop Exp $
+$NetBSD: patch-aa,v 1.4 2004/05/20 12:40:47 timbishop Exp $
 
---- configure.orig	Wed May 19 22:24:23 2004
-+++ configure	Wed May 19 22:24:38 2004
-@@ -20870,7 +20870,7 @@
+--- configure.bak	2004-05-20 13:33:41.000000000 +0100
++++ configure	2004-05-20 13:35:00.000000000 +0100
+@@ -20421,7 +20421,7 @@
+ # Set things up for different OS's
+ # We define the name of the OS so the code can act accordingly
+ # We also need to add the right LDFLAGS
+-case $host_os in
++case $build_os in
+ solaris2.[6-7])
  
- 	LINKFLAGS="-ldevstat"
- 	;;
--netbsdelf1*)
-+netbsdelf)
- 
- cat >>confdefs.h <<\_ACEOF
- #define ALLBSD
+ for ac_header in kstat.h
