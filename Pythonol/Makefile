@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/26 19:10:00 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/26 19:12:08 mpasternak Exp $
 #
 
 DISTNAME=		Pythonol-2.0_i586
@@ -24,7 +24,7 @@ SCRIPTNAME=		${PREFIX}/bin/pythonol
 do-install:
 	${INSTALL_DATA_DIR} ${TARGET_DIR}
 	cd ${WRKSRC} && ${PAX} -rw -pe * ${TARGET_DIR}
-	printf "#!/bin/sh\nexec ${PYTHONBIN} ${PREFIX}/${PYSITELIB}/pythonolui.py" > ${SCRIPTNAME}
+	printf "#!/bin/sh\nexec ${PYTHONBIN} ${TARGET_DIR}/pythonolui.py" > ${SCRIPTNAME}
 	${CHMOD} ${BINMODE} ${SCRIPTNAME}
 	${CHOWN} ${BINOWN}:${BINGRP} ${SCRIPTNAME}
 
