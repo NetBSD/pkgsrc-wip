@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/09 09:00:27 imilh Exp $
+$NetBSD: distinfo,v 1.2 2004/07/09 09:36:30 imilh Exp $
 
-SHA1 (wimon-0.2.1.tar.gz) = 755e66a25e04e245e905491f29cff676855b9aab
-Size (wimon-0.2.1.tar.gz) = 5764 bytes
+SHA1 (wimon-0.2.1.tar.gz) = 13a874292f4564759362d6eb70e6334f6699fb24
+Size (wimon-0.2.1.tar.gz) = 5934 bytes
