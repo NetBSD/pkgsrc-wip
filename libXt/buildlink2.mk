@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2004/02/10 18:40:42 jeremy-c-reed Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/02/11 05:10:18 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXt.
 #
@@ -41,6 +41,9 @@ BUILDLINK_FILES.libXt+=	lib/libXt.*
 
 .include "../../mk/pthread.buildlink2.mk"
 LIBS+=		${BUILDLINK_LDFLAGS.pthread}
+
+# libXt needs IceProcessMessages and SmcSaveYourselfDone and others
+LDFLAGS+=	-lICE -lSM
 
 BUILDLINK_TARGETS+=	libXt-buildlink
 
