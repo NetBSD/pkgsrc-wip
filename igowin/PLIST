@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2004/06/25 16:59:42 rillig Exp $
-bin/${PKGNAME}
-share/${PKGNAME}/grain.bmp
-share/${PKGNAME}/${PKGNAME}.exe
-share/${PKGNAME}/${PKGNAME}.hlp
-share/${PKGNAME}/readme.txt
-share/${PKGNAME}/tutor.hlp
-@dirrm share/${PKGNAME}
+@comment $NetBSD: PLIST,v 1.2 2004/06/25 17:07:32 thomasklausner Exp $
+bin/igowin
+share/igowin/grain.bmp
+share/igowin/${PKGNAME}.exe
+share/igowin/${PKGNAME}.hlp
+share/igowin/readme.txt
+share/igowin/tutor.hlp
+@dirrm share/igowin
