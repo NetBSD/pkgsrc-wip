@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/02 01:27:45 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/02 04:59:37 dhowland Exp $
 bin/qemu
+bin/qemu-mkcow
 bin/qemu-system-ppc
 bin/vmdk2raw
 share/doc/qemu/qemu-doc.html

@@ -1,7 +1,19 @@
-PACKAGE IS NOT DONE!
+As far as I know, this package only will compile and install on
+NetBSD-1.6.  I have no machine to test it on 2.0 or 1.5.  I know iti
+won't work on Linux, and I doubt it will work on any other platforms.
 
-not even close.
+I hope to contribute to QEMU towards making it more portable in
+future versions, so the hackjob I do on it with patches won't be
+necessary, and this package can support more platforms.
 
-don't bother.
+QEMU is very picky about the compiler you use, and it is not very
+clear which ones work and which don't.  I got this particular package
+to work with NetBSD-1.6.2's gcc (2.95.3).  I have no idea if other
+versions will work or not, which further complicates the job of
+getting the package to work on more platforms.
 
-yet...
+I will have to look into all of this more, but for now, QEMU is
+still in the early stages of the project, and we can expect that it
+will change significantly and rapidly.  If you want to try this 
+*beta* software, then go for it...just try and find a 1.6 box to
+compile it.  (or use the qemu-bin package)
