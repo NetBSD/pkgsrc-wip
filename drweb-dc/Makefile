@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/02/25 16:10:16 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/12 00:21:06 minskim Exp $
 
 DRW_CLIENT_NAME=	dc
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Command line client for DrWeb Daemon antivirus
 
 do-install:

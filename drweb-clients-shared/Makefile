@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/02/25 16:10:16 bubuchka Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/12 00:20:16 minskim Exp $
 
 DRW_CLIENT_NAME=	clients-shared
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Shared files of clients to DrWeb Daemon antivirus
 
 NO_CONFIGURE=		yes
