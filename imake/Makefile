@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/24 00:08:58 blef Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/24 00:21:13 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XFREE86_VERSION}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	Imake and other utilities from XFree86
 
 USE_BUILDLINK2=	YES
-USE_PERL5=	YES
 
 INSTALL_TARGET=	install install.man
 
