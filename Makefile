@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1622 2005/01/16 17:51:15 ishit Exp $
-# $NetBSD: Makefile,v 1.1622 2005/01/16 17:51:15 ishit Exp $
+# $Id: Makefile,v 1.1623 2005/01/18 05:35:31 ianzag Exp $
+# $NetBSD: Makefile,v 1.1623 2005/01/18 05:35:31 ianzag Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -365,11 +365,25 @@ SUBDIR+=	kazehakase
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	koffice-i18n
+SUBDIR+=	koffice-i18n-af
+SUBDIR+=	koffice-i18n-bg
+SUBDIR+=	koffice-i18n-br
+SUBDIR+=	koffice-i18n-ca
+SUBDIR+=	koffice-i18n-cs
+SUBDIR+=	koffice-i18n-cy
+SUBDIR+=	koffice-i18n-da
 SUBDIR+=	koffice-i18n-de
+SUBDIR+=	koffice-i18n-el
+SUBDIR+=	koffice-i18n-en_GB
+SUBDIR+=	koffice-i18n-eo
 SUBDIR+=	koffice-i18n-es
 SUBDIR+=	koffice-i18n-et
+SUBDIR+=	koffice-i18n-fa
 SUBDIR+=	koffice-i18n-fi
 SUBDIR+=	koffice-i18n-fr
+SUBDIR+=	koffice-i18n-he
+SUBDIR+=	koffice-i18n-hsb
+SUBDIR+=	koffice-i18n-hu
 SUBDIR+=	koffice-i18n-it
 SUBDIR+=	koffice-i18n-nl
 SUBDIR+=	koffice-i18n-pl
