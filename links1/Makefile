@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/06/21 09:05:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/27 08:11:49 thomasklausner Exp $
 #
 
-DISTNAME=		links-1.00pre7
-PKGNAME=		links1-0.99.7
+DISTNAME=		links-1.00pre8
+PKGNAME=		links1-0.99.8
 CATEGORIES=		www
 MASTER_SITES=		http://artax.karlin.mff.cuni.cz/~mikulas/links/download/
 
