@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/28 07:40:16 bjan2 Exp $
+bin/tifiles-config
+include/tilp/file_def.h
+include/tilp/file_err.h
+include/tilp/file_int.h
+include/tilp/file_ver.h
+include/tilp/files8x.h
+include/tilp/files9x.h
+include/tilp/filesxx.h
+include/tilp/grp_ops.h
+include/tilp/macros.h
+include/tilp/stdints.h
+include/tilp/tifiles.h
+include/tilp/types73.h
+include/tilp/types82.h
+include/tilp/types83.h
+include/tilp/types83p.h
+include/tilp/types85.h
+include/tilp/types86.h
+include/tilp/types89.h
+include/tilp/types92.h
+include/tilp/types92p.h
+include/tilp/typesv2.h
+include/tilp/typesxx.h
+lib/libtifiles.a
+lib/libtifiles.la
+lib/libtifiles.so
+lib/libtifiles.so.5
+lib/libtifiles.so.5.6
+libdata/pkgconfig/tifiles.pc
+man/man1/tifiles-config.1
+@unexec ${RMDIR} libdata/pkgconfig >/dev/null 2>&1 || ${TRUE}
+@dirrm include/tilp
