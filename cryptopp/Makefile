@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/26 12:48:52 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/26 12:51:19 minskim Exp $
 #
 
 DISTNAME=		crypto51
@@ -10,7 +10,7 @@ MASTER_SITES=		http://www.eskimo.com/~weidai/ \
 EXTRACT_SUFX=           .zip
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.eskimo.com/~weidai/cryptlib.html
+HOMEPAGE=		http://www.cryptopp.com/
 COMMENT=		Free C++ class library of Cryptographic Primitives
 
 USE_GNU_TOOLS+=		make
