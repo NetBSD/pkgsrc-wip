@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/13 20:03:48 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/19 00:08:23 thomasklausner Exp $
 #
 
 DISTNAME=	ut-server-436
-PKGNAME=	unrealtournament-server
+PKGNAME=	${DISTNAME:S/ut/unrealtournament/}
 WRKSRC=		${WRKDIR}/ut-server
 CATEGORIES=	games
 MASTER_SITES=	http://public.planetmirror.com/pub/lokigames/installers/ut/
