@@ -1,0 +1,50 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/03/18 23:55:10 poppnk Exp $
+
+DISTNAME=		kaffe-1.1.4
+CATEGORIES=		lang java
+MASTER_SITES=		http://www.kaffe.org/ftp/pub/kaffe/v1.1.x-development/\
+			ftp://ftp.kaffe.org/pub/kaffe/v1.1.x-development/
+
+MAINTAINER=		pancake@phreaker.net
+HOMEPAGE=		http://www.kaffe.org/
+COMMENT=		Virtual machine capable of running Java(tm) code
+
+USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
+USE_LIBTOOL=		yes
+USE_GNU_TOOLS+=		make
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+TEST_TARGET=		check
+
+GNU_CONFIGURE=		yes
+CPPFLAGS+=		-Dunix
+
+JVM_HOME=		${LOCALBASE}/java/kaffe
+NO_MTREE=		yes	# since we change PREFIX below
+
+OWN_DIRS=	${PREFIX}
+OWN_DIRS+=	${PREFIX}/etc
+OWN_DIRS+=	${PREFIX}/jre
+OWN_DIRS+=	${PREFIX}/jre/lib
+OWN_DIRS+=	${PREFIX}/jre/lib/security
+SUPPORT_FILES=	${PREFIX}/jre/lib/security/java.security.default	\
+		${PREFIX}/jre/lib/security/java.security
+CONFIGURE_ARGS+=--enable-pure-java-math
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == "NetBSD") && (${OBJECT_FMT} == "ELF")
+#
+# We need to explicitly link libkaffe*.so with libc.so so that libc symbols
+# are resolved correctly when libkaffe*.so are dynamically loaded.
+#
+CONFIGURE_ENV+=		VM_LIBS="-lc"
+.endif
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/license.terms ${PREFIX}
+
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
+
+PREFIX=		${JVM_HOME}
