@@ -1,0 +1,23 @@
+--- makefile.oril	2003-06-03 19:49:25.000000000 -0400
++++ makefile	2003-06-03 19:49:51.000000000 -0400
+@@ -5,15 +5,15 @@
+ VER=245
+ 
+ all:
+-	cd ga; make
+-	cd examples; make
++	cd ga; gmake
++	cd examples; gmake
+ 
+ install:
+-	cd ga; make install
++	cd ga; gmake install
+ 
+ clean:
+-	cd ga; make clean
+-	cd examples; make clean
++	cd ga; gmake clean
++	cd examples; gmake clean
+ 
+ 
+ 
