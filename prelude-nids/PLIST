@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/28 13:02:17 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/10/20 08:28:49 adrian_p Exp $
 bin/prelude-nids
 etc/prelude-nids/ruleset/attack-responses.rules
 etc/prelude-nids/ruleset/backdoor.rules
 etc/prelude-nids/ruleset/bad-traffic.rules
 etc/prelude-nids/ruleset/chat.rules
+etc/prelude-nids/ruleset/classification.config
 etc/prelude-nids/ruleset/ddos.rules
 etc/prelude-nids/ruleset/deleted.rules
 etc/prelude-nids/ruleset/dns.rules
@@ -30,6 +31,7 @@ etc/prelude-nids/ruleset/pop2.rules
 etc/prelude-nids/ruleset/pop3.rules
 etc/prelude-nids/ruleset/porn.rules
 etc/prelude-nids/ruleset/prelude.rules
+etc/prelude-nids/ruleset/reference.config
 etc/prelude-nids/ruleset/rpc.rules
 etc/prelude-nids/ruleset/rservices.rules
 etc/prelude-nids/ruleset/scan.rules
