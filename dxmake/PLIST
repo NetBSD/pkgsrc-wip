@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/21 18:42:36 mpasternak Exp $
+bin/dxmake
+man/cat1/dxmake.0
+man/man1/dxmake.1

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/21 18:42:37 mpasternak Exp $
+
+--- Makefile.orig	2004-03-21 20:50:46.000000000 +0100
++++ Makefile
+@@ -8,7 +8,7 @@ PROTOS= dmake-protos.h
+ SRCS= buffer.c cmdlist.c convert.c depend.c main.c parse.c run.c subs.c var.c lists.c cond.c
+ HFILES= defs.h dmake_str.h lists.h tokens.h dmake-protos.h
+ BINDIR= $(PREFIX)/bin/
+-MANDIR= $(PREFIX)/man/man
++MANDIR= $(PREFIX)/man/
+ TARFILES= $(SRCS) Makefile Makefile.portable dxmake.1 $(HFILES)
+ CFLAGS= -Wall -Wstrict-prototypes
+ REV= 2.11
