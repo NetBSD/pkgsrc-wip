@@ -1,12 +1,70 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2004/01/29 07:32:47 marttikuparinen Exp $
-include/asm
-include/asm-generic/bitops.h
-include/asm-generic/ide_iops.h
-include/asm-generic/pgtable.h
-include/asm-generic/smplock.h
-include/asm-generic/tlb.h
-include/asm-generic/unaligned.h
-include/asm-generic/xor.h
+@comment $NetBSD: PLIST.common,v 1.2 2004/01/30 13:10:52 marttikuparinen Exp $
+include/asm/a.out.h
+include/asm/atomic.h
+include/asm/bitops.h
+include/asm/bugs.h
+include/asm/byteorder.h
+include/asm/cache.h
+include/asm/checksum.h
+include/asm/current.h
+include/asm/delay.h
+include/asm/div64.h
+include/asm/dma.h
+include/asm/elf.h
+include/asm/errno.h
+include/asm/fcntl.h
+include/asm/hardirq.h
+include/asm/hdreg.h
+include/asm/ide.h
+include/asm/ide_iops.h
+include/asm/io.h
+include/asm/ioctl.h
+include/asm/ioctls.h
+include/asm/ipcbuf.h
+include/asm/irq.h
+include/asm/mman.h
+include/asm/mmu.h
+include/asm/mmu_context.h
+include/asm/module.h
+include/asm/msgbuf.h
+include/asm/namei.h
+include/asm/page.h
+include/asm/param.h
+include/asm/pci.h
+include/asm/pgalloc.h
+include/asm/pgtable.h
+include/asm/poll.h
+include/asm/posix_types.h
+include/asm/processor.h
+include/asm/ptrace.h
+include/asm/resource.h
+include/asm/scatterlist.h
+include/asm/segment.h
+include/asm/semaphore.h
+include/asm/sembuf.h
+include/asm/shmbuf.h
+include/asm/shmparam.h
+include/asm/sigcontext.h
+include/asm/siginfo.h
+include/asm/signal.h
+include/asm/smplock.h
+include/asm/socket.h
+include/asm/sockios.h
+include/asm/softirq.h
+include/asm/stat.h
+include/asm/statfs.h
+include/asm/string.h
+include/asm/system.h
+include/asm/termbits.h
+include/asm/termios.h
+include/asm/timex.h
+include/asm/tlb.h
+include/asm/types.h
+include/asm/uaccess.h
+include/asm/unaligned.h
+include/asm/unistd.h
+include/asm/user.h
+include/asm/xor.h
 include/linux/802_11.h
 include/linux/a.out.h
 include/linux/ac97_codec.h
@@ -702,14 +760,14 @@ include/linux/zorro_ids.h
 include/linux/zutil.h
 @dirrm include/linux/mtd
 @dirrm include/linux/hdlc
-@dirrm include/linux/isdn
-@dirrm include/linux/nfsd
-@dirrm include/linux/raid
 @dirrm include/linux/netfilter_arp
+@dirrm include/linux/nfsd
 @dirrm include/linux/lockd
+@dirrm include/linux/sunrpc
+@dirrm include/linux/byteorder
+@dirrm include/linux/raid
 @dirrm include/linux/netfilter_ipv4
 @dirrm include/linux/netfilter_ipv6
-@dirrm include/linux/byteorder
-@dirrm include/linux/sunrpc
+@dirrm include/linux/isdn
 @dirrm include/linux
-@dirrm include/asm-generic
+@dirrm include/asm
