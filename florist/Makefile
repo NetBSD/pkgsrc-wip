@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/25 13:29:24 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/27 11:01:20 johnrshannon Exp $
 #
 
 DISTNAME=		florist-3.15p-src
@@ -10,15 +10,12 @@ MAINTAINER=		john@johnrshannon.com
 HOMEPAGE=		ftp://ftp.cs.nyu.edu/pub/gnat/3.15p/
 COMMENT=		FSU implementation of POSIX.5 (Ada binding)
 
-BUILD_DEPENDS+=		gcc3-ada-[0-9]*:../../lang/gcc3-ada
-
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_AUTOCONF=		yes
 AUTOCONF_REQD=		2.12
 USE_GNU_TOOLS+=		make
-GCC_SUBPREFIX=		gcc3
 GCC_REQUIRED+=	3.3
 
 post-extract:
@@ -34,6 +31,6 @@ do-install:
 		${PREFIX}/lib/florist
 	@${INSTALL_DATA} ${WRKSRC}/floristlib/libflorist.a ${PREFIX}/lib
 
+.include "../../lang/gcc3-ada/buildlink3.mk"
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
-#.include "${LOCALBASE}/${GCC_SUBPREFIX}/mk/ada.mk"
