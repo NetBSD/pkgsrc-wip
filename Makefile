@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.229 2003/06/05 14:22:45 poppnk Exp $
-# $NetBSD: Makefile,v 1.229 2003/06/05 14:22:45 poppnk Exp $
+# $Id: Makefile,v 1.230 2003/06/05 20:35:37 marc Exp $
+# $NetBSD: Makefile,v 1.230 2003/06/05 20:35:37 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -185,6 +185,7 @@ SUBDIR+=	totem
 SUBDIR+=	trickle
 SUBDIR+=	tsclient
 SUBDIR+=	tuxtype2
+SUBDIR+=	umbrello
 SUBDIR+=	umix
 SUBDIR+=	vcdgear
 SUBDIR+=	vixie-cron
