@@ -1,0 +1,29 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2003/11/29 18:15:41 mpasternak Exp $
+# $Id: Makefile.common,v 1.1.1.1 2003/11/29 18:15:41 mpasternak Exp $
+
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw/}
+
+MAINTAINER?=		dotz@irc.pl
+COMMENT?=		GNU C Compiler ported to win32 platforms
+HOMEPAGE?=		http://mingw.sf.net/
+
+WRKSRC?=		${WRKDIR}/${DISTNAME:S/-src//}
+
+USE_BUILDLINK2?=	yes
+USE_PKGLOCALE?=		yes
+GNU_CONFIGURE?=		yes
+USE_CROSSBASE=		yes
+
+PLIST_SUBST+=		MINGWTARGET=${MINGWTARGET}
+
+CONFIGURE_ARGS+=	--prefix=${PREFIX} --exec-prefix=${PREFIX} \
+			--target=${MINGWTARGET}
+
+# Those settings need to be shared between mingw/Makefile.common and
+# buildlink.mk2 files in dependent packages. Unfortunatley, buildlinks
+# don't support them yet :/
+
+MINGWTARGET=		i586-mingw32
+MINGWCCOREDISTFILE=	gcc-core-3.3.1-20030804-1-src
+
+.include "../../mk/bsd.pkg.mk"
