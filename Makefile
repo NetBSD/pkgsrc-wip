@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.599 2003/11/05 05:21:56 mpasternak Exp $
-# $NetBSD: Makefile,v 1.599 2003/11/05 05:21:56 mpasternak Exp $
+# $Id: Makefile,v 1.600 2003/11/06 05:48:12 mpasternak Exp $
+# $NetBSD: Makefile,v 1.600 2003/11/06 05:48:12 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -259,6 +259,7 @@ SUBDIR+=	lilo
 SUBDIR+=	lilypond20
 SUBDIR+=	lincvs
 SUBDIR+=	links-hacked
+SUBDIR+=	linux-chprofessional
 SUBDIR+=	linux-kbd
 SUBDIR+=	linux-makedev
 SUBDIR+=	linux-modutils
