@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/15 21:38:48 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/11 05:13:43 blef Exp $
 #
 
 DISTNAME=		Slune-0.6.1
@@ -11,7 +11,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://oomadness.tuxfamily.org/en/slune/index.html
 COMMENT=		Action game, featuring cars, races and Tux the Penguin
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
