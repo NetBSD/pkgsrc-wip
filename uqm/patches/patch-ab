@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/12/16 16:03:50 bencollver Exp $
+
+--- build/unix/build.config.orig	Tue Dec  7 15:47:41 2004
++++ build/unix/build.config
+@@ -2,7 +2,7 @@
+ 
+ # Include build functions used here
+ . build/unix/config_functions
+-. build/unix/menu_functions
++#. build/unix/menu_functions
+ . build/unix/ansi
+ 
+ 
+@@ -195,6 +195,15 @@ prefix="$INPUT_install_prefix_VALUE" \
+ 		eval INSTALL_LIBDIR="${INPUT_install_libdir_VALUE%/}/"
+ prefix="$INPUT_install_prefix_VALUE" \
+ 		eval INSTALL_SHAREDIR="${INPUT_install_sharedir_VALUE%/}/"
++
++# menu is not good for bulk build environments
++debug_action
++graphics_opengl_action
++sound_openal_action
++ioformat_stdio_zip_action
++INSTALL_BINDIR=${PREFIX}/bin/
++INSTALL_LIBDIR=${PREFIX}/lib/
++INSTALL_SHAREDIR=${PREFIX}/share/
+ 
+ # Set the content dir
+ CONTENTDIR="${INSTALL_SHAREDIR}uqm/content"

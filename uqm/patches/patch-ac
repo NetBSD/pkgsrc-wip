@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/12/16 16:03:50 bencollver Exp $
+
+--- src/sc2code/libs/uio/stdio/stdio.c.orig	Sun Aug 31 11:40:01 2003
++++ src/sc2code/libs/uio/stdio/stdio.c
+@@ -32,6 +32,21 @@
+ 		// for readdir_r
+ #	include <dirent.h>
+ #endif
++#if defined(__NetBSD__) && !defined(readdir_r)
++int readdir_r(DIR *dirp, struct dirent *entry, struct dirent **result)
++{
++	struct dirent *my_result;
++
++	my_result = readdir(dirp);
++	if (my_result == NULL) {
++		*result = NULL;
++	} else {
++		*entry = *my_result;
++		*result = entry;
++	}
++	return 0;  /* how do i detect if readdir() fails? */
++}
++#endif
+ #include <stdio.h>
+ #include <sys/types.h>
+ #include <errno.h>

@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/12/16 16:03:50 bencollver Exp $
+
+SHA1 (uqm/uqm-0.3-source.tgz) = 3e1c8560dc05f2e02c0ac38eed7cbd4ca5a58602
+Size (uqm/uqm-0.3-source.tgz) = 906653 bytes
+SHA1 (uqm/uqm-0.3-content.zip) = 41e7d68b1317d766d804e690f399d7d11a3b8912
+Size (uqm/uqm-0.3-content.zip) = 12554418 bytes
+SHA1 (patch-aa) = 446f447d851afe0ab1f1b67af7d1e2c80077ccbe
+SHA1 (patch-ab) = 208ff1d8ea69febb94710919aad5aa84c6730a82
+SHA1 (patch-ac) = acad0c6831988f2d6a83b553e46cf05c76c3948c

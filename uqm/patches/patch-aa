@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/12/16 16:03:50 bencollver Exp $
+
+--- build/unix/config_proginfo.orig	Tue Jul 15 11:29:34 2003
++++ build/unix/config_proginfo
+@@ -30,7 +30,7 @@ PROG_sed_VERSION=''
+ 
+ PROG_make_NAME="Make"
+ case "$OSNAME" in
+-	FreeBSD|OpenBSD)
++	FreeBSD|OpenBSD|NetBSD)
+ 		PROG_make_FILE="gmake"
+ 		;;
+ 	*)
+@@ -81,6 +81,7 @@ LIB_openal_NAME="OpenAL"
+ LIB_openal_CFLAGS=""
+ case "$OSNAME" in
+ 	FreeBSD|OpenBSD)   LIB_openal_LDFLAGS="-L/usr/local/lib -pthread -lopenal" ;;
++	NetBSD)   LIB_openal_LDFLAGS="-lpthread -lopenal ${LIBOSSAUDIO}" ;;
+ 	MINGW32*)  LIB_openal_LDFLAGS="-lopenal32" ;;
+ 	*)         LIB_openal_LDFLAGS="-lopenal" ;;
+ esac
+@@ -92,6 +93,10 @@ case "$OSNAME" in
+ 		LIB_opengl_CFLAGS="-I/usr/X11R6/include -D_THREAD_SAFE"
+ 		LIB_opengl_LDFLAGS="-L/usr/X11R6/lib -lX11 -lXext -pthread -lGL"
+ 		;;
++	NetBSD)
++		LIB_opengl_CFLAGS="-D_THREAD_SAFE"
++		LIB_opengl_LDFLAGS="-lX11 -lXext -lpthread -lGL -lm"
++		;;
+ 	MINGW32*)
+ 		LIB_opengl_CFLAGS=""
+ 		LIB_opengl_LDFLAGS="-lopengl32"
+@@ -117,6 +122,10 @@ case "$OSNAME" in
+ 	FreeBSD|OpenBSD)
+ 		LIB_vorbisfile_CFLAGS="-I/usr/local/include"
+ 		LIB_vorbisfile_LDFLAGS="-L/usr/local/lib -lvorbisfile -lvorbis"
++		;;
++	NetBSD)
++		LIB_vorbisfile_CFLAGS=""
++		LIB_vorbisfile_LDFLAGS="-lvorbisfile -lvorbis"
+ 		;;
+ 	QNX)
+ 		LIB_vorbisfile_CFLAGS=""

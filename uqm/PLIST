@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/16 16:03:50 bencollver Exp $
+bin/uqm
+lib/uqm/uqm
+share/uqm/content/version
+@dirrm share/uqm/content/packages/addons
+@dirrm share/uqm/content/packages
+@dirrm share/uqm/content
+@dirrm share/uqm
+@dirrm lib/uqm
