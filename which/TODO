@@ -1,0 +1,6 @@
+maybe use getprogname() for some platforms?
+
+maybe get rid of default execute search path code since it is unused?
+
+I didn't install as whereis too, because I have that command
+in my util-linux package. They behave different though.

@@ -1,0 +1,3 @@
+The which tool is used to locate a program file in the user's PATH.
+
+This which code is from NetBSD's whereis.c and originally from 3.0BSD.
