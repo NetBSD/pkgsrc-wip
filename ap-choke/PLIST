@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/16 00:57:54 dmb_ Exp $
+lib/httpd/mod_choke.so
+share/doc/mod_choke/README
+@dirrm share/doc/mod_choke

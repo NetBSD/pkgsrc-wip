@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/03/16 00:57:54 dmb_ Exp $
+
+For instructions about how to set up mod_choke please see
+`${PREFIX}/share/doc/mod_choke/README'
+
+===========================================================================

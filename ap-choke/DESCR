@@ -1,0 +1,7 @@
+mod_choke is a module for Apache that limits usage by greedy clients.
+It's two main functions are to limit the number of concurrent
+connections per IP, and to limit the rate at which apache sends data
+to the client. It includes detection of users behind proxy servers
+(using the X-Referred-By header). It includes limiting the speed at
+which files are sent to a configurable rate, with the option of
+allowing a burst at full speed for the first chunk of a file.
