@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/09/01 23:57:52 blef Exp $
+# $NetBSD: Makefile,v 1.12 2003/09/02 00:25:28 blef Exp $
 
 DISTNAME=	# empty
 PKGNAME=	XFree86-${XF_VER}
@@ -18,11 +18,11 @@ DEPENDS+=	XFree86-docs>=4.3.0:../../wip/XFree86-docs
 DEPENDS+=	XFree86-man>=4.3.0:../../wip/XFree86-man
 DEPENDS+=	XFree86-fontsEncodings>=4.3.0:../../wip/XFree86-fontsEncodings
 DEPENDS+=	XFree86-fontsCyrillic>=4.3.0:../../wip/XFree86-fontsCyrillic
+DEPENDS+=	XFree86-fontsMisc>=4.3.0:../../wip/XFree86-fontsMisc
 DEPENDS+=	XFree86-fonts100dpi>=4.3.0:../../wip/XFree86-fonts100dpi
 DEPENDS+=	XFree86-fonts75dpi>=4.3.0:../../wip/XFree86-fonts75dpi
 DEPENDS+=	XFree86-fontserver>=4.3.0:../../wip/XFree86-fontserver
 DEPENDS+=	XFree86-fontsScalable>=4.3.0:../../wip/XFree86-fontsScalable
-DEPENDS+=	XFree86-defaultBitmaps>=4.3.0:../../wip/XFree86-defaultBitmaps
 
 USE_BUILDLINK2=		yes
 NO_BUILD=		# defined
