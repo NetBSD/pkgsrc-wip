@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/18 15:38:17 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/18 15:51:01 poppnk Exp $
 #
 
 DISTNAME=		jep-2.24
@@ -6,7 +6,7 @@ CATEGORIES=		wip
 MASTER_SITES=		http://www.singularsys.com/download/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://www.singularsys.com/
+HOMEPAGE=		http://www.singularsys.com/jep/
 COMMENT=		Java Mathematical Expression Parser
 
 USE_BUILDLINK3=		yes
