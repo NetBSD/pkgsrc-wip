@@ -1,0 +1,24 @@
+$NetBSD: patch-an,v 1.1 2003/09/17 20:52:58 adrian_p Exp $
+
+--- sql/mysql_priv.h.orig	2003-09-11 02:09:53.000000000 +0200
++++ sql/mysql_priv.h	2003-09-11 02:11:10.000000000 +0200
+@@ -474,11 +474,19 @@
+ #include <openssl/des.h>
+ struct st_des_keyblock 
+ { 
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f
++  DES_cblock key1, key2, key3; 
++#else
+   des_cblock key1, key2, key3; 
++#endif
+ };
+ struct st_des_keyschedule
+ {
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f
++  DES_key_schedule ks1, ks2, ks3;
++#else
+   des_key_schedule ks1, ks2, ks3;
++#endif
+ };
+ extern char *des_key_file;
+ extern struct st_des_keyschedule des_keyschedule[10];

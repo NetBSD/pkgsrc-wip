@@ -1,0 +1,31 @@
+$NetBSD: patch-ap,v 1.1 2003/09/17 20:52:58 adrian_p Exp $
+
+--- sql/des_key_file.cc.orig	2003-09-11 02:24:27.000000000 +0200
++++ sql/des_key_file.cc	2003-09-11 02:26:56.000000000 +0200
+@@ -76,16 +76,26 @@
+ 
+       if (start != end)
+       {
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f
++	DES_cblock ivec;
++#else
+ 	des_cblock ivec;
++#endif
+ 	bzero((char*) &ivec,sizeof(ivec));
+ 	// We make good 24-byte (168 bit) key from given plaintext key with MD5
+ 	EVP_BytesToKey(EVP_des_ede3_cbc(),EVP_md5(),NULL,
+ 		       (uchar *) start, (int) (end-start),1,
+ 		       (uchar *) &keyblock,
+ 		       ivec);
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f
++	DES_set_key_unchecked(&keyblock.key1,&des_keyschedule[(int)offset].ks1);
++	DES_set_key_unchecked(&keyblock.key2,&des_keyschedule[(int)offset].ks2);
++	DES_set_key_unchecked(&keyblock.key3,&des_keyschedule[(int)offset].ks3);
++#else
+ 	des_set_key_unchecked(&keyblock.key1,des_keyschedule[(int)offset].ks1);
+ 	des_set_key_unchecked(&keyblock.key2,des_keyschedule[(int)offset].ks2);
+ 	des_set_key_unchecked(&keyblock.key3,des_keyschedule[(int)offset].ks3);
++#endif
+ 	if (des_default_key == 15)
+ 	  des_default_key= (uint) offset;		// use first as def.
+       }

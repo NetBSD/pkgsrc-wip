@@ -1,0 +1,122 @@
+$NetBSD: patch-ao,v 1.1 2003/09/17 20:52:58 adrian_p Exp $
+
+--- sql/item_strfunc.cc.orig	2003-09-11 02:12:07.000000000 +0200
++++ sql/item_strfunc.cc	2003-09-11 02:22:32.000000000 +0200
+@@ -330,7 +330,11 @@
+ String *Item_func_des_encrypt::val_str(String *str)
+ {
+ #ifdef HAVE_OPENSSL
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f
++  DES_cblock ivec;
++#else
+   des_cblock ivec;
++#endif
+   struct st_des_keyblock keyblock;
+   struct st_des_keyschedule keyschedule;
+   const char *append_str="********";
+@@ -370,9 +374,15 @@
+     EVP_BytesToKey(EVP_des_ede3_cbc(),EVP_md5(),NULL,
+ 		   (uchar*) keystr->ptr(), (int) keystr->length(),
+ 		   1, (uchar*) &keyblock,ivec);
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f
++    DES_set_key_unchecked(&keyblock.key1,&keyschedule.ks1);
++    DES_set_key_unchecked(&keyblock.key2,&keyschedule.ks2);
++    DES_set_key_unchecked(&keyblock.key3,&keyschedule.ks3);
++#else
+     des_set_key_unchecked(&keyblock.key1,keyschedule.ks1);
+     des_set_key_unchecked(&keyblock.key2,keyschedule.ks2);
+     des_set_key_unchecked(&keyblock.key3,keyschedule.ks3);
++#endif
+   }
+ 
+   /* 
+@@ -393,6 +403,15 @@
+   tmp_value[0]=(char) (128 | key_number);
+   // Real encryption
+   bzero((char*) &ivec,sizeof(ivec));
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f
++  DES_ede3_cbc_encrypt((const uchar*) (res->ptr()),
++		       (uchar*) (tmp_value.ptr()+1),
++		       res_length,
++		       &keyschedule.ks1,
++		       &keyschedule.ks2,
++		       &keyschedule.ks3,
++		       &ivec, TRUE);
++#else
+   des_ede3_cbc_encrypt((const uchar*) (res->ptr()),
+ 		       (uchar*) (tmp_value.ptr()+1),
+ 		       res_length,
+@@ -400,6 +419,8 @@
+ 		       keyschedule.ks2,
+ 		       keyschedule.ks3,
+ 		       &ivec, TRUE);
++#endif
++
+   return &tmp_value;
+ 
+ error:
+@@ -412,8 +433,13 @@
+ String *Item_func_des_decrypt::val_str(String *str)
+ {
+ #ifdef HAVE_OPENSSL
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f
++  DES_key_schedule ks1, ks2, ks3;
++  DES_cblock ivec;
++#else
+   des_key_schedule ks1, ks2, ks3;
+   des_cblock ivec;
++#endif
+   struct st_des_keyblock keyblock;
+   struct st_des_keyschedule keyschedule;
+   String *res= args[0]->val_str(str);
+@@ -447,14 +473,29 @@
+ 		   (uchar*) keystr->ptr(),(int) keystr->length(),
+ 		   1,(uchar*) &keyblock,ivec);
+     // Here we set all 64-bit keys (56 effective) one by one
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f
++    DES_set_key_unchecked(&keyblock.key1,&keyschedule.ks1);
++    DES_set_key_unchecked(&keyblock.key2,&keyschedule.ks2);
++    DES_set_key_unchecked(&keyblock.key3,&keyschedule.ks3); 
++#else
+     des_set_key_unchecked(&keyblock.key1,keyschedule.ks1);
+     des_set_key_unchecked(&keyblock.key2,keyschedule.ks2);
+     des_set_key_unchecked(&keyblock.key3,keyschedule.ks3); 
++#endif
+   }
+   if (tmp_value.alloc(length-1))
+     goto error;
+ 
+   bzero((char*) &ivec,sizeof(ivec));
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f
++  DES_ede3_cbc_encrypt((const uchar*) res->ptr()+1,
++		       (uchar*) (tmp_value.ptr()),
++		       length-1,
++		       &keyschedule.ks1,
++		       &keyschedule.ks2,
++		       &keyschedule.ks3,
++		       &ivec, FALSE);
++#else
+   des_ede3_cbc_encrypt((const uchar*) res->ptr()+1,
+ 		       (uchar*) (tmp_value.ptr()),
+ 		       length-1,
+@@ -462,6 +503,8 @@
+ 		       keyschedule.ks2,
+ 		       keyschedule.ks3,
+ 		       &ivec, FALSE);
++#endif
++
+   /* Restore old length of key */
+   if ((tail=(uint) (uchar) tmp_value[length-2]) > 8)
+     goto error;					// Wrong key
+@@ -1312,7 +1355,11 @@
+     salt_ptr= salt_str->c_ptr();
+   }
+   pthread_mutex_lock(&LOCK_crypt);
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f
++  char *tmp=DES_crypt(res->c_ptr(),salt_ptr);
++#else
+   char *tmp=crypt(res->c_ptr(),salt_ptr);
++#endif
+   str->set(tmp,(uint) strlen(tmp));
+   str->copy();
+   pthread_mutex_unlock(&LOCK_crypt);
