@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/24 23:02:22 bjan2 Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/27 23:02:16 thomasklausner Exp $
 
 DISTNAME=       snownews-1.4.2
 CATEGORIES=     www
@@ -16,11 +16,11 @@ USE_NCURSES=		# missing WA_BOLD, WA_REVERSE, KEY_RESIZE
 USE_PKGLOCALEDIR=	YES
 
 MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR} GMAKE=${GMAKE}
-MAKE_ENV+=	EXTRA_CFLAGS="${CFLAGS}" 
+MAKE_ENV+=	EXTRA_CFLAGS="${CFLAGS}"
 
 # XXX -lintl hack suggested by Jeremy C. Reed: blocking on PR #23369
 .include "../../devel/gettext-lib/buildlink2.mk"
-MAKE_ENV+=	EXTRA_LDFLAGS="${LDFLAGS} ${_BLNK_INTL_LDFLAGS}" 
+MAKE_ENV+=	EXTRA_LDFLAGS="${LDFLAGS} ${_BLNK_INTL_LDFLAGS}"
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
