@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/26 18:49:48 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/18 22:44:17 daprice Exp $
 #
 
 CATEGORIES=	databases math
@@ -16,7 +16,6 @@ R_PKGNAME=      Rdbi.PgSQL
 R_PKGVER=       0.1-2
 
 DEPENDS+=	R-Rdbi>=0.1.2:../../wip/R-Rdbi
-DEPENDS+=	postgresql74-lib>=7.4.3:../../databases/postgresql74-lib
 
 WRKSRC=		${WRKDIR}/Rdbi.PgSQL
 MAKE_ENV=	PREFIX=${PREFIX}
@@ -29,4 +28,5 @@ post-patch:
 	${CHMOD} 755 ${WRKSRC}/configure
 	
 .include "../../math/R/Makefile.extension"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
