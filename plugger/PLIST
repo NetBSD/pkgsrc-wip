@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2003/06/11 13:44:04 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/17 23:53:35 airhead Exp $
 bin/${PKGNAME}
+lib/plugger.so
 man/man7/plugger.7
-share/examples/plugger/pluggerrc
-@dirrm share/examples/plugger
+${EGDIR}/pluggerrc
+@dirrm ${EGDIR}

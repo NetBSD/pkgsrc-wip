@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2003/12/17 23:53:35 airhead Exp $
+
+--- plugger-controller.c.orig	2003-12-17 17:52:03.000000000 +0100
++++ plugger-controller.c	2003-12-17 17:58:01.000000000 +0100
+@@ -136,7 +136,7 @@
+   if(!pid)
+   {
+     char *cmd[4];
+-    setpgrp();
++    setpgid(0, 0);
+     cmd[0]="/bin/sh";
+     cmd[1]="-c";
+     cmd[2]=argv[1];
