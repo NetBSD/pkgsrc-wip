@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/22 11:05:08 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/26 13:18:38 cjep Exp $
 
 DISTNAME=	maradns-1.0.17
 CATEGORIES=	net
@@ -13,7 +13,7 @@ USE_PKGINSTALL=	YES
 
 RCD_SCRIPTS=	maradns
 
-EGDIR=		${PREFIX}/share/examples/maradns 
+EGDIR=		${PREFIX}/share/examples/maradns
 CONF_FILES=	${EGDIR}/example_mararc ${PKG_SYSCONFDIR}/mararc
 
 post-install:
