@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/28 17:07:37 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/28 21:59:45 jeremy-c-reed Exp $
 #
 
 DISTNAME=		xpde-0.4.0-20030730
 PKGNAME=		xpde-0.4.0
 WRKSRC=			${WRKDIR}/xpde-0.4.0
-CATEGORIES=		misc
+CATEGORIES=		misc wm x11
 MASTER_SITES=		http://www.xpde.com/releases/
 
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.xpde.com/
-COMMENT=		Makes your X11 look like MS Windows XP(TM)
+COMMENT=		"Desktop environment for X11 (Windows XP interface clone)"
 
 .include "../../mk/bsd.prefs.mk"
 
