@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.722 2003/12/03 18:45:09 xtraeme Exp $
-# $NetBSD: Makefile,v 1.722 2003/12/03 18:45:09 xtraeme Exp $
+# $Id: Makefile,v 1.723 2003/12/03 18:50:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.723 2003/12/03 18:50:53 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -65,7 +65,6 @@ SUBDIR+=	bitchbot
 SUBDIR+=	bnr2
 SUBDIR+=	boost-base
 SUBDIR+=	boost-thread
-SUBDIR+=	boson
 SUBDIR+=	bub-n-bros
 SUBDIR+=	bugzilla
 SUBDIR+=	busybox
