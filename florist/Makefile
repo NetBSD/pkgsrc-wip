@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/27 03:43:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/25 13:29:24 johnrshannon Exp $
 #
 
 DISTNAME=		florist-3.15p-src
@@ -19,6 +19,7 @@ USE_AUTOCONF=		yes
 AUTOCONF_REQD=		2.12
 USE_GNU_TOOLS+=		make
 GCC_SUBPREFIX=		gcc3
+GCC_REQUIRED+=	3.3
 
 post-extract:
 	${CP} ${FILESDIR}/pconfig.NetBSD ${WRKSRC}/configs
