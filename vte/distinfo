@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/06/24 04:02:16 xtraeme Exp $
+
+SHA1 (vte-0.10.29.tar.bz2) = a9bab77a79a6bffabd06d67251a6c143f923c6b4
+Size (vte-0.10.29.tar.bz2) = 756923 bytes
+SHA1 (patch-aa) = 86af5434ee4cf12e4825f6dc0316073fbfe69538

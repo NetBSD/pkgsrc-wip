@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/24 04:02:17 xtraeme Exp $
+
+--- Makefile.in.orig	2003-06-24 05:17:22.000000000 +0200
++++ Makefile.in	2003-06-24 05:17:41.000000000 +0200
+@@ -120,7 +120,7 @@
+ pkgpythondir = @pkgpythondir@
+ pyexecdir = @pyexecdir@
+ pythondir = @pythondir@
+-SUBDIRS = src gnome-pty-helper python termcaps po doc
++SUBDIRS = src termcaps po doc
+ EXTRA_DIST = HACKING vte.spec vte.pc.in
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
