@@ -1,0 +1,10 @@
+OpenGaim is an instant messaging, or "text chat", client capable of
+communicating over many protocols, including Jabber, AOL Instant Messenger
+(AIM), ICQ, MSN Messenger, Yahoo! Messenger, Internet Relay Chat (IRC), and
+more. It runs on Microsoft Windows and the Unix-based X Window System, using
+the GTK2 GUI toolkit.
+
+OpenGaim is a loose relative of the Gaim project and contains much of the
+source code in Gaim itself. However, OpenGaim aims to provide quicker
+releases to fix major problems, and advanced customization options and
+features not available in Gaim.
