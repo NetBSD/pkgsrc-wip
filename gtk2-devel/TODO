@@ -1,9 +1,10 @@
-$Id: TODO,v 1.2 2004/03/17 11:54:28 mpasternak Exp $
+$Id: TODO,v 1.3 2004/03/17 14:04:55 mpasternak Exp $
 
 Add messages about configuration files, just like x11/gtk2 does
 
-Is the PLIST okay?
-
 Does it compile on NetBSD-stable and NetBSD-current?
+
+FreeBSD-4.9-STABLE build confirmed (needs LDFLAGS=-pthread in mk.conf, but
+that's not my fault ;)
 
 	-- dotz@irc.pl

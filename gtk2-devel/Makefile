@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/17 11:48:56 mpasternak Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/17 14:04:55 mpasternak Exp $
 #
 
 DISTNAME=		gtk+-2.4.0
@@ -13,6 +13,7 @@ COMMENT=		Development version of x11/gtk2
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/ltmain.sh ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gdk-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gdk-pixbuf-2.0.pc.in
