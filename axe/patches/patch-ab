@@ -1,0 +1,35 @@
+--- Makefile.orig	Wed Feb  2 20:56:52 2000
++++ Makefile	Sat Sep 27 21:20:07 2003
+@@ -1,17 +1,13 @@
+ all: axe
+ 
+-CC=gcc
+-
+ VERSION=0.2.0
+ 
+-CFLAGS=-DVERSION=\"$(VERSION)\"
+-
+ axe: axe.o axelib.o
+-	$(CC) $(DEBUG) $(CFLAGS) -o axe axe.o axelib.o
++	$(CC) $(CFLAGS) -o axe axe.o axelib.o
+ axe.o: axe.c axe.h
+-	$(CC) $(DEBUG) $(CFLAGS) -o axe.o -c axe.c
++	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c axe.c
+ axelib.o: axelib.c axe.h
+-	$(CC) $(DEBUG) $(CFLAGS) -o axelib.o -c axelib.c
++	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c axelib.c
+ clean:
+ 	rm -f axe axe.o axelib.o core *~ #*
+ 
+@@ -19,10 +15,9 @@
+ 	DEBUG="-DDEBUG -g" make -e all
+ 
+ install: axe
+-	cp axe /usr/local/bin
++	${INSTALL} -c -m 0755 axe ${PREFIX}/bin
+ 
+ tarball: clean
+ 	@ cd .. ; \
+ 	tar cvfz axe-$(VERSION).tar.gz axe-$(VERSION); \
+ 	echo ../axe-$(VERSION).tar.gz created
+-

@@ -1,0 +1,11 @@
+--- axe.h.orig	Sat Sep 27 20:41:02 2003
++++ axe.h	Sat Sep 27 20:39:45 2003
+@@ -4,7 +4,7 @@
+ #include <sys/types.h>
+ #include <fcntl.h>
+ #include <unistd.h>
+-#include <getopt.h>
++/* #include <getopt.h> -- This gives an error on FreeBSD */
+ #include <dirent.h>
+ 
+ extern char *optarg;

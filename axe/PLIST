@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/17 15:25:20 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/27 20:30:00 virtus Exp $
+bin/axe
