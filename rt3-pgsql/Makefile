@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/04/05 07:25:46 roelants Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 11:01:45 roelants Exp $
 #
 
 DISTNAME=		rt-3.0.10
-DISTNAME=		rt-pgsql-3.0.10
+PKGNAME=		${DISTNAME:S/-/-pgsql-/}
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
@@ -10,6 +10,7 @@ MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://bestpractical.com/rt/
 COMMENT=		Industrial-grade ticketing system
 
+# Mason dependencies:
 DEPENDS+=	p5-Params-Validate>=0.02:../../devel/p5-Params-Validate
 DEPENDS+=	p5-Cache-Cache>=1.02:../../devel/p5-Cache-Cache
 DEPENDS+=	p5-HTML-Mason>=1.16:../../www/p5-HTML-Mason
@@ -17,12 +18,16 @@ DEPENDS+=	p5-MLDBM>=2.01:../../databases/p5-MLDBM
 DEPENDS+=	p5-FreezeThaw>=0.43:../../devel/p5-FreezeThaw
 DEPENDS+=	p5-Digest-MD5>=2.27:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Apache-Session>=1.53:../../www/p5-Apache-Session
+# Mailgate dependencies:
 DEPENDS+=	p5-HTML-Tree>=3.18:../../www/p5-HTML-Tree
 DEPENDS+=	p5-HTML-Format>=2.03:../../www/p5-HTML-Format
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
+# Modperl1 dependencies:
 DEPENDS+=	p5-libapreq>=1.2:../../www/p5-libapreq
 DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
+# Postgresql dependencies
 DEPENDS+=	p5-DBD-postgresql>=1.22:../../databases/p5-DBD-postgresql
+# Core dependencies:
 DEPENDS+=	p5-DBI>=1.37:../../databases/p5-DBI
 DEPENDS+=	p5-Test-Inline>=0.15:../../devel/p5-Test-Inline
 DEPENDS+=	p5-Class-ReturnValue>=0.40:../../devel/p5-Class-ReturnValue
@@ -42,9 +47,10 @@ DEPENDS+=	p5-Time>=101.062101:../../time/p5-Time
 DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-Text-Autoformat>=1.04:../../textproc/p5-Text-Autoformat
 DEPENDS+=	p5-Text-Quoted>=1.5:../../wip/p5-Text-Quoted
+# Dev dependencies:
 DEPENDS+=	p5-Regexp-Common>=2.113:../../textproc/p5-Regexp-Common
 DEPENDS+=	p5-Test-Inline>=0.15:../../devel/p5-Test-Inline
-DEPENDS+=	p5-WWW-Mechanize>=0.72:../../wip/p5-WWW-Mechanize
+DEPENDS+=	p5-WWW-Mechanize>=0.72:../../www/p5-WWW-Mechanize
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
