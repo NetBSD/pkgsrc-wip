@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/16 16:45:51 airhead Exp $
+bin/embryo
+bin/embryo-config
+bin/embryo_cc
+include/Embryo.h
+lib/libembryo.a
+lib/libembryo.la
+lib/libembryo.so
+lib/libembryo.so.9
+lib/libembryo.so.9.0
+lib/pkgconfig/embryo.pc
+share/embryo/examples/example.inc
+share/embryo/examples/example.sma
+share/embryo/examples/recurse.inc
+share/embryo/examples/recurse.sma
+share/embryo/examples/test.inc
+share/embryo/examples/test.sma
+share/embryo/include/default.inc
+@dirrm share/embryo/include
+@dirrm share/embryo/examples
+@dirrm share/embryo
