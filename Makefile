@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1474 2004/09/22 07:21:58 marttikuparinen Exp $
-# $NetBSD: Makefile,v 1.1474 2004/09/22 07:21:58 marttikuparinen Exp $
+# $Id: Makefile,v 1.1475 2004/09/25 00:44:00 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.1475 2004/09/25 00:44:00 grantbeattie Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -387,7 +387,6 @@ SUBDIR+=	luacheia
 SUBDIR+=	luaposix
 SUBDIR+=	luasocket
 SUBDIR+=	mailfilter
-SUBDIR+=	mailscanner
 SUBDIR+=	man-db
 SUBDIR+=	map-browse
 SUBDIR+=	matchbox-common
