@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.639 2003/11/22 12:50:06 mpasternak Exp $
-# $NetBSD: Makefile,v 1.639 2003/11/22 12:50:06 mpasternak Exp $
+# $Id: Makefile,v 1.640 2003/11/22 13:05:13 mpasternak Exp $
+# $NetBSD: Makefile,v 1.640 2003/11/22 13:05:13 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -426,6 +426,7 @@ SUBDIR+=	py-ipython
 SUBDIR+=	py-libpcap
 SUBDIR+=	py-oak
 SUBDIR+=	py-ogg
+# SUBDIR+=	py-slune # depends on py-vorbis; py-vorbis defunct yet
 SUBDIR+=	py-spambayes
 SUBDIR+=	py-spark
 SUBDIR+=	py-spreadmodule
