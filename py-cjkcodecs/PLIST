@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/05 03:23:01 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/01/04 23:29:48 minskim Exp $
 ${PYSITELIB}/cjkcodecs.pth
 ${PYSITELIB}/cjkcodecs/__init__.py
 ${PYSITELIB}/cjkcodecs/__init__.pyc
@@ -19,6 +19,7 @@ ${PYSITELIB}/cjkcodecs/_iso_2022_jp.so
 ${PYSITELIB}/cjkcodecs/_iso_2022_jp_1.so
 ${PYSITELIB}/cjkcodecs/_iso_2022_jp_2.so
 ${PYSITELIB}/cjkcodecs/_iso_2022_jp_3.so
+${PYSITELIB}/cjkcodecs/_iso_2022_jp_ext.so
 ${PYSITELIB}/cjkcodecs/_iso_2022_kr.so
 ${PYSITELIB}/cjkcodecs/_johab.so
 ${PYSITELIB}/cjkcodecs/_shift_jis.so
@@ -77,6 +78,9 @@ ${PYSITELIB}/cjkcodecs/iso_2022_jp_2.pyo
 ${PYSITELIB}/cjkcodecs/iso_2022_jp_3.py
 ${PYSITELIB}/cjkcodecs/iso_2022_jp_3.pyc
 ${PYSITELIB}/cjkcodecs/iso_2022_jp_3.pyo
+${PYSITELIB}/cjkcodecs/iso_2022_jp_ext.py
+${PYSITELIB}/cjkcodecs/iso_2022_jp_ext.pyc
+${PYSITELIB}/cjkcodecs/iso_2022_jp_ext.pyo
 ${PYSITELIB}/cjkcodecs/iso_2022_kr.py
 ${PYSITELIB}/cjkcodecs/iso_2022_kr.pyc
 ${PYSITELIB}/cjkcodecs/iso_2022_kr.pyo

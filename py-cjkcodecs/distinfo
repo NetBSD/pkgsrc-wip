@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/12/05 03:23:01 minskim Exp $
+$NetBSD: distinfo,v 1.3 2004/01/04 23:29:48 minskim Exp $
 
-SHA1 (cjkcodecs-1.0.2.tar.gz) = 3648233a05515964b44f269fa50a61d403f26258
-Size (cjkcodecs-1.0.2.tar.gz) = 500550 bytes
+SHA1 (cjkcodecs-1.0.3.tar.gz) = 8386bee917b2c2e56a41eb163ef200ad84bbe015
+Size (cjkcodecs-1.0.3.tar.gz) = 499394 bytes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/12/05 03:23:01 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/04 23:29:48 minskim Exp $
 #
 
-DISTNAME=	cjkcodecs-1.0.2
+DISTNAME=	cjkcodecs-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters
 MASTER_SITES=	http://download.berlios.de/cjkpython/
