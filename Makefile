@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1018 2004/02/24 02:32:58 tvierling Exp $
-# $NetBSD: Makefile,v 1.1018 2004/02/24 02:32:58 tvierling Exp $
+# $Id: Makefile,v 1.1019 2004/02/24 03:35:33 tvierling Exp $
+# $NetBSD: Makefile,v 1.1019 2004/02/24 03:35:33 tvierling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -418,6 +418,7 @@ SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Mail-Milter
+SUBDIR+=	p5-Mail-SRS
 SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-SWF-File
