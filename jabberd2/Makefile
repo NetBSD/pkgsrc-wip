@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/09/27 13:20:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.22 2003/09/27 13:44:38 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0b1
@@ -20,12 +20,13 @@ USE_PKGINSTALL=		yes
 BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6b
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--enable-debug
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	JABBERD_USER JABBERD_GROUP \
+BUILD_DEFS+=	JABBERD_USER JABBERD_GROUP JABBERD_STATIC\
 		JABBERD_AUTH_METHOD JABBERD_STORAGE_METHOD \
 		JABBERD_LOGDIR JABBERD_DBDIR JABBERD_PIDDIR
 
@@ -87,6 +88,10 @@ CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-server}
 CONFIGURE_ARGS+=	--enable-storage=pgsql
 CONFIGURE_ARGS+=	--with-pgsql=${BUILDLINK_PREFIX.postgresql-lib}
 .include "../../databases/postgresql-lib/buildlink2.mk"
+.endif
+
+.if defined(JABBERD_STATIC) && !empty(JABBERD_STATIC:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-all-static
 .endif
 
 RCD_SCRIPTS=		jabberd
