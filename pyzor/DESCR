@@ -1,0 +1,15 @@
+Pyzor is a collaborative, networked system to detect and block spam
+using identifying digests of messages.
+
+Pyzor initially started out to be merely a Python implementation of Razor,
+but due to the protocol and the fact that Razor's server is not Open Source
+or software libre, I decided to impelement Pyzor with a new protocol and
+release the entire system as Open Source and software libre.
+
+Since the entire system is released under the GPL,
+people are free to host their own independent servers. 
+Server peering is planned for a future release. 
+
+For more information on Pyzor see:
+http://pyzor.sourceforge.net/
+http://pyzor.sourceforge.net/blocking.html
