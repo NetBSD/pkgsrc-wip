@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/04/06 00:33:12 marmfield Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/04/09 01:23:05 marmfield Exp $
 #
 
 PLUGINSVERSION=	1.3.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagiosplug/}
 
 HOMEPAGE=	http://sourceforge.net/projects/nagiosplug/
 
-.include "../../net/nagios-base/Makefile.common"
+.include "../../wip/nagios-base/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-nagios-user=${NAGIOS_USER}
 CONFIGURE_ARGS+=	--with-nagios-group=${NAGIOS_GROUP}
