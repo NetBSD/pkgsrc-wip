@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/05/01 15:27:42 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.12 2004/05/01 20:30:30 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -16,7 +16,7 @@ GCC_VERSION=	3.4.0
 
 # Optional languages
 BUILD_ADA=	YES
-BUILD_CXX=	NO
+BUILD_CXX=	YES
 BUILD_F77=	NO
 BUILD_JAVA=	NO
 BUILD_OBJC=	NO
@@ -26,22 +26,23 @@ BUILD_OBJC=	NO
 java=	NO
 .endif
 
-LANGS=	c
+LANGS='c'
 .if ${BUILD_ADA} == "YES"
-CONFIGURE_ARGS+=        --enable-languages="ada"
+LANGS+='ada'
 .endif
 .if ${BUILD_CXX} == "YES"
-CONFIGURE_ARGS+=        --enable-languages="c++"
+LANGS+='c++'
 .endif
 .if ${BUILD_F77} == "YES"
-CONFIGURE_ARGS+=        --enable-languages="f77"
+LANGS+='f77'
 .endif
 .if ${BUILD_JAVA} == "YES"
-CONFIGURE_ARGS+=        --enable-languages="java"
+LANGS+='java'
 .endif
 .if ${BUILD_OBJC} == "YES"
-CONFIGURE_ARGS+=        --enable-languages="objc"
+LANGS+='objc'
 .endif
+CONFIGURE_ARGS+=        --enable-languages="${LANGS}"
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
@@ -54,11 +55,11 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 # An Ada compiler is required to build the Ada compiler. Two
 may be used:
 #USE_GCC3	=# Define to use lang/gcc3-ada
-#USE_GCC34ADA	=# Define to use gcc-3.4-ada
+USE_GCC34ADA	=# Define to use gcc-3.4-ada
 # You may also specify the path of a gcc/gnat Ada compiler
 # outside of the pkgsrc system by specifying the full path
 # of the compiler (example) below:
-ALT_GCC=       /usr/pkg/gccAda-3.4.0/bin/gcc
+#ALT_GCC=       /usr/pkg/gccAda-3.4.0/bin/gcc
 .if defined(ALT_GCC)
 ALT_GCC_PREFIX:=        ${ALT_GCC:H}/..
 ALT_GCC_RTS!=   ${FIND} ${ALT_GCC_PREFIX} -name adalib
