@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2003/10/14 05:46:33 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/10 17:06:34 jeremy-c-reed Exp $
 
 DISTNAME=		krb5-1.3.1
 PKGNAME=		mit-${DISTNAME}
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		security
+# Official site has different download (tar with tar.gz inside it)
+# and it is an interactive install so use these mirrors instead
 #MASTER_SITES=		# empty
 MASTER_SITES=	http://www.crypto-publish.org/dist/mit-kerberos5/
-# has 1.2.8
-#MASTER_SITES+=	http://www.mirrors.wiretapped.net/security/cryptography/apps/kerberos/krb5-mit/unix/
+MASTER_SITES+=	http://www.mirrors.wiretapped.net/security/cryptography/apps/kerberos/krb5-mit/unix/
 # XXX if using above MASTER_SITES then fix EXTRACT_SUFX and get rid of FETCH below
-EXTRACT_SUFX=		.tar
+#EXTRACT_SUFX=		.tar
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://web.mit.edu/kerberos/www/
@@ -34,7 +35,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-DOWNLOAD=		http://web.mit.edu/network/kerberos-form.html
+#DOWNLOAD=		http://web.mit.edu/network/kerberos-form.html
 
 #INTERACTIVE_STAGE=	fetch
 
