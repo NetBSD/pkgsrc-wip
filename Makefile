@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.608 2003/11/12 05:50:30 blef Exp $
-# $NetBSD: Makefile,v 1.608 2003/11/12 05:50:30 blef Exp $
+# $Id: Makefile,v 1.609 2003/11/12 06:12:26 blef Exp $
+# $NetBSD: Makefile,v 1.609 2003/11/12 06:12:26 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -481,6 +481,7 @@ SUBDIR+=	treecc
 SUBDIR+=	tsm
 SUBDIR+=	tsocks
 SUBDIR+=	tutos
+SUBDIR+=	tuxnes
 SUBDIR+=	tuxtype2
 SUBDIR+=	typhoon
 SUBDIR+=	ubs
