@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.604 2003/11/08 05:27:06 mpasternak Exp $
-# $NetBSD: Makefile,v 1.604 2003/11/08 05:27:06 mpasternak Exp $
+# $Id: Makefile,v 1.605 2003/11/08 05:35:21 mpasternak Exp $
+# $NetBSD: Makefile,v 1.605 2003/11/08 05:35:21 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -392,6 +392,7 @@ SUBDIR+=	psh
 SUBDIR+=	pts
 SUBDIR+=	pxlib
 SUBDIR+=	pxview
+SUBDIR+=	py-CVSTools
 SUBDIR+=	py-EditObj
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-OpenSSL
