@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/09/27 14:22:47 dolecek Exp $
+# $NetBSD: Makefile,v 1.3 2003/12/20 16:18:54 marttikuparinen Exp $
 
 MODNAME=		mysql4
 PKGMODNAME=		mysql
@@ -14,5 +14,5 @@ EVAL_PREFIX+=		MYSQLDIR=mysql4-client
 CONFIGURE_ARGS+=	--with-${PKGMODNAME}=shared,${MYSQLDIR}
 LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib/mysql
 
-.include "../../wip/mysql4-client/buildlink2.mk"
+.include "../../databases/mysql4-client/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

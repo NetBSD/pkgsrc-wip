@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/18 07:31:23 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/20 16:18:54 marttikuparinen Exp $
 #
 
 DISTNAME=		rekall-2.2.0-beta0
@@ -19,7 +19,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV=		"PYTHONBIN=${PYTHONBIN}"
 
 .include "../../wip/xbsql/buildlink2.mk"
-.include "../../wip/mysql4-client/buildlink2.mk"
+.include "../../databases/mysql4-client/buildlink2.mk"
 .include "../../databases/postgresql-lib/buildlink2.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/kdelibs3/buildlink2.mk"
