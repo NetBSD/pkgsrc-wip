@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/12 15:49:13 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/12 15:59:01 mpasternak Exp $
 #
 
 DISTNAME=		slackware_devel-9.1.2
@@ -13,6 +13,8 @@ COMMENT=		Meta package for slackware_compat development
 DEPENDS+=		slackware_gcc>=3.3.3:../../wip/slackware_gcc
 DEPENDS+=		slackware_glibc>=2.3.2:../../wip/slackware_glibc
 DEPENDS+=		slackware_make>=3.80:../../wip/slackware_make
+DEPENDS+=		slackware_sed>=4.0.9:../../wip/slackware_sed
+DEPENDS+=		slackware_awk>=3.1.3:../../wip/slackware_awk
 
 EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		yes
