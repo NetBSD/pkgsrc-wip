@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/23 20:30:44 xtraeme Exp $
-# $Id: Makefile,v 1.1.1.1 2003/07/23 20:30:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/23 23:01:22 xtraeme Exp $
+# $Id: Makefile,v 1.2 2003/07/23 23:01:22 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XFREE86_VERSION}
@@ -18,6 +18,13 @@ INSTALL_TARGET=	install install.man
 
 NO_XFREE86_TARGETS=	# defined
 FAKE_XFREE86_DEPS=	# defined
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+DEPENDS+=       bison-[0-9]*:../../devel/bison
+DEPENDS+=       flex-[0-9]*:../../devel/flex
+.endif
 
 .include "../../wip/XFree86/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
