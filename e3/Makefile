@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:12:06 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 18:10:35 blef Exp $
 #
 
 DISTNAME=		e3-2.43
@@ -15,6 +15,6 @@ BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 CONFIGURE=              no
 USE_GNU_TOOLS+=		make
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 .include "../../mk/bsd.pkg.mk"
