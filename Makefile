@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.541 2003/10/13 02:49:11 xtraeme Exp $
-# $NetBSD: Makefile,v 1.541 2003/10/13 02:49:11 xtraeme Exp $
+# $Id: Makefile,v 1.542 2003/10/13 06:44:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.542 2003/10/13 06:44:21 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -193,6 +193,7 @@ SUBDIR+=	jdk12-openjit
 SUBDIR+=	jdk13
 SUBDIR+=	jdk13-openjit
 SUBDIR+=	jigdo
+SUBDIR+=	jpeg_ls
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	kgpg
@@ -227,6 +228,7 @@ SUBDIR+=	linux-makedev
 SUBDIR+=	linux-modutils
 SUBDIR+=	linux-nfs-utils
 SUBDIR+=	liquidwar
+SUBDIR+=	ljpeg
 SUBDIR+=	lletters
 SUBDIR+=	lmarbles
 SUBDIR+=	lsdvd
@@ -437,7 +439,7 @@ SUBDIR+=	wmclockmon
 SUBDIR+=	wmitime
 SUBDIR+=	wmnetload
 SUBDIR+=	words
-SUBIDR+=	wxhugo
+SUBDIR+=	wxhugo
 SUBDIR+=	xawtv
 SUBDIR+=	xchm
 SUBDIR+=	xevil
