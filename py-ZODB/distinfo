@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/20 04:10:26 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2003/11/20 04:38:42 mpasternak Exp $
 
-SHA1 (ZODB3-3.2c1.tar.gz) = b334988912018c39ca7dfa34049b34e222342c4a
-Size (ZODB3-3.2c1.tar.gz) = 858279 bytes
+SHA1 (ZODB3-3.2.tar.gz) = 15d8448907cbdb4c2aafa592296a0a5c8147de2b
+Size (ZODB3-3.2.tar.gz) = 857984 bytes
