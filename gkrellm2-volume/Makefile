@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/04 14:20:44 cubidou Exp $
+# $NetBSD: Makefile,v 1.3 2003/04/07 18:02:20 cubidou Exp $
 
 DISTNAME=	gkrellm-volume-2.1.7
 WRKSRC=		${WRKDIR}/gkrellm-volume
@@ -9,11 +9,11 @@ MAINTAINER=	cube@cubidou.net
 HOMEPAGE=	http://gkrellm.luon.net/volume.phtml
 COMMENT=	gkrellm2 volume mixer plugin
 
-PTHREAD_OPTS=		require
-USE_BUILDLINK2=		yes
+BUILD_USES_MSGFMT=	YES
+
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_PKGLOCALEDIR=	YES
-BUILD_USES_MSGFMT=	YES
 
 MAKE_ENV+=	LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \
 		enable_nls=1
@@ -21,6 +21,5 @@ MAKE_ENV+=	LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \
 .include "../../wip/gkrellm2/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
