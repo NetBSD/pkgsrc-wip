@@ -1,0 +1,46 @@
+#!/bin/sh
+
+if [ -e _etc_/firefox-wrapper.conf ]; then
+. _etc_/firefox-wrapper.conf
+fi
+
+if [ -e "${HOME}/.firefox-wrapper.conf" ]; then
+. ${HOME}/.firefox-wrapper.conf
+fi
+
+if [ "${FIREFOX_BIN}" = "" ]; then
+	echo "Please define FIREFOX_BIN in _etc_/firefox-wrapper.conf"
+	exit 1
+fi
+if [ "${OPEN_MODE}" = "" ]; then
+	echo "Please define OPEN_MODE in _etc_/firefox-wrapper.conf"
+	echo "Valid values are: 'new-window', 'new-tab', 'current'"
+	exit 1
+fi
+if [ ! "${OPEN_MODE}" = "new-tab" ]; then
+if [ ! "${OPEN_MODE}" = "new-window" ]; then
+if [ ! "${OPEN_MODE}" = "current" ]; then
+	echo "Invalid value in OPEN_MODE"
+	echo "Valid values are: 'new-window', 'new-tab', 'current'"
+	exit 1
+fi
+fi
+fi
+
+if [ ! -x ${FIREFOX_BIN} ]; then
+	echo "${FIREFOX_BIN}: cannot execute."
+	echo "Please check the FIREFOX_BIN value"
+	exit 1
+fi
+
+${FIREFOX_BIN} -remote "ping()"
+
+if [ "$?" = "0" ]; then # firefox is running
+	if [ "${OPEN_MODE}" = "current" ]; then
+		${FIREFOX_BIN} -remote "openURL($1)"
+	else
+		${FIREFOX_BIN} -remote "openURL($1,${OPEN_MODE})"
+	fi
+else
+	${FIREFOX_BIN} $1
+fi

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/11 12:10:33 poppnk Exp $
+bin/firefox
+etc/firefox-wrapper.conf
