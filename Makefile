@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1317 2004/06/08 15:45:45 cjep Exp $
-# $NetBSD: Makefile,v 1.1317 2004/06/08 15:45:45 cjep Exp $
+# $Id: Makefile,v 1.1318 2004/06/08 21:41:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1318 2004/06/08 21:41:36 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -116,6 +116,7 @@ SUBDIR+=	drweb-clients-shared
 SUBDIR+=	drweb-dc
 SUBDIR+=	drweb-smf
 SUBDIR+=	dspam
+SUBDIR+=	dspam3
 SUBDIR+=	dumb
 SUBDIR+=	dxmake
 SUBDIR+=	e2fsprogs
