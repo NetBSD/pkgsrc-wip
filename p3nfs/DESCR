@@ -1,0 +1,6 @@
+P3nfsd is a Symbian (Psion/Nokia/Sony-Ericsson/etc) to UNIX/Linux
+communication program. It allows you to mount the file systems of
+the Phone/PDA on your UNIX machine. This means that you see all the
+filesystems of the Phone/PDA as a filesystem on your UNIX machine,
+and you can copy/backup/edit any file on the Phone/PDA with your
+preferred tools on the UNIX machine. 

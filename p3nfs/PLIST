@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/22 14:42:56 poppnk Exp $
+bin/p3nfsd
+share/doc/${PKGNAME}/CHANGES
+share/doc/${PKGNAME}/Epoc16
+share/doc/${PKGNAME}/Epoc32_R5
+share/doc/${PKGNAME}/Epoc32_R6
+share/doc/${PKGNAME}/LICENCE
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/bluetooth.${LOWER_OPSYS}
+share/doc/${PKGNAME}/nfsapp-2.8-UIQ.sis
+share/doc/${PKGNAME}/nfsapp-2.8-crystal.sis
+share/doc/${PKGNAME}/nfsapp-2.8-epocR5.sis
+share/doc/${PKGNAME}/nfsapp-2.8-series60.sis
+share/doc/${PKGNAME}/nfsc.app
+share/doc/${PKGNAME}/nfsc3.opl
+share/doc/${PKGNAME}/nfsc3a.opl
+share/doc/${PKGNAME}/nfsc5.opl
+share/doc/${PKGNAME}/usb.${LOWER_OPSYS}
+share/man/man1/p3nfsd.1
+@dirrm share/man/man1
+@dirrm share/doc/${PKGNAME}
