@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2003/10/31 01:24:37 xtraeme Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2003/12/02 07:40:12 xtraeme Exp $
 bin/xcursor-config
 include/DPS/ColorSB.h
 include/DPS/ColorSBP.h
@@ -566,6 +566,8 @@ lib/libXi.a
 lib/libXi.so
 lib/libXi.so.6
 lib/libXinerama.a
+lib/libXinerama.so  
+lib/libXinerama.so.1
 lib/libXmu.a
 lib/libXmu.so
 lib/libXmu.so.6
