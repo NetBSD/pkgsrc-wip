@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/01 22:46:54 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/02 10:49:49 xtraeme Exp $
+bin/stratagus-bos
 share/stratagus/bos/LICENSE.txt
 share/stratagus/bos/README.txt
 share/stratagus/bos/graphics/elites/build/development_yard.png
