@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/25 02:32:44 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/12 15:22:49 thomasklausner Exp $
 
 DISTNAME=	mc-4.6.0
 CATEGORIES=	sysutils
@@ -11,7 +11,7 @@ COMMENT=	User-friendly file manager and visual shell
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK2=
+USE_BUILDLINK3=
 GNU_CONFIGURE=
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=
@@ -19,6 +19,10 @@ USE_PKGLOCALEDIR=
 .if ${OPSYS} == "Linux"
 PLIST_SRC+=	${PKGDIR}/PLIST.cons.saver
 .endif
+
+# remove dir if no extensions were installed there
+post-install:
+	@${RMDIR} ${PREFIX}/lib/mc 2>/dev/null
 
 # we need working e2fsprogs and gpm packages first
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
@@ -41,7 +45,7 @@ CONFIGURE_ARGS+=	--with-edit
 PLIST_SRC+=		${PKGDIR}/PLIST.mcedit
 .		elif ${__feature} == charset
 CONFIGURE_ARGS+=	--enable-charset
-.include "../../converters/libiconv/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 PLIST_SRC+=		${PKGDIR}/PLIST.charset
 .		elif ${__feature} == largefile
 CONFIGURE_ARGS+=	--enable-largefile
@@ -83,14 +87,14 @@ PLIST_SRC+=  	${PKGDIR}/PLIST
 
 .if ${MC_SCREEN_LIBRARY} == "slang"
 CONFIGURE_ARGS+=	--with-screen=slang
-.include "../../devel/libslang/buildlink2.mk"
+.include "../../devel/libslang/buildlink3.mk"
 .elif ${MC_SCREEN_LIBRARY} == "ncurses"
 CONFIGURE_ARGS+=	--with-screen=ncurses
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--with-screen=mcslang
 .endif
 
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
