@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/05 21:55:47 freyr Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/06 11:41:21 thomasklausner Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -13,5 +13,9 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 USE_X11BASE=	YES
+
+post-install:
+	${GZIP_CMD} -d ${PREFIX}/man/man1/golem.1.gz
+	${CHMOD} 644 ${PREFIX}/man/man1/golem.1
 
 .include "../../mk/bsd.pkg.mk"
