@@ -68,8 +68,10 @@
 #define HasXdmAuth		YES
 #define UseInstalledPrograms	YES
 
+#ifndef FreeBSDArchitecture
 #ifndef BuildThreadStubLibrary
-# define BuildThreadStubLibrary YES
+#	define BuildThreadStubLibrary YES
+#endif
 #endif
 
 #define HasZlib YES
