@@ -4,9 +4,9 @@
 #
 # (C) 2004 Michal Pasternak <dotz@irc.pl>
 #
-# This script is distributed under BSD license
+# This script is distributed as public domain.
 #
-# $Id: slackpkg2pkgsrc.py,v 1.1.1.1 2004/03/15 12:38:51 mpasternak Exp $
+# $Id: slackpkg2pkgsrc.py,v 1.2 2004/03/15 13:26:11 mpasternak Exp $
 #
 
 import sys, os, socket, shutil
@@ -66,8 +66,8 @@ if dname[-4:]==".tgz":
 f = open("Makefile", "w")
 f.write(
 """
-# $NetBSD: slackpkg2pkgsrc.py,v 1.1.1.1 2004/03/15 12:38:51 mpasternak Exp $
-# $Id: slackpkg2pkgsrc.py,v 1.1.1.1 2004/03/15 12:38:51 mpasternak Exp $
+# $NetBSD: slackpkg2pkgsrc.py,v 1.2 2004/03/15 13:26:11 mpasternak Exp $
+# $Id: slackpkg2pkgsrc.py,v 1.2 2004/03/15 13:26:11 mpasternak Exp $
 #
 
 DISTNAME=		%s
