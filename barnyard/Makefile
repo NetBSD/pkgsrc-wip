@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2004/04/26 14:39:26 adrian_p Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/30 17:28:42 adrian_p Exp $
 
-DISTNAME=	barnyard-0.1.0
+DISTNAME=	barnyard-0.2.0
 CATEGORIES=	net
 MASTER_SITES=	http://www.snort.org/dl/barnyard/
 
@@ -21,6 +21,12 @@ EGDIR=		${PREFIX}/share/examples/barnyard
 
 BUILD_DEFS+=	USE_MYSQL USE_PGSQL
 
+SUBST_CLASSES=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	src/barnyard.c
+SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_MESSAGE.paths=	"Fixing paths."
+
 .if defined(USE_MYSQL) && ${USE_MYSQL} == YES
 .include "../../databases/mysql-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-mysql
@@ -36,11 +42,6 @@ CONFIGURE_ARGS+=	--with-postgres-includes=${BUILDLINK_PREFIX.postgresql-lib}/inc
 CONFIGURE_ARGS+=	--with-postgres-libraries=${BUILDLINK_PREFIX.postgresql-lib}/lib/postgresql
 LIBS=	-Wl,-R${PREFIX}/lib/postgresql
 .endif
-
-pre-configure:
-	@${CP} ${WRKSRC}/src/barnyard.c ${WRKSRC}/src/barnyard.c.patched
-	@${SED} -e 's|@PREFIX@|${PREFIX}|g' < ${WRKSRC}/src/barnyard.c.patched \
-		> ${WRKSRC}/src/barnyard.c
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/barnyard

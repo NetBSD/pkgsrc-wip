@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/08/21 15:34:27 adrian_p Exp $
+$NetBSD: distinfo,v 1.3 2004/06/30 17:28:42 adrian_p Exp $
 
-SHA1 (barnyard-0.1.0.tar.gz) = f846201c92e9dd22ba7b4f44dd767ec4a2f2d068
-Size (barnyard-0.1.0.tar.gz) = 135599 bytes
-SHA1 (patch-aa) = 80f5d6fcd7611b41d3246d0b582a14f40c8b96b3
+SHA1 (barnyard-0.2.0.tar.gz) = 4adfcabb2702def5a9a6c68cbde1b90a70f7e67a
+Size (barnyard-0.2.0.tar.gz) = 161543 bytes
