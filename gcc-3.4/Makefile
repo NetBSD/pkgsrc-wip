@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/25 11:14:12 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/30 10:56:36 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -28,7 +28,11 @@ USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=  require native
+.if (${MACHINE_GNU_ARCH} == "x86_64")
+CONFIGURE_ARGS+=        --enable-languages="c,ada,c++,f77,objc"
+.else
 CONFIGURE_ARGS+=        --enable-languages="c,ada,c++,f77,objc,java"
+.endif
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 # An Ada compiler is required to build this pkg. Two
@@ -60,16 +64,8 @@ post-patch:
 
 .if defined(USE_GCC34ADA)
 # Overide compiler.mk setup to use gccAda-3.4.0
-GCC_DIR=	${WRKDIR}/.gcc
 pre-configure:
-	(cd ${BUILDLINK_PREFIX.gccAda-3.4.0}/bin && files=`ls gnat*` && \
-	cd ${GCC_DIR}/bin/ && \
-	for file in gcc cc cpp $${files} ; do \
-	  $(ECHO) '#!/bin/sh' > $${file}; \
-	  $(ECHO) -n "exec ${BUILDLINK_PREFIX.gccAda-3.4.0}/bin/$${file} " >>$${file}; \
-	  $(ECHO) '"$$@"' >>$${file}; \
-	  $(CHMOD) +x $${file}; \
-	done )
+.include "../../wip/gcc-3.4-ada/preconfigure.mk"
 .endif
 
 do-configure:
@@ -80,6 +76,9 @@ do-build:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
 
 do-test:
+.if (${MACHINE_GNU_ARCH} == "x86_64")
+	(cd files && cp netbsd64macro.dfs ${WRKSRC}/gcc/testsuite/ada/acats/support/macro.dfs)
+.endif
 	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
 
 do-install:
