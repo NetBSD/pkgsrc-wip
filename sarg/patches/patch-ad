@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.7 2005/03/14 15:39:13 bubuchka Exp $
+$NetBSD: patch-ad,v 1.8 2005/03/31 06:38:21 bubuchka Exp $
 
---- log.c.orig	2005-03-14 17:02:07.000000000 +0200
+--- log.c.orig	2005-03-31 09:20:06.000000000 +0300
 +++ log.c
 @@ -146,8 +146,8 @@ int main(argc,argv)
     ExternalCSSFile[0]='\0';
@@ -44,4 +44,4 @@ $NetBSD: patch-ad,v 1.7 2005/03/14 15:39:13 bubuchka Exp $
 +      strcpy(ConfigFile,"@PKG_SYSCONFDIR@/sarg.conf");
      else {
        if(access(ConfigFile, R_OK) != 0) {
-          sprintf(msg,"Cannot open config file: %s",ConfigFile);
+          sprintf(msg,"Cannot open config file: %s - %s",ConfigFile,strerror(errno));
