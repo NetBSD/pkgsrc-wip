@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.347 2003/07/27 06:06:03 bencollver Exp $
-# $NetBSD: Makefile,v 1.347 2003/07/27 06:06:03 bencollver Exp $
+# $Id: Makefile,v 1.348 2003/07/28 09:22:02 blef Exp $
+# $NetBSD: Makefile,v 1.348 2003/07/28 09:22:02 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -68,6 +68,7 @@ SUBDIR+=	dfbsee
 SUBDIR+=	dfm
 SUBDIR+=	directfb
 SUBDIR+=	directory-administrator
+SUBDIR+=	dnsmasq
 SUBDIR+=	dpkg
 SUBDIR+=	drweb
 SUBDIR+=	drwright
@@ -84,6 +85,7 @@ SUBDIR+=	festival-gaim
 SUBDIR+=	fluxconf
 SUBDIR+=	freenet-tools
 SUBDIR+=	frontpage
+SUBDIR+=	fspanel
 SUBDIR+=	fuse
 SUBDIR+=	fuse-utils
 SUBDIR+=	fwbuilder
@@ -296,6 +298,7 @@ SUBDIR+=	sun-jre142
 SUBDIR+=	svgalib
 SUBDIR+=	sysklogd
 SUBDIR+=	sysvinit
+SUBDIR+=	tcc
 SUBDIR+=	tendra
 SUBDIR+=	tex-foiltex
 SUBDIR+=	theora-nightly
