@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/07/11 21:36:46 othyro Exp $
+$NetBSD: distinfo,v 1.3 2004/07/12 16:48:41 othyro Exp $
 
-SHA1 (prngd-0.9.28.tar.gz) = 1a644e7a153157eeaeb3a7d0c24b10c0c2267cfa
-Size (prngd-0.9.28.tar.gz) = 70150 bytes
+SHA1 (prngd-0.9.29.tar.gz) = ab3650bd7f92501646114d18cb410c19ed3b5f8d
+Size (prngd-0.9.29.tar.gz) = 71235 bytes
