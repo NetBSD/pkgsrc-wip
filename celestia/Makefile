@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/13 12:51:07 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/13 12:52:30 cjep Exp $
 #
 
 DISTNAME=	celestia-1.2.4
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=celestia/}
 
 MAINTAINER=	cesar_catrian@yahoo.com
 HOMEPAGE=	http://www.shatters.net/celestia/
-COMMENT=	Free real time space simulator in three dimensions.
+COMMENT=	Free real time space simulator in three dimensions
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
