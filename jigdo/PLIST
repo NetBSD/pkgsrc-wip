@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/11/20 19:17:08 thomasklausner Exp $
-bin/jigdo-file
-bin/jigdo-lite
-bin/jigdo-mirror
-share/jigdo/debian-mirrors.jigdo
-man/man1/jigdo-file.1
-man/man1/jigdo-lite.1
-man/man1/jigdo-mirror.1
-@dirrm share/jigdo

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/11/20 19:17:08 thomasklausner Exp $
-
-SHA1 (jigdo-0.7.0.tar.bz2) = 9c4d4ae384e25e3001912b2030941bc3d8b3e036
-Size (jigdo-0.7.0.tar.bz2) = 530737 bytes
-SHA1 (patch-aa) = 19a397a8b8bf362ba2aa0c534ba1d60f1e567dc9
-SHA1 (patch-ab) = c210a203effb77ecf1a62f0fb53f4bd46d17d7d9

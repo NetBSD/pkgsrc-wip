@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1032 2004/02/26 22:51:46 minskim Exp $
-# $NetBSD: Makefile,v 1.1032 2004/02/26 22:51:46 minskim Exp $
+# $Id: Makefile,v 1.1033 2004/02/26 22:59:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1033 2004/02/26 22:59:53 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -244,7 +244,6 @@ SUBDIR+=	jdk12
 SUBDIR+=	jdk12-openjit
 SUBDIR+=	jdk13
 SUBDIR+=	jdk13-openjit
-SUBDIR+=	jigdo
 SUBDIR+=	kadu
 SUBDIR+=	kaffe-nox11
 SUBDIR+=	kannel-gateway
