@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/04/06 11:17:20 thomasklausner Exp $
+
+--- src/unix/uoss.c.orig	Sat Dec 21 09:34:32 2002
++++ src/unix/uoss.c
+@@ -176,6 +176,8 @@ static void oss_update(int threaded)
+ 	 _mix_some_samples((unsigned long) oss_bufdata, 0, oss_signed);
+       }
+    }
++
++   yield_timeslice();
+ }
+ 
+ 
+@@ -583,6 +585,7 @@ static int oss_rec_read(void *buf)
+ 	 p[i] ^= 0x80;
+    }
+ 
++   yield_timeslice();
+    return 1;
+ }
+ 

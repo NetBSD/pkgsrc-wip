@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/06 11:17:20 thomasklausner Exp $
+
+--- configure.orig	Sat Dec 21 09:38:49 2002
++++ configure
+@@ -1982,7 +1982,7 @@ else
+   COMPILE_PROGRAM=COMPILE_NORMAL
+   COMPILE_S_PROGRAM=COMPILE_S_NORMAL
+   if test "X$allegro_cv_prog_ld_s" = "Xyes"; then
+-    LDFLAGS="-s $LDFLAGS"
++    LDFLAGS="$LDFLAGS"
+   fi
+   LIB_TO_LINK=alleg
+   PLUGIN_LIB=lib/unix/libaldat.a
+@@ -5016,7 +5016,7 @@ sed 's/%@/@@/; s/@%/@@/; s/%g\$/@g/; /@g
+ $ac_vpsub
+ $extrasub
+ s%@SHELL@%$SHELL%g
+-s%@CFLAGS@%$CFLAGS%g
++s%@CFLAGS@%$CFLAGS -g%g
+ s%@CPPFLAGS@%$CPPFLAGS%g
+ s%@CXXFLAGS@%$CXXFLAGS%g
+ s%@FFLAGS@%$FFLAGS%g

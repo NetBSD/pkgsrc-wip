@@ -1,0 +1,10 @@
+Reason it's not committed:
+liquidwar isn't working, probably a threading issue.
+
+patch-aa, patch-ab, and patch-ad are only there to add debug flags --
+they should be removed once the problem with liquid war is found and fixed.
+The same holds for --enable-dbglib in Makefile.
+
+patch-ae is an unsuccessful try to fix the problem.
+
+Help in debugging this welcome.
