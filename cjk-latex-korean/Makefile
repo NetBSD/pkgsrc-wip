@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/11 04:36:22 blef Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/25 20:48:05 thomasklausner Exp $
 
 DISTNAME=	cjk-latex-korean-20020721
 WRKSRC=		${WRKDIR}
@@ -25,7 +25,7 @@ TEXMFMAIN=	${PREFIX}/share/texmf
 TFMDIR=		${TEXMFMAIN}/fonts/tfm
 TTFDIR=		${TEXMFMAIN}/fonts/truetype
 
-X11TTFDIR=	${X11PREFIX}/lib/X11/fonts/TrueType
+X11TTFDIR=	${X11PREFIX}/lib/X11/fonts/TTF
 
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
