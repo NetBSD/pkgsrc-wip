@@ -1,0 +1,4 @@
+$NetBSD: TODO,v 1.1 2003/08/08 09:32:41 adrian_p Exp $
+
+Test more.
+Does not shutdown correctly on -current (tested on 1.6U)
