@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/04 00:22:49 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/14 00:59:37 greyskyy Exp $
 bin/kapital
 bin/kapitalminder
 lib/libaccountcombo.la
@@ -69,8 +69,6 @@ lib/libkapitalcore.la
 lib/libkapitalcore.so
 lib/libkapitalcore.so.0
 lib/libkapitalcore.so.0.0
-lib/libkapitalpreviewpart.la
-lib/libkapitalpreviewpart.so
 lib/liblistbox.la
 lib/liblistbox.so
 lib/liblistbox.so.0
@@ -200,7 +198,6 @@ share/kde/mimelnk/application/kapital-ofx.desktop
 share/kde/mimelnk/application/kapital-qif.desktop
 share/kde/mimelnk/application/kapital-session.desktop
 share/kde/services/Kapital-service.desktop
-share/kde/services/kapitalpreview_component.desktop
 @dirrm share/kde/apps/kapitalminder/pics
 @dirrm share/kde/apps/kapitalminder
 @dirrm share/kde/apps/kapital/pics
