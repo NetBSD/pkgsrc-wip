@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/02/17 02:56:53 blef Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/24 17:11:57 jmmv Exp $
 #
 
 DISTNAME=	totem-0.95.1
@@ -12,7 +12,7 @@ COMMENT=	Simple movie player for the Gnome desktop based on xine
 DEPENDS+=		gnome2-dirs>=1.1:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=      YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
@@ -23,6 +23,6 @@ GCONF2_SCHEMAS=		totem-video-thumbnail.schemas
 GCONF2_SCHEMAS+=	totem.schemas
 
 .include "../../devel/GConf2/schemas.mk"
-.include "../../multimedia/xine-lib/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../multimedia/xine-lib/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

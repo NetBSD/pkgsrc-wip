@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/17 02:55:36 blef Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/24 17:11:56 jmmv Exp $
 #
 
 DISTNAME=	gnumeric-1.2.2
@@ -15,7 +15,7 @@ COMMENT=	Spreadsheet program from the GNOME project
 #BUILD_DEPENDS+=		python>=2.0:../../lang/python
 BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.4
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
@@ -32,17 +32,17 @@ GCONF2_SCHEMAS=		gnumeric-dialogs.schemas
 GCONF2_SCHEMAS+=	gnumeric-general.schemas
 GCONF2_SCHEMAS+=	gnumeric-plugins.schemas
 
-.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libgsf/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/libgnome/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../graphics/libart2/buildlink2.mk"
-.include "../../graphics/libgnomecanvas/buildlink2.mk"
-.include "../../print/libgnomeprint/buildlink2.mk"
-.include "../../print/libgnomeprintui/buildlink2.mk"
-.include "../../textproc/libunicode/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../devel/libgsf/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
+.include "../../print/libgnomeprint/buildlink3.mk"
+.include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../textproc/libunicode/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:23:08 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/24 17:11:57 jmmv Exp $
 #
 
 DISTNAME=	gurlchecker-0.4.1
@@ -12,12 +12,12 @@ COMMENT=	Gnome2 program to check a page/website for broken links
 DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
