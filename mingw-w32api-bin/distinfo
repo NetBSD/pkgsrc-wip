@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/29 18:22:41 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2004/06/20 05:04:17 xtraeme Exp $
 
-SHA1 (w32api-2.4.tar.gz) = 9e68ea815eb77e8b8da14804bb3eda10f01998db
-Size (w32api-2.4.tar.gz) = 1286408 bytes
+SHA1 (w32api-2.5.tar.gz) = cb5eca3f0fd11ecae4ce7852f5b0b605b8746d6d
+Size (w32api-2.5.tar.gz) = 1336713 bytes
