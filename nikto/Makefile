@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/08 14:56:44 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/06 18:15:47 adrian_p Exp $
 
 DISTNAME=	nikto-1.30
 CATEGORIES=	security www
@@ -11,7 +11,6 @@ COMMENT=	URL scanner used to search for known vulnerable CGIs on websites
 DEPENDS+=	p5-Net-SSLeay>=1.20:../../security/p5-Net-SSLeay
 DEPENDS+=	nmap>=2.00:../../net/nmap
 
-CONFLICTS=	whisker-[0-9]*
 USE_PERL5=      YES
 REPLACE_PERL=	nikto.pl
 
