@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/27 01:53:46 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/05/14 01:22:35 minskim Exp $
 
-SHA1 (libSM-6.0.1.tar.bz2) = 90ea5abee6c5413d814b9618b344190a0d9a5283
-Size (libSM-6.0.1.tar.bz2) = 195592 bytes
+SHA1 (libSM-6.0.3.tar.bz2) = f2bc39cad96be2b08efdb2c11bf644d061869903
+Size (libSM-6.0.3.tar.bz2) = 200225 bytes

@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2004/05/09 02:39:05 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/14 01:22:35 minskim Exp $
 #
 
-DISTNAME=		libSM-6.0.1
+DISTNAME=		libSM-6.0.3
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://freedesktop.org/~xlibs/dist/
+MASTER_SITES=		http://freedesktop.org/~xlibs/release/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://freedesktop.org/
+HOMEPAGE=		http://xlibs.freedesktop.org/
 COMMENT=		SM Extension
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
@@ -19,9 +19,9 @@ PKGCONFIG_OVERRIDE+=	sm.pc.in
 # XXX does not have an option to disable xthread;
 # XXX it is based on how libX11 was built.
 #PTHREAD_OPTS+=		require
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
-.include "../../wip/libICE/buildlink2.mk"
-.include "../../wip/libX11/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../wip/libICE/buildlink3.mk"
+.include "../../wip/libX11/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
