@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/10 07:23:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/10 07:24:14 jmmv Exp $
 #
 
 DISTNAME=	jabber-1.4.2
@@ -28,7 +28,7 @@ CONF_FILES=	${EGDIR}/jabber.xml.conf.default ${PKG_SYSCONFDIR}/jabber.xml
 post-extract:
 	${MV} ${WRKSRC}/jabber.xml ${WRKSRC}/jabber.xml.in
 
-pre-build:
+pre-configure:
 	${SED} -e "s|@LIBDIR@|${PREFIX}/lib/jabberd|g" \
 		-e "s|@LOG_DIR@|/var/log/jabberd|g" \
 		-e "s|@PID_DIR@|/var/run|g" \
