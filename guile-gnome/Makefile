@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/20 23:58:26 lexort Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/21 18:08:50 lexort Exp $
 
 DISTNAME=	guile-gnome-platform-2.7.91
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.gna.org/guile-gnome/releases/
 
