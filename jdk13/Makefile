@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/06 20:37:00 tvierling Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/06 20:45:33 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -54,10 +54,6 @@ PLIST_SRC=	# added to below
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(JDK_WITH_BUNDLES) && !empty(JDK_WITH_BUNDLES:M[Yy][Ee][Ss])
-ALL_TARGET+=	release-bundles
-.endif
-
 # Let an installed version of this package bootstrap a later version
 # (skips having to reinstall sun-jdk13 again)
 #
@@ -91,6 +87,10 @@ post-install:
 .endif
 
 ALL_TARGET+=	images
+.if defined(JDK_WITH_BUNDLES) && !empty(JDK_WITH_BUNDLES:M[Yy][Ee][Ss])
+ALL_TARGET+=	bundles
+.endif
+
 MOTIF_TYPE=	openmotif
 PLIST_SRC+=	${.CURDIR}/PLIST
 
