@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2004/01/31 19:49:41 rillig Exp $
+$NetBSD: distinfo,v 1.2 2004/01/31 23:02:15 rillig Exp $
 
 SHA1 (same-1.3.tar.gz) = 0638d10e53c022470e0ef724679f2c476607ebb2
 Size (same-1.3.tar.gz) = 9119 bytes
-SHA1 (patch-aa) = a98bf1528add137b82b79115f8ecc1a48f2200bd
+SHA1 (patch-aa) = b4720b6441eb835885a520a115df74405f19a8a9
 SHA1 (patch-ab) = 4441c001f6c5058ff9e920a8b9205069fa16d8b4
+SHA1 (patch-ac) = a2475001c01ce68a7e7e101c420d52accb4671fa
