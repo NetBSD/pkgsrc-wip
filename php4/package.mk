@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.1.1.1 2003/09/01 12:49:55 adrian_p Exp $
+# $NetBSD: package.mk,v 1.2 2003/09/28 09:29:30 dolecek Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -6,7 +6,7 @@
 # This is not linke a perl module in that you will need to generate
 # a PLIST on your own and add it to your package.
 #
-# If you don't know what pair is you can visit: http://pear.php.net/
+# If you don't know what pear is, you can visit: http://pear.php.net/
 #
 # PEAR_PREFIX	the directory under which pear packages are installed.
 #		this will default to ${PREFIX}/lib/php
