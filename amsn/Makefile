@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/11/01 15:09:15 ppostma Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/01 15:09:55 ppostma Exp $
 #
 
 DISTNAME=		amsn-0_93
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/_/./}
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amsn/}
 
-MAINTAINER=		virtus@wanadoo.nl
+MAINTAINER=		peter@pointless.nl
 HOMEPAGE=		http://amsn.sourceforge.net/
 COMMENT=		"Alvaro's MSN messenger client"
 
