@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/24 20:15:11 xtraeme Exp $
+bin/xml2doc
+share/doc/xml2doc/BUGS
+share/doc/xml2doc/README
+share/doc/xml2doc/TODO
+share/doc/xml2doc/examples/align.xml
+share/doc/xml2doc/examples/colors.xml
+share/doc/xml2doc/examples/font.xml
+share/doc/xml2doc/examples/images.xml
+share/doc/xml2doc/examples/manpage.xml
+share/man/man1/xml2doc.1.gz
+@dirrm share/man/man1
