@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/31 13:45:25 airhead Exp $
+
+SHA1 (e16keyedit-0.2.tar.gz) = 6ae901afaaf6d1095c58b7b9cbf7a6d0e1d0ccc8
+Size (e16keyedit-0.2.tar.gz) = 13749 bytes
+SHA1 (patch-aa) = d5c776da74322bda4c33512df07ab014a37888ef

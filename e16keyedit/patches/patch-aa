@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/08/31 13:45:25 airhead Exp $
+
+--- Makefile.orig	2000-03-23 20:04:16.000000000 +0100
++++ Makefile
+@@ -10,17 +10,17 @@ EXTRAS   =
+ BUILD    = \
+ 
+ LIB_DIRS = \
+-    -L/usr/local/lib -L/usr/X11R6/lib -L/usr/X11/lib -L/usr/dt/lib
++    -L${PREFIX}/lib -L${X11BASE}/lib -L${X11BASE}/lib
+ LIBS     = \
+-    `gtk-config --libs` -lgdbm -lgdk_imlib
+-CFLAGS   = \
+-    -O -g -D_GNU_SOURCE $(DEVFLAGS)
++    `gtk-config --libs`
++#CFLAGS   = \
++#    -O -g -D_GNU_SOURCE $(DEVFLAGS)
+ #CFLAGS   = \
+ #    -O -g -W -Wall -Wno-unused  -pedantic -pedantic-errors -ansi -D_GNU_SOURCE
+-OPTFLAGS   = \
+-    -O6 -mpentium -mcpu=pentium -march=pentium -ffast-math -D_GNU_SOURCE
++#OPTFLAGS   = \
++#    -O6 -mpentium -mcpu=pentium -march=pentium -ffast-math -D_GNU_SOURCE
+ INCLUDES = \
+-    `gtk-config --cflags` -I..
++    `gtk-config --cflags` -I.. -I${X11BASE}/include -I${PREFIX}/include
+ 
+ BIN      = e16keyedit
+ 
