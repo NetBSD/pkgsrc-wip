@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/31 18:38:47 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/31 18:41:01 minskim Exp $
 #
 
 DISTNAME=		libXtrans-0.1
@@ -11,7 +11,9 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://xlibs.freedesktop.org/
 COMMENT=		Network API translation layer to insulate X
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xtrans.pc.in
