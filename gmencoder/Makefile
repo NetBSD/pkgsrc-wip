@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/23 18:08:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/27 20:28:15 cjep Exp $
 #
 
-DISTNAME=	gmencoder-0.0.7		
+DISTNAME=	gmencoder-0.0.7
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gmencoder/}	
-EXTRACT_SUFX=	.tgz	
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gmencoder/}
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://gmencoder.sourceforge.net/
