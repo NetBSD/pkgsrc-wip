@@ -1,0 +1,11 @@
+=========================================================
+
+	Dont forget to put boost headers in your compilers
+	search path. Here is and example:
+	
+		g++ -I${PREFIX}/include example.cpp
+		
+	It is adviced that you use gcc3 when using boost
+	libraries.
+	
+=========================================================
