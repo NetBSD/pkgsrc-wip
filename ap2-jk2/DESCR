@@ -1,0 +1,2 @@
+mod_jk2 handles the communication between Tomcat and Apache.
+JK2 is a refactoring of JK and is much more powerful.
