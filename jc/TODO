@@ -1,0 +1,4 @@
+GNU-Classpath must be installed into /usr/pkg/jc/
+
+this must be modified in jc sources or create a shell-script wrapper to
+change the default classpath directory.

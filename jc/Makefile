@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/15 20:46:24 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/17 18:07:11 poppnk Exp $
 #
 
 DISTNAME=		jc-1.2.2
@@ -12,6 +12,10 @@ COMMENT=		Native java compiler using gcc
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_MAKEINFO=	yes
+INFO_FILES=jc.info jc.info-1 jc.info-2 jc.info-3
+
+CONFIGURE_ARGS+=--disable-assertions
 
 SUBST_CLASSES=uname gcc
 SUBST_FILES.uname=configure
