@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/10 22:56:52 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/11 06:58:34 cubidou Exp $
 #
 
 DISTNAME=	ogmtools-1.0.1
@@ -15,7 +15,6 @@ GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--with-dvdread-includes=${BUILDLINK_DIR}
 
-.include "../../audio/libogg/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../misc/libdvdread/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
