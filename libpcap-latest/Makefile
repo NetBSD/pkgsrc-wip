@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/08/17 18:29:59 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2004/08/29 13:26:29 ppostma Exp $
 
 DISTNAME=		libpcap-0.8.3
 PKGREVISION=		1
@@ -18,8 +18,6 @@ USE_LIBTOOL=		yes
 LIBTOOL_LA_FILES+=	lib/libpcap.la
 
 .include "../../mk/bsd.prefs.mk"
-
-# this come from 0.7.2 pcap pkgsrc :
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
 .  if exists(/usr/include/netinet/ip6.h)
