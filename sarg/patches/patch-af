@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.5 2005/01/13 15:43:44 bubuchka Exp $
+$NetBSD: patch-af,v 1.6 2005/03/01 11:01:01 bubuchka Exp $
 
---- sarg.conf.orig	2004-11-22 15:37:02.000000000 +0200
+--- sarg.conf.orig	2005-02-22 14:24:44.000000000 +0200
 +++ sarg.conf
 @@ -29,7 +29,7 @@
  #       Where is the access.log file
@@ -29,7 +29,7 @@ $NetBSD: patch-af,v 1.5 2005/01/13 15:43:44 bubuchka Exp $
  
  # TAG: replace_index string
  #      Replace "index.html" in the main index file with this string
-@@ -456,10 +456,10 @@ report_type topsites sites_users users_s
+@@ -455,10 +455,10 @@ max_elapsed 28800000
  #
  #parsed_output_log none
  
@@ -42,7 +42,7 @@ $NetBSD: patch-af,v 1.5 2005/01/13 15:43:44 bubuchka Exp $
  
  # TAG displayed_values bytes|abbreviation
  #      how the values will be displayed in reports.
-@@ -488,7 +488,7 @@ report_type topsites sites_users users_s
+@@ -487,7 +487,7 @@ max_elapsed 28800000
  #     Sarg will create sarg-php directory with some PHP modules:
  #     - sarg-squidguard-block.php - add urls from user reports to squidGuard DB
  #
@@ -51,7 +51,7 @@ $NetBSD: patch-af,v 1.5 2005/01/13 15:43:44 bubuchka Exp $
  
  # TAG block_it module_url
  #     This tag allow you to pass urls from user reports to a cgi or php module,
-@@ -496,7 +496,7 @@ report_type topsites sites_users users_s
+@@ -495,7 +495,7 @@ max_elapsed 28800000
  #
  #     Eg.: block_it /sarg-php/sarg-block-it.php
  #     sarg-block-it is a php that will append a url to a flat file.
@@ -60,7 +60,7 @@ $NetBSD: patch-af,v 1.5 2005/01/13 15:43:44 bubuchka Exp $
  #     in $filename variable, and chown to a httpd owner.
  #
  #     sarg will pass http://module_url?url=url
-@@ -517,7 +517,7 @@ report_type topsites sites_users users_s
+@@ -516,7 +516,7 @@ max_elapsed 28800000
  #	.data2		table text class, align:right, border colors
  #	.link  		link class
  #
@@ -69,7 +69,7 @@ $NetBSD: patch-af,v 1.5 2005/01/13 15:43:44 bubuchka Exp $
  #
  #external_css_file none
  
-@@ -531,7 +531,7 @@ report_type topsites sites_users users_s
+@@ -530,7 +530,7 @@ max_elapsed 28800000
  #                                          %u - user report
  #
  # user_authentication no

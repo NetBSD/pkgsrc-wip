@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.5 2005/01/13 15:43:44 bubuchka Exp $
+$NetBSD: patch-ad,v 1.6 2005/03/01 11:01:01 bubuchka Exp $
 
---- log.c.orig	2005-01-13 16:46:49.000000000 +0200
+--- log.c.orig	2005-02-22 16:06:18.000000000 +0200
 +++ log.c
-@@ -142,8 +142,8 @@ int main(argc,argv)
-    BlockIt[0]='\0';
+@@ -148,8 +148,8 @@ int main(argc,argv)
     ExternalCSSFile[0]='\0';
+    SquidGuardLogFormat[0]='\0';
  
 -   strcpy(AccessLog,"/usr/local/squid/var/logs/access.log");
 -   sprintf(ExcludeCodes,"%s/exclude_codes",SYSCONFDIR);
@@ -13,7 +13,7 @@ $NetBSD: patch-ad,v 1.5 2005/01/13 15:43:44 bubuchka Exp $
     strcpy(GraphDaysBytesBarColor,"orange");
     strcpy(BgColor,"#FFFFFF");
     strcpy(TxColor,"#000000");
-@@ -156,7 +156,7 @@ int main(argc,argv)
+@@ -162,7 +162,7 @@ int main(argc,argv)
     strcpy(HeaderBgColor,"#DDDDDD");
     strcpy(FontSize,"9px");
     strcpy(TempDir,"/tmp");
@@ -22,7 +22,7 @@ $NetBSD: patch-ad,v 1.5 2005/01/13 15:43:44 bubuchka Exp $
     strcpy(Ip2Name,"no");
     strcpy(DateFormat,"u");
     strcpy(OverwriteReport,"no");
-@@ -193,11 +193,11 @@ int main(argc,argv)
+@@ -199,11 +199,11 @@ int main(argc,argv)
     strcpy(ShowSargInfo,"yes");
     strcpy(ShowSargLogo,"yes");
     strcpy(ParsedOutputLog,"no");
@@ -36,7 +36,7 @@ $NetBSD: patch-ad,v 1.5 2005/01/13 15:43:44 bubuchka Exp $
     strcpy(AuthName,"SARG, Restricted Access");
     strcpy(AuthType,"basic");
     strcpy(Require,"require user admin %u");
-@@ -353,7 +353,7 @@ int main(argc,argv)
+@@ -362,7 +362,7 @@ int main(argc,argv)
        debuga("Init");
  
     if(ConfigFile[0] == '\0')

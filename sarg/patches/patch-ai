@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.1 2005/01/13 15:43:44 bubuchka Exp $
+$NetBSD: patch-ai,v 1.2 2005/03/01 11:01:01 bubuchka Exp $
 
---- grepday.c.orig	2004-11-22 15:37:02.000000000 +0200
+--- grepday.c.orig	2005-02-24 14:35:33.000000000 +0200
 +++ grepday.c
 @@ -36,7 +36,7 @@ int x1;
  char *font1 = SYSCONFDIR"/fonts/Verdana.TTF";

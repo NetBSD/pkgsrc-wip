@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.2 2005/01/13 15:43:44 bubuchka Exp $
+$NetBSD: patch-ah,v 1.3 2005/03/01 11:01:01 bubuchka Exp $
 
---- usage.c.orig	2004-11-22 15:37:02.000000000 +0200
+--- usage.c.orig	2005-02-21 20:13:21.000000000 +0200
 +++ usage.c
 @@ -30,7 +30,7 @@ void usage(char *prog)
    fprintf(stderr, "%5s-c %s\n"," ",text[69]);
