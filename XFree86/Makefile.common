@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2003/09/01 20:59:01 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.18 2003/09/01 21:15:44 xtraeme Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -21,6 +21,8 @@
 
 .if ${OPSYS} == "FreeBSD"
 MANCOMPRESSED=	YES
+.elif ${OPSYS} == "Linux"
+USE_GNU_TOOLS+= make
 .endif
 
 WRKSRC?=	${WRKDIR}/xc
@@ -41,13 +43,9 @@ IMAKE=		${X11BASE}/bin/imake
 XINSTALL_DIRS?=	${XBUILD_DIRS}
 _XINCLUDE_DIRS=	include ${XBUILD_DIRS} ${XINCLUDE_DIRS}
 
-.if ${OPSYS} == "Linux"
-USE_GNU_TOOLS+=	make
-.endif
-
 # Operating Systems to pass our compiler options (CC, CXX, CPP, CFLAGS)
 
-SYSTEMS=	FreeBSD linux NetBSD
+SYSTEMS=	FreeBSD NetBSD linux
 
 .if !defined(NO_XFREE86_TARGETS)
 
@@ -95,7 +93,6 @@ pre-configure:
 		-e "s|@@PKGSRC_CXX@@|${CXX}|g" \
 		-e "s|@@PKGSRC_CPP@@|${CPP}|g" \
 		-e "s|@@PKGSRC_CFLAGS@@|${CFLAGS}|g" \
-		-e "s|@LOCALBASE@|${LOCALBASE}|g" \
 		-e "s|-I${LOCALBASE}/include||" \
 		-e "s|-I${X11BASE}/include||" \
 		${WRKSRC}/config/cf/${F}.cf.in > \
