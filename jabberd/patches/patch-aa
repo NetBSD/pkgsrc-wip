@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2003/05/09 22:20:17 xtraeme Exp $
+$NetBSD: patch-aa,v 1.3 2003/05/10 07:22:16 jmmv Exp $
 
---- jabber.xml.orig	2003-05-10 00:03:51.000000000 +0200
-+++ jabber.xml	2003-05-10 00:06:50.000000000 +0200
-@@ -253,7 +253,7 @@
- 
-       </browse>
- 
--    </jsm>
-+    @LIBDIR@>
- 
-     <!--
-     The following section dynamically loads the individual
+--- jabber.xml.in.orig	2003-05-10 00:03:51.000000000 +0200
++++ jabber.xml.in	2003-05-10 00:06:50.000000000 +0200
 @@ -264,26 +264,26 @@
      -->
  
@@ -63,7 +54,7 @@ $NetBSD: patch-aa,v 1.2 2003/05/09 22:20:17 xtraeme Exp $
      <host/>
      <load>
 -      <xdb_file>./xdb_file/xdb_file.so</xdb_file>
-+    <xdb_file>@LIBDIR@/xdb_file.so</xdb_file>
++      <xdb_file>@LIBDIR@/xdb_file.so</xdb_file>
      </load>
      <xdb_file xmlns="jabber:config:xdb_file">
 -      <spool><jabberd:cmdline flag='s'>./spool</jabberd:cmdline></spool>
@@ -112,7 +103,7 @@ $NetBSD: patch-aa,v 1.2 2003/05/09 22:20:17 xtraeme Exp $
    <service id="s2s">
      <load>
 -      <dialback>./dialback/dialback.so</dialback>
-+    <dialback>@LIBDIR@/dialback.so</dialback>
++      <dialback>@LIBDIR@/dialback.so</dialback>
      </load>
      <dialback xmlns='jabber:config:dialback'>
        <legacy/>
