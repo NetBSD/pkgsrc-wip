@@ -1,0 +1,6 @@
+Computer systems can provide an arithmetic that gives
+the results that people expect, instead of the results
+that binary floating point calculations give (see the
+sidebar on the right for an example). This is not
+available in Java today, so a decimal floating point
+arithmetic is needed.
