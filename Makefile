@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.107 2003/04/20 06:28:43 xtraeme Exp $
-# $NetBSD: Makefile,v 1.107 2003/04/20 06:28:43 xtraeme Exp $
+# $Id: Makefile,v 1.108 2003/04/20 15:11:49 cjep Exp $
+# $NetBSD: Makefile,v 1.108 2003/04/20 15:11:49 cjep Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -69,6 +69,7 @@ SUBDIR+=	mailfilter
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	mopac
+SUBDIR+=	mtf
 SUBDIR+=	nagios-base
 SUBDIR+=	nagios-plugin-ldap
 SUBDIR+=	nagios-plugin-mysql
