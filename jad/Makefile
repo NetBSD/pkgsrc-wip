@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/03 17:09:07 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/03 17:49:07 poppnk Exp $
 #
 
 DISTNAME=		jadlx158
@@ -27,8 +27,15 @@ DISTINFO_FILE=${PKGDIR}/distinfo.FreeBSD
 PLIST_SRC=${PKGDIR}/PLIST.FreeBSD
 .endif
 
+.if ${OPSYS} == "OpenBSD"
+DISTNAME=jadob158
+JAD_OSDIR=openbsd/
+DISTINFO_FILE=${PKGDIR}/distinfo.OpenBSD
+PLIST_SRC=${PKGDIR}/PLIST.FreeBSD
+.endif
+
 # TODO add support for the rest of supported archs
-ONLY_FOR_PLATFORM=Linux-*-i386 FreeBSD-*-i386
+ONLY_FOR_PLATFORM=Linux-*-i386 FreeBSD-*-i386 OpenBSD-2.*-i386
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/jad ${PREFIX}/bin/jad
