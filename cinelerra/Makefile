@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/10 07:40:37 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/11 05:56:08 jeremy-c-reed Exp $
 #
 
 #DISTNAME=		cinelerra-1.2.0-src
@@ -15,6 +15,8 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://cvs.cinelerra.org/
 COMMENT=		Non-linear video and audio editor and compositor (unofficial)
 
+#DEPENDS+=	toolame>=02:../../audio/toolame
+
 #WRKSRC=			${WRKDIR}/cinelerra-1.2.0/cinelerra
 #WRKSRC=			${WRKDIR}/cinelerra-1.2.0
 WRKSRC=			${WRKDIR}/hvirtual
@@ -24,27 +26,35 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 
-.include "../../audio/liba52/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+# maybe have an option for HAVE_ALSA
+.include "../../wip/alsa-lib/buildlink3.mk"
+.include "../../audio/esound/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
+# what can be done about ACCEPTABLE_LICENSES=fee-based-commercial-use ?
+.include "../../audio/lame/buildlink3.mk"
+.include "../../audio/liba52/buildlink3.mk"
+.include "../../audio/libaudiofile/buildlink3.mk"
+#.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+
+.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"
 
 # maybe have an option for HAVE_FIREWIRE
 .include "../../wip/libraw1394/buildlink3.mk"
 .include "../../wip/libavc1394/buildlink3.mk"
-
-#.include "../../audio/libsndfile/buildlink3.mk"
-#.include "../../wip/libuuid/buildlink3.mk"
-#.include "../../audio/esound/buildlink3.mk"
-#.include "../../graphics/freetype2/buildlink3.mk"
-#.include "../../graphics/tiff/buildlink3.mk"
-#DEPENDS+=	toolame>=02:../../audio/toolame
-#ifeq ($(HAVE_ALSA), y)
-#.include "../../wip/alsa-lib/buildlink3.mk"
+.include "../../wip/libdv/buildlink3.mk"
 
 #  libmpeg3
 # jpeg-mmx
-#.include "../../audio/libogg/buildlink3.mk"
-#.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 
+.include "../../wip/libuuid/buildlink3.mk"
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
