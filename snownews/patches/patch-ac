@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/12/23 22:55:59 bjan2 Exp $
+
+--- Makefile.orig	2003-12-23 15:39:02.000000000 -0700
++++ Makefile	2003-12-23 15:39:08.000000000 -0700
+@@ -2,7 +2,7 @@
+ 
+ LDFLAGS = -lncurses `xml2-config --libs` $(EXTRA_LDFLAGS)
+ OBJFILES = main.o netio.o interface.o xmlparse.o updatecheck.o conversions.o dialog.o ui-support.o categories.o
+-CFLAGS = -Wall -O2 -DLOCALEPATH="\"$(LOCALEPATH)\"" -DOS=\"$(shell uname)\" `xml2-config --cflags` $(EXTRA_CFLAGS)
++CFLAGS = -Wall -DLOCALEPATH="\"$(LOCALEPATH)\"" -DOS=\"$(shell uname)\" `xml2-config --cflags` $(EXTRA_CFLAGS)
+ VERSION = `grep VERSION version.h | sed s/\"//g | sed s/\#define\ VERSION\ //`
+ MAN = doc/man
+ DISTDIR = snownews-$(VERSION)

@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/23 22:55:59 bjan2 Exp $
+
+bin/snownews
+bin/opml2snow
+man/man1/snownews.1
+man/de/man1/snownews.1
+man/nl/man1/snownews.1
+man/fr/man1/snownews.1
+man/it/man1/snownews.1
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/snownews.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/snownews.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/snownews.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/snownews.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/snownews.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/snownews.mo
