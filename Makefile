@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.224 2003/06/05 06:01:40 mjasm Exp $
-# $NetBSD: Makefile,v 1.224 2003/06/05 06:01:40 mjasm Exp $
+# $Id: Makefile,v 1.225 2003/06/05 06:11:17 mjasm Exp $
+# $NetBSD: Makefile,v 1.225 2003/06/05 06:11:17 mjasm Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -149,6 +149,7 @@ SUBDIR+=	ppp
 SUBDIR+=	procps
 SUBDIR+=	pts
 SUBDIR+=	py-OpenGL
+SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-adns
 SUBDIR+=	py-elementtree
