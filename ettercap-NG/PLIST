@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/07 19:06:50 adrian_p Exp $
+bin/ettercap
+bin/etterfilter
+bin/etterlog
+man/man5/etter.conf.5
+man/man8/ettercap.8
+man/man8/ettercap_curses.8
+man/man8/etterfilter.8
+man/man8/etterlog.8
+share/ettercap/etter.dns
+share/ettercap/etter.fields
+share/ettercap/etter.filter
+share/ettercap/etter.filter.examples
+share/ettercap/etter.filter.kill
+share/ettercap/etter.filter.ssh
+share/ettercap/etter.finger.mac
+share/ettercap/etter.finger.os
+share/ettercap/etter.mime
+share/ettercap/etter.services
+share/ettercap/etter.ssl.crt
+share/ettercap/ettercap.png
+share/ettercap/etterfilter.cnt
+share/ettercap/etterfilter.tbl
+share/ettercap/etterlog.dtd
+@dirrm share/ettercap
