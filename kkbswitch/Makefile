@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/24 14:59:29 ianzag Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/12 04:51:48 ianzag Exp $
 #
 
 DISTNAME=		kkbswitch-1.4.1
@@ -12,6 +12,7 @@ COMMENT=		Keyboard layout indicator for KDE 2 or 3
 USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
+CONFIGURE_ARGS+= --disable-ru-ua-layout
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
