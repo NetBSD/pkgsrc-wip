@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/06/16 15:28:10 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/23 12:04:19 rillig Exp $
 #
 
 DISTNAME=		tcd-2.2.0
@@ -14,6 +14,5 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-DEPENDS+=		SDL:../../devel/SDL
-
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
