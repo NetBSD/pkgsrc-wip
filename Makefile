@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1357 2004/07/03 08:57:02 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1357 2004/07/03 08:57:02 xtraeme Exp $
+# $Id: Makefile,v 1.1358 2004/07/03 09:11:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1358 2004/07/03 09:11:34 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -220,7 +220,6 @@ SUBDIR+=	gtkada
 SUBDIR+=	gtkglk
 SUBDIR+=	gtklookat
 SUBDIR+=	gtkpod
-SUBDIR+=	gtkterm2
 SUBDIR+=	guile-gtk-devel
 SUBDIR+=	gurlchecker
 SUBDIR+=	gwc

@@ -1,6 +1,0 @@
-It's installed successfully, but pkglint says one
-fatal message.
-"documentation must be installed under share/doc, not doc."
-
-
-
