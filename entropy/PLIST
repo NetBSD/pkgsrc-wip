@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2003/12/04 12:29:30 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/02/12 16:10:51 tvierling Exp $
 bin/entropy
+bin/entropy-monoopt
 bin/entropy-storechg
 share/examples/entropy/entropy.conf
 share/examples/entropy/node/background.png
