@@ -1,4 +1,4 @@
-# $NetBSD: cvs-package.mk,v 1.2 2004/11/20 16:11:38 rillig Exp $
+# $NetBSD: cvs-package.mk,v 1.3 2005/01/11 18:42:30 rillig Exp $
 
 # Written by:
 #    Roland Illig <roland.illig@gmx.de>, 2004.
@@ -17,9 +17,9 @@
 _PKG_MK_CVS_PACKAGE_MK=	# defined
 
 # commonly used repositories
-CVS_REPOSITORY_GNU=	:ext:anoncvs@cvs.gnu.org:/cvsroot/
+CVS_REPOSITORY_GNU=	:ext:anoncvs@cvs.gnu.org:/cvsroot
 CVS_REPOSITORY_NONGNU=	${CVS_REPOSITORY_GNU}
-CVS_REPOSITORY_SOURCEFORGE= :pserver:anonymous:@cvs.sourceforge.net:/cvsroot/
+CVS_REPOSITORY_SOURCEFORGE= :pserver:anonymous:@cvs.sourceforge.net:/cvsroot
 
 # default values (internal)
 _CVS_RSH=		ssh
