@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/23 21:11:40 tomhensel Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/24 01:36:29 tomhensel Exp $
 
 DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}-cvs
 PKGNAME=	spamassassin-cvs-${_SA_CVS_DATE}
@@ -25,6 +25,8 @@ CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*			\
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+NO_CHECKSUM=	YES
+
 .include "../../mk/bsd.prefs.mk"
 
 # which version of SA is current in CVS
@@ -33,7 +35,7 @@ _SA_CVS_DATE!=	${DATE} +%Y%m%d
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-cvs//}
 
-PERL5_REQD+=    5.6.2   # MakeMaker >= 5.45 needed, >= 6.16 recommended
+PERL5_REQD+=    5.6.1	# MakeMaker >= 5.45 needed, >= 6.16 recommended
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
@@ -47,17 +49,20 @@ SPAMASSASSIN_CONTACT_ADDRESS?=		'postmaster'
 SPAMASSASSIN_PERL_WARNINGS?=		YES
 SPAMASSASSIN_PERL_TAINT_CHECKS?=	YES
 
-# Enable network tests during 'make test'?
+# Enable test for Razor/Pyzor during 'make test'?
 SPAMASSASSIN_NET_TESTS?=		NO
 
-# Enable SSL support in spamd
+# Use "NO" to disable OpenSSL support
 SPAMASSASSIN_USE_SSL?=			YES
 
-# Enable MySQL support using p5-DBI/DBD
+# Enable MySQL support using p5-DBI/DBD?
 SPAMASSASSIN_USE_MYSQL?=		NO
 
-# Enable razor-agents support
+# Enable razor-agents support?
 SPAMASSASSIN_USE_RAZOR?=		YES
+
+# Enable pyzor support?
+SPAMASSASSIN_USE_PYZOR?=		NO
 
 .if !empty(SPAMASSASSIN_USE_SSL:M[yY][eE][sS])
 .  include "../../security/openssl/buildlink3.mk"
@@ -75,16 +80,21 @@ SA_SSLCERTS=		'$$LOCAL_RULES_DIR/certs'
 .include "../../database/p5-DBI/buildlink3.mk"
 DEPENDS+=		p5-DBI>=1.37:../../database/p5-DBI
 DEPENDS+=		p5-DBD-mysql>=2.1017:../../database/p5-DBD-mysql
-SPAMASSASSIN_NET_TESTS?=		YES
-.else
-SPAMASSASSIN_NET_TESTS?=		NO
 .endif
 
 .if !empty(SPAMASSASSIN_USE_RAZOR:M[yY][eE][sS])
 DEPENDS+=		p5-razor-agents>=2.36:../../mail/p5-razor-agents
+SPAMASSASSIN_NET_TESTS?=	YES
+.endif
+
+.if !empty(SPAMASSASSIN_USE_PYZOR:M[yY][eE][sS])
+#DEPENDS+=		pyzor>=0.40:../../mail/pyzor
+DEPENDS+=		pyzor>=0.40:../../wip/pyzor
+SPAMASSASSIN_NET_TESTS?=	YES
 .endif
 
 BUILD_DEFS+=		SPAMASSASSIN_USE_SSL
+BUILD_DEFS+=		SPAMASSASSIN_USE_MYSQL
 BUILD_DEFS+=		SPAMASSASSIN_CONTACT_ADDRESS
 BUILD_DEFS+=		SPAMASSASSIN_PERL_WARNINGS
 BUILD_DEFS+=		SPAMASSASSIN_PERL_TAINT_CHECKS
