@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/27 01:59:14 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/27 02:10:39 minskim Exp $
 #
 
 DISTNAME=		Reverend-0.2.4
@@ -10,8 +10,9 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.divmod.org/Reverend/
 COMMENT=		General purpose Bayesian classifier
 
-USE_BUILDLINK2=		yes
-PY_PATCHPLIST=		yes
+NO_BUILDLINK=		yes
+NO_CONFIGURE=		yes
+USE_LANGUAGES=		# empty
 PYDISTUTILSPKG=		yes
 
 .include "../../lang/python/extension.mk"
