@@ -4,3 +4,5 @@ did not build with old gcc:
 In file included from ../../libxml++/parsers/domparser.h:12,
                  from domparser.cc:7:
 ../../libxml++/document.h:19: ostream: No such file or directory
+
+Update to 2.8.
