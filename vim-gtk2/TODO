@@ -1,0 +1,5 @@
+- The Makefile looks ugly and pkglint is really unhappy with that.
+  DISTINFO_FILE needs to be overridden because the vim-share/distinfo does
+  not include the gtk2 patch.
+- Only tested with NetBSD/i386. Needs some testing with other archs and
+  plattforms.
