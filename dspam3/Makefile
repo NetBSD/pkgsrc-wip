@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/06/15 17:03:36 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/16 02:08:21 xtraeme Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -13,6 +13,9 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+REPLACE_PERL=		tools/dspam_genaliases.in \
+			tools/dspam_corpus.in
 
 PKGCONFIG_OVERRIDE+=	dspam.pc.in
 
@@ -45,10 +48,10 @@ CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
 #
 .if !empty(DSPAM_DELIVERY_AGENT:Mprocmail)
 BUILD_DEPENDS+=		procmail-[0-9]*:../../mail/procmail
-CONFIGURE_ARGS+=	--with-delivery-agent="${PREFIX}/bin/procmail $u"
+CONFIGURE_ARGS+=	--with-delivery-agent="${LOCALBASE}/bin/procmail"
 .elif !empty(DSPAM_DELIVERY_AGENT:Mmaildrop)
 BUILD_DEPENDS+=		maildrop-[0-9]*:../../mail/maildrop
-CONFIGURE_ARGS+=	--with-delivery-agent="${PREFIX}/bin/maildrop $u"
+CONFIGURE_ARGS+=	--with-delivery-agent="${LOCALBASE}/bin/maildrop"
 .endif
 
 #
