@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1544 2004/11/19 18:58:31 jgoamakf Exp $
-# $NetBSD: Makefile,v 1.1544 2004/11/19 18:58:31 jgoamakf Exp $
+# $Id: Makefile,v 1.1545 2004/11/19 20:38:06 larnor Exp $
+# $NetBSD: Makefile,v 1.1545 2004/11/19 20:38:06 larnor Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -213,6 +213,7 @@ SUBDIR+=	grip
 SUBDIR+=	grisbi
 SUBDIR+=	gtick
 SUBDIR+=	gtk-engines-thinice
+SUBDIR+=	gtk-gnutella-current
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtk-theme-switch
 SUBDIR+=	gtk2-engines-dwerg
