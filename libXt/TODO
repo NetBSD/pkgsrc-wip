@@ -1,8 +1,0 @@
-this is planned to be the start of pkgsrc for libXt based
-on official freedesktop.org version. Later to be hosted at
-freedesktop.org.
-
-I made this portable. - reed
-
-is it okay to have PLIST with PKGVERSION like:
-lib/libXt.so.${PKGVERSION}
