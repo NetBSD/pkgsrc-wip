@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.548 2003/10/15 01:36:16 tvierling Exp $
-# $NetBSD: Makefile,v 1.548 2003/10/15 01:36:16 tvierling Exp $
+# $Id: Makefile,v 1.549 2003/10/16 02:27:00 cetrox Exp $
+# $NetBSD: Makefile,v 1.549 2003/10/16 02:27:00 cetrox Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -143,6 +143,7 @@ SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
 SUBDIR+=	gl-117
 SUBDIR+=	glaxium
+SUBDIR+=	glide3
 SUBDIR+=	gnome2-extras
 SUBDIR+=	gnome2-pkgview
 SUBDIR+=	gnome2-system-monitor
