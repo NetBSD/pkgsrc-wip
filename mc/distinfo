@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/22 14:52:40 id9848949 Exp $
+
+SHA1 (mc-4.6.0.tar.gz) = 815668f4f1e7a0b1a7d55d307f44f90a18f3160f
+Size (mc-4.6.0.tar.gz) = 3727676 bytes
+SHA1 (patch-aa) = 7e7cae934a4e151b124dce77074634845b8b10ea
+SHA1 (patch-ab) = ef8a17c1405885059b6139309adb9a3f24d843be
+SHA1 (patch-ac) = c2f027b4b759d796054992396e660fe9eab36efe
+SHA1 (patch-ad) = 2af962b087579d79d8c6a0909c224a1f2937f981

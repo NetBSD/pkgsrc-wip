@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/22 14:52:40 id9848949 Exp $
+
+--- configure.orig	Wed Feb  5 19:09:04 2003
++++ configure
+@@ -16485,7 +16485,13 @@ if test "${ac_cv_lib_slang_SLang_init_tt
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lslang  $LIBS"
++
++if [ `uname -s` == "Linux" ]; then
++	LIBS="-lslang -ldl $LIBS"
++else
++	LIBS="-lslang $LIBS"
++fi
++
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -16534,7 +16540,13 @@ fi
+ echo "$as_me:$LINENO: result: $ac_cv_lib_slang_SLang_init_tty" >&5
+ echo "${ECHO_T}$ac_cv_lib_slang_SLang_init_tty" >&6
+ if test $ac_cv_lib_slang_SLang_init_tty = yes; then
+-  MCLIBS="$MCLIBS -lslang"
++
++	if [ `uname -s` == "Linux" ]; then
++		MCLIBS="$MCLIBS -ldl -lslang"
++	else
++		MCLIBS="$MCLIBS -lslang"
++	fi
++
+ else
+   with_screen=mcslang
+ fi
