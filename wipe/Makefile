@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/08/02 17:21:32 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/08/02 17:21:53 minskim Exp $
 #
 
 DISTNAME=		wipe-2.2.0
-CATEGORIES=		wip sysutils
+CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wipe/}
 EXTRACT_SUFX=		.tar.bz2
 
