@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/26 18:20:35 daprice Exp $
+$NetBSD: distinfo,v 1.2 2005/03/18 22:45:34 daprice Exp $
 
-SHA1 (R/R2HTML_1.3.tar.gz) = 5e6f0ffb9ce0c30b3dcf09334d6f2e353c7cbdb2
-Size (R/R2HTML_1.3.tar.gz) = 178439 bytes
+SHA1 (R/R2HTML_1.53.tar.gz) = 70815462a999a473983339a14f33367e02634e63
+RMD160 (R/R2HTML_1.53.tar.gz) = 0f6201dcb5a45d0817cb38b5823f78c97adaae60
+Size (R/R2HTML_1.53.tar.gz) = 329097 bytes
