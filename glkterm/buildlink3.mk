@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/23 23:20:04 dillo Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/03/02 17:10:00 dillo Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLKTERM_BUILDLINK3_MK:=	${GLKTERM_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES+=	glkterm
 .if !empty(GLKTERM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.glkterm+=	glkterm>=0.7.8
 BUILDLINK_PKGSRCDIR.glkterm?=	../../wip/glkterm
-BUILDLINK_DEPMETHOD.glkterm?=	build
+#BUILDLINK_DEPMETHOD.glkterm?=	build
 
 BUILDLINK_TRANSFORM+=	l:glk:glkterm
 BUILDLINK_TARGETS+=	buildlink-glkterm-hook

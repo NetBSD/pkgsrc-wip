@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/09 23:09:28 dillo Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/02 17:10:00 dillo Exp $
 #
 
 DISTNAME=	glkterm-078
@@ -17,14 +17,7 @@ INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]* NetBSD-1.5* NetBSD-1.6-* NetBSD-1.6.*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*
 
 USE_BUILDLINK3=	yes
-
-do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/glkterm
-	for f in Make.glkterm gi_blorb.h gi_dispa.h glk.h glkstart.h; \
-	do \
-		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/include/glkterm; \
-	done
-	${INSTALL_DATA} ${WRKSRC}/libglkterm.a ${PREFIX}/lib
+USE_LIBTOOL=	yes
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

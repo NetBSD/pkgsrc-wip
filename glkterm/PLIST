@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/21 11:49:05 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/02 17:10:00 dillo Exp $
 include/glkterm/Make.glkterm
 include/glkterm/gi_blorb.h
 include/glkterm/gi_dispa.h
 include/glkterm/glk.h
 include/glkterm/glkstart.h
-lib/libglkterm.a
+lib/libglkterm.la
 @dirrm include/glkterm
