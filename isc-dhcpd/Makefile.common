@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2004/04/18 17:26:35 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/07/07 19:53:56 jeremy-c-reed Exp $
 #
 
 DISTNAME=		dhcp-3.0pl2
@@ -20,8 +20,7 @@ HOMEPAGE=		http://www.isc.org/products/DHCP/
 HAS_CONFIGURE=		yes
 
 FILESDIR=		${.CURDIR}/../isc-dhcpd/files
-
-VAR_DIR?=		/var
+PKGMANDIR?=		man
 
 USE_PKGINSTALL=			YES
 RCD_SCRIPTS=			isc_${ISC_DHCP_TYPE}
@@ -30,12 +29,13 @@ pre-configure:
 	@${SED} \
 		-e "s|@@CC@@|${CC}|g" \
 		-e "s|@@CFLAGS@@|${CFLAGS}|g" \
-		-e "s|@@VAR_DIR@@|${VAR_DIR}|g" \
+		-e "s|@@VARBASE@@|${VARBASE}|g" \
 		-e "s|@@SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
 		-e "s|@@PREFIX@@|${PREFIX}|g" \
+		-e "s|@@PKGMANDIR@@|${PKGMANDIR}|g" \
 		${FILESDIR}/site.conf >> ${WRKSRC}/site.conf
 	@${SED} \
-		-e "s|@@VAR_DIR@@|${VAR_DIR}|g" \
+		-e "s|@@VARBASE@@|${VARBASE}|g" \
 		-e "s|@@SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
 		-e "s|@@PREFIX@@|${PREFIX}|g" \
 		${FILESDIR}/site.h >> ${WRKSRC}/includes/site.h

@@ -20,7 +20,7 @@ patch the various Makefile.dist to change all target to use SEDMANPAGES instead
 (so nroff is not done)
 
 rc.d script: 
- * make it obey VAR_DIR setting (should be easy) (mpasternak)
+ * make it obey VARBASE setting (should be easy) (mpasternak)
  * should it use name isc_dhcpd ? perhaps one rc.d script could be used
    to run dhcpd, with optional dhcpd_type set to different types of dhcpd
    servers (but, by that time, dhcpd servers should be non conflicting at
