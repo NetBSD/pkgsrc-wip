@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/29 17:57:27 daprice Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2005/02/24 17:27:16 daprice Exp $
 #
 
 DISTNAME=		JacORB_${DIST_VERSION}-src
 PKGNAME=                JacORB-lib-${PKG_VERSION}
-WRKSRC=		        ${WRKDIR}/JacORB_${DIST_VERSION}
 CATEGORIES=		corba
 MASTER_SITES=		http://www.jacorb.org/releases/${PKG_VERSION}/
 
@@ -11,8 +10,12 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.jacorb.org/releases/${PKG_VERSION}/
 COMMENT=		Java implementation of the OMG's CORBA jar
 
-DEPENDS+=               apache-ant>=1.5.3.1:../../devel/apache-ant
+BUILD_DEPENDS+=               apache-ant>=1.5.3.1:../../devel/apache-ant
 
+WRKSRC=		        ${WRKDIR}/JacORB_${DIST_VERSION}
+
+PKG_JVMS_ACCEPTED+=	sun-jdk13
+PKG_JVMS_ACCEPTED+=	sun-jdk14
 DIST_VERSION=           1_4_1
 PKG_VERSION=            1.4.1
 
