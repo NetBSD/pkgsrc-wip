@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/02/10 18:48:12 jeremy-c-reed Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/02/10 18:49:42 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use xlibs
 #
@@ -8,7 +8,7 @@ XLIBS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xlibs
 BUILDLINK_DEPENDS.xlibs?=		xlibs>=1.0
-BUILDLINK_PKGSRCDIR.xlibs?=		../../new/xlibs
+BUILDLINK_PKGSRCDIR.xlibs?=		../../wip/xlibs
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xlibs=xlibs
 BUILDLINK_PREFIX.xlibs_DEFAULT=	${X11PREFIX}
