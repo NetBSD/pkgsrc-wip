@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/27 23:36:45 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/28 03:37:13 virtus Exp $
 #
 
 DISTNAME=	amsn-0.71
@@ -7,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=amsn/}
 
 MAINTAINER=	virtus@wanadoo.nl
-HOMEPAGE=	http://amsn.sourceforge.net
+HOMEPAGE=	http://amsn.sourceforge.net/
 COMMENT=	Alvaro's MSN messenger client
 
 USE_BUILDLINK2=	YES
