@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/25 07:01:05 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/30 21:09:41 minskim Exp $
 #
 
 DISTNAME=	adtool-1.2
@@ -8,6 +8,8 @@ MASTER_SITES=	http://c128.org/adtool/
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://c128.org/adtool/
 COMMENT=	Active Directory administration utility for Unix
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
