@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/14 20:38:08 marc Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/14 22:00:38 marc Exp $
 #
 
 DISTNAME=	Gnosis_Utils-1.1.0
@@ -16,6 +16,6 @@ PYDISTUTILSPKG=	YES
 PYSETUP=	setup_gnosis.py
 PY_PATCHPLIST=	YES
 
-.include "../../textproc/pyxml/buildlink2.mk"
 .include "../../lang/python/extension.mk"
+.include "../../textproc/pyxml/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

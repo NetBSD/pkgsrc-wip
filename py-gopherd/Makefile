@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/09/06 12:20:37 marc Exp $
+# $NetBSD: Makefile,v 1.4 2003/09/14 22:00:38 marc Exp $
 #
 
 DISTNAME=	pygopherd_2.0.3
@@ -68,8 +68,6 @@ post-install:
 		${INSTALL_DATA} $$egfile ${EXAMPLEDIR}; \
 	done
 	${INSTALL_MAN} ${WRKSRC}/pygopherd.8 ${PREFIX}/man/man8
-	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py \
-		${PREFIX}/${PYSITELIB}/pygopherd
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

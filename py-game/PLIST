@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/19 20:29:55 marc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/14 22:00:37 marc Exp $
 ${PYINC}/pygame/CPS.h
 ${PYINC}/pygame/font.h
 ${PYINC}/pygame/mixer.h
@@ -6,15 +6,19 @@ ${PYINC}/pygame/pygame.h
 ${PYINC}/pygame/setproctitle.h
 ${PYSITELIB}/pygame/__init__.py
 ${PYSITELIB}/pygame/__init__.pyc
+${PYSITELIB}/pygame/__init__.pyo
 ${PYSITELIB}/pygame/base.so
 ${PYSITELIB}/pygame/cdrom.so
 ${PYSITELIB}/pygame/color.py
 ${PYSITELIB}/pygame/color.pyc
+${PYSITELIB}/pygame/color.pyo
 ${PYSITELIB}/pygame/colordict.py
 ${PYSITELIB}/pygame/colordict.pyc
+${PYSITELIB}/pygame/colordict.pyo
 ${PYSITELIB}/pygame/constants.so
 ${PYSITELIB}/pygame/cursors.py
 ${PYSITELIB}/pygame/cursors.pyc
+${PYSITELIB}/pygame/cursors.pyo
 ${PYSITELIB}/pygame/display.so
 ${PYSITELIB}/pygame/draw.so
 ${PYSITELIB}/pygame/event.so
@@ -26,6 +30,7 @@ ${PYSITELIB}/pygame/joystick.so
 ${PYSITELIB}/pygame/key.so
 ${PYSITELIB}/pygame/locals.py
 ${PYSITELIB}/pygame/locals.pyc
+${PYSITELIB}/pygame/locals.pyo
 ${PYSITELIB}/pygame/mixer.so
 ${PYSITELIB}/pygame/mixer_music.so
 ${PYSITELIB}/pygame/mouse.so
@@ -39,14 +44,17 @@ ${PYSITELIB}/pygame/rwobject.so
 ${PYSITELIB}/pygame/sndarray.so
 ${PYSITELIB}/pygame/sprite.py
 ${PYSITELIB}/pygame/sprite.pyc
+${PYSITELIB}/pygame/sprite.pyo
 ${PYSITELIB}/pygame/surface.so
 ${PYSITELIB}/pygame/surfarray.so
 ${PYSITELIB}/pygame/surflock.so
 ${PYSITELIB}/pygame/sysfont.py
 ${PYSITELIB}/pygame/sysfont.pyc
+${PYSITELIB}/pygame/sysfont.pyo
 ${PYSITELIB}/pygame/time.so
 ${PYSITELIB}/pygame/transform.so
 ${PYSITELIB}/pygame/version.py
 ${PYSITELIB}/pygame/version.pyc
+${PYSITELIB}/pygame/version.pyo
 @dirrm ${PYSITELIB}/pygame
 @dirrm ${PYINC}/pygame

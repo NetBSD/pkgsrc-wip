@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/30 17:39:54 marc Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/14 22:00:37 marc Exp $
 #
 
 DISTNAME=	albatross-1.10
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://www.object-craft.com.au/projects/albatross/download/
 
-MAINTAINER=	marc@informatik.uni-bremen.de
+MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.object-craft.com.au/projects/albatross/
 COMMENT=	Toolkit for Stateful Web Applications
 
@@ -65,10 +65,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	cd ${WRKSRC}/samples && ${FIND} . -type f \! -name \.cvsignore \
 		-print | ${PAX} -rw -pp -pm ${EXAMPLEDIR}
-	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py \
-		${PREFIX}/${PYSITELIB}/albatross
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
 
 .include "../../mk/bsd.pkg.mk"
