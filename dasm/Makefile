@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/20 15:43:11 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/20 15:47:10 minskim Exp $
 #
 
 DISTNAME=	dasm212
@@ -11,7 +11,7 @@ MAINTAINER=	mor@linex.com
 HOMEPAGE=	http://members.cox.net/rcolbert/dasm.htm
 COMMENT=	Professional-grade multi-CPU cross-assembler for 6502, 6803 and 68HC11
 
-NO_CONFIGURE:	YES
+NO_CONFIGURE=	YES
 
 post-extract:
 	${MKDIR} ${WRKSRC}
