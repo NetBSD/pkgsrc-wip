@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/24 10:00:23 blef Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/24 10:40:41 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-server-${XF_VER}
@@ -38,6 +38,11 @@ pre-install:
 		-e '/$$(RANLIB).*lib$$(LIBNAME).a/ d' \
 		-e 's|$$(INSTALL) $$(INSTALLFLAGS) $$(INSTINCFLAGS)|echo|' \
 	       	Makefile.orig > Makefile
+	@cd ${WRKSRC}/lib/font/stubs && \
+		${CP} Makefile Makefile.orig && \
+		${SED} -e '/$$(INSTALL).*libfntstubs.a/ d' \
+			-e '/$$(RANLIB).*libfntstubs.a/ d' Makefile.orig \
+			> Makefile
 
 .include "../../wip/XFree86/Makefile.common"
 .include "../../wip/XFree86-libs/buildlink2.mk"
