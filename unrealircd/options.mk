@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2004/09/29 23:53:06 adrian_p Exp $
+# $NetBSD: options.mk,v 1.3 2004/09/29 23:59:52 adrian_p Exp $
 
 .if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
 PKG_DEFAULT_OPTIONS+=   inet6
@@ -8,7 +8,7 @@ PKG_DEFAULT_OPTIONS+=	ssl
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
-PKG_SUPPORTED_OPTIONS=	inet6 nospoof hub leaf ziplinks remoteinc ssl
+PKG_SUPPORTED_OPTIONS=	inet6 nospoof hub leaf ziplinks remoteinc ssl chroot
 
 .if !defined(PKG_OPTIONS.unrealircd)
 PKG_DEFAULT_OPTIONS+=	hub nospoof
@@ -71,4 +71,14 @@ CONFIGURE_ARGS+=		--enable-ziplinks
 CONFIGURE_ARGS+=		--enable-libcurl
 .	include "../../www/curl/buildlink3.mk"
 .	include "../../wip/c-ares/buildlink3.mk"
+.endif
+
+###
+### Compile in CHROOTDIR support. 
+### As far as pkgsrc goes this is just an expirement.  You should read the 
+### unrealircd docs/source for further information on this.  By default 
+### CHROOTDIR is defined as ${IRCD_HOME}.
+###
+.if !empty(PKG_OPTIONS:Mchroot)
+CFLAGS+=	-DCHROOTDIR
 .endif
