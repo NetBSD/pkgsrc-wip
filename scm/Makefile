@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/13 11:02:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:19 marttikuparinen Exp $
 #
 
 DISTNAME=	scm5d6
@@ -13,7 +13,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	davids@idiom.com
 HOMEPAGE=	http://www.swiss.ai.mit.edu/~jaffer/SCM.html
-COMMENT=	portable scheme interpreter
+COMMENT=	Portable scheme interpreter
 
 BUILD_DEPENDS+=	slib-${SLIB_VER}:../../devel/slib
 DEPENDS+=	${BUILD_DEPENDS}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 17:52:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 17:33:12 marttikuparinen Exp $
 
 DISTNAME=	gnome2-extras-2.2.3
 CATEGORIES=	meta-pkgs x11 gnome2
@@ -7,7 +7,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://www.gnome.org/
-COMMENT=	meta-package with extras for GNOME2
+COMMENT=	Meta-package with extras for GNOME2
 
 DEPENDS+=	gnome>=2.2.3:../../meta-pkgs/gnome2
 DEPENDS+=	gnome2-pkgview>=1.0.0:../../wip/gnome2-pkgview

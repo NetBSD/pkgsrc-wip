@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/03 14:29:07 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:13 marttikuparinen Exp $
 #
 
 DISTNAME=	ht-0.7.1
@@ -7,7 +7,7 @@ MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=hte/}
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://hte.sourceforge.net
-COMMENT=	file editor/viewer/analyzer for executables
+COMMENT=	File editor/viewer/analyzer for executables
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/18 03:38:50 bencollver Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:33:15 marttikuparinen Exp $
 #
 
 DISTNAME=		jigdo-0.6.9
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://home.in.tum.de/~atterer/jigdo/
-COMMENT=		download manager and ISO image constructor
+COMMENT=		Download manager and ISO image constructor
 
 DEPENDS+=		wget>=1.8.2:../../net/wget
 

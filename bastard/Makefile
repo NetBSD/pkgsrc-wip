@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/14 01:32:24 mjasm Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:10 marttikuparinen Exp $
 #
 
 DISTNAME=		bastard-0.17-pre
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=		adam@monkeybyte.org
 HOMEPAGE=		http://bastard.sourceforge.net/
-COMMENT=		disassembler for ELF x86 binarys
+COMMENT=		Disassembler for ELF x86 binarys
 
 USE_BUILDLINK2= YES
 USE_GMAKE= 		YES

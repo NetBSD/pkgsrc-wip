@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/03 16:58:02 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:18 marttikuparinen Exp $
 #
 
 DISTNAME=	MHonArc${VERSION}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.mhonarc.org/
-COMMENT=	perl mail-to-HTML converter
+COMMENT=	Perl mail-to-HTML converter
 
 VERSION=	2.6.3
 

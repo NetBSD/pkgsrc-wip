@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/01 07:48:03 blef Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:20 marttikuparinen Exp $
 
 DISTNAME=		VisualBoyAdvance-1.5.1-src
 PKGNAME=		vba-1.5.1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.zip
 
 MAINTAINER=		soren@blef.org
 HOMEPAGE=		http://vboy.emuhq.com/
-COMMENT=		gameboy advance emulator
+COMMENT=		Gameboy advance emulator
 
 USE_GMAKE=		yes
 USE_BUILDLINK2=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/06/28 16:51:06 marc Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/21 17:33:19 marttikuparinen Exp $
 #
 
 DISTNAME=		scons-0.90
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scons/}
 
 MAINTAINER=		marc@informatik.uni-bremen.de
 HOMEPAGE=		http://www.scons.org/
-COMMENT=		build system, written in Python
+COMMENT=		Build system, written in Python
 
 PYDISTUTILSPKG=		yes
 USE_BUILDLINK2=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/08 14:49:25 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:18 marttikuparinen Exp $
 
 DISTNAME=	mailman-${PKG_VERSION}
 PKGNAME=	mailman21-${PKG_VERSION}
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	adrianp@stindustries.net
 HOMEPAGE= 	http://www.list.org
-COMMENT=	the GNU Mailing List Manager
+COMMENT=	The GNU Mailing List Manager
 
 .include "../../mk/bsd.prefs.mk"
 

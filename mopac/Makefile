@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/06 17:46:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:33:18 marttikuparinen Exp $
 #
 #
 
@@ -15,7 +15,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://server.ccl.net/cca/software/LINUX/mopac7/index.shtml
-COMMENT=	molecular energy calculation program
+COMMENT=	Molecular energy calculation program
 
 WRKSRC=			${WRKDIR}/mopac7
 ALL_TARGET=		MOPAC7

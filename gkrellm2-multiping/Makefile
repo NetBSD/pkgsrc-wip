@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/16 16:29:55 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:11 marttikuparinen Exp $
 #
 
 DISTNAME=	gkrellm-multiping-2.0.2
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	cube@cubidou.net
 HOMEPAGE=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/index.html
-COMMENT=	pings several machines and prints out stats
+COMMENT=	Pings several machines and prints out stats
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/30 23:56:40 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:12 marttikuparinen Exp $
 
 DISTNAME=	gnucash-docs-1.8.1
 CATEGORIES=	finance
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.gnucash.org/
-COMMENT=	help documentation and tutorial guide for gnucash
+COMMENT=	Help documentation and tutorial guide for gnucash
 
 USE_BUILDLINK2=	# defined
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/28 16:16:38 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:19 marttikuparinen Exp $
 
 # XXX This version was based on number of cvs revisions.
 DISTNAME=		rcorder-0.11
@@ -7,7 +7,7 @@ MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		packages@NetBSD.ORG
-COMMENT=		print a dependency ordering of interdependent files
+COMMENT=		Print a dependency ordering of interdependent files
 
 # NetBSD since 1.5.2? has this included in base install.
 NOT_FOR_PLATFORM=	NetBSD-*-*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/06/02 15:49:59 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/21 17:33:20 marttikuparinen Exp $
 
 DISTNAME=	Tuxtype2-${VERSION}
 PKGNAME=	tuxtype2-${VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxtype/}
 
 MAINTAINER=	reed@reedmedia.net
-COMMENT=	educational typing tutorial game for children
+COMMENT=	Educational typing tutorial game for children
 HOMEPAGE=	http://tuxtype.sourceforge.net/
 
 VERSION=	1.5.0

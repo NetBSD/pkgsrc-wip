@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/14 01:25:06 mjasm Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:17 marttikuparinen Exp $
 #
 
 DISTNAME=		libdisasm-0.17pre2
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=		adam@monkeybyte.org
 HOMEPAGE=		http://bastard.sourceforge.net/
-COMMENT=		dissassembly library for ELF x86 binarys
+COMMENT=		Dissassembly library for ELF x86 binarys
 
 do-build:
 	cd ${WRKSRC}/src/arch/i386/libdisasm && make

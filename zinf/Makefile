@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/06 19:52:52 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:20 marttikuparinen Exp $
 #
 
 DISTNAME=	zinf-2.2.0
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zinf/}
 
 MAINTAINER=	rxg@netbsd.org
 HOMEPAGE=	http://www.zinf.org/
-COMMENT=	simple but powerful audio player
+COMMENT=	Simple but powerful audio player
 
 #BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
 

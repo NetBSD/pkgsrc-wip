@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/29 20:22:59 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:11 marttikuparinen Exp $
 #
 
 DISTNAME=		bub-n-bros-1.0
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bub-n-bros/}
 
 MAINTAINER=		marc@informatik.uni-bremen.de
 HOMEPAGE=		http://bub-n-bros.sourceforge.net/
-COMMENT=		multiplayer crazy clone of Bubble Bobble
+COMMENT=		Multiplayer crazy clone of Bubble Bobble
 
 WRKSRC=			${WRKDIR}/bub-n-bros
 USE_X11=		yes

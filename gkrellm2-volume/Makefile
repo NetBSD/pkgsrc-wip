@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/25 20:28:35 cubidou Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:33:12 marttikuparinen Exp $
 
 DISTNAME=	gkrellm-volume-2.1.8
 WRKSRC=		${WRKDIR}/gkrellm-volume
@@ -7,7 +7,7 @@ MASTER_SITES=	http://gkrellm.luon.net/files/
 
 MAINTAINER=	cube@cubidou.net
 HOMEPAGE=	http://gkrellm.luon.net/volume.phtml
-COMMENT=	gkrellm2 volume mixer plugin
+COMMENT=	Gkrellm2 volume mixer plugin
 
 BUILD_USES_MSGFMT=	YES
 

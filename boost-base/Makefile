@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/30 00:40:14 felix9x Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:11 marttikuparinen Exp $
 #
 
 DISTNAME=		boost_1_30_0
@@ -9,7 +9,7 @@ MASTER_SITES=	http://twtelecom.dl.sourceforge.net/sourceforge/boost/
 
 MAINTAINER=		felix@students.poly.edu
 HOMEPAGE=		http://www.boost.org
-COMMENT=		free, portable c++ libraries that integrate with C++ Standard library
+COMMENT=		Free, portable c++ libraries that integrate with C++ Standard library
 
 CONFLICTS=		boost-1.28.0
 

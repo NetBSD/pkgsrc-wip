@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/04 00:09:35 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:16 marttikuparinen Exp $
 
 DISTNAME=	korelib-1.0
 CATEGORIES=	devel kde
@@ -6,7 +6,7 @@ MASTER_SITES=	http://host33.ipowerweb.com/~smga3000/thekompany/Korelib/
 
 MAINTAINER=	jnr@cwru.edu
 HOMEPAGE=	http://www.thekompany.com/projects/korelib/
-COMMENT=	cross-platform C++ library for developing modular applications
+COMMENT=	Cross-platform C++ library for developing modular applications
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES

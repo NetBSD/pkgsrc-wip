@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/05 13:20:49 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:17 marttikuparinen Exp $
 #
 
 DISTNAME=	lde-2.6.0
@@ -8,7 +8,7 @@ MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=lde/}
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://lde.sourceforge.net
-COMMENT=	curses based file system viewer/editor for Linux
+COMMENT=	Curses based file system viewer/editor for Linux
 
 USE_BUILDLINK2=	YES
 USE_NCURSES=	YES # missing function termname

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/17 19:08:42 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:11 marttikuparinen Exp $
 
 DISTNAME=	bc-1.06
 CATEGORIES=	math
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=bc/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/bc/bc.html
-COMMENT=	arbitrary precision calculator language
+COMMENT=	Arbitrary precision calculator language
 # this provides dc(1) which is essential for pkgsrc installations
 
 USE_BUILDLINK2=	YES

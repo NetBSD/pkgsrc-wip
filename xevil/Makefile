@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/14 00:22:40 blef Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:20 marttikuparinen Exp $
 
 DISTNAME=	xevilsrc2.02
 PKGNAME=	xevil-2.02
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	soren@blef.org
 HOMEPAGE=	http://www.xevil.com/
-COMMENT=	side scrolling, bloody action game
+COMMENT=	Side scrolling, bloody action game
 
 MAKEFILE=	makefile
 

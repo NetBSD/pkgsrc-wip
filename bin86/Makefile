@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/17 00:22:50 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:11 marttikuparinen Exp $
 
 DISTNAME=		bin86-0.16.11
 CATEGORIES=		devel
@@ -6,7 +6,7 @@ MASTER_SITES=		http://www.cix.co.uk/~mayday/dev86/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
-COMMENT=	 	simple assember and linker for x86 machine code
+COMMENT=	 	Simple assember and linker for x86 machine code
 
 # devel/bcc also provides as86 and ld86
 CONFLICTS=		bcc-*

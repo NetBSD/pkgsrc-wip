@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/29 11:40:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:19 marttikuparinen Exp $
 #
 
 DISTNAME=	tutos-php-1.1.20030404
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.tutos.org/homepage/about.html
-COMMENT=	time and team management software
+COMMENT=	Time and team management software
 
 USE_BUILDLINK2=	yes
 USE_PKGINSTALL=	yes

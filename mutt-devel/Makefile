@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/06/25 07:24:42 yeled Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/21 17:33:18 marttikuparinen Exp $
 
 DISTNAME=		mutt-1.5.4i
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.mutt.org/mutt/ \
 
 MAINTAINER=		charlie@rubberduck.com
 HOMEPAGE=		http://www.mutt.org/
-COMMENT=		text-based MIME mail client with PGP support
+COMMENT=		Text-based MIME mail client with PGP support
 
 # for nntp patch
 DISTFILES=  ${DISTNAME}${EXTRACT_SUFX}
