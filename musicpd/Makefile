@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/23 00:51:48 rockpiper Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/26 05:26:10 rockpiper Exp $
 
-DISTNAME=	mpd-0.10.1
-PKGNAME=	musicpd-0.10.1
+DISTNAME=	mpd-0.10.2
+PKGNAME=	musicpd-0.10.2
+
 CATEGORIES=	audio
 MASTER_SITES=	http://mercury.chem.pitt.edu/~shank/
 
@@ -21,6 +22,7 @@ BUILD_DEFS+=	MUSICPD_WITH_FLAC\
 		MUSICPD_WITH_ICONV\
 		MUSICPD_WITH_ID3\
 		MUSICPD_WITH_OSSMIXER\
+		MUSICPD_WITH_AAC\
 		USE_INET6
 
 MUSICPD_WITH_FLAC?= YES
@@ -29,6 +31,7 @@ MUSICPD_WITH_AUDIOFILE?= YES
 MUSICPD_WITH_ICONV?= NO
 MUSICPD_WITH_ID3?= YES
 MUSICPD_WITH_OSSMIXER?= NO
+MUSICPD_WITH_AAC= YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -72,6 +75,13 @@ CONFIGURE_ARGS+=--disable-id3
 .else
 CONFIGURE_ENV+=         NO_OSS_MIXER="YES"
 MAKE_ENV+=              NO_OSS_MIXER="YES"
+.endif
+
+.if ${MUSICPD_WITH_AAC} == "YES"
+.include "../../audio/faad2/buildlink3.mk"
+CONFIGURE_ARGS+=--with-faad=${BUILDLINK_PREFIX.faad2}
+.else
+CONFIGURE_ARGS+=--disable-aac
 .endif
 
 .if defined(USE_INET6) && (${USE_INET6} == "YES")
