@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/05/12 20:33:18 marc Exp $
+$NetBSD: distinfo,v 1.2 2003/06/10 21:33:24 marc Exp $
 
-SHA1 (libfwbuilder-0.10.13.tar.gz) = ca64c1ac79b187fa6a6ab21cf1749f92c4c47330
-Size (libfwbuilder-0.10.13.tar.gz) = 237198 bytes
+SHA1 (libfwbuilder-1.0.0.tar.gz) = af0d1fe217df7666f75b9cece9ce006c3b4f7bf8
+Size (libfwbuilder-1.0.0.tar.gz) = 197567 bytes

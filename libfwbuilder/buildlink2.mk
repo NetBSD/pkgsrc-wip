@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/05/23 16:36:09 marc Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/06/10 21:33:24 marc Exp $
 #
 
 .if !defined(LIBFWBUILDER_BUILDLINK2_MK)
 LIBFWBUILDER_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libfwbuilder
-BUILDLINK_DEPENDS.libfwbuilder?=		libfwbuilder>=0.10.13
+BUILDLINK_DEPENDS.libfwbuilder?=		libfwbuilder>=1.0.0
 BUILDLINK_PKGSRCDIR.libfwbuilder?=		../../wip/libfwbuilder
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libfwbuilder=libfwbuilder
@@ -17,9 +17,9 @@ BUILDLINK_FILES.libfwbuilder+=	lib/libfwbuilder.*
 BUILDLINK_FILES.libfwbuilder+=	lib/libfwcompiler.*
 
 .include "../../devel/glib/buildlink2.mk"
-.include "../../lang/gcc/buildlink2.mk"
 .include "../../net/net-snmp/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
+.include "../../mk/gcc.buildlink2.mk"
 
 .if defined(FWBUILDER_USE_BIND) && !empty(FWBUILDER_USE_BIND:M[yY][eE][sS])
 .include "../../net/bind9/buildlink2.mk"
