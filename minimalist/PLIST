@@ -1,3 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/11 22:00:14 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/22 13:07:33 poppnk Exp $
 bin/minimalist.pl
 bin/minimalist_request.pl
+etc/minimalist.conf
+share/doc/minimalist/CHANGES.txt
+share/doc/minimalist/FAQ/postfix.mailloop
+share/doc/minimalist/FAQ/sendmail.smrsh
+share/doc/minimalist/README
+share/doc/minimalist/virtual-domains.txt
+share/examples/minimalist/lists.lst
+share/examples/minimalist/minimalist.conf
+share/examples/minimalist/sample/config
+share/examples/minimalist/sample/footer
+share/examples/minimalist/sample/info
+@dirrm share/examples/minimalist/sample
+@dirrm share/examples/minimalist
+@dirrm share/doc/minimalist/FAQ
+@dirrm share/doc/minimalist
