@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/26 05:02:50 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/26 15:05:34 minskim Exp $
 #
 
 DISTNAME=	imhangul-0.9.9
@@ -14,6 +14,7 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+GTK2_IMMODULES=		YES
 
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../x11/gtk2/modules.mk"
 .include "../../mk/bsd.pkg.mk"
