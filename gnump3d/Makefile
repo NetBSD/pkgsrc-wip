@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/04/18 15:12:49 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/20 14:22:10 poppnk Exp $
 #
 
-DISTNAME=		gnump3d-2.7
+DISTNAME=		gnump3d-2.8
 CATEGORIES=		wip
 MASTER_SITES=		http://savannah.gnu.org/download/gnump3d/
 EXTRACT_SUFX=		.tar.bz2
