@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1250 2004/04/30 19:36:09 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1250 2004/04/30 19:36:09 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1251 2004/05/02 04:02:57 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.1251 2004/05/02 04:02:57 grantbeattie Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -182,7 +182,6 @@ SUBDIR+=	glide3
 SUBDIR+=	glkterm
 SUBDIR+=	glulxe
 SUBDIR+=	gmfsk
-SUBDIR+=	gmpc
 SUBDIR+=	gnome-alsamixer
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnomeicu
