@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/24 02:32:02 tvierling Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/25 20:02:25 tvierling Exp $
 #
 
-DISTNAME=	Mail-Milter-0.01
+DISTNAME=	Mail-Milter-0.02
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	wip mail perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmilter/}

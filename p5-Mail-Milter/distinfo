@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/24 02:32:02 tvierling Exp $
+$NetBSD: distinfo,v 1.2 2004/02/25 20:02:26 tvierling Exp $
 
-SHA1 (Mail-Milter-0.01.tar.gz) = 235ce89238920e47038e56e209ee1f6526a10111
-Size (Mail-Milter-0.01.tar.gz) = 7212 bytes
+SHA1 (Mail-Milter-0.02.tar.gz) = 02e3fd5336cadf5fe46d95a4b5eb84b948411ff6
+Size (Mail-Milter-0.02.tar.gz) = 14078 bytes
