@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/08 12:52:57 ppostma Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/24 22:13:02 ppostma Exp $
 
 DISTNAME=	pfstat-1.7
 CATEGORIES=	sysutils net
@@ -8,15 +8,14 @@ MAINTAINER=	peter@pointless.nl
 HOMEPAGE=	http://www.benzedrine.cx/pfstat.html
 COMMENT=	Utility to render graphical statistics for PF
 
-BUILD_DEPENDS+=	pf-lkm-[0-9]*:../../wip/pflkm
-
-DEPENDS+=	gd-[0-9]*:../../graphics/gd
-DEPENDS+=	freetype-lib-[0-9]*:../../graphics/freetype-lib
-
+USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pfstat ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/pfstat.8 ${PREFIX}/man/man8
 
+.include "../../graphics/gd/buildlink3.mk"
+.include "../../graphics/freetype-lib/buildlink3.mk"
+.include "../../wip/pflkm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
