@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/27 04:25:19 xtraeme Exp $
-bin/ginicon
-bin/ginifeed
-man/man1/ginicon.1
-man/man1/ginifeed.1
-man/man8/gini.8
-sbin/gini
