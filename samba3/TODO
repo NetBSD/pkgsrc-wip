@@ -1,3 +1,5 @@
+Update to 3.0.1.
+
 pkglint says:
 FATAL: extra item "COUNTRY_MIRRORS" placed in the DISTNAME section.
 FATAL: extra item ".for COUNTRY in ${COUNTRY_MIRRORS}" placed in the DISTNAME section.
