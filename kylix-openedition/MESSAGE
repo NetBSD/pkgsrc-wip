@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/11/29 03:22:56 mpasternak Exp $
+
+License key for OpenEdition can be obtained from:
+
+	http://www.borland.com/products/downloads/download_kylix.html
+	
+Binaries have been installed in:
+
+	${EMULOPTDIR}/kylix/bin/
+
+===========================================================================
