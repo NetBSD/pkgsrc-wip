@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.5 2004/05/22 14:43:43 adrian_p Exp $
+$NetBSD: patch-aa,v 1.6 2005/02/07 09:42:21 adrian_p Exp $
 
---- Makefile.am.orig	Sun Apr 11 10:19:01 2004
-+++ Makefile.am	Sat May 22 00:32:55 2004
+--- Makefile.am.orig	2005-02-07 09:37:46.000000000 +0000
++++ Makefile.am
 @@ -2,9 +2,9 @@
- # Makefile for Hydra - (c) 2001-2004 by van Hauser / THC <vh@thc.org>
+ # Makefile for Hydra - (c) 2001-2005 by van Hauser / THC <vh@thc.org>
  #
  
 -OPTS=-I. -Wall -O2
