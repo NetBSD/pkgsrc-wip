@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1082 2004/03/14 22:20:09 poppnk Exp $
-# $NetBSD: Makefile,v 1.1082 2004/03/14 22:20:09 poppnk Exp $
+# $Id: Makefile,v 1.1083 2004/03/17 20:17:01 poppnk Exp $
+# $NetBSD: Makefile,v 1.1083 2004/03/17 20:17:01 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -209,6 +209,7 @@ SUBDIR+=	gtkmagnetic
 SUBDIR+=	gtkpod
 SUBDIR+=	gurlchecker
 SUBDIR+=	gwc
+SUBDIR+=	gzrecover
 SUBDIR+=	hasciicam
 SUBDIR+=	hashcash
 SUBDIR+=	heroes
@@ -246,6 +247,7 @@ SUBDIR+=	jabberd2
 SUBDIR+=	jakarta-log4j
 SUBDIR+=	java-gnucrypto
 SUBDIR+=	java-gnujaxp
+SUBDIR+=	java-jflex
 SUBDIR+=	java-xmlrpc
 SUBDIR+=	javascript-guide
 SUBDIR+=	javascript-reference
