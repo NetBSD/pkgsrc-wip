@@ -1,0 +1,9 @@
+$Id: TODO,v 1.1.1.1 2004/03/06 16:13:51 mpasternak Exp $
+
+1) make it build:
+	- semaphore.h on netbsd (patches/patch-ab)
+	- freebsd: problems with gnome-1.x packages
+
+2) make PLIST
+
+	-- dotz@irc.pl

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/06 16:13:51 mpasternak Exp $
+
+--- Makefile.in.orig	Sat Mar  6 16:50:22 2004
++++ Makefile.in
+@@ -110,7 +110,7 @@ package_host_cpu = @package_host_cpu@
+ 
+ SRC_SUBDIRS = common server client component skin gdam123 defaults cli
+ @HAVE_SGMLTOOLS_TRUE@doc_subdirs =  doc
+-SUBDIRS = build doc $(doc_subdirs) $(SRC_SUBDIRS)
++SUBDIRS = build $(SRC_SUBDIRS)
+ 
+ EXTRA_DIST = acgdam.m4 autogen.sh acconfig.h CONTRIBUTORS pkgwriteinfo.in
+ 

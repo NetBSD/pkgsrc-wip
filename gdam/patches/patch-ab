@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/03/06 16:13:51 mpasternak Exp $
+
+--- server/gdamcallbackdevice.h.orig	Sat Mar  6 17:14:28 2004
++++ server/gdamcallbackdevice.h
+@@ -29,7 +29,11 @@ typedef struct _GdamCallbackDevice GdamC
+ typedef struct _GdamCallbackDeviceClass GdamCallbackDeviceClass;
+ 
+ #include "gdamoutputdevice.h"
+-#include <semaphore.h>
++#ifndef __NetBSD__
++# include <semaphore.h>
++#else
++#error No semaphore.h on NetBSD...
++#endif
+ #include <gdam/common/gdamfdpoll.h>
+ 
+ #ifdef __cplusplus

@@ -1,0 +1,23 @@
+GDAM is a digital dj mixing software package. It aims to be a powerful,
+professional-quality music mixing and remixing system, suitable for live
+performance. It was conceived on some beautiful summer morning (in 1998),
+and developed with drive and enthusiasm that seemed completely unnatural.
+Over four years later, we have achieved many of our goals; yet, development
+continues. Here is a list of features: 
+
+* client-server architecture based around glib 
+* streaming and mixing of any number of mp3 files 
+* dynamic filter insertion and removal 
+* multiple sound device support (see the faq) 
+* plugin support 
+* cacheing / playing loops 
+* contiguous queueing - plays albums without gaps between songs, regardless of
+  output buffer size 
+* dj turntable-style interface 
+* assisted beat matching 
+* waveform viewer / beat calculator 
+* sequencer 
+* record from any point in the stream, to disk or another process 
+* gtk gui's, with simple skin support 
+* flexible command-line interface 
+* gdam123 - an mpg123 clone that talks to a gdam server 

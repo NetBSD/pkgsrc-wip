@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/06 16:13:51 mpasternak Exp $
+
+SHA1 (gdam-0.942.tar.gz) = f1dc301893f4560f9c692f4af7cbf9d6a48fbff9
+Size (gdam-0.942.tar.gz) = 2347542 bytes
+SHA1 (patch-aa) = ad6de017c94220e4b81d0fb0c8d4c673f599e588
+SHA1 (patch-ab) = 42feb17fbfc0516fa7b53480ebc23fbef507527d
