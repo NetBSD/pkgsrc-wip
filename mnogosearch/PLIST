@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/10 23:36:06 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/23 05:59:54 jlamwww Exp $
 bin/search.cgi
 bin/udm-config
 include/udm_agent.h
@@ -42,7 +42,6 @@ include/udm_utils.h
 include/udm_word.h
 include/udm_xmalloc.h
 include/udmsearch.h
-lib/libudmsearch.a
 lib/libudmsearch.la
 man/man1/indexer.1
 man/man5/indexer.conf.5

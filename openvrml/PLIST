@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/21 21:04:23 bjan2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:56 jlamwww Exp $
 bin/lookat
 include/openvrml/openvrml/basetypes.h
 include/openvrml/openvrml/bounding_volume.h
@@ -21,16 +21,8 @@ include/openvrml/openvrml/script.h
 include/openvrml/openvrml/system.h
 include/openvrml/openvrml/viewer.h
 include/openvrml/openvrml/vrml97node.h
-lib/libopenvrml-gl.a
 lib/libopenvrml-gl.la
-lib/libopenvrml-gl.so
-lib/libopenvrml-gl.so.5
-lib/libopenvrml-gl.so.5.1
-lib/libopenvrml.a
 lib/libopenvrml.la
-lib/libopenvrml.so
-lib/libopenvrml.so.4
-lib/libopenvrml.so.4.1
 lib/pkgconfig/openvrml-gl.pc
 lib/pkgconfig/openvrml.pc
 share/doc/${PKGNAME}/manual/annotated.html

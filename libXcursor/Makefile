@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/08/17 18:28:44 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2004/09/23 05:59:45 jlamwww Exp $
 #
 
 DISTNAME=		libXcursor-1.1.1
@@ -13,7 +13,6 @@ COMMENT=		Client-side cursor loading library for X
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_LA_FILES+=	lib/libXcursor.la
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	xcursor.pc.in

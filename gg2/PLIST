@@ -1,6 +1,13 @@
-@comment $NetBSD: PLIST,v 1.9 2004/08/17 18:26:33 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/09/23 05:59:38 jlamwww Exp $
 bin/gg2
 include/gg2_core.h
+lib/gg2/libGUI_plugin.la
+lib/gg2/libgadu_gadu_plugin.la
+lib/gg2/libsms_plugin.la
+lib/gg2/libsound_oss_plugin.la
+lib/gg2/libtlen_plugin.la
+lib/gg2/libxosd_plugin.la
+lib/libgg2_core.la
 lib/pkgconfig/gg2_core.pc
 share/gg2/pixmaps/arrow.png
 share/gg2/pixmaps/away.png

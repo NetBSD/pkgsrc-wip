@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/04 00:20:47 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 06:00:01 jlamwww Exp $
 bin/chage
 bin/chfn
 bin/chsh
@@ -12,9 +12,7 @@ bin/newgrp
 bin/passwd
 bin/sg
 bin/su
-lib/libmisc.a
 lib/libmisc.la
-lib/libshadow.a
 lib/libshadow.la
 man/cs/man5/passwd.5
 man/cs/man5/shadow.5

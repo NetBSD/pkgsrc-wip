@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2004/09/03 12:09:37 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:32 jlamwww Exp $
 include/dclib/cclient.h
 include/dclib/cclientssl.h
 include/dclib/cconfig.h
@@ -54,7 +54,5 @@ include/dclib/dcobject.h
 include/dclib/dcos.h
 include/dclib/hash/tiger.h
 include/dclib/hash/tigertree.h
-lib/libdc.a
 lib/libdc.la
-lib/libdc.so.0.1
 lib/pkgconfig/dclib.pc

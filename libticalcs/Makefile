@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/08/17 18:30:10 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/23 05:59:51 jlamwww Exp $
 #
 
 DISTNAME=		libticalcs
@@ -13,7 +13,6 @@ COMMENT=		Database of TI calculator model information
 WRKSRC=			${WRKDIR}/${PKGNAME}
 
 USE_LIBTOOL=		YES
-LIBTOOL_LA_FILES+=	lib/libticalcs-4.la
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-nls
 USE_GNU_TOOLS+=		make

@@ -1,28 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2004/09/02 22:35:43 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 06:00:01 jlamwww Exp $
 bin/sawfish
 bin/sawfish-client
 bin/sawfish-ui
-libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/client.a
 libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/client.la
-libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/client.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/DOC
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gradient.la
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gtk-style
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.a
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.so
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/gradient.a
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/gradient.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/gradient.so
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/play-sample.a
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/play-sample.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/play-sample.so
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.a
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.so
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.a
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-about
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-menu
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/selection.la

@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:26:11 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/23 05:59:30 jlamwww Exp $
 include/GL/openglut.h
 include/GL/openglut_exp.h
 include/GL/openglut_ext.h
 include/GL/openglut_std.h
+lib/libopenglut.la
 man/cat3/glutAddMenuEntry.0
 man/cat3/glutAddSubMenu.0
 man/cat3/glutAttachMenu.0

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/28 07:00:07 bjan2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:51 jlamwww Exp $
 bin/ticables-config
 include/tilp/cabl_def.h
 include/tilp/cabl_err.h
@@ -9,9 +9,6 @@ include/tilp/intl.h
 include/tilp/ticables.h
 include/tilp/timeout.h
 lib/libticables.la
-lib/libticables.so
-lib/libticables.so.10
-lib/libticables.so.10.6
 libdata/pkgconfig/ticables.pc
 man/man1/ticables-config.1
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libticables.mo

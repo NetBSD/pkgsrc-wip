@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/28 13:01:54 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:57 jlamwww Exp $
 bin/prelude-lml
 etc/prelude-lml/ruleset/checkpoint.rules
 etc/prelude-lml/ruleset/cisco.rules
@@ -23,11 +23,8 @@ include/prelude-lml/lml-alert.h
 include/prelude-lml/log-common.h
 include/prelude-lml/plugin-log.h
 lib/prelude-lml/debug.la
-lib/prelude-lml/debug.so
 lib/prelude-lml/pax.la
-lib/prelude-lml/pax.so
 lib/prelude-lml/simple.la
-lib/prelude-lml/simple.so
 @dirrm lib/prelude-lml
 @dirrm include/prelude-lml
 @dirrm etc/prelude-lml/ruleset

@@ -1,6 +1,34 @@
-@comment $NetBSD: PLIST,v 1.3 2004/08/17 18:27:56 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/09/23 05:59:42 jlamwww Exp $
 bin/kapital
 bin/kapitalminder
+lib/libaccountcombo.la
+lib/libaccountlist.la
+lib/libaccountsbox.la
+lib/libaddressbook.la
+lib/libbaseipagewidget.la
+lib/libcalc.la
+lib/libcalendar.la
+lib/libcategorylist.la
+lib/libcheckwriter.la
+lib/libcontrolbar.la
+lib/libcorepages.la
+lib/libeditcontrol.la
+lib/libfindtransaction.la
+lib/libfmengine.la
+lib/libfmfile.la
+lib/libimportdialog.la
+lib/libkapitalcore.la
+lib/liblistbox.la
+lib/libmaincaption.la
+lib/libmyfinances.la
+lib/libofx.la
+lib/libonlinestatement.la
+lib/libpaintwidget.la
+lib/libreconcilie.la
+lib/libregister.la
+lib/libreport.la
+lib/libschedulerpage.la
+lib/libtoolbar.la
 share/kde/applnk/Applications/Kapital.desktop
 share/kde/applnk/Applications/KapitalMinder.desktop
 share/kde/apps/kapital/categories/children.tkk

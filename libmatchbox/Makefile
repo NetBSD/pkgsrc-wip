@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/08/17 18:29:53 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2004/09/23 05:59:49 jlamwww Exp $
 #
 
 DISTNAME=	libmatchbox-1.2
@@ -12,7 +12,6 @@ COMMENT=	Library used by Matchbox
 
 USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
-LIBTOOL_LA_FILES+=	lib/libmb.la
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 

@@ -1,7 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/08 14:56:37 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:58 jlamwww Exp $
 bin/proxychains
-lib/libproxychains.a
 lib/libproxychains.la
-lib/libproxychains.so
-lib/libproxychains.so.2
-lib/libproxychains.so.2.0

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:30:15 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/23 05:59:52 jlamwww Exp $
 bin/tifiles-config
 include/tilp/file_def.h
 include/tilp/file_err.h
@@ -22,6 +22,7 @@ include/tilp/types92.h
 include/tilp/types92p.h
 include/tilp/typesv2.h
 include/tilp/typesxx.h
+lib/libtifiles.la
 libdata/pkgconfig/tifiles.pc
 man/man1/tifiles-config.1
 @unexec ${RMDIR} libdata/pkgconfig >/dev/null 2>&1 || ${TRUE}

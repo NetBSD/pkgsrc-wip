@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/17 18:28:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2004/09/23 05:59:44 jlamwww Exp $
 #
 
 DISTNAME=		libSM-6.0.3
@@ -14,7 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_LA_FILES+=	lib/libSM.la
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	sm.pc.in

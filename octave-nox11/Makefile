@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/08/17 18:31:30 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2004/09/23 05:59:55 jlamwww Exp $
 #
 
 DISTNAME=	octave-${OCTAVE_VER}
@@ -30,9 +30,6 @@ USE_GNU_TOOLS+=		make
 USE_GNU_READLINE=	yes
 USE_MAKEINFO=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_LA_FILES+=	lib/libcruft.la
-LIBTOOL_LA_FILES+=	lib/liboctave.la
-LIBTOOL_LA_FILES+=	lib/liboctinterp.la
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		yes
 

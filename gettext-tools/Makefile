@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/08/17 18:26:33 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2004/09/23 05:59:38 jlamwww Exp $
 
 .include "../../wip/gettext-runtime/Makefile.common"
 
@@ -18,10 +18,6 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_LA_FILES+=	lib/libgettextlib.la
-LIBTOOL_LA_FILES+=	lib/libgettextpo.la
-LIBTOOL_LA_FILES+=	lib/libgettextsrc.la
-LIBTOOL_LA_FILES+=	lib/libgnuintl.la
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
 
 INFO_FILES=		gettext.info

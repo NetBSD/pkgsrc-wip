@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/28 13:02:45 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:57 jlamwww Exp $
 bin/manager-adduser
 bin/prelude-manager
 bin/prelude-manager-db-create.sh
@@ -12,13 +12,9 @@ include/prelude-manager/plugin-report.h
 include/prelude-manager/plugin-util.h
 include/prelude-manager/report.h
 lib/prelude-manager/decodes/prelude-nids.la
-lib/prelude-manager/decodes/prelude-nids.so
 lib/prelude-manager/reports/debug.la
-lib/prelude-manager/reports/debug.so
 lib/prelude-manager/reports/textmod.la
-lib/prelude-manager/reports/textmod.so
 lib/prelude-manager/reports/xmlmod.la
-lib/prelude-manager/reports/xmlmod.so
 share/doc/prelude/html/prelude-manager/c4.html
 share/doc/prelude/html/prelude-manager/index.html
 share/doc/prelude/html/prelude-manager/index.sgml

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:31:31 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/23 05:59:55 jlamwww Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -328,6 +328,9 @@ info/octave.info-6
 info/octave.info-7
 info/octave.info-8
 info/octave.info-9
+lib/libcruft.la
+lib/liboctave.la
+lib/liboctinterp.la
 libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/info-emacs-info
 libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/info-emacs-octave-help
 libexec/octave/ls-R

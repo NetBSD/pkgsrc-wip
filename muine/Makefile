@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/08/17 18:31:14 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/23 05:59:54 jlamwww Exp $
 #
 
 DISTNAME=	muine-0.5.2
@@ -12,7 +12,6 @@ COMMENT=	Simple and intuitive music player for GNOME
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_LA_FILES+=	lib/muine/libmuine.la
 USE_PKGLOCALEDIR=	YES
 
 GCONF2_SCHEMAS=		muine.schemas

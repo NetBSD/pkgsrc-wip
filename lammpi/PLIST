@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/26 04:58:52 mjasm Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:44 jlamwww Exp $
 bin/hboot
 bin/hcc
 bin/hcp
@@ -85,17 +85,10 @@ include/mpif.h
 include/mpio.h
 include/mpiof.h
 lib/lam/liblam_totalview.la
-lib/lam/liblam_totalview.so
-lib/lam/liblam_totalview.so.0
-lib/lam/liblam_totalview.so.0.0
-lib/liblam.a
 lib/liblam.la
-lib/liblamf77mpi.a
 lib/liblamf77mpi.la
-lib/liblammpi++.a
 lib/liblammpi++.la
 lib/liblammpio.a
-lib/libmpi.a
 lib/libmpi.la
 man/man1/hboot.1
 man/man1/hcc.1

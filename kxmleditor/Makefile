@@ -18,8 +18,6 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
-LIBTOOL_LA_FILES+=	lib/libkxmleditorpart.la
-
 SHLIBTOOL_OVERRIDE=	libtool
 
 .include "../../meta-pkgs/kde3/kde3.mk"

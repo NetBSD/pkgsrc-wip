@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/12 16:22:22 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 06:00:02 jlamwww Exp $
 ${EMULSUBDIR}/usr/bin/addr2line
 ${EMULSUBDIR}/usr/bin/ar
 ${EMULSUBDIR}/usr/bin/as
@@ -69,12 +69,8 @@ ${EMULSUBDIR}/usr/lib/ldscripts/i386linux.xbn
 ${EMULSUBDIR}/usr/lib/ldscripts/i386linux.xn
 ${EMULSUBDIR}/usr/lib/ldscripts/i386linux.xr
 ${EMULSUBDIR}/usr/lib/ldscripts/i386linux.xu
-${EMULSUBDIR}/usr/lib/libbfd-2.14.90.0.8.so
-${EMULSUBDIR}/usr/lib/libbfd.a
 ${EMULSUBDIR}/usr/lib/libbfd.la
 ${EMULSUBDIR}/usr/lib/libiberty.a
-${EMULSUBDIR}/usr/lib/libopcodes-2.14.90.0.8.so
-${EMULSUBDIR}/usr/lib/libopcodes.a
 ${EMULSUBDIR}/usr/lib/libopcodes.la
 ${EMULSUBDIR}/usr/man/man1/addr2line.1.gz
 ${EMULSUBDIR}/usr/man/man1/ar.1.gz

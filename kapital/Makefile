@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/08/17 18:27:56 tvierling Exp $
+# $NetBSD: Makefile,v 1.10 2004/09/23 05:59:42 jlamwww Exp $
 
 DISTNAME=	kapital-1.1.030606
 CATEGORIES=	devel kde
@@ -39,34 +39,6 @@ _FETCH_MESSAGE= \
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=  YES
 USE_LIBTOOL=    YES
-LIBTOOL_LA_FILES+=	lib/libaccountcombo.la
-LIBTOOL_LA_FILES+=	lib/libaccountlist.la
-LIBTOOL_LA_FILES+=	lib/libaccountsbox.la
-LIBTOOL_LA_FILES+=	lib/libaddressbook.la
-LIBTOOL_LA_FILES+=	lib/libbaseipagewidget.la
-LIBTOOL_LA_FILES+=	lib/libcalc.la
-LIBTOOL_LA_FILES+=	lib/libcalendar.la
-LIBTOOL_LA_FILES+=	lib/libcategorylist.la
-LIBTOOL_LA_FILES+=	lib/libcheckwriter.la
-LIBTOOL_LA_FILES+=	lib/libcontrolbar.la
-LIBTOOL_LA_FILES+=	lib/libcorepages.la
-LIBTOOL_LA_FILES+=	lib/libeditcontrol.la
-LIBTOOL_LA_FILES+=	lib/libfindtransaction.la
-LIBTOOL_LA_FILES+=	lib/libfmengine.la
-LIBTOOL_LA_FILES+=	lib/libfmfile.la
-LIBTOOL_LA_FILES+=	lib/libimportdialog.la
-LIBTOOL_LA_FILES+=	lib/libkapitalcore.la
-LIBTOOL_LA_FILES+=	lib/liblistbox.la
-LIBTOOL_LA_FILES+=	lib/libmaincaption.la
-LIBTOOL_LA_FILES+=	lib/libmyfinances.la
-LIBTOOL_LA_FILES+=	lib/libofx.la
-LIBTOOL_LA_FILES+=	lib/libonlinestatement.la
-LIBTOOL_LA_FILES+=	lib/libpaintwidget.la
-LIBTOOL_LA_FILES+=	lib/libreconcilie.la
-LIBTOOL_LA_FILES+=	lib/libregister.la
-LIBTOOL_LA_FILES+=	lib/libreport.la
-LIBTOOL_LA_FILES+=	lib/libschedulerpage.la
-LIBTOOL_LA_FILES+=	lib/libtoolbar.la
 LTCONFIG_OVERRIDE=  ${WRKSRC}/ltconfig
 SHLIBTOOL_OVERRIDE=	libtool
 

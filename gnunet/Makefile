@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/08/17 18:26:52 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2004/09/23 05:59:39 jlamwww Exp $
 #
 
 DISTNAME=	GNUnet-0.5.4a
@@ -16,27 +16,6 @@ USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_LA_FILES+=	lib/libgnunetafs_blocks.la
-LIBTOOL_LA_FILES+=	lib/libgnunetafs_database.la
-LIBTOOL_LA_FILES+=	lib/libgnunetafs_database_directory.la
-LIBTOOL_LA_FILES+=	lib/libgnunetafs_database_gdbm.la
-LIBTOOL_LA_FILES+=	lib/libgnunetafs_decoding.la
-LIBTOOL_LA_FILES+=	lib/libgnunetafs_delete.la
-LIBTOOL_LA_FILES+=	lib/libgnunetafs_encoding.la
-LIBTOOL_LA_FILES+=	lib/libgnunetafs_policy.la
-LIBTOOL_LA_FILES+=	lib/libgnunetafs_protocol.la
-LIBTOOL_LA_FILES+=	lib/libgnunetafs_search.la
-LIBTOOL_LA_FILES+=	lib/libgnunetafs_util.la
-LIBTOOL_LA_FILES+=	lib/libgnunetchat_protocol.la
-LIBTOOL_LA_FILES+=	lib/libgnunetcommon.la
-LIBTOOL_LA_FILES+=	lib/libgnunettbench_protocol.la
-LIBTOOL_LA_FILES+=	lib/libgnunettracekit_protocol.la
-LIBTOOL_LA_FILES+=	lib/libgnunettransport_http.la
-LIBTOOL_LA_FILES+=	lib/libgnunettransport_smtp.la
-LIBTOOL_LA_FILES+=	lib/libgnunettransport_tcp.la
-LIBTOOL_LA_FILES+=	lib/libgnunettransport_udp.la
-LIBTOOL_LA_FILES+=	lib/libgnunetutil.la
-LIBTOOL_LA_FILES+=	lib/libltdl.la
 
 PTHREAD_OPTS=	require
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/17 18:29:43 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2004/09/23 05:59:49 jlamwww Exp $
 #
 
 DISTNAME=		libXv-2.2.1
@@ -14,7 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_LA_FILES+=	lib/libXv.la
 PKGCONFIG_OVERRIDE+=	xv.pc.in
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make

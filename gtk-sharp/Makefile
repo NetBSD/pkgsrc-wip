@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/08/17 18:27:03 tvierling Exp $
+# $NetBSD: Makefile,v 1.19 2004/09/23 05:59:39 jlamwww Exp $
 #
 
 DISTNAME=	gtk-sharp-0.99
@@ -15,12 +15,6 @@ USE_GNU_TOOLS+=	make
 USE_PERL5=	yes
 USE_X11=	yes
 USE_LIBTOOL=	yes
-LIBTOOL_LA_FILES+=	lib/libgdksharpglue.la
-LIBTOOL_LA_FILES+=	lib/libgladesharpglue.la
-LIBTOOL_LA_FILES+=	lib/libglibsharpglue.la
-LIBTOOL_LA_FILES+=	lib/libgnomesharpglue.la
-LIBTOOL_LA_FILES+=	lib/libgtksharpglue.la
-LIBTOOL_LA_FILES+=	lib/libpangosharpglue.la
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 PERL5_SITELIB=	yes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/08/17 18:28:41 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/23 05:59:45 jlamwww Exp $
 include/X11/ImUtil.h
 include/X11/XKBlib.h
 include/X11/Xcms.h
@@ -9,6 +9,7 @@ include/X11/Xresource.h
 include/X11/Xutil.h
 include/X11/cursorfont.h
 include/X11/region.h
+lib/libX11.la
 lib/pkgconfig/x11.pc
 share/X11/XErrorDB
 share/X11/XKeysymDB

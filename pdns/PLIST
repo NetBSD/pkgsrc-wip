@@ -1,13 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/27 02:47:12 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:56 jlamwww Exp $
 bin/pdns_control
 bin/zone2ldap
 bin/zone2sql
 etc/pdns.conf-dist
-lib/libpipebackend.a
 lib/libpipebackend.la
-lib/libpipebackend.so
-lib/libpipebackend.so.0
-lib/libpipebackend.so.0.0
 man/man8/pdns_control.8
 man/man8/pdns_server.8
 man/man8/zone2sql.8

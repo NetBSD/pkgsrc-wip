@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/09/04 23:40:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2004/09/23 06:00:00 jlamwww Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -21,8 +21,6 @@ WRKSRC=		${WRKDIR}/quagga-0.96.5
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		YES
-LIBTOOL_LA_FILES+=	lib/libospf.la
-LIBTOOL_LA_FILES+=	lib/libzebra.la
 
 PKG_SYSCONFSUBDIR?=	zebra
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:32:06 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/23 05:59:59 jlamwww Exp $
 bin/qhacc
 bin/qhacc-cli
 bin/qhacc-config
@@ -15,6 +15,36 @@ include/qhacc/qhaccutils.h
 include/qhacc/resultset.h
 include/qhacc/sqldbplugin.h
 include/qhacc/tableops.h
+lib/qhacc/libacct.la
+lib/qhacc/libarcio.la
+lib/qhacc/libaves.la
+lib/qhacc/libbalances.la
+lib/qhacc/libbudget.la
+lib/qhacc/libcliimpio.la
+lib/qhacc/libdbbase.la
+lib/qhacc/libdeltas.la
+lib/qhacc/libdoublebargraph.la
+lib/qhacc/libdoublelinegraph.la
+lib/qhacc/libextprgio.la
+lib/qhacc/libfiledbio.la
+lib/qhacc/libgraphbase.la
+lib/qhacc/libjournal.la
+lib/qhacc/libmbudget.la
+lib/qhacc/libmonthlygraph.la
+lib/qhacc/libnativedbio.la
+lib/qhacc/libpayee.la
+lib/qhacc/libpiegraph.la
+lib/qhacc/libprofitloss.la
+lib/qhacc/libqhacc.la
+lib/qhacc/libqhaccext.la
+lib/qhacc/libqhaccutils.la
+lib/qhacc/libqifio.la
+lib/qhacc/libsinglebargraph.la
+lib/qhacc/libsinglelinegraph.la
+lib/qhacc/libtbal.la
+lib/qhacc/libtrans.la
+lib/qhacc/libupgradeio.la
+lib/qhacc/libxmlio.la
 lib/qhacc/plugins/db/libextprgio.so
 lib/qhacc/plugins/db/libupgradeio.so
 lib/qhacc/plugins/db/libxmlio.so

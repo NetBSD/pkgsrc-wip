@@ -1,12 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/24 15:09:15 ianzag Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:29 jlamwww Exp $
 bin/LabPlot
-lib/libLabPlot.a
 lib/libLabPlot.la
-lib/libLabPlotcephes.a
 lib/libLabPlotcephes.la
-lib/libLabPlotcephes.so
-lib/libLabPlotcephes.so.1
-lib/libLabPlotcephes.so.1.0
 share/doc/kde/HTML/de/LabPlot/index.docbook
 share/doc/kde/HTML/de/LabPlot/small_pics
 share/doc/kde/HTML/en/LabPlot/index.docbook

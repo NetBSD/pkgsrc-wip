@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/08/17 18:31:02 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/23 05:59:53 jlamwww Exp $
 bin/metatheme-edit
 bin/metatheme_selector_capplet
 include/mtm/mtm-config-gui.h
@@ -13,31 +13,12 @@ include/mtm/mtm-stateful.h
 include/mtm/mtm-theme.h
 include/mtm/mtm-util.h
 include/mtm/mtm.h
-lib/metatheme/plugins/${PKGVERSION}/libbgplugin.a
+lib/libmtm.la
 lib/metatheme/plugins/${PKGVERSION}/libbgplugin.la
-lib/metatheme/plugins/${PKGVERSION}/libbgplugin.so
-lib/metatheme/plugins/${PKGVERSION}/libbgplugin.so.0
-lib/metatheme/plugins/${PKGVERSION}/libbgplugin.so.0.0
-lib/metatheme/plugins/${PKGVERSION}/libgtkplugin1.a
 lib/metatheme/plugins/${PKGVERSION}/libgtkplugin1.la
-lib/metatheme/plugins/${PKGVERSION}/libgtkplugin1.so
-lib/metatheme/plugins/${PKGVERSION}/libgtkplugin1.so.0
-lib/metatheme/plugins/${PKGVERSION}/libgtkplugin1.so.0.0
-lib/metatheme/plugins/${PKGVERSION}/libgtkplugin2.a
 lib/metatheme/plugins/${PKGVERSION}/libgtkplugin2.la
-lib/metatheme/plugins/${PKGVERSION}/libgtkplugin2.so
-lib/metatheme/plugins/${PKGVERSION}/libgtkplugin2.so.0
-lib/metatheme/plugins/${PKGVERSION}/libgtkplugin2.so.0.0
-lib/metatheme/plugins/${PKGVERSION}/libnautilus.a
 lib/metatheme/plugins/${PKGVERSION}/libnautilus.la
-lib/metatheme/plugins/${PKGVERSION}/libnautilus.so
-lib/metatheme/plugins/${PKGVERSION}/libnautilus.so.0
-lib/metatheme/plugins/${PKGVERSION}/libnautilus.so.0.0
-lib/metatheme/plugins/${PKGVERSION}/libsawfish.a
 lib/metatheme/plugins/${PKGVERSION}/libsawfish.la
-lib/metatheme/plugins/${PKGVERSION}/libsawfish.so
-lib/metatheme/plugins/${PKGVERSION}/libsawfish.so.0
-lib/metatheme/plugins/${PKGVERSION}/libsawfish.so.0.0
 share/applications/metatheme-edit.desktop
 share/control-center-2.0/capplets/metatheme_selector.desktop
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/metatheme.mo

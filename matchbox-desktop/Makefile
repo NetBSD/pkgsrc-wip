@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/08/17 18:30:43 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2004/09/23 05:59:53 jlamwww Exp $
 #
 
 DISTNAME=	matchbox-desktop-0.8
@@ -12,9 +12,6 @@ COMMENT=	Desktop manager for Matchbox
 
 USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
-LIBTOOL_LA_FILES+=	share/matchbox/desktop/modules/dotdesktop.la
-LIBTOOL_LA_FILES+=	share/matchbox/desktop/modules/simplefilebrowser.la
-LIBTOOL_LA_FILES+=	share/matchbox/desktop/modules/tasks.la
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 

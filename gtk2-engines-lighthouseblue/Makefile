@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/08/17 18:27:27 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2004/09/23 05:59:40 jlamwww Exp $
 
 DISTNAME=		GTK2-LighthouseBlue-0.4
 PKGNAME=		gtk2-engines-lighthouseblue-0.4
@@ -12,7 +12,6 @@ COMMENT=		Theme engine for GTK+ 2.x
 
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_LA_FILES+=	lib/gtk-2.0/2.4.0/engines/liblighthouseblue.la
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS=		--disable-gtktest

@@ -1,8 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2004/08/17 18:31:08 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/23 05:59:54 jlamwww Exp $
 bin/gsttest
 bin/monkey-bubble
 bin/monkey-srv
 etc/gconf/schemas/monkey-bubble.schemas
+lib/libgdkview.la
+lib/libgstaudio.la
+lib/libmonkey.la
+lib/libmonkeyutil.la
+lib/libnetcltmonkey.la
 share/applications/monkey-bubble.desktop
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/monkey-bubble.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/monkey-bubble.mo

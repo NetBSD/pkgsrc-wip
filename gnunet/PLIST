@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:26:52 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/23 05:59:39 jlamwww Exp $
 bin/gnunet-chat
 bin/gnunet-check
 bin/gnunet-convert
@@ -13,6 +13,27 @@ bin/gnunet-tracekit
 bin/gnunet-transport-check
 bin/gnunetd
 include/ltdl.h
+lib/libgnunetafs_blocks.la
+lib/libgnunetafs_database.la
+lib/libgnunetafs_database_directory.la
+lib/libgnunetafs_database_gdbm.la
+lib/libgnunetafs_decoding.la
+lib/libgnunetafs_delete.la
+lib/libgnunetafs_encoding.la
+lib/libgnunetafs_policy.la
+lib/libgnunetafs_protocol.la
+lib/libgnunetafs_search.la
+lib/libgnunetafs_util.la
+lib/libgnunetchat_protocol.la
+lib/libgnunetcommon.la
+lib/libgnunettbench_protocol.la
+lib/libgnunettracekit_protocol.la
+lib/libgnunettransport_http.la
+lib/libgnunettransport_smtp.la
+lib/libgnunettransport_tcp.la
+lib/libgnunettransport_udp.la
+lib/libgnunetutil.la
+lib/libltdl.la
 man/man1/gnunet-chat.1
 man/man1/gnunet-check.1
 man/man1/gnunet-convert.1

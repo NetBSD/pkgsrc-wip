@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/10 23:00:34 bjan2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:29 jlamwww Exp $
 bin/coin-config
 include/Inventor/C/base/hash.h
 include/Inventor/C/base/heap.h
@@ -667,8 +667,6 @@ include/Inventor/threads/SbTypedStorage.h
 include/SoWinEnterScope.h
 include/SoWinLeaveScope.h
 lib/libCoin.la
-lib/libCoin.so
-lib/libCoin.so.42
 man/man1/coin-config.1
 share/Coin/conf/coin-default.cfg
 share/Coin/draggerDefaults/centerballDragger.iv

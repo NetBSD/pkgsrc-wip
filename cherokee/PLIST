@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/08/17 18:26:19 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/23 05:59:31 jlamwww Exp $
 include/cherokee/avl.h
 include/cherokee/buffer.h
 include/cherokee/cherokee.h
@@ -15,6 +15,14 @@ include/cherokee/plugin_table_entry.h
 include/cherokee/server.h
 include/cherokee/table.h
 include/cherokee/virtual_server.h
+lib/cherokee/libcherokee_common.la
+lib/cherokee/libcherokee_gzip.la
+lib/cherokee/libcherokee_dirlist.la
+lib/cherokee/libcherokee_file.la
+lib/cherokee/libcherokee_gnomevfs.la
+lib/cherokee/libcherokee_nn.la
+lib/cherokee/libcherokee_redir.la
+lib/libcherokee.la
 man/man1/cherokee.1
 sbin/cherokee
 sbin/cherokee-config

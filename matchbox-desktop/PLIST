@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:30:43 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/23 05:59:53 jlamwww Exp $
 bin/matchbox-desktop
 include/matchbox-desktop/mbdesktop.h
 include/matchbox-desktop/mbdesktop_item.h
@@ -7,6 +7,9 @@ include/matchbox-desktop/mbdesktop_view.h
 lib/pkgconfig/matchbox-desktop.pc
 share/applications/mb-show-desktop.desktop
 share/matchbox-desktop/mbdesktop_modules
+share/matchbox/desktop/modules/dotdesktop.la
+share/matchbox/desktop/modules/simplefilebrowser.la
+share/matchbox/desktop/modules/tasks.la
 share/pixmaps/mbdesktop.png
 @dirrm share/matchbox/desktop/modules
 @dirrm share/matchbox/desktop

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/06/20 06:50:15 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/23 05:59:54 jlamwww Exp $
 bin/${MINGW_TARGET}-c++
 bin/${MINGW_TARGET}-cc
 bin/${MINGW_TARGET}-cpp
@@ -12,11 +12,8 @@ ${MINGW_TARGET}/bin/cc
 ${MINGW_TARGET}/bin/cpp
 ${MINGW_TARGET}/bin/g++
 ${MINGW_TARGET}/bin/gcc
-${MINGW_TARGET}/lib/libobjc.a
 ${MINGW_TARGET}/lib/libobjc.la
-${MINGW_TARGET}/lib/libstdc++.a
 ${MINGW_TARGET}/lib/libstdc++.la
-${MINGW_TARGET}/lib/libsupc++.a
 ${MINGW_TARGET}/lib/libsupc++.la
 include/c++/3.3.1/algorithm
 include/c++/3.3.1/backward/algo.h

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/08/17 18:31:02 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2004/09/23 05:59:53 jlamwww Exp $
 #
 
 DISTNAME=		metatheme-0.9.7
@@ -16,12 +16,6 @@ USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 BUILD_USES_MSGFMT=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_LA_FILES+=	lib/libmtm.la
-LIBTOOL_LA_FILES+=	lib/metatheme/plugins/${PKGVERSION}/libbgplugin.la
-LIBTOOL_LA_FILES+=	lib/metatheme/plugins/${PKGVERSION}/libgtkplugin1.la
-LIBTOOL_LA_FILES+=	lib/metatheme/plugins/${PKGVERSION}/libgtkplugin2.la
-LIBTOOL_LA_FILES+=	lib/metatheme/plugins/${PKGVERSION}/libnautilus.la
-LIBTOOL_LA_FILES+=	lib/metatheme/plugins/${PKGVERSION}/libsawfish.la
 GNU_CONFIGURE=		yes
 
 .include "../../devel/GConf2/buildlink3.mk"

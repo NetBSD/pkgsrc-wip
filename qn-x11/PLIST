@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:32:08 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/23 06:00:00 jlamwww Exp $
+lib/gtk/themes/engines/libqnx.la
 share/themes/QN-X11/gtk/gtkrc
 share/themes/QN-X11/ICON.png
 share/themes/QN-X11/README.html

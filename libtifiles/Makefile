@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/08/17 18:30:15 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2004/09/23 05:59:52 jlamwww Exp $
 #
 
 DISTNAME=		libtifiles
@@ -14,7 +14,6 @@ WRKSRC=			${WRKDIR}/${PKGNAME}
 
 LDFLAGS+=		-lintl
 USE_LIBTOOL=		YES
-LIBTOOL_LA_FILES+=	lib/libtifiles.la
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-nls
 USE_GNU_TOOLS+=		make

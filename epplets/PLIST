@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/31 13:24:10 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:34 jlamwww Exp $
 bin/E-Areas.epplet
 bin/E-Bandwidth.epplet
 bin/E-Biff.epplet
@@ -32,11 +32,7 @@ bin/E-Wireless.epplet
 bin/E-Xss.epplet
 bin/Emix.epplet
 include/epplet.h
-lib/libepplet.a
 lib/libepplet.la
-lib/libepplet.so
-lib/libepplet.so.1
-lib/libepplet.so.1.0
 share/enlightenment/epplet_data/E-Biff/7of9.png
 share/enlightenment/epplet_data/E-Biff/newmail.png
 share/enlightenment/epplet_data/E-Biff/nomail.png

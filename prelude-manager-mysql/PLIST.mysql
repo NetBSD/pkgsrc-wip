@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.mysql,v 1.1.1.1 2003/09/28 13:03:36 adrian_p Exp $
+@comment $NetBSD: PLIST.mysql,v 1.2 2004/09/23 05:59:57 jlamwww Exp $
 lib/prelude-manager/db/mysql.la
-lib/prelude-manager/db/mysql.so
 @dirrm lib/prelude-manager/db
 @dirrm lib/prelude-manager

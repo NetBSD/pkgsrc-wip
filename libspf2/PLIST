@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/01 16:01:22 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:51 jlamwww Exp $
 bin/spf_example
 bin/spf_example_2mx
 bin/spf_example_2mx_static
@@ -17,9 +17,5 @@ include/spf2/spf_dns_resolv.h
 include/spf2/spf_dns_test.h
 include/spf2/spf_dns_zone.h
 include/spf2/spf_lib_version.h
-lib/libspf2.a
 lib/libspf2.la
-lib/libspf2.so
-lib/libspf2.so.1
-lib/libspf2.so.1.0
 @dirrm include/spf2

@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/17 18:26:21 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/23 05:59:36 jlamwww Exp $
 bin/fluxspace
 bin/fluxspace-add-idesk-icon
 bin/fluxspace-sync-idesk-with-appdirs
 bin/fluxspacebg
 bin/rox-add-app
-lib/lib${PKGNAME}.so
+lib/libfluxspace.la
 lib/python2.2/site-packages/_fluxspace.so
 lib/python2.2/site-packages/fluxlet/__init__.py
 lib/python2.2/site-packages/fluxlet/__init__.pyc
