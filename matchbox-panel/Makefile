@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/06/08 00:31:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/01 22:43:12 mattd Exp $
 #
 
-DISTNAME=	matchbox-panel-0.8.1
+DISTNAME=	matchbox-panel-0.8.3
 CATEGORIES=	x11
-MASTER_SITES=	http://matchbox.handhelds.org/sources/matchbox-panel/0.8/
+MASTER_SITES=	ftp://ftp.handhelds.org/projects/matchbox/sources/matchbox-panel/0.8/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -18,13 +18,30 @@ USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
+AUTOCONF_REQD=		2.53
 
 CONFIGURE_ARGS+=	--enable-small-icons
 CONFIGURE_ARGS+=	--enable-startup-notification
 CONFIGURE_ARGS+=	--enable-nls
 
+CONFIGURE_ENV+=		XGETTEXT=${LOCALBASE}/bin/xgettext
+CONFIGURE_ENV+=		GMSGFMT=${LOCALBASE}/bin/msgfmt
+CONFIGURE_ENV+=		MSGFMT=${LOCALBASE}/bin/msgfmt
+CONFIGURE_ENV+=		MSGMERGE=${LOCALBASE}/bin/msgmerge
+
+# Regenerate files after patching. This will disappear in next version,
+# patches have been sent upstream.
+#
+pre-configure:
+	cd ${WRKSRC};							\
+	${ACLOCAL};							\
+	${AUTOHEADER};							\
+	${AUTOMAKE} -a --foreign -i;					\
+	${AUTOCONF}
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../wip/libmatchbox/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

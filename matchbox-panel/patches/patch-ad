@@ -1,0 +1,26 @@
+$NetBSD: patch-ad,v 1.1 2005/01/01 22:43:12 mattd Exp $
+
+--- po/Makefile.am.orig	2004-06-28 13:00:08.000000000 +0000
++++ po/Makefile.am
+@@ -16,10 +16,10 @@ POTFILES  = \
+ SUFFIXES = .po .mo
+ 
+ .po.mo: 
+-	msgfmt -o $@ $<
++	$(MSGFMT) -o $@ $<
+ 
+ matchbox.pot: $(POTFILES)
+-	xgettext --default-domain=matchbox \
++	$(XGETTEXT) --default-domain=matchbox \
+ 	--add-comments --keyword=_ $(POTFILES)
+ 	if cmp -s matchbox.po matchbox.pot; then \
+ 	    rm -f matchbox.po; \
+@@ -31,7 +31,7 @@ update.po: matchbox.pot
+ 	for n in $(CATALOGS) __DuMmY ; do \
+ 		if test "$$n" -a "$$n" != "__DuMmY" ; then \
+ 		l=`basename $$n .mo`; \
+-		msgmerge --update $$l.po matchbox.pot; \
++		$(MSGMERGE) --update $$l.po matchbox.pot; \
+ 		fi; \
+ 	done
+ 

@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2005/01/01 22:43:12 mattd Exp $
+
+--- configure.ac.orig	2004-08-30 18:15:49.000000000 +0000
++++ configure.ac
+@@ -92,6 +92,8 @@ if test x$enable_nls = xyes; then
+ 		  	 INTLIBS="" ))
+ 
+   AC_CHECK_PROG(XGETTEXT, xgettext, xgettext)
++  AC_CHECK_PROG(MSGMERGE, msgmerge, msgmerge)
++  AC_CHECK_PROG(MSGFMT, msgfmt, msgfmt)
+ 
+   if test "$XGETTEXT" != ""; then 
+     if $XGETTEXT --help 2>&1 | grep illegal >/dev/null ; then
+@@ -252,4 +254,4 @@ echo "
+ 
+         Building mb-applet-battery:         ${miniapm_enabled}
+         Building mb-applet-wireless:        ${wifi_enabled}
+-"
+\ No newline at end of file
++"
