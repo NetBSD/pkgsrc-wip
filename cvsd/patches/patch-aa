@@ -1,0 +1,21 @@
+--- Makefile.am.orig	Sun Apr  6 22:56:42 2003
++++ Makefile.am	Sun Apr  6 22:57:18 2003
+@@ -56,13 +56,13 @@
+ 	fi
+ 
+ install-initscript:
+-	if [ ! -d $(DESTDIR)$(sysconfdir)/init.d ]; then \
+-	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/init.d; \
++	if [ ! -d $(DESTDIR)$(sysconfdir)/rd.d ]; then \
++	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/rc.d; \
+ 	fi
+-	if [ -f $(DESTDIR)$(sysconfdir)/init.d/cvsd ]; then \
+-	  echo "$(DESTDIR)$(sysconfdir)/init.d/cvsd already exists, overwriting"; \
++	if [ -f $(DESTDIR)$(sysconfdir)/rc.d/cvsd ]; then \
++	  echo "$(DESTDIR)$(sysconfdir)/rc.d/cvsd already exists, overwriting"; \
+ 	fi
+-	$(INSTALL_SCRIPT) cvsd.init $(DESTDIR)$(sysconfdir)/init.d/cvsd
++	$(INSTALL_SCRIPT) cvsd.init $(DESTDIR)$(sysconfdir)/rc.d/cvsd
+ 
+ #  targets for debian package
+ deb: distdir
