@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/15 16:00:03 poppnk Exp $
+include/libvg-digest.h
+include/libvg-functions.h
+include/libvg-globals.h
+include/libvg-macros.h
+include/libvg-resin.h
+include/libvg-structures.h
+include/libvg-types.h
+include/libvg.h
+lib/libvg.a
+lib/libvg.so
