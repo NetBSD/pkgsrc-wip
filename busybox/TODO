@@ -1,2 +1,4 @@
 - PLIST for linux
 - Patch to be multiplatform?
+- Exclude some files from being installed
+  (they most likely conflict with other packages)
