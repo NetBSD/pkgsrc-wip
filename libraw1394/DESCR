@@ -1,0 +1,9 @@
+libraw1394 is a supported interface to the Linux kernel side raw1394
+of the Linux IEEE-1394 subsystem, which provides direct access to
+the connected 1394 buses to user space.  Through libraw1394/raw1394,
+applications can directly send to and receive from other nodes
+without requiring a Linux kernel driver for the protocol in question.
+
+This package also includes tools for listening to IEEE 1394 isochronous
+channels, sending IEEE 1394 isochronous packets, and testing Linux IEEE
+1394 subsystem (through libraw1394).
