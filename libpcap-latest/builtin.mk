@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2004/10/25 11:17:15 ppostma Exp $
+# $NetBSD: builtin.mk,v 1.3 2004/10/26 23:09:52 ppostma Exp $
 
 _LIBPCAP_PKGSRC_PKGNAME=	libpcap-0.8.3
 _LIBPCAP_PCAP_H=		/usr/include/pcap.h
@@ -19,21 +19,18 @@ _PCAP_060!=		${GREP} -c pcap_freecode.struct.bpf_program ${_LIBPCAP_PCAP_H} || $
 # libpcap>=0.5.0: pcap_compile_nopcap added
 _PCAP_050!=		${GREP} -c pcap_compile_nopcap ${_LIBPCAP_PCAP_H} || ${TRUE}
 
-BUILTIN_PKG.libpcap=	libpcap-0.4.0
-.if ${_PCAP_050} == "1"
-BUILTIN_PKG.libpcap=	libpcap-0.5.0
-.if ${_PCAP_060} == "1"
-BUILTIN_PKG.libpcap=	libpcap-0.6.0
-.if ${_PCAP_070} == "1"
-BUILTIN_PKG.libpcap=	libpcap-0.7.0
-.if ${_PCAP_080} == "1"
-BUILTIN_PKG.libpcap=	libpcap-0.8.0
 .if ${_PCAP_081} == "1"
 BUILTIN_PKG.libpcap=	libpcap-0.8.1
-.endif
-.endif
-.endif
-.endif
+.elif ${_PCAP_080} == "1"
+BUILTIN_PKG.libpcap=	libpcap-0.8.0
+.elif ${_PCAP_070} == "1"
+BUILTIN_PKG.libpcap=	libpcap-0.7.0
+.elif ${_PCAP_060} == "1"
+BUILTIN_PKG.libpcap=	libpcap-0.6.0
+.elif ${_PCAP_050} == "1"
+BUILTIN_PKG.libpcap=	libpcap-0.5.0
+.else
+BUILTIN_PKG.libpcap=	libpcap-0.4.0
 .endif
 
 .endif  # exists({_LIBPCAP_PCAP_H})
