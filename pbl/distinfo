@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/26 14:49:35 oherrala Exp $
+$NetBSD: distinfo,v 1.2 2004/11/11 17:46:50 oherrala Exp $
 
-SHA1 (pbl_1_02.tar.gz) = c46a327c6b9c5b4cedb32cb65abbae2bd9fdf04b
-Size (pbl_1_02.tar.gz) = 131922 bytes
+SHA1 (pbl_1_03.tar.gz) = 29223a97e8408564bf1714590eea4ab0bcf18f3c
+Size (pbl_1_03.tar.gz) = 114672 bytes
