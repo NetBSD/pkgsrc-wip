@@ -1,3 +1,0 @@
-- This seems to have screen refresh trouble for me. (and it won't
-  start my editor -- I can't write mail. Doh!) Forcing NCurses does
-  not help. Somebody should test this one on Linux
