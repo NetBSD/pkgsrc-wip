@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/13 10:50:53 cjep Exp $
+
+SHA1 (idled-1.16.tar.gz) = 42cc38f2b2e22147cf2760e4e0d90aaab13f31e5
+Size (idled-1.16.tar.gz) = 70864 bytes
+SHA1 (patch-aa) = a3d1bd054133832cc16687533317f7cee85cef47
+SHA1 (patch-ab) = a1a834f1ee418f1e83b0249a29f094644d721e38

@@ -1,0 +1,8 @@
+Idled (pronounced idle-dee) is a program that will run 
+in the background on a machine and monitor the current 
+tty sessions. It can be configured to log out users that 
+have been idle for too long or logged on for too long. 
+It can also prevent users from being logged in too many 
+times, and refuse users from being logged in at all.
+
+Homepage: http://www.darkwing.com/idled/

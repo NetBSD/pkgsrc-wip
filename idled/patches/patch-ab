@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/04/13 10:50:53 cjep Exp $
+
+--- warn.c.orig	Thu May 16 23:59:57 1996
++++ warn.c
+@@ -152,7 +152,6 @@ void warn(i, type, do_msg)
+          termf->_IO_read_ptr = termf->_IO_read_base;
+          termf->_IO_write_ptr = termf->_IO_write_base;
+ #elif defined(BSDI) || defined(BSD_OS2)
+-         termf->_p = (termf->_ub)._base;
+ #else
+ 	 termf->_ptr = termf->_base;
+ #endif
