@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1464 2004/09/16 12:39:38 airhead Exp $
-# $NetBSD: Makefile,v 1.1464 2004/09/16 12:39:38 airhead Exp $
+# $Id: Makefile,v 1.1465 2004/09/16 15:12:18 airhead Exp $
+# $NetBSD: Makefile,v 1.1465 2004/09/16 15:12:18 airhead Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -142,6 +142,7 @@ SUBDIR+=	emacs-carbon
 SUBDIR+=	emirror
 SUBDIR+=	epplets
 SUBDIR+=	etpan-ng
+SUBDIR+=	evas
 SUBDIR+=	evolution-sharp
 SUBDIR+=	exiftool
 SUBDIR+=	ezbounce
