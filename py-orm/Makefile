@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/17 03:12:40 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/17 03:14:38 mpasternak Exp $
 #
 
 DISTNAME=		orm-0.16
+PKGNAME=		${PYPKGPREFIX}-${DISTFILES}
 CATEGORIES=		databases
 MASTER_SITES=		http://tux4web.de/computer/software/orm/download/
 
