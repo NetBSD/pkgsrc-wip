@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/30 20:00:36 cjep Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/19 00:05:01 minskim Exp $
 bin/ttx
-@comment TODO: existence of this file could be dependent on -pth or
-@comment TODO: non-pth Python version
-${PYSITELIB}/FontTools.pth
+${FONTTOOLSPTH}${PYSITELIB}/FontTools.pth
 ${PYSITELIB}/FontTools/fontTools/__init__.py
 ${PYSITELIB}/FontTools/fontTools/__init__.pyc
 ${PYSITELIB}/FontTools/fontTools/__init__.pyo
