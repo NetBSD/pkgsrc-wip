@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2004/04/25 23:02:16 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/18 15:11:31 ppostma Exp $
 #
 
 DISTNAME=		scite159
 PKGNAME=		scite-1.59
 WRKSRC=			${WRKDIR}
-CATEGORIES=		wip
+CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scintilla/}
 EXTRACT_SUFX=		.tgz
 
