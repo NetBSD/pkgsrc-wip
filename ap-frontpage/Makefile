@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/08 18:45:12 blef Exp $
-# FreeBSD Id: ports/www/mod_frontpage/Makefile,v 1.12 2002/05/23 22:38:29 mbr Exp
+# $NetBSD: Makefile,v 1.4 2005/03/24 21:13:26 thomasklausner Exp $
 
 DISTNAME=	mod_frontpage_mirfak-${M_FPVERSION}
 PKGNAME=	ap-frontpage-${M_FPVERSION}

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/02 16:38:59 thomasklausner Exp $
-# FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
+# $NetBSD: Makefile,v 1.6 2005/03/24 21:13:27 thomasklausner Exp $
 
 DISTNAME=	emacs-carbon-21.3.50
 CATEGORIES=	editors

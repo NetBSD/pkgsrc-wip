@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/16 13:09:11 ura Exp $
-# FreeBSD Id: ports/mail/bsfilter/Makefile,v 1.6 2004/08/24 19:38:56 sem Exp
+# $NetBSD: Makefile,v 1.3 2005/03/24 21:13:26 thomasklausner Exp $
 
 DISTNAME=	bsfilter-1.0.6
 CATEGORIES=	mail

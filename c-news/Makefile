@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/13 13:04:10 hfath Exp $
-# FreeBSD Id: ports/news/cnews/Makefile,v 1.43 2001/06/24 04:28:36 dinoex Exp
+# $NetBSD: Makefile,v 1.5 2005/03/24 21:13:27 thomasklausner Exp $
 
 DISTNAME=	c-news
 PKGNAME=        c-news-CR-7

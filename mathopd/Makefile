@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/20 06:47:54 ishit Exp $
-# FreeBSD Id: ports/www/mathopd/Makefile,v 1.16 2004/11/29 08:58:58 tobez Exp
+# $NetBSD: Makefile,v 1.3 2005/03/24 21:13:29 thomasklausner Exp $
 
 DISTNAME=	mathopd-1.5p4
 CATEGORIES=	www

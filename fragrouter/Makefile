@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/16 17:34:31 ishit Exp $
-# FreeBSD Id: ports/security/fragrouter/Makefile,v 1.8 2003/12/21 00:22:25 sergei Exp
+# $NetBSD: Makefile,v 1.2 2005/03/24 21:13:28 thomasklausner Exp $
 
 DISTNAME=	fragrouter-1.6
 CATEGORIES=	security

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/15 23:37:46 rillig Exp $
-# FreeBSD Id: ports/net/l2tpd/Makefile,v 1.6 2003/04/16 13:53:27 ru Exp
+# $NetBSD: Makefile,v 1.6 2005/03/24 21:13:28 thomasklausner Exp $
 
 DISTNAME=	l2tpd-0.69
 CATEGORIES=	net

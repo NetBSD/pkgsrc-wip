@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/15 14:07:29 kheinz Exp $
-# FreeBSD Id: ports/print/rlpr/Makefile,v 1.12 2003/03/07 06:09:06 ade Exp
+# $NetBSD: Makefile,v 1.4 2005/03/24 21:13:30 thomasklausner Exp $
 
 DISTNAME=	rlpr-2.04
 CATEGORIES=	print net

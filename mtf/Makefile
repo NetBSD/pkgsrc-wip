@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/02 16:39:04 thomasklausner Exp $
-# FreeBSD Id: ports/archivers/mtf/Makefile,v 1.1 2002/06/26 06:33:35 ijliao Exp
+# $NetBSD: Makefile,v 1.5 2005/03/24 21:13:29 thomasklausner Exp $
 
 DISTNAME=	mtf-0.2.1
 CATEGORIES=	archivers

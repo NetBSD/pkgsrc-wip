@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/02 16:39:07 thomasklausner Exp $
-# FreeBSD: ports/graphics/svgalib/Makefile,v 1.10 2003/03/07 06:04:12 ade Exp
-#
+# $NetBSD: Makefile,v 1.6 2005/03/24 21:13:30 thomasklausner Exp $
 
 DISTNAME=	svgalib-1.4.3
 CATEGORIES=	graphics devel

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/31 18:55:17 blef Exp $
-# FreeBSD Id: ports/www/frontpage/Makefile,v 1.5 2002/11/03 07:57:25 ijliao Exp
+# $NetBSD: Makefile,v 1.8 2005/03/24 21:13:28 thomasklausner Exp $
 
 DISTNAME=	frontpage-5.0.2.2623
 CATEGORIES=	www
