@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.318 2003/07/09 18:02:53 marttikuparinen Exp $
-# $NetBSD: Makefile,v 1.318 2003/07/09 18:02:53 marttikuparinen Exp $
+# $Id: Makefile,v 1.319 2003/07/12 02:43:53 bencollver Exp $
+# $NetBSD: Makefile,v 1.319 2003/07/12 02:43:53 bencollver Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -307,6 +307,7 @@ SUBDIR+=	xfce4-wm
 SUBDIR+=	xfce4-wm-themes
 SUBDIR+=	xmail
 SUBDIR+=	xml2doc
+SUBDIR+=	xmms-modplug
 SUBDIR+=	xplore
 SUBDIR+=	xsh
 SUBDIR+=	yafray
