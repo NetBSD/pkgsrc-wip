@@ -1,0 +1,49 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/08 17:13:23 daprice Exp $
+share/dataset/geography/${PKGNAME}/PERMANENT/DEFAULT_WIND
+share/dataset/geography/${PKGNAME}/PERMANENT/MYNAME
+share/dataset/geography/${PKGNAME}/PERMANENT/PROJ_INFO
+share/dataset/geography/${PKGNAME}/PERMANENT/PROJ_UNITS
+share/dataset/geography/${PKGNAME}/PERMANENT/WIND
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/maasbank
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/topomap
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/maasbank
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/topomap
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/maasbank/f_format
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/maasbank/f_quant
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/maasbank/f_range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/maasbank/null
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/topomap/null
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/topomap/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/maasbank
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/topomap
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/maasbank
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/topomap
+share/dataset/geography/${PKGNAME}/PERMANENT/fcell/maasbank
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/maasbank
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/topomap
+share/dataset/geography/${PKGNAME}/PERMANENT/site_lists/Cd
+share/dataset/geography/${PKGNAME}/PERMANENT/site_lists/Cu
+share/dataset/geography/${PKGNAME}/PERMANENT/site_lists/Fldf
+share/dataset/geography/${PKGNAME}/PERMANENT/site_lists/LOI
+share/dataset/geography/${PKGNAME}/PERMANENT/site_lists/Pb
+share/dataset/geography/${PKGNAME}/PERMANENT/site_lists/Soil
+share/dataset/geography/${PKGNAME}/PERMANENT/site_lists/Zn
+share/dataset/geography/${PKGNAME}/PERMANENT/site_lists/d.river
+share/dataset/geography/${PKGNAME}/PERMANENT/site_lists/elev
+share/dataset/geography/${PKGNAME}/README
+share/dataset/geography/${PKGNAME}/user1/WIND
+@dirrm share/dataset/geography/${PKGNAME}/user1
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/site_lists
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/hist
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/fcell
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/colr
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cellhd
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/topomap
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/maasbank
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cats
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT
+@dirrm share/dataset/geography/${PKGNAME}
+@dirrm share/dataset/geography
+@dirrm share/dataset
