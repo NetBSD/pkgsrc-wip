@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1354 2004/06/29 16:45:45 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1354 2004/06/29 16:45:45 adrian_p Exp $
+# $Id: Makefile,v 1.1355 2004/06/30 14:19:54 bencollver Exp $
+# $NetBSD: Makefile,v 1.1355 2004/06/30 14:19:54 bencollver Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -667,6 +667,7 @@ SUBDIR+=	ruby-syck
 SUBDIR+=	sara
 SUBDIR+=	scite
 SUBDIR+=	scm
+SUBDIR+=	scourge
 SUBDIR+=	scponly
 SUBDIR+=	send-pr
 SUBDIR+=	sendmail813
