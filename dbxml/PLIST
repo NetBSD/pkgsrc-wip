@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/26 21:27:48 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/13 14:22:33 minskim Exp $
 bin/dbxml_dump
 bin/dbxml_load
 include/dbxml/DbXml.hpp
@@ -1229,6 +1229,7 @@ share/doc/dbxml/ref_xml/xml_unix/intro.html
 share/doc/dbxml/ref_xml/xml_unix/notes.html
 share/doc/dbxml/ref_xml/xml_unix/shlib.html
 share/doc/dbxml/ref_xml/xml_unix/test.html
+share/doc/dbxml/ref_xml/xml_win/examples.html
 share/doc/dbxml/ref_xml/xml_win/intro.html
 share/doc/dbxml/ref_xml/xml_win/notes.html
 share/doc/dbxml/ref_xml/xml_win/test.html

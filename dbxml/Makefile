@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/02/13 14:00:31 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/13 14:22:33 minskim Exp $
 
-DISTNAME=	dbxml-1.2.0
+DISTNAME=	dbxml-1.2.1
 WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
