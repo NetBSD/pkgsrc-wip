@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/27 02:45:33 mpasternak Exp $
-
-SHA1 (GTK2-LighthouseBlue-0.4.tar.gz) = 24b519d65a0842c1fff16cda29df95af4c6bff0d
-Size (GTK2-LighthouseBlue-0.4.tar.gz) = 197063 bytes
-SHA1 (patch-aa) = 8df0e54219e0f62584d216057e1b6f6767ad9cb8
-SHA1 (patch-ab) = f1918a2e0c8ff8a7208de74574e85c5cdfd71dd1
