@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1044 2004/03/03 22:40:15 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1044 2004/03/03 22:40:15 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1045 2004/03/04 16:03:11 roelants Exp $
+# $NetBSD: Makefile,v 1.1045 2004/03/04 16:03:11 roelants Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -399,6 +399,7 @@ SUBDIR+=	p5-DateTime-Event-Cron
 SUBDIR+=	p5-DateTime-LeapSecond
 SUBDIR+=	p5-DateTime-Set
 SUBDIR+=	p5-DateTime-TimeZone
+SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-ExtUtils-Depends
 SUBDIR+=	p5-ExtUtils-PkgConfig
 SUBDIR+=	p5-File-Tail
@@ -408,18 +409,23 @@ SUBDIR+=	p5-Glib2
 SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTTP-GHTTP
+SUBDIR+=	p5-Locale-Maketext-Fuzzy
+SUBDIR+=	p5-Locale-Maketext-Lexicon
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Mail-Milter
 SUBDIR+=	p5-Mail-SRS
 SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-Parallel-ForkManager
+SUBDIR+=	p5-Regexp-Common
 SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Sendmail-PMilter
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-String-Approx
+SUBDIR+=	p5-Text-Quoted
 SUBDIR+=	p5-Text-Tabs+Wrap
 SUBDIR+=	p5-Tk-TableMatrix
+SUBDIR+=	p5-WWW-Mechanize
 SUBDIR+=	p5-XML-Sablotron
 SUBDIR+=	p5-gtk2
 SUBDIR+=	palm-db-tools
