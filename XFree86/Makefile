@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/24 04:23:52 blef Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/24 04:55:25 blef Exp $
 
 DISTNAME=	# empty
 PKGNAME=	XFree86-${XF_VER}
@@ -19,7 +19,7 @@ DEPENDS+=	XFree86-man-[0-9]*:../../wip/XFree86-man
 DEPENDS+=	XFree86-fontsEncodings-[0-9]*:../../wip/XFree86-fontsEncodings
 DEPENDS+=	XFree86-fontsCyrillic-[0-9]*:../../wip/XFree86-fontsCyrillic
 DEPENDS+=	XFree86-fonts100dpi-[0-9]*:../../wip/XFree86-fonts100dpi
-DEPENDS+=       XFree86-fonts75dpi-[0-9]*:../../wip/XFree86-fonts75dpi
+DEPENDS+=	XFree86-fonts75dpi-[0-9]*:../../wip/XFree86-fonts75dpi
 DEPENDS+=	XFree86-fontserver-[0-9]*:../../wip/XFree86-fontserver
 DEPENDS+=	XFree86-fontsScalable-[0-9]*:../../wip/XFree86-fontsScalable
 DEPENDS+=	XFree86-defaultBitmaps-[0-9]*:../../wip/XFree86-defaultBitmaps

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/07/24 04:25:59 blef Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/24 04:52:27 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_XFREE}
-DISTFILES=      X430src-1.tgz X430src-3.tgz
+DISTFILES=	X430src-1.tgz X430src-3.tgz
 
 MAINTAINER=	xfree86@xtraeme.unixbsd.org
 HOMEPAGE=	http://www.xfree86.org/
@@ -20,8 +20,8 @@ FAKE_XFREE86_DEPS=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
-DEPENDS+=       bison-[0-9]*:../../devel/bison
-DEPENDS+=       flex-[0-9]*:../../devel/flex
+DEPENDS+=	bison-[0-9]*:../../devel/bison
+DEPENDS+=	flex-[0-9]*:../../devel/flex
 .endif
 
 .include "../../wip/XFree86/Makefile.common"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/07/24 04:23:52 blef Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/07/24 04:55:25 blef Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -23,7 +23,7 @@
 MANCOMPRESSED=	YES
 .endif
 
-WRKSRC?=        ${WRKDIR}/xc
+WRKSRC?=	${WRKDIR}/xc
 USE_X11BASE?=	YES
 
 MASTER_SITE_XFREE+=	\
@@ -100,7 +100,7 @@ do-build:
 post-extract:
 	@${SED} \
 		-e "s|BLNK|${BUILDLINK_DIR}|g" \
-  		-e "s|PREFIX|${X11BASE}|g" \
+		-e "s|PREFIX|${X11BASE}|g" \
 		-e "s|LOCALBASE|${LOCALBASE}|g" \
 		-e "s|@LDFLAGS@|${LDFLAGS}|g" \
 		${FILESDIR}/host.def > ${WRKSRC}/config/cf/host.def
@@ -142,7 +142,7 @@ do-configure:
 	@for dir in ${_XINCLUDE_DIRS}; do \
 		cd ${WRKSRC}/$${dir} && ${WRKSRC}/config/imake/imake \
 			-DTOPDIR=${WRKSRC} -DCURDIR=$${dir} \
-		       	-I${WRKSRC}/config/cf; \
+			-I${WRKSRC}/config/cf; \
 	done
 	@for dir in ${_XINCLUDE_DIRS}; do \
 		cd ${WRKSRC}/$${dir} && ${MAKE} Makefiles; \
