@@ -1,0 +1,257 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/09 20:13:03 marc Exp $
+pgsql80/bin/clusterdb
+pgsql80/bin/createdb
+pgsql80/bin/createlang
+pgsql80/bin/createuser
+pgsql80/bin/dropdb
+pgsql80/bin/droplang
+pgsql80/bin/dropuser
+pgsql80/bin/initdb
+pgsql80/bin/ipcclean
+pgsql80/bin/pg_config
+pgsql80/bin/pg_controldata
+pgsql80/bin/pg_ctl
+pgsql80/bin/pg_dump
+pgsql80/bin/pg_dumpall
+pgsql80/bin/pg_resetxlog
+pgsql80/bin/pg_restore
+pgsql80/bin/psql
+pgsql80/bin/vacuumdb
+pgsql80/man/man1/clusterdb.1
+pgsql80/man/man1/createdb.1
+pgsql80/man/man1/createlang.1
+pgsql80/man/man1/createuser.1
+pgsql80/man/man1/dropdb.1
+pgsql80/man/man1/droplang.1
+pgsql80/man/man1/dropuser.1
+pgsql80/man/man1/initdb.1
+pgsql80/man/man1/initlocation.1
+pgsql80/man/man1/ipcclean.1
+pgsql80/man/man1/pg_config.1
+pgsql80/man/man1/pg_controldata.1
+pgsql80/man/man1/pg_ctl.1
+pgsql80/man/man1/pg_dump.1
+pgsql80/man/man1/pg_dumpall.1
+pgsql80/man/man1/pg_resetxlog.1
+pgsql80/man/man1/pg_restore.1
+pgsql80/man/man1/psql.1
+pgsql80/man/man1/vacuumdb.1
+pgsql80/man/manl/abort.l
+pgsql80/man/manl/alter_aggregate.l
+pgsql80/man/manl/alter_conversion.l
+pgsql80/man/manl/alter_database.l
+pgsql80/man/manl/alter_domain.l
+pgsql80/man/manl/alter_function.l
+pgsql80/man/manl/alter_group.l
+pgsql80/man/manl/alter_language.l
+pgsql80/man/manl/alter_operator_class.l
+pgsql80/man/manl/alter_schema.l
+pgsql80/man/manl/alter_sequence.l
+pgsql80/man/manl/alter_table.l
+pgsql80/man/manl/alter_trigger.l
+pgsql80/man/manl/alter_user.l
+pgsql80/man/manl/analyze.l
+pgsql80/man/manl/begin.l
+pgsql80/man/manl/checkpoint.l
+pgsql80/man/manl/close.l
+pgsql80/man/manl/cluster.l
+pgsql80/man/manl/comment.l
+pgsql80/man/manl/commit.l
+pgsql80/man/manl/copy.l
+pgsql80/man/manl/create_aggregate.l
+pgsql80/man/manl/create_cast.l
+pgsql80/man/manl/create_constraint_trigger.l
+pgsql80/man/manl/create_conversion.l
+pgsql80/man/manl/create_database.l
+pgsql80/man/manl/create_domain.l
+pgsql80/man/manl/create_function.l
+pgsql80/man/manl/create_group.l
+pgsql80/man/manl/create_index.l
+pgsql80/man/manl/create_language.l
+pgsql80/man/manl/create_operator.l
+pgsql80/man/manl/create_operator_class.l
+pgsql80/man/manl/create_rule.l
+pgsql80/man/manl/create_schema.l
+pgsql80/man/manl/create_sequence.l
+pgsql80/man/manl/create_table.l
+pgsql80/man/manl/create_table_as.l
+pgsql80/man/manl/create_trigger.l
+pgsql80/man/manl/create_type.l
+pgsql80/man/manl/create_user.l
+pgsql80/man/manl/create_view.l
+pgsql80/man/manl/deallocate.l
+pgsql80/man/manl/declare.l
+pgsql80/man/manl/delete.l
+pgsql80/man/manl/drop_aggregate.l
+pgsql80/man/manl/drop_cast.l
+pgsql80/man/manl/drop_conversion.l
+pgsql80/man/manl/drop_database.l
+pgsql80/man/manl/drop_domain.l
+pgsql80/man/manl/drop_function.l
+pgsql80/man/manl/drop_group.l
+pgsql80/man/manl/drop_index.l
+pgsql80/man/manl/drop_language.l
+pgsql80/man/manl/drop_operator.l
+pgsql80/man/manl/drop_operator_class.l
+pgsql80/man/manl/drop_rule.l
+pgsql80/man/manl/drop_schema.l
+pgsql80/man/manl/drop_sequence.l
+pgsql80/man/manl/drop_table.l
+pgsql80/man/manl/drop_trigger.l
+pgsql80/man/manl/drop_type.l
+pgsql80/man/manl/drop_user.l
+pgsql80/man/manl/drop_view.l
+pgsql80/man/manl/end.l
+pgsql80/man/manl/execute.l
+pgsql80/man/manl/explain.l
+pgsql80/man/manl/fetch.l
+pgsql80/man/manl/grant.l
+pgsql80/man/manl/insert.l
+pgsql80/man/manl/listen.l
+pgsql80/man/manl/load.l
+pgsql80/man/manl/lock.l
+pgsql80/man/manl/move.l
+pgsql80/man/manl/notify.l
+pgsql80/man/manl/prepare.l
+pgsql80/man/manl/reindex.l
+pgsql80/man/manl/reset.l
+pgsql80/man/manl/revoke.l
+pgsql80/man/manl/rollback.l
+pgsql80/man/manl/select.l
+pgsql80/man/manl/select_into.l
+pgsql80/man/manl/set.l
+pgsql80/man/manl/set_constraints.l
+pgsql80/man/manl/set_session_authorization.l
+pgsql80/man/manl/set_transaction.l
+pgsql80/man/manl/show.l
+pgsql80/man/manl/start_transaction.l
+pgsql80/man/manl/truncate.l
+pgsql80/man/manl/unlisten.l
+pgsql80/man/manl/update.l
+pgsql80/man/manl/vacuum.l
+pgsql80/${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/initdb.mo
+pgsql80/${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/pg_ctl.mo
+pgsql80/${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/pg_dump.mo
+pgsql80/${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/pgscripts.mo
+pgsql80/${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/de/LC_MESSAGES/initdb.mo
+pgsql80/${PKGLOCALEDIR}/locale/de/LC_MESSAGES/pg_config.mo
+pgsql80/${PKGLOCALEDIR}/locale/de/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/de/LC_MESSAGES/pg_ctl.mo
+pgsql80/${PKGLOCALEDIR}/locale/de/LC_MESSAGES/pg_dump.mo
+pgsql80/${PKGLOCALEDIR}/locale/de/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/de/LC_MESSAGES/pgscripts.mo
+pgsql80/${PKGLOCALEDIR}/locale/de/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/es/LC_MESSAGES/initdb.mo
+pgsql80/${PKGLOCALEDIR}/locale/es/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/es/LC_MESSAGES/pg_ctl.mo
+pgsql80/${PKGLOCALEDIR}/locale/es/LC_MESSAGES/pg_dump.mo
+pgsql80/${PKGLOCALEDIR}/locale/es/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/es/LC_MESSAGES/pgscripts.mo
+pgsql80/${PKGLOCALEDIR}/locale/es/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/initdb.mo
+pgsql80/${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/pg_ctl.mo
+pgsql80/${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/pg_dump.mo
+pgsql80/${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/pgscripts.mo
+pgsql80/${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/it/LC_MESSAGES/initdb.mo
+pgsql80/${PKGLOCALEDIR}/locale/it/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/it/LC_MESSAGES/pg_dump.mo
+pgsql80/${PKGLOCALEDIR}/locale/it/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/it/LC_MESSAGES/pgscripts.mo
+pgsql80/${PKGLOCALEDIR}/locale/it/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/pg_dump.mo
+pgsql80/${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/initdb.mo
+pgsql80/${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/pg_config.mo
+pgsql80/${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/pg_ctl.mo
+pgsql80/${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/pg_dump.mo
+pgsql80/${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/pgscripts.mo
+pgsql80/${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/initdb.mo
+pgsql80/${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/pg_config.mo
+pgsql80/${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/pg_ctl.mo
+pgsql80/${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/pg_dump.mo
+pgsql80/${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/pgscripts.mo
+pgsql80/${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/initdb.mo
+pgsql80/${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/pg_ctl.mo
+pgsql80/${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/pg_dump.mo
+pgsql80/${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/pgscripts.mo
+pgsql80/${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/pgscripts.mo
+pgsql80/${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/initdb.mo
+pgsql80/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/pg_config.mo
+pgsql80/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/pg_ctl.mo
+pgsql80/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/pg_dump.mo
+pgsql80/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/pgscripts.mo
+pgsql80/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/initdb.mo
+pgsql80/${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/pg_config.mo
+pgsql80/${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/pg_ctl.mo
+pgsql80/${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/pgscripts.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/initdb.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/pg_ctl.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/pg_dump.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/pgscripts.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/psql.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/initdb.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/pg_config.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/pg_controldata.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/pg_ctl.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/pg_dump.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/pg_resetxlog.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/pgscripts.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/psql.mo
+pgsql80/share/psqlrc.sample
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/tr/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/tr
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/sl/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/sk/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/ru/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/nb/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/it/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/hu/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/hu
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/fr/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/fa/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/fa
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/es/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/de/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/cs/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale
+@dirrm pgsql80/share
+@dirrm pgsql80/man/manl
+@comment in postgresql80-lib: @dirrm pgsql80/man/man1
+@comment in postgresql80-lib: @dirrm pgsql80/man
+@comment in postgresql80-lib: @dirrm pgsql80/bin

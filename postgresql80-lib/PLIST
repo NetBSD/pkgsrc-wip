@@ -1,0 +1,455 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/09 20:12:14 marc Exp $
+pgsql80/bin/ecpg
+pgsql80/include/ecpg_informix.h
+pgsql80/include/ecpgerrno.h
+pgsql80/include/ecpglib.h
+pgsql80/include/ecpgtype.h
+pgsql80/include/informix/esql/datetime.h
+pgsql80/include/informix/esql/decimal.h
+pgsql80/include/informix/esql/sqlda.h
+pgsql80/include/informix/esql/sqltypes.h
+pgsql80/include/internal/c.h
+pgsql80/include/internal/libpq-int.h
+pgsql80/include/internal/libpq/pqcomm.h
+pgsql80/include/internal/port.h
+pgsql80/include/internal/postgres_fe.h
+pgsql80/include/internal/pqexpbuffer.h
+pgsql80/include/libpq-fe.h
+pgsql80/include/libpq/libpq-fs.h
+pgsql80/include/pg_config.h
+pgsql80/include/pg_config_manual.h
+pgsql80/include/pg_config_os.h
+pgsql80/include/pgtypes_date.h
+pgsql80/include/pgtypes_error.h
+pgsql80/include/pgtypes_interval.h
+pgsql80/include/pgtypes_numeric.h
+pgsql80/include/pgtypes_timestamp.h
+pgsql80/include/postgres_ext.h
+pgsql80/include/server/access/attnum.h
+pgsql80/include/server/access/clog.h
+pgsql80/include/server/access/genam.h
+pgsql80/include/server/access/gist.h
+pgsql80/include/server/access/gistscan.h
+pgsql80/include/server/access/hash.h
+pgsql80/include/server/access/heapam.h
+pgsql80/include/server/access/hio.h
+pgsql80/include/server/access/htup.h
+pgsql80/include/server/access/ibit.h
+pgsql80/include/server/access/iqual.h
+pgsql80/include/server/access/itup.h
+pgsql80/include/server/access/nbtree.h
+pgsql80/include/server/access/printtup.h
+pgsql80/include/server/access/relscan.h
+pgsql80/include/server/access/rmgr.h
+pgsql80/include/server/access/rtree.h
+pgsql80/include/server/access/rtscan.h
+pgsql80/include/server/access/sdir.h
+pgsql80/include/server/access/skey.h
+pgsql80/include/server/access/slru.h
+pgsql80/include/server/access/subtrans.h
+pgsql80/include/server/access/transam.h
+pgsql80/include/server/access/tupdesc.h
+pgsql80/include/server/access/tupmacs.h
+pgsql80/include/server/access/tuptoaster.h
+pgsql80/include/server/access/valid.h
+pgsql80/include/server/access/xact.h
+pgsql80/include/server/access/xlog.h
+pgsql80/include/server/access/xlog_internal.h
+pgsql80/include/server/access/xlogdefs.h
+pgsql80/include/server/access/xlogutils.h
+pgsql80/include/server/bootstrap/bootstrap.h
+pgsql80/include/server/c.h
+pgsql80/include/server/catalog/catalog.h
+pgsql80/include/server/catalog/catname.h
+pgsql80/include/server/catalog/catversion.h
+pgsql80/include/server/catalog/dependency.h
+pgsql80/include/server/catalog/heap.h
+pgsql80/include/server/catalog/index.h
+pgsql80/include/server/catalog/indexing.h
+pgsql80/include/server/catalog/namespace.h
+pgsql80/include/server/catalog/pg_aggregate.h
+pgsql80/include/server/catalog/pg_am.h
+pgsql80/include/server/catalog/pg_amop.h
+pgsql80/include/server/catalog/pg_amproc.h
+pgsql80/include/server/catalog/pg_attrdef.h
+pgsql80/include/server/catalog/pg_attribute.h
+pgsql80/include/server/catalog/pg_cast.h
+pgsql80/include/server/catalog/pg_class.h
+pgsql80/include/server/catalog/pg_constraint.h
+pgsql80/include/server/catalog/pg_control.h
+pgsql80/include/server/catalog/pg_conversion.h
+pgsql80/include/server/catalog/pg_database.h
+pgsql80/include/server/catalog/pg_depend.h
+pgsql80/include/server/catalog/pg_description.h
+pgsql80/include/server/catalog/pg_group.h
+pgsql80/include/server/catalog/pg_index.h
+pgsql80/include/server/catalog/pg_inherits.h
+pgsql80/include/server/catalog/pg_language.h
+pgsql80/include/server/catalog/pg_largeobject.h
+pgsql80/include/server/catalog/pg_listener.h
+pgsql80/include/server/catalog/pg_namespace.h
+pgsql80/include/server/catalog/pg_opclass.h
+pgsql80/include/server/catalog/pg_operator.h
+pgsql80/include/server/catalog/pg_proc.h
+pgsql80/include/server/catalog/pg_rewrite.h
+pgsql80/include/server/catalog/pg_shadow.h
+pgsql80/include/server/catalog/pg_statistic.h
+pgsql80/include/server/catalog/pg_tablespace.h
+pgsql80/include/server/catalog/pg_trigger.h
+pgsql80/include/server/catalog/pg_type.h
+pgsql80/include/server/catalog/pg_version.h
+pgsql80/include/server/commands/alter.h
+pgsql80/include/server/commands/async.h
+pgsql80/include/server/commands/cluster.h
+pgsql80/include/server/commands/comment.h
+pgsql80/include/server/commands/conversioncmds.h
+pgsql80/include/server/commands/copy.h
+pgsql80/include/server/commands/dbcommands.h
+pgsql80/include/server/commands/defrem.h
+pgsql80/include/server/commands/explain.h
+pgsql80/include/server/commands/lockcmds.h
+pgsql80/include/server/commands/portalcmds.h
+pgsql80/include/server/commands/prepare.h
+pgsql80/include/server/commands/proclang.h
+pgsql80/include/server/commands/schemacmds.h
+pgsql80/include/server/commands/sequence.h
+pgsql80/include/server/commands/tablecmds.h
+pgsql80/include/server/commands/tablespace.h
+pgsql80/include/server/commands/trigger.h
+pgsql80/include/server/commands/typecmds.h
+pgsql80/include/server/commands/user.h
+pgsql80/include/server/commands/vacuum.h
+pgsql80/include/server/commands/variable.h
+pgsql80/include/server/commands/version.h
+pgsql80/include/server/commands/view.h
+pgsql80/include/server/dynloader.h
+pgsql80/include/server/executor/execdebug.h
+pgsql80/include/server/executor/execdefs.h
+pgsql80/include/server/executor/execdesc.h
+pgsql80/include/server/executor/executor.h
+pgsql80/include/server/executor/functions.h
+pgsql80/include/server/executor/hashjoin.h
+pgsql80/include/server/executor/instrument.h
+pgsql80/include/server/executor/nodeAgg.h
+pgsql80/include/server/executor/nodeAppend.h
+pgsql80/include/server/executor/nodeFunctionscan.h
+pgsql80/include/server/executor/nodeGroup.h
+pgsql80/include/server/executor/nodeHash.h
+pgsql80/include/server/executor/nodeHashjoin.h
+pgsql80/include/server/executor/nodeIndexscan.h
+pgsql80/include/server/executor/nodeLimit.h
+pgsql80/include/server/executor/nodeMaterial.h
+pgsql80/include/server/executor/nodeMergejoin.h
+pgsql80/include/server/executor/nodeNestloop.h
+pgsql80/include/server/executor/nodeResult.h
+pgsql80/include/server/executor/nodeSeqscan.h
+pgsql80/include/server/executor/nodeSetOp.h
+pgsql80/include/server/executor/nodeSort.h
+pgsql80/include/server/executor/nodeSubplan.h
+pgsql80/include/server/executor/nodeSubqueryscan.h
+pgsql80/include/server/executor/nodeTidscan.h
+pgsql80/include/server/executor/nodeUnique.h
+pgsql80/include/server/executor/spi.h
+pgsql80/include/server/executor/spi_priv.h
+pgsql80/include/server/executor/tstoreReceiver.h
+pgsql80/include/server/executor/tuptable.h
+pgsql80/include/server/fmgr.h
+pgsql80/include/server/funcapi.h
+pgsql80/include/server/getaddrinfo.h
+pgsql80/include/server/getopt_long.h
+pgsql80/include/server/lib/dllist.h
+pgsql80/include/server/lib/stringinfo.h
+pgsql80/include/server/libpq/auth.h
+pgsql80/include/server/libpq/be-fsstubs.h
+pgsql80/include/server/libpq/crypt.h
+pgsql80/include/server/libpq/hba.h
+pgsql80/include/server/libpq/ip.h
+pgsql80/include/server/libpq/libpq-be.h
+pgsql80/include/server/libpq/libpq-fs.h
+pgsql80/include/server/libpq/libpq.h
+pgsql80/include/server/libpq/pqcomm.h
+pgsql80/include/server/libpq/pqformat.h
+pgsql80/include/server/libpq/pqsignal.h
+pgsql80/include/server/mb/pg_wchar.h
+pgsql80/include/server/miscadmin.h
+pgsql80/include/server/nodes/bitmapset.h
+pgsql80/include/server/nodes/execnodes.h
+pgsql80/include/server/nodes/makefuncs.h
+pgsql80/include/server/nodes/memnodes.h
+pgsql80/include/server/nodes/nodeFuncs.h
+pgsql80/include/server/nodes/nodes.h
+pgsql80/include/server/nodes/params.h
+pgsql80/include/server/nodes/parsenodes.h
+pgsql80/include/server/nodes/pg_list.h
+pgsql80/include/server/nodes/plannodes.h
+pgsql80/include/server/nodes/primnodes.h
+pgsql80/include/server/nodes/print.h
+pgsql80/include/server/nodes/readfuncs.h
+pgsql80/include/server/nodes/relation.h
+pgsql80/include/server/nodes/value.h
+pgsql80/include/server/optimizer/clauses.h
+pgsql80/include/server/optimizer/cost.h
+pgsql80/include/server/optimizer/geqo.h
+pgsql80/include/server/optimizer/geqo_copy.h
+pgsql80/include/server/optimizer/geqo_gene.h
+pgsql80/include/server/optimizer/geqo_misc.h
+pgsql80/include/server/optimizer/geqo_mutation.h
+pgsql80/include/server/optimizer/geqo_pool.h
+pgsql80/include/server/optimizer/geqo_random.h
+pgsql80/include/server/optimizer/geqo_recombination.h
+pgsql80/include/server/optimizer/geqo_selection.h
+pgsql80/include/server/optimizer/joininfo.h
+pgsql80/include/server/optimizer/pathnode.h
+pgsql80/include/server/optimizer/paths.h
+pgsql80/include/server/optimizer/plancat.h
+pgsql80/include/server/optimizer/planmain.h
+pgsql80/include/server/optimizer/planner.h
+pgsql80/include/server/optimizer/prep.h
+pgsql80/include/server/optimizer/restrictinfo.h
+pgsql80/include/server/optimizer/subselect.h
+pgsql80/include/server/optimizer/tlist.h
+pgsql80/include/server/optimizer/var.h
+pgsql80/include/server/parser/analyze.h
+pgsql80/include/server/parser/gramparse.h
+pgsql80/include/server/parser/keywords.h
+pgsql80/include/server/parser/parse.h
+pgsql80/include/server/parser/parse_agg.h
+pgsql80/include/server/parser/parse_clause.h
+pgsql80/include/server/parser/parse_coerce.h
+pgsql80/include/server/parser/parse_expr.h
+pgsql80/include/server/parser/parse_func.h
+pgsql80/include/server/parser/parse_node.h
+pgsql80/include/server/parser/parse_oper.h
+pgsql80/include/server/parser/parse_relation.h
+pgsql80/include/server/parser/parse_target.h
+pgsql80/include/server/parser/parse_type.h
+pgsql80/include/server/parser/parser.h
+pgsql80/include/server/parser/parsetree.h
+pgsql80/include/server/parser/scansup.h
+pgsql80/include/server/pg_config.h
+pgsql80/include/server/pg_config_manual.h
+pgsql80/include/server/pg_config_os.h
+pgsql80/include/server/pgstat.h
+pgsql80/include/server/pgtime.h
+pgsql80/include/server/port.h
+pgsql80/include/server/port/aix.h
+pgsql80/include/server/port/beos.h
+pgsql80/include/server/port/bsdi.h
+pgsql80/include/server/port/cygwin.h
+pgsql80/include/server/port/${LOWER_OPSYS}.h
+pgsql80/include/server/port/dgux.h
+pgsql80/include/server/port/freebsd.h
+pgsql80/include/server/port/hpux.h
+pgsql80/include/server/port/irix.h
+pgsql80/include/server/port/linux.h
+pgsql80/include/server/port/netbsd.h
+pgsql80/include/server/port/nextstep.h
+pgsql80/include/server/port/openbsd.h
+pgsql80/include/server/port/osf.h
+pgsql80/include/server/port/qnx4.h
+pgsql80/include/server/port/sco.h
+pgsql80/include/server/port/solaris.h
+pgsql80/include/server/port/sunos4.h
+pgsql80/include/server/port/svr4.h
+pgsql80/include/server/port/ultrix4.h
+pgsql80/include/server/port/univel.h
+pgsql80/include/server/port/unixware.h
+pgsql80/include/server/port/win32.h
+pgsql80/include/server/postgres.h
+pgsql80/include/server/postgres_ext.h
+pgsql80/include/server/postgres_fe.h
+pgsql80/include/server/regex/regcustom.h
+pgsql80/include/server/regex/regerrs.h
+pgsql80/include/server/regex/regex.h
+pgsql80/include/server/regex/regguts.h
+pgsql80/include/server/rewrite/prs2lock.h
+pgsql80/include/server/rewrite/rewriteDefine.h
+pgsql80/include/server/rewrite/rewriteHandler.h
+pgsql80/include/server/rewrite/rewriteManip.h
+pgsql80/include/server/rewrite/rewriteRemove.h
+pgsql80/include/server/rewrite/rewriteSupport.h
+pgsql80/include/server/rusagestub.h
+pgsql80/include/server/storage/backendid.h
+pgsql80/include/server/storage/block.h
+pgsql80/include/server/storage/buf.h
+pgsql80/include/server/storage/buf_internals.h
+pgsql80/include/server/storage/buffile.h
+pgsql80/include/server/storage/bufmgr.h
+pgsql80/include/server/storage/bufpage.h
+pgsql80/include/server/storage/fd.h
+pgsql80/include/server/storage/freespace.h
+pgsql80/include/server/storage/ipc.h
+pgsql80/include/server/storage/item.h
+pgsql80/include/server/storage/itemid.h
+pgsql80/include/server/storage/itempos.h
+pgsql80/include/server/storage/itemptr.h
+pgsql80/include/server/storage/large_object.h
+pgsql80/include/server/storage/lmgr.h
+pgsql80/include/server/storage/lock.h
+pgsql80/include/server/storage/lwlock.h
+pgsql80/include/server/storage/off.h
+pgsql80/include/server/storage/pg_sema.h
+pgsql80/include/server/storage/pg_shmem.h
+pgsql80/include/server/storage/pmsignal.h
+pgsql80/include/server/storage/pos.h
+pgsql80/include/server/storage/proc.h
+pgsql80/include/server/storage/relfilenode.h
+pgsql80/include/server/storage/s_lock.h
+pgsql80/include/server/storage/shmem.h
+pgsql80/include/server/storage/sinval.h
+pgsql80/include/server/storage/sinvaladt.h
+pgsql80/include/server/storage/smgr.h
+pgsql80/include/server/storage/spin.h
+pgsql80/include/server/strdup.h
+pgsql80/include/server/tcop/dest.h
+pgsql80/include/server/tcop/fastpath.h
+pgsql80/include/server/tcop/pquery.h
+pgsql80/include/server/tcop/tcopdebug.h
+pgsql80/include/server/tcop/tcopprot.h
+pgsql80/include/server/tcop/utility.h
+pgsql80/include/server/utils/acl.h
+pgsql80/include/server/utils/array.h
+pgsql80/include/server/utils/ascii.h
+pgsql80/include/server/utils/builtins.h
+pgsql80/include/server/utils/cash.h
+pgsql80/include/server/utils/catcache.h
+pgsql80/include/server/utils/date.h
+pgsql80/include/server/utils/datetime.h
+pgsql80/include/server/utils/datum.h
+pgsql80/include/server/utils/dynahash.h
+pgsql80/include/server/utils/dynamic_loader.h
+pgsql80/include/server/utils/elog.h
+pgsql80/include/server/utils/errcodes.h
+pgsql80/include/server/utils/fmgroids.h
+pgsql80/include/server/utils/fmgrtab.h
+pgsql80/include/server/utils/formatting.h
+pgsql80/include/server/utils/geo_decls.h
+pgsql80/include/server/utils/guc.h
+pgsql80/include/server/utils/guc_tables.h
+pgsql80/include/server/utils/help_config.h
+pgsql80/include/server/utils/hsearch.h
+pgsql80/include/server/utils/inet.h
+pgsql80/include/server/utils/int8.h
+pgsql80/include/server/utils/inval.h
+pgsql80/include/server/utils/logtape.h
+pgsql80/include/server/utils/lsyscache.h
+pgsql80/include/server/utils/memutils.h
+pgsql80/include/server/utils/nabstime.h
+pgsql80/include/server/utils/numeric.h
+pgsql80/include/server/utils/palloc.h
+pgsql80/include/server/utils/pg_crc.h
+pgsql80/include/server/utils/pg_locale.h
+pgsql80/include/server/utils/pg_lzcompress.h
+pgsql80/include/server/utils/portal.h
+pgsql80/include/server/utils/ps_status.h
+pgsql80/include/server/utils/rel.h
+pgsql80/include/server/utils/relcache.h
+pgsql80/include/server/utils/resowner.h
+pgsql80/include/server/utils/selfuncs.h
+pgsql80/include/server/utils/syscache.h
+pgsql80/include/server/utils/timestamp.h
+pgsql80/include/server/utils/tqual.h
+pgsql80/include/server/utils/tuplesort.h
+pgsql80/include/server/utils/tuplestore.h
+pgsql80/include/server/utils/typcache.h
+pgsql80/include/server/utils/varbit.h
+pgsql80/include/sql3types.h
+pgsql80/include/sqlca.h
+pgsql80/lib/libecpg.4.2.dylib
+pgsql80/lib/libecpg.4.dylib
+pgsql80/lib/libecpg.a
+pgsql80/lib/libecpg.dylib
+pgsql80/lib/libecpg_compat.1.1.dylib
+pgsql80/lib/libecpg_compat.1.dylib
+pgsql80/lib/libecpg_compat.a
+pgsql80/lib/libecpg_compat.dylib
+pgsql80/lib/libpgtypes.1.2.dylib
+pgsql80/lib/libpgtypes.1.dylib
+pgsql80/lib/libpgtypes.a
+pgsql80/lib/libpgtypes.dylib
+pgsql80/lib/libpq.3.2.dylib
+pgsql80/lib/libpq.3.dylib
+pgsql80/lib/libpq.a
+pgsql80/lib/libpq.dylib
+pgsql80/lib/postgresql/plpgsql.so
+pgsql80/man/man1/ecpg.1
+pgsql80/${PKGLOCALEDIR}/locale/af/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libpq.mo
+pgsql80/${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libpq.mo
+pgsql80/share/pg_service.conf.sample
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/zh_TW
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/zh_CN
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/sv
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/sl/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/sl
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/sk/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/sk
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/ru/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/ru
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/pt_BR
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/nb/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/nb
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/it/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/it
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/hr/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/hr
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/fr/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/fr
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/es/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/es
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/de/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/de
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/cs/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/cs
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/af/LC_MESSAGES
+@dirrm pgsql80/${PKGLOCALEDIR}/locale/af
+@dirrm pgsql80/${PKGLOCALEDIR}/locale
+@dirrm pgsql80/share
+@dirrm pgsql80/man/man1
+@dirrm pgsql80/man
+@dirrm pgsql80/lib/postgresql
+@dirrm pgsql80/lib
+@dirrm pgsql80/include/server/utils
+@dirrm pgsql80/include/server/tcop
+@dirrm pgsql80/include/server/storage
+@dirrm pgsql80/include/server/rewrite
+@dirrm pgsql80/include/server/regex
+@dirrm pgsql80/include/server/port
+@dirrm pgsql80/include/server/parser
+@dirrm pgsql80/include/server/optimizer
+@dirrm pgsql80/include/server/nodes
+@dirrm pgsql80/include/server/mb
+@dirrm pgsql80/include/server/libpq
+@dirrm pgsql80/include/server/lib
+@dirrm pgsql80/include/server/executor
+@dirrm pgsql80/include/server/commands
+@dirrm pgsql80/include/server/catalog
+@dirrm pgsql80/include/server/bootstrap
+@dirrm pgsql80/include/server/access
+@dirrm pgsql80/include/server
+@dirrm pgsql80/include/libpq
+@dirrm pgsql80/include/internal/libpq
+@exec ${MKDIR} %D/pgsql80/include/internal/lib
+@dirrm pgsql80/include/internal/lib
+@dirrm pgsql80/include/internal
+@dirrm pgsql80/include/informix/esql
+@dirrm pgsql80/include/informix
+@dirrm pgsql80/include
+@dirrm pgsql80/bin
+@dirrm pgsql80
