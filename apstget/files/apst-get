@@ -315,7 +315,7 @@ case "$1" in
 	do_update
 	;;
 "dist-upgrade")
-	echo "==> Generating the updated list..."
+	echo "==> Generating the update list..."
 	LIST=`${PKGCHK} -i | grep mismatch | \
 		awk -F '([.\-]*)-[0-9]' '{print $1 }'|grep -v WARNING`
 		
@@ -344,6 +344,9 @@ case "$1" in
 		break;
 		fi
 	done
+	;;
+*)
+	do_usage $0
 	;;
 esac
 
