@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1709 2005/03/29 05:19:31 sifu Exp $
-# $NetBSD: Makefile,v 1.1709 2005/03/29 05:19:31 sifu Exp $
+# $Id: Makefile,v 1.1710 2005/03/29 14:19:54 minskim Exp $
+# $NetBSD: Makefile,v 1.1710 2005/03/29 14:19:54 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -840,7 +840,6 @@ SUBDIR+=	rssh
 SUBDIR+=	rtorrent
 SUBDIR+=	ruby-RMagick
 SUBDIR+=	ruby-dpklib
-SUBDIR+=	ruby-imlib2
 SUBDIR+=	ruby-ming
 SUBDIR+=	ruby-misen
 SUBDIR+=	ruby-ncurses
