@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/24 04:32:59 blef Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/24 05:14:37 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-docs-${XF_VER}
@@ -14,7 +14,6 @@ COMMENT=	XFree86 Documentation
 DEPENDS=	imake>=4.3.0:../../wip/imake
 
 USE_BUILDLINK2=		yes
-PROJECTROOT=		-DProjectRoot=${PREFIX}
 NO_XFREE86_TARGETS=	# defined
 
 pre-configure:
@@ -22,7 +21,7 @@ pre-configure:
 
 do-configure:
 	( cd ${WRKSRC}; \
-	${IMAKE} -DUseInstalled ${PROJECTROOT} -I. -I${PREFIX}/lib/X11/config \
+	${IMAKE} -DUseInstalled -I. -I${PREFIX}/lib/X11/config \
 		-DTOPDIR=../.. -DCURDIR=.; \
 	${MAKE} Makefiles ; \
 	${MAKE} includes ; \
