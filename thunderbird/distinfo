@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/12/20 11:03:44 grantbeattie Exp $
+$NetBSD: distinfo,v 1.3 2003/12/30 04:57:33 jgoamakf Exp $
 
 SHA1 (thunderbird-source-0.4.tar.bz2) = e84fab22248c8052e110272204214ff3a3ad0690
 Size (thunderbird-source-0.4.tar.bz2) = 30968925 bytes
@@ -16,5 +16,5 @@ SHA1 (patch-be) = 20050e778410393b2ac6343b9f8ba2c0affc432b
 SHA1 (patch-bm) = d67723f17ca2ceaab0488798f55a4c621926a029
 SHA1 (patch-bn) = b5a5effc0b427ede79171f167a4110959ed8b064
 SHA1 (patch-bo) = b4c52c0b798e4a3004fe1eee0630eba173204943
-SHA1 (patch-bp) = e8cdd22555b577109ae777410c95f8aeeb5f6f25
+SHA1 (patch-bp) = 016262f79861111dd124627874b1c642d1d1d64e
 SHA1 (patch-bq) = f81601c6bf7aa3a47d93bd9a24b5d22fd7133e1c
