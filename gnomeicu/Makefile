@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/19 12:58:28 bmeurer Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/06 22:34:55 bmeurer Exp $
 
 DISTNAME=	gnomeicu-0.99
 CATEGORIES=	chat gnome
@@ -22,7 +22,7 @@ GCONF2_SCHEMAS=		gnomeicu.schemas
 
 .include "../../databases/gdbm/buildlink2.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../net/gnet/buildlink2.mk"
+.include "../../net/gnet1/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
