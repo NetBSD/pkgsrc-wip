@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.953 2004/02/11 20:40:09 rasputnik Exp $
-# $NetBSD: Makefile,v 1.953 2004/02/11 20:40:09 rasputnik Exp $
+# $Id: Makefile,v 1.954 2004/02/12 02:41:23 minskim Exp $
+# $NetBSD: Makefile,v 1.954 2004/02/12 02:41:23 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -309,7 +309,6 @@ SUBDIR+=	libmodplug
 SUBDIR+=	libneural
 SUBDIR+=	libogg-nightly
 SUBDIR+=	libol
-SUBDIR+=	libpathan
 SUBDIR+=	libprelude
 SUBDIR+=	libstatgrab
 SUBDIR+=	libtlen
