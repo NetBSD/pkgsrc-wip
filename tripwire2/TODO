@@ -1,0 +1,7 @@
+tested on:
+	* OpenBSD
+
+TODO: Must be ported to:
+	* FreeBSD
+	* Linux
+	* NetBSD (not supported by default, must patch more)

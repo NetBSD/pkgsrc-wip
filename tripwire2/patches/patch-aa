@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/10 17:05:27 poppnk Exp $
+--- Makefile.orig	Sat Jul 10 19:53:15 2004
++++ Makefile	Sat Jul 10 19:53:29 2004
+@@ -79,7 +79,7 @@
+ # sparc-linux == Linux Sparc (not fully implemented)
+ #
+ 
+-SYSPRE = i686-pc-linux
++#SYSPRE = i686-pc-linux
+ #SYSPRE = sparc-linux
+ #SYSPRE = i386-unknown-freebsd
+ #SYSPRE = i386-unknown-openbsd
+@@ -93,7 +93,7 @@
+ # file to Makefile.linux_intel or something similar.
+ 
+ MAKEFILE = Makefile
+-GMAKE = gmake
++GMAKE = ${PREFIX}/bin/gmake
+ 
+ #-----------------------------------------------------------------------------
+ # STLPORT

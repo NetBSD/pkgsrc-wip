@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/10 17:05:27 poppnk Exp $
+
+SHA1 (tripwire-2.3.1-2.tar.gz) = 9ae70cae2b526c83c857a2391a8a530de99433fc
+Size (tripwire-2.3.1-2.tar.gz) = 1514955 bytes
+SHA1 (patch-aa) = 49238e7980b468bea37f8e27b440df8d4c13f343

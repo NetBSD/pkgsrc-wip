@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/10 17:05:27 poppnk Exp $
+man/man4/twconfig.4
+man/man4/twpolicy.4
+man/man5/twfiles.5
+man/man8/siggen.8
+man/man8/tripwire.8
+man/man8/twadmin.8
+man/man8/twintro.8
+man/man8/twprint.8
+sbin/siggen
+sbin/tripwire
+sbin/twadmin
+sbin/twprint
+share/tripwire/policyguide.txt
+share/tripwire/twpol.txt
+@dirrm share/tripwire
