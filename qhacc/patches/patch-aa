@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/05/26 04:00:43 jeremy-c-reed Exp $
+
+--- docs/Makefile.in.orig	2004-05-01 13:47:04.000000000 -0700
++++ docs/Makefile.in
+@@ -169,7 +169,7 @@ html_DATA = index.html intro.html format
+ 
+ EXTRA_DIST = $(html_DATA) uml.xmi
+ 
+-htmldir = $(datadir)/doc/html
++htmldir = $(datadir)/doc/qhacc
+ subdir = docs
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

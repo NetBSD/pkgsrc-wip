@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/05/26 04:00:43 jeremy-c-reed Exp $
+
+--- Makefile.in.orig	2004-05-25 13:58:12.000000000 -0700
++++ Makefile.in
+@@ -162,7 +162,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = lib src plugins contrib docs qm
++SUBDIRS = lib src plugins docs
+ 
+ EXTRA_DIST = AUTHORS NEWS COPYING README ChangeLog THANKS FILE_FORMAT TODO \
+ 						 INSTALL UPGRADE

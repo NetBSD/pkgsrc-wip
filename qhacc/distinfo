@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/05/26 04:00:43 jeremy-c-reed Exp $
+
+SHA1 (qhacc-3.0.tar.gz) = c62947e31025ec49cd2309b350847b9d23788a6e
+Size (qhacc-3.0.tar.gz) = 524020 bytes
+SHA1 (patch-aa) = 5b0701901a16a6cd773c9f3acfdc64f50d2ac502
+SHA1 (patch-ab) = 8c9fe3cada9cd30bbe97e21736eab1d1346723eb

@@ -1,0 +1,8 @@
+should the comment be: Simple QT-based financial manager  ??
+
+test under NetBSD (I didn't test yet, because qt3 fails
+when using buildlink3)
+
+a KDE integrated version is available too, called KHacc
+
+make a MESSAGE about --create for a new configuration
