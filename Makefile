@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1378 2004/07/13 01:49:58 cetrox Exp $
-# $NetBSD: Makefile,v 1.1378 2004/07/13 01:49:58 cetrox Exp $
+# $Id: Makefile,v 1.1379 2004/07/13 04:09:42 cetrox Exp $
+# $NetBSD: Makefile,v 1.1379 2004/07/13 04:09:42 cetrox Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -10,6 +10,7 @@ SUBDIR+=	LabPlot
 SUBDIR+=	OpenGLUT
 SUBDIR+=	PPower4
 SUBDIR+=	PyBabelFish
+SUBDIR+=	PyPanel
 SUBDIR+=	Pythonol
 SUBDIR+=	Radiator
 SUBDIR+=	Radiator-all
