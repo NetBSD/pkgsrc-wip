@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/09/27 10:04:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/27 10:07:07 xtraeme Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -40,7 +40,7 @@ JABBERD_LOGDIR?=	/var/log/jabberd
 JABBERD_SPOOLDIR?=	/var/spool/jabberd
 JABBERD_PIDDIR?=	/var/run/jabberd
 
-.for f in ${JABBERD_LOGDIR} ${JABBERD_SPOOLDIR}
+.for f in ${JABBERD_LOGDIR} ${JABBERD_SPOOLDIR} ${JABBERD_PIDDIR}
 OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 750
 .endfor
 
