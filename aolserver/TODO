@@ -30,10 +30,4 @@
 - MAKE_FLAGS should be separated from USE_* variables. (I don't think
   this matters much, but I prefer it this way ;)
 
-- About MESSAGE... see pkglint:
-
-  WARN: ./MESSAGE should begin with a 75-character double-dashed line.
-  FATAL: missing RCS Id in MESSAGE file: ./MESSAGE
-  WARN: ./MESSAGE should end with a 75-character double-dashed line.
-
 - Add a trailing / to HOMEPAGE.
