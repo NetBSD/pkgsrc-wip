@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1659 2005/02/21 10:50:06 imilh Exp $
-# $NetBSD: Makefile,v 1.1659 2005/02/21 10:50:06 imilh Exp $
+# $Id: Makefile,v 1.1660 2005/02/23 18:50:23 daprice Exp $
+# $NetBSD: Makefile,v 1.1660 2005/02/23 18:50:23 daprice Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -236,6 +236,7 @@ SUBDIR+=	galib
 SUBDIR+=	gcompris
 SUBDIR+=	gdam
 SUBDIR+=	geeklog
+SUBDIR+=	geos
 SUBDIR+=	gettext-lib
 SUBDIR+=	gettext-runtime
 SUBDIR+=	gettext-tools
@@ -264,6 +265,14 @@ SUBDIR+=	goldwater
 SUBDIR+=	gotmail
 SUBDIR+=	gov2
 SUBDIR+=	gps
+SUBDIR+=	grass
+SUBDIR+=	grass-JockeyRidge
+SUBDIR+=	grass-Maas
+SUBDIR+=	grass-Slovakia
+SUBDIR+=	grass-Spearfish
+SUBDIR+=	grass-Spearfish-imagery
+SUBDIR+=	grass-WakeCounty
+SUBDIR+=	grass-gully
 SUBDIR+=	grip
 SUBDIR+=	grisbi
 SUBDIR+=	gsoap
@@ -462,6 +471,7 @@ SUBDIR+=	lua-pgsql
 SUBDIR+=	luacheia
 SUBDIR+=	luaposix
 SUBDIR+=	luasocket
+SUBDIR+=	lucy
 SUBDIR+=	lwc
 SUBDIR+=	mailfilter
 SUBDIR+=	man
@@ -634,6 +644,7 @@ SUBDIR+=	php-doc-sl
 SUBDIR+=	php-doc-sv
 SUBDIR+=	php-fcgi
 SUBDIR+=	php-mode
+SUBDIR+=	php4-dbx
 SUBDIR+=	picasm
 SUBDIR+=	picprog
 SUBDIR+=	pinball
