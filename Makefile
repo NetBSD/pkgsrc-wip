@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1118 2004/03/27 23:40:07 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1118 2004/03/27 23:40:07 xtraeme Exp $
+# $Id: Makefile,v 1.1119 2004/03/27 23:56:01 mpasternak Exp $
+# $NetBSD: Makefile,v 1.1119 2004/03/27 23:56:01 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -54,6 +54,7 @@ SUBDIR+=	beast
 SUBDIR+=	beep-media-player
 SUBDIR+=	billardgl
 SUBDIR+=	bin86
+SUBDIR+=	bison13
 SUBDIR+=	bitchbot
 SUBDIR+=	blassic
 SUBDIR+=	bnr2
@@ -557,6 +558,7 @@ SUBDIR+=	prelude-nids
 SUBDIR+=	premake
 SUBDIR+=	prngd
 SUBDIR+=	procps
+SUBDIR+=	prothon
 SUBDIR+=	prtunnel
 SUBDIR+=	psh
 SUBDIR+=	pts
