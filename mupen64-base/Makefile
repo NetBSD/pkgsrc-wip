@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/17 00:03:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/17 00:50:50 xtraeme Exp $
 #
 
 DISTNAME=	mupen64_src-0.3
-PKGNAME=	${DISTNAME:S/_src//}
+PKGNAME=	${DISTNAME:S/_src/-base/}
 CATEGORIES=	emulators
 MASTER_SITES=	http://mupen64.emulation64.com/files/src/
 EXTRACT_SUFX=	.tar.bz2
