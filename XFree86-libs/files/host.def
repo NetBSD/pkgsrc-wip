@@ -1,0 +1,47 @@
+/*
+ * XFree86 packages for pkgsrc system
+ * 
+ * $Id: host.def,v 1.1.1.1 2003/07/23 20:33:50 xtraeme Exp $ 
+ *
+ */
+
+#define ProjectRoot PREFIX
+
+#define NothingOutsideProjectRoot YES
+
+#define	InstallXdmConfig NO
+#define	InstallXinitConfig NO
+#define	InstallFSConfig NO
+#define	InstallAppDefFiles NO
+#define	BuildServer NO
+#define	BuildFontServer NO
+#define	BuildFonts NO
+#define	Build75DpiFonts NO
+#define	Build100DpiFonts NO
+#define	BuildSpeedoFonts NO
+#define BuildType1Fonts NO
+#define	BuildCIDFonts NO
+#define	BuildCyrillicFonts NO
+#define	BuildLatin2Fonts NO
+#define	BuildPlugin NO
+#define DebuggableLibraries NO
+#define StandardIncludes \
+	-IBLNK/include \
+	-IPREFIX/include \
+	-ILOCALBASE/include
+
+#define UseInstalledPrograms YES
+
+#if !defined(FreeBSDArchitecture)
+# define BuildThreadStubLibrary YES
+#endif
+
+#define GlxDriverUsesMesa YES
+#define HasFreetype2 YES
+#define Freetype2Dir BLNK
+
+#define HasExpat YES
+#define ExpatDir BLNK
+
+#define HasFontconfig YES
+#define FontconfigDir BLNK
