@@ -1,6 +1,6 @@
-#!@RCS_SCRIPTS_SHELL@
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cvsd.sh,v 1.2 2003/07/14 17:55:30 xtraeme Exp $
+# $NetBSD: cvsd.sh,v 1.3 2003/09/27 02:35:15 xtraeme Exp $
 #
 # PROVIDE: cvsd
 # REQUIRE: DAEMON

@@ -1,4 +1,4 @@
-#!@RCS_SCRIPTS_SHELL@
+#!@RCD_SCRIPTS_SHELL@
 #
 #  PPower4 shell script file                 last update: 29 Aug 2002
 #
