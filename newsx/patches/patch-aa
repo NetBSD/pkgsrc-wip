@@ -1,29 +1,41 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/05/07 19:08:23 cubidou Exp $
+$NetBSD: patch-aa,v 1.2 2003/06/08 08:03:27 cubidou Exp $
 
---- configure.orig	2003-03-28 12:20:44.000000000 +0100
+--- configure.orig	2003-05-18 19:25:34.000000000 +0200
 +++ configure
-@@ -1040,24 +1040,6 @@ echo "configure:1038: checking history" 
- 		    HISTORY="$with_history"
+@@ -1965,35 +1965,8 @@ echo $ECHO_N "checking history... $ECHO_
  		fi
  	    fi
--	    	    if test -f $HISTORY; then
+ 	    if test -f $HISTORY; then
 -		if test -f $HISTORY.index; then
--		    echo "$ac_t""$HISTORY" 1>&6
+-		    echo "$as_me:$LINENO: result: $HISTORY" >&5
+-echo "${ECHO_T}$HISTORY" >&6
 -		elif test -f $HISTORY.pag; then
--		    cat >> confdefs.h <<EOF
--#define DO_TAGGED_HASH 1
--EOF
 -
--		    echo "$ac_t""$HISTORY" 1>&6
+-cat >>confdefs.h <<_ACEOF
+-#define DO_TAGGED_HASH 1
+-_ACEOF
+-
+-		    echo "$as_me:$LINENO: result: $HISTORY" >&5
+-echo "${ECHO_T}$HISTORY" >&6
+-		elif test -f $HISTORY.n.index; then
+-		    echo "$as_me:$LINENO: result: $HISTORY" >&5
+-echo "${ECHO_T}$HISTORY" >&6
+-		elif test -f $HISTORY.n.pag; then
+-
+-cat >>confdefs.h <<_ACEOF
+-#define DO_TAGGED_HASH 1
+-_ACEOF
+-
+-		    echo "$as_me:$LINENO: result: $HISTORY" >&5
++		echo "$as_me:$LINENO: result: $HISTORY" >&5
+ echo "${ECHO_T}$HISTORY" >&6
 -		else
--		    echo "$ac_t""ERROR: cannot determine hash mode of $HISTORY" 1>&6
--		    echo "$ac_t""Try running makehistory first" 1>&6
+-		    echo "$as_me:$LINENO: result: ERROR: cannot determine hash mode of $HISTORY" >&5
+-echo "${ECHO_T}ERROR: cannot determine hash mode of $HISTORY" >&6
+-		    echo "$as_me:$LINENO: result: Try running makehistory first" >&5
+-echo "${ECHO_T}Try running makehistory first" >&6
 -		    exit 1
 -		fi
--	    else
--		echo "$ac_t""ERROR: cannot find database $HISTORY" 1>&6
--		exit 1
--	    fi
- 	fi
- 
- 			echo $ac_n "checking locks""... $ac_c" 1>&6
+ 	    else
+ 		echo "$as_me:$LINENO: result: ERROR: cannot find database $HISTORY" >&5
+ echo "${ECHO_T}ERROR: cannot find database $HISTORY" >&6

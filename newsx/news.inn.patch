@@ -43,7 +43,7 @@ diff -u -r1.4 PLIST
 --- PLIST	2002/09/29 10:39:36	1.4
 +++ PLIST	2003/05/07 19:01:54
 @@ -1,6 +1,10 @@
- @comment $NetBSD: news.inn.patch,v 1.1 2003/05/07 19:14:34 cubidou Exp $
+ @comment $NetBSD: news.inn.patch,v 1.2 2003/06/08 08:03:27 cubidou Exp $
  bin/inews
  etc/rc.d/innd
 +include/inn/config.h
@@ -76,7 +76,7 @@ diff -u -r1.6 distinfo
 --- /dev/null	2003-05-07 20:56:22.000000000 +0200
 +++ patches/patch-ai	2003-04-06 13:39:05.000000000 +0200
 @@ -0,0 +1,13 @@
-+$NetBSD: news.inn.patch,v 1.1 2003/05/07 19:14:34 cubidou Exp $
++$NetBSD: news.inn.patch,v 1.2 2003/06/08 08:03:27 cubidou Exp $
 +
 +--- include/dbz.h.orig	2002-12-23 00:00:38.000000000 +0100
 ++++ include/dbz.h
@@ -92,7 +92,7 @@ diff -u -r1.6 distinfo
 --- /dev/null	2003-05-07 20:56:22.000000000 +0200
 +++ Makefile.common	2003-03-29 10:08:08.000000000 +0100
 @@ -0,0 +1,6 @@
-+# $NetBSD: news.inn.patch,v 1.1 2003/05/07 19:14:34 cubidou Exp $
++# $NetBSD: news.inn.patch,v 1.2 2003/06/08 08:03:27 cubidou Exp $
 +#
 +
 +INN_PREFIX?=	${PREFIX}/inn
@@ -100,8 +100,8 @@ diff -u -r1.6 distinfo
 +INN_SPOOL?=	${INN_DATA_DIR}/spool
 --- /dev/null	2003-05-07 20:56:22.000000000 +0200
 +++ buildlink2.mk	2003-04-06 13:04:45.000000000 +0200
-@@ -0,0 +1,27 @@
-+# $NetBSD: news.inn.patch,v 1.1 2003/05/07 19:14:34 cubidou Exp $
+@@ -0,0 +1,25 @@
++# $NetBSD: news.inn.patch,v 1.2 2003/06/08 08:03:27 cubidou Exp $
 +#
 +# This Makefile fragment is included by packages that use inn.
 +#
@@ -120,8 +120,6 @@ diff -u -r1.6 distinfo
 +BUILDLINK_FILES.inn=          inn/lib/libinn.a
 +BUILDLINK_FILES.inn+=         inn/lib/libstorage.a
 +BUILDLINK_FILES.inn+=         include/inn/*
-+
-+.include "../../lang/perl5/buildlink2.mk"
 +
 +BUILDLINK_TARGETS+=	inn-buildlink
 +

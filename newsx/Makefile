@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/07 19:08:23 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/08 08:03:27 cubidou Exp $
 #
 
-DISTNAME=	newsx-1.5pre
-PKGNAME=	${DISTNAME:S/pre//}
+DISTNAME=	newsx-1.6
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.kvaleberg.com/pub/
 
