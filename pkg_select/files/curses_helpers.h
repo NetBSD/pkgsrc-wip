@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: curses_helpers.h,v 1.1.1.1 2005/02/21 10:38:06 imilh Exp $ 
+ * $Id: curses_helpers.h,v 1.2 2005/02/22 09:52:37 imilh Exp $ 
  */
 
 #include <curses.h>
@@ -40,5 +40,5 @@ extern WINDOW *info_popup(const char *, const char *, int, int, int, int);
 extern char getch_popup(const char *, const char *, int, int, int, int);
 extern char *getstr_popup(const char *, int, int, int, int);
 extern void cmd_spawn(const char *, ...);
-
+extern void draw_box(WINDOW *, const char *);
 #define ANY_KEY "\nPress any key to continue..."

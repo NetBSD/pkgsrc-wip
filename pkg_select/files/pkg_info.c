@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_info.c,v 1.1.1.1 2005/02/21 10:38:07 imilh Exp $ 
+ * $Id: pkg_info.c,v 1.2 2005/02/22 09:52:41 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -37,7 +37,7 @@
 static int show_pkgfile(WINDOW *, char *, const char *);
 static void pkg_popup(WINDOW *, char *, char *, 
 		      const char *, const char *, const char *);
-static void pkg_depends(WINDOW *, char *, const char *);
+static void pkg_depends(char *, const char *);
 
 static int
 show_pkgfile(WINDOW *win, char *path, const char *file)
@@ -97,7 +97,7 @@ pkg_popup(WINDOW *win, char *path, char *pkg,
 }
 
 static void
-pkg_depends(WINDOW *win, char *path, const char *varname)
+pkg_depends(char *path, const char *varname)
 {
 	int len;
 	char **list;
@@ -123,7 +123,7 @@ pkg_depends(WINDOW *win, char *path, const char *varname)
 int
 info_win(WINDOW *win, char *pkg, char *path)
 {
-	int ret, c, line_index, msv, len, recurs;
+	int ret, c, line_index, msv, len;
 	struct cf *file;
 	char buf[MAXLEN], *homepage, *comment, *distname, *version;
 	WINDOW *popup;
@@ -133,23 +133,14 @@ info_win(WINDOW *win, char *pkg, char *path)
 	/* info window needs all screen */
 	wresize(win, LINES - 2, COLS - 2);
 	
-	/* deep recursion check */
-	if (strstr(path, "../") != NULL)
-		recurs = T_TRUE;
-	else
-		recurs = T_FALSE;
-
 	for (;;) {
 		/* load Makefile* */
 		file = load_makefile(path, FULL);
 
 		line_index = 2;
 
-		wclear(win);
-		box(win, 0, 0);
-		wattron(win, A_BOLD);
-
-		mvwprintw(win, 0, COLS - 8 - strlen(path), "[ %s ]", path);
+		/* redraw box and title */
+		draw_box(win, path);
 
 		mvwprintw(win, line_index, 2, PKG_ADMIN_INFO);
 		wattroff(win, A_BOLD);
@@ -222,12 +213,9 @@ info_win(WINDOW *win, char *pkg, char *path)
 			line_index++;
 		}
 
-		if (!recurs) {
-			wprint_kb(win, "[e]", "show package dependancies",
-				  line_index, 2);
-			line_index++;
-		}
-		line_index++;
+		wprint_kb(win, "[e]", "show package dependancies",
+			  line_index, 2);
+		line_index += 2;
 
 		wprint_kb(win, "[i]", "build and install package",
 			  line_index, 2);
@@ -290,8 +278,7 @@ info_win(WINDOW *win, char *pkg, char *path)
 				  "add");
 			break;
 		case 'e':
-			if (!recurs)
-				pkg_depends(win, path, "DEPENDS");
+			pkg_depends(path, "DEPENDS");
 			/* back from main_loop, resize */
 			wresize(win, LINES - 2, COLS - 2);
 

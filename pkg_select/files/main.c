@@ -29,15 +29,15 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: main.c,v 1.1.1.1 2005/02/21 10:38:06 imilh Exp $ 
+ * $Id: main.c,v 1.2 2005/02/22 09:52:39 imilh Exp $ 
  */
 
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
-static char *rcsid = "$Id: main.c,v 1.1.1.1 2005/02/21 10:38:06 imilh Exp $";
+static char *rcsid = "$Id: main.c,v 1.2 2005/02/22 09:52:39 imilh Exp $";
 #else
-__RCSID("$Id: main.c,v 1.1.1.1 2005/02/21 10:38:06 imilh Exp $");
+__RCSID("$Id: main.c,v 1.2 2005/02/22 09:52:39 imilh Exp $");
 #endif
 #endif
 
@@ -57,7 +57,6 @@ static void finish(int);
 static int dcount(Etree **);
 static void clear_tree(Etree ***, int);
 static int toplevel(const char *);
-static void draw_box(const char *);
 static int print_entry(Etree *, HL_datas *, char *, int, int);
 static void list_win_refresh(void);
 static int print_list(Etree **, HL_datas *, char *, int);
@@ -99,6 +98,10 @@ init_windows()
 static void
 finish(int sig)
 {
+	/* do something useful with sig so compiler does not 
+	   complain on unused variable (FreeBSD) */
+	if (sig)
+		sig &= 0;
 	/* free dir list */
 	free_pkgdb();
 
@@ -137,19 +140,6 @@ clear_tree(Etree ***etree, const int where)
 		free_nodir_tree(etree);
 	else
 		free_tree(etree);
-}
-
-static void
-draw_box(const char *path)
-{
-	wclear(list_win);
-	/* draw box */
-	box(list_win, 0 , 0);
-	wattron(list_win, A_BOLD);
-	/* top right item */
-	mvwprintw(list_win, 
-		  top_line - 1, ncols - 6 - strlen(path), "[ %s ]", path);
-	wattroff(list_win, A_BOLD);
 }
 
 /* print item + descr, d_index = y + i (relative / delta index) */
@@ -251,7 +241,7 @@ print_list(Etree **etree, HL_datas *hl, char *path, const int where)
 
 	/* don't show path when listing PKGDB */
 	if (where == IN_PKGDB)
-		draw_box(INST_PKGS);
+		draw_box(list_win, INST_PKGS);
 
 	/* etree == NULL, no directories found */
 	if (etree == NULL || etree[0] == NULL) {
@@ -279,7 +269,7 @@ print_list(Etree **etree, HL_datas *hl, char *path, const int where)
 
 		if (where == IN_PKGDB)
 			/* redraw borders */
-			draw_box(INST_PKGS);
+			draw_box(list_win, INST_PKGS);
 		
 		if (where == IN_DEPENDS) {
 			if ((ppath = strstr(path, "/..")) != NULL)
@@ -289,7 +279,7 @@ print_list(Etree **etree, HL_datas *hl, char *path, const int where)
 				/* pkgfind */
 				strcpy(path, pkgsrcbase);
 
-			draw_box(path);
+			draw_box(list_win, path);
 		}
 
 		if (where == IN_PKGSRC) {
@@ -298,7 +288,7 @@ print_list(Etree **etree, HL_datas *hl, char *path, const int where)
 			*ppath = '\0';
 			
 			/* redraw borders */
-			draw_box(path);
+			draw_box(list_win, path);
 		}
 		/* jump back to main loop with etree = NULL */
 		return(IN_DESCR);
@@ -309,9 +299,9 @@ print_list(Etree **etree, HL_datas *hl, char *path, const int where)
 	hl->count = dcount(etree);
 	
 	/* if hl < old we are scrolling up, don't update y */
-	if (hl->hl_index < hl->old_index) {
+	if (hl->hl_index < hl->old_index)
 		visible_index = hl->old_index;
-	} else {
+	else {
 		visible_index = hl->hl_index;
 		hl->old_index = hl->hl_index;
 	}
@@ -386,6 +376,7 @@ nodir_loop(const char *path, char **list)
 		etree = get_nodir_tree(path, list);
 		if (etree != NULL)
 			etree = main_loop(etree, list, path, IN_DEPENDS);
+		/* at this point etree should be NULL */
 	}
 }
 
@@ -407,7 +398,7 @@ main_loop(Etree **etree, char **list, const char *basepath, const int where)
 		list_win_refresh();
 
 	/* redraw box */
-	draw_box(wpath);
+	draw_box(list_win, wpath);
 
 	/* main loop */
 	for (;;) {
@@ -526,7 +517,7 @@ main_loop(Etree **etree, char **list, const char *basepath, const int where)
 				etree = get_tree(basepath, where);
 
 			/* re-init screen */
-			draw_box(basepath);
+			draw_box(list_win, basepath);
 		}
 	} /* for (;;) */
 	/* NOTREACHED */

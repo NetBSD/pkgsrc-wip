@@ -1,3 +1,15 @@
+22 / 02 / 2005
+--------------
+
+. deep depends recursion now allowed
+. title rewriting
+
+21 / 02 / 2005
+--------------
+
+. 1st wip commit
+. compiles / run on FreeBSD
+
 20 / 02 / 2005
 --------------
 

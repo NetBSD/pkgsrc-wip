@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: parsedirs.c,v 1.3 2005/02/21 14:11:26 poppnk Exp $ 
+ * $Id: parsedirs.c,v 1.4 2005/02/22 09:52:39 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -52,8 +52,7 @@ static const char *skip[] = {
 static struct dirent **dlist;
 static int count;
 
-static int
-checkskip(DIRENT *dp)
+static int checkskip(DIRENT *dp)
 {
         const char **p;
 
@@ -237,7 +236,7 @@ pkgfind(const char *path, const char *pkg, int nres)
 	static char **reslist = NULL;
         struct stat sb;
 
-	if (!isalnum((int)pkg[0]))
+	if (!isalnum((unsigned char)*pkg))
 		return(NULL);
 
         if ((ncat = scandir(path, &cat, checkskip, alphasort)) < 0)
@@ -251,8 +250,8 @@ pkgfind(const char *path, const char *pkg, int nres)
 		called = T_FALSE;
 
         for (i = 0; i < ncat; i++) {
-                if (snprintf(tmp, sizeof(tmp), "%s/%s", path, cat[i]->d_name)
-                    >= sizeof(tmp)) {
+                if ((unsigned int)snprintf(tmp, sizeof(tmp), "%s/%s",
+			     path, cat[i]->d_name) >= sizeof(tmp)) {
                         warnx("filename too long");
                         continue;
                 }
@@ -263,8 +262,11 @@ pkgfind(const char *path, const char *pkg, int nres)
                         continue;
                 }
                 for (j = 0; j < nlist; j++) {
-                        if (snprintf(tmp, sizeof(tmp), "%s/%s/%s", path,
-				     cat[i]->d_name, list[j]->d_name) >= sizeof(tmp)) {
+                        if ((unsigned int)snprintf(tmp, sizeof(tmp), 
+						   "%s/%s/%s", 
+						   path,
+						   cat[i]->d_name, 
+						   list[j]->d_name) >= sizeof(tmp)) {
                                 warnx("filename too long");
                                 continue;
                         }

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/02/21 14:19:18 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/22 09:52:25 imilh Exp $
 #
 
-DISTNAME=	pkg_select-20050221
-PKGREVISION=	2
-CATEGORIES=	pkgtools
+DISTNAME=		pkg_select-20050222
+CATEGORIES=		pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 

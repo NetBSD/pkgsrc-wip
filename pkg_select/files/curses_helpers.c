@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: curses_helpers.c,v 1.1.1.1 2005/02/21 10:38:06 imilh Exp $ 
+ * $Id: curses_helpers.c,v 1.2 2005/02/22 09:52:33 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -153,4 +153,23 @@ cmd_spawn(const char *command, ...)
 	nonl();
 	noecho();
 	curs_set(0);
+}
+
+void
+draw_box(WINDOW *win, const char *path)
+{
+	char *p, title[MAXLEN];
+	/* clean up title when deeply recursing */
+	if ((strstr(path, "/..") != NULL) && (p = strrchr(path, '/')) != NULL)
+		snprintf(title, MAXLEN, "dependency: %s", ++p);
+	else
+		strcpy(title, path);
+
+	wclear(win);
+	/* draw box */
+	box(win, 0 , 0);
+	wattron(win, A_BOLD);
+	/* top right item */
+	mvwprintw(win, 0, COLS - 8 - strlen(title), "[ %s ]", title);
+	wattroff(win, A_BOLD);
 }

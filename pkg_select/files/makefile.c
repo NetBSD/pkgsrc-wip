@@ -30,7 +30,7 @@
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
  *
- * $Id: makefile.c,v 1.1.1.1 2005/02/21 10:38:06 imilh Exp $ 
+ * $Id: makefile.c,v 1.2 2005/02/22 09:52:39 imilh Exp $ 
  */
 
 #include "pkg_select.h"

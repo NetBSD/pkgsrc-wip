@@ -30,7 +30,7 @@
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
  *
- * $Id: texts.h,v 1.1.1.1 2005/02/21 10:38:07 imilh Exp $ 
+ * $Id: texts.h,v 1.2 2005/02/22 09:52:41 imilh Exp $ 
  */
 
 #ifndef _TEXTS_H_

@@ -29,13 +29,13 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: more.c,v 1.1.1.1 2005/02/21 10:38:07 imilh Exp $
+ * $Id: more.c,v 1.2 2005/02/22 09:52:39 imilh Exp $
  */
 
 #include "pkg_select.h"
 
 static void
-print_page(WINDOW *win, char **page, int y, int x, int maxlines)
+print_page(WINDOW *win, char **page, int maxlines, int maxcols, int y, int x)
 {
 	int i, j, len;
 	char buf[MAXLEN], *c;
@@ -51,6 +51,9 @@ print_page(WINDOW *win, char **page, int y, int x, int maxlines)
 		/* print entry */
 		len = strlen(page[i]);
 		snprintf(buf, MAXLEN, "%s", page[i]);
+
+		/* 5 = 2 borders + 2 lines + 1 */
+		cut_str(&buf[0], maxcols - 5);
 
 		/* curses doesn't like newlines */
 		c = strchr(buf, '\n');
@@ -105,7 +108,7 @@ more_list(WINDOW *win, char **list, int h, int w, int y, int x)
 	box(win, 0, 0);
 
 	i = 0;
-	print_page(win, &list[i], y, x, h);
+	print_page(win, &list[i], h, w, y, x);
 
 	for (;;) {
 
@@ -136,7 +139,7 @@ more_list(WINDOW *win, char **list, int h, int w, int y, int x)
 			break;
 	}
 
-		print_page(win, &list[i], y, x, h);
+		print_page(win, &list[i], h, w, y, x);
 		
 		wrefresh(win);
 	}

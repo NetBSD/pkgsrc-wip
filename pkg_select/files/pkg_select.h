@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_select.h,v 1.1.1.1 2005/02/21 10:38:07 imilh Exp $ 
+ * $Id: pkg_select.h,v 1.2 2005/02/22 09:52:41 imilh Exp $ 
  */
 
 #ifndef _PKG_SELECT_H_
