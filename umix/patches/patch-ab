@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/04/13 14:37:02 cjep Exp $
+
+--- src/error.c.orig	Thu Aug  1 12:00:49 2002
++++ src/error.c
+@@ -30,6 +30,15 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ 
++/* Hmm not sure about the *BSD includes */
++#if defined(__linux__)
++  #include <sys/soundcard.h>
++#elif defined(__FreeBSD__)
++  #include "machine/soundcard.h"
++#elif defined(__NetBSD__)
++  #include <soundcard.h>
++#endif
++
+ #include "error.h"
+ 
+ /* error handler */
