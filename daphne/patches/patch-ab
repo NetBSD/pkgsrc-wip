@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+
+--- Makefile.vars.orig	2004-06-19 04:53:38.000000000 +0200
++++ Makefile.vars
+@@ -5,15 +5,14 @@
+ #DFLAGS = -g -DCPU_DEBUG
+ 
+ # optimized version
+-DFLAGS = -O3 -march=i686 -DX86_ASM -DGCC_X86_ASM -fomit-frame-pointer \
+-	-fexpensive-optimizations -funroll-loops
++#DFLAGS = -O3 -march=i686 -DX86_ASM -DGCC_X86_ASM -fomit-frame-pointer \
++#	-fexpensive-optimizations -funroll-loops
+ 
+ # this is to be exported for MMX assembly optimization
+-export USE_MMX_RGB2YUV = 1
++#export USE_MMX_RGB2YUV = 1
+ 
+ # platform-specific compile flags
+-PFLAGS = ${DFLAGS} `sdl-config --cflags` -DUNIX -DLINUX -DNATIVE_CPU_X86 \
+-	-DMMX_RGB2YUV
++PFLAGS += ${DFLAGS} $(shell sdl-config --cflags) -DUNIX
+ 
+ # platform-specific lib flags
+-LIBS = `sdl-config --libs` -lSDL_mixer -ldl -lz -logg -lvorbis -lvorbisfile
++LIBS = $(shell sdl-config --libs) -lSDL_mixer -lz -logg -lvorbis -lvorbisfile

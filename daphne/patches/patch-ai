@@ -1,0 +1,42 @@
+$NetBSD: patch-ai,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+
+--- daphne.cpp.orig	2003-02-20 22:56:02.000000000 +0100
++++ daphne.cpp
+@@ -36,6 +36,7 @@
+ // - A common modern computer (i386 Win32, i386 Linux most likely)
+ // No other original hardware (motherboard, power supply, harness) required
+ 
++#include <sys/stat.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -366,3 +367,29 @@ unsigned char get_startsilent()
+ 	return(startsilent);
+ }
+ // end edit
++
++// added by dillo
++// XXX: probably belongs elsewhere
++
++char *find_data_file(const char *name)
++{
++	static const char *data_path[] = {
++		".",
++		DATA_DIR,
++		NULL
++	};
++
++	int i;
++	char buf[1024];
++	struct stat st;
++
++	for (i=0; data_path[i]; i++) {
++		snprintf(buf, sizeof(buf), "%s/%s", data_path[i], name);
++		if (stat(buf, &st) == 0)
++			return buf;
++	}
++
++	snprintf(buf, sizeof(buf), "cannot find data file `%s'", name);
++	printerror(buf);
++	return "NOSUCHFILE";
++}

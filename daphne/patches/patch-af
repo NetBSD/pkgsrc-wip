@@ -1,0 +1,43 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+
+--- video/video.cpp.orig	2003-05-11 22:08:23.000000000 +0200
++++ video/video.cpp
+@@ -136,7 +139,7 @@ bool init_display()
+ 			SDL_WM_SetCaption("DAPHNE: First Ever Multiple Arcade Laserdisc Emulator =]", "daphne");
+ 			
+ 			// initialize SDL console in the background
+-			if (ConsoleInit("pics/ConsoleFont.bmp", g_screen, 100)==0)
++			if (ConsoleInit(find_data_file("pics/ConsoleFont.bmp"), g_screen, 100)==0)
+ 			{
+ 				AddCommand(g_cpu_break, "break");
+ 				g_console_initialized = true;
+@@ -198,7 +201,7 @@ int load_bmps()
+ 
+ 	for (; index < LED_RANGE; index++)
+ 	{
+ 		sprintf(filename, "pics/led%d.bmp", index);
+ 
+-		g_led_bmps[index] = load_one_bmp(filename);
++		g_led_bmps[index] = load_one_bmp(find_data_file(filename));
+ 
+@@ -211,13 +214,13 @@ int load_bmps()
+ 			result = 0;
+ 		}
+ 	}
+-	g_other_bmps[B_DL_PLAYER1] = load_one_bmp("pics/player1.bmp");
+-	g_other_bmps[B_DL_PLAYER2] = load_one_bmp("pics/player2.bmp");
+-	g_other_bmps[B_DL_LIVES] = load_one_bmp("pics/lives.bmp");
+-	g_other_bmps[B_DL_CREDITS] = load_one_bmp("pics/credits.bmp");
+-	g_other_bmps[B_DAPHNE_SAVEME] = load_one_bmp("pics/saveme.bmp");
+-	g_other_bmps[B_GAMENOWOOK] = load_one_bmp("pics/gamenowook.bmp");
+-    g_other_bmps[B_OVERLAY_LEDS] = load_one_bmp("pics/overlayleds.bmp");
++	g_other_bmps[B_DL_PLAYER1] = load_one_bmp(find_data_file("pics/player1.bmp"));
++	g_other_bmps[B_DL_PLAYER2] = load_one_bmp(find_data_file("pics/player2.bmp"));
++	g_other_bmps[B_DL_LIVES] = load_one_bmp(find_data_file("pics/lives.bmp"));
++	g_other_bmps[B_DL_CREDITS] = load_one_bmp(find_data_file("pics/credits.bmp"));
++	g_other_bmps[B_DAPHNE_SAVEME] = load_one_bmp(find_data_file("pics/saveme.bmp"));
++	g_other_bmps[B_GAMENOWOOK] = load_one_bmp(find_data_file("pics/gamenowook.bmp"));
++    g_other_bmps[B_OVERLAY_LEDS] = load_one_bmp(find_data_file("pics/overlayleds.bmp"));
+ 
+ 	for (index = 0; index < B_EMPTY; index++)
+ 	{

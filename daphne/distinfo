@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+
+SHA1 (daphne-0.99.6-src.tar.gz) = 40ded2e02163047e097f6309e266a9281fb53219
+Size (daphne-0.99.6-src.tar.gz) = 2685633 bytes
+SHA1 (patch-aa) = 10bd9c1273460ffabfd2c2b551d71c84dee25579
+SHA1 (patch-ab) = ae772b8387c4c32df4d492550c7fd0a8043a500c
+SHA1 (patch-ac) = 8a46cabb072fb4f8a8e04f7e832f0d488af9e56f
+SHA1 (patch-ad) = e9275a985210af27609824a8b1ac7dcf684176d2
+SHA1 (patch-ae) = 8350d5820ff276bc57309f29d3b4bcf58d35e635
+SHA1 (patch-af) = d41b67bae1ddbaea6f3b204d0e81e49bb280514f
+SHA1 (patch-ag) = e0e0ee98a42f7ac28c54c2b1b8f04ec79ce79f02
+SHA1 (patch-ah) = fb74bdb48f562786a48000ceeca0dbd13a8d693c
+SHA1 (patch-ai) = f3483c8ead53424778860d01766899cf4f88da84
+SHA1 (patch-aj) = c9a94a9083be3f504086116bc3dc381edaa7bd30
+SHA1 (patch-ak) = dec92311455774d01922bab60d041b87a0999983

@@ -1,0 +1,26 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+
+--- vldp2/Makefile.linux.orig	2003-03-20 23:44:31.000000000 +0100
++++ vldp2/Makefile.linux
+@@ -3,17 +3,17 @@
+ 
+ # TODO: Add dependencies
+ 
+-CC = gcc
++#CC = gcc
+ #DFLAGS = -g -DVLDP_DEBUG
+ 
+ # Benchmarking version
+ #DFLAGS = -O3 -march=i686 -fomit-frame-pointer -funroll-loops -DVLDP_BENCHMARK
+ 
+ # Standard version
+-DFLAGS = -O3 -march=i686 -fomit-frame-pointer -funroll-loops
++#DFLAGS = -O3 -march=i686 -fomit-frame-pointer -funroll-loops
+ 
+-CFLAGS = ${DFLAGS} `sdl-config --cflags` -I./include
+-LIBS = `sdl-config --libs`
++CFLAGS = ${DFLAGS} $(shell sdl-config --cflags) -I./include
++LIBS = $(shell sdl-config --libs)
+ 
+ OBJS =  vldp/vldp.o vldp/vldp_internal.o vldp/mpegscan.o \
+ 	libmpeg2/cpu_accel.o libmpeg2/alloc.o libmpeg2/cpu_state.o \

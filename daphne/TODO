@@ -1,0 +1,5 @@
+- fix ``your OS is unknown in network.cpp, please fix this''
+- disable send to server by default, add option to enable it
+- install documentation
+- write man page (?)
+- test on non-i386

@@ -1,0 +1,61 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+bin/daphne
+lib/daphne/libvldp2.so
+share/daphne/pics/ConsoleFont.bmp
+share/daphne/pics/credits.bmp
+share/daphne/pics/gamenowook.bmp
+share/daphne/pics/led0.bmp
+share/daphne/pics/led1.bmp
+share/daphne/pics/led10.bmp
+share/daphne/pics/led11.bmp
+share/daphne/pics/led12.bmp
+share/daphne/pics/led13.bmp
+share/daphne/pics/led14.bmp
+share/daphne/pics/led15.bmp
+share/daphne/pics/led16.bmp
+share/daphne/pics/led2.bmp
+share/daphne/pics/led3.bmp
+share/daphne/pics/led4.bmp
+share/daphne/pics/led5.bmp
+share/daphne/pics/led6.bmp
+share/daphne/pics/led7.bmp
+share/daphne/pics/led8.bmp
+share/daphne/pics/led9.bmp
+share/daphne/pics/lives.bmp
+share/daphne/pics/overlayleds.bmp
+share/daphne/pics/player1.bmp
+share/daphne/pics/player2.bmp
+share/daphne/pics/saveme.bmp
+share/daphne/sound/ab_alarm1.wav
+share/daphne/sound/ab_alarm2.wav
+share/daphne/sound/ab_alarm3.wav
+share/daphne/sound/ab_alarm4.wav
+share/daphne/sound/ab_enemy.wav
+share/daphne/sound/ab_fire.wav
+share/daphne/sound/ab_ship.wav
+share/daphne/sound/bl_shot.wav
+share/daphne/sound/cliff_correct.wav
+share/daphne/sound/cliff_startup.wav
+share/daphne/sound/cliff_wrong.wav
+share/daphne/sound/dl_accept.wav
+share/daphne/sound/dl_buzz.wav
+share/daphne/sound/dl_credit.wav
+share/daphne/sound/esh_beep.wav
+share/daphne/sound/gr_alarm1.wav
+share/daphne/sound/gr_alarm2.wav
+share/daphne/sound/gr_alarm3.wav
+share/daphne/sound/gr_alarm4.wav
+share/daphne/sound/gr_attack.wav
+share/daphne/sound/gr_cannon.wav
+share/daphne/sound/gr_fire.wav
+share/daphne/sound/gr_mineon.wav
+share/daphne/sound/saveme.wav
+share/daphne/sound/sd_coin.wav
+share/daphne/sound/sd_fail.wav
+share/daphne/sound/sd_succeed.wav
+share/daphne/sound/sda_success_hi.wav
+share/daphne/sound/sda_success_lo.wav
+@dirrm share/daphne/sound
+@dirrm share/daphne/pics
+@dirrm share/daphne
+@dirrm lib/daphne

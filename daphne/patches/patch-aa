@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+
+--- Makefile.orig	2002-12-17 07:28:37.000000000 +0100
++++ Makefile
+@@ -8,10 +8,10 @@ include Makefile.vars
+ 
+ # send these to all the sub-Makefiles
+ 
+-export CXX = g++
++#export CXX = g++
+ 
+ # Platform specific cflags defined in the Makefile.vars file
+-export CFLAGS = ${PFLAGS} -Wall -Winline
++export CFLAGS += ${PFLAGS} -Wall -Winline -DDATA_DIR=\"${DATA_DIR}\" -DLIB_DIR=\"${LIB_DIR}\"
+ 
+ # name of the executable
+ EXE = ../daphne
+@@ -23,9 +23,12 @@ LOCAL_OBJS = daphne.o
+ 
+ .SUFFIXES:	.cpp
+ 
+-all:	${LOCAL_OBJS} sub
++all:	${LOCAL_OBJS} sub do-vldp2
+ 	${CXX} ${DFLAGS} ${OBJS} -o ${EXE} ${LIBS}
+ 
++do-vldp2:
++	cd vldp2 && ${MAKE} -f Makefile.linux
++
+ sub:
+ 	cd ldp-out && $(MAKE)
+ 	cd cpu && $(MAKE)

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+
+--- io/parallel.cpp.orig	2003-01-07 03:25:53.000000000 +0100
++++ io/parallel.cpp
+@@ -21,7 +21,7 @@
+  */
+ 
+ // this code only applies to x86-based systems, I believe
+-#ifdef NATIVE_CPU_X86
++#if 0 /* def NATIVE_CPU_X86 */
+ 
+ // Code to control the parallel port
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+
+--- daphne.h.orig	2003-05-11 22:08:22.000000000 +0200
++++ daphne.h
+@@ -105,5 +105,8 @@ void set_startsilent(unsigned char value
+ unsigned char get_startsilent();
+ // end edit
+ 
++// added by dillo
++char *find_data_file(const char *);
++
+ #endif // DAPHNE_H
+ 

@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+
+--- sound/sound.cpp.orig	2003-01-16 22:39:08.000000000 +0100
++++ sound/sound.cpp
+@@ -204,7 +204,7 @@ int load_waves()
+ 		sprintf(filename, "sound/%s", g_game->get_sound_name(i));
+ 
+ 		// if loading of the wave failed...
+-		mixwave[i] = Mix_LoadWAV(filename);
++		mixwave[i] = Mix_LoadWAV(find_data_file(filename));
+ 		if (!mixwave[i])
+ 		{
+ 			fprintf(stderr, "Can't find file %s\n", filename);
+@@ -215,7 +215,7 @@ int load_waves()
+ 	}
+ 
+ 	// load "saveme" sound in
+-	mixwave_saveme = Mix_LoadWAV("sound/saveme.wav");
++	mixwave_saveme = Mix_LoadWAV(find_data_file("sound/saveme.wav"));
+ 	if (!mixwave_saveme)
+ 	{
+ 		result = 0;

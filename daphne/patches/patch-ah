@@ -1,0 +1,17 @@
+$NetBSD: patch-ah,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+
+--- io/network.cpp.orig	2003-04-08 01:50:23.000000000 +0200
++++ io/network.cpp
+@@ -539,10 +539,12 @@ void net_send_data_to_server()
+ #endif
+ 
+ 				// safety check
++#if 0
+ 				if (g_packet.os == OS_UNKNOWN)
+ 				{
+ 					printerror("your OS is unknown in network.cpp, please fix this");
+ 				}
++#endif
+ 
+ 				strncpy(g_packet.os_desc, get_os_description(), sizeof(g_packet.os_desc));
+ 				g_packet.protocol = PROTOCOL_VERSION;
