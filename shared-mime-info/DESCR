@@ -1,4 +1,0 @@
-share-mime-info is a package containing a large number of common MIME types, 
-created by converting the existing KDE and GNOME databases to the new format 
-and merging them together, and software for updating the database based on 
-the share-mime-info specification.
