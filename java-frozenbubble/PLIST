@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/14 20:09:03 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/17 19:25:04 xtraeme Exp $
 bin/java-frozenbubble
-share/classpath/frozenbubble.jar
+${JAR_MAIN_PREFIX}/frozenbubble.jar
