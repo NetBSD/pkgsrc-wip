@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.580 2003/10/30 05:33:37 minskim Exp $
-# $NetBSD: Makefile,v 1.580 2003/10/30 05:33:37 minskim Exp $
+# $Id: Makefile,v 1.581 2003/10/30 09:54:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.581 2003/10/30 09:54:28 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -166,6 +166,7 @@ SUBDIR+=	gov2
 SUBDIR+=	gpdf
 SUBDIR+=	grdc
 SUBDIR+=	grip
+SUBDIR+=	gsasl
 SUBDIR+=	gstreamer-player
 SUBDIR+=	gtick
 SUBDIR+=	gtk-engines-thinice
@@ -235,7 +236,9 @@ SUBDIR+=	libfwbuilder
 SUBDIR+=	libgpg-error
 SUBDIR+=	libgringotts
 SUBDIR+=	libhydrogen
+SUBDIR+=	libidn
 SUBDIR+=	libneural
+SUBDIR+=	libntlm
 SUBDIR+=	libogg-nightly
 SUBDIR+=	libprelude
 SUBDIR+=	libshout
