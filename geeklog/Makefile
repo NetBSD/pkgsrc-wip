@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/07 01:57:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/13 22:28:48 blef Exp $
 #
 
 DISTNAME=	geeklog-1.3.7sr1
@@ -13,7 +13,6 @@ COMMENT=	Web content management
 DEPENDS+=       {ap-php-4.[0-9]*,ap2-php-4.[0-9]*}:../../www/ap-php4
 DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql-server
 
-USE_BUILDLINK2=	YES
 NO_BUILD=	YES
 
 APACHEDIR=	${PREFIX}/share/httpd/htdocs/
