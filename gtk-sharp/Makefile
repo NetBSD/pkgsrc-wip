@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/04/03 21:26:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/04 18:43:13 marc Exp $
 #
 
 DISTNAME=	gtk-sharp-0.18
@@ -29,10 +29,10 @@ REPLACE_PERL+=	bin/gapi_pp.pl
 
 PARSER_MK=	${WRKSRC}/parser/GAPI/Makefile.in
 
-pre-configure:
-	${SED} -e 's,%%PERL5_SITELIB%%,${PERL5_SITELIB},' \
-		${PARSER_MK} > ${PARSER_MK}.new
-	${MV} ${PARSER_MK}.new ${PARSER_MK}
+SUBST_CLASSES+=		gapi
+SUBST_STAGE.gapi=	pre-configure
+SUBST_FILES.gapi=	parser/GAPI/Makefile.in
+SUBST_SED.gapi=		-e 's,%%PERL5_SITELIB%%,${PERL5_SITELIB},'
 
 .include "../../databases/libgda/buildlink3.mk"
 .include "../../databases/libgnomedb/buildlink3.mk"
