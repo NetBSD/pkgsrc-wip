@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2003/10/07 22:12:41 cubidou Exp $
+# $NetBSD: Makefile.common,v 1.8 2003/10/07 22:19:27 cubidou Exp $
 
 DISTNAME=	${GKRELLM_DISTBASE}
 PKGNAME=	${GKRELLM_PKGBASE}-${GKRELLM_VERSION}
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://gkrellm.net/
+
+CONFLICTS+=	gkrellm-1*
 
 USE_GMAKE=		YES
 USE_PKGLOCALEDIR=	YES

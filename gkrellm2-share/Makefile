@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/09/15 05:00:47 cubidou Exp $
+# $NetBSD: Makefile,v 1.7 2003/10/07 22:19:27 cubidou Exp $
 .include "../../wip/gkrellm2/Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm-share
 
 COMMENT=		GKrellM2 locale files
-CONFLICTS=		gkrellm-1*
 
 BUILD_USES_MSGFMT=	YES
 
