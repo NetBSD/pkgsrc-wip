@@ -1,3 +1,0 @@
-ICMP SHell is a telnet-like protocol. It allows users to connect to a
-remote host and to open a shell using only ICMP to send and receive
-data. ICMP Shell war written in C for the UNIX environment.
