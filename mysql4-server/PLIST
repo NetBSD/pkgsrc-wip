@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/09 17:17:15 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/10 11:06:13 adrian_p Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
@@ -23,6 +23,7 @@ lib/mysql/libmyisammrg.a
 lib/mysql/libmystrings.a
 lib/mysql/libmysys.a
 lib/mysql/libnisam.a
+lib/mysql/libvio.a
 libexec/mysqld
 man/man1/mysqld.1
 man/man1/mysqld_safe.1
