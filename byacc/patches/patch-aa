@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/06 02:16:27 jeremy-c-reed Exp $
---- Makefile.orig	Sun Jan 13 21:22:29 1991
-+++ Makefile	Mon Mar 31 19:59:31 2003
+$NetBSD: patch-aa,v 1.2 2003/06/15 12:44:08 lsed Exp $
+
+--- Makefile.orig	Mon Jan 14 06:22:29 1991
++++ Makefile	Sun Jun 15 14:37:15 2003
 @@ -1,14 +1,14 @@
 -DEST	      = .
 +DEST	      = $(PREFIX)/bin
@@ -28,3 +29,25 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/06 02:16:27 jeremy-c-reed Exp $
  
  SRCS	      = closure.c \
  		error.c \
+@@ -45,9 +45,7 @@
+ all:		$(PROGRAM)
+ 
+ $(PROGRAM):     $(OBJS) $(LIBS)
+-		@echo -n "Loading $(PROGRAM) ... "
+-		@$(LINKER) $(LDFLAGS) -o $(PROGRAM) $(OBJS) $(LIBS)
+-		@echo "done"
++		$(LINKER) $(LDFLAGS) -o $(PROGRAM) $(OBJS) $(LIBS)
+ 
+ clean:;		@rm -f $(OBJS)
+ 
+@@ -58,8 +56,8 @@
+ index:;		@ctags -wx $(HDRS) $(SRCS)
+ 
+ install:	$(PROGRAM)
+-		@echo Installing $(PROGRAM) in $(DEST)
+-		@install -s $(PROGRAM) $(DEST)
++		$(BSD_INSTALL_PROGRAM) $(PROGRAM) $(DEST)
++		$(BSD_INSTALL_MAN) yacc.1 $(PREFIX)/man/man1/$(PROGRAM).1
+ 
+ listing:;	@$(PRINT) Makefile $(HDRS) $(SRCS) | lpr
+ 
