@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1233 2004/04/23 09:04:14 poppnk Exp $
-# $NetBSD: Makefile,v 1.1233 2004/04/23 09:04:14 poppnk Exp $
+# $Id: Makefile,v 1.1234 2004/04/23 16:13:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1234 2004/04/23 16:13:07 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -624,7 +624,6 @@ SUBDIR+=	ruby-syck
 SUBDIR+=	scite
 SUBDIR+=	scm
 SUBDIR+=	scponly
-SUBDIR+=	screws
 SUBDIR+=	send-pr
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shadow
