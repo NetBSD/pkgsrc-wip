@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2005/02/18 06:27:04 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/26 19:56:18 jsrocket Exp $
 
-DISTNAME=	bsflite-0.72
+DISTNAME=	bsflite-0.73
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bsflite/}
 
