@@ -1,8 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/05 12:53:36 drue Exp $
-bin/netbeans
-share/doc/netbeans/CHANGES.html
-share/doc/netbeans/CREDITS.html
-share/doc/netbeans/README.html
-share/doc/netbeans/README_fr.html
-share/doc/netbeans/README_ru.html
-share/doc/netbeans/netbeans.css
+@comment $NetBSD: PLIST,v 1.2 2003/05/07 07:39:47 drue Exp $

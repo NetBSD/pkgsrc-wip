@@ -1,0 +1,4 @@
++ Check for restrictions
++ test installation
++ check installation for MacOS X 
+    (ln bin/macosx_launcher.dmg to ${PREFIX}/bin/netbeans)
