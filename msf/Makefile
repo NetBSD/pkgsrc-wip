@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/08/20 09:27:20 adrian_p Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/19 14:32:01 adrian_p Exp $
 #
 
 DISTNAME=	framework-2.2
@@ -29,6 +29,7 @@ NO_BUILD=	YES
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.msf
 PKG_SUPPORTED_OPTIONS=	python
+
 .include "../../mk/bsd.options.mk"
 
 # add python support for external payloads
@@ -56,6 +57,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${MSFDIR}/payloads/external
 	${INSTALL_DATA_DIR} ${MSFDIR}/sdk
 	${INSTALL_DATA_DIR} ${MSFDIR}/tools
+	${INSTALL_DATA_DIR} ${MSFDIR}/src
 
 	${INSTALL_DATA} ${WRKSRC}/docs/* ${MSFDOC}
 	${INSTALL_DATA} ${WRKSRC}/data/* ${MSFDIR}/data
@@ -65,6 +67,7 @@ do-install:
 	cd ${WRKSRC}/lib && ${PAX} -rw . ${MSFDIR}/lib
 	cd ${WRKSRC}/sdk && ${PAX} -rw . ${MSFDIR}/sdk
 	cd ${WRKSRC}/tools && ${PAX} -rw . ${MSFDIR}/tools
+	cd ${WRKSRC}/src && ${PAX} -rw . ${MSFDIR}/src
 
 	${INSTALL_DATA} ${WRKSRC}/nops/*.pm ${MSFDIR}/nops
 	${INSTALL_DATA} ${WRKSRC}/payloads/*.pm ${MSFDIR}/payloads
