@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/30 20:35:46 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/07 03:43:57 shattered Exp $
 #
 
 DISTNAME=		smartmontools-5.30
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/smartmontools
 CONF_FILES=		${PREFIX}/share/doc/smartmontools/smartd.conf ${PKG_SYSCONFDIR}/smartd.conf
 USE_GNU_TOOLS+=		make
+USE_PKGINSTALL=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -25,5 +26,4 @@ post-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/smartd ${PREFIX}/etc/rc.d/smartd
 .endif
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
