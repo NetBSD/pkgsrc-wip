@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/04 17:24:59 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/08 12:05:11 adrian_p Exp $
 
 DISTNAME=	Unreal3.2.2
 PKGNAME=	unrealircd-3.2.2
@@ -13,6 +13,7 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 WRKSRC=		${WRKDIR}/Unreal3.2
+INSTALL_UNSTRIPPED=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -44,7 +45,7 @@ BUILD_DEFS+=	IRCD_HOME IRCD_NICKHIST IRCD_FDSIZE IRCD_GROUP
 PTHREAD_OPTS=	require
 
 # The defaults for most of these here are from the standard Conf
-# script supplied with the UnrealIRCD package.
+# script supplied with the UnrealIRCd package.
 #
 IRCD_SENDQ?=	3000000
 IRCD_LISTEN?=	5
@@ -53,7 +54,7 @@ IRCD_NICKHIST?=	2000
 IRCD_FDSIZE?=	512
 IRCD_USER?=	uircd
 IRCD_GROUP?=	uircd
-IRCD_HOST?=	localhost
+IRCD_HOST?=	`${UNAME} -n`
 IRCD_HOME?=	${VARBASE}/unrealircd
 
 DOC_FILES=	doc/Authors doc/coding-guidelines doc/tao.of.irc LICENSE
@@ -96,7 +97,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/badwords*.conf ${IRCD_SHARE}
 	${INSTALL_DATA} ${WRKSRC}/help.conf ${IRCD_SHARE}
 	${INSTALL_DATA} ${WRKSRC}/spamfilter.conf ${IRCD_SHARE}
-	${INSTALL_SCRIPT} ${WRKSRC}/src/modules/*.so ${IRCD_SHARE}/modules
+	${INSTALL_DATA} ${WRKSRC}/src/modules/*.so ${IRCD_SHARE}/modules
 
 	for f in ${DOC_FILES}; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${IRCD_DOCS}; \
@@ -108,6 +109,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/example.conf ${IRCD_EG}
 	${INSTALL_DATA} ${WRKSRC}/doc/example.settings ${IRCD_EG}
 
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../wip/tre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
