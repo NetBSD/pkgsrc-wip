@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.875 2004/01/10 21:07:39 ora8_ Exp $
-# $NetBSD: Makefile,v 1.875 2004/01/10 21:07:39 ora8_ Exp $
+# $Id: Makefile,v 1.876 2004/01/10 21:50:31 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.876 2004/01/10 21:50:31 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -400,6 +400,7 @@ SUBDIR+=	p5-Apache-Request
 SUBDIR+=	p5-Apache-Test
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-CDDB
+SUBDIR+=	p5-Carp-Assert
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Class-Factory-Util
 SUBDIR+=	p5-Class-MethodMaker
