@@ -312,7 +312,7 @@ case "$1" in
 	done
 	;;
 "update")
-	do_update
+	do_update $1 $2
 	;;
 "dist-upgrade")
 	echo "==> Generating the update list..."
