@@ -4,10 +4,3 @@ acats is the Ada compiler validation suite:
 # of expected passes            2314
 # of unexpected failures        8
 *** FAILURES: c34005a c34005d c34005g c34005j cc3601a cxb3010 cxb3014 cxb3015
-
-
-- Depends (probably) on the patches submitted with two (unprocessed) PRs:
-  pkg/23692
-  pkg/23871
-  Without these patches, it's necessary to tweak your environment so that
-  the Ada compiler and its components are found.

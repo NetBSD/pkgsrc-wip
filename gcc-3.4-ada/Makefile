@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/08 13:55:05 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/09 23:24:18 johnrshannon Exp $
 #
 
 SNAPDATE=	20040107
@@ -20,12 +20,15 @@ USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=        --enable-languages="c,ada"
-EXTRA_ENV+=     ADAC= -- Add path to your Ada compiler here
-CONFIGURE_ENV+= ${EXTRA_ENV}
-MAKE_ENV+=      ${EXTRA_ENV}
+ADA_BOOT_PATH=               /usr/pkg/gcc3.4
+ADA_BOOT_ADAC=  ${ADA_BOOT_PATH}/bin/gcc
+ADA_BOOT_GNATBIND=      ${ADA_BOOT_PATH}/bin/gnatbind
+EXTRA_ENV+=     ADAC=${ADA_BOOT_ADAC:Q}
+CONFIGURE_ENV+=	${EXTRA_ENV}
+MAKE_ENV+=	${EXTRA_ENV}
 
 # Make location overridable, to allow ping-pong bootstraps.
-GCC3_DEFAULT_SUBPREFIX=	gcc34
+GCC3_DEFAULT_SUBPREFIX=	gcc3.4
 GCC3_INSTALLTO_SUBPREFIX?=	${GCC3_DEFAULT_SUBPREFIX}
 .if ${GCC3_INSTALLTO_SUBPREFIX} != ${GCC3_DEFAULT_SUBPREFIX}
 GCC3_PKGMODIF=		_${GCC3_INSTALLTO_SUBPREFIX}
@@ -33,6 +36,7 @@ GCC3_PKGMODIF=		_${GCC3_INSTALLTO_SUBPREFIX}
 
 GCC_SUBPREFIX=		${GCC3_INSTALLTO_SUBPREFIX}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
+PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 PLIST_SUBST+=		GCC_SUBPREFIX=${GCC_SUBPREFIX}
 FILES_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME}
@@ -55,19 +59,41 @@ post-patch:
 		${CP} $$i ${WRKSRC}/gcc/ada; \
 	done )
 
+#post-buildlink:
+#	${LN} -sf ${ADA_BOOT_GNATBIND} ${BUILDLINK_DIR}/bin
+
 do-configure:
-	(test -d  ${WRKDIR}/obj || mkdir ${WRKDIR}/obj && cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS})
+	(${TEST} -d  ${WRKDIR}/obj || ${MKDIR} ${WRKDIR}/obj && cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS})
 
 do-build:
 	(cd ${WRKDIR}/obj && ${GMAKE} bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
+
+post-build:
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
 
 do-test:
 	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
 
 do-install:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install \
-	 && test -f ${GCC_PREFIX}/bin/cc || ln -s ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc \
-	 && test -f ${GCC_PREFIX}/bin/gnat1 || ln -s ${GCC_ARCHDIR}/3.4.0/gnat1 ${GCC_PREFIX}/bin/gnat1)
+	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc)
+
+post-install:
+	${ECHO} -n 'GCC_EXEC_PREFIX='>> ${WRKDIR}/gcc3.mk
+	${DIRNAME} `${GCC_PREFIX}/bin/gcc -print-prog-name=gnat1` >> ${WRKDIR}/gcc3.mk
+	${ECHO} -n 'ADA_INCLUDE_PATH+='>> ${WRKDIR}/gcc3.mk
+	${FIND} ${GCC_PREFIX} -name adainclude -print >> ${WRKDIR}/gcc3.mk
+	${ECHO} -n 'ADA_OBJECTS_PATH+='>> ${WRKDIR}/gcc3.mk
+	${FIND} ${GCC_PREFIX} -name adalib -print >> ${WRKDIR}/gcc3.mk
+	${INSTALL_DATA_DIR} ${GCC_PREFIX}/mk
+	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${GCC_PREFIX}/mk/ada.mk
+	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
+	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print		\
+		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
+		>> ${PLIST_SRC}
+	${FIND} ${GCC_PREFIX} -type d -print				\
+		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
+		>> ${PLIST_SRC}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/pthread.buildlink2.mk"
