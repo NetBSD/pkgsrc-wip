@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2003/11/17 10:18:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.24 2003/11/30 16:21:40 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-1.4.3
-#PKGNAME=		${DISTNAME:S/-/d-/}
 CATEGORIES=		net
 MASTER_SITES=		http://jabberd.jabberstudio.org/1.4/dist/
 
