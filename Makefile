@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.615 2003/11/13 20:16:10 grantbeattie Exp $
-# $NetBSD: Makefile,v 1.615 2003/11/13 20:16:10 grantbeattie Exp $
+# $Id: Makefile,v 1.616 2003/11/13 20:28:25 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.616 2003/11/13 20:28:25 grantbeattie Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -475,6 +475,8 @@ SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
 SUBDIR+=	theora-nightly
+SUBDIR+=	thunderbird-bin
+SUBDIR+=	thunderbird-bin-nightly
 SUBDIR+=	thy
 SUBDIR+=	tinc
 SUBDIR+=	tinylogin
