@@ -1,7 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/14 09:54:32 tripledes Exp $
---- GNUmakefile.orig	2004-04-14 01:10:14.000000000 +0100
-+++ GNUmakefile	2004-04-14 01:12:55.000000000 +0100
-@@ -47,16 +47,16 @@
+$NetBSD: patch-aa,v 1.2 2004/07/26 12:49:15 minskim Exp $
+
+--- GNUmakefile.orig	2003-03-19 19:24:11.000000000 -0600
++++ GNUmakefile
+@@ -1,5 +1,5 @@
+ # can't use -fno-rtti yet because it causes problems with exception handling in GCC 2.95.2
+-CXXFLAGS = -g
++CXXFLAGS = ${CFLAGS}
+ # Uncomment the next two lines to do a release build.
+ # Note that you must define NDEBUG for your own application if you define it for Crypto++.
+ # Also, make sure you run the validation tests and test your own program thoroughly
+@@ -47,16 +47,16 @@ OBJS = $(SRCS:.cpp=.o)
  TESTOBJS = bench.o test.o validat1.o validat2.o validat3.o adhoc.o datatest.o regtest.o
  LIBOBJS = $(filter-out $(TESTOBJS),$(OBJS))
  
