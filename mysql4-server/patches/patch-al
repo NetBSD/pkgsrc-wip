@@ -1,12 +1,21 @@
-$NetBSD: patch-al,v 1.1.1.1 2003/07/09 17:17:15 xtraeme Exp $
+$NetBSD: patch-al,v 1.2 2003/07/10 10:37:19 adrian_p Exp $
 
---- include/my_pthread.h.orig	Mon Jan 20 18:40:49 2003
-+++ include/my_pthread.h	Mon Jan 20 18:40:58 2003
-@@ -21,6 +21,7 @@
+--- include/my_pthread.h.orig	Thu Jul 10 11:00:09 2003
++++ include/my_pthread.h	Thu Jul 10 11:01:08 2003
+@@ -20,6 +20,7 @@
  #define _my_pthread_h
  
  #include <errno.h>
 +#include <signal.h>
  #ifndef ETIME
  #define ETIME ETIMEDOUT				/* For FreeBSD */
+ #endif
+@@ -298,7 +299,7 @@
+ #endif
+ 
+ #ifndef HAVE_NONPOSIX_SIGWAIT
+-#define my_sigwait(A,B) sigwait((A),(B))
++#define my_sigwait(A,B) __pthread_sigwait((A),(B))
+ #else
+ int my_sigwait(const sigset_t *set,int *sig);
  #endif
