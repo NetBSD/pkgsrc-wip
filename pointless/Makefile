@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/07 12:17:53 peterih Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/07 14:37:57 peterih Exp $
 #
 
 DISTNAME=		pointless-0.5
@@ -12,6 +12,7 @@ COMMENT=		Markup-language presentation tool
 DEPENDS+=               a2ps>=4.1:../../print/a2ps
 DEPENDS+=               gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=               teTeX>=2.0:../../print/teTeX
+DEPENDS+=               Mesa>=6.0:../../graphics/Mesa
 
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=       yes
