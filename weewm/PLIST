@@ -1,2 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/03 16:17:32 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/03 16:32:44 xtraeme Exp $
 bin/weewm
+share/doc/weewm/FAQ
+share/doc/weewm/INSTALL
+share/doc/weewm/README
+share/examples/weewm/keys.rc
+@dirrm share/examples/weewm
+@dirrm share/doc/weewm
