@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/12/17 23:53:35 airhead Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/18 08:17:00 airhead Exp $
 #
 
 DISTNAME=	plugger-5.0
@@ -21,6 +21,7 @@ PLIST_SUBST+=		EGDIR=${REL_EGDIR}
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/plugger-${PKGVERSION} ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/plugger-controller ${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/plugger.so ${PREFIX}/lib/
 	${INSTALL_MAN} ${WRKSRC}/plugger.7 ${PREFIX}/man/man7/
 	${INSTALL_DATA} ${WRKSRC}/pluggerrc ${EGDIR}/
