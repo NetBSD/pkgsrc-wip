@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/15 14:14:59 poppnk Exp $
+bin/dirb
+bin/gendict
+man/man1/dirb.1
