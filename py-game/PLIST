@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/14 22:00:37 marc Exp $
-${PYINC}/pygame/CPS.h
+@comment $NetBSD: PLIST,v 1.3 2003/11/18 00:54:40 marc Exp $
 ${PYINC}/pygame/font.h
 ${PYINC}/pygame/mixer.h
 ${PYINC}/pygame/pygame.h
-${PYINC}/pygame/setproctitle.h
 ${PYSITELIB}/pygame/__init__.py
 ${PYSITELIB}/pygame/__init__.pyc
 ${PYSITELIB}/pygame/__init__.pyo
@@ -31,6 +29,9 @@ ${PYSITELIB}/pygame/key.so
 ${PYSITELIB}/pygame/locals.py
 ${PYSITELIB}/pygame/locals.pyc
 ${PYSITELIB}/pygame/locals.pyo
+${PYSITELIB}/pygame/macosx.py
+${PYSITELIB}/pygame/macosx.pyc
+${PYSITELIB}/pygame/macosx.pyo
 ${PYSITELIB}/pygame/mixer.so
 ${PYSITELIB}/pygame/mixer_music.so
 ${PYSITELIB}/pygame/mouse.so
