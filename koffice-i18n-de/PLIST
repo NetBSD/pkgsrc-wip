@@ -1,0 +1,61 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/06 17:28:20 marc Exp $
+share/doc/kde/HTML/de/kchart/common
+share/doc/kde/HTML/de/kchart/index.cache.bz2
+share/doc/kde/HTML/de/kchart/index.docbook
+share/doc/kde/HTML/de/kformula/common
+share/doc/kde/HTML/de/kformula/index.cache.bz2
+share/doc/kde/HTML/de/kformula/index.docbook
+share/doc/kde/HTML/de/koshell/common
+share/doc/kde/HTML/de/koshell/index.cache.bz2
+share/doc/kde/HTML/de/koshell/index.docbook
+share/doc/kde/HTML/de/kpresenter/faq.docbook
+share/doc/kde/HTML/de/kpresenter/guides.docbook
+share/doc/kde/HTML/de/kpresenter/menus.docbook
+share/doc/kde/HTML/de/kpresenter/options.docbook
+share/doc/kde/HTML/de/thesaurus/common
+share/doc/kde/HTML/de/thesaurus/index.cache.bz2
+share/doc/kde/HTML/de/thesaurus/index.docbook
+share/kde/locale/de/LC_MESSAGES/csvfilter.mo
+share/kde/locale/de/LC_MESSAGES/desktop_koffice.mo
+share/kde/locale/de/LC_MESSAGES/example.mo
+share/kde/locale/de/LC_MESSAGES/graphite.mo
+share/kde/locale/de/LC_MESSAGES/karbon.mo
+share/kde/locale/de/LC_MESSAGES/kchart.mo
+share/kde/locale/de/LC_MESSAGES/kfile_koffice.mo
+share/kde/locale/de/LC_MESSAGES/kformula.mo
+share/kde/locale/de/LC_MESSAGES/kformulalatexfilter.mo
+share/kde/locale/de/LC_MESSAGES/kformulapngfilter.mo
+share/kde/locale/de/LC_MESSAGES/kivio.mo
+share/kde/locale/de/LC_MESSAGES/koconverter.mo
+share/kde/locale/de/LC_MESSAGES/kocryptfilter.mo
+share/kde/locale/de/LC_MESSAGES/koffice.mo
+share/kde/locale/de/LC_MESSAGES/kontour.mo
+share/kde/locale/de/LC_MESSAGES/koshell.mo
+share/kde/locale/de/LC_MESSAGES/kounavail.mo
+share/kde/locale/de/LC_MESSAGES/kplato.mo
+share/kde/locale/de/LC_MESSAGES/kpresenter.mo
+share/kde/locale/de/LC_MESSAGES/kpresenterkwordfilter.mo
+share/kde/locale/de/LC_MESSAGES/krita.mo
+share/kde/locale/de/LC_MESSAGES/kscan_plugin.mo
+share/kde/locale/de/LC_MESSAGES/kspread.mo
+share/kde/locale/de/LC_MESSAGES/kspreadcalc_calc.mo
+share/kde/locale/de/LC_MESSAGES/kspreadqprofilter.mo
+share/kde/locale/de/LC_MESSAGES/kthesaurus.mo
+share/kde/locale/de/LC_MESSAGES/kugar.mo
+share/kde/locale/de/LC_MESSAGES/kword.mo
+share/kde/locale/de/LC_MESSAGES/kwordasciifilter.mo
+share/kde/locale/de/LC_MESSAGES/kwordhtmlexportfilter.mo
+share/kde/locale/de/LC_MESSAGES/kwordhtmlimportfilter.mo
+share/kde/locale/de/LC_MESSAGES/kwordlatexfilter.mo
+share/kde/locale/de/LC_MESSAGES/kwordmswritefilter.mo
+share/kde/locale/de/LC_MESSAGES/olefilterswinword97filter.mo
+share/kde/locale/de/LC_MESSAGES/thesaurus_tool.mo
+share/kde/locale/de/LC_MESSAGES/xsltexportfilter.mo
+share/kde/locale/de/LC_MESSAGES/xsltimportfilter.mo
+@dirrm share/doc/kde/HTML/de/thesaurus
+@dirrm share/doc/kde/HTML/de/kpresenter
+@dirrm share/doc/kde/HTML/de/koshell
+@dirrm share/doc/kde/HTML/de/kformula
+@dirrm share/doc/kde/HTML/de/kchart
+@unexec ${RMDIR} %D/share/doc/kde/HTML/de 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/locale/de/LC_MESSAGES 2>/dev/null || ${TRUE}
