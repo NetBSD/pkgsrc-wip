@@ -1,0 +1,18 @@
+Heroes is similar to the "Tron" and "Nibbles" games of yore, but includes
+many graphical improvements and new game features. In it, you must maneuver
+a small vehicle around a world and collect powerups while avoiding
+obstacles, your opponents' trails, and even your own trail. 
+
+There are five game modes available. Quest is the classical Nibbles, in
+Death Match you start with very long tails and must kill your opponents, in
+Kill'em All you must run over lemmings moving on the ground, in Time Cash or
+Color modes you must collect money or pyramids of color. Heroes features 12
+original sound tracks, 94 levels (in 10 different tile sets) plus a level
+editor.
+
+Heroes' source code (distributed under the GNU General Public Licence
+version 2) originates from an original MS-DOS game but has been heavily
+modified to enhance the portability. Some new features have been added and
+MS-DOS support has been lost by the meantime. The original MS-DOS version
+can still be found on the Internet but is unmaintained and should be
+considered obsolete.

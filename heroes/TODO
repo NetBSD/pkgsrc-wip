@@ -1,0 +1,9 @@
+$Id: TODO,v 1.1.1.1 2004/03/08 05:22:45 mpasternak Exp $
+
+DISTFILES are basically same named as HEROES_DIRS, only with .bz2 suffixes.
+Perhaps it could be generated from HEROES_DIRS.
+
+Does pkgsrc supports "multiple" WRKSRC directories? It could be useful in
+this case.
+
+	-- dotz@irc.pl
