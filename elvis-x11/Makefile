@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/20 20:11:23 airhead Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 21:13:03 marc Exp $
 #
 
 .include "../elvis/Makefile.common"
@@ -10,6 +10,9 @@ CONFLICTS+=	elvis-[0-9]*
 
 USE_X11=		YES
 CONFIGURE_ARGS+=	--with-x=yes
+CONFIGURE_ARGS+=	--with-xft
 
-.include "../../graphics/freetype2/buildlink2.mk"
+MAKEFLAGS+=	CC="${CC} -I${LOCALBASE}/include/freetype2 ${CFLAGS}"
+
+.include "../../fonts/Xft2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
