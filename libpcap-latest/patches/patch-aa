@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/08/10 13:49:41 imilh Exp $
+
+--- Makefile.in.orig	2003-12-15 02:42:23.000000000 +0100
++++ Makefile.in
+@@ -54,6 +54,9 @@ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ RANLIB = @RANLIB@
++LN = ln
++
++VERSION = `cat VERSION`
+ 
+ #
+ # Flex and bison allow you to specify the prefixes of the global symbols
+@@ -96,13 +99,17 @@ TAGFILES = \
+ 
+ CLEANFILES = $(OBJ) libpcap.a $(GENSRC) $(GENHDR) lex.yy.c
+ 
+-all: libpcap.a
++all: libpcap.a libpcap.so
+ 
+ libpcap.a: $(OBJ)
+ 	@rm -f $@
+ 	ar rc $@ $(OBJ) $(LIBS)
+ 	$(RANLIB) $@
+ 
++libpcap.so: $(OBJ)
++	@rm -f $@
++	ld -shared -fPIC -o libpcap.so.$(VERSION) $(OBJ)
++
+ scanner.c: $(srcdir)/scanner.l
+ 	@rm -f $@
+ 	$(LEX) -t $< > $$$$.$@; mv $$$$.$@ $@
+@@ -168,8 +175,15 @@ install:
+ 	$(INSTALL_DATA) $(srcdir)/pcap.3 \
+ 	    $(DESTDIR)$(mandir)/man3/pcap.3
+ 
++	$(INSTALL) -m 444 libpcap.so.$(VERSION) \
++			$(DESTDIR)$(libdir)/libpcap.so.$(VERSION)
++	$(LN) -fs $(DESTDIR)$(libdir)/libpcap.so.$(VERSION) \
++		$(DESTDIR)$(libdir)/libpcap.so
++
+ uninstall:
+ 	rm -f $(DESTDIR)$(libdir)/libpcap.a
++	rm -f $(DESTDIR)$(libdir)/libpcap.so
++	rm -f $(DESTDIR)$(libdir)/libpcap.so.$(VERSION)
+ 	rm -f $(DESTDIR)$(includedir)/pcap.h
+ 	rm -f $(DESTDIR)$(includedir)/pcap-bpf.h
+ 	rm -f $(DESTDIR)$(includedir)/pcap-namedb.h
