@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.652 2003/11/23 01:36:25 mpasternak Exp $
-# $NetBSD: Makefile,v 1.652 2003/11/23 01:36:25 mpasternak Exp $
+# $Id: Makefile,v 1.653 2003/11/23 12:08:22 mpasternak Exp $
+# $NetBSD: Makefile,v 1.653 2003/11/23 12:08:22 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -421,6 +421,7 @@ SUBDIR+=	py-biggles
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-cjkcodecs
 SUBDIR+=	py-elementtree
+SUBDIR+=	py-f2py2e
 SUBDIR+=	py-fastaudio
 SUBDIR+=	py-fonttools
 SUBDIR+=	py-game
