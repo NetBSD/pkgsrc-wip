@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/05 04:25:05 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/04/05 04:40:09 xtraeme Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ALLEGRO_BUILDLINK3_MK:=	${ALLEGRO_BUILDLINK3_MK}+
@@ -15,6 +15,10 @@ BUILDLINK_DEPENDS.allegro+=	allegro>=4.1.13
 BUILDLINK_PKGSRCDIR.allegro?=	../../wip/allegro
 .endif	# ALLEGRO_BUILDLINK3_MK
 
-.include "../../audio/esound/buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_ESOUND:M[Yy][Ee][Ss])
+  .include "../../audio/esound/buildlink3.mk"
+.endif
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
