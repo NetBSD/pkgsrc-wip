@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2003/06/25 15:43:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/31 02:26:19 xtraeme Exp $
 #
 
 DISTNAME=	ezbounce-1.04a
 CATEGORIES=	chat
 MASTER_SITES=	http://druglord.freelsd.org/ezbounce/ \
 		http://www.shellcentral.com/downloads/files/
+PATCHFILES=	ezb-1.04a-crash-fix-patch
+PATCH_DIST_STRIP=	-p1
+PATCH_SITES=	${MASTER_SITES}
 
 MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://druglord.freelsd.org/ezbounce/
