@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.736 2003/12/04 14:27:26 jgoamakf Exp $
-# $NetBSD: Makefile,v 1.736 2003/12/04 14:27:26 jgoamakf Exp $
+# $Id: Makefile,v 1.737 2003/12/04 15:49:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.737 2003/12/04 15:49:47 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -280,7 +280,6 @@ SUBDIR+=	libXext
 SUBDIR+=	libXfixes
 SUBDIR+=	libXfont
 SUBDIR+=	libXi
-SUBDIR+=	libXrandr
 SUBDIR+=	libXrender
 SUBDIR+=	libXres
 SUBDIR+=	libXt
@@ -519,7 +518,6 @@ SUBDIR+=	q3-urbanterror
 SUBDIR+=	qico
 SUBDIR+=	qinx
 SUBDIR+=	qn-x11
-SUBDIR+=	randrext
 SUBDIR+=	rapidsvn
 SUBDIR+=	rc.subr
 SUBDIR+=	rcorder
