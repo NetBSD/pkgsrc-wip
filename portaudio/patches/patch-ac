@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2003/11/22 17:56:55 mpasternak Exp $
+$NetBSD: patch-ac,v 1.4 2004/04/09 00:30:44 bencollver Exp $
 
---- Makefile.in~	Tue Feb 11 23:24:56 2003
-+++ Makefile.in	Sat Nov 22 17:18:08 2003
-@@ -7,7 +7,7 @@
+--- Makefile.in.orig	Tue Feb 11 23:24:56 2003
++++ Makefile.in
+@@ -7,12 +7,12 @@
  PREFIX = @prefix@
  CC = @CC@
  CFLAGS = @CFLAGS@ -Ipa_common
@@ -11,3 +11,9 @@ $NetBSD: patch-ac,v 1.3 2003/11/22 17:56:55 mpasternak Exp $
  AR = @AR@
  RANLIB = @RANLIB@
  INSTALL = @INSTALL@
+ SHARED_FLAGS = @SHARED_FLAGS@
+-DLL_LIBS = @DLL_LIBS@
++DLL_LIBS = @DLL_LIBS@ ${LIBOSSAUDIO}
+ 
+ OTHER_OBJS = @OTHER_OBJS@
+ 
