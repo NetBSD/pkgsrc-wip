@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/14 16:55:48 hsaliak Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/03 08:55:28 hsaliak Exp $
 bin/bmon
 man/man1/bmon.1
-share/examples/bmon/bmonrc
+share/examples/bmon/bmon.conf
 @dirrm share/examples/bmon

@@ -1,25 +1,33 @@
-# $NetBSD: Makefile,v 1.5 2004/08/05 03:32:44 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/03 08:55:28 hsaliak Exp $
+#
 
-DISTNAME=	bmon-1.2.1
+DISTNAME=	bmon-2.0.1
 CATEGORIES=	net
-MASTER_SITES=	http://trash.net/~reeler/bmon/files/
+MASTER_SITES=	http://people.suug.ch/~tgr/bmon/files/
 
 MAINTAINER=	hsaliak@gmail.com
-HOMEPAGE=	http://trash.net/~reeler/bmon/
+HOMEPAGE=	http://people.suug.ch/~tgr/bmon/
 COMMENT=	Bmon is an interface bandwidth monitor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
+MAKEFILE=	GNUmakefile
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
+USE_PKGINSTALL=	YES	# to allow the examples to be copied over to the confdir
 
-INSTALLATION_DIRS= bin man/man1
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+EGDIR=		${PREFIX}/share/examples/bmon
+CONF_FILES=	${EGDIR}/bmon.conf ${PKG_SYSCONFDIR}/bmon.conf
+
+INSTALLATION_DIRS= bin man/man1 share/examples/bmon
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bmon ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/bmon.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/bmon ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/bmon.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bmon
-	${INSTALL_DATA} ${WRKSRC}/bmonrc ${PREFIX}/share/examples/bmon/bmonrc
+	${INSTALL_DATA}  ${WRKSRC}/etc/bmon.conf ${PREFIX}/share/examples/bmon/bmon.conf
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
