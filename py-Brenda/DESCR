@@ -1,0 +1,7 @@
+PyBrenda is a system for easily doing parallel computation using the
+Python programming language.  It is somewhat similar to the C-Linda
+language; it uses the notion of "tuple space" to simplify the
+interactions among processes.
+
+PyBrenda coordinates requests for more processors to be involved in
+computations and facilitates data sharing among those processors.
