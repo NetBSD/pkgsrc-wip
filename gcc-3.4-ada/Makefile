@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/04/22 08:51:48 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.29 2004/04/24 14:13:52 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
@@ -24,7 +24,16 @@ WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}
 # An Ada compiler is required to build this pkg. Two
 may be used:
 #USE_GCC3	=# Define to use lang/gcc3-ada
-USE_GCC34	=# Define to use gcc-3.4-ada
+USE_GCC34	=# Define to use gcc-3.4
+# You may also specify the path of a gcc/gnat Ada compiler
+# outside of the pkgsrc system by specifying the full path
+# of the compiler (example) below:
+#ALT_GCC=	/usr/pkg/gcc3bootstrap/bin/gcc
+.if defined(ALT_GCC)
+ALT_GCC_PREFIX:=	${ALT_GCC:H}/..
+ALT_GCC_RTS!=	find ${ALT_GCC_PREFIX} -name adalib
+RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
+.endif
 
 # Make location overridable, to allow ping-pong bootstraps.
 GCC34_DEFAULT_SUBPREFIX=	${PKGNAME_NOREV}
@@ -59,13 +68,18 @@ post-patch:
 	done )
 
 .if defined(USE_GCC34)
-# Overide compiler.mk setup to use gcc-3.4.0
 pre-configure:
-	(cd ${BUILDLINK_PREFIX.gcc-3.4.0}/bin && files=`ls gnat*` && \
+.include "../../wip/gcc-3.4/preconfigure.mk"
+.elif defined(ALT_GCC)
+pre-configure:
+	(cd ${WRKDIR}/.buildlink && ${MKDIR} ${RALT_GCC_RTS} && \
+	cd ${RALT_GCC_RTS} && ln -s ${ALT_GCC_RTS}/libgnat.a .) 
+	(cd ${ALT_GCC:H} && \
+	files=`${FIND} . -type f \( -perm -0100 \)` && \
 	cd ${GCC_DIR}/bin/ && \
-	for file in gcc cc cpp $${files} ; do \
+	for file in ${ALT_GCC:T} $${files} ; do \
 	  $(ECHO) '#!/bin/sh' > $${file}; \
-	  $(ECHO) -n "exec ${BUILDLINK_PREFIX.gcc-3.4.0}/bin/$${file} " >>$${file}; \
+	  $(ECHO) -n "exec ${ALT_GCC:H}/$${file} " >>$${file}; \
 	  $(ECHO) '"$$@"' >>$${file}; \
 	  $(CHMOD) +x $${file}; \
 	done )
@@ -95,7 +109,7 @@ post-install:
 .if defined(USE_GCC3)
 .include "../../lang/gcc3-ada/buildlink3.mk"
 .elif defined(USE_GCC34)
-BUILDLINK_DEPMETHOD.gcc-3.4.0= build
+BUILDLINK_DEPMETHOD.gcc-3.4.0=	build
 .include "../../wip/gcc-3.4/buildlink3.mk"
 .endif
 .include "../../mk/pthread.buildlink3.mk"
