@@ -1,0 +1,11 @@
+$Id: TODO,v 1.1.1.1 2004/03/28 01:28:35 mpasternak Exp $
+
+I have no idea, why "doc/" directory doesn't build with pkgsrc. To compile
+ecl, do it by hand, then get back to normal build, eg:
+	
+	# cd work/ecl-0.9c-build/doc
+	# gmake
+	# cd ../../..
+	# make install
+
+	-- dotz@irc.pl

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/28 01:28:35 mpasternak Exp $
+
+SHA1 (ecl-0.9c.tgz) = e42ab2a07ef42ca6b46cd6e4cd096863d089989f
+Size (ecl-0.9c.tgz) = 4085688 bytes
+SHA1 (patch-aa) = a8bb6f27f21411650a9c69ed72922eadf25f98b3

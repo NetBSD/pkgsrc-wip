@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/28 01:28:36 mpasternak Exp $
+
+--- ../ecl-0.9c/src/Makefile.in.orig	2003-10-30 17:58:45.000000000 +0100
++++ ../ecl-0.9c/src/Makefile.in
+@@ -32,6 +32,7 @@ infodir=@infodir@
+ #
+ INSTALL	= @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ INSTALL_DATA = @INSTALL_DATA@
+ 
+ # Files
+@@ -84,23 +85,23 @@ BUILD-STAMP: config.status
+ 	(echo "#"; uname -a) > $@
+ 	head -8 config.status | tail -6 >> $@
+ install: BUILD-STAMP
+-	$(INSTALL) -d $(PREFIX)$(bindir) $(PREFIX)$(mandir) $(PREFIX)$(libdir)/h
+-	$(INSTALL_PROGRAM) -s $(TARGETS) $(PREFIX)$(bindir)
+-	$(INSTALL_PROGRAM) ecl-config $(PREFIX)$(bindir)
+-	$(INSTALL_DATA) $(srcdir)/etc/ecl.1 $(PREFIX)$(mandir)
+-	$(INSTALL_DATA) BUILD-STAMP $(LSP_LIBRARIES) $(LIBRARIES) $(PREFIX)$(libdir)
+-	$(INSTALL_DATA) h/config.h $(PREFIX)$(libdir)/h
+-	$(INSTALL_DATA) c/dpp* help.doc $(PREFIX)$(libdir)
++	$(INSTALL) -d $(bindir) $(mandir) $(libdir)/h
++	$(INSTALL_PROGRAM) -s $(TARGETS) $(bindir)
++	$(INSTALL_SCRIPT) ecl-config $(bindir)
++	$(INSTALL_DATA) $(srcdir)/etc/ecl.1 $(mandir)
++	$(INSTALL_DATA) BUILD-STAMP $(LSP_LIBRARIES) $(LIBRARIES) $(libdir)
++	$(INSTALL_DATA) h/config.h $(libdir)/h
++	$(INSTALL_DATA) c/dpp* help.doc $(libdir)
+ 	if (echo $(SUBDIR) | grep gc); then $(MAKE) installgc; fi
+ 	if (echo $(SUBDIR) | grep gmp); then $(MAKE) installgmp; fi
+-	cd c; $(MAKE) PREFIX="$(PREFIX)" install
+-	cd doc; $(MAKE) PREFIX="$(PREFIX)" install
++	cd c; $(MAKE) PREFIX="/" install
++	cd doc; $(MAKE) PREFIX="/" install
+ installgc:
+-	$(INSTALL) -d $(PREFIX)$(libdir)/h/private
+-	$(INSTALL_DATA) $(srcdir)/gc/include/*.h $(PREFIX)$(libdir)/h/
+-	$(INSTALL_DATA) $(srcdir)/gc/include/private/*.h $(PREFIX)$(libdir)/h/private/
++	$(INSTALL) -d $(libdir)/h/private
++	$(INSTALL_DATA) $(srcdir)/gc/include/*.h $(libdir)/h/
++	$(INSTALL_DATA) $(srcdir)/gc/include/private/*.h $(libdir)/h/private/
+ installgmp:
+-	$(INSTALL_DATA) h/gmp.h $(PREFIX)$(libdir)/h/
++	$(INSTALL_DATA) h/gmp.h $(libdir)/h/
+ 
+ uninstall:
+ 	rm -rf $(mandir)/ecl.1
