@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/11/04 01:19:35 adrian_p Exp $
+# $NetBSD: Makefile,v 1.19 2004/11/04 15:32:41 adrian_p Exp $
 #
 
 DISTNAME=	bugzilla-2.18rc3
@@ -20,21 +20,8 @@ DEPENDS+=	mysql-client>=3.23.41:../../databases/mysql3-client
 DEPENDS+=	p5-DBI>=1.36:../../databases/p5-DBI
 DEPENDS+=	p5-DBD-mysql>=2.1010:../../databases/p5-DBD-mysql
 
-## option.mk -> charts
-DEPENDS+=	gd>=1.20:../../graphics/gd
-DEPENDS+=	p5-Chart>=1.0:../../graphics/p5-Chart
-DEPENDS+=	p5-GDTextUtil-[0-9]*:../../graphics/p5-GDTextUtil
-DEPENDS+=	p5-GDGraph-[0-9]*:../../graphics/p5-GDGraph
-
-## option.mk -> patchviewer
-DEPENDS+=	p5-PatchReader>=0.9.4:../../devel/p5-PatchReader
-DEPENDS+=	patchutils-[0-9]*:../../devel/patchutils
-
-## option.mk -> xmlimportbugs
-DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
-
-## option.mk -> ldapauth
-DEPENDS+=	p5-perl-ldap-[0-9]*:../../databases/p5-perl-ldap
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 NO_BUILDLINK=	YES
 NO_BUILD=	YES

@@ -1,2 +1,3 @@
 - Does bugzilla support mySQL 4.x ?
-- Add options.mk framework
+- Move to pkgsrc once 2.18.x is released
+- Fix CHMOD of pax files - binary package issues ?
