@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.892 2004/01/18 12:46:39 marc Exp $
-# $NetBSD: Makefile,v 1.892 2004/01/18 12:46:39 marc Exp $
+# $Id: Makefile,v 1.893 2004/01/18 19:06:31 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.893 2004/01/18 19:06:31 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -402,6 +402,7 @@ SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-CDDB
 SUBDIR+=	p5-Carp-Assert
 SUBDIR+=	p5-Chart
+SUBDIR+=	p5-Class-Accessor
 SUBDIR+=	p5-Class-Factory-Util
 SUBDIR+=	p5-Class-MethodMaker
 SUBDIR+=	p5-Class-Singleton
