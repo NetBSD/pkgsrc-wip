@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/25 18:42:07 blef Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/03 14:19:04 thomasklausner Exp $
 #
 
 DISTNAME=		drpython-2.1.9
@@ -27,6 +27,6 @@ do-install:
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 	${LN} -s ${PREFIX}/${DRPYTHON_DIR}/drpython.py ${PREFIX}/bin
 
-.include "../../x11/py-wxWindows/buildlink3.mk"
+.include "../../x11/py-wxWidgets/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
