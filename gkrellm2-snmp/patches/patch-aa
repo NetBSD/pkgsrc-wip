@@ -1,14 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/16 12:41:57 cubidou Exp $
+$NetBSD: patch-aa,v 1.2 2003/12/31 10:55:23 cubidou Exp $
 
---- Makefile.orig	2003-04-16 13:21:02.000000000 +0200
+--- Makefile.orig	2003-09-21 14:47:38.000000000 +0200
 +++ Makefile
-@@ -2,11 +2,11 @@
- 
- # Linux
- ##GTK_CONFIG = gtk-config
--GTK_CONFIG = pkg-config gtk+-2.0 --cflags
-+GTK_CONFIG = pkg-config gtk+-2.0
- IMLIB_CONFIG = imlib-config
+@@ -4,7 +4,7 @@
+ GTK_CONFIG = pkg-config gtk+-2.0
  SYSLIB = -lsnmp
  # we need lib crypto if libsnmp has privacy support.
 -SYSLIB += -lcrypto -L/usr/local/ssl/lib -L/usr/ssl/lib
@@ -16,23 +11,20 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/16 12:41:57 cubidou Exp $
  
  # FreeBSD
  #GTK_CONFIG = gtk12-config
-@@ -15,8 +15,8 @@ SYSLIB += -lcrypto -L/usr/local/ssl/lib 
+@@ -12,17 +12,17 @@ SYSLIB += -lcrypto -L/usr/local/ssl/lib 
  #PLUGIN_DIR = /usr/X11R6/libexec/gkrellm/plugins/
  
  USER_PLUGIN_DIR = $(HOME)/.gkrellm2/plugins
--PLUGIN_DIR = /usr/local/lib/gkrellm2/plugins
--GKRELLM_INCLUDE = -I/usr/local/include
+-PLUGIN_DIR = /usr/lib/gkrellm2/plugins
+-GKRELLM_INCLUDE = -I/usr/X11R6/include
 +PLUGIN_DIR = $(PREFIX)/lib/gkrellm2/plugins
 +GKRELLM_INCLUDE = -I$(BUILDLINK_DIR)/include
  
  GTK_INCLUDE = `$(GTK_CONFIG) --cflags`
  GTK_LIB = `$(GTK_CONFIG) --libs`
-@@ -25,11 +25,11 @@ GTK_LIB = `$(GTK_CONFIG) --libs`
- #IMLIB_LIB = `$(IMLIB_CONFIG) --libs-gdk`
- 
  
 -FLAGS = -Wall -fPIC $(GTK_INCLUDE) $(GKRELLM_INCLUDE)
-+FLAGS = $(CFLAGS) -Wall -fPIC $(GTK_INCLUDE) $(GKRELLM_INCLUDE)
++FLAGS = $(CFLAGS) -Wall -fPIC $(GTK_INCLUDE) $(GKRELLM_INCLUDE) -DNETSNMP
  LIBS = $(GTK_LIB) $(SYSLIB)
  LFLAGS = -shared
  
@@ -41,7 +33,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/16 12:41:57 cubidou Exp $
  
  INSTALL = install -c
  INSTALL_PROGRAM = $(INSTALL) -s
-@@ -51,8 +51,8 @@ install-user:	gkrellm_snmp.so
+@@ -47,8 +47,8 @@ install-user:	gkrellm_snmp.so
  	make PLUGIN_DIR=$(USER_PLUGIN_DIR) install
  
  install:	gkrellm_snmp.so

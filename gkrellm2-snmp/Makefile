@@ -1,14 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/16 12:41:56 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/31 10:55:23 cubidou Exp $
 #
 
-DISTNAME=	gkrellm_snmp-0.18
+DISTNAME=	gkrellm_snmp-0.21
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net
 MASTER_SITES=	http://triq.net/gkrellm/
-
-PATCH_SITES=		http://triq.net/gkrellm/
-PATCHFILES=		gkrellm_snmp-0.18-gtk2.patch
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	cube@cubidou.net
 HOMEPAGE=	http://triq.net/gkrellm_snmp.html
