@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/29 05:11:43 sifu Exp $
+${PYSITELIB}/twisted/flow/__init__.py
+${PYSITELIB}/twisted/flow/__init__.pyc
+${PYSITELIB}/twisted/flow/__init__.pyo
+${PYSITELIB}/twisted/flow/base.py
+${PYSITELIB}/twisted/flow/base.pyc
+${PYSITELIB}/twisted/flow/base.pyo
+${PYSITELIB}/twisted/flow/controller.py
+${PYSITELIB}/twisted/flow/controller.pyc
+${PYSITELIB}/twisted/flow/controller.pyo
+${PYSITELIB}/twisted/flow/flow.py
+${PYSITELIB}/twisted/flow/flow.pyc
+${PYSITELIB}/twisted/flow/flow.pyo
+${PYSITELIB}/twisted/flow/pipe.py
+${PYSITELIB}/twisted/flow/pipe.pyc
+${PYSITELIB}/twisted/flow/pipe.pyo
+${PYSITELIB}/twisted/flow/protocol.py
+${PYSITELIB}/twisted/flow/protocol.pyc
+${PYSITELIB}/twisted/flow/protocol.pyo
+${PYSITELIB}/twisted/flow/stage.py
+${PYSITELIB}/twisted/flow/stage.pyc
+${PYSITELIB}/twisted/flow/stage.pyo
+${PYSITELIB}/twisted/flow/test/__init__.py
+${PYSITELIB}/twisted/flow/test/__init__.pyc
+${PYSITELIB}/twisted/flow/test/__init__.pyo
+${PYSITELIB}/twisted/flow/test/test_flow.py
+${PYSITELIB}/twisted/flow/test/test_flow.pyc
+${PYSITELIB}/twisted/flow/test/test_flow.pyo
+${PYSITELIB}/twisted/flow/threads.py
+${PYSITELIB}/twisted/flow/threads.pyc
+${PYSITELIB}/twisted/flow/threads.pyo
+${PYSITELIB}/twisted/flow/web.py
+${PYSITELIB}/twisted/flow/web.pyc
+${PYSITELIB}/twisted/flow/web.pyo
+${PYSITELIB}/twisted/flow/wrap.py
+${PYSITELIB}/twisted/flow/wrap.pyc
+${PYSITELIB}/twisted/flow/wrap.pyo
+@dirrm ${PYSITELIB}/twisted/flow/test
+@dirrm ${PYSITELIB}/twisted/flow
