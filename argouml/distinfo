@@ -1,8 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/07/09 07:27:34 drue Exp $
+$NetBSD: distinfo,v 1.3 2005/03/18 22:38:11 daprice Exp $
 
-SHA1 (ArgoUML-0.14.a1.app.tgz) = 8c859c5930995b0717464afe11c1e36c4e92a53f
-Size (ArgoUML-0.14.a1.app.tgz) = 5232857 bytes
-SHA1 (argo_elmuth.jar) = 9a2f9259f28e49061ef6a265f09533bdaa0ce32d
-Size (argo_elmuth.jar) = 340919 bytes
-SHA1 (xalan-java1.jar) = 8c3c0d38c9fdc3ff395ea50c70af3fd521b8d397
-Size (xalan-java1.jar) = 437699 bytes
+SHA1 (ArgoUML-0.14.tar.gz) = 23f47940dc5a4b346262c048ff5042d1a0986310
+Size (ArgoUML-0.14.tar.gz) = 5207511 bytes
