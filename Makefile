@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1240 2004/04/27 06:12:25 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1240 2004/04/27 06:12:25 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1241 2004/04/28 01:14:09 marc Exp $
+# $NetBSD: Makefile,v 1.1241 2004/04/28 01:14:09 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -270,6 +270,7 @@ SUBDIR+=	jdk12
 SUBDIR+=	jdk12-openjit
 SUBDIR+=	jdk13
 SUBDIR+=	jdk13-openjit
+SUBDIR+=	jdk14
 SUBDIR+=	kadu
 SUBDIR+=	kahakai
 SUBDIR+=	kannel-gateway
