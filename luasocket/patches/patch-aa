@@ -1,0 +1,32 @@
+--- makefile.Linux.orig	2004-12-28 02:22:12.000000000 -0400
++++ makefile.Linux	2004-12-28 02:23:12.000000000 -0400
+@@ -3,7 +3,7 @@
+ 
+ LUAC=luac
+ BIN2C=bin2c
+-CC=gcc
++CC?=gcc
+ OPT=-O2  
+ DEF = -DLUASOCKET_DEBUG #-Dsocklen_t=int
+ 
+@@ -24,16 +24,18 @@
+ MOBJS= \
+ 	mime.o 
+ 
+-CFLAGS=-I../../include $(PROF) $(OPT) $(DBG) $(DEF) -pedantic -W -Wall 
++CFLAGS+=-I../../include $(PROF) $(OPT) $(DBG) $(DEF) -pedantic -W -Wall 
+ 
+ LDYN=luasocket.so.$(LV)
+ 
+ MDYN=mime.so.$(MV)
+ 
++LIBS=-llua -llualib
++
+ all: $(LDYN) $(MDYN)
+ 
+ $(LDYN): $(LOBJS)
+-	gcc -shared -o $(LDYN) $(LOBJS)
++	gcc -shared -o $(LDYN) $(LOBJS) $(LDFLAGS) $(LIBS)
+ 
+ $(MDYN): $(MOBJS)
+ 	gcc -shared -o $(MDYN) $(MOBJS)
