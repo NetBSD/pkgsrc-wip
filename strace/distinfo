@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/05/16 03:45:51 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2003/09/05 21:22:07 jeremy-c-reed Exp $
 
-SHA1 (strace-4.4.94.tar.bz2) = 87be2104d110b101b00c64d6987ffe8c02dbb57f
-Size (strace-4.4.94.tar.bz2) = 361744 bytes
+SHA1 (strace-4.4.98.tar.bz2) = c992788f81388b4923f43f9817ca88d334151b67
+Size (strace-4.4.98.tar.bz2) = 375679 bytes
