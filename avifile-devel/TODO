@@ -1,0 +1,5 @@
+aviplay core dumped.
+
+plugin "xvid4.la" is linked statically.
+
+If oss is not useable, can't use option "ac3_passthrough". But how to determine?

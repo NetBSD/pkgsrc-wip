@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/03/23 11:11:21 obache Exp $
+--- lib/common/String.cpp.orig	2003-05-24 21:53:24.000000000 +0900
++++ lib/common/String.cpp	2005-02-16 22:21:31.000000000 +0900
+@@ -3,6 +3,7 @@
+ #include <ctype.h>
+ #include <stdio.h>
+ #include <stdarg.h>
++#include <stdlib.h>
+ 
+ AVM_BEGIN_NAMESPACE;
+ 
+@@ -170,7 +171,7 @@
+ #else
+     // a bit poor hack but should be sufficient
+     // eventually write full implementation
+-    s = malloc(1000);
++    s = (char*)malloc(1000);
+     r = vsnprintf(str, 999, fmt, ap);
+ #endif
+     if (s)

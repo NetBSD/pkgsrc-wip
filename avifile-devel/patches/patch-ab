@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/03/23 11:11:21 obache Exp $
+--- lib/aviread/AsfFileInputStream.cpp.orig	2003-05-28 00:23:20.000000000 +0900
++++ lib/aviread/AsfFileInputStream.cpp	2005-02-16 22:14:32.000000000 +0900
+@@ -18,6 +18,10 @@
+ #define O_LARGEFILE 0
+ #endif
+ 
++#ifndef __linux__
++#define lseek64 lseek
++#endif
++
+ AVM_BEGIN_NAMESPACE;
+ 
+ #define __MODULE__ "AsfFileInputStream"

@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/23 11:11:21 obache Exp $
+
+SHA1 (avifile-0.7-0.7.41.tar.gz) = 1db88d00140c88a5fcb314fdd1320b80db730430
+RMD160 (avifile-0.7-0.7.41.tar.gz) = f619635abcfd4e006d449a5cebd8d6685e9c4328
+Size (avifile-0.7-0.7.41.tar.gz) = 3498203 bytes
+SHA1 (patch-aa) = 935f1865b1286f085e5986bcb9173d9248befc36
+SHA1 (patch-ab) = 209ba4965dc2a9dc042c18424743f6e1a3f478f9
+SHA1 (patch-ac) = 7a6daa211ca67588d05e6b3497689b34fa177ea7
+SHA1 (patch-ad) = 7b44cdaa0e85a53b91c00b45ca5d30012718da86
+SHA1 (patch-ae) = e52d7b406e1414b87ef7679cbb03d809cf8d7e6e

@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/03/23 11:11:21 obache Exp $
+--- plugins/libac3pass/ac3-iec958.c.orig	2004-02-20 18:21:13.000000000 +0900
++++ plugins/libac3pass/ac3-iec958.c	2005-02-16 22:38:29.000000000 +0900
+@@ -21,7 +21,10 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <string.h>
+-#ifndef __USE_XOPEN
++#if !defined(__USE_XOPEN) && ((__FreeBSD_cc_version < 460001) || \
++                               defined(_ANSI_SOURCE)          || \
++                               defined(_POSIX_SOURCE))           \
++			  && !defined(__NetBSD__)
+ void swab(const void *from, void *to, ssize_t n);
+ #endif
+ #include "ac3-iec958.h"
