@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.2 2003/07/24 12:34:24 tripledes Exp $
+@comment $NetBSD: PLIST.FreeBSD,v 1.3 2003/07/25 19:29:39 blef Exp $
 man/man1/Xmark.1.gz
 man/man1/appres.1.gz
 man/man1/atobm.1.gz
@@ -48,6 +48,7 @@ man/man1/xclipboard.1.gz
 man/man1/xclock.1.gz
 man/man1/xcmsdb.1.gz
 man/man1/xconsole.1.gz
+man/man1/xcursorgen.1.gz
 man/man1/xcutsel.1.gz
 man/man1/xditview.1.gz
 man/man1/xdm.1.gz

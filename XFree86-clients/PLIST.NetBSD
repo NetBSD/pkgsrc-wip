@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.3 2003/07/25 04:03:37 blef Exp $
+@comment $NetBSD: PLIST.NetBSD,v 1.4 2003/07/25 19:29:39 blef Exp $
 man/cat1/Xmark.0
 man/cat1/appres.0
 man/cat1/atobm.0
@@ -48,6 +48,7 @@ man/cat1/xclipboard.0
 man/cat1/xclock.0
 man/cat1/xcmsdb.0
 man/cat1/xconsole.0
+man/cat1/xcursorgen.0
 man/cat1/xcutsel.0
 man/cat1/xditview.0
 man/cat1/xdm.0

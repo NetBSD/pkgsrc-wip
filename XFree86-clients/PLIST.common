@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2003/07/25 04:15:02 xtraeme Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2003/07/25 19:29:39 blef Exp $
 bin/Xmark
 bin/appres
 bin/atobm
@@ -51,6 +51,7 @@ bin/xclipboard
 bin/xclock
 bin/xcmsdb
 bin/xconsole
+bin/xcursorgen
 bin/xcutsel
 bin/xditview
 bin/xdm
@@ -157,6 +158,7 @@ lib/X11/doc/html/xclipboard.1.html
 lib/X11/doc/html/xclock.1.html
 lib/X11/doc/html/xcmsdb.1.html
 lib/X11/doc/html/xconsole.1.html
+lib/X11/doc/html/xcursorgen.1.html
 lib/X11/doc/html/xcutsel.1.html
 lib/X11/doc/html/xditview.1.html
 lib/X11/doc/html/xdm.1.html
