@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/08/16 21:14:06 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/19 09:32:23 rillig Exp $
 #
 
 DISTNAME=		igowin
@@ -12,7 +12,7 @@ EXTRACT_SUFX=		.exe
 # above. The filename is composed from the DISTNAME and the EXTRACT_SUFX.
 # The default for EXTRACT_SUFX is .tar.gz, and you only need to define it
 # in such special cases like this. As Igowin is a game, I placed it into
-# the category "games".
+# the CATEGORIES "games".
 
 MAINTAINER=		roland.illig@gmx.de
 HOMEPAGE=		http://www.smart-games.com/
@@ -20,16 +20,19 @@ COMMENT=		Go playing program
 
 # The MAINTAINER is the person who keeps an eye on the pkgsrc package.
 # The HOMEPAGE is saved with the binary package. You can see it if you
-# run "pkg_info igowin". The comment is a short statement about the pack-
+# run "pkg_info igowin". The COMMENTS is a short statement about the pack-
 # age.
 
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=		wine-[0-9]*:../../emulators/wine
 
-# There are two types of dependency a package can have. Igowin needs unzip
-# to extract the distribution file, but doesn't need it later to run. On
-# the other side it needs wine (the WINdows Emulator) to run, but this is
-# not required at build time.
+# There are two types of dependencies a package can have. Igowin needs
+# unzip to extract the distribution file, but doesn't need it later to run.
+# On the other hand it needs wine (the WINdows Emulator) to run, but this
+# is not required at build time. Wine will nevertheless be installed at
+# buildtime, as most packages in DEPENDS are also needed at build time.
+# The other way, BUILD_DEPENDS packages are not required at runtime, so
+# they can be deinstalled after the build.
 
 WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${EXTRACT_CMD.zip}
