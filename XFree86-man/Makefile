@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/24 05:02:47 blef Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/24 05:27:56 xtraeme Exp $
 
 DISTNAME=	X430src-1
 PKGNAME=	XFree86-man-${XF_VER}
@@ -15,13 +15,12 @@ DEPENDS=	imake>=4.3.0:../../wip/imake
 
 USE_BUILDLINK2=		yes
 
-PROJECTROOT=		-DProjectRoot=${PREFIX}
 NO_XFREE86_TARGETS=	# defined
 INSTALL_TARGET=		install.man
 
 do-configure:
 	(cd ${WRKSRC} ; \
-	${IMAKE} -DUseInstalled ${PROJECTROOT} -I. -I${PREFIX}/lib/X11/config \
+	${IMAKE} -DUseInstalled -I. -I${PREFIX}/lib/X11/config \
 		-DTOPDIR=../.. -DCURDIR=.; \
 	${MAKE} Makefiles ; \
 	${MAKE} includes ; \
