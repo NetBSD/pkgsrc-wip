@@ -17,15 +17,18 @@
 #  check JAVA_APP_CLASSPATH when no JAVA_APP_MAIN defined.
 #  80 cols width
 
-JAR_PREFIX?=${PREFIX}/share/classpath/
+.if !defined(JAVA_APP_MK)
+JAVA_APP_MK=		# defined
 
-.if !defined(JAVA_PKG_MK)
+JAR_MAIN_PREFIX?=	share/classpath
+JAR_PREFIX?=		${LOCALBASE}/${JAR_MAIN_PREFIX}
 
-JAVA_PKG_MK=	#defined
+PLIST_SUBST+=		JAR_MAIN_PREFIX=${JAR_MAIN_PREFIX}
+BUILD_DEFS+=		JAR_MAIN_PREFIX
 
 # default
-JAVA_APP_PATH?=${PREFIX}/bin
-JAVA_APP_WRKDIR?=${WRKDIR}/.java-app/
+JAVA_APP_PATH?=		${PREFIX}/bin
+JAVA_APP_WRKDIR?=	${WRKDIR}/.java-app
 
 # main loop
 .for s in ${JAVA_APP_TARGETS}
@@ -34,13 +37,13 @@ JAVA_APP_WRKDIR?=${WRKDIR}/.java-app/
 post-install: 	install-java-app-${s}
 
 .PHONY:		build-java-app-${s}
-post-build:	build-java-app-${s}
+post-configure:	build-java-app-${s}
 
-JAVA_APP_PATH.${s}?=${JAVA_APP_PATH}
-JAVA_APP_BIN.${s}?=${s}
+JAVA_APP_PATH.${s}?=	${JAVA_APP_PATH}
+JAVA_APP_BIN.${s}?=	${s}
 
 build-java-app-${s}:
-	@${MKDIR} ${JAVA_APP_WRKDIR}
+	${MKDIR} ${JAVA_APP_WRKDIR}
 	@${ECHO} "#!/bin/sh" > ${JAVA_APP_WRKDIR}/${JAVA_APP_BIN.${s}}
 .if defined(JAVA_APP_MAIN.${s})
 	@${ECHO} "env CLASSPATH=${JAVA_APP_CLASSPATH.${s}} java ${JAVA_APP_MAIN.${s}} \$$*" \
@@ -51,9 +54,20 @@ build-java-app-${s}:
 .endif
 
 install-java-app-${s}:
-	${INSTALL_SCRIPT} ${JAVA_APP_WRKDIR}/${JAVA_APP_BIN.${s}} ${JAVA_APP_PATH}/
+	${INSTALL_SCRIPT} ${JAVA_APP_WRKDIR}/${JAVA_APP_BIN.${s}} ${JAVA_APP_PATH}
 
 .endfor
 .undef s
 
+.PHONY:		install-required-dirs
+pre-install:	install-required-dirs
+
+install-required-dirs:
+.if !exists(${JAVA_APP_CLASSPATH})
+	${INSTALL_DATA_DIR} ${JAVA_APP_CLASSPATH}
 .endif
+.if !exists(${JAR_PREFIX})
+	${INSTALL_DATA_DIR} ${JAR_PREFIX}
+.endif
+
+.endif # JAVA_APP_MK
