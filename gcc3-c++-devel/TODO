@@ -1,1 +1,12 @@
-- Compiler builds, runtime library does not.
+                === g++ Summary ===
+
+# of expected passes            9287
+# of unexpected successes       1
+# of expected failures          58
+# of unsupported tests          44
+
+Awaiting release of 3.4
+
+Need to integrate with now gcc.mk stuff. This will only
+build with the old (<= 6 Feb 04) pkgsrc/mk files
+
