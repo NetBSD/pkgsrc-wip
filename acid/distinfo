@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/08 11:46:21 adrian_p Exp $
+
+SHA1 (acid-0.9.6b23.tar.gz) = 2ca04ea4482507ac924318bb1d086021388ef9a6
+Size (acid-0.9.6b23.tar.gz) = 116728 bytes
+SHA1 (patch-aa) = 363fa31a25a877e48689e35f0a759b80f513578b
