@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/15 14:09:22 marc Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/09/11 16:03:39 marc Exp $
 bin/generateDS
 ${PYSITELIB}/generateDS.py
 ${PYSITELIB}/generateDS.pyc
+${PYSITELIB}/generateDS.pyo
