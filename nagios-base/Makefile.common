@@ -1,7 +1,5 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/04/06 00:30:40 marmfield Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/12/21 20:56:29 anewsmurf Exp $
 #
-
-CATEGORIES=		net sysutils
 
 NAGIOS_USER?=		nagios
 NAGIOS_GROUP?=		${NAGIOS_USER}

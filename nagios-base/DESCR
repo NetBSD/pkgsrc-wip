@@ -1,4 +1,4 @@
-  Nagios is a program that will monitor hosts and services on your
+Nagios is a program that will monitor hosts and services on your
 network.  It has the ability to email or page you when a problem arises
 and when it gets resolved.  Nagios is written in C and is designed to
 run under Linux, although it should work under most other *NIX variants.
