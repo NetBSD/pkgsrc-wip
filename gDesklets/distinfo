@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/01/19 21:33:48 minskim Exp $
+
+SHA1 (gDesklets-0.25.1.tar.bz2) = 03b9cbaca46a9918e1bbad26deb74bb45df582fb
+Size (gDesklets-0.25.1.tar.bz2) = 363328 bytes
+SHA1 (patch-aa) = 80baca32cb64a8021c375983541d21aa1facaa26
+SHA1 (patch-ab) = d2551bc003f12f1154eeb42987e2c93c4093f1f4

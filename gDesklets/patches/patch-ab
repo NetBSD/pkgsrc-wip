@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/01/19 21:33:48 minskim Exp $
+
+--- gdesklets.orig	2004-01-16 23:08:10.000000000 -0600
++++ gdesklets
+@@ -47,4 +47,6 @@ starter.start_displays()
+ 
+ # Trigger the GC every 10 seconds
+ gtk.timeout_add(10000, gc_collect)
++gtk.threads_enter()
+ gtk.mainloop()
++gtk.threads_leave()

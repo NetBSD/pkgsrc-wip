@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/19 21:33:48 minskim Exp $
+
+--- data/Makefile.in.orig	2003-12-29 16:19:27.000000000 -0600
++++ data/Makefile.in
+@@ -220,7 +220,7 @@ pixmap_DATA = gdesklets.png
+ fakepixmapdir = $(coredir)/data
+ 
+ schema_in_files = gdesklets-display-thumbnail.schemas.in
+-schemadir = $(sysconfdir)/gconf/schemas
++schemadir = @GCONF_SCHEMA_FILE_DIR@
+ schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+ 
+ CLEANFILES = \

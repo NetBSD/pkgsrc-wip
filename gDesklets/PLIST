@@ -1,0 +1,184 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/19 21:33:48 minskim Exp $
+bin/gdesklets
+bin/gdesklets-display-thumbnailer
+lib/pkgconfig/gdesklets-core.pc
+man/man1/gdesklets.1
+share/application-registry/gdesklets.applications
+share/applications/gdesklets.desktop
+share/gconf/schemas/gdesklets-display-thumbnail.schemas
+share/gdesklets/Sensors/External/__init__.py
+share/gdesklets/Sensors/FontSelector/__init__.py
+share/gdesklets/config/ConfigManager.py
+share/gdesklets/config/DummyBackend.py
+share/gdesklets/config/GConfBackend.py
+share/gdesklets/config/__init__.py
+share/gdesklets/config/migration.py
+share/gdesklets/config/settings.py
+share/gdesklets/data/gdesklets.png
+share/gdesklets/desktop/BGWatcher.py
+share/gdesklets/desktop/GlassWindow.py
+share/gdesklets/desktop/__init__.py
+share/gdesklets/display/ContainerTarget.py
+share/gdesklets/display/DataTarget.py
+share/gdesklets/display/Display.py
+share/gdesklets/display/DisplayConfigurator.py
+share/gdesklets/display/DisplayContainer.py
+share/gdesklets/display/DisplayTarget.py
+share/gdesklets/display/TargetAlignment.py
+share/gdesklets/display/TargetArray.py
+share/gdesklets/display/TargetBonoboControl.py
+share/gdesklets/display/TargetCanvas.py
+share/gdesklets/display/TargetExpander.py
+share/gdesklets/display/TargetFrame.py
+share/gdesklets/display/TargetGauge.py
+share/gdesklets/display/TargetGroup.py
+share/gdesklets/display/TargetHTML.py
+share/gdesklets/display/TargetImage.py
+share/gdesklets/display/TargetLabel.py
+share/gdesklets/display/TargetPlotter.py
+share/gdesklets/display/TargetPopup.py
+share/gdesklets/display/Window.py
+share/gdesklets/display/WindowSnapper.py
+share/gdesklets/display/__init__.py
+share/gdesklets/display/layouters.py
+share/gdesklets/display/targetregistry.py
+share/gdesklets/factory/DisplayFactory.py
+share/gdesklets/factory/SensorFactory.py
+share/gdesklets/factory/__init__.py
+share/gdesklets/gdesklets
+share/gdesklets/libdesklets/CPU.py
+share/gdesklets/libdesklets/Convert.py
+share/gdesklets/libdesklets/Disk.py
+share/gdesklets/libdesklets/Memory.py
+share/gdesklets/libdesklets/Network.py
+share/gdesklets/libdesklets/Sys.py
+share/gdesklets/libdesklets/__init__.py
+share/gdesklets/libdesklets/_glibtopmodule.a
+share/gdesklets/libdesklets/_glibtopmodule.la
+share/gdesklets/libdesklets/glibtop.py
+share/gdesklets/libdesklets/polling.py
+share/gdesklets/locale/ar/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/az/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/ca/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/de/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/el/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/es/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/eu/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/fr/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/he/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/it/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/ja/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/ko/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/lt/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/ms/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/nl/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/pl/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/pt/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/pt_BR/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/ru/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/sq/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/sr/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/sr@Latn/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/sv/LC_MESSAGES/gdesklets.mo
+share/gdesklets/locale/tr/LC_MESSAGES/gdesklets.mo
+share/gdesklets/main/CmdLineParser.py
+share/gdesklets/main/Starter.py
+share/gdesklets/main/__init__.py
+share/gdesklets/main/admin.py
+share/gdesklets/sensor/DefaultSensor.py
+share/gdesklets/sensor/Menu.py
+share/gdesklets/sensor/Sensor.py
+share/gdesklets/sensor/SensorConfigurator.py
+share/gdesklets/sensor/__init__.py
+share/gdesklets/utils/BinTree.py
+share/gdesklets/utils/FileWatcher.py
+share/gdesklets/utils/GConfWatcher.py
+share/gdesklets/utils/Hash2D.py
+share/gdesklets/utils/Observable.py
+share/gdesklets/utils/TargetSettings.py
+share/gdesklets/utils/TilingImage.py
+share/gdesklets/utils/TypeConverter.py
+share/gdesklets/utils/__init__.py
+share/gdesklets/utils/_ewmhmodule.a
+share/gdesklets/utils/_ewmhmodule.la
+share/gdesklets/utils/actionparser.py
+share/gdesklets/utils/datatypes.py
+share/gdesklets/utils/dialog.py
+share/gdesklets/utils/i18n.py
+share/gdesklets/utils/installer.py
+share/gdesklets/utils/pwstore.py
+share/gdesklets/utils/singleton.py
+share/gdesklets/utils/vfs.py
+share/icons/gnome/48x48/mimetypes/x-gdesklets-display.png
+share/mime-info/gdesklets.keys
+share/mime-info/gdesklets.mime
+share/pixmaps/gdesklets.png
+@comment in gnome-dirs: @dirrm share/mime-info
+@comment @dirrm share/icons/gnome/48x48/mimetypes
+@dirrm share/gdesklets/utils
+@dirrm share/gdesklets/sensor
+@dirrm share/gdesklets/main
+@dirrm share/gdesklets/locale/tr/LC_MESSAGES
+@dirrm share/gdesklets/locale/tr
+@dirrm share/gdesklets/locale/sv/LC_MESSAGES
+@dirrm share/gdesklets/locale/sv
+@dirrm share/gdesklets/locale/sr@Latn/LC_MESSAGES
+@dirrm share/gdesklets/locale/sr@Latn
+@dirrm share/gdesklets/locale/sr/LC_MESSAGES
+@dirrm share/gdesklets/locale/sr
+@dirrm share/gdesklets/locale/sq/LC_MESSAGES
+@dirrm share/gdesklets/locale/sq
+@dirrm share/gdesklets/locale/ru/LC_MESSAGES
+@dirrm share/gdesklets/locale/ru
+@dirrm share/gdesklets/locale/pt_BR/LC_MESSAGES
+@dirrm share/gdesklets/locale/pt_BR
+@dirrm share/gdesklets/locale/pt/LC_MESSAGES
+@dirrm share/gdesklets/locale/pt
+@dirrm share/gdesklets/locale/pl/LC_MESSAGES
+@dirrm share/gdesklets/locale/pl
+@dirrm share/gdesklets/locale/nl/LC_MESSAGES
+@dirrm share/gdesklets/locale/nl
+@dirrm share/gdesklets/locale/ms/LC_MESSAGES
+@dirrm share/gdesklets/locale/ms
+@dirrm share/gdesklets/locale/lt/LC_MESSAGES
+@dirrm share/gdesklets/locale/lt
+@dirrm share/gdesklets/locale/ko/LC_MESSAGES
+@dirrm share/gdesklets/locale/ko
+@dirrm share/gdesklets/locale/ja/LC_MESSAGES
+@dirrm share/gdesklets/locale/ja
+@dirrm share/gdesklets/locale/it/LC_MESSAGES
+@dirrm share/gdesklets/locale/it
+@dirrm share/gdesklets/locale/he/LC_MESSAGES
+@dirrm share/gdesklets/locale/he
+@dirrm share/gdesklets/locale/fr/LC_MESSAGES
+@dirrm share/gdesklets/locale/fr
+@dirrm share/gdesklets/locale/eu/LC_MESSAGES
+@dirrm share/gdesklets/locale/eu
+@dirrm share/gdesklets/locale/es/LC_MESSAGES
+@dirrm share/gdesklets/locale/es
+@dirrm share/gdesklets/locale/el/LC_MESSAGES
+@dirrm share/gdesklets/locale/el
+@dirrm share/gdesklets/locale/de/LC_MESSAGES
+@dirrm share/gdesklets/locale/de
+@dirrm share/gdesklets/locale/ca/LC_MESSAGES
+@dirrm share/gdesklets/locale/ca
+@dirrm share/gdesklets/locale/az/LC_MESSAGES
+@dirrm share/gdesklets/locale/az
+@dirrm share/gdesklets/locale/ar/LC_MESSAGES
+@dirrm share/gdesklets/locale/ar
+@dirrm share/gdesklets/locale
+@dirrm share/gdesklets/libdesklets
+@dirrm share/gdesklets/factory
+@dirrm share/gdesklets/display
+@dirrm share/gdesklets/desktop
+@dirrm share/gdesklets/data
+@dirrm share/gdesklets/config
+@dirrm share/gdesklets/Sensors/FontSelector
+@dirrm share/gdesklets/Sensors/External
+@dirrm share/gdesklets/Sensors
+@exec ${MKDIR} %D/share/gdesklets/Displays
+@dirrm share/gdesklets/Displays
+@dirrm share/gdesklets
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in gnome2-dirs: @dirrm share/applications
+@comment in gnome2-dirs: @dirrm share/application-registry
