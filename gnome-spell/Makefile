@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/09 18:35:33 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 21:28:36 minskim Exp $
 
 DISTNAME=	gnome-spell-1.0.5
 CATEGORIES=	textproc
@@ -10,19 +10,19 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Spell checking as you type like gtkspell
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../net/ORBit2/buildlink2.mk"
-.include "../../devel/libbonobo/buildlink2.mk"
-.include "../../devel/libbonoboui/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../textproc/aspell/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../net/ORBit2/buildlink3.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/aspell/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
