@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2003/07/05 22:03:18 xtraeme Exp $
+$NetBSD: distinfo,v 1.6 2003/07/22 22:59:50 xtraeme Exp $
 
-SHA1 (windowlab-1.11.tar) = 3e19f81ac5e69d148338568ddf0c291ee1ddc1ce
-Size (windowlab-1.11.tar) = 133120 bytes
+SHA1 (windowlab-1.12.tar) = d42a249d1d51ed316a41f6cb74bc94a279d06abb
+Size (windowlab-1.12.tar) = 143360 bytes
 SHA1 (patch-aa) = 4170cdb47715139e4f84ce90ae132bcaf52c91e1

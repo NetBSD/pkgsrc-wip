@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/05 22:03:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/22 22:59:50 xtraeme Exp $
 #
 
-DISTNAME=	windowlab-1.11
+DISTNAME=	windowlab-1.12
 CATEGORIES=	wm
 MASTER_SITES=	http://www.nickgravgaard.com/windowlab/
 EXTRACT_SUFX=	.tar
@@ -25,6 +25,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/menurc.sample ${EGDIR}/menurc.default
 
 .include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../fonts/fontconfig/buildlink2.mk"
+.include "../../fonts/Xft2/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
