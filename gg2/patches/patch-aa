@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/05/04 09:36:11 moubctez Exp $
+$NetBSD: patch-aa,v 1.5 2004/06/14 14:04:03 moubctez Exp $
 
---- lib/Makefile.in.orig	2004-05-03 21:42:08.000000000 +0000
+--- lib/Makefile.in.orig	2004-06-12 07:19:21.000000000 +0000
 +++ lib/Makefile.in
-@@ -306,7 +306,7 @@ libgg2_core_la_SOURCES = unified-types.c
+@@ -310,7 +310,7 @@ libgg2_core_la_SOURCES = \
  	perl_embed.h 
  
  libgg2_core_la_HEADERS = gg2_core.h
