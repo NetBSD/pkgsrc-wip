@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/11/05 12:51:41 airhead Exp $
+# $NetBSD: Makefile,v 1.5 2003/11/06 09:45:04 airhead Exp $
 #
 
 DISTNAME=	d2x-0.2.5
@@ -16,7 +16,6 @@ USE_BUILDLINK2=		YES
 D2X_DATA=		${PREFIX}/share/games/${PKGBASE}
 MAKE_DIRS=		${D2X_DATA}
 MESSAGE_SUBST+=		D2X_DATA=${D2X_DATA}
-PLIST_SUBST+=		D2X_DATA=${D2X_DATA}
 
 #
 # Network disabled for now, since only IPX is supported which NetBSD doesn't
