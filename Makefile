@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1708 2005/03/29 00:12:49 jgoamakf Exp $
-# $NetBSD: Makefile,v 1.1708 2005/03/29 00:12:49 jgoamakf Exp $
+# $Id: Makefile,v 1.1709 2005/03/29 05:19:31 sifu Exp $
+# $NetBSD: Makefile,v 1.1709 2005/03/29 05:19:31 sifu Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -782,6 +782,18 @@ SUBDIR+=	py-spambayes
 SUBDIR+=	py-spark
 SUBDIR+=	py-speex
 SUBDIR+=	py-stem
+SUBDIR+=	py-twisted
+SUBDIR+=	py-twisted-conch
+SUBDIR+=	py-twisted-flow
+SUBDIR+=	py-twisted-lore
+SUBDIR+=	py-twisted-mail
+SUBDIR+=	py-twisted-names
+SUBDIR+=	py-twisted-news
+SUBDIR+=	py-twisted-pair
+SUBDIR+=	py-twisted-runner
+SUBDIR+=	py-twisted-web
+SUBDIR+=	py-twisted-words
+SUBDIR+=	py-twisted-xish
 SUBDIR+=	py-visionegg
 SUBDIR+=	py-visionegg-contrib
 SUBDIR+=	py-visionegg-demos
@@ -790,6 +802,7 @@ SUBDIR+=	py-vtkmodule
 SUBDIR+=	py-weave
 SUBDIR+=	py-willow
 SUBDIR+=	py-xsdb
+SUBDIR+=	py-ZopeInterface
 SUBDIR+=	pydance
 SUBDIR+=	pynfo
 SUBDIR+=	pysite
