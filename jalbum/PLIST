@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/02 18:12:56 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/20 18:53:14 marttikuparinen Exp $
 JAlbum/JAlbum.jar
 JAlbum/StartJAlbum.bat
+JAlbum/filetypes.xml
 JAlbum/help/addbuttons.html
 JAlbum/help/faq.html
 JAlbum/help/features.html
@@ -11,6 +12,7 @@ JAlbum/help/images/beans.gif
 JAlbum/help/images/beforefilter-standard.jpg
 JAlbum/help/images/beforefilter.jpg
 JAlbum/help/images/bigicon.gif
+JAlbum/help/images/blurexample.jpg
 JAlbum/help/images/browsers.gif
 JAlbum/help/images/button.gif
 JAlbum/help/images/buttonedit.gif
@@ -18,6 +20,7 @@ JAlbum/help/images/camera.gif
 JAlbum/help/images/closeupwithtext.jpg
 JAlbum/help/images/console.gif
 JAlbum/help/images/david.jpg
+JAlbum/help/images/demowebhost.gif
 JAlbum/help/images/digicam.gif
 JAlbum/help/images/download.gif
 JAlbum/help/images/dragndrop.png
@@ -46,11 +49,14 @@ JAlbum/help/images/navigation1.gif
 JAlbum/help/images/navigation2.gif
 JAlbum/help/images/openskin.gif
 JAlbum/help/images/paypaldonate.gif
+JAlbum/help/images/pdf.gif
 JAlbum/help/images/pil.gif
 JAlbum/help/images/q.gif
+JAlbum/help/images/rotationexample.jpg
 JAlbum/help/images/runson-os.gif
 JAlbum/help/images/script.gif
 JAlbum/help/images/shadowtextexample.jpg
+JAlbum/help/images/sharpenexample.jpg
 JAlbum/help/images/skin.gif
 JAlbum/help/images/skindirectory.gif
 JAlbum/help/images/skinfolder.gif
@@ -68,11 +74,15 @@ JAlbum/help/images/ui-edit.gif
 JAlbum/help/images/ui-macosx.gif
 JAlbum/help/images/ui-metal.gif
 JAlbum/help/images/ui-publish.gif
+JAlbum/help/images/ui-publish.png
 JAlbum/help/images/ui.gif
 JAlbum/help/images/uploading.gif
 JAlbum/help/images/watermarkexample.jpg
+JAlbum/help/images/xbfexample.jpg
+JAlbum/help/images/xborderexample.jpg
 JAlbum/help/images/zoomexample.jpg
 JAlbum/help/index.html
+JAlbum/help/index.ico
 JAlbum/help/misc.html
 JAlbum/help/quickstart.html
 JAlbum/help/scripting.html
@@ -81,9 +91,13 @@ JAlbum/help/style.css
 JAlbum/help/supporting.html
 JAlbum/help/tutorials.html
 JAlbum/help/usermanual.html
+JAlbum/includes/printing.bsh
+JAlbum/includes/printing.inc
 JAlbum/includes/shutterfly.inc
 JAlbum/includes/test.inc
 JAlbum/init.bsh
+JAlbum/plugins/BlurFilter.class
+JAlbum/plugins/BlurFilter.java
 JAlbum/plugins/Compile.bat
 JAlbum/plugins/FixedShapeFilter.class
 JAlbum/plugins/FixedShapeFilter.java
@@ -92,9 +106,15 @@ JAlbum/plugins/GrayscaleFilter.java
 JAlbum/plugins/LogoFilter.class
 JAlbum/plugins/LogoFilter.java
 JAlbum/plugins/LogoFilter.jbx
+JAlbum/plugins/PropertySettingFilterWrapper.class
+JAlbum/plugins/PropertySettingFilterWrapper.java
+JAlbum/plugins/RotationFilter.class
+JAlbum/plugins/RotationFilter.java
 JAlbum/plugins/ShadowTextFilter.class
 JAlbum/plugins/ShadowTextFilter.java
 JAlbum/plugins/ShadowTextFilter.jbx
+JAlbum/plugins/SharpenFilter.class
+JAlbum/plugins/SharpenFilter.java
 JAlbum/plugins/SimpleFilter.class
 JAlbum/plugins/SimpleFilter.java
 JAlbum/plugins/TextFilter.class
@@ -107,46 +127,49 @@ JAlbum/plugins/XBorderFilter.class
 JAlbum/plugins/XBorderFilter.java
 JAlbum/plugins/ZoomFilter.class
 JAlbum/plugins/ZoomFilter.java
-JAlbum/plugins/dependency cache/UnnamedPackage.dependency
-JAlbum/plugins/documentation/FixedShapeFilter.html
-JAlbum/plugins/documentation/GrayscaleFilter.html
-JAlbum/plugins/documentation/LogoFilter.html
-JAlbum/plugins/documentation/ShadowTextFilter.html
-JAlbum/plugins/documentation/SimpleFilter.html
-JAlbum/plugins/documentation/TextFilter.html
-JAlbum/plugins/documentation/WatermarkFilter.html
-JAlbum/plugins/documentation/ZoomFilter.html
-JAlbum/plugins/documentation/allclasses-frame.html
-JAlbum/plugins/documentation/allclasses-noframe.html
-JAlbum/plugins/documentation/constant-values.html
-JAlbum/plugins/documentation/deprecated-list.html
-JAlbum/plugins/documentation/help-doc.html
-JAlbum/plugins/documentation/index-all.html
-JAlbum/plugins/documentation/index.html
-JAlbum/plugins/documentation/overview-tree.html
-JAlbum/plugins/documentation/package-list
-JAlbum/plugins/documentation/packages.html
-JAlbum/plugins/documentation/serialized-form.html
-JAlbum/plugins/documentation/stylesheet.css
 JAlbum/plugins/makedoc.bat
 JAlbum/plugins/readme.txt
 JAlbum/plugins/wishlist.txt
 JAlbum/readme.html
+JAlbum/res/doc.gif
+JAlbum/res/folder.gif
+JAlbum/res/img.gif
+JAlbum/res/mdb.gif
+JAlbum/res/movie.gif
+JAlbum/res/pdf.gif
+JAlbum/res/ppt.gif
+JAlbum/res/txt.gif
+JAlbum/res/unknown.gif
+JAlbum/res/xls.gif
+JAlbum/res/xml.gif
+JAlbum/res/zip.gif
 JAlbum/skins/BluPlusPlus/bsh/base.bsh
 JAlbum/skins/BluPlusPlus/bsh/common.bsh
-JAlbum/skins/BluPlusPlus/bsh/exif-info.bsh
 JAlbum/skins/BluPlusPlus/bsh/index.bsh
+JAlbum/skins/BluPlusPlus/bsh/photographic-meta-info.bsh
+JAlbum/skins/BluPlusPlus/bsh/slide-original.bsh
 JAlbum/skins/BluPlusPlus/bsh/slide.bsh
 JAlbum/skins/BluPlusPlus/bsh/vars.bsh
+JAlbum/skins/BluPlusPlus/cameras.properties
 JAlbum/skins/BluPlusPlus/docs/ChangesHistory.txt
 JAlbum/skins/BluPlusPlus/docs/ReadMe.txt
 JAlbum/skins/BluPlusPlus/docs/UserGuide.txt
 JAlbum/skins/BluPlusPlus/hints.jap
 JAlbum/skins/BluPlusPlus/includes/footer.inc
-JAlbum/skins/BluPlusPlus/includes/index-navigation.inc
+JAlbum/skins/BluPlusPlus/includes/header.inc
+JAlbum/skins/BluPlusPlus/includes/help.inc
+JAlbum/skins/BluPlusPlus/includes/index-bottom-navigation.inc
+JAlbum/skins/BluPlusPlus/includes/index-top-navigation.inc
 JAlbum/skins/BluPlusPlus/includes/index-topbar.inc
+JAlbum/skins/BluPlusPlus/includes/setup-index.js
+JAlbum/skins/BluPlusPlus/includes/setup-slide-common.js
+JAlbum/skins/BluPlusPlus/includes/setup-slide-original.js
+JAlbum/skins/BluPlusPlus/includes/setup-slide.js
+JAlbum/skins/BluPlusPlus/includes/slide-bottom-navigation.inc
+JAlbum/skins/BluPlusPlus/includes/slide-comment.inc
 JAlbum/skins/BluPlusPlus/includes/slide-info.inc
-JAlbum/skins/BluPlusPlus/includes/slide-navigation.inc
+JAlbum/skins/BluPlusPlus/includes/slide-photographic-meta-info.inc
+JAlbum/skins/BluPlusPlus/includes/slide-top-navigation.inc
 JAlbum/skins/BluPlusPlus/includes/slide-topbar.inc
 JAlbum/skins/BluPlusPlus/index.htt
 JAlbum/skins/BluPlusPlus/init.bsh
@@ -157,12 +180,14 @@ JAlbum/skins/BluPlusPlus/res/actions/black/first.gif
 JAlbum/skins/BluPlusPlus/res/actions/black/first_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/black/folder.gif
 JAlbum/skins/BluPlusPlus/res/actions/black/folder_small.gif
+JAlbum/skins/BluPlusPlus/res/actions/black/help.gif
 JAlbum/skins/BluPlusPlus/res/actions/black/index.gif
 JAlbum/skins/BluPlusPlus/res/actions/black/info.gif
 JAlbum/skins/BluPlusPlus/res/actions/black/info_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/black/last.gif
 JAlbum/skins/BluPlusPlus/res/actions/black/last_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/black/movie.gif
+JAlbum/skins/BluPlusPlus/res/actions/black/movie_small.gif
 JAlbum/skins/BluPlusPlus/res/actions/black/next.gif
 JAlbum/skins/BluPlusPlus/res/actions/black/next_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/black/order_print.gif
@@ -178,12 +203,14 @@ JAlbum/skins/BluPlusPlus/res/actions/bright-matte/first.gif
 JAlbum/skins/BluPlusPlus/res/actions/bright-matte/first_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/bright-matte/folder.gif
 JAlbum/skins/BluPlusPlus/res/actions/bright-matte/folder_small.gif
+JAlbum/skins/BluPlusPlus/res/actions/bright-matte/help.gif
 JAlbum/skins/BluPlusPlus/res/actions/bright-matte/index.gif
 JAlbum/skins/BluPlusPlus/res/actions/bright-matte/info.gif
 JAlbum/skins/BluPlusPlus/res/actions/bright-matte/info_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/bright-matte/last.gif
 JAlbum/skins/BluPlusPlus/res/actions/bright-matte/last_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/bright-matte/movie.gif
+JAlbum/skins/BluPlusPlus/res/actions/bright-matte/movie_small.gif
 JAlbum/skins/BluPlusPlus/res/actions/bright-matte/next.gif
 JAlbum/skins/BluPlusPlus/res/actions/bright-matte/next_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/bright-matte/order_print.gif
@@ -199,12 +226,14 @@ JAlbum/skins/BluPlusPlus/res/actions/dark-matte/first.gif
 JAlbum/skins/BluPlusPlus/res/actions/dark-matte/first_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/dark-matte/folder.gif
 JAlbum/skins/BluPlusPlus/res/actions/dark-matte/folder_small.gif
+JAlbum/skins/BluPlusPlus/res/actions/dark-matte/help.gif
 JAlbum/skins/BluPlusPlus/res/actions/dark-matte/index.gif
 JAlbum/skins/BluPlusPlus/res/actions/dark-matte/info.gif
 JAlbum/skins/BluPlusPlus/res/actions/dark-matte/info_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/dark-matte/last.gif
 JAlbum/skins/BluPlusPlus/res/actions/dark-matte/last_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/dark-matte/movie.gif
+JAlbum/skins/BluPlusPlus/res/actions/dark-matte/movie_small.gif
 JAlbum/skins/BluPlusPlus/res/actions/dark-matte/next.gif
 JAlbum/skins/BluPlusPlus/res/actions/dark-matte/next_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/dark-matte/order_print.gif
@@ -220,12 +249,14 @@ JAlbum/skins/BluPlusPlus/res/actions/universal/first.gif
 JAlbum/skins/BluPlusPlus/res/actions/universal/first_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/universal/folder.gif
 JAlbum/skins/BluPlusPlus/res/actions/universal/folder_small.gif
+JAlbum/skins/BluPlusPlus/res/actions/universal/help.gif
 JAlbum/skins/BluPlusPlus/res/actions/universal/index.gif
 JAlbum/skins/BluPlusPlus/res/actions/universal/info.gif
 JAlbum/skins/BluPlusPlus/res/actions/universal/info_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/universal/last.gif
 JAlbum/skins/BluPlusPlus/res/actions/universal/last_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/universal/movie.gif
+JAlbum/skins/BluPlusPlus/res/actions/universal/movie_small.gif
 JAlbum/skins/BluPlusPlus/res/actions/universal/next.gif
 JAlbum/skins/BluPlusPlus/res/actions/universal/next_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/universal/order_print.gif
@@ -241,12 +272,14 @@ JAlbum/skins/BluPlusPlus/res/actions/white/first.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/first_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/folder.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/folder_small.gif
+JAlbum/skins/BluPlusPlus/res/actions/white/help.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/index.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/info.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/info_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/last.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/last_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/movie.gif
+JAlbum/skins/BluPlusPlus/res/actions/white/movie_small.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/next.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/next_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/order_print.gif
@@ -402,52 +435,56 @@ JAlbum/skins/BluPlusPlus/res/borders/solid/border_top_left.gif
 JAlbum/skins/BluPlusPlus/res/borders/solid/border_top_middle.gif
 JAlbum/skins/BluPlusPlus/res/borders/solid/border_top_right.gif
 JAlbum/skins/BluPlusPlus/res/empty.gif
+JAlbum/skins/BluPlusPlus/res/favicon.ico
 JAlbum/skins/BluPlusPlus/res/folder.gif
-JAlbum/skins/BluPlusPlus/res/js/exif-info.js
+JAlbum/skins/BluPlusPlus/res/js/common.js
+JAlbum/skins/BluPlusPlus/res/js/help.js
 JAlbum/skins/BluPlusPlus/res/js/keyboard.js
 JAlbum/skins/BluPlusPlus/res/js/nav-index.js
 JAlbum/skins/BluPlusPlus/res/js/nav-slide.js
+JAlbum/skins/BluPlusPlus/res/js/photographic-meta-info.js
 JAlbum/skins/BluPlusPlus/res/js/save-protection.js
 JAlbum/skins/BluPlusPlus/res/js/shadow.js
 JAlbum/skins/BluPlusPlus/res/js/slideshow.js
 JAlbum/skins/BluPlusPlus/res/js/statusbar.js
 JAlbum/skins/BluPlusPlus/res/movie.gif
-JAlbum/skins/BluPlusPlus/res/styles/Arcs.css
-JAlbum/skins/BluPlusPlus/res/styles/Arcs/background.jpg
-JAlbum/skins/BluPlusPlus/res/styles/Arcs/rule.gif
-JAlbum/skins/BluPlusPlus/res/styles/Arcs/theme.properties
-JAlbum/skins/BluPlusPlus/res/styles/Artsy.css
-JAlbum/skins/BluPlusPlus/res/styles/Artsy/background.jpg
-JAlbum/skins/BluPlusPlus/res/styles/Artsy/rule.gif
-JAlbum/skins/BluPlusPlus/res/styles/Artsy/theme.properties
-JAlbum/skins/BluPlusPlus/res/styles/Autumn.css
-JAlbum/skins/BluPlusPlus/res/styles/Autumn/theme.properties
-JAlbum/skins/BluPlusPlus/res/styles/Black.css
-JAlbum/skins/BluPlusPlus/res/styles/Black/theme.properties
-JAlbum/skins/BluPlusPlus/res/styles/Bluish.css
-JAlbum/skins/BluPlusPlus/res/styles/Bluish/theme.properties
-JAlbum/skins/BluPlusPlus/res/styles/Bluish2.css
-JAlbum/skins/BluPlusPlus/res/styles/Bluish2/theme.properties
-JAlbum/skins/BluPlusPlus/res/styles/Canvas.css
-JAlbum/skins/BluPlusPlus/res/styles/Canvas/background.jpg
-JAlbum/skins/BluPlusPlus/res/styles/Canvas/rule.gif
-JAlbum/skins/BluPlusPlus/res/styles/Canvas/theme.properties
-JAlbum/skins/BluPlusPlus/res/styles/Christmas.css
-JAlbum/skins/BluPlusPlus/res/styles/Christmas/theme.properties
-JAlbum/skins/BluPlusPlus/res/styles/Expedition.css
-JAlbum/skins/BluPlusPlus/res/styles/Expedition/background.jpg
-JAlbum/skins/BluPlusPlus/res/styles/Expedition/rule.gif
-JAlbum/skins/BluPlusPlus/res/styles/Expedition/theme.properties
-JAlbum/skins/BluPlusPlus/res/styles/Glacier.css
-JAlbum/skins/BluPlusPlus/res/styles/Glacier/background.jpg
-JAlbum/skins/BluPlusPlus/res/styles/Glacier/rule.gif
-JAlbum/skins/BluPlusPlus/res/styles/Glacier/theme.properties
-JAlbum/skins/BluPlusPlus/res/styles/Gray.css
-JAlbum/skins/BluPlusPlus/res/styles/Gray/theme.properties
-JAlbum/skins/BluPlusPlus/res/styles/Hakki.css
-JAlbum/skins/BluPlusPlus/res/styles/Hakki/theme.properties
-JAlbum/skins/BluPlusPlus/res/styles/White.css
-JAlbum/skins/BluPlusPlus/res/styles/White/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/arcs.css
+JAlbum/skins/BluPlusPlus/res/styles/arcs/background.jpg
+JAlbum/skins/BluPlusPlus/res/styles/arcs/rule.gif
+JAlbum/skins/BluPlusPlus/res/styles/arcs/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/artsy.css
+JAlbum/skins/BluPlusPlus/res/styles/artsy/background.jpg
+JAlbum/skins/BluPlusPlus/res/styles/artsy/rule.gif
+JAlbum/skins/BluPlusPlus/res/styles/artsy/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/autumn.css
+JAlbum/skins/BluPlusPlus/res/styles/autumn/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/black.css
+JAlbum/skins/BluPlusPlus/res/styles/black/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/bluish.css
+JAlbum/skins/BluPlusPlus/res/styles/bluish/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/bluish2.css
+JAlbum/skins/BluPlusPlus/res/styles/bluish2/rule.gif
+JAlbum/skins/BluPlusPlus/res/styles/bluish2/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/canvas.css
+JAlbum/skins/BluPlusPlus/res/styles/canvas/background.jpg
+JAlbum/skins/BluPlusPlus/res/styles/canvas/rule.gif
+JAlbum/skins/BluPlusPlus/res/styles/canvas/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/christmas.css
+JAlbum/skins/BluPlusPlus/res/styles/christmas/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/expedition.css
+JAlbum/skins/BluPlusPlus/res/styles/expedition/background.jpg
+JAlbum/skins/BluPlusPlus/res/styles/expedition/rule.gif
+JAlbum/skins/BluPlusPlus/res/styles/expedition/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/glacier.css
+JAlbum/skins/BluPlusPlus/res/styles/glacier/background.jpg
+JAlbum/skins/BluPlusPlus/res/styles/glacier/rule.gif
+JAlbum/skins/BluPlusPlus/res/styles/glacier/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/gray.css
+JAlbum/skins/BluPlusPlus/res/styles/gray/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/hakki.css
+JAlbum/skins/BluPlusPlus/res/styles/hakki/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/white.css
+JAlbum/skins/BluPlusPlus/res/styles/white/theme.properties
 JAlbum/skins/BluPlusPlus/res/topbars/black/classic.gif
 JAlbum/skins/BluPlusPlus/res/topbars/blue/classic.gif
 JAlbum/skins/BluPlusPlus/res/topbars/blue/panel.gif
@@ -472,33 +509,38 @@ JAlbum/skins/BluPlusPlus/res/topbars/purple/classic.gif
 JAlbum/skins/BluPlusPlus/res/topbars/purple/panel.gif
 JAlbum/skins/BluPlusPlus/res/topbars/purple/pipe.gif
 JAlbum/skins/BluPlusPlus/res/topbars/red/classic.gif
-JAlbum/skins/BluPlusPlus/setup-index.js
-JAlbum/skins/BluPlusPlus/setup-slide.js
+JAlbum/skins/BluPlusPlus/slide-original.htt
 JAlbum/skins/BluPlusPlus/slide.htt
-JAlbum/skins/BluPlusPlus/styles/Arcs.css
-JAlbum/skins/BluPlusPlus/styles/Artsy.css
-JAlbum/skins/BluPlusPlus/styles/Autumn.css
-JAlbum/skins/BluPlusPlus/styles/Black.css
-JAlbum/skins/BluPlusPlus/styles/Bluish.css
-JAlbum/skins/BluPlusPlus/styles/Bluish2.css
-JAlbum/skins/BluPlusPlus/styles/Canvas.css
-JAlbum/skins/BluPlusPlus/styles/Christmas.css
-JAlbum/skins/BluPlusPlus/styles/Expedition.css
-JAlbum/skins/BluPlusPlus/styles/Glacier.css
-JAlbum/skins/BluPlusPlus/styles/Gray.css
-JAlbum/skins/BluPlusPlus/styles/Hakki.css
-JAlbum/skins/BluPlusPlus/styles/White.css
-JAlbum/skins/BluPlusPlus/texts.properties
-JAlbum/skins/BluPlusPlus/texts_ca.properties
-JAlbum/skins/BluPlusPlus/texts_de.properties
-JAlbum/skins/BluPlusPlus/texts_en.properties
-JAlbum/skins/BluPlusPlus/texts_es.properties
-JAlbum/skins/BluPlusPlus/texts_it.properties
-JAlbum/skins/BluPlusPlus/texts_nl.properties
-JAlbum/skins/BluPlusPlus/texts_pl.properties
-JAlbum/skins/BluPlusPlus/texts_pl.properties_original
-JAlbum/skins/BluPlusPlus/texts_pt.properties
-JAlbum/skins/BluPlusPlus/texts_ru.properties
+JAlbum/skins/BluPlusPlus/styles/arcs.css
+JAlbum/skins/BluPlusPlus/styles/artsy.css
+JAlbum/skins/BluPlusPlus/styles/autumn.css
+JAlbum/skins/BluPlusPlus/styles/black.css
+JAlbum/skins/BluPlusPlus/styles/bluish.css
+JAlbum/skins/BluPlusPlus/styles/bluish2.css
+JAlbum/skins/BluPlusPlus/styles/canvas.css
+JAlbum/skins/BluPlusPlus/styles/christmas.css
+JAlbum/skins/BluPlusPlus/styles/expedition.css
+JAlbum/skins/BluPlusPlus/styles/glacier.css
+JAlbum/skins/BluPlusPlus/styles/gray.css
+JAlbum/skins/BluPlusPlus/styles/hakki.css
+JAlbum/skins/BluPlusPlus/styles/white.css
+JAlbum/skins/BluPlusPlus/texts/photo-metadata.properties
+JAlbum/skins/BluPlusPlus/texts/photo-metadata_en.properties
+JAlbum/skins/BluPlusPlus/texts/texts.properties
+JAlbum/skins/BluPlusPlus/texts/texts_ca.properties
+JAlbum/skins/BluPlusPlus/texts/texts_cs.properties
+JAlbum/skins/BluPlusPlus/texts/texts_da.properties
+JAlbum/skins/BluPlusPlus/texts/texts_de.properties
+JAlbum/skins/BluPlusPlus/texts/texts_en.properties
+JAlbum/skins/BluPlusPlus/texts/texts_es.properties
+JAlbum/skins/BluPlusPlus/texts/texts_fr.properties
+JAlbum/skins/BluPlusPlus/texts/texts_it.properties
+JAlbum/skins/BluPlusPlus/texts/texts_nl.properties
+JAlbum/skins/BluPlusPlus/texts/texts_pl.properties
+JAlbum/skins/BluPlusPlus/texts/texts_pl.properties_original
+JAlbum/skins/BluPlusPlus/texts/texts_pt.properties
+JAlbum/skins/BluPlusPlus/texts/texts_zh.properties
+JAlbum/skins/BluPlusPlus/texts/texts_zh.properties_original
 JAlbum/skins/Bluepro/hints.jap
 JAlbum/skins/Bluepro/index.htt
 JAlbum/skins/Bluepro/preview.jpg
@@ -539,7 +581,6 @@ JAlbum/skins/Camera Geek/styles/Bright.css
 JAlbum/skins/Camera Geek/styles/Custom.css
 JAlbum/skins/Camera Geek/styles/Dark.css
 JAlbum/skins/Camera Geek/styles/Sunset.css
-JAlbum/skins/Colorful/Genv„g till Colorful.lnk
 JAlbum/skins/Colorful/defs.jap
 JAlbum/skins/Colorful/index.htt
 JAlbum/skins/Colorful/preview.jpg
@@ -573,7 +614,6 @@ JAlbum/skins/Colorful/res/up.gif
 JAlbum/skins/Colorful/slide.htt
 JAlbum/skins/Colorful/styles/babyblue.css
 JAlbum/skins/Colorful/styles/pink.css
-JAlbum/skins/Exhibit/closeup.jpg
 JAlbum/skins/Exhibit/index.htt
 JAlbum/skins/Exhibit/init.bsh
 JAlbum/skins/Exhibit/onload.bsh
@@ -946,6 +986,62 @@ JAlbum/skins/Experience/res/up.gif
 JAlbum/skins/Experience/slide.htt
 JAlbum/skins/Experience/styles/dark.css
 JAlbum/skins/Experience/styles/white.css
+JAlbum/skins/Family/footer.inc
+JAlbum/skins/Family/hints.jap
+JAlbum/skins/Family/index.htt
+JAlbum/skins/Family/init.bsh
+JAlbum/skins/Family/onload.bsh
+JAlbum/skins/Family/res/folder.gif
+JAlbum/skins/Family/res/trans.gif
+JAlbum/skins/Family/slide.htt
+JAlbum/skins/Family/styles/black.bsh
+JAlbum/skins/Family/styles/black.css
+JAlbum/skins/Family/styles/black.jpg
+JAlbum/skins/Family/styles/black/bktile.jpg
+JAlbum/skins/Family/styles/black/bottom.jpg
+JAlbum/skins/Family/styles/black/btn_off.gif
+JAlbum/skins/Family/styles/black/btn_on.gif
+JAlbum/skins/Family/styles/black/btnrow_bktile.jpg
+JAlbum/skins/Family/styles/black/folder.gif
+JAlbum/skins/Family/styles/black/left.jpg
+JAlbum/skins/Family/styles/black/right.jpg
+JAlbum/skins/Family/styles/black/top.jpg
+JAlbum/skins/Family/styles/blue.bsh
+JAlbum/skins/Family/styles/blue.css
+JAlbum/skins/Family/styles/blue.jpg
+JAlbum/skins/Family/styles/blue/bktile.jpg
+JAlbum/skins/Family/styles/blue/bottom.jpg
+JAlbum/skins/Family/styles/blue/btn_off.gif
+JAlbum/skins/Family/styles/blue/btn_on.gif
+JAlbum/skins/Family/styles/blue/btnrow_bktile.jpg
+JAlbum/skins/Family/styles/blue/folder.gif
+JAlbum/skins/Family/styles/blue/left.jpg
+JAlbum/skins/Family/styles/blue/right.jpg
+JAlbum/skins/Family/styles/blue/top.jpg
+JAlbum/skins/Family/styles/pink.bsh
+JAlbum/skins/Family/styles/pink.css
+JAlbum/skins/Family/styles/pink.jpg
+JAlbum/skins/Family/styles/pink/bktile.jpg
+JAlbum/skins/Family/styles/pink/bottom.jpg
+JAlbum/skins/Family/styles/pink/btn_off.gif
+JAlbum/skins/Family/styles/pink/btn_on.gif
+JAlbum/skins/Family/styles/pink/btnrow_bktile.jpg
+JAlbum/skins/Family/styles/pink/folder.gif
+JAlbum/skins/Family/styles/pink/left.jpg
+JAlbum/skins/Family/styles/pink/right.jpg
+JAlbum/skins/Family/styles/pink/top.jpg
+JAlbum/skins/Family/styles/white.bsh
+JAlbum/skins/Family/styles/white.css
+JAlbum/skins/Family/styles/white.jpg
+JAlbum/skins/Family/styles/white/bktile.jpg
+JAlbum/skins/Family/styles/white/bottom.jpg
+JAlbum/skins/Family/styles/white/btn_off.gif
+JAlbum/skins/Family/styles/white/btn_on.gif
+JAlbum/skins/Family/styles/white/btnrow_bktile.jpg
+JAlbum/skins/Family/styles/white/folder.gif
+JAlbum/skins/Family/styles/white/left.jpg
+JAlbum/skins/Family/styles/white/right.jpg
+JAlbum/skins/Family/styles/white/top.jpg
 JAlbum/skins/Film/about.txt
 JAlbum/skins/Film/hints.jap
 JAlbum/skins/Film/index.htt
@@ -1180,6 +1276,7 @@ JAlbum/skins/Standard/styles/Plain.css
 JAlbum/skins/Standard/styles/White.css
 JAlbum/skins/Standard/subdir/head.inc
 JAlbum/skins/Standard/texts.properties
+JAlbum/skins/Standard/texts_cs.properties
 JAlbum/skins/Standard/texts_en.properties
 JAlbum/skins/Standard/texts_sv.properties
 JAlbum/skins/Vertical/about.txt
@@ -1196,6 +1293,36 @@ JAlbum/skins/Vertical/styles/AskUser.css
 JAlbum/skins/Vertical/styles/Black.css
 JAlbum/skins/Vertical/styles/Pro.css
 JAlbum/skins/Vertical/styles/White.css
+JAlbum/skins/Wedding/hints.jap
+JAlbum/skins/Wedding/index.htt
+JAlbum/skins/Wedding/init.bsh
+JAlbum/skins/Wedding/onload.bsh
+JAlbum/skins/Wedding/png/ornamentBigBottomLeft.png
+JAlbum/skins/Wedding/png/ornamentBigBottomRight.png
+JAlbum/skins/Wedding/png/ornamentBigTopLeft.png
+JAlbum/skins/Wedding/png/ornamentBigTopRight.png
+JAlbum/skins/Wedding/png/ornamentSmallBottomLeft.png
+JAlbum/skins/Wedding/png/ornamentSmallBottomRight.png
+JAlbum/skins/Wedding/png/ornamentSmallTopLeft.png
+JAlbum/skins/Wedding/png/ornamentSmallTopRight.png
+JAlbum/skins/Wedding/res/back.gif
+JAlbum/skins/Wedding/res/dot.gif
+JAlbum/skins/Wedding/res/folder.gif
+JAlbum/skins/Wedding/res/next.gif
+JAlbum/skins/Wedding/res/ornament_left.gif
+JAlbum/skins/Wedding/res/ornament_right.gif
+JAlbum/skins/Wedding/res/prev.gif
+JAlbum/skins/Wedding/slide.htt
+JAlbum/skins/Wedding/styles/pink.bsh
+JAlbum/skins/Wedding/styles/pink.css
+JAlbum/skins/Wedding/styles/pink.jpg
+JAlbum/skins/Wedding/styles/pink/background.jpg
+JAlbum/skins/Wedding/styles/white.bsh
+JAlbum/skins/Wedding/styles/white.css
+JAlbum/skins/Wedding/styles/white.jpg
+JAlbum/skins/Wedding/styles/white/background.jpg
+JAlbum/skins/Wedding/texts/texts.properties
+JAlbum/skins/Wedding/texts/texts_sv.properties
 JAlbum/skins/Whitey/index.htt
 JAlbum/skins/Whitey/res/camera.gif
 JAlbum/skins/Whitey/res/folder.gif
@@ -1243,10 +1370,12 @@ JAlbum/skins/XP/styles/Standard (Blue)/InfoPaneHeaderOpenBlue.gif
 JAlbum/skins/XP/styles/Standard (Blue)/MainBGBlue.gif
 JAlbum/skins/XP/texts/texts.properties
 JAlbum/skins/XP/texts/texts_ca.properties
+JAlbum/skins/XP/texts/texts_cs.properties
 JAlbum/skins/XP/texts/texts_da.properties
 JAlbum/skins/XP/texts/texts_de.properties
 JAlbum/skins/XP/texts/texts_en.properties
 JAlbum/skins/XP/texts/texts_es.properties
+JAlbum/skins/XP/texts/texts_fi.properties
 JAlbum/skins/XP/texts/texts_fr.properties
 JAlbum/skins/XP/texts/texts_is.properties
 JAlbum/skins/XP/texts/texts_it.properties
@@ -1259,6 +1388,7 @@ JAlbum/skins/XP/texts/texts_sv.properties
 JAlbum/skins/XP/texts/texts_zh.properties
 JAlbum/skins/XP/texts/texts_zh_tw.properties
 JAlbum/texts/texts.properties
+JAlbum/texts/texts_bg.properties
 JAlbum/texts/texts_cs.properties
 JAlbum/texts/texts_da.properties
 JAlbum/texts/texts_de.properties
@@ -1268,6 +1398,7 @@ JAlbum/texts/texts_fi.properties
 JAlbum/texts/texts_fr.properties
 JAlbum/texts/texts_hu.properties
 JAlbum/texts/texts_it.properties
+JAlbum/texts/texts_ja.properties
 JAlbum/texts/texts_nl.properties
 JAlbum/texts/texts_pl.properties
 JAlbum/texts/texts_pt.properties
@@ -1276,12 +1407,17 @@ JAlbum/texts/texts_sk.properties
 JAlbum/texts/texts_sv.properties
 JAlbum/texts/texts_th.properties
 JAlbum/tools/Adjust image orientation.bsh
+JAlbum/tools/Calculate album size.bsh
+JAlbum/tools/Clear user defined variables.bsh
 JAlbum/tools/Convert upper case to lower case.bsh
 JAlbum/tools/Extract comments.bsh
 JAlbum/tools/Perform garbage collection.bsh
+JAlbum/tools/Replace spaces with underscores.bsh
 JAlbum/tools/Reset file date to camera date.bsh
 JAlbum/tools/Sample tool.bsh
 bin/jalbum
+@dirrm JAlbum/res
+@dirrm JAlbum/includes
 @dirrm JAlbum/skins/Bluepro/res
 @dirrm JAlbum/skins/Bluepro/styles
 @dirrm JAlbum/skins/Bluepro
@@ -1314,19 +1450,19 @@ bin/jalbum
 @dirrm JAlbum/skins/BluPlusPlus/res/borders/solid
 @dirrm JAlbum/skins/BluPlusPlus/res/borders
 @dirrm JAlbum/skins/BluPlusPlus/res/js
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/Arcs
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/Artsy
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/Autumn
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/Black
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/Bluish
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/Bluish2
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/Canvas
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/Christmas
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/Expedition
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/Glacier
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/Gray
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/Hakki
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/White
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/arcs
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/artsy
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/autumn
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/black
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/bluish
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/bluish2
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/hakki
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/canvas
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/christmas
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/expedition
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/white
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/glacier
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/gray
 @dirrm JAlbum/skins/BluPlusPlus/res/styles
 @dirrm JAlbum/skins/BluPlusPlus/res/topbars/black
 @dirrm JAlbum/skins/BluPlusPlus/res/topbars/blue
@@ -1341,6 +1477,7 @@ bin/jalbum
 @dirrm JAlbum/skins/BluPlusPlus/res/topbars
 @dirrm JAlbum/skins/BluPlusPlus/res
 @dirrm JAlbum/skins/BluPlusPlus/styles
+@dirrm JAlbum/skins/BluPlusPlus/texts
 @dirrm JAlbum/skins/BluPlusPlus
 @dirrm JAlbum/skins/Camera Geek/res
 @dirrm JAlbum/skins/Camera Geek/styles
@@ -1372,6 +1509,13 @@ bin/jalbum
 @dirrm JAlbum/skins/Experience/res
 @dirrm JAlbum/skins/Experience/styles
 @dirrm JAlbum/skins/Experience
+@dirrm JAlbum/skins/Family/res
+@dirrm JAlbum/skins/Family/styles/black
+@dirrm JAlbum/skins/Family/styles/blue
+@dirrm JAlbum/skins/Family/styles/pink
+@dirrm JAlbum/skins/Family/styles/white
+@dirrm JAlbum/skins/Family/styles
+@dirrm JAlbum/skins/Family
 @dirrm JAlbum/skins/Film/res
 @dirrm JAlbum/skins/Film/styles
 @dirrm JAlbum/skins/Film
@@ -1408,6 +1552,13 @@ bin/jalbum
 @dirrm JAlbum/skins/Standard/styles
 @dirrm JAlbum/skins/Standard/subdir
 @dirrm JAlbum/skins/Standard
+@dirrm JAlbum/skins/Wedding/png
+@dirrm JAlbum/skins/Wedding/res
+@dirrm JAlbum/skins/Wedding/styles/pink
+@dirrm JAlbum/skins/Wedding/styles/white
+@dirrm JAlbum/skins/Wedding/styles
+@dirrm JAlbum/skins/Wedding/texts
+@dirrm JAlbum/skins/Wedding
 @dirrm JAlbum/skins/Vertical/res
 @dirrm JAlbum/skins/Vertical/styles
 @dirrm JAlbum/skins/Vertical
@@ -1422,12 +1573,10 @@ bin/jalbum
 @dirrm JAlbum/skins/XP/texts
 @dirrm JAlbum/skins/XP
 @dirrm JAlbum/skins
+@dirrm JAlbum/texts
 @dirrm JAlbum/tools
-@dirrm JAlbum/plugins/dependency cache
-@dirrm JAlbum/plugins/documentation
-@dirrm JAlbum/plugins
-@dirrm JAlbum/includes
 @dirrm JAlbum/help/images
 @dirrm JAlbum/help
-@dirrm JAlbum/texts
+@dirrm JAlbum/plugins/documentation
+@dirrm JAlbum/plugins
 @dirrm JAlbum
