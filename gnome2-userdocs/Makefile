@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/09/11 18:56:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/12 16:34:13 xtraeme Exp $
 #
 
 DISTNAME=	gnome2-user-docs-2.0.6
-CATEGORIES=	x11
+CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome2-user-docs/2.0/}
 EXTRACT_SUFX=	.tar.bz2
 
