@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1478 2004/09/28 07:26:27 marttikuparinen Exp $
-# $NetBSD: Makefile,v 1.1478 2004/09/28 07:26:27 marttikuparinen Exp $
+# $Id: Makefile,v 1.1479 2004/09/29 23:46:41 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1479 2004/09/29 23:46:41 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -65,6 +65,7 @@ SUBDIR+=	bugzilla
 SUBDIR+=	busybox
 SUBDIR+=	bwidget
 SUBDIR+=	byacc
+SUBDIR+=	c-ares
 SUBDIR+=	c-news
 SUBDIR+=	caml-libnum
 SUBDIR+=	caml-libunix
@@ -787,6 +788,7 @@ SUBDIR+=	tls
 SUBDIR+=	toppler
 SUBDIR+=	totem
 SUBDIR+=	tr2latex
+SUBDIR+=	tre
 SUBDIR+=	tripwire2
 SUBDIR+=	tsm
 SUBDIR+=	turba
@@ -797,6 +799,7 @@ SUBDIR+=	uclibc
 SUBDIR+=	udhcp
 SUBDIR+=	umix
 SUBDIR+=	unmo3
+SUBDIR+=	unrealircd
 SUBDIR+=	unrealtournament-server
 SUBDIR+=	unshield
 SUBDIR+=	up-imapproxy
