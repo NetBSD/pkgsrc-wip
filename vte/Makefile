@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/10/03 10:32:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2003/10/26 22:55:03 xtraeme Exp $
 #
 
 DISTNAME=	vte-0.11.10
@@ -29,4 +29,5 @@ PKGCONFIG_OVERRIDE+=    ${WRKSRC}/vte.pc.in
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
+.include "../../x11/libzvt/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
