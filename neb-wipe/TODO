@@ -1,0 +1,2 @@
+- Perhaps some testing - although I did on alpha and i386 so it should run on any NetBSD platform
+- Will work and is configured to be NetBSD only due to calls of opendisk(3) which is not available on all OS (maybe someone should try on OpenBSD, FreeBSD, ...)- Ready for uploading into pkgsrc beside upper items
