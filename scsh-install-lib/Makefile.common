@@ -1,0 +1,14 @@
+#
+# $NetBSD: Makefile.common,v 1.1 2005/02/15 21:09:53 airhead Exp $
+#
+# Common Makefile for packages that are installed using scsh-install-lib
+#
+
+NO_BUILD=		yes
+
+do-install:
+	cd ${WRKSRC}; \
+	scsh-install-pkg --bindir ${PREFIX}/bin	\
+			 --prefix=${PREFIX}/lib/scsh \
+			 --layout fhs \
+			 --verbose
