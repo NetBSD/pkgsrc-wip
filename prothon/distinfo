@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/27 23:54:25 mpasternak Exp $
+
+SHA1 (prothon-115.tar.gz) = 5206886bfbde2dfc671ce111364ab8a688463d53
+Size (prothon-115.tar.gz) = 179619 bytes
+SHA1 (patch-aa) = a18303dd75ac1d7ae6a2a7216131ac9362e4972f

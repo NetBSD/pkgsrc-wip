@@ -1,0 +1,9 @@
+Prothon is a fresh new language that gets rid of classes altogether in the
+same way that Self does and regains the original practical and fun
+sensibility of Python. This major improvement plus many minor ones make for
+a clean new revolutionary break in language development. Prothon is quite
+simple and yet offers the power of Python and Self.
+
+Prothon is also an industrial-strength alternative to Python and Self.
+Prothon uses native threads and a 64-bit architecture to maximize
+performance in applications such as multiple-cpu hosting.

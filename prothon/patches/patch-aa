@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/27 23:54:25 mpasternak Exp $
+
+--- src/Makefile.in.orig	2004-03-28 01:34:49.000000000 +0100
++++ src/Makefile.in
+@@ -13,7 +13,7 @@ PROTHON_DEFAULT_MODDIR = @PROTHON_DEFAUL
+ 
+ CC=@CC@
+ LD=$(CC)
+-BISON=bison-1.35
++BISON=${PREFIX}/bin/bison-1.35
+ 
+ CFLAGS=@CFLAGS@ -I../include $(APR_CFLAGS) $(APR_INCLUDES) \
+ 	-DPROTHON_DEFAULT_MODDIR="\"$(PROTHON_DEFAULT_MODDIR)\""
