@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/06 06:51:18 jcd Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/07 03:54:32 jcd Exp $
 
 DISTNAME=	amavisd-new-${VERSION}
 PKGNAME=	${DISTNAME}${PATCHLEVEL}
@@ -42,9 +42,7 @@ CONFLICTS+=     amavis-perl-[0-9]*
 PERL5_REQD=     5.8.0
 
 .include "../../mk/bsd.prefs.mk"
-.if defined(USE_MILTER) && ${USE_MILTER} == "YES"
 USE_BUILDLINK2= yes
-.endif
 
 VERSION=	20030616
 PATCHLEVEL=	p6
