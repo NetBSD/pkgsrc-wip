@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/30 17:08:55 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2003/10/14 05:46:33 jeremy-c-reed Exp $
 
-SHA1 (krb5-1.3.tar) = a66c78537f4f85041d97631faa69281a0851b81e
-Size (krb5-1.3.tar) = 6154240 bytes
+SHA1 (krb5-1.3.1.tar) = 442fc9f0831102189c21fe343db12b1dc2246cba
+Size (krb5-1.3.1.tar) = 6164480 bytes
 SHA1 (patch-aa) = a854b5fba5c60540079cae9dd014c6a89ab9a105
-SHA1 (patch-ab) = a4d88f9510de04e846f7024cbe275909d8426545
+SHA1 (patch-ab) = dd149c94ffdbd4739503ad113ae1e1b9a95ff626
 SHA1 (patch-ac) = be7b57700c19d61359f25f34341491625d379bb9
 SHA1 (patch-ad) = 0b2f4f2bbd57c9dfb51b17ba7b840f1430185f37
 SHA1 (patch-ae) = 8b472879a36dc5dac7f1ab09562ac921b52a1ceb
