@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1504 2004/10/22 10:39:32 moubctez Exp $
-# $NetBSD: Makefile,v 1.1504 2004/10/22 10:39:32 moubctez Exp $
+# $Id: Makefile,v 1.1505 2004/10/23 00:25:09 minskim Exp $
+# $NetBSD: Makefile,v 1.1505 2004/10/23 00:25:09 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -477,7 +477,6 @@ SUBDIR+=	p5-Apache-Request
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Class-Date
-SUBDIR+=	p5-Class-Factory
 SUBDIR+=	p5-Class-Factory-Util
 SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-Convert-BinHex
