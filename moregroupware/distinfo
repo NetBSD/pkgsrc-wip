@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/27 23:02:03 xtraeme Exp $
+
+SHA1 (moregroupware-core-0.7.1.tar.gz) = c05c7a4fbdfa285334cbf638dfee99caf7edc074
+Size (moregroupware-core-0.7.1.tar.gz) = 2277444 bytes
+SHA1 (moregroupware-docs-0.7.1.tar.gz) = 268e8bd2b5488c5a00ae2385c98e0c3bf35bfa7a
+Size (moregroupware-docs-0.7.1.tar.gz) = 2113887 bytes

@@ -1,0 +1,25 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/03/27 23:02:03 xtraeme Exp $
+
+You will need to make Moregroupware accessible through your HTTP server.
+If you are running Apache and ap-php, then you may either symlink
+	
+	${PREFIX}/share/moregroupware
+
+into DocumentRoot, or add the following lines to httpd.conf:
+	
+	<IfModule mod_alias.c>
+		Alias /moregroupware/ "${PREFIX}/share/moregroupware"
+	</IfModule>
+
+By the way, You need to have the following directives in
+${PKG_SYSCONFDIR}/php.ini:
+
+	- allow_call_time_pass_reference = On
+	- extension=mysql.so
+	- extension=gd.so
+	- extension=ldap.so
+	- extension=pcre.so
+	- extension=session.so
+
+===========================================================================
