@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/03/06 07:20:11 jeremy-c-reed Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/03/10 05:46:30 jeremy-c-reed Exp $
 
 GETTEXT_VERSION=	0.14.1
 DISTNAME=		gettext-${GETTEXT_VERSION}
@@ -9,3 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gettext/gettext.html
 
 GNU_CONFIGURE=		yes
+
+# XXX need to only depend on GNU libiconv on non-glibc systems
+.include "../../converters/libiconv/buildlink3.mk"
