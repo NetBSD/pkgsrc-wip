@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/04/29 15:18:21 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/30 09:40:28 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
@@ -99,7 +99,7 @@ do-test:
 .if (${MACHINE_GNU_ARCH} == "x86_64")
 	(cd files && cp netbsd64macro.dfs ${WRKSRC}/gcc/testsuite/ada/acats/support/macro.dfs)
 .endif
-	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
+	(cd ${WRKDIR}/obj && ${GMAKE} -k check ada)
 
 do-install:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} ${INSTALL} \
