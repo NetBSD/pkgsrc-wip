@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2004/04/21 10:01:01 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.28 2004/04/22 08:51:48 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
 PKGNAME=	gccAda-${GCC_VERSION}
 CATEGORIES=	lang
-MASTER_SITES=   ${MASTER_SITE_GNU:=gcc/releases/gcc-${GCC_VERSION}/}
+MASTER_SITES=   ${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 DISTFILES=	gcc-${GCC_VERSION}.tar.bz2
 
 MAINTAINER=	john@johnrshannon.com
