@@ -1,0 +1,3 @@
+- Split left, right channel
+- Autoupdate when some other app changes mixer settings
+- Saving mixer state to file
