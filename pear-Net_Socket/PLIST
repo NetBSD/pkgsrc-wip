@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/15 16:19:01 poppnk Exp $
-lib/php/.lock
-lib/php/.registry/net_socket.reg
-lib/php/Net/Socket.php
-@dirrm lib/php/Net
-@dirrm lib/php/.registry

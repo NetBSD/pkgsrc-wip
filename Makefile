@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1518 2004/10/31 22:02:08 dolecek Exp $
-# $NetBSD: Makefile,v 1.1518 2004/10/31 22:02:08 dolecek Exp $
+# $Id: Makefile,v 1.1519 2004/11/01 21:53:28 dolecek Exp $
+# $NetBSD: Makefile,v 1.1519 2004/11/01 21:53:28 dolecek Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -515,12 +515,6 @@ SUBDIR+=	pcsx
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdns
 SUBDIR+=	pdq
-SUBDIR+=	pear-DIME
-SUBDIR+=	pear-HTTP_Request
-SUBDIR+=	pear-Mail_Mime
-SUBDIR+=	pear-Net_Socket
-SUBDIR+=	pear-Net_URL
-SUBDIR+=	pear-SOAP
 SUBDIR+=	pekwm-nightly
 SUBDIR+=	perl59
 SUBDIR+=	perltidy
