@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/16 07:54:11 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/27 00:35:37 blef Exp $
 
 DISTNAME=	gwc-0.19-10
 PKGNAME=	gwc-0.19.10
@@ -11,15 +11,15 @@ HOMEPAGE=	http://gwc.sourceforge.net/
 COMMENT=	Gnome Wave Cleaner: dehiss and declick .wav files
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11BASE=	YES
 
 post-patch:
 	${SED} -e s,@DEVOSSAUDIO@,${DEVOSSAUDIO}, ${WRKSRC}/gwc.c > ${WRKSRC}/gwc.c.sed
 	${MV} ${WRKSRC}/gwc.c.sed ${WRKSRC}/gwc.c
 
-.include "../../math/fftw/buildlink2.mk"
-.include "../../audio/libsndfile/buildlink2.mk"
-.include "../../x11/gnome-core/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../math/fftw/buildlink3.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../x11/gnome-core/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
