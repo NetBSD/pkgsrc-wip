@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/24 12:03:23 jmmv Exp $
+bin/thcrut
+share/thcrut/manuf
+share/thcrut/nmap-os-fingerprints
+share/thcrut/thcrut-os-fingerprints
+@dirrm share/thcrut
