@@ -1,16 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/07/02 21:05:58 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/02 21:10:34 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
 # * PKGNAME: 2.0.11 means "1.2.2-FCS, patchset 11" (FCS = Sun patch 0).
-#
-# * Because this all requires SCSL acceptance, the JRE is not
-#   actually redistributable.  Thus source building is required, and
-#   there's little point in separating JDK and JRE into separate
-#   pkgsrc entities.
-#
-# * There is no LICENSE setting, since obtaining the source tarball
-#   already requires having a SCSL-accepted login name and password.
 #
 # * The JDBC-ODBC bridge is not supported, because of the fact that
 #   the pkgsrc build of unixodbc needs userland pthreads (which
@@ -26,6 +18,8 @@ DISTFILES=	${SCSL_DF} ${PATCH_DF} ${BOOTSTRAP_DF}
 MAINTAINER=	tv@pobox.com
 HOMEPAGE=	http://www.eyesbeyond.com/freebsddom/java/
 COMMENT=	Sun's Java(tm) 2 SDK (SCSL+FreeBSDdom 1.2 release)
+
+LICENSE=	scsl-2.3-license
 
 BUILD_DEPENDS+=	m4-[0-9]*:../../devel/m4
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip

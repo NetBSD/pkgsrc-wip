@@ -1,16 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/07/02 20:56:11 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/02 21:10:35 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
 # * PKGNAME: 1.0.8 means "1.3.1-FCS, patchset 8" (FCS = Sun patch 0).
-#
-# * Because this all requires SCSL acceptance, the JRE is not
-#   actually redistributable.  Thus source building is required, and
-#   there's little point in separating JDK and JRE into separate
-#   pkgsrc entities.
-#
-# * There is no LICENSE setting, since obtaining the source tarball
-#   already requires having a SCSL-accepted login name and password.
 #
 # * The HotSpot JVM is not yet built, and likely won't work until
 #   NetBSD pre-2.0-current pthreads changes settle.  (This requires
@@ -27,6 +19,8 @@ DISTFILES=	${SCSL_DF} ${PATCH_DF}
 MAINTAINER=	tv@pobox.com
 HOMEPAGE=	http://www.eyesbeyond.com/freebsddom/java/
 COMMENT=	Sun's Java(tm) 2 SDK (SCSL+FreeBSDdom 1.3 release)
+
+LICENSE=	scsl-2.3-license
 
 BUILD_DEPENDS+=	sun-jdk13>=1:../../lang/sun-jdk13
 BUILD_DEPENDS+=	m4-[0-9]*:../../devel/m4
