@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/12/04 21:07:16 jeremy-c-reed Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/12/04 21:16:35 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use e2fsprogs.
 #
@@ -10,7 +10,7 @@ E2FSPROGS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			e2fsprogs
 BUILDLINK_DEPENDS.e2fsprogs?=		e2fsprogs>=1.34
-BUILDLINK_PKGSRCDIR.e2fsprogs?=		../../sysutils/e2fsprogs
+BUILDLINK_PKGSRCDIR.e2fsprogs?=		../../wip/e2fsprogs
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.e2fsprogs=e2fsprogs
 BUILDLINK_PREFIX.e2fsprogs_DEFAULT=	${LOCALBASE}
