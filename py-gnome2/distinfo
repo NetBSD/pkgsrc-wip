@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/08/25 22:54:17 marc Exp $
+$NetBSD: distinfo,v 1.3 2003/09/09 01:56:42 marc Exp $
 
-SHA1 (gnome-python-1.99.18.tar.bz2) = 552c3e03dc37916d4538a79d9d5eac417fac20cc
-Size (gnome-python-1.99.18.tar.bz2) = 320948 bytes
+SHA1 (gnome-python-2.0.0.tar.bz2) = 03db02145baf8d9701d177866d691dd7cfa5db78
+Size (gnome-python-2.0.0.tar.bz2) = 322139 bytes

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2003/08/25 22:54:17 marc Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/09 01:56:42 marc Exp $
 #
 
-DISTNAME=	gnome-python-1.99.18
+DISTNAME=	gnome-python-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python/1.99/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python/2.0/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	marc@informatik.uni-bremen.de
+MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Python binding for GNOME2
 
