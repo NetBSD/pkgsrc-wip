@@ -7,8 +7,11 @@
 - tsm wants /etc/mtab as a link to native /etc/fstab. Document that.
 - Populate etc/tivoli (dsm.{sys,opt}, and don't forget the 
   en_US -> /emul/linux/opt/tivoli/tsm/client/ba/bin/en_US/ symlink)
+- Make sure 'passworddir' is set so that the passwd file ends up 
+  in /etc/tivoli instead of the shadow hierarchy
 - Notify the admin that the environment variables DSM_DIR, DSM_CONFIG, DSM_LOG 
-  have to be set properly. DSM_LOG may end up in the emul shadow hierarchy.
+  have to be set properly. DSM_LOG may inadvertently end up in the emul 
+  shadow hierarchy.
 - Notify the admin that she needs a construct like 'ln -s / /.mymachine' 
   to break out of the emul shadow hierarchy.
 
