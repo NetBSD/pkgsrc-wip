@@ -1,0 +1,84 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/14 16:55:48 hsaliak Exp $
+
+--- configure.orig	2003-07-21 05:22:33.000000000 +0800
++++ configure
+@@ -3373,7 +3373,7 @@ if test $ac_cv_lib_ncurses_initscr = yes
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define HAVE_NCURSES "1"
++#define HAVE_NCURSES 1
+ _ACEOF
+ 
+   LIB="-lncurses"
+@@ -3438,7 +3438,7 @@ if test $ac_cv_lib_curses_initscr = yes;
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define HAVE_CURSES "1"
++#define HAVE_CURSES 1
+ _ACEOF
+ 
+ 	  LIB="-lcurses"
+@@ -3511,7 +3511,7 @@ if test $ac_cv_lib_ncurses_use_default_c
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define HAVE_USE_DEFAULT_COLORS "1"
++#define HAVE_USE_DEFAULT_COLORS 1
+ _ACEOF
+ 
+ 
+@@ -3642,7 +3642,7 @@ if test $ac_cv_lib_kstat_kstat_open = ye
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define HAVE_KSTAT "1"
++#define HAVE_KSTAT 1
+ _ACEOF
+ 
+   LIB="${LIB} -lkstat"
+@@ -3679,14 +3679,14 @@ case ${target_os} in
+   linux*)
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define SYS_LINUX "1"
++#define SYS_LINUX 1
+ _ACEOF
+ 
+     ;;
+   *solaris*)
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define SYS_SUNOS "1"
++#define SYS_SUNOS 1
+ _ACEOF
+ 
+     ;;
+@@ -3694,7 +3694,7 @@ _ACEOF
+   *bsd*)
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define SYS_BSD "1"
++#define SYS_BSD 1
+ _ACEOF
+ 
+     ;;
+@@ -3702,7 +3702,7 @@ _ACEOF
+   *darwin*)
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define SYS_BSD "1"
++#define SYS_BSD 1
+ _ACEOF
+ 
+     ;;
+@@ -3710,7 +3710,7 @@ _ACEOF
+   *)
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define SYS_OTHER "1"
++#define SYS_OTHER 1
+ _ACEOF
+ 
+     ;;
