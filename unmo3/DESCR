@@ -1,0 +1,15 @@
+Decodes MO3 files back to their original format.
+
+MO3 is a file format, encapsulating the features of several "MOD" formats
+(IT / XM / S3M / MTM / MOD), but with one big difference - MP3 and OGG
+compressed samples. A lossless codec is also incorporated for any samples
+that don't like lossy encoding, and the whole file structure is compressed
+too.
+
+All this makes it possible to have great reductions in file sizes with
+practically identical sound quality. Infact, MO3 allows greater quality
+compositions because MP3/OGG encoding works best with 16-bit samples, so
+there's no reason to use low quality 8-bit samples anymore.
+
+The part that is not so great about MO3 is that the specification is
+closed, and so is this software.

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/24 06:23:00 bencollver Exp $
+bin/unmo3
+share/doc/unmo3/unmo3.txt
+@dirrm share/doc/unmo3.txt

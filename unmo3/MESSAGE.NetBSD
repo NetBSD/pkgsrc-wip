@@ -1,0 +1,5 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1.1.1 2003/09/24 06:23:00 bencollver Exp $
+
+You will need the COMPAT_LINUX kernel option to run this program.
+===========================================================================
