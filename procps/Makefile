@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/29 14:56:41 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/25 02:33:18 grantbeattie Exp $
 
 DISTNAME=		procps-3.0.5
 CATEGORIES=		sysutils
@@ -13,7 +13,7 @@ COMMENT=		The Linux /proc file system utilities
 # This uses Linux include/asm/page.h
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 MAKE_ENV+=		DESTDIR=${PREFIX}
 

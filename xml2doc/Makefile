@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/27 12:36:27 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:50 grantbeattie Exp $
 #
 
 DISTNAME=	xml2doc-20030424
@@ -14,7 +14,7 @@ COMMENT=	Xml to document formats converter
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 MANCOMPRESSED=		xml2doc.1.gz
 

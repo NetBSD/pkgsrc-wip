@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 18:07:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:33:20 grantbeattie Exp $
 #
 
 DISTNAME=	qico-0.48.5
@@ -8,7 +8,7 @@ MASTER_SITES=	http://lev.serebryakov.spb.ru/download/0.48/
 MAINTAINER=	gik@nc.ru
 COMMENT=	FidoNet mailer
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 
 MAKE_ENV+=	SH="${SH}" AWK="${AWK}" MORDA="${QCC}"
 

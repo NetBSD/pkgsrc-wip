@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2003/12/15 14:31:57 mpasternak Exp $
-# $Id: Makefile,v 1.4 2003/12/15 14:31:57 mpasternak Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/25 02:32:46 grantbeattie Exp $
+# $Id: Makefile,v 1.5 2004/01/25 02:32:46 grantbeattie Exp $
 
 DISTNAME=		binutils-2.14.90-20030807-1-src
 PKGNAME=		mingw-${DISTNAME:S/-20030807-1-src//}
@@ -15,7 +15,7 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=      	yes
 GNU_CONFIGURE=		yes
 USE_CROSSBASE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --exec-prefix=${PREFIX} \
 			--target=${MINGW_TARGET}

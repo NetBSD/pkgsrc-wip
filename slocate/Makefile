@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/31 09:37:29 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:33:39 grantbeattie Exp $
 #
 
 DISTNAME=		slocate-2.7
@@ -11,7 +11,7 @@ COMMENT=		Secure Locate
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 MANCOMPRESSED=		locate.1.gz
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:32:51 grantbeattie Exp $
 #
 
 DISTNAME=	navigatrix-0.5
@@ -11,7 +11,7 @@ COMMENT=	GPS navigational system for KDE
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_X11BASE=		yes
 

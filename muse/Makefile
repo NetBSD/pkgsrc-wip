@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/09/29 14:56:41 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/25 02:32:49 grantbeattie Exp $
 #
 
 DISTNAME=	MuSE-0.8.1
@@ -14,7 +14,7 @@ COMMENT=	Multiple Streaming Engine
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 USE_OSS=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.prefs.mk"

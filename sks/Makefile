@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/10/28 21:29:55 cubidou Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:36 grantbeattie Exp $
 #
 
 DISTNAME=	sks-${SKS_VERSION}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.nongnu.org/sks/
 COMMENT=	Self Replicating PGP Key Server
 
 USE_BUILDLINK2=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 
 SKS_VERSION=	1.0.4
 

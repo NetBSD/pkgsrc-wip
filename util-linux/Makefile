@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/01 22:53:38 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:33:48 grantbeattie Exp $
 
 DISTNAME=	util-linux-2.11z
 CATEGORIES=	sysutils
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	Linux-*-* # Uses Linux kernel headers
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 MAKE_ENV+=	DESTDIR=${PREFIX}
 MAKE_ENV+=	ETCDIR=${PREFIX}/share/examples/util-linux

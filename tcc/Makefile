@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/09/06 11:44:43 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:44 grantbeattie Exp $
 #
 
 DISTNAME=	tcc-0.9.19
@@ -9,7 +9,7 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.tinycc.org/
 COMMENT=	The Smallest ANSI C compiler
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
 

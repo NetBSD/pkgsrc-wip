@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/22 16:51:29 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:33:18 grantbeattie Exp $
 #
 
 DISTNAME=		premake-src-1.2
@@ -12,7 +12,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.scons.org/
 COMMENT=		Build script generator
 
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		yes
 
 do-install:

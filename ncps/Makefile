@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/05 13:22:35 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:32:52 grantbeattie Exp $
 
 DISTNAME=	ncps-0.55
 CATEGORIES=	sysutils
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.math.ohio-state.edu/~pschan/ncps/
 COMMENT=	ncurses based process-killer
 
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 USE_NCURSES=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/01 02:38:18 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/25 02:34:01 grantbeattie Exp $
 #
 
 DISTNAME=	XML-XSH-1.6
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Term-ReadLine>=1.12:../../devel/p5-Term-ReadLine
 DEPENDS+=	p5-XML-LibXML>=1.31:../../textproc/p5-XML-LibXML
 
 USE_PERL5=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_BUILDLINK2=	yes
 PKG_SHELL=	${PREFIX}/bin/xsh
 

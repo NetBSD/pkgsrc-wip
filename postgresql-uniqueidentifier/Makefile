@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/10 19:13:03 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:33:15 grantbeattie Exp $
 #
 
 DISTNAME=		uniqueidentifier-0.2
@@ -14,7 +14,7 @@ HOMEPAGE=		http://gborg.postgresql.org/project/uniqueidentifier/projdisplay.php
 COMMENT=		Allows PostgreSQL databases to use Global Unique Identifier (GUID)
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 DEPENDS=		postgresql-server>=7.3.4:../../databases/postgresql-server
 
 post-extract: postgresql-post-extract

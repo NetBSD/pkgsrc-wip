@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/10/20 08:37:43 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:17 grantbeattie Exp $
 
 DISTNAME=	prelude-lml-0.8.5
 CATEGORIES=	net www
@@ -10,7 +10,7 @@ COMMENT=	Prelude HIDS sensor
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		YES
 
 PKG_SYSCONFSUBDIR=	prelude-lml

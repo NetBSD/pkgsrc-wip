@@ -20,7 +20,7 @@ BUILD_DEPENDS+=	rpm2cpio:../../converters/rpm2cpio
 BUILD_DEPENDS+=	libtool:../..//devel/libtool
 
 WRKSRC= 	${WRKDIR}/redhat-artwork-${THEMEVERSION}
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_X11BASE=	YES
 THEMES_SUBDIRS= ${WRKSRC}/art/gtk/Bluecurve1
 USE_BUILDLINK2=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/28 09:48:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/25 02:33:46 grantbeattie Exp $
 #
 
 DISTNAME=	totem-0.95.1
@@ -16,7 +16,7 @@ USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11=		YES
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/30 01:29:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:34:07 grantbeattie Exp $
 #
 
 DISTNAME=	xwpe-1.5.29a
@@ -11,7 +11,7 @@ COMMENT=	Programming environment for UNIX systems
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_NCURSES=		# tigetstr()
 USE_X11=		yes
 

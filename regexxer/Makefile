@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/08/28 09:48:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:22 grantbeattie Exp $
 #
 
 DISTNAME=	regexxer-0.4
@@ -13,7 +13,7 @@ DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
 .include "../../devel/gettext-lib/buildlink2.mk"

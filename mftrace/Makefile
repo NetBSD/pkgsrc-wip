@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/25 12:19:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/25 02:32:46 grantbeattie Exp $
 # based on FreeBSD-port pkgtrace originally by ijliao
 # created 2003-10-22 Patrick Atamaniuk <atamaniuk-pkgsrc@frobs.net>
 
@@ -17,7 +17,7 @@ DEPENDS+=	pfaedit>=20030712:../../fonts/pfaedit
 
 USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 MAKEFILE=	GNUmakefile
 
 CONFIGURE_ARGS+=	--build=${MACHINE_ARCH}-portbld-netbsd${OSREL}

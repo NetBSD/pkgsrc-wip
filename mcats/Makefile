@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/13 14:51:48 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:32:44 grantbeattie Exp $
 #
 
 DISTNAME=	mcats-0.1.0
@@ -10,7 +10,7 @@ HOMEPAGE=	http://mcats.net/
 COMMENT=	Catalog converter
 
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 

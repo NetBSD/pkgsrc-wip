@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/09/28 13:02:45 adrian_p Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/25 02:33:18 grantbeattie Exp $
 
 DISTNAME=	prelude-manager-0.8.8
 CATEGORIES=	net www
@@ -10,7 +10,7 @@ COMMENT=	Prelude manager
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		YES
 
 PTHREAD_OPTS=		require

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/26 05:45:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:32:47 grantbeattie Exp $
 #
 
 DISTNAME=	mlview-0.6.0
@@ -13,7 +13,7 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

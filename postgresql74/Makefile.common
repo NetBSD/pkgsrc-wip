@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/20 00:23:38 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/25 02:33:16 grantbeattie Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -41,7 +41,7 @@ BUILDLINK_DEPENDS.postgresql-lib?=	postgresql-lib>=${BASE_VERS}
 BUILDLINK_DEPENDS.tcl-postgresql?=	tcl-postgresql>=${BASE_VERS}
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 PKG_SYSCONFSUBDIR=	postgresql
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/23 10:20:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/25 02:34:07 grantbeattie Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 
 DISTNAME=	zebra-pj-20030428
@@ -15,7 +15,7 @@ CONFLICTS=		zebra
 AUTOCONF_REQD=		2.13
 AUTOMAKE_REQD=		1.4
 GNU_CONFIGURE=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 INFO_FILES=	zebra.info zebra.info-1 zebra.info-2 \
 		zebra.info-3 zebra.info-4
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/04 01:07:52 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:27 grantbeattie Exp $
 #
 
 DISTNAME=		rss2html-0.3
@@ -10,6 +10,6 @@ HOMEPAGE=		http://www.nopcode.org/?t=rss2html
 COMMENT=		RSS to HTML converter
 
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/24 23:56:42 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:32:43 grantbeattie Exp $
 #
 
 DISTNAME=		luasocket-2.0-alpha
@@ -12,7 +12,7 @@ COMMENT=		Gives socket capabilities to lua50
 
 MAKEFILE=		${WRKSRC}/makefile
 ALL_TARGET=		dyn
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 
 .include "../../lang/lua/buildlink2.mk"

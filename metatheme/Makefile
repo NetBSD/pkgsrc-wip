@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/06 17:35:55 marc Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:32:45 grantbeattie Exp $
 #
 
 DISTNAME=		metatheme-0.9.7
@@ -12,7 +12,7 @@ COMMENT=		Themes for GNOME 2
 
 DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 BUILD_USES_MSGFMT=	yes

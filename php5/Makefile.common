@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/01/24 23:28:35 poppnk Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/01/25 02:33:12 grantbeattie Exp $
 #
 
 DISTNAME?=	php-${PHP5_VERSION}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.php.net/
 # Did conflicts works?
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 
 PHP5_VERSION=	5.0.0b3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/19 09:07:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/25 02:32:50 grantbeattie Exp $
 #
 
 DISTNAME=	nautilus-media-0.2.2
@@ -17,7 +17,7 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
