@@ -1,2 +1,5 @@
-MD5 (hydra-2.2.tar.gz) = 05042c1add6155ea48233df05a1e37ae
-MD5 (patch-aa) = ef63cea49b4adda97ad484896acaed1a
+$NetBSD: distinfo,v 1.2 2003/09/24 12:07:16 jmmv Exp $
+
+SHA1 (hydra-2.2.tar.gz) = 65bb35cbe4c4aa4d53fd75cc3b677861117f4a38
+Size (hydra-2.2.tar.gz) = 37174 bytes
+SHA1 (patch-aa) = 6ff0d29509a94b6db78b8dbb7b43102c4f78cf55
