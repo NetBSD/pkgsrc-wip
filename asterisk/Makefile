@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/03/16 18:58:22 riz Exp $
+# $NetBSD: Makefile,v 1.11 2005/03/30 16:46:03 riz Exp $
 #
 
-DISTNAME=		asterisk-1.0.6
+DISTNAME=		asterisk-1.0.7
 CATEGORIES=		wip
 MASTER_SITES=		ftp://ftp.asterisk.org/pub/asterisk/ \
 			ftp://ftp.asterisk.org/pub/asterisk/old-releases/
