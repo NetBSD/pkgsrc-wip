@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/01 20:53:29 poppnk Exp $
+
+--- Makefile.orig	2004-06-01 21:44:28.000000000 +0000
++++ Makefile	2004-06-01 21:44:40.000000000 +0000
+@@ -1,5 +1,5 @@
+ CC=gcc
+-CFLAGS=-O3 -Wall
++CFLAGS+=-O3 -Wall
+ LIBS=-lncurses
+ 
+ CFILES=globals.c view.c aliens.c ufo.c player.c nInvaders.c
