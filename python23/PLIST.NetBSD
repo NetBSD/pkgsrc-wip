@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.2 2003/07/31 17:56:35 marc Exp $
-lib/python${PKGVERSION}/lib-dynload/bsddb185.so
-lib/python${PKGVERSION}/test/output/test_linuxaudiodev
-lib/python${PKGVERSION}/test/test_linuxaudiodev.py
-lib/python${PKGVERSION}/test/test_linuxaudiodev.pyc
-lib/python${PKGVERSION}/test/test_linuxaudiodev.pyo
