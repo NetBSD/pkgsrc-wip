@@ -1,0 +1,144 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/04/07 16:16:07 tvierling Exp $
+#
+# Some notes for those working on this package:
+#
+# * PKGNAME: 2.0.11 means "1.2.2-FCS, patchset 11" (FCS = Sun patch 0).
+#
+# * Since there isn't a blackdown-jdk12 package, this downloads such
+#   JDK from Sunsite mirrors.  It's modified to run in green_threads
+#   mode for stability's sake, and is used only in the build tree
+#   for bootstrapping.  It may be possible to change to Jikes in the
+#   future, or for later JDKs.
+#
+# * Because this all requires SCSL acceptance, the JRE is not
+#   actually redistributable.  Thus source building is required, and
+#   there's little point in separating JDK and JRE int separate
+#   pkgsrc entities.
+#
+# * There is no LICENSE setting, since obtaining the source tarball
+#   already requires having a SCSL-accepted login name and password.
+#
+# * The JDBC-ODBC bridge is not supported, because of the fact that
+#   the pkgsrc build of unixodbc needs userland pthreads (which
+#   messes with green_threads).
+#
+# * DPS (and thus printing) is not supported currently, but this
+#   may be possible to add.
+#
+# * Building is indirected through the "release-bundles" target,
+#   which produces wrapped zipfiles.  This is preferred to tarfiles
+#   as they *don't* have file ownership information (and will thus
+#   re-extract as root) and this is Sun's current preferred
+#   distribution format.
+
+DISTNAME=	jdk1_2_2-src
+PKGNAME=	jdk12-2.0.11
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_SUNSITE:=devel/lang/java/blackdown.org/JDK-1.2.2/i386/FCS/}
+EXTRACT_SUFX=	.tar.gz # must be explicitly specified for the ".if exists" below
+DISTFILES=	${SCSL_DF} ${PATCH_DF} ${BOOTSTRAP_DF}
+
+MAINTAINER=	tv@pobox.com
+HOMEPAGE=	http://www.eyesbeyond.com/freebsddom/java/
+COMMENT=	Sun's Java(tm) 2 SDK (SCSL+FreeBSDdom 1.2 release)
+
+BUILD_DEPENDS+=	m4-[0-9]*:../../devel/m4
+BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
+BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
+
+RESTRICTED=	"Redistribution of source or binaries not permitted"
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+
+USE_BUILDLINK2=	YES
+USE_GMAKE=	YES
+USE_PKGINSTALL=	YES
+
+JVM_HOME=	${LOCALBASE}/java/jdk-1.2.2
+ONLY_FOR_PLATFORM=	NetBSD-1.[4-9]*-i386 NetBSD-[2-9]*-i386
+
+ALL_TARGET=	world release-bundles
+BUILD_DIRS=	${WRKSRC}/build/bsd
+CHECK_SHLIBS=	NO # scripts set LD_LIBRARY_PATH
+MAKEFILE=	GNUmakefile
+NO_MTREE=	YES # since we change PREFIX below
+OWN_DIRS=	${PREFIX}
+WRKSRC=		${WRKDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+MAKE_ARGS+=	LOCALDIR=${LOCALBASE} # used to find "zip" and "unzipsfx"
+MAKE_ARGS+=	M4=${LOCALBASE}/bin/gm4
+MAKE_ENV+=	ALT_BOOTDIR=${WRKSRC}/jdk1.2.2
+MAKE_ENV+=	ALT_MOTIF_DIR=${MOTIFBASE}
+MAKE_ENV+=	HAVE_ODBC=no
+MAKE_ENV+=	LD_RUN_PATH=${MOTIFBASE}/lib # substitute for -rpath option
+MAKE_ENV+=	OPENWINHOME=${MOTIFBASE}
+MAKE_ENV+=	USE_GNU_M4=1
+
+BOOTSTRAP_DF=	j2sdk-1.2.2-FCS-linux-i386-glibc-2.1.3.tar.bz2
+
+PATCH_DF=	bsd-jdk122-patches-11.tar.gz
+PATCH_DOWNLOAD=	http://www.eyesbeyond.com/freebsddom/java/JDKSCSLConfirm.html
+
+SCSL_DF=	${DISTNAME}${EXTRACT_SUFX}
+SCSL_DOWNLOAD=	http://wwws.sun.com/software/java2/download.html
+
+.if !exists(${DISTDIR}/${SCSL_DF}) || !exists(${DISTDIR}/${PATCH_DF})
+INTERACTIVE_STAGE=	fetch
+_FETCH_MESSAGE= \
+	${ECHO} "======================================================================"; \
+	${ECHO} ; \
+	${ECHO} " The file ${SCSL_DF} containing the"; \
+	${ECHO} " Java(tm) 2 SDK, Standard Edition must be fetched"; \
+	${ECHO} " into:"; \
+	${ECHO} "	${DISTDIR}/${SCSL_DF}"; \
+	${ECHO} " from (choose the second Download link for Java[tm] 2 SDK 1.2.2):"; \
+	${ECHO} "	${SCSL_DOWNLOAD}"; \
+	${ECHO} ; \
+	${ECHO} " This requires a Sun Community Source Licensing account."; \
+	${ECHO} ; \
+	${ECHO} " Also, the file ${PATCH_DF} must be fetched into:"; \
+	${ECHO} "	${DISTDIR}/${PATCH_DF}"; \
+	${ECHO} " from (choose Patchset 11):"; \
+	${ECHO} "	${PATCH_DOWNLOAD}"; \
+	${ECHO} ; \
+	${ECHO} "======================================================================"
+.endif
+
+pre-patch:
+	@for dir in build src ext/i18n/build ext/i18n/src ext/iiimp/build; do \
+		(cd ${WRKSRC}/$$dir && ${LN} -s solaris bsd); \
+	done
+	cd ${WRKSRC}/build/bsd && ${PATCH} -s -p1 <${WRKSRC}/build.patches
+	cd ${WRKSRC}/build/share && ${PATCH} -s -p1 <${WRKSRC}/buildshare.patches
+	cd ${WRKSRC}/src/bsd && ${PATCH} -s -p1 <${WRKSRC}/src.patches
+	cd ${WRKSRC}/src/share && ${PATCH} -s -p1 <${WRKSRC}/srcshare.patches
+	cd ${WRKSRC}/ext && ${PATCH} -s -p1 <${WRKSRC}/ext.patches
+	@${FIND} ${WRKSRC} -name '*.orig' | ${XARGS} ${RM} -f
+
+post-build:
+	@${ECHO_MSG} '=== Sun-style release bundle ".sh" files are now available'
+	@${ECHO_MSG} '=== in the following directory:'
+	@${ECHO_MSG} '=== ${WRKSRC}/build/bsd'
+
+# Extracts from the .sh file, then flattens one directory, and
+# fixes .so files to be symlinks.
+do-install:
+	${INSTALL_PROGRAM_DIR} ${PREFIX}
+	cd ${PREFIX} && ${ECHO} 'yes' | ${WRKSRC}/build/bsd/jdk-1.2.2-bsd-i386.sh >/dev/null
+	${MV} ${PREFIX}/jdk1.2.2/* ${PREFIX}/
+	${RMDIR} ${PREFIX}/jdk1.2.2
+	@for f in `find ${PREFIX} -name '*.so'`; do \
+		if [ -f $$f.1.2.2 ]; then \
+			${LN} -sf `basename $$f.1.2.2` $$f; \
+		else true; fi; \
+	done
+
+.include "../../mk/motif.buildlink2.mk"
+.include "../../mk/bsd.pkg.mk"
+
+# This needs to be after bsd.pkg.mk
+PREFIX=		${JVM_HOME}
