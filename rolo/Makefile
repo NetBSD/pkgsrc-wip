@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/12/25 00:26:39 bjan2 Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/27 23:09:49 thomasklausner Exp $
 
 DISTNAME=	rolo-011
 CATEGORIES=	databases
-MASTER_SITES=	http://osdn.dl.sourceforge.net/sourceforge/rolo/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rolo/}
 
 MAINTAINER=	bjan+pkgsrc@bjan.net
 HOMEPAGE=	http://rolo.sf.net/
