@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.479 2003/09/21 19:29:09 mpasternak Exp $
-# $NetBSD: Makefile,v 1.479 2003/09/21 19:29:09 mpasternak Exp $
+# $Id: Makefile,v 1.480 2003/09/21 20:19:05 mpasternak Exp $
+# $NetBSD: Makefile,v 1.480 2003/09/21 20:19:05 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -369,6 +369,7 @@ SUBDIR+=	stickynotes-applet
 SUBDIR+=	strace
 SUBDIR+=	streamripper
 SUBDIR+=	sudoscript
+SUBDIR+=	superkaramba
 SUBDIR+=	svgalib
 SUBDIR+=	sysklogd
 SUBDIR+=	sysvinit
