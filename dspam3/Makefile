@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/06/17 23:43:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.20 2004/06/18 02:05:41 xtraeme Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -39,6 +39,7 @@ BUILD_DEFS+=		DSPAM_SIGNATURE_LIFE
 BUILD_DEFS+=		DSPAM_SIGNATURE_ATTACHMENTS
 BUILD_DEFS+=            DSPAM_SIGNATURE_HEADERS
 BUILD_DEFS+=		DSPAM_LARGESCALE
+BUILD_DEFS+=		DSPAM_VIRTUAL_USERS
 BUILD_DEFS+=		DSPAM_USE_WEBMAIL
 BUILD_DEFS+=		DSPAM_HOMEDIR_DOTFILES
 BUILD_DEFS+=		DSPAM_USER DSPAM_GROUP
@@ -93,9 +94,17 @@ CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT_ARGS:Q}
 .if !empty(DSPAM_STORAGE_DRIVER:Mmysql)
 .  include "../../databases/mysql4-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=mysql_drv
+CONFIGURE_ARGS+=	\
+	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql
+CONFIGURE_ARGS+=	\
+	--with-mysql-libraries=${BUILDLINK_PREFIX.mysql-client}/lib
 .elif !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
 .  include "../../databases/postgresql74-lib/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=pgsql_drv
+CONFIGURE_ARGS+=	\
+	--with-pgsql-includes=${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
+CONFIGURE_ARGS+=	\
+	--with-pgsql-libraries=${BUILDLINK_PREFIX.postgresql-lib}/lib
 .elif !empty(DSPAM_STORAGE_DRIVER:M${BDB_TYPE})
 CONFIGURE_ARGS+=	--with-storage-driver=lib${BDB_TYPE}_drv
 .endif
@@ -130,6 +139,10 @@ SUBST_FILES.large=	cgi/dspam.cgi cgi/admin.cgi
 SUBST_SED.large=	\
 	-e "s|CONFIG{'LARGE_SCALE'}.*=.*0|CONFIG{'LARGE_SCALE'}	= 1|"
 SUBST_MESSAGE.large=	"Fixing config options."
+.endif
+
+.if defined(DSPAM_VIRTUAL_USERS) && !empty(DSPAM_VIRTUAL_USERS:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-virtual-users
 .endif
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE} \
