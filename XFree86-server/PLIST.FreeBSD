@@ -1,7 +1,15 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.5 2003/10/22 13:01:26 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST.FreeBSD,v 1.6 2003/10/31 02:22:28 xtraeme Exp $
 bin/kbd_mode
 lib/modules/extensions/libdri.a
 lib/modules/${LOWER_OPSYS}/libdrm.a
+lib/modules/dri/gamma_dri.so
+lib/modules/dri/i810_dri.so
+lib/modules/dri/i830_dri.so
+lib/modules/dri/mga_dri.so
+lib/modules/dri/r128_dri.so
+lib/modules/dri/r200_dri.so
+lib/modules/dri/radeon_dri.so
+lib/modules/dri/tdfx_dri.so
 man/man1/XFree86.1.gz
 man/man1/Xnest.1.gz
 man/man1/Xserver.1.gz
