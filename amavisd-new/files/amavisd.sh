@@ -1,9 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: amavisd.sh,v 1.2 2004/04/15 19:02:04 marc Exp $
+# $NetBSD: amavisd.sh,v 1.3 2004/04/19 03:42:09 jcd Exp $
 #
 # PROVIDE: amavisd
 # REQUIRE: DAEMON
+# BEFORE:  mail
 #
 # To start spread at startup, copy this script to /etc/rc.d and set
 # spread=YES in /etc/rc.conf.
