@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST.ppc64,v 1.1 2004/02/03 09:20:16 marttikuparinen Exp $
+@comment $NetBSD: PLIST.ppc64,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
 include/asm/abs_addr.h
 include/asm/bootinfo.h
+include/asm/bootx.h
+include/asm/btext.h
 include/asm/compat.h
 include/asm/cputable.h
+include/asm/dbdma.h
 include/asm/eeh.h
 include/asm/floppy.h
 include/asm/hdreg.h
 include/asm/hvcall.h
+include/asm/hvconsole.h
 include/asm/hw_irq.h
 include/asm/iSeries/HvCall.h
 include/asm/iSeries/HvCallCfg.h
@@ -41,23 +45,27 @@ include/asm/iSeries/iSeries_irq.h
 include/asm/iSeries/iSeries_pci.h
 include/asm/iSeries/iSeries_proc.h
 include/asm/iSeries/mf.h
-include/asm/iSeries/mf_proc.h
-include/asm/iSeries/veth-proc.h
+include/asm/iSeries/vio.h
 include/asm/ide.h
 include/asm/init.h
 include/asm/ipc.h
+include/asm/keylargo.h
 include/asm/lmb.h
 include/asm/machdep.h
+include/asm/macio.h
 include/asm/mc146818rtc.h
 include/asm/memory.h
 include/asm/mmzone.h
 include/asm/naca.h
 include/asm/numnodes.h
 include/asm/nvram.h
+include/asm/of_device.h
 include/asm/paca.h
 include/asm/parport.h
 include/asm/pci-bridge.h
 include/asm/pci_dma.h
+include/asm/pmac_feature.h
+include/asm/pmac_low_i2c.h
 include/asm/pmc.h
 include/asm/ppc32.h
 include/asm/ppc_asm.h
@@ -70,7 +78,6 @@ include/asm/ptrace-common.h
 include/asm/ptrace.h
 include/asm/rtas.h
 include/asm/rwsem.h
-include/asm/segment.h
 include/asm/serial.h
 include/asm/setup.h
 include/asm/sigcontext.h
@@ -81,6 +88,8 @@ include/asm/systemcfg.h
 include/asm/time.h
 include/asm/ucontext.h
 include/asm/udbg.h
+include/asm/uninorth.h
 include/asm/vga.h
+include/asm/vio.h
 include/asm/xics.h
 @dirrm include/asm/iSeries

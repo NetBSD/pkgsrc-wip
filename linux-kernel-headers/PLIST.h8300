@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.h8300,v 1.1 2004/02/03 09:20:15 marttikuparinen Exp $
+@comment $NetBSD: PLIST.h8300,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
 include/asm/aki3068net/machine-depend.h
 include/asm/bootinfo.h
 include/asm/cachectl.h
@@ -26,7 +26,6 @@ include/asm/processor.h
 include/asm/ptrace.h
 include/asm/regs267x.h
 include/asm/regs306x.h
-include/asm/segment.h
 include/asm/semaphore-helper.h
 include/asm/setup.h
 include/asm/sh_bios.h

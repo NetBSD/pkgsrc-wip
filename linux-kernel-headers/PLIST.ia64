@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.ia64,v 1.1 2004/02/03 09:20:16 marttikuparinen Exp $
+@comment $NetBSD: PLIST.ia64,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
 include/asm/acpi-ext.h
 include/asm/acpi.h
 include/asm/agp.h
@@ -23,7 +23,6 @@ include/asm/machvec_dig.h
 include/asm/machvec_hpsim.h
 include/asm/machvec_hpzx1.h
 include/asm/machvec_init.h
-include/asm/machvec_sn1.h
 include/asm/machvec_sn2.h
 include/asm/mc146818rtc.h
 include/asm/mca.h
@@ -44,14 +43,10 @@ include/asm/ptrace_offsets.h
 include/asm/rse.h
 include/asm/rwsem.h
 include/asm/sal.h
-include/asm/segment.h
 include/asm/serial.h
 include/asm/sigcontext.h
 include/asm/smp.h
 include/asm/sn/addrs.h
-include/asm/sn/alenlist.h
-include/asm/sn/arc/hinv.h
-include/asm/sn/arc/types.h
 include/asm/sn/arch.h
 include/asm/sn/bte.h
 include/asm/sn/cdl.h
@@ -65,7 +60,6 @@ include/asm/sn/hcl_util.h
 include/asm/sn/hwgfs.h
 include/asm/sn/ifconfig_net.h
 include/asm/sn/intr.h
-include/asm/sn/invent.h
 include/asm/sn/io.h
 include/asm/sn/ioc4.h
 include/asm/sn/ioconfig_bus.h
@@ -79,7 +73,6 @@ include/asm/sn/ksys/l1.h
 include/asm/sn/labelcl.h
 include/asm/sn/leds.h
 include/asm/sn/module.h
-include/asm/sn/nag.h
 include/asm/sn/nodepda.h
 include/asm/sn/pci/bridge.h
 include/asm/sn/pci/pci_bus_cvlink.h
@@ -131,7 +124,6 @@ include/asm/unwind.h
 include/asm/ustack.h
 include/asm/vga.h
 @dirrm include/asm/sn
-@dirrm include/asm/sn/arc
 @dirrm include/asm/sn/ksys
 @dirrm include/asm/sn/pci
 @dirrm include/asm/sn/sn2

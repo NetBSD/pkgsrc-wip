@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.arm26,v 1.1 2004/02/03 09:20:15 marttikuparinen Exp $
+@comment $NetBSD: PLIST.arm26,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
 include/asm/assembler.h
 include/asm/calls.h
 include/asm/constants.h
@@ -27,7 +27,6 @@ include/asm/proc-fns.h
 include/asm/processor.h
 include/asm/procinfo.h
 include/asm/ptrace.h
-include/asm/segment.h
 include/asm/semaphore-helper.h
 include/asm/serial.h
 include/asm/setup.h

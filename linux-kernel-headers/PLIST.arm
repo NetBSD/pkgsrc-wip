@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.arm,v 1.1 2004/02/03 09:20:15 marttikuparinen Exp $
+@comment $NetBSD: PLIST.arm,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
 include/asm/apm.h
 include/asm/arch-adifcc/adi_evb.h
 include/asm/arch-adifcc/dma.h
@@ -105,6 +105,7 @@ include/asm/arch-epxa10db/uart00.h
 include/asm/arch-epxa10db/uncompress.h
 include/asm/arch-epxa10db/vmalloc.h
 include/asm/arch-integrator/bits.h
+include/asm/arch-integrator/cm.h
 include/asm/arch-integrator/dma.h
 include/asm/arch-integrator/hardware.h
 include/asm/arch-integrator/impd1.h
@@ -191,6 +192,7 @@ include/asm/arch-pxa/serial.h
 include/asm/arch-pxa/system.h
 include/asm/arch-pxa/time.h
 include/asm/arch-pxa/timex.h
+include/asm/arch-pxa/udc.h
 include/asm/arch-pxa/uncompress.h
 include/asm/arch-pxa/vmalloc.h
 include/asm/arch-rpc/acornfb.h
@@ -327,7 +329,6 @@ include/asm/proc-fns.h
 include/asm/processor.h
 include/asm/procinfo.h
 include/asm/ptrace.h
-include/asm/segment.h
 include/asm/semaphore-helper.h
 include/asm/serial.h
 include/asm/setup.h

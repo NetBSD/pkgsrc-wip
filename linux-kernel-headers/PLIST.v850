@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.v850,v 1.1 2004/02/03 09:20:16 marttikuparinen Exp $
+@comment $NetBSD: PLIST.v850,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
 include/asm/anna.h
 include/asm/as85ep1.h
 include/asm/asm.h
@@ -22,7 +22,6 @@ include/asm/rte_ma1_cb.h
 include/asm/rte_mb_a_pci.h
 include/asm/rte_me2_cb.h
 include/asm/rte_nb85e_cb.h
-include/asm/segment.h
 include/asm/serial.h
 include/asm/sigcontext.h
 include/asm/sim.h

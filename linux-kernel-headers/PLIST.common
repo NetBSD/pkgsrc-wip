@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2004/02/03 09:20:15 marttikuparinen Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
 include/asm/a.out.h
 include/asm/atomic.h
 include/asm/bitops.h
@@ -53,6 +53,7 @@ include/asm/rmap.h
 include/asm/rtc.h
 include/asm/scatterlist.h
 include/asm/sections.h
+include/asm/segment.h
 include/asm/semaphore.h
 include/asm/sembuf.h
 include/asm/shmbuf.h
@@ -215,6 +216,7 @@ include/linux/dm-ioctl-v1.h
 include/linux/dm-ioctl-v4.h
 include/linux/dm-ioctl.h
 include/linux/dma-mapping.h
+include/linux/dmapool.h
 include/linux/dn.h
 include/linux/dnotify.h
 include/linux/dp83840.h
@@ -433,7 +435,6 @@ include/linux/mc146818rtc.h
 include/linux/mc6821.h
 include/linux/mca-legacy.h
 include/linux/mca.h
-include/linux/memblk.h
 include/linux/mempool.h
 include/linux/meye.h
 include/linux/mii.h
@@ -632,7 +633,6 @@ include/linux/parser.h
 include/linux/pci-dynids.h
 include/linux/pci.h
 include/linux/pci_ids.h
-include/linux/pci_msi.h
 include/linux/percpu.h
 include/linux/percpu_counter.h
 include/linux/personality.h
@@ -865,18 +865,3 @@ include/linux/zlib.h
 include/linux/zorro.h
 include/linux/zorro_ids.h
 include/linux/zutil.h
-@dirrm include/asm
-@dirrm include/linux/dvb
-@dirrm include/linux/mtd
-@dirrm include/linux/hdlc
-@dirrm include/linux/isdn
-@dirrm include/linux/nfsd
-@dirrm include/linux/raid
-@dirrm include/linux/netfilter_arp
-@dirrm include/linux/lockd
-@dirrm include/linux/netfilter_bridge
-@dirrm include/linux/netfilter_ipv4
-@dirrm include/linux/netfilter_ipv6
-@dirrm include/linux/byteorder
-@dirrm include/linux/sunrpc
-@dirrm include/linux

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.ppc,v 1.1 2004/02/03 09:20:16 marttikuparinen Exp $
+@comment $NetBSD: PLIST.ppc,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
 include/asm/8xx_immap.h
 include/asm/agp.h
 include/asm/amigahw.h
@@ -57,6 +57,7 @@ include/asm/parport.h
 include/asm/pc_serial.h
 include/asm/pci-bridge.h
 include/asm/pmac_feature.h
+include/asm/pmac_low_i2c.h
 include/asm/pnp.h
 include/asm/ppc405_dma.h
 include/asm/ppc4xx_pic.h
@@ -72,7 +73,6 @@ include/asm/reg.h
 include/asm/reg_booke.h
 include/asm/residual.h
 include/asm/rwsem.h
-include/asm/segment.h
 include/asm/serial.h
 include/asm/setup.h
 include/asm/sigcontext.h

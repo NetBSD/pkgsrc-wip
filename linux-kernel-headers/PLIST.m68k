@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.m68k,v 1.1 2004/02/03 09:20:16 marttikuparinen Exp $
+@comment $NetBSD: PLIST.m68k,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
 include/asm/adb.h
 include/asm/adb_iop.h
 include/asm/adb_mouse.h
@@ -70,7 +70,6 @@ include/asm/q40_master.h
 include/asm/q40ints.h
 include/asm/raw_io.h
 include/asm/sbus.h
-include/asm/segment.h
 include/asm/semaphore-helper.h
 include/asm/serial.h
 include/asm/setup.h

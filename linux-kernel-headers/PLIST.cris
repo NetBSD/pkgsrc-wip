@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.cris,v 1.1 2004/02/03 09:20:15 marttikuparinen Exp $
+@comment $NetBSD: PLIST.cris,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
 include/asm/arch-v10/bitops.h
 include/asm/arch-v10/byteorder.h
 include/asm/arch-v10/cache.h
@@ -34,7 +34,6 @@ include/asm/ipc.h
 include/asm/processor.h
 include/asm/ptrace.h
 include/asm/rs485.h
-include/asm/segment.h
 include/asm/semaphore-helper.h
 include/asm/setup.h
 include/asm/sigcontext.h

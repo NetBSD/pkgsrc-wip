@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.sparc,v 1.1 2004/02/03 09:20:16 marttikuparinen Exp $
+@comment $NetBSD: PLIST.sparc,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
 include/asm/apc.h
 include/asm/asi.h
 include/asm/asmmacro.h
@@ -58,7 +58,6 @@ include/asm/reg.h
 include/asm/ross.h
 include/asm/sbi.h
 include/asm/sbus.h
-include/asm/segment.h
 include/asm/setup.h
 include/asm/sfp-machine.h
 include/asm/sigcontext.h

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.mips,v 1.1 2004/02/03 09:20:16 marttikuparinen Exp $
+@comment $NetBSD: PLIST.mips,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
 include/asm/addrspace.h
 include/asm/arc/hinv.h
 include/asm/arc/types.h
@@ -146,7 +146,6 @@ include/asm/r4kcache.h
 include/asm/reboot.h
 include/asm/regdef.h
 include/asm/riscos-syscall.h
-include/asm/segment.h
 include/asm/semaphore-helper.h
 include/asm/serial.h
 include/asm/sgi/gio.h

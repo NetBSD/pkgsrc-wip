@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.i386,v 1.1 2004/02/03 09:20:15 marttikuparinen Exp $
+@comment $NetBSD: PLIST.i386,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
 include/asm/acpi.h
 include/asm/agp.h
 include/asm/apic.h
@@ -108,7 +108,6 @@ include/asm/math_emu.h
 include/asm/mc146818rtc.h
 include/asm/mca.h
 include/asm/mca_dma.h
-include/asm/memblk.h
 include/asm/mmx.h
 include/asm/mmzone.h
 include/asm/mpspec.h
@@ -128,7 +127,6 @@ include/asm/processor.h
 include/asm/ptrace.h
 include/asm/rwlock.h
 include/asm/rwsem.h
-include/asm/segment.h
 include/asm/serial.h
 include/asm/setup.h
 include/asm/sigcontext.h
