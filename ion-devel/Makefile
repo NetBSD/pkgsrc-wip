@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/05 10:30:00 cubidou Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/05 13:04:35 cubidou Exp $
 #
 
 DISTNAME=	ion-devel-20031211
@@ -31,12 +31,29 @@ CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
 .endfor
 .undef f
 
+ION_INCLUDE_DIR=	${PREFIX}/include/ion
+
 post-patch:
 	${SED} -e s,@@PREFIX@@,${PREFIX}, -e s,@@X11BASE@@,${X11BASE},	\
 	    -e s,@@LUADIR@@,${BUILDLINK_PREFIX.lua},			\
 	    -e s,@@LIBTOOL@@,${BUILDLINK_PREFIX.ltdl}/bin/libtool,	\
 	    ${WRKSRC}/system.mk > ${WRKSRC}/system.mk.tmp
 	${MV} ${WRKSRC}/system.mk.tmp ${WRKSRC}/system.mk
+
+post-install:
+	${INSTALL_DATA_DIR} ${ION_INCLUDE_DIR}
+	${INSTALL_DATA_DIR} ${ION_INCLUDE_DIR}/ioncore
+	${INSTALL_DATA_DIR} ${ION_INCLUDE_DIR}/libtu
+	${INSTALL_DATA_DIR} ${ION_INCLUDE_DIR}/luaextl
+	${INSTALL_DATA} ${WRKSRC}/config.h ${ION_INCLUDE_DIR}
+	${INSTALL_DATA} ${WRKSRC}/version.h ${ION_INCLUDE_DIR}
+	${INSTALL_DATA} ${WRKSRC}/mkexports.lua ${ION_INCLUDE_DIR}
+	${INSTALL_DATA} ${WRKSRC}/rules.mk ${ION_INCLUDE_DIR}
+	${INSTALL_DATA} ${WRKSRC}/system.mk ${ION_INCLUDE_DIR}
+	${INSTALL_DATA} ${WRKSRC}/system-inc.mk ${ION_INCLUDE_DIR}
+	${INSTALL_DATA} ${WRKSRC}/ioncore/*.h ${ION_INCLUDE_DIR}/ioncore
+	${INSTALL_DATA} ${WRKSRC}/libtu/include/libtu/*.h ${ION_INCLUDE_DIR}/libtu
+	${INSTALL_DATA} ${WRKSRC}/luaextl/luaextl.h ${ION_INCLUDE_DIR}/luaextl/
 
 .include "../../lang/lua/buildlink2.mk"
 .include "../../devel/libtool/buildlink2.mk"

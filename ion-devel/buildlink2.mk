@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2004/01/05 10:30:00 cubidou Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/01/05 13:04:35 cubidou Exp $
 
 .if !defined(ION_BUILDLINK2_MK)
 ION_BUILDLINK2_MK=	# defined
@@ -10,10 +10,11 @@ BUILDLINK_PKGSRCDIR.ion?=	../../wip/ion-devel
 EVAL_PREFIX+=			BUILDLINK_PREFIX.ion=ion
 BUILDLINK_PREFIX.ion_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.ion=		include/ion/*.h
+BUILDLINK_FILES.ion+=		include/ion/mkexports.lua
 BUILDLINK_FILES.ion+=		include/ion/*.mk
 BUILDLINK_FILES.ion+=		include/ion/ioncore/*.h
-BUILDLINK_FILES.ion+=		include/libtu/*
-BUILDLINK_FILES.ion+=		lib/libtu.a
+BUILDLINK_FILES.ion+=		include/ion/libtu/*.h
+BUILDLINK_FILES.ion+=		include/ion/luaextl/*.h
 
 BUILDLINK_TARGETS+=		ion-buildlink
 
