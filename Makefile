@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.986 2004/02/19 00:41:31 minskim Exp $
-# $NetBSD: Makefile,v 1.986 2004/02/19 00:41:31 minskim Exp $
+# $Id: Makefile,v 1.987 2004/02/19 01:16:40 minskim Exp $
+# $NetBSD: Makefile,v 1.987 2004/02/19 01:16:40 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -518,7 +518,6 @@ SUBDIR+=	py-InlineEgg
 SUBDIR+=	py-MayaVi
 SUBDIR+=	py-OpenAL
 SUBDIR+=	py-OpenGL
-SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-Py2Play
 SUBDIR+=	py-PyPE
 SUBDIR+=	py-Pyro
