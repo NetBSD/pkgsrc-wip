@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.829 2004/01/01 03:59:10 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.829 2004/01/01 03:59:10 thomasklausner Exp $
+# $Id: Makefile,v 1.830 2004/01/01 04:11:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.830 2004/01/01 04:11:06 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -106,7 +106,6 @@ SUBDIR+=	darkice
 SUBDIR+=	dasm
 SUBDIR+=	dbf
 #SUBDIR+=	dbxml		# depends on libpathan
-SUBDIR+=	dccserver
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dfm
