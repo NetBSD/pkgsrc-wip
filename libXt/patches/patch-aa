@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/01/31 08:50:48 jeremy-c-reed Exp $
+
+--- Xtos.h.orig	2004-01-13 21:09:41.000000000 -0800
++++ Xtos.h
+@@ -55,7 +55,7 @@ SOFTWARE.
+ 
+ #define ALLOCATE_LOCAL_FALLBACK(_size) XtMalloc((unsigned long)(_size))
+ #define DEALLOCATE_LOCAL_FALLBACK(_ptr) XtFree((XtPointer)(_ptr))
+-#include <X11/Xalloca.h>
++#include "Xalloca.h"
+ 
+ #ifdef CRAY
+ #define WORD64
