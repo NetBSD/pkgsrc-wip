@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/06/04 07:42:55 marttikuparinen Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/06/04 09:48:17 marttikuparinen Exp $
 
-XFCE4_VERSION=		3.99.20030604
+XFCE4_VERSION=		3.90.20030604
 
 DISTNAME=		xfce4-cvs-snapshot
 CATEGORIES=		x11
