@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1434 2004/08/19 08:14:31 kristerw Exp $
-# $NetBSD: Makefile,v 1.1434 2004/08/19 08:14:31 kristerw Exp $
+# $Id: Makefile,v 1.1435 2004/08/19 08:17:01 kristerw Exp $
+# $NetBSD: Makefile,v 1.1435 2004/08/19 08:17:01 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -697,7 +697,7 @@ SUBDIR+=	slackware_sed
 SUBDIR+=	slackware_tar
 SUBDIR+=	slackware_tcsh
 SUBDIR+=	slate
-SUBDIR+=	sleuthkit # READ TODO #
+SUBDIR+=	sleuthkit
 SUBDIR+=	slocate
 SUBDIR+=	slrn-pl
 SUBDIR+=	slune
