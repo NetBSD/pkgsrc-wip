@@ -1,0 +1,55 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/11/15 20:23:10 daprice Exp $
+
+--- src/Makefile.in.orig	Tue Jul 27 14:54:57 2004
++++ src/Makefile.in	Tue Jul 27 15:03:11 2004
+@@ -48,7 +48,7 @@
+ 	$(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+-mkinstalldirs = $(mkdir_p)
++mkinstalldirs = $(SHELL) ../mkinstalldirs
+ CONFIG_CLEAN_FILES =
+ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)"
+ libLTLIBRARIES_INSTALL = $(INSTALL)
+@@ -70,12 +70,12 @@
+ am__DEPENDENCIES_1 =
+ @LOCALLINK_FALSE@meme_DEPENDENCIES = libmeme.la $(am__DEPENDENCIES_1)
+ @LOCALLINK_TRUE@meme_DEPENDENCIES = libmeme.la \
+-@LOCALLINK_TRUE@	../../../nucleus/libnucleus.la \
+-@LOCALLINK_TRUE@	../../../ajax/libajax.la \
+-@LOCALLINK_TRUE@	../../../plplot/libplplot.la \
++@LOCALLINK_TRUE@	@EMBOSSLIB@/libnucleus.la \
++@LOCALLINK_TRUE@	@EMBOSSLIB@/libajax.la \
++@LOCALLINK_TRUE@	@EMBOSSLIB@/libplplot.la \
+ @LOCALLINK_TRUE@	$(am__DEPENDENCIES_1)
+ DEFAULT_INCLUDES = -I. -I$(srcdir)
+-depcomp = $(SHELL) $(top_srcdir)/depcomp
++depcomp = $(SHELL) ../depcomp
+ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/align.Plo ./$(DEPDIR)/banner.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/chi.Plo ./$(DEPDIR)/clock.Plo \
+@@ -246,11 +246,11 @@
+ target_alias = @target_alias@
+ SUBDIRS = INCLUDE
+ lib_LTLIBRARIES = libmeme.la
+-@LOCALLINK_FALSE@INCLUDES = -IINCLUDE -I${embprefix}/include
+-@LOCALLINK_TRUE@INCLUDES = -IINCLUDE -I../../../ajax
++@LOCALLINK_FALSE@INCLUDES = -IINCLUDE -I@INCLUDE@
++@LOCALLINK_TRUE@INCLUDES = -IINCLUDE -I@INCLUDE@
+ @ISAIXIA64_FALSE@@ISSHARED_TRUE@AM_CFLAGS = 
+-@ISAIXIA64_TRUE@@ISSHARED_TRUE@@LOCALLINK_FALSE@AM_CFLAGS = -Wl,-bdynamic -Wl,-brtl -L../../../ajax/.libs -lajax
+-@ISAIXIA64_TRUE@@ISSHARED_TRUE@@LOCALLINK_TRUE@AM_CFLAGS = -Wl,-bdynamic -Wl,-brtl -L../../../ajax/.libs -lajax
++@ISAIXIA64_TRUE@@ISSHARED_TRUE@@LOCALLINK_FALSE@AM_CFLAGS = -Wl,-bdynamic -Wl,-brtl -L@EMBOSSLIB@ -lajax
++@ISAIXIA64_TRUE@@ISSHARED_TRUE@@LOCALLINK_TRUE@AM_CFLAGS = -Wl,-bdynamic -Wl,-brtl -L@EMBOSSLIB@ -lajax
+ MEMESRC = clock.c display.c em.c init.c meme_util.c seq2theta.c \
+ 	shorten.c starts.c prior.c split.c align.c justlike.c \
+ 	oops.c tcm.c zoops.c banner.c logs.c palindrome.c gamma.c \
+@@ -262,7 +262,7 @@
+ libmeme_la_LDFLAGS = -version-info 2:3:1
+ meme_SOURCES = meme.c
+ @LOCALLINK_FALSE@LDADD = libmeme.la -L${embprefix}/lib -lnucleus -lajax -lplplot $(XLIB)
+-@LOCALLINK_TRUE@LDADD = libmeme.la ../../../nucleus/libnucleus.la ../../../ajax/libajax.la ../../../plplot/libplplot.la $(XLIB)
++@LOCALLINK_TRUE@LDADD = libmeme.la @EMBOSSLIB@/libnucleus.la @EMBOSSLIB@/libajax.la @EMBOSSLIB@/libplplot.la $(XLIB)
+ all: all-recursive
+ 
+ .SUFFIXES:

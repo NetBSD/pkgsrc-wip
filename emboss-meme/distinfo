@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/15 20:23:10 daprice Exp $
+
+SHA1 (emboss/meme-2.3.1-20041107/MEME-2.3.1.tar.gz) = 7f43041d3b4bbc5ba5b7c39c7320906966c079df
+Size (emboss/meme-2.3.1-20041107/MEME-2.3.1.tar.gz) = 417514 bytes
+SHA1 (patch-aa) = d7b7d55c81df79f4c437fb6b2378322a69bbd204
+SHA1 (patch-ab) = 125cd943e6fe3e4133f1ab947caa1d01d84b76fb
+SHA1 (patch-ac) = 2e4931f73c58e9fba786ffae9b9b593fa89079ae
