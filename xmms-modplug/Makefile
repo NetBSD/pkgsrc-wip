@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2003/07/22 00:46:57 bencollver Exp $
+# $NetBSD: Makefile,v 1.3 2003/12/21 20:59:38 bencollver Exp $
 #
 
-DISTNAME=		modplugxmms-2.04
-PKGNAME=		xmms-modplug-2.04
+DISTNAME=		modplugxmms-2.05
+PKGNAME=		xmms-modplug-2.05
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=modplug-xmms/}
 
-MAINTAINER=		collver1@comcast.net
+MAINTAINER=		ben@netbsd.org
 HOMEPAGE=		http://modplug-xmms.sourceforge.net/
 COMMENT=		XMMS plugin based on modplug
 
@@ -17,8 +17,12 @@ USE_X11=		yes
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+#LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool-disable-static
 
+CFLAGS+=		-DDEVICE_NAME="\"\\\"${DEVOSSSOUND}\\\"\""
+
+.include "../../wip/libmodplug/buildlink2.mk"
 .include "../../audio/xmms/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
