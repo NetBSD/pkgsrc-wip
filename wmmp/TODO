@@ -1,5 +1,3 @@
 - don't know why this get's installed suid root and why configure
   checks the operating system and need this kvm stuff for freebsd -->
   i'm gonna contact the developer...
-- lots of pkglint warnings about absolute pathnames in the configure
-  script.
