@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1719 2005/04/01 09:50:13 jgoamakf Exp $
-# $NetBSD: Makefile,v 1.1719 2005/04/01 09:50:13 jgoamakf Exp $
+# $Id: Makefile,v 1.1720 2005/04/02 16:52:02 kristerw Exp $
+# $NetBSD: Makefile,v 1.1720 2005/04/02 16:52:02 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -755,6 +755,7 @@ SUBDIR+=	py-RXP
 SUBDIR+=	py-SQLObject
 SUBDIR+=	py-SciPy
 SUBDIR+=	py-Soya
+SUBDIR+=	py-ZopeInterface
 SUBDIR+=	py-albatross
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-buildbot
@@ -807,7 +808,6 @@ SUBDIR+=	py-vtkmodule
 SUBDIR+=	py-weave
 SUBDIR+=	py-willow
 SUBDIR+=	py-xsdb
-SUBDIR+=	py-ZopeInterface
 SUBDIR+=	pydance
 SUBDIR+=	pynfo
 SUBDIR+=	pysite
