@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/22 15:50:13 ianzag Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/01 11:12:17 ianzag Exp $
 share/doc/kde/HTML/sv/kchart/common
 share/doc/kde/HTML/sv/kchart/index.cache.bz2
 share/doc/kde/HTML/sv/kchart/index.docbook
@@ -352,7 +352,6 @@ share/kde/locale/sv/LC_MESSAGES/kwordasciifilter.mo
 share/kde/locale/sv/LC_MESSAGES/kwordhtmlexportfilter.mo
 share/kde/locale/sv/LC_MESSAGES/kwordhtmlimportfilter.mo
 share/kde/locale/sv/LC_MESSAGES/kwordlatexexportfilter.mo
-share/kde/locale/sv/LC_MESSAGES/kwordlatexfilter.mo
 share/kde/locale/sv/LC_MESSAGES/kwordlateximportfilter.mo
 share/kde/locale/sv/LC_MESSAGES/kwordmswordfilter.mo
 share/kde/locale/sv/LC_MESSAGES/kwordmswritefilter.mo
