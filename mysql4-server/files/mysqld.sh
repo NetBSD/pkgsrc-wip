@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCS_SCRIPTS_SHELL@
 #
-# $NetBSD: mysqld.sh,v 1.1.1.1 2003/07/09 17:17:15 xtraeme Exp $
+# $NetBSD: mysqld.sh,v 1.2 2003/07/14 17:55:31 xtraeme Exp $
 #
 
 # PROVIDE: mysqld

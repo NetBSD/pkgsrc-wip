@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: honeydarpd.sh,v 1.1 2003/07/09 15:41:43 adrian_p Exp $
+# $NetBSD: honeydarpd.sh,v 1.2 2003/07/14 17:55:30 xtraeme Exp $
 #
 
 # PROVIDE: honeydarpd

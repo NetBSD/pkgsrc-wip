@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCS_SCRIPTS_SHELL@
 #
-# $NetBSD: maradns.sh,v 1.1.1.1 2003/05/22 11:05:12 poppnk Exp $
+# $NetBSD: maradns.sh,v 1.2 2003/07/14 17:55:30 xtraeme Exp $
 #
 
 # PROVIDE: maradns

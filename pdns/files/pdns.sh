@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pdns.sh,v 1.1.1.1 2003/06/27 02:47:12 poppnk Exp $
+# $NetBSD: pdns.sh,v 1.2 2003/07/14 17:55:31 xtraeme Exp $
 #
 
 # PROVIDE: pdns

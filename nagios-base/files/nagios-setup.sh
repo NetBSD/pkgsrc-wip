@@ -1,4 +1,4 @@
-#! /bin/sh
+#!@RCS_SCRIPTS_SHELL@
 #
 # Run this script as root to create these necessary runtime directories.
 #

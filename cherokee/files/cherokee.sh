@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCS_SCRIPTS_SHELL@
 #
-# $NetBSD: cherokee.sh,v 1.2 2003/05/27 11:49:20 xtraeme Exp $
+# $NetBSD: cherokee.sh,v 1.3 2003/07/14 17:55:30 xtraeme Exp $
 #
 
 # PROVIDE: cherokee
