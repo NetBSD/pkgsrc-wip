@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/05/05 12:26:02 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/07 08:50:17 johnrshannon Exp $
 #
 
 DISTNAME=		gdb-${GDB_VERSION}
@@ -16,6 +16,8 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=         make
+USE_MAKEINFO=		YES
+USE_NEW_TEXINFO=	YES
 
 GDB_VERSION=	6.1
 GDB_PREFIX=	${PREFIX}/${PKGNAME_NOREV}
@@ -29,9 +31,12 @@ CONFIGURE_ARGS+=	--includedir=${GDB_PREFIX}/include
 CONFIGURE_ARGS+=	--mandir=${GDB_PREFIX}/man
 CONFIGURE_ARGS+=	--datadir=${GDB_PREFIX}/share
 CONFIGURE_ARGS+=	--disable-nls
-USE_MAKEINFO=		YES
-USE_NEW_TEXINFO=	YES
+CONFIGURE_ARGS+=	--without-included-gettext
 
-.include "../../mk/pthread.buildlink3.mk"
+do-test:
+	(cd ${WRKSRC} && ${GMAKE} check)
+
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
