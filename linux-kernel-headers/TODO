@@ -1,0 +1,9 @@
+maybe should remove any include/asm symlink and recreate
+
+maybe could have seperate ${PREFIX}/include/asm-generic         
+directory (but maybe that is a waste of un-needed headers)
+and then have include/asm and have symlink to include/asm-${LOWER_ARCH}
+
+should put include/asm-generic, include/asm, include-${LOWER_ARCH}
+and include/linux as @dirrm in PLIST.common
+
