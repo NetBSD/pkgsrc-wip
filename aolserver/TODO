@@ -1,0 +1,5 @@
+Pkglint finds that I hardcoded /var/log/... as the log directory.  If there is a way for pkgsrc to know your favorite log location, I don't know what it is.
+
+I made it require ptl because it needs a thread library and ptl is the one I found first.  I don't know if there is a standard way to address this issue either.
+
+The post-install script is probably not the right way to install the rc.d script and config file, but I don't know how to do it better.
