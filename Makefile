@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.393 2003/08/25 10:51:57 cjep Exp $
-# $NetBSD: Makefile,v 1.393 2003/08/25 10:51:57 cjep Exp $
+# $Id: Makefile,v 1.394 2003/08/26 10:09:14 jlamwww Exp $
+# $NetBSD: Makefile,v 1.394 2003/08/26 10:09:14 jlamwww Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -268,6 +268,7 @@ SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-gtk2
 SUBDIR+=	pdns
+SUBDIR+=	perl58
 SUBDIR+=	perltidy
 SUBDIR+=	pgp6
 SUBDIR+=	pgpenvelope
