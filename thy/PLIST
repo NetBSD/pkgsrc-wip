@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/17 15:49:54 xtraeme Exp $
+etc/rc.d/thy
+share/thy/samples/http301.html
+share/thy/samples/http302.html
+share/thy/samples/http400.html
+share/thy/samples/http401.html
+share/thy/samples/http403.html
+share/thy/samples/http404.html
+share/thy/samples/http405.html
+share/thy/samples/http412.html
+share/thy/samples/http416.html
+share/thy/samples/http500.html
+share/thy/samples/http501.html
+share/thy/samples/http505.html
+share/thy/samples/thy.conf
+@dirrm share/thy/samples
+@dirrm share/thy
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/thy.info
+info/thy.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/thy.info
+man/man8/thy.8
+sbin/thy
