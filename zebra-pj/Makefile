@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:34:07 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/11 04:29:39 blef Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 
 DISTNAME=	zebra-pj-20030428
@@ -31,9 +31,9 @@ CONFIGURE_ARGS+=	--localstatedir=/var/run
 PLIST_SRC=		# empty (built from optional pieces below)
 
 .if defined(USE_ZEBRA_VTYSH) && ${USE_ZEBRA_VTYSH} == "YES"
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_GNU_READLINE=	# uses rl_pending_input
-.  include "../../devel/readline/buildlink2.mk"
+.  include "../../devel/readline/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-vtysh
 PLIST_SRC+=		${PKGDIR}/PLIST.vtysh
 .else
