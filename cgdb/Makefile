@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/09/29 14:56:41 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2003/10/03 11:42:06 xtraeme Exp $
 #
 
-DISTNAME=	cgdb-0.3.2
+DISTNAME=	cgdb-0.3.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cgdb/}
 
@@ -13,7 +13,8 @@ USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_GNU_READLINE=	yes
-USE_NCURSES=		yes
+
+CONFIGURE_ARGS+=	--with-curses
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cgdb
