@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/06/28 13:10:33 adrian_p Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/28 15:45:00 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -65,6 +65,9 @@ post-patch: make-sendmail-siteconfig
 	@${CAT} ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
 .elif defined(USE_SASL) && ${USE_SASL} == YES
 	@${CAT} ${FILESDIR}/site.config.m4-sasl >>${SITECONFIG}
+.endif
+.if defined(USE_SOCKETMAP) && ${USE_SOCKETMAP} == YES
+	@${CAT} ${FILESDIR}/site.config.m4-socketmap >>${SITECONFIG}
 .endif
 
 do-build:
