@@ -1,6 +1,5 @@
-# $NetBSD: Makefile.common,v 1.5 2003/06/25 06:52:45 marttikuparinen Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/07/04 11:13:52 marttikuparinen Exp $
 
-CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xfce/}
 
 MAINTAINER=		martti@netbsd.org
