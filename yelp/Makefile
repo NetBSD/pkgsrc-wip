@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/12 16:48:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/12 16:50:56 xtraeme Exp $
 #
 
 DISTNAME=		yelp-2.2.2
@@ -8,9 +8,9 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		Help browser for GNOME 2.0 desktop
+COMMENT=		Help browser for GNOME 2 desktop
 
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK2=		yes
