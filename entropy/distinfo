@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2003/10/25 22:36:08 tvierling Exp $
+$NetBSD: distinfo,v 1.25 2003/10/28 15:46:47 tvierling Exp $
 
-SHA1 (entropy-0.5.9-353.tgz) = cb30f457887ab2d3ad3c5da3b0686b011c8f6122
-Size (entropy-0.5.9-353.tgz) = 707447 bytes
+SHA1 (entropy-0.5.9-354.tgz) = d12490a5d0e1ced2a2a227df0ce562e8e3a2a5fb
+Size (entropy-0.5.9-354.tgz) = 707239 bytes
 SHA1 (patch-ac) = cf51c4f645edc3f5307548033526d9da4af9c078
