@@ -1,0 +1,8 @@
+Rserve is a TCP/IP server which allows other programs to use facilities
+of R (see www.r-project.org) from various languages without the need to
+initialize R or link against R library. Every connection has a separate
+workspace  and  working  directory. Client-side  implementations  are
+available for popular languages such as C/C++ and Java. Rserve supports
+remote connection, authentication and file transfer. Typical use is to
+integrate R backend for computation of statstical models, plots etc. in
+other applications.
