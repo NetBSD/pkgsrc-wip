@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.457 2003/09/17 15:50:42 xtraeme Exp $
-# $NetBSD: Makefile,v 1.457 2003/09/17 15:50:42 xtraeme Exp $
+# $Id: Makefile,v 1.458 2003/09/17 16:05:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.458 2003/09/17 16:05:47 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -316,6 +316,7 @@ SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-RXP
 SUBDIR+=	py-SimpleParse
 SUBDIR+=	py-albatross
+SUBDIR+=	py-biggles
 SUBDIR+=	py-elementtree
 SUBDIR+=	py-game
 SUBDIR+=	py-generateDS
