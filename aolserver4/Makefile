@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/21 18:16:44 ianharding Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/22 17:53:07 ianharding Exp $
 #
 
 DISTNAME=		aolserver-4.0.7-src
@@ -36,6 +36,12 @@ RCD_SCRIPTS=		nsd
 
 OWN_DIRS_PERMS=		${NSD_LOGDIR} ${NSD_USER} ${NSD_GROUP} 740
 OWN_DIRS_PERMS+=	${NSD_PIDDIR} ${NSD_USER} ${NSD_GROUP} 740
+
+SUBST_CLASSES=		cl1
+SUBST_STAGE.cl1=	post-patch
+SUBST_FILES.cl1=	sample-config.tcl
+SUBST_SED.cl1=		-e s!@PREFIX@!${PREFIX}!g \
+			-e s!@VARBASE@!${VARBASE}!g
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

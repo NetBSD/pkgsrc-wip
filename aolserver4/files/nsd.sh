@@ -1,4 +1,4 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
 # 
 
@@ -6,8 +6,8 @@
 
 name="nsd"
 rcvar=${name}
-command="/usr/pkg/bin/${name}"
-nsd_flags="-t /usr/pkg/etc/nsd.tcl -u nsadmin -g nsadmin"
+command="@PREFIX@/bin/${name}"
+nsd_flags="-t @PKG_SYSCONFDIR@/nsd.tcl -u nsadmin -g nsadmin"
 nsd_user="root"
 
 # set defaults
@@ -19,4 +19,3 @@ else
 fi
 
 run_rc_command "$1"
-

@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2004/06/08 20:53:37 ianharding Exp $
+$NetBSD: patch-ac,v 1.2 2004/07/22 17:53:08 ianharding Exp $
 
---- sample-config.tcl.orig	2003-08-08 14:52:17.000000000 +0000
+--- sample-config.tcl.orig	2004-03-26 20:58:18.000000000 +0000
 +++ sample-config.tcl
 @@ -52,16 +52,16 @@ set httpport               8000
  set httpsport              8443
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.1 2004/06/08 20:53:37 ianharding Exp $
  
 -set homedir                [file dirname [ns_info config]]
 -set bindir                 [file dirname [ns_info nsd]]
-+set homedir                /usr/pkg
++set homedir                @PREFIX@
 +set bindir                 ${homedir}/bin
  
 -set pageroot               ${homedir}/servers/${servername}/pages
@@ -29,8 +29,8 @@ $NetBSD: patch-ac,v 1.1 2004/06/08 20:53:37 ianharding Exp $
  #ns_param  PreferredCharsets { utf-8 iso8859-1 } ;# This parameter supports output
                                         # encoding arbitration.
 -
-+ns_param pidfile	"/var/run/nsd/${servername}.pid"
-+ns_param serverlog	"/var/log/nsd/${servername}.log"
++ns_param pidfile	"@VARBASE@/run/nsd/${servername}.pid"
++ns_param serverlog	"@VARBASE@/log/nsd/${servername}.log"
  #
  # MIME types.
  #
@@ -62,7 +62,7 @@ $NetBSD: patch-ac,v 1.1 2004/06/08 20:53:37 ianharding Exp $
  
  #
  # Socket driver module (HTTP)  -- nssock
-@@ -321,8 +343,10 @@ ns_param   rollonsignal    true      ;# 
+@@ -341,8 +363,10 @@ ns_param   rollonsignal    true      ;# 
  ns_param   rollhour        0         ;# Time to roll log.
  ns_param   maxbackup       5         ;# Max number to keep around when rolling.
  ns_param   logreqtime      true      ;# Log the execution time of request
@@ -74,7 +74,7 @@ $NetBSD: patch-ac,v 1.1 2004/06/08 20:53:37 ianharding Exp $
  #
  # CGI interface -- nscgi
  #
-@@ -342,7 +366,10 @@ ns_section "ns/server/${servername}/modu
+@@ -362,7 +386,10 @@ ns_section "ns/server/${servername}/modu
      ns_param nslog ${bindir}/nslog.so
      #ns_param nscgi ${bindir}/nscgi.so
      #ns_param nsperm ${bindir}/nsperm.so
