@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/11/05 05:01:55 mpasternak Exp $
+
+SHA1 (cal3d_cally-0.9.tar.gz) = 5fbf19328ddf6b97e06adb80ad0df9a53a2395ff
+Size (cal3d_cally-0.9.tar.gz) = 78913 bytes
+SHA1 (TheCallyDemo-2.9.zip) = 30d034abe6c5e67746e8b9bca7b1cb59d7989ada
+Size (TheCallyDemo-2.9.zip) = 2397824 bytes
+SHA1 (patch-aa) = f4ee7ba8de23542da9bcd15d78528073007cd43a
+SHA1 (patch-ab) = 71ee739d35f5b2769bd04bf2add14e35056e8362
+SHA1 (patch-ac) = a8ef53042003df8945a5b397a980b1aa281f5563
