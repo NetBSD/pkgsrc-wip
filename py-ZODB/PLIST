@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/20 04:10:26 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/20 04:26:55 mpasternak Exp $
 bin/fsdump.py
 bin/fsrefs.py
 bin/fstail.py
@@ -120,6 +120,12 @@ ${PYSITELIB}/BTrees/tests/testSetOps.pyo
 ${PYSITELIB}/BTrees/tests/test_check.py
 ${PYSITELIB}/BTrees/tests/test_check.pyc
 ${PYSITELIB}/BTrees/tests/test_check.pyo
+${PYSITELIB}/ThreadedAsync/LoopCallback.py
+${PYSITELIB}/ThreadedAsync/LoopCallback.pyc
+${PYSITELIB}/ThreadedAsync/LoopCallback.pyo
+${PYSITELIB}/ThreadedAsync/__init__.py
+${PYSITELIB}/ThreadedAsync/__init__.pyc
+${PYSITELIB}/ThreadedAsync/__init__.pyo
 ${PYSITELIB}/ZODB/ActivityMonitor.py
 ${PYSITELIB}/ZODB/ActivityMonitor.pyc
 ${PYSITELIB}/ZODB/ActivityMonitor.pyo
@@ -475,6 +481,7 @@ ${PYSITELIB}/Persistence/__init__.pyo
 @dirrm ${PYSITELIB}/BTrees/tests
 @dirrm ${PYSITELIB}/BTrees
 @dirrm ${PYSITELIB}/Persistence
+@dirrm ${PYSITELIB}/ThreadedAsync
 @dirrm ${PYSITELIB}/ZConfig/tests/library/widget
 @dirrm ${PYSITELIB}/ZConfig/tests/library/thing/ext
 @dirrm ${PYSITELIB}/ZConfig/tests/library/thing
