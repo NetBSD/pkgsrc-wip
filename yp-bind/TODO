@@ -1,0 +1,9 @@
+This software is know to run on
+sparc-sun-solaris2.x   Solaris 2.x with pthread library
+can someone test?
+
+maybe include pthreads buildlink
+
+setup MAKE_DIRS  for /var/yp/binding/
+
+and is this okay /var/run/ypbind.pid

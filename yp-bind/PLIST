@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/06 00:20:17 jeremy-c-reed Exp $
+man/man5/yp.conf.5
+man/man8/ypbind.8
+sbin/ypbind
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/ypbind-mt.mo

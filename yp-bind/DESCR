@@ -1,0 +1,7 @@
+ypbind-mt is a complete new implementation of a NIS binding daemon
+for Linux and Solaris. It supports ypbind protocol V1 and V2, supports
+multiple domain bindings, uses threads for better response, supports
+/var/yp/binding/* file, supports a list of known secure NIS servers
+(etc/yp.conf), and binds to the server which answers first.
+
+ypbind is used to setup an NIS client.
