@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 2003/09/28 03:28:35 virtus Exp $
+
 --- src/Makefile.in.orig	Sat Sep 27 21:29:51 2003
 +++ src/Makefile.in		Sat Sep 27 21:32:37 2003
 @@ -1,7 +1,7 @@
