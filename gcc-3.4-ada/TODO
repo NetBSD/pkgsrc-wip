@@ -1,3 +1,0 @@
-- Need to address architectures other than NetBSD with native pthreads.
-
-- Otherwise, ready for pkgsrc
