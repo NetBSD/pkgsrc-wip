@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.507 2003/09/28 11:09:26 xtraeme Exp $
-# $NetBSD: Makefile,v 1.507 2003/09/28 11:09:26 xtraeme Exp $
+# $Id: Makefile,v 1.508 2003/09/28 13:08:16 adrian_p Exp $
+# $NetBSD: Makefile,v 1.508 2003/09/28 13:08:16 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -204,6 +204,7 @@ SUBDIR+=	libgringotts
 SUBDIR+=	libhydrogen
 SUBDIR+=	libneural
 SUBDIR+=	libogg-nightly
+SUBDIR+=	libprelude
 SUBDIR+=	libshout
 SUBDIR+=	libvc
 SUBDIR+=	libvorbis-nightly
@@ -320,6 +321,11 @@ SUBDIR+=	poedit
 SUBDIR+=	portmap
 SUBDIR+=	postal
 SUBDIR+=	ppp
+SUBDIR+=	prelude-lml
+SUBDIR+=	prelude-manager
+SUBDIR+=	prelude-manager-mysql
+SUBDIR+=	prelude-manager-pgsql
+SUBDIR+=	prelude-nids
 SUBDIR+=	premake
 SUBDIR+=	procps
 SUBDIR+=	prtunnel
