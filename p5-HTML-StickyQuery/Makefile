@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/10 21:56:54 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/27 14:12:07 jgoamakf Exp $
 #
 
-DISTNAME=		HTML-StickyQuery-0.11
+DISTNAME=		HTML-StickyQuery-0.12
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5sqy
 CATEGORIES=		www perl5
