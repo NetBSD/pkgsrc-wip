@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/14 22:00:38 marc Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/30 17:22:19 marc Exp $
 #
 
 DISTNAME=	pygopherd_2.0.3
@@ -35,6 +35,7 @@ SEDFILES+=	${WRKSRC}/conf/pygopherd.conf ${WRKSRC}/pygopherd.8
 
 RCD_SCRIPTS=	pygopherd
 FILES_SUBST+=	RUNTIMEDIR=${RUNTIMEDIR}
+FILES_SUBST+=	PYTHONBIN=${PYTHONBIN}
 
 PYTHON_PATCH_SCRIPTS=	bin/pygopherd
 PYTHON_PATCH_SCRIPTS+=	pygopherd/GopherExceptionsTest.py

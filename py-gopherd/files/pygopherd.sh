@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pygopherd.sh,v 1.1 2003/09/06 12:20:37 marc Exp $
+# $NetBSD: pygopherd.sh,v 1.2 2003/09/30 17:22:20 marc Exp $
 #
 # PROVIDE: pygopherd
 # REQUIRE: DAEMON
@@ -19,6 +19,7 @@ rcd_dir=`@DIRNAME@ $0`
 name="pygopherd"
 rcvar=$name
 command="@PREFIX@/bin/${name}"
+command_interpreter="@PYTHONBIN@"
 pidfile="/var/run/${name}.pid"
 conf_file="@PKG_SYSCONFDIR@/${name}.conf"
 mime_file="@PKG_SYSCONFDIR@/mime.types"
