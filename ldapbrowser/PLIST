@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/20 05:54:44 marmfield Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/20 06:15:58 marmfield Exp $
 bin/lbe
 lib/ldapbrowser/CHANGES.TXT
 lib/ldapbrowser/LICENSE.ICONS
@@ -15,6 +15,7 @@ lib/ldapbrowser/lbe.jar
 lib/ldapbrowser/lbe.old.bat
 lib/ldapbrowser/lbe.old.sh
 lib/ldapbrowser/lbe.sh
+lib/ldapbrowser/lbe.sh.orig
 lib/ldapbrowser/lib/jndi.jar
 lib/ldapbrowser/lib/ldap.jar
 lib/ldapbrowser/lib/ldapbp.jar

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/20 05:54:44 marmfield Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/20 06:15:58 marmfield Exp $
 #
 
 DISTNAME=		Browser282b2
@@ -18,14 +18,15 @@ LBE_DIR=		${PREFIX}/lib/ldapbrowser
 USE_JAVA=		run
 
 do-build:
-	${SED} s%DESTINATION%${LBE_DIR}% ${FILESDIR}/lbe \
-		> ${WRKSRC}/lbe.x
+	${SED} s%DESTINATION%${LBE_DIR}% ${WRKSRC}/lbe.sh \
+		> ${WRKSRC}/lbe.sh.x
+	${MV} ${WRKSRC}/lbe.sh.x ${WRKSRC}/lbe.sh
+	${CHMOD} a+x ${WRKSRC}/lbe.sh
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${LDAPBROWSER_HOME}
-	${INSTALL_SCRIPT} ${WRKSRC}/lbe.x ${PREFIX}/bin/lbe
-	${RM} ${WRKSRC}/lbe.x
+	${INSTALL_PROGRAM_DIR} ${LBE_DIR}
 	cd ${WRKSRC} && ${PAX} -rwp ma . ${LBE_DIR}
+	ln -s ${LBE_DIR}/lbe.sh ${PREFIX}/bin/lbe
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
