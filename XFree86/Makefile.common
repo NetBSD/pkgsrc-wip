@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2003/07/24 04:55:25 blef Exp $
+# $NetBSD: Makefile.common,v 1.8 2003/07/25 00:27:24 xtraeme Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -102,7 +102,7 @@ post-extract:
 		-e "s|BLNK|${BUILDLINK_DIR}|g" \
 		-e "s|PREFIX|${X11BASE}|g" \
 		-e "s|LOCALBASE|${LOCALBASE}|g" \
-		-e "s|@LDFLAGS@|${LDFLAGS}|g" \
+		-e "s|LDFLAGS|${LDFLAGS}|g" \
 		${FILESDIR}/host.def > ${WRKSRC}/config/cf/host.def
 	@${LN} -sf ${PREFIX}/bin/gccmakedep ${WRKSRC}/config/util
 	@${LN} -sf ${PREFIX}/bin/revpath ${WRKSRC}/config/util
