@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.223 2003/06/05 05:48:17 mjasm Exp $
-# $NetBSD: Makefile,v 1.223 2003/06/05 05:48:17 mjasm Exp $
+# $Id: Makefile,v 1.224 2003/06/05 06:01:40 mjasm Exp $
+# $NetBSD: Makefile,v 1.224 2003/06/05 06:01:40 mjasm Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -20,6 +20,7 @@ SUBDIR+=	billardgl
 SUBDIR+=	bin86
 SUBDIR+=	bugzilla
 SUBDIR+=	byacc
+SUBDIR+=	cdpr
 SUBDIR+=	cherokee
 SUBDIR+=	chksniff
 SUBDIR+=	cjk-latex
@@ -42,6 +43,7 @@ SUBDIR+=	frontpage
 SUBDIR+=	fuse
 SUBDIR+=	fuse-utils
 SUBDIR+=	fwbuilder
+SUBDIR+=	galib
 SUBDIR+=	gdrdao
 SUBDIR+=	geeklog
 SUBDIR+=	gimp-current
@@ -148,6 +150,7 @@ SUBDIR+=	procps
 SUBDIR+=	pts
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-PgSQL
+SUBDIR+=	py-adns
 SUBDIR+=	py-elementtree
 SUBDIR+=	py-gnome2
 SUBDIR+=	py-gnosis-utils
@@ -207,7 +210,7 @@ SUBDIR+=	xml2doc
 SUBDIR+=	xplore
 SUBDIR+=	yafray
 SUBDIR+=	zebra-pj
-SUBDIR+=	cdpr
-SUBDIR+=	galib
+
+
 
 .include "../mk/bsd.pkg.subdir.mk"
