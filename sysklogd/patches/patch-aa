@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/05/07 23:32:33 jeremy-c-reed Exp $
+
+--- Makefile.orig	Mon Oct 12 13:25:15 1998
++++ Makefile	Wed Nov  6 13:49:33 2002
+@@ -3,13 +3,13 @@
+ CC= gcc
+ #CFLAGS= -g -DSYSV -Wall
+ #LDFLAGS= -g
+-CFLAGS= $(RPM_OPT_FLAGS) -O3 -DSYSV -fomit-frame-pointer -Wall -fno-strength-reduce
++CFLAGS+= $(RPM_OPT_FLAGS) -O3 -DSYSV -fomit-frame-pointer -Wall -fno-strength-reduce
+ LDFLAGS= -s
+ 
+ # Look where your install program is.
+ INSTALL = /usr/bin/install
+-BINDIR = /usr/sbin
+-MANDIR = /usr/man
++BINDIR = ${DESTDIR}/sbin
++MANDIR = ${DESTDIR}/man
+ 
+ # There is one report that under an all ELF system there may be a need to
+ # explicilty link with libresolv.a.  If linking syslogd fails you may wish
+@@ -29,12 +29,13 @@
+ 
+ # The following define determines whether the package adheres to the
+ # file system standard.
+-FSSTND = -DFSSTND
++#FSSTND = -DFSSTND
++FSSTND=
+ 
+ # The following define establishes ownership for the man pages.
+ # Avery tells me that there is a difference between Debian and
+ # Slackware.  Rather than choose sides I am leaving it up to the user.
+-MAN_OWNER = root
++MAN_OWNER = ${ROOT_USER}
+ # MAN_OWNER = man
+ 
+ # The following define establishes the name of the pid file for the

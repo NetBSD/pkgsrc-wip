@@ -1,0 +1,14 @@
+This is the sysklogd package for Linux.
+
+The sysklogd package implements two system log daemons.  The syslogd
+daemon is the general system logging daemon which is responsible for
+handling requests for syslog services.  This version of syslogd is
+similar to the standard Berkeley product but with a number of compatible
+extensions.  The klogd daemon runs either standalone or as a client
+of syslogd.  Klogd 'listens' to kernel log messages, prioritizes them
+and routes them to either output files or to syslogd.  This version
+of klogd will optionally translate kernel addresses to their symbolic
+equivalents if provided with a system map.
+
+This is Dr. Greg W. Wettstein's version of sysklogd.  It is maintained
+by Martin Schulze.

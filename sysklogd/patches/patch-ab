@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/05/07 23:32:33 jeremy-c-reed Exp $
+
+--- syslogd.c.orig	Wed Nov  6 13:48:23 2002
++++ syslogd.c	Wed Nov  6 13:49:13 2002
+@@ -521,7 +521,8 @@
+ #if defined(FSSTND)
+ #define _PATH_LOGPID _PATH_VARRUN SYSLOGD_PIDNAME
+ #else
+-#define _PATH_LOGPID "/etc/" SYSLOGD_PIDNAME
++/* #define _PATH_LOGPID "/etc/" SYSLOGD_PIDNAME */
++#define _PATH_LOGPID _PATH_VARRUN SYSLOGD_PIDNAME
+ #endif
+ #else
+ #ifndef _PATH_LOGPID

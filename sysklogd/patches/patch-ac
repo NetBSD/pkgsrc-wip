@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/05/07 23:32:33 jeremy-c-reed Exp $
+
+--- klogd.c.orig	Wed Nov  6 13:46:12 2002
++++ klogd.c	Wed Nov  6 13:47:35 2002
+@@ -282,7 +282,8 @@
+ #if defined(FSSTND)
+ static char	*PidFile = _PATH_VARRUN "klogd.pid";
+ #else
+-static char	*PidFile = "/etc/klogd.pid";
++/* static char	*PidFile = "/etc/klogd.pid"; */
++static char	*PidFile = _PATH_VARRUN "klogd.pid";
+ #endif
+ #endif
+ 

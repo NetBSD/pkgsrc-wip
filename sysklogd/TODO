@@ -1,0 +1,10 @@
+provide a ready-to-use syslog.conf also
+
+fix hard-coded paths in manual pages?
+
+what about conflicting /var/run/syslogd.pid?
+
+provide rc.d script for syslogd
+
+provide rc.d script for klogd
+(I have these)

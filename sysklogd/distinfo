@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/05/07 23:32:33 jeremy-c-reed Exp $
+
+SHA1 (sysklogd-1.4.1.tar.gz) = 093775da0e429d0768cf195ceb20fdd6d96aeeea
+Size (sysklogd-1.4.1.tar.gz) = 81784 bytes
+SHA1 (patch-aa) = c9e7803be72c89103eba6537f41804c30ec569fa
+SHA1 (patch-ab) = 80729d5d6a4d4cc78b3cb1f3d85eec50a06786b7
+SHA1 (patch-ac) = 05db3f45cb966c6a755b98f69f6bad41573a26fe
