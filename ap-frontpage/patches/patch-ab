@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/06/03 16:39:03 schnoebe Exp $
+$NetBSD: patch-ab,v 1.2 2004/01/26 18:09:55 schnoebe Exp $
 
 --- Makefile.in.orig	Tue Mar 12 15:07:06 2002
 +++ Makefile.in
@@ -31,8 +31,8 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/06/03 16:39:03 schnoebe Exp $
 +	-DFP_SAFE_PATH=\"$(PREFIX)/bin:/usr/local/bin:/usr/bin:/bin\" \
 +	-DFPDIR=\"$(PREFIX)/frontpage/version5.0/exes\" \
 +	-DPREFIX=\"$(PREFIX)\" \
-+	-DFP_USER=\"$(BINOWN)\" \
-+	-DFP_GROUP=\"$(BINGRP)\" \
++	-DFP_USER=\"$(FPOWN)\" \
++	-DFP_GROUP=\"$(FPGRP)\" \
  	-DFP_HTACCESS=\".htaccess\" \
  	-DFP_UMASK=022
  

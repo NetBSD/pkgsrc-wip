@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/03 16:39:03 schnoebe Exp $
+$NetBSD: distinfo,v 1.2 2004/01/26 18:09:54 schnoebe Exp $
 
 SHA1 (mod_frontpage_mirfak-1.6.2.tar.gz) = a026ddbc3bea15e2ce9ff6510132b69505acbf53
 Size (mod_frontpage_mirfak-1.6.2.tar.gz) = 29831 bytes
 SHA1 (patch-aa) = 0f10a699a2fd2ccb15ee74d6d97aa138981bffbb
-SHA1 (patch-ab) = 4c538d637267336a0793c45244a1fa35e9b05880
+SHA1 (patch-ab) = 11bfde55d70ccecad91a0fc403f1c89363f147ef
 SHA1 (patch-ac) = a47a4d9d097f37d31d6244139e983423086a2c5d
 SHA1 (patch-ad) = f36345fefb3410fe02b10badb00980d2456dd696
 SHA1 (patch-ae) = 84172ec282b6453147edf89c367115a19193170c
