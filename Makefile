@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1638 2005/01/31 14:44:21 tvierling Exp $
-# $NetBSD: Makefile,v 1.1638 2005/01/31 14:44:21 tvierling Exp $
+# $Id: Makefile,v 1.1639 2005/01/31 14:50:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1639 2005/01/31 14:50:14 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -226,6 +226,7 @@ SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-CornerXMMS
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
+SUBDIR+=	gaim
 SUBDIR+=	gaim-encryption
 SUBDIR+=	galib
 #SUBDIR+=	gcl		# see TODO
@@ -364,37 +365,10 @@ SUBDIR+=	kazehakase
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	koffice-i18n
-SUBDIR+=	koffice-i18n-af
-SUBDIR+=	koffice-i18n-bg
-SUBDIR+=	koffice-i18n-br
-SUBDIR+=	koffice-i18n-ca
-SUBDIR+=	koffice-i18n-cs
-SUBDIR+=	koffice-i18n-cy
-SUBDIR+=	koffice-i18n-da
-SUBDIR+=	koffice-i18n-de
-SUBDIR+=	koffice-i18n-el
-SUBDIR+=	koffice-i18n-en_GB
-SUBDIR+=	koffice-i18n-eo
-SUBDIR+=	koffice-i18n-es
-SUBDIR+=	koffice-i18n-et
-SUBDIR+=	koffice-i18n-fa
-SUBDIR+=	koffice-i18n-fi
-SUBDIR+=	koffice-i18n-fr
-SUBDIR+=	koffice-i18n-he
-SUBDIR+=	koffice-i18n-hsb
-SUBDIR+=	koffice-i18n-hu
-SUBDIR+=	koffice-i18n-it
-SUBDIR+=	koffice-i18n-nl
-SUBDIR+=	koffice-i18n-pl
-SUBDIR+=	koffice-i18n-ru
-SUBDIR+=	koffice-i18n-se
-SUBDIR+=	koffice-i18n-sk
-SUBDIR+=	koffice-i18n-sv
 SUBDIR+=	konversation
 SUBDIR+=	korelib
 SUBDIR+=	kpanta
 SUBDIR+=	ksambaplugin
-SUBDIR+=	kscope
 SUBDIR+=	kvirc
 SUBDIR+=	kxmleditor
 SUBDIR+=	kylix-openedition
@@ -653,6 +627,7 @@ SUBDIR+=	picprog
 SUBDIR+=	pinball
 SUBDIR+=	pizza
 SUBDIR+=	pkg_install-testing
+SUBDIR+=	planner
 SUBDIR+=	plugger
 SUBDIR+=	pngnq
 SUBDIR+=	pointless
@@ -845,6 +820,8 @@ SUBDIR+=	spamprobe-pbl
 SUBDIR+=	spe
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
+SUBDIR+=	squirrelmail-avelsieve
+SUBDIR+=	squirrelmail-chg_sasl_passwd
 SUBDIR+=	srvx
 SUBDIR+=	stmpclean
 SUBDIR+=	stonx
