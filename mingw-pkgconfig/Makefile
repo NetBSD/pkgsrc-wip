@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/01 23:44:28 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/15 15:58:24 mpasternak Exp $
 #
 
 DISTNAME=	pkgconfig-0.15.0
@@ -19,11 +19,11 @@ NO_MTREE=		yes
 # I can't get the settings to work exactly like I want, so:
 
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./configure --disable-threads --prefix=${CROSSBASE}/${MINGWTARGET} 
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./configure --disable-threads --prefix=${CROSSBASE}/${MINGW_TARGET}
 
 post-install:
-	${INSTALL_DATA_DIR} ${CROSSBASE}/${MINGWTARGET}/lib/pkgconfig
-	${LN} -s ${CROSSBASE}/${MINGWTARGET}/bin/pkg-config ${CROSSBASE}/bin/${MINGWTARGET}-pkg-config
+	${INSTALL_DATA_DIR} ${CROSSBASE}/${MINGW_TARGET}/lib/pkgconfig
+	${LN} -s ${CROSSBASE}/${MINGW_TARGET}/bin/pkg-config ${CROSSBASE}/bin/${MINGW_TARGET}-pkg-config
 
 .include "../../wip/mingw/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
