@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.281 2003/06/29 11:53:17 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.281 2003/06/29 11:53:17 thomasklausner Exp $
+# $Id: Makefile,v 1.282 2003/06/29 20:24:12 marc Exp $
+# $NetBSD: Makefile,v 1.282 2003/06/29 20:24:12 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -24,6 +24,7 @@ SUBDIR+=	bc
 SUBDIR+=	billardgl
 SUBDIR+=	bin86
 SUBDIR+=	bitlbee
+SUBDIR+=	bub-n-bros
 SUBDIR+=	bugzilla
 SUBDIR+=	byacc
 SUBDIR+=	cdpr
