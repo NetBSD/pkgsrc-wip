@@ -1,39 +1,44 @@
-# $NetBSD: Makefile.common,v 1.14 2004/05/22 15:17:21 poppnk Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/07/16 14:24:00 ppostma Exp $
 #
 
 DISTNAME?=		php-${PHP5_VERSION}
-MASTER_SITES=	http://www.php.net/distributions/
-EXTRACT_SUFX=	.tar.bz2
+CATEGORIES+=		www
+MASTER_SITES?=		http://www.php.net/distributions/ \
+			http://php3.de/distributions/ \
+			ftp://ftp.php.net/pub/distributions/
+EXTRACT_SUFX?=		.tar.bz2
 
-USE_BUILDLINK3=	YES
-GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+MAINTAINER?=		tech-pkg@NetBSD.org
+HOMEPAGE?=		http://www.php.net/
 
-PHP5_VERSION=	5.0.0RC2
+PHP5_VERSION=		5.0.0
 CONFLICTS+=		php-[34]*
 
-EGDIR=		${PREFIX}/
-CONF_FILES=	${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
-BUILD_DEFS=	USE_INET6 PHP5_WITHOUT_NETWORK
+EGDIR=			${PREFIX}/
+CONF_FILES=		${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
+BUILD_DEFS=		USE_INET6 PHP5_WITHOUT_NETWORK
+
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=--with-config-file-path=${PREFIX}/etc/
-CONFIGURE_ARGS+=--enable-mbstring
-CONFIGURE_ARGS+=--enable-calendar
+CONFIGURE_ARGS+=	--with-config-file-path=${PREFIX}/etc/
+CONFIGURE_ARGS+=	--enable-mbstring
+CONFIGURE_ARGS+=	--enable-calendar
 
 .if !defined(PHP5_WITHOUT_NETWORK) || ${PHP5_WITHOUT_NETWORK} == "NO"
-CONFIGURE_ARGS+=--enable-sockets
-CONFIGURE_ARGS+=--enable-ftp
+CONFIGURE_ARGS+=	--enable-sockets
+CONFIGURE_ARGS+=	--enable-ftp
 .endif
 
 .if defined(USE_INET6) && ${USE_INET6} == "NO"
-CONFIGURE_ARGS+=--disable-ipv6
+CONFIGURE_ARGS+=	--disable-ipv6
 .else
-CONFIGURE_ARGS+=--enable-ipv6
+CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
-CONFIGURE_ARGS+=--enable-xml
-CONFIGURE_ARGS+=--with-libxml-dir=${PREFIX}
+CONFIGURE_ARGS+=	--enable-xml
+CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 
 .include "../../textproc/libxml2/buildlink3.mk"

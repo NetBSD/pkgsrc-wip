@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/07/02 19:50:53 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/07/16 14:24:00 ppostma Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PHP_BUILDLINK3_MK:=	${PHP_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nphp}
 BUILDLINK_PACKAGES+=	php
 
 .if !empty(PHP_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.php+=	php>=5.0.0RC2
+BUILDLINK_DEPENDS.php+=	php>=5.0.0
 BUILDLINK_PKGSRCDIR.php?=	../../wip/php5
 .endif	# PHP_BUILDLINK3_MK
 

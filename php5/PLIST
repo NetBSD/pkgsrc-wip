@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2004/05/10 22:17:24 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/07/16 14:24:00 ppostma Exp $
 bin/pear
 bin/php
 bin/php-config
 bin/phpextdist
 bin/phpize
 etc/pear.conf
-etc/php.ini
 include/php/TSRM/TSRM.h
 include/php/TSRM/acconfig.h
 include/php/TSRM/readdir.h
