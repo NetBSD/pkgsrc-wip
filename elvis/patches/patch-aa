@@ -1,0 +1,47 @@
+--- instman.sh.orig	2003-06-10 12:34:23.000000000 +0200
++++ instman.sh	2003-06-10 12:33:31.000000000 +0200
+@@ -185,43 +185,7 @@
+ # then give these new pages the same treatment.
+ case $job in
+   install)
+-	for dir in $mandir $catdir
+-	do
+-		if test "`echo $dir/*.Z`" != "$dir/*.Z"
+-		then
+-			for i
+-			do
+-				rm -f $dir/$i$ext.Z
+-				compress $dir/$i$ext
+-			done
+-			finalext=$ext.Z
+-		elif test "`echo $dir.Z/*`" != "$dir.Z/*"
+-		then
+-			for i
+-			do
+-				compress <$dir/$i$ext >$dir.Z/$i$ext && rm -f $dir/$i$ext
+-			done
+-			finalext=$ext
+-		elif test "`echo $dir/*.z`" != "$dir/*.z"
+-		then
+-			for i
+-			do
+-				rm -f $dir/$i$ext.z
+-				pack $dir/$i$ext
+-			done
+-			finalext=$ext.z
+-		elif test "`echo $dir/*.gz`" != "$dir/*.gz"
+-		then
+-			for i
+-			do
+-				rm -f $dir/$i$ext.z
+-				gzip -f $dir/$i$ext
+-			done
+-			finalext=$ext.gz
+-		else
+-			finalext=$ext
+-		fi
+-	done
++	finalext=$ext
+ 	;;
+ esac
+ 
