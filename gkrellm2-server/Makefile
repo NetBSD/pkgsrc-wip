@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 17:33:11 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/15 05:05:17 cubidou Exp $
 .include "../../wip/gkrellm2/Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm-server
@@ -13,10 +13,7 @@ CONF_FILES=		${PREFIX}/share/examples/gkrellm-server/gkrellmd.conf ${PREFIX}/etc
 
 SPECIAL_PERMS+=         ${PREFIX}/bin/gkrellmd ${ROOT_USER} kmem 2711
 
-ALL_TARGET=		netbsd
-INSTALL_TARGET=		install_netbsd
-
-WRKSRC=			${GKRELLM_SRCDIR}
+MAKE_ENV+=		MODULES=server
 
 pre-build:
 	${SED} -e s,@@PREFIX@@,${PREFIX}, \
