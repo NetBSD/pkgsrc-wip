@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1140 2004/03/29 18:51:03 tvierling Exp $
-# $NetBSD: Makefile,v 1.1140 2004/03/29 18:51:03 tvierling Exp $
+# $Id: Makefile,v 1.1141 2004/03/29 19:26:02 tvierling Exp $
+# $NetBSD: Makefile,v 1.1141 2004/03/29 19:26:02 tvierling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -482,7 +482,6 @@ SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-mysql
 SUBDIR+=	pam-pop3
 SUBDIR+=	pango-devel
-SUBDIR+=	par2
 SUBDIR+=	parsifal
 SUBDIR+=	passepartout
 SUBDIR+=	patchutils
