@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/16 22:30:19 xtraeme Exp $
+share/mupen64/plugins/mupen64_audio.so

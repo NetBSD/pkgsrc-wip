@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/16 22:30:19 xtraeme Exp $
+
+--- main.c.orig	2004-04-16 23:54:07.000000000 +0200
++++ main.c	2004-04-16 23:59:15.000000000 +0200
+@@ -6,7 +6,13 @@
+ #include <stdlib.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
++#if defined(__NetBSD__)
++#include <soundcard.h>
++#elif defined(__Linux__)
+ #include <linux/soundcard.h>
++#else
++#include <sys/soundcard.h>
++#endif
+ #include <unistd.h>
+ #include <pthread.h>
+ 
+@@ -141,7 +147,7 @@
+    int channel=1, format, f;
+    dsp = open("/dev/dsp", O_WRONLY);
+    if (dsp == -1) printf("error opening /dev/dsp\n");
+-   if (ioctl(dsp, SNDCTL_DSP_RESET) == -1)
++   if (ioctl(dsp, SNDCTL_DSP_RESET, NULL) == -1)
+      printf("error resetting sound card\n");
+    f = 0x30018;
+    if (ioctl(dsp, SNDCTL_DSP_SETFRAGMENT, &f) == -1)
+@@ -162,7 +168,7 @@
+ EXPORT void CALL
+ RomClosed( void )
+ {
+-   ioctl(dsp, SNDCTL_DSP_SYNC);
++   ioctl(dsp, SNDCTL_DSP_SYNC, NULL);
+    close(dsp);
+ }
+ 

@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/16 22:30:19 xtraeme Exp $
+
+--- Makefile.orig	2004-04-16 23:52:03.000000000 +0200
++++ Makefile	2004-04-16 23:53:56.000000000 +0200
+@@ -1,14 +1,14 @@
+-CC = gcc
+-CFLAGS = -O3 -fomit-frame-pointer -funroll-loops -ffast-math -mcpu=athlon -march=athlon `gtk-config --cflags` -DUSE_GTK -Wall
+-LD = gcc
+-LDFLAGS = -shared -Wl,-Bsymbolic `gtk-config --libs` -lpthread
++#CC = gcc
++CFLAGS += -funroll-loops -ffast-math `gtk-config --cflags` -DUSE_GTK -Wall
++#LD = gcc
++LDFLAGS += -shared -Wl,-Bsymbolic `gtk-config --libs`
+ 
+ OBJECTS	=	main.o
+ 
+-all: mupen64_audio.so instructions
++all: mupen64_audio.so
+ 
+ mupen64_audio.so: $(OBJECTS)
+-	$(LD) $(LDFLAGS) -o $@ $(OBJECTS)
++	$(CC) $(LDFLAGS) -o $@ $(OBJECTS)
+ 	strip --strip-all $@
+ 
+ instructions:
+@@ -18,6 +18,9 @@
+ .o: .c
+ 	$(CC) $(CFLAGS) -c -o $@ $<
+ 
++install:
++	$(BSD_INSTALL_DATA) mupen64_audio.so $(PREFIX)/share/mupen64/plugins
++
+ clean:
+ 	rm -rf mupen64_audio.so $(OBJECTS)
+ 
