@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/05/18 04:44:34 marmfield Exp $
+
+--- mkntpwd/Makefile.orig	2001-12-14 23:22:26.000000000 +1100
++++ mkntpwd/Makefile
+@@ -47,7 +47,7 @@ XLIBS=
+ #OPTIMIZE=
+ #XLIBS=
+ 
+-CFLAGS= $(DEBUG) $(OPTIMIZE) $(ARCH) $(VISUAL) $(PERMUTE) $(STATIC) 
++CFLAGS= $(DEBUG) $(OPTIMIZE) $(ARCH) $(PERMUTE) $(STATIC) 
+ 
+ OBJS = getopt.o        md4.o           mkntpwd.o       smbdes.o
+ 

@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/05/18 04:44:34 marmfield Exp $
+
+--- smbldap-populate.orig	2004-02-10 06:05:33.000000000 +1100
++++ smbldap-populate
+@@ -153,7 +153,7 @@ sambaLMPassword: XXX
+ sambaNTPassword: XXX
+ sambaAcctFlags: [U          ]
+ sambaSID: $config{SID}-2996
+-loginShell: /bin/false
++loginShell: /sbin/nologin
+ gecos: Netbios Domain Administrator
+ 
+ dn: uid=$guestName,$config{usersdn}
+@@ -185,7 +185,7 @@ sambaLMPassword: NO PASSWORDXXXXXXXXXXXX
+ sambaNTPassword: NO PASSWORDXXXXXXXXXXXXXXXXXXXXX
+ sambaAcctFlags: [NU         ]
+ sambaSID: $config{SID}-2998
+-loginShell: /bin/false
++loginShell: /sbin/nologin
+ 
+ dn: cn=Domain Admins,$config{groupsdn}
+ objectClass: posixGroup

@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/05/18 04:44:34 marmfield Exp $
+
+--- smbldap_tools.pm.orig	2004-02-10 06:05:33.000000000 +1100
++++ smbldap_tools.pm
+@@ -95,7 +95,7 @@ sub read_parameter
+ sub read_conf
+ {
+ my %conf;
+-my $smbldap_conf="/etc/smbldap-tools/smbldap.conf";
++my $smbldap_conf="@PREFIX@/etc/smbldap-tools/smbldap.conf";
+ open (CONFIGFILE, "$smbldap_conf") || die "Unable to open $smbldap_conf for reading !\n";
+ while (<CONFIGFILE>) {
+         chomp($_);
+@@ -108,7 +108,7 @@ while (<CONFIGFILE>) {
+ close (CONFIGFILE);
+ 
+ if ($< == 0) {
+-        $smbldap_conf="/etc/smbldap-tools/smbldap_bind.conf";
++        $smbldap_conf="@PREFIX@/etc/smbldap-tools/smbldap_bind.conf";
+         open (CONFIGFILE, "$smbldap_conf") || die "Unable to open $smbldap_conf for reading !\n";
+         while (<CONFIGFILE>) {
+                 chomp($_);
+@@ -357,8 +357,8 @@ sub add_posix_machine
+ 										   'uid'   => "$user",
+ 										   'uidNumber'   => "$uid",
+ 										   'gidNumber'   => "$gid",
+-										   'homeDirectory'   => '/dev/null',
+-										   'loginShell'   => '/bin/false',
++										   'homeDirectory'   => '/nonexistant',
++										   'loginShell'   => 'sbin/nologin',
+ 										   'description'   => 'Computer',
+ 										  ]
+ 								);

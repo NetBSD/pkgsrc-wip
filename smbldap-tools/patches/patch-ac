@@ -1,0 +1,41 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/05/18 04:44:34 marmfield Exp $
+
+--- smbldap.conf.orig	2004-02-10 06:05:33.000000000 +1100
++++ smbldap.conf
+@@ -74,15 +74,15 @@ verify="require"
+ 
+ # CA certificate
+ # see "man Net::LDAP" in start_tls section for more details
+-cafile="/etc/smbldap-tools/ca.pem"
++cafile="/etc/openssl/cacert.pem"
+ 
+ # certificate to use to connect to the ldap server
+ # see "man Net::LDAP" in start_tls section for more details
+-clientcert="/etc/smbldap-tools/smbldap-tools.pem"
++clientcert="@PREFIX@/etc/smbldap-tools/smbldap-tools.pem"
+ 
+ # key certificate to use to connect to the ldap server
+ # see "man Net::LDAP" in start_tls section for more details
+-clientkey="/etc/smbldap-tools/smbldap-tools.key"
++clientkey="@PREFIX@/etc/smbldap-tools/smbldap-tools.key"
+ 
+ # LDAP Suffix
+ # Ex: suffix=dc=IDEALX,dc=ORG
+@@ -115,7 +115,7 @@ hash_encrypt="SSHA"
+ # Login defs
+ # Default Login Shell
+ # Ex: userLoginShell="/bin/bash"
+-userLoginShell="/bin/bash"
++userLoginShell="/bin/csh"
+ 
+ # Home directory prefix (without username)
+ # Ex: userHomePrefix="/home/"
+@@ -178,6 +178,6 @@ userScript="" 
+ # Allows not to use smbpasswd (if with_smbpasswd == 0 in smbldap_conf.pm) but
+ # prefer mkntpwd... most of the time, it's a wise choice :-) 
+ with_smbpasswd="0"
+-smbpasswd="/usr/bin/smbpasswd"
+-mk_ntpasswd="/usr/local/sbin/mkntpwd"
++smbpasswd="@PREFIX@/bin/smbpasswd"
++mk_ntpasswd="@PREFIX@/sbin/mkntpwd"
+ 

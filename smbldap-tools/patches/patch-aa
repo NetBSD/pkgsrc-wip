@@ -1,0 +1,61 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/05/18 04:44:34 marmfield Exp $
+
+--- configure.pl.orig	2004-02-10 06:05:33.000000000 +1100
++++ configure.pl
+@@ -48,10 +48,8 @@ Before starting, check
+ print "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n";
+ print "Looking for configuration files...\n\n";
+ my $smb_conf;
+-if (-e "/etc/samba/smb.conf") {
+-	$smb_conf="/etc/samba/smb.conf";
+-} elsif (-e "/usr/local/samba/lib/smb.conf") {
+-	$smb_conf="/usr/local/samba/lib/smb.conf";
++if (-e "@PREFIX@/etc/samba/smb.conf") {
++	$smb_conf="@PREFIX@/etc/samba/smb.conf";
+ }
+ print "Samba Config File Location [$smb_conf] > ";
+ chomp(my $config_smb=<STDIN>);
+@@ -59,8 +57,8 @@ if ($config_smb ne "") {
+ 	$smb_conf=$config_smb;
+ }
+ my $smbldap_conf;
+-if (-e "/etc/smbldap-tools/smbldap.conf") {
+-	$smbldap_conf="/etc/smbldap-tools/smbldap.conf";
++if (-e "@PREFIX@/etc/smbldap-tools/smbldap.conf") {
++	$smbldap_conf="@PREFIX@/etc/smbldap-tools/smbldap.conf";
+ }
+ print "smbldap Config file Location (global parameters) [$smbldap_conf] > ";
+ chomp(my $config_smbldap=<STDIN>);
+@@ -69,8 +67,8 @@ if ($config_smbldap ne "") {
+ }
+ 
+ my $smbldap_bind_conf;
+-if (-e "/etc/smbldap-tools/smbldap_bind.conf") {
+-	$smbldap_bind_conf="/etc/smbldap-tools/smbldap_bind.conf";
++if (-e "@PREFIX@/etc/smbldap-tools/smbldap_bind.conf") {
++	$smbldap_bind_conf="@PREFIX@/etc/smbldap-tools/smbldap_bind.conf";
+ }
+ print "smbldap Config file Location (bind parameters) [$smbldap_bind_conf] > ";
+ chomp(my $config_smbldap_bind=<STDIN>);
+@@ -245,9 +243,9 @@ my $ldaptls=read_entry(". ldap tls suppo
+ my ($cert_verify,$cert_cafile,$cert_clientcert,$cert_clientkey);
+ if ($ldaptls == 1) {
+ 	$cert_verify=read_entry(". How to verify the server's certificate (none, optional or require)","require",0);
+-	$cert_cafile=read_entry(". CA certificate file","/etc/smbldap-tools/ca.pem",0);
+-	$cert_clientcert=read_entry(". certificate to use to connect to the ldap server","/etc/smbldap-tools/smbldap-tools.pem",0);
+-	$cert_clientkey=read_entry(". key certificate to use to connect to the ldap server","/etc/smbldap-tools/smbldap-tools.key",0);
++	$cert_cafile=read_entry(". CA certificate file","/etc/openssl/cacert.pem",0);
++	$cert_clientcert=read_entry(". certificate to use to connect to the ldap server","@PREFIX@/etc/smbldap-tools/smbldap-tools.pem",0);
++	$cert_clientkey=read_entry(". key certificate to use to connect to the ldap server","@PREFIX@/etc/smbldap-tools/smbldap-tools.key",0);
+ }
+ 
+ # let's test if any sid is available
+@@ -267,7 +265,7 @@ my $userHomePrefix=read_entry(". home di
+ print ". default password validation: default time before a user has to change his password\n";
+ my $defaultMaxPasswordAge=read_entry("  default password validation time (time in days)","45",0);
+ 
+-my $userLoginShell=read_entry(". default login shell","/bin/bash",0);
++my $userLoginShell=read_entry(". default login shell","/bin/csh",0);
+ 
+ 
+ ### Let's now incorporate our modifications
