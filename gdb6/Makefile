@@ -1,52 +1,42 @@
-# $NetBSD: Makefile,v 1.4 2004/05/10 22:11:45 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/13 09:53:34 johnrshannon Exp $
 #
 
-DISTNAME=		gdb-${GDB_VERSION}
-CATEGORIES=		wip
+DISTNAME=		gdb-6.1
+CATEGORIES=		devel
 MASTER_SITES=		ftp://sources.redhat.com/pub/gdb/releases/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		john@johnrshannon.com
-HOMEPAGE=		ftp://sources.redhat.com/pub/gdb/releases/
+HOMEPAGE=		http://www.gnu.org/software/gdb/gdb.html
 COMMENT=		The GNU Project Debugger
 
-# OPTIONS
-USE_GCC_3.4=		# defined
+BUILD_USES_MSGFMT=	yes
+
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS=		make
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
+
+USE_MAKEINFO=		yes
+INFO_FILES=		annotate.info bfd.info configure.info
+INFO_FILES+=		gdb.info gdbint.info mmalloc.info
+INFO_FILES+=		stabs.info standards.info
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=         make
-USE_MAKEINFO=		YES
-USE_NEW_TEXINFO=	YES
-
-GDB_VERSION=	6.1
-GDB_PREFIX=	${PREFIX}/${PKGNAME_NOREV}
-INFO_DIR=	${GDB_PREFIX}/info
-LIB_DIR=	${GDB_PREFIX}/lib
-CONFIGURE_ARGS+=	--prefix=${GDB_PREFIX}
-CONFIGURE_ARGS+=	--exec-prefix=${GDB_PREFIX}
-CONFIGURE_ARGS+=	--infodir=${INFO_DIR}
-CONFIGURE_ARGS+=	--libdir=${LIB_DIR}
-CONFIGURE_ARGS+=	--includedir=${GDB_PREFIX}/include
-CONFIGURE_ARGS+=	--mandir=${GDB_PREFIX}/man
-CONFIGURE_ARGS+=	--datadir=${GDB_PREFIX}/share
-CONFIGURE_ARGS+=	--disable-nls
-CONFIGURE_ARGS+=	--without-included-gettext
+BUILD_DEFS=	USE_GCC_34
+USE_GCC_34?=	NO
 
 pre-patch:
-	${CP} files/nbsd-nat.c ${WRKSRC}/gdb
+	${CP} ${FILESDIR}/nbsd-nat.c ${WRKSRC}/gdb
 
-.if defined(USE_GCC_3.4)
+.if !empty(USE_GCC_34:M[Yy][Ee][Ss])
+.  include "../../wip/gcc-3.4/buildlink3.mk"
 pre-configure:
-.include "../../wip/gcc-3.4/preconfigure.mk"
+.  include "../../wip/gcc-3.4/preconfigure.mk"
 .endif
 
-.if defined(USE_GCC_3.4)
-.include "../../wip/gcc-3.4/buildlink3.mk"
-.endif
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
