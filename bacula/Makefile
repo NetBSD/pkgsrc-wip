@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/11/24 20:34:49 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/26 12:35:21 xtraeme Exp $
 #
 
 DISTNAME=		bacula-1.34.6
@@ -15,8 +15,8 @@ USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR?=	bacula
-BACULA_PIDDIR?=		/var/run/bacula
-BACULA_WORKINGDIR?=	/var/spool/bacula
+BACULA_PIDDIR?=		${VARBASE}/run/bacula
+BACULA_WORKINGDIR?=	${VARBASE}/spool/bacula
 BACULA_GROUP?=		bacula
 BACULA_DIR_USER?=	bacula-dir
 BACULA_SD_USER?=	bacula-sd
@@ -36,8 +36,10 @@ CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/libexec/bacula
 CONFIGURE_ARGS+=	--with-working-dir=${BACULA_WORKINGDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${BACULA_PIDDIR}
 CONFIGURE_ARGS+=	--with-readline=${PREFIX}/include/readline
-CONFIGURE_ARGS+=	--with-dir-user=${BACULA_DIR_USER} --with-dir-group=${BACULA_GROUP}
-CONFIGURE_ARGS+=	--with-sd-user=${BACULA_SD_USER} --with-sd-group=${BACULA_GROUP}
+CONFIGURE_ARGS+=	--with-dir-user=${BACULA_DIR_USER}	\
+			--with-dir-group=${BACULA_GROUP}
+CONFIGURE_ARGS+=	--with-sd-user=${BACULA_SD_USER}	\
+			--with-sd-group=${BACULA_GROUP}
 .if ${BACULA_DB} == "sqlite"
 CONFIGURE_ARGS+=	--with-sqlite=${PREFIX}
 .endif
@@ -58,7 +60,8 @@ PKG_USERS+=	${BACULA_SD_USER}:${BACULA_GROUP}
 PLIST_SUBST+=	BACULA_DB=${BACULA_DB}
 
 EXAMPLESDIR=	${PREFIX}/share/examples/bacula
-CONF_FILES=	${EXAMPLESDIR}/bacula-dir.conf ${PKG_SYSCONFDIR}/bacula-dir.conf
+CONF_FILES=	${EXAMPLESDIR}/bacula-dir.conf	\
+		${PKG_SYSCONFDIR}/bacula-dir.conf
 CONF_FILES+=	${EXAMPLESDIR}/bacula-fd.conf ${PKG_SYSCONFDIR}/bacula-fd.conf
 CONF_FILES+=	${EXAMPLESDIR}/bacula-sd.conf ${PKG_SYSCONFDIR}/bacula-sd.conf
 CONF_FILES+=	${EXAMPLESDIR}/bconsole.conf ${PKG_SYSCONFDIR}/bconsole.conf
