@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.187 2003/05/23 12:32:18 marc Exp $
-# $NetBSD: Makefile,v 1.187 2003/05/23 12:32:18 marc Exp $
+# $Id: Makefile,v 1.188 2003/05/23 17:05:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.188 2003/05/23 17:05:22 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -93,6 +93,7 @@ SUBDIR+=	libshout
 SUBDIR+=	libspectrum
 SUBDIR+=	libvorbis-nightly
 SUBDIR+=	libwpd
+SUBDIR+=	linuxsms
 SUBDIR+=	linux-modutils
 SUBDIR+=	linux-nfs-utils
 SUBDIR+=	liquidwar
