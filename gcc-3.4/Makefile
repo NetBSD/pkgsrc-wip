@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/01 12:39:24 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.10 2004/05/01 13:52:48 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -12,56 +12,29 @@ COMMENT=	This is the gcc 3.4 compiler
 
 GCC_VERSION=	3.4.0
 
-.include "../../mk/bsd.prefs.mk"
+INSTLIBS=	libsupc++.la
+INSTLIBS=	libstdc++.la
+INSTLIBS=	libg2c.la
+INSTLIBS=	libobjc.la
+INSTLIBS=	libffi.la
+INSTLIBS=	libgcj.la
+INSTLIBS=	lib-org-xml-sax.la
+INSTLIBS=	lib-org-w3c-dom.la
 
-# Optional languages
-ADA=	YES
-CXX=	YES
-F77=	NO
-JAVA=	NO
-OBJC=	NO
-.if ${MACHINE_GNU_ARCH} == "x86_64"
-java=	NO
-.endif
-LANGS=	c
-.if ${ADA} == "YES"
-LANGS+= ada
-.endif
-.if ${CXX} == "YES"
-LANGS+= c++
-.endif
-.if ${F77} == "YES"
-LANGS+= f77
-.endif
-.if ${JAVA} == "YES"
-LANGS+= java
-.endif
-.if ${OBJC} == "YES"
-LANGS+= objc
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=  require native
-CONFIGURE_ARGS+=        --enable-languages="${LANGS}"
+CONFIGURE_ARGS+=        --enable-languages="c,ada,c++,f77,objc,java"
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
-# An Ada compiler is required to build the Ada compiler. Two
+# An Ada compiler is required to build this pkg. Two
 may be used:
 #USE_GCC3	=# Define to use lang/gcc3-ada
 USE_GCC34ADA	=# Define to use gcc-3.4-ada
-# You may also specify the path of a gcc/gnat Ada compiler
-# outside of the pkgsrc system by specifying the full path
-# of the compiler (example) below:
-#ALT_GCC=       /usr/pkg/gccAda-3.4.0/bin/gcc
-.if defined(ALT_GCC)
-ALT_GCC_PREFIX:=        ${ALT_GCC:H}/..
-ALT_GCC_RTS!=   ${FIND} ${ALT_GCC_PREFIX} -name adalib
-RALT_GCC_RTS=   ${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
-.endif
-
 
 GCC_SUBPREFIX=		${PKGNAME_NOREV}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
@@ -85,25 +58,10 @@ post-patch:
 		${CP} $$i ${WRKSRC}/gcc/ada; \
 	done )
 
-.if ${ADA} == "YES"
 .if defined(USE_GCC34ADA)
 # Overide compiler.mk setup to use gccAda-3.4.0
 pre-configure:
 .include "../../wip/gcc-3.4-ada/preconfigure.mk"
-.elif defined(ALT_GCC)
-pre-configure:
-	(cd ${WRKDIR}/.buildlink && ${MKDIR} ${RALT_GCC_RTS} && \
-	cd ${RALT_GCC_RTS} && ${LN} -s ${ALT_GCC_RTS}/libgnat.a .)
-	(cd ${ALT_GCC:H} && \
-	bin_files=`ls *` && \
-	cd ${WRKDIR}/.gcc/bin/ && \
-	for file in $${bin_files} ; do \
-	  $(ECHO) '#!/bin/sh' > $${file}; \
-	  $(ECHO) -n "exec ${ALT_GCC:H}/$${file} " >>$${file}; \
-	  $(ECHO) '"$$@"' >>$${file}; \
-	  $(CHMOD) +x $${file}; \
-	done )
-.endif
 .endif
 
 do-configure:
@@ -111,10 +69,7 @@ do-configure:
 	 (cd ${WRKDIR}/obj && ${SETENV} ${CONFIGURE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS}))
 
 do-build:
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap )
-.if ${ADA} == "YES"
-	(cd ${WRKDIR}/obj/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib_and_tools )
-.endif
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
 
 do-test:
 .if (${MACHINE_GNU_ARCH} == "x86_64")

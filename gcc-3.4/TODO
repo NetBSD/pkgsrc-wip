@@ -4,4 +4,3 @@
   of this fix, a buildlink3.mk file was provided for lang/gcc3-ada 
   It will build from wip/gcc-3.4-ada
 
-- I broke this while making languages optional
