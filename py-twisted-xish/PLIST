@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/29 04:58:05 sifu Exp $
+${PYSITELIB}/twisted/xish/__init__.py
+${PYSITELIB}/twisted/xish/__init__.pyc
+${PYSITELIB}/twisted/xish/__init__.pyo
+${PYSITELIB}/twisted/xish/domish.py
+${PYSITELIB}/twisted/xish/domish.pyc
+${PYSITELIB}/twisted/xish/domish.pyo
+${PYSITELIB}/twisted/xish/test/__init__.py
+${PYSITELIB}/twisted/xish/test/__init__.pyc
+${PYSITELIB}/twisted/xish/test/__init__.pyo
+${PYSITELIB}/twisted/xish/test/test_domish.py
+${PYSITELIB}/twisted/xish/test/test_domish.pyc
+${PYSITELIB}/twisted/xish/test/test_domish.pyo
+${PYSITELIB}/twisted/xish/test/test_xishutil.py
+${PYSITELIB}/twisted/xish/test/test_xishutil.pyc
+${PYSITELIB}/twisted/xish/test/test_xishutil.pyo
+${PYSITELIB}/twisted/xish/test/test_xmlstream.py
+${PYSITELIB}/twisted/xish/test/test_xmlstream.pyc
+${PYSITELIB}/twisted/xish/test/test_xmlstream.pyo
+${PYSITELIB}/twisted/xish/test/test_xpath.py
+${PYSITELIB}/twisted/xish/test/test_xpath.pyc
+${PYSITELIB}/twisted/xish/test/test_xpath.pyo
+${PYSITELIB}/twisted/xish/utility.py
+${PYSITELIB}/twisted/xish/utility.pyc
+${PYSITELIB}/twisted/xish/utility.pyo
+${PYSITELIB}/twisted/xish/xmlstream.py
+${PYSITELIB}/twisted/xish/xmlstream.pyc
+${PYSITELIB}/twisted/xish/xmlstream.pyo
+${PYSITELIB}/twisted/xish/xpath.py
+${PYSITELIB}/twisted/xish/xpath.pyc
+${PYSITELIB}/twisted/xish/xpath.pyo
+${PYSITELIB}/twisted/xish/xpathparser.py
+${PYSITELIB}/twisted/xish/xpathparser.pyc
+${PYSITELIB}/twisted/xish/xpathparser.pyo
+${PYSITELIB}/twisted/xish/xpathparser.g
+@dirrm ${PYSITELIB}/twisted/xish/test
+@dirrm ${PYSITELIB}/twisted/xish
