@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/02/14 11:41:49 socrtp Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/22 14:02:07 socrtp Exp $
 
-DISTNAME=		lighttpd-1.3.10
-PKGNAME=		lighttpd-1.3.10
+DISTNAME=		lighttpd-1.3.11
+# PKGNAME=		lighttpd-1.3.10
 CATEGORIES=		www
 MASTER_SITES=		http://lighttpd.net/download/
 

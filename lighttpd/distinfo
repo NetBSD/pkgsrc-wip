@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/14 11:41:49 socrtp Exp $
+$NetBSD: distinfo,v 1.3 2005/02/22 14:02:07 socrtp Exp $
 
-SHA1 (lighttpd-1.3.10.tar.gz) = 60cae8f8d414503b1f60ccc6e363745c35edda19
-Size (lighttpd-1.3.10.tar.gz) = 667324 bytes
-SHA1 (patch-aa) = b45c852b389a042d78269ae4c6493faedce2a537
+SHA1 (lighttpd-1.3.11.tar.gz) = a413e7a170128691cc57e03393db0c97a088aaaa
+Size (lighttpd-1.3.11.tar.gz) = 670438 bytes
+SHA1 (patch-aa) = a4bc411cf740f8821559097f6e90c3d6f5bf6c42

@@ -1,21 +1,21 @@
-$NetBSD: patch-aa,v 1.1 2005/02/04 06:41:32 socrtp Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/22 14:02:08 socrtp Exp $
 
---- doc/lighttpd.conf.orig	2005-01-05 20:42:46.000000000 +0100
-+++ doc/lighttpd.conf	2005-02-04 07:12:26.000000000 +0100
-@@ -127,8 +127,10 @@
+--- doc/lighttpd.conf.orig	2005-02-20 15:25:02.000000000 +0100
++++ doc/lighttpd.conf	2005-02-22 14:43:55.000000000 +0100
+@@ -127,7 +127,10 @@
  #server.error-handler-404   = "/error-handler.php"
  
  ## to help the rc.scripts
--# server.pid-file              = "/var/run/lighttpd.pid"
-+server.pid-file              = "/var/run/lighttpd.pid"
- 
+-#server.pid-file            = "/var/run/lighttpd.pid"
++server.pid-file            = "/var/run/lighttpd.pid"
++
 +# uncomment this for NetBSD 2.0, see doc/performance.txt
 +#server.event-handler        = "freebsd-kqueue"
  
+ 
  ###### virtual hosts
- ##
-@@ -161,10 +163,10 @@
- #server.chroot            = "/"
+@@ -165,10 +168,10 @@
+ #server.chroot              = "/"
  
  ## change uid to <uid> (default: don't care)
 -#server.username            = "wwwrun"
@@ -26,4 +26,4 @@ $NetBSD: patch-aa,v 1.1 2005/02/04 06:41:32 socrtp Exp $
 +server.groupname           = "@@LIGHTTPD_GROUP@@"
  
  #### compress module
- #compress.cache-dir          = "/tmp/lighttpd/cache/compress/"
+ #compress.cache-dir         = "/tmp/lighttpd/cache/compress/"
