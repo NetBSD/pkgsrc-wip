@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/03/23 01:46:18 rockpiper Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/03 20:25:07 poppnk Exp $
 #
 
 DISTNAME=		elmo-1.1.0
-CATEGORIES=		mail
+CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=elmo/}
 
 MAINTAINER=		pkg@burningsoda.com
@@ -13,7 +13,5 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-.include "../../mk/curses.buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../security/gpgme/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
