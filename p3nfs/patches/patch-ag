@@ -1,0 +1,40 @@
+$NetBSD: patch-ag,v 1.1 2005/01/02 21:29:03 mreriksson Exp $
+
+--- nfsd/nfs_prot_svc.c.orig	2001-01-03 13:52:27.000000000 +0100
++++ nfsd/nfs_prot_svc.c
+@@ -7,7 +7,7 @@
+ #include "OSdefs.h"
+ 
+ #define PORTMAP
+-#ifdef __SVR4
++#if defined(__SVR4) || defined(__NetBSD__)
+ #include <unistd.h>
+ #include <stdlib.h>
+ #endif
+@@ -15,7 +15,7 @@
+ #include <rpc/rpc.h>
+ #include "nfs_prot.h"
+ #include "mp.h"
+-#ifdef __GLIBC__
++#if defined(__GLIBC__) || defined(__NetBSD__)
+ #include <string.h>
+ #endif
+ 
+@@ -196,7 +196,7 @@ nfs_program_2(rqstp, transp)
+ 	}
+ 	memset((char *)&argument, 0, sizeof(argument));
+ #if !defined(__SVR4) && !defined(__FreeBSD__)
+-#ifdef __GLIBC__
++#if defined(__GLIBC__) || defined(__NetBSD__)
+ 	if (!svc_getargs(transp, (xdrproc_t)xdr_argument, (caddr_t)&argument)) {
+ #else
+ 	if (!svc_getargs(transp, xdr_argument, &argument)) {
+@@ -216,7 +216,7 @@ nfs_program_2(rqstp, transp)
+ 		svcerr_systemerr(transp);
+ 	}
+ #if !defined(__SVR4) && !defined(__FreeBSD__)
+-#ifdef __GLIBC__
++#if defined(__GLIBC__) || defined(__NetBSD__)
+ 	if (!svc_freeargs(transp, (xdrproc_t)xdr_argument,(caddr_t)&argument)) {
+ #else
+ 	if (!svc_freeargs(transp, xdr_argument, &argument)) {

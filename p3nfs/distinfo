@@ -1,4 +1,14 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/10/22 14:42:56 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/01/02 21:29:02 mreriksson Exp $
 
 SHA1 (p3nfs-5.16.tar.gz) = d171039879a8854514d7e7d43786d1c6eee6ef9c
 Size (p3nfs-5.16.tar.gz) = 246547 bytes
+SHA1 (patch-aa) = 753e8fadef386566b111c96df0169e98494302c9
+SHA1 (patch-ab) = 30513b2994fb5cf5ffd7380d36eec93c49d19d9f
+SHA1 (patch-ac) = 3e09da1ca4b642e07986fdd10caca50de1c32a13
+SHA1 (patch-ad) = 451ac5918bdae2517592837bb8783f119934aeed
+SHA1 (patch-ae) = dee5a2ba144cc64de83af183e44c0bbc39c9d7a5
+SHA1 (patch-af) = 0e59525f7a8fe279139f3a987d83dca65f96c3ff
+SHA1 (patch-ag) = 9dca9562c3dbd253eb1ac2ddbc6db4d2a3596072
+SHA1 (patch-ah) = 8893fccda37376696ff9752e93e535568c18dd72
+SHA1 (patch-ai) = a3fde2ecdd9eef40e24b19588dfa64a9ddaf74fd
+SHA1 (patch-aj) = 0fb9befe80c2e4a490a5608eaab88e715097fa7e

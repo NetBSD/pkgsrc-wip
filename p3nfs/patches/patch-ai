@@ -1,0 +1,10 @@
+$NetBSD: patch-ai,v 1.1 2005/01/02 21:29:03 mreriksson Exp $
+
+--- nfsd/tcp.c.orig	2003-04-06 14:23:54.000000000 +0200
++++ nfsd/tcp.c
+@@ -1,4 +1,4 @@
+-#ifdef linux
++#if defined(linux) || defined(__NetBSD__)
+ # include <unistd.h>		/* read() write() gethostname() */
+ # include <arpa/inet.h>		/* inet_addr() */
+ # include <string.h>		/* bcopy() */
