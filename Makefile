@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.587 2003/11/01 13:05:33 jmmv Exp $
-# $NetBSD: Makefile,v 1.587 2003/11/01 13:05:33 jmmv Exp $
+# $Id: Makefile,v 1.588 2003/11/02 12:09:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.588 2003/11/02 12:09:38 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -66,6 +66,7 @@ SUBDIR+=	byacc
 SUBDIR+=	c-news
 SUBDIR+=	cawf
 SUBDIR+=	ccrypt
+SUBDIR+=	ccze
 SUBDIR+=	cdl3
 SUBDIR+=	cdpr
 SUBDIR+=	cgdb
@@ -79,13 +80,13 @@ SUBDIR+=	cjk-latex-japanese
 SUBDIR+=	cjk-latex-korean
 SUBDIR+=	cops
 SUBDIR+=	cvsd
-SUBDIR+=	ccze
 SUBDIR+=	cyrus-imapd22
 SUBDIR+=	dancer-ircd
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darkice
 SUBDIR+=	dasm
 SUBDIR+=	dbf
+SUBDIR+=	dccserver
 SUBDIR+=	devIL
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
@@ -153,11 +154,11 @@ SUBDIR+=	glkterm
 SUBDIR+=	glulxe
 SUBDIR+=	gnats4
 SUBDIR+=	gnetcat
+SUBDIR+=	gnome-speech
 SUBDIR+=	gnome2-extras
 SUBDIR+=	gnome2-pkgview
 SUBDIR+=	gnome2-system-monitor
 SUBDIR+=	gnome2-themes-extra
-SUBDIR+=	gnome-speech
 SUBDIR+=	gnomeicu
 SUBDIR+=	gnucash-docs
 SUBDIR+=	gnumeric
