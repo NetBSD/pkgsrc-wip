@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/27 23:41:18 poppnk Exp $
-bin/airsnort
-bin/decrypt
-bin/gencases
-bin/orinoco_hopper
-man/man1/airsnort.1
-man/man1/decrypt.1
-man/man1/gencases.1
+@comment $NetBSD: PLIST,v 1.2 2004/11/27 23:44:02 poppnk Exp $
+bin/lcrack
+bin/mktbl
+bin/mkword
+bin/regex

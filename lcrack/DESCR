@@ -1,4 +1,8 @@
-AirSnort is a wireless LAN (WLAN) tool which cracks encryption keys on
-802.11b WEP networks. AirSnort operates by passively monitoring
-transmissions, computing the encryption key when enough packets have
-been gathered.
+Lepton's Crack is a generic password cracker. It is easily-customizable with
+a simple plugin system and allows system administrators to review the quality
+of the passwords being used on their systems. It can perform a dictionary-based
+(wordlist) attack as well as a brute force (incremental) password scan,
+including the use of regular expressions. It supports standard MD4 hash,
+standard MD5 hash, NT MD4/Unicode, Lotus Domino HTTP password (R4), and SHA-1
+hash formats. LM (LAN Manager) plus appending and prepending of characters is
+available in the Development branch (strongly recommended).

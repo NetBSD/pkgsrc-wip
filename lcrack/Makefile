@@ -1,20 +1,24 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/27 23:41:18 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/27 23:44:02 poppnk Exp $
 #
 
-DISTNAME=		airsnort-0.2.6
-CATEGORIES=		wip net security linux
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=airsnort/}
+DISTNAME=		lcrack-20040914
+CATEGORIES=		wip security
+MASTER_SITES=		http://usuarios.lycos.es/reinob/lcrack/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://airsnort.sourceforge.net/
-COMMENT=		WLAN sniffer and realtime WEP cracker
+HOMEPAGE=		http://usuarios.lycos.es/reinob/
+COMMENT=		Generic password hash cracker
 
+WRKSRC=		${WRKDIR}/
+HAS_CONFIGURE=	yes
 USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
 
-ONLY_FOR_PLATFORM=	Linux-*-*
+CONFIGURE_ARGS+=unknown  # talking with authors to solve this :)
 
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../net/libpcap/buildlink3.mk"
+do-install:
+.for _file_ in lcrack mkword regex mktbl
+	${INSTALL_PROGRAM} ${WRKSRC}/${_file_} ${PREFIX}/bin/${_file_}
+.endfor
+.undef _file_
+
 .include "../../mk/bsd.pkg.mk"
