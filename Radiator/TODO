@@ -1,0 +1,5 @@
+
+$Id: TODO,v 1.1.1.1 2003/06/22 11:58:59 cjep Exp $
+
+Maybe remove GUI functionality from the test script and make a GUI
+test script package.
