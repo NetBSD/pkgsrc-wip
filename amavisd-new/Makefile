@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2004/02/26 03:36:52 jcd Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/26 04:10:07 jcd Exp $
 
 DISTNAME=	amavisd-new-${VERSION}-${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
-WRKSRC=		${WRKDIR}/amavisd-new-${VERSION}
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://mirrors.catpipe.net/amavisd-new/ \
@@ -25,6 +24,8 @@ DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
 DEPENDS+=	p5-Net-Server-[0-9]*:../../net/p5-Net-Server
 DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
+
+WRKSRC=         ${WRKDIR}/amavisd-new-${VERSION}
 
 CONFLICTS+=     amavis-[0-9]*
 CONFLICTS+=     amavis-perl-[0-9]*
