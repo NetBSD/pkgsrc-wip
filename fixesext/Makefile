@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/27 01:20:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/29 20:34:30 jeremy-c-reed Exp $
 #
 
 DISTNAME=		fixesext-2.0
@@ -7,8 +7,8 @@ MASTER_SITES=		http://freedesktop.org/~xlibs/dist/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		xtraeme@NetBSD.org
-HOMEPAGE=		http://freedesktop.org/
-COMMENT=		header files and documentation for the X RandR extension		
+HOMEPAGE=		http://www.freedesktop.org/Software/xlibs
+COMMENT=		X Fixes extension headers and specification
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
