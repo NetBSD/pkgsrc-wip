@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/11/30 23:27:16 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/12/01 05:54:00 xtraeme Exp $
 bin/${MINGWTARGET}-cc
 bin/${MINGWTARGET}-cpp
 bin/${MINGWTARGET}-gcc
@@ -44,7 +44,6 @@ lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/mkheaders
 lib/gcc-lib/${MINGWTARGET}/3.3.1/install-tools/mkheaders.conf
 lib/gcc-lib/${MINGWTARGET}/3.3.1/libgcc.a
 lib/gcc-lib/${MINGWTARGET}/3.3.1/specs
-lib/libiberty.a
 man/man1/cpp.1
 man/man1/gcov.1
 man/man1/${MINGWTARGET}-gcc.1
