@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/18 09:41:21 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/18 09:48:33 cjep Exp $
 
 DISTNAME=	cjk-latex-chinese-20020721
+WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,15 +10,14 @@ MAINTAINER=	rxg@netbsd.org
 HOMEPAGE=	http://cjk.ffii.org/
 COMMENT=	Chinese BIG5/GB support for CJK-LaTeX
 
-DEPENDS+=	cjk-latex>=4.5.1:../../print/cjk-latex
+#DEPENDS+=	cjk-latex>=4.5.1:../../print/cjk-latex
+DEPENDS+=	cjk-latex>=4.5.1:../../wip/cjk-latex
 DEPENDS+=	arphic-ttf-*:../../fonts/arphic-ttf
 
 FONT_FILES=	bkai00mp bsmi00lp gbsn00lp gkai00mp
 
 EXTRACT_ONLY=	# empty
-WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
