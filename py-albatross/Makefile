@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/12 15:26:54 marc Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/12 20:22:16 marc Exp $
 #
 
 DISTNAME=	albatross-1.10pre2
@@ -38,6 +38,29 @@ OWN_DIRS+=	${LOGDIR}
 OWN_DIRS_PERMS=	${RUNTIME_DIR} ${ALBATROSS_USER} ${ALBATROSS_GROUP} 0750
 OWN_DIRS_PERMS+=${LOGDIR} ${ALBATROSS_USER} ${ALBATROSS_GROUP} 0750
 
+PYTHON_PATCH_SCRIPTS=	samples/extension/cal.py
+PYTHON_PATCH_SCRIPTS+=	samples/form4/form.py
+PYTHON_PATCH_SCRIPTS+=	samples/paginate/paginate.py
+PYTHON_PATCH_SCRIPTS+=	samples/popview1/popview.py
+PYTHON_PATCH_SCRIPTS+=	samples/popview2/popview.py
+PYTHON_PATCH_SCRIPTS+=	samples/popview3/popview.py
+PYTHON_PATCH_SCRIPTS+=	samples/popview4/popview.py
+PYTHON_PATCH_SCRIPTS+=	samples/random/random.py
+PYTHON_PATCH_SCRIPTS+=	samples/templates/content1/content.py
+PYTHON_PATCH_SCRIPTS+=	samples/templates/content2/content.py
+PYTHON_PATCH_SCRIPTS+=	samples/templates/form1/form.py
+PYTHON_PATCH_SCRIPTS+=	samples/templates/form2/form.py
+PYTHON_PATCH_SCRIPTS+=	samples/templates/form3/form.py
+PYTHON_PATCH_SCRIPTS+=	samples/templates/simple1/simple.py
+PYTHON_PATCH_SCRIPTS+=	samples/templates/simple2/simple.py
+PYTHON_PATCH_SCRIPTS+=	samples/templates/simple3/simple.py
+PYTHON_PATCH_SCRIPTS+=	samples/templates/simple4/simple.py
+PYTHON_PATCH_SCRIPTS+=	samples/templates/simple5/simple.py
+PYTHON_PATCH_SCRIPTS+=	samples/templates/stream/stream.py
+PYTHON_PATCH_SCRIPTS+=	samples/tree1/tree.py
+PYTHON_PATCH_SCRIPTS+=	samples/tree2/tree.py
+PYTHON_PATCH_SCRIPTS+=	samples/tree3/tree.py
+
 # XXX chmod/chown shouldn't be there OWN_DIRS* should handle this
 post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
@@ -48,6 +71,7 @@ post-install:
 	${CHMOD} 0750 ${RUNTIME_DIR} ${LOGDIR}
 	${CHOWN} ${PKG_USERS} ${RUNTIME_DIR} ${LOGDIR}
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 
 .include "../../mk/bsd.pkg.install.mk"
