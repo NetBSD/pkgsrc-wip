@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/10/14 22:45:20 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.1.1.2 2004/10/15 15:49:12 johnrshannon Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBRFUNCS_BUILDLINK3_MK:=	${LIBRFUNCS_BUILDLINK3_MK}+
@@ -17,7 +17,8 @@ BUILDLINK_PKGSRCDIR.librfuncs?=	../../wip/librfuncs
 
 .include "../../mk/pthread.buildlink3.mk"
 LIBS+=	${BUILDLINK_LDADD.pthread}
-LDFLAGS+=	-lrfuncs
-LDFLAGS+=	${BUILDLINK_LDADD.pthread}
+BUILDLINK_LDFLAGS.librfuncs+=	-lrfuncs
+BUILDLINK_LDFLAGS.librfuncs+=	${BUILDLINK_LDADD.pthread}
+BUILDLINK_CPPFLAGS.librfuncs+=	-include rfuncs.h
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
