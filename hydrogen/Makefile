@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 15:33:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/17 17:42:23 xtraeme Exp $
 
 DISTNAME=	hydrogen-0.8.0
 PKGNAME=	${DISTNAME}
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-alsa-seq
 CONFIGURE_ARGS+=	--disable-jack-support
 
-.include "../../audio/libhydrogen/buildlink2.mk"
+.include "../../wip/libhydrogen/buildlink2.mk"
 .include "../../x11/qt3-libs/buildlink2.mk"
 .include "../../x11/qt3-tools/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
