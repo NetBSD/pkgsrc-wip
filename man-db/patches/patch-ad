@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.3 2004/05/21 07:27:32 jeremy-c-reed Exp $
+
+--- configure.orig	2003-09-20 04:04:29.000000000 -0700
++++ configure
+@@ -10737,8 +10737,8 @@ fi
+ 
+ fi
+ 
+-if test "$db" = "no" || test "$db" = "db3" || test "$db" = "db"; then
+-for head in db_185.h db3/db_185.h
++if test "$db" = "no" || test "$db" = "db3" || test "$db" = "db4" || test "$db" = "db"; then
++for head in db4/db_185.h db3/db_185.h db_185.h
+ do
+ 
+ for ac_header in $head
+@@ -10886,7 +10886,7 @@ done
+ 
+   if test "$got" = "yes"
+   then
+-    for lib in db3
++    for lib in db4 db3
+     do
+       as_man_tr_bdb=`echo "man_cv_bdb_header_${head}_lib_${lib}" | $as_tr_sh`
+       man_saved_LIBS="$LIBS"

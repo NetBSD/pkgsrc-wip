@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.7 2004/05/14 13:18:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/21 07:27:32 jeremy-c-reed Exp $
 
-DISTNAME=		man-db-${VERSION}
+DISTNAME=		man-db_${VERSION}.orig
+PKGNAME=		man-db-${VERSION}
 CATEGORIES=		misc
-MASTER_SITES=		http://savannah.nongnu.org/download/man-db/stable.pkg/${VERSION}/
+MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/man-db/}
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.chiark.greenend.org.uk/~cjwatson/code/man-db/
 COMMENT=		Manual pager and related man page utilities
 
-.if !exists(/usr/bin/nroff)
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "NetBSD"
 DEPENDS+=		groff-[0-9]*:../../textproc/groff
 .endif
 
@@ -44,7 +47,11 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/man-db
 	${INSTALL_DATA} ${WRKSRC}/src/man_db.conf ${PREFIX}/share/examples/man-db
 
-.include "../../databases/db/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
+USE_DB185=	YES
+.include "../../mk/bdb.buildlink3.mk"
+.if ${BDB_TYPE} != "native"
+CONFIGURE_ARGS+=	--with-db=${BDB_TYPE}
+.endif
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

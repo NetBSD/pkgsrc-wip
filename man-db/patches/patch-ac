@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/08/20 08:55:21 jeremy-c-reed Exp $
+$NetBSD: patch-ac,v 1.2 2004/05/21 07:27:32 jeremy-c-reed Exp $
 
 --- include/manconfig.h.in.orig	2003-04-19 14:40:32.000000000 -0700
 +++ include/manconfig.h.in	2003-04-19 14:40:40.000000000 -0700
@@ -8,7 +8,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2003/08/20 08:55:21 jeremy-c-reed Exp $
  /* FSSTND directories */
 -#define CAT_ROOT	"/var/catman"		/* required by fsstnd() */
 -#define MAN_ROOT	"/usr" 			/* required by fsstnd() */
-+#define CAT_ROOT	"@prefix@/man"
++#define CAT_ROOT	"@mandir@"
 +#define MAN_ROOT	"@prefix@"
  /* FHS directories */
  #define FHS_CAT_ROOT	"/var/cache/man"	/* required by fsstnd() */
