@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/16 18:54:25 daprice Exp $
+$NetBSD: distinfo,v 1.2 2005/03/18 20:02:03 daprice Exp $
 
 SHA1 (r8s1.7.dist.tar.Z) = 14d87103fe928ddbab609a88705c0e919586fad2
 Size (r8s1.7.dist.tar.Z) = 1892674 bytes
-SHA1 (patch-aa) = bd84a233408d129b399810189fdd32b9d2bd6ae3
-SHA1 (patch-ab) = 567b519fb56982b798d3d3f3df0cd10bb7240c96
+SHA1 (patch-aa) = 7d37edc9d5d13e1ca739cccd96521df7f80ae6ef
+SHA1 (patch-ab) = bd84a233408d129b399810189fdd32b9d2bd6ae3
+SHA1 (patch-ac) = 567b519fb56982b798d3d3f3df0cd10bb7240c96
