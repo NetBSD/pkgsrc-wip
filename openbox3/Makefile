@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/09 23:39:43 blef Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/14 22:09:52 blef Exp $
 #
 
 DISTNAME=	openbox-3.0-beta2
@@ -6,12 +6,13 @@ PKGNAME=	${DISTNAME:S/-beta/beta/}
 CATEGORIES=	wm x11
 MASTER_SITES=	http://icculus.org/openbox/releases/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	snj@pobox.com
 HOMEPAGE=	http://icculus.org/openbox/
 COMMENT=	Standards compliant, light-weight and extensible window manager
 
 BUILD_USES_MSGFMT=	YES
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS+=		vera-ttf>=1.10:../../fonts/vera-ttf
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
