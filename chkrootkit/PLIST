@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/29 16:16:13 poppnk Exp $
+bin/chkdirs
+bin/chklastlog
+bin/chkproc
+bin/chkwtmp
+bin/ifpromisc
+bin/strings-static
