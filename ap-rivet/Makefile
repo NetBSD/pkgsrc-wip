@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/11 04:15:22 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/12 21:35:06 minskim Exp $
 
 DISTNAME=	rivet_0.4.0-1
 PKGNAME=	ap-rivet-0.4.0.1
@@ -19,9 +19,10 @@ CONFIGURE_ARGS+=	-prefix ${PREFIX}/lib				\
 			-with-tclconfig ${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ENV+=		LANG=C
 
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../www/apache/buildlink3.mk"
+
 do-install:
 	cd ${WRKSRC}; ./make.tcl install
 
-.include "../../lang/tcl/buildlink3.mk"
-.include "../../www/apache/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
