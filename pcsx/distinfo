@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/05/27 16:02:03 xtraeme Exp $
+
+SHA1 (PcsxSrc-1.5.tgz) = ce7200a3ee79e04685c6fe666b1bb7e49f8a4a17
+Size (PcsxSrc-1.5.tgz) = 441651 bytes
+SHA1 (patch-aa) = 9faee84b30c48a5274c2f1df7dbc6aef3a314450

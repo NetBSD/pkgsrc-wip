@@ -1,0 +1,4 @@
+$Id: TODO,v 1.1.1.1 2004/05/27 16:02:03 xtraeme Exp $
+
+	o Fix some crashes when closing the gui.
+	o Build packages for the plugins.
