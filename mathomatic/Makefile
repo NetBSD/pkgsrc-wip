@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/05 17:20:38 mjasm Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/29 17:43:33 bjan2 Exp $
 #
 
 DISTNAME=			am
@@ -8,7 +8,7 @@ CATEGORIES=			wip
 MASTER_SITES=		http://www.panix.com/~gesslein/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=			adam@monkeybyte.org
+MAINTAINER=			bjan+pkgsrc@bjan.net
 HOMEPAGE=			http://www.panix.com/~gesslein/
 COMMENT=			Small portable symbolic math program
 
