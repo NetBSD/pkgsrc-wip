@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/07 21:38:10 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/02/13 15:39:18 rillig Exp $
 share/anope/anoperc
 share/anope/anopesmtp
-share/examples/anope/example.chk
-share/examples/anope/example.conf
 share/anope/languages/cat
 share/anope/languages/de
 share/anope/languages/en_us
@@ -21,7 +19,6 @@ share/anope/listnicks
 share/anope/modules/hs_moo.so
 share/anope/modules/ircd_catserv.so
 share/anope/services
-share/examples/anope/tables.sql
 share/doc/anope/BUGS
 share/doc/anope/COPYING
 share/doc/anope/DEFCON
@@ -33,6 +30,9 @@ share/doc/anope/MYSQL
 share/doc/anope/NEWS
 share/doc/anope/OLDCHANGES
 share/doc/anope/README
+share/examples/anope/example.chk
+share/examples/anope/example.conf
+share/examples/anope/tables.sql
 @dirrm share/doc/anope
 @dirrm share/examples/anope
 @exec ${MKDIR} %D/share/anope/modules/runtime

@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/11 19:48:05 xmor61 Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/13 15:38:07 rillig Exp $
 bin/adamem
 bin/cvem
-bin/z80dasm
 bin/snapedit
-share/adamem/adamem.txt
-share/adamem/adamem.snd
-share/adamem/OS7.rom
+bin/z80dasm
 share/adamem/EOS.rom
+share/adamem/OS7.rom
 share/adamem/WP.rom
+share/adamem/adamem.snd
+share/adamem/adamem.txt
 @dirrm share/adamem
