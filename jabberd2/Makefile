@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/06/14 04:59:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/14 08:34:02 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0.0-a4
@@ -30,16 +30,20 @@ FILES=			c2s.xml resolver.xml router.xml s2s.xml sm.xml
 .for f in ${FILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
+.undef f
 
-OWN_DIRS=		/var/log/jabberd
-OWN_DIRS+=		/var/db/jabberd
+DIRS=			/var/log/jabberd /var/db/jabberd
+
+.for f in ${DIRS}
+OWN_DIRS+=		${f}
+.endfor
+.undef f
 
 post-extract:
 
-.for f in ${FILES}
+.for f in jabberd.cfg ${FILES}
 	${MV} ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
 .endfor
-	${MV} ${WRKSRC}/etc/jabberd.cfg.dist.in ${WRKSRC}/etc/jabberd.cfg.in
 .undef f
 
 pre-configure:
@@ -60,9 +64,8 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/etc/jabberd.cfg ${EGDIR}
 
-.for f in ${FILES}
+.for f in jabberd.cfg ${FILES}
 	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
 .endfor
 
