@@ -1,3 +1,2 @@
-Please test. I have briefly tested this embedded in konquerer for
-looking at some stuff off apple web site and it works for small versions
-of movies but hangs after a couple of seconds on larger versions of movies.
+To use the apple quicktime movie preview site, increase the cache size.
+I'm using 4096 kB and all previews tested so far work for me.
