@@ -1,0 +1,114 @@
+/* lib/config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* Define to 1 if you have the `chflags' function. */
+#undef HAVE_CHFLAGS
+
+/* Define to 1 if you have the <db1/db.h> header file. */
+#undef HAVE_DB1_DB_H
+
+/* Define to 1 if you have the <db2/db_185.h> header file. */
+#undef HAVE_DB2_DB__185_H
+
+/* Define to 1 if you have the <db3/db_185.h> header file. */
+#undef HAVE_DB3_DB_185_H
+
+/* Define to 1 if you have the <db4/db_185.h> header file. */
+#undef HAVE_DB4_DB_185_H
+
+/* Define to 1 if you have the `dbopen' function. */
+#undef HAVE_DBOPEN
+
+/* Define to 1 if you have the <db.h> header file. */
+#undef HAVE_DB_H
+
+/* Define to 1 if you have the <fnmatch.h> header file. */
+#undef HAVE_FNMATCH_H
+
+/* Define to 1 if you have the `getrlimit' function. */
+#undef HAVE_GETRLIMIT
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define to 1 if you have the `db1' library (-ldb1). */
+#undef HAVE_LIBDB1
+
+/* Define to 1 if you have the `db2' library (-ldb2). */
+#undef HAVE_LIBDB2
+
+/* Define to 1 if you have the `db3' library (-ldb3). */
+#undef HAVE_LIBDB3
+
+/* Define to 1 if you have the `db4' library (-ldb4). */
+#undef HAVE_LIBDB4
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the <regex.h> header file. */
+#undef HAVE_REGEX_H
+
+/* Define to 1 if you have the `setrlimit' function. */
+#undef HAVE_SETRLIMIT
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the <sys/ioctl.h> header file. */
+#undef HAVE_SYS_IOCTL_H
+
+/* Define to 1 if you have the <sys/resource.h> header file. */
+#undef HAVE_SYS_RESOURCE_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have the <sys/utsname.h> header file. */
+#undef HAVE_SYS_UTSNAME_H
+
+/* Define to 1 if you have the <sys/wait.h> header file. */
+#undef HAVE_SYS_WAIT_H
+
+/* Define to 1 if you have the `tgetent' function. */
+#undef HAVE_TGETENT
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define to 1 if you have the `vfork' function. */
+#undef HAVE_VFORK
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+#if !HAVE_VFORK
+# define vfork fork
+#endif
+

@@ -1,0 +1,62 @@
+This is a custom pkg_install:
+
+1) configures for more db versions.
+
+2) integrates a new package upgrade routine where it overwrites
+   instead of pkg_delete'ing first (see pkg_add man page)
+
+3) pkg_add -r is the replace mechanism -- it is the old -u switch
+
+4) pkg_add -u is the new overwriting upgrade option
+
+5) currently the part to delete files no longer included after
+   upgrade is disabled (for now for testing)
+
+Some things to work on:
+
+6)
+each time an overwrite (and maybe replace) is done
+entries to +REQUIRED_BY are repeated (same package name
+different version):
+libxslt-1.1.4
+libglade2-2.0.1nb14
+...
+abiword-2.0.4nb4
+libxslt-1.1.5
+libxslt-1.1.4
+libxslt-1.1.5
+libxslt-1.1.4
+libxslt-1.1.5
+libxslt-1.1.4
+It should chop out previous version. Because later may have errors
+checking for non-existing +CONTENTS file
+like /var/db/pkg/libxslt-1.1.5/+CONTENTS when really libxslt-1.1.4
+is installed.
+
+if conflict (like have old libxml installed and try to install new libxslt)
+it says:
+Depends pre-scan: `libxml2>=2.6.8' required.
+HF: replace note -- could 'pkg_delete libxml2-2.6.7', and let the normal
+dependency handling reinstall the replaced package, assuming one IS
+available. But then I'd expect proper binary pkgs being available for
+the replace case.
+
+if not verbose then says:
+pkg_add: pkg `libxml2>=2.6.8' required, but `libxml2-2.6.7' found installed.
+pkg_add: Please resolve this conflict!
+pkg_add: 1 package addition failed
+
+7)
+should not need to extract to staging if already knows "already recorded as installed"
+
+8)
+need manpages installed to correct place? (or may be able to see?)
+
+9)
+pkg_add -r will permanently delete the package
+before it checks for conflicts.
+
+10) add a pkg_upgrade symlink
+
+also look at http://mail-index.netbsd.org/tech-pkg/2003/03/18/0002.html
+

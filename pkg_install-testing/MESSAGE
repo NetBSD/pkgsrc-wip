@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/04/02 05:57:35 jeremy-c-reed Exp $
+
+This is a testing version of the pkg_install.
+
+As you can see, it allows installation.
+
+The old -u option has been replaced with an overwrite
+upgrade. Use -r for the old pkg_delete before update
+method. See the new pkg_add man page for details.
+
+Currently, the files no longer needed after an -u
+upgrade are not deleted. After some more testing
+this will be turned on.
+
+Please share your feedback.
+
+===========================================================================

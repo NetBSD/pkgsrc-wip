@@ -1,0 +1,38 @@
+# $NetBSD: Makefile.in,v 1.1.1.1 2004/04/02 05:58:01 jeremy-c-reed Exp $
+
+srcdir=		@srcdir@
+
+pkgdbdir=	@pkgdbdir@
+
+tar=		@tar@
+ftp=		@ftp@
+
+RANLIB=		@RANLIB@
+AR=		@AR@
+CC=		@CC@
+CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir)
+DEFS=		@DEFS@ -DDEF_LOG_DIR=\"$(pkgdbdir)\" -DTAR_CMD=\"$(tar)\" -DFTP_CMD=\"$(ftp)\"
+CFLAGS=		@CFLAGS@
+
+LIB=	libinstall.a
+
+SRCS=	exec.c fexec.c file.c ftpio.c global.c lpkg.c path.c pen.c \
+	pkgdb.c plist.c str.c version.c
+OBJS=	$(SRCS:.c=.o)
+
+.PHONY: all clean install
+
+.c.o:
+	$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS) -c $<
+
+all: $(LIB)
+
+$(LIB): $(OBJS)
+	$(AR) crv $@ $(OBJS)
+	$(RANLIB) $@
+
+clean:
+	rm -f $(OBJS) $(LIB)
+
+install:
+	@true # do nothing
