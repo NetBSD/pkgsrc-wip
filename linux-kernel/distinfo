@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/01/28 10:06:33 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.3 2004/02/03 09:19:58 marttikuparinen Exp $
 
-SHA1 (linux-2.4.24.tar.bz2) = 0a8a14cf6af7fd50abc939df9c4602575ba79d21
-Size (linux-2.4.24.tar.bz2) = 29837818 bytes
-SHA1 (patch-aa) = fb120e8304eb78d2eb76741f00ab6b484c3637af
+SHA1 (linux-2.6.1.tar.bz2) = 874629065582898f67b2218f0c904aa9fd489f3c
+Size (linux-2.6.1.tar.bz2) = 33240033 bytes
+SHA1 (patch-aa) = d4d899f775def1c2e427d61fcb2b59c857c0be9e

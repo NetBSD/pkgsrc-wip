@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.1 2004/01/28 10:06:33 marttikuparinen Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/02/03 09:19:58 marttikuparinen Exp $
 
-LINUX_VERSION=		2.4.24
+LINUX_VERSION=		2.6.1
 
 DISTNAME=		linux-${LINUX_VERSION}
 CATEGORIES=		misc
-MASTER_SITES=		http://www.kernel.org/pub/linux/kernel/v2.4/	\
-			http://www.de.kernel.org/pub/linux/kernel/v2.4/	\
-			ftp://ftp.jp.kernel.org/pub/linux/kernel/v2.4/
+MASTER_SITES=		http://www.kernel.org/pub/linux/kernel/v2.6/	\
+			http://www.de.kernel.org/pub/linux/kernel/v2.6/	\
+			ftp://ftp.jp.kernel.org/pub/linux/kernel/v2.6/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/28 10:06:33 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/03 09:19:58 marttikuparinen Exp $
 
 .include "Makefile.common"
 
@@ -22,9 +22,9 @@ do-build:
 
 do-install:
 	${CP} ${WRKSRC}/arch/${LOWER_ARCH}/boot/bzImage \
-		/boot/bzImage-${LINUX_VERSION}
+		${PREFIX}/boot/bzImage-${LINUX_VERSION}
 	${CP} ${WRKSRC}/System.map \
-		/boot/System.map-${LINUX_VERSION}
+		${PREFIX}/boot/System.map-${LINUX_VERSION}
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} modules_install
 
 .include "../../mk/bsd.pkg.mk"
