@@ -1,0 +1,13 @@
+# $NetBSD: Makefile.common,v 1.1 2004/01/20 19:56:09 airhead Exp $
+#
+
+DISTNAME=	elvis-2.2_0
+CATEGORIES=	editors
+MASTER_SITES=	ftp://ftp.cs.pdx.edu/pub/elvis/
+
+MAINTAINER=	airhead@users.sourceforge.net
+HOMEPAGE=	http://elvis.vi-editor.org/
+
+HAS_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/elvis
