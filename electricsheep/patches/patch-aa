@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 2004/12/29 08:23:20 dyeske Exp $
+
 --- mpeg2dec/libvo/video_out_x11.c.orig	Fri Jun  6 02:15:57 2003
 +++ mpeg2dec/libvo/video_out_x11.c	Sun Jan 25 00:03:30 2004
 @@ -235,7 +235,9 @@

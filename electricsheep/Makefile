@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/28 21:58:29 dyeske Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/29 08:23:20 dyeske Exp $
 
 DISTNAME=		electricsheep-2.5
 CATEGORIES=		x11
@@ -6,14 +6,14 @@ MASTER_SITES=		http://electricsheep.org/
 
 MAINTAINER=		dyeske@yahoo.com
 HOMEPAGE=		http://electricsheep.org/
-COMMENT=		A nice distributed screensaver
+COMMENT=		Distributed fractal flame screensaver
+
+DEPENDS+=		xli-[0-9]*:../../graphics/xli
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
-
-DEPENDS+=		xli-[0-9]*:../../graphics/xli
 
 .include "../../mk/bsd.prefs.mk"
 
