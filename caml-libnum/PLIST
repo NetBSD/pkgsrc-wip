@@ -1,10 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/17 20:57:48 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/17 22:29:45 airhead Exp $
+lib/caml-light/arith_flags.zo
+lib/caml-light/arith_flags.zi
 lib/caml-light/arith_status.zi
+lib/caml-light/arith_status.zo
 lib/caml-light/big_int.zi
+lib/caml-light/big_int.zo
 lib/caml-light/camlnum
 lib/caml-light/fnat.zi
+lib/caml-light/fnat.zo
+lib/caml-light/int_misc.zi
+lib/caml-light/int_misc.zo
 lib/caml-light/libnums.a
 lib/caml-light/nat.zi
+lib/caml-light/nat.zo
 lib/caml-light/num.zi
+lib/caml-light/num.zo
+lib/caml-light/numprint.zi
+lib/caml-light/numprint.zo
 lib/caml-light/nums.zo
 lib/caml-light/ratio.zi
+lib/caml-light/ratio.zo
+@dirrm lib/caml-light

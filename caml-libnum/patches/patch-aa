@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/17 20:57:48 airhead Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/17 22:29:46 airhead Exp $
 
---- Makefile.orig	2004-03-17 22:01:33.000000000 +0100
-+++ Makefile	2004-03-17 22:04:32.000000000 +0100
+--- Makefile.orig	1997-12-02 18:09:37.000000000 +0100
++++ Makefile	2004-03-17 23:30:51.000000000 +0100
 @@ -4,6 +4,7 @@
  
  BIGNUM_ARCH=C
@@ -10,3 +10,21 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/17 20:57:48 airhead Exp $
  
  # Test to see whether ranlib exists on the machine
  RANLIBTEST=test -f /usr/bin/ranlib -o -f /bin/ranlib
+@@ -24,7 +25,7 @@
+ 
+ ZOFILESD=${ZOFILES} ltx_num.zo fmt_num.zo
+ 
+-ZIFILES=big_int.zi fnat.zi nat.zi num.zi ratio.zi arith_status.zi
++ZIFILES=big_int.zi fnat.zi nat.zi num.zi ratio.zi arith_status.zi int_misc.zi arith_flags.zi
+ ZIFILESD=$(ZIFILES) ltx_num.zi fmt_num.zi
+ 
+ OBJFILES=nat_stubs.o
+@@ -45,7 +46,7 @@
+ install:
+ 	cp libnums.a $(LIBDIR)/libnums.a
+ 	if $(RANLIBTEST); then cd $(LIBDIR); $(RANLIB) libnums.a; else true; fi
+-	cp nums.zo $(ZIFILES) $(LIBDIR)
++	cp nums.zo numprint.zo numprint.zi $(ZOFILES) $(ZIFILES) $(LIBDIR)
+ 	cp camlnum $(LIBDIR)
+ 
+ clean:
