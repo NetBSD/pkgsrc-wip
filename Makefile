@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.373 2003/08/15 14:08:15 amadeus_z Exp $
-# $NetBSD: Makefile,v 1.373 2003/08/15 14:08:15 amadeus_z Exp $
+# $Id: Makefile,v 1.374 2003/08/15 15:20:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.374 2003/08/15 15:20:26 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -106,7 +106,6 @@ SUBDIR+=	gkrellm2-leds
 SUBDIR+=	gkrellm2-multiping
 SUBDIR+=	gkrellm2-server
 SUBDIR+=	gkrellm2-share
-SUBDIR+=	gkrellm2-shoot
 SUBDIR+=	gkrellm2-snmp
 SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
