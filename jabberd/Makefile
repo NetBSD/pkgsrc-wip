@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/05/10 07:31:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/10 10:08:22 xtraeme Exp $
 #
 
 DISTNAME=	jabber-1.4.2
@@ -14,6 +14,8 @@ USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_PKGINSTALL=		yes
+
+CONFIGURE_ARGS+=	--enable-ssl
 
 RCD_SCRIPTS=		jabber
 
@@ -48,6 +50,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/jabberd/jabberd.h ${INCDIR}
 	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/lib.h ${INCDIR}
 	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/xmlparse.h ${INCDIR}
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/platform-settings ${PKG_SYSCONFDIR}
+
+post-deinstall:
+	${RM} ${PKG_SYSCONFDIR}/platform-settings
 
 .include "../../security/openssl/buildlink2.mk"
 .include "../../devel/pth/buildlink2.mk"
