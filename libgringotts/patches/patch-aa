@@ -1,0 +1,17 @@
+--- Makefile.in.orig	Sun Jan  5 18:17:47 2003
++++ Makefile.in	Sun Jan  5 18:18:30 2003
+@@ -386,11 +386,11 @@
+ 	@echo
+ 	@echo
+ 	@echo ----------------------------------------------------------------------
+-	@echo   md5sum of relevant files:
++	@echo   md5 of relevant files:
+ 	@echo
+-	@md5sum $(DESTDIR)$(libdir)/libgringotts.so|(read A B; echo $$B ":"; echo $$A)
++	@md5 $(DESTDIR)$(libdir)/libgringotts.so|(read A B; echo $$B ":"; echo $$A)
+ 	@echo
+-	@md5sum $(DESTDIR)$(includedir)/libgringotts.h|(read A B; echo $$B ":"; echo $$A)
++	@md5 $(DESTDIR)$(includedir)/libgringotts.h|(read A B; echo $$B ":"; echo $$A)
+ 	@echo
+ 	@echo use these values to check library integrity at any time
+ 	@echo ----------------------------------------------------------------------
