@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/12 06:11:37 blef Exp $
+bin/romfixer
+bin/tuxnes
