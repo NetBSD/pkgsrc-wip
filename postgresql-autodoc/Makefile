@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2003/09/06 20:50:41 marc Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/06 21:19:43 marc Exp $
 #
 
-DISTNAME=		postgresql_autodoc-1.11
+DISTNAME=		postgresql_autodoc-1.12
 PKGNAME=		${DISTNAME:S/_/-/}
 WRKSRC=			${WRKDIR}/postgresql_autodoc
 CATEGORIES=		databases
 MASTER_SITES=		http://www.rbt.ca/autodoc/binaries/
 
-MAINTAINER=		marc@informatik.uni-bremen.de
+MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://www.rbt.ca/autodoc/
 COMMENT=		Documentation system for PostgreSQL
 
