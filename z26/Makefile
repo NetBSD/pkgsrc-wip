@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/02 16:39:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/28 12:54:12 thomasklausner Exp $
 #
 
 DISTNAME=		z26v213
@@ -10,7 +10,7 @@ MAINTAINER=		xmor61@users.sourceforge.net
 HOMEPAGE=		http://www.whimsey.com/z26/
 COMMENT=		Atari 2600 Emulator
 
-BUILD_DEPENDS+=		nasm-*:../../devel/nasm
+BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 
 ONLY_FOR_PLATFORM+=	*-i386
 
