@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/01 03:00:08 cetrox Exp $
+lib/netscape/plugins/flashplayer.xpt
+lib/netscape/plugins/libflashplayer.so
+@dirrm lib/netscape/plugins
+@dirrm lib/netscape
