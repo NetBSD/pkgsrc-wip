@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/12/28 08:35:06 xtraeme Exp $
-
-SHA1 (dpkg_1.9.21.tar.gz) = b0f4ce559420d72b49441e383cf574ff40e36db9
-Size (dpkg_1.9.21.tar.gz) = 1378272 bytes
-SHA1 (patch-aa) = 201feccd2e8f67f936d703b5485ce127d05f557b
-SHA1 (patch-ab) = 19f621f1c58f92d1b9d5773500c39291c4a722c4
-SHA1 (patch-ac) = 130359aeeafc5c8bc10f38eac7335c2781f3c503
