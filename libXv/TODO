@@ -1,6 +1,1 @@
-does not build yet.
-
-maybe X11/extensions/Xvlib.h header should be in xextensions package instead?
-(it is included here and is needed to build)
-
 also maybe this should include pthreads buildlink

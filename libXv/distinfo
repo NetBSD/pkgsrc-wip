@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/30 07:20:11 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2003/11/30 08:14:30 jeremy-c-reed Exp $
 
 SHA1 (libXv-2.2.1.tar.bz2) = f9e38531589b5ee31e038b5f03d0523b49be349d
 Size (libXv-2.2.1.tar.bz2) = 197562 bytes
+SHA1 (patch-aa) = 0e1ea51f31dd7948c145111aea0edb26880ff1e7
