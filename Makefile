@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1007 2004/02/22 01:15:56 minskim Exp $
-# $NetBSD: Makefile,v 1.1007 2004/02/22 01:15:56 minskim Exp $
+# $Id: Makefile,v 1.1008 2004/02/22 01:36:21 minskim Exp $
+# $NetBSD: Makefile,v 1.1008 2004/02/22 01:36:21 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -402,7 +402,6 @@ SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Class-Factory-Util
 SUBDIR+=	p5-Class-MethodMaker
 SUBDIR+=	p5-Class-Singleton
-SUBDIR+=	p5-DBI-Shell
 SUBDIR+=	p5-Data-TemporaryBag
 SUBDIR+=	p5-DateTime
 SUBDIR+=	p5-DateTime-Event-Cron
