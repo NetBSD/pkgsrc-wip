@@ -1,4 +1,9 @@
 maybe red shouldn't be installed as gred??
 
+installs says:
+install-info: warning: no info dir entry in `/usr/pkg/info/ed.info'
+
+(I fixed this for bc too. I just need to patch it.)
+
 deinstall said:
 install-info: warning: no entries found for `/usr/pkg/info/ed.info'; nothing deleted
