@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/28 23:43:28 bjan2 Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/29 04:25:52 bjan2 Exp $
 #
 
 DISTNAME=		am-10.9b
@@ -14,8 +14,9 @@ COMMENT=		Small portable symbolic math program
 WRKSRC=			${WRKDIR}/am
 MAKEFILE=		makefile
 
+# gcc's optimizer causes problems with this version of the program
+CFLAGS+=		-DUNIX -O0
 CFLAGS.SunOS+=		-DSOLARIS
-CFLAGS+=		-DUNIX
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/am ${PREFIX}/bin/am_mathomatic
