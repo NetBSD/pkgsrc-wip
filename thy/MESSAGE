@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/09/17 15:49:54 xtraeme Exp $
-
-In order to use Thy, you will need to set up a directory to serve documents
-from. By default, Thy looks in `/var/www', you might consider using that,
-or `/var/httpd', as installed by apache.
-===========================================================================

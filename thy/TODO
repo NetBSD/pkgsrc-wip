@@ -1,5 +1,0 @@
-$Id: TODO,v 1.1 2004/02/27 09:48:58 xtraeme Exp $
-
-    o Doesn't work with current pkgsrc gnutls package.
-      I'll import it when it has been fixed.
-    o Convert to buildlink3.
