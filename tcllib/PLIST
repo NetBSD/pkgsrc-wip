@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/26 16:24:30 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/13 18:21:24 ppostma Exp $
 lib/tcllib${PKGVERSION}/base64/base64.tcl
+lib/tcllib${PKGVERSION}/base64/base64c.tcl
 lib/tcllib${PKGVERSION}/base64/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/base64/uuencode.tcl
 lib/tcllib${PKGVERSION}/base64/yencode.tcl
@@ -43,6 +44,7 @@ lib/tcllib${PKGVERSION}/doctools/mpformats/fmt.null
 lib/tcllib${PKGVERSION}/doctools/mpformats/fmt.text
 lib/tcllib${PKGVERSION}/doctools/mpformats/fmt.tmml
 lib/tcllib${PKGVERSION}/doctools/mpformats/fmt.wiki
+lib/tcllib${PKGVERSION}/doctools/mpformats/fr.msg
 lib/tcllib${PKGVERSION}/doctools/mpformats/idx.html
 lib/tcllib${PKGVERSION}/doctools/mpformats/idx.nroff
 lib/tcllib${PKGVERSION}/doctools/mpformats/idx.text
@@ -66,6 +68,8 @@ lib/tcllib${PKGVERSION}/ftpd/ftpd.tcl
 lib/tcllib${PKGVERSION}/ftpd/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/html/html.tcl
 lib/tcllib${PKGVERSION}/html/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/inifile/ini.tcl
+lib/tcllib${PKGVERSION}/inifile/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/irc/irc.tcl
 lib/tcllib${PKGVERSION}/irc/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/javascript/javascript.tcl
@@ -135,6 +139,7 @@ lib/tcllib${PKGVERSION}/control/do.tcl
 lib/tcllib${PKGVERSION}/control/no-op.tcl
 lib/tcllib${PKGVERSION}/control/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/control/tclIndex
+lib/tcllib${PKGVERSION}/crc/crcc.tcl
 lib/tcllib${PKGVERSION}/crc/cksum.tcl
 lib/tcllib${PKGVERSION}/crc/crc16.tcl
 lib/tcllib${PKGVERSION}/crc/crc32.tcl
@@ -147,13 +152,22 @@ lib/tcllib${PKGVERSION}/htmlparse/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/log/log.tcl
 lib/tcllib${PKGVERSION}/log/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/md5/md5.tcl
+lib/tcllib${PKGVERSION}/md5/md5c.tcl
+lib/tcllib${PKGVERSION}/md5/md5x.tcl
 lib/tcllib${PKGVERSION}/md5/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/md5crypt/md5crypt.tcl
+lib/tcllib${PKGVERSION}/md5crypt/md5cryptc.tcl
+lib/tcllib${PKGVERSION}/md5crypt/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/multiplexer/multiplexer.tcl
+lib/tcllib${PKGVERSION}/multiplexer/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/report/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/report/report.tcl
 lib/tcllib${PKGVERSION}/sha1/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/sha1/sha1.tcl
 lib/tcllib${PKGVERSION}/smtpd/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/smtpd/smtpd.tcl
+lib/tcllib${PKGVERSION}/snit/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/snit/snit.tcl
 lib/tcllib${PKGVERSION}/soundex/soundex.tcl
 lib/tcllib${PKGVERSION}/soundex/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/stooop/mkpkgidx.tcl
@@ -163,8 +177,22 @@ lib/tcllib${PKGVERSION}/stooop/switched.tcl
 lib/tcllib${PKGVERSION}/stooop/xifo.tcl
 lib/tcllib${PKGVERSION}/struct/list.tcl
 lib/tcllib${PKGVERSION}/struct/prioqueue.tcl
+lib/tcllib${PKGVERSION}/struct/sets.tcl
 lib/tcllib${PKGVERSION}/struct/skiplist.tcl
 lib/tcllib${PKGVERSION}/struct/record.tcl
+lib/tcllib${PKGVERSION}/struct1/graph.tcl
+lib/tcllib${PKGVERSION}/struct1/list.tcl
+lib/tcllib${PKGVERSION}/struct1/matrix.tcl
+lib/tcllib${PKGVERSION}/struct1/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/struct1/pool.tcl
+lib/tcllib${PKGVERSION}/struct1/pooltest.tcl
+lib/tcllib${PKGVERSION}/struct1/prioqueue.tcl
+lib/tcllib${PKGVERSION}/struct1/queue.tcl
+lib/tcllib${PKGVERSION}/struct1/record.tcl
+lib/tcllib${PKGVERSION}/struct1/skiplist.tcl
+lib/tcllib${PKGVERSION}/struct1/stack.tcl
+lib/tcllib${PKGVERSION}/struct1/struct.tcl
+lib/tcllib${PKGVERSION}/struct1/tree.tcl
 lib/tcllib${PKGVERSION}/textutil/dehypht.tex
 lib/tcllib${PKGVERSION}/textutil/eshyph_vo.tex
 lib/tcllib${PKGVERSION}/textutil/ithyph.tex
@@ -201,6 +229,7 @@ man/mann/graph.n
 man/mann/html.n
 man/mann/htmlparse.n
 man/mann/irc.n
+man/mann/ini.n
 man/mann/javascript.n
 man/mann/log.n
 man/mann/logger.n
@@ -210,6 +239,7 @@ man/mann/md4.n
 man/mann/md5.n
 man/mann/mime.n
 man/mann/mpexpand.n
+man/mann/multiplexer.n
 man/mann/ncgi.n
 man/mann/nntp.n
 man/mann/ntp_time.n
@@ -228,11 +258,14 @@ man/mann/sha1.n
 man/mann/skiplist.n
 man/mann/smtp.n
 man/mann/smtpd.n
+man/mann/snit.n
+man/mann/snitfaq.n
 man/mann/soundex.n
 man/mann/stack.n
 man/mann/statistics.n
 man/mann/stooop.n
 man/mann/struct_list.n
+man/mann/struct_set.n
 man/mann/struct_tree.n
 man/mann/sum.n
 man/mann/tcllib_dns.n
@@ -242,9 +275,11 @@ man/mann/uuencode.n
 man/mann/yencode.n
 @dirrm lib/tcllib${PKGVERSION}/uri
 @dirrm lib/tcllib${PKGVERSION}/textutil
+@dirrm lib/tcllib${PKGVERSION}/struct1
 @dirrm lib/tcllib${PKGVERSION}/struct
 @dirrm lib/tcllib${PKGVERSION}/stooop
 @dirrm lib/tcllib${PKGVERSION}/soundex
+@dirrm lib/tcllib${PKGVERSION}/snit
 @dirrm lib/tcllib${PKGVERSION}/smtpd
 @dirrm lib/tcllib${PKGVERSION}/sha1
 @dirrm lib/tcllib${PKGVERSION}/report
@@ -254,12 +289,15 @@ man/mann/yencode.n
 @dirrm lib/tcllib${PKGVERSION}/ntp
 @dirrm lib/tcllib${PKGVERSION}/nntp
 @dirrm lib/tcllib${PKGVERSION}/ncgi
+@dirrm lib/tcllib${PKGVERSION}/multiplexer
 @dirrm lib/tcllib${PKGVERSION}/mime
+@dirrm lib/tcllib${PKGVERSION}/md5crypt
 @dirrm lib/tcllib${PKGVERSION}/md5
 @dirrm lib/tcllib${PKGVERSION}/md4
 @dirrm lib/tcllib${PKGVERSION}/math
 @dirrm lib/tcllib${PKGVERSION}/log
 @dirrm lib/tcllib${PKGVERSION}/javascript
+@dirrm lib/tcllib${PKGVERSION}/inifile
 @dirrm lib/tcllib${PKGVERSION}/irc
 @dirrm lib/tcllib${PKGVERSION}/htmlparse
 @dirrm lib/tcllib${PKGVERSION}/html

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/26 16:24:30 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/06/13 18:21:24 ppostma Exp $
 
-SHA1 (tcllib-1.4.tar.bz2) = 7593cfa5f03d34d5796d8e86b6a1c4217b483ba2
-Size (tcllib-1.4.tar.bz2) = 916891 bytes
-SHA1 (patch-aa) = 2209fbc0e4391d5bbc767188bd858cc6b95366a9
+SHA1 (tcllib-1.6.1.tar.bz2) = fb619ef99abf1aefcd5edcea5b162257926ae409
+Size (tcllib-1.6.1.tar.bz2) = 1179128 bytes
+SHA1 (patch-aa) = b7c093b8f750927dc4a019ae5dde1a55610d0547
