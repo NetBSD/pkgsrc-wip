@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/13 14:37:02 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/13 14:39:43 cjep Exp $
 bin/umix
 lib/umix/libuincurses.a
 lib/umix/libuincurses.la
@@ -7,4 +7,3 @@ man/man1/umix.1
 ${GTK}lib/umix/libuigtk.a
 ${GTK}lib/umix/libuigtk.la
 ${GTK}lib/umix/libuigtk.so
-

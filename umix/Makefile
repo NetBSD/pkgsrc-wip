@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/13 14:37:02 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/13 14:39:43 cjep Exp $
 #
 
 DISTNAME=	umix-0.9.2
@@ -12,7 +12,7 @@ COMMENT=	Replacement for aumix
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 
-GAUTOMAKE_REQD=          1.4
+AUTOMAKE_REQD=          1.4
 GNU_CONFIGURE=          yes
 USE_GMAKE=              yes
 USE_LIBTOOL=            yes
