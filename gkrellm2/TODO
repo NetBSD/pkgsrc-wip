@@ -1,2 +1,5 @@
 o Rewrite Makefiles to avoid hard-coded make targets,
-o Update to 2.1.13.
+o Update to 2.1.15.
+
+  I'll solve *both* issues in one shot. 2.1.15 is not
+  a security update as 2.1.14 was.
