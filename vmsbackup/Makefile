@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/02 21:07:03 blef Exp $
 #
 
 DISTNAME=	vmsbackup
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://garbo.uwasa.fi/pub/unix/vmsbackup/
 COMMENT=	Utility to read VMS backup tapes
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 ALL_TARGET=	vmsbackup
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 

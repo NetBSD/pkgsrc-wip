@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:33:46 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/02 21:05:20 blef Exp $
 #
 
 DISTNAME=	uClibc-0.9.20
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.uclibc.org/
 COMMENT=	C library for developing embedded Linux systems
 
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
