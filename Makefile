@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.291 2003/07/02 11:07:20 xtraeme Exp $
-# $NetBSD: Makefile,v 1.291 2003/07/02 11:07:20 xtraeme Exp $
+# $Id: Makefile,v 1.292 2003/07/02 13:31:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.292 2003/07/02 13:31:07 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -146,7 +146,6 @@ SUBDIR+=	mhonarc
 SUBDIR+=	mixer.tk
 SUBDIR+=	mopac
 SUBDIR+=	mtf
-SUBDIR+=	multi-aterm
 SUBDIR+=	muse
 SUBDIR+=	mutella
 SUBDIR+=	mutt-devel
