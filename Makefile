@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1269 2004/05/10 09:13:11 arved Exp $
-# $NetBSD: Makefile,v 1.1269 2004/05/10 09:13:11 arved Exp $
+# $Id: Makefile,v 1.1270 2004/05/10 09:33:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1270 2004/05/10 09:33:46 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -610,7 +610,6 @@ SUBDIR+=	ruby-ncurses
 SUBDIR+=	ruby-raggle
 SUBDIR+=	ruby-redcloth
 SUBDIR+=	ruby-syck
-SUBDIR+=	scdp
 SUBDIR+=	scite
 SUBDIR+=	scm
 SUBDIR+=	scponly
