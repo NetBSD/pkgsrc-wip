@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/15 10:29:56 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/15 18:44:26 bmeurer Exp $
 bin/totem
 bin/totem-video-thumbnailer
-etc/gconf/schemas/totem-video-thumbnail.schemas
-etc/gconf/schemas/totem.schemas
 share/application-registry/totem.applications
 share/applications/totem.desktop
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/totem.mo
@@ -33,6 +31,8 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/totem.mo
 share/mime-info/totem.keys
 share/pixmaps/media-player-48.png
+share/gconf/schemas/totem-video-thumbnail.schemas
+share/gconf/schemas/totem.schemas
 share/totem/media-player-48.png
 share/totem/playlist-16.png
 share/totem/playlist-24.png

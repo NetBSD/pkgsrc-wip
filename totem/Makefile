@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/15 10:29:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/15 18:44:25 bmeurer Exp $
 #
 
 DISTNAME=	totem-0.95.1
@@ -21,6 +21,10 @@ USE_X11=		YES
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
+GCONF2_SCHEMAS=		totem-video-thumbnail.schemas
+GCONF2_SCHEMAS+=	totem.schemas
+
+.include "../../devel/GConf2/schemas.mk"
 .include "../../graphics/xine-lib/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

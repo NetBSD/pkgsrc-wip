@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/04/15 18:44:27 bmeurer Exp $
+
+--- data/Makefile.in.orig	Tue Apr 15 20:37:32 2003
++++ data/Makefile.in
+@@ -124,7 +124,7 @@ app_DATA = totem.applications
+ appdir = $(datadir)/application-registry
+ 
+ schema_in_files = totem.schemas.in totem-video-thumbnail.schemas.in
+-schemadir = $(sysconfdir)/gconf/schemas
++schemadir = @GCONF_SCHEMA_FILE_DIR@
+ schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+ 
+ EXTRA_DIST = $(stuff_DATA) $(desktop_in_files) $(keys_DATA) $(app_DATA) $(schema_in_files) lirc_example schemas.sh
