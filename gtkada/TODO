@@ -8,4 +8,4 @@ gnatlink -o gate-in.exe -L. -lgtkada -Wl,-R/usr/pkg/lib -Wl,--export-dynamic -L/
   this error message means that __enable_execute_stack is being called
   from a shared library. The library, libgcc.a, is a static
   library. The procedure, __enable_execute_stack, is called as part of
-  it's initialialization.
+  its initialialization.

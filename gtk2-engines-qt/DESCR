@@ -1,4 +1,4 @@
-This GTK theme engine uses the currently selected QT style to do it's
+This GTK theme engine uses the currently selected QT style to do its
 drawing. Basically, it makes your GTK apps look like QT ones :)
 
 Currently the code is very buggy and incomplete - a few widgets do not yet

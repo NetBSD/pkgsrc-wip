@@ -1,6 +1,6 @@
-$Id: TODO,v 1.1 2003/11/08 14:32:52 mpasternak Exp $
+$Id: TODO,v 1.2 2004/01/17 20:15:45 blef Exp $
 
-py-twisted should install it's binaries (bin/*) with
+py-twisted should install its binaries (bin/*) with
 ${PYVERSSUFFIX} appended. Like eg. devel/py-checker does. That way
 py-twisted could be installed for different python versions at the same
 time.
