@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.631 2003/11/20 04:51:41 grantbeattie Exp $
-# $NetBSD: Makefile,v 1.631 2003/11/20 04:51:41 grantbeattie Exp $
+# $Id: Makefile,v 1.632 2003/11/20 17:03:03 mpasternak Exp $
+# $NetBSD: Makefile,v 1.632 2003/11/20 17:03:03 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -407,6 +407,7 @@ SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-Py2Play
 SUBDIR+=	py-PythonDirector
 SUBDIR+=	py-Quotient
+SUBDIR+=	py-Reverend
 SUBDIR+=	py-RXP
 SUBDIR+=	py-Soya
 SUBDIR+=	py-ZODB
