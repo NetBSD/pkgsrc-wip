@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/26 14:57:25 poppnk Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/01 21:47:44 adrian_p Exp $
 #
 
 DISTNAME=       amap-4.7
@@ -12,6 +12,8 @@ COMMENT=        Applications and Services scanner
 USE_BUILDLINK3=	YES
 HAS_CONFIGURE=	YES
 
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/amap ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/amapcrap ${PREFIX}/bin
@@ -21,21 +23,18 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/appdefs.resp ${PREFIX}/share/amap
 	${INSTALL_DATA} ${WRKSRC}/appdefs.rpc ${PREFIX}/share/amap
 
-SUBST_CLASSES=appdef man pfx
+SUBST_CLASSES=		loc conf
+SUBST_FILES.loc=	amap.h
+SUBST_STAGE.loc=	pre-configure
+SUBST_SED.loc=		-e 's|/usr/local|${PREFIX}|g' \
+			-e 's|AMAP_PREFIX\"/bin\"|\"${PREFIX}/bin\"|g'
+SUBST_MESSAGE.loc=	"Fixing program file locations."
 
-SUBST_FILES.appdef=amap.h
-SUBST_STAGE.appdef=post-configure
-SUBST_SED.appdef=-e 's|/bin|/share/amap|g'
-
-# XXX it must use CONFIGURE_ARGS+=--prefix=${PREFIX}
-SUBST_FILES.man=configure
-SUBST_STAGE.man=pre-configure
-SUBST_SED.man=-e 's|@PREFIX@|${PREFIX}|g' \
-	-e 's|@MANDIR@|${PREFIX}/man|g'
-
-SUBST_FILES.pfx=amap.h
-SUBST_STAGE.pfx=pre-configure
-SUBST_SED.pfx=-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_FILES.conf=	configure
+SUBST_STAGE.conf=	pre-configure
+SUBST_SED.conf=		-e 's|@PREFIX@|${PREFIX}|g' \
+			-e 's|@MANDIR@|${PREFIX}/man|g'
+SUBST_MESSAGE.conf=	"Fixing configure script."
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
