@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.469 2003/09/17 18:41:47 xtraeme Exp $
-# $NetBSD: Makefile,v 1.469 2003/09/17 18:41:47 xtraeme Exp $
+# $Id: Makefile,v 1.470 2003/09/17 18:50:59 xtraeme Exp $
+# $NetBSD: Makefile,v 1.470 2003/09/17 18:50:59 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -391,6 +391,7 @@ SUBDIR+=	umix
 SUBDIR+=	vba
 SUBDIR+=	vcdgear
 SUBDIR+=	vixie-cron
+SUBDIR+=	vlc
 SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
 SUBDIR+=	vte
