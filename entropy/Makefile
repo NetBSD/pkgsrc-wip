@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/10/18 14:50:14 tvierling Exp $
+# $NetBSD: Makefile,v 1.23 2003/10/21 21:06:13 tvierling Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -12,19 +12,19 @@ MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://entropy.stop1984.com/
 COMMENT=		Anonymous peer-to-peer networking node (similar to Freenet)
 
+NOT_FOR_PLATFORM=	NetBSD-1.6Z*-*
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 
-ENTROPY_VERSION=	0.5.9-346
+ENTROPY_VERSION=	0.5.9-347
 
 CONFIGURE_ARGS+=	--enable-verbose
 
 post-patch:
 	${SED} -e '/^# /!s/^#//' <${WRKSRC}/seed.txt-dist >${WRKSRC}/seed.txt
-	${RM} -f -r ${WRKSRC}/node/my0812.bdf.gz*
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/entropy ${PREFIX}/bin/entropy
@@ -37,7 +37,7 @@ do-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-# "monolithic" is somehow broken at the moment
+# tree is most efficient on *ix; can also be "monolithic" or "mysql"
 ENTROPY_STORE_TYPE?=	tree
 
 .if ${ENTROPY_STORE_TYPE} == "tree"
