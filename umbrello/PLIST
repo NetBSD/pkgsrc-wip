@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/05 20:32:25 marc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/10 11:13:39 marc Exp $
 bin/umbrello
 lib/libcodegenerator.la
 lib/libcodegenerator.so
@@ -203,9 +203,9 @@ share/kde/mimelnk/application/x-uml.desktop
 @dirrm share/doc/kde/HTML/sk/umbrello
 @comment @dirrm share/doc/kde/HTML/sk
 @dirrm share/doc/kde/HTML/en/umbrello/pics
-@comment @dirrm share/doc/kde/HTML/en/umbrello
-@dirrm share/doc/kde/HTML/en
-@comment @dirrm share/doc/kde/HTML/de/umbrello/pics
+@dirrm share/doc/kde/HTML/en/umbrello
+@comment @dirrm share/doc/kde/HTML/en
+@dirrm share/doc/kde/HTML/de/umbrello/pics
 @dirrm share/doc/kde/HTML/de/umbrello
 @comment @dirrm share/doc/kde/HTML/de
 @comment @dirrm share/doc/kde/HTML
