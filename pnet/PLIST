@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/18 16:46:50 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.1.1.2 2003/10/29 15:52:29 poppnk Exp $
 bin/al
+bin/cli-unknown-ar
+bin/cli-unknown-gcc
+bin/cli-unknown-ranlib
+bin/cli-unknown-size
+bin/cli-unknown-strip
 bin/clrwrap
 bin/csant
 bin/cscc
@@ -7,20 +12,20 @@ bin/csdoc
 bin/csdoc2hier
 bin/csdoc2html
 bin/csdoc2texi
+bin/cssrc2html
 bin/ilalink
 bin/ilasm
 bin/ildasm
-bin/ildb
 bin/ildd
-bin/ildiff
 bin/ilfind
 bin/ilheader
 bin/ilnative
+bin/ilranlib
 bin/ilrun
 bin/ilsize
+bin/ilstrip
 bin/ilverify
 bin/resgen
-bin/treecc
 include/pnet/ffi.h
 include/pnet/ffi_mips.h
 include/pnet/fficonfig.h
@@ -58,13 +63,6 @@ include/pnet/il_xml.h
 include/pnet/leak_detector.h
 @unexec install-info --delete
 info/pnettools.info
-info/pnettools.info-1
-info/pnettools.info-2
-info/pnettools.info-3
-info/pnettools.info-4
-info/treecc.info
-info/treecc.info-1
-info/treecc.info-2
 @exec install-info
 lib/cscc/plugins/cscc-b
 lib/cscc/plugins/cscc-bf
@@ -88,25 +86,26 @@ lib/pnet/libgc.so
 lib/pnet/libgc.so.1
 lib/pnet/libgc.so.1.2
 man/man1/clrwrap.1
+man/man1/csant.1
 man/man1/cscc.1
 man/man1/csdoc.1
 man/man1/csdoc2hier.1
 man/man1/csdoc2html.1
 man/man1/csdoc2texi.1
+man/man1/cssrc2html.1
 man/man1/ilalink.1
 man/man1/ilasm.1
 man/man1/ildasm.1
-man/man1/ildb.1
 man/man1/ildd.1
-man/man1/ildiff.1
 man/man1/ilfind.1
 man/man1/ilheader.1
 man/man1/ilnative.1
+man/man1/ilranlib.1
 man/man1/ilrun.1
 man/man1/ilsize.1
+man/man1/ilstrip.1
+man/man1/ilverify.1
 man/man1/resgen.1
-man/man1/treecc.1
 @dirrm lib/pnet
 @dirrm lib/cscc/plugins
-@dirrm lib/cscc
 @dirrm include/pnet
