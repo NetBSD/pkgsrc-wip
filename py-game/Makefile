@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/11/18 00:54:40 marc Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/06 17:15:52 mpasternak Exp $
 #
 
 DISTNAME=		pygame-1.6
@@ -12,15 +12,15 @@ COMMENT=		Set of Python modules designed for writing games
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 PYTHON_VERSIONS_ACCEPTED= 23 23pth 22 22pth
 
-.include "../../audio/SDL_mixer/buildlink2.mk"
-.include "../../devel/SDL_ttf/buildlink2.mk"
-.include "../../devel/smpeg/buildlink2.mk"
-.include "../../graphics/SDL_image/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../devel/smpeg/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../math/py-Numeric/buildlink2.mk"
+.include "../../math/py-Numeric/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
