@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/16 09:46:56 xtraeme Exp $
-bin/vls
-bin/vlsd
-lib/videolan/vls/dvdreader.so
-share/examples/vls/vls.cfg
-@dirrm share/examples/vls
-@dirrm lib/videolan/vls
