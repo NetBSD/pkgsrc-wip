@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.4 2004/03/14 19:56:21 mpasternak Exp $
-# $Id: Makefile.common,v 1.4 2004/03/14 19:56:21 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/03/15 10:17:12 mpasternak Exp $
+# $Id: Makefile.common,v 1.5 2004/03/15 10:17:12 mpasternak Exp $
 #
 # (C) 2004 Michal Pasternak <dotz@irc.pl>
 
@@ -10,6 +10,12 @@
 SLACKWARE_MASTER_SITES= \
 	ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/${SLACK_GROUP}/ \
 	ftp://sunsite.icm.edu.pl/pub/linux/slackware/slackware-current/slackware/${SLACK_GROUP}/
+
+#
+# All slackware packages are .tgz
+#
+
+EXTRACT_SUFX?=		.tgz
 
 #
 # SLACK_GROUP is a Slackware directory (on site), where .tgz exists
