@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/11/27 15:43:17 mpasternak Exp $
+$NetBSD: distinfo,v 1.3 2003/11/27 15:47:49 mpasternak Exp $
 
 SHA1 (GKT2-Quantumcurve.tar.gz) = 95812eb59ba2a41c3b01221f05f15c8e4bf6cbf0
 Size (GKT2-Quantumcurve.tar.gz) = 1276 bytes
@@ -202,4 +202,4 @@ SHA1 (GTK2-red-onion.tar.gz) = ef6876be977f257808e66639084fa429451ea5df
 Size (GTK2-red-onion.tar.gz) = 12163 bytes
 SHA1 (GTK2-yglacier.tgz) = 054d57bef6d1573412d77194c8e9bebe38e83cb2
 Size (GTK2-yglacier.tgz) = 18537 bytes
-SHA1 (patch-aa) = ef83336436bddf52bdd027887af69e481d47eaa8
+SHA1 (patch-aa) = 360dbc4530c259f09a70c23e2bcf45fb17dcc075
