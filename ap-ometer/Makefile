@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/27 12:00:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 16:42:25 xtraeme Exp $
 #
 
 DISTNAME=	mod_ometer-1.2.0
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/mod_/ap-/}
 CATEGORIES=	www
 MASTER_SITES=	http://www.umich.edu/~umweb/downloads/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://www.umich.edu/~umweb/software/mod_ometer.html
 COMMENT=	Web counter apache module
 
