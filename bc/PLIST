@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/22 16:39:14 xtraeme Exp $
-bin/bc
-bin/dc
-man/man1/bc.1
-man/man1/dc.1
-info/bc.info
-info/dc.info
