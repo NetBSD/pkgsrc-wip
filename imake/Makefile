@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/25 19:10:37 blef Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/25 19:24:37 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
@@ -22,6 +22,8 @@ NO_XFREE86_TARGETS=	# defined
 DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	flex-[0-9]*:../../devel/flex
 .endif
+
+.include "../../wip/XFree86/Makefile.common"
 
 post-extract:
 .for F in ${SYSTEMS}
@@ -58,5 +60,4 @@ do-build:
 	${MAKE} -f xmakefile VerifyOS version.def \
 		Makefiles includes )
 
-.include "../../wip/XFree86/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
