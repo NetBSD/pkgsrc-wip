@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.83 2003/04/14 10:37:55 xtraeme Exp $
-# $NetBSD: Makefile,v 1.83 2003/04/14 10:37:55 xtraeme Exp $
+# $Id: Makefile,v 1.84 2003/04/14 11:28:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.84 2003/04/14 11:28:09 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -84,5 +84,7 @@ SUBDIR+=	tsclient
 SUBDIR+=	dovecot
 SUBDIR+=	directfb
 SUBDIR+=	geeklog
+SUBDIR+=	lpe
+SUBDIR+=	gdrdao
 
 .include "../mk/bsd.pkg.subdir.mk"
