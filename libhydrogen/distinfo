@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/17 15:32:25 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/09/24 12:33:52 xtraeme Exp $
 
 SHA1 (libhydrogen-0.8.0.tar.gz) = 4f43b81653144ed4ade9df2e538259cf4289e3db
 Size (libhydrogen-0.8.0.tar.gz) = 767576 bytes
+SHA1 (patch-aa) = f0416cedb3b9a4df2979ca4075472223b444b242
