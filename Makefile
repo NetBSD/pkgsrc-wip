@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.29 2003/04/05 15:31:11 adrian_p Exp $
-# $NetBSD: Makefile,v 1.29 2003/04/05 15:31:11 adrian_p Exp $
+# $Id: Makefile,v 1.30 2003/04/05 15:42:59 virtus Exp $
+# $NetBSD: Makefile,v 1.30 2003/04/05 15:42:59 virtus Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -16,12 +16,14 @@ SUBDIR+=	httrack
 SUBDIR+=	ike-scan
 SUBDIR+=	ion-devel
 SUBDIR+=	ion-dock
+SUBDIR+=	ircservices
 SUBDIR+=	nvtv
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Net-Jabber
 SUBDIR+=	p5-Time
 SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-XML-Stream
+SUBDIR+=	perltidy
 SUBDIR+=	poedit
 SUBDIR+=	py-csv
 SUBDIR+=	pyPgSQL
