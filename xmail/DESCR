@@ -1,0 +1,11 @@
+XMail is an Internet and intranet mail server featuring an SMTP server,
+POP3 server, finger server, multiple domains, no need for users to have
+a real system account, SMTP relay checking, RBL/RSS/ORBS/DUL and custom
+( IP based and address based ) spam protection, SMTP authentication
+( PLAIN LOGIN CRAM-MD5 POP3-before-SMTP and custom ), a POP3 account
+syncronizer with external POP3 accounts, account aliases, domain
+aliases, custom mail processing, direct mail files delivery, custom mail
+filters, mailing lists, remote administration, custom mail exchangers,
+logging, and multi-platform code. XMail sources compile under GNU/Linux,
+FreeBSD, OpenBSD, Solaris and NT/2K/XP. Read the file README.TXT
+included with the distribution.
