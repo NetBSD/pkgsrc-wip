@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1661 2005/02/24 13:06:33 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1661 2005/02/24 13:06:33 adrian_p Exp $
+# $Id: Makefile,v 1.1662 2005/02/25 00:23:01 daprice Exp $
+# $NetBSD: Makefile,v 1.1662 2005/02/25 00:23:01 daprice Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -15,12 +15,16 @@ SUBDIR+=	PyPanel
 SUBDIR+=	Pythonol
 SUBDIR+=	R-CGIwithR
 SUBDIR+=	R-DAAG
+SUBDIR+=	R-GRASS
+SUBDIR+=	R-ISwR
 SUBDIR+=	R-PHYLOGR
 SUBDIR+=	R-R2HTML
 SUBDIR+=	R-RArcInfo
+SUBDIR+=	R-Rcmdr
 SUBDIR+=	R-Rdbi
 SUBDIR+=	R-Rdbi.PgSQL
 SUBDIR+=	R-Rserve
+SUBDIR+=	R-VR
 SUBDIR+=	R-chron
 SUBDIR+=	R-date
 SUBDIR+=	R-genetics
@@ -29,6 +33,7 @@ SUBDIR+=	R-httpRequest
 SUBDIR+=	R-hwde
 SUBDIR+=	R-lmm
 SUBDIR+=	R-mapproj
+SUBDIR+=	R-maps
 SUBDIR+=	R-pixmap
 SUBDIR+=	R-sgeostat
 SUBDIR+=	R-shapefiles
@@ -66,6 +71,7 @@ SUBDIR+=	ap2-python
 SUBDIR+=	apachebench2
 SUBDIR+=	apstget
 SUBDIR+=	argouml
+SUBDIR+=	arka
 SUBDIR+=	artemis
 SUBDIR+=	asfrecorder
 SUBDIR+=	asterisk
