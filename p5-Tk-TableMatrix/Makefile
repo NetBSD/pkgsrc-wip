@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/29 13:56:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/16 15:45:56 jmmv Exp $
 #
 
 DISTNAME=	Tk-TableMatrix-1.01
@@ -11,10 +11,12 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.cpan.org/
 COMMENT=	Table/Matrix widget extension to Perl/Tk
 
-DEPENDS+=	p5-Tk>=800.024:../../x11/p5-Tk
-
+USE_BUILDLINK2=		YES
 USE_X11=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Tk/TableMatrix/.packlist
 
+CPPFLAGS+=		${BUILDLINK_CPPFLAGS.p5-Tk}
+
 .include "../../lang/perl5/module.mk"
+.include "../../x11/p5-Tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
