@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/09 17:17:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/09 20:01:52 xtraeme Exp $
 
-PKGNAME=		${DISTNAME:S/-/-server-/}
+PKGNAME=		${DISTNAME:S/-/4-server-/}
 SVR4_PKGNAME=		mysqs
 COMMENT=		MySQL, a free SQL database (server)
 
-.include "../mysql-client/Makefile.common"
+.include "../mysql4-client/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-libwrap
 CONFIGURE_ARGS+=	--without-berkeley-db
@@ -12,26 +12,9 @@ USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 USE_GMAKE=		YES
 
-ONLY_FOR_PLATFORM=	SunOS-*-sparc Linux-*-*
+PTHREAD_OPTS=		require
 
-# on NetBSD, if native threads are not available, hardwire
-# included mit-pthreads, as this doesn't yet work properly with pth
-.if ${OPSYS} == "NetBSD"
-.  if exists(/usr/include/pthread.h)
-
-# native pthreads
-ONLY_FOR_PLATFORM+=	NetBSD-*-*
-.  else
-
-# force included mit-pthreads
-CONFIGURE_ARGS+=	--with-mit-threads
-
-# platforms on which included mit-pthreads is usable
-ONLY_FOR_PLATFORM+=	NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
-			NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-m68k	\
-			NetBSD-*-powerpc
-.  endif
-.endif
+CONFIGURE_ARGS+=	--with-pthreads
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 
@@ -65,7 +48,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/mysqld_safe.1 ${PREFIX}/man/man1
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
-.include "../../databases/mysql-client/buildlink2.mk"
+.include "../../wip/mysql4-client/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"
-
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
