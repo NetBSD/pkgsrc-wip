@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/19 18:04:49 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/06/08 00:31:35 xtraeme Exp $
 
-SHA1 (matchbox-panel-0.8.tar.bz2) = 2a324dac44f75069e34509e5b035c93107f29b9b
-Size (matchbox-panel-0.8.tar.bz2) = 151157 bytes
-SHA1 (patch-aa) = 8947ca6ec9612020c9ff57395c5123c4b123adda
+SHA1 (matchbox-panel-0.8.1.tar.bz2) = 4e8832d9e8a1b93f70a79e4730a195fd491d591a
+Size (matchbox-panel-0.8.1.tar.bz2) = 152532 bytes
+SHA1 (patch-aa) = f2085259dbcf93c4f22ee07e2dfbeb10db497c2a
 SHA1 (patch-ab) = 9f068959f73a27c51252cde792ceed4d229eeaea

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/19 18:04:49 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/08 00:31:35 xtraeme Exp $
 bin/matchbox-panel
 bin/mb-applet-clock
 bin/mb-applet-launcher
@@ -29,3 +29,5 @@ share/pixmaps/signal-1-40.png
 share/pixmaps/signal-41-60.png
 share/pixmaps/signal-61-80.png
 share/pixmaps/signal-81-100.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/applications
