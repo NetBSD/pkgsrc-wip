@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/07/27 10:37:57 marc Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/28 08:43:22 marc Exp $
 bin/cyradm
 bin/imtest
 bin/installsieve
@@ -157,16 +157,6 @@ share/examples/cyrus-imapd/prefork.conf
 share/examples/cyrus-imapd/small.conf
 @dirrm share/examples/cyrus-imapd
 @dirrm share/doc/html/cyrus-imapd
-@dirrm lib/perl5/site_perl/man/man3
-@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/SIEVE/managesieve
-@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/SIEVE
-@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/IMAP
-@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus
-@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto
-@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/Cyrus/SIEVE
-@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/Cyrus/IMAP
-@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}/Cyrus
-@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}
 @dirrm include/cyrus
 @dirrm cyrus/bin
 @dirrm cyrus
