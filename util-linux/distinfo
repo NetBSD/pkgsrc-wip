@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/01 22:53:38 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2004/04/01 10:16:42 jeremy-c-reed Exp $
 
 SHA1 (util-linux-2.11z.tar.bz2) = 6b48b47540bcb18e71928c258161a4d1aa34bd16
 Size (util-linux-2.11z.tar.bz2) = 1266784 bytes
-SHA1 (patch-aa) = f83f8a8856e468fd7455ce7c1706e353c38fbf4d
+SHA1 (patch-aa) = 29cfb203f66ac691f08880700e4f753e5f24f967
 SHA1 (patch-ab) = 058439aaa2db18e5bcbebf3522315086d2c4060e
+SHA1 (patch-ac) = c4393fe87351173ee2e42bb90b6f1825d0b9a742
+SHA1 (patch-ad) = b65ae76fecb76e508753ecbc22bf7e9e8a69d871

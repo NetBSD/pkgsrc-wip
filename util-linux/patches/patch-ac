@@ -1,0 +1,28 @@
+$NetBSD: patch-ac,v 1.1 2004/04/01 10:16:37 jeremy-c-reed Exp $
+http://lists.ibiblio.org/pipermail/sm-discuss/2004-January/005086.html
+http://www.ece.cmu.edu/~rholzer/cryptoloop/util-linux-2.12-kernel-2.6.patch
+
+--- disk-utils/blockdev.c.orig	2002-03-08 14:57:02.000000000 -0800
++++ disk-utils/blockdev.c
+@@ -9,6 +9,7 @@
+ #include <string.h>
+ #include <unistd.h>
+ #include <sys/ioctl.h>
++#include <linux/version.h>
+ 
+ #include "nls.h"
+ 
+@@ -24,8 +25,13 @@
+ #define BLKRASET   _IO(0x12,98)
+ #define BLKRAGET   _IO(0x12,99)
+ #define BLKSSZGET  _IO(0x12,104)
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 0)
+ #define BLKBSZGET  _IOR(0x12,112,sizeof(int))
+ #define BLKBSZSET  _IOW(0x12,113,sizeof(int))
++#else
++#define BLKBSZGET  _IOR(0x12,112,int)
++#define BLKBSZSET  _IOW(0x12,113,int)
++#endif
+ #endif
+ 
+ /* Maybe <linux/hdreg.h> could be included */
