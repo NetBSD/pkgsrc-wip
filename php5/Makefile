@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/10 16:59:33 poppnk Exp $
+# $NetBSD: Makefile,v 1.10 2004/05/10 20:02:25 poppnk Exp $
 #
 
 PKGNAME=	php-${PHP5_VERSION}
@@ -8,7 +8,6 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.php.net/
 COMMENT=	PHP Hypertext Preprocessor version 5
 
-CONFLICTS+=	php-[34]*
 USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
@@ -16,7 +15,7 @@ USE_GNU_TOOLS+=	make
 
 CONF_FILES=	${PREFIX}/etc/php.ini
 
-BUILD_DEFS=	USE_INET6
+BUILD_DEFS=	USE_INET6 PHP5_WITHOUT_NETWORK
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/php.ini-recommended \
