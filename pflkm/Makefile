@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/06/14 15:36:04 ppostma Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/21 12:50:23 ppostma Exp $
 
 DISTNAME=		pf-lkm-20040607
 CATEGORIES=		security ipv6
@@ -23,19 +23,9 @@ CONF_FILES=		${PREFIX}/share/examples/${PKGBASE}/pf.conf \
 CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/pf.os \
 			${PKG_SYSCONFDIR}/pf.os
 
-pre-install:
-.if !exists(${PREFIX}/lkm)
-	@${INSTALL_DATA_DIR} ${PREFIX}/lkm
-.endif
-.if !exists(${PREFIX}/include/net)
-	@${INSTALL_DATA_DIR} ${PREFIX}/include/net
-.endif
-.if !exists(${VARBASE}/chroot/pflogd)
-	@${INSTALL_DATA_DIR} ${VARBASE}/chroot/pflogd
-.endif
-.if !exists(${PREFIX}/share/examples/${PKGBASE})
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PKGBASE}
-.endif
+OWN_DIRS=		${PREFIX}/lkm ${VARBASE}/chroot/pflogd
+OWN_DIRS+=		${PREFIX}/share/examples/${PKGBASE}
+MAKE_DIRS=		${PREFIX}/include/net
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/pf.conf \
