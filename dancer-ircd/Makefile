@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2003/04/21 14:55:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2003/04/21 17:59:57 xtraeme Exp $
 #
 
-DISTNAME=	dancer-ircd-1.0.31+maint8
-PKGNAME=	${DISTNAME:S/+maint/m/}
+DISTNAME=	dancer-ircd-1.0.31+maint8-fn6
+PKGNAME=	${DISTNAME:S/+maint8-fn6/m8/}
 CATEGORIES=	chat
-MASTER_SITES=	http://www.doc.ic.ac.uk/~aps100/dancer/dancer-ircd/stable/releases/
+MASTER_SITES=	http://freenode.net/
 
 MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://freenode.net/dancer_ircd.shtml
