@@ -1,4 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/15 14:30:58 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/11/30 17:07:26 xtraeme Exp $
+${MINGW_TARGET}/include/windns.h
+${MINGW_TARGET}/include/dhcpcsdk.h
+${MINGW_TARGET}/include/dxerr8.h
+${MINGW_TARGET}/include/dxerr9.h
+${MINGW_TARGET}/include/errorrep.h
+${MINGW_TARGET}/include/tmschema.h
+${MINGW_TARGET}/include/uxtheme.h
+${MINGW_TARGET}/include/msacm.h
+${MINGW_TARGET}/include/aclui.h
+${MINGW_TARGET}/include/afxres.h
+${MINGW_TARGET}/include/d3d9.h
+${MINGW_TARGET}/include/d3d9types.h
+${MINGW_TARGET}/include/d3d9caps.h
 ${MINGW_TARGET}/include/accctrl.h
 ${MINGW_TARGET}/include/aclapi.h
 ${MINGW_TARGET}/include/basetsd.h
@@ -24,6 +37,7 @@ ${MINGW_TARGET}/include/ddk/ddkmapi.h
 ${MINGW_TARGET}/include/ddk/hidclass.h
 ${MINGW_TARGET}/include/ddk/hidpi.h
 ${MINGW_TARGET}/include/ddk/hidusage.h
+${MINGW_TARGET}/include/ddk/kbdmou.h
 ${MINGW_TARGET}/include/ddk/mcd.h
 ${MINGW_TARGET}/include/ddk/miniport.h
 ${MINGW_TARGET}/include/ddk/minitape.h
@@ -352,5 +366,32 @@ ${MINGW_TARGET}/lib/libws2_32.a
 ${MINGW_TARGET}/lib/libwsnmp32.a
 ${MINGW_TARGET}/lib/libwsock32.a
 ${MINGW_TARGET}/lib/libwst.a
+${MINGW_TARGET}/lib/libaclui.a
+${MINGW_TARGET}/lib/libavicap32.a
+${MINGW_TARGET}/lib/libavifil32.a
+${MINGW_TARGET}/lib/libd3d8.a
+${MINGW_TARGET}/lib/libd3d9.a
+${MINGW_TARGET}/lib/libd3dx8d.a
+${MINGW_TARGET}/lib/libd3dx9d.a
+${MINGW_TARGET}/lib/libdhcpcsvc.a
+${MINGW_TARGET}/lib/libdinput8.a
+${MINGW_TARGET}/lib/libdmoguids.a
+${MINGW_TARGET}/lib/libdnsapi.a
+${MINGW_TARGET}/lib/libdpnaddr.a
+${MINGW_TARGET}/lib/libdpnet.a
+${MINGW_TARGET}/lib/libdpnlobby.a
+${MINGW_TARGET}/lib/libdpvoice.a
+${MINGW_TARGET}/lib/libdxerr8.a
+${MINGW_TARGET}/lib/libdxerr9.a
+${MINGW_TARGET}/lib/libfaultrep.a
+${MINGW_TARGET}/lib/libksproxy.a
+${MINGW_TARGET}/lib/libksuser.a
+${MINGW_TARGET}/lib/libmsdmo.a
+${MINGW_TARGET}/lib/libmsvfw32.a
+${MINGW_TARGET}/lib/libquartz.a
+${MINGW_TARGET}/lib/libstrmiids.a
+${MINGW_TARGET}/lib/libuxtheme.a
 @dirrm ${MINGW_TARGET}/include/GL
 @dirrm ${MINGW_TARGET}/include/ddk
+@dirrm ${MINGW_TARGET}/include
+@dirrm ${MINGW_TARGET}/lib
