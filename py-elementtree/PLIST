@@ -1,16 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/26 14:24:43 marc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/03 11:06:24 marc Exp $
+${PYSITELIB}/elementtree/ElementPath.py
+${PYSITELIB}/elementtree/ElementPath.pyc
+${PYSITELIB}/elementtree/ElementTree.py
+${PYSITELIB}/elementtree/ElementTree.pyc
+${PYSITELIB}/elementtree/HTMLTreeBuilder.py
+${PYSITELIB}/elementtree/HTMLTreeBuilder.pyc
+${PYSITELIB}/elementtree/SimpleXMLTreeBuilder.py
+${PYSITELIB}/elementtree/SimpleXMLTreeBuilder.pyc
+${PYSITELIB}/elementtree/SimpleXMLWriter.py
+${PYSITELIB}/elementtree/SimpleXMLWriter.pyc
+${PYSITELIB}/elementtree/TidyTools.py
+${PYSITELIB}/elementtree/TidyTools.pyc
+${PYSITELIB}/elementtree/XMLTreeBuilder.py
+${PYSITELIB}/elementtree/XMLTreeBuilder.pyc
 ${PYSITELIB}/elementtree/__init__.py
 ${PYSITELIB}/elementtree/__init__.pyc
-${PYSITELIB}/elementtree/elementtree.py
-${PYSITELIB}/elementtree/elementtree.pyc
-${PYSITELIB}/elementtree/htmltreebuilder.py
-${PYSITELIB}/elementtree/htmltreebuilder.pyc
-${PYSITELIB}/elementtree/simplexmltreebuilder.py
-${PYSITELIB}/elementtree/simplexmltreebuilder.pyc
-${PYSITELIB}/elementtree/simplexmlwriter.py
-${PYSITELIB}/elementtree/simplexmlwriter.pyc
-${PYSITELIB}/elementtree/tidytools.py
-${PYSITELIB}/elementtree/tidytools.pyc
-${PYSITELIB}/elementtree/xmltreebuilder.py
-${PYSITELIB}/elementtree/xmltreebuilder.pyc
 @dirrm ${PYSITELIB}/elementtree
