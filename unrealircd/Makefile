@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/03/25 09:49:05 adrian_p Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/25 10:36:06 adrian_p Exp $
 
-DISTNAME=	Unreal3.2.2b
-PKGNAME=	unrealircd-3.2.2b
+DISTNAME=	Unreal3.2.3
+PKGNAME=	unrealircd-3.2.3
 CATEGORIES=	chat
 MASTER_SITES=	http://unreal.atlanti-ka.org/
 
@@ -13,10 +13,13 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 WRKSRC=		${WRKDIR}/Unreal3.2
+TRE_NEEDED=	0.7.2
+
+BUILDLINK_DEPENDS.tre+=	tre>=${TRE_NEEDED}
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ENV+=	tre_version="0.7.0"
+CONFIGURE_ENV+=	tre_version="${TRE_NEEDED}"
 CONFIGURE_ENV+=	TRELIBS="-L${PREFIX}/lib -ltre"
 
 CONFIGURE_ARGS+=	--with-dpath=${IRCD_HOME}
@@ -40,7 +43,7 @@ IRCD_SHARE=	${PREFIX}/share/unrealircd
 IRCD_EG=	${PREFIX}/share/examples/unrealircd
 
 BUILD_DEFS+=	IRCD_SENDQ IRCD_LISTEN IRCD_BUFFER IRCD_USER IRCD_HOST
-BUILD_DEFS+=	IRCD_HOME IRCD_NICKHIST IRCD_FDSIZE IRCD_GROUP 
+BUILD_DEFS+=	IRCD_HOME IRCD_NICKHIST IRCD_FDSIZE IRCD_GROUP
 
 PTHREAD_OPTS=	require
 
@@ -81,13 +84,17 @@ SUBST_MESSAGE.homedir=	"Fixing home directory of IRC server."
 OWN_DIRS_PERMS=		${IRCD_HOME} ${IRCD_USER} ${IRCD_GROUP} 0700
 
 # Do an explicit disable of inet6 as --disable-inet6 does not do the job
-.if empty(PKG_OPTIONS:Minet6)         
-CONFIGURE_ENV+=		ac_cv_ip6=no  
+.if empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ENV+=		ac_cv_ip6=no
 .endif
 
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=YES
 .endif
+
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../wip/tre/buildlink3.mk"
 
 do-install:
 	${INSTALL_DATA_DIR} ${IRCD_SHARE}
@@ -116,9 +123,6 @@ do-install:
 		${PREFIX}/share/doc/html/unrealircd
 
 	${INSTALL_DATA} ${WRKSRC}/doc/example.conf ${IRCD_EG}
-	${INSTALL_DATA} ${WRKSRC}/doc/example.settings ${IRCD_EG}
+	#${INSTALL_DATA} ${WRKSRC}/doc/example.settings ${IRCD_EG}
 
-.include "../../devel/pkgconfig/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-.include "../../wip/tre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

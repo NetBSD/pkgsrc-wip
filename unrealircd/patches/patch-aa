@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.4 2004/11/04 17:25:00 adrian_p Exp $
+$NetBSD: patch-aa,v 1.5 2005/03/25 10:36:06 adrian_p Exp $
 
---- configure.orig	2004-11-03 10:15:28.000000000 +0000
-+++ configure	2004-11-03 10:17:52.000000000 +0000
-@@ -10184,39 +10184,6 @@
+--- configure.orig	2005-03-25 09:51:47.000000000 +0000
++++ configure
+@@ -10614,39 +10614,6 @@ IRCDLIBS="$IRCDLIBS -lresolv "
  ;;
  esac
  
--tre_version="0.7.0"
+-tre_version="0.7.2"
 -echo "$as_me:$LINENO: result: extracting TRE regex library" >&5
 -echo "${ECHO_T}extracting TRE regex library" >&6
 -cur_dir=`pwd`

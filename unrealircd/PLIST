@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/29 23:38:40 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/03/25 10:36:06 adrian_p Exp $
 sbin/ircd
+share/doc/html/unrealircd/unreal32docs.html
 share/doc/unrealircd/Authors
 share/doc/unrealircd/LICENSE
 share/doc/unrealircd/coding-guidelines
 share/doc/unrealircd/tao.of.irc
-share/doc/html/unrealircd/unreal32docs.html
 share/examples/unrealircd/example.conf
-share/examples/unrealircd/example.settings
 share/unrealircd/aliases/aliases.conf
 share/unrealircd/aliases/anope.conf
 share/unrealircd/aliases/auspice.conf
@@ -28,6 +27,7 @@ share/unrealircd/modules/m_admin.so
 share/unrealircd/modules/m_adminchat.so
 share/unrealircd/modules/m_akill.so
 share/unrealircd/modules/m_away.so
+share/unrealircd/modules/m_botmotd.so
 share/unrealircd/modules/m_chatops.so
 share/unrealircd/modules/m_chghost.so
 share/unrealircd/modules/m_chgident.so
@@ -44,6 +44,7 @@ share/unrealircd/modules/m_help.so
 share/unrealircd/modules/m_htm.so
 share/unrealircd/modules/m_invite.so
 share/unrealircd/modules/m_ison.so
+share/unrealircd/modules/m_join.so
 share/unrealircd/modules/m_kick.so
 share/unrealircd/modules/m_kill.so
 share/unrealircd/modules/m_knock.so
@@ -51,12 +52,18 @@ share/unrealircd/modules/m_lag.so
 share/unrealircd/modules/m_links.so
 share/unrealircd/modules/m_list.so
 share/unrealircd/modules/m_locops.so
+share/unrealircd/modules/m_lusers.so
 share/unrealircd/modules/m_map.so
 share/unrealircd/modules/m_message.so
 share/unrealircd/modules/m_mkpasswd.so
+share/unrealircd/modules/m_mode.so
+share/unrealircd/modules/m_motd.so
 share/unrealircd/modules/m_nachat.so
 share/unrealircd/modules/m_netinfo.so
+share/unrealircd/modules/m_nick.so
 share/unrealircd/modules/m_oper.so
+share/unrealircd/modules/m_opermotd.so
+share/unrealircd/modules/m_part.so
 share/unrealircd/modules/m_pass.so
 share/unrealircd/modules/m_pingpong.so
 share/unrealircd/modules/m_protoctl.so
@@ -101,15 +108,17 @@ share/unrealircd/modules/m_tsctl.so
 share/unrealircd/modules/m_umode2.so
 share/unrealircd/modules/m_undccdeny.so
 share/unrealircd/modules/m_unkline.so
+share/unrealircd/modules/m_user.so
+share/unrealircd/modules/m_userip.so
 share/unrealircd/modules/m_unsqline.so
 share/unrealircd/modules/m_unzline.so
 share/unrealircd/modules/m_userhost.so
 share/unrealircd/modules/m_vhost.so
 share/unrealircd/modules/m_wallops.so
+share/unrealircd/modules/m_watch.so
 share/unrealircd/modules/m_who.so
 share/unrealircd/modules/m_whois.so
 share/unrealircd/modules/m_whowas.so
-share/unrealircd/modules/oldcloak.so
 share/unrealircd/networks/awesomechristians.network
 share/unrealircd/networks/axenet.network
 share/unrealircd/networks/bunker7.network
