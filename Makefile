@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1590 2004/12/29 20:08:44 kristerw Exp $
-# $NetBSD: Makefile,v 1.1590 2004/12/29 20:08:44 kristerw Exp $
+# $Id: Makefile,v 1.1591 2004/12/29 20:12:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.1591 2004/12/29 20:12:25 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -186,7 +186,6 @@ SUBDIR+=	emboss-phylip
 SUBDIR+=	emboss-topo
 SUBDIR+=	embryo
 SUBDIR+=	emirror
-SUBDIR+=	epeg
 SUBDIR+=	epplets
 SUBDIR+=	ethtool
 SUBDIR+=	etpan-ng
@@ -416,6 +415,7 @@ SUBDIR+=	liblingoteach
 SUBDIR+=	libmatchbox
 SUBDIR+=	libnet11
 SUBDIR+=	libneural
+SUBDIR+=	libpano12
 SUBDIR+=	libpcap-latest
 SUBDIR+=	libprelude
 SUBDIR+=	libpusb
