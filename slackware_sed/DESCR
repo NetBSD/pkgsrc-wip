@@ -1,0 +1,6 @@
+sed (stream editor)
+
+This is the GNU version of sed, a stream editor.  A stream editor is
+used to perform basic text transformations on an input stream (a file
+or input from a pipeline).  It is sed's ability to filter text in a
+pipeline which distinguishes it from other types of editors.
