@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.159 2003/05/14 03:55:24 lsed Exp $
-# $NetBSD: Makefile,v 1.159 2003/05/14 03:55:24 lsed Exp $
+# $Id: Makefile,v 1.160 2003/05/14 04:29:18 lsed Exp $
+# $NetBSD: Makefile,v 1.160 2003/05/14 04:29:18 lsed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -28,7 +28,6 @@ SUBDIR+=	dancer-ircd
 SUBDIR+=	devhelp
 SUBDIR+=	dircproxy
 SUBDIR+=	directfb
-SUBDIR+=	dovecot
 SUBDIR+=	drweb
 SUBDIR+=	emirror
 SUBDIR+=	ezbounce
