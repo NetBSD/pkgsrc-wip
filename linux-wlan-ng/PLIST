@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/13 13:40:22 poppnk Exp $
+etc/wlan/prism2_af.hex
+etc/wlan/prism2_ak.hex
+etc/wlan/prism2_pm.hex
+etc/wlan/prism2_r1.hex
+etc/wlan/prism2_rf.hex
+etc/wlan/prism2_ru.hex
+etc/wlan/prism2_ssf.pda
+sbin/nwepgen
+sbin/prism2dl
+sbin/wlancfg
+sbin/wlanctl-ng
+sbin/wland
+@dirrm etc/wlan

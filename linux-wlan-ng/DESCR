@@ -1,0 +1,7 @@
+The linux-wlan package is a linux device driver and subsystem
+package that is intended to provide the full range of IEEE 802.11 MAC
+management capabilities for use in user-mode utilities and scripts.
+The package currently supports the Intersil 802.11b Prism2, Prism2.5,
+and Prism3 reference designs for PCMCIA, PCI, and USB.  Additionally,
+the package includes support for PLX9052 based PCI to PCMCIA adapter
+with a few different PCMCIA cards.
