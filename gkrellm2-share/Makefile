@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2003/06/07 12:54:58 cubidou Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/15 05:00:47 cubidou Exp $
 .include "../../wip/gkrellm2/Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm-share
-WRKSRC=			${GKRELLM_SRCDIR}/po
 
-COMMENT=		gkrellm2 locale files
+COMMENT=		GKrellM2 locale files
 CONFLICTS=		gkrellm-1*
 
 BUILD_USES_MSGFMT=	YES
+
+MAKE_ENV+=		MODULES=po
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gkrellm2
