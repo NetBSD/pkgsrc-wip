@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/04/22 16:46:04 mpasternak Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/23 20:34:57 hubertf Exp $
 
---- packages/xpce/Makefile.in.orig	Mon Oct  6 08:15:06 2003
-+++ packages/xpce/Makefile.in
-@@ -4,7 +4,7 @@
- # See also ./configure
- ################################################################
- 
--MAKE=@MAKE@
-+MAKE=gmake
- BUILDARCH=@BUILDARCH@
- 
- all::
+--- src/configure.orig	Tue Apr 16 10:03:45 2002
++++ src/configure	Wed May  1 19:21:58 2002
+@@ -978,7 +978,7 @@
+ EXTRAOBJ=""
+ EXTRAHDR=""
+ INSTALLTARGET=dv-install
+-PL=pl
++#PL=pl
+ PLLIB=libpl.a
+ RT=""
+ PLVERSION=`cat ../VERSION`

@@ -1,14 +1,22 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/04/22 16:46:04 mpasternak Exp $
+$NetBSD: patch-af,v 1.2 2004/04/23 20:34:57 hubertf Exp $
 
---- src/pl-xterm.c.orig	Thu Apr 22 16:35:01 2004
-+++ src/pl-xterm.c
-@@ -27,7 +27,8 @@
- #endif
+--- packages/xpce/src/Makefile.in.orig	Sat Jan 17 18:28:41 2004
++++ packages/xpce/src/Makefile.in
+@@ -88,7 +88,7 @@ NETLIBS=@NETLIBS@
+ XLIBS=@XLIBS@
+ LDFLAGS=-L$(XLIB) @LDFLAGS@
+ GCCLIB=@GCCLIB@
+-LDSOFLAGS=@LDSOFLAGS@ -L$(XLIB)
++LDSOFLAGS=@LDSOFLAGS@ -L$(XLIB) -Wl,-R${XLIB} -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
+ SOEXTRAOBJ=@SOEXTRAOBJ@
+ SO=@SO@
+ VWS=@VWS@
+@@ -107,7 +107,7 @@ LIBS= $(XLIBS) $(NETLIBS) -lm
  
- #include "pl-incl.h"
--#if defined(HAVE_GRANTPT) && defined(O_PLMT)
-+#if defined(HAVE_GRANTPT) && defined(O_PLMT) \
-+     && !defined(__FreeBSD__) /* grantpt is borked on freebsd up to 5.2.1-rc */
+ COFLAGS=@COFLAGS@
+ CWFLAGS=@CWFLAGS@
+-CIFLAGS=-I. -I$(srcdir) @CIFLAGS@
++CIFLAGS=-I. -I$(srcdir) @CIFLAGS@ -I${LOCALBASE}/include
+ CMFLAGS=@CMFLAGS@ @DEFS@
+ CFLAGS=$(CWFLAGS) $(COFLAGS) $(CIFLAGS) $(CMFLAGS)
  
- /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
- Open an alternative  xterm-console.  Used   to  support  multi-threading

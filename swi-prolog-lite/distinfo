@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.2 2004/04/22 17:13:59 mpasternak Exp $
+$NetBSD: distinfo,v 1.3 2004/04/23 20:34:57 hubertf Exp $
 
 SHA1 (swi-prolog/pl-5.2.13.tar.gz) = 2c13a65698e0de72e84132f929f5377306c65453
 Size (swi-prolog/pl-5.2.13.tar.gz) = 7122170 bytes
-SHA1 (patch-aa) = c96d54bb05a743b7e1569a082a243e9b31b46d14
-SHA1 (patch-ab) = 96308e7320edf9ad3e44f12dae0d6562bdcd21ad
-SHA1 (patch-ac) = d5aea5c56bb92f171fa4d99ee53f5e284acdc50e
-SHA1 (patch-ad) = a2bf53b8de6ec17adebf41159bec952a5214f960
-SHA1 (patch-ae) = b70c0964a2e34c71132af2c761f046b8fbba8317
-SHA1 (patch-af) = 3bfc13a920e0f3a79e6764a9ace89032989e2c67
+SHA1 (patch-aa) = 2b6164ed8cc4398c1e7cc2662016e202f61e51f2
+SHA1 (patch-ab) = 66576bfd1c48a9501070308b8925f1cf4ff0bb37
+SHA1 (patch-ac) = 909331edb76b5d0ce5003d86775524cd29e22a79
+SHA1 (patch-ad) = 194e2ef8d8af03e63b7398f61a705d75b14677b5
+SHA1 (patch-ae) = 41f52217706600aac46f8992b15682024b3b6b47
+SHA1 (patch-af) = 6ca56f948950cc198fe255f064cc30fb6c1a58fb
+SHA1 (patch-ag) = 77543e08081f10deb17d48e4e91f3074f1202400
+SHA1 (patch-ah) = 3bfc13a920e0f3a79e6764a9ace89032989e2c67
+SHA1 (patch-ai) = 9446bc38a0a7e02de303e68c923249b615c91833
