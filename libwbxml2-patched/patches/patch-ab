@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/01/05 22:50:06 mreriksson Exp $
+
+--- tools/Makefile.am.orig	2005-01-05 17:43:43.000000000 +0100
++++ tools/Makefile.am
+@@ -3,7 +3,7 @@
+ INCLUDES =\
+ 	 -I. -I../src -I/usr/include
+ 
+-CFLAGS =\
++AM_CFLAGS =\
+ 	 -DHAVE_CONFIG_H\
+ 	 -DHAVE_EXPAT\
+ 	 -D_REENTRANT\
