@@ -1,0 +1,66 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/27 22:49:30 xtraeme Exp $
+etc/rc.d/dansguardian
+etc/dansguardian/bannedextensionlist
+etc/dansguardian/bannediplist
+etc/dansguardian/bannedmimetypelist
+etc/dansguardian/bannedphraselist
+etc/dansguardian/bannedregexpurllist
+etc/dansguardian/bannedsitelist
+etc/dansguardian/bannedurllist
+etc/dansguardian/banneduserlist
+etc/dansguardian/contentregexplist
+etc/dansguardian/dansguardian.conf
+etc/dansguardian/exceptioniplist
+etc/dansguardian/exceptionphraselist
+etc/dansguardian/exceptionsitelist
+etc/dansguardian/exceptionurllist
+etc/dansguardian/exceptionuserlist
+etc/dansguardian/logrotation
+etc/dansguardian/messages
+etc/dansguardian/phraselists/chat/weighted
+etc/dansguardian/phraselists/drugadvocacy/weighted
+etc/dansguardian/phraselists/dutchbadwords/weighted
+etc/dansguardian/phraselists/frenchbadwords/weighted
+etc/dansguardian/phraselists/gambling/banned
+etc/dansguardian/phraselists/gambling/weighted
+etc/dansguardian/phraselists/germanpornography/weighted
+etc/dansguardian/phraselists/goodphrases/exception
+etc/dansguardian/phraselists/goodphrases/weighted
+etc/dansguardian/phraselists/gore/weighted
+etc/dansguardian/phraselists/illegaldrugs/banned
+etc/dansguardian/phraselists/illegaldrugs/weighted
+etc/dansguardian/phraselists/intolerance/weighted
+etc/dansguardian/phraselists/italianbadwords/weighted
+etc/dansguardian/phraselists/legaldrugs/weighted
+etc/dansguardian/phraselists/personals/weighted
+etc/dansguardian/phraselists/pornography/banned
+etc/dansguardian/phraselists/pornography/weighted
+etc/dansguardian/phraselists/violence/weighted
+etc/dansguardian/phraselists/warezhacking/weighted
+etc/dansguardian/phraselists/weapons/weighted
+etc/dansguardian/pics
+etc/dansguardian/template.html
+etc/dansguardian/weightedphraselist
+etc/rc.d/dansguardian.sh
+libexec/cgi-bin/dansguardian.pl
+man/man8/dansguardian.8.gz
+sbin/dansguardian
+@dirrm etc/dansguardian/phraselists/weapons
+@dirrm etc/dansguardian/phraselists/warezhacking
+@dirrm etc/dansguardian/phraselists/violence
+@dirrm etc/dansguardian/phraselists/pornography
+@dirrm etc/dansguardian/phraselists/personals
+@dirrm etc/dansguardian/phraselists/legaldrugs
+@dirrm etc/dansguardian/phraselists/italianbadwords
+@dirrm etc/dansguardian/phraselists/intolerance
+@dirrm etc/dansguardian/phraselists/illegaldrugs
+@dirrm etc/dansguardian/phraselists/gore
+@dirrm etc/dansguardian/phraselists/goodphrases
+@dirrm etc/dansguardian/phraselists/germanpornography
+@dirrm etc/dansguardian/phraselists/gambling
+@dirrm etc/dansguardian/phraselists/frenchbadwords
+@dirrm etc/dansguardian/phraselists/dutchbadwords
+@dirrm etc/dansguardian/phraselists/drugadvocacy
+@dirrm etc/dansguardian/phraselists/chat
+@dirrm etc/dansguardian/phraselists
+@dirrm etc/dansguardian
