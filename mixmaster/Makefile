@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/18 18:25:03 tvierling Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/18 18:35:35 tvierling Exp $
 #
 # XXX WIP: only installs parts necessary for client operation.
 # Server parts still in work (need to add informational texts into
@@ -15,6 +15,7 @@ COMMENT=		The Mixmaster anonymous remailer client
 
 USE_BUILDLINK2=		yes
 
+BUILD_DEFS+=		USE_IDEA
 BUILD_DIRS=		${WRKSRC}/Src
 MAKE_FLAGS+=		CC=${CC} CFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q} LIBS=
 MAKEFILE=		Makefile.in
@@ -25,6 +26,8 @@ MAKEFILE=		Makefile.in
 .include "../../security/libidea/buildlink2.mk"
 CFLAGS+=		-DUSE_IDEA
 LDFLAGS+=		-lidea # must go before -lcrypto to override
+.else
+MESSAGE_SRC+=		${.CURDIR}/MESSAGE.noIDEA
 .endif
 
 # note: HAVE_GETDOMAINNAME is *not* set.  Mixmaster abuses this value,
