@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.476 2003/09/18 18:15:55 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.476 2003/09/18 18:15:55 thomasklausner Exp $
+# $Id: Makefile,v 1.477 2003/09/21 07:59:54 marmfield Exp $
+# $NetBSD: Makefile,v 1.477 2003/09/21 07:59:54 marmfield Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -187,11 +187,13 @@ SUBDIR+=	jigdo
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	kgpg
+SUBDIR+=	kmplayer
 SUBDIR+=	koffice-i18n-de
 SUBDIR+=	koffice-i18n-es
 SUBDIR+=	korelib
 SUBDIR+=	lash
 SUBDIR+=	lbdb
+SUBDIR+=	ldapbrowser
 SUBDIR+=	ldapdns
 SUBDIR+=	lde
 SUBDIR+=	libcroco
