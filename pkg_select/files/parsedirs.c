@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: parsedirs.c,v 1.1.1.1 2005/02/21 10:38:07 imilh Exp $ 
+ * $Id: parsedirs.c,v 1.2 2005/02/21 12:09:50 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -231,7 +231,7 @@ pkgfind(const char *path, const char *pkg, int nres)
 	static char **reslist = NULL;
         struct stat sb;
 
-	if (!isalnum(*pkg))
+	if (!isalnum((int)pkg[0]))
 		return(NULL);
 
         if ((ncat = scandir(path, &cat, checkskip, alphasort)) < 0)
