@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1123 2004/03/28 04:44:41 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1123 2004/03/28 04:44:41 xtraeme Exp $
+# $Id: Makefile,v 1.1124 2004/03/28 07:01:19 bjan2 Exp $
+# $NetBSD: Makefile,v 1.1124 2004/03/28 07:01:19 bjan2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -344,6 +344,7 @@ SUBDIR+=	libogg-nightly
 SUBDIR+=	libol
 SUBDIR+=	libprelude
 SUBDIR+=	libstatgrab
+SUBDIR+=	libticables
 SUBDIR+=	libtlen2
 SUBDIR+=	libuuid
 SUBDIR+=	libvorbis-nightly
