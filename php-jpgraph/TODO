@@ -1,12 +1,3 @@
-$NetBSD: TODO,v 1.2 2003/07/08 10:33:40 adrian_p Exp $
+$NetBSD: TODO,v 1.3 2003/10/20 21:58:40 adrian_p Exp $
 
-I'm working on a ACID pkg at the moment and it will need this pkg as
-a dependency.
-
-Not really tested on NetBSD 1.6 i386.
-
-Give it a go and let me know if there are any problems.
-
-Ta,
-
-Adrian.
+Ready for pkgsrc.
