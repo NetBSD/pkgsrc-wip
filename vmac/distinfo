@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/11/12 20:00:58 bubuchka Exp $
+$NetBSD: distinfo,v 1.5 2005/03/28 13:22:49 bubuchka Exp $
 
 SHA1 (vMac-0.1.9.3-src.tgz) = e33f6383760814d15ef54bd97574072057928e01
+RMD160 (vMac-0.1.9.3-src.tgz) = 2eb449ae7da2e8d4d131a3cc59a4eb7582674389
 Size (vMac-0.1.9.3-src.tgz) = 186064 bytes
 SHA1 (patch-aa) = 8098246d62b4e0f5e085a1e1c9f0767e4e1ffea5
 SHA1 (patch-ab) = 30250039a592b0e399c1a6dea47897a23041f2e7
