@@ -1,0 +1,26 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/01/02 19:38:06 poppnk Exp $
+--- src/client.c.orig	Thu Oct  3 13:20:54 2002
++++ src/client.c	Thu Oct  3 13:20:44 2002
+@@ -132,8 +132,21 @@
+ 	con->headervars = create_header_vars ();
+ 
+ 	do {
++		int i=0;
++		while(expr[i++]&&(i<1024));
++		if (i>200)
++		{
++		 sock_write_line (con->sock,"BufferOverflow logged =)\n");
++		 kick_not_connected(con, "BufOvr detected!");
++		 go_on = 0;
++		 return;
++		}
++		
+ 		if (splitc(line, expr, '\n') == NULL) {
+-			strncpy(line, expr, BUFSIZE);
++ 	        	while(expr[i++]&&(i<400));
++ 	        	memcpy(line,expr,500);
++ 	        	line[i]=0;
++		//	strncpy(line, expr, BUFSIZE); // don't play with that!
+ 			go_on = 0;
+ 		}
+       

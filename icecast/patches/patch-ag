@@ -1,0 +1,19 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/01/02 19:38:06 poppnk Exp $
+--- src/source.h.orig   Mon Aug 12 16:10:42 2002
++++ src/source.h        Mon Aug 12 16:08:26 2002
+@@ -19,6 +19,14 @@
+  *
+  */
+
++
++
++
++
++#define BUF_SIZE 100
++#define RET_OK  1
++#define RET_ERR 0
++
+ #ifndef __ICECAST_SOURCE_H
+ #define __ICECAST_SOURCE_H
+
+
