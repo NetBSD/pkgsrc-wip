@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/30 14:17:17 bencollver Exp $
+
+SHA1 (scourge-0.4.tar.gz) = fcf5e16c234b919ed165d87a05df28dba9d05b13
+Size (scourge-0.4.tar.gz) = 3999387 bytes
+SHA1 (patch-aa) = 505f5550a4acd9490d001064fa60606084c03285
+SHA1 (patch-ab) = d6bc44a05f43529ac2c7737476adabf9e2a9f263
+SHA1 (patch-ac) = 706fb37cce48faaba4dba3c12f3d04fb47a606dd
+SHA1 (patch-ad) = 4d0ddb2d90a13d02b49556d4dd1158a1a1c9e188
+SHA1 (patch-ae) = 9da2b8a5dbd684b4dce3c248f1316c3d1453bce6

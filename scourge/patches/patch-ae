@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/06/30 14:17:17 bencollver Exp $
+
+--- Makefile.Fedora.orig	Wed May  5 22:00:45 2004
++++ Makefile.Fedora
+@@ -2,7 +2,7 @@ CPP = g++
+ TARGET = scourge
+ include objects.mk
+ CFLAGS = `sdl-config --cflags` -Isrc -I/usr/X11R6/include -c -g -Wno-deprecated 
+-LDFLAGS = `sdl-config --libs` -L/usr/X11R6/lib -lGL -lGLU -lfreeglut-1.3 -lm -lXmu -lXext -lX11 -lXi -lXxf86vm
++LDFLAGS = `sdl-config --libs` -L/usr/X11R6/lib -lGL -lGLU -lglut -lm -lXmu -lXext -lX11 -lXi -lXxf86vm
+ 
+ 
+ 

@@ -1,0 +1,120 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/06/30 14:17:17 bencollver Exp $
+
+--- src/util.cpp.orig	Thu May  6 21:25:47 2004
++++ src/util.cpp
+@@ -22,6 +22,10 @@ Util::Util(){
+ Util::~Util(){
+ }
+ 
++#ifdef __NetBSD__
++#define round rint
++#endif
++
+ void Util::rotate(Sint16 x, Sint16 y, Sint16 *px, Sint16 *py, float angle) {
+     // convert to radians
+     angle = degreesToRadians(angle);
+@@ -175,6 +179,7 @@ void Util::findPath(Sint16 sx, Sint16 sy
+ 
+         // Check to see if already on OPEN
+         for (int t=0; t<(int)OPEN.size(); t++) {
++#if __GNUC_PREREQ__(2, 96)
+           if ((Node.x == OPEN.at(t).x) &&
+               (Node.y == OPEN.at(t).y)) {   // If already on OPEN
+             if (Node.gone < OPEN.at(t).gone) {
+@@ -186,10 +191,24 @@ void Util::findPath(Sint16 sx, Sint16 sy
+             bNodeFound = true;
+             break;
+           }
++#else
++          if ((Node.x == OPEN[t].x) &&
++              (Node.y == OPEN[t].y)) {   // If already on OPEN
++            if (Node.gone < OPEN[t].gone) {
++              OPEN[t].gone = Node.gone;
++              OPEN[t].f = Node.gone + OPEN[t].heuristic;
++              OPEN[t].px = Node.px;
++              OPEN[t].py = Node.py;
++            }
++            bNodeFound = true;
++            break;
++          }
++#endif
+         }
+         if (!bNodeFound ) { // If Node NOT found on OPEN
+           // Check to see if already on CLOSED
+           for (int t=0; t<(int)CLOSED.size(); t++) {
++#if __GNUC_PREREQ__(2, 96)
+             if ((Node.x == CLOSED.at(t).x) &&
+                 (Node.y == CLOSED.at(t).y)) {   // If on CLOSED, Which has lower gone?
+               if (Node.gone < CLOSED.at(t).gone) {
+@@ -201,6 +220,19 @@ void Util::findPath(Sint16 sx, Sint16 sy
+               bNodeFound = true;
+               break;
+             }
++#else
++            if ((Node.x == CLOSED[t].x) &&
++                (Node.y == CLOSED[t].y)) {   // If on CLOSED, Which has lower gone?
++              if (Node.gone < CLOSED[t].gone) {
++                CLOSED[t].gone = Node.gone;
++                CLOSED[t].f = Node.gone + CLOSED[t].heuristic;
++                CLOSED[t].px = Node.px;
++                CLOSED[t].py = Node.py;
++              }
++              bNodeFound = true;
++              break;
++            }
++#endif
+           }
+         }
+         if (!bNodeFound ) { // If Node NOT found on OPEN or CLOSED
+@@ -214,15 +246,25 @@ void Util::findPath(Sint16 sx, Sint16 sy
+                    cout << "OPEN:   ";
+                    for (i=0; i<OPEN.size(); i++)
+                    {
++#if __GNUC_PREREQ__(2, 96)
+                        cout << OPEN.at(i).x << "," << OPEN.at(i).y << ",";
+                        cout << OPEN.at(i).gone << "," << OPEN.at(i).heuristic << "  ";
++#else
++                       cout << OPEN[i].x << "," << OPEN[i].y << ",";
++                       cout << OPEN[i].gone << "," << OPEN[i].heuristic << "  ";
++#endif
+                    }
+                    cout << endl;
+                    cout << "CLOSED:   ";
+                    for (i=0; i<CLOSED.size(); i++)
+                    {
++#if __GNUC_PREREQ__(2, 96)
+                        cout << CLOSED.at(i).x << "," << CLOSED.at(i).y << ",";
+                        cout << CLOSED.at(i).gone << "," << CLOSED.at(i).heuristic << "  ";
++#else
++                       cout << CLOSED[i].x << "," << CLOSED[i].y << ",";
++                       cout << CLOSED[i].gone << "," << CLOSED[i].heuristic << "  ";
++#endif
+                    }
+                    cout << endl << endl;
+                    int ch = _getch();
+@@ -251,8 +293,13 @@ void Util::findPath(Sint16 sx, Sint16 sy
+     pVector->clear();
+     for (int i=(PATH.size()-1); i>=0; i--) {
+       //for (container::iterator i=PATH.begin(); i!= PATH.end(); ++i)
++#if __GNUC_PREREQ__(2, 96)
+       Fix.x = PATH.at(i).x;
+       Fix.y = PATH.at(i).y;
++#else
++      Fix.x = PATH[i].x;
++      Fix.y = PATH[i].y;
++#endif
+       Fix.z = 0;
+       pVector->push_back(Fix);
+     }
+@@ -348,7 +395,11 @@ float Util::distance(float x1, float y1,
+ string Util::getNextWord(const string theInput, int fromPos, int &endWord){
+     int firstChar, lastStringChar;
+     string sub;
++#if __GNUC_PREREQ__(2, 96)
+     sub.clear();
++#else
++    sub.erase(sub.begin(), sub.end());
++#endif
+     
+     if (theInput.empty() || fromPos==-1) {return sub;}
+ 

@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/30 14:17:17 bencollver Exp $
+
+--- src/constants.h.orig	Thu May  6 21:25:51 2004
++++ src/constants.h
+@@ -28,7 +28,9 @@
+ #include <GL/glut.h>
+ #ifndef WIN32
+ // Could not get these to include on my Mandrake9 box...
++#ifndef APIENTRY
+ #define APIENTRY
++#endif
+ typedef void (APIENTRY * PFNGLACTIVETEXTUREARBPROC) (GLenum texture);
+ typedef void (APIENTRY * PFNGLMULTITEXCOORD2FARBPROC) (GLenum target, GLfloat s, GLfloat t);
+ typedef void (APIENTRY * PFNGLMULTITEXCOORD2IARBPROC) (GLenum target, GLint s, GLint t);
