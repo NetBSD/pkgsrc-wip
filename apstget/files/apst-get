@@ -63,12 +63,14 @@ fi
 
 do_make_clean () {
 	if [ "${CLEAN_BUILD}" = "1" ]; then
+		echo "==> Cleaning..."
 		${MAKE} clean
 	fi
 }
 
 do_make_package () {
 	if [ "${PACKAGE_BUILD}" = "1" ]; then
+		echo "==> Generating package..."
 		env PACKAGE_NOINSTALL=YES ${MAKE} package
 	fi
 }
@@ -229,6 +231,7 @@ do_install() {
 	echo "==> Preparing installation for $DIR"
 	cd ${PKGSRC_DIR}/${DIR}
 	DEPS=`${MAKE} show-depends-dirs`
+	DEPS="${DEPS} ${DIR}"
 	REPLACE=""
 	INSTALL=""
 	for A in ${DEPS} ; do
@@ -250,15 +253,16 @@ do_install() {
 		  fi
 		fi
 		# Add new deps
-		#cd ${PKGSRC_DIR}/${A}
-		#DEPS2=`${MAKE} show-depends-dirs`
-		#for B in ${DEPS2} ; do
-		#	if [ "`echo ${DEPS} | grep ${B}`" = "" ]; then
-		#		DEPS="${DEPS} ${B}"
-		#	fi
-		#done
+		cd ${PKGSRC_DIR}/${A}
+		DEPS2=`${MAKE} show-depends-dirs`
+		for B in ${DEPS2} ; do
+			if [ "`echo ${DEPS} | grep ${B}`" = "" ]; then
+				DEPS="${DEPS} ${B}"
+			fi
+		done
 	done
 	fi
+
 	# replace list
 	if [ ! "${REPLACE}" = "" ]; then
 	for A in ${REPLACE}; do
