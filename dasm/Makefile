@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 18:38:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/20 15:43:11 minskim Exp $
 #
 
 DISTNAME=	dasm212
@@ -8,7 +8,7 @@ MASTER_SITES=	http://members.cox.net/rcolbert/zip/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	mor@linex.com
-HOMEPAGE=	http://members.cox.net/rcolbert/index.htm
+HOMEPAGE=	http://members.cox.net/rcolbert/dasm.htm
 COMMENT=	Professional-grade multi-CPU cross-assembler for 6502, 6803 and 68HC11
 
 NO_CONFIGURE:	YES
