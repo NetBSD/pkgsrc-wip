@@ -3,7 +3,7 @@
 # APST-GET : Yet Another PkgSrc Tool to manage packages.
 #
 # AUTHOR: pancake < pancake@phreaker.net >
-# DATE: 2004/12/13
+# DATE: 2005/02/20
 #
 # depends: pkg_find, pkg_tarup, awk, pkglint, pkg_chk
 #
@@ -117,7 +117,7 @@ do_usage() {
 check_version() {
 	cPKG=$1
 	cDIR=$1
-	if [ ! "${cDIR}" = "" ]; then
+	if [ -n "${cDIR}" ]; then
 	if [ "`echo $cPKG | grep /`" = "" ]; then
 		cDIR=`${PKGFIND} -qx $cPKG`
 	else
@@ -193,6 +193,31 @@ do_relink() {
 	done
 }
 
+required_deps() {
+STEP=1
+for A in `${MAKE} show-installed-depends` ; do
+   case ${STEP} in
+   "1")
+      PKG="`echo $A | awk -F '>' '{print $1 }'`"
+      STEP=2
+      ;;
+   "2")
+      STEP=3
+      ;;
+   "3")
+      STEP=1
+      if [ -z "`echo ${A} | grep -e '-' `" ]; then
+         echo ${PKG} ;
+         PKG=${A}
+         STEP=2
+       fi
+      ;;
+   esac
+done
+if [ "${A}" = "=>" ]; then
+   echo ${PKG}
+fi
+}
 
 do_auto_relink() {
 	rPKG=$1
@@ -210,7 +235,7 @@ do_install() {
 	PKG=$1
 	DIR=$1
 	UPD=$2 # Update flag
-	if [ "`echo $PKG | grep /`" = "" ]; then
+	if [ -z "`echo $PKG | grep /`" ]; then
 		DIR=`${PKGFIND} -qx $PKG`
 		if [ "${DIR}" = "" ]; then
 			DIR=NOTFOUND
@@ -244,11 +269,23 @@ do_install() {
 	else
 
 	STAT="`check_version $DIR`"
-	if [ "${STAT}" = "" ]; then
+	if [ -z "${STAT}" ]; then
 		echo "==> Package ${DIR} is at the latest version"
 	else
 	echo "==> Preparing installation for $DIR"
 	cd ${PKGSRC_DIR}/${DIR}
+
+	# Clean-UP
+	REPLACE=""
+	INSTALL=""
+
+	# Get per-version dependencies
+	BDEP="`required_deps`"
+	REQUIRED=""
+	for A in ${BDEP} ; do
+		REQUIRED="${REQUIRED} `${PKGFIND} -qx ${A}`"
+	done
+	# Get all dependencies
 	DEPS="`${MAKE} ${MAKEFLAG} show-depends-dirs`"
 	for A in ${DEPS} ; do
 		cd ${PKGSRC_DIR}/${DIR}
@@ -266,10 +303,12 @@ do_install() {
 		fi
 	done
 	DEPS="${DEPS} ${DIR}"
-	REPLACE=""
-	INSTALL=""
 	for A in ${DEPS} ; do
-		CHK=`check_version ${A}`
+		if [ -n "`echo ${REQUIRED} | grep ${A}`" ]; then
+			CHK="required"
+		else
+			CHK=`check_version ${A}`
+		fi
 		cd ${PKGSRC_DIR}/${A}/
 		PVAR=`${MAKE} show-var VARNAME=PKG_OPTIONS_VAR`
 		SPOP=`${MAKE} show-var VARNAME=${PVAR}`
@@ -281,15 +320,21 @@ do_install() {
 			PKGO="${PKGO} ${X}"
 			fi
 		done
-		if [ ! "${CHK}" = "" ]; then
-		if [ ! "`echo ${CHK}|grep missing`" = "" ]; then
+		if [ -n "${CHK}" ]; then
+		if [ "${CHK}" = "required" ]; then
+			echo " [r] Required upgrade for ${A}"
+			if [ ! "${POPT}" = "" ]; then
+				echo "   <options> ${PKGO}"
+			fi
+		else
+		if [ -n "`echo ${CHK}|grep missing`" ]; then
 			echo " [i] Enqueueing for install ${A}"
 			INSTALL="${INSTALL} ${A}"
 			if [ ! "${POPT}" = "" ]; then
 				echo "   <options> ${PKGO}"
 			fi
 		else
-		if [ ! "`echo ${CHK}| grep from`" = "" ]; then
+		if [ -n "`echo ${CHK}| grep from`" ]; then
 			echo " [u] Need to update ${A} ${CHK}"
 			if [ ! "${POPT}" = "" ]; then
 				echo "   <options> ${POPT}"
@@ -301,6 +346,7 @@ do_install() {
 				REPLACE="${REPLACE} ${A}"
 				fi
 			fi;fi
+		  fi
 		  fi
 		fi
 		# Add new deps
@@ -324,6 +370,26 @@ do_install() {
 	fi
 
 	press_any_key
+
+	# required list
+	if [ -n "${REQUIRED}" ]; then
+	for A in ${REQUIRED}; do
+		echo "==> Upgrading ${A}..."
+		cd ${PKGSRC_DIR}/${A}
+		${MAKE} ${MAKEFLAG} fetch
+		do_make_clean
+		${MAKE} ${MAKEFLAG} replace ${UD_TARGETS} | ${WRAPPER} 2>&1
+		do_make_package
+		do_make_clean
+		if [ ! "$?" = "0" ]; then
+			echo "==> Error occurred at ${DIR}."
+			process_failed
+		else
+			echo "==> Process finished."
+			do_auto_relink ${A}
+		fi
+	done
+	fi
 
 	# replace list
 	if [ ! "${REPLACE}" = "" ]; then
