@@ -1,0 +1,3 @@
+- Correct pthread use, package doesn't need it but improves encryption operations.
+- Create a RCD_SCRIPT to start daemon at boot.
+- Test, test, test.
