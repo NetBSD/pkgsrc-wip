@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:12:08 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/09 21:17:26 blef Exp $
 #
 
 DISTNAME=	festival-gaim-0.64
@@ -15,6 +15,7 @@ DEPENDS+=	festlex-poslex>=1.4.0:../../audio/festlex-poslex
 DEPENDS+=	festvox-el11>=1.4.0:../../audio/festvox-el11
 DEPENDS+=	gaim>=0.64:../../chat/gaim
 
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 
@@ -24,6 +25,6 @@ MAKE_ENV+=	PLUGIN_GAIM_PATH="${PREFIX}/lib/gaim"
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/festival.so ${PREFIX}/lib/gaim
 
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
