@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/10 20:42:21 bjan2 Exp $
+bin/simage-config
+include/simage.h
+lib/libsimage.la
+lib/libsimage.so
+lib/libsimage.so.26
+share/Coin/conf/simage-default.cfg
+share/aclocal/simage.m4
+@unexec ${RMDIR} share/Coin/conf 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} share/Coin 2>/dev/null || ${TRUE}
