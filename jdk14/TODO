@@ -1,3 +1,5 @@
-HACK: usage of -Wl,-rpath $(LIBDIR)/$(LIBARCH) (patch-ag).
+- HACK: usage of -Wl,-rpath $(LIBDIR)/$(LIBARCH) (patch-ag).
 This way a reference to ${WRKDIR} is stored in the resulting
 executables/libs.
+
+- Can only be built as root atm (pre-build target).
