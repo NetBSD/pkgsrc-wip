@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/27 11:01:20 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/13 11:36:49 johnrshannon Exp $
 #
 
 DISTNAME=		florist-3.15p-src
@@ -16,12 +16,25 @@ GNU_CONFIGURE=		yes
 USE_AUTOCONF=		yes
 AUTOCONF_REQD=		2.12
 USE_GNU_TOOLS+=		make
-GCC_REQUIRED+=	3.3
+
+.include "../../mk/bsd.prefs.mk"
+
+# This package requires an Ada compiler. Two are available:
+# 1) gcc-3.4-ada and 2) gcc-3.4 build with Ada option
+# If USE_GCC_34=YES this package will use gcc-3.4. Otherwise,
+# it will use gcc-3.4-ada
+BUILD_DEFS=	USE_GCC_34
+USE_GCC_34?=	NO
 
 post-extract:
 	${CP} ${FILESDIR}/pconfig.NetBSD ${WRKSRC}/configs
 
 pre-configure:
+.if !empty(USE_GCC_34:M[Yy][Ee][Ss])
+.  include "../../wip/gcc-3.4/preconfigure.mk"
+.else
+.  include "../../wip/gcc-3.4-ada/preconfigure.mk"
+.endif
 	cd ${WRKSRC}; ${AUTOCONF}
 
 do-install:
@@ -31,6 +44,11 @@ do-install:
 		${PREFIX}/lib/florist
 	@${INSTALL_DATA} ${WRKSRC}/floristlib/libflorist.a ${PREFIX}/lib
 
-.include "../../lang/gcc3-ada/buildlink3.mk"
+.if !empty(USE_GCC_34:M[Yy][Ee][Ss])
+.  include "../../wip/gcc-3.4/buildlink3.mk"
+.else
+.  include "../../wip/gcc-3.4-ada/buildlink3.mk"
+.endif
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
