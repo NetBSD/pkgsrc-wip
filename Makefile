@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.270 2003/06/24 09:36:00 xtraeme Exp $
-# $NetBSD: Makefile,v 1.270 2003/06/24 09:36:00 xtraeme Exp $
+# $Id: Makefile,v 1.271 2003/06/24 10:11:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.271 2003/06/24 10:11:12 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -69,6 +69,7 @@ SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
 SUBDIR+=	gmencoder
 SUBDIR+=	gnomeicu
+SUBDIR+=	gnome2-extras
 SUBDIR+=	gnome2-pkgview
 SUBDIR+=	gnome2-system-monitor
 SUBDIR+=	gnome2-themes
