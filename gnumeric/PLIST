@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/06 12:14:23 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/14 13:15:41 moubctez Exp $
 bin/gnumeric
+bin/ssconvert
 etc/gconf/schemas/gnumeric-dialogs.schemas
 etc/gconf/schemas/gnumeric-general.schemas
 etc/gconf/schemas/gnumeric-plugins.schemas
@@ -272,6 +273,7 @@ share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/configuration-to
 share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/data-commentNlink.xml
 share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/data-delete.xml
 share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/data-entry-advanced.xml
+share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/data-entry-external.xml
 share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/data-entry.xml
 share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/data-format.xml
 share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/data-generate.xml
@@ -281,7 +283,6 @@ share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/data-move-copy.x
 share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/data-overview.xml
 share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/data-selections.xml
 share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/data-types.xml
-share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/datasource.xml
 share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/extending-code.xml
 share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/extending-functions.xml
 share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/extending-overview.xml
@@ -593,7 +594,6 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnumeric.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnumeric.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnumeric.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnumeric.mo
-${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnumeric.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnumeric.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnumeric.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnumeric.mo
