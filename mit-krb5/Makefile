@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/30 17:08:55 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/31 05:21:29 jeremy-c-reed Exp $
 
 DISTNAME=		krb5-1.3
 PKGNAME=		mit-${DISTNAME}
@@ -22,6 +22,7 @@ CONFLICTS=		kth-krb4-[0-9]*
 YACC=			bison -y
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-shared
+MAKE_ENV+=		ROOT_USER=${ROOT_USER}
 
 # XXX do we care?
 RESTRICTED=		"Redistribution not permitted"
