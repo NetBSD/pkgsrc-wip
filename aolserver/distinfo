@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/03/26 00:05:26 ianharding Exp $
+$NetBSD: distinfo,v 1.2 2004/05/24 18:34:31 ianharding Exp $
 
-SHA1 (aolserver-3.4.2-src.tar.gz) = 23e4270f9b868338e8024cc221fe6bb35edc6498
-Size (aolserver-3.4.2-src.tar.gz) = 3701565 bytes
-SHA1 (patch-aa) = c1a52d22b9de1abee1172e080dc3b55d953987b6
-SHA1 (patch-ab) = 1a9db1216f4bfdefc88690f2fb6b029ee63d48d8
-SHA1 (patch-ac) = d1d8238bf3460b5d8eb43391dbeafe09b8257ee1
+SHA1 (aolserver-4.01-src.tar.gz) = 4c5aaa1755cef1c0ae69f48da31619f8c2368970
+Size (aolserver-4.01-src.tar.gz) = 586019 bytes
+SHA1 (patch-aa) = 9470dfc80c9462adf558c920b2ce0e6cc4c6a5c9

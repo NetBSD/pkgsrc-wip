@@ -1,43 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/03/26 00:05:27 ianharding Exp $
+$NetBSD: patch-aa,v 1.2 2004/05/24 18:34:32 ianharding Exp $
 
---- Makefile.orig	Tue Sep 18 13:31:02 2001
-+++ Makefile
-@@ -7,10 +7,8 @@
- #
- # Tell make where AOLserver source code lives.
- #
--NSHOME    =  $(shell pwd)
--MAKEFLAGS += NSHOME=$(NSHOME)
+--- include/Makefile.global.in.orig	2003-06-03 12:08:20.000000000 +0000
++++ include/Makefile.global.in
+@@ -90,11 +90,11 @@ LIBS		+= @TCL_LIB_SPEC@ @TCL_LIBS@
+ CCLIBS		= $(LIBS) @TCL_LD_FLAGS@
  
--include $(NSHOME)/include/Makefile.global
-+include include/Makefile.global
- 
- #
- # AOLserver Dynamically-Loaded Modules
-@@ -45,9 +43,10 @@
- #
- install: all
- 	$(MKDIR)                    $(INSTBIN)
--	$(MKDIR)                    $(INSTLOG)
-+	$(MKDIR) -m 777             $(INSTLOG)
- 	$(MKDIR)                    $(INSTTCL)
- 	$(MKDIR)                    $(INSTLIB)
-+	$(MKDIR)		    $(INSTINC)
- 	$(MKDIR)                    $(INSTLIB)/tcl8.3
- 	( cd tcl8.3.2/library && $(CP) -r . $(INSTLIB)/tcl8.3 || exit 1; )
- 	$(MKDIR)                    $(INSTSRVMOD)
-@@ -55,13 +54,13 @@
- 	$(CP) -r tcl                $(INSTMOD)
- 	$(CP) nsd/translate-ini     $(INSTBIN)
- 	$(CP) -r include            $(INSTINC)
--	$(CP) nsd/sample-config.tcl $(INST)
- 	test -f $(INSTSRVPAG)/index.html \
- 		|| $(CP) doc/default-home.html $(INSTSRVPAG)/index.html
- 	@for i in $(ALLDIRS); do \
- 		$(ECHO) "installing \"$$i\""; \
- 		( cd $$i && $(MAKE) install) || exit 1; \
- 	done
-+	chmod 777 ${INSTSRVMOD}/nslog
- 	(cd thread && $(MAKE) install)
- 
+ # Install directories
+-INSTBIN		= $(AOLSERVER)/bin
+-INSTLIB		= $(AOLSERVER)/lib
+-INSTMOD		= $(AOLSERVER)/modules
+-INSTTCL		= $(AOLSERVER)/modules/tcl
+-INSTSRV		= $(AOLSERVER)/servers/server1
++INSTBIN		= ${PREFIX}/bin
++INSTLIB		= ${PREFIX}/lib
++INSTMOD		= ${NSD_ROOT}/modules
++INSTTCL		= ${NSD_ROOT}/modules/tcl
++INSTSRV		= ${NSD_ROOT}/servers/server1
+ INSTSRVMOD	= $(INSTSRV)/modules
+ INSTSRVPAG	= $(INSTSRV)/pages
  

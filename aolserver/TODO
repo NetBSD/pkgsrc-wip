@@ -1,33 +1,6 @@
-- Pkglint finds that I hardcoded /var/log/... as the log directory.
-  If there is a way for pkgsrc to know your favorite log location,
-  I don't know what it is.
+Now that NetBSD has TCL 4 and native threads, AOLServer 4 should build
+without the ugliness of needing to carry its own TCL install with it.
 
-- To install rc.d scripts, use the RCD_SCRIPTS feature provided by
-  bsd.pkg.install.mk (USE_PKGINSTALL=YES).  Unfortunately, the former
-  is not documented in Packages.txt yet (there is an open PR about it)
-  but you may want to look at some other packages to see how the thing
-  works (see security/racoon or net/samba for example).
-
-  In a nutshell, rename the script to <rcdname>.sh in the files dir
-  and set RCD_SCRIPTS variable to rcdname, together with
-  USE_PKGINSTALL=YES.
-
-- Do not use MKDIR; and the way you are using it is completely wrong,
-  as the directory is outside pkgsrc's tree.  Use OWN_DIRS instead,
-  also part of bsd.pkg.install.mk (see cups for an example).
-
-- Do not put example files under prefix/etc.  Use PKG_SYSCONFDIR
-  instead (also part of bsd.pkg.install.mk). See section 10.27 of
-  Packages.txt.
-
-- ptl2 has a buildlink2 file, so use it instead of depends.  Or even
-  better, use pthread.buildlink2.mk, located in mk/.
-
-- For PKGNAME, do: PKGNAME= ${DISTNAME:S/-src//}
-
-- WRKSRC is unsorted.  It goes after PKGNAME.
-
-- MAKE_FLAGS should be separated from USE_* variables. (I don't think
-  this matters much, but I prefer it this way ;)
-
-- Add a trailing / to HOMEPAGE.
+This package does not build since I don't understand dynamic linking 
+very well, and can't figure out libtool.  It fails saying it can't find
+a .so file.
