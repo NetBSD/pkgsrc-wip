@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/10/15 17:15:17 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/15 22:02:48 johnrshannon Exp $
 #
 
 DISTNAME=		pinentry-0.7.1
@@ -8,6 +8,8 @@ MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 COMMENT=		Applications for entering PINs or Passphrases
+
+BUILDLINK_DEPENDS.libgpg-erro>= 1.0.0
 
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
