@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/14 19:17:54 poppnk Exp $
+
+SHA1 (snark-0.5.tar.gz) = 6cc00e9e59deee56a6b08d76e02bc92adf2cedb0
+Size (snark-0.5.tar.gz) = 58820 bytes
+SHA1 (patch-aa) = e1d78a34cae144beb31391824223212093e4dffc

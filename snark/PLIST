@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/14 19:17:54 poppnk Exp $
+bin/snark
+share/classpath/snark.jar
+@dirrm share/classpath

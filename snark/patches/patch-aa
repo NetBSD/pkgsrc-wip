@@ -1,0 +1,16 @@
+--- Makefile.orig	2004-12-30 12:17:43.000000000 -0400
++++ Makefile	2004-12-30 12:20:06.000000000 -0400
+@@ -5,10 +5,10 @@
+ 
+ #JAVAC=$(GCJ) -C
+ #JAVAC_FLAGS=$(GCJ_FLAGS)
+-JAVAC=jikes-classpath
+-JAVAC_FLAGS=-g -O
++JAVAC=javac
++JAVAC_FLAGS= -O
+ 
+-JAR=fastjar
++JAR=jar
+ 
+ PROGRAM=snark
+ MAINCLASS=org.klomp.snark.Snark
