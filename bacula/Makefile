@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/01 22:38:26 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/09 17:42:35 mpasternak Exp $
 #
 
 DISTNAME=		bacula-1.32f
@@ -7,7 +7,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 
 MAINTAINER=		dotz@irc.pl
-HOMEPAGE=		http://bacula.sourceforge.net/
+HOMEPAGE=		http://www.bacula.org/
 COMMENT=		Network Backup Solution
 
 USE_BUILDLINK2=		yes
