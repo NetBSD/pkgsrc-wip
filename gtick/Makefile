@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/16 18:48:52 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/18 03:37:43 bencollver Exp $
 #
 
 DISTNAME=		gtick-0.2.0
 CATEGORIES=		audio
 MASTER_SITES=		http://www.antcom.de/download/gtick/
 
-MAINTAINER=		collver1@attbi.com
+MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.antcom.de/gtick/
 COMMENT=		GTK+ metronome
 
