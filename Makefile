@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1723 2005/04/03 14:45:48 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1723 2005/04/03 14:45:48 adrian_p Exp $
+# $Id: Makefile,v 1.1724 2005/04/04 08:51:57 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.1724 2005/04/04 08:51:57 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -638,6 +638,7 @@ SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Devel-Profiler
 SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-Exporter-Lite
+SUBDIR+=	p5-File-Find-Rule
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-HTML-Latex
@@ -657,6 +658,7 @@ SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Term-Screen
 SUBDIR+=	p5-Text-Glob
 SUBDIR+=	p5-Tk-TableMatrix
+SUBDIR+=	p5-UNIVERSAL-exports
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-mysql
 SUBDIR+=	pam-pop3
