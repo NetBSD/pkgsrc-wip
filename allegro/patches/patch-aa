@@ -1,22 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/06 11:17:20 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/02 05:36:25 blef Exp $
 
---- configure.orig	Sat Dec 21 09:38:49 2002
-+++ configure
-@@ -1982,7 +1982,7 @@ else
+--- configure.orig	Tue Jul  1 21:33:57 2003
++++ configure	Tue Jul  1 21:36:51 2003
+@@ -3892,7 +3892,7 @@
    COMPILE_PROGRAM=COMPILE_NORMAL
    COMPILE_S_PROGRAM=COMPILE_S_NORMAL
    if test "X$allegro_cv_prog_ld_s" = "Xyes"; then
--    LDFLAGS="-s $LDFLAGS"
-+    LDFLAGS="$LDFLAGS"
+-    PROG_LDFLAGS="-s \$(LDFLAGS)"
++    PROG_LDFLAGS="\$(LDFLAGS)"
+   else
+     PROG_LDFLAGS="\$(LDFLAGS)"
    fi
-   LIB_TO_LINK=alleg
-   PLUGIN_LIB=lib/unix/libaldat.a
-@@ -5016,7 +5016,7 @@ sed 's/%@/@@/; s/@%/@@/; s/%g\$/@g/; /@g
- $ac_vpsub
- $extrasub
- s%@SHELL@%$SHELL%g
--s%@CFLAGS@%$CFLAGS%g
-+s%@CFLAGS@%$CFLAGS -g%g
- s%@CPPFLAGS@%$CPPFLAGS%g
- s%@CXXFLAGS@%$CXXFLAGS%g
- s%@FFLAGS@%$FFLAGS%g
+@@ -9608,7 +9608,7 @@
+ s,@ECHO_T@,$ECHO_T,;t t
+ s,@LIBS@,$LIBS,;t t
+ s,@CC@,$CC,;t t
+-s,@CFLAGS@,$CFLAGS,;t t
++s,@CFLAGS@,$CFLAGS -g,;t t
+ s,@LDFLAGS@,$LDFLAGS,;t t
+ s,@CPPFLAGS@,$CPPFLAGS,;t t
+ s,@ac_ct_CC@,$ac_ct_CC,;t t

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/06 11:17:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/02 05:36:25 blef Exp $
 #
 
-DISTNAME=	allegro-4.1.8
+DISTNAME=	allegro-4.1.11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=alleg/}
 
@@ -15,6 +15,7 @@ USE_X11=	YES
 GNU_CONFIGURE=	YES
 
 MAKEFILE=		makefile
+ALL_TARGET=		# there is no 'all' target for some reason
 INFO_FILES=		allegro.info
 INSTALL_TARGET=		install install-info
 

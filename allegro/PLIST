@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 11:17:20 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/02 05:36:25 blef Exp $
 bin/allegro-config
 bin/colormap
 bin/dat
@@ -56,6 +56,7 @@ include/allegro/platform/aintbeos.h
 include/allegro/platform/aintdos.h
 include/allegro/platform/aintlnx.h
 include/allegro/platform/aintmac.h
+include/allegro/platform/aintosx.h
 include/allegro/platform/aintqnx.h
 include/allegro/platform/aintunix.h
 include/allegro/platform/aintwin.h
@@ -71,6 +72,8 @@ include/allegro/platform/almac.h
 include/allegro/platform/almaccfg.h
 include/allegro/platform/almngw32.h
 include/allegro/platform/almsvc.h
+include/allegro/platform/alosx.h
+include/allegro/platform/alosxcfg.h
 include/allegro/platform/alplatf.h
 include/allegro/platform/alqnx.h
 include/allegro/platform/alqnxcfg.h

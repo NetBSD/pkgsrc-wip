@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/04/06 11:17:20 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.2 2003/07/02 05:36:25 blef Exp $
 
---- misc/deplib.sh.orig	Sat Dec 21 09:34:30 2002
-+++ misc/deplib.sh
-@@ -24,7 +24,7 @@ write_code() {
+--- misc/deplib.sh.orig	Tue Jul  1 21:38:28 2003
++++ misc/deplib.sh	Tue Jul  1 21:39:13 2003
+@@ -24,7 +24,7 @@
      echo "	rm -f \$@"
      # gf: This bit is obviously gcc-specific
      # eb: Yes, but the GNU C Compiler doesn't always spell 'gcc'
--    echo "	\$(CC) -shared -o \$@ ${shareobj} \$(LDFLAGS) -Wl,-h,lib${1}.so.\$(shared_major_minor) \$(LIBS)"
-+    echo "	\$(CC) -g -shared -o \$@ ${shareobj} \$(LDFLAGS) -Wl,-h,lib${1}.so.\$(shared_major_minor) \$(LIBS)"
+-    echo "	\$(CC) -shared -o \$@ ${shareobj} ${3} \$(LDFLAGS) -Wl,-h,lib${1}.so.\$(shared_major_minor) \$(LIBS)"
++    echo "	\$(CC) -g -shared -o \$@ ${shareobj} ${3} \$(LDFLAGS) -Wl,-h,lib${1}.so.\$(shared_major_minor) \$(LIBS)"
      echo ""
      echo "\$(LIBDIR)/${unsharelib}: ${unshareobj}"
      echo "	rm -f \$@"
