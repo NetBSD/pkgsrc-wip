@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:33:39 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/12 06:54:07 minskim Exp $
 #
 
 DISTNAME=		slocate-2.7
@@ -14,5 +14,10 @@ GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 
 MANCOMPRESSED=		locate.1.gz
+
+pre-configure:
+.for f in aclocal.m4 Makefile.in configure stamp-h.in
+	${TOUCH} ${WRKSRC}/$f
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
