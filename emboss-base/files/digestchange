@@ -1,0 +1,126 @@
+#! /bin/sh
+# David Price
+# 06-29-2004
+# this script reads the working directory, and changes documentation files which
+# reference digest to refer to edigest it is passed the location of the working directory
+# as an argument.  this allows the program digest to be placed into the pkg/bin directory
+# without overwriting the pkgtool program digest
+
+pdirs() {
+#function to switch directories based on a passed variable
+
+  DIR=$1
+  ABSDIR=$2
+
+  case $DIR in
+
+
+	html) cd ${ABSDIR}/${DIR}
+	      phtml html
+	      cd ${ABSDIR}
+	;;
+	text) cd ${ABSDIR}/text
+	      ptext txt
+	      cd ${ABSDIR}
+	;;
+
+	*)	echo "ERROR: bad directory given to digestchange script, directory was: $DIR"
+		exit 1
+	;;
+  esac
+
+
+}
+
+phtml() {
+
+
+    for HFILE in *html ; do
+
+	sed -e 's|digest\.html|edigest\.html|g' \
+	    -e 's/>digest/>edigest/g' \
+	    -e 's/^digest/edigest/g' \
+	    -e 's|EMBOSS: digest|EMBOSS: edigest|g' \
+	    -e 's|session with digest|session with edigest|g' \
+	    -e 's|opsd_human.digest|opsd_human.edigest|g' \
+	    -e 's|Program: digest|Program: edigest|g' \
+	    -e 's|% digest|% edigest|g' \
+	    -e 's|digest[ ]\{10,13\}Protein|edigest		Protein|g' \
+	    ${HFILE} > ${HFILE}.new ;
+
+	mv ${HFILE}.new ${HFILE}
+	echo "digestchange modified ${HFILE}"
+
+    done
+
+  
+
+    for HMFILE in Makefile* ; do 
+
+        sed -e 's| digest\.html| edigest\.html|g' ${HMFILE} > ${HMFILE}.new ;
+
+	mv ${HMFILE}.new ${HMFILE}
+	echo "digestchange modified ${HMFILE}"
+
+
+    done
+
+}
+
+ptext() {
+    
+    
+    for TFILE in *txt ; do
+
+
+
+	sed -e 's|session with digest|session with edigest|g' \
+	    -e 's|opsd_human.digest|opsd_human.edigest|g' \
+	    -e 's/rogram. digest/rogram edigest/g' \
+	    -e 's|% digest|% edigest|g' \
+	    -e 's/ \{30,40\}digest/				edigest/g' \
+	    -e 's/digest \{6,13\}Protein/edigest		Protein/g' \
+	    -e 's/digest(	)\{1,3\}Protein/edigest		Protein/g' \
+	    -e 's| digest finds| edigest finds|g' \
+	    ${TFILE} > ${TFILE}.new ;
+	    
+	mv ${TFILE}.new ${TFILE}
+
+	echo "digestchange modified ${TFILE}"
+
+    done
+
+
+    for TMFILE in Makefile* ; do 
+
+        sed -e 's| digest\.txt| edigest\.txt|g' ${TMFILE} > ${TMFILE}.new ;
+
+	mv ${TMFILE}.new ${TMFILE}
+
+	echo "digestchange modified ${TMFILE}"
+
+    done
+
+
+}
+
+# Main body of the script
+
+WRKINGDIR=$1
+
+BASEDIR=${WRKINGDIR}/doc/programs
+
+pdirs html $BASEDIR
+pdirs text $BASEDIR
+
+cd $WRKINGDIR
+
+
+
+#emboss/Makefile.in
+#emboss/Makefile.am
+#emboss/acd/Makefile.am
+#emboss/acd/Makefile.in
+#emboss/acd/digest.acd
+#emboss/acd/Makefile
+#emboss/digest.c

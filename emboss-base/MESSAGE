@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/11/10 22:40:43 daprice Exp $
+
+     You may want to add the following in your .cshrc and .profile to run this
+     package correctly:
+
+     (.cshrc)
+     setenv EMBOSS_DATA		/usr/pkg/share/EMBOSS/data
+     setenv EMBOSS_ACDROOT	/usr/pkg/share/EMBOSS/acd
+
+     (.profile)
+     EMBOSS_DATA=/usr/pkg/share/EMBOSS/data export EMBOSS_DATA;
+     EMBOSS_ACDROOT=/usr/pkg/share/EMBOSS/acd export EMBOSS_ACDROOT;
+===========================================================================
