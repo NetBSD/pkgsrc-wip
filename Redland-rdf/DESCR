@@ -1,0 +1,21 @@
+Redland  is  a  library  that  provides a high-level interface for RDF
+allowing  the  RDF  graph  to  be parsed from XML, stored, queried and
+manipulated.  Redland  implements  each of the RDF concepts in its own
+class  via an object based API, reflected into the other language APIs
+- Java, Perl, PHP, Python, Ruby and Tcl. Some of the classes providing
+the  parsers,  storage  mechanisms  and  other  elements  are built as
+modules that can be added or removed as required.
+
+Redland provides:
+     * A modular, object based library written in C
+     * Java,  Perl, PHP, Python, Ruby and Tcl interfaces for manipulating
+       the RDF graph and parts - Statements, Resources and Literals
+     * Parsers and Serializers for reading and writing RDF as syntax.
+     * Storage  for  graphs in memory and on disk via Sleepcat / Berkeley
+       DB.
+     * Query  APIs  for  the graph by Statement (triples) or by Nodes and
+       Arcs
+     * Statement  Streams  for construction, parsing, de/serialisation of
+       graphs
+     * Start of query language support.
+     * No memory leaks so far.
