@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.48 2004/06/06 20:03:32 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.49 2004/06/11 20:43:52 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
-PKGNAME=	gcc3-ada-${GCC_VERSION}
+#PKGNAME=	gcc34-ada-${GCC_VERSION}
+PKGNAME=	gcc34-ada-3.4.1
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
+MASTER_SITES=   ftp://gcc.gnu.org/pub/gcc/snapshots/${GCC_VERSION}/
+#MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	shannonjr@NetBSD.org
@@ -13,7 +15,7 @@ COMMENT=	This is the gcc 3.4 Ada compiler
 
 BUILD_USES_MSGFMT=	YES
 
-GCC_VERSION=	3.4.0
+GCC_VERSION=	3.4-20040604
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
@@ -28,7 +30,7 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 # An Ada compiler is required to build the Ada compiler. Two
 may be used:
 #USE_GCC33	=# Define to use gcc-3.3.x-ada
-#USE_GCC34	=# Define to use gcc-3.4.x-ada
+#USE_GCC34	=# Define to use gcc34
 # You may also specify the path of a gcc/gnat Ada compiler
 # outside of the pkgsrc system by specifying the full path
 # of the compiler (example) below:
@@ -133,9 +135,9 @@ post-install:
 		>> ${PLIST_SRC}
 
 .if defined(USE_GCC33)
-.include "../../wip/gcc33-ada/buildlink3.mk"
+.include "../../lang/gcc3-ada/buildlink3.mk"
 .elif defined(USE_GCC34)
-BUILDLINK_DEPMETHOD.gcc3=	build
+BUILDLINK_DEPMETHOD.gcc34=	build
 .include "../../wip/gcc-3.4/buildlink3.mk"
 .endif
 .include "../../converters/libiconv/buildlink3.mk"
