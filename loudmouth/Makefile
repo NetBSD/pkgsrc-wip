@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2003/08/05 03:19:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/16 00:16:20 xtraeme Exp $
 #
 
 DISTNAME=	loudmouth-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/${VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/${DIST_VER}/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://www.imendio.com/projects/loudmouth/
@@ -20,7 +21,8 @@ PKGCONFIG_OVERRIDE+=    ${WRKSRC}/loudmouth-1.0.pc.in
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--disable-debug
 
-VERSION=		0.13
+DIST_VER=		0.13
+VERSION=		0.13.2
 
 .include "../../mk/bsd.prefs.mk"
 
