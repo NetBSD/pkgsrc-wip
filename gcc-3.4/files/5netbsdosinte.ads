@@ -56,6 +56,9 @@ package System.OS_Interface is
    subtype plain_char     is Interfaces.C.plain_char;
    subtype size_t         is Interfaces.C.size_t;
 
+   type int32_t is range -2**31 .. (2**31)-1;
+   for int32_t'Size use 32;
+
    -----------
    -- Errno --
    -----------
@@ -301,7 +304,7 @@ package System.OS_Interface is
    -- LWP --
    ---------
 
-   type lwpid_t is new long;
+   type lwpid_t is new int32_t;
 
    function lwp_self return System.Address;
    pragma Import (C, lwp_self, "ada_lwp_self");
@@ -568,9 +571,11 @@ private
    end record;
    pragma Convention (C, sigset_t);
 
-   type pid_t is new long;
+   type pid_t is new int32_t;
 
-   type time_t is new long;
+   type time_t is new int32_t;
+
+   type suseconds_t is new int32_t;
 
    type timespec is record
       tv_sec : time_t;
@@ -584,7 +589,11 @@ private
 
    type struct_timeval is record
       tv_sec  : time_t;
-      tv_usec : time_t;
+      tv_usec : suseconds_t;
+   end record;
+   for struct_timeval use record
+      tv_sec at 0 range 0 .. 31;
+      tv_usec at 4 range 0 .. 31;
    end record;
    pragma Convention (C, struct_timeval);
 

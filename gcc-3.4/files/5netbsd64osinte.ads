@@ -575,7 +575,7 @@ private
    --  From <sys/ansi.h>
    type pid_t is new int32_t;
 
-   type time_t is new long;
+   type time_t is new int32_t;
 
    type timespec is record
       tv_sec : time_t;
