@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/08 12:05:11 adrian_p Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/23 00:26:02 adrian_p Exp $
 
 DISTNAME=	Unreal3.2.2
 PKGNAME=	unrealircd-3.2.2
@@ -13,9 +13,8 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 WRKSRC=		${WRKDIR}/Unreal3.2
-INSTALL_UNSTRIPPED=	YES
 
-.include "../../mk/bsd.prefs.mk"
+#.include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ENV+=	tre_version="0.7.0"
 CONFIGURE_ENV+=	TRELIBS="-L${PREFIX}/lib -ltre"
@@ -32,6 +31,7 @@ CONFIGURE_ARGS+=	--with-sendq=${IRCD_SENDQ}
 CONFIGURE_ARGS+=	--with-bufferpool=${IRCD_BUFFER}
 CONFIGURE_ARGS+=	--with-fd-setsize=${IRCD_FDSIZE}
 CONFIGURE_ARGS+=	--with-nick-history=${IRCD_NICKHIST}
+CONFIGURE_ARGS+=	--disable-inet6
 
 .include "options.mk"
 
@@ -79,6 +79,13 @@ SUBST_SED.homedir=	-e "s|src/modules|${IRCD_SHARE}/modules|g" \
 SUBST_MESSAGE.homedir=	"Fixing home directory of IRC server."
 
 OWN_DIRS_PERMS=		${IRCD_HOME} ${IRCD_USER} ${IRCD_GROUP} 0700
+
+# Bad hack as I think there's a bug floating round the place
+# with INSTALL_UNSTRIPPED=yes being ignored in cetain cases.
+.if ${OPSYS} == "Darwin"
+_STRIPFLAG_CC=          
+_STRIPFLAG_INSTALL=     
+.endif
 
 do-install:
 	${INSTALL_DATA_DIR} ${IRCD_SHARE}
