@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/09/30 09:11:28 hfath Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/18 03:38:42 minskim Exp $
 # FreeBSD Id: ports/net/l2tpd/Makefile,v 1.6 2003/04/16 13:53:27 ru Exp
 
 DISTNAME=	l2tpd-0.69
@@ -9,6 +9,7 @@ MAINTAINER=	hauke@Espresso.Rhein-Neckar.DE
 HOMEPAGE=	http://www.l2tpd.org/
 COMMENT=	Implementation of the layer two tunneling protocol (l2tp)
 
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL= YES
 
 .include "../../mk/bsd.prefs.mk"
