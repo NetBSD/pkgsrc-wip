@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/04/18 09:40:00 cjep Exp $
+$NetBSD: patch-ad,v 1.2 2004/02/27 23:22:25 rillig Exp $
 
 --- texinput/Bg5/c00kai.fd.orig	Sun Jul  1 23:55:08 2001
 +++ texinput/Bg5/c00kai.fd	Sun Jul  1 23:56:20 2001
@@ -10,55 +10,5 @@ $NetBSD: patch-ad,v 1.1.1.1 2003/04/18 09:40:00 cjep Exp $
 -\DeclareFontShape{C00}{kai}{bx}{n}{<-> CJKb * b5ka12}{\CJKbold}
 +\DeclareFontShape{C00}{kai}{m}{n}{<-> CJK * bkai00mp}{}
 +\DeclareFontShape{C00}{kai}{bx}{n}{<-> CJKb * bkai00mp}{\CJKbold}
- 
- \endinput
---- texinput/Bg5/c00song.fd.orig	Sun Jul  1 23:58:07 2001
-+++ texinput/Bg5/c00song.fd	Sun Jul  1 23:58:58 2001
-@@ -19,7 +19,7 @@
- 
- \DeclareFontFamily{C00}{song}{\hyphenchar \font\m@ne}
- 
--\DeclareFontShape{C00}{song}{m}{n}{<-> CJKsub * kai/m/n}{}
--\DeclareFontShape{C00}{song}{bx}{n}{<-> CJKsub * kai/bx/n}{}
-+\DeclareFontShape{C00}{song}{m}{n}{<-> CJK * bsmi00lp}{}
-+\DeclareFontShape{C00}{song}{bx}{n}{<-> CJKb * bsmi00lp}{\CJKbold}
- 
- \endinput
---- texinput/GB/c10kai.fd.orig	Mon Jul  2 00:21:47 2001
-+++ texinput/GB/c10kai.fd	Mon Jul  2 00:13:32 2001
-@@ -0,0 +1,23 @@
-+% This is the file c10kai.fd of the CJK package
-+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
-+%
-+% created by Werner Lemberg <wl@gnu.org>
-+%
-+% Version 4.5.1 (17-Jun-2002)
-+
-+\def\fileversion{4.5.1}
-+\def\filedate{2002/06/17}
-+\ProvidesFile{c10kai.fd}[\filedate\space\fileversion]
-+
-+
-+% simplified Chinese characters
-+%
-+% character set: GB 2312-80
-+% font encoding: CJK (standard)
-+
-+\DeclareFontFamily{C10}{kai}{\hyphenchar \font\m@ne}
-+
-+\DeclareFontShape{C10}{kai}{m}{n}{<-> CJK * gkai00mp}{}
-+\DeclareFontShape{C10}{kai}{bx}{n}{<-> CJKb * gkai00mp}{\CJKbold}
-+
-+\endinput
---- texinput/GB/c10song.fd.orig	Mon Jul  2 00:03:16 2001
-+++ texinput/GB/c10song.fd	Mon Jul  2 00:05:00 2001
-@@ -17,7 +17,7 @@
- 
- \DeclareFontFamily{C10}{song}{\hyphenchar \font\m@ne}
- 
--\DeclareFontShape{C10}{song}{m}{n}{<-> CJKsub * fs/m/n}{}
--\DeclareFontShape{C10}{song}{bx}{n}{<-> CJKsub * fs/bx/n}{}
-+\DeclareFontShape{C10}{song}{m}{n}{<-> CJK * gbsn00lp}{}
-+\DeclareFontShape{C10}{song}{bx}{n}{<-> CJKb * gbsn00lp}{\CJKbold}
  
  \endinput
