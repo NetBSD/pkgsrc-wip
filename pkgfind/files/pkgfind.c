@@ -190,6 +190,8 @@ subcasestr(const char *s, const char *find)
 static void
 usage(void)
 {
-	(void)fprintf(stderr, "Usage: %s keyword [...]\n", getprogname());
+	extern char *__progname;
+
+	(void)fprintf(stderr, "Usage: %s keyword [...]\n", __progname);
 	exit(EXIT_FAILURE);
 }
