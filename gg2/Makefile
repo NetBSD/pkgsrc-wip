@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/17 02:55:31 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/19 18:08:38 thomasklausner Exp $
 #
 
 DISTNAME=	gg2-2.0pre6
@@ -9,7 +9,7 @@ MAINTAINER=	dotz@irc.pl
 HOMEPAGE=	http://ggadu.sourceforge.net/
 COMMENT=	Instant messenger software for Poland; Jabber plugin included
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/lib/gg2_core.pc.in
@@ -18,10 +18,11 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gui --with-gadu --with-tlen \
 			--with-sms --with-xosd --with-oss
 
-.include "../../wip/libtlen/buildlink2.mk"
-.include "../../chat/ekg/buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
-.include "../../x11/xosd/buildlink2.mk"
+.include "../../wip/libtlen/buildlink3.mk"
+.include "../../chat/ekg/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/xosd/buildlink3.mk"
 
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
