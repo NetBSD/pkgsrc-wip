@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/11/29 03:40:01 mpasternak Exp $
+# $NetBSD: Makefile,v 1.5 2003/11/30 17:19:22 mpasternak Exp $
 #
 
 DISTNAME=		# defined
@@ -32,7 +32,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${TARGET_DIR}
 	cd ${WRKDIR}/kylix3_open/runimage/kylix && ${PAX} -rw -pe * ${TARGET_DIR}
 	${LN} -s ${EMULOPTDIR}/bin/libwine.borland.so.1.0 ${EMULDIR}/usr/lib/libwine.borland.so
-	${LN} -s ${EMULOPTDIR}/bin/libwine_unicode.borland.so.1.0 ${EMULDIR}/usr/lib/libwine_unicode.borland.so.1.0
+	${LN} -s ${EMULOPTDIR}/bin/libwine_unicode.borland.so.1.0 ${EMULDIR}/usr/lib/libwine_unicode.borland.so
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	cd ${EMULOPTDIR} && ${FIND} kylix -type f | \
 		${SED} -e "s|^|\$${EMULOPTSUBDIR}/|" >> ${PLIST_SRC}
