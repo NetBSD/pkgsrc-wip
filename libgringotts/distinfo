@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/04 02:35:08 xtraeme Exp $
-
-SHA1 (libgringotts-1.2.1.tar.bz2) = 893f9e607a954b548069addbe053d50983e7388e
-Size (libgringotts-1.2.1.tar.bz2) = 167013 bytes
-SHA1 (patch-aa) = d5f709216825052ab6c003a8eca056a47a82f131
