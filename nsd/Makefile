@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/03 20:04:39 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/26 00:39:23 rockpiper Exp $
 #
 
 DISTNAME=		nsd-2.0.2
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.nlnetlabs.nl/nsd/
 COMMENT=		Name Server Daemon
 
-USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
