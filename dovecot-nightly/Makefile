@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/22 19:18:51 tomhensel Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/24 01:49:19 tomhensel Exp $
 
 DISTNAME=		dovecot-${_DOVECOT_VER}
 PKGNAME=		dovecot-nightly-${_DOVECOT_VER}
@@ -8,6 +8,8 @@ MASTER_SITES=		http://dovecot.fi/nightly/
 MAINTAINER=		tom@replic8.net
 HOMEPAGE=		http://dovecot.fi/
 COMMENT=		Secure, full-featured IMAP (and POP3) server
+
+NO_CHECKSUM=		YES
 
 CONFLICTS=		dovecot
 
@@ -91,7 +93,7 @@ CONF_FILES=	${EGDIR}/dovecot.conf.default ${PKG_SYSCONFDIR}/dovecot.conf
 
 post-configure:
 	@cd ${WRKSRC};							\
-	for file in dovecot-example.conf; do				\
+	for ${FILE} in dovecot-example.conf; do				\
 		${SED} ${FILES_SUBST_SED} $$file > $$file.new;		\
 		${MV} -f $$file.new $$file;				\
 	done
