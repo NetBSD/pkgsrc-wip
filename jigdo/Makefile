@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 17:33:15 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/20 19:17:08 thomasklausner Exp $
 #
 
-DISTNAME=		jigdo-0.6.9
+DISTNAME=		jigdo-0.7.0
 CATEGORIES=		misc
 MASTER_SITES=		http://home.in.tum.de/~atterer/jigdo/
 EXTRACT_SUFX=		.tar.bz2

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/25 19:52:41 virtus Exp $
+$NetBSD: patch-aa,v 1.2 2003/11/20 19:17:08 thomasklausner Exp $
 
---- src/cachefile.hh.orig	Tue Feb 12 16:36:16 2002
+--- src/cachefile.hh.orig	2003-03-03 21:47:16.000000000 +0100
 +++ src/cachefile.hh
-@@ -50,7 +50,7 @@ using namespace std;
+@@ -48,7 +48,7 @@
  #include <time.h> /* for time_t */
  
  #if HAVE_LIBDB
