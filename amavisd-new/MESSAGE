@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/09/14 17:02:22 jcd Exp $
+
+ To use amavisd-new, you need to install at least one virus scanner.
+ For example McAfee VirusScan is available as a package in
+ /usr/pkgsrc/security/uvscan. If you want to use the amavis sendmail
+ milter interface, you need to type the following command:
+
+	touch ${AMAVISDIR}/use.milter
+
+===========================================================================
