@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1129 2004/03/28 19:44:40 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1129 2004/03/28 19:44:40 xtraeme Exp $
+# $Id: Makefile,v 1.1130 2004/03/28 19:51:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1130 2004/03/28 19:51:37 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -189,7 +189,6 @@ SUBDIR+=	glaxium
 SUBDIR+=	glib2-devel
 SUBDIR+=	glibc
 SUBDIR+=	glide3
-SUBDIR+=	gliv
 SUBDIR+=	glkterm
 SUBDIR+=	glulxe
 SUBDIR+=	gmfsk
