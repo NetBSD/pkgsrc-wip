@@ -1,1 +1,2 @@
-Update to 1.3.0.
+- fix KDE and GNOME dependency.  (create separate celestia-kde and
+  celestia-gnome packages, perhaps?)

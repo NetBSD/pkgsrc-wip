@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2003/04/13 13:12:29 cjep Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/07 17:37:39 lsed Exp $
 #
 
-DISTNAME=	celestia-1.2.4
+DISTNAME=	celestia-1.3.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=celestia/}
 
@@ -15,10 +15,8 @@ USE_GMAKE=	YES
 USE_X11=	YES
 
 .include "../../x11/gtkglarea/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/glut/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/MesaLib/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
