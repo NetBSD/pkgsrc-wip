@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/03 17:26:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/04 01:35:53 thomasklausner Exp $
 
 DISTNAME=		gnucash-1.8.9
 # bumped due to g-wrap etc.
@@ -28,6 +28,9 @@ CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ENV+=		PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
+
+# code is using char/unsigned char inconsistently
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 AM_MAKEFLAGS=		LIBTOOL='${LIBTOOL} ${LIBTOOL_FLAGS}'
 MAKE_ENV+=		AM_MAKEFLAGS="${AM_MAKEFLAGS}"
