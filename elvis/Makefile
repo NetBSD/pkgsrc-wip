@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/06/10 11:15:37 airhead Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/22 10:40:02 cjep Exp $
 #
 
-PKGNAME=        elvis-2.1.4
 DISTNAME=	elvis-2.1_4
+PKGNAME=        elvis-2.1.4
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cs.pdx.edu/pub/elvis/
 
