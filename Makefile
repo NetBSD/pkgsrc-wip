@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.103 2003/04/19 08:42:49 lsed Exp $
-# $NetBSD: Makefile,v 1.103 2003/04/19 08:42:49 lsed Exp $
+# $Id: Makefile,v 1.104 2003/04/19 12:59:58 bmeurer Exp $
+# $NetBSD: Makefile,v 1.104 2003/04/19 12:59:58 bmeurer Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -31,6 +31,7 @@ SUBDIR+=	gkrellm2-share
 SUBDIR+=	gkrellm2-snmp
 SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
+SUBDIR+=	gnomeicu
 SUBDIR+=	golem
 SUBDIR+=	gstreamer
 SUBDIR+=	gstreamer-player
