@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2003/08/28 11:12:14 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2003/08/28 19:30:21 adrian_p Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
-PKGREVISION=		1
 SVR4_PKGNAME=		mysqs
 COMMENT=		MySQL, a free SQL database (server)
 
@@ -11,7 +10,10 @@ CONFIGURE_ARGS+=	--with-libwrap
 CONFIGURE_ARGS+=	--without-berkeley-db
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
-USE_GMAKE=		YES
+
+PTHREAD_OPTS=		require
+
+CONFIGURE_ARGS+=	--with-pthreads
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 
@@ -51,8 +53,9 @@ post-install:
 
 .if ${PTHREAD_TYPE} == "pth"
 CFLAGS+=	-DSIGNALS_DONT_BREAK_READ
-.else
-CFLAGS+=	-DHAVE_NONPOSIX_SIGWAIT
+CXXFLAGS+=	-DSIGNALS_DONT_BREAK_READ
+CONFIGURE_ENV+=	ac_cv_func_pthread_setschedparam=no
+CONFIGURE_ENV+=	ac_cv_func_pthread_attr_setschedparam=no
 .endif
 
 .include "../../mk/bsd.pkg.mk"

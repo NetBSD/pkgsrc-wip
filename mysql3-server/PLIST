@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/09 18:02:10 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/28 19:30:22 adrian_p Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
@@ -120,3 +120,5 @@ share/mysql/ukrainian/errmsg.txt
 @dirrm share/mysql/danish
 @dirrm share/mysql/czech
 @dirrm share/mysql/charsets
+@dirrm share/mysql
+@dirrm lib/mysql
