@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/24 17:23:55 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/31 12:40:01 cubidou Exp $
 #
 
 DISTNAME=		mod_auth_mysql.c
@@ -11,6 +11,8 @@ DISTFILES=		${DISTNAME}.gz mysql-group-auth.txt
 MAINTAINER=		cube@NetBSD.org
 HOMEPAGE=		ftp://ftp.redhat.com/pub/redhat/linux/9/en/os/i386/SRPMS/
 COMMENT=		Module to allow Apache 2 authentication against a MySQL database.
+
+CONFLICTS+=		ap-auth-mysql-*
 
 DIST_SUBDIR=		ap2-auth-mysql
 EXTRACT_ONLY=		${DISTNAME}.gz
