@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/02 20:52:09 dillo Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/06 22:21:59 dillo Exp $
 #
 
 DISTNAME=		glkloader-0.3.2
@@ -9,7 +9,7 @@ MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://mirror.ifarchive.org/if-archiveXprogrammingXglkXimplementations.html
 COMMENT=		Glk library that loads real glk implementation at runtime
 
-DEPENDS+=		glkterm-[0-9]:../../wip/glkterm
+DEPENDS+=		glkterm-[0-9]*:../../wip/glkterm
 
 USE_BUILDLINK3=		yes
 USE_PERL5=		build
