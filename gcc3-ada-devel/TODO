@@ -1,4 +1,0 @@
-- There is an incomplete change in the gcc source
-  tree changing to directory gcc instead of gcc-lib.
-  The gcc-lib ireferences are still abundant in the ada and
-  testsuite code.
