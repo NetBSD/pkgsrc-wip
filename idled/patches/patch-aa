@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/13 10:50:53 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2003/04/22 20:15:49 cjep Exp $
 
---- Makefile.orig	Fri May 17 00:05:28 1996
+--- Makefile.orig	1996-05-16 23:05:28.000000000 +0100
 +++ Makefile
 @@ -165,27 +165,27 @@ INCLUDE = 
  #        If you add it, '-lkvm' must also be added to the SPECLIBS line
