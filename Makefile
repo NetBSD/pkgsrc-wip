@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.257 2003/06/22 13:50:16 marc Exp $
-# $NetBSD: Makefile,v 1.257 2003/06/22 13:50:16 marc Exp $
+# $Id: Makefile,v 1.258 2003/06/23 16:25:06 poppnk Exp $
+# $NetBSD: Makefile,v 1.258 2003/06/23 16:25:06 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -38,6 +38,7 @@ SUBDIR+=	darkice
 SUBDIR+=	devhelp
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
+SUBDIR+=	dfm
 SUBDIR+=	directfb
 SUBDIR+=	directory-administrator
 SUBDIR+=	drweb
