@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/17 12:53:39 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/03/17 12:59:31 mpasternak Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -6,6 +6,7 @@ bin/gobject-query
 include/glib-2.0/glib-object.h
 include/glib-2.0/glib.h
 include/glib-2.0/glib/galloca.h
+include/glib-2.0/glib/gatomic.h
 include/glib-2.0/glib/garray.h
 include/glib-2.0/glib/gasyncqueue.h
 include/glib-2.0/glib/gbacktrace.h
