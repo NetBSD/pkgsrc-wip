@@ -23,7 +23,7 @@ WRKSRC= 	${WRKDIR}/redhat-artwork-${THEMEVERSION}
 USE_GNU_TOOLS+=	make
 USE_X11BASE=	YES
 THEMES_SUBDIRS= ${WRKSRC}/art/gtk/Bluecurve1
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 do-extract:
 	@${RM} -rf ${WRKDIR}
@@ -51,6 +51,6 @@ do-install:
 	@${MKDIR} ${PREFIX}/share/themes/Bluecurve/gtk && ${CHMOD} a+rx ${PREFIX}/share/themes/Bluecurve/gtk
 	@${INSTALL_DATA} ${WRKSRC}/art/gtk/Bluecurve1/gtk/gtkrc ${PREFIX}/share/themes/Bluecurve/gtk
 
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
