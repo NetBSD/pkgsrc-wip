@@ -1,7 +1,0 @@
-
-- Try to avoid conflicting with silc-client and silc-server
-  - File man/man1/silc.1 conflicts with silc-client..
-- Create & test buildlink{2,3}.mk files
-- Test with NetBSD 1.6 and devel/pth
-- There is some problems with pkgviews installation and linking of files with
-  space " " characters.

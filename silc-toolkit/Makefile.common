@@ -1,9 +1,0 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/22 20:00:30 oherrala Exp $
-#
-
-# Distribution specific information.
-#
-SILC_TOOLKIT_VERSION=		0.9.11
-SILC_TOOLKIT_DISTNAME=		silc-toolkit-${SILC_TOOLKIT_VERSION}
-SILC_TOOLKIT_EXTRACT_SUFX=	.tar.bz2
-SILC_TOOLKIT_DISTFILE=		${SILC_TOOLKIT_DISTNAME}${SILC_TOOLKIT_EXTRACT_SUFX}

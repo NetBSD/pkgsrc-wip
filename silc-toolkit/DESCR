@@ -1,6 +1,0 @@
-SILC Toolkit is a software development toolkit which provides full SILC
-protocol implementation for application developers. The SILC Toolkit provides
-SILC Client Library, SILC Protocol Core Library, SILC Key Exchange Library,
-SILC Crypto Library, SILC Math Library, SILC Utility Library, and other
-libraries. The SILC Toolkit also includes full reference manual and developer
-guide with examples and tutorials.

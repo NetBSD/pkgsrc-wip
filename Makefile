@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1435 2004/08/19 08:17:01 kristerw Exp $
-# $NetBSD: Makefile,v 1.1435 2004/08/19 08:17:01 kristerw Exp $
+# $Id: Makefile,v 1.1436 2004/08/19 12:25:18 oherrala Exp $
+# $NetBSD: Makefile,v 1.1436 2004/08/19 12:25:18 oherrala Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -666,7 +666,6 @@ SUBDIR+=	serlook
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shadow
 SUBDIR+=	shoutcast
-SUBDIR+=	silc-toolkit
 SUBDIR+=	silky
 SUBDIR+=	simage
 SUBDIR+=	simgear
