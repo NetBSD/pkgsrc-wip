@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/15 20:09:38 daprice Exp $
+
+--- Makefile.in.orig	Tue Jul 27 13:47:16 2004
++++ Makefile.in	Tue Jul 27 13:47:39 2004
+@@ -156,7 +156,7 @@
+ SHELL = @SHELL@
+ STRIP = @STRIP@
+ VERSION = @VERSION@
+-XLIB = @XLIB@
++XLIB = @XLIB@ @X116@
+ X_CFLAGS = @X_CFLAGS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_LIBS = @X_LIBS@

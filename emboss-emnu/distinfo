@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/15 20:09:38 daprice Exp $
+
+SHA1 (emboss/emnu-1.05-20041107/EMNU-1.05.tar.gz) = 0a8798eb99f49d67c4cdbca24c2c02ec1c3918aa
+Size (emboss/emnu-1.05-20041107/EMNU-1.05.tar.gz) = 341879 bytes
+SHA1 (patch-aa) = 7651e9aa9e8dc8fc8a0444f70eda5121fc467f1c
+SHA1 (patch-ab) = ef4e491662f95246f5070375514b6959de050b57
+SHA1 (patch-ac) = c306a01fe4bfba54a136ef3d57db79387481fcfe
+SHA1 (patch-ad) = 60b09e5888976fc906d9294185e2d6a7b7385623
