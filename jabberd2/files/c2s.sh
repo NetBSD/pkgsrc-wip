@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: c2s.sh,v 1.2 2004/03/17 02:41:33 xtraeme Exp $
+# $NetBSD: c2s.sh,v 1.3 2004/03/17 05:20:42 xtraeme Exp $
 #
 # PROVIDE: c2s
 # REQUIRE: DAEMON
@@ -14,7 +14,7 @@ rcvar=$name
 command="@PREFIX@/bin/${name}"
 required_files="@PKG_SYSCONFDIR@/${name}.xml"
 extra_commands="reload"
-command_args="-D 2>&1 > @JABBERD_LOGDIR@/${name}.log &"
+command_args="2>&1 >/dev/null &"
 c2s_user="@JABBERD_USER@"
 pidfile="@JABBERD_PIDDIR@/${name}.pid"
 stop_postcmd="remove_pidfile"
