@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2004/02/27 10:55:32 pulahti Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/16 12:44:47 pulahti Exp $
 
 DISTNAME=	xpilot-4.5.4X2
 PKGNAME=	xpilot-ng-4.5.4X2
@@ -14,5 +14,4 @@ USE_BUILDLINK3=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
-.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
