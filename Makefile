@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.534 2003/10/11 18:13:27 shattered Exp $
-# $NetBSD: Makefile,v 1.534 2003/10/11 18:13:27 shattered Exp $
+# $Id: Makefile,v 1.535 2003/10/11 21:48:17 minskim Exp $
+# $NetBSD: Makefile,v 1.535 2003/10/11 21:48:17 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -398,6 +398,7 @@ SUBDIR+=	tetrinet
 SUBDIR+=	tetrinetx
 SUBDIR+=	tex-foiltex
 SUBDIR+=	tex-prosper
+SUBDIR+=	tex-xmltex
 SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
