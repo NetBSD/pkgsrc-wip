@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/29 18:20:42 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2004/06/20 05:05:24 xtraeme Exp $
 
-SHA1 (mingw-runtime-3.2.tar.gz) = ef30f93037318c0ab57b71b649ffc81895e19f25
-Size (mingw-runtime-3.2.tar.gz) = 308420 bytes
+SHA1 (mingw-runtime-3.3.tar.gz) = c62e7701946b2476dc923d7fd651cb0f1f402f93
+Size (mingw-runtime-3.3.tar.gz) = 335134 bytes
