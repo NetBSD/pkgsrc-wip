@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/09 02:39:34 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/13 23:31:12 blef Exp $
 #
 
 DISTNAME=		libXres-1.0.1
@@ -11,17 +11,17 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://xlibs.freedesktop.org/
 COMMENT=		X Resource usage library
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	xres.pc.in
 
-.include "../../wip/libX11/buildlink2.mk"
-.include "../../wip/libXau/buildlink2.mk"
-.include "../../wip/libXext/buildlink2.mk"
-.include "../../wip/xproto/buildlink2.mk"
-.include "../../wip/xextensions/buildlink2.mk"
-.include "../../wip/resourceext/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../wip/libX11/buildlink3.mk"
+.include "../../wip/libXau/buildlink3.mk"
+.include "../../wip/libXext/buildlink3.mk"
+.include "../../wip/xproto/buildlink3.mk"
+.include "../../wip/xextensions/buildlink3.mk"
+.include "../../wip/resourceext/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
