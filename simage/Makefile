@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/11 21:57:39 bjan2 Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/11 21:59:07 bjan2 Exp $
 
 DISTNAME=		simage-1.6.0
 CATEGORIES=		graphics
@@ -12,6 +12,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--with-ungif --with-jpeg --with-png \
 			--with-tiff --with-mpeg2enc
 USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
