@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/30 04:11:12 blef Exp $
-
-SHA1 (gtk-mist-engine-0.10.tar.gz) = bb62ce390ad7fbfb2599f7b6c69fadf5c5332465
-Size (gtk-mist-engine-0.10.tar.gz) = 209842 bytes
-SHA1 (patch-aa) = f2b706aa4d5502cdcaa4cab3974ae9d9e9875eab
-SHA1 (patch-ab) = bb537253ac9639d06e362989b480f2bb1148bf5a
-SHA1 (patch-ac) = 92aa7ab325118c910028245de70fbe48c7622aef
