@@ -1,6 +1,3 @@
 This is not ready but should be a nice starting point...
 
 - I'm having problems with NetBSD + sun-jre14
-
-- How can I allow either sun-jre13 or sun-jre14 to be dependency? If neither
-  is installed, then install sun-jre13.
