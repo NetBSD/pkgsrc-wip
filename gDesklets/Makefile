@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/20 03:16:45 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/22 20:59:30 minskim Exp $
 
 DISTNAME=	gDesklets-0.25.1
 CATEGORIES=	x11 gnome
@@ -39,4 +39,8 @@ post-install:
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/py-gnome2/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
+
+# libXau.so is required to build dynamically-linked Python modules.
+.include "../../wip/libXau/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
