@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2003/09/30 15:39:59 hfath Exp $
+$NetBSD: patch-ab,v 1.2 2004/02/27 23:12:24 rillig Exp $
 
 diff pre-conf/util/namecheck.t util/namecheck.t
 --- pre-conf/util/namecheck.t	Tue Oct 18 04:50:01 1994
@@ -16,12 +16,3 @@ diff pre-conf/util/namecheck.t util/namecheck.t
  comp.lang.C++	uppercase letter(s) in name
  comp.lang.c_2
  comp.lang.c-2
-diff pre-conf/ctl/reg/n.1r work/ctl/reg/n.1r
---- pre-conf/ctl/reg/n.1r	Fri Apr 28 02:50:47 1995
-+++ ctl/reg/n.1r	Mon Aug  2 22:12:43 1999
-@@ -1,4 +1,4 @@
--newgroup comp.lang.beta
-+new newsgroup comp.lang.beta
- :::
- tale@uunet.uu.net (David C Lawrence) said to
- create `comp.lang.beta'.
