@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/23 19:11:09 xtraeme Exp $
+
+--- src/util.c.orig	2003-06-23 20:35:00.000000000 +0200
++++ src/util.c	2003-06-23 20:35:54.000000000 +0200
+@@ -14,12 +14,19 @@
+ #include <sys/wait.h>
+ 
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ # include <errno.h>
++#endif
++
++#ifdef __FreeBSD__
+ # include <libutil.h>
+ #endif
+ 
+-#include "util.h"
++#ifdef __NetBSD__
++# include <util.h>
++#endif
++
++# include "util.h"
+ 
+ /* ABORT() kills GTK if we're not root, else it just exits.
+  */
+@@ -40,7 +47,7 @@
+  */
+ #define OPEN_TTY() getpt()
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ /* FreeBSD doesn't have getpt(). This function emulates it's behaviour. */
+ int getpt (void);
+ 

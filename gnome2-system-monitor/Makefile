@@ -1,0 +1,40 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/06/23 19:11:09 xtraeme Exp $
+#
+
+DISTNAME=	gnome-system-monitor-2.0.5
+PKGNAME=	${DISTNAME:S/gnome/gnome2/}
+CATEGORIES=	sysutils gnome2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.0/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.gnome.org/
+COMMENT=	GNOME 2.0 system monitor program
+
+DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+BUILD_USES_MSGFMT=	yes
+
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
+USE_GMAKE=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+LDFLAGS+=	-lutil
+.endif
+
+CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
+MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
+
+GCONF2_SCHEMAS+=	gnome-system-monitor.schemas
+
+.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/libgtop2/buildlink2.mk"
+.include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../devel/libwnck/buildlink2.mk"
+.include "../../x11/startup-notification/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/bsd.pkg.mk"
