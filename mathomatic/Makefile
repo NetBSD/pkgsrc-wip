@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/01/08 19:09:22 bjan2 Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/08 19:14:35 bjan2 Exp $
 #
 
 DISTNAME=		am-10.7d
+PKGNAME=		mathomatic-10.7d
 WRKSRC=			${WRKDIR}/math
 CATEGORIES=		wip
 MASTER_SITES=		http://bjan.freeshell.org/nb/
