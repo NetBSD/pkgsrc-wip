@@ -1,7 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/10 00:01:10 blef Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/05/10 01:39:09 blef Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_F2PY2E_BUILDLINK3_MK:=	${PY_F2PY2E_BUILDLINK3_MK}+
+
+.include "../../lang/python/pyversion.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	pyf2py2e
