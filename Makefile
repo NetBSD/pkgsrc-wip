@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.831 2004/01/01 17:04:02 cjep Exp $
-# $NetBSD: Makefile,v 1.831 2004/01/01 17:04:02 cjep Exp $
+# $Id: Makefile,v 1.832 2004/01/01 17:06:19 mpasternak Exp $
+# $NetBSD: Makefile,v 1.832 2004/01/01 17:06:19 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -146,6 +146,7 @@ SUBDIR+=	freeglut
 SUBDIR+=	freenet-tools
 SUBDIR+=	frontpage
 SUBDIR+=	fsv
+SUBDIR+=	fvcool
 SUBDIR+=	fwbuilder
 SUBDIR+=	galib
 SUBDIR+=	gcc3-ada-devel
