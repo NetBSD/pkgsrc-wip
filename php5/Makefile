@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/15 15:32:32 poppnk Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/24 23:28:33 poppnk Exp $
 #
 
 PKGNAME=	php-${PHP5_VERSION}
@@ -16,8 +16,7 @@ USE_GMAKE=	YES
 
 CONF_FILES=	${PREFIX}/lib/php.ini
 
-BUILD_DEFS=	USE_INET6 PHP5_WITH_FTP \
-		PHP5_WITHOUT_XML
+BUILD_DEFS=	USE_INET6 PHP5_WITH_FTP
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/php.ini-recommended \

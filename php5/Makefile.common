@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.4 2004/01/14 20:40:32 poppnk Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/01/24 23:28:35 poppnk Exp $
 #
 
-DISTNAME=	php-${PHP5_VERSION}
+DISTNAME?=	php-${PHP5_VERSION}
 CATEGORIES=	wip www
 MASTER_SITES=	http://www.php.net/
 EXTRACT_SUFX=	.tar.bz2
@@ -29,14 +29,12 @@ CONFIGURE_ARGS+=--disable-ipv6
 CONFIGURE_ARGS+=--enable-ipv6
 .endif
 
+# XXX This must be a php5-ftp module
 .if defined(PHP5_WITH_FTP) && ${PHP5_WITH_FTP} == "YES"
 CONFIGURE_ARGS+=--enable-ftp
 .endif
 
-.if defined(PHP5_WITHOUT_XML) && ${PHP5_WITHOUT_XML} == "YES"
-CONFIGURE_ARGS+=--disable-xml
-.else
+CONFIGURE_ARGS+=--enable-xml
 CONFIGURE_ARGS+=--with-libxml-dir=${PREFIX}
 .include "../../textproc/libxml2/buildlink2.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
