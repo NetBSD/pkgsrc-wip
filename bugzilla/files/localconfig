@@ -13,12 +13,27 @@ $index_html = 0;
 
 
 #
-# In order to do certain functions in Bugzilla (such as sync the shadow
-# database), we require the MySQL Binaries (mysql, mysqldump, and mysqladmin).
-# Because it's possible that these files aren't in your path, you can specify
-# their location here.
+# For some optional functions of Bugzilla (such as the pretty-print patch
+# viewer), we need the cvs binary to access files and revisions.
+# Because it's possible that this program is not in your path, you can specify
+# its location here.  Please specify the full path to the executable.
+$cvsbin = "/usr/bin/cvs";
+
+
+
+#
+# For some optional functions of Bugzilla (such as the pretty-print patch
+# viewer), we need the interdiff binary to make diffs between two patches.
+# Because it's possible that this program is not in your path, you can specify
+# its location here.  Please specify the full path to the executable.
+$interdiffbin = "";
+
+
+
+#
+# The interdiff feature needs diff, so we have to have that path.
 # Please specify only the directory name, with no trailing slash.
-$mysqlpath = "@PREFIX@/bin";
+$diffpath = "/usr/bin";
 
 
 #
@@ -34,7 +49,6 @@ $mysqlpath = "@PREFIX@/bin";
 # If this is set to 1, Bugzilla will create these files if they don't exist.
 # If this is set to 0, Bugzilla will not create these files.
 $create_htaccess = 1;
-
 
 
 #
@@ -55,10 +69,10 @@ $webservergroup = "@BZ_WEB_GROUP@";
 #
 # How to access the SQL database:
 #
-$db_host = "@BZ_DB_HOST@";		# where is the database?
-$db_port = @BZ_DB_PORT@;                # which port to use
-$db_name = "@BZ_DB_DATABASE@";          # name of the MySQL database
-$db_user = "@BZ_DB_USER@";              # user to attach to the MySQL database
+$db_host = "@BZ_DB_HOST@";         # where is the database?
+$db_port = @BZ_DB_PORT@;           # which port to use
+$db_name = "@BZ_DB_DATABASE@";     # name of the MySQL database
+$db_user = "@BZ_DB_USER@";         # user to attach to the MySQL database
 
 
 
@@ -69,6 +83,12 @@ $db_user = "@BZ_DB_USER@";              # user to attach to the MySQL database
 # need to escape it by preceding it with a \ character. (\') or (\\)
 #
 $db_pass = '@BZ_DB_PASS@';
+
+
+
+# Enter a path to the unix socket for mysql. If this is blank, then mysql's
+# compiled-in default will be used. You probably want that.
+$db_sock = '';
 
 
 
@@ -120,6 +140,7 @@ $db_check = 1;
         "Windows 2000",
         "Windows NT",
         "Windows XP",
+        "Windows Server 2003",
         "Mac System 7",
         "Mac System 7.5",
         "Mac System 7.6.1",
@@ -127,9 +148,12 @@ $db_check = 1;
         "Mac System 8.5",
         "Mac System 8.6",
         "Mac System 9.x",
-        "MacOS X",
+        "Mac OS X 10.0",
+        "Mac OS X 10.1",
+        "Mac OS X 10.2",
+        "Mac OS X 10.3",
         "Linux",
-        "BSDI",
+        "BSD/OS",
         "FreeBSD",
         "NetBSD",
         "OpenBSD",
@@ -161,15 +185,3 @@ $db_check = 1;
         "Sun",
         "Other"
 );
-
-
-
-#
-# The types of content that template files can generate, indexed by file extension.
-#
-$contenttypes = {
-  "html" => "text/html" , 
-   "rdf" => "application/xml" , 
-   "xml" => "text/xml" , 
-    "js" => "application/x-javascript" , 
-};
