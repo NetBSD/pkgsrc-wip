@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 22:54:50 blef Exp $
+bin/fakenes
+share/fakenes/fakenes.dat
+@dirrm share/fakenes

@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/11/27 22:54:50 blef Exp $
+
+--- src/Makefile.in.orig	2002-05-03 23:33:02.000000000 -0700
++++ src/Makefile.in	2003-11-27 06:46:15.000000000 -0800
+@@ -39,15 +39,9 @@
+ 
+ 
+ install : ${BINARY} ${DATAFILE}
+-
+-	${MKDIR} ${HOME}/bin
+-
+-	${MKDIR} ${HOME}/.fakenes
+-
+-
+-	${INSTALL} -m 0755 ${BINARY} ${HOME}/bin
+-
+-	${INSTALL} -m 0644 ${DATAFILE} ${HOME}/.fakenes
++	${BSD_INSTALL_PROGRAM} ${BINARY} ${PREFIX}/bin
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/fakenes
++	${BSD_INSTALL_DATA} ${DATAFILE} ${PREFIX}/share/fakenes
+ 
+ 
+ .SUFFIXES : .c
