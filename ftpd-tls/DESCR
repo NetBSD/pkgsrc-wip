@@ -1,0 +1,4 @@
+ftpd-tls is a ftp server that supports TLS authentication and encryption
+(by the means of the OpenSSL toolkit).
+The base ftp server code is from OpenBSD 2.7. Porting to Linux and TLS
+implementation by Peter 'Luna' Runestig <peter@runestig.com>.
