@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/14 17:22:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2003/08/12 17:38:49 xtraeme Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -69,5 +69,4 @@ post-deinstall:
 	${RM} ${PKG_SYSCONFDIR}/platform-settings
 
 .include "../../security/openssl/buildlink2.mk"
-.include "../../devel/pth/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: jabberd.sh,v 1.2 2003/06/25 15:37:21 xtraeme Exp $
+# $NetBSD: jabberd.sh,v 1.3 2003/08/12 17:38:49 xtraeme Exp $
 #
 
 # PROVIDE: jabberd
@@ -12,9 +12,9 @@ name="jabberd"
 help_name="jabber"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
-command_args="-B -H /var/spool/jabberd -c \$required_files"
-pidfile="/var/run/${help_name}.pid"
 required_files="@PKG_SYSCONFDIR@/jabber.xml"
+command_args="-B -H /var/spool/jabberd -c $required_files"
+pidfile="/var/run/${help_name}.pid"
 jabberd_user="jabberd"
 
 load_rc_config $name
