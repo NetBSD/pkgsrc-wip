@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 08:37:56 anoncvs_oppn Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/27 11:12:36 marc Exp $
 #
 
 DISTNAME=	albatross-1.10
@@ -13,6 +13,7 @@ COMMENT=	Toolkit for Stateful Web Applications
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 USE_BUILDLINK2=	yes
+USE_PKGINSTALL=	yes
 
 RUNTIME_DIR?=	/var/run/albatross
 LOGDIR?=	/var/log/albatross
@@ -74,5 +75,4 @@ post-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
