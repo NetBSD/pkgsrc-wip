@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2004/02/01 18:55:48 minskim Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/02/10 18:22:43 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libX11.
 #
@@ -30,6 +30,9 @@ BUILDLINK_FILES.libX11+=	lib/libX11.*
 .include "../../wip/xproto/buildlink2.mk"
 .include "../../wip/xtrans/buildlink2.mk"
 .include "../../wip/libXau/buildlink2.mk"
+
+.include "../../mk/pthread.buildlink2.mk"
+LIBS+=		${BUILDLINK_LDFLAGS.pthread}
 
 BUILDLINK_TARGETS+=	libX11-buildlink
 
