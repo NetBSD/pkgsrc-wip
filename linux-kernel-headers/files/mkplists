@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mkplists,v 1.2 2004/06/12 17:37:46 rillig Exp $
+# $NetBSD: mkplists,v 1.3 2004/06/12 22:45:33 jeremy-c-reed Exp $
 #
 # Author: Martti Kuparinen <martti@NetBSD.org>
 #
@@ -9,12 +9,12 @@
 #
 # Usage:
 #
-#   bmake extract
+#   bmake # so include/linux/version.h will be made
 #   sh files/mkplists
 #
 set -e
 
-cd `pwd`/work/linux-*/include
+cd `pwd`/work*/linux-*/include
 
 echo "Creating temporary sets for each ARCH"
 for i in asm-*
