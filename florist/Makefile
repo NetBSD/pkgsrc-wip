@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:12:10 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/27 03:43:25 xtraeme Exp $
 #
 
 DISTNAME=		florist-3.15p-src
@@ -35,4 +35,4 @@ do-install:
 
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
-.include "${LOCALBASE}/${GCC_SUBPREFIX}/mk/ada.mk"
+#.include "${LOCALBASE}/${GCC_SUBPREFIX}/mk/ada.mk"
