@@ -1,8 +1,4 @@
 Works when tested by itself and with gpgsm, however,
-it does not work reliably with Kmail for SMIME.
-
-This package is designed to work with PTH threads. The
-PTH option is currently disabled because the gpgme test
-of gpgsm hangs when PTH threads are enabled. I'm
-modifying gpg-agent to work with the threads package
-detected by pthreads.mk.
+it does not work reliably with Kmail for SMIME on 
+smp machines (NetBSD); it appears to work fine with
+uniprocessor.
