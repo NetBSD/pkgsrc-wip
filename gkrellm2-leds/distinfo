@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/16 09:12:46 cubidou Exp $
+
+SHA1 (gkleds-0.8.1.tar.gz) = 4b126ea47470430adf2938b79c6e1aa70371912e
+Size (gkleds-0.8.1.tar.gz) = 44904 bytes
+SHA1 (patch-aa) = 5dbd00ad923de4842b32b2e7d0ef372bb4df2fe3
