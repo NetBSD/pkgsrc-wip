@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/11 09:22:11 shattered Exp $
+
+--- Makefile.orig	Fri Jun 20 14:11:29 2003
++++ Makefile
+@@ -16,8 +16,7 @@ CFLAGS  = -W -Wall -Wshadow -Wstrict-pro
+ #CFLAGS += -DALIGNMENT_WORKAROUND
+ #CFLAGS += -DTABLE_LITTLEENDIAN
+ #CFLAGS += -D__IA64__
+-CFLAGS += -DUSE_MMAP
+-PREFIX  = /usr/local
++#CFLAGS += -DUSE_MMAP
+ 
+ all : dmidecode biosdecode ownership
+ 

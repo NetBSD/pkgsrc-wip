@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/10/11 09:22:13 shattered Exp $
+
+SHA1 (dmidecode-2.2.tar.gz) = 115b5379aaf05b8101dafc7c6279341aa8db2ab3
+Size (dmidecode-2.2.tar.gz) = 36507 bytes
+SHA1 (patch-aa) = df236539483b5efdd46cb2d88ede6c22eeb4d7b3
