@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/18 22:11:41 poppnk Exp $
+man/man5/and.conf.5
+man/man5/and.priorities.5
+man/man8/and.8
+sbin/and

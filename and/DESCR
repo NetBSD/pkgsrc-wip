@@ -1,0 +1,3 @@
+The auto nice daemon activates itself in certain intervals and renices
+jobs according to their priority and CPU usage. Jobs owned by root are
+left alone. Jobs are never increased in their priority.
