@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/11/17 18:07:11 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/28 23:35:24 poppnk Exp $
 #
 
-DISTNAME=		jc-1.2.2
+DISTNAME=		jc-1.2.3
 CATEGORIES=		wip lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jcvm/}
 
@@ -16,6 +16,8 @@ USE_MAKEINFO=	yes
 INFO_FILES=jc.info jc.info-1 jc.info-2 jc.info-3
 
 CONFIGURE_ARGS+=--disable-assertions
+
+DEPENDS+=   classpath>=0.12:../../lang/classpath
 
 SUBST_CLASSES=uname gcc
 SUBST_FILES.uname=configure

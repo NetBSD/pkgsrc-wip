@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/15 20:46:24 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2004/11/28 23:35:25 poppnk Exp $
 
-SHA1 (jc-1.2.2.tar.gz) = c440ff656db5ec1a1a0b106f72c8e71683072e0e
-Size (jc-1.2.2.tar.gz) = 27461440 bytes
+SHA1 (jc-1.2.3.tar.gz) = 5346ba2c2eea697ca041fb54ea39fd1a46ed702e
+Size (jc-1.2.3.tar.gz) = 28686430 bytes
