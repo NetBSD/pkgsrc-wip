@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.24 2004/03/19 03:03:31 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.25 2004/04/18 10:22:54 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
 PKGNAME=	gccAda-${GCC_VERSION}
 CATEGORIES=	lang
-MASTER_SITES=	ftp://gcc.gnu.org/pub/gcc/snapshots/${GCC_VERSION}-${SNAPDATE}/ \
-		ftp://mirrors.rcn.net/pub/sourceware/gcc/snapshots/${GCC_VERSION}-${SNAPDATE}/
+MASTER_SITES=	ftp://gcc.gnu.org/pub/gcc/prerelease-${GCC_VERSION}-${SNAPDATE}/ \
+		ftp://mirrors.rcn.net/pub/sourceware/gcc/prerelease-${GCC_VERSION}-${SNAPDATE}/
 DISTFILES=	gcc-${GCC_VERSION}-${SNAPDATE}.tar.bz2
 
 MAINTAINER=	john@johnrshannon.com
 HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
-COMMENT=	This is the developmental gcc 3.4 Ada compiler
+COMMENT=	This is the gcc 3.4 RC2 Ada compiler
 
-GCC_VERSION=	3.4
-SNAPDATE=	20040317
+GCC_VERSION=	3.4.0
+SNAPDATE=	20040416
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
@@ -67,7 +67,7 @@ do-build:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
 
 do-test:
-	(cd ${WRKDIR}/obj && ${GMAKE} -k check-ada)
+	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
 
 do-install:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install \
