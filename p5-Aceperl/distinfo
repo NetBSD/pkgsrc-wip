@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/19 21:52:41 daprice Exp $
+
+SHA1 (AcePerl-1.86.tar.gz) = 4ec5bbeb3a5ec14e33da4019f8467054f79513f5
+Size (AcePerl-1.86.tar.gz) = 294461 bytes
+SHA1 (patch-aa) = 21b22c5508807b90f964789ee85ca4b3a9091b52
