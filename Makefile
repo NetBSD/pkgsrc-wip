@@ -1,9 +1,10 @@
-# $Id: Makefile,v 1.161 2003/05/14 06:40:18 xtraeme Exp $
-# $NetBSD: Makefile,v 1.161 2003/05/14 06:40:18 xtraeme Exp $
+# $Id: Makefile,v 1.162 2003/05/15 08:52:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.162 2003/05/15 08:52:13 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	PPower4
+SUBDIR+=	WEPCrack
 SUBDIR+=	abook
 SUBDIR+=	adodb
 SUBDIR+=	allegro
@@ -23,8 +24,8 @@ SUBDIR+=	cjk-latex-chinese
 SUBDIR+=	cjk-latex-japanese
 SUBDIR+=	cjk-latex-korean
 SUBDIR+=	cvsd
-SUBDIR+=	darkice
 SUBDIR+=	dancer-ircd
+SUBDIR+=	darkice
 SUBDIR+=	devhelp
 SUBDIR+=	dircproxy
 SUBDIR+=	directfb
@@ -53,11 +54,13 @@ SUBDIR+=	golem
 SUBDIR+=	gstreamer-player
 SUBDIR+=	gtetrinet2
 SUBDIR+=	gtk-sharp
+SUBDIR+=	gtk2-engines-mist
 SUBDIR+=	gtk2-engines-xfce
 SUBDIR+=	gtranslator
 SUBDIR+=	honeyd-arpd
 SUBDIR+=	httrack
 SUBDIR+=	ices
+SUBDIR+=	icmpchat
 SUBDIR+=	idesk
 SUBDIR+=	idled
 SUBDIR+=	ike-scan
@@ -94,8 +97,9 @@ SUBDIR+=	nagios-plugin-pgsql
 SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	navigatrix
-SUBDIR+=	netbeans-ide
 SUBDIR+=	net-tools
+SUBDIR+=	netbeans-ide
+SUBDIR+=	newsx
 SUBDIR+=	nvtv
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-HTTP-GHTTP
@@ -142,10 +146,9 @@ SUBDIR+=	vmsbackup
 SUBDIR+=	windowlab
 SUBDIR+=	xawtv
 SUBDIR+=	xevil
-SUBDIR+=	xmms-liveice
 SUBDIR+=	xml2doc
+SUBDIR+=	xmms-liveice
 SUBDIR+=	xplore
 SUBDIR+=	zebra-pj
-SUBDIR+=	WEPCrack
 
 .include "../mk/bsd.pkg.subdir.mk"
