@@ -1,8 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2004/07/29 02:50:03 tvierling Exp $
+# $NetBSD: Makefile,v 1.24 2004/07/29 13:46:28 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
 # * PKGNAME: 1.0.8 means "1.3.1-FCS, patchset 8" (FCS = Sun patch 0).
+#
+# * It's possible to update this package without having sun-jdk13
+#   installed.  Rather than just "make update", a "make" (with jdk13
+#   still installed) followed by "make update" will rebuild jdk13
+#   without using the Linux sun-jdk13 binary distribution at all.
 #
 # * The HotSpot JVM is not yet built, and likely won't work until
 #   NetBSD pre-2.0-current pthreads changes settle.  (This requires
@@ -10,6 +15,7 @@
 
 DISTNAME=	j2sdk-1_3_1-src
 PKGNAME=	jdk13-1.0.9
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	# empty
 EXTRACT_SUFX=	.tar.gz # must be explicitly specified for the ".if exists" below
@@ -37,28 +43,32 @@ USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_PKGINSTALL=	YES
 
-JVM_HOME=	${PREFIX}/java/jdk-1.3.1
 ONLY_FOR_PLATFORM=	NetBSD-1.[4-9]*-i386 NetBSD-[2-9]*-i386
+
+JAVA_HOME=	${PREFIX}/java/jdk-1.3.1
+JAVA_NAME=	jdk13
+JAVA_WRAPPERS=	appletviewer extcheck idlj jar jarsigner java javac javadoc \
+		javah javap jdb keytool policytool rmic rmid rmiregistry \
+		serialver tnameserv
 
 ALL_TARGET=	all # added to below
 BUILD_DIRS=	${WRKSRC}/j2sdk1.3.1/make
 CHECK_SHLIBS=	NO # scripts set LD_LIBRARY_PATH
 MESSAGE_SRC=	${WRKDIR}/LegalReadme.txt
-OWN_DIRS=	${JVM_HOME} ${JVM_HOME}/jre ${JVM_HOME}/jre/lib \
-		${JVM_HOME}/jre/lib/images ${JVM_HOME}/jre/lib/images/cursors \
-		${JVM_HOME}/jre/lib/security \
-		${JVM_HOME}/jre/lib/applet ${JVM_HOME}/jre/lib/ext \
-		${JVM_HOME}/jre/plugin
+OWN_DIRS=	${JAVA_HOME} ${JAVA_HOME}/jre ${JAVA_HOME}/jre/lib \
+		${JAVA_HOME}/jre/lib/images ${JAVA_HOME}/jre/lib/images/cursors \
+		${JAVA_HOME}/jre/lib/security \
+		${JAVA_HOME}/jre/lib/applet ${JAVA_HOME}/jre/lib/ext \
+		${JAVA_HOME}/jre/plugin
 PLIST_SRC=	# added to below
 
 .include "../../mk/bsd.prefs.mk"
 
-# Let an installed version of this package bootstrap a later version
-# (skips having to reinstall sun-jdk13 again)
+# Let an installed version of this package bootstrap a later version.
 #
-.if exists(${JVM_HOME}/LICENSE)
+.if exists(${LOCALBASE}/java/jdk-1.3.1/LICENSE)
 BUILD_DEPENDS+=	jdk13>=1
-MAKE_ENV+=	ALT_BOOTDIR=${JVM_HOME}
+MAKE_ENV+=	ALT_BOOTDIR=${LOCALBASE}/java/jdk-1.3.1
 .else
 BUILD_DEPENDS+=	sun-jdk13>=1:../../lang/sun-jdk13
 MAKE_ENV+=	ALT_BOOTDIR=${LOCALBASE}/java/sun-1.3.1
@@ -78,7 +88,7 @@ MAKE_ENV+=	GTK_HDRS="${LOCALBASE}/include/gtk-1.2"
 MAKE_ENV+=	LIBIDL_HDRS="${LOCALBASE}/include"
 
 post-install:
-	${LN} -f -s ${JVM_HOME}/jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji.so ${MOZILLA_PLUGINS_DIR}/
+	${LN} -f -s ${JAVA_HOME}/jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji.so ${MOZILLA_PLUGINS_DIR}/
 
 .include "../../net/ORBit/buildlink3.mk"
 .include "../../www/mozilla/buildlink3.mk"
@@ -123,7 +133,7 @@ SFILES+=	security/java.security
 
 SUPPORT_FILES=	# empty
 .for f in ${SFILES}
-SUPPORT_FILES+=	${JVM_HOME}/jre/lib/$f.default ${JVM_HOME}/jre/lib/$f
+SUPPORT_FILES+=	${JAVA_HOME}/jre/lib/$f.default ${JAVA_HOME}/jre/lib/$f
 .endfor
 
 PATCH_DF=	bsd-jdk131-patches-9.tar.gz
@@ -171,8 +181,9 @@ post-build:
 .endfor
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${JVM_HOME}
-	cd ${BUILD_DIRS}/../build/*/jdk-image-${MACHINE_ARCH} && ${PAX} -rw . ${JVM_HOME}
+	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
+	cd ${BUILD_DIRS}/../build/*/jdk-image-${MACHINE_ARCH} && ${PAX} -rw . ${JAVA_HOME}
 
+.include "../../mk/java-env.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
