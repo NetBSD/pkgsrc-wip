@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.627 2003/11/19 02:17:57 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.627 2003/11/19 02:17:57 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.628 2003/11/19 13:16:47 mpasternak Exp $
+# $NetBSD: Makefile,v 1.628 2003/11/19 13:16:47 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -419,9 +419,11 @@ SUBDIR+=	py-generateDS
 SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-ipython
 SUBDIR+=	py-libpcap
+SUBDIR+=	py-oak
 SUBDIR+=	py-spark
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-twisted
+SUBDIR+=	py-willow
 SUBDIR+=	py-zsi
 SUBDIR+=	py23-html-docs
 SUBDIR+=	pysite
