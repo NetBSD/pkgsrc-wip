@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.748 2003/12/07 04:15:32 blef Exp $
-# $NetBSD: Makefile,v 1.748 2003/12/07 04:15:32 blef Exp $
+# $Id: Makefile,v 1.749 2003/12/08 17:54:35 mpasternak Exp $
+# $NetBSD: Makefile,v 1.749 2003/12/08 17:54:35 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -340,6 +340,7 @@ SUBDIR+=	mingw-w32api-bin
 SUBDIR+=	mingw32-gettext-lib
 SUBDIR+=	mingw32-glib2
 SUBDIR+=	mingw32-libiconv
+SUBDIR+=	mingw32-libogg
 SUBDIR+=	mingw32-pxlib
 SUBDIR+=	mingw32-pxview
 SUBDIR+=	mit-krb5
