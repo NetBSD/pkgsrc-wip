@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/02 00:58:40 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/02 04:41:08 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -49,7 +49,9 @@ BUILD_DIRS=	${WRKSRC}/build/bsd
 CHECK_SHLIBS=	NO # scripts set LD_LIBRARY_PATH
 MAKEFILE=	GNUmakefile
 NO_MTREE=	YES # since we change PREFIX below
-OWN_DIRS=	${PREFIX}
+OWN_DIRS=	${PREFIX} ${PREFIX}/jre ${PREFIX}/jre/lib \
+		${PREFIX}/jre/lib/images ${PREFIX}/jre/lib/images/cursors \
+		${PREFIX}/jre/lib/security
 WRKSRC=		${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
