@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.220 2003/06/04 07:46:32 marttikuparinen Exp $
-# $NetBSD: Makefile,v 1.220 2003/06/04 07:46:32 marttikuparinen Exp $
+# $Id: Makefile,v 1.221 2003/06/04 11:45:50 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.221 2003/06/04 11:45:50 marttikuparinen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -188,13 +188,20 @@ SUBDIR+=	xevil
 SUBDIR+=	xfce4
 SUBDIR+=	xfce4-desktop
 SUBDIR+=	xfce4-fm
+SUBDIR+=	xfce4-fm-icons
 SUBDIR+=	xfce4-iconbox
 SUBDIR+=	xfce4-mcs-manager
 SUBDIR+=	xfce4-mcs-plugins
+SUBDIR+=	xfce4-mixer
 SUBDIR+=	xfce4-panel
 SUBDIR+=	xfce4-print
+SUBDIR+=	xfce4-systray
+SUBDIR+=	xfce4-themes
+SUBDIR+=	xfce4-toys
+SUBDIR+=	xfce4-trigger-launcher
 SUBDIR+=	xfce4-utils
 SUBDIR+=	xfce4-wm
+SUBDIR+=	xfce4-wm-themes
 SUBDIR+=	xml2doc
 SUBDIR+=	xplore
 SUBDIR+=	yafray
