@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/29 00:24:59 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2004/03/15 09:50:05 mpasternak Exp $
 
-SHA1 (manual-split.tar.gz) = e78989ff908445b11641fd5bfa09f79a3820224a
-Size (manual-split.tar.gz) = 924116 bytes
+SHA1 (manual-split.tar.gz) = 4c88452303ad16f9da1b985cd610eb320366f9fd
+Size (manual-split.tar.gz) = 985942 bytes
