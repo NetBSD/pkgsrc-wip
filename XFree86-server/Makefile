@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/24 13:50:57 tripledes Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/25 04:20:41 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-server-${XF_VER}
@@ -23,8 +23,6 @@ XINSTALL_MAN_DIRS=	programs/Xserver
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
-
-PLIST_SRC+=	${.CURDIR}/PLIST.html
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "alpha"
 XBUILD_DIRS+=		lib/XThrStub lib/X11 lib/Xext lib/GL
