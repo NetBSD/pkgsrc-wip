@@ -1,7 +1,0 @@
-Works when tested by itself.
-
-When tested with Kmail:
-  OpenPGP/MIME works
-  SMIME signatures work
-  SMIME encryption fails
-    (at least with my DoD PKI certs)

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2004/10/23 10:11:08 johnrshannon Exp $
-bin/gpg-agent
-bin/gpgconf
-bin/watchgnupg
-info/gnupg.info
-libexec/gpg-protect-tool
-sbin/addgnupghome

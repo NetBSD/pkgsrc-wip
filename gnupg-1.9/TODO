@@ -1,4 +1,0 @@
-SMIME support is not stable. When enabled,
-gpg-agent crashes frequently. Since this support
-is in the alpha stage of development, it's
-not suprising.

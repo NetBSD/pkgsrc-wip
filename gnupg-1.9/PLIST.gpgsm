@@ -1,9 +1,0 @@
-bin/gpg2
-bin/gpgsm
-bin/gpgv2
-bin/kbxutil
-bin/sc-copykeys
-bin/sc-investigate
-bin/scdaemon
-lib/gnupg/pcsc-wrapper
-share/gnupg/gpg-conf.skel
