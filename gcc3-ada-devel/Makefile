@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2003/12/15 18:42:08 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/15 23:12:25 johnrshannon Exp $
 #
 
 PKGNAME=		gcc3${GCC3_PKGMODIF}-ada-${GCC_VERSION}-devel
 COMMENT=		GNU Compiler Collection, version 3-${SNAPDATE}, Ada compiler
 
-.include "../../lang/gcc3-c-devel/buildaddon.mk"
+.include "../gcc3-c-devel/buildaddon.mk"
 
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=	--enable-languages="ada"
