@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/04/20 15:11:22 cjep Exp $
+
+--- mtf.c.orig	Wed Sep 13 16:26:41 2000
++++ mtf.c
+@@ -137,7 +137,8 @@ int main(int argc, char *argv[])
+ 	if (ptr != NULL)
+ 		strcpy(device, ptr);
+ 	else
+-		strcpy(device, "/dev/tape");
++		strcpy(device, "/dev/st0");
++		/*strcpy(device, "/dev/tape");*/
+ 
+ 	ptr = getenv("MTF_OPTS");
+ 	if ((ptr != NULL) && (strlen(ptr) > 0))
