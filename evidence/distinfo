@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/16 22:26:08 airhead Exp $
+
+SHA1 (evidence-0.9.8.tar.gz) = 59b126f911f1f85ab5acb532e29e6158f70f13d0
+Size (evidence-0.9.8.tar.gz) = 5895048 bytes
+SHA1 (patch-aa) = db59175212dad752da740a9acbc47604bc471047
+SHA1 (patch-ab) = 679d04bef03ae716865faf8337af903a220d2df2

@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/16 22:26:08 airhead Exp $
+
+--- src/thumbnailer/Makefile.in.orig	2004-08-02 19:20:54.000000000 +0200
++++ src/thumbnailer/Makefile.in
+@@ -295,8 +295,9 @@ xine_PLUGINS = @xine_PLUGINS@
+ @BUILD_THUMBNAILER_MPEG3_TRUE@MPEG3_DIR = mpeg3
+ @BUILD_THUMBNAILER_AVIFILE_TRUE@AVIFILE_DIR = avifile
+ @BUILD_THUMBNAILER_ID3_TRUE@ID3_DIR = id3
++@BUILD_THUMBNAILER_XINE_TRUE@XINE_DIR = xine
+ 
+-SUBDIRS = epeg imlib_loaders ttf $(AVIFILE_DIR) $(ID3_DIR) $(MPEG3_DIR) xine
++SUBDIRS = epeg imlib_loaders ttf $(AVIFILE_DIR) $(ID3_DIR) $(MPEG3_DIR) ${XINE_DIR}
+ 
+ AUTOMAKE_OPTIONS = 1.4 foreign
+ 

@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/09/16 22:26:08 airhead Exp $
+
+--- configure.orig	2004-08-02 19:20:57.000000000 +0200
++++ configure
+@@ -25044,8 +25044,8 @@ echo "$as_me:$LINENO: result: $ac_cv_lib
+ echo "${ECHO_T}$ac_cv_lib_ecore_ecore_main_loop_iterate" >&6
+ if test $ac_cv_lib_ecore_ecore_main_loop_iterate = yes; then
+ 
+-#                 ecore_cflags=`ecore-config --cflags`
+-#                 ecore_libs=`ecore-config --libs`
++                  ecore_cflags=`ecore-config --cflags`
++                  ecore_libs=`ecore-config --libs`
+                   ecore=yes
+                   if test X"$ac_use_ecore" = Xyes; then
+                     loop=eCore
+@@ -30692,7 +30692,7 @@ fi
+ 
+ 
+ 
+-if test "loop" = "eCore"; then
++if test "$loop" = "eCore"; then
+   BUILD_ECORE_MAINLOOP_TRUE=
+   BUILD_ECORE_MAINLOOP_FALSE='#'
+ else
+@@ -31767,6 +31767,8 @@ s,@PACKAGE_TARNAME@,$PACKAGE_TARNAME,;t 
+ s,@PACKAGE_VERSION@,$PACKAGE_VERSION,;t t
+ s,@PACKAGE_STRING@,$PACKAGE_STRING,;t t
+ s,@PACKAGE_BUGREPORT@,$PACKAGE_BUGREPORT,;t t
++s,@ecore_cflags@,$ecore_cflags,;t t
++s,@ecore_libs@,$ecore_libs,;t t
+ s,@exec_prefix@,$exec_prefix,;t t
+ s,@prefix@,$prefix,;t t
+ s,@program_transform_name@,$program_transform_name,;t t
