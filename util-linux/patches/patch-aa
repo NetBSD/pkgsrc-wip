@@ -1,0 +1,70 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/01 22:53:38 jeremy-c-reed Exp $
+
+--- MCONFIG.orig	2002-11-25 02:29:48.000000000 -0800
++++ MCONFIG	2003-04-19 15:20:35.000000000 -0700
+@@ -88,7 +88,7 @@
+ # If HAVE_SLN is set to "yes", then sln won't be installed
+ # (but the man page sln.8 will be installed anyway).
+ # sln also comes with libc and glibc.
+-HAVE_SLN=no
++HAVE_SLN=yes
+ 
+ # If HAVE_FDUTILS is set to "yes", then setfdprm won't be installed.
+ HAVE_FDUTILS=no
+@@ -100,7 +100,7 @@
+ # If configure decides that Native Language Support (NLS) is available,
+ # it sets MAY_ENABLE_NLS in defines.h. If you don't want NLS, set
+ # DISABLE_NLS to "yes".
+-DISABLE_NLS=no
++DISABLE_NLS=yes
+ 
+ # Different optimizations for different cpus.
+ # gcc 3.0 likes options -mcpu=i486 instead of -m486
+@@ -146,23 +146,23 @@
+ DEV_DIR=	/dev
+ ETC_DIR=	/etc
+ SBIN_DIR=	/sbin
+-USRSBIN_DIR=	/usr/sbin
+-USRLIB_DIR=	/usr/lib
+-USRBIN_DIR=	/usr/bin
+-USRGAMES_DIR=	/usr/games
+-USRSHAREMISC_DIR=/usr/share/misc
+-LOCALE_DIR=	/usr/share/locale
++USRSBIN_DIR=	/sbin
++USRLIB_DIR=	/lib
++USRBIN_DIR=	/bin
++USRGAMES_DIR=	/games
++USRSHAREMISC_DIR=/share/misc
++LOCALE_DIR=	/share/locale
+ BIN_DIR=        /bin
+ VAR_PATH=	/var
+ LOG_DIR=	/var/log
+-MAN_DIR=	/usr/share/man
+-INFO_DIR=	/usr/share/info
++MAN_DIR=	/man
++INFO_DIR=	/info
+ 
+ #
+ # Paths used for install
+ #
+ DEVDIR=		$(DESTDIR)$(DEV_DIR)
+-ETCDIR=		$(DESTDIR)$(ETC_DIR)
++#ETCDIR=		$(DESTDIR)$(ETC_DIR)
+ SBINDIR=	$(DESTDIR)$(SBIN_DIR)
+ USRSBINDIR=	$(DESTDIR)$(USRSBIN_DIR)
+ USRLIBDIR=      $(DESTDIR)$(USRLIB_DIR)
+@@ -212,6 +212,7 @@
+ 			-DLOGDIR=\"$(LOG_DIR)\" \
+ 			-DVARPATH=\"$(VAR_PATH)\" \
+ 			-DLOCALEDIR=\"$(LOCALE_DIR)\" \
++			-DFDPRMFILE=\"$(FDPRMFILE)\" \
+ 			$(CFLAGS)
+ 
+ 
+@@ -219,5 +220,5 @@
+ 	$(CC) -c $(CFLAGS) $< -o $@
+ 
+ %: %.cc
+-	$(CXX) $(CFLAGS) $< -o $@
++	$(CXX) $(CFLAGS) $< -o $@ 
+ 

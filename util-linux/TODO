@@ -1,0 +1,27 @@
+maybe fix hard-coded paths:
+ /etc/adjtime in hwclock files
+ /etc/issue in getty
+ /etc/securetty for login
+ /etc/shells in chsh
+ /etc/TZ in simpleinit (maybe don't install it)
+ /etc/shutdown.conf for shutdown
+ /etc/nologin
+ /etc/fstab
+ /etc/mtab
+ and others ...
+
+# todo: make sure fdprm config is installed to correct CONF directory
+
+have it use linux-kernel-headers buildlink2.mk file
+
+some manpages and example fdprm have hard-coded paths
+
+# todo: sometimes it installs pivot_root (and man) and sometimes not
+# todo: set in MCONFIG HAVE_PAM=yes
+# todo: maybe setterm only works if ...
+#         vcterm = (!strncmp(term, "con", 3) || !strncmp(term, "linux", 5));
+# todo: later add gettext support and enable NLS
+
+# this doesn't install sln binary, but does install sln manpage
+# sln is also in glibc-2.2.5
+
