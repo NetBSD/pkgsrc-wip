@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1061 2004/03/08 05:23:14 mpasternak Exp $
-# $NetBSD: Makefile,v 1.1061 2004/03/08 05:23:14 mpasternak Exp $
+# $Id: Makefile,v 1.1062 2004/03/08 16:39:15 poppnk Exp $
+# $NetBSD: Makefile,v 1.1062 2004/03/08 16:39:15 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -244,6 +244,7 @@ SUBDIR+=	isc-dhcpd
 SUBDIR+=	ish
 SUBDIR+=	jabberd2
 SUBDIR+=	jakarta-log4j
+SUBDIR+=	java-xmlrpc
 SUBDIR+=	javascript-guide
 SUBDIR+=	javascript-reference
 SUBDIR+=	jdk12
