@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/05 07:26:55 mjasm Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/18 13:10:56 cjep Exp $
 #
 
 DISTNAME=		liferea-0.3.3
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=liferea/}
 
 MAINTAINER=		adam@monkeybyte.org
 HOMEPAGE=		http://liferea.sourceforge.net/
-COMMENT=		Liferea is a simple FeedReader clone. It is a reader for RSS/RDF feeds.
+COMMENT=		Liferea is a simple FeedReader clone for reading RSS/RDF feeds
 
 USE_BUILDLINK2=         yes
 GNU_CONFIGURE=          yes
