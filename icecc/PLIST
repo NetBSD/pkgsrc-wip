@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/09 01:36:02 plunky Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/03/13 13:48:11 plunky Exp $
 bin/icecc
 bin/icecchelp
 bin/icebgset
@@ -28,15 +28,11 @@ share/icecc/themes/Control Panel/theme
 share/icecc/themes/Control Panel/README
 share/icecc/themes/Simple/theme
 share/icecc/themes/Simple/icecc_desk.png
-share/icecc/icewm4vim/INSTALL
-share/icecc/icewm4vim/filetype.vim
-share/icecc/icewm4vim/icewm.vim
-share/icecc/icewm4vim/syntax/icewm.vim
+share/vim/${VIM_SUBDIR}/ftplugin/iceprefs.vim
+share/vim/${VIM_SUBDIR}/syntax/iceprefs.vim
 @dirrm share/icecc/help/default
 @dirrm share/icecc/help
 @dirrm share/icecc/themes/Control Panel
 @dirrm share/icecc/themes/Simple
 @dirrm share/icecc/themes
-@dirrm share/icecc/icewm4vim/syntax
-@dirrm share/icecc/icewm4vim
 @dirrm share/icecc

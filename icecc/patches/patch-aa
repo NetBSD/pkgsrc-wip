@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/03/09 01:40:59 plunky Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/13 13:48:12 plunky Exp $
+
+these utilities were written with qt2 but they still ok with qt3
 
 --- icewm4vim/Makefile.orig	2005-03-07 15:55:33.000000000 +0000
 +++ icewm4vim/Makefile	2005-03-07 15:54:07.000000000 +0000
