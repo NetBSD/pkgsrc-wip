@@ -1,0 +1,3 @@
+o Make a rc.d script for nvtvd. This one is not simple
+since it requires some code change (read: a call to
+daemon()).
