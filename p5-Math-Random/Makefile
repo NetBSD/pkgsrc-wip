@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/07 15:06:34 imilh Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/08 16:05:43 imilh Exp $
 #
 
 DISTNAME=	Math-Random-0.67
@@ -7,6 +7,7 @@ CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Math/}
 
 MAINTAINER=	imil@gcu.info
+HOMEPAGE=	http://search.cpan.org/dist/Math-Random/
 COMMENT=	Random number generators
 
 USE_BUILDLINK3=	YES
