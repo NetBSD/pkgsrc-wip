@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/05/07 01:57:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/12 21:44:10 poppnk Exp $
 #
 
-DISTNAME=	IlohaMail-0.8.11
+DISTNAME=	IlohaMail-0.8.12
 PKGNAME=	${DISTNAME:S/IlohaM/iloham/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ilohamail/}
