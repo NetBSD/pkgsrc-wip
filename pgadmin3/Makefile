@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/30 01:36:37 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/14 22:44:34 thomasklausner Exp $
 #
 
 DISTNAME=		pgadmin3-1.0.2
@@ -22,6 +22,12 @@ CONFIGURE_ARGS=		--with-pgsql=${PREFIX} \
 			--with-wx=${PREFIX} \
 			--with-pgsql=${PREFIX}
 
-.include "../../wip/wxGTK2/buildlink2.mk"
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(WXGTK_USE_GTK1:M[Yy][Ee][Ss])
+BROKEN=		Needs wxGTK to be compiled against GTK2 -- unset WXGTK_USE_GTK1 and reinstall wxGTK.
+.endif
+
+.include "../../x11/wxGTK/buildlink2.mk"
 .include "../../databases/postgresql-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
