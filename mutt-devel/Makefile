@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/08/19 18:50:43 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/26 00:37:25 rockpiper Exp $
 
 DISTNAME=		mutt-1.5.4i
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
@@ -19,7 +19,7 @@ CONFLICTS+=		mutt-[0-9]*
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
@@ -35,13 +35,13 @@ LDFLAGS+=		${_STRIPFLAG_CC}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MUTT_USE_SLANG} == YES
-. include "../../devel/libslang/buildlink2.mk"
+. include "../../devel/libslang/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang}
 .else
 . if ${MUTT_USE_NCURSES} == YES
 USE_NCURSES=		yes
 . endif
-. include "../../devel/ncurses/buildlink2.mk"
+. include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
 .endif
 
@@ -74,19 +74,19 @@ CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh
 .endif
 
 .if ${MUTT_USE_SSL} == YES
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 .else
 CONFIGURE_ARGS+=	--without-ssl
 .endif
 
 .if defined(USE_SASL) && ${USE_SASL} == "YES"
-.include "../../security/cyrus-sasl/buildlink2.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 .endif
 
 .if defined(USE_SASL2) && ${USE_SASL2} == "YES"
-.include "../../security/cyrus-sasl2/buildlink2.mk"
+.include "../../security/cyrus-sasl2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sasl2=${BUILDLINK_PREFIX.cyrus-sasl2}
 .endif
 
@@ -106,6 +106,6 @@ post-install:
 	${CP} ${WRKSRC}/smime_keys ${PREFIX}/bin
 	${LN} -s ${EGDIR} ${PREFIX}/share/doc/mutt/samples
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
