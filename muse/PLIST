@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/14 06:39:29 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/15 22:58:13 lsed Exp $
 bin/muse
-doc/MuSE/AUTHORS
-doc/MuSE/COPYING
-doc/MuSE/ChangeLog
-doc/MuSE/KNOWN-BUGS
-doc/MuSE/NEWS
-doc/MuSE/README
-doc/MuSE/TODO
-doc/MuSE/USAGE
+share/doc/muse/AUTHORS
+share/doc/muse/COPYING
+share/doc/muse/ChangeLog
+share/doc/muse/KNOWN-BUGS
+share/doc/muse/NEWS
+share/doc/muse/README
+share/doc/muse/TODO
+share/doc/muse/USAGE
 man/man1/muse.1
-@dirrm doc/MuSE
+@dirrm share/doc/muse
