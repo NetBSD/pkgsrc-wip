@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/25 20:28:52 daprice Exp $
+
+SHA1 (mim-1.2.tar.gz) = f7fecd9aa2ae9914bc7f505ef82bac93b4ff68c5
+Size (mim-1.2.tar.gz) = 94504 bytes
+SHA1 (patch-aa) = 47e3abb98b176a030f62a626df122e22a58be097
+SHA1 (patch-ab) = 2834a5999885adc94940ff89990bb59db9ee752d

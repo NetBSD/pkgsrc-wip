@@ -1,0 +1,5 @@
+mim is a program that allows a user to watch MPEG-I multicast audio and 
+video streams such as those sourced by Cisco System's IP/TV, fvc.com's 
+I-Caster, and live.com's liveCaster. mim requires the mtvp program from 
+MPEGTV (http://www.mpegtv.com). mtvp is used to decode the MPEG-1 audio
+and video streams.
