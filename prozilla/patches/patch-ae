@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 2004/06/21 07:49:43 sourceforge_low Exp $
+
 --- src/ftpsearch.c.orig	2001-08-18 01:38:28.000000000 +0200
 +++ src/ftpsearch.c	2004-06-19 20:15:55.000000000 +0200
 @@ -26,7 +26,6 @@
