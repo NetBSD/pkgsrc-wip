@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/01/20 19:59:42 marc Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/01/20 20:12:13 airhead Exp $
 #
 
 DISTNAME=	elvis-2.2_0
@@ -8,9 +8,9 @@ MASTER_SITES=	ftp://ftp.cs.pdx.edu/pub/elvis/
 MAINTAINER=	airhead@users.sourceforge.net
 HOMEPAGE=	http://elvis.vi-editor.org/
 
-PLIST_SRC=	${.CURDIR}/../../elvis/PLIST.common
-PATCHDIR=	${.CURDIR}/../../elvis/patches
-DISTINFO_FILE=	${.CURDIR}/../../elvis/distinfo
+PLIST_SRC=	${.CURDIR}/../elvis/PLIST.common
+PATCHDIR=	${.CURDIR}/../elvis/patches
+DISTINFO_FILE=	${.CURDIR}/../elvis/distinfo
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
