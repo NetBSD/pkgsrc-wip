@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/06/28 16:02:51 adrian_p Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/04 09:08:04 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -9,6 +9,16 @@ CONFLICTS+=	postfix-[0-9]*
 
 MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+
+PLIST_SUBST+=  CAT1=0
+PLIST_SUBST+=  CAT5=0
+PLIST_SUBST+=  CAT8=0
+
+.if ${OPSYS} == "Linux"
+PLIST_SUBST+=  CAT1=1
+PLIST_SUBST+=  CAT5=5
+PLIST_SUBST+=  CAT8=8
+.endif
 
 SUBST_CLASSES=		paths
 SUBST_STAGE.paths=	post-build
