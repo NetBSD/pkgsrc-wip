@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.79 2003/04/14 03:59:23 xtraeme Exp $
-# $NetBSD: Makefile,v 1.79 2003/04/14 03:59:23 xtraeme Exp $
+# $Id: Makefile,v 1.80 2003/04/14 04:56:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.80 2003/04/14 04:56:09 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -78,5 +78,7 @@ SUBDIR+=	puf
 SUBDIR+=	SDL_mm
 SUBDIR+=	fluxconf
 SUBDIR+=	mplayerplugin
+SUBDIR+=	streamripper
+SUBDIR+=	tsclient
 
 .include "../mk/bsd.pkg.subdir.mk"
