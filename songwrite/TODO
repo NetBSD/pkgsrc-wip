@@ -1,0 +1,6 @@
+$Id: TODO,v 1.1.1.1 2004/01/02 03:52:07 mpasternak Exp $
+
+Patch setup.py to make "bin/songwrite" installation in a nicer way (now it
+is handled by post-install, I could not make it work properly other way)
+
+	-- dotz@irc.pl
