@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/02 23:02:05 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/18 13:42:45 rillig Exp $
 
 DISTNAME=	cawf
 PKGNAME=	cawf-4.10
@@ -18,7 +18,7 @@ BUILD_DEFS+=	CAWFLIB
 MAKE_FLAGS+=	CAWFLIB=${CAWFLIB}
 
 post-extract:
-	${MV} ${WRKSRC}/cawf.1 ${WRKSRC}/cawf.1.orig &&
+	${MV} ${WRKSRC}/cawf.1 ${WRKSRC}/cawf.1.orig && \
 	${SED} -e "s|/Homes/abe/lib/cawf|${CAWFLIB}|g" \
 		< ${WRKSRC}/cawf.1.orig > ${WRKSRC}/cawf.1
 
