@@ -1,0 +1,5 @@
+The Web Stress Tool is a non-browser HTTP/HTTPS client capable of sending
+valid HTTP or HTTPS (SSL) requests to an web server and recieveing responses
+back, parsing, them, and acting on that parsed data. It has several
+convenience features for stress or preformance testing and is designed mainly
+for putting large amounts of load an a web server.

@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/03 17:15:09 poppnk Exp $
+bin/west
+share/doc/west/background.html
+share/doc/west/command_ref.html
+share/doc/west/index.html
+share/doc/west/scripting.html
+@dirrm share/doc/west
