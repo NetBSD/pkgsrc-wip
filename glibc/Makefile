@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/07 12:46:29 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/22 05:00:03 marttikuparinen Exp $
 
 DISTNAME=	glibc-${VERSION}
 CATEGORIES=	misc
@@ -12,7 +12,7 @@ COMMENT=	GNU C library
 
 VERSION=	2.3.2
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
 
