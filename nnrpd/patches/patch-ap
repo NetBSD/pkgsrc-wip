@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- nnrpd/post.c.orig	Tue Dec  9 00:48:50 1997
++++ nnrpd/post.c
+@@ -525,7 +525,7 @@ CheckIncludedText(p, lines)
+ 	    i--;
+ 	    break;
+ 	}
+-	if ((p = strchr(p + 1, '\n')) == NULL)
++	if (*p == '\0' || (p = strchr(p + 1, '\n')) == NULL)
+ 	    break;
+     }
+     if ((i * 2 > lines) && (lines > 40))

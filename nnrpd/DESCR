@@ -1,0 +1,6 @@
+This is the public release of version 1.7.2 of InterNet News (INN)
+with Insync patches. This work is sponsored by the Internet Software
+Consortium.
+
+The package installs the NNTP reader daemon nnrpd from the INN package
+for use with the C News package.

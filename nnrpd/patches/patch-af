@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- samples/innshellvars.pl.orig	Tue Dec  9 00:48:50 1997
++++ samples/innshellvars.pl
+@@ -17,6 +17,12 @@
+ ##  =()<$activetimes = "@<_PATH_ACTIVETIMES>@" ;>()=
+ $activetimes = "/var/news/etc/active.times" ;
+ 
++##  =()<$actived = "@<_PATH_ACTIVED>@" ;>()=
++$actived = "/usr/news/bin/actived" ;
++
++##  =()<$activedpid = "@<_PATH_ACTIVEDPID>@" ;>()=
++$activedpid = "/var/news/run/actived.pid" ;
++
+ ##  =()<$awk = "@<_PATH_AWK>@" ;>()=
+ $awk = "/usr/bin/awk" ;
+ 

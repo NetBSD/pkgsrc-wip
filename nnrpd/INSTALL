@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2005/01/13 14:26:22 hfath Exp $
+
+if [ "$2" != "POST-INSTALL" ]; then
+  exit 0
+fi
+
+DIRS="etc run tmp"
+for DIR in $DIRS; do
+	if [ ! -d @INNDATA@/$DIR ]; then
+		install -d -o news -g news -m 775 @INNDATA@/$DIR
+	fi
+done
+
+ETC="nnrp.access"
+for FILE in $ETC; do 
+	if [ ! -f @INNDATA@/etc/$FILE ]; then
+		install -c -o news -g news -m 664 \
+		    ${PKG_PREFIX}/share/examples/inn/$FILE @INNDATA@/etc
+	fi
+done
+
+exit 0

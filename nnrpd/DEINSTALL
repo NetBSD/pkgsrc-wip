@@ -1,0 +1,20 @@
+#! /bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2005/01/13 14:26:21 hfath Exp $
+
+case "$2" in
+        DEINSTALL) cat <<EOF
+
+==========================================================================
+
+Note that the inn data directory (@INNDATA@) is NOT deleted during
+the package deinstallation. Please remove this directory and all its
+contents manually if it is no longer needed.
+
+==========================================================================
+
+EOF
+        ;;
+esac
+
+exit 0

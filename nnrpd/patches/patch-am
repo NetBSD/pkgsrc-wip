@@ -1,0 +1,30 @@
+$NetBSD: patch-am,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- nnrpd/group.c.orig	Fri Dec 12 17:43:47 1997
++++ nnrpd/group.c
+@@ -627,6 +627,7 @@ CMDxgtitle(ac, av)
+     register char	*p;
+     register char	*q;
+     char		save;
++    char                *grplist[2];
+ 
+     /* Parse the arguments. */
+     if (ac == 1) {
+@@ -646,6 +647,7 @@ CMDxgtitle(ac, av)
+ 	return;
+     }
+     Printf("%d list follows\r\n", NNTP_XGTITLE_OK);
++    grplist[1] = NULL;
+ 
+     /* Print all lines with matching newsgroup name. */
+     while ((line = QIOread(qp)) != NULL) {
+@@ -653,7 +655,8 @@ CMDxgtitle(ac, av)
+ 	    continue;
+ 	save = *q;
+ 	*q = '\0';
+-	if (wildmat(line, p)) {
++        grplist[0] = line;
++        if (wildmat(line, p) && PERMmatch(PERMdefault, PERMlist, grplist)) {
+ 	    *q = save;
+ 	    Printf("%s\r\n", line);
+ 	}

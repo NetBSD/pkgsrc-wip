@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/01/13 14:26:21 hfath Exp $
+
+Please start actived at boot time with ${PREFIX}/etc/rc.d/actived
+and add nnrpd to /etc/inetd.conf like
+
+nntp  stream  tcp     nowait  news:news /usr/pkg/sbin/nnrpd   nnrpd
+
+===========================================================================

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- Makefile.orig	Tue Dec  9 00:48:50 1997
++++ Makefile
+@@ -17,7 +17,7 @@
+ RCSCOFLAGS	= -u
+ 
+ ##  The first two directories must be config and lib.
+-PROGS	= config lib frontends innd nnrpd backends expire doc
++PROGS	= config lib nnrpd actived doc
+ DIRS	= $(PROGS) site
+ 
+ ##  We invoke an extra process and set this to be what to make.

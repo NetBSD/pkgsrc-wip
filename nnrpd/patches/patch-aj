@@ -1,0 +1,74 @@
+$NetBSD: patch-aj,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- lib/Makefile.orig	Tue Dec  9 00:48:50 1997
++++ lib/Makefile
+@@ -39,8 +39,6 @@
+ ##  See the rule for version.o, below.
+ OSXATTOBJ= version.o memchr.o memcmp.o memcpy.o memset.o strchr.o strrchr.o
+ 
+-##  =()<DBZDIR	= @<DBZDIR>@>()=
+-DBZDIR	= ../dbz
+ ##  =()<MISSING_SRC = @<MISSING_SRC>@>()=
+ MISSING_SRC = 
+ ##  =()<MISSING_OBJ = @<MISSING_OBJ>@>()=
+@@ -48,7 +46,7 @@
+ 
+ SOURCES = $(MISSING_SRC) \
+ 	checkart.c cleanfrom.c clientactive.c clientlib.c closeonexec.c \
+-	dbz.c defdist.c findheader.c genid.c getconfig.c getdtab.c \
++	defdist.c findheader.c genid.c getconfig.c getdtab.c \
+ 	getfqdn.c getmodaddr.c gettime.c inndcomm.c innvers.c localopen.c \
+ 	lockfile.c nonblocking.c parsedate.c perl.c qio.c radix32.c readin.c \
+ 	remopen.c resource.c sendarticle.c sendpass.c tempname.c \
+@@ -56,7 +54,7 @@
+ 	xfopena.c xmalloc.c xmemerr.c xrealloc.c xwrite.c xwritev.c
+ OBJECTS = $(MISSING_OBJ) \
+ 	checkart.o cleanfrom.o clientactive.o clientlib.o closeonexec.o \
+-	dbz.o defdist.o findheader.o genid.o getconfig.o getdtab.o \
++	defdist.o findheader.o genid.o getconfig.o getdtab.o \
+ 	getfqdn.o getmodaddr.o gettime.o inndcomm.o innvers.o localopen.o \
+ 	lockfile.o nonblocking.o parsedate.o perl.o qio.o radix32.o readin.o \
+ 	remopen.o resource.o sendarticle.o sendpass.o tempname.o \
+@@ -118,25 +116,6 @@
+ 	@rm -f $(OSXATTOBJ)
+ 	/.attbin/ar vx /usr/.attlib/libc.a $(OSXATTOBJ)
+ 
+-dbz.o:			dbz.c
+-	$(CC) $(DBZCFLAGS) -c dbz.c
+-
+-../include/dbz.h:	$(DBZDIR)/dbz.h
+-	@rm -f ../include/dbz.h
+-	cp $(DBZDIR)/dbz.h ../include/dbz.h
+-
+-dbz.c:			$(DBZDIR)/dbz.c
+-	cp $(DBZDIR)/dbz.c dbz.c
+-
+-##  Only do this if you're building a release kit.
+-PATCH:			dbz.pch.intro
+-	rcs -l dbz.pch
+-	@rm -f dbz.pch
+-	cat dbz.pch.intro >dbz.pch
+-	@echo "Ignore diff's exit status."
+-	-diff -c $(DBZDIR)/dbz.c dbz.c >>dbz.pch
+-	ci -u dbz.pch
+-
+ ##
+ ccenter:	$(SOURCES)
+ 	#load $(CFLAGS) $(SOURCES)
+@@ -151,7 +130,7 @@
+ 	cp llib-linn.ln $@
+ 
+ ##  Dependencies.  Default list, below, is probably good enough.
+-depend:		Makefile $(SOURCES) ../include/dbz.h
++depend:		Makefile $(SOURCES)
+ 	makedepend $(DEFS) $(SOURCES)
+ 
+ # DO NOT DELETE THIS LINE -- make depend depends on it.
+@@ -185,7 +164,6 @@
+ closeonexec.o: ../include/clibrary.h
+ closeonexec.o: ../include/configdata.h
+ closeonexec.o: ../include/configdata.h
+-dbz.o: ../include/dbz.h
+ defdist.o: ../include/clibrary.h
+ defdist.o: ../include/configdata.h
+ defdist.o: ../include/configdata.h

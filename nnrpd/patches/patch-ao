@@ -1,0 +1,12 @@
+$NetBSD: patch-ao,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- nnrpd/nnrpd.h.orig	Tue Dec  9 00:48:50 1997
++++ nnrpd/nnrpd.h
+@@ -93,6 +93,7 @@ EXTERN char	**PERMlist;
+ EXTERN STRING	MyHostName;
+ extern char	ACTIVE[];
+ EXTERN char	ClientHost[SMBUF];
++EXTERN char	ClientAddr[SMBUF];
+ EXTERN char	LogName[256] ;
+ extern char	ACTIVETIMES[];
+ extern char	HISTORY[];

@@ -1,0 +1,18 @@
+$NetBSD: patch-ak,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- actived/Makefile.orig	Mon Oct 20 23:00:03 1997
++++ actived/Makefile
+@@ -63,8 +63,6 @@
+ 	@rm -f lint
+ 	lint $(LINTFLAGS) $(SOURCES) $(LINTLIB) $(LINTFILTER) >lint
+ 
+-../include/dbz.h:
+-	(cd ../lib ; $(MAKE) ../include/dbz.h)
+ $(LIBNEWS) $(LINTLIB):
+ 	(cd ../lib ; $(MAKE) install )
+ 
+@@ -92,4 +90,3 @@
+ 		../include/macros.h ../include/nntp.h \
+ 		../include/paths.h ../include/qio.h
+ group.o:	../include/mydir.h
+-misc.o:		../include/dbz.h

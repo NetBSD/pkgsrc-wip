@@ -1,0 +1,68 @@
+$NetBSD: patch-ah,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- site/Makefile.orig	Tue Dec  9 00:48:50 1997
++++ site/Makefile
+@@ -92,7 +92,7 @@
+ 	    innwatch innlog.pl innshellvars innshellvars.pl innshellvars.csh \
+ 	    innshellvars.tcl filter.tcl startup.tcl startup_innd.pl \
+ 	    filter_innd.pl filter_nnrpd.pl \
+-	actsync.cfg actsync.ign scanspool
++	actsync.cfg actsync.ign scanspool mailpost
+ 
+ MOST_INSTALLED	= \
+ 	$D$(PATH_NEWSBOOT) $D$(PATH_SCHEMA) \
+@@ -114,7 +114,8 @@
+ 	    $D$(PATH_PERL_FILTER_NNRPD) \
+ 	    $D$(PATH_TCL_SHELLVARS) $D$(PATH_TCL_STARTUP) \
+ 	    $D$(PATH_CSH_SHELLVARS) \
+-	    $D$(PATH_TCL_FILTER) $D$(NEWSBIN)/scanspool
++	    $D$(PATH_TCL_FILTER) $D$(NEWSBIN)/scanspool \
++	    $D$(NEWSBIN)/mailpost
+ 
+ ##  Scripts from above, plus site-specific config files.
+ REST		= \
+@@ -128,13 +129,6 @@
+ ALL		= $(MOST) $(REST)
+ 
+ REST_INSTALLED	= \
+-	$D$(PATH_NEWSFEEDS) \
+-	$D$(PATH_INNDHOSTS) $D$(PATH_NOLIMIT) \
+-	$D$(PATH_NNRPACCESS) $D$(PATH_NNTPPASS) \
+-	$D$(PATH_CONFIG) $D$(PATH_MODERATORS) \
+-	$D$(PATH_CONTROLCTL) $D$(PATH_EXPIRECTL) $D$(NEWSLIB)/nntpsend.ctl \
+-	$D$(PATH_CTLWATCH) $D$(PATH_DISTPATS) \
+-	$D$(PATH_ACTSYNC_CFG) $D$(PATH_ACTSYNC_IGN) \
+ 	$D$(CTLBIN)/sample.control
+ 
+ ALL_INSTALLED	= $(MOST_INSTALLED) $(REST_INSTALLED)
+@@ -237,10 +231,10 @@
+ $D$(NEWSBIN)/innmail:	innmail		; $(COPY_XPRI) $? $@
+ $D$(NEWSBIN)/pgpverify:	pgpverify	; $(COPY_XPRI) $? $@
+ $D$(NEWSBIN)/innwatch:	innwatch	; $(COPY_XPRI) $? $@
+-$D$(PATH_SHELLVARS):	innshellvars	; $(COPY_RPRI) $? $@
+-$D$(PATH_PERL_SHELLVARS): innshellvars.pl ; $(COPY_RPRI) $? $@
+-$D$(PATH_TCL_SHELLVARS): innshellvars.tcl ; $(COPY_RPRI) $? $@
+-$D$(PATH_CSH_SHELLVARS): innshellvars.csh ; $(COPY_RPRI) $? $@
++$D$(PATH_SHELLVARS):	innshellvars	; $(COPY_RPUB) $? $@
++$D$(PATH_PERL_SHELLVARS): innshellvars.pl ; $(COPY_RPUB) $? $@
++$D$(PATH_TCL_SHELLVARS): innshellvars.tcl ; $(COPY_RPUB) $? $@
++$D$(PATH_CSH_SHELLVARS): innshellvars.csh ; $(COPY_RPUB) $? $@
+ $D$(NEWSLIB)/innlog.pl: innlog.pl	; $(COPY_RPRI) $? $@
+ $D$(PATH_PERL_STARTUP_INND): startup_innd.pl ; $(COPY_RPRI) $? $@
+ $D$(PATH_PERL_FILTER_INND): filter_innd.pl ; $(COPY_RPRI) $? $@
+@@ -250,6 +244,7 @@
+ $D$(PATH_ACTSYNC_CFG): actsync.cfg	; $(COPY_RPRI) $? $@
+ $D$(PATH_ACTSYNC_IGN): actsync.ign	; $(COPY_RPRI) $? $@
+ $D$(NEWSBIN)/scanspool: scanspool	; $(COPY_XPRI) $? $@
++$D$(NEWSBIN)/mailpost: mailpost		; $(COPY_XPUB) $? $@
+ $D$(CTLBIN)/sample.control: sample.control ; $(COPY_RPRI) $? $@
+ 
+ 
+@@ -291,6 +286,7 @@
+ innshellvars.pl: ../samples/innshellvars.pl	; $(COPY) $? $@
+ innshellvars.tcl: ../samples/innshellvars.tcl	; $(COPY) $? $@
+ innshellvars.csh: ../samples/innshellvars.csh	; $(COPY) $? $@
++mailpost:	../samples/mailpost		; $(COPY) $? $@
+ moderators:	../samples/moderators		; $(COPY) $? $@
+ distrib.pats:	../samples/distrib.pats		; $(COPY) $? $@
+ newgroup:	../samples/newgroup		; $(COPY) $? $@

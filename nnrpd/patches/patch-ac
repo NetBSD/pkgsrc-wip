@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- config/fixinterps.pl.orig	Tue Dec  9 00:48:50 1997
++++ config/fixinterps.pl
+@@ -160,7 +160,10 @@
+     close (PERL);
+ 
+     if ($rval !~ /^\d+\.\d+(_\d+|)$/) {
+-	warn "perl version from $perl looks suspicious: $rval\n";
++        $rval = $];
++	if ($rval == 0) {
++	    warn "perl version from $perl looks suspicious: $rval\n";
++	}
+     }
+ 
+     return $rval;

@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+
+--- samples/innshellvars.tcl.orig	Tue Dec  9 00:48:50 1997
++++ samples/innshellvars.tcl
+@@ -15,6 +15,12 @@
+ ##  =()<set inn_activetimes "@<_PATH_ACTIVETIMES>@">()=
+ set inn_activetimes "/var/news/etc/active.times"
+ 
++##  =()<set inn_actived "@<_PATH_ACTIVED>@">()=
++set inn_actived "/usr/news/bin/actived"
++
++##  =()<set inn_activedpid "@<_PATH_ACTIVEDPID>@">()=
++set inn_activedpid "/var/news/run/actived.pid"
++
+ ##  =()<set inn_awk "@<_PATH_AWK>@">()=
+ set inn_awk "/usr/bin/awk"
+ 
