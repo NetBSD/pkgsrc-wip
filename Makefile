@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1573 2004/12/11 03:50:41 minskim Exp $
-# $NetBSD: Makefile,v 1.1573 2004/12/11 03:50:41 minskim Exp $
+# $Id: Makefile,v 1.1574 2004/12/11 22:30:10 cetrox Exp $
+# $NetBSD: Makefile,v 1.1574 2004/12/11 22:30:10 cetrox Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -820,6 +820,7 @@ SUBDIR+=	spamassassin-cvs
 SUBDIR+=	spamd
 SUBDIR+=	spamprobe-pbl
 SUBDIR+=	spe
+SUBDIR+=	speedtouch131
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
 SUBDIR+=	srvx
