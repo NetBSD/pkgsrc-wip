@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2004/09/02 22:35:43 tnn2 Exp $
+
+SHA1 (rep-gtk-0.18.tar.gz) = 9410c348bd0736a86063c6b0a46c2d7f9b0a8f4a
+Size (rep-gtk-0.18.tar.gz) = 147665 bytes
+SHA1 (patch-aa) = 48f44d05447b4a7934ff13a8b1c805f183abf274
+SHA1 (patch-ab) = cc831a1393bc95b3cdeb261d5063650866d7a4cc
