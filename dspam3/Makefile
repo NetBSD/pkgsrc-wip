@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/06/16 05:02:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/06/16 05:10:33 xtraeme Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -26,6 +26,8 @@ BUILD_DEFS+=		DSPAM_DELIVERY_AGENT
 BUILD_DEFS+=		DSPAM_HOME
 BUILD_DEFS+=		DSPAM_STORAGE_DRIVER
 BUILD_DEFS+=		DSPAM_SIGNATURE_LIFE
+BUILD_DEFS+=		DSPAM_SIGNATURE_ATTACHMENTS
+BUILD_DEFS+=		DSPAM_LARGESCALE
 BUILD_DEFS+=		DSPAM_USE_WEBMAIL
 BUILD_DEFS+=		DSPAM_HOMEDIR_DOTFILES
 BUILD_DEFS+=		DSPAM_USER DSPAM_GROUP
@@ -97,6 +99,15 @@ CONFIGURE_ARGS+=	--enable-homedir-dotfiles
 .if defined(DSPAM_USE_WEBMAIL) && \
     !empty(DSPAM_USE_WEBMAIL:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-webmail
+.endif
+
+.if defined(DSPAM_SIGNATURE_ATTACHMENTS) && \
+    !empty(DSPAM_SIGNATURE_ATTACHMENTS:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-signature-attachments
+.endif
+
+.if defined(DSPAM_LARGESCALE) && !empty(DSPAM_LARGESCALE:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-large-scale
 .endif
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE} \
