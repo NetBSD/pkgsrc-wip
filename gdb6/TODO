@@ -1,1 +1,15 @@
 - Need to add pthread support
+
+- Need to improve:
+
+                === gdb Summary ===
+
+# of expected passes            9337
+# of unexpected failures        58
+# of unexpected successes       3
+# of expected failures          48
+# of unknown successes          11
+# of known failures             39
+# of unresolved testcases       1
+# of untested testcases         4
+# of unsupported tests          9
