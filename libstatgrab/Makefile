@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/19 21:37:03 timbishop Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/20 20:23:26 timbishop Exp $
 
 DISTNAME=	libstatgrab-0.10
 CATEGORIES=	devel
@@ -11,7 +11,6 @@ MAINTAINER=	tim@bishnet.net
 HOMEPAGE=	http://www.i-scream.org/libstatgrab/
 COMMENT=	Provides a useful interface to system statistics
 
-DIST_SUBDIR=	i-scream
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 PKGCONFIG_OVERRIDE+=	libstatgrab.pc.in
@@ -34,6 +33,7 @@ CONFIGURE_ARGS+=	--disable-saidar
 PLIST_SUBST+=		SAIDAR="@comment "
 .else
 PLIST_SUBST+=		SAIDAR=""
+.include "../../devel/ncurses/buildlink3.mk"
 .endif
 BUILD_DEFS+=		WITHOUT_SAIDAR
 
