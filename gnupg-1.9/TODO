@@ -1,4 +1,7 @@
-Works, but depends on uncommited updates
-to:
+Works when tested by itself.
 
-  security/libgpg-error
+When tested with Kmail:
+  OpenPGP/MIME works
+  SMIME signatures work
+  SMIME encryption fails
+    (at least with my DoD PKI certs)

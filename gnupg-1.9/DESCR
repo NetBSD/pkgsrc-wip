@@ -1,6 +1,5 @@
-This package provides the new utility programs 
-(e.g. gpg-agent, watchgnupg, gpgconf) that come 
-with GnuPG 1.9.x. They work with gnupg >= 1.2.6.
-They are provided, by themselves, for the benefit
-of Kmail and other programs relying on them for
-PGP/MIME handling.
+GnuPG 1.9 is the experimental branch of GnuPG 
+with support for S/MIME. This pagkage provides
+several utilities that are used by several mail 
+clients, such as Kmail and Balsa, to provide 
+OpenPGP/MIME and SMIME support.
