@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/08/29 10:31:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/29 15:42:36 thomasklausner Exp $
 #
 
 DISTNAME=	allegro-4.1.11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=alleg/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://alleg.sourceforge.net/
 COMMENT=	Allegro game programming library
 
