@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/06 00:30:47 marmfield Exp $
+$NetBSD: patch-aa,v 1.2 2004/02/29 15:41:08 anewsmurf Exp $
 
---- Makefile.in.orig	Sat Oct 26 10:47:15 2002
-+++ Makefile.in
-@@ -19,16 +19,17 @@ LDFLAGS=@LDFLAGS@ @LIBS@
+--- Makefile.in.orig	Sat Oct 26 02:47:15 2002
++++ Makefile.in	Sat Feb 28 12:19:41 2004
+@@ -19,16 +19,17 @@
  
  prefix=@prefix@
  exec_prefix=@exec_prefix@
@@ -23,7 +23,68 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/06 00:30:47 marmfield Exp $
  CGICFGDIR=$(CGIDIR)
  PERLDIR=@PERLDIR@
  
-@@ -152,10 +153,8 @@ install:
+@@ -56,60 +57,6 @@
+ 	cd $(SRC_CGI) && $(MAKE)
+ 	cd $(SRC_HTM) && $(MAKE)
+ 
+-	@echo ""
+-	@echo "*** Compile finished ***"
+-	@echo ""
+-	@echo "If the main program and CGIs compiled without any errors, you"
+-	@echo "can continue with installing Nagios as follows (type 'make'"
+-	@echo "without any arguments for a list of all possible options):"
+-	@echo ""
+-	@echo "  make install"
+-	@echo "     - This installs the main program, CGIs, and HTML files"
+-	@echo ""
+-	@echo "  make install-init"
+-	@echo "     - This installs the init script in $(DESTDIR)$(INIT_DIR)"
+-	@echo ""
+-	@echo "  make install-commandmode"
+-	@echo "     - This installs and configures permissions on the"
+-	@echo "       directory for holding the external command file"
+-	@echo ""
+-	@echo "  make install-config"
+-	@echo "     - This installs *SAMPLE* config files in $(DESTDIR)$(CFGDIR)"
+-	@echo "       You'll have to modify these sample files before you can"
+-	@echo "       use Nagios.  Read the HTML documentation for more info"
+-	@echo "       on doing this.  Pay particular attention to the docs on"
+-	@echo "       object configuration files, as they determine what/how"
+-	@echo "       things get monitored!"
+-	@echo ""
+-	@echo ""
+-	@echo "*** Support Notes *******************************************"
+-	@echo ""
+-	@echo "If you have questions about configuring or running Nagios,"
+-	@echo "please make sure that you:"
+-	@echo ""
+-	@echo "     - Look at the sample config files"
+-	@echo "     - Read the HTML documentation"
+-	@echo "     - Read the FAQs online at http://www.nagios.org/faqs"
+-	@echo ""
+-	@echo "before you post a question to one of the mailing lists."
+-	@echo "Also make sure to include pertinent information that could"
+-	@echo "help others help you.  This might include:"
+-	@echo ""
+-	@echo "     - What version of Nagios you are using"
+-	@echo "     - What version of the plugins you are using"
+-	@echo "     - Relevant snippets from your config files"
+-	@echo "     - Relevant error messages from the Nagios log file"
+-	@echo ""
+-	@echo "For those of you who are interested in contract support or"
+-	@echo "consulting services for Nagios, please visit:"
+-	@echo ""
+-	@echo "       http://www.nagios.org/contractsupport"
+-	@echo ""
+-	@echo "*************************************************************"
+-	@echo ""
+-	@echo "Enjoy."
+-	@echo ""
+-
+ nagios:
+ 	cd $(SRC_BASE) && $(MAKE)
+ 
+@@ -152,10 +99,8 @@
  	cd $(SRC_BASE) && $(MAKE) $@
  	cd $(SRC_CGI) && $(MAKE) $@
  	cd $(SRC_HTM) && $(MAKE) $@
@@ -35,7 +96,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/06 00:30:47 marmfield Exp $
  	fi;
  
  	@echo ""
-@@ -182,20 +181,20 @@ install:
+@@ -182,20 +127,20 @@
  
  
  install-config:

@@ -1,4 +1,4 @@
-# $NetBSD: TODO,v 1.3 2003/12/21 20:56:29 anewsmurf Exp $
+# $NetBSD: TODO,v 1.4 2004/02/29 15:41:08 anewsmurf Exp $
 #
 
 TODO list for nagios-base
@@ -6,7 +6,3 @@ TODO list for nagios-base
 	- A little more testing.
 	- Add apache installation instructions to some post install
 message, instead of always looking at doco.
-	- Add optional support for MySQL (WITH_MYSQL=1) or PgSQL (WITH_POSTGRES=1)
-Done
-
-Update to 1.1.

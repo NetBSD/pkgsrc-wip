@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/12/21 20:56:29 anewsmurf Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/29 15:41:07 anewsmurf Exp $
 #
 
-DISTNAME=	nagios-1.0
+DISTNAME=	nagios-1.2
 PKGNAME=	${DISTNAME:S/-/-base-/}
 PKGREVISION=	# not defined
 CATEGORIES=	net sysutils
