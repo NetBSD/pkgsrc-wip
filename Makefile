@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.93 2003/04/16 12:47:26 cubidou Exp $
-# $NetBSD: Makefile,v 1.93 2003/04/16 12:47:26 cubidou Exp $
+# $Id: Makefile,v 1.94 2003/04/16 16:57:58 cubidou Exp $
+# $NetBSD: Makefile,v 1.94 2003/04/16 16:57:58 cubidou Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -21,6 +21,7 @@ SUBDIR+=	gkrellm2
 SUBDIR+=	gkrellm2-flynn
 SUBDIR+=	gkrellm2-launch
 SUBDIR+=	gkrellm2-leds
+SUBDIR+=	gkrellm2-multiping
 SUBDIR+=	gkrellm2-server
 SUBDIR+=	gkrellm2-share
 SUBDIR+=	gkrellm2-snmp
