@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/09/12 13:08:19 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/09/12 17:24:46 marttikuparinen Exp $
 bin/fgr
 bin/scramble
 bin/xfapps
@@ -81,6 +81,7 @@ share/xffm/AUTHORS
 share/xffm/pixmaps/Makefile
 share/xffm/pixmaps/Makefile.am
 share/xffm/pixmaps/Makefile.in
+share/xffm/pixmaps/Makefile.in.subst.sav
 share/xffm/pixmaps/comp1.xpm
 share/xffm/pixmaps/empty.xpm
 share/xffm/pixmaps/network-36.png
