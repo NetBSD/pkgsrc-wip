@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/11/30 03:25:14 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/30 05:18:01 grantbeattie Exp $
 
 DISTNAME=	exim-3.36
 CATEGORIES=	mail net
@@ -29,13 +29,18 @@ OWN_DIRS_PERMS+=	/var/spool/exim ${EXIM_USER} ${EXIM_GROUP} 0750
 PKG_USERS=		${EXIM_USER}:${EXIM_GROUP}:8:Exim\\ mail\\ server\\ user:/var/mail:/sbin/nologin
 PKG_GROUPS=		${EXIM_GROUP}
 
+.include "../../mk/bsd.prefs.mk"
+
+_GZIP_CMD!=		${ECHO} ${GZIP_CMD} | ${SED} -e 's/ .*//'
+FILES_SUBST+=		GZIP_CMD="${_GZIP_CMD}"
+FILES_SUBST+=		GZCAT="${GZCAT}"
+
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
 	${CP} ${WRKSRC}/src/EDITME ${WRKSRC}/Local/Makefile.netbsd
 
 pre-configure:
-	${SED} -e 's:@PREFIX@:${PREFIX}:' \
-		${WRKSRC}/Local/Makefile.netbsd \
+	@${SED} ${FILES_SUBST_SED} ${WRKSRC}/Local/Makefile.netbsd \
 		> ${WRKSRC}/Local/Makefile
 
 pre-install:

@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/11/30 02:06:30 grantbeattie Exp $
+$NetBSD: patch-ab,v 1.2 2003/11/30 05:18:02 grantbeattie Exp $
 
---- Local/Makefile.netbsd.orig	Mon Jun 11 13:11:04 2001
-+++ Local/Makefile.netbsd	Mon Jun 11 13:11:40 2001
+--- Local/Makefile.netbsd.orig	2003-11-30 16:06:49.000000000 +1100
++++ Local/Makefile.netbsd
 @@ -78,7 +78,7 @@
  # CHGRP_COMMAND=/usr/bin/chgrp
  # MV_COMMAND=/bin/mv
@@ -31,25 +31,33 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/11/30 02:06:30 grantbeattie Exp $
  
  
  # The default distribution of Exim contains only the plain text form of the
-@@ -121,7 +121,7 @@
+@@ -121,14 +121,14 @@ BIN_DIRECTORY=/usr/exim/bin
  # files. Both the name of the command and the suffix that it adds to files
  # need to be defined here. See also the EXICYCLOG_MAX configuration.
  
 -COMPRESS_COMMAND=/opt/gnu/bin/gzip
-+COMPRESS_COMMAND=/usr/bin/gzip
++COMPRESS_COMMAND=@GZIP_CMD@
  COMPRESS_SUFFIX=gz
  
  
-@@ -137,7 +137,7 @@
+ # If the exigrep utility is fed compressed log files, it tries to uncompress
+ # them using this command.
+ 
+-ZCAT_COMMAND=/opt/gnu/bin/zcat
++ZCAT_COMMAND=@GZCAT@
+ 
+ 
+ # The runtime configuration file: This variable defines where Exim's runtime
+@@ -137,7 +137,7 @@ ZCAT_COMMAND=/opt/gnu/bin/zcat
  # location of all other runtime files and directories can be changed in the
  # runtime configuration file.
  
 -CONFIGURE_FILE=/usr/exim/configure
-+CONFIGURE_FILE=@PREFIX@/etc/exim/configure
++CONFIGURE_FILE=@PKG_SYSCONFDIR@/configure
  
  
  # In some installations there may be multiple machines sharing file systems,
-@@ -241,7 +241,7 @@
+@@ -243,7 +243,7 @@ EXICYCLOG_MAX=10
  # are defaulted in the OS/Makefile-Default file, and can be overridden
  # in local OS-specific make files.
  
@@ -58,7 +66,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/11/30 02:06:30 grantbeattie Exp $
  
  
  # Compiling in support for embedded Perl: If you want to be able to
-@@ -284,7 +284,7 @@
+@@ -286,7 +286,7 @@ EXIM_MONITOR=eximon.bin
  # "panic", or "reject" to form the final file name. For example, some
  # installations may want something like this:
  
@@ -67,7 +75,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/11/30 02:06:30 grantbeattie Exp $
  
  # which results in files with names /var/log/exim_mainlog, etc. The directory
  # in which the log files are placed must exist; Exim does not try to create
-@@ -409,7 +409,7 @@
+@@ -411,7 +411,7 @@ LOOKUP_LSEARCH=yes
  # the file name, allowing sites that run two separate daemons to distinguish
  # them. Some installations may want something like this
  
@@ -76,7 +84,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/11/30 02:06:30 grantbeattie Exp $
  
  # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
  # (see SPOOL_DIRECTORY below) with the name "exim-daemon.pid" for the standard
-@@ -458,7 +458,7 @@
+@@ -460,7 +460,7 @@ ROUTER_QUERYPROGRAM=yes
  # uid and gid.
  
  # Many installations will want something like this:
@@ -85,7 +93,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/11/30 02:06:30 grantbeattie Exp $
  
  # Others may prefer to keep all Exim things under one directory:
  # SPOOL_DIRECTORY=/usr/exim/spool
-@@ -565,7 +565,7 @@
+@@ -567,7 +567,7 @@ TRANSPORT_SMTP=yes
  # This one is special-purpose, and commonly not required, so do not include
  # it by default.
  
