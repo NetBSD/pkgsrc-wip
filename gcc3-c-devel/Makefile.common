@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.6 2004/01/25 02:12:37 grantbeattie Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/02/11 22:58:29 johnrshannon Exp $
 #
 
-SNAPDATE=	20040107
+SNAPDATE=	20040211
 GCC_VERSION=	3.4
 DISTNAME=	gcc-${GCC_VERSION}-${SNAPDATE}
 CATEGORIES=	lang
