@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.968 2004/02/16 01:17:39 minskim Exp $
-# $NetBSD: Makefile,v 1.968 2004/02/16 01:17:39 minskim Exp $
+# $Id: Makefile,v 1.969 2004/02/16 01:58:45 minskim Exp $
+# $NetBSD: Makefile,v 1.969 2004/02/16 01:58:45 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -595,7 +595,6 @@ SUBDIR+=	resourceext
 SUBDIR+=	rlpr
 SUBDIR+=	rosegarden-current
 SUBDIR+=	rox-gtk2
-SUBDIR+=	rss2html
 SUBDIR+=	ruby-amrita
 SUBDIR+=	ruby-dpklib
 SUBDIR+=	ruby-ming
