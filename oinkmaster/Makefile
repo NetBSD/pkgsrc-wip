@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/22 19:49:30 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/22 20:43:58 adrian_p Exp $
 
 DISTNAME=	oinkmaster-0.8
 CATEGORIES=	net
@@ -10,6 +10,8 @@ HOMEPAGE= 	http://www.algonet.se/~nitzer/oinkmaster/
 COMMENT=	Manage snort rule updates
 
 DEPENDS+=	wget>=1.00:../../net/wget
+
+USE_PERL5=	YES
 
 USE_PKGINSTALL=	YES
 USE_BUILDLINK2=	YES
