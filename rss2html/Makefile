@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:27 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/27 22:39:25 poppnk Exp $
 #
 
-DISTNAME=		rss2html-0.3
+DISTNAME=		rss2html-0.5
 CATEGORIES=		wip converters
 MASTER_SITES=		ftp://ftp.nopcode.org/prj/rss2html/
 
