@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/18 22:36:15 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/02 21:58:42 blef Exp $
 #
 
 DISTNAME=		InlineEgg-1.02
@@ -10,7 +10,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://oss.corest.com/projects/inlineegg.html
 COMMENT=		Python module for writing inline assembler programs
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
