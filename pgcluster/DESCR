@@ -1,0 +1,13 @@
+PGCluster is the synchronous replication system of the multi-master
+system for PostgreSQL. It supports many features:
+
+- Load Balancing
+- Problem Handling
+- Recovery
+- Replication by:
+  - query
+  - copy
+  - NOW()
+  - NEXTVAL(), SETVAL()
+  - Serial type
+  - Stored procedure
