@@ -1,7 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/09/16 13:40:56 airhead Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/09/16 14:59:48 airhead Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-EET_BUILDLINK3_MK:=	${JPEG_BUILDLINK3_MK}+
+EET_BUILDLINK3_MK:=	${EET_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	eet
@@ -13,5 +13,9 @@ BUILDLINK_PACKAGES+=	eet
 BUILDLINK_DEPENDS.eet+=		eet>=0.9.9
 BUILDLINK_PKGSRCDIR.eet?=	../../wip/eet
 .endif	# EET_BUILDLINK3_MK
+
+.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
