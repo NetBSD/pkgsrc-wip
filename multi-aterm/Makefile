@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/22 12:19:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/22 15:01:17 xtraeme Exp $
 #
 
 DISTNAME=	multi-aterm-0.0.4
@@ -23,4 +23,5 @@ CONFIGURE_ARGS+=	--enable-mousewheel \
 			--enable-kanji \
 			--enable-big5
 
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
