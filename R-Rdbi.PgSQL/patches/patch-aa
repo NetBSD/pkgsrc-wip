@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/26 18:49:48 daprice Exp $
+
+--- configure.orig	2001-07-31 10:23:09.000000000 -0600
++++ configure
+@@ -19,6 +19,8 @@ ac_help="$ac_help
+ # Initialize some variables set by options.
+ # The variables have the same names as the options, with
+ # dashes changed to underlines.
++PG_INC_PATH=@PG_INC_PATH@
++PG_LIB_PATH=@PG_LIB_PATH@
+ build=NONE
+ cache_file=./config.cache
+ exec_prefix=NONE
+@@ -550,7 +552,7 @@ if eval "test \"`echo '$''{'ac_cv_lib_$a
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lpq  $LIBS"
++LIBS="-Wl,-R${PG_LIB_PATH} -L${PG_LIB_PATH} -lpq $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 556 "configure"
+ #include "confdefs.h"
+@@ -609,7 +611,9 @@ then
+ 	/usr/local/include/postgresql \
+ 	/opt/include \
+ 	/opt/include/pgsql \
+-	/opt/include/postgresql
++	/opt/include/postgresql \
++	${PG_INC_PATH} \
++	${PG_INC_PATH}/postgresql
+ 	do
+ 		echo $ac_n "checking how to run the C preprocessor""... $ac_c" 1>&6
+ echo "configure:616: checking how to run the C preprocessor" >&5

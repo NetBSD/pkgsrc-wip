@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/26 18:49:48 daprice Exp $
+
+SHA1 (R/Rdbi.PgSQL_0.1-2.tar.gz) = b34305978cb42df2a7ff1e869d0ea3210b89aa99
+Size (R/Rdbi.PgSQL_0.1-2.tar.gz) = 25815 bytes
+SHA1 (patch-aa) = de4eb5a98c0daddbb7e5ddf6a130f83f4d071145
