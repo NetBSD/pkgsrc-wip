@@ -1,27 +1,27 @@
-# $NetBSD: Makefile,v 1.13 2004/06/14 15:28:36 ppostma Exp $
+# $NetBSD: Makefile,v 1.14 2004/06/14 15:33:22 ppostma Exp $
 
-DISTNAME=	pf-lkm-20040607
-CATEGORIES=	security ipv6
-MASTER_SITES=	http://nedbsd.nl/~ppostma/pf/
+DISTNAME=		pf-lkm-20040607
+CATEGORIES=		security ipv6
+MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
 
-MAINTAINER=	peter@pointless.nl
-HOMEPAGE=	http://nedbsd.nl/~ppostma/pf-lkm.html
-COMMENT=	OpenBSD PF loadable kernel module for NetBSD
+MAINTAINER=		peter@pointless.nl
+HOMEPAGE=		http://nedbsd.nl/~ppostma/pf-lkm.html
+COMMENT=		OpenBSD PF loadable kernel module for NetBSD
 
 ONLY_FOR_PLATFORM=	NetBSD-2.0*-*
 
-USE_PKGINSTALL=	yes
-USE_BUILDLINK3=	yes
-NO_CONFIGURE=	yes
+USE_PKGINSTALL=		yes
+USE_BUILDLINK3=		yes
+NO_CONFIGURE=		yes
 
-PKG_USERS=	_pflogd:nogroup::pflogd\\ pseudo-user:${VARBASE}/chroot/pflogd:/sbin/nologin
+PKG_USERS=		_pflogd:nogroup::pflogd\\ pseudo-user:${VARBASE}/chroot/pflogd:/sbin/nologin
 
-RCD_SCRIPTS=	pf pflogd
-PKG_SYSCONFSUBDIR= pf
-CONF_FILES=	${PREFIX}/share/examples/${PKGBASE}/pf.conf \
-		${PKG_SYSCONFDIR}/pf.conf
-CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/pf.os \
-		${PKG_SYSCONFDIR}/pf.os
+RCD_SCRIPTS=		pf pflogd
+PKG_SYSCONFSUBDIR=	pf
+CONF_FILES=		${PREFIX}/share/examples/${PKGBASE}/pf.conf \
+			${PKG_SYSCONFDIR}/pf.conf
+CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/pf.os \
+			${PKG_SYSCONFDIR}/pf.os
 
 pre-install:
 .if !exists(${PREFIX}/lkm)
