@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/15 18:04:10 bmeurer Exp $
+
+SHA1 (gst-plugins-0.6.0.tar.bz2) = 5605580c1dffe164eddeced17169c3404728eba3
+Size (gst-plugins-0.6.0.tar.bz2) = 1876447 bytes
+SHA1 (patch-aa) = 7c0c17adef6c1618a01db95b0d3cbe4d8d7212d2

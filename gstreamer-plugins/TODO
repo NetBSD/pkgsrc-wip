@@ -1,0 +1,3 @@
+- Most of the plugins are broken and do not build on NetBSD.
+- Maybe we should split this into several pkgs.
+- Thread related crashes.
