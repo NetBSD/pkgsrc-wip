@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/15 07:12:41 xmor61 Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/07 01:49:15 thomasklausner Exp $
 #
 
 DISTNAME=		STonX-0.6.7.6
@@ -10,8 +10,7 @@ HOMEPAGE=		http://stonx.sourceforge.net/
 COMMENT=		Atari ST Emulator
 
 USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
 GNU_CONFIGURE=		yes
 
-.include "../../pkgtools/x11-links/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
