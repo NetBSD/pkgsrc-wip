@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1616 2005/01/14 11:33:26 imilh Exp $
-# $NetBSD: Makefile,v 1.1616 2005/01/14 11:33:26 imilh Exp $
+# $Id: Makefile,v 1.1617 2005/01/14 13:40:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.1617 2005/01/14 13:40:36 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -43,7 +43,6 @@ SUBDIR+=	WEPCrack
 SUBDIR+=	abuse_sdl
 SUBDIR+=	acpid
 SUBDIR+=        adamem
-SUBDIR+=	afterstep2
 SUBDIR+=	aircrack
 SUBDIR+=	airsnort
 SUBDIR+=	alsa-lib
