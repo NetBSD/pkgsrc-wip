@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/08/22 02:22:39 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/22 04:05:33 schnoebe Exp $
 # FreeBSD Id: ports/sysutils/copytape/Makefile,v 1.10 2003/02/20 19:00:46 knu Exp
 
 DISTNAME=		copytape
-PKGNAME=		copytape-1.0
+PKGNAME=		${DISTNAME}-1.0
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_COMP_SOURCES:=unix/volume10/}
 EXTRACT_SUFX=		.Z
@@ -14,20 +14,22 @@ COMMENT=	Copytape duplicates magnetic tapes, with only one drive
 BUILD_DEPENDS+=	gsharutils>=4.2.1nb2:../../archivers/gsharutils
 
 WRKSRC=			${WRKDIR}
+ALL_TARGET=		copytape
 
 # MASTER_SITES=		${MASTER_SITE_COMP_SOURCES}
 # DISTNAME=		copytape
 # EXTRACT_SUFX=		.Z
 
-EXTRACT_CMD=            ${GZCAT} ${DOWNLOADED_DISTFILE} | gunshar
+EXTRACT_CMD=            ${GZCAT} ${DOWNLOADED_DISTFILE} | ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}unshar
 
-MAN1=			copytape.1
-MAN5=			copytape.5
+# post-fetch:
+# 	${MV} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
+# 				${DISTDIR}/${DISTNAME}.shar${EXTRACT_SUFX}
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/copytape ${PREFIX}/bin/copytape
-	@${INSTALL_MAN} ${WRKSRC}/copytape.1 ${PREFIX}/man/man1/copytape.1
-	@${INSTALL_MAN} ${WRKSRC}/copytape.5 ${PREFIX}/man/man5/copytape.5
+	${INSTALL_PROGRAM} ${WRKSRC}/copytape ${PREFIX}/bin/copytape
+	${INSTALL_MAN} ${WRKSRC}/copytape.1 ${PREFIX}/man/man1/copytape.1
+	${INSTALL_MAN} ${WRKSRC}/copytape.5 ${PREFIX}/man/man5/copytape.5
 
 .include "../../mk/bsd.pkg.mk"
 
