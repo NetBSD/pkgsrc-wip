@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/04/22 16:46:04 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/04/22 17:13:59 mpasternak Exp $
+# $Id: Makefile.common,v 1.2 2004/04/22 17:13:59 mpasternak Exp $
 
-SWIPLVERS=		5.2.9
+SWIPLVERS=		5.2.13
 DISTNAME=		pl-${SWIPLVERS}
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.swi.psy.uva.nl/SWI-Prolog/
