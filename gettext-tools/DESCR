@@ -6,3 +6,6 @@ It includes msgfmt(1) for generating binary message catalogs,
 xgettext(1) for extracting gettext translatable strings, and other
 tools for editing translations of message catalogs and maintaining
 the gettext infrastructure.
+
+It also provides the autoconf/automake m4 files for this GNU NLS
+library.
