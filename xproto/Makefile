@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/11/26 23:57:48 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/26 23:58:59 jeremy-c-reed Exp $
 #
 
 DISTNAME=		xproto-6.6
@@ -17,4 +17,5 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xproto.pc.in
 GNU_CONFIGURE=		yes
 
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
