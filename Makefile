@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1158 2004/04/02 00:33:46 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1158 2004/04/02 00:33:46 thomasklausner Exp $
+# $Id: Makefile,v 1.1159 2004/04/02 06:00:02 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1159 2004/04/02 06:00:02 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -522,6 +522,7 @@ SUBDIR+=	picasm
 SUBDIR+=	picprog
 SUBDIR+=	pinball
 SUBDIR+=	pizza
+SUBDIR+=	pkg_install-testing
 SUBDIR+=	plugger
 SUBDIR+=	pointless
 SUBDIR+=	portaudio
