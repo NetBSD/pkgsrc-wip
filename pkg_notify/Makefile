@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/10/27 13:36:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/08 10:50:45 imilh Exp $
 #
 
-DISTNAME=	pkg_notify-0.1
+DISTNAME=	pkg_notify-0.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://imil.net/NetBSD/
 
@@ -22,14 +22,18 @@ USE_PERL5=	yes
 
 INSTALLATION_DIRS=	bin
 
+pre-patch:
+
+SUBST_CLASSES+=	pkg_notify
+SUBST_MESSAGE.pkg_notify=	"Setting up various path."
+SUBST_STAGE.pkg_notify=		post-patch
+SUBST_FILES.pkg_notify=		pkg_notify
+SUBST_SED.pkg_notify=		-e 's|@PKGSRCDIR@|${PKGSRCDIR}|'	\
+				-e 's|@LOCALBASE@|${LOCALBASE}|g'	\
+				-e 's|@MAKE@|${MAKE}|g'			\
+				-e 's|@PERL@|${PERL5}|g'
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_notify ${PREFIX}/bin
-
-SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-extract
-SUBST_FILES.path=	pkg_notify
-SUBST_SED.path=		-e "s|/usr/pkgsrc|${PKGSRCDIR}|g" \
-			-e "s|/usr/pkg|${LOCALBASE}|g"
-SUBST_MESSAGE.path=	"Fixing harcoded paths."
 
 .include "../../mk/bsd.pkg.mk"
