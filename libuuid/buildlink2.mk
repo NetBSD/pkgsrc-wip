@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/01/10 18:05:25 mpasternak Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/03/04 16:07:07 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libuuid.
 #
@@ -7,7 +7,7 @@
 LIBUUID_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libuuid
-BUILDLINK_DEPENDS.libuuid?=		libuuid>=1.34
+BUILDLINK_DEPENDS.libuuid?=		libuuid>=1.35
 BUILDLINK_PKGSRCDIR.libuuid?=		../../wip/libuuid
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libuuid=libuuid

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/10 18:05:25 mpasternak Exp $
-# $Id: Makefile,v 1.1.1.1 2004/01/10 18:05:25 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/04 16:07:07 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.2 2004/03/04 16:07:07 jeremy-c-reed Exp $
 
 DISTNAME=		${E2FSPROGS_DISTNAME}
-PKGNAME=		libuuid-1.34
+PKGNAME=		libuuid-${E2FSPROGS_VERSION}
 WRKSRC=			${WRKDIR}/${DISTNAME}/lib/uuid/
 CATEGORIES=		devel
 MASTER_SITES=		${E2FSPROGS_MASTER_SITES}
@@ -15,7 +15,7 @@ CONFLICTS=		e2fsprogs-1.32
 
 do-configure:
 	cd ${WRKSRC}/../../ && ${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
-	
+
 post-build:
 	cd ${WRKSRC}/../../misc/ && ${SETENV} ${MAKE_ENV} ${MAKE} \
 		${MAKE_FLAGS} uuidgen uuidgen.1
