@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: drweb-smf.sh,v 1.2 2003/09/13 17:21:21 bubuchka Exp $
+# $NetBSD: drweb-smf.sh,v 1.3 2003/09/14 00:43:09 bubuchka Exp $
 
 # PROVIDE: drwebsmf
 # REQUIRE: DAEMON
@@ -15,7 +15,7 @@ procname="${command}"
 start_precmd="drwebsmf_clean"
 required_files="@PKG_SYSCONFDIR@/drweb-smf.conf"
 
-drweb_smf_clean()
+drwebsmf_clean()
 {
 	if [ -e @DRW_SMF_SOCKFILE@ ]; then
 		rm -f @DRW_SMF_SOCKFILE@
