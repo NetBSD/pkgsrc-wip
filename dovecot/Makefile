@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/05/13 20:09:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2003/05/13 20:50:27 lsed Exp $
 #
 
 DISTNAME=	dovecot-0.99.9.1
@@ -77,6 +77,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/dovecot-example.conf	\
 		${EGDIR}/dovecot.conf.default
+	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-* ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/doc/mkcert.sh ${EGDIR}
 	# Generate modules part of PLIST dynamically.  It can be different
 	# depending on OS.
 	cd ${PREFIX} && ${FIND} libexec/dovecot -type f > ${WRKDIR}/PLIST

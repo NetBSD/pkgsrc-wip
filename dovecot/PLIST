@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/05/06 22:34:55 lsed Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/05/13 20:50:27 lsed Exp $
 etc/rc.d/dovecot
 sbin/dovecot
 share/doc/dovecot/auth.txt
@@ -9,6 +9,10 @@ share/doc/dovecot/mail-storages.txt
 share/doc/dovecot/multiaccess.txt
 share/doc/dovecot/nfs.txt
 share/examples/dovecot/dovecot.conf.default
+share/examples/dovecot/dovecot-ldap.conf
+share/examples/dovecot/dovecot-openssl.cnf
+share/examples/dovecot/dovecot-pgsql.conf
+share/examples/dovecot/mkcert.sh
 @dirrm share/examples/dovecot
 @dirrm share/doc/dovecot
 @dirrm libexec/dovecot
