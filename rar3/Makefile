@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/09 01:27:43 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/10 23:48:14 thomasklausner Exp $
 #
 
 DISTNAME=		rarbsd-3.3.0
@@ -11,7 +11,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://files10.rarlab.com/rar/
 COMMENT=		File archiver (binary only)
 
-ONLY_FOR_PLATFORM=	FreeBSD-*-i386
+ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386
 
 NO_BUILD=		# defined
 NO_CONFIGURE=		# defined
