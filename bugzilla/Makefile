@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/27 16:29:43 adrian_p Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/03 18:39:59 adrian_p Exp $
 #
 
 DISTNAME=	bugzilla-2.16.7
@@ -23,7 +23,7 @@ DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 # these are optional
 #
 DEPENDS+=	gd>=1.19:../../graphics/gd
-DEPENDS+=	p5-Chart-[0-9]*:../../wip/p5-Chart
+DEPENDS+=	p5-Chart-[0-9]*:../../graphics/p5-Chart
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 NO_BUILDLINK=	YES
