@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/06 15:47:19 poppnk Exp $
+
+SHA1 (tcpspy-1.7.tar.gz) = 5e25160d8ed637d748b88e0cdef7333294eb6192
+Size (tcpspy-1.7.tar.gz) = 14813 bytes
+SHA1 (patch-aa) = 43e82ac80312bbcbeb1cb8dbc582dcce6057a4b8
+SHA1 (patch-ab) = b82ad421cb729a8cacc22a1d037ff388b7285239

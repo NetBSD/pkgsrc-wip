@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/06 15:47:19 poppnk Exp $
+--- rule_grammar.y.orig	2004-09-06 05:34:07.000000000 -0400
++++ rule_grammar.y	2004-09-06 05:34:17.000000000 -0400
+@@ -31,6 +31,7 @@
+  *
+  * $Id: patch-aa,v 1.1.1.1 2004/09/06 15:47:19 poppnk Exp $
+  */
++#include <stdio.h>
+ #include <netinet/in.h>
+ #include <stdlib.h>
+ #include <sys/types.h>
