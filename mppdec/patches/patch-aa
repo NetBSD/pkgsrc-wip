@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/19 15:46:14 mpasternak Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/19 16:06:39 thomasklausner Exp $
 
---- mpp.h.orig	Tue Jul 30 22:19:57 2002
+--- mpp.h.orig	Wed Jul 31 00:19:57 2002
 +++ mpp.h
 @@ -8,7 +8,7 @@
  // use optimized assembler routines for Pentium III/K6-2/Athlon (only 32 bit OS, Intel x86 and no MAKE_xxBITS)
@@ -20,6 +20,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/19 15:46:14 mpasternak Exp $
  
  // native Sun Onboard-Audio support (only SunOS)
  // If you have a Sun Workstation with Onboard-Audio, you can output to /dev/audio and
+@@ -57,7 +57,7 @@
+ // use realtime scheduling if destination is an audio device
+ // This sets the program to real time priority when playing the file directly to a sound card.
+ // Now it should really difficult to get drop outs (file IO and other realtime programs are the remaining weak points)
+-#define USE_REALTIME
++//#define USE_REALTIME
+ 
+ // use ANSI-Escape sequences to structure output
+ #define USE_ANSI_ESCAPE
 @@ -134,7 +134,7 @@
  //#define MUST_ALIGNED
  
