@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/23 23:34:50 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/24 00:00:02 poppnk Exp $
 #
 
 DISTNAME=		charva-1.0.1
@@ -20,7 +20,8 @@ USE_GNU_TOOLS+=		make
 do-build:
 	${RM} -f c/src/libTerminal.so
 	cd ${WRKSRC}/c/src/ && \
-	${CC} -Wl,-R ${PREFIX}/lib -shared -fpic ${CFLAGS} -I ${JAVA_HOME}/include/ \
+	${CC} -Wl,-R ${PREFIX}/lib -shared -fpic -lncurses \
+		${CFLAGS} -I ${JAVA_HOME}/include/ \
 		-I ${PREFIX}/include/ Toolkit.c -o libTerminal.so
 
 do-install:
