@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/05 13:40:27 virtus Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/05 16:24:59 virtus Exp $
+bin/chksniff
