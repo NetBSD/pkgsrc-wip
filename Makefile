@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1559 2004/11/28 20:30:13 shattered Exp $
-# $NetBSD: Makefile,v 1.1559 2004/11/28 20:30:13 shattered Exp $
+# $Id: Makefile,v 1.1560 2004/11/29 14:21:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1560 2004/11/29 14:21:59 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -329,7 +329,6 @@ SUBDIR+=	javascript-reference
 SUBDIR+=	jc
 SUBDIR+=	jdk14
 SUBDIR+=	jemboss-standalone
-SUBDIR+=	jpegpixi
 SUBDIR+=	kahakai
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
