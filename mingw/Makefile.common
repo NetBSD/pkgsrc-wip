@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.4 2003/12/01 03:07:00 mpasternak Exp $
-# $Id: Makefile.common,v 1.4 2003/12/01 03:07:00 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/12/01 23:27:04 mpasternak Exp $
+# $Id: Makefile.common,v 1.5 2003/12/01 23:27:04 mpasternak Exp $
 
 MASTER_SITES?=		${MASTER_SITE_SOURCEFORGE:=mingw/}
 
@@ -12,7 +12,7 @@ WRKSRC?=		${WRKDIR}/${DISTNAME:S/-src//}
 USE_BUILDLINK2?=	yes
 USE_PKGLOCALE?=		yes
 GNU_CONFIGURE?=		yes
-USE_CROSSBASE=		yes
+USE_CROSSBASE?=		yes
 USE_GMAKE?=		yes
 
 PLIST_SUBST+=		MINGWTARGET=${MINGWTARGET}
