@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1330 2004/06/18 21:30:31 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1330 2004/06/18 21:30:31 thomasklausner Exp $
+# $Id: Makefile,v 1.1331 2004/06/20 19:39:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1331 2004/06/20 19:39:45 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -495,7 +495,6 @@ SUBDIR+=	pear-Mail_Mime
 SUBDIR+=	pear-Net_Socket
 SUBDIR+=	pear-Net_URL
 SUBDIR+=	pear-SOAP
-SUBDIR+=	pearpc
 SUBDIR+=	pekwm-nightly
 SUBDIR+=	perl59
 SUBDIR+=	perltidy
@@ -769,7 +768,6 @@ SUBDIR+=	vtk-data
 SUBDIR+=	vtk-docs
 SUBDIR+=	vtk-python
 SUBDIR+=	webcleaner
-SUBDIR+=	websvn
 SUBDIR+=	weewm
 SUBDIR+=	which
 SUBDIR+=	wmclockmon
