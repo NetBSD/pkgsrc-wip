@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/14 18:33:29 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/15 00:52:44 dillo Exp $
 #
 
 DISTNAME=		scare-1.3.3
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.geocities.com/legion_if/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		dillo@NetBSD.org
-HOMEPAGE=		http://www.geocities.com/legion_if/
+HOMEPAGE=		http://www.geocities.com/legion_if/scare.html
 COMMENT=		Interpreter for interactive fiction written in Adrift
 
 USE_BUILDLINK3=		yes
