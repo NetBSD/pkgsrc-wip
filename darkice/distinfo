@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/05/09 09:54:29 xtraeme Exp $
+
+SHA1 (darkice-0.13.1.tar.gz) = b86bda90862840f57c8b0e033b90d9c2d09b51c6
+Size (darkice-0.13.1.tar.gz) = 323578 bytes
+SHA1 (patch-aa) = 5a3f792b9f89addf04cce52c7703d7cfff512327
+SHA1 (patch-ab) = 6cf9285316e7f7bf0cce835c89881c2ed0bd8439
+SHA1 (patch-ac) = ec927674c9d9e00a8178545ee8def243e5258b14
+SHA1 (patch-ad) = 6a81af90d01e37c6c08bbf0bb867907a5d2a9c42
+SHA1 (patch-ae) = 740e82a667b38308bbabdd09858465c9c2389199

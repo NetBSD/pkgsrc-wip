@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/05/09 09:54:29 xtraeme Exp $
+
+--- src/OssDspSource.cpp.orig	2003-05-08 04:48:52.000000000 +0200
++++ src/OssDspSource.cpp	2003-05-08 04:50:01.000000000 +0200
+@@ -82,10 +82,18 @@
+ 
+ #ifdef HAVE_SYS_SOUNDCARD_H
+ #include <sys/soundcard.h>
+-#else
+-#error need sys/soundcard.h
++#endif
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#include <soundcard.h>
+ #endif
+ 
++#if defined(__FreeBSD__)
++#if defined(__sparc__) || defined(__powerpc__)
++#define AFMT_S16_NE AFMT_S16_BE
++#else
++#define AFMT_S16_NE AFMT_S16_LE
++#endif
++#endif
+ 
+ #include "Util.h"
+ #include "Exception.h"

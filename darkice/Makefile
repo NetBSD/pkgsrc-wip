@@ -1,0 +1,42 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/05/09 09:54:29 xtraeme Exp $
+#
+
+DISTNAME=	darkice-0.13.1
+CATEGORIES=	audio
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darkice/}
+
+MAINTAINER=	jrp@hispabsd.org
+HOMEPAGE=	http://darkice.sourceforge.net/
+COMMENT=	IceCast, IceCast2 and ShoutCast live audio streamer
+
+USE_BUILDLINK2=		yes
+GNU_CONFIGURE=		yes
+USE_GMAKE=		yes
+USE_OSS=		yes
+USE_PKGINSTALL=		yes
+
+CONFIGURE_ARGS+=	--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis}
+CONFIGURE_ARGS+=	--with-lame-prefix=${BUILDLINK_PREFIX.lame}
+
+EGDIR=		${PREFIX}/share/examples/darkice
+HTMLDIR=	${PREFIX}/share/doc/html/darkice
+
+CONF_FILES=	${PREFIX}/share/examples/darkice.conf.default \
+	    	${PKG_SYSCONFDIR}/darkice.conf
+
+do-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/darkice.cfg ${PKG_SYSCONFDIR}/darkice.conf
+	${INSTALL_DATA} ${WRKSRC}/darkice.cfg ${EGDIR}/darkice.conf.default
+	${INSTALL_PROGRAM} ${WRKSRC}/src/darkice ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/darkice.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man/darkice.cfg.5 ${PREFIX}/man/man5/darkice.conf.5
+	for f in ${WRKSRC}/kdoc/*.html; do \
+		${INSTALL_DATA} $$f ${HTMLDIR}; \
+	done
+
+.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../audio/lame/buildlink2.mk"
+.include "../../audio/libvorbis/buildlink2.mk"
+.include "../../mk/bsd.pkg.mk"
