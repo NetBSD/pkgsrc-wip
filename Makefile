@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1085 2004/03/17 20:58:37 airhead Exp $
-# $NetBSD: Makefile,v 1.1085 2004/03/17 20:58:37 airhead Exp $
+# $Id: Makefile,v 1.1086 2004/03/17 22:30:49 airhead Exp $
+# $NetBSD: Makefile,v 1.1086 2004/03/17 22:30:49 airhead Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -215,6 +215,7 @@ SUBDIR+=	gzrecover
 SUBDIR+=	hasciicam
 SUBDIR+=	hashcash
 SUBDIR+=	heroes
+SUBDIR+=	hol-light
 SUBDIR+=	honeyd
 SUBDIR+=	honeyd-arpd
 SUBDIR+=	host
