@@ -1,47 +1,52 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/10/01 02:44:33 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/09 20:22:46 jeremy-c-reed Exp $
 
---- MAKEDEV.orig	Tue Aug 19 23:37:45 2003
+--- MAKEDEV.orig	2004-04-09 13:24:52.163585728 -0700
 +++ MAKEDEV
-@@ -3,2 +3,4 @@
+@@ -75,8 +75,7 @@ done
  
-+VERSION='2.3.1-62'
-+
- #---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#
-@@ -78,4 +80,3 @@ if [ "$opt_V" ]
+ if [ "$opt_V" ]
  then
 -	echo "This is Debian MAKEDEV.  For version info, try 'dpkg --list makedev'"
 -	echo "See /usr/share/doc/makedev/ for more information on Debian MAKEDEV."
-+	echo "$VERSION"
++	echo "@VERSION@"
  	exit 0
-@@ -120,3 +121,3 @@ symlink () {	# usage: symlink name targe
+ fi
+ 
+@@ -133,7 +132,7 @@ symlink () {	# usage: symlink name targe
+ 
+ #---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#
  
 -# Debian allows us to assume /bin/sh is a POSIX compliant shell, so go for it!
 +# Assume /bin/sh is a POSIX compliant shell, so go for it!
  
-@@ -155,3 +156,3 @@ else
- 	do
--		device=`echo $device | sed 's#/.*##'`
-+		device=${device%/*}
- 		case "$major" in
-@@ -267,4 +268,3 @@ do
+ math () {
+ 	eval echo "\$(($*))"
+@@ -286,8 +285,7 @@ do
+ #	case `cvt $arg` in
+ 	case $arg in
  	generic)
 -		# pick the right generic-<arch> using dpkg's knowledge
 -		case `dpkg --print-installation-architecture` in
 +		case `uname -m` in
  			alpha)
-@@ -278,3 +278,3 @@ do
+ 				$0 $opts generic-alpha
+ 				;;
+@@ -297,7 +295,7 @@ do
+ 			hppa)
+ 				$0 $opts generic-hppa
  				;;
 -			i386)
 +			i?86)
  				$0 $opts generic-i386
-@@ -633,4 +633,3 @@ do
+ 				;;
+ 			amd64)
+@@ -657,8 +655,7 @@ do
+ 		done
+ 		;;
  	adb)
 -		# pick the right arch device using dpkg's knowledge
 -		case `dpkg --print-installation-architecture` in
 +		case `uname -m` in
  			powerpc)
-@@ -1923,3 +1922,3 @@ do
- 			do
--				device=`echo $device | sed 's#/.*##'`
-+				device=${device%/*}
- 				case "$major" in
+ 				# ADB bus devices (char)
+ 				makedev adb c 56 0 $mouse

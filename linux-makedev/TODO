@@ -1,4 +1,8 @@
+this uses sed, maybe don't use sed
+
 Don't rely on debian diff -- it may change version and become unavailable.
+
+Debian moving to Red Hat's table-driven makedev (in experimental now)
 
 This uses uname -m for machine type. Need to check names.
 
@@ -30,3 +34,10 @@ shell suffix (or prefix) pattern removal
 	kern_rev1=${kern_rev%.*.*}
 but maybe a kernel revision has more than 3 parts?
 	kern_rev2=${kern_rev%.*} ; kern_rev2=${kern_rev2#*.*}
+
+seeing some errors like:
+-sh-2.05b# MAKEDEV usb
+/usr/sbin/MAKEDEV: line 1: major_/dev/vc=4: No such file or directory
+/usr/sbin/MAKEDEV: line 1: major_/dev=5: No such file or directory
+/usr/sbin/MAKEDEV: line 1: major_/dev=5: No such file or directory
+/usr/sbin/MAKEDEV: line 1: major_/dev=5: No such file or directory
