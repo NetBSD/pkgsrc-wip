@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/16 01:07:58 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/16 01:09:54 minskim Exp $
 #
 
 DISTNAME=	scew-0.3.1
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.ccd.uab.es/~aleix/scew/
 MAINTAINER=	thorbjorn@jemander.net
 HOMEPAGE=	http://www.nongnu.org/scew/
 COMMENT=	Light-weight DOM-like object model API for Expat
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
