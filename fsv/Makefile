@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2004/04/25 06:35:01 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/07 01:57:54 xtraeme Exp $
 #
 
 DISTNAME=	fsv-0.9
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fsv/}
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://fsv.sourceforge.net/
 COMMENT=	3D filesystem visualizer
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/20 17:12:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/07 01:58:07 xtraeme Exp $
 #
 
 DISTNAME=	libmatchbox-1.1
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://matchbox.handhelds.org/sources/libmatchbox/1.1/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://matchbox.handhelds.org/sources/libmatchbox/1.1/
 COMMENT=	Library used by Matchbox Window Manager		
 

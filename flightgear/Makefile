@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/19 05:15:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/07 01:57:53 xtraeme Exp $
 #
 
 DISTNAME=		FlightGear-0.9.3
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/FlightGear/flightgear/}
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.flightgear.org/pub/fgfs/Source/
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.flightgear.org/
 COMMENT=		The FlightGear Simulator
 

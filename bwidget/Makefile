@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/25 18:18:56 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/07 01:57:49 xtraeme Exp $
 #
 
 DISTNAME=		BWidget-1.6.0
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/BW/bw/}
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcllib/}
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://tcllib.sourceforge.net/
 COMMENT=		High-level widget set for Tcl/Tk
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/17 02:55:53 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/07 01:58:05 xtraeme Exp $
 #
 
 DISTNAME=		libXi-6.0.1
@@ -7,7 +7,7 @@ CATEGORIES=		x11 devel
 MASTER_SITES=		http://freedesktop.org/~xlibs/release/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.freedesktop.org/software/xlibs
 COMMENT=		X Input extension library
 

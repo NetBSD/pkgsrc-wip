@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/02 20:48:18 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/07 01:57:55 xtraeme Exp $
 #
 
 DISTNAME=	giFTui-0.1.1
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/FT/ft/}
 CATEGORIES=	net
 MASTER_SITES=	http://giftui.tuxfamily.org/downloads/sources/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://giftui.tuxfamily.org/
 COMMENT=	Graphical user interface to giFT using GTK+2
 

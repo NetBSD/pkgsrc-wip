@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/16 22:31:33 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/07 01:58:13 xtraeme Exp $
 #
 
 DISTNAME=	tr64_oglv078_src
@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://mupen64.emulation64.com/files/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mupen64.emulation64.com/
 COMMENT=	OpenGL Video plugin for mupen64 emulator
 

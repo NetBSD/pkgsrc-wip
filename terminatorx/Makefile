@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/28 17:46:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/07 01:58:15 xtraeme Exp $
 #
 
 DISTNAME=	terminatorX-3.81
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://terminatorx.cx/dist/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://terminatorx.cx/
 COMMENT=	Realtime audio synthesizer
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2004/04/26 20:35:37 blef Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/07 01:58:17 xtraeme Exp $
 #
 
 DISTNAME=	yafray-0.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.coala.uniovi.es/~jandro/noname/downloads/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.yafray.org/
 COMMENT=	Yet Another Free Raytracer
 

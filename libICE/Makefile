@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/17 02:55:47 blef Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/07 01:58:00 xtraeme Exp $
 #
 
 DISTNAME=		libICE-6.3.1
@@ -7,7 +7,7 @@ CATEGORIES=		x11 devel
 MASTER_SITES=		http://freedesktop.org/~xlibs/dist/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.freedesktop.org/software/xlibs
 COMMENT=		Inter Client Exchange (ICE) library for X
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/12 02:46:38 blef Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/07 01:58:07 xtraeme Exp $
 #
 
 DISTNAME=	links-hacked-${VER}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://xray.sai.msu.ru/~karpov/links-hacked/downloads/
 EXTRACT_SUFX=	.tgz
 DISTFILES+=     ${DISTNAME}${EXTRACT_SUFX} links-fonts-new${EXTRACT_SUFX}
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://xray.sai.msu.ru/~karpov/links-hacked/
 COMMENT=        Enhanced version of Links with tabs and more
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/08/28 09:48:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/07 01:57:54 xtraeme Exp $
 #
 
 DISTNAME=	geeklog-1.3.7sr1
@@ -6,7 +6,7 @@ PKGNAME=	geeklog-1.3.7
 CATEGORIES=	www
 MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.geeklog.net/
 COMMENT=	Web content management
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/31 22:24:09 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/07 01:57:53 xtraeme Exp $
 #
 
 DISTNAME=		fixesext-2.0.1
@@ -6,7 +6,7 @@ CATEGORIES=		x11 devel
 MASTER_SITES=		http://freedesktop.org/~xlibs/release/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.freedesktop.org/Software/FixesExt
 COMMENT=		X Fixes extension headers and specification
 

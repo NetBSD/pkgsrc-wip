@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/08/28 09:48:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/07 01:57:53 xtraeme Exp $
 #
 
 DISTNAME=	fluxconf-0.9.4
 CATEGORIES=	wm
 MASTER_SITES=	http://devaux.fabien.free.fr/flux/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://devaux.fabien.free.fr/flux/
 COMMENT=	GTK based configuration tool for the fluxbox window manager
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2004/04/15 11:03:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2004/05/07 01:58:15 xtraeme Exp $
 #
 
 DISTNAME=	totem-0.99.9
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	http://www.hadess.net/files/software/totem/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.hadess.net/totem.php3
 COMMENT=	Movie player for the GNOME desktop based on xine
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/28 17:43:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/07 01:57:59 xtraeme Exp $
 #
 
 DISTNAME=	ladspa_sdk_1.12
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.ladspa.org/download/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ladspa.org/
 COMMENT=	Linux Audio Developers Simple Plugin API
 

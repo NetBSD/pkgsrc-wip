@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/28 04:41:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/07 01:57:56 xtraeme Exp $
 #
 
 DISTNAME=	howl-0.9.4
 CATEGORIES=	net
 MASTER_SITES=	http://www.porchdogsoft.com/download/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.porchdogsoft.com/download/
 COMMENT=	Cross-platform implementation of the Zeroconf
 

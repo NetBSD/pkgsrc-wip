@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/17 01:28:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/07 01:58:12 xtraeme Exp $
 #
 
 DISTNAME=	mupen64_input
@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://mupen64.emulation64.com/files/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mupen64.emulation64.com/
 COMMENT=	Input plugin for mupen64 emulator
 

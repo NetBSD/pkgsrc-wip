@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/04/12 02:47:02 blef Exp $
+# $NetBSD: Makefile,v 1.12 2004/05/07 01:57:52 xtraeme Exp $
 #
 
 DISTNAME=	DirectFB-0.9.19
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/DFB/dfb/}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.directfb.org/download/DirectFB/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.directfb.org/
 COMMENT=	Thin library that provides hardware graphics acceleration
 

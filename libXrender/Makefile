@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/27 04:52:45 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/07 01:58:06 xtraeme Exp $
 #
 
 DISTNAME=		libXrender-0.8.3
@@ -6,7 +6,7 @@ CATEGORIES=		x11 devel
 MASTER_SITES=		http://freedesktop.org/~xlibs/dist/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://freedesktop.org/
 COMMENT=		Xrender extension (Library)
 

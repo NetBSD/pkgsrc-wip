@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/15 11:03:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/07 01:58:09 xtraeme Exp $
 #
 
 DISTNAME=		matchbox-panel-0.8
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		http://matchbox.handhelds.org/sources/matchbox-panel/0.8/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://matchbox.handhelds.org/sources/matchbox-panel/0.8/
 COMMENT=		Panel for Matchbox
 

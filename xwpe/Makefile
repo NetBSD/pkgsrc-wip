@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2004/04/25 06:46:57 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/07 01:58:16 xtraeme Exp $
 #
 
 DISTNAME=	xwpe-1.5.29a
 CATEGORIES=	editors
 MASTER_SITES=	http://www.identicalsoftware.com/xwpe/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.identicalsoftware.com/xwpe/
 COMMENT=	Programming environment for UNIX systems
 

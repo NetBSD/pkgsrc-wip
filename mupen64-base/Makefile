@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/17 00:50:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/07 01:58:11 xtraeme Exp $
 #
 
 DISTNAME=	mupen64_src-0.3
@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://mupen64.emulation64.com/files/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mupen64.emulation64.com/
 COMMENT=	Free Nintendo 64(TM) emulator for unix-like OS 
 

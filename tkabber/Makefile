@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2003/11/28 20:45:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/07 01:58:15 xtraeme Exp $
 #
 
 DISTNAME=	tkabber-0.9.5beta
 CATEGORIES=	chat
 MASTER_SITES=	http://www.jabberstudio.org/files/tkabber/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tkabber.jabber.ru/en/
 COMMENT=	Free and Open Source TCL/TK jabber client
 
