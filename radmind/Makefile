@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/17 11:00:00 hfath Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/17 12:56:05 hfath Exp $
 #
 
 DISTNAME=	radmind-1.3.2
@@ -15,11 +15,10 @@ CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-radminddir=${VARBASE}/radmind
 PLIST_SUBST+=		VARBASE=${VARBASE}
 
+BUILD_TARGET=	all man rash
+
 USE_PKGINSTALL=	YES
 RCD_SCRIPTS=	radmind
-
-post-build:
-	(cd ${WRKSRC} && ${MAKE} man rash)
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
