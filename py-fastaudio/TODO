@@ -1,0 +1,8 @@
+$Id: TODO,v 1.3 2003/11/26 01:33:01 mpasternak Exp $
+
+Wed Nov 26 02:30:47 CET 2003
+
+This works properly on -stable only if you update devel/pth as I have wrote
+about in PR/23571
+
+      -- dotz@irc.pl
