@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/22 10:40:02 cjep Exp $
+# $NetBSD: Makefile,v 1.8 2003/11/05 12:49:31 airhead Exp $
 #
 
 DISTNAME=	elvis-2.1_4
@@ -6,7 +6,7 @@ PKGNAME=        elvis-2.1.4
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cs.pdx.edu/pub/elvis/
 
-MAINTAINER=	airhead@sourceforge.net
+MAINTAINER=	airhead@users.sourceforge.net
 HOMEPAGE=	http://elvis.the-little-red-haired-girl.org
 COMMENT=	vi with regex search, hex editing, HTML and TeX previewing
 

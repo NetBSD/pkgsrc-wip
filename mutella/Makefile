@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2003/06/05 13:56:23 airhead Exp $
+# $NetBSD: Makefile,v 1.7 2003/11/05 12:50:18 airhead Exp $
 #
 
 DISTNAME=	mutella-0.4.3
 CATEGORIES=	net www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mutella/}
 
-MAINTAINER=	airhead@sourceforge.net
+MAINTAINER=	airhead@users.sourceforge.net
 HOMEPAGE=	http://mutella.sourceforge.net
 COMMENT=	Console mode Gnutella client with optional HTTP interface
 

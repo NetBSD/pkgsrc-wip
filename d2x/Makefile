@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2003/11/05 12:16:55 airhead Exp $
+# $NetBSD: Makefile,v 1.4 2003/11/05 12:51:41 airhead Exp $
 #
 
 DISTNAME=	d2x-0.2.5
 CATEGORIES=	games x11
 MASTER_SITES=	http://icculus.org/d2x/src/
 
-MAINTAINER=	airhead@sourceforge.net
+MAINTAINER=	airhead@users.sourceforge.net
 HOMEPAGE=	http://icculus.org/d2x/
 COMMENT=	Descent II port
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/10 13:43:56 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/05 12:51:15 airhead Exp $
 #
 
 DISTNAME=	elvis-2.1_4
@@ -6,7 +6,7 @@ PKGNAME=        elvis-x11-2.1.4
 CATEGORIES=	editors x11
 MASTER_SITES=	ftp://ftp.cs.pdx.edu/pub/elvis/
 
-MAINTAINER=	airhead@sourceforge.net
+MAINTAINER=	airhead@users.sourceforge.net
 HOMEPAGE=	http://elvis.the-little-red-haired-girl.org
 COMMENT=	GUI for elvis, includes console elvis
 
