@@ -1,6 +1,6 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.6 2003/11/29 03:20:56 mpasternak Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.7 2003/12/30 19:48:19 cjep Exp $
 # 
-# $Id: linuxbin.pkg.mk,v 1.6 2003/11/29 03:20:56 mpasternak Exp $
+# $Id: linuxbin.pkg.mk,v 1.7 2003/12/30 19:48:19 cjep Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 # Currently supports only RPMs, but should be good enough to make
@@ -33,12 +33,10 @@ ONLY_FOR_PLATFORM=	Linux-*-${MACHINE_ARCH}
 # ... but, in case we're running on i386:
 
 .if ${LINUX_ARCH_REQD}=="i386"
-# on i386, NetBSD, FreeBSD and propably DragonFlyBSD
+# on i386, {Free,Net,Open}BSD and probably DragonFlyBSD
 # please add other OS, that have Linux emul and work on i386
 #
-# I dont have no idea if OpenBSD has linux emul
-
-ONLY_FOR_PLATFORM+=	[NFD]*BSD-*-${LINUX_ARCH_REQD}
+ONLY_FOR_PLATFORM+=	[DFNO]*BSD-*-${LINUX_ARCH_REQD}
 .endif
 
 # PLEASE ADD MORE .if ${LINUX_ARCH_REQD} ifdefs !
