@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1644 2005/02/05 21:52:34 riz Exp $
-# $NetBSD: Makefile,v 1.1644 2005/02/05 21:52:34 riz Exp $
+# $Id: Makefile,v 1.1645 2005/02/06 00:34:42 mreriksson Exp $
+# $NetBSD: Makefile,v 1.1645 2005/02/06 00:34:42 mreriksson Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -407,6 +407,7 @@ SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libgeotiff
 SUBDIR+=	libgrass5
+SUBDIR+=	libhttpd
 SUBDIR+=	liblingoteach
 SUBDIR+=	libmatchbox
 SUBDIR+=	libneural
