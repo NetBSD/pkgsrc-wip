@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2003/06/27 11:26:21 drue Exp $
+$NetBSD: distinfo,v 1.3 2003/06/27 14:16:26 drue Exp $
 
 SHA1 (lbdb_0.27.tar.gz) = 849bf6a9d8e25ea3fc1315b3990c7cdd535c487a
 Size (lbdb_0.27.tar.gz) = 82568 bytes
-SHA1 (patch-aa) = 5232658f2ad4592608aee22ec563397791426a61
+SHA1 (patch-aa) = 3c81eff2ca2217c11aa0c5a038ba10089ef2d443
 SHA1 (patch-ab) = fffccdbd02796659e698225ceb1177cf82b5058a
