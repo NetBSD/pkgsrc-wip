@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/27 23:02:03 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/05/19 11:16:36 peterih Exp $
 
-SHA1 (moregroupware-core-0.7.1.tar.gz) = c05c7a4fbdfa285334cbf638dfee99caf7edc074
-Size (moregroupware-core-0.7.1.tar.gz) = 2277444 bytes
-SHA1 (moregroupware-docs-0.7.1.tar.gz) = 268e8bd2b5488c5a00ae2385c98e0c3bf35bfa7a
-Size (moregroupware-docs-0.7.1.tar.gz) = 2113887 bytes
+SHA1 (moregroupware-core-0.7.2.tar.gz) = 52299dc9dcdba2b241a2e98e8c23f49ba3cad2de
+Size (moregroupware-core-0.7.2.tar.gz) = 1917546 bytes
+SHA1 (moregroupware-docs-0.7.2.tar.gz) = dea829b33f8991f480c6faaa36c5948801d62c7b
+Size (moregroupware-docs-0.7.2.tar.gz) = 2113475 bytes
+SHA1 (moregroupware-addons-0.7.2.tar.gz) = b269208b0f47ac2e9098e7dad3cc5cf656fc59a0
+Size (moregroupware-addons-0.7.2.tar.gz) = 1467351 bytes
+SHA1 (moregroupware-scripts-0.7.2.tar.gz) = 46c0d6e4bf27618a3df52acb82c2aaf78053bc0a
+Size (moregroupware-scripts-0.7.2.tar.gz) = 14710 bytes
