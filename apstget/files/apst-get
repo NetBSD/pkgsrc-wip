@@ -25,13 +25,10 @@ fi
 
 #----->8--------------#
 PREFIX=_pfx_
-PREFIX=/usr/pkg
 MAKE=${PREFIX}/bin/bmake
 PKGFIND=${PREFIX}/bin/pkgfind
 PKGCHK=${PREFIX}/sbin/pkg_chk
 PKGSRC_DIR=_psd_
-PKGSRC_DIR=/usr/pkgsrc/
-DBDIR=/var/db/pkg/
 DEFAULT_TARGETS="${DEFAULT_TARGETS}"
 if [ "${MAKE_TARGET}" = "" ]; then
 	MAKE_TARGET="clean"
