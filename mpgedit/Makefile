@@ -1,0 +1,39 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/12/27 02:01:02 thomasklausner Exp $
+#
+
+DISTNAME=		mpgedit_0-7p2beta_src
+PKGNAME=		mpgedit-0.7.1.99
+WRKSRC=			${WRKDIR}/${DISTNAME}/mpgedit
+CATEGORIES=		audio
+MASTER_SITES=		http://www.mpgedit.org/mpgedit/download/mirror1/ \
+			http://www.mpgedit.org/mpgedit/download/
+
+MAINTAINER=		wiz@NetBSD.org
+HOMEPAGE=		http://www.mpgedit.org/mpgedit/
+COMMENT=		MPEG audio file editor
+
+USE_BUILDLINK2=		yes
+MAKEFILE=		makefile.linux
+
+do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xmpgedit
+	cd ${WRKSRC} && for f in mpgedit.1 xmpgedit.1 decoder.so.1 mp3decoder.sh.1 \
+		scramble_times.pl.1 scramble.pl.1 unscramble.pl.1; do \
+		${INSTALL_MAN} $$f ${PREFIX}/man/man1; \
+	done; \
+	for f in libdecoder_mpg123.so libdecoder_popen.so libmpglib_mpgedit.so; do \
+		${INSTALL_DATA} $$f ${PREFIX}/lib; \
+	done; \
+	for f in mpgedit mpgedit_nocurses gui/xmpgedit; do \
+		${INSTALL_PROGRAM} $$f ${PREFIX}/bin; \
+	done; \
+	${INSTALL_SCRIPT} mp3decoder.sh ${PREFIX}/bin; \
+	for f in eject.xpm pause.xpm record.xpm next_t.xpm play.xpm stop.xpm; do \
+		${INSTALL_DATA} gui/$$f ${PREFIX}/share/xmpgedit; \
+	done
+	${RM} -f ${PREFIX}/lib/libmpgedit_decoder.so
+	${LN} -s libdecoder_mpg123.so ${PREFIX}/lib/libmpgedit_decoder.so
+
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/27 02:01:02 thomasklausner Exp $
+
+--- audio.c.orig	Thu Sep 11 08:14:10 2003
++++ audio.c
+@@ -71,6 +71,10 @@ struct parameter param;
+ #elif defined(WIN32)
+ #include "audio_win32.c"
+ 
++#elif defined(__NetBSD__)
++#include "audio_sun.c"
++struct parameter param;
++
+ #else
+ %%% Not ported to your operating system %%%
+ #endif

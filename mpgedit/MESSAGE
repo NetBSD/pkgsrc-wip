@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/12/27 02:01:02 thomasklausner Exp $
+
+	To get icons in xmpgedit, please create
+		$HOME/.xmpgedit-gtkrc
+	and write the following line in it:
+		pixmap_path "${PREFIX}/share/xmpgedit"
+
+===========================================================================
