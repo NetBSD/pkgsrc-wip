@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/15 20:22:11 cubidou Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/15 21:16:41 cubidou Exp $
 bin/dosbox
 man/man1/dosbox.1
+share/doc/dosbox/README
+@dirrm share/doc/dosbox
