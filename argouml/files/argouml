@@ -1,13 +1,20 @@
 #!/bin/sh
-# $NetBSD: argouml,v 1.1.1.1 2003/06/30 14:45:34 drue Exp $
+# $NetBSD: argouml,v 1.2 2003/07/09 07:27:35 drue Exp $
 #
 # start script for argouml
 
-CLASSPATH=$CLASSPATH:@PREFIX@/lib/java/log4j-1.2.8.jar:@PREFIX@/lib/java/xerces.jar
+if [ "x$CLASSPATH" = "x" ]
+then
+    CLASSPATH=@PREFIX@/lib/java/log4j.jar:@PREFIX@/lib/java/xerces.jar
+else
+    CLASSPATH=$CLASSPATH:@PREFIX@/lib/java/log4j.jar:@PREFIX@/lib/java/xerces.jar
+fi
+
 for f in antlrall argouml gef i18n nsuml ocl-argo
 do
-    CLASSPATH=$CLASSPATH:@PREFIX@/lib/java/${f}.jar
+    CLASSPATH=$CLASSPATH:@PREFIX@/lib/java/argouml/${f}.jar
 done
 export CLASSPATH
 
-java -jar @PREFIX@/lib/java/argouml.jar
+#java -jar @PREFIX@/lib/java/argouml/argouml.jar
+java org.argouml.application.Main
