@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/16 22:31:02 xtraeme Exp $
+
+--- Makefile.orig	2004-04-17 00:17:06.000000000 +0200
++++ Makefile	2004-04-17 00:18:06.000000000 +0200
+@@ -1,15 +1,15 @@
+-CC = gcc
+-CFLAGS = -DUSE_GTK `gtk-config --cflags` -O3 -mcpu=athlon -ffast-math -funroll-loops -fomit-frame-pointer
++#CC = gcc
++CFLAGS += -DUSE_GTK `gtk-config --cflags`
+ #CFLAGS = -DUSE_GTK `gtk-config --cflags` -g -fPIC
+-LD = gcc
+-LDFLAGS =
++#LD = gcc
++#LDFLAGS =
+ 
+ OBJECTS = main.o disasm.o jpeg.o ucode1.o ucode3.o ucode2.o
+ 
+ all:	mupen64_hle_rsp.so instruction
+ 
+ mupen64_hle_rsp.so: $(OBJECTS)
+-	$(LD) -shared -fPIC -Wl,-Bsymbolic `gtk-config --libs` $(LDFLAGS) -o $@ $(OBJECTS)
++	$(CC) -shared -fPIC -Wl,-Bsymbolic `gtk-config --libs` $(LDFLAGS) -o $@ $(OBJECTS)
+ 	strip --strip-all $@
+ 
+ instruction:
+@@ -18,6 +18,9 @@
+ .o: .c
+ 	$(CC) $(CFLAGS) -o $@ $<
+ 
++install:
++	$(BSD_INSTALL_DATA) mupen64_hle_rsp.so $(PREFIX)/share/mupen64/plugins
++
+ clean:
+ 	rm -rf $(OBJECTS) $(ALL)
+ 
