@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1652 2005/02/14 11:46:35 socrtp Exp $
-# $NetBSD: Makefile,v 1.1652 2005/02/14 11:46:35 socrtp Exp $
+# $Id: Makefile,v 1.1653 2005/02/14 18:35:42 dillo Exp $
+# $NetBSD: Makefile,v 1.1653 2005/02/14 18:35:42 dillo Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -762,6 +762,7 @@ SUBDIR+=	ruby-syck
 SUBDIR+=	sara
 SUBDIR+=	sarg
 SUBDIR+=	sawfish-gtk2
+SUBDIR+=	scare
 SUBDIR+=	scite
 SUBDIR+=	scm
 SUBDIR+=	scourge
