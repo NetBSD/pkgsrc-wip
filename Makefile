@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.208 2003/06/03 03:16:47 xtraeme Exp $
-# $NetBSD: Makefile,v 1.208 2003/06/03 03:16:47 xtraeme Exp $
+# $Id: Makefile,v 1.209 2003/06/03 04:44:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.209 2003/06/03 04:44:46 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -13,7 +13,6 @@ SUBDIR+=	amsn
 SUBDIR+=	aolserver
 SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-ometer
-SUBDIR+=	aputils
 SUBDIR+=	autoproject
 SUBDIR+=	bc
 SUBDIR+=	billardgl
