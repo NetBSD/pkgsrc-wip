@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/11/26 23:33:37 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.17 2003/11/26 23:35:05 jeremy-c-reed Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-libs-${XF_VER}
@@ -10,6 +10,10 @@ DISTFILES=		X430src-1.tgz X430src-2.tgz \
 MAINTAINER=		xfree86@blef.org
 HOMEPAGE=		http://www.xfree86.org/
 COMMENT=		XFree86 Libraries
+
+CONFLICTS+=		xextensions-[0-9]*
+CONFLICTS+=		libX11-[0-9]*
+CONFLICTS+=		libXau-[0-9]*
 
 DEPENDS=		imake>=4.3.0:../../wip/imake
 
