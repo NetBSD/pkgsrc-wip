@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/26 21:03:03 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/26 21:35:24 mpasternak Exp $
 #
 
 DISTNAME=		PEAK-0.5a3
@@ -9,6 +9,8 @@ MASTER_SITES=		http://peak.telecommunity.com/dist/
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://peak.telecommunity.com/
 COMMENT=		Python Enterprise Application Kit
+
+CONFLICTS+=		${PYPKGPREFIX}-ZODB-*
 
 USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
