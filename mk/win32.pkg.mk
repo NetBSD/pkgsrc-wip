@@ -1,10 +1,17 @@
-# $Id: win32.pkg.mk,v 1.1 2003/12/01 01:43:29 mpasternak Exp $
+# $Id: win32.pkg.mk,v 1.2 2003/12/01 02:19:00 mpasternak Exp $
 # (C) 2003 Michal Pasternak <dotz@irc.pl>
+#
+#
+#	Naming convention for mingw packages:
+# 
+# mingw- 	means a native cross-build tool
+# mingw32- 	means a tool compiled by mingw, which will work on win32
+#
 
 .include "../../mk/bsd.prefs.mk"
 
 MINGWTARGET=		i586-pc-mingw32
-WINSRC_PKG_PREFIX=	mingw32-
+MINGW_PKG_PREFIX=	mingw32-
 GNU_CONFIGURE_PREFIX=	${CROSSBASE}/i586-pc-mingw32
 CONFIGURE_ARGS+=	--build=i586-pc-mingw32
 
