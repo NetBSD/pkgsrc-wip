@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/06 21:40:33 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/10 13:59:44 marc Exp $
 #
 
 DISTNAME=	PyOpenGL-2.0.0.44
@@ -13,7 +13,7 @@ COMMENT=	Pyhton bindings for OpenGL
 USE_X11=	YES
 USE_BUILDLINK2=	YES
 PYDISTUTILSPKG=	YES
-PY_PATCH_PLIST=	YES
+PY_PATCHPLIST=	YES
 
 post-extract:
 	${CP} ${WRKSRC}/config/freebsd.cfg ${WRKSRC}/config/netbsd1.cfg.tmp

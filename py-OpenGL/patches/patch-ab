@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1 2003/04/10 13:59:46 marc Exp $
+
+--- setup/togl_setup.py.orig	2003-04-07 09:00:28.000000000 +0200
++++ setup/togl_setup.py	2003-04-07 09:01:25.000000000 +0200
+@@ -50,16 +50,14 @@
+         # VC++ 6.0 needs this, why togl doesn't use _WIN32?
+         extra_compile_args.append('-DWIN32=1')
+ 
+-        libs.append('tcl' + string.replace(tk.getvar('tcl_version'), '.', ''))
+-        libs.append('tk' + string.replace(tk.getvar('tk_version'), '.', ''))
+     else:
+         include_dirs.append(os.path.normpath(os.path.join(tk.getvar('tcl_library'), '..', '..', 'include')))
+ 
+         lib_dirs.append(os.path.normpath(os.path.join(tk.getvar('tcl_library'), '..')))
+ 
+-        libs.append('tcl' + tk.getvar('tcl_version'))
+-        libs.append('tk' + tk.getvar('tk_version'))
+-
++    libs.append('tcl' + string.replace(tk.getvar('tcl_version'), '.', ''))
++    libs.append('tk' + string.replace(tk.getvar('tk_version'), '.', ''))
++    
+     # rest of this function was inspired by build_ext.py , build_extensions() 
+     
+     if build_ext.inplace:
