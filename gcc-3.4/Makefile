@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2004/04/18 12:59:10 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/20 23:24:00 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
-PKGNAME=	gcc-${GCC_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://gcc.gnu.org/pub/gcc/prerelease-${GCC_VERSION}-${SNAPDATE}/ \
 		ftp://mirrors.rcn.net/pub/sourceware/gcc/prerelease-${GCC_VERSION}-${SNAPDATE}/
@@ -15,6 +14,15 @@ COMMENT=	This is the gcc 3.4 RC2 compiler
 GCC_VERSION=	3.4.0
 SNAPDATE=	20040416
 
+INSTLIBS=	libsupc++.la
+INSTLIBS=	libstdc++.la
+INSTLIBS=	libg2c.la
+INSTLIBS=	libobjc.la
+INSTLIBS=	libffi.la
+INSTLIBS=	libgcj.la
+INSTLIBS=	lib-org-xml-sax.la
+INSTLIBS=	lib-org-w3c-dom.la
+
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
@@ -25,20 +33,11 @@ WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}-${SNAPDATE}
 
 # An Ada compiler is required to build this pkg. Two
 may be used:
-USE_GCC3	=# Define to use lang/gcc3-ada
-#USE_GCC34	=# Define to use gcc-3.4-ada
+#USE_GCC3	=# Define to use lang/gcc3-ada
+USE_GCC34ADA	=# Define to use gcc-3.4-ada
 
-# Make location overridable, to allow ping-pong bootstraps.
-GCC34_DEFAULT_SUBPREFIX=	${PKGNAME_NOREV}
-GCC34_INSTALLTO_SUBPREFIX?=	${GCC34_DEFAULT_SUBPREFIX}
-.if ${GCC34_INSTALLTO_SUBPREFIX} != ${GCC34_DEFAULT_SUBPREFIX}
-GCC34_PKGMODIF=		_${GCC34_INSTALLTO_SUBPREFIX}
-.endif
-
-GCC_SUBPREFIX=		${GCC34_INSTALLTO_SUBPREFIX}
+GCC_SUBPREFIX=		${PKGNAME_NOREV}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
-PLIST_SUBST+=		GCC_SUBPREFIX=${GCC_SUBPREFIX}
-FILES_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
@@ -59,6 +58,20 @@ post-patch:
 		${CP} $$i ${WRKSRC}/gcc/ada; \
 	done )
 
+.if defined(USE_GCC34ADA)
+# Overide compiler.mk setup to use gccAda-3.4.0
+GCC_DIR=	${WRKDIR}/.gcc
+pre-configure:
+	(cd ${BUILDLINK_PREFIX.gccAda-3.4.0}/bin && files=`ls gnat*` && \
+	cd ${GCC_DIR}/bin/ && \
+	for file in gcc cc cpp $${files} ; do \
+	  $(ECHO) '#!/bin/sh' > $${file}; \
+	  $(ECHO) -n "exec ${BUILDLINK_PREFIX.gccAda-3.4.0}/bin/$${file} " >>$${file}; \
+	  $(ECHO) '"$$@"' >>$${file}; \
+	  $(CHMOD) +x $${file}; \
+	done )
+.endif
+
 do-configure:
 	((${TEST} -d  ${WRKDIR}/obj || ${MKDIR} ${WRKDIR}/obj) && \
 	 (cd ${WRKDIR}/obj && ${SETENV} ${CONFIGURE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS}))
@@ -76,8 +89,9 @@ do-install:
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_GCC3)
 .include "../../lang/gcc3-ada/buildlink3.mk"
-.elif  defined(USE_GCC34)
+.elif  defined(USE_GCC34ADA)
 .include "../../wip/gcc-3.4-ada/buildlink3.mk"
 .endif
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
