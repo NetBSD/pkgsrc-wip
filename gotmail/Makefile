@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/04 19:44:12 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 18:32:17 blef Exp $
 #
 
 DISTNAME=		gotmail-0.8.1
@@ -14,7 +14,7 @@ DEPENDS+=		curl>=7.10.4:../../www/curl
 DEPENDS+=		p5-Net-[0-9]*:../../net/p5-Net
 
 NO_BUILD=		YES
-USE_BUILDLINK2=		YES
+NO_BUILDLINK=		YES
 USE_PERL5=		YES
 REPLACE_PERL=		${WRKSRC}/gotmail
 
