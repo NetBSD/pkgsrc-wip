@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2003/11/29 21:40:49 mpasternak Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/13 12:21:40 moubctez Exp $
 
---- lib/Makefile.in~	Tue Jun 10 00:04:24 2003
-+++ lib/Makefile.in	Sat Nov 29 22:34:05 2003
-@@ -244,7 +244,8 @@
+--- lib/Makefile.in.orig	2004-01-11 15:39:58.000000000 +0000
++++ lib/Makefile.in
+@@ -254,7 +254,8 @@ libgg2_core_la_SOURCES = unified-types.c
  
  libgg2_core_la_HEADERS = gg2_core.h
  
