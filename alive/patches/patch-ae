@@ -1,0 +1,55 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/03/04 19:04:21 oht Exp $
+--- include/http.h.orig	2004-06-27 00:24:55.000000000 +0200
++++ include/http.h	2005-03-03 23:26:22.000000000 +0100
+@@ -4,15 +4,33 @@
+ #include "config.h"
+ #include "log.h"
+ 
++#define HTTP_REV "HTTP/1.1"
++
++#define PRX_PRLGN_MSG      					\
++  "GET http://%s:%d%s "HTTP_REV"\n" 					\
++  "Referer: http://%s\n"                                    \
++  "Host: %s\n"                                              \
++  "Accept: */*\n\n"                                       
++
+ #define PRELOGIN_MSG                                        \
+-  "GET %s HTTP/0.9\n"                                       \
++  "GET %s "HTTP_REV"\n"                                       \
+   "Referer: http://%s\n"                                    \
+   "Host: %s\n"                                              \
+   "Accept: */*\n\n"
+ 
++#define PRX_LGN_MSG                                          \
++  "POST http://%s:%d%s  "HTTP_REV"\n"                                     \
++  "Host: %s\n"                                              \
++  "User-Agent:" PACKAGE_NAME " v" PACKAGE_VERSION" %s patch  \n"     \
++  "Accept: */*\n"                                           \
++  "Referer: http://%s:%d%s\n"                                  \
++  "Content-type: application/x-www-form-urlencoded\n"       \
++  "Content-length: %d\n\n"                                  \
++   "%s\n\n"
++ 
+ 
+ #define LOGIN_MSG                                           \
+-  "POST %s HTTP/0.9\n"                                      \
++  "POST %s "HTTP_REV"\n"                                      \
+   "Host: %s\n"                                              \
+   "User-Agent: " PACKAGE_NAME " v" PACKAGE_VERSION "\n"     \
+   "Accept: */*\n"                                           \
+@@ -21,8 +39,14 @@
+   "Content-length: %d\n\n"                                  \
+   "%s\n\n"
+ 
++#define PRX_LGT_MSG                                          \
++  "GET http://%s:%d%s "HTTP_REV"\n"                                       \
++  "Referer: http://%s:%d%s\n"                                  \
++  "Host: %s\n"                                              \
++  "Accept: */*\n\n"                                         \
++
+ #define LOGOUT_MSG                                          \
+-  "GET %s HTTP/0.9\n"                                       \
++  "GET %s "HTTP_REV"\n"                                       \
+   "Referer: http://%s%s\n"                                  \
+   "Host: %s\n"                                              \
+   "Accept: */*\n\n"                                         \

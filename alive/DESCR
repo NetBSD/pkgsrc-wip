@@ -1,0 +1,6 @@
+Alive is an auto-login client and connection keeper for Telia AB ADSL
+and Comhem broadband. It automatically logs in at system startup and
+then "forks" a daemon that pings and logs into the login host after a
+chosen delay. Alive is a continuation of the qadsl project.  
+The pkgsrc patch enables the use of environment settings "http_proxy"
+and "no_proxy".
