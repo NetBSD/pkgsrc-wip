@@ -1,0 +1,3 @@
+Gnu Midi Compiler is a tool which enables you to produce midi files from 
+text files.  You can type the names of the tones in the text files and 
+they will be audible in the midi file. 

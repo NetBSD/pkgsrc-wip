@@ -1,0 +1,51 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/07 16:06:33 bencollver Exp $
+bin/gmc2mid
+share/doc/gmc2mid/README
+share/examples/gmc2mid/lections/lection1.gmc
+share/examples/gmc2mid/lections/lection10.gmc
+share/examples/gmc2mid/lections/lection11.gmc
+share/examples/gmc2mid/lections/lection12.gmc
+share/examples/gmc2mid/lections/lection13a.gmc
+share/examples/gmc2mid/lections/lection13b.gmc
+share/examples/gmc2mid/lections/lection14.gmc
+share/examples/gmc2mid/lections/lection2.gmc
+share/examples/gmc2mid/lections/lection3.gmc
+share/examples/gmc2mid/lections/lection4.gmc
+share/examples/gmc2mid/lections/lection5.gmc
+share/examples/gmc2mid/lections/lection6.gmc
+share/examples/gmc2mid/lections/lection7.gmc
+share/examples/gmc2mid/lections/lection8.gmc
+share/examples/gmc2mid/lections/lection9.gmc
+share/examples/gmc2mid/samples/complete/dorime.gmc
+share/examples/gmc2mid/samples/complete/fata.gmc
+share/examples/gmc2mid/samples/complete/felicidad.gmc
+share/examples/gmc2mid/samples/complete/felicita.gmc
+share/examples/gmc2mid/samples/complete/geheimnis.gmc
+share/examples/gmc2mid/samples/complete/ibiza.gmc
+share/examples/gmc2mid/samples/complete/mango.gmc
+share/examples/gmc2mid/samples/complete/pueppchen.gmc
+share/examples/gmc2mid/samples/complete/schmutzig.gmc
+share/examples/gmc2mid/samples/complete/sobistdu.gmc
+share/examples/gmc2mid/samples/complete/tanze.gmc
+share/examples/gmc2mid/samples/complete/weisse.gmc
+share/examples/gmc2mid/samples/from_mid2gmc/mb.gmc
+share/examples/gmc2mid/samples/incomplete/alex.gmc
+share/examples/gmc2mid/samples/incomplete/ballade.gmc
+share/examples/gmc2mid/samples/incomplete/fliegen.gmc
+share/examples/gmc2mid/samples/incomplete/lonley.gmc
+share/examples/gmc2mid/samples/incomplete/magic_carpet_ride.gmc
+share/examples/gmc2mid/samples/incomplete/mambo.gmc
+share/examples/gmc2mid/samples/incomplete/narcotic.gmc
+share/examples/gmc2mid/samples/incomplete/por_que_te_vas.gmc
+share/examples/gmc2mid/samples/incomplete/rosen.gmc
+share/examples/gmc2mid/samples/incomplete/saveworld.gmc
+share/examples/gmc2mid/samples/incomplete/silberfaeden.gmc
+share/examples/gmc2mid/samples/others_songs/uptempo.gmc
+@dirrm share/doc/gmc2mid
+@dirrm share/examples/gmc2mid/lections
+@dirrm share/examples/gmc2mid/samples/complete
+@dirrm share/examples/gmc2mid/samples/from_mid2gmc
+@dirrm share/examples/gmc2mid/samples/incomplete
+@dirrm share/examples/gmc2mid/samples/others_songs
+@dirrm share/examples/gmc2mid/samples
+@dirrm share/examples/gmc2mid
