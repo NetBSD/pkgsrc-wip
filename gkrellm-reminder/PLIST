@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/16 14:55:41 cubidou Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/25 23:33:42 thomasklausner Exp $
 lib/gkrellm/plugins/reminder.so
-@dirrm lib/gkrellm/plugins

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/16 14:55:41 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/25 23:33:42 thomasklausner Exp $
 
 DISTNAME=	reminder-0.3.5
 PKGNAME=	gkrellm-reminder-0.3.5
@@ -9,7 +9,7 @@ MAINTAINER=	david@netbsd-fr.org
 HOMEPAGE=	http://www.engr.orst.edu/~simonsen/reminder
 COMMENT=	GKrellM plugin that reminds you of important events
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
-.include "../../sysutils/gkrellm/buildlink2.mk"
+.include "../../sysutils/gkrellm1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
