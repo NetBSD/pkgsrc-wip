@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/27 02:01:02 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2004/04/26 00:47:10 rockpiper Exp $
 
-SHA1 (mpgedit_0-7p2beta_src.tar.gz) = 516cf6637435db7848a53ba6daaae42d3212bc86
-Size (mpgedit_0-7p2beta_src.tar.gz) = 1339563 bytes
+SHA1 (mpgedit_0-7p2beta_src.tgz) = 516cf6637435db7848a53ba6daaae42d3212bc86
+Size (mpgedit_0-7p2beta_src.tgz) = 1339563 bytes
 SHA1 (patch-aa) = e2bcef7e41ca5eb5fe0bab6661f1b18533e2d673
 SHA1 (patch-ab) = c8f9bf2f0416d683402c12f13b061a80de223556
 SHA1 (patch-ac) = 5ca1b853a4575a6ada207d50d0cb793e8325fb9c

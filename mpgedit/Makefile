@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/27 02:01:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/26 00:47:09 rockpiper Exp $
 #
 
 DISTNAME=		mpgedit_0-7p2beta_src
 PKGNAME=		mpgedit-0.7.1.99
+EXTRACT_SUFX=		.tgz
 WRKSRC=			${WRKDIR}/${DISTNAME}/mpgedit
 CATEGORIES=		audio
-MASTER_SITES=		http://www.mpgedit.org/mpgedit/download/mirror1/ \
-			http://www.mpgedit.org/mpgedit/download/
+MASTER_SITES=		http://www.mpgedit.org/mpgedit/download/
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.mpgedit.org/mpgedit/
 COMMENT=		MPEG audio file editor
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 MAKEFILE=		makefile.linux
 
 do-install:
@@ -34,6 +34,6 @@ do-install:
 	${RM} -f ${PREFIX}/lib/libmpgedit_decoder.so
 	${LN} -s libdecoder_mpg123.so ${PREFIX}/lib/libmpgedit_decoder.so
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
