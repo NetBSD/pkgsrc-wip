@@ -1,4 +1,4 @@
-# $Id: win32.pkg.mk,v 1.4 2003/12/01 03:33:20 mpasternak Exp $
+# $Id: win32.pkg.mk,v 1.5 2003/12/01 03:43:45 mpasternak Exp $
 # (C) 2003 Michal Pasternak <dotz@irc.pl>
 #
 #
@@ -33,7 +33,7 @@ LD=		${CROSSBASE}/i586-pc-mingw32/bin/ld
 AR=		${CROSSBASE}/i586-pc-mingw32/bin/ar
 AS=		${CROSSBASE}/i586-pc-mingw32/bin/as
 NM=		${CROSSBASE}/i586-pc-mingw32/bin/nm
-
+LDFLAGS=	-L${CROSSBASE}/i586-pc-mingw32/lib
 .ifdef MINGW_STATIC
 LIBTOOL=	${CROSSBASE}/i586-pc-mingw32/bin/libtool-static
 .else
