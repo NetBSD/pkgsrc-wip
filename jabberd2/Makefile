@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/06/12 11:27:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/12 12:10:12 xtraeme Exp $
 #
 
 DISTNAME=	jabberd-2.0.0-a4
-PKGNAME=	${DISTNAME:C/d-2.0.0-a/d2-2.0.0rc/}
+PKGNAME=	${DISTNAME:S/d-2.0.0-a/d2-2.0.0-alpha/}
 CATEGORIES=	chat
 MASTER_SITES=	http://www.jabberstudio.org/files/jabberd2/
 
@@ -21,12 +21,12 @@ RCD_SCRIPTS=		jabberd
 PKG_SYSCONFSUBDIR=	jabberd
 
 EGDIR=			${PREFIX}/share/examples/jabberd
-SUPPORT_FILES+=         ${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
+SUPPORT_FILES=          ${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
 
-FILES=			c2s resolver router s2s sm
+FILES=			c2s.xml resolver.xml router.xml s2s.xml sm.xml
 
 .for f in ${FILES}
-CONF_FILES+=		${EGDIR}/${f}.xml ${PKG_SYSCONFDIR}/${f}.xml
+CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 OWN_DIRS=		/var/log/jabberd
@@ -35,9 +35,10 @@ OWN_DIRS+=		/var/db/jabberd
 post-extract:
 
 .for f in ${FILES}
-	${MV} ${WRKSRC}/etc/${f}.xml.dist.in ${WRKSRC}/etc/${f}.xml.in
+	${MV} ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
 .endfor
 	${MV} ${WRKSRC}/etc/jabberd.cfg.dist.in ${WRKSRC}/etc/jabberd.cfg.in
+.undef f
 
 pre-configure:
 
@@ -47,21 +48,24 @@ pre-configure:
 		-e "s|@@LOGDIR@@|/var/log/jabberd|g " \
 		-e "s|@@BINDIR@@|${PREFIX}/bin|g " \
 		-e "s|@@DBDIR@@|/var/db/jabberd|g " \
-                < ${WRKSRC}/etc/${f}.xml.in > ${WRKSRC}/etc/${f}.xml
+                < ${WRKSRC}/etc/${f}.in > ${WRKSRC}/etc/${f}
 .endfor	
+.undef f
 
 .for f in ${WRKSRC}/etc/jabberd.cfg.in 
 	${SED}  \
 		-e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
 		< ${WRKSRC}/etc/jabberd.cfg.in > ${WRKSRC}/etc/jabberd.cfg
 .endfor
+.undef f
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/etc/*.cfg ${EGDIR}
-	for f in ${WRKSRC}/etc/*.xml; do \
-		${INSTALL_DATA} $$f ${EGDIR}; \
-	done
+	${INSTALL_DATA} ${WRKSRC}/etc/jabberd.cfg ${EGDIR}
+
+.for f in ${FILES}
+	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
+.endfor
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../databases/db4/buildlink2.mk"
