@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/10/21 12:56:28 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.15 2004/10/22 10:21:36 johnrshannon Exp $
 #
 
 DISTNAME=		gnupg-1.9.11
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=        --without-included-gettext
 TEST_TARGET=            check
 
 # We need gettext-lib >= 0.14.1 for NLS support
-.include "../../wip/gettext-lib/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 GETTEXT_IS_TOO_OLD!=if ${PKG_ADMIN} pmatch 'gettext-lib < 0.14.1' gettext-lib ; then \
 		${ECHO} "yes";	\
 	else 	\
