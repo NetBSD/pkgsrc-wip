@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/11/29 18:20:43 mpasternak Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/15 14:30:58 mpasternak Exp $
 #
 # This Makefile fragment is included by packages that use mingw-runtime-bin.
 #
@@ -13,7 +13,7 @@ BUILDLINK_DEPENDS.mingw-runtime-bin?=		mingw-runtime-bin>=3.2
 BUILDLINK_PKGSRCDIR.mingw-runtime-bin?=		../../wip/mingw-runtime-bin
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.mingw-runtime-bin=mingw-runtime-bin
-BUILDLINK_PREFIX.mingw-runtime-bin_DEFAULT=	${CROSSBASE}/i586-mingw
+BUILDLINK_PREFIX.mingw-runtime-bin_DEFAULT=	${CROSSBASE}/${MINGW_TARGET}
 BUILDLINK_FILES.mingw-runtime-bin+=	\
 	include/assert.h include/conio.h include/ctype.h \
 	include/dir.h include/direct.h include/dirent.h include/dos.h \
@@ -43,4 +43,5 @@ BUILDLINK_TARGETS+=	mingw-runtime-bin-buildlink
 
 mingw-runtime-bin-buildlink: _BUILDLINK_USE
 
+.include "../../wip/mingw/Makefile.common"
 .endif	# MINGW_RUNTIME_BIN_BUILDLINK2_MK
