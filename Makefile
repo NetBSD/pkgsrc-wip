@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.583 2003/10/30 11:12:19 xtraeme Exp $
-# $NetBSD: Makefile,v 1.583 2003/10/30 11:12:19 xtraeme Exp $
+# $Id: Makefile,v 1.584 2003/10/30 11:24:17 xtraeme Exp $
+# $NetBSD: Makefile,v 1.584 2003/10/30 11:24:17 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -411,6 +411,7 @@ SUBDIR+=	rolo
 SUBDIR+=	rosegarden-current
 SUBDIR+=	samba3
 SUBDIR+=	sarg
+SUBDIR+=	scew
 SUBDIR+=	scm
 SUBDIR+=	scons
 SUBDIR+=	scponly
