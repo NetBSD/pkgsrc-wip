@@ -1,8 +1,0 @@
-$Id: TODO,v 1.3 2004/03/21 16:38:25 mpasternak Exp $
-
-When pkgsrc will contain recent ekg, with shared libgadu, 
-try to learn this build to use it, and not provide own libgadu.
-
-Check if 0.3.7 builds (qt3-libs don't build on my box, sorry!)
-
-	-- dotz@irc.pl
