@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/17 13:44:19 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/17 13:53:09 marc Exp $
 #
 
 DISTNAME=		Twisted-1.0.5
@@ -21,7 +21,5 @@ post-install:
 	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py \
 		${PREFIX}/${PYSITELIB}/twisted
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
