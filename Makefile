@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1520 2004/11/03 15:34:52 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1520 2004/11/03 15:34:52 adrian_p Exp $
+# $Id: Makefile,v 1.1521 2004/11/03 21:06:33 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1521 2004/11/03 21:06:33 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -500,7 +500,6 @@ SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-Term-ProgressBar
-SUBDIR+=	p5-Text-Tabs+Wrap
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-WWW-Curl
 SUBDIR+=	palm-db-tools
