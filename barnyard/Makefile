@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/10/11 17:00:12 adrian_p Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/26 14:39:26 adrian_p Exp $
 
 DISTNAME=	barnyard-0.1.0
 CATEGORIES=	net
@@ -10,7 +10,7 @@ COMMENT=	Fast output system for snort
 
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 PKG_SYSCONFSUBDIR=	snort
 
@@ -22,7 +22,7 @@ EGDIR=		${PREFIX}/share/examples/barnyard
 BUILD_DEFS+=	USE_MYSQL USE_PGSQL
 
 .if defined(USE_MYSQL) && ${USE_MYSQL} == YES
-.include "../../databases/mysql-client/buildlink2.mk"
+.include "../../databases/mysql-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-mysql
 CONFIGURE_ARGS+=	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql
 CONFIGURE_ARGS+=	--with-mysql-libraries=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
@@ -30,7 +30,7 @@ LIBS=	-Wl,-R${PREFIX}/lib/mysql
 .endif
 
 .if defined(USE_PGSQL) && ${USE_PGSQL} == YES
-.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../../databases/postgresql-lib/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-postgres
 CONFIGURE_ARGS+=	--with-postgres-includes=${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
 CONFIGURE_ARGS+=	--with-postgres-libraries=${BUILDLINK_PREFIX.postgresql-lib}/lib/postgresql
