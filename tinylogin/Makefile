@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:33:45 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/14 21:47:53 poppnk Exp $
 #
 
 DISTNAME=	tinylogin-1.4
@@ -10,7 +10,7 @@ HOMEPAGE=	http://tinylogin.busybox.net/
 COMMENT=	Suite of tiny Unix utilities for handling logging
 
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
