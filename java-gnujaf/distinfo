@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/17 15:42:29 poppnk Exp $
+
+SHA1 (activation-1.0.tar.gz) = 484347c75c1d2902383d97718d8593a920e514c0
+Size (activation-1.0.tar.gz) = 146228 bytes
+SHA1 (patch-aa) = 88b22d10cc17adb37f7ec62f507b4692662bba82
