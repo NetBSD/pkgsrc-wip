@@ -1,0 +1,30 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/03/13 16:11:15 tomhensel Exp $
+
+ See the file ${DOCSDIR}/README
+ on how to setup DSPAM and configure your MTA.
+ Examples are provided for sendmail, exim and other popular MTAs.
+
+ Integrating DSPAM with Postfix is described at
+ http://www.phpinsider.com/dspam/
+
+
+ ${EXAMPLESDIR}/mysql.data
+ contains an example configuration for use with MySQL.
+ Edit and install as
+ ${LOCALBASE}/etc/dspam/mysql.data
+
+ ${EXAMPLESDIR}/mysql_objects.sql
+ contains a dump of MySQL table structures used by DSPAM,
+ import it into your database.
+
+
+ Please note the lack of manpages in the current release of DSPAM.
+
+ A FAQ is available at
+ http://www.nuclearelephant.com/projects/dspam/faq.html
+
+ For more information on the optional Chi Square algorithm see
+ http://radio.weblogs.com/0101454/stories/2002/09/16/spamDetection.html
+
+===========================================================================

@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/13 16:11:15 tomhensel Exp $
+
+--- configure.orig	Wed Nov 26 14:35:34 2003
++++ configure	Thu Dec 11 14:00:18 2003
+@@ -7548,7 +7548,8 @@
+ 
+ 
+ # This can be used to rebuild libtool when needed
+-LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
++LIBTOOL_DEPS="%%LIBTOOLFLAGS%% $ac_aux_dir/ltmain.sh"
++$ac_aux_dir/ltconfig $LIBTOOL_DEPS
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
