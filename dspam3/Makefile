@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/06/16 03:45:27 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/16 04:01:02 xtraeme Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -96,6 +96,19 @@ CONFIGURE_ARGS+=	--enable-homedir-dotfiles
 .if defined(DSPAM_USE_WEBMAIL) && !empty(DSPAM_USE_WEBMAIL:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-webmail
 .endif
+
+INSTALLATION_DIRS=	share/doc/${PKGBASE} \
+			share/${PKGBASE}/txt share/${PKGBASE}/cgi
+
+post-install:
+.for d in txt cgi cgi/templates
+	${FIND} ${WRKSRC}/${d} -name Makefile\* | ${XARGS} ${RM} -f
+.endfor
+.undef d
+.for d in txt cgi
+	cd ${WRKSRC}/${d} && && ${PAX} -rwppm . ${PREFIX}/share/${PKGBASE}/${d}
+.endfor
+	${INSTALL_DATA} ${WRKSRC}/RE* ${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
