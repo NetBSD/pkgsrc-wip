@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/23 00:03:26 rpereyra Exp $
-share/httpd/htdocs/uebimiau
-share/httpd/htdocs/uebimiau/database
+@comment $NetBSD: PLIST,v 1.1.1.2 2004/12/26 15:25:55 rpereyra Exp $
 share/httpd/htdocs/uebimiau/database/index.php
 share/httpd/htdocs/uebimiau/database/temporary files are stored here.txt
-share/httpd/htdocs/uebimiau/inc
 share/httpd/htdocs/uebimiau/inc/class.uebimiau.php
 share/httpd/htdocs/uebimiau/inc/class.smtp.php
 share/httpd/htdocs/uebimiau/inc/lib.export.php
@@ -16,12 +13,10 @@ share/httpd/htdocs/uebimiau/addressbook.php
 share/httpd/htdocs/uebimiau/badlogin.php
 share/httpd/htdocs/uebimiau/catch.php
 share/httpd/htdocs/uebimiau/CHANGELOG.txt
-share/httpd/htdocs/uebimiau/extra
 share/httpd/htdocs/uebimiau/extra/clean.php.txt
 share/httpd/htdocs/uebimiau/extra/rmdir.php.txt
 share/httpd/htdocs/uebimiau/download.php
 share/httpd/htdocs/uebimiau/error.php
-share/httpd/htdocs/uebimiau/images
 share/httpd/htdocs/uebimiau/images/arrow_down.gif
 share/httpd/htdocs/uebimiau/images/aleft.gif
 share/httpd/htdocs/uebimiau/images/aright.gif
@@ -53,7 +48,6 @@ share/httpd/htdocs/uebimiau/images/under.gif
 share/httpd/htdocs/uebimiau/images/wlink.gif
 share/httpd/htdocs/uebimiau/folders.php
 share/httpd/htdocs/uebimiau/headers.php
-share/httpd/htdocs/uebimiau/langs
 share/httpd/htdocs/uebimiau/langs/ch_big5.txt
 share/httpd/htdocs/uebimiau/langs/bg.txt
 share/httpd/htdocs/uebimiau/langs/cz_iso.txt
@@ -86,14 +80,11 @@ share/httpd/htdocs/uebimiau/printmsg.php
 share/httpd/htdocs/uebimiau/README.txt
 share/httpd/htdocs/uebimiau/readmsg.php
 share/httpd/htdocs/uebimiau/search.php
-share/httpd/htdocs/uebimiau/smarty
 share/httpd/htdocs/uebimiau/smarty/PEAR.php
 share/httpd/htdocs/uebimiau/smarty/Smarty_Compiler.class.php
 share/httpd/htdocs/uebimiau/smarty/Smarty.addons.php
 share/httpd/htdocs/uebimiau/smarty/Smarty.class.php
 share/httpd/htdocs/uebimiau/smarty/Smarty_Config.class.php
-share/httpd/htdocs/uebimiau/themes
-share/httpd/htdocs/uebimiau/themes/default
 share/httpd/htdocs/uebimiau/themes/default/address-display.htm
 share/httpd/htdocs/uebimiau/themes/default/address-form.htm
 share/httpd/htdocs/uebimiau/themes/default/address-list.htm
@@ -117,7 +108,6 @@ share/httpd/htdocs/uebimiau/themes/default/upload-attach.htm
 share/httpd/htdocs/uebimiau/themes/default/webmail.css
 share/httpd/htdocs/uebimiau/themes/default/webmail.js
 share/httpd/htdocs/uebimiau/themes/debug.tpl
-share/httpd/htdocs/uebimiau/themes/neotech.net
 share/httpd/htdocs/uebimiau/themes/neotech.net/messagelist.htm
 share/httpd/htdocs/uebimiau/themes/neotech.net/address-display.htm
 share/httpd/htdocs/uebimiau/themes/neotech.net/address-form.htm
