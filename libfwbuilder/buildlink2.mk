@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/09/24 21:54:14 tvierling Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/09/27 18:27:29 marc Exp $
 #
 
 .if !defined(LIBFWBUILDER_BUILDLINK2_MK)
 LIBFWBUILDER_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libfwbuilder
-BUILDLINK_DEPENDS.libfwbuilder?=		libfwbuilder>=1.0.0
+BUILDLINK_DEPENDS.libfwbuilder?=		libfwbuilder>=1.0.1
 BUILDLINK_PKGSRCDIR.libfwbuilder?=		../../wip/libfwbuilder
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libfwbuilder=libfwbuilder

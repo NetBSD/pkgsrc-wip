@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2003/09/24 21:54:14 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/27 18:27:29 marc Exp $
 #
 
-DISTNAME=		libfwbuilder-1.0.0
+DISTNAME=		libfwbuilder-1.0.1
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fwbuilder/}
 
-MAINTAINER=		marc@informatik.uni-bremen.de
+MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://www.fwbuilder.org/
 COMMENT=		Firewall configuration and management tool
 
