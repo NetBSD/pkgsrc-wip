@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1476 2004/09/26 05:30:15 marmfield Exp $
-# $NetBSD: Makefile,v 1.1476 2004/09/26 05:30:15 marmfield Exp $
+# $Id: Makefile,v 1.1477 2004/09/27 22:06:11 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.1477 2004/09/27 22:06:11 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -476,6 +476,7 @@ SUBDIR+=	oqtplayer
 SUBDIR+=	p5-Apache-Request
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-Chart
+SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Class-Factory-Util
 SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-Convert-BinHex
@@ -494,6 +495,7 @@ SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-IO-Multiplex
+SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Net-PcapUtils
 SUBDIR+=	p5-POE
