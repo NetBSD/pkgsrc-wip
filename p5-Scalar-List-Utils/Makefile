@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/12/30 19:56:11 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/16 13:28:18 adrian_p Exp $
 #
 
-DISTNAME=		Scalar-List-Utils-1.11
+DISTNAME=		Scalar-List-Utils-1.13
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5slu
 CATEGORIES=		lang perl5
