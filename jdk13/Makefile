@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/02 16:53:13 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/02 19:48:25 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -60,12 +60,18 @@ PLIST_SRC=	# added to below
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(JDK13_WITH_PLUGIN) && !empty(JDK13_WITH_PLUGIN:M[Yy][Ee][Ss])
+MOZILLA_PLUGINS_DIR= ${LOCALBASE}/lib/mozilla/plugins
+
 ALL_TARGET+=	plugin
 PLIST_SRC+=	${.CURDIR}/PLIST.plugin
+PLIST_SUBST+=	MOZILLA_PLUGINS_DIR=${MOZILLA_PLUGINS_DIR}
 
 MAKE_ENV+=	LIBG_HDRS="${LOCALBASE}/include/glib/glib-1.2 -I${LOCALBASE}/lib/glib/include"
 MAKE_ENV+=	GTK_HDRS="${LOCALBASE}/include/gtk-1.2"
 MAKE_ENV+=	LIBIDL_HDRS="${LOCALBASE}/include"
+
+post-install:
+	${LN} -f -s ${PREFIX}/jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji.so ${MOZILLA_PLUGINS_DIR}/
 
 .include "../../net/ORBit/buildlink2.mk"
 .include "../../www/mozilla/buildlink2.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.plugin,v 1.1 2003/07/02 16:53:13 tvierling Exp $
+@comment $NetBSD: PLIST.plugin,v 1.2 2003/07/02 19:48:25 tvierling Exp $
 bin/ControlPanel
 bin/HtmlConverter
 bin/${MACHINE_ARCH}/green_threads/java_vm
@@ -26,6 +26,8 @@ jre/plugin/${MACHINE_ARCH}/ns4/javaplugin_g.so
 jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji.so
 jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji_g.so
 lib/htmlconverter.jar
+@exec ${LN} -f -s %D/jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji.so ${MOZILLA_PLUGINS_DIR}/
+@unexec ${RM} -f ${MOZILLA_PLUGINS_DIR}/libjavaplugin_oji.so
 @dirrm jre/plugin/${MACHINE_ARCH}/ns600
 @dirrm jre/plugin/${MACHINE_ARCH}/ns4
 @dirrm jre/plugin/${MACHINE_ARCH}
