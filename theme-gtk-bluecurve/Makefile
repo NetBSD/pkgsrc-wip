@@ -16,7 +16,7 @@ MASTER_SITES=	ftp://ftp.rutgers.edu/pub/redhat/linux/8.0/en/os/i386/SRPMS/ \
 DISTFILES=	redhat-artwork-${THEMEVERSION}-${SUBVERSION}.src.rpm
 MAINTAINER=	dferlier@BonBon.net
 
-BUILD_DEPENDS+=	rpm2cpio:../../converters/rpm2cpio
+BUILD_DEPENDS+=	rpm-[0-9]*:../../misc/rpm
 BUILD_DEPENDS+=	libtool:../..//devel/libtool
 
 WRKSRC= 	${WRKDIR}/redhat-artwork-${THEMEVERSION}
