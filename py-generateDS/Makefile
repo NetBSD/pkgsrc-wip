@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/09/17 22:20:09 marc Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/15 14:08:13 marc Exp $
 #
 
-DISTNAME=	generateDS-1.4a
+DISTNAME=	generateDS-1.4b
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.rexx.com/~dkuhlman/
@@ -26,6 +26,6 @@ post-install:
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
-.include "../../textproc/pyxml/buildlink2.mk"
+#.include "../../textproc/pyxml/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
