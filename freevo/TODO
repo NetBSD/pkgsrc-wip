@@ -1,4 +1,4 @@
-$Id: TODO,v 1.2 2004/01/04 11:15:16 mpasternak Exp $
+$Id: TODO,v 1.3 2004/01/04 11:25:43 mpasternak Exp $
 
 Check the fantastic PLIST twice. You can even sort it.
 
@@ -7,5 +7,9 @@ E-mail:
 and ask for NetBSD (pkgsrc) package placement at:
 	http://freevo.sourceforge.net/install.html
 _when_ it works. No earlier.
+
+This depends on xml.utils package in Python.
+Propably the solution is to install http://pyxml.sourceforge.net/ ; I will
+handle this.
 
 	-- dotz@irc.pl
