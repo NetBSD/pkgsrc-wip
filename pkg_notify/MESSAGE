@@ -1,9 +1,6 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/01/05 15:12:05 imilh Exp $
+$NetBSD: MESSAGE,v 1.5 2005/01/14 09:41:22 imilh Exp $
 
-Modify the ${PKG_SYSCONFDIR}/pkg_notify.list file containing the package
-list you want to be informed on or invoke pkg_notify this way :
-
-$ pkg_notify category/foo another/bar and/so-on
+Please read ${DOCDIR}/README
 
 ===========================================================================
