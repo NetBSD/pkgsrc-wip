@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/05/12 13:47:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/06/03 18:16:16 xtraeme Exp $
 #
 
 DISTNAME=	dancer-ircd-1.0.31+maint8-fn6
@@ -64,13 +64,11 @@ pre-configure:
 		${WRKSRC}/include/config.h.dist
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}/hybrid
-	(cd ${WRKSRC}/doc && \
-	    for f in RE* *.txt; do ${INSTALL_DATA} $$f ${DOCDIR}; done )
+	${INSTALL_DATA_DIR} ${EGDIR} ${DOCDIR} ${DOCDIR}/hybrid
+	( cd ${WRKSRC}/doc && \
+		for f in RE* *.txt; do ${INSTALL_DATA} $$f ${DOCDIR}; done )
 	( cd ${WRKSRC}/doc/hybrid/ && \
-	for f in *; do ${INSTALL_DATA} $$f ${DOCDIR}/hybrid; done )
+		for f in *; do ${INSTALL_DATA} $$f ${DOCDIR}/hybrid; done )
 	${INSTALL_PROGRAM} ${WRKSRC}/src/dancer-ircd ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkconf ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/install_ircd ${PREFIX}/sbin

@@ -1,8 +1,7 @@
-$NetBSD: TODO,v 1.5 2003/05/10 08:48:39 xtraeme Exp $
+$Id: TODO,v 1.6 2003/06/03 18:16:16 xtraeme Exp $
 
 * Improve DESCR ?
 * Improve the do-install target ?
-* Would we apply the patch of freenode ?
 
 - There is no need for files/dancer-ircd.sh to have execute permissions.  When
   importing this package in pkgsrc, fix it.
