@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/08/17 18:29:19 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2004/09/13 19:44:08 minskim Exp $
 #
 
 DISTNAME=		libXfont-1.4.1
@@ -20,4 +20,5 @@ PKGCONFIG_OVERRIDE+=	xfont.pc.in
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/xproto/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
