@@ -1,3 +1,2 @@
-A simple GTK-2 Terminal with tabs.
-
-WWW:	http://gtkterm.feige.net/
+A GTK/VTE based Multi Terminal Emulator for X Windows.
+It provides several terminals in one window.
