@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1362 2004/07/06 14:43:43 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1362 2004/07/06 14:43:43 xtraeme Exp $
+# $Id: Makefile,v 1.1363 2004/07/06 14:57:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1363 2004/07/06 14:57:12 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -230,7 +230,6 @@ SUBDIR+=	ht2html
 SUBDIR+=	html2latex
 SUBDIR+=	httrack
 SUBDIR+=	hydra
-SUBDIR+=	hydrogen
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
 SUBDIR+=	icc
@@ -330,7 +329,6 @@ SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libetpan
 SUBDIR+=	libfwbuilder
-SUBDIR+=	libhydrogen
 SUBDIR+=	libmatchbox
 SUBDIR+=	libmilter813
 SUBDIR+=	libneural
