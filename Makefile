@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1097 2004/03/20 01:28:11 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1097 2004/03/20 01:28:11 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1098 2004/03/20 20:13:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1098 2004/03/20 20:13:19 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -151,6 +151,7 @@ SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-CornerXMMS
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
+SUBDIR+=	galeon-devel
 SUBDIR+=	galib
 SUBDIR+=	gcc-3.4-ada
 SUBDIR+=	gcc3-ada-devel
