@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/18 09:49:33 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2003/04/27 10:47:05 cjep Exp $
 
 DISTNAME=	cjk-latex-korean-20020721
 WRKSRC=		${WRKDIR}
@@ -10,7 +10,8 @@ MAINTAINER=	rxg@netbsd.org
 HOMEPAGE=	http://cjk.ffii.org/
 COMMENT=	Korean support for CJK-LaTeX
 
-DEPENDS+=	cjk-latex>=4.5.1:../../print/cjk-latex
+#DEPENDS+=	cjk-latex>=4.5.1:../../print/cjk-latex
+DEPENDS+=	cjk-latex>=4.5.1:../../wip/cjk-latex
 DEPENDS+=	baekmuk-ttf-*:../../fonts/baekmuk-ttf
 
 FONT_FILES=	batang dotum gulim hline
