@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1182 2004/04/09 10:11:10 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1182 2004/04/09 10:11:10 thomasklausner Exp $
+# $Id: Makefile,v 1.1183 2004/04/10 12:50:25 lsed Exp $
+# $NetBSD: Makefile,v 1.1183 2004/04/10 12:50:25 lsed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -390,7 +390,6 @@ SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
 #SUBDIR+=	mk 		# not a package
 SUBDIR+=	mkdep
-SUBDIR+=	mkvtoolnix
 SUBDIR+=	mnogosearch
 SUBDIR+=	monkey-bubble
 SUBDIR+=	monodoc
