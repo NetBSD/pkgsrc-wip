@@ -10,3 +10,10 @@ for libraries. Mine installed:
 /usr/lib/libX11.so.0.0
 My workaround was to create symlink and then I could use xev client
 which also used /usr/lib/libXau.so.0.
+
+When I got rid of the LIBTOOL_OVERRIDE, the library versions were correct:
+/usr/lib/libX11.so.6
+/usr/lib/libX11.so.6.2.1
+
+So maybe we need to fix the libtool or maybe don't use LIBTOOL_OVERRIDE.
+I believe this is the same for all these freedesktop.org xlibs packages.
