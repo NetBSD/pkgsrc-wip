@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/09/04 02:35:08 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/02/19 17:49:25 thomasklausner Exp $
 #
 # This Makefile fragment is included by packages that use libgringotts.
 #
@@ -18,7 +18,6 @@ BUILDLINK_FILES.libgringotts+=	include/libgringotts.h
 BUILDLINK_FILES.libgringotts+=	lib/libgringotts.*
 BUILDLINK_FILES.libgringotts+=	lib/pkgconfig/libgringotts.pc
 
-.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../security/libmcrypt/buildlink2.mk"
 .include "../../security/mhash/buildlink2.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/06/03 02:45:28 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/02/19 17:49:24 thomasklausner Exp $
 #
 # This Makefile fragment is included by packages that use directfb.
 #
@@ -34,7 +34,6 @@ BUILDLINK_FILES.directfb+=	lib/libdirectfb.*
 BUILDLINK_FILES.directfb+=	lib/pkgconfig/directfb-internal.pc
 BUILDLINK_FILES.directfb+=	lib/pkgconfig/directfb.pc
 
-.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"

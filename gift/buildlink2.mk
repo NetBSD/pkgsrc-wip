@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/08/21 18:21:49 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/02/19 17:49:24 thomasklausner Exp $
 #
 # This Makefile fragment is included by packages that use gift.
 #
@@ -20,7 +20,6 @@ BUILDLINK_FILES.gift+=	lib/libgiftproto.*
 BUILDLINK_FILES.gift+=	lib/pkgconfig/libgift.pc
 
 .include "../../audio/libvorbis/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	gift-buildlink
 
