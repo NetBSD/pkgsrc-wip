@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.897 2004/01/20 13:52:27 xtraeme Exp $
-# $NetBSD: Makefile,v 1.897 2004/01/20 13:52:27 xtraeme Exp $
+# $Id: Makefile,v 1.898 2004/01/20 21:22:40 marc Exp $
+# $NetBSD: Makefile,v 1.898 2004/01/20 21:22:40 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -134,8 +134,6 @@ SUBDIR+=	ed
 SUBDIR+=	ed2k-gtk-gui
 SUBDIR+=	eic
 SUBDIR+=	elinks09
-SUBDIR+=	elvis
-SUBDIR+=	elvis-x11
 SUBDIR+=	emirror
 SUBDIR+=	entropy
 SUBDIR+=	ezbounce
