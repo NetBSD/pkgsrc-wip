@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/04/06 11:06:58 jgoamakf Exp $
+
+SHA1 (Cgi-Simple-0.077.tar.gz) = a30f1613affe062b8502faa957d9f8f0be1bd254
+RMD160 (Cgi-Simple-0.077.tar.gz) = 27704907b86ff74847d6c717d90a54c99580e907
+Size (Cgi-Simple-0.077.tar.gz) = 149933 bytes
