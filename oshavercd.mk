@@ -1,5 +1,5 @@
-# $NetBSD: oshavercd.mk,v 1.1 2003/09/11 14:53:53 bubuchka Exp $
-# $Id: oshavercd.mk,v 1.1 2003/09/11 14:53:53 bubuchka Exp $
+# $NetBSD: oshavercd.mk,v 1.2 2003/09/13 17:17:04 bubuchka Exp $
+# $Id: oshavercd.mk,v 1.2 2003/09/13 17:17:04 bubuchka Exp $
 #
 # This makefile intended to determine is system have rc.d framework,
 # or not. If there is no such one, it will be installed by dependency.
@@ -24,6 +24,10 @@ MAJOR_OS_VERSION=	${OS_VERSION:S/${OS_VERSION:C/^[0-9]*\.[0-9]*//}//}
 RCD_DIR?=		/etc/rc.d
 RCD_ORDER?=		/sbin/rcorder
 RCD_SUBR?=		/etc/rc.subr
+
+FILES_SUBST+=		RCD_DIR=${RCD_DIR}				\
+			RCD_ORDER=${RCD_ORDER}				\
+			RCD_SUBR=${RCD_SUBR}
 
 .if ${OPSYS} == "NetBSD" && ${MAJOR_OS_VERSION} >= 1.5
 OS_HAVE_RCD=		YES
