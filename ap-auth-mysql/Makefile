@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/31 12:40:00 cubidou Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/14 00:45:33 blef Exp $
 #
 
 DISTNAME=		libapache-mod-auth-mysql_4.1.7
@@ -13,7 +13,7 @@ COMMENT=		Module to allow Apache authentication against a MySQL database.
 
 CONFLICTS+=		ap2-auth-mysql-*
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql	\
@@ -29,7 +29,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/DIRECTIVES ${PREFIX}/share/doc/mod_auth_mysql
 	${INSTALL_DATA} ${WRKSRC}/USAGE ${PREFIX}/share/doc/mod_auth_mysql
 
-.include "../../databases/mysql-client/buildlink2.mk"
+.include "../../databases/mysql-client/buildlink3.mk"
 .include "../../www/apache/module.mk"
 
 .include "../../mk/bsd.pkg.mk"
