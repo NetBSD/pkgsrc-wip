@@ -1,28 +1,24 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/12 12:36:50 virtus Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/13 08:05:51 jmmv Exp $
+#
 
-DISTNAME=       qinx-0.3
+DISTNAME=	qinx-0.3
 CATEGORIES=	wm kde
-MASTER_SITES=   http://www.usermode.org/code/
+MASTER_SITES=	http://www.usermode.org/code/
 
-MAINTAINER=     flynn@energyhq.homeip.net
+MAINTAINER=	flynn@energyhq.homeip.net
 HOMEPAGE=	http://www.usermode.org/code.html
 COMMENT=	Widget style and window decoration for KDE3
 
-.include "../../x11/kde3/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
+USE_GMAKE=		YES
+USE_X11=		YES
 
-PTHREAD_OPTS+=		require
-USE_GMAKE=              YES
-GNU_CONFIGURE=          YES
-USE_LIBTOOL=            YES
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
-USE_BUILDLINK_ONLY=     YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../mk/bsd.prefs.mk"
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
-.if ${OPSYS} == "NetBSD"
-LIBS+=                  -Wl,--export-dynamic
-.endif
-
+.include "../../x11/kde3/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
