@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.915 2004/01/26 23:34:57 poppnk Exp $
-# $NetBSD: Makefile,v 1.915 2004/01/26 23:34:57 poppnk Exp $
+# $Id: Makefile,v 1.916 2004/01/27 13:58:30 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.916 2004/01/27 13:58:30 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -394,6 +394,7 @@ SUBDIR+=	p5-Carp-Assert
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Class-Accessor
 SUBDIR+=	p5-Class-Factory-Util
+SUBDIR+=	p5-Class-Fields
 SUBDIR+=	p5-Class-MethodMaker
 SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-DBI-Shell
