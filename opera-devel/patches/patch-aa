@@ -1,0 +1,54 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/28 22:41:41 kheinz Exp $
+
+--- install.sh.orig	Thu Apr 22 14:53:20 2004
++++ install.sh	Wed Apr 28 11:39:11 2004
+@@ -767,6 +767,7 @@
+     case "${machine}:${os}" in
+ 	i[3456]86:Linux|i[3456]86:FreeBSD|i[3456]86:NetBSD|i[3456]86:OpenBSD)
+ 	    wrapper_plugin_paths="
++    ${PKGSRC_PREFIX}/Acrobat[45]/Browsers/intellinux \\
+     /usr/local/Acrobat[45]/Browsers/intellinux \\
+     /usr/lib/Acrobat[45]/Browsers/intellinux \\
+     /usr/X11R6/lib/Acrobat[45]/Browsers/intellinux \\
+@@ -782,6 +783,7 @@
+ 
+ 	sun*:SunOS*|sparc*:SunOS*)
+ 	    wrapper_plugin_paths="
++    ${PKGSRC_PREFIX}/Acrobat[45]/Browsers/sparcsolaris \\
+     /opt/Acrobat[45]/Browsers/sparcsolaris \\
+     /usr/local/Acrobat[45]/Browsers/sparcsolaris \\
+     /usr/lib/Acrobat[45]/Browsers/sparcsolaris \\
+@@ -833,6 +835,7 @@
+ 
+ # Location of the Opera binaries
+ OPERA_BINARYDIR=${str_localdirexec}
++LD_LIBRARY_PATH=\${LD_LIBRARY_PATH}:\${OPERA_BINARYDIR}
+ 
+ # Parse commandline parameters
+ passflags=''
+@@ -983,6 +986,7 @@
+ 
+ # Acrobat Reader
+ for BINDIR in \\
++    ${PKGSRC_PREFIX}/Acrobat[45]/bin \\
+     /usr/local/Acrobat[45]/bin \\
+     /usr/lib/Acrobat[45]/bin \\
+     /usr/X11R6/lib/Acrobat[45]/bin \\
+@@ -1129,7 +1133,7 @@
+ 	mkdir $mkdirv $mkdirp $doc_dir/
+ 	chmod $chmodv 755 $doc_dir
+ 	cp $cpv $cpf LICENSE $doc_dir
+-	if not "test -d $doc_dir/help"; then ln -s $str_localdirshare/help $doc_dir/help; fi
++	if not test -d "$doc_dir/help"; then ln -s $str_localdirshare/help $doc_dir/help; fi
+ 
+     # Shared files
+ 	debug_msg 1 "Shared files"
+@@ -1180,7 +1184,7 @@
+ 	chmod $chmodv 755 $share_dir/styles/user
+ 	cp $cpv $cpf $cpR styles/user/* $share_dir/styles/user/
+ 
+-	if not "test -f $share_dir/styles/OPF.css"; then
++	if not test -f "$share_dir/styles/OPF.css"; then
+ 	    ln $lns opf.css $share_dir/styles/OPF.css
+ 	fi
+ 

@@ -1,0 +1,11 @@
+# $Id: TODO,v 1.1.1.1 2004/04/28 22:41:41 kheinz Exp $
+- 5 warnings from pkglint, probably the best we can get...
+- support for FreeBSD. Is patch-aa necessary/correct?
+- support for Linux?
+- what about OpenBSD?
+- testing on Solaris/sparc, especially the Adobe Acrobat integration.
+  PLIST.SunOS should be correct
+
+- the spell checker does not work without libaspell.so.15. Platforms using
+  the Linux packages would need a working RPM for aspell.
+  On FreeBSD and Solaris textproc/aspell might do the trick
