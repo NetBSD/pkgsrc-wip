@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/06/14 14:04:03 moubctez Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/08/05 08:43:51 moubctez Exp $
 bin/gg2
 include/gg2_core.h
 lib/gg2/libGUI_plugin.a
@@ -253,9 +253,11 @@ share/gg2/pixmaps/icq-occupied.png
 share/gg2/pixmaps/icq-offline.png
 share/gg2/pixmaps/icq-online.png
 share/gg2/pixmaps/icq.png
+share/gg2/pixmaps/jabber-auth-from.png
 share/gg2/pixmaps/jabber-away.png
 share/gg2/pixmaps/jabber-dnd.png
 share/gg2/pixmaps/jabber-error.png
+share/gg2/pixmaps/jabber-noauth.png
 share/gg2/pixmaps/jabber-offline.png
 share/gg2/pixmaps/jabber-online.png
 share/gg2/pixmaps/jabber-xa.png
@@ -287,8 +289,10 @@ share/gg2/themes/default.theme
 share/gg2/themes/gray2.theme
 share/gg2/themes/green2.theme
 share/gg2/themes/lightblue.theme
+share/gg2/themes/office.theme
 share/gg2/themes/red2.theme
 share/gg2/themes/thinice.theme
+share/gg2/themes/tropic.theme
 share/gg2/themes/vblue2.theme
 share/gg2/themes/vgreen2.theme
 share/gg2/themes/vred2.theme
