@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/27 03:07:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/29 20:22:57 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXcursor-1.1.1
@@ -7,8 +7,8 @@ MASTER_SITES=		http://freedesktop.org/~xlibs/dist/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		xtraeme@NetBSD.org
-HOMEPAGE=		http://freedesktop.org/
-COMMENT=		Xcursor extension
+HOMEPAGE=		http://www.freedesktop.org/Software/xlibs
+COMMENT=		Client-side cursor loading library for X
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
