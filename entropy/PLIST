@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/04 19:32:38 tvierling Exp $
+bin/entropy
+bin/entropy-storechg
+share/examples/entropy/entropy.conf
+share/examples/entropy/node/7x14.bdf.gz
+share/examples/entropy/node/background.png
+share/examples/entropy/node/bar.png
+share/examples/entropy/node/font8x13.txt
+share/examples/entropy/node/gateway.de.html
+share/examples/entropy/node/gateway.en.html
+share/examples/entropy/node/logo_small.png
+share/examples/entropy/node/mime.types
+share/examples/entropy/node/my0812.bdf.gz
+share/examples/entropy/node/next.png
+share/examples/entropy/node/prev.png
+share/examples/entropy/node/style.css
+share/examples/entropy/node/unicode.txt.gz
+share/examples/entropy/seed.txt
+@dirrm share/examples/entropy/node
+@dirrm share/examples/entropy

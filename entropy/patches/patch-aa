@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/04 19:32:38 tvierling Exp $
+
+--- Makefile.orig	Tue Jul  1 19:15:45 2003
++++ Makefile
+@@ -67,7 +67,7 @@ CDEFS+=-DMSB_FIRST=$(MSB_FIRST)
+ CDEFS+=-DSTORE_MONO=$(STORE_MONO)
+ INC=include
+ 
+-INCLUDES=-I$(INC) -I/usr/local/include
++INCLUDES=-I$(INC)
+ 
+ ifeq ($(QUIET),1)
+ CC=@gcc
+@@ -87,8 +87,7 @@ FONT_MSG=
+ endif
+ 
+ 
+-CFLAGS=-W -Wall -Wuninitialized -pipe -O3 -g $(CDEFS) $(INCLUDES)
+-#CFLAGS=-W -Wall -Wuninitialized -pipe -O -g $(CDEFS) $(INCLUDES)
++CFLAGS+=$(CPPFLAGS) $(CDEFS) $(INCLUDES)
+ 
+ ifeq ($(PPC),1)
+ CFLAGS+=-mcpu=powerpc
+@@ -147,8 +146,6 @@ endif
+ endif
+ endif
+ endif
+-
+-LDFLAGS=
+ 
+ OBJ=obj
+ 

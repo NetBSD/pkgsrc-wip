@@ -1,0 +1,27 @@
+ENTROPY stands for Emerging Network To Reduce Orwellian Potency Yield and as
+such describes the main goal of the project.
+
+ENTROPY is developed as a response to increasing censorship and surveillance
+in the internet. The program connects your computer to a network of machines
+which all run this software. The ENTROPY network is running parallel to the
+WWW and also other internet services like FTP, email, ICQ. etc.
+
+For the user the ENTROPY network looks like a collection of WWW pages. The
+difference to the WWW however is that there are no accesses to central
+servers. And this is why there is no site operator who could log who
+downloaded what and when. Every computer taking part in the ENTROPY network
+(every node) is at the same time server, router for other nodes, caching
+proxy and client for the user: that is You.
+
+After you gained some experience with the ENTROPY network, there are command
+line tools for you to insert whole directory trees into the network as a
+ENTROPY site. So ENTROPY does for you what a webspace provider does for you
+in the WWW - but without the storage and bandwidth costs and without any
+regulation or policy as to what kind of content you are allowed to publish.
+Everyone can contribute his own ENTROPY site for everybody else to browse
+through. The contents is stored in a distributed manner across all available
+and reachable nodes and no one can find out about who put up what contents
+into the network. Even if your node is not actively running, your contents
+can be retrieved by others -- without knowing that it was actually you who
+published the files. Of course this is only true if you do not publish your
+name (or leave your name or other personal data in the files you publish)
