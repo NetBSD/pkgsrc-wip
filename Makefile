@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.789 2003/12/21 21:42:57 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.789 2003/12/21 21:42:57 thomasklausner Exp $
+# $Id: Makefile,v 1.790 2003/12/22 03:43:29 jcd Exp $
+# $NetBSD: Makefile,v 1.790 2003/12/22 03:43:29 jcd Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -44,6 +44,7 @@ SUBDIR+=	ap-macro
 SUBDIR+=	ap-ometer
 SUBDIR+=	ap2-auth-mysql
 SUBDIR+=	ap2-limitipconn
+SUBDIR+=	ap2-macro
 SUBDIR+=	ap2-python
 SUBDIR+=	ap2-xslt
 SUBDIR+=	apotheke
