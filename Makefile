@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.419 2003/09/02 08:47:45 xtraeme Exp $
-# $NetBSD: Makefile,v 1.419 2003/09/02 08:47:45 xtraeme Exp $
+# $Id: Makefile,v 1.420 2003/09/03 16:50:51 mpasternak Exp $
+# $NetBSD: Makefile,v 1.420 2003/09/03 16:50:51 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -403,6 +403,8 @@ SUBDIR+=	xmail
 SUBDIR+=	xml2doc
 SUBDIR+=	xmms-dumb
 SUBDIR+=	xmms-modplug
+SUBDIR+=	xmms-pitch
+SUBDIR+=	xpad
 SUBDIR+=	xplore
 SUBDIR+=	xsh
 SUBDIR+=	yafray
