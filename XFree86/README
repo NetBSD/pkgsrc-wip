@@ -4,6 +4,9 @@ and expat. We realize that this may lead to rebuilding XFree86
 more than desired (when fontconfig is updated, for instance) but we
 believe that this is the best way to do things.
 
+** NOTE: NOT NEEDED WITH NetBSD CURRENT **
+** Make sure you have /usr/X11R6 before skip these steps **
+
 You will not be able to install these packages if ${X11BASE} does
 not exist. To work around this you could just create the directory
 yourself, but for a more automated solution, find the block
@@ -20,6 +23,8 @@ in bsd.pkg.mk, delete the PKG_FAIL_REASON line, and replace it with
 
 Note that those need to have a tab character in front of them.
 
+** NOTE: NOT NEEDED WITH NetBSD CURRENT **
+
 After making that change, you shouldn't have any (infrastructure)
 problems.
 
@@ -28,14 +33,14 @@ Good luck!
 This meta package has been tested and reported that works
 perfectly on:
 
-x86 (gcc 2.xx.x/3.x):
-
-	* FreeBSD -current
-	* NetBSD 1.6.1 and -current
-	* Debian sid 
+x86:
+	* FreeBSD 5.x
+	* NetBSD 1.6.x and -current
+	* GNU/Linux Debian sid
 
 Contributed by:
 
 	* Jeremy C.Reed <reed@reedmedia.net>	
 	* Juan RP <juan@xtraeme.unixbsd.org>
 	* Soren Jacobsen <soren@blef.org>
+
