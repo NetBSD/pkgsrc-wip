@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2003/12/29 17:43:33 bjan2 Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/08 19:09:22 bjan2 Exp $
 #
 
-DISTNAME=			am
-PKGNAME=			mathomatic-10.5
-WRKSRC=				${WRKDIR}/math
-CATEGORIES=			wip
-MASTER_SITES=		http://www.panix.com/~gesslein/
+DISTNAME=		am-10.7d
+WRKSRC=			${WRKDIR}/math
+CATEGORIES=		wip
+MASTER_SITES=		http://bjan.freeshell.org/nb/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=			bjan+pkgsrc@bjan.net
-HOMEPAGE=			http://www.panix.com/~gesslein/
-COMMENT=			Small portable symbolic math program
+MAINTAINER=		bjan+pkgsrc@bjan.freeshell.org
+HOMEPAGE=		http://www.panix.com/~gesslein/
+COMMENT=		Small portable symbolic math program
 
-MAKEFILE=			makefile
+MAKEFILE=		makefile
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/am.1 ${PREFIX}/man/man1/
