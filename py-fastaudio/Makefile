@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/11/24 01:47:23 mpasternak Exp $
+# $NetBSD: Makefile,v 1.5 2003/11/25 22:18:32 mpasternak Exp $
 #
 
 DISTNAME=		fastaudio
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME}-0.1
 WRKSRC=			${WRKDIR}/portaudio_v18_1
 CATEGORIES=		audio
 MASTER_SITES=		http://www.freenet.org.nz/python/pyPortAudio/ \
