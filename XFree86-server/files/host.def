@@ -19,6 +19,11 @@
 #define UseInstalledPrograms YES
 #define StandardIncludes -IBLNK/include
 
+#ifdef LinuxArchitecture
+#define InstallAppDefFiles YES
+#define LdPostLib LDFLAGS
+#endif
+
 #define XTrueTypeInstallCConvHeaders NO
 
 /* Don't build with SecureRPC, we need to fix this ... */
