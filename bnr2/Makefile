@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/06/14 17:36:42 dhowland Exp $
+# $NetBSD: Makefile,v 1.9 2004/06/16 01:14:28 dhowland Exp $
 #
 
 DISTNAME=		BNR2beta-0.13.3
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tgz
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			libborqt-6.9.0-qt2.3.so.tgz
 
-MAINTAINER=		tv@duh.org
+MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://www.bnr2.org/
 COMMENT=		USENET bulk binary downloader (X11)
 
