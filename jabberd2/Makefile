@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/02/17 02:55:44 blef Exp $
+# $NetBSD: Makefile,v 1.32 2004/03/17 02:19:12 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0s2
@@ -16,16 +16,19 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 
+BDB_ACCEPTED=			db4
 BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.6b
+BUILDLINK_TRANSFORM.db4=	-e "s,/db4/,/,g"
 
-SUBST_CLASSES=		foo
-SUBST_STAGE.foo=	post-patch
-SUBST_FILES.foo=	configure
-SUBST_MESSAGE.foo=	"Fixing configure script"
-SUBST_SED.foo=		-e "s,/usr/local,${PREFIX},g"			\
-			-e "s,$sysconfdir/jabberd,$sysconfdir,g"
+SUBST_CLASSES=		path
+SUBST_STAGE.path=	post-patch
+SUBST_FILES.path=	configure
+SUBST_MESSAGE.path=	"Fixing configure script."
+SUBST_SED.path=		-e "s,/usr/local,${PREFIX},g"			\
+			-e "s,\$sysconfdir/jabberd,\$sysconfdir,g"
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+#CONFIGURE_ARGS+=	--enable-debug
 
 REPLACE_PERL=		tools/pipe-auth.pl
 
@@ -50,8 +53,8 @@ JABBERD_AUTH_METHOD?=		db
 
 .if !empty(JABBERD_AUTH_METHOD:Mdb)
 CONFIGURE_ARGS+=	--enable-authreg=db
-CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_PREFIX.db4}/include/db4
-.include "../../databases/db4/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_DIR}/include
+.include "../../mk/bdb.buildlink3.mk"
 .elif !empty(JABBERD_AUTH_METHOD:Mopenldap)
 CONFIGURE_ARGS+=	--enable-authreg=ldap
 CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap}
@@ -83,8 +86,8 @@ JABBERD_STORAGE_METHOD?=	db
 
 .if !empty(JABBERD_STORAGE_METHOD:Mdb)
 CONFIGURE_ARGS+=	--enable-storage=db
-CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_PREFIX.db4}/include/db4
-.include "../../databases/db4/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_DIR}/include
+.include "../../mk/bdb.buildlink3.mk"
 .elif !empty(JABBERD_STORAGE_METHOD:Mmysql)
 CONFIGURE_ARGS+=	--enable-storage=mysql
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-server}
@@ -100,13 +103,15 @@ CONFIGURE_ARGS+=	--enable-all-static
 .endif
 
 PKG_SYSCONFSUBDIR=	jabberd
-RCD_SCRIPTS=		jabberd
+RCD_SCRIPTS=		jabberd c2s sm resolver router s2s
 JABBERD_USER?=		jabberd
 JABBERD_GROUP?=		jabberd
 FILES_SUBST+=		JABBERD_USER=${JABBERD_USER}
 FILES_SUBST+=		JABBERD_GROUP=${JABBERD_GROUP}
+FILES_SUBST+=		JABBERD_PIDDIR=${JABBERD_PIDDIR}
+FILES_SUBST+=		JABBERD_LOGDIR=${JABBERD_LOGDIR}
 PKG_GROUPS=             ${JABBERD_GROUP}
-PKG_USERS=              ${JABBERD_USER}:${JABBERD_GROUP}::Jabberd\\ user
+PKG_USERS=              ${JABBERD_USER}:${JABBERD_GROUP}
 
 BINDIR=			${PREFIX}/bin
 EGDIR=			${PREFIX}/share/examples/jabberd
@@ -130,7 +135,7 @@ JABBERD_DBDIR?=		/var/db/jabberd
 JABBERD_PIDDIR?=	/var/run/jabberd
 
 .for f in ${JABBERD_LOGDIR} ${JABBERD_DBDIR} ${JABBERD_PIDDIR}
-OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 750
+OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 770
 .endfor
 .undef f
 
@@ -160,13 +165,13 @@ pre-configure:
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/templates/roster.xml.dist.in	\
-	    ${EGDIR}/roxter.xml
+	    ${EGDIR}/roster.xml
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/pipe-auth.pl ${BINDIR}
 .for f in ${DBFILES}
 	${INSTALL_DATA} ${WRKSRC}/tools/${f} ${EGDIR}
 .endfor
 .undef f
-.for f in jabberd.cfg roster.xml ${FILES}
+.for f in jabberd.cfg ${FILES}
 	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
 .endfor
 .undef f

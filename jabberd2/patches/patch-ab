@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2004/02/12 06:14:59 xtraeme Exp $
+$NetBSD: patch-ab,v 1.6 2004/03/17 02:19:12 xtraeme Exp $
 
 --- etc/jabberd.cfg.in.orig	2003-09-27 11:12:14.000000000 +0200
 +++ etc/jabberd.cfg.in	2003-09-27 11:15:29.000000000 +0200
@@ -11,8 +11,8 @@ $NetBSD: patch-ab,v 1.5 2004/02/12 06:14:59 xtraeme Exp $
 -@jabberd_sm_bin@          @sysconfdir@/sm.xml
 -@jabberd_s2s_bin@         @sysconfdir@/s2s.xml
 -@jabberd_c2s_bin@         @sysconfdir@/c2s.xml
-+@BINDIR@/router	@PKG_SYSCONFDIR@/router.xml
-+@BINDIR@/resolver	@PKG_SYSCONFDIR@/resolver.xml
-+@BINDIR@/sm		@PKG_SYSCONFDIR@/sm.xml
-+@BINDIR@/s2s		@PKG_SYSCONFDIR@/s2s.xml
-+@BINDIR@/c2s		@PKG_SYSCONFDIR@/c2s.xml
++router		@PKG_SYSCONFDIR@/router.xml
++resolver	@PKG_SYSCONFDIR@/resolver.xml
++sm		@PKG_SYSCONFDIR@/sm.xml
++s2s		@PKG_SYSCONFDIR@/s2s.xml
++c2s		@PKG_SYSCONFDIR@/c2s.xml
