@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/06 07:51:27 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/06 08:12:51 jeremy-c-reed Exp $
 bin/autopoint
 bin/gettextize
 bin/msgattrib
@@ -996,5 +996,4 @@ share/man/man1/xgettext.1
 @dirrm share/doc/gettext/examples/hello-c
 @dirrm share/doc/gettext/examples/config
 @dirrm share/doc/gettext/examples
-@dirrm share/doc/gettext
 @dirrm lib/gettext
