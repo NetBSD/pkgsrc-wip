@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="314"
+   name="svn:this_dir"
+   committed-date="2003-07-21T22:23:25.489219Z"
+   url="http://Insomnio:81/repos/xfree86/XFree86-docs"
+   last-author="xtraeme"
+   kind="dir"
+   uuid="ac33715b-8fc1-0310-aeb0-9980936b5364"
+   revision="335"/>
+<entry
+   committed-rev="225"
+   name="distinfo"
+   text-time="2003-07-21T22:06:17.000000Z"
+   committed-date="2003-07-15T23:15:23.773016Z"
+   checksum="ce607f6c9a01ecced865956a279c3534"
+   last-author="xtraeme"
+   kind="file"
+   prop-time="2003-07-21T22:06:17.000000Z"/>
+<entry
+   committed-rev="172"
+   name="DESCR"
+   text-time="2003-07-21T22:06:17.000000Z"
+   committed-date="2003-07-12T16:46:06.212058Z"
+   checksum="d3446ed271283184f732fb2bbfca7e7b"
+   last-author="xtraeme"
+   kind="file"
+   prop-time="2003-07-21T22:06:17.000000Z"/>
+<entry
+   name="files"
+   kind="dir"/>
+<entry
+   committed-rev="172"
+   name="PLIST"
+   text-time="2003-07-21T22:06:18.000000Z"
+   committed-date="2003-07-12T16:46:06.212058Z"
+   checksum="2e9d0170a98bdb168b9ec880c9ed89ba"
+   last-author="xtraeme"
+   kind="file"
+   prop-time="2003-07-21T22:06:18.000000Z"/>
+<entry
+   committed-rev="314"
+   name="Makefile"
+   text-time="2003-07-21T22:16:10.000000Z"
+   committed-date="2003-07-21T22:23:25.489219Z"
+   checksum="ae72210821fa59244e89779e0ab2af10"
+   last-author="xtraeme"
+   kind="file"
+   prop-time="2003-07-21T22:06:18.000000Z"/>
+</wc-entries>
