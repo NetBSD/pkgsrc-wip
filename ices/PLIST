@@ -1,0 +1,45 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/11 20:03:40 icmp Exp $
+bin/ices
+doc/ices/icesmanual.html
+doc/libshout-1.0.9/AUTHORS
+doc/libshout-1.0.9/CHANGES
+doc/libshout-1.0.9/COPYING
+doc/libshout-1.0.9/README
+doc/libshout-1.0.9/connection.html
+doc/libshout-1.0.9/datastreaming.html
+doc/libshout-1.0.9/datastructures.html
+doc/libshout-1.0.9/errorhandling.html
+doc/libshout-1.0.9/example.html
+doc/libshout-1.0.9/example/Makefile
+doc/libshout-1.0.9/example/example.c
+doc/libshout-1.0.9/example_c.html
+doc/libshout-1.0.9/index.html
+doc/libshout-1.0.9/initialization.html
+doc/libshout-1.0.9/metadata.html
+doc/libshout-1.0.9/overview.html
+doc/libshout-1.0.9/reference.html
+doc/libshout-1.0.9/shout_conn_t.html
+doc/libshout-1.0.9/shout_connect.html
+doc/libshout-1.0.9/shout_disconnect.html
+doc/libshout-1.0.9/shout_init_connection.html
+doc/libshout-1.0.9/shout_send_data.html
+doc/libshout-1.0.9/shout_sleep.html
+doc/libshout-1.0.9/shout_strerror.html
+doc/libshout-1.0.9/shout_update_metadata.html
+doc/libshout-1.0.9/style.css
+etc/ices.conf.dist
+etc/modules/ices.pm.dist
+etc/modules/ices.py.dist
+include/shout/shout.h
+lib/libshout.a
+lib/libshout.la
+lib/libshout.so
+lib/libshout.so.2
+lib/libshout.so.2.2
+man/man1/ices.1
+@dirrm include/shout
+@dirrm etc/modules
+@dirrm doc/libshout-1.0.9/example
+@dirrm doc/libshout-1.0.9
+@dirrm doc/ices
+@dirrm doc
