@@ -1,0 +1,20 @@
+# $NetBSD: buildlink3.mk,v 1.1 2004/07/02 19:50:53 thomasklausner Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+PHP_BUILDLINK3_MK:=	${PHP_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	php
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nphp}
+BUILDLINK_PACKAGES+=	php
+
+.if !empty(PHP_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.php+=	php>=5.0.0RC2
+BUILDLINK_PKGSRCDIR.php?=	../../wip/php5
+.endif	# PHP_BUILDLINK3_MK
+
+.include "../../textproc/libxml2/buildlink3.mk"
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
