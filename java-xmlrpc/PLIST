@@ -1,3 +1,130 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/08 17:23:34 poppnk Exp $
-share/classpath/xmlr${LOWER_VENDOR}-1.2-${PKGVERSION}-applet.jar
-share/classpath/xmlr${LOWER_VENDOR}-1.2-${PKGVERSION}.jar
+@comment $NetBSD: PLIST,v 1.3 2004/05/08 17:30:10 poppnk Exp $
+share/classpath/xmlrpc-${PKGVERSION}-b1-applet.jar
+share/classpath/xmlrpc-${PKGVERSION}-b1.jar
+share/doc/java-xmlrpc/allclasses-frame.html
+share/doc/java-xmlrpc/deprecated-list.html
+share/doc/java-xmlrpc/help-doc.html
+share/doc/java-xmlrpc/index-all.html
+share/doc/java-xmlrpc/index.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/AsyncCallback.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/AuthDemo.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/AuthenticatedXmlRpcHandler.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/AuthenticationFailed.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/Base64.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/ContextXmlRpcHandler.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/DefaultHandlerMapping.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/DefaultTypeFactory.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/DefaultXmlRpcContext.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/Echo.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/Invoker.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/MultiCall.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/ParseFailed.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/SystemHandler.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/TypeFactory.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/WebServer.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/XmlRpc.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/XmlRpcClient.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/XmlRpcClientLite.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/XmlRpcContext.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/XmlRpcException.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/XmlRpcHandler.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/XmlRpcHandlerMapping.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/XmlRpcProxyServlet.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/XmlRpcRequest.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/XmlRpcRequestProcessor.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/XmlRpcResponseProcessor.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/XmlRpcServer.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/XmlRpcWorker.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/applet/JSXmlRpcApplet.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/applet/SimpleXmlRpcClient.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/applet/XmlRpcApplet.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/applet/XmlRpcException.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/applet/class-use/JSXmlRpcApplet.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/applet/class-use/SimpleXmlRpcClient.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/applet/class-use/XmlRpcApplet.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/applet/class-use/XmlRpcException.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/applet/package-frame.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/applet/package-summary.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/applet/package-tree.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/applet/package-use.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/AsyncCallback.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/AuthDemo.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/AuthenticatedXmlRpcHandler.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/AuthenticationFailed.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/Base64.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/ContextXmlRpcHandler.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/DefaultHandlerMapping.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/DefaultTypeFactory.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/DefaultXmlRpcContext.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/Echo.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/Invoker.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/MultiCall.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/ParseFailed.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/SystemHandler.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/TypeFactory.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/WebServer.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/XmlRpc.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/XmlRpcClient.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/XmlRpcClientLite.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/XmlRpcContext.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/XmlRpcException.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/XmlRpcHandler.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/XmlRpcHandlerMapping.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/XmlRpcProxyServlet.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/XmlRpcRequest.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/XmlRpcRequestProcessor.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/XmlRpcResponseProcessor.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/XmlRpcServer.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/class-use/XmlRpcWorker.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/fesi/FesiRpcExtension.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/fesi/FesiRpcServer.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/fesi/FesiRpcUtil.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/fesi/class-use/FesiRpcExtension.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/fesi/class-use/FesiRpcServer.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/fesi/class-use/FesiRpcUtil.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/fesi/package-frame.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/fesi/package-summary.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/fesi/package-tree.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/fesi/package-use.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/package-frame.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/package-summary.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/package-tree.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/package-use.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/secure/SecureWebServer.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/secure/SecureXmlRpcClient.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/secure/SecurityConstants.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/secure/SecurityTool.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/secure/class-use/SecureWebServer.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/secure/class-use/SecureXmlRpcClient.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/secure/class-use/SecurityConstants.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/secure/class-use/SecurityTool.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/secure/package-frame.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/secure/package-summary.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/secure/package-tree.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/secure/package-use.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/util/DateTool.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/util/class-use/DateTool.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/util/package-frame.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/util/package-summary.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/util/package-tree.html
+share/doc/java-xmlrpc/org/apache/xmlrpc/util/package-use.html
+share/doc/java-xmlrpc/overview-frame.html
+share/doc/java-xmlrpc/overview-summary.html
+share/doc/java-xmlrpc/overview-tree.html
+share/doc/java-xmlrpc/package-list
+share/doc/java-xmlrpc/packages.html
+share/doc/java-xmlrpc/serialized-form.html
+share/doc/java-xmlrpc/stylesheet.css
+@dirrm share/doc/java-xmlrpc/org/apache/xmlrpc/util/class-use
+@dirrm share/doc/java-xmlrpc/org/apache/xmlrpc/util
+@dirrm share/doc/java-xmlrpc/org/apache/xmlrpc/secure/class-use
+@dirrm share/doc/java-xmlrpc/org/apache/xmlrpc/secure
+@dirrm share/doc/java-xmlrpc/org/apache/xmlrpc/fesi/class-use
+@dirrm share/doc/java-xmlrpc/org/apache/xmlrpc/fesi
+@dirrm share/doc/java-xmlrpc/org/apache/xmlrpc/class-use
+@dirrm share/doc/java-xmlrpc/org/apache/xmlrpc/applet/class-use
+@dirrm share/doc/java-xmlrpc/org/apache/xmlrpc/applet
+@dirrm share/doc/java-xmlrpc/org/apache/xmlrpc
+@dirrm share/doc/java-xmlrpc/org/apache
+@dirrm share/doc/java-xmlrpc/org
+@dirrm share/doc/java-xmlrpc
