@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.965 2004/02/15 22:23:52 minskim Exp $
-# $NetBSD: Makefile,v 1.965 2004/02/15 22:23:52 minskim Exp $
+# $Id: Makefile,v 1.966 2004/02/15 23:20:40 poppnk Exp $
+# $NetBSD: Makefile,v 1.966 2004/02/15 23:20:40 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -243,6 +243,7 @@ SUBDIR+=	ike-scan
 SUBDIR+=	ile
 SUBDIR+=	ilohamail
 SUBDIR+=	imhangul_status_applet
+SUBDIR+=	imposter
 SUBDIR+=	interbase-docs
 SUBDIR+=	interchange
 SUBDIR+=	ipgrab
