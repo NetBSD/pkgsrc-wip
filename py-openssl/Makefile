@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/12/27 23:12:59 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/27 23:20:40 minskim Exp $
 # 
 
 DISTNAME=	pyOpenSSL-0.6
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyOpenSSL/openssl/}
+PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
 CATEGORIES=	security
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=pyopenssl/}
 
