@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/11 17:23:54 jeremy-c-reed Exp $
+bin/lorder
+man/man1/lorder.1

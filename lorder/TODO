@@ -1,0 +1,5 @@
+Maybe use REPLACE_INTERPRETER, but probably the /bin/sh is fine.
+
+Maybe this package is not needed
+see my email at
+ http://mail-index.netbsd.org/tech-pkg/2003/10/07/0024.html
