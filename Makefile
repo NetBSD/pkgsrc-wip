@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1657 2005/02/16 00:09:10 airhead Exp $
-# $NetBSD: Makefile,v 1.1657 2005/02/16 00:09:10 airhead Exp $
+# $Id: Makefile,v 1.1658 2005/02/19 15:30:34 chriswareham Exp $
+# $NetBSD: Makefile,v 1.1658 2005/02/19 15:30:34 chriswareham Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -266,6 +266,7 @@ SUBDIR+=	gov2
 SUBDIR+=	gps
 SUBDIR+=	grip
 SUBDIR+=	grisbi
+SUBDIR+=	gsoap
 SUBDIR+=	gstat
 SUBDIR+=	gtick
 SUBDIR+=	gtk-engines-thinice
