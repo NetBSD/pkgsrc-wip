@@ -1,3 +1,5 @@
-Apply : Subject: Re: 24219: Lua5 must install bin2c (to compile external modules)
+- Install files/XXX into correct directory.
+- Modify files/XXX to get the correct libpath.
+- Question...install the rest of .lua files (http,etc.)
 
-Compiled properly...but I need luasocket.lua...refine a little bt more.
+- The correct path must be : ${PREFIX}/share/lua50/

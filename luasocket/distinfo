@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/24 23:56:42 poppnk Exp $
+$NetBSD: distinfo,v 1.1.1.2 2004/01/26 08:45:44 poppnk Exp $
 
 SHA1 (luasocket-2.0-alpha.tar.gz) = 8e6ca9f11b1d582293a1f99d24a9e800f39f35f1
 Size (luasocket-2.0-alpha.tar.gz) = 51194 bytes
-SHA1 (patch-aa) = b553b557d2034c8cde41a321e07acd23ea133502
+SHA1 (patch-aa) = c26995235d4f041868ea5f2a17d7870306828310
