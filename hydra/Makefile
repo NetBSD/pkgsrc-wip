@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/05/22 14:43:42 adrian_p Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/19 20:50:05 adrian_p Exp $
 #
 
-DISTNAME=	hydra-4.0-src
-PKGNAME=	hydra-4.0
-WRKSRC=		${WRKDIR}/${PKGNAME}
+DISTNAME=	hydra-4.3-src
+PKGNAME=	hydra-4.3
+WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	http://www.thc.org/releases/
 
