@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/03/24 22:44:55 marc Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/03/26 15:29:46 marc Exp $
 #
 
 .if !defined(GTK_SHARP_BUILDLINK2_MK)
@@ -6,7 +6,7 @@ GTK_SHARP_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gtk-sharp
 BUILDLINK_DEPENDS.gtk-sharp?=		gtk-sharp>=0.8
-BUILDLINK_PKGSRCDIR.gtk-sharp?=		../../x11/gtk-sharp
+BUILDLINK_PKGSRCDIR.gtk-sharp?=		../../wip/gtk-sharp
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gtk-sharp=gtk-sharp
 BUILDLINK_PREFIX.gtk-sharp_DEFAULT=	${LOCALBASE}

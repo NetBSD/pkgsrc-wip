@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/03/25 18:36:59 marc Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/03/26 15:29:47 marc Exp $
 #
 # This Makefile fragment is included by packages that use gtkglarea2.
 #
@@ -10,7 +10,7 @@ GTKGLAREA2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gtkglarea2
 BUILDLINK_DEPENDS.gtkglarea2?=		gtkglarea2>=1.99.0
-BUILDLINK_PKGSRCDIR.gtkglarea2?=		../../x11/gtkglarea2
+BUILDLINK_PKGSRCDIR.gtkglarea2?=		../../wip/gtkglarea2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gtkglarea2=gtkglarea2
 BUILDLINK_PREFIX.gtkglarea2_DEFAULT=	${LOCALBASE}
