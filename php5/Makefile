@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2004/05/10 20:02:25 poppnk Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/10 21:21:31 poppnk Exp $
 #
 
 PKGNAME=	php-${PHP5_VERSION}
-CATEGORIES+=	lang
+CATEGORIES=	www
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.php.net/
 COMMENT=	PHP Hypertext Preprocessor version 5
 
 USE_BUILDLINK3=	YES
-USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
 
