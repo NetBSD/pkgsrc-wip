@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/06 23:05:21 marc Exp $
+# $NetBSD: Makefile,v 1.5 2005/02/04 14:26:55 thomasklausner Exp $
 #
 
 DISTNAME=		PyPE1.8.2
@@ -12,7 +12,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://pype.sourceforge.net/
 COMMENT=		Lightweight, but powerful editor for Python
 
-DEPENDS=	${PYPKGPREFIX}-wxWindows>=2.4.2.4:../../x11/py-wxWindows
+DEPENDS=	${PYPKGPREFIX}-wxWidgets>=2.4.2.4:../../x11/py-wxWidgets
 
 PYTHON_PATCH_SCRIPTS=   pype.py
 NO_BUILD=		# defined
