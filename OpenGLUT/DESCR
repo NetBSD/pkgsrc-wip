@@ -1,0 +1,11 @@
+OpenGLUT is an open source evolution of the GLUT API.  The goals
+include cleaning the API, fixing bugs, adding features, portability,
+and documenting the library.  OpenGLUT is prepared to break with
+GLUT compatibility in order to achieve its primary goals.
+
+The code is based on freeglut, with numerous bugfixes above and
+beyond that, and a few new features.  As such, it is fairly usable.
+On the other hand, there are major features to be added to the API,
+and plans to deprecate some obsolete, redundant, and inconsistant
+features that OpenGLUT inherited.  It is best to regard OpenGLUT
+as experimental, but seeking feedback.
