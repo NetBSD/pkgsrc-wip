@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1166 2004/04/05 04:32:01 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1166 2004/04/05 04:32:01 xtraeme Exp $
+# $Id: Makefile,v 1.1167 2004/04/05 04:58:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1167 2004/04/05 04:58:15 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -19,7 +19,6 @@ SUBDIR+=	acid
 SUBDIR+=	adodb
 SUBDIR+=	adtool
 SUBDIR+=	afterstep2
-SUBDIR+=	allegro
 SUBDIR+=	amap
 SUBDIR+=	amavisd-new
 SUBDIR+=	amsn
@@ -619,7 +618,6 @@ SUBDIR+=	qico
 SUBDIR+=	qinx
 SUBDIR+=	qn-x11
 SUBDIR+=	quagga-devel
-SUBDIR+=	raine
 SUBDIR+=	rar3
 SUBDIR+=	rc.subr
 SUBDIR+=	rcorder
