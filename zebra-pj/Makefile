@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/22 16:39:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/23 10:20:49 xtraeme Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 
 DISTNAME=	zebra-pj-20030428
@@ -49,8 +49,6 @@ CONFIGURE_ARGS+=	--disable-ripngd
 .endif
 
 PLIST_SRC+=		${PKGDIR}/PLIST
-
-INFO_FILES=		zebra.info
 
 # patches modify Makefile.am and configure.in
 pre-configure:
