@@ -1,9 +1,10 @@
-# $Id: Makefile,v 1.1598 2005/01/08 00:29:33 kristerw Exp $
-# $NetBSD: Makefile,v 1.1598 2005/01/08 00:29:33 kristerw Exp $
+# $Id: Makefile,v 1.1599 2005/01/08 05:58:27 rxg Exp $
+# $NetBSD: Makefile,v 1.1599 2005/01/08 05:58:27 rxg Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	4stAttack
+SUBDIR+=	Chinput
 SUBDIR+=	Coin
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
