@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/03/14 01:43:25 jcd Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/14 05:54:36 jcd Exp $
 
 DISTNAME=	amavisd-new-${VERSION}-${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
@@ -58,6 +58,8 @@ BUILD_DEFS+=	AMAVISDIR
 BUILD_DEFS+=	AMAVISQUARANTINE
 BUILD_DEFS+=	USE_MILTER
 
+RCD_SCRIPTS=	amavisd
+
 .if defined(USE_MILTER) && ${USE_MILTER} == "YES"
 
 GNU_CONFIGURE=  yes
@@ -83,8 +85,8 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 pre-build:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${SED}  -e "s|/usr/bin/perl|${PERL5}|" \
-		-e "s|/etc/amavisd.conf|${PKG_SYSCONFDIR}/amavisd.conf|" \
-		${WRKSRC}/amavisd > ${WRKDIR}/amavisd
+                -e "s|/etc/amavisd.conf|${PKG_SYSCONFDIR}/amavisd.conf|" \
+		${WRKSRC}/amavisd > ${WRKDIR}/amavisd.pl
 	${SED}  -e "s|%%AMAVISDIR%%|${AMAVISDIR}|g" \
 		-e "s|%%AMAVISUSER%%|${AMAVISUSER}|g" \
 		-e "s|%%AMAVISGROUP%%|${AMAVISGROUP}|g" \
@@ -96,17 +98,17 @@ pre-build:
 		-e 's|%%AMAVISDIR%%|${AMAVISDIR}|g' \
 		-e 's|%%AMAVISQUARANTINE%%|${AMAVISQUARANTINE}|g' \
 		-e 's|%%PREFIX%%|${PREFIX}|g' \
-		${FILESDIR}/amavisd.sh.tmpl > ${WRKDIR}/amavisd.sh
+		${FILESDIR}/amavisd.sh.tmpl > ${WRKDIR}/amavisd
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/amavisd ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKDIR}/amavisd.pl ${PREFIX}/sbin/amavisd
 .if defined(USE_MILTER) && ${USE_MILTER} == "YES"
 	${INSTALL_PROGRAM} ${WRKSRC}/helper-progs/amavis ${PREFIX}/sbin
 	${ECHO} "sbin/amavis" >> ${PLIST_SRC}
 	${INSTALL_PROGRAM} ${WRKSRC}/helper-progs/amavis-milter ${PREFIX}/sbin
 	${ECHO} "sbin/amavis-milter" >> ${PLIST_SRC}
 .endif
-	${INSTALL_SCRIPT} ${WRKDIR}/amavisd.sh ${PREFIX}/etc/rc.d
+	${INSTALL_SCRIPT} ${WRKDIR}/amavisd ${PREFIX}/etc/rc.d
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/amavisd-new
 	${INSTALL_DATA} ${WRKSRC}/AAAREADME.first ${PREFIX}/share/doc/amavisd-new
