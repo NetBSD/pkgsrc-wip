@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1669 2005/03/01 12:46:43 peterih Exp $
-# $NetBSD: Makefile,v 1.1669 2005/03/01 12:46:43 peterih Exp $
+# $Id: Makefile,v 1.1670 2005/03/02 17:27:56 dillo Exp $
+# $NetBSD: Makefile,v 1.1670 2005/03/02 17:27:56 dillo Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -264,6 +264,7 @@ SUBDIR+=	glade2-nognome
 SUBDIR+=	glibc
 SUBDIR+=	glide3
 SUBDIR+=	glimmerm
+SUBDIR+=	glkloader
 SUBDIR+=	glkterm
 SUBDIR+=	glulxe
 SUBDIR+=	gmc2mid
