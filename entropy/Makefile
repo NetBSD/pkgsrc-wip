@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/10/14 03:36:53 tvierling Exp $
+# $NetBSD: Makefile,v 1.20 2003/10/16 23:20:25 tvierling Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -14,20 +14,13 @@ COMMENT=		Anonymous peer-to-peer networking node (similar to Freenet)
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc
 
+GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 
-ENTROPY_VERSION=	0.5.7-343
+ENTROPY_VERSION=	0.5.7-344
 
-MAKE_FLAGS+=		QUIET=0
-MAKE_FLAGS+=		LIBEXPAT=-lexpat LIBZ=-lz
-MAKE_FLAGS+=		CC=${CC:Q} LD=${CC:Q} DEP=${CC:Q}
-
-.if ${MACHINE_ARCH} == "i386"
-MAKE_FLAGS+=		ARCH=X86
-.elif ${MACHINE_ARCH} == "powerpc"
-MAKE_FLAGS+=		ARCH=PPC
-.endif
+CONFIGURE_ARGS+=	--enable-verbose --disable-debug
 
 post-patch:
 	${SED} -e '/^# /!s/^#//' <${WRKSRC}/seed.txt-dist >${WRKSRC}/seed.txt
@@ -48,11 +41,9 @@ do-install:
 ENTROPY_STORE_TYPE?=	tree
 
 .if ${ENTROPY_STORE_TYPE} == "tree"
-MAKE_FLAGS+=		STORE_TYPE=1
+CONFIGURE_ARGS+=	--with-tree
 .elif ${ENTROPY_STORE_TYPE} == "mysql"
-MAKE_FLAGS+=		STORE_TYPE=2
-MAKE_FLAGS+=		INCMYSQL=${PREFIX}/include/mysql LIBMYSQL=-lmysqlclient
-LDFLAGS+=		${BUILDLINK_LDFLAGS.mysql-client}
+CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE}
 .include "../../databases/mysql-client/buildlink2.mk"
 .elif ${ENTROPY_STORE_TYPE} != "monolithic"
 .error unknown ENTROPY_STORE_TYPE: ${ENTROPY_STORE_TYPE}
