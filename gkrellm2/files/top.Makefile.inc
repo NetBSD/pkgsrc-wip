@@ -43,49 +43,49 @@ OSREV=		$(shell uname -r)
 # Isn't this ugly?
 
 ifeq ($(OPSYS),NetBSD)
-SYS_LIBS=	"-lkvm"
+SYS_LIBS=	-lkvm
 BINGROUP=	kmem
 else
  ifeq ($(OPSYS),OpenBSD)
-SYS_LIBS=	"-lkvm -pthread"
+SYS_LIBS=	-lkvm -pthread
 BINGROUP=	kmem
  else
   ifeq ($(OPSYS),FreeBSD)
 BINGROUP=	kmem
    ifeq ($(filter 2.%,$(OSREV)),)
-SYS_LIBS=	"-lkvm -ldevstat -lmd"
+SYS_LIBS=	-lkvm -ldevstat -lmd
    else
-SYS_LIBS=	"-lkvm -lmd"
+SYS_LIBS=	-lkvm -lmd
    endif
   else
    ifeq ($(OPSYS),Darwin)
-SYS_LIBS=	"-lkvm -lmd5 -framework IOKit"
-LINK_FLAGS+=	"-flat_namespace -undefined warning -prebind -Wl,-bind_at_load"
+SYS_LIBS=	-lkvm -lmd5 -framework IOKit
+LINK_FLAGS+=	-flat_namespace -undefined warning -prebind -Wl,-bind_at_load
 GTK_CONFIG=	gtk-config
 STRIP=
     ifeq ($(MODULE),src)
-CFLAGS+=	"-Ddlsym=dlsym_prepend_underscore"
+CFLAGS+=	-Ddlsym=dlsym_prepend_underscore
     endif
    else
     ifeq ($(OPSYS),Solaris)
 MSGFMT_OPT=	-v 
 CC?=		gcc
-CFLAGS+=	"-Wno-implicit-int"
-SYS_LIBS=	"-lkstat -lkvm -ldevinfo"
+CFLAGS+=	-Wno-implicit-int
+SYS_LIBS=	-lkstat -lkvm -ldevinfo
      ifeq ($(OSREV),5.8)
 LINK_FLAGS=
-SYS_LIBS+=	"-lsocket -lintl"
+SYS_LIBS+=	-lsocket -lintl
       ifeq ($(MODULE),src)
-SYS_LIBS+=	"-lresolv -lX11"
+SYS_LIBS+=	-lresolv -lX11
       else # Well, we don't really care about po
-SYS_LIBS+=	"-lnsl"
-CFLAGS+=	"-DSOLARIS_8"
+SYS_LIBS+=	-lnsl
+CFLAGS+=	-DSOLARIS_8
       endif
      else
       ifeq ($(MODULE),src)
-SYS_LIBS+=	"-lresolv"
+SYS_LIBS+=	-lresolv
       else
-SYS_LIBS+=	"-lsocket -lnsl"
+SYS_LIBS+=	-lsocket -lnsl
       endif
      endif
     endif
