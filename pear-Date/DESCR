@@ -1,4 +1,4 @@
-Generic classes for representation and manipulation of
+Generic PHP classes for representation and manipulation of
 dates, times and time zones without the need of timestamps,
 which is a huge limitation for php programs. Includes time zone data,
 time zone conversions and many date/time conversions.

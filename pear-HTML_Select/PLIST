@@ -1,3 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/01 12:54:06 adrian_p Exp $
-lib/php/.registry/html_select.reg
-lib/php/HTML/Select.php
+@comment $NetBSD: PLIST,v 1.2 2003/09/28 14:10:25 dolecek Exp $

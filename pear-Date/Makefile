@@ -1,15 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/01 12:51:03 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/28 14:10:25 dolecek Exp $
 
 DISTNAME=	Date-1.3
-PKGNAME=	pear-${DISTNAME}
-CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_PAIR_PACKAGE}
 
 MAINTAINER=	adrianp@stindustries.net
 HOMEPAGE= 	http://pear.php.net/package/Date
-COMMENT=	Date and Time Zone Classes
+COMMENT=	PHP Date and Time Zone Classes
 
-USE_BUILDLINK2=		YES
-
-.include "../../wip/php4/package.mk"
+.include "../../wip/php4/pear.mk"
 .include "../../mk/bsd.pkg.mk"
