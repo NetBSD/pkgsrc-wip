@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/08 17:03:53 daprice Exp $
+
+SHA1 (grass-5.0.3_src.tar.gz) = 74a58f906b74e8e443d0ec1a5b8bf42db73d17cd
+Size (grass-5.0.3_src.tar.gz) = 17503696 bytes
+SHA1 (patch-aa) = dfa4ddb41d3702735f9529d61d661b34c40a80ab
+SHA1 (patch-ab) = a3ece975a610cc86f3069bd29f22d3fac12b3e60
+SHA1 (patch-ac) = b79a96389cb69cfc178287c125667e29e2d0968d
+SHA1 (patch-ad) = 77d8331b2531f63d0e2f15797e462fc427069b42
+SHA1 (patch-ae) = 22df806aeecf358e7cdae06ef617cd91a2b0ee48
