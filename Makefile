@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.231 2003/06/06 09:24:51 takasan-tt Exp $
-# $NetBSD: Makefile,v 1.231 2003/06/06 09:24:51 takasan-tt Exp $
+# $Id: Makefile,v 1.232 2003/06/10 10:40:19 airhead Exp $
+# $NetBSD: Makefile,v 1.232 2003/06/10 10:40:19 airhead Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -38,6 +38,7 @@ SUBDIR+=	drweb
 SUBDIR+=	ed
 SUBDIR+=	emirror
 SUBDIR+=	ezbounce
+SUBDIR+=	elvis
 SUBDIR+=	fluxconf
 SUBDIR+=	frontpage
 SUBDIR+=	fuse
