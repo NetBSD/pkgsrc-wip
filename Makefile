@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.889 2004/01/16 15:21:22 pulahti Exp $
-# $NetBSD: Makefile,v 1.889 2004/01/16 15:21:22 pulahti Exp $
+# $Id: Makefile,v 1.890 2004/01/17 17:58:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.890 2004/01/17 17:58:15 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -115,7 +115,6 @@ SUBDIR+=	dfm
 SUBDIR+=	dicom3tools
 SUBDIR+=	directfb
 SUBDIR+=	directory-administrator
-SUBDIR+=	dirlist
 SUBDIR+=	distella
 SUBDIR+=	dmidecode
 SUBDIR+=	dnsmasq
@@ -195,9 +194,9 @@ SUBDIR+=	glide3
 SUBDIR+=	glkterm
 SUBDIR+=	glulxe
 SUBDIR+=	gnats4
+SUBDIR+=	gnome-spell
 SUBDIR+=	gnome2-extras
 SUBDIR+=	gnome2-pkgview
-SUBDIR+=	gnome-spell
 SUBDIR+=	gnomeicu
 SUBDIR+=	gnucash-docs
 SUBDIR+=	gnumeric
@@ -233,7 +232,6 @@ SUBDIR+=	gurlchecker
 SUBDIR+=	gwc
 SUBDIR+=	hasciicam
 SUBDIR+=	hashcash
-SUBDIR+=	heimdal
 SUBDIR+=	honeyd
 SUBDIR+=	honeyd-arpd
 SUBDIR+=	host
@@ -359,6 +357,7 @@ SUBDIR+=	mingw-gcc
 SUBDIR+=	mingw-runtime-bin
 SUBDIR+=	mingw-w32api-bin
 SUBDIR+=	mini_httpd
+SUBDIR+=	minimalist
 SUBDIR+=	mit-krb5
 SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
@@ -446,12 +445,12 @@ SUBDIR+=	patchutils
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdns
 SUBDIR+=	pdq
+SUBDIR+=	pear-DIME
 SUBDIR+=	pear-HTTP_Request
-SUBDIR+=	pear-Net_DIME
-SUBDIR+=	pear-Net_URL       
 SUBDIR+=	pear-Mail_Mime
 SUBDIR+=	pear-Net_Socket
-SUBDIR+=	pear-SOAP          
+SUBDIR+=	pear-Net_URL
+SUBDIR+=	pear-SOAP
 SUBDIR+=	perl58
 SUBDIR+=	perl59
 SUBDIR+=	perltidy
@@ -491,6 +490,7 @@ SUBDIR+=	pointless
 SUBDIR+=	portaudio
 SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
+SUBDIR+=	postgresql-uniqueidentifier
 SUBDIR+=	ppp
 SUBDIR+=	prelude-lml
 SUBDIR+=	prelude-manager
@@ -524,9 +524,9 @@ SUBDIR+=	py-PythonDirector
 SUBDIR+=	py-Quotient
 SUBDIR+=	py-RXP
 SUBDIR+=	py-Reverend
+SUBDIR+=	py-SQLObject
 SUBDIR+=	py-SciPy
 SUBDIR+=	py-Soya
-SUBDIR+=	py-SQLObject
 SUBDIR+=	py-TTFQuery
 SUBDIR+=	py-albatross
 SUBDIR+=	py-ao
