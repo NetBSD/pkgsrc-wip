@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/17 14:45:24 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/17 15:12:19 minskim Exp $
 #
 
 DISTNAME=		chkrootkit
@@ -17,6 +17,21 @@ VERSION=		0.43
 DIST_SUBDIR=		${PKGNAME}
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		yes
+NO_CONFIGURE=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CFLAGS+=	-DSOLARIS2
+LDFLAGS+=	-lsocket
+.  if empty(CC_VERSION:Mgcc-*)
+MAKE_ENV+=	STATIC="-B static"
+.  else
+MAKE_ENV+=	STATIC="-static"
+.  endif
+.else
+MAKE_ENV+=	STATIC="-static"
+.endif
 
 INSTALLATION_DIRS+=	bin
 
