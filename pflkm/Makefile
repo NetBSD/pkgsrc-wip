@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/06/09 08:47:15 ppostma Exp $
+# $NetBSD: Makefile,v 1.8 2004/06/09 09:21:25 ppostma Exp $
 
 DISTNAME=		pf-lkm-20040607
 CATEGORIES=		security ipv6
@@ -10,8 +10,11 @@ COMMENT=		OpenBSD PF loadable kernel module for NetBSD
 
 ONLY_FOR_PLATFORM=	NetBSD-2.0*-*
 
+USE_PKGINSTALL=		yes
 USE_BUILDLINK3=		yes
 NO_CONFIGURE=		yes
+
+PKG_USERS=		_pflogd:nogroup:60:pflogd\\ pseudo-user:/var/empty:/sbin/nologin
 
 post-patch:
 .for f in sbin/pfctl/pfctl_parser.h usr.sbin/authpf/pathnames.h
@@ -26,6 +29,9 @@ pre-install:
 .endif
 .if !exists(${PREFIX}/include/net)
 	@${INSTALL_DATA_DIR} ${PREFIX}/include/net
+.endif
+.if !exists(/var/empty)
+	@${INSTALL_DATA_DIR} /var/empty
 .endif
 
 post-install:
