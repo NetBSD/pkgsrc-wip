@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/02 16:39:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/02 01:16:04 aolcarton Exp $
 
 DISTNAME=	t-gnus-6.17.2.00
 CATEGORIES=	mail
@@ -20,7 +20,7 @@ BUILD_TARGET=		all-ja
 INSTALL_TARGET=		install-ja
 
 USE_MAKEINFO=		YES
-INFO_FILES=		gnus message emacs-mime sieve gnus-ja message-ja
+INFO_FILES=		t-gnus t-message t-emacs-mime t-sieve t-gnus-ja t-message-ja
 
 # last template is ${_FOOTER_TMPL} which is just 'exit 0'.  but conveniently 
 # the pkgsrc graybeards have said INSTALL_SRC?=${INSTALL_TEMPLATES}.  insert 

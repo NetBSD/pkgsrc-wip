@@ -1,0 +1,100 @@
+$NetBSD: patch-aa,v 1.1 2005/01/02 01:16:04 aolcarton Exp $
+
+--- texi/Makefile.in.orig	2004-09-05 20:00:00.000000000 -0400
++++ texi/Makefile.in	2005-01-01 18:08:13.000000000 -0500
+@@ -19,24 +19,35 @@
+ INSTALL_DATA = @INSTALL_DATA@
+ SHELL = /bin/sh
+ PAPERTYPE=a4
+-INFO_DEPS=gnus message emacs-mime sieve
+-INFO_DEPS_JA=gnus-ja message-ja
+-INFO_DEPS_INFO=gnus.info message.info emacs-mime.info sieve.info
+-INFO_DEPS_JA_INFO=gnus-ja.info message-ja.info
++INFO_DEPS=t-gnus t-message t-emacs-mime t-sieve
++INFO_DEPS_JA=t-gnus-ja t-message-ja
++INFO_DEPS_INFO=t-gnus.info t-message.info t-emacs-mime.info t-sieve.info
++INFO_DEPS_JA_INFO=t-gnus-ja.info t-message-ja.info
++
++.for t in $(INFO_DEPS) $(INFO_DEPS_JA) t-gnus-faq t-gnus-faq-ja t-gnus-news
++${t}.texi: ${t:S/^t-//}.texi
++	awk \
++	       '/^@direntry/, /^@end direntry/ \
++			{ sub("^\\* [^ ][^ ]*: \\(", "&t-") } \
++		/^@setfilename [^ ]*$$/ \
++			{ sub("^@setfilename ", "@setfilename t-") } \
++		{ print }' \
++		< ${t:S/^t-//}.texi > ${t}.texi || rm ${t}.texi
++.endfor
+ 
+ all: $(INFO_DEPS)
+ all-info: $(INFO_DEPS_INFO)
+ 
+-gnus.info: gnus.texi gnus-faq.texi
+-message.info: message.texi
+-emacs-mime.info: emacs-mime.texi
+-sieve.info: sieve.texi
++t-gnus.info: t-gnus.texi t-gnus-faq.texi
++t-message.info: t-message.texi
++t-emacs-mime.info: t-emacs-mime.texi
++t-sieve.info: t-sieve.texi
+ 
+ ja: $(INFO_DEPS_JA)
+ ja-info: $(INFO_DEPS_JA_INFO)
+ 
+-gnus-ja.info: gnus-ja.texi gnus-faq-ja.texi
+-message-ja.info: message-ja.texi
++t-gnus-ja.info: t-gnus-ja.texi t-gnus-faq-ja.texi
++t-message-ja.info: t-message-ja.texi
+ 
+ most: texi2latex.elc latex latexps
+ 
+@@ -50,8 +61,8 @@
+ 
+ %.info: %.texi
+ 	@if test "x$(MAKEINFO)" = "xno" \
+-	  -o "$<" = "gnus-ja.texi" \
+-	  -o "$<" = "message-ja.texi"; then \
++	  -o "$<" = "t-gnus-ja.texi" \
++	  -o "$<" = "t-message-ja.texi"; then \
+ 	  echo "rm -f $@"; echo "$(EMACSINFO) $< t"; \
+ 	  rm -f $@; \
+ 	  $(EMACSINFO) $< t; \
+@@ -64,8 +75,8 @@
+ 
+ .texi:
+ 	@if test "x$(MAKEINFO)" = "xno" \
+-	  -o "$<" = "gnus-ja.texi" \
+-	  -o "$<" = "message-ja.texi"; then \
++	  -o "$<" = "t-gnus-ja.texi" \
++	  -o "$<" = "t-message-ja.texi"; then \
+ 	  echo "rm -f $@"; echo "$(EMACSINFO) $<"; \
+ 	  rm -f $@; \
+ 	  $(EMACSINFO) $<; \
+@@ -75,11 +86,11 @@
+ 	fi
+ 
+ # Files included in gnus.texi
+-gnus.texi: gnus-faq.texi gnus-news.texi
++t-gnus.texi: t-gnus-faq.texi t-gnus-news.texi
+ 
+ # FIXME: Target should be in parent directory.  A cvs commit script could
+ # automatically create it.
+-GNUS-NEWS:	gnus-news.texi
++GNUS-NEWS:	t-gnus-news.texi
+ 	$(EMACSCOMP) -l $(srcdir)/gnus-news.el -f batch-gnus-news $< $@
+ 
+ dvi: gnus.dvi message.dvi refcard.dvi emacs-mime.dvi sieve.dvi
+@@ -243,13 +254,6 @@
+ 	    else : ; fi; \
+ 	  done; \
+ 	done
+-	@if $(SHELL) -c 'install-info --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
+-	  list='$(INFO_DEPS)'; \
+-	  for file in $$list; do \
+-	    echo " install-info --info-dir=$(infodir) $(infodir)/$$file";\
+-	    install-info --info-dir=$(infodir) $(infodir)/$$file || :;\
+-	  done; \
+-	else : ; fi
+ 
+ uninstall:
+ 	@list='$(INFO_DEPS)'; \

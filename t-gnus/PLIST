@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/14 17:37:24 aolcarton Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/02 01:16:04 aolcarton Exp $
 @comment ${EMACS_LISPPREFIX}/${PKGBASE}_hidden-native-gnus.tar.gz
 ${EMACS_LISPPREFIX}/gnus/binhex.el
 ${EMACS_LISPPREFIX}/gnus/binhex.elc
@@ -280,50 +280,3 @@ ${EMACS_LISPPREFIX}/gnus/webmail.elc
 ${EMACS_LISPPREFIX}/gnus/yenc.el
 ${EMACS_LISPPREFIX}/gnus/yenc.elc
 @dirrm ${EMACS_LISPPREFIX}/gnus
-info/gnus
-info/gnus-1
-info/gnus-2
-info/gnus-3
-info/gnus-4
-info/gnus-5
-info/gnus-6
-info/gnus-7
-info/gnus-8
-info/gnus-9
-info/gnus-10
-info/gnus-11
-info/gnus-12
-info/gnus-13
-info/gnus-14
-info/gnus-15
-info/gnus-16
-info/gnus-17
-info/gnus-18
-info/gnus-19
-info/gnus-20
-info/gnus-21
-info/gnus-22
-info/gnus-23
-info/message
-info/message-1
-info/message-2
-info/emacs-mime
-info/emacs-mime-1
-info/emacs-mime-2
-info/sieve
-info/gnus-ja
-info/gnus-ja-1
-info/gnus-ja-2
-info/gnus-ja-3
-info/gnus-ja-4
-info/gnus-ja-5
-info/gnus-ja-6
-info/gnus-ja-7
-info/gnus-ja-8
-info/gnus-ja-9
-info/gnus-ja-10
-info/gnus-ja-11
-info/gnus-ja-12
-info/gnus-ja-13
-info/gnus-ja-14
-info/message-ja

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/14 17:37:24 aolcarton Exp $
+$NetBSD: distinfo,v 1.2 2005/01/02 01:16:04 aolcarton Exp $
 
 SHA1 (t-gnus-6.17.2.00.tar.gz) = ec6a923ed8e04a760048fc9f1bc1e0b82dc4f4a2
 Size (t-gnus-6.17.2.00.tar.gz) = 2890671 bytes
+SHA1 (patch-aa) = b7b8c456305d9d2c8e00082ad12ee6d647653f4e
