@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1694 2005/03/18 23:17:10 daprice Exp $
-# $NetBSD: Makefile,v 1.1694 2005/03/18 23:17:10 daprice Exp $
+# $Id: Makefile,v 1.1695 2005/03/18 23:46:38 daprice Exp $
+# $NetBSD: Makefile,v 1.1695 2005/03/18 23:46:38 daprice Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -586,6 +586,7 @@ SUBDIR+=	natali
 SUBDIR+=	navigatrix
 SUBDIR+=	ncbi
 SUBDIR+=	ncbi-bin
+SUBDIR+=	ncbi-c++-lib
 SUBDIR+=	ncbi-lib
 SUBDIR+=	ncc
 SUBDIR+=	ncps
