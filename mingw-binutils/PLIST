@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/29 18:16:29 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/02 02:03:04 mpasternak Exp $
 bin/${MINGWTARGET}-addr2line
 bin/${MINGWTARGET}-ar
 bin/${MINGWTARGET}-as
@@ -22,6 +22,7 @@ ${MINGWTARGET}/bin/ld
 ${MINGWTARGET}/bin/nm
 ${MINGWTARGET}/bin/ranlib
 ${MINGWTARGET}/bin/strip
+${MINGWTARGET}/bin/windres
 ${MINGWTARGET}/lib/ldscripts/i386pe.x
 ${MINGWTARGET}/lib/ldscripts/i386pe.xbn
 ${MINGWTARGET}/lib/ldscripts/i386pe.xn
