@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/31 07:44:15 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/09 18:33:24 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXmu-6.2.1
@@ -22,4 +22,6 @@ USE_GNU_TOOLS+=		make
 .include "../../wip/libX11/buildlink2.mk"
 .include "../../wip/xextensions/buildlink2.mk"
 .include "../../wip/xproto/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
