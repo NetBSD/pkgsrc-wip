@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/02 21:42:49 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/09 05:36:49 minskim Exp $
 #
 
 DISTNAME=	Data-TemporaryBag-0.04
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/search?dist=Data-TemporaryBag
 COMMENT=	Handle long size data using temporary file
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 
