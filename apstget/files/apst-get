@@ -83,7 +83,7 @@ do_usage() {
 	echo "  clean        - clean all build directories."
 	echo ""
 	echo "variables (environ|_etc_/apstget.conf):"
-	echo "  MAKE_TARGET,INTERACTIVE,QUITE"
+	echo "  MAKE_TARGET,INTERACTIVE,QUITE,IGNORE_ERRORS,UPDATE_METHOD,UPDATE_ARGS"
 }
 
 do_install() {
