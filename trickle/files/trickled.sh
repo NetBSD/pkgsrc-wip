@@ -1,6 +1,6 @@
 #!/bin/sh
-# $Id: trickled.sh,v 1.1 2003/06/05 00:00:43 xtraeme Exp $
-# $NetBSD: trickled.sh,v 1.1 2003/06/05 00:00:43 xtraeme Exp $
+# $Id: trickled.sh,v 1.2 2003/06/05 00:12:45 xtraeme Exp $
+# $NetBSD: trickled.sh,v 1.2 2003/06/05 00:12:45 xtraeme Exp $
 #
 
 # PROVIDE: trickled
@@ -10,7 +10,7 @@
 
 name="trickled"
 rcvar=$name
-command="@PREFIX@/sbin/${name}"
+command="@PREFIX@/bin/${name}"
 pidfile="/var/run/${name}.pid"
 required_files="@PKG_SYSCONFDIR@/trickled.conf"
 
