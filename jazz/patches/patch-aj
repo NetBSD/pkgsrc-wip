@@ -1,0 +1,34 @@
+$NetBSD: patch-aj,v 1.1.1.1 2003/05/21 14:57:50 bencollver Exp $
+
+--- src/audiodrv.h.orig	Fri Mar  3 11:03:57 2000
++++ src/audiodrv.h
+@@ -24,7 +24,29 @@
+ #include "config.h"
+ #ifdef AUDIO
+ 
++#ifdef __NetBSD__
++#include <sys/midiio.h>
++#include <soundcard.h>
++extern unsigned char _seqbuf[];
++extern int _seqbuflen;
++extern int _seqbufptr;
++#define _SEQ_NEEDBUF(len)		if ((_seqbufptr+(len)) > _seqbuflen) seqbuf_dump()
++#define _SEQ_ADVBUF(len)		_seqbufptr += len
++#define EV_SEQ_LOCAL			SEQ_LOCAL
++#define LOCL_STARTAUDIO			1
++#define _LOCAL_EVENT(ev, parm)		{_SEQ_NEEDBUF(8);\
++					_seqbuf[_seqbufptr+0] = EV_SEQ_LOCAL; \
++					_seqbuf[_seqbufptr+1] = (ev); \
++					_seqbuf[_seqbufptr+2] = 0;\
++					_seqbuf[_seqbufptr+3] = 0;\
++					*(unsigned int *)&_seqbuf[_seqbufptr+4] = (parm); \
++					_SEQ_ADVBUF(8);}
++#define SEQ_PLAYAUDIO(devmask)		_LOCAL_EVENT(LOCL_STARTAUDIO, devmask)
++#define SNDCTL_SEQ_GETTIME		SEQUENCER_GETTIME
++#define SNDCTL_TMR_TEMPO		SEQUENCER_TMR_TEMPO
++#else
+ #include <sys/soundcard.h>
++#endif
+ // in oss/free (from kernel 2.0.29) the following is not implemented
+ // but this works for oss/linux for 2.0.29
+ // #ifndef SNDCTL_SEQ_GETTIME

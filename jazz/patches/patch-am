@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1.1.1 2003/05/21 14:57:50 bencollver Exp $
+
+--- jazz.cfg.orig	Fri Mar  3 11:03:56 2000
++++ jazz.cfg
+@@ -51,7 +51,7 @@
+ #  1 = OSS /dev/music
+ #  2 = ALSA (experimental)
+ 
+-.driver 2
++.driver 1
+ 
+ # OSS-Device no, a value of -1 will pop up a dialog at startup
+ .device -1

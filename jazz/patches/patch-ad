@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/05/21 14:57:49 bencollver Exp $
+
+--- src/jazz.cpp.orig	Mon Mar 27 10:01:15 2000
++++ src/jazz.cpp
+@@ -39,8 +39,6 @@
+ 
+ #ifdef wx_msw
+ #include "winplay.h"
+-#else
+-#include "alsaplay.h"
+ #endif
+ 
+ #include "config.h"
+@@ -789,7 +787,7 @@
+ #ifdef wx_msw
+   HelpInstance = new tHelp( HelpPathList.FindValidPath("jazz.hlp") );
+ #else
+-  HelpInstance = new tHelp( HelpPathList.FindValidPath("jazz") );
++  HelpInstance = new tHelp( HelpPathList.FindValidPath("jazz.xlp") );
+ #endif
+ 
+   TheSong = new tSong;

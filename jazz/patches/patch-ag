@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2003/05/21 14:57:50 bencollver Exp $
+
+--- src/random.h.orig	Mon Mar 27 10:42:35 2000
++++ src/random.h
+@@ -35,7 +35,7 @@
+ #endif
+ 
+ // gcc > 2.7.2 does not have ACG anymore?
+-#define USE_ACG 1
++#define USE_ACG 0
+ 
+ #if USE_ACG
+ #include <ACG.h>	// random generator from libg++

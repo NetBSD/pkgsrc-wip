@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/21 14:57:49 bencollver Exp $
+bin/jazz
+share/jazz/jazz.cfg
+share/jazz/jazz.xlp
+share/jazz/ctrlnam.jzi
+share/jazz/e26.jzi
+share/jazz/e26voice.jzi
+share/jazz/gm.jzi
+share/jazz/gmdrmnam.jzi
+share/jazz/gmdrmset.jzi
+share/jazz/gmvoices.jzi
+share/jazz/gs.jzi
+share/jazz/gsdrmset.jzi
+share/jazz/gsvoices.jzi
+share/jazz/jv1000.jzi
+share/jazz/sc88pdrm.jzi
+share/jazz/sc88pro.jzi
+share/jazz/sc88pvoi.jzi
+share/jazz/xg.jzi
+share/jazz/xgdrmnam.jzi
+share/jazz/xgdrmset.jzi
+share/jazz/xgvoices.jzi
+@dirrm share/jazz

@@ -1,0 +1,60 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/05/21 14:57:49 bencollver Exp $
+
+--- Makefile.orig	Sun Nov 25 11:38:38 2001
++++ Makefile
+@@ -5,24 +5,25 @@
+ include make.env
+ 
+ 
++MAKE = gmake
+ DIRS = bitmaps src # doc midinetd linux
+ 
+ all:
+-	for i in $(DIRS); do (cd $$i && make all) || exit 1; done
++	for i in $(DIRS); do (cd $$i && $(MAKE) all) || exit 1; done
+ 	cp jazz.cfg src/.jazz
+ 	for i in $(JZI_FILES); do (cp conf/$$i src/$$i); done
+ 
+ 
+ win:
+-	cd doc && make win
++	cd doc && $(MAKE) win
+ 	cat jazz.cfg | scripts/unix2dos > mswin/jazz.cfg
+ 	for i in $(JZI_FILES); do (cat conf/$$i | scripts/unix2dos > mswin/$$i); done
+ 
+ clean:
+-	for i in $(DIRS); do (cd $$i && make clean GUI=$(GUI)) || exit 1; done
++	for i in $(DIRS); do (cd $$i && $(MAKE) clean GUI=$(GUI)) || exit 1; done
+ 
+ depend:
+-	(cd src; make depend GUI=$(GUI))
++	(cd src; $(MAKE) depend GUI=$(GUI))
+ 
+ install:
+ 	echo please use the install-jazz script
+@@ -45,11 +46,11 @@
+ 	cp -r $(SRCDIST) $(BINDIST)
+ 	-cd $(BINDIST) && find . -name CVS -exec rm -rf {} \;
+ 	mv $(BINDIST)/src/jazz.mid $(BINDIST)/.
+-	cd $(BINDIST) && make GUI=$(GUI) LFLAGS="-static $(LFLAGS)"
++	cd $(BINDIST) && $(MAKE) GUI=$(GUI) LFLAGS="-static $(LFLAGS)"
+ 	strip $(BINDIST)/src/$(GUI)/jazz
+ 	cd $(BINDIST) && mv src/$(GUI)/jazz .
+-	cd $(BINDIST)/midinetd && make clean
+-	cd $(BINDIST)/doc && make dist
++	cd $(BINDIST)/midinetd && $(MAKE) clean
++	cd $(BINDIST)/doc && $(MAKE) dist
+ 	cd $(BINDIST) && rm -rf itsopen
+ 	cd $(BINDIST) && rm -rf src vc5 bitmaps mswin Makefile make.env
+ 	cd $(BINDIST) && chmod 666 jazz.cfg
+@@ -60,8 +61,8 @@
+ dist: 
+ 	rm -rf $(TMPDIR)/jazz*
+ 	cp make.env Makefile $(TMPDIR)
+-	cd $(TMPDIR) && make $(SRCDIST).tar.gz
+-	cd $(TMPDIR) && make $(BINDIST).tar.gz
++	cd $(TMPDIR) && $(MAKE) $(SRCDIST).tar.gz
++	cd $(TMPDIR) && $(MAKE) $(BINDIST).tar.gz
+ 
+ tag:
+ 	perl -i.bak scripts/version.pl \"$(REL)\" src/about.h
