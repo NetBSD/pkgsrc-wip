@@ -1,0 +1,11 @@
+Py2Play is a network game engine written in Python, and it rests on a Peer
+To Peer model (ala Napster) and not a client-server one, as it is usually
+done.
+
+Peer To Peer presents some avantages, and drawbacks too, which will be
+detailed in a future article on this subject (let me the time to write it !).
+
+Py2Play can be used for about any game, even if it has been designed at the
+origin with massive online games in mind. It interfaces well with Soya3D but
+can be used separately too. The only limitation is that each player must
+play a single character.
