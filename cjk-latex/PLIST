@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/18 09:40:00 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/09 14:24:12 hubertf Exp $
 bin/bg5+latex
 bin/bg5conv
 bin/bg5latex
@@ -14,8 +14,6 @@ bin/hbf2gf
 bin/pinyin
 bin/sjisconv
 bin/sjislatex
-bin/ttf2pk
-bin/ttf2tfm
 man/man1/bg5conv.1
 man/man1/cef5conv.1
 man/man1/cefconv.1
@@ -23,8 +21,6 @@ man/man1/cefsconv.1
 man/man1/extconv.1
 man/man1/hbf2gf.1
 man/man1/sjisconv.1
-man/man1/ttf2pk.1
-man/man1/ttf2tfm.1
 share/doc/cjk-latex/CEF.doc
 share/doc/cjk-latex/CJK.doc
 share/doc/cjk-latex/COPYING
@@ -62,6 +58,7 @@ share/examples/cjk-latex/CJKbabel.tex
 share/examples/cjk-latex/GB.tex
 share/examples/cjk-latex/JIS.tex
 share/examples/cjk-latex/KS.tex
+share/examples/cjk-latex/README
 share/examples/cjk-latex/SJIS.tex
 share/examples/cjk-latex/UTF8.tex
 share/examples/cjk-latex/muletest.tex
@@ -91,6 +88,7 @@ share/texmf/tex/latex/CJK/Bg5/Bg5.chr
 share/texmf/tex/latex/CJK/Bg5/Bg5.cpx
 share/texmf/tex/latex/CJK/Bg5/Bg5.enc
 share/texmf/tex/latex/CJK/Bg5/c00bsmi.fd
+share/texmf/tex/latex/CJK/Bg5/c00bsmi.fdv
 share/texmf/tex/latex/CJK/Bg5/c00bsmir.fd
 share/texmf/tex/latex/CJK/Bg5/c00cns.fd
 share/texmf/tex/latex/CJK/Bg5/c00fs.fd
@@ -120,6 +118,7 @@ share/texmf/tex/latex/CJK/GB/GB.cap
 share/texmf/tex/latex/CJK/GB/GB.cpx
 share/texmf/tex/latex/CJK/GB/c10fs.fd
 share/texmf/tex/latex/CJK/GB/c10gbsn.fd
+share/texmf/tex/latex/CJK/GB/c10gbsn.fdv
 share/texmf/tex/latex/CJK/GB/c10kai.fd
 share/texmf/tex/latex/CJK/GB/c10song.fd
 share/texmf/tex/latex/CJK/GB/c11song.fd
@@ -297,21 +296,6 @@ share/texmf/tex/latex/CJK/thai/c90dbss.fd
 share/texmf/tex/latex/CJK/thai/c90enc.def
 share/texmf/tex/latex/CJK/thai/c90nrsr.fd
 share/texmf/tex/latex/CJK/thai/thaicjk.ldf
-share/texmf/ttf2pk/Big5.sfd
-share/texmf/ttf2pk/ET5.enc
-share/texmf/ttf2pk/EUC.sfd
-share/texmf/ttf2pk/SJIS.sfd
-share/texmf/ttf2pk/T1-WGL4.enc
-share/texmf/ttf2pk/UBg5plus.sfd
-share/texmf/ttf2pk/UBig5.sfd
-share/texmf/ttf2pk/UGB.sfd
-share/texmf/ttf2pk/UGBK.sfd
-share/texmf/ttf2pk/UJIS.sfd
-share/texmf/ttf2pk/UKS.sfd
-share/texmf/ttf2pk/Unicode.sfd
-share/texmf/ttf2pk/VPS.rpl
-share/texmf/ttf2pk/ttfonts.map
-@dirrm share/texmf/ttf2pk
 @dirrm share/texmf/tex/latex/CJK/thai
 @dirrm share/texmf/tex/latex/CJK/mule
 @dirrm share/texmf/tex/latex/CJK/UTF8
