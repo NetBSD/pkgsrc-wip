@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/26 18:31:48 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2004/01/18 08:50:43 minskim Exp $
 
 SHA1 (PyBabelPhish-2.0_All_Platforms.tar.bz2) = e1371f8010823fa3904efeb24f3d54f3d6f4feaf
 Size (PyBabelPhish-2.0_All_Platforms.tar.bz2) = 62159 bytes
+SHA1 (patch-aa) = faaf652b388bac2e080ec52af69cc782ad47eac5
