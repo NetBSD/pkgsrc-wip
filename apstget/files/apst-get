@@ -20,6 +20,7 @@ fi
 # IGNORE_ERRORS="0"   # Don't stop on failed build
 # UPDATE_METHOD="cvs" # cvsync|cvs|sup|cvsup
 # UPDATE_ARGS=""      # UPDATE_METHOD flags
+# GET_FIRST="0"       # Always get first pkg on dup packages found
 
 #----->8--------------#
 PREFIX=_pfx_
@@ -39,6 +40,9 @@ if [ "${IGNORE_ERRORS}" = "" ]; then
 fi
 if [ "${UPDATE_METHOD}" = "" ]; then
 	UPDATE_METHOD="cvs"
+fi
+if [ "${GET_FIRST}" = "" ]; then
+	GET_FIRST="0"
 fi
 if [ "${UPDATE_METHOD}" = "cvs" ]; then
 	if [ "${UPDATE_ARGS}" = "" ]; then
@@ -83,7 +87,8 @@ do_usage() {
 	echo "  clean        - clean all build directories."
 	echo ""
 	echo "variables (environ|_etc_/apstget.conf):"
-	echo "  MAKE_TARGET,INTERACTIVE,QUITE,IGNORE_ERRORS,UPDATE_METHOD,UPDATE_ARGS"
+	echo "  MAKE_TARGET, INTERACTIVE, QUITE, IGNORE_ERRORS"
+	echo "  UPDATE_METHOD, UPDATE_ARGS, GET_FIRST"
 }
 
 do_install() {
@@ -95,8 +100,17 @@ do_install() {
 	else
 		PKG=`echo $PKG | awk -F / '{ print $2 }'`
 	fi
+
+	if [ "${GET_FIRST}" = "1" ]; then
+		DIR=`echo ${DIR} | awk '{print $1}'`
+	fi
 	if [ ! -e "${PKGSRC_DIR}/${DIR}" ]; then
-	echo "==> Error! The package $PKG was not found!"
+		if [ "`echo ${DIR}|awk '{print $2}'`" = "" ]; then
+			echo "==> Error! The package $PKG was not found!"
+		else
+			echo "==> ${PKG} is in more than one category. Specify it:"
+			echo "==> Found at: `echo ${DIR}`"
+		fi
 	else
 	STAT="`echo $DIR | ${PKGCHK} -C /dev/stdin -c`"
 	if [ "${STAT}" = "" ]; then
@@ -174,7 +188,7 @@ do_remove() {
 		LIST="`pkg_delete -n ${PKG}`"
 		DEIN="`echo ${LIST} | grep DEINSTALL`"
 
-		pkg_delete -n ${PKG} | grep -v DEINSTALL
+		pkg_delete -n ${PKG} | grep -v DEINSTALL | grep delete
 		echo ""
 		if [ ! "${DEIN}" = "" ]; then
 		echo "==> Use 'pkg_info -k ${PKG} | more' to see the DEINSTALL script"
