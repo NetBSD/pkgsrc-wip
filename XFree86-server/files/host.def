@@ -1,0 +1,56 @@
+
+/*
+ * XFree86 packages for pkgsrc system
+ *
+ * $Id: host.def,v 1.1.1.1 2003/07/23 20:35:19 xtraeme Exp $
+ *
+ */
+
+#define ProjectRoot PREFIX
+
+#define NothingOutsideProjectRoot YES
+#define InstallXserverSetUID YES
+#define HasGlide3 YES
+
+#define BuildServer YES
+#define LibInstallBuild YES
+#define ModInstall YES
+#define XF86Server YES
+#define BuildServersOnly YES
+#define BuildGLXLibrary YES
+#define BuildXFree86ConfigTools YES
+#define UseInstalledPrograms YES
+#define StandardIncludes -IBLNK/include
+
+/* Don't build with SecureRPC, we need to fix this ... */
+
+#if defined(NetBSDArchitecture)
+# define HasSecureRPC NO
+#endif
+
+/* DRI/DRM Support only in FreeBSD/Linux at this moment ... 
+
+#define BuildXF86DRIDriverSupport YES
+
+#if defined(FreeBSDArchitecture) || defined(LinuxArchitecture)
+# define BuildXF86DRI YES
+# define BuildXF86DRM YES
+# define HasSecureRPC YES
+#endif
+
+*/
+
+#if defined(i386Architecture)
+# define XF86CardDrivers	mga glint nv tga s3 s3virge sis rendition \
+				neomagic i740 tdfx savage \
+				cirrus vmware tseng trident chips apm \
+				i128 nsc ati i810 ark cyrix siliconmotion \
+				vesa vga
+#elif defined(ia64Architecture)
+# define XF86CardDrivers	mga nv tdfx glint ati vga
+#elif defined(AlphaArchitecture)
+# define XF86CardDrivers	mga glint nv tga s3 s3virge rendition \
+				tdfx savage cirrus ati siliconmotion vga
+#elif defined(Sparc64Architecture)
+# define XF86CardDrivers	nv ati sunffb
+#endif
