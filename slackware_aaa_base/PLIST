@@ -1,4 +1,7 @@
 ${EMULSUBDIR}/etc/slackware-version
+${EMULSUBDIR}/etc/shells
+${EMULSUBDIR}/etc/passwd
+${EMULSUBDIR}/etc/group
 ${EMULSUBDIR}/var/spool/mail/root
 ${EMULSUBDIR}/bin/sh
 ${EMULSUBDIR}/usr/X11

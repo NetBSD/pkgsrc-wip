@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/12 12:42:34 mpasternak Exp $
-# $Id: Makefile,v 1.1.1.1 2004/03/12 12:42:34 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/14 20:11:31 mpasternak Exp $
+# $Id: Makefile,v 1.2 2004/03/14 20:11:31 mpasternak Exp $
 #
 
 DISTNAME=		slackware_aaa_base-9.1.0
@@ -19,6 +19,9 @@ post-install:
 	${RM} -rf ${EMULDIR}/install
 	# slackware_bash won't install without this:
 	${TOUCH} ${EMULDIR}/etc/shells
+	# bootstrap-pkgsrc and other stuff need this:
+	${ECHO} "root:*:0:0:Charlie &:/root:/bin/bash" > ${EMULDIR}/etc/passwd	
+	${ECHO} "root:*:0:root" > ${EMULDIR}/etc/group
 
 .include "../../wip/slackware_compat/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
