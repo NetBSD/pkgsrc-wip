@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/30 10:38:27 algernon Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/09/30 13:32:00 algernon Exp $
 etc/rc.d/thy
 share/thy/samples/http301.html
 share/thy/samples/http302.html
@@ -17,9 +17,7 @@ share/thy/samples/http505.html
 share/thy/samples/thy.conf
 @dirrm share/thy/samples
 @dirrm share/thy
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/thy.info
 info/thy.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/thy.info
 man/man8/thy.8
 man/man7/thy-auth.7
 sbin/thy
