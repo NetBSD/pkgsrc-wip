@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2004/10/26 23:09:52 ppostma Exp $
+# $NetBSD: builtin.mk,v 1.4 2005/01/11 20:49:40 ppostma Exp $
 
 _LIBPCAP_PKGSRC_PKGNAME=	libpcap-0.8.3
 _LIBPCAP_PCAP_H=		/usr/include/pcap.h
@@ -8,6 +8,8 @@ IS_BUILTIN.libpcap=	no
 .  if exists(${_LIBPCAP_PCAP_H})
 IS_BUILTIN.libpcap=	yes
 
+# libpcap>=0.8.3: MODE_MON added
+_PCAP_083!=		${GREP} -c MODE_MON ${_LIBPCAP_PCAP_H} || ${TRUE}
 # libpcap>=0.8.1: pcap_get_selectable_fd added
 _PCAP_081!=		${GREP} -c pcap_get_selectable_fd ${_LIBPCAP_PCAP_H} || ${TRUE}
 # libpcap>=0.8.0: pcap_datalink_val_to_description added
@@ -19,7 +21,9 @@ _PCAP_060!=		${GREP} -c pcap_freecode.struct.bpf_program ${_LIBPCAP_PCAP_H} || $
 # libpcap>=0.5.0: pcap_compile_nopcap added
 _PCAP_050!=		${GREP} -c pcap_compile_nopcap ${_LIBPCAP_PCAP_H} || ${TRUE}
 
-.if ${_PCAP_081} == "1"
+.if ${_PCAP_083} == "1"
+BUILTIN_PKG.libpcap=	libpcap-0.8.3
+.elif ${_PCAP_081} == "1"
 BUILTIN_PKG.libpcap=	libpcap-0.8.1
 .elif ${_PCAP_080} == "1"
 BUILTIN_PKG.libpcap=	libpcap-0.8.0
