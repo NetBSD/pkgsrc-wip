@@ -1,11 +1,11 @@
-=========================================================
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2003/09/06 12:03:45 cjep Exp $
 
-	Dont forget to put boost headers in your compilers
-	search path. Here is and example:
+Don't forget to put boost headers in your compiler's search path. 
+Here is an example:
 	
-		g++ -I${PREFIX}/include example.cpp
+	g++ -I${PREFIX}/include example.cpp
 		
-	It is adviced that you use gcc3 when using boost
-	libraries.
+It is advised that you use gcc3 when using boost libraries.
 	
-=========================================================
+===========================================================================
