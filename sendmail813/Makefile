@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/27 10:27:24 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/27 16:32:31 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -9,6 +9,12 @@ CONFLICTS+=	postfix-[0-9]*
 
 MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+
+SUBST_CLASSES=		paths
+SUBST_STAGE.paths=	post-build
+SUBST_FILES.paths=	${WRKDIR}/mailer.conf
+SUBST_SED.paths=	-e "s|@@PREFIX@@|${PREFIX}|g"
+SUBST_MESSAGE.paths=	Fixing paths.
 
 .if ${OPSYS} == "SunOS"
 USE_DB2?=	YES
@@ -71,10 +77,9 @@ post-patch: make-sendmail-siteconfig
 
 do-build:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
+	@${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 post-build:
-	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
-		<${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.sendmail
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
 .if ${USE_DB2} == YES
@@ -92,8 +97,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sendmail
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sendmail
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sendmail
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf.sendmail \
-		${PREFIX}/share/examples/sendmail/mailer.conf
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
+		${PREFIX}/share/examples/sendmail/
 	cd ${WRKSRC}/cf && ${PAX} -rw -pp -pm . ${PREFIX}/share/sendmail
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/sendmail
 
