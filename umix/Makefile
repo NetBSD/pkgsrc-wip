@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/25 02:33:47 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/17 02:56:53 blef Exp $
 #
 
 DISTNAME=	umix-1.0
@@ -15,7 +15,6 @@ USE_LIBTOOL=	YES
 AUTOMAKE_REQD=          1.4
 GNU_CONFIGURE=          yes
 USE_GNU_TOOLS+=		make
-#LIBTOOL_OVERRIDE=      ${WRKSRC}/libtool
 
 PLIST_SUBST+=           DISTNAME=${DISTNAME}
 

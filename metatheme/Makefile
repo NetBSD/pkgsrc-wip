@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:32:45 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/17 02:56:19 blef Exp $
 #
 
 DISTNAME=		metatheme-0.9.7
@@ -17,7 +17,6 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 BUILD_USES_MSGFMT=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
 .include "../../textproc/intltool/buildlink2.mk"

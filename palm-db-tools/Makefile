@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/25 02:32:55 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/17 02:56:30 blef Exp $
 #
 
 DISTNAME=	palm-db-tools-0_3_4
@@ -14,7 +14,6 @@ USE_GNU_TOOLS+=	make
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
-LIBTOOL_OVERRIDE=${WRKSRC}/libtool
 
 GNU_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	${WRKSRC}/configure

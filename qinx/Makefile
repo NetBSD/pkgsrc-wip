@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/25 02:33:21 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/17 02:56:46 blef Exp $
 #
 
 DISTNAME=	qinx-0.3
@@ -14,8 +14,6 @@ USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 

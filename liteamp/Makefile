@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/15 21:25:46 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/17 02:56:04 blef Exp $
 
 DISTNAME=	liteamp-0.2.4.1
 CATEGORIES=	audio
@@ -15,7 +15,6 @@ USE_PKGLOCALEDIR=	yes
 USE_PERL5=		build
 
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	libtool
 
 .include "../../audio/libao/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"

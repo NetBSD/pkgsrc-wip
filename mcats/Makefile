@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:32:44 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/17 02:56:18 blef Exp $
 #
 
 DISTNAME=	mcats-0.1.0
@@ -12,6 +12,5 @@ COMMENT=	Catalog converter
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.pkg.mk"

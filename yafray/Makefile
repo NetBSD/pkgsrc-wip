@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/02 02:31:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/17 02:56:57 blef Exp $
 #
 
 DISTNAME=	yafray-0.0.4
@@ -13,8 +13,6 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_GCC_SHLIB=		yes
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 YAFRAYDIR=		${PREFIX}/share/yafray/
 DOCDIR=			${PREFIX}/share/doc/yafray

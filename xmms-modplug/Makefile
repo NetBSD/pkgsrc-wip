@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/30 20:03:01 cjep Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/17 02:56:56 blef Exp $
 #
 
 DISTNAME=		modplugxmms-2.05
@@ -17,8 +17,7 @@ USE_X11=		yes
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool-disable-static
+SHLIBTOOL_OVERRIDE=	libtool-disable-static
 
 CFLAGS+=		-DDEVICE_NAME="\"\\\"${DEVOSSSOUND}\\\"\""
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:42 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/17 02:56:52 blef Exp $
 
 DISTNAME=       superkaramba-0.33
 CATEGORIES=     x11 misc
@@ -13,7 +13,6 @@ USE_BUILDLINK2= YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-pythondir=${PREFIX}
 USE_LIBTOOL=	yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PYTHON_VERSIONS_ACCEPTED=	23 23pth
 

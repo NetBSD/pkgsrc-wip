@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/20 16:18:54 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/17 02:56:48 blef Exp $
 #
 
 DISTNAME=		rekall-2.2.0-beta0
@@ -14,7 +14,6 @@ COMMENT=		KDE database frontend
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV=		"PYTHONBIN=${PYTHONBIN}"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/26 20:30:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/17 02:56:53 blef Exp $
 #
 
 DISTNAME=	totem-0.95.1
@@ -18,8 +18,6 @@ GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 GCONF2_SCHEMAS=		totem-video-thumbnail.schemas
 GCONF2_SCHEMAS+=	totem.schemas

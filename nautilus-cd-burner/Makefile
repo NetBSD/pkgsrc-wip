@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:32:50 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/17 02:56:28 blef Exp $
 #
 
 DISTNAME=	nautilus-cd-burner-0.5.3
@@ -21,8 +21,6 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/09 02:04:46 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/17 02:56:47 blef Exp $
 
 DISTNAME=	qnx11__-1.2.x
 PKGNAME=	qn-x11-0.1
@@ -14,8 +14,6 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

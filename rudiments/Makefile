@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/13 20:09:16 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/17 02:56:49 blef Exp $
 #
 
 DISTNAME=		rudiments-0.25.1
@@ -14,7 +14,5 @@ USE_BUILDLINK2=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.pkg.mk"
