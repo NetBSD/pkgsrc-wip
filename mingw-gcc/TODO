@@ -1,7 +1,6 @@
-$Id: TODO,v 1.1 2003/12/15 15:23:37 mpasternak Exp $
+$Id: TODO,v 1.2 2003/12/15 19:19:28 mpasternak Exp $
 
-1) objc is not built
-2) g++ is not(?) built
-3) verify if PLIST is okay
+1) verify if PLIST is okay
+2) verify objc (is it built? is it installed?)
 
 	-- dotz@irc.pl
