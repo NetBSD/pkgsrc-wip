@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/11 12:10:33 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/11 19:39:14 poppnk Exp $
 
 DISTNAME=	firefox-wrapper-0.1
 CATEGORIES=	www wip
@@ -20,7 +20,7 @@ do-extract:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/firefox ${PREFIX}/bin/firefox
-	${INSTALL_SCRIPT} ${WRKSRC}/firefox-wrapper.conf \
+	${INSTALL_DATA} ${WRKSRC}/firefox-wrapper.conf \
 		${PKG_SYSCONFDIR}/firefox-wrapper.conf
 
 .include "../../mk/bsd.prefs.mk"
