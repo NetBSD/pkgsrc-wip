@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/17 20:56:27 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/18 20:34:57 daprice Exp $
 #
 
 DISTNAME=		mapserver-4.4.1
@@ -56,7 +56,7 @@ do-install:
 .include "../../print/pdflib/buildlink3.mk"
 .include "../../www/php4/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
-.include "../../wip/gdal/buildlink3.mk"
+.include "../../wip/gdal-lib/buildlink3.mk"
 .include "../../wip/mk/postgis.buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
