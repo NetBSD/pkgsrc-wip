@@ -1,0 +1,25 @@
+--- src/Makefile.in.orig	Sat Sep 27 21:29:51 2003
++++ src/Makefile.in		Sat Sep 27 21:32:37 2003
+@@ -1,7 +1,7 @@
+-CC=gcc
++CC=@CC@
+ CFLAGS=@CFLAGS@
+ INC=-I../include
+-INSDIR=@prefix@/bin
++INSDIR=@prefix@/bin
+ LIBS=@LIBS@
+ OBJS=chksniff.o
+ 
+@@ -12,10 +12,10 @@
+ 		$(CC) $(CFLAGS) $(INC) -c chksniff.c
+ 
+ install:	
+-		cp chksniff $(INSDIR)
++		${INSTALL} -c -m 0755 chksniff $(INSDIR)
+ 
+ uninstall:	
+-		rm $(INSDIR)/chksniff
++		rm -f $(INSDIR)/chksniff
+ 
+ clean:		
+ 		rm -f *.o chksniff
