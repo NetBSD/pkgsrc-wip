@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2005/02/04 06:39:42 socrtp Exp $
+bin/php-fcgi
