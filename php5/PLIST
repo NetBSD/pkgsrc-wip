@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/07/16 16:05:51 ppostma Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/07/16 17:13:50 ppostma Exp $
 bin/pear
 bin/php
 bin/php-config
@@ -233,6 +233,8 @@ lib/php/data/PEAR/package.dtd
 lib/php/data/PEAR/template.spec
 lib/php/doc/Archive_Tar/docs/Archive_Tar.txt
 lib/php/pearcmd.php
+share/examples/php/php.ini-dist
+share/examples/php/php.ini-recommended
 @dirrm lib/php/doc/Archive_Tar/docs
 @dirrm lib/php/doc/Archive_Tar
 @dirrm lib/php/doc

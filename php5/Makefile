@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/07/16 16:03:57 ppostma Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/16 17:05:38 ppostma Exp $
 #
 
 PKGNAME=		php-${PHP5_VERSION}
@@ -15,9 +15,13 @@ LIBTOOL_OVERRIDE=	# empty
 
 .include "Makefile.common"
 
-EGDIR=			${PREFIX}/
-CONF_FILES=		${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
+EGDIR=			${PREFIX}/share/examples/php
 
+CONF_FILES=		${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=		${PREFIX}/${PHP_EXTENSION_DIR}
+
+post-install:
+	@${INSTALL_DATA_DIR} ${EGDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} php.ini-dist php.ini-recommended ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
