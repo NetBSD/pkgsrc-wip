@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/15 01:39:28 adrian_p Exp $
-share/adodb/adodb-connection.inc.php
+@comment $NetBSD: PLIST,v 1.3 2003/07/08 08:50:58 adrian_p Exp $
 share/adodb/adodb-cryptsession.php
 share/adodb/adodb-csvlib.inc.php
 share/adodb/adodb-datadict.inc.php
@@ -9,15 +8,21 @@ share/adodb/adodb-errorpear.inc.php
 share/adodb/adodb-lib.inc.php
 share/adodb/adodb-pager.inc.php
 share/adodb/adodb-pear.inc.php
-share/adodb/adodb-recordset.inc.php
+share/adodb/adodb-session-clob.php
 share/adodb/adodb-session.php
 share/adodb/adodb-time.inc.php
+share/adodb/adodb-xmlschema.inc.php
 share/adodb/adodb.inc.php
 share/adodb/crypt.inc.php
 share/adodb/cute_icons_for_site/adodb.gif
 share/adodb/cute_icons_for_site/adodb.png
 share/adodb/cute_icons_for_site/adodb2.gif
 share/adodb/cute_icons_for_site/adodb2.png
+share/adodb/datadict/datadict-access.inc.php
+share/adodb/datadict/datadict-db2.inc.php
+share/adodb/datadict/datadict-generic.inc.php
+share/adodb/datadict/datadict-ibase.inc.php
+share/adodb/datadict/datadict-informix.inc.php
 share/adodb/datadict/datadict-mssql.inc.php
 share/adodb/datadict/datadict-mysql.inc.php
 share/adodb/datadict/datadict-oci8.inc.php
@@ -52,6 +57,8 @@ share/adodb/drivers/adodb-proxy.inc.php
 share/adodb/drivers/adodb-sqlanywhere.inc.php
 share/adodb/drivers/adodb-sybase.inc.php
 share/adodb/drivers/adodb-vfp.inc.php
+share/adodb/lang/adodb-en.inc.php
+share/adodb/lang/adodb-fr.inc.php
 share/adodb/pivottable.inc.php
 share/adodb/rsfilter.inc.php
 share/adodb/server.php
@@ -76,13 +83,18 @@ share/adodb/tests/time.php
 share/adodb/tests/tmssql.php
 share/adodb/toexport.inc.php
 share/adodb/tohtml.inc.php
+share/doc/adodb/docs-adodb.htm
+share/doc/adodb/docs-datadict.htm
+share/doc/adodb/docs-session.htm
 share/doc/adodb/license.txt
+share/doc/adodb/old-changelog.htm
 share/doc/adodb/readme.htm
 share/doc/adodb/readme.txt
 share/doc/adodb/tips_portable_sql.htm
 share/doc/adodb/tute.htm
 @dirrm share/doc/adodb
 @dirrm share/adodb/tests
+@dirrm share/adodb/lang
 @dirrm share/adodb/drivers
 @dirrm share/adodb/datadict
 @dirrm share/adodb/cute_icons_for_site
