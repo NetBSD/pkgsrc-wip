@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.533 2003/10/11 01:29:38 blef Exp $
-# $NetBSD: Makefile,v 1.533 2003/10/11 01:29:38 blef Exp $
+# $Id: Makefile,v 1.534 2003/10/11 18:13:27 shattered Exp $
+# $NetBSD: Makefile,v 1.534 2003/10/11 18:13:27 shattered Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -87,6 +87,7 @@ SUBDIR+=	dfm
 SUBDIR+=	directfb
 SUBDIR+=	directory-administrator
 SUBDIR+=	distella
+SUBDIR+=	dmidecode
 SUBDIR+=	dnsmasq
 SUBDIR+=	docbook-simple
 SUBDIR+=	dpkg
