@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/01 04:23:26 mpasternak Exp $
+${MINGWTARGET}/bin/pxview
+${MINGWTARGET}/${PKGLOCALEDIR}/de/LC_MESSAGES/pxview.mo
