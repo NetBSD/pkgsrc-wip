@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/11/27 03:05:59 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2003/11/27 15:43:17 mpasternak Exp $
 #
 
 DISTNAME=      	gtk2-theme-pack
 PKGNAME=       	gtk2-theme-pack-0.1
+WRKSRC=		${WRKDIR}
 CATEGORIES=    	x11
 MASTER_SITES=	http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/themes/gtk2/
 DISTFILES=	GKT2-Quantumcurve.tar.gz \
@@ -127,6 +128,7 @@ NO_BUILD=      	# defined
 do-configure:
 	${FIND} ${WRKDIR} -name .xvpics -type d -print0 | ${XARGS} -t -0 ${RM} -r
 	${FIND} ${WRKDIR} -name \*~ -type f -print0 | ${XARGS} -t -0 ${RM}
+	${FIND} ${WRKDIR} -name \*.orig -type f -print0 | ${XARGS} -t -0 ${RM}
 
 do-install:
 	cd ${WRKDIR} && ${PAX} -rw -pe [A-Za-z]* ${PREFIX}/share/themes

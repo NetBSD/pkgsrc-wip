@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1 2003/11/27 15:43:17 mpasternak Exp $
+
+--- work/LighthouseGreen/gtk-2.0/gtkrc	Thu Jul 24 14:45:51 2003
++++ LighthouseGreen/gtk-2.0/gtkrc	Thu Nov 27 16:37:12 2003
+@@ -50,8 +50,8 @@
+   engine "lighthouseblue"
+   {
+     has_notebook_patch = FALSE
+-    make_tab_labels_bold = TRUE
+-    make_frame_labels_bold = TRUE
++#    make_tab_labels_bold = TRUE
++#    make_frame_labels_bold = TRUE
+   }
+ }
+ 
+--- work/LighthouseIDEA/gtk-2.0/gtkrc	Sun Feb 16 01:47:05 2003
++++ LighthouseIDEA/gtk-2.0/gtkrc	Thu Nov 27 16:37:08 2003
+@@ -47,8 +47,8 @@
+   engine "lighthouseblue"
+   {
+     has_notebook_patch = FALSE
+-    make_tab_labels_bold = TRUE
+-    make_frame_labels_bold = TRUE
++#    make_tab_labels_bold = TRUE
++#    make_frame_labels_bold = TRUE
+   }
+ }
+ 
+--- work/LighthouseWhite/gtk-2.0/gtkrc	Fri Feb 21 10:09:19 2003
++++ LighthouseWhite/gtk-2.0/gtkrc	Thu Nov 27 16:37:03 2003
+@@ -40,8 +40,8 @@
+   engine "lighthouseblue"
+   {
+     has_notebook_patch = FALSE
+-    make_tab_labels_bold = TRUE
+-    make_frame_labels_bold = TRUE
++#    make_tab_labels_bold = TRUE
++#    make_frame_labels_bold = TRUE
+   }
+ }
+ 

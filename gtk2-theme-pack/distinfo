@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/26 23:34:53 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2003/11/27 15:43:17 mpasternak Exp $
 
 SHA1 (GKT2-Quantumcurve.tar.gz) = 95812eb59ba2a41c3b01221f05f15c8e4bf6cbf0
 Size (GKT2-Quantumcurve.tar.gz) = 1276 bytes
@@ -10,8 +10,6 @@ SHA1 (GTK2-AnotherBrushedMetal.tar.bz2) = db68a3325a0f98a22c3581c8c3b16cf74efc30
 Size (GTK2-AnotherBrushedMetal.tar.bz2) = 65763 bytes
 SHA1 (GTK2-Aqua-Metal.tar.gz) = c4fdf1a311de544c117a7993e3b331413098c156
 Size (GTK2-Aqua-Metal.tar.gz) = 18700 bytes
-SHA1 (GTK2-Aquativo-1.5.tar.gz) = af41bd3f071ea52133d61d1b2df030424ef40690
-Size (GTK2-Aquativo-1.5.tar.gz) = 74620 bytes
 SHA1 (GTK2-Aquesco-ThreeColour.tar.gz) = 9197554f04871d8f38c1acbcf2117514bc34383d
 Size (GTK2-Aquesco-ThreeColour.tar.gz) = 107360 bytes
 SHA1 (GTK2-BlackIce.tar.gz) = 970dd1cb7046ec6d4021d017e5e6d6d07efa2e95
@@ -62,8 +60,6 @@ SHA1 (GTK2-Funklor-0.2.tar.gz) = 7d1a6ecedd63abca9603fdefcedbae5f6e978074
 Size (GTK2-Funklor-0.2.tar.gz) = 704 bytes
 SHA1 (GTK2-Funky-Monkey.tar.gz) = 4361512f4d02e6700a11d03df4e7363f7b57429b
 Size (GTK2-Funky-Monkey.tar.gz) = 500 bytes
-SHA1 (GTK2-Galaxy.tar.gz) = 965a93aae60569f1b7088e258aa2685cef05e6de
-Size (GTK2-Galaxy.tar.gz) = 236030 bytes
 SHA1 (GTK2-GitM.tar.gz) = e7147459cab5e12de9094de785adf3610bca3142
 Size (GTK2-GitM.tar.gz) = 1357 bytes
 SHA1 (GTK2-Glacier-2.3.tar.gz) = 8ab5a21375790482f3cd01f8c3ee5404426c57ed
@@ -88,8 +84,6 @@ SHA1 (GTK2-Latte.tar.bz2) = 3207365aaebe4177bb41c25648a082a646293e7d
 Size (GTK2-Latte.tar.bz2) = 12207 bytes
 SHA1 (GTK2-Lighthouse-H20.tar.gz) = 3de825b34c520c5ddf058f642dfaad21b8b2df41
 Size (GTK2-Lighthouse-H20.tar.gz) = 17180 bytes
-SHA1 (GTK2-LighthouseBlue-0.4.tar.gz) = 24b519d65a0842c1fff16cda29df95af4c6bff0d
-Size (GTK2-LighthouseBlue-0.4.tar.gz) = 197063 bytes
 SHA1 (GTK2-LighthouseGreen.tar.gz) = 91af486d976187cb178f133ae854f7024f4a7fe5
 Size (GTK2-LighthouseGreen.tar.gz) = 1152 bytes
 SHA1 (GTK2-LighthouseIDEA.tar.bz2) = 9d64537221a695504abaa985e75f7d1ca0ac1d5e
@@ -202,11 +196,10 @@ SHA1 (GTK2-m8Blue.tar.gz) = 4ad6469fdcc131d9a726cb1af33e6124c593f2bf
 Size (GTK2-m8Blue.tar.gz) = 393435 bytes
 SHA1 (GTK2-m8darker-default-1.0.tar.gz) = fb8e6d557a8bb388c2571020758c87f093bb07f6
 Size (GTK2-m8darker-default-1.0.tar.gz) = 18275 bytes
-SHA1 (GTK2-mgicchikn-1.0.2.tar.gz) = 765ab0b4041ff530f16f507a3a5ad44c298bc2c2
-Size (GTK2-mgicchikn-1.0.2.tar.gz) = 224151 bytes
 SHA1 (GTK2-outWorld.tar.gz) = c449a5ac73f787a55112ad54afb416bed66981b5
 Size (GTK2-outWorld.tar.gz) = 2792 bytes
 SHA1 (GTK2-red-onion.tar.gz) = ef6876be977f257808e66639084fa429451ea5df
 Size (GTK2-red-onion.tar.gz) = 12163 bytes
 SHA1 (GTK2-yglacier.tgz) = 054d57bef6d1573412d77194c8e9bebe38e83cb2
 Size (GTK2-yglacier.tgz) = 18537 bytes
+SHA1 (patch-aa) = ef83336436bddf52bdd027887af69e481d47eaa8
