@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.759 2003/12/13 19:13:31 xtraeme Exp $
-# $NetBSD: Makefile,v 1.759 2003/12/13 19:13:31 xtraeme Exp $
+# $Id: Makefile,v 1.760 2003/12/13 21:13:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.760 2003/12/13 21:13:13 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -383,7 +383,6 @@ SUBDIR+=	netkit-base
 SUBDIR+=	newsx
 SUBDIR+=	noip
 SUBDIR+=	nuppelvideo
-SUBDIR+=	obconf
 SUBDIR+=	oinkmaster
 SUBDIR+=	opax
 SUBDIR+=	openvpn
