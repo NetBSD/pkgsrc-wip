@@ -36,5 +36,6 @@ x86 (gcc 2.xx.x/3.x):
 
 Contributed by:
 
-	* Juan RP 
-	* Soren Jacobsen
+	* Jeremy C.Reed <reed@reedmedia.net>	
+	* Juan RP <juan@xtraeme.unixbsd.org>
+	* Soren Jacobsen <soren@blef.org>
