@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/28 01:53:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/28 02:11:30 xtraeme Exp $
 #
 
 DISTNAME=	grip-3.0.7
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.nostatic.org/grip/
 COMMENT=	cd-player and cd-ripper for the Gnome desktop
 
 DEPENDS+=	gnome1-dirs>=1.0:../../misc/gnome1-dirs
+BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
