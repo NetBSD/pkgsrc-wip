@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/06/13 03:36:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2003/06/20 04:38:58 xtraeme Exp $
 #
 
 DISTNAME=		jabber-1.4.2
+PKGNAME=		${DISTNAME:S/-/d-/}
 CATEGORIES=		net
 MASTER_SITES=		http://jabberd.jabberstudio.org/downloads/
 
@@ -24,8 +25,18 @@ EGDIR=			${PREFIX}/share/examples/jabberd
 LIBDIR=			${PREFIX}/lib/jabberd
 INCDIR=			${PREFIX}/include/jabberd
 
-OWN_DIRS=		/var/spool/jabberd
-OWN_DIRS+=		/var/log/jabberd
+JABBERD_USER=           jabberd
+JABBERD_GROUP=          jabberd
+PKG_GROUPS=             ${JABBERD_GROUP}
+PKG_USERS=              ${JABBERD_USER}:${JABBERD_GROUP}::Jabberd\\ user
+
+JABBERD_DIRS=		/var/spool/jabberd /var/log/jabberd
+
+.for f in ${JABBERD_DIRS}
+OWN_DIRS+=		${f}
+.endfor
+
+OWN_DIRS_PERMS=		/var/spool/jabberd jabberd jabberd 750
 
 CONF_FILES=		${EGDIR}/jabber.xml ${PKG_SYSCONFDIR}/jabber.xml
 
