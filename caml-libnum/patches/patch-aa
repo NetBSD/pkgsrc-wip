@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/17 20:57:48 airhead Exp $
+
+--- Makefile.orig	2004-03-17 22:01:33.000000000 +0100
++++ Makefile	2004-03-17 22:04:32.000000000 +0100
+@@ -4,6 +4,7 @@
+ 
+ BIGNUM_ARCH=C
+ CC=cc
++LIBDIR=${PREFIX}/lib/caml-light
+ 
+ # Test to see whether ranlib exists on the machine
+ RANLIBTEST=test -f /usr/bin/ranlib -o -f /bin/ranlib
