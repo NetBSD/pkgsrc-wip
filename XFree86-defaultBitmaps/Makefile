@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/24 14:26:19 tripledes Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/24 23:12:06 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-defaultBitmaps-${XF_VER}
@@ -11,8 +11,7 @@ MAINTAINER=	xfree86@xtraeme.unixbsd.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 default bitmap fonts
 
-DEPENDS=	XFree86-clients>=4.3.0:../../wip/XFree86-clients
-DEPENDS+=	XFree86-fontsEncodings>=4.3.0:../../wip/XFree86-fontsEncodings
+DEPENDS=	XFree86-fontsEncodings>=4.3.0:../../wip/XFree86-fontsEncodings
 
 USE_BUILDLINK2=		yes
 NO_XFREE86_TARGETS=	# defined
