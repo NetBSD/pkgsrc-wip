@@ -1,51 +1,51 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/15 23:25:09 airhead Exp $
-lib/scsh/lib/scsh-0.6/modules/${PKGNAME}/${MACHINE_GNU_PLATFORM}/libscx.la
-lib/scsh/share/scsh-0.6/modules/scx
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/load.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/examples/hello-xft.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/examples/hello.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/examples/picture.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/examples/regions.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/examples/scxev.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/libs/libs-interfaces.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/libs/libs-packages.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/libs/weak-table.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/libs/xft.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/libs/xpm.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/libs/xrender.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/atom.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/client.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/colormap.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/cursor.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/display.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/error.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/event-types.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/event.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/extension.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/font.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/gcontext.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/grab.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/graphics.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/key.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/pixmap.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/property.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/region.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/sync-event.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/text.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/utility.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/visual.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/window.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/wm.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/xlib-interfaces.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/xlib-packages.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xt/resource-types.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xt/widget-type.scm
-lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xt/widget.scm
-@dirrm lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xt
-@dirrm lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/xlib
-@dirrm lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/libs
-@dirrm lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme/examples
-@dirrm lib/scsh/share/scsh-0.6/modules/${PKGNAME}/scheme
-@dirrm lib/scsh/share/scsh-0.6/modules/${PKGNAME}
-@dirrm lib/scsh/lib/scsh-0.6/modules/${PKGNAME}/${MACHINE_GNU_PLATFORM}
-@dirrm lib/scsh/lib/scsh-0.6/modules/${PKGNAME}
+@comment $NetBSD: PLIST,v 1.2 2005/02/15 23:56:48 airhead Exp $
+lib/scsh-0.6/modules/${PKGNAME}/${MACHINE_GNU_PLATFORM}/libscx.la
+share/scsh-0.6/modules/scx
+share/scsh-0.6/modules/${PKGNAME}/load.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/examples/hello-xft.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/examples/hello.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/examples/picture.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/examples/regions.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/examples/scxev.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/libs/libs-interfaces.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/libs/libs-packages.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/libs/weak-table.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/libs/xft.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/libs/xpm.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/libs/xrender.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/atom.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/client.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/colormap.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/cursor.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/display.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/error.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/event-types.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/event.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/extension.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/font.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/gcontext.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/grab.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/graphics.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/key.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/pixmap.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/property.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/region.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/sync-event.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/text.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/utility.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/visual.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/window.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/wm.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/xlib-interfaces.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xlib/xlib-packages.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xt/resource-types.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xt/widget-type.scm
+share/scsh-0.6/modules/${PKGNAME}/scheme/xt/widget.scm
+@dirrm share/scsh-0.6/modules/${PKGNAME}/scheme/xt
+@dirrm share/scsh-0.6/modules/${PKGNAME}/scheme/xlib
+@dirrm share/scsh-0.6/modules/${PKGNAME}/scheme/libs
+@dirrm share/scsh-0.6/modules/${PKGNAME}/scheme/examples
+@dirrm share/scsh-0.6/modules/${PKGNAME}/scheme
+@dirrm share/scsh-0.6/modules/${PKGNAME}
+@dirrm lib/scsh-0.6/modules/${PKGNAME}/${MACHINE_GNU_PLATFORM}
+@dirrm lib/scsh-0.6/modules/${PKGNAME}
