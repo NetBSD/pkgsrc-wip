@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/18 15:50:18 ppostma Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/09 08:10:16 kristerw Exp $
 #
 
 DISTNAME=	Siesta-0.65
@@ -8,6 +8,8 @@ MASTER_SITES=	http://siesta.unixbeard.net/releases/
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://siesta.unixbeard.net/
 COMMENT=	Siesta Mailing List Manager
+
+DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
 
 USE_PERL5=	YES
 
