@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/17 21:16:12 daprice Exp $
+
+--- configure.orig	2004-10-22 12:59:06.000000000 -0600
++++ configure
+@@ -15848,13 +15848,13 @@ _ACEOF
+ 
+ fi
+ 
+-
++NCBI_C_PATH=$prefix
+ ## NCBI C Toolkit
+ if test "$with_ncbi_c" != "no" ; then
+    NCBI_C_PATH=${NCBI_C_PATH:="$NCBI"}
+-   NCBI_C_INCLUDE="-I$NCBI_C_PATH/include${bit64_sfx}"
++   NCBI_C_INCLUDE="-I$NCBI_C_PATH/include${bit64_sfx}/ncbi"
+    if test "$with_debug" = "no" ; then
+-     NCBI_C_LIBPATH="$NCBI_C_PATH/lib${bit64_sfx}"
++     NCBI_C_LIBPATH="$NCBI_C_PATH/lib${bit64_sfx}/ncbi"
+    else
+      NCBI_C_LIBPATH="$NCBI_C_PATH/altlib${bit64_sfx}"
+    fi
+@@ -15874,6 +15874,7 @@ echo $ECHO_N "checking for the NCBI C to
+ if test "${ncbi_cv_lib_ctools+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
++  NCBI_C_INCLUDE=-I$NCBI_C_PATH/include/ncbi
+   CPPFLAGS="$NCBI_C_INCLUDE $orig_CPPFLAGS"
+        LIBS="$NCBI_C_LIBPATH $NCBI_C_ncbi $NETWORK_LIBS $orig_LIBS"
+        cat >conftest.$ac_ext <<_ACEOF
