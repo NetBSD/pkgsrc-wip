@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/27 21:42:02 poppnk Exp $
+bin/cvschroot
+bin/cvsco
+bin/cvsdiscard
+bin/cvsdo
+bin/cvspurge
+bin/cvstrim
+bin/cvsu
+man/man1/cvsutils.1
