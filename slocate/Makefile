@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/12 06:54:07 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/12 07:24:09 minskim Exp $
 #
 
 DISTNAME=		slocate-2.7
@@ -9,7 +9,9 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.geekreview.org/slocate/
 COMMENT=		Secure Locate
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 
