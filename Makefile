@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1416 2004/08/05 05:35:00 dillo Exp $
-# $NetBSD: Makefile,v 1.1416 2004/08/05 05:35:00 dillo Exp $
+# $Id: Makefile,v 1.1417 2004/08/08 17:58:32 kristerw Exp $
+# $NetBSD: Makefile,v 1.1417 2004/08/08 17:58:32 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -24,7 +24,6 @@ SUBDIR+=	afterstep2
 SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-utils
 SUBDIR+=	amap
-SUBDIR+=	amavisd-new
 SUBDIR+=	amsn
 SUBDIR+=	and
 SUBDIR+=	aols-postgres
@@ -448,7 +447,6 @@ SUBDIR+=	openvrml
 SUBDIR+=	opera-devel
 SUBDIR+=	oqtplayer
 SUBDIR+=	p5-Apache-Request
-SUBDIR+=	p5-Apache-Test
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Class-Factory-Util
@@ -467,8 +465,6 @@ SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTTP-GHTTP
-SUBDIR+=	p5-Locale-Maketext-Fuzzy
-SUBDIR+=	p5-Locale-Maketext-Lexicon
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Set-Crontab
@@ -645,7 +641,6 @@ SUBDIR+=	rlpr
 SUBDIR+=	rosegarden-current
 SUBDIR+=	rox-gtk2
 SUBDIR+=	rssh
-SUBDIR+=	rt3-pgsql
 SUBDIR+=	ruby-amrita
 SUBDIR+=	ruby-dpklib
 SUBDIR+=	ruby-ming
