@@ -1,32 +1,31 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/07/04 19:32:38 tvierling Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/06 18:33:04 tvierling Exp $
 
---- Makefile.orig	Tue Jul  1 19:15:45 2003
+--- Makefile.orig	Sun Jul  6 11:11:03 2003
 +++ Makefile
-@@ -67,7 +67,7 @@ CDEFS+=-DMSB_FIRST=$(MSB_FIRST)
- CDEFS+=-DSTORE_MONO=$(STORE_MONO)
+@@ -86,7 +86,7 @@ CDEFS+=-DSTORE_MONO=$(STORE_MONO)
  INC=include
  
+ # Specifying includes for C-Compiler 
 -INCLUDES=-I$(INC) -I/usr/local/include
 +INCLUDES=-I$(INC)
  
+ # Setting verbosity
  ifeq ($(QUIET),1)
- CC=@gcc
-@@ -87,8 +87,7 @@ FONT_MSG=
+@@ -107,7 +107,7 @@ FONT_MSG=
  endif
  
- 
+ # Defining C-Compiler CFLAGS
 -CFLAGS=-W -Wall -Wuninitialized -pipe -O3 -g $(CDEFS) $(INCLUDES)
--#CFLAGS=-W -Wall -Wuninitialized -pipe -O -g $(CDEFS) $(INCLUDES)
 +CFLAGS+=$(CPPFLAGS) $(CDEFS) $(INCLUDES)
  
+ # Setting additional optimizations for C-Compiler
  ifeq ($(PPC),1)
- CFLAGS+=-mcpu=powerpc
-@@ -147,8 +146,6 @@ endif
+@@ -173,8 +173,6 @@ endif
  endif
  endif
- endif
--
+  
 -LDFLAGS=
- 
+-
  OBJ=obj
  
+ PROG1=entropy
