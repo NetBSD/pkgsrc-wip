@@ -1,0 +1,32 @@
+upgrade to lilo-22.5.7.2
+
+use pkgsrc tool to replace path to sh and path to perl
+
+perl is used for keytab-lilo script --
+ maybe rewrite?
+
+maybe the examples should be put in an examples directory?
+
+this should note that it uses $PREFIX/boot 
+should put under share/lilo/boot
+or set LOCALBASE to / for just /boot
+
+also check what this is for
+cat $ROOT/etc/lilo.defines
+maybe that changes the build
+
+this should install a lilo.conf with conf files
+
+# boot/ directory may have file boot.300 or whatever later generated
+for example:
+Backup copy of boot sector in /usr/boot/boot.1600
+
+# have option to copy to /boot in addition or instead of PREFIX/boot
+
+# maybe include QuickInst as example
+
+depends on ...
+# bin86 builds under Linux but not NetBSD, and
+# bcc builds under NetBSD, but not Linux -- both need to be fixed
+#BUILD_DEPENDS+=		bcc>=95.3.12:../../devel/bcc
+BUILD_DEPENDS+=		bin86>=0.16.9:../../devel/bin86

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/10/01 02:35:00 jeremy-c-reed Exp $
+
+SHA1 (lilo-22.5.tar.gz) = 914569c8f49824e8ac4f71451ba3c386430d5978
+Size (lilo-22.5.tar.gz) = 375680 bytes
+SHA1 (patch-aa) = 291d8932dac20545e17d417fe98e3fb93f095c25
+SHA1 (patch-ab) = 069b7ed036a80f8730f4167fa6f33153b314eb6b
