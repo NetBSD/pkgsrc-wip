@@ -1,73 +1,71 @@
-$NetBSD: patch-aa,v 1.4 2004/01/23 02:59:26 rillig Exp $
---- makefile.orig	2003-08-10 21:34:22.000000000 +0200
-+++ makefile	2004-01-23 03:49:05.761156200 +0100
-@@ -1,14 +1,12 @@
+$NetBSD: patch-aa,v 1.5 2004/03/28 23:43:29 bjan2 Exp $
+
+--- makefile.orig	2004-03-21 18:58:00.000000000 -0700
++++ makefile
+@@ -1,54 +1,22 @@
  # Makefile for compiling Mathomatic for UNIX or Linux.
  
--CC		= cc
-+OWNLIBS = -lm
- 
+-#CC		= cc
+-
 -CFLAGS		= -c -DUNIX
 -LFLAGS		= -s
  # To use readline, uncomment the following two lines:
  #CFLAGS		= -c -DUNIX -DREADLINE
  #LFLAGS		= -s -lreadline -lcurses
  
--AOUT	=ac
-+AOUT	=am_mathomatic
+-INSTALL_DIR	= /usr/local
++INSTALL_DIR	= ${PREFIX}
+ 
+-AOUT	=am
++AOUT	= am
  OBJECTS	=main.o am.o parse.o cmds.o simplify.o factor.o super.o \
  	unfactor.o diff.o complex.o list.o
  
-@@ -16,40 +14,40 @@
++.c.o:
++	$(CC) $(CFLAGS) -c $<
++
+ all: $(AOUT)
  	@echo Make completed.
  
- main.o: main.c am.h makefile
+-main.o: main.c am.h
 -	$(CC) $(CFLAGS) $*.c
-+	$(CC) -c $(CPPFLAGS) $(CFLAGS) $*.c
- 
- am.o: am.c am.h externs.h makefile
+-
+-am.o: am.c am.h externs.h
 -	$(CC) $(CFLAGS) $*.c
-+	$(CC) -c $(CPPFLAGS) $(CFLAGS) $*.c
- 
- parse.o: parse.c parse.h am.h externs.h makefile
+-
+-parse.o: parse.c parse.h am.h externs.h
 -	$(CC) $(CFLAGS) $*.c
-+	$(CC) -c $(CPPFLAGS) $(CFLAGS) $*.c
- 
- cmds.o: cmds.c am.h externs.h makefile
+-
+-cmds.o: cmds.c am.h externs.h
 -	$(CC) $(CFLAGS) $*.c
-+	$(CC) -c $(CPPFLAGS) $(CFLAGS) $*.c
- 
- simplify.o: simplify.c am.h externs.h makefile
+-
+-simplify.o: simplify.c am.h externs.h
 -	$(CC) $(CFLAGS) $*.c
-+	$(CC) -c $(CPPFLAGS) $(CFLAGS) $*.c
- 
- factor.o: factor.c am.h externs.h makefile
+-
+-factor.o: factor.c am.h externs.h
 -	$(CC) $(CFLAGS) $*.c
-+	$(CC) -c $(CPPFLAGS) $(CFLAGS) $*.c
- 
- super.o: super.c am.h externs.h makefile
+-
+-super.o: super.c am.h externs.h
 -	$(CC) $(CFLAGS) $*.c
-+	$(CC) -c $(CPPFLAGS) $(CFLAGS) $*.c
- 
- unfactor.o: unfactor.c am.h externs.h makefile
+-
+-unfactor.o: unfactor.c am.h externs.h
 -	$(CC) $(CFLAGS) $*.c
-+	$(CC) -c $(CPPFLAGS) $(CFLAGS) $*.c
- 
- diff.o: diff.c am.h externs.h makefile
+-
+-diff.o: diff.c am.h externs.h
 -	$(CC) $(CFLAGS) $*.c
-+	$(CC) -c $(CPPFLAGS) $(CFLAGS) $*.c
- 
- complex.o: complex.c am.h externs.h makefile
+-
+-complex.o: complex.c am.h externs.h
 -	$(CC) $(CFLAGS) $*.c
-+	$(CC) -c $(CPPFLAGS) $(CFLAGS) $*.c
- 
- list.o: list.c am.h externs.h makefile
+-
+-list.o: list.c am.h externs.h
 -	$(CC) $(CFLAGS) $*.c
-+	$(CC) -c $(CPPFLAGS) $(CFLAGS) $*.c
++$(OBJECTS): am.h externs.h
  
  $(AOUT): $(OBJECTS)
--	$(CC) $(LFLAGS) $(OBJECTS) -lm -o $(AOUT)
-+	$(CC) $(OBJECTS) $(LDFLAGS) $(LIBS) $(OWNLIBS) -o $(AOUT)
+ 	$(CC) $(LFLAGS) $(OBJECTS) -lm -o $(AOUT)
+@@ -59,4 +27,4 @@ install: $(AOUT)
+ 	@echo Install completed.
  
- install: $(AOUT)
- 	cp $(AOUT) /usr/local/bin/ac
+ clean:
+-	rm *.o
++	rm -f $(OBJECTS)
