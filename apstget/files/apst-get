@@ -157,6 +157,9 @@ do_relink() {
 
 do_auto_relink() {
 	rPKG=$1
+	if [ ! "`echo $1| grep /`" = "" ]; then
+		rPKG=`echo $1 | awk -F / '{ print $2 }'`
+	fi
 	rPKGS=`pkg_info -qR ${rPKG}`
 	echo "==> Doing automatic relink for inverse deps of ${rPKG}"
 	for A in ${rPKGS} ; do
