@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1591 2004/12/29 20:12:25 kristerw Exp $
-# $NetBSD: Makefile,v 1.1591 2004/12/29 20:12:25 kristerw Exp $
+# $Id: Makefile,v 1.1592 2005/01/02 13:49:44 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1592 2005/01/02 13:49:44 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -91,7 +91,6 @@ SUBDIR+=	bnr2
 SUBDIR+=	bridge-utils
 SUBDIR+=	bscript
 SUBDIR+=	bub-n-bros
-SUBDIR+=	bugzilla
 SUBDIR+=	busybox
 SUBDIR+=	bwidget
 SUBDIR+=	byacc
