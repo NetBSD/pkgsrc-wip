@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2005/03/26 22:39:47 riz Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/31 01:12:36 riz Exp $
 
-DISTNAME=		newt-0.51.6-5.src.rpm
+DISTNAME=		${PKGNAME_NOREV}-5.src.rpm
 PKGNAME=		newt-0.51.6
 PKGREVISION=		1
 CATEGORIES=		devel
@@ -18,11 +18,11 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 NO_EXPORT_CPP=		yes
 GNU_CONFIGURE=		yes
-WRKSRC=			${WRKDIR}/newt-0.51.6
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 do-extract:
-	rpm2pkg -d ${WRKDIR} ${DISTDIR}/${DISTNAME}
-	cd ${WRKDIR} ; ${GZCAT} ${WRKDIR}/newt-0.51.6.tar.gz | ${TAR} -xf -
+	${LOCALBASE}/sbin/rpm2pkg -d ${WRKDIR} ${DISTDIR}/${DISTNAME}
+	cd ${WRKDIR} ; ${GZCAT} ${WRKSRC}.tar.gz | ${TAR} -xf -
 
 do-install:
 	cd ${WRKSRC}; \
