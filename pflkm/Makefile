@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/06/08 12:31:48 ppostma Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/09 08:47:15 ppostma Exp $
 
 DISTNAME=		pf-lkm-20040607
 CATEGORIES=		security ipv6
-MASTER_SITES=		http://ipv4.pointless.nl/~peter/
+MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
 
 MAINTAINER=		peter@pointless.nl
 HOMEPAGE=		http://nedbsd.nl/~ppostma/pf-lkm.html
