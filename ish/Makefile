@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/04 03:14:18 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/22 23:17:15 rillig Exp $
 #
 
 DISTNAME=	ish-v${VERSION}
@@ -31,3 +31,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ishd ${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"
+
+.if ${OPSYS} == "SunOS"
+ALL_TARGET=	solaris
+.endif
