@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1722 2005/04/02 22:44:30 minskim Exp $
-# $NetBSD: Makefile,v 1.1722 2005/04/02 22:44:30 minskim Exp $
+# $Id: Makefile,v 1.1723 2005/04/03 14:45:48 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1723 2005/04/03 14:45:48 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -976,7 +976,6 @@ SUBDIR+=	tripwire2
 SUBDIR+=	tsh
 SUBDIR+=	tsm
 SUBDIR+=	ttysnoop
-SUBDIR+=	turba
 SUBDIR+=	tutos
 SUBDIR+=	tuxtype2
 SUBDIR+=	typhoon
