@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/07/16 06:19:41 marttikuparinen Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/07/21 08:26:56 marttikuparinen Exp $
 #
 # This Makefile fragment is included by packages that use libxfce4util.
 #
@@ -9,7 +9,7 @@
 LIBXFCE4UTIL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libxfce4util
-BUILDLINK_DEPENDS.libxfce4util?=		libxfce4util>=3.99.1
+BUILDLINK_DEPENDS.libxfce4util?=		libxfce4util>=3.99.2
 BUILDLINK_PKGSRCDIR.libxfce4util?=		../../wip/libxfce4util
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libxfce4util=libxfce4util

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/25 06:52:46 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/21 08:26:57 marttikuparinen Exp $
 share/xfce4/themes/BeOS/LICENSE
 share/xfce4/themes/BeOS/README
 share/xfce4/themes/BeOS/edit.png
@@ -45,6 +45,7 @@ share/xfce4/themes/BeOS/trash_full.png
 share/xfce4/themes/BeOS/trash_full.svg
 share/xfce4/themes/BeOS/unknown.png
 share/xfce4/themes/BeOS/unknown.svg
+share/xfce4/themes/Lush/LICENSE
 share/xfce4/themes/Lush/README
 share/xfce4/themes/Lush/edit.png
 share/xfce4/themes/Lush/edit.svg

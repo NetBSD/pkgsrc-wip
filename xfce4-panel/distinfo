@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/07/16 06:19:42 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.4 2003/07/21 08:26:57 marttikuparinen Exp $
 
-SHA1 (xfce4-panel-3.99.1.tar.gz) = fbdee235ca109e4c7c7b38733ed13eaf31ba1d36
-Size (xfce4-panel-3.99.1.tar.gz) = 1087300 bytes
+SHA1 (xfce4-panel-3.99.2.tar.gz) = c53df672d84cd107a90a0b443286c84f60e6c6f6
+Size (xfce4-panel-3.99.2.tar.gz) = 1093676 bytes
