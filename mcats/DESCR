@@ -1,0 +1,11 @@
+MCatS is a Modular Catalog System.
+The basic idea is to have several modules (shared libraries) that are dynamicly loaded on demand.
+Lets say you want to scan a CD-ROM media and store it in a database, you just specify that you want to read from cd and output to database.
+By it's flexibility it makes it very easy to convert between different formats, like between "WhereIsIt?" and csv format.
+
+This package includes support for:
+cdinput
+stdout
+wii
+
+Additional iodbc support can be obtained by installing mcats-iodbc package.
