@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/16 22:29:22 xtraeme Exp $
+
+--- Makefile.orig	2004-04-16 23:10:06.000000000 +0200
++++ Makefile	2004-04-16 23:14:22.000000000 +0200
+@@ -1,21 +1,19 @@
+-#Makefile GRAPHIC
+-#CXX  		=g++ -O3 -mpentium -Wall -DEMU64_DEBUG
+-#CC		=gcc -O3 -I/usr/X11R6/include -fPIC -fomit-frame-pointer -funroll-loops -ffast-math -mcpu=pentium -pipe
+-#CC		=gcc -O3 -mpentium -Wall -g -pg
+-CC 		=gcc -O3 -fomit-frame-pointer -funroll-loops -ffast-math -mcpu=athlon -Wall -DUSE_GTK `gtk-config --cflags` -I/usr/X11R6/include -pipe
++# Blah!
+ 
+-OBJ		=main.o
++CFLAGS+=    -Wall -DUSE_GTK `gtk-config --cflags` -I${X11BASE}/include
++OBJ=	    main.o
+ 
+ 
+-all:		mupen64_input.so instruction
+-
++all:		mupen64_input.so
+ 
+ mupen64_input.so:	$(OBJ)
+-			$(CC) $(OBJ) -Wl,-Bsymbolic -shared -lSDL `gtk-config --cflags --libs` -o $@
++			$(CC) $(CFLAGS) $(OBJ) -Wl,-Bsymbolic -shared -lSDL \
++			    `gtk-config --cflags --libs` -o $@
+ 			strip --strip-all $@
+ 
+-instruction:
+-	$(warning please copy mupen64_input.so in the plugins/ folder of the emulator)
++install:
++	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/mupen64/plugins
++	$(BSD_INSTALL_DATA) mupen64_input.so $(PREFIX)/share/mupen64/plugins
+ 
+ clean:
+ 	find . -name '*.o' -print0 | xargs -0r rm -f

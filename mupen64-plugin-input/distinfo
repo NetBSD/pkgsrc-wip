@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/16 22:29:22 xtraeme Exp $
+
+SHA1 (mupen64_input.tar.bz2) = 691bdb0e238b659e1db93fb50723892d8f2411c6
+Size (mupen64_input.tar.bz2) = 4438 bytes
+SHA1 (patch-aa) = 103b437c2731bc918d6ce2a6cd6530e14e44ce83
