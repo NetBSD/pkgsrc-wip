@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/29 18:22:39 mpasternak Exp $
-# $Id: Makefile,v 1.1.1.1 2003/11/29 18:22:39 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/29 20:03:09 mpasternak Exp $
+# $Id: Makefile,v 1.2 2003/11/29 20:03:09 mpasternak Exp $
 
 DISTNAME=		w32api-2.4
-PKGNAME=		mingw-${DISTNAME}
+PKGNAME=		mingw-w32api-bin-2.4
 WRKSRC=			${WRKDIR}
 CATEGORIES=		cross
 
