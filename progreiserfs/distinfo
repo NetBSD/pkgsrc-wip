@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/25 23:20:19 xtraeme Exp $
+
+SHA1 (progsreiserfs-0.3.0.4.tar.gz) = 4b7d18beb76780adc3d843f80762492552ff14ef
+Size (progsreiserfs-0.3.0.4.tar.gz) = 308247 bytes
+SHA1 (patch-aa) = 97bd6058ccf98bba0270a98639651b0c59febab6

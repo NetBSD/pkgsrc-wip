@@ -1,0 +1,44 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/25 23:20:19 xtraeme Exp $
+include/dal/dal.h
+include/dal/file_dal.h
+include/reiserfs/bitmap.h
+include/reiserfs/block.h
+include/reiserfs/core.h
+include/reiserfs/dir.h
+include/reiserfs/endian.h
+include/reiserfs/exception.h
+include/reiserfs/file.h
+include/reiserfs/filesystem.h
+include/reiserfs/gauge.h
+include/reiserfs/geom.h
+include/reiserfs/hashes.h
+include/reiserfs/journal.h
+include/reiserfs/key.h
+include/reiserfs/object.h
+include/reiserfs/path.h
+include/reiserfs/reiserfs.h
+include/reiserfs/tools.h
+include/reiserfs/tree.h
+lib/libdal-0.3.so.0
+lib/libdal-0.3.so.0.0
+lib/libdal.a
+lib/libdal.la
+lib/libdal.so
+lib/libreiserfs-0.3.so.0
+lib/libreiserfs-0.3.so.0.0
+lib/libreiserfs.a
+lib/libreiserfs.la
+lib/libreiserfs.so
+man/man8/cpfs.reiserfs.8
+man/man8/mkfs.reiserfs.8
+man/man8/reiserfs.8
+man/man8/resizefs.reiserfs.8
+man/man8/tunefs.reiserfs.8
+sbin/cpfs.reiserfs
+sbin/fsck.reiserfs
+sbin/mkfs.reiserfs
+sbin/resizefs.reiserfs
+sbin/tunefs.reiserfs
+share/aclocal/progsreiserfs.m4
+@dirrm include/reiserfs
+@dirrm include/dal
