@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/06/04 11:40:45 marttikuparinen Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/07/16 06:19:43 marttikuparinen Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-trigger-launcher.
 #
@@ -9,7 +9,7 @@
 XFCE4_TRIGGER_LAUNCHER_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-trigger-launcher
-BUILDLINK_DEPENDS.xfce4-trigger-launcher?=		xfce4-trigger-launcher>=3.90.20030604
+BUILDLINK_DEPENDS.xfce4-trigger-launcher?=		xfce4-trigger-launcher>=3.99.1
 BUILDLINK_PKGSRCDIR.xfce4-trigger-launcher?=		../../wip/xfce4-trigger-launcher
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-trigger-launcher=xfce4-trigger-launcher

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/06/25 06:52:45 marttikuparinen Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/07/16 06:19:41 marttikuparinen Exp $
 #
 # This Makefile fragment is included by packages that use libxfce4gui.
 #
@@ -9,7 +9,7 @@
 LIBXFCE4GUI_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libxfce4gui
-BUILDLINK_DEPENDS.libxfce4gui?=		libxfce4gui>=3.91.0
+BUILDLINK_DEPENDS.libxfce4gui?=		libxfce4gui>=3.99.1
 BUILDLINK_PKGSRCDIR.libxfce4gui?=		../../wip/libxfce4gui
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libxfce4gui=libxfce4gui

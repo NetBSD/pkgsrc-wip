@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/05 17:01:08 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/16 06:19:41 marttikuparinen Exp $
 
 .include "Makefile.common"
 
@@ -30,7 +30,7 @@ do-install:	# empty
 .include "../../wip/xfce4-systray/buildlink2.mk"
 .include "../../wip/xfce4-themes/buildlink2.mk"
 .include "../../wip/xfce4-toys/buildlink2.mk"
-## .include "../../wip/xfce4-trigger-launcher/buildlink2.mk"
+.include "../../wip/xfce4-trigger-launcher/buildlink2.mk"
 .include "../../wip/xfce4-wm-themes/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

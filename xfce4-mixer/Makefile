@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2003/07/05 17:12:00 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/16 06:19:42 marttikuparinen Exp $
 
 .include "../xfce4/Makefile.common"
-
-XFCE4_VERSION=	0.1
 
 DISTNAME=	xfce4-mixer-${XFCE4_VERSION}
 CATEGORIES=	audio

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/25 06:52:46 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/16 06:19:42 marttikuparinen Exp $
 bin/xfce4-panel
 etc/xfce4/xfce4rc
 include/xfce4/panel/controls.h
@@ -24,6 +24,9 @@ lib/xfce4/panel-plugins/libmailcheck.so
 lib/xfce4/panel-plugins/libpager.a
 lib/xfce4/panel-plugins/libpager.la
 lib/xfce4/panel-plugins/libpager.so
+lib/xfce4/panel-plugins/libseparator.a
+lib/xfce4/panel-plugins/libseparator.la
+lib/xfce4/panel-plugins/libseparator.so
 lib/xfce4/panel-plugins/libswitcher.a
 lib/xfce4/panel-plugins/libswitcher.la
 lib/xfce4/panel-plugins/libswitcher.so

@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2003/07/16 06:19:43 marttikuparinen Exp $
+
+--- scripts/xinitrc.orig	Mon Jul 14 14:36:57 2003
++++ scripts/xinitrc	Mon Jul 14 14:37:40 2003
+@@ -16,14 +16,6 @@
+ # Launch xscreensaver (if available), but only as non-root user
+ test $UID -gt 0 && xscreensaver -no-splash &
+ 
+-# Run xfce4-session if installed
+-xfcesm=`which xfce4-session`
+-if test "x$xfcesm" != "x" ; then
+-	exec $xfcesm
+-        # Shouldn't get there, but anyway...
+-        exit
+-fi
+-
+ # or use old-fashioned startup script otherwise
+ xfce-mcs-manager
+ xfwm4 --daemon

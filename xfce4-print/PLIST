@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/09 06:30:50 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/16 06:19:43 marttikuparinen Exp $
 bin/xfprint-manager
 bin/xfprint4
 lib/libxfprint.a
@@ -9,6 +9,7 @@ lib/libxfprint.so.0.0
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfprint.mo
@@ -16,3 +17,4 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfprint.mo

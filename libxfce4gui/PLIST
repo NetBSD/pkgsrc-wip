@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/25 06:52:45 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/16 06:19:41 marttikuparinen Exp $
 include/xfce4/libxfcegui4/dialogs.h
 include/xfce4/libxfcegui4/gtk_style.h
 include/xfce4/libxfcegui4/gtktoxevent.h
@@ -33,6 +33,6 @@ lib/libxfcegui4.a
 lib/libxfcegui4.la
 lib/libxfcegui4.so
 lib/libxfcegui4.so.0
-lib/libxfcegui4.so.0.24
+lib/libxfcegui4.so.0.26
 lib/pkgconfig/libxfcegui4-1.0.pc
 @dirrm include/xfce4/libxfcegui4

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.6 2003/07/04 11:13:52 marttikuparinen Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/07/16 06:19:41 marttikuparinen Exp $
 
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xfce/}
+MASTER_SITES=		http://www.xfce.org/archive/xfce4-rc1/src/
 
 MAINTAINER=		martti@netbsd.org
 HOMEPAGE=		http://www.xfce.org/
 
-XFCE4_VERSION=		3.91.0
+XFCE4_VERSION=		3.99.1
 
 USE_BUILDLINK2=		# defined
 USE_X11BASE=		# defined

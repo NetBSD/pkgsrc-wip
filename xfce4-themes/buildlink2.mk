@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/06/25 06:52:46 marttikuparinen Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/07/16 06:19:43 marttikuparinen Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-themes.
 #
@@ -9,7 +9,7 @@
 XFCE4_THEMES_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-themes
-BUILDLINK_DEPENDS.xfce4-themes?=		xfce4-themes>=3.91.0
+BUILDLINK_DEPENDS.xfce4-themes?=		xfce4-themes>=3.99.1
 BUILDLINK_PKGSRCDIR.xfce4-themes?=		../../wip/xfce4-themes
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-themes=xfce4-themes

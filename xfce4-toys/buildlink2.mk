@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/06/11 05:43:07 marttikuparinen Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/07/16 06:19:43 marttikuparinen Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-toys.
 #
@@ -9,7 +9,7 @@
 XFCE4_TOYS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-toys
-BUILDLINK_DEPENDS.xfce4-toys?=		xfce4-toys>=0.3.0
+BUILDLINK_DEPENDS.xfce4-toys?=		xfce4-toys>=3.99.1
 BUILDLINK_PKGSRCDIR.xfce4-toys?=		../../wip/xfce4-toys
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-toys=xfce4-toys
