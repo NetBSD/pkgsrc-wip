@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mkplists,v 1.1 2004/02/03 09:20:16 marttikuparinen Exp $
+# $NetBSD: mkplists,v 1.2 2004/06/12 17:37:46 rillig Exp $
 #
 # Author: Martti Kuparinen <martti@NetBSD.org>
 #
@@ -12,6 +12,7 @@
 #   bmake extract
 #   sh files/mkplists
 #
+set -e
 
 cd `pwd`/work/linux-*/include
 
