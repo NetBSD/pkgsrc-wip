@@ -1,0 +1,1 @@
+It depends on ncurses. but only builds with NO_BUILDLINK :///

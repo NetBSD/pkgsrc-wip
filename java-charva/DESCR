@@ -1,0 +1,9 @@
+CHARVA is a Java framework for presenting a "graphical" user interface,
+composed of elements such as windows, dialogs, menus, textfields and buttons,
+on a traditional character-cell ASCII terminal. It has an API based on that
+of "Swing" (a.k.a. the Java Foundation Classes). Programmers familiar with
+AWT and Swing will find programming CHARVA straightforward. User interfaces
+can be designed on WYSIWYG IDEs such as Borland JBuilder and then easily
+converted to CHARVA merely by changing the "import" statements to import the
+"charva.awt and "charvax.swing" packages instead of the standard "java.awt"
+and "javax.swing" packages.
