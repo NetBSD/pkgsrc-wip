@@ -1,10 +1,25 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/09/14 17:02:22 jcd Exp $
+$NetBSD: MESSAGE,v 1.2 2004/02/25 05:09:00 jcd Exp $
 
  To use amavisd-new, you need to install at least one virus scanner.
  For example McAfee VirusScan is available as a package in
- /usr/pkgsrc/security/uvscan. If you want to use the amavis sendmail
- milter interface, you need to type the following command:
+ /usr/pkgsrc/security/uvscan.
+
+ amavisd-new will only scan inside archives if the appropriate
+ unarchiving tools are available. You may choose to install the
+ following tools to scan the respective archive types:
+
+ arc			archivers/arc
+ freeze			archivers/freeze
+ lha			archivers/lha
+ lzop			archivers/lzop
+ unarj			archivers/unarj
+ unrar			archivers/unrar
+ xbin			archivers/xbin
+ zoo			archivers/zoo
+
+ If you want to use the amavis sendmail milter interface, you need
+ to type the following command:
 
 	touch ${AMAVISDIR}/use.milter
 

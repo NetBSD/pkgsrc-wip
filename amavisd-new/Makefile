@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/07 04:05:43 jcd Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/25 05:09:00 jcd Exp $
 
 DISTNAME=	amavisd-new-${VERSION}
 PKGNAME=	${DISTNAME}${PATCHLEVEL}
@@ -14,16 +14,7 @@ MAINTAINER=	jdunn@aquezada.com
 HOMEPAGE=	http://www.ijs.si/software/amavisd/
 COMMENT=	Performance-enhanced daemonized version of amavis-perl
 
-DEPENDS+=	perl>=5.8:../../lang/perl58
 DEPENDS+=	spamassassin-[0-9]*:../../mail/spamassassin
-DEPENDS+=	unarj-[0-9]*:../../archivers/unarj
-DEPENDS+=	unrar-[0-9]*:../../archivers/unrar
-DEPENDS+=	xbin-[0-9]*:../../archivers/xbin
-DEPENDS+=	lzop-[0-9]*:../../archivers/lzop
-DEPENDS+=	lha-[0-9]*:../../archivers/lha
-DEPENDS+=	zoo-[0-9]*:../../archivers/zoo
-DEPENDS+=	freeze-[0-9]*:../../archivers/freeze
-DEPENDS+=	arc-[0-9]*:../../archivers/arc
 DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
@@ -39,7 +30,8 @@ DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
 CONFLICTS+=     amavis-[0-9]*
 CONFLICTS+=     amavis-perl-[0-9]*
 
-PERL5_REQD=     5.8.0
+USE_PERL5=	yes
+PERL5_REQD=     5.8
 
 .include "../../mk/bsd.prefs.mk"
 USE_BUILDLINK2= yes
@@ -91,7 +83,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 pre-build:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${SED}  -e "s|/usr/bin/perl|${PERL5}|" \
-		-e "s|/etc/amavisd.conf|${PKG_SYSCONFBASE}/amavisd.conf|" \
+		-e "s|/etc/amavisd.conf|${PKG_SYSCONFDIR}/amavisd.conf|" \
 		${WRKSRC}/amavisd > ${WRKDIR}/amavisd
 	${SED}  -e "s|%%AMAVISDIR%%|${AMAVISDIR}|g" \
 		-e "s|%%AMAVISUSER%%|${AMAVISUSER}|g" \
