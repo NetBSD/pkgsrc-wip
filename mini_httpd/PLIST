@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/08 00:51:10 bjan2 Exp $
+man/man1/htpasswd.1
+man/man8/mini_httpd.8
+sbin/htpasswd
+sbin/mini_httpd
