@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/07/27 14:49:59 thomasklausner Exp $
+$NetBSD: distinfo,v 1.4 2004/07/27 23:51:30 thomasklausner Exp $
 
 SHA1 (ZSNESS_0717.tar.bz2) = 9ee175ca3aa3734b8dcf69dac33fb4bcf7ee2e21
 Size (ZSNESS_0717.tar.bz2) = 788499 bytes
-SHA1 (patch-ab) = 571dd1af70c06f1747a213c3d5326eff76049247
+SHA1 (patch-ab) = 6ae94deedcc4a9c462f990a4671586868b21fc41
 SHA1 (patch-ac) = 25ecfe2c6a8db006310d80c6bb6ceb308d23fbdc
-SHA1 (patch-ad) = 8bbecedccc5a85dfe7d843f9de75a9498195eed6
+SHA1 (patch-ad) = c492d83fd16c59ad6f9712c694ff696b5679e39e
