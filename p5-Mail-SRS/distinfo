@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/02/25 20:05:17 tvierling Exp $
-
-SHA1 (Mail-SRS-0.27.tar.gz) = 4eb985091f9c3cb4039d5d323abf0e8a13a4099b
-Size (Mail-SRS-0.27.tar.gz) = 23387 bytes
-SHA1 (patch-aa) = 266ae0983d23a0fc3dc743ff606fa6de289c0aae
