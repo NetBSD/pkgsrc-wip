@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1711 2005/03/30 09:15:24 ianzag Exp $
-# $NetBSD: Makefile,v 1.1711 2005/03/30 09:15:24 ianzag Exp $
+# $Id: Makefile,v 1.1712 2005/03/30 11:39:34 tnn2 Exp $
+# $NetBSD: Makefile,v 1.1712 2005/03/30 11:39:34 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -556,7 +556,6 @@ SUBDIR+=	mpgedit
 SUBDIR+=	mppdec
 SUBDIR+=	mpq-tools
 SUBDIR+=	mrxvt
-SUBDIR+=	mrxvt-devel
 SUBDIR+=	msworkbench
 SUBDIR+=	mtf
 SUBDIR+=	mtrack
