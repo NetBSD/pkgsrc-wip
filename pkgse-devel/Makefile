@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/12 09:09:47 imilh Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/12 12:54:23 thomasklausner Exp $
 #
 
 DISTNAME=	pkgse-0.2
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://imil.net/
-COMMENT=	Fetch informations about a NetBSD package on pkgsrc.netbsd.se
+COMMENT=	Fetch informations about a NetBSD package from pkgsrc.netbsd.se
 
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
 
