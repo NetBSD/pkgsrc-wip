@@ -13,3 +13,5 @@ MANINSTALL
 
 patch the Makefile.dist files to change all target to use SEDMANPAGES instead
 (so nroff is not done)
+
+make rc.d script

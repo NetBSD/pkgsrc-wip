@@ -18,3 +18,5 @@ should this document the libraries/headers in DESCR?
 
 patch the various Makefile.dist to change all target to use SEDMANPAGES instead
 (so nroff is not done)
+
+make rc.d script
