@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.7 2004/02/29 22:30:46 mpasternak Exp $
-bin/ckeygen
-bin/conch
-bin/im
-bin/lore
-bin/mailmail
-bin/manhole
-bin/mktap
-bin/t-im
-bin/tap2deb
-bin/tapconvert
-bin/tkconch
-bin/tkmktap
-bin/trial
-bin/twistd
-bin/websetroot
+@comment $NetBSD: PLIST,v 1.8 2004/03/29 23:35:41 mpasternak Exp $
+bin/ckeygen${PYVERSSUFFIX}
+bin/conch${PYVERSSUFFIX}
+bin/im${PYVERSSUFFIX}
+bin/lore${PYVERSSUFFIX}
+bin/mailmail${PYVERSSUFFIX}
+bin/manhole${PYVERSSUFFIX}
+bin/mktap${PYVERSSUFFIX}
+bin/t-im${PYVERSSUFFIX}
+bin/tap2deb${PYVERSSUFFIX}
+bin/tapconvert${PYVERSSUFFIX}
+bin/tkconch${PYVERSSUFFIX}
+bin/tkmktap${PYVERSSUFFIX}
+bin/trial${PYVERSSUFFIX}
+bin/twistd${PYVERSSUFFIX}
+bin/websetroot${PYVERSSUFFIX}
 ${PYSITELIB}/twisted/__init__.py
 ${PYSITELIB}/twisted/__init__.pyc
 ${PYSITELIB}/twisted/__init__.pyo
