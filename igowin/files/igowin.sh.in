@@ -1,0 +1,19 @@
+#!@SHELL@
+set -e
+
+# igowin creates a "learning" file in its current directory. It also
+# expects its data files there. So we build a symlink directory and
+# run the program therein.
+
+workdir="$HOME/.igowin"
+if @TEST@ ! -d "$workdir"; then
+  @MKDIR@ "$workdir"
+fi
+for i in @FILES@; do
+  if @TEST@ ! -f "$workdir/$i"; then
+    @RM@ -f "$workdir/$i"
+    @LN@ -s "@PKGDIR@/$i" "$workdir/$i"
+  fi
+done
+cd "$workdir"
+exec wine ./igowin.exe "$@"

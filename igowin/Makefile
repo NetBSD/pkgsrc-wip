@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/25 17:07:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/27 15:56:45 rillig Exp $
 #
 
 DISTNAME=		igowin
@@ -17,31 +17,27 @@ DEPENDS+=		wine-[0-9]*:../../emulators/wine
 WRKSRC=			${WRKDIR}
 NO_BUILDLINK=		yes
 NO_TOOLS=		yes
-NO_BUILD=		yes
 
 EXTRACT_CMD=		${EXTRACT_CMD.zip}
+IGOWIN_FILES=		grain.bmp igowin.exe igowin.hlp readme.txt tutor.hlp
 
 INSTALLATION_DIRS=	bin share/${PKGNAME}
 
-# igowin creates a "learning" file in its current directory. It also
-# expects its data files there. So we build a symlink directory and
-# run the program therein.
-do-configure:
-	{ \
-	${ECHO} "#!/bin/sh" && \
-	${ECHO} "set -e" && \
-	${ECHO} "workdir=\"$$HOME/.igowin\"" && \
-	${ECHO} "if ${TEST} ! -d \"\$$workdir\"; then" && \
-	${ECHO} "  ${MKDIR} \"\$$workdir\"" && \
-	${ECHO} "  ${LN} -s ${PREFIX}/share/${PKGNAME}/* \"\$$workdir\"" && \
-	${ECHO} "fi" && \
-	${ECHO} "cd \"\$$workdir\"" && \
-	${ECHO} "exec wine ./igowin.exe \"\$$@\""; \
-	} > ${WRKSRC}/igowin.sh
+do-build:
+.for FILE in igowin.sh
+	@${SED} -e 's|@SHELL@|${SHELL}|g'			\
+		-e 's|@TEST@|${TEST}|g'				\
+		-e 's|@MKDIR@|${MKDIR}|g'			\
+		-e 's|@RM@|${RM}|g'				\
+		-e 's|@LN@|${LN}|g'				\
+		-e 's|@PKGDIR@|${PREFIX}/share/${PKGNAME}|g'	\
+		-e 's|@FILES@|${IGOWIN_FILES}|g'		\
+		${FILESDIR}/${FILE}.in > ${WRKSRC}/${FILE}
+.endfor
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/igowin.sh ${PREFIX}/bin/igowin
-.for _F_ in grain.bmp igowin.exe igowin.hlp readme.txt tutor.hlp
+.for _F_ in ${IGOWIN_FILES}
 	${INSTALL_DATA} ${WRKSRC}/${_F_} ${PREFIX}/share/${PKGNAME}/${_F_}
 .endfor
 
