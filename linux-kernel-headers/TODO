@@ -1,3 +1,7 @@
+should this install include/linux/config/* ?
+
+should this install include/linux/compile.h ?
+
 maybe should remove any include/asm symlink and recreate
 
 maybe could have seperate ${PREFIX}/include/asm-generic         
