@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/01 02:26:52 mpasternak Exp $
+
+SHA1 (libiconv-1.9.1.tar.gz) = f130c93fdf20903ca21bace8b8822f46468c9d65
+Size (libiconv-1.9.1.tar.gz) = 3907735 bytes
+SHA1 (patch-aa) = 8314724322f0f56f75b42016048752c3611f54dd

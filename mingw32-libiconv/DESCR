@@ -1,0 +1,3 @@
+See converters/libiconv for a full description. This is a test package for
+wip/mingw-* utilities; it should compile on your Unix and give win32
+(Microsoft(R) Windows(TM)) platform binaries.

@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/01 02:26:51 mpasternak Exp $
+i586-pc-mingw32/bin/iconv
+i586-pc-mingw32/include/iconv.h
+i586-pc-mingw32/include/libcharset.h
+i586-pc-mingw32/include/localcharset.h
+i586-pc-mingw32/lib/charset.alias
+i586-pc-mingw32/lib/libcharset-1.dll
+i586-pc-mingw32/lib/libcharset.la
+i586-pc-mingw32/lib/libiconv-2.dll
+i586-pc-mingw32/lib/libiconv.la
+i586-pc-mingw32/share/doc/libiconv/iconv.1.html
+i586-pc-mingw32/share/doc/libiconv/iconv.3.html
+i586-pc-mingw32/share/doc/libiconv/iconv_close.3.html
+i586-pc-mingw32/share/doc/libiconv/iconv_open.3.html
+i586-pc-mingw32/share/man/man1/iconv.1
+i586-pc-mingw32/share/man/man3/iconv.3
+i586-pc-mingw32/share/man/man3/iconv_close.3
+i586-pc-mingw32/share/man/man3/iconv_open.3
+@dirrm i586-pc-mingw32/share/doc/libiconv
