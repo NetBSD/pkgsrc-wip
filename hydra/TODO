@@ -1,4 +1,3 @@
-$NetBSD: TODO,v 1.4 2004/10/19 20:50:35 adrian_p Exp $
-
-Not tested on -current
-patch-ac is not portable enough it needs a few #if's
+Re-visit OpenSSL patches
+Add support for gtk interface
+Need to add LICENSE when imported
