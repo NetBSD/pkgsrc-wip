@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/27 05:08:07 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/31 23:57:51 blef Exp $
 #
 
 DISTNAME=       interchange-5.0.0
@@ -90,7 +90,7 @@ do-configure:
 # Install the daemon start up script in ${PREFIX}/etc/rc.d
 #
 # Install the interchange PDF documentation in ${PREFIX}/share/doc
-# (interchange documentation is now in a seperate tarball)
+# (interchange documentation is now in a separate tarball)
 #	for i in ${WRKDIR}/${DISTNAME}/pdf/*.pdf ; do \
 #	    ${INSTALL_DATA} $$i ${PREFIX}/share/doc/interchange ;\
 #	done

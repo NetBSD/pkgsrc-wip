@@ -4,4 +4,4 @@ WARN: do not use DISTFILES and DISTNAME to control WRKSRC. how about "WRKSRC=${W
 
 sometimes lletters hangs
 
-maybe wavr should be made into a seperate package (for wavtools)
+maybe wavr should be made into a separate package (for wavtools)
