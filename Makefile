@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1081 2004/03/14 22:12:42 mpasternak Exp $
-# $NetBSD: Makefile,v 1.1081 2004/03/14 22:12:42 mpasternak Exp $
+# $Id: Makefile,v 1.1082 2004/03/14 22:20:09 poppnk Exp $
+# $NetBSD: Makefile,v 1.1082 2004/03/14 22:20:09 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -700,6 +700,7 @@ SUBDIR+=	unrealircd
 SUBDIR+=	unrealtournament-server
 SUBDIR+=	util-linux
 SUBDIR+=	vcdgear
+SUBDIR+=	vche
 SUBDIR+=	viewcvs
 SUBDIR+=	viewer
 SUBDIR+=	vixie-cron
