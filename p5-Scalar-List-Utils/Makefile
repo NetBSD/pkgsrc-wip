@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 18:25:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 19:56:11 cjep Exp $
 #
 
 DISTNAME=		Scalar-List-Utils-1.11
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5slu
 CATEGORIES=		lang perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Scalar/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/search?dist=Scalar-List-Utils
 COMMENT=		Perl subroutines that would be nice to have in the perl core
 
