@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/20 12:09:02 imilh Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/08 13:15:10 minskim Exp $
 #
 
 DISTNAME=	WWW-Curl-2.0
@@ -10,6 +10,8 @@ MAINTAINER=	imil@gcu.info
 COMMENT=	Perl binding interface for curl
 
 DEPENDS+=	curl>=7.12.1:../../www/curl
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/WWW/Curl/.packlist
