@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/06 12:08:06 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/11 17:00:12 adrian_p Exp $
 
 DISTNAME=	barnyard-0.1.0
 CATEGORIES=	net
@@ -18,6 +18,8 @@ CONF_FILES=	${EGDIR}/barnyard.conf \
 		${PKG_SYSCONFDIR}/barnyard.conf
 
 EGDIR=		${PREFIX}/share/examples/barnyard
+
+BUILD_DEFS+=	USE_MYSQL USE_PGSQL
 
 .if defined(USE_MYSQL) && ${USE_MYSQL} == YES
 .include "../../databases/mysql-client/buildlink2.mk"
