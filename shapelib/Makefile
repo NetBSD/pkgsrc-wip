@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/12/02 16:39:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/27 21:16:35 thomasklausner Exp $
 #
 
 DISTNAME=		shapelib-1.2.10
-CATEGORIES=		wip
+CATEGORIES=		geography
 MASTER_SITES=		http://shapelib.maptools.org/dl/
 
 MAINTAINER=		mchittur@cs.nmsu.edu
