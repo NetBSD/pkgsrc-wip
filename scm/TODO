@@ -1,0 +1,4 @@
+Fails to compile with:
+./scmlit -fr4rstest.scm -e'(test-sc4)(test-cont)(test-delay)(gc)' \
+-e '(or (null? errs) (quit 1))'
+ERROR: Wrong number of args given #<CLOSURE (optstring) (let* ((opt (getopt (string-appen ...

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:33:34 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/14 12:53:21 thomasklausner Exp $
 #
 
 DISTNAME=	scm5d6
@@ -18,7 +18,7 @@ COMMENT=	Portable scheme interpreter
 
 DEPENDS+=	slib>=2.4.4:../../devel/slib
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	# defined
 USE_GNU_TOOLS+=	make
 
 ALL_TARGET=	scmlit
@@ -28,7 +28,7 @@ INFO_FILES=	${SCM_INFO}
 
 .if defined(USE_X) && defined(USE_NCURSES)
 USE_X11=	yes
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 PLIST_SRC=	${PKGDIR}/PLIST.X_ncurses
 SCM_INFO=	${SCM_DATA} Xlibscm.info
 BUILD_SCRIPT=	${FILESDIR}/buildscm_X_ncurses.sh
@@ -38,7 +38,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.X
 SCM_INFO=	${SCM_DATA} Xlibscm.info
 BUILD_SCRIPT=	${FILESDIR}/buildscm_X.sh
 .elif defined(USE_NCURSES)
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 PLIST_SRC=	${PKGDIR}/PLIST.ncurses
 SCM_INFO=	${SCM_DATA}
 BUILD_SCRIPT=	${FILESDIR}/buildscm_ncurses.sh
