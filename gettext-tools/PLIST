@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/06 08:12:51 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/03/06 08:15:27 jeremy-c-reed Exp $
 bin/autopoint
 bin/gettextize
 bin/msgattrib
@@ -891,24 +891,24 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gettext-tools.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gettext-tools.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gettext-tools.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gettext-tools.mo
-share/man/man1/autopoint.1
-share/man/man1/gettextize.1
-share/man/man1/msgattrib.1
-share/man/man1/msgcat.1
-share/man/man1/msgcmp.1
-share/man/man1/msgcomm.1
-share/man/man1/msgconv.1
-share/man/man1/msgen.1
-share/man/man1/msgexec.1
-share/man/man1/msgfilter.1
-share/man/man1/msgfmt.1
-share/man/man1/msggrep.1
-share/man/man1/msginit.1
-share/man/man1/msgmerge.1
-share/man/man1/msgunfmt.1
-share/man/man1/msguniq.1
-share/man/man1/xgettext.1
-@dirrm share/man/man1
+man/man1/autopoint.1
+man/man1/gettextize.1
+man/man1/msgattrib.1
+man/man1/msgcat.1
+man/man1/msgcmp.1
+man/man1/msgcomm.1
+man/man1/msgconv.1
+man/man1/msgen.1
+man/man1/msgexec.1
+man/man1/msgfilter.1
+man/man1/msgfmt.1
+man/man1/msggrep.1
+man/man1/msginit.1
+man/man1/msgmerge.1
+man/man1/msgunfmt.1
+man/man1/msguniq.1
+man/man1/xgettext.1
+@dirrm man/man1
 @dirrm share/gettext/projects/TP
 @dirrm share/gettext/projects/KDE
 @dirrm share/gettext/projects/GNOME
