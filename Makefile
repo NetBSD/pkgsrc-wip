@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.918 2004/01/28 10:22:49 marttikuparinen Exp $
-# $NetBSD: Makefile,v 1.918 2004/01/28 10:22:49 marttikuparinen Exp $
+# $Id: Makefile,v 1.919 2004/01/28 15:29:53 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.919 2004/01/28 15:29:53 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -400,6 +400,7 @@ SUBDIR+=	p5-Class-Factory-Util
 SUBDIR+=	p5-Class-Fields
 SUBDIR+=	p5-Class-MethodMaker
 SUBDIR+=	p5-Class-Singleton
+SUBDIR+=	p5-Class-Trigger
 SUBDIR+=	p5-DBI-Shell
 SUBDIR+=	p5-Data-TemporaryBag
 SUBDIR+=	p5-DateTime
