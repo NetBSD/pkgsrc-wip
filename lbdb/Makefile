@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/27 11:16:04 drue Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/03 07:29:52 drue Exp $
 #
 
 DISTNAME=	lbdb_0.27
@@ -17,5 +17,16 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=  yes
+
+DOCDIR=	${PREFIX}/share/doc/${PKGBASE}
+
+post-install:
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	for f in COPYING README TODO; \
+	do \
+		${INSTALL_DATA} ${WRKSRC}/$${f} ${DOCDIR}; \
+	done
+	${INSTALL_DATA} ${WRKSRC}/debian/changelog ${DOCDIR}/ChangeLog
+	${INSTALL_DATA} ${WRKSRC}/lbdb.sl ${PREFIX}/share/examples/lbdb/
 
 .include "../../mk/bsd.pkg.mk"
