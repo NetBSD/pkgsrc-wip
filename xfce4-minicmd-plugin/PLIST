@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/25 10:05:44 marttikuparinen Exp $
-lib/xfce4/panel-plugins/libminicmd.a
-lib/xfce4/panel-plugins/libminicmd.la
-lib/xfce4/panel-plugins/libminicmd.so

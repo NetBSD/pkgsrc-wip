@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/04 11:38:18 marttikuparinen Exp $
-lib/xfce4/panel-plugins/libsystray.a
-lib/xfce4/panel-plugins/libsystray.la
-lib/xfce4/panel-plugins/libsystray.so

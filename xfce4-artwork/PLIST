@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/13 00:07:14 marc Exp $
-share/xfce4/backdrops/xfce-evil.jpg
-share/xfce4/backdrops/xfce-gradiented.png
-share/xfce4/backdrops/xfce-rio.png
-share/xfce4/backdrops/xfce-transparent.png
-@comment in xfce4-desktop: @dirrm share/xfce4/backdrops

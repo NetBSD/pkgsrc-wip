@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.510 2003/09/30 00:23:02 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.510 2003/09/30 00:23:02 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.511 2003/09/30 11:07:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.511 2003/09/30 11:07:01 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -208,9 +208,6 @@ SUBDIR+=	libshout
 SUBDIR+=	libvc
 SUBDIR+=	libvorbis-nightly
 SUBDIR+=	libwpd
-SUBDIR+=	libxfce4gui
-SUBDIR+=	libxfce4mcs
-SUBDIR+=	libxfce4util
 SUBDIR+=	liferea
 SUBDIR+=	lincvs
 SUBDIR+=	links-hacked
@@ -422,29 +419,6 @@ SUBDIR+=	words
 SUBDIR+=	xawtv
 SUBDIR+=	xchm
 SUBDIR+=	xevil
-SUBDIR+=	xfce4
-SUBDIR+=	xfce4-artwork
-SUBDIR+=	xfce4-desktop
-SUBDIR+=	xfce4-fm
-SUBDIR+=	xfce4-fm-icons
-SUBDIR+=	xfce4-gtk2-engines
-SUBDIR+=	xfce4-iconbox
-SUBDIR+=	xfce4-mcs-manager
-SUBDIR+=	xfce4-mcs-plugins
-SUBDIR+=	xfce4-minicmd-plugin
-SUBDIR+=	xfce4-mixer
-SUBDIR+=	xfce4-netload-plugin
-SUBDIR+=	xfce4-panel
-SUBDIR+=	xfce4-print
-SUBDIR+=	xfce4-showdesktop-plugin
-SUBDIR+=	xfce4-systemload-plugin
-SUBDIR+=	xfce4-systray
-SUBDIR+=	xfce4-themes
-SUBDIR+=	xfce4-toys
-SUBDIR+=	xfce4-trigger-launcher
-SUBDIR+=	xfce4-utils
-SUBDIR+=	xfce4-wm
-SUBDIR+=	xfce4-wm-themes
 SUBDIR+=	xmail
 SUBDIR+=	xml2doc
 SUBDIR+=	xmms-dumb
