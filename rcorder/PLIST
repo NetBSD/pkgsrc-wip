@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/28 16:16:38 jeremy-c-reed Exp $
-sbin/rcorder
-man/man8/rcorder.8
