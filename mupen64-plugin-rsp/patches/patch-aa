@@ -1,35 +1,39 @@
-$NetBSD: patch-aa,v 1.2 2004/04/17 00:59:29 xtraeme Exp $
+$NetBSD: patch-aa,v 1.3 2004/07/13 23:03:33 xtraeme Exp $
 
---- Makefile.orig	2004-04-17 00:17:06.000000000 +0200
-+++ Makefile	2004-04-17 00:18:06.000000000 +0200
-@@ -1,15 +1,15 @@
+--- Makefile.orig	2004-07-14 00:53:59.000000000 +0200
++++ Makefile	2004-07-14 00:55:53.000000000 +0200
+@@ -1,23 +1,24 @@
 -CC = gcc
--CFLAGS = -DUSE_GTK `gtk-config --cflags` -O3 -mcpu=athlon -ffast-math -funroll-loops -fomit-frame-pointer
+-CFLAGS = -DUSE_GTK `gtk-config --cflags` -O3 -mcpu=athlon \
 +#CC = gcc
-+CFLAGS += -DUSE_GTK `gtk-config --cflags`
++CFLAGS += -DUSE_GTK `gtk-config --cflags` \
+          -ffast-math -funroll-loops -fomit-frame-pointer
  #CFLAGS = -DUSE_GTK `gtk-config --cflags` -g -fPIC
--LD = gcc
+-CXX = g++
+-CXXFLAGS = $(CFLAGS)
+-LD = g++
 -LDFLAGS =
-+#LD = gcc
++#CXX = g++
++#CXXFLAGS = $(CFLAGS)
++#LD = g++
 +#LDFLAGS =
  
- OBJECTS = main.o disasm.o jpeg.o ucode1.o ucode3.o ucode2.o
+ TARGET = mupen64_hle_rsp_azimer.so
+ OBJECTS = main.o disasm.o jpeg.o ucode1.o ucode2.o ucode3.o ucode3mp3.o
  
- all:	mupen64_hle_rsp.so instruction
+-all:	$(TARGET) instruction
++all:	$(TARGET)
  
- mupen64_hle_rsp.so: $(OBJECTS)
--	$(LD) -shared -fPIC -Wl,-Bsymbolic `gtk-config --libs` $(LDFLAGS) -o $@ $(OBJECTS)
-+	$(CC) -shared -fPIC -Wl,-Bsymbolic `gtk-config --libs` $(LDFLAGS) -o $@ $(OBJECTS)
+ $(TARGET): $(OBJECTS)
+-	$(LD) -shared -Wl,-Bsymbolic `gtk-config --libs` $(LDFLAGS) -o $@ $(OBJECTS)
++	$(CC) -shared -Wl,-Bsymbolic `gtk-config --libs` $(LDFLAGS) -o $@ $(OBJECTS)
  	strip --strip-all $@
  
- instruction:
-@@ -18,6 +18,9 @@
- .o: .c
- 	$(CC) $(CFLAGS) -o $@ $<
- 
+-instruction:
+-	$(warning please copy $(TARGET) in the plugins/ folder of the emulator)
 +install:
-+	$(BSD_INSTALL_DATA) mupen64_hle_rsp.so $(PREFIX)/share/mupen64-base/plugins
-+
- clean:
- 	rm -rf $(OBJECTS) $(ALL)
++	$(BSD_INSTALL_DATA) mupen64_hle_rsp_azimer.so \
++		$(PREFIX)/share/mupen64-base/plugins
  
+ #.o: .c
+ #	$(CC) $(CFLAGS) -o $@ $<

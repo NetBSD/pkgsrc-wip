@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/04/17 00:59:29 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2004/07/13 23:03:33 xtraeme Exp $
 
-SHA1 (mupen64_hle_rsp.tar.bz2) = 35b5e42a319ba5605be52ecd544650d3c7f056c3
-Size (mupen64_hle_rsp.tar.bz2) = 24951 bytes
-SHA1 (patch-aa) = cb96b064251ddca67a191f78ca36dad0ccec3a41
+SHA1 (hack_azi_rsp_hle.tar.bz2) = 9ba4a945c1b13d6a239bdc1d81f0c7fd92742d9e
+Size (hack_azi_rsp_hle.tar.bz2) = 38268 bytes
+SHA1 (patch-aa) = 297274f0a55faaea5121afc3c1beef02c01b30b1
