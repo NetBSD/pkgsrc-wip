@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/25 08:07:44 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 09:28:40 minskim Exp $
 
 DISTNAME=	ipgrab-0.9.8
 CATEGORIES=	net security
@@ -8,7 +8,7 @@ MAINTAINER=	minskim@bawi.org
 HOMEPAGE=	http://ipgrab.sourceforge.net/
 COMMENT=	Verbose packet sniffer for UNIX hosts
 
-PKG_INSTALLATION_TYPES= overwrite pkgviews
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
