@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1072 2004/03/12 12:46:07 mpasternak Exp $
-# $NetBSD: Makefile,v 1.1072 2004/03/12 12:46:07 mpasternak Exp $
+# $Id: Makefile,v 1.1073 2004/03/12 15:14:17 mpasternak Exp $
+# $NetBSD: Makefile,v 1.1073 2004/03/12 15:14:17 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -613,7 +613,9 @@ SUBDIR+=	slackware_aaa_base
 SUBDIR+=	slackware_aaa_elflibs
 SUBDIR+=	slackware_bash
 SUBDIR+=	slackware_compat
+SUBDIR+=	slackware_coreutils
 SUBDIR+=	slackware_gcc
+SUBDIR+=	slackware_glibc
 SUBDIR+=	slackware_glibc_solibs
 SUBDIR+=	slackware_tcsh
 SUBDIR+=	sleuthkit # READ TODO #
