@@ -1,0 +1,38 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/29 18:05:57 daprice Exp $
+bin/dba
+bin/dnal
+bin/estwise
+bin/estwisedb
+bin/genewise
+bin/genewisedb
+bin/genomewise
+bin/psw
+bin/pswdb
+share/wise2/wisecfg/BLOSUM30.bla
+share/wise2/wisecfg/BLOSUM45.bla
+share/wise2/wisecfg/BLOSUM62.bla
+share/wise2/wisecfg/BLOSUM80.bla
+share/wise2/wisecfg/aa.rnd
+share/wise2/wisecfg/blosum30.bla
+share/wise2/wisecfg/blosum62.bla
+share/wise2/wisecfg/cb.tmf
+share/wise2/wisecfg/codon.table
+share/wise2/wisecfg/gene.stat
+share/wise2/wisecfg/gon120.bla
+share/wise2/wisecfg/gon160.bla
+share/wise2/wisecfg/gon200.bla
+share/wise2/wisecfg/gon250.bla
+share/wise2/wisecfg/gon350.bla
+share/wise2/wisecfg/human.gf
+share/wise2/wisecfg/human.gp
+share/wise2/wisecfg/human.stats
+share/wise2/wisecfg/idenity.bla
+share/wise2/wisecfg/methods
+share/wise2/wisecfg/pb.gf
+share/wise2/wisecfg/pombe.gf
+share/wise2/wisecfg/tm.pri
+share/wise2/wisecfg/wise.2
+share/wise2/wisecfg/wise.per
+share/wise2/wisecfg/worm.gf
+@dirrm share/wise2/wisecfg
+@dirrm share/wise2

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/29 18:05:57 daprice Exp $
+
+--- makefile.orig	Thu Jun 19 22:46:19 2003
++++ makefile
+@@ -89,7 +89,7 @@ debug :
+ bin : 
+ 	mkdir bin
+ 	mv models/pswdb models/psw models/genewisedb models/estwisedb models/estwise models/genewise models/dba models/dnal models/genomewise ./bin
+-	csh welcome.csh
++#	csh welcome.csh
+ 
+ libs : 
+ 	(cd base   ; make CC="$(CC)" CFLAGS="$(CFLAGS)" libwisebase.a )
