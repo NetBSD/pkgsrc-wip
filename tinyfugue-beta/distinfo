@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2005/01/31 16:41:05 martijnb Exp $
+$NetBSD: distinfo,v 1.2 2005/03/03 08:58:19 martijnb Exp $
 
 SHA1 (tf-50b6.tar.gz) = bc1f5636a0876c2670135b4dea0dc75447cd28da
+RMD160 (tf-50b6.tar.gz) = a5019848f669c8d2f9eb0566da45cb08e54a175c
 Size (tf-50b6.tar.gz) = 637983 bytes
