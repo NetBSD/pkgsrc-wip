@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2003/05/10 08:38:42 jmmv Exp $
+$NetBSD: patch-ab,v 1.4 2003/05/10 08:48:39 xtraeme Exp $
 
---- include/config.h.dist.in.orig	2003-05-10 00:59:48.000000000 +0200
-+++ include/config.h.dist.in	2003-05-10 01:00:25.000000000 +0200
+--- include/config.h.dist.in.orig	2003-05-10 10:07:29.000000000 +0200
++++ include/config.h.dist.in	2003-05-10 10:12:33.000000000 +0200
 @@ -125,15 +125,15 @@
   */
  
@@ -27,6 +27,27 @@ $NetBSD: patch-ab,v 1.3 2003/05/10 08:38:42 jmmv Exp $
  
  /* HIDE_OPS
   * Define this to prevent non chanops from seeing what ops a channel has
+@@ -173,17 +173,17 @@
+ /* NETWORK_NAME
+  * Displayed in place of the servername when SERVERHIDE is enabled
+  */   
+-#define NETWORK_NAME "irc.freenode.net"
++#define NETWORK_NAME "@NET_NAME@"
+ 
+ /* NETWORK_DESC
+  * Displayed in place of the server info when SERVERHIDE is enabled
+  */
+-#define NETWORK_DESC "http://freenode.net/"
++#define NETWORK_DESC "@NET_DESCR@"
+ 
+ /* NETWORK_REALNAME
+  * Displayed in welcome message
+  */
+-#define NETWORK_REALNAME "freenode IRC"
++#define NETWORK_REALNAME "@NET_RNAME@"
+ 
+ /* USE_SERVICES
+  * Defines whether or not you're using services on your network
 @@ -251,7 +251,7 @@
   */
  #define SAVE_MAXCLIENT
@@ -36,3 +57,12 @@ $NetBSD: patch-ab,v 1.3 2003/05/10 08:38:42 jmmv Exp $
  # define SAVE_TIME 3600
  #endif 
  
+@@ -575,7 +575,7 @@
+  * this option is used unless you tell the system administrator beforehand
+  * and obtain their permission to send messages to the system log files.
+  */
+-#undef  USE_SYSLOG
++#define  USE_SYSLOG
+ 
+ #ifdef  USE_SYSLOG
+ /* SYSLOG_KILL SYSLOG_SQUIT SYSLOG_CONNECT SYSLOG_USERS SYSLOG_OPER
