@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/14 08:34:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/14 17:03:48 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0.0-a4
@@ -22,6 +22,11 @@ LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 RCD_SCRIPTS=		jabberd
 PKG_SYSCONFSUBDIR=	jabberd
 
+JABBERD_USER=           jabberd
+JABBERD_GROUP=          jabberd
+PKG_GROUPS=             ${JABBERD_GROUP}
+PKG_USERS=              ${JABBERD_USER}:${JABBERD_GROUP}::Jabberd\\ user
+
 EGDIR=			${PREFIX}/share/examples/jabberd
 SUPPORT_FILES=          ${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
 
@@ -35,7 +40,7 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 DIRS=			/var/log/jabberd /var/db/jabberd
 
 .for f in ${DIRS}
-OWN_DIRS+=		${f}
+OWN_DIRS_PERMS+=	${f} jabberd jabberd 750
 .endfor
 .undef f
 
