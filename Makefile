@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1218 2004/04/19 15:50:21 mpasternak Exp $
-# $NetBSD: Makefile,v 1.1218 2004/04/19 15:50:21 mpasternak Exp $
+# $Id: Makefile,v 1.1219 2004/04/19 17:46:38 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1219 2004/04/19 17:46:38 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -453,12 +453,9 @@ SUBDIR+=	p5-DateTime-LeapSecond
 SUBDIR+=	p5-DateTime-Set
 SUBDIR+=	p5-DateTime-TimeZone
 SUBDIR+=	p5-Encode-compat
-SUBDIR+=	p5-ExtUtils-Depends
-SUBDIR+=	p5-ExtUtils-PkgConfig
 SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-GeoIP
-SUBDIR+=	p5-Glib2
 SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTTP-GHTTP
@@ -475,7 +472,6 @@ SUBDIR+=	p5-Text-Quoted
 SUBDIR+=	p5-Text-Tabs+Wrap
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-XML-Sablotron
-SUBDIR+=	p5-gtk2
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-mysql
 SUBDIR+=	pam-pop3
