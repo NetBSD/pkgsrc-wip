@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2005/03/07 17:21:47 dhowland Exp $
+
+--- Makefile.in.orig	2004-12-20 13:22:40.000000000 -0500
++++ Makefile.in
+@@ -138,8 +138,8 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ with_ffmpeg = @with_ffmpeg@
+ 
+-SUBDIRS = libvncserver examples contrib x11vnc vncterm classes libvncclient client_examples test
+-DIST_SUBDIRS = libvncserver examples contrib x11vnc vncterm classes libvncclient client_examples test
++SUBDIRS = libvncserver libvncclient
++DIST_SUBDIRS = libvncserver libvncclient
+ 
+ bin_SCRIPTS = libvncserver-config
+ 
