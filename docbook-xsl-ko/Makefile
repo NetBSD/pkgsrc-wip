@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/19 22:54:52 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/31 08:57:39 minskim Exp $
 
 DISTNAME=	docbook-xsl-ko-0.2
 CATEGORIES=	textproc
@@ -17,6 +17,13 @@ USE_BUILDLINK2=	YES
 XSLDIR=		${PREFIX}/share/xsl/docbook-ko
 
 XML_CATALOGS=	${XSLDIR}/catalog
+
+SUBST_CLASSES+=		xsl
+SUBST_MESSAGE.xsl=	"Fixing remote URLs."
+SUBST_STAGE.xsl=	post-patch
+SUBST_FILES.xsl=	dbk-fo.xsl dbk-html-chunk.xsl dbk-html.xsl \
+			dbk-htmlhelp.xsl
+SUBST_SED.xsl=		-e 's,http://docbook.sourceforge.net/release/xsl/current/,../docbook/,g'
 
 do-install:
 	${INSTALL_DATA_DIR} ${XSLDIR}
