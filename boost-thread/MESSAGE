@@ -1,0 +1,12 @@
+=========================================================
+
+	When compiling with boost thread library dont 
+	forget to link against pthread.
+	
+	Here is an example of compiling a simple program 
+	with boost threads:
+	
+	g++ example.cpp -I${PREFIX}/include -L${PREFIX}/lib
+		-lboost_thread  -lpthread
+
+=========================================================
