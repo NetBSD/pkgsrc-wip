@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/27 03:27:08 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/02/01 22:34:53 minskim Exp $
 
-SHA1 (libXext-6.4.1.tar.bz2) = da1323896311a0ca260d6c66c8cc4fa06647c1b5
-Size (libXext-6.4.1.tar.bz2) = 213474 bytes
+SHA1 (libXext-6.4.2.tar.bz2) = efdad0754b3c9c10697b6476f02ebdd9f51ba233
+Size (libXext-6.4.2.tar.bz2) = 214172 bytes

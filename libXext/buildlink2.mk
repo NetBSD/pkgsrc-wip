@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/11/27 03:27:08 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/02/01 22:34:53 minskim Exp $
 #
 # This Makefile fragment is included by packages that use libXext.
 #
@@ -17,7 +17,6 @@ BUILDLINK_PREFIX.libXext_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libXext+=	lib/libXext.*
 
 .include "../../wip/libX11/buildlink2.mk"
-.include "../../wip/libXau/buildlink2.mk"
 .include "../../wip/xproto/buildlink2.mk"
 .include "../../wip/xextensions/buildlink2.mk"
 
