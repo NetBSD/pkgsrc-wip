@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/08/21 19:45:23 adrian_p Exp $
+# $NetBSD: Makefile,v 1.24 2004/08/21 21:19:55 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -20,11 +20,6 @@ SUBST_SED.paths=	-e "s|@@PREFIX@@|${PREFIX}|g" \
 			-e "s|@@SMRSH_CMDDIR@@|${SMRSH_CMDDIR}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
-.if ${OPSYS} == "SunOS"
-USE_DB2?=	YES
-.else
-USE_DB2?=	NO
-.endif
 .if defined(USE_DB4) && ${USE_DB4} == YES
 .include "../../databases/db4/buildlink3.mk"
 .elif ${USE_DB2} == YES
