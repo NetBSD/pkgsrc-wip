@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2004/03/16 12:44:47 pulahti Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/22 14:19:26 pulahti Exp $
 
 DISTNAME=	xpilot-4.5.4X2
 PKGNAME=	xpilot-ng-4.5.4X2
 CATEGORIES=	games
 MASTER_SITES=	http://www.hut.fi/~ksoderbl/xpilot/
 
-MAINTAINER=	pulahti@sourceforge.net
+MAINTAINER=	vnorrman@cc.hut.fi
 HOMEPAGE=	http://xpilot.sourceforge.net/
 COMMENT=	Enhanced version of XPilot network space battle
 
