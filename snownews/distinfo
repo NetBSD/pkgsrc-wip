@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/23 22:55:59 bjan2 Exp $
+$NetBSD: distinfo,v 1.2 2003/12/24 02:36:01 bjan2 Exp $
 
 SHA1 (snownews-1.4.2.tar.gz) = 6a935496d707f6fb456b6b259ca3ceb69b44505c
 Size (snownews-1.4.2.tar.gz) = 88822 bytes
-SHA1 (patch-aa) = b530932ebbed6b9cc82685b25305c9813c8ea20b
+SHA1 (patch-aa) = ccdba21b156e31ca238d1c383837ff2b4bcf3d38
 SHA1 (patch-ab) = b1daaff6a08e855c6a5e8126f90370db6c7873a8
 SHA1 (patch-ac) = daf0f7de6794b39b7417fde5619ae89a69fe875b
