@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/22 17:00:47 poppnk Exp $
+bin/microcom
+share/doc/microcom/index.html
+@dirrm share/doc/microcom
