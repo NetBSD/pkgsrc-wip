@@ -1,9 +1,6 @@
-$Id: TODO,v 1.1.1.1 2004/01/04 11:03:52 mpasternak Exp $
+$Id: TODO,v 1.2 2004/01/04 11:15:16 mpasternak Exp $
 
 Check the fantastic PLIST twice. You can even sort it.
-
-Doesn't work yet -- pkgsrc Python issues, at least on my box. Marc has did a
-great job with Python package, but some more has to be done.
 
 E-mail:
 	http://sourceforge.net/mail/?group_id=46652	
