@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.760 2003/12/13 21:13:13 xtraeme Exp $
-# $NetBSD: Makefile,v 1.760 2003/12/13 21:13:13 xtraeme Exp $
+# $Id: Makefile,v 1.761 2003/12/13 21:27:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.761 2003/12/13 21:27:44 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -101,7 +101,6 @@ SUBDIR+=	dancer-ircd
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darkice
 SUBDIR+=	dasm
-SUBDIR+=	db2latex
 SUBDIR+=	dbf
 SUBDIR+=	dccserver
 SUBDIR+=	dfbpoint
@@ -112,14 +111,12 @@ SUBDIR+=	directory-administrator
 SUBDIR+=	distella
 SUBDIR+=	dmidecode
 SUBDIR+=	dnsmasq
-SUBDIR+=	docbook-simple
 SUBDIR+=	dpkg
 SUBDIR+=	drweb
 SUBDIR+=	drweb-clients-shared
 SUBDIR+=	drweb-dc
 SUBDIR+=	drweb-smf
 SUBDIR+=	drwright
-SUBDIR+=	dtdparse
 SUBDIR+=	dumb
 SUBDIR+=	dzt
 SUBDIR+=	e2fsprogs
