@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/10/04 20:53:46 dhowland Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/27 19:15:12 dhowland Exp $
 #
 
-DISTNAME=		BNR2beta-0.14.3
+DISTNAME=		BNR2beta-0.14.4
 PKGNAME=		${DISTNAME:S/BNR2beta/bnr2/}
 CATEGORIES=		news
 MASTER_SITES=		http://www.bnr2.org/
