@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2003/08/29 10:31:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2003/08/29 15:34:32 jeremy-c-reed Exp $
 
 DISTNAME=		ed-0.2
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GNU:=ed/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.gnu.org/software/ed/ed.html
 COMMENT=		GNU version of line-oriented text editor
 
