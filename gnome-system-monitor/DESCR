@@ -1,0 +1,3 @@
+gnome-system-monitor is a nicer, simpler, easier to use replacement to
+gtop. It uses libgtop for the process monitoring and gtktreeview for
+the viewing.

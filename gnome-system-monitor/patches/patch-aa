@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/11/27 19:16:10 marc Exp $
+
+--- src/Makefile.am.orig	Mon Nov 25 21:02:50 2002
++++ src/Makefile.am
+@@ -23,7 +23,7 @@ gnome_system_monitor_SOURCES = \
+ 	favorites.c favorites.h \
+ 	defaulttable.h
+ 
+-gnome_system_monitor_LDADD = @PROCMAN_LIBS@
++gnome_system_monitor_LDADD = @PROCMAN_LIBS@ -lutil
+ 
+ specdir = $(datadir)/procman
+ 
