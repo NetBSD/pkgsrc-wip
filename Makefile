@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.799 2003/12/24 10:00:26 marc Exp $
-# $NetBSD: Makefile,v 1.799 2003/12/24 10:00:26 marc Exp $
+# $Id: Makefile,v 1.800 2003/12/24 10:15:09 marc Exp $
+# $NetBSD: Makefile,v 1.800 2003/12/24 10:15:09 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -514,7 +514,6 @@ SUBDIR+=	py-vtkmodule
 SUBDIR+=	py-weave
 SUBDIR+=	py-willow
 SUBDIR+=	py-zsi
-SUBDIR+=	py23-html-docs
 SUBDIR+=	pynfo
 SUBDIR+=	pysite
 SUBDIR+=	pywm
