@@ -58,7 +58,7 @@
 /* global variable for argv[0] */
 const char *my_name = NULL;
 
-static char *basename(char *pathname)
+static char *u_basename(char *pathname)
 {
 	char	*ptr;
 
@@ -885,7 +885,7 @@ int main(int argc, char *argv[])
 		}
 
 		/* remove path prefix */
-		zstrcpy(&t, basename(fout));
+		zstrcpy(&t, u_basename(fout));
 		zstrcpy(&fout, t);
 
 		/* write new BDF file */
