@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/25 02:32:48 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/26 20:30:11 thomasklausner Exp $
 #
 
 DISTNAME=		monkey-bubble-0.1.6
@@ -17,5 +17,5 @@ GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 
 .include "../../graphics/librsvg2/buildlink2.mk"
-.include "../../misc/gstreamer/buildlink2.mk"
+.include "../../multimedia/gstreamer/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:33:46 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/26 20:30:30 thomasklausner Exp $
 #
 
 DISTNAME=	totem-0.95.1
@@ -25,6 +25,6 @@ GCONF2_SCHEMAS=		totem-video-thumbnail.schemas
 GCONF2_SCHEMAS+=	totem.schemas
 
 .include "../../devel/GConf2/schemas.mk"
-.include "../../graphics/xine-lib/buildlink2.mk"
+.include "../../multimedia/xine-lib/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

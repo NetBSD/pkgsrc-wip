@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:32:50 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/26 20:30:15 thomasklausner Exp $
 #
 
 DISTNAME=	nautilus-media-0.2.2
@@ -26,8 +26,8 @@ GCONF2_SCHEMAS+=	gst-thumbnail.schemas
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../sysutils/nautilus/buildlink2.mk"
-.include "../../misc/gstreamer/buildlink2.mk"
-.include "../../misc/gst-plugins/buildlink2.mk"
+.include "../../multimedia/gstreamer/buildlink2.mk"
+.include "../../multimedia/gst-plugins/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
