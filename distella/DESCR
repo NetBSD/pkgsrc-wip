@@ -1,0 +1,6 @@
+Distella disassembles Atari 2600 Binary ROM images
+into 6502 source, complete with actuall 2600
+headers and machine cycle counts.  Can also
+extract data and graphics from ROMs with a
+little intervention.  Output is intended
+to be compatible with the DASM cross-assembler.
