@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/11 21:36:21 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/12 02:53:29 othyro Exp $
 
 DISTNAME=		prngd-0.9.28
 CATEGORIES=		security
@@ -25,6 +25,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/00README ${PREFIX}/share/doc/prngd
 	${INSTALL_DATA} ${WRKSRC}/00README.gatherers ${PREFIX}/share/doc/prngd
 	${INSTALL_DATA} ${WRKSRC}/00DESIGN ${PREFIX}/share/doc/prngd
-	${INSTALL_MAN} ${WRKSRC}/prngd.man ${PREFIX}/man/man1/prngd.1
+#	${INSTALL_MAN} ${WRKSRC}/prngd.man ${PREFIX}/man/man1/prngd.1
 
 .include "../../mk/bsd.pkg.mk"
