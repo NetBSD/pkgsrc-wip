@@ -1,4 +1,4 @@
-/*	$NetBSD: whereis.c,v 1.1.1.1 2004/05/23 04:05:15 jeremy-c-reed Exp $	*/
+/*	$NetBSD: whereis.c,v 1.2 2004/06/11 20:20:47 ppostma Exp $	*/
 
 /*-
  * Copyright (c) 1993
@@ -39,6 +39,7 @@
 
 #include <err.h>
 #include <errno.h>
+#include <libgen.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -61,7 +62,7 @@ main(int argc, char *argv[])
 	gid_t egid = getegid();
 	uid_t euid = geteuid();
 
-	__progname = (char *)basename(argv[0]);
+	__progname = basename(argv[0]);
 	which = strcmp(__progname, "which") == 0;
 	useenvpath = which;
 
