@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/03/31 18:34:53 airhead Exp $
+$NetBSD: distinfo,v 1.3 2005/03/31 18:54:52 airhead Exp $
 
 SHA1 (jumpnbump-1.50.tar.gz) = e20ea6821dccf6100a7b157b6568b9d4da86d799
 RMD160 (jumpnbump-1.50.tar.gz) = e6c7754f938d0c11c92b28a95b07b80448260add
 Size (jumpnbump-1.50.tar.gz) = 397208 bytes
 SHA1 (patch-aa) = 30c41128d22541c5edbb67570dfd3a183f97d1b9
+SHA1 (patch-ab) = 16e3cfa61893669ac2c6a6777914fd4218236305
