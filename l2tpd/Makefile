@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2003/09/30 08:59:20 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/30 09:11:28 hfath Exp $
 # FreeBSD Id: ports/net/l2tpd/Makefile,v 1.6 2003/04/16 13:53:27 ru Exp
 
-DISTNAME=	l2tpd
-PKGNAME=	l2tpd-0.69
+DISTNAME=	l2tpd-0.69
 CATEGORIES=	net
 MASTER_SITES=	http://www.l2tpd.org/downloads/
 
