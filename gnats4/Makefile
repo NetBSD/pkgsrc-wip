@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/16 14:06:34 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/16 14:16:14 marc Exp $
 #
 
 DISTNAME=	gnats-4.0
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.gnu.org/software/gnats/
 COMMENT=	GNATS bug tracking system
 
 BUILD_DEPENDS+=	m4-*:../../devel/m4
+
+CONFLICTS=	gnats-[0-9]*
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
