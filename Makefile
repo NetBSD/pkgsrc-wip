@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1562 2004/11/30 09:01:50 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1562 2004/11/30 09:01:50 thomasklausner Exp $
+# $Id: Makefile,v 1.1563 2004/12/03 12:45:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1563 2004/12/03 12:45:20 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -251,7 +251,6 @@ SUBDIR+=	gnucash
 SUBDIR+=	gnump3d
 SUBDIR+=	gnunet
 SUBDIR+=	gnupoc-makesis
-SUBDIR+=	gob2
 SUBDIR+=	goldwater
 SUBDIR+=	gotmail
 SUBDIR+=	gov2
@@ -658,7 +657,6 @@ SUBDIR+=	prozilla
 SUBDIR+=	prtunnel
 SUBDIR+=	pts
 SUBDIR+=	putty
-SUBDIR+=	pwlib-trial
 SUBDIR+=	pxlib
 SUBDIR+=	pxview
 SUBDIR+=	py-Brenda
