@@ -1,8 +1,0 @@
-$Id: TODO,v 1.1.1.1 2004/03/28 04:41:44 xtraeme Exp $
-
-Looks like doesn't work under NetBSD:
-
-mDNSResponder starting up...
-socket.c:427: error: sw_socket_join_multicast_group: setsockopt(IP_MULTICAST_TTL) failed: 22
-mDNSPlatform.c:594: error: platform_setup_socket: unable to join multicast group
-notosx_mdns.c:1405: fatal error: sw_mdns_servant_init: DNSServicesInitialize() failed
