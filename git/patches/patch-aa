@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/05/23 23:22:32 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/07 14:57:32 dillo Exp $
 
 --- Makefile.orig	Sat Mar 13 17:07:47 2004
 +++ Makefile
-@@ -9,15 +9,15 @@ GLK = cheapglk
+@@ -9,16 +9,16 @@ GLK = cheapglk
  #GLK = glkterm
  #GLK = xglk
  
@@ -18,10 +18,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/05/23 23:22:32 dillo Exp $
  
  # Generic C compiler
 -CC = cc -O2
+-OPTIONS =
 +#CC = cc -O2
- OPTIONS =
++OPTIONS =-rdynamic
  
  # Best settings for GCC 2.95. This generates faster code than
+ # GCC 3, so you should use this setup if possible.
 @@ -37,7 +37,7 @@ OPTIONS =
  # -----------------------------------------------------------------
  # Step 3: decide where you want to install the compiled executable.

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/23 23:22:32 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/07 14:57:31 dillo Exp $
 #
 
 DISTNAME=		git-104
-CATEGORIES=		zzz
+CATEGORIES=		games
 MASTER_SITES=		http://diden.net/if/git/releases/
 EXTRACT_SUFX=		.zip
 
@@ -14,5 +14,5 @@ WRKSRC=			${WRKDIR}/git-1.0.4
 USE_BUILDLINK3=		yes
 MAKE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 
-.include "../../wip/gtkglk/buildlink3.mk"
+.include "../../wip/glkloader/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
