@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/22 17:54:38 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2003/05/02 07:44:11 jmmv Exp $
 #
 
 DISTNAME=	geeklog-1.3.7sr1
@@ -19,7 +19,6 @@ NO_BUILD=	YES
 APACHEDIR=	${PREFIX}/share/httpd/htdocs/
 
 do-install:
-
 	${MKDIR} ${APACHEDIR}/geeklog
 	${CP} -R ${WRKSRC}/* ${APACHEDIR}/geeklog
 	${CHOWN} -R www:www ${APACHEDIR}/geeklog
