@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/08/28 09:48:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/02 01:51:23 xtraeme Exp $
 #
 
 DISTNAME=	MuSE-0.8.1
@@ -15,16 +15,22 @@ USE_BUILDLINK2=	YES
 USE_X11=	YES
 USE_OSS=	YES
 USE_GMAKE=	YES
-USE_NCURSES=	YES
 GNU_CONFIGURE=	YES
 
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=	MUSE_USES_RUBIK
+
+.if defined(MUSE_USES_RUBIK) && !empty(MUSE_USES_RUBIK:M[yY][eE][sS])
+USE_NCURSES=    YES
 CONFIGURE_ARGS=	--with-rubik
+.include "../../devel/ncurses/buildlink2.mk"
+.endif
 
 CPPFLAGS=	-DDEVOSSAUDIO=\"\\\"${DEVOSSAUDIO}\\\"\"
 
 .include "../../audio/lame/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
 .include "../../mk/pthread.buildlink2.mk"
