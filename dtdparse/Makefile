@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/26 05:54:22 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/24 05:24:10 minskim Exp $
 #
 
 DISTNAME=	dtdparse-2.0beta6
@@ -34,9 +34,7 @@ do-install:
 		${PERL5_SITELIB}/XML/DTDParse
 	${MKDIR} ${XMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/dtd.dtd ${XMLDIR}
-	${ECHO} \
-		'PUBLIC "-//Norman Walsh//DTD DTDParse V2.0//EN" "dtd.dtd"' \
-		>${XMLDIR}/catalog
+	${INSTALL_DATA} ${FILESDIR}/catalog ${XMLDIR}/catalog
 
 post-install:
 	${MKDIR} ${EGDIR}
