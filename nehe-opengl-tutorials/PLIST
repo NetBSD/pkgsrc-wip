@@ -1,0 +1,229 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/20 01:56:42 mpasternak Exp $
+share/nehe-opengl-tutorials-sdl-0/Lesson36_linux_SDL/main.h
+share/nehe-opengl-tutorials-sdl-0/Lesson36_linux_SDL/error.c
+share/nehe-opengl-tutorials-sdl-0/Lesson36_linux_SDL/Makefile
+share/nehe-opengl-tutorials-sdl-0/Lesson36_linux_SDL/main.c
+share/nehe-opengl-tutorials-sdl-0/Lesson36_linux_SDL/lesson36.c
+share/nehe-opengl-tutorials-sdl-0/Lesson36_linux_SDL/main.o
+share/nehe-opengl-tutorials-sdl-0/Lesson36_linux_SDL/lesson36.o
+share/nehe-opengl-tutorials-sdl-0/Lesson36_linux_SDL/error.o
+share/nehe-opengl-tutorials-sdl-0/Lesson36_linux_SDL/Lesson36
+share/nehe-opengl-tutorials-sdl-0/lesson01/lesson01.c
+share/nehe-opengl-tutorials-sdl-0/lesson01/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson01/README
+share/nehe-opengl-tutorials-sdl-0/lesson01/lesson01.c~
+share/nehe-opengl-tutorials-sdl-0/lesson01/lesson01
+share/nehe-opengl-tutorials-sdl-0/lesson02/lesson02.c
+share/nehe-opengl-tutorials-sdl-0/lesson02/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson02/README
+share/nehe-opengl-tutorials-sdl-0/lesson02/lesson02.c~
+share/nehe-opengl-tutorials-sdl-0/lesson02/lesson02
+share/nehe-opengl-tutorials-sdl-0/lesson03/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson03/README
+share/nehe-opengl-tutorials-sdl-0/lesson03/lesson03.c
+share/nehe-opengl-tutorials-sdl-0/lesson03/lesson03.c~
+share/nehe-opengl-tutorials-sdl-0/lesson03/lesson03
+share/nehe-opengl-tutorials-sdl-0/lesson04/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson04/README
+share/nehe-opengl-tutorials-sdl-0/lesson04/lesson04.c
+share/nehe-opengl-tutorials-sdl-0/lesson04/lesson04
+share/nehe-opengl-tutorials-sdl-0/lesson05/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson05/README
+share/nehe-opengl-tutorials-sdl-0/lesson05/lesson05.c
+share/nehe-opengl-tutorials-sdl-0/lesson05/lesson05
+share/nehe-opengl-tutorials-sdl-0/lesson06/lesson06.c
+share/nehe-opengl-tutorials-sdl-0/lesson06/data/nehe.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson06/README
+share/nehe-opengl-tutorials-sdl-0/lesson06/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson06/lesson06
+share/nehe-opengl-tutorials-sdl-0/lesson07/lesson07.c
+share/nehe-opengl-tutorials-sdl-0/lesson07/data/crate.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson07/README
+share/nehe-opengl-tutorials-sdl-0/lesson07/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson07/lesson07
+share/nehe-opengl-tutorials-sdl-0/lesson08/lesson08.c
+share/nehe-opengl-tutorials-sdl-0/lesson08/data/glass.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson08/README
+share/nehe-opengl-tutorials-sdl-0/lesson08/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson08/lesson08
+share/nehe-opengl-tutorials-sdl-0/lesson09/lesson09.c
+share/nehe-opengl-tutorials-sdl-0/lesson09/data/star.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson09/README
+share/nehe-opengl-tutorials-sdl-0/lesson09/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson09/lesson09
+share/nehe-opengl-tutorials-sdl-0/lesson10/lesson10.c
+share/nehe-opengl-tutorials-sdl-0/lesson10/data/mud.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson10/data/world.txt
+share/nehe-opengl-tutorials-sdl-0/lesson10/README
+share/nehe-opengl-tutorials-sdl-0/lesson10/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson10/lesson10
+share/nehe-opengl-tutorials-sdl-0/lesson11/lesson11.c
+share/nehe-opengl-tutorials-sdl-0/lesson11/data/tim.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson11/README
+share/nehe-opengl-tutorials-sdl-0/lesson11/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson11/lesson11
+share/nehe-opengl-tutorials-sdl-0/lesson12/lesson12.c
+share/nehe-opengl-tutorials-sdl-0/lesson12/data/cube.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson12/README
+share/nehe-opengl-tutorials-sdl-0/lesson12/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson12/lesson12
+share/nehe-opengl-tutorials-sdl-0/lesson16/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson16/README
+share/nehe-opengl-tutorials-sdl-0/lesson16/data/crate.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson16/lesson16.c
+share/nehe-opengl-tutorials-sdl-0/lesson16/lesson16
+share/nehe-opengl-tutorials-sdl-0/lesson17/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson17/README
+share/nehe-opengl-tutorials-sdl-0/lesson17/lesson17.c
+share/nehe-opengl-tutorials-sdl-0/lesson17/data/bumps.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson17/data/font.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson17/lesson17
+share/nehe-opengl-tutorials-sdl-0/lesson18/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson18/README
+share/nehe-opengl-tutorials-sdl-0/lesson18/data/wall.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson18/lesson18.c
+share/nehe-opengl-tutorials-sdl-0/lesson18/lesson18
+share/nehe-opengl-tutorials-sdl-0/lesson19/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson19/README
+share/nehe-opengl-tutorials-sdl-0/lesson19/lesson19.c
+share/nehe-opengl-tutorials-sdl-0/lesson19/data/particle.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson19/lesson19
+share/nehe-opengl-tutorials-sdl-0/lesson20/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson20/README
+share/nehe-opengl-tutorials-sdl-0/lesson20/data/image1.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson20/data/image2.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson20/data/logo.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson20/data/mask1.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson20/data/mask2.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson20/lesson20.c
+share/nehe-opengl-tutorials-sdl-0/lesson20/lesson20
+share/nehe-opengl-tutorials-sdl-0/lesson21/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson21/README
+share/nehe-opengl-tutorials-sdl-0/lesson21/lesson21.c
+share/nehe-opengl-tutorials-sdl-0/lesson21/data/complete.wav
+share/nehe-opengl-tutorials-sdl-0/lesson21/data/die.wav
+share/nehe-opengl-tutorials-sdl-0/lesson21/data/font.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson21/data/freeze.wav
+share/nehe-opengl-tutorials-sdl-0/lesson21/data/hourglass.wav
+share/nehe-opengl-tutorials-sdl-0/lesson21/data/image.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson21/data/lktheme.mod
+share/nehe-opengl-tutorials-sdl-0/lesson21/lesson21
+share/nehe-opengl-tutorials-sdl-0/lesson22/data/bump.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson22/data/base.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson22/data/multi_on.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson22/data/multi_on_alpha.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson22/data/opengl.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson22/data/opengl_alpha.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson22/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson22/README
+share/nehe-opengl-tutorials-sdl-0/lesson22/lesson22.c
+share/nehe-opengl-tutorials-sdl-0/lesson22/lesson22
+share/nehe-opengl-tutorials-sdl-0/lesson23/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson23/README
+share/nehe-opengl-tutorials-sdl-0/lesson23/data/bg.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson23/data/reflect.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson23/lesson23.c
+share/nehe-opengl-tutorials-sdl-0/lesson23/lesson23
+share/nehe-opengl-tutorials-sdl-0/lesson24/Data/Font.tga
+share/nehe-opengl-tutorials-sdl-0/lesson24/Lesson24.cpp
+share/nehe-opengl-tutorials-sdl-0/lesson24/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson24/Lesson24
+share/nehe-opengl-tutorials-sdl-0/lesson25/Data/Sphere.txt
+share/nehe-opengl-tutorials-sdl-0/lesson25/Data/Torus.txt
+share/nehe-opengl-tutorials-sdl-0/lesson25/Data/Tube.txt
+share/nehe-opengl-tutorials-sdl-0/lesson25/Lesson25.cpp
+share/nehe-opengl-tutorials-sdl-0/lesson25/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson25/Lesson25
+share/nehe-opengl-tutorials-sdl-0/lesson32/Data/Coke.tga
+share/nehe-opengl-tutorials-sdl-0/lesson32/Data/Target.tga
+share/nehe-opengl-tutorials-sdl-0/lesson32/Data/BlueFace.tga
+share/nehe-opengl-tutorials-sdl-0/lesson32/Data/Vase.tga
+share/nehe-opengl-tutorials-sdl-0/lesson32/Data/Sky.tga
+share/nehe-opengl-tutorials-sdl-0/lesson32/Data/Bucket.tga
+share/nehe-opengl-tutorials-sdl-0/lesson32/Data/Explode.tga
+share/nehe-opengl-tutorials-sdl-0/lesson32/Data/Shot.wav
+share/nehe-opengl-tutorials-sdl-0/lesson32/Data/Crosshair.tga
+share/nehe-opengl-tutorials-sdl-0/lesson32/Data/Ground.tga
+share/nehe-opengl-tutorials-sdl-0/lesson32/Data/Font.tga
+share/nehe-opengl-tutorials-sdl-0/lesson32/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson32/lesson32.cpp
+share/nehe-opengl-tutorials-sdl-0/lesson32/lesson32
+share/nehe-opengl-tutorials-sdl-0/lesson37/Data/Model.txt
+share/nehe-opengl-tutorials-sdl-0/lesson37/Data/Shader.txt
+share/nehe-opengl-tutorials-sdl-0/lesson37/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson37/README
+share/nehe-opengl-tutorials-sdl-0/lesson37/lesson37.cpp
+share/nehe-opengl-tutorials-sdl-0/lesson37/lesson37
+share/nehe-opengl-tutorials-sdl-0/lesson40_linux_sdl/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson40_linux_sdl/main.cpp
+share/nehe-opengl-tutorials-sdl-0/lesson40_linux_sdl/Physics1.h
+share/nehe-opengl-tutorials-sdl-0/lesson40_linux_sdl/main.h
+share/nehe-opengl-tutorials-sdl-0/lesson40_linux_sdl/lesson40.cpp
+share/nehe-opengl-tutorials-sdl-0/lesson40_linux_sdl/Physics2.h
+share/nehe-opengl-tutorials-sdl-0/lesson40_linux_sdl/NeHe's Readme.txt
+share/nehe-opengl-tutorials-sdl-0/lesson40_linux_sdl/main.o
+share/nehe-opengl-tutorials-sdl-0/lesson40_linux_sdl/lesson40.o
+share/nehe-opengl-tutorials-sdl-0/lesson40_linux_sdl/lesson40
+share/nehe-opengl-tutorials-sdl-0/lesson41_linux_sdl/main.h
+share/nehe-opengl-tutorials-sdl-0/lesson41_linux_sdl/error.c
+share/nehe-opengl-tutorials-sdl-0/lesson41_linux_sdl/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson41_linux_sdl/lesson41.c
+share/nehe-opengl-tutorials-sdl-0/lesson41_linux_sdl/main.c
+share/nehe-opengl-tutorials-sdl-0/lesson41_linux_sdl/data/wall.bmp
+share/nehe-opengl-tutorials-sdl-0/lesson41_linux_sdl/main.o
+share/nehe-opengl-tutorials-sdl-0/lesson41_linux_sdl/lesson41.o
+share/nehe-opengl-tutorials-sdl-0/lesson41_linux_sdl/error.o
+share/nehe-opengl-tutorials-sdl-0/lesson41_linux_sdl/lesson41
+share/nehe-opengl-tutorials-sdl-0/lesson42/Makefile
+share/nehe-opengl-tutorials-sdl-0/lesson42/README
+share/nehe-opengl-tutorials-sdl-0/lesson42/lesson42.c
+share/nehe-opengl-tutorials-sdl-0/lesson42/lesson42
+@dirrm share/nehe-opengl-tutorials-sdl-0/Lesson36_linux_SDL
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson01
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson02
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson03
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson04
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson05
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson06/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson06
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson07/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson07
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson08/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson08
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson09/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson09
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson10/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson10
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson11/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson11
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson12/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson12
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson16/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson16
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson17/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson17
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson18/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson18
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson19/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson19
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson20/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson20
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson21/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson21
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson22/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson22
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson23/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson23
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson24/Data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson24
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson25/Data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson25
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson32/Data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson32
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson37/Data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson37
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson40_linux_sdl
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson41_linux_sdl/data
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson41_linux_sdl
+@dirrm share/nehe-opengl-tutorials-sdl-0/lesson42
+@dirrm share/nehe-opengl-tutorials-sdl-0
