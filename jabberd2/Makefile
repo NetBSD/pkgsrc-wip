@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/09/27 12:15:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.20 2003/09/27 12:29:53 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0b1
@@ -122,32 +122,34 @@ OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 750
 post-extract:
 
 .for f in jabberd.cfg ${FILES}
-	${MV} ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
+	@${MV} ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
 .endfor
 .undef f
 
 pre-configure:
 
 .for f in ${FILES}
-	${SED}  \
+	@${SED}  \
 		-e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
 		-e "s|@@PIDDIR@@|${JABBERD_PIDDIR}|g" \
-		-e "s|@@LOGDIR@@|${JABBERD_LOGDIR}|g " \
-		-e "s|@@BINDIR@@|${PREFIX}/bin|g " \
-		-e "s|@@DBDIR@@|${JABBERD_DBDIR}|g " \
+		-e "s|@@LOGDIR@@|${JABBERD_LOGDIR}|g" \
+		-e "s|@@SSLCERTS@@|${SSLCERTS}|g" \
+		-e "s|@@BINDIR@@|${PREFIX}/bin|g" \
+		-e "s|@@DBDIR@@|${JABBERD_DBDIR}|g" \
 		${WRKSRC}/etc/${f}.in > ${WRKSRC}/etc/${f}
 .endfor
 .undef f
 
-	${SED}  \
+	@${SED}  \
 		-e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
 		-e "s|@@BINDIR@@|${PREFIX}/bin|g " \
 		${WRKSRC}/etc/jabberd.cfg.in > ${WRKSRC}/etc/jabberd.cfg
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
+
+	@${INSTALL_DATA_DIR} ${EGDIR}
 .for f in jabberd.cfg ${FILES}
-	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
+	@${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
 .endfor
 
 .include "../../converters/libiconv/buildlink2.mk"
