@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2004/05/10 22:04:24 blef Exp $
-# $Id: Makefile,v 1.6 2004/05/10 22:04:24 blef Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/20 05:28:25 xtraeme Exp $
+# $Id: Makefile,v 1.7 2004/06/20 05:28:25 xtraeme Exp $
 
-DISTNAME=		binutils-2.14.90-20030807-1-src
-PKGNAME=		mingw-${DISTNAME:S/-20030807-1-src//}
-WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}
-CATEGORIES=		cross
-MASTER_SITES=		${MASTER_SITE_MINGW}
+DISTNAME=	binutils-2.15.90-20040222-1-src
+PKGNAME=	mingw-${DISTNAME:C/-200.*-src//}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
+CATEGORIES=	cross
+MASTER_SITES=	${MASTER_SITE_MINGW}
 
-MAINTAINER=		dotz@irc.pl
-HOMEPAGE=		http://mingw.sf.net/
-COMMENT=		GNU C Compiler ported to win32 platforms
+MAINTAINER=	dotz@irc.pl
+HOMEPAGE=	http://mingw.sf.net/
+COMMENT=	GNU C Compiler ported to win32 platforms
 
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=      	yes
@@ -21,7 +21,8 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} --exec-prefix=${PREFIX} \
 			--target=${MINGW_TARGET}
 
 post-install:
-	${LN} -s ${PREFIX}/bin/${MINGW_TARGET}-windres ${PREFIX}/${MINGW_TARGET}/bin/windres
+	${LN} -s ${PREFIX}/bin/${MINGW_TARGET}-windres \
+		${PREFIX}/${MINGW_TARGET}/bin/windres
 
 .include "../../wip/mingw/Makefile.common"
 .include "../../wip/mingw-w32api-bin/buildlink3.mk"

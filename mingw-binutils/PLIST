@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/12/15 14:39:03 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/06/20 05:28:26 xtraeme Exp $
 bin/${MINGW_TARGET}-addr2line
 bin/${MINGW_TARGET}-ar
 bin/${MINGW_TARGET}-as
@@ -29,15 +29,8 @@ ${MINGW_TARGET}/lib/ldscripts/i386pe.xn
 ${MINGW_TARGET}/lib/ldscripts/i386pe.xr
 ${MINGW_TARGET}/lib/ldscripts/i386pe.xu
 lib/libiberty.a
-info/as.info
-info/bfd.info
-info/binutils.info
-info/configure.info
-info/ld.info
-info/standards.info
 man/man1/${MINGW_TARGET}-addr2line.1
 man/man1/${MINGW_TARGET}-ar.1
-man/man1/${MINGW_TARGET}-as.1
 man/man1/${MINGW_TARGET}-c++filt.1
 man/man1/${MINGW_TARGET}-dlltool.1
 man/man1/${MINGW_TARGET}-ld.1
