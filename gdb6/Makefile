@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/28 11:36:57 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/28 12:22:10 johnrshannon Exp $
 #
 
 DISTNAME=		gdb-6.1
@@ -42,7 +42,6 @@ do-test:
 	fi
 
 pre-configure:
-	cd ${WRKSRC}/gdb; ${AUTOCONF}
 .if !empty(USE_GCC_34:M[Yy][Ee][Ss])
 .  include "../../wip/gcc-3.4/preconfigure.mk"
 .endif
@@ -50,6 +49,5 @@ pre-configure:
 .if !empty(USE_GCC_34:M[Yy][Ee][Ss])
 .include "../../wip/gcc-3.4/buildlink3.mk"
 .endif
-.include "../../mk/autoconf.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
