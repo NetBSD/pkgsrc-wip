@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1217 2004/04/19 05:53:53 blef Exp $
-# $NetBSD: Makefile,v 1.1217 2004/04/19 05:53:53 blef Exp $
+# $Id: Makefile,v 1.1218 2004/04/19 15:50:21 mpasternak Exp $
+# $NetBSD: Makefile,v 1.1218 2004/04/19 15:50:21 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -397,6 +397,7 @@ SUBDIR+=	moregroupware
 SUBDIR+=	mpc
 SUBDIR+=	mpgedit
 SUBDIR+=	mplusfonts
+SUBDIR+=	mppdec
 SUBDIR+=	msf
 SUBDIR+=	mtf
 SUBDIR+=	mtrack
