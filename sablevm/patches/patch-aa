@@ -1,0 +1,37 @@
+--- src/libsablevm/error.c.orig	2004-03-24 00:28:11.000000000 +0000
++++ src/libsablevm/error.c	2004-03-24 00:29:17.000000000 +0000
+@@ -219,7 +219,7 @@
+   switch (signo)
+     {
+ 
+-#if defined(_SABLEVM_SIGNALS_FOR_EXCEPTIONS) || defined(_SABLEVM_INLINABILITY_TESTING)
++#if 0
+ 
+     case SIGSEGV:
+       {
+@@ -257,7 +257,6 @@
+       }
+       break;
+ 
+-#endif /* _SABLEVM_SIGNALS_FOR_EXCEPTIONS || _SABLEVM_INLINABILITY_TESTING */
+ 
+     case SIGQUIT:
+       {
+@@ -276,7 +275,7 @@
+ 	  }
+       }
+       break;
+-
++#endif
+     default:
+       {
+ 	/* this signal handler shouldn't be registered to catch these! */
+@@ -362,7 +361,7 @@
+ #endif /* _SABLEVM_INLINABILITY_TESTING */
+ 
+   /* use extended info version */
+-  sa.sa_flags = SA_SIGINFO;
++  //sa.sa_flags = SA_SIGINFO;
+   sa.sa_sigaction = _svmf_internal_sigaction;
+ 
+   if (sigaction (SIGQUIT, &sa, &_svmv_old_sigquit) != 0)
