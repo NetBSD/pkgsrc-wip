@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.69 2003/04/13 11:57:54 jmmv Exp $
-# $NetBSD: Makefile,v 1.69 2003/04/13 11:57:54 jmmv Exp $
+# $Id: Makefile,v 1.70 2003/04/13 12:35:12 cjep Exp $
+# $NetBSD: Makefile,v 1.70 2003/04/13 12:35:12 cjep Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -63,6 +63,7 @@ SUBDIR+=	py-csv
 SUBDIR+=	py-gnome2
 SUBDIR+=	py-gtk2
 SUBDIR+=	py-spreadmodule
+SUBDIR+=	qadsl
 SUBDIR+=	scm
 SUBDIR+=	shoutcast
 SUBDIR+=	tex-foiltex
