@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 23:28:43 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/09 19:34:21 blef Exp $
 #
 
 DISTNAME=		lposix
@@ -12,12 +12,12 @@ HOMEPAGE=		http://www.tecgraf.puc-rio.br/~diego/luasocket/new/
 COMMENT=		POSIX library for Lua
 
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/lposix.so ${PREFIX}/lib/libluaposix.so
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/lua/
 	${INSTALL_DATA} ${WRKSRC}/*.lua ${PREFIX}/lib/lua/
 
-.include "../../lang/lua/buildlink2.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
