@@ -1,0 +1,45 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/17 16:56:46 xtraeme Exp $
+lib/libneural.a
+lib/libneural.la
+lib/libneural.so
+lib/libneural.so.0
+lib/libneural.so.0.0.0
+include/neuron.h
+include/nnwork.h
+share/libneural-1.0.3/examples/.libs/char_recognition
+share/libneural-1.0.3/examples/.libs/char_stats
+share/libneural-1.0.3/examples/.libs/odd_even
+@dirrm share/libneural-1.0.3/examples/.libs
+share/libneural-1.0.3/examples/OX/src/ox.cxx
+@dirrm share/libneural-1.0.3/examples/OX/src
+@dirrm share/libneural-1.0.3/examples/OX/obj
+@dirrm share/libneural-1.0.3/examples/OX/bin
+share/libneural-1.0.3/examples/OX/Makefile
+share/libneural-1.0.3/examples/OX/ox.net
+share/libneural-1.0.3/examples/OX/README
+@dirrm share/libneural-1.0.3/examples/OX
+share/libneural-1.0.3/examples/Makefile.in
+share/libneural-1.0.3/examples/char_recognition.cc
+share/libneural-1.0.3/examples/char_data.cc
+share/libneural-1.0.3/examples/char_stats.cc
+share/libneural-1.0.3/examples/char_cov.cc
+share/libneural-1.0.3/examples/odd_even.cc
+share/libneural-1.0.3/examples/char_recognition.nnw
+share/libneural-1.0.3/examples/odd_even.nnw
+share/libneural-1.0.3/examples/build_nnstats
+share/libneural-1.0.3/examples/build_covstats
+share/libneural-1.0.3/examples/Makefile
+share/libneural-1.0.3/examples/char_recognition.o
+share/libneural-1.0.3/examples/char_data.o
+share/libneural-1.0.3/examples/char_recognition
+share/libneural-1.0.3/examples/char_stats.o
+share/libneural-1.0.3/examples/char_stats
+share/libneural-1.0.3/examples/char_cov.o
+share/libneural-1.0.3/examples/char_cov
+share/libneural-1.0.3/examples/odd_even.o
+share/libneural-1.0.3/examples/README
+share/libneural-1.0.3/examples/odd_even
+share/libneural-1.0.3/examples/Makefile.am
+@dirrm share/libneural-1.0.3/examples
+share/libneural-1.0.3/README
+@dirrm share/libneural-1.0.3

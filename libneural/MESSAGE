@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/09/17 16:56:45 xtraeme Exp $
+
+  See 
+  ${PREFIX}/share/libneural-1.0.3/README
+  for an overview.
+  Sample applications are in
+  ${PREFIX}/share/libneural-1.0.3/examples/
+
+===========================================================================
