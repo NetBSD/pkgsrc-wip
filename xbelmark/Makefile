@@ -1,4 +1,4 @@
-NetBSD $NetBSD: Makefile,v 1.2 2003/12/30 20:03:00 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/07 20:47:56 mpasternak Exp $
 #
 
 DISTNAME=		xbelmark.py
