@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/15 23:12:53 mpasternak Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/15 23:18:08 mpasternak Exp $
 #
 
 DISTNAME=      	gtk2-theme-pack
@@ -116,7 +116,7 @@ COMMENT=		Art for your GTK+ 2.x desktop
 DEPENDS+=	gtk2-engines-bluecurve>=1.0:../../wip/gtk2-engines-bluecurve
 DEPENDS+=	gtk2-engines-dwerg>=0.6:../../wip/gtk2-engines-dwerg
 DEPENDS+=	gtk2-engines-flat>=2.0:../../wip/gtk2-engines-flat
-DEPENDS+=	gtk2-engines-galaxy>=0.2:../../wip/gtk2-engines-galaxy
+DEPENDS+=	gtk2-engines-galaxy>=0:../../wip/gtk2-engines-galaxy
 DEPENDS+=	gtk2-engines-industrial>=0:../../wip/gtk2-engines-industrial
 DEPENDS+=	gtk2-engines-lighthouseblue>=0.4:../../wip/gtk2-engines-lighthouseblue
 DEPENDS+=	gtk2-engines-magichicken>=1.0.2:../../wip/gtk2-engines-magichicken
