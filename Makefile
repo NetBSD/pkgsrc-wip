@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1092 2004/03/19 05:16:54 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1092 2004/03/19 05:16:54 xtraeme Exp $
+# $Id: Makefile,v 1.1093 2004/03/19 17:49:50 poppnk Exp $
+# $NetBSD: Makefile,v 1.1093 2004/03/19 17:49:50 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -109,6 +109,7 @@ SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	dovecot-nightly
 SUBDIR+=	dpkg
+SUBDIR+=	drow
 SUBDIR+=	drpython
 SUBDIR+=	drweb
 SUBDIR+=	drweb-clients-shared
