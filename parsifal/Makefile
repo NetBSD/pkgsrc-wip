@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/11 20:00:45 ora8_ Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/11 22:25:52 ora8_ Exp $
 
 DISTNAME=	libparsifal-0.7.3
 CATEGORIES=	textproc
@@ -8,6 +8,7 @@ MAINTAINER=	josediazfer@yahoo.es
 HOMEPAGE=	http://www.saunalahti.fi/~samiuus/toni/xmlproc/
 COMMENT= 	XML parser with implementation SAX2
 
+USE_BUILDLINK2= YES
 HAS_CONFIGURE=  YES
 
 CONFIGURE_ARGS+=--prefix=${LOCALBASE}
