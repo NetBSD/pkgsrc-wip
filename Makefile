@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1006 2004/02/22 01:09:23 minskim Exp $
-# $NetBSD: Makefile,v 1.1006 2004/02/22 01:09:23 minskim Exp $
+# $Id: Makefile,v 1.1007 2004/02/22 01:15:56 minskim Exp $
+# $NetBSD: Makefile,v 1.1007 2004/02/22 01:15:56 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -427,7 +427,6 @@ SUBDIR+=	p5-Sendmail-PMilter
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-String-Approx
-SUBDIR+=	p5-Text-Reform
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-XML-LibXSLT
 SUBDIR+=	p5-XML-Sablotron

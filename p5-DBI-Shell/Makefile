@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/22 01:09:23 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/22 01:15:57 minskim Exp $
 #
 
 DISTNAME=	DBI-Shell-11.9
@@ -13,7 +13,7 @@ COMMENT=	Interactive command Shell for the Perl DBI
 
 DEPENDS+=	p5-DBI>=1.37:../../databases/p5-DBI
 DEPENDS+=	p5-IO-Tee>=0.64:../../devel/p5-IO-Tee
-DEPENDS+=	p5-Text-Reform>=1.11:../../wip/p5-Text-Reform
+DEPENDS+=	p5-Text-Reform>=1.11:../../textproc/p5-Text-Reform
 
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DBI/Shell/.packlist
