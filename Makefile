@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1090 2004/03/19 01:46:12 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1090 2004/03/19 01:46:12 xtraeme Exp $
+# $Id: Makefile,v 1.1091 2004/03/19 02:22:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1091 2004/03/19 02:22:40 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -621,6 +621,7 @@ SUBDIR+=	shoutcast
 SUBDIR+=	silc-toolkit
 SUBDIR+=	silky
 SUBDIR+=	simage
+SUBDIR+=	simgear
 SUBDIR+=	sks
 SUBDIR+=	slackware_aaa_base
 SUBDIR+=	slackware_aaa_elflibs
