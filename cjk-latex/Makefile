@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/10/26 00:43:43 rxg Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/21 17:05:27 rxg Exp $
 
-DISTNAME=	CJK-4_5.2
+DISTNAME=	cjk-4.5.2
 PKGNAME=	cjk-latex-4.5.2
 CATEGORIES=	print
-MASTER_SITES=	http://www.feyrer.de/Misc/ \
-		${MASTER_SITE_LOCAL}	# relocate to MSL when moving to pkgsrc
+MASTER_SITES=	http://cjk.ffii.org/
 
 MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
 HOMEPAGE=	http://cjk.ffii.org/
