@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/07 02:29:20 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/03/31 22:54:07 jeremy-c-reed Exp $
 boot/System.map-${PKGVERSION}
 boot/bzImage-${PKGVERSION}
 boot/${PKGNAME}.config
@@ -39,7 +39,7 @@ lib/modules/${PKGVERSION}/modules.generic_string
 lib/modules/${PKGVERSION}/modules.ieee1394map
 lib/modules/${PKGVERSION}/modules.isapnpmap
 lib/modules/${PKGVERSION}/modules.parportmap
-lib/modules/${PKGVERSION}/modules.${LOWER_VENDOR}imap
+lib/modules/${PKGVERSION}/modules.pcimap
 lib/modules/${PKGVERSION}/modules.pnpbiosmap
 lib/modules/${PKGVERSION}/modules.usbmap
 @dirrm lib/modules/${PKGVERSION}/kernel/sound/drivers/mpu401
