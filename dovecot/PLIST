@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2003/05/13 20:50:27 lsed Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/05/14 02:50:09 lsed Exp $
 etc/rc.d/dovecot
+libexec/dovecot/dovecot-auth
+libexec/dovecot/imap-login
+libexec/dovecot/imap
+libexec/dovecot/pop3-login
+libexec/dovecot/pop3
 sbin/dovecot
 share/doc/dovecot/auth.txt
 share/doc/dovecot/configuration.txt
