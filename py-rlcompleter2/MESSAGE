@@ -1,6 +1,6 @@
 ===========================================================================
-$NetBSD: DISPLAY,v 1.1.1.1 2004/04/22 23:42:11 mpasternak Exp $
-$Id: DISPLAY,v 1.1.1.1 2004/04/22 23:42:11 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.1 2004/04/23 03:15:19 mpasternak Exp $
+$Id: MESSAGE,v 1.1 2004/04/23 03:15:19 mpasternak Exp $
 
 To enable completion, type:
 
