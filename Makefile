@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1326 2004/06/12 11:03:52 ppostma Exp $
-# $NetBSD: Makefile,v 1.1326 2004/06/12 11:03:52 ppostma Exp $
+# $Id: Makefile,v 1.1327 2004/06/12 22:54:47 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1327 2004/06/12 22:54:47 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -74,6 +74,7 @@ SUBDIR+=	cgic
 SUBDIR+=	cherokee
 SUBDIR+=	chksniff
 SUBDIR+=	chora
+SUBDIR+=	cinelerra
 SUBDIR+=	cjk-latex
 SUBDIR+=	cjk-latex-chinese
 SUBDIR+=	cjk-latex-japanese
@@ -276,6 +277,7 @@ SUBDIR+=	jdk14
 SUBDIR+=	kahakai
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
+SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	koffice-i18n-de
 SUBDIR+=	koffice-i18n-es
@@ -324,6 +326,8 @@ SUBDIR+=	libhydrogen
 SUBDIR+=	libmatchbox
 SUBDIR+=	libneural
 SUBDIR+=	libprelude
+SUBDIR+=	libavc1394
+SUBDIR+=	libraw1394
 SUBDIR+=	libssh
 SUBDIR+=	libticables
 SUBDIR+=	libticalcs
@@ -340,6 +344,7 @@ SUBDIR+=	links-hacked
 SUBDIR+=	links1
 SUBDIR+=	linux-ch
 SUBDIR+=	linux-chprofessional
+SUBDIR+=	linux-hotplug
 SUBDIR+=	linux-kbd
 SUBDIR+=	linux-kernel
 SUBDIR+=	linux-kernel-headers
@@ -354,6 +359,7 @@ SUBDIR+=	liquidwar
 SUBDIR+=	lletters
 SUBDIR+=	lmarbles
 SUBDIR+=	logrotate
+SUBDIR+=	lorder
 SUBDIR+=	lua-pgsql
 SUBDIR+=	luacheia
 SUBDIR+=	luaposix
