@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2003/10/17 10:56:27 adrian_p Exp $
+$NetBSD: distinfo,v 1.4 2004/02/14 10:59:54 adrian_p Exp $
 
-SHA1 (socat-1.3.2.1.tar.gz) = 46bd1c0da5b8946f9e7d64192f3f3f0da6fce27a
-Size (socat-1.3.2.1.tar.gz) = 282745 bytes
+SHA1 (socat-1.3.2.2.tar.gz) = 5026fdc2f65af4a7c711d08fc3cbace5123465ec
+Size (socat-1.3.2.2.tar.gz) = 285280 bytes
 SHA1 (patch-aa) = ffe4de9db45c91cce596cc1f81dd9a7016e58b74
+SHA1 (patch-ab) = 3a87d78c88acd72f520a716a5595a1d87cb81115
