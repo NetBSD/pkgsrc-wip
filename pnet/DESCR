@@ -1,0 +1,10 @@
+The goal of this project is to build a suite of Free Software tools
+to build and execute .NET applications, including a C# compiler,
+assembler, disassembler, and runtime engine.  The initial target
+platform is GNU/Linux, with other platforms to follow in the future.
+
+The product is available under the terms of the GNU General Public
+License.  The latest version of the product can be downloaded
+from the following Web site:
+
+    http://www.southern-storm.com.au/portable_net.html
