@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/27 02:36:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 20:09:37 cjep Exp $
 #
 
 DISTNAME=		libXfixes-2.0.0
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://freedesktop.org/
-COMMENT=		Xfixes extension of X RandR		
+COMMENT=		Xfixes extension of X RandR
 
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
