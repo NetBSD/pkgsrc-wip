@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/11 01:47:43 bjan2 Exp $
+
+SHA1 (QUANTA-0.3.tar.gz) = d0008523c76d3f4ef3f210fdeed9ea34c06bcae8
+Size (QUANTA-0.3.tar.gz) = 878767 bytes
+SHA1 (patch-aa) = 5eb4ac77849d216e6703c3eee0103becf3c8fe7c
+SHA1 (patch-ab) = a5e4cf068bcccae986af7b58b12c0ae88d664af1

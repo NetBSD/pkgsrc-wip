@@ -1,0 +1,12 @@
+QUANTA is a toolkit for supporting Optiputer applications over optical
+networks.
+
+Getting TeraNode applications to work optimally on a high speed optical
+network is not as simple as connecting ones computer to the Internet.
+Today's protocol stacks and scientific applications cannot and do not
+know how to utilize this extreme level of bandwidth even when it is
+available. We intend to address this problem with Quanta, a
+cross-platform adaptive networking toolkit for supporting the
+extraordinary networking requirements of Tera-Nodes.
+
+Note: This has nothing to do with www/quanta*, the KDE HTML editor.
