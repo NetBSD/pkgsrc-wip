@@ -1,5 +1,5 @@
---- IckleClient.cpp.orig	Fri Apr 11 22:32:26 2003
-+++ IckleClient.cpp	Fri Apr 11 22:34:32 2003
+--- ickle/IckleClient.cpp.orig	Fri Apr 11 22:32:26 2003
++++ ickle/IckleClient.cpp	Fri Apr 11 22:34:32 2003
 @@ -162,7 +162,7 @@
  
  void IckleClient::loadContactList() {
