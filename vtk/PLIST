@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/11/23 03:24:01 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/01/02 00:22:34 mpasternak Exp $
 include/vtk/expat.h
 include/vtk/expatDllConfig.h
 include/vtk/png.h
@@ -497,7 +497,6 @@ include/vtk/vtkPropPicker.h
 include/vtk/vtkProperty.h
 include/vtk/vtkProperty2D.h
 include/vtk/vtkPyramid.h
-include/vtk/vtkPythonUtil.h
 include/vtk/vtkQuad.h
 include/vtk/vtkQuadraticEdge.h
 include/vtk/vtkQuadraticHexahedron.h

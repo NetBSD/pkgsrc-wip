@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/11/23 03:16:10 mpasternak Exp $
+$NetBSD: distinfo,v 1.4 2004/01/02 00:22:34 mpasternak Exp $
 
-SHA1 (VTK-4.2-LatestRelease.tar.gz) = 11310ffbf30d75f01b3afab69473bf97141e3b1b
-Size (VTK-4.2-LatestRelease.tar.gz) = 6070918 bytes
-SHA1 (patch-aa) = fb57c7d8110e6886816a71b0300d4e363f47ef0e
+SHA1 (VTK-4.2-LatestRelease.tar.gz) = a01adb01acd18f162df3b3c20d2d4dfff927dd88
+Size (VTK-4.2-LatestRelease.tar.gz) = 6150847 bytes
