@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/14 17:42:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/15 17:03:36 adrian_p Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -23,6 +23,7 @@ BUILD_DEFS+=		DSPAM_HOME
 BUILD_DEFS+=		DSPAM_STORAGE_DRIVER
 BUILD_DEFS+=		DSPAM_SIGNATURE_LIFE
 BUILD_DEFS+=		DSPAM_USE_WEBMAIL
+BUILD_DEFS+=		DSPAM_HOMEDIR_DOTFILES
 
 DSPAM_DELIVERY_AGENT?=	procmail
 DSPAM_HOME?=		${VARBASE}/dspam
@@ -62,6 +63,13 @@ CONFIGURE_ARGS+=	--with-storage-driver=mysql_drv
 CONFIGURE_ARGS+=	--with-storage-driver=pgsql_drv
 .elif !empty(DSPAM_STORAGE_DRIVER:M${BDB_TYPE})
 CONFIGURE_ARGS+=	--with-storage-driver=lib${BDB_TYPE}_drv
+.endif
+
+#
+# Use of home directory dot file for opt-in/opt-out
+#
+.if defined(DSPAM_HOMEDIR_DOTFILES) && !empty(DSPAM_HOMEDIR_DOTFILES:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-homedir-dotfiles
 .endif
 
 .if defined(DSPAM_USE_WEBMAIL) && !empty(DSPAM_USE_WEBMAIL:M[Yy][Ee][Ss])
