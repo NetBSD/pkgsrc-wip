@@ -1,2 +1,2 @@
-make the PLIST
+install in /usr/pkg/bin instead of /usr/pkg/i38--netbsdelf/bin
 Find a way to make gromacs work with fftw2
