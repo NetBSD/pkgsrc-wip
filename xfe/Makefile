@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/09/09 01:29:54 cetrox Exp $
+# $NetBSD: Makefile,v 1.5 2004/09/09 02:59:00 cetrox Exp $
 #
 
 DISTNAME=		xfe-0.70
@@ -15,6 +15,8 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
+# Message catalog files need to be rebuilt to incorporate fuzzy
+# entries, allowed by the -f arg in patch-ac.
 pre-build:
 		cd ${WRKSRC}/po ; \
 		${MAKE} update-po
