@@ -1,0 +1,20 @@
+lde  supports  the  three  most popular file systems under
+Linux at the time of its  inception:  ext2fs,  minix,  and
+xiafs.   It  also  has  minimal support for msdos FAT file
+systems and a nofs system in which case lde will  function
+as  a  binary  editor.   lde will attempt to automatically
+detect the file system present on the device or file  when
+it  is  started,  if it does not recognize the file system
+present on the device, it will default to nofs.
+
+lde allows you to view and edit  disk  blocks  in  hex  or
+ASCII  mode,  view a block that contains directory entries
+in a readable fashion, and view and edit formatted inodes.
+lde  is  a  great  help when recovering deleted files (see
+doc/UNERASE included with the lde  distribution  for  more
+info).
+
+The  device  parameter  is  a required option for lde.  If
+ommitted, it will print a warning and refuse to start.  The
+default  mode  for  lde is to use a curses interface; this
+can be overriden by some of the options listed below.
