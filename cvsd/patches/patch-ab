@@ -1,23 +1,14 @@
-$NetBSD: patch-ab,v 1.2 2003/04/20 16:14:36 virtus Exp $
+$NetBSD: patch-ab,v 1.3 2003/06/22 04:08:40 schnoebe Exp $
 
---- Makefile.in.orig	Sun Apr  6 22:56:55 2003
-+++ Makefile.in	Sun Apr  6 22:57:37 2003
-@@ -532,13 +532,13 @@
- 	fi
+--- configure.orig	Mon Apr 21 12:29:19 2003
++++ configure
+@@ -9087,7 +8860,7 @@ fi
+>>>>>>> 1.1.1.1
  
- install-initscript:
--	if [ ! -d $(DESTDIR)$(sysconfdir)/init.d ]; then \
--	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/init.d; \
-+	if [ ! -d $(DESTDIR)$(sysconfdir)/rc.d ]; then \
-+	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/rc.d; \
- 	fi
--	if [ -f $(DESTDIR)$(sysconfdir)/init.d/cvsd ]; then \
--	  echo "$(DESTDIR)$(sysconfdir)/init.d/cvsd already exists, overwriting"; \
-+	if [ -f $(DESTDIR)$(sysconfdir)/rc.d/cvsd ]; then \
-+	  echo "$(DESTDIR)$(sysconfdir)/rc.d/cvsd already exists, overwriting"; \
- 	fi
--	$(INSTALL_SCRIPT) cvsd.init $(DESTDIR)$(sysconfdir)/init.d/cvsd
-+	$(INSTALL_SCRIPT) cvsd.init $(DESTDIR)$(sysconfdir)/rc.d/cvsd
+ # where to find the configuration file
+ # TODO: this should probably be fixed to be nicer
+-CONFIGFILE=`eval echo $sysconfdir/cvsd/cvsd.conf | \
++CONFIGFILE=`eval echo $sysconfdir/cvsd.conf | \
+             sed "s%^NONE/%${prefix}/%" | \
+             sed "s%^NONE/%${ac_default_prefix}/%"`
  
- #  targets for debian package
- deb: distdir

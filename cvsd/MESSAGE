@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/06/22 03:58:15 schnoebe Exp $
+$NetBSD: MESSAGE,v 1.2 2003/06/22 04:08:39 schnoebe Exp $
 
     You should set up user and group ids for cvsd, create a
     chrooted filesystem and create repositories.
