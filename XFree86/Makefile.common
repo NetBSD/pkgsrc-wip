@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2003/08/21 20:40:56 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.13 2003/08/28 06:46:59 blef Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -24,7 +24,7 @@ MANCOMPRESSED=	YES
 .endif
 
 WRKSRC?=	${WRKDIR}/xc
-USE_X11BASE?=	YES
+USE_X11BASE=	YES
 USE_X11_LINKS=  NO
 
 MASTER_SITE_XFREE+=	\
