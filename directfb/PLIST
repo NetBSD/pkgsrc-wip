@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/03 02:45:28 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/24 06:02:20 xtraeme Exp $
 bin/dfbdump
 bin/dfbg
 bin/dfbinfo
+bin/dfblayer
 bin/directfb-config
 bin/directfb-csource
 include/directfb-internal/core/clipboard.h
@@ -67,22 +68,27 @@ include/directfb/dfb_types.h
 include/directfb/directfb.h
 include/directfb/directfb_keyboard.h
 include/directfb/directfb_keynames.h
+include/directfb/directfb_strings.h
 include/directfb/directfb_version.h
-lib/${PKGNAME}/interfaces/IDirectFBFont/libidirectfbfont_default.la
-lib/${PKGNAME}/interfaces/IDirectFBFont/libidirectfbfont_default.so
-lib/${PKGNAME}/interfaces/IDirectFBFont/libidirectfbfont_ft2.la
-lib/${PKGNAME}/interfaces/IDirectFBFont/libidirectfbfont_ft2.so
-lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_gif.la
-lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_gif.so
-lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_jpeg.la
-lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_jpeg.so
-lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_mpeg2.la
-lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_mpeg2.so
-lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_png.la
-lib/${PKGNAME}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_png.so
+lib/directfb-${PKGVERSION}/inputdrivers/libdirectfb_sdlinput.la
+lib/directfb-${PKGVERSION}/inputdrivers/libdirectfb_sdlinput.so
+lib/directfb-${PKGVERSION}/interfaces/IDirectFBFont/libidirectfbfont_default.la
+lib/directfb-${PKGVERSION}/interfaces/IDirectFBFont/libidirectfbfont_default.so
+lib/directfb-${PKGVERSION}/interfaces/IDirectFBFont/libidirectfbfont_ft2.la
+lib/directfb-${PKGVERSION}/interfaces/IDirectFBFont/libidirectfbfont_ft2.so
+lib/directfb-${PKGVERSION}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_gif.la
+lib/directfb-${PKGVERSION}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_gif.so
+lib/directfb-${PKGVERSION}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_jpeg.la
+lib/directfb-${PKGVERSION}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_jpeg.so
+lib/directfb-${PKGVERSION}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_mpeg2.la
+lib/directfb-${PKGVERSION}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_mpeg2.so
+lib/directfb-${PKGVERSION}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_png.la
+lib/directfb-${PKGVERSION}/interfaces/IDirectFBImageProvider/libidirectfbimageprovider_png.so
+lib/directfb-${PKGVERSION}/systems/libdirectfb_sdl.la
+lib/directfb-${PKGVERSION}/systems/libdirectfb_sdl.so
 lib/libdirectfb-0.9.so
-lib/libdirectfb-0.9.so.18
-lib/libdirectfb-0.9.so.18.0
+lib/libdirectfb-0.9.so.19
+lib/libdirectfb-0.9.so.19.0
 lib/libdirectfb.la
 lib/libdirectfb.so
 lib/pkgconfig/directfb-internal.pc
@@ -90,14 +96,16 @@ lib/pkgconfig/directfb.pc
 man/man1/dfbg.1
 man/man1/directfb-csource.1
 man/man5/directfbrc.5
-share/${PKGNAME}/cursor.dat
-@dirrm share/${PKGNAME}
-@exec ${MKDIR} %D/lib/${PKGNAME}/interfaces/IDirectFBVideoProvider
-@dirrm lib/${PKGNAME}/interfaces/IDirectFBVideoProvider
-@dirrm lib/${PKGNAME}/interfaces/IDirectFBImageProvider
-@dirrm lib/${PKGNAME}/interfaces/IDirectFBFont
-@dirrm lib/${PKGNAME}/interfaces
-@dirrm lib/${PKGNAME}
+share/directfb-${PKGVERSION}/cursor.dat
+@dirrm share/directfb-${PKGVERSION}
+@dirrm lib/directfb-${PKGVERSION}/systems
+@exec ${MKDIR} %D/lib/directfb-${PKGVERSION}/interfaces/IDirectFBVideoProvider
+@dirrm lib/directfb-${PKGVERSION}/interfaces/IDirectFBVideoProvider
+@dirrm lib/directfb-${PKGVERSION}/interfaces/IDirectFBImageProvider
+@dirrm lib/directfb-${PKGVERSION}/interfaces/IDirectFBFont
+@dirrm lib/directfb-${PKGVERSION}/interfaces
+@dirrm lib/directfb-${PKGVERSION}/inputdrivers
+@dirrm lib/directfb-${PKGVERSION}
 @dirrm include/directfb-internal/windows
 @dirrm include/directfb-internal/misc
 @dirrm include/directfb-internal/media

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/06/03 02:45:28 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2003/07/24 06:02:20 xtraeme Exp $
 
-SHA1 (DirectFB-0.9.18.tar.gz) = f2ea1ab47428f883b26a985508517d34cbb16b8f
-Size (DirectFB-0.9.18.tar.gz) = 1113655 bytes
+SHA1 (DirectFB-0.9.19.tar.gz) = dc646d78fa098685a1fc59970a79cd8df495bf22
+Size (DirectFB-0.9.19.tar.gz) = 1148437 bytes

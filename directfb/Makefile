@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/07/12 15:34:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/24 06:02:20 xtraeme Exp $
 #
 
-DISTNAME=	DirectFB-0.9.18
-PKGNAME=	${DISTNAME:S/DirectFB/directfb/}
+DISTNAME=	DirectFB-0.9.19
+PKGNAME=	${DISTNAME:S/DFB/dfb/}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.directfb.org/download/DirectFB/
 
