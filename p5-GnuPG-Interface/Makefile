@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/20 20:46:07 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/29 18:47:24 tvierling Exp $
 #
 
 DISTNAME=		GnuPG-Interface-0.34
@@ -11,7 +11,7 @@ MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://gnupg-interface.sourceforge.net/
 COMMENT=		Perl interface to GnuPG
 
-DEPENDS+=		p5-Class-MethodMaker>=1.00:../../wip/p5-Class-MethodMaker
+DEPENDS+=		p5-Class-MethodMaker>=1.00:../../devel/p5-Class-MethodMaker
 DEPENDS+=		gnupg>=1.2.3:../../security/gnupg
 
 USE_BUILDLINK3=		yes
