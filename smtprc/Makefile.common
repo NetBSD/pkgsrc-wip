@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/10/05 19:05:55 adrian_p Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/05/09 21:44:18 blef Exp $
 
 DISTNAME=	smtprc-0.9.7
 PKGNAME=	smtprc-0.9.7b
@@ -10,6 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	adrianp@stindustries.net
 HOMEPAGE= 	http://irc.warg.co.uk/smtprc-website/index.html
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 PKG_SYSCONFSUBDIR=	smtprc

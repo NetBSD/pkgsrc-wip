@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/30 23:57:35 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/09 21:44:19 blef Exp $
 
 .include "../../wip/smtprc/Makefile.common"
 
@@ -6,9 +6,8 @@ PKGNAME=        ${DISTNAME:S/-/-gui-/}
 
 COMMENT=	Open relay scanner Tk GUI
 
-USE_BUILDLINK2=	YES
-
 DEPENDS+=	smtprc-[0-9]*:../../wip/smtprc
+DEPENDS+=	p5-Tk>=800.024:../../x11/p5-Tk
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
@@ -28,5 +27,4 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/gsmtprc.new ${PREFIX}/bin/gsmtprc
 	${INSTALL_MAN} ${WRKSRC}/gsmtprc.1 ${PREFIX}/man/man1
 
-.include "../../x11/p5-Tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

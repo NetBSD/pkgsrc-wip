@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/07 01:58:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/09 21:48:15 blef Exp $
 #
 
 DISTNAME=	weewm-0.01
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.weewm.org/
 COMMENT=	Fast and ultra light windowmanager with total keyboard control
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 
 EXAMPLESDIR=	${PREFIX}/share/examples/weewm

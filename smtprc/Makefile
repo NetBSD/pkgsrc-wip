@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/12/30 23:57:35 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/09 21:44:18 blef Exp $
 
 .include "Makefile.common"
 
 COMMENT=	Open relay scanner
 
-USE_BUILDLINK2=	YES
 ALL_TARGET=	freebsd
 
 PTHREAD_OPTS=	require
@@ -32,5 +31,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/smtprc
 	${INSTALL_MAN} ${WRKSRC}/smtprc.1 ${PREFIX}/man/man1
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
