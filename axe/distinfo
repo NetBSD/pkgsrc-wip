@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2003/09/27 20:30:00 virtus Exp $
+$NetBSD: distinfo,v 1.3 2004/02/27 22:55:15 rillig Exp $
 
 SHA1 (axe-0.2.0.tar.gz) = 852fa466ad37f19839a99ae307482dd0c2eb1a97
 Size (axe-0.2.0.tar.gz) = 14138 bytes
-SHA1 (patch-aa) = ccbfc04361e1a6ff50afc4668f2cf38b6da69fef
-SHA1 (patch-ab) = 4d1ec149ff17f6fe8159682e54d62abfaf5e50c7
+SHA1 (patch-aa) = a04b79a090f9da3a4ffe9bdd6f681d4df3dc880a
+SHA1 (patch-ab) = c9528d5c117dface7164b88335741d58d02c3790
