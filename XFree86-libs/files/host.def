@@ -34,7 +34,7 @@
 #endif
 
 #ifndef LinuxArchitecture
-#define GlxDriverUsesMesa YE
+#define GlxDriverUsesMesa YES
 #endif
 
 #define HasFreetype2 YES
