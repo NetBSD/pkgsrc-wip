@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/12 15:08:22 mpasternak Exp $
-# $Id: Makefile,v 1.1.1.1 2004/03/12 15:08:22 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/16 21:32:52 mpasternak Exp $
+# $Id: Makefile,v 1.2 2004/03/16 21:32:52 mpasternak Exp $
 #
 
-DISTNAME=		slackware_glibc-2.3.2
+DISTNAME=		glibc-2.3.2-i486-5
+PKGNAME=		slackware_glibc-2.3.2
 CATEGORIES=		emulators
 MASTER_SITES=		${SLACKWARE_MASTER_SITES}
-DISTFILES=		glibc-2.3.2-i486-5.tgz
 
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://slackware.com/

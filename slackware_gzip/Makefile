@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/14 21:01:09 mpasternak Exp $
-# $Id: Makefile,v 1.1.1.1 2004/03/14 21:01:09 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/16 21:32:53 mpasternak Exp $
+# $Id: Makefile,v 1.2 2004/03/16 21:32:53 mpasternak Exp $
 #
 
-DISTNAME=		slackware_gzip-1.3.3
+DISTNAME=		gzip-1.3.3-i386-2
+PKGNAME=		slackware_gzip-1.3.3
 CATEGORIES=		emulators
 MASTER_SITES=		${SLACKWARE_MASTER_SITES}
-DISTFILES=		gzip-1.3.3-i386-2.tgz
 
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://slackware.com

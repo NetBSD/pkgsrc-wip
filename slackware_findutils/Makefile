@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/14 21:01:09 mpasternak Exp $
-# $Id: Makefile,v 1.1.1.1 2004/03/14 21:01:09 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/16 21:32:50 mpasternak Exp $
+# $Id: Makefile,v 1.2 2004/03/16 21:32:50 mpasternak Exp $
 #
 
-DISTNAME=		slackware_findutils-4.1.7
+DISTNAME=		findutils-4.1.7-i386-1
+PKGNAME=		slackware_findutils-4.1.7
 CATEGORIES=		emulators
 MASTER_SITES=		${SLACKWARE_MASTER_SITES}
-DISTFILES=		findutils-4.1.7-i386-1.tgz
 
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://slackware.com
