@@ -34,11 +34,11 @@
 .Nm
 cleans up your pkgsrc by removing the work directories.
 It's a fast alternative for
-.Dq cd /usr/pkgsrc && make clean .
+.Dq cd @PKGSRCDIR@ && make clean .
 .Pp
 .Nm
 uses
-.Pa /usr/pkgsrc
+.Pa @PKGSRCDIR@
 by default.
 You may specify a different path by setting
 the environment variable
