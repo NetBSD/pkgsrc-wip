@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/23 02:17:46 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/12 03:18:09 blef Exp $
+bin/theora-dump_video
 bin/theora-encoder_example
 bin/theora-player_example
-share/doc/theora/README
 include/theora/theora.h
 lib/libtheora.a
 lib/libtheora.la
 lib/libtheora.so
 lib/libtheora.so.0
 lib/libtheora.so.0.0
+share/doc/${PKGNAME_NOREV}/README
+share/doc/${PKGNAME_NOREV}/spec.html
+share/doc/${PKGNAME_NOREV}/spec.py
+share/doc/${PKGNAME_NOREV}/vp3-format.txt
+@dirrm share/doc/${PKGNAME_NOREV}
 @dirrm include/theora
-@dirrm share/doc/theora

@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/02/17 02:56:52 blef Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/12 03:18:09 blef Exp $
 
-DISTNAME=	theora_cvs_snapshot
-PKGNAME=	theora-${PKGVER}
-WRKSRC=		${WRKDIR}/theora
+DISTNAME=	libtheora-1.0alpha3
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.xiph.org/ogg/vorbis/download/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	http://www.theora.org/files/
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.theora.org/
@@ -13,35 +10,20 @@ COMMENT=	Video codec for Ogg multimedia streaming (nightly source)
 
 .include "../../mk/bsd.prefs.mk"
 
-PKGVER!=	${DATE} +%Y%m%d
-NO_SRC_ON_FTP=	# defined
-DIST_SUBDIR=	${PKGNAME_NOREV}
-NO_CHECKSUM=	# defined
-
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
+PLIST_SUBST=	PKGNAME_NOREV=${PKGNAME_NOREV}
 
-pre-configure:
-	cd ${WRKSRC} && ${ACLOCAL}
-	cd ${WRKSRC} && libtoolize --automake
-	cd ${WRKSRC} && ${AUTOMAKE} --add-missing
-	cd ${WRKSRC} && ${AUTOCONF}
-
-# XXX the Makefile's don't install examples yet
+# XXX the Makefiles don't install examples yet
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/examples/encoder_example ${PREFIX}/bin/theora-encoder_example
-	${INSTALL_PROGRAM} ${WRKSRC}/examples/player_example ${PREFIX}/bin/theora-player_example
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/theora
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/theora/
+	${INSTALL_PROGRAM} ${WRKSRC}/examples/.libs/encoder_example ${PREFIX}/bin/theora-encoder_example
+	${INSTALL_PROGRAM} ${WRKSRC}/examples/.libs/player_example ${PREFIX}/bin/theora-player_example
+	${INSTALL_PROGRAM} ${WRKSRC}/examples/.libs/dump_video ${PREFIX}/bin/theora-dump_video
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PKGNAME_NOREV}
 
 # XXX SDL is for the player_example
-.include "../../devel/SDL/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 
-# XXX use the latest libvorbis (and libogg too)
-BUILDLINK_DEPENDS.libvorbis=   libvorbis>=20030520
-BUILDLINK_PKGSRCDIR.libvorbis= ../../wip/libvorbis-nightly
-.include "../../audio/libvorbis/buildlink2.mk"
-
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

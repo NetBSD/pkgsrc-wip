@@ -1,8 +1,3 @@
-is theora-nightly an okay name?
-(note that a regular tarball is not officially available)
+Test.
 
-later add buildlink2.mk file
-
-pkglint complains:
-FATAL: version number part of PKGNAME looks illegal. You should modify "-${PKGVER}"
-WARN: "BUILD_DEPENDS" has to appear earlier in Makefile.
+Rename.  "theora-nightly" is not appropriate anymore.
