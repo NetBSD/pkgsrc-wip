@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/01/12 22:45:52 adrian_p Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/12 23:11:41 adrian_p Exp $
 #
 
 DISTNAME=	konversation-0.15
@@ -29,5 +29,7 @@ REPLACE_PERL=		src/konversation/konversation-0.14-mainwindow.pl
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
 CONFIGURE_ARGS+=	--disable-threading
 .endif
+
+CONFIGURE_ARGS+=	--with-extra-includes=${BUILDLINK_PREFIX.jpeg}/include
 
 .include "../../mk/bsd.pkg.mk"
