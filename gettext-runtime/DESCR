@@ -2,5 +2,10 @@ GNU gettext provides the necessary tools and libraries for
 handling messages in different languages, as one of the steps to
 internationalisation (or i18n) of a utility.
 
-This package provides the runtime libraries and programs for
-anyone who wants to run internationalized programs.
+This package provides the runtime libraries and programs for anyone who
+wants to run internationalized programs.
+
+It includes the gettext(1) tool for translating a natural language
+message into user's native language, by looking up the translation in
+a message catalog. And it provides the manual page documentation
+for the gettext(3) related functions.
