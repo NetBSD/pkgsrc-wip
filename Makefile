@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.345 2003/07/27 06:01:55 bencollver Exp $
-# $NetBSD: Makefile,v 1.345 2003/07/27 06:01:55 bencollver Exp $
+# $Id: Makefile,v 1.346 2003/07/27 06:04:31 bencollver Exp $
+# $NetBSD: Makefile,v 1.346 2003/07/27 06:04:31 bencollver Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -292,6 +292,7 @@ SUBDIR+=	strace
 SUBDIR+=	streamripper
 SUBDIR+=	sun-jdk142
 SUBDIR+=	sun-jre142
+SUBDIR+=	svgalib
 SUBDIR+=	sysklogd
 SUBDIR+=	sysvinit
 SUBDIR+=	tendra
