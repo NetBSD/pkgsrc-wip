@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/14 07:56:02 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/25 04:30:59 blef Exp $
 #
 
 PKGNAME=		arping-1.08
@@ -10,7 +10,7 @@ MAINTAINER=		cube@NetBSD.org
 HOMEPAGE=		ftp://ftp.habets.pp.se/pub/synscan/
 COMMENT=		ARP-level ping utility
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 NO_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -30,6 +30,6 @@ ALL_TARGET=		macosx
 ONLY_FOR_PLATFORM=	NetBSD-* OpenBSD-* FreeBSD-*	\
 			Linux-* SunOS-* Darwin-*
 
-.include "../../net/libpcap/buildlink2.mk"
-.include "../../devel/libnet/buildlink2.mk"
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../devel/libnet/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
