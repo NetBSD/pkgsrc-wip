@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/02 14:51:04 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/02 16:00:08 poppnk Exp $
 #
 
 DISTNAME=		ccsh-0.0.4
@@ -9,7 +9,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://ccsh.sourceforge.net/
 COMMENT=		C-like syntax scripting
 
-USE_GNU_TOOLS+=		gmake
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		yes
 
 do-install:
