@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.547 2003/10/14 20:17:31 adrian_p Exp $
-# $NetBSD: Makefile,v 1.547 2003/10/14 20:17:31 adrian_p Exp $
+# $Id: Makefile,v 1.548 2003/10/15 01:36:16 tvierling Exp $
+# $NetBSD: Makefile,v 1.548 2003/10/15 01:36:16 tvierling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -164,6 +164,7 @@ SUBDIR+=	gtkmagnetic
 SUBDIR+=	gtkpod
 SUBDIR+=	gurlchecker
 SUBDIR+=	hasciicam
+SUBDIR+=	hashcash
 SUBDIR+=	heimdal
 SUBDIR+=	ht
 SUBDIR+=	ht2html
