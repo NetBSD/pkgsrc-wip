@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/17 20:17:34 airhead Exp $
+
+SHA1 (cl74unix.tar.gz) = feae4a53af78b6c500a03c618dc11444e8b5dc47
+Size (cl74unix.tar.gz) = 999170 bytes
+SHA1 (patch-aa) = a2f108ea2e5fe7d153c613c70cb4a0e2071df4b6
+SHA1 (patch-ab) = 34f41fc12c6dac6eb3bcf1c4513b2da82329ed26

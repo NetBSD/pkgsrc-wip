@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/17 20:17:34 airhead Exp $
+
+--- Makefile.orig	2004-03-17 20:35:31.000000000 +0100
++++ Makefile	2004-03-17 20:40:51.000000000 +0100
+@@ -3,7 +3,7 @@
+ # These options are overriden when called from ../Makefile
+ CC=cc
+ OPTS=
+-LIBDIR=/usr/local/lib/caml-light
++LIBDIR=${PREFIX}/lib/caml-light
+ 
+ # Test to see whether ranlib exists on the machine
+ RANLIBTEST=test -f /usr/bin/ranlib -o -f /bin/ranlib

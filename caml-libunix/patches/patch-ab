@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/03/17 20:17:34 airhead Exp $
+
+--- errmsg.c.orig	1994-11-01 18:37:03.000000000 +0100
++++ errmsg.c	2004-03-17 21:17:04.000000000 +0100
+@@ -1,9 +1,6 @@
+ #include <mlvalues.h>
+ #include <alloc.h>
+-
+-extern int errno;
+-extern int sys_nerr;
+-extern char *sys_errlist[];
++#include <errno.h>
+ 
+ extern int error_table[];
+ 

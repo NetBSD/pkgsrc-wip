@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/17 20:17:34 airhead Exp $
+lib/caml-light/camlunix
+lib/caml-light/libunix.a
+lib/caml-light/unix.zi
+lib/caml-light/unix.zo

@@ -1,0 +1,2 @@
+This is libunix from the CAML-light contrib directory.
+It provides Unix system calls to CAML.
