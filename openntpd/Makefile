@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/07/18 14:20:27 ppostma Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/19 14:32:22 ppostma Exp $
 
-DISTNAME=		openntpd-20040718p
+DISTNAME=		openntpd-20040719p
 CATEGORIES=		net
 MASTER_SITES=		http://www.openntpd.org/dist/portable/
 

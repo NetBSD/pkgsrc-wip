@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/07/18 14:17:22 ppostma Exp $
+$NetBSD: distinfo,v 1.3 2004/07/19 14:32:23 ppostma Exp $
 
-SHA1 (openntpd-20040718p.tar.gz) = f5d185e490efac5b458e2eae9258fcf1241e4091
-Size (openntpd-20040718p.tar.gz) = 78891 bytes
+SHA1 (openntpd-20040719p.tar.gz) = 818bb0da6de374c69ec1e909079427f12b332dba
+Size (openntpd-20040719p.tar.gz) = 105460 bytes
