@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.504 2003/09/27 13:17:25 dolecek Exp $
-# $NetBSD: Makefile,v 1.504 2003/09/27 13:17:25 dolecek Exp $
+# $Id: Makefile,v 1.505 2003/09/27 13:23:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.505 2003/09/27 13:23:01 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -246,7 +246,6 @@ SUBDIR+=	mysql3-client
 SUBDIR+=	mysql3-server
 SUBDIR+=	mysql4-client
 SUBDIR+=	mysql4-server
-SUBDIR+=	nabi
 SUBDIR+=	nagios-base
 SUBDIR+=	nagios-plugin-ldap
 SUBDIR+=	nagios-plugin-mysql
