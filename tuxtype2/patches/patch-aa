@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1 2003/08/23 08:07:04 xtraeme Exp $
+
+--- Makefile.in.orig	2003-08-22 23:27:53.000000000 +0200
++++ Makefile.in	2003-08-22 23:35:43.000000000 +0200
+@@ -424,20 +424,9 @@
+ 
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(DESTDIR)$(prefix)/doc/$(PACKAGE)
+-	$(INSTALL_DATA) $(srcdir)/AUTHORS $(DESTDIR)$(prefix)/doc/$(PACKAGE)/AUTHORS
+-	$(mkinstalldirs) $(DESTDIR)$(prefix)/doc/$(PACKAGE)
+-	$(INSTALL_DATA) $(srcdir)/COPYING $(DESTDIR)$(prefix)/doc/$(PACKAGE)/COPYING
+-	$(mkinstalldirs) $(DESTDIR)$(prefix)/doc/$(PACKAGE)
+-	$(INSTALL_DATA) $(srcdir)/ChangeLog $(DESTDIR)$(prefix)/doc/$(PACKAGE)/ChangeLog
+-	$(mkinstalldirs) $(DESTDIR)$(prefix)/doc/$(PACKAGE)
+-	$(INSTALL_DATA) $(srcdir)/INSTALL $(DESTDIR)$(prefix)/doc/$(PACKAGE)/INSTALL
+-	$(mkinstalldirs) $(DESTDIR)$(prefix)/doc/$(PACKAGE)
+-	$(INSTALL_DATA) $(srcdir)/README $(DESTDIR)$(prefix)/doc/$(PACKAGE)/README
+-	$(mkinstalldirs) $(DESTDIR)$(prefix)/doc/$(PACKAGE)
+-	$(INSTALL_DATA) $(srcdir)/TODO $(DESTDIR)$(prefix)/doc/$(PACKAGE)/TODO
+-	$(mkinstalldirs) $(DESTDIR)$(prefix)/doc/$(PACKAGE)
+-	$(INSTALL_DATA) $(srcdir)/tuxtype.lsm $(DESTDIR)$(prefix)/doc/$(PACKAGE)/tuxtype.lsm
++	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/$(PACKAGE)
++	$(INSTALL_DATA) $(srcdir)/README $(DESTDIR)$(prefix)/share/doc/$(PACKAGE)/README
++	$(INSTALL_DATA) $(srcdir)/tuxtype.lsm $(DESTDIR)$(prefix)/share/doc/$(PACKAGE)/tuxtype.lsm
+ 
+ uninstall-local:
+ 	-rm -f $(DESTDIR)$(prefix)/doc/$(PACKAGE)/AUTHORS
