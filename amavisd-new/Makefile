@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/04/11 03:30:56 jcd Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/15 17:19:15 cubidou Exp $
 
 DISTNAME=	amavisd-new-${VERSION}-${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
@@ -34,7 +34,7 @@ USE_PERL5=	yes
 PERL5_REQD=     5.8
 
 .include "../../mk/bsd.prefs.mk"
-USE_BUILDLINK2= yes
+USE_BUILDLINK3= yes
 
 VERSION=	20030616
 PATCHLEVEL=	p9
@@ -58,10 +58,26 @@ BUILD_DEFS+=	AMAVISDIR
 BUILD_DEFS+=	AMAVISQUARANTINE
 BUILD_DEFS+=	USE_MILTER
 
-RCD_SCRIPTS=	amavisd
+FILES_SUBST+=	AMAVISUSER=${AMAVISUSER}
+FILES_SUBST+=	AMAVISGROUP=${AMAVISGROUP}
+FILES_SUBST+=	AMAVISDIR=${AMAVISDIR}
+FILES_SUBST+=	AMAVISQUARANTINE=${AMAVISQUARANTINE}
+
+REPLACE_PERL+=	${WRKSRC}/amavisd
+
+SUBST_CLASSES+=	amavisd
+SUBST_STAGE.amavisd=	pre-build
+SUBST_FILES.amavisd=	${WRKSRC}/amavisd	${WRKSRC}/amavisd.conf
+SUBST_SED.amavisd=	-e "s|/etc/amavisd.conf|${PKG_SYSCONFDIR}/amavisd.conf|"	\
+			-e "s|%%AMAVISDIR%%|${AMAVISDIR}|g"				\
+			-e "s|%%AMAVISUSER%%|${AMAVISUSER}|g"				\
+			-e "s|%%AMAVISGROUP%%|${AMAVISGROUP}|g"				\
+			-e "s|%%AMAVISQUARANTINE%%|${AMAVISQUARANTINE}|g"		\
+			-e "s|%%LOCALBASE%%|${LOCALBASE}|g"
+
+PLIST_SUBST+=	AMAVIS_MILTER_USED=${AMAVIS_MILTER_USED}
 
 .if defined(USE_MILTER) && ${USE_MILTER} == "YES"
-
 GNU_CONFIGURE=  yes
 CONFIGURE_ARGS+=--with-milterinc=${PREFIX}/include
 CONFIGURE_ARGS+=--with-milterlib=${PREFIX}/lib
@@ -70,46 +86,25 @@ CONFIGURE_ARGS+=--with-sockname=${AMAVISDIR}/amavisd.sock
 CONFIGURE_ARGS+=--with-user=${AMAVISUSER}
 CONFIGURE_DIRS=       ${WRKSRC}/helper-progs
 BUILD_DIRS=   ${WRKSRC}/helper-progs
-
+AMAVIS_MILTER_USED=
 .else
-NO_CONFIGURE=	yes
+do-configure:
+
 do-build:
 	@${ECHO} libmilter not used, not building amavis-milter and amavis
+
+AMAVIS_MILTER_USED=	"@comment "
 .endif
 
 OWN_DIRS_PERMS=	${AMAVISDIR} ${AMAVISUSER} ${AMAVISGROUP} 0750 \
 		${AMAVISQUARANTINE} ${AMAVISUSER} ${AMAVISGROUP} 0750
 
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
-
-pre-build:
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	${SED}  -e "s|/usr/bin/perl|${PERL5}|" \
-                -e "s|/etc/amavisd.conf|${PKG_SYSCONFDIR}/amavisd.conf|" \
-		${WRKSRC}/amavisd > ${WRKDIR}/amavisd.pl
-	${SED}  -e "s|%%AMAVISDIR%%|${AMAVISDIR}|g" \
-		-e "s|%%AMAVISUSER%%|${AMAVISUSER}|g" \
-		-e "s|%%AMAVISGROUP%%|${AMAVISGROUP}|g" \
-		-e "s|%%AMAVISQUARANTINE%%|${AMAVISQUARANTINE}|g" \
-		-e "s|%%LOCALBASE%%|${LOCALBASE}|g" \
-		${WRKSRC}/amavisd.conf > ${WRKDIR}/amavisd.conf
-	${SED}  -e 's|%%AMAVISUSER%%|${AMAVISUSER}|g' \
-		-e 's|%%AMAVISGROUP%%|${AMAVISGROUP}|g' \
-		-e 's|%%AMAVISDIR%%|${AMAVISDIR}|g' \
-		-e 's|%%AMAVISQUARANTINE%%|${AMAVISQUARANTINE}|g' \
-		-e 's|%%PREFIX%%|${PREFIX}|g' \
-		${FILESDIR}/amavisd.sh.tmpl > ${WRKDIR}/amavisd
-
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/amavisd.pl ${PREFIX}/sbin/amavisd
+	${INSTALL_SCRIPT} ${WRKSRC}/amavisd ${PREFIX}/sbin/amavisd
 .if defined(USE_MILTER) && ${USE_MILTER} == "YES"
 	${INSTALL_PROGRAM} ${WRKSRC}/helper-progs/amavis ${PREFIX}/sbin
-	${ECHO} "sbin/amavis" >> ${PLIST_SRC}
 	${INSTALL_PROGRAM} ${WRKSRC}/helper-progs/amavis-milter ${PREFIX}/sbin
-	${ECHO} "sbin/amavis-milter" >> ${PLIST_SRC}
 .endif
-	${INSTALL_SCRIPT} ${WRKDIR}/amavisd ${PREFIX}/etc/rc.d
-
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/amavisd-new
 	${INSTALL_DATA} ${WRKSRC}/AAAREADME.first ${PREFIX}/share/doc/amavisd-new
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/amavisd-new
@@ -131,11 +126,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.sendmail ${PREFIX}/share/doc/amavisd-new
 	${INSTALL_DATA} ${WRKSRC}/README_FILES/README.sendmail-dual ${PREFIX}/share/doc/amavisd-new
 	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/amavisd-new
-	${INSTALL_DATA} ${WRKDIR}/amavisd.conf ${PREFIX}/share/doc/amavisd-new/amavisd.conf
+	${INSTALL_DATA} ${WRKSRC}/amavisd.conf ${PREFIX}/share/doc/amavisd-new/amavisd.conf
 
 .if defined(USE_MILTER) && ${USE_MILTER} == "YES"
-.include "../../mk/pthread.buildlink2.mk"
-.include "../../mail/libmilter/buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mail/libmilter/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,11 +1,11 @@
-#!/bin/sh
+#!@SH@
 
 if ! PREFIX=$(expr $0 : "\(/.*\)/etc/rc\.d/$(basename $0)\$"); then
 	echo "$0: Cannot determine the PREFIX" >&2
 	exit 1
 fi
 
-DIR=%%AMAVISDIR%%
+DIR=@AMAVISDIR@
 PIDFILE=$DIR/amavisd.pid
 SOCKFILES=$DIR/amavis*.sock
 MILTERFLAG=$DIR/use.milter
@@ -15,17 +15,17 @@ start)
 	if [ -e ${PREFIX}/etc/amavisd.conf ]; then
 		rm -rf ${SOCKFILES}
 		if [ -e $MILTERFLAG ]; then
-			su %%AMAVISUSER%% -c "${PREFIX}/sbin/amavis-milter -D -p $DIR/amavis-milter.sock"
+			su @AMAVISUSER@ -c "${PREFIX}/sbin/amavis-milter -D -p $DIR/amavis-milter.sock"
 		fi
-		su %%AMAVISUSER%% -c "${PREFIX}/sbin/amavisd > /dev/null 2>&1" && echo -n ' amavisd'
+		su @AMAVISUSER@ -c "${PREFIX}/sbin/amavisd > /dev/null 2>&1" && echo -n ' amavisd'
 	fi
 	;;
 stop)
 	if [ -e $MILTERFLAG ]; then
-		killall -u %%AMAVISUSER%% amavis-milter >/dev/null 2>&1
+		killall -u @AMAVISUSER@ amavis-milter >/dev/null 2>&1
 	fi
 	if [ -e $PIDFILE ]; then
-		su %%AMAVISUSER%% -c "kill `cat $PIDFILE`" && echo -n ' amavisd'
+		su @AMAVISUSER@ -c "kill `cat $PIDFILE`" && echo -n ' amavisd'
 	fi
 	;;
 *)
