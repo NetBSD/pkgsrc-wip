@@ -1,0 +1,14 @@
+Golem is an X11 Window Manager. Design goals are that it be fast and
+lightweight, as well as very customizable in any way that will not prevent
+the first goal from being realized.
+
+Some features:
+- Small memory footprint
+- Window decoration customization (theming) with multiple decoration
+	styles (dgroups)
+- Multiple disjoint large virtual desktops
+- Hotkeys
+- Supports various focusing styles (sloppy, pointer, click)
+- Useful stuff for multiscreen displays (special focus cycling modes, etc)
+- Xinerama support for multimonitor screens
+- Plugins
