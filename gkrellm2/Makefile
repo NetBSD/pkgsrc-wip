@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/10/13 07:11:20 cubidou Exp $
+# $NetBSD: Makefile,v 1.13 2003/10/13 08:11:46 cubidou Exp $
 .include "Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm
@@ -19,8 +19,6 @@ SPECIAL_PERMS+=		${PREFIX}/bin/gkrellm ${ROOT_USER} kmem 2711
 .endif
 
 NOT_FOR_PLATFORM=	IRIX-*
-
-.include "../../mk/bsd.prefs.mk"
 
 MAKE_ENV+=		MODULES=src LINK_FLAGS=${EXPORT_SYMBOLS_LDFLAGS}
 
