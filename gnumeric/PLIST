@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/01/14 22:41:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/01/29 14:45:01 minskim Exp $
 bin/gnumeric
 bin/ssconvert
 lib/bonobo/servers/GNOME_Gnumeric.server
@@ -631,6 +631,9 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnumeric.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnumeric.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnumeric.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnumeric.mo
+share/gconf/schemas/gnumeric-dialogs.schemas
+share/gconf/schemas/gnumeric-general.schemas
+share/gconf/schemas/gnumeric-plugins.schemas
 share/mc/templates/gnumeric.desktop
 share/mime-info/gnumeric.keys
 share/mime-info/gnumeric.mime
