@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/01 10:24:48 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 07:59:41 marc Exp $
 #
 
 DISTNAME=	xmule-1.4.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmule/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	marc@informatik.uni-bremen.de
 HOMEPAGE=	http://www.xmule.org/
 COMMENT=	eDonkey2000 client based on eMule
 
