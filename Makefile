@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1703 2005/03/27 21:00:15 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1703 2005/03/27 21:00:15 thomasklausner Exp $
+# $Id: Makefile,v 1.1704 2005/03/27 21:20:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1704 2005/03/27 21:20:39 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -846,7 +846,6 @@ SUBDIR+=	send-pr
 SUBDIR+=	serlook
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shadow
-SUBDIR+=	shapelib
 SUBDIR+=	shaper
 SUBDIR+=	shoutcast
 SUBDIR+=	sid-milter

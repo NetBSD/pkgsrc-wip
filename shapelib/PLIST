@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/18 19:53:11 daprice Exp $
-include/libshp/shapefil.h
-lib/libshp.la
-@dirrm include/libshp
