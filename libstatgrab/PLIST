@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/01/21 17:10:53 timbishop Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/02/10 21:50:20 timbishop Exp $
 ${SAIDAR}bin/saidar
 ${STATGRAB}bin/statgrab
 ${STATGRAB}bin/statgrab-make-mrtg-config
@@ -8,7 +8,7 @@ lib/libstatgrab.a
 lib/libstatgrab.la
 lib/libstatgrab.so
 lib/libstatgrab.so.3
-lib/libstatgrab.so.3.1
+lib/libstatgrab.so.3.2
 lib/pkgconfig/libstatgrab.pc
 man/man3/cpu_percent_usage.3
 man/man3/get_cpu_diff.3
