@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.206 2003/06/02 15:47:29 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.206 2003/06/02 15:47:29 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.207 2003/06/02 22:25:34 poppnk Exp $
+# $NetBSD: Makefile,v 1.207 2003/06/02 22:25:34 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -56,6 +56,7 @@ SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
 SUBDIR+=	gmencoder
 SUBDIR+=	gnomeicu
+SUBDIR+=	gotmail
 SUBDIR+=	grip
 SUBDIR+=	gstreamer-player
 SUBDIR+=	gtetrinet2
