@@ -1,30 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/25 17:12:27 marc Exp $
-#
+# $NetBSD: Makefile,v 1.2 2004/03/26 14:32:19 marc Exp $
 
-DISTNAME=	wxGTK-2.5.1
-CATEGORIES=	x11
-MASTER_SITES=	http://biolpc22.york.ac.uk/pub/2.5.1/
-EXTRACT_SUFX=	.tar.bz2
+.include "Makefile.common"
 
-MAINTAINER=	recht@NetBSD.org
-HOMEPAGE=	http://www.wxwidgets.org/
 COMMENT=	GTK-based implementation of the wxWidgets GUI library
-
-USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
-USE_LANGUAGES=		c c++
-USE_GNU_TOOLS+=		make
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-opengl
-CONFIGURE_ARGS+=	--with-sdl
-CONFIGURE_ARGS+=	--with-expat=sys
-CONFIGURE_ARGS+=	--with-libpng=sys
-CONFIGURE_ARGS+=	--with-libjpeg=sys
-CONFIGURE_ARGS+=	--with-libtiff=sys
-CONFIGURE_ARGS+=	--with-zlib=sys
-CONFIGURE_ENV+= 	CC=cc
-CONFIGURE_ENV+= 	CXX=c++
 
 .include "../../mk/bsd.prefs.mk"
 
