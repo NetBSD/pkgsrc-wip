@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/21 17:05:27 rxg Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/02 21:00:07 hubertf Exp $
 
 DISTNAME=	cjk-4.5.2
 PKGNAME=	cjk-latex-4.5.2
@@ -41,4 +41,5 @@ post-install:
 	# Update ls-R
 	@${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
