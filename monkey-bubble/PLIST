@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/24 12:50:32 cubidou Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/10/02 11:10:08 cubidou Exp $
 bin/monkey-srv
-bin/ui
+bin/monkey-bubble
 lib/libgdkview.a
 lib/libgdkview.la
 lib/libgdkview.so

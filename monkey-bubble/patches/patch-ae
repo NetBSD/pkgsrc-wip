@@ -1,0 +1,77 @@
+$NetBSD: patch-ae,v 1.1 2003/10/02 11:10:08 cubidou Exp $
+
+--- src/ui/Makefile.in.orig	2003-10-02 11:58:30.000000000 +0200
++++ src/ui/Makefile.in
+@@ -121,9 +121,9 @@ INCLUDES = \
+ 	-Wall -Werror -pg
+ 
+ 
+-bin_PROGRAMS = ui
++bin_PROGRAMS = monkey-bubble
+ 
+-ui_SOURCES = \
++monkey_bubble_SOURCES = \
+ 	game.c game.h \
+ 	game-1-player.c game-1-player.h \
+ 	game-2-player.c game-2-player.h \
+@@ -137,9 +137,9 @@ ui_SOURCES = \
+ 	network-game.c network-game.h
+ 
+ 
+-ui_LDFLAGS = -pg  
++monkey_bubble_LDFLAGS = -pg  
+ 
+-ui_LDADD = \
++monkey_bubble_LDADD = \
+ 	$(UI_LIBS) \
+ 	../monkey/libmonkey.la \
+ 	../view/libgdkview.la \
+@@ -150,17 +150,18 @@ subdir = src/ui
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+-bin_PROGRAMS = ui$(EXEEXT)
++bin_PROGRAMS = monkey-bubble$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_ui_OBJECTS = game.$(OBJEXT) game-1-player.$(OBJEXT) \
++am_monkey_bubble_OBJECTS = game.$(OBJEXT) game-1-player.$(OBJEXT) \
+ 	game-2-player.$(OBJEXT) game-manager.$(OBJEXT) \
+ 	game-1-player-manager.$(OBJEXT) game-2-player-manager.$(OBJEXT) \
+ 	igame-observer.$(OBJEXT) main.$(OBJEXT) ui-main.$(OBJEXT) \
+ 	network-ui.$(OBJEXT) network-game.$(OBJEXT)
+-ui_OBJECTS = $(am_ui_OBJECTS)
+-ui_DEPENDENCIES = ../monkey/libmonkey.la ../view/libgdkview.la \
+-	../net/libnetcltmonkey.la ../util/libmonkeyutil.la
++monkey_bubble_OBJECTS = $(am_monkey_bubble_OBJECTS)
++monkey_bubble_DEPENDENCIES = ../monkey/libmonkey.la \
++	../view/libgdkview.la ../net/libnetcltmonkey.la \
++	../util/libmonkeyutil.la
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -185,9 +186,9 @@ CCLD = $(CC)
+ LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CFLAGS = @CFLAGS@
+-DIST_SOURCES = $(ui_SOURCES)
++DIST_SOURCES = $(monkey_bubble_SOURCES)
+ DIST_COMMON = Makefile.am Makefile.in
+-SOURCES = $(ui_SOURCES)
++SOURCES = $(monkey_bubble_SOURCES)
+ 
+ all: all-am
+ 
+@@ -227,9 +228,9 @@ clean-binPROGRAMS:
+ 	  echo " rm -f $$p $$f"; \
+ 	  rm -f $$p $$f ; \
+ 	done
+-ui$(EXEEXT): $(ui_OBJECTS) $(ui_DEPENDENCIES) 
+-	@rm -f ui$(EXEEXT)
+-	$(LINK) $(ui_LDFLAGS) $(ui_OBJECTS) $(ui_LDADD) $(LIBS)
++monkey-bubble$(EXEEXT): $(monkey_bubble_OBJECTS) $(monkey_bubble_DEPENDENCIES) 
++	@rm -f monkey-bubble$(EXEEXT)
++	$(LINK) $(monkey_bubble_LDFLAGS) $(monkey_bubble_OBJECTS) $(monkey_bubble_LDADD) $(LIBS)
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT) core *.core

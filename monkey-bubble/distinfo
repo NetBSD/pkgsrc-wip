@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/24 12:50:32 cubidou Exp $
+$NetBSD: distinfo,v 1.2 2003/10/02 11:10:08 cubidou Exp $
 
 SHA1 (monkey-bubble-0.1.tar.gz) = 7079e77e4f63a0fb2811a48a2ae3bf4e710a78b6
 Size (monkey-bubble-0.1.tar.gz) = 1491216 bytes
 SHA1 (patch-aa) = e444eef6a26ce2f0a945731a66f1362435ae6083
 SHA1 (patch-ab) = 24ccf5400618ca18503e773a7d39899de23eb40c
 SHA1 (patch-ac) = 63bf3b8bac14ac475fd5a1dec3fa8ce538cbeb05
+SHA1 (patch-ad) = 864da3451e7d1ad5a7c3c644111f15e9622762d7
+SHA1 (patch-ae) = b9238053ed2b143209f6f9d283fe5d02bb1978c5

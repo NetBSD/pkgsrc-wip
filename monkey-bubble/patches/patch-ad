@@ -1,0 +1,29 @@
+$NetBSD: patch-ad,v 1.1 2003/10/02 11:10:08 cubidou Exp $
+
+--- src/ui/Makefile.am.orig	2003-09-22 17:13:00.000000000 +0200
++++ src/ui/Makefile.am
+@@ -10,9 +10,9 @@ INCLUDES = \
+ 	-Wall -Werror -pg
+ 
+ 
+-bin_PROGRAMS = ui
++bin_PROGRAMS = monkey-bubble
+ 
+-ui_SOURCES = \
++monkey_bubble_SOURCES = \
+ 	game.c game.h \
+ 	game-1-player.c game-1-player.h \
+ 	game-2-player.c game-2-player.h \
+@@ -25,10 +25,10 @@ ui_SOURCES = \
+ 	network-ui.c network-ui.h \
+ 	network-game.c network-game.h
+ 
+-ui_LDFLAGS=-pg  
++monkey_bubble_LDFLAGS=-pg  
+ 
+ 
+-ui_LDADD =  \
++monkey_bubble_LDADD =  \
+ 	$(UI_LIBS) \
+ 	../monkey/libmonkey.la \
+ 	../view/libgdkview.la \
