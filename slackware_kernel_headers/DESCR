@@ -1,0 +1,5 @@
+kernel-headers (Linux kernel include files)
+
+These are the include files from the Linux kernel.
+
+You'll need these to compile most system software for Linux.
