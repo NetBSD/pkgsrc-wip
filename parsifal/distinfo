@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/01/11 20:00:45 ora8_ Exp $
+$NetBSD: distinfo,v 1.3 2005/02/06 19:20:59 poppnk Exp $
 
-SHA1 (libparsifal-0.7.3.tar.gz) = 2faea72256929cdb98304ab473c55a06c760a04b
-Size (libparsifal-0.7.3.tar.gz) = 385775 bytes
+SHA1 (libparsifal-0.9.0.tar.gz) = 00cc8e629b0584fb6018dd4c48a032da5dfd3dab
+Size (libparsifal-0.9.0.tar.gz) = 492268 bytes

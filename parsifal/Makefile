@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2004/05/09 07:00:04 blef Exp $
+# $NetBSD: Makefile,v 1.6 2005/02/06 19:20:58 poppnk Exp $
 
-DISTNAME=	libparsifal-0.7.3
+DISTNAME=	libparsifal-0.9.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.saunalahti.fi/~samiuus/toni/xmlproc/
 
@@ -9,11 +9,9 @@ HOMEPAGE=	http://www.saunalahti.fi/~samiuus/toni/xmlproc/
 COMMENT= 	XML parser with implementation SAX2
 
 USE_BUILDLINK3= YES
-HAS_CONFIGURE=  YES
+GNU_CONFIGURE=  YES
 
-CONFIGURE_ARGS+=--prefix=${LOCALBASE}
-
-WRKSRC=${WRKDIR}/libparsifal-0.7.3
+#CONFIGURE_ARGS+=--prefix=${LOCALBASE}
 
 SRC_FILES=`ls ${WRKSRC}/src/*.c`
 INC_FILES=`ls ${WRKSRC}/include/libparsifal/*.h`
