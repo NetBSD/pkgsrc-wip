@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/17 15:21:25 thomasklausner Exp $
-bin/skippy
-share/examples/skippy/skippyrc-default
-@dirrm share/examples/skippy
