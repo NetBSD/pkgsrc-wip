@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/11/08 11:49:31 imilh Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/09 09:30:22 imilh Exp $
 #
 
-DISTNAME=	pkg_notify-0.2
+DISTNAME=	pkg_notify-0.2.1
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://imil.net/NetBSD/
 
@@ -23,13 +23,13 @@ USE_PERL5=	yes
 INSTALLATION_DIRS=	bin
 
 SUBST_CLASSES+=	pkg_notify
-SUBST_MESSAGE.pkg_notify=	"Setting up various path."
+SUBST_MESSAGE.pkg_notify=	"Setting up hardcoded path."
 SUBST_STAGE.pkg_notify=		post-patch
 SUBST_FILES.pkg_notify=		pkg_notify
-SUBST_SED.pkg_notify=		-e 's|@PKGSRCDIR@|${PKGSRCDIR}|'	\
-				-e 's|@LOCALBASE@|${LOCALBASE}|g'	\
-				-e 's|@MAKE@|${MAKE}|g'			\
-				-e 's|@PERL@|${PERL5}|g'
+SUBST_SED.pkg_notify=		-e 's|/usr/pkgsrc|${PKGSRCDIR}|'	\
+				-e 's|/usr/pkg|${LOCALBASE}|g'		\
+				-e 's|/usr/bin/make|${MAKE}|g'		\
+				-e 's|/usr/pkg/bin/perl|${PERL5}|g'
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_notify ${PREFIX}/bin
