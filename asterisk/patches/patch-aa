@@ -1,10 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/11/10 10:14:21 marc Exp $
-
---- Makefile.orig	2003-03-18 15:00:13.000000000 +0900
-+++ Makefile	2003-08-24 09:39:13.000000000 +0900
-@@ -43,16 +43,16 @@
- # Default -> leave empty
- INSTALL_PREFIX=
+$NetBSD: patch-aa,v 1.2 2005/01/23 07:01:56 riz Exp $
+--- Makefile.orig	2004-10-03 11:37:37.000000000 -0700
++++ Makefile	2005-01-22 22:11:58.000000000 -0800
+@@ -110,17 +110,18 @@
+ # Don't use together with -DBUSYDETECT_TONEONLY
+ BUSYDETECT+= #-DBUSYDETECT_COMPARE_TONE_AND_SILENCE
  
 -ASTLIBDIR=$(INSTALL_PREFIX)/usr/lib/asterisk
 -ASTVARLIBDIR=$(INSTALL_PREFIX)/var/lib/asterisk
@@ -12,72 +11,68 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/11/10 10:14:21 marc Exp $
 -ASTSPOOLDIR=$(INSTALL_PREFIX)/var/spool/asterisk
 -ASTLOGDIR=$(INSTALL_PREFIX)/var/log/asterisk
 -ASTHEADERDIR=$(INSTALL_PREFIX)/usr/include/asterisk
-+ASTLIBDIR=$(PREFIX)/lib/asterisk
-+ASTVARLIBDIR=$(PREFIX)/lib/asterisk/var
-+ASTETCDIR=$(PKG_SYSCONFDIR)/asterisk
-+ASTSPOOLDIR=/var/spool/asterisk
-+ASTLOGDIR=/var/log/asterisk
-+ASTHEADERDIR=$(PREFIX)/include/asterisk
- ASTCONFPATH=$(ASTETCDIR)/asterisk.conf
+-ASTCONFPATH=$(ASTETCDIR)/asterisk.conf
 -ASTBINDIR=$(INSTALL_PREFIX)/usr/bin
 -ASTSBINDIR=$(INSTALL_PREFIX)/usr/sbin
 -ASTVARRUNDIR=$(INSTALL_PREFIX)/var/run
-+ASTBINDIR=$(PREFIX)/bin
-+ASTSBINDIR=$(PREFIX)/sbin
-+ASTVARRUNDIR=/var/run
- 
+-ASTMANDIR=$(INSTALL_PREFIX)/usr/share/man
++ASTLIBDIR = /usr/pkg/lib/asterisk
++ASTVARLIBDIR = /usr/pkg/libdata/asterisk
++ASTETCDIR = /usr/pkg/etc/asterisk
++ASTSPOOLDIR = /var/spool/asterisk
++ASTLOGDIR = /var/log/asterisk
++ASTHEADERDIR = /usr/pkg/include/asterisk
++ASTCONFPATH = /usr/pkg/etc/asterisk/asterisk.conf
++ASTBINDIR = /usr/pkg/bin
++ASTSBINDIR = /usr/pkg/sbin
++ASTVARRUNDIR = /var/run/asterisk
++ASTMANDIR = /usr/pkg/man
++ASTEXAMPLEDIR = /usr/pkg/share/examples/asterisk
  
  MODULES_DIR=$(ASTLIBDIR)/modules
-@@ -85,7 +85,7 @@
- CFLAGS+= $(TRACE_FRAMES)
- CFLAGS+=# -fomit-frame-pointer 
- SUBDIRS=res channels pbx apps codecs formats agi cdr astman
--LIBS=-ldl -lpthread -lncurses -lm  #-lnjamd
-+LIBS=-lpthread -lm #-lncurses -lnjamd
- OBJS=io.o sched.o logger.o frame.o loader.o config.o channel.o \
- 	translate.o file.o say.o pbx.o cli.o md5.o term.o \
- 	ulaw.o alaw.o callerid.o fskmodem.o image.o app.o \
-@@ -114,11 +114,11 @@
- 	fi
+ AGI_DIR=$(ASTVARLIBDIR)/agi-bin
+@@ -433,29 +434,29 @@
+ upgrade: all bininstall
  
- editline/libedit.a: editline/config.h
--	make -C editline libedit.a
-+	${MAKE} -C editline libedit.a
+ adsi: all
+-	mkdir -p $(DESTDIR)$(ASTETCDIR)
++	mkdir -p $(DESTDIR)$(ASTEXAMPLEDIR)
+ 	for x in configs/*.adsi; do \
+-		if ! [ -f $(DESTDIR)$(ASTETCDIRX)/$$x ]; then \
+-			install -m 644 $$x $(DESTDIR)$(ASTETCDIR)/`basename $$x` ; \
++		if ! [ -f $(DESTDIR)$(ASTEXAMPLEDIR)/$$x ]; then \
++			install -m 644 $$x $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x` ; \
+ 		fi ; \
+ 	done
  
- db1-ast/libdb1.a: 
- 	@if [ -d db1-ast ]; then \
--		make -C db1-ast libdb1.a ; \
-+		${MAKE} -C db1-ast libdb1.a ; \
- 	else \
- 		echo "You need to do a cvs update -d not just cvs update"; \
- 		exit 1; \
-@@ -148,8 +148,8 @@
- 	rm -f *.o *.so asterisk
- 	rm -f build.h 
- 	rm -f ast_expr.c
--	@if [ -e editline/Makefile ]; then make -C editline clean ; fi
--	make -C db1-ast clean
-+	@if [ -e editline/Makefile ]; then ${MAKE} -C editline clean ; fi
-+	${MAKE} -C db1-ast clean
- 
- datafiles: all
- 	mkdir -p $(ASTVARLIBDIR)/sounds/digits
-@@ -305,8 +305,8 @@
- __rpm: _version
- 	rm -rf /tmp/asterisk ; \
- 	mkdir -p /tmp/asterisk/redhat/RPMS/i386 ; \
--	make INSTALL_PREFIX=/tmp/asterisk install ; \
--	make INSTALL_PREFIX=/tmp/asterisk samples ; \
-+	${MAKE} INSTALL_PREFIX=/tmp/asterisk install ; \
-+	${MAKE} INSTALL_PREFIX=/tmp/asterisk samples ; \
- 	mkdir -p /tmp/asterisk/etc/rc.d/init.d ; \
- 	cp -f redhat/asterisk /tmp/asterisk/etc/rc.d/init.d/ ; \
- 	cp -f redhat/rpmrc /tmp/asterisk/ ; \
-@@ -329,6 +329,6 @@
- 
- 	
- dont-optimize:
--	make OPTIMIZE= K6OPT= install
-+	${MAKE} OPTIMIZE= K6OPT= install
- 
- valgrind: dont-optimize
+ samples: all datafiles adsi
+-	mkdir -p $(DESTDIR)$(ASTETCDIR)
++	mkdir -p $(DESTDIR)$(ASTEXAMPLEDIR)
+ 	for x in configs/*.sample; do \
+-		if [ -f $(DESTDIR)$(ASTETCDIR)/`basename $$x .sample` ]; then \
+-			mv -f $(DESTDIR)$(ASTETCDIR)/`basename $$x .sample` $(DESTDIR)$(ASTETCDIR)/`basename $$x .sample`.old ; \
++		if [ -f $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x .sample` ]; then \
++			mv -f $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x .sample` $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x .sample`.old ; \
+ 		fi ; \
+-		install -m 644 $$x $(DESTDIR)$(ASTETCDIR)/`basename $$x .sample` ;\
++		install -m 644 $$x $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x .sample` ;\
+ 	done
+-	echo "[directories]" > $(DESTDIR)$(ASTETCDIR)/asterisk.conf
+-	echo "astetcdir => $(ASTETCDIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
+-	echo "astmoddir => $(MODULES_DIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
+-	echo "astvarlibdir => $(ASTVARLIBDIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
+-	echo "astagidir => $(AGI_DIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
+-	echo "astspooldir => $(ASTSPOOLDIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
+-	echo "astrundir => $(ASTVARRUNDIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
+-	echo "astlogdir => $(ASTLOGDIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
++	echo "[directories]" > $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
++	echo "astetcdir => $(ASTETCDIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
++	echo "astmoddir => $(MODULES_DIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
++	echo "astvarlibdir => $(ASTVARLIBDIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
++	echo "astagidir => $(AGI_DIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
++	echo "astspooldir => $(ASTSPOOLDIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
++	echo "astrundir => $(ASTVARRUNDIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
++	echo "astlogdir => $(ASTLOGDIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
+ 	for x in sounds/demo-*; do \
+ 		if grep -q "^%`basename $$x`%" sounds.txt; then \
+ 			install -m 644 $$x $(DESTDIR)$(ASTVARLIBDIR)/sounds ; \

@@ -1,15 +1,86 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:11:32 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/23 07:01:56 riz Exp $
 #
 
-DISTNAME=	asterisk-0.4.0
-CATEGORIES=	chat
-MASTER_SITES=	ftp://ftp.asterisk.org/pub/telephony/asterisk/ \
-		ftp://ftp.asterisk.org/pub/telephony/asterisk/old-releases/
+DISTNAME=		asterisk-1.0.4
+CATEGORIES=		wip
+MASTER_SITES=		ftp://ftp.asterisk.org/pub/asterisk/
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.asteriskpbx.com/
-COMMENT=	Open source PBX
+MAINTAINER=		riz@tastylime.net
+HOMEPAGE=		http://www.asterisk.org/
+COMMENT=		The Asterisk Software PBX
 
-USE_GNU_TOOLS+=	make
+USE_BUILDLINK3=		yes
 
+USE_GNU_TOOLS+= 	make yacc
+
+MANCOMPRESSED= 		yes
+
+INSTALL_TARGET= 	install samples
+
+# Running as non-root will come later
+#ASTERISK_USER?= 	asterisk
+#ASTERISK_GROUP?= 	asterisk
+#PKG_GROUPS= 		${ASTERISK_GROUP}
+#PKG_USERS= 		${ASTERISK_USER}:${ASTERISK_GROUP}::Asterisk\\ user
+
+# Various path settings for Asterisk
+PKG_SYSCONFSUBDIR?=	asterisk
+ASTLIBDIR?=${PREFIX}/lib/asterisk
+ASTVARLIBDIR?=${PREFIX}/libdata/asterisk
+ASTETCDIR?=${PKG_SYSCONFDIR}
+ASTSPOOLDIR?=${VARBASE}/spool/asterisk
+ASTLOGDIR?=${VARBASE}/log/asterisk
+ASTHEADERDIR?=${PREFIX}/include/asterisk
+ASTCONFPATH?=${ASTETCDIR}/asterisk.conf
+ASTBINDIR?=${PREFIX}/bin
+ASTSBINDIR?=${PREFIX}/sbin
+ASTVARRUNDIR?=${VARBASE}/run/asterisk
+ASTMANDIR?=${PREFIX}/man
+ASTEXAMPLEDIR?=${PREFIX}/share/examples/asterisk
+
+# Override default paths in Makefile
+SUBST_CLASSES+= 	asterisk
+SUBST_STAGE.asterisk= 	post-patch
+SUBST_FILES.asterisk=	Makefile
+SUBST_SED.asterisk= 	\
+	-e "s|^\(ASTLIBDIR\)=.*|\1 = ${ASTLIBDIR}|"		\
+	-e "s|^\(ASTVARLIBDIR\)=.*|\1 = ${ASTVARLIBDIR}|"	\
+	-e "s|^\(ASTETCDIR\)=.*|\1 = ${ASTETCDIR}|"		\
+	-e "s|^\(ASTSPOOLDIR\)=.*|\1 = ${ASTSPOOLDIR}|"		\
+	-e "s|^\(ASTLOGDIR\)=.*|\1 = ${ASTLOGDIR}|"		\
+	-e "s|^\(ASTHEADERDIR\)=.*|\1 = ${ASTHEADERDIR}|"	\
+	-e "s|^\(ASTCONFPATH\)=.*|\1 = ${ASTCONFPATH}|"		\
+	-e "s|^\(ASTBINDIR\)=.*|\1 = ${ASTBINDIR}|"		\
+	-e "s|^\(ASTSBINDIR\)=.*|\1 = ${ASTSBINDIR}|"		\
+	-e "s|^\(ASTVARRUNDIR\)=.*|\1 = ${ASTVARRUNDIR}|"	\
+	-e "s|^\(ASTMANDIR\)=.*|\1 = ${ASTMANDIR}|"		\
+	-e "s|^\(ASTEXAMPLEDIR\)=.*|\1 = ${ASTEXAMPLEDIR}|"
+
+USE_PKGINSTALL= 	yes
+RCD_SCRIPTS= 		asterisk
+OWN_DIRS+= 		${ASTSPOOLDIR} ${ASTLOGDIR} ${ASTVARRUNDIR}
+OWN_DIRS+=		${ASTLOGDIR}/cdr-csv
+
+CONF_FILES=		# empty
+.for _file_ in asterisk.conf extensions.conf
+CONF_FILES+=	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
+.endfor
+
+# if we put all the files in $CONF_FILES, the message is _way_ too long.
+.for _file_ in adsi.conf adtranvofr.conf agents.conf alarmreceiver.conf \
+	alsa.conf cdr_manager.conf cdr_odbc.conf 			\
+	cdr_pgsql.conf cdr_tds.conf enum.conf extconfig.conf 		\
+	features.conf festival.conf iax.conf 				\
+	iaxprov.conf indications.conf logger.conf manager.conf 		\
+	meetme.conf mgcp.conf modem.conf modules.conf musiconhold.conf 	\
+	osp.conf oss.conf phone.conf privacy.conf queues.conf		\
+	res_config_odbc.conf res_odbc.conf rpt.conf rtp.conf sip.conf 	\
+	skinny.conf voicemail.conf vpb.conf zapata.conf asterisk.adsi 	\
+	telcordia-1.adsi
+SUPPORT_FILES+= 	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
+.endfor
+.undef _file_
+
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

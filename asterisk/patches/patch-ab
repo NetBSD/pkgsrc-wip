@@ -1,15 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/11/10 10:14:21 marc Exp $
-
---- db1-ast/include/mpool.h-	2003-08-24 09:41:47.000000000 +0900
-+++ db1-ast/include/mpool.h	2003-08-24 09:42:22.000000000 +0900
-@@ -38,6 +38,10 @@
+$NetBSD: patch-ab,v 1.2 2005/01/23 07:02:12 riz Exp $
+--- pbx/Makefile.orig	2005-01-05 15:12:44.000000000 -0800
++++ pbx/Makefile	2005-01-05 15:13:09.000000000 -0800
+@@ -16,7 +16,7 @@
+ PBX_LIBS=pbx_config.so pbx_wilcalu.so pbx_spool.so     # pbx_gtkconsole.so pbx_kdeconsole.so
  
- #include <sys/queue.h>
+ # Add GTK console if appropriate
+-PBX_LIBS+=$(shell gtk-config --cflags >/dev/null 2>/dev/null && echo "pbx_gtkconsole.so")
++#PBX_LIBS+=$(shell gtk-config --cflags >/dev/null 2>/dev/null && echo "pbx_gtkconsole.so")
+ # Add KDE Console if appropriate
+ #PBX_LIBS+=$(shell [ "$$QTDIR" != "" ] && echo "pbx_kdeconsole.so")
  
-+#ifndef __PMT
-+#define	__PMT(x)	__P(x)
-+#endif
-+
- /*
-  * The memory pool scheme is a simple one.  Each in-memory page is referenced
-  * by a bucket which is threaded in up to two of three ways.  All active pages
