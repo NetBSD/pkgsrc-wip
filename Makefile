@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1507 2004/10/23 17:07:29 minskim Exp $
-# $NetBSD: Makefile,v 1.1507 2004/10/23 17:07:29 minskim Exp $
+# $Id: Makefile,v 1.1508 2004/10/23 17:21:43 minskim Exp $
+# $NetBSD: Makefile,v 1.1508 2004/10/23 17:21:43 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -499,7 +499,6 @@ SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Mail-Webmail-Gmail
 SUBDIR+=	p5-Net-PcapUtils
-SUBDIR+=	p5-OOTools
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
