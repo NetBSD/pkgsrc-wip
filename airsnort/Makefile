@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2004/12/13 14:43:02 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/13 14:43:40 poppnk Exp $
 #
 
 DISTNAME=		airsnort-0.2.6
 CATEGORIES=		wip net security linux
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=airsnort/}
+PKGREVISION=		1
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://airsnort.sourceforge.net/
