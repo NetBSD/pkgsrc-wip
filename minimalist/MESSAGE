@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/04/22 13:08:06 poppnk Exp $
+
+Add these lines to /etc/aliases and update your MTA with 'newaliases'.
+
+ minimalist: "|${PREFIX}/bin/minimalist.pl"
+ 
+To create a new list copy the directory 
+	${PREFIX}/share/examples/minimalist/list to
+	/var/spool/minimalist/
+
+Edit the files inside and chmod -R to 644
+
+and append to /etc/aliases theses lines:
+
+ listname: "|${PREFIX}/bin/minimalist.pl listname"
+ listname-owner: "|${PREFIX}/bin/minimalist.pl listname-owner"
+
+===========================================================================
