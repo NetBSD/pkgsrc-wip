@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/12 15:46:05 ianharding Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/13 16:09:16 ianharding Exp $
 #
 
 DISTNAME=		nsopenssl-3.0b23-src
-PKGNAME=                ${DISTNAME:S/b23-src//}
+PKGNAME=                aols-openssl-3.0b23
 CATEGORIES=             www
 MASTER_SITES=           ${MASTER_SITE_SOURCEFORGE:=aolserver/}
 
