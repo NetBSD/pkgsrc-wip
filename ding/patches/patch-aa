@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/09 22:21:51 neutr1n0x Exp $
+
+--- ding.old	Wed Feb  4 22:01:02 2004
++++ ding	Wed Feb  4 22:03:34 2004
+@@ -86,5 +86,5 @@
+ set default_searchmeth(0,name) {Dictionary}
+ set default_searchmeth(0,grepcmds) {agrep egrep internal_search}
+-set default_searchmeth(0,dictfile) [expr {$param(isunix) ?  "/usr/share/dict/ger-eng.txt" : "ger-eng.txt"}]
++set default_searchmeth(0,dictfile) [expr {$param(isunix) ?  "/usr/pkg/share/dict/ger-eng.txt" : "ger-eng.txt"}]
+ set default_searchmeth(0,separator) { :: }
+ set default_searchmeth(0,language1) {Deutsch}

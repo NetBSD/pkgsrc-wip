@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/09 22:21:51 neutr1n0x Exp $
+
+SHA1 (ding-1.2.tar.gz) = d07c7d56042f6a6de63a04fc64e2213cddb6b1fe
+Size (ding-1.2.tar.gz) = 1581400 bytes
+SHA1 (ger-eng.txt.gz) = fde1a47316a7a0231a57d8773a5e86924ab77d24
+Size (ger-eng.txt.gz) = 1527727 bytes
+SHA1 (patch-aa) = 23e1fd039b3feb7b4b5569e1712df07d4887bce3
