@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/10 00:41:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/14 02:39:45 hubertf Exp $
 
 DISTNAME=	cjk-latex-wadalab-4.5.2
 CATEGORIES=	print
@@ -43,7 +43,8 @@ MAKE_ENV+=	TEXMFMAIN=${TEXMFMAIN}
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
 
-FILES_SUBST=		MAPDIR=${MAPDIR}
+FILES_SUBST=		MAPDIR=${MAPDIR} \
+			TEXMFMAIN=${TEXMFMAIN}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 post-extract:
