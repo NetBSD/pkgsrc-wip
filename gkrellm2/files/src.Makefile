@@ -3,7 +3,7 @@ include ../Makefile.inc
 PACKAGE ?= gkrellm
 EXTRAOBJS ?= md5c.o
 
-SMC_LIBS ?= -L$(X11BASE)/lib -lSM -lICE
+SMC_LIBS ?= -L$(X11BASE)/lib -Wl,-R$(X11BASE)/lib -lSM -lICE
 
 GKRELLM_INCLUDES = gkrellm.h gkrellm-public-proto.h
 

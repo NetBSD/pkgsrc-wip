@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/09/25 20:06:51 uid117197 Exp $
+# $NetBSD: Makefile,v 1.11 2003/10/13 07:08:13 cubidou Exp $
 .include "Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm
@@ -11,7 +11,7 @@ DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}:../../wip/gkrellm2-share
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_PKGINSTALL=		YES
-PTHREAD_OPTS=		require
+#PTHREAD_OPTS=		require
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,5 +36,5 @@ post-install:
 
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+#.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
