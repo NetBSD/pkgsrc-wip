@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.common,v 1.3 2003/10/17 19:13:29 bubuchka Exp $
+$NetBSD: MESSAGE.common,v 1.4 2004/04/06 15:19:35 bubuchka Exp $
 
 Add the similar to following to /etc/services:
   drwebd	3000/tcp	# DrWeb daemon
@@ -10,15 +10,8 @@ Add the similar to following to crontab(5) file:
 
 	*** IMPORTANT ***
 
-If you are doing upgrade from DrWeb version prior to 4.30, it is
-HIGHLY RECOMMENDED to pass trough the following steps:
-
-    1) deinstall any installed DrWeb package using pkg_delete(1);
-    2) remove at least the following things:
-
-	contents of the "${DRW_BASESDIR}" directory,
-	"${PKG_SYSCONFDIR}/drweb32.ini" file;
-
-    3) install ${PKGNAME} package back.
+If you are doing upgrade from DrWeb version prior to 4.30, you MUST
+merge your existent "${PKG_SYSCONFDIR}/drweb32.ini" file within
+clean copy installed in "${EGDIR}/drweb32.ini".
 
 ===========================================================================

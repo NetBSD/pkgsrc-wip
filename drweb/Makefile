@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2004/03/07 05:49:17 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/06 15:19:35 bubuchka Exp $
 #
 # Note: We'll not use drweb's own configuration / building / installation
 # facilities so as its all are very ugly.
 
-DISTNAME=	drweb-4.30-${DISTTYPE}
-PKGNAME=	drweb-4.30
+DISTNAME=	drweb-4.31.3-${DISTTYPE}
+PKGNAME=	drweb-4.31.3
 CATEGORIES=	wip security
 MASTER_SITES=	ftp://ftp.drweb.ru/pub/unix/				\
 		ftp://ftp.drweb.ru/pub/unix/betas/
@@ -13,7 +13,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.sald.com/
 COMMENT=	DrWeb Antivirus Suite
 
-ONLY_FOR_PLATFORM= FreeBSD-[45].[0-9]*-i386 OpenBSD-[3-9].*-i386	\
+ONLY_FOR_PLATFORM= FreeBSD-[3-5].[0-9]*-i386 OpenBSD-[3-9].*-i386	\
 		NetBSD-1.[6-9]*-i386 NetBSD-[2-9].[0-9]-i386		\
 		Linux-*-i[3-6]86 Solaris-*-i386
 
@@ -23,10 +23,12 @@ ONLY_FOR_PLATFORM= FreeBSD-[45].[0-9]*-i386 OpenBSD-[3-9].*-i386	\
 DISTTYPE=	freebsd5
 .elif ${OPSYS} == "FreeBSD" && ${MAJOR_OS_VERSION} >= 4.0
 DISTTYPE=	freebsd4
+.elif ${OPSYS} == "FreeBSD" && ${MAJOR_OS_VERSION} >= 3.0
+DISTTYPE=	freebsd3
 .elif ${OPSYS} == "NetBSD"
 DISTTYPE=	freebsd4
 .elif ${OPSYS} == "OpenBSD"
-DISTTYPE=	openbsd
+DISTTYPE=	openbsd3
 .elif ${OPSYS} == "Solaris"
 DISTTYPE=	solaris
 .elif ${OPSYS} == "Linux"
@@ -61,15 +63,7 @@ SUPPORT_FILES=	${EGDIR}/drweb.key ${PKG_SYSCONFDIR}/drweb.key		\
 		${EGDIR}/drwebd.key ${PKG_SYSCONFDIR}/drwebd.key	\
 		${EGDIR}/drweb32.dll ${DRW_BASESDIR}/drweb32.dll	\
 		${EGDIR}/drwebase.vdb ${DRW_BASESDIR}/drwebase.vdb	\
-		${EGDIR}/drw43001.vdb ${DRW_BASESDIR}/drw43001.vdb	\
-		${EGDIR}/drw43002.vdb ${DRW_BASESDIR}/drw43002.vdb	\
-		${EGDIR}/drw43003.vdb ${DRW_BASESDIR}/drw43003.vdb	\
-		${EGDIR}/drw43004.vdb ${DRW_BASESDIR}/drw43004.vdb	\
-		${EGDIR}/drw43005.vdb ${DRW_BASESDIR}/drw43005.vdb	\
-		${EGDIR}/drw43006.vdb ${DRW_BASESDIR}/drw43006.vdb	\
-		${EGDIR}/drw43007.vdb ${DRW_BASESDIR}/drw43007.vdb	\
-		${EGDIR}/drw43008.vdb ${DRW_BASESDIR}/drw43008.vdb	\
-		${EGDIR}/drw43009.vdb ${DRW_BASESDIR}/drw43009.vdb
+		${EGDIR}/drw43101.vdb ${DRW_BASESDIR}/drw43001.vdb
 
 RCD_SCRIPTS=		drwebd
 RCD_SCRIPT_SRC.drwebd=	${FILESDIR}/drwebd-rcd.src
@@ -120,15 +114,7 @@ do-install:
 	# --> Minimal set of antivirus bases
 	${INSTALL_DATA} ${WRKSRC_BIN}/lib/drweb32.dll ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/var/drweb/bases/drwebase.vdb ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/var/drweb/bases/drw43001.vdb ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/var/drweb/bases/drw43002.vdb ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/var/drweb/bases/drw43003.vdb ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/var/drweb/bases/drw43004.vdb ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/var/drweb/bases/drw43005.vdb ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/var/drweb/bases/drw43006.vdb ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/var/drweb/bases/drw43007.vdb ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/var/drweb/bases/drw43008.vdb ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/var/drweb/bases/drw43009.vdb ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/var/drweb/bases/drw43101.vdb ${EGDIR}
 
 	# --> Documentation
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -138,6 +124,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC_BIN}/doc/readme.scanner ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC_BIN}/doc/readme.eicar ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC_BIN}/update/readme.update ${DOCDIR}
+
+post-install:
+	# --> Remove old antivirus databases
+	${RM} -f ${DRW_BASESDIR}/drw4[0-2]*.vdb
+	${RM} -f ${DRW_BASESDIR}/drw430*.vdb
+	${RM} -f ${DRW_BASESDIR}/drwtoday.vdb
 
 .include "../../wip/drweb/Makefile.common"
 .include "../../mk/bsd.pkg.install.mk"
