@@ -1,13 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2004/11/22 18:14:30 lexort Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/23 17:35:08 lexort Exp $
 #
 
 DISTNAME=	guile-pg-0.23
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.glug.org/people/ttn/software/guile-pg/
 
 MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://www.glug.org/people/ttn/software/guile-pg/
 COMMENT=	PostgreSQL interface for Guile
+
+# This is wrong if pgsql.buildlink3.mk chooses otherwise.
+DEPENDS+=	postgresql74-client>=7.4.1:../../databases/postgresql74-client
 
 USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
@@ -26,12 +30,12 @@ INFO_FILES=	guile-pg.info
 # $GUILE_LIBSITE, which is searched by ttn-1.4, but not by 1.6.  The
 # simplest nonproblematic solution is to symlink the installed code to
 # where 1.6 expects it.  We could patch guile-pg to install in 1.6's
-# preferred location /usr/pkg/share/guile/site, but there is a shared
+# preferred location ${PREFIX}/share/guile/site, but there is a shared
 # library which of course cannot go in share.
 
 post-install:
 	# guile should make this, but if not
-	${MKDIR} ${PREFIX}/share/guile/site
+	${INSTALL_DATA_DIR} ${PREFIX}/share/guile/site
 	cd ${PREFIX}/share/guile/site && ${LN} -sf ../../../lib/guile/site/database .
 
 PGSQL_VERSION_REQD=	74
