@@ -1,0 +1,4 @@
+Test and import into pkgsrc. Everything is fine as far as I can tell.
+
+Ignore the laggy sound. This has nothing to do with abuse-sdl itself,
+and can be seen in other SDL applications as well.
