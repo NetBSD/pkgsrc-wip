@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/07/27 06:05:17 bencollver Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/27 11:39:57 blef Exp $
 
---- Makefile.orig	Wed Mar 28 02:51:41 2001
-+++ Makefile
-@@ -11,16 +11,16 @@
+--- Makefile.orig	Tue Mar 27 16:51:41 2001
++++ Makefile	Sun Jul 27 04:27:49 2003
+@@ -4,23 +4,23 @@
+ 
+ # $Id: patch-aa,v 1.2 2003/07/27 11:39:57 blef Exp $
+ 
+-#TARGET?=Linux_svgalib
+-TARGET?=Linux_X
++TARGET?=Linux_svgalib
++#TARGET?=Linux_X
+ #TARGET?=DJGPP
+ #TARGET?=Linux_GTK
  
  #C_ONLY=-DC_ONLY
  
