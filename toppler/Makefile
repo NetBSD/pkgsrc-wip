@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:19 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2003/08/23 00:42:14 blef Exp $
 
 DISTNAME=		toppler-1.0.2
 CATEGORIES=		games
@@ -11,5 +11,6 @@ COMMENT=		Tower climbing game
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../audio/SDL_mixer/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
