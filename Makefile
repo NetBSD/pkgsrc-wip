@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1498 2004/10/19 16:50:40 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1498 2004/10/19 16:50:40 adrian_p Exp $
+# $Id: Makefile,v 1.1499 2004/10/20 12:16:33 imilh Exp $
+# $NetBSD: Makefile,v 1.1499 2004/10/20 12:16:33 imilh Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -507,6 +507,7 @@ SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-Text-Tabs+Wrap
 SUBDIR+=	p5-Time-Piece
 SUBDIR+=	p5-Tk-TableMatrix
+SUBDIR+=	p5-WWW-Curl
 SUBDIR+=	p5-X11-Protocol
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-mysql
