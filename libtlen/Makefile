@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/02/19 17:53:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/22 21:16:08 mpasternak Exp $
 #
 
-DISTNAME=	libtlen-20040112
+DISTNAME=	libtlen-20040212
 CATEGORIES=	chat
 MASTER_SITES=	http://www.libtlen.eu.org/snapshots/archive/
 

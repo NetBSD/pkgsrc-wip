@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/19 17:53:28 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/22 21:16:08 mpasternak Exp $
 #
 # This Makefile fragment is included by packages that use libtlen.
 #
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS+=	libtlen
 
 .if !empty(LIBTLEN_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			libtlen
-BUILDLINK_DEPENDS.libtlen+=		libtlen>=20040112
+BUILDLINK_DEPENDS.libtlen+=		libtlen>=20040212
 BUILDLINK_PKGSRCDIR.libtlen?=		../../wip/libtlen
 
 .endif # LIBTLEN_BUILDLINK3_MK
