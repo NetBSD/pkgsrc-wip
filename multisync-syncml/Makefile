@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/05 16:53:20 mreriksson Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/05 22:51:33 mreriksson Exp $
 #
 
 PKGNAME=		multisync-syncml-0.82
@@ -31,4 +31,5 @@ do-install:
 		${MAKE} install
 
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../wip/libwbxml2-patched/buildlink3.mk"
 .include "../../wip/multisync/Makefile.common"
