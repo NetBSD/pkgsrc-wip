@@ -1,7 +1,3 @@
 1) Patch man page for paths (use sed in pre-install)
 	I really don't know how to do this. I looked at pkgsrc/mk/subst.mk,
-	but I still don't understand it.
-
-2) Still waiting for Lutz to `make man' before packaging this release.
-	The Makefile has a commented entry for now,
-	just so this pkg can be installed.
+	but I still don't understand it. I'll look into it deeper.
