@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.313 2003/07/08 15:06:36 adrian_p Exp $
-# $NetBSD: Makefile,v 1.313 2003/07/08 15:06:36 adrian_p Exp $
+# $Id: Makefile,v 1.314 2003/07/09 14:37:47 adrian_p Exp $
+# $NetBSD: Makefile,v 1.314 2003/07/09 14:37:47 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -245,6 +245,7 @@ SUBDIR+=	shoutcast
 SUBDIR+=	slocate
 SUBDIR+=	slrn-pl
 SUBDIR+=	smtpscan
+SUBDIR+=	socat
 SUBDIR+=	speedx
 SUBDIR+=	srvx
 SUBDIR+=	stickynotes-applet
