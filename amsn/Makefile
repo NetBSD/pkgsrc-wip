@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/09/28 03:37:13 virtus Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/15 17:26:22 virtus Exp $
 #
 
-DISTNAME=	amsn-0.71
+DISTNAME=	amsn-0_83
 WRKSRC=		${WRKDIR}/msn
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=amsn/}

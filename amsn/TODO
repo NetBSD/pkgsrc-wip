@@ -1,0 +1,5 @@
+$Id: TODO,v 1.3 2004/01/15 17:26:22 virtus Exp $
+
+* Paths are hardcoded in Makefile
+* /usr/bin/wish hardcoded in numerous .tcl files
+* etc..
