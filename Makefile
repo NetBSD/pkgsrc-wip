@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.71 2003/04/13 12:51:49 cjep Exp $
-# $NetBSD: Makefile,v 1.71 2003/04/13 12:51:49 cjep Exp $
+# $Id: Makefile,v 1.72 2003/04/13 12:52:03 cjep Exp $
+# $NetBSD: Makefile,v 1.72 2003/04/13 12:52:03 cjep Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -14,7 +14,6 @@ SUBDIR+=	celestia
 SUBDIR+=	chksniff
 SUBDIR+=	cvsd
 SUBDIR+=	drweb
-SUBDIR+=	file
 SUBDIR+=	gkrellm2
 SUBDIR+=	gkrellm2-flynn
 SUBDIR+=	gkrellm2-server
