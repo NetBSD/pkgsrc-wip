@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.193 2003/05/31 00:55:01 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.193 2003/05/31 00:55:01 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.194 2003/05/31 09:46:57 poppnk Exp $
+# $NetBSD: Makefile,v 1.194 2003/05/31 09:46:57 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -99,6 +99,7 @@ SUBDIR+=	linux-nfs-utils
 SUBDIR+=	linuxsms
 SUBDIR+=	liquidwar
 SUBDIR+=	mailfilter
+SUBDIR+=	maradns
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	metacity-setup
@@ -156,6 +157,7 @@ SUBDIR+=	scm
 SUBDIR+=	scons
 SUBDIR+=	scponly
 SUBDIR+=	shoutcast
+SUBDIR+=	slocate
 SUBDIR+=	srvx
 SUBDIR+=	strace
 SUBDIR+=	streamripper
