@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/11 05:56:08 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/27 22:13:22 thomasklausner Exp $
 #
 
 #DISTNAME=		cinelerra-1.2.0-src
@@ -38,13 +38,13 @@ USE_GNU_TOOLS+=		make
 .include "../../audio/libvorbis/buildlink3.mk"
 
 .include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/libdv/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"
 
 # maybe have an option for HAVE_FIREWIRE
 .include "../../wip/libraw1394/buildlink3.mk"
 .include "../../wip/libavc1394/buildlink3.mk"
-.include "../../wip/libdv/buildlink3.mk"
 
 #  libmpeg3
 # jpeg-mmx

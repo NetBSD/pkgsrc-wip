@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/11 19:25:24 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/27 22:13:22 thomasklausner Exp $
 #
 
 DISTNAME=		kino-0.7.1
@@ -36,12 +36,12 @@ GNU_CONFIGURE=		yes
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
+.include "../../multimedia/libdv/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
 .include "../../wip/libavc1394/buildlink3.mk"
 .include "../../wip/libraw1394/buildlink3.mk"
-.include "../../wip/libdv/buildlink3.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
