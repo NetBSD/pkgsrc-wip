@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1693 2005/03/18 12:18:54 obache Exp $
-# $NetBSD: Makefile,v 1.1693 2005/03/18 12:18:54 obache Exp $
+# $Id: Makefile,v 1.1694 2005/03/18 23:17:10 daprice Exp $
+# $NetBSD: Makefile,v 1.1694 2005/03/18 23:17:10 daprice Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -700,7 +700,12 @@ SUBDIR+=	pointless
 SUBDIR+=	poppler
 SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
+SUBDIR+=	postgis
+SUBDIR+=	postgis74
 SUBDIR+=	postgresql-uniqueidentifier
+SUBDIR+=	postgresql73-postgis
+SUBDIR+=	postgresql74-postgis
+SUBDIR+=	postgresql80-postgis
 SUBDIR+=	ppp
 SUBDIR+=	prelude-lml
 SUBDIR+=	prelude-manager
