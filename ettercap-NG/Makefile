@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/08 22:53:46 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/22 23:52:52 adrian_p Exp $
 
 DISTNAME=	ettercap-NG-0.7.1
 CATEGORIES=	net
@@ -10,13 +10,18 @@ COMMENT=	Multipurpose sniffer/interceptor/logger for switched LAN
 
 CONFLICTS=	ettercap-0*
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+INSTALL_UNSTRIPPED=	yes
+.endif
+
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 PTHREAD_OPTS+=		require
 USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	libtool
-INSTALL_UNSTRIPPED=	YES
 
 CONFIGURE_ARGS+=	--with-libnet=${BUILDLINK_PREFIX.libnet}
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
@@ -29,7 +34,8 @@ CONFIGURE_ARGS+=	--disable-gtk
 USE_BUILTIN.libpcap=	no
 USE_BUILTIN.ncurses=	no
 
-CONF_FILES=	${WRKSRC}/share/etter.conf ${PKG_SYSCONFDIR}/etter.conf
+CONF_FILES=	${PREFIX}/share/examples/ettercap-NG/etter.conf \
+		${PKG_SYSCONFDIR}/etter.conf
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.ettercap-NG
 PKG_SUPPORTED_OPTIONS=	gtk
@@ -40,6 +46,11 @@ PKG_SUPPORTED_OPTIONS=	gtk
 .	include "../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gtk
 .endif
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ettercap-NG
+	${INSTALL_DATA} ${WRKSRC}/share/etter.conf \
+		${PREFIX}/share/examples/ettercap-NG
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
