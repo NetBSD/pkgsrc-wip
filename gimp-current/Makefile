@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/12 04:24:45 blef Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/15 21:37:23 minskim Exp $
 #
 
 DISTNAME=		gimp-${GIMP_VER}
@@ -53,6 +53,7 @@ post-install:
 .include "../../graphics/librsvg2/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/libwmf/buildlink2.mk"
 .include "../../www/libgtkhtml/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 
