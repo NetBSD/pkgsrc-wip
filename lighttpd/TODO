@@ -1,0 +1,3 @@
+- fix mysql compile problems - configure is dumb to --with/--without-mysql
+  argument and uses mysql always when it finds it. this may cause a problem
+  with PLIST on systems without mysql installed.
