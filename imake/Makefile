@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/07/24 00:21:13 blef Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/24 04:25:59 blef Exp $
 
 DISTNAME=	${DISTFILES}
-PKGNAME=	imake-${XFREE86_VERSION}
+PKGNAME=	imake-${XF_VER}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_XFREE}
 DISTFILES=      X430src-1.tgz X430src-3.tgz
