@@ -1,0 +1,6 @@
+$Id: TODO,v 1.1 2003/09/01 18:06:01 xtraeme Exp $
+
+* Doesn't build on NetBSD 1.6.x (I'm looking at it)
+* Fix trouble with x11-links
+* Fix trouble of Jeremy C.Reed on Linux
+* We need to test/build this on more platforms than x86 
