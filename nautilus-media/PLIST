@@ -1,11 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/23 19:37:12 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/25 07:53:50 xtraeme Exp $
 bin/gst-thumbnail
-etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@mpeg/%gconf.xml
-etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-avi/%gconf.xml
-etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-fli/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@mpeg/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-avi/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-fli/%gconf.xml
 lib/bonobo/libnautilus-audio-properties-view.a
 lib/bonobo/libnautilus-audio-properties-view.la
 lib/bonobo/libnautilus-audio-properties-view.so
@@ -69,12 +63,3 @@ share/pixmaps/nautilus-media/prev.png
 share/pixmaps/nautilus-media/scan.png
 share/pixmaps/nautilus-media/stop.png
 @dirrm share/pixmaps/nautilus-media
-@dirrm share/nautilus/glade
-@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-fli
-@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-avi
-@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@mpeg
-@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers
-@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-fli
-@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-avi
-@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@mpeg
-@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers
