@@ -1,19 +1,21 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/11/30 03:25:14 grantbeattie Exp $
+$NetBSD: MESSAGE,v 1.3 2003/11/30 04:44:28 grantbeattie Exp $
 
-To use exim, you will need to perform the following steps manually; it is
-inappropriate for this package to make the changes for you.
+To use exim, you will need to do the following:
 
 1. Read the documentation. Edit ${PKG_SYSCONFDIR}/configure to taste.
-   Note that depending on the version of NetBSD, the `aliases' file may
+   Note that depending on your operating system, the `aliases' file may
    be in /etc/mail and not /etc, as it was previously.
 
-2. Back-up /etc/mailer.conf to /etc/mailer.conf.sendmail. Copy
+2. If you use mailwrapper (eg. NetBSD), back-up /etc/mailer.conf to
+   /etc/mailer.conf.sendmail and copy
    ${EGDIR}/mailer.conf to /etc/mailer.conf.
 
-3. Set 'sendmail=NO', 'exim=YES' in /etc/rc.conf.
+3. If you use rc.conf, set 'exim=YES' and be sure to disable any other
+   MTAs.
 
-4. Configuring log rotation is dependant on personal taste and the version of
-   NetBSD in use. See weekly.conf(5), newsyslog(8), exicyclog and eximstats.
+4. Configuring log rotation is dependant on personal taste and your
+   operating system. See exicyclog and eximstats. Additionally, on NetBSD,
+   see weekly.conf(5) and newsyslog(8).
 
 ===========================================================================
