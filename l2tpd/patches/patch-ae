@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 2003/09/30 08:59:20 hfath Exp $
+
+--- control.c.orig	2002-04-10 22:09:33.000000000 +0200
++++ control.c
+@@ -16,8 +16,6 @@
+ #include <errno.h>
+ #include <string.h>
+ #include <stdio.h>
+-#include <netinet/in.h>
+-#include <arpa/inet.h>
+ #include <unistd.h>
+ #include <stdlib.h>
+ #include "l2tp.h"
+@@ -1661,7 +1659,6 @@ inline int handle_packet (struct buffer 
+                           struct call *c)
+ {
+     int res;
+-    struct timeval tv;
+     if (CTBIT (*((_u16 *) buf->start)))
+     {
+         /* We have a control packet */
