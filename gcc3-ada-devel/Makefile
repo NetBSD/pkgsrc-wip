@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/15 23:12:25 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/24 18:56:07 johnrshannon Exp $
 #
 
 PKGNAME=		gcc3${GCC3_PKGMODIF}-ada-${GCC_VERSION}-devel
@@ -8,8 +8,6 @@ COMMENT=		GNU Compiler Collection, version 3-${SNAPDATE}, Ada compiler
 
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=	--enable-languages="ada"
-CONFIGURE_ARGS+=	--enable-threads=yes
-CONFIGURE_ARGS+=	--disable-nls
 
 #
 # Bootstrap section. Define something to make the pkg usable.
@@ -64,13 +62,17 @@ post-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} configure-target)
 	${TEST} -f ${WRKSRC}/gcc/ada/Makefile \
 	  || ${FALSE} # no ada bootstrap found by configure
-	(cd ${WRKSRC}/gcc/ada && ${TOUCH} treeprs.ads [es]info.h nmake.ad[bs])
 
-post-build:
+do-build:
+	(cd ${WRKSRC}/intl && ${SETENV} ${MAKE_ENV} ${GMAKE})
+	(cd ${WRKSRC}/gcc && ${GMAKE} ada)
+	# XXX avoid some VPATH related lossage
 	(cd ${WRKSRC}/gcc/ada && ${MV} targtyps.o targtyps.o.sav)
 	(cd ${WRKSRC}/gcc/ada && ${RM} -f *.o *.ali)
 	(cd ${WRKSRC}/gcc/ada && ${MV} targtyps.o.sav targtyps.o)
 	(cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib_and_tools)
+
+pre-install:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
 	${ECHO} "ADA_INCLUDE_PATH+=${GCC_ARCHDIR}/adainclude" >> ${WRKDIR}/gcc3.mk
 
