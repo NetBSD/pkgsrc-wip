@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/07/18 15:50:23 ppostma Exp $
+# $NetBSD: Makefile,v 1.7 2005/03/18 21:05:53 daprice Exp $
 
 DISTNAME=	jakarta-log4j-1.2.8
 CATEGORIES=	www
@@ -8,8 +8,7 @@ MAINTAINER=	drue@users.sourceforge.net
 HOMEPAGE=	http://jakarta.apache.org/log4j/docs/index.html
 COMMENT=	Logging facility for Java
 
-USE_BUILDLINK3=	yes
-#USE_PKGINSTALL=	yes # What does it do?
+USE_BUILDLINK3= yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_JAVA=	run
