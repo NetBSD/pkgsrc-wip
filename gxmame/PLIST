@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/24 00:07:39 xtraeme Exp $
+bin/gxmame
+share/applnk/Games/Arcade/gxmame.desktop
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/BUGS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/ChangeLog
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/TODO
+share/doc/${PKGNAME}/html/gui/metal2.jpg
+share/doc/${PKGNAME}/html/gxmame-doc-1.html
+share/doc/${PKGNAME}/html/gxmame-doc-2.html
+share/doc/${PKGNAME}/html/gxmame-doc-3.html
+share/doc/${PKGNAME}/html/gxmame-doc-4.html
+share/doc/${PKGNAME}/html/gxmame-doc-5.html
+share/doc/${PKGNAME}/html/gxmame-doc-6.html
+share/doc/${PKGNAME}/html/gxmame-doc.2.html
+share/doc/${PKGNAME}/html/gxmame-doc.html
+share/doc/${PKGNAME}/html/includes/gxmame.css
+share/gnome/apps/Games/Arcade/gxmame.desktop
+share/icons/gxmame.png
+share/icons/mini/gxmame.xpm
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gxmame.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gxmame.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gxmame.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gxmame.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gxmame.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gxmame.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gxmame.mo
+@dirrm share/gnome/apps/Games/Arcade
+@dirrm share/doc/${PKGNAME}/html/includes
+@dirrm share/doc/${PKGNAME}/html/gui
+@dirrm share/doc/${PKGNAME}/html
+@dirrm share/doc/${PKGNAME}
+@dirrm share/applnk/Games/Arcade
