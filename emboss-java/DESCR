@@ -1,0 +1,5 @@
+This package  installs a C library which provides and interface between jemboss,
+the java emboss interface and the emboss C libraries and programs.
+Jemboss requires it to run.
+
+

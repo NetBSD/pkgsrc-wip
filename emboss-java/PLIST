@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/16 20:50:06 daprice Exp $
+lib/libajaxj.a
+lib/libajaxj.la
+lib/libajaxj.so
