@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2004/08/27 15:34:48 lexort Exp $
+# $NetBSD: Makefile,v 1.10 2004/08/27 15:38:56 lexort Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
 DISTNAME=	quagga-0.96.5-20040812
 PKGNAME=	quagga-0.96.5.20040812
+PKGREVISION=	1
 CATEGORIES=	net
 # Use pkgsrc/ for saved snapshots, cvs/ for current ones
 MASTER_SITES=	http://www.quagga.net/download/cvs/ \
