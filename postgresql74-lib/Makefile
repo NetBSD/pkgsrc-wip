@@ -1,0 +1,36 @@
+# $NetBSD: Makefile,v 1.1.1.1 2004/01/20 00:25:48 xtraeme Exp $
+
+PKGNAME=		postgresql74-lib-${BASE_VERS}
+SVR4_PKGNAME=		pstgl
+COMMENT=		PostgreSQL database headers and libraries
+
+DESCR_SRC=		${.CURDIR}/../../databases/postgresql-lib/DESCR
+
+.include "../../wip/postgresql74/Makefile.common"
+
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+BUILD_DIRS=		${WRKSRC}/src/include
+BUILD_DIRS+=		${WRKSRC}/src/interfaces
+BUILD_DIRS+=		${WRKSRC}/src/pl
+
+.include "../../mk/bsd.prefs.mk"
+
+post-buildlink:
+#
+# Avoid conflict between "${LOCALBASE}/include/openssl/des.h" and
+# "/usr/include/crypt.h" -- we want the definitions in the former.
+#
+.if (${OPSYS} == "SunOS")
+	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
+.endif
+
+post-install:
+	cd ${WRKSRC}/src/include && ${SETENV} ${MAKE_ENV}		\
+		${MAKE_PROGRAM} install-all-headers
+	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz             \
+		`${SED} -e "s|^#.*||" ${FILESDIR}/man.lib`
+	${RM} -f ${PREFIX}/include/pgsql
+	${LN} -sf postgresql ${PREFIX}/include/pgsql
+
+.include "../../security/openssl/buildlink2.mk"
+.include "../../mk/bsd.pkg.mk"
