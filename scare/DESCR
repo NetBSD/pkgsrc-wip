@@ -1,0 +1,13 @@
+Scare is a GPL ISO C implementation of an interpreter for interactive
+fiction games written in Adrift.
+
+Version 1.3 unites the improvements of later version 1.1 releases,
+such as UNDO, with Thomas Payerle's support for Adrift 3.90 games
+in version 1.2, and new support for Adrift 3.80 games, resulting
+in a single open source Adrift runner that seamlessly plays Adrift
+version 4.00, version 3.90, and version 3.80 games.
+
+Version 1.3 is designed to be compatible with the Adrift Runner
+version 4.00.42, with some version 4.00.44 features.  It automatically
+converts Adrift version 3.90 and version 3.80 games into version
+4.00 format before playing them.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/14 18:33:29 dillo Exp $
+
+SHA1 (scare-1.3.3.zip) = 184abe227625dd22487e1078294a5e0aa3eeb40e
+Size (scare-1.3.3.zip) = 629739 bytes
+SHA1 (patch-aa) = 73c7b584390f23b494130d4f243c8fc9ccc611fe

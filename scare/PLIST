@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/14 18:33:29 dillo Exp $
+bin/glkscare
+share/doc/scare/DEBUGGER
+share/doc/scare/README
+share/doc/scare/RUNNING
+@dirrm share/doc/scare
