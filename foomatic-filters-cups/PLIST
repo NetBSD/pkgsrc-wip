@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/25 02:40:13 bjan2 Exp $
+libexec/cups/filter/foomatic-rip
