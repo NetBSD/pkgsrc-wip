@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/05/07 21:52:11 poppnk Exp $
+
+SHA1 (WEPCrack-0.0.10.tar.gz) = e406376ba17b932a373035157df95cc7f638c809
+Size (WEPCrack-0.0.10.tar.gz) = 4660 bytes
+SHA1 (patch-aa) = c3843b839c5fe810ff74153d4ff8f445458fa090
