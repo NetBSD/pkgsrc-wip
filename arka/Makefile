@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/27 12:59:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/27 13:05:51 jmmv Exp $
 #
 
 DISTNAME=	arka-0.11
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	hdp@cs.nmsu.edu
 HOMEPAGE=	http://www.bioinformatics.org/genpak/
 COMMENT=	Graphic interface for the programs from the GP package
+
+DEPENDS+=	gp-[0-9]*:../../biology/gp
 
 USE_DIRS+=	xdg-1.1
 USE_PKGINSTALL=	YES
