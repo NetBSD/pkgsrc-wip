@@ -1,0 +1,4 @@
+Sometimes receive:
+ SDL: Audio timeout - buggy audio driver? (disabled)
+ audio: Bad file descriptor
+(sound usually works though)
