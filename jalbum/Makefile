@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/02 18:12:54 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/03 07:00:53 marttikuparinen Exp $
 
 DISTNAME=		JAlbum
 PKGNAME=		jalbum-4.6
@@ -16,6 +16,7 @@ USE_JAVA2=		YES
 USE_JAVA=		run
 
 PKG_JVM_DEFAULT=	sun-jdk14
+PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14
 
 do-build:
 	${SED}	-e "s#@PKG_JAVA_HOME@#${PKG_JAVA_HOME}#g"	\
