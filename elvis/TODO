@@ -1,6 +1,7 @@
-$Id: TODO,v 1.3 2003/06/06 05:51:19 airhead Exp $
+$Id: TODO,v 1.4 2003/06/06 19:32:42 airhead Exp $
 
 - Perhaps add the X11 GUI support? (This doesn't compile yet, though)
+- Look into the man page handling (instman.sh)
 
 --
 
