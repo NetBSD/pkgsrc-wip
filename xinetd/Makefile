@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/07/11 10:52:09 poppnk Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/18 15:50:24 ppostma Exp $
 #
 
 DISTNAME=		xinetd-2.3.13
-CATEGORIES=		wip sysutils
+CATEGORIES=		sysutils
 MASTER_SITES=		http://www.xinetd.org/
 
 MAINTAINER=		pancake@phreaker.net

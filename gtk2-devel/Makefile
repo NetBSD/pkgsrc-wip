@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/05/09 02:39:03 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/18 15:50:21 ppostma Exp $
 #
 
 DISTNAME=		gtk+-2.4.0
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
-CATEGORIES=		wip
+CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.4/
 EXTRACT_SUFX=		.tar.bz2
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/13 04:07:33 cetrox Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/18 15:50:17 ppostma Exp $
 #
 
 DISTNAME=		PyPanel-1.2
-CATEGORIES=		wip
+CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pypanel/}
 
 MAINTAINER=		ccatrian@eml.cc

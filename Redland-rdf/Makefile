@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/09 01:13:24 mjasm Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/18 15:50:17 ppostma Exp $
 #
 
 DISTNAME=		redland-0.9.14
-CATEGORIES=		wip
+CATEGORIES=		textproc
 MASTER_SITES=		http://www.redland.opensource.ac.uk/dist/source/
 
 MAINTAINER=		adam@monkeybyte.org

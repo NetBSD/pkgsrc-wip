@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/21 00:22:53 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/18 15:50:24 ppostma Exp $
 #
 
 DISTNAME=		muse-0.8a5
 PKGNAME=		java-muse-0.8a5
-CATEGORIES=		wip
+CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=muse/}
 
 MAINTAINER=		pancake@phreaker.net

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2004/07/01 16:57:10 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/18 15:50:18 ppostma Exp $
 #
 
 DISTNAME=	ArgoUML-0.14.a1.app
 PKGNAME=	argouml-0.14a1
 WRKSRC=		${WRKDIR}/ArgoUML.app
-CATEGORIES=	wip
+CATEGORIES=	devel
 MASTER_SITES=	http://argouml.tigris.org/files/documents/4/0/argouml-0.14.a1/
 EXTRACT_SUFX=	.tgz
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} argo_elmuth.jar xalan-java1.jar

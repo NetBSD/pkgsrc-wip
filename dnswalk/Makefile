@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2004/05/08 13:50:07 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/18 15:50:18 ppostma Exp $
 #
 
 DISTNAME=		dnswalk-2.0.2
 WRKSRC=			${WRKDIR}/
-CATEGORIES=		wip
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dnswalk/}
+CATEGORIES=		net
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dnswalk/}
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://dnswalk.sourceforge.net/

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/05/05 00:43:30 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/18 15:50:18 ppostma Exp $
 
 DISTNAME=	ding-1.2
-CATEGORIES=	wip
+CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.tu-chemnitz.de/pub/Local/urz/ding/	\
 		ftp://ftp.tu-chemnitz.de/pub/Local/urz/ding/ger-eng/
 DISTFILES=	ding-1.2.tar.gz		\

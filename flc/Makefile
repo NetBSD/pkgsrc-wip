@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/06/14 14:44:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/18 15:50:19 ppostma Exp $
 #
 
 DISTNAME=		flc
 PKGNAME=		flc-0.1
-CATEGORIES=		wip
+CATEGORIES=		lang
 MASTER_SITES=		ftp://coombs.anu.edu.au/pub/net/firewall/ip-filter/
 
 MAINTAINER=		pancake@phreaker.net

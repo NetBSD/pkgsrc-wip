@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2004/05/09 06:54:25 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/18 15:50:18 ppostma Exp $
 #
 
 DISTNAME=		bastard-0.17-pre
 WRKSRC=			${WRKDIR}/bastard_src-0.17
-CATEGORIES=		wip
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bastard/}
-EXTRACT_SUFX=	.tgz
+CATEGORIES=		sysutils
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bastard/}
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		adam@monkeybyte.org
 HOMEPAGE=		http://bastard.sourceforge.net/

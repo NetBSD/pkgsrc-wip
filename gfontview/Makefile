@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/13 17:04:31 cetrox Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/18 15:50:19 ppostma Exp $
 #
 
 DISTNAME=		gfontview-0.5.0
-CATEGORIES=		wip
+CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gfontview/}
 
 MAINTAINER=		ccatrian@eml.cc

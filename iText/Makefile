@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/07/01 17:06:48 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/18 15:50:22 ppostma Exp $
 #
 
 DISTNAME=		iText
 PKGNAME=		iText-1.02
-CATEGORIES=		wip
+CATEGORIES=		devel
 MASTER_SITES=		http://itext.sourceforge.net/downloads/
 EXTRACT_SUFX=		.jar
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/04/18 17:07:15 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/18 15:50:24 ppostma Exp $
 #
 
 DISTNAME=		jep-2.24
 PKGNAME=		java-jep-2.24
-CATEGORIES=		wip
+CATEGORIES=		math
 MASTER_SITES=		http://www.singularsys.com/download/
 
 MAINTAINER=		pancake@phreaker.net

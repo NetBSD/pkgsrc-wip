@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/02/25 19:18:43 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/18 15:50:20 ppostma Exp $
 #
 
 DISTNAME=		gnupg-1.9.5
-CATEGORIES=		wip
+CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/
 
 MAINTAINER=		john@johnrshannon.com

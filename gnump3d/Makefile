@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/05/20 14:22:10 poppnk Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/18 15:50:20 ppostma Exp $
 #
 
 DISTNAME=		gnump3d-2.8
-CATEGORIES=		wip
+CATEGORIES=		audio
 MASTER_SITES=		http://savannah.gnu.org/download/gnump3d/
 EXTRACT_SUFX=		.tar.bz2
 

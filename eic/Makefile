@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:12:06 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/18 15:50:19 ppostma Exp $
 #
 
 DISTNAME=		EiCsrc_4.3.0
 PKGNAME=		EiC-4.3.0
 WRKSRC=			${WRKDIR}/EiC/
-CATEGORIES=		wip
-MASTER_SITES=	http://eic.sourceforge.net/download/eicdist/4_3_0/
-EXTRACT_SUFX=	.tgz
+CATEGORIES=		lang
+MASTER_SITES=		http://eic.sourceforge.net/download/eicdist/4_3_0/
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		adam@monkeybyte.org
 HOMEPAGE=		http://eic.sourceforge.net/download/eicdist/4_3_0/

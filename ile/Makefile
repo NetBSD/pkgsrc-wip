@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/06/26 11:01:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/18 15:50:22 ppostma Exp $
 #
 
 DISTNAME=		ile-0.4
-CATEGORIES=		wip
-MASTER_SITES=	http://www.jabberstudio.org/files/ile/
+CATEGORIES=		misc
+MASTER_SITES=		http://www.jabberstudio.org/files/ile/
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.jabberstudio.org/files/ile/

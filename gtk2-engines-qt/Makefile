@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2004/05/09 22:35:59 blef Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/18 15:50:21 ppostma Exp $
 #
 
 DISTNAME=		9714-gtk-qt-engine-0.2
 PKGNAME=		gtk2-engines-qt-0.2
 WRKSRC=			${WRKDIR}/gtk-qt-engine-0.2
-CATEGORIES=		wip
+CATEGORIES=		devel x11
 MASTER_SITES=		http://www.kde-look.org/content/files/
 EXTRACT_SUFX=		.tar.bz2
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/09 00:31:31 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/18 15:50:24 ppostma Exp $
 #
 
 DISTNAME=		gnu-crypto-2.0.1-bin
 PKGNAME=		java-gnucrypto-2.0.1
-CATEGORIES=		wip
+CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/GnuPG/gnu-crypto/
 EXTRACT_SUFX=		.zip
 

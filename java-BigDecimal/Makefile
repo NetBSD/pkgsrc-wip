@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/17 22:57:09 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/18 15:50:23 ppostma Exp $
 #
 
 DISTNAME=		decimal
 PKGNAME=		java-BigDecimal-1.0
-CATEGORIES=		wip
+CATEGORIES=		devel math
 MASTER_SITES=		http://www2.hursley.ibm.com/decimalj/
 EXTRACT_SUFX=		.zip
 

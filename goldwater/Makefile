@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/05/02 21:08:23 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/18 15:50:21 ppostma Exp $
 #
 
 DISTNAME=		goldwater-1.4.0
-CATEGORIES=		wip
+CATEGORIES=		sysutils
 MASTER_SITES=		http://www.nfluid.com/download/src/
 EXTRACT_SUFX=		.tgz
 

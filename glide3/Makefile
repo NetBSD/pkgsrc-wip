@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/07/02 17:50:52 blef Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/18 15:50:20 ppostma Exp $
 #
 
 DISTNAME=		Glide_V3-2.60-18
-CATEGORIES=		wip
+CATEGORIES=		graphics
 MASTER_SITES=		http://www.sunpoint.net/~freeworld/
 EXTRACT_SUFX=		.tar.bz2
 

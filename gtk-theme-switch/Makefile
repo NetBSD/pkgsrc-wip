@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/04/25 06:38:49 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/18 15:50:21 ppostma Exp $
 #
 
 DISTNAME=		gtk-theme-switch-1.0.1
-CATEGORIES=		wip
+CATEGORIES=		x11
 MASTER_SITES=		http://www.muhri.net/
 
 MAINTAINER=		dotz@irc.pl

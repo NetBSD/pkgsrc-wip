@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/21 00:19:19 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/18 15:50:23 ppostma Exp $
 #
 
 DISTNAME=		java-getopt-1.0.9
-CATEGORIES=		wip
+CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.urbanophile.com/pub/arenn/software/sources/
 EXTRACT_SUFX=		.jar
 
