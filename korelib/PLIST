@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/04 00:09:35 jeremy-c-reed Exp $
+bin/demo
+include/kore/componentproxy.h
+include/kore/componentref.h
+include/kore/componenttrader.h
+include/kore/interface.h
+include/kore/kore.h
+include/kore/library.h
+include/kore/libraryloader.h
+include/kore/librarylocator.h
+include/kore/metainfo.h
+include/kore/robackend.h
+include/kore/rwbackend.h
+include/kore/wrbackend.h
+lib/libkore.a
+lib/libkore.la
+lib/libkore.so
+lib/libkore.so.8
+lib/libkore.so.8.0
+lib/libkoretest.a
+lib/libkoretest.la
+lib/libkoretest.so
+lib/libkoretest.so.8
+lib/libkoretest.so.8.0
+@dirrm include/kore

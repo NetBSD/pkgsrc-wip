@@ -1,0 +1,15 @@
+/usr/pkg/bin/demo should be renamed?
+
+demo needs some python component
+
+configure says:
+ /usr/pkg/tmp/pkgsrc/new/korelib/work.rainier/korelib-1.0/missing: Unknown `--run' option
+ Try `/usr/pkg/tmp/pkgsrc/new/korelib/work.rainier/korelib-1.0/missing --help' for more information
+ configure: WARNING: `missing' script is too old or missing
+(but probably doesn't matter)
+
+LIBTOOL_OVERRIDE=${WRKSRC}/libtool
+causes:
+ltconfig: unrecognized option `--build=i386-unknown-netbsdelf1.6'
+Try `ltconfig --help' for more information.
+configure: error: libtool configure failed
