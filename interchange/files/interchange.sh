@@ -1,6 +1,6 @@
-#! /bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: interchange.sh,v 1.1.1.1 2004/01/26 18:32:55 schnoebe Exp $
+# $NetBSD: interchange.sh,v 1.2 2004/01/27 05:08:07 schnoebe Exp $
 #
 # PROVIDE: interchange
 # REQUIRE: DAEMON
