@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2003/09/14 22:09:52 blef Exp $
-#
+# $NetBSD: Makefile,v 1.7 2003/09/16 04:48:15 blef Exp $
 
-DISTNAME=	openbox-3.0-beta2
+DISTNAME=	openbox-3.0-beta3
 PKGNAME=	${DISTNAME:S/-beta/beta/}
 CATEGORIES=	wm x11
 MASTER_SITES=	http://icculus.org/openbox/releases/

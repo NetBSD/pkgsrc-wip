@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/09 23:39:43 blef Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/16 04:48:15 blef Exp $
 bin/kdetrayproxy
 bin/openbox
 include/openbox/3.0/openbox/parse.h
@@ -42,6 +42,7 @@ share/openbox/themes/om4ob/shade_hover.xbm
 share/openbox/themes/om4ob/shade_toggled.xbm
 share/openbox/themes/om4ob/themerc
 share/openbox/themes/thebear/themerc
+share/pixmaps/openbox.png
 @dirrm share/openbox/themes/thebear
 @dirrm share/openbox/themes/om4ob
 @dirrm share/openbox/themes/blah41
