@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/03 20:04:39 poppnk Exp $
+etc/nsd/nsd.zones.sample
+etc/nsd/nsdc.conf.sample
+man/man8/nsd-notify.8
+man/man8/nsd.8
+man/man8/nsdc.8
+man/man8/zonec.8
+sbin/nsd
+sbin/nsd-notify
+sbin/nsdc
+sbin/zonec
+@dirrm etc/nsd
