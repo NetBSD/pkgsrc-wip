@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2003/11/10 01:10:28 tvierling Exp $
+$NetBSD: distinfo,v 1.3 2003/11/17 12:30:07 tvierling Exp $
 
-SHA1 (BNR2beta-0.12.0.tgz) = baa543bbe739052bc588e48472fb2d529a592e25
-Size (BNR2beta-0.12.0.tgz) = 790258 bytes
+SHA1 (BNR2beta-0.12.3.tgz) = 675f3e5ece9cc8c988c86423fa576ae74dbce7e6
+Size (BNR2beta-0.12.3.tgz) = 780738 bytes
 SHA1 (libborqt-6.9.0-qt2.3.so.tgz) = 0ad9bf7fbbdbbd537ffd8b345f5a43aed856f104
 Size (libborqt-6.9.0-qt2.3.so.tgz) = 2510680 bytes
