@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1524 2004/11/07 04:43:40 rxg Exp $
-# $NetBSD: Makefile,v 1.1524 2004/11/07 04:43:40 rxg Exp $
+# $Id: Makefile,v 1.1525 2004/11/07 18:51:46 minskim Exp $
+# $NetBSD: Makefile,v 1.1525 2004/11/07 18:51:46 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -58,7 +58,6 @@ SUBDIR+=	billardgl
 SUBDIR+=	bin86
 SUBDIR+=	bison13
 SUBDIR+=	blassic
-SUBDIR+=	bmon
 SUBDIR+=	bnr2
 SUBDIR+=	bub-n-bros
 SUBDIR+=	bugzilla
