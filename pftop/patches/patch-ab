@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2004/06/27 12:31:18 ppostma Exp $
+$NetBSD: patch-ab,v 1.3 2004/10/25 15:36:49 ppostma Exp $
 
 --- pftop.c.orig	2003-08-05 03:20:39.000000000 +0200
-+++ pftop.c	2004-06-27 14:07:34.000000000 +0200
++++ pftop.c	2004-10-25 17:26:10.000000000 +0200
 @@ -31,6 +31,11 @@
   */
  #include "config.h"
@@ -68,12 +68,21 @@ $NetBSD: patch-ab,v 1.2 2004/06/27 12:31:18 ppostma Exp $
  	}
  	field_setup();
  }
+@@ -1212,7 +1210,7 @@
+ 		ps.ps_buf = (char *) state_buf;
+ 
+ 		if (ioctl(dev, DIOCGETSTATES, &ps) < 0) {
+-			errx(1, "DIOCGETSTATES");
++			err(1, "DIOCGETSTATES");
+ 		}
+ 		num_states = ps.ps_len / sizeof(struct pf_state);
+ 
 @@ -1303,7 +1301,7 @@
  		tbprintf(" PAUSED");
  
  	if (rawmode)
 -		printf("\n\n%s\n", tmp_buf);
-+		printf("\n\n%s ", tmp_buf);
++		printf("\n%s", tmp_buf);
  	else
  		mvprintw(0, 0, "%s", tmp_buf);
  
@@ -83,12 +92,39 @@ $NetBSD: patch-ab,v 1.2 2004/06/27 12:31:18 ppostma Exp $
  			len = 0;
 -		mvprintw(0, len, "%s", tmp_buf);
 +		if (rawmode)
-+			printf("%s\n", tmp_buf);
++			printf(" %s\n", tmp_buf);
 +		else
 +			mvprintw(0, len, "%s", tmp_buf);
  	}
  
  	tb_end();
+@@ -1645,7 +1646,7 @@
+ 		dispstart = 0;
+ 
+ 	if (ioctl(dev, DIOCGETSTATUS, &status)) {
+-		warnx("DIOCGETSTATUS");
++		warn("DIOCGETSTATUS");
+ 		return (-1);
+ 	}
+ 
+@@ -1681,7 +1682,7 @@
+ 
+ 	memset(&pr, 0, sizeof(pr));
+ 	if (ioctl(dev, DIOCGETRULES, &pr)) {
+-		warnx("DIOCGETRULES");
++		warn("DIOCGETRULES");
+ 		return (-1);
+ 	}
+ 
+@@ -1704,7 +1705,7 @@
+ 	for (nr = 0; nr < num_rules; ++nr) {
+ 		pr.nr = nr;
+ 		if (ioctl(dev, DIOCGETRULE, &pr)) {
+-			warnx("DIOCGETRULE");
++			warn("DIOCGETRULE");
+ 			return (-1);
+ 		}
+ 		rules[nr] = pr.rule;
 @@ -2486,12 +2487,6 @@
  }
  
@@ -267,7 +303,16 @@ $NetBSD: patch-ab,v 1.2 2004/06/27 12:31:18 ppostma Exp $
  
  #ifdef HAVE_DEVICE_RO
  	dev = open("/dev/pf", O_RDONLY);
-@@ -2910,35 +2887,7 @@
+@@ -2884,7 +2861,7 @@
+ 
+ 	/* preallocate existing states if possible */
+ 	if (ioctl(dev, DIOCGETSTATUS, &status)) {
+-		warnx("DIOCGETSTATUS");
++		warn("DIOCGETSTATUS");
+ 		alloc_buf(0);
+ 	} else
+ 		alloc_buf(status.states);
+@@ -2910,36 +2887,7 @@
  	if (rawmode && countmax == 0)
  		countmax = 1;
  
@@ -300,10 +345,11 @@ $NetBSD: patch-ab,v 1.2 2004/06/27 12:31:18 ppostma Exp $
 -			if (countmax && ++count >= countmax)
 -				break;
 -		}
- 
+-
  		if (gotsig_close)
  			break;
-@@ -2947,10 +2896,28 @@
+ 		if (gotsig_resize) {
+@@ -2947,12 +2895,30 @@
  				endwin();
  			setup_term(maxstates);
  			gotsig_resize = 0;
@@ -311,6 +357,8 @@ $NetBSD: patch-ab,v 1.2 2004/06/27 12:31:18 ppostma Exp $
  		}
  
 -		if (interactive && need_update == 0)
+-			keyboard();
+-		else if (interactive == 0)
 +		read_view(dev);
 +		sort_view();
 +
@@ -322,15 +370,17 @@ $NetBSD: patch-ab,v 1.2 2004/06/27 12:31:18 ppostma Exp $
 +		if (countmax && ++count >= countmax)
 +			break;
 +
-+		set[0].fd = STDIN_FILENO;
-+		set[0].events = POLLIN;
-+		if (poll(set, 1, delay * 1000) == -1) {
-+			if (errno == EINTR)
-+				continue;
-+			break;
-+		}
-+
-+		if (interactive && (set[0].revents & POLLIN))
- 			keyboard();
- 		else if (interactive == 0)
++		if (interactive) {
++			set[0].fd = STDIN_FILENO;
++			set[0].events = POLLIN;
++			if (poll(set, 1, delay * 1000) == -1) {
++				if (errno == EINTR)
++					continue;
++				break;
++			}
++			if ((set[0].revents & POLLIN) != 0)
++				keyboard();
++		} else
  			sleep(delay);
+ 	}
+ 
