@@ -1,13 +1,9 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/04/03 15:09:28 cubidou Exp $
+$NetBSD: patch-ac,v 1.2 2003/04/07 17:54:34 cubidou Exp $
 
---- server/gkrellmd.h.orig	2003-03-10 06:59:52.000000000 +0100
+--- server/gkrellmd.h.orig	2003-03-29 03:34:13.000000000 +0100
 +++ server/gkrellmd.h
-@@ -140,10 +140,10 @@ extern int	errno;
- #define GKRELLMD_VERSION_REV     8
- #define GKRELLMD_EXTRAVERSION    ""
- 
--#define GKRELLMD_CONFIG     "gkrellmd.conf"
-+#define GKRELLMD_CONFIG     "@@PACKAGE@@.conf"
+@@ -143,7 +143,7 @@ extern int	errno;
+ #define GKRELLMD_CONFIG     "gkrellmd.conf"
  
  #if !defined(WIN32)
 -#define	GKRELLMD_SYS_ETC	"/etc"

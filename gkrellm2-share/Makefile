@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2003/04/06 05:00:31 cubidou Exp $
-
-PKGNAME=	gkrellm-share-2.1.8a
+# $NetBSD: Makefile,v 1.4 2003/04/07 17:54:32 cubidou Exp $
 .include "../../wip/gkrellm2/Makefile.common"
 
-COMMENT=	gkrellm2 shared files
+GKRELLM_PKGBASE=	gkrellm-share
+WRKSRC=			${WRKDIR}/gkrellm-${GKRELLM_VERSION}/po
+
+COMMENT=	gkrellm2 locale files
 CONFLICTS=	gkrellm-1*
 
 BUILD_USES_MSGFMT=	YES
-
-WRKSRC=			${WRKDIR}/gkrellm-2.1.8/po
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gkrellm2

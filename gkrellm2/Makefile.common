@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/04/03 15:07:55 cubidou Exp $
-DISTNAME=	gkrellm-2.1.8a
+# $NetBSD: Makefile.common,v 1.2 2003/04/07 17:54:30 cubidou Exp $
+
+DISTNAME=	gkrellm-${GKRELLM_VERSION}
+PKGNAME=	${GKRELLM_PKGBASE}-${GKRELLM_VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://web.wt.net/~billw/gkrellm/
 EXTRACT_SUFX=	.tar.bz2
@@ -7,11 +9,10 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	cube@cubidou.net
 HOMEPAGE=	http://gkrellm.net/
 
-ONLY_FOR_PLATFORM=	NetBSD-*
-
-OSVERSION_SPECIFIC=	YES
 USE_GMAKE=		YES
 USE_PKGLOCALEDIR=	YES
 
 MAKE_ENV+=		LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \
 			enable_nls=1
+
+GKRELLM_VERSION=	2.1.9
