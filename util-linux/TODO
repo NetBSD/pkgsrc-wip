@@ -12,7 +12,7 @@ maybe fix hard-coded paths:
 
 # todo: make sure fdprm config is installed to correct CONF directory
 
-have it use linux-kernel-headers buildlink2.mk file
+have it use linux-kernel-headers buildlink3.mk file
 
 some manpages and example fdprm have hard-coded paths
 

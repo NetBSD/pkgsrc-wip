@@ -6,7 +6,7 @@ use configurations under $PREFIX --sysconfdir
 
 maybe install from doc, etc examples
 
-use this buildlink2 for util-linux
+use this buildlink3 for util-linux
 
 pkg_create: Overwriting /usr/bin/groups - pkg sh-utils-2.0nb2 bogus/conflicting?
 pkg_create: Overwriting /usr/man/man1/su.1 - pkg sh-utils-2.0nb2 bogus/conflicti
