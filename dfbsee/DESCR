@@ -1,0 +1,2 @@
+DFBSee is an image viewer and video player using DirectFB. It asks DirectFB
+for a suitable  media  provider  for  the given files and displays them.
