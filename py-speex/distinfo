@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/24 01:41:14 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2003/11/27 04:05:01 mpasternak Exp $
 
-SHA1 (pySpeex.tar.gz) = a3f2e5fd9abb7d21eff23b275c608addc44a3a2b
-Size (pySpeex.tar.gz) = 58530 bytes
+SHA1 (pySpeex-0.2.tar.gz) = 3cd6f6c5450846590e84d632470a5bb50ada0f06
+Size (pySpeex-0.2.tar.gz) = 93072 bytes
