@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.35 2003/04/06 02:23:13 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.35 2003/04/06 02:23:13 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.36 2003/04/06 05:11:44 blef Exp $
+# $NetBSD: Makefile,v 1.36 2003/04/06 05:11:44 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -37,3 +37,4 @@ SUBDIR+=	tcpflow
 SUBDIR+=	tex-foiltex
 SUBDIR+=	whisker
 SUBDIR+=	yasm
+SUBDIR+=	ickle
