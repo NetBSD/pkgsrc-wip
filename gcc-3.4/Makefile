@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/06/20 09:51:05 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.31 2004/06/27 10:11:38 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -13,7 +13,7 @@ MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the gcc 3.4 compiler
 
-GCC_VERSION=	3.4-20040618
+GCC_VERSION=	3.4-20040625
 
 .include "../../mk/bsd.prefs.mk"
 
