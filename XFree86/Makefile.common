@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2003/07/25 19:10:37 blef Exp $
+# $NetBSD: Makefile.common,v 1.11 2003/08/11 18:34:46 xtraeme Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -61,6 +61,9 @@ post-extract:
 	@${LN} -sf ${PREFIX}/lib/X11/config/date.def ${WRKSRC}/config/cf
 .if exists(${FILESDIR}/ucs2any.c)
 	@${CP} ${FILESDIR}/ucs2any.c ${WRKSRC}/fonts/util
+.endif
+.if exists(${FILESDIR}/Wraphelp.c)
+	@${CP} ${FILESDIR}/Wraphelp.c ${WRKSRC}/lib/Xdmcp
 .endif
 
 .for F in ${SYSTEMS}

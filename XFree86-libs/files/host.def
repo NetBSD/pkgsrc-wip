@@ -47,7 +47,8 @@
 #define NormalLibXag	YES
 #define NormalOldX	YES
 
-#define UseInstalledPrograms YES
+#define HasXdmAuth		YES
+#define UseInstalledPrograms	YES
 
 #ifndef FreeBSDArchitecture
 # define BuildThreadStubLibrary YES
