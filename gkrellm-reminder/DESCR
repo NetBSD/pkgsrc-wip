@@ -1,0 +1,3 @@
+A useful plugin for GKrellM that can remind you of important events.
+Events can be scheduled inside GKrellM's configuration and will be
+displayed in gkrellm-reminder's panel.
