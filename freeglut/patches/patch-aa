@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/19 07:35:48 xtraeme Exp $
+
+--- src/freeglut_joystick.c.orig	Tue Aug 19 09:24:14 2003
++++ src/freeglut_joystick.c	Tue Aug 19 09:25:34 2003
+@@ -54,9 +54,10 @@
+ #   include <mmsystem.h>
+ #   include <string.h>
+ #else
++#   include <sys/param.h>
+ #   include <unistd.h>
+ #   include <fcntl.h>
+-#   ifdef __FreeBSD__
++#   ifdef __NetBSD__ || defined(__FreeBSD__) && __FreeBSD_version <= 500000
+ #       include <machine/joystick.h>
+ #       define JS_DATA_TYPE joystick
+ #       define JS_RETURN (sizeof(struct JS_DATA_TYPE))
+@@ -64,6 +65,10 @@
+ #       include <sys/ioctl.h>
+ #       include <linux/joystick.h>
+ #       include <errno.h>
++#   elif defined(__FreeBSD__) && __FreeBSD_version >= 500000
++#	include <sys/joystick.h>
++#	define JS_DATA_TYPE joystick
++#	define JS_RETURN (sizeof(struct JS_DATA_TYPE))
+ 
+         /*
+          * Check the joystick driver version
