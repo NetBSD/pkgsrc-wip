@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2004/02/09 17:57:27 jeremy-c-reed Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/02/10 18:32:25 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXmu.
 #
@@ -9,7 +9,7 @@
 LIBXMU_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libXmu
-BUILDLINK_DEPENDS.libXmu?=		libXmu>=6.2.1
+BUILDLINK_DEPENDS.libXmu?=		libXmu>=6.2.1nb1
 BUILDLINK_PKGSRCDIR.libXmu?=		../../wip/libXmu
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libXmu=libXmu
@@ -46,6 +46,9 @@ BUILDLINK_FILES.libXmu+=	lib/libXmuu.*
 
 # libXmu uses libXext's XShapeCombineMask()
 LDFLAGS+=			-lXext
+
+.include "../../mk/pthread.buildlink2.mk"
+LIBS+=				${BUILDLINK_LDFLAGS.pthread}
 
 BUILDLINK_TARGETS+=	libXmu-buildlink
 

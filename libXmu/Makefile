@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/02/09 18:33:24 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/10 18:32:25 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXmu-6.2.1
+PKGREVISION=		1
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://freedesktop.org/~xlibs/release/xlibs-1.0/
 EXTRACT_SUFX=		.tar.bz2
