@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/02/22 21:02:00 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/22 21:04:39 minskim Exp $
 
 DISTNAME=	CornerXMMS-0.0.5
+PKGNAME=	gDesklets-${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	http://gdesklets.gnomedesktop.org/files/
 EXTRACT_SUFX=	.tar.bz2
