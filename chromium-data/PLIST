@@ -1,0 +1,123 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/30 15:11:40 poppnk Exp $
+share/chromium/CVS/Entries
+share/chromium/CVS/Repository
+share/chromium/CVS/Root
+share/chromium/doc/CVS/Entries
+share/chromium/doc/CVS/Repository
+share/chromium/doc/CVS/Root
+share/chromium/doc/faq.htm
+share/chromium/doc/images/CVS/Entries
+share/chromium/doc/images/CVS/Repository
+share/chromium/doc/images/CVS/Root
+share/chromium/doc/images/heroAmmo00.jpg
+share/chromium/doc/images/heroAmmo01.jpg
+share/chromium/doc/images/heroAmmo02.jpg
+share/chromium/doc/images/powerUp00.jpg
+share/chromium/doc/images/powerUp01.jpg
+share/chromium/doc/images/powerUp02.jpg
+share/chromium/doc/images/useItem00.jpg
+share/chromium/doc/info.htm
+share/chromium/fonts/CVS/Entries
+share/chromium/fonts/CVS/Repository
+share/chromium/fonts/CVS/Root
+share/chromium/fonts/space.txf
+share/chromium/fonts/space.txf.small
+share/chromium/png/.xvpics/cursor.png
+share/chromium/png/.xvpics/enemy01-extra.png
+share/chromium/png/.xvpics/gndMetalBase02.png
+share/chromium/png/.xvpics/menu_updown.png
+share/chromium/png/.xvpics/menu_updown.xcf
+share/chromium/png/.xvpics/reflect.png
+share/chromium/png/CVS/Entries
+share/chromium/png/CVS/Repository
+share/chromium/png/CVS/Root
+share/chromium/png/check.png
+share/chromium/png/chrome.jpg
+share/chromium/png/cursor.png
+share/chromium/png/darken.png
+share/chromium/png/elect.png
+share/chromium/png/electric.png
+share/chromium/png/enemy00.png
+share/chromium/png/enemy01-extra.png
+share/chromium/png/enemy01-rot.png
+share/chromium/png/enemy01.png
+share/chromium/png/enemy02.png
+share/chromium/png/enemy03-extra.png
+share/chromium/png/enemy03.png
+share/chromium/png/enemy04.png
+share/chromium/png/enemy05.png
+share/chromium/png/enemy06.png
+share/chromium/png/enemyAmmo00.png
+share/chromium/png/enemyAmmo01.png
+share/chromium/png/enemyAmmo02.png
+share/chromium/png/enemyAmmo03.png
+share/chromium/png/enemyAmmo04.png
+share/chromium/png/enemyAmmoExplo00.png
+share/chromium/png/enemyAmmoExplo01.png
+share/chromium/png/enemyAmmoExplo02.png
+share/chromium/png/enemyAmmoExplo03.png
+share/chromium/png/enemyAmmoExplo04.png
+share/chromium/png/enemyExplo.png
+share/chromium/png/explo.png
+share/chromium/png/glitter.png
+share/chromium/png/gndBaseSea.png
+share/chromium/png/gndMetalBase00.png
+share/chromium/png/gndMetalBase01.png
+share/chromium/png/gndMetalBase02.png
+share/chromium/png/gndMetalBlip.png
+share/chromium/png/hero.png
+share/chromium/png/heroAmmo00.png
+share/chromium/png/heroAmmo01.png
+share/chromium/png/heroAmmo02.png
+share/chromium/png/heroAmmoExplo00.png
+share/chromium/png/heroAmmoExplo01.png
+share/chromium/png/heroAmmoExplo02.png
+share/chromium/png/heroAmmoFlash00.png
+share/chromium/png/heroAmmoFlash01.png
+share/chromium/png/heroAmmoFlash02.png
+share/chromium/png/heroExplo00.png
+share/chromium/png/heroExplo01.png
+share/chromium/png/heroExplo02.png
+share/chromium/png/heroShields.png
+share/chromium/png/heroSuper.png
+share/chromium/png/life.png
+share/chromium/png/menu_back.png
+share/chromium/png/menu_updown.png
+share/chromium/png/powerUpAmmo.png
+share/chromium/png/powerUpShield.png
+share/chromium/png/powerUpTex.png
+share/chromium/png/reflect-blend.png
+share/chromium/png/reflect-gnd.png
+share/chromium/png/reflect.png
+share/chromium/png/shields.png
+share/chromium/png/stat-top.png
+share/chromium/png/statBar.png
+share/chromium/png/superBomb.png
+share/chromium/png/useFocus.png
+share/chromium/png/useItem00.png
+share/chromium/png/useItem01.png
+share/chromium/wav/CVS/Entries
+share/chromium/wav/CVS/Repository
+share/chromium/wav/CVS/Root
+share/chromium/wav/boom.wav
+share/chromium/wav/exploBig.wav
+share/chromium/wav/exploPop.wav
+share/chromium/wav/exploStd.wav
+share/chromium/wav/life_add.wav
+share/chromium/wav/life_lose.wav
+share/chromium/wav/music_game.wav
+share/chromium/wav/music_menu.wav
+share/chromium/wav/power.wav
+@dirrm share/chromium/wav/CVS
+@dirrm share/chromium/wav
+@dirrm share/chromium/png/CVS
+@dirrm share/chromium/png/.xvpics
+@dirrm share/chromium/png
+@dirrm share/chromium/fonts/CVS
+@dirrm share/chromium/fonts
+@dirrm share/chromium/doc/images/CVS
+@dirrm share/chromium/doc/images
+@dirrm share/chromium/doc/CVS
+@dirrm share/chromium/doc
+@dirrm share/chromium/CVS
+@dirrm share/chromium
