@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1337 2004/06/22 22:15:21 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1337 2004/06/22 22:15:21 adrian_p Exp $
+# $Id: Makefile,v 1.1338 2004/06/24 15:16:34 dillo Exp $
+# $NetBSD: Makefile,v 1.1338 2004/06/24 15:16:34 dillo Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -92,6 +92,7 @@ SUBDIR+=	cvsd
 SUBDIR+=	d4x
 SUBDIR+=	damageext
 SUBDIR+=	dansguardian
+SUBDIR+=	daphne
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darcs
 SUBDIR+=	dasm
