@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/16 03:20:43 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/27 20:46:56 jeremy-c-reed Exp $
 bin/free
 bin/pgrep
 bin/pkill
@@ -28,7 +28,3 @@ man/man1/watch.1
 man/man5/sysctl.conf.5
 man/man8/sysctl.8
 man/man8/vmstat.8
-@dirrm man/man8
-@dirrm man/man5
-@dirrm man/man1
-@dirrm man
