@@ -1,4 +1,4 @@
-$Id: DESC,v 1.3 2003/12/02 13:27:04 bubuchka Exp $
+$Id: DESC,v 1.4 2004/01/10 19:11:32 mpasternak Exp $
 
 Please provide .mk files descriptions and reasons for existence of those
 files here.
@@ -22,3 +22,6 @@ rcd.mk          - this file is intended to determine if build system
 		  have an rc.d framework, or not. In case if there is no
 		  such one, it will be installed from pkgsrc-wip by
 		  dependency.
+
+postgresql.mk	- improvement for current postgresql-* packages; should reside
+		  in databases/postgresql/ directory and not mk.
