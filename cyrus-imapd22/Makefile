@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/26 17:46:52 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/27 10:37:57 marc Exp $
 #
 
 DISTNAME=		cyrus-imapd-2.2.1-BETA
@@ -100,7 +100,9 @@ pre-configure:
 	${AUTOCONF}
 
 post-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/masssievec ${PREFIX}/cyrus/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${PREFIX}/cyrus/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/mknewsgroups ${PREFIX}/cyrus/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/translatesieve ${PREFIX}/cyrus/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/rehash ${PREFIX}/cyrus/bin
 	${INSTALL_DATA_DIR} ${EGDIR}

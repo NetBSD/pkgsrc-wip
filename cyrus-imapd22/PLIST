@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/26 17:46:52 marc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/27 10:37:57 marc Exp $
 bin/cyradm
 bin/imtest
 bin/installsieve
@@ -22,10 +22,12 @@ cyrus/bin/imapd
 cyrus/bin/ipurge
 cyrus/bin/lmtpd
 cyrus/bin/lmtpproxyd
+cyrus/bin/masssievec
 cyrus/bin/master
 cyrus/bin/mbexamine
 cyrus/bin/mbpath
 cyrus/bin/mkimap
+cyrus/bin/mknewsgroups
 cyrus/bin/mupdate
 cyrus/bin/notifyd
 cyrus/bin/pop3d
