@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/25 20:17:28 daprice Exp $
+
+SHA1 (azara-2.7-src.tar.gz) = 53caa85953f700cdc4ec9ef26d2bb7d9448b77b0
+Size (azara-2.7-src.tar.gz) = 565272 bytes
+SHA1 (patch-aa) = 1066c1e1b070020bbdd18439b27e15d359dd5e69
+SHA1 (patch-ab) = 46e512fba5b00cb36cd2b2d50db4919875124309
