@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/15 12:37:00 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2004/05/17 15:21:25 thomasklausner Exp $
 
-SHA1 (skippy-0.4.0.tar.bz2) = f950b8ed73735c266e35cbcc01e000b4e34cc70a
-Size (skippy-0.4.0.tar.bz2) = 20157 bytes
+SHA1 (skippy-0.4.1.tar.bz2) = 40d518982d451f9dfacd5984d96da9584d2f9e19
+Size (skippy-0.4.1.tar.bz2) = 21628 bytes
