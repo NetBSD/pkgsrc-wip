@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/22 09:43:15 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/22 09:51:23 poppnk Exp $
 #
 
 DISTNAME=		bluez-utils-2.10
@@ -21,5 +21,5 @@ SUBST_STAGE.initd=pre-install
 SUBST_FILES.initd=scripts/Makefile
 SUBST_SED.initd=-e 's,install-data-local,,g'
 
-.include "../../wip/bluez-libs/buildlink3.mk"
+.include "../../wip/bluez-libs/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
