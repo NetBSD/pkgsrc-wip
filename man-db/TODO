@@ -1,0 +1,39 @@
+security fixes are available in Debian diff man-db_2.4.1-13.diff
+http://packages.qa.debian.org/m/man-db.html
+Jul 29 Vade 79             (7611) man-db[] multiple(4) vulnerabilities
+
+This uses /var/cache/man
+
+This needs to be patched to support .0 suffix in preformatted cat files;
+I already discussed with developer.
+
+Apr  7 Conectiva Updates   (4559) [CLA-2003:620] Conectiva Security An
+does this matter?
+
+need to test different tools this provides
+
+maybe databases/db buildlink could be used instead of db3
+I patched my db3 so it would provide db_185 compat
+I have also used with gdbm
+
+man.1 = $(DESTDIR)$(manroot)/$(nlspath)/$(man1dir)/$(man)$(man1ext)
+GNU/./man1/man.1
+
+Linux may need -lintl for LDLIBS in src/Makefile.in
+
+man < 1.5l has vulnerability -- make sure this doesn't have same
+ I couldn't repeat it
+
+make sure it reads the installed etc/man_db.conf
+
+ask tech-pkg about MANDB_MAP
+
+define a pager PAGER and BROWSER
+
+if not netbsd, then depend on groff
+
+--with-db=LIBRARY       use database library LIBRARY
+                          (db3, db2, db1, db, gdbm, ndbm)
+  --with-config-file=CF   use config file CF [CF=SYSCONFDIR/man_db.conf]
+  --with-libiconv-prefix=DIR  search for libiconv in DIR/include and DIR/lib
+  --with-included-gettext use the GNU gettext library included here

@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/20 08:55:21 jeremy-c-reed Exp $
+
+--- src/Makefile.in.orig	Sun Dec 22 10:19:16 2002
++++ src/Makefile.in	Sat Mar 15 12:37:20 2003
+@@ -132,15 +132,6 @@
+ 			$(INSTALL_PROGRAM) $$j $(DESTDIR)$(libdir)/man-db/$$j; \
+ 		fi; \
+ 	done
+-	@if test -f $(DESTDIR)$(config_file); then \
+-		echo " "; \
+-		echo "$(DESTDIR)$(config_file) already exists. Overwrite manually if necessary"; \
+-		echo " "; \
+-	else \
+-		$(MKINSTALLDIRS) $(dir $(DESTDIR)$(config_file)); \
+-		echo "$(INSTALL_DATA) man_db.conf $(DESTDIR)$(config_file)"; \
+-		$(INSTALL_DATA) man_db.conf $(DESTDIR)$(config_file); \
+-	fi
+ 
+ uninstall:
+ 	rm -f $(addprefix $(DESTDIR)$(bindir)/, $(PROGS))

@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/08/20 08:55:21 jeremy-c-reed Exp $
+
+--- lib/tempname.c.orig	Fri Mar 21 09:43:57 2003
++++ lib/tempname.c	Fri Mar 21 09:44:14 2003
+@@ -17,7 +17,7 @@
+    02111-1307 USA.  */
+ 
+ #if HAVE_CONFIG_H
+-# include <config.h>
++# include "config.h"
+ #endif
+ 
+ #include <sys/types.h>

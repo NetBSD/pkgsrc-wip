@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/08/20 08:55:21 jeremy-c-reed Exp $
+
+--- include/Defines.in.orig	Tue Nov 12 14:59:52 2002
++++ include/Defines.in	Tue Nov 12 15:00:25 2002
+@@ -47,7 +47,7 @@
+ bindir = $(exec_prefix)/bin
+ sbindir = $(exec_prefix)/sbin
+ localedir = $(exec_prefix)/lib/locale
+-manroot = $(prefix)/share/man
++manroot = @mandir@
+ man1dir = man1
+ man5dir = man5
+ man8dir = man8

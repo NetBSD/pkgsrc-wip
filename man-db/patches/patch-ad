@@ -1,0 +1,37 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/08/20 08:55:21 jeremy-c-reed Exp $
+
+--- configure.orig	Sat Mar 15 13:11:02 2003
++++ configure	Sat Mar 15 13:13:24 2003
+@@ -3767,16 +3767,16 @@
+ 
+ else
+   case $host in
+-		*-gnu)          mandir=GNU;;
+-		*-hpux*)        mandir=HPUX;;
+-		*-irix*)        mandir=IRIX;;
+-		*-solaris*)     mandir=Solaris;;
+-		*)              mandir=;;
++		*-gnu)          mandirs=GNU;;
++		*-hpux*)        mandirs=HPUX;;
++		*-irix*)        mandirs=IRIX;;
++		*-solaris*)     mandirs=Solaris;;
++		*)              mandirs=;;
+ 	 esac
+-	 if test -n "$mandir"; then
+-		echo "Using hierarchy organization $mandir" 1>&6
++	 if test -n "$mandirs"; then
++		echo "Using hierarchy organization $mandirs" 1>&6
+ 		cat >>confdefs.h <<_ACEOF
+-#define MANDIR_LAYOUT "$mandir"
++#define MANDIR_LAYOUT "$mandirs"
+ _ACEOF
+ 
+ 	 else
+@@ -13287,6 +13287,7 @@
+ s,@oldincludedir@,$oldincludedir,;t t
+ s,@infodir@,$infodir,;t t
+ s,@mandir@,$mandir,;t t
++s,@mandirs@,$mandirs,;t t
+ s,@build_alias@,$build_alias,;t t
+ s,@host_alias@,$host_alias,;t t
+ s,@target_alias@,$target_alias,;t t

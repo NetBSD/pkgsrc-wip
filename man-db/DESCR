@@ -1,0 +1,13 @@
+man-db is a collection of tools for using the online manuals.  man-db uses
+a Berkeley DB database instead of the traditional flat-text whatis
+databases. It includes:
+
+  apropos - search the manual page names and descriptions
+  catman  - create or update the pre-formatted manual pages
+  man     - an interface to the on-line reference manuals
+  mandb   - create or update the manual page index caches
+  manpath - determine search path for manual pages
+  whatis  - search the manual page names
+  zsoelim - satisfy .so requests in roff input
+
+This version of the man suite is maintained by Colin Watson.

@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/08/20 08:55:21 jeremy-c-reed Exp $
+
+--- include/manconfig.h.in.orig	2003-04-19 14:40:32.000000000 -0700
++++ include/manconfig.h.in	2003-04-19 14:40:40.000000000 -0700
+@@ -361,11 +361,11 @@
+ #define STRNEQ(a,b,d)	(strncmp(a,b,d) == 0)
+ 
+ /* FSSTND directories */
+-#define CAT_ROOT	"/var/catman"		/* required by fsstnd() */
+-#define MAN_ROOT	"/usr" 			/* required by fsstnd() */
++#define CAT_ROOT	"@prefix@/man"
++#define MAN_ROOT	"@prefix@"
+ /* FHS directories */
+ #define FHS_CAT_ROOT	"/var/cache/man"	/* required by fsstnd() */
+-#define FHS_MAN_ROOT	"/usr/share"		/* required by fsstnd() */
++#define FHS_MAN_ROOT	"@prefix@"		/* required by fsstnd() */
+ 
+ /* some special database keys used for storing important info */
+ #define VER_KEY         "$version$"	/* version key */

@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/20 08:55:21 jeremy-c-reed Exp $
+
+SHA1 (man-db-2.4.1.tar.gz) = ad23384749ff78a8f115950f79763fc085d98754
+Size (man-db-2.4.1.tar.gz) = 644109 bytes
+SHA1 (patch-aa) = 99202bb1f378a0bf120284be507c2d87d8968df7
+SHA1 (patch-ab) = df42ee19216b7b9de43e252e22688b3d8b8525e8
+SHA1 (patch-ac) = c40b3965734f4ed605628fea2bbaf00f2245ee4a
+SHA1 (patch-ad) = 5496ac515d039aeb6a50521a2df3d6c5de4e9c95
+SHA1 (patch-ae) = 3e11c6ba5bfaedb9dcfa241f5025ec9c06c8df24
+SHA1 (patch-af) = 684a1510f74bff266ab2c0dfc37b08ffcaf49d77

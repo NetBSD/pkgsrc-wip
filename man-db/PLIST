@@ -1,0 +1,84 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/20 08:55:21 jeremy-c-reed Exp $
+bin/apropos
+bin/catman
+bin/lexgrog
+bin/man
+bin/mandb
+bin/manpath
+bin/whatis
+bin/zsoelim
+man/de_DE.88591/man1/apropos.1
+man/de_DE.88591/man1/man.1
+man/de_DE.88591/man1/manpath.1
+man/de_DE.88591/man1/whatis.1
+man/de_DE.88591/man1/zsoelim.1
+man/de_DE.88591/man5/manpath.5
+man/de_DE.88591/man8/accessdb.8
+man/de_DE.88591/man8/catman.8
+man/de_DE.88591/man8/mandb.8
+man/es_ES.88591/man1/apropos.1
+man/es_ES.88591/man1/man.1
+man/es_ES.88591/man1/manpath.1
+man/es_ES.88591/man1/whatis.1
+man/es_ES.88591/man1/zsoelim.1
+man/es_ES.88591/man5/manpath.5
+man/es_ES.88591/man8/accessdb.8
+man/es_ES.88591/man8/catman.8
+man/es_ES.88591/man8/mandb.8
+man/it_IT.88591/man1/apropos.1
+man/it_IT.88591/man1/man.1
+man/it_IT.88591/man1/manpath.1
+man/it_IT.88591/man1/whatis.1
+man/it_IT.88591/man1/zsoelim.1
+man/it_IT.88591/man5/manpath.5
+man/it_IT.88591/man8/accessdb.8
+man/it_IT.88591/man8/catman.8
+man/it_IT.88591/man8/mandb.8
+man/ja_JP.eucJP/man1/apropos.1
+man/ja_JP.eucJP/man1/man.1
+man/ja_JP.eucJP/man1/manpath.1
+man/ja_JP.eucJP/man1/whatis.1
+man/ja_JP.eucJP/man1/zsoelim.1
+man/ja_JP.eucJP/man5/manpath.5
+man/ja_JP.eucJP/man8/accessdb.8
+man/ja_JP.eucJP/man8/catman.8
+man/ja_JP.eucJP/man8/mandb.8
+man/man1/apropos.1
+man/man1/lexgrog.1
+man/man1/man.1
+man/man1/manpath.1
+man/man1/whatis.1
+man/man1/zsoelim.1
+man/man5/manpath.5
+man/man8/accessdb.8
+man/man8/catman.8
+man/man8/mandb.8
+sbin/accessdb
+share/examples/man-db/man_db.conf
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/man-db.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/man-db.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/man-db.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/man-db.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/man-db.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/man-db.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/man-db.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/man-db.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/man-db.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/man-db.mo
+@dirrm share/examples/man-db
+@dirrm man/ja_JP.eucJP/man8
+@dirrm man/ja_JP.eucJP/man5
+@dirrm man/ja_JP.eucJP/man1
+@dirrm man/ja_JP.eucJP
+@dirrm man/it_IT.88591/man8
+@dirrm man/it_IT.88591/man5
+@dirrm man/it_IT.88591/man1
+@dirrm man/it_IT.88591
+@dirrm man/es_ES.88591/man8
+@dirrm man/es_ES.88591/man5
+@dirrm man/es_ES.88591/man1
+@dirrm man/es_ES.88591
+@dirrm man/de_DE.88591/man8
+@dirrm man/de_DE.88591/man5
+@dirrm man/de_DE.88591/man1
+@dirrm man/de_DE.88591
