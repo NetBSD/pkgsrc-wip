@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/17 02:55:44 blef Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/18 00:25:27 blef Exp $
 
 DISTNAME=	hydrogen-0.8.0
 PKGNAME=	${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	chris.wareham@btinternet.com
 HOMEPAGE=	http://hydrogen.sourceforge.net/
 COMMENT=	Real time drum machine/sequencer
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 
 USE_GNU_TOOLS+=		make
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-jack-support
 CONFIGURE_ARGS+=	--with-xinerama
 .endif
 
-.include "../../wip/libhydrogen/buildlink2.mk"
-.include "../../x11/qt3-libs/buildlink2.mk"
-.include "../../x11/qt3-tools/buildlink2.mk"
+.include "../../wip/libhydrogen/buildlink3.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
