@@ -20,7 +20,7 @@ BINGROUP?=	root
 
 # Tools paths
 MSGFMT?=	msgfmt
-MSGFMT_OPT?=	-f -v -o
+MSGFMT_OPT?=	-f -v 
 INSTALL?=	install
 PKG_CONFIG?=	pkg-config
 STRIP?=		-s
@@ -52,7 +52,7 @@ BINGROUP=	kmem
  else
   ifeq ($(OPSYS),FreeBSD)
 BINGROUP=	kmem
-   ifeq ($(patsubst 2.%,$(OSREV)),)
+   ifeq ($(filter 2.%,$(OSREV)),)
 SYS_LIBS=	"-lkvm -ldevstat -lmd"
    else
 SYS_LIBS=	"-lkvm -lmd"
@@ -68,7 +68,7 @@ CFLAGS+=	"-Ddlsym=dlsym_prepend_underscore"
     endif
    else
     ifeq ($(OPSYS),Solaris)
-MSGFMT_OPT=	-v -o
+MSGFMT_OPT=	-v 
 CC?=		gcc
 CFLAGS+=	"-Wno-implicit-int"
 SYS_LIBS=	"-lkstat -lkvm -ldevinfo"

@@ -21,7 +21,8 @@ clean:		clean-rec
 
 build-rec install-rec clean-rec uninstall-rec:
 	for subdir in $(MODULES); do					\
-	cd $$subdir && $(MAKE) $(patsubst %-rec,%,$@) MODULE=$$subdir;	\
+	cd $$subdir && 							\
+	$(MAKE) $(patsubst %-rec,%,$@) MODULE=$$subdir || exit 1	\
 	cd ..;								\
 	done
 
