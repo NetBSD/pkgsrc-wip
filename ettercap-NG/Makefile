@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/07 19:06:50 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/07 22:38:28 adrian_p Exp $
 
 DISTNAME=	ettercap-NG-0.7.1
 CATEGORIES=	net
@@ -14,6 +14,9 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 PTHREAD_OPTS+=		require
 USE_PKGINSTALL=		YES
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	libtool
+INSTALL_UNSTRIPPED=	YES
 
 CONFIGURE_ARGS+=	--with-libnet=${BUILDLINK_PREFIX.libnet}
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
@@ -27,12 +30,6 @@ USE_BUILTIN.libpcap=	no
 USE_BUILTIN.ncurses=	no
 
 CONF_FILES=	${WRKSRC}/share/etter.conf ${PKG_SYSCONFDIR}/etter.conf
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--disable-plugins
-.endif
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"

@@ -1,10 +1,38 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/07 19:06:50 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/07 22:38:28 adrian_p Exp $
 bin/ettercap
 bin/etterfilter
 bin/etterlog
+lib/ettercap/ec_arp_cop.la
+lib/ettercap/ec_autoadd.la
+lib/ettercap/ec_chk_poison.la
+lib/ettercap/ec_dns_spoof.la
+lib/ettercap/ec_dos_attack.la
+lib/ettercap/ec_dummy.la
+lib/ettercap/ec_find_conn.la
+lib/ettercap/ec_find_ettercap.la
+lib/ettercap/ec_find_ip.la
+lib/ettercap/ec_finger.la
+lib/ettercap/ec_finger_submit.la
+lib/ettercap/ec_gre_relay.la
+lib/ettercap/ec_gw_discover.la
+lib/ettercap/ec_isolate.la
+lib/ettercap/ec_link_type.la
+lib/ettercap/ec_pptp_chapms1.la
+lib/ettercap/ec_pptp_clear.la
+lib/ettercap/ec_pptp_pap.la
+lib/ettercap/ec_pptp_reneg.la
+lib/ettercap/ec_rand_flood.la
+lib/ettercap/ec_remote_browser.la
+lib/ettercap/ec_reply_arp.la
+lib/ettercap/ec_scan_poisoner.la
+lib/ettercap/ec_search_promisc.la
+lib/ettercap/ec_smb_clear.la
+lib/ettercap/ec_smb_down.la
+lib/ettercap/ec_stp_mangler.la
 man/man5/etter.conf.5
 man/man8/ettercap.8
 man/man8/ettercap_curses.8
+man/man8/ettercap_plugins.8
 man/man8/etterfilter.8
 man/man8/etterlog.8
 share/ettercap/etter.dns
@@ -23,3 +51,4 @@ share/ettercap/etterfilter.cnt
 share/ettercap/etterfilter.tbl
 share/ettercap/etterlog.dtd
 @dirrm share/ettercap
+@dirrm lib/ettercap
