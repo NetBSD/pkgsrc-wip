@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/29 08:35:24 martijnb Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/29 08:36:35 martijnb Exp $
 #
 
 DISTNAME=		kscope-1.0
@@ -17,7 +17,7 @@ USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 
-USE_LIPBTOOL=		yes
+USE_LIBTOOL=		yes
 USE_LANGUAGES=		"c c++"
 
 post-build:
