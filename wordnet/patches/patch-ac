@@ -1,13 +1,47 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
+$NetBSD: patch-ac,v 1.2 2005/03/03 17:29:51 airhead Exp $
 
 --- src/lib/Makefile.orig	2003-07-15 16:42:31.000000000 +0200
 +++ src/lib/Makefile
-@@ -12,7 +12,7 @@ OBJ = binsrch.o morph.o search.o setutil
+@@ -2,17 +2,12 @@ SHELL=/bin/sh
  
- CC = gcc
- LOCAL_CFLAGS = -O -DUNIX
+ # Makefile for WordNet 2.0 library
+ 
+-WN_ROOT = /usr/local/WordNet-2.0
+-WN_INSTALLDIR = $(WN_ROOT)/lib
+-WN_INCDIR = $(WN_ROOT)/include
+-
+ WN_FILES = libwn.a
+ SRC = binsrch.c morph.c search.c setutil.c wnglobal.c wnhelp.c wnrtl.c wnutil.c
+ OBJ = binsrch.o morph.o search.o setutil.o wnglobal.o wnhelp.o wnrtl.o wnutil.o
+ 
+-CC = gcc
+-LOCAL_CFLAGS = -O -DUNIX
 -CFLAGS = -I$(WN_INCDIR) $(LOCAL_CFLAGS)
-+CFLAGS = -I../include $(LOCAL_CFLAGS)
++LOCAL_CFLAGS += -O -DUNIX
++CFLAGS += -I../include $(LOCAL_CFLAGS)
  
  all: $(WN_FILES) 
  
+@@ -29,11 +24,10 @@ install: $(WN_FILES)
+ 			echo "Cannot install $$filename: file exists" ; \
+ 		else \
+ 			echo "Installing $$filename" ; \
+-			cp -p $$file $$filename ; \
+-			chmod 444 $$filename ; \
++			${BSD_INSTALL_LIB} $$file $$filename ; \
+ 		fi ; \
+ 	 done ;
+-	@(cd wnres; $(MAKE) -k WN_INSTALLDIR='$(WN_INSTALLDIR)/wnres' install)
++	@(cd wnres; $(MAKE) WN_INSTALLDIR='$(WN_INSTALLDIR)/wnres' install)
+ 	@echo "Done installing WordNet library in $(WN_INSTALLDIR)"
+ 
+ uninstall:
+@@ -47,7 +41,7 @@ uninstall:
+ 			rm -f $$filename ; \
+ 		fi ; \
+ 	 done ;
+-	@(cd wnres; $(MAKE) -k WN_INSTALLDIR='$(WN_INSTALLDIR)/wnres' uninstall)
++	@(cd wnres; $(MAKE) WN_INSTALLDIR='$(WN_INSTALLDIR)/wnres' uninstall)
+ 	@echo "Done uninstalling WordNet library from $(WN_INSTALLDIR)"
+ 
+ $(WN_FILES): $(OBJ)

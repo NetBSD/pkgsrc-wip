@@ -1,10 +1,14 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
+$NetBSD: distinfo,v 1.2 2005/03/03 17:29:51 airhead Exp $
 
 SHA1 (WordNet-2.0.tar.gz) = be33dbcda5a6cb6851b331365efa012525a9d05f
 RMD160 (WordNet-2.0.tar.gz) = 4176dd842a216c6942362ea1fef08e2e223b356f
 Size (WordNet-2.0.tar.gz) = 12847598 bytes
-SHA1 (patch-aa) = 7ef6dd69032bcb7746c10e9bd670da1bde326b24
-SHA1 (patch-ab) = 1131f5029fff78af86bfd9819f9095d2700387a3
-SHA1 (patch-ac) = 0f8a07c4a303fe5566e3cbdb03c5e8e8ee9f038c
-SHA1 (patch-ad) = bbc9fe8a1dcb9f2acc87944491f595a95e7cad09
-SHA1 (patch-ae) = 7e563dbcfc0a8f3806b92275f383ebe03457a23e
+SHA1 (patch-aa) = 36e8ba3990f5d3bd890942589ce7bd2feb99ab8c
+SHA1 (patch-ab) = 6329a860d6879a9aebce1cf6a780733e4758461b
+SHA1 (patch-ac) = 1f44c0e0608055addbda2e407671ba2a3fbff522
+SHA1 (patch-ad) = 62773eab900d47c88b31b16c1bf16688a45a6f87
+SHA1 (patch-ae) = 2c813e205544b60b68ab29d964f78611e37f3671
+SHA1 (patch-af) = 0a348d6d56126817e3ce3a53f701f340c395a356
+SHA1 (patch-ag) = 36c21519d45ce86109cbca14b37a743aa4e942ef
+SHA1 (patch-ah) = e60845e78225df6ba6cb81e8f958a307334d7674
+SHA1 (patch-ai) = f5d5ac783baa75f650e8c75899a4cce6b96290d2

@@ -1,0 +1,26 @@
+$NetBSD: patch-ah,v 1.1 2005/03/03 17:29:51 airhead Exp $
+
+--- dict/Makefile.orig	2003-07-17 16:27:36.000000000 +0200
++++ dict/Makefile
+@@ -2,12 +2,6 @@ SHELL=/bin/sh
+ 
+ # Makefile for WordNet 2.0 database directory "dict"
+ 
+-WN_ROOT = /usr/local/WordNet-2.0
+-WN_INSTALLDIR = $(WN_ROOT)/dict
+-
+-INSTALLCMD = cp
+-INSTALLFLAGS = -p
+-
+ WN_FILES = data.noun data.verb data.adj data.adv index.noun index.verb index.adj index.adv noun.exc verb.exc adj.exc adv.exc index.sense cntlist cntlist.rev lexnames sentidx.vrb sents.vrb
+ 
+ all: $(WN_FILES)
+@@ -26,7 +20,7 @@ install: $(WN_FILES)
+ 			echo "Cannot install $$filename: file exists" ; \
+ 		else \
+ 			echo "Installing $$filename" ; \
+-			$(INSTALLCMD) $(INSTALLFLAGS) $$file $$filename ; \
++			$(BSD_INSTALL_DATA) $$file $$filename ; \
+ 		fi ; \
+ 	 done ;
+ 	@echo "Done installing database files in $(WN_INSTALLDIR)"

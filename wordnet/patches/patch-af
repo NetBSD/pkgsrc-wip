@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2005/03/03 17:29:51 airhead Exp $
+
+--- src/lib/wnutil.c.orig	2003-07-15 16:41:55.000000000 +0200
++++ src/lib/wnutil.c
+@@ -7,10 +7,6 @@
+ #include <stdio.h>
+ #include <ctype.h>
+ 
+-#ifdef UNIX
+-#include <malloc.h>
+-#endif
+-
+ #include <assert.h>
+ #include <string.h>
+ #include <stdlib.h>

@@ -1,0 +1,23 @@
+$NetBSD: patch-ag,v 1.1 2005/03/03 17:29:51 airhead Exp $
+
+--- src/include/Makefile.orig	2003-06-16 17:54:42.000000000 +0200
++++ src/include/Makefile
+@@ -2,9 +2,6 @@ SHELL=/bin/sh
+ 
+ # Makefile for WordNet 2.0 source code header files
+ 
+-WN_ROOT = /usr/local/WordNet-2.0
+-WN_INSTALLDIR = $(WN_ROOT)/include
+-
+ WN_FILES = license.h setutil.h wn.h wnconsts.h wnglobal.h wnhelp.h wnrtl.h wntypes.h
+ 
+ all: $(WN_FILES)
+@@ -22,7 +19,7 @@ install: $(WN_FILES)
+ 			echo "Cannot install $$filename: file exists" ; \
+ 		else \
+ 			echo "Installing $$filename" ; \
+-			cp -p $$file $$filename ; \
++			${BSD_INSTALL_DATA} $$file $$filename ; \
+ 		fi ; \
+ 	 done ;
+ 	@echo "Done installing include files in $(WN_INSTALLDIR)"

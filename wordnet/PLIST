@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/03 17:29:51 airhead Exp $
 bin/wishwn
 bin/wn
 bin/wnb
@@ -122,9 +122,9 @@ share/wordnet/dict/sentidx.vrb
 share/wordnet/dict/sents.vrb
 share/wordnet/dict/verb.exc
 @dirrm lib/wnres
-@dirrm share/doc/wordnet
 @dirrm share/doc/wordnet/html
 @dirrm share/doc/wordnet/pdf
 @dirrm share/doc/wordnet/ps
-@dirrm share/wordnet
+@dirrm share/doc/wordnet
 @dirrm share/wordnet/dict
+@dirrm share/wordnet

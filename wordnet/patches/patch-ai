@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2005/03/03 17:29:51 airhead Exp $
+
+--- include/Makefile.orig	2003-07-15 16:47:42.000000000 +0200
++++ include/Makefile
+@@ -22,7 +22,7 @@ install: $(WN_FILES)
+ 			echo "Cannot install $$filename: file exists" ; \
+ 		else \
+ 			echo "Installing $$filename" ; \
+-			cp -p $$file $$filename ; \
++			${INSTALL_DATA} $$file $$filename ; \
+ 		fi ; \
+ 	 done ;
+ 	@echo "Done installing include files in $(WN_INSTALLDIR)"

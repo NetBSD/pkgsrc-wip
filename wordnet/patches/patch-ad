@@ -1,16 +1,36 @@
-$NetBSD: patch-ad,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
+$NetBSD: patch-ad,v 1.2 2005/03/03 17:29:51 airhead Exp $
 
 --- src/wn/Makefile.orig	2003-07-15 17:52:47.000000000 +0200
 +++ src/wn/Makefile
-@@ -9,9 +9,9 @@ WN_LIBDIR = $(WN_ROOT)/lib
+@@ -2,17 +2,11 @@ SHELL=/bin/sh
  
- CC = gcc
+ # Makefile for WordNet 2.0 command line interface "wn"
+ 
+-WN_ROOT = /usr/local/WordNet-2.0
+-WN_INSTALLDIR = $(WN_ROOT)/bin
+-WN_INCDIR = $(WN_ROOT)/include
+-WN_LIBDIR = $(WN_ROOT)/lib
+-
+-CC = gcc
  LOCAL_CFLAGS = -O -DUNIX
 -CFLAGS = -I$(WN_INCDIR) $(LOCAL_CFLAGS)
-+CFLAGS = -I../include $(LOCAL_CFLAGS)
- LOCAL_LDFLAGS = -static
+-LOCAL_LDFLAGS = -static
 -LDFLAGS= -L$(WN_LIBDIR) $(LOCAL_LDFLAGS)
-+LDFLAGS= -Wl,-L../lib -Wl,-R$(WN_LIBDIR) $(LOCAL_LDFLAGS)
- LIBS = -lwn
+-LIBS = -lwn
++CFLAGS += -I../include $(LOCAL_CFLAGS)
++LOCAL_LDFLAGS += -static
++LDFLAGS+= -Wl,-L../lib -Wl,-R$(WN_LIBDIR) $(LOCAL_LDFLAGS)
++LIBS += -lwn
  
  WN_FILES = wn
+ SRC = wn.c
+@@ -33,8 +27,7 @@ install: $(WN_FILES)
+ 			echo "Cannot install $$filename: file exists" ; \
+ 		else \
+ 			echo "Installing $$filename" ; \
+-			cp -p $$file $$filename ; \
+-			chmod 555 $$filename ; \
++			${BSD_INSTALL_PROGRAM} $$file $$filename ; \
+ 		fi ; \
+ 	 done ;
+ 	@echo "Done installing command line interface in $(WN_INSTALLDIR)"

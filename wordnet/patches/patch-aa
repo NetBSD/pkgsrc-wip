@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/03 17:29:51 airhead Exp $
 
 --- Makefile.orig	2003-06-16 18:09:25.000000000 +0200
 +++ Makefile
@@ -29,6 +29,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
  
  # By default, installing the database files is done by copying them
  # from the "dict" subdirectory into WN_DICTDIR.  To save space, you
+@@ -85,8 +85,8 @@ WN_DICTDIR = $(WN_ROOT)/dict
+ # copy of the database files in the release directory.  If you set
+ # INSTALLCMD to 'mv', you must set INSTALLFLAGS to nothing.
+ 
+-INSTALLCMD = cp
+-INSTALLFLAGS = -p
++#INSTALLCMD = cp
++#INSTALLFLAGS = -p
+ #INSTALLCMD = mv
+ #INSTALLFLAGS = 
+ 
 @@ -105,7 +105,7 @@ WN_INCDIR = $(WN_ROOT)/include
  # also installed in HTML and PDF formats in $WN_ROOT/doc.
  
@@ -38,8 +49,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
  
  ##### Platform specific stuff (for compiling from source only) 
  ##### If you are not compiling WordNet 2.0, you do not have to change
-@@ -118,11 +118,13 @@ WN_DOCDIR = $(WN_ROOT)/doc
- CC = gcc
+@@ -115,17 +115,19 @@ WN_DOCDIR = $(WN_ROOT)/doc
+ # and readily available.  It's what we used to make the precompiled
+ # binaries.
+ 
+-CC = gcc
++#CC = gcc
  
  # Use this for Solaris
 -LOCAL_LDFLAGS = -R/usr/openwin/lib:/usr/lib:/usr/local/lib
@@ -48,11 +63,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
  # Use this for Irix and Linux
  #LOCAL_LDFLAGS = 
  
-+LOCAL_LDFLAGS = -Wl,-R${PREFIX}/lib -Wl,-L${PREFIX}/lib
++#LOCAL_LDFLAGS =
 +
  # "UNIX" must be defined for things to compile...
  
- LOCAL_CFLAGS = -O -DUNIX
+-LOCAL_CFLAGS = -O -DUNIX
++#LOCAL_CFLAGS = -O -DUNIX
+ 
+ # The WordNet browser uses the Tcl/Tk libraries.  WordNet 2.0 should
+ # work with Tcl/Tk 8.0 and higher.  It was built with version 8.3 on
 @@ -142,12 +144,12 @@ LOCAL_CFLAGS = -O -DUNIX
  
  # For the Solaris build, these were used:
@@ -63,26 +82,25 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
 -TK_LIBDIR = /usr/local/lib
 -X11_INCDIR = /usr/openwin/include
 -X11_LIBDIR = /usr/openwin/lib
-+TCL_INCDIR = ${PREFIX}/include
-+TCL_LIBDIR = ${PREFIX}/lib
-+TK_INCDIR = ${PREFIX}/include
-+TK_LIBDIR = ${PREFIX}/lib
-+X11_INCDIR = ${X11BASE}/include
-+X11_LIBDIR = ${X11BASE}/lib
++#TCL_INCDIR = /usr/local/include
++#TCL_LIBDIR = /usr/local/lib
++#TK_INCDIR = /usr/local/include
++#TK_LIBDIR = /usr/local/lib
++#X11_INCDIR = /usr/openwin/include
++#X11_LIBDIR = /usr/openwin/lib
  
  # For the Irix build, these were used:
  
-@@ -169,7 +171,8 @@ X11_LIBDIR = /usr/openwin/lib
+@@ -169,7 +171,7 @@ X11_LIBDIR = /usr/openwin/lib
  
  # Libraries needed for Solaris
  
 -WNB_LIBS = -ltk8.3 -ltcl8.3 -lX11 -lm -lsocket -lnsl -ldl -lpthread
 +#WNB_LIBS = -ltk8.3 -ltcl8.3 -lX11 -lm -lsocket -lnsl -ldl -lpthread
-+WNB_LIBS = -ltk -ltcl -lX11 -lm -lpthread
  
  # Libraries needed for Irix
  
-@@ -194,8 +197,14 @@ BinWorld: wnbin wndict wninclude wnlib w
+@@ -194,8 +196,14 @@ BinWorld: wnbin wndict wninclude wnlib w
  
  # Target to compile and install WordNet from source code
  
@@ -95,16 +113,47 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
 +	@echo "Done installing WordNet 2.0.."
 +
 +wninst:
-+	(cd src; $(MAKE) -k CC='$(CC)' WN_ROOT='$(WN_ROOT)' TCL_INCDIR='$(TCL_INCDIR)' TK_INCDIR='$(TK_INCDIR)' TCL_LIBDIR='$(TCL_LIBDIR)' TK_LIBDIR='$(TK_LIBDIR)' X11_INCDIR='$(X11_INCDIR)' X11_LIBDIR='$(X11_LIBDIR)' WNB_LIBS='$(WNB_LIBS)' LOCAL_CFLAGS='$(LOCAL_CFLAGS)' LOCAL_LDFLAGS='$(LOCAL_LDFLAGS)' WN_BINDIR='$(WN_BINDIR)' WN_LIBDIR='$(WN_LIBDIR)' WN_INCDIR='$(WN_INCDIR)' install)
++	(cd src; $(MAKE) WN_ROOT='$(WN_ROOT)' WN_BINDIR='$(WN_BINDIR)' WN_LIBDIR='$(WN_LIBDIR)' WN_INCDIR='$(WN_INCDIR)' install)
  
  # After the database is installed and everything has been tested,
  # use this target to clean up from the make and delete the uninstalled 
-@@ -233,7 +242,7 @@ wndoc:
- 	(cd doc; $(MAKE) -k WN_INSTALLDIR='$(WN_DOCDIR)' install)
+@@ -209,31 +217,31 @@ CleanWorld: clean cleandbfiles
+ 
+ wnbin:
+ 	@echo "Installing WordNet 2.0 binaries in $(WN_BINDIR)..."
+-	(cd bin/$(PLATFORM); $(MAKE) -k WN_INSTALLDIR='$(WN_BINDIR)' install)
++	(cd bin/$(PLATFORM); $(MAKE) WN_INSTALLDIR='$(WN_BINDIR)' install)
+ 
+ wndict:
+ 	@echo "Installing WordNet 2.0 database in $(WN_DICTDIR)..."
+-	(cd dict; $(MAKE) -k WN_INSTALLDIR='$(WN_DICTDIR)' INSTALLCMD='$(INSTALLCMD)' INSTALLFLAGS='$(INSTALLFLAGS)' install)
++	(cd dict; $(MAKE) WN_INSTALLDIR='$(WN_DICTDIR)' install)
+ 
+ wninclude:
+ 	@echo "Installing WordNet 2.0 header files in $(WN_INCDIR)..."
+-	(cd include; $(MAKE) -k WN_INSTALLDIR='$(WN_INCDIR)' install)
++	(cd include; $(MAKE) WN_INSTALLDIR='$(WN_INCDIR)' install)
+ 
+ wnlib:
+ 	@echo "Installing WordNet 2.0 library in $(WN_LIBDIR)..."
+-	(cd lib/$(PLATFORM); $(MAKE) -k WN_INSTALLDIR='$(WN_LIBDIR)' install)
+-	(cd lib/wnres; $(MAKE) -k WN_INSTALLDIR='$(WN_LIBDIR)/wnres' install)
++	(cd lib/$(PLATFORM); $(MAKE) WN_INSTALLDIR='$(WN_LIBDIR)' install)
++	(cd lib/wnres; $(MAKE) WN_INSTALLDIR='$(WN_LIBDIR)/wnres' install)
+ 
+ wnman:
+ 	@echo "Installing WordNet 2.0 Reference Manaul in $(WN_MANDIR)..."
+-	(cd man; $(MAKE) -k WN_INSTALLDIR='$(WN_MANDIR)' install)
++	(cd man; $(MAKE) WN_INSTALLDIR='$(WN_MANDIR)' install)
+ 
+ wndoc:
+ 	@echo "Installing WordNet 2.0 Reference Manual in $(WN_DOCDIR)..."
+-	(cd doc; $(MAKE) -k WN_INSTALLDIR='$(WN_DOCDIR)' install)
++	(cd doc; $(MAKE) WN_INSTALLDIR='$(WN_DOCDIR)' install)
  
  wnsrc:
 -	(cd src; $(MAKE) -k CC='$(CC)' WN_ROOT='$(WN_ROOT)' TCL_INCDIR='$(TCL_INCDIR)' TK_INCDIR='$(TK_INCDIR)' TCL_LIBDIR='$(TCL_LIBDIR)' TK_LIBDIR='$(TK_LIBDIR)' X11_INCDIR='$(X11_INCDIR)' X11_LIBDIR='$(X11_LIBDIR)' WNB_LIBS='$(WNB_LIBS)' LOCAL_CFLAGS='$(LOCAL_CFLAGS)' LOCAL_LDFLAGS='$(LOCAL_LDFLAGS)' WN_BINDIR='$(WN_BINDIR)' WN_LIBDIR='$(WN_LIBDIR)' WN_INCDIR='$(WN_INCDIR)' all install)
-+	(cd src; $(MAKE) -k CC='$(CC)' WN_ROOT='$(WN_ROOT)' TCL_INCDIR='$(TCL_INCDIR)' TK_INCDIR='$(TK_INCDIR)' TCL_LIBDIR='$(TCL_LIBDIR)' TK_LIBDIR='$(TK_LIBDIR)' X11_INCDIR='$(X11_INCDIR)' X11_LIBDIR='$(X11_LIBDIR)' WNB_LIBS='$(WNB_LIBS)' LOCAL_CFLAGS='$(LOCAL_CFLAGS)' LOCAL_LDFLAGS='$(LOCAL_LDFLAGS)' WN_BINDIR='$(WN_BINDIR)' WN_LIBDIR='$(WN_LIBDIR)' WN_INCDIR='$(WN_INCDIR)' all)
++	(cd src; $(MAKE) WN_ROOT='$(WN_ROOT)' WN_BINDIR='$(WN_BINDIR)' WN_LIBDIR='$(WN_LIBDIR)' WN_INCDIR='$(WN_INCDIR)' all)
  
  CLEANDIRS = bin dict include lib man doc
  
