@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/08 05:22:45 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/08 05:31:20 mpasternak Exp $
 #
 
 DISTNAME=		heroes-0.21
@@ -23,6 +23,8 @@ HEROES_DIRS=		heroes-0.21 heroes-data-1.5 \
        			heroes-sound-effects-1.0 \
 			heroes-sound-tracks-1.0
 
+CONFIGURE_ARGS+=	--with-sdl-mixer
+
 do-configure:
 	@for dir in ${HEROES_DIRS}; do \
 		cd ${WRKSRC}/$$dir && ${SETENV} ${CONFIGURE_ENV} ./configure \
@@ -39,4 +41,6 @@ do-install:
 			${MAKE_FLAGS} install; done
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../audio/libmikmod/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
