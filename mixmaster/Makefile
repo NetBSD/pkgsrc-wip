@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/19 20:47:01 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/31 05:34:40 tvierling Exp $
 #
 # XXX WIP: only installs parts necessary for client operation.
 # Server parts still in work (need to add informational texts into
@@ -48,7 +48,7 @@ MESSAGE_SRC+=		${.CURDIR}/MESSAGE.noIDEA
 
 CFLAGS+=		-DUSE_NCURSES -DUSE_PCRE -DUSE_SOCK -DUSE_ZLIB \
 			-DGLOBALMIXCONF=\"${PKG_SYSCONFDIR}/mix.cfg\"
-LDFLAGS+=		-lcrypto -lncurses -lpcre -lz
+LDFLAGS+=		-ldes -lcrypto -lncurses -lpcre -lz
 
 post-extract:
 	${MV} ${WRKSRC}/conf/mix.cfg.ex ${WRKSRC}/conf/mix.cfg.server
@@ -68,5 +68,6 @@ do-install:
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/libdes/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

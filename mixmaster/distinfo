@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/01/31 02:52:26 tvierling Exp $
+$NetBSD: distinfo,v 1.4 2004/07/31 05:34:40 tvierling Exp $
 
 SHA1 (mixmaster-2.9.1.tar.gz) = 27780dcbffb74e8259999141391f84e5d52ac1cf
 Size (mixmaster-2.9.1.tar.gz) = 534816 bytes
@@ -6,3 +6,4 @@ SHA1 (patch-aa) = 4f680b623152e66152d3a2fdf974b6b8d362be18
 SHA1 (patch-ab) = 9583892453d38a62550e06c3434d5e2381cab271
 SHA1 (patch-ac) = 665ddb8a4150c7b6851fb2a1deebc0a0cae94def
 SHA1 (patch-ad) = e2830594c268910576d967ea6a5f87b2bc094012
+SHA1 (patch-ae) = 7ab68e7c1c857b96bdaa432bf3e9b31a002c7924
