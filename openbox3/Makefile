@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2003/09/20 16:56:47 blef Exp $
+# $NetBSD: Makefile,v 1.10 2003/11/12 01:25:00 blef Exp $
 
-DISTNAME=	openbox-3.0-beta3
-PKGNAME=	${DISTNAME:S/-beta/beta/}
+DISTNAME=	openbox-3.0
 CATEGORIES=	wm x11
 MASTER_SITES=	http://icculus.org/openbox/releases/
 
@@ -17,15 +16,10 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
-USE_PKGINSTALL=		YES
-
-PKG_SYSCONFSUBDIR=	openbox
-EGDIR=			${PREFIX}/share/examples/openbox
-CONF_FILES=		${EGDIR}/rc.xml ${PKG_SYSCONFDIR}/rc.xml
-CONF_FILES+=		${EGDIR}/menu.xml ${PKG_SYSCONFDIR}/menu.xml
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+PKGCONFIG_OVERRIDE=	${WRKSRC}/parser/obparser-3.0.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/render/obrender-3.0.pc.in
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
