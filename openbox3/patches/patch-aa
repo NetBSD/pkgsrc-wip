@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1 2003/09/16 05:48:11 blef Exp $
+
+--- Makefile.in.orig	2003-09-15 00:00:04.000000000 -0700
++++ Makefile.in	2003-09-15 15:42:24.000000000 -0700
+@@ -182,7 +182,7 @@
+ 
+ themedir = $(datadir)/openbox/themes
+ localedir = $(datadir)/locale
+-rcdir = $(datadir)/openbox
++rcdir = $(sysconfdir)
+ desktopfilesdir = $(datadir)/gnome/wm-properties
+ pkgconfigdir = $(libdir)/pkgconfig
+ pubincludedir = $(includedir)/openbox/@OB_VERSION@/openbox
+@@ -2543,11 +2543,12 @@
+ install-dist_rcDATA: $(dist_rc_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(rcdir)
++	$(mkinstalldirs) $(datadir)/examples/openbox/
+ 	@list='$(dist_rc_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(dist_rcDATA_INSTALL) $$d$$p $(DESTDIR)$(rcdir)/$$f"; \
+-	  $(dist_rcDATA_INSTALL) $$d$$p $(DESTDIR)$(rcdir)/$$f; \
++	  echo " $(dist_rcDATA_INSTALL) $$d$$p $(datadir)/examples/openbox/$$f"; \
++	  $(dist_rcDATA_INSTALL) $$d$$p $(datadir)/examples/openbox/$$f; \
+ 	done
+ 
+ uninstall-dist_rcDATA:

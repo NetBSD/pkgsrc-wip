@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/09/16 04:48:15 blef Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/09/16 05:48:11 blef Exp $
 bin/kdetrayproxy
 bin/openbox
 include/openbox/3.0/openbox/parse.h
@@ -16,9 +16,9 @@ lib/libobrender.so.0
 lib/libobrender.so.0.0
 lib/pkgconfig/obparser-3.0.pc
 lib/pkgconfig/obrender-3.0.pc
+share/examples/openbox/menu.xml
+share/examples/openbox/rc.xml
 share/gnome/wm-properties/openbox.desktop
-share/openbox/menu.xml
-share/openbox/rc.xml
 share/openbox/themes/allegro/bullet.xbm
 share/openbox/themes/allegro/themerc
 share/openbox/themes/artwiz/themerc
@@ -51,6 +51,7 @@ share/pixmaps/openbox.png
 @dirrm share/openbox/themes
 @dirrm share/openbox
 @comment in gnome2-dirs: @dirrm share/gnome/wm-properties
+@dirrm share/examples/openbox
 @dirrm include/openbox/3.0/openbox
 @dirrm include/openbox/3.0
 @dirrm include/openbox

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/16 04:48:15 blef Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/16 05:48:11 blef Exp $
 
 DISTNAME=	openbox-3.0-beta3
 PKGNAME=	${DISTNAME:S/-beta/beta/}
@@ -17,8 +17,15 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
+USE_PKGINSTALL=		YES
+
+PKG_SYSCONFSUBDIR?=	openbox
+EGDIR=			${PREFIX}/share/examples/openbox
+CONF_FILES=		${EGDIR}/rc.xml ${PKG_SYSCONFDIR}/rc.xml
+CONF_FILES+=		${EGDIR}/menu.xml ${PKG_SYSCONFDIR}/menu.xml
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
