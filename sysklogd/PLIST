@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/07 23:32:33 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/30 20:27:28 jeremy-c-reed Exp $
 man/man5/syslog.conf.5
 man/man8/klogd.8
 man/man8/sysklogd.8
@@ -6,4 +6,4 @@ man/man8/syslogd.8
 sbin/klogd
 sbin/syslogd
 share/examples/sysklogd/syslog.conf.example
-@dirrm share/sysklogd
+@dirrm share/examples/sysklogd
