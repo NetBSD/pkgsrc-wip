@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/05/21 07:27:32 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/21 07:29:32 jeremy-c-reed Exp $
 
 DISTNAME=		man-db_${VERSION}.orig
 PKGNAME=		man-db-${VERSION}
+WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/man-db/}
 
