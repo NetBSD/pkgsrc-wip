@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/18 22:29:05 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/18 22:30:07 mpasternak Exp $
 #
 
 DISTNAME=		Impacket-0.9.5.1
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://oss.corest.com/repo/
 
 MAINTAINER=		dotz@irc.pl
-HOMEPAGE=		http://oss.corest.com/repo/
+HOMEPAGE=		http://oss.corest.com/projects/impacket.html
 COMMENT=		Collection of Python classes for working with network protocols
 
 USE_BUILDLINK2=		yes
