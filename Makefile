@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1219 2004/04/19 17:46:38 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1219 2004/04/19 17:46:38 xtraeme Exp $
+# $Id: Makefile,v 1.1220 2004/04/19 18:15:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1220 2004/04/19 18:15:53 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -73,7 +73,6 @@ SUBDIR+=	ccrypt
 SUBDIR+=	ccze
 SUBDIR+=	cdl3
 SUBDIR+=	cdpr
-SUBDIR+=	cgdb
 SUBDIR+=	cgic
 SUBDIR+=	cherokee
 SUBDIR+=	chksniff
