@@ -1,3 +1,4 @@
+$NetBSD: patch-an,v 1.4 2003/09/06 11:30:04 cjep Exp $
 Index: lib/FS/FSFontInfo.c
 ===================================================================
 RCS file: /home/ncvs/xfree/xc/lib/FS/FSFontInfo.c,v
