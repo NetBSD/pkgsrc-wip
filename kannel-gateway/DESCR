@@ -1,8 +1,8 @@
-Kannel is a WAP gateway.  WAP, short for Wireless Application 
-Protocol, is a collection of languages and tools and an 
-infrastructure for implementing services for mobile phones. 
-Traditionally such services have worked via normal phone calls 
-or short textual messages (e.g., SMS messages in GSM networks). 
-Neither are very efficient to use, nor very user friendly. 
-WAP makes it possible to implement services similar to the 
-World Wide Web. 
+Kannel is a WAP gateway.  WAP, short for Wireless Application
+Protocol, is a collection of languages and tools and an
+infrastructure for implementing services for mobile phones.
+Traditionally such services have worked via normal phone calls
+or short textual messages (e.g., SMS messages in GSM networks).
+Neither are very efficient to use, nor very user friendly.
+WAP makes it possible to implement services similar to the
+World Wide Web.

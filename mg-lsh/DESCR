@@ -1,8 +1,8 @@
-lsh is a shell which resembles command interpreters of PC 
-systems (such as 4-DOS, DR-DOS, FREE-DOS, MS-DOS, OPEN-DOS, N-DOS, 
-PC-DOS, Q-DOS and others, which might be trademarks of their owners 
-and which is hereby acknowledged). 
+lsh is a shell which resembles command interpreters of PC
+systems (such as 4-DOS, DR-DOS, FREE-DOS, MS-DOS, OPEN-DOS, N-DOS,
+PC-DOS, Q-DOS and others, which might be trademarks of their owners
+and which is hereby acknowledged).
 
 Many of these command interpreters are but poor copies of proper
 unix shells. So you can think of lsh as a poor clone of a poor
-clone. 
+clone.

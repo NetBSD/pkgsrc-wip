@@ -1,5 +1,5 @@
-Jemboss is a java based interface to EMBOSS. It provides the advantage 
-of being able to provide sensible EMBOSS defaults on-the-fly for a 
-given  sequence or  for a given  input parameter. Jemboss can run the 
-EMBOSS applications interactively or as a batch process. The progress 
-of the batch processes are monitored by a job manager. 
+Jemboss is a java based interface to EMBOSS. It provides the advantage
+of being able to provide sensible EMBOSS defaults on-the-fly for a
+given  sequence or  for a given  input parameter. Jemboss can run the
+EMBOSS applications interactively or as a batch process. The progress
+of the batch processes are monitored by a job manager.

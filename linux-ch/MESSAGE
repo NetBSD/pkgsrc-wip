@@ -1,26 +1,26 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/11/28 22:52:48 mpasternak Exp $
- 
- You can use ch or chs (Ch interpreters: normal and safe variant) 
+$NetBSD: MESSAGE,v 1.3 2005/02/13 20:04:48 rillig Exp $
+
+ You can use ch or chs (Ch interpreters: normal and safe variant)
  as login shells.
 
  If you install Ch, please run the command ch -d to create a Ch startup
  configuration file in your home directory, if it is the first time to run
  Ch. To get started for Ch, you can run the command help in a Ch shell. Read
- Online documentation for more information. 
- 
+ Online documentation for more information.
+
  Getting started in Ch, type
- 
+
   setenv CHHOME ${EMULOPTDIR}/ch4.0.0/
-  
+
  if you use csh, or
- 
+
   export CHHOME="${EMULOPTDIR}/ch4.0.0/"
-  
+
  if you use (ba)sh. Then execute:
-  
+
   ${EMULOPTDIR}/ch4.0.0/bin/ch
-  
+
   help
-				       
+
 ===========================================================================

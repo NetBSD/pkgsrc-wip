@@ -1,8 +1,8 @@
-Host is a very powerful DNS query and testing command-line tool. There are 
-many differences with the ancient version of the program with the same name 
+Host is a very powerful DNS query and testing command-line tool. There are
+many differences with the ancient version of the program with the same name
 that is included in the BIND-4 and BIND-8 distributions, including:
 
- - Major overhaul of the entire code. Very rigid error checking, with more 
+ - Major overhaul of the entire code. Very rigid error checking, with more
    verbose error messages. Code is extensively documented.
  - It is now possible to do recursive listings into delegated zones.
  - Maintain resource record statistics and count of hosts during zone listings.
@@ -20,5 +20,5 @@ that is included in the BIND-4 and BIND-8 distributions, including:
  - Special mode to check reverse mappings of host addresses.
  - Configurable default options in HOST_DEFAULTS environment variable.
  - Basic experimental NSAP support as defined in RFC 1637.
- - Implement new resource record types from RFCs 1183, 1348, 1664, 1712, 
+ - Implement new resource record types from RFCs 1183, 1348, 1664, 1712,
    1876 and 1886.

@@ -3,8 +3,8 @@ the "state top" feature of IP Filter (see "The Idea" below) in
 IP Tables. "State top" displays the states held by your stateful
 firewall in a top-like manner.
 
-Since IP Tables doesn't have a built in way to easily display 
-this information even once, an option was added to just have it 
+Since IP Tables doesn't have a built in way to easily display
+this information even once, an option was added to just have it
 display the state table once.
  
 Features include:
