@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/17 19:16:52 poppnk Exp $
+sbin/mdadm
+usr/share/man/man4/md.4
+usr/share/man/man5/mdadm.conf.5
+usr/share/man/man8/mdadm.8
+@dirrm usr/share/man/man8
+@dirrm usr/share/man/man5
+@dirrm usr/share/man/man4
+@dirrm usr/share/man
+@dirrm usr/share
+@dirrm usr
