@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.180 2003/05/21 09:38:05 xtraeme Exp $
-# $NetBSD: Makefile,v 1.180 2003/05/21 09:38:05 xtraeme Exp $
+# $Id: Makefile,v 1.181 2003/05/21 10:05:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.181 2003/05/21 10:05:57 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -113,10 +113,12 @@ SUBDIR+=	netkit-base
 SUBDIR+=	newsx
 SUBDIR+=	nvtv
 SUBDIR+=	p5-Chart
+SUBDIR+=	p5-Data-TemporaryBag
 SUBDIR+=	p5-GeoIP
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-Net-Gnats
 SUBDIR+=	p5-Net-Jabber
+SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-gtk2
