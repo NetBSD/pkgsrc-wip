@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.8 2004/07/18 17:44:59 ppostma Exp $
+# $NetBSD: Makefile,v 1.9 2004/07/18 17:50:24 ppostma Exp $
 
-DISTNAME=       spamd-20040609
-CATEGORIES=     mail
-MASTER_SITES=   http://nedbsd.nl/~ppostma/pf/
+DISTNAME=		spamd-20040609
+CATEGORIES=		mail
+MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
 
-MAINTAINER=     peter@pointless.nl
-HOMEPAGE=       http://nedbsd.nl/~ppostma/pf-lkm.html
-COMMENT=        OpenBSD spamd daemon which rejects false mail
+MAINTAINER=		peter@pointless.nl
+HOMEPAGE=		http://nedbsd.nl/~ppostma/pf-lkm.html
+COMMENT=		OpenBSD spamd daemon which rejects false mail
 
-ONLY_FOR_PLATFORM=      NetBSD-2*-*
+ONLY_FOR_PLATFORM=	NetBSD-2*-*
 
-USE_PKGINSTALL=         YES
+USE_PKGINSTALL=		YES
 
-CONF_FILES=	${PREFIX}/share/examples/spamd/spamd.conf ${PKG_SYSCONFDIR}/spamd.conf
+CONF_FILES=		${PREFIX}/share/examples/spamd/spamd.conf \
+			    ${PKG_SYSCONFDIR}/spamd.conf
 
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/spamd.conf.5 ${PREFIX}/man/man5
