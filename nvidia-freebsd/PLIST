@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/18 18:32:13 xtraeme Exp $
+X11R6/lib/libGL.so
+X11R6/lib/libGL.so.1
+X11R6/lib/libGLcore.so
+X11R6/lib/libGLcore.so.1
+X11R6/lib/libXvMCNVIDIA.so
+X11R6/lib/libXvMCNVIDIA.so.1
+X11R6/lib/modules/drivers/nvidia_drv.o
+X11R6/lib/modules/extensions/libglx.so
+X11R6/lib/modules/extensions/libglx.so.1
+emul/linux/usr/X11R6/lib/libGL.so
+emul/linux/usr/X11R6/lib/libGL.so.1
+emul/linux/usr/X11R6/lib/libGL.so.1.0.${PKGVERSION}
+emul/linux/usr/X11R6/lib/libGLcore.so
+emul/linux/usr/X11R6/lib/libGLcore.so.1
+emul/linux/usr/X11R6/lib/libGLcore.so.1.0.${PKGVERSION}
+share/doc/nvidia-${LOWER_OPSYS}-1.0/README
+share/doc/nvidia-${LOWER_OPSYS}-1.0/README.Linux
+@dirrm share/doc/nvidia-${LOWER_OPSYS}-1.0
