@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/07/09 17:14:13 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/07/09 22:37:23 xtraeme Exp $
 
 DISTNAME=		mysql-4.0.13
 CATEGORIES=		databases
@@ -48,6 +48,7 @@ CFLAGS+=		-DHAVE_CURSES_H
 CXXFLAGS+=		-DHAVE_CURSES_H
 .endif
 
+USE_GMAKE=		yes
 USE_PERL5=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
