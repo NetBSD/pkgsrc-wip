@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/03/26 00:14:12 marc Exp $
+# $NetBSD: Makefile,v 1.3 2003/04/27 10:49:00 cjep Exp $
 #
 
 DISTNAME=	gtk-sharp-0.8
@@ -24,7 +24,6 @@ MAKEFILE=	makefile
 REPLACE_PERL=	bin/gapi.pl
 REPLACE_PERL+=	bin/gapi2xml.pl
 REPLACE_PERL+=	bin/gapi_pp.pl
-
 
 PARSER_MK=	${WRKSRC}/parser/Makefile.in
 
