@@ -1,4 +1,3 @@
-- split Makefile into Makefile and Makefile.common
-- create separate celestia-kde (or -qt?  need to find out from the
-  requirements) and celestia-gtk (currently requires GNOME) packages
+- create separate celestia-gtk (or -gnome, since it currently
+  requires GNOME) packages
 - honour PKG_SYSCONFDIR
