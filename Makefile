@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1698 2005/03/23 11:13:12 obache Exp $
-# $NetBSD: Makefile,v 1.1698 2005/03/23 11:13:12 obache Exp $
+# $Id: Makefile,v 1.1699 2005/03/23 11:18:57 obache Exp $
+# $NetBSD: Makefile,v 1.1699 2005/03/23 11:18:57 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1047,6 +1047,7 @@ SUBDIR+=	ypserv
 SUBDIR+=	z26
 SUBDIR+=	zaptel-netbsd
 SUBDIR+=	zinf
+SUBDIR+=	zphoto
 SUBDIR+=	zsnes-devel
 
 ${.CURDIR}/PKGDB:
