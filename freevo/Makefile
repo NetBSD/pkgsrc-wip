@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/27 03:18:46 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/31 19:10:30 thomasklausner Exp $
 #
 
 DISTNAME=		freevo-1.4.1
@@ -36,7 +36,7 @@ post-install:
 		${PKG_SYSCONFDIR}/local_conf.py
 
 .include "../../wip/py-game/buildlink2.mk"
-.include "../../wip/py-twisted/buildlink2.mk"
+.include "../../net/py-twisted/buildlink2.mk"
 .include "../../wip/py-mmpython/buildlink2.mk"
 .include "../../textproc/py-xml/buildlink2.mk"
 .include "../../graphics/py-imaging/buildlink2.mk"
