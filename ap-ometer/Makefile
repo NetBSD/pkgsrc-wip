@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/07 01:57:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/09 04:55:44 blef Exp $
 #
 
 DISTNAME=	mod_ometer-1.2.0
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.umich.edu/~umweb/software/mod_ometer.html
 COMMENT=	Web counter apache module
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-freetype=${BUILDLINK_PREFIX.freetype2}
@@ -21,10 +21,11 @@ CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
 APACHE_MODULE_NAME=     ${DISTNAME:C|-.*||}.so
 APACHE_MODULE_SRC=	${DISTNAME:C|-.*||}.c
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../databases/db4/buildlink2.mk"
-.include "../../graphics/gd/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../www/apache/module.mk"
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../databases/db4/buildlink3.mk"
+.include "../../graphics/gd/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
