@@ -56,10 +56,14 @@
 #define NormalLibXag	YES
 #define NormalOldX	YES
 
+#ifndef DriDrivers
+#define DriDrivers	/* Don't build the drivers here */
+#endif
+
 #define HasXdmAuth		YES
 #define UseInstalledPrograms	YES
 
-#ifndef FreeBSDArchitecture
+#ifndef BuildThreadStubLibrary
 # define BuildThreadStubLibrary YES
 #endif
 
