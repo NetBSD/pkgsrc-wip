@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2004/10/25 17:14:19 poppnk Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/26 05:25:05 xtraeme Exp $
 
-DISTNAME=	apstget-20041025
+DISTNAME=	apstget-20041026
 CATEGORIES=	pkgtools wip
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -30,6 +30,7 @@ SUBST_STAGE.etc=	post-patch
 SUBST_FILES.etc=	apst-get
 SUBST_SED.etc=		-e "s,_etc_,${PKG_SYSCONFDIR},g" \
 			-e "s,_pfx_,${PREFIX},g" \
-			-e "s,_psd_,${PKGSRCDIR},g"
+			-e "s,_psd_,${PKGSRCDIR},g" \
+			-e "s,_makebin_,${MAKE},g"
 
 .include "../../mk/bsd.pkg.mk"

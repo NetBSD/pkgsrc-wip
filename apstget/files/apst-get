@@ -25,7 +25,7 @@ fi
 
 #----->8--------------#
 PREFIX=_pfx_
-MAKE=${PREFIX}/bin/bmake
+MAKE=_makebin_
 PKGFIND=${PREFIX}/bin/pkgfind
 PKGCHK=${PREFIX}/sbin/pkg_chk
 PKGSRC_DIR=_psd_
