@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.517 2003/10/01 20:58:02 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.517 2003/10/01 20:58:02 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.518 2003/10/01 22:48:09 marc Exp $
+# $NetBSD: Makefile,v 1.518 2003/10/01 22:48:09 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -343,7 +343,6 @@ SUBDIR+=	py-game
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-libpcap
-SUBDIR+=	py-psyco
 SUBDIR+=	py-spark
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-twisted
