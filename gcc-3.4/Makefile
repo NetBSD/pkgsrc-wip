@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/05/05 20:15:02 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.20 2004/05/09 08:53:06 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -17,11 +17,11 @@ GCC_VERSION=	3.4.0
 # Optional languages - change as required
 #   If BUILD_ADA is YES, then you'll need to specify
 #   an Ada in the "Ada bootstrap compiler section"
-BUILD_ADA=	YES
-BUILD_CXX=	YES
-BUILD_F77=	YES
-BUILD_JAVA=	YES
-BUILD_OBJC=	YES
+BUILD_ADA?=	NO
+BUILD_CXX?=	YES
+BUILD_F77?=	YES
+BUILD_JAVA?=	NO
+BUILD_OBJC?=	YES
 
 LANGS='c'
 .if ${BUILD_ADA} == "YES"
