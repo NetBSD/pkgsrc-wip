@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1145 2004/03/29 20:23:05 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1145 2004/03/29 20:23:05 xtraeme Exp $
+# $Id: Makefile,v 1.1146 2004/03/29 22:22:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1146 2004/03/29 22:22:28 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -178,7 +178,6 @@ SUBDIR+=	gift
 SUBDIR+=	gift-openft
 SUBDIR+=	giftcurs
 SUBDIR+=	giftui
-SUBDIR+=	gimp-current
 SUBDIR+=	gkrellm-launch
 SUBDIR+=	gkrellm-reminder
 SUBDIR+=	gl-117
