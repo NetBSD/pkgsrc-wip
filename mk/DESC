@@ -1,4 +1,4 @@
-$Id: DESC,v 1.1 2003/11/28 20:50:02 mpasternak Exp $
+$Id: DESC,v 1.2 2003/12/01 01:43:29 mpasternak Exp $
 
 Please provide .mk files descriptions and reasons for existence of those
 files here.
@@ -12,3 +12,8 @@ linuxbin.pkg.mk	- generalised .mk file for installing Linux binary packages,
 		  - current emul/suse_linux/ layer provided by Makefile.common
 		    is no good (can't override path for RPMFILES, for example)
 		  - could be used by emul/linux base packages as well
+
+
+win32.pkg.mk	- this is winpkgsrc base makefile; it is a base of all
+		  packages, that are cross-compiled with mingw32. Do not
+		  use it with normal packages by any means.
