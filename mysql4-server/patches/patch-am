@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1.1.1 2003/07/09 17:17:16 xtraeme Exp $
+$NetBSD: patch-am,v 1.2 2003/08/08 14:50:34 adrian_p Exp $
 
---- scripts/mysqld_safe.sh.orig	2003-05-27 21:05:44.000000000 +0200
-+++ scripts/mysqld_safe.sh	2003-05-27 21:11:30.000000000 +0200
-@@ -232,6 +232,15 @@
+--- scripts/mysqld_safe.sh.orig	Fri Aug  8 12:40:47 2003
++++ scripts/mysqld_safe.sh	Fri Aug  8 12:47:23 2003
+@@ -247,6 +247,15 @@
    fi
  fi
  
@@ -18,13 +18,13 @@ $NetBSD: patch-am,v 1.1.1.1 2003/07/09 17:17:16 xtraeme Exp $
  #
  # If there exists an old pid file, check if the daemon is already running
  # Note: The switches to 'ps' may depend on your operating system
-@@ -242,18 +251,16 @@
+@@ -257,18 +266,16 @@
    then
      if @FIND_PROC@
      then    # The pid contains a mysqld process
 -      echo "A mysqld process already exists"
 -      echo "A mysqld process already exists at " `date` >> $err_log
-+      datemsg "A mysqld process already exists"
++	  datemsg "A mysqld process already exists"
        exit 1
      fi
    fi
@@ -41,21 +41,21 @@ $NetBSD: patch-am,v 1.1.1.1 2003/07/09 17:17:16 xtraeme Exp $
      exit 1
    fi
  fi
-@@ -262,11 +269,11 @@
- # Uncomment the following lines if you want all tables to be automaticly
- # checked and repaired at start
+@@ -281,11 +288,11 @@
+ # Alternatively, you can start mysqld with the "myisam-recover" option. See
+ # the manual for details.
  #
 -# echo "Checking tables in $DATADIR"
 +# datemsg "Checking tables in $DATADIR"
- # $MY_BASEDIR_VERSION/bin/myisamchk --silent --force --fast --medium-check -O key_buffer=64M -O sort_buffer=64M $DATADIR/*/*.MYI
- # $MY_BASEDIR_VERSION/bin/isamchk --silent --force -O sort_buffer=64M $DATADIR/*/*.ISM
+ # $MY_BASEDIR_VERSION/bin/myisamchk --silent --force --fast --medium-check $DATADIR/*/*.MYI
+ # $MY_BASEDIR_VERSION/bin/isamchk --silent --force $DATADIR/*/*.ISM
  
 -echo "Starting $MYSQLD daemon with databases from $DATADIR"
 +datemsg "Starting $MYSQLD daemon with databases from $DATADIR"
  
  # Does this work on all systems?
  #if type ulimit | grep "shell builtin" > /dev/null
-@@ -274,7 +281,7 @@
+@@ -293,7 +300,7 @@
  #  ulimit -n 256 > /dev/null 2>&1		# Fix for BSD and FreeBSD systems
  #fi
  
@@ -64,16 +64,16 @@ $NetBSD: patch-am,v 1.1.1.1 2003/07/09 17:17:16 xtraeme Exp $
  while true
  do
    rm -f $MYSQL_UNIX_PORT $pid_file	# Some extra safety
-@@ -297,7 +304,7 @@
+@@ -316,7 +323,7 @@
      # The only thing is ps x => redhat 5 gives warnings when using ps -x.
      # kill -9 is used or the process won't react on the kill.
      numofproces=`ps xa | grep -v "grep" | grep -c $ledir/$MYSQLD`
 -    echo -e "\nNumber of processes running now: $numofproces" | tee -a $err_log
-+    datemsg "Number of processes running now: $numofproces"
++	datemsg "Number of processes running now: $numofproces"
      I=1
      while test "$I" -le "$numofproces"
      do 
-@@ -309,15 +316,14 @@
+@@ -328,15 +335,14 @@
  	#    echo "TEST $I - $T **"
  	if kill -9 $T
  	then
