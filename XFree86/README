@@ -30,18 +30,8 @@ a few things:
   #PKG_FAIL_REASON= "${PKGNAME} requires X headers to be installed"
   #.endif
 
-* You will need to add the XFree86-libs buildlink to your bsd.pkg.mk,
-  when the XFree86 has been instaled or if any package requires the
-  headers of X, i.e:
-
-  .if defined(USE_X11)
-  X11_LDFLAGS=            # empty
-  X11_LDFLAGS+=           -Wl,${RPATH_FLAG}${X11BASE}/lib
-  X11_LDFLAGS+=           -L${X11BASE}/lib
-  LDFLAGS+=               ${X11_LDFLAGS}
-  .include "../../wip/XFree86-libs/buildlink2.mk"
-    .endif
-  .endif
+* You will need to reinstall the x11-links package when the XFree86
+  package has been installed succesfully.
 
 After making these changes, you shouldn't have any (infrastructure)
 problems.
