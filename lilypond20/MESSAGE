@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/10/24 14:30:10 atamaniuk Exp $
-
-* Look in ${EXAMPLES_DIR}/scripts 
-* for needed additions to your .profile 
-* (at least the TEXMF environment variable is required).
-===========================================================================
