@@ -1,42 +1,25 @@
-$NetBSD: patch-aa,v 1.2 2003/04/09 17:52:54 cubidou Exp $
+$NetBSD: patch-aa,v 1.3 2004/01/05 13:08:44 cubidou Exp $
 
---- Makefile.orig	2003-03-27 00:09:51.000000000 +0100
+--- Makefile.orig	2003-12-22 20:39:03.000000000 +0100
 +++ Makefile
-@@ -5,15 +5,15 @@
- # Set this to your Ion source directory.
- # If you're using the Debian package, just apt-get install ion-devel-dev
- # instead.
--ION_DIR = /usr/include/ion-devel
-+ION_DIR = $(BUILDLINK_DIR)/include/ion
+@@ -5,7 +5,7 @@
+ ##
  
- TOPDIR := $(ION_DIR)
- include $(ION_DIR)/system-inc.mk
+ # System specific configuration is in system.mk
+-TOPDIR=/usr/include/ion
++TOPDIR?=/usr/include/ion
+ include $(TOPDIR)/system-inc.mk
  
--MODULEDIR := $(LIBDIR)/ion-devel
--IONETCDIR := $(ETCDIR)/ion-devel
-+MODULEDIR := $(LIBDIR)/ion
-+IONETCDIR := $(EXDIR)/ion
+ ######################################
+@@ -28,9 +28,9 @@ include $(TOPDIR)/rules.mk
+ ######################################
  
--CFLAGS := -g -O2 -fPIC $(WARN) $(DEFINES) $(INCLUDES) $(X11_INCLUDES) \
-+CFLAGS += -fPIC $(WARN) $(DEFINES) $(INCLUDES) $(X11_INCLUDES) \
- 	$(EXTRA_INCLUDES) -I$(ION_DIR) -I$(ION_DIR)/libtu/include
+ _install: module_install
+-	$(INSTALLDIR) $(ETCDIR)
++	$(INSTALLDIR) $(EXDIR)
+ 	for i in $(ETC); do \
+-		$(INSTALL) -m $(DATA_MODE) $$i $(ETCDIR); \
++		$(INSTALL) -m $(DATA_MODE) $$i $(EXDIR); \
+ 	done
  
- ifeq ($(ION_DEBIAN_PACKAGE),1)
-@@ -27,15 +27,8 @@ CONFFILE = dock.conf
- all: $(MODULE).so
- 
- install: all
--	install -m0644 $(MODULE).so $(MODULEDIR)/$(MODULE).so
--	@if [ -e $(IONETCDIR)/$(CONFFILE) ]; then \
--		echo "** $(IONETCDIR)/$(CONFFILE) exists so it was not" \
--			"installed"; \
--		echo "** Please perform any necessary changes manually"; \
--	else \
--		echo "install -m0644 $(CONFFILE) $(IONETCDIR)/$(CONFFILE)"; \
--		install -m0644 $(CONFFILE) $(IONETCDIR)/$(CONFFILE); \
--	fi
-+	$(INSTALL) -m $(DATA_MODE) $(MODULE).so $(MODULEDIR)/$(MODULE).so
-+	$(INSTALL) -m $(DATA_MODE) $(CONFFILE) $(IONETCDIR)/$(CONFFILE)
- 
- $(MODULE).so: $(OBJS)
- 	$(CC) -shared -o $(MODULE).so $(OBJS)
+ ######################################

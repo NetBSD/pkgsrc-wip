@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2003/04/03 11:30:40 cubidou Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/05 13:08:44 cubidou Exp $
 #
 
-DISTNAME=	ion-dock-20030330
+DISTNAME=	ion-devel-dock-20031221
+PKGNAME=	${DISTNAME:S/-devel//}
 CATEGORIES=	x11
-MASTER_SITES=	http://kanin.dsv.su.se/ion/dock/
+MASTER_SITES=	http://www.dsv.su.se/~pelle/ion-dock/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	cube@cubidou.net
-HOMEPAGE=	http://kanin.dsv.su.se/ion/dock/
+MAINTAINER=	cube@NetBSD.org
+HOMEPAGE=	http://www.dsv.su.se/~pelle/ion-dock/
 COMMENT=	ion module that enables docking
 
 USE_BUILDLINK2=		YES
@@ -14,9 +16,12 @@ USE_PKGINSTALL=		YES
 USE_GMAKE=		YES
 USE_X11=		YES
 
-PKG_SYSCONFSUBDIR=	ion
+MAKE_ENV+=		TOPDIR=${BUILDLINK_PREFIX.ion}/include/ion
 
-CONF_FILES=		${PREFIX}/share/examples/ion/dock.conf ${PKG_SYSCONFDIR}/dock.conf
+ION_EX_DIR=		${PREFIX}/share/examples/ion
+PKG_SYSCONFSUBDIR=	ion
+CONF_FILES=		${ION_EX_DIR}/dock.lua ${PKG_SYSCONFDIR}/dock.lua \
+			${ION_EX_DIR}/dock-draw.lua ${PKG_SYSCONFDIR}/dock-draw.lua
 
 .include "../../wip/ion-devel/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
