@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/09 14:43:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2005/02/02 05:35:16 rxg Exp $
 
 DISTNAME=	cjk-latex-korean-20020721
 WRKSRC=		${WRKDIR}
@@ -23,7 +23,6 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 TEXMFMAIN=	${PREFIX}/share/texmf
-SFDDIR=		${TEXMFMAIN}/ttf2tfm/base
 TFMDIR=		${TEXMFMAIN}/fonts/tfm
 TTFDIR=		${TEXMFMAIN}/fonts/truetype
 
@@ -46,7 +45,7 @@ do-install:
 	${LN} -fs ${X11TTFDIR}/${f}.ttf ${TTFDIR}/baekmuk/${f}.ttf
 	${INSTALL_DATA_DIR} ${TFMDIR}/baekmuk/${f}
 	@(cd ${TFMDIR}/baekmuk/${f}; \
-		ttf2tfm ${TTFDIR}/baekmuk/${f} -P 3 -E 1 ${f}@${SFDDIR}/UKS@)
+		ttf2tfm ${TTFDIR}/baekmuk/${f} -P 3 -E 1 ${f}@UKS@)
 .endfor
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/10/09 14:43:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2005/02/02 05:32:19 rxg Exp $
 
 DISTNAME=	cjk-latex-chinese-20020721
 WRKSRC=		${WRKDIR}
@@ -23,7 +23,6 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 TEXMFMAIN=	${PREFIX}/share/texmf
-SFDDIR=		${TEXMFMAIN}/ttf2tfm/base
 TFMDIR=		${TEXMFMAIN}/fonts/tfm
 TTFDIR=		${TEXMFMAIN}/fonts/truetype
 
@@ -47,9 +46,9 @@ do-install:
 	${INSTALL_DATA_DIR} ${TFMDIR}/arphic/${f}
 	@(cd ${TFMDIR}/arphic/${f}; \
 	  if [ ${f} = bkai00mp ] || [ ${f} = bsmi00lp ]; then \
-		ttf2tfm ${TTFDIR}/arphic/${f} -P 3 -E 1 ${f}@${SFDDIR}/UBig5@; \
+		ttf2tfm ${TTFDIR}/arphic/${f} -P 3 -E 1 ${f}@UBig5@; \
 	  else \
-		ttf2tfm ${TTFDIR}/arphic/${f} -P 3 -E 1 ${f}@${SFDDIR}/UGB@; \
+		ttf2tfm ${TTFDIR}/arphic/${f} -P 3 -E 1 ${f}@UGB@; \
 	  fi)
 .endfor
 

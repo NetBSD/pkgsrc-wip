@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/10/09 14:43:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2005/02/02 05:34:02 rxg Exp $
 
 DISTNAME=	cjk-latex-japanese-20020721
 WRKSRC=		${WRKDIR}
@@ -23,7 +23,6 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 TEXMFMAIN=	${PREFIX}/share/texmf
-SFDDIR=		${TEXMFMAIN}/ttf2tfm/base
 TFMDIR=		${TEXMFMAIN}/fonts/tfm
 TTFDIR=		${TEXMFMAIN}/fonts/truetype
 
@@ -46,7 +45,7 @@ do-install:
 	${LN} -fs ${X11TTFDIR}/kochi-${f}.ttf ${TTFDIR}/kochi/${f}.ttf
 	${INSTALL_DATA_DIR} ${TFMDIR}/kochi/${f}
 	(cd ${TFMDIR}/kochi/${f}; \
-		ttf2tfm ${TTFDIR}/kochi/${f} -P 3 -E 1 ${f}@${SFDDIR}/UJIS@)
+		ttf2tfm ${TTFDIR}/kochi/${f} -P 3 -E 1 ${f}@UJIS@)
 .endfor
 
 post-install:
