@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/25 18:34:22 marc Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/16 17:29:25 marc Exp $
 
 PKGNAME=		postgresql-server-${BASE_VERS}
 SVR4_PKGNAME=		pstgs
@@ -52,6 +52,13 @@ post-buildlink:
 .if (${OPSYS} == "SunOS")
 	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
 .endif
+
+pre-build:
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/backend && \
+       	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+	 ../../src/include/parser/parse.h ../../src/include/utils/fmgroids.h
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/port && \
+       	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
 
 pre-install:
 	@case "X${PGUSER}" in						\

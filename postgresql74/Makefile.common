@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/03/25 18:34:18 marc Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/04/16 17:29:23 marc Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -42,14 +42,21 @@ BUILDLINK_DEPENDS.tcl-postgresql?=	tcl-postgresql>=${BASE_VERS}
 
 BUILD_DEPENDS+=		bison>=1.875:../../devel/bison
 
-YACC=			${LOCALBASE}/bin/bison -y
-
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make yacc
 PKG_SYSCONFSUBDIR=	postgresql
 
 .include "../../mk/bsd.prefs.mk"
+
+# Add support for hierarchical queries with Oracle like CONNECT BY syntax.
+# see http://gppl.terminal.ru/README.html for details.
+.if defined(PGSQL_USE_HIER) && !empty(PGSQL_USE_HIER:M[yY][eE][sS])
+PATCH_SITES=		http://gppl.terminal.ru/
+PATCHFILES=		hier-Pg7.4-0.5.2.tar.gz
+PATCH_DIST_STRIP=	-p1
+.endif
+BUILD_DEFS+=	PGSQL_USE_HIER
 
 PGSQL_TEMPLATE.SunOS=		solaris
 .if !defined(PGSQL_TEMPLATE.${OPSYS})
@@ -89,8 +96,4 @@ post-extract:
 			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
 	fi
 
-#pre-configure:
-#	cd ${WRKSRC} && ${AUTOCONF}
-
 .include "../../devel/zlib/buildlink3.mk"
-#.include "../../mk/autoconf.mk"

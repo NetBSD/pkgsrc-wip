@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/20 00:24:22 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/16 17:29:24 marc Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -27,6 +27,7 @@ man/man1/createuser.1
 man/man1/dropdb.1
 man/man1/droplang.1
 man/man1/dropuser.1
+man/man1/ecpg.1
 man/man1/initdb.1
 man/man1/initlocation.1
 man/man1/ipcclean.1
@@ -37,11 +38,23 @@ man/man1/pg_dump.1
 man/man1/pg_dumpall.1
 man/man1/pg_resetxlog.1
 man/man1/pg_restore.1
+man/man1/pgtclsh.1
+man/man1/pgtksh.1
+man/man1/postgres.1
+man/man1/postmaster.1
 man/man1/psql.1
 man/man1/vacuumdb.1
 man/manl/abort.l
+man/manl/alter_aggregate.l
+man/manl/alter_conversion.l
 man/manl/alter_database.l
+man/manl/alter_domain.l
+man/manl/alter_function.l
 man/manl/alter_group.l
+man/manl/alter_language.l
+man/manl/alter_operator_class.l
+man/manl/alter_schema.l
+man/manl/alter_sequence.l
 man/manl/alter_table.l
 man/manl/alter_trigger.l
 man/manl/alter_user.l
