@@ -5,4 +5,4 @@ COMPLETE and accurate than reverse DNS lookups.
 
 This module can be used to automatically select the geographically closest
 mirror, or to analyze your web server logs to determine the countries of
-your visiters.
+your visitors.
