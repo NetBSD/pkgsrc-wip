@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/06/02 20:32:22 plunky Exp $
+# $NetBSD: Makefile,v 1.6 2004/06/11 21:19:16 plunky Exp $
 
 DISTNAME=	ppp-lzs-1.0
+PKGNAME=	ppp-lzs-2.4.0
 CATEGORIES=	net
 MASTER_SITES=	http://homepages.rya-online.net/plunky/
 
@@ -8,7 +9,7 @@ MAINTAINER=	plunky@rya-online.net
 HOMEPAGE=	http://homepages.rya-online.net/plunky/lzs.html
 COMMENT=	PPP daemon and LKM with Stac LZS decompression
 
-CONFLICTS+=		ppp-mppe-*
+CONFLICTS+=		ppp-* ppp-mppe-*
 ONLY_FOR_PLATFORM= 	NetBSD-*-*
 
 MAKE_ENV+=	BSDSRCDIR="${BSDSRCDIR}"
