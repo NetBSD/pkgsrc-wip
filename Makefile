@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.817 2003/12/29 00:25:46 mpasternak Exp $
-# $NetBSD: Makefile,v 1.817 2003/12/29 00:25:46 mpasternak Exp $
+# $Id: Makefile,v 1.818 2003/12/29 00:57:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.818 2003/12/29 00:57:57 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -185,7 +185,6 @@ SUBDIR+=	gnats4
 SUBDIR+=	gnome-speech
 SUBDIR+=	gnome2-extras
 SUBDIR+=	gnome2-pkgview
-SUBDIR+=	gnome2-system-monitor
 SUBDIR+=	gnome2-themes-extra
 SUBDIR+=	gnomeicu
 SUBDIR+=	gnucash-docs
