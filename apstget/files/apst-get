@@ -1,0 +1,282 @@
+#!/bin/sh
+#
+# APST-GET : Another PkgSrc Tool to manage packages.
+#
+# AUTHOR: pancake < pancake@phreaker.net >
+# DATE: 2004/10/20
+#
+# depends: pkg_find, pkg_chk, pkg_tarup, awk
+#
+
+if [ -e "_etc_/apstget.conf" ]; then
+. _etc_/apstget.conf
+fi
+
+# apstget.conf looks like:
+#
+# MAKE_TARGET="clean" # package
+# INTERACTIVE="1"
+# QUITE="1"
+
+#----->8--------------#
+PREFIX=/usr/pkg/
+MAKE=${PREFIX}/bin/bmake
+PKGSRC_DIR=/usr/pkgsrc/
+DEFAULT_TARGETS="${DEFAULT_TARGETS}"
+if [ "${MAKE_TARGET}" = "" ]; then
+	MAKE_TARGET="clean"
+fi
+if [ "${INTERACTIVE}" = "" ]; then
+	INTERACTIVE="1"
+fi
+case "${QUITE}" in
+"1") QUITE=">/dev/null" ;;
+"2") QUITE=">/dev/null 2>&1" ;;
+esac
+
+press_any_key() {
+	if [ "${INTERACTIVE}" = "1" ]; then
+		echo "==> Press Control-C if you are not agree else any key."
+		read ME
+	fi
+}
+
+do_usage() {
+	echo "Usage $1 [action] [targets...]"
+	echo "actions:"
+	echo "  install      - installs/updates selected packages."
+	echo "  upgrade      - updates selected packages and dependencies."
+	echo "  dist-upgrade - updates entire system."
+	echo "  remove       - removes selected packages."
+	echo "  update       - updates pkgsrc/-wip tree."
+	echo "  relink       - tries to solve all broken libs."
+	echo "  clean        - cleans all build directories."
+	echo ""
+	echo "variables (environ|_etc_/apstget.conf):"
+	echo "  MAKE_TARGET,INTERACTIVE,QUITE"
+}
+
+do_install() {
+	PKG=$1
+	DIR=$1
+	UPD=$2 # Update flag
+	if [ "`echo $PKG | grep /`" = "" ]; then
+		DIR=`pkgfind -qx $PKG`
+	else
+		PKG=`echo $PKG | awk -F / '{ print $2 }'`
+	fi
+	if [ ! -e "${PKGSRC_DIR}/${DIR}" ]; then
+	echo "==> Error! package $PKG not found!"
+	else
+	STAT="`echo $DIR | pkg_chk -C /dev/stdin -c`"
+	if [ "${STAT}" = "" ]; then
+		echo "==> Package ${DIR} is updated to the latest version"
+	else
+	echo "==> Preparing installation for $DIR"
+	cd ${PKGSRC_DIR}/${DIR}
+	DEPS=`${MAKE} show-all-depends-dirs`
+	REPLACE=""
+	INSTALL=""
+	for A in ${DEPS} ; do
+		CHK=`echo ${A} | pkg_chk -C /dev/stdin -c`
+		if [ ! "`echo ${CHK}|grep missing`" = "" ]; then
+			echo " [i] Enqueueing for install ${A}"
+			INSTALL="${INSTALL} ${A}"
+		else
+		if [ ! "`echo ${CHK}| grep mismatch`" = "" ]; then
+			echo " [u] Need to update ${A}"
+			if [ "${UPD}" = "1" ]; then
+				REPLACE="${REPLACE} ${A}"
+			else
+			if [ "${A}" = "${DIR}" ]; then
+				REPLACE="${REPLACE} ${A}"
+				fi
+			fi;fi
+		fi
+	done
+	fi
+	# replace list
+	if [ ! "${REPLACE}" = "" ]; then
+	for A in ${REPLACE}; do
+		echo "==> Upgrading ${REPLACE}..."
+		sleep 1
+		cd ${PKGSRC_DIR}/${A}
+		${MAKE} replace ${UD_TARGETS} ${QUITE}
+		if [ ! "$?" = "0" ]; then
+			exit 1 # TODO allow ignore errors?
+		fi
+	done
+	fi
+
+	# install list
+	if [ ! "${INSTALL}" = "" ]; then
+	for A in ${INSTALL}; do
+		echo "==> Installing ${A}"
+		cd ${PKGSRC_DIR}/${A}
+		${MAKE} install ${UD_TARGETS} ${QUITE}
+		if [ ! "$?" = "0" ]; then
+			exit 1 # TODO allow ignore errors?
+		fi
+	done
+	fi
+
+	fi # check installed
+}
+
+do_remove() {
+	PKG=$1
+	DIR=$1
+	if [ "`echo $PKG | grep /`" = "" ]; then
+		DIR=`pkgfind -qx $PKG`
+	else
+		PKG=`echo $PKG | awk -F / '{ print $2 }'`
+	fi
+
+	FOUND="`pkg_info ${PKG} 2>/dev/null`"
+	if [ "${FOUND}" = "" ]; then
+	echo "==> Package $PKG not installed."
+	else
+		LIST="`pkg_delete -n ${PKG}`"
+		DEIN="`echo ${LIST} | grep DEINSTALL`"
+
+		pkg_delete -n ${PKG} | grep -v DEINSTALL
+		echo ""
+		if [ ! "${DEIN}" = "" ]; then
+		echo "==> Use 'pkg_info -k ${PKG} | more' to see the DEINSTALL script"
+		fi
+
+		press_any_key
+
+		echo "==> Performing remove for $PKG..."
+		pkg_delete "${PKG}"
+	fi
+}
+
+do_update() {
+	# TODO check cvs/cvsup first
+	echo "==> Updating pkgsrc tree..."
+	cd ${PKGSRC_DIR}
+	cvs -z 3 -q update -dP
+
+	if [ -e "${PKGSRC_DIR}/wip" ]; then
+	echo "==> Updating pkgsrc-wip tree..."
+	cd ${PKGSRC_DIR}/wip
+	cvs -z 3 -q update -dP
+	fi
+}
+
+do_clean() {
+	WRKOBJDIR="`grep -e WRKOBJDIR /etc/mk.conf|awk -F = '{ print $2; }'`"
+	if [ -z "${WRKOBJDIR}" ]; then
+		echo "==> WRKOBJDIR not defined in mk.conf"
+		cd ${PKGSRC_DIR}
+		printf "==> Scanning pkgsrc tree for dirty dirs... "
+	PKGTOCLEAN=`find . | grep work | awk -F / '{print $2"/"$3; }'|uniq`
+		echo "DONE"
+	else
+		echo "Using WRKOBJDIR=${WRKOBJDIR}"
+		cd ${WRKOBJDIR}
+		PKGTOCLEAN=`echo */*`;
+	fi
+
+	echo "==> Cleaning all dirty builds..."
+	for A in ${PKGTOCLEAN} ; do
+		if [ ! -e ${PKGSRC_DIR}/${A} ]; then continue ; fi
+		cd ${PKGSRC_DIR}/${A}
+		printf "${A}   "
+		${MAKE} clean > /dev/null 2>&1
+		echo "OK"
+	done
+	echo "DONE"
+
+}
+
+do_relink() {
+	if [ "$1" = "" ]; then
+	echo "==> Looking for broken libs on ${PREFIX}[/bin|/sbin|/lib]"
+		FILES=`find ${PREFIX}/bin ${PREFIX}/sbin ${PREFIX}/lib -type f`
+	else
+	echo "==> Looking for unlinked binaries of package ${1}"
+		FILES=`pkg_info -L $1 | grep bin`
+	fi
+
+	for A in ${FILES}; do
+		LIB=`ldd ${A} 2>/dev/null |grep found|awk -F = '{ print $1 }'`
+		for B in ${LIB}; do
+		#--
+		echo "==> Relinking ${B}..."
+		COW="`echo ${B} |awk -F . '{ print $1 }'`.so"
+		TARGET="`ls -l ${PREFIX}/lib/${COW}.* 2>/dev/null | grep -e ^- `"
+		if [ "${TARGET}" = "" ]; then
+			echo " * Cannot be resolved"
+		else
+			TARGET=`echo ${TARGET} | awk '{ print $9 }'`
+			echo " * Solved against ${TARGET}"
+			ln -s ${TARGET} ${PREFIX}/lib/$B
+		fi
+		#--		
+		done
+	done
+}
+
+# Main procedure
+
+case "$1" in
+"")
+	do_usage $0
+	;;
+"install"|"upgrade")
+	FLAG=0
+	if [ "${2}" = "" ]; then
+		echo "You must give me at least one target"
+		exit 1
+	fi
+	if [ "$1" = "upgrade" ]; then
+		FLAG=1
+	fi
+	while : ; do
+		do_install $2 ${FLAG}
+		shift;
+		if [ "$2" = "" ]; then
+		break;
+		fi
+	done
+	;;
+"remove")
+	if [ "${2}" = "" ]; then
+		echo "You must give me at least one target"
+		exit 1
+	fi
+	while : ; do
+		do_remove $2
+		shift;
+		if [ "$2" = "" ]; then
+		break;
+		fi
+	done
+	;;
+"update")
+	do_update
+	;;
+"dist-upgrade")
+	echo "==> Generating updated list..."
+	F=`${PKGCHK} -i|grep mismatch|awk -F : '{print $1 }'|grep -v WARNING`
+	for A in ${F}; do
+		echo "==> Updating ${A}..."
+		do_install ${A} 1
+	done
+	;;
+"clean")
+	do_clean
+	;;
+"relink")
+	while : ; do
+		do_relink $2
+		shift;
+		if [ "$2" = "" ]; then
+		break;
+		fi
+	done
+	;;
+esac
+
