@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/03/04 21:22:08 peterih Exp $
+$NetBSD: distinfo,v 1.4 2005/03/05 00:31:49 peterih Exp $
 
-SHA1 (moregroupware-core-0.7.2.tar.gz) = 52299dc9dcdba2b241a2e98e8c23f49ba3cad2de
-RMD160 (moregroupware-core-0.7.2.tar.gz) = d1ba46759953a5db38f3a06d17b7ae7d5d7e9dc7
+SHA1 (moregroupware-core-0.7.2.tar.gz) = d0956ee85d8998362491c35251bbde6fc58293ef
+RMD160 (moregroupware-core-0.7.2.tar.gz) = 51c08c70b5daa967430fc60984648d093c1a84d4
 Size (moregroupware-core-0.7.2.tar.gz) = 1917546 bytes
 SHA1 (moregroupware-docs-0.7.2.tar.gz) = dea829b33f8991f480c6faaa36c5948801d62c7b
 RMD160 (moregroupware-docs-0.7.2.tar.gz) = 3cec414eb9f919269c428fd70bcdab1ccca02707
