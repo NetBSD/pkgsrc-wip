@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/16 20:05:31 riz Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/16 20:22:19 riz Exp $
 #
 
 DISTNAME=		zaptel-netbsd-20050314
@@ -20,6 +20,8 @@ CONF_FILES=		${PREFIX}/share/examples/zaptel/zaptel.conf \
 			${PKG_SYSCONFDIR}/zaptel.conf
 
 USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
+RCD_SCRIPTS=		ztcfg
 
 .include "../../wip/newt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
