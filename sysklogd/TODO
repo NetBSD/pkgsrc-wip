@@ -1,10 +1,10 @@
-provide a ready-to-use syslog.conf also
-
 fix hard-coded paths in manual pages?
 
 what about conflicting /var/run/syslogd.pid?
 
-provide rc.d script for syslogd
+what about making /var/log directory and /var/log/* files?
 
-provide rc.d script for klogd
-(I have these)
+README.1st suggests that old .pid files shouold be removed at startup
+
+check sysklogd-1.4.1-querymod.patch from
+http://www.linuxfromscratch.org/patches/downloads/sysklogd/

@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/05/07 23:32:33 jeremy-c-reed Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/09 07:50:27 jeremy-c-reed Exp $
+the second part of this patch is from
+LFS and http://www.geocrawler.com/mail/msg.php3?msg_id=6612801&list=709
 
---- syslogd.c.orig	Wed Nov  6 13:48:23 2002
-+++ syslogd.c	Wed Nov  6 13:49:13 2002
-@@ -521,7 +521,8 @@
+--- syslogd.c.orig	2001-03-11 11:40:10.000000000 -0800
++++ syslogd.c
+@@ -521,7 +521,8 @@ static char sccsid[] = "@(#)syslogd.c	5.
  #if defined(FSSTND)
  #define _PATH_LOGPID _PATH_VARRUN SYSLOGD_PIDNAME
  #else
@@ -12,3 +14,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/05/07 23:32:33 jeremy-c-reed Exp $
  #endif
  #else
  #ifndef _PATH_LOGPID
+@@ -890,11 +891,11 @@ int main(argc, argv)
+ 		dprintf("Checking pidfile.\n");
+ 		if (!check_pid(PidFile))
+ 		{
++			signal (SIGTERM, doexit);
+ 			if (fork()) {
+ 				/*
+ 				 * Parent process
+ 				 */
+-				signal (SIGTERM, doexit);
+ 				sleep(300);
+ 				/*
+ 				 * Not reached unless something major went wrong.  5

@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2004/04/09 07:50:27 jeremy-c-reed Exp $
+use own module.h so will work with newer kernels
+
+--- ksym_mod.c.orig	2004-04-09 00:42:31.915160432 -0700
++++ ksym_mod.c
+@@ -93,7 +93,7 @@
+ #include <linux/time.h>
+ #include <linux/module.h>
+ #else /* __GLIBC__ */
+-#include <linux/module.h>
++#include "module.h"
+ extern __off64_t lseek64 __P ((int __fd, __off64_t __offset, int __whence));
+ extern int get_kernel_syms __P ((struct kernel_sym *__table));
+ #endif /* __GLIBC__ */
