@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.563 2003/10/24 00:08:23 xtraeme Exp $
-# $NetBSD: Makefile,v 1.563 2003/10/24 00:08:23 xtraeme Exp $
+# $Id: Makefile,v 1.564 2003/10/24 00:16:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.564 2003/10/24 00:16:09 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -258,6 +258,7 @@ SUBDIR+=	mc
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	memtester
+SUBDIR+=	mftrace
 SUBDIR+=	mhonarc
 SUBDIR+=	mit-krb5
 SUBDIR+=	mixer.tk
