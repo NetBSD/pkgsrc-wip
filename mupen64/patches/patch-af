@@ -1,0 +1,35 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/04/16 22:28:41 xtraeme Exp $
+
+--- Makefile.orig	2004-04-16 22:31:22.000000000 +0200
++++ Makefile	2004-04-16 22:33:02.000000000 +0200
+@@ -1,14 +1,14 @@
+ #Makefile MUPEN64 for Linux
+ 
+ #CC  		=gcc -DX86 -O3 -mpentium -Wall -DEMU64_DEBUG
+-CC		=gcc -DX86 -O3 -fomit-frame-pointer -funroll-loops -ffast-math -mcpu=athlon -Wall -pipe
++#CC		=gcc -DX86 -O3 -fomit-frame-pointer -funroll-loops -ffast-math -mcpu=athlon -Wall -pipe
+ #CC		=gcc -DX86 -O3 -mpentium -Wall -g -pg
+ #CC 		=gcc -DX86 -Wall -pipe -g3 -DEMU64_DEBUG
+ #CC		=gcc -DX86 -Wall -pipe -g -DEMU64_DEBUG -DCOMPARE_CORE
+ #CC		=icc -DX86 -O3 -unroll -axM -vec_report3 -Dinline=
+ #CC		=gcc -DX86 -Wall -pipe -g
+ 
+-GL_PATH		=-I/usr/X11R6/include
++GL_PATH		=-I@BLNK@/include
+ 
+ OBJ		=main/rom.o \
+ 		r4300/r4300.o \
+@@ -118,11 +118,11 @@
+ 				$(CC) -c -o $@ $< `gtk-config --cflags`
+ 
+ mupen64_nogui:	$(OBJ) $(OBJ_X86) main/main.o
+-		$(CC) $^ $(LIB) -Wl,-export-dynamic -L/usr/X11R6/lib -lSDL -lGL -lpthread -ldl -o $@
++		$(CC) $^ $(LIB) @LDFLAGS@ -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -lSDL -lGL -o $@
+ 		strip --strip-all $@
+ 
+ mupen64:	$(OBJ) $(OBJ_X86) $(OBJ_GTK_GUI)
+-		$(CC) $^ $(LIB) -Wl,-export-dynamic `gtk-config --libs` -L/usr/X11R6/lib -lSDL -lGL -lpthread -ldl -o $@
++		$(CC) $^ $(LIB) @LDFLAGS@ `gtk-config --libs` -lSDL -lGL -o $@
+ 		strip --strip-all $@
+ 
+ mupen64_oldgui:	$(OBJ) $(OBJ_X86) main/main_gtk.o
