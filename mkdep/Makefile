@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/02 04:25:58 blef Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/06 05:40:54 tvierling Exp $
 
 # Version based on CVS revision number.
 DISTNAME=		mkdep-1.16
@@ -14,7 +14,7 @@ NO_CONFIGURE=		YES
 USE_BUILDLINK3=		yes
 
 do-extract:
-	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mkdep ${PREFIX}/bin

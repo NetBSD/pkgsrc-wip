@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/24 01:24:05 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/06 05:40:54 tvierling Exp $
 
 # Notes to package maintainers:
 #
@@ -72,8 +72,8 @@ VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
 
 do-extract:
-	@${CP} -Rp ${LIBNBCOMPAT_FILESDIR} ${LIBNBCOMPAT_SRCDIR}
-	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+	@${CP} -R ${LIBNBCOMPAT_FILESDIR} ${LIBNBCOMPAT_SRCDIR}
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 pre-configure:
 	@cd ${LIBNBCOMPAT_SRCDIR} && ${SETENV} ${CONFIGURE_ENV:NLIBS=*}	\

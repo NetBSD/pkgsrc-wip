@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/12/28 00:31:38 xtraeme Exp $
+# $NetBSD: Makefile,v 1.19 2005/01/06 05:40:53 tvierling Exp $
 
 DISTNAME=	apstget-20041227
 CATEGORIES=	pkgtools
@@ -21,7 +21,7 @@ NO_BUILD=	yes
 CONF_FILES=	${PKG_SYSCONFDIR}/apstget.conf
 
 do-extract:
-	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/apst-get ${PREFIX}/bin/apstget
