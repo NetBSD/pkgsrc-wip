@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/11 00:56:30 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/11 23:22:07 poppnk Exp $
 #
 
 PKGNAME=	php-${PHP5_VERSION}
@@ -10,6 +10,7 @@ COMMENT=	PHP Hypertext Preprocessor version 5
 
 CONFLICTS+=	php-[34]*
 USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 
