@@ -1,27 +1,33 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/08/19 07:35:48 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2003/09/22 04:57:21 xtraeme Exp $
 
---- src/freeglut_joystick.c.orig	Tue Aug 19 09:24:14 2003
-+++ src/freeglut_joystick.c	Tue Aug 19 09:25:34 2003
-@@ -54,9 +54,10 @@
+--- src/freeglut_joystick.c.orig	2003-09-22 06:49:36.000000000 +0200
++++ src/freeglut_joystick.c	2003-09-22 06:51:05.000000000 +0200
+@@ -51,13 +51,18 @@
+ #       define NEAR /* */
+ #       define FAR  /* */
+ #   endif
++#   include <sys/param.h>
  #   include <mmsystem.h>
  #   include <string.h>
  #else
-+#   include <sys/param.h>
  #   include <unistd.h>
  #   include <fcntl.h>
 -#   ifdef __FreeBSD__
-+#   ifdef __NetBSD__ || defined(__FreeBSD__) && __FreeBSD_version <= 500000
++#   ifdef __FreeBSD__ || defined(__NetBSD__)
++#   if __FreeBSD_version >= 500000
++#	include <sys/joystick.h>
++#   else
  #       include <machine/joystick.h>
++#   endif
  #       define JS_DATA_TYPE joystick
  #       define JS_RETURN (sizeof(struct JS_DATA_TYPE))
-@@ -64,6 +65,10 @@
- #       include <sys/ioctl.h>
- #       include <linux/joystick.h>
- #       include <errno.h>
-+#   elif defined(__FreeBSD__) && __FreeBSD_version >= 500000
-+#	include <sys/joystick.h>
-+#	define JS_DATA_TYPE joystick
-+#	define JS_RETURN (sizeof(struct JS_DATA_TYPE))
+ #   elif defined(__linux__)
+@@ -253,7 +258,7 @@
+     }
  
-         /*
-          * Check the joystick driver version
+     if( buttons )
+-#       ifdef __FreeBSD__
++#       ifdef __FreeBSD__ || defined(__NetBSD__)
+         *buttons = (joy->js.b1 ? 1 : 0) | (joy->js.b2 ? 2 : 0);
+ #       else
+         *buttons = joy->js.buttons;
