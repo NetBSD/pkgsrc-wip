@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/05 05:01:54 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 20:21:25 cjep Exp $
 #
 
 DISTNAME=		cal3d_cally-0.9
@@ -24,12 +24,12 @@ PATCHDATA=		cally.cfg paladin.cfg skeleton.cfg
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
-	
+
 post-patch:
 	${CP} ${WRKSRC}/src/demo.cpp ${WRKSRC}/src/demo.cpp.pkgsrc
 	${SED} -e 's|@@DATADIR@@|${DATADIR}|g' ${WRKSRC}/src/demo.cpp.pkgsrc > \
 		${WRKSRC}/src/demo.cpp
-		
+
 	for f in ${PATCHDATA}; do \
 		${CP} ${WRKDATADIR}/$$f ${WRKDATADIR}/$$f.pkgsrc && \
 		${SED} -e 's|@@DATADIR@@|${DATADIR}|g' ${WRKDATADIR}/$$f.pkgsrc > \
