@@ -1,14 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/16 18:54:25 daprice Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/18 19:55:31 daprice Exp $
 
---- TreeUtils.h.orig	Mon Apr 14 15:55:48 2003
-+++ TreeUtils.h	Thu Jan 13 19:16:22 2005
-@@ -3,7 +3,9 @@
+--- Makefile.orig	2005-02-11 08:22:01.000000000 -0700
++++ Makefile	2005-02-11 08:22:44.000000000 -0700
+@@ -4,6 +4,7 @@
  
- #define LARGE_NODES	0		/* set to 1 iff we want to use all fields in every node,
- 					if this is 0, we cannot do HMM now! */
-+#if !defined(FLT_MAX)
- #define FLT_MAX 1e35	/* no longer defined in limits.h--do it here temporarily */
-+#endif
- #include <string.h>
- #include <stdio.h>
- #include <ctype.h>
+ FC = g77  # Fortran compiler; standard on Linux, may have to go fetch this on OS X! (get it from Fink)
+ CC = gcc  # GNU C compiler
++CXX = g++ # GNU C++ compiler
+ LIBS =  -lg2c -lm  # FORTRAN to C library, and standard C library 
+ LPATH = -L/sw/lib  # This is the directory where Mac's Fink stuck the g2c library 
+ CFLAGS = -g  # For faster execution remove this debug flag 
+@@ -20,7 +21,7 @@
+ #	${CC} -o r8s  ${OBJS} ${LIBS}
+ # Use the following for MAC OS X
+ r8s: ${OBJS}
+-	${CC} -o r8s  ${LPATH} ${OBJS} ${LIBS}
++	${CXX} -o r8s  ${LPATH} ${OBJS} ${LIBS}
+ 
+ # DO NOT DELETE
+ 
