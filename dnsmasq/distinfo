@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.2 2003/10/13 20:09:43 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2004/01/10 20:01:06 poppnk Exp $
 
-SHA1 (dnsmasq-1.13.tar.gz) = 7f9da6d9f304b39139cddc460b437b9ab89a9ba6
-Size (dnsmasq-1.13.tar.gz) = 60903 bytes
-SHA1 (patch-aa) = 0a507c439f2105d286ff68659e399e492b00c04e
+SHA1 (dnsmasq-1.18.tar.gz) = b2413c85a75fd2bd9374e425d972f3586d4acfcc
+Size (dnsmasq-1.18.tar.gz) = 70839 bytes
+SHA1 (patch-aa) = 28d0fa9527e9fb3c5c4d45ee9efafceff0c4e4b9

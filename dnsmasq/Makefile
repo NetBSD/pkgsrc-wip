@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.2 2003/10/13 20:09:42 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/10 20:01:06 poppnk Exp $
 #
 
-DISTNAME=	dnsmasq-1.13
+DISTNAME=	dnsmasq-1.18
 CATEGORIES=	net
 MASTER_SITES=	http://www.thekelleys.org.uk/dnsmasq/
 
