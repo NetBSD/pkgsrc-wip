@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/27 00:05:09 xtraeme Exp $
+$NetBSD: distinfo,v 1.1.1.2 2003/11/29 11:36:00 poppnk Exp $
 
-SHA1 (gpdf-0.111.tar.bz2) = 2b7ad4682a004f6ae1150171017fe82d6d0719d2
-Size (gpdf-0.111.tar.bz2) = 827822 bytes
+SHA1 (gpdf-0.104.tar.bz2) = 8328ac9e4f5b1cc23b33da31d33ce05af0fc96ba
+Size (gpdf-0.104.tar.bz2) = 690789 bytes
