@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/06/27 10:27:24 adrian_p Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/06/28 11:33:24 adrian_p Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -27,7 +27,6 @@ SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
 BUILD_DEFS+=    USE_INET6 USE_TCPWRAPPERS USE_OPENLDAP USE_DB2 \
 		USE_SASL USE_SASL2 USE_STARTTLS USE_DB4
-DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
 WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
 USE_BUILDLINK3=	YES
@@ -37,22 +36,17 @@ MAKE_ENV+=	M4="${M4}"
 .include "../../mk/bsd.prefs.mk"
 
 make-sendmail-siteconfig:
-	${CP} ${FILESDIR}/site.config.m4 ${SITECONFIG}
-	${CHMOD} +w ${SITECONFIG}
-	${CP} ${PKGDIR}/DESCR ${DESCR_SRC}
-	${ECHO} '---' >>${DESCR_SRC}
-	${ECHO} -n 'compiled features:' >>${DESCR_SRC}
+	@${CP} ${FILESDIR}/site.config.m4 ${SITECONFIG}
+	@${CHMOD} +w ${SITECONFIG}
 
 .if defined(USE_INET6) && ${USE_INET6} == YES
-	${CAT} ${FILESDIR}/site.config.m4-v6 >>${SITECONFIG}
+	@${CAT} ${FILESDIR}/site.config.m4-v6 >>${SITECONFIG}
 .if ${OPSYS} != "SunOS" && ${OPSYS} != "BSDOS"
-	${CAT} ${FILESDIR}/site.config.m4-v6-not-solaris >>${SITECONFIG}
+	@${CAT} ${FILESDIR}/site.config.m4-v6-not-solaris >>${SITECONFIG}
 .endif
-	${ECHO} -n ' INET6' >>${DESCR_SRC}
 .endif
 
 .if ${OPSYS} == "SunOS"
-	${CAT} ${FILESDIR}/site.config.m4-solaris >>${SITECONFIG}
+	@${CAT} ${FILESDIR}/site.config.m4-solaris >>${SITECONFIG}
 .endif
-	${CAT} ${FILESDIR}/site.config.m4-milter >>${SITECONFIG}
-	${ECHO} -n ' MILTER' >>${DESCR_SRC}
+	@${CAT} ${FILESDIR}/site.config.m4-milter >>${SITECONFIG}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/06/28 09:32:24 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/28 11:33:24 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -48,46 +48,38 @@ USE_TCPWRAPPERS?=	YES
 
 post-patch: make-sendmail-siteconfig
 .if ${USE_TCPWRAPPERS} == YES
-	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
-	${ECHO} -n ' TCPWRAPPERS' >>${DESCR_SRC}
+	@${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
 .endif
 .if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
-	${CAT} ${FILESDIR}/site.config.m4-ldap >>${SITECONFIG}
-	${ECHO} -n ' LDAP' >>${DESCR_SRC}
+	@${CAT} ${FILESDIR}/site.config.m4-ldap >>${SITECONFIG}
 .endif
 .if defined(USE_DB4) && ${USE_DB4} == YES
-	${CAT} ${FILESDIR}/site.config.m4-db4 >>${SITECONFIG}
-	${ECHO} -n ' DB4' >>${DESCR_SRC}
+	@${CAT} ${FILESDIR}/site.config.m4-db4 >>${SITECONFIG}
 .elif ${USE_DB2} == YES
-	${CAT} ${FILESDIR}/site.config.m4-db2 >>${SITECONFIG}
-	${ECHO} -n ' DB2' >>${DESCR_SRC}
+	@${CAT} ${FILESDIR}/site.config.m4-db2 >>${SITECONFIG}
 .endif
 .if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
-	${CAT} ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
-	${ECHO} -n ' STARTTLS' >>${DESCR_SRC}
+	@${CAT} ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
 .endif
 .if defined(USE_SASL2) && ${USE_SASL2} == YES
-	${CAT} ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
-	${ECHO} -n ' SASL2' >>${DESCR_SRC}
+	@${CAT} ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
 .elif defined(USE_SASL) && ${USE_SASL} == YES
-	${CAT} ${FILESDIR}/site.config.m4-sasl >>${SITECONFIG}
-	${ECHO} -n ' SASL' >>${DESCR_SRC}
+	@${CAT} ${FILESDIR}/site.config.m4-sasl >>${SITECONFIG}
 .endif
-	${ECHO} >>${DESCR_SRC}
 
 do-build:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
 	@${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 post-build:
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
+	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	@${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
 .if ${USE_DB2} == YES
-	${ECHO} "" >>${MESSAGE_SRC}
-	${ECHO} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all" >>${MESSAGE_SRC}
-	${ECHO} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"." >>${MESSAGE_SRC}
-	${ECHO} >>${PLIST_SRC} "@exec mv -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || true"
-	${ECHO} >>${PLIST_SRC} "@unexec mv -f /usr/sbin/makemap.8.8 /usr/sbin/makemap || true"
+	@${ECHO} "" >>${MESSAGE_SRC}
+	@${ECHO} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all" >>${MESSAGE_SRC}
+	@${ECHO} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"." >>${MESSAGE_SRC}
+	@${ECHO} >>${PLIST_SRC} "@exec mv -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || true"
+	@${ECHO} >>${PLIST_SRC} "@unexec mv -f /usr/sbin/makemap.8.8 /usr/sbin/makemap || true"
 .endif
 
 pre-install:
@@ -103,7 +95,7 @@ post-install:
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/sendmail
 
 .if ${USE_DB2} == YES
-	${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
+	@${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
 .endif
 
 	${INSTALL_DATA} ${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsm/libsm.a \
