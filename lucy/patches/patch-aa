@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/23 18:57:07 daprice Exp $
+
+--- Makefile.orig	Mon Aug 26 14:46:06 2002
++++ Makefile
+@@ -1,6 +1,6 @@
+ CC = cc
+ CFLAGS = -O
+-LIBS = -lpthread
++LIBS = -Wl,-R${PREFIX}/lib -L${PREFIX}/lib -lpthread
+ OBJS = lucy.o qual_trim.o abi.o vector.o splice.o poly.o
+ 
+ all: lucy beep
