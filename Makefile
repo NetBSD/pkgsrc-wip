@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1278 2004/05/14 14:38:31 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1278 2004/05/14 14:38:31 thomasklausner Exp $
+# $Id: Makefile,v 1.1279 2004/05/14 14:41:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1279 2004/05/14 14:41:52 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -154,11 +154,13 @@ SUBDIR+=	gDesklets-CornerXMMS
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
 SUBDIR+=	galib
+SUBDIR+=	gcc-3.4
 SUBDIR+=	gcc-3.4-ada
 #SUBDIR+=	gcl		# see TODO
 #SUBDIR+=	gcl-nox11	# see gcl/TODO
 SUBDIR+=	gcompris
 SUBDIR+=	gdam
+SUBDIR+=	gdb6
 SUBDIR+=	gdbada
 SUBDIR+=	geeklog
 SUBDIR+=	gettext-runtime
@@ -231,6 +233,7 @@ SUBDIR+=	icecast
 SUBDIR+=	ices
 SUBDIR+=	icmpchat
 SUBDIR+=	idled
+SUBDIR+=	ifstat
 SUBDIR+=	igal
 SUBDIR+=	iip
 SUBDIR+=	iisemulator
@@ -245,7 +248,11 @@ SUBDIR+=	isc-dhcpd
 SUBDIR+=	jabberd-aim
 SUBDIR+=	jabberd-msn
 SUBDIR+=	jakarta-log4j
+SUBDIR+=	jakarta-struts
+SUBDIR+=	jamaica
 SUBDIR+=	java-BigDecimal
+SUBDIR+=	java-asm
+SUBDIR+=	java-bcel
 SUBDIR+=	java-charva
 SUBDIR+=	java-getopt
 SUBDIR+=	java-gnucrypto
@@ -254,6 +261,7 @@ SUBDIR+=	java-gtk2
 SUBDIR+=	java-jep
 SUBDIR+=	java-jflex
 SUBDIR+=	java-muse
+SUBDIR+=	java-swingwt
 SUBDIR+=	java-swt
 SUBDIR+=	java-xmlrpc
 SUBDIR+=	javascript-guide
@@ -279,8 +287,8 @@ SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
 SUBDIR+=	ladspa
-SUBDIR+=	latex2rtf
 SUBDIR+=	lammpi
+SUBDIR+=	latex2rtf
 SUBDIR+=	lbdb
 SUBDIR+=	ldapbrowser
 SUBDIR+=	ldapdns
@@ -431,7 +439,7 @@ SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-DateTime
 SUBDIR+=	p5-DateTime-Event-Cron
-SUBDIR+=	p5-DateTime-LeapSecond
+SUBDIR+=	p5-DateTime-Locale
 SUBDIR+=	p5-DateTime-Set
 SUBDIR+=	p5-DateTime-TimeZone
 SUBDIR+=	p5-Encode-compat
