@@ -1,0 +1,11 @@
+This package will have some errors when running with gcc3.3.3. You can fix it by
+- changing void main(..) to int main(...)
+- Removing <cr> in the following lines in build-icm.c file
+ "usage:
+ \t%s [-options ...]
+ \t{reads traing seq from stdin}
+ \t{print model to stdout}\n\n", *argv);
+ fprintf (stderr,
+ "where options include:
+ \t-b\tprint the model as a binary file (default)
+ \t-h\tprint this help message                         

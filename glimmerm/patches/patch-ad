@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/02/25 21:41:33 daprice Exp $
+
+--- ../train/scoreATG.c.orig	2003-05-16 11:42:33.000000000 -0600
++++ ../train/scoreATG.c
+@@ -88,7 +88,7 @@ int  Is_Atg  (const int * , double *);
+ int *basetoint(char sequence[], long length);
+ int comp(const void *a, const void *b);
+ 
+-void main ( int argc, char * argv [])
++main ( int argc, char * argv [])
+ { 
+    FILE  * Infile, *Outfile;
+    char  S [MAX_STRING_LEN], T [MAX_STRING_LEN], Name[MAX_STRING_LEN];

@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/02/25 21:41:33 daprice Exp $
+
+--- ../train/updomeasure.c.orig	2003-05-16 11:44:26.000000000 -0600
++++ ../train/updomeasure.c
+@@ -24,7 +24,7 @@ void  Read_Models  ();
+ void compute_codings(int start,int end, double *cod);
+ void  Indep_Eval  (char X [], int T, double P [], double & Prob_X);
+ 
+-void main ( int argc, char * argv [])
++main ( int argc, char * argv [])
+ { 
+   char *sequence;
+   int seqlen;

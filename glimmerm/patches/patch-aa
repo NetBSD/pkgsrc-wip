@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/25 21:41:33 daprice Exp $
+
+--- ../train/build-icm.c.orig	2004-05-25 00:48:58.000000000 -0600
++++ ../train/build-icm.c
+@@ -699,15 +699,15 @@ process_options (int argc, char **argv)
+              PRINT_BINARY = TRUE;
+              break;
+            case 'h':   //list all avail options
+-             fprintf (stderr, 
+-"usage:
+-\t%s [-options ...] 
+-\t{reads traing seq from stdin} 
++             fprintf (stderr,\ 
++"usage: \
++\t%s [-options ...] \ 
++\t{reads traing seq from stdin} \ 
+ \t{print model to stdout}\n\n", *argv);
+-             fprintf (stderr, 
+-"where options include:
+-\t-b\tprint the model as a binary file (default)
+-\t-h\tprint this help message
++             fprintf (stderr, \ 
++"where options include: \
++\t-b\tprint the model as a binary file (default) \
++\t-h\tprint this help message \
+ \t-t\tprint the model as a text file\n");
+              exit (0);
+              break;

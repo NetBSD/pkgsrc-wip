@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/02/25 21:41:33 daprice Exp $
+
+--- ../train/score.c.orig	2003-05-16 11:42:05.000000000 -0600
++++ ../train/score.c
+@@ -86,7 +86,7 @@ int findfile(const int * S, tree *t);
+ void readtree(char *line, tree *t, int start);
+ int find(char *line, int start);
+ 
+-void main ( int argc, char * argv [])
++main ( int argc, char * argv [])
+ { 
+    FILE  * Infile, *Outfile;
+    char  S [MAX_STRING_LEN], T [MAX_STRING_LEN], Name[MAX_STRING_LEN];
