@@ -1,0 +1,26 @@
+$Id: TODO,v 1.1.1.1 2004/03/06 14:58:55 mpasternak Exp $
+
+audacity 1.2.0, which will replace audio/audacity some day.
+
+make PLIST when it compiles
+
+FreeBSD4 build breaks at:
+
+/usr/libexec/elf/ld: ../src/.libs/libsndfile.so: end: invalid version 27093
+(max 0)
+../src/.libs/libsndfile.so: could not read symbols: Bad value
+gmake[3]: *** [sndfile-info] B³±d 1
+gmake[3]: Leaving directory
+/usr/build/builds/wip/audacity12/work.mainframe/audacity-src-1.2.0/lib-src/libsndfile/examples'
+gmake[2]: *** [all-recursive] B³±d 1
+gmake[2]: Leaving directory
+/usr/build/builds/wip/audacity12/work.mainframe/audacity-src-1.2.0/lib-src/libsndfile'
+gmake[1]: *** [libsndfile/src/.libs/libsndfile.a] B³±d 2
+gmake[1]: Leaving directory
+/usr/build/builds/wip/audacity12/work.mainframe/audacity-src-1.2.0/lib-src'
+gmake: *** [audacity] B³±d 2
+*** Error code 2
+
+Stop.
+bmake: stopped in /usr/pkgsrc/wip/audacity12
+*** Error code 1

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/06 14:58:55 mpasternak Exp $
+
+SHA1 (audacity-src-1.2.0.tar.gz) = 379019855184d8e47809c2c53e384655eda70742
+Size (audacity-src-1.2.0.tar.gz) = 3341562 bytes
+SHA1 (patch-aa) = 5494f3fb6035f15a4447556f8cf4a0a2404a2259
+SHA1 (patch-ab) = 8630488f5a89b1542ac2a9f01080c36f1eac7c7d
