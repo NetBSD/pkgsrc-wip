@@ -1,11 +1,14 @@
-DISTNAME=       thcrut-1.2.4g
-CATEGORIES=     net security
-MASTER_SITES=   http://www.thc.org/releases/
+# $NetBSD: Makefile,v 1.2 2003/09/24 12:08:19 jmmv Exp $
+#
 
-MAINTAINER=     adam@monkeybyte.org
-HOMEPAGE=       http://www.thc.org
-COMMENT=        Gathers information from local and remote networks.
+DISTNAME=	thcrut-1.2.4g
+CATEGORIES=	net security
+MASTER_SITES=	http://www.thc.org/releases/
 
-GNU_CONFIGURE=  yes
+MAINTAINER=	adam@monkeybyte.org
+HOMEPAGE=	http://www.thc.org/
+COMMENT=	Gathers information from local and remote networks
+
+GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.pkg.mk"
