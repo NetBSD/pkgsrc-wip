@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/11/10 16:11:02 poppnk Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/10 22:08:15 jeremy-c-reed Exp $
 
 DISTNAME=		samba-3.0.0
 WRKSRC?=		${WRKDIR}/${DISTNAME}/source
@@ -16,8 +16,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX (v3)
-
-CONFLICTS=		samba-[0-9]*
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
