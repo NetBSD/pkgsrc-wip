@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/03/17 21:53:23 daprice Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/03/18 21:21:13 daprice Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -22,7 +22,7 @@ BUILDLINK_PACKAGES+=	gdal
 
 .if !empty(GDAL_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gdal+=	gdal>=1.2.5
-BUILDLINK_PKGSRCDIR.gdal?=	../../wip/gdal
+BUILDLINK_PKGSRCDIR.gdal?=	../../wip/gdal-lib
 .endif	# GDAL_BUILDLINK3_MK
 
 .include "../../misc/proj/buildlink3.mk"
