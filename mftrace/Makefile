@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:32:46 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/09 04:08:37 blef Exp $
 # based on FreeBSD-port pkgtrace originally by ijliao
 # created 2003-10-22 Patrick Atamaniuk <atamaniuk-pkgsrc@frobs.net>
 
@@ -15,7 +15,7 @@ DEPENDS+=	autotrace>=0.31:../../graphics/autotrace
 DEPENDS+=	t1utils>=1.27:../../fonts/t1utils
 DEPENDS+=	pfaedit>=20030712:../../fonts/pfaedit
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 MAKEFILE=	GNUmakefile
