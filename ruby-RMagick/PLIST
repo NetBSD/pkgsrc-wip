@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/15 17:02:47 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/06 12:44:47 obache Exp $
 ${RUBY_SITEARCHLIBDIR}/RMagick.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/RMagick.rb
 ${RUBY_EXAMPLESDIR}/RMagick/describe.rb
@@ -196,6 +196,7 @@ ${RUBY_DOCDIR}/RMagick/ex/get_type_metrics.rb
 ${RUBY_DOCDIR}/RMagick/ex/get_pixels.jpg
 ${RUBY_DOCDIR}/RMagick/ex/get_pixels.rb
 ${RUBY_DOCDIR}/RMagick/ex/gradientfill.rb
+${RUBY_DOCDIR}/RMagick/ex/gradientfill.gif
 ${RUBY_DOCDIR}/RMagick/ex/grav.gif
 ${RUBY_DOCDIR}/RMagick/ex/grav.rb
 ${RUBY_DOCDIR}/RMagick/ex/gravity.rb
