@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1475 2004/09/25 00:44:00 grantbeattie Exp $
-# $NetBSD: Makefile,v 1.1475 2004/09/25 00:44:00 grantbeattie Exp $
+# $Id: Makefile,v 1.1476 2004/09/26 05:30:15 marmfield Exp $
+# $NetBSD: Makefile,v 1.1476 2004/09/26 05:30:15 marmfield Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -479,6 +479,7 @@ SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Class-Factory-Util
 SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-Convert-BinHex
+SUBDIR+=	p5-Crypt-SmbHash
 SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-DateTime
 SUBDIR+=	p5-DateTime-Event-Cron
