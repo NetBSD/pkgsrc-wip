@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/17 18:29:00 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/17 21:26:57 thomasklausner Exp $
 #
 
 DISTNAME=		libXfixes-2.0.1
@@ -20,6 +20,6 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	xfixes.pc.in
 
 .include "../../wip/libX11/buildlink3.mk"
-.include "../../wip/fixesext/buildlink3.mk"
+.include "../../x11/fixesext/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
