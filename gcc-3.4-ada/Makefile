@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/04/24 14:13:52 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.30 2004/04/25 07:43:35 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
@@ -20,6 +20,7 @@ HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=        --enable-languages="c,ada"
 WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}
+PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 # An Ada compiler is required to build this pkg. Two
 may be used:
@@ -104,6 +105,14 @@ post-install:
 	${ECHO} '"$$@"' >> ${WRKDIR}/ada
 	${INSTALL_DATA} ${WRKDIR}/ada ${LOCALBASE}/bin/ada
 	${CHMOD} +x ${WRKDIR}/ada ${LOCALBASE}/bin/ada
+	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
+	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print	\
+		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"	\
+		>> ${PLIST_SRC}
+	${FIND} ${GCC_PREFIX} -type d -print	\
+		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
+		>> ${PLIST_SRC}
+
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_GCC3)
