@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/27 13:09:25 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/27 13:19:39 mpasternak Exp $
 #
 
 DISTNAME=		Nevow-0.2.0
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.divmod.org/Home/Projects/Nevow/index.html
 COMMENT=		Next-generation web application templating system
 
 DEPENDS+=		${PYPKGPREFIX}-twisted>=1.2.0:../../wip/py-twisted
-DEPENDS+=		${PYPKGPREFIX}-XML>=0.8.3:../../textproc/py-xml
+DEPENDS+=		${PYPKGPREFIX}-xml>=0.8.3:../../textproc/py-xml
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/N/n/}
 PY_PATCHPLIST=		yes
