@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/31 13:30:12 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/09 23:46:35 blef Exp $
 
 DISTNAME=		Frontier-RPC-0.06
 PKGNAME=		p5-${DISTNAME}
@@ -10,7 +10,9 @@ HOMEPAGE=		http://datetime.perl.org/
 COMMENT=		Perl module to handle client/server xmlrpc
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
+
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Frontier/RPC/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
