@@ -1,12 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/11/04 05:04:31 mpasternak Exp $
+$NetBSD: patch-aa,v 1.2 2003/11/04 23:43:22 mpasternak Exp $
 
---- include/paradox.h~	Tue Nov  4 05:43:42 2003
-+++ include/paradox.h	Tue Nov  4 05:46:32 2003
-@@ -5,7 +5,6 @@
+--- include/paradox.h~	Thu Oct 30 10:15:23 2003
++++ include/paradox.h	Wed Nov  5 00:37:47 2003
+@@ -5,7 +5,9 @@
  #define PX_USE_ICONV 1
  
  #include <stdio.h>
--#include <stdbool.h>
++#ifndef __NetBSD__
+ #include <stdbool.h>
++#endif
  #if PX_USE_RECODE
  #include <recode.h>
  #else
