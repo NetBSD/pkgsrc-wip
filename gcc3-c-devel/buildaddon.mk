@@ -1,6 +1,6 @@
-# $NetBSD: buildaddon.mk,v 1.1.1.1 2003/12/11 22:14:51 johnrshannon Exp $
+# $NetBSD: buildaddon.mk,v 1.2 2003/12/14 22:39:20 blef Exp $
 
-.include "../../lang/gcc3-c-devel/Makefile.common"
+.include "../../wip/gcc3-c-devel/Makefile.common"
 
 pre-build:
 	(cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} tconfig.h)
