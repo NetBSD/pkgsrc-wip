@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.278 2003/06/27 22:35:12 jmmv Exp $
-# $NetBSD: Makefile,v 1.278 2003/06/27 22:35:12 jmmv Exp $
+# $Id: Makefile,v 1.279 2003/06/27 22:41:28 marc Exp $
+# $NetBSD: Makefile,v 1.279 2003/06/27 22:41:28 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -193,6 +193,7 @@ SUBDIR+=	pixieplus
 SUBDIR+=	plugger
 SUBDIR+=	poedit
 SUBDIR+=	portmap
+SUBDIR+=	postgresql-autodoc
 SUBDIR+=	ppp
 SUBDIR+=	procps
 SUBDIR+=	psh
