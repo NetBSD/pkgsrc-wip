@@ -1,2 +1,5 @@
-MD5 (galib245.tar.gz) = 5a19b7692c3c18741cc0a120d36de165
-MD5 (patch-aa) = cb3c71cbbd2d9dea3b294aff5528ca98
+$NetBSD: distinfo,v 1.2 2003/06/07 16:06:40 cjep Exp $
+
+SHA1 (galib245.tar.gz) = 7fb5de20b01aa73365112872936dae545c049711
+Size (galib245.tar.gz) = 385224 bytes
+SHA1 (patch-aa) = 2019cf2bde67679518b1ccf25033ee5050f974f9

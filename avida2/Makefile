@@ -1,5 +1,7 @@
-DISTNAME=       avida-2.0b1
+# $NetBSD: Makefile,v 1.2 2003/06/07 16:04:35 cjep Exp $
+#
 
+DISTNAME=       avida-2.0b1
 CATEGORIES=     misc
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=avida/}
 
