@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/08/02 04:47:37 bencollver Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/18 14:12:37 bencollver Exp $
 #
 
-DISTNAME=		fluidsynth-1.0.4
+DISTNAME=		fluidsynth-1.0.5
 CATEGORIES=		audio
 MASTER_SITES=		http://savannah.nongnu.org/download/fluid/
 
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 
-CFLAGS+=		-DDEVOSSAUDIO="\"\\\"${DEVOSSAUDIO}\\\"\""
+CFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 LDFLAGS+=		${LIBOSSAUDIO}
 
 .include "../../devel/readline/buildlink3.mk"
