@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/08 19:22:34 airhead Exp $
+
+SHA1 (hpoj-0.91.tgz) = 36785cf1a925f569ed3983b8c068620e2c9b4456
+Size (hpoj-0.91.tgz) = 542475 bytes
+SHA1 (patch-aa) = 77a01a3e5bb774b2024ebc7d2f11a3d4038962b0
+SHA1 (patch-ab) = 4fed4fa5e6546f2c9039779095879319aab9acbe
+SHA1 (patch-ac) = a4b30ee6d1ea382ddf888aa56e34185381707840

@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/01/08 19:22:34 airhead Exp $
+
+--- Makefile.in.orig	2003-09-23 03:16:41.000000000 +0200
++++ Makefile.in
+@@ -59,6 +59,7 @@ distclean:
+ 
+ INSTALL=@INSTALL@
+ INSTALL_PROGRAM=@INSTALL_PROGRAM@
++INSTALL_SCRIPT=@INSTALL_SCRIPT@
+ INSTALL_DATA=@INSTALL_DATA@
+ LN_S=@LN_S@
+ 
+@@ -69,6 +70,7 @@ bindir=@bindir@
+ bindir_program=@bindir_program@
+ sbindir=@sbindir@
+ sbindir_program=@sbindir_program@
++sbindir_script=@sbindir_script@
+ 
+ libdir=@libdir@
+ libdir_program=lib/hpojip/libhpojip.so.*.* lib/ptal/libptal.so.*.* lib/sane/libsane-hpoj.so.*.*
+@@ -95,6 +97,9 @@ user_install:
+ 	@ if test -n "$(sbindir_program)" ; then \
+ 		$(INSTALL_PROGRAM) $(sbindir_program) $(sbindir) ; \
+ 	fi
++	@ if test -n "$(sbindir_script)" ; then \
++		$(INSTALL_SCRIPT) $(sbindir_script) $(sbindir) ; \
++	fi
+ 	@ if test -n "$(libdir_program)" ; then \
+ 		$(INSTALL_PROGRAM) $(libdir_program) $(libdir) ; \
+ 	fi

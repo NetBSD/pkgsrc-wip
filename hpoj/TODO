@@ -1,0 +1,3 @@
+$NetBSD: TODO,v 1.1.1.1 2005/01/08 19:22:34 airhead Exp $
+
+Add options for Qt and snmp using pkg.options framework.
