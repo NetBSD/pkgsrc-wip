@@ -3,7 +3,7 @@
 # APST-GET : Yet Another PkgSrc Tool to manage packages.
 #
 # AUTHOR: pancake < pancake@phreaker.net >
-# DATE: 2005/02/26
+# DATE: 2005/03/01
 #
 # depends: pkg_find, pkg_tarup, awk, pkglint, pkg_chk
 #
@@ -194,31 +194,32 @@ do_relink() {
 }
 
 required_deps() {
-STEP=1
-for A in `${MAKE} show-installed-depends` ; do
-   case ${STEP} in
-   "1")
-      PKG="`echo $A | awk -F '>' '{print $1 }'`"
-      STEP=2
-      ;;
-   "2")
-      STEP=3
-      ;;
-   "3")
-      STEP=1
-      if [ -z "`echo ${A} | grep -e '-' `" ]; then
-	if [ -n "`pkg_info ${A} 2> /dev/null`" ]; then
-         echo ${PKG} ;
+	STEP=1
+	for A in `${MAKE} show-installed-depends` ; do
+	case ${STEP} in
+	"1")
+		PKG="`echo $A | awk -F '>' '{print $1 }'`"
+		STEP=2
+		;;
+	"2")
+		STEP=3
+		;;
+	"3")
+		STEP=1
+		if [ -z "`echo ${A} | grep -e '-' `" ]; then
+			if [ -n "`pkg_info ${A} 2> /dev/null`" ]; then
+			echo ${PKG} ;
+			fi
+		PKG=${A}
+		STEP=2
+		fi
+		;;
+	esac
+	done
+
+	if [ "${A}" = "=>" ]; then
+		echo ${PKG}
 	fi
-         PKG=${A}
-         STEP=2
-       fi
-      ;;
-   esac
-done
-if [ "${A}" = "=>" ]; then
-   echo ${PKG}
-fi
 }
 
 do_auto_relink() {
@@ -307,7 +308,12 @@ do_install() {
 	DEPS="${DEPS} ${DIR}"
 	for A in ${DEPS} ; do
 		if [ -n "`echo ${REQUIRED} | grep ${A}`" ]; then
-			CHK="required"
+			IS_INSTALLED="`pkg_info ${A} 2> /dev/null`"
+			if [ -z "${IS_INSTALLED}" ]; then
+				CHK="missing"
+			else
+				CHK="required"
+			fi
 		else
 			CHK=`check_version ${A}`
 		fi
@@ -664,10 +670,12 @@ case "$1" in
 			exit 1
 		fi
 	fi
+
 	if [ ! -d "${PKGSRC_DIR}/${DIR}" ]; then
 		echo "Package ${PKGSRC_DIR}/${DIR} does not exist."
 		exit 1
 	fi
+
 	cd ${PKGSRC_DIR}/${DIR}
 	PKGNAM=`${MAKE} show-var VARNAME=PKGNAME`
 	PKGOPT=`${MAKE} show-var VARNAME=PKG_SUPPORTED_OPTIONS`
