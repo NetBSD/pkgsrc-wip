@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/30 21:35:17 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/30 21:38:07 minskim Exp $
 #
 
 DISTNAME=		aliados-0.1.1
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 NO_CONFIGURE=		YES
+USE_LANGUAGES=		c++
 USE_NCURSES=		# tigetstr tparm setupterm
 
 INSTALLATION_DIRS=	bin
