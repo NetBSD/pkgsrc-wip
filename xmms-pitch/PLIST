@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/03 16:48:50 mpasternak Exp $
+lib/xmms/Effect/libpitch.so
