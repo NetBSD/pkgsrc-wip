@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.638 2003/11/22 12:12:52 mpasternak Exp $
-# $NetBSD: Makefile,v 1.638 2003/11/22 12:12:52 mpasternak Exp $
+# $Id: Makefile,v 1.639 2003/11/22 12:50:06 mpasternak Exp $
+# $NetBSD: Makefile,v 1.639 2003/11/22 12:50:06 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -413,6 +413,7 @@ SUBDIR+=	py-Reverend
 SUBDIR+=	py-Soya
 SUBDIR+=	py-ZODB
 SUBDIR+=	py-albatross
+SUBDIR+=	py-ao
 SUBDIR+=	py-biggles
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-cjkcodecs
@@ -424,11 +425,13 @@ SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-ipython
 SUBDIR+=	py-libpcap
 SUBDIR+=	py-oak
+SUBDIR+=	py-ogg
 SUBDIR+=	py-spambayes
 SUBDIR+=	py-spark
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-twisted
 SUBDIR+=	py-willow
+# SUBDIR+=	py-vorbis # doesn't compile yet; see TODO
 SUBDIR+=	py-zsi
 SUBDIR+=	py23-html-docs
 SUBDIR+=	pysite
@@ -440,8 +443,7 @@ SUBDIR+=	rapidsvn
 SUBDIR+=	rc.subr
 SUBDIR+=	rcorder
 SUBDIR+=	regexxer
-# wip/rekall doesn't compile yet
-# SUBDIR+=	rekall
+# SUBDIR+=	rekall # doesn't compile yet; see TODO
 SUBDIR+=	rlpr
 SUBDIR+=	rolo
 SUBDIR+=	rosegarden-current
