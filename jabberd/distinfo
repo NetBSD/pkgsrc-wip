@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2003/10/09 02:26:23 xtraeme Exp $
+$NetBSD: distinfo,v 1.6 2003/11/17 10:18:39 xtraeme Exp $
 
-SHA1 (jabber-1.4.2.tar.gz) = aa0bc2e9815e4fa4a1ca8ba7f320bfd3c85ba11f
-Size (jabber-1.4.2.tar.gz) = 690217 bytes
-SHA1 (patch-aa) = ecd92f585bfe59cf0b4c71efa41e0a47403a9f3a
+SHA1 (jabberd-1.4.3.tar.gz) = cf968017c8a4f2d0dc3c139c712846a722d9bbed
+Size (jabberd-1.4.3.tar.gz) = 258016 bytes
+SHA1 (patch-aa) = f51bb9bbab6e884d6f36f4e67c7d76a38fd7db4f
 SHA1 (patch-ab) = 8685472f1acc4b5ae4cc15627076ff67b6964a25
+SHA1 (patch-ac) = 4074d63be28dcaf47e7f9be8487938777b227964

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2003/10/08 00:17:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2003/11/17 10:18:39 xtraeme Exp $
 #
 
-DISTNAME=		jabber-1.4.2
-PKGNAME=		${DISTNAME:S/-/d-/}
+DISTNAME=		jabberd-1.4.3
+#PKGNAME=		${DISTNAME:S/-/d-/}
 CATEGORIES=		net
 MASTER_SITES=		http://jabberd.jabberstudio.org/1.4/dist/
 
@@ -30,7 +30,11 @@ INCDIR=			${PREFIX}/include/jabberd
 
 BUILD_DEFS+=		JABBERD_USER JABBERD_GROUP \
 			JABBERD_LOGDIR	JABBERD_SPOOLDIR \
-			JABBERD_PIDDIR
+			JABBERD_PIDDIR  USE_INET6
+
+.if !empty(USE_INET6:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-ipv6
+.endif
 
 JABBERD_USER?=		jabberd
 JABBERD_GROUP?=		jabberd
@@ -59,8 +63,8 @@ post-extract:
 pre-configure:
 	${SED}	\
 		-e "s|@LIBDIR@|${PREFIX}/lib/jabberd|g" \
-		-e "s|@LOG_DIR@|${JABBERD_LOGDIR}|g" \
-		-e "s|@PID_DIR@|${JABBERD_PIDDIR}|g" \
+		-e "s|@LOGDIR@|${JABBERD_LOGDIR}|g" \
+		-e "s|@PIDDIR@|${JABBERD_PIDDIR}|g" \
 		-e "s|@SPOOLDIR@|${JABBERD_SPOOLDIR}|g" \
 		${WRKSRC}/jabber.xml.in > ${WRKSRC}/jabber.xml
 
@@ -78,5 +82,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/lib.h ${INCDIR}
 	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/xmlparse.h ${INCDIR}
 
+.include "../../devel/pth/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
