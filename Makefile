@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1376 2004/07/12 14:47:53 ianzag Exp $
-# $NetBSD: Makefile,v 1.1376 2004/07/12 14:47:53 ianzag Exp $
+# $Id: Makefile,v 1.1377 2004/07/12 16:07:19 ianzag Exp $
+# $NetBSD: Makefile,v 1.1377 2004/07/12 16:07:19 ianzag Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -656,6 +656,7 @@ SUBDIR+=	scite
 SUBDIR+=	scm
 SUBDIR+=	scourge
 SUBDIR+=	scponly
+SUBDIR+=	scribus
 SUBDIR+=	send-pr
 SUBDIR+=	sendmail813
 SUBDIR+=	sgmltools-lite
