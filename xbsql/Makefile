@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/17 02:56:55 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/06 15:51:15 mpasternak Exp $
 #
 
 DISTNAME=		xbsql-0.11
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.rekallrevealed.org/packages/
 COMMENT=		SQL frontend for DB4 (DBF) files with xbase
+
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
