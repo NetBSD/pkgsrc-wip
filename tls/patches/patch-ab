@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2004/02/28 00:51:24 rillig Exp $
+$NetBSD: patch-ab,v 1.2 2004/05/12 13:14:19 thomasklausner Exp $
 
---- Makefile.in~	Sun Sep 22 18:39:11 2002
-+++ Makefile.in	Sun Sep 22 18:41:23 2002
-@@ -120,6 +120,7 @@
+--- Makefile.in.orig	2000-08-23 19:35:24.000000000 +0200
++++ Makefile.in
+@@ -120,6 +120,7 @@ POST_UNINSTALL = :
  PACKAGE = @PACKAGE@
  VERSION = @VERSION@
  CC = @CC@

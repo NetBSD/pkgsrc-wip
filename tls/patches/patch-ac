@@ -1,34 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2004/02/28 00:51:24 rillig Exp $
+$NetBSD: patch-ac,v 1.2 2004/05/12 13:14:19 thomasklausner Exp $
 
---- configure	Sun Sep 22 18:43:37 2002
-+++ configure.new	Sun Sep 22 18:43:16 2002
-@@ -1649,6 +1649,7 @@
- 
- 
- 
-+
- #--------------------------------------------------------------------
- # Set the default compiler switches based on the --enable-symbols 
- # option.
-@@ -1665,7 +1666,7 @@
-     esac
- 
-     echo $ac_n "checking for build with symbols""... $ac_c" 1>&6
--echo "configure:1669: checking for build with symbols" >&5
-+echo "configure:1670: checking for build with symbols" >&5
-     # Check whether --enable-symbols or --disable-symbols was given.
- if test "${enable_symbols+set}" = set; then
-   enableval="$enable_symbols"
-@@ -1814,7 +1815,7 @@
- 
- 
-     echo $ac_n "checking for tclsh""... $ac_c" 1>&6
--echo "configure:1818: checking for tclsh" >&5
-+echo "configure:1819: checking for tclsh" >&5
- 
-     if eval "test \"`echo '$''{'ac_cv_path_tclsh'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
-@@ -2035,6 +2036,7 @@
+--- configure.orig	2000-08-23 19:34:32.000000000 +0200
++++ configure
+@@ -1448,7 +1448,7 @@ echo "configure:1438: checking for Tcl p
+ 	    TCL_PLATFORM_DIR_NATIVE=${TCL_WIN_DIR_NATIVE}
+ 	;;
+ 	*)
+-	    TCL_TOP_DIR_NATIVE='$(TCL_SRC_DIR)'
++	    TCL_TOP_DIR_NATIVE='$(LOCALBASE)/include/tcl'
+ 	    TCL_GENERIC_DIR_NATIVE='$(TCL_TOP_DIR_NATIVE)/generic'
+ 	    TCL_UNIX_DIR_NATIVE='$(TCL_TOP_DIR_NATIVE)/unix'
+ 	    TCL_WIN_DIR_NATIVE='$(TCL_TOP_DIR_NATIVE)/win'
+@@ -2035,6 +2035,7 @@ s%@TCL_TOOL_DIR_NATIVE@%$TCL_TOOL_DIR_NA
  s%@TCL_PLATFORM_DIR_NATIVE@%$TCL_PLATFORM_DIR_NATIVE%g
  s%@TCL_INCLUDES@%$TCL_INCLUDES%g
  s%@CLEANFILES@%$CLEANFILES%g
