@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/09 20:26:46 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/21 20:39:34 poppnk Exp $
 bin/mksend
 share/mksend/db/arp.xml
 share/mksend/db/ethernet.xml
@@ -7,7 +7,6 @@ share/mksend/db/ipv4.xml
 share/mksend/db/tcp.xml
 share/mksend/db/vlan.xml
 share/mksend/scripts/troute
-share/mksend/scripts/vimks
 @dirrm share/mksend/scripts
 @dirrm share/mksend/db
 @dirrm share/mksend
