@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1296 2004/05/27 11:00:22 mpasternak Exp $
-# $NetBSD: Makefile,v 1.1296 2004/05/27 11:00:22 mpasternak Exp $
+# $Id: Makefile,v 1.1297 2004/05/27 16:03:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1297 2004/05/27 16:03:23 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -28,6 +28,7 @@ SUBDIR+=	aolserver
 SUBDIR+=	ap-auth-mysql
 SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-frontpage
+SUBDIR+=	ap2-jk2
 SUBDIR+=	ap-macro
 SUBDIR+=	ap-ometer
 SUBDIR+=	ap-php5
@@ -466,6 +467,7 @@ SUBDIR+=	parsifal
 SUBDIR+=	passepartout
 SUBDIR+=	patchutils
 SUBDIR+=	pbl
+SUBDIR+=	pcsx
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdns
 SUBDIR+=	pdq
