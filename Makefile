@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.893 2004/01/18 19:06:31 jgoamakf Exp $
-# $NetBSD: Makefile,v 1.893 2004/01/18 19:06:31 jgoamakf Exp $
+# $Id: Makefile,v 1.894 2004/01/19 20:58:48 marc Exp $
+# $NetBSD: Makefile,v 1.894 2004/01/19 20:58:48 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -315,6 +315,7 @@ SUBDIR+=	libogg-nightly
 SUBDIR+=	libol
 #SUBDIR+=	libpathan	# needs xerces-c-2.3.0 in pkg/23861
 SUBDIR+=	libpixregion
+SUBDIR+=	libpixman
 SUBDIR+=	libprelude
 SUBDIR+=	libstatgrab
 SUBDIR+=	libtlen
