@@ -1,13 +1,48 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/14 17:36:43 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/08/10 17:45:02 dhowland Exp $
 bin/bnr2
 lib/bnr2/BNR2
 lib/bnr2/libborqt-6.9-qt2.3.so
 lib/bnr2/libborqt-6.9.0-qt2.3.so
-share/icons/bnr2/bnr2a.png
+lib/bnr2/Themes
+share/icons/bnr2/BNR2a.png
 share/doc/bnr2/changes.txt
 share/doc/bnr2/shutdown-readme.txt
-share/doc/bnr2/tgz-readme.txt
-share/doc/bnr2/install-script-readme.txt
+share/doc/bnr2/BNR-readme.txt
+share/themes/bnr2/Luna/Arrows.bmp
+share/themes/bnr2/Luna/Button.bmp
+share/themes/bnr2/Luna/CheckBox.bmp
+share/themes/bnr2/Luna/ComboBox.bmp
+share/themes/bnr2/Luna/EditText.bmp
+share/themes/bnr2/Luna/GroupBox.bmp
+share/themes/bnr2/Luna/Header.bmp
+share/themes/bnr2/Luna/ProgressBar.bmp
+share/themes/bnr2/Luna/RadioButton.bmp
+share/themes/bnr2/Luna/ScrollBar.bmp
+share/themes/bnr2/Luna/TabBody.bmp
+share/themes/bnr2/Luna/Tabs.bmp
+share/themes/bnr2/Luna/ToolBarButton.bmp
+share/themes/bnr2/Luna/ToolBarSep.bmp
+share/themes/bnr2/Luna/TrackBar.bmp
+share/themes/bnr2/Silver/Arrows.bmp
+share/themes/bnr2/Silver/Button.bmp
+share/themes/bnr2/Silver/CheckBox.bmp
+share/themes/bnr2/Silver/ComboBox.bmp
+share/themes/bnr2/Silver/EditText.bmp
+share/themes/bnr2/Silver/GroupBox.bmp
+share/themes/bnr2/Silver/Header.bmp
+share/themes/bnr2/Silver/ProgressBar.bmp
+share/themes/bnr2/Silver/RadioButton.bmp
+share/themes/bnr2/Silver/ScrollBar.bmp
+share/themes/bnr2/Silver/TabBody.bmp
+share/themes/bnr2/Silver/Tabs.bmp
+share/themes/bnr2/Silver/ToolBarButton.bmp
+share/themes/bnr2/Silver/ToolBarSep.bmp
+share/themes/bnr2/Silver/TrackBar.bmp
+share/themes/bnr2/Silver/checkedmenu.bmp
+share/themes/bnr2/Silver/checkedmenu.png
+@dirrm share/themes/bnr2/Luna
+@dirrm share/themes/bnr2/Silver
+@dirrm share/themes/bnr2
 @dirrm share/icons/bnr2
 @dirrm share/doc/bnr2
 @dirrm lib/bnr2
