@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/07/18 03:00:51 bencollver Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/19 13:45:34 bencollver Exp $
 
 --- Makefile.inc.orig	Tue Apr  8 09:36:00 2003
 +++ Makefile.inc
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/18 03:00:51 bencollver Exp $
  
  $(PLUGIN_FILE): $(OBJECTS)
 -	$(CC) -o $@ $^ -ldumb -lxmms -shared
-+	$(CC) -o $@ $^ -ldumb -lxmms -shared `pkg-config gtk+ --libs`
++	$(CC) -o $@ $^ -ldumb -lxmms -shared `gtk-config --libs`
  
  $(OBJDIR)/%.o: %.c
  	$(CC) -c -o $@ $(CFLAGS) $<

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/18 03:00:51 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/19 13:45:33 bencollver Exp $
 #
 
 DISTNAME=		dumb-xmms-0.1
@@ -17,6 +17,5 @@ USE_BUILDLINK2=		yes
 
 .include "../../wip/dumb/buildlink2.mk"
 .include "../../audio/xmms/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
