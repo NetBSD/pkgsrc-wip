@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/09 12:42:51 zul_ Exp $
+
+SHA1 (eboard-0.9.5.tar.gz) = 6f4353176641bea22c0866a2eea279e63970d3e8
+Size (eboard-0.9.5.tar.gz) = 449330 bytes
+SHA1 (patch-aa) = 34c08491dcf41d8ea30f66a0ecba72a12097cddb
