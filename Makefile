@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.845 2004/01/04 07:52:29 bjan2 Exp $
-# $NetBSD: Makefile,v 1.845 2004/01/04 07:52:29 bjan2 Exp $
+# $Id: Makefile,v 1.846 2004/01/04 07:53:42 bjan2 Exp $
+# $NetBSD: Makefile,v 1.846 2004/01/04 07:53:42 bjan2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -131,7 +131,7 @@ SUBDIR+=	e2fsprogs
 SUBDIR+=	eag
 SUBDIR+=	ed
 SUBDIR+=	eic
-SUBDIR+=	elinks
+SUBDIR+=	elinks09
 SUBDIR+=	elvis
 SUBDIR+=	elvis-x11
 SUBDIR+=	emirror
