@@ -1,13 +1,7 @@
-$Id: TODO,v 1.1.1.1 2004/01/04 03:54:59 mpasternak Exp $
+$Id: TODO,v 1.2 2004/01/04 04:35:21 jeremy-c-reed Exp $
 
  -- This _does_ build on FreeBSD-4-STABLE
-
-This doesn't build.
- -- propably NetBSD-current or NetBSD-stable... ?
- 
-In file included from ab.c:174:
-/usr/pkg/include/apr-0/apr_poll.h:109: redefinition of `apr_pollfd_t'
-/usr/pkg/include/apr_network_io.h:188: `apr_pollfd_t' previously declared here
+ -- This builds and installs on NetBSD 1.6.2_RC3
 
 This could use devel/apr but I don't to have an dependency, because
 using --enable-static-ab.
