@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1033 2004/02/26 22:59:53 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1033 2004/02/26 22:59:53 xtraeme Exp $
+# $Id: Makefile,v 1.1034 2004/02/26 23:55:10 poppnk Exp $
+# $NetBSD: Makefile,v 1.1034 2004/02/26 23:55:10 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -567,6 +567,7 @@ SUBDIR+=	regexxer
 #SUBDIR+=	rekall # doesn't compile yet; see TODO
 SUBDIR+=	resourceext
 SUBDIR+=	rlpr
+SUBDIR+=	rssh
 SUBDIR+=	rosegarden-current
 SUBDIR+=	rox-gtk2
 SUBDIR+=	ruby-amrita
