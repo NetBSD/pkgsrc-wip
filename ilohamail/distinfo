@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/08/20 09:35:07 poppnk Exp $
+$NetBSD: distinfo,v 1.6 2004/12/14 12:35:10 poppnk Exp $
 
-SHA1 (IlohaMail-0.8.13.tar.gz) = a70e100941a7dfbf87ced6d400700f90762d9100
-Size (IlohaMail-0.8.13.tar.gz) = 364963 bytes
-SHA1 (patch-aa) = eddef6f64afbec817a44e6bdfe4612328ef78591
+SHA1 (IlohaMail-0.8.14-rc1.tar.gz) = 00928b89b5e8c2d1a174f53a5c9af1f99bacc42b
+Size (IlohaMail-0.8.14-rc1.tar.gz) = 361885 bytes

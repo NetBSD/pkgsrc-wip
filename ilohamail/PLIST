@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/30 15:39:09 bubuchka Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/12/14 12:35:10 poppnk Exp $
 share/httpd/htdocs/IlohaMail/conf-orig/conf.inc
 share/httpd/htdocs/IlohaMail/conf-orig/custom_auth.inc
 share/httpd/htdocs/IlohaMail/conf-orig/db_conf.php
@@ -45,6 +45,7 @@ share/httpd/htdocs/IlohaMail/include/encryption.inc
 share/httpd/htdocs/IlohaMail/include/gpg.inc
 share/httpd/htdocs/IlohaMail/include/header_main.inc
 share/httpd/htdocs/IlohaMail/include/icl.inc
+share/httpd/htdocs/IlohaMail/include/icl_commons.inc
 share/httpd/htdocs/IlohaMail/include/idba.MySQL.inc
 share/httpd/htdocs/IlohaMail/include/identities.inc
 share/httpd/htdocs/IlohaMail/include/imap.inc
@@ -61,7 +62,6 @@ share/httpd/htdocs/IlohaMail/include/mime.inc
 share/httpd/htdocs/IlohaMail/include/mod_base64.inc
 share/httpd/htdocs/IlohaMail/include/nocache.inc
 share/httpd/htdocs/IlohaMail/include/pop3.inc
-share/httpd/htdocs/IlohaMail/include/pop3.inc.orig
 share/httpd/htdocs/IlohaMail/include/pref_header.inc
 share/httpd/htdocs/IlohaMail/include/qp_enc.inc
 share/httpd/htdocs/IlohaMail/include/read_message_handler.inc

@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/05/31 17:37:34 xtraeme Exp $
+$NetBSD: MESSAGE,v 1.2 2004/12/14 12:35:10 poppnk Exp $
 
 You must add an alias to your httpd.conf pointing to ilohamail directory,
 for example:
 
-Alias /webmail "${PREFIX}/share/httpd/htdocs/IlohaMail/source/index.php/"
+Alias /webmail "${PREFIX}/share/httpd/htdocs/IlohaMail/source/index.php"
 
 ===========================================================================
