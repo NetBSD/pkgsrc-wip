@@ -1,0 +1,16 @@
+The Security Auditor's Research Assistant (SARA) is a third
+generation Unix-based security analysis tool that is:
+1. Supports the FBI/SANS Top 20 Consensus (2 Oct 03)
+2. Operates on most Unix-type platforms including MAC OS X
+3. Fully complies with the SANS Top 20 specification
+4. Remote self scan and API facilities.
+5. Used for CIS benchmark initiatives
+6. Plug-in facility for third party apps
+7. SANS/ISTS Certified
+8. CVE standards support
+9. Enterprise search module
+10. Standalone or daemon mode
+11. Free-use open SATAN oriented license
+12. Updated twice a month
+13. User extension support
+14. Based on the SATAN model
