@@ -1,12 +1,14 @@
-$Id: TODO,v 1.2 2003/06/06 02:17:42 xtraeme Exp $
+$Id: TODO,v 1.3 2003/06/06 05:51:19 airhead Exp $
 
 - Perhaps add the X11 GUI support? (This doesn't compile yet, though)
 
 --
 
-1) Replace GNU_CONFIGURE= no with HAS_CONFIGURE.
-2) We don't need to put the CONFIGURE_ARGS with --bindir, --datadir, etc
+Questions remaining:
+1) We don't need to put the CONFIGURE_ARGS with --bindir, --datadir, etc
      pkgsrc will do it.
-3) Patch the configure script and replace the harcoded PATHS with PREFIX
+2) Patch the configure script and replace the harcoded PATHS with PREFIX
      or X11BASE in the right place.
-4) Add USE_X11 to the Makefile.     
+3) Add USE_X11 to the Makefile.
+
+This last is only when the GUI is built.
