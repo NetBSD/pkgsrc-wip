@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/06/09 08:15:52 tripledes Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/09 10:05:08 ppostma Exp $
 
-DISTNAME=       spamd_20040511
-PKGNAME=        ${DISTNAME:S/_/-/}
+DISTNAME=       spamd-20040609
 CATEGORIES=     mail
 MASTER_SITES=   http://nedbsd.nl/~ppostma/pf/
 
