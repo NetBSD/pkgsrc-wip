@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/16 03:45:51 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/16 03:50:43 jeremy-c-reed Exp $
 
 DISTNAME=		strace-4.4.94
-CATEGORIES=		sysutils
+CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=strace/}
 EXTRACT_SUFX=		.tar.bz2
 
