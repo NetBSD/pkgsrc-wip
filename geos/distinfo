@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/08 18:02:43 daprice Exp $
+$NetBSD: distinfo,v 1.2 2005/03/18 21:17:35 daprice Exp $
 
-SHA1 (geos-2.0.0.tar.bz2) = 68ebffa7e18f4edf932e98bd3cf20d58a439c22e
-Size (geos-2.0.0.tar.bz2) = 512262 bytes
+SHA1 (geos-1.0.0.tar.bz2) = edfabd9bbc4e47d911b3f250c90c989f321ede75
+Size (geos-1.0.0.tar.bz2) = 324317 bytes

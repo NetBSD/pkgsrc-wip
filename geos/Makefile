@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/08 18:02:43 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/18 21:17:35 daprice Exp $
 #
 
-DISTNAME=		geos-2.0.0
-CATEGORIES=		wip
+DISTNAME=		geos-1.0.0
+CATEGORIES=		wip geography
 MASTER_SITES=		http://geos.refractions.net/
 EXTRACT_SUFX=		.tar.bz2
 
@@ -10,12 +10,11 @@ MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://geos.refractions.net/
 COMMENT=		C++ port of the Java Topology Suite (JTS)
 
-CONFLICTS=		geos-1.0.0
-
-USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
+WRKSRC=			${WRKDIR}/geos-1.0
+USE_BUILDLINK3=		YES
+USE_PKGLOCALEDIR=	YES
+USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.pkg.mk"
