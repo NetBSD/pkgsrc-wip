@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/21 10:30:14 marc Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/03 21:10:54 jmmv Exp $
 bin/gapi-codegen
 bin/gapi-fixup
 bin/gapi-fixup.exe
@@ -22,8 +22,21 @@ lib/gnome-sharp.dll
 lib/gnomedb-sharp.dll
 lib/gtk-sharp.dll
 lib/gtkhtml-sharp.dll
+lib/libgdksharpglue.a
+lib/libgdksharpglue.la
+lib/libgdksharpglue.so
+lib/libgladesharpglue.a
+lib/libgladesharpglue.la
+lib/libgladesharpglue.so
+lib/libglibsharpglue.a
+lib/libglibsharpglue.la
+lib/libglibsharpglue.so
+lib/libgnomesharpglue.a
+lib/libgnomesharpglue.la
+lib/libgnomesharpglue.so
 lib/libgtksharpglue.a
 lib/libgtksharpglue.la
+lib/libgtksharpglue.so
 lib/pango-sharp.dll
 ${PERL5_SITELIB}/GAPI/Metadata.pm
 lib/pkgconfig/gapi.pc

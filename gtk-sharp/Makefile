@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/03/21 10:30:14 marc Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/03 21:10:53 jmmv Exp $
 #
 
-DISTNAME=	gtk-sharp-0.17
+DISTNAME=	gtk-sharp-0.18
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-sharp/}
 
@@ -27,19 +27,25 @@ REPLACE_PERL+=	bin/gapi.pl
 REPLACE_PERL+=	bin/gapi2xml.pl
 REPLACE_PERL+=	bin/gapi_pp.pl
 
-PARSER_MK=	${WRKSRC}/parser/Makefile.in
+PARSER_MK=	${WRKSRC}/parser/GAPI/Makefile.in
 
-post-patch:
+pre-configure:
 	${SED} -e 's,%%PERL5_SITELIB%%,${PERL5_SITELIB},' \
 		${PARSER_MK} > ${PARSER_MK}.new
 	${MV} ${PARSER_MK}.new ${PARSER_MK}
 
+.include "../../databases/libgda/buildlink3.mk"
 .include "../../databases/libgnomedb/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgdiplus/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
-.include "../../multimedia/gstreamer/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
-.include "../../www/libgtkhtml/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../www/gtkhtml3/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"

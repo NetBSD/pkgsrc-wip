@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2003/11/19 23:14:46 marc Exp $
+$NetBSD: patch-aa,v 1.4 2004/04/03 21:10:55 jmmv Exp $
 
---- parser/Makefile.in.orig	2003-11-19 00:04:40.000000000 +0100
-+++ parser/Makefile.in	2003-11-19 00:05:47.000000000 +0100
-@@ -39,8 +39,8 @@
- 		$(install) $$i $(DESTDIR)$(prefix)/bin; \
- 	done
- 	for i in $(MODULES); do \
--		../mkinstalldirs $(DESTDIR)$(prefix)/share/perl5/GAPI && \
--		$(install) $$i $(DESTDIR)$(prefix)/share/perl5/GAPI; \
-+		../mkinstalldirs %%PERL5_SITELIB%%/GAPI && \
-+		$(install) $$i %%PERL5_SITELIB%%/GAPI; \
- 	done
- 	../mkinstalldirs $(DESTDIR)$(prefix)/lib/pkgconfig && \
- 	$(install) -m 644 gapi.pc $(DESTDIR)$(prefix)/lib/pkgconfig
+--- parser/GAPI/Makefile.in.orig	2004-03-31 18:54:40.000000000 +0200
++++ parser/GAPI/Makefile.in
+@@ -106,7 +106,7 @@ XML_LIBS = @XML_LIBS@
+ am__include = @am__include@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+-moduledir = $(datadir)/perl5/GAPI
++moduledir =  %%PERL5_SITELIB%%/GAPI
+ module_SCRIPTS = Metadata.pm
+ EXTRA_DIST = Metadata.pm
+ subdir = parser/GAPI
