@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2004/04/28 01:00:24 marc Exp $
+
+--- j2se/src/solaris/native/sun/awt/awt_Component.c.orig	2004-03-27 14:55:05.000000000 +0100
++++ j2se/src/solaris/native/sun/awt/awt_Component.c
+@@ -1179,7 +1179,7 @@ void processTree(Widget from, Widget to,
+             }
+             XtVaSetValues(to, XmNtraversalOn, True, NULL);
+         }
+-    } else if (from != NULL) {
++    } else if (from != NULL && to != NULL) {
+         // disable the tree starting from uncommon part to 'from'
+         if (parents_from[index] == parents_to[index]) {
+             if (index == count_from - 1) {

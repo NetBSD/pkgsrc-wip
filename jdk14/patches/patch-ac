@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/04/28 01:00:21 marc Exp $
+
+--- deploy/make/plugin/common/config.gmk.orig	2004-03-27 14:55:04.000000000 +0100
++++ deploy/make/plugin/common/config.gmk
+@@ -60,7 +60,7 @@ ifeq ($(PLATFORM), bsd)
+ 
+   # include search paths
+   # XXXBSD: these should be defined in other place
+-  CPPFLAGS1 += -I/usr/X11R6/include -I/usr/local/include
++  CPPFLAGS1 += -I/usr/X11R6/include -I${LOCALBASE}/include
+ 
+   ifeq ($(TRUE_PLATFORM), FreeSBD)
+     ifeq ($(FREEBSD_4STABLE), true)

@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/28 01:00:21 marc Exp $
+
+SHA1 (j2sdk-1_4_2-src-scsl.zip) = a48f7df999e27a23071e259bd11f2eac18d99d3c
+Size (j2sdk-1_4_2-src-scsl.zip) = 49269919 bytes
+SHA1 (j2sdk-1_4_2-bin-scsl.zip) = 6d304be453abf477c793005d6f5b12ebc9e7be57
+Size (j2sdk-1_4_2-bin-scsl.zip) = 2513462 bytes
+SHA1 (bsd-jdk14-patches-6.tar.gz) = ea09a660b58c28246ffa94285690eb2527c278f2
+Size (bsd-jdk14-patches-6.tar.gz) = 1068798 bytes
+SHA1 (patch-aa) = d0181aa08930003a83d508c298b5e848e1e51211
+SHA1 (patch-ab) = 41301b1cdce2162450cfc40faaf7e8ab7b5e02b9
+SHA1 (patch-ac) = f04afb3cafaba404e554ff716421b1f95dafc8ec
+SHA1 (patch-ad) = c86bf4e97ed109ad34069331d8f46c5f0abc5d5a
+SHA1 (patch-ae) = 95f479d508a4b1580b37e775ffb5f97203751774
+SHA1 (patch-af) = 015eeb5d32801e30ee939558c5172ed96c5c6444
+SHA1 (patch-ag) = 3dd6784431646d10fec8c480ffd07d0d94ffb877
+SHA1 (patch-ah) = ca9cda390ba188475a918dbe6c42243582de9d26
+SHA1 (patch-ai) = 644c9c9bf82c48198a3ab67ebf32b884d27045f9

@@ -1,0 +1,46 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/28 01:00:21 marc Exp $
+
+--- deploy/make/Makefile.orig	2004-03-27 14:55:04.000000000 +0100
++++ deploy/make/Makefile
+@@ -24,17 +24,29 @@ BUILDDIR=.
+ DEPLOY_TOPDIR=..
+ include $(BUILDDIR)/common/Defs.gmk
+ 
++ifdef NO_PLUGIN
++BUILD_PLUGIN=	false
++else
++BUILD_PLUGIN=	true
++endif
++
++ifdef NO_JAVAWS
++BUILD_JAVAWS=	false
++else
++BUILD_JAVAWS=	true
++endif
++
+ all:: 
+ 	@$(ECHO) "$(PLATFORM) $(ARCH) $(RELEASE) deploy build started: $(shell $(DATE) '+%y-%m-%d %H:%M')"
+ 
+-BUILD_PLUGIN = true
+-
+ #
+ # Core.
+ #
+ JAVAWS_SUBDIR = javaws
+ PLUGIN_SUBDIR = plugin
++ifeq ($(BUILD_JAVAWS), true)
+ SUBDIRS = $(JAVAWS_SUBDIR)
++endif
+ ifeq ($(BUILD_PLUGIN), true)
+ SUBDIR += $(PLUGIN_SUBDIR)
+ endif
+@@ -47,7 +59,9 @@ all optimized debug::
+ 	done
+ 
+ javaws-all: sanity-javaws
++   ifeq ($(BUILD_JAVAWS), true)
+ 	$(CD) $(BUILDDIR)/javaws ; $(MAKE) installer-int dev-all doc aubundle
++   endif
+ 
+ plugin-all: sanity-plugin
+    ifeq ($(BUILD_PLUGIN), true)
