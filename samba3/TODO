@@ -1,3 +1,14 @@
+This needs to be converted to use new mk/krb5.buildlink3.mk.
+I think it needs: KRB5_ACCEPTED=mit-krb5
+but also test heimdal
+samba-3.0.1/WHATSNEW.txt says:
+     MIT kerberos 1.3.1 supports the ARCFOUR-HMAC-MD5 encryption 
+     type which is neccessary for servers on which the 
+     administrator password has not been changed, or kerberos-enabled 
+     SMB connections to servers that require Kerberos SMB signing.
+     Besides this one difference, either MIT or Heimdal Kerberos
+     distributions are usable by Samba 3.0.
+
 When samba version three is in real pksgrc use "samba" as directory
 name (and not samba3). And maybe reimport samba as samba2?
 
