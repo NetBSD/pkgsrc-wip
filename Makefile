@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.462 2003/09/17 16:47:17 xtraeme Exp $
-# $NetBSD: Makefile,v 1.462 2003/09/17 16:47:17 xtraeme Exp $
+# $Id: Makefile,v 1.463 2003/09/17 16:58:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.463 2003/09/17 16:58:01 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -196,6 +196,7 @@ SUBDIR+=	libdisasm
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgringotts
 SUBDIR+=	libhydrogen
+SUBDIR+=	libneural
 SUBDIR+=	libogg-nightly
 SUBDIR+=	libshout
 SUBDIR+=	libvc
