@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/12/16 16:52:04 goteki Exp $
+
+SHA1 (pyOpenSSL-0.6.tar.gz) = a9626095db201eeac979d0624101f5afa888f9b6
+Size (pyOpenSSL-0.6.tar.gz) = 281910 bytes
