@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/16 16:29:55 cubidou Exp $
+$NetBSD: patch-aa,v 1.2 2003/09/26 06:05:03 cubidou Exp $
 
---- Makefile.orig	2003-01-22 17:12:53.000000000 +0100
+--- Makefile.orig	2003-09-01 15:40:12.000000000 +0200
 +++ Makefile
 @@ -1,26 +1,27 @@
 -INSTALLDIR = /usr/local/lib/gkrellm2/plugins
 +INSTALLDIR = $(PREFIX)/lib/gkrellm2/plugins
- VERSION = 2.0.2
+ VERSION = 2.0.3
  PKGNAME = gkrellm-multiping
  #OPT = -march=athlon -O2
  #CC = gcc-3.0

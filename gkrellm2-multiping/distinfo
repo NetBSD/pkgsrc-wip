@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/16 16:29:55 cubidou Exp $
+$NetBSD: distinfo,v 1.2 2003/09/26 06:05:03 cubidou Exp $
 
-SHA1 (gkrellm-multiping-2.0.2.tgz) = 904677b3027fed3a745039f20c4c79ab9bc6e297
-Size (gkrellm-multiping-2.0.2.tgz) = 13201 bytes
-SHA1 (patch-aa) = 34853890b1ff7d1d9f743c10f565546593869a43
+SHA1 (gkrellm-multiping-2.0.3.tgz) = f31e3293a54328f9c3d4a1ff6030498efae8a2c8
+Size (gkrellm-multiping-2.0.3.tgz) = 13943 bytes
+SHA1 (patch-aa) = 359212dfb9c4247207af1035a4df10b1aadd4192
 SHA1 (patch-ab) = 465567eb777db1d144d23e7fc457fb63db8ff23c
 SHA1 (patch-ac) = 4151e6d76665d33293038832c9cba4c4f56b3a56
