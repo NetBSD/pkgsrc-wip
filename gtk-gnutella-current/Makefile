@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/19 20:36:32 larnor Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/20 20:22:43 larnor Exp $
 
 DISTNAME=		gtk-gnutella-current-${GTK_GNUTELLA_VER}
 CATEGORIES=		net
@@ -33,7 +33,7 @@ NO_CHECKSUM=		# defined
 # number.
 #PKG_INSTALLATION_TYPE=	pkgviews
 
-.include "../../wip/gtk-gnutella-current.import/Makefile.version"
+.include "../../wip/gtk-gnutella-current/Makefile.version"
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
