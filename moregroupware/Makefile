@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/11/01 18:43:14 dolecek Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/01 22:36:19 dolecek Exp $
 
 DISTNAME=	moregroupware-0.7.2
 PKGNAME=	${DISTNAME}
@@ -14,7 +14,7 @@ MAINTAINER=	pih@bsdmail.dk
 HOMEPAGE=	http://moregroupware.org/
 COMMENT=	Web based GroupWare system
 
-DEPENDS+=	php-curl>=4.3.4:../../www/php4-curl
+DEPENDS+=	php-curl>=4.3.4:../../www/php-curl
 DEPENDS+=	mysql-server>=3.23:../../databases/mysql-server
 DEPENDS+=	php-ldap>=4.3.4:../../databases/php-ldap
 DEPENDS+=	php-mysql>=4.3.4:../../databases/php-mysql
