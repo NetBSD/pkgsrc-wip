@@ -1,0 +1,16 @@
+TuxTyping is an educational typing tutorial game for children
+starring Tux, the Linux Penguin. It features several different
+types of gameplay, at a variety of difficulty levels.
+
+In Fish Cascade, you control Tux as he searches for fish to eat.
+Fish fall from the top of the screen. These fish have letters on
+them.  Unforunate for Tux, eating a fish with a letter on it will
+cause his stomach to become ill, so it is up to you to help Tux
+eat fish!  By typing the letters, it will cause them to disappear
+so tux can chow down on the fish.
+
+In Comet Zap, you control tux as he defends the city from comets.
+To protect a city from a comet, type the letter on the comet and
+it will cause tux to destroy it with a laser.
+
+This is TuxType2 which is very different from old TuxType.
