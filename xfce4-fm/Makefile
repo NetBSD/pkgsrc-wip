@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/16 06:19:41 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/25 18:56:11 marc Exp $
 
 .include "../xfce4/Makefile.common"
 
@@ -8,6 +8,8 @@ CATEGORIES=	sysutils
 COMMENT=	XFce4 filemanager
 
 MESSAGE_SRC+=	${.CURDIR}/MESSAGE
+
+PKGCONFIG_OVERRIDE=	src/xffm-1.0.pc.in
 
 .include "../../databases/dbh/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
