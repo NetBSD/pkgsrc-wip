@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/08/12 13:06:43 adrian_p Exp $
+
+--- configure.orig	Tue Aug 12 12:35:18 2003
++++ configure	Tue Aug 12 12:35:43 2003
+@@ -306,7 +306,7 @@
+ # include <unistd.h>
+ #endif"
+ 
+-ac_subdirs_all="$ac_subdirs_all cvsunix"
++ac_subdirs_all="$ac_subdirs_all"
+ ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS gcvspath INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM AWK SET_MAKE CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE CXX CXXFLAGS ac_ct_CXX CXXDEPMODE CPP EGREP RANLIB ac_ct_RANLIB YACC LEX LEXLIB LEX_OUTPUT_ROOT LIBOBJS GTK_CONFIG GTK_CFLAGS GTK_LIBS HAVE_TCL TCL_CFLAGS TCL_LIB_SPEC DEBUG_TRUE DEBUG_FALSE subdirs LTLIBOBJS'
+ ac_subst_files=''
+ 
+@@ -5632,7 +5632,7 @@
+ 
+ 
+ 
+-subdirs="$subdirs cvsunix"
++subdirs="$subdirs"
+ 
+                                                                                                     ac_config_files="$ac_config_files Makefile common/Makefile cvstree/Makefile rf/Makefile rf/support/Makefile rf/support/gtk/Makefile gcvs/Makefile gcvs/src/Makefile Macros/Makefile GuiDoc/Makefile"
+ cat >confcache <<\_ACEOF

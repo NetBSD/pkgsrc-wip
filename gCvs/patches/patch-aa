@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/12 13:06:43 adrian_p Exp $
+
+--- configure.in.orig	Tue Aug 12 12:29:19 2003
++++ configure.in	Tue Aug 12 12:30:06 2003
+@@ -188,7 +188,6 @@
+ packagesrcdir=`cd $srcdir && pwd`
+ AC_DEFINE_UNQUOTED(PACKAGE_SOURCE_DIR, "${packagesrcdir}/gcvs")
+ 
+-AC_CONFIG_SUBDIRS(cvsunix)
+ AC_OUTPUT([
+ 	Makefile \
+ 	common/Makefile \

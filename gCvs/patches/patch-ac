@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/08/12 13:06:43 adrian_p Exp $
+
+--- Makefile.am.orig	Tue Aug 12 12:45:13 2003
++++ Makefile.am	Tue Aug 12 12:46:18 2003
+@@ -1,5 +1,5 @@
+ EXTRA_DIST = GCVS-VERSION .cvsignore PORTING README.SUN gcvs.spec make_configure
+-SUBDIRS = common cvstree rf gcvs Macros cvsunix GuiDoc
++SUBDIRS = common cvstree rf gcvs Macros GuiDoc
+ CONFIG_STATUS_DEPENDENCIES = GCVS-VERSION
+ 
+ etags:

@@ -1,0 +1,6 @@
+gcvs is currently in his first stage of developement.
+
+This program is part of the CvsGui project, a set of cvs front-end
+applications which use a native framework for each platform. More
+informations can be found on the existing applications (MacCvs and
+WinCvs) on the GvsGui main page http://www.wincvs.org.
