@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/19 01:12:31 bubuchka Exp $
-bin/pkg_distclean
