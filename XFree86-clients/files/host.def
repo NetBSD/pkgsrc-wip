@@ -36,7 +36,6 @@
 #define InstallXinitConfig YES
 #define InstallAppDefFiles YES
 
-#define LdPostLib @LDFLAGS@
 #define UsrLibDir BLNK/lib
 #define LibInstallBuild  YES
 #define StandardIncludes -IBLNK/include
