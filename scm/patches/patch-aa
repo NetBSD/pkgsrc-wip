@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/13 11:02:10 jmmv Exp $
+
+--- Makefile.orig	Sun Apr 14 21:22:10 2002
++++ Makefile
+@@ -323,12 +323,12 @@ $(PREVDOCS)scm.info:	srcdir.mk Makefile
+ 
+ rpm_prefix=/usr/src/redhat/
+ 
+-prefix = /usr/local/
++prefix = $(PREFIX)/
+ exec_prefix = $(prefix)
+ # directory where `make install' will put executable.
+ bindir = $(exec_prefix)bin/
+ libdir = $(exec_prefix)lib/
+-libscmdir = $(libdir)scm/
++libscmdir = $(PREFIX)/share/scm/
+ # directory where `make install' will put manual page.
+ mandir = $(prefix)man/
+ man1dir = $(mandir)man1/
