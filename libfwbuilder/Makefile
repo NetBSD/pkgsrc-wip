@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/03/21 11:35:04 marc Exp $
-#
+# $NetBSD: Makefile,v 1.13 2004/03/21 11:36:55 marc Exp $
 
 DISTNAME=	libfwbuilder-1.0.2
 CATEGORIES=	security
@@ -13,8 +12,8 @@ USE_GNU_TOOLS+=	make
 USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_GCC_SHLIB=	yes
 GCC_REQD=	2.95.3
+USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--with-openssl-prefix=${BUILDLINK_PREFIX.openssl}
 
