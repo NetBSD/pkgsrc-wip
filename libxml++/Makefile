@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/28 05:27:46 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/24 19:25:05 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libxml++-0.27.0
+PKGREVISION=		1
 CATEGORIES=		textproc devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libxmlplusplus/}
 EXTRACT_SUFX=		.tar.bz2
