@@ -1,33 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2003/04/13 23:00:41 virtus Exp $
+$NetBSD: patch-aa,v 1.3 2004/06/12 17:25:19 ppostma Exp $
 
---- Makefile.orig	2003-04-14 02:49:19.000000000 +0200
-+++ Makefile	2003-04-14 02:49:27.000000000 +0200
-@@ -10,7 +10,7 @@
- module=msn
+--- amsn.orig	2004-05-30 20:47:50.000000000 +0200
++++ amsn	2004-06-12 14:49:43.000000000 +0200
+@@ -70,6 +70,8 @@
+ 	set program [file tail $program]
+ }
  
- # Installation paths
--prefix=/usr
-+prefix=/usr/pkg
- exec_prefix=${prefix}
- bindir=${exec_prefix}/bin
- libdir=${prefix}/share/${name}
-@@ -42,7 +42,7 @@
- # 2) make tar
- # Then assuming the spec file & tar file are into the RPM tree
- # 3)  rpm -bb --target noarch --clean amsn.spec
--all: install
-+all:
- 
- mkdirs:
- 	echo "LIB $(libdir) DATA $(datadir) BIN $(bindir)" 
-@@ -95,8 +95,8 @@
- #		ln -sf $(libdir)/i/$(icon) $(datadir)/$(icon)
- 	@cp .$(transcript) $(libdir)/$(transcript)
- #	Now we install the executable in the binary directory
--#	@ln -sf $(libdir)/${name} $(bindir)/${name}
--	@cp amsn $(bindir)/amsn
-+	@ln -sf $(libdir)/${name} $(bindir)/${name}
-+#	@cp amsn $(bindir)/amsn
- 	@echo "rm -f $(bindir)/amsn" >> .$(transcript)
- #	cat .$(transcript)
- 
++set program_dir "@@PREFIX@@/share/amsn"
++
+ set starting_dir [pwd]
+ cd $program_dir
+ unset program

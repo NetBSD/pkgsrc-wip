@@ -1,7 +1,0 @@
-$Id: TODO,v 1.4 2004/05/01 16:35:57 blef Exp $
-
-* Paths are hardcoded in Makefile
-* /usr/bin/wish hardcoded in numerous .tcl files
-* etc..
-* Patches do not apply
-* Installation fails

@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/01/15 17:26:22 virtus Exp $
+$NetBSD: distinfo,v 1.5 2004/06/12 17:25:19 ppostma Exp $
 
-SHA1 (amsn-0_83.tar.gz) = 11559d01d577cc30889ddcba9fa1582accce904c
-Size (amsn-0_83.tar.gz) = 1131505 bytes
-SHA1 (patch-aa) = 17dcdf44a0210b0bae1c42d99f2635f42cae8af1
-SHA1 (patch-ab) = ac4d058f36887be30249e35c0c77e397907f141e
-SHA1 (patch-ac) = daeeee6dd935c86e0d3dd936c29c9d566aacf84c
+SHA1 (amsn-0_92.tar.gz) = 58afd69927595e5e688be84a88505a11fe071d8e
+Size (amsn-0_92.tar.gz) = 2039934 bytes
+SHA1 (patch-aa) = d427f13a4e379ed3c9a54c82116bd3663dd081db
