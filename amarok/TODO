@@ -1,6 +1,5 @@
 
 * Find a better work around for locale files installation
-* Add external SQLite dependency
 * Check if xmms is required in runtime or just to build
 * Send PR to authors to add option like "--without-xmms"
 * Make Xine, GStream and NNM specific package
@@ -8,3 +7,5 @@
 Right now pkg-configure dosn't return --modversion for sqlite.
 I guess this is the reason why configure fails to find external
 databases/sqlite. Need to fix it.
+
++ Add external SQLite dependency (fixed)
