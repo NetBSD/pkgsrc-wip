@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/07/22 17:53:07 ianharding Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/12 14:35:47 ianharding Exp $
 #
 
-DISTNAME=		aolserver-4.0.7-src
+DISTNAME=		aolserver-4.0.8-src
 PKGNAME=		${DISTNAME:S/-src//}
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aolserver/}

@@ -1,2 +1,1 @@
-Figure out how to patch files with the value of PREFIX and VARBASE, 
-specifically patch-ac which patches the configuration file nsd.tcl.
+Ready for import, as far as I am concerned...
