@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/12/06 08:37:39 jeremy-c-reed Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/04/18 17:22:12 mpasternak Exp $
 #
 
 DISTNAME=		dhcp-3.0pl2
@@ -17,12 +17,15 @@ HOMEPAGE=		http://www.isc.org/products/DHCP/
 # XXX don't need nroff once patched
 # XXX BUILD_DEPENDS+=	groff-[0-9]*:../../textproc/groff
 
-USE_BUILDLINK2=		yes
 HAS_CONFIGURE=		yes
 
 FILESDIR=		${.CURDIR}/../isc-dhcpd/files
 
 VAR_DIR?=		/var
+
+USE_PKGINSTALL=			YES
+PKG_RCD_SCRIPTS=		YES
+RCD_SCRIPTS=			isc_${ISC_DHCP_TYPE}
 
 pre-configure:
 	@${SED} \

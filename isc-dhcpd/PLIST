@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/06 08:37:38 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/18 17:22:12 mpasternak Exp $
 bin/omshell
+etc/rc.d/isc_dhcpd
 include/dhcpctl.h
 include/isc-dhcp/boolean.h
 include/isc-dhcp/dst.h
