@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/11 09:37:57 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/11 10:06:31 airhead Exp $
 #
 
 DISTNAME=	plugger-4.0
@@ -12,7 +12,7 @@ HOMEPAGE=	http://fredrik.hubbe.net/plugger/plugger.html
 COMMENT=	Plugin for multimedia types in Mozilla, Netscape and Opera
 
 USE_X11=	YES
-ALL_TARGET=	netbsd
+ALL_TARGET=	auto
 
 # Remove the following lines when the package will install
 NO_PKG_REGISTER=	YES
