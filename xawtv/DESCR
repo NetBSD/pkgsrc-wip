@@ -1,0 +1,3 @@
+xawtv is a set of utilities to manage the video4linux interface (and BSD's
+bktr driver too).  The main component of the suite is xawtv itself, which
+is a X11 application to watch the TV.

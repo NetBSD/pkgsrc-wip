@@ -1,0 +1,6 @@
+- Guess why the overlay mode does not work, at least on NetBSD...
+
+- Maybe write a more complete DESCR file.
+
+- Add `xawtv' to the list of packages which support the USE_MMX variable in
+  bsd.pkg.defaults.mk when importing it.
