@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2004/08/31 16:27:25 lexort Exp $
+# $NetBSD: Makefile,v 1.13 2004/09/02 18:41:16 lexort Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
 DISTNAME=	quagga-0.96.5-20040831
 PKGNAME=	quagga-0.96.5.20040831
-#PKGREVISION=	0
+PKGREVISION=	1
 CATEGORIES=	net
 # Use pkgsrc/ for saved snapshots, cvs/ for current ones
 MASTER_SITES=	http://www.quagga.net/download/cvs/ \
@@ -53,7 +53,7 @@ CONF_FILES_PERMS+=      ${PREFIX}/share/examples/quagga/log_syslog.conf ${PKG_SY
 
 BUILD_DEFS+=			USE_ZEBRA_VTYSH USE_ZEBRA_OSPF_OPAQUELSA
 USE_ZEBRA_VTYSH?=		YES
-USE_ZEBRA_OSPF_OPAQUELSA?=	NO
+USE_ZEBRA_OSPF_OPAQUELSA?=	YES
 
 .if defined(USE_ZEBRA_VTYSH) && ${USE_ZEBRA_VTYSH} == "YES"
 USE_GNU_READLINE=	# uses rl_pending_input
