@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/12 19:12:27 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/06 04:35:09 thomasklausner Exp $
 
 DISTNAME=	libwhisker2-2.0
 CATEGORIES=	security www
@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.wiretrip.net/rfp/libwhisker/
 
 MAINTAINER=	adrianp@stindustries.net
 HOMEPAGE= 	http://www.wiretrip.net/rfp/lw.asp
-COMMENT=	Perl module geared specificly for HTTP testing
+COMMENT=	Perl module geared specifically for HTTP testing
 
 DEPENDS+=	p5-Net-SSLeay>=1.20:../../security/p5-Net-SSLeay
 
