@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/17 12:05:24 cubidou Exp $
+$NetBSD: distinfo,v 1.2 2004/05/11 07:47:42 cubidou Exp $
 
-SHA1 (Set-Infinite-0.49.tar.gz) = 9b34b1a7bd33ff22cf4843b6f1013d241a14e4e7
-Size (Set-Infinite-0.49.tar.gz) = 60206 bytes
+SHA1 (Set-Infinite-0.57.tar.gz) = b20926ad973f1165a05a944dd5193d5c2b7faad0
+Size (Set-Infinite-0.57.tar.gz) = 48512 bytes
