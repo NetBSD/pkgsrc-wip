@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/23 00:51:49 rockpiper Exp $
+
+SHA1 (mpd-0.10.1.tar.gz) = ce541fdf390c52407d4e2783941299d40f0b365c
+Size (mpd-0.10.1.tar.gz) = 787064 bytes
+SHA1 (patch-aa) = 7697645d0e2174393c99cfbfd8c37a03cb2a37ea

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/23 00:51:49 rockpiper Exp $
+
+--- src/conf.c.orig	Thu Mar  4 22:42:13 2004
++++ src/conf.c
+@@ -64,7 +64,7 @@
+ #define CONF_MIXER_TYPE_DEFAULT				VOLUME_MIXER_ALSA
+ #define CONF_MIXER_DEVICE_DEFAULT			""
+ #else
+-#define CONF_MIXER_TYPE_DEFAULT				VOLUME_MIXER_NULL
++#define CONF_MIXER_TYPE_DEFAULT				VOLUME_MIXER_SOFTWARE
+ #define CONF_MIXER_DEVICE_DEFAULT			""
+ #endif
+ #endif
