@@ -1,3 +1,2 @@
 *) Test on platforms other than i386/-current
-*) Fix lib/bonobo/servers/GNOME_Spell.server path
-   substitution
+
