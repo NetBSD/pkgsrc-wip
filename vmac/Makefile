@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/23 23:23:02 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 11:38:07 bubuchka Exp $
 
 DISTNAME=	vMac-${VMAC_VERSION}-src
 PKGNAME=	vmac-${VMAC_VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://www.leb.net/vmac/download/XWindows/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pkgsrc@netbsd.org
+MAINTAINER=	mishka@terabyte.com.ua
 HOMEPAGE=	http://www.vmac.org/
 COMMENT=	Macintosh Plus Emulator
 
