@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/04 04:36:39 minskim Exp $
-etc/gconf/gconf.xml.defaults/schemas/apps/imhangul_status/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/imhangul_status/prefs/%gconf.xml
+@comment $NetBSD: PLIST,v 1.2 2003/11/22 20:26:41 minskim Exp $
 lib/bonobo/servers/GNOME_IMHangulStatusApplet.server
 libexec/imhangul-status-applet
 share/gconf/schemas/imhangul_status.schemas
@@ -37,8 +35,6 @@ share/imhangul/themes/keyboard/none.png
 share/pixmaps/imhangul-status-applet-logo.png
 share/pixmaps/imhangul-status-applet.png
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/imhangul_status_applet.mo
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/imhangul_status/prefs
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/imhangul_status
 @dirrm share/imhangul/themes/MSWindows
 @dirrm share/imhangul/themes/Mac
 @dirrm share/imhangul/themes/Onion
