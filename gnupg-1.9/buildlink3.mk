@@ -1,18 +1,25 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/10/15 22:18:18 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/10/23 10:11:08 johnrshannon Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GNUPG2_BUILDLINK3_MK:=	${GNUPG2_BUILDLINK3_MK}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+GNUPG_DEVEL_BUILDLINK3_MK:=	${GNUPG_DEVEL_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gnupg2
+BUILDLINK_DEPENDS+=	gnupg-devel
 .endif
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnupg2}
-BUILDLINK_PACKAGES+=	gnupg2
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnupg-devel}
+BUILDLINK_PACKAGES+=	gnupg-devel
 
-.if !empty(GNUPG2_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gnupg2+=	gnupg2>=1.9.11
-BUILDLINK_PKGSRCDIR.gnupg2?=	../../wip/gnupg-1.9
-.endif	# GNUPG2_BUILDLINK3_MK
+.if !empty(GNUPG_DEVEL_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.gnupg-devel+=	gnupg-devel>=1.9.11
+BUILDLINK_PKGSRCDIR.gnupg-devel?=	../../wip/gnupg-1.9
+.endif	# GNUPG_DEVEL_BUILDLINK3_MK
+BUILDLINK_PREFIX.gnupg-devel?=	${LOCALBASE}
+
+.include "../../security/libgpg-error/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../wip/libassuan/buildlink3.mk"
+.include "../../security/libksba/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
