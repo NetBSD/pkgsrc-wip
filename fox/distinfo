@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/07 22:36:15 cetrox Exp $
+$NetBSD: distinfo,v 1.2 2004/12/08 03:39:01 cetrox Exp $
 
-SHA1 (fox-1.2.9.tar.gz) = a8667ee46cbf9f3386e78bd17a84608eeb848b28
-Size (fox-1.2.9.tar.gz) = 3770101 bytes
+SHA1 (fox-1.2.11.tar.gz) = a28c679e673eaac93d264720e4d0d8361081ea43
+Size (fox-1.2.11.tar.gz) = 3770933 bytes
