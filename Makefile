@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.315 2003/07/09 15:02:09 adrian_p Exp $
-# $NetBSD: Makefile,v 1.315 2003/07/09 15:02:09 adrian_p Exp $
+# $Id: Makefile,v 1.316 2003/07/09 15:07:23 adrian_p Exp $
+# $NetBSD: Makefile,v 1.316 2003/07/09 15:07:23 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -111,6 +111,7 @@ SUBDIR+=	ices
 SUBDIR+=	icmpchat
 SUBDIR+=	idesk
 SUBDIR+=	idled
+SUBDIR+=	iisemulator
 SUBDIR+=	ike-scan
 SUBDIR+=	ilohamail
 SUBDIR+=	ion-devel
