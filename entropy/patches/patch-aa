@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.6 2003/10/19 14:53:03 tvierling Exp $
+
 Index: include/unicode.h
 ===================================================================
 RCS file: /home/cvs/entropy/include/unicode.h,v
