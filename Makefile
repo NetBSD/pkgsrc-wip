@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1441 2004/08/27 22:51:49 froz Exp $
-# $NetBSD: Makefile,v 1.1441 2004/08/27 22:51:49 froz Exp $
+# $Id: Makefile,v 1.1442 2004/08/28 00:24:32 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1442 2004/08/28 00:24:32 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -751,6 +751,7 @@ SUBDIR+=	tleenx3
 SUBDIR+=	tls
 SUBDIR+=	toppler
 SUBDIR+=	totem
+SUBDIR+=	tr2latex
 SUBDIR+=	tripwire2
 SUBDIR+=	tsm
 SUBDIR+=	turba
