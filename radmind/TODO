@@ -1,0 +1,6 @@
+
+(1) The syslog category is hardcoded as LOCAL7 in
+$WRKSRC/Makefile.in. Either patch that to make it configurable by a
+make(1) variable, or ask the authors to have it settable through
+GNU configure.
+
