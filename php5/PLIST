@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2004/05/10 16:59:33 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/05/10 22:17:24 poppnk Exp $
 bin/pear
 bin/php
 bin/php-config
 bin/phpextdist
 bin/phpize
 etc/pear.conf
+etc/php.ini
 include/php/TSRM/TSRM.h
 include/php/TSRM/acconfig.h
 include/php/TSRM/readdir.h
@@ -27,9 +28,9 @@ include/php/Zend/zend_config.h
 include/php/Zend/zend_config.nw.h
 include/php/Zend/zend_config.w32.h
 include/php/Zend/zend_constants.h
-include/php/Zend/zend_default_classes.h
 include/php/Zend/zend_dynamic_array.h
 include/php/Zend/zend_errors.h
+include/php/Zend/zend_exceptions.h
 include/php/Zend/zend_execute.h
 include/php/Zend/zend_extensions.h
 include/php/Zend/zend_fast_cache.h
@@ -66,7 +67,8 @@ include/php/Zend/zend_ts_hash.h
 include/php/Zend/zend_types.h
 include/php/Zend/zend_variables.h
 include/php/acconfig.h
-include/php/ext/mbstring/mb_g${LOWER_VENDOR}.h
+include/php/ext/libxml/php_libxml.h
+include/php/ext/mbstring/mb_gpc.h
 include/php/ext/mbstring/mbstring.h
 include/php/ext/mbstring/php_mbregex.h
 include/php/ext/mbstring/php_unicode.h
@@ -187,44 +189,14 @@ include/php/regex/regex.h
 include/php/regex/regex2.h
 include/php/regex/regex_extra.h
 include/php/regex/utils.h
-etc/php.ini
 lib/php/.filemap
 lib/php/.lock
 lib/php/.registry/archive_tar.reg
 lib/php/.registry/console_getopt.reg
-lib/php/.registry/db.reg
-lib/php/.registry/http.reg
-lib/php/.registry/mail.reg
-lib/php/.registry/net_smtp.reg
-lib/php/.registry/net_socket.reg
 lib/php/.registry/pear.reg
-lib/php/.registry/xml_parser.reg
-lib/php/.registry/xml_r${LOWER_VENDOR}.reg
+lib/php/.registry/xml_rpc.reg
 lib/php/Archive/Tar.php
 lib/php/Console/Getopt.php
-lib/php/DB.php
-lib/php/DB/common.php
-lib/php/DB/dbase.php
-lib/php/DB/fbsql.php
-lib/php/DB/ibase.php
-lib/php/DB/ifx.php
-lib/php/DB/msql.php
-lib/php/DB/mssql.php
-lib/php/DB/mysql.php
-lib/php/DB/oci8.php
-lib/php/DB/odbc.php
-lib/php/DB/pgsql.php
-lib/php/DB/sqlite.php
-lib/php/DB/storage.php
-lib/php/DB/sybase.php
-lib/php/HTTP.php
-lib/php/Mail.php
-lib/php/Mail/RFC822.php
-lib/php/Mail/mail.php
-lib/php/Mail/sendmail.php
-lib/php/Mail/smtp.php
-lib/php/Net/SMTP.php
-lib/php/Net/Socket.php
 lib/php/OS/Guess.php
 lib/php/PEAR.php
 lib/php/PEAR/Autoloader.php
@@ -243,13 +215,13 @@ lib/php/PEAR/Common.php
 lib/php/PEAR/Config.php
 lib/php/PEAR/Dependency.php
 lib/php/PEAR/Downloader.php
+lib/php/PEAR/ErrorStack.php
 lib/php/PEAR/Frontend/CLI.php
 lib/php/PEAR/Installer.php
 lib/php/PEAR/Packager.php
 lib/php/PEAR/Registry.php
 lib/php/PEAR/Remote.php
 lib/php/System.php
-lib/php/XML/Parser.php
 lib/php/XML/RPC.php
 lib/php/XML/RPC/Server.php
 lib/php/build/Makefile.global
@@ -261,61 +233,7 @@ lib/php/build/shtool
 lib/php/data/PEAR/package.dtd
 lib/php/data/PEAR/template.spec
 lib/php/doc/Archive_Tar/docs/Archive_Tar.txt
-lib/php/doc/DB/doc/IDEAS
-lib/php/doc/DB/doc/MAINTAINERS
-lib/php/doc/DB/doc/STATUS
-lib/php/doc/DB/doc/TESTERS
 lib/php/pearcmd.php
-lib/php/test/DB/tests/db_error.phpt
-lib/php/test/DB/tests/db_error2.phpt
-lib/php/test/DB/tests/db_factory.phpt
-lib/php/test/DB/tests/db_ismanip.phpt
-lib/php/test/DB/tests/db_parsedsn.phpt
-lib/php/test/DB/tests/driver/01connect.phpt
-lib/php/test/DB/tests/driver/02fetch.phpt
-lib/php/test/DB/tests/driver/03simplequery.phpt
-lib/php/test/DB/tests/driver/04numcols.phpt
-lib/php/test/DB/tests/driver/05sequences.phpt
-lib/php/test/DB/tests/driver/06prepexec.phpt
-lib/php/test/DB/tests/driver/08affectedrows.phpt
-lib/php/test/DB/tests/driver/09numrows.phpt
-lib/php/test/DB/tests/driver/10errormap.phpt
-lib/php/test/DB/tests/driver/13limit.phpt
-lib/php/test/DB/tests/driver/14fetchmode_object.phpt
-lib/php/test/DB/tests/driver/15quote.phpt
-lib/php/test/DB/tests/driver/bug22328.phpt
-lib/php/test/DB/tests/driver/connect.inc
-lib/php/test/DB/tests/driver/mktable.inc
-lib/php/test/DB/tests/driver/setup.inc
-lib/php/test/DB/tests/driver/skipif.inc
-lib/php/test/DB/tests/errors.inc
-lib/php/test/DB/tests/fetchmode_object.inc
-lib/php/test/DB/tests/fetchmodes.inc
-lib/php/test/DB/tests/fetchrow.inc
-lib/php/test/DB/tests/include.inc
-lib/php/test/DB/tests/limit.inc
-lib/php/test/DB/tests/numcols.inc
-lib/php/test/DB/tests/numrows.inc
-lib/php/test/DB/tests/prepexe.inc
-lib/php/test/DB/tests/sequences.inc
-lib/php/test/DB/tests/simplequery.inc
-lib/php/test/DB/tests/tableinfo.inc
-lib/php/test/DB/tests/transactions.inc
-lib/php/test/XML_Parser/tests/001.phpt
-lib/php/test/XML_Parser/tests/002.phpt
-lib/php/test/XML_Parser/tests/003.phpt
-lib/php/test/XML_Parser/tests/004.phpt
-lib/php/test/XML_Parser/tests/005.phpt
-lib/php/test/XML_Parser/tests/test2.xml
-lib/php/test/XML_Parser/tests/test3.xml
-@dirrm lib/php/test/XML_Parser/tests
-@dirrm lib/php/test/XML_Parser
-@dirrm lib/php/test/DB/tests/driver
-@dirrm lib/php/test/DB/tests
-@dirrm lib/php/test/DB
-@dirrm lib/php/test
-@dirrm lib/php/doc/DB/doc
-@dirrm lib/php/doc/DB
 @dirrm lib/php/doc/Archive_Tar/docs
 @dirrm lib/php/doc/Archive_Tar
 @dirrm lib/php/doc
@@ -328,9 +246,6 @@ lib/php/test/XML_Parser/tests/test3.xml
 @dirrm lib/php/PEAR/Command
 @dirrm lib/php/PEAR
 @dirrm lib/php/OS
-@dirrm lib/php/Net
-@dirrm lib/php/Mail
-@dirrm lib/php/DB
 @dirrm lib/php/Console
 @dirrm lib/php/Archive
 @dirrm lib/php/.registry
@@ -347,6 +262,7 @@ lib/php/test/XML_Parser/tests/test3.xml
 @dirrm include/php/ext/sqlite
 @dirrm include/php/ext/session
 @dirrm include/php/ext/mbstring
+@dirrm include/php/ext/libxml
 @dirrm include/php/ext
 @dirrm include/php/Zend
 @dirrm include/php/TSRM

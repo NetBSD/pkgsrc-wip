@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/01/15 15:21:27 poppnk Exp $
+$NetBSD: MESSAGE,v 1.2 2004/05/10 22:17:24 poppnk Exp $
 
-You must edit your "${PREFIX}/lib/php.ini" if you want to use PEAR packages:
+You must edit your "${PREFIX}/etc/php.ini" if you want to use PEAR packages:
 
   register_argc_argv = On
   register_globals = On

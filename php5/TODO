@@ -1,6 +1,2 @@
 The rest of flags like bz2,zlib,mp,jpeg,gif...and the rest of modules
 : mono,msql,odbc,mysql,snmp
-
-and modules for other webservers like thttpd , roxen, pi3web, aolserver..
-
-just flags or different packages.
