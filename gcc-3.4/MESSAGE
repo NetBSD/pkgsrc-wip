@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2004/06/05 19:56:36 johnrshannon Exp $
+$NetBSD: MESSAGE,v 1.6 2004/06/11 20:20:36 johnrshannon Exp $
 
-gcc-3.4.0 has been installed in ${LOCALBASE}/gcc-3.4.0
+gcc-3.4.0 has been installed in ${LOCALBASE}/gcc34
 
 To use this compiler in pkgsrc:
 
@@ -12,12 +12,6 @@ To use this compiler in pkgsrc:
    2) .include "../../wip/gcc-3.4/buildlink3.mk" 
 
 The "preconfigure.mk" makefile fragment will override the compiler tools
-selected by ../../mk/compiler.mk to use gcc-3.4.0.
-
-As an alternative, if you prefer to build in pkgsrc without modifying
-Makefiles, define:
- _NEED_NEWER_GCC=NO
-_IGNORE_GCC=YES
-and prefix your PATH with ${LOCALBASE}/gcc-3.4.0/bin
+selected by ../../mk/compiler.mk to use gcc version 3.4.x.
 
 ===========================================================================

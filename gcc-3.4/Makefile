@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.27 2004/06/06 20:01:53 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.28 2004/06/11 20:20:36 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
-PKGNAME=	gcc3-${GCC_VERSION}
+#PKGNAME=	gcc34-${GCC_VERSION}
+PKGNAME=	gcc34-3.4.1
 CATEGORIES=	lang
-MASTER_SITES=   ${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
+#MASTER_SITES=   ${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
+MASTER_SITES=	ftp://gcc.gnu.org/pub/gcc/snapshots/${GCC_VERSION}/
 EXTRACT_SUFX=   .tar.bz2
 
 MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the gcc 3.4 compiler
 
-GCC_VERSION=	3.4.0
+GCC_VERSION=	3.4-20040604
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -84,7 +86,7 @@ PKG_SKIP_REASON=	"An Ada bootstrap compiler must be specified to BUILD_ADA"
 .  endif
 .endif
 
-GCC_SUBPREFIX=		${DISTNAME}
+GCC_SUBPREFIX=		gcc34
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
