@@ -176,15 +176,13 @@ subcasestr(const char *s, const char *find)
 {
 	size_t len, n;
 
-	n = strlen(s);
 	len = strlen(find);
+	n = strlen(s) - len;
 
 	do {
-		if ((int)(n-- - len) < 0)
-			return 0;
 		if (strncasecmp(s, find, len) == 0)
 			return 1;
-	} while (*++s != '\0');
+	} while (*++s != '\0' && n-- > 0);
 
 	return 0;
 }
