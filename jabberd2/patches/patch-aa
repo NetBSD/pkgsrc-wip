@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2003/10/08 00:59:51 xtraeme Exp $
+$NetBSD: patch-aa,v 1.5 2003/11/05 00:31:37 xtraeme Exp $
 
---- configure.orig	2003-10-08 02:22:43.000000000 +0200
-+++ configure	2003-10-08 02:26:01.000000000 +0200
-@@ -22466,7 +22466,7 @@
+--- configure.orig	2003-11-05 01:16:10.000000000 +0100
++++ configure	2003-11-05 01:17:39.000000000 +0100
+@@ -22491,7 +22491,7 @@
  fi;
  
      if test "$places" = "search"; then
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2003/10/08 00:59:51 xtraeme Exp $
                /usr/local/BerkeleyDB.4.1 /usr/include/db4:/usr/lib
                /sw/include/db4:/sw/lib"
      fi
-@@ -22539,7 +22539,7 @@
+@@ -22564,7 +22564,7 @@
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -20,30 +20,21 @@ $NetBSD: patch-aa,v 1.4 2003/10/08 00:59:51 xtraeme Exp $
  #include <stdio.h>
  main ()
  {
-@@ -22887,7 +22887,7 @@
- fi;
- 
+@@ -22914,7 +22914,7 @@
    if test "$places" = "search"; then
--    places="std /usr/include/mysql:/usr/lib /usr/local
-+    places="std ${PREFIX}/mysql:${PREFIX}/lib /usr/local
+     places="std /usr/include/mysql:/usr/lib /usr/local
              /usr/include/mysql:/usr/lib/mysql
-             /usr/local/include/mysql:/usr/local/lib
+-            /usr/local/include/mysql:/usr/local/lib
++            ${PREFIX}/include/mysql:${PREFIX}/lib
              /sw/include/mysql:/sw/lib"
-@@ -23060,7 +23060,7 @@
- fi;
- 
-   if test "$places" = "search"; then
--    places="std /usr/include/postgresql:/usr/lib /usr/local
-+    places="std ${PREFIX}/postgresql:${PREFIX}/lib /usr/local
-             /sw/include/postgresql:/sw/lib
-             /usr/local/include/postgresql:/usr/local/lib"
    fi
-@@ -23481,7 +23481,7 @@
- 
- 
- 
--sysconfdir="$sysconfdir/jabberd"
-+sysconfdir="$sysconfdir"
- 
-                                                                                                                                                                           ac_config_files="$ac_config_files Makefile ac-helpers/Makefile etc/Makefile etc/templates/Makefile tools/Makefile man/Makefile sx/Makefile mio/Makefile util/Makefile expat/Makefile idn/Makefile scod/Makefile c2s/Makefile resolver/Makefile router/Makefile s2s/Makefile sm/Makefile"
- cat >confcache <<\_ACEOF
+   # Now `places' is guaranteed to be a list of place specs we should
+@@ -23087,7 +23087,7 @@
+   if test "$places" = "search"; then
+     places="std /usr/include/postgresql:/usr/lib /usr/local
+             /sw/include/postgresql:/sw/lib
+-            /usr/local/include/postgresql:/usr/local/lib"
++            ${PREFIX}/include/postgresql:${PREFIX}/lib"
+   fi
+   # Now `places' is guaranteed to be a list of place specs we should
+   # search, no matter what flags the user passed.

@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.7 2003/10/08 00:59:51 xtraeme Exp $
+$NetBSD: distinfo,v 1.8 2003/11/05 00:31:36 xtraeme Exp $
 
-SHA1 (jabberd-2.0b2.tar.gz) = 16446e0011a2453535a3a22461819728a50cd362
-Size (jabberd-2.0b2.tar.gz) = 750743 bytes
-SHA1 (patch-aa) = f59cafb188f268ce76f28aa9b7d18d1f35e64b44
-SHA1 (patch-ab) = 9beca5869b0d785bf0a6e01fa6928f92d59c9ede
+SHA1 (jabberd-2.0b3.tar.gz) = 5cf7d8ef66125167c40f4830b2010c2b13a3e35b
+Size (jabberd-2.0b3.tar.gz) = 771117 bytes
+SHA1 (patch-aa) = 4b8643628af81dad96fb752c3f44229372df5a07
+SHA1 (patch-ab) = 210389798690b21879282bba64f2e35d47814193
 SHA1 (patch-ac) = 5756d4f4cd1dd42b4045045c6f5abf3429fa9c36
 SHA1 (patch-ad) = 0bbf1ca154d2f46babe10197720bbe3888157f66
-SHA1 (patch-ae) = 627b5a51db78cecd7ffbf3d3cdbe25e83286fdf8
+SHA1 (patch-ae) = 293b086d3ee27d0f494d98534f6454771311c914
 SHA1 (patch-af) = 4161bcc7fcdd53d477401152b08b56a731ed7d44
-SHA1 (patch-ag) = 8557c9b3ec662b6ef9000e5f46241bf0640dacd9
+SHA1 (patch-ag) = ea2935da481bcc91889a3bd74da41ad787e1b1a5
 SHA1 (patch-ah) = 5b7fb2c4e9fba19408aada448afa01671834f096
 SHA1 (patch-ai) = c518a67aafdcbe0286bd19f17cdde0944fcc42de
 SHA1 (patch-aj) = d371a5b3ca736e03d7028f098c857eb8c7480ee8

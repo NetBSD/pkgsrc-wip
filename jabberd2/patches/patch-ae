@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.5 2003/09/27 13:20:09 xtraeme Exp $
+$NetBSD: patch-ae,v 1.6 2003/11/05 00:31:37 xtraeme Exp $
 
---- etc/router.xml.in.orig	2003-09-27 15:01:11.000000000 +0200
-+++ etc/router.xml.in	2003-09-27 15:02:09.000000000 +0200
+--- etc/router.xml.in.orig	2003-11-05 01:19:46.000000000 +0100
++++ etc/router.xml.in	2003-11-05 01:20:44.000000000 +0100
 @@ -6,7 +6,7 @@
    <!-- The process ID file. comment this out if you don't need to know
         to know the process ID from outside the process (eg for control
@@ -9,9 +9,9 @@ $NetBSD: patch-ae,v 1.5 2003/09/27 13:20:09 xtraeme Exp $
 -  <pidfile>@localstatedir@/jabberd/pid/router.pid</pidfile>
 +  <pidfile>@@PIDDIR@@/router.pid</pidfile>
  
-   <!-- Log configuration - type is either "syslog" or "file" -->
+   <!-- Log configuration - type is "syslog", "file" or "stdout" -->
    <log type='syslog'>
-@@ -15,7 +15,7 @@
+@@ -19,7 +19,7 @@
  
      <!-- If logging to file, this is the filename of the logfile -->
      <!--
@@ -20,7 +20,7 @@ $NetBSD: patch-ae,v 1.5 2003/09/27 13:20:09 xtraeme Exp $
      -->
    </log>
  
-@@ -30,7 +30,7 @@
+@@ -34,7 +34,7 @@
      <!-- File containing the user table. This is where the router gets
           its component and secret information from for component
           authentication.-->
@@ -29,7 +29,7 @@ $NetBSD: patch-ae,v 1.5 2003/09/27 13:20:09 xtraeme Exp $
  
      <!-- Shared secret used to identify legacy components (that is,
           "jabber:component:accept" components that authenticate using
-@@ -42,7 +42,7 @@
+@@ -46,7 +46,7 @@
           connections. If this is commented out, connecting components
           will not be able to request a SSL-encrypted channel. -->
      <!--
@@ -37,4 +37,3 @@ $NetBSD: patch-ae,v 1.5 2003/09/27 13:20:09 xtraeme Exp $
 +    <pemfile>@@SSLCERTS@@/server.pem</pemfile>
      -->
    </local>
- 

@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.4 2003/10/08 00:59:51 xtraeme Exp $
+$NetBSD: patch-ag,v 1.5 2003/11/05 00:31:37 xtraeme Exp $
 
---- etc/c2s.xml.in.orig	2003-10-08 02:29:23.000000000 +0200
-+++ etc/c2s.xml.in	2003-10-08 02:30:47.000000000 +0200
+--- etc/c2s.xml.in.orig	2003-11-05 01:21:31.000000000 +0100
++++ etc/c2s.xml.in	2003-11-05 01:23:03.000000000 +0100
 @@ -6,7 +6,7 @@
    <!-- The process ID file. comment this out if you don't need to know
         to know the process ID from outside the process (eg for control
@@ -20,8 +20,8 @@ $NetBSD: patch-ag,v 1.4 2003/10/08 00:59:51 xtraeme Exp $
      -->
  
      <!-- Router connection retry -->
-@@ -52,7 +52,7 @@
- 
+@@ -56,7 +56,7 @@
+     
      <!-- If logging to file, this is the filename of the logfile -->
      <!--
 -    <file>@localstatedir@/jabberd/log/c2s.log</file>
@@ -29,7 +29,7 @@ $NetBSD: patch-ag,v 1.4 2003/10/08 00:59:51 xtraeme Exp $
      -->
    </log>
  
-@@ -84,7 +84,7 @@
+@@ -88,7 +88,7 @@
           connections. If this is commented out, clients will not be
           offered the STARTTLS stream extension -->
      <!--
@@ -38,7 +38,7 @@ $NetBSD: patch-ag,v 1.4 2003/10/08 00:59:51 xtraeme Exp $
      -->
  
      <!-- Older versions of jabberd support encrypted client connections
-@@ -278,7 +278,7 @@
+@@ -282,7 +282,7 @@
      <!-- Berkeley DB module configuration -->
      <db>
        <!-- Directory to store database files under -->
@@ -47,7 +47,7 @@ $NetBSD: patch-ag,v 1.4 2003/10/08 00:59:51 xtraeme Exp $
        
        <!-- Synchronize the database to disk after each write. If you
             disable this, database accesses may be faster, but data may
-@@ -312,7 +312,7 @@
+@@ -316,7 +316,7 @@
      <!-- Pipe module configuration -->
      <pipe>
        <!-- Program to execute -->
