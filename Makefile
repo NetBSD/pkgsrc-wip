@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.594 2003/11/05 02:58:03 mpasternak Exp $
-# $NetBSD: Makefile,v 1.594 2003/11/05 02:58:03 mpasternak Exp $
+# $Id: Makefile,v 1.595 2003/11/05 03:50:01 mpasternak Exp $
+# $NetBSD: Makefile,v 1.595 2003/11/05 03:50:01 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -64,6 +64,7 @@ SUBDIR+=	bugzilla
 SUBDIR+=	busybox
 SUBDIR+=	byacc
 SUBDIR+=	c-news
+SUBDIR+=	cal3d
 SUBDIR+=	cawf
 SUBDIR+=	ccrypt
 SUBDIR+=	ccze
