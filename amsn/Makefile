@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/06/12 17:25:19 ppostma Exp $
+# $NetBSD: Makefile,v 1.9 2004/06/13 18:26:54 ppostma Exp $
 #
 
 DISTNAME=	amsn-0_92
@@ -20,6 +20,7 @@ post-patch:
 	@${MV} ${WRKSRC}/amsn ${WRKSRC}/amsn.orig
 	@${SED} -e 's!@@PREFIX@@!${PREFIX}!g' < ${WRKSRC}/amsn.orig > \
 	    ${WRKSRC}/amsn
+	@${RM} -f ${WRKSRC}/amsn.orig
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/amsn

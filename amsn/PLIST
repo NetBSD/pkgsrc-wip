@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/06/12 17:25:19 ppostma Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/06/13 18:26:54 ppostma Exp $
 bin/amsn
 share/amsn/AppMain.tcl
 share/amsn/CREDITS
@@ -14,7 +14,6 @@ share/amsn/amsn
 share/amsn/amsn-remote
 share/amsn/amsn.debianmenu
 share/amsn/amsn.desktop
-share/amsn/amsn.orig
 share/amsn/amsn.spec
 share/amsn/anigif.tcl
 share/amsn/automsg.tcl
@@ -680,38 +679,38 @@ share/pixmaps/amsn.png
 share/pixmaps/crystal.png
 share/pixmaps/msn.png
 share/pixmaps/tux-32x32.png
-@dirrm share/amsn/plugins/tclzlib
-@dirrm share/amsn/plugins/winflash
-@dirrm share/amsn/plugins/traydock
-@dirrm share/amsn/plugins/QuickTimeTcl3.1
-@dirrm share/amsn/plugins/icons
-@dirrm share/amsn/plugins/tclCarbonNotification/Darwin-ppc
-@dirrm share/amsn/plugins/tclCarbonNotification
-@dirrm share/amsn/plugins/sha1
-@dirrm share/amsn/plugins/BWidget-1.7.0/lang
-@dirrm share/amsn/plugins/BWidget-1.7.0/images
-@dirrm share/amsn/plugins/BWidget-1.7.0
-@dirrm share/amsn/plugins/http2.4
-@dirrm share/amsn/plugins/base64
-@dirrm share/amsn/plugins
 @dirrm share/amsn/utils
-@dirrm share/amsn/docs
-@dirrm share/amsn/icons/128x128
-@dirrm share/amsn/icons/32x32
-@dirrm share/amsn/icons/48x48
-@dirrm share/amsn/icons/64x64
-@dirrm share/amsn/icons/96x96
-@dirrm share/amsn/icons/winicons
-@dirrm share/amsn/icons
-@dirrm share/amsn/skins/default/pixmaps
-@dirrm share/amsn/skins/default/smileys
 @dirrm share/amsn/skins/default/sounds
+@dirrm share/amsn/skins/default/smileys
+@dirrm share/amsn/skins/default/pixmaps
 @dirrm share/amsn/skins/default/displaypic
 @dirrm share/amsn/skins/default
-@dirrm share/amsn/skins/Tux/pixmaps
 @dirrm share/amsn/skins/Tux/smileys
+@dirrm share/amsn/skins/Tux/pixmaps
 @dirrm share/amsn/skins/Tux/displaypic
 @dirrm share/amsn/skins/Tux
 @dirrm share/amsn/skins
+@dirrm share/amsn/plugins/winflash
+@dirrm share/amsn/plugins/traydock
+@dirrm share/amsn/plugins/tclzlib
+@dirrm share/amsn/plugins/tclCarbonNotification/Darwin-ppc
+@dirrm share/amsn/plugins/tclCarbonNotification
+@dirrm share/amsn/plugins/sha1
+@dirrm share/amsn/plugins/icons
+@dirrm share/amsn/plugins/http2.4
+@dirrm share/amsn/plugins/base64
+@dirrm share/amsn/plugins/QuickTimeTcl3.1
+@dirrm share/amsn/plugins/BWidget-1.7.0/lang
+@dirrm share/amsn/plugins/BWidget-1.7.0/images
+@dirrm share/amsn/plugins/BWidget-1.7.0
+@dirrm share/amsn/plugins
 @dirrm share/amsn/lang
+@dirrm share/amsn/icons/winicons
+@dirrm share/amsn/icons/96x96
+@dirrm share/amsn/icons/64x64
+@dirrm share/amsn/icons/48x48
+@dirrm share/amsn/icons/32x32
+@dirrm share/amsn/icons/128x128
+@dirrm share/amsn/icons
+@dirrm share/amsn/docs
 @dirrm share/amsn
