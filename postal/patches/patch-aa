@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/02 05:53:56 xtraeme Exp $
+
+--- configure.in.orig	Sun Jun 16 21:16:25 2002
++++ configure.in	Sat Jan  4 13:31:52 2003
+@@ -95,15 +95,9 @@
+    linux_pthread="#define LINUX_PTHREAD"
+ fi
+ 
+-LDFLAGS=-lpthread
+-AC_TRY_LINK([#include <pthread.h>
+-void * thread_func(void * param) { return NULL; }
+-] , [pthread_t thread_info;
+-     pthread_attr_t attr;
+-     pthread_create(&thread_info, &attr, &thread_func, NULL);]
+-  , extra_ldflags="$extra_ldflags -lpthread"
+-  , extra_ldflags="$extra_ldflags -pthread")
+-
++LDFLAGS="-lpthread -L/usr/pkg/lib"
++CFLAGS="-I/usr/pkg/include"
++extra_ldflags="$extra_ldflags ${LDFLAGS}"
+ AC_SUBST(large_file)
+ large_file=""
+ 

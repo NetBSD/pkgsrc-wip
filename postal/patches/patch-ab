@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/09/02 05:53:56 xtraeme Exp $
+
+--- postal.cpp.orig	Sat Jan  4 13:25:06 2003
++++ postal.cpp	Sat Jan  4 13:26:25 2003
+@@ -110,7 +110,6 @@
+   }
+   struct sigaction sa;
+   sa.sa_handler = SIG_IGN;
+-  sa.sa_sigaction = NULL;
+   sa.sa_flags = 0;
+   if(sigaction(SIGPIPE, &sa, NULL))
+   {
