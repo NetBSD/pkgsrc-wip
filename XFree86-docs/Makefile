@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/01 23:57:52 blef Exp $
+# $NetBSD: Makefile,v 1.7 2003/10/27 23:01:39 jeremy-c-reed Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-docs-${XF_VER}
@@ -11,7 +11,7 @@ MAINTAINER=	xfree86@blef.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 Documentation
 
-DEPENDS=	imake>=4.3.0:../../wip/imake
+BUILD_DEPENDS=	imake>=4.3.0:../../wip/imake
 
 USE_BUILDLINK2=		yes
 NO_XFREE86_TARGETS=	# defined

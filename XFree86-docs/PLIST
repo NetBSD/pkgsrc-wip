@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/23 20:26:50 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/10/27 23:01:39 jeremy-c-reed Exp $
 lib/X11/doc/DPMS.TXT
 lib/X11/doc/DPMSLib.TXT
 lib/X11/doc/ICElib.TXT
@@ -92,4 +92,4 @@ lib/X11/doc/xtest.TXT
 lib/X11/doc/xtestlib.TXT
 lib/X11/doc/xv-protocol-v2.TXT
 @dirrm lib/X11/doc/PostScript
-@dirrm lib/X11/doc
+@unexec ${RM} %D/lib/X11/doc 2>/dev/null || true
