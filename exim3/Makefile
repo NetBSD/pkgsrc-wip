@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/11/30 02:37:15 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.5 2003/11/30 03:25:14 grantbeattie Exp $
 
 DISTNAME=	exim-3.36
 CATEGORIES=	mail net
@@ -13,7 +13,21 @@ COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 USE_PERL5=	YES
 USE_PKGINSTALL=	YES
 
-RCD_SCRIPTS=	exim
+BUILD_DEFS+=		EXIM_USER EXIM_GROUP
+
+PKG_SYSCONFSUBDIR?=	exim
+EGDIR=			${PREFIX}/share/examples/exim
+MAKE_ENV+=		INST_CONFIGURE_FILE="${EGDIR}/configure"
+CONF_FILES=		${EGDIR}/configure ${PKG_SYSCONFDIR}/configure
+MESSAGE_SUBST+=		EGDIR="${EGDIR}"
+
+RCD_SCRIPTS=		exim
+
+OWN_DIRS_PERMS=		/var/log/exim ${EXIM_USER} ${EXIM_GROUP} 0750
+OWN_DIRS_PERMS+=	/var/spool/exim ${EXIM_USER} ${EXIM_GROUP} 0750
+
+PKG_USERS=		${EXIM_USER}:${EXIM_GROUP}:8:Exim\\ mail\\ server\\ user:/var/mail:/sbin/nologin
+PKG_GROUPS=		${EXIM_GROUP}
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
@@ -21,11 +35,11 @@ pre-patch:
 
 pre-configure:
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
-	    < ${WRKSRC}/Local/Makefile.netbsd \
-	    > ${WRKSRC}/Local/Makefile
+		${WRKSRC}/Local/Makefile.netbsd \
+		> ${WRKSRC}/Local/Makefile
 
 pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/exim
+	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} /var/log/exim
 	${CHMOD} 750 /var/log/exim
 	strip ${WRKSRC}/build*/exim
@@ -35,14 +49,17 @@ pre-install:
 	strip ${WRKSRC}/build*/exim_dumpdb
 	strip ${WRKSRC}/build*/exim_lock
 
+post-build:
+	${SED} -e 's:@PREFIX@:${PREFIX}:' \
+		${FILESDIR}/mailer.conf.exim \
+		> ${WRKDIR}/mailer.conf
+
 post-install:
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
-	    ${FILESDIR}/exim_newaliases \
-	    > ${PREFIX}/sbin/exim_newaliases
+		${FILESDIR}/exim_newaliases
+		> ${PREFIX}/sbin/exim_newaliases
 	${CHMOD} ugo+x ${PREFIX}/sbin/exim_newaliases
-	${SED} -e 's:@PREFIX@:${PREFIX}:' \
-	    ${FILESDIR}/mailer.conf.exim \
-	    > ${PREFIX}/etc/exim/mailer.conf.exim
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EGDIR}
 	${CP} ${FILESDIR}/exim.8 ${PREFIX}/man/man8/exim.8
 
 .include "../../mk/bsd.pkg.mk"
