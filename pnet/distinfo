@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/18 16:46:50 poppnk Exp $
+$NetBSD: distinfo,v 1.1.1.2 2003/10/29 15:52:29 poppnk Exp $
 
-SHA1 (pnet-0.5.8.tar.gz) = 028e9c6daadd906752e96792041565026396dc49
-Size (pnet-0.5.8.tar.gz) = 2992268 bytes
+SHA1 (pnet-0.6.0.tar.gz) = 26fe79140f18fad6664ad1b5948d38d33ff3f6e6
+Size (pnet-0.6.0.tar.gz) = 3092602 bytes
