@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 2003/12/08 05:51:25 jcd Exp $
 --- amavisd.conf.orig	Sun Nov  9 18:07:53 2003
 +++ amavisd.conf	Mon Dec  8 00:41:07 2003
 @@ -51,7 +51,7 @@
