@@ -1,21 +1,21 @@
 #!@SH@
 #
-# $NetBSD: drweb-smf.sh,v 1.4 2003/09/16 16:22:25 bubuchka Exp $
+# $NetBSD: drweb-smf.sh,v 1.5 2003/10/27 20:26:59 bubuchka Exp $
 
-# PROVIDE: drwebsmf
+# PROVIDE: drweb_smf
 # REQUIRE: DAEMON
 # BEFORE: LOGIN
 
 . @RCD_SUBR@
 
-name="drwebsmf"
+name="drweb_smf"
 rcvar=$name
 command="@PREFIX@/sbin/drweb-smf"
 procname="${command}"
-start_precmd="drwebsmf_clean"
+start_precmd="drweb_smf_clean"
 required_files="@PKG_SYSCONFDIR@/drweb-smf.conf"
 
-drwebsmf_clean()
+drweb_smf_clean()
 {
 	if [ -e @DRW_SMF_SOCKFILE@ ]; then
 		rm -f @DRW_SMF_SOCKFILE@
