@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.666 2003/11/26 05:30:26 minskim Exp $
-# $NetBSD: Makefile,v 1.666 2003/11/26 05:30:26 minskim Exp $
+# $Id: Makefile,v 1.667 2003/11/26 16:21:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.667 2003/11/26 16:21:51 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -184,6 +184,7 @@ SUBDIR+=	gss
 SUBDIR+=	gstreamer-player
 SUBDIR+=	gtick
 SUBDIR+=	gtk-engines-thinice
+SUBDIR+=	gtk-send-pr
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtk-theme-switch
 SUBDIR+=	gtk2-engines-mist
