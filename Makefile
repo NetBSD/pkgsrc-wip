@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.338 2003/07/23 21:13:07 xtraeme Exp $
-# $NetBSD: Makefile,v 1.338 2003/07/23 21:13:07 xtraeme Exp $
+# $Id: Makefile,v 1.339 2003/07/24 04:47:44 blef Exp $
+# $NetBSD: Makefile,v 1.339 2003/07/24 04:47:44 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -9,6 +9,19 @@ SUBDIR+=	PPower4
 SUBDIR+=	Radiator
 SUBDIR+=	Radiator-all
 SUBDIR+=	WEPCrack
+SUBDIR+=	XFree86
+SUBDIR+=	XFree86-clients
+SUBDIR+=	XFree86-defaultBitmaps
+SUBDIR+=	XFree86-docs
+SUBDIR+=	XFree86-fonts100dpi
+SUBDIR+=	XFree86-fonts75dpi
+SUBDIR+=	XFree86-fontsCyrillic
+SUBDIR+=	XFree86-fontsEncodings
+SUBDIR+=	XFree86-fontsScalable
+SUBDIR+=	XFree86-fontserver
+SUBDIR+=	XFree86-libs
+SUBDIR+=	XFree86-man
+SUBDIR+=	XFree86-server
 SUBDIR+=	abuse_sdl
 SUBDIR+=	acid
 SUBDIR+=	adodb
@@ -117,8 +130,8 @@ SUBDIR+=	idesk
 SUBDIR+=	idled
 SUBDIR+=	iisemulator
 SUBDIR+=	ike-scan
-SUBDIR+=	imake
 SUBDIR+=	ilohamail
+SUBDIR+=	imake
 SUBDIR+=	ion-devel
 SUBDIR+=	ion-dock
 SUBDIR+=	ish
@@ -233,6 +246,7 @@ SUBDIR+=	poedit
 SUBDIR+=	portmap
 SUBDIR+=	postgresql-autodoc
 SUBDIR+=	ppp
+SUBDIR+=	premake
 SUBDIR+=	procps
 SUBDIR+=	psh
 SUBDIR+=	pts
@@ -274,8 +288,8 @@ SUBDIR+=	srvx
 SUBDIR+=	stickynotes-applet
 SUBDIR+=	strace
 SUBDIR+=	streamripper
-SUBDIR+=	sun-jre142
 SUBDIR+=	sun-jdk142
+SUBDIR+=	sun-jre142
 SUBDIR+=	sysklogd
 SUBDIR+=	sysvinit
 SUBDIR+=	tendra
@@ -337,18 +351,5 @@ SUBDIR+=	yelp
 SUBDIR+=	zebra-pj
 SUBDIR+=	zenity
 SUBDIR+=	zinf
-SUBDIR+=        XFree86
-SUBDIR+=        XFree86-clients
-SUBDIR+=        XFree86-defaultBitmaps
-SUBDIR+=        XFree86-docs
-SUBDIR+=        XFree86-fonts100dpi
-SUBDIR+=        XFree86-fonts75dpi
-SUBDIR+=        XFree86-fontsCyrillic
-SUBDIR+=        XFree86-fontsEncodings
-SUBDIR+=        XFree86-fontsScalable
-SUBDIR+=        XFree86-fontserver
-SUBDIR+=        XFree86-libs
-SUBDIR+=        XFree86-man
-SUBDIR+=        XFree86-server
 
 .include "../mk/bsd.pkg.subdir.mk"
