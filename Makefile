@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.916 2004/01/27 13:58:30 jgoamakf Exp $
-# $NetBSD: Makefile,v 1.916 2004/01/27 13:58:30 jgoamakf Exp $
+# $Id: Makefile,v 1.917 2004/01/27 14:24:57 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.917 2004/01/27 14:24:57 marttikuparinen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -317,6 +317,7 @@ SUBDIR+=	links-hacked
 SUBDIR+=	linux-ch
 SUBDIR+=	linux-chprofessional
 SUBDIR+=	linux-kbd
+SUBDIR+=	linux-kernel-sources
 SUBDIR+=	linux-makedev
 SUBDIR+=	linux-modutils
 SUBDIR+=	linux-nfs-utils
