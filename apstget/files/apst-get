@@ -19,9 +19,11 @@ fi
 # QUITE="1"
 
 #----->8--------------#
-PREFIX=/usr/pkg/
+PREFIX=_pfx_
 MAKE=${PREFIX}/bin/bmake
-PKGSRC_DIR=/usr/pkgsrc/
+PKGCHK=${PREFIX}/sbin/pkg_chk
+PKGFIND=${PREFIX}/bin/pkgfind
+PKGSRC_DIR=_psd_
 DEFAULT_TARGETS="${DEFAULT_TARGETS}"
 if [ "${MAKE_TARGET}" = "" ]; then
 	MAKE_TARGET="clean"
@@ -52,7 +54,7 @@ do_usage() {
 	echo "  relink       - tries to solve all broken libs."
 	echo "  clean        - cleans all build directories."
 	echo ""
-	echo "variables (environ|_etc_/apstget.conf):"
+	echo "variables (environ|_etc/apstget.conf):"
 	echo "  MAKE_TARGET,INTERACTIVE,QUITE"
 }
 
@@ -61,16 +63,16 @@ do_install() {
 	DIR=$1
 	UPD=$2 # Update flag
 	if [ "`echo $PKG | grep /`" = "" ]; then
-		DIR=`pkgfind -qx $PKG`
+		DIR=`${PKGFIND} -qx $PKG`
 	else
 		PKG=`echo $PKG | awk -F / '{ print $2 }'`
 	fi
 	if [ ! -e "${PKGSRC_DIR}/${DIR}" ]; then
 	echo "==> Error! package $PKG not found!"
 	else
-	STAT="`echo $DIR | pkg_chk -C /dev/stdin -c`"
+	STAT="`echo $DIR | ${PKGCHK} -C /dev/stdin -c`"
 	if [ "${STAT}" = "" ]; then
-		echo "==> Package ${DIR} is updated to the latest version"
+		echo "==> Package ${DIR} is at the latest version"
 	else
 	echo "==> Preparing installation for $DIR"
 	cd ${PKGSRC_DIR}/${DIR}
@@ -78,7 +80,7 @@ do_install() {
 	REPLACE=""
 	INSTALL=""
 	for A in ${DEPS} ; do
-		CHK=`echo ${A} | pkg_chk -C /dev/stdin -c`
+		CHK=`echo ${A} | ${PKGCHK} -C /dev/stdin -c`
 		if [ ! "`echo ${CHK}|grep missing`" = "" ]; then
 			echo " [i] Enqueueing for install ${A}"
 			INSTALL="${INSTALL} ${A}"
@@ -127,7 +129,7 @@ do_remove() {
 	PKG=$1
 	DIR=$1
 	if [ "`echo $PKG | grep /`" = "" ]; then
-		DIR=`pkgfind -qx $PKG`
+		DIR=`${PKGFIND} -qx $PKG`
 	else
 		PKG=`echo $PKG | awk -F / '{ print $2 }'`
 	fi
@@ -260,11 +262,19 @@ case "$1" in
 	;;
 "dist-upgrade")
 	echo "==> Generating updated list..."
-	F=`${PKGCHK} -i|grep mismatch|awk -F : '{print $1 }'|grep -v WARNING`
-	for A in ${F}; do
+	LIST=`${PKGCHK} -i | grep mismatch | \
+		awk -F '([.\-]*)-[0-9]' '{print $1 }'|grep -v WARNING`
+		
+	if [ "${LIST}" = "" ]; then
+		echo "Your system is completily updated"
+	else
+	echo "Upgrade list:"
+	echo ${LIST}
+	for A in ${LIST}; do
 		echo "==> Updating ${A}..."
 		do_install ${A} 1
 	done
+	fi
 	;;
 "clean")
 	do_clean
