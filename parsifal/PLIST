@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/10 20:35:13 ora8_ Exp $
+include/libparsifal/bistream.h
+include/libparsifal/isrcmem.h
+include/libparsifal/parsifal.h
+include/libparsifal/xmlhash.h
+include/libparsifal/xmlsbuf.h
+include/libparsifal/xmlvect.h
+lib/${PKGNAME}.so
+lib/libparsifal.a
+lib/libparsifal.la
+lib/libparsifal.so
+@dirrm include/libparsifal
