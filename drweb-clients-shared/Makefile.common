@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/04/07 10:01:03 bubuchka Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/05/09 20:48:25 blef Exp $
 #
 # This is installation framework to various clients to DrWeb daemon
 # antivirus shiped by Dialogue Science
@@ -46,8 +46,8 @@ DEPENDS+=		drweb-clients-shared-${DRW_CLVERN}:../../wip/drweb-clients-shared
 CFLAGS+=		-DPKG_SYSCONFDIR='\"${PKG_SYSCONFDIR}\"'
 
 PTHREAD_OPTS+=		required
-USE_BUILDLINK2=		# defined
-.include "../../mk/pthread.buildlink2.mk"
+USE_BUILDLINK3=		yes
+.include "../../mk/pthread.buildlink3.mk"
 .endif
 
 DRW_EGDIR=		${_EGDIR}-${DRW_CLIENT_NAME}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:33:39 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/09 19:53:21 blef Exp $
 # based on slrn-pl.spec from PLD Linux (http://www.pld-linux.org)
 #
 # SLRN_PL_FACES - build both slrnfaces (x11) and txtfaces extensions
@@ -15,7 +15,7 @@ COMMENT=	Highly customizable threaded newsreader (PoLished version)
 
 PKG_SYSCONFSUBDIR=	slrn-pl
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=--disable-inews \
@@ -39,13 +39,13 @@ CONFIGURE_ARGS+=--disable-inews \
 USE_X11=        	YES
 CONFIGURE_ARGS+= 	--with-txtface --with-slrnface
 PLIST_SRC+=             ${PKGDIR}/PLIST.faces
-.include "../../mail/faces/buildlink2.mk"
+.include "../../mail/faces/buildlink3.mk"
 .else
 CONFIGURE_ARGS+= 	--without-txtface --without-slrnface
 .endif
 
 PLIST_SRC+=             ${PKGDIR}/PLIST
 
-.include "../../devel/libslang/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/libslang/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

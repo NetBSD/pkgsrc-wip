@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/12 16:45:10 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/09 20:48:25 blef Exp $
 
 DRW_CLIENT_NAME=	smf
 
@@ -43,6 +43,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/sendmail/viruses_list.txt ${DOCDIR}
 
 .include "../../wip/drweb-clients-shared/Makefile.common"
-.include "../../mail/libmilter/buildlink2.mk"
+.include "../../mail/libmilter/buildlink3.mk"
 .include "../../wip/mk/rcd.mk"
 .include "../../mk/bsd.pkg.mk"
