@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/28 09:50:25 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/02 22:41:29 blef Exp $
 #
 
 DISTNAME=		passepartout-0.3
@@ -10,12 +10,14 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.stacken.kth.se/project/pptout/
 COMMENT=		Desktop publishing for X
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+BUILDLINK_TRANSFORM+=	S:-Wold-style-casts:
+
 .include "../../mk/ghostscript.mk"
-.include "../../x11/gtkmm/buildlink2.mk"
-.include "../../textproc/libxslt/buildlink2.mk"
-.include "../../wip/libxml++/buildlink2.mk"
+.include "../../x11/gtkmm/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../wip/libxml++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
