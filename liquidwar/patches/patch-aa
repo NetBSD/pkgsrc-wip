@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/06 11:33:04 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/02 21:14:32 blef Exp $
 
---- Makefile.in.orig	Mon Dec 16 10:55:46 2002
-+++ Makefile.in
-@@ -100,8 +100,8 @@ install_nolink: install_bin install_data
+--- Makefile.in.orig	Thu Mar  6 00:29:07 2003
++++ Makefile.in	Wed Jul  2 14:08:08 2003
+@@ -7,7 +7,7 @@
+ infodir =         @infodir@
+ 
+ BINDIR =          $(bindir)
+-GAMEDIR =         $(exec_prefix)/games
++GAMEDIR =         $(exec_prefix)/bin
+ DATADIR =         $(datadir)/games/liquidwar
+ PIXDIR =          $(datadir)/pixmaps
+ DOCDIR =          $(datadir)/doc/liquidwar
+@@ -104,8 +104,8 @@
  install_bin: src/liquidwar src/liquidwar-server
  	@echo "Installing liquidwar binaries in $(GAMEDIR)."
  	@install -d $(DESTDIR)$(GAMEDIR)
@@ -13,7 +22,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/06 11:33:04 thomasklausner Exp $
  
  install_link:
  	@echo "Installing link in $(BINDIR)."
-@@ -114,50 +114,50 @@ install_link:
+@@ -118,50 +118,50 @@
  install_data: data/liquidwar.dat
  	@echo "Installing liquidwar datafile in $(DATADIR)."
  	@install -d $(DESTDIR)$(DATADIR)
