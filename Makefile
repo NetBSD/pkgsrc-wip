@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.153 2003/05/09 20:34:30 marc Exp $
-# $NetBSD: Makefile,v 1.153 2003/05/09 20:34:30 marc Exp $
+# $Id: Makefile,v 1.154 2003/05/12 22:04:33 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.154 2003/05/12 22:04:33 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -73,7 +73,9 @@ SUBDIR+=	jdk13-openjit
 SUBDIR+=	jigdo
 SUBDIR+=	jpgraph
 SUBDIR+=	libdialog
+SUBDIR+=	libgsf
 SUBDIR+=	libshout
+SUBDIR+=	libwpd
 SUBDIR+=	liquidwar
 SUBDIR+=	lpe
 SUBDIR+=	mailfilter
