@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/12 20:19:01 lexort Exp $
+
+SHA1 (guile-pg-0.22.tar.gz) = b782bdbd34bfcaf35c364250cea9d3b747e3c99c
+Size (guile-pg-0.22.tar.gz) = 448569 bytes
