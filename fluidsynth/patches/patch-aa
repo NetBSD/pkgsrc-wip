@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/08/02 04:43:47 bencollver Exp $
+$NetBSD: patch-aa,v 1.2 2004/08/09 16:12:33 bencollver Exp $
 
 --- src/fluid_oss.c.orig	Wed Mar  3 03:02:28 2004
 +++ src/fluid_oss.c
@@ -44,23 +44,29 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/08/02 04:43:47 bencollver Exp $
    }
  
    if (stat(devname, &devstat) == -1) {
-@@ -229,6 +237,7 @@ new_fluid_oss_audio_driver(fluid_setting
+@@ -229,6 +237,13 @@ new_fluid_oss_audio_driver(fluid_setting
      goto error_recovery;
    }
  
-+#if !defined(__NetBSD__)
++#ifdef __NetBSD__
++  err = pthread_create(&dev->thread, &attr, fluid_oss_audio_run, (void*) dev);
++  if (err) {
++    FLUID_LOG(FLUID_ERR, "Couldn't create audio thread");
++    goto error_recovery;
++  }
++#else
    /* the pthread_create man page explains that
       pthread_attr_setschedpolicy returns an error if the user is not
       permitted the set SCHED_FIFO. it seems however that no error is
-@@ -264,6 +273,7 @@ new_fluid_oss_audio_driver(fluid_setting
+@@ -264,6 +279,7 @@ new_fluid_oss_audio_driver(fluid_setting
      }
      break;
    }
-+#endif /* !defined(__NetBSD__) */
++#endif /* __NetBSD__ */
  
    return (fluid_audio_driver_t*) dev;
  
-@@ -285,8 +295,10 @@ new_fluid_oss_audio_driver2(fluid_settin
+@@ -285,8 +301,10 @@ new_fluid_oss_audio_driver2(fluid_settin
    int format;
    pthread_attr_t attr;
    int err;
@@ -71,7 +77,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/08/02 04:43:47 bencollver Exp $
  
    dev = FLUID_NEW(fluid_oss_audio_driver_t);
    if (dev == NULL) {
-@@ -311,7 +323,7 @@ new_fluid_oss_audio_driver2(fluid_settin
+@@ -311,7 +329,7 @@ new_fluid_oss_audio_driver2(fluid_settin
  
  
    if (!fluid_settings_getstr(settings, "audio.oss.device", &devname)) {
@@ -80,23 +86,29 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/08/02 04:43:47 bencollver Exp $
    }
    if (stat(devname, &devstat) == -1) {
      FLUID_LOG(FLUID_ERR, "Device <%s> does not exists", devname);    
-@@ -380,6 +392,7 @@ new_fluid_oss_audio_driver2(fluid_settin
+@@ -380,6 +398,13 @@ new_fluid_oss_audio_driver2(fluid_settin
      goto error_recovery;
    }
  
-+#if !defined(__NetBSD__)
++#ifdef __NetBSD__
++  err = pthread_create(&dev->thread, &attr, fluid_oss_audio_run2, (void*) dev);
++  if (err) {
++    FLUID_LOG(FLUID_ERR, "Couldn't create audio2 thread");
++    goto error_recovery;
++  }
++#else
    /* the pthread_create man page explains that
       pthread_attr_setschedpolicy returns an error if the user is not
       permitted the set SCHED_FIFO. it seems however that no error is
-@@ -415,6 +428,7 @@ new_fluid_oss_audio_driver2(fluid_settin
+@@ -415,6 +440,7 @@ new_fluid_oss_audio_driver2(fluid_settin
      }
      break;
    }
-+#endif /* !defined(__NetBSD__) */
++#endif /* __NetBSD__ */
  
    return (fluid_audio_driver_t*) dev;
  
-@@ -644,7 +658,7 @@ fluid_oss_audio_run2(void* d)
+@@ -644,7 +670,7 @@ fluid_oss_audio_run2(void* d)
  
  void fluid_oss_midi_driver_settings(fluid_settings_t* settings)
  {
@@ -105,7 +117,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/08/02 04:43:47 bencollver Exp $
  }
  
  /*
-@@ -657,8 +671,10 @@ new_fluid_oss_midi_driver(fluid_settings
+@@ -657,8 +683,10 @@ new_fluid_oss_midi_driver(fluid_settings
    int err;
    fluid_oss_midi_driver_t* dev;
    pthread_attr_t attr;
@@ -116,7 +128,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/08/02 04:43:47 bencollver Exp $
    char* device;
    
    /* not much use doing anything */
-@@ -689,7 +705,7 @@ new_fluid_oss_midi_driver(fluid_settings
+@@ -689,7 +717,7 @@ new_fluid_oss_midi_driver(fluid_settings
    /* get the device name. if none is specified, use the default device. */
    fluid_settings_getstr(settings, "midi.oss.device", &device);
    if (device == NULL) {
@@ -125,20 +137,26 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/08/02 04:43:47 bencollver Exp $
    }
  
    /* open the default hardware device. only use midi in. */
-@@ -706,6 +722,8 @@ new_fluid_oss_midi_driver(fluid_settings
+@@ -706,6 +734,14 @@ new_fluid_oss_midi_driver(fluid_settings
      FLUID_LOG(FLUID_ERR, "Couldn't initialize midi thread attributes");
      goto error_recovery;
    }
 +
-+#if !defined(__NetBSD__)
++#ifdef __NetBSD__
++  err = pthread_create(&dev->thread, &attr, fluid_oss_midi_run, (void*) dev);
++  if (err) {
++    FLUID_LOG(FLUID_ERR, "Couldn't create midi thread");
++    goto error_recovery;
++  }
++#else
    /* use fifo scheduling. if it fails, use default scheduling. */
    while (1) {
      err = pthread_attr_setschedpolicy(&attr, sched);
-@@ -737,6 +755,7 @@ new_fluid_oss_midi_driver(fluid_settings
+@@ -737,6 +773,7 @@ new_fluid_oss_midi_driver(fluid_settings
      }
      break;
    }  
-+#endif /* !defined(__NetBSD__) */
++#endif /* __NetBSD__ */
    return (fluid_midi_driver_t*) dev;
  
   error_recovery:
