@@ -1,0 +1,8 @@
+- these packages are *very* incomplete. testing/improvements/fixes are
+  definitely needed.
+
+- firefox for Linux/i386 starts about 50% of the time (and runs
+  flawlessly when it does) on NetBSD 2.0E with these libraries, but this
+  may be a Linux compat issue. I haven't really tested much else.
+
+- ldconfig handling is non-existant yet.

@@ -1,0 +1,28 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/11 10:01:54 grantbeattie Exp $
+
+SHA1 (debian_linux/xlibs_4.3.0.dfsg.1-4_all.deb) = 641f5872e95b151dae1fd70bb591f57aa0e9d476
+Size (debian_linux/xlibs_4.3.0.dfsg.1-4_all.deb) = 382360 bytes
+SHA1 (debian_linux/libxi6_4.3.0.dfsg.1-4_i386.deb) = a1d8ce5c79279ef883e4a14a5c4ecd7bab3cf45e
+Size (debian_linux/libxi6_4.3.0.dfsg.1-4_i386.deb) = 149170 bytes
+SHA1 (debian_linux/libice6_4.3.0.dfsg.1-4_i386.deb) = 803d6ca98fcc5f467cc48828c6810d4ff52bc3d7
+Size (debian_linux/libice6_4.3.0.dfsg.1-4_i386.deb) = 173102 bytes
+SHA1 (debian_linux/libsm6_4.3.0.dfsg.1-4_i386.deb) = 3b41b9a9692f11830696e34d07c61e1d26151e42
+Size (debian_linux/libsm6_4.3.0.dfsg.1-4_i386.deb) = 150834 bytes
+SHA1 (debian_linux/libx11-6_4.3.0.dfsg.1-4_i386.deb) = 8e15c334ffd1455a5262aaf059e6c6747f1a5ceb
+Size (debian_linux/libx11-6_4.3.0.dfsg.1-4_i386.deb) = 683278 bytes
+SHA1 (debian_linux/libxext6_4.3.0.dfsg.1-4_i386.deb) = 97c5d6a3c21b7258266f67772c45201830f8fb86
+Size (debian_linux/libxext6_4.3.0.dfsg.1-4_i386.deb) = 157976 bytes
+SHA1 (debian_linux/libxmu6_4.3.0.dfsg.1-4_i386.deb) = 3bfc4331428e3095b709c3b3060583c80f0d2378
+Size (debian_linux/libxmu6_4.3.0.dfsg.1-4_i386.deb) = 179380 bytes
+SHA1 (debian_linux/libxmuu1_4.3.0.dfsg.1-4_i386.deb) = 91fc65d99b9fd1042e95e3897a747ab16a68d8e4
+Size (debian_linux/libxmuu1_4.3.0.dfsg.1-4_i386.deb) = 141250 bytes
+SHA1 (debian_linux/libxp6_4.3.0.dfsg.1-4_i386.deb) = ec163b219a6479c567ba03ae33fd4fe00195be5f
+Size (debian_linux/libxp6_4.3.0.dfsg.1-4_i386.deb) = 148314 bytes
+SHA1 (debian_linux/libxpm4_4.3.0.dfsg.1-4_i386.deb) = d617270cc5f4cdcb69614e96d32c2260980ca95d
+Size (debian_linux/libxpm4_4.3.0.dfsg.1-4_i386.deb) = 164008 bytes
+SHA1 (debian_linux/libxt6_4.3.0.dfsg.1-4_i386.deb) = 10eb760ff7c138519339500ee8a82dbe64ca7eca
+Size (debian_linux/libxt6_4.3.0.dfsg.1-4_i386.deb) = 287386 bytes
+SHA1 (debian_linux/libxt-dev_4.3.0.dfsg.1-4_i386.deb) = 9f2fae4e52700c941324ce4ac7e1b149d2307ef7
+Size (debian_linux/libxt-dev_4.3.0.dfsg.1-4_i386.deb) = 587476 bytes
+SHA1 (debian_linux/xlibs-data_4.3.0.dfsg.1-4_all.deb) = 9be11b9b0575fd86ac15478c6b7385d92afe3585
+Size (debian_linux/xlibs-data_4.3.0.dfsg.1-4_all.deb) = 867526 bytes

@@ -1,0 +1,35 @@
+# $Id: Makefile.common,v 1.1.1.1 2004/06/11 10:00:38 grantbeattie Exp $
+
+MAINTAINER?=		grant@NetBSD.org
+HOMEPAGE?=		http://www.debian.org/
+
+DIST_SUBDIR=		debian_linux
+
+NO_CONFIGURE=		# defined
+NO_BUILD=		# defined
+
+DEBIAN_EMUL_DIR=	${PREFIX}/emul/debian_linux
+
+WRKDIR_DEBS?=		${WRKDIR}/var/cache/apt/archives
+EXTRACT_CMD.deb=	${AR} x $${extract_file} data.tar.gz
+
+.PHONY: do-extract-deb
+.if !target(do-extract-deb)
+do-extract-deb: ${WRKDIR}
+.  for _deb_ in ${DEBS}
+	${_PKG_SILENT}${_PKG_DEBUG} ${MKDIR} ${WRKDIR}/${_deb_}
+	${_PKG_SILENT}${_PKG_DEBUG} \
+	extract_file="${DISTDIR}/${DIST_SUBDIR}/${_deb_}"; \
+	export extract_file; \
+	cd ${WRKDIR}/${_deb_} && ${EXTRACT_CMD.deb}
+.  endfor
+.endif
+
+.PHONY: do-install-deb
+.if !target(do-install-deb)
+do-install-deb: ${WRKDIR}
+.  for _deb_ in ${DEBS}
+	cd ${DEBIAN_EMUL_DIR} && \
+		${TAR} -zxpf ${WRKDIR}/${_deb_}/data.tar.gz
+.  endfor
+.endif

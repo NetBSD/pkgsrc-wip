@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/11 09:59:39 grantbeattie Exp $
+
+SHA1 (debian_linux/libc6_2.3.2.ds1-13_i386.deb) = 28709a852bcb1dd677ad2d1a99c06b7082d37032
+Size (debian_linux/libc6_2.3.2.ds1-13_i386.deb) = 4929012 bytes
+SHA1 (debian_linux/zlib1g_1.2.1.1-3_i386.deb) = 20106b627c09ecd8a02fde49e58341efc0e31d5e
+Size (debian_linux/zlib1g_1.2.1.1-3_i386.deb) = 61580 bytes
+SHA1 (debian_linux/libstdc++5_3.3.3-9_i386.deb) = 666f99026c3d2a58a27fd52227fe4fb74fcb3163
+Size (debian_linux/libstdc++5_3.3.3-9_i386.deb) = 289722 bytes
