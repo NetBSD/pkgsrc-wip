@@ -1,0 +1,6 @@
+ACPID used to try to handle events internally.  Rather than try to climb
+an ever-growing mountain, ACPID now lets YOU define what events to handle.
+Any event that publishes itself to /proc/acpi/event can be handled.
+
+ACPID reads a set of configuration files which define event->action pairs.
+This is how you make it do stuff. See the man page for details.

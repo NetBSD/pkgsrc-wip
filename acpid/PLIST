@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/03 19:52:33 poppnk Exp $
+man/man8/acpid.8
+sbin/acpi_listen
+sbin/acpid
+share/examples/acpid/acpi_handler.sh
+share/examples/acpid/battery/battery.conf
+share/examples/acpid/battery/battery.sh
+share/examples/acpid/panasonic/ac_adapt.pl
+share/examples/acpid/panasonic/ac_adapter
+share/examples/acpid/panasonic/hotkey
+share/examples/acpid/panasonic/hotkey.pl
+share/examples/acpid/sample.conf
+@dirrm share/examples/acpid/panasonic
+@dirrm share/examples/acpid/battery
+@dirrm share/examples/acpid
