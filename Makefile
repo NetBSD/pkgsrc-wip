@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.110 2003/04/20 15:16:12 xtraeme Exp $
-# $NetBSD: Makefile,v 1.110 2003/04/20 15:16:12 xtraeme Exp $
+# $Id: Makefile,v 1.111 2003/04/20 23:36:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.111 2003/04/20 23:36:51 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -109,6 +109,7 @@ SUBDIR+=	umix
 SUBDIR+=	vim-gtk2
 SUBDIR+=	vixie-cron
 SUBDIR+=	vmsbackup
+SUBDIR+=	windowlab
 SUBDIR+=	xawtv
 SUBDIR+=	xevil
 
