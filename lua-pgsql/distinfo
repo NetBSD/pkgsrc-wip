@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/26 15:03:07 poppnk Exp $
+
+SHA1 (luasql-2.0b.tar.gz) = 1fa2e606a9e6a8c396563eafa20740fb23203737
+Size (luasql-2.0b.tar.gz) = 31176 bytes
+SHA1 (patch-aa) = dab3a81e380645c43bcecc11a19524cc66571c40
