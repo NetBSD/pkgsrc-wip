@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.557 2003/10/19 18:44:43 bubuchka Exp $
-# $NetBSD: Makefile,v 1.557 2003/10/19 18:44:43 bubuchka Exp $
+# $Id: Makefile,v 1.558 2003/10/20 13:18:30 dillo Exp $
+# $NetBSD: Makefile,v 1.558 2003/10/20 13:18:30 dillo Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -166,6 +166,7 @@ SUBDIR+=	gtk-engines-thinice
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtk-theme-switch
 SUBDIR+=	gtk2-engines-mist
+SUBDIR+=	gtkglk
 SUBDIR+=	gtkmagnetic
 SUBDIR+=	gtkpod
 SUBDIR+=	gurlchecker
