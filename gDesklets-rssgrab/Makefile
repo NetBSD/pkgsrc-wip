@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/22 01:23:23 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 20:40:33 minskim Exp $
 
 DISTNAME=	rssgrab-0.4
 PKGNAME=	gDesklets-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://gdesklets.gnomedesktop.org/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@bawi.org
-HOMEPAGE=	http://gdesklets.gnomedesktop.org/files/
+HOMEPAGE=	http://gdesklets.gnomedesktop.org/categories.php?func=gd_show_app&gd_app_id=101
 COMMENT=	RSS/RDF News Feed Grabber
 
 DEPENDS=	gDesklets-[0-9]*:../../wip/gDesklets
