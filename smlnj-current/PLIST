@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/08 12:55:08 pulahti Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/18 21:28:12 pulahti Exp $
 bin/ml-build
 bin/ml-burg
 bin/ml-lex
@@ -121,6 +121,7 @@ lib/smlnj/lib/smlnj/internal/.cm/${BOX}-unix/cm-lib.cm
 lib/smlnj/lib/smlnj/internal/.cm/${BOX}-unix/cm-sig-lib.cm
 lib/smlnj/lib/smlnj/internal/.cm/${BOX}-unix/cm0.cm
 lib/smlnj/lib/smlnj/internal/.cm/${BOX}-unix/intsys.cm
+lib/smlnj/lib/smlnj/internal/.cm/${BOX}-unix/smlnj-version.cm
 lib/smlnj/lib/smlnj/internal/.cm/${BOX}-unix/srcpath-lib.cm
 lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/alpha32.cm
 lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/basics.cm
