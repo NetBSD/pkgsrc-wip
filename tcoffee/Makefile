@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/29 18:05:21 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/03 14:06:12 thomasklausner Exp $
 #
 
 DISTNAME=		T-COFFEE_distribution
@@ -11,7 +11,7 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://igs-server.cnrs-mrs.fr/~cnotred/Packages/
 COMMENT=		Multiple Sequence Alignment Package
 
-DEPENDS+=               clustalw-1.8:../../biology/clustalw
+DEPENDS+=               clustalw>=1.8:../../biology/clustalw
 
 MESSAGE_SUBST+=         PREFIX=${PREFIX}
 MAKEFILE=               makefile
