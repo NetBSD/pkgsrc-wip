@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.988 2004/02/19 09:31:45 adrian_p Exp $
-# $NetBSD: Makefile,v 1.988 2004/02/19 09:31:45 adrian_p Exp $
+# $Id: Makefile,v 1.989 2004/02/19 22:24:01 shattered Exp $
+# $NetBSD: Makefile,v 1.989 2004/02/19 22:24:01 shattered Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -389,6 +389,7 @@ SUBDIR+=	noip
 SUBDIR+=	noiptun
 SUBDIR+=	nuppelvideo
 SUBDIR+=	oinkmaster
+SUBDIR+=	oops
 SUBDIR+=	opax
 SUBDIR+=	p5-Apache-Reload
 SUBDIR+=	p5-Apache-Request
