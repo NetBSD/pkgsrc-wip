@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/19 22:41:10 matthewluckie Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/24 09:51:29 matthewluckie Exp $
 bin/atob
 bin/bltest
 bin/btoa
@@ -10,7 +10,7 @@ bin/cmsutil
 bin/crlutil
 bin/dbtest
 bin/derdump
-bin/digest
+@comment bin/digest
 bin/instinit
 bin/makepqg
 bin/mangle
