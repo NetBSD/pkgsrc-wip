@@ -1,0 +1,46 @@
+$NetBSD: patch-au,v 1.1 2005/01/30 22:51:34 hfath Exp $
+
+--- lib/perl.c.orig	1997-12-17 16:58:34.000000000 +0100
++++ lib/perl.c
+@@ -36,7 +36,7 @@ extern void boot_DynaLoader _((CV* cv));
+ 
+ int	PerlFilterActive = FALSE;
+ 
+-static PerlInterpreter	*PerlCode;
++PerlInterpreter	*my_perl;
+ CV *perl_filter_cv ;                 /* filter_art or filter_post holder */
+ extern char	LogName[];
+ 
+@@ -92,7 +92,7 @@ PerlParse ()
+     /* We can't call 'eval' and 'do' directly for some reason, so we define
+        some wrapper functions to give us access. */
+         
+-    perl_parse (PerlCode,xs_init,5,argv,NULL) ;
++    perl_parse (my_perl,xs_init,5,argv,NULL) ;
+ }
+ 
+ 
+@@ -108,9 +108,9 @@ int
+ PERLsetup (startupfile, filterfile, function)
+     char *startupfile, *filterfile, *function;
+ {
+-    if (PerlCode == NULL) {
+-        PerlCode = perl_alloc();
+-        perl_construct(PerlCode);
++    if (my_perl == NULL) {
++        my_perl = perl_alloc();
++        perl_construct(my_perl);
+         PerlParse () ;
+     }
+     
+@@ -219,8 +219,8 @@ PERLreadfilter(filterfile, function)
+ void
+ PerlClose()
+ {
+-   perl_destruct(PerlCode);
+-   perl_free(PerlCode);
++   perl_destruct(my_perl);
++   perl_free(my_perl);
+    PerlFilterActive = FALSE;
+ }
+ 

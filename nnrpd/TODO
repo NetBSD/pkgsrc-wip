@@ -11,4 +11,5 @@ allow installing INN and C News at the same time?
 
 - Fix rc.d script installation
 
-- FIXME -- With Perl 5.8, nnrpd dumps core when you send an article.
+- With Perl 5.8, nnrpd dumps core when you send an article.
+  Fixed, check Perl 5.6 compatibility?

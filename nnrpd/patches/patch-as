@@ -1,13 +1,8 @@
-$NetBSD: patch-as,v 1.1.1.1 2005/01/13 14:26:23 hfath Exp $
+$NetBSD: patch-as,v 1.2 2005/01/30 22:51:34 hfath Exp $
 
---- nnrpd/perl.c.orig	1997-12-09 00:48:50.000000000 +0100
-+++ nnrpd/perl.c
-@@ -33,6 +33,8 @@ extern BOOL PerlFilterActive;
- extern HEADER	Table[], *EndOfTable;
- extern char LogName[];
- 
-+PerlInterpreter *my_perl;
-+
- char *
- HandleHeaders()
- {
+--- doc/nnrpd.8.orig	1997-12-09 00:48:50.000000000 +0100
++++ doc/nnrpd.8
+@@ -206,2 +206,2 @@ This is revision \\$3, dated \\$4.
+ .SH "SEE ALSO"
+-ctlinnd(8), innd(8), inn.conf(5), nnrp.access(5), signal(2), wildmat(3).
++nnrp.access(5), signal(2), wildmat(3).
