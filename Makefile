@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1422 2004/08/12 13:18:16 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1422 2004/08/12 13:18:16 thomasklausner Exp $
+# $Id: Makefile,v 1.1423 2004/08/12 15:26:10 rillig Exp $
+# $NetBSD: Makefile,v 1.1423 2004/08/12 15:26:10 rillig Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -87,6 +87,7 @@ SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	crawl
 SUBDIR+=	cube
+SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvsd
 SUBDIR+=	cvsreport
 SUBDIR+=	d4x
