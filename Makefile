@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.526 2003/10/06 12:17:27 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.526 2003/10/06 12:17:27 thomasklausner Exp $
+# $Id: Makefile,v 1.527 2003/10/06 14:04:17 tvierling Exp $
+# $NetBSD: Makefile,v 1.527 2003/10/06 14:04:17 tvierling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -297,6 +297,7 @@ SUBDIR+=	p5-Text-Reform
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-gtk2
 SUBDIR+=	palm-db-tools
+SUBDIR+=	par2
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdns
 SUBDIR+=	pear-Date
