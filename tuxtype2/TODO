@@ -5,6 +5,8 @@ different from tuxtype2."
 this doesn't run under NetBSD/i386 1.6. I sent a note to tuxtype developers.
 CFLAGS+=        -DDEBUG
 
+runs fine on NetBSD 1.6ZK i386
+
 maybe put html docs under a HTML directory
 
 install-info: warning: no entries found for `/usr/pkg/share/tuxtype2/data/text/english.info'; nothing deleted
@@ -12,3 +14,4 @@ install-info: warning: no entries found for `/usr/pkg/share/tuxtype2/data/text/m
 install-info: warning: no entries found for `/usr/pkg/share/tuxtype2/data/text/spanish.info'; nothing deleted
 install-info: warning: no entries found for `/usr/pkg/share/tuxtype2/data/themes/nynorsk/text/menu.info'; nothing deleted
 
+update to 1.5.2
