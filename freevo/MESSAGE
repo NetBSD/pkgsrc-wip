@@ -1,10 +1,20 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/01/04 11:48:51 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.2 2004/01/04 11:57:41 mpasternak Exp $
 
 Installation done. To finish the setup, type:
 
 	freevo setup
 	
-at the command prompt.	
+at the command prompt. freevo will perform then package checking, which
+looks like this:
 
+	checking for mplayer...    /usr/pkg/bin/mplayer
+	checking for mencoder...   not found (deactivated)
+	checking for tvtime...     not found (deactivated)
+	[...]
+	
+You can of course install additional packages to increase freevo
+functionality.
+
+Have fun!
 ===========================================================================
