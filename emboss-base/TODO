@@ -1,0 +1,1 @@
+plplot: there is no configuration option to use a different plplot, using a different one than what it builds when it installs would require some patching, I believe.   
