@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/11/05 03:48:09 mpasternak Exp $
+
+--- src/cal3d/cal3d_wrapper.h~	Wed Jul 23 00:01:54 2003
++++ src/cal3d/cal3d_wrapper.h	Wed Nov  5 04:35:01 2003
+@@ -45,7 +45,8 @@
+ // Defines for Linux, Cygwin, FreeBSD Sun and Mips                            //
+ //****************************************************************************//
+ 
+-#if defined(__linux__)  \
++#if defined(__NetBSD__) \
++        || defined(__linux__)  \
+ 	|| (__CYGWIN__) \
+ 	|| (sun) \
+ 	|| (mips) \
