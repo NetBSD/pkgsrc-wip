@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.994 2004/02/20 04:17:08 minskim Exp $
-# $NetBSD: Makefile,v 1.994 2004/02/20 04:17:08 minskim Exp $
+# $Id: Makefile,v 1.995 2004/02/20 04:26:32 minskim Exp $
+# $NetBSD: Makefile,v 1.995 2004/02/20 04:26:32 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -414,7 +414,6 @@ SUBDIR+=	p5-GeoIP
 SUBDIR+=	p5-Glib2
 SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-HTML-Latex
-SUBDIR+=	p5-HTML-StickyQuery
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-IO-Tee
 SUBDIR+=	p5-Mail-Box
