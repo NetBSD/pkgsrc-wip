@@ -1,16 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/10 21:36:30 marc Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/09/27 18:30:39 marc Exp $
+bin/fwb_compile_all
 bin/fwb_install
 bin/fwb_ipf
 bin/fwb_ipfw
 bin/fwb_ipt
 bin/fwb_pf
+bin/fwbedit
 bin/fwblookup
 bin/fwbuilder
+man/man1/fwb_compile_all.1
 man/man1/fwb_install.1
 man/man1/fwb_ipf.1
 man/man1/fwb_ipfw.1
 man/man1/fwb_ipt.1
 man/man1/fwb_pf.1
+man/man1/fwbedit.1
 man/man1/fwblookup.1
 man/man1/fwbuilder.1
 share/bug-buddy/bugzilla/fwbuilder.bugzilla
@@ -54,6 +58,8 @@ share/doc/${PKGNAME}/ReleaseNotes_1.0.0
 share/doc/${PKGNAME}/ReleaseNotes_1.0.0.html
 share/doc/${PKGNAME}/ReleaseNotes_1.0.1
 share/doc/${PKGNAME}/ReleaseNotes_1.0.1.html
+share/doc/${PKGNAME}/ReleaseNotes_1.0.10
+share/doc/${PKGNAME}/ReleaseNotes_1.0.10.html
 share/doc/${PKGNAME}/ReleaseNotes_${PKGVERSION}
 share/doc/${PKGNAME}/ReleaseNotes_${PKGVERSION}.html
 share/doc/${PKGNAME}/ReleaseNotes_1.0.2
@@ -94,6 +100,7 @@ share/fwbuilder/migration/0.9.8/FWBuilderPreferences.xslt
 share/fwbuilder/migration/0.9.9/FWBuilderPreferences.xslt
 share/fwbuilder/migration/1.0.0/FWBuilderPreferences.xslt
 share/fwbuilder/migration/1.0.1/FWBuilderPreferences.xslt
+share/fwbuilder/migration/1.0.10/FWBuilderPreferences.xslt
 share/fwbuilder/migration/1.0.2/FWBuilderPreferences.xslt
 share/fwbuilder/migration/1.0.3/FWBuilderPreferences.xslt
 share/fwbuilder/migration/1.0.4/FWBuilderPreferences.xslt
@@ -247,6 +254,7 @@ share/pixmaps/fwbuilder/yes.png
 @dirrm share/fwbuilder/migration/1.0.4
 @dirrm share/fwbuilder/migration/1.0.3
 @dirrm share/fwbuilder/migration/1.0.2
+@dirrm share/fwbuilder/migration/1.0.10
 @dirrm share/fwbuilder/migration/1.0.1
 @dirrm share/fwbuilder/migration/1.0.0
 @dirrm share/fwbuilder/migration/0.9.9
