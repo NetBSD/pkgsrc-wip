@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/27 00:24:39 rockpiper Exp $
+
+SHA1 (FXPy-1.0.5.tar.gz) = f9a326f9621611aa46f96146d28d08979890b95f
+Size (FXPy-1.0.5.tar.gz) = 947438 bytes
+SHA1 (patch-aa) = 4855f45920b0b45ac0a35afcd54b12497af5ace6
