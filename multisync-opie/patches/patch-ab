@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2005/01/09 22:41:46 mreriksson Exp $
+
+--- configure.in.orig	2005-01-09 23:27:17.000000000 +0100
++++ configure.in
+@@ -52,6 +52,6 @@ AC_OUTPUT([
+ Makefile
+ src/Makefile
+ po/Makefile.in
+-${MULTISYNC_TOP}/specs/multisync-opie.spec
++../../specs/multisync-opie.spec
+ ])
+ 
