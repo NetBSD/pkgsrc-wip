@@ -1,7 +1,5 @@
-$NetBSD: patch-aa,v 1.1 2003/12/01 01:29:45 mpasternak Exp $
-
---- libtool.orig	Mon Dec  1 02:28:22 2003
-+++ libtool	Mon Dec  1 02:28:35 2003
+--- libtool.orig	Mon Dec  1 04:13:26 2003
++++ libtool	Mon Dec  1 04:14:42 2003
 @@ -59,13 +59,13 @@
  SHELL="/bin/sh"
  
@@ -89,3 +87,21 @@ $NetBSD: patch-aa,v 1.1 2003/12/01 01:29:45 mpasternak Exp $
  
  # Symbols that should not be listed in the preloaded symbols.
  exclude_expsyms="_GLOBAL_OFFSET_TABLE_"
+@@ -5327,6 +5300,17 @@
+ 	    ;;
+ 	  *:*.exe)
+ 	    destfile=`echo $destfile | sed -e 's,.exe$,,'`
++	    ;;
++	  esac
++	  ;;
++	# for mingw append .exe for everything that goest to bin/ or sbin/
++	*install*,*mingw*)
++	  case $file:$destfile in
++	  *:*/bin/*)
++	    destfile=$destfile.exe
++	    ;;
++	  *:*/sbin/*)
++	    destfile=$destfile.exe
+ 	    ;;
+ 	  esac
+ 	  ;;
