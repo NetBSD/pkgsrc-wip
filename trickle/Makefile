@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/23 13:18:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/02 08:55:36 xtraeme Exp $
 #
 
 DISTNAME=	trickle-1.06
@@ -19,8 +19,8 @@ LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=		${PREFIX}/share/examples/trickle
-CONF_FILES=	${PREFIX}/share/examples/trickle/trickled.conf \
-	    	${PKG_SYSCONFDIR}/trickled.conf
+CONF_FILES=	${EGDIR}/trickled.conf ${PKG_SYSCONFDIR}/trickled.conf
+
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/trickled.conf ${EGDIR}
