@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/03 06:00:26 eeg3 Exp $
+
+--- Makefile.orig	Fri Nov 22 02:39:24 2002
++++ Makefile
+@@ -3,7 +3,7 @@
+ 
+ OBJS = main.o Aget.o Misc.o Head.o Signal.o Download.o Resume.o
+ CFLAGS = -g -Wall -W -pedantic 
+-LDFLAGS = -pthread
++LDFLAGS = -Wl,-R/usr/pkg/lib -L/usr/pkg/lib -lpthread 
+ CC = gcc
+ STRIP = strip
+ 

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/03 06:00:26 eeg3 Exp $
+
+SHA1 (aget-0.4.tar.gz) = acd428c919c105401f4b1c19a082c71f470fe9af
+Size (aget-0.4.tar.gz) = 11152 bytes
+SHA1 (patch-aa) = 3f9868ebad4ac3c8273535c6467836c3e1c61570

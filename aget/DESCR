@@ -1,0 +1,5 @@
+Aget is a multithreaded HTTP download accelerator. It aims to imitate Flashget
+for Win32. Aget is an acronym for two turkish words "Acele Getir," meaning 
+"Get it fast."
+
+WWW: http://www.enderunix.org/aget/
