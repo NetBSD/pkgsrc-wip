@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/18 23:21:22 larnor Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/21 07:17:21 larnor Exp $
 
 DISTNAME=		gtk-gnutella-current-${GTK_GNUTELLA_VER}
 PKGREVISION=		1
@@ -11,8 +11,7 @@ COMMENT=		GTK-based gnutella client, CVS snapshot
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
-BUILD_USES_MSGFMT=	yes
-_USE_GNU_GETTEXT=	yes
+BUILD_DEPENDS+=		../../devel/gettext
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 HAS_CONFIGURE=		yes
