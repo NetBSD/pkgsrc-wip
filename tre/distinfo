@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/11/03 10:13:55 adrian_p Exp $
+$NetBSD: distinfo,v 1.3 2005/03/25 10:02:03 adrian_p Exp $
 
-SHA1 (tre-0.7.0.tar.gz) = d6b43c78929e953270ac3fa32c0be61e217ff9bb
-Size (tre-0.7.0.tar.gz) = 414568 bytes
+SHA1 (tre-0.7.2.tar.gz) = 8211711cf9098ddee0d71da7a4b02036d679ba15
+RMD160 (tre-0.7.2.tar.gz) = 0fb34240e337efaac20bcd7e9cc9a69c0f66636a
+Size (tre-0.7.2.tar.gz) = 427366 bytes

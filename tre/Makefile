@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2004/11/03 10:13:55 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/25 10:02:02 adrian_p Exp $
 
-DISTNAME=	tre-0.7.0
+DISTNAME=	tre-0.7.2
 CATEGORIES=	devel
 MASTER_SITES=	http://laurikari.net/tre/
 
