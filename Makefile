@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1530 2004/11/10 16:26:21 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1530 2004/11/10 16:26:21 thomasklausner Exp $
+# $Id: Makefile,v 1.1531 2004/11/11 06:20:06 minskim Exp $
+# $NetBSD: Makefile,v 1.1531 2004/11/11 06:20:06 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -683,7 +683,6 @@ SUBDIR+=	shadow
 SUBDIR+=	shoutcast
 SUBDIR+=	sid-milter
 SUBDIR+=	silky
-SUBDIR+=	simage
 SUBDIR+=	simgear
 SUBDIR+=	simplec
 SUBDIR+=	skippy

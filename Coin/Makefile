@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/06/13 18:56:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/11 06:20:06 minskim Exp $
 
 DISTNAME=		Coin-2.2.1
 CATEGORIES=		graphics
@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--enable-3ds-import --disable-debug
 
 USE_X11=		yes
 
-.include "../../wip/simage/buildlink3.mk"
+.include "../../graphics/simage/buildlink3.mk"
 #.include "../../audio/openal/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

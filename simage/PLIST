@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/23 06:00:02 jlamwww Exp $
-bin/simage-config
-include/simage.h
-lib/libsimage.la
-share/Coin/conf/simage-default.cfg
-share/aclocal/simage.m4
-@unexec ${RMDIR} share/Coin/conf 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} share/Coin 2>/dev/null || ${TRUE}
