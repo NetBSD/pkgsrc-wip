@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.398 2003/08/29 11:19:51 adrian_p Exp $
-# $NetBSD: Makefile,v 1.398 2003/08/29 11:19:51 adrian_p Exp $
+# $Id: Makefile,v 1.399 2003/08/29 15:51:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.399 2003/08/29 15:51:11 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -238,6 +238,7 @@ SUBDIR+=	ntp4-dev
 SUBDIR+=	nvtv
 SUBDIR+=	nvtv-gtk2
 SUBDIR+=	opax
+SUBDIR+=	openbox3
 SUBDIR+=	openvpn
 SUBDIR+=	p5-Authen-SASL
 SUBDIR+=	p5-Authen-SASL-Cyrus
