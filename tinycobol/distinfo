@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/29 21:34:21 lrfurtado Exp $
+
+SHA1 (tinycobol-0.61.tar.gz) = f88317ac6b0553f301bf86d7c606ada620187042
+Size (tinycobol-0.61.tar.gz) = 817294 bytes
+SHA1 (patch-aa) = d2ec72715f25cf82bc3c1c9041efedc30700ee49
