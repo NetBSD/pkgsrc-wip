@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/19 12:11:47 hfath Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/19 15:36:48 hfath Exp $
 man/man1/fsdiff.1
 man/man1/ktcheck.1
 man/man1/lapply.1
@@ -20,3 +20,5 @@ bin/lfdiff
 bin/twhich
 bin/ra.sh
 @unexec ${RMDIR} /var/radmind/cert
+@unexec ${RMDIR} /var/radmind/client
+@unexec ${RMDIR} /var/radmind
