@@ -1,0 +1,20 @@
+This is a first try at a Bugzilla package but there are a few things to
+be aware of:
+
+- It's not complete yet as it provides the user with no instruction on how
+to setup the mySQL side of Bugzilla.
+- I'm not a Bugzilla person so I'm not sure if the application defaults
+are appropriate or should be changed.
+- You need to install the p5-Chart pkg which is in pkgsrc-wip as well.
+However, I have not tested that it actually works with Bugzilla.
+
+I'll doubt I will get much more time to work on this so I'm importing it
+in the hope that someone can finish off the package from here. If anyone
+feels they want to give it a go and can test it adequately please feel free
+to hack away at it.
+
+Sort of tested on NetBSD 1.6 i386.
+
+Regards,
+
+Adrian.
