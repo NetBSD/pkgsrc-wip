@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/11/28 08:29:44 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/13 22:06:57 minskim Exp $
 #
 
 DISTNAME=	atasm103
@@ -13,7 +13,7 @@ COMMENT=	Cross-assembler for 6502 optimized to code for Atari 8 bit computers
 
 NO_CONFIGURE=   YES
 WRKSRC=         ${WRKDIR}/${DISTNAME}/src
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 DOCDIR=		${PREFIX}/share/doc/atasm
 
