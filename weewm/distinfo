@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/03 16:17:33 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/06/03 21:22:06 xtraeme Exp $
 
 SHA1 (weewm-0.01.tar.gz) = 98d11e172611be993fcda41f6844d3d9edb07675
 Size (weewm-0.01.tar.gz) = 31979 bytes
-SHA1 (patch-aa) = d1bdc5a62688ba03f0a8b23d4a074351a32808fd
+SHA1 (patch-aa) = f9bae96947ad727b8a2369b37c00f3be3ee641b9
