@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.168 2003/05/16 04:19:33 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.168 2003/05/16 04:19:33 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.169 2003/05/16 04:41:13 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.169 2003/05/16 04:41:13 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -81,6 +81,7 @@ SUBDIR+=	libfwbuilder
 SUBDIR+=	libgsf
 SUBDIR+=	libshout
 SUBDIR+=	libwpd
+SUBDIR+=	linux-nfs-utils
 SUBDIR+=	liquidwar
 SUBDIR+=	mailfilter
 SUBDIR+=	mcats
