@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.783 2003/12/21 03:56:01 bencollver Exp $
-# $NetBSD: Makefile,v 1.783 2003/12/21 03:56:01 bencollver Exp $
+# $Id: Makefile,v 1.784 2003/12/21 05:46:07 jcd Exp $
+# $NetBSD: Makefile,v 1.784 2003/12/21 05:46:07 jcd Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -40,6 +40,7 @@ SUBDIR+=	aolserver
 SUBDIR+=	ap-auth-mysql
 SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-frontpage
+SUBDIR+=	ap-macro
 SUBDIR+=	ap-ometer
 SUBDIR+=	ap2-auth-mysql
 SUBDIR+=	ap2-limitipconn
