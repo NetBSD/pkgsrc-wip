@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/01 02:26:51 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/01 06:43:12 xtraeme Exp $
 #
 
 DISTNAME=		libiconv-1.9.1
@@ -10,12 +10,12 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.gnu.org/software/libiconv/
 COMMENT=		Character set conversion library
 
-USE_BUILDLINK2=		YES
-USE_PKGINSTALL=		YES
-USE_GMAKE=		YES
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-USE_CROSSBASE=		YES
+USE_BUILDLINK2=		yes
+USE_GMAKE=		yes
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_CROSSBASE=		yes
+
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libcharset/libtool
 
