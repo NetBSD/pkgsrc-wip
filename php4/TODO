@@ -1,2 +1,5 @@
 Please leave this file here.  Any packages that are pear based will need this
 to compile and install.
+
+Once the pear stuff would be moved to main pkgsrc tree, mail/imp
+should be updated to have these as dependencies.
