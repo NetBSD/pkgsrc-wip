@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/04 02:17:43 lexort Exp $
+$NetBSD: distinfo,v 1.2 2005/03/14 21:17:47 lexort Exp $
 
-SHA1 (ufraw-0.2.tar.gz) = 9e82dea54ffab28fa0f192c89c4f2c00a4e29b57
-Size (ufraw-0.2.tar.gz) = 82106 bytes
+SHA1 (ufraw-0.4.tar.gz) = dd907171f6e3b0055499f108ba212465839d6f89
+RMD160 (ufraw-0.4.tar.gz) = e1a8106305fcc2b5405344cdca28c0fa503dcb66
+Size (ufraw-0.4.tar.gz) = 101409 bytes
