@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/25 04:15:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/25 18:25:20 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-clients-${XF_VER}
@@ -11,16 +11,12 @@ HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 client programs and related files
 
 USE_BUILDLINK2=		yes
-USE_PERL5=		yes
-
 DISTINFO_FILE=		${.CURDIR}/../XFree86-libs/distinfo
 PATCHDIR=		${.CURDIR}/../XFree86-libs/patches
 
 XBUILD_DIRS=		lib/xtrans lib/lbxutil programs fonts/util
 XINSTALL_DIRS=		programs fonts/util
 XINSTALL_MAN_DIRS=	programs
-
-REPLACE_PERL=		fonts/util/bdftruncate.pl fonts/util/ucs2any.pl
 
 .include "../../mk/bsd.prefs.mk"
 
