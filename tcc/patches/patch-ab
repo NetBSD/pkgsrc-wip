@@ -1,20 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2004/11/23 22:56:57 xtraeme Exp $
+$NetBSD: patch-ab,v 1.3 2005/01/08 15:07:05 gson Exp $
 
---- tccelf.c.orig	2004-11-23 23:46:18.000000000 +0100
-+++ tccelf.c	2004-11-23 23:50:23.000000000 +0100
-@@ -387,7 +387,11 @@
- 
- static void *resolve_sym(const char *sym)
- {
-+#ifdef __NetBSD__
-+    return dlsym(RTLD_LAZY, sym);
-+#else
-     return dlsym(RTLD_DEFAULT, sym);
-+#endif
- }
- 
- /* relocate symbol table, resolve undefined symbols if do_resolve is
-@@ -1067,6 +1071,8 @@
+--- tccelf.c.orig	2004-11-08 22:47:16.000000000 +0200
++++ tccelf.c
+@@ -1067,6 +1067,8 @@ static void tcc_add_linker_symbols(TCCSt
  /* name of ELF interpreter */
  #ifdef __FreeBSD__
  static char elf_interp[] = "/usr/libexec/ld-elf.so.1";
@@ -23,7 +11,7 @@ $NetBSD: patch-ab,v 1.2 2004/11/23 22:56:57 xtraeme Exp $
  #else
  static char elf_interp[] = "/lib/ld-linux.so.2";
  #endif
-@@ -1647,6 +1653,9 @@
+@@ -1647,6 +1649,9 @@ int tcc_output_file(TCCState *s1, const 
  #ifdef __FreeBSD__
          ehdr.e_ident[EI_OSABI] = ELFOSABI_FREEBSD;
  #endif
