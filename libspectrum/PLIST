@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/21 09:11:16 moubctez Exp $
+include/libspectrum.h
+lib/libspectrum.a
+lib/libspectrum.la
+lib/libspectrum.so
+lib/libspectrum.so.1
+lib/libspectrum.so.1.0
