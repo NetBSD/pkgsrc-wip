@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1154 2004/04/01 05:11:03 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1154 2004/04/01 05:11:03 xtraeme Exp $
+# $Id: Makefile,v 1.1155 2004/04/01 05:25:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1155 2004/04/01 05:25:08 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -773,7 +773,6 @@ SUBDIR+=	xevil
 SUBDIR+=	xextensions
 SUBDIR+=	xlibs
 SUBDIR+=	xmail
-SUBDIR+=	xmlindent
 SUBDIR+=	xmms-dumb
 SUBDIR+=	xmms-pitch
 SUBDIR+=	xmms-wip
