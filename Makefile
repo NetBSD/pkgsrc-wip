@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1648 2005/02/13 12:50:13 ppostma Exp $
-# $NetBSD: Makefile,v 1.1648 2005/02/13 12:50:13 ppostma Exp $
+# $Id: Makefile,v 1.1649 2005/02/13 19:00:01 bencollver Exp $
+# $NetBSD: Makefile,v 1.1649 2005/02/13 19:00:01 bencollver Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -518,6 +518,7 @@ SUBDIR+=	mupen64-plugin-input
 SUBDIR+=	mupen64-plugin-rsp
 SUBDIR+=	mupen64-plugin-sound
 SUBDIR+=	mupen64-plugin-video
+SUBDIR+=	musepack
 SUBDIR+=	mutella
 SUBDIR+=	mutt-devel
 SUBDIR+=	mysql-docs
