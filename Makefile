@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.739 2003/12/04 17:59:24 froz Exp $
-# $NetBSD: Makefile,v 1.739 2003/12/04 17:59:24 froz Exp $
+# $Id: Makefile,v 1.740 2003/12/04 18:26:20 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.740 2003/12/04 18:26:20 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -121,6 +121,7 @@ SUBDIR+=	drwright
 SUBDIR+=	dtdparse
 SUBDIR+=	dumb
 SUBDIR+=	dzt
+SUBDIR+=	e2fsprogs
 SUBDIR+=	eag
 SUBDIR+=	ed
 SUBDIR+=	eic
@@ -534,6 +535,7 @@ SUBDIR+=	scons
 SUBDIR+=	scponly
 SUBDIR+=	send-pr
 SUBDIR+=	sgmltools-lite
+SUBDIR+=	shadow
 SUBDIR+=	shared-mime-info
 SUBDIR+=	shoutcast
 SUBDIR+=	sks
