@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/13 03:46:18 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/22 01:03:39 minskim Exp $
 #
 
 DISTNAME=	IO-Tee-0.64
@@ -11,7 +11,9 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://search.cpan.org/search?module=IO::Tee
 COMMENT=	Multiplex output to multiple output handles
 
-USE_BUILDLINK2=	YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/IO/Tee/.packlist
 
 .include "../../lang/perl5/module.mk"
