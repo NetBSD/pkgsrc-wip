@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/06/18 17:15:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/06/19 14:57:39 xtraeme Exp $
 #
 
 DISTNAME=		pearpc-0.2.0
@@ -27,24 +27,23 @@ BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 CONFIGURE_ARGS+=	--enable-cpu=jitc_x86
 .endif
 
-.ifdef NOT_YET
-BUILD_DEFS+=		USE_QT_GUI
-
-.if defined(USE_QT_GUI) && !empty(USE_QT_GUI:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-gui=qt
-.include "../../x11/qt3-libs/buildlink3.mk"
-.endif
-
-.endif
+INSTALLATION_DIRS=	share/${PKGBASE} bin
 
 do-install:
-	${SED} -e "s,@PREFIX@,${PREFIX}," \
+	${SED}	-e "s,@PREFIX@,${PREFIX}," \
 		-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR}," \
 		${FILESDIR}/pearpc.sh > ${WRKSRC}/pearpc.sh
 	${INSTALL_SCRIPT} ${WRKSRC}/pearpc.sh ${PREFIX}/bin/pearpc
-	${INSTALL_PROGRAM} ${WRKSRC}/src/ppc ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/ppc ${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/video.x ${PREFIX}/share/${PKGBASE}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/ppccfg.example ${EGDIR}
+
+SUBST_CLASSES=		conf
+SUBST_STAGE.conf=	post-patch
+SUBST_FILES.conf=	ppccfg.example
+SUBST_SED.conf=		-e "s|\"nvram\"|\"/tmp/nvram\"|"
+SUBST_MESSAGE.conf=	"Fixing configuration file."
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
