@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/01/06 08:51:03 ianzag Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/06 10:08:37 ianzag Exp $
 #
 
-DISTNAME=		qnetwalk-1.0
+DISTNAME=		qnetwalk-1.1
 CATEGORIES=		x11 games
 MASTER_SITES=	http://qt.osdn.org.ua/
 
@@ -18,7 +18,9 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 
 QNETWALK_BIN=	${PREFIX}/bin
+QNETWALK_MAN=	${PREFIX}/man/man6
 QNETWALK_DATA=	${PREFIX}/share/games/${PKGBASE}
+QNETWALK_TR=	${QNETWALK_DATA}
 
 do-configure:
 	(cd ${WRKSRC} && ${QTDIR}/bin/qmake -o Makefile qnetwalk.pro)
@@ -27,8 +29,10 @@ do-configure:
 SUBST_CLASSES=		path
 SUBST_MESSAGE.path=	"Fixing hardcoded paths."
 SUBST_STAGE.path=	post-patch
-SUBST_FILES.path=	qnetwalk.pro
+SUBST_FILES.path=	qnetwalk.pro main.cpp mainwindow.cpp
 SUBST_SED.path=		-e 's:@QNETWALK_BIN@:${QNETWALK_BIN}:g'
+SUBST_SED.path+=	-e 's:@QNETWALK_MAN@:${QNETWALK_MAN}:g'
+SUBST_SED.path+=	-e 's:@QNETWALK_TR@:${QNETWALK_TR}:g'
 SUBST_SED.path+=	-e 's:@QNETWALK_DATA@:${QNETWALK_DATA}:g'
 
 .include "../../x11/qt3-libs/buildlink3.mk"

@@ -1,17 +1,27 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/04 12:21:02 ianzag Exp $
+$NetBSD: patch-aa,v 1.2 2005/01/06 10:08:38 ianzag Exp $
 
---- qnetwalk.pro.orig	2004-09-13 01:45:01.000000000 +0700
+--- qnetwalk.pro.orig	2004-12-14 23:32:57.000000000 +0600
 +++ qnetwalk.pro
-@@ -46,10 +46,10 @@ TRANSLATIONS = qnetwalk_ru.ts
+@@ -47,18 +47,18 @@ TRANSLATIONS = translations/qnetwalk_fr.
+ 	       translations/qnetwalk_ru.ts
  
- TARGET = qnetwalk
+ TARGET       = qnetwalk
+-target.path  = /usr/local/bin
++target.path  = @QNETWALK_BIN@
+ INSTALLS    += target
  
--target.path = /usr/local/bin
-+target.path = @QNETWALK_BIN@
- INSTALLS   += target
+-man.path     = /usr/local/man/man6
++man.path     = @QNETWALK_MAN@
+ man.files    = qnetwalk.6
+ INSTALLS    += man
  
--share.path  = /usr/local/share/games/qnetwalk
-+share.path  = @QNETWALK_DATA@
- share.files = qnetwalk_ru.qm	\
- 	      sounds/click.wav	\
- 	      sounds/connect.wav \
+-tr.path      = /usr/local/share/qnetwalk/translations
++tr.path      = @QNETWALK_TR@
+ tr.files     = translations/*.qm
+ INSTALLS    += tr
+ 
+-sounds.path  = /usr/local/share/qnetwalk/sounds
++sounds.path  = @QNETWALK_DATA@
+ sounds.files = sounds/*.wav
+ INSTALLS    += sounds
+ 
