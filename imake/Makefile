@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/24 04:52:27 blef Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/25 00:22:30 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
@@ -22,6 +22,9 @@ FAKE_XFREE86_DEPS=	# defined
 .if ${OPSYS} == "Linux"
 DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	flex-[0-9]*:../../devel/flex
+PLIST_SRC+=	${.CURDIR}/PLIST.html
+.elif ${OPSYS} == "FreeBSD"
+PLIST_SRC+=	${.CURDIR}/PLIST.html
 .endif
 
 .include "../../wip/XFree86/Makefile.common"

@@ -1,20 +1,4 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1.1.1 2003/07/23 20:30:44 xtraeme Exp $
-lib/X11/doc/html/ccmakedep.1.html
-lib/X11/doc/html/cleanlinks.1.html
-lib/X11/doc/html/gccmakedep.1.html
-lib/X11/doc/html/imake.1.html
-lib/X11/doc/html/lndir.1.html
-lib/X11/doc/html/makedepend.1.html
-lib/X11/doc/html/makeg.1.html
-lib/X11/doc/html/makestrs.1.html
-lib/X11/doc/html/manindex1.html
-lib/X11/doc/html/mergelib.1.html
-lib/X11/doc/html/mkdirhier.1.html
-lib/X11/doc/html/mkhtmlindex.1.html
-lib/X11/doc/html/pswrap.1.html
-lib/X11/doc/html/revpath.1.html
-lib/X11/doc/html/rman.1.html
-lib/X11/doc/html/xmkmf.1.html
+@comment $NetBSD: PLIST.FreeBSD,v 1.2 2003/07/25 00:22:30 xtraeme Exp $
 man/man1/ccmakedep.1.gz
 man/man1/cleanlinks.1.gz
 man/man1/gccmakedep.1.gz
