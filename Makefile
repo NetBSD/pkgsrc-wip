@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.55 2003/04/10 19:21:18 jmmv Exp $
-# $NetBSD: Makefile,v 1.55 2003/04/10 19:21:18 jmmv Exp $
+# $Id: Makefile,v 1.56 2003/04/10 22:58:40 cubidou Exp $
+# $NetBSD: Makefile,v 1.56 2003/04/10 22:58:40 cubidou Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -19,6 +19,7 @@ SUBDIR+=	gkrellm2-server
 SUBDIR+=	gkrellm2-share
 SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
+SUBDIR+=	gltron
 SUBDIR+=	golem
 SUBDIR+=	gtetrinet2
 SUBDIR+=	gtk-sharp
@@ -46,6 +47,7 @@ SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	navigatrix
 SUBDIR+=	nvtv
+SUBDIR+=	ogmtools
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Net-Jabber
 SUBDIR+=	p5-Unicode-String
