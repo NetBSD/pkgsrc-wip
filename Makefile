@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1242 2004/04/28 14:28:31 moubctez Exp $
-# $NetBSD: Makefile,v 1.1242 2004/04/28 14:28:31 moubctez Exp $
+# $Id: Makefile,v 1.1243 2004/04/28 15:43:50 airhead Exp $
+# $NetBSD: Makefile,v 1.1243 2004/04/28 15:43:50 airhead Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -288,6 +288,7 @@ SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
 SUBDIR+=	ladspa
+SUBDIR+=	latex2rtf
 SUBDIR+=	lammpi
 SUBDIR+=	lbdb
 SUBDIR+=	ldapbrowser
