@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/02 22:12:28 blef Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/23 21:39:30 marc Exp $
 #
 
 DISTNAME=		Impacket-0.9.5.1
@@ -14,7 +14,7 @@ USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
-PYTHON_VERSIONS_ACCEPTED=	23 22 23pth 22pth
+PYTHON_VERSIONS_ACCEPTED=	23 22
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

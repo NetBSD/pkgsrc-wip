@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/05/09 21:17:26 blef Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/23 21:39:28 marc Exp $
 #
 
 DISTNAME=	festival-gaim-0.64
+PKGREVISION=	1
 CATEGORIES=	audio chat
 MASTER_SITES=	http://primates.ximian.com/~sandino/festival/SOURCES/
 

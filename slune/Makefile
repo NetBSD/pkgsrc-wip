@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/11 05:13:43 blef Exp $
+# $NetBSD: Makefile,v 1.7 2005/01/23 21:39:29 marc Exp $
 #
 
 DISTNAME=		Slune-0.6.1
@@ -15,7 +15,7 @@ USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
-PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
+PYTHON_VERSIONS_ACCEPTED=	23 22
 
 DEPENDS+=		${PYPKGPREFIX}-Py2Play>=0.1.6:../../wip/py-Py2Play
 DEPENDS+=		${PYPKGPREFIX}-Soya>=0.6.1:../../wip/py-Soya

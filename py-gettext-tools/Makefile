@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/02 22:28:56 blef Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/23 21:39:32 marc Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-gettext-tools-0
@@ -13,7 +13,7 @@ NO_BUILD=	# defined
 
 EXTRACT_ELEMENTS=		${PYSUBDIR}/Tools/i18n/*
 
-PYTHON_VERSIONS_ACCEPTED=	23 23pth
+PYTHON_VERSIONS_ACCEPTED=	2
 
 PYTHON_PATCH_SCRIPTS=		Tools/i18n/msgfmt.py Tools/i18n/pygettext.py
 
