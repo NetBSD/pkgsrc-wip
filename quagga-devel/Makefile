@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2004/09/23 06:00:00 jlamwww Exp $
+# $NetBSD: Makefile,v 1.16 2005/02/22 21:13:26 lexort Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
-DISTNAME=	quagga-0.96.5-20040831
-PKGNAME=	quagga-0.96.5.20040831
-PKGREVISION=	1
+DISTNAME=	quagga-0.99.0-20050222
+PKGNAME=	quagga-0.99.0.20050222
 CATEGORIES=	net
 # Use pkgsrc/ for saved snapshots, cvs/ for current ones
 MASTER_SITES=	http://www.quagga.net/download/cvs/ \
@@ -14,7 +13,7 @@ MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://www.quagga.net/
 COMMENT=	Free multithreaded routing daemon software (fork of zebra)
 
-WRKSRC=		${WRKDIR}/quagga-0.96.5
+WRKSRC=		${WRKDIR}/quagga-0.99.0
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -25,10 +24,9 @@ USE_LIBTOOL=		YES
 PKG_SYSCONFSUBDIR?=	zebra
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-exampledir=${PREFIX}/share/examples/quagga
+CONFIGURE_ARGS+=	--enable-pkgsrcrcdir=${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
 # Note that localstatedir is wired into the rc.d scripts.
 CONFIGURE_ARGS+=	--localstatedir=/var/run/zebra
-# you might need debugging, it's a developer release !
-#CFLAGS+=	-g
 
 CONFLICTS+=		zebra-[0-9]*
 CONFLICTS+=		quagga-[0-9]*
@@ -43,6 +41,7 @@ RCD_SCRIPTS=	zebra bgpd ospfd ripd
 PKG_GROUPS=	quagga
 PKG_USERS=	quagga:quagga
 
+# log_syslog.conf is used as a template for each config file
 .for _file_ in vtysh.conf zebra.conf bgpd.conf ospfd.conf ripd.conf
 CONF_FILES_PERMS+=      ${PREFIX}/share/examples/quagga/log_syslog.conf ${PKG_SYSCONFDIR}/${_file_} quagga quagga 0600
 .endfor
@@ -90,9 +89,6 @@ LIBS+=			${LDFLAGS}
 RCD_SCRIPT_SRC.${_script_}?=	${WRKSRC}/pkgsrc/${_script_}.sh
 .endfor
 
-pre-configure:
-	cd ${WRKSRC} && ${AUTORECONF} --force
-
 post-install:
 	@${CHMOD} a+r ${PREFIX}/share/examples/quagga/*
 	${INSTALL} -d -o quagga -g quagga -m 750 ${PKG_SYSCONFDIR}
@@ -106,8 +102,5 @@ post-install:
 	(cd ${PREFIX}; ${FIND} share/doc/quagga -type f -print ) >> ${PLIST_SRC}
 	(cd ${PREFIX}; ${FIND} share/doc/quagga -type d -print ) | \
 		${SED} -e 's/^/@dirrm /' | ${SORT} -r >> ${PLIST_SRC}
-#	cd ${PREFIX}/info ; \
-#	for t in "" -1 -2 -3 -4; do mv quagga.info$$t quagga$$t; done
 
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
