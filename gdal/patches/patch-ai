@@ -1,0 +1,34 @@
+$NetBSD: patch-ai,v 1.1 2005/03/17 00:02:58 daprice Exp $
+
+--- frmts/sdts/GNUmakefile.orig	2003-10-09 09:58:04.000000000 -0600
++++ frmts/sdts/GNUmakefile
+@@ -40,14 +40,14 @@ sdts2shp:	sdts2shp.cpp $(SDTSLIB)
+ 
+ install-obj:	$(O_OBJ) ../o/sdtsdataset.o
+ 
+-docs:
+-	rm -rf html
+-	mkdir html
+-	doxygen
+-	rm html/index.html
+-	cp html/sdts_al_main.html html/index.html
++#docs:
++#	rm -rf html
++#	mkdir html
++#	doxygen
++#	rm html/index.html
++#	cp html/sdts_al_main.html html/index.html
+ 
+-dist:	docs
++dist:
+ 	rm -rf $(DISTDIR)
+ 	mkdir $(DISTDIR)
+ 	mkdir $(DISTDIR)/html
+@@ -67,6 +67,6 @@ dist:	docs
+ 	tar czf $(DISTDIR).tar.gz $(DISTDIR)
+ 	zip -r $(DISTDIR).zip $(DISTDIR)
+ 
+-update-web:	dist docs
++update-web:	dist
+ 	cp html/* $(WEB_DIR)
+ 	cp $(DISTDIR).tar.gz $(DISTDIR).zip /u/ftp/pub/outgoing

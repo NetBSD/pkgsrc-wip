@@ -1,0 +1,28 @@
+$NetBSD: patch-af,v 1.1 2005/03/17 00:02:58 daprice Exp $
+
+--- frmts/gxf/GNUmakefile.orig	2004-10-06 07:04:10.000000000 -0600
++++ frmts/gxf/GNUmakefile
+@@ -28,10 +28,10 @@ $(SHARED_LIB):	$(OBJ)
+ install-lib:	$(SHARED_LIB)
+ 	cp $(SHARED_LIB) $(GDAL_ROOT)/lib
+ 
+-docs:
+-	rm -rf html
+-	mkdir html
+-	doxygen
++#docs:
++#	rm -rf html
++#	mkdir html
++#	doxygen
+ 
+ update-web:	dist
+ 	cp html/* $(WEB_DIR)
+@@ -39,7 +39,7 @@ update-web:	dist
+ 	cp $(DISTDIR).zip /u/ftp/pub/outgoing
+ 
+ 
+-dist:	docs
++dist:
+ 	rm -rf $(DISTDIR)
+ 	mkdir $(DISTDIR)
+ 	mkdir $(DISTDIR)/html

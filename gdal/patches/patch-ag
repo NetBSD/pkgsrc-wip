@@ -1,0 +1,32 @@
+$NetBSD: patch-ag,v 1.1 2005/03/17 00:02:58 daprice Exp $
+
+--- frmts/iso8211/GNUmakefile.orig	2004-10-06 07:06:26.000000000 -0600
++++ frmts/iso8211/GNUmakefile
+@@ -14,7 +14,7 @@ OBJ =	ddfmodule.o ddfutils.o ddffielddef
+ 
+ default:	$(ISOLIB)
+ 
+-all:	$(ISOLIB) 8211dump 8211view mkcatalog docs
++all:	$(ISOLIB) 8211dump 8211view mkcatalog
+ 
+ clean:
+ 	rm -rf *.o 8211dump 8211view $(DISTDIR) $(DISTDIR).tar.gz html/* \
+@@ -47,12 +47,12 @@ mkcatalog:	mkcatalog.o $(ISOLIB)
+ 	$(CXX) $(CXX_ODFLAGS) mkcatalog.o \
+ 		$(ISOLIB) $(GDAL_LIB) $(LIBS) -o mkcatalog
+ 
+-docs:
+-	rm -rf html
+-	mkdir html
+-	doxygen
+-	rm html/index.html
+-	cp html/ISO8211Lib.html html/index.html
++#docs:
++#	rm -rf html
++#	mkdir html
++#	doxygen
++#	rm html/index.html
++#	cp html/ISO8211Lib.html html/index.html
+ 
+ dist:	docs
+ 	rm -rf $(DISTDIR)
