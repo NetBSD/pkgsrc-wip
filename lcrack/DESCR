@@ -1,0 +1,4 @@
+AirSnort is a wireless LAN (WLAN) tool which cracks encryption keys on
+802.11b WEP networks. AirSnort operates by passively monitoring
+transmissions, computing the encryption key when enough packets have
+been gathered.
