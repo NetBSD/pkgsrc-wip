@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/11/06 20:49:32 tvierling Exp $
+# $NetBSD: Makefile,v 1.30 2003/11/07 17:47:41 tvierling Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -13,13 +13,11 @@ MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://entropy.stop1984.com/
 COMMENT=		Anonymous peer-to-peer networking node (similar to Freenet)
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc
-
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 
-ENTROPY_VERSION=	0.6.0-358
+ENTROPY_VERSION=	0.6.1-359
 
 CONFIGURE_ARGS+=	--enable-verbose
 
@@ -41,11 +39,13 @@ do-install:
 ENTROPY_STORE_TYPE?=	tree
 
 .if ${ENTROPY_STORE_TYPE} == "tree"
-CONFIGURE_ARGS+=	--with-tree
+CONFIGURE_ARGS+=	--with-tree --with-svid-sem
 .elif ${ENTROPY_STORE_TYPE} == "mysql"
-CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE} --with-svid-sem
 .include "../../databases/mysql-client/buildlink2.mk"
-.elif ${ENTROPY_STORE_TYPE} != "monolithic"
+.elif ${ENTROPY_STORE_TYPE} == "monolithic"
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc
+.else
 .error unknown ENTROPY_STORE_TYPE: ${ENTROPY_STORE_TYPE}
 .endif
 
