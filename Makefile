@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.725 2003/12/03 19:08:32 xtraeme Exp $
-# $NetBSD: Makefile,v 1.725 2003/12/03 19:08:32 xtraeme Exp $
+# $Id: Makefile,v 1.726 2003/12/03 19:14:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.726 2003/12/03 19:14:47 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -626,7 +626,6 @@ SUBDIR+=	vtk-data
 SUBDIR+=	vtk-docs
 SUBDIR+=	vtk-python
 SUBDIR+=	weewm
-SUBDIR+=	wistumbler2
 SUBDIR+=	wmclockmon
 SUBDIR+=	wmitime
 SUBDIR+=	wmnetload
