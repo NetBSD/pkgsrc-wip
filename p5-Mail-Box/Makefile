@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/19 09:30:47 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/02 20:45:46 thomasklausner Exp $
 
 DISTNAME=	Mail-Box-2.054
 PKGNAME=	p5-${DISTNAME}
@@ -29,6 +29,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Mail/Box/.packlist
 
-# .include "../../lang/perl5/buildlink2.mk"
+# .include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
