@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/07/23 01:52:18 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/23 01:54:59 minskim Exp $
 #
 
 DISTNAME=		cdl3-1.2.4
@@ -14,7 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
