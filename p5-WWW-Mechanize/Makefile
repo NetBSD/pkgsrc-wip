@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/04 15:55:38 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/27 18:43:59 roelants Exp $
 #
 
 DISTNAME=		WWW-Mechanize-0.72
@@ -9,8 +9,14 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=WWW/}
 MAINTAINER=		dieter.NetBSD@pandora.be
 COMMENT=		Automates web page form & link interaction
 
-INTERACTIVE_STAGE=	configure
-USE_BUILDLINK2=		yes
+DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
+DEPENDS+=	p5-HTML-Parser>=3.35:../../www/p5-HTML-Parser
+DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
+USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/WWW/Mechanize/.packlist
 
 .include "../../lang/perl5/module.mk"
