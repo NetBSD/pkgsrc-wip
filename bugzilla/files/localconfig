@@ -173,5 +173,3 @@ $contenttypes = {
    "xml" => "text/xml" , 
     "js" => "application/x-javascript" , 
 };
-
-

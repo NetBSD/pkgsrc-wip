@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/11/04 00:01:23 adrian_p Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/04 00:04:08 adrian_p Exp $
 #
 
 DISTNAME=	bugzilla-2.18rc3
@@ -68,7 +68,6 @@ SUBST_SED.conf=		-e "s|@PREFIX@|${PREFIX}|g" \
 			-e "s|@BZ_DB_USER@|${BZ_DB_USER}|g" \
 			-e "s|@BZ_DB_PASS@|${BZ_DB_PASS}|g"
 SUBST_MESSAGE.conf=	"Fixing configuration files."
-
 
 post-extract:
 	@${FIND} ${WRKSRC}/docs/images -type d -name CVS | ${XARGS} ${RM} -rf
