@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 09:41:20 bmeurer Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/22 13:20:42 thomasklausner Exp $
 
 DISTNAME=		autoproject-0.17
 CATEGORIES=		devel
@@ -11,7 +11,7 @@ COMMENT=		Creates a skeleton source package for a new program
 DEPENDS+=		autoconf>=2.57:../../devel/autoconf
 DEPENDS+=		automake>=1.7:../../devel/automake
 DEPENDS+=		bash>=2.0:../../shells/bash2
-DEPENDS+=		sh-utils-[0-9]*:../../sysutils/sh-utils
+DEPENDS+=		{sh-utils-[0-9]*,coreutils-[0-9]*}:../../sysutils/coreutils
 
 GNU_CONFIGURE=		yes
 
