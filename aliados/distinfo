@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.2 2004/09/05 13:31:11 ivaniclixx Exp $
+$NetBSD: distinfo,v 1.2 2004/10/30 21:34:21 minskim Exp $
 
 SHA1 (aliados-0.1.1.tgz) = adcc43f7bafc2ee11222002d03f306e8f561e3f6
 Size (aliados-0.1.1.tgz) = 50210 bytes
-SHA1 (patch-aa) = 5696b99d259711bf8c9ebcd771b8151eec9082b5
+SHA1 (patch-aa) = 2347332c491796a6df2468c6c814fbf9ffa04a8d

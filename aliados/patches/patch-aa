@@ -1,13 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.2 2004/09/05 13:31:11 ivaniclixx Exp $
+$NetBSD: patch-aa,v 1.2 2004/10/30 21:34:22 minskim Exp $
 
---- Makefile.orig	2004-03-20 20:31:28.000000000 +0100
-+++ Makefile	2004-09-04 21:03:21.000000000 +0200
-@@ -1,16 +1,16 @@
+--- Makefile.orig	2004-03-20 13:31:28.000000000 -0600
++++ Makefile
+@@ -1,16 +1,17 @@
  # Makefile para aliados
  
  # Path to ncurses required in hp-ux.
 -CPPFLAGS=-W -Wall -I/opt/ncurses/include
 +#CPPFLAGS=-W -Wall -I/opt/ncurses/include
++CPPFLAGS+=	${CXXFLAGS}
  
  # To compile with console emulation using curses.
 -LDFLAGS=-lncurses -L/opt/ncurses/lib
@@ -22,7 +23,7 @@ $NetBSD: patch-aa,v 1.1.1.2 2004/09/05 13:31:11 ivaniclixx Exp $
  
  # If you want to build the versions with and without libz80 at the same time.
  
-@@ -21,17 +21,17 @@
+@@ -21,17 +22,17 @@ both: aliados aliadoslz disassemble
  #------------------------------------------------
  
  aliadoslz: aliadoslz.o cpmlz.o realconsole.o cpuz.o directory.o
@@ -44,7 +45,7 @@ $NetBSD: patch-aa,v 1.1.1.2 2004/09/05 13:31:11 ivaniclixx Exp $
  
  #------------------------------------------------
  #	Version using  ImcZ80.
-@@ -41,7 +41,7 @@
+@@ -41,7 +42,7 @@ cpuz.o: cpu.cpp cpu.h
  
  # Uncomment this if you compile with ImcZ80 and with libz80.
  #aliados: aliados.o cpm.o Z80.o realconsole.o cpu.o
@@ -53,7 +54,7 @@ $NetBSD: patch-aa,v 1.1.1.2 2004/09/05 13:31:11 ivaniclixx Exp $
  #		aliados.o cpm.o realconsole.o Z80.o cpu.o \
  #		directory.o printer.o \
  #		-lz80
-@@ -50,47 +50,47 @@
+@@ -50,47 +51,47 @@ cpuz.o: cpu.cpp cpu.h
  aliados: aliados.o cpm.o Z80.o realconsole.o cpu.o disasm.o \
  		directory.o printer.o
  
