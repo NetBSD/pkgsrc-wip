@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 04:46:20 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/22 21:02:00 minskim Exp $
 
 DISTNAME=	CornerXMMS-0.0.5
 CATEGORIES=	audio
@@ -10,7 +10,7 @@ HOMEPAGE=	http://gdesklets.gnomedesktop.org/categories.php?func=gd_show_app&gd_a
 COMMENT=	Fancy desklet that allows you to control XMMS
 
 DEPENDS+=	gDesklets-[0-9]*:../../wip/gDesklets
-DEPENDS+=	${PYPKGPREFIX}-xmms-[0-9]*:../../wip/py-xmms
+DEPENDS+=	${PYPKGPREFIX}-xmms-[0-9]*:../../audio/py-xmms
 
 USE_BUILDLINK2=	yes
 NO_CONFIGURE=	yes
