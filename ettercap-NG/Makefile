@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/03/05 01:46:14 adrian_p Exp $
+# $NetBSD: Makefile,v 1.12 2005/03/05 14:01:30 adrian_p Exp $
 
 DISTNAME=	ettercap-NG-0.7.2
 CATEGORIES=	net
@@ -8,7 +8,7 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://ettercap.sourceforge.net/
 COMMENT=	Multipurpose sniffer/interceptor/logger for switched LAN
 
-CONFLICTS=	ettercap-0*
+CONFLICTS=	ettercap-[0-9]*
 
 BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.8.1
 
@@ -46,8 +46,8 @@ CONFIGURE_ARGS+=	--enable-gtk
 
 # See PR# 28772 about INSTALL_STRIPPED=NO being ignored on certain platforms
 .if ${OPSYS} == "Darwin"
-${_STRIPFLAG_CC}=
-${_STRIPFLAG_INSTALL}=
+_STRIPFLAG_CC=
+_STRIPFLAG_INSTALL=
 .endif
 
 .include "../../security/openssl/buildlink3.mk"
@@ -60,7 +60,6 @@ ${_STRIPFLAG_INSTALL}=
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ettercap-NG
-	#${INSTALL_DATA_DIR} ${PREFIX}/share/ettercap
 	${INSTALL_DATA} ${WRKSRC}/share/etter.conf \
 		${PREFIX}/share/examples/ettercap-NG
 
