@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/24 00:15:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/25 18:22:52 atamaniuk Exp $
 # based on FreeBSD-port pkgtrace originally by ijliao
 # created 2003-10-22 Patrick Atamaniuk <atamaniuk-pkgsrc@frobs.net>
 
@@ -42,5 +42,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/tfm.py ${PREFIX}/${PYSITELIB}
 	${INSTALL_DATA} ${WRKSRC}/afm.py ${PREFIX}/${PYSITELIB}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
