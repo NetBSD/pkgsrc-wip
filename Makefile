@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1399 2004/07/19 19:44:07 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1399 2004/07/19 19:44:07 thomasklausner Exp $
+# $Id: Makefile,v 1.1400 2004/07/19 19:50:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1400 2004/07/19 19:50:01 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -26,6 +26,7 @@ SUBDIR+=	alsa-utils
 SUBDIR+=	amap
 SUBDIR+=	amavisd-new
 SUBDIR+=	amsn
+SUBDIR+=	and
 SUBDIR+=	aols-postgres
 SUBDIR+=	aolserver
 SUBDIR+=	aolserver4
@@ -265,6 +266,7 @@ SUBDIR+=	java-bcel
 SUBDIR+=	java-charva
 SUBDIR+=	java-getopt
 SUBDIR+=	java-gnucrypto
+SUBDIR+=	java-gnujaf
 SUBDIR+=	java-gnujaxp
 SUBDIR+=	java-gtk2
 SUBDIR+=	java-jep
