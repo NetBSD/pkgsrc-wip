@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/08/15 15:25:50 tvierling Exp $
+
+--- libs/pgpcdk/pub/include/pgpSockets.h.orig	Fri Aug 15 09:59:55 2003
++++ libs/pgpcdk/pub/include/pgpSockets.h
+@@ -28,6 +28,9 @@ ________________________________________
+ #elif PGP_UNIX_AIX
+ # include <sys/time.h>
+ # include <sys/ioctl.h>
++#elif defined(__NetBSD__)
++# include <sys/time.h>
++# include <sys/ioctl.h>
+ #endif /* ! PGP_UNIX_LINUX */
+ # include <netinet/in.h>
+ # include <netdb.h>

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/15 15:25:50 tvierling Exp $
+bin/pgp6
+man/man1/pgp6.1
+share/doc/pgp6/LICENSE
+share/doc/pgp6/pgpcmdln.ps
+@dirrm share/doc/pgp6

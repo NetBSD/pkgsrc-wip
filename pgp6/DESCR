@@ -1,0 +1,9 @@
+PGP (Pretty Good Privacy) is a public key encryption package to protect
+E-mail and data files.  It lets you communicate securely with people
+you've never met, with no secure channels needed for prior exchange of
+keys.  It's well featured and fast, with sophisticated key management,
+digital signatures, data compression, and good ergonomic design.
+
+This is PGP 6.5.8, which brings back the classic PGP 2 command line
+syntax, adds a few more encryption and digest algorithms, and fixes
+miscellaneous problems in PGP 5.
