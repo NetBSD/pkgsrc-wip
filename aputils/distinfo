@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/05/07 22:00:19 poppnk Exp $
+
+SHA1 (ap-utils-1.3.2-pre3.tar.bz2) = 068f9bb118ac3366a93ed3a96f15da772375cb27
+Size (ap-utils-1.3.2-pre3.tar.bz2) = 279976 bytes
+SHA1 (patch-aa) = 85d50bbc03372cd160cb8314787de72ccd06251b
