@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/09 13:59:48 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/02 21:54:01 blef Exp $
 #
 
 DISTNAME=		SQLObject-0.5.1
@@ -10,7 +10,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://sqlobject.sourceforge.net/
 COMMENT=		Allows you to translate RDBMS table rows into Python objects
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
