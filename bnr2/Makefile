@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/18 17:02:47 tvierling Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/10 01:10:28 tvierling Exp $
 #
 
-DISTNAME=		BNR2beta-0.11.7
-WRKSRC=			${WRKDIR}/usr/local/BNR2
+DISTNAME=		BNR2beta-0.12.0
+PKGNAME=		${DISTNAME:S/BNR2beta/bnr2/}
+WRKSRC=			${WRKDIR}/BNR2
 CATEGORIES=		news
 MASTER_SITES=		http://www.bnr2.org/
 EXTRACT_SUFX=		.tgz
@@ -12,6 +13,8 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://www.bnr2.org/
 COMMENT=		USENET bulk binary downloader (X11)
+
+CONFLICTS+=		BNR2beta-0.*
 
 NO_BUILD=		# defined
 USE_BUILDLINK2=		yes
@@ -27,8 +30,8 @@ DEPENDS+=		suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/bnr2
-	${INSTALL_SCRIPT} ${WRKSRC}/BNR2 ${PREFIX}/lib/bnr2/
-	${INSTALL_SCRIPT} ${WRKSRC}/lib/libborqt-6.9.0-qt2.3.so ${PREFIX}/lib/bnr2/
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/BNR2 ${PREFIX}/lib/bnr2/
+	${INSTALL_SCRIPT} ${WRKDIR}/usr/local/BNR2/lib/libborqt-6.9.0-qt2.3.so ${PREFIX}/lib/bnr2/
 	${LN} -s -f libborqt-6.9.0-qt2.3.so ${PREFIX}/lib/bnr2/libborqt-6.9-qt2.3.so
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bnr2
 	${INSTALL_DATA} ${WRKSRC}/icon/bnr2a.png ${PREFIX}/share/doc/bnr2/
