@@ -1,8 +1,8 @@
 test multiplayer:
 Multiplayer on the same screen is deprecated ..: Undefined error: 0
 
-pkglint complains:
-FATAL: extra item "SITES_mercrain.s3m.zip" placed in the DISTNAME section.
+fix the fetching of mercrain. the trailing .zip needs to be removed in
+order to fetch properly. I can't think of a sane way to do this.
 
 post-install should just use cpio ??
 but cpio may not exist? and no CPIO is defined

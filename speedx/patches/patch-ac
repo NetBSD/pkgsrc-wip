@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1 2003/06/03 02:19:02 blef Exp $
+
+--- src/keyboard.h.orig	Mon Jun  2 15:52:06 2003
++++ src/keyboard.h	Mon Jun  2 15:55:13 2003
+@@ -40,12 +40,16 @@
+ 
+ 
+ 
++KeyCode ALTERNATE_KEY_UP;
+ KeyCode KEY_UP;
+ 
++KeyCode ALTERNATE_KEY_DOWN;
+ KeyCode KEY_DOWN;
+ 
++KeyCode ALTERNATE_KEY_RIGHT;
+ KeyCode KEY_RIGHT;
+ 
++KeyCode ALTERNATE_KEY_LEFT;
+ KeyCode KEY_LEFT;
+ 
+ KeyCode KEY_UP2;

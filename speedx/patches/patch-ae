@@ -1,0 +1,49 @@
+$NetBSD: patch-ae,v 1.1 2003/06/03 02:19:02 blef Exp $
+
+--- src/loop.c.orig	Mon Jun  2 15:58:37 2003
++++ src/loop.c	Mon Jun  2 16:00:06 2003
+@@ -118,19 +118,19 @@
+ 
+   case KeyPress:
+ 
+-    if (touche == KEY_UP) {
++    if (touche == KEY_UP || touche == ALTERNATE_KEY_UP) {
+       (*mask) =	(*mask) & (~DOWN);
+       (*mask) =	(*mask) | UP;
+     }
+-    if (touche == KEY_DOWN) {
++    if (touche == KEY_DOWN || touche == ALTERNATE_KEY_DOWN) {
+       (*mask) =	(*mask) & (~UP);
+       (*mask) =	(*mask) | DOWN;
+     }
+-    if (touche == KEY_RIGHT) {
++    if (touche == KEY_RIGHT || touche == ALTERNATE_KEY_RIGHT) {
+       (*mask) =	(*mask) & (~LEFT);
+       (*mask) =	(*mask) | RIGHT;
+     }
+-    if (touche == KEY_LEFT) {
++    if (touche == KEY_LEFT || touche == ALTERNATE_KEY_LEFT) {
+       (*mask) =	(*mask) & (~RIGHT);
+       (*mask) =	(*mask) | LEFT;
+     }
+@@ -158,16 +158,16 @@
+ 
+   case KeyRelease:
+ 
+-    if (touche == KEY_UP)
++    if (touche == KEY_UP || touche == ALTERNATE_KEY_UP)
+       (*mask) =	(*mask) & (~UP);
+ 
+-    if (touche == KEY_DOWN)
++    if (touche == KEY_DOWN || touche == ALTERNATE_KEY_DOWN)
+       (*mask) =	(*mask) & (~DOWN);
+ 
+-    if (touche == KEY_RIGHT)
++    if (touche == KEY_RIGHT || touche == ALTERNATE_KEY_RIGHT)
+       (*mask) =	(*mask) & (~RIGHT);
+ 
+-    if (touche == KEY_LEFT)
++    if (touche == KEY_LEFT || touche == ALTERNATE_KEY_LEFT)
+       (*mask) =	(*mask) & (~LEFT);
+ 
+     if (touche == KEY_UP2)
