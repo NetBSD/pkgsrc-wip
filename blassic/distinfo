@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.2 2004/02/22 22:45:04 ivaniclixx Exp $
+$NetBSD: distinfo,v 1.2 2005/02/12 17:28:31 ivaniclixx Exp $
 
-SHA1 (blassic-0.8.1.tgz) = cea211963afdd7fd8cc750fbd835af2bc3f59ee4
-Size (blassic-0.8.1.tgz) = 291652 bytes
+SHA1 (blassic-0.10.0.tgz) = 13e0581afe2f515180bc539c83d4e0ab5dc97470
+Size (blassic-0.10.0.tgz) = 349359 bytes

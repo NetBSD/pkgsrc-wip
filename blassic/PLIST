@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/13 19:37:09 ivaniclixx Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/12 17:28:31 ivaniclixx Exp $
 bin/blassic
 share/blassic/examples/4raya.bas
 share/blassic/examples/allkeywords.blc
@@ -87,5 +87,8 @@ share/blassic/examples/trim.bas
 share/blassic/examples/viewpass.bas
 share/blassic/examples/while.bas
 share/blassic/examples/window.bas
+share/blassic/examples/graphget.bas
+share/blassic/examples/regexp.bas
+share/blassic/examples/tierra.bas
 @dirrm share/blassic/examples
 @dirrm share/blassic

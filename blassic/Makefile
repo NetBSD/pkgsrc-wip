@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2005/01/23 18:04:19 ivaniclixx Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/12 17:28:31 ivaniclixx Exp $
 #
 
-DISTNAME=		blassic-0.8.1
+DISTNAME=		blassic-0.10.0
 CATEGORIES=		lang
 MASTER_SITES=		http://www.arrakis.es/~ninsesabe/blassic/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		ivaniclixx@gmail.com
-HOMEPAGE=		http://www.arrakis.es/~ninsesabe/blassic/
+HOMEPAGE=		http://blassic.org
 COMMENT=		Blassic is a classic Basic interpreter
 
 USE_BUILDLINK3=		yes
