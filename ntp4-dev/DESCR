@@ -1,0 +1,3 @@
+This development branch of the NTP Version 4 (NTPv4) daemon for 
+Unix incorporates new features and refinements to the NTP Version 3 (NTPv3) 
+algorithms (including IPv6 support).

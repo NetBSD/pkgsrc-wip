@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/07 01:50:59 adrian_p Exp $
+
+SHA1 (ntp-4.1.80-rc1.tar.gz) = bddbc31aa874f4beb5941d17da4903077776cf53
+Size (ntp-4.1.80-rc1.tar.gz) = 2406377 bytes
+SHA1 (patch-aa) = ea63c0249022f240a4d306f97c5ddbd537938e42
+SHA1 (patch-ab) = 08e8942328568056f6a0093bbc9b839c18a11989
+SHA1 (patch-ac) = ed1a1f3d02587890eb4748395556c742d3cc337a
