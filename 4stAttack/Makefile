@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/09/29 13:14:51 marc Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/05 18:50:15 xtraeme Exp $
 #
 
 DISTNAME=		4stAttack-2.1.4
@@ -9,7 +9,7 @@ MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://forcedattack.sourceforge.net/
 COMMENT=		Game in which you have to try to out-smart your opponent
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 PYTHON_PATCH_SCRIPTS=	4stattack.py
 
@@ -29,7 +29,7 @@ do-install:
 	cd ${WRKSRC} && ${FIND} . -type f -and \! ${FIND_EXCLUDE} \
 		-print | ${PAX} -rw -pp -pm ${PREFIX}/games/${PKGBASE}
 
-.include "../../wip/py-game/buildlink2.mk"
+.include "../../wip/py-game/buildlink3.mk"
 .include "../../lang/python/application.mk"
 
 .include "../../mk/bsd.pkg.mk"
