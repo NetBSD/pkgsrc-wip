@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/04 11:38:57 marttikuparinen Exp $
+share/xfce4/themes/Sky/AUTHOR
+share/xfce4/themes/Sky/LICENSE
+share/xfce4/themes/Sky/README
+share/xfce4/themes/Sky/edit.png
+share/xfce4/themes/Sky/file1.png
+share/xfce4/themes/Sky/file2.png
+share/xfce4/themes/Sky/games.png
+share/xfce4/themes/Sky/man.png
+share/xfce4/themes/Sky/miniinfo.png
+share/xfce4/themes/Sky/minilock.png
+share/xfce4/themes/Sky/minipalet.png
+share/xfce4/themes/Sky/minipower.png
+share/xfce4/themes/Sky/multimedia.png
+share/xfce4/themes/Sky/network.png
+share/xfce4/themes/Sky/newmail.png
+share/xfce4/themes/Sky/nomail.png
+share/xfce4/themes/Sky/oldmail.png
+share/xfce4/themes/Sky/paint.png
+share/xfce4/themes/Sky/sound.png
+share/xfce4/themes/Sky/terminal.png
+share/xfce4/themes/Sky/unknown.png
+@dirrm share/xfce4/themes/Sky
