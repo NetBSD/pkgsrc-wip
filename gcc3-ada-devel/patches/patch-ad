@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/12/12 10:52:53 johnrshannon Exp $
+$NetBSD: patch-ad,v 1.2 2003/12/15 18:42:08 johnrshannon Exp $
 
 --- gcc/ada/Make-lang.in.orig	2003-12-01 06:29:28.000000000 -0700
 +++ gcc/ada/Make-lang.in
@@ -11,3 +11,19 @@ $NetBSD: patch-ad,v 1.1.1.1 2003/12/12 10:52:53 johnrshannon Exp $
  	$(MAKE) -C ada $(FLAGS_TO_PASS) $(ADA_FLAGS_TO_PASS) \
  	  ADA_INCLUDES="-I- -I../rts"\
  	  CC="../../xgcc -B../../" STAGE_PREFIX=../../  gnattools1
+@@ -945,11 +945,14 @@ ada.stagefeedback: stagefeedback-start
+ check-ada: check-gnat
+ 
+ ACATSDIR = $(TESTSUITEDIR)/ada/acats
++ACATSOBJDIR = $(TESTSUITEDIR)/ada/acatsobj
+ 
+ check-gnat:
+ 	test -d $(ACATSDIR) || mkdir -p $(ACATSDIR)
++	test -d $(ACATSOBJDIR) || mkdir -p $(ACATSOBJDIR)
++	objdir=`cd ${srcdir}/${ACATSOBJDIR}; ${PWD_COMMAND}`; \
+ 	testdir=`cd ${srcdir}/${ACATSDIR}; ${PWD_COMMAND}`; \
+-	export testdir; cd $(ACATSDIR); $${testdir}/run_acats $(CHAPTERS)
++	export objdir; export testdir; cd $(objdir); $${testdir}/run_acats $(CHAPTERS)
+ 
+ .PHONY: check-gnat
+ 

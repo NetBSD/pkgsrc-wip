@@ -54,35 +54,6 @@ package body System.OS_Interface is
       null;
    end pthread_init;
 
-   function pthread_mutexattr_setprotocol
-     (attr     : access pthread_mutexattr_t;
-      protocol : int)
-      return     int
-   is
-   begin
-      return 0;
-   end pthread_mutexattr_setprotocol;
-
-   function pthread_mutexattr_setprioceiling
-     (attr        : access pthread_mutexattr_t;
-      prioceiling : int)
-      return        int
-   is
-   begin
-      return 0;
-   end pthread_mutexattr_setprioceiling;
-
-   function pthread_setschedparam
-    (thread : pthread_t;
-     policy : int;
-     param  : access struct_sched_param)
-     return   int
-   is
-   begin
-      --  Dummy until function is included in run-time
-      return 0;
-   end pthread_setschedparam;
-
    -----------------
    -- To_Duration --
    -----------------
@@ -117,7 +88,7 @@ package body System.OS_Interface is
          F := F + 1.0;
       end if;
 
-      return timespec' (tv_sec => S,
+      return timespec'(tv_sec => S,
         tv_nsec => long (Long_Long_Integer (F * 10#1#E9)));
    end To_Timespec;
 
@@ -137,7 +108,7 @@ package body System.OS_Interface is
          F := F + 1.0;
       end if;
 
-      return struct_timeval' (tv_sec => S,
+      return struct_timeval'(tv_sec => S,
         tv_usec => time_t (Long_Long_Integer (F * 10#1#E6)));
    end To_Timeval;
 

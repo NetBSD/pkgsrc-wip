@@ -83,7 +83,18 @@ package body Specific is
    begin
       Result := pthread_getspecific (ATCB_Key);
       pragma Assert (Result /= System.Null_Address);
-      return To_Task_ID (Result);
+      return To_Task_Id (Result);
    end Self;
+
+   -------------------
+   -- Is_Valid_Task --
+   -------------------
+
+   function Is_Valid_Task return Boolean is
+   begin
+      return  pthread_getspecific (ATCB_Key) /= System.Null_Address;
+   end Is_Valid_Task;
+
+
 
 end Specific;

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2003/12/14 22:38:39 blef Exp $
+# $NetBSD: Makefile,v 1.4 2003/12/15 18:42:08 johnrshannon Exp $
 #
 
 PKGNAME=		gcc3${GCC3_PKGMODIF}-ada-${GCC_VERSION}-devel
 COMMENT=		GNU Compiler Collection, version 3-${SNAPDATE}, Ada compiler
 
-.include "../../wip/gcc3-c-devel/buildaddon.mk"
+.include "../../lang/gcc3-c-devel/buildaddon.mk"
 
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=	--enable-languages="ada"
@@ -51,6 +51,7 @@ post-patch:
 	(cd files; \
 		${CP} adasignal.c ${WRKSRC}/gcc/ada; \
 		${CP} ada_lwp_self.c ${WRKSRC}/gcc/ada; \
+		${CP} dummy_pthreads.c ${WRKSRC}/gcc/ada; \
 		for i in *.adb *.ads ; do \
 		${CP} $$i ${WRKSRC}/gcc/ada; \
 	done )
@@ -65,25 +66,21 @@ post-configure:
 	  || ${FALSE} # no ada bootstrap found by configure
 	(cd ${WRKSRC}/gcc/ada && ${TOUCH} treeprs.ads [es]info.h nmake.ad[bs])
 
-do-build:
-	(cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} ada)
-	# XXX avoid some VPATH related lossage
+post-build:
 	(cd ${WRKSRC}/gcc/ada && ${MV} targtyps.o targtyps.o.sav)
 	(cd ${WRKSRC}/gcc/ada && ${RM} -f *.o *.ali)
 	(cd ${WRKSRC}/gcc/ada && ${MV} targtyps.o.sav targtyps.o)
 	(cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib_and_tools)
-
-post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
 	${ECHO} "ADA_INCLUDE_PATH+=${GCC_ARCHDIR}/adainclude" >> ${WRKDIR}/gcc3.mk
 
 do-test:
-	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} test-ada)
+	(cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} check-ada)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gcc/gnat1 ${GCC_ARCHDIR}
 	(cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} \
-		ada.install-common ada.install-info install-gnatlib)
+		ada.install-common install-gnatlib)
 	${RM} -f ${GCC_ARCHDIR}/adalib/lib*.so
 
 post-install:

@@ -1,5 +1,4 @@
-- Build does not complete. Path to Ada compiler is
-  forgotten when building RTS.
-- Fix some RTS dependancies
-- Eliminate unnecessary configuration
-- Add ACATS C tests to test suite
+- There is an incomplete change in the gcc source
+  tree changing to directory gcc instead of gcc-lib.
+  The gcc-lib ireferences are still abundant in the ada and
+  testsuite code.

@@ -56,7 +56,7 @@ package Ada.Interrupts.Names is
       --  trace trap (not reset)
    Sigiot    : constant Interrupt_ID := System.OS_Interface.sigiot;
       --  IOT instruction
-   Sigabrt   : constant Interrupt_ID := System.OS_Interface.sigabrt;
+   SIGABRT   : constant Interrupt_ID := System.OS_Interface.SIGABRT;
       --  used by abort,--  replace SIGIOT in the  future
    Sigemt    : constant Interrupt_ID := System.OS_Interface.sigemt;
       --  EMT instruction

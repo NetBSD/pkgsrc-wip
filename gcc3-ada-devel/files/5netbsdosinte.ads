@@ -170,8 +170,8 @@ package System.OS_Interface is
    sigquit : constant := 3; -- quit
    sigill  : constant := 4; -- illegal instruction (not reset when caught)
    sigtrap : constant := 5; -- trace trap (not reset when caught)
-   sigabrt : constant := 6;       -- abort()
-   sigiot  : constant := sigabrt; -- compatibility
+   SIGABRT : constant := 6;       -- abort()
+   sigiot  : constant := SIGABRT; -- compatibility
    sigemt  : constant := 7;       -- EMT instruction
    sigfpe  : constant := 8;       -- floating point exception
    sigkill : constant := 9; -- kill (cannot be caught or ignored)
@@ -201,6 +201,8 @@ package System.OS_Interface is
    sigwaiting : constant := 0; -- process's lwps blocked (Solaris)
    sigcancel : constant := 0; --  thread cancellation signal (libthread)
 
+   SIGADAABORT : constant := SIGABRT;
+
    type signal_set is array (Natural range <>) of Signal;
 
    Unmasked : constant signal_set := (sigkill, sigill, sigprof, sigtrap,
@@ -209,7 +211,7 @@ package System.OS_Interface is
    --  Following signals should not be disturbed.
    --  See c-posix-signals.c in FLORIST
    Reserved : constant signal_set := (sigalrm, sigbus, sigill, sigsegv,
-     sigfpe, sigabrt, sigkill, sigstop);
+     sigfpe, SIGABRT, sigkill, sigstop);
 
    --  PTHREAD_SIGMASK(3)
    SIG_BLOCK : constant := 1;
@@ -447,10 +449,14 @@ package System.OS_Interface is
    function pthread_mutexattr_setprotocol
      (attr     : access pthread_mutexattr_t;
       protocol : int) return int;
+   pragma Import
+     (C, pthread_mutexattr_setprotocol, "ada_pthread_mutexattr_setprotocol");
 
    function pthread_mutexattr_setprioceiling
      (attr     : access pthread_mutexattr_t;
       prioceiling : int) return int;
+   pragma Import
+     (C, pthread_mutexattr_setprioceiling, "pthread_mutexattr_setprioceiling");
 
    type struct_sched_param is record
       sched_priority : int;
@@ -465,8 +471,7 @@ package System.OS_Interface is
       policy : int;
       param  : access struct_sched_param)
      return int;
-   --  Does not exist yet - we provide a dummy
-   --  pragma Import (C, pthread_setschedparam, "pthread_setschedparam");
+   pragma Import (C, pthread_setschedparam, "pthread_setschedparam");
 
    function pthread_attr_setscope
      (attr            : access pthread_attr_t;
