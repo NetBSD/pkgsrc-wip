@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/10/02 15:30:36 hfath Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/27 23:13:27 rillig Exp $
 # FreeBSD Id: ports/news/cnews/Makefile,v 1.43 2001/06/24 04:28:36 dinoex Exp
 
 DISTNAME=	c-news
 PKGNAME=        c-news-CR-7
-WRKSRC=		${WRKDIR}
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.cs.toronto.edu/pub/c-news/ \
 		ftp://ftp.funet.fi/pub/unix/news/cnews/ \
@@ -34,6 +33,7 @@ COMMENT=	The 3rd generation USENET news server
 
 CONFLICTS+=	nntpclnt-[0-9]* inn*
 
+WRKSRC=		${WRKDIR}
 USE_PKGINSTALL=	YES
 PKG_USERS=	news:news::Internet\\ News:${CNEWSDATA}:${SH}
 PKG_GROUPS=	news
