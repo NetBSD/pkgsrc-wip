@@ -1,0 +1,15 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2003/12/15 17:30:39 mpasternak Exp $
+# $Id: Makefile.common,v 1.1.1.1 2003/12/15 17:30:39 mpasternak Exp $
+
+PHP_DOC_LANG?=		en
+
+PHP_DOC_LANG_DESC?=	English
+
+PHP_DOC_MASTER_SITES=	http://www.php.net/distributions/manual/ \
+			http://us2.php.net/distributions/manual/ \
+			http://us3.php.net/distributions/manual/ \
+			http://us4.php.net/distributions/manual/ \
+			http://pl.php.net/distributions/manual/ \
+			http://pl2.php.net/distributions/manual/ \
+			http://ar.php.net/distributions/manual/ \
+			http://ar2.php.net/distributions/manual/

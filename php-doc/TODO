@@ -1,0 +1,11 @@
+$Id: TODO,v 1.1.1.1 2003/12/15 17:30:39 mpasternak Exp $
+
+1) add more mirrors to Makefile.common: get mirror URLs from:
+
+	http://pl.php.net/get/php_manual_en.tar.gz/from/a/mirror
+
+2) NO_CHECKSUM - is that okay for everyone?
+
+3) test them! I've checked only php-doc-en :)
+   
+	-- dotz@irc.pl
