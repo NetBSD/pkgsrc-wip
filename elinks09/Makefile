@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/04 09:44:45 bjan2 Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/04 09:48:49 bjan2 Exp $
 
 DISTNAME=		elinks-0.9.0
 CATEGORIES=		www
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 
+CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 
 .include "../../archivers/bzip2/buildlink2.mk"
