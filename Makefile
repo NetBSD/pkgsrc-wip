@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.753 2003/12/11 21:21:10 blef Exp $
-# $NetBSD: Makefile,v 1.753 2003/12/11 21:21:10 blef Exp $
+# $Id: Makefile,v 1.754 2003/12/12 02:48:06 mjasm Exp $
+# $NetBSD: Makefile,v 1.754 2003/12/12 02:48:06 mjasm Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -550,6 +550,7 @@ SUBDIR+=	speedx
 SUBDIR+=	sqlrelay
 SUBDIR+=	sredird
 SUBDIR+=	srvx
+SUBDIR+=	steghide
 SUBDIR+=	stickynotes-applet
 SUBDIR+=	strace
 SUBDIR+=	streamripper
