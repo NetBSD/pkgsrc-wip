@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/09/13 12:58:42 bubuchka Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/10/17 19:51:41 bubuchka Exp $
 #
 # This is installation framework to various clients to DrWeb daemon
 # antivirus shiped by Dialogue Science
@@ -41,10 +41,13 @@ HOMEPAGE=		http://www.drweb.ru/
 
 .if ${DRW_CLIENT_NAME} != "clients-shared"
 DEPENDS+=	drweb-clients-shared-${DRW_CLVER}:../../wip/drweb-clients-shared
-.endif
 
-USE_BUILDLINK2=		# defined
+CFLAGS+=		-DPKG_SYSCONFDIR='\"${PKG_SYSCONFDIR}\"'
+
 PTHREAD_OPTS+=		required
+USE_BUILDLINK2=		# defined
+.include "../../mk/pthread.buildlink2.mk"
+.endif
 
 DRW_EGDIR=		${_EGDIR}-${DRW_CLIENT_NAME}
 DRW_DOCDIR=		${_DOCDIR}-${DRW_CLIENT_NAME}
@@ -54,8 +57,6 @@ DISTINFO_FILE=		${.CURDIR}/../../wip/drweb-clients-shared/distinfo
 
 FILES_SUBST+=		DRW_CLVER=${DRW_CLVER} DRW_CLSUBVER=${DRW_CLSUBVER}
 
-CFLAGS+=		-DPKG_SYSCONFDIR='\"${PKG_SYSCONFDIR}\"'
-
 pre-configure:
 	@${SED} ${FILES_SUBST_SED}					\
 		${FILESDIR}/configure.answers.${DRW_CLIENT_NAME}	\
@@ -63,5 +64,4 @@ pre-configure:
 	cd ${WRKSRC} && ${SH} configure < ${WRKDIR}/configure.answers
 
 .include "../../wip/drweb/Makefile.common"
-.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
