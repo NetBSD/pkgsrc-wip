@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2003/10/28 16:08:45 bubuchka Exp $
+
+--- src/Makefile.nix.tmpl.orig	2003-10-20 20:02:10.000000000 +0300
++++ src/Makefile.nix.tmpl
+@@ -33,6 +33,7 @@ OPTFLAGS        = ___OPT_FLAGS___
+ DEFFLAGS        = ___POLL_DEF___ -D__UNIX_DW -D$(OS)_DW
+ INCFLAGS        = 
+ ADD_CFLAGS      = $(OPTFLAGS) $(DEFFLAGS) $(INCFLAGS) $(ADDFLAGS)
++ADD_CFLAGS	+= ${CFLAGS} ${PTHREAD_CFLAGS}
+ 
+ SRCS	= \
+ 	dwc_strings.c\
