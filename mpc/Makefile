@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/23 01:10:54 rockpiper Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/15 01:29:48 rockpiper Exp $
 
-DISTNAME=	mpc-0.10.1
+DISTNAME=	mpc-0.10.3
 CATEGORIES=	audio
 MASTER_SITES=	http://mercury.chem.pitt.edu/~shank/
 
