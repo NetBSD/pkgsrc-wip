@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/24 05:45:21 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/01/29 05:27:59 schnoebe Exp $
 bin/ecpg
 include/ecpg_informix.h
 include/ecpgerrno.h
@@ -401,39 +401,6 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libpq.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libpq.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libpq.mo
 share/postgresql/pg_service.conf.sample
-@dirrm ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/zh_TW
-@dirrm ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/zh_CN
-@dirrm ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/sv
-@dirrm ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/sl
-@dirrm ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/sk
-@dirrm ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/ru
-@dirrm ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/pt_BR
-@dirrm ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/nb
-@dirrm ${PKGLOCALEDIR}/locale/it/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/it
-@dirrm ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/hr
-@dirrm ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/fr
-@dirrm ${PKGLOCALEDIR}/locale/es/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/es
-@dirrm ${PKGLOCALEDIR}/locale/de/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/de
-@dirrm ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/cs
-@dirrm ${PKGLOCALEDIR}/locale/af/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/af
-@dirrm ${PKGLOCALEDIR}/locale
-@dirrm man/man1
-@dirrm lib/postgresql
 @dirrm include/postgresql/server/utils
 @dirrm include/postgresql/server/tcop
 @dirrm include/postgresql/server/storage
@@ -454,8 +421,6 @@ share/postgresql/pg_service.conf.sample
 @dirrm include/postgresql/server
 @dirrm include/postgresql/libpq
 @dirrm include/postgresql/internal/libpq
-@exec ${MKDIR} %D/include/postgresql/internal/lib
-@dirrm include/postgresql/internal/lib
 @dirrm include/postgresql/internal
 @dirrm include/postgresql/informix/esql
 @dirrm include/postgresql/informix
