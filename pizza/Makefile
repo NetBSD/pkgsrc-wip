@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/21 12:16:22 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/21 12:47:32 poppnk Exp $
 #
 
 DISTNAME=		pizza-1.1
@@ -21,6 +21,9 @@ do-install:
 	${INSTALL_DATA} ${DISTDIR}/${DISTNAME}.jar \
 		${PREFIX}/bin/pizza.jar
 	${ECHO} "#!/bin/sh" > ${PREFIX}/bin/pizza
+	${ECHO} "if [ \"\" = \"`echo $CLASSPATH|grep pizza.jar`\" ];then" >> ${PREFIX}/bin/pizza
+	${ECHO} "echo \"WARNING: You must add ${PREFIX}/bin/pizza.jar to CLASSPATH\"" >> ${PREFIX}/bin/pizza
+	${ECHO} "fi" >> ${PREFIX}/bin/pizza
 	${ECHO} "CLASSPATH=${PREFIX}/bin/pizza.jar:${CLASSPATH}" >> ${PREFIX}/bin/pizza
 	${ECHO} "java -jar ${PREFIX}/bin/pizza.jar \$$*" >> ${PREFIX}/bin/pizza
 	${CHMOD} +x ${PREFIX}/bin/pizza
