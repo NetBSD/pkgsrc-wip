@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.452 2003/09/17 14:51:39 xtraeme Exp $
-# $NetBSD: Makefile,v 1.452 2003/09/17 14:51:39 xtraeme Exp $
+# $Id: Makefile,v 1.453 2003/09/17 15:06:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.453 2003/09/17 15:06:08 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -113,6 +113,7 @@ SUBDIR+=	fsv
 SUBDIR+=	fwbuilder
 SUBDIR+=	galib
 SUBDIR+=	gcompris
+SUBDIR+=	gdbada
 SUBDIR+=	gdrdao
 SUBDIR+=	geeklog
 SUBDIR+=	gift
