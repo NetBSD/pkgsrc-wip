@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/04 17:08:11 ivaniclixx Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2004/09/05 13:31:11 ivaniclixx Exp $
 #
 
 DISTNAME=		aliados-0.1.1
@@ -17,8 +17,8 @@ NO_CONFIGURE=		YES
 USE_NCURSES=		YES
 
 do-install:
-	${MKDIR} ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/aliados ${PREFIX}/bin/aliados
+	${INSTALL_PROGRAM_DIR} ${INSTALL_DIR_PROGRAM} ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/aliados ${PREFIX}/bin/
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
