@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/29 14:17:51 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/29 14:39:10 cubidou Exp $
 
 MODNAME=		exif
 CATEGORIES+=		graphics
@@ -10,5 +10,4 @@ USE_BUILDLINK2=		YES
 
 CONFIGURE_ARGS+=	--enable-exif=shared,${BUILDLINK_PREFIX.exif}
 
-.include "../../graphics/libexif/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
