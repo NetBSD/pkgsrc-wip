@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/22 09:51:23 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/22 14:20:04 poppnk Exp $
 #
 
 DISTNAME=		bluez-utils-2.10
@@ -6,7 +6,7 @@ CATEGORIES=		wip net
 MASTER_SITES=		http://bluez.sf.net/download/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://bluez.sf.net/download/
+HOMEPAGE=		http://www.bluez.org/
 COMMENT=		Linux Bluetooth Stack utilities
 
 USE_BUILDLINK3=		yes
