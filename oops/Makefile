@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/27 21:20:05 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2005/02/03 18:55:00 shattered Exp $
 #
 
 DISTNAME=	oops-1.5.23
@@ -82,5 +82,4 @@ post-install:
 .include "../../mk/compiler.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
