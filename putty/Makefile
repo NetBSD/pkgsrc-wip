@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/06 23:35:33 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/07 16:16:43 xtraeme Exp $
 #
 
 DISTNAME=	putty-0.54
@@ -19,11 +19,17 @@ MAKEFILE=	Makefile.gtk
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
-CFLAGS+=	-DBSD_PTYS -DOMIT_UTMP -DHAVE_NO_SETRESUID
+CFLAGS+=	-DOMIT_UTMP -DHAVE_NO_SETRESUID
 .endif
 
 .if !empty(USE_INET6:M[Yy][Ee][Ss])
 CFLAGS+=	-DIPV6
+.endif
+
+# Unix98 ptys were added some weeks ago in NetBSD -current,
+# so use it if we have the device, otherwise use the old style.
+.if !exists(/dev/ptmx)
+CFLAGS+=	-DBSD_PTYS
 .endif
 
 .include "../../x11/gtk/buildlink3.mk"
