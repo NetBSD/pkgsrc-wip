@@ -1,4 +1,1 @@
-$NetBSD: TODO,v 1.2 2003/12/29 22:05:27 adrian_p Exp $
-
 Fix libjpeg support - currently does not detect jpeg installation properly
-USE_X11BASE - should it be used yes/no, why/why not ?
