@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1.1.1 2003/07/23 20:35:17 xtraeme Exp $
-lib/X11/Cards
+@comment $NetBSD: PLIST.FreeBSD,v 1.2 2003/07/24 08:19:21 blef Exp $
 lib/X11/doc/html/XF86Config.5.html
 lib/X11/doc/html/XF86VidMode.3.html
 lib/X11/doc/html/XF86VidModeDeleteModeLine.3.html
