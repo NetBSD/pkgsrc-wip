@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/10 13:42:47 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/14 03:50:09 xtraeme Exp $
 bin/gtranslator
 bin/pozilla.sh
 lib/gtranslator/backends/docbook.xml
@@ -7,8 +7,8 @@ lib/gtranslator/backends/docbook/docbook.so
 lib/gtranslator/backends/text.xml
 lib/gtranslator/backends/text/text.la
 lib/gtranslator/backends/text/text.so
-man/man1/gtranslator.1
-man/man1/pozilla.sh.1
+man/man1/gtranslator.1.gz
+man/man1/pozilla.sh.1.gz
 share/gnome/apps/Development/gtranslator.desktop
 share/gnome/help/gtranslator/C/authors.html
 share/gnome/help/gtranslator/C/bugs.html
@@ -16,7 +16,6 @@ share/gnome/help/gtranslator/C/figures/mainwindow.png
 share/gnome/help/gtranslator/C/figures/prefs.png
 share/gnome/help/gtranslator/C/figures/toolbar.png
 share/gnome/help/gtranslator/C/glossary.html
-share/gnome/help/gtranslator/C/gtranslator.sgml
 share/gnome/help/gtranslator/C/index.html
 share/gnome/help/gtranslator/C/license.html
 share/gnome/help/gtranslator/C/prefs.html
@@ -100,13 +99,9 @@ share/pixmaps/gtranslator/untranslated_small.png
 @dirrm share/gtranslator/scripts
 @dirrm share/gtranslator/etspecs
 @dirrm share/gtranslator/colorschemes
-@dirrm share/gtranslator
 @dirrm share/gnome/help/gtranslator/ja
 @dirrm share/gnome/help/gtranslator/C/figures
 @dirrm share/gnome/help/gtranslator/C
-@dirrm share/gnome/help/gtranslator
-@dirrm share/gnome/apps/Development
 @dirrm lib/gtranslator/backends/text
 @dirrm lib/gtranslator/backends/docbook
 @dirrm lib/gtranslator/backends
-@dirrm lib/gtranslator
