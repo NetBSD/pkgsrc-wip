@@ -1,0 +1,11 @@
+* UPX does not pack NetBSD binaries, but it can be built on NetBSD and
+  used to manipulate Linux binaries.
+
+* The UPX packed Linux binary I tried to run under Linux emulation did
+  not work, so I resorted to building UPX and unpacking the binary.  I
+  should have worked on resolving the conflict between COMPAT_LINUX
+  and the UPX stub, if I had the time.
+
+* Verify whether this builds and runs on architectures other than i386.
+
+* Make patches only apply for NetBSD build, and not for Linux build.
