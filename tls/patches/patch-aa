@@ -1,0 +1,58 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/30 23:47:51 xtraeme Exp $
+
+--- configure.in.orig	Fri Aug 18 21:09:22 2000
++++ configure.in	Sun Sep 22 18:41:00 2002
+@@ -299,6 +299,7 @@
+ STLIB_LD=${TCL_STLIB_LD}
+ SHLIB_CFLAGS=${TCL_SHLIB_CFLAGS}
+ 
++AC_SUBST(TCL_CC)
+ AC_SUBST(CFLAGS_DEBUG)
+ AC_SUBST(CFLAGS_OPTIMIZE)
+ AC_SUBST(STLIB_LD)
+--- Makefile.in~	Sun Sep 22 18:39:11 2002
++++ Makefile.in	Sun Sep 22 18:41:23 2002
+@@ -120,6 +120,7 @@
+ PACKAGE = @PACKAGE@
+ VERSION = @VERSION@
+ CC = @CC@
++TCL_CC = @TCL_CC@
+ CFLAGS_DEBUG = @CFLAGS_DEBUG@
+ CFLAGS_DEFAULT = @CFLAGS_DEFAULT@
+ CFLAGS_OPTIMIZE = @CFLAGS_OPTIMIZE@
+--- configure	Sun Sep 22 18:43:37 2002
++++ configure.new	Sun Sep 22 18:43:16 2002
+@@ -1649,6 +1649,7 @@
+ 
+ 
+ 
++
+ #--------------------------------------------------------------------
+ # Set the default compiler switches based on the --enable-symbols 
+ # option.
+@@ -1665,7 +1666,7 @@
+     esac
+ 
+     echo $ac_n "checking for build with symbols""... $ac_c" 1>&6
+-echo "configure:1669: checking for build with symbols" >&5
++echo "configure:1670: checking for build with symbols" >&5
+     # Check whether --enable-symbols or --disable-symbols was given.
+ if test "${enable_symbols+set}" = set; then
+   enableval="$enable_symbols"
+@@ -1814,7 +1815,7 @@
+ 
+ 
+     echo $ac_n "checking for tclsh""... $ac_c" 1>&6
+-echo "configure:1818: checking for tclsh" >&5
++echo "configure:1819: checking for tclsh" >&5
+ 
+     if eval "test \"`echo '$''{'ac_cv_path_tclsh'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -2035,6 +2036,7 @@
+ s%@TCL_PLATFORM_DIR_NATIVE@%$TCL_PLATFORM_DIR_NATIVE%g
+ s%@TCL_INCLUDES@%$TCL_INCLUDES%g
+ s%@CLEANFILES@%$CLEANFILES%g
++s%@TCL_CC@%$TCL_CC%g
+ s%@CFLAGS_DEBUG@%$CFLAGS_DEBUG%g
+ s%@CFLAGS_OPTIMIZE@%$CFLAGS_OPTIMIZE%g
+ s%@STLIB_LD@%$STLIB_LD%g
