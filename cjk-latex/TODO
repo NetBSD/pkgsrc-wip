@@ -3,10 +3,3 @@
  * maybe integrate with cjk-latex-wadalab, which can be used (w/o
    cjk-latex-japanese) to get examplex/JIS.tex to work for latex, xdvi,
    dvips and dvipdfm
- * Rename things when importing into pkgsrc:
-
-        cjk-latex               => tex-cjk
-        cjk-latex-chinese       => tex-cjk-chinese
-        cjk-latex-japanese      => tex-cjk-japanese(-kochi?)
-        cjk-latex-korean        => tex-cjk-korean
-        cjk-latex-wadalab       => tex-cjk-japanese-wadalab
