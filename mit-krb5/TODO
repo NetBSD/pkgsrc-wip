@@ -1,3 +1,7 @@
+This conflicts with e2fsprogs and heimdal (but didn't add CONFLICTS
+yet because I need both).  Need to figure out a way to split out
+bin/compile_et, lib/libcom_err.a, and compile_et.1.
+
 pkglint complains: "WARN: is "mit-krb5" sane as package name WITHOUT
 version number? if not, avoid "-" in version number part of PKGNAME."
 
