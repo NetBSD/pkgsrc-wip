@@ -1,10 +1,17 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/07/09 17:17:15 xtraeme Exp $
+$NetBSD: patch-ae,v 1.2 2003/07/09 21:51:04 adrian_p Exp $
 
-$NetBSD: patch-ae,v 1.1.1.1 2003/07/09 17:17:15 xtraeme Exp $
-
---- configure.in.orig	Thu Feb 14 18:30:15 2002
-+++ configure.in	Mon Mar 18 14:49:20 2002
-@@ -1743,7 +1743,6 @@
+--- configure.in.orig	Wed Jul  9 21:12:31 2003
++++ configure.in	Wed Jul  9 21:10:01 2003
+@@ -1791,7 +1791,7 @@
+  tell atod memcpy memmove \
+  setupterm strcasecmp sighold vidattr lrand48 localtime_r \
+  sigset sigthreadmask pthread_sigmask pthread_setprio pthread_setprio_np \
+- pthread_setschedparam pthread_attr_setprio pthread_attr_setschedparam \
++ pthread_attr_setprio \
+  pthread_attr_create pthread_getsequence_np pthread_attr_setstacksize \
+  pthread_attr_getstacksize \
+  pthread_condattr_create rwlock_init pthread_rwlock_rdlock \
+@@ -2137,7 +2137,6 @@
  else
    bench_dirs=""
  fi
