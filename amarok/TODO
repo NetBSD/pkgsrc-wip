@@ -1,5 +1,0 @@
-
-* Check if xmms is required in runtime or just to build
-* Send PR to authors to add option like "--without-xmms"
-* Send PR to add $(LIBOSSAUDIO) option
-* Make Xine, GStream and NNM specific package
