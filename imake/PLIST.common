@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2003/07/23 20:30:44 xtraeme Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2003/07/23 23:16:53 blef Exp $
 bin/ccmakedep
 bin/cleanlinks
 bin/gccmakedep
@@ -120,4 +120,3 @@ lib/X11/config/xf86.tmpl
 lib/X11/config/xf86site.def
 lib/X11/config/xfree86.cf
 @dirrm lib/X11/config
-@dirrm lib/X11
