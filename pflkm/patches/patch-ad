@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/04/29 12:18:15 imilh Exp $
+
+--- lkm/pf_norm.c.orig	2003-06-04 08:17:57.000000000 +0200
++++ lkm/pf_norm.c
+@@ -817,7 +817,7 @@ pf_normalize_ip(struct mbuf **m0, int di
+ 	int			 mff = (h->ip_off & IP_MF);
+ 	int			 hlen = h->ip_hl << 2;
+ 	u_int16_t		 fragoff = (h->ip_off & IP_OFFMASK) << 3;
+-	u_int16_t		 max;
++	int			 max;
+ 	int			 ip_len;
+ 	int			 ip_off;
+ 

@@ -1,0 +1,8 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/29 12:18:15 imilh Exp $
+
+--- libexec/Makefile.inc.orig	2003-06-04 08:41:05.000000000 +0200
++++ libexec/Makefile.inc
+@@ -1 +1,2 @@
+-BINDIR=/usr/libexec
++BINDIR=${PREFIX}/libexec
++MANDIR=${PREFIX}/man
