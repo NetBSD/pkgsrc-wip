@@ -124,8 +124,7 @@ void zstrcat(char **dest, const char *source)
 		dest_size = strlen(*dest) + 1;
 	source_size = strlen(source);
 	*dest = zrealloc(*dest, dest_size + source_size);
-	(*dest)[dest_size - 1] = '\000';
-	strcat(*dest, source);
+	strcpy(*dest + dest_size - 1, source);
 }
 
 void zstrtoupper(char *s)
@@ -421,25 +420,30 @@ char *search_replace_sub(char *buffer, char *expression, char *replacement,
 
 /* "CLASS" file input */
 
+#define TYPICAL_LINE_SIZE (80)
+
 int read_line(FILE *fp, char **buffer)
 {
-	int buffer_size = 1;
+	int buffer_size = TYPICAL_LINE_SIZE;
 	int eof = 0;
-	signed char c;
+	int position = 0;
+	int c;
 
-	zstrcpy(buffer, "");
+	*buffer = zmalloc(TYPICAL_LINE_SIZE);
+	(*buffer)[0] = '\0';
 
-	c = fgetc(fp);
-	if (c == EOF && (feof(fp) || ferror(fp)))
+	if ((c = getc(fp)) == EOF)
 		eof = 1;
 
 	while (c != '\n' && !eof) {
-		buffer_size++;
-		*buffer = zrealloc(*buffer, buffer_size);
-		strncat(*buffer, &c, 1);
-		(*buffer)[buffer_size - 1] = 0;
-		c = fgetc(fp);
-		if (c == EOF && (feof(fp) || ferror(fp)))
+		if (position + 1 >= buffer_size) {
+			buffer_size = buffer_size * 2 + 1;
+			*buffer = zrealloc(*buffer, buffer_size);
+		}
+		(*buffer)[position++] = c;
+		(*buffer)[position] = '\0';
+		c = getc(fp);
+		if (c == EOF)
 			eof = 1;
 	}
 
@@ -590,7 +594,7 @@ int main(int argc, char *argv[])
 	char *slant = NULL;
 	char *spacing = NULL;
 	char *sc = NULL;
-	int code;
+	int code = -1;
 	da_t *startchar;
 	da_t *my_char;
 	char *fmap = NULL;
@@ -697,7 +701,7 @@ int main(int argc, char *argv[])
 				zstrcat(&header, "COMMENT ");
 				zstrcat(&header, match(l, 1));
 				zstrcat(&header, "\n");
-			} else if (regex(l, "^COMMENT[[:space:]]+$Id: ucs2any.c,v 1.2 2003/08/08 14:03:22 xtraeme Exp $[[:space:]]*$"))
+			} else if (regex(l, "^COMMENT[[:space:]]+\\$[I]d: (.*)\\$[[:space:]]*$"))
 			{
 				zstrcat(&header, "COMMENT Derived from ");
 				zstrcat(&header, match(l, 1));
