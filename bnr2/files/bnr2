@@ -1,4 +1,5 @@
 #!/bin/sh
-# $NetBSD: bnr2,v 1.2 2004/06/14 17:36:45 dhowland Exp $
+# $NetBSD: bnr2,v 1.3 2005/01/05 19:44:06 dhowland Exp $
 
+export LD_LIBRARY_PATH=@PREFIX@/lib/bnr2:$LD_LIBRARY_PATH
 exec @PREFIX@/lib/bnr2/BNR2 "$@"

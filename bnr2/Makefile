@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/11/27 19:15:12 dhowland Exp $
+# $NetBSD: Makefile,v 1.14 2005/01/05 19:44:06 dhowland Exp $
 #
 
-DISTNAME=		BNR2beta-0.14.4
+DISTNAME=		BNR2beta-0.14.6
 PKGNAME=		${DISTNAME:S/BNR2beta/bnr2/}
 CATEGORIES=		news
 MASTER_SITES=		http://www.bnr2.org/
@@ -32,8 +32,8 @@ DEPENDS+=		suse_libjpeg-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_libjpeg
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/bnr2
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/BNR2 ${PREFIX}/lib/bnr2/
-	${INSTALL_SCRIPT} ${WRKSRC}/lib/libborqt-6.9.0-qt2.3.so ${PREFIX}/lib/bnr2/
+	${INSTALL} ${WRKSRC}/bin/BNR2 ${PREFIX}/lib/bnr2/
+	${INSTALL} ${WRKSRC}/lib/libborqt-6.9.0-qt2.3.so ${PREFIX}/lib/bnr2/
 	${LN} -s -f libborqt-6.9.0-qt2.3.so ${PREFIX}/lib/bnr2/libborqt-6.9-qt2.3.so
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bnr2
 	${INSTALL_DATA_DIR} ${PREFIX}/share/icons/bnr2
