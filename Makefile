@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.190 2003/05/25 23:48:23 marc Exp $
-# $NetBSD: Makefile,v 1.190 2003/05/25 23:48:23 marc Exp $
+# $Id: Makefile,v 1.191 2003/05/26 14:26:10 marc Exp $
+# $NetBSD: Makefile,v 1.191 2003/05/26 14:26:10 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -139,6 +139,7 @@ SUBDIR+=	portmap
 SUBDIR+=	ppp
 SUBDIR+=	procps
 SUBDIR+=	pts
+SUBDIR+=	py-elementtree
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-gnome2
