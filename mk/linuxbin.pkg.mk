@@ -1,7 +1,7 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.9 2004/03/12 12:59:29 mpasternak Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.10 2004/03/12 14:28:22 mpasternak Exp $
 ###########################################################################
 # 
-# $Id: linuxbin.pkg.mk,v 1.9 2004/03/12 12:59:29 mpasternak Exp $
+# $Id: linuxbin.pkg.mk,v 1.10 2004/03/12 14:28:22 mpasternak Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 #
@@ -252,7 +252,23 @@ do-install:
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw -pe * ${EMULDIR}
 .if !defined(SLACK_NO_INSTALL)
+.if ${OPSYS} == "FreeBSD"
+	@echo ===========================================================================
+	@echo *WARNING*
+	@echo
+	@echo doinst.sh script is run with error-checking TURNED OFF
+	@echo 
+	@echo this setting is needed on some FreeBSD-stable boxes to avoid Signal 12
+	@echo at application exiting trouble.
+	@echo
+	@echo freebsd-emulation@ has been consulted about this, the bug is being
+	@echo tracked, but for now - if you notice *any* errors below this line,
+	@echo "please e-mail slackware_compat maintainer (dotz at irc.pl) ASAP."
+	@echo ===========================================================================
+	chroot ${EMULDIR} bin/bash install/doinst.sh || ${YES}
+.else
 	chroot ${EMULDIR} bin/bash install/doinst.sh
+.endif
 	${RM} -rf ${EMULDIR}/install
 .endif
 .endif
