@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/10 13:55:50 imilh Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/11 10:49:41 imilh Exp $
 
 DISTNAME=		tcpdump-3.8.3
 CATEGORIES=		net
@@ -8,8 +8,9 @@ MAINTAINER=		imil@gcu.info
 HOMEPAGE=		http://www.tcpdump.org/
 COMMENT=		Network monitoring tool
 
-GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
+GNU_CONFIGURE=		yes
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
 
 .if exists(/usr/include/netinet/ip6.h)
 CONFIGURE_ARGS+=	--enable-ipv6
