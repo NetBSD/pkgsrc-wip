@@ -14,3 +14,25 @@ man.mac needs to be a lot smarter, for example
 should be set depending on section number,
 like if 9 then: Kernel Manual
 and Unix replaced with operating system name
+
+This caused core dump:
+.if '\\$1'0' ds CH "General Information
+.if "\\$1"1" ds CH "Commands and Applications
+.if '\\$1'2' ds CH "System Calls
+
+This didn't work:
+.if "\\$2"2" .ds CH "System Calls
+It needs '\\$2'2'
+
+need to make it so it doesn't append formfeed at end of man page
+also don't append formfeed or date after each page
+
+need to figure out:
+\*[Lt] and for Gt too
+I already have .Lt and .Gt defined but don't understand brackets
+
+allow multiple macro file declarations as command-line arguments
+
+if error message says $0 and is not cawf then also say cawf in (parenthesis)
+
+cawf: (man1/zip.1, 125): unknown font C - \fCzip -r foo foo\fP
