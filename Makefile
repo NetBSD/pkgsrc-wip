@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1629 2005/01/23 17:47:31 ivaniclixx Exp $
-# $NetBSD: Makefile,v 1.1629 2005/01/23 17:47:31 ivaniclixx Exp $
+# $Id: Makefile,v 1.1630 2005/01/25 16:13:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1630 2005/01/25 16:13:25 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -952,7 +952,6 @@ SUBDIR+=	xbsql
 SUBDIR+=	xchat2-perl
 SUBDIR+=	xchat2-python
 SUBDIR+=	xchat2-tcl
-SUBDIR+=	xevil
 SUBDIR+=	xfe
 SUBDIR+=	xgobi
 SUBDIR+=	xinetd
