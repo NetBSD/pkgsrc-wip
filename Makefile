@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.240 2003/06/13 13:46:55 cjep Exp $
-# $NetBSD: Makefile,v 1.240 2003/06/13 13:46:55 cjep Exp $
+# $Id: Makefile,v 1.241 2003/06/14 01:23:08 mjasm Exp $
+# $NetBSD: Makefile,v 1.241 2003/06/14 01:23:08 mjasm Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -29,6 +29,7 @@ SUBDIR+=	cjk-latex-chinese
 SUBDIR+=	cjk-latex-japanese
 SUBDIR+=	cjk-latex-korean
 SUBDIR+=	cvsd
+SUBDIR+=	eic
 SUBDIR+=	dancer-ircd
 SUBDIR+=	darkice
 SUBDIR+=	devhelp
@@ -163,7 +164,6 @@ SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-SimpleParse
 SUBDIR+=	py-adns
-SUBDIR+=	py-egenix-mx-base
 SUBDIR+=	py-elementtree
 SUBDIR+=	py-gnome2
 SUBDIR+=	py-gnosis-utils
