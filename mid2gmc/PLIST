@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/07 16:08:31 bencollver Exp $
+bin/mid2gmc
