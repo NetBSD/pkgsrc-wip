@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/06/18 12:13:18 adrian_p Exp $
+# $NetBSD: Makefile,v 1.23 2004/06/19 11:03:00 adrian_p Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -27,7 +27,8 @@ SUBST_FILES.cgi=	cgi/dspam.cgi cgi/admin.cgi
 SUBST_SED.cgi=		-e "s|/usr/local/bin/dspam|${PREFIX}/bin/dspam|g" \
 			-e "s|/var/dspam|${DSPAM_HOME}|g" \
 			-e "s|/usr/local|${PREFIX}|g" \
-			-e "s|LARGE_SCLAE|LARGE_SCALE|g"
+			-e "s|LARGE_SCLAE|LARGE_SCALE|g" \
+			-e "s|-deaf|${DSPAM_PSFLAGS}|g"
 SUBST_MESSAGE.cgi=	"Fixing paths and typos."
 
 BDB_ACCEPTED=		db4 db3
@@ -45,6 +46,7 @@ BUILD_DEFS+=		DSPAM_HOMEDIR_DOTFILES
 BUILD_DEFS+=		DSPAM_USER DSPAM_GROUP
 BUILD_DEFS+=		DSPAM_BINMODE
 BUILD_DEFS+=		DSPAM_CGI_GRAPHS
+BUILD_DEFS+=		DSPAM_PSFLAGS
 
 DSPAM_DELIVERY_AGENT?=		procmail
 DSPAM_DELIVERY_AGENT_ARGS?=	# empty
@@ -52,6 +54,8 @@ DSPAM_DELIVERY_AGENT_ARGS?=	# empty
 DSPAM_HOME?=		${VARBASE}/dspam
 DSPAM_STORAGE_DRIVER?=	${BDB_TYPE}
 DSPAM_SIGNATURE_LIFE?=	15
+
+DSPAM_PSFLAGS?=		aux
 
 DSPAM_BINMODE?=		4511
 DSPAM_USER?=		dspam
@@ -152,6 +156,10 @@ CONFIGURE_ARGS+=	--enable-virtual-users
 
 .if defined(DSPAM_CGI_GRAPHS) && !empty(DSPAM_CGI_GRAPHS:M[Yy][Ee][Ss])
 DEPENDS+=	p5-GDGraph3d-[0-9]*:../../graphics/p5-GDGraph3d
+.endif
+
+.if ${OPSYS} == "Linux"
+DSPAM_PSFLAGS?=		-deaf
 .endif
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE} \
