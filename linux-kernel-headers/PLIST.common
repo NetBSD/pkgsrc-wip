@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.3 2004/03/07 06:18:56 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST.common,v 1.4 2004/03/11 17:50:43 jeremy-c-reed Exp $
 include/asm/a.out.h
 include/asm/atomic.h
 include/asm/bitops.h
@@ -128,6 +128,7 @@ include/linux/atmsap.h
 include/linux/atmsvc.h
 include/linux/auto_fs.h
 include/linux/auto_fs4.h
+include/linux/autoconf.h
 include/linux/awe_voice.h
 include/linux/ax25.h
 include/linux/b1lli.h
