@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.394 2003/08/26 10:09:14 jlamwww Exp $
-# $NetBSD: Makefile,v 1.394 2003/08/26 10:09:14 jlamwww Exp $
+# $Id: Makefile,v 1.395 2003/08/28 04:30:11 blef Exp $
+# $NetBSD: Makefile,v 1.395 2003/08/28 04:30:11 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -33,9 +33,9 @@ SUBDIR+=	aolserver
 SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-frontpage
 SUBDIR+=	ap-ometer
-SUBDIR+=	apotheke
 SUBDIR+=	ap2-python
 SUBDIR+=	ap2-xslt
+SUBDIR+=	apotheke
 SUBDIR+=	argouml
 SUBDIR+=	armagetron
 SUBDIR+=	artwiz-fonts
@@ -72,10 +72,10 @@ SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darkice
 SUBDIR+=	dega
 SUBDIR+=	devhelp
-SUBDIR+=	dgen
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dfm
+SUBDIR+=	dgen
 SUBDIR+=	directfb
 SUBDIR+=	directory-administrator
 SUBDIR+=	dnsmasq
@@ -108,7 +108,7 @@ SUBDIR+=	galib
 SUBDIR+=	gdrdao
 SUBDIR+=	geeklog
 SUBDIR+=	gift
-SUBDIR+=	gitfcurs
+SUBDIR+=	giftcurs
 SUBDIR+=	giftui
 SUBDIR+=	gimp-current
 SUBDIR+=	gkrellm2
@@ -121,6 +121,7 @@ SUBDIR+=	gkrellm2-share
 SUBDIR+=	gkrellm2-snmp
 SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
+SUBDIR+=	glaxium
 SUBDIR+=	gnome2-extras
 SUBDIR+=	gnome2-pkgview
 SUBDIR+=	gnome2-system-monitor
@@ -130,7 +131,6 @@ SUBDIR+=	gnome2-userdocs
 SUBDIR+=	gnomeicu
 SUBDIR+=	gnucash-docs
 SUBDIR+=	gnunet
-SUBDIR+=	glaxium
 SUBDIR+=	gossip
 SUBDIR+=	gotmail
 SUBDIR+=	gov2
@@ -206,6 +206,7 @@ SUBDIR+=	memtester
 SUBDIR+=	mhonarc
 SUBDIR+=	mit-krb5
 SUBDIR+=	mixer.tk
+SUBDIR+=	mixmaster
 SUBDIR+=	mopac
 SUBDIR+=	mtf
 SUBDIR+=	muse
