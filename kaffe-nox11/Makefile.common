@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/02/19 16:42:33 poppnk Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/03/25 15:32:15 poppnk Exp $
 
 DISTNAME=		kaffe-1.1.4
 CATEGORIES=		lang java
@@ -16,6 +16,8 @@ USE_GNU_TOOLS+=		make
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 TEST_TARGET=		check
 
+DEPENDS+=		jikes>=1.1.4:../../lang/jikes
+
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips*	\
 			*-*-sparc *-*-powerpc
 
@@ -32,7 +34,9 @@ OWN_DIRS+=	${PREFIX}/jre/lib
 OWN_DIRS+=	${PREFIX}/jre/lib/security
 SUPPORT_FILES=	${PREFIX}/jre/lib/security/java.security.default	\
 		${PREFIX}/jre/lib/security/java.security
+
 CONFIGURE_ARGS+=--enable-pure-java-math
+CONFIGURE_ARGS+=--with-jikes=${LOCALBASE}/bin/jikes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -56,3 +60,4 @@ post-install:
 .include "../../mk/bsd.pkg.mk"
 
 PREFIX=		${JVM_HOME}
+

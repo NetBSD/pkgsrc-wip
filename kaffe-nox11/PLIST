@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 22:23:45 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/25 15:32:29 poppnk Exp $
 bin/appletviewer
 bin/install-jar
 bin/jar
@@ -56,9 +56,7 @@ jre/lib/${MACHINE_ARCH}/libzip-${PKGVERSION}.so
 jre/lib/${MACHINE_ARCH}/libzip.la
 jre/lib/${MACHINE_ARCH}/libzip.so
 jre/lib/rt.jar
-jre/lib/security/.pkgsrc
 jre/lib/security/java.security
-jre/lib/security/java.security.default
 lib/kjc.jar
 license.terms
 man/man1/kaffe.1
