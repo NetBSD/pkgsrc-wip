@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/21 21:28:25 bjan2 Exp $
+
+SHA1 (foomatic-db-engine-3.0.1.tar.gz) = 256aa8b227889942e5c5aee9c0046e6ac22b7399
+Size (foomatic-db-engine-3.0.1.tar.gz) = 290338 bytes
+SHA1 (patch-aa) = 176809ebe2b383cd427fa940d699ffd89fed9ff3
