@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/24 00:15:58 blef Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/24 00:25:04 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-libs-${XFREE86_VERSION}
@@ -11,8 +11,9 @@ MAINTAINER=	xfree86@xtraeme.unixbsd.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 Libraries
 
-DEPENDS+=		imake-*:../../wip/imake
-USE_BUILDLINK2=         yes
+DEPENDS+=		imake-[0-9]*:../../wip/imake
+
+USE_BUILDLINK2=         YES
 
 XBUILD_DIRS=		lib nls programs/Xserver/include \
 			programs/Xserver/hw/xfree86/parser
