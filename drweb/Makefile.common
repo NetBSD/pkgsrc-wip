@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/10/13 18:19:44 bubuchka Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/06/10 06:31:20 bubuchka Exp $
 #
 # This part of Makefile should be also used in DrWeb AV companion software
 
@@ -7,7 +7,7 @@ DRWEB=			drweb
 DRW_USER=		${DRWEB}
 DRW_GROUP=		${DRWEB}
 
-DRW_DIR?=		/var/${DRWEB}
+DRW_DIR?=		${VARBASE}/${DRWEB}
 DRW_BASESDIR?=		${DRW_DIR}/bases
 DRW_INFECTDIR?=		${DRW_DIR}/infected
 DRW_LOGDIR?=		${DRW_DIR}
