@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/01 02:01:33 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/05 03:23:01 minskim Exp $
 ${PYSITELIB}/cjkcodecs.pth
 ${PYSITELIB}/cjkcodecs/__init__.py
 ${PYSITELIB}/cjkcodecs/__init__.pyc
@@ -9,6 +9,7 @@ ${PYSITELIB}/cjkcodecs/_cp949.so
 ${PYSITELIB}/cjkcodecs/_cp950.so
 ${PYSITELIB}/cjkcodecs/_euc_jisx0213.so
 ${PYSITELIB}/cjkcodecs/_euc_jp.so
+${PYSITELIB}/cjkcodecs/_euc_jp_strict.so
 ${PYSITELIB}/cjkcodecs/_euc_kr.so
 ${PYSITELIB}/cjkcodecs/_gb18030.so
 ${PYSITELIB}/cjkcodecs/_gb2312.so
@@ -21,6 +22,7 @@ ${PYSITELIB}/cjkcodecs/_iso_2022_jp_3.so
 ${PYSITELIB}/cjkcodecs/_iso_2022_kr.so
 ${PYSITELIB}/cjkcodecs/_johab.so
 ${PYSITELIB}/cjkcodecs/_shift_jis.so
+${PYSITELIB}/cjkcodecs/_shift_jis_strict.so
 ${PYSITELIB}/cjkcodecs/_shift_jisx0213.so
 ${PYSITELIB}/cjkcodecs/_utf_7.so
 ${PYSITELIB}/cjkcodecs/_utf_8.so
@@ -45,6 +47,9 @@ ${PYSITELIB}/cjkcodecs/euc_jisx0213.pyo
 ${PYSITELIB}/cjkcodecs/euc_jp.py
 ${PYSITELIB}/cjkcodecs/euc_jp.pyc
 ${PYSITELIB}/cjkcodecs/euc_jp.pyo
+${PYSITELIB}/cjkcodecs/euc_jp_strict.py
+${PYSITELIB}/cjkcodecs/euc_jp_strict.pyc
+${PYSITELIB}/cjkcodecs/euc_jp_strict.pyo
 ${PYSITELIB}/cjkcodecs/euc_kr.py
 ${PYSITELIB}/cjkcodecs/euc_kr.pyc
 ${PYSITELIB}/cjkcodecs/euc_kr.pyo
@@ -86,6 +91,9 @@ ${PYSITELIB}/cjkcodecs/multibytecodec.so
 ${PYSITELIB}/cjkcodecs/shift_jis.py
 ${PYSITELIB}/cjkcodecs/shift_jis.pyc
 ${PYSITELIB}/cjkcodecs/shift_jis.pyo
+${PYSITELIB}/cjkcodecs/shift_jis_strict.py
+${PYSITELIB}/cjkcodecs/shift_jis_strict.pyc
+${PYSITELIB}/cjkcodecs/shift_jis_strict.pyo
 ${PYSITELIB}/cjkcodecs/shift_jisx0213.py
 ${PYSITELIB}/cjkcodecs/shift_jisx0213.pyc
 ${PYSITELIB}/cjkcodecs/shift_jisx0213.pyo
