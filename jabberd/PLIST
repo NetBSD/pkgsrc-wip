@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/09 18:44:35 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/10 07:31:18 jmmv Exp $
 etc/rc.d/jabber
 include/jabberd/jabberd.h
 include/jabberd/lib.h
@@ -9,7 +9,7 @@ lib/jabberd/jsm.so
 lib/jabberd/pthsock_client.so
 lib/jabberd/xdb_file.so
 sbin/jabberd
-share/examples/jabberd/jabber.xml.conf.default
+share/examples/jabberd/jabber.xml
 @dirrm share/examples/jabberd
 @dirrm lib/jabberd
 @dirrm include/jabberd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/10 07:24:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/10 07:31:18 jmmv Exp $
 #
 
 DISTNAME=	jabber-1.4.2
@@ -23,7 +23,7 @@ INCDIR=			${PREFIX}/include/jabberd
 OWN_DIRS=		/var/spool/jabberd
 OWN_DIRS+=		/var/log/jabberd
 
-CONF_FILES=	${EGDIR}/jabber.xml.conf.default ${PKG_SYSCONFDIR}/jabber.xml
+CONF_FILES=	${EGDIR}/jabber.xml ${PKG_SYSCONFDIR}/jabber.xml
 
 post-extract:
 	${MV} ${WRKSRC}/jabber.xml ${WRKSRC}/jabber.xml.in
@@ -38,10 +38,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${LIBDIR}
 	${INSTALL_DATA_DIR} ${INCDIR}
-	${INSTALL_DATA} ${WRKSRC}/jabber.xml \
-		${EGDIR}/jabber.xml.conf.default
-	${INSTALL_PROGRAM} ${WRKSRC}/jabberd/jabberd \
-		${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/jabber.xml ${EGDIR}/jabber.xml
+	${INSTALL_PROGRAM} ${WRKSRC}/jabberd/jabberd ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/jsm/jsm.so ${LIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/xdb_file/xdb_file.so ${LIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/pthsock/pthsock_client.so ${LIBDIR}
