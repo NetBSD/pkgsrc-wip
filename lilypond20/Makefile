@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/24 14:30:10 atamaniuk Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/26 10:07:45 atamaniuk Exp $
 # created 2003-10-22 Patrick Atamaniuk <atamaniuk-pkgsrc@frobs.net>
 
 DISTNAME=	lilypond-2.0.1
@@ -10,8 +10,6 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://lilypond.org/web/
 COMMENT=	GNU Music Typesetter
 
-#BUILD_DEPENDS+=	mftrace>=1.0.19:../../fonts/mftrace
-BUILD_DEPENDS+=	mftrace>=1.0.19:../../wip/mftrace
 DEPENDS+=	ghostscript-gnu-x11>=7:../../print/ghostscript-gnu-x11
 
 GNU_CONFIGURE=		YES
@@ -26,8 +24,7 @@ TEXINFO_REQD=	4.0
 INFO_FILES=	lilypond.info lilypond-internals.info music-glossary.info
 
 PYTHON_VERSIONS_ACCEPTED= 20 21 23 # 22 has some regular expression problem
-CPPFLAGS+=\
-	-I${WRKSRC}/lily/out -D__GNU_LIBRARY__ \
+CPPFLAGS+=	-I${WRKSRC}/lily/out -D__GNU_LIBRARY__
 
 CONFIGURE_ARGS+=--disable-optimising
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
@@ -61,6 +58,7 @@ post-install:
 .endfor
 	PKG_PREFIX=${PREFIX} ${SH} ${PKGDIR}/INSTALL ${PKGNAME} POST-INSTALL
 
+.include "../../wip/mftrace/buildlink2.mk"
 .include "../../lang/guile/buildlink2.mk"
 .include "../../lang/python/application.mk"
 .include "../../print/teTeX2-bin/kpathsea.buildlink2.mk"
