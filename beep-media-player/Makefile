@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/26 16:31:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/03 02:23:15 blef Exp $
 #
 
 DISTNAME=		beep-media-player-1.0.0-pre5
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--disable-alsa
 PTHREAD_OPTS+=		require
 
 .if ${OPSYS} == "NetBSD"
-RAWPART!=		/sbin/sysctl -n kern.rawpartition | tr 0-9 a-j
+RAWPART!=		/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
 CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND}           \
 			--with-cdda-device=/dev/rcd0${RAWPART}  \
 			--with-cdda-dir=/cdrom/
