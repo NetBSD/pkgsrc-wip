@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/14 15:05:54 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 22:34:06 minskim Exp $
 
 DISTNAME=	socat-1.3.2.2
 WRKSRC=         ${WRKDIR}/socat-1.3
@@ -16,10 +16,11 @@ USE_GNU_READLINE=	YES
 CONFIGURE_ARGS+=	--disable-libwrap
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 
-pre-install:
-	${CP} ${WRKSRC}/socat.1 ${WRKSRC}/socat.1.orig
-	${SED} -e 's#@PREFIX@#${PREFIX}#g' < ${WRKSRC}/socat.1.orig \
-		> ${WRKSRC}/socat.1
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	socat.1
+SUBST_SED.paths=	-e 's,/usr/,${PREFIX}/,g'
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
