@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1272 2004/05/10 15:15:37 arved Exp $
-# $NetBSD: Makefile,v 1.1272 2004/05/10 15:15:37 arved Exp $
+# $Id: Makefile,v 1.1273 2004/05/12 16:21:51 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1273 2004/05/12 16:21:51 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -380,6 +380,7 @@ SUBDIR+=	monkey-bubble
 SUBDIR+=	monodoc
 SUBDIR+=	mopac
 SUBDIR+=	moregroupware
+SUBDIR+=	mozplugger
 SUBDIR+=	mpgedit
 SUBDIR+=	mplusfonts
 SUBDIR+=	mppdec
