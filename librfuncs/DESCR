@@ -1,0 +1,4 @@
+Provides missing POSIX *_r functions:
+ttyname_r(), getenv_r() and strerror_r(). These
+are thread safe versions of the corresponding
+functions without the "_r".
