@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.140 2003/05/07 13:57:45 lsed Exp $
-# $NetBSD: Makefile,v 1.140 2003/05/07 13:57:45 lsed Exp $
+# $Id: Makefile,v 1.141 2003/05/07 21:41:07 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.141 2003/05/07 21:41:07 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -99,6 +99,7 @@ SUBDIR+=	phplot
 SUBDIR+=	pinball
 SUBDIR+=	pixieplus
 SUBDIR+=	poedit
+SUBDIR+=	portmap
 SUBDIR+=	ppp
 SUBDIR+=	pts
 SUBDIR+=	puf
