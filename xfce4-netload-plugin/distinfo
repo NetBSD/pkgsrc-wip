@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/25 10:06:27 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.2 2003/08/28 08:32:24 marttikuparinen Exp $
 
-SHA1 (xfce4-netload-plugin-0.2.0pre1.tar.gz) = d38943dd45f95893096cab15278917805b60d99f
-Size (xfce4-netload-plugin-0.2.0pre1.tar.gz) = 328980 bytes
+SHA1 (xfce4-netload-plugin-0.2.0pre4.tar.gz) = 3bed74d1cf9ba5e4ed6c70988a2f81053923c24c
+Size (xfce4-netload-plugin-0.2.0pre4.tar.gz) = 330637 bytes
