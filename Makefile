@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.204 2003/06/02 14:12:57 jmmv Exp $
-# $NetBSD: Makefile,v 1.204 2003/06/02 14:12:57 jmmv Exp $
+# $Id: Makefile,v 1.205 2003/06/02 15:26:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.205 2003/06/02 15:26:04 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -31,7 +31,6 @@ SUBDIR+=	dancer-ircd
 SUBDIR+=	darkice
 SUBDIR+=	defendguin
 SUBDIR+=	devhelp
-SUBDIR+=	dircproxy
 SUBDIR+=	directfb
 SUBDIR+=	dosbox
 SUBDIR+=	drweb
