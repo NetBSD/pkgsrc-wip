@@ -1,3 +1,5 @@
-$NetBSD: TODO,v 1.2 2003/10/13 14:31:46 adrian_p Exp $
+$NetBSD: TODO,v 1.3 2003/10/13 14:33:37 adrian_p Exp $
 
-Does not shutdown correctly on -current (last confirmed on 1.6U)
+- Does not shutdown correctly on -current (last confirmed on 1.6U)
+- Stop server package from installing include files that are already there
+from the mysql4-client package.
