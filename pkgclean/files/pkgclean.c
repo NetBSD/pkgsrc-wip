@@ -70,7 +70,7 @@ pkgclean(const char *path)
 		err(EXIT_FAILURE, "%s", path);
 
 	for (i = 0; i < ncat; i++) {
-		if ((size_t)snprintf(tmp, sizeof(tmp), "%s/%s", path, cat[i]->d_name) > sizeof(tmp)) {
+		if ((size_t)snprintf(tmp, sizeof(tmp), "%s/%s", path, cat[i]->d_name) >= sizeof(tmp)) {
 			(void)fprintf(stderr, "warning: filename too long: %s\n", tmp);
 			continue;
 		}
@@ -82,7 +82,7 @@ pkgclean(const char *path)
 		}
 		for (j = 0; j < nlist; j++) {
 			if ((size_t)snprintf(tmp, sizeof(tmp), "%s/%s/%s/work", path,
-			    cat[i]->d_name, list[j]->d_name) > sizeof(tmp)) {
+			    cat[i]->d_name, list[j]->d_name) >= sizeof(tmp)) {
 				(void)fprintf(stderr, "warning: filename too long: %s\n", tmp);
 				continue;
 			}
@@ -90,7 +90,7 @@ pkgclean(const char *path)
 				continue;
 			(void)printf("Deleting %s\n", tmp);
 			if (fork() == 0) {
-				(void)execl("/bin/rm", "-rf", tmp, NULL);
+				(void)execl("/bin/rm", "/bin/rm", "-rf", tmp, NULL);
 				perror(tmp);
 				exit(EXIT_FAILURE);
 			}
