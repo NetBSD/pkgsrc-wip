@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1663 2005/02/25 21:30:11 daprice Exp $
-# $NetBSD: Makefile,v 1.1663 2005/02/25 21:30:11 daprice Exp $
+# $Id: Makefile,v 1.1664 2005/02/25 21:40:09 daprice Exp $
+# $NetBSD: Makefile,v 1.1664 2005/02/25 21:40:09 daprice Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -565,6 +565,7 @@ SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	natali
 SUBDIR+=	navigatrix
+SUBDIR+=	ncbi
 SUBDIR+=	ncbi-bin
 SUBDIR+=	ncbi-lib
 SUBDIR+=	ncc
