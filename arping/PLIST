@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/14 07:56:02 cubidou Exp $
-bin/arping
-man/man8/arping.8
