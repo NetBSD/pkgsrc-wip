@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.241 2003/06/14 01:23:08 mjasm Exp $
-# $NetBSD: Makefile,v 1.241 2003/06/14 01:23:08 mjasm Exp $
+# $Id: Makefile,v 1.242 2003/06/14 01:26:08 mjasm Exp $
+# $NetBSD: Makefile,v 1.242 2003/06/14 01:26:08 mjasm Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -99,6 +99,7 @@ SUBDIR+=	kgpg
 SUBDIR+=	korelib
 SUBDIR+=	lde
 SUBDIR+=	libdialog
+SUBDIR+=	libdisasm
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgsf
 SUBDIR+=	libogg-nightly
