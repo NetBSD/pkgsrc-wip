@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/11/18 08:03:44 mpasternak Exp $
+
+--- setup.py~	Sat Nov 15 23:39:06 2003
++++ setup.py	Tue Nov 18 08:50:17 2003
+@@ -119,7 +119,7 @@
+ templatePath = os.path.join('quotient','templates')
+ quotientPath = 'quotient'
+ quotientPlugins = [os.path.join('quotient', 'plugins.tml'),
+-                   os.path.join('quotient', 'components.csv')]
++                   os.path.join('quotient', 'components.wsv')]
+ nevowPath = 'nevow'
+ nevowPlugins = [os.path.join(nevowPath, 'plugins.tml')]
+ # os.path.join(nevowPath, 'components.csv')
