@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/25 13:29:25 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/25 19:21:37 minskim Exp $
 #
 # This Makefile fragment is included by packages that use libgcrypt.
 #
@@ -17,11 +17,10 @@ BUILDLINK_RECOMMENDED.gnupg-1.9?=   gnupg-1.9-lib>=1.9.5
 BUILDLINK_PKGSRCDIR.gnupg-1.9?=     ../../wip/gnupg-1.9
 BUILDLINK_PACKAGES+=          gnupg-1.9
  
-.  include "../libgcrypt/buildlink3.mk"
+.  include "../../security/libgcrypt/buildlink3.mk"
 .  include "../libassuan/buildlink3.mk"
-.  include "../libksba/buildlink3.mk"
-.  include "../libgpg-error/buildlink3.mk"
+.  include "../../security/libksba/buildlink3.mk"
+.  include "../../security/libgpg-error/buildlink3.mk"
 .endif # GNUPG-1.9_BUILDLINK3_MK
  
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
-
