@@ -1,0 +1,3 @@
+This package was inspired by the Big Brother Database package available for
+various Emacs mailers. It provides adapters for various address data stores
+for use with mutt.

@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/27 11:16:05 drue Exp $
+
+--- Makefile.in.orig	Fri Jun 27 12:28:44 2003
++++ Makefile.in
+@@ -169,6 +169,7 @@ Makefile: Makefile.in
+ 
+ %.man: %.man.in
+ 	sed -e 's!@''libdir@!$(libdir)!' \
++	    -e 's!@''prefix@!$(prefix)!' \
+ 	    -e 's!@''sysconfdir@!$(sysconfdir)!' \
+ 	    -e 's!@''dotlock@!$(DOTLOCKBASE)!' $@.in > $@
+ 

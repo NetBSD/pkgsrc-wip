@@ -1,0 +1,2 @@
+* Install configuration in /usr/pkg/share, not in /usr/pkg/etc
+* Install Documentation and examples
