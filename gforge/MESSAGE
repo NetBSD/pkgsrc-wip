@@ -1,0 +1,27 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/03/27 22:53:30 xtraeme Exp $
+
+You will need to make GForge accessible through your HTTP server.
+For this:
+
+	- Add these lines to ${PKG_SYSCONFDIR}/etc/httpd/httpd.conf
+	
+	<IfModule mod_alias.c>
+		Alias /gforge/ "${PREFIX}/share/gforge/www/"
+	</IfModule>
+	DirectoryIndex index.html index.php
+
+	- Add ${PREFIX}/share/gforge to include_path in
+	  ${PKG_SYSCONFDIR}/php.ini, like:
+
+	  include_path = ".:/usr/pkg/lib/php:/usr/pkg/share/gforge"
+
+	- Add extension=pgsql.so to ${PKG_SYSCONFDIR}/php.ini.
+
+A sample config file is in ${PKG_SYSCONFDIR}/gforge/local.inc-dist.
+You will need to copy it to ${PKG_SYSCONFDIR}/gforge/local.inc, then
+tune it.
+
+Then point your browser to http://localhost/gforge/
+
+===========================================================================
