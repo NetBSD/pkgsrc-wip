@@ -1,6 +1,5 @@
-$NetBSD: patch-amavisd.conf,v 1.1.1.1 2003/09/14 17:02:22 jcd Exp $
---- amavisd.conf.orig	Tue Aug 12 14:50:37 2003
-+++ amavisd.conf	Sat Aug 23 18:37:12 2003
+--- amavisd.conf.orig	Sun Nov  9 18:07:53 2003
++++ amavisd.conf	Mon Dec  8 00:41:07 2003
 @@ -51,7 +51,7 @@
  # $MYHOME serves as a quick default for some other configuration settings.
  # More refined control is available with each individual setting further down.
@@ -13,7 +12,7 @@ $NetBSD: patch-amavisd.conf,v 1.1.1.1 2003/09/14 17:02:22 jcd Exp $
 @@ -60,8 +60,8 @@
  
  # Set the user and group to which the daemon will change if started as root
- # (otherwise just keep the UID unchanged, and these settings have no effect):
+ # (otherwise just keeps the UID unchanged, and these settings have no effect):
 -$daemon_user  = 'vscan';	# (no default;  customary: vscan or amavis)
 -$daemon_group = 'sweep';	# (no default;  customary: vscan or amavis)
 +$daemon_user  = '%%AMAVISUSER%%';	# (no default;  customary: vscan or amavis)
@@ -21,7 +20,7 @@ $NetBSD: patch-amavisd.conf,v 1.1.1.1 2003/09/14 17:02:22 jcd Exp $
  
  # Runtime working directory (cwd), and a place where
  # temporary directories for unpacking mail are created.
-@@ -271,7 +271,7 @@
+@@ -274,7 +274,7 @@
  # 3: server, client
  # 4: decompose parts
  # 5: more debug details
@@ -30,7 +29,7 @@ $NetBSD: patch-amavisd.conf,v 1.1.1.1 2003/09/14 17:02:22 jcd Exp $
  
  # Customizable template for the most interesting log file entry (e.g. with
  # $log_level=0) (take care to properly quote Perl special characters like '\')
-@@ -498,7 +498,7 @@
+@@ -510,7 +510,7 @@
  #   or a directory (no trailing slash)
  #   (the default value is undef, meaning no quarantine)
  #
@@ -39,7 +38,7 @@ $NetBSD: patch-amavisd.conf,v 1.1.1.1 2003/09/14 17:02:22 jcd Exp $
  
  #$virus_quarantine_method = "local:virus-%i-%n";    # default
  #$spam_quarantine_method  = "local:spam-%b-%i-%n";  # default
-@@ -1018,7 +1018,7 @@
+@@ -1032,7 +1032,7 @@
  # NOTE: if $daemon_chroot_dir is nonempty, the directories will be
  #       relative to the chroot directory specified;
  

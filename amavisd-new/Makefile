@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/14 17:02:22 jcd Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/08 05:48:31 jcd Exp $
 
 DISTNAME=	amavisd-new-${VERSION}
 PKGNAME=	${DISTNAME}${PATCHLEVEL}
@@ -47,7 +47,7 @@ DEPENDS+=	libmilter>=8.12.9nb1:../../mail/libmilter
 .endif
 
 VERSION=	20030616
-PATCHLEVEL=	p5
+PATCHLEVEL=	p6
 
 USE_PKGINSTALL=	YES
 AMAVISUSER?=    vscan
