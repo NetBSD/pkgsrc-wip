@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/04 04:34:51 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/04 05:03:44 mpasternak Exp $
 
 # XXX This uses the version of apache2 distfile instead of
 # XXX the AP_AB_BASEREVISION from the support/ab.c source.
@@ -17,16 +17,14 @@ USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 ALL_TARGET=		ab
 
-# Apache Portable Runtime library configure options
-CONFIGURE_ARGS+=	--with-apr=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-apr-util=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--enable-static-ab
-# ab_LTFLAGS="-static"
 
 do-build:
 	cd ${WRKSRC}/srclib/pcre && ${SETENV} ${MAKE_ENV} ${MAKE}
-	cd ${WRKSRC}/support && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS}
+	cd ${WRKSRC}/srclib/apr-util && ${SETENV} ${MAKE_ENV} ${MAKE}
+	cd ${WRKSRC}/srclib/apr && ${SETENV} ${MAKE_ENV} ${MAKE}
+	cd ${WRKSRC}/support && ${SETENV} ${MAKE_ENV} ${MAKE} ab
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/support/ab ${PREFIX}/sbin/apachebench2
@@ -34,5 +32,4 @@ do-install:
 
 .include "../../www/apache2/Makefile.common"
 .include "../../security/openssl/buildlink2.mk"
-.include "../../devel/apr/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
