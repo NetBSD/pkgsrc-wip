@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.145 2003/05/08 01:55:36 xtraeme Exp $
-# $NetBSD: Makefile,v 1.145 2003/05/08 01:55:36 xtraeme Exp $
+# $Id: Makefile,v 1.146 2003/05/08 04:08:17 xtraeme Exp $
+# $NetBSD: Makefile,v 1.146 2003/05/08 04:08:17 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -9,6 +9,7 @@ SUBDIR+=	adodb
 SUBDIR+=	allegro
 SUBDIR+=	amsn
 SUBDIR+=	aolserver
+SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-ometer
 SUBDIR+=	aputils
 SUBDIR+=	autoproject
