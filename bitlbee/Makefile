@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/25 16:22:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/29 13:06:04 cjep Exp $
 #
 
 DISTNAME=		bitlbee-0.80
@@ -49,6 +49,6 @@ do-install:
 .for F in FAQ README TODO
 	${INSTALL_DATA} ${WRKSRC}/doc/${F} ${DOCDIR}
 .endfor
-		
+
 .include "../../devel/glib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
