@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/21 07:56:00 marmfield Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/01 02:46:56 marmfield Exp $
 bin/kmplayer
 lib/kde3/kmplayer.la
 lib/kde3/kmplayer.so
@@ -8,17 +8,19 @@ lib/libkdeinit_kmplayer.la
 lib/libkdeinit_kmplayer.so
 lib/libkmplayercommon.la
 lib/libkmplayercommon.so
-share/kde/applnk/Multimedia/kmplayer.desktop
+share/kde/applications/kde/kmplayer.desktop
 share/kde/apps/kmplayer/kmplayerpartui.rc
 share/kde/apps/kmplayer/kmplayerui.rc
 share/kde/config/kmplayerrc
 share/kde/icons/crystalsvg/32x32/apps/kmplayer.png
 share/kde/icons/locolor/16x16/apps/kmplayer.png
 share/kde/icons/locolor/32x32/apps/kmplayer.png
+share/kde/locale/bs/LC_MESSAGES/kmplayer.mo
 share/kde/locale/ca/LC_MESSAGES/kmplayer.mo
 share/kde/locale/da/LC_MESSAGES/kmplayer.mo
 share/kde/locale/de/LC_MESSAGES/kmplayer.mo
 share/kde/locale/es/LC_MESSAGES/kmplayer.mo
+share/kde/locale/et/LC_MESSAGES/kmplayer.mo
 share/kde/locale/fi/LC_MESSAGES/kmplayer.mo
 share/kde/locale/fr/LC_MESSAGES/kmplayer.mo
 share/kde/locale/hu/LC_MESSAGES/kmplayer.mo
@@ -27,6 +29,7 @@ share/kde/locale/nl/LC_MESSAGES/kmplayer.mo
 share/kde/locale/pt/LC_MESSAGES/kmplayer.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kmplayer.mo
 share/kde/locale/ru/LC_MESSAGES/kmplayer.mo
+share/kde/locale/sr/LC_MESSAGES/kmplayer.mo
 share/kde/locale/sv/LC_MESSAGES/kmplayer.mo
 share/kde/locale/tr/LC_MESSAGES/kmplayer.mo
 share/kde/locale/xx/LC_MESSAGES/kmplayer.mo
