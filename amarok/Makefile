@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/09/08 17:30:55 ianzag Exp $
+# $NetBSD: Makefile,v 1.3 2004/09/22 12:47:13 ianzag Exp $
 #
 
 DISTNAME=		amarok-1.0.2
@@ -25,5 +25,6 @@ CONFIGURE_ARGS+= --without-included-sqlite
 .include "../../multimedia/kdemultimedia3/buildlink3.mk"
 .include "../../databases/sqlite/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
+.include "../../audio/taglib/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
