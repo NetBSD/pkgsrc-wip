@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/15 13:23:24 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2004/02/27 15:16:12 mpasternak Exp $
 
-SHA1 (pygtk2tutorial.tgz) = 3cacf201a7e87383a9a57661161e1ca9595a97b8
-Size (pygtk2tutorial.tgz) = 1682473 bytes
-SHA1 (pygtk2reference.tgz) = 3c38885515ac884a30081b1e1c44af3b34db9eb5
-Size (pygtk2reference.tgz) = 534433 bytes
+SHA1 (pygtk2tutorial.tgz) = af309b721dfe58baa454342f948d79cb9bc45dcd
+Size (pygtk2tutorial.tgz) = 1686019 bytes
+SHA1 (pygtk2reference.tgz) = cee47c9422e445c41404d073fe04eb6f3803393b
+Size (pygtk2reference.tgz) = 534703 bytes
