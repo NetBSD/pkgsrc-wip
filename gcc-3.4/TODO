@@ -4,7 +4,5 @@
   of this fix, a buildlink3.mk file was provided for lang/gcc3-ada 
   It will build from wip/gcc-3.4-ada
 
-- Need to define baseline_symbols.txt for libstdc++-v3/config/abi/${ARCH}
-
 - Currently, there are 147 unexpected failures encountered in the testsuite for
   libstdc++-v3

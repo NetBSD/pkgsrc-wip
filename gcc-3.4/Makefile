@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/05/03 14:23:34 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/03 17:04:48 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -17,16 +17,11 @@ GCC_VERSION=	3.4.0
 # Optional languages - change as required
 #   If BUILD_ADA is YES, then you'll need to specify
 #   an Ada in the "Ada bootstrap compiler section"
-BUILD_ADA=	YES
+BUILD_ADA=	NO
 BUILD_CXX=	YES
-BUILD_F77=	YES
-BUILD_JAVA=	YES
-BUILD_OBJC=	YES
-
-# Java can't be built on x86_64
-.if ${MACHINE_GNU_ARCH} == "x86_64"
+BUILD_F77=	NO
 BUILD_JAVA=	NO
-.endif
+BUILD_OBJC=	NO
 
 LANGS='c'
 .if ${BUILD_ADA} == "YES"
@@ -48,6 +43,8 @@ CONFIGURE_ARGS+=        --enable-languages="${LANGS}"
 CONFIGURE_ARGS+=        --with-system-zlib
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
+CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--enable-long-long
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
@@ -87,7 +84,10 @@ GCC_ARCHSUBDIR=	${GCC_SUBPREFIX}/lib/gcc/${GCC_PLATFORM}/${GCC_VERSION}
 GCC_ARCHDIR=	${PREFIX}/${GCC_ARCHSUBDIR}
 
 post-patch:
+	(${TEST} -d ${WRKSRC}/libstdc++-v3/config/abi/i386-netbsdelf2.0 || \
+         ${MKDIR} ${WRKSRC}/libstdc++-v3/config/abi/i386-netbsdelf2.0 )
 	(cd files; \
+		${CP} baseline_symbols.txt ${WRKSRC}/libstdc++-v3/config/abi/i386-netbsdelf2.0; \
 		${CP} adasignal.c ${WRKSRC}/gcc/ada; \
 		${CP} ada_lwp_self.c ${WRKSRC}/gcc/ada; \
 		${CP} dummy_pthreads.c ${WRKSRC}/gcc/ada; \
