@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/10 23:00:34 bjan2 Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/11 05:19:35 bjan2 Exp $
 
 DISTNAME=		Coin-2.2.1
 CATEGORIES=		graphics
@@ -8,19 +8,18 @@ MAINTAINER=		pkgsrc@bjan.freeshell.org
 HOMEPAGE=		http://www.coin3d.org/
 COMMENT=		Free, portable, Open Inventor API implementation
 
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-3ds-import --disable-debug
 
-USE_BUILDLINK2=		yes
-
 USE_X11=		yes
 
-.include "../../wip/simage/buildlink2.mk"
-#.include "../../audio/openal/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
+.include "../../wip/simage/buildlink3.mk"
+#.include "../../audio/openal/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"
 CONFIGURE_ARGS+=        --with-pthreads=yes --enable-threadsafe 
