@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/06/16 04:59:40 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2004/06/16 05:02:21 xtraeme Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -104,7 +104,8 @@ INSTALLATION_DIRS=	share/doc/${PKGBASE} \
 
 post-install:
 .for d in txt cgi
-	cd ${WRKSRC}/${d} && ${PAX} -rwppm '-s|.*/Makefile.*$$||' . ${PREFIX}/share/${PKGBASE}/${d}
+	cd ${WRKSRC}/${d} && ${PAX} -rwppm '-s|.*/Makefile.*$$||' \
+		. ${PREFIX}/share/${PKGBASE}/${d}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/RE* ${PREFIX}/share/doc/${PKGBASE}
 
