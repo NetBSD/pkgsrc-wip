@@ -1,28 +1,24 @@
-- Several cleanup.
+$Id: TODO,v 1.6 2003/10/17 19:13:29 bubuchka Exp $
 
-- Test if it works properly (use the wip/drweb-* clients).
+- [jmmv] Several cleanup.
 
-- It can works on FreeBSD (natively), and NetBSD, OpenBSD (in
-  emulation).  Thus, so as pkgsrc is a cross-platform framework,
-  this package should be available on that systems too.
+- [jmmv] Test if it works properly (use the wip/drweb-* clients).
 
-  Please note both scanner and daemon was compiled to ran natively
-  on NetBSD and OpenBSD, but both are in experimental and in beta
-  stage at once.
+- Wait until DrWeb 4.30 for NetBSD will released, then support it.
+  Just at this moment it runs under FreeBSD binary emulation.
 
-- There is existent DrWeb for Solaris/i386. Made it work from
-  pkgsrc, as well as for xBSD and Linux variants.
+- It is possible use both variants of DrWeb/Linux - for glibc 2.2
+  and for glibc 2.3 (customizable with GLIBC_VERSION option).
+  However, user have no assistance on what versions are available
+  to choose. Solve this.
 
-  Please note DrWeb for Linux has been built in two variants - for
-  glibc 2.2 and for glibc 2.3. this package will install glibc 2.3
-  only.
+- Eliminate dependency on wget for systems, which have its own
+  downloaders.
 
-- Eliminate dependency on wget (?).
-
-- After all, upgrade to DrWeb 4.30 (developers are promised make
-  a native release for NetBSD as well as for other platforms).
+- The drweb-update script must be modified to allow use of externally
+  supplied login and password.
 
 Please also note that all precomplied software available (at least
-tested) for i386 only. The sources (clients) had all chances to
+tested) for i386 only. The sources (clients) have all chances to
 work on other architectures (someone has reported running sendmail
-filter on Solaris/UltraSPARC)
+filter on Solaris/UltraSPARC and I've tested drweb-dc on NetBSD/macppc).

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/16 16:57:59 bubuchka Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/10/17 19:13:29 bubuchka Exp $
 bin/drweb
 bin/drweb-bin
 etc/rc.d/drwebd
@@ -7,11 +7,19 @@ sbin/drwebd
 sbin/drwebd-bin
 ${DRW_DOCDIR}/ChangeLog
 ${DRW_DOCDIR}/README
-${DRW_DOCDIR}/drwebd-api
 ${DRW_DOCDIR}/readme.daemon
 ${DRW_DOCDIR}/readme.eicar
 ${DRW_DOCDIR}/readme.scanner
 ${DRW_DOCDIR}/readme.update
+${DRW_EGDIR}/drw43001.vdb
+${DRW_EGDIR}/drw43002.vdb
+${DRW_EGDIR}/drw43003.vdb
+${DRW_EGDIR}/drw43004.vdb
+${DRW_EGDIR}/drw43005.vdb
+${DRW_EGDIR}/drw43006.vdb
+${DRW_EGDIR}/drw43007.vdb
+${DRW_EGDIR}/drw43008.vdb
+${DRW_EGDIR}/drw43009.vdb
 ${DRW_EGDIR}/drweb.key
 ${DRW_EGDIR}/drweb32.dll
 ${DRW_EGDIR}/drweb32.ini

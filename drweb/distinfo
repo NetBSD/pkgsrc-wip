@@ -1,7 +1,15 @@
-$NetBSD: distinfo,v 1.2 2003/09/11 15:20:28 bubuchka Exp $
+$NetBSD: distinfo,v 1.3 2003/10/17 19:13:29 bubuchka Exp $
 
-SHA1 (drweb-4.29.5-freebsd4.tar.gz) = ce32345c74492ce0abcafaebbb1e7c8842448123
-Size (drweb-4.29.5-freebsd4.tar.gz) = 1715558 bytes
-SHA1 (drweb-4.29.5-glibc.2.3.tar.gz) = b31cb509cdaf4c080bb5a7b151ad548a48774858
-Size (drweb-4.29.5-glibc.2.3.tar.gz) = 1371879 bytes
-SHA1 (patch-aa) = 384eb49fc4ed32d73eb7f61e7da56bcd89ef1585
+SHA1 (drweb-4.30-freebsd4.tar.gz) = 3047cbdc89c21e5534c4a7e376701c9b5ae0188c
+Size (drweb-4.30-freebsd4.tar.gz) = 2057340 bytes
+SHA1 (drweb-4.30-freebsd5.tar.gz) = 3ccaf270a3793531cb38c3a7c064fc660def29f9
+Size (drweb-4.30-freebsd5.tar.gz) = 1750206 bytes
+SHA1 (drweb-4.30-openbsd.tar.gz) = 78063d24b86b2172232bb63c20aa2cf43ede6ece
+Size (drweb-4.30-openbsd.tar.gz) = 1726201 bytes
+SHA1 (drweb-4.30-solaris.tar.gz) = b5f66f08a6661331e1ca7ab53e9acf618dcb0d0d
+Size (drweb-4.30-solaris.tar.gz) = 1615163 bytes
+SHA1 (drweb-4.30-glibc.2.2.tar.gz) = ccdd07e266c5f047c656136183bd9136b69b02b7
+Size (drweb-4.30-glibc.2.2.tar.gz) = 1785567 bytes
+SHA1 (drweb-4.30-glibc.2.3.tar.gz) = c5ebfd7f0b989853c7261ac706ee603efda2b860
+Size (drweb-4.30-glibc.2.3.tar.gz) = 1617764 bytes
+SHA1 (patch-aa) = 2ba10fe5d01124c224b3d5772a494986bb9d0517
