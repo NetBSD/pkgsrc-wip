@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/15 08:20:33 thomasklausner Exp $
+
+SHA1 (pngnq-0.3-src.tar.gz) = e4d18958772009c9d6c4068dfb19a1c130bba48f
+Size (pngnq-0.3-src.tar.gz) = 14805 bytes
+SHA1 (patch-aa) = eb592dd5309eb649608c70b69b1889beadf69647
