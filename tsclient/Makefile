@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/06/25 07:37:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/14 16:24:59 xtraeme Exp $
 #
 
-DISTNAME=	tsclient-0.104
+DISTNAME=	tsclient-0.120
 CATEGORIES=	net
 MASTER_SITES=	http://www.gnomepro.com/tsclient/
 
@@ -18,6 +18,7 @@ USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_X11=		yes
 USE_PKGLOCALEDIR=	yes
+USE_GMAKE=		yes
 
 .include "../../x11/gnome-panel/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
