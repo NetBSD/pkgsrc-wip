@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1134 2004/03/29 00:45:46 minskim Exp $
-# $NetBSD: Makefile,v 1.1134 2004/03/29 00:45:46 minskim Exp $
+# $Id: Makefile,v 1.1135 2004/03/29 10:31:08 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.1135 2004/03/29 10:31:08 grantbeattie Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -766,7 +766,6 @@ SUBDIR+=	vche
 SUBDIR+=	viewcvs
 SUBDIR+=	viewer
 SUBDIR+=	vixie-cron
-SUBDIR+=	vlc
 SUBDIR+=	vls
 SUBDIR+=	vm-pop3d
 SUBDIR+=	vmac
