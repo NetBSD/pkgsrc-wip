@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/28 12:22:10 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.10 2004/06/01 15:48:48 johnrshannon Exp $
 #
 
 DISTNAME=		gdb-6.1
@@ -18,7 +18,6 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-AUTOCONF_REQD=		2.13
 
 USE_MAKEINFO=		yes
 INFO_FILES=		annotate.info bfd.info configure.info
@@ -32,7 +31,6 @@ USE_GCC_34?=	NO
 
 pre-patch:
 	${CP} ${FILESDIR}/nbsd-nat.c ${WRKSRC}/gdb
-	${CP} ${FILESDIR}/nbsd-thread.c ${WRKSRC}/gdb
 
 do-test:
 	if `${PKG_INFO} -qe dejagnu` ;then		\
@@ -41,13 +39,12 @@ do-test:
 		${ECHO} dejagnu is required for the test target;	\
 	fi
 
-pre-configure:
 .if !empty(USE_GCC_34:M[Yy][Ee][Ss])
+.include "../../wip/gcc-3.4/buildlink3.mk"
+pre-configure:
 .  include "../../wip/gcc-3.4/preconfigure.mk"
 .endif
 
-.if !empty(USE_GCC_34:M[Yy][Ee][Ss])
-.include "../../wip/gcc-3.4/buildlink3.mk"
-.endif
+.include "../../wip/libiberty/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
