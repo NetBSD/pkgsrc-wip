@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/04 17:55:36 froz Exp $
+@comment $NetBSD: PLIST,v 1.1.1.2 2003/12/04 22:23:06 anielski Exp $
 bin/update-mime-database
 man/man1/update-mime-database.1
 share/mime/XMLnamespaces
@@ -363,4 +363,3 @@ share/mime/video/x-sgi-movie.xml
 @dirrm share/mime/image
 @dirrm share/mime/audio
 @dirrm share/mime/application
-@dirrm share/mime

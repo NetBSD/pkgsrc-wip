@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/04 17:55:36 froz Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2003/12/04 22:23:05 anielski Exp $
+#
 
-DISTNAME=		shared-mime-info-0.12	
-CATEGORIES=		misc
-MASTER_SITES=	http://www.freedesktop.org/software/shared-mime-info/releases/
+DISTNAME=		shared-mime-info-0.12
+CATEGORIES=		sysutils
+MASTER_SITES=   ${HOMEPAGE}releases/
 
-MAINTAINER=		froz@icix.org
-COMMENT=		The freedesktop.org shared MIME database
+MAINTAINER=		aniou@smutek.pl
+HOMEPAGE=		http://www.freedesktop.org/software/shared-mime-info/
+COMMENT=		large number of common MIME types
 
-USE_BUILDLINK2=		YES
-GNU_CONFIGURE=		YES
-
-MAKE_ENV+=  XDG_DATA_HOME=${LOCALBASE}/share
-MAKE_ENV+=  XDG_DATA_DIRS=${LOCALBASE}/share
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
 
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
