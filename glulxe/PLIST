@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/20 13:24:28 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/05/23 23:19:15 dillo Exp $
+bin/glulxe

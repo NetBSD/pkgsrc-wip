@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/10/20 13:24:28 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2004/05/23 23:19:16 dillo Exp $
 
 --- Makefile.orig	Tue Jul 11 04:09:06 2000
 +++ Makefile
@@ -20,13 +20,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/10/20 13:24:28 dillo Exp $
 -#GLKINCLUDEDIR = ../xglk
 -#GLKLIBDIR = ../xglk
 -#GLKMAKEFILE = Make.xglk
-+GLKINCLUDEDIR = ${PREFIX}/include
++GLKINCLUDEDIR = ${PREFIX}/include/glk
 +GLKLIBDIR = ${PREFIX}/lib
 +GLKMAKEFILE = Make.glk
  
  # Pick a C compiler.
  #CC = cc
- CC = gcc
+-CC = gcc
++#CC = gcc
  
 -OPTIONS = -g -Wall -Wmissing-prototypes -Wstrict-prototypes -Wno-unused -DOS_UNIX
 +OPTIONS = -Wall -Wmissing-prototypes -Wstrict-prototypes -Wno-unused -DOS_UNIX
