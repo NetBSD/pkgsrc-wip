@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1293 2004/05/25 17:52:59 mpasternak Exp $
-# $NetBSD: Makefile,v 1.1293 2004/05/25 17:52:59 mpasternak Exp $
+# $Id: Makefile,v 1.1294 2004/05/26 04:02:31 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1294 2004/05/26 04:02:31 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -599,6 +599,7 @@ SUBDIR+=	pysite
 SUBDIR+=	pywm
 SUBDIR+=	pyzor
 SUBDIR+=	q3-urbanterror
+SUBDIR+=	qhacc
 SUBDIR+=	qico
 SUBDIR+=	qinx
 SUBDIR+=	qn-x11
