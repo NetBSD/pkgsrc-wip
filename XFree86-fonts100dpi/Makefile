@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/24 04:57:51 blef Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/24 14:16:23 tripledes Exp $
 
 DISTNAME=	X430src-4
 PKGNAME=	XFree86-fonts100dpi-${XF_VER}
@@ -18,6 +18,12 @@ NO_XFREE86_TARGETS=	#defined
 PROJECTROOT=		-DProjectRoot=${PREFIX}
 
 FILESDIR=	${PKGDIR}/../XFree86-fontsEncodings/files
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
+PLIST_SRC+=	${.CURDIR}/PLIST.PERL
+.endif
 
 post-extract:
 	@${LN} -sf ${FILESDIR}/host.def ${WRKSRC}
