@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/03/26 05:26:10 rockpiper Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/15 01:26:14 rockpiper Exp $
 
-DISTNAME=	mpd-0.10.2
-PKGNAME=	musicpd-0.10.2
+DISTNAME=	mpd-0.10.3
+PKGNAME=	musicpd-0.10.3
 
 CATEGORIES=	audio
 MASTER_SITES=	http://mercury.chem.pitt.edu/~shank/
@@ -13,8 +13,6 @@ COMMENT=	The Music Player Daemon allows remote access for playing music
 USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
-EXAMPLESDIR=	${LOCALBASE}/share/examples
-DOCSDIR=	${LOCALBASE}/share/doc/musicpd
 
 BUILD_DEFS+=	MUSICPD_WITH_FLAC\
 		MUSICPD_WITH_OGG\
@@ -28,10 +26,12 @@ BUILD_DEFS+=	MUSICPD_WITH_FLAC\
 MUSICPD_WITH_FLAC?= YES
 MUSICPD_WITH_OGG?= YES
 MUSICPD_WITH_AUDIOFILE?= YES
-MUSICPD_WITH_ICONV?= NO
+MUSICPD_WITH_ICONV?= YES
 MUSICPD_WITH_ID3?= YES
-MUSICPD_WITH_OSSMIXER?= NO
+MUSICPD_WITH_OSSMIXER?= YES
 MUSICPD_WITH_AAC= YES
+
+LDFLAGS+= ${LIBOSSAUDIO}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,14 +51,14 @@ CONFIGURE_ARGS+=--disable-ogg
 
 .if ${MUSICPD_WITH_AUDIOFILE} == "YES"
 .include "../../audio/libaudiofile/buildlink3.mk"
-CONFIGURE_ARGS+=--with-audiofile=${BUILDLINK_PREFIX.libaudiofile}
+CONFIGURE_ARGS+=--with-audiofile=${BUILDLINK_PREFIX.audiofile}
 .else
 CONFIGURE_ARGS+=--disable-audiofile
 .endif
 
 .if ${MUSICPD_WITH_ICONV} == "YES"
 .include "../../converters/libiconv/buildlink3.mk"
-CONFIGURE_ARGS+=--with-iconv=${BUILDLINK_PREFIX.libiconv}
+CONFIGURE_ARGS+=--with-iconv=${BUILDLINK_PREFIX.iconv}
 .else
 CONFIGURE_ARGS+=--disable-iconv
 .endif
@@ -90,6 +90,10 @@ CONFIGURE_ARGS+=--enable-ipv6
 CONFIGURE_ARGS+=--disable-ipv6
 .endif
 
+pre-configure:
+	cd ${WRKSRC}; ${AUTOCONF}
+
+.include "../../mk/autoconf.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libao/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
