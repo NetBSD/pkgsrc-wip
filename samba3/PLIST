@@ -1,0 +1,487 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/01 21:03:22 jeremy-c-reed Exp $
+bin/findsmb
+bin/net
+bin/nmblookup
+bin/ntlm_auth
+bin/pdbedit
+bin/profiles
+bin/rpcclient
+bin/smbcacls
+bin/smbclient
+bin/smbcontrol
+bin/smbcquotas
+bin/smbpasswd
+bin/smbspool
+bin/smbstatus
+bin/smbtar
+bin/smbtree
+bin/tdbbackup
+bin/testparm
+bin/testprns
+etc/samba/smb.conf
+lib/samba/lowcase.dat
+lib/samba/upcase.dat
+lib/samba/valid.dat
+lib/samba/vfs/audit.so
+lib/samba/vfs/extd_audit.so
+lib/samba/vfs/fake_perms.so
+lib/samba/vfs/netatalk.so
+lib/samba/vfs/recycle.so
+man/man1/editreg.1
+man/man1/findsmb.1
+man/man1/nmblookup.1
+man/man1/ntlm_auth.1
+man/man1/profiles.1
+man/man1/rpcclient.1
+man/man1/smbcacls.1
+man/man1/smbclient.1
+man/man1/smbcontrol.1
+man/man1/smbcquotas.1
+man/man1/smbsh.1
+man/man1/smbstatus.1
+man/man1/smbtar.1
+man/man1/smbtree.1
+man/man1/testparm.1
+man/man1/testprns.1
+man/man1/vfstest.1
+man/man1/wbinfo.1
+man/man5/lmhosts.5
+man/man5/smb.conf.5
+man/man5/smbpasswd.5
+man/man7/Samba.7
+man/man7/samba.7
+man/man8/net.8
+man/man8/nmbd.8
+man/man8/pdbedit.8
+man/man8/smbd.8
+man/man8/smbmnt.8
+man/man8/smbmount.8
+man/man8/smbpasswd.8
+man/man8/smbspool.8
+man/man8/smbumount.8
+man/man8/swat.8
+man/man8/tdbbackup.8
+man/man8/winbindd.8
+sbin/mksmbpasswd
+sbin/nmbd
+sbin/smbd
+sbin/swat
+sbin/updatesmbpasswd
+share/doc/samba/NT4-Locking.reg
+share/doc/samba/NT4_PlainPassword.reg
+share/doc/samba/README.NOW
+share/doc/samba/README.jis
+share/doc/samba/Win-NT-2K-XP-DeleteRoamingProfile.reg
+share/doc/samba/Win2000_PlainPassword.reg
+share/doc/samba/Win95_PlainPassword.reg
+share/doc/samba/Win98_PlainPassword.reg
+share/doc/samba/Win9X-CacheHandling.reg
+share/doc/samba/WinME_PlainPassword.reg
+share/doc/samba/WinXP_PlainPassword.reg
+share/doc/samba/WinXP_SignOrSeal.reg
+share/doc/samba/WindowsTerminalServer.reg
+share/examples/samba/LDAP/README
+share/examples/samba/LDAP/convertSambaAccount
+share/examples/samba/LDAP/export_smbpasswd.pl
+share/examples/samba/LDAP/import_smbpasswd.pl
+share/examples/samba/LDAP/ldapchpasswd
+share/examples/samba/LDAP/ldapsync.pl
+share/examples/samba/LDAP/samba-schema-netscapeds4.x
+share/examples/samba/LDAP/samba-schema-netscapeds5.x
+share/examples/samba/LDAP/samba-schema.IBMSecureWay
+share/examples/samba/LDAP/samba.schema
+share/examples/samba/README
+share/examples/samba/VFS/Makefile.in
+share/examples/samba/VFS/README
+share/examples/samba/VFS/autogen.sh
+share/examples/samba/VFS/configure.in
+share/examples/samba/VFS/install-sh
+share/examples/samba/VFS/skel_opaque.c
+share/examples/samba/VFS/skel_transparent.c
+share/examples/samba/appliance/Makefile
+share/examples/samba/appliance/README
+share/examples/samba/appliance/appliance.spec
+share/examples/samba/appliance/build.sh
+share/examples/samba/appliance/smb.conf-appliance
+share/examples/samba/auth/Makefile
+share/examples/samba/auth/auth_skel.c
+share/examples/samba/autofs/auto.a
+share/examples/samba/dce-dfs/README
+share/examples/samba/dce-dfs/smb.conf
+share/examples/samba/genlogon/genlogon.pl
+share/examples/samba/libsmbclient/Makefile
+share/examples/samba/libsmbclient/README
+share/examples/samba/libsmbclient/testsmbc.c
+share/examples/samba/libsmbclient/tree.c
+share/examples/samba/misc/extra_smbstatus
+share/examples/samba/misc/mknissmbpasswd.sh
+share/examples/samba/misc/modify_samba_config.pl
+share/examples/samba/misc/swat.pl
+share/examples/samba/misc/wall.perl
+share/examples/samba/ntlogon/README
+share/examples/samba/ntlogon/ntlogon.conf
+share/examples/samba/ntlogon/ntlogon.py
+share/examples/samba/pdb/Makefile
+share/examples/samba/pdb/README
+share/examples/samba/pdb/mysql/mysql.dump
+share/examples/samba/pdb/mysql/smb.conf
+share/examples/samba/pdb/pdb_test.c
+share/examples/samba/pdb/sambapdb.dtd
+share/examples/samba/printer-accounting/README
+share/examples/samba/printer-accounting/acct-all
+share/examples/samba/printer-accounting/acct-sum
+share/examples/samba/printer-accounting/hp5-redir
+share/examples/samba/printer-accounting/lp-acct
+share/examples/samba/printer-accounting/printcap
+share/examples/samba/printing/prtpub.c
+share/examples/samba/printing/readme.prtpub
+share/examples/samba/printing/smbprint
+share/examples/samba/printing/smbprint-new.sh
+share/examples/samba/printing/smbprint.sysv
+share/examples/samba/simple/README
+share/examples/samba/simple/smb.conf
+share/examples/samba/smb.conf.default
+share/examples/samba/svr4-startup/README
+share/examples/samba/svr4-startup/samba.server
+share/examples/samba/thoralf/smb.conf
+share/examples/samba/tridge/README
+share/examples/samba/tridge/smb.conf
+share/examples/samba/tridge/smb.conf.WinNT
+share/examples/samba/tridge/smb.conf.fjall
+share/examples/samba/tridge/smb.conf.lapland
+share/examples/samba/tridge/smb.conf.vittjokk
+share/examples/samba/validchars/msdos70.out
+share/examples/samba/validchars/nwdos70.out
+share/examples/samba/validchars/readme
+share/examples/samba/validchars/validchr.c
+share/examples/samba/validchars/validchr.com
+share/samba/swat/help/AccessControls.html
+share/samba/swat/help/AdvancedNetworkManagement.html
+share/samba/swat/help/Appendixes.html
+share/samba/swat/help/Backup.html
+share/samba/swat/help/CUPS-printing.html
+share/samba/swat/help/ClientConfig.html
+share/samba/swat/help/DNSDHCP.html
+share/samba/swat/help/FastStart.html
+share/samba/swat/help/Further-Resources.html
+share/samba/swat/help/InterdomainTrusts.html
+share/samba/swat/help/IntroSMB.html
+share/samba/swat/help/NT4Migration.html
+share/samba/swat/help/NetworkBrowsing.html
+share/samba/swat/help/Other-Clients.html
+share/samba/swat/help/PolicyMgmt.html
+share/samba/swat/help/Portability.html
+share/samba/swat/help/ProfileMgmt.html
+share/samba/swat/help/SWAT.html
+share/samba/swat/help/Samba-Developers-Guide.html
+share/samba/swat/help/Samba-HOWTO-Collection.html
+share/samba/swat/help/SambaHA.html
+share/samba/swat/help/ServerType.html
+share/samba/swat/help/StandAloneServer.html
+share/samba/swat/help/VFS.html
+share/samba/swat/help/bugreport.html
+share/samba/swat/help/compiling.html
+share/samba/swat/help/diagnosis.html
+share/samba/swat/help/domain-member.html
+share/samba/swat/help/editreg.1.html
+share/samba/swat/help/findsmb.1.html
+share/samba/swat/help/groupmapping.html
+share/samba/swat/help/index.html
+share/samba/swat/help/install.html
+share/samba/swat/help/integrate-ms-networks.html
+share/samba/swat/help/introduction.html
+share/samba/swat/help/ix01.html
+share/samba/swat/help/lmhosts.5.html
+share/samba/swat/help/locking.html
+share/samba/swat/help/migration.html
+share/samba/swat/help/msdfs.html
+share/samba/swat/help/net.8.html
+share/samba/swat/help/nmbd.8.html
+share/samba/swat/help/nmblookup.1.html
+share/samba/swat/help/ntlm_auth.1.html
+share/samba/swat/help/optional.html
+share/samba/swat/help/pam.html
+share/samba/swat/help/passdb.html
+share/samba/swat/help/pdbedit.8.html
+share/samba/swat/help/printing.html
+share/samba/swat/help/problems.html
+share/samba/swat/help/profiles.1.html
+share/samba/swat/help/rpcclient.1.html
+share/samba/swat/help/samba-bdc.html
+share/samba/swat/help/samba-pdc.html
+share/samba/swat/help/samba.7.html
+share/samba/swat/help/securing-samba.html
+share/samba/swat/help/smb.conf.5.html
+share/samba/swat/help/smbcacls.1.html
+share/samba/swat/help/smbclient.1.html
+share/samba/swat/help/smbcontrol.1.html
+share/samba/swat/help/smbcquotas.1.html
+share/samba/swat/help/smbd.8.html
+share/samba/swat/help/smbmnt.8.html
+share/samba/swat/help/smbmount.8.html
+share/samba/swat/help/smbpasswd.5.html
+share/samba/swat/help/smbpasswd.8.html
+share/samba/swat/help/smbsh.1.html
+share/samba/swat/help/smbspool.8.html
+share/samba/swat/help/smbstatus.1.html
+share/samba/swat/help/smbtar.1.html
+share/samba/swat/help/smbtree.1.html
+share/samba/swat/help/smbumount.8.html
+share/samba/swat/help/speed.html
+share/samba/swat/help/swat.8.html
+share/samba/swat/help/tdbbackup.8.html
+share/samba/swat/help/testparm.1.html
+share/samba/swat/help/testprns.1.html
+share/samba/swat/help/troubleshooting.html
+share/samba/swat/help/type.html
+share/samba/swat/help/unicode.html
+share/samba/swat/help/upgrading-to-3.0.html
+share/samba/swat/help/vfstest.1.html
+share/samba/swat/help/wbinfo.1.html
+share/samba/swat/help/welcome.html
+share/samba/swat/help/winbind.html
+share/samba/swat/help/winbindd.8.html
+share/samba/swat/images/globals.gif
+share/samba/swat/images/home.gif
+share/samba/swat/images/passwd.gif
+share/samba/swat/images/printers.gif
+share/samba/swat/images/samba.gif
+share/samba/swat/images/shares.gif
+share/samba/swat/images/status.gif
+share/samba/swat/images/viewconfig.gif
+share/samba/swat/images/wizard.gif
+share/samba/swat/include/footer.html
+share/samba/swat/include/header.html
+share/samba/swat/lang/ja/help/welcome.html
+share/samba/swat/lang/ja/images/globals.gif
+share/samba/swat/lang/ja/images/home.gif
+share/samba/swat/lang/ja/images/passwd.gif
+share/samba/swat/lang/ja/images/printers.gif
+share/samba/swat/lang/ja/images/samba.gif
+share/samba/swat/lang/ja/images/shares.gif
+share/samba/swat/lang/ja/images/status.gif
+share/samba/swat/lang/ja/images/viewconfig.gif
+share/samba/swat/lang/ja/include/footer.html
+share/samba/swat/lang/ja/include/header.html
+share/samba/swat/lang/ja/include/header.nocss.html
+share/samba/swat/lang/ja/include/header_css.html
+share/samba/swat/lang/tr/help/welcome.html
+share/samba/swat/lang/tr/images/globals.gif
+share/samba/swat/lang/tr/images/home.gif
+share/samba/swat/lang/tr/images/passwd.gif
+share/samba/swat/lang/tr/images/printers.gif
+share/samba/swat/lang/tr/images/samba.gif
+share/samba/swat/lang/tr/images/shares.gif
+share/samba/swat/lang/tr/images/status.gif
+share/samba/swat/lang/tr/images/viewconfig.gif
+share/samba/swat/lang/tr/include/header.html
+share/samba/swat/using_samba/appa_01.html
+share/samba/swat/using_samba/appa_02.html
+share/samba/swat/using_samba/appa_03.html
+share/samba/swat/using_samba/appa_04.html
+share/samba/swat/using_samba/appa_05.html
+share/samba/swat/using_samba/appb_01.html
+share/samba/swat/using_samba/appb_02.html
+share/samba/swat/using_samba/appb_03.html
+share/samba/swat/using_samba/appc_01.html
+share/samba/swat/using_samba/appd_01.html
+share/samba/swat/using_samba/appe_01.html
+share/samba/swat/using_samba/appf_01.html
+share/samba/swat/using_samba/ch01_01.html
+share/samba/swat/using_samba/ch01_02.html
+share/samba/swat/using_samba/ch01_03.html
+share/samba/swat/using_samba/ch01_04.html
+share/samba/swat/using_samba/ch01_05.html
+share/samba/swat/using_samba/ch01_06.html
+share/samba/swat/using_samba/ch01_07.html
+share/samba/swat/using_samba/ch01_08.html
+share/samba/swat/using_samba/ch02_01.html
+share/samba/swat/using_samba/ch02_02.html
+share/samba/swat/using_samba/ch02_03.html
+share/samba/swat/using_samba/ch02_04.html
+share/samba/swat/using_samba/ch02_05.html
+share/samba/swat/using_samba/ch02_06.html
+share/samba/swat/using_samba/ch03_01.html
+share/samba/swat/using_samba/ch03_02.html
+share/samba/swat/using_samba/ch03_03.html
+share/samba/swat/using_samba/ch04_01.html
+share/samba/swat/using_samba/ch04_02.html
+share/samba/swat/using_samba/ch04_03.html
+share/samba/swat/using_samba/ch04_04.html
+share/samba/swat/using_samba/ch04_05.html
+share/samba/swat/using_samba/ch04_06.html
+share/samba/swat/using_samba/ch04_07.html
+share/samba/swat/using_samba/ch04_08.html
+share/samba/swat/using_samba/ch05_01.html
+share/samba/swat/using_samba/ch05_02.html
+share/samba/swat/using_samba/ch05_03.html
+share/samba/swat/using_samba/ch05_04.html
+share/samba/swat/using_samba/ch05_05.html
+share/samba/swat/using_samba/ch06_01.html
+share/samba/swat/using_samba/ch06_02.html
+share/samba/swat/using_samba/ch06_03.html
+share/samba/swat/using_samba/ch06_04.html
+share/samba/swat/using_samba/ch06_05.html
+share/samba/swat/using_samba/ch06_06.html
+share/samba/swat/using_samba/ch07_01.html
+share/samba/swat/using_samba/ch07_02.html
+share/samba/swat/using_samba/ch07_03.html
+share/samba/swat/using_samba/ch08_01.html
+share/samba/swat/using_samba/ch08_02.html
+share/samba/swat/using_samba/ch08_03.html
+share/samba/swat/using_samba/ch08_04.html
+share/samba/swat/using_samba/ch08_05.html
+share/samba/swat/using_samba/ch08_06.html
+share/samba/swat/using_samba/ch08_07.html
+share/samba/swat/using_samba/ch09_01.html
+share/samba/swat/using_samba/ch09_02.html
+share/samba/swat/using_samba/ch09_03.html
+share/samba/swat/using_samba/figs/sam.0101.gif
+share/samba/swat/using_samba/figs/sam.0102.gif
+share/samba/swat/using_samba/figs/sam.0103.gif
+share/samba/swat/using_samba/figs/sam.0104.gif
+share/samba/swat/using_samba/figs/sam.0105.gif
+share/samba/swat/using_samba/figs/sam.0106.gif
+share/samba/swat/using_samba/figs/sam.0107.gif
+share/samba/swat/using_samba/figs/sam.0108.gif
+share/samba/swat/using_samba/figs/sam.0109.gif
+share/samba/swat/using_samba/figs/sam.0110.gif
+share/samba/swat/using_samba/figs/sam.0111.gif
+share/samba/swat/using_samba/figs/sam.0112.gif
+share/samba/swat/using_samba/figs/sam.0113.gif
+share/samba/swat/using_samba/figs/sam.0114.gif
+share/samba/swat/using_samba/figs/sam.0201.gif
+share/samba/swat/using_samba/figs/sam.0202.gif
+share/samba/swat/using_samba/figs/sam.0203.gif
+share/samba/swat/using_samba/figs/sam.0204.gif
+share/samba/swat/using_samba/figs/sam.0301.gif
+share/samba/swat/using_samba/figs/sam.0302.gif
+share/samba/swat/using_samba/figs/sam.0303.gif
+share/samba/swat/using_samba/figs/sam.0304.gif
+share/samba/swat/using_samba/figs/sam.0305.gif
+share/samba/swat/using_samba/figs/sam.0306.gif
+share/samba/swat/using_samba/figs/sam.0307.gif
+share/samba/swat/using_samba/figs/sam.0308.gif
+share/samba/swat/using_samba/figs/sam.0309.gif
+share/samba/swat/using_samba/figs/sam.0310.gif
+share/samba/swat/using_samba/figs/sam.0311.gif
+share/samba/swat/using_samba/figs/sam.0312.gif
+share/samba/swat/using_samba/figs/sam.0313.gif
+share/samba/swat/using_samba/figs/sam.0314.gif
+share/samba/swat/using_samba/figs/sam.0315.gif
+share/samba/swat/using_samba/figs/sam.0316.gif
+share/samba/swat/using_samba/figs/sam.0317.gif
+share/samba/swat/using_samba/figs/sam.0318.gif
+share/samba/swat/using_samba/figs/sam.0319.gif
+share/samba/swat/using_samba/figs/sam.0320.gif
+share/samba/swat/using_samba/figs/sam.0321.gif
+share/samba/swat/using_samba/figs/sam.0322.gif
+share/samba/swat/using_samba/figs/sam.0323.gif
+share/samba/swat/using_samba/figs/sam.0324.gif
+share/samba/swat/using_samba/figs/sam.0325.gif
+share/samba/swat/using_samba/figs/sam.0326.gif
+share/samba/swat/using_samba/figs/sam.0327.gif
+share/samba/swat/using_samba/figs/sam.0328.gif
+share/samba/swat/using_samba/figs/sam.0401.gif
+share/samba/swat/using_samba/figs/sam.0402.gif
+share/samba/swat/using_samba/figs/sam.0403.gif
+share/samba/swat/using_samba/figs/sam.0404.gif
+share/samba/swat/using_samba/figs/sam.0405.gif
+share/samba/swat/using_samba/figs/sam.0406.gif
+share/samba/swat/using_samba/figs/sam.0407.gif
+share/samba/swat/using_samba/figs/sam.0501.gif
+share/samba/swat/using_samba/figs/sam.0502.gif
+share/samba/swat/using_samba/figs/sam.0503.gif
+share/samba/swat/using_samba/figs/sam.0504.gif
+share/samba/swat/using_samba/figs/sam.0505.gif
+share/samba/swat/using_samba/figs/sam.0506.gif
+share/samba/swat/using_samba/figs/sam.0507.gif
+share/samba/swat/using_samba/figs/sam.0508.gif
+share/samba/swat/using_samba/figs/sam.0601.gif
+share/samba/swat/using_samba/figs/sam.0602.gif
+share/samba/swat/using_samba/figs/sam.0603.gif
+share/samba/swat/using_samba/figs/sam.0604.gif
+share/samba/swat/using_samba/figs/sam.0605.gif
+share/samba/swat/using_samba/figs/sam.0606.gif
+share/samba/swat/using_samba/figs/sam.0701.gif
+share/samba/swat/using_samba/figs/sam.0702.gif
+share/samba/swat/using_samba/figs/sam.0703.gif
+share/samba/swat/using_samba/figs/sam.0704.gif
+share/samba/swat/using_samba/figs/sam.0705.gif
+share/samba/swat/using_samba/figs/sam.0706.gif
+share/samba/swat/using_samba/figs/sam.0707.gif
+share/samba/swat/using_samba/figs/sam.0708.gif
+share/samba/swat/using_samba/figs/sam.0709.gif
+share/samba/swat/using_samba/figs/sam.0801.gif
+share/samba/swat/using_samba/figs/sam.0802.gif
+share/samba/swat/using_samba/figs/sam.0803.gif
+share/samba/swat/using_samba/figs/sam.0804.gif
+share/samba/swat/using_samba/figs/sam.0805.gif
+share/samba/swat/using_samba/figs/sam.0901.gif
+share/samba/swat/using_samba/figs/sam.0902.gif
+share/samba/swat/using_samba/figs/sam.0903.gif
+share/samba/swat/using_samba/figs/sam.0904.gif
+share/samba/swat/using_samba/figs/sam.0905.gif
+share/samba/swat/using_samba/figs/sam.aa01.gif
+share/samba/swat/using_samba/figs/sam.ab01.gif
+share/samba/swat/using_samba/figs/sam.ab02.gif
+share/samba/swat/using_samba/gifs/index.gif
+share/samba/swat/using_samba/gifs/samba.s.gif
+share/samba/swat/using_samba/gifs/txthome.gif
+share/samba/swat/using_samba/gifs/txtnexta.gif
+share/samba/swat/using_samba/gifs/txtpreva.gif
+share/samba/swat/using_samba/index.html
+share/samba/swat/using_samba/inx.html
+share/samba/swat/using_samba/licenseinfo.html
+share/samba/swat/using_samba/this_edition.html
+@dirrm share/samba/swat/using_samba/gifs
+@dirrm share/samba/swat/using_samba/figs
+@dirrm share/samba/swat/using_samba
+@dirrm share/samba/swat/lang/tr/include
+@dirrm share/samba/swat/lang/tr/images
+@dirrm share/samba/swat/lang/tr/help
+@dirrm share/samba/swat/lang/tr
+@dirrm share/samba/swat/lang/ja/include
+@dirrm share/samba/swat/lang/ja/images
+@dirrm share/samba/swat/lang/ja/help
+@dirrm share/samba/swat/lang/ja
+@dirrm share/samba/swat/lang
+@dirrm share/samba/swat/include
+@dirrm share/samba/swat/images
+@dirrm share/samba/swat/help
+@dirrm share/samba/swat
+@dirrm share/samba
+@dirrm share/examples/samba/validchars
+@dirrm share/examples/samba/tridge
+@dirrm share/examples/samba/thoralf
+@dirrm share/examples/samba/svr4-startup
+@dirrm share/examples/samba/simple
+@dirrm share/examples/samba/printing
+@dirrm share/examples/samba/printer-accounting
+@dirrm share/examples/samba/pdb/mysql
+@dirrm share/examples/samba/pdb
+@dirrm share/examples/samba/ntlogon
+@dirrm share/examples/samba/misc
+@dirrm share/examples/samba/libsmbclient
+@dirrm share/examples/samba/genlogon
+@dirrm share/examples/samba/dce-dfs
+@dirrm share/examples/samba/autofs
+@dirrm share/examples/samba/auth
+@dirrm share/examples/samba/appliance
+@dirrm share/examples/samba/VFS
+@dirrm share/examples/samba/LDAP
+@dirrm share/examples/samba
+@dirrm share/doc/samba
+@dirrm lib/vfs
+@exec ${MKDIR} %D/lib/rpc
+@dirrm lib/rpc
+@exec ${MKDIR} %D/lib/pdb
+@dirrm lib/pdb
+@exec ${MKDIR} %D/lib/idmap
+@dirrm lib/idmap
+@exec ${MKDIR} %D/lib/charset
+@dirrm lib/charset
+@exec ${MKDIR} %D/lib/auth
+@dirrm lib/auth
+@dirrm etc/samba/private
+@dirrm etc/samba

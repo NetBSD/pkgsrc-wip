@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/08/01 21:03:22 jeremy-c-reed Exp $
+
+--- script/installscripts.sh.orig	Wed Jul 30 22:41:20 2003
++++ script/installscripts.sh	Wed Jul 30 22:42:12 2003
+@@ -24,10 +24,6 @@
+ for p in $*; do
+   p2=`basename $p`
+   echo Installing $BINDIR/$p2
+-  if [ -f $BINDIR/$p2 ]; then
+-    rm -f $BINDIR/$p2.old
+-    mv $BINDIR/$p2 $BINDIR/$p2.old
+-  fi
+   cp $p $BINDIR/
+   chmod $INSTALLPERMS $BINDIR/$p2
+   if [ ! -f $BINDIR/$p2 ]; then
+@@ -37,10 +33,7 @@
+ 
+ cat << EOF
+ ======================================================================
+-The scripts have been installed. You may uninstall them using
+-the command "make uninstallscripts" or "make install" to install binaries,
+-man pages and shell scripts. You may recover the previous version (if any
+-by "make revert".
++The scripts have been installed.
+ ======================================================================
+ EOF
+ 

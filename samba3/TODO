@@ -1,0 +1,44 @@
+pkglint says:
+FATAL: extra item "COUNTRY_MIRRORS" placed in the DISTNAME section.
+FATAL: extra item ".for COUNTRY in ${COUNTRY_MIRRORS}" placed in the DISTNAME section.
+FATAL: extra item ".endfor" placed in the DISTNAME section.
+
+test without MIT kerbeors -- try with NetBSD's heimdal instead.
+
+test swat
+
+maybe lockdir should be ${VARDIR}/lock ??
+instead of SAMBA_LOCKDIR?=         ${VARDIR}/db/samba
+
+improve DESCR: this is 3.x, AD, what it includes ...
+
+check #!/path/to/interpreter for /sbin/updatesmbpasswd and other scripts
+
+--with-smbmount ?? for Linux
+ln -sf $BINDIR/$p2 /sbin/mount.smbfs (I removed this in patch-aa)
+
+? --with-acl-support      Include ACL support (default=no)
+
+? --with-winbind          Build winbind (default, if supported by OS)
+
+? --with-python=PYTHONNAME  build Python libraries
+
+?? --with-libiconv
+
+when testing, make sure work/samba-3.0.0beta3/source/include/config.h
+says HAVE_LDAP is defined
+ (yes with NetBSD 1.6)
+ (but undefined with Linux, but did link with liblber.so)
+also under NetBSD, smbd linked with libssl (why?)
+
+check different builds and make sure the PLIST_SUBSTR is correct
+
+Is this okay?
+lib/samba/lowcase.dat
+lib/samba/vfs/audit.so
+FreeBSD places it to /etc; Debian places at usr/share/samba/
+
+also set up CONFLICTS for other samba and samba20
+
+need rc.d scripts for RCD_SCRIPTS
+(maybe copy from other samba package)
