@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/29 02:39:35 dolecek Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/29 02:47:04 dolecek Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 SVR4_PKGNAME=		mysqc
@@ -11,7 +11,6 @@ USE_BUILDLINK2=		YES
 
 USE_NEW_TEXINFO=	YES
 INFO_FILES=		mysql.info
-PLIST_SUBST+=		DISTNAME="${DISTNAME}"
 
 post-install:
 	cd ${PREFIX}/man/man1; ${RM} -f mysqld.1 safe_mysqld.1
