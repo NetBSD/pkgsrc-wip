@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.738 2003/12/04 16:17:09 xtraeme Exp $
-# $NetBSD: Makefile,v 1.738 2003/12/04 16:17:09 xtraeme Exp $
+# $Id: Makefile,v 1.739 2003/12/04 17:59:24 froz Exp $
+# $NetBSD: Makefile,v 1.739 2003/12/04 17:59:24 froz Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -534,6 +534,7 @@ SUBDIR+=	scons
 SUBDIR+=	scponly
 SUBDIR+=	send-pr
 SUBDIR+=	sgmltools-lite
+SUBDIR+=	shared-mime-info
 SUBDIR+=	shoutcast
 SUBDIR+=	sks
 SUBDIR+=	slim
