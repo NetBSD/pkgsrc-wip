@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.423 2003/09/04 07:22:55 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.423 2003/09/04 07:22:55 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.424 2003/09/04 13:53:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.424 2003/09/04 13:53:05 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -243,14 +243,11 @@ SUBDIR+=	nvtv-gtk2
 SUBDIR+=	opax
 SUBDIR+=	openbox3
 SUBDIR+=	openvpn
-SUBDIR+=	p5-Authen-SASL
-SUBDIR+=	p5-Authen-SASL-Cyrus
 SUBDIR+=	p5-CDDB
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Class-Factory-Util
 SUBDIR+=	p5-Class-MethodMaker
 SUBDIR+=	p5-Class-Singleton
-SUBDIR+=	p5-Compress-Bzip2
 SUBDIR+=	p5-DBI-Shell
 SUBDIR+=	p5-Data-TemporaryBag
 SUBDIR+=	p5-DateTime
@@ -263,8 +260,6 @@ SUBDIR+=	p5-GeoIP
 SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-IO-Tee
-SUBDIR+=	p5-Net-Gnats
-SUBDIR+=	p5-Net-Jabber
 SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Set-Crontab
