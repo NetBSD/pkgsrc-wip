@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/10/05 17:50:13 adrian_p Exp $
+
+SHA1 (sgmltools-lite-3.0.3.tar.gz) = e7bf0c173cf668782c9212bbd03e1473d1ee7e94
+Size (sgmltools-lite-3.0.3.tar.gz) = 61342 bytes
+SHA1 (patch-aa) = 3438bb5edbdd5d7dc776ea50ac4cfba47416f835

@@ -1,0 +1,3 @@
+SGML-tools Lite is a subset of SGML-tools (www.sgmltools.org). It gives
+you a friendly Python interface to SGML software specificially in a
+DocBook/OpenJade environment.
