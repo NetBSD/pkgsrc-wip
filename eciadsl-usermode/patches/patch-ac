@@ -1,0 +1,57 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/11/24 17:23:48 imilh Exp $
+
+--- check-hdlc-bug.c.orig	2002-06-10 19:49:33.000000000 +0200
++++ check-hdlc-bug.c
+@@ -13,7 +13,9 @@
+     added support for /dev/ptyXX. There was previously only /dev/ptmx
+ */
+ 
++#if !defined(_XOPEN_SOURCE) && !defined(__osf__) && !defined(__NetBSD__)
+ #define _XOPEN_SOURCE /* for grantpt in <stdlib.h> */
++#endif
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+@@ -24,6 +26,14 @@
+ #include <unistd.h>
+ #include <termios.h>
+ #include <signal.h>
++#ifdef __NetBSD__
++#include <util.h>
++#include <string.h>
++#include <errno.h>
++#include <err.h>
++
++#define N_HDLC 13
++#endif
+ 
+ /* for ident(1) command */
+ static const char id[] =
+@@ -31,6 +41,19 @@ static const char id[] =
+ 
+ int get_master_slave_ptmx(int *master, int *slave)
+ {
++#ifdef __NetBSD__
++        /* openpty(3) exists in OSF/1 and some other os'es */
++        char buf[64];
++        int i;
++
++        i = openpty(master, slave, buf, NULL, NULL);
++        if (i < 0) {
++                err(1, "openpty: %.100s", strerror(errno));
++                return -1;
++        }
++
++        return 0;
++#else
+ 	const char *pts;
+ 
+ 	/* try to open the master side, using /dev/ptmx */
+@@ -49,6 +72,7 @@ int get_master_slave_ptmx(int *master, i
+ 
+ 	/* gotcha! */
+ 	return 0;
++#endif
+ }
+ 
+ int get_master_slave_pty(int *master, int *slave)

@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/11/24 17:23:48 imilh Exp $
+
+--- Makefile.orig	2003-10-15 13:21:19.000000000 +0200
++++ Makefile
+@@ -14,10 +14,10 @@ STRIP = strip
+ PRODUCT_ID = ECIADSL
+ PRODUCT_NAME = ECIADSL USB modem driver
+ PRODUCT_VERSION ?= 0.8
+-PREFIX = /usr/local/
++PREFIX = /usr/pkg/
+ ETC_PREFIX = /
+ CONF_PREFIX = /
+-DOC_PREFIX = /usr/local/
++DOC_PREFIX = /usr/pkg/
+ BIN_DIR = $(PREFIX)bin
+ ETC_DIR = $(ETC_PREFIX)etc
+ CONF_DIR = $(CONF_PREFIX)etc/eciadsl
+@@ -25,8 +25,8 @@ DOC_DIR = $(DOC_PREFIX)doc/eciadsl
+ CFLAGS += -pedantic -Wall -W
+ 
+ # for libpusb
+-CFLAGS += -I/usr/local/include
+-LDLIBS += -L/usr/local/lib -lpusb
++CFLAGS += -I/usr/pkg/include
++LDLIBS += -L/usr/pkg/lib -lpusb -lutil
+ 
+ PPPD_DIR = $(ETC_DIR)/ppp
+ ROOT ?= /
+@@ -248,4 +248,4 @@ DEP=Makefile.dep
+ $(DEP): $(SRC)
+ 	$(CC) $(CFLAGS) -MM $^ > $@
+ 
+--include $(DEP)
+\ No newline at end of file
++-include $(DEP)

@@ -1,0 +1,18 @@
+$NetBSD: patch-ai,v 1.1.1.1 2004/11/24 17:23:48 imilh Exp $
+
+--- semaphore.c.orig	2003-10-15 11:05:05.000000000 +0200
++++ semaphore.c
+@@ -76,9 +76,13 @@ int semaphore_decr(int sem, int val)
+ 
+ int semaphore_done(int sem)
+ {
++#ifdef __NetBSD__
++   if (semctl(sem, 0, IPC_RMID, NULL) == -1)
++#else
+    union semun un;
+  
+    if (semctl(sem, 0, IPC_RMID, un) == -1)
++#endif
+         return(-1);
+ 
+     return 0;
