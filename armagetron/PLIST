@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/07 07:55:14 amadeus_z Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/30 20:41:20 blef Exp $
 bin/armagetron
 games/armagetron/COPYING.txt
 games/armagetron/arenas/basic.aar
@@ -7,7 +7,6 @@ games/armagetron/bin/astat
 games/armagetron/bin/pushscores
 games/armagetron/bin/rcd_master
 games/armagetron/bin/rcd_server
-games/armagetron/bin/starter.in.orig
 games/armagetron/bin/stat
 games/armagetron/bin/uninstall
 games/armagetron/config/.tag
@@ -80,7 +79,9 @@ share/docs/html/armagetron/todo.html
 @dirrm games/armagetron/textures
 @dirrm games/armagetron/sound
 @dirrm games/armagetron/models
+@dirrm games/armagetron/music
 @dirrm games/armagetron/language
+@dirrm games/armagetron/log
 @dirrm games/armagetron/doc/net
 @dirrm games/armagetron/doc
 @dirrm games/armagetron/config
