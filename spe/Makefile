@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/28 00:35:27 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/28 01:45:36 mpasternak Exp $
 #
 
 DISTNAME=		SPE-0.4.1.d-wx2.4.2.4.-bl2.28
@@ -11,11 +11,11 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://spe.pycs.net/
 COMMENT=		Python IDE with wxGlade GUI designer, auto-indentation and more
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 EXTRACT_CMD_OPTS.zip=	-aqo
 
-.include "../../x11/py-wxWindows/buildlink2.mk"
+.include "../../x11/py-wxWindows/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
