@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2004/03/04 16:07:07 jeremy-c-reed Exp $
-# $Id: Makefile,v 1.2 2004/03/04 16:07:07 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/12 12:39:45 thomasklausner Exp $
+# $Id: Makefile,v 1.3 2004/05/12 12:39:45 thomasklausner Exp $
 
 DISTNAME=		${E2FSPROGS_DISTNAME}
 PKGNAME=		libuuid-${E2FSPROGS_VERSION}
@@ -12,18 +12,16 @@ HOMEPAGE=		http://e2fsprogs.sourceforge.net/
 COMMENT=		Standalone libuuid from e2fsprogs package
 
 CONFLICTS=		e2fsprogs-1.32
-
-do-configure:
-	cd ${WRKSRC}/../../ && ${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
+CONFIGURE_DIRS=		${WRKSRC}/../..
 
 post-build:
-	cd ${WRKSRC}/../../misc/ && ${SETENV} ${MAKE_ENV} ${MAKE} \
+	cd ${WRKSRC}/../../misc && ${SETENV} ${MAKE_ENV} ${MAKE} \
 		${MAKE_FLAGS} uuidgen uuidgen.1
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/../../misc/uuidgen ${PREFIX}/bin/uuidgen
 	${INSTALL_MAN} ${WRKSRC}/../../misc/uuidgen.1 ${PREFIX}/man/man1/uuidgen.1
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../wip/e2fsprogs/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.3 2004/03/04 19:13:41 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST.common,v 1.4 2004/05/12 12:39:46 thomasklausner Exp $
 bin/chattr
 bin/lsattr
 bin/mk_cmds
@@ -42,6 +42,7 @@ man/man8/dumpe2fs.8
 man/man8/e2fsck.8
 man/man8/e2image.8
 man/man8/e2label.8
+man/man8/filefrag.8
 man/man8/findfs.8
 man/man8/fsck.ext2.8
 man/man8/fsck.ext3.8
@@ -59,6 +60,7 @@ sbin/dumpe2fs
 sbin/e2fsck
 sbin/e2image
 sbin/e2label
+sbin/filefrag
 sbin/findfs
 sbin/fsck.ext2
 sbin/fsck.ext3
@@ -73,7 +75,9 @@ share/ss/ct_c.awk
 share/ss/ct_c.sed
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/e2fsprogs.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/e2fsprogs.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/e2fsprogs.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/e2fsprogs.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/e2fsprogs.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/e2fsprogs.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/e2fsprogs.mo
 @dirrm share/ss

@@ -8,3 +8,7 @@ or at least don't have conflicting files.
 
 maybe make run tex on the com_err.texinfo file to provide a
 plain text version to put under share/doc/com_err/README
+
+compile_et contains:
+ET_DIR="/usr/obj/wip/com_err/work.i386/e2fsprogs-1.35/lib/et"
+what should be there instead?

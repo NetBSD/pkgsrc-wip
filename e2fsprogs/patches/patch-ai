@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2004/03/04 16:17:56 jeremy-c-reed Exp $
+$NetBSD: patch-ai,v 1.2 2004/05/12 12:39:46 thomasklausner Exp $
 
---- lib/ext2fs/Makefile.in.orig	Sat Jan 31 19:33:16 2004
-+++ lib/ext2fs/Makefile.in	Wed Mar  3 12:25:05 2004
-@@ -149,7 +149,7 @@
+--- lib/ext2fs/Makefile.in.orig	2004-02-01 04:33:16.000000000 +0100
++++ lib/ext2fs/Makefile.in
+@@ -149,7 +149,7 @@ ELF_SO_VERSION = 2
  ELF_IMAGE = libext2fs
  ELF_MYDIR = ext2fs
  ELF_INSTALL_DIR = $(root_libdir)
@@ -11,12 +11,12 @@ $NetBSD: patch-ai,v 1.1 2004/03/04 16:17:56 jeremy-c-reed Exp $
  
  BSDLIB_VERSION = 2.1
  BSDLIB_IMAGE = libext2fs
-@@ -172,7 +172,7 @@
+@@ -172,7 +172,7 @@ BSDLIB_INSTALL_DIR = $(root_libdir)
  @ELF_CMT@	$(CC) $(ALL_CFLAGS) -fPIC -o elfshared/$*.o -c $<
  @BSDLIB_CMT@	$(CC) $(ALL_CFLAGS) -fpic -o pic/$*.o -c $<
  
 -COMPILE_ET=../et/compile_et --build-tree
-+COMPILE_ET=$(PREFIX)/bin/compile_et --build-tree
++COMPILE_ET=$(PREFIX)/bin/compile_et
  
  DISTFILES= Makefile *.c *.h image
  

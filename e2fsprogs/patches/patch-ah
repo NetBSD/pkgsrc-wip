@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2004/03/04 16:17:56 jeremy-c-reed Exp $
+$NetBSD: patch-ah,v 1.2 2004/05/12 12:39:46 thomasklausner Exp $
 
---- lib/ss/Makefile.in.orig	Sun Dec  7 09:11:38 2003
-+++ lib/ss/Makefile.in	Wed Mar  3 12:26:30 2004
-@@ -30,7 +30,7 @@
+--- lib/ss/Makefile.in.orig	2003-12-07 18:11:38.000000000 +0100
++++ lib/ss/Makefile.in
+@@ -30,7 +30,7 @@ ELF_SO_VERSION = 2
  ELF_IMAGE = libss
  ELF_MYDIR = ss
  ELF_INSTALL_DIR = $(root_libdir)
@@ -11,12 +11,12 @@ $NetBSD: patch-ah,v 1.1 2004/03/04 16:17:56 jeremy-c-reed Exp $
  
  BSDLIB_VERSION = 1.0
  BSDLIB_IMAGE = libss
-@@ -38,13 +38,13 @@
+@@ -38,13 +38,13 @@ BSDLIB_MYDIR = ss
  BSDLIB_INSTALL_DIR = $(root_libdir)
  
  TAGS=etags
 -COMPILE_ET=../et/compile_et --build-tree
-+COMPILE_ET=$(PREFIX)/bin/compile_et --build-tree
++COMPILE_ET=$(PREFIX)/bin/compile_et
  MK_CMDS=_SS_DIR_OVERRIDE=. ./mk_cmds
  
  # -I.. is so that ss/ss_err.h works

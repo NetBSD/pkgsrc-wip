@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2004/03/04 23:12:15 jeremy-c-reed Exp $
-# $Id: Makefile,v 1.5 2004/03/04 23:12:15 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/12 12:39:46 thomasklausner Exp $
+# $Id: Makefile,v 1.6 2004/05/12 12:39:46 thomasklausner Exp $
 
 DISTNAME=	${E2FSPROGS_DISTNAME}
 PKGREVISION=	3
@@ -10,11 +10,16 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://e2fsprogs.sourceforge.net/
 COMMENT=	Second extended file system (ext2fs) management programs
 
+# needs msginit
+BUILD_DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
+
 # libss and related installed
 CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
 
 CONFIGURE_ARGS+=	--with-ldopts=-Wl,${RPATH_FLAG}${PREFIX}/lib
+
+INSTALL_TARGET=		install install-libs
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Linux"
@@ -26,12 +31,8 @@ pre-build:
 	# XXX po/ files are not writable by regular user
 	${CHMOD} u+w ${WRKSRC}/po/*
 
-post-install:
-	# install headers too
-	cd ${WRKSRC} && ${MAKE} install-libs
-
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../wip/e2fsprogs/Makefile.common"
-.include "../../wip/libuuid/buildlink2.mk"
-.include "../../wip/com_err/buildlink2.mk"
+.include "../../wip/libuuid/buildlink3.mk"
+.include "../../wip/com_err/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
