@@ -1,0 +1,4 @@
+The traffic shaper for Linux configures a virtual interface, for which all
+outgoing packets are shaped. This means that you may set parameters and
+limits on outgoing network traffic. Incoming traffic may not be limited or
+shaped using this utility.
