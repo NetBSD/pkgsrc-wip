@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/12/14 12:02:13 cetrox Exp $
+# $NetBSD: Makefile,v 1.5 2005/02/08 18:38:04 cetrox Exp $
 #
 
-DISTNAME=		PyPanel-2.0
+DISTNAME=		PyPanel-2.2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pypanel/}
 
@@ -14,9 +14,18 @@ PY_PATCHPLIST=  	yes
 USE_BUILDLINK3= 	yes
 USE_X11=		yes
 
+SUBST_CLASSES+=		setup
+SUBST_MESSAGE.setup=	"Fixing LOCALBASE and X11BASE paths."
+SUBST_STAGE.setup=	post-patch
+SUBST_FILES.setup=	setup.py
+SUBST_SED.setup+=	-e 's|/usr/bin|${LOCALBASE}/bin|g'
+SUBST_SED.setup+=	-e 's|/usr/X11R6|${X11BASE}|g'
+SUBST_SED.setup+=	-e 's|/usr/lib|${LOCALBASE}/lib|g'
+
+PYTHON_VERSIONS_ACCEPTED=	24 23 22
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../x11/py-Xlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
