@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/18 18:32:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/02 07:36:10 xtraeme Exp $
 #
 
 DISTNAME=	NVIDIA-FreeBSD-x86-${DIST_VERSION}
@@ -6,7 +6,7 @@ PKGNAME=	nvidia-freebsd-${DIST_VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.nvidia.com/freebsd/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nvidia.com/
 COMMENT=	NVIDIA Graphic drivers for FreeBSD/i386
 
