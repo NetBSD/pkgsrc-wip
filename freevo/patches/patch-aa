@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2004/01/04 11:12:55 mpasternak Exp $
+
+--- freevo~	Thu Nov 20 19:16:40 2003
++++ freevo	Sun Jan  4 11:07:57 2004
+@@ -142,15 +142,7 @@
+ export RUNAPP=""
+ 
+ # search for the correct Python binary
+-PYTHON=python
+-for name in python python2 python2.3; do
+-    for p in `echo $PATH | sed 's/:/ /g'`; do 
+-	if [ -e "$p/$name" ]; then
+-	    PYTHON="$p/$name"
+-	    break
+-	fi
+-    done
+-done
++PYTHON=@@PYTHONBIN@@
+ 
+ # Check the environment we started in. There are three choices:
+ # o installed into the system
