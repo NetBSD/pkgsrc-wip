@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/06/28 15:45:00 adrian_p Exp $
+# $NetBSD: Makefile,v 1.8 2004/06/28 16:02:51 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -15,6 +15,8 @@ SUBST_STAGE.paths=	post-build
 SUBST_FILES.paths=	${WRKDIR}/mailer.conf
 SUBST_SED.paths=	-e "s|@@PREFIX@@|${PREFIX}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
+
+REPLACE_PERL=	contrib/socketmapClient.pl contrib/socketmapServer.pl
 
 .if ${OPSYS} == "SunOS"
 USE_DB2?=	YES
@@ -108,6 +110,11 @@ post-install:
 	${INSTALL_DATA} \
 		${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
 		${PREFIX}/lib
+
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmapClient.pl \
+		${PREFIX}/share/examples/sendmail
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmapServer.pl \
+		${PREFIX}/share/examples/sendmail
 
 	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/sendmail
 	${INSTALL_DATA} ${WRKSRC}/cf/README ${PREFIX}/share/doc/sendmail

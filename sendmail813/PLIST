@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/27 10:27:24 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/06/28 16:02:51 adrian_p Exp $
 bin/hoststat
 bin/mailq
 bin/newaliases
@@ -28,6 +28,8 @@ share/doc/sendmail/SECURITY
 share/doc/sendmail/op.me
 share/doc/sendmail/op.ps
 share/examples/sendmail/mailer.conf
+share/examples/sendmail/socketmapClient.pl
+share/examples/sendmail/socketmapServer.pl
 share/misc/helpfile
 share/sendmail/README
 share/sendmail/cf/Build
