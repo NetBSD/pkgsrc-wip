@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1500 2004/10/20 13:18:04 imilh Exp $
-# $NetBSD: Makefile,v 1.1500 2004/10/20 13:18:04 imilh Exp $
+# $Id: Makefile,v 1.1501 2004/10/20 18:21:27 lexort Exp $
+# $NetBSD: Makefile,v 1.1501 2004/10/20 18:21:27 lexort Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -171,6 +171,7 @@ SUBDIR+=	freevo
 SUBDIR+=	frontpage
 SUBDIR+=	fvcool
 SUBDIR+=	fwbuilder
+SUBDIR+=	g-wrap2
 SUBDIR+=	g21k-binutils
 SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-CornerXMMS
@@ -230,6 +231,7 @@ SUBDIR+=	gtkglk
 SUBDIR+=	gtklookat
 SUBDIR+=	gtkpod
 SUBDIR+=	guile-gtk-devel
+SUBDIR+=	guile-lib
 SUBDIR+=	guile16-slib
 SUBDIR+=	gurlchecker
 SUBDIR+=	gwc
