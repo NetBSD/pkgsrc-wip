@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/16 12:41:56 cubidou Exp $
+lib/gkrellm2/plugins/gkrellm_snmp.so

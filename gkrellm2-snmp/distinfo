@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/16 12:41:56 cubidou Exp $
+
+SHA1 (gkrellm_snmp-0.18.tar.gz) = c1aa5edf8e86aedb377c454cf1f249d956ec8a67
+Size (gkrellm_snmp-0.18.tar.gz) = 15450 bytes
+SHA1 (gkrellm_snmp-0.18-gtk2.patch) = 9d03148893b44ed21641d96afc60ec2842e0fc00
+Size (gkrellm_snmp-0.18-gtk2.patch) = 12380 bytes
+SHA1 (patch-aa) = d2e63306036c7b6b8945634bddb97c010e7ead4a
+SHA1 (patch-ab) = c2e4bad30b91e4add995920321f169aeea7ed587
