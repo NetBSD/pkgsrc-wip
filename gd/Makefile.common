@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/06/09 23:21:59 xtraeme Exp $
+
+DISTNAME=	gd-${DIST_VER}
+CATEGORIES=	graphics
+MASTER_SITES=	http://www.boutell.com/gd/http/
+
+MAINTAINER=	adam@NetBSD.org
+HOMEPAGE=	http://www.boutell.com/gd/
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
+REPLACE_PERL=		bdftogd
+LIBS+=			${PTHREAD_LDFLAGS}
+
+BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.4
+
+PLIST_SRC=		${.CURDIR}/../../wip/gd/PLIST
+DISTINFO_FILE=		${.CURDIR}/../../wip/gd/distinfo
+DESCR_SRC=		${.CURDIR}/../../wip/gd/DESCR
+PATCHDIR=		${.CURDIR}/../../wip/gd/patches
+
+DIST_VER=		2.0.25
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+
+.include "../../mk/pthread.buildlink3.mk"
