@@ -1,18 +1,14 @@
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.uk.embnet.org/pub/EMBOSS/
-HOMEPAGE=		http://www.emboss.org/
-MAINTAINER=		dprice@cs.nmsu.edu
 
-WRKSRC=			${WRKDIR}/${DISTNAME}
+MAINTAINER=		dprice@cs.nmsu.edu
+HOMEPAGE=		http://www.emboss.org/
 
 USE_X11=		yes
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
-
-
 
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
@@ -22,10 +18,9 @@ CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/doc
 
-CONFIGURE_ARGS+=	--with-pngdriver=${PREFIX}/lib
+CONFIGURE_ARGS+=	--with-pngdriver=${BUILDLINK_PREFIX.png}/lib
 
 PKG_DISTFILES_DIR=	emboss
-
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
