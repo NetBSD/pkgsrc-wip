@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/08 09:44:16 adrian_p Exp $
+$NetBSD: distinfo,v 1.2 2003/07/08 10:33:40 adrian_p Exp $
 
-SHA1 (jpgraph-1.11.tar.gz) = 78549c367ac9a3281b7e06f606e70ff20d8fbb4e
-Size (jpgraph-1.11.tar.gz) = 402414 bytes
+SHA1 (jpgraph-1.12.2.tar.gz) = ed96a2472b006ab46fc5cb990f6f23af7ec7fb3f
+Size (jpgraph-1.12.2.tar.gz) = 1991375 bytes
