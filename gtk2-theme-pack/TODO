@@ -1,0 +1,13 @@
+$Id: TODO,v 1.1.1.1 2003/11/26 23:34:53 mpasternak Exp $
+
+- this package could be split to parts dependent only on gtk2-engine they
+  use - for example, all GTK2-Smooth-* use gtk2-engines-smooth
+
+- could we use a DIST_SUBDIR?
+  
+- new engines should be added ("industrial", "galaxy") to fully support all
+  themes
+
+- add buildlinks for engines (?)
+
+	-- dotz@irc.pl
