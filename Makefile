@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.558 2003/10/20 13:18:30 dillo Exp $
-# $NetBSD: Makefile,v 1.558 2003/10/20 13:18:30 dillo Exp $
+# $Id: Makefile,v 1.559 2003/10/20 13:25:48 dillo Exp $
+# $NetBSD: Makefile,v 1.559 2003/10/20 13:25:48 dillo Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -146,6 +146,7 @@ SUBDIR+=	gkrellm2-xmms
 SUBDIR+=	gl-117
 SUBDIR+=	glaxium
 SUBDIR+=	glide3
+SUBDIR+=	glulxe
 SUBDIR+=	gnats4
 SUBDIR+=	gnetcat
 SUBDIR+=	gnome2-extras
