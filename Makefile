@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1348 2004/06/26 19:50:31 dillo Exp $
-# $NetBSD: Makefile,v 1.1348 2004/06/26 19:50:31 dillo Exp $
+# $Id: Makefile,v 1.1349 2004/06/26 20:47:52 rillig Exp $
+# $NetBSD: Makefile,v 1.1349 2004/06/26 20:47:52 rillig Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -24,6 +24,7 @@ SUBDIR+=	alsa-utils
 SUBDIR+=	amap
 SUBDIR+=	amavisd-new
 SUBDIR+=	amsn
+SUBDIR+=	aols-postgres
 SUBDIR+=	aolserver
 SUBDIR+=	aolserver4
 SUBDIR+=	ap-auth-mysql
@@ -72,6 +73,7 @@ SUBDIR+=	ccze
 SUBDIR+=	cdl3
 SUBDIR+=	cdpr
 SUBDIR+=	cgic
+SUBDIR+=	cgoban2
 SUBDIR+=	cherokee
 SUBDIR+=	chksniff
 SUBDIR+=	chora
@@ -99,6 +101,11 @@ SUBDIR+=	darcs
 SUBDIR+=	dasm
 SUBDIR+=	db1
 SUBDIR+=	dbf
+SUBDIR+=	debian_base
+SUBDIR+=	debian_glib
+SUBDIR+=	debian_gtk
+SUBDIR+=	debian_linux
+SUBDIR+=	debian_x11
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dicom3tools
@@ -130,6 +137,7 @@ SUBDIR+=	eic
 SUBDIR+=	elmo
 SUBDIR+=	emacs-carbon
 SUBDIR+=	emirror
+SUBDIR+=	et
 SUBDIR+=	etpan-ng
 SUBDIR+=	evolution-sharp
 SUBDIR+=	ezbounce
@@ -242,6 +250,7 @@ SUBDIR+=	icmpchat
 SUBDIR+=	idled
 SUBDIR+=	ifstat
 SUBDIR+=	igal
+SUBDIR+=	igowin
 SUBDIR+=	iip
 SUBDIR+=	iisemulator
 SUBDIR+=	ile
@@ -253,6 +262,7 @@ SUBDIR+=	iptables
 SUBDIR+=	iptstate
 SUBDIR+=	isc-dhclient
 SUBDIR+=	isc-dhcpd
+SUBDIR+=	ispell-lietuviu
 SUBDIR+=	jabberd-aim
 SUBDIR+=	jabberd-msn
 SUBDIR+=	jakarta-log4j
@@ -728,6 +738,7 @@ SUBDIR+=	syslog-ng
 SUBDIR+=	sysvinit
 SUBDIR+=	taskbar
 SUBDIR+=	tcc
+SUBDIR+=	tcd
 SUBDIR+=	tcllib
 SUBDIR+=	tendra
 SUBDIR+=	tenmado
