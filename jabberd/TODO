@@ -1,7 +1,0 @@
-- The package seems to work with pth only.  As seen in the configure script,
-  it does not check for anything else, although it might work with a native
-  implementation.  Somebody (jabberd developers?) should try and hack the
-  configure script to detect the right threading implementation ;)
-
-- There is no need for files/jabber.sh to have execute permissions.  When
-  importing this package in pkgsrc, fix it.
