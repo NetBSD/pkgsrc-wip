@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/09/01 23:57:52 blef Exp $
+# $NetBSD: Makefile,v 1.9 2003/11/25 19:46:19 jeremy-c-reed Exp $
 
 DISTNAME=	X430src-4
 PKGNAME=	XFree86-fontsEncodings-${XF_VER}
@@ -17,7 +17,11 @@ USE_BUILDLINK2=		yes
 NO_XFREE86_TARGETS=	# defined
 
 post-extract:
-	@${LN} -sf ${FILESDIR}/host.def ${WRKSRC}
+	@${SED} \
+		-e "s|@PREFIX@|${X11PREFIX}|g" \
+		-e "s|@MAKE@|${MAKE_PROGRAM}|g" \
+		-e "s|@IMAKE@|${IMAKE}|g" \
+		${FILESDIR}/host.def > ${WRKSRC}/host.def
 
 do-configure:
 	(cd ${WRKSRC} && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/09/01 23:57:52 blef Exp $
+# $NetBSD: Makefile,v 1.10 2003/11/25 19:46:19 jeremy-c-reed Exp $
 
 DISTNAME=	X430src-4
 PKGNAME=	XFree86-fonts75dpi-${XF_VER}
@@ -19,9 +19,13 @@ NO_XFREE86_TARGETS=	# defined
 FILESDIR=	${PKGDIR}/../XFree86-fontsEncodings/files
 
 post-extract:
-	@${LN} -sf ${FILESDIR}/host.def ${WRKSRC}
-	@${LN} -sf ${FILESDIR}/host.def ${WRKDIR}/xc/fonts/encodings
-	@${LN} -sf ${FILESDIR}/host.def ${WRKDIR}/xc/fonts/encodings/large
+	@${SED} \
+		-e "s|@PREFIX@|${X11PREFIX}|g" \
+		-e "s|@MAKE@|${MAKE_PROGRAM}|g" \
+		-e "s|@IMAKE@|${IMAKE}|g" \
+		${FILESDIR}/host.def > ${WRKSRC}/host.def
+	@${LN} -sf ${WRKSRC}/host.def ${WRKDIR}/xc/fonts/encodings
+	@${LN} -sf ${WRKSRC}/host.def ${WRKDIR}/xc/fonts/encodings/large
 
 do-configure:
 	(cd ${WRKDIR}/xc/fonts/encodings && \

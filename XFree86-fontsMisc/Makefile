@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/02 00:23:40 blef Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/25 19:46:19 jeremy-c-reed Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-fontsMisc-${XF_VER}
@@ -23,9 +23,13 @@ post-extract:
 	cd ${WRKDIR} && \
 		${GUNZIP_CMD} -c ${DISTDIR}/X430src-1.tgz | ${GTAR} -xf - \
 		xc/extras/fonts/arabic24 xc/extras/fonts/ClearlyU;
-	@${LN} -sf ${FILESDIR}/host.def ${WRKSRC}
-	@${LN} -sf ${FILESDIR}/host.def ${WRKDIR}/xc/fonts/encodings
-	@${LN} -sf ${FILESDIR}/host.def ${WRKDIR}/xc/fonts/encodings/large
+	@${SED} \
+		-e "s|@PREFIX@|${X11PREFIX}|g" \
+		-e "s|@MAKE@|${MAKE_PROGRAM}|g" \
+		-e "s|@IMAKE@|${IMAKE}|g" \
+		${FILESDIR}/host.def > ${WRKSRC}/host.def
+	@${LN} -sf ${WRKSRC}/host.def ${WRKDIR}/xc/fonts/encodings
+	@${LN} -sf ${WRKSRC}/host.def ${WRKDIR}/xc/fonts/encodings/large
 
 do-configure:
 	(cd ${WRKDIR}/xc/fonts/encodings && \
