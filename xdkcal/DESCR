@@ -1,5 +1,0 @@
-X Desktop Calendar (xdkcal) is a Calendar for X Window System.  It
-draws calendar on your desktop.  You can customize, fontset, color
-drawing style.  This application is completely internationalized
-so it reads locale database and draw locale specific strings, such
-as name of months or weeks.
