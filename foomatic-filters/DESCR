@@ -1,0 +1,3 @@
+Filter scripts used by printer spoolers to convert incoming PostScript
+data into the printer's native format using a printer/driver specific,
+but spooler-independent PPD file.
