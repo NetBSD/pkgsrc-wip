@@ -14,7 +14,9 @@ fi
 
 # apstget.conf looks like:
 #
-# MAKE_TARGET="clean" # package
+# 
+# CLEAN_BUILD="1"     # clean before and after every build
+# PACKAGE_BUILD="0"   # build packages
 # INTERACTIVE="1"     # wait user for confirmations
 # QUITE="1"           # Be silent in builds
 # IGNORE_ERRORS="0"   # Don't stop on failed build
@@ -30,8 +32,8 @@ PKGFIND=${PREFIX}/bin/pkgfind
 PKGCHK=${PREFIX}/sbin/pkg_chk
 PKGSRC_DIR=_psd_
 DEFAULT_TARGETS="${DEFAULT_TARGETS}"
-if [ "${MAKE_TARGET}" = "" ]; then
-	MAKE_TARGET="clean"
+if [ "${CLEAN_BUILD}" = "" ]; then
+	CLEAN_BUILD="1"
 fi
 if [ "${INTERACTIVE}" = "" ]; then
 	INTERACTIVE="1"
@@ -58,6 +60,18 @@ fi
 if [ ! -e "/dev/stderr" ]; then
 	echo "/dev/stderr doesn't exist. Please create the device first."
 fi
+
+do_make_clean () {
+	if [ "${CLEAN_BUILD}" = "1" ]; then
+		${MAKE} clean
+	fi
+}
+
+do_make_package () {
+	if [ "${PACKAGE_BUILD}" = "1" ]; then
+		env PACKAGE_NOINSTALL=YES ${MAKE} package
+	fi
+}
 
 process_failed () {
 	if [ "${IGNORE_ERRORS}" = "0" ]; then
@@ -86,8 +100,9 @@ do_usage() {
 	echo "  orphan       - list orphaned packages."
 	echo ""
 	echo "variables (environ|_etc_/apstget.conf):"
-	echo "  MAKE_TARGET, INTERACTIVE, QUITE, IGNORE_ERRORS"
-	echo "  UPDATE_METHOD, UPDATE_ARGS, GET_FIRST, PREFERED"
+	echo "  CLEAN_BUILD=1, INTERACTIVE=1, QUITE=0, IGNORE_ERRORS=0"
+	echo "  UPDATE_METHOD=cvs, UPDATE_ARGS, GET_FIRST=0, PREFERED"
+	echo "  BUILD_PACKAGES=0"
 }
 
 check_version() {
@@ -213,7 +228,7 @@ do_install() {
 	else
 	echo "==> Preparing installation for $DIR"
 	cd ${PKGSRC_DIR}/${DIR}
-	DEPS=`${MAKE} show-all-depends-dirs`
+	DEPS=`${MAKE} show-depends-dirs`
 	REPLACE=""
 	INSTALL=""
 	for A in ${DEPS} ; do
@@ -234,6 +249,14 @@ do_install() {
 			fi;fi
 		  fi
 		fi
+		# Add new deps
+		#cd ${PKGSRC_DIR}/${A}
+		#DEPS2=`${MAKE} show-depends-dirs`
+		#for B in ${DEPS2} ; do
+		#	if [ "`echo ${DEPS} | grep ${B}`" = "" ]; then
+		#		DEPS="${DEPS} ${B}"
+		#	fi
+		#done
 	done
 	fi
 	# replace list
@@ -242,7 +265,10 @@ do_install() {
 		echo "==> Upgrading ${A}..."
 		cd ${PKGSRC_DIR}/${A}
 		${MAKE} fetch
+		do_make_clean
 		${MAKE} replace ${UD_TARGETS} | ${WRAPPER} 2>&1
+		do_make_package
+		do_make_clean
 		if [ ! "$?" = "0" ]; then
 			echo "==> Error occurred at ${DIR}."
 			process_failed
@@ -259,7 +285,10 @@ do_install() {
 		echo "==> Installing ${A}"
 		cd ${PKGSRC_DIR}/${A}
 		${MAKE} fetch
+		do_make_clean
 		${MAKE} install ${UD_TARGETS} | ${WRAPPER} 2>&1
+		do_make_package
+		do_make_clean
 		if [ ! "$?" = "0" ]; then
 			echo "==> Error occurred at ${DIR}."
 			process_failed
