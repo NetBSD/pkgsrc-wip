@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/04 15:48:02 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/27 18:56:51 roelants Exp $
 #
 
 DISTNAME=		Locale-Maketext-Lexicon-0.35
@@ -10,7 +10,10 @@ MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://www.autrijus.org/webl10n/
 COMMENT=		Use other catalog formats in Maketext
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
+USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Locale/Maketext/Lexicon/.packlist
 
 .include "../../lang/perl5/module.mk"
