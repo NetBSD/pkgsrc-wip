@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/04/21 18:17:46 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/04/23 19:47:03 johnrshannon Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCC34_BUILDLINK3_MK:=  ${GCC34_BUILDLINK3_MK}+
@@ -18,7 +18,7 @@ BUILDLINK_PKGSRCDIR.gcc34?=    ../../wip/gcc-3.4
 
 BUILDLINK_PKGSRCDIR.gcc34?=     ../../wip/gcc-3.4
 BUILDLINK_CONTENTS_FILTER.gcc34= \
-	${EGREP} '(libexec.*|bin.*/|include.*/|\.h$$|\.pc$$|lib.*/lib[^/]*$$)'
+	${EGREP} '(libexec.*|bin.*/|include.*/|\.h$$|\.idl$$|\.pc$$|/lib[^/]*\.[^/]*$$)'
 BUILDLINK_ENV+=$PATH:=${BUILDLINK_PREFIX.gcc-3.4.0}:${PATH}
 
 # Packages that link against shared libraries need a full dependency.
