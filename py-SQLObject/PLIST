@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/09 13:59:48 mpasternak Exp $
+${PYSITELIB}/SQLObject/Cache.py
+${PYSITELIB}/SQLObject/Cache.pyc
+${PYSITELIB}/SQLObject/Cache.pyo
+${PYSITELIB}/SQLObject/Col.py
+${PYSITELIB}/SQLObject/Col.pyc
+${PYSITELIB}/SQLObject/Col.pyo
+${PYSITELIB}/SQLObject/Constraints.py
+${PYSITELIB}/SQLObject/Constraints.pyc
+${PYSITELIB}/SQLObject/Constraints.pyo
+${PYSITELIB}/SQLObject/Converters.py
+${PYSITELIB}/SQLObject/Converters.pyc
+${PYSITELIB}/SQLObject/Converters.pyo
+${PYSITELIB}/SQLObject/DBConnection.py
+${PYSITELIB}/SQLObject/DBConnection.pyc
+${PYSITELIB}/SQLObject/DBConnection.pyo
+${PYSITELIB}/SQLObject/Join.py
+${PYSITELIB}/SQLObject/Join.pyc
+${PYSITELIB}/SQLObject/Join.pyo
+${PYSITELIB}/SQLObject/SQLBuilder.py
+${PYSITELIB}/SQLObject/SQLBuilder.pyc
+${PYSITELIB}/SQLObject/SQLBuilder.pyo
+${PYSITELIB}/SQLObject/SQLObject.py
+${PYSITELIB}/SQLObject/SQLObject.pyc
+${PYSITELIB}/SQLObject/SQLObject.pyo
+${PYSITELIB}/SQLObject/Style.py
+${PYSITELIB}/SQLObject/Style.pyc
+${PYSITELIB}/SQLObject/Style.pyo
+${PYSITELIB}/SQLObject/__init__.py
+${PYSITELIB}/SQLObject/__init__.pyc
+${PYSITELIB}/SQLObject/__init__.pyo
+${PYSITELIB}/SQLObject/include/Validator.py
+${PYSITELIB}/SQLObject/include/Validator.pyc
+${PYSITELIB}/SQLObject/include/Validator.pyo
+${PYSITELIB}/SQLObject/include/__init__.py
+${PYSITELIB}/SQLObject/include/__init__.pyc
+${PYSITELIB}/SQLObject/include/__init__.pyo
+@dirrm ${PYSITELIB}/SQLObject/include
+@dirrm ${PYSITELIB}/SQLObject
