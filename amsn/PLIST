@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/11/01 15:03:16 ppostma Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/11/13 13:16:28 ppostma Exp $
 bin/amsn
 share/amsn/AppMain.tcl
 share/amsn/CREDITS
@@ -20,6 +20,7 @@ share/amsn/anigif.tcl
 share/amsn/automsg.tcl
 share/amsn/balloon.tcl
 share/amsn/blocking.tcl
+share/amsn/chatwindow.tcl
 share/amsn/combobox.tcl
 share/amsn/config.tcl
 share/amsn/ctadverts.tcl
@@ -247,16 +248,19 @@ share/amsn/plugins/BWidget-1.7.0/widget.tcl
 share/amsn/plugins/BWidget-1.7.0/wizard.tcl
 share/amsn/plugins/BWidget-1.7.0/xpm2image.tcl
 share/amsn/plugins/Makefile
+share/amsn/plugins/Nudge/Nudge.tcl
+share/amsn/plugins/Nudge/plugininfo.xml
 share/amsn/plugins/QuickTimeTcl3.1/QuickTimeTcl3.1.dylib
 share/amsn/plugins/QuickTimeTcl3.1/movie.tcl
 share/amsn/plugins/QuickTimeTcl3.1/pkgIndex.tcl
-share/amsn/plugins/applescript/display_and_send.scpt
-share/amsn/plugins/applescript/itunes.tcl
+share/amsn/plugins/applescript/ae.tcl
 share/amsn/plugins/applescript/mail-bugreport.scpt
 share/amsn/plugins/base64/base64.tcl
 share/amsn/plugins/base64/pkgIndex.tcl
 share/amsn/plugins/base64/uuencode.tcl
 share/amsn/plugins/base64/yencode.tcl
+share/amsn/plugins/emotes/emotes.tcl
+share/amsn/plugins/emotes/plugininfo.xml
 share/amsn/plugins/gtkdock.c
 share/amsn/plugins/gtkdock.h
 share/amsn/plugins/http2.4/http.tcl
@@ -307,6 +311,9 @@ share/amsn/plugins/winflash/flash.cpp
 share/amsn/plugins/winflash/flash.dll
 share/amsn/plugins/winflash/flash.h
 share/amsn/plugins/winico05.dll
+share/amsn/plugins/winutils/winutils.cpp
+share/amsn/plugins/winutils/winutils.dll
+share/amsn/plugins/winutils/winutils.h
 share/amsn/png.tcl
 share/amsn/preferences.tcl
 share/amsn/progressbar.tcl
@@ -536,8 +543,6 @@ share/amsn/skins/default/pixmaps/butblock.gif
 share/amsn/skins/default/pixmaps/butfont.gif
 share/amsn/skins/default/pixmaps/butinvite.gif
 share/amsn/skins/default/pixmaps/butsend.gif
-share/amsn/skins/default/pixmaps/butsend2.gif
-share/amsn/skins/default/pixmaps/butsend3.gif
 share/amsn/skins/default/pixmaps/butsmile.gif
 share/amsn/skins/default/pixmaps/colorbar.gif
 share/amsn/skins/default/pixmaps/contract.gif
@@ -570,11 +575,9 @@ share/amsn/skins/default/pixmaps/newline.gif
 share/amsn/skins/default/pixmaps/notifclose.gif
 share/amsn/skins/default/pixmaps/notifico.gif
 share/amsn/skins/default/pixmaps/notifyoffline.gif
-share/amsn/skins/default/pixmaps/notifyoffline_1.gif
 share/amsn/skins/default/pixmaps/notifyonline.gif
-share/amsn/skins/default/pixmaps/notifyonline_1.gif
+share/amsn/skins/default/pixmaps/notifyplugins.gif
 share/amsn/skins/default/pixmaps/notifystate.gif
-share/amsn/skins/default/pixmaps/notifystate_1.gif
 share/amsn/skins/default/pixmaps/notinlist.gif
 share/amsn/skins/default/pixmaps/null
 share/amsn/skins/default/pixmaps/offline.gif
@@ -727,6 +730,7 @@ share/pixmaps/tux-32x32.png
 @dirrm share/amsn/skins/Tux/displaypic
 @dirrm share/amsn/skins/Tux
 @dirrm share/amsn/skins
+@dirrm share/amsn/plugins/winutils
 @dirrm share/amsn/plugins/winflash
 @dirrm share/amsn/plugins/traydock
 @dirrm share/amsn/plugins/tclzlib
@@ -740,8 +744,10 @@ share/pixmaps/tux-32x32.png
 @dirrm share/amsn/plugins/linphone
 @dirrm share/amsn/plugins/icons
 @dirrm share/amsn/plugins/http2.4
+@dirrm share/amsn/plugins/emotes
 @dirrm share/amsn/plugins/base64
 @dirrm share/amsn/plugins/QuickTimeTcl3.1
+@dirrm share/amsn/plugins/Nudge
 @dirrm share/amsn/plugins/BWidget-1.7.0/lang
 @dirrm share/amsn/plugins/BWidget-1.7.0/images
 @dirrm share/amsn/plugins/BWidget-1.7.0
