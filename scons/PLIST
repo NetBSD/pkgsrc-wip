@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/05/25 23:55:53 marc Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/06/28 16:51:06 marc Exp $
 bin/scons
 lib/scons/SCons/Action.py
 lib/scons/SCons/Action.pyc
@@ -132,6 +132,8 @@ lib/scons/SCons/Tool/hplink.py
 lib/scons/SCons/Tool/hplink.pyc
 lib/scons/SCons/Tool/icc.py
 lib/scons/SCons/Tool/icc.pyc
+lib/scons/SCons/Tool/icl.py
+lib/scons/SCons/Tool/icl.pyc
 lib/scons/SCons/Tool/ifl.py
 lib/scons/SCons/Tool/ifl.pyc
 lib/scons/SCons/Tool/ilink.py
@@ -150,6 +152,8 @@ lib/scons/SCons/Tool/link.py
 lib/scons/SCons/Tool/link.pyc
 lib/scons/SCons/Tool/linkloc.py
 lib/scons/SCons/Tool/linkloc.pyc
+lib/scons/SCons/Tool/m4.py
+lib/scons/SCons/Tool/m4.pyc
 lib/scons/SCons/Tool/masm.py
 lib/scons/SCons/Tool/masm.pyc
 lib/scons/SCons/Tool/midl.py
@@ -162,6 +166,8 @@ lib/scons/SCons/Tool/mslink.py
 lib/scons/SCons/Tool/mslink.pyc
 lib/scons/SCons/Tool/msvc.py
 lib/scons/SCons/Tool/msvc.pyc
+lib/scons/SCons/Tool/msvs.py
+lib/scons/SCons/Tool/msvs.pyc
 lib/scons/SCons/Tool/nasm.py
 lib/scons/SCons/Tool/nasm.pyc
 lib/scons/SCons/Tool/pdflatex.py
