@@ -1,0 +1,18 @@
+# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 21:00:02 daprice Exp $
+#
+
+DISTNAME=		xgfe-2.1
+CATEGORIES=		x11
+MASTER_SITES=		${MASTER_SITE_TEX_CTAN=graphics/gnuplot/contrib}
+
+MAINTAINER=		dprice@cs.nmsu.edu
+HOMEPAGE=		http://www.bl.physik.uni-muenchen.de/rechner/grafik/xgfe/xgfe.html
+COMMENT=		GUI front end for Gnuplot plotting package
+
+USE_X11=		yes
+USE_BUILDLINK3=		yes
+
+WRKSRC=			${WRKDIR}/xgfe-2.1/source
+
+.include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
