@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/11/26 16:02:59 xtraeme Exp $
-
-SHA1 (MuSE-0.8.1.tar.gz) = 785e4324880276c1f4d27892a036372de28326b3
-Size (MuSE-0.8.1.tar.gz) = 624750 bytes
-SHA1 (patch-aa) = 6a7e62a41391bd908b4187662870d2a763389dc7
-SHA1 (patch-ab) = f62db1459a2a3e0878c0cbff2c2d6dc3cdd25e28
-SHA1 (patch-ac) = df3670611d7e2267e4f22157688aa219d1632f25
-SHA1 (patch-ad) = 60b374c786fefb01383586581d2c1bd3c518eb2f
