@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/21 14:34:32 poppnk Exp $
+lib/perl5/5.8.5/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/perllocal.pod
+lib/perl5/site_perl/5.8.5/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Term/Screen/.packlist
+lib/perl5/site_perl/man/man3/Term::Screen.3
+@dirrm lib/perl5/site_perl/man/man3
+@dirrm lib/perl5/site_perl/5.8.5/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Term/Screen
+@dirrm lib/perl5/site_perl/5.8.5/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Term
+@dirrm lib/perl5/site_perl/5.8.5/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto
+@dirrm lib/perl5/site_perl/5.8.5/Term
+@dirrm lib/perl5/site_perl/5.8.5
