@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.40 2003/04/06 13:52:16 marc Exp $
-# $NetBSD: Makefile,v 1.40 2003/04/06 13:52:16 marc Exp $
+# $Id: Makefile,v 1.41 2003/04/06 14:44:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.41 2003/04/06 14:44:12 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -9,10 +9,8 @@ SUBDIR+=	aolserver
 SUBDIR+=	autoproject
 SUBDIR+=	byacc
 SUBDIR+=	chksniff
-SUBDIR+=	chktex
 SUBDIR+=	coreutils
 SUBDIR+=	cvsd
-SUBDIR+=	dbh
 SUBDIR+=	gkrellm2
 SUBDIR+=	gkrellm2-flynn
 SUBDIR+=	gkrellm2-server
@@ -44,13 +42,12 @@ SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	perltidy
 SUBDIR+=	poedit
+SUBDIR+=	py-ORBit
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-csv
 SUBDIR+=	py-gtk2
-SUBDIR+=	py-ORBit
 SUBDIR+=	startup-notification
 SUBDIR+=	tcpflow
 SUBDIR+=	tex-foiltex
 SUBDIR+=	vim-gtk2
-SUBDIR+=	whisker
 SUBDIR+=	yasm
