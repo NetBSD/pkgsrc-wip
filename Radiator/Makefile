@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/22 11:58:59 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 11:49:28 thomasklausner Exp $
 #
 
 DISTNAME=		Radiator-3.6
@@ -6,7 +6,7 @@ CATEGORIES=		net wip
 MASTER_SITES=		# Need to get it yourself.
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		cjep@netbsd.org
+MAINTAINER=		cjep@NetBSD.org
 HOMEPAGE=		http://www.open.com.au/radiator/
 COMMENT=		RADIUS server implemented in Perl
 

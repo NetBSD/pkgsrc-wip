@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/08/26 14:11:48 moubctez Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/29 11:49:28 thomasklausner Exp $
 #
 
 DISTNAME=		gimp-${GIMP_VER}
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.3/v${GIMP_VER}/ \
 	ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.3/v${GIMP_VER}/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		adam@netbsd.org
+MAINTAINER=		adam@NetBSD.org
 HOMEPAGE=		http://www.gimp.org/
 COMMENT=		Image manipulation program similar to Photoshop[tm]
 

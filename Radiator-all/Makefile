@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 17:33:10 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/29 11:49:27 thomasklausner Exp $
 #
 
 DISTNAME=	Radiator-all-3.6
@@ -6,7 +6,7 @@ CATEGORIES=	meta-pkgs net wip
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	cjep@netbsd.org
+MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	# irrelevant
 COMMENT=	Provides some useful modules for Radiator
 

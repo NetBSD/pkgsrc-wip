@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/12 19:06:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 11:49:28 thomasklausner Exp $
 #
 
 DISTNAME=	xawtv_3.86
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	graphics
 MASTER_SITES=	http://bytesex.org/xawtv/
 
-MAINTAINER=	jmmv@netbsd.org
+MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://bytesex.org/xawtv/
 COMMENT=	TV application for Brooktree 848 compatible cards
 

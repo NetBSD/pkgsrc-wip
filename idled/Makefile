@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/13 10:50:53 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 11:49:28 thomasklausner Exp $
 #
 
 DISTNAME=	idled-1.16
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.darkwing.com/idled/download/
 
-MAINTAINER=	tmarc@netbsd.org.pl
+MAINTAINER=	tmarc@NetBSD.org.pl
 HOMEPAGE=	http://www.darkwing.com/idled/
 COMMENT=	Daemon that logs out idle users
 

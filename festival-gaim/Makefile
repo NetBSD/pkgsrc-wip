@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/03 19:10:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 11:49:28 thomasklausner Exp $
 #
 
 DISTNAME=	festival-gaim-0.64
 CATEGORIES=	audio chat
 MASTER_SITES=	http://primates.ximian.com/~sandino/festival/SOURCES/
 
-MAINTAINER=	jmmv@netbsd.org
+MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/softwaremap/projects/festival-gaim/
 COMMENT=	Synthesizes incoming messages using voice
 
