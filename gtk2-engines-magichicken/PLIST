@@ -1,16 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/26 22:29:12 mpasternak Exp $
-lib/gtk-2.0/2.2.0/engines/libmgicchikn.so
-lib/gtk-2.0/2.2.0/engines/libmgicchikn.la
-lib/gtk-2.0/2.2.0/engines/libmgicchikn.a
-share/themes/CortlandChicken/gtk-2.0/gtkrc
+@comment $NetBSD: PLIST,v 1.2 2004/05/09 07:32:55 blef Exp $
+lib/gtk-2.0/2.4.0/engines/libmgicchikn.a
+lib/gtk-2.0/2.4.0/engines/libmgicchikn.la
+lib/gtk-2.0/2.4.0/engines/libmgicchikn.so
 share/themes/CortlandChicken/README
-share/themes/MagicChicken/gtk-2.0/gtkrc
+share/themes/CortlandChicken/gtk-2.0/gtkrc
 share/themes/MagicChicken/README
-share/themes/OkayishChicken/gtk-2.0/gtkrc
+share/themes/MagicChicken/gtk-2.0/gtkrc
 share/themes/OkayishChicken/README
+share/themes/OkayishChicken/gtk-2.0/gtkrc
 @dirrm share/themes/OkayishChicken/gtk-2.0
 @dirrm share/themes/OkayishChicken
 @dirrm share/themes/MagicChicken/gtk-2.0
 @dirrm share/themes/MagicChicken
 @dirrm share/themes/CortlandChicken/gtk-2.0
 @dirrm share/themes/CortlandChicken
+@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/engines
