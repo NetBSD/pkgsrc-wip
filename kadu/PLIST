@@ -1,4 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/29 21:52:57 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/29 22:49:08 mpasternak Exp $
+@comment ======================================================
+@comment entries below will be not needed when we manage 
+@comment to get it running with chat/ekg shared library
+@comment ======================================================
+include/libgadu.h
+include/libgadu-config.h
+include/libgadu-stdint.h
+lib/pkgconfig/libgadu.pc
+lib/libgadu.a
+@comment ======================================================
 bin/kadu
 share/kadu/translations/kadu_de.qm
 share/kadu/translations/kadu_en.qm

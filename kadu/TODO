@@ -1,5 +1,6 @@
-$Id: TODO,v 1.1.1.1 2003/11/29 21:52:57 mpasternak Exp $
+$Id: TODO,v 1.2 2003/11/29 22:49:08 mpasternak Exp $
 
-This propably will build when recent chat/ekg is avialable.
+When pkgsrc will contain recent ekg, with shared libgadu, 
+try to learn this build to use it, and not provide own libgadu.
 
 Create PLIST
