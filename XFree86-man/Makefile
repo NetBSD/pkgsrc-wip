@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/01 23:57:53 blef Exp $
+# $NetBSD: Makefile,v 1.7 2003/10/28 01:09:35 jeremy-c-reed Exp $
 
 DISTNAME=	X430src-1
 PKGNAME=	XFree86-man-${XF_VER}
@@ -11,12 +11,19 @@ MAINTAINER=	xfree86@blef.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 Manuals
 
-DEPENDS=	imake>=4.3.0:../../wip/imake
+BUILD_DEPENDS=	imake>=4.3.0:../../wip/imake
 
 USE_BUILDLINK2=		yes
 
 NO_XFREE86_TARGETS=	# defined
 INSTALL_TARGET=		install.man
+
+# XXX please share suggestion on how to do this correctly
+pre-configure:
+.for F in general X11 GL/gl GL/glx GLU GLw Xv Xau Xt Xext Xext/dbe Xi 
+	@${LN} -sf ${FILESDIR}/host.def ${WRKSRC}/${F}/
+.endfor
+.undef F
 
 do-configure:
 	(cd ${WRKSRC} ; \

@@ -1,0 +1,4 @@
+/* $NetBSD */
+#define BuildHtmlManPages NO
+#define PreprocessManPages YES
+#define DontPreprocessManPages NO
