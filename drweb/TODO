@@ -1,11 +1,11 @@
-$Id: TODO,v 1.6 2003/10/17 19:13:29 bubuchka Exp $
+$Id: TODO,v 1.7 2004/01/21 15:30:54 bubuchka Exp $
 
 - [jmmv] Several cleanup.
 
 - [jmmv] Test if it works properly (use the wip/drweb-* clients).
 
-- Wait until DrWeb 4.30 for NetBSD will released, then support it.
-  Just at this moment it runs under FreeBSD binary emulation.
+- Wait until DrWeb 4.30.x for NetBSD will released, then support
+  it.  Just at this moment it runs under FreeBSD binary emulation.
 
 - It is possible use both variants of DrWeb/Linux - for glibc 2.2
   and for glibc 2.3 (customizable with GLIBC_VERSION option).
@@ -14,9 +14,6 @@ $Id: TODO,v 1.6 2003/10/17 19:13:29 bubuchka Exp $
 
 - Eliminate dependency on wget for systems, which have its own
   downloaders.
-
-- The drweb-update script must be modified to allow use of externally
-  supplied login and password.
 
 Please also note that all precomplied software available (at least
 tested) for i386 only. The sources (clients) have all chances to
