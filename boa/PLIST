@@ -1,0 +1,8 @@
+sbin/boa
+sbin/boa_indexer
+share/examples/boa/boa.conf
+share/doc/boa/CREDITS
+share/doc/boa/README
+man/man8/boa.8
+@dirrm share/examples/boa
+@dirrm share/doc/boa
