@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/05 04:43:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/05 04:44:11 xtraeme Exp $
 #
 
 DISTNAME=	raines-0.40.0
@@ -27,7 +27,6 @@ pre-install:
 	    ${FILESDIR}/raine.sh > ${WRKSRC}/raine.sh
 	@${INSTALL_SCRIPT} ${WRKSRC}/raine.sh ${PREFIX}/bin/raine
 
-.include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/allegro/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
