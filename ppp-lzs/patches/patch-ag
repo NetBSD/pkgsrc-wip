@@ -1,0 +1,15 @@
+--- pppd/ccp.h.orig	Tue Apr 15 23:20:03 2003
++++ pppd/ccp.h	Tue Apr 15 23:20:39 2003
+@@ -33,4 +33,5 @@
+     bool bsd_compress;		/* do BSD Compress? */
+     bool deflate;		/* do Deflate? */
++    bool lzs;			/* do Stac LZS? */
+     bool predictor_1;		/* do Predictor-1? */
+     bool predictor_2;		/* do Predictor-2? */
+@@ -40,4 +41,6 @@
+     u_short deflate_size;	/* lg(window size) for Deflate */
+     short method;		/* code for chosen compression method */
++    u_short lzs_checkmode;	/* check mode for Stac LZS */
++    u_short lzs_history;	/* # of history buffers for Stac LZS */
+ } ccp_options;
+ 

@@ -1,0 +1,27 @@
+--- pppd/Makefile.orig	Thu Apr 17 07:17:56 2003
++++ pppd/Makefile	Thu Apr 17 10:30:18 2003
+@@ -1,13 +1,14 @@
+ #	$NetBSD: patch-ae,v 1.1.1.1 2004/03/14 01:33:48 jeremy-c-reed Exp $
+ 
+-PCAPDIR=${.CURDIR}/../../../lib/libpcap
++PCAPDIR=${BSDSRCDIR}/lib/libpcap
++PPPDDIR=${BSDSRCDIR}/usr.sbin/pppd/pppd
+ 
+ PROG=	pppd
+ SRCS=	auth.c cbcp.c ccp.c chap.c chap_ms.c demand.c eui64.c fsm.c \
+ 	ipcp.c ipv6cp.c ipxcp.c lcp.c magic.c main.c multilink.c options.c \
+ 	sys-bsd.c tdb.c tty.c upap.c utils.c
+ 
+-.PATH:	${PCAPDIR}
++.PATH:	${PPPDDIR} ${PCAPDIR}
+ MAN=	pppd.8
+ BINMODE=4555
+ BINOWN=	root
+@@ -15,6 +16,7 @@
+ LDADD=	-lpcap -lcrypt -lutil
+ DPADD=	${LIBPCAP} ${LIBCRYPT} ${LIBUTIL}
+ CPPFLAGS+= -I. -DHAVE_PATHS_H 
++CPPFLAGS+= -I.. -I${PPPDDIR}
+ CPPFLAGS+= -I${PCAPDIR} -DPPP_FILTER
+ CPPFLAGS+= -DCBCP_SUPPORT -DCHAPMS -DUSE_CRYPT -DMSLANMAN
+ CPPFLAGS+= -DINET6

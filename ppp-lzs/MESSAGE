@@ -1,0 +1,4 @@
+You will probably need to add a line to your /etc/lkm.conf file to
+load the kernel module at bootup time, like so:
+
+${PREFIX}/lkm/lzs.o	-	-	-	-	BEFORENET

@@ -1,0 +1,93 @@
+--- /dev/null	Tue Apr 15 22:48:31 2003
++++ lkm/lkminit_lzs.c	Tue Apr 15 23:07:51 2003
+@@ -0,0 +1,90 @@
++/*
++ * lkminit_lzs.c - module code for Stac LZS compressor
++ *
++ * written by Iain Hibbert <plunky@rya-online.net>
++ */
++#include <sys/param.h>
++#include <sys/systm.h>
++#include <sys/conf.h>
++#include <sys/exec.h>
++#include <sys/lkm.h>
++#include <sys/file.h>
++#include <sys/errno.h>
++#include <sys/mbuf.h>
++
++#define PACKETPTR 	struct mbuf *
++#include <net/ppp_defs.h>
++#include <net/ppp-comp.h>
++
++extern struct compressor *ppp_compressors[];
++extern struct compressor ppp_lzs;
++
++static int lzs_handle __P((struct lkm_table *lkmtp, int cmd));
++int lzs_lkmentry __P((struct lkm_table *lkmtp, int cmd, int ver));
++
++MOD_MISC("lzs")
++
++static int
++lzs_handle(lkmtp, cmd)
++    struct lkm_table *lkmtp;
++    int cmd;
++{
++    int	i = 0;
++
++    switch(cmd) {
++    case LKM_E_LOAD:
++	/*
++	 * Load the Stac LZS compressor into the master table in the first
++	 * available slot unless there is a CI_LZS compressor already
++	 * there. The table should always be NULL terminated, so leave
++	 * a space.
++	 */
++
++	while(ppp_compressors[i]) {
++	    if (ppp_compressors[i]->compress_proto == CI_LZS)
++		return EEXIST; /* either me or the in-kernel version */
++
++	    if (++i == PPP_COMPRESSORS_MAX - 1)
++		return ENFILE; /* no room */
++	}
++
++	ppp_compressors[i++] = &ppp_lzs;
++	break;
++
++    case LKM_E_UNLOAD:
++
++	/*
++	 * Find the first instance of CI_LZS in the table, and
++	 * unload it. If this instance was not mine, Somebody
++	 * has been Playing With Fire, and will Likely Get Burnt.
++	 */
++	while (ppp_compressors[i]->compress_proto != CI_LZS)
++	    i++;
++
++	while (ppp_compressors[i] && i < (PPP_COMPRESSORS_MAX - 1)) {
++	    ppp_compressors[i] = ppp_compressors[i + 1];
++	    i++;
++	}
++	ppp_compressors[i] = NULL;
++	break;
++
++    case LKM_E_STAT:
++	break;
++
++    default:
++	return EINVAL;
++    }
++
++    return 0;	/* success */
++}
++
++/*
++ * the module entry point.
++ */
++int
++lzs_lkmentry(lkmtp, cmd, ver)
++    struct lkm_table *lkmtp;
++    int cmd, ver;
++{
++    DISPATCH(lkmtp, cmd, ver, lzs_handle, lzs_handle, lzs_handle)
++}

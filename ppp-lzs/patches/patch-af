@@ -1,0 +1,357 @@
+--- pppd/ccp.c.orig	Tue Apr 15 23:19:57 2003
++++ pppd/ccp.c	Tue Apr 15 23:20:28 2003
+@@ -54,4 +54,5 @@
+ static int setbsdcomp __P((char **));
+ static int setdeflate __P((char **));
++static int setlzs __P((char **));
+ 
+ static option_t ccp_option_list[] = {
+@@ -79,4 +80,12 @@
+       "don't use draft deflate #", OPT_A2COPY,
+       &ccp_allowoptions[0].deflate_draft },
++    { "lzs", 1, (void *)setlzs,
++      "request Stac LZS compression" },
++    { "-lzs", o_bool, &ccp_wantoptions[0].lzs,
++      "don't allow Stac LZS compression", OPT_A2COPY,
++      &ccp_allowoptions[0].lzs },
++    { "nolzs", o_bool, &ccp_wantoptions[0].lzs,
++      "don't allow Stac LZS compression", OPT_A2COPY,
++      &ccp_allowoptions[0].lzs },
+     { "predictor1", o_bool, &ccp_wantoptions[0].predictor_1,
+       "request Predictor-1", 1, &ccp_allowoptions[0].predictor_1 },
+@@ -166,8 +175,12 @@
+ };
+ 
++static char *lzs_mode[] = {
++    "none", "lcb", "crc", "seq", "ext"
++};
++
+ /*
+  * Do we want / did we get any compression?
+  */
+-#define ANY_COMPRESS(opt)	((opt).deflate || (opt).bsd_compress \
++#define ANY_COMPRESS(opt)	((opt).deflate || (opt).bsd_compress || (opt).lzs \
+ 				 || (opt).predictor_1 || (opt).predictor_2)
+ 
+@@ -178,4 +191,6 @@
+ #define RACK_PENDING	1	/* waiting for reset-ack */
+ #define RREQ_REPEAT	2	/* send another reset-req if no reset-ack */
++#define RACK_NOWAIT	4	/* in lzs/ext mode, we wont get a reset-ack */
++				/* so dont wait for it */
+ 
+ #define RACKTIMEOUT	1	/* second */
+@@ -259,4 +274,64 @@
+ }
+ 
++/*
++ * lzs recv-mode[,recv-hist][:xmit-mode[,xmit-hist]]
++ */
++static int
++setlzs(argv)
++    char **argv;
++{
++    char *str, *endp;
++    int rm, rh, tm, th;
++
++    str = *argv;
++    th = rh = LZS_HISTORY_MAX;
++    tm = rm = strtol(str, &endp, 0);	/* checkmode */
++    if (endp != str && *endp == ':') {
++	str = endp + 1;
++	th = rh = strtol(str, &endp, 0);	/* history */
++    }
++
++    if (endp != str && *endp == ',') {
++	str = endp + 1;
++	tm = strtol(str, &endp, 0);	/* xmit checkmode */
++	if (endp != str && *endp == ':') {
++	    str = endp + 1;
++	    th = strtol(str, &endp, 0);		/* xmit history */
++	}
++    }
++
++    if (*endp != 0 || endp == *argv
++	    || rm > LZS_CHECKMODE_MAX
++	    || tm > LZS_CHECKMODE_MAX
++	    || rh < 0 || rh > LZS_HISTORY_MAX
++	    || th < 0 || th > LZS_HISTORY_MAX) {
++	option_error("invalid parameter '%s' for lzs option", *argv);
++	return 0;
++    }
++
++    if ((rm == LZS_CMODE_EXT && rh != 1)
++	    || (tm == LZS_CMODE_EXT && th != 1)) {
++	option_error("lzs checkmode ext must use single history buffer");
++	return 0;
++    }
++
++    if (rm < 0)
++	ccp_wantoptions[0].lzs = 0;
++    else {
++	ccp_wantoptions[0].lzs = 1;
++	ccp_wantoptions[0].lzs_checkmode = rm;
++	ccp_wantoptions[0].lzs_history = rh;
++    }
++
++    if (tm < 0)
++	ccp_allowoptions[0].lzs = 0;
++    else {
++	ccp_allowoptions[0].lzs = 1;
++	ccp_allowoptions[0].lzs_checkmode = tm;
++	ccp_allowoptions[0].lzs_history = th;
++    }
++
++    return 1;
++}
+ 
+ /*
+@@ -293,4 +368,11 @@
+     ccp_allowoptions[0].bsd_bits = BSD_MAX_BITS;
+ 
++    ccp_wantoptions[0].lzs = 1;
++    ccp_wantoptions[0].lzs_checkmode = LZS_CMODE_SEQ;
++    ccp_wantoptions[0].lzs_history = LZS_HISTORY_MAX;
++    ccp_allowoptions[0].lzs = 1;
++    ccp_allowoptions[0].lzs_checkmode = LZS_CMODE_SEQ;
++    ccp_allowoptions[0].lzs_history = LZS_HISTORY_MAX;
++
+     ccp_allowoptions[0].predictor_1 = 1;
+ }
+@@ -396,4 +478,7 @@
+ 	/* send a reset-ack, which the transmitter will see and
+ 	   reset its compression state. */
++	/* in lzs/ext mode we shouldnt send this, but we do need
++	   to so that the kernel layer sees it and handles the
++	   reset. I expect the peer will ignore it. */
+ 	fsm_sdata(f, CCP_RESETACK, id, NULL, 0);
+ 	break;
+@@ -448,4 +533,14 @@
+ 	    go->bsd_compress = 0;
+     }
++    if (go->lzs) {
++	opt_buf[0] = CI_LZS;
++	opt_buf[1] = CILEN_LZS;
++	opt_buf[2] = LZS_HISTORY_MSB(go->lzs_history);
++	opt_buf[3] = LZS_HISTORY_LSB(go->lzs_history);
++	opt_buf[4] = go->lzs_checkmode;
++	if (ccp_test(f->unit, opt_buf, CILEN_LZS, 0) <= 0) {
++	    go->lzs = 0;
++	}
++    }
+     if (go->deflate) {
+ 	if (go->deflate_correct) {
+@@ -493,4 +588,5 @@
+     return (go->bsd_compress? CILEN_BSD_COMPRESS: 0)
+ 	+ (go->deflate? CILEN_DEFLATE: 0)
++	+ (go->lzs? CILEN_LZS: 0)
+ 	+ (go->predictor_1? CILEN_PREDICTOR_1: 0)
+ 	+ (go->predictor_2? CILEN_PREDICTOR_2: 0);
+@@ -563,4 +659,45 @@
+ 	}
+     }
++    if (go->lzs) {
++        p[0] = CI_LZS;
++        p[1] = CILEN_LZS;
++        p[2] = LZS_HISTORY_MSB(go->lzs_history);
++        p[3] = LZS_HISTORY_LSB(go->lzs_history);
++        p[4] = go->lzs_checkmode;
++	if (p != p0) {
++	    p += CILEN_LZS;	/* not the first option */
++	} else {
++	    for(;;) {
++	        res = ccp_test(f->unit, p, CILEN_LZS, 0);
++		if (res > 0) {	/* like */
++		    p += CILEN_LZS;
++		    break;
++		}
++
++		if (res < 0) {	/* no like */
++		    go->lzs = 0;
++		    break;
++		}
++
++		/* nearly there, try less history or else
++		 * fallback to seq mode which should be ok.
++		 */
++		if (go->lzs_history) {
++		    go->lzs_history--; /* try less history */
++		} else {
++		    if (go->lzs_checkmode == LZS_CMODE_SEQ) {
++			go->lzs = 0;
++			break;
++		    }
++		    go->lzs_checkmode = LZS_CMODE_SEQ;
++		    go->lzs_history = LZS_HISTORY_MAX;
++		}
++
++		p[2] = LZS_HISTORY_MSB(go->lzs_history);
++		p[3] = LZS_HISTORY_LSB(go->lzs_history);
++		p[4] = go->lzs_checkmode;
++	    }
++	}
++    }
+     /* XXX Should Predictor 2 be preferable to Predictor 1? */
+     if (go->predictor_1) {
+@@ -635,4 +772,18 @@
+ 	    return 1;
+     }
++    if (go->lzs) {
++	if (len < CILEN_LZS
++	    || p[0] != CI_LZS || p[1] != CILEN_LZS
++	    || LZS_HISTORY(p) != go->lzs_history
++	    || LZS_CHECKMODE(p) != go->lzs_checkmode ) {
++	    return 0;
++	}
++	p += CILEN_LZS;
++	len -= CILEN_LZS;
++	/* XXX Cope with first/fast ack */
++	if (p == p0 && len == 0) {
++	    return 1;
++	}
++    }
+     if (go->predictor_1) {
+ 	if (len < CILEN_PREDICTOR_1
+@@ -717,4 +868,28 @@
+     }
+ 
++    if (go->lzs && len >= CILEN_LZS
++	&& p[0] == CI_LZS && p[1] == CILEN_LZS) {
++	u_int16_t n;
++
++	n = LZS_HISTORY(p);	/* he wants different history? */
++	if (n != go->lzs_history) {
++	    if (n <= LZS_HISTORY_MAX)
++		try.lzs_history = n;
++	    else
++		try.lzs = 0;
++	}
++
++	n = LZS_CHECKMODE(p);	/* and/or different checkmode? */
++	if (n != go->lzs_checkmode) {
++	    if (n <= LZS_CHECKMODE_MAX)
++		try.lzs_checkmode = n;
++	    else
++		try.lzs = 0;
++	}
++
++	p += CILEN_LZS;
++	len -= CILEN_LZS;
++    }
++
+     /*
+      * Predictor-1 and 2 have no options, so they can't be Naked.
+@@ -782,4 +957,16 @@
+ 	len -= CILEN_BSD_COMPRESS;
+     }
++
++    if (go->lzs && len >= CILEN_LZS && p[0] == CI_LZS && p[1] == CILEN_LZS) {
++	if (p[2] != LZS_HISTORY_MSB(go->lzs_history)
++	    && p[3] != LZS_HISTORY_LSB(go->lzs_history)
++	    && LZS_CHECKMODE(p) != go->lzs_checkmode )
++	    return 0; /* Rej is not right */
++
++	try.lzs = 0;
++	p += CILEN_LZS;
++	len -= CILEN_LZS;
++    }
++
+     if (go->predictor_1 && len >= CILEN_PREDICTOR_1
+ 	&& p[0] == CI_PREDICTOR_1 && p[1] == CILEN_PREDICTOR_1) {
+@@ -929,4 +1116,42 @@
+ 		break;
+ 
++	    case CI_LZS:
++		if (!ao->lzs || clen != CILEN_LZS) {
++		    newret = CONFREJ;
++		    break;
++		}
++
++		ho->lzs = 1;
++		ho->lzs_history = LZS_HISTORY(p);
++		ho->lzs_checkmode = LZS_CHECKMODE(p);
++
++		if (ho->lzs_checkmode != ao->lzs_checkmode) {
++		    newret = CONFNAK;
++		    if (dont_nak)
++			break;
++		    else
++			p[4] = ao->lzs_checkmode;
++		}
++
++		if (ho->lzs_history > ao->lzs_history) {
++		    newret = CONFNAK;
++		    if (dont_nak) {
++			break;
++		    } else {
++			p[2] = LZS_HISTORY_MSB(ao->lzs_history);
++			p[3] = LZS_HISTORY_LSB(ao->lzs_history);
++		    }
++		}
++
++		/* and just make sure the kernel can do it */
++		if (p == p0 && ccp_test(f->unit, p, CILEN_LZS, 1) <= 0 ) {
++			newret = CONFREJ;
++			p[2] = LZS_HISTORY_MSB(ho->lzs_history);
++			p[3] = LZS_HISTORY_LSB(ho->lzs_history);
++			p[4] = ho->lzs_checkmode;
++		}
++
++		break;
++
+ 	    case CI_PREDICTOR_1:
+ 		if (!ao->predictor_1 || clen != CILEN_PREDICTOR_1) {
+@@ -1016,4 +1241,13 @@
+ 		     opt->bsd_bits);
+ 	break;
++    case CI_LZS:
++	if (opt2 != NULL && opt2->lzs_history != opt->lzs_history)
++	    slprintf(result, sizeof(result), "Stac LZS (%s:%d/%s:%d)",
++		    lzs_mode[opt->lzs_checkmode], opt->lzs_history,
++		    lzs_mode[opt2->lzs_checkmode], opt2->lzs_history);
++        else
++	    slprintf(result, sizeof(result), "Stac LZS (%s:%d)",
++		    lzs_mode[opt->lzs_checkmode], opt->lzs_history);
++	break;
+     case CI_PREDICTOR_1:
+ 	return "Predictor 1";
+@@ -1039,4 +1273,9 @@
+     ccp_flags_set(f->unit, 1, 1);
+     if (ANY_COMPRESS(*go)) {
++	/* in lzs/ext mode, we wont get a Reset-Ack as its included in
++	   the packet, so mark it and don't do the timeout thing */
++	if (go->lzs && go->lzs_checkmode == LZS_CMODE_EXT)
++	    ccp_localstate[f->unit] |= RACK_NOWAIT;
++
+ 	if (ANY_COMPRESS(*ho)) {
+ 	    if (go->method == ho->method) {
+@@ -1140,4 +1379,11 @@
+ 		}
+ 		break;
++	    case CI_LZS:
++		if( optlen >= CILEN_LZS) {
++		    printer(arg, "lzs %s:%d",
++			lzs_mode[LZS_CHECKMODE(p)], LZS_HISTORY(p));
++		    p += CILEN_LZS;
++		}
++		break;
+ 	    case CI_PREDICTOR_1:
+ 		if (optlen >= CILEN_PREDICTOR_1) {
+@@ -1210,8 +1456,16 @@
+ 	     * acknowledgement to a previous reset-request.
+ 	     */
++	    /*
++	     * If we are doing lzs/ext mode, we just send the reset-req
++	     * and forget about the ack because it will never come (its
++	     * included in the packet) - if the decompressor is not acked
++	     * then it will just ask for another reset on every packet.
++	     */
+ 	    if (!(ccp_localstate[f->unit] & RACK_PENDING)) {
+ 		fsm_sdata(f, CCP_RESETREQ, f->reqid = ++f->id, NULL, 0);
+-		TIMEOUT(ccp_rack_timeout, f, RACKTIMEOUT);
+-		ccp_localstate[f->unit] |= RACK_PENDING;
++		if (!(ccp_localstate[f->unit] & RACK_NOWAIT)) {
++		    TIMEOUT(ccp_rack_timeout, f, RACKTIMEOUT);
++		    ccp_localstate[f->unit] |= RACK_PENDING;
++		}
+ 	    } else
+ 		ccp_localstate[f->unit] |= RREQ_REPEAT;

@@ -1,0 +1,16 @@
+--- /dev/null	Thu Apr 17 10:52:18 2003
++++ lkm/Makefile	Thu Apr 17 10:54:51 2003
+@@ -0,0 +1,13 @@
++
++.include "${BSDSRCDIR}/sys/lkm/Makefile.inc"
++
++.PATH: ..
++
++CPPFLAGS+=-I.. -DDO_LZS=1
++MKMAN=	no
++KMOD=	lzs
++SRCS=	lkminit_lzs.c ppp-lzs.c
++
++LDFLAGS=
++
++.include <bsd.kmod.mk>

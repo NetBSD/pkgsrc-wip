@@ -1,0 +1,29 @@
+--- pppd/pppd.8.orig	Tue Apr 15 23:20:09 2003
++++ pppd/pppd.8	Tue Apr 15 23:20:52 2003
+@@ -556,4 +556,17 @@
+ system password database to be allowed access.
+ .TP
++.B lzs \fIrecv-mode\fR:\fIrecv-hist\fR[,\fIxmit-mode\fR:\fIxmit-hist\fR]
++Request that the peer compress packets that it sends with the Stac LZS
++compressor, using the checkmode \fIrecv-mode\fR and a maximum number
++of \fIrecv-hist\fR history buffers, and agree to compress packets sent
++to the peer using the checkmode \fIxmit-mode\fR and a maximum number of
++\fIxmit-hist\fR history buffers. Values for the number of history buffers
++in either direction may be either 0 or 1, and the default is 1. Values
++for the checkmode in either direction may be 0 (None), 1 (LCB), 2 (CRC),
++3 (Sequence Number [this is the default]), and 4 (Extended Mode).
++Alternatively, a negative value for \fIrecv-mode\fR or \fIxmit-mode\fR
++disables compression in the corresponding direction. Use \fInolzs\fR
++to disable Stac LZS compression entirely.
++.TP
+ .B maxconnect \fIn
+ Terminate the connection when it has been available for network
+@@ -709,4 +722,8 @@
+ Do not send log messages to a file or file descriptor.  This option
+ cancels the \fBlogfd\fR and \fBlogfile\fR options.
++.TP
++.B nolzs
++Disable Stac LZS compression; pppd will neither request nor agree to
++compress packets with the Stac LZS scheme.
+ .TP
+ .B nomagic

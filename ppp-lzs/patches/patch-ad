@@ -1,0 +1,46 @@
+--- net/ppp-comp.h.orig	Tue Apr 15 23:06:42 2003
++++ net/ppp-comp.h	Tue Apr 15 23:12:26 2003
+@@ -43,8 +43,18 @@
+ #define DO_DEFLATE	1	/* by default, include Deflate */
+ #endif
++#ifndef DO_LZS
++#define DO_LZS		1	/* by default, include Stac LZS */
++#endif
+ #define DO_PREDICTOR_1	0
+ #define DO_PREDICTOR_2	0
+ 
+ /*
++ * How many entries to make space for in the compressors table.
++ */
++#ifndef PPP_COMPRESSORS_MAX
++#define PPP_COMPRESSORS_MAX	8
++#endif
++
++/*
+  * Structure giving methods for compression/decompression.
+  */
+@@ -157,4 +167,24 @@
+ 				 + DEFLATE_METHOD_VAL)
+ #define DEFLATE_CHK_SEQUENCE	0
++
++/*
++ * Definitions for Stac LZS Compression
++ */
++#define CI_LZS			17	/* config option for Stac LZS */
++#define CILEN_LZS		5	/* length of config option */
++
++#define LZS_CHECKMODE(p)	((p)[4] & 0x7)
++#define LZS_CHECKMODE_MAX	4
++
++#define LZS_CMODE_NONE		0	/* No Checking */
++#define LZS_CMODE_LCB		1	/* Longitudinal Check Byte */
++#define LZS_CMODE_CRC		2	/* CRC-16 */
++#define LZS_CMODE_SEQ		3	/* Sequence Number */
++#define LZS_CMODE_EXT		4	/* Extended Mode */
++
++#define LZS_HISTORY_MAX		1
++#define LZS_HISTORY_MSB(b)	(((b) >> 8) & 0xff)
++#define LZS_HISTORY_LSB(b)	((b) & 0xff)
++#define LZS_HISTORY(p)		(((p)[2] << 8) | (p)[3])
+ 
+ /*

@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/14 01:33:48 jeremy-c-reed Exp $
+
+SHA1 (ppp-lzs-1.0.tar.gz) = ef3dc1098271bc59893aba830022dd5d1d05f742
+Size (ppp-lzs-1.0.tar.gz) = 6028 bytes
+SHA1 (patch-aa) = bd082c909e50bc5cfced832656911a7d8fa073cb
+SHA1 (patch-ab) = 539ad8c7ec618e72efa31e8f0a47a8aa26f31848
+SHA1 (patch-ac) = ab61dcf89fc10ef9d285a1097c1eda879113ca74
+SHA1 (patch-ad) = 6716cf7d810827da3f226f79565504918cf0ce85
+SHA1 (patch-ae) = 9f516cb329eb58188a7d2ec29295635de8691c0a
+SHA1 (patch-af) = f208576a30c7fc7a01644a6380a197eead3600e9
+SHA1 (patch-ag) = bcb0a42abd081454bcd64eaf6ceda72c37ddd04c
+SHA1 (patch-ah) = aaf6046476a13a7223f0d1f203f0db408e588c5c
