@@ -1,0 +1,17 @@
+The Ada compiler front-end of gcc is itself written
+in Ada. Consequently, an Ada compiler must be used
+to build this pkg. In pkgsrc, lang/gcc3-ada is version
+3.3 of the gcc Ada compiler; it also requires an Ada
+compiler to build. This pkg may also be built from an
+installed copy of itself.
+
+For bootstrapping, you can download a pre-built version
+of this package from:
+
+https://www.johnrshannon.com/NetBSD/ix86/gcc-3.4-ada.tgz
+
+A pre-built gcc3-ada may be downloaded from:
+
+https://www.johnrshannon.com/NetBSD/ix86/gcc3-ada.tgz
+
+Both pkgs were built on NetBSD 1.6ZK for Intel ix86 hardware.

@@ -1,0 +1,23 @@
+- Need to address bootstrapping without existing Ada pkg.
+
+- Need to address architectures other than NetBSD with native pthreads.
+
+- Building from an instance of this package, installed in a non-standard
+  location does not work
+
+- The sequence: make && make deinstall && make install does not work
+  because the installation uses on the Ada compiler tools used to
+  build the pkg. It should be possible to use the new tools in the
+  installation.
+
+- Requires fix to lang/gcc3-ada PR pkg/24573 to build. As part of this
+  fix, a buildlink3.mk file was provided for lang/gcc3-ada 
+
+- With the latest snapshot, make test is broken because the gcc scripts
+  depend on an installed tool from gcc 3.4. The tests can be be run with
+  some manipulation of the environment to select gnatls from gcc 3.4.
+
+                === acats Summary ===
+# of expected passes            2322
+# of unexpected failures        0
+
