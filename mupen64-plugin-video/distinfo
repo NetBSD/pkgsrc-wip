@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/04/16 23:57:28 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2004/04/17 00:59:30 xtraeme Exp $
 
 SHA1 (tr64_oglv078_src.tar.bz2) = 539d452b13245425317082b88c47248280457e87
 Size (tr64_oglv078_src.tar.bz2) = 285068 bytes
-SHA1 (patch-aa) = f6c8d248debb176220f36d2c8775fab496154572
+SHA1 (patch-aa) = 5f7908a4a1dd07c959de8801c29dd36fc1cfab9d

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/04/16 23:57:28 xtraeme Exp $
+$NetBSD: patch-aa,v 1.3 2004/04/17 00:59:31 xtraeme Exp $
 
 --- Makefile.orig	2004-04-17 00:07:28.000000000 +0200
 +++ Makefile	2004-04-17 00:08:49.000000000 +0200
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.2 2004/04/16 23:57:28 xtraeme Exp $
  	$(CC) $(CFLAGS) -o $@ $<
  
 +install:
-+	$(BSD_INSTALL_DATA) tr64gl.so $(PREFIX)/share/mupen64/plugins
++	$(BSD_INSTALL_DATA) tr64gl.so $(PREFIX)/share/mupen64-base/plugins
 +
  clean:
  	rm -rf $(OBJECTS) $(ALL)

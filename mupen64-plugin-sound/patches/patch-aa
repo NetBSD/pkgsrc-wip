@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/16 22:30:19 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/17 00:59:30 xtraeme Exp $
 
 --- Makefile.orig	2004-04-16 23:52:03.000000000 +0200
 +++ Makefile	2004-04-16 23:53:56.000000000 +0200
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/16 22:30:19 xtraeme Exp $
  	$(CC) $(CFLAGS) -c -o $@ $<
  
 +install:
-+	$(BSD_INSTALL_DATA) mupen64_audio.so $(PREFIX)/share/mupen64/plugins
++	$(BSD_INSTALL_DATA) mupen64_audio.so $(PREFIX)/share/mupen64-base/plugins
 +
  clean:
  	rm -rf mupen64_audio.so $(OBJECTS)
