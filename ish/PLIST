@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/04 03:14:18 poppnk Exp $
+bin/ish
+sbin/ishd
