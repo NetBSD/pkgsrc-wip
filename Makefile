@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.527 2003/10/06 14:04:17 tvierling Exp $
-# $NetBSD: Makefile,v 1.527 2003/10/06 14:04:17 tvierling Exp $
+# $Id: Makefile,v 1.528 2003/10/07 18:12:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.528 2003/10/07 18:12:11 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -222,6 +222,7 @@ SUBDIR+=	linux-nfs-utils
 SUBDIR+=	liquidwar
 SUBDIR+=	lletters
 SUBDIR+=	lmarbles
+SUBDIR+=	lsdvd
 SUBDIR+=	mailfilter
 SUBDIR+=	mailman
 SUBDIR+=	man-db
@@ -280,8 +281,11 @@ SUBDIR+=	p5-DateTime-Event-Cron
 SUBDIR+=	p5-DateTime-LeapSecond
 SUBDIR+=	p5-DateTime-Set
 SUBDIR+=	p5-DateTime-TimeZone
+SUBDIR+=	p5-ExtUtils-Depends
+SUBDIR+=	p5-ExtUtils-PkgConfig
 SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-GeoIP
+SUBDIR+=	p5-Glib2
 SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTTP-GHTTP
