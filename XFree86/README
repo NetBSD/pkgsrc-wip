@@ -44,7 +44,7 @@ perfectly on:
 x86 (gcc 2.xx.x/3.x):
 
 	* FreeBSD -current
-	* NetBSD -current 
+	* NetBSD 1.6.1 and -current
 	* Debian sid 
 
 At this moment, this meta package doesn't work on NetBSD
