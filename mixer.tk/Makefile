@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/24 21:13:35 jejcic Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/16 23:53:35 jejcic Exp $
 #
 
-DISTNAME=	mixer.tk-0.2
+DISTNAME=	mixer.tk-0.3
 CATEGORIES=	audio
 MASTER_SITES=	http://netbsd.gnorw.net/Applications/mixer.tk/downloads/
 
