@@ -28,6 +28,7 @@ fi
 # PREFERED=""         # space-separated list of prefered packages (for dup)
 
 #----->8--------------#
+VERSION=20050301
 MAKEFLAG="PKG_RESUME_TRANSFERS=YES" # make this as default
 PREFIX=_pfx_
 MAKE=_makebin_
@@ -89,13 +90,14 @@ process_failed () {
 press_any_key () {
 	if [ "${INTERACTIVE}" = "1" ]; then
 		echo "==> Press Ctrl-C to cancel, any other key to proceed."
-		read ME
+		read me
 	fi
 }
 
 do_usage() {
-	echo "Usage $1 [action] [pkgtargets...]"
-	echo "actions:"
+	echo "Usage: $1 [action] [pkgtargets...]"
+	echo ""
+	echo "Actions:"
 	echo "  install      - install/update selected packages."
 	echo "  upgrade      - update the selected packages and solves dependencies."
 	echo "  dist-upgrade - update the entire system."
@@ -108,10 +110,12 @@ do_usage() {
 	echo "  show         - show DESCR of target package."
 	echo "  check        - Checks MD5s of pkg files."
 	echo ""
-	echo "variables (environ|_etc_/apstget.conf):"
+	echo "Variables (environ|_etc_/apstget.conf):"
 	echo "  CLEAN_BUILD=1, INTERACTIVE=1, QUITE=0, IGNORE_ERRORS=0"
 	echo "  UPDATE_METHOD=cvs, UPDATE_ARGS, GET_FIRST=0, PREFERED"
 	echo "  BUILD_PACKAGES=0, SKIP_LICENSES=0"
+	echo ""
+	echo "VERSION=${VERSION}"
 }
 
 check_version() {
@@ -288,6 +292,7 @@ do_install() {
 	for A in ${BDEP} ; do
 		REQUIRED="${REQUIRED} `${PKGFIND} -qx ${A}`"
 	done
+
 	# Get all dependencies
 	DEPS="`${MAKE} ${MAKEFLAG} show-depends-dirs`"
 	for A in ${DEPS} ; do
@@ -310,53 +315,85 @@ do_install() {
 		if [ -n "`echo ${REQUIRED} | grep ${A}`" ]; then
 			IS_INSTALLED="`pkg_info ${A} 2> /dev/null`"
 			if [ -z "${IS_INSTALLED}" ]; then
-				CHK="missing"
+				CHK="preinstall"
 			else
 				CHK="required"
 			fi
 		else
 			CHK=`check_version ${A}`
+			if [ -n "`echo ${CHK} | grep missing`" ]; then
+				CHK=missing;
+			fi
 		fi
+
 		cd ${PKGSRC_DIR}/${A}/
+
+		# package options
 		PVAR=`${MAKE} show-var VARNAME=PKG_OPTIONS_VAR`
-		SPOP=`${MAKE} show-var VARNAME=${PVAR}`
-		POPT="`${MAKE} show-var VARNAME=PKG_SUPPORTED_OPTIONS`"
-		for X in ${POPT}; do
-			if [ "`echo ${SPOP}|grep ${X}`" = "" ]; then
-			PKGO="${PKGO} -${X}"
-			else
-			PKGO="${PKGO} ${X}"
-			fi
-		done
-		if [ -n "${CHK}" ]; then
-		if [ "${CHK}" = "required" ]; then
-			echo " [r] Required upgrade for ${A}"
-			if [ ! "${POPT}" = "" ]; then
-				echo "   <options> ${PKGO}"
-			fi
+		if [ -z "${PVAR}" ]; then
+			SPOP=""
+			POPT=""
 		else
-		if [ -n "`echo ${CHK}|grep missing`" ]; then
+			SPOP=`${MAKE} show-var VARNAME=${PVAR}`
+			POPT="`${MAKE} show-var VARNAME=PKG_SUPPORTED_OPTIONS`"
+			for X in ${POPT}; do
+				WITH=1
+				for Y in ${SPOP}; do
+					case "${Y}" in
+					"${X}")
+						WITH=1
+						break
+						;;
+					"-${X}")
+						WITH=0;
+						break;
+						;;
+					esac
+				done
+				if [ "${WITH}" = "1" ]; then
+					PKGO="${PKGO} ${X}"
+				else
+					PKGO="${PKGO} -${X}"
+				fi
+			done
+		fi
+
+		# check actions for each package
+		case "${CHK}" in
+		"")
+			# nothing to do here :)
+			;;
+		"preinstall")
+			echo " [r] Required install for ${A}"
+			PREINSTALL="${PREINSTALL} ${A}"
+			if [ -n "${POPT}" ]; then echo "   <options> ${PKGO}"; fi
+			;;
+		"required")
+			echo " [r] Required upgrade for ${A}"
+			REPLACE="${A} ${REPLACE}"
+			if [ -n "${POPT}" ]; then echo "   <options> ${PKGO}"; fi
+			;;
+		"missing")
 			echo " [i] Enqueueing for install ${A}"
 			INSTALL="${INSTALL} ${A}"
-			if [ ! "${POPT}" = "" ]; then
-				echo "   <options> ${PKGO}"
-			fi
-		else
-		if [ -n "`echo ${CHK}| grep from`" ]; then
-			echo " [u] Need to update ${A} ${CHK}"
-			if [ ! "${POPT}" = "" ]; then
-				echo "   <options> ${POPT}"
-			fi
-			if [ "${UPD}" = "1" ]; then
-				REPLACE="${REPLACE} ${A}"
-			else
-			if [ "${A}" = "${DIR}" ]; then
-				REPLACE="${REPLACE} ${A}"
+			if [ -n "${POPT}" ]; then echo "   <options> ${PKGO}" ; fi
+			;;
+		*)
+			if [ -n "`echo ${CHK}| grep from`" ]; then
+				echo " [u] Need to update ${A} ${CHK}"
+				if [ ! "${POPT}" = "" ]; then
+					echo "   <options> ${PKGO}"
 				fi
-			fi;fi
-		  fi
-		  fi
-		fi
+				if [ "${UPD}" = "1" ]; then
+					REPLACE="${REPLACE} ${A}"
+				else
+					if [ "${A}" = "${DIR}" ]; then
+						REPLACE="${REPLACE} ${A}"
+					fi
+				fi
+			fi
+			;;
+		esac
 		# Add new deps
 		cd ${PKGSRC_DIR}/${A}
 		if [ "${SKIP_LICENSES}" = "1" ]; then
@@ -379,14 +416,14 @@ do_install() {
 
 	press_any_key
 
-	# required list
-	if [ -n "${REQUIRED}" ]; then
-	for A in ${REQUIRED}; do
-		echo "==> Upgrading ${A}..."
+	# required install
+	if [ -n "${PREINSTALL}" ]; then
+	for A in ${PREINSTALL}; do
+		echo "==> Preinstalling ${A}"
 		cd ${PKGSRC_DIR}/${A}
 		${MAKE} ${MAKEFLAG} fetch
 		do_make_clean
-		${MAKE} ${MAKEFLAG} replace ${UD_TARGETS} | ${WRAPPER} 2>&1
+		${MAKE} ${MAKEFLAG} install ${UD_TARGETS} | ${WRAPPER} 2>&1
 		do_make_package
 		do_make_clean
 		if [ ! "$?" = "0" ]; then
@@ -394,13 +431,12 @@ do_install() {
 			process_failed
 		else
 			echo "==> Process finished."
-			do_auto_relink ${A}
 		fi
 	done
 	fi
 
 	# replace list
-	if [ ! "${REPLACE}" = "" ]; then
+	if [ -n "${REPLACE}" ]; then
 	for A in ${REPLACE}; do
 		echo "==> Upgrading ${A}..."
 		cd ${PKGSRC_DIR}/${A}
@@ -420,7 +456,7 @@ do_install() {
 	fi
 
 	# install list
-	if [ ! "${INSTALL}" = "" ]; then
+	if [ -n "${INSTALL}" ]; then
 	for A in ${INSTALL}; do
 		echo "==> Installing ${A}"
 		cd ${PKGSRC_DIR}/${A}
