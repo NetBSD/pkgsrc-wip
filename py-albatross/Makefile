@@ -1,0 +1,54 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/07/12 15:23:43 marc Exp $
+#
+
+DISTNAME=	albatross-1.10pre2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	www python
+MASTER_SITES=	http://www.object-craft.com.au/projects/albatross/download/
+
+MAINTAINER=	marc@informatik.uni-bremen.de
+HOMEPAGE=	http://www.object-craft.com.au/projects/albatross/
+COMMENT=	Toolkit for Stateful Web Applications
+
+PYDISTUTILSPKG=	yes
+PY_PATCHPLIST=	yes
+USE_BUILDLINK2=	yes
+
+RUNTIME_DIR?=	/var/run/albatross
+EXAMPLEDIR=	${PREFIX}/share/examples/albatross
+LOGDIR?=	/var/log/albatross
+LOGFILE?=	${LOGDIR}/al-session-daemon.log
+PIDFILE?=	/var/run/albatross/session-daemon.pid
+
+ALBATROSS_USER=	albatross
+ALBATROSS_GROUP=albatross
+
+FILES_SUBST+=	ALBATROSS_USER=${ALBATROSS_USER}
+FILES_SUBST+=	ALBATROSS_GROUP=${ALBATROSS_GROUP}
+FILES_SUBST+=	RUNTIME_DIR=${RUNTIME_DIR}
+FILES_SUBST+=	LOGFILE=${LOGFILE}
+FILES_SUBST+=	PIDFILE=${PIDFILE}
+
+RCD_SCRIPTS=	al_session_daemon
+PKG_GROUPS=	${ALBATROSS_USER}
+PKG_USERS=	${ALBATROSS_USER}:${ALBATROSS_GROUP}
+
+OWN_DIRS=	${RUNTIME_DIR}
+OWN_DIRS+=	${LOGDIR}
+OWN_DIRS_PERMS=	${RUNTIME_DIR} ${ALBATROSS_USER} ${ALBATROSS_GROUP} 0750
+OWN_DIRS_PERMS+=${LOGDIR} ${ALBATROSS_USER} ${ALBATROSS_GROUP} 0750
+
+# XXX chmod/chown shouldn't be there OWN_DIRS* should handle this
+post-install:
+	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
+	cd ${WRKSRC}/samples && ${FIND} . -type f \! -name \.cvsignore \
+		-print | ${PAX} -rw -pp -pm ${EXAMPLEDIR}
+	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py \
+		${PREFIX}/${PYSITELIB}/albatross
+	${CHMOD} 0750 ${RUNTIME_DIR} ${LOGDIR}
+	${CHOWN} ${PKG_USERS} ${RUNTIME_DIR} ${LOGDIR}
+
+.include "../../lang/python/extension.mk"
+
+.include "../../mk/bsd.pkg.install.mk"
+.include "../../mk/bsd.pkg.mk"
