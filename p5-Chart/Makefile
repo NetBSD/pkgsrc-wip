@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/26 14:43:01 adrian_p Exp $
-#
+# $NetBSD: Makefile,v 1.4 2004/11/03 08:58:50 absd Exp $
 
 DISTNAME=	Chart-2.3
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +11,7 @@ COMMENT=	Perl5 charting library
 
 DEPENDS+=	p5-GD>=1.32:../../graphics/p5-GD
 
-NO_BUILDLINK=	YES
-
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Chart/.packlist
 
 .include "../../lang/perl5/module.mk"
