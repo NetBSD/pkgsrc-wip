@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/08/07 07:55:14 amadeus_z Exp $
-
-If you do not have a hardware accelerated card, armagetron may run very
-slowly (2-5fps) unless you disable all textures and features in-game, and
-use a very low resolution.
-
-===========================================================================
