@@ -1,0 +1,11 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/03/06 07:20:11 jeremy-c-reed Exp $
+
+GETTEXT_VERSION=	0.14.1
+DISTNAME=		gettext-${GETTEXT_VERSION}
+CATEGORIES=		devel
+MASTER_SITES=		${MASTER_SITE_GNU:=gettext/}
+
+MAINTAINER=		tech-pkg@NetBSD.org
+HOMEPAGE=		http://www.gnu.org/software/gettext/gettext.html
+
+GNU_CONFIGURE=		yes

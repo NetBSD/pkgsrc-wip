@@ -1,0 +1,8 @@
+make a mk/libintl.mk file?
+this provides libintl.so on NetBSD even if NetBSD has native
+
+has wrong version numbers?
+lib/libasprintf.so.0.0
+maybe force newer version of libtool?
+
+older gettext needed groff to build

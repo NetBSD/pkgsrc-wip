@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1.1.1 2004/03/06 07:20:11 jeremy-c-reed Exp $
+include/libintl.h
+lib/charset.alias
+lib/libintl.a
+lib/libintl.la
+lib/libintl.so
+lib/libintl.so.7
+lib/libintl.so.7.0
+${PKGLOCALEDIR}/locale/locale.alias
