@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/08/03 21:17:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2004/08/04 04:25:31 marttikuparinen Exp $
 
 DISTNAME=		JAlbum
 PKGNAME=		jalbum-4.6
@@ -23,7 +23,6 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/jalbum ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/JAlbum
 	(cd ${WRKDIR} && ${TAR} -cf - JAlbum) | ${TAR} -xf - -C ${PREFIX}
 
 .include "../../mk/java-vm.mk"
