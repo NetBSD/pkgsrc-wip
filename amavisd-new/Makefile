@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2004/02/25 05:09:00 jcd Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/26 03:36:52 jcd Exp $
 
-DISTNAME=	amavisd-new-${VERSION}
-PKGNAME=	${DISTNAME}${PATCHLEVEL}
-WRKSRC=         ${WRKDIR}/${DISTNAME}
+DISTNAME=	amavisd-new-${VERSION}-${PATCHLEVEL}
+PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
+WRKSRC=		${WRKDIR}/amavisd-new-${VERSION}
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://mirrors.catpipe.net/amavisd-new/ \
 		http://ftp.cfu.net/pub/amavisd-new/ \
 		ftp://ftp.cfu.net/pub/amavisd-new/
-DISTFILES=      ${DISTNAME}-${PATCHLEVEL}${EXTRACT_SUFX}
 
 MAINTAINER=	jdunn@aquezada.com
 HOMEPAGE=	http://www.ijs.si/software/amavisd/
