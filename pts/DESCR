@@ -1,0 +1,15 @@
+Perl TetriNET  Server (pts) is a tetrinet server written in perl. pts
+   has the following features:
+     * Written in Perl. You can run PTS on Windows/Unix/etc.
+     * Supports multiple channels.
+     * Supports TetriNET and TetriFAST clients. (no Tspec, no IRC)
+     * Supports Query (IRC bot's check) access.
+     * 10 level authority.
+     * Game statistics.
+     * User Profile with registered nick (no registered team yet).
+     * Ping.
+     * Async DNS lookup.
+     * Anti flood.
+     * Imperfect detection of cheat programs.
+
+Email to : drick@zippy.sonoma.edu
