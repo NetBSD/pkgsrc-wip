@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/24 04:33:13 xtraeme Exp $
+bin/gnome-pkgview
+share/applications/gnome-pkgview.desktop
+share/gconf/schemas/gnome-pkgview.schemas
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-pkgview.mo
+share/pixmaps/gnome-pkgview/logo.png
+share/pixmaps/gnome-pkgview/pkgview.png
+@dirrm share/pixmaps/gnome-pkgview
