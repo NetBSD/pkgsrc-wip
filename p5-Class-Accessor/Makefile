@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/18 19:02:01 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/20 03:57:34 minskim Exp $
 #
 
 DISTNAME=	Class-Accessor-0.18
@@ -11,7 +11,9 @@ MAINTAINER=	hiramatu@boreas.dti.ne.jp
 HOMEPAGE=	http://search.cpan.org/dist/Class-Accessor/
 COMMENT=	Automated accessor generation
 
-USE_BUILDLINK2=	YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Class/Accessor/.packlist
 
 .include "../../lang/perl5/module.mk"
