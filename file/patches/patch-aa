@@ -1,4 +1,5 @@
-$NetBSD: patch-aa,v 1.1 2003/04/13 04:03:20 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.2 2003/04/13 08:17:27 jmmv Exp $
+
 --- src/Makefile.in.orig	Fri Apr 11 19:37:59 2003
 +++ src/Makefile.in	Fri Apr 11 19:41:12 2003
 @@ -122,13 +122,13 @@
