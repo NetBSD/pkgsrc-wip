@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/09 18:01:22 marttikuparinen Exp $
+
+SHA1 (mysql-3.23.57.tar.gz) = 99c3643158ea03d8f96f1ea8acc2d02ab635cdae
+Size (mysql-3.23.57.tar.gz) = 11738262 bytes
+SHA1 (patch-af) = 0ac0172c264b9c9e8f173d29085096bc1c611132

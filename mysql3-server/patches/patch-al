@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2003/07/09 18:02:10 marttikuparinen Exp $
+
+--- include/my_pthread.h.orig	Sat Feb 15 21:41:38 2003
++++ include/my_pthread.h	Sat Feb 15 21:42:30 2003
+@@ -294,7 +294,7 @@
+ #endif
+ 
+ #ifndef HAVE_NONPOSIX_SIGWAIT
+-#define my_sigwait(A,B) sigwait((A),(B))
++#define my_sigwait(A,B) __pthread_sigwait((A),(B))
+ #else
+ int my_sigwait(const sigset_t *set,int *sig);
+ #endif

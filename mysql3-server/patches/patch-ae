@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/07/09 18:02:10 marttikuparinen Exp $
+
+--- configure.in.orig	Tue Jan 21 20:41:56 2003
++++ configure.in	Sat Feb 15 21:44:31 2003
+@@ -1562,7 +1562,7 @@
+  tell atod memcpy memmove \
+  setupterm strcasecmp sighold vidattr lrand48 localtime_r \
+  sigset sigthreadmask pthread_sigmask pthread_setprio pthread_setprio_np \
+- pthread_setschedparam pthread_attr_setprio pthread_attr_setschedparam \
++ pthread_attr_setprio \
+  pthread_attr_create pthread_getsequence_np pthread_attr_setstacksize \
+  pthread_condattr_create rwlock_init pthread_rwlock_rdlock \
+  fchmod getpass getpassphrase initgroups mlockall)
+@@ -1850,7 +1850,6 @@
+ else
+   bench_dirs=""
+ fi
+-bench_dirs="$bench_dirs mysql-test"
+ AC_SUBST(bench_dirs)
+ 
+ # Don't build readline, i have it already
