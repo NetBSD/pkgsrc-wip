@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/21 14:12:18 imilh Exp $
+include/torrent/entry.h
+include/torrent/http.h
+include/torrent/peer.h
+include/torrent/torrent.h
+include/torrent/tracker.h
+include/torrent/bencode.h
+include/torrent/common.h
+include/torrent/download.h
+include/torrent/exceptions.h
+lib/libtorrent.la
+lib/pkgconfig/libtorrent.pc
+@unexec ${RMDIR} lib/pkgconfig/libtorrent.pc >/dev/null 2>&1 || ${TRUE}
+@dirrm include/torrent
