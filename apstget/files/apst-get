@@ -101,16 +101,18 @@ check_version() {
 	else
 		cPKG=`echo $cPKG | awk -F / '{ print $2 }'`
 	fi
-        IVER=`pkg_info -e $cPKG`
-        if [ "$?" = "1" ]; then
-                echo "missing"
-        else
-                cd ${PKGSRC_DIR}/${cDIR}
-                DVER=`${MAKE} show-var VARNAME=PKGNAME 2> /dev/null`
-                if [ ! "${DVER}" = "${IVER}" ]; then
-                        echo "from ${IVER} to ${DVER}"
-                fi
-        fi
+		cd ${PKGSRC_DIR}/${cDIR}/
+		cPKG=`${MAKE} show-var VARNAME=PKGNAME | awk -F '([.\-]*)-[0-9]' '{print $1 }'`
+		IVER=`pkg_info -e $cPKG`
+		if [ "$?" = "1" ]; then
+			echo "missing"
+		else
+			cd ${PKGSRC_DIR}/${cDIR}
+			DVER=`${MAKE} show-var VARNAME=PKGNAME 2> /dev/null`
+			if [ ! "${DVER}" = "${IVER}" ]; then
+				echo "from ${IVER} to ${DVER}"
+			fi
+		fi
 
 	fi
 }
@@ -165,6 +167,7 @@ do_install() {
 	for A in ${DEPS} ; do
 		CHK=`check_version ${A}`
 		#CHK=`echo ${A} | ${PKGCHK} -C /dev/stdin -c`
+		if [ ! "${CHK}" = "" ]; then
 		if [ ! "`echo ${CHK}|grep missing`" = "" ]; then
 			echo " [i] Enqueueing for install ${A}"
 			INSTALL="${INSTALL} ${A}"
@@ -178,6 +181,7 @@ do_install() {
 				REPLACE="${REPLACE} ${A}"
 				fi
 			fi;fi
+		  fi
 		fi
 	done
 	fi
