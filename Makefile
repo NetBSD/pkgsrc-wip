@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1586 2004/12/28 03:32:50 minskim Exp $
-# $NetBSD: Makefile,v 1.1586 2004/12/28 03:32:50 minskim Exp $
+# $Id: Makefile,v 1.1587 2004/12/28 09:46:56 imilh Exp $
+# $NetBSD: Makefile,v 1.1587 2004/12/28 09:46:56 imilh Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -217,6 +217,7 @@ SUBDIR+=	fox
 SUBDIR+=	freevo
 SUBDIR+=	frontpage
 SUBDIR+=	ftpsesame
+SUBDIR+=	ftpd-tls
 SUBDIR+=	fvcool
 SUBDIR+=	fwbuilder
 SUBDIR+=	g21k-binutils
