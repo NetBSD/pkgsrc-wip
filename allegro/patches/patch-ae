@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/04/06 11:17:20 thomasklausner Exp $
+$NetBSD: patch-ae,v 1.2 2003/07/02 21:00:28 blef Exp $
 
---- src/unix/uoss.c.orig	Sat Dec 21 09:34:32 2002
-+++ src/unix/uoss.c
-@@ -176,6 +176,8 @@ static void oss_update(int threaded)
+--- src/unix/uoss.c.orig	Sun Jun 29 16:27:04 2003
++++ src/unix/uoss.c	Wed Jul  2 13:25:43 2003
+@@ -176,6 +176,8 @@
  	 _mix_some_samples((unsigned long) oss_bufdata, 0, oss_signed);
        }
     }
@@ -11,7 +11,16 @@ $NetBSD: patch-ae,v 1.1.1.1 2003/04/06 11:17:20 thomasklausner Exp $
  }
  
  
-@@ -583,6 +585,7 @@ static int oss_rec_read(void *buf)
+@@ -191,7 +193,7 @@
+ 
+    ustrzcpy(_oss_driver, sizeof(_oss_driver), get_config_string(uconvert_ascii("sound", tmp1),
+ 					                        uconvert_ascii("oss_driver", tmp2),
+-					                        uconvert_ascii("/dev/dsp", tmp3)));
++					                        uconvert_ascii(DEVOSSAUDIO, tmp3)));
+ 
+    ustrzcpy(_oss_mixer_driver, sizeof(_oss_mixer_driver), get_config_string(uconvert_ascii("sound", tmp1),
+ 					                                    uconvert_ascii("oss_mixer_driver", tmp2),
+@@ -583,6 +585,7 @@
  	 p[i] ^= 0x80;
     }
  
