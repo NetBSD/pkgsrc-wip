@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/11/23 00:19:42 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/11/25 22:19:07 mpasternak Exp $
 bin/ckeygen
 bin/conch
 bin/im
@@ -114,7 +114,6 @@ ${PYSITELIB}/twisted/conch/ssh/sexpy.pyo
 ${PYSITELIB}/twisted/conch/ssh/transport.py
 ${PYSITELIB}/twisted/conch/ssh/transport.pyc
 ${PYSITELIB}/twisted/conch/ssh/transport.pyo
-${PYSITELIB}/twisted/conch/ssh/transport.py~
 ${PYSITELIB}/twisted/conch/ssh/ttymodes.py
 ${PYSITELIB}/twisted/conch/ssh/ttymodes.pyc
 ${PYSITELIB}/twisted/conch/ssh/ttymodes.pyo
@@ -1385,7 +1384,6 @@ ${PYSITELIB}/twisted/web/trp.pyo
 ${PYSITELIB}/twisted/web/twcgi.py
 ${PYSITELIB}/twisted/web/twcgi.pyc
 ${PYSITELIB}/twisted/web/twcgi.pyo
-${PYSITELIB}/twisted/web/twcgi.py~
 ${PYSITELIB}/twisted/web/util.py
 ${PYSITELIB}/twisted/web/util.pyc
 ${PYSITELIB}/twisted/web/util.pyo
