@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2004/02/11 22:58:29 johnrshannon Exp $
+# $NetBSD: Makefile.common,v 1.8 2004/02/12 19:40:20 johnrshannon Exp $
 #
 
 SNAPDATE=	20040211
@@ -22,7 +22,7 @@ HAS_CONFIGURE=		YES
 .include "../../mk/bsd.prefs.mk"
 
 # Make location overridable, to allow ping-pong bootstraps.
-GCC3_DEFAULT_SUBPREFIX=	gcc3devel
+GCC3_DEFAULT_SUBPREFIX=	gcc-3.4
 GCC3_INSTALLTO_SUBPREFIX?=	${GCC3_DEFAULT_SUBPREFIX}
 .if ${GCC3_INSTALLTO_SUBPREFIX} != ${GCC3_DEFAULT_SUBPREFIX}
 GCC3_PKGMODIF=		_${GCC3_INSTALLTO_SUBPREFIX}
