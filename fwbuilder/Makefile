@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/17 02:55:20 blef Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/27 00:47:18 blef Exp $
 #
 
 DISTNAME=		fwbuilder-1.0.11
@@ -11,7 +11,7 @@ COMMENT=		Firewall configuration and management tool
 
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -25,9 +25,9 @@ pre-configure:
 	cd ${WRKSRC} && ${ACLOCAL}
 	cd ${WRKSRC} && ${AUTOCONF}
 
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../x11/gtk--/buildlink2.mk"
-.include "../../wip/libfwbuilder/buildlink2.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../x11/gtk--/buildlink3.mk"
+.include "../../wip/libfwbuilder/buildlink3.mk"
 
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
