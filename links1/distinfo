@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.8 2004/10/29 10:13:07 thomasklausner Exp $
+$NetBSD: distinfo,v 1.9 2005/04/04 08:43:18 thomasklausner Exp $
 
-SHA1 (links-1.00pre12.tar.gz) = b2c122e54ddacf29b1cde94a77116d291f6fdab9
-Size (links-1.00pre12.tar.gz) = 597333 bytes
+SHA1 (links-1.00pre13.tar.gz) = 4a7c4bf91f8a25ef82f0f1db7ed05136768c894e
+RMD160 (links-1.00pre13.tar.gz) = d618d6440e3bd05fb9a659f2dca47849755c9284
+Size (links-1.00pre13.tar.gz) = 602966 bytes
