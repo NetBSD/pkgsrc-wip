@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/22 20:00:30 oherrala Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/07 22:40:23 oherrala Exp $
 #
 
 DISTNAME=		${SILC_TOOLKIT_DISTNAME}
@@ -24,7 +24,6 @@ USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/lib/silcmath/mpi/libtool
 
 CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
 CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
@@ -36,6 +35,7 @@ CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/silc-toolkit/modules
 CONFIGURE_ARGS+=	--with-logsdir=${PREFIX}/share/silc-toolkit/logs
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/silc-toolkit
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/silc-toolkit
+CONFIGURE_ARGS+=	--enable-shared=yes --enable-static=yes
 CONFIGURE_ARGS+=	--without-libtoolfix
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--without-irssi
@@ -57,7 +57,7 @@ CONFIGURE_ARGS+=	--disable-asm
 
 # If you want to debug silc-toolkit, uncomment this.
 #
-#CONFIGURE_ARGS+=	--enable-debug
+CONFIGURE_ARGS+=	--enable-debug
 
 #PLIST_SRC+=		${PKGDIR}/PLIST
 
