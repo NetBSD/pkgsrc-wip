@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/01/04 02:07:02 poppnk Exp $
-
-SHA1 (pnetlib-0.6.2.tar.gz) = 36a861395831e37209cc0cf6acd1062e5239c827
-Size (pnetlib-0.6.2.tar.gz) = 3473746 bytes
-SHA1 (patch-aa) = 145a6e643df64982d8c919055a1418377958dd58
-SHA1 (patch-ab) = 4d15add2187792c0914ac310a2836590368631cc
-SHA1 (patch-ac) = 14b17466cbbe605ccd03cd71db846fc098da8e15

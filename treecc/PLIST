@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2003/10/26 10:49:01 poppnk Exp $
-@unexec install-info --delete
-bin/treecc
-info/treecc.info
-man/man1/treecc.1
-@exec install-info
