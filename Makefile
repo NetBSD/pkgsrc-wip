@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.565 2003/10/24 04:10:27 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.565 2003/10/24 04:10:27 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.566 2003/10/24 14:32:05 atamaniuk Exp $
+# $NetBSD: Makefile,v 1.566 2003/10/24 14:32:05 atamaniuk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -239,6 +239,7 @@ SUBDIR+=	libvorbis-nightly
 SUBDIR+=	libwpd
 SUBDIR+=	liferea
 SUBDIR+=	lilo
+SUBDIR+=	lilypond20
 SUBDIR+=	lincvs
 SUBDIR+=	links-hacked
 SUBDIR+=	linux-makedev
