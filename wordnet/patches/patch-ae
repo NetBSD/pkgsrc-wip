@@ -1,0 +1,18 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
+
+--- src/wnb/Makefile.orig	2003-07-15 17:18:03.000000000 +0200
++++ src/wnb/Makefile
+@@ -20,9 +20,10 @@ WNB_LIBS = -ltk8.3 -ltcl8.3 -lX11 -lm -l
+ 
+ CC = gcc
+ LOCAL_CFLAGS = -O -DUNIX -I$(TCL_INCDIR) -I$(TK_INCDIR) -I$(X11_INCDIR)
+-CFLAGS = -I$(WN_INCDIR) $(LOCAL_CFLAGS)
+-LOCAL_LDFLAGS = -L$(TCL_LIBDIR) -L$(TK_LIBDIR) -L$(X11_LIBDIR)
+-LDFLAGS= -L$(WN_LIBDIR) $(LOCAL_LDFLAGS)
++CFLAGS = -I../include $(LOCAL_CFLAGS)
++LOCAL_LDFLAGS  = -Wl,-L$(TCL_LIBDIR) -Wl,-L$(TK_LIBDIR) -Wl,-L$(X11_LIBDIR)
++LOCAL_LDFLAGS += -Wl,-R$(TCL_LIBDIR) -Wl,-R$(TK_LIBDIR) -Wl,-R$(X11_LIBDIR)
++LDFLAGS= -Wl,-L../lib -Wl,-L$(WN_LIBDIR) $(LOCAL_LDFLAGS)
+ LIBS = -lwn $(WNB_LIBS)
+ 
+ WN_FILES = wishwn wnb

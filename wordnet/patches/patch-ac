@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
+
+--- src/lib/Makefile.orig	2003-07-15 16:42:31.000000000 +0200
++++ src/lib/Makefile
+@@ -12,7 +12,7 @@ OBJ = binsrch.o morph.o search.o setutil
+ 
+ CC = gcc
+ LOCAL_CFLAGS = -O -DUNIX
+-CFLAGS = -I$(WN_INCDIR) $(LOCAL_CFLAGS)
++CFLAGS = -I../include $(LOCAL_CFLAGS)
+ 
+ all: $(WN_FILES) 
+ 

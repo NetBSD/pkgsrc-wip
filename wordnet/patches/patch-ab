@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
+
+--- src/Makefile.orig	2003-07-15 18:51:55.000000000 +0200
++++ src/Makefile
+@@ -30,7 +30,7 @@ APPDIRS = wn wnb grind
+ INCDIR = include
+ SUBDIRS = $(LIBDIR) $(APPDIRS) $(INCDIR)
+ 
+-all: inc library compile
++all: library compile
+ 
+ inc:
+ 	@( cd $(INCDIR) ; echo "Installing $(INCDIR).."; $(MAKE) WN_INSTALLDIR='$(WN_INCDIR)' all install)
+@@ -38,6 +38,8 @@ inc:
+ library:
+ 	@( cd $(LIBDIR) ; echo "Making WordNet library libwn.a" ; $(MAKE) -k CC='$(CC)' WN_INCDIR='$(WN_INCDIR)' LOCAL_CFLAGS='$(LOCAL_CFLAGS)' all )
+ 	@echo "Done compiling library"
++
++libinst:
+ 	@( cd $(LIBDIR) ; echo "Installing $(LIBDIR).."; $(MAKE) WN_INSTALLDIR='$(WN_LIBDIR)' install )
+ 
+ compile: 
+@@ -46,7 +48,7 @@ compile: 
+ 		if [ -d $$dir -a $$dir = "wnb" ] ; then \
+ 			echo "Compiling $$dir..." ; \
+ 			(cd $$dir ; \
+-			$(MAKE) -k CC='$(CC)' LOCAL_CFLAGS='$(LOCAL_CFLAGS) -I$(TCL_INCDIR) -I$(TK_INCDIR) -I$(X11_INCDIR)' LOCAL_LDFLAGS='$(LOCAL_LDFLAGS) -L$(TCL_LIBDIR) -L$(TK_LIBDIR) -L$(X11_LIBDIR)' LIBS='$(WNB_LIBS) $(LIBS)' WN_INCDIR='$(WN_INCDIR)' WN_LIBDIR='$(WN_LIBDIR)' all )  \
++			$(MAKE) -k CC='$(CC)' LOCAL_CFLAGS='$(LOCAL_CFLAGS) -I$(TCL_INCDIR) -I$(TK_INCDIR) -I$(X11_INCDIR)' LOCAL_LDFLAGS='$(LOCAL_LDFLAGS) -Wl,-L$(TCL_LIBDIR) -Wl,-L$(TK_LIBDIR) -Wl,-R$(TCL_LIBDIR) -Wl,-R$(TK_LIBDIR) -Wl,-R$(X11_LIBDIR) -Wl,-L$(X11_LIBDIR)' LIBS='$(WNB_LIBS) $(LIBS)' WN_INCDIR='$(WN_INCDIR)' WN_LIBDIR='$(WN_LIBDIR)' all )  \
+ 		elif [ -d $$dir ] ; then \
+ 			echo "Compiling $$dir..." ; \
+ 			(cd $$dir ; \
+@@ -57,7 +59,7 @@ compile: 
+ 	 done ;
+ 	@echo "Done compiling interfaces"
+ 
+-install:
++install: inc libinst
+ 	@for dir in $(APPDIRS) ; \
+ 	 do \
+ 		if [ -d $$dir ] ; then \

@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/03/03 09:59:04 airhead Exp $
+
+--- src/wn/Makefile.orig	2003-07-15 17:52:47.000000000 +0200
++++ src/wn/Makefile
+@@ -9,9 +9,9 @@ WN_LIBDIR = $(WN_ROOT)/lib
+ 
+ CC = gcc
+ LOCAL_CFLAGS = -O -DUNIX
+-CFLAGS = -I$(WN_INCDIR) $(LOCAL_CFLAGS)
++CFLAGS = -I../include $(LOCAL_CFLAGS)
+ LOCAL_LDFLAGS = -static
+-LDFLAGS= -L$(WN_LIBDIR) $(LOCAL_LDFLAGS)
++LDFLAGS= -Wl,-L../lib -Wl,-R$(WN_LIBDIR) $(LOCAL_LDFLAGS)
+ LIBS = -lwn
+ 
+ WN_FILES = wn
