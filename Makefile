@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1396 2004/07/16 20:46:50 ppostma Exp $
-# $NetBSD: Makefile,v 1.1396 2004/07/16 20:46:50 ppostma Exp $
+# $Id: Makefile,v 1.1397 2004/07/18 15:55:14 cetrox Exp $
+# $NetBSD: Makefile,v 1.1397 2004/07/18 15:55:14 cetrox Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -72,6 +72,7 @@ SUBDIR+=	ccze
 SUBDIR+=	cdl3
 SUBDIR+=	cdpr
 SUBDIR+=	cgic
+SUBDIR+=	chbg
 SUBDIR+=	cherokee
 SUBDIR+=	chksniff
 SUBDIR+=	chora
