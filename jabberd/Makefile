@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/10/06 14:25:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.22 2003/10/08 00:17:29 xtraeme Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -37,6 +37,11 @@ JABBERD_GROUP?=		jabberd
 PKG_GROUPS=             ${JABBERD_GROUP}
 PKG_USERS=              ${JABBERD_USER}:${JABBERD_GROUP}::Jabberd\\ user
 
+FILES_SUBST+=		JABBERD_USER="${JABBERD_USER}"
+FILES_SUBST+=		JABBERD_GROUP="${JABBERD_GROUP}"
+FILES_SUBST+=		JABBERD_SPOOLDIR="${JABBERD_SPOOLDIR}"
+FILES_SUBST+=		JABBERD_PIDDIR="${JABBERD_PIDDIR}"
+
 JABBERD_LOGDIR?=	/var/log/jabberd
 JABBERD_SPOOLDIR?=	/var/spool/jabberd
 JABBERD_PIDDIR?=	/var/run/jabberd
@@ -73,6 +78,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/lib.h ${INCDIR}
 	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/xmlparse.h ${INCDIR}
 
-.include "../../devel/pth/buildlink2.mk" # uses pth.h, not pthread.h
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
