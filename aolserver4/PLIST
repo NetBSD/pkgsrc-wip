@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/08 21:01:01 ianharding Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/07/20 18:15:55 ianharding Exp $
 bin/init.tcl
 bin/install-sh
 bin/nscgi.so
@@ -873,15 +873,7 @@ share/nsd/servers/server1/modules/nsperm/hosts.allow
 share/nsd/servers/server1/modules/nsperm/hosts.deny
 share/nsd/servers/server1/modules/nsperm/passwd
 share/nsd/servers/server1/modules/nsperm/perms
-share/nsd/servers/server1/pages/tests/CVS/Entries
-share/nsd/servers/server1/pages/tests/CVS/Repository
-share/nsd/servers/server1/pages/tests/CVS/Root
-share/nsd/servers/server1/pages/tests/CVS/Tag
 share/nsd/servers/server1/pages/tests/README-tests.txt
-share/nsd/servers/server1/pages/tests/adp/CVS/Entries
-share/nsd/servers/server1/pages/tests/adp/CVS/Repository
-share/nsd/servers/server1/pages/tests/adp/CVS/Root
-share/nsd/servers/server1/pages/tests/adp/CVS/Tag
 share/nsd/servers/server1/pages/tests/adp/test1.adp
 share/nsd/servers/server1/pages/tests/adp/test2.adp
 share/nsd/servers/server1/pages/tests/adp/test3.adp
@@ -898,51 +890,24 @@ share/nsd/servers/server1/pages/tests/adp/test8a.adp
 share/nsd/servers/server1/pages/tests/adp/test8b.adp
 share/nsd/servers/server1/pages/tests/adp/test9.adp
 share/nsd/servers/server1/pages/tests/adp/test9.inc
-share/nsd/servers/server1/pages/tests/api/CVS/Entries
-share/nsd/servers/server1/pages/tests/api/CVS/Repository
-share/nsd/servers/server1/pages/tests/api/CVS/Root
-share/nsd/servers/server1/pages/tests/api/CVS/Tag
 share/nsd/servers/server1/pages/tests/api/ns_conn.adp
 share/nsd/servers/server1/pages/tests/api/ns_job.adp
 share/nsd/servers/server1/pages/tests/api/ns_localtime.adp
-share/nsd/servers/server1/pages/tests/cdev/CVS/Entries
-share/nsd/servers/server1/pages/tests/cdev/CVS/Repository
-share/nsd/servers/server1/pages/tests/cdev/CVS/Root
-share/nsd/servers/server1/pages/tests/cdev/CVS/Tag
 share/nsd/servers/server1/pages/tests/cdev/test1.adp
-share/nsd/servers/server1/pages/tests/dbase/CVS/Entries
-share/nsd/servers/server1/pages/tests/dbase/CVS/Repository
-share/nsd/servers/server1/pages/tests/dbase/CVS/Root
-share/nsd/servers/server1/pages/tests/dbase/CVS/Tag
 share/nsd/servers/server1/pages/tests/dbase/test1.adp
 share/nsd/servers/server1/pages/tests/index.adp
 share/nsd/servers/server1/pages/tests/nstelemetry.adp
-share/nsd/servers/server1/pages/tests/sec/CVS/Entries
-share/nsd/servers/server1/pages/tests/sec/CVS/Repository
-share/nsd/servers/server1/pages/tests/sec/CVS/Root
-share/nsd/servers/server1/pages/tests/sec/CVS/Tag
 share/nsd/servers/server1/pages/tests/sec/test1.adp
-share/nsd/servers/server1/pages/tests/tcl/CVS/Entries
-share/nsd/servers/server1/pages/tests/tcl/CVS/Repository
-share/nsd/servers/server1/pages/tests/tcl/CVS/Root
-share/nsd/servers/server1/pages/tests/tcl/CVS/Tag
 share/nsd/servers/server1/pages/tests/tcl/test1.tcl
 share/nsd/servers/server1/pages/tests/tcl/test1a.tcl
 share/nsd/servers/server1/pages/tests/tcl/test1b.tcl
 share/nsd/servers/server1/pages/tests/tests.html
-@dirrm share/nsd/servers/server1/pages/tests/tcl/CVS
 @dirrm share/nsd/servers/server1/pages/tests/tcl
-@dirrm share/nsd/servers/server1/pages/tests/sec/CVS
 @dirrm share/nsd/servers/server1/pages/tests/sec
-@dirrm share/nsd/servers/server1/pages/tests/dbase/CVS
 @dirrm share/nsd/servers/server1/pages/tests/dbase
-@dirrm share/nsd/servers/server1/pages/tests/cdev/CVS
 @dirrm share/nsd/servers/server1/pages/tests/cdev
-@dirrm share/nsd/servers/server1/pages/tests/api/CVS
 @dirrm share/nsd/servers/server1/pages/tests/api
-@dirrm share/nsd/servers/server1/pages/tests/adp/CVS
 @dirrm share/nsd/servers/server1/pages/tests/adp
-@dirrm share/nsd/servers/server1/pages/tests/CVS
 @dirrm share/nsd/servers/server1/pages/tests
 @dirrm share/nsd/servers/server1/pages
 @dirrm share/nsd/servers/server1/modules/nsperm

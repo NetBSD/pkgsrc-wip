@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/07/20 18:15:55 ianharding Exp $
+
+AOLServer is configured to listen on 127.0.0.1:8000.  You can find test
+pages at http://127.0.0.1:8000/tests and some insteresting server
+statistics at http://127.0.0.1:8000/tests/nstelemetry.adp.  The username
+is nsadmin and the password is x.  You should change the password.  See
+the AOLServer homepage at www.aolserver.com for details.
+
+===========================================================================

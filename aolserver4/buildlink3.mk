@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/06/08 20:53:26 ianharding Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/07/20 18:15:55 ianharding Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 AOLSERVER4_BUILDLINK3_MK:=	${AOLSERVER4_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Naolserver4}
 BUILDLINK_PACKAGES+=	aolserver4
 
 .if !empty(AOLSERVER4_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.aolserver4+=		aolserver>=4.01
+BUILDLINK_DEPENDS.aolserver4+=		aolserver>=4.0.7
 BUILDLINK_PKGSRCDIR.aolserver4?=	../../wip/aolserver4
 
 .endif	# AOLSERVER4_BUILDLINK3_MK

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/06/08 21:01:00 ianharding Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/20 18:15:55 ianharding Exp $
 #
 
-DISTNAME=		aolserver-4.01-src
+DISTNAME=		aolserver-4.0.7-src
 PKGNAME=		${DISTNAME:S/-src//}
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aolserver/}
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.aolserver.com/
 COMMENT=		America Online's open source web server
 
 MAKE_FLAGS=		NSHOME=${WRKSRC} TCL_CC="gcc -nostartfiles"
-CONFIGURE_ARGS+=	--with-tcl=${LOCALBASE}/lib
+CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 
 WRKSRC=			${WRKDIR}/${PKGNAME}
 USE_BUILDLINK3=		yes
@@ -22,8 +22,8 @@ GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 PTHREAD_OPTS+=  	require
 
-NSD_LOGDIR=		/var/log/nsd
-NSD_PIDDIR=		/var/run/nsd
+NSD_LOGDIR=		${VARBASE}/log/nsd
+NSD_PIDDIR=		${VARBASE}/run/nsd
 NSD_USER?=		nsadmin
 NSD_GROUP?=		nsadmin
 

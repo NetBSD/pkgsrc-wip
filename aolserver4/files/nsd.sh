@@ -7,7 +7,7 @@
 name="nsd"
 rcvar=${name}
 command="/usr/pkg/bin/${name}"
-nsd_flags="-t /usr/pkg/etc/nsd.tcl -u nsadmin"
+nsd_flags="-t /usr/pkg/etc/nsd.tcl -u nsadmin -g nsadmin"
 nsd_user="root"
 
 # set defaults
