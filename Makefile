@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.506 2003/09/27 15:43:26 xtraeme Exp $
-# $NetBSD: Makefile,v 1.506 2003/09/27 15:43:26 xtraeme Exp $
+# $Id: Makefile,v 1.507 2003/09/28 11:09:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.507 2003/09/28 11:09:26 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -372,7 +372,6 @@ SUBDIR+=	streamripper
 SUBDIR+=	sudoscript
 SUBDIR+=	superkaramba
 SUBDIR+=	svgalib
-SUBDIR+=	sylpheed-gtk2
 SUBDIR+=	sysklogd
 SUBDIR+=	sysvinit
 SUBDIR+=	tads
