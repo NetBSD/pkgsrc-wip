@@ -1,0 +1,3 @@
+pkglint complains about BUILD_DEPENDS/DEPENDS have to appear earlier.
+
+PLIST contains @exec/@unexec mktexlsr. This is probably bad.

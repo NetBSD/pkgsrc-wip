@@ -1,0 +1,3 @@
+pkglint complains about absolute pathname "/dev/null" in Makefile.
+
+PLIST contains @exec/@unexec mktexlsr. This is probably bad.

@@ -1,0 +1,6 @@
+PPower4 is used to post process presentationen in PDF format which were
+prepared using LaTeX to add dynamic effects. The PDF files must have been
+created with either pdflatex, vlatex or with standard LaTeX and the converted
+to PDF with dvipdfm. It is strongly recommended to use the Adobe Acrobat
+Reader to view the results, because other viewers do not implement some
+of the special features. For further information see the PPower4 manual.
