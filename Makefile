@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.992 2004/02/20 04:04:31 minskim Exp $
-# $NetBSD: Makefile,v 1.992 2004/02/20 04:04:31 minskim Exp $
+# $Id: Makefile,v 1.993 2004/02/20 04:11:53 minskim Exp $
+# $NetBSD: Makefile,v 1.993 2004/02/20 04:11:53 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -397,7 +397,6 @@ SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-CDDB
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Class-Factory-Util
-SUBDIR+=	p5-Class-Fields
 SUBDIR+=	p5-Class-MethodMaker
 SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-Class-Trigger
