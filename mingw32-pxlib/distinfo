@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/01 03:34:18 mpasternak Exp $
-
-SHA1 (pxlib_0.2.0.orig.tar.gz) = e0a243290ec957ade4d3af7aa58f44af50c9c5a1
-Size (pxlib_0.2.0.orig.tar.gz) = 376353 bytes
-SHA1 (patch-aa) = 6cf0a024a6cd0354d7dc9738bbde3675340e5597

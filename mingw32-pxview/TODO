@@ -1,7 +1,0 @@
-$Id: TODO,v 1.1.1.1 2003/12/01 04:23:26 mpasternak Exp $
-
-Doesn't compile. The dependent library seems okay, but has all symbols
-prepend with underscore (_PX_get_record2 instead PX_get_record), and 
-the configure fails.
-
-	-- dotz@irc.pl

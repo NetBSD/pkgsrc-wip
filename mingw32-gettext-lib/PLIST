@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/01 22:18:45 mpasternak Exp $
-${MINGWTARGET}/include/libintl.h
-${MINGWTARGET}/lib/libintl-2.dll
-${MINGWTARGET}/lib/libintl.a
-${MINGWTARGET}/lib/libintl.la

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/01 03:34:18 mpasternak Exp $
-${MINGWTARGET}/include/paradox.h
-${MINGWTARGET}/include/paradox-gsf.h
-${MINGWTARGET}/include/pxversion.h
-${MINGWTARGET}/lib/libpx.a
-${MINGWTARGET}/lib/libpx.la
-${MINGWTARGET}/lib/pkgconfig/pxlib.pc

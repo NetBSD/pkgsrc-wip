@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/08 17:51:33 mpasternak Exp $
-${MINGWTARGET}/include/ogg/config_types.h
-${MINGWTARGET}/include/ogg/ogg.h
-${MINGWTARGET}/include/ogg/os_types.h
-${MINGWTARGET}/lib/libogg.a
-${MINGWTARGET}/lib/libogg-1.0.dll
-@dirrm ${MINGWTARGET}/include/ogg
