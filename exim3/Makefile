@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/11/30 05:21:03 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.8 2003/11/30 14:31:55 grantbeattie Exp $
 
 DISTNAME=	exim-3.36
 CATEGORIES=	mail net
@@ -45,8 +45,6 @@ pre-configure:
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} /var/log/exim
-	${CHMOD} 750 /var/log/exim
 	strip ${WRKSRC}/build*/exim
 	strip ${WRKSRC}/build*/exim_dbmbuild
 	strip ${WRKSRC}/build*/exim_tidydb
