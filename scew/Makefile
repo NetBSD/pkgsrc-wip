@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/16 00:57:49 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/16 01:07:58 minskim Exp $
 #
 
 DISTNAME=	scew-0.3.1
@@ -11,6 +11,8 @@ COMMENT=	Light-weight DOM-like object model API for Expat
 
 USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
+
+PKGCONFIG_OVERRIDE=	etc/pkg-config/scew.pc.in
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
