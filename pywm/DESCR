@@ -1,0 +1,11 @@
+PyWM is a Python Window Manager.
+
+You drive PYWM by creating a subclass of the basic pywm.WM window manager
+class. If you want even more per-window control, you can subclass the
+pywm.window class as well. Plenty of examples in the PYWM distribution you
+can use as a starting point.
+
+In contrast to other Python-driven window managers, this one is so easy and
+intuitive that you'll be hacking your own window manager script in a couple
+of minutes. A set of easily-undersood example scripts is included with the
+distribution.

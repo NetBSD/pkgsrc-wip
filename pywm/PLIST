@@ -1,0 +1,40 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/26 16:24:23 mpasternak Exp $
+${PYSITELIB}/pywm/__init__.py
+${PYSITELIB}/pywm/__init__.pyc
+${PYSITELIB}/pywm/__init__.pyo
+${PYSITELIB}/pywm/applets.py
+${PYSITELIB}/pywm/applets.pyc
+${PYSITELIB}/pywm/applets.pyo
+${PYSITELIB}/pywm/examples/__init__.py
+${PYSITELIB}/pywm/examples/__init__.pyc
+${PYSITELIB}/pywm/examples/__init__.pyo
+${PYSITELIB}/pywm/examples/example1.py
+${PYSITELIB}/pywm/examples/example1.pyc
+${PYSITELIB}/pywm/examples/example1.pyo
+${PYSITELIB}/pywm/examples/example2.py
+${PYSITELIB}/pywm/examples/example2.pyc
+${PYSITELIB}/pywm/examples/example2.pyo
+${PYSITELIB}/pywm/examples/example3.py
+${PYSITELIB}/pywm/examples/example3.pyc
+${PYSITELIB}/pywm/examples/example3.pyo
+${PYSITELIB}/pywm/examples/example4.py
+${PYSITELIB}/pywm/examples/example4.pyc
+${PYSITELIB}/pywm/examples/example4.pyo
+${PYSITELIB}/pywm/examples/example5.py
+${PYSITELIB}/pywm/examples/example5.pyc
+${PYSITELIB}/pywm/examples/example5.pyo
+${PYSITELIB}/pywm/examples/examplen.py
+${PYSITELIB}/pywm/examples/examplen.pyc
+${PYSITELIB}/pywm/examples/examplen.pyo
+${PYSITELIB}/pywm/examples/testimport.py
+${PYSITELIB}/pywm/examples/testimport.pyc
+${PYSITELIB}/pywm/examples/testimport.pyo
+${PYSITELIB}/pywm/fltk.py
+${PYSITELIB}/pywm/fltk.pyc
+${PYSITELIB}/pywm/fltk.pyo
+${PYSITELIB}/pywm/flwm.py
+${PYSITELIB}/pywm/flwm.pyc
+${PYSITELIB}/pywm/flwm.pyo
+${PYSITELIB}/pywm/flwm_.so
+@dirrm ${PYSITELIB}/pywm/examples
+@dirrm ${PYSITELIB}/pywm

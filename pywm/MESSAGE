@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/11/26 16:24:23 mpasternak Exp $
+
+If you want X to start up with your own PYWM script, then put the following
+into ~/.xinitrc:
+
+	${PYTHONBIN} /path/to/my/pywm/script.py
+
+The simplest PYWM script is:
+
+  import pywm
+  class myWindowManagerClass(pywm.WM):
+    pass
+  def main():
+    myWindowManager = myWindowManagerClass()
+    myWindowManager.run()
+  if __name__ == '__main__':
+    main()
+
+===========================================================================

@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/11/26 16:24:23 mpasternak Exp $
+
+--- setup.py.orig	Mon Jun  2 10:07:20 2003
++++ setup.py	Wed Nov 26 17:07:26 2003
+@@ -5,20 +5,24 @@
+ from distutils.extension import Extension
+ from Pyrex.Distutils import build_ext
+ 
+-import sys
++import sys, os
++class objenviron:
++    def __getattr__(self, s):
++	return os.environ.get(s)
++oe = objenviron()
+ 
+-pyIncludes = '/usr/include/python2.2'
+-libdirs = ['/usr/X11R6/lib']
++pyIncludes = oe.PYINC
++libdirs = [oe.X11BASE + "/lib", oe.PREFIX + "/lib"]
+ defines = []
+ #libs = ['X11', 'Xext', 'fltk', 'm']
+ libs = ['X11', 'Xext', 'm']
+ 
+ # edit this to point to your FLTK **VERSON 1.0** static library
+ #extra_link_args = ['fltk-1.0.11/lib/libfltk.a']
+-extra_link_args = ['/usr/lib/libfltk.a']
++extra_link_args = [oe.PREFIX + '/lib/libfltk.a', oe.PTHREAD_LDFLAGS]
+ 
+ # edit this to point to your FLTK **VERSION 1.0** headers
+-fltkInclude = '../fltk-1.0.11'
++fltkInclude = oe.X11BASE + '/include/'
+ 
+ flwmSources=['src-pyrex/flwm_.pyx',
+              'src-c/main.cpp',
