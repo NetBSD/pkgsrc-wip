@@ -1,7 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2004/11/04 00:07:57 adrian_p Exp $
+$NetBSD: MESSAGE,v 1.7 2004/11/04 00:41:51 adrian_p Exp $
 
-To complete the setup you will need to:
+To complete the setup you will need to read the Bugzilla-Guide.txt in order
+to setup mySQL properly.  In particular secion 2.2.2 of the document deals
+with database setup.  After the initial setup of the database you can then:
 
 	cd ${BZDIR}
 	./checksetup.pl
@@ -16,6 +18,6 @@ to make Bugzilla accessible through:
 	
 	http://www.domain.com/bugzilla/
 
-CHANGE YOUR PASSWORD !!
+IMPORTANTLY: CHANGE YOUR DATABASE PASSWORD FROM THE DEFAULT !!
 
 ===========================================================================
