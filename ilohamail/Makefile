@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/20 09:35:07 poppnk Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/06 20:54:41 dolecek Exp $
 #
 
 DISTNAME=	IlohaMail-0.8.13
@@ -10,13 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ilohamail.org/
 COMMENT=	Light weight yet full featured multilingual webmail
 
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(ILOHAMAIL_USE_PHP5) && ${ILOHAMAIL_USE_PHP5} == YES
-DEPENDS+=	{ap-php-5.[0-9]*,ap2-php-5.[0-9]*}:../../wip/ap-php5
-.else
-DEPENDS+=	{ap-php-4.[0-9]*,ap2-php-4.[0-9]*}:../../www/ap-php4
-.endif
+DEPENDS+=	ap{,2}-php>=4.3.0:../../www/ap-php
 
 NO_BUILD=	yes
 
