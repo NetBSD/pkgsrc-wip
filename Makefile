@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.370 2003/08/13 07:11:35 adrian_p Exp $
-# $NetBSD: Makefile,v 1.370 2003/08/13 07:11:35 adrian_p Exp $
+# $Id: Makefile,v 1.371 2003/08/13 10:39:12 marc Exp $
+# $NetBSD: Makefile,v 1.371 2003/08/13 10:39:12 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -306,8 +306,6 @@ SUBDIR+=	srvx
 SUBDIR+=	stickynotes-applet
 SUBDIR+=	strace
 SUBDIR+=	streamripper
-SUBDIR+=	sun-jdk142
-SUBDIR+=	sun-jre142
 SUBDIR+=	svgalib
 SUBDIR+=	sysklogd
 SUBDIR+=	sysvinit
