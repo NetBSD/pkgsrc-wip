@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.268 2003/06/24 08:02:57 xtraeme Exp $
-# $NetBSD: Makefile,v 1.268 2003/06/24 08:02:57 xtraeme Exp $
+# $Id: Makefile,v 1.269 2003/06/24 09:11:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.269 2003/06/24 09:11:58 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -219,6 +219,7 @@ SUBDIR+=	shoutcast
 SUBDIR+=	slocate
 SUBDIR+=	speedx
 SUBDIR+=	srvx
+SUBDIR+=	stickynotes-applet
 SUBDIR+=	strace
 SUBDIR+=	streamripper
 SUBDIR+=	sysklogd
