@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/09 11:12:01 matthewluckie Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/09 22:57:24 matthewluckie Exp $
 bin/gaim
 bin/gaim-remote
 lib/gaim/autorecon.so
@@ -251,7 +251,6 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gaim.mo
-@dirrm share/gnome/gaim
 @dirrm share/pixmaps/gaim/status/default
 @dirrm share/pixmaps/gaim/status
 @dirrm share/pixmaps/gaim/smileys/default
