@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.8 2004/01/12 14:51:12 tvierling Exp $
+
+--- src/peer.c	11 Jan 2004 14:06:52 -0000	1.1051
++++ src/peer.c	12 Jan 2004 14:39:05 -0000	1.1052
+@@ -4698,7 +4698,7 @@
+ 		/* inet_addr failed, probably a hostname */
+ 		host = gethostbyname(g_conf->nodename);
+ 		if (host == NULL) {
+-			LOGS(L_PEER,L_ERROR,("gethostbyname(%s) failed (%s)\n",
++			LOGS(L_PEER,L_DEBUG,("gethostbyname(%s) failed (%s)\n",
+ 				g_conf->nodename, hstrerror(h_errno)));
+ 			/* we can't resolve a new address, so we must keep the old one */
+ 			node_new.sin_addr.s_addr =
+@@ -5635,7 +5635,7 @@
+ 				rc = sock_outgoing(&conn,inet_ntoa(peer.sin_addr),
+ 					ntohs(peer.sin_port), 1);
+ 				if (0 != rc) {
+-					LOGS(L_PEER,L_ERROR,("sock_outgoing(%s:%d) failed (%s)\n",
++					LOGS(L_PEER,L_MINOR,("sock_outgoing(%s:%d) failed (%s)\n",
+ 						inet_ntoa(peer.sin_addr),
+ 						ntohs(peer.sin_port),
+ 						strerror(errno)));
