@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1136 2004/03/29 18:04:12 tvierling Exp $
-# $NetBSD: Makefile,v 1.1136 2004/03/29 18:04:12 tvierling Exp $
+# $Id: Makefile,v 1.1137 2004/03/29 18:22:08 tvierling Exp $
+# $NetBSD: Makefile,v 1.1137 2004/03/29 18:22:08 tvierling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -469,7 +469,6 @@ SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-Locale-Maketext-Fuzzy
 SUBDIR+=	p5-Locale-Maketext-Lexicon
 SUBDIR+=	p5-Mail-Box
-SUBDIR+=	p5-Mail-Milter
 SUBDIR+=	p5-Mail-SRS
 SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-NetPacket
