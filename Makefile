@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1716 2005/03/31 18:28:50 airhead Exp $
-# $NetBSD: Makefile,v 1.1716 2005/03/31 18:28:50 airhead Exp $
+# $Id: Makefile,v 1.1717 2005/04/01 05:14:02 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.1717 2005/04/01 05:14:02 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -650,8 +650,10 @@ SUBDIR+=	p5-MasonX-Apache2Handler
 SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-PcapUtils
 SUBDIR+=	p5-News-Newsrc
+SUBDIR+=	p5-Number-Compare
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Term-Screen
+SUBDIR+=	p5-Text-Glob
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-mysql
