@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/05/02 21:10:01 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/22 23:32:35 dillo Exp $
 #
 
 DISTNAME=	hugov30_unix_source
-PKGNAME=	wxhugo-3.0.06
-WRKSRC=		${WRKDIR}/hugov3.0.06/hewx
+PKGNAME=	wxhugo-3.0.07
 CATEGORIES=	games
 MASTER_SITES=	http://www.ifarchive.org/if-archive/programming/hugo/source/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTFILE_WX}
@@ -15,8 +14,10 @@ COMMENT=	Interactive fiction interpreter with sound and graphics support
 DISTFILE_WX=	hugov30_wxwin_source${EXTRACT_SUFX}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
+DIST_SUBDIR=	hugo-3.0.07
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
+WRKSRC=		${WRKDIR}/hugov3.0.07/hewx
 
 LIBDIR=		${PREFIX}/share/hugo
 
