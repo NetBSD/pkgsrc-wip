@@ -1,0 +1,29 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2003/06/04 07:42:55 marttikuparinen Exp $
+
+XFCE4_VERSION=		3.99.20030604
+
+DISTNAME=		xfce4-cvs-snapshot
+CATEGORIES=		x11
+MASTER_SITES=		http://www.xfce.org/archive/
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		martti@netbsd.org
+HOMEPAGE=		http://www.xfce.org/
+
+USE_BUILDLINK2=		# defined
+USE_X11BASE=		# defined
+USE_PKGLOCALEDIR=	# defined
+
+USE_LIBTOOL=		# defined
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+USE_GMAKE=		# defined
+GNU_CONFIGURE=		# defined
+
+PATCHDIR?=		${.CURDIR}/../xfce4/patches
+DISTINFO_FILE?=		${.CURDIR}/../xfce4/distinfo
+
+PKG_CONFIG_PATH=	${BUILDLINK_DIR}/lib/pkgconfig
+
+.include "../../devel/glib2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
