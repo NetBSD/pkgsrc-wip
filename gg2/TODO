@@ -1,0 +1,13 @@
+$Id: TODO,v 1.1.1.1 2003/11/29 21:18:42 mpasternak Exp $
+
+Add extra options for it:
+
+Build plugin Gadu-Gadu......... : no
+Build plugin Jabber............ : no
+Build plugin docklet........... : no
+Build plugin sound ESD......... : no
+Build plugin sound aRts........ : no
+Build plugin sound external.... : no
+Build plugin remote............ : no
+Build plugin update............ : no
+Build perl support............. : no
