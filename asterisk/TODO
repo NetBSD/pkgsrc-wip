@@ -1,4 +1,0 @@
-$NetBSD: TODO,v 1.6 2005/03/16 18:58:52 riz Exp $
-
-- add option for graphic console support.  Haven't looked at this yet, not
-  sure how necessary it is.

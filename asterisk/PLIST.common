@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2005/03/30 22:39:01 riz Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2005/03/31 00:20:50 riz Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -155,6 +155,7 @@ lib/asterisk/modules/res_features.so
 lib/asterisk/modules/res_indications.so
 lib/asterisk/modules/res_monitor.so
 lib/asterisk/modules/res_musiconhold.so
+${GTK}lib/asterisk/modules/pbx_gtkconsole.so
 ${ZAPTEL}lib/asterisk/modules/app_flash.so
 ${ZAPTEL}lib/asterisk/modules/app_meetme.so
 ${ZAPTEL}lib/asterisk/modules/app_zapbarge.so
