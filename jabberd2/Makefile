@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/09/27 12:29:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.21 2003/09/27 13:20:08 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0b1
@@ -99,10 +99,12 @@ PKG_USERS=              ${JABBERD_USER}:${JABBERD_GROUP}::Jabberd\\ user
 EGDIR=			${PREFIX}/share/examples/jabberd
 SUPPORT_FILES=          ${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
 
-FILES=			c2s.xml resolver.xml router.xml s2s.xml sm.xml
+FILES=			c2s.xml resolver.xml router.xml \
+			router-users.xml s2s.xml sm.xml
 .for f in ${FILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
+CONF_FILES+=		${EGDIR}/roster.xml ${PKG_SYSCONFDIR}/roster.xml
 .undef f
 
 # Directory to store the log files
@@ -139,15 +141,16 @@ pre-configure:
 		${WRKSRC}/etc/${f}.in > ${WRKSRC}/etc/${f}
 .endfor
 .undef f
-
 	@${SED}  \
 		-e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g" \
 		-e "s|@@BINDIR@@|${PREFIX}/bin|g " \
 		${WRKSRC}/etc/jabberd.cfg.in > ${WRKSRC}/etc/jabberd.cfg
 
 post-install:
-
 	@${INSTALL_DATA_DIR} ${EGDIR}
+	@${MV} ${WRKSRC}/etc/templates/roster.xml.dist.in \
+		${WRKSRC}/etc/roster.xml
+	@${INSTALL_DATA} ${WRKSRC}/etc/roster.xml ${EGDIR}
 .for f in jabberd.cfg ${FILES}
 	@${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
 .endfor

@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.2 2003/09/27 09:34:23 xtraeme Exp $
+$NetBSD: patch-ai,v 1.3 2003/09/27 13:20:09 xtraeme Exp $
 
---- etc/sm.xml.in.orig	2003-09-27 10:59:17.000000000 +0200
-+++ etc/sm.xml.in	2003-09-27 10:59:48.000000000 +0200
+--- etc/sm.xml.in.orig	2003-09-27 14:55:18.000000000 +0200
++++ etc/sm.xml.in	2003-09-27 14:57:05.000000000 +0200
 @@ -9,7 +9,7 @@
    <!-- The process ID file. comment this out if you don't need to know
         to know the process ID from outside the process (eg for control
@@ -11,6 +11,24 @@ $NetBSD: patch-ai,v 1.2 2003/09/27 09:34:23 xtraeme Exp $
  
    <!-- Router connection configuration -->
    <router>
+@@ -26,7 +26,7 @@
+          commented out, or the file can't be read, no attempt will be
+          made to establish an encrypted channel with the router. -->
+     <!--
+-    <pemfile>@sysconfdir@/server.pem</pemfile>
++    <pemfile>@@SSLCERTS@@/server.pem</pemfile>
+     -->
+   </router>
+ 
+@@ -37,7 +37,7 @@
+ 
+     <!-- If logging to file, this is the filename of the logfile -->
+     <!--
+-    <file>@localstatedir@/jabberd/log/sm.log</file>
++    <file>@@LOGDIR@@/sm.log</file>
+     -->
+   </log>
+ 
 @@ -96,7 +96,7 @@
      <!-- Berkeley DB driver configuration -->
      <db>
@@ -20,3 +38,12 @@ $NetBSD: patch-ai,v 1.2 2003/09/27 09:34:23 xtraeme Exp $
  
        <!-- Synchronize the database to disk after each write. If you
             disable this, database accesses may be faster, but data may
+@@ -352,7 +352,7 @@
+          stored in the users data store when they are created. -->
+     <template>
+       <!--
+-      <roster>@sysconfdir@/templates/roster.xml</roster>
++      <roster>@@PKG_SYSCONFDIR@@/roster.xml</roster>
+       -->
+     </template>
+   </user>
