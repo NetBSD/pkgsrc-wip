@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1320 2004/06/09 21:27:58 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1320 2004/06/09 21:27:58 xtraeme Exp $
+# $Id: Makefile,v 1.1321 2004/06/11 09:44:39 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.1321 2004/06/11 09:44:39 grantbeattie Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -356,6 +356,7 @@ SUBDIR+=	luacheia
 SUBDIR+=	luaposix
 SUBDIR+=	luasocket
 SUBDIR+=	mailfilter
+SUBDIR+=	mailscanner
 SUBDIR+=	man-db
 SUBDIR+=	map-browse
 SUBDIR+=	matchbox-common
@@ -442,6 +443,7 @@ SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Class-Factory-Util
 SUBDIR+=	p5-Class-Singleton
+SUBDIR+=	p5-Convert-BinHex
 SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-DateTime
 SUBDIR+=	p5-DateTime-Event-Cron
