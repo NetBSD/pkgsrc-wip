@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/09/16 15:03:12 airhead Exp $
+
+--- src/lib/Makefile.in.orig	2004-07-30 05:21:51.000000000 +0200
++++ src/lib/Makefile.in
+@@ -121,7 +121,7 @@ AUTOMAKE_OPTIONS = 1.4 foreign
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+-LDFLAGS = 
++LDFLAGS = @LDFLAGS@
+ INCLUDES = @freetype_cflags@ @x_cflags@ @qt_cflags@ @DIRECTFB_CFLAGS@ @gl_cflags@                        -I.                        -I$(top_srcdir)/src/lib 		       -I$(top_srcdir)/src/lib/include
+ 
+ 

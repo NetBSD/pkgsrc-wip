@@ -1,0 +1,43 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/16 15:03:12 airhead Exp $
+bin/evas-config
+bin/evas_buffer_test
+bin/evas_gl_x11_test
+bin/evas_software_x11_perf_load
+bin/evas_software_x11_perf_test
+bin/evas_software_x11_test
+include/Evas.h
+include/Evas_Engine_Buffer.h
+include/Evas_Engine_GL_X11.h
+include/Evas_Engine_Software_X11.h
+lib/libevas.a
+lib/libevas.la
+lib/libevas.so
+lib/libevas.so.1
+lib/libevas.so.1.0
+lib/pkgconfig/evas.pc
+share/evas/data/Vera.ttf
+share/evas/data/VeraBI.ttf
+share/evas/data/VeraBd.ttf
+share/evas/data/VeraIt.ttf
+share/evas/data/VeraMoBI.ttf
+share/evas/data/VeraMoBd.ttf
+share/evas/data/VeraMoIt.ttf
+share/evas/data/VeraMono.ttf
+share/evas/data/VeraSe.ttf
+share/evas/data/VeraSeBd.ttf
+share/evas/data/backdrop.png
+share/evas/data/bg.png
+share/evas/data/e_logo.png
+share/evas/data/evas_logo.png
+share/evas/data/fonts.alias
+share/evas/data/fonts.dir
+share/evas/data/panel.png
+share/evas/data/panel_shadow.png
+share/evas/data/panel_top.png
+share/evas/data/sphere.png
+share/evas/data/sphere_shadow.png
+share/evas/data/t1.png
+share/evas/data/t2.png
+share/evas/data/test_pattern.png
+@dirrm share/evas/data
+@dirrm share/evas

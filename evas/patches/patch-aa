@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/16 15:03:12 airhead Exp $
+
+--- configure.orig	2004-07-30 05:21:41.000000000 +0200
++++ configure
+@@ -23036,7 +23036,7 @@ fi
+ 
+ fi
+ 
+-function vser
++vser ()
+ {
+   v=$1
+   VSTART=`echo $v | awk -F_ '{printf("%s", $1);}'`

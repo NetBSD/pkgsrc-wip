@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/16 15:03:12 airhead Exp $
+
+SHA1 (evas-1.0.0_pre13.tar.gz) = 09bbac66048f6fb98a793e7a88ceac3aa9ff9341
+Size (evas-1.0.0_pre13.tar.gz) = 4245207 bytes
+SHA1 (patch-aa) = c6ac691edce243516a9633fbd616818abf506f66
+SHA1 (patch-ab) = 12c7370c5faedd6d592d605e11fc93f8e0319269
+SHA1 (patch-ac) = 27732dfb2e856fcd37342526a2c0f0a5eb25fa7d
+SHA1 (patch-ad) = a892b4fbd8947deef5f0f08e7d39c3ce2b0c8fdf
+SHA1 (patch-ae) = 33f6acff564f759a92584216589865508ed216ab
+SHA1 (patch-af) = ee7069dd4c7d1e59132c78713373175b0ceb4dcb
+SHA1 (patch-ag) = 1112a1b0d618fea3fa1f2ef4b60299eaeda5eb94
+SHA1 (patch-ah) = c1eb3771160b025f094137654cd12ac5fb03cbc8
+SHA1 (patch-ai) = 520025b70f0a09851662ba09303bb45f9d43b488
+SHA1 (patch-aj) = dbfa020647e8e68d67e5a77457f4acb1eaff0473
+SHA1 (patch-ak) = 33cacde54262e36bbd258a5b8189b60e482b3e7e
+SHA1 (patch-al) = d04eb8a54a4edaf7811d24dc698a27450c61f268
+SHA1 (patch-am) = 25a8015b48b3f105150f439bda660bd75455e829
+SHA1 (patch-an) = 95e483f395eddb0366d960c9d87e6b0ab93f38a3
