@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/09/15 13:54:07 ianzag Exp $
+
+--- configure.orig	2004-07-26 20:23:26.000000000 +0700
++++ configure
+@@ -2791,7 +2791,7 @@ fi
+ 
+         # Find any Python interpreter.
+     # Extract the first word of "python python2 python2.2 python2.1 python2.0 python1.6 python1.5", so it can be a program name with args.
+-set dummy python python2 python2.2 python2.1 python2.0 python1.6 python1.5; ac_word=$2
++set dummy python python2 python2.3 python2.2 python2.1 python2.0 python1.6 python1.5; ac_word=$4
+ echo "$as_me:$LINENO: checking for $ac_word" >&5
+ echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
+ if test "${ac_cv_path_PYTHON+set}" = set; then
+@@ -10140,6 +10140,7 @@ case "$host" in
+   *-*-freebsd4*) plat_name="FreeBSD";  plat_def="__freebsd__";  os_v="4";;
+   *-*-freebsd5*) plat_name="FreeBSD";  plat_def="__freebsd__";  os_v="5";;
+   *-*-openbsd*)  plat_name="OpenBSD";  plat_def="__openbsd__";  os_v="3";;
++  *-*-netbsd*)   plat_name="NetBSD";   plat_def="__netbsd__";   os_v="2";;
+   *-*-sco*)      plat_name="OSR5";     plat_def="__osr5__";     os_v="5";;
+ esac
+ 

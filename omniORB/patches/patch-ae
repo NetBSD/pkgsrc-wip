@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/09/15 13:54:07 ianzag Exp $
+
+--- mk/beforeauto.mk.in.orig	2004-07-26 20:02:55.000000000 +0700
++++ mk/beforeauto.mk.in
+@@ -1002,6 +1002,15 @@ OMNITHREAD_LIB += -pthread
+ endif
+ 
+ ###################
++ifdef NetBSD
++IMPORT_CPPFLAGS += -D__netbsd__
++
++OMNITHREAD_CPPFLAGS = -D_REENTRANT -D_THREAD_SAFE
++OMNITHREAD_POSIX_CPPFLAGS = -DUsePthread -DPthreadDraftVersion=10
++OMNITHREAD_LIB += -pthread
++endif
++
++###################
+ ifdef OpenBSD
+ IMPORT_CPPFLAGS += -D__openbsd__
+ 

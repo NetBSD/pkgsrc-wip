@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/09/15 13:54:07 ianzag Exp $
+
+--- configure.ac.orig	2004-07-26 20:23:26.000000000 +0700
++++ configure.ac
+@@ -161,6 +161,7 @@ case "$host" in
+   *-*-freebsd3*) plat_name="FreeBSD";  plat_def="__freebsd__";  os_v="3";;
+   *-*-freebsd4*) plat_name="FreeBSD";  plat_def="__freebsd__";  os_v="4";;
+   *-*-freebsd5*) plat_name="FreeBSD";  plat_def="__freebsd__";  os_v="5";;
++  *-*-netbsd*)   plat_name="NetBSD";   plat_def="__netbsd__";   os_v="2";;
+   *-*-openbsd*)  plat_name="OpenBSD";  plat_def="__openbsd__";  os_v="3";;
+   *-*-sco*)      plat_name="OSR5";     plat_def="__osr5__";     os_v="5";;
+ esac

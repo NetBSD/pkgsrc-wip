@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/15 13:54:07 ianzag Exp $
+
+SHA1 (omniORB-4.0.4.tar.gz) = b00a53b41a6e3041e23d766dd934483e11f2028d
+Size (omniORB-4.0.4.tar.gz) = 2751162 bytes
+SHA1 (patch-aa) = d89023f2d875f20ab44f2c72caccf1d89420eff2
+SHA1 (patch-ab) = fb1e0ce2ca9848bc20e3fccb08092c489afa673c
+SHA1 (patch-ac) = f6548f953b37427c11a7e71b4c37bb3d8f482bc9
+SHA1 (patch-ad) = ea3009b39fda6addf47a064f5df518135e44b789
+SHA1 (patch-ae) = 0e3f30a89bf4543f2dd33bc54eb798973d22ee8e

@@ -1,0 +1,11 @@
+
+Note: I have tested this package only with NetBSD-current.
+      Cannot say anything about NetBSD 1.6.x branch.
+
+Todo:
+  * Test test and once again test..
+  * Add rc.d scripts.
+  * Fix Python detection scheme to be more flexible.
+  * Make package with OpenSSL.
+  * Send NetBSD specific patches to the authors.
+  * Build/test on other platforms and architectures
