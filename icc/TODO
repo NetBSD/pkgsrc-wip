@@ -1,0 +1,10 @@
+$Id: TODO,v 1.1.1.1 2003/11/28 21:19:44 mpasternak Exp $
+
+Someone with IA64 - please check if this is useable there.
+
+Messages about bogus conflicts: propably require changes in rpm2pkg.
+
+Homework: compile a kernel with it! (FreeBSD folks did that, Google for
+details)
+
+	-- dotz@irc.pl
