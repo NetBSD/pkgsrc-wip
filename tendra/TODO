@@ -1,0 +1,7 @@
+Fix PLIST.
+Some comments from Alistair:
+At the moment, it can't handle the RENAME()s in NetBSD's header files,
+and I build things in a ${WRKSRC}/build directory, and these files need
+to be moved to ${PREFIX} in the install stage. The files should also be
+checked to see if there are any embedded hardcoded paths, which would
+make this approach infeasible.

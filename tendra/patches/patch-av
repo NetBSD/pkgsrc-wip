@@ -1,0 +1,10 @@
+$NetBSD: patch-av,v 1.1.1.1 2003/04/29 09:22:28 thomasklausner Exp $
+
+--- /dev/null	2003-04-28 11:51:49.000000000 +0100
++++ src/lib/env/netbsd/common/80x86/tcc_diag	2003-04-28 11:49:12.000000000 +0100
+@@ -0,0 +1,5 @@
++/* TCC ENVIRONMENT : DIAGNOSTICS FOR NetBSD */
++
+++CRT0		"/usr/lib/crt0.o"
++<LINK		"-L-LIBDIR-/diag"
++>SYS_LIB	"-static -lg"
