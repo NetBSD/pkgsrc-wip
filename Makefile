@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.100 2003/04/18 19:25:30 hweiss Exp $
-# $NetBSD: Makefile,v 1.100 2003/04/18 19:25:30 hweiss Exp $
+# $Id: Makefile,v 1.101 2003/04/18 21:47:51 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.101 2003/04/18 21:47:51 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -74,6 +74,7 @@ SUBDIR+=	p5-XML-Stream
 SUBDIR+=	perltidy
 SUBDIR+=	phplot
 SUBDIR+=	poedit
+SUBDIR+=	ppp
 SUBDIR+=	pts
 SUBDIR+=	py-ORBit
 SUBDIR+=	py-OpenGL
