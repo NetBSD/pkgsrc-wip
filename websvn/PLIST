@@ -1,0 +1,55 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/09 21:22:32 xtraeme Exp $
+share/httpd/htdocs/websvn/cache/tmp
+share/httpd/htdocs/websvn/changes.txt
+share/httpd/htdocs/websvn/diff.php
+share/httpd/htdocs/websvn/filedetails.php
+share/httpd/htdocs/websvn/form.php
+share/httpd/htdocs/websvn/include/command.inc
+share/httpd/htdocs/websvn/include/configclass.inc
+share/httpd/htdocs/websvn/include/distconfig.inc
+share/httpd/htdocs/websvn/include/setup.inc
+share/httpd/htdocs/websvn/include/svnlook.inc
+share/httpd/htdocs/websvn/include/template.inc
+share/httpd/htdocs/websvn/include/utils.inc
+share/httpd/htdocs/websvn/include/version.inc
+share/httpd/htdocs/websvn/index.php
+share/httpd/htdocs/websvn/install.txt
+share/httpd/htdocs/websvn/languages/english.inc
+share/httpd/htdocs/websvn/languages/german.inc
+share/httpd/htdocs/websvn/licence.txt
+share/httpd/htdocs/websvn/listing.php
+share/httpd/htdocs/websvn/log.php
+share/httpd/htdocs/websvn/templates.txt
+share/httpd/htdocs/websvn/templates/BlueGrey/diff.tmpl
+share/httpd/htdocs/websvn/templates/BlueGrey/directory.tmpl
+share/httpd/htdocs/websvn/templates/BlueGrey/file.png
+share/httpd/htdocs/websvn/templates/BlueGrey/file.tmpl
+share/httpd/htdocs/websvn/templates/BlueGrey/filec.png
+share/httpd/htdocs/websvn/templates/BlueGrey/fileh.png
+share/httpd/htdocs/websvn/templates/BlueGrey/files.png
+share/httpd/htdocs/websvn/templates/BlueGrey/folder.png
+share/httpd/htdocs/websvn/templates/BlueGrey/footer.tmpl
+share/httpd/htdocs/websvn/templates/BlueGrey/header.tmpl
+share/httpd/htdocs/websvn/templates/BlueGrey/index.tmpl
+share/httpd/htdocs/websvn/templates/BlueGrey/log.tmpl
+share/httpd/htdocs/websvn/templates/BlueGrey/png.js
+share/httpd/htdocs/websvn/templates/BlueGrey/repo.png
+share/httpd/htdocs/websvn/templates/BlueGrey/styles.css
+share/httpd/htdocs/websvn/templates/BlueGrey/subversion.png
+share/httpd/htdocs/websvn/templates/Standard/diff.tmpl
+share/httpd/htdocs/websvn/templates/Standard/directory.tmpl
+share/httpd/htdocs/websvn/templates/Standard/file.tmpl
+share/httpd/htdocs/websvn/templates/Standard/footer.tmpl
+share/httpd/htdocs/websvn/templates/Standard/header.tmpl
+share/httpd/htdocs/websvn/templates/Standard/index.tmpl
+share/httpd/htdocs/websvn/templates/Standard/log.tmpl
+share/httpd/htdocs/websvn/templates/Standard/styles.css
+share/httpd/htdocs/websvn/wsvn.php
+@dirrm share/httpd/htdocs/websvn/templates/Standard
+@dirrm share/httpd/htdocs/websvn/templates/BlueGrey
+@dirrm share/httpd/htdocs/websvn/templates
+@dirrm share/httpd/htdocs/websvn/temp
+@dirrm share/httpd/htdocs/websvn/languages
+@dirrm share/httpd/htdocs/websvn/include
+@dirrm share/httpd/htdocs/websvn/cache
+@dirrm share/httpd/htdocs/websvn
