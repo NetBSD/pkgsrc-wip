@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1402 2004/07/20 21:47:11 jmmv Exp $
-# $NetBSD: Makefile,v 1.1402 2004/07/20 21:47:11 jmmv Exp $
+# $Id: Makefile,v 1.1403 2004/07/21 03:11:09 blef Exp $
+# $NetBSD: Makefile,v 1.1403 2004/07/21 03:11:09 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -726,7 +726,6 @@ SUBDIR+=	spamprobe-pbl
 SUBDIR+=	spe
 SUBDIR+=	speedx
 SUBDIR+=	srvx
-SUBDIR+=	steghide
 SUBDIR+=	stmpclean
 SUBDIR+=	strace
 SUBDIR+=	stratagus
