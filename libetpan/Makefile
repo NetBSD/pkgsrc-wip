@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/17 02:55:57 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/28 00:13:17 blef Exp $
 #
 
 DISTNAME=		libetpan-0.32
@@ -9,13 +9,13 @@ MAINTAINER=		dawszy@arhea.pl
 HOMEPAGE=		http://libetpan.sourceforge.net/
 COMMENT=		Really nice mail library
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-.include "../../mk/pthread.buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../databases/db4/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../databases/db4/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
