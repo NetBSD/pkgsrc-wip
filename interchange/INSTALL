@@ -1,0 +1,63 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2004/01/26 18:32:53 schnoebe Exp $
+#
+#	based on the INSTALL script for amanda-common
+
+PKGNAME=$1
+STAGE=$2
+
+ICUSER=@ICUSER@
+ICGROUP=@ICGROUP@
+ICDIR=@ICDIR@
+ADDUSER=@ADDUSER@
+ADDGROUP=@ADDGROUP@
+CHGRP=@CHGRP@
+ID=@ID@
+TOUCH=@TOUCH@
+RM=@RM@
+
+case ${STAGE} in
+PRE-INSTALL)
+	# Group... the default's shipped with NetBSD
+	# We need to check that ${ICGROUP} exists before adding the user.
+	#
+	${TOUCH} "/tmp/grouptestic.$$"
+	${CHGRP} ${ICGROUP} "/tmp/grouptestic.$$" >/dev/null 2>&1
+	if [ $? -eq 0 ]; then
+		echo "Group '${ICGROUP}' already exists...proceeding."
+	else
+		echo "Creating '${ICGROUP}' group..."
+		${ADDGROUP} ${ICGROUP}
+		echo "Done."
+	fi
+	${RM} -f "/tmp/grouptestic.$$"
+
+	${ID} ${ICUSER} >/dev/null 2>&1
+	if [ $? -eq 0 ]; then
+		echo "User '${ICUSER}' already exists...proceeding."
+	else
+		echo "Creating '${ICUSER}' user..."
+		${ADDUSER} -c "Interchange User" -g ${ICGROUP} \
+				-d ${ICDIR} -s /bin/sh ${ICUSER}
+		echo "Done."
+	fi
+	;;
+POST-INSTALL)
+	# copy in the default interchange configuration file
+	echo "Installing configuration file(s) in ${PKG_PREFIX}/etc"
+	if [ -f ${PKG_PREFIX}/etc/interchange.cfg ] ; then
+	    echo "    ${PKG_PREFIX}/etc/interchange.cfg already exists"
+	else
+	    echo "    Installing ${PKG_PREFIX}/etc/interchange.cfg"
+	    cp ${ICDIR}/interchange.cfg.dist ${PKG_PREFIX}/etc/interchange.cfg
+	    chmod 644 ${PKG_PREFIX}/etc/interchange.cfg
+	    # we should generate the default catalog here..
+	fi
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0

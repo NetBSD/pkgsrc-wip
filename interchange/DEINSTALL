@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2004/01/26 18:32:53 schnoebe Exp $
+#	based upon the amanda-common DEINSTALL script
+#
+
+PKGNAME=$1
+STAGE=$2
+
+USER=@ICUSER@
+GROUP=@ICGROUP@
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	cat << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to
+remove the \`${USER}' user and \`${GROUP}' group. (and don't forget
+to remove \`${USER}'s home directory, in case you wish to reinstall)
+===========================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0
