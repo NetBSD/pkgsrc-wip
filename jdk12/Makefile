@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/06 20:37:00 tvierling Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/08 16:28:23 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -61,7 +61,7 @@ MAKE_FLAGS+=	M4=${LOCALBASE}/bin/gm4
 MAKE_ENV+=	ALT_BOOTDIR=${WRKSRC}/jdk1.2.2
 MAKE_ENV+=	ALT_MOTIF_DIR=${MOTIFBASE}
 MAKE_ENV+=	HAVE_ODBC=no
-MAKE_ENV+=	LD_RUN_PATH=${MOTIFBASE}/lib # substitute for -rpath option
+MAKE_ENV+=	LD_RUN_PATH=${MOTIFBASE}/lib:${X11BASE}/lib # substitute for -rpath option
 MAKE_ENV+=	OPENWINHOME=${MOTIFBASE}
 MAKE_ENV+=	USE_GNU_M4=1
 
