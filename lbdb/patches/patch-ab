@@ -1,22 +1,22 @@
-$NetBSD: patch-ab,v 1.2 2003/06/27 11:26:21 drue Exp $
+$NetBSD: patch-ab,v 1.3 2004/03/18 15:30:35 mpasternak Exp $
 
---- mutt_ldap_query.pl.in.orig	Sun Feb  9 13:20:04 2003
+--- mutt_ldap_query.pl.in.orig	2004-03-18 17:35:42.000000000 +0100
 +++ mutt_ldap_query.pl.in
 @@ -23,6 +23,8 @@ use Getopt::Long;
  use Net::LDAP;
- #use Pod::Usage;
+ use Pod::Usage;
  
 +our $prefix = '@prefix@';
 +
  #------8<------8<------8<------8<---cut here--->8------>8------>8------>8------
  # The defaults
  my $man = 0;
-@@ -322,7 +324,7 @@ in the m_ldap script.
+@@ -337,7 +339,7 @@ in the m_ldap script.
  
- mutt_ldap_query is now fully customizable using an external
- ressource file.  By default mutt_ldap_query parses the system
--definition file localted gernerally at F</etc/mutt_ldap_query.rc>
-+definition file localted gernerally at F<@prefix@/etc/mutt_ldap_query.rc>
- or F</usr/local/etc/mutt_ldap_query.rc> and also the user one:
+ mutt_ldap_query is now fully customizable using an external resource
+ file. By default mutt_ldap_query parses the system definition file
+-located generally at F</etc/mutt_ldap_query.rc> or
++located generally at F<@prefix@/etc/mutt_ldap_query.rc> or
+ F</usr/local/etc/mutt_ldap_query.rc> and also the user one:
  F<$HOME/.mutt_ldap_query.rc>.
  

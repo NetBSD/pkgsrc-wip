@@ -1,3 +1,10 @@
-$Id: TODO,v 1.6 2004/02/24 05:26:27 minskim Exp $
+$Id: TODO,v 1.7 2004/03/18 15:30:34 mpasternak Exp $
 
-* 0.29 is out.
+Is p5 dependency (ldap) really needed? Perhaps we could use some build
+variable.
+
+Is PLIST correct?
+
+NetBSD-current 1.6ZI build confirmed.
+
+	-- dotz@irc.pl
