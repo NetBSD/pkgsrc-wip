@@ -37,6 +37,7 @@ PKGCHK=${PREFIX}/sbin/pkg_chk
 PKGSRC_DIR=_psd_
 DEFAULT_TARGETS="${DEFAULT_TARGETS}"
 CVS_RSH=ssh
+
 if [ "${CLEAN_BUILD}" = "" ]; then
 	CLEAN_BUILD="1"
 fi
@@ -151,6 +152,8 @@ do_relink() {
 		echo "==> Looking for unlinked binaries in package ${lPKG}"
 		FILES=`pkg_info -L $lPKG | grep -e bin -e lib`
 	fi
+	X11_TYPE=`grep -e X11_TYPE /etc/mk.conf | awk -F = '{ print $2; }'`
+	if [ "${X11_TYPE}" = "" ]; then X11_TYPE=XxZzYy; fi # invalid directory
 
 	for A in ${FILES}; do
 		LIB=`ldd ${A} 2>/dev/null |grep found|awk -F = '{ print $1 }'`
@@ -165,18 +168,28 @@ do_relink() {
 		if [ "${OK}" = "1" ]; then
 		echo "==> Relinking ${B}..."
 		COW="`echo ${B} |awk -F so '{ print $1 }'`so"
-		TARGET="`ls -l ${PREFIX}/lib/${COW}.* 2>/dev/null | grep -e ^- `"
+		RESOLVED=0
+		for RELINKDIR in ${PREFIX}/lib ${PREFIX}/${X11_TYPE}/lib /lib /usr/lib ; do
+		if [ ! -d "${RELINKDIR}" ]; then continue; fi
+		TARGET="`ls -l ${RELINKDIR}/${COW}.* 2>/dev/null | grep -e ^- `"
 		if [ "${TARGET}" = "" ]; then
+			continue;
+		else
+			RESOLVED=1
+			TARGET=`echo ${TARGET} | awk '{ print $9 }'`
+			ln -s ${TARGET} ${RELINKDIR}/$B
+			break;
+		fi
+		done # for RELINKDIR
+		if [ "${RESOLVED}" = "1" ]; then
+			echo " * Solved against ${TARGET}"
+		else
 			echo " * Unable to be resolved"
 			UNRESOLVED="${UNRESOLVED} ${B}"
-		else
-			TARGET=`echo ${TARGET} | awk '{ print $9 }'`
-			echo " * Solved against ${TARGET}"
-			ln -s ${TARGET} ${PREFIX}/lib/$B
 		fi
 		#--		
 		fi
-		done
+		done # for A in ${files}
 	done
 }
 
@@ -541,8 +554,12 @@ case "$1" in
 	cd ${PKGSRC_DIR}/${DIR}
 	PKGNAM=`${MAKE} show-var VARNAME=PKGNAME`
 	PKGOPT=`${MAKE} show-var VARNAME=PKG_SUPPORTED_OPTIONS`
+	HOMEPAGE=`${MAKE} show-var VARNAME=HOMEPAGE`
+	COMMENT=`${MAKE} show-var VARNAME=COMMENT`
 	PKGDEP=`${MAKE} show-depends-dirs`
 	echo ">> PKGNAME: ${PKGNAM}"
+	echo ">> HOMEPAGE: ${HOMEPAGE}"
+	echo ">> COMMENT: ${COMMENT}"
 	if [ ! "${PKGOPT}" = "" ]; then
 	echo ">> OPTIONS: ${PKGOPT}"
 	fi
