@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/29 17:59:55 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/18 20:28:01 daprice Exp $
 #
 
 DISTNAME=		ncbi
@@ -19,6 +19,14 @@ USE_X11=		yes
 
 MAKE_ENV+=		PREFIX=${PREFIX}
 
+post-extract:
+	${MV} ${WRKSRC}/make/makedis.csh ${WRKSRC}/make/makedis.csh.in
+
+do-configure:
+	${SED} -e 's:@PREFIX@:${PREFIX}:g' \
+		-e 's:@X11BASE@:${X11BASE}:g' ${WRKSRC}/make/makedis.csh.in > ${WRKSRC}/make/makedis.csh
+	${CHMOD} 755 ${WRKSRC}/make/makedis.csh
+
 do-build:
 	cd ${WRKSRC}/.. && ${SETENV} ${MAKE_ENV} ${CSH} ncbi/make/makedis.csh
 
@@ -29,6 +37,8 @@ do-install:
 .for LIB in libblast.a libblastapi.a libncbi.a libncbiCacc.a \
 	    libncbiNacc.a libncbiacc.a libncbicdr.a libncbiid1.a \
 	    libncbimmdb.a libncbiobj.a libncbitool.a libnetblast.a \
+	    libddvlib.a libncbicn3d.a libncbidesk.a libncbimla.a \
+	    libvibgif.a libvibnet.a libvibrant.a libncbitxc2.a \
 	    libnetcli.a libnetentr.a libregexp.a ncbithr.o
 	@${INSTALL_DATA} ${WRKSRC}/lib/${LIB}  ${PREFIX}/lib/ncbi
 .endfor
