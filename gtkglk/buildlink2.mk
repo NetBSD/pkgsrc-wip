@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/10/20 13:17:29 dillo Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/10/20 13:26:04 dillo Exp $
 #
 # This Makefile fragment is included by packages that use gtkglk.
 #
@@ -16,7 +16,7 @@ BUILDLINK_FILES.gtkglk+=	include/gtkglk/*
 BUILDLINK_FILES.gtkglk+=	lib/libgtkglk.*
 
 BUILDLINK_CPPFLAGS.gtkglk= \
-        -I${BUILDLINK_PREFIX.gtkglk}/include/gtkglk
+	-I${BUILDLINK_PREFIX.gtkglk}/include/gtkglk
 
 CPPFLAGS+=      ${BUILDLINK_CPPFLAGS.gtkglk}
 
