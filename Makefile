@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.855 2004/01/05 23:25:10 xtraeme Exp $
-# $NetBSD: Makefile,v 1.855 2004/01/05 23:25:10 xtraeme Exp $
+# $Id: Makefile,v 1.856 2004/01/06 00:27:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.856 2004/01/06 00:27:18 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -99,8 +99,6 @@ SUBDIR+=	compositeext
 SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	cvsd
-SUBDIR+=	cvsup
-SUBDIR+=	cvsup-gui
 SUBDIR+=	cyrus-imapd22
 SUBDIR+=	d2x
 SUBDIR+=	d4x
@@ -141,7 +139,6 @@ SUBDIR+=	elvis-x11
 SUBDIR+=	emirror
 SUBDIR+=	entropy
 SUBDIR+=	ezbounce
-SUBDIR+=	ezm3
 SUBDIR+=	fakenes
 SUBDIR+=	festival-gaim
 SUBDIR+=	firebird

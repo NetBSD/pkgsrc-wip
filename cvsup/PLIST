@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/05 21:36:03 xtraeme Exp $
-bin/cvpasswd
-bin/cvsup
-sbin/cvsupd
-share/doc/cvsup/License
-man/man1/cvpasswd.1
-man/man1/cvsup.1
-man/man8/cvsupd.8
-@dirrm share/doc/cvsup
