@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/13 12:34:15 cjep Exp $
+
+--- Makefile.orig	Sat Oct 20 15:45:47 2001
++++ Makefile
+@@ -5,18 +5,19 @@
+ MACRO=__OpenBSD__
+ OBJS=main.o netfunc.o conf.o func.o
+ SRC=main.c netfunc.c conf.c func.c
+-CPATH=/etc/
+-INSTALL=/usr/local/sbin/
+-MANPATH=/usr/local/man/man8/
++CPATH=${PREFIX}/etc
++INSTALL=${PREFIX}/sbin
++MANPATH=${PREFIX}/man/man8
++CFLAGS+=-D__DEFAULT_CFG_PATH=\"${CPATH}/${CONF}\"
+ 
+ all:${PROG}
+ 
+ ${PROG}: 
+-	${CC} -c ${SRC} 
++	${CC} ${CFLAGS} -c ${SRC} 
+ 	${CC} -o ${PROG} ${OBJS} 
+ 
+ bsd:
+-	${CC} -D${MACRO} -c ${SRC}
++	${CC} ${CFLAGS} -D${MACRO} -c ${SRC}
+ 	${CC} -o ${PROG} ${OBJS}
+ 
+ clean:

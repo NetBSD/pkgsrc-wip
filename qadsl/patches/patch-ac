@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/04/13 12:34:15 cjep Exp $
+
+--- main.c.orig	Sat Oct 20 16:29:16 2001
++++ main.c
+@@ -32,7 +32,7 @@
+ char send_msg[MAXDATASIZE], get_msg[MAXDATASIZE];
+ char user[MAXLEN], pass[MAXLEN], serv[MAXLEN], deamon_s[MAXLEN], deamon_t[MAXLEN], deamon_d[MAXLEN];
+ 
+-char *conf="/etc/qadsl.conf";
++char *conf=__DEFAULT_CFG_PATH;
+ 
+ int main(int argc, char *argv[])
+ {
