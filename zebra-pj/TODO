@@ -1,5 +1,0 @@
-1. Perhaps test more:
-   vtysh
-   no v6 (platform without support)
-   other than NetBSD
-   BGP, RIPv2, OSPFv3
