@@ -1,0 +1,28 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/09/29 23:25:56 adrian_p Exp $
+
+--- src/support.c.orig	2004-09-29 10:57:08.000000000 +0100
++++ src/support.c	2004-09-29 22:11:13.000000000 +0100
+@@ -41,6 +41,8 @@
+ #include <string.h>
+ #include <utime.h>
+ extern int errno;		/* ...seems that errno.h doesn't define this everywhere */
++extern int sw_uid;
++extern int sw_gid;
+ #endif
+ 
+ extern void outofmemory();
+@@ -1764,10 +1766,11 @@
+ 	close(srcfd);
+ 	close(destfd);
+ 	unreal_setfilemodtime(dest, mtime);
+-#if defined(IRC_UID) && defined(IRC_GID)
++
++if ((sw_uid != -1) && (sw_gid != -1)) {
+ 	if (!loop.ircd_booted)
+-		chown(dest, IRC_UID, IRC_GID);
+-#endif
++		chown(dest, sw_uid, sw_gid);
++}
+ 	return 1;
+ fail:
+ 	close(srcfd);

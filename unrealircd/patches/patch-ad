@@ -1,0 +1,48 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/09/29 23:25:56 adrian_p Exp $
+
+--- src/url.c.orig	2004-09-29 22:12:55.000000000 +0100
++++ src/url.c	2004-09-29 22:18:26.000000000 +0100
+@@ -29,6 +29,11 @@
+ extern char *SSLKeyPasswd;
+ #endif
+ 
++#ifndef _WIN32
++extern int sw_uid;
++extern int sw_gid;
++#endif
++
+ CURLM *multihandle;
+ 
+ /* Stores information about the async transfer.
+@@ -179,10 +184,11 @@
+ 	curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, errorbuf);
+ 	res = curl_easy_perform(curl);
+ 	fclose(fd);
+-#if defined(IRC_UID) && defined(IRC_GID)
+-	if (!loop.ircd_booted)
+-		chown(tmp, IRC_UID, IRC_GID);
+-#endif
++	if ((sw_uid != -1) && (sw_gid != -1)) 
++	{
++		if (!loop.ircd_booted)
++			chown(tmp, sw_uid, sw_gid);
++	}
+ 	if (file)
+ 		free(file);
+ 	if (res == CURLE_OK)
+@@ -330,10 +336,11 @@
+ 			curl_easy_getinfo(easyhand, CURLINFO_EFFECTIVE_URL, &url);
+ 			curl_easy_getinfo(easyhand, CURLINFO_FILETIME, &last_mod);
+ 			fclose(handle->fd);
+-#if defined(IRC_UID) && defined(IRC_GID)
+-			if (!loop.ircd_booted)
+-				chown(handle->filename, IRC_UID, IRC_GID);
+-#endif
++			if ((sw_uid != -1) && (sw_gid != -1))
++			{
++				if (!loop.ircd_booted)
++					chown(handle->filename, sw_uid, sw_gid);
++			}
+ 			if (msg->data.result == CURLE_OK)
+ 			{
+ 				if (code == 304 || (last_mod != -1 && last_mod < handle->cachetime))

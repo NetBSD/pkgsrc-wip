@@ -1,0 +1,112 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/09/29 23:25:56 adrian_p Exp $
+
+--- src/ircd.c.orig	2004-09-29 10:15:58.000000000 +0100
++++ src/ircd.c	2004-09-29 22:30:53.000000000 +0100
+@@ -37,6 +37,7 @@
+ #ifndef _WIN32
+ #include <sys/file.h>
+ #include <pwd.h>
++#include <grp.h>
+ #include <sys/time.h>
+ #else
+ #include <io.h>
+@@ -96,6 +97,12 @@
+ extern MODVAR aMotd *botmotd;
+ extern MODVAR aMotd *smotd;
+ MODVAR MemoryInfo StatsZ;
++struct group *gr;
++struct passwd *pw;
++int sw_uid = -1;
++int sw_gid = -1; 
++char *rt_user = NULL;
++char *rt_group = NULL;
+ 
+ int  R_do_dns, R_fin_dns, R_fin_dnsc, R_fail_dns, R_do_id, R_fin_id, R_fail_id;
+ 
+@@ -747,7 +754,7 @@
+ #define CMDLINE_CFG ""
+ #endif
+ 	(void)printf
+-	    ("Usage: ircd %s[-h servername] [-p portnumber] [-x loglevel] [-t] [-H]\n",
++	    ("Usage: ircd %s[-h servername] [-p portnumber] [-x loglevel] [-t] [-H] [-u user:[group]]\n",
+ 	    CMDLINE_CFG);
+ 	(void)printf("Server not started\n\n");
+ #else
+@@ -1113,6 +1120,35 @@
+ 			  (void)setuid((uid_t) uid);
+ 			  bootopt |= BOOT_TTY;
+ 			  break;
++		  case 'u':
++			  /* grab the user and/or group specified */
++			  rt_user = malloc(strlen(p) + 1);
++			  if (rt_user == NULL)
++				exit(0);
++
++			  /* yank out the group bit */
++			  (void)strncpy(rt_user, p, strlen(p) + 1);
++			  rt_group = rindex(rt_user, ':');
++			  if (rt_group)
++				*rt_group++ = '\0'; /* get rid of the ':' */
++
++		     	  /* lookup user name to UID */
++			  if ((pw = getpwnam(rt_user)) != NULL) {
++				sw_uid = pw->pw_uid;
++			  } else {
++				(void)printf("User not found %s\n", rt_user);
++			 	exit(0);
++			  }
++
++			  /* lookup group name to GID */
++			  if ((gr = getgrnam(rt_group)) != NULL) {
++				sw_gid = pw->pw_gid;
++			  } else {
++				(void)printf("Group not found %s\n", rt_group);
++				exit(0);
++			  }
++
++			  break;
+ 		  case 'v':
+ 			  (void)printf("%s build %s\n", version, buildid);
+ #else
+@@ -1371,17 +1407,17 @@
+ 	R_fin_id = strlen(REPORT_FIN_ID);
+ 	R_fail_id = strlen(REPORT_FAIL_ID);
+ 
+-#if !defined(IRC_UID) && !defined(_WIN32)
+-	if ((uid != euid) && !euid) {
++#if !defined(_WIN32)
++	if ((uid != euid) && !euid && (sw_uid == -1)) {
+ 		(void)fprintf(stderr,
+ 		    "ERROR: do not run ircd setuid root. Make it setuid a normal user.\n");
+ 		exit(-1);
+ 	}
+ #endif
+ 
+-#if defined(IRC_UID) && defined(IRC_GID)
++if ((sw_uid != -1) && (sw_gid != -1)) {
+ 	if ((int)getuid() == 0) {
+-		if ((IRC_UID == 0) || (IRC_GID == 0)) {
++		if ((sw_uid == 0) || (sw_gid == 0)) {
+ 			(void)fprintf(stderr,
+ 			    "ERROR: SETUID and SETGID have not been set properly"
+ 			    "\nPlease read your documentation\n(HINT:SETUID or SETGID can not be 0)\n");
+@@ -1394,14 +1430,14 @@
+ 			(void)fprintf(stderr,
+ 			    "WARNING: ircd invoked as root\n");
+ 			(void)fprintf(stderr, "         changing to uid %d\n",
+-			    IRC_UID);
++			    sw_uid);
+ 			(void)fprintf(stderr, "         changing to gid %d\n",
+-			    IRC_GID);
+-			(void)setgid(IRC_GID);
+-			(void)setuid(IRC_UID);
++			    sw_gid);
++			(void)setgid(sw_gid);
++			(void)setuid(sw_uid);
+ 		}
+ 	}
+-#endif
++}
+ 	write_pidfile();
+ 	Debug((DEBUG_NOTICE, "Server ready..."));
+ 	SetupEvents();
