@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 15:40:55 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/05/09 04:02:51 minskim Exp $
 #
 # This Makefile fragment is included by packages that use libX11.
 
@@ -9,7 +9,7 @@ LIBX11_BUILDLINK3_MK:=	${LIBX11_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	libX11
 .endif
 
-BUILDLINK_PACKAGES:=	{BUILDLINK_PACKAGES:NlibX11}
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibX11}
 BUILDLINK_PACKAGES+=	libX11
 
 .if !empty(LIBX11_BUILDLINK3_MK:M+)
