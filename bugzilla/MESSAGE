@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2004/04/02 13:52:14 adrian_p Exp $
+$NetBSD: MESSAGE,v 1.5 2004/11/04 00:02:10 adrian_p Exp $
 
 To complete the setup you will need to:
 
@@ -13,7 +13,7 @@ If you are running Apache then you may either symlink
 
 into DocumentRoot, or copy
 
-	${EXDIR}/bugzilla.conf
+	${EGDIR}/bugzilla.conf
 
 to ${PKG_SYSCONFDIR}/httpd and add the following lines to httpd.conf:
 
