@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2003/10/11 21:25:49 tvierling Exp $
+
+--- entropy.conf-dist.orig	Sat Oct 11 17:23:38 2003
++++ entropy.conf-dist
+@@ -54,13 +54,13 @@ storedepth=1
+ # ikg2: Mr. Ikg's second stream cipher alogrithm.
+ # ikg3: Mr. Ikg's second algo with different entropy vector.
+ # lorenz: 'Lorenz attractor', cipher based on chaos theory.
+-crypto_default=crypt1
++crypto_default=ikg3
+ 
+ # What crypto modules to reject for incoming connections?
+ # If you list modules here, your node will reject connections trying to
+ # use the specified module. The modules crypt0, crypt1, crypt2 and vmc1
+ # could be listed here, but they aren't (currently) used anyways.
+-crypto_reject=crypt0
++crypto_reject=crypt0,crypt1,crypt2,vmc1
+ 
+ # Select a log filename. Default is entropy.log in the current directory.
+ logfile=entropy.log
