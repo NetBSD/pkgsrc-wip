@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/12 04:01:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/12 04:38:50 xtraeme Exp $
 #
 
 DISTNAME=	jabberd-2.0.0-a4
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.jabberstudio.org/
 COMMENT=	Instant messaging server ( version 2 )
 
 USE_BUILDLINK2=		yes
-USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
