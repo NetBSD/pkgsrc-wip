@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/08/21 17:55:17 adrian_p Exp $
+# $NetBSD: Makefile,v 1.23 2004/08/21 19:45:23 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -61,7 +61,6 @@ post-patch: make-sendmail-siteconfig
 	@${CAT} ${FILESDIR}/site.config.m4-db4 >>${SITECONFIG}
 .elif ${USE_DB2} == YES
 	@${CAT} ${FILESDIR}/site.config.m4-db2 >>${SITECONFIG}
-PLIST_SRC+=	${PKGDIR}/PLIST.db2
 .endif
 .if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
 	@${CAT} ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
