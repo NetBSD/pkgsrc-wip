@@ -1,77 +1,77 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/09 20:13:45 marc Exp $
-pgsql80/bin/postgres
-pgsql80/bin/postmaster
-pgsql80/lib/postgresql/ascii_and_mic.so
-pgsql80/lib/postgresql/cyrillic_and_mic.so
-pgsql80/lib/postgresql/euc_cn_and_mic.so
-pgsql80/lib/postgresql/euc_jp_and_sjis.so
-pgsql80/lib/postgresql/euc_kr_and_mic.so
-pgsql80/lib/postgresql/euc_tw_and_big5.so
-pgsql80/lib/postgresql/latin2_and_win1250.so
-pgsql80/lib/postgresql/latin_and_mic.so
-pgsql80/lib/postgresql/utf8_and_ascii.so
-pgsql80/lib/postgresql/utf8_and_big5.so
-pgsql80/lib/postgresql/utf8_and_cyrillic.so
-pgsql80/lib/postgresql/utf8_and_euc_cn.so
-pgsql80/lib/postgresql/utf8_and_euc_jp.so
-pgsql80/lib/postgresql/utf8_and_euc_kr.so
-pgsql80/lib/postgresql/utf8_and_euc_tw.so
-pgsql80/lib/postgresql/utf8_and_gb18030.so
-pgsql80/lib/postgresql/utf8_and_gbk.so
-pgsql80/lib/postgresql/utf8_and_iso8859.so
-pgsql80/lib/postgresql/utf8_and_iso8859_1.so
-pgsql80/lib/postgresql/utf8_and_johab.so
-pgsql80/lib/postgresql/utf8_and_sjis.so
-pgsql80/lib/postgresql/utf8_and_tcvn.so
-pgsql80/lib/postgresql/utf8_and_uhc.so
-pgsql80/lib/postgresql/utf8_and_win1250.so
-pgsql80/lib/postgresql/utf8_and_win1256.so
-pgsql80/lib/postgresql/utf8_and_win874.so
-pgsql80/man/man1/postgres.1
-pgsql80/man/man1/postmaster.1
-pgsql80/share/conversion_create.sql
-pgsql80/share/information_schema.sql
-pgsql80/${PKGLOCALEDIR}/locale/af/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/de/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/es/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/it/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/postgres.mo
-pgsql80/${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/postgres.mo
-pgsql80/share/pg_hba.conf.sample
-pgsql80/share/pg_ident.conf.sample
-pgsql80/share/postgres.bki
-pgsql80/share/postgres.description
-pgsql80/share/postgresql.conf.sample
-pgsql80/share/recovery.conf.sample
-pgsql80/share/sql_features.txt
-pgsql80/share/system_views.sql
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/tr/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/sv/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/sk/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/ru/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/nb/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/it/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/hu/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/hr/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/fr/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/es/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/de/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/cs/LC_MESSAGES
-@dirrm pgsql80/${PKGLOCALEDIR}/locale/af/LC_MESSAGES
-@comment in postgresql80-client: @dirrm pgsql80/share
-@comment in postgresql80-lib: @dirrm pgsql80/man/man1
-@comment in postgresql80-lib: @dirrm pgsql80/lib/postgresql
-@comment in postgresql80-lib: @dirrm pgsql80/bin
+@comment $NetBSD: PLIST,v 1.2 2005/01/24 05:45:21 schnoebe Exp $
+bin/postgres
+bin/postmaster
+lib/postgresql/ascii_and_mic.so
+lib/postgresql/cyrillic_and_mic.so
+lib/postgresql/euc_cn_and_mic.so
+lib/postgresql/euc_jp_and_sjis.so
+lib/postgresql/euc_kr_and_mic.so
+lib/postgresql/euc_tw_and_big5.so
+lib/postgresql/latin2_and_win1250.so
+lib/postgresql/latin_and_mic.so
+lib/postgresql/utf8_and_ascii.so
+lib/postgresql/utf8_and_big5.so
+lib/postgresql/utf8_and_cyrillic.so
+lib/postgresql/utf8_and_euc_cn.so
+lib/postgresql/utf8_and_euc_jp.so
+lib/postgresql/utf8_and_euc_kr.so
+lib/postgresql/utf8_and_euc_tw.so
+lib/postgresql/utf8_and_gb18030.so
+lib/postgresql/utf8_and_gbk.so
+lib/postgresql/utf8_and_iso8859.so
+lib/postgresql/utf8_and_iso8859_1.so
+lib/postgresql/utf8_and_johab.so
+lib/postgresql/utf8_and_sjis.so
+lib/postgresql/utf8_and_tcvn.so
+lib/postgresql/utf8_and_uhc.so
+lib/postgresql/utf8_and_win1250.so
+lib/postgresql/utf8_and_win1256.so
+lib/postgresql/utf8_and_win874.so
+man/man1/postgres.1
+man/man1/postmaster.1
+share/postgresql/conversion_create.sql
+share/postgresql/information_schema.sql
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/postgres.mo
+share/postgresql/pg_hba.conf.sample
+share/postgresql/pg_ident.conf.sample
+share/postgresql/postgres.bki
+share/postgresql/postgres.description
+share/postgresql/postgresql.conf.sample
+share/postgresql/recovery.conf.sample
+share/postgresql/sql_features.txt
+share/postgresql/system_views.sql
+@dirrm ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/it/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/es/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/de/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/af/LC_MESSAGES
+@comment in postgresql80-client: @dirrm share
+@comment in postgresql80-lib: @dirrm man/man1
+@comment in postgresql80-lib: @dirrm lib/postgresql
+@comment in postgresql80-lib: @dirrm bin

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/09 20:14:46 marc Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/24 05:45:21 schnoebe Exp $
 share/doc/postgresql80/FAQ
 share/doc/postgresql80/FAQ_AIX
 share/doc/postgresql80/FAQ_CYGWIN
@@ -26,19 +26,11 @@ share/doc/postgresql80/README.mb.big5
 share/doc/postgresql80/README.mb.jp
 share/doc/postgresql80/TODO
 share/doc/postgresql80/TODO.detail/README
-share/doc/postgresql80/TODO.detail/atttypmod
-share/doc/postgresql80/TODO.detail/count
-share/doc/postgresql80/TODO.detail/fadvise
-share/doc/postgresql80/TODO.detail/inheritance
-share/doc/postgresql80/TODO.detail/mmap
-share/doc/postgresql80/TODO.detail/performance
 share/doc/postgresql80/TODO.detail/psql
 share/doc/postgresql80/TODO.detail/thread
 share/doc/postgresql80/TODO.detail/trigger
 share/doc/postgresql80/TODO.detail/update
-share/doc/postgresql80/TODO.detail/view
 share/doc/postgresql80/TODO.detail/wal
-share/doc/postgresql80/TODO.detail/win32
 share/doc/postgresql80/admin.html
 share/doc/postgresql80/app-clusterdb.html
 share/doc/postgresql80/app-createdb.html
@@ -62,7 +54,7 @@ share/doc/postgresql80/app-postmaster.html
 share/doc/postgresql80/app-psql.html
 share/doc/postgresql80/app-vacuumdb.html
 share/doc/postgresql80/appendixes.html
-share/doc/postgresql80/${LOWER_VENDOR}vel-consistency.html
+share/doc/postgresql80/applevel-consistency.html
 share/doc/postgresql80/arrays.html
 share/doc/postgresql80/auth-methods.html
 share/doc/postgresql80/backup-file.html
@@ -170,6 +162,8 @@ share/doc/postgresql80/explicit-joins.html
 share/doc/postgresql80/explicit-locking.html
 share/doc/postgresql80/extend-type-system.html
 share/doc/postgresql80/extend.html
+share/doc/postgresql80/external-extensions.html
+share/doc/postgresql80/external-projects.html
 share/doc/postgresql80/extensibility.html
 share/doc/postgresql80/features.html
 share/doc/postgresql80/functions-admin.html
@@ -263,6 +257,7 @@ share/doc/postgresql80/kernel-resources.html
 share/doc/postgresql80/largeobjects.html
 share/doc/postgresql80/libpq-async.html
 share/doc/postgresql80/libpq-build.html
+share/doc/postgresql80/libpq-cancel.html
 share/doc/postgresql80/libpq-control.html
 share/doc/postgresql80/libpq-copy.html
 share/doc/postgresql80/libpq-envars.html
@@ -300,7 +295,6 @@ share/doc/postgresql80/nls-programmer.html
 share/doc/postgresql80/nls.html
 share/doc/postgresql80/notation.html
 share/doc/postgresql80/overview.html
-share/doc/postgresql80/page.html
 share/doc/postgresql80/parser-stage.html
 share/doc/postgresql80/performance-tips.html
 share/doc/postgresql80/perm-functions.html
@@ -575,6 +569,9 @@ share/doc/postgresql80/sql-vacuum.html
 share/doc/postgresql80/sql.html
 share/doc/postgresql80/ssh-tunnels.html
 share/doc/postgresql80/ssl-tcp.html
+share/doc/postgresql80/storage-page-layout.html
+share/doc/postgresql80/storage-toast.html
+share/doc/postgresql80/storage.html
 share/doc/postgresql80/stylesheet.css
 share/doc/postgresql80/supported-platforms.html
 share/doc/postgresql80/transaction-iso.html
@@ -607,7 +604,7 @@ share/doc/postgresql80/typeconv-oper.html
 share/doc/postgresql80/typeconv-query.html
 share/doc/postgresql80/typeconv-union-case.html
 share/doc/postgresql80/typeconv.html
-share/doc/postgresql80/unsupported-features-sql99.html
+share/doc/postgresql80/unsupported-features-sql-standard.html
 share/doc/postgresql80/user-attributes.html
 share/doc/postgresql80/user-manag.html
 share/doc/postgresql80/view-pg-indexes.html

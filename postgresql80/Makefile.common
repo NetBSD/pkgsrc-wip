@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2005/01/22 20:43:14 schnoebe Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/01/24 05:45:20 schnoebe Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -46,7 +46,7 @@ USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 BUILD_USES_MSGFMT=	yes
 USE_GNU_TOOLS+=		lex make yacc
-#PKG_SYSCONFSUBDIR=	postgresql
+PKG_SYSCONFSUBDIR=	postgresql
 
 # in 7.4.2, this is done by autoconf stuff which has leading whitespace
 #USE_PKGLOCALEDIR=	yes
@@ -71,7 +71,7 @@ PGSQL_TEMPLATE.SunOS=		solaris
 PGSQL_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 .endif
 
-PG_DIR=			${PREFIX}/pgsql80
+PG_DIR=			${PREFIX}
 GNU_CONFIGURE_PREFIX=	${PG_DIR}
 INSTALLATION_DIRS+=	${PG_DIR}
 
