@@ -1,3 +1,5 @@
+Don't rely on debian diff -- it may change version and become unavailable.
+
 This uses uname -m for machine type. Need to check names.
 
 should -V option give ${VERSION:S/-/./} or just ${VERSION} ??

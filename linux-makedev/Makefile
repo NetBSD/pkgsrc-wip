@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/01 02:44:33 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/25 14:57:42 jeremy-c-reed Exp $
 #
 
 DISTNAME=		makedev_2.3.1.orig
 PKGNAME=		linux-makedev-${VERSION:S/-/./}
-PKGREVISION=		1
 WRKSRC=			${WRKDIR}/makedev-2.3.1.orig
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/makedev/}
@@ -17,7 +16,7 @@ COMMENT=		Script to make and update Linux /dev device nodes
 
 ONLY_FOR_PLATFORM=	Linux-*-* # This is for the Linux kernel devices
 
-VERSION=		2.3.1-62
+VERSION=		2.3.1-63
 
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
