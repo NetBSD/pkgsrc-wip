@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/15 20:30:04 daprice Exp $
+
+SHA1 (emboss/topo-1.0.0-20041107/TOPO-1.0.0.tar.gz) = b96203b99a0f6d2af15cfa509bfbfb3a5d28d473
+Size (emboss/topo-1.0.0-20041107/TOPO-1.0.0.tar.gz) = 345281 bytes
+SHA1 (patch-aa) = acbd68a1b0e9516abcebba93cd6897e2d28d7621
+SHA1 (patch-ab) = c510e8ed9c43990f04456ae312e8b42eea196759

@@ -1,0 +1,72 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/11/15 20:30:04 daprice Exp $
+
+--- source/Makefile.in.orig	2004-07-15 09:34:27.000000000 -0600
++++ source/Makefile.in	2004-07-26 12:48:29.000000000 -0600
+@@ -49,7 +49,7 @@
+ 	$(top_srcdir)/m4/sgi.m4 $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+-mkinstalldirs = $(mkdir_p)
++mkinstalldirs = $(SHELL) ../mkinstalldirs
+ CONFIG_CLEAN_FILES =
+ am__installdirs = "$(DESTDIR)$(bindir)"
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
+@@ -60,20 +60,20 @@
+ am__DEPENDENCIES_1 =
+ @ISCYGWIN_FALSE@@LOCALLINK_FALSE@topo_DEPENDENCIES =  \
+ @ISCYGWIN_FALSE@@LOCALLINK_FALSE@	$(am__DEPENDENCIES_1)
+-@ISCYGWIN_FALSE@@LOCALLINK_TRUE@topo_DEPENDENCIES = ../../../nucleus/libnucleus.la \
+-@ISCYGWIN_FALSE@@LOCALLINK_TRUE@	../../../ajax/libajaxg.la \
+-@ISCYGWIN_FALSE@@LOCALLINK_TRUE@	../../../ajax/libajax.la \
+-@ISCYGWIN_FALSE@@LOCALLINK_TRUE@	../../../plplot/libplplot.la \
++@ISCYGWIN_FALSE@@LOCALLINK_TRUE@topo_DEPENDENCIES = $(libdir)/nucleus/libnucleus.la \
++@ISCYGWIN_FALSE@@LOCALLINK_TRUE@	$(libdir)/ajax/libajaxg.la \
++@ISCYGWIN_FALSE@@LOCALLINK_TRUE@	$(libdir)/ajax/libajax.la \
++@ISCYGWIN_FALSE@@LOCALLINK_TRUE@	$(libdir)/plplot/libplplot.la \
+ @ISCYGWIN_FALSE@@LOCALLINK_TRUE@	$(am__DEPENDENCIES_1)
+ @ISCYGWIN_TRUE@@LOCALLINK_FALSE@topo_DEPENDENCIES =  \
+ @ISCYGWIN_TRUE@@LOCALLINK_FALSE@	$(am__DEPENDENCIES_1)
+ @ISCYGWIN_TRUE@@LOCALLINK_TRUE@topo_DEPENDENCIES =  \
+-@ISCYGWIN_TRUE@@LOCALLINK_TRUE@	../../../nucleus/libnucleus.la \
+-@ISCYGWIN_TRUE@@LOCALLINK_TRUE@	../../../ajax/libajax.la \
+-@ISCYGWIN_TRUE@@LOCALLINK_TRUE@	../../../plplot/libplplot.la \
++@ISCYGWIN_TRUE@@LOCALLINK_TRUE@	$(libdir)/nucleus/libnucleus.la \
++@ISCYGWIN_TRUE@@LOCALLINK_TRUE@	$(libdir)/ajax/libajax.la \
++@ISCYGWIN_TRUE@@LOCALLINK_TRUE@	$(libdir)/plplot/libplplot.la \
+ @ISCYGWIN_TRUE@@LOCALLINK_TRUE@	$(am__DEPENDENCIES_1)
+ DEFAULT_INCLUDES = -I. -I$(srcdir)
+-depcomp = $(SHELL) $(top_srcdir)/depcomp
++depcomp = $(SHELL) ../depcomp
+ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/topo.Po
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+@@ -104,7 +104,7 @@
+ AWK = @AWK@
+ CC = @CC@
+ CCDEPMODE = @CCDEPMODE@
+-CFLAGS = @CFLAGS@
++CFLAGS = @CFLAGS@ -I@INCLUDE@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+ CXX = @CXX@
+@@ -172,7 +172,7 @@
+ SHELL = @SHELL@
+ STRIP = @STRIP@
+ VERSION = @VERSION@
+-XLIB = @XLIB@
++XLIB = @X116@ @XLIB@
+ X_CFLAGS = @X_CFLAGS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_LIBS = @X_LIBS@
+@@ -228,9 +228,9 @@
+ topo_SOURCES = topo.c 
+ noinst_HEADERS = common.h
+ @ISCYGWIN_FALSE@@LOCALLINK_FALSE@LDADD = -L${embprefix}/lib -lnucleus -lajaxg -lajax -lplplot $(XLIB)
+-@ISCYGWIN_FALSE@@LOCALLINK_TRUE@LDADD = ../../../nucleus/libnucleus.la ../../../ajax/libajaxg.la ../../../ajax/libajax.la ../../../plplot/libplplot.la $(XLIB)
++@ISCYGWIN_FALSE@@LOCALLINK_TRUE@LDADD = $(libdir)/nucleus/libnucleus.la $(libdir)/ajax/libajaxg.la $(libdir)/ajax/libajax.la $(libdir)/plplot/libplplot.la $(XLIB)
+ @ISCYGWIN_TRUE@@LOCALLINK_FALSE@LDADD = -L${embprefix}/lib -lnucleus -lajax -lplplot $(XLIB)
+-@ISCYGWIN_TRUE@@LOCALLINK_TRUE@LDADD = ../../../nucleus/libnucleus.la  ../../../ajax/libajax.la ../../../plplot/libplplot.la $(XLIB)
++@ISCYGWIN_TRUE@@LOCALLINK_TRUE@LDADD = $(libdir)/nucleus/libnucleus.la  $(libdir)/ajax/libajax.la $(libdir)/plplot/libplplot.la $(XLIB)
+ all: all-am
+ 
+ .SUFFIXES:
