@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/12 03:57:14 blef Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/12 04:24:45 blef Exp $
 #
 
 DISTNAME=		gimp-${GIMP_VER}
@@ -39,13 +39,6 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/${PKGNAME}
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
-
-MAKE_ENV+=		X11BASE=${X11BASE}
-PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
-
-pre-build:
-	${BUILDLINK_CC} -o ${WRKSRC}/docs/pdb_self_doc			\
-		${FILESDIR}/pdb_self_doc.c
 
 post-install:
 	${TEST} ${PREFIX} = ${LOCALBASE} ||				\
