@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/02 02:14:42 dawszy Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/25 06:41:27 blef Exp $
 #
 
 DISTNAME=		mtrack-0.3
@@ -9,7 +9,7 @@ MAINTAINER=		dawszy@arhea.pl
 HOMEPAGE=		http://www.qsl.net/g4klx/
 COMMENT=		Satellite tracking program for amateurs
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 NO_CONFIGURE=		yes
 
 pre-build:
@@ -18,5 +18,5 @@ pre-build:
 		> ${WRKSRC}/Makefile.new
 	${MV} ${WRKSRC}/Makefile.new ${WRKSRC}/Makefile
 
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

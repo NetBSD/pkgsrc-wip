@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/30 17:40:22 blef Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/25 06:37:24 blef Exp $
 lib/gtk/themes/engines/libthinice.a
 lib/gtk/themes/engines/libthinice.la
 lib/gtk/themes/engines/libthinice.so
@@ -7,7 +7,4 @@ share/themes/ThinIce/README.html
 share/themes/ThinIce/gtk/gtkrc
 @dirrm share/themes/ThinIce/gtk
 @dirrm share/themes/ThinIce
-@dirrm share/themes
 @dirrm lib/gtk/themes/engines
-@dirrm lib/gtk/themes
-@dirrm lib/gtk
