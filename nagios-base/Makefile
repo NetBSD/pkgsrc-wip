@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/06 00:30:40 marmfield Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/09 01:21:13 marmfield Exp $
 #
 
 DISTNAME=	nagios-1.0
@@ -10,7 +10,7 @@ MAINTAINER=	murray@river-styx.org
 HOMEPAGE=	http://www.nagios.org/
 COMMENT=	network monitor
 
-.include "../../net/nagios-base/Makefile.common"
+.include "../../wip/nagios-base/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-gd-lib=${LOCALBASE}/lib		\
 			--with-gd-inc=${LOCALBASE}/include	\
