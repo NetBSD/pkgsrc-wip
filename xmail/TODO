@@ -1,1 +1,1 @@
-make install doesn't exists :/ -> Must read 'xmail.spec' and write do-install:
+create rc.d scripts

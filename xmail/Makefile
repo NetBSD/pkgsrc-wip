@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2004/04/13 22:03:00 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/14 13:25:03 poppnk Exp $
 #
 
-DISTNAME=	xmail-1.15
+DISTNAME=	xmail-1.18
 CATEGORIES=	mail
 MASTER_SITES=	http://www.xmailserver.com/
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.xmailserver.com/
-COMMENT=	Show png icons on your desktop
+COMMENT=	SMTP, POP3 and finder server
 
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
+
+MAKE_ENV+=	OSTYPE=${OPSYS}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,5 +34,19 @@ EXT=bsd # Default one :)
 .endif
 
 MAKEFILE=Makefile.${EXT}
+
+do-install:
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/xmail
+.for bin in XMail XMCrypt CtrlClnt MkUsers
+	${INSTALL_PROGRAM} ${WRKSRC}/${bin} ${PREFIX}/libexec/xmail/${bin}
+.endfor
+.undef bin
+	${INSTALL_SCRIPT} ${WRKSRC}/sendmail    ${PREFIX}/sbin/sendmail.xmail
+	${INSTALL_SCRIPT} ${WRKSRC}/sendmail.sh ${PREFIX}/sbin/sendmail.xmail.sh
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xmail
+.for doc in Readme.txt Readme.html
+	${INSTALL_DATA} ${WRKSRC}/docs/${doc} ${PREFIX}/share/doc/xmail/${doc}
+.endfor
+.undef doc
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/04/13 22:03:00 poppnk Exp $
+$NetBSD: distinfo,v 1.3 2004/04/14 13:25:03 poppnk Exp $
 
-SHA1 (xmail-1.15.tar.gz) = bbc26765674c6403615901b216b3ed296f3b1001
-Size (xmail-1.15.tar.gz) = 402472 bytes
-SHA1 (patch-aa) = 836bfbe6a81efc011cb61b122d1439610e8c580c
-SHA1 (patch-ab) = f73a484e5335983a0b458cb1cb305a392548755e
+SHA1 (xmail-1.18.tar.gz) = 3143b631d7d3309e83e9688e008dd7f9635bce4e
+Size (xmail-1.18.tar.gz) = 406933 bytes
+SHA1 (patch-aa) = a931570d247930609c24dcb3006381673a396e59
