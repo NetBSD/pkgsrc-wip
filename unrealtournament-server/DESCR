@@ -1,0 +1,4 @@
+Unreal Tournament is a 3D first person shooter available for Linux,
+Windows and Macintosh. This package provides the server-only which
+consumes considerably less CPU than running a server inside the game
+itself.
