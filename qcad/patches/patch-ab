@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2005/03/08 15:43:01 jcflack Exp $
+
+--- qcadlib/src/engine/rs_system.cpp.orig	2004-09-14 15:13:02.000000000 -0500
++++ qcadlib/src/engine/rs_system.cpp
+@@ -292,13 +292,7 @@ RS_StringList RS_System::getDirectoryLis
+             dirList.append(appDir + "/" + subDirectory);
+         }
+ 
+-        // Redhat style:
+-        dirList.append("/usr/share/" + appDirName + "/" + subDirectory);
+-
+-        // SuSE style:
+-        dirList.append("/usr/X11R6/" + appDirName + "/" + subDirectory);
+-
+-        dirList.append("/usr/X11R6/share/" + appDirName + "/" + subDirectory);
++        dirList.append("@PREFIX@/share/" + appDirName + "/" + subDirectory);
+         dirList.append(getHomeDir() + "/." + appDirName + "/" + subDirectory);
+ 
+ #ifdef __APPLE__

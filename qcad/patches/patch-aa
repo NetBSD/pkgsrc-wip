@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1 2005/03/08 15:43:01 jcflack Exp $
+
+--- qcad/src/qc_applicationwindow.cpp.orig	2004-09-14 15:13:07.000000000 -0500
++++ qcad/src/qc_applicationwindow.cpp
+@@ -2701,7 +2701,7 @@ void QC_ApplicationWindow::slotHelpAbout
+     QString demo; // = " [Demo]";
+ #else
+ 
+-    QString demo = " [Professional]";
++    QString demo = " [Community Edition]";
+ #endif
+ 
+     QStringList modules;
+@@ -2739,6 +2739,9 @@ void QC_ApplicationWindow::slotHelpAbout
+                        "<br>" +
+                        tr("Modules: %1").arg(modulesString) + "<br>" +
+                        QString("http://www.ribbonsoft.com")
++                       + QString("<hr>")
++                       + QString("<br>Installed with pkgsrc: www.pkgsrc.org")
++                       + QString("<br>use pkg_info for build details")
+ #ifdef QC_ABOUT_ADD_COMPANY
+                        + QString("<br>") + QC_ABOUT_ADD_COMPANY
+                        + QString("</center>")
+@@ -2765,7 +2768,7 @@ void QC_ApplicationWindow::slotHelpManua
+                         RS_SYSTEM->getAppDir().latin1());
+         RS_DEBUG->print("QC_ApplicationWindow::slotHelpManual(): appdir: %s",
+                         RS_SYSTEM->getAppDir().latin1());
+-        assistant = new QAssistantClient(RS_SYSTEM->getAppDir()+"/bin", this);
++        assistant = new QAssistantClient("@QTDIR@/bin", this);
+         QStringList args;
+         args << "-profile";
+         args << QDir::convertSeparators(RS_SYSTEM->getDocPath() + "/qcaddoc.adp");

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/03/08 15:43:01 jcflack Exp $
+
+--- qcadlib/src/filters/rs_filterdxf.cpp.orig	2004-09-14 15:13:02.000000000 -0500
++++ qcadlib/src/filters/rs_filterdxf.cpp
+@@ -509,7 +509,7 @@ void RS_FilterDXF::addMText(const DL_MTe
+         lss = RS2::Exact;
+     }
+ 
+-	mtext+=data.text;
++	mtext+=data.text.c_str();
+ 
+     RS_String locallyEncoded = mtext;
+     RS_String enc = RS_System::getEncoding(
