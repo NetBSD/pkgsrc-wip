@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/14 00:22:40 blef Exp $
+$NetBSD: patch-aa,v 1.2 2003/08/17 01:30:42 blef Exp $
 
---- config.mk.orig	Sun Apr 13 14:00:32 2003
-+++ config.mk	Sun Apr 13 14:07:03 2003
+--- config.mk.orig	2003-03-23 00:08:58.000000000 +0000
++++ config.mk	2003-08-16 11:05:41.000000000 +0000
 @@ -36,7 +36,7 @@
  # internally, so you do so at your own risk.
  DEBUG_OPT   =   -O #-DNDEBUG
  
 -LINK_OPT    =	
-+LINK_OPT    =	-Wl,-R$(X11BASE)/lib
++LINK_OPT    =	-Wl,$(RPATH_FLAG)$(X11BASE)/lib
  
  # The string that will be used for making the packaged .tar.Z file.
- VERSION     =   2.01
+ VERSION     =   2.02r2
 @@ -160,11 +160,11 @@
  
  # The -DMSEC_PER_CLOCK=8 is kind of a hack, take it out if the game speed of 
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/14 00:22:40 blef Exp $
 -INCL_DIRS="-I/usr/X11R6/include" LIBS_DIRS="-L/usr/X11R6/lib" \
 -OBJ_DIR=$(DEPTH)/x11/FREEBSD PCKG_NAME="freebsd" \
 +CFLAGS="-DUSE_RANDOM -DPROTECTED_IS_PUBLIC -DUSE_UINT_NET_LENGTH ${CFLAGS}" \
-+INCL_DIRS=-I$(X11BASE)/include LIBS_DIRS=-L$(X11BASE)/lib \
++INCL_DIRS="-I$(X11BASE)/include" LIBS_DIRS="-L$(X11BASE)/lib" \
 +OBJ_DIR=$(DEPTH)/x11/PKGSRC PCKG_NAME="pkgsrc" \
  LIBS="-lXpm -lX11 -lm" $(TARGETS)
  

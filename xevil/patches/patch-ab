@@ -1,13 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/04/14 00:22:40 blef Exp $
+$NetBSD: patch-ab,v 1.2 2003/08/17 01:30:42 blef Exp $
 
---- x11/ui.cpp~	Wed Jan 19 12:54:14 2000
-+++ x11/ui.cpp	Thu Dec 21 19:41:38 2000
-@@ -1322,7 +1322,7 @@
-       
-       // Get font.  Use user-specified font if given.
-       // regular size font.
--      char *theFont = fontName ? fontName : DEFAULT_FONT_NAME;
-+      const char *theFont = fontName ? fontName : DEFAULT_FONT_NAME;
-       xvars.font[xvars.dpyMax] = 
-         XLoadQueryFont(xvars.dpy[xvars.dpyMax],theFont);
-       if (!xvars.font[xvars.dpyMax]) {
+--- cmn/utils.cpp.orig	Sun Apr 13 15:11:54 2003
++++ cmn/utils.cpp	Sun Apr 13 15:12:19 2003
+@@ -483,11 +483,7 @@
+ #endif
+ 
+ 
+-#ifdef UNAME_USR_BIN
+-#define UNAME_PATH "/usr/bin/uname"
+-#else
+-#define UNAME_PATH "/bin/uname"
+-#endif
++#define UNAME_PATH "@UNAME@"
+ 
+ #ifdef X11
+   FILE* fp = popen(UNAME_PATH " -a","r");

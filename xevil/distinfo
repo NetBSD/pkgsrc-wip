@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/14 00:22:40 blef Exp $
+$NetBSD: distinfo,v 1.2 2003/08/17 01:30:42 blef Exp $
 
-MD5 (xevilsrc2.02.zip) = e1890f77144367e2e8bbf3609458b784
-SHA1 (patch-aa) = 2d267129e2ea3e43dc931f1076abe360335fe6bf
-SHA1 (patch-ab) = f678fc40c9500c77c1ef5e58f13bb9253b4220c5
-SHA1 (patch-ac) = 789676f386dde63b00bfbc02b9bad3df282e6874
-SHA1 (patch-ad) = 7beae27f7e909338f97be193650ed0fb99b5b3d1
-SHA1 (patch-ae) = 10416465eb62f034b111971530f6c1897bce3266
+SHA1 (xevilsrc2.02r2.zip) = e9a262daffc7ee5c06196dc94cf35c199be86bbc
+Size (xevilsrc2.02r2.zip) = 1857315 bytes
+SHA1 (patch-aa) = 644fa704f9da80ba76a9822bc8b63c6d0594db5f
+SHA1 (patch-ab) = 10416465eb62f034b111971530f6c1897bce3266
+SHA1 (patch-ac) = 470479cc03cbd3cc35b5c12560868a18845cdf35
