@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/11/12 01:25:00 blef Exp $
+# $NetBSD: Makefile,v 1.11 2003/11/28 05:01:16 blef Exp $
 
 DISTNAME=	openbox-3.0
 CATEGORIES=	wm x11
@@ -15,6 +15,7 @@ DEPENDS+=		vera-ttf>=1.10:../../fonts/vera-ttf
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
