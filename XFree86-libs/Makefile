@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/08/28 14:41:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2003/09/01 23:57:53 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-libs-${XF_VER}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XFREE}
 DISTFILES=	X430src-1.tgz X430src-2.tgz \
 		X430src-3.tgz X430src-4.tgz
 
-MAINTAINER=	xfree86@xtraeme.unixbsd.org
+MAINTAINER=	xfree86@blef.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 Libraries
 

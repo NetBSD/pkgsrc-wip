@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/08/28 06:55:54 blef Exp $
+# $NetBSD: Makefile,v 1.11 2003/09/01 23:57:52 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-fontsScalable-${XF_VER}
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
 DISTFILES=	X430src-4.tgz X430src-5.tgz
 
-MAINTAINER=	xfree86@xtraeme.unixbsd.org
+MAINTAINER=	xfree86@blef.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 scalable fonts
 

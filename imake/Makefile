@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/08/28 15:22:05 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.16 2003/09/01 23:57:53 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_XFREE}
 DISTFILES=	X430src-1.tgz X430src-3.tgz
 
-MAINTAINER=	xfree86@xtraeme.unixbsd.org
+MAINTAINER=	xfree86@blef.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	Imake and other utilities from XFree86
 

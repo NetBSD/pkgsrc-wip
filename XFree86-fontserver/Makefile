@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/25 23:51:59 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/01 23:57:53 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-fontserver-${XF_VER}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XFREE}
 DISTFILES=	X430src-1.tgz X430src-2.tgz \
 		X430src-3.tgz X430src-4.tgz
 
-MAINTAINER=	xfree86@xtraeme.unixbsd.org
+MAINTAINER=	xfree86@blef.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 font server
 
