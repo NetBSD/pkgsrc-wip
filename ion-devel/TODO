@@ -1,6 +1,3 @@
-I'm not entirely satisfied with the fact that the package
-installs a system.mk file that references buildlink dir.
-That's fine when plugins are installed from pkgsrc, but
-not for plugins that are not built from pkgsrc. The
-reference should be set to $(X11BASE) (and hard wired in
-the installed system.mk file).
+New version out. This one will need more work, since now
+it depends on lua-devel, which I have to package as
+well.

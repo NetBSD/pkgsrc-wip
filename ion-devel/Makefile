@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 09:27:17 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/09 17:52:52 cubidou Exp $
 #
 
 DISTNAME=	ion-devel-20030327
@@ -15,6 +15,8 @@ USE_PKGINSTALL=	YES
 USE_X11=	YES
 USE_GMAKE=	YES
 
+MAKE_ENV+=	X11_PREFIX=${BUILDLINK_X11_DIR}
+
 PKG_SYSCONFSUBDIR=	ion
 EGDIR=			${PREFIX}/share/examples/ion
 EGFILES=		common-frame-bindings.conf draw.conf \
@@ -28,5 +30,10 @@ EGFILES=		common-frame-bindings.conf draw.conf \
 CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
 .endfor
 .undef f
+
+post-patch:
+	${SED} -e s,@@PREFIX@@,${PREFIX}, -e s,@@X11BASE@@,${X11BASE}, \
+	    ${WRKSRC}/system.mk > ${WRKSRC}/system.mk.tmp
+	${MV} ${WRKSRC}/system.mk.tmp ${WRKSRC}/system.mk
 
 .include "../../mk/bsd.pkg.mk"

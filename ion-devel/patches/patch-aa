@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/03 09:27:17 cubidou Exp $
+$NetBSD: patch-aa,v 1.2 2003/04/09 17:52:53 cubidou Exp $
 
 --- system.mk.orig	2003-03-17 19:49:26.000000000 +0100
 +++ system.mk
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/03 09:27:17 cubidou Exp $
  ##
  
 -PREFIX=/usr/local/ion-devel
-+#PREFIX=/usr/local/ion-devel
++PREFIX?=@@PREFIX@@
  
  # No need to modify these usually
  BINDIR=$(PREFIX)/bin
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/03 09:27:17 cubidou Exp $
  ##
  
 -X11_PREFIX=/usr/X11R6
-+X11_PREFIX=$(BUILDLINK_X11_DIR)
++X11_PREFIX?=@@X11BASE@@
  # SunOS/Solaris
  #X11_PREFIX=/usr/openwin
  

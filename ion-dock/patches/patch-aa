@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/03 09:29:50 cubidou Exp $
+$NetBSD: patch-aa,v 1.2 2003/04/09 17:52:54 cubidou Exp $
 
 --- Makefile.orig	2003-03-27 00:09:51.000000000 +0100
 +++ Makefile
-@@ -5,13 +5,13 @@
+@@ -5,15 +5,15 @@
  # Set this to your Ion source directory.
  # If you're using the Debian package, just apt-get install ion-devel-dev
  # instead.
@@ -17,8 +17,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/03 09:29:50 cubidou Exp $
 +MODULEDIR := $(LIBDIR)/ion
 +IONETCDIR := $(EXDIR)/ion
  
- CFLAGS := -g -O2 -fPIC $(WARN) $(DEFINES) $(INCLUDES) $(X11_INCLUDES) \
+-CFLAGS := -g -O2 -fPIC $(WARN) $(DEFINES) $(INCLUDES) $(X11_INCLUDES) \
++CFLAGS += -fPIC $(WARN) $(DEFINES) $(INCLUDES) $(X11_INCLUDES) \
  	$(EXTRA_INCLUDES) -I$(ION_DIR) -I$(ION_DIR)/libtu/include
+ 
+ ifeq ($(ION_DEBIAN_PACKAGE),1)
 @@ -27,15 +27,8 @@ CONFFILE = dock.conf
  all: $(MODULE).so
  
