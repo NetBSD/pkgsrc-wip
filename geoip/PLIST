@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/24 23:56:47 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/09 10:40:06 xtraeme Exp $
 bin/geoipexport
 bin/geoiplookup
 bin/geoipupdate
-etc/GeoIP.conf
 include/GeoIP.h
 include/GeoIPBitReader.h
 include/GeoIPCity.h
@@ -24,3 +23,5 @@ lib/libGeoIPUpdate.so.0
 lib/libGeoIPUpdate.so.0.0
 man/man1/geoiplookup.1
 man/man1/geoipupdate.1
+share/examples/GeoIP/GeoIP.conf.default
+@dirrm share/examples/GeoIP
