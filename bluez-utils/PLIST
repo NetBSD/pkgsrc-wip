@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/22 09:43:15 poppnk Exp $
+bin/bluepin
+bin/ciptool
+bin/dund
+bin/hcitool
+bin/hidd
+bin/l2ping
+bin/pand
+bin/rfcomm
+bin/sdptool
+man/man1/ciptool.1
+man/man1/dund.1
+man/man1/hcitool.1
+man/man1/l2ping.1
+man/man1/pand.1
+man/man1/rfcomm.1
+man/man1/sdptool.1
+man/man5/hcid.conf.5
+man/man8/hciattach.8
+man/man8/hciconfig.8
+man/man8/hcid.8
+man/man8/sdpd.8
+sbin/hciattach
+sbin/hciconfig
+sbin/hcid
+sbin/sdpd
