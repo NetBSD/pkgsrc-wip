@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/06/27 16:32:31 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/28 09:32:24 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -106,11 +106,11 @@ post-install:
 	${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
 .endif
 
-	${INSTALL_DATA} ${WRKSRC}/obj.`uname -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsm/libsm.a \
+	${INSTALL_DATA} ${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsm/libsm.a \
 		${PREFIX}/lib
 
 	${INSTALL_DATA} \
-		${WRKSRC}/obj.`uname -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
+		${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
 		${PREFIX}/lib
 
 	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/sendmail
