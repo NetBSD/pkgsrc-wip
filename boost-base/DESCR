@@ -1,6 +1,0 @@
-Boost provides free, peer-reviewed, C++ libraries. The
-emphasis is on portable libraries which work well with the ISO C++
-Standard Library.
-
-This package installs the boost libraries contained in header files. To
-install compiled boost libraries see other boost packages.

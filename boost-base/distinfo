@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/30 00:40:14 felix9x Exp $
-
-SHA1 (boost_1_30_0.tar.gz) = 94b6ebb7b091077593f84963b1fc8d2b9484ddd7
-Size (boost_1_30_0.tar.gz) = 6764661 bytes
-SHA1 (patch-aa) = dc5d42977776ca14cd0b29ee0bf633fdb8bb5619
-SHA1 (patch-ab) = 9316973b5e358f4f5af73fca0d6a16603ff5a3dd
