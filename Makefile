@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.620 2003/11/16 15:57:40 minskim Exp $
-# $NetBSD: Makefile,v 1.620 2003/11/16 15:57:40 minskim Exp $
+# $Id: Makefile,v 1.621 2003/11/17 00:51:28 blef Exp $
+# $NetBSD: Makefile,v 1.621 2003/11/17 00:51:28 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -241,7 +241,6 @@ SUBDIR+=	ldapdns
 SUBDIR+=	lde
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
-SUBDIR+=	libdvbpsi
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgpg-error
 SUBDIR+=	libgringotts
