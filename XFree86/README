@@ -35,6 +35,13 @@ a few things:
 After making these changes, you shouldn't have any problems.
 Good luck!
 
+This meta package has been tested and reported that works
+perfectly on:
+
+	* FreeBSD 5.1-CURRENT ( x86 )
+	* NetBSD 1.6U -current ( x86 )
+	* Debian sid with gcc-3.3.1 ( x86 )
+
 Contributed by:
 
 	* Juan RP 
