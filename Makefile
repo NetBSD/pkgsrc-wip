@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1371 2004/07/08 14:50:29 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1371 2004/07/08 14:50:29 xtraeme Exp $
+# $Id: Makefile,v 1.1372 2004/07/08 14:51:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1372 2004/07/08 14:51:25 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -322,7 +322,6 @@ SUBDIR+=	libassuan
 SUBDIR+=	libavc1394
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
-SUBDIR+=	libfwbuilder
 SUBDIR+=	libmatchbox
 SUBDIR+=	libmilter813
 SUBDIR+=	libneural

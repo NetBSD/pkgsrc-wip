@@ -1,6 +1,0 @@
-Firewall Builder consists of an object-oriented GUI and a set of policy
-compilers for various firewall platforms. In Firewall Builder, a firewall
-policy is a set of rules; each rule consists of abstract objects that
-represent real network objects and services (hosts, routers, firewalls,
-networks, protocols). Firewall Builder helps users maintain a database of
-objects and allows policy editing using simple drag-and-drop operations. 
