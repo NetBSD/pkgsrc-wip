@@ -1,16 +1,27 @@
-# $NetBSD: Makefile,v 1.3 2004/02/02 14:26:11 bjan2 Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/21 21:00:04 bjan2 Exp $
 
-DISTNAME=	foomatic-filters-3.0-20031224
+DISTNAME=	foomatic-filters-3.0.1
 CATEGORIES=	print
 MASTER_SITES=	http://www.linuxprinting.org/download/foomatic/
 
-MAINTAINER=	pkgsrc@bjan.net
+MAINTAINER=	pkgsrc@bjan.freeshell.org
 HOMEPAGE=	http://www.linuxprinting.org/
 COMMENT=	Spooler independent postscript printing filter
+
+# You may choose from any of the following, if you wish
+DEPENDS+=	mpage-[0-9]*:../../print/mpage
+#DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
+#DEPENDS+=	enscript-[0-9]*:../../print/enscript
 
 GNU_CONFIGURE=		YES
 CONFIG_GUESS_OVERRIDE=  ${WRKSRC}/config.guess
 CONFIG_SUB_OVERRIDE=    ${WRKSRC}/config.sub
+
+# Rather than wrestle with the maintainer's horribly broken configure
+# scripts, we just override everything here
+CONFIGURE_ENV+= 	CUPS=${LOCALBASE}/share/cups
+CONFIGURE_ENV+= 	CUPS_FILTERS=${LOCALBASE}/lib/cups/filter
+CONFIGURE_ENV+= 	PRINTCAP=/etc/printcap
 
 USE_GNU_TOOLS+=	make
 USE_PERL5=	yes

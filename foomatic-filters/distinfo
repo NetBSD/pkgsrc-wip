@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/25 02:11:55 bjan2 Exp $
+$NetBSD: distinfo,v 1.2 2004/03/21 21:00:04 bjan2 Exp $
 
-SHA1 (foomatic-filters-3.0-20031224.tar.gz) = a1a67deb6d881fb3092adf5f40f2ac81606caa96
-Size (foomatic-filters-3.0-20031224.tar.gz) = 160320 bytes
+SHA1 (foomatic-filters-3.0.1.tar.gz) = d965bf638ea45c216aee71b9cae2e40a51b6ff9a
+Size (foomatic-filters-3.0.1.tar.gz) = 125103 bytes
+SHA1 (patch-aa) = 3bc18d45ead52a31d10e82f7e0030d8c92359277
