@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2004/10/06 16:24:26 bubuchka Exp $
+$NetBSD: patch-ad,v 1.5 2005/01/13 15:43:44 bubuchka Exp $
 
---- log.c.orig	2004-10-04 00:37:03.000000000 +0300
+--- log.c.orig	2005-01-13 16:46:49.000000000 +0200
 +++ log.c
-@@ -128,8 +128,8 @@ int main(argc,argv)
+@@ -142,8 +142,8 @@ int main(argc,argv)
     BlockIt[0]='\0';
     ExternalCSSFile[0]='\0';
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ad,v 1.4 2004/10/06 16:24:26 bubuchka Exp $
     strcpy(GraphDaysBytesBarColor,"orange");
     strcpy(BgColor,"#FFFFFF");
     strcpy(TxColor,"#000000");
-@@ -142,7 +142,7 @@ int main(argc,argv)
+@@ -156,7 +156,7 @@ int main(argc,argv)
     strcpy(HeaderBgColor,"#DDDDDD");
     strcpy(FontSize,"9px");
     strcpy(TempDir,"/tmp");
@@ -22,7 +22,7 @@ $NetBSD: patch-ad,v 1.4 2004/10/06 16:24:26 bubuchka Exp $
     strcpy(Ip2Name,"no");
     strcpy(DateFormat,"u");
     strcpy(OverwriteReport,"no");
-@@ -179,11 +179,11 @@ int main(argc,argv)
+@@ -193,11 +193,11 @@ int main(argc,argv)
     strcpy(ShowSargInfo,"yes");
     strcpy(ShowSargLogo,"yes");
     strcpy(ParsedOutputLog,"no");
@@ -36,7 +36,7 @@ $NetBSD: patch-ad,v 1.4 2004/10/06 16:24:26 bubuchka Exp $
     strcpy(AuthName,"SARG, Restricted Access");
     strcpy(AuthType,"basic");
     strcpy(Require,"require user admin %u");
-@@ -336,7 +336,7 @@ int main(argc,argv)
+@@ -353,7 +353,7 @@ int main(argc,argv)
        debuga("Init");
  
     if(ConfigFile[0] == '\0')

@@ -1,13 +1,19 @@
-# $NetBSD: Makefile,v 1.4 2004/10/06 15:49:00 bubuchka Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/13 15:43:42 bubuchka Exp $
 
-DISTNAME=		sarg-2.0.1
+DISTNAME=		sarg-2.0.2
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sarg/}
+
+PATCH_SITES=		http://sarg.sourceforge.net/
+PATCHFILES=		sarg-2.0.2-version.patch.gz
 
 MAINTAINER=		mishka@apk.od.ua
 HOMEPAGE=		http://www.sarg-squid.org/
 COMMENT=		Squid-Cache proxy server Analysis Report Generator
 
+DIST_SUBDIR=		${DISTNAME}
+
+AUTOCONF_REQD=		2.56
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-bindir=${PREFIX}/sbin			\
 			--enable-mandir=${PREFIX}/man/man1		\
@@ -54,6 +60,13 @@ CONF_FILES=		${EGDIR}/sarg.conf ${PKG_SYSCONFDIR}/sarg.conf	\
 			${EGDIR}/css.tpl ${PKG_SYSCONFDIR}/css.tpl	\
 			${EGDIR}/exclude_codes ${PKG_SYSCONFDIR}/exclude_codes
 
+post-extract:
+		@${FIND} ${WRKSRC} -type d -exec ${CHMOD} +x {} \;
+		@${RM} ${WRKSRC}/languages/.new
+
+pre-configure:
+		cd ${WRKSRC} && ${AUTOCONF}
+
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/sarg ${PREFIX}/sbin
 		${INSTALL_MAN} ${WRKSRC}/sarg.1 ${PREFIX}/man/man1
@@ -68,8 +81,5 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/images/* ${DATADIR}/images
 		${INSTALL_DATA} ${WRKSRC}/languages/* ${DATADIR}/languages
 
-post-extract:
-		@${FIND} ${WRKSRC} -type d -exec ${CHMOD} +x {} \;
-		@${RM} ${WRKSRC}/languages/.new
-
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
