@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/12 12:49:08 virtus Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/13 08:14:23 jmmv Exp $
 #
 
 DISTNAME=		vcdgear16_static-e
@@ -12,7 +12,7 @@ COMMENT=		the video cd toolbox
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-do-build:
+NO_BUILD=		YES
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vcdgear16 ${PREFIX}/bin
