@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/02 13:27:04 bubuchka Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/25 16:10:16 bubuchka Exp $
 #
 # Note: We'll not use drweb's own configuration / building / installation
 # facilities so as its all are very ugly.
@@ -9,7 +9,7 @@ CATEGORIES=	wip security
 MASTER_SITES=	ftp://ftp.drweb.ru/pub/unix/				\
 		ftp://ftp.drweb.ru/pub/unix/betas/
 
-MAINTAINER=	mishka@terabyte.com.ua
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.sald.com/
 COMMENT=	DrWeb Antivirus Suite
 
