@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/07 18:30:36 tvierling Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/20 20:12:27 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -9,7 +9,7 @@
 #   implementing some lower level threads glue, as well.)
 
 DISTNAME=	j2sdk-1_3_1-src
-PKGNAME=	jdk13-1.0.8.20030423
+PKGNAME=	jdk13-1.0.8.20030808
 WRKSRC=		${WRKDIR}
 CATEGORIES=	lang
 MASTER_SITES=	# empty
