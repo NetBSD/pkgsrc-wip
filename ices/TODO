@@ -1,0 +1,8 @@
+TODO:
+
+Everything seems to work except the embedded python support.
+Currently, it seems like there is a problem with dl support
+(ices wants to use libdl, which doesn't exist on NetBSD, but
+when I remove it from configure, problems occur).
+
+-- Erik Osheim, 2003/06/25
