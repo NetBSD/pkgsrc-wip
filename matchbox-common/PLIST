@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/19 10:43:20 xtraeme Exp $
+bin/matchbox-session
+share/matchbox/vfolders/Accessories.directory
+share/matchbox/vfolders/Applications.directory
+share/matchbox/vfolders/Development.directory
+share/matchbox/vfolders/Games.directory
+share/matchbox/vfolders/Graphics.directory
+share/matchbox/vfolders/Internet.directory
+share/matchbox/vfolders/Multimedia.directory
+share/matchbox/vfolders/Office.directory
+share/matchbox/vfolders/Root.directory
+share/matchbox/vfolders/Root.order
+share/matchbox/vfolders/Settings.directory
+share/matchbox/vfolders/System.directory
+share/pixmaps/mbadd.png
+share/pixmaps/mbdown.png
+share/pixmaps/mbfolder.png
+share/pixmaps/mbfolderprev.png
+share/pixmaps/mbnoapp.png
+share/pixmaps/mbremove.png
+share/pixmaps/mbup.png
+@dirrm share/matchbox/vfolders
+@dirrm share/matchbox
