@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/31 08:14:09 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/10 16:05:56 greyskyy Exp $
 
 DISTNAME=	kapital-1.1.030606
 CATEGORIES=	devel kde
@@ -36,11 +36,14 @@ _FETCH_MESSAGE= \
 	${ECHO} ; \
 	${ECHO} "======================================================================"
 
+USE_GMAKE=		YES
 GNU_CONFIGURE=  YES
 USE_LIBTOOL=    YES
 LTCONFIG_OVERRIDE=  ${WRKSRC}/ltconfig
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdelibs3/buildlink2.mk"
 .include "../../x11/qt3-tools/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
