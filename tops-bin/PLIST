@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 20:51:07 daprice Exp $
+bin/EditTops
+bin/Tops
+java/sun-1.5/lib/TOPS.jar
+share/doc/tops-bin/Guide.ps
+share/examples/tops-bin/6fab.dssp
+share/examples/tops-bin/6fab.tops
+share/examples/tops-bin/DomainFile
+share/examples/tops-bin/tops.def
+@dirrm share/examples/tops-bin
+@dirrm share/doc/tops-bin
