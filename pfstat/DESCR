@@ -1,0 +1,4 @@
+Pfstat is a small utility that collects statistics for PF (wip/pf) and
+produces graphs like mrtg or alike. Samples can be found on the website below.
+
+Homepage: http://www.benzedrine.cx/pfstat.html
