@@ -1,8 +1,8 @@
-$NetBSD: patch-i386_nm_nbsd_h,v 1.1 2004/05/07 08:50:19 johnrshannon Exp $
+$NetBSD: patch-i386_nm_nbsd_h,v 1.2 2004/05/10 22:11:50 johnrshannon Exp $
 
 --- gdb/config/i386/nm-nbsd.h.orig	2004-02-22 09:20:22.000000000 -0700
 +++ gdb/config/i386/nm-nbsd.h
-@@ -23,7 +23,16 @@
+@@ -23,7 +23,13 @@
  #ifndef NM_NBSD_H
  #define NM_NBSD_H
  
@@ -11,9 +11,6 @@ $NetBSD: patch-i386_nm_nbsd_h,v 1.1 2004/05/07 08:50:19 johnrshannon Exp $
  /* Get generic NetBSD native definitions.  */
  #include "config/nm-nbsd.h"
  
-+/* Get generic i386 native definitions.  */
-+#include "i386/nm-i386.h"
-+
 +#include <sys/lock.h>
 +#include <machine/vmparam.h>
 +#define KERNEL_U_ADDR USRSTACK
