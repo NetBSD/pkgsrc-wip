@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/05 05:59:47 mjasm Exp $
-${PYSITELIB}/ADNS.pyc
-${PYSITELIB}/ADNS.py
-${PYSITELIB}/adns.so
-${PYSITELIB}/hostmx.pyc
-${PYSITELIB}/hostmx.py
-${PYSITELIB}/rblcheck.pyc
-${PYSITELIB}/rblcheck.py
