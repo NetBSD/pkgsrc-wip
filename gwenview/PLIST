@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/15 16:06:00 ianzag Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/02 02:04:20 ianzag Exp $
 bin/gwenview
 lib/kde3/libgvdirpart.la
 lib/kde3/libgvdirpart.so
@@ -72,17 +72,50 @@ share/kde/icons/crystalsvg/22x22/apps/imagegallery.png
 share/kde/icons/crystalsvg/32x32/apps/gwenview.png
 share/kde/icons/crystalsvg/48x48/apps/gwenview.png
 share/kde/icons/crystalsvg/64x64/apps/gwenview.png
+share/kde/locale/ar/LC_MESSAGES/gwenview.mo
+share/kde/locale/az/LC_MESSAGES/gwenview.mo
+share/kde/locale/cs/LC_MESSAGES/gwenview.mo
+share/kde/locale/da/LC_MESSAGES/gwenview.mo
+share/kde/locale/de/LC_MESSAGES/gwenview.mo
+share/kde/locale/el/LC_MESSAGES/gwenview.mo
+share/kde/locale/en_GB/LC_MESSAGES/gwenview.mo
+share/kde/locale/es/LC_MESSAGES/gwenview.mo
+share/kde/locale/et/LC_MESSAGES/gwenview.mo
+share/kde/locale/fo/LC_MESSAGES/gwenview.mo
+share/kde/locale/fr/LC_MESSAGES/gwenview.mo
+share/kde/locale/he/LC_MESSAGES/gwenview.mo
+share/kde/locale/hu/LC_MESSAGES/gwenview.mo
+share/kde/locale/is/LC_MESSAGES/gwenview.mo
+share/kde/locale/it/LC_MESSAGES/gwenview.mo
+share/kde/locale/ja/LC_MESSAGES/gwenview.mo
+share/kde/locale/ko/LC_MESSAGES/gwenview.mo
+share/kde/locale/nb/LC_MESSAGES/gwenview.mo
+share/kde/locale/nl/LC_MESSAGES/gwenview.mo
+share/kde/locale/nso/LC_MESSAGES/gwenview.mo
+share/kde/locale/pl/LC_MESSAGES/gwenview.mo
+share/kde/locale/pt/LC_MESSAGES/gwenview.mo
+share/kde/locale/pt_BR/LC_MESSAGES/gwenview.mo
+share/kde/locale/sv/LC_MESSAGES/gwenview.mo
+share/kde/locale/ta/LC_MESSAGES/gwenview.mo
+share/kde/locale/tr/LC_MESSAGES/gwenview.mo
+share/kde/locale/uk/LC_MESSAGES/gwenview.mo
+share/kde/locale/ven/LC_MESSAGES/gwenview.mo
+share/kde/locale/xh/LC_MESSAGES/gwenview.mo
+share/kde/locale/xx/LC_MESSAGES/gwenview.mo
+share/kde/locale/zh_CN/LC_MESSAGES/gwenview.mo
+share/kde/locale/zh_TW/LC_MESSAGES/gwenview.mo
+share/kde/locale/zu/LC_MESSAGES/gwenview.mo
 share/kde/services/gvdirpart.desktop
 share/kde/services/gvimagepart.desktop
 @dirrm share/kde/apps/gwenview/tools
 @dirrm share/kde/apps/gwenview/thumbnail
 @dirrm share/kde/apps/gwenview/icons/hicolor/48x48/actions
-@dirrm share/kde/apps/gwenview/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/gwenview/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/gwenview/icons/hicolor/16x16/actions
 @dirrm share/kde/apps/gwenview/icons/hicolor/48x48
+@dirrm share/kde/apps/gwenview/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/gwenview/icons/hicolor/32x32
+@dirrm share/kde/apps/gwenview/icons/hicolor/22x22/actions
 @dirrm share/kde/apps/gwenview/icons/hicolor/22x22
+@dirrm share/kde/apps/gwenview/icons/hicolor/16x16/actions
 @dirrm share/kde/apps/gwenview/icons/hicolor/16x16
 @dirrm share/kde/apps/gwenview/icons/hicolor
 @dirrm share/kde/apps/gwenview/icons
