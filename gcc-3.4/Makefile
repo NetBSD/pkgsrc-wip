@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/05/01 20:30:30 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/03 10:59:02 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -14,12 +14,14 @@ GCC_VERSION=	3.4.0
 
 .include "../../mk/bsd.prefs.mk"
 
-# Optional languages
+# Optional languages - change as required
+#   If BUILD_ADA is YES, then you'll need to specify
+#   an Ada in the "Ada bootstrap compiler section"
 BUILD_ADA=	YES
 BUILD_CXX=	YES
-BUILD_F77=	NO
-BUILD_JAVA=	NO
-BUILD_OBJC=	NO
+BUILD_F77=	YES
+BUILD_JAVA=	YES
+BUILD_OBJC=	YES
 
 # Java can't be built on x86_64
 .if ${MACHINE_GNU_ARCH} == "x86_64"
@@ -52,6 +54,7 @@ PTHREAD_OPTS+=  require native
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 .if ${BUILD_ADA} == "YES"
+# Ada bootstrap compiler section
 # An Ada compiler is required to build the Ada compiler. Two
 may be used:
 #USE_GCC3	=# Define to use lang/gcc3-ada
@@ -59,14 +62,13 @@ USE_GCC34ADA	=# Define to use gcc-3.4-ada
 # You may also specify the path of a gcc/gnat Ada compiler
 # outside of the pkgsrc system by specifying the full path
 # of the compiler (example) below:
-#ALT_GCC=       /usr/pkg/gccAda-3.4.0/bin/gcc
+#ALT_GCC=       /usr/pkg/gcc3bootstrap/bin/gcc
 .if defined(ALT_GCC)
 ALT_GCC_PREFIX:=        ${ALT_GCC:H}/..
 ALT_GCC_RTS!=   ${FIND} ${ALT_GCC_PREFIX} -name adalib
 RALT_GCC_RTS=   ${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
 .endif
 .endif
-
 
 GCC_SUBPREFIX=		${PKGNAME_NOREV}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
