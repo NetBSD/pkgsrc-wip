@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.215 2003/06/03 17:02:37 poppnk Exp $
-# $NetBSD: Makefile,v 1.215 2003/06/03 17:02:37 poppnk Exp $
+# $Id: Makefile,v 1.216 2003/06/03 17:13:08 schnoebe Exp $
+# $NetBSD: Makefile,v 1.216 2003/06/03 17:13:08 schnoebe Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -12,6 +12,7 @@ SUBDIR+=	allegro
 SUBDIR+=	amsn
 SUBDIR+=	aolserver
 SUBDIR+=	ap-bunzip2
+SUBDIR+=	ap-frontpage
 SUBDIR+=	ap-ometer
 SUBDIR+=	autoproject
 SUBDIR+=	bc
@@ -37,6 +38,7 @@ SUBDIR+=	ed
 SUBDIR+=	emirror
 SUBDIR+=	ezbounce
 SUBDIR+=	fluxconf
+SUBDIR+=	frontpage
 SUBDIR+=	fuse
 SUBDIR+=	fuse-utils
 SUBDIR+=	fwbuilder
