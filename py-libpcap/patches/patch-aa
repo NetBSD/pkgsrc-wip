@@ -1,0 +1,29 @@
+--- pypcap.h.oril	2003-05-27 22:15:27.000000000 -0400
++++ pypcap.h	2003-05-27 22:16:23.000000000 -0400
+@@ -14,6 +14,15 @@
+  */
+ 
+ #include <pcap.h>
++#define DLT_ATM_CLIP    19      /* Linux Classical-IP over ATM */
++#define DLT_C_HDLC      104     /* Cisco HDLC */
++#define DLT_CHDLC       DLT_C_HDLC
++#define DLT_LOOP        108
++#define DLT_LINUX_SLL   113
++#define DLT_LTALK       114 
++#define DLT_IPFILTER    116
++#define DLT_PFLOG       117
++#define DLT_CISCO_IOS   118
+ 
+ /* the pcap class */
+ typedef struct {
+--- setup.py.oril	2003-05-27 22:16:32.000000000 -0400
++++ setup.py	2003-05-27 22:16:50.000000000 -0400
+@@ -96,7 +96,7 @@
+ # change pcap.c to pcap.i in the following line if you want to build
+ # pcap.c from the SWIG interface
+                             ["pcap.c","pcap_interface.c","exception.c","error.c"],
+-                            include_dirs=["/usr/local/include"],
++                            include_dirs=["/usr/pkg/include"],
+                             extra_objects=[],
+                             libraries=["pcap",],
+                         ) 
