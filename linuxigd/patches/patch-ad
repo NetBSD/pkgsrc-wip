@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/03/13 12:48:22 obache Exp $
+
+--- gateway.h.orig	2002-12-14 07:16:28.000000000 +0900
++++ gateway.h
+@@ -28,7 +28,7 @@ extern pthread_mutex_t DevMutex;
+ 
+ #define INIT_PORT          2869
+ #define INIT_DESC_DOC      "gatedesc"
+-#define INIT_CONF_DIR      "/etc/linuxigd/"
++#define INIT_CONF_DIR      "@CONFDIR@/"
+ 
+ #define GATE_SERVICE_SERVCOUNT  3
+ #define GATE_SERVICE_OSINFO             0

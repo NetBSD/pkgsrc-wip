@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/03/13 12:48:22 obache Exp $
+
+--- gateway.cpp.orig	2003-01-14 07:11:20.000000000 +0900
++++ gateway.cpp
+@@ -49,6 +49,7 @@
+ 
+ // The global GATE object
+ Gate gate;
++char *ExtIf;
+ 
+ // Callback Function wrapper.  This is needed because ISO forbids a pointer to a bound
+ // member function.  This corrects the issue.
+@@ -108,6 +109,7 @@ int main (int argc, char** argv)
+         //close (STDOUT_FILENO);
+         close (STDERR_FILENO);
+ 
++	ExtIf = argv[1];
+ 	gate.m_ipcon = new IPCon(argv[2]);
+ 	address = gate.m_ipcon->IPCon_GetIpAddrStr();
+ 	strcpy(lan_ip_address, address);

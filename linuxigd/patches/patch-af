@@ -1,0 +1,58 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/03/13 12:48:22 obache Exp $
+
+--- pmlist.cpp.orig	2003-01-03 04:14:24.000000000 +0900
++++ pmlist.cpp
+@@ -31,6 +31,8 @@
+ #include <unistd.h>
+ #include <iostream>
+ 
++extern char *ExtIf;
++
+ PortMapList::PortMapList()
+ {
+ 
+@@ -182,8 +184,23 @@ int PortMapList::addPortForward(char *Pr
+ {
+ 	char command[255];
+ 
++#ifdef __linux__
+ 	sprintf(command,"/usr/sbin/iptables -t nat -A PREROUTING -p %s -d %s --dport %d -j DNAT --to %s:%d", Proto, ExtIP, ExtPort, IntIP, IntPort);
+ 	system(command);
++#elif defined(__OpenBSD__)
++	snprintf(command, 255, "/sbin/pfctl -a upnpd:%s-%s-%d -f -", ExtIf, Proto, ExtPort);
++	FILE *ipf = popen(command, "w");
++	if (ipf == NULL) return 0;
++	snprintf(command, 255, "rdr pass on %s protp %s from any to %s port %d -> %s port %d\n", ExtIf, Protp, ExtIP, ExtPort, IntIP, IntPort);
++	fprintf(ipf, command);
++	pclose(ipf);
++#else
++	FILE *ipnat = popen("/usr/sbin/ipnat -f -", "w");
++	if (ipnat == NULL) return 0;
++	snprintf(command, 255, "rdr %s %s/32 port %d -> %s port %d %s\n", ExtIf, ExtIP, ExtPort, IntIP, IntPort, Proto);
++	fprintf(ipnat, command);
++	pclose(ipnat);
++#endif
+ 
+ 	return (1);
+ }
+@@ -218,9 +235,19 @@ int PortMapList::delPortForward(char *Pr
+ {
+ 	char command[255];
+ 	
+-
++#ifdef __linux__
+ 	sprintf(command, "/usr/sbin/iptables -t nat -D PREROUTING -p %s -d %s --dport %d -j DNAT --to %s:%d", Proto, ExtIP, ExtPort, IntIP, IntPort);
+ 	system(command);	
++#elif defined(__OpenBSD__)
++	snprintf(command, 255, "/sbin/ipctl -a upnpd:%s-%s-%d -F all", ExtIf, Proto, ExtPort);
++	system(command);
++#else
++	FILE *ipnat = popen("/usr/sbin/ipnat -rf -", "w");
++	if (ipnat == NULL) return 0;
++	snprintf(command, 255, "rdr %s %s/32 port %d -> %s port %d %s\n", ExtIf, ExtIP, ExtPort, IntIP, IntPort, Proto);
++	fprintf(ipnat, command);
++	pclose(ipnat);
++#endif
+ 	return (1);
+ }
+ 

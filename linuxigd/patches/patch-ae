@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/03/13 12:48:22 obache Exp $
+
+--- ipcon.cpp.orig	2003-01-14 05:59:00.000000000 +0900
++++ ipcon.cpp
+@@ -25,7 +25,12 @@
+ #include <stdio.h>
+ #include <unistd.h>
+ #include <arpa/inet.h>
++#ifdef __linux__
+ #include <linux/sockios.h>
++#else
++#include <sys/sockio.h>
++#include <sys/socket.h>
++#endif
+ #include <net/if.h>
+ #include <netinet/in.h>
+ #include <sys/ioctl.h>

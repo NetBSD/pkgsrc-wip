@@ -1,0 +1,54 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/03/13 12:48:22 obache Exp $
+
+--- gate.cpp.orig	2003-01-14 06:04:30.000000000 +0900
++++ gate.cpp
+@@ -124,9 +124,11 @@ int Gate::GateDeviceStateTableInit (char
+ 	{
+ 		syslog(LOG_ERR, "DeviceStateTableInit -- Error Parsing %s\n", DescDocURL);
+ 		ret =UPNP_E_INVALID_DESC;
+-	}
++	} else {
+ 
+ 	gate_udn = SampleUtil_GetFirstDocumentItem(DescDoc, "UDN");
++	}
++	if(DescDoc) UpnpDocument_free(DescDoc);
+ 
+ 	return (ret);
+ }
+@@ -334,7 +336,7 @@ int Gate::GateDeviceGetTotalBytesReceive
+ {
+ 	char result_str[500];
+ 	char dev[15];
+-        char *iface;
++        char *iface=NULL;
+         FILE *stream;
+         unsigned long bytes=0,total=0;
+ 
+@@ -374,7 +376,7 @@ int Gate::GateDeviceGetTotalPacketsSent(
+ {
+ 	char result_str[500];
+ 	char dev[15];
+-        char *iface;
++        char *iface=NULL;
+         FILE *stream;
+         unsigned long pkt=0, total=0;
+ 
+@@ -412,7 +414,7 @@ int Gate::GateDeviceGetTotalPacketsRecei
+ {
+ 	char result_str[500];
+ 	char dev[15];
+-        char *iface;
++        char *iface=NULL;
+         FILE *stream;
+         unsigned long pkt=0, total=0;
+ 
+@@ -669,6 +671,9 @@ int Gate::GateDeviceGetSpecificPortMappi
+ 		ca_event->ActionResult = NULL;
+ 	}
+ 	
++	if(proto) delete [] proto;
++	if(ext_port) delete [] ext_port;
++
+ 	return (ca_event->ErrCode);
+ }
+ 

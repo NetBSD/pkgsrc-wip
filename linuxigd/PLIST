@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/13 12:48:21 obache Exp $
+bin/upnpd
+share/examples/linuxigd/gateconnSCPD.xml
+share/examples/linuxigd/gatedesc.skl
+share/examples/linuxigd/gatedesc.xml
+share/examples/linuxigd/gateicfgSCPD.xml
+share/examples/linuxigd/gateinfoSCPD.xml
+@dirrm share/examples/linuxigd

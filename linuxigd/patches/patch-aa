@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/13 12:48:22 obache Exp $
+
+--- Makefile.orig	2002-12-14 07:16:22.000000000 +0900
++++ Makefile
+@@ -1,6 +1,5 @@
+ CC=g++
+-INCLUDES= -I/usr/include/upnp 
+-LIBS= -lpthread  /usr/lib/libupnp.so
++LIBS= /usr/lib/libupnp.so
+ 
+ 
+ ifeq ($(DEBUG),1)
+@@ -9,24 +8,24 @@ else
+ OPT = -O2
+ endif
+ 
+-CFLAGS += -Wall -g $(OPT)
++CFLAGS += -Wall -g $(OPT) $(PTHREAD_CFLAGS)
+ 
+ APPS = upnpd
+ 
+ all: $(APPS)
+ 
+ upnpd:  gate.o gateway.o sample_util.o ipcon.o portmap.o pmlist.o
+-	$(CC)  $(CFLAGS) gate.o gateway.o sample_util.o ipcon.o portmap.o pmlist.o $(LIBS) -o  $@ 
++	$(CC)  $(LDFLAGS) gate.o gateway.o sample_util.o ipcon.o portmap.o pmlist.o $(LIBS) -o  $@ 
+ 	@echo "make $@ finished on `date`"
+ 
+ %.o:	%.cpp
+-	$(CC) $(CFLAGS) $(INCLUDES) -c $<
++	$(CC) $(CFLAGS) -c $<
+ 
+ clean:
+ 	rm -f *.o $(APPS)
+ 
+ install: upnpd
+-	@install -d /etc/linuxigd
+-	@install etc/* /etc/linuxigd
+-	@install upnpd /usr/bin
++	@install -d ${PREFIX}/share/examples/linuxigd
++	@install etc/* ${PREFIX}/share/examples/linuxigd
++	@install upnpd ${PREFIX}/bin
+ 
