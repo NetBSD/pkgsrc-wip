@@ -1,0 +1,3 @@
+
+* Fix libjpeg autoconfigure.
+* Fix generated Makefile dependency on config.status.
