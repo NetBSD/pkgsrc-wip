@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/06/17 21:47:05 adrian_p Exp $
+# $NetBSD: Makefile,v 1.17 2004/06/17 22:22:59 xtraeme Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -58,7 +58,6 @@ PKG_USERS=              ${DSPAM_GROUP}:${DSPAM_USER}
 
 # Default options
 CONFIGURE_ARGS+=	--enable-client-compression
-CONFIGURE_ARGS+=	--enable-robinson
 CONFIGURE_ARGS+=	--enable-chi-square
 CONFIGURE_ARGS+=	--enable-robinson-pvalues
 CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
