@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/20 19:24:08 airhead Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 19:30:53 airhead Exp $
 #
 
 DISTNAME=	elvis-2.2_0
@@ -15,7 +15,6 @@ CONFLICTS+=	elvis-x11[0-9]*
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-x=no
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-
-MAKEFLAGS+=		DOCDIR=${PREFIX}/share/doc/elvis
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/elvis
 
 .include "../../mk/bsd.pkg.mk"
