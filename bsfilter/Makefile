@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/16 07:17:22 ura Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/16 13:09:11 ura Exp $
 # FreeBSD Id: ports/mail/bsfilter/Makefile,v 1.6 2004/08/24 19:38:56 sem Exp
 
-DISTNAME=	bsfilter-1.0.4
+DISTNAME=	bsfilter-1.0.6
 CATEGORIES=	mail
-MASTER_SITES=	http://keihanna.dl.sourceforge.jp/bsfilter/10876/
+MASTER_SITES=	http://keihanna.dl.sourceforge.jp/bsfilter/12638/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ura@jp.netbsd.org
