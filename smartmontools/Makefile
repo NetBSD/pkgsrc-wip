@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/25 23:03:52 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 20:03:00 cjep Exp $
 #
 
 DISTNAME=		smartmontools-5.26
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=smartmontools/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://smartmontools.sourceforge.net/
 COMMENT=		Control and monitor storage systems using SMART
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/13 01:45:23 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 20:03:00 cjep Exp $
 #
 
 DISTNAME=	hugov30_unix_source
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.ifarchive.org/if-archive/programming/hugo/source/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTFILE_WX}
 
-MAINTAINER=	dillo@netbsd.org
+MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://161.184.245.22/tessman/gcc/hugo.html
 COMMENT=	Interactive fiction interpreter with sound and graphics support
 

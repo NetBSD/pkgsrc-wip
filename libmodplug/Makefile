@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/21 21:01:13 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 20:03:00 cjep Exp $
 #
 
 DISTNAME=		libmodplug-0.7
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=modplug-xmms/}
 
-MAINTAINER=		ben@netbsd.org
+MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://modplug-xmms.sourceforge.net/
 COMMENT=		Library for decoding mod-like music formats
 
