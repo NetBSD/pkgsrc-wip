@@ -1,0 +1,46 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/20 20:19:14 jeremy-c-reed Exp $
+bin/pxspread
+bin/xspread
+man/man1/pxspread.1
+man/man1/xspread.1
+share/doc/xspread/README
+share/doc/xspread/Sample_Run
+share/doc/xspread/final_rpt
+share/doc/xspread/last_xspread
+share/doc/xspread/prog_rpt
+share/doc/xspread/sc.changes
+share/doc/xspread/sc.readme
+share/doc/xspread/sc.vms_notes
+share/doc/xspread/xspread.aux
+share/doc/xspread/xspread.dvi
+share/doc/xspread/xspread.log
+share/doc/xspread/xspread.ps
+share/doc/xspread/xspread.tex
+share/doc/xspread/xspread.toc
+share/doc/xspread/xspread_prog.asc
+share/doc/xspread/notes
+share/xspread/documents/progress.aux
+share/xspread/documents/progress.dvi
+share/xspread/documents/progress.log
+share/xspread/documents/progress.ps
+share/xspread/documents/progress.tex
+share/xspread/documents/report.aux
+share/xspread/documents/report.dvi
+share/xspread/documents/report.log
+share/xspread/documents/report.ps
+share/xspread/documents/report.tex
+share/xspread/examples/demo_dates
+share/xspread/examples/demo_func
+share/xspread/examples/demo_math
+share/xspread/examples/demo_matrix
+share/xspread/examples/demo_strval
+share/xspread/examples/ex1
+share/xspread/examples/ex1o
+share/xspread/examples/ex2
+share/xspread/examples/ex2o
+share/xspread/examples/ex3
+share/xspread/examples/tutorial
+@dirrm share/xspread/examples
+@dirrm share/xspread/documents
+@dirrm share/xspread
+@dirrm share/doc/xspread
