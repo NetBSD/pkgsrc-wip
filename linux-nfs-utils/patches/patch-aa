@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/05/16 04:36:05 jeremy-c-reed Exp $
+
+--- utils/exportfs/Makefile.orig	2003-03-20 01:13:02.000000000 -0800
++++ utils/exportfs/Makefile	2003-03-20 01:13:18.000000000 -0800
+@@ -3,6 +3,7 @@
+ #
+ 
+ PROGRAM	= exportfs
++PREFIX  =
+ OBJS	= exportfs.o
+ LIBDEPS	= $(TOP)support/lib/libexport.a $(TOP)/support/lib/libnfs.a
+ LIBS	= -lexport -lnfs

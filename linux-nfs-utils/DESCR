@@ -1,0 +1,21 @@
+This is the Linux NFS utility package. This software includes:
+
+- exportfs - management of NFS exported file systems.
+- rpc.lockd - the NFS lock manager (if needed).
+- rpc.mountd - the NFS mount daemon for exporting file systems. It has
+  TCP Wrappers support.
+- rpc.nfsd - NFS server process.
+- rpc.rquotad - returns quotas for a user of a local file system
+  which is mounted by a remote machine over the NFS.
+- rpc.statd - status monitor server for the NSM (Network Status
+  Monitor) RPC protocol. This also has TCP Wrappers protection.
+- nfsstat - reports NFS (and RPC) stats for server and client.
+- nhfsstone - used on an NFS client to generate an artificial load.
+- nhfsrun - a shell script for running nhfsstone over multiple load
+  levels.
+- nhfsnums - uses the nhfsrun output and converts it to plot(5) format.
+- nhfsgraph - uses that nhfsnums output and produces a Postscript
+  graph using graph(1). Install the graphics/plotutils package to
+  use it.
+- showmount - list the clients mounting from the NFS server or show
+  other mount information.

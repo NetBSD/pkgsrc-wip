@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/05/16 04:36:05 jeremy-c-reed Exp $
+
+--- utils/nfsstat/Makefile.orig	2003-03-20 01:14:24.000000000 -0800
++++ utils/nfsstat/Makefile	2003-03-20 01:14:33.000000000 -0800
+@@ -3,6 +3,7 @@
+ #
+ 
+ PROGRAM	= nfsstat
++PREFIX  =
+ OBJS	= nfsstat.o
+ MAN8	= nfsstat
+ 

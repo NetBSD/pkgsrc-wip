@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/05/16 04:36:05 jeremy-c-reed Exp $
+
+nhfsgraph uses that nhfsnums' plot(5) output and produces a Postscript
+graph using graph(1). Install the graphics/plotutils package to
+use it.
+
+===========================================================================

@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/05/16 04:36:05 jeremy-c-reed Exp $
+
+--- utils/showmount/Makefile.orig	2003-03-20 01:15:40.000000000 -0800
++++ utils/showmount/Makefile	2003-03-20 01:15:53.000000000 -0800
+@@ -3,6 +3,7 @@
+ #
+ 
+ PROGRAM	= showmount
++PREFIX  =
+ OBJS	= showmount.o
+ LIBDEPS	= $(TOP)support/lib/libexport.a
+ LIBS	= -lexport
