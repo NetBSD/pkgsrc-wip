@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.653 2003/11/23 12:08:22 mpasternak Exp $
-# $NetBSD: Makefile,v 1.653 2003/11/23 12:08:22 mpasternak Exp $
+# $Id: Makefile,v 1.654 2003/11/23 12:16:17 mpasternak Exp $
+# $NetBSD: Makefile,v 1.654 2003/11/23 12:16:17 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -532,6 +532,7 @@ SUBDIR+=	viewcvs
 SUBDIR+=	vixie-cron
 SUBDIR+=	vlc
 SUBDIR+=	vtk
+SUBDIR+=	vtk-docs
 SUBDIR+=	vtk-python
 SUBDIR+=	vm-pop3d
 SUBDIR+=	vmac
