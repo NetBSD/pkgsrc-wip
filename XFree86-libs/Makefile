@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/24 05:00:00 blef Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/24 11:08:03 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-libs-${XF_VER}
@@ -11,7 +11,7 @@ MAINTAINER=	xfree86@xtraeme.unixbsd.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 Libraries
 
-DEPENDS+=		imake-[0-9]*:../../wip/imake
+DEPENDS=	imake>=4.3.0:../../wip/imake
 
 USE_BUILDLINK2=		YES
 
@@ -32,4 +32,5 @@ PLIST_SRC+=	${.CURDIR}/PLIST.DRI
 .include "../../fonts/fontconfig/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
+.include "../../x11/Xrender/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
