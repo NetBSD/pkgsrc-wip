@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.297 2003/07/03 23:06:17 xtraeme Exp $
-# $NetBSD: Makefile,v 1.297 2003/07/03 23:06:17 xtraeme Exp $
+# $Id: Makefile,v 1.298 2003/07/04 03:26:07 poppnk Exp $
+# $NetBSD: Makefile,v 1.298 2003/07/04 03:26:07 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -29,6 +29,7 @@ SUBDIR+=	boost-base
 SUBDIR+=	boost-thread
 SUBDIR+=	bub-n-bros
 SUBDIR+=	bugzilla
+SUBDIR+=	busybox
 SUBDIR+=	byacc
 SUBDIR+=	cawf
 SUBDIR+=	cdpr
@@ -51,6 +52,7 @@ SUBDIR+=	directfb
 SUBDIR+=	directory-administrator
 SUBDIR+=	dpkg
 SUBDIR+=	drweb
+SUBDIR+=	dzt
 SUBDIR+=	ed
 SUBDIR+=	eic
 SUBDIR+=	elvis
@@ -105,6 +107,7 @@ SUBDIR+=	ices
 SUBDIR+=	icmpchat
 SUBDIR+=	idesk
 SUBDIR+=	idled
+SUBDIR+=	ish
 SUBDIR+=	ike-scan
 SUBDIR+=	ilohamail
 SUBDIR+=	ion-devel
@@ -244,6 +247,7 @@ SUBDIR+=	sysvinit
 SUBDIR+=	tendra
 SUBDIR+=	tex-foiltex
 SUBDIR+=	theora-nightly
+SUBDIR+=	tinydns
 SUBDIR+=	toppler
 SUBDIR+=	totem
 SUBDIR+=	trickle
@@ -252,6 +256,8 @@ SUBDIR+=	tsm
 SUBDIR+=	tutos
 SUBDIR+=	tuxtype2
 SUBDIR+=	typhoon
+SUBDIR+=	uclibc
+SUBDIR+=	udhcp
 SUBDIR+=	umbrello
 SUBDIR+=	umix
 SUBDIR+=	vba
@@ -287,6 +293,7 @@ SUBDIR+=	xfce4-wm-themes
 SUBDIR+=	xmail
 SUBDIR+=	xml2doc
 SUBDIR+=	xplore
+SUBDIR+=	xsh
 SUBDIR+=	yafray
 SUBDIR+=	yelp
 SUBDIR+=	zebra-pj
