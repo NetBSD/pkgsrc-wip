@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/30 23:28:01 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 14:19:52 jeremy-c-reed Exp $
 #
 
 DISTNAME=	tuxmath-2001.09.07-0102
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/tuxmath
 CATEGORIES=	games math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxmath/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.newbreedsoftware.com/tuxmath/
 COMMENT=	educational math arcade game
 
