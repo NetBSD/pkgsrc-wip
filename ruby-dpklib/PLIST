@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/10 11:28:10 rasputnik Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/16 22:19:43 thomasklausner Exp $
 bin/dpkruby-array
 bin/dpkruby-dcp
 bin/dpkruby-discoveryd
@@ -83,13 +83,15 @@ ${RUBY_SITELIBDIR}/dpklib/gtk/container.rb
 ${RUBY_SITELIBDIR}/dpklib/gtk/dialog.rb
 ${RUBY_SITELIBDIR}/dpklib/gtk/menu.rb
 ${RUBY_SITELIBDIR}/dpklib/gtk/utils.rb
-@dirrm ${RUBY_SITELIBDIR}/dpklib/gtk/
+@dirrm ${RUBY_SITELIBDIR}/dpklib/gtk
 ${RUBY_SITELIBDIR}/dpklib/timearea/composer.rb
 ${RUBY_SITELIBDIR}/dpklib/timearea/parser.rb
-@dirrm ${RUBY_SITELIBDIR}/dpklib/timearea/
+@dirrm ${RUBY_SITELIBDIR}/dpklib/timearea
 ${RUBY_SITELIBDIR}/dpklib/webrick+/action-cgi.rb
 ${RUBY_SITELIBDIR}/dpklib/webrick+/authserver.rb
 ${RUBY_SITELIBDIR}/dpklib/webrick+/mime-action.rb
 ${RUBY_SITELIBDIR}/dpklib/webrick+/userpath.rb
-@dirrm ${RUBY_SITELIBDIR}/dpklib/webrick+/
-@dirrm ${RUBY_SITELIBDIR}/dpklib/
+@dirrm ${RUBY_SITELIBDIR}/dpklib/webrick+
+@dirrm ${RUBY_SITELIBDIR}/dpklib
+${RUBY_EXAMPLESDIR}/dpklib/recreate-table.rb
+@dirrm ${RUBY_EXAMPLESDIR}/dpklib

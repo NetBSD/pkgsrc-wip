@@ -1,3 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/11 15:48:37 rasputnik Exp $
-${RUBY_ARCHLIBDIR}/ncurses.so
-${RUBY_LIBDIR}/ncurses.rb
+@comment $NetBSD: PLIST,v 1.2 2004/12/16 22:19:44 thomasklausner Exp $
+${RUBY_SITEARCHLIBDIR}/ncurses.${RUBY_DLEXT}
+${RUBY_SITELIBDIR}/ncurses.rb
+${RUBY_EXAMPLESDIR}/ncurses/example.rb
+${RUBY_EXAMPLESDIR}/ncurses/hello_ncurses.rb
+${RUBY_EXAMPLESDIR}/ncurses/rain.rb
+${RUBY_EXAMPLESDIR}/ncurses/read_line.rb
+${RUBY_EXAMPLESDIR}/ncurses/tclock.rb
+${RUBY_EXAMPLESDIR}/ncurses/test_scanw.rb
+@dirrm ${RUBY_EXAMPLESDIR}/ncurses

@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/03 22:00:14 rasputnik Exp $
-${RUBY_SITEARCHLIBDIR}/ming/ming.so
+@comment $NetBSD: PLIST,v 1.2 2004/12/16 22:19:43 thomasklausner Exp $
+${RUBY_SITEARCHLIBDIR}/ming/ming.${RUBY_DLEXT}
 @dirrm ${RUBY_SITEARCHLIBDIR}/ming
 ${RUBY_EXAMPLESDIR}/ming/README
 ${RUBY_EXAMPLESDIR}/ming/action.rb

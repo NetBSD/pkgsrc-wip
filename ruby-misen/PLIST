@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/10 11:31:15 rasputnik Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/16 22:19:44 thomasklausner Exp $
 bin/misen-expand
 ${RUBY_SITELIBDIR}/misen/expand-acq.rb
 ${RUBY_SITELIBDIR}/misen/expand.rb
@@ -9,3 +9,11 @@ ${RUBY_SITELIBDIR}/misen/style-tex.rb
 ${RUBY_SITELIBDIR}/misen/style.rb
 ${RUBY_SITELIBDIR}/misen/util.rb
 @dirrm ${RUBY_SITELIBDIR}/misen/
+${RUBY_EXAMPLESDIR}/misen/acq-expand.rb
+${RUBY_EXAMPLESDIR}/misen/bookmark.rb
+${RUBY_EXAMPLESDIR}/misen/conditional.rb
+${RUBY_EXAMPLESDIR}/misen/hello-latex.rb
+${RUBY_EXAMPLESDIR}/misen/hello-latex.sh
+${RUBY_EXAMPLESDIR}/misen/hello.rb
+${RUBY_EXAMPLESDIR}/misen/hello.sh
+@dirrm ${RUBY_EXAMPLESDIR}/misen

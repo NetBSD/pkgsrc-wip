@@ -1,25 +1,32 @@
-# $NetBSD: Makefile,v 1.7 2004/05/02 21:07:37 blef Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/16 22:19:45 thomasklausner Exp $
 
 DISTNAME=	syck-${VER}
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
-WRKSRC=	${WRKDIR}/${DISTNAME}/ext/ruby
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=yaml4r/}
 
 MAINTAINER=	rasputnik@hellooperator.net
 HOMEPAGE=	http://www.whytheluckystiff.net/syck/
-COMMENT=		Fast YAML reader/writer for Ruby
+COMMENT=	Fast YAML reader/writer for Ruby
 
-USE_BUILDLINK3= # defined
+.include "../../lang/ruby/rubyversion.mk"
+.if ${RUBY_VER} == "16"
+DEPENDS+=	${RUBY_PKGPREFIX}-racc>=1.4.3:../../devel/ruby-racc
+.endif
 
-DEPENDS+=	ruby-racc>=1.4.3:../../devel/ruby-racc
-VER=	0.42
-USE_RUBY_SETUP=	yes
-RUBY_SETUP=	install.rb
-MAKE_FLAGS+=	SHELL=${SH}
+USE_BUILDLINK3= 	yes
+USE_RUBY_SETUP=		yes
+RUBY_DIST_SUBDIR=	# make it empty
+RUBY_SETUP=		install.rb
+VER=			0.42
+WRKSRC=			${WRKDIR}/${DISTNAME}/ext/ruby
 
-EXAMPLES=	okayNews-modules.rb okayNews-sample.rb okayNews-validate.rb \
-			okayRpc-client.rb okayRpc-server.rb yaml-sortHashKeys.rb
+EXAMPLES=		okayNews-modules.rb okayNews-sample.rb \
+			okayNews-validate.rb okayRpc-client.rb \
+			okayRpc-server.rb yaml-sortHashKeys.rb
+.for f in ${EXAMPLES}
+REPLACE_RUBY+=		samples/$f
+.endfor
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/syck
@@ -27,6 +34,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/samples/$f ${RUBY_EXAMPLESDIR}/syck
 .endfor
 
-.include "../../lang/ruby-base/Makefile.common"
-.include "../../lang/ruby-base/buildlink3.mk"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"

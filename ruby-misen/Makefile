@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/10 11:31:15 rasputnik Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/16 22:19:44 thomasklausner Exp $
 
-DISTNAME= misen-${VER}
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+DISTNAME= 	misen-${VER}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	www textproc
 MASTER_SITES=	http://devel.korinkan.co.jp/
 
@@ -9,17 +9,24 @@ MAINTAINER=	rasputnik@hellooperator.net
 HOMEPAGE=	http://devel.korinkan.co.jp/misen/
 COMMENT=	Ruby text template library
 
-DIST_SUBDIR=	ruby
-VER=  0.11.1
+DEPENDS+=	${RUBY_PKGPREFIX}-dpklib>=1.0.6:../../wip/ruby-dpklib
 
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}dpklib>=1.0.6:../../wip/${RUBY_PKGNAMEPREFIX}dpklib
-USE_RUBY=   yes
-USE_RUBY_SETUP=   yes
-RUBY_SETUP=   install.rb
+USE_RUBY_SETUP=	yes
+RUBY_SETUP=	install.rb
+VER=		0.11.1
 
-#do-install:
-#	cd ${WRKSRC} && ${RUBY} install.rb
-#	${CP} -R ${WRKSRC}/sample ${RUBY_EXAMPLESDIR}/amrita
+EXAMPLES=		acq-expand.rb bookmark.rb conditional.rb \
+			hello-latex.rb hello-latex.sh hello.rb hello.sh
+REPLACE_RUBY+=		bin/misen-expand
+.for f in ${EXAMPLES}
+REPLACE_RUBY+=		sample/$f
+.endfor
 
-.include "../../lang/ruby-base/Makefile.common"
+post-install:
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/misen
+.for f in ${EXAMPLES}
+	${INSTALL_DATA} ${WRKSRC}/sample/$f ${RUBY_EXAMPLESDIR}/misen
+.endfor
+
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"

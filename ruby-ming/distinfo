@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/03 22:00:14 rasputnik Exp $
+$NetBSD: distinfo,v 1.2 2004/12/16 22:19:43 thomasklausner Exp $
 
-SHA1 (ming-ruby-0.1.6.tar.gz) = 6b0bbd536548e53dbd3d40c344b34f4a1a9f7cf8
-Size (ming-ruby-0.1.6.tar.gz) = 42844 bytes
+SHA1 (ruby/ming-ruby-0.1.6.tar.gz) = 6b0bbd536548e53dbd3d40c344b34f4a1a9f7cf8
+Size (ruby/ming-ruby-0.1.6.tar.gz) = 42844 bytes
