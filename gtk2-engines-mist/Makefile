@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/30 04:11:12 blef Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/23 17:52:38 blef Exp $
 
 DISTNAME=		gtk-mist-engine-0.10
 PKGNAME=		gtk2-engines-mist-0.10
@@ -12,7 +12,6 @@ COMMENT=		flat engine for GTK+ 2.x
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 
-USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
