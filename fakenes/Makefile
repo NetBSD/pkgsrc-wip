@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/19 19:17:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/19 19:54:52 thomasklausner Exp $
 #
 
 DISTNAME=		fakenes-0.3.1
@@ -13,7 +13,6 @@ COMMENT=		Portable Open Source NES emulator
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 
