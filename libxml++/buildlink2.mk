@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/11/28 05:27:46 jeremy-c-reed Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/11/28 16:51:29 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libxml++.
 #
@@ -9,8 +9,8 @@
 LIBXMLXX_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libxmlxx
-BUILDLINK_DEPENDS.libxmlXX?=		libxml++>=0.27.0
-BUILDLINK_PKGSRCDIR.libxmlXX?=		../../new/libxml++
+BUILDLINK_DEPENDS.libxmlxx?=		libxml++>=0.27.0
+BUILDLINK_PKGSRCDIR.libxmlxx?=		../../new/libxml++
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libxmlxx=libxmlxx
 BUILDLINK_PREFIX.libxmlxx_DEFAULT=	${LOCALBASE}
