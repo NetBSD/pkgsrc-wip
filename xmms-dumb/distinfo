@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/18 03:00:51 bencollver Exp $
+$NetBSD: distinfo,v 1.2 2003/07/19 14:16:59 bencollver Exp $
 
 SHA1 (dumb-xmms-0.1.tar.gz) = 0d769e4fea9104a021bd58029978e8066f7e5dad
 Size (dumb-xmms-0.1.tar.gz) = 11718 bytes
-SHA1 (patch-aa) = 7ed307e7fd30ce1c86aa9689a1c864166936cc80
+SHA1 (patch-aa) = 075537ba9cd32d1fcc24f807fab7a0d81720c9a3
 SHA1 (patch-ab) = 7beb6a30373976d6d595ccdda23a9a19e423e3fe
