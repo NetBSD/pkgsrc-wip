@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/17 15:16:17 xtraeme Exp $
+
+SHA1 (atasm103.zip) = 641bfe0bc1cb8a40d973c8b56b9e4580839a0405
+Size (atasm103.zip) = 178271 bytes
+SHA1 (patch-aa) = d7af566efe72d67520895212c230fb23db4e49d8
