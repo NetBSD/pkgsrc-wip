@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1179 2004/04/07 13:29:58 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1179 2004/04/07 13:29:58 xtraeme Exp $
+# $Id: Makefile,v 1.1180 2004/04/07 15:43:05 ura Exp $
+# $NetBSD: Makefile,v 1.1180 2004/04/07 15:43:05 ura Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -355,6 +355,7 @@ SUBDIR+=	linux24-kernel-headers
 SUBDIR+=	liquidwar
 SUBDIR+=	lletters
 SUBDIR+=	lmarbles
+SUBDIR+=	logrotate
 SUBDIR+=	lsdvd
 SUBDIR+=	lua-pgsql
 SUBDIR+=	luacheia
