@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/28 10:22:22 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/28 17:25:51 marttikuparinen Exp $
 include/asm-alpha/a.out.h
 include/asm-alpha/agp_backend.h
 include/asm-alpha/asm_offsets.h
@@ -3444,6 +3444,7 @@ include/linux/user.h
 include/linux/utime.h
 include/linux/uts.h
 include/linux/utsname.h
+include/linux/version.h
 include/linux/vfs.h
 include/linux/video_decoder.h
 include/linux/video_encoder.h

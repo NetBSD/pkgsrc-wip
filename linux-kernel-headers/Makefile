@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/28 10:22:22 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/28 17:25:51 marttikuparinen Exp $
 
 .include "../../wip/linux-kernel/Makefile.common"
 
-PKGNAME=		linux-kernel-headers-${LINUX_VERSION}
-COMMENT=		Linux kernel headers
+PKGNAME=	linux-kernel-headers-${LINUX_VERSION}
+COMMENT=	Linux kernel headers
 
-NO_BUILD=		# defined
+do-build:
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} include/linux/version.h)
 
 do-install:
 	(cd ${WRKSRC}/include && ${GTAR} -cf - linux asm*) | \
