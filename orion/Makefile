@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/16 00:07:52 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/16 16:57:39 airhead Exp $
 #
 
 DISTNAME=		orion-0.2
@@ -16,8 +16,8 @@ COMMENT=		Orion - a window manager for X written in Scheme
 #
 BUILD_DEPENDS+=		scsh-${SCSH_VERSION}.[0-9]:../../shells/scsh
 BUILD_DEPENDS+=		scsh-install-lib>=1:../../wip/scsh-install-lib
-BUILD_DEPENDS+=		sunterlib-*:../../wip/sunterlib
-BUILD_DEPENDS+=		scx-*:../../wip/scx
+DEPENDS+=		sunterlib-*:../../wip/sunterlib
+DEPENDS+=		scx-*:../../wip/scx
 
 SCSH_VERSION?=		0.6
 SCSH_LIBPATH=		${PREFIX}/share/scsh-${SCSH_VERSION}/modules
