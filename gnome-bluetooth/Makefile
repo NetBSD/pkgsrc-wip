@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/11 15:09:19 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/03 14:20:50 thomasklausner Exp $
 #
 
 DISTNAME=		gnome-bluetooth-0.5.1
@@ -23,13 +23,13 @@ SUBST_STAGE.py=post-configure
 SUBST_SED.py=-e 's,/usr/share/,${PREFIX}/share/,g' \
 		-e 's,python ,python2.3 ,g'
 
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../audio/esound/buildlink3.mk"
-.include "../../net/ORBit2/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
-.include "../../x11/gnome-python/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/gob2/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
-.include "../../wip/gob2/buildlink3.mk"
 .include "../../wip/libbtctl/buildlink3.mk"
+.include "../../x11/gnome-python/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
