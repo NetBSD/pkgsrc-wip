@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/07/03 19:22:02 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/26 20:32:34 kristerw Exp $
 # created 2003-10-22 Patrick Atamaniuk <atamaniuk-pkgsrc@frobs.net>
 # MAINTAINER_of-previous-lilypond-versions=	rh@NetBSD.org
 
@@ -57,7 +57,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/Documentation/topdocs/out/${f} ${DOCSDIR}
 .endfor
 
-.include "../../wip/mftrace/buildlink3.mk"
+.include "../../fonts/mftrace/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
