@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.42 2003/04/06 19:00:41 jmmv Exp $
-# $NetBSD: Makefile,v 1.42 2003/04/06 19:00:41 jmmv Exp $
+# $Id: Makefile,v 1.43 2003/04/07 06:09:10 marc Exp $
+# $NetBSD: Makefile,v 1.43 2003/04/07 06:09:10 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -46,6 +46,7 @@ SUBDIR+=	poedit
 SUBDIR+=	py-ORBit
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-csv
+SUBDIR+=	py-gnome2
 SUBDIR+=	py-gtk2
 SUBDIR+=	startup-notification
 SUBDIR+=	tcpflow
