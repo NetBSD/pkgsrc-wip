@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/01/11 19:48:05 xmor61 Exp $
+
+--- dev_dsp.h.orig	Mon Jan 10 20:58:53 2005
++++ dev_dsp.h	Mon Jan 10 20:59:27 2005
+@@ -22,7 +22,7 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/time.h>
+-#include <sys/soundcard.h>
++#include <soundcard.h>
+ 
+ static pid_t childpid;
+ 

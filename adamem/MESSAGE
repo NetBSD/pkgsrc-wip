@@ -1,0 +1,24 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/01/11 19:48:05 xmor61 Exp $
+
+1. Invoke 'adamem' to start up in Adam computer mode.
+
+2. Invoke 'cvem' to start up in Colecovision mode.
+
+3. ADAMEm requires you to have several data files in your current
+directory in order to run.  All the necessary files have been installed to
+${PREFIX}/share/adamem. You should write a script that either changes
+into that directory before loading the emulator, or copy all the files
+from ${PREFIX}/share/adamem to your home directory (or other
+desired location--like where you store your game dumps--from which you
+plan on executing the emulator)...  For more info on starting and using
+the emulator, ead the file:
+
+	${PREFIX}/share/adamem/adamem.txt
+
+4. Also, try the '-help' command line switch for a bit less detailed
+guidance.
+
+5. Enjoy!
+
+===========================================================================
