@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.8 2003/07/21 08:26:56 marttikuparinen Exp $
+# $NetBSD: Makefile.common,v 1.9 2003/07/21 15:20:00 marttikuparinen Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce4-rc2/src/
 
-MAINTAINER=		martti@netbsd.org
+MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.xfce.org/
 
 XFCE4_VERSION=		3.99.2
