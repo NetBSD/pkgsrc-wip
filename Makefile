@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1358 2004/07/03 09:11:34 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1358 2004/07/03 09:11:34 xtraeme Exp $
+# $Id: Makefile,v 1.1359 2004/07/06 08:03:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1359 2004/07/06 08:03:34 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -815,7 +815,6 @@ SUBDIR+=	xproto
 SUBDIR+=	xrestop
 SUBDIR+=	xscribble-fs
 SUBDIR+=	xtrans
-SUBDIR+=	xwpe
 SUBDIR+=	yafray
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
