@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.913 2004/01/26 18:35:22 schnoebe Exp $
-# $NetBSD: Makefile,v 1.913 2004/01/26 18:35:22 schnoebe Exp $
+# $Id: Makefile,v 1.914 2004/01/26 22:28:55 blef Exp $
+# $NetBSD: Makefile,v 1.914 2004/01/26 22:28:55 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -179,8 +179,8 @@ SUBDIR+=	glide3
 SUBDIR+=	glkterm
 SUBDIR+=	glulxe
 SUBDIR+=	gnats4
-SUBDIR+=	gnome-spell
 SUBDIR+=	gnome-clipboard-daemon
+SUBDIR+=	gnome-spell
 SUBDIR+=	gnome2-pkgview
 SUBDIR+=	gnomeicu
 SUBDIR+=	gnucash-docs
@@ -236,6 +236,7 @@ SUBDIR+=	igal
 SUBDIR+=	iip
 SUBDIR+=	iisemulator
 SUBDIR+=	ike-scan
+SUBDIR+=	ile
 SUBDIR+=	ilohamail
 SUBDIR+=	imhangul
 SUBDIR+=	imhangul_status_applet
