@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.30 2003/04/05 15:42:59 virtus Exp $
-# $NetBSD: Makefile,v 1.30 2003/04/05 15:42:59 virtus Exp $
+# $Id: Makefile,v 1.31 2003/04/05 20:45:10 marc Exp $
+# $NetBSD: Makefile,v 1.31 2003/04/05 20:45:10 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -27,7 +27,7 @@ SUBDIR+=	perltidy
 SUBDIR+=	poedit
 SUBDIR+=	py-csv
 SUBDIR+=	pyPgSQL
-SUBDIR+=	pygtk2
+SUBDIR+=	py-gtk2
 SUBDIR+=	pyorbit
 SUBDIR+=	tcpflow
 SUBDIR+=	tex-foiltex
