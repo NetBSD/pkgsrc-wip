@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/09/25 02:45:18 tvierling Exp $
+# $NetBSD: Makefile,v 1.16 2003/09/29 15:50:59 tvierling Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 
-ENTROPY_VERSION=	0.5.6-328
+ENTROPY_VERSION=	0.5.6-334
 
 MAKE_FLAGS+=		QUIET=0
 MAKE_FLAGS+=		LIBEXPAT=-lexpat LIBZ=-lz
