@@ -1,4 +1,4 @@
-$Id: TODO,v 1.8 2004/04/07 07:38:21 bubuchka Exp $
+$Id: TODO,v 1.9 2004/04/07 07:51:09 bubuchka Exp $
 
 - [jmmv] Several cleanup.
 
@@ -6,9 +6,6 @@ $Id: TODO,v 1.8 2004/04/07 07:38:21 bubuchka Exp $
 
 - Wait until DrWeb 4.30.x for NetBSD will released, then support
   it.  Just at this moment it runs under FreeBSD binary emulation.
-
-- Eliminate dependency on wget for systems, which have its own
-  downloaders.
 
 Please also note that all precomplied software available (at least
 tested) for i386 only. The sources (clients) have all chances to
