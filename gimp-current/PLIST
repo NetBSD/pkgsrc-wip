@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/01/12 03:45:29 blef Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/01/16 02:01:10 minskim Exp $
 bin/gimp-1.3
 bin/gimp-remote-1.3
 bin/gimptool-1.3
@@ -300,6 +300,7 @@ lib/gimp/1.3/plug-ins/waves
 lib/gimp/1.3/plug-ins/webbrowser
 lib/gimp/1.3/plug-ins/whirlpinch
 lib/gimp/1.3/plug-ins/wind
+lib/gimp/1.3/plug-ins/wmf
 lib/gimp/1.3/plug-ins/xbm
 lib/gimp/1.3/plug-ins/xjt
 lib/gimp/1.3/plug-ins/xpm
