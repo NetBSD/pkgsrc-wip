@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/23 11:11:21 obache Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/31 02:58:48 obache Exp $
 
 DISTNAME=	avifile-0.7-0.7.41
 PKGNAME=	avifile-devel-0.7.41
@@ -14,7 +14,6 @@ DEPENDS=	win32-codecs>=010122:../../multimedia/win32-codecs
 .endif
 
 USE_X11=		YES
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_LANGUAGE+=		c c++ fortran

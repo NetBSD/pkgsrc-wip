@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/23 11:17:21 obache Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/31 03:02:24 obache Exp $
 #
 
 DISTNAME=	zphoto-1.2
@@ -9,7 +9,6 @@ MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://namazu.org/~satoru/zphoto/
 COMMENT=	Flash-based photo album generator
 
-USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
