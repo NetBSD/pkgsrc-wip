@@ -1,0 +1,5 @@
+JEP is a Java API for parsing and evaluating mathematical
+expressions. With this library you can allow your users to
+enter an arbitrary formula as a string, and instantly evaluate
+it. JEP supports user defined variables, constants, and functions.
+A number of common mathematical functions and constants are included.
