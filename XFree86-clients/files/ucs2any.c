@@ -728,15 +728,17 @@ int main(int argc, char *argv[])
 
 	/* read characters */
 	while (read_line(fsource_fp, &l)) {
-		if (regex(l, "^STARTCHAR")) {
+		if (l[0] == 'S' && regex(l, "^STARTCHAR")) {
 			zstrcpy(&sc, l);
 			zstrcat(&sc, "\n");
 			code = -1;
-		} else if (regex(l, "^ENCODING[[:space:]]+(-?[[:digit:]]+)")) {
+		} else if (l[0] == 'E' && l[1] == 'N' && l[2] == 'C' &&
+			    regex(l, "^ENCODING[[:space:]]+(-?[[:digit:]]+)")) {
 			code = atoi(match(l, 1));
 			da_add_str(startchar, code, sc);
 			da_add_str(my_char, code, "");
-		} else if (regex(l, "^ENDFONT$")) {
+		} else if (l[0] == 'E' && l[1] == 'N' && l[2] == 'D' &&
+				regex(l, "^ENDFONT$")) {
 			code = -1;
 			zstrcpy(&sc, "STARTCHAR ???\n");
 		} else {
@@ -744,7 +746,7 @@ int main(int argc, char *argv[])
 			zstrcat(&t, l);
 			zstrcat(&t, "\n");
 			da_add_str(my_char, code, t);
-			if (regex(l, "^ENDCHAR$")) {
+			if (l[0] == 'E' && l[1] == 'N' && regex(l, "^ENDCHAR$")) {
 				code = -1;
 				zstrcpy(&sc, "STARTCHAR ???\n");
 			}
@@ -782,12 +784,17 @@ int main(int argc, char *argv[])
 		da_clear(map);
 
 		while (read_line(fmap_fp, &l)) {
-			if (regex(l, "^[[:space:]]*(#.*)?$"))
+			char *p;
+
+			for (p = l; isspace(p[0]); p++)
+				;
+			if (p[0] == '\0' || p[0] == '#')
 				continue;
-			if (regex(l, "^[[:space:]]*(0[xX])?([[:xdigit:]]{2})[[:space:]]+(0[xX]|U\\+|U-)?([[:xdigit:]]{4})"))
+
+			if (regex(p, "^(0[xX])?([[:xdigit:]]{2})[[:space:]]+(0[xX]|U\\+|U-)?([[:xdigit:]]{4})"))
 			{
-				target = xmatch(l, 2);
-				ucs = xmatch(l, 4);
+				target = xmatch(p, 2);
+				ucs = xmatch(p, 4);
 				if (!is_control(ucs)) {
 					if (zs_true(da_fetch_str(startchar,
 						ucs)))
