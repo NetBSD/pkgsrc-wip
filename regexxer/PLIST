@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/24 09:35:23 xtraeme Exp $
+bin/regexxer
+share/applications/regexxer.desktop
+share/pixmaps/regexxer.png
+@dirrm share/applications
