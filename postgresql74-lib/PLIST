@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/20 00:25:50 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/06 04:59:03 mpasternak Exp $
 bin/ecpg
 include/ecpg_informix.h
 include/ecpgerrno.h
@@ -240,7 +240,7 @@ include/postgresql/server/port/freebsd.h
 include/postgresql/server/port/hpux.h
 include/postgresql/server/port/irix5.h
 include/postgresql/server/port/linux.h
-include/postgresql/server/port/${LOWER_OPSYS}.h
+include/postgresql/server/port/netbsd.h
 include/postgresql/server/port/nextstep.h
 include/postgresql/server/port/openbsd.h
 include/postgresql/server/port/osf.h
