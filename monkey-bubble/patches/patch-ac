@@ -1,16 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/09/24 12:50:32 cubidou Exp $
+$NetBSD: patch-ac,v 1.2 2003/10/02 11:47:53 cubidou Exp $
 
---- src/util/clock.c.orig	2003-09-22 17:13:05.000000000 +0200
-+++ src/util/clock.c
-@@ -108,10 +108,10 @@ void clock_start(Clock * clock) {  
- }
+--- src/ui/Makefile.am.orig	2003-10-02 13:37:27.000000000 +0200
++++ src/ui/Makefile.am
+@@ -25,7 +25,7 @@ monkey_bubble_SOURCES = \
+ 	network-ui.c network-ui.h \
+ 	network-game.c network-game.h
  
- void clock_pause(Clock * clock,gboolean paused) {
--  g_assert( IS_CLOCK(clock));
-   GTimeVal c;
-   GTimeVal p;
-   GTimeVal r;
-+  g_assert( IS_CLOCK(clock));
+-monkey_bubble_LDFLAGS=-pg  
++#monkey_bubble_LDFLAGS=-pg  
  
-   if( paused ) {
  
+ monkey_bubble_LDADD =  \
