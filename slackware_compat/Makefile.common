@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.2 2004/03/12 13:11:50 mpasternak Exp $
-# $Id: Makefile.common,v 1.2 2004/03/12 13:11:50 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/03/14 19:53:20 mpasternak Exp $
+# $Id: Makefile.common,v 1.3 2004/03/14 19:53:20 mpasternak Exp $
 #
 # (C) 2004 Michal Pasternak <dotz@irc.pl>
 
@@ -56,5 +56,35 @@ MANCOMPRESSED?=		yes
 #
 
 WRKSRC?=		${WRKDIR}
+
+#
+# FreeBSD-4 have problems running glibc 2.3.2 apps
+#
+
+.include "../../mk/bsd.prefs.mk"
+
+warn-on-freebsd:
+.if ${OPSYS} == "FreeBSD"
+.if ${LOWER_OPSYS_VERSUFFIX} == "4" 
+	@echo ===========================================================================
+	@echo "* WARNING * WARNING * WARNING * WARNING * WARNING * WARNING * WARNING"
+	@echo
+	@echo It appears you're running FreeBSD-4 stable system, which is
+	@echo known to have trouble running applications linked agains glibc 2.3.2
+	@echo "(just like the package you are instaling)"
+	@echo
+	@echo If build breaks with Signal 12 while running Linux application,
+	@echo be sure to review the FreeBSD PR 64169 here:
+	@echo "    http://www.freebsd.org/cgi/query-pr.cgi?pr=64169"
+	@echo and install needed patches.
+	@echo
+	@echo ===========================================================================
+.else
+	@# do nothing
+.else
+	@# do nothing
+.endif
+
+http://www.freebsd.org/cgi/query-pr.cgi?pr=64169
 
 .include "../../wip/mk/linuxbin.pkg.mk"
