@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/15 18:08:47 mpasternak Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/15 18:55:05 mpasternak Exp $
 #
 
 DISTNAME=		mingw-gcc-3.3.1-20030804
@@ -23,8 +23,7 @@ PATH:=			${CROSSBASE}/bin:${PATH}
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --exec-prefix=${PREFIX} \
 			--target=${MINGW_TARGET} \
-			--enable-languages="c++" --enable-languages="objc" \
-			--enable-languages="c"
+			--enable-languages=c++, objc
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS}
