@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/10/24 15:07:41 lexort Exp $
+$NetBSD: distinfo,v 1.2 2004/11/11 13:03:08 poppnk Exp $
 
-SHA1 (gob2-2.0.10.tar.gz) = bc8e610cea840d305339092e13ab6e54976e71be
-Size (gob2-2.0.10.tar.gz) = 239648 bytes
+SHA1 (gob2-2.0.11.tar.gz) = 79f084dee9865cdbcd40076675debe8a640a7f76
+Size (gob2-2.0.11.tar.gz) = 239798 bytes
