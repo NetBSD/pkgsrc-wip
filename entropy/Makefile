@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/11/12 21:49:46 tvierling Exp $
+# $NetBSD: Makefile,v 1.33 2003/11/17 13:17:21 tvierling Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 
-ENTROPY_VERSION=	0.6.1-363
+ENTROPY_VERSION=	0.6.1-366
 
 CONFIGURE_ARGS+=	--enable-verbose
 
@@ -39,13 +39,11 @@ do-install:
 ENTROPY_STORE_TYPE?=	tree
 
 .if ${ENTROPY_STORE_TYPE} == "tree"
-CONFIGURE_ARGS+=	--with-tree --with-svid-sem
+CONFIGURE_ARGS+=	--with-tree
 .elif ${ENTROPY_STORE_TYPE} == "mysql"
-CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE} --with-svid-sem
+CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE}
 .include "../../databases/mysql-client/buildlink2.mk"
-.elif ${ENTROPY_STORE_TYPE} == "monolithic"
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc
-.else
+.elif ${ENTROPY_STORE_TYPE} != "monolithic"
 .error unknown ENTROPY_STORE_TYPE: ${ENTROPY_STORE_TYPE}
 .endif
 
