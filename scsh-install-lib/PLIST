@@ -1,15 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/15 22:46:55 airhead Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/03/05 16:22:39 airhead Exp $
 bin/scsh-install-pkg
-share/doc/scsh-0.6/install-lib-1.2.0/pdf/install-lib.pdf
-share/scsh-0.6/modules/install-lib
-share/scsh-0.6/modules/install-lib-1.2.0/load.scm
-share/scsh-0.6/modules/install-lib-1.2.0/scheme/install-lib-module.scm
-share/scsh-0.6/modules/install-lib-1.2.0/scheme/install-lib-version.scm
-share/scsh-0.6/modules/install-lib-1.2.0/scheme/install-lib.scm
-@dirrm share/scsh-0.6/modules/install-lib-1.2.0/scheme
-@dirrm share/scsh-0.6/modules/install-lib-1.2.0
-@dirrm share/scsh-0.6/modules
-@dirrm share/scsh-0.6
-@dirrm share/doc/scsh-0.6/install-lib-1.2.0/pdf
-@dirrm share/doc/scsh-0.6/install-lib-1.2.0
-@dirrm share/doc/scsh-0.6
+share/doc/scsh/modules/install-lib-1.2.0/pdf/install-lib.pdf
+share/scsh/modules/install-lib
+share/scsh/modules/install-lib-1.2.0/load.scm
+share/scsh/modules/install-lib-1.2.0/scheme/install-lib-module.scm
+share/scsh/modules/install-lib-1.2.0/scheme/install-lib-version.scm
+share/scsh/modules/install-lib-1.2.0/scheme/install-lib.scm
+@dirrm share/scsh/modules/install-lib-1.2.0/scheme
+@dirrm share/scsh/modules/install-lib-1.2.0
+@dirrm share/scsh/modules
+@dirrm share/doc/scsh/modules/install-lib-1.2.0/pdf
+@dirrm share/doc/scsh/modules/install-lib-1.2.0
+@dirrm share/doc/scsh/modules

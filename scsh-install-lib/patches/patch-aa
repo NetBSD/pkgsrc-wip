@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1 2005/03/05 16:22:41 airhead Exp $
+
+--- scheme/install-lib.scm.orig	2004-11-13 21:14:57.000000000 +0100
++++ scheme/install-lib.scm
+@@ -400,22 +400,23 @@
+ (define (fhs-layout pkg)
+   (let* ((scsh-version-dir (string-append "scsh-" scsh-version-string))
+          (base (paths->file-name "share"
+-                                 scsh-version-dir
++                                 "scsh"
+                                  "modules"
+                                  (package-full-name pkg))))
+     `((base        . ,base)
+       (misc-shared . ,base)
+       (scheme      . ,(absolute-file-name "scheme" base))
+       (lib         . ,(paths->file-name "lib"
+-                                        scsh-version-dir
++                                        "scsh"
+                                         "modules"
+                                         (package-full-name pkg)))
+       (doc         . ,(paths->file-name "share"
+                                         "doc"
+-                                        scsh-version-dir
++                                        "scsh"
++					"modules"
+                                         (package-full-name pkg)))
+       (active      . ,(paths->file-name "share"
+-                                        scsh-version-dir
++                                        "scsh"
+                                         "modules")))))
+ 
+ (define (fhs-program-layout pkg)
