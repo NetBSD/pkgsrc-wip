@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/11/01 22:35:30 dolecek Exp $
+# $NetBSD: Makefile,v 1.7 2005/02/09 23:35:52 tvierling Exp $
 #
 
 DISTNAME=	TUTOS-php-1.2.20040906
-PKGNAME=	${DISTNAME:tl}
+PKGNAME=	${DISTNAME:s/TUTOS/tutos/}
 WRKSRC=		${WRKDIR}/tutos
 CATEGORIES=	devel
 MASTER_SITES=	http://www.tutos.org/download/
