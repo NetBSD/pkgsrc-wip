@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.3 2003/08/04 19:17:16 bencollver Exp $
+bin/darcnes-svgalib
+share/doc/darcnes-svgalib/readme
+@dirrm share/doc/darcnes-svgalib
