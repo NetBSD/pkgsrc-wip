@@ -1,0 +1,56 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/28 04:41:44 xtraeme Exp $
+bin/mDNSBrowse
+bin/mDNSPublish
+bin/mDNSResponder
+include/${PKGNAME}/corby/buffer.h
+include/${PKGNAME}/corby/channel.h
+include/${PKGNAME}/corby/corby.h
+include/${PKGNAME}/corby/message.h
+include/${PKGNAME}/corby/object.h
+include/${PKGNAME}/corby/orb.h
+include/${PKGNAME}/discovery/discovery.h
+include/${PKGNAME}/discovery/text_record.h
+include/${PKGNAME}/howl.h
+include/${PKGNAME}/howl_dll.h
+include/${PKGNAME}/rendezvous/rendezvous.h
+include/${PKGNAME}/rendezvous/text_record.h
+include/${PKGNAME}/salt/address.h
+include/${PKGNAME}/salt/assert.h
+include/${PKGNAME}/salt/interface.h
+include/${PKGNAME}/salt/log.h
+include/${PKGNAME}/salt/salt.h
+include/${PKGNAME}/salt/signal.h
+include/${PKGNAME}/salt/socket.h
+include/${PKGNAME}/salt/time.h
+include/${PKGNAME}/salt/verrno.h
+include/${PKGNAME}/salt/vstdlib.h
+include/${PKGNAME}/salt/vstring.h
+include/${PKGNAME}/salt/vtypes.h
+lib/lib${PKGNAME}.so.0
+lib/lib${PKGNAME}.so.0.1
+lib/libhowl.a
+lib/libhowl.la
+lib/libhowl.so
+lib/pkgconfig/howl.pc
+man/man8/mDNSResponder.8
+share/howl/help/address-summary.html
+share/howl/help/address.html
+share/howl/help/discovery-summary.html
+share/howl/help/discovery.html
+share/howl/help/index.html
+share/howl/help/overall.html
+share/howl/help/salt-summary.html
+share/howl/help/salt.html
+share/howl/help/txt_rec-summary.html
+share/howl/help/txt_rec.html
+share/howl/help/txt_rec_iter-summary.html
+share/howl/help/txt_rec_iter.html
+share/howl/help/txt_rec_str_iter-summary.html
+share/howl/help/txt_rec_str_iter.html
+@dirrm share/howl/help
+@dirrm share/howl
+@dirrm include/${PKGNAME}/salt
+@dirrm include/${PKGNAME}/rendezvous
+@dirrm include/${PKGNAME}/discovery
+@dirrm include/${PKGNAME}/corby
+@dirrm include/${PKGNAME}

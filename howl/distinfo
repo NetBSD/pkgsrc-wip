@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/28 04:41:44 xtraeme Exp $
+
+SHA1 (howl-0.9.4.tar.gz) = a119548b96d8e7ddb8ef2cd40d88871ec076d2d3
+Size (howl-0.9.4.tar.gz) = 551985 bytes
+SHA1 (patch-aa) = 418062cd02a8ccfa9dcd3b881b7124371225bbf4
+SHA1 (patch-ab) = 6ce49543b1d7db79232bc6bd991a98044bd3a9b5
+SHA1 (patch-ac) = ae88a75689cdca85e0e7622521b422b8ccdb5cd3
+SHA1 (patch-ad) = e6ea7bf1208036dbe1fbd8ef1a81cdfce01a1f35
+SHA1 (patch-ae) = cd95dde259a25f38ab6f70a005e864ac65d3f442

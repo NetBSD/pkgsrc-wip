@@ -1,0 +1,6 @@
+Howl is a cross-platform implementation of the Zeroconf networking standard.
+Zeroconf brings a new ease of use to IP networking.
+
+Branded as Rendezvous(TM) by Apple Computer, Inc., Zeroconf standardizes 
+networking protocols for delivering hassle-free ad-hoc networking, service 
+discovery and IP configuration.

@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/03/28 04:41:45 xtraeme Exp $
+
+--- src/lib/howl/Posix/posix_interface.c.orig	2004-03-28 06:38:22.000000000 +0200
++++ src/lib/howl/Posix/posix_interface.c	2004-03-28 06:38:50.000000000 +0200
+@@ -82,7 +82,7 @@
+ 
+ #define max(a,b)	((a) > (b) ? (a) : (b))
+ /* for Posix and MacOs */
+-#if defined(__APPLE__) || defined(__FreeBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
+ int 
+ get_sa_len(struct ifreq * ifr)
+ {
