@@ -49,7 +49,6 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <limits.h>
-#include <regex.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -57,7 +56,7 @@
 #include <unistd.h>
 
 /* global variable for argv[0] */
-char *my_name = NULL;
+const char *my_name = NULL;
 
 static char *basename(char *pathname)
 {
@@ -115,6 +114,26 @@ void zstrcpy(char **dest, const char *source)
 	*dest = zstrdup(source);
 }
 
+void zquotedcpy(char **dest, const char *source)
+{
+	const char *start, *end;
+
+	if (*dest != NULL)
+		free(*dest);
+	*dest = NULL;
+	start = source;
+	if (*start == '"') {
+		start = source+1;
+		end = strrchr(start, '"');
+		if (!end) return;
+		*dest = zmalloc(end-start+1);
+		strncpy(*dest, start, end-start);
+		(*dest)[end-start] = '\0';
+	} else {
+		*dest = zstrdup(source);
+	}
+}
+
 void zstrcat(char **dest, const char *source)
 {
 	int dest_size = 1;
@@ -159,69 +178,6 @@ char *zitoa(int value)
 
 #define zs_true(x)	(x != NULL && strcmp(x, "0") != 0)
 #define zi_true(x)	(x == 1)
-
-/* "CLASS" regular expression cache */
-
-typedef struct {
-	char *name;
-	int size;
-	char **keys;
-	void **values;
-} rc_t;
-
-rc_t *rc_new(char *name)
-{
-	rc_t *rc;
-
-	rc = zmalloc(sizeof(rc_t));
-	rc->size = 0;
-	rc->keys = NULL;
-	rc->values = NULL;
-	rc->name = NULL;
-	zstrcpy(&(rc->name), name);
-	return rc;
-}
-
-int rc_find(rc_t *rc, const char *key)
-{
-	int i = rc->size;
-	int r = -1;
-
-	while (i-- > 0)
-		if (key == rc->keys[i])
-			r = i;
-	return r;
-}
-
-void *rc_fetch(rc_t *rc, const char *key)
-{
-	int i;
-	void *r = NULL;
-
-	i = rc_find(rc, key);
-	if (i != -1)
-		r = rc->values[i];
-	return r;
-}
-
-void rc_add(rc_t *rc, const char *key, void *value)
-{
-	int i;
-	i = rc_find(rc, key);
-	if (i == -1) {
-		i = rc->size;
-		rc->size++;
-		rc->keys = zrealloc(rc->keys, rc->size * sizeof(char *));
-		rc->keys[i] = (char *)key;
-		rc->values = zrealloc(rc->values, rc->size * sizeof(void *));
-		rc->values[i] = value;
-	} else {
-		free(rc->values[i]);
-		rc->values[i] = value;
-	}
-}
-
-#define rc_size(rc) (rc->size)
 
 /* "CLASS" "dynamic array" */
 
@@ -304,7 +260,7 @@ void da_add(da_t *da, int key, void *value)
 
 void da_add_str(da_t *da, int key, char *value)
 {
-	da_add(da, key, zstrdup(value));
+	da_add(da, key, value?zstrdup(value):NULL);
 }
 
 void da_add_int(da_t *da, int key, int value)
@@ -332,96 +288,11 @@ void da_clear(da_t *da)
 	da->values = NULL;
 }
 
-/* "CLASS" regular expression support */
-
-#define err_buffer_size 2048
-void comp_regex(regex_t *rx, char *expression, int cflags)
-{
-	int retval;
-	char err_buffer[err_buffer_size];
-
-	retval = regcomp(rx, expression, cflags);
-	if (retval != 0) {
-		regerror(retval, rx, err_buffer, err_buffer_size);
-		fprintf(stderr, "%s: %s", my_name, err_buffer);
-		exit(retval);
-	}
-}
-
-rc_t *regex_cache = NULL;
-#define regmatch_size 20
-regmatch_t rm[regmatch_size];
-
-int do_regex(char *buffer, char *expression, int cflags)
-{
-	regex_t *rx;
-	int r;
-
-	rx = rc_fetch(regex_cache, expression);
-	if (rx == NULL) {
-		rx = zmalloc(sizeof(regex_t));
-		comp_regex(rx, expression, cflags);
-		rc_add(regex_cache, expression, rx);
-	}
-
-	r = regexec(rx, buffer, regmatch_size, rm, 0);
-
-	return !r;
-}
-
-#define regex(b,e) do_regex(b,e,REG_EXTENDED)
-#define regexm(b,e) do_regex(b,e,REG_EXTENDED|REG_NEWLINE)
-#define regexi(b,e) do_regex(b,e,REG_EXTENDED|REG_ICASE)
-
-char *rmbuf = NULL;
-char *match(char *buffer, int n)
-{
-	int length;
-
-	length = rm[n].rm_eo - rm[n].rm_so;
-	if (rmbuf != NULL)
-		free(rmbuf);
-	rmbuf = zmalloc(length + 1);
-	memcpy(rmbuf, &buffer[rm[n].rm_so], length);
-	return rmbuf;
-}
-
-int xmatch(char *buffer, int n)
-{
-	int r;
-	char *t = NULL;
-
-	zstrcpy(&t, "0x");
-	zstrcat(&t, match(buffer, n));
-	r = strtol(t, NULL, 16);
-	free(t);
-	return r;
-}
-
-char *srbuf = NULL;
-
-char *search_replace_sub(char *buffer, char *expression, char *replacement,
-	int cflags)
-{
-	zstrcpy(&srbuf, buffer);
-	if (do_regex(buffer, expression, cflags)) {
-		srbuf[rm[0].rm_so] = '\000';
-		zstrcat(&srbuf, replacement);
-		zstrcat(&srbuf, &buffer[rm[0].rm_eo]);
-	}
-	return srbuf;
-}
-
-#define search_replace(b,e,r) \
-	search_replace_sub(b,e,r,REG_EXTENDED)
-
-#define search_replacem(b,e,r) \
-	search_replace_sub(b,e,r,REG_EXTENDED|REG_NEWLINE)
-
 /* "CLASS" file input */
 
 #define TYPICAL_LINE_SIZE (80)
 
+/* read a line and strip trailing whitespace */
 int read_line(FILE *fp, char **buffer)
 {
 	int buffer_size = TYPICAL_LINE_SIZE;
@@ -451,6 +322,13 @@ int read_line(FILE *fp, char **buffer)
 		free(*buffer);
 		*buffer = NULL;
 		return 0;
+	}
+
+	while (position > 1) {
+		position--;
+		if (!isspace((*buffer)[position]))
+			break;
+		(*buffer)[position] = '\0';
 	}
 
 	return 1;
@@ -579,6 +457,23 @@ int chars_compare(const void *aa, const void *bb)
 	return a - b;
 }
 
+/*
+ * Return != 0 if "string" starts with "pattern" followed by whitespace.
+ * If it does, return a pointer to the first non space char.
+ */
+static const char * startswith(const char *string, const char *pattern)
+{
+	int l = strlen(pattern);
+
+	if (strlen(string) <= l) return NULL;
+	if (strncmp(string, pattern, l) != 0) return NULL;
+	string += l;
+	if (!isspace(*string)) return NULL;
+	while (isspace(*string))
+		string++;
+	return string;
+}
+
 int main(int argc, char *argv[])
 {
 	int ai = 1;
@@ -589,8 +484,8 @@ int main(int argc, char *argv[])
 	int default_char;
 	char *l = NULL;
 	char *t = NULL;
+	const char *nextc = NULL;
 	char *startfont = NULL;
-	char *header = NULL;
 	char *slant = NULL;
 	char *spacing = NULL;
 	char *sc = NULL;
@@ -600,8 +495,19 @@ int main(int argc, char *argv[])
 	char *fmap = NULL;
 	char *registry = NULL;
 	char *encoding = NULL;
+	char *fontname = NULL;
 	FILE *fmap_fp;
 	da_t *map;
+	da_t *headers;
+	int nextheader = -1;
+	int default_char_index = -1;
+	int startproperties_index = -1;
+	int fontname_index = -1;
+	int charset_registry_index = -1;
+	int slant_index = -1;
+	int spacing_index = -1;
+	int charset_encoding_index = -1;
+	int fontboundingbox_index = -1;
 	int target;
 	int ucs;
 	int i;
@@ -610,16 +516,15 @@ int main(int argc, char *argv[])
 	bbx_t bbx;
 	char *fout = NULL;
 	FILE *fout_fp;
-	char *newheader = NULL;
 	int k;
 	char *registry_encoding = NULL;
 
-	zstrcpy(&my_name, argv[0]);
+	my_name = argv[0];
 
-	regex_cache = rc_new("regex_cache");
 	startchar = da_new("startchar");
 	my_char = da_new("my_char");
 	map = da_new("map");
+	headers = da_new("headers");
 
 	if (argc < 2) {
 		usage();
@@ -634,9 +539,13 @@ int main(int argc, char *argv[])
 		ai++;
 		dec_chars = 0;
 	}
+	if (ai >= argc) {
+		usage();
+		exit(0);
+	}
 
 	/* open and read source file */
-	zstrcpy(&fsource, argv[ai]);
+	fsource = argv[ai];
 	fsource_fp = fopen(fsource, "r");
 	if (fsource_fp == NULL) {
 		fprintf(stderr, "%s: Can't read file '%s': %s!\n", my_name,
@@ -648,69 +557,94 @@ int main(int argc, char *argv[])
 	properties = 0;
 	default_char = 0;
 	while (read_line(fsource_fp, &l)) {
-		if (regex(l, "^CHARS[ \t]"))
+		if (startswith(l, "CHARS"))
 			break;
-		if (regex(l, "^STARTFONT")) {
+		if (startswith(l, "STARTFONT")) {
 			zstrcpy(&startfont, l);
-		} else if (regex(l, "^_XMBDFED_INFO[[:space:]]") ||
-			regex(l, "^_XFREE86_GLYPH_RANGES[ \t]"))
+		} else if (startswith(l, "_XMBDFED_INFO") ||
+			startswith(l, "XFREE86_GLYPH_RANGES"))
 		{
 			properties--;
-		} else if (regex(l, "DEFAULT_CHAR[[:space:]]+([[:digit:]]+)[[:space:]]*$"))
+		} else if ((nextc = startswith(l, "DEFAULT_CHAR")) != NULL)
 		{
-			default_char = atoi(match(l, 1));
-			zstrcat(&header, "DEFAULT_CHAR 0\n");
+			default_char = atoi(nextc);
+			default_char_index = ++nextheader;
+			da_add_str(headers, default_char_index, NULL);
 		} else {
-			if (regex(l, "^STARTPROPERTIES[[:space:]]+([[:digit:]]+)"))
+			if ((nextc = startswith(l, "STARTPROPERTIES")) != NULL)
 			{
-				properties = atoi(match(l, 1));
-			} else if (regex(l, "^FONT[[:space:]]+(.*-([^-]*-[^[:space:]]*))[[:space:]]*$"))
+				properties = atoi(nextc);
+				startproperties_index = ++nextheader;
+				da_add_str(headers, startproperties_index, NULL);
+			} else if ((nextc = startswith(l, "FONT")) != NULL)
 			{
-				if (strcmp(match(l, 2), "ISO10646-1") != 0) {
+				char * term;
+				/* slightly simplistic check ... */
+				zquotedcpy(&fontname, nextc);
+				if ((term = strstr(fontname, "-ISO10646-1")) == NULL) {
 					fprintf(stderr,
 						"%s: FONT name in '%s' is '%s' and not '*-ISO10646-1'!\n",
-						my_name, fsource, match(l, 1));
+						my_name, fsource, fontname);
 					exit(1);
 				}
-			} else if (regex(l, "CHARSET_REGISTRY[[:space:]]+\"(.*)\"[[:space:]]*$"))
+				*term = '\0';
+				fontname_index = ++nextheader;
+				da_add_str(headers, fontname_index, NULL);
+			} else if ((nextc = startswith(l, "CHARSET_REGISTRY")) != NULL)
 			{
-				if (strcmp(match(l, 1), "ISO10646") != 0) {
+				if (strcmp(nextc, "\"ISO10646\"") != 0) {
 					fprintf(stderr,
 						"%s: CHARSET_REGISTRY in '%s' is '%s' and not 'ISO10646'!\n",
-						my_name, fsource, match(l, 1));
+						my_name, fsource, nextc);
 					exit(1);
 				}
-			} else if (regex(l, "^CHARSET_ENCODING[[:space:]]+\"(.*)\"[[:space:]]*$"))
+				charset_registry_index = ++nextheader;
+				da_add_str(headers, charset_registry_index, NULL);
+			} else if ((nextc = startswith(l, "CHARSET_ENCODING")) != NULL)
 			{
-				if (strcmp(match(l, 1), "1") != 0) {
+				if (strcmp(nextc, "\"1\"") != 0) {
 					fprintf(stderr,
 						"%s: CHARSET_ENCODING in '%s' is '%s' and not '1'!\n",
-						my_name, fsource, match(l, 1));
+						my_name, fsource, nextc);
 					exit(1);
 				}
-			} else if (regex(l, "^SLANT[[:space:]]+\"(.*)\"[[:space:]]*$"))
+				charset_encoding_index = ++nextheader;
+				da_add_str(headers, charset_encoding_index, NULL);
+			} else if (startswith(l, "FONTBOUNDINGBOX")) {
+				fontboundingbox_index = ++nextheader;
+				da_add_str(headers, fontboundingbox_index, NULL);
+			} else if ((nextc = startswith(l, "SLANT")) != NULL)
 			{
-				zstrcpy(&slant, match(l, 1));
-				zstrtoupper(slant);
-			} else if (regex(l, "^SPACING[[:space:]]+\"(.*)\"[[:space:]]*$"))
+				zquotedcpy(&slant, nextc);
+				slant_index = ++nextheader;
+				da_add_str(headers, slant_index, NULL);
+			} else if ((nextc = startswith(l, "SPACING")) != NULL)
 			{
-				zstrcpy(&spacing, match(l, 1));
+				zquotedcpy(&spacing, nextc);
 				zstrtoupper(spacing);
-			}
-			if (regex(l, "^COMMENT[[:space:]]+\"(.*)\"$")) {
-				zstrcat(&header, "COMMENT ");
-				zstrcat(&header, match(l, 1));
-				zstrcat(&header, "\n");
-			} else if (regex(l, "^COMMENT[[:space:]]+\\$[I]d: (.*)\\$[[:space:]]*$"))
-			{
-				zstrcat(&header, "COMMENT Derived from ");
-				zstrcat(&header, match(l, 1));
-				zstrcat(&header, "\n");
+				spacing_index = ++nextheader;
+				da_add_str(headers, spacing_index, NULL);
+			} else if ((nextc = startswith(l, "COMMENT")) != NULL) {
+				if (strncmp(nextc, "$Id: ", 5)==0) {
+					char *header = NULL;
+					char *id = NULL, *end = NULL;
+					id = zstrdup(nextc + 5);
+					end = strrchr(id, '$');
+					if (end) *end = '\0';
+					zstrcpy(&header, "COMMENT Derived from ");
+					zstrcat(&header, id);
+					zstrcat(&header, "\n");
+					free(id);
+					da_add_str(headers, ++nextheader, header);
+					free(header);
+				} else {
+					da_add_str(headers, ++nextheader, l);
+				}
 			} else {
-				zstrcat(&header, l);
-				zstrcat(&header, "\n");
+				da_add_str(headers, ++nextheader, l);
 			}
 		}
+		free(l);
 	}
 
 	if (startfont == NULL) {
@@ -719,26 +653,17 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	zstrcpy(&t, "\nSTARTPROPERTIES ");
-	zstrcat(&t, zitoa(properties));
-	zstrcat(&t, "\n");
-	zstrcpy(&header, search_replace(header,
-		"\nSTARTPROPERTIES[[:space:]]+([[:digit:]]+)\n", t));
-
-
 	/* read characters */
 	while (read_line(fsource_fp, &l)) {
-		if (l[0] == 'S' && regex(l, "^STARTCHAR")) {
+		if (startswith(l, "STARTCHAR")) {
 			zstrcpy(&sc, l);
 			zstrcat(&sc, "\n");
 			code = -1;
-		} else if (l[0] == 'E' && l[1] == 'N' && l[2] == 'C' &&
-			    regex(l, "^ENCODING[[:space:]]+(-?[[:digit:]]+)")) {
-			code = atoi(match(l, 1));
+		} else if ((nextc = startswith(l, "ENCODING")) != NULL) {
+			code = atoi(nextc);
 			da_add_str(startchar, code, sc);
 			da_add_str(my_char, code, "");
-		} else if (l[0] == 'E' && l[1] == 'N' && l[2] == 'D' &&
-				regex(l, "^ENDFONT$")) {
+		} else if (strcmp(l, "ENDFONT")==0) {
 			code = -1;
 			zstrcpy(&sc, "STARTCHAR ???\n");
 		} else {
@@ -746,11 +671,12 @@ int main(int argc, char *argv[])
 			zstrcat(&t, l);
 			zstrcat(&t, "\n");
 			da_add_str(my_char, code, t);
-			if (l[0] == 'E' && l[1] == 'N' && regex(l, "^ENDCHAR$")) {
+			if (strcmp(l, "ENDCHAR")==0) {
 				code = -1;
 				zstrcpy(&sc, "STARTCHAR ???\n");
 			}
 		}
+		free(l);
 	}
 
 	fclose(fsource_fp);
@@ -759,14 +685,25 @@ int main(int argc, char *argv[])
 	while (ai < argc) {
 		zstrcpy(&fmap, argv[ai]);
 		i = ai + 1;
-		if (i < argc && regex(argv[i], "^([^-]+)-([^-]+)$")) {
-			zstrcpy(&registry, match(argv[i], 1));
-			zstrcpy(&encoding, match(argv[i], 2));
+		if (i < argc) {
+			char *temp = NULL;
+			char * hyphen = strchr(argv[i], '-');
+			if (!hyphen || strchr(hyphen+1, '-') != NULL) {
+				fprintf(stderr,
+					"%s: Argument registry-encoding '%s' not in expected format!\n",
+					my_name, i < argc ? fmap : "");
+				exit(1);
+			}
+			temp = zstrdup(argv[i]);
+			hyphen = strchr(temp, '-');
+			if (hyphen) *hyphen = 0;
+			zstrcpy(&registry, temp);
+			zstrcpy(&encoding, hyphen+1);
+			free(temp);
 		} else {
-			fprintf(stderr,
-				"%s: Argument registry-encoding '%s' not in expected format!\n",
-				my_name, i < argc ? fmap : "");
-			exit(1);
+			fprintf(stderr, "map file argument \"%s\" needs a "
+			    "coresponding registry-encoding argument\n", fmap);
+			exit(0);
 		}
 
 		ai++;
@@ -783,39 +720,46 @@ int main(int argc, char *argv[])
 
 		da_clear(map);
 
-		while (read_line(fmap_fp, &l)) {
-			char *p;
+		for (;read_line(fmap_fp, &l); free(l)) {
+			char *p, *endp;
 
 			for (p = l; isspace(p[0]); p++)
 				;
 			if (p[0] == '\0' || p[0] == '#')
 				continue;
+			if (p[0] == '0' && (p[1] == 'x' || p[1] == 'X')) {
+				target = strtol(p+2, &endp, 16);
+				if (*endp == '\0') goto bad;
+				p = endp;
+			} else
+				goto bad;
+			for (; isspace(p[0]); p++)
+				;
+			if (p[0] == '0' && (p[1] == 'x' || p[1] == 'X')) {
+				ucs = strtol(p+2, &endp, 16);
+				if (*endp == '\0') goto bad;
+				p = endp;
+			} else
+				goto bad;
 
-			if (regex(p, "^(0[xX])?([[:xdigit:]]{2})[[:space:]]+(0[xX]|U\\+|U-)?([[:xdigit:]]{4})"))
-			{
-				target = xmatch(p, 2);
-				ucs = xmatch(p, 4);
-				if (!is_control(ucs)) {
-					if (zs_true(da_fetch_str(startchar,
-						ucs)))
-					{
-						da_add_int(map, target, ucs);
-					} else {
-						if (!((is_blockgraphics(ucs) &&
-							strcmp(slant, "R") != 0) ||
-							(ucs >= 0x200e &&
-							ucs <= 0x200f)))							{
-							fprintf(stderr,
-								"No glyph for character U+%04X (0x%02x) available.\n",
-								ucs, target);
-						}
+			if (!is_control(ucs)) {
+				if (zs_true(da_fetch_str(startchar, ucs)))
+				{
+					da_add_int(map, target, ucs);
+				} else {
+					if (!((is_blockgraphics(ucs) &&
+						strcmp(slant, "R") != 0) ||
+						(ucs >= 0x200e &&
+						ucs <= 0x200f)))							{
+						fprintf(stderr,
+							"No glyph for character U+%04X (0x%02x) available.\n",
+							ucs, target);
 					}
 				}
-			} else {
-				fprintf(stderr,
-					"Unrecognized line in '%s':\n%s\n",
-					fmap, l);
 			}
+			continue;
+		bad:
+			fprintf(stderr, "Unrecognized line in '%s':\n%s\n", fmap, l);
 		}
 		fclose(fmap_fp);
 
@@ -868,23 +812,48 @@ int main(int argc, char *argv[])
 		for (i = 0; i < j; i++) {
 			ucs = da_fetch_int(map, chars[i]);
 			zstrcpy(&t, da_fetch_str(my_char, ucs));
-			if (regexm(t,
-				"^BBX[[:space:]]+([[:digit:]]+)[[:space:]]+([[:digit:]]+)[[:space:]]+(-?[[:digit:]]+)[[:space:]]+(-?[[:digit:]]+)[[:space:]]*$"))
+			if ((nextc = startswith(t, "BBX")) != NULL 
+			    || (nextc = strstr(t, "\nBBX")) != NULL)
 			{
+				char *endp;
+				long w, h, x, y;
+
+				if (*nextc == '\n') {
+					nextc += 4;
+					while (isspace(*nextc))
+						nextc++;
+				}
+				for (;isspace(*nextc);)
+					nextc++;
+				w = strtol(nextc, &endp, 10);
+				nextc = endp;
+				if (*nextc == '\0') goto bbxbad;
+				for (;isspace(*nextc);)
+					nextc++;
+				h = strtol(nextc, &endp, 10);
+				nextc = endp;
+				if (*nextc == '\0') goto bbxbad;
+				for (;isspace(*nextc);)
+					nextc++;
+				x = strtol(nextc, &endp, 10);
+				nextc = endp;
+				if (*nextc == '\0') goto bbxbad;
+				for (;isspace(*nextc);)
+					nextc++;
+				y = strtol(nextc, &endp, 10);
 				if (bbx.cwidth == -1) {
-					bbx.cwidth = atoi(match(t, 1));
-					bbx.cheight = atoi(match(t, 2));
-					bbx.cxoff = atoi(match(t, 3));
-					bbx.cyoff = atoi(match(t, 4));
+					bbx.cwidth = w;
+					bbx.cheight = h;
+					bbx.cxoff = x;
+					bbx.cyoff = y;
 				} else {
 					combine_bbx(bbx.cwidth, bbx.cheight,
 						bbx.cxoff, bbx.cyoff,
-						atoi(match(t, 1)),
-						atoi(match(t, 2)),
-						atoi(match(t, 3)),
-						atoi(match(t, 4)),
-						&bbx);
+						w, h, x, y, &bbx);
 				}
+				continue;
+			bbxbad:
+				fprintf(stderr, "Unparsable BBX found for U+%04x!\n", ucs);
 			} else {
 				fprintf(stderr,
 					"Warning: No BBX found for U+%04X!\n",
@@ -892,19 +861,27 @@ int main(int argc, char *argv[])
 			}
 		}
 
+		if (!registry) registry = zstrdup("");
+		if (!encoding) encoding = zstrdup("");
+
 		/* generate output file name */
 		zstrcpy(&registry_encoding, "-");
 		zstrcat(&registry_encoding, registry);
 		zstrcat(&registry_encoding, "-");
 		zstrcat(&registry_encoding, encoding);
 
-		if (regexi(fsource, "^(.*).bdf$")) {
-			zstrcpy(&fout, match(fsource, 1));
-			zstrcat(&fout, registry_encoding);
-			zstrcat(&fout, ".bdf");
-		} else {
-			zstrcpy(&fout, match(fsource, 1));
-			zstrcat(&fout, registry_encoding);
+		{
+			char * p = strstr(fsource, ".bdf");
+			if (p) {
+				zstrcpy(&fout, fsource);
+				p = strstr(fout, ".bdf");
+				*p = 0;
+				zstrcat(&fout, registry_encoding);
+				zstrcat(&fout, ".bdf");
+			} else {
+				zstrcpy(&fout, fsource);
+				zstrcat(&fout, registry_encoding);
+			}
 		}
 
 		/* remove path prefix */
@@ -933,48 +910,29 @@ int main(int argc, char *argv[])
 			"COMMENT ucs2any by Ben Collver <collver1@attbi.com>, 2003.\n");
 		fprintf(fout_fp, "%s",
 			"COMMENT based on ucs2any.pl by Markus Kuhn <mkuhn@acm.org>, 2000.\n");
-		zstrcpy(&newheader, header);
 
-		zstrcpy(&t, "FONTBOUNDINGBOX ");
-		zstrcat(&t, zitoa(bbx.cwidth));
-		zstrcat(&t, " ");
-		zstrcat(&t, zitoa(bbx.cheight));
-		zstrcat(&t, " ");
-		zstrcat(&t, zitoa(bbx.cxoff));
-		zstrcat(&t, " ");
-		zstrcat(&t, zitoa(bbx.cyoff));
-
-		zstrcpy(&newheader, search_replacem(newheader,
-			"^FONTBOUNDINGBOX[[:space:]]+.*$", t));
-
-		if (regexm(newheader,
-			"^(FONT[[:space:]]+(.*)-[[:alnum:]_]+-[[:alnum:]_]+[[:space:]]*)$"))
-		{
-			zstrcpy(&t, "FONT ");
-			zstrcat(&t, match(newheader, 2));
-			zstrcat(&t, registry_encoding);
-			zstrcpy(&newheader, search_replacem(newheader,
-				"^(FONT[[:space:]]+(.*)-[[:alnum:]_]+-[[:alnum:]_]+[[:space:]]*)$",
-				t));
+		for (i = 0; i <= nextheader; i++) {
+			if (i == default_char_index)
+				fprintf(fout_fp, "DEFAULT_CHAR %d\n", default_char);
+			else if (i == startproperties_index)
+				fprintf(fout_fp, "STARTPROPERTIES %d\n", properties);
+			else if (i == fontname_index) {
+				fprintf(fout_fp, "FONT %s%s\n", fontname, registry_encoding);
+			}
+			else if (i == charset_registry_index)
+				fprintf(fout_fp, "CHARSET_REGISTRY \"%s\"\n", registry);
+			else if (i == slant_index)
+				fprintf(fout_fp, "SLANT \"%s\"\n", slant);
+			else if (i == charset_encoding_index)
+				fprintf(fout_fp, "CHARSET_ENCODING \"%s\"\n", encoding);
+			else if (i == fontboundingbox_index)
+				fprintf(fout_fp, "FONTBOUNDINGBOX %d %d %d %d\n", bbx.cwidth, bbx.cheight, bbx.cxoff, bbx.cyoff);
+			else if (i == spacing_index)
+				fprintf(fout_fp, "SPACING \"%s\"\n", spacing);
+			else
+				fprintf(fout_fp, "%s\n", da_fetch_str(headers, i));
 		}
 
-		zstrcpy(&t, "CHARSET_REGISTRY \"");
-		zstrcat(&t, registry);
-		zstrcat(&t, "\"");
-		zstrcpy(&newheader,
-			search_replacem(newheader,
-				"^CHARSET_REGISTRY[[:space:]]+.*$",
-				t));
-
-		zstrcpy(&t, "CHARSET_ENCODING \"");
-		zstrcat(&t, encoding);
-		zstrcat(&t, "\"");
-		zstrcpy(&newheader,
-			search_replacem(newheader,
-				"^CHARSET_ENCODING[[:space:]]+.*$",
-				t));
-
-		fprintf(fout_fp, "%s", newheader);
 		fprintf(fout_fp, "CHARS %d\n", j);
 
 		/* Write characters */
