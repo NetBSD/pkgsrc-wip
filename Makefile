@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.797 2003/12/23 15:11:18 lexort Exp $
-# $NetBSD: Makefile,v 1.797 2003/12/23 15:11:18 lexort Exp $
+# $Id: Makefile,v 1.798 2003/12/23 22:58:35 bjan2 Exp $
+# $NetBSD: Makefile,v 1.798 2003/12/23 22:58:35 bjan2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -553,6 +553,7 @@ SUBDIR+=	slune
 SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
+SUBDIR+=	snownews
 SUBDIR+=	socat
 SUBDIR+=	speedx
 SUBDIR+=	sqlrelay
