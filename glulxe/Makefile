@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/20 13:24:28 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/21 12:01:02 dillo Exp $
 #
 
 DISTNAME=	glulxe-035
@@ -13,8 +13,8 @@ HOMEPAGE=	http://www.eblong.com/zarf/glulx/index.html
 COMMENT=	Interpreter for Glulx text adventures
 
 USE_BUILDLINK2=	yes
-USE_X11=	yes
 
 .include "../../wip/gtkglk/buildlink2.mk"
+#.include "../../wip/glkterm/buildlink2.mk"
 #.include "../../wip/xglk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
