@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/29 19:10:23 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/09/04 01:53:17 blef Exp $
 bin/kdetrayproxy
 bin/obconf
 bin/openbox
@@ -12,49 +12,13 @@ lib/libobrender.la
 lib/libobrender.so
 lib/libobrender.so.0
 lib/libobrender.so.0.0
-lib/openbox/plugins/client_list_menu.a
-lib/openbox/plugins/client_list_menu.la
-lib/openbox/plugins/client_list_menu.so
-lib/openbox/plugins/client_menu.a
-lib/openbox/plugins/client_menu.la
-lib/openbox/plugins/client_menu.so
-lib/openbox/plugins/fifo_menu.a
-lib/openbox/plugins/fifo_menu.la
-lib/openbox/plugins/fifo_menu.so
-lib/openbox/plugins/include_menu.a
-lib/openbox/plugins/include_menu.la
-lib/openbox/plugins/include_menu.so
-lib/openbox/plugins/placement.a
-lib/openbox/plugins/placement.la
-lib/openbox/plugins/placement.so
-lib/openbox/plugins/timed_menu.a
-lib/openbox/plugins/timed_menu.la
-lib/openbox/plugins/timed_menu.so
 share/gnome/wm-properties/openbox.desktop
-share/openbox/menu
-share/openbox/rc3
-share/openbox/themes/BBstylE/close.xbm
-share/openbox/themes/BBstylE/desk.xbm
-share/openbox/themes/BBstylE/desk_toggled.xbm
-share/openbox/themes/BBstylE/iconify.xbm
-share/openbox/themes/BBstylE/max.xbm
-share/openbox/themes/BBstylE/max_toggled.xbm
-share/openbox/themes/BBstylE/shade.xbm
-share/openbox/themes/BBstylE/shade_toggled.xbm
-share/openbox/themes/BBstylE/themerc
-share/openbox/themes/I-merry/close.xbm
-share/openbox/themes/I-merry/iconify.xbm
-share/openbox/themes/I-merry/max.xbm
-share/openbox/themes/I-merry/themerc
-share/openbox/themes/Light-Industry-big/close.xbm
-share/openbox/themes/Light-Industry-big/iconify.xbm
-share/openbox/themes/Light-Industry-big/max.xbm
-share/openbox/themes/Light-Industry-big/themerc
-share/openbox/themes/Light-Industry/close.xbm
-share/openbox/themes/Light-Industry/iconify.xbm
-share/openbox/themes/Light-Industry/max.xbm
-share/openbox/themes/Light-Industry/themerc
-share/openbox/themes/greenz/themerc
+share/openbox/menu.xml
+share/openbox/rc.xml
+share/openbox/themes/allegro/bullet.xbm
+share/openbox/themes/allegro/themerc
+share/openbox/themes/artwiz/themerc
+share/openbox/themes/blah41/themerc
 share/openbox/themes/om4ob/close.xbm
 share/openbox/themes/om4ob/close_hover.xbm
 share/openbox/themes/om4ob/desk.xbm
@@ -73,26 +37,12 @@ share/openbox/themes/om4ob/shade_disabled.xbm
 share/openbox/themes/om4ob/shade_hover.xbm
 share/openbox/themes/om4ob/shade_toggled.xbm
 share/openbox/themes/om4ob/themerc
-share/openbox/themes/planton/close.xbm
-share/openbox/themes/planton/desk.xbm
-share/openbox/themes/planton/desk_toggled.xbm
-share/openbox/themes/planton/iconify.xbm
-share/openbox/themes/planton/max.xbm
-share/openbox/themes/planton/max_toggled.xbm
-share/openbox/themes/planton/shade.xbm
-share/openbox/themes/planton/shade_toggled.xbm
-share/openbox/themes/planton/themerc
 share/openbox/themes/thebear/themerc
 @dirrm share/openbox/themes/thebear
-@dirrm share/openbox/themes/planton
 @dirrm share/openbox/themes/om4ob
-@dirrm share/openbox/themes/greenz
-@dirrm share/openbox/themes/Light-Industry-big
-@dirrm share/openbox/themes/Light-Industry
-@dirrm share/openbox/themes/I-merry
-@dirrm share/openbox/themes/BBstylE
+@dirrm share/openbox/themes/blah41
+@dirrm share/openbox/themes/artwiz
+@dirrm share/openbox/themes/allegro
 @dirrm share/openbox/themes
 @dirrm share/openbox
 @comment in gnome2-dirs: @dirrm share/gnome/wm-properties
-@dirrm lib/openbox/plugins
-@dirrm lib/openbox
