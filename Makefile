@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1043 2004/03/03 20:15:05 poppnk Exp $
-# $NetBSD: Makefile,v 1.1043 2004/03/03 20:15:05 poppnk Exp $
+# $Id: Makefile,v 1.1044 2004/03/03 22:40:15 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1044 2004/03/03 22:40:15 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -79,6 +79,7 @@ SUBDIR+=	cjk-latex-chinese
 SUBDIR+=	cjk-latex-japanese
 SUBDIR+=	cjk-latex-korean
 SUBDIR+=	cmatrix
+SUBDIR+=	com_err
 SUBDIR+=	compare
 SUBDIR+=	compositeext
 SUBDIR+=	cops
