@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/08 14:56:45 adrian_p Exp $
+
+--- nikto.pl.orig	Sun Jun  1 14:09:16 2003
++++ nikto.pl	Sun Jun  1 14:12:52 2003
+@@ -5,7 +5,7 @@
+ # INSTALLED LW:
+ #use LW; 
+ # LOCAL LW:
+-require "./plugins/LW.pm";
++require "@PREFIX@/share/nikto/plugins/LW.pm";
+ 
+ #######################################################################
+ # last update: 05.30.2003
