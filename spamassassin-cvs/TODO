@@ -1,0 +1,6 @@
+- overall testing (!)
+- test MySQL support
+- automate tests for sqled autowhitelist/bayes support
+- test razor-agents support (patch needed for razor-agents!)
+- add OpenLDAP support, test OpenLDAP support
+- update DEINSTALL
