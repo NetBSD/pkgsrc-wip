@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.589 2003/11/02 15:17:27 tripledes Exp $
-# $NetBSD: Makefile,v 1.589 2003/11/02 15:17:27 tripledes Exp $
+# $Id: Makefile,v 1.590 2003/11/03 12:11:30 adrian_p Exp $
+# $NetBSD: Makefile,v 1.590 2003/11/03 12:11:30 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -244,6 +244,7 @@ SUBDIR+=	libidn
 SUBDIR+=	libneural
 SUBDIR+=	libntlm
 SUBDIR+=	libogg-nightly
+SUBDIR+=	libol
 SUBDIR+=	libprelude
 SUBDIR+=	libshout
 SUBDIR+=	libstatgrab
@@ -438,6 +439,7 @@ SUBDIR+=	sudoscript
 SUBDIR+=	superkaramba
 SUBDIR+=	svgalib
 SUBDIR+=	sysklogd
+SUBDIR+=	syslog-ng
 SUBDIR+=	sysvinit
 SUBDIR+=	tcc
 SUBDIR+=	tendra
