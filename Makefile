@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1254 2004/05/04 16:27:55 dillo Exp $
-# $NetBSD: Makefile,v 1.1254 2004/05/04 16:27:55 dillo Exp $
+# $Id: Makefile,v 1.1255 2004/05/07 16:38:09 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1255 2004/05/07 16:38:09 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -504,6 +504,7 @@ SUBDIR+=	php5-pgsql
 SUBDIR+=	picasm
 SUBDIR+=	picprog
 SUBDIR+=	pinball
+SUBDIR+=	pine-pgp-filters
 SUBDIR+=	pizza
 SUBDIR+=	pkg_install-testing
 SUBDIR+=	pkgse
