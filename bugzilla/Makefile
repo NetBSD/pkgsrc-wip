@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/11/04 23:28:15 adrian_p Exp $
+# $NetBSD: Makefile,v 1.22 2004/11/04 23:56:07 adrian_p Exp $
 #
 
 DISTNAME=	bugzilla-2.18rc3
@@ -126,4 +126,5 @@ do-install:
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
