@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/08 14:56:44 adrian_p Exp $
+$NetBSD: distinfo,v 1.2 2003/09/14 22:23:37 adrian_p Exp $
 
-SHA1 (nikto-1.30.tar.gz) = df0df8a7a685828657e8b7fa095b87262b68c4de
-Size (nikto-1.30.tar.gz) = 137927 bytes
+SHA1 (nikto-1.30.tar.gz) = c4714bbaf914a77e46b08f75737554d00c290d63
+Size (nikto-1.30.tar.gz) = 142102 bytes
 SHA1 (patch-aa) = 037c96fa9e3049fbb54de46afe7e61a3baf9df8e
 SHA1 (patch-ab) = 82a442bbe32f3c9ba32cd9933b344c9ab13b55a3
+SHA1 (patch-ac) = 2fe6b18a1e66b1ecc865aa50feb5fc166bc0e853

@@ -1,11 +1,11 @@
-$NetBSD: TODO,v 1.1.1.1 2003/07/08 14:56:44 adrian_p Exp $
+$NetBSD: TODO,v 1.2 2003/09/14 22:23:37 adrian_p Exp $
 
 This is the repacement for whisker which is no longer being maintained.  
 Once it is in pkgsrc the whisker package should be removed.
 
 Please test and let me know if there are any issues.
 
-Tested on NetBSD 1.6 i386.
+Tested on NetBSD 1.6.1 i386.
 
 Ta,
 

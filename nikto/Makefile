@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/09/06 18:22:13 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2003/09/14 22:23:37 adrian_p Exp $
 
 DISTNAME=	nikto-1.30
 CATEGORIES=	security www
@@ -23,11 +23,11 @@ do-build:
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nikto
 	${INSTALL_DATA_DIR} ${PREFIX}/share/nikto
+	${INSTALL_DATA_DIR} ${PREFIX}/share/nikto/docs
 	${INSTALL_DATA_DIR} ${PREFIX}/share/nikto/plugins
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/nikto
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${PREFIX}/share/doc/nikto
-	${INSTALL_DATA} ${WRKSRC}/docs/CHANGES.txt ${PREFIX}/share/nikto
-	${CHMOD} 0644 ${PREFIX}/share/nikto/CHANGES.txt
+	${INSTALL_DATA} ${WRKSRC}/docs/CHANGES.txt ${PREFIX}/share/nikto/docs
 	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${PREFIX}/share/doc/nikto
 	${INSTALL_DATA} ${WRKSRC}/config.txt.sample \
 		${PREFIX}/share/examples/nikto
