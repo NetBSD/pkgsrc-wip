@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/10 18:03:29 lexort Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/01 18:43:41 lexort Exp $
 
 DISTNAME=	guile-lib-0.1.2
 PKGREVISION=	2
@@ -26,7 +26,6 @@ USE_GNU_TOOLS=	make
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
-
 
 USE_MAKEINFO=	yes
 INFO_FILES=	guile-library.info
