@@ -207,7 +207,9 @@ for A in `${MAKE} show-installed-depends` ; do
    "3")
       STEP=1
       if [ -z "`echo ${A} | grep -e '-' `" ]; then
+	if [ -n "`pkg_info ${A} 2> /dev/null`" ]; then
          echo ${PKG} ;
+	fi
          PKG=${A}
          STEP=2
        fi
