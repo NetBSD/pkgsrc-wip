@@ -1,0 +1,53 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/15 14:02:19 amadeus_z Exp $
+bin/fluxspace
+bin/fluxspace-add-idesk-icon
+bin/fluxspace-sync-idesk-with-appdirs
+bin/fluxspacebg
+bin/rox-add-app
+lib/lib${PKGNAME}.so
+lib/libfluxspace.a
+lib/libfluxspace.la
+lib/libfluxspace.so
+lib/python2.2/site-packages/_fluxspace.so
+lib/python2.2/site-packages/fluxlet/__init__.py
+lib/python2.2/site-packages/fluxlet/__init__.pyc
+lib/python2.2/site-packages/fluxlet/__init__.pyo
+lib/python2.2/site-packages/fluxlet/idesk.py
+lib/python2.2/site-packages/fluxlet/idesk.pyc
+lib/python2.2/site-packages/fluxlet/idesk.pyo
+lib/python2.2/site-packages/fluxlet/painter.py
+lib/python2.2/site-packages/fluxlet/painter.pyc
+lib/python2.2/site-packages/fluxlet/painter.pyo
+lib/python2.2/site-packages/fluxlet/rox.py
+lib/python2.2/site-packages/fluxlet/rox.pyc
+lib/python2.2/site-packages/fluxlet/rox.pyo
+lib/python2.2/site-packages/fluxlet/runner.py
+lib/python2.2/site-packages/fluxlet/runner.pyc
+lib/python2.2/site-packages/fluxlet/runner.pyo
+lib/python2.2/site-packages/fluxlet/tracer.py
+lib/python2.2/site-packages/fluxlet/tracer.pyc
+lib/python2.2/site-packages/fluxlet/tracer.pyo
+lib/python2.2/site-packages/fluxspace.py
+lib/python2.2/site-packages/fluxspace.pyc
+lib/python2.2/site-packages/fluxspace.pyo
+lib/python2.2/site-packages/fluxspace/__init__.py
+lib/python2.2/site-packages/fluxspace/config.py
+lib/python2.2/site-packages/fluxspace/config.pyc
+lib/python2.2/site-packages/fluxspace/config.pyo
+lib/python2.2/site-packages/fluxspace/ideskutil.py
+lib/python2.2/site-packages/fluxspace/ideskutil.pyc
+lib/python2.2/site-packages/fluxspace/ideskutil.pyo
+lib/python2.2/site-packages/fluxspace/process.py
+lib/python2.2/site-packages/fluxspace/process.pyc
+lib/python2.2/site-packages/fluxspace/process.pyo
+share/fluxspace/AUTHORS
+share/fluxspace/BUGS
+share/fluxspace/COPYING
+share/fluxspace/ChangeLog
+share/fluxspace/NEWS
+share/fluxspace/README
+share/fluxspace/examples/fluxspace.xml
+@dirrm share/fluxspace/examples
+@dirrm share/fluxspace
+@dirrm lib/python2.2/site-packages/fluxspace
+@dirrm lib/python2.2/site-packages/fluxlet
