@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/18 15:12:53 ppostma Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/17 15:21:11 minskim Exp $
 
 DISTNAME=	python-xlib-0.12
 PKGNAME=	${PYPKGPREFIX}-Xlib-0.12
@@ -13,7 +13,6 @@ USE_BUILDLINK3=	yes
 
 PYDISTUTILSPKG= yes
 PYBINMODULE=    yes
-PYSETUP=        setup.py
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
