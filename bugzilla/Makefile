@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/09/11 04:36:22 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/27 03:17:08 minskim Exp $
 #
 
 DISTNAME=	bugzilla-2.16.2
@@ -19,7 +19,7 @@ DEPENDS+=       p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 DEPENDS+=       p5-CGI-[0-9]*:../../www/p5-CGI
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
-DEPENDS+=	p5-Chart-[0-9]*:../../graphics/p5-Chart
+DEPENDS+=	p5-Chart-[0-9]*:../../wip/p5-Chart
 
 BZDIR?=		${PREFIX}/share/bugzilla
 
