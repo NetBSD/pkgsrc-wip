@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/02 13:52:14 adrian_p Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/13 10:43:41 adrian_p Exp $
 #
 
 DISTNAME=	bugzilla-2.16.4
@@ -93,5 +93,4 @@ do-install:
 	cd ${WRKSRC}/template && ${PAX} -rw . ${BZDIR}/template
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${BZDIR}/template
 
-.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
