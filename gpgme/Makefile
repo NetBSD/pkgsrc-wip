@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/22 19:34:57 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/22 19:43:34 johnrshannon Exp $
 #
 
 DISTNAME=	gpgme-1.0.0
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/ \
 		ftp://ftp.gnupg.org/gcrypt/alpha/gpgme/
 
-MAINTAINER=	shannonjr@netbsd.org
+MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/gpgme.html
 COMMENT=	GnuPG Made Easy
 
