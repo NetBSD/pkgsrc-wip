@@ -1,16 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/02 11:05:18 xtraeme Exp $
-lib/X11/fonts/artwiz/anorexia.pcf.gz
-lib/X11/fonts/artwiz/aqui.pcf.gz
-lib/X11/fonts/artwiz/cure.pcf.gz
-lib/X11/fonts/artwiz/cursor.pcf.gz
-lib/X11/fonts/artwiz/drift.pcf.gz
-lib/X11/fonts/artwiz/edges.pcf.gz
+@comment $NetBSD: PLIST,v 1.2 2003/08/15 13:12:24 xtraeme Exp $
+lib/X11/fonts/artwiz/anorexia.pcf
+lib/X11/fonts/artwiz/aqui.pcf
+lib/X11/fonts/artwiz/cure.pcf
+lib/X11/fonts/artwiz/cursor.pcf
+lib/X11/fonts/artwiz/drift.pcf
+lib/X11/fonts/artwiz/edges.pcf
+lib/X11/fonts/artwiz/fkp.pcf
 lib/X11/fonts/artwiz/fonts.dir
-lib/X11/fonts/artwiz/gelly.pcf.gz
-lib/X11/fonts/artwiz/glisp-bold.pcf.gz
-lib/X11/fonts/artwiz/glisp.pcf.gz
-lib/X11/fonts/artwiz/lime.pcf.gz
-lib/X11/fonts/artwiz/mints-mild.pcf.gz
-lib/X11/fonts/artwiz/mints-strong.pcf.gz
-lib/X11/fonts/artwiz/nu.pcf.gz
-lib/X11/fonts/artwiz/snap.pcf.gz
+lib/X11/fonts/artwiz/gelly.pcf
+lib/X11/fonts/artwiz/glisp-bold.pcf
+lib/X11/fonts/artwiz/glisp.pcf
+lib/X11/fonts/artwiz/kates.pcf
+lib/X11/fonts/artwiz/lime.pcf
+lib/X11/fonts/artwiz/mints-mild.pcf
+lib/X11/fonts/artwiz/mints-strong.pcf
+lib/X11/fonts/artwiz/nu.pcf
+lib/X11/fonts/artwiz/smoothansi.pcf
+lib/X11/fonts/artwiz/snap.pcf

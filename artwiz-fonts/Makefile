@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/02 11:05:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/15 13:12:24 xtraeme Exp $
 #
 
-DISTNAME=	artwiz-fonts
+DISTNAME=	artwiz-aleczapka
 PKGNAME=        artwiz-fonts-1.0
-WRKSRC=         ${WRKDIR}/fluxbox-${DISTNAME}
 CATEGORIES=	fonts
-MASTER_SITES=	http://www.xs4all.nl/~hanb/software/fluxbox/ \
-		http://www.cus.org.uk/~dom/distfiles/artwiz-fonts/
+MASTER_SITES=	http://fluxbox.org/artwiz-aleczapka/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jrp@hispabsd.org
@@ -24,7 +22,7 @@ FONTS_X11_DIRS=		${FONTS}
 OWN_DIRS=		${FONTS}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/*.gz ${FONTS_X11_DIRS}
+	${INSTALL_DATA} ${WRKSRC}/*.pcf ${FONTS_X11_DIRS}
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
