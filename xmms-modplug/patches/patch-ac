@@ -1,0 +1,28 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/07/12 02:41:12 bencollver Exp $
+
+--- modplugplay/modplugplay.c.orig	Tue Apr 29 02:52:59 2003
++++ modplugplay/modplugplay.c
+@@ -33,7 +33,11 @@
+ #include <modplug.h>
+ #include <sys/ioctl.h>
+ #include <fcntl.h>
++#ifdef __NetBSD__
++#include <soundcard.h>
++#else
+ #include <sys/soundcard.h>
++#endif
+ #include <sys/time.h>
+ #include <sys/poll.h>
+ #include <getopt.h>
+@@ -42,7 +46,11 @@
+ #define VERSION 0.0.1
+ 
+ #define BUF_SIZE 4096
++#ifdef __NetBSD__
++#define DEVICE_NAME "/dev/sound"
++#else
+ #define DEVICE_NAME "/dev/dsp"
++#endif
+ 
+ /* state variable */
+ int audio_fd;

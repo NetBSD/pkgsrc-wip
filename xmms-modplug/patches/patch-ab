@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/07/12 02:41:12 bencollver Exp $
+
+--- modplugplay/Makefile.in.orig	Fri Jul 11 02:21:15 2003
++++ modplugplay/Makefile.in
+@@ -130,7 +130,7 @@ modplugplay_DEPENDENCIES =
+ modplugplay_LDFLAGS =
+ 
+ DEFS = @DEFS@
+-DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
++DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir) -I../libmodplug
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
