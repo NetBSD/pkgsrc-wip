@@ -1,6 +1,7 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.7 2003/12/30 19:48:19 cjep Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.8 2004/03/12 12:42:54 mpasternak Exp $
+###########################################################################
 # 
-# $Id: linuxbin.pkg.mk,v 1.7 2003/12/30 19:48:19 cjep Exp $
+# $Id: linuxbin.pkg.mk,v 1.8 2004/03/12 12:42:54 mpasternak Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 # Currently supports only RPMs, but should be good enough to make
@@ -9,8 +10,8 @@
 # I have included comments, indents and unneeded spacings, so you can
 # read this file more easily.
 #
+# (C) 2003, 2004 Michal Pasternak <dotz@irc.pl>
 #
-# (C) 2003 Michal Pasternak <dotz@irc.pl>
 
 .ifndef LINUXBIN_MK
 LINUXBIN_MK=		# defined
@@ -22,7 +23,13 @@ INTERACTIVE_STAGE=	fetch
 
 .include "../../mk/bsd.prefs.mk"
 
-# defaults to your machine architecture. 
+###########################################################################
+#
+# First, we check if Linux binaries are supported on this platrofm
+#
+# defaults to your machine architecture.
+#
+
 LINUX_ARCH_REQD?=	${MACHINE_ARCH}
 
 # by default, we can run Linux binaries only on the same OS (Linux), on the
@@ -41,21 +48,60 @@ ONLY_FOR_PLATFORM+=	[DFNO]*BSD-*-${LINUX_ARCH_REQD}
 
 # PLEASE ADD MORE .if ${LINUX_ARCH_REQD} ifdefs !
 
+###########################################################################
+#
+# Aloha, this is IMPORTANT:
+#
 # which linux base (suse/debian?/rh?) do we want:
-LINUX_BASE_REQUIRED?=		suse
+#
+#
+
+#
+# LINUX_BASE_PREFERED should be set in mk/defaults or /etc/mk.conf
+# This setting show us the user / sysadmin preference for a given linux base
+#
+
+LINUX_BASE_PREFERED?=		suse
+
+#
+# LINUX_BASE_REQUIRED is *per package* setting (SuSE-only apps set this to
+# suse, Slackware apps - to slackware and so on)
+#
+#
+# TODO: make it possible, that we somehow can override LINUX_BASE_VERSION
+# and make a given package require at least x.x.x version of linux_base
+#
+
+LINUX_BASE_REQUIRED?=		${LINUX_BASE_PREFERED}
+
 LINUX_BASE_PREFIX.suse?=	suse
+LINUX_BASE_VERSION.suse=	7.3.0
+
+LINUX_BASE_PREFIX.slackware?=	slackware
+LINUX_BASE_VERSION.slackware?=	9.1.0
+
+#
+# those will be not needed when slackware-base is in /emulators, for example
+#
+
+LINUX_PKGSRCDIR.suse=		emulators
+LINUX_PKGSRCDIR.slackware=     	wip
 
 # ... and finally:
 LINUX_BASE_PREFIX=		${LINUX_BASE_PREFIX.${LINUX_BASE_REQUIRED}}
 
-# add here in the future more linux bases:
+# TODO: add here in the future more linux bases:
 # LINUX_BASE_PREFIX.debian?=
 
 # define it to automatically depend on X11:
 LINUX_USE_X11?=			NO
 
-# format of Linux binary packages. only RPM is supported, but in future we
-# could try adding more
+###########################################################################
+#
+# format of Linux binary packages. only rpm, slack and tgz are supported, 
+# but in future we could try adding more
+#
+
 LINUX_BINPKG_FMT?=		rpm
 
 # in the future:
@@ -68,25 +114,41 @@ LINUX_BINPKG_FMT?=		rpm
 LINUX_BINPKG_PATH?=	${WRKSRC}
 LINUX_BINPKG_FILES?=    # empty
 
+###########################################################################
 #
 # enough settings, we'll start working here:
+
+#
 # first, include base linux files, that this port depends on.
 # of course, pkgsrc working on Linux won't need compat files:
 #
 
 .if ( ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFlyBSD")
-DEPENDS+=	${LINUX_BASE_PREFIX}_compat-[0-9]*:../../emulators/${LINUX_BASE_PREFIX}_compat
-.if ${LINUX_USE_X11} == "yes" || ${LINUX_USE_X11} == "YES"
-DEPENDS+=	${LINUX_BASE_PREFIX}_x11-[0-9]*:../../emulators/${LINUX_BASE_PREFIX}_x11
-.endif
+
+# 
+# LINUX_BASE_NODEPS is useful only for Linux binary packages, which are 
+# base package itself, or come so statically compiled, that don't need 
+# linux_base packages (rar3 for Linux?)
+#
+
+.ifndef LINUX_BASE_NODEPS
+DEPENDS+=${LINUX_BASE_PREFIX}_compat>=${LINUX_BASE_VERSION.${LINUX_BASE_REQUIRED}}:../../${LINUX_PKGSRCDIR.${LINUX_BASE_REQUIRED}}/${LINUX_BASE_PREFIX}_compat
 .endif
 
+.if ${LINUX_USE_X11} == "yes" || ${LINUX_USE_X11} == "YES" 
+DEPENDS+=${LINUX_BASE_PREFIX}_x11>=${LINUX_BASE_VERSION.${LINUX_BASE_REQUIRED}}:../../${LINUX_PKGSRCDIR.${LINUX_BASE_REQUIRED}}/${LINUX_BASE_PREFIX}_x11
+.endif
+
+.endif
+
+###########################################################################
 #
-# those below are ripoffs of suse_linux/Makefile.common
-#
+# definetly don't build binary packages:
 
 NO_BUILD?=		YES
 
+###########################################################################
+#
 # To EMULSUBDIR or not to EMULSUBDIR... this is a question.
 #
 # In future, the user should be able to:
@@ -110,13 +172,16 @@ EMULOPTSUBDIR?=		${EMULSUBDIR}/opt
 EMULDIR?=		${PREFIX}/${EMULSUBDIR}
 EMULOPTDIR?=		${PREFIX}/${EMULOPTSUBDIR}
 
+###########################################################################
+#
 # little messy, but it makes porting packages easier:
 
 PLIST_SUBST+=		EMULDIR=${EMULDIR} EMULSUBDIR=${EMULSUBDIR} \
 			EMULOPTDIR=${EMULOPTDIR} EMULOPTSUBDIR=${EMULOPTSUBDIR}
-MESSAGE_SUBST+=		EMULDIR=${EMULDIR} EMULOPTDIR=${EMULOPTDIR} \
+MESSAGE_SUBST+=		EMULDIR=${EMULDIR} EMULSUBDIR=${EMULSUBDIR} \
 			EMULOPTDIR=${EMULOPTDIR} EMULOPTSUBDIR=${EMULOPTSUBDIR}
 
+###########################################################################
 #
 # now, do the _actual_ work:
 #
@@ -126,6 +191,10 @@ MESSAGE_SUBST+=		EMULDIR=${EMULDIR} EMULOPTDIR=${EMULOPTDIR} \
 #
 
 .if ${LINUX_BINPKG_FMT}=="rpm"
+#
+# those below are ripoffs of suse_linux/Makefile.common
+#
+
 PLIST_SRC?=		${WRKDIR}/PLIST_DYNAMIC
 RPM2PKG?=		${PREFIX}/sbin/rpm2pkg
 BUILD_DEPENDS+=		rpm2pkg>=1.3:../../pkgtools/rpm2pkg
@@ -152,18 +221,40 @@ do-install:
 	  ${ECHO} "@unexec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR} 2>/dev/null" >> ${PLIST_SRC}; \
 	fi
 .endif
-.else
-.if ${LINUX_BINPKG_FMT}=="plain"
+.elif ${LINUX_BINPKG_FMT}=="plain"
 .if !target(do-install)
 do-install:
 	@${ECHO} "Please provide do-install target for plain binaries!"
 	@exit -1
 .endif
+.elif ${LINUX_BINPKG_FMT}=="slackware"
+#
+# installation procedures for slackware packages
+# they basically come with install/doinst.sh script,
+#
+# so what we want to do is move all files to ${EMULSUBDIR},
+# chroot to ${EMULSUBDIR} and launch doinst.sh
+# 
+# only slackware_base packages for slackware won't use this method (eg. we can't
+# chroot without shell and shared libs - so for them there is SLACK_NO_INSTALL
+# setting)
+#
+# TODO: there's no chroot def in pkgsrc/mk
+#
+
+.if !target(do-install)
+do-install:
+	cd ${WRKSRC} && ${PAX} -rw -pe * ${EMULDIR}
+.if !defined(SLACK_NO_INSTALL)
+	chroot ${EMULDIR} bin/bash install/doinst.sh
+	${RM} -rf ${EMULDIR}/install
+.endif
+.endif
 .else
 .error "Please add support for this kind of package!"
 .endif
-.endif
 
+###########################################################################
 #
 # many Linux commercial packages require some voodoo before actual
 # downloading, so why not put it here... define LINUX_DOWNLOAD
