@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/23 20:39:54 xtraeme Exp $
-# $Id: Makefile,v 1.1.1.1 2003/07/23 20:39:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/23 22:31:56 blef Exp $
+# $Id: Makefile,v 1.2 2003/07/23 22:31:56 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-fontsScalable-${XFREE86_VERSION}
@@ -12,8 +12,8 @@ MAINTAINER=	xfree86@xtraeme.unixbsd.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 scalable fonts
 
-DEPENDS=	XFree86-clients*:../../xfree86/XFree86-clients
-DEPENDS+=	XFree86-fontsEncodings*:../../xfree86/XFree86-fontsEncodings
+DEPENDS=	XFree86-clients*:../../wip/XFree86-clients
+DEPENDS+=	XFree86-fontsEncodings*:../../wip/XFree86-fontsEncodings
 
 USE_BUILDLINK2=		yes
 NO_XFREE86_TARGETS=	#defined
