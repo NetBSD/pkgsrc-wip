@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/04 20:37:04 xtraeme Exp $
+bin/poedit
+man/man1/poedit.1
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/sv_SE/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/poedit.mo
+share/poedit/help-gettext.zip
+share/poedit/help-hr.zip
+share/poedit/help.zip
+share/poedit/resources.zip
+@dirrm share/poedit
