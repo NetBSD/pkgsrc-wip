@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.782 2003/12/20 16:07:55 marttikuparinen Exp $
-# $NetBSD: Makefile,v 1.782 2003/12/20 16:07:55 marttikuparinen Exp $
+# $Id: Makefile,v 1.783 2003/12/21 03:56:01 bencollver Exp $
+# $NetBSD: Makefile,v 1.783 2003/12/21 03:56:01 bencollver Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -247,7 +247,6 @@ SUBDIR+=	jabberd2
 SUBDIR+=	jakarta-log4j
 SUBDIR+=	javascript-guide
 SUBDIR+=	javascript-reference
-SUBDIR+=	jazz
 SUBDIR+=	jdk12
 SUBDIR+=	jdk12-openjit
 SUBDIR+=	jdk13
