@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1347 2004/06/26 18:19:15 grantbeattie Exp $
-# $NetBSD: Makefile,v 1.1347 2004/06/26 18:19:15 grantbeattie Exp $
+# $Id: Makefile,v 1.1348 2004/06/26 19:50:31 dillo Exp $
+# $NetBSD: Makefile,v 1.1348 2004/06/26 19:50:31 dillo Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -166,6 +166,7 @@ SUBDIR+=	gcc-3.4-ada
 SUBDIR+=	gcompris
 SUBDIR+=	gdam
 SUBDIR+=	geeklog
+SUBDIR+=	gens
 SUBDIR+=	gettext-runtime
 SUBDIR+=	gettext-tools
 SUBDIR+=	gforge
