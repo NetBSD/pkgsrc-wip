@@ -34,7 +34,7 @@ This meta package has been tested and reported that works
 perfectly on:
 
 x86:
-	* FreeBSD 5.x
+	* FreeBSD 4.9, 5.x
 	* NetBSD 1.6.x and -current
 	* GNU/Linux Debian sid
 
