@@ -1,5 +1,12 @@
 
-$Id: TODO,v 1.1.1.1 2003/06/22 11:58:59 cjep Exp $
+$Id: TODO,v 1.2 2003/06/22 12:24:15 cjep Exp $
 
-Maybe remove GUI functionality from the test script and make a GUI
-test script package.
+Mull over what to do about the GUI functionality in the test script, i.e.
+ 1. whether to leave it as is and let the user decide whether to install
+     p5-Tk
+ 2. whether to make a separate package for a GUI test script
+ 3. or whether to make this package depend on p5-Tk.
+                                                                                
+(1 or 2 are probably what will happen.)
+                                                                                
+Also need to add an rc.d script and see what to do about PKG_SYSCONFDIR.
