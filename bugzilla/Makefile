@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/04/26 14:40:35 adrian_p Exp $
+# $NetBSD: Makefile,v 1.9 2004/07/14 10:49:56 absd Exp $
 #
 
-DISTNAME=	bugzilla-2.16.4
+DISTNAME=	bugzilla-2.16.6
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/webtools/
 
@@ -42,6 +42,11 @@ BZ_WEB_GROUP?=	www
 MESSAGE_SUBST+=	BZDIR=${BZDIR} EXDIR=${PREFIX}/share/examples/bugzilla \
 		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
+EGDIR=		${PREFIX}/share/examples/bugzilla
+OWN_DIRS+=	${EGDIR}
+CONF_FILES=	${EGDIR}/bugzilla.conf ${BZDIR}/bugzilla.conf
+CONF_FILES+=	${EGDIR}/localconfig ${BZDIR}/localconfig
+
 post-extract:
 	${FIND} ${WRKSRC}/template -type d -name CVS | ${XARGS} ${RM} -fr
 	${FIND} ${WRKSRC}/template -type f -name ".cvsignore" | ${XARGS} ${RM} -f
@@ -69,7 +74,7 @@ do-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bugzilla
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bugzilla
+	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${BZDIR}
 	${INSTALL_DATA_DIR} ${BZDIR}/css
 	${INSTALL_DATA_DIR} ${BZDIR}/template
@@ -85,8 +90,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/1x1.gif ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/ant.jpg ${BZDIR}
-	${INSTALL_DATA} ${WRKSRC}/bugzilla.conf ${PREFIX}/share/examples/bugzilla
-	${INSTALL_DATA} ${WRKSRC}/localconfig ${BZDIR}
+	${INSTALL_DATA} ${WRKSRC}/bugzilla.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/localconfig ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/bugzilla.dtd ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.js ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/processmail ${BZDIR}

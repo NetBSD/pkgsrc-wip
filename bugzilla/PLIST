@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/18 04:16:52 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/14 10:49:56 absd Exp $
 share/bugzilla/1x1.gif
 share/bugzilla/Attachment.pm
 share/bugzilla/Bug.pm
@@ -41,7 +41,6 @@ share/bugzilla/helpemailquery.html
 share/bugzilla/how_to_mail.html
 share/bugzilla/importxml.pl
 share/bugzilla/index.cgi
-share/bugzilla/localconfig
 share/bugzilla/localconfig.js
 share/bugzilla/long_list.cgi
 share/bugzilla/move.pl
@@ -58,6 +57,7 @@ share/bugzilla/quips.cgi
 share/bugzilla/relogin.cgi
 share/bugzilla/reports.cgi
 share/bugzilla/robots.txt
+share/bugzilla/runtests.pl
 share/bugzilla/sanitycheck.cgi
 share/bugzilla/show_activity.cgi
 share/bugzilla/show_bug.cgi
@@ -66,18 +66,6 @@ share/bugzilla/showdependencygraph.cgi
 share/bugzilla/showdependencytree.cgi
 share/bugzilla/sidebar.cgi
 share/bugzilla/syncshadowdb
-share/bugzilla/token.cgi
-share/bugzilla/userprefs.cgi
-share/bugzilla/votehelp.html
-share/bugzilla/votes.cgi
-share/bugzilla/whineatnews.pl
-share/bugzilla/xml.cgi
-share/doc/bugzilla/Bugzilla-Guide.txt
-share/doc/bugzilla/README
-share/doc/bugzilla/UPGRADING
-share/doc/bugzilla/UPGRADING-pre-2.8
-share/doc/bugzilla/rel_notes.txt
-share/examples/bugzilla/bugzilla.conf
 share/bugzilla/template/en/default/account/cancel-token.txt.tmpl
 share/bugzilla/template/en/default/account/create.html.tmpl
 share/bugzilla/template/en/default/account/created.html.tmpl
@@ -126,6 +114,7 @@ share/bugzilla/template/en/default/bug/show-multiple.html.tmpl
 share/bugzilla/template/en/default/bug/votes/delete-all.html.tmpl
 share/bugzilla/template/en/default/bug/votes/list-for-bug.html.tmpl
 share/bugzilla/template/en/default/bug/votes/list-for-user.html.tmpl
+share/bugzilla/template/en/default/filterexceptions.pl
 share/bugzilla/template/en/default/global/banner.html.tmpl
 share/bugzilla/template/en/default/global/choose-product.html.tmpl
 share/bugzilla/template/en/default/global/code-error.html.tmpl
@@ -155,6 +144,19 @@ share/bugzilla/template/en/default/search/form.html.tmpl
 share/bugzilla/template/en/default/search/knob.html.tmpl
 share/bugzilla/template/en/default/search/search.html.tmpl
 share/bugzilla/template/en/default/sidebar.xul.tmpl
+share/bugzilla/token.cgi
+share/bugzilla/userprefs.cgi
+share/bugzilla/votehelp.html
+share/bugzilla/votes.cgi
+share/bugzilla/whineatnews.pl
+share/bugzilla/xml.cgi
+share/doc/bugzilla/Bugzilla-Guide.txt
+share/doc/bugzilla/README
+share/doc/bugzilla/UPGRADING
+share/doc/bugzilla/UPGRADING-pre-2.8
+share/doc/bugzilla/rel_notes.txt
+share/examples/bugzilla/bugzilla.conf
+share/examples/bugzilla/localconfig
 @dirrm share/examples/bugzilla
 @dirrm share/doc/bugzilla
 @dirrm share/bugzilla/css
