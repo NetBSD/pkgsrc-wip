@@ -1,4 +1,4 @@
-# $NetBSD: TODO,v 1.1 2003/04/06 01:04:38 marmfield Exp $
+# $NetBSD: TODO,v 1.2 2004/02/14 00:00:49 blef Exp $
 #
 
 TODO file for nagios-plugins:
@@ -6,5 +6,5 @@ TODO file for nagios-plugins:
 	- There is a problem with the sensors check.
 	- Testing, glorious testing. Yes I want some more...
 	- There are a couple of checks which use other pkgs. We may want
-to either included a dependancy or create another nagios-plugin-XXX pkg.
+to either included a dependency or create another nagios-plugin-XXX pkg.
 I have not looked at the checks that aren't compiled/installed.
