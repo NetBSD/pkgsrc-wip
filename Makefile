@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1203 2004/04/15 22:18:57 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1203 2004/04/15 22:18:57 adrian_p Exp $
+# $Id: Makefile,v 1.1204 2004/04/16 10:28:59 tripledes Exp $
+# $NetBSD: Makefile,v 1.1204 2004/04/16 10:28:59 tripledes Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -198,6 +198,7 @@ SUBDIR+=	gnupg-1.9
 SUBDIR+=	goldwater
 SUBDIR+=	gotmail
 SUBDIR+=	gov2
+SUBDIR+=	gps
 SUBDIR+=	grip
 SUBDIR+=	grisbi
 SUBDIR+=	gtick
