@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.930 2004/02/05 12:03:31 mpasternak Exp $
-# $NetBSD: Makefile,v 1.930 2004/02/05 12:03:31 mpasternak Exp $
+# $Id: Makefile,v 1.931 2004/02/06 21:12:18 blef Exp $
+# $NetBSD: Makefile,v 1.931 2004/02/06 21:12:18 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -245,6 +245,7 @@ SUBDIR+=	imhangul_status_applet
 SUBDIR+=	interbase-docs
 SUBDIR+=	interchange
 SUBDIR+=	ipgrab
+SUBDIR+=	iptables
 SUBDIR+=	isc-dhclient
 SUBDIR+=	isc-dhcpd
 SUBDIR+=	ish
@@ -334,8 +335,8 @@ SUBDIR+=	lmarbles
 SUBDIR+=	lsdvd
 SUBDIR+=	lua-expat
 SUBDIR+=	luacheia
-SUBDIR+=	luasocket
 SUBDIR+=	luaposix
+SUBDIR+=	luasocket
 SUBDIR+=	mailfilter
 SUBDIR+=	man-db
 SUBDIR+=	map-browse
@@ -416,6 +417,7 @@ SUBDIR+=	p5-DateTime-TimeZone
 SUBDIR+=	p5-ExtUtils-Depends
 SUBDIR+=	p5-ExtUtils-PkgConfig
 SUBDIR+=	p5-File-Tail
+SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-GeoIP
 SUBDIR+=	p5-Glib2
 SUBDIR+=	p5-GnuPG-Interface
@@ -600,6 +602,7 @@ SUBDIR+=	rlpr
 SUBDIR+=	rosegarden-current
 SUBDIR+=	rox-gtk2
 SUBDIR+=	rss2html
+SUBDIR+=	ruby-amrita
 SUBDIR+=	ruby-ming
 SUBDIR+=	ruby-syck
 SUBDIR+=	rudiments
