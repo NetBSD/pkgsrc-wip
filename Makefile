@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1116 2004/03/27 00:26:09 rockpiper Exp $
-# $NetBSD: Makefile,v 1.1116 2004/03/27 00:26:09 rockpiper Exp $
+# $Id: Makefile,v 1.1117 2004/03/27 18:27:33 shattered Exp $
+# $NetBSD: Makefile,v 1.1117 2004/03/27 18:27:33 shattered Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -324,11 +324,13 @@ SUBDIR+=	libXv
 SUBDIR+=	libassuan
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
+SUBDIR+=	libebml
 SUBDIR+=	libetpan
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgringotts
 SUBDIR+=	libhydrogen
 SUBDIR+=	libmatchbox
+SUBDIR+=	libmatroska
 SUBDIR+=	libneural
 SUBDIR+=	libogg-nightly
 SUBDIR+=	libol
@@ -394,6 +396,7 @@ SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
 #SUBDIR+=	mk 		# not a package
 SUBDIR+=	mkdep
+SUBDIR+=	mkvtoolnix
 SUBDIR+=	mnogosearch
 SUBDIR+=	monkey-bubble
 SUBDIR+=	mopac
