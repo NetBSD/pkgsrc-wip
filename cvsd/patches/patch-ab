@@ -1,9 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2003/06/22 04:08:40 schnoebe Exp $
+$NetBSD: patch-ab,v 1.4 2003/06/22 22:07:57 schnoebe Exp $
 
 --- configure.orig	Mon Apr 21 12:29:19 2003
 +++ configure
 @@ -9087,7 +8860,7 @@ fi
->>>>>>> 1.1.1.1
  
  # where to find the configuration file
  # TODO: this should probably be fixed to be nicer
