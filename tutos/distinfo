@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/29 11:40:04 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2004/11/01 22:35:30 dolecek Exp $
 
-SHA1 (tutos-php-1.1.20030404.tar.bz2) = 073a6bbdcfd2b1754d29119977de4dfe9e90bab7
-Size (tutos-php-1.1.20030404.tar.bz2) = 3741629 bytes
+SHA1 (TUTOS-php-1.2.20040906.tar.gz) = 6808454a53b4a431b40d7efaa0a136e3c1c23701
+Size (TUTOS-php-1.2.20040906.tar.gz) = 957969 bytes

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2004/07/25 16:22:59 marc Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/01 22:35:30 dolecek Exp $
 #
 
-DISTNAME=	tutos-php-1.1.20030404
+DISTNAME=	TUTOS-php-1.2.20040906
+PKGNAME=	${DISTNAME:tl}
 WRKSRC=		${WRKDIR}/tutos
 CATEGORIES=	devel
 MASTER_SITES=	http://www.tutos.org/download/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.tutos.org/homepage/about.html
@@ -29,7 +29,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/htdocs/tutos
 	cd ${WRKSRC}; ${PAX} -rwpe . ${PREFIX}/share/httpd/htdocs/tutos
 
-.include "../../www/php4/buildlink3.mk"
-.include "../../www/apache2/buildlink3.mk"
+.include "../../lang/php/phpversion.mk"
+.include "${PHPPKGSRCDIR}/buildlink3.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
