@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/18 03:38:18 bencollver Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/22 00:46:57 bencollver Exp $
 #
 
 DISTNAME=		jazz-src-4.1.3
@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.jazzware.com/pub/jazz/stable/source/
 
 MAINTAINER=		collver1@comcast.net
-HOMEPAGE=		http://www.jazzware.com
+HOMEPAGE=		http://www.jazzware.com/
 COMMENT=		MIDI sequencer
 
 BUILD_DEPENDS+=		tex2rtf-*:../../converters/tex2rtf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/18 04:34:08 bencollver Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/22 00:46:57 bencollver Exp $
 #
 
 DISTNAME=		vcdgear16_static-e
@@ -7,7 +7,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://www.vcdgear.com/files/
 
 MAINTAINER=		collver1@comcast.net
-HOMEPAGE=		http://www.vcdgear.com
+HOMEPAGE=		http://www.vcdgear.com/
 COMMENT=		Video CD toolbox and MPEG repair tool
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/12 02:41:12 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/22 00:46:57 bencollver Exp $
 #
 
 DISTNAME=		modplugxmms-2.04
@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=modplug-xmms/}
 
 MAINTAINER=		collver1@comcast.net
-HOMEPAGE=		http://modplug-xmms.sourceforge.net
+HOMEPAGE=		http://modplug-xmms.sourceforge.net/
 COMMENT=		XMMS plugin based on modplug
 
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip

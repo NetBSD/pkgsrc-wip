@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/18 03:00:10 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/22 00:46:57 bencollver Exp $
 #
 
 DISTNAME=		dumb-0.9.2-fixed
@@ -8,7 +8,7 @@ CATEGORIES=		audio devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dumb/}
 
 MAINTAINER=		collver1@comcast.net
-HOMEPAGE=		http://dumb.sourceforge.net
+HOMEPAGE=		http://dumb.sourceforge.net/
 COMMENT=		IT, XM, S3M and MOD player library
 
 LICENSE=		dumb-license
