@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD
+#
 
 # PROVIDE: pts
 # REQUIRE: DAEMON LOGIN network
@@ -8,9 +11,9 @@
 name="pts"
 rcvar=$name
 procname="perl:"
-command="/usr/pkg/sbin/${name}"
+command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
-required_files="/usr/pkg/share/pts/pts.ini"
+required_files="@PREFIX@/share/pts/pts.ini"
 
 load_rc_config $name
 run_rc_command "$1"

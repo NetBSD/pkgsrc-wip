@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/13 08:25:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/13 08:30:15 jmmv Exp $
 
 DISTNAME=	pts-0.20a
 CATEGORIES=	games
@@ -12,9 +12,13 @@ DEPENDS+=	p5-Config-IniFiles>=2.20:../../devel/p5-Config-IniFiles
 
 NO_BUILD=	YES
 USE_BUILDLINK2= YES
+USE_PKGINSTALL=	YES
+
 REPLACE_PERL=	${WRKSRC}/pts.pl
 
 DATADIR=	${PREFIX}/share/pts
+
+RCD_SCRIPTS=	pts
 
 do-install:
 	${INSTALL_DATA_DIR} ${DATADIR}
@@ -34,7 +38,6 @@ do-install:
 	done
 
 	${INSTALL_SCRIPT} ${WRKSRC}/pts.pl ${PREFIX}/sbin/pts
-	${INSTALL_SCRIPT} ${FILESDIR}/pts ${PREFIX}/etc/rc.d/pts
 
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
