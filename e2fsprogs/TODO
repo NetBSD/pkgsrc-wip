@@ -1,3 +1,5 @@
+$Id: TODO,v 1.2 2004/01/10 18:08:40 mpasternak Exp $
+
 use libtool to properly build so executables are linked correctly
 /usr/pkg/sbin/debugfs:
          -lext2fs.2 => not found
@@ -7,3 +9,8 @@ use libtool to properly build so executables are linked correctly
          -lblkid.1 => not found
          -luuid.1 => not found
          -lc.12 => /usr/lib/libc.so.12
+
+>> Sat 10 Jan 18:01:58 2004 CET
+As libuuid is available as separate package in pkgsrc-wip, make it neither
+build nor install it's own libuuid.
+	-- dotz@irc.pl
