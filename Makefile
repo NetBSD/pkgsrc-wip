@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.114 2003/04/23 22:11:10 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.114 2003/04/23 22:11:10 thomasklausner Exp $
+# $Id: Makefile,v 1.115 2003/04/24 16:54:43 bmeurer Exp $
+# $NetBSD: Makefile,v 1.115 2003/04/24 16:54:43 bmeurer Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -50,6 +50,7 @@ SUBDIR+=	gstreamer-player
 SUBDIR+=	gstreamer-plugins
 SUBDIR+=	gtetrinet2
 SUBDIR+=	gtk-sharp
+SUBDIR+=	gtk2-engines-xfce
 SUBDIR+=	gtkglarea2
 SUBDIR+=	gtranslator
 SUBDIR+=	honeyd-arpd
@@ -82,6 +83,7 @@ SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	navigatrix
 SUBDIR+=	nvtv
+SUBDIR+=	p5-gtk2
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-Net-Jabber
