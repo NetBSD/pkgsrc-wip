@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1108 2004/03/23 01:14:47 rockpiper Exp $
-# $NetBSD: Makefile,v 1.1108 2004/03/23 01:14:47 rockpiper Exp $
+# $Id: Makefile,v 1.1109 2004/03/23 01:43:50 rockpiper Exp $
+# $NetBSD: Makefile,v 1.1109 2004/03/23 01:43:50 rockpiper Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -124,6 +124,7 @@ SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
 SUBDIR+=	eag
 SUBDIR+=	eic
+SUBDIR+=	elmo
 SUBDIR+=	emacs-carbon
 SUBDIR+=	emirror
 SUBDIR+=	entropy
