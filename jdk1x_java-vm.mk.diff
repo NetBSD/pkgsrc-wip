@@ -1,11 +1,11 @@
 Index: java-vm.mk
 ===================================================================
 RCS file: /cvsroot/pkgsrc/mk/java-vm.mk,v
-retrieving revision 1.12
-diff -u -r1.12 java-vm.mk
---- java-vm.mk	2003/03/23 17:30:39	1.12
-+++ java-vm.mk	2003/04/07 18:50:17
-@@ -41,9 +41,9 @@
+retrieving revision 1.14
+diff -u -r1.14 java-vm.mk
+--- java-vm.mk	2003/05/25 18:39:12	1.14
++++ java-vm.mk	2003/07/06 20:27:15
+@@ -43,9 +43,9 @@
  # Note: The wonka configuration is still under development
  #
  .if defined(USE_JAVA2) && !empty(USE_JAVA2:M[yY][eE][sS])
@@ -17,7 +17,7 @@ diff -u -r1.12 java-vm.mk
  .endif
  
  # To be deprecated: if PKG_JVM is explicitly set, then use it as the
-@@ -76,6 +76,10 @@
+@@ -78,6 +78,10 @@
  # These lists are copied from the JVM package Makefiles.
  _ONLY_FOR_PLATFORMS.jdk= \
  	NetBSD-*-i386 Linux-*-i[3-6]86
@@ -28,7 +28,7 @@ diff -u -r1.12 java-vm.mk
  _ONLY_FOR_PLATFORMS.blackdown-jdk13= \
  	NetBSD-*-i386 NetBSD-*-powerpc NetBSD-*-sparc \
  	Linux-*-i[3-6]86 Linux-*-powerpc Linux-*-sparc
-@@ -102,6 +106,8 @@
+@@ -104,6 +108,8 @@
  .endfor
  
  _JAVA_PKGBASE.jdk=		jdk
@@ -37,7 +37,7 @@ diff -u -r1.12 java-vm.mk
  _JAVA_PKGBASE.sun-jdk13=	sun-jdk13
  _JAVA_PKGBASE.sun-jdk14=	sun-jdk14
  _JAVA_PKGBASE.blackdown-jdk13=	blackdown-jdk13
-@@ -178,6 +184,8 @@
+@@ -180,6 +186,8 @@
  .endif
  
  BUILDLINK_DEPENDS.jdk?=			jdk-[0-9]*
@@ -46,7 +46,7 @@ diff -u -r1.12 java-vm.mk
  BUILDLINK_DEPENDS.sun-jdk13?=		sun-jdk13-[0-9]*
  BUILDLINK_DEPENDS.sun-jre13?=		sun-jre13-[0-9]*
  BUILDLINK_DEPENDS.sun-jdk14?=		sun-jdk14-[0-9]*
-@@ -188,6 +196,8 @@
+@@ -190,6 +198,8 @@
  BUILDLINK_DEPENDS.wonka?=		wonka-[0-9]*
  
  _JRE.jdk=		jdk
@@ -55,7 +55,7 @@ diff -u -r1.12 java-vm.mk
  _JRE.sun-jdk13=		sun-jre13
  _JRE.sun-jdk14=		sun-jre14
  _JRE.blackdown-jdk13=	blackdown-jre13
-@@ -200,6 +210,14 @@
+@@ -202,6 +212,14 @@
  _JDK_PKGSRCDIR=		../../lang/jdk
  _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
  _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.1.8
