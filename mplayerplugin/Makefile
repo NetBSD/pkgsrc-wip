@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/14 03:58:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/15 21:29:53 xtraeme Exp $
 #
 
 DISTNAME=	mplayerplug-in_v0.71
@@ -18,8 +18,9 @@ WRKSRC=         ${WRKDIR}/mplayerplug-in
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 
+MOZ_PLUGDIR=    ${PREFIX}/lib/mozilla/plugins
+
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/mplayerplug-in.so \
-	${X11BASE}/lib/mozilla/plugins/
+	${INSTALL_DATA} ${WRKSRC}/mplayerplug-in.so ${MOZ_PLUGDIR}
 
 .include "../../mk/bsd.pkg.mk"
