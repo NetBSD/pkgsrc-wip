@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1572 2004/12/10 17:48:44 dmb_ Exp $
-# $NetBSD: Makefile,v 1.1572 2004/12/10 17:48:44 dmb_ Exp $
+# $Id: Makefile,v 1.1573 2004/12/11 03:50:41 minskim Exp $
+# $NetBSD: Makefile,v 1.1573 2004/12/11 03:50:41 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -58,6 +58,7 @@ SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-frontpage
 SUBDIR+=	ap-macro
 SUBDIR+=	ap-ometer
+SUBDIR+=	ap-rivet
 SUBDIR+=	ap2-jk2
 SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-macro
