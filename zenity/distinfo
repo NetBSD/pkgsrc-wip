@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/24 04:50:44 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/10/12 02:59:38 xtraeme Exp $
 
-SHA1 (zenity-1.2.tar.bz2) = f6f2857814109587eedb5e47e2bb289426053611
-Size (zenity-1.2.tar.bz2) = 345208 bytes
+SHA1 (zenity-1.6.tar.bz2) = e7c861d26b3869c1061890470367273438dfab6b
+Size (zenity-1.6.tar.bz2) = 417606 bytes
+SHA1 (patch-aa) = 67fb03e5eb039913c1821aa07aa29af720324e71

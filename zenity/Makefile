@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2003/08/28 09:48:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/12 02:59:38 xtraeme Exp $
 #
 
-DISTNAME=	zenity-1.2
+DISTNAME=	zenity-1.6
 CATEGORIES=	x11 gnome2
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/1.2/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/1.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Display GNOME dialogs from the command line
 
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK2=		yes
@@ -19,8 +19,10 @@ GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_X11=		yes
 
-.include "../../textproc/scrollkeeper/omf.mk"
-.include "../../graphics/libgnomecanvas/buildlink2.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/popt/buildlink2.mk"
+.include "../../graphics/libgnomecanvas/buildlink2.mk"
+.include "../../textproc/intltool/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/bsd.pkg.mk"
