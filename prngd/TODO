@@ -1,0 +1,7 @@
+Install example configuration. Look in contrib/ directory.
+
+Have MESSAGE about entropy.
+
+Is this okay? RANDSAVENAME="/var/db/prngd-seed"
+
+Patch man page for paths (use sed in pre-install)
