@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/20 00:25:03 xtraeme Exp $
+share/doc/postgresql/FAQ
+share/doc/postgresql/FAQ_AIX
+share/doc/postgresql/FAQ_DEV
+share/doc/postgresql/FAQ_HPUX
+share/doc/postgresql/FAQ_IRIX
+share/doc/postgresql/FAQ_MSWIN
+share/doc/postgresql/FAQ_QNX4
+share/doc/postgresql/FAQ_SCO
+share/doc/postgresql/FAQ_Solaris
+share/doc/postgresql/FAQ_czech
+share/doc/postgresql/FAQ_german
+share/doc/postgresql/FAQ_hungarian
+share/doc/postgresql/FAQ_japanese
+share/doc/postgresql/FAQ_polish
+share/doc/postgresql/FAQ_russian
+share/doc/postgresql/FAQ_turkish
+share/doc/postgresql/KNOWN_BUGS
+share/doc/postgresql/MISSING_FEATURES
+share/doc/postgresql/README.mb.big5
+share/doc/postgresql/README.mb.jp
+share/doc/postgresql/TODO
+share/doc/postgresql/bug.template
+@dirrm share/doc/postgresql
