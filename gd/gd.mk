@@ -1,4 +1,4 @@
-# $NetBSD: gd.mk,v 1.1.1.1 2004/06/09 23:21:59 xtraeme Exp $
+# $NetBSD: gd.mk,v 1.2 2004/06/10 06:58:19 xtraeme Exp $
 #
 # Makefile fragment to choose the correct gd package.
 #
@@ -15,7 +15,8 @@ GD_NOX11_INSTALLED!=	\
 		${ECHO} "no";			\
 	fi
 
-.if ${GD_NOX11_INSTALLED} == "yes"
+.if (${GD_NOX11_INSTALLED} == "yes" || (defined(PKG_GD_DEFAULT) && \
+	!empty(PKG_GD_DEFAULT:Mgd-nox11)))
 .  include "../../wip/gd-nox11/buildlink3.mk"
 .else
 .  include "../../wip/gd/buildlink3.mk"
