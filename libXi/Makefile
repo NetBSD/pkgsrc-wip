@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2004/01/27 21:03:36 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/10 18:29:05 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXi-6.0.1
+PKGREVISION=		1
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://freedesktop.org/~xlibs/dist/
+MASTER_SITES=		http://freedesktop.org/~xlibs/release/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		xtraeme@NetBSD.org
@@ -19,6 +20,7 @@ PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xi.pc.in
 
 .include "../../wip/libX11/buildlink2.mk"
 .include "../../wip/libXau/buildlink2.mk"
+.include "../../wip/libXext/buildlink2.mk"
 .include "../../wip/xproto/buildlink2.mk"
 .include "../../wip/xextensions/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
