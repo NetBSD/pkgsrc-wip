@@ -1,7 +1,7 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/07/31 05:25:42 jeremy-c-reed Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/08/01 21:04:02 jeremy-c-reed Exp $
 
 .if !defined(MITKRB5_BUILDLINK2_MK)
-MITKRB5_BUILDLINK2_MK=   # defined 
+MITKRB5_BUILDLINK2_MK=   # defined
 
 BUILDLINK_PACKAGES+=		mit-krb5
 BUILDLINK_DEPENDS.mit-krb5?=	mit-krb5>=1.3
@@ -28,6 +28,6 @@ BUILDLINK_FILES.mit-krb5+=	lib/libkrb5.*
 
 BUILDLINK_TARGETS+=             mit-krb5-buildlink
 
-mit-krb5-buildlink: _BUILDLINK_USE  
+mit-krb5-buildlink: _BUILDLINK_USE
 
 .endif	# MITKRB5_BUILDLINK2_MK
