@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2003/07/31 19:43:23 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.4 2003/12/21 08:31:43 blef Exp $
 
---- Makefile.in.orig	Thu Mar  6 09:29:07 2003
-+++ Makefile.in
-@@ -7,15 +7,15 @@ mandir =          @mandir@
+--- Makefile.in.orig	2003-12-21 00:12:50.000000000 -0800
++++ Makefile.in	2003-12-21 00:19:35.000000000 -0800
+@@ -7,7 +7,7 @@
  infodir =         @infodir@
  
  BINDIR =          $(bindir)
@@ -11,6 +11,7 @@ $NetBSD: patch-aa,v 1.3 2003/07/31 19:43:23 thomasklausner Exp $
  DATADIR =         $(datadir)/games/liquidwar
  PIXDIR =          $(datadir)/pixmaps
  DOCDIR =          $(datadir)/doc/liquidwar
+@@ -15,8 +15,8 @@
  # We don't use the autoconf default mandir=$(prefix)/man man
  # directory since the FHS (File Hierarchy Standard recommends
  # to place man pages in $(datadir)/man (ie /usr/share/man).
@@ -21,18 +22,20 @@ $NetBSD: patch-aa,v 1.3 2003/07/31 19:43:23 thomasklausner Exp $
  # We don't use the autoconf default infodir=$(prefix)/info info
  # directory since the FHS (File Hierarchy Standard recommends
  # to place info pages in $(datadir)/info (ie /usr/share/info).
-@@ -104,8 +104,8 @@ install_nolink: install_bin install_data
- install_bin: src/liquidwar src/liquidwar-server
+@@ -105,9 +105,9 @@
+ install_bin: src/liquidwar src/liquidwar-server src/liquidwar-mapgen
  	@echo "Installing liquidwar binaries in $(GAMEDIR)."
  	@install -d $(DESTDIR)$(GAMEDIR)
 -	@install -s src/liquidwar $(DESTDIR)$(GAMEDIR)
 -	@install -s src/liquidwar-server $(DESTDIR)$(GAMEDIR)
+-	@install -s src/liquidwar-mapgen $(DESTDIR)$(GAMEDIR)
 +	@install -c -s src/liquidwar $(DESTDIR)$(GAMEDIR)
 +	@install -c -s src/liquidwar-server $(DESTDIR)$(GAMEDIR)
++	@install -c -s src/liquidwar-mapgen $(DESTDIR)$(GAMEDIR)
  
  install_link:
  	@echo "Installing link in $(BINDIR)."
-@@ -118,50 +118,50 @@ install_link:
+@@ -122,55 +122,55 @@
  install_data: data/liquidwar.dat
  	@echo "Installing liquidwar datafile in $(DATADIR)."
  	@install -d $(DESTDIR)$(DATADIR)
@@ -67,7 +70,7 @@ $NetBSD: patch-aa,v 1.3 2003/07/31 19:43:23 thomasklausner Exp $
 -	@if [ -f $(MAKE_DOC_DIR)/info/liquidwar.info.gz ]; then echo "Installing info page $(INFODIR)/liquidwar.info.gz."; install -d $(DESTDIR)$(INFODIR); install -m 644 $(MAKE_DOC_DIR)/info/liquidwar.info* $(DESTDIR)$(INFODIR); if which install-info; then if test -d $(DESTDIR)$(INFODIRDIR); then if test -f $(DESTDIR)$(INFODIRDIR)/dir; then echo "Installing liquidwar info entry."; install-info --info-dir=$(DESTDIR)$(INFODIRDIR) $(MAKE_DOC_DIR)/info/liquidwar.info.gz; fi; fi; fi; fi
 -	@if [ -f $(MAKE_DOC_DIR)/ps/liquidwar.ps ]; then echo "Installing liquidwar PostScript doc in $(DOCDIR)/ps."; install -d $(DESTDIR)$(DOCDIR)/ps; install -m 0644 $(MAKE_DOC_DIR)/ps/*.ps $(DESTDIR)$(DOCDIR)/ps; fi
 -	@if [ -f $(MAKE_DOC_DIR)/pdf/liquidwar.pdf ]; then echo "Installing liquidwar PDF doc in $(DOCDIR)/pdf."; install -d $(DESTDIR)$(DOCDIR)/pdf; install -m 0644 $(MAKE_DOC_DIR)/pdf/*.pdf $(DESTDIR)$(DOCDIR)/pdf; fi
-+	@if [ -f $(MAKE_DOC_DIR)/txt/rules.txt ]; then echo "Installing liquidwar plain text doc in $(DOCDIR)/txt."; install -d $(DESTDIR)$(DOCDIR)/txt; install -c -m 0644 $(MAKE_DOC_DIR)/txt/*.txt $(DESTDIR)$(DOCDIR)/txt; fi
++	@if [ -f $(MAKE_DOC_DIR)/txt/rules.txt ]; then echo "Installing liquidwar plain text doc in $(DOCDIR)/txt."; install -d $(DESTDIR)$(DOCDIR)/txt; install-c -m 0644 $(MAKE_DOC_DIR)/txt/*.txt $(DESTDIR)$(DOCDIR)/txt; fi
 +	@if [ -f $(MAKE_DOC_DIR)/html/rules.html ]; then echo "Installing liquidwar HTML doc in $(DOCDIR)/html."; install -d $(DESTDIR)$(DOCDIR)/html; install -c -m 0644 $(MAKE_DOC_DIR)/html/*.html $(DESTDIR)$(DOCDIR)/html; fi
 +	@if [ -f $(MAKE_DOC_DIR)/man/liquidwar.6.gz ]; then echo "Installing liquidwar man page in $(MANDIR)."; install -d $(DESTDIR)$(MANDIR); install -c -m 0644 $(MAKE_DOC_DIR)/man/*.gz $(DESTDIR)$(MANDIR); fi
 +	@if [ -f $(MAKE_DOC_DIR)/info/liquidwar.info.gz ]; then echo "Installing info page $(INFODIR)/liquidwar.info.gz."; install -d $(DESTDIR)$(INFODIR); install -c -m 644 $(MAKE_DOC_DIR)/info/liquidwar.info* $(DESTDIR)$(INFODIR); if which install-info; then if test -d $(DESTDIR)$(INFODIRDIR); then if test -f $(DESTDIR)$(INFODIRDIR)/dir; then echo "Installing liquidwar info entry."; install-info --info-dir=$(DESTDIR)$(INFODIRDIR) $(MAKE_DOC_DIR)/info/liquidwar.info.gz; fi; fi; fi; fi
@@ -79,6 +82,12 @@ $NetBSD: patch-aa,v 1.3 2003/07/31 19:43:23 thomasklausner Exp $
  	@install -d $(DESTDIR)$(PIXDIR)
 -	@install -m 0644 misc/liquidwar.xpm $(DESTDIR)$(PIXDIR)
 +	@install -c -m 0644 misc/liquidwar.xpm $(DESTDIR)$(PIXDIR)
+ 
+ install_desktop:
+ 	@echo "Installing desktop file in $(DESKTOPDIR)."
+ 	@install -d $(DESKTOPDIR)
+-	@install -m 0644 misc/liquidwar.desktop $(DESKTOPDIR)
++	@install -c -m 0644 misc/liquidwar.desktop $(DESKTOPDIR)
  
  install_gpl:
  	@echo "Installing GPL in $(DOCDIR)."
