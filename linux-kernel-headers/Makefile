@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/07 04:06:52 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/07 04:35:54 jeremy-c-reed Exp $
 
 .include "../../wip/linux-kernel/Makefile.common"
 
@@ -15,9 +15,10 @@ do-build:
 do-install:
 	cd ${WRKSRC}/include && ${PAX} -rw -pe linux ${PREFIX}/include
 	${INSTALL_DATA_DIR} ${PREFIX}/include/asm
-	cd ${WRKSRC}/include/asm-generic && \
-		${PAX} -rw -pe . ${PREFIX}/include/asm
+	${LN} -sf ${PREFIX}/include/asm ${PREFIX}/include/asm-generic
 	cd ${WRKSRC}/include/asm-${LOWER_ARCH} && \
+		${PAX} -rw -pe . ${PREFIX}/include/asm
+	cd ${WRKSRC}/include/asm-generic && \
 		${PAX} -rw -pe . ${PREFIX}/include/asm
 
 .include "../../mk/bsd.pkg.mk"
