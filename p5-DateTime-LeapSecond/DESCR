@@ -1,9 +1,0 @@
-This module is used to calculate leap seconds for a given Rata Die
-day. It is mostly intended for use by the DateTime.pm, rather than
-for external users.
-
-This library uses 1 second precision and is known to be accurate
-for dates until december 2003.
-
-There are no leap seconds before 1972, because that's the year
-this system was implemented.
