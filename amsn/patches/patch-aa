@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/13 22:45:38 virtus Exp $
+$NetBSD: patch-aa,v 1.2 2003/04/13 23:00:41 virtus Exp $
 
---- Makefile.orig	2003-04-14 02:33:06.000000000 +0200
-+++ Makefile	2003-04-14 02:34:04.000000000 +0200
+--- Makefile.orig	2003-04-14 02:49:19.000000000 +0200
++++ Makefile	2003-04-14 02:49:27.000000000 +0200
 @@ -10,7 +10,7 @@
  module=msn
  
@@ -20,3 +20,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/13 22:45:38 virtus Exp $
  
  mkdirs:
  	echo "LIB $(libdir) DATA $(datadir) BIN $(bindir)" 
+@@ -95,8 +95,8 @@
+ #		ln -sf $(libdir)/i/$(icon) $(datadir)/$(icon)
+ 	@cp .$(transcript) $(libdir)/$(transcript)
+ #	Now we install the executable in the binary directory
+-#	@ln -sf $(libdir)/${name} $(bindir)/${name}
+-	@cp amsn $(bindir)/amsn
++	@ln -sf $(libdir)/${name} $(bindir)/${name}
++#	@cp amsn $(bindir)/amsn
+ 	@echo "rm -f $(bindir)/amsn" >> .$(transcript)
+ #	cat .$(transcript)
+ 

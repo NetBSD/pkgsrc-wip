@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/13 22:45:38 virtus Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/13 23:00:36 virtus Exp $
 bin/amsn
 share/amsn/README
 share/amsn/abook.tcl
@@ -144,7 +144,3 @@ share/amsn/smileys.tcl
 share/amsn/socks.tcl
 share/amsn/uninstall.sh
 share/pixmaps/messenger.png
-@dirrm share/amsn/s
-@dirrm share/amsn/lang
-@dirrm share/amsn/i
-@dirrm share/amsn
