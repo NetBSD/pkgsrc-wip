@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/10 13:49:40 imilh Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/11 10:49:15 imilh Exp $
 lib/libpcap.a
+lib/libpcap.la
 lib/libpcap.so
-lib/libpcap.so.0.8.3
+lib/libpcap.so.0
+lib/libpcap.so.0.8
 include/pcap.h
 include/pcap-namedb.h
 include/pcap-bpf.h

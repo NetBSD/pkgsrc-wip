@@ -1,47 +1,103 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/08/10 13:49:41 imilh Exp $
+$NetBSD: patch-aa,v 1.2 2004/08/11 10:49:15 imilh Exp $
 
 --- Makefile.in.orig	2003-12-15 02:42:23.000000000 +0100
 +++ Makefile.in
-@@ -54,6 +54,9 @@ INSTALL = @INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
+@@ -55,6 +55,12 @@ INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
  RANLIB = @RANLIB@
-+LN = ln
-+
-+VERSION = `cat VERSION`
  
++LIB = libpcap.a
++
++MAJOR = 0
++MINOR = 8
++AGE = 0
++
  #
  # Flex and bison allow you to specify the prefixes of the global symbols
-@@ -96,13 +99,17 @@ TAGFILES = \
+ # used by the generated parser.  This allows programs to use lex/yacc
+@@ -68,7 +74,7 @@ YACC = @V_YACC@
+ # problem if you don't own the file but can write to the directory.
+ .c.o:
+ 	@rm -f $@
+-	$(CC) $(CFLAGS) -c $(srcdir)/$*.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $(srcdir)/$*.c
  
- CLEANFILES = $(OBJ) libpcap.a $(GENSRC) $(GENHDR) lex.yy.c
+ PSRC =	pcap-@V_PCAP@.c
+ FSRC =  fad-@V_FINDALLDEVS@.c
+@@ -94,21 +100,22 @@ TAGHDR = \
+ TAGFILES = \
+ 	$(SRC) $(HDR) $(TAGHDR)
+ 
+-CLEANFILES = $(OBJ) libpcap.a $(GENSRC) $(GENHDR) lex.yy.c
++CLEANFILES = $(OBJ) $(LIB) $(GENSRC) $(GENHDR) lex.yy.c
  
 -all: libpcap.a
-+all: libpcap.a libpcap.so
++all: $(LIB)
  
- libpcap.a: $(OBJ)
+-libpcap.a: $(OBJ)
++$(LIB): $(OBJ)
  	@rm -f $@
- 	ar rc $@ $(OBJ) $(LIBS)
- 	$(RANLIB) $@
+-	ar rc $@ $(OBJ) $(LIBS)
+-	$(RANLIB) $@
++	$(LIBTOOL) --mode=link $(CC) $(OBJ:.o=.lo) \
++		-rpath $(PREFIX)/lib -version-info $(MAJOR):$(MINOR):$(AGE) \
++		-o ${LIB:.a=.la}
  
-+libpcap.so: $(OBJ)
-+	@rm -f $@
-+	ld -shared -fPIC -o libpcap.so.$(VERSION) $(OBJ)
-+
  scanner.c: $(srcdir)/scanner.l
  	@rm -f $@
  	$(LEX) -t $< > $$$$.$@; mv $$$$.$@ $@
-@@ -168,8 +175,15 @@ install:
+ 
+ scanner.o: scanner.c tokdefs.h
+-	$(CC) $(CFLAGS) -c scanner.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c scanner.c
+ 
+ pcap.o: version.h
+ 
+@@ -121,13 +128,15 @@ grammar.c: $(srcdir)/grammar.y
+ 
+ grammar.o: grammar.c
+ 	@rm -f $@
+-	$(CC) $(CFLAGS) -Dyylval=pcap_lval -c grammar.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) \
++		-Dyylval=pcap_lval -c grammar.c
+ 
+ version.o: version.c
+-	$(CC) $(CFLAGS) -c version.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c version.c
+ 
+ snprintf.o: $(srcdir)/missing/snprintf.c
+-	$(CC) $(CFLAGS) -o $@ -c $(srcdir)/missing/snprintf.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) \
++		-o $@ -c $(srcdir)/missing/snprintf.c
+ 
+ version.c: $(srcdir)/VERSION
+ 	@rm -f $@
+@@ -149,13 +158,12 @@ bpf_filter.c: $(srcdir)/bpf/net/bpf_filt
+ 	ln -s $(srcdir)/bpf/net/bpf_filter.c bpf_filter.c
+ 
+ bpf_filter.o: bpf_filter.c
+-	$(CC) $(CFLAGS) -c bpf_filter.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c bpf_filter.c
+ 
+ install:
+-	[ -d $(DESTDIR)$(libdir) ] || \
+-	    (mkdir -p $(DESTDIR)$(libdir); chmod 755 $(DESTDIR)$(libdir))
+-	$(INSTALL_DATA) libpcap.a $(DESTDIR)$(libdir)/libpcap.a
+-	$(RANLIB) $(DESTDIR)$(libdir)/libpcap.a
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) \
++		$(LIB:.a=.la) $(PREFIX)/lib
++
+ 	[ -d $(DESTDIR)$(includedir) ] || \
+ 	    (mkdir -p $(DESTDIR)$(includedir); chmod 755 $(DESTDIR)$(includedir))
+ 	$(INSTALL_DATA) $(srcdir)/pcap.h $(DESTDIR)$(includedir)/pcap.h
+@@ -168,8 +176,11 @@ install:
  	$(INSTALL_DATA) $(srcdir)/pcap.3 \
  	    $(DESTDIR)$(mandir)/man3/pcap.3
  
-+	$(INSTALL) -m 444 libpcap.so.$(VERSION) \
-+			$(DESTDIR)$(libdir)/libpcap.so.$(VERSION)
-+	$(LN) -fs $(DESTDIR)$(libdir)/libpcap.so.$(VERSION) \
-+		$(DESTDIR)$(libdir)/libpcap.so
 +
  uninstall:
- 	rm -f $(DESTDIR)$(libdir)/libpcap.a
+-	rm -f $(DESTDIR)$(libdir)/libpcap.a
++	rm -f $(DESTDIR)$(libdir)/$(LIB)
 +	rm -f $(DESTDIR)$(libdir)/libpcap.so
 +	rm -f $(DESTDIR)$(libdir)/libpcap.so.$(VERSION)
  	rm -f $(DESTDIR)$(includedir)/pcap.h
