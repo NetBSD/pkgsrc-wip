@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/09/22 20:25:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2003/09/22 20:31:47 xtraeme Exp $
 #
 
 DISTNAME=	dgen-sdl-1.23
@@ -9,7 +9,9 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.pknet.com/~joe/dgen-sdl.html
 COMMENT=	Genesis/Megadrive emulator for Unix platforms
 
+.if ${MACHINE_ARCH} == "i386"
 DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+.endif
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
