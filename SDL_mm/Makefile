@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/14 03:19:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/07 13:47:50 lsed Exp $
 #
 
 DISTNAME=	SDLmm-0.1.8
@@ -10,9 +10,8 @@ HOMEPAGE=	http://sdlmm.sourceforge.net/
 COMMENT=	C++ Wrapper for the Simple DirectMedia Layer
 
 USE_BUILDLINK2=	YES
-USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_LIBTOOL=	YES
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
