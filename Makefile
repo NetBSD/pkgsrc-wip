@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.199 2003/06/01 12:29:58 jmmv Exp $
-# $NetBSD: Makefile,v 1.199 2003/06/01 12:29:58 jmmv Exp $
+# $Id: Makefile,v 1.200 2003/06/01 16:01:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.200 2003/06/01 16:01:54 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -96,7 +96,6 @@ SUBDIR+=	libvorbis-nightly
 SUBDIR+=	libwpd
 SUBDIR+=	linux-modutils
 SUBDIR+=	linux-nfs-utils
-SUBDIR+=	linuxsms
 SUBDIR+=	liquidwar
 SUBDIR+=	mailfilter
 SUBDIR+=	maradns
