@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/05/10 08:48:39 xtraeme Exp $
-
-SHA1 (dancer-ircd-1.0.31+maint8-fn6.tar.gz) = 8d67992ff4da97c2b94d7de079eaeb734d2b8b69
-Size (dancer-ircd-1.0.31+maint8-fn6.tar.gz) = 779694 bytes
-SHA1 (patch-aa) = 393181160d1f4e66eee051816a8dc92f2e7c07c4
-SHA1 (patch-ab) = 42dc4f293d5e6095db90baba33afb477bb7dadb7

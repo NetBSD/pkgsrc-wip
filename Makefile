@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1220 2004/04/19 18:15:53 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1220 2004/04/19 18:15:53 xtraeme Exp $
+# $Id: Makefile,v 1.1221 2004/04/19 18:19:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1221 2004/04/19 18:19:30 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -92,7 +92,6 @@ SUBDIR+=	cvsd
 SUBDIR+=	d2x
 SUBDIR+=	d4x
 SUBDIR+=	damageext
-SUBDIR+=	dancer-ircd
 SUBDIR+=	dansguardian
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	dasm
