@@ -1,5 +1,4 @@
-$Id: TODO,v 1.7 2003/12/09 17:10:11 airhead Exp $
+$Id: TODO,v 1.8 2003/12/09 17:37:35 airhead Exp $
 - Perhaps the documentation directory should be ${PREFIX}/share/doc/elvis in
    stead of ${PREFIX}/share/elvis/doc
 - Man pages are too wide
-- Editor starts in color mode, making it unreadable on a dark xterm
