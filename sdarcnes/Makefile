@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/27 06:05:17 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/29 15:18:55 bencollver Exp $
 
 DISTNAME=	dn9b0401
-PKGNAME=	darcnes-20010401
+PKGNAME=	darcnes-svgalib-20010401
 WRKSRC=		${WRKDIR}/darcnes
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.dridus.com/~nyef/darcnes/download/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	collver1@comcast.net
 HOMEPAGE=	http://www.dridus.com/~nyef/darcnes/
-COMMENT=	Multi-system emulator (NES, SMS, GG, PCE, and others)
+COMMENT=	Multi-system emulator, svgalib display
 
 LICENSE=	no-commercial-use
 

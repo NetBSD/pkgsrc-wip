@@ -1,5 +1,5 @@
-DarcNES is a multi-system emulator. Some of the systems it emulates
-are
+DarcNES-svgalib is a multi-system emulator that uses svgalib for display.
+Some of the systems it emulates are
   o Sega Master System, Sega Game Gear (with sound)
   o Nintende Entertainment System (with sound)
   o PC-Engine
