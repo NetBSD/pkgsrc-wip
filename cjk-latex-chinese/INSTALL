@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+
+STAGE=$2
+
+TEXMFMAIN=@TEXMFMAIN@
+SPECIALMAP=${TEXMFMAIN}/fontname/special.map
+
+case ${STAGE} in
+    PRE-INSTALL)
+	;;
+    POST-INSTALL)
+	echo "Edit ${SPECIALMAP}"
+	echo "@c Chinese TrueType fonts by Arphic:"     >> ${SPECIALMAP}
+	echo "bkai00mp        arphic          bkai00mp" >> ${SPECIALMAP}
+	echo "bsmi00lp        arphic          bsmi00lp" >> ${SPECIALMAP}
+	echo "gbsn00lp        arphic          gbsn00lp" >> ${SPECIALMAP}
+	echo "gkai00mp        arphic          gkai00mp" >> ${SPECIALMAP}
+
+	echo "Update ls-R"
+	mktexlsr
+	;;
+    *)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
