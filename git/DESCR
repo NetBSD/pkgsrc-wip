@@ -1,0 +1,4 @@
+Git is an interpreter for the Glulx virtual machine. Its main
+goal in life is to be fast. It's about five times faster than
+Glulxe, and about twice as fast as Frotz (using the same Inform
+source compiled for the Z-machine).

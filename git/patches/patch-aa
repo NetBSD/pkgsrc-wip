@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/05/23 23:22:32 dillo Exp $
+
+--- Makefile.orig	Sat Mar 13 17:07:47 2004
++++ Makefile
+@@ -9,15 +9,15 @@ GLK = cheapglk
+ #GLK = glkterm
+ #GLK = xglk
+ 
+-GLKINCLUDEDIR = ../$(GLK)
+-GLKLIBDIR = ../$(GLK)
+-GLKMAKEFILE = Make.$(GLK)
++GLKINCLUDEDIR = $(PREFIX)/include/glk
++GLKLIBDIR = $(PREFIX)/lib
++GLKMAKEFILE = Make.glk
+ 
+ # -----------------------------------------------------------------
+ # Step 2: pick a C compiler.
+ 
+ # Generic C compiler
+-CC = cc -O2
++#CC = cc -O2
+ OPTIONS =
+ 
+ # Best settings for GCC 2.95. This generates faster code than
+@@ -37,7 +37,7 @@ OPTIONS =
+ # -----------------------------------------------------------------
+ # Step 3: decide where you want to install the compiled executable.
+ 
+-INSTALLDIR = /usr/local/bin
++INSTALLDIR = $(PREFIX)/bin
+ 
+ # -----------------------------------------------------------------
+ # You shouldn't have to change anything from here on down.
+@@ -46,7 +46,7 @@ MAJOR = 1
+ MINOR = 0
+ PATCH = 4
+ 
+-include $(GLKINCLUDEDIR)/$(GLKMAKEFILE)
++include $(BUILDLINK_DIR)/include/glk/$(GLKMAKEFILE)
+ 
+ CFLAGS = $(OPTIONS) -I$(GLKINCLUDEDIR) \
+ 	-DGIT_MAJOR=$(MAJOR) -DGIT_MINOR=$(MINOR) -DGIT_PATCH=$(PATCH)
+@@ -69,7 +69,7 @@ git: $(OBJS)
+ 	$(CC) $(OPTIONS) -o git $(OBJS) $(LIBS)
+ 
+ install: git
+-	cp git $(INSTALLDIR)/git
++	$(BSD_INSTALL_PROGRAM) git $(INSTALLDIR)/git
+ 
+ clean:
+ 	rm -f *~ *.o git
