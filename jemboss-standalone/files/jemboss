@@ -1,0 +1,5 @@
+#! /bin/sh
+# script to remotely run jemboss
+
+cd @EMBOSS_INSTALL@
+./runJemboss.sh

@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
+
+--- configure.orig	Tue Jul 13 15:19:51 2004
++++ configure	Tue Jul 13 15:21:14 2004
+@@ -24137,8 +24137,8 @@
+ 
+ 	  if test "$withval" = "linux" ; then
+ 	        CFLAGS="$CFLAGS -D_REENTRANT"
+-		LDFLAGS="$LDFLAGS -lpthread"
+-		LIBS="$LIBS -lpthread"
++		LDFLAGS="$LDFLAGS R@LIB@ -lpthread"
++		LIBS="$LIBS @LIB@ -lpthread"
+ 	  fi
+ 
+ 	  if test "$withval" = "solaris" ; then

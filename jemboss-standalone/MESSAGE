@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
+
+        The following .jar files were pre-built:
+
+        EMBOSS-2.7.1/jemboss/lib/JembossAlignment.jar
+        EMBOSS-2.7.1/jemboss/lib/jcert.jar
+        EMBOSS-2.7.1/jemboss/lib/jnet.jar
+        EMBOSS-2.7.1/jemboss/lib/jakarta-regexp-1.2.jar
+	EMBOSS-2.7.1/jemboss/lib/axis/axis-ant.jar
+        EMBOSS-2.7.1/jemboss/lib/axis/commons-discovery.jar
+        EMBOSS-2.7.1/jemboss/lib/axis/commons-logging.jar
+        EMBOSS-2.7.1/jemboss/lib/axis/jaxrpc.jar
+        EMBOSS-2.7.1/jemboss/lib/axis/log4j-1.2.4.jar
+        EMBOSS-2.7.1/jemboss/lib/axis/saaj.jar
+        EMBOSS-2.7.1/jemboss/lib/axis/wsdl4j.jar
+
+===========================================================================

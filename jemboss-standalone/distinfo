@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
+
+SHA1 (emboss/emboss-2.9.0/EMBOSS-2.9.0.tar.gz) = 761832b9c6cf1939a769b1f27bc1b7e44cbeab89
+Size (emboss/emboss-2.9.0/EMBOSS-2.9.0.tar.gz) = 14479274 bytes
+SHA1 (patch-aa) = d26246e545f3423d1d72a3d38cca315ab2a0cdf0
+SHA1 (patch-ab) = 3bf34af20cb9b272490a1115186088f61d25d6bf
+SHA1 (patch-ac) = 036d9e334c16bdeda537d0cf0ac030c623a30476
+SHA1 (patch-ad) = 3073554c4687ac0188d77e514849345e3dfa9d2c
+SHA1 (patch-ae) = 776d9ab3efaa93c328e8c24b33e196c4e1fa910f
+SHA1 (patch-ag) = 99b51f1836d482d7d442ba6f96bc32ee26f0e555
+SHA1 (patch-ah) = f125de78e603e71a77736b36c84fba8ed122c24b
+SHA1 (patch-ai) = 331d38fd310c8ae80ddb619d611af8294d081eb0
+SHA1 (patch-aj) = 37d7c60bc6d41755c78f7a131a1a411f63522848
+SHA1 (patch-ak) = 1261ed2d2e0225963a6a720c8457bccf57e965a1
+SHA1 (patch-al) = d3145ceaba67853155d5559858f9f36299818cc0

@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
+
+--- emboss/jembossctl.c.orig	Sat Jul 10 06:00:07 2004
++++ emboss/jembossctl.c	Thu Jul 22 12:27:25 2004
+@@ -112,10 +112,6 @@
+ #define _XOPEN_SOURCE
+ #endif
+ 
+-#if !defined(__ppc__) && !defined(__FreeBSD__)
+-#include <crypt.h>
+-#endif
+-
+ #ifdef N_SHADOW
+ #include <shadow.h>
+ #endif

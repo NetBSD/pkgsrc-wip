@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
+
+--- ajax/ajjava.c.orig	Thu Jul 22 10:44:12 2004
++++ ajax/ajjava.c	Thu Jul 22 10:46:57 2004
+@@ -83,10 +83,6 @@
+ #define _XOPEN_SOURCE
+ #endif
+ 
+-#if !defined(__ppc__) && !defined(__FreeBSD__)
+-#include <crypt.h>
+-#endif
+-
+ 
+ 
+ #ifdef N_SHADOW

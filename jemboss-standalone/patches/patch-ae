@@ -1,0 +1,75 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
+
+--- jemboss/Makefile.in.orig	Thu Jul 15 07:52:05 2004
++++ jemboss/Makefile.in	Thu Jul 22 12:46:20 2004
+@@ -141,7 +141,7 @@
+ SHELL = @SHELL@
+ STRIP = @STRIP@
+ VERSION = @VERSION@
+-XLIB = @XLIB@
++XLIB = @X116@ @XLIB@
+ X_CFLAGS = @X_CFLAGS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_LIBS = @X_LIBS@
+@@ -524,8 +524,8 @@
+ @ISCYGWIN_TRUE@	  export CLASSPATH; \
+ @ISCYGWIN_TRUE@          mv -f ./org/emboss/jemboss/editor/PrintAlignmentImage.java ./org/emboss/jemboss/editor/PrintAlignmentImage.java_o; \
+ @ISCYGWIN_TRUE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java org/emboss/jemboss/draw/PrintDNAImage.java_o; \
+-@ISCYGWIN_TRUE@          javac -d . org/emboss/jemboss/draw/DNADraw.java; \
+-@ISCYGWIN_TRUE@	  javac -d . org/emboss/jemboss/Jemboss.java; \
++@ISCYGWIN_TRUE@          @JAVAC@ -d . org/emboss/jemboss/draw/DNADraw.java; \
++@ISCYGWIN_TRUE@	  @JAVAC@ -d . org/emboss/jemboss/Jemboss.java; \
+ @ISCYGWIN_TRUE@          mv -f ./org/emboss/jemboss/editor/PrintAlignmentImage.java_o ./org/emboss/jemboss/editor/PrintAlignmentImage.java; \
+ @ISCYGWIN_TRUE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java_o org/emboss/jemboss/draw/PrintDNAImage.java; \
+ @ISCYGWIN_TRUE@	  else \
+@@ -533,8 +533,8 @@
+ @ISCYGWIN_TRUE@	  export CLASSPATH; \
+ @ISCYGWIN_TRUE@          mv -f ./org/emboss/jemboss/editor/PrintAlignmentImage.java ./org/emboss/jemboss/editor/PrintAlignmentImage.java_o; \
+ @ISCYGWIN_TRUE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java org/emboss/jemboss/draw/PrintDNAImage.java_o; \
+-@ISCYGWIN_TRUE@          javac -d . org/emboss/jemboss/draw/DNADraw.java; \
+-@ISCYGWIN_TRUE@	  javac -d . org/emboss/jemboss/Jemboss.java; \
++@ISCYGWIN_TRUE@          @JAVAC@ -d . org/emboss/jemboss/draw/DNADraw.java; \
++@ISCYGWIN_TRUE@	  @JAVAC@ -d . org/emboss/jemboss/Jemboss.java; \
+ @ISCYGWIN_TRUE@          mv -f ./org/emboss/jemboss/editor/PrintAlignmentImage.java_o ./org/emboss/jemboss/editor/PrintAlignmentImage.java; \
+ @ISCYGWIN_TRUE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java_o org/emboss/jemboss/draw/PrintDNAImage.java; \
+ @ISCYGWIN_TRUE@	  fi); \
+@@ -547,8 +547,8 @@
+ @ISCYGWIN_FALSE@	  export CLASSPATH; \
+ @ISCYGWIN_FALSE@          mv -f ./org/emboss/jemboss/editor/PrintAlignmentImage.java ./org/emboss/jemboss/editor/PrintAlignmentImage.java_o; \
+ @ISCYGWIN_FALSE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java org/emboss/jemboss/draw/PrintDNAImage.java_o; \
+-@ISCYGWIN_FALSE@          javac -d . org/emboss/jemboss/draw/DNADraw.java; \
+-@ISCYGWIN_FALSE@	  javac -d . org/emboss/jemboss/Jemboss.java; \
++@ISCYGWIN_FALSE@          @JAVAC@ -d . org/emboss/jemboss/draw/DNADraw.java; \
++@ISCYGWIN_FALSE@	  @JAVAC@ -d . org/emboss/jemboss/Jemboss.java; \
+ @ISCYGWIN_FALSE@          mv -f ./org/emboss/jemboss/editor/PrintAlignmentImage.java_o ./org/emboss/jemboss/editor/PrintAlignmentImage.java; \
+ @ISCYGWIN_FALSE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java_o org/emboss/jemboss/draw/PrintDNAImage.java; \
+ @ISCYGWIN_FALSE@	  else \
+@@ -556,20 +556,20 @@
+ @ISCYGWIN_FALSE@	  export CLASSPATH; \
+ @ISCYGWIN_FALSE@          mv -f ./org/emboss/jemboss/editor/PrintAlignmentImage.java ./org/emboss/jemboss/editor/PrintAlignmentImage.java_o; \
+ @ISCYGWIN_FALSE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java org/emboss/jemboss/draw/PrintDNAImage.java_o; \
+-@ISCYGWIN_FALSE@          javac -d . org/emboss/jemboss/draw/DNADraw.java; \
+-@ISCYGWIN_FALSE@	  javac -d . org/emboss/jemboss/Jemboss.java; \
++@ISCYGWIN_FALSE@          @JAVAC@ -d . org/emboss/jemboss/draw/DNADraw.java; \
++@ISCYGWIN_FALSE@	  @JAVAC@ -d . org/emboss/jemboss/Jemboss.java; \
+ @ISCYGWIN_FALSE@          mv -f ./org/emboss/jemboss/editor/PrintAlignmentImage.java_o ./org/emboss/jemboss/editor/PrintAlignmentImage.java; \
+ @ISCYGWIN_FALSE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java_o org/emboss/jemboss/draw/PrintDNAImage.java; \
+ @ISCYGWIN_FALSE@	  fi); \
+ @ISCYGWIN_FALSE@	fi
+ 
+ install-exec-hook:
+-	rm -f $(DESTDIR)$(bindir)/runJemboss.csh; \
+-	echo "#!/bin/csh" >> $(DESTDIR)$(bindir)/runJemboss.csh; \
+-	echo "setenv LD_LIBRARY_PATH $(libdir)" >> $(DESTDIR)$(bindir)/runJemboss.csh; \
+-	echo "setenv CLASSPATH $(prefix)/share/$(PACKAGE)/jemboss/lib/JembossPrintAlignment.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/xerces.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/mail.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/activation.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/jakarta-regexp-1.2.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/jalview.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/jcert.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/jnet.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/jsse.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/axis-ant.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/axis.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/commons-discovery.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/commons-logging.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/jaxrpc.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/log4j-1.2.4.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/saaj.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/wsdl4j.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/grout.jar:$(prefix)/share/$(PACKAGE)/jemboss" >> $(DESTDIR)$(bindir)/runJemboss.csh; \
+-	echo "(cd $(prefix)/share/$(PACKAGE)/jemboss; java org/emboss/jemboss/Jemboss &)" >> $(DESTDIR)$(bindir)/runJemboss.csh; \
+-	chmod 755 $(DESTDIR)$(bindir)/runJemboss.csh;
++#	rm -f $(DESTDIR)$(bindir)/runJemboss.csh; \
++#	echo "#!/bin/csh" >> $(DESTDIR)$(bindir)/runJemboss.csh; \
++#	echo "setenv LD_LIBRARY_PATH $(libdir)" >> $(DESTDIR)$(bindir)/runJemboss.csh; \
++#	echo "setenv CLASSPATH $(prefix)/share/$(PACKAGE)/jemboss/lib/JembossPrintAlignment.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/xerces.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/mail.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/activation.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/jakarta-regexp-1.2.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/jalview.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/jcert.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/jnet.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/jsse.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/axis-ant.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/axis.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/commons-discovery.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/commons-logging.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/jaxrpc.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/log4j-1.2.4.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/saaj.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/axis/wsdl4j.jar:$(prefix)/share/$(PACKAGE)/jemboss/lib/grout.jar:$(prefix)/share/$(PACKAGE)/jemboss" >> $(DESTDIR)$(bindir)/runJemboss.csh; \
++#	echo "(cd $(prefix)/share/$(PACKAGE)/jemboss; java org/emboss/jemboss/Jemboss &)" >> $(DESTDIR)$(bindir)/runJemboss.csh; \
++#	chmod 755 $(DESTDIR)$(bindir)/runJemboss.csh;
+ 
+ # tar to pick up the other directories
+ # then remove any CVS subdirectories
