@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/27 03:33:49 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/09/13 19:42:35 minskim Exp $
 
-SHA1 (libXfont-1.4.1.tar.bz2) = 06baf972a30b813a8c04054936a5d958b86e3e37
-Size (libXfont-1.4.1.tar.bz2) = 366449 bytes
+SHA1 (libXfont-1.4.1.tar.bz2) = ff75f88c8a104cf566c6b67d2e77f46b217eb556
+Size (libXfont-1.4.1.tar.bz2) = 366483 bytes
