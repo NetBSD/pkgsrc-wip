@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/02/25 12:03:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2005/02/25 15:02:13 thomasklausner Exp $
 #
 
 DISTNAME=		darcs-1.0.1
@@ -23,9 +23,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/doc/${PKGBASE}/
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${PREFIX}/share/doc/${PKGBASE}/
 
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/ghc/buildlink3.mk"
-.include "../../math/gmp/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
