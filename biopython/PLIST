@@ -1,0 +1,888 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/18 21:02:38 daprice Exp $
+lib/python2.2/site-packages/Bio/lcc.py
+lib/python2.2/site-packages/Bio/lcc.pyc
+lib/python2.2/site-packages/Bio/EZRetrieve.py
+lib/python2.2/site-packages/Bio/EZRetrieve.pyc
+lib/python2.2/site-packages/Bio/AlignAce/AlignAceStandalone.py
+lib/python2.2/site-packages/Bio/AlignAce/Applications.py
+lib/python2.2/site-packages/Bio/AlignAce/Motif.py
+lib/python2.2/site-packages/Bio/AlignAce/Parser.py
+lib/python2.2/site-packages/Bio/AlignAce/Scanner.py
+lib/python2.2/site-packages/Bio/AlignAce/__init__.py
+lib/python2.2/site-packages/Bio/AlignAce/AlignAceStandalone.pyc
+lib/python2.2/site-packages/Bio/AlignAce/Applications.pyc
+lib/python2.2/site-packages/Bio/AlignAce/Motif.pyc
+lib/python2.2/site-packages/Bio/AlignAce/Parser.pyc
+lib/python2.2/site-packages/Bio/AlignAce/Scanner.pyc
+lib/python2.2/site-packages/Bio/AlignAce/__init__.pyc
+lib/python2.2/site-packages/Bio/Compass/__init__.py
+lib/python2.2/site-packages/Bio/Compass/__init__.pyc
+lib/python2.2/site-packages/Bio/EUtils/DBIdsClient.py
+lib/python2.2/site-packages/Bio/EUtils/Config.py
+lib/python2.2/site-packages/Bio/EUtils/HistoryClient.py
+lib/python2.2/site-packages/Bio/EUtils/Datatypes.py
+lib/python2.2/site-packages/Bio/EUtils/ReseekFile.py
+lib/python2.2/site-packages/Bio/EUtils/Mixins.py
+lib/python2.2/site-packages/Bio/EUtils/MultiDict.py
+lib/python2.2/site-packages/Bio/EUtils/POM.py
+lib/python2.2/site-packages/Bio/EUtils/ThinClient.py
+lib/python2.2/site-packages/Bio/EUtils/__init__.py
+lib/python2.2/site-packages/Bio/EUtils/dtd2py.py
+lib/python2.2/site-packages/Bio/EUtils/parse.py
+lib/python2.2/site-packages/Bio/EUtils/setup.py
+lib/python2.2/site-packages/Bio/EUtils/sourcegen.py
+lib/python2.2/site-packages/Bio/EUtils/DTDs/LinkOut.py
+lib/python2.2/site-packages/Bio/EUtils/DTDs/__init__.py
+lib/python2.2/site-packages/Bio/EUtils/DTDs/eInfo_020511.py
+lib/python2.2/site-packages/Bio/EUtils/DTDs/eLink_020511.py
+lib/python2.2/site-packages/Bio/EUtils/DTDs/ePost_020511.py
+lib/python2.2/site-packages/Bio/EUtils/DTDs/eSearch_020511.py
+lib/python2.2/site-packages/Bio/EUtils/DTDs/eSummary_020511.py
+lib/python2.2/site-packages/Bio/EUtils/DTDs/LinkOut.pyc
+lib/python2.2/site-packages/Bio/EUtils/DTDs/__init__.pyc
+lib/python2.2/site-packages/Bio/EUtils/DTDs/eInfo_020511.pyc
+lib/python2.2/site-packages/Bio/EUtils/DTDs/eLink_020511.pyc
+lib/python2.2/site-packages/Bio/EUtils/DTDs/ePost_020511.pyc
+lib/python2.2/site-packages/Bio/EUtils/DTDs/eSearch_020511.pyc
+lib/python2.2/site-packages/Bio/EUtils/DTDs/eSummary_020511.pyc
+lib/python2.2/site-packages/Bio/EUtils/DTDs/eInfo_020511.dtd
+lib/python2.2/site-packages/Bio/EUtils/DTDs/LinkOut.dtd
+lib/python2.2/site-packages/Bio/EUtils/DTDs/eSearch_020511.dtd
+lib/python2.2/site-packages/Bio/EUtils/DTDs/eLink_020511.dtd
+lib/python2.2/site-packages/Bio/EUtils/DTDs/ePost_020511.dtd
+lib/python2.2/site-packages/Bio/EUtils/DTDs/eSummary_020511.dtd
+lib/python2.2/site-packages/Bio/EUtils/DBIdsClient.pyc
+lib/python2.2/site-packages/Bio/EUtils/Config.pyc
+lib/python2.2/site-packages/Bio/EUtils/HistoryClient.pyc
+lib/python2.2/site-packages/Bio/EUtils/Datatypes.pyc
+lib/python2.2/site-packages/Bio/EUtils/ReseekFile.pyc
+lib/python2.2/site-packages/Bio/EUtils/Mixins.pyc
+lib/python2.2/site-packages/Bio/EUtils/MultiDict.pyc
+lib/python2.2/site-packages/Bio/EUtils/POM.pyc
+lib/python2.2/site-packages/Bio/EUtils/ThinClient.pyc
+lib/python2.2/site-packages/Bio/EUtils/__init__.pyc
+lib/python2.2/site-packages/Bio/EUtils/dtd2py.pyc
+lib/python2.2/site-packages/Bio/EUtils/parse.pyc
+lib/python2.2/site-packages/Bio/EUtils/setup.pyc
+lib/python2.2/site-packages/Bio/EUtils/sourcegen.pyc
+lib/python2.2/site-packages/Bio/LocusLink/locus_format.py
+lib/python2.2/site-packages/Bio/LocusLink/__init__.py
+lib/python2.2/site-packages/Bio/LocusLink/web_parse.py
+lib/python2.2/site-packages/Bio/LocusLink/locus_format.pyc
+lib/python2.2/site-packages/Bio/LocusLink/__init__.pyc
+lib/python2.2/site-packages/Bio/LocusLink/web_parse.pyc
+lib/python2.2/site-packages/Bio/NMR/NOEtools.py
+lib/python2.2/site-packages/Bio/NMR/__init__.py
+lib/python2.2/site-packages/Bio/NMR/xpktools.py
+lib/python2.2/site-packages/Bio/NMR/NOEtools.pyc
+lib/python2.2/site-packages/Bio/NMR/__init__.pyc
+lib/python2.2/site-packages/Bio/NMR/xpktools.pyc
+lib/python2.2/site-packages/Bio/Sequencing/__init__.py
+lib/python2.2/site-packages/Bio/Sequencing/Ace.py
+lib/python2.2/site-packages/Bio/Sequencing/Phd.py
+lib/python2.2/site-packages/Bio/Sequencing/__init__.pyc
+lib/python2.2/site-packages/Bio/Sequencing/Ace.pyc
+lib/python2.2/site-packages/Bio/Sequencing/Phd.pyc
+lib/python2.2/site-packages/Bio/Statistics/__init__.py
+lib/python2.2/site-packages/Bio/Statistics/lowess.py
+lib/python2.2/site-packages/Bio/Statistics/__init__.pyc
+lib/python2.2/site-packages/Bio/Statistics/lowess.pyc
+lib/python2.2/site-packages/Bio/Wise/__init__.py
+lib/python2.2/site-packages/Bio/Wise/dnal.py
+lib/python2.2/site-packages/Bio/Wise/psw.py
+lib/python2.2/site-packages/Bio/Wise/__init__.pyc
+lib/python2.2/site-packages/Bio/Wise/dnal.pyc
+lib/python2.2/site-packages/Bio/Wise/psw.pyc
+lib/python2.2/site-packages/Bio/Affy/CelFile.py
+lib/python2.2/site-packages/Bio/Affy/__init__.py
+lib/python2.2/site-packages/Bio/Affy/_cel.so
+lib/python2.2/site-packages/Bio/Affy/CelFile.pyc
+lib/python2.2/site-packages/Bio/Affy/__init__.pyc
+lib/python2.2/site-packages/Bio/Cluster/__init__.py
+lib/python2.2/site-packages/Bio/Cluster/data.py
+lib/python2.2/site-packages/Bio/Cluster/cluster.so
+lib/python2.2/site-packages/Bio/Cluster/__init__.pyc
+lib/python2.2/site-packages/Bio/Cluster/data.pyc
+lib/python2.2/site-packages/Bio/Ais/__init__.py
+lib/python2.2/site-packages/Bio/Ais/__init__.pyc
+lib/python2.2/site-packages/Bio/Ais/example_ais2.py
+lib/python2.2/site-packages/Bio/Ais/example_ais2.pyc
+lib/python2.2/site-packages/Bio/Align/AlignInfo.py
+lib/python2.2/site-packages/Bio/Align/AlignInfo.pyc
+lib/python2.2/site-packages/Bio/Align/FormatConvert.py
+lib/python2.2/site-packages/Bio/Align/FormatConvert.pyc
+lib/python2.2/site-packages/Bio/Align/Generic.py
+lib/python2.2/site-packages/Bio/Align/Generic.pyc
+lib/python2.2/site-packages/Bio/Align/__init__.py
+lib/python2.2/site-packages/Bio/Align/__init__.pyc
+lib/python2.2/site-packages/Bio/Alphabet/IUPAC.py
+lib/python2.2/site-packages/Bio/Alphabet/IUPAC.pyc
+lib/python2.2/site-packages/Bio/Alphabet/Reduced.py
+lib/python2.2/site-packages/Bio/Alphabet/Reduced.pyc
+lib/python2.2/site-packages/Bio/Alphabet/__init__.py
+lib/python2.2/site-packages/Bio/Alphabet/__init__.pyc
+lib/python2.2/site-packages/Bio/Application/__init__.py
+lib/python2.2/site-packages/Bio/Application/__init__.pyc
+lib/python2.2/site-packages/Bio/Blast/Applications.py
+lib/python2.2/site-packages/Bio/Blast/Applications.pyc
+lib/python2.2/site-packages/Bio/Blast/NCBIStandalone.py
+lib/python2.2/site-packages/Bio/Blast/NCBIStandalone.pyc
+lib/python2.2/site-packages/Bio/Blast/NCBIWWW.py
+lib/python2.2/site-packages/Bio/Blast/NCBIWWW.pyc
+lib/python2.2/site-packages/Bio/Blast/Record.py
+lib/python2.2/site-packages/Bio/Blast/Record.pyc
+lib/python2.2/site-packages/Bio/Blast/__init__.py
+lib/python2.2/site-packages/Bio/Blast/__init__.pyc
+lib/python2.2/site-packages/Bio/Blast/NCBIXML.py
+lib/python2.2/site-packages/Bio/Blast/NCBIXML.pyc
+lib/python2.2/site-packages/Bio/Blast/ParseBlastTable.py
+lib/python2.2/site-packages/Bio/Blast/ParseBlastTable.pyc
+lib/python2.2/site-packages/Bio/CDD/Record.py
+lib/python2.2/site-packages/Bio/CDD/Record.pyc
+lib/python2.2/site-packages/Bio/CDD/__init__.py
+lib/python2.2/site-packages/Bio/CDD/__init__.pyc
+lib/python2.2/site-packages/Bio/CDD/cdd_format.py
+lib/python2.2/site-packages/Bio/CDD/cdd_format.pyc
+lib/python2.2/site-packages/Bio/Clustalw/__init__.py
+lib/python2.2/site-packages/Bio/Clustalw/__init__.pyc
+lib/python2.2/site-packages/Bio/Clustalw/clustal_format.py
+lib/python2.2/site-packages/Bio/Clustalw/clustal_format.pyc
+lib/python2.2/site-packages/Bio/Crystal/__init__.py
+lib/python2.2/site-packages/Bio/Crystal/__init__.pyc
+lib/python2.2/site-packages/Bio/DBXRef.py
+lib/python2.2/site-packages/Bio/DBXRef.pyc
+lib/python2.2/site-packages/Bio/Data/CodonTable.py
+lib/python2.2/site-packages/Bio/Data/CodonTable.pyc
+lib/python2.2/site-packages/Bio/Data/IUPACData.py
+lib/python2.2/site-packages/Bio/Data/IUPACData.pyc
+lib/python2.2/site-packages/Bio/Data/__init__.py
+lib/python2.2/site-packages/Bio/Data/__init__.pyc
+lib/python2.2/site-packages/Bio/Decode.py
+lib/python2.2/site-packages/Bio/Decode.pyc
+lib/python2.2/site-packages/Bio/DocSQL.py
+lib/python2.2/site-packages/Bio/DocSQL.pyc
+lib/python2.2/site-packages/Bio/ECell/Record.py
+lib/python2.2/site-packages/Bio/ECell/Record.pyc
+lib/python2.2/site-packages/Bio/ECell/__init__.py
+lib/python2.2/site-packages/Bio/ECell/__init__.pyc
+lib/python2.2/site-packages/Bio/ECell/ecell_format.py
+lib/python2.2/site-packages/Bio/ECell/ecell_format.pyc
+lib/python2.2/site-packages/Bio/Emboss/Applications.py
+lib/python2.2/site-packages/Bio/Emboss/Applications.pyc
+lib/python2.2/site-packages/Bio/Emboss/Primer.py
+lib/python2.2/site-packages/Bio/Emboss/Primer.pyc
+lib/python2.2/site-packages/Bio/Emboss/__init__.py
+lib/python2.2/site-packages/Bio/Emboss/__init__.pyc
+lib/python2.2/site-packages/Bio/Emboss/primer3_format.py
+lib/python2.2/site-packages/Bio/Emboss/primer3_format.pyc
+lib/python2.2/site-packages/Bio/Emboss/primersearch_format.py
+lib/python2.2/site-packages/Bio/Emboss/primersearch_format.pyc
+lib/python2.2/site-packages/Bio/Encodings/IUPACEncoding.py
+lib/python2.2/site-packages/Bio/Encodings/IUPACEncoding.pyc
+lib/python2.2/site-packages/Bio/Encodings/__init__.py
+lib/python2.2/site-packages/Bio/Encodings/__init__.pyc
+lib/python2.2/site-packages/Bio/Enzyme/__init__.py
+lib/python2.2/site-packages/Bio/Enzyme/__init__.pyc
+lib/python2.2/site-packages/Bio/FSSP/FSSPTools.py
+lib/python2.2/site-packages/Bio/FSSP/FSSPTools.pyc
+lib/python2.2/site-packages/Bio/FSSP/__init__.py
+lib/python2.2/site-packages/Bio/FSSP/__init__.pyc
+lib/python2.2/site-packages/Bio/FSSP/fssp_rec.py
+lib/python2.2/site-packages/Bio/FSSP/fssp_rec.pyc
+lib/python2.2/site-packages/Bio/Fasta/FastaAlign.py
+lib/python2.2/site-packages/Bio/Fasta/FastaAlign.pyc
+lib/python2.2/site-packages/Bio/Fasta/__init__.py
+lib/python2.2/site-packages/Bio/Fasta/__init__.pyc
+lib/python2.2/site-packages/Bio/File.py
+lib/python2.2/site-packages/Bio/File.pyc
+lib/python2.2/site-packages/Bio/FilteredReader.py
+lib/python2.2/site-packages/Bio/FilteredReader.pyc
+lib/python2.2/site-packages/Bio/FormatIO.py
+lib/python2.2/site-packages/Bio/FormatIO.pyc
+lib/python2.2/site-packages/Bio/GA/Crossover/General.py
+lib/python2.2/site-packages/Bio/GA/Crossover/General.pyc
+lib/python2.2/site-packages/Bio/GA/Crossover/GeneralPoint.py
+lib/python2.2/site-packages/Bio/GA/Crossover/GeneralPoint.pyc
+lib/python2.2/site-packages/Bio/GA/Crossover/Point.py
+lib/python2.2/site-packages/Bio/GA/Crossover/Point.pyc
+lib/python2.2/site-packages/Bio/GA/Crossover/TwoPoint.py
+lib/python2.2/site-packages/Bio/GA/Crossover/TwoPoint.pyc
+lib/python2.2/site-packages/Bio/GA/Crossover/Uniform.py
+lib/python2.2/site-packages/Bio/GA/Crossover/Uniform.pyc
+lib/python2.2/site-packages/Bio/GA/Crossover/__init__.py
+lib/python2.2/site-packages/Bio/GA/Crossover/__init__.pyc
+lib/python2.2/site-packages/Bio/GA/Evolver.py
+lib/python2.2/site-packages/Bio/GA/Evolver.pyc
+lib/python2.2/site-packages/Bio/GA/Mutation/General.py
+lib/python2.2/site-packages/Bio/GA/Mutation/General.pyc
+lib/python2.2/site-packages/Bio/GA/Mutation/Simple.py
+lib/python2.2/site-packages/Bio/GA/Mutation/Simple.pyc
+lib/python2.2/site-packages/Bio/GA/Mutation/__init__.py
+lib/python2.2/site-packages/Bio/GA/Mutation/__init__.pyc
+lib/python2.2/site-packages/Bio/GA/Organism.py
+lib/python2.2/site-packages/Bio/GA/Organism.pyc
+lib/python2.2/site-packages/Bio/GA/Repair/Stabilizing.py
+lib/python2.2/site-packages/Bio/GA/Repair/Stabilizing.pyc
+lib/python2.2/site-packages/Bio/GA/Repair/__init__.py
+lib/python2.2/site-packages/Bio/GA/Repair/__init__.pyc
+lib/python2.2/site-packages/Bio/GA/Selection/Abstract.py
+lib/python2.2/site-packages/Bio/GA/Selection/Abstract.pyc
+lib/python2.2/site-packages/Bio/GA/Selection/Diversity.py
+lib/python2.2/site-packages/Bio/GA/Selection/Diversity.pyc
+lib/python2.2/site-packages/Bio/GA/Selection/RouletteWheel.py
+lib/python2.2/site-packages/Bio/GA/Selection/RouletteWheel.pyc
+lib/python2.2/site-packages/Bio/GA/Selection/Tournament.py
+lib/python2.2/site-packages/Bio/GA/Selection/Tournament.pyc
+lib/python2.2/site-packages/Bio/GA/Selection/__init__.py
+lib/python2.2/site-packages/Bio/GA/Selection/__init__.pyc
+lib/python2.2/site-packages/Bio/GA/__init__.py
+lib/python2.2/site-packages/Bio/GA/__init__.pyc
+lib/python2.2/site-packages/Bio/GFF/GenericTools.py
+lib/python2.2/site-packages/Bio/GFF/GenericTools.pyc
+lib/python2.2/site-packages/Bio/GFF/__init__.py
+lib/python2.2/site-packages/Bio/GFF/__init__.pyc
+lib/python2.2/site-packages/Bio/GFF/binning.py
+lib/python2.2/site-packages/Bio/GFF/binning.pyc
+lib/python2.2/site-packages/Bio/GFF/easy.py
+lib/python2.2/site-packages/Bio/GFF/easy.pyc
+lib/python2.2/site-packages/Bio/GenBank/LocationParser.py
+lib/python2.2/site-packages/Bio/GenBank/LocationParser.pyc
+lib/python2.2/site-packages/Bio/GenBank/Record.py
+lib/python2.2/site-packages/Bio/GenBank/Record.pyc
+lib/python2.2/site-packages/Bio/GenBank/__init__.py
+lib/python2.2/site-packages/Bio/GenBank/__init__.pyc
+lib/python2.2/site-packages/Bio/GenBank/utils.py
+lib/python2.2/site-packages/Bio/GenBank/utils.pyc
+lib/python2.2/site-packages/Bio/Geo/Record.py
+lib/python2.2/site-packages/Bio/Geo/Record.pyc
+lib/python2.2/site-packages/Bio/Geo/__init__.py
+lib/python2.2/site-packages/Bio/Geo/__init__.pyc
+lib/python2.2/site-packages/Bio/Geo/geo_format.py
+lib/python2.2/site-packages/Bio/Geo/geo_format.pyc
+lib/python2.2/site-packages/Bio/Gobase/__init__.py
+lib/python2.2/site-packages/Bio/Gobase/__init__.pyc
+lib/python2.2/site-packages/Bio/Graphics/BasicChromosome.py
+lib/python2.2/site-packages/Bio/Graphics/BasicChromosome.pyc
+lib/python2.2/site-packages/Bio/Graphics/Comparative.py
+lib/python2.2/site-packages/Bio/Graphics/Comparative.pyc
+lib/python2.2/site-packages/Bio/Graphics/DisplayRepresentation.py
+lib/python2.2/site-packages/Bio/Graphics/DisplayRepresentation.pyc
+lib/python2.2/site-packages/Bio/Graphics/Distribution.py
+lib/python2.2/site-packages/Bio/Graphics/Distribution.pyc
+lib/python2.2/site-packages/Bio/Graphics/__init__.py
+lib/python2.2/site-packages/Bio/Graphics/__init__.pyc
+lib/python2.2/site-packages/Bio/HMM/DynamicProgramming.py
+lib/python2.2/site-packages/Bio/HMM/DynamicProgramming.pyc
+lib/python2.2/site-packages/Bio/HMM/MarkovModel.py
+lib/python2.2/site-packages/Bio/HMM/MarkovModel.pyc
+lib/python2.2/site-packages/Bio/HMM/Trainer.py
+lib/python2.2/site-packages/Bio/HMM/Trainer.pyc
+lib/python2.2/site-packages/Bio/HMM/Utilities.py
+lib/python2.2/site-packages/Bio/HMM/Utilities.pyc
+lib/python2.2/site-packages/Bio/HMM/__init__.py
+lib/python2.2/site-packages/Bio/HMM/__init__.pyc
+lib/python2.2/site-packages/Bio/HotRand.py
+lib/python2.2/site-packages/Bio/HotRand.pyc
+lib/python2.2/site-packages/Bio/Index.py
+lib/python2.2/site-packages/Bio/Index.pyc
+lib/python2.2/site-packages/Bio/IntelliGenetics/Record.py
+lib/python2.2/site-packages/Bio/IntelliGenetics/Record.pyc
+lib/python2.2/site-packages/Bio/IntelliGenetics/__init__.py
+lib/python2.2/site-packages/Bio/IntelliGenetics/__init__.pyc
+lib/python2.2/site-packages/Bio/IntelliGenetics/intelligenetics_format.py
+lib/python2.2/site-packages/Bio/IntelliGenetics/intelligenetics_format.pyc
+lib/python2.2/site-packages/Bio/InterPro/__init__.py
+lib/python2.2/site-packages/Bio/InterPro/__init__.pyc
+lib/python2.2/site-packages/Bio/KDTree/__init__.py
+lib/python2.2/site-packages/Bio/KDTree/__init__.pyc
+lib/python2.2/site-packages/Bio/KDTree/CKDTree.py
+lib/python2.2/site-packages/Bio/KDTree/CKDTree.pyc
+lib/python2.2/site-packages/Bio/KDTree/KDTree.py
+lib/python2.2/site-packages/Bio/KDTree/KDTree.pyc
+lib/python2.2/site-packages/Bio/KDTree/_CKDTree.so
+lib/python2.2/site-packages/Bio/KEGG/Compound/__init__.py
+lib/python2.2/site-packages/Bio/KEGG/Compound/__init__.pyc
+lib/python2.2/site-packages/Bio/KEGG/Compound/compound_format.py
+lib/python2.2/site-packages/Bio/KEGG/Compound/compound_format.pyc
+lib/python2.2/site-packages/Bio/KEGG/Enzyme/__init__.py
+lib/python2.2/site-packages/Bio/KEGG/Enzyme/__init__.pyc
+lib/python2.2/site-packages/Bio/KEGG/Enzyme/enzyme_format.py
+lib/python2.2/site-packages/Bio/KEGG/Enzyme/enzyme_format.pyc
+lib/python2.2/site-packages/Bio/KEGG/Map/__init__.py
+lib/python2.2/site-packages/Bio/KEGG/Map/__init__.pyc
+lib/python2.2/site-packages/Bio/KEGG/Map/map_format.py
+lib/python2.2/site-packages/Bio/KEGG/Map/map_format.pyc
+lib/python2.2/site-packages/Bio/KEGG/__init__.py
+lib/python2.2/site-packages/Bio/KEGG/__init__.pyc
+lib/python2.2/site-packages/Bio/Kabat/Record.py
+lib/python2.2/site-packages/Bio/Kabat/Record.pyc
+lib/python2.2/site-packages/Bio/Kabat/__init__.py
+lib/python2.2/site-packages/Bio/Kabat/__init__.pyc
+lib/python2.2/site-packages/Bio/Kabat/kabat_format.py
+lib/python2.2/site-packages/Bio/Kabat/kabat_format.pyc
+lib/python2.2/site-packages/Bio/LogisticRegression.py
+lib/python2.2/site-packages/Bio/LogisticRegression.pyc
+lib/python2.2/site-packages/Bio/MarkovModel.py
+lib/python2.2/site-packages/Bio/MarkovModel.pyc
+lib/python2.2/site-packages/Bio/MarkupEditor.py
+lib/python2.2/site-packages/Bio/MarkupEditor.pyc
+lib/python2.2/site-packages/Bio/MaxEntropy.py
+lib/python2.2/site-packages/Bio/MaxEntropy.pyc
+lib/python2.2/site-packages/Bio/Medline/NLMMedlineXML.py
+lib/python2.2/site-packages/Bio/Medline/NLMMedlineXML.pyc
+lib/python2.2/site-packages/Bio/Medline/__init__.py
+lib/python2.2/site-packages/Bio/Medline/__init__.pyc
+lib/python2.2/site-packages/Bio/Medline/nlmmedline_001211_format.py
+lib/python2.2/site-packages/Bio/Medline/nlmmedline_001211_format.pyc
+lib/python2.2/site-packages/Bio/Medline/nlmmedline_010319_format.py
+lib/python2.2/site-packages/Bio/Medline/nlmmedline_010319_format.pyc
+lib/python2.2/site-packages/Bio/Medline/nlmmedline_011101_format.py
+lib/python2.2/site-packages/Bio/Medline/nlmmedline_011101_format.pyc
+lib/python2.2/site-packages/Bio/MetaTool/Input.py
+lib/python2.2/site-packages/Bio/MetaTool/Input.pyc
+lib/python2.2/site-packages/Bio/MetaTool/Record.py
+lib/python2.2/site-packages/Bio/MetaTool/Record.pyc
+lib/python2.2/site-packages/Bio/MetaTool/__init__.py
+lib/python2.2/site-packages/Bio/MetaTool/__init__.pyc
+lib/python2.2/site-packages/Bio/MetaTool/metatool_format.py
+lib/python2.2/site-packages/Bio/MetaTool/metatool_format.pyc
+lib/python2.2/site-packages/Bio/Mindy/BaseDB.py
+lib/python2.2/site-packages/Bio/Mindy/BaseDB.pyc
+lib/python2.2/site-packages/Bio/Mindy/BerkeleyDB.py
+lib/python2.2/site-packages/Bio/Mindy/BerkeleyDB.pyc
+lib/python2.2/site-packages/Bio/Mindy/FlatDB.py
+lib/python2.2/site-packages/Bio/Mindy/FlatDB.pyc
+lib/python2.2/site-packages/Bio/Mindy/Location.py
+lib/python2.2/site-packages/Bio/Mindy/Location.pyc
+lib/python2.2/site-packages/Bio/Mindy/SimpleSeqRecord.py
+lib/python2.2/site-packages/Bio/Mindy/SimpleSeqRecord.pyc
+lib/python2.2/site-packages/Bio/Mindy/XPath.py
+lib/python2.2/site-packages/Bio/Mindy/XPath.pyc
+lib/python2.2/site-packages/Bio/Mindy/__init__.py
+lib/python2.2/site-packages/Bio/Mindy/__init__.pyc
+lib/python2.2/site-packages/Bio/Mindy/compression.py
+lib/python2.2/site-packages/Bio/Mindy/compression.pyc
+lib/python2.2/site-packages/Bio/MultiProc/Scheduler.py
+lib/python2.2/site-packages/Bio/MultiProc/Scheduler.pyc
+lib/python2.2/site-packages/Bio/MultiProc/Task.py
+lib/python2.2/site-packages/Bio/MultiProc/Task.pyc
+lib/python2.2/site-packages/Bio/MultiProc/__init__.py
+lib/python2.2/site-packages/Bio/MultiProc/__init__.pyc
+lib/python2.2/site-packages/Bio/MultiProc/copen.py
+lib/python2.2/site-packages/Bio/MultiProc/copen.pyc
+lib/python2.2/site-packages/Bio/NBRF/Record.py
+lib/python2.2/site-packages/Bio/NBRF/Record.pyc
+lib/python2.2/site-packages/Bio/NBRF/ValSeq.py
+lib/python2.2/site-packages/Bio/NBRF/ValSeq.pyc
+lib/python2.2/site-packages/Bio/NBRF/__init__.py
+lib/python2.2/site-packages/Bio/NBRF/__init__.pyc
+lib/python2.2/site-packages/Bio/NBRF/nbrf_format.py
+lib/python2.2/site-packages/Bio/NBRF/nbrf_format.pyc
+lib/python2.2/site-packages/Bio/NaiveBayes.py
+lib/python2.2/site-packages/Bio/NaiveBayes.pyc
+lib/python2.2/site-packages/Bio/Ndb/__init__.py
+lib/python2.2/site-packages/Bio/Ndb/__init__.pyc
+lib/python2.2/site-packages/Bio/NetCatch.py
+lib/python2.2/site-packages/Bio/NetCatch.pyc
+lib/python2.2/site-packages/Bio/NeuralNetwork/BackPropagation/Layer.py
+lib/python2.2/site-packages/Bio/NeuralNetwork/BackPropagation/Layer.pyc
+lib/python2.2/site-packages/Bio/NeuralNetwork/BackPropagation/Network.py
+lib/python2.2/site-packages/Bio/NeuralNetwork/BackPropagation/Network.pyc
+lib/python2.2/site-packages/Bio/NeuralNetwork/BackPropagation/__init__.py
+lib/python2.2/site-packages/Bio/NeuralNetwork/BackPropagation/__init__.pyc
+lib/python2.2/site-packages/Bio/NeuralNetwork/Gene/Motif.py
+lib/python2.2/site-packages/Bio/NeuralNetwork/Gene/Motif.pyc
+lib/python2.2/site-packages/Bio/NeuralNetwork/Gene/Pattern.py
+lib/python2.2/site-packages/Bio/NeuralNetwork/Gene/Pattern.pyc
+lib/python2.2/site-packages/Bio/NeuralNetwork/Gene/Schema.py
+lib/python2.2/site-packages/Bio/NeuralNetwork/Gene/Schema.pyc
+lib/python2.2/site-packages/Bio/NeuralNetwork/Gene/Signature.py
+lib/python2.2/site-packages/Bio/NeuralNetwork/Gene/Signature.pyc
+lib/python2.2/site-packages/Bio/NeuralNetwork/Gene/__init__.py
+lib/python2.2/site-packages/Bio/NeuralNetwork/Gene/__init__.pyc
+lib/python2.2/site-packages/Bio/NeuralNetwork/StopTraining.py
+lib/python2.2/site-packages/Bio/NeuralNetwork/StopTraining.pyc
+lib/python2.2/site-packages/Bio/NeuralNetwork/Training.py
+lib/python2.2/site-packages/Bio/NeuralNetwork/Training.pyc
+lib/python2.2/site-packages/Bio/NeuralNetwork/__init__.py
+lib/python2.2/site-packages/Bio/NeuralNetwork/__init__.pyc
+lib/python2.2/site-packages/Bio/PDB/mmCIF/__init__.py
+lib/python2.2/site-packages/Bio/PDB/mmCIF/__init__.pyc
+lib/python2.2/site-packages/Bio/PDB/mmCIF/MMCIFlex.so
+lib/python2.2/site-packages/Bio/PDB/DSSP.py
+lib/python2.2/site-packages/Bio/PDB/DSSP.pyc
+lib/python2.2/site-packages/Bio/PDB/FragmentMapper.py
+lib/python2.2/site-packages/Bio/PDB/FragmentMapper.pyc
+lib/python2.2/site-packages/Bio/PDB/HSExposure.py
+lib/python2.2/site-packages/Bio/PDB/HSExposure.pyc
+lib/python2.2/site-packages/Bio/PDB/MMCIF2Dict.py
+lib/python2.2/site-packages/Bio/PDB/MMCIF2Dict.pyc
+lib/python2.2/site-packages/Bio/PDB/MMCIFParser.py
+lib/python2.2/site-packages/Bio/PDB/MMCIFParser.pyc
+lib/python2.2/site-packages/Bio/PDB/PDBList.py
+lib/python2.2/site-packages/Bio/PDB/PDBList.pyc
+lib/python2.2/site-packages/Bio/PDB/ResidueDepth.py
+lib/python2.2/site-packages/Bio/PDB/ResidueDepth.pyc
+lib/python2.2/site-packages/Bio/PDB/StructureAlignment.py
+lib/python2.2/site-packages/Bio/PDB/StructureAlignment.pyc
+lib/python2.2/site-packages/Bio/PDB/Superimposer.py
+lib/python2.2/site-packages/Bio/PDB/Superimposer.pyc
+lib/python2.2/site-packages/Bio/PDB/Vector.py
+lib/python2.2/site-packages/Bio/PDB/Vector.pyc
+lib/python2.2/site-packages/Bio/PDB/parse_pdb_header.py
+lib/python2.2/site-packages/Bio/PDB/parse_pdb_header.pyc
+lib/python2.2/site-packages/Bio/PDB/Atom.py
+lib/python2.2/site-packages/Bio/PDB/Atom.pyc
+lib/python2.2/site-packages/Bio/PDB/Chain.py
+lib/python2.2/site-packages/Bio/PDB/Chain.pyc
+lib/python2.2/site-packages/Bio/PDB/Entity.py
+lib/python2.2/site-packages/Bio/PDB/Entity.pyc
+lib/python2.2/site-packages/Bio/PDB/Model.py
+lib/python2.2/site-packages/Bio/PDB/Model.pyc
+lib/python2.2/site-packages/Bio/PDB/NeighborSearch.py
+lib/python2.2/site-packages/Bio/PDB/NeighborSearch.pyc
+lib/python2.2/site-packages/Bio/PDB/PDBExceptions.py
+lib/python2.2/site-packages/Bio/PDB/PDBExceptions.pyc
+lib/python2.2/site-packages/Bio/PDB/PDBIO.py
+lib/python2.2/site-packages/Bio/PDB/PDBIO.pyc
+lib/python2.2/site-packages/Bio/PDB/PDBParser.py
+lib/python2.2/site-packages/Bio/PDB/PDBParser.pyc
+lib/python2.2/site-packages/Bio/PDB/Polypeptide.py
+lib/python2.2/site-packages/Bio/PDB/Polypeptide.pyc
+lib/python2.2/site-packages/Bio/PDB/Residue.py
+lib/python2.2/site-packages/Bio/PDB/Residue.pyc
+lib/python2.2/site-packages/Bio/PDB/Selection.py
+lib/python2.2/site-packages/Bio/PDB/Selection.pyc
+lib/python2.2/site-packages/Bio/PDB/Structure.py
+lib/python2.2/site-packages/Bio/PDB/Structure.pyc
+lib/python2.2/site-packages/Bio/PDB/StructureBuilder.py
+lib/python2.2/site-packages/Bio/PDB/StructureBuilder.pyc
+lib/python2.2/site-packages/Bio/PDB/__init__.py
+lib/python2.2/site-packages/Bio/PDB/__init__.pyc
+lib/python2.2/site-packages/Bio/ParserSupport.py
+lib/python2.2/site-packages/Bio/ParserSupport.pyc
+lib/python2.2/site-packages/Bio/Parsers/__init__.py
+lib/python2.2/site-packages/Bio/Parsers/__init__.pyc
+lib/python2.2/site-packages/Bio/Parsers/spark.py
+lib/python2.2/site-packages/Bio/Parsers/spark.pyc
+lib/python2.2/site-packages/Bio/Pathway/Rep/Graph.py
+lib/python2.2/site-packages/Bio/Pathway/Rep/Graph.pyc
+lib/python2.2/site-packages/Bio/Pathway/Rep/HashSet.py
+lib/python2.2/site-packages/Bio/Pathway/Rep/HashSet.pyc
+lib/python2.2/site-packages/Bio/Pathway/Rep/MultiGraph.py
+lib/python2.2/site-packages/Bio/Pathway/Rep/MultiGraph.pyc
+lib/python2.2/site-packages/Bio/Pathway/Rep/__init__.py
+lib/python2.2/site-packages/Bio/Pathway/Rep/__init__.pyc
+lib/python2.2/site-packages/Bio/Pathway/__init__.py
+lib/python2.2/site-packages/Bio/Pathway/__init__.pyc
+lib/python2.2/site-packages/Bio/PropertyManager.py
+lib/python2.2/site-packages/Bio/PropertyManager.pyc
+lib/python2.2/site-packages/Bio/Prosite/Pattern.py
+lib/python2.2/site-packages/Bio/Prosite/Pattern.pyc
+lib/python2.2/site-packages/Bio/Prosite/Prodoc.py
+lib/python2.2/site-packages/Bio/Prosite/Prodoc.pyc
+lib/python2.2/site-packages/Bio/Prosite/__init__.py
+lib/python2.2/site-packages/Bio/Prosite/__init__.pyc
+lib/python2.2/site-packages/Bio/PubMed.py
+lib/python2.2/site-packages/Bio/PubMed.pyc
+lib/python2.2/site-packages/Bio/Rebase/__init__.py
+lib/python2.2/site-packages/Bio/Rebase/__init__.pyc
+lib/python2.2/site-packages/Bio/RecordFile.py
+lib/python2.2/site-packages/Bio/RecordFile.pyc
+lib/python2.2/site-packages/Bio/ReseekFile.py
+lib/python2.2/site-packages/Bio/ReseekFile.pyc
+lib/python2.2/site-packages/Bio/SCOP/Cla.py
+lib/python2.2/site-packages/Bio/SCOP/Cla.pyc
+lib/python2.2/site-packages/Bio/SCOP/Des.py
+lib/python2.2/site-packages/Bio/SCOP/Des.pyc
+lib/python2.2/site-packages/Bio/SCOP/Dom.py
+lib/python2.2/site-packages/Bio/SCOP/Dom.pyc
+lib/python2.2/site-packages/Bio/SCOP/FileIndex.py
+lib/python2.2/site-packages/Bio/SCOP/FileIndex.pyc
+lib/python2.2/site-packages/Bio/SCOP/Hie.py
+lib/python2.2/site-packages/Bio/SCOP/Hie.pyc
+lib/python2.2/site-packages/Bio/SCOP/Raf.py
+lib/python2.2/site-packages/Bio/SCOP/Raf.pyc
+lib/python2.2/site-packages/Bio/SCOP/Residues.py
+lib/python2.2/site-packages/Bio/SCOP/Residues.pyc
+lib/python2.2/site-packages/Bio/SCOP/__init__.py
+lib/python2.2/site-packages/Bio/SCOP/__init__.pyc
+lib/python2.2/site-packages/Bio/SGMLExtractor.py
+lib/python2.2/site-packages/Bio/SGMLExtractor.pyc
+lib/python2.2/site-packages/Bio/SVDSuperimposer/SVDSuperimposer.py
+lib/python2.2/site-packages/Bio/SVDSuperimposer/SVDSuperimposer.pyc
+lib/python2.2/site-packages/Bio/SVDSuperimposer/__init__.py
+lib/python2.2/site-packages/Bio/SVDSuperimposer/__init__.pyc
+lib/python2.2/site-packages/Bio/SVM.py
+lib/python2.2/site-packages/Bio/SVM.pyc
+lib/python2.2/site-packages/Bio/Saf/Record.py
+lib/python2.2/site-packages/Bio/Saf/Record.pyc
+lib/python2.2/site-packages/Bio/Saf/__init__.py
+lib/python2.2/site-packages/Bio/Saf/__init__.pyc
+lib/python2.2/site-packages/Bio/Saf/saf_format.py
+lib/python2.2/site-packages/Bio/Saf/saf_format.pyc
+lib/python2.2/site-packages/Bio/Search.py
+lib/python2.2/site-packages/Bio/Search.pyc
+lib/python2.2/site-packages/Bio/Seq.py
+lib/python2.2/site-packages/Bio/Seq.pyc
+lib/python2.2/site-packages/Bio/SeqFeature.py
+lib/python2.2/site-packages/Bio/SeqFeature.pyc
+lib/python2.2/site-packages/Bio/SeqIO/FASTA.py
+lib/python2.2/site-packages/Bio/SeqIO/FASTA.pyc
+lib/python2.2/site-packages/Bio/SeqIO/__init__.py
+lib/python2.2/site-packages/Bio/SeqIO/__init__.pyc
+lib/python2.2/site-packages/Bio/SeqIO/generic.py
+lib/python2.2/site-packages/Bio/SeqIO/generic.pyc
+lib/python2.2/site-packages/Bio/SeqRecord.py
+lib/python2.2/site-packages/Bio/SeqRecord.pyc
+lib/python2.2/site-packages/Bio/SeqUtils/__init__.py
+lib/python2.2/site-packages/Bio/SeqUtils/__init__.pyc
+lib/python2.2/site-packages/Bio/SeqUtils/CodonUsage.py
+lib/python2.2/site-packages/Bio/SeqUtils/CodonUsage.pyc
+lib/python2.2/site-packages/Bio/SeqUtils/CodonUsageIndices.py
+lib/python2.2/site-packages/Bio/SeqUtils/CodonUsageIndices.pyc
+lib/python2.2/site-packages/Bio/SeqUtils/IsoelectricPoint.py
+lib/python2.2/site-packages/Bio/SeqUtils/IsoelectricPoint.pyc
+lib/python2.2/site-packages/Bio/SeqUtils/MeltingTemp.py
+lib/python2.2/site-packages/Bio/SeqUtils/MeltingTemp.pyc
+lib/python2.2/site-packages/Bio/SeqUtils/ProtParam.py
+lib/python2.2/site-packages/Bio/SeqUtils/ProtParam.pyc
+lib/python2.2/site-packages/Bio/SeqUtils/ProtParamData.py
+lib/python2.2/site-packages/Bio/SeqUtils/ProtParamData.pyc
+lib/python2.2/site-packages/Bio/Std.py
+lib/python2.2/site-packages/Bio/Std.pyc
+lib/python2.2/site-packages/Bio/StdHandler.py
+lib/python2.2/site-packages/Bio/StdHandler.pyc
+lib/python2.2/site-packages/Bio/SubsMat/FreqTable.py
+lib/python2.2/site-packages/Bio/SubsMat/FreqTable.pyc
+lib/python2.2/site-packages/Bio/SubsMat/MatrixInfo.py
+lib/python2.2/site-packages/Bio/SubsMat/MatrixInfo.pyc
+lib/python2.2/site-packages/Bio/SubsMat/__init__.py
+lib/python2.2/site-packages/Bio/SubsMat/__init__.pyc
+lib/python2.2/site-packages/Bio/SwissProt/KeyWList.py
+lib/python2.2/site-packages/Bio/SwissProt/KeyWList.pyc
+lib/python2.2/site-packages/Bio/SwissProt/SProt.py
+lib/python2.2/site-packages/Bio/SwissProt/SProt.pyc
+lib/python2.2/site-packages/Bio/SwissProt/__init__.py
+lib/python2.2/site-packages/Bio/SwissProt/__init__.pyc
+lib/python2.2/site-packages/Bio/Transcribe.py
+lib/python2.2/site-packages/Bio/Transcribe.pyc
+lib/python2.2/site-packages/Bio/Translate.py
+lib/python2.2/site-packages/Bio/Translate.pyc
+lib/python2.2/site-packages/Bio/UniGene/__init__.py
+lib/python2.2/site-packages/Bio/UniGene/__init__.pyc
+lib/python2.2/site-packages/Bio/WWW/ExPASy.py
+lib/python2.2/site-packages/Bio/WWW/ExPASy.pyc
+lib/python2.2/site-packages/Bio/WWW/InterPro.py
+lib/python2.2/site-packages/Bio/WWW/InterPro.pyc
+lib/python2.2/site-packages/Bio/WWW/NCBI.py
+lib/python2.2/site-packages/Bio/WWW/NCBI.pyc
+lib/python2.2/site-packages/Bio/WWW/SCOP.py
+lib/python2.2/site-packages/Bio/WWW/SCOP.pyc
+lib/python2.2/site-packages/Bio/WWW/__init__.py
+lib/python2.2/site-packages/Bio/WWW/__init__.pyc
+lib/python2.2/site-packages/Bio/Writer.py
+lib/python2.2/site-packages/Bio/Writer.pyc
+lib/python2.2/site-packages/Bio/__init__.py
+lib/python2.2/site-packages/Bio/__init__.pyc
+lib/python2.2/site-packages/Bio/biblio.py
+lib/python2.2/site-packages/Bio/biblio.pyc
+lib/python2.2/site-packages/Bio/builders/Search/__init__.py
+lib/python2.2/site-packages/Bio/builders/Search/__init__.pyc
+lib/python2.2/site-packages/Bio/builders/Search/search.py
+lib/python2.2/site-packages/Bio/builders/Search/search.pyc
+lib/python2.2/site-packages/Bio/builders/SeqRecord/__init__.py
+lib/python2.2/site-packages/Bio/builders/SeqRecord/__init__.pyc
+lib/python2.2/site-packages/Bio/builders/SeqRecord/sequence.py
+lib/python2.2/site-packages/Bio/builders/SeqRecord/sequence.pyc
+lib/python2.2/site-packages/Bio/builders/__init__.py
+lib/python2.2/site-packages/Bio/builders/__init__.pyc
+lib/python2.2/site-packages/Bio/cMarkovModel.so
+lib/python2.2/site-packages/Bio/cSVM.so
+lib/python2.2/site-packages/Bio/cdistance.so
+lib/python2.2/site-packages/Bio/ckMeans.so
+lib/python2.2/site-packages/Bio/clistfns.so
+lib/python2.2/site-packages/Bio/cmathfns.so
+lib/python2.2/site-packages/Bio/config/_stanzaformat.py
+lib/python2.2/site-packages/Bio/config/_stanzaformat.pyc
+lib/python2.2/site-packages/Bio/config/DBRegistry.py
+lib/python2.2/site-packages/Bio/config/DBRegistry.pyc
+lib/python2.2/site-packages/Bio/config/FormatRegistry.py
+lib/python2.2/site-packages/Bio/config/FormatRegistry.pyc
+lib/python2.2/site-packages/Bio/config/Registry.py
+lib/python2.2/site-packages/Bio/config/Registry.pyc
+lib/python2.2/site-packages/Bio/config/SeqDBRegistry.py
+lib/python2.2/site-packages/Bio/config/SeqDBRegistry.pyc
+lib/python2.2/site-packages/Bio/config/__init__.py
+lib/python2.2/site-packages/Bio/config/__init__.pyc
+lib/python2.2/site-packages/Bio/config/_support.py
+lib/python2.2/site-packages/Bio/config/_support.pyc
+lib/python2.2/site-packages/Bio/cpairwise2.so
+lib/python2.2/site-packages/Bio/crc.py
+lib/python2.2/site-packages/Bio/crc.pyc
+lib/python2.2/site-packages/Bio/cstringfns.so
+lib/python2.2/site-packages/Bio/dbdefs/__init__.py
+lib/python2.2/site-packages/Bio/dbdefs/__init__.pyc
+lib/python2.2/site-packages/Bio/dbdefs/fasta.py
+lib/python2.2/site-packages/Bio/dbdefs/fasta.pyc
+lib/python2.2/site-packages/Bio/dbdefs/medline.py
+lib/python2.2/site-packages/Bio/dbdefs/medline.pyc
+lib/python2.2/site-packages/Bio/dbdefs/_support.py
+lib/python2.2/site-packages/Bio/dbdefs/_support.pyc
+lib/python2.2/site-packages/Bio/dbdefs/embl.py
+lib/python2.2/site-packages/Bio/dbdefs/embl.pyc
+lib/python2.2/site-packages/Bio/dbdefs/genbank.py
+lib/python2.2/site-packages/Bio/dbdefs/genbank.pyc
+lib/python2.2/site-packages/Bio/dbdefs/interpro.py
+lib/python2.2/site-packages/Bio/dbdefs/interpro.pyc
+lib/python2.2/site-packages/Bio/dbdefs/pdb.py
+lib/python2.2/site-packages/Bio/dbdefs/pdb.pyc
+lib/python2.2/site-packages/Bio/dbdefs/prodoc.py
+lib/python2.2/site-packages/Bio/dbdefs/prodoc.pyc
+lib/python2.2/site-packages/Bio/dbdefs/prosite.py
+lib/python2.2/site-packages/Bio/dbdefs/prosite.pyc
+lib/python2.2/site-packages/Bio/dbdefs/swissprot.py
+lib/python2.2/site-packages/Bio/dbdefs/swissprot.pyc
+lib/python2.2/site-packages/Bio/distance.py
+lib/python2.2/site-packages/Bio/distance.pyc
+lib/python2.2/site-packages/Bio/expressions/__init__.py
+lib/python2.2/site-packages/Bio/expressions/__init__.pyc
+lib/python2.2/site-packages/Bio/expressions/blast/__init__.py
+lib/python2.2/site-packages/Bio/expressions/blast/__init__.pyc
+lib/python2.2/site-packages/Bio/expressions/blast/ncbiblast.py
+lib/python2.2/site-packages/Bio/expressions/blast/ncbiblast.pyc
+lib/python2.2/site-packages/Bio/expressions/blast/wublast.py
+lib/python2.2/site-packages/Bio/expressions/blast/wublast.pyc
+lib/python2.2/site-packages/Bio/expressions/blocks.py
+lib/python2.2/site-packages/Bio/expressions/blocks.pyc
+lib/python2.2/site-packages/Bio/expressions/embl/__init__.py
+lib/python2.2/site-packages/Bio/expressions/embl/__init__.pyc
+lib/python2.2/site-packages/Bio/expressions/embl/embl65.py
+lib/python2.2/site-packages/Bio/expressions/embl/embl65.pyc
+lib/python2.2/site-packages/Bio/expressions/fasta.py
+lib/python2.2/site-packages/Bio/expressions/fasta.pyc
+lib/python2.2/site-packages/Bio/expressions/genbank.py
+lib/python2.2/site-packages/Bio/expressions/genbank.pyc
+lib/python2.2/site-packages/Bio/expressions/hmmpfam.py
+lib/python2.2/site-packages/Bio/expressions/hmmpfam.pyc
+lib/python2.2/site-packages/Bio/expressions/swissprot/__init__.py
+lib/python2.2/site-packages/Bio/expressions/swissprot/__init__.pyc
+lib/python2.2/site-packages/Bio/expressions/swissprot/speclist.py
+lib/python2.2/site-packages/Bio/expressions/swissprot/speclist.pyc
+lib/python2.2/site-packages/Bio/expressions/swissprot/sprot38.py
+lib/python2.2/site-packages/Bio/expressions/swissprot/sprot38.pyc
+lib/python2.2/site-packages/Bio/expressions/swissprot/sprot40.py
+lib/python2.2/site-packages/Bio/expressions/swissprot/sprot40.pyc
+lib/python2.2/site-packages/Bio/formatdefs/__init__.py
+lib/python2.2/site-packages/Bio/formatdefs/__init__.pyc
+lib/python2.2/site-packages/Bio/formatdefs/embl.py
+lib/python2.2/site-packages/Bio/formatdefs/embl.pyc
+lib/python2.2/site-packages/Bio/formatdefs/genbank.py
+lib/python2.2/site-packages/Bio/formatdefs/genbank.pyc
+lib/python2.2/site-packages/Bio/formatdefs/search.py
+lib/python2.2/site-packages/Bio/formatdefs/search.pyc
+lib/python2.2/site-packages/Bio/formatdefs/sequence.py
+lib/python2.2/site-packages/Bio/formatdefs/sequence.pyc
+lib/python2.2/site-packages/Bio/formatdefs/swissprot.py
+lib/python2.2/site-packages/Bio/formatdefs/swissprot.pyc
+lib/python2.2/site-packages/Bio/kMeans.py
+lib/python2.2/site-packages/Bio/kMeans.pyc
+lib/python2.2/site-packages/Bio/kNN.py
+lib/python2.2/site-packages/Bio/kNN.pyc
+lib/python2.2/site-packages/Bio/listfns.py
+lib/python2.2/site-packages/Bio/listfns.pyc
+lib/python2.2/site-packages/Bio/mathfns.py
+lib/python2.2/site-packages/Bio/mathfns.pyc
+lib/python2.2/site-packages/Bio/pairwise2.py
+lib/python2.2/site-packages/Bio/pairwise2.pyc
+lib/python2.2/site-packages/Bio/sequtils.py
+lib/python2.2/site-packages/Bio/sequtils.pyc
+lib/python2.2/site-packages/Bio/stringfns.py
+lib/python2.2/site-packages/Bio/stringfns.pyc
+lib/python2.2/site-packages/Bio/trie.so
+lib/python2.2/site-packages/Bio/triefind.py
+lib/python2.2/site-packages/Bio/triefind.pyc
+lib/python2.2/site-packages/Bio/utils.py
+lib/python2.2/site-packages/Bio/utils.pyc
+lib/python2.2/site-packages/Bio/writers/SeqRecord/__init__.py
+lib/python2.2/site-packages/Bio/writers/SeqRecord/__init__.pyc
+lib/python2.2/site-packages/Bio/writers/SeqRecord/empty.py
+lib/python2.2/site-packages/Bio/writers/SeqRecord/empty.pyc
+lib/python2.2/site-packages/Bio/writers/SeqRecord/fasta.py
+lib/python2.2/site-packages/Bio/writers/SeqRecord/fasta.pyc
+lib/python2.2/site-packages/Bio/writers/__init__.py
+lib/python2.2/site-packages/Bio/writers/__init__.pyc
+lib/python2.2/site-packages/Bio/xkMeans.py
+lib/python2.2/site-packages/Bio/xkMeans.pyc
+lib/python2.2/site-packages/BioSQL/BioSeq.py
+lib/python2.2/site-packages/BioSQL/BioSeq.pyc
+lib/python2.2/site-packages/BioSQL/BioSeqDatabase.py
+lib/python2.2/site-packages/BioSQL/BioSeqDatabase.pyc
+lib/python2.2/site-packages/BioSQL/DBUtils.py
+lib/python2.2/site-packages/BioSQL/DBUtils.pyc
+lib/python2.2/site-packages/BioSQL/Loader.py
+lib/python2.2/site-packages/BioSQL/Loader.pyc
+lib/python2.2/site-packages/BioSQL/__init__.py
+lib/python2.2/site-packages/BioSQL/__init__.pyc
+lib/python2.2/site-packages/Martel/Dispatch.py
+lib/python2.2/site-packages/Martel/Dispatch.pyc
+lib/python2.2/site-packages/Martel/Expression.py
+lib/python2.2/site-packages/Martel/Expression.pyc
+lib/python2.2/site-packages/Martel/Generate.py
+lib/python2.2/site-packages/Martel/Generate.pyc
+lib/python2.2/site-packages/Martel/IterParser.py
+lib/python2.2/site-packages/Martel/IterParser.pyc
+lib/python2.2/site-packages/Martel/Iterator.py
+lib/python2.2/site-packages/Martel/Iterator.pyc
+lib/python2.2/site-packages/Martel/LAX.py
+lib/python2.2/site-packages/Martel/LAX.pyc
+lib/python2.2/site-packages/Martel/Parser.py
+lib/python2.2/site-packages/Martel/Parser.pyc
+lib/python2.2/site-packages/Martel/RecordReader.py
+lib/python2.2/site-packages/Martel/RecordReader.pyc
+lib/python2.2/site-packages/Martel/Time.py
+lib/python2.2/site-packages/Martel/Time.pyc
+lib/python2.2/site-packages/Martel/__init__.py
+lib/python2.2/site-packages/Martel/__init__.pyc
+lib/python2.2/site-packages/Martel/convert_re.py
+lib/python2.2/site-packages/Martel/convert_re.pyc
+lib/python2.2/site-packages/Martel/msre_constants.py
+lib/python2.2/site-packages/Martel/msre_constants.pyc
+lib/python2.2/site-packages/Martel/msre_parse.py
+lib/python2.2/site-packages/Martel/msre_parse.pyc
+lib/python2.2/site-packages/Martel/optimize.py
+lib/python2.2/site-packages/Martel/optimize.pyc
+lib/python2.2/site-packages/Martel/setup.py
+lib/python2.2/site-packages/Martel/setup.pyc
+share/doc/biopython/Blast.txt
+share/doc/biopython/CDD.txt
+share/doc/biopython/CONTRIB
+share/doc/biopython/Crystal.txt
+share/doc/biopython/ECell.txt
+share/doc/biopython/Enzyme.txt
+share/doc/biopython/Fasta.txt
+share/doc/biopython/FilteredReader.txt
+share/doc/biopython/Geo.txt
+share/doc/biopython/IntelliGenetics.txt
+share/doc/biopython/InterPro.txt
+share/doc/biopython/KEGG.txt
+share/doc/biopython/Kabat.txt
+share/doc/biopython/LICENSE
+share/doc/biopython/Medline.txt
+share/doc/biopython/NBRF.txt
+share/doc/biopython/Ndb.txt
+share/doc/biopython/NetCatch.txt
+share/doc/biopython/Parser.txt
+share/doc/biopython/Prosite.txt
+share/doc/biopython/README
+share/doc/biopython/References.txt
+share/doc/biopython/SGMLExtractor.txt
+share/doc/biopython/Saf.txt
+share/doc/biopython/SwissProt.txt
+share/doc/biopython/Tutorial.txt
+share/doc/biopython/metatool.txt
+share/examples/biopython/clustal_run.py
+share/examples/biopython/fasta_consumer.py
+share/examples/biopython/fasta_dictionary.py
+share/examples/biopython/fasta_iterator.py
+share/examples/biopython/getgene.py
+share/examples/biopython/local_blast.py
+share/examples/biopython/ls_orchid.fasta
+share/examples/biopython/m_cold.fasta
+share/examples/biopython/make_subsmat.py
+share/examples/biopython/opuntia.fasta
+share/examples/biopython/pubmed_search.py
+share/examples/biopython/query_entrez.py
+share/examples/biopython/swissprot.py
+share/examples/biopython/www_blast.py
+share/examples/biopython/protein.aln
+share/examples/biopython/nmr/noed.xpk
+share/examples/biopython/nmr/simplepredict.py
+@dirrm share/examples/biopython/nmr
+@dirrm share/examples/biopython
+@dirrm share/doc/biopython
+@dirrm lib/python2.2/site-packages/Martel
+@dirrm lib/python2.2/site-packages/BioSQL
+@dirrm lib/python2.2/site-packages/Bio/writers/SeqRecord
+@dirrm lib/python2.2/site-packages/Bio/writers
+@dirrm lib/python2.2/site-packages/Bio/formatdefs
+@dirrm lib/python2.2/site-packages/Bio/expressions/swissprot
+@dirrm lib/python2.2/site-packages/Bio/expressions/embl
+@dirrm lib/python2.2/site-packages/Bio/expressions/blast
+@dirrm lib/python2.2/site-packages/Bio/expressions
+@dirrm lib/python2.2/site-packages/Bio/dbdefs
+@dirrm lib/python2.2/site-packages/Bio/config
+@dirrm lib/python2.2/site-packages/Bio/builders/SeqRecord
+@dirrm lib/python2.2/site-packages/Bio/builders/Search
+@dirrm lib/python2.2/site-packages/Bio/builders
+@dirrm lib/python2.2/site-packages/Bio/WWW
+@dirrm lib/python2.2/site-packages/Bio/UniGene
+@dirrm lib/python2.2/site-packages/Bio/SwissProt
+@dirrm lib/python2.2/site-packages/Bio/SubsMat
+@dirrm lib/python2.2/site-packages/Bio/SeqUtils
+@dirrm lib/python2.2/site-packages/Bio/SeqIO
+@dirrm lib/python2.2/site-packages/Bio/Saf
+@dirrm lib/python2.2/site-packages/Bio/SVDSuperimposer
+@dirrm lib/python2.2/site-packages/Bio/SCOP
+@dirrm lib/python2.2/site-packages/Bio/Rebase
+@dirrm lib/python2.2/site-packages/Bio/Prosite
+@dirrm lib/python2.2/site-packages/Bio/Pathway/Rep
+@dirrm lib/python2.2/site-packages/Bio/Pathway
+@dirrm lib/python2.2/site-packages/Bio/Parsers
+@dirrm lib/python2.2/site-packages/Bio/PDB/mmCIF
+@dirrm lib/python2.2/site-packages/Bio/PDB
+@dirrm lib/python2.2/site-packages/Bio/NeuralNetwork/Gene
+@dirrm lib/python2.2/site-packages/Bio/NeuralNetwork/BackPropagation
+@dirrm lib/python2.2/site-packages/Bio/NeuralNetwork
+@dirrm lib/python2.2/site-packages/Bio/Ndb
+@dirrm lib/python2.2/site-packages/Bio/NBRF
+@dirrm lib/python2.2/site-packages/Bio/MultiProc
+@dirrm lib/python2.2/site-packages/Bio/Mindy
+@dirrm lib/python2.2/site-packages/Bio/MetaTool
+@dirrm lib/python2.2/site-packages/Bio/Medline
+@dirrm lib/python2.2/site-packages/Bio/Kabat
+@dirrm lib/python2.2/site-packages/Bio/KEGG/Map
+@dirrm lib/python2.2/site-packages/Bio/KEGG/Enzyme
+@dirrm lib/python2.2/site-packages/Bio/KEGG/Compound
+@dirrm lib/python2.2/site-packages/Bio/KEGG
+@dirrm lib/python2.2/site-packages/Bio/KDTree
+@dirrm lib/python2.2/site-packages/Bio/InterPro
+@dirrm lib/python2.2/site-packages/Bio/IntelliGenetics
+@dirrm lib/python2.2/site-packages/Bio/HMM
+@dirrm lib/python2.2/site-packages/Bio/Graphics
+@dirrm lib/python2.2/site-packages/Bio/Gobase
+@dirrm lib/python2.2/site-packages/Bio/Geo
+@dirrm lib/python2.2/site-packages/Bio/GenBank
+@dirrm lib/python2.2/site-packages/Bio/GFF
+@dirrm lib/python2.2/site-packages/Bio/GA/Selection
+@dirrm lib/python2.2/site-packages/Bio/GA/Repair
+@dirrm lib/python2.2/site-packages/Bio/GA/Mutation
+@dirrm lib/python2.2/site-packages/Bio/GA/Crossover
+@dirrm lib/python2.2/site-packages/Bio/GA
+@dirrm lib/python2.2/site-packages/Bio/Fasta
+@dirrm lib/python2.2/site-packages/Bio/FSSP
+@dirrm lib/python2.2/site-packages/Bio/Enzyme
+@dirrm lib/python2.2/site-packages/Bio/Encodings
+@dirrm lib/python2.2/site-packages/Bio/Emboss
+@dirrm lib/python2.2/site-packages/Bio/ECell
+@dirrm lib/python2.2/site-packages/Bio/Data
+@dirrm lib/python2.2/site-packages/Bio/Crystal
+@dirrm lib/python2.2/site-packages/Bio/Clustalw
+@dirrm lib/python2.2/site-packages/Bio/CDD
+@dirrm lib/python2.2/site-packages/Bio/Blast
+@dirrm lib/python2.2/site-packages/Bio/Application
+@dirrm lib/python2.2/site-packages/Bio/Alphabet
+@dirrm lib/python2.2/site-packages/Bio/Align
+@dirrm lib/python2.2/site-packages/Bio/Ais
+@dirrm lib/python2.2/site-packages/Bio/Affy
+@dirrm lib/python2.2/site-packages/Bio/AlignAce
+@dirrm lib/python2.2/site-packages/Bio/Cluster
+@dirrm lib/python2.2/site-packages/Bio/Compass
+@dirrm lib/python2.2/site-packages/Bio/EUtils/DTDs
+@dirrm lib/python2.2/site-packages/Bio/EUtils
+@dirrm lib/python2.2/site-packages/Bio/LocusLink
+@dirrm lib/python2.2/site-packages/Bio/NMR
+@dirrm lib/python2.2/site-packages/Bio/Sequencing
+@dirrm lib/python2.2/site-packages/Bio/Statistics
+@dirrm lib/python2.2/site-packages/Bio/Wise
+@dirrm lib/python2.2/site-packages/Bio

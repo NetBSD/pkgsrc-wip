@@ -1,0 +1,10 @@
+- The math/py-Numeric package should be installed before installing this one
+- There might be the error:
+	Bio/KDTree/_KDTree.swig.C:544: Numeric/arrayobject.h: No such file or directory
+when running this package. That's because, the include path is not correct
+ install math/py-Numeric package.
+- To fix that error, look for the line in KDTree.swig.C that looks like:
+ 	#include <Numeric/arrayobject.h>
+change it so that it includes the include directory where the numeric libraries were installed:
+	#include </your_dir/include/python/Numeric/arrayobject.h>
+- if you use gcc 3.3.3 or more, you should install emulators/compat16 package before this one.

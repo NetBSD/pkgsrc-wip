@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/18 21:02:38 daprice Exp $
+
+SHA1 (biopython-1.30.tar.gz) = 3422f0cc8ee118596c781e9e7a16efced1bbdc2b
+Size (biopython-1.30.tar.gz) = 3186467 bytes
+SHA1 (patch-aa) = 020a2df9924a6f71304d48eb3fc4279b3fe8f48c
