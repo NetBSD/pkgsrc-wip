@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/10/27 03:41:19 atamaniuk Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/25 12:19:26 jmmv Exp $
 # created 2003-10-22 Patrick Atamaniuk <atamaniuk-pkgsrc@frobs.net>
 # MAINTAINER_of-previous-lilypond-versions=	rh@NetBSD.org
 
@@ -60,6 +60,6 @@ post-install:
 .include "../../wip/mftrace/buildlink2.mk"
 .include "../../lang/guile/buildlink2.mk"
 .include "../../lang/python/application.mk"
-.include "../../print/teTeX2-bin/kpathsea.buildlink2.mk"
+.include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

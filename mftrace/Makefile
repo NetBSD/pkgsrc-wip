@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/10/26 22:13:27 atamaniuk Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/25 12:19:26 jmmv Exp $
 # based on FreeBSD-port pkgtrace originally by ijliao
 # created 2003-10-22 Patrick Atamaniuk <atamaniuk-pkgsrc@frobs.net>
 
@@ -10,7 +10,7 @@ MAINTAINER=	atamaniuk-pkgsrc@frobs.net
 HOMEPAGE=	http://www.xs4all.nl/~hanwen/mftrace/
 COMMENT=	Scalable PostScript (Type1) Fonts for MetaFont
 
-DEPENDS+=	teTeX2>=2.0.2:../../print/teTeX2
+DEPENDS+=	teTeX>=2.0.2:../../print/teTeX
 DEPENDS+=	autotrace>=0.31:../../graphics/autotrace
 DEPENDS+=	t1utils>=1.27:../../fonts/t1utils
 DEPENDS+=	pfaedit>=20030712:../../fonts/pfaedit

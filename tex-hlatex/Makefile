@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/15 15:26:22 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/25 12:19:27 jmmv Exp $
 #
 
 DISTNAME=	HLaTeX-0.991
@@ -12,7 +12,7 @@ MAINTAINER=	minskim@bawi.org
 HOMEPAGE=	http://ftp.ktug.or.kr/mirrors/HLaTeX/hlatex.html
 COMMENT=	LaTeX package to use Hangul (UHC/KSX1001)
 
-DEPENDS+=	teTeX{,2}-bin-[0-9]*:../../print/teTeX-bin
+DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 TEXMF=		${LOCALBASE}/share/texmf
