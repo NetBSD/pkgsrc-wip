@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/06/17 19:14:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.16 2004/06/17 21:47:05 adrian_p Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -18,9 +18,16 @@ REPLACE_PERL=		tools/dspam_genaliases.in \
 			tools/dspam_corpus.in \
 			cgi/admin.cgi cgi/admingraph.cgi \
 			cgi/dspam.cgi cgi/graph.cgi
-			
 
 PKGCONFIG_OVERRIDE+=	dspam.pc.in
+
+SUBST_CLASSES=		cgi
+SUBST_STAGE.cgi=	post-patch
+SUBST_FILES.cgi=	cgi/dspam.cgi cgi/admin.cgi 
+SUBST_SED.cgi=		-e "s|/usr/local/bin/dspam|${PREFIX}/bin/dspam|" \
+			-e "s|/var/dspam|${DSPAM_HOME}|" \
+			-e "s|/usr/local|${PREFIX}|"
+SUBST_MESSAGE.cgi=	"Fixing paths."
 
 BDB_ACCEPTED=		db4 db3
 
