@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/10 01:27:36 blef Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/04 14:27:55 thomasklausner Exp $
 #
 
 DISTNAME=		buildbot-0.3.5
@@ -14,7 +14,7 @@ USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
-DEPENDS+=		${PYPKGPREFIX}-Twisted-[0-9]*:../../net/py-twisted
+DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
