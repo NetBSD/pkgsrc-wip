@@ -1,0 +1,2 @@
+Berkeley DB version 1.86 for those OS, that require it, because they don't
+have it integrated in the basesystem (mainly Linuxes).
