@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/27 22:54:50 blef Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/28 07:29:29 blef Exp $
 
 DISTNAME=		fakenes-0.1.5
-CATEGORIES=		wip
+CATEGORIES=		wip emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fakenes/}
 EXTRACT_SUFX=		.tar.bz2
 
