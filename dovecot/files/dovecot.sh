@@ -1,10 +1,10 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dovecot.sh,v 1.1.1.1 2003/04/14 05:10:48 xtraeme Exp $
+# $NetBSD: dovecot.sh,v 1.2 2003/05/06 21:13:27 lsed Exp $
 #
 
 # PROVIDE: dovecot
-# REQUIRE: DAEMON
+# REQUIRE: DAEMON LOGIN
 
 . /etc/rc.subr
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2003/04/28 07:04:33 cjep Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/06 21:13:27 lsed Exp $
 #
 
-DISTNAME=	dovecot-0.99.8.1
+DISTNAME=	dovecot-0.99.9.1
 CATEGORIES=	mail
 MASTER_SITES=	http://dovecot.procontrol.fi/
 
@@ -30,8 +30,7 @@ CONFIGURE_ARGS+=	--enable-ipv6
 RCD_SCRIPTS=	dovecot
 
 EGDIR=		${PREFIX}/share/examples/dovecot
-CONF_FILES=	${PREFIX}/share/examples/dovecot/dovecot.conf.default	\
-			${PKG_SYSCONFDIR}/dovecot.conf
+CONF_FILES=	${EGDIR}/dovecot.conf.default ${PKG_SYSCONFDIR}/dovecot.conf
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
