@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/06/22 03:58:15 schnoebe Exp $
+$NetBSD: patch-ad,v 1.1 2004/01/05 15:22:54 virtus Exp $
 
 --- cvsd-buildroot.in.orig	Sat Apr 12 12:52:59 2003
 +++ cvsd-buildroot.in
