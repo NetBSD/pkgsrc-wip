@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/07 12:29:07 marc Exp $
+lib/httpd/mod_python.so
+${PYSITELIB}/mod_python/__init__.pyc
+${PYSITELIB}/mod_python/__init__.pyo
+${PYSITELIB}/mod_python/apache.pyc
+${PYSITELIB}/mod_python/apache.pyo
+${PYSITELIB}/mod_python/cgihandler.pyc
+${PYSITELIB}/mod_python/cgihandler.pyo
+${PYSITELIB}/mod_python/publisher.pyc
+${PYSITELIB}/mod_python/publisher.pyo
+${PYSITELIB}/mod_python/util.pyc
+${PYSITELIB}/mod_python/util.pyo
+@dirrm ${PYSITELIB}/mod_python
