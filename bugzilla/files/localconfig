@@ -69,10 +69,10 @@ $webservergroup = "@BZ_WEB_GROUP@";
 #
 # How to access the SQL database:
 #
-$db_host = "@BZ_DB_HOST@";         # where is the database?
-$db_port = @BZ_DB_PORT@;           # which port to use
-$db_name = "@BZ_DB_DATABASE@";     # name of the MySQL database
-$db_user = "@BZ_DB_USER@";         # user to attach to the MySQL database
+$db_host = "localhost";         # where is the database?
+$db_port = 3306;           	# which port to use
+$db_name = "bugs";     		# name of the MySQL database
+$db_user = "user";         	# user to attach to the MySQL database
 
 
 
@@ -82,13 +82,13 @@ $db_user = "@BZ_DB_USER@";         # user to attach to the MySQL database
 # If you use apostrophe (') or a backslash (\) in your password, you'll
 # need to escape it by preceding it with a \ character. (\') or (\\)
 #
-$db_pass = '@BZ_DB_PASS@';
+$db_pass = 'changemeplease';
 
 
 
 # Enter a path to the unix socket for mysql. If this is blank, then mysql's
 # compiled-in default will be used. You probably want that.
-$db_sock = '@MYSQL_SOCLOC@';
+$db_sock = '/tmp/mysql.sock';
 
 
 

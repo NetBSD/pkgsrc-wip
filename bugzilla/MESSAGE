@@ -1,9 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.8 2004/11/04 22:22:19 adrian_p Exp $
+$NetBSD: MESSAGE,v 1.9 2004/12/28 16:30:06 adrian_p Exp $
 
 To complete the setup you will need to read the Bugzilla-Guide.txt in order
 to setup mySQL properly.  In particular secion 2.2.2 of the document deals
-with database setup.  After the initial setup of the database you can then:
+with database setup.  After the initial setup of the database you can then
+check the settings in ${BZDIR}/localconfig and:
 
 	cd ${BZDIR}
 	./checksetup.pl

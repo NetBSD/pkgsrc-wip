@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/11/08 19:35:38 adrian_p Exp $
+# $NetBSD: Makefile,v 1.26 2004/12/28 16:30:06 adrian_p Exp $
 #
 
 DISTNAME=	bugzilla-2.18rc3
@@ -29,25 +29,19 @@ PERL5_REQD+=	5.6.0
 BUILDLINK_DEPENDS.p5-DBI+=		p5-DBI>=1.36
 BUILDLINK_DEPENDS.mysql-client+=	mysql-client>=3.23.41
 
-BZ_DB_DATABASE?=bugs
-BZ_DB_HOST?=	localhost
-BZ_DB_PORT?=	3306
-BZ_DB_USER?=	bugs
-BZ_DB_PASS?=	changemeplease
 BZ_WEB_GROUP?=	www
-MYSQL_SOCLOC?=	/tmp/mysql.sock
 SENDMAIL?=	/usr/sbin/sendmail
 APACHE_USER?=	www
 
-BUILD_DEFS+=	BZ_DB_DATABASE BZ_DB_HOST BZ_DB_PORT BZ_DB_USER BZ_DB_PASS \
-		BZ_WEB_GROUP MYSQL_SOCLOC SENDMAIL
+BUILD_DEFS+= 	BZ_WEB_GROUP SENDMAIL APACHE_USER
 
 MESSAGE_SUBST+=	BZDIR=${BZDIR} PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 BZDIR=		${PREFIX}/share/bugzilla
 EGDIR=		${PREFIX}/share/examples/bugzilla
 DOCDIR=		${PREFIX}/share/doc/bugzilla
-CONF_FILES=	${EGDIR}/bugzilla.conf ${PKG_SYSCONFDIR}/bugzilla.conf
+CONF_FILES=	${EGDIR}/bugzilla.conf ${PKG_SYSCONFDIR}/bugzilla.conf \
+		${EGDIR}/localconfig ${BZDIR}/localconfig
 SPECIAL_PERMS=	${BZDIR}/localconfig ${APACHE_USER} ${SHAREGRP} 0400
 
 REPLACE_PERL=	*.pl *.cgi
@@ -55,13 +49,7 @@ REPLACE_PERL=	*.pl *.cgi
 SUBST_CLASSES=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	bugzilla.conf localconfig Bugzilla/BugMail.pm
-SUBST_SED.conf=		-e "s|@BZ_DB_HOST@|${BZ_DB_HOST}|g" 		\
-			-e "s|@BZ_WEB_GROUP@|${BZ_WEB_GROUP}|g"		\
-			-e "s|@BZ_DB_PORT@|${BZ_DB_PORT}|g" 		\
-			-e "s|@BZ_DB_DATABASE@|${BZ_DB_DATABASE}|g" 	\
-			-e "s|@BZ_DB_USER@|${BZ_DB_USER}|g" 		\
-			-e "s|@BZ_DB_PASS@|${BZ_DB_PASS}|g"		\
-			-e "s|@MYSQL_SOCLOC@|${MYSQL_SOCLOC}|g"		\
+SUBST_SED.conf=		-e "s|@BZ_WEB_GROUP@|${BZ_WEB_GROUP}|g"		\
 			-e "s|@PREFIX@|${PREFIX}|g"			\
 			-e "s|@BZDIR@|${BZDIR}|g"			\
 			-e "s|/usr/lib/sendmail|${SENDMAIL}|g"
@@ -73,7 +61,6 @@ post-extract:
 		${RM} -f
 	@${CP} ${FILESDIR}/bugzilla.conf ${WRKSRC}
 	@${CP} ${FILESDIR}/localconfig ${WRKSRC}
-	@${CP} ${FILESDIR}/localconfig ${WRKSRC}/localconfig.sample
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -109,7 +96,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ant.jpg ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/padlock.png ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/bugzilla.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/localconfig.sample ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/localconfig ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/bugzilla.dtd ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.js ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/js/*.js ${BZDIR}/js
