@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/05 16:45:04 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/18 14:13:56 bencollver Exp $
 #
 #
 
@@ -16,7 +16,7 @@ DEPENDS+=	free-[0-9]*:../../sysutils/free
 USE_BUILDLINK3=	YES
 BUILD_TARGET=	lsh
 WRKSRC=		${WRKDIR}/lsh-0.70
-CFLAGS+=	-DLSH_SYSCONFDIR="\"\\\"${PKG_SYSCONFDIR}\\\"\""
+CFLAGS+=	-DLSH_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 CONFLICTS+=	lsh-[0-9]*:../../security/lsh
 
 USE_PKGINSTALL=	yes
