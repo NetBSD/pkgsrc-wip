@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1525 2004/11/07 18:51:46 minskim Exp $
-# $NetBSD: Makefile,v 1.1525 2004/11/07 18:51:46 minskim Exp $
+# $Id: Makefile,v 1.1526 2004/11/09 05:50:39 minskim Exp $
+# $NetBSD: Makefile,v 1.1526 2004/11/09 05:50:39 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -19,7 +19,6 @@ SUBDIR+=	Siesta
 SUBDIR+=	WEPCrack
 SUBDIR+=	abuse_sdl
 SUBDIR+=	afterstep2
-SUBDIR+=	aliados
 SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-utils
 SUBDIR+=	amap
