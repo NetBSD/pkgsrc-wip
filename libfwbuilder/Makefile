@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/12 20:33:17 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/13 20:37:56 marc Exp $
 #
 
 DISTNAME=		libfwbuilder-0.10.13
@@ -16,8 +16,14 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-CONFIGURE_ARGS+=	--with-lwres
 CONFIGURE_ARGS+=	--with-openssl-prefix=${BUILDLINK_PREFIX.openssl}
+
+.if defined(FWBUILDER_USE_BIND) && !empty(FWBUILDER_USE_BIND:M[yY][eE][sS])
+CONFIGURE_ARGS+=	--with-lwres
+.include "../../net/bind9/buildlink2.mk"
+.else
+.include "../../security/openssl/buildlink2.mk"
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/libtoolize --force --copy
@@ -27,7 +33,6 @@ pre-configure:
 .include "../../devel/glib/buildlink2.mk"
 .include "../../lang/gcc/buildlink2.mk"
 .include "../../net/ucd-snmp/buildlink2.mk"
-.include "../../net/bind9/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
