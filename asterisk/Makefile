@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/15 01:38:05 riz Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/16 18:58:22 riz Exp $
 #
 
 DISTNAME=		asterisk-1.0.6
@@ -6,7 +6,7 @@ CATEGORIES=		wip
 MASTER_SITES=		ftp://ftp.asterisk.org/pub/asterisk/ \
 			ftp://ftp.asterisk.org/pub/asterisk/old-releases/
 
-MAINTAINER=		riz@netbsd.org
+MAINTAINER=		riz@NetBSD.org
 HOMEPAGE=		http://www.asterisk.org/
 COMMENT=		The Asterisk Software PBX
 
@@ -42,8 +42,10 @@ ASTEXAMPLEDIR?=${PREFIX}/share/examples/asterisk
 # Override default paths in Makefile
 SUBST_CLASSES+= 	asterisk
 SUBST_STAGE.asterisk= 	pre-configure
-SUBST_FILES.asterisk=	Makefile
+SUBST_FILES.asterisk=	Makefile apps/Makefile channels/Makefile res/Makefile
 SUBST_SED.asterisk= 	\
+	-e "s|/usr/local/include/zaptel.h|${PREFIX}/include/zaptel.h|"	\
+	-e "s|-ltonezone|-L${PREFIX}/lib -ltonezone|"		\
 	-e "s|^\(ASTLIBDIR\)=.*|\1 = ${ASTLIBDIR}|"		\
 	-e "s|^\(ASTVARLIBDIR\)=.*|\1 = ${ASTVARLIBDIR}|"	\
 	-e "s|^\(ASTETCDIR\)=.*|\1 = ${ASTETCDIR}|"		\
@@ -56,6 +58,8 @@ SUBST_SED.asterisk= 	\
 	-e "s|^\(ASTVARRUNDIR\)=.*|\1 = ${ASTVARRUNDIR}|"	\
 	-e "s|^\(ASTMANDIR\)=.*|\1 = ${ASTMANDIR}|"		\
 	-e "s|^\(ASTEXAMPLEDIR\)=.*|\1 = ${ASTEXAMPLEDIR}|"
+
+.include "options.mk"
 
 USE_PKGINSTALL= 	yes
 RCD_SCRIPTS= 		asterisk
