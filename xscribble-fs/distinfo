@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/01 10:40:02 cubidou Exp $
+
+SHA1 (xscribblefs.tar.gz) = 00ddf2e3e0c476e17bc808f5955e9138d6eba103
+Size (xscribblefs.tar.gz) = 279847 bytes
+SHA1 (patch-aa) = a9624489e56f0196ed3ac3a6f82d41c7f5a586e3
+SHA1 (patch-ab) = 4c234c385851db1237769b55c74ee2c462a6bad1
+SHA1 (patch-ac) = 0a6352bf35e79db51b25e195a5bed88661672987
+SHA1 (patch-ad) = 9fe0ce4f137975cd380280e13ccfa1543016b5b7
