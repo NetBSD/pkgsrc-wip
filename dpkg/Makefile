@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:12:02 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/26 21:05:27 blef Exp $
 #
 
 DISTNAME=	dpkg_1.9.21
@@ -13,7 +13,7 @@ COMMENT=	Package maintenance system for Debian
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
@@ -32,9 +32,9 @@ CONFIGURE_ARGS+=	--with-admindir=${ADMIN_DIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/dpkg
 
 #.include "../../wip/debian_base/linux.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
