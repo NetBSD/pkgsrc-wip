@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.626 2003/11/18 14:40:56 mpasternak Exp $
-# $NetBSD: Makefile,v 1.626 2003/11/18 14:40:56 mpasternak Exp $
+# $Id: Makefile,v 1.627 2003/11/19 02:17:57 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.627 2003/11/19 02:17:57 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -173,6 +173,7 @@ SUBDIR+=	gnunet
 SUBDIR+=	gotmail
 SUBDIR+=	gov2
 SUBDIR+=	gpdf
+SUBDIR+=	gramps
 SUBDIR+=	grdc
 SUBDIR+=	grip
 SUBDIR+=	gsasl
