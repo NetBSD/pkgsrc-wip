@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1450 2004/09/01 17:39:01 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1450 2004/09/01 17:39:01 thomasklausner Exp $
+# $Id: Makefile,v 1.1451 2004/09/03 10:16:31 tnn2 Exp $
+# $NetBSD: Makefile,v 1.1451 2004/09/03 10:16:31 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -645,6 +645,7 @@ SUBDIR+=	rcorder
 SUBDIR+=	realvnc
 SUBDIR+=	regexxer
 #SUBDIR+=	rekall # doesn't compile yet; see TODO
+SUBDIR+=	rep-gtk2
 SUBDIR+=	resourceext
 SUBDIR+=	rlpr
 SUBDIR+=	rosegarden-current
@@ -659,6 +660,7 @@ SUBDIR+=	ruby-raggle
 SUBDIR+=	ruby-redcloth
 SUBDIR+=	ruby-syck
 SUBDIR+=	sara
+SUBDIR+=	sawfish-gtk2
 SUBDIR+=	scite
 SUBDIR+=	scm
 SUBDIR+=	scourge
