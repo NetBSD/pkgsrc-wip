@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/14 15:34:29 lexort Exp $
+bin/exiftool
