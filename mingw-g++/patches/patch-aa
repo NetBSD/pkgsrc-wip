@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/12/01 03:51:19 xtraeme Exp $
+
+--- i586-pc-mingw32/libiberty/physmem.c.orig	2003-12-01 04:42:16.000000000 +0100
++++ i586-pc-mingw32/libiberty/physmem.c	2003-12-01 04:42:28.000000000 +0100
+@@ -48,7 +48,7 @@
+ # include <sys/param.h>
+ #endif
+ 
+-#if HAVE_SYS_SYSCTL_H
++#if 0
+ # include <sys/sysctl.h>
+ #endif
+ 
