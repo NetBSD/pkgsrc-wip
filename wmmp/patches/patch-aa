@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/24 00:56:44 rockpiper Exp $
+
+--- configure.ac.orig	Tue Mar  2 13:51:13 2004
++++ configure.ac
+@@ -125,6 +125,9 @@ openbsd*)
+ solaris*)
+   OS=solaris
+   ;;
++netbsd*)
++  OS=netbsd
++  ;;
+ *)
+   echo ""
+   echo "Sorry, ${host_os} is not supported yet"
