@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/03 18:45:34 tnn2 Exp $
+lib/xmms/General/libxmms_scrobbler.la
