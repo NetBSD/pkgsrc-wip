@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/04/22 13:20:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/22 20:36:05 rillig Exp $
 
 DISTNAME=		autoproject-0.17
 CATEGORIES=		devel
-MASTER_SITES=		http://www.mv.com/ipusers/vanzandt/
+MASTER_SITES=		http://www.mv.com/ipusers/vanzandt/ \
+			http://www.ibiblio.org/pub/Linux/devel/
 
 MAINTAINER=		benedikt.meurer@unix-ag.uni-siegen.de
 HOMEPAGE=		http://www.mv.com/ipusers/vanzandt/
