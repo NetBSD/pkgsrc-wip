@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2003/09/14 22:23:37 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/03 23:58:39 adrian_p Exp $
 
-DISTNAME=	nikto-1.30
+DISTNAME=	nikto-1.31
 CATEGORIES=	security www
 MASTER_SITES=	http://www.cirt.net/source/
 
@@ -15,8 +15,6 @@ USE_PERL5=      YES
 REPLACE_PERL=	nikto.pl
 
 do-build:
-	@${SED} -e 's|@PREFIX@|${PREFIX}|g' < ${WRKSRC}/nikto.pl > \
-		${WRKSRC}/nikto
 	@${SED} -e 's|@PREFIX@|${PREFIX}|g' < ${WRKSRC}/config.txt > \
 		${WRKSRC}/config.txt.sample
 
@@ -31,10 +29,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${PREFIX}/share/doc/nikto
 	${INSTALL_DATA} ${WRKSRC}/config.txt.sample \
 		${PREFIX}/share/examples/nikto
-	${INSTALL_SCRIPT} ${WRKSRC}/nikto ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/nikto.pl ${PREFIX}/bin/nikto
 	${INSTALL_DATA} ${WRKSRC}/plugins/*.plugin ${PREFIX}/share/nikto/plugins
 	${INSTALL_DATA} ${WRKSRC}/plugins/LW.pm ${PREFIX}/share/nikto/plugins
 	${INSTALL_DATA} ${WRKSRC}/plugins/*.db ${PREFIX}/share/nikto/plugins
+	${INSTALL_DATA} ${WRKSRC}/plugins/*.txt ${PREFIX}/share/nikto/plugins
 
 .include "../../mk/bsd.pkg.mk"
-

@@ -1,15 +1,15 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/07/08 14:56:45 adrian_p Exp $
+$NetBSD: patch-ab,v 1.2 2003/10/03 23:58:39 adrian_p Exp $
 
---- config.txt.orig	Sun Jun  1 14:29:28 2003
-+++ config.txt	Sun Jun  1 14:35:26 2003
+--- config.txt.orig	Sat Oct  4 01:49:02 2003
++++ config.txt	Sat Oct  4 01:49:49 2003
 @@ -5,13 +5,13 @@
  # CLIOPTS=-g -a
  
  # location of nmap to use with port scanning (rather than Nikto internals)
--NMAP=/usr/bin/nmap
+-#NMAP=/usr/bin/nmap
 +NMAP=@PREFIX@/bin/nmap
  
- # ports never to scan (21/111 tend to respond slowly... and USUALLY aren't web servers)
+ # ports never to scan
  SKIPPORTS=21 111
  
  # if Nikto is having difficulty finding 'plugins', set the full path here
