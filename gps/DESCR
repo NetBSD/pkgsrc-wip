@@ -1,0 +1,7 @@
+GPS is a port scanner, which uses spoofing at IP and ethernet levels, 
+ARP poisoning and some other technics to perform a stealth information
+collect. Note that GPS needs to sniff responses from the target host.
+Only loopback and ethernet devices are supported.
+
+
+WWW: http://gps.sourceforge.net/
