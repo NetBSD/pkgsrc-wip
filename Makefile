@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.381 2003/08/19 06:48:48 xtraeme Exp $
-# $NetBSD: Makefile,v 1.381 2003/08/19 06:48:48 xtraeme Exp $
+# $Id: Makefile,v 1.382 2003/08/19 07:36:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.382 2003/08/19 07:36:28 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -92,6 +92,7 @@ SUBDIR+=	festival-gaim
 SUBDIR+=	fluxconf
 SUBDIR+=	fluxspace
 SUBDIR+=	foobillard
+SUBDIR+=	freeglut
 SUBDIR+=	freenet-tools
 SUBDIR+=	frontpage
 SUBDIR+=	fspanel
