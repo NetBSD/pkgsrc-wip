@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.56 2003/04/10 22:58:40 cubidou Exp $
-# $NetBSD: Makefile,v 1.56 2003/04/10 22:58:40 cubidou Exp $
+# $Id: Makefile,v 1.57 2003/04/11 00:18:39 lsed Exp $
+# $NetBSD: Makefile,v 1.57 2003/04/11 00:18:39 lsed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -19,7 +19,6 @@ SUBDIR+=	gkrellm2-server
 SUBDIR+=	gkrellm2-share
 SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
-SUBDIR+=	gltron
 SUBDIR+=	golem
 SUBDIR+=	gtetrinet2
 SUBDIR+=	gtk-sharp
