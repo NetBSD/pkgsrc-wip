@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2004/12/23 00:22:14 adrian_p Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/29 21:49:41 adrian_p Exp $
 
-DISTNAME=	ettercap-NG-0.7.1
+DISTNAME=	ettercap-NG-0.7.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ettercap/}
 
@@ -50,6 +50,7 @@ _STRIPFLAG_INSTALL=
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ettercap-NG
+	#${INSTALL_DATA_DIR} ${PREFIX}/share/ettercap
 	${INSTALL_DATA} ${WRKSRC}/share/etter.conf \
 		${PREFIX}/share/examples/ettercap-NG
 

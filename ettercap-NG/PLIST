@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/10/07 22:38:28 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/12/29 21:49:41 adrian_p Exp $
 bin/ettercap
 bin/etterfilter
 bin/etterlog
@@ -24,6 +24,7 @@ lib/ettercap/ec_pptp_reneg.la
 lib/ettercap/ec_rand_flood.la
 lib/ettercap/ec_remote_browser.la
 lib/ettercap/ec_reply_arp.la
+lib/ettercap/ec_repoison_arp.la
 lib/ettercap/ec_scan_poisoner.la
 lib/ettercap/ec_search_promisc.la
 lib/ettercap/ec_smb_clear.la
@@ -50,5 +51,7 @@ share/ettercap/ettercap.png
 share/ettercap/etterfilter.cnt
 share/ettercap/etterfilter.tbl
 share/ettercap/etterlog.dtd
+share/examples/ettercap-NG/etter.conf
 @dirrm share/ettercap
 @dirrm lib/ettercap
+@dirrm share/examples/ettercap-NG
