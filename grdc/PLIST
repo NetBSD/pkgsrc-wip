@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/19 18:40:30 bubuchka Exp $
+bin/grdc
+man/man6/grdc.6
