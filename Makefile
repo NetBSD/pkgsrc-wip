@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1089 2004/03/18 23:56:44 poppnk Exp $
-# $NetBSD: Makefile,v 1.1089 2004/03/18 23:56:44 poppnk Exp $
+# $Id: Makefile,v 1.1090 2004/03/19 01:46:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1090 2004/03/19 01:46:12 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -164,6 +164,7 @@ SUBDIR+=	gettext-tools
 SUBDIR+=	gg2
 SUBDIR+=	ghostpcl
 SUBDIR+=	gift
+SUBDIR+=	gift-openft
 SUBDIR+=	giftcurs
 SUBDIR+=	giftui
 SUBDIR+=	gimp-current
@@ -174,6 +175,7 @@ SUBDIR+=	glaxium
 SUBDIR+=	glib2-devel
 SUBDIR+=	glibc
 SUBDIR+=	glide3
+SUBDIR+=	gliv
 SUBDIR+=	glkterm
 SUBDIR+=	glulxe
 SUBDIR+=	gmfsk
