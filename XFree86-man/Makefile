@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/23 20:37:01 xtraeme Exp $
-# $Id: Makefile,v 1.1.1.1 2003/07/23 20:37:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/24 00:16:22 blef Exp $
 
 DISTNAME=	X430src-1
 PKGNAME=	XFree86-man-${XFREE86_VERSION}
