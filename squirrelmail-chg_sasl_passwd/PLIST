@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/30 19:16:19 schnoebe Exp $
+share/squirrelmail/plugins/chg_sasl_passwd/Readme
+share/squirrelmail/plugins/chg_sasl_passwd/chg_sasl_passwd.po
+share/squirrelmail/plugins/chg_sasl_passwd/chgsaslpasswd.c
+share/squirrelmail/plugins/chg_sasl_passwd/config.php
+share/squirrelmail/plugins/chg_sasl_passwd/index.php
+share/squirrelmail/plugins/chg_sasl_passwd/locale/de_DE/LC_MESSAGES/chg_sasl_passwd.mo
+share/squirrelmail/plugins/chg_sasl_passwd/locale/de_DE/LC_MESSAGES/chg_sasl_passwd.po
+share/squirrelmail/plugins/chg_sasl_passwd/locale/is_IS/LC_MESSAGES/chg_sasl_passwd.mo
+share/squirrelmail/plugins/chg_sasl_passwd/locale/is_IS/LC_MESSAGES/chg_sasl_passwd.po
+share/squirrelmail/plugins/chg_sasl_passwd/locale/sv_SE/LC_MESSAGES/chg_sasl_passwd.mo
+share/squirrelmail/plugins/chg_sasl_passwd/locale/sv_SE/LC_MESSAGES/chg_sasl_passwd.po
+share/squirrelmail/plugins/chg_sasl_passwd/options.php
+share/squirrelmail/plugins/chg_sasl_passwd/setup.php
+share/squirrelmail/plugins/chg_sasl_passwd/version
+@dirrm share/squirrelmail/plugins/chg_sasl_passwd/locale/sv_SE/LC_MESSAGES
+@dirrm share/squirrelmail/plugins/chg_sasl_passwd/locale/sv_SE
+@dirrm share/squirrelmail/plugins/chg_sasl_passwd/locale/is_IS/LC_MESSAGES
+@dirrm share/squirrelmail/plugins/chg_sasl_passwd/locale/is_IS
+@dirrm share/squirrelmail/plugins/chg_sasl_passwd/locale/de_DE/LC_MESSAGES
+@dirrm share/squirrelmail/plugins/chg_sasl_passwd/locale/de_DE
+@dirrm share/squirrelmail/plugins/chg_sasl_passwd/locale
+@dirrm share/squirrelmail/plugins/chg_sasl_passwd
