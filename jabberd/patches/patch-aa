@@ -1,22 +1,91 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/05/09 18:44:36 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2003/05/09 22:20:17 xtraeme Exp $
 
---- jabber.xml.orig	2003-05-09 20:14:32.000000000 +0200
-+++ jabber.xml	2003-05-09 20:16:09.000000000 +0200
-@@ -298,7 +298,7 @@
-       <xdb_file>./xdb_file/xdb_file.so</xdb_file>
+--- jabber.xml.orig	2003-05-10 00:03:51.000000000 +0200
++++ jabber.xml	2003-05-10 00:06:50.000000000 +0200
+@@ -253,7 +253,7 @@
+ 
+       </browse>
+ 
+-    </jsm>
++    @LIBDIR@>
+ 
+     <!--
+     The following section dynamically loads the individual
+@@ -264,26 +264,26 @@
+     -->
+ 
+     <load main="jsm">
+-      <jsm>./jsm/jsm.so</jsm>
+-      <mod_echo>./jsm/jsm.so</mod_echo>
+-      <mod_roster>./jsm/jsm.so</mod_roster>
+-      <mod_time>./jsm/jsm.so</mod_time>
+-      <mod_vcard>./jsm/jsm.so</mod_vcard>
+-      <mod_last>./jsm/jsm.so</mod_last>
+-      <mod_version>./jsm/jsm.so</mod_version>
+-      <mod_announce>./jsm/jsm.so</mod_announce>
+-      <mod_agents>./jsm/jsm.so</mod_agents>
+-      <mod_browse>./jsm/jsm.so</mod_browse>
+-      <mod_admin>./jsm/jsm.so</mod_admin>
+-      <mod_filter>./jsm/jsm.so</mod_filter>
+-      <mod_offline>./jsm/jsm.so</mod_offline>
+-      <mod_presence>./jsm/jsm.so</mod_presence>
+-      <mod_auth_plain>./jsm/jsm.so</mod_auth_plain>
+-      <mod_auth_digest>./jsm/jsm.so</mod_auth_digest>
+-      <mod_auth_0k>./jsm/jsm.so</mod_auth_0k>
+-      <mod_log>./jsm/jsm.so</mod_log>
+-      <mod_register>./jsm/jsm.so</mod_register>
+-      <mod_xml>./jsm/jsm.so</mod_xml>
++      <jsm>@LIBDIR@/jsm.so</jsm>
++      <mod_echo>@LIBDIR@/jsm.so</mod_echo>
++      <mod_roster>@LIBDIR@/jsm.so</mod_roster>
++      <mod_time>@LIBDIR@/jsm.so</mod_time>
++      <mod_vcard>@LIBDIR@/jsm.so</mod_vcard>
++      <mod_last>@LIBDIR@/jsm.so</mod_last>
++      <mod_version>@LIBDIR@/jsm.so</mod_version>
++      <mod_announce>@LIBDIR@/jsm.so</mod_announce>
++      <mod_agents>@LIBDIR@/jsm.so</mod_agents>
++      <mod_browse>@LIBDIR@/jsm.so</mod_browse>
++      <mod_admin>@LIBDIR@/jsm.so</mod_admin>
++      <mod_filter>@LIBDIR@/jsm.so</mod_filter>
++      <mod_offline>@LIBDIR@/jsm.so</mod_offline>
++      <mod_presence>@LIBDIR@/jsm.so</mod_presence>
++      <mod_auth_plain>@LIBDIR@/jsm.so</mod_auth_plain>
++      <mod_auth_digest>@LIBDIR@/jsm.so</mod_auth_digest>
++      <mod_auth_0k>@LIBDIR@/jsm.so</mod_auth_0k>
++      <mod_log>@LIBDIR@/jsm.so</mod_log>
++      <mod_register>@LIBDIR@/jsm.so</mod_register>
++      <mod_xml>@LIBDIR@/jsm.so</mod_xml>
+     </load>
+ 
+   </service>
+@@ -295,10 +295,10 @@
+   <xdb id="xdb">
+     <host/>
+     <load>
+-      <xdb_file>./xdb_file/xdb_file.so</xdb_file>
++    <xdb_file>@LIBDIR@/xdb_file.so</xdb_file>
      </load>
      <xdb_file xmlns="jabber:config:xdb_file">
 -      <spool><jabberd:cmdline flag='s'>./spool</jabberd:cmdline></spool>
-+	    <spool><jabberd:cmdline flag='s'>/var/spool/jabberd</jabberd:cmdline></spool>
++      <spool><jabberd:cmdline flag='s'>@SPOOLDIR@</jabberd:cmdline></spool>
      </xdb_file>
    </xdb>
  
+@@ -319,7 +319,7 @@
+ 
+   <service id="c2s">
+     <load>
+-      <pthsock_client>./pthsock/pthsock_client.so</pthsock_client>
++      <pthsock_client>@LIBDIR@/pthsock_client.so</pthsock_client>
+     </load>
+     <pthcsock xmlns='jabber:config:pth-csock'>
+       <authtime/>
 @@ -359,7 +359,7 @@
      <host/>
      <logtype/>
      <format>%d: [%t] (%h): %s</format>
 -    <file>error.log</file>
-+    <file>/var/log/jabberd/error.log</file>
++    <file>@LOG_DIR@/error.log</file>
      <stderr/>
    </log>
  
@@ -25,16 +94,34 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/05/09 18:44:36 xtraeme Exp $
      <logtype>record</logtype>
      <format>%d %h %s</format>
 -    <file>record.log</file>
-+    <file>/var/log/jabberd/record.log</file>
++    <file>@LOG_DIR@/record.log</file>
    </log>
  
    <!-- The following two services are for handling server-to-server traffic. -->
+@@ -382,7 +382,7 @@
+   <service id="dnsrv">
+     <host/>
+     <load>
+-      <dnsrv>./dnsrv/dnsrv.so</dnsrv>
++      <dnsrv>@LIBDIR@/dnsrv.so</dnsrv>
+     </load>
+     <dnsrv xmlns="jabber:config:dnsrv">
+     	<resend service="_jabber._tcp">s2s</resend> <!-- for supporting SRV records -->
+@@ -401,7 +401,7 @@
+ 
+   <service id="s2s">
+     <load>
+-      <dialback>./dialback/dialback.so</dialback>
++    <dialback>@LIBDIR@/dialback.so</dialback>
+     </load>
+     <dialback xmlns='jabber:config:dialback'>
+       <legacy/>
 @@ -596,7 +596,7 @@
    <!--
    This specifies the file to store the pid of the process in.
    -->
 -  <pidfile>./jabber.pid</pidfile>
-+  <pidfile>/var/run/jabber.pid</pidfile>
++  <pidfile>@PID_DIR@/jabber.pid</pidfile>
  
  
  </jabber>

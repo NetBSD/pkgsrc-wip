@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/09 18:44:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/09 22:20:17 xtraeme Exp $
 #
 
 DISTNAME=	jabber-1.4.2
@@ -20,15 +20,23 @@ RCD_SCRIPTS=		jabber
 EGDIR=			${PREFIX}/share/examples/jabberd
 LIBDIR=			${PREFIX}/lib/jabberd
 INCDIR=			${PREFIX}/include/jabberd
-SPOOLDIR=		/var/spool/jabberd
-LOGDIR=			/var/log/jabberd
+OWN_DIRS=		/var/spool/jabberd
+OWN_DIRS+=		/var/log/jabberd
 
 CONF_FILES=	${EGDIR}/jabber.xml.conf.default ${PKG_SYSCONFDIR}/jabber.xml
 
+post-configure:
+	${CP} ${WRKSRC}/jabber.xml ${WRKSRC}/jabber.xml.in
+	${RM} ${WRKSRC}/jabber.xml
+
+pre-build:
+	${SED} -e "s|@LIBDIR@|${PREFIX}/lib/jabberd|g" \
+		-e "s|@LOG_DIR@|/var/log/jabberd|g" \
+		-e "s|@PID_DIR@|/var/run|g" \
+		< ${WRKSRC}/jabber.xml.in > ${WRKSRC}/jabber.xml
+
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${SPOOLDIR}
-	${INSTALL_DATA_DIR} ${LOGDIR}
 	${INSTALL_DATA_DIR} ${LIBDIR}
 	${INSTALL_DATA_DIR} ${INCDIR}
 	${INSTALL_DATA} ${WRKSRC}/jabber.xml \
@@ -44,5 +52,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/lib.h ${INCDIR}
 	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/xmlparse.h ${INCDIR}
 
+.include "../../security/openssl/buildlink2.mk"
 .include "../../devel/pth/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
