@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/05 15:46:34 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/11 00:52:31 xtraeme Exp $
 
-PKGNAME=	php5-pgsql
+PKGNAME=	php5-pgsql-${PHP5_VERSION}
 CATEGORIES+=	databases
 COMMENT=	PHP5 extension for PostgreSQL databases
 
