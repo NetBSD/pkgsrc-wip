@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/12 15:45:41 tnn2 Exp $
+$NetBSD: distinfo,v 1.4 2005/02/22 08:55:34 tnn2 Exp $
 
-SHA1 (valknut-0.3.6.tar.bz2) = 628b4118f0cf8450696cb7f871ac6c4e05339515
-Size (valknut-0.3.6.tar.bz2) = 1148310 bytes
+SHA1 (valknut-0.3.7.tar.bz2) = 0172ff77c5273e2f786c46d9c4c19121f37a01f3
+Size (valknut-0.3.7.tar.bz2) = 1080857 bytes
 SHA1 (patch-aa) = 12fb589ed6fdbeed21af13a2ef54cec10f097dfb
