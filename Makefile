@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.254 2003/06/21 17:13:13 xtraeme Exp $
-# $NetBSD: Makefile,v 1.254 2003/06/21 17:13:13 xtraeme Exp $
+# $Id: Makefile,v 1.255 2003/06/22 10:12:15 cjep Exp $
+# $NetBSD: Makefile,v 1.255 2003/06/22 10:12:15 cjep Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -161,9 +161,9 @@ SUBDIR+=	p5-GeoIP
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-Net-Gnats
 SUBDIR+=	p5-Net-Jabber
+SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
-SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-gtk2
@@ -216,6 +216,7 @@ SUBDIR+=	theora-nightly
 SUBDIR+=	totem
 SUBDIR+=	trickle
 SUBDIR+=	tsclient
+SUBDIR+=	tsm
 SUBDIR+=	tuxtype2
 SUBDIR+=	typhoon
 SUBDIR+=	umbrello
@@ -253,6 +254,5 @@ SUBDIR+=	xplore
 SUBDIR+=	yafray
 SUBDIR+=	yelp
 SUBDIR+=	zebra-pj
-
 
 .include "../mk/bsd.pkg.subdir.mk"
