@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1170 2004/04/05 12:31:39 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1170 2004/04/05 12:31:39 xtraeme Exp $
+# $Id: Makefile,v 1.1171 2004/04/05 13:48:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1171 2004/04/05 13:48:58 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -359,7 +359,6 @@ SUBDIR+=	liquidwar
 SUBDIR+=	lletters
 SUBDIR+=	lmarbles
 SUBDIR+=	lsdvd
-SUBDIR+=	lua-expat
 SUBDIR+=	lua-pgsql
 SUBDIR+=	lua-sqlite
 SUBDIR+=	luacheia
