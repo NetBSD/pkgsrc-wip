@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/05/28 01:53:14 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/05/28 16:26:48 xtraeme Exp $
 
 SHA1 (grip-3.0.7.tar.gz) = 153cc2f936332c349e0cdc2c1b6c54ee105b55d8
 Size (grip-3.0.7.tar.gz) = 874766 bytes
-SHA1 (patch-aa) = 403ac24dbcbc16070ca88ce006132f9099d06120
-SHA1 (patch-ab) = 17891b19842b029e8436da9982b9298ab0d7260f
-SHA1 (patch-ac) = 1ea3c2cbf5e73c87536070a937f5658e46ad92c5
+SHA1 (patch-aa) = f5846fda885e6c8bc4e2c17a16eb2c7b360df4bb
+SHA1 (patch-ab) = 812fa49775abc63c26cc330d90cd8442116821b5
+SHA1 (patch-ac) = bd282fb9a90ae5a0606cbaea0a68fd26745d4cd4
+SHA1 (patch-ad) = ede8babcbdb471fc1ebd33440e9c463ed4f80a7b
+SHA1 (patch-ae) = 44aefc95a2d7b7ba77cc3eb9d8e0156052c0980d
+SHA1 (patch-af) = 4c6c52a76d53e154513ca78bd2115b2f1cbde9fa

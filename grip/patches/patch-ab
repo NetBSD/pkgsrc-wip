@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/05/28 01:53:14 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2003/05/28 16:26:49 xtraeme Exp $
 
---- src/rip.c.orig	2003-05-28 03:14:58.000000000 +0200
-+++ src/rip.c	2003-05-28 03:15:27.000000000 +0200
+--- src/rip.c.orig	2003-05-28 13:50:42.000000000 +0200
++++ src/rip.c	2003-05-28 13:51:31.000000000 +0200
 @@ -27,7 +27,7 @@
  #elif defined (HAVE_SYS_VFS_H)
  #include <sys/vfs.h>
