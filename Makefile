@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.956 2004/02/13 06:32:27 minskim Exp $
-# $NetBSD: Makefile,v 1.956 2004/02/13 06:32:27 minskim Exp $
+# $Id: Makefile,v 1.957 2004/02/13 19:39:04 minskim Exp $
+# $NetBSD: Makefile,v 1.957 2004/02/13 19:39:04 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -95,7 +95,6 @@ SUBDIR+=	darcnes-svgalib
 SUBDIR+=	dasher
 SUBDIR+=	dasm
 SUBDIR+=	dbf
-SUBDIR+=	dbxml
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dfm
