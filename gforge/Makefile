@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/01/03 14:04:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/02/04 14:31:17 thomasklausner Exp $
 
 DISTNAME=	gforge-3.1
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Open Source collaborative software development tool
 DEPENDS+=	wget>=1.9:../../net/wget
 DEPENDS+=	php-jpgraph>=1.12:../../graphics/php-jpgraph
 DEPENDS+=	php-pgsql>=4.3:../../databases/php-pgsql
-DEPENDS+=	postgresql-lib73>=7.3.1:../../databases/postgresql-lib73
+DEPENDS+=	postgresql73-lib>=7.3.1:../../databases/postgresql73-lib
 
 USE_PERL5=	YES
 NO_BUILD=	YES
