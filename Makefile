@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.962 2004/02/15 01:59:16 minskim Exp $
-# $NetBSD: Makefile,v 1.962 2004/02/15 01:59:16 minskim Exp $
+# $Id: Makefile,v 1.963 2004/02/15 15:46:01 minskim Exp $
+# $NetBSD: Makefile,v 1.963 2004/02/15 15:46:01 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -574,7 +574,6 @@ SUBDIR+=	py-visionegg
 SUBDIR+=	py-visionegg-contrib
 SUBDIR+=	py-visionegg-demos
 SUBDIR+=	py-visionegg-docs
-SUBDIR+=	py-vorbis
 SUBDIR+=	py-vtkmodule
 SUBDIR+=	py-weave
 SUBDIR+=	py-willow
