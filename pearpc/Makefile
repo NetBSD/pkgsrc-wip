@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/06/16 16:54:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/18 17:15:29 xtraeme Exp $
 #
 
 DISTNAME=		pearpc-0.2.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://pearpc.sourceforge.net/
 COMMENT=		PowerPC emulator
-
-ONLY_FOR_PLATFORMS=	NetBSD-*-* Linux-*-i386
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
