@@ -2,4 +2,4 @@ UebiMiau is a simple, yet efficient cross-plataform POP3/IMAP mail
 reader written in PHP. 
 It's have some many features, such as: Folders, View and Send 
 Attachments, Preferences, Search, Quota Limit, etc. 
-UebiMiau DOES NOT require database or extra PHP modules (--with-imap)
+UebiMiau DOES NOT require database (ie. mysql) or extra PHP modules (--with-imap)
