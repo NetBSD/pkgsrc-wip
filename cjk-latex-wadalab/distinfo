@@ -1,0 +1,21 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/10/09 14:53:38 hubertf Exp $
+
+SHA1 (CJK-4_5.2.tar.gz) = 3acbd142686fab3fe074570a1e87bcc78ae22509
+Size (CJK-4_5.2.tar.gz) = 432014 bytes
+SHA1 (wadalab-gothic-0-13.5.tar.gz) = ff58fb62b3525de1067ed5458031f3d74220e338
+Size (wadalab-gothic-0-13.5.tar.gz) = 2336730 bytes
+SHA1 (wadalab-maru-0-8.4.tar.gz) = dd2f8aa3f3391ed1f2272b3df2ef62d9000b223f
+Size (wadalab-maru-0-8.4.tar.gz) = 3521140 bytes
+SHA1 (wadalab-maru-1-8.tar.gz) = 982ab1d58570b00c0e7fa80ecbe84de84c3d0b4d
+Size (wadalab-maru-1-8.tar.gz) = 3476423 bytes
+SHA1 (wadalab-mincho-0-12.8.tar.gz) = e84275a720d0d07fed7a4a2a5f6af0871b7d8f0c
+Size (wadalab-mincho-0-12.8.tar.gz) = 3515628 bytes
+SHA1 (wadalab-mincho-0-8.4.tar.gz) = d70fbee99b1202f22d4d95bd79f4c15208b70de2
+Size (wadalab-mincho-0-8.4.tar.gz) = 3612495 bytes
+SHA1 (wadalab-mincho-1-8.tar.gz) = d5da12339a5a243e83b4eec3da6f6485aad9e487
+Size (wadalab-mincho-1-8.tar.gz) = 3494558 bytes
+SHA1 (wadalab-sym.7.tar.gz) = 67123d5f812eca6da91eb58b9938ff10f1379816
+Size (wadalab-sym.7.tar.gz) = 52446 bytes
+SHA1 (wftodm.c) = 8fed4956e5314567d79d680558ca457d42ee1cab
+Size (wftodm.c) = 8474 bytes
+SHA1 (patch-aa) = a63a97fa2ccc90c8ff4e60ce0de53832662bc5d6

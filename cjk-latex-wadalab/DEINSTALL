@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+
+STAGE=$2
+
+TEXMFMAIN=@TEXMFMAIN@
+UPDMAP_CFG=${TEXMFMAIN}/web2c/updmap.cfg
+
+case ${STAGE} in
+    DEINSTALL)
+	;;
+    POST-DEINSTALL)
+	echo "Edit ${UPDMAP_CFG}"
+	cp -p ${UPDMAP_CFG} ${UPDMAP_CFG}.tmp
+	sed -e "/wadalab/d" ${UPDMAP_CFG}.tmp > ${UPDMAP_CFG}
+	rm -f ${UPDMAP_CFG}.tmp
+
+	echo "Running updmap"
+	updmap
+	;;
+    *)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/09 14:53:38 hubertf Exp $
+
+--- wftodm-orig2.c      Tue Sep 23 22:45:32 1997
++++ wftodm.c    Tue Aug 25 13:13:09 1998
+@@ -209,14 +209,13 @@
+   fprintf(ofp,"/UnderlineThickness 0 def\n");
+   fprintf(ofp,"end readonly def\n");
+   fprintf(ofp,"/FontName /%s def\n",fontname);
+-  fprintf(ofp,"/DmEncoding [\n");
++  fprintf(ofp,"/Encoding 256 array\n");
++  fprintf(ofp,"0 1 255 {1 index exch /.notdef put} for\n");
+   for(i=0;i<16;i++){
+     for(j=0;j<16;j++)
+-      fprintf(ofp," /c%02X",i*16+j);
+-    putc('\n',ofp);
++      fprintf(ofp,"dup %d /c%02X put\n",i*16+j,i*16+j);
+   }
+-  fprintf(ofp,"] readonly def\n");
+-  fprintf(ofp,"/Encoding DmEncoding def\n");
++  fprintf(ofp,"readonly def\n");
+   fprintf(ofp,"/PaintType 0 def\n");
+   fprintf(ofp,"/FontType 1 def\n");
+   fprintf(ofp,"/FontMatrix [.001 0 0 .001 0 -0.16] readonly def\n");

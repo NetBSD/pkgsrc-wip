@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+
+STAGE=$2
+
+TEXMFMAIN=@TEXMFMAIN@
+
+case ${STAGE} in
+    PRE-INSTALL)
+	;;
+    POST-INSTALL)
+	updmap --enable Map wadalab.map
+	;;
+    *)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
