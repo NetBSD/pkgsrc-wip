@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/18 04:22:08 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/15 23:37:46 rillig Exp $
 # FreeBSD Id: ports/net/l2tpd/Makefile,v 1.6 2003/04/16 13:53:27 ru Exp
 
 DISTNAME=	l2tpd-0.69
@@ -19,7 +19,7 @@ EGDIR=		${PREFIX}/share/examples/l2tpd
 CONF_FILES=	${EGDIR}/l2tpd.conf.sample ${PKG_SYSCONFDIR}/l2tpd.conf
 CONF_FILES+=	${EGDIR}/l2tpd-secrets.sample ${PKG_SYSCONFDIR}/l2tpd-secrets
 
-CFLAGS+=	-DPREFIX="\\\"${PREFIX}\\\"" -DSANITY
+CFLAGS+=	-DPREFIX='"${PREFIX}"' -DSANITY
 
 SUBST_CLASSES+=		options
 SUBST_MESSAGE.options=	"Fixing build options."
