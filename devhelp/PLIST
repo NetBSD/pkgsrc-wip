@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/15 17:56:14 bmeurer Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/26 15:01:21 bmeurer Exp $
 bin/devhelp
 lib/devhelp/libdevhelp.a
 lib/devhelp/libdevhelp.la
@@ -25,9 +25,13 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/devhelp.mo
@@ -42,6 +46,8 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/devhelp.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/devhelp.mo
+share/mime-info/devhelp.keys
+share/mime-info/devhelp.mime
 share/pixmaps/devhelp.png
 @dirrm share/examples/devhelp
 @dirrm share/doc/devhelp
@@ -49,5 +55,4 @@ share/pixmaps/devhelp.png
 @dirrm share/devhelp/images
 @dirrm share/devhelp/dtd
 @dirrm share/devhelp
-@dirrm share/applications
 @dirrm lib/devhelp
