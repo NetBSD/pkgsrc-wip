@@ -1,0 +1,20 @@
+This program consists of
+
+* a remailer client:
+
+  The remailer client supports sending anonymous mail using Cypherpunk
+  and Mixmaster remailers, managing pseudonyms at Newnym nym servers
+  and receiving mail anonymously from Cypherpunk remailers. It supports
+  OpenPGP encryption (compatible with PGP 2, PGP 5 and up, and GnuPG).
+
+  The client can be used with a menu-based user interface and with
+  command line options.
+
+* a remailer:
+
+  The remailer supports the Cypherpunk and Mixmaster message formats.
+  It can be integrated with the mail delivery system of Unix-based
+  computers or use the POP3 and SMTP protocols for mail transfer.
+  Mixmaster includes an automated abuse-handling system.
+
+[XXX WIP NOTE:  Server functionality in this package is not yet complete.]

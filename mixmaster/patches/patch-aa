@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/18 18:25:03 tvierling Exp $
+
+--- Src/mix.c.orig	Mon Aug 18 12:25:48 2003
++++ Src/mix.c
+@@ -86,7 +86,7 @@ char POOLDIR[PATHMAX];
+ #ifdef WIN32
+ char SENDMAIL[LINELEN] = "outfile";
+ #else /* end of WIN32 */
+-char SENDMAIL[LINELEN] = "/usr/lib/sendmail -t";
++char SENDMAIL[LINELEN] = "/usr/sbin/sendmail -t";
+ #endif /* else if not WIN32 */
+ char SENDANONMAIL[LINELEN];
+ char NEWS[LINELEN];

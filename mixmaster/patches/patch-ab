@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/08/18 18:25:03 tvierling Exp $
+
+--- mix.1.orig	Mon Aug 18 12:26:14 2003
++++ mix.1
+@@ -278,7 +278,7 @@ in the
+ .B pool
+ directory instead of sending mail.
+ Default:
+-.BR "/usr/lib/sendmail -t" .
++.BR "/usr/sbin/sendmail -t" .
+ .TP
+ .B SMTPRELAY
+ Name of SMTP relay. If set, mail will be delivered to the relay
