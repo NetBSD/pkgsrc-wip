@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1582 2004/12/27 19:55:37 chriswareham Exp $
-# $NetBSD: Makefile,v 1.1582 2004/12/27 19:55:37 chriswareham Exp $
+# $Id: Makefile,v 1.1583 2004/12/27 23:39:24 minskim Exp $
+# $NetBSD: Makefile,v 1.1583 2004/12/27 23:39:24 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -709,7 +709,6 @@ SUBDIR+=	py-mmpython
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-nevow
 SUBDIR+=	py-oak
-SUBDIR+=	py-openssl
 SUBDIR+=	py-orm
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-plucker
