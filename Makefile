@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1510 2004/10/23 17:35:41 bencollver Exp $
-# $NetBSD: Makefile,v 1.1510 2004/10/23 17:35:41 bencollver Exp $
+# $Id: Makefile,v 1.1511 2004/10/23 23:43:54 lexort Exp $
+# $NetBSD: Makefile,v 1.1511 2004/10/23 23:43:54 lexort Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -103,6 +103,7 @@ SUBDIR+=	dasm
 SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dclib
+SUBDIR+=	dcraw
 SUBDIR+=	debian_base
 SUBDIR+=	debian_glib
 SUBDIR+=	debian_gtk
