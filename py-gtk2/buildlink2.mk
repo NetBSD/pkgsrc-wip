@@ -1,8 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/04/05 20:40:56 marc Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/09 14:46:33 drochner Exp $
 
 .if !defined(PYGTK2_BUILDLINK2_MK)
 PYGTK2_BUILDLINK2_MK=	# defined
 
+PYTHON_VERSION_REQD=	22pth
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_PACKAGES+=			pygtk2

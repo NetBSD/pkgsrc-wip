@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/25 18:55:29 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2003/05/09 14:46:32 drochner Exp $
 #
 
 DISTNAME=	pygtk-1.99.16
@@ -11,7 +11,7 @@ MAINTAINER=	marc@informatik.uni-bremen.de
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Python bindings for GTK+2
 
-CONFLICTS=	${PYPKGPREFIX}-gtk-*
+CONFLICTS=	${PYPKGPREFIX}-gtk<0.6.10
 
 PY_PATCHPLIST=	YES
 USE_BUILDLINK2=	YES
@@ -21,7 +21,7 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/pygtk-2.0.pc.in
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 
-PYTHON_VERSION_REQD=	22
+PYTHON_VERSION_REQD=	22pth
 
 .include "../../mk/pthread.buildlink2.mk"
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "native")
@@ -33,7 +33,6 @@ CONFIGURE_ARGS+=	--enable-thread
 .include "../../lang/python/extension.mk"
 .include "../../math/py-Numeric/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
-
-.include "../../wip/gtkglarea2/buildlink2.mk"
+.include "../../x11/gtkglarea2/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
