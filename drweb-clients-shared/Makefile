@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/13 12:58:42 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/17 23:20:33 bubuchka Exp $
 
 DRW_CLIENT_NAME=	clients-shared
 
 MAINTAINER=		mishka@terabyte.com.ua
-COMMENT=		Shared files of clients to DrWeb AntiVirus daemon
+COMMENT=		Shared files of clients to DrWeb Daemon antivirus
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
