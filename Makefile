@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1547 2004/11/20 04:21:16 minskim Exp $
-# $NetBSD: Makefile,v 1.1547 2004/11/20 04:21:16 minskim Exp $
+# $Id: Makefile,v 1.1548 2004/11/20 16:27:21 minskim Exp $
+# $NetBSD: Makefile,v 1.1548 2004/11/20 16:27:21 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -95,7 +95,6 @@ SUBDIR+=	dansguardian
 SUBDIR+=	daphne
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darcs
-SUBDIR+=	dasm
 SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dclib
