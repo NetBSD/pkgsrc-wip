@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/12 20:39:31 jcflack Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/29 15:33:22 jcflack Exp $
 #
 
 DISTNAME=		qcad-2.0.4.0-1.src
@@ -12,8 +12,8 @@ PKGNAME=		qcad-2.0.4.0
 COMMENT=		2D CAD system
 
 USE_BUILDLINK3=		yes
-USE_X11=		# defined
-GNU_CONFIGURE=		# defined
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+= 	make
 
 CONFIGURE_DIRS= 	${WRKSRC}/fparser ${WRKSRC}/dxflib
@@ -24,7 +24,6 @@ BUILD_DIRS=		${CONFIGURE_DIRS}
 .endfor
 BUILD_DIRS+=		${WRKSRC}/qcad
 
-# XXX how to determine the below dynamically?
 MAKE_ENV+=		QMAKESPEC=${QTDIR}/mkspecs/default
 PREPEND_PATH+=		${QTDIR}/bin
 
@@ -38,7 +37,7 @@ PREPEND_PATH+=		${QTDIR}/bin
 # is provided here as follows: the escaped-newline real-newline escaped-newline
 # sequence separating individual sed commands is enclosed in ""s so it is not a
 # word separator for the shell; sed sees a single trailing blank on the first
-# command and a single leading blank on the second, neither of which matters. 
+# command and a single leading blank on the second, neither of which matters.
 # The constant portions of the sed commands are (by inspection) free of shell
 # metacharacters; the variable portions ${PREFIX} and ${QTDIR} are subject to
 # two layers of quoting: S/=/\=/g ensures that any = in their values will be
