@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/12 15:22:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/07 11:27:57 rillig Exp $
 
 DISTNAME=	mc-4.6.0
 CATEGORIES=	sysutils
@@ -22,7 +22,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.cons.saver
 
 # remove dir if no extensions were installed there
 post-install:
-	@${RMDIR} ${PREFIX}/lib/mc 2>/dev/null
+	@${RMDIR} ${PREFIX}/lib/mc 2>/dev/null || ${TRUE}
 
 # we need working e2fsprogs and gpm packages first
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
