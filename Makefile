@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.528 2003/10/07 18:12:11 xtraeme Exp $
-# $NetBSD: Makefile,v 1.528 2003/10/07 18:12:11 xtraeme Exp $
+# $Id: Makefile,v 1.529 2003/10/07 23:39:42 blef Exp $
+# $NetBSD: Makefile,v 1.529 2003/10/07 23:39:42 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -105,6 +105,7 @@ SUBDIR+=	emirror
 SUBDIR+=	entropy
 SUBDIR+=	ezbounce
 SUBDIR+=	festival-gaim
+SUBDIR+=	fisg
 SUBDIR+=	fluxconf
 SUBDIR+=	fluxspace
 SUBDIR+=	fragroute
