@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/05 13:40:27 virtus Exp $
+$NetBSD: distinfo,v 1.2 2003/04/06 18:43:59 virtus Exp $
 
-SHA1 (chksniff-0.1.tar.gz) = c5e933a2420d3de2efbbafa2576e7d6974eec650
-Size (chksniff-0.1.tar.gz) = 30567 bytes
+SHA1 (chksniff-0.2.tar.gz) = 008a63e429dc0c12c0ba760e6476623ca99ad85a
+Size (chksniff-0.2.tar.gz) = 28419 bytes
