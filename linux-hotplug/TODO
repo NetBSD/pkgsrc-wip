@@ -1,0 +1,7 @@
+from readme:
+On Kernel 2.4 based systems, you may want to avoid installing the separate
+"pcmcia_cs" package.  It's not integrated with kernel hotplugging, and
+appears not to handle Cardbus as well as needed.  On the other hand, if
+you need to use PCMCIA (16 bit) cards, you'll likely need it.
+
+need to do plist
