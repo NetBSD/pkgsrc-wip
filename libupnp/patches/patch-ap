@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/genlib/util/Makefile.orig	2001-06-15 09:22:16.000000000 +0900
++++ src/genlib/util/Makefile
+@@ -44,7 +44,7 @@ objects = genexception.o xstring.o memre
+ 
+ all: $(objects) $(lib_dir)/utilall.o
+ 
+-CFLAGS = -I $(inc_root) -fpic -Wall -c -D_REENTRANT
++CFLAGS = -I $(inc_root) -fpic -Wall -c $(PTHREAD_CFLAGS)
+ 
+ ifeq ($(WEB),1)
+ CFLAGS += -DINTERNAL_WEB_SERVER

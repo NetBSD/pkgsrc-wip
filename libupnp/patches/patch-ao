@@ -1,0 +1,15 @@
+$NetBSD: patch-ao,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/genlib/tpool/interrupts.cpp.orig	2001-06-15 09:22:16.000000000 +0900
++++ src/genlib/tpool/interrupts.cpp
+@@ -44,7 +44,9 @@
+ #include <pthread.h>
+ #include <unistd.h>
+ 
+-
++#ifndef SA_NOMASK
++#define SA_NOMASK SA_NODEFER
++#endif
+ 
+ // module vars //////////////////////////////
+ 

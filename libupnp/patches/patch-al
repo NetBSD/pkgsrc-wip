@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/genlib/service_table/Makefile.orig	2001-06-15 09:21:34.000000000 +0900
++++ src/genlib/service_table/Makefile
+@@ -45,7 +45,7 @@ lib_dir = $(upnp_src_dir)/lib
+ 
+ TARGET = $(lib_dir)/service_table.o
+ 
+-CFLAGS = -Wall -fpic -I$(upnp_src_inc_dir) -I$(upnp_inc_dir) 
++CFLAGS = -Wall -fpic -I$(upnp_src_inc_dir) -I$(upnp_inc_dir) $(PTHREAD_CFLAGS)
+ 
+ ifeq ($(WEB),1)
+ CFLAGS += -DINTERNAL_WEB_SERVER

@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/genlib/http_client/Makefile.orig	2001-06-15 09:21:34.000000000 +0900
++++ src/genlib/http_client/Makefile
+@@ -44,7 +44,7 @@ lib_dir=../../lib
+ 
+ TARGET = $(lib_dir)/http_client.o
+ 
+-CFLAGS = -Wall -c -I $(upnp_src_inc_dir) -I$(upnp_inc_dir) 
++CFLAGS = -Wall -c -I $(upnp_src_inc_dir) -I$(upnp_inc_dir) $(PTHREAD_CFLAGS)
+ 
+ ifeq ($(WEB),1)
+ CFLAGS += -DINTERNAL_WEB_SERVER

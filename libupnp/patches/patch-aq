@@ -1,0 +1,17 @@
+$NetBSD: patch-aq,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/genlib/util/gmtdate.cpp.orig	2001-06-15 09:22:16.000000000 +0900
++++ src/genlib/util/gmtdate.cpp
+@@ -41,7 +41,12 @@
+ #include <stdlib.h>
+ #include <ctype.h>
+ #include <string.h>
++#ifdef __linux__
+ #include <values.h>
++#else
++#include <limits.h>
++#define MAXINT INT_MAX
++#endif
+ #include <genlib/util/gmtdate.h>
+ #include <genlib/util/miscexceptions.h>
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-at,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/ssdp/makefile.orig	2001-06-15 09:21:35.000000000 +0900
++++ src/ssdp/makefile
+@@ -32,8 +32,8 @@
+ TARGET=../lib/ssdp.o
+ 
+ CC = gcc
+-CFLAGS =  -fpic -c -Wall
+-LDFLAGS =   -g -shared -Wl,-soname,ssdpres.so.0 -o ssdpres.so.0.0  /usr/lib/libpthread.so -lc
++CFLAGS =  -fpic -c -Wall $(PTHREAD_CFLAGS)
++LDFLAGS =   -g -shared -Wl,-soname,ssdpres.so.0 -o ssdpres.so.0.0  $(PTHREAD_LDFLAGS) -lc
+ INCLUDES = -I. -I../inc -I../../inc
+ 
+ ifeq ($(DEBUG),1)

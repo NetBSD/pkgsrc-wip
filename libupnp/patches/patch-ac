@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/api/upnpapi.c.orig	2001-06-15 09:22:15.000000000 +0900
++++ src/api/upnpapi.c
+@@ -44,7 +44,11 @@
+ #include<string.h>
+ 
+ #include <sys/ioctl.h>
++#ifdef __linux__
+ #include <linux/if.h>
++#else
++#include <net/if.h>
++#endif
+ #include <sys/utsname.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>

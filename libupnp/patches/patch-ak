@@ -1,0 +1,14 @@
+$NetBSD: patch-ak,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/genlib/net/http/readwrite.cpp.orig	2001-06-15 09:22:15.000000000 +0900
++++ src/genlib/net/http/readwrite.cpp
+@@ -34,6 +34,9 @@
+ 
+ // readwrite.cpp
+ #include "../../inc/tools/config.h"
++#ifndef MSG_NOSIGNAL
++#define MSG_NOSIGNAL 0
++#endif
+ #ifdef INTERNAL_WEB_SERVER
+ #if EXCLUDE_WEB_SERVER == 0
+ 

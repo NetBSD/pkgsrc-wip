@@ -1,0 +1,28 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+SHA1 (upnpsdk-1.0.4.tar.gz) = a5541968b4e6ee2b1aa5399394a40e0e060d4c52
+RMD160 (upnpsdk-1.0.4.tar.gz) = 1fd2a714de84e8fec0b57e9cdc918eb4c802101b
+Size (upnpsdk-1.0.4.tar.gz) = 227425 bytes
+SHA1 (patch-aa) = c3120a643ed9935a329fb1dd9a3c2821ea10f4ae
+SHA1 (patch-ab) = cd6931cfabb8fbf5d0553ec1f66c50185dad2d3e
+SHA1 (patch-ac) = e22563ac647db603fc6b05d2003fd8f733b829b3
+SHA1 (patch-ad) = 6e588d5367661a50cffe9bad0018877f2be9a8ad
+SHA1 (patch-ae) = 776813d3a154fe2705c4c88e57a90d0b6fde0366
+SHA1 (patch-af) = 27ef6b78fc02784dc495f9850dc26537d7f9bb38
+SHA1 (patch-ag) = 3bee6f0525fa3180d4c1aa5ae4c021091e9fa350
+SHA1 (patch-ah) = b0e5ce833d63072c19a7010a624283d0d304f989
+SHA1 (patch-ai) = dc9778768ed2dbe9b56cf4e39771150b2c41a0df
+SHA1 (patch-aj) = 97a4cb94bb47fb07706a6c6b531817569935bc5f
+SHA1 (patch-ak) = b5a34ac55a5f4eb5615f4f80e8cd372579212052
+SHA1 (patch-al) = e0228bee0ec97c695b17d7b1133c6d5d44d0737f
+SHA1 (patch-am) = e1f9a99ef427ade5dde67a36a352fa218e7d4163
+SHA1 (patch-an) = e7ff4c93bd78e81c06fb42f683fe1c3d4993951d
+SHA1 (patch-ao) = 73cae9e83a2a1ee22e25618ea0594ec8bd81c407
+SHA1 (patch-ap) = 3c20f9a3234da2e7e9c67fa24b07c2c5945d9644
+SHA1 (patch-aq) = 7685c2ef971d982c8923b70382005a8ded20b0e7
+SHA1 (patch-ar) = 419a713e2c2daad6b648a1d5cd4e976f2e8a593e
+SHA1 (patch-as) = f93c028adc29ce5d82b8510223a9498149acac47
+SHA1 (patch-at) = 3b9c9f087b021f21cc8093ec53e77ceeafe1bfa3
+SHA1 (patch-au) = 5b2abdc8f18f27e5b5115ef8a633dd29bc9df222
+SHA1 (patch-av) = 1c682e676c9312e7086fa306123e77689485b0c1
+SHA1 (patch-aw) = 6f4fa955a17f3fbe8cf7a9590b5cb3b02b216f50

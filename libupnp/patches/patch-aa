@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- makefile.orig	2001-08-16 03:20:11.000000000 +0900
++++ makefile
+@@ -34,6 +34,7 @@ UPNP = bin/libupnp.so
+ SUBDIRS = src
+ 
+ VERSION=1.0.4
++SO_VERSION=1
+ 
+ ifeq ($(DEBUG),1)
+ STRIPU =
+@@ -102,17 +103,19 @@ clean:
+ 	@if [ -f "doc/upnpsdk.aux" ]; then rm doc/upnpsdk.aux; fi
+ 
+ install: upnp
+-	@install -d /usr/include/upnp
+-	@install -d /usr/include/upnp/upnpdom
+-	@install -d /usr/include/upnp/tools
+-	@install bin/libupnp.so /usr/lib/libupnp.so.$(VERSION)
+-	ln -s /usr/lib/libupnp.so.$(VERSION) /usr/lib/libupnp.so
+-	@install inc/*.h /usr/include/upnp
+-	@install inc/upnpdom/*.h /usr/include/upnp/upnpdom
+-	@install inc/tools/*.h /usr/include/upnp/tools
++	@install -d ${PREFIX}/include/upnp
++	@install -d ${PREFIX}/include/upnp/upnpdom
++	@install -d ${PREFIX}/include/upnp/tools
++	@install bin/libupnp.so ${PREFIX}/lib/libupnp.so.$(VERSION)
++	ln -s ${PREFIX}/lib/libupnp.so.$(VERSION) ${PREFIX}/lib/libupnp.so
++	ln -s ${PREFIX}/lib/libupnp.so.$(VERSION) ${PREFIX}/lib/libupnp.so.$(SO_VERSION)
++	@install inc/*.h ${PREFIX}/include/upnp
++	@install inc/upnpdom/*.h ${PREFIX}/include/upnp/upnpdom
++	@install inc/tools/*.h ${PREFIX}/include/upnp/tools
+ 
+ uninstall:
+-	@if [ -d /usr/include/upnp ]; then rm -rf /usr/include/upnp; fi
+-	@if [ -f /usr/lib/libupnp.so ]; then rm /usr/lib/libupnp.so; fi
+-	@if [ -f /usr/lib/libupnp.so.$(VERSION) ]; then rm /usr/lib/libupnp.so.$(VERSION); fi
++	@if [ -d ${PREFIX}/include/upnp ]; then rm -rf ${PREFIX}/include/upnp; fi
++	@if [ -f ${PREFIX}/lib/libupnp.so ]; then rm ${PREFIX}/lib/libupnp.so; fi
++	@if [ -f ${PREFIX}/lib/libupnp.so.$(VERSION) ]; then rm ${PREFIX}/lib/libupnp.so.$(VERSION); fi
++	@if [ -f ${PREFIX}/lib/libupnp.so.$(SO_VERSION) ]; then rm ${PREFIX}/lib/libupnp.so.$(SO_VERSION); fi
+ 	

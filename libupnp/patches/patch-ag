@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/genlib/http_client/http_client.c.orig	2001-06-15 09:21:55.000000000 +0900
++++ src/genlib/http_client/http_client.c
+@@ -38,6 +38,9 @@
+ 
+ #include "./genlib/http_client/http_client.h"
+ 
++#ifndef MSG_NOSIGNAL
++#define MSG_NOSIGNAL 0
++#endif
+ 
+ //*************************************************************************
+ //* Name: copy_sockaddr_in

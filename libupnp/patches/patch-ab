@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/api/makefile.orig	2001-06-15 09:21:33.000000000 +0900
++++ src/api/makefile
+@@ -32,17 +32,17 @@
+ TARGET=../../bin/libupnp.so
+ 
+ CC = gcc
+-CFLAGS = -Wall -fpic $(DEFS) 
++CFLAGS = -Wall -fpic $(DEFS) $(PTHREAD_CFLAGS)
+ C2FLAGS = -Wall $(DEFS) -shared -Wl,-soname,libupnp.so
+ INCLUDES = -I ../inc -I ../../inc -I ../../inc/upnpdom  -I ../inc/tools
+-LIBS = -lpthread -luuid
++LIBS = $(PTHREAD_LIBS) -luuid
+ 
+ ifeq ($(DEBUG),1)
+ CFLAGS += -g -O -DDEBUG
+-C2FLAGS += -g -O -DDEBUG
++C2FLAGS += -g -O -DDEBUG $(PTHREAD_LDFLAGS) $(LDFLAGS)
+ else
+ CFLAGS += -O2
+-C2FLAGS += -O2
++C2FLAGS += -O2 $(PTHREAD_LDFLAGS) $(LDFLAGS)
+ endif
+ 
+ objects = upnpapi.o config.o ../lib/ssdp.o ../lib/soap.o \

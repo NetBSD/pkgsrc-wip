@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/soap/makefile.orig	2001-06-15 09:21:11.000000000 +0900
++++ src/soap/makefile
+@@ -32,7 +32,7 @@
+ TARGET=../lib/soap.o
+ 
+ CC = gcc
+-CFLAGS =  -fpic -c -Wall
++CFLAGS =  -fpic -c -Wall $(PTHREAD_CFLAGS)
+ INCLUDES = -I. -I../inc -I../../inc
+ 
+ ifeq ($(DEBUG),1)

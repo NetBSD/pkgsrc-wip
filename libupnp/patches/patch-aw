@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/urlconfig/Makefile.orig	2001-06-15 09:21:36.000000000 +0900
++++ src/urlconfig/Makefile
+@@ -46,7 +46,7 @@ url_inc=../inc/urlconfig
+ lib_dir=../lib
+ all: urlconfig.o $(lib_dir)/urlconfigall.o
+ 
+-CFLAGS = -I $(upnp_root) -I $(genlib_r) -I $(url_inc) -fpic -Wall -c -D_REENTRANT
++CFLAGS = -I $(upnp_root) -I $(genlib_r) -I $(url_inc) -fpic -Wall -c $(PTHREAD_CFLAGS)
+ 
+ ifeq ($(WEB),1)
+ CFLAGS += -DINTERNAL_WEB_SERVER

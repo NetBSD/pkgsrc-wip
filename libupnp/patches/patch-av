@@ -1,0 +1,15 @@
+$NetBSD: patch-av,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/upnpdom/Makefile.orig	2001-06-15 09:22:16.000000000 +0900
++++ src/upnpdom/Makefile
+@@ -34,8 +34,8 @@ CC = gcc
+ CCPP = g++
+ PLATFORM = LINUX
+ COMPILER = g++
+-CXXFLAGS = -w -O
+-CFLAGS = -fpic -Wall -D_REENTRANT  
++CXXFLAGS = -w -O $(PTHREAD_CFLAGS)
++CFLAGS = -fpic -Wall $(PTHREAD_CFLAGS)
+ PREFIX = /usr/local
+ LIBS =  
+ INCLUDE = -I ../../inc/upnpdom -I ../inc

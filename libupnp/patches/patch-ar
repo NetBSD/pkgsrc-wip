@@ -1,0 +1,14 @@
+$NetBSD: patch-ar,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/inc/genlib/tpool/tpool.h.orig	2001-06-15 09:22:16.000000000 +0900
++++ src/inc/genlib/tpool/tpool.h
+@@ -36,7 +36,9 @@
+ #define GENLIB_TPOOL_TPOOL_H
+ 
+ #include <stdio.h>
++#ifdef __linux__
+ #include <semaphore.h>
++#endif
+ #include <pthread.h>
+ 
+ #include <genlib/tpool/scheduler.h>

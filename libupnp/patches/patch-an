@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/genlib/tpool/Makefile.orig	2001-06-15 09:21:34.000000000 +0900
++++ src/genlib/tpool/Makefile
+@@ -40,7 +40,7 @@ p_inc=../../inc/genlib/tpool
+ lib_dir=../../lib
+ all: tpool.o scheduler.o interrupts.o $(lib_dir)/tpoolall.o
+ 
+-CFLAGS = -I $(inc_root) -fpic -Wall -c -D_REENTRANT
++CFLAGS = -I $(inc_root) -fpic -Wall -c $(PTHREAD_CFLAGS)
+ 
+ ifeq ($(DEBUG),1)
+ CFLAGS += -g -O -DDEBUG

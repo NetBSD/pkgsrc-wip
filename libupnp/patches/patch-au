@@ -1,0 +1,16 @@
+$NetBSD: patch-au,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+
+--- src/ssdp/ssdplib.c.orig	2001-08-16 03:17:31.000000000 +0900
++++ src/ssdp/ssdplib.c
+@@ -403,7 +403,11 @@ end:
+     bzero((char *)&SelfAddr, sizeof(struct sockaddr_in));
+ 
+     SelfAddr.sin_family = AF_INET;
++#ifdef __linux__
+     SelfAddr.sin_addr.s_addr = inet_addr(SSDP_IP);
++#else
++    SelfAddr.sin_addr.s_addr = htonl(INADDR_ANY);
++#endif
+     SelfAddr.sin_port = htons(SSDP_PORT);
+     if (bind( SsdpSock, (struct sockaddr *) &SelfAddr, sizeof(SelfAddr)) != 0)
+     {
