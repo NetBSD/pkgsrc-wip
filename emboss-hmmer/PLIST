@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/15 20:21:19 daprice Exp $
+bin/ealistat
+bin/ehmmalign
+bin/ehmmbuild
+bin/ehmmcalibrate
+bin/ehmmconvert
+bin/ehmmemit
+bin/ehmmfetch
+bin/ehmmindex
+bin/ehmmpfam
+bin/ehmmsearch
+lib/libhmmer.a
+lib/libhmmer.la
+lib/libhmmer.so
+lib/libhmmer.so.2
+lib/libhmmer.so.2.1
+share/EMBOSS/acd/ealistat.acd
+share/EMBOSS/acd/ehmmalign.acd
+share/EMBOSS/acd/ehmmbuild.acd
+share/EMBOSS/acd/ehmmcalibrate.acd
+share/EMBOSS/acd/ehmmconvert.acd
+share/EMBOSS/acd/ehmmemit.acd
+share/EMBOSS/acd/ehmmfetch.acd
+share/EMBOSS/acd/ehmmindex.acd
+share/EMBOSS/acd/ehmmpfam.acd
+share/EMBOSS/acd/ehmmsearch.acd

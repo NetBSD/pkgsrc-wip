@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/11/15 20:21:19 daprice Exp $
+
+--- src/Makefile.in.orig	Tue Jul 27 14:15:13 2004
++++ src/Makefile.in	Tue Jul 27 14:17:37 2004
+@@ -53,7 +53,7 @@
+ 	$(top_srcdir)/m4/sgi.m4 $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+-mkinstalldirs = $(mkdir_p)
++mkinstalldirs = $(SHELL) ../mkinstalldirs
+ CONFIG_CLEAN_FILES =
+ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)"
+ libLTLIBRARIES_INSTALL = $(INSTALL)
+@@ -172,8 +172,8 @@
+ @LOCALLINK_TRUE@	../../../ajax/libajax.la \
+ @LOCALLINK_TRUE@	../../../plplot/libplplot.la \
+ @LOCALLINK_TRUE@	$(am__DEPENDENCIES_1)
+-DEFAULT_INCLUDES = -I. -I$(srcdir)
+-depcomp = $(SHELL) $(top_srcdir)/depcomp
++DEFAULT_INCLUDES = -I.
++depcomp = $(SHELL) ../depcomp
+ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/aligneval.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/alignio.Plo ./$(DEPDIR)/alphabet.Plo \
+@@ -356,7 +356,7 @@
+ target_alias = @target_alias@
+ lib_LTLIBRARIES = libhmmer.la
+-@LOCALLINK_FALSE@INCLUDES = -IINCLUDE -I${embprefix}/include
+-@LOCALLINK_TRUE@INCLUDES = -IINCLUDE -I../../../ajax
++@LOCALLINK_FALSE@INCLUDES = -IINCLUDE -I@INCLUDE@
++@LOCALLINK_TRUE@INCLUDES = -IINCLUDE -I@INCLUDE@
+ @ISAIXIA64_FALSE@@ISSHARED_TRUE@AM_CFLAGS = 
+ @ISAIXIA64_TRUE@@ISSHARED_TRUE@@LOCALLINK_FALSE@AM_CFLAGS = -Wl,-bdynamic -Wl,-brtl -L${embprefix}/lib -lajax
+ @ISAIXIA64_TRUE@@ISSHARED_TRUE@@LOCALLINK_TRUE@AM_CFLAGS = -Wl,-bdynamic -Wl,-brtl -L../../../ajax/.libs -lajax

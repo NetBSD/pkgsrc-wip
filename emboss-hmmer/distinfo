@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/15 20:21:19 daprice Exp $
+
+SHA1 (emboss/hmmer-2.1.1-20041107/HMMER-2.1.1.tar.gz) = 95e843dd350ae1117981ed837da25a80d576bd57
+Size (emboss/hmmer-2.1.1-20041107/HMMER-2.1.1.tar.gz) = 555504 bytes
+SHA1 (patch-aa) = 19ece4e7116ecaec51cd9abef3460c5093241263
+SHA1 (patch-ab) = 2dc7c3085966d064005b8419f5724702e473d3d3
