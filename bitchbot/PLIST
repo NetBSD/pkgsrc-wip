@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/14 20:16:32 adrian_p Exp $
-bin/bitch
-bin/genstats
-share/examples/bitch/bitch.conf.template
-@dirrm share/examples/bitch
