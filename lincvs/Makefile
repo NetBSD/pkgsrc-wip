@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/28 23:38:15 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/29 03:06:20 mpasternak Exp $
 #
 
-DISTNAME=		lincvs-1.2.0-0-generic-src
-PKGNAME=		${DISTNAME:S/-0-generic-src//}
-WRKSRC=			${WRKDIR}/${PKGNAME}
+DISTNAME=		lincvs-1.3.0-rc2-generic-src
+PKGNAME=		${DISTNAME:S/-rc2-generic-src//}
+WRKSRC=			${WRKDIR}/${PKGNAME}-rc2
 CATEGORIES=		devel x11
-MASTER_SITES=		http://ppprs1.phy.tu-dresden.de/~trogisch/lincvs/download/LinCVS/lincvs-1.2.0/
+MASTER_SITES=	        http://ppprs1.phy.tu-dresden.de/~trogisch/lincvs/download/20_LinCVS/hr_lincvs-1.3.0rc2/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		dotz@irc.pl

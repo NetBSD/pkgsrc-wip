@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/28 23:38:15 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2003/12/29 03:06:20 mpasternak Exp $
 
-SHA1 (lincvs-1.2.0-0-generic-src.tgz) = 35ec073e5919434dc9650cb22620eb9d18ccf0c0
-Size (lincvs-1.2.0-0-generic-src.tgz) = 511955 bytes
+SHA1 (lincvs-1.3.0-rc2-generic-src.tgz) = 7a1f9b0afdf3463ccce846e9e096c053bd5524c5
+Size (lincvs-1.3.0-rc2-generic-src.tgz) = 840738 bytes
