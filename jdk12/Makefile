@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/02 21:10:34 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/03 14:51:28 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -42,7 +42,6 @@ ALL_TARGET=	world release-images
 BUILD_DIRS=	${WRKSRC}/build/bsd
 CHECK_SHLIBS=	NO # scripts set LD_LIBRARY_PATH
 MAKEFILE=	GNUmakefile
-MESSAGE_SRC=	
 NO_MTREE=	YES # since we change PREFIX below
 OWN_DIRS=	${PREFIX} ${PREFIX}/jre ${PREFIX}/jre/lib \
 		${PREFIX}/jre/lib/images ${PREFIX}/jre/lib/images/cursors \
