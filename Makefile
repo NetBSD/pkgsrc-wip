@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1098 2004/03/20 20:13:19 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1098 2004/03/20 20:13:19 xtraeme Exp $
+# $Id: Makefile,v 1.1099 2004/03/21 00:12:27 poppnk Exp $
+# $NetBSD: Makefile,v 1.1099 2004/03/21 00:12:27 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -503,6 +503,7 @@ SUBDIR+=	php5
 SUBDIR+=	php5-pgsql
 SUBDIR+=	picasm
 SUBDIR+=	picprog
+SUBDIR+=	pizza
 SUBDIR+=	pinball
 SUBDIR+=	plugger
 SUBDIR+=	poedit
