@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1553 2004/11/26 19:31:57 kristerw Exp $
-# $NetBSD: Makefile,v 1.1553 2004/11/26 19:31:57 kristerw Exp $
+# $Id: Makefile,v 1.1554 2004/11/26 19:36:59 kristerw Exp $
+# $NetBSD: Makefile,v 1.1554 2004/11/26 19:36:59 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -202,7 +202,6 @@ SUBDIR+=	gnomeicu
 SUBDIR+=	gnucash
 SUBDIR+=	gnump3d
 SUBDIR+=	gnunet
-SUBDIR+=	gnupg-1.9
 SUBDIR+=	gnupoc-makesis
 SUBDIR+=	goldwater
 SUBDIR+=	gotmail
@@ -342,7 +341,6 @@ SUBDIR+=	libXrender
 SUBDIR+=	libXres
 SUBDIR+=	libXt
 SUBDIR+=	libXv
-SUBDIR+=	libassuan
 SUBDIR+=	libavc1394
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
@@ -505,7 +503,6 @@ SUBDIR+=	p5-Net-PcapUtils
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
-SUBDIR+=	p5-Term-ProgressBar
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-WWW-Curl
 SUBDIR+=	palm-db-tools
