@@ -4,3 +4,5 @@
 
 - Requires fix to lang/gcc3-ada PR pkg/24573 to build. As part of this
   fix, a buildlink3.mk file was provided for lang/gcc3-ada 
+
+- gcc 3.4.0 release
