@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/01/09 14:05:20 rasputnik Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/20 11:35:20 rasputnik Exp $
 
 DISTNAME=	syck-${VER}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 WRKSRC=	${WRKDIR}/${DISTNAME}/ext/ruby
-CATEGORIES=	devel
+CATEGORIES=	textproc
 MASTER_SITES=   http://heanet.dl.sourceforge.net/sourceforge/yaml4r/
 
 MAINTAINER=	rasputin@idoru.mine.nu
@@ -12,7 +12,7 @@ COMMENT=		Fast YAML reader/writer for Ruby
 
 USE_BUILDLINK2= # defined
 
-DEPENDS+=	ruby-racc>1.4:../../devel/ruby-racc
+DEPENDS+=	ruby-racc>=1.4.3:../../devel/ruby-racc
 VER=	0.42
 USE_RUBY_SETUP=	yes
 RUBY_SETUP=	install.rb
