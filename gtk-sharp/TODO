@@ -1,2 +1,0 @@
-This doesn't work at all at the moment since the glue library
-(libgtksharpglue.so) doesn't get build correctly.
