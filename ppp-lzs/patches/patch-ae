@@ -1,28 +1,17 @@
-$NetBSD: patch-ae,v 1.2 2004/05/09 18:56:17 plunky Exp $
+$NetBSD: patch-ae,v 1.3 2004/05/31 22:28:16 plunky Exp $
 
---- pppd/Makefile.orig	Thu Apr 17 07:17:56 2003
-+++ pppd/Makefile	Thu Apr 17 10:30:18 2003
-@@ -2,12 +2,13 @@
-
--PCAPDIR=${.CURDIR}/../../../lib/libpcap
-+PCAPDIR=${BSDSRCDIR}/lib/libpcap
-+PPPDDIR=${BSDSRCDIR}/usr.sbin/pppd/pppd
- 
- PROG=	pppd
- SRCS=	auth.c cbcp.c ccp.c chap.c chap_ms.c demand.c eui64.c fsm.c \
- 	ipcp.c ipv6cp.c ipxcp.c lcp.c magic.c main.c multilink.c options.c \
- 	sys-bsd.c tdb.c tty.c upap.c utils.c
- 
--.PATH:	${PCAPDIR}
-+.PATH:	${PPPDDIR} ${PCAPDIR}
- MAN=	pppd.8
- BINMODE=4555
- BINOWN=	root
-@@ -15,6 +16,7 @@
- LDADD=	-lpcap -lcrypt -lutil
- DPADD=	${LIBPCAP} ${LIBCRYPT} ${LIBUTIL}
- CPPFLAGS+= -I. -DHAVE_PATHS_H 
-+CPPFLAGS+= -I.. -I${PPPDDIR}
- CPPFLAGS+= -I${PCAPDIR} -DPPP_FILTER
- CPPFLAGS+= -DCBCP_SUPPORT -DCHAPMS -DUSE_CRYPT -DMSLANMAN
- CPPFLAGS+= -DINET6
+*** pppd/Makefile.orig	Mon May 31 23:15:25 2004
+--- pppd/Makefile	Mon May 31 23:19:51 2004
+***************
+*** 2,6 ****
+  
+! PCAPDIR=${.CURDIR}/../../../lib/libpcap
+  
+  PROG=	pppd
+  SRCS=	auth.c cbcp.c ccp.c chap.c chap_ms.c demand.c eui64.c fsm.c \
+--- 2,6 ----
+  
+! PCAPDIR=${BSDSRCDIR}/lib/libpcap
+  
+  PROG=	pppd
+  SRCS=	auth.c cbcp.c ccp.c chap.c chap_ms.c demand.c eui64.c fsm.c \
