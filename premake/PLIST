@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/22 16:51:29 poppnk Exp $
-bin/${PKGNAME}
+@comment $NetBSD: PLIST,v 1.2 2004/05/02 21:53:01 blef Exp $
+bin/premake
