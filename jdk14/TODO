@@ -1,0 +1,3 @@
+HACK: usage of -Wl,-rpath $(LIBDIR)/$(LIBARCH) (patch-ag).
+This way a reference to ${WRKDIR} is stored in the resulting
+executables/libs.
