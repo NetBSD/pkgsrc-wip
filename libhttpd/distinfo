@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2005/02/06 00:30:42 mreriksson Exp $
+$NetBSD: distinfo,v 1.2 2005/03/28 13:28:13 thomasklausner Exp $
 
 SHA1 (libhttpd-1.4.tar.gz) = 7ab3d829a6e3fad8fdda47db98c8392e1d2cc80e
+RMD160 (libhttpd-1.4.tar.gz) = 04ab4bae4788c748a1bddc5f9676895d5d27751b
 Size (libhttpd-1.4.tar.gz) = 169015 bytes
 SHA1 (patch-aa) = 74a30b14262949aa6e717522ebe719c1a33ca6c2
 SHA1 (patch-ab) = a65f4fee268735f460de3846f920ffe6b12a0d88
