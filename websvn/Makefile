@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/09 21:22:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/10 01:50:20 xtraeme Exp $
 #
 
 DISTNAME=	WebSVN_139
@@ -18,8 +18,11 @@ NO_BUILD=	yes
 
 MESSAGE_SUBST+=	PKGBASE=${PKGBASE}
 MESSAGE_SUBST+=	HTTPD_ROOT=${HTTPD_ROOT}
+PLIST_SUBST+=	HTTPD_ROOT=${HTTPD_ROOT}
 
-HTTPD_ROOT?=	${PREFIX}/share/httpd/htdocs
+HTTPD_ROOT?=	share/httpd/htdocs
+
+BUILD_DEFS+=	HTTPD_ROOT
 
 do-install:
 	${INSTALL_DATA_DIR} ${HTTPD_ROOT}/websvn
