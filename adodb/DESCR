@@ -12,7 +12,7 @@ Unique Features of ADOdb
   string concatenation and string quoting characters for differing databases.
 - A metatype system is built in so that we can figure out that types such as
   CHAR, TEXT and STRING are equivalent in different databases.
-- Easy to port because all the database dependant code are stored in stub
+- Easy to port because all the database dependent code are stored in stub
   functions. You do not need to port the core logic of the classes.
 - SQL to popup menu (<SELECT>) support included
 - PHP4 Session support.
