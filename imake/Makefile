@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/08/28 05:19:28 blef Exp $
+# $NetBSD: Makefile,v 1.14 2003/08/28 06:47:43 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
@@ -60,11 +60,11 @@ do-build:
 	${MAKE_PROGRAM} -f xmakefile VerifyOS version.def \
 		Makefiles includes )
 
-pre-install:
-.if !exists(${X11BASE})
-	@${MKDIR} ${X11BASE}
-	@${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${X11BASE}
-	@${CHMOD} ${PKGDIRMODE} ${X11BASE}
-.endif
+#pre-install:
+#.if !exists(${X11BASE})
+#	@${MKDIR} ${X11BASE}
+#	@${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${X11BASE}
+#	@${CHMOD} ${PKGDIRMODE} ${X11BASE}
+#.endif
 
 .include "../../mk/bsd.pkg.mk"
