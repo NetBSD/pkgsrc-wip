@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.769 2003/12/15 14:51:56 mpasternak Exp $
-# $NetBSD: Makefile,v 1.769 2003/12/15 14:51:56 mpasternak Exp $
+# $Id: Makefile,v 1.770 2003/12/15 17:32:42 mpasternak Exp $
+# $NetBSD: Makefile,v 1.770 2003/12/15 17:32:42 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -424,6 +424,25 @@ SUBDIR+=	pgpenvelope
 SUBDIR+=	php-jpgraph
 #SUBDIR+=	php4			# not a package
 SUBDIR+=	php4-mysql4
+# SUBDIR+=	php-doc			# not a package
+SUBDIR+=	php-doc-ar
+SUBDIR+=	php-doc-br
+SUBDIR+=	php-doc-de
+SUBDIR+=	php-doc-en
+SUBDIR+=	php-doc-es
+SUBDIR+=	php-doc-fi
+SUBDIR+=	php-doc-fr
+SUBDIR+=	php-doc-hk
+SUBDIR+=	php-doc-hu
+SUBDIR+=	php-doc-it
+SUBDIR+=	php-doc-ja
+SUBDIR+=	php-doc-kr
+SUBDIR+=	php-doc-nl
+SUBDIR+=	php-doc-ro
+SUBDIR+=	php-doc-ru
+SUBDIR+=	php-doc-sk
+SUBDIR+=	php-doc-sl
+SUBDIR+=	php-doc-sv
 SUBDIR+=	picasm
 SUBDIR+=	picprog
 SUBDIR+=	pinball
