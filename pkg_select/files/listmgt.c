@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: listmgt.c,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
+ * $Id: listmgt.c,v 1.4 2005/03/18 10:50:04 imilh Exp $ 
  */
 
 #include "pkg_select.h"

@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_adm.c,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
+ * $Id: pkg_adm.c,v 1.4 2005/03/18 10:50:04 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -290,7 +290,7 @@ pkgsrc_make(const char *action, const char *path, int waitkey)
 	if ((env = getenv("PKG_PATH")) != NULL)
 		unsetenv("PKG_PATH");
 
-	(void) cmd_spawn(waitkey, make_progress,
+	(void) cmd_spawn(waitkey, make_progress, CYCLIC,
 			 "cd %s && %s %s %s",
 			 path, MAKE, action, "clean");
 
@@ -317,7 +317,7 @@ pkg_tool(const char *action, const char *pkg, const char *option, int waitkey)
 		break;
 	}
 
-	(void) cmd_spawn(waitkey, tool_progress,
+	(void) cmd_spawn(waitkey, tool_progress, CYCLIC,
 			 "%s/pkg_%s %s %s 2>&1",
 			 PKGTOOLS_PATH, action, option, pkg);
 	reload_pkgdb();

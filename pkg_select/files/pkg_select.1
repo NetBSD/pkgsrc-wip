@@ -1,4 +1,4 @@
-.\"	$Id: pkg_select.1,v 1.3 2005/03/15 17:14:25 imilh Exp $
+.\"	$Id: pkg_select.1,v 1.4 2005/03/18 10:50:04 imilh Exp $
 .\"
 .\" Copyright (c) 2005
 .\"      iMil <imil@gcu.info>.  All rights reserved.
@@ -44,6 +44,8 @@
 .Op Fl l
 .Op Fl m
 .Op Fl u Ar NetBSD ftp mirror
+.Op Fl d Ar download url
+.Op Fl s
 .Sh DESCRIPTION
 .Nm
 will display a curses file browser for the pkg system. You can browse
@@ -64,8 +66,8 @@ If no
 .Ar pkgsrc
 is installed,
 .Nm
-offers ability fo fetch it, either by FTP or CVS. It is also possible to update
-an existing pkgsrc via the interface.
+offers ability fo fetch it by FTP, CVS or directory copy. It is also possible to
+update an existing pkgsrc via the interface.
 .Pp
 .Nm
 user interface is quite self explainatory, every available shortcut is
@@ -100,6 +102,23 @@ over FTP
 Defines a
 .Ar NetBSD ftp mirror
 for live pkgsrc-over-FTP
+.It Fl d Ar url
+Set
+.Ar url
+as the pkgsrc tree download url.
+.Ar url
+can be one of
+.Pp
+.Bl -item -compact
+.It
+.Pa ftp://ftp.mirror.NetBSD.org/pub/NetBSD
+.It
+.Pa cvs://[:pserver:]anoncvs@anoncvs.mirror.NetBSD.org:/cvsroot
+.It
+.Pa file:///some/path
+.El
+.It Fl s
+Force shell output instead of curses progress bars
 .El
 .Sh ENVIRONMENT
 .Bl -tag -width indent -compact

@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkg_adm.h,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
+ * $Id: pkg_adm.h,v 1.4 2005/03/18 10:50:04 imilh Exp $ 
  */
 
 extern void free_pkgdb(void);
@@ -91,54 +91,54 @@ extern void set_pkg_path(const char *);
 			NULL }
 
 #define PKGSRC_PROGRESS { \
-	"archivers/", \
-		"audio/", \
-		"benchmarks/", \
-		"biology/", \
-		"bootstrap/", \
-		"cad/", \
-		"chat/", \
-		"comms/", \
-		"converters/", \
-		"cross/", \
-		"databases/", \
-		"devel/", \
-		"distfiles/", \
-		"doc/", \
-		"editors/", \
-		"emulators/", \
-		"finance/", \
-		"fonts/", \
-		"games/", \
-		"geography/", \
-		"graphics/", \
-		"ham/", \
-		"inputmethod/", \
-		"lang/", \
-		"licenses/", \
-		"mail/", \
-		"math/", \
-		"mbone/", \
-		"meta-pkgs/", \
-		"misc/", \
-		"mk/", \
-		"multimedia/", \
-		"net/", \
-		"news/", \
-		"packages/", \
-		"parallel/", \
-		"pkgtools/", \
-		"print/", \
-		"regress/", \
-		"security/", \
-		"shells/", \
-		"sysutils/", \
-		"templates/", \
-		"textproc/", \
-		"time/", \
-		"wm/", \
-		"www/", \
-		"x11/", \
+	"/archivers/", \
+		"/audio/", \
+		"/benchmarks/", \
+		"/biology/", \
+		"/bootstrap/", \
+		"/cad/", \
+		"/chat/", \
+		"/comms/", \
+		"/converters/", \
+		"/cross/", \
+		"/databases/", \
+		"/devel/", \
+		"/distfiles/", \
+		"/doc/", \
+		"/editors/", \
+		"/emulators/", \
+		"/finance/", \
+		"/fonts/", \
+		"/games/", \
+		"/geography/", \
+		"/graphics/", \
+		"/ham/", \
+		"/inputmethod/", \
+		"/lang/", \
+		"/licenses/", \
+		"/mail/", \
+		"/math/", \
+		"/mbone/", \
+		"/meta-pkgs/", \
+		"/misc/", \
+		"/mk/", \
+		"/multimedia/", \
+		"/net/", \
+		"/news/", \
+		"/packages/", \
+		"/parallel/", \
+		"/pkgtools/", \
+		"/print/", \
+		"/regress/", \
+		"/security/", \
+		"/shells/", \
+		"/sysutils/", \
+		"/templates/", \
+		"/textproc/", \
+		"/time/", \
+		"/wm/", \
+		"/www/", \
+		"/x11/", \
 		NULL }
 
 extern void pkgsrc_make(const char *, const char *, int);

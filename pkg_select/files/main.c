@@ -29,15 +29,15 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: main.c,v 1.5 2005/03/16 08:26:10 imilh Exp $ 
+ * $Id: main.c,v 1.6 2005/03/18 10:50:04 imilh Exp $ 
  */
 
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
-static char *rcsid = "$Id: main.c,v 1.5 2005/03/16 08:26:10 imilh Exp $";
+static char *rcsid = "$Id: main.c,v 1.6 2005/03/18 10:50:04 imilh Exp $";
 #else
-__RCSID("$Id: main.c,v 1.5 2005/03/16 08:26:10 imilh Exp $");
+__RCSID("$Id: main.c,v 1.6 2005/03/18 10:50:04 imilh Exp $");
 #endif
 #endif
 
@@ -68,7 +68,7 @@ usage()
 {
 	(void) fprintf(stderr, "%s\n%s\n",
 		       "usage: pkg_select [-h] [-b pkgsrcdir] [-K pkg_dbdir] [-c conf file]", 
-		       "                  [-l [-m] [-u NetBSD ftp mirror]]");
+		       "                  [-l [-m] [-u NetBSD ftp mirror]] [-d url] [-s]");
 
         exit(1);
 }
@@ -467,15 +467,15 @@ int
 main(int argc, char *argv[])
 {
 	Etree **etree;
-	char ch, basepath[MAXLEN], *confpath, *ftp_url;
-	int where, use_live_ftp, read_makefiles;
+	char ch, basepath[MAXLEN], *confpath, *ftp_url, *dl_path;
+	int where, use_live_ftp, read_makefiles, console_output;
 
-	pkgsrcbase = pkg_dbdir = confpath = ftp_url = NULL;
-	use_live_ftp = 0;
+	pkgsrcbase = pkg_dbdir = confpath = ftp_url = dl_path = NULL;
+	use_live_ftp = console_output = T_FALSE;
 	read_makefiles = T_TRUE; /* live_ftp option */
 
 	/* command line handling */
-	while ((ch = getopt(argc, argv, "c:b:K:u:lmh")) != -1)
+	while ((ch = getopt(argc, argv, "c:b:K:u:d:lmsh")) != -1)
 		switch(ch) {
 		case 'b':
 			pkgsrcbase = optarg;
@@ -493,6 +493,12 @@ main(int argc, char *argv[])
 			break;
 		case 'm':
 			read_makefiles = T_FALSE;
+			break;
+		case 'd':
+			dl_path = optarg;
+			break;
+		case 's':
+			console_output = T_TRUE;
 			break;
 		case 'h':
 			usage();
@@ -524,6 +530,9 @@ main(int argc, char *argv[])
 				/* default pkg_dbdir */
 				pkg_dbdir = PKGDB;
 	}
+
+	if (console_output == T_TRUE)
+		conf.shell_output = T_TRUE;
 
         argc -= optind;
         argv += optind;
@@ -575,10 +584,19 @@ main(int argc, char *argv[])
 		/* set pkgsrc base to ftp base */
 		pkgsrcbase = conf.live_ftp;
 	} else {
-		/* check for pkgsrc presence */
-		if (pkgsrc_chk(basepath) < 0)
-			/* pkgsrc fetch failed */
-			finish(0);
+		/* was pkgsrc download asked ? */
+		if (dl_path != NULL) {
+			if (download_pkgsrc(dl_path, basepath) < 0) {
+				warnx("pkgsrc download failed");
+				finish(0);
+			}
+		} else
+			/* check for pkgsrc presence */
+			if (pkgsrc_chk(basepath) < 0) {
+				warnx("%s does not exists", basepath);
+				/* pkgsrc fetch failed */
+				finish(0);
+			}
 	
 		where = IN_PKGSRC;
 		/* get directory listing */

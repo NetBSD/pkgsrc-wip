@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: install_many.c,v 1.1 2005/03/15 17:14:25 imilh Exp $ 
+ * $Id: install_many.c,v 1.2 2005/03/18 10:50:04 imilh Exp $ 
  */
 
 #include "pkg_select.h"

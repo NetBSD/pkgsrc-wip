@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: pkgsrc.c,v 1.1 2005/03/15 17:14:26 imilh Exp $ 
+ * $Id: pkgsrc.c,v 1.2 2005/03/18 10:50:04 imilh Exp $ 
  */
 
 #include "pkg_select.h"
@@ -44,6 +44,7 @@ static char **build_mirror_list(const char *);
 static int ftp_fetch(const char *, const char *);
 static int cvs_fetch(const char *, const char *, int);
 static char *get_cvs_branch(const char *, int);
+static int dir_fetch(const char *, const char *);
 
 static char **
 build_mirror_list(const char *method)
@@ -98,9 +99,9 @@ pkgsrc_chk(const char *path)
 {
 	int rc, len;
 	struct stat sb;
-	char resp, *mirror, *p, bpath[MAXLEN], message[MAXLEN];
+	char resp, *p, *mirror, bpath[MAXLEN], message[MAXLEN];
 
-	/* check if we are browsing a directory */
+	/* check if we are browsing a directory and it is called pkgsrc */
 	if (stat(path, &sb) > -1 && 
 	    (sb.st_mode & S_IFMT) == S_IFDIR &&
 	    strstr(path, "pkgsrc") != NULL)
@@ -118,12 +119,10 @@ pkgsrc_chk(const char *path)
 	len = strlen(bpath);
 	if (bpath[len - 1] == '/')
 		bpath[len - 1] = '\0';
-	/* in case user set a bad path, rewind to last / */
-	if ((p = strrchr(bpath, '/')) == NULL)
-		/* no / ?? set p to curdir */
-		strcpy(bpath, "./");
-	else
-		*(++p) = '\0';
+
+	/* strip "pkgsrc" from dest path */
+	if ((p = strstr(bpath, "/pkgsrc")) != NULL)
+		*p = '\0';
 
 	do {
 		resp = mid_getch_popup("Download method", DL_METHOD);
@@ -136,6 +135,10 @@ pkgsrc_chk(const char *path)
 		case 'c':
 			if ((mirror = list_mirrors("cvs")) != NULL)
 				rc = cvs_fetch(mirror, bpath, CHECKOUT);
+			break;
+		case 'd':
+			if ((mirror = mid_getstr_popup("enter directory")) != NULL)
+				rc = dir_fetch(mirror, bpath);
 			break;
 		}
 
@@ -264,7 +267,7 @@ cvs_fetch(const char *anoncvs, const char *dir, int mode)
 		/* if it's a pserver, be sure to login */
 		snprintf(cmd, MAXLEN, "%s -d %s login && ", CVS_CMD, anoncvs);
 
-	popup = mid_info_popup("cvs", "connecting to cvs server...");
+	popup = mid_info_popup("cvs", CVS_CONNECT);
 	wrefresh(popup);
 
 	/* select branch */
@@ -283,7 +286,7 @@ cvs_fetch(const char *anoncvs, const char *dir, int mode)
 		snprintf(rel, MAXLEN, "-r%s ", branch);
 	}
 
-	popup = mid_info_popup("cvs", "comparing trees, please wait...");
+	popup = mid_info_popup("cvs", CVS_COMPARE);
 	wrefresh(popup);
 
 	if (mode == CHECKOUT)
@@ -293,7 +296,7 @@ cvs_fetch(const char *anoncvs, const char *dir, int mode)
 		snprintf(cmd, MAXLEN, "%s -d %s update -PAd %s 2>&1", 
 			 CVS_CMD, anoncvs, rel);
 
-	cmd_spawn(DONT_WAIT, pkgsrc_progress, cmd);
+	cmd_spawn(DONT_WAIT, pkgsrc_progress, CYCLIC, cmd);
 	clr_del_win(popup);
 	XFREE(branch);
 
@@ -317,4 +320,48 @@ cvs_up(const char *dir)
 	
 	trimcr(buf);
 	return(cvs_fetch(buf, dir, UPDATE));
+}
+
+/* fetch by simple cp */
+static int
+dir_fetch(const char *dir, const char *dest)
+{
+	char cmd[MAXLEN];
+
+	snprintf(cmd, MAXLEN, "cp -pRv %s %s", dir, dest);
+	/* incremental progress bar, cp does not follow alphabetic order  */
+	cmd_spawn(DONT_WAIT, pkgsrc_progress, INCREMENTAL, cmd);
+
+	return(0);
+}
+
+int
+download_pkgsrc(const char *dl_path, const char *path)
+{
+	char *p, *ppath, buf[MAXLEN];
+
+	if ((p = strstr(dl_path, "://")) == NULL) {
+		warnx(WARN_DOWN_URL);
+		return(-1);
+	}
+
+	p += 3;
+
+	XSTRCPY(buf, path);
+	if ((ppath = strstr(buf, "/pkgsrc")) == NULL) {
+		warnx("%s must contain /pkgsrc !", pkgsrcbase);
+		return(-1);
+	}
+	*ppath = '\0';
+
+	if (strncmp(dl_path, "ftp://", 6) == 0)
+	    ftp_fetch(dl_path, buf);
+
+	if (strncmp(dl_path, "cvs://", 6) == 0)
+	    cvs_fetch(p, buf, CHECKOUT);
+
+	if (strncmp(dl_path, "file://", 7) == 0)
+	    dir_fetch(p, buf);
+
+	return(chdir(path));
 }

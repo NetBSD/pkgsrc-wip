@@ -1,8 +1,8 @@
-/*	$NetBSD: ftpio.c,v 1.2 2005/03/17 08:45:29 imilh Exp $	*/
+/*	$NetBSD: ftpio.c,v 1.3 2005/03/18 10:50:04 imilh Exp $	*/
 
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: ftpio.c,v 1.2 2005/03/17 08:45:29 imilh Exp $");
+__RCSID("$NetBSD: ftpio.c,v 1.3 2005/03/18 10:50:04 imilh Exp $");
 #endif
 
 /* slightly modified version of ftpio.c with pkg_select integration */
@@ -321,20 +321,24 @@ expect(int fd, const char *str, int *ftprc)
 			/* used for progress bars with tar(1) */
 			if (use_tar && strncmp(buf, "pkgsrc/", 7) == 0 &&
 			    (p = strchr(buf, '/')) != NULL) {
-				p++; /* point after pkgsrc/ */
-				strcpy(progress_str, p);
-				if ((p = strchr(progress_str, '/')) != NULL) {
-					/* pkg_select addon */
+				/* point after pkgsrc/ */
+				strcpy(progress_str, p); /* /category/blah */
+
+				p++; /* category/blah */
+				if ((p = strchr(p, '/')) != NULL) {
+
 					if (conf.shell_output)
 						printf("%s\n", progress_str);
+
 					else if (next) {
 						char msg[MAXLEN];
 						p++;
 						*p = '\0';
 
 						snprintf(msg, MAXLEN,
-							 "extracting %s",
+							 "extracting pkgsrc%s",
 							 progress_str);
+
 						next = progress_bar(pkgsrc_progress, 
 								    msg, 
 								    INCREMENTAL);

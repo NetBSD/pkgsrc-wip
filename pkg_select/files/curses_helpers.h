@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: curses_helpers.h,v 1.3 2005/03/15 17:14:25 imilh Exp $ 
+ * $Id: curses_helpers.h,v 1.4 2005/03/18 10:50:04 imilh Exp $ 
  */
 
 #include <curses.h>
@@ -53,7 +53,7 @@ extern void draw_box(WINDOW *, const char *);
 extern int combo_list(WINDOW *, Etree **, HL_datas *, const char *);
 extern char *combo_select(Etree **, const char *, int, int, int, int, int);
 extern int progress_bar(const char **, char *, int);
-extern void cmd_spawn(int, const char **, const char *, ...);
+extern void cmd_spawn(int, const char **, int, const char *, ...);
 #define ANY_KEY "\nPress any key to continue..."
 
 #define CYCLIC 0

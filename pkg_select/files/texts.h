@@ -30,7 +30,7 @@
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
  *
- * $Id: texts.h,v 1.3 2005/03/15 17:14:26 imilh Exp $ 
+ * $Id: texts.h,v 1.4 2005/03/18 10:50:04 imilh Exp $ 
  */
 
 #ifndef _TEXTS_H_
@@ -43,13 +43,16 @@
 #define INST_PKGS "installed packages"
 #define SEARCH_INFOS "searching infos..."
 #define PKGSRC_NOTFOUND "pkgsrc was not found in %s, download it ? [Y/n]"
-#define DL_METHOD "Download method: (f)tp  / (c)vs ?"
+#define DL_METHOD "Download method: (f)tp  / (c)vs / (d)irectory cp ?"
 #define FETCH_FAILED "pkgsrc fetch failed, retry ? [Y/n]"
 #define UPDT_FAILED "pkgsrc update failed, retry ? [Y/n]"
 #define NEXT ">> Next"
 #define PKG_TB_INST "packages to be installed"
 #define PKG_TB_DEINST "packages to be deinstalled"
 #define REALLY_MASS_DELETE "really delete these packages ? [Y/n/r(ecursive)]"
+#define CVS_CONNECT "connecting to cvs server..."
+#define CVS_COMPARE "comparing trees, please wait..."
+#define WARN_DOWN_URL "download url must be one of ftp://, cvs:// or file://"
 
 /* shortcuts */
 
