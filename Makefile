@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.235 2003/06/11 12:08:33 cjep Exp $
-# $NetBSD: Makefile,v 1.235 2003/06/11 12:08:33 cjep Exp $
+# $Id: Makefile,v 1.236 2003/06/12 04:08:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.236 2003/06/12 04:08:32 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -82,6 +82,7 @@ SUBDIR+=	ilohamail
 SUBDIR+=	ion-devel
 SUBDIR+=	ion-dock
 SUBDIR+=	jabberd
+SUBDIR+=	jabberd2
 SUBDIR+=	jakarta-log4j
 SUBDIR+=	jazz
 SUBDIR+=	jdk-openjit
