@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/03/17 02:56:38 xtraeme Exp $
+# $NetBSD: Makefile,v 1.35 2004/03/24 06:47:31 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0s2
@@ -16,7 +16,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 
-BDB_ACCEPTED=			db4
 BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.6b
 BUILDLINK_TRANSFORM.db4=	-e "s,/db4/,/,g"
 
@@ -55,7 +54,7 @@ AUTHREG_MODS="anon pipe ${JABBERD_AUTH_METHOD}"
 .if !empty(JABBERD_AUTH_METHOD:Mdb)
 CONFIGURE_ARGS+=	--enable-authreg=${AUTHREG_MODS}
 CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_DIR}/include
-.    include "../../mk/bdb.buildlink3.mk"
+.    include "../../databases/db4/buildlink3.mk"
 .  elif !empty(JABBERD_AUTH_METHOD:Mopenldap)
 CONFIGURE_ARGS+=	--enable-authreg=${AUTHREG_MODS}
 CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap}
@@ -88,7 +87,7 @@ JABBERD_STORAGE_METHOD?=	db
 .if !empty(JABBERD_STORAGE_METHOD:Mdb)
 CONFIGURE_ARGS+=	--enable-storage=db
 CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_DIR}/include
-.    include "../../mk/bdb.buildlink3.mk"
+.    include "../../databases/db4/buildlink3.mk"
 .  elif !empty(JABBERD_STORAGE_METHOD:Mmysql)
 CONFIGURE_ARGS+=	--enable-storage=mysql
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-server}
