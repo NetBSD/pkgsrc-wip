@@ -1,0 +1,4 @@
+- Track all dependancies properly.  configure looks for many things that this
+  package does not care about.
+
+- Uhhh... buildlink2.mk is a directory, containing the whole package again??
