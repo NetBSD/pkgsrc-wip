@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/03/12 12:42:35 mpasternak Exp $
-# $Id: Makefile.common,v 1.1.1.1 2004/03/12 12:42:35 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/03/12 13:11:50 mpasternak Exp $
+# $Id: Makefile.common,v 1.2 2004/03/12 13:11:50 mpasternak Exp $
 #
-# (C) 2003 Michal Pasternak <dotz@irc.pl>
+# (C) 2004 Michal Pasternak <dotz@irc.pl>
 
 #
 # TODO: add more MASTER_SITES
