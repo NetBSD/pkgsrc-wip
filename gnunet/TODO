@@ -1,10 +1,10 @@
-$Id: TODO,v 1.3 2003/12/25 14:32:48 thomasklausner Exp $
+$Id: TODO,v 1.4 2004/08/29 15:26:35 thomasklausner Exp $
 
 * Ignores IPv6 flag
 * Non-Posix pthread functions doesn't exist on *BSD
   ...patch-aa seems to be incorrect
 
-* Update to 0.6.1.
+* Update to 0.6.4.
 
 --
 
