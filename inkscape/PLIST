@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/20 22:12:07 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/10/11 20:01:54 jeremy-c-reed Exp $
 bin/inkscape
 bin/inkview
 man/man1/inkscape.1
@@ -277,5 +277,3 @@ share/pixmaps/inkscape.png
 @dirrm share/inkscape/clipart
 @dirrm share/inkscape
 @comment in xdg-dirs: @dirrm share/applications
-@exec ${MKDIR} %D/lib/inkscape
-@dirrm lib/inkscape
