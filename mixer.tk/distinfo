@@ -1,4 +1,3 @@
-$NetBSD: distinfo,v 1.2 2003/05/16 23:53:36 jejcic Exp $
-
-SHA1 (mixer.tk-0.3.tar.gz) = 48ce23deb1443ea4e3c10d945af85f1559eba12d
-Size (mixer.tk-0.3.tar.gz) = 2804 bytes
+$NetBSD: distinfo,v 1.3 2005/01/13 16:59:05 jejcic Exp $
+SHA1 (mixer.tk-0.3.tar.gz) = 5f509d614bd6f6701bd5898b20ff229aa630940d
+Size (mixer.tk-0.3.tar.gz) = 2814 bytes
