@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/04/19 20:53:02 tvierling Exp $
+# $NetBSD: Makefile,v 1.22 2004/07/01 13:18:28 thomasklausner Exp $
 #
 # Some notes for those working on this package:
 #
@@ -10,7 +10,7 @@
 
 DISTNAME=	j2sdk-1_3_1-src
 PKGNAME=	jdk13-1.0.8.20031122
-WRKSRC=		${WRKDIR}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	# empty
 EXTRACT_SUFX=	.tar.gz # must be explicitly specified for the ".if exists" below
@@ -20,10 +20,10 @@ MAINTAINER=	tv@duh.org
 HOMEPAGE=	http://www.eyesbeyond.com/freebsddom/java/
 COMMENT=	Sun's Java(tm) 2 SDK (SCSL+FreeBSDdom 1.3 release)
 
-LICENSE=	scsl-2.3-license
-
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
+
+LICENSE=	scsl-2.3-license
 
 RESTRICTED=	"Redistribution of source or binaries permitted only by license terms"
 NO_SRC_ON_CDROM=${RESTRICTED}
@@ -32,23 +32,23 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
 EXTRACT_USING_PAX= YES # GNU tar barfs on really deep paths
+WRKSRC=		${WRKDIR}
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_PKGINSTALL=	YES
 
-JVM_HOME=	${LOCALBASE}/java/jdk-1.3.1
+JVM_HOME=	${PREFIX}/java/jdk-1.3.1
 ONLY_FOR_PLATFORM=	NetBSD-1.[4-9]*-i386 NetBSD-[2-9]*-i386
 
 ALL_TARGET=	all # added to below
 BUILD_DIRS=	${WRKSRC}/j2sdk1.3.1/make
 CHECK_SHLIBS=	NO # scripts set LD_LIBRARY_PATH
 MESSAGE_SRC=	${WRKDIR}/LegalReadme.txt
-NO_MTREE=	YES # since we change PREFIX below
-OWN_DIRS=	${PREFIX} ${PREFIX}/jre ${PREFIX}/jre/lib \
-		${PREFIX}/jre/lib/images ${PREFIX}/jre/lib/images/cursors \
-		${PREFIX}/jre/lib/security \
-		${PREFIX}/jre/lib/applet ${PREFIX}/jre/lib/ext \
-		${PREFIX}/jre/plugin
+OWN_DIRS=	${JVM_HOME} ${JVM_HOME}/jre ${JVM_HOME}/jre/lib \
+		${JVM_HOME}/jre/lib/images ${JVM_HOME}/jre/lib/images/cursors \
+		${JVM_HOME}/jre/lib/security \
+		${JVM_HOME}/jre/lib/applet ${JVM_HOME}/jre/lib/ext \
+		${JVM_HOME}/jre/plugin
 PLIST_SRC=	# added to below
 
 .include "../../mk/bsd.prefs.mk"
@@ -78,7 +78,7 @@ MAKE_ENV+=	GTK_HDRS="${LOCALBASE}/include/gtk-1.2"
 MAKE_ENV+=	LIBIDL_HDRS="${LOCALBASE}/include"
 
 post-install:
-	${LN} -f -s ${PREFIX}/jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji.so ${MOZILLA_PLUGINS_DIR}/
+	${LN} -f -s ${JVM_HOME}/jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji.so ${MOZILLA_PLUGINS_DIR}/
 
 .include "../../net/ORBit/buildlink3.mk"
 .include "../../www/mozilla/buildlink3.mk"
@@ -122,7 +122,7 @@ SFILES+=	security/java.security
 
 SUPPORT_FILES=	# empty
 .for f in ${SFILES}
-SUPPORT_FILES+=	${PREFIX}/jre/lib/$f.default ${PREFIX}/jre/lib/$f
+SUPPORT_FILES+=	${JVM_HOME}/jre/lib/$f.default ${JVM_HOME}/jre/lib/$f
 .endfor
 
 PATCH_DF=	bsd-jdk131-patches-current.tar.gz
@@ -170,11 +170,8 @@ post-build:
 .endfor
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}
-	cd ${BUILD_DIRS}/../build/*/jdk-image-${MACHINE_ARCH} && ${PAX} -rw . ${PREFIX}
+	${INSTALL_PROGRAM_DIR} ${JVM_HOME}
+	cd ${BUILD_DIRS}/../build/*/jdk-image-${MACHINE_ARCH} && ${PAX} -rw . ${JVM_HOME}
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# This needs to be after bsd.pkg.mk
-PREFIX=		${JVM_HOME}

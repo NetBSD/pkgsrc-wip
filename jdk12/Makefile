@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/04/19 20:53:01 tvierling Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/01 13:18:28 thomasklausner Exp $
 #
 # Some notes for those working on this package:
 #
@@ -10,6 +10,7 @@
 
 DISTNAME=	jdk1_2_2-src
 PKGNAME=	jdk12-2.0.11
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=devel/lang/java/blackdown.org/JDK-1.2.2/i386/FCS/}
 EXTRACT_SUFX=	.tar.gz # must be explicitly specified for the ".if exists" below
@@ -34,17 +35,16 @@ USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_PKGINSTALL=	YES
 
-JVM_HOME=	${LOCALBASE}/java/jdk-1.2.2
+JVM_HOME=	${PREFIX}/java/jdk-1.2.2
 ONLY_FOR_PLATFORM=	NetBSD-1.[4-9]*-i386 NetBSD-[2-9]*-i386
 
 ALL_TARGET=	world release-images
 BUILD_DIRS=	${WRKSRC}/build/bsd
 CHECK_SHLIBS=	NO # scripts set LD_LIBRARY_PATH
 MAKEFILE=	GNUmakefile
-NO_MTREE=	YES # since we change PREFIX below
-OWN_DIRS=	${PREFIX} ${PREFIX}/jre ${PREFIX}/jre/lib \
-		${PREFIX}/jre/lib/images ${PREFIX}/jre/lib/images/cursors \
-		${PREFIX}/jre/lib/security
+OWN_DIRS=	${JVM_HOME} ${JVM_HOME}/jre ${JVM_HOME}/jre/lib \
+		${JVM_HOME}/jre/lib/images ${JVM_HOME}/jre/lib/images/cursors \
+		${JVM_HOME}/jre/lib/security
 WRKSRC=		${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
@@ -73,7 +73,7 @@ SFILES+=	security/java.security
 
 SUPPORT_FILES=	# empty
 .for f in ${SFILES}
-SUPPORT_FILES+=	${PREFIX}/jre/lib/$f.default ${PREFIX}/jre/lib/$f
+SUPPORT_FILES+=	${JVM_HOME}/jre/lib/$f.default ${JVM_HOME}/jre/lib/$f
 .endfor
 
 BOOTSTRAP_DF=	j2sdk-1.2.2-FCS-linux-i386-glibc-2.1.3.tar.bz2
@@ -128,11 +128,8 @@ post-build:
 .endfor
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}
-	cd ${BUILD_DIRS}/jdk-image-${MACHINE_ARCH} && ${PAX} -rw . ${PREFIX}
+	${INSTALL_PROGRAM_DIR} ${JVM_HOME}
+	cd ${BUILD_DIRS}/jdk-image-${MACHINE_ARCH} && ${PAX} -rw . ${JVM_HOME}
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# This needs to be after bsd.pkg.mk
-PREFIX=		${JVM_HOME}

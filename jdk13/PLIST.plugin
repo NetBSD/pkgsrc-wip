@@ -1,60 +1,60 @@
-@comment $NetBSD: PLIST.plugin,v 1.2 2003/07/02 19:48:25 tvierling Exp $
-bin/ControlPanel
-bin/HtmlConverter
-bin/${MACHINE_ARCH}/green_threads/java_vm
-bin/${MACHINE_ARCH}/native_threads/java_vm
-jre/ControlPanel.html
-jre/bin/ControlPanel
-jre/bin/${MACHINE_ARCH}/green_threads/java_vm
-jre/bin/${MACHINE_ARCH}/native_threads/java_vm
-jre/lib/${MACHINE_ARCH}/libjavaplugin_jni.so
-jre/lib/javaplugin.jar
-jre/lib/locale/de/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/es/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/fr/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/it/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/ja/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/ko.UTF-8/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/ko/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/sv/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/zh.GBK/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo
-jre/plugin/${MACHINE_ARCH}/ns4/javaplugin.so
-jre/plugin/${MACHINE_ARCH}/ns4/javaplugin_g.so
-jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji.so
-jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji_g.so
-lib/htmlconverter.jar
-@exec ${LN} -f -s %D/jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji.so ${MOZILLA_PLUGINS_DIR}/
+@comment $NetBSD: PLIST.plugin,v 1.3 2004/07/01 13:18:29 thomasklausner Exp $
+java/jdk-1.3.1/bin/ControlPanel
+java/jdk-1.3.1/bin/HtmlConverter
+java/jdk-1.3.1/bin/${MACHINE_ARCH}/green_threads/java_vm
+java/jdk-1.3.1/bin/${MACHINE_ARCH}/native_threads/java_vm
+java/jdk-1.3.1/jre/ControlPanel.html
+java/jdk-1.3.1/jre/bin/ControlPanel
+java/jdk-1.3.1/jre/bin/${MACHINE_ARCH}/green_threads/java_vm
+java/jdk-1.3.1/jre/bin/${MACHINE_ARCH}/native_threads/java_vm
+java/jdk-1.3.1/jre/lib/${MACHINE_ARCH}/libjavaplugin_jni.so
+java/jdk-1.3.1/jre/lib/javaplugin.jar
+java/jdk-1.3.1/jre/lib/locale/de/LC_MESSAGES/sunw_java_plugin.mo
+java/jdk-1.3.1/jre/lib/locale/es/LC_MESSAGES/sunw_java_plugin.mo
+java/jdk-1.3.1/jre/lib/locale/fr/LC_MESSAGES/sunw_java_plugin.mo
+java/jdk-1.3.1/jre/lib/locale/it/LC_MESSAGES/sunw_java_plugin.mo
+java/jdk-1.3.1/jre/lib/locale/ja/LC_MESSAGES/sunw_java_plugin.mo
+java/jdk-1.3.1/jre/lib/locale/ko.UTF-8/LC_MESSAGES/sunw_java_plugin.mo
+java/jdk-1.3.1/jre/lib/locale/ko/LC_MESSAGES/sunw_java_plugin.mo
+java/jdk-1.3.1/jre/lib/locale/sv/LC_MESSAGES/sunw_java_plugin.mo
+java/jdk-1.3.1/jre/lib/locale/zh.GBK/LC_MESSAGES/sunw_java_plugin.mo
+java/jdk-1.3.1/jre/lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo
+java/jdk-1.3.1/jre/lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo
+java/jdk-1.3.1/jre/lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo
+java/jdk-1.3.1/jre/plugin/${MACHINE_ARCH}/ns4/javaplugin.so
+java/jdk-1.3.1/jre/plugin/${MACHINE_ARCH}/ns4/javaplugin_g.so
+java/jdk-1.3.1/jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji.so
+java/jdk-1.3.1/jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji_g.so
+java/jdk-1.3.1/lib/htmlconverter.jar
+@exec ${LN} -f -s %D/java/jdk-1.3.1/jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji.so ${MOZILLA_PLUGINS_DIR}/
 @unexec ${RM} -f ${MOZILLA_PLUGINS_DIR}/libjavaplugin_oji.so
-@dirrm jre/plugin/${MACHINE_ARCH}/ns600
-@dirrm jre/plugin/${MACHINE_ARCH}/ns4
-@dirrm jre/plugin/${MACHINE_ARCH}
-@dirrm jre/lib/locale/zh_TW/LC_MESSAGES
-@dirrm jre/lib/locale/zh_TW.BIG5/LC_MESSAGES
-@dirrm jre/lib/locale/zh_TW.BIG5
-@dirrm jre/lib/locale/zh_TW
-@dirrm jre/lib/locale/zh/LC_MESSAGES
-@dirrm jre/lib/locale/zh.GBK/LC_MESSAGES
-@dirrm jre/lib/locale/zh.GBK
-@dirrm jre/lib/locale/zh
-@dirrm jre/lib/locale/sv/LC_MESSAGES
-@dirrm jre/lib/locale/sv
-@dirrm jre/lib/locale/ko/LC_MESSAGES
-@dirrm jre/lib/locale/ko.UTF-8/LC_MESSAGES
-@dirrm jre/lib/locale/ko.UTF-8
-@dirrm jre/lib/locale/ko
-@dirrm jre/lib/locale/ja/LC_MESSAGES
-@dirrm jre/lib/locale/ja
-@dirrm jre/lib/locale/it/LC_MESSAGES
-@dirrm jre/lib/locale/it
-@dirrm jre/lib/locale/fr/LC_MESSAGES
-@dirrm jre/lib/locale/fr
-@dirrm jre/lib/locale/es/LC_MESSAGES
-@dirrm jre/lib/locale/es
-@dirrm jre/lib/locale/de/LC_MESSAGES
-@dirrm jre/lib/locale/de
-@dirrm jre/lib/locale
-@dirrm jre/bin/${MACHINE_ARCH}/native_threads
-@dirrm bin/${MACHINE_ARCH}/native_threads
+@dirrm java/jdk-1.3.1/jre/plugin/${MACHINE_ARCH}/ns600
+@dirrm java/jdk-1.3.1/jre/plugin/${MACHINE_ARCH}/ns4
+@dirrm java/jdk-1.3.1/jre/plugin/${MACHINE_ARCH}
+@dirrm java/jdk-1.3.1/jre/lib/locale/zh_TW/LC_MESSAGES
+@dirrm java/jdk-1.3.1/jre/lib/locale/zh_TW.BIG5/LC_MESSAGES
+@dirrm java/jdk-1.3.1/jre/lib/locale/zh_TW.BIG5
+@dirrm java/jdk-1.3.1/jre/lib/locale/zh_TW
+@dirrm java/jdk-1.3.1/jre/lib/locale/zh/LC_MESSAGES
+@dirrm java/jdk-1.3.1/jre/lib/locale/zh.GBK/LC_MESSAGES
+@dirrm java/jdk-1.3.1/jre/lib/locale/zh.GBK
+@dirrm java/jdk-1.3.1/jre/lib/locale/zh
+@dirrm java/jdk-1.3.1/jre/lib/locale/sv/LC_MESSAGES
+@dirrm java/jdk-1.3.1/jre/lib/locale/sv
+@dirrm java/jdk-1.3.1/jre/lib/locale/ko/LC_MESSAGES
+@dirrm java/jdk-1.3.1/jre/lib/locale/ko.UTF-8/LC_MESSAGES
+@dirrm java/jdk-1.3.1/jre/lib/locale/ko.UTF-8
+@dirrm java/jdk-1.3.1/jre/lib/locale/ko
+@dirrm java/jdk-1.3.1/jre/lib/locale/ja/LC_MESSAGES
+@dirrm java/jdk-1.3.1/jre/lib/locale/ja
+@dirrm java/jdk-1.3.1/jre/lib/locale/it/LC_MESSAGES
+@dirrm java/jdk-1.3.1/jre/lib/locale/it
+@dirrm java/jdk-1.3.1/jre/lib/locale/fr/LC_MESSAGES
+@dirrm java/jdk-1.3.1/jre/lib/locale/fr
+@dirrm java/jdk-1.3.1/jre/lib/locale/es/LC_MESSAGES
+@dirrm java/jdk-1.3.1/jre/lib/locale/es
+@dirrm java/jdk-1.3.1/jre/lib/locale/de/LC_MESSAGES
+@dirrm java/jdk-1.3.1/jre/lib/locale/de
+@dirrm java/jdk-1.3.1/jre/lib/locale
+@dirrm java/jdk-1.3.1/jre/bin/${MACHINE_ARCH}/native_threads
+@dirrm java/jdk-1.3.1/bin/${MACHINE_ARCH}/native_threads
