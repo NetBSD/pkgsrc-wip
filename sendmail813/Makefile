@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/08/04 20:57:36 adrian_p Exp $
+# $NetBSD: Makefile,v 1.13 2004/08/05 20:48:54 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -20,13 +20,16 @@ PLIST_SUBST+=  CAT5=5
 PLIST_SUBST+=  CAT8=8
 .endif
 
-SUBST_CLASSES=		paths
+SUBST_CLASSES=		paths perl
 SUBST_STAGE.paths=	pre-build
 SUBST_FILES.paths=	${WRKDIR}/mailer.conf
 SUBST_SED.paths=	-e "s|@@PREFIX@@|${PREFIX}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
-REPLACE_PERL=	contrib/socketmapClient.pl contrib/socketmapServer.pl
+SUBST_STAGE.perl=	pre-build
+SUBST_FILES.perl=	contrib/socketmapClient.pl contrib/socketmapServer.pl
+SUBST_SED.perl=		-e "s|/usr/bin/perl|${PREFIX}/bin/perl|g"
+SUBST_MESSAGE.perl=	Fixing perl path.
 
 .if ${OPSYS} == "SunOS"
 USE_DB2?=	YES
