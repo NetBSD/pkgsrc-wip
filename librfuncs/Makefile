@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/14 22:45:20 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/17 09:31:28 johnrshannon Exp $
 #
 
 DISTNAME=		librfuncs-1.0
@@ -14,9 +14,16 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-PTHREAD_OPTS+=		require
 
 TEST_TARGET=		check
 
 .include "../../mk/pthread.buildlink3.mk"
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
+CONFIGURE_ARGS+=	--disable-threads
+.else
+CONFIGURE_ARGS+=	--enable-threads
+CFLAGS+=	${PTHREAD_CFLAGS}
+LDFLAGS+=	${PTHREAD_LDFLAGS}
+.endif
+
 .include "../../mk/bsd.pkg.mk"
