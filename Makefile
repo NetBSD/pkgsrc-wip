@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1458 2004/09/13 15:20:18 cetrox Exp $
-# $NetBSD: Makefile,v 1.1458 2004/09/13 15:20:18 cetrox Exp $
+# $Id: Makefile,v 1.1459 2004/09/13 15:45:49 cetrox Exp $
+# $NetBSD: Makefile,v 1.1459 2004/09/13 15:45:49 cetrox Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -775,6 +775,7 @@ SUBDIR+=	unmo3
 SUBDIR+=	unrealtournament-server
 SUBDIR+=	unshield
 SUBDIR+=	up-imapproxy
+SUBDIR+=	urlgfe
 SUBDIR+=	util-linux
 SUBDIR+=	valknut
 SUBDIR+=	vcdgear
