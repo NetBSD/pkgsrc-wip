@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/12 14:45:57 ianzag Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/29 07:43:28 ianzag Exp $
 #
 
-DISTNAME=		krusader-1.40-beta2
+DISTNAME=		krusader-1.40
 CATEGORIES=		kde x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=krusader/}
 
