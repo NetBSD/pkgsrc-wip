@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/08/07 01:50:59 adrian_p Exp $
+$NetBSD: MESSAGE,v 1.2 2003/08/07 10:51:06 adrian_p Exp $
 
 THERE ARE NO MAN PAGES. All installed documentation
 is accessible through
@@ -19,8 +19,15 @@ To get this running on NetBSD 1.5 and above:
 1.	Set ntpd=YES in /etc/rc.conf and set any flags that may be necessary 
 	for your environment using ntpd_flags="".
 
-2.	At this time the ntpd_chrootdir flag is not supported with this package.
-	It must be removed from /etc/rc.conf if present.
+2.	At this time the ntpd_chrootdir flag is supported with this package,
+	it's just not documented. Add ntpd_chrootdir="/var/chroot/ntpd" 
+	in rc.conf to get ntpd running in a chroot evironment. 
+	For this to work correctly you will also need to add the following 
+	to your kernel config file and compile a new kernel:
+
+	pseudo-device   clockctl
+
+	Also ensure that /dev/clockctl exists.
 
 3.	Add a file called "ntpd" to /etc/rc.conf.d with the following entries:
 	command="${PREFIX}/bin/${name}".
