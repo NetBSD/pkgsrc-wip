@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/05/07 17:29:34 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.41 2004/05/14 11:58:04 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
@@ -24,18 +24,29 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 .include "../../mk/bsd.prefs.mk"
 
-# An Ada compiler is required to build this pkg. Two
+
+.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
+# Ada bootstrap compiler section
+# An Ada compiler is required to build the Ada compiler. Two
 may be used:
 #USE_GCC3	=# Define to use lang/gcc3-ada
 USE_GCC34	=# Define to use gcc-3.4
 # You may also specify the path of a gcc/gnat Ada compiler
 # outside of the pkgsrc system by specifying the full path
 # of the compiler (example) below:
-#ALT_GCC=	/usr/pkg/gcc3bootstrap/bin/gcc
-.if defined(ALT_GCC)
-ALT_GCC_PREFIX:=	${ALT_GCC:H}/..
-ALT_GCC_RTS!=	${FIND} ${ALT_GCC_PREFIX} -name adalib
-RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
+#ALT_GCC=       /usr/pkg/gcc3bootstrap/bin/gcc
+.  if defined(ALT_GCC)
+.     if exists(${ALT_GCC})
+ALT_GCC_PREFIX:=        ${ALT_GCC:H}/..
+ALT_GCC_RTS!=   ${FIND} ${ALT_GCC_PREFIX} -name adalib
+RALT_GCC_RTS=   ${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
+.     else
+PKG_SKIP_REASON=	"Missing bootstrap Ada compiler"
+.     endif
+.  endif
+.  if !defined(USE_GCC3) && !defined(USE_GCC34) && !defined(ALT_GCC)
+PKG_SKIP_REASON=	"An Ada bootstrap compiler must be specified"
+.  endif
 .endif
 
 # Make location overridable, to allow ping-pong bootstraps.
