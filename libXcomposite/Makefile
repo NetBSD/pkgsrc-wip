@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/09/23 05:59:45 jlamwww Exp $
+# $NetBSD: Makefile,v 1.10 2004/09/30 12:32:05 thomasklausner Exp $
 #
 
 DISTNAME=		libXcomposite-1.0.0
@@ -16,8 +16,8 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	xcomposite.pc.in
 
-.include "../../wip/libXfixes/buildlink3.mk"
+.include "../../x11/Xfixes/buildlink3.mk"
+.include "../../x11/compositeext/buildlink3.mk"
 .include "../../x11/fixesext/buildlink3.mk"
-.include "../../wip/compositeext/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

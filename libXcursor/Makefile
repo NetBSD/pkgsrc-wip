@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/09/23 05:59:45 jlamwww Exp $
+# $NetBSD: Makefile,v 1.9 2004/09/30 12:32:06 thomasklausner Exp $
 #
 
 DISTNAME=		libXcursor-1.1.1
@@ -20,6 +20,6 @@ PKGCONFIG_OVERRIDE+=	xcursor.pc.in
 .include "../../wip/xproto/buildlink3.mk"
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXrender/buildlink3.mk"
-.include "../../wip/libXfixes/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/Xfixes/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
