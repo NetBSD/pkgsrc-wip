@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1689 2005/03/16 01:04:30 dmb_ Exp $
-# $NetBSD: Makefile,v 1.1689 2005/03/16 01:04:30 dmb_ Exp $
+# $Id: Makefile,v 1.1690 2005/03/16 07:30:41 ura Exp $
+# $NetBSD: Makefile,v 1.1690 2005/03/16 07:30:41 ura Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -103,6 +103,7 @@ SUBDIR+=	bluez-utils
 SUBDIR+=	bnr2
 SUBDIR+=	boa
 SUBDIR+=	bridge-utils
+SUBDIR+=	bsfilter
 SUBDIR+=	bscript
 SUBDIR+=	bub-n-bros
 SUBDIR+=	busybox
