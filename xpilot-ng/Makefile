@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/26 21:02:42 pulahti Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2004/02/27 10:55:32 pulahti Exp $
 
 DISTNAME=	xpilot-4.5.4X2
 PKGNAME=	xpilot-ng-4.5.4X2
@@ -11,7 +11,6 @@ COMMENT=	Enhanced version of XPilot network space battle
 
 CONFLICTS+=	xpilot-[0-9]*
 USE_BUILDLINK3=	yes
-USE_GNU_TOOLS+=	make
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
