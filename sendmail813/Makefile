@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/08/07 21:12:00 adrian_p Exp $
+# $NetBSD: Makefile,v 1.16 2004/08/07 21:18:37 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -61,6 +61,11 @@ USE_TCPWRAPPERS?=	YES
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .endif
 
+USE_SOCKETMAP?=	YES
+.if ${USE_SOCKETMAP} == YES
+USE_PERL5= YES
+.endif
+
 post-patch: make-sendmail-siteconfig
 .if ${USE_TCPWRAPPERS} == YES
 	@${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
@@ -83,7 +88,6 @@ post-patch: make-sendmail-siteconfig
 .endif
 .if defined(USE_SOCKETMAP) && ${USE_SOCKETMAP} == YES
 	@${CAT} ${FILESDIR}/site.config.m4-socketmap >>${SITECONFIG}
-	USE_PERL5=	YES
 .endif
 
 do-build:
