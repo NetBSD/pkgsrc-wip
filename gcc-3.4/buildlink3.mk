@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/05/12 21:15:28 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2004/05/13 10:44:52 johnrshannon Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCC34_BUILDLINK3_MK:=  ${GCC34_BUILDLINK3_MK}+
@@ -16,11 +16,13 @@ BUILDLINK_DEPENDS.gcc34+=      gcc-3.4.0
 BUILDLINK_PKGSRCDIR.gcc34?=    ../../wip/gcc-3.4
 BUILDLINK_ENV+=	PATH=${PATH}:${LOCALBASE}/gcc-3.4.0/bin
 _GCC_ARCHDIR!=	${DIRNAME} `${LOCALBASE}/gcc-3.4.0/bin/gcc --print-libgcc-file-name`
+.  if empty(_GCC_ARCHDIR:M*not_found*)
 BUILDLINK_ENV+=	ADA_INCLUDE_PATH=${_GCC_ARCHDIR}/adainclude
 BUILDLINK_ENV+=	ADA_OBJECT_PATH=${_GCC_ARCHDIR}/adalib
 BUILDLINK_RPATHDIRS.gcc+=	${LOCALBASE}/gcc-3.4.0/lib
 BUILDLINK_RPATHDIRS.gcc+=	${_GCC_ARCHDIR}/adalib
 BUILDLINK_RPATHDIRS.gcc+=	${_GCC_ARCHDIR}
+.  endif
 .endif  # GCC34_BUILDLINK3_MK
 
 BUILDLINK_PKGSRCDIR.gcc34?=     ../../wip/gcc-3.4
