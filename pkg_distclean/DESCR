@@ -1,0 +1,5 @@
+Shell script to remove old/unattended/unknown files from pkgsrc's
+DISTFILES directory. It was created in way to some clean up of
+disks with small amount of free space.
+
+Use the "pkg_distclean -h" to view how to use it.
