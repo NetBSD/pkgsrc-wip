@@ -1,1 +1,4 @@
-Initial setup. Won't compile.
+Works, but depends on uncommited updates
+to:
+
+  security/libgpg-error
