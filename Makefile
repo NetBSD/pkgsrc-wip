@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.466 2003/09/17 18:19:34 xtraeme Exp $
-# $NetBSD: Makefile,v 1.466 2003/09/17 18:19:34 xtraeme Exp $
+# $Id: Makefile,v 1.467 2003/09/17 18:27:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.467 2003/09/17 18:27:12 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -280,6 +280,7 @@ SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-IO-Tee
 SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-SWF-File
+SUBDIR+=	p5-Scalar-List-Utils
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-String-Approx
