@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/19 14:32:22 ppostma Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/19 19:15:13 xtraeme Exp $
 
 DISTNAME=		openntpd-20040719p
 CATEGORIES=		net
@@ -6,7 +6,7 @@ MASTER_SITES=		http://www.openntpd.org/dist/portable/
 
 MAINTAINER=		peter@pointless.nl
 HOMEPAGE=		http://www.openntpd.org/
-COMMENT=                OpenNTPd is a free implementation of the Network Time Protocol
+COMMENT=                Free implementation of the Network Time Protocol
 
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
@@ -18,10 +18,7 @@ CONF_FILES=		${EGDIR}/ntpd.conf ${PKG_SYSCONFDIR}/ntpd.conf
 RCD_SCRIPTS=		openntpd
 PKG_USERS=		_ntp:nogroup::ntpd\\ pseudo-user:${VARBASE}/chroot/ntpd:/sbin/nologin
 
-pre-install:
-.if !exists(${VARBASE}/chroot/ntpd)
-	@${INSTALL_DATA_DIR} ${VARBASE}/chroot/ntpd
-.endif
+OWN_DIRS=		${VARBASE}/chroot/ntpd
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ntpd ${PREFIX}/sbin/ntpd
