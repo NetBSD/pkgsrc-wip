@@ -1,34 +1,21 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/04/03 15:07:55 cubidou Exp $
+$NetBSD: patch-ae,v 1.2 2003/06/25 20:27:35 cubidou Exp $
 
---- src/sysdeps/netbsd.c.orig	2003-01-09 02:03:25.000000000 +0100
+--- src/sysdeps/netbsd.c.orig	2003-06-09 22:07:45.000000000 +0200
 +++ src/sysdeps/netbsd.c
-@@ -126,7 +126,7 @@ gkrellm_sys_proc_read_data(void)
- void
- gkrellm_sys_proc_read_users(void)
- 	{
--	gint	n_user;
-+	gint	n_users;
-    static time_t utmp_mtime;
-    struct utmp utmp;
-    struct stat s;
-@@ -217,8 +217,8 @@ gkrellm_sys_sensors_get_fan(gchar *path,
- {
+@@ -219,7 +219,7 @@ gkrellm_sys_sensors_get_fan(gchar *path,
     envsys_tre_data_t data;	/* sensor data */
  
--   data.sensor = sensor->interface;
+    data.sensor = interface;
 -   if (ioctl(sensor->iodev, ENVSYS_GTREDATA, &data) < 0) return FALSE;
-+   data.sensor = interface;
 +   if (ioctl(iodev, ENVSYS_GTREDATA, &data) < 0) return FALSE;
     if (!(data.validflags & (ENVSYS_FVALID|ENVSYS_FCURVALID))) return FALSE;
  
     if (data.units == ENVSYS_SFANRPM) {
-@@ -235,8 +235,8 @@ gkrellm_sys_sensors_get_voltage(gchar *p
- {
+@@ -237,7 +237,7 @@ gkrellm_sys_sensors_get_voltage(gchar *p
     envsys_tre_data_t data;	/* sensor data */
  
--   data.sensor = sensor->interface;
+    data.sensor = interface;
 -   if (ioctl(sensor->iodev, ENVSYS_GTREDATA, &data) < 0) return FALSE;
-+   data.sensor = interface;
 +   if (ioctl(iodev, ENVSYS_GTREDATA, &data) < 0) return FALSE;
     if (!(data.validflags & (ENVSYS_FVALID|ENVSYS_FCURVALID))) return FALSE;
  
