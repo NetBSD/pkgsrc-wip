@@ -1,4 +1,4 @@
-# $Id: win32.pkg.mk,v 1.11 2003/12/01 05:34:42 mpasternak Exp $
+# $Id: win32.pkg.mk,v 1.12 2003/12/01 05:39:23 mpasternak Exp $
 # (C) 2003 Michal Pasternak <dotz@irc.pl>
 #
 #
@@ -49,7 +49,7 @@ SHLIBTOOL:=	${LIBTOOL}
 .endif
 
 BUILD_DEPENDS+=	mingw-c>=3.1.1:../../wip/mingw-c
-# BUILD_DEPENDS+=	mingw-g++>=3.1.1:../../wip/mingw-g++
+BUILD_DEPENDS+=	mingw-g++>=3.1.1:../../wip/mingw-g++
 BUILD_DEPENDS+=	mingw-binutils>=2.14.90:../../wip/mingw-binutils
 BUILD_DEPENDS+=	mingw-runtime-bin>=3.2:../../wip/mingw-runtime-bin
 BUILD_DEPENDS+=	mingw-w32api-bin>=2.2:../../wip/mingw-w32api-bin
