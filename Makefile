@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1295 2004/05/26 13:43:58 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1295 2004/05/26 13:43:58 thomasklausner Exp $
+# $Id: Makefile,v 1.1296 2004/05/27 11:00:22 mpasternak Exp $
+# $NetBSD: Makefile,v 1.1296 2004/05/27 11:00:22 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -582,6 +582,7 @@ SUBDIR+=	py-pcapy
 SUBDIR+=	py-rlcompleter2
 SUBDIR+=	py-scapy
 SUBDIR+=	py-scipy_distutils
+SUBDIR+=	py-shtoom
 SUBDIR+=	py-spambayes
 SUBDIR+=	py-spark
 SUBDIR+=	py-speex
