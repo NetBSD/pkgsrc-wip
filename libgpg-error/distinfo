@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/10/17 08:15:18 minskim Exp $
+
+SHA1 (libgpg-error-0.5.tar.gz) = abd2a1f8e8e8001ad1025b209e0071f281cde736
+Size (libgpg-error-0.5.tar.gz) = 378801 bytes

@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/17 08:15:18 minskim Exp $
+bin/gpg-error-config
+include/gpg-error.h
+lib/libgpg-error.a
+lib/libgpg-error.la
+lib/libgpg-error.so
+lib/libgpg-error.so.1
+lib/libgpg-error.so.1.0
+share/aclocal/gpg-error.m4
