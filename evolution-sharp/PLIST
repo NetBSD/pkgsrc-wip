@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/05 14:39:17 marc Exp $
+lib/evolution-sharp.dll
+lib/pkgconfig/evolution-sharp.pc
+share/gapi/ebook-api.xml
+share/gapi/edataserver-api.xml
+@comment in gtk-sharp: @dirrm share/gapi
