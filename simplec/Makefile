@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/04 02:25:10 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/04 02:30:36 poppnk Exp $
 #
 
 DISTNAME=		simplec
@@ -9,6 +9,8 @@ MASTER_SITES=		http://retro.tunes.org/simplec/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://retro.tunes.org/simplec/
 COMMENT=		Port of SmallC/i386 compiler
+
+ONLY_FOR_PLATFORM=	*-*-i386
 
 do-build:
 	cd ${WRKSRC}/ && ${SH} ./build
