@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/11 11:22:34 lsed Exp $
-bin/dvdauthor
-bin/dvddirdel
-bin/dvdunauthor
-bin/mpeg2desc
-bin/spumux
-bin/spuunmux
-man/man1/dvdauthor.1
-man/man1/spumux.1
