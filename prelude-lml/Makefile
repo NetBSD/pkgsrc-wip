@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/07 14:52:14 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/10 01:07:29 blef Exp $
 
 DISTNAME=	prelude-lml-0.8.6
 CATEGORIES=	net www
@@ -9,7 +9,7 @@ HOMEPAGE= 	http://www.prelude-ids.org/
 COMMENT=	Prelude HIDS sensor
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		YES
 
@@ -22,7 +22,7 @@ CONF_FILES+=	${WRKSRC}/plugins.rules \
 
 PTHREAD_OPTS=		require
 
-.include "../../wip/libprelude/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
-.include "../../devel/pcre/buildlink2.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../wip/libprelude/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

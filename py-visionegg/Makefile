@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/10 17:48:39 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/10 00:44:04 blef Exp $
 #
 
 DISTNAME=		visionegg-0.9.9
@@ -10,21 +10,21 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://visionegg.sourceforge.net/
 COMMENT=		Visual stimulus creation and control in Python
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 MAKE_ENV+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
-.if exists(../../mk/opengl.buildlink2.mk)
+.if exists(../../mk/opengl.buildlink3.mk)
 # see PR 23845 for details
-.include "../../mk/opengl.buildlink2.mk"
+.include "../../mk/opengl.buildlink3.mk"
 .else
-.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .endif
 
-.include "../../math/py-Numeric/buildlink2.mk"
-.include "../../wip/py-game/buildlink2.mk"
-.include "../../x11/py-Tk/buildlink2.mk"
+.include "../../math/py-Numeric/buildlink3.mk"
+.include "../../wip/py-game/buildlink3.mk"
+.include "../../x11/py-Tk/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

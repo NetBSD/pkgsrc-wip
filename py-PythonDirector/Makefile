@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/08 11:48:57 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/10 01:21:28 blef Exp $
 #
 
 DISTNAME=		pydirector-0.0.7
@@ -10,7 +10,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://cesnet.dl.sourceforge.net/sourceforge/pythondirector/
 COMMENT=		Pure-python TCP load balancer
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
