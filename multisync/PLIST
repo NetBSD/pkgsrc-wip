@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2005/01/05 10:23:23 mreriksson Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/16 23:01:06 mreriksson Exp $
 bin/multisync
 include/multisync/multisync.h
 share/applications/multisync.desktop
@@ -10,3 +10,4 @@ share/multisync/pixmaps/resync_small.png
 @dirrm share/multisync/pixmaps
 @dirrm share/multisync
 @dirrm include/multisync
+@dirrm lib/multisync
