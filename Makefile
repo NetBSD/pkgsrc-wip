@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.791 2003/12/23 04:03:26 mpasternak Exp $
-# $NetBSD: Makefile,v 1.791 2003/12/23 04:03:26 mpasternak Exp $
+# $Id: Makefile,v 1.792 2003/12/23 09:10:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.792 2003/12/23 09:10:26 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -214,7 +214,6 @@ SUBDIR+=	gtkmagnetic
 SUBDIR+=	gtkpod
 SUBDIR+=	gurlchecker
 SUBDIR+=	gwc
-SUBDIR+=	gxmame
 SUBDIR+=	hasciicam
 SUBDIR+=	hashcash
 SUBDIR+=	heimdal
