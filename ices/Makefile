@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/29 10:31:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/14 22:45:31 thomasklausner Exp $
 #
 
 DISTNAME=	ices-0.2.3
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--with-lame=${BUILDLINK_PREFIX.lame} \
 			--with-docdir=${LOCALBASE}/share/doc/ices \
 			--with-libshout=${BUILDLINK_PREFIX.libshout}
 
-.include "../../wip/libshout/buildlink2.mk"
+.include "../../audio/libshout/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../audio/lame/buildlink2.mk"
