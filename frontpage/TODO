@@ -1,3 +1,18 @@
+Fri Jun 13 00:14:44 CDT 2003
+    Done:
+	+   Test publishing with MS-FrontPage 2000 (part of Office 2000)
+	    Target Platform was NetBSD/alpha 1.6.1.
+	+   A patch adding setre[ug]id(2) in the OSF1 compatibility
+	    module has been submitted.  GNATS id port-alpha/21870.
+	+   Updated MESSAGE with a list of directives needed, and 
+	    required values.
+
+    To-do:
+	+   write a manual page on owsadm.exe.  The average NetBSD
+	    administrator shouldn't even think about using fpinstall.sh,
+	    as it gets a number of things wrong (they are right on
+	    OSF1/Tru64, but not on NetBSD.)
+
 Sun Jun  1 22:47:37 CDT 2003
     Items in need of attention:
 	+   Testing on non-alpha platforms (intel and sparc*)
@@ -10,7 +25,6 @@ Sun Jun  1 22:47:37 CDT 2003
 	add support for setre[ug]id(2).  Fortunately, NetBSD already has
 	these calls, so it was easy to add support.
 
-	A patch request will be submitted to -current.
-
 	Additional system calls may require emulation once executables
-	other than owsadm.exc have been tried.
+	other than owsadm.exe have been tried. [no other system calls
+	were needed to run shtml.exe or author.exe]
