@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/18 14:17:22 ppostma Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/18 14:20:27 ppostma Exp $
 
 DISTNAME=		openntpd-20040718p
 CATEGORIES=		net
@@ -12,7 +12,7 @@ USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 
-EGDIR=			${PREFIX}/share/examples/ntpd
+EGDIR=			${PREFIX}/share/examples/openntpd
 CONF_FILES=		${EGDIR}/ntpd.conf ${PKG_SYSCONFDIR}/ntpd.conf
 
 RCD_SCRIPTS=		openntpd
