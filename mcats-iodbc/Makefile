@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/25 02:32:44 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/05 03:12:39 blef Exp $
 #
 
 DISTNAME=	mcats-0.1.0
@@ -16,7 +16,7 @@ DEPENDS+=	mcats>=0.1.0:../../wip/mcats
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 CONFIGURE_ARGS+=	--enable-iodbc
 
 do-build:
@@ -27,5 +27,5 @@ do-install:
 	cd ${WRKSRC}/src/modules/iodbc &&			\
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 
-.include "../../databases/iodbc/buildlink2.mk"
+.include "../../databases/iodbc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
