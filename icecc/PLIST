@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/28 10:05:43 plunky Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/09 01:36:02 plunky Exp $
 bin/icecc
+bin/icecchelp
 bin/icebgset
 bin/iceked
 bin/icemc
@@ -11,6 +12,8 @@ bin/iceiconcvt.py
 bin/icemergeprefs.py
 bin/icerrrun.py
 bin/icerrun.py
+bin/icecolsel
+bin/icefonsel
 share/icecc/help/default/icecc_desk.png
 share/icecc/help/default/index.html
 share/icecc/help/default/index.sgml
@@ -25,9 +28,15 @@ share/icecc/themes/Control Panel/theme
 share/icecc/themes/Control Panel/README
 share/icecc/themes/Simple/theme
 share/icecc/themes/Simple/icecc_desk.png
+share/icecc/icewm4vim/INSTALL
+share/icecc/icewm4vim/filetype.vim
+share/icecc/icewm4vim/icewm.vim
+share/icecc/icewm4vim/syntax/icewm.vim
 @dirrm share/icecc/help/default
 @dirrm share/icecc/help
 @dirrm share/icecc/themes/Control Panel
 @dirrm share/icecc/themes/Simple
 @dirrm share/icecc/themes
+@dirrm share/icecc/icewm4vim/syntax
+@dirrm share/icecc/icewm4vim
 @dirrm share/icecc

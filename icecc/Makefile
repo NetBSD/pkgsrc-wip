@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/28 10:05:43 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/09 01:36:02 plunky Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
@@ -39,7 +39,7 @@ PYTHON_PATCH_SCRIPTS+=	icemergeprefs-0.5/icemergeprefs.py icerrun-0.5/icerrrun.p
 PYTHON_PATCH_SCRIPTS+=	icerrun-0.5/icerrun.py
 
 SUBST_CLASSES=		path
-SUBST_STAGE.path=	patch
+SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	icebgset-1.3/icebgset.pro icecc-2.9/icecc.pro iceked-1.5/iceked.pro
 SUBST_FILES.path+=	icemc-2.1/icemc.pro icesndcfg-1.3/icesndcfg.pro icets-1.4/icets.pro
 SUBST_FILES.path+=	icewoed-1.8/icewoed.pro
@@ -55,13 +55,23 @@ do-configure:
 	cd ${WRKSRC}/${dir} && ${QTDIR}/bin/qmake "QMAKE_MKDIR=${MKDIR}" "QMAKE_CHK_DIR_EXISTS=${TEST} -d"
 .   endfor
 
+post-build:
+	cd ${WRKSRC}/icewm4vim && gmake QTDIR=${QTDIR}
+
 post-install:
 .   for script in ${PYTHON_PATCH_SCRIPTS}
 	${INSTALL_SCRIPT} ${WRKSRC}/${script} ${PREFIX}/bin
 .   endfor
+	${INSTALL_PROGRAM} ${WRKSRC}/icewm4vim/icecolsel ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/icewm4vim/icefonsel ${PREFIX}/bin
+	${MKDIR} ${PREFIX}/share/icecc/icewm4vim ${PREFIX}/share/icecc/icewm4vim/syntax
+	${INSTALL_DATA} ${WRKSRC}/icewm4vim/INSTALL ${PREFIX}/share/icecc/icewm4vim/INSTALL
+	${INSTALL_DATA} ${WRKSRC}/icewm4vim/filetype.vim ${PREFIX}/share/icecc/icewm4vim/filetype.vim
+	${INSTALL_DATA} ${WRKSRC}/icewm4vim/icewm.vim ${PREFIX}/share/icecc/icewm4vim/icewm.vim
+	${INSTALL_DATA} ${WRKSRC}/icewm4vim/syntax/icewm.vim ${PREFIX}/share/icecc/icewm4vim/syntax/icewm.vim
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
-.include "../../x11/py-qt3-base/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../x11/py-qt3-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
