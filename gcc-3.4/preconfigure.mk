@@ -1,5 +1,5 @@
 	# Create compiler driver scripts in ${WRKDIR}.
-	(cd ${BUILDLINK_PREFIX.gcc-3.4.0}/bin && bin_files=`ls gcc cc cpp g++ g77` && \
+	(cd ${BUILDLINK_PREFIX.gcc-3.4.0}/bin && bin_files=`ls *` && \
 	cd ${WRKDIR}/.gcc/bin && \
 	for _target_ in $${bin_files} ; do \
 		${ECHO} '#!${TOOLS_SHELL}' > $${_target_} && \

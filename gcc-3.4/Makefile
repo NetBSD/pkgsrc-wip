@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/05/14 11:52:05 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.23 2004/05/20 16:49:11 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -68,7 +68,7 @@ may be used:
 # You may also specify the path of a gcc/gnat Ada compiler
 # outside of the pkgsrc system by specifying the full path
 # of the compiler (example) below:
-#ALT_GCC=       /usr/pkg/gcc3bootstrap/bin/gcc
+#ALT_GCC=       /usr/oldpkg/gcc-3.4.0/bin/gcc
 .  if defined(ALT_GCC)
 .     if exists(${ALT_GCC})
 ALT_GCC_PREFIX:=        ${ALT_GCC:H}/..
@@ -140,10 +140,9 @@ do-configure:
 	 (cd ${WRKDIR}/obj && ${SETENV} ${CONFIGURE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS}))
 
 do-build:
-.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
-.else
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap)
+.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
+	(cd ${WRKDIR}/obj/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib_and_tools)
 .endif
 
 do-test:
@@ -155,6 +154,14 @@ do-test:
 do-install:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} ${INSTALL} \
 	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc)
+.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
+		(SPECPATH=`${GCC_PREFIX}/bin/gcc -print-file-name=specs` && \
+		for EXPANDEDSPECPATH in $${SPECPATH} ; do \
+			SPECDIR=`${DIRNAME} $${EXPANDEDSPECPATH}`; \
+			${ECHO} $${SPECDIR}/adainclude > $${SPECDIR}/ada_source_path;   \
+			${ECHO} $${SPECDIR}/adalib > $${SPECDIR}/ada_object_path;       \
+		done )
+.endif
 
 post-install:
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
