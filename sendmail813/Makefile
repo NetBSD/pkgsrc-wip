@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/06/28 11:33:24 adrian_p Exp $
+# $NetBSD: Makefile,v 1.6 2004/06/28 13:10:33 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -74,6 +74,7 @@ do-build:
 post-build:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
+
 .if ${USE_DB2} == YES
 	@${ECHO} "" >>${MESSAGE_SRC}
 	@${ECHO} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all" >>${MESSAGE_SRC}
@@ -118,4 +119,4 @@ PKG_USERS=	smmsp:smmsp::Sendmail\\ Message\\ Submission\\ Program
 .include "../../mk/bsd.pkg.mk"
 
 # has to be below include for bsd.pkg.mk, else substition fails
-OBJDIR!=	${ECHO} obj.`uname -srm | ${TR} \  . | ${TR} \/ -`
+OBJDIR!=	${ECHO} obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ -`
