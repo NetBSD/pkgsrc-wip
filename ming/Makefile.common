@@ -1,0 +1,14 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2003/11/26 17:08:13 mpasternak Exp $
+
+DISTNAME?=		ming-0.2a
+CATEGORIES?=		graphics
+MASTER_SITES?=		${MASTER_SITE_SOURCEFORGE:=ming/}
+EXTRACT_SUFX?=		.tgz
+
+MAINTAINER?=		dotz@irc.pl
+HOMEPAGE?=		http://ming.sourceforge.net/
+COMMENT?=		Create SWF (Macromedia Flash) files with this library
+
+DISTINFO_FILE?=		${.CURDIR}/../ming/distinfo
+COMMON_FILESDIR?=	${.CURDIR}/../ming/files
+PATCHDIR?=		${.CURDIR}/../ming/patches

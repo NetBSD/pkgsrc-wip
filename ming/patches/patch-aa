@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/11/26 17:08:13 mpasternak Exp $
+
+--- Makefile~	Fri Aug 17 19:05:49 2001
++++ Makefile	Wed Nov 26 17:33:37 2003
+@@ -1,9 +1,9 @@
+ #CC = gcc -g -pg -a	# profiling flags
+ #CC = gcc -O5
+-CC = gcc -g -Wall
++#CC = gcc -g -Wall
+ 
+ #PREFIX = /usr/local
+-PREFIX = /usr
++#PREFIX = /usr
+ LIBDIR = ${PREFIX}/lib
+ INCLUDEDIR = ${PREFIX}/include
+ 
