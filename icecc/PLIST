@@ -1,33 +1,33 @@
-@comment $NetBSD: PLIST,v 1.3 2005/03/13 13:48:11 plunky Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/03/13 20:36:57 plunky Exp $
+bin/icebgset
 bin/icecc
 bin/icecchelp
-bin/icebgset
+bin/icecolsel
+bin/icecurcfg.py
+bin/icefonsel
+bin/iceiconcvt.py
 bin/iceked
 bin/icemc
-bin/icesndcfg
-bin/icets
-bin/icewoed
-bin/icecurcfg.py
-bin/iceiconcvt.py
 bin/icemergeprefs.py
 bin/icerrrun.py
 bin/icerrun.py
-bin/icecolsel
-bin/icefonsel
+bin/icesndcfg
+bin/icets
+bin/icewoed
 share/icecc/help/default/icecc_desk.png
-share/icecc/help/default/index.html
-share/icecc/help/default/index.sgml
 share/icecc/help/default/index-1.html
 share/icecc/help/default/index-2.html
 share/icecc/help/default/index-3.html
 share/icecc/help/default/index-4.html
 share/icecc/help/default/index-5.html
 share/icecc/help/default/index-6.html
+share/icecc/help/default/index.html
+share/icecc/help/default/index.sgml
+share/icecc/themes/Control Panel/README
 share/icecc/themes/Control Panel/bgimg.jpg
 share/icecc/themes/Control Panel/theme
-share/icecc/themes/Control Panel/README
-share/icecc/themes/Simple/theme
 share/icecc/themes/Simple/icecc_desk.png
+share/icecc/themes/Simple/theme
 share/vim/${VIM_SUBDIR}/ftplugin/iceprefs.vim
 share/vim/${VIM_SUBDIR}/syntax/iceprefs.vim
 @dirrm share/icecc/help/default
