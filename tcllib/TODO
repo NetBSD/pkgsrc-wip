@@ -1,5 +1,0 @@
-$Id: TODO,v 1.1 2004/03/09 00:43:44 minskim Exp $
-
-  * wget patch doesn't work, because /usr/pkg/bin/ftp is not available
-    on NetBSD.
-  * 1.6 is out.
