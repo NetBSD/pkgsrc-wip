@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/05 21:22:07 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/21 18:35:49 jeremy-c-reed Exp $
 
 DISTNAME=		strace-4.4.98
 CATEGORIES=		devel
@@ -7,6 +7,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.wi.leidenuniv.nl/~wichert/strace/
+HOMEPAGE=		http://www.liacs.nl/~wichert/strace/
 COMMENT=		System call tracing utility
 
 GNU_CONFIGURE=		YES
