@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/12/28 00:15:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/29 18:23:51 thomasklausner Exp $
 
 DISTNAME=	rolo-011
 CATEGORIES=	databases
@@ -9,7 +9,7 @@ HOMEPAGE=	http://rolo.sf.net/
 COMMENT=	Contact info manager using ncurses and vCards
 
 INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
-INCOMPAT_CURSES=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*
+INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
