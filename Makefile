@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1495 2004/10/15 12:49:46 cetrox Exp $
-# $NetBSD: Makefile,v 1.1495 2004/10/15 12:49:46 cetrox Exp $
+# $Id: Makefile,v 1.1496 2004/10/15 22:41:42 minskim Exp $
+# $NetBSD: Makefile,v 1.1496 2004/10/15 22:41:42 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -153,7 +153,6 @@ SUBDIR+=	evolution-sharp
 SUBDIR+=	exiftool
 SUBDIR+=	ezbounce
 SUBDIR+=	fakenes
-SUBDIR+=	faster-configure
 SUBDIR+=	fbpanel
 SUBDIR+=	festival-gaim
 SUBDIR+=	firebird

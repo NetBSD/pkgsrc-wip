@@ -1,8 +1,0 @@
-This small script lets you save the long time GNU configure script
-"detecting maximum length of command-line arguments".
-
-This utility is very simple implementation of so-called "pkgsrc database"
-with command-line lenghts, proposed once upon a time on tech-pkg@ . Better
-implementation could include cut-n-paste version from the configure script,
-but I think this small pkg works for me (saves me time installing the same
-file on many boxes).
