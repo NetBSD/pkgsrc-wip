@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1490 2004/10/10 10:13:41 minskim Exp $
-# $NetBSD: Makefile,v 1.1490 2004/10/10 10:13:41 minskim Exp $
+# $Id: Makefile,v 1.1491 2004/10/11 15:58:02 minskim Exp $
+# $NetBSD: Makefile,v 1.1491 2004/10/11 15:58:02 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -71,7 +71,6 @@ SUBDIR+=	caml-libnum
 SUBDIR+=	caml-libunix
 SUBDIR+=	cawf
 SUBDIR+=	ccrypt
-SUBDIR+=	ccze
 SUBDIR+=	cdpr
 SUBDIR+=	chbg
 SUBDIR+=	cherokee
