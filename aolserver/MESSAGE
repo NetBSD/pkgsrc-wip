@@ -1,0 +1,5 @@
+The startup script is at ${PREFIX}/etc/rc.d/nsd" and the configuration 
+file is at ${PREFIX}/etc/nsd.tcl.  The name nsd is from the original 
+name of this product, NaviServer.
+  
+Documentation is at http://www.aolserver.com.
