@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/07/31 01:52:55 adrian_p Exp $
+$NetBSD: MESSAGE,v 1.2 2005/02/17 13:38:54 adrian_p Exp $
 
 Please refer to the file:
 
@@ -7,17 +7,16 @@ Please refer to the file:
 
 on how to setup your Turba installation. You need to at least edit
 
-	${TURBADIR}/config/conf.php
+	${PREFIX}/share/horde/config/registry.php
 
-You will also need to make Turba accessible through your HTTP server.  If
-you are running Apache and ap-php, then you can add the following lines
+to enable Turba in the horde framework.  You will also need to configure Turba 
+by using the Horde administrative interface.
+
+Finally you will also need to make Turba accessible through your HTTP server.  
+If you are running Apache and ap-php, then you can add the following lines
 to httpd.conf:
 
 	Include ${PKG_SYSCONFDIR}/horde.conf
 	Include ${PKG_SYSCONFDIR}/turba.conf
-
-and then you have to edit
-	${PREFIX}/share/horde/config/registry.php
-to enable Turba in the horde framework.
 
 ===========================================================================

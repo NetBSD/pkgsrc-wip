@@ -1,63 +1,86 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/31 01:52:56 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/17 13:38:54 adrian_p Exp $
 
-DISTNAME=	turba-1.2.2
+DISTNAME=	turba-h3-${TURBAVER}
+PKGNAME=	turba-${TURBAVER}
 CATEGORIES=	mail www
-MASTER_SITES=	ftp://ftp.horde.org/pub/turba/tarballs/
+MASTER_SITES=	ftp://ftp.horde.org/pub/turba/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.horde.org/turba/
 COMMENT=	Horde contact management application
 
-DEPENDS+=	horde>=2.2.4:../../www/horde
+DEPENDS+=	horde>=3.0.0:../../www/horde3
+
+.include "../../mk/bsd.prefs.mk"
 
 DOCDIR=		${PREFIX}/share/doc/turba
 EGDIR=		${PREFIX}/share/examples/turba
 HORDEDIR=	${PREFIX}/share/horde
 TURBADIR=	${HORDEDIR}/turba
+TURBAVER=	2.0.2
+PAXDIRS=	lib locale po scripts templates themes
+USE_PERL5=	YES
 
 MESSAGE_SUBST+=	TURBADIR=${TURBADIR}
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+REPLACE_PERL=	${WRKSRC}/scripts/ldap/addou.pl
 
-USE_PKGINSTALL=		yes
+USE_PKGINSTALL=		YES
 PKG_SYSCONFSUBDIR?=	httpd
 
-SUBST_CLASSES=		paths
-SUBST_STAGE.paths=	pre-install
-SUBST_FILES.paths=	${FILESDIR}/turba.conf.dist
-SUBST_SED.paths=	-e "s|@TURBADIR@|${TURBADIR}|g"
-SUBST_MESSAGE.paths=	"Fixing paths."
+SUBST_CLASSES=		files
+SUBST_STAGE.files=	post-build
+SUBST_FILES.files=	turba.conf.dist
+SUBST_SED.files=	-e "s|@TURBADIR@|${TURBADIR}|g"
+SUBST_MESSAGE.files=	"Fixing configuration files."
 
-CONF_FILES=	${EGDIR}/turba.conf ${PKG_SYSCONFDIR}/turba.conf
-CONF_FILES+=	${TURBADIR}/config/conf.php.dist \
-		${TURBADIR}/config/conf.php
-SUPPORT_FILES+=	${TURBADIR}/config/attributes.php.dist \
-		${TURBADIR}/config/attributes.php
-SUPPORT_FILES+=	${TURBADIR}/config/html.php.dist \
-		${TURBADIR}/config/html.php
-SUPPORT_FILES+=	${TURBADIR}/config/menu.php.dist \
-		${TURBADIR}/config/menu.php
-SUPPORT_FILES+=	${TURBADIR}/config/prefs.php.dist \
-		${TURBADIR}/config/prefs.php
-SUPPORT_FILES+=	${TURBADIR}/config/sources.php.dist \
-		${TURBADIR}/config/sources.php
+CONF_FILES=		${EGDIR}/turba.conf ${PKG_SYSCONFDIR}/turba.conf
+CONF_FILES+=		${TURBADIR}/config/sources.php.dist \
+			${TURBADIR}/config/sources.php
+CONF_FILES+=		${TURBADIR}/config/attributes.php.dist \
+			${TURBADIR}/config/attributes.php
+SUPPORT_FILES_PERMS+=	${TURBADIR}/config/conf.xml.dist \
+			${TURBADIR}/config/conf.xml \
+			${APACHE_USER} ${ROOT_GROUP} 0440
+SUPPORT_FILES_PERMS+=	${TURBADIR}/config/menu.php.dist \
+			${TURBADIR}/config/menu.php \
+			${APACHE_USER} ${ROOT_GROUP} 0440
+SUPPORT_FILES_PERMS+=	${TURBADIR}/config/prefs.php.dist \
+                        ${TURBADIR}/config/prefs.php \
+			${APACHE_USER} ${ROOT_GROUP} 0440
+
+.include "options.mk"
 
 do-build:
+	@${CP} ${FILESDIR}/turba.conf.dist ${WRKSRC}/turba.conf.dist
+	@${CP} ${WRKSRC}/config/conf.xml ${WRKSRC}/config/conf.xml.dist
 	@${FIND} ${WRKSRC} -name .htaccess -print | ${XARGS} ${RM} -f
-	@${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
-	@${FIND} ${WRKSRC} -name "*.pl" -print | ${XARGS} ${CHMOD} ${BINMODE}
-	@${FIND} ${WRKSRC} -name "*.sh" -print | ${XARGS} ${CHMOD} ${BINMODE}
+	@${CHMOD} 0750 ${WRKSRC}/scripts/ldap/addou.pl
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${TURBADIR}
-	cd ${FILESDIR} && ${INSTALL_DATA} turba.conf.dist ${EGDIR}/turba.conf
-	cd ${WRKSRC} && ${INSTALL_DATA} COPYING README docs/* ${DOCDIR}
-	cd ${WRKSRC} && ${CP} -R graphics lib locale po scripts \
-		templates ${TURBADIR}
 	${INSTALL_DATA_DIR} ${TURBADIR}/config
-	cd ${WRKSRC}/config && ${INSTALL_DATA} * ${TURBADIR}/config
-	cd ${WRKSRC} && ${INSTALL_DATA} *.php ${TURBADIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/LDAP ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/RELEASE_NOTES ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/UPGRADING ${DOCDIR}
+
+.	for d in ${PAXDIRS}
+		${INSTALL_DATA_DIR} ${TURBADIR}/${d}
+.	endfor
+.	undef d
+
+.	for d in ${PAXDIRS}
+		cd ${WRKSRC}/${d} && ${PAX} -rw . ${TURBADIR}/${d}
+.	endfor
+.	undef d
+
+	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${TURBADIR}/config
+	${INSTALL_DATA} ${WRKSRC}/*.php ${TURBADIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${TURBADIR}
 	${CHMOD} -R a-w ${TURBADIR}
 

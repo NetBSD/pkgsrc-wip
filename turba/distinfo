@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/31 01:52:55 adrian_p Exp $
+$NetBSD: distinfo,v 1.2 2005/02/17 13:38:54 adrian_p Exp $
 
-SHA1 (turba-1.2.2.tar.gz) = 9d6a94d3034a27adb612584cf9972241e8c3bb22
-Size (turba-1.2.2.tar.gz) = 508914 bytes
+SHA1 (turba-h3-2.0.2.tar.gz) = c9d9f0b1e6e9edf0272c9926d8703ff33a2551ec
+Size (turba-h3-2.0.2.tar.gz) = 1227556 bytes
