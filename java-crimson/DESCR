@@ -1,0 +1,13 @@
+Crimson is a Java XML parser which supports XML 1.0 via the following APIs:
+
+    * Java API for XML Processing (JAXP) 1.1 minus the javax.xml.transform
+		package. JAXP is a pluggable API that allows applications to access
+		XML documents in a parser-independent manner. It endorses the industry
+		standard SAX and DOM APIs and also adds a few classes under the
+		javax.xml.parsers package to implement pluggability and utility methods.
+		Note: the javax.xml.transform package hierarchy of JAXP is not
+		implemented by Crimson. One implementation of javax.xml.transform can
+		be found at Xalan Java 2.
+    * SAX 2.0
+    * SAX2 Extensions version 1.0
+    * DOM Level 2 Core Recommendation

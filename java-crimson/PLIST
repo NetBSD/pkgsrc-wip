@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/14 22:33:15 poppnk Exp $
+share/classpath/crimson.jar
+@dirrm share/classpath
