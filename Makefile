@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.525 2003/10/05 22:14:03 dillo Exp $
-# $NetBSD: Makefile,v 1.525 2003/10/05 22:14:03 dillo Exp $
+# $Id: Makefile,v 1.526 2003/10/06 12:17:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.526 2003/10/06 12:17:27 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -143,6 +143,7 @@ SUBDIR+=	gnome2-system-monitor
 SUBDIR+=	gnome2-themes-extra
 SUBDIR+=	gnomeicu
 SUBDIR+=	gnucash-docs
+SUBDIR+=	gnumeric
 SUBDIR+=	gnunet
 SUBDIR+=	gotmail
 SUBDIR+=	gov2
