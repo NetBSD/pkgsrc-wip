@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2004/01/04 10:18:52 mpasternak Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/01/04 10:25:35 mpasternak Exp $
 #
 # This Makefile fragment is included by packages that use py-twisted.
 #
@@ -9,14 +9,14 @@ PY_TWISTED_BUILDLINK2_MK=	# defined
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_PACKAGES+=			${PYPKGPREFIX}-twisted
-BUILDLINK_DEPENDS.${PYPKGPREFIX}-Twisted?=		${PYPKGPREFIX}-twisted>=1.1.1
-BUILDLINK_PKGSRCDIR.${PYPKGPREFIX}-Twisted?=		../../wip/py-twisted
+BUILDLINK_DEPENDS.${PYPKGPREFIX}-twisted?=		${PYPKGPREFIX}-twisted>=1.1.1
+BUILDLINK_PKGSRCDIR.${PYPKGPREFIX}-twisted?=		../../wip/py-twisted
 
-EVAL_PREFIX+=	BUILDLINK_PREFIX.${PYPKGPREFIX}-Twisted=${PYPKGPREFIX}-twisted
-BUILDLINK_PREFIX.${PYPKGPREFIX}-Twisted_DEFAULT=	${LOCALBASE}
+EVAL_PREFIX+=	BUILDLINK_PREFIX.${PYPKGPREFIX}-twisted=${PYPKGPREFIX}-twisted
+BUILDLINK_PREFIX.${PYPKGPREFIX}-twisted_DEFAULT=	${LOCALBASE}
 
-BUILDLINK_TARGETS+=	${PYPKGPREFIX}-Twisted-buildlink
+BUILDLINK_TARGETS+=	${PYPKGPREFIX}-twisted-buildlink
 
-${PYPKGPREFIX}-Twisted-buildlink: _BUILDLINK_USE
+${PYPKGPREFIX}-twisted-buildlink: _BUILDLINK_USE
 
 .endif	# PY_TWISTED_BUILDLINK2_MK
