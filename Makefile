@@ -1,10 +1,11 @@
-# $Id: Makefile,v 1.125 2003/04/27 10:35:05 cjep Exp $
-# $NetBSD: Makefile,v 1.125 2003/04/27 10:35:05 cjep Exp $
+# $Id: Makefile,v 1.126 2003/04/27 10:37:06 cjep Exp $
+# $NetBSD: Makefile,v 1.126 2003/04/27 10:37:06 cjep Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	PPower4
 SUBDIR+=	SDL_mm
+SUBDIR+=	abook
 SUBDIR+=	adodb
 SUBDIR+=	allegro
 SUBDIR+=	amsn
@@ -67,6 +68,7 @@ SUBDIR+=	jdk12
 SUBDIR+=	jdk12-openjit
 SUBDIR+=	jdk13
 SUBDIR+=	jdk13-openjit
+SUBDIR+=	jigdo
 SUBDIR+=	jpgraph
 SUBDIR+=	libdialog
 SUBDIR+=	liquidwar
@@ -74,6 +76,7 @@ SUBDIR+=	lpe
 SUBDIR+=	mailfilter
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
+SUBDIR+=	mixer.tk
 SUBDIR+=	mopac
 SUBDIR+=	mtf
 SUBDIR+=	nagios-base
@@ -111,6 +114,7 @@ SUBDIR+=	qn-x11
 SUBDIR+=	scm
 SUBDIR+=	scponly
 SUBDIR+=	shoutcast
+SUBDIR+=	srvx
 SUBDIR+=	streamripper
 SUBDIR+=	tex-foiltex
 SUBDIR+=	totem
