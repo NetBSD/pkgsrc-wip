@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/08/13 08:03:08 ianzag Exp $
+
+--- open21xx.sh.orig	2002-10-18 10:19:20.000000000 +0700
++++ open21xx.sh
+@@ -1,5 +1,5 @@
+ # open21xx initialization script (sh)
+-if [ -z "$OPEN21XXDIR"  -o  "$OPEN21XXDIR" != "/usr/local/open21xx" ] ; then
+-	OPEN21XXDIR="/usr/local/open21xx"
++if [ -z "$OPEN21XXDIR"  -o  "$OPEN21XXDIR" != "@PREFIX@/open21xx" ] ; then
++	OPEN21XXDIR="@PREFIX@/open21xx"
+ fi
+ export  OPEN21XXDIR

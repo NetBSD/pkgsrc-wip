@@ -1,0 +1,55 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/08/13 08:03:08 ianzag Exp $
+
+--- Makefile.orig	2003-11-23 09:10:41.000000000 +0600
++++ Makefile
+@@ -27,15 +27,13 @@
+ 
+ .PHONY:	all build_samples build_all install clean_all clean tar backup
+ 
+-INSTALL_DIR=/usr/local/
+-INSTALL_BIN=$(INSTALL_DIR)bin/
+-INSTALL_TARGET=$(INSTALL_DIR)/open21xx/
+-INSTALL_INCLUDE=$(INSTALL_TARGET)/include/
+-INSTALL_MAN1=$(INSTALL_DIR)man/man1/
++INSTALL_DIR=${PREFIX}
++INSTALL_BIN=$(INSTALL_DIR)/bin
++INSTALL_TARGET=$(INSTALL_DIR)/open21xx
++INSTALL_INCLUDE=$(INSTALL_TARGET)/include
++INSTALL_MAN1=$(INSTALL_DIR)/man/man1
+ INSTALL=install
+ 
+-PROFILE_DIR=/etc/profile.d/
+-
+ all:	build_all build_samples
+ 
+ build_samples:	build_all
+@@ -49,22 +47,24 @@ build_all:
+ 	$(MAKE) -C elfdump
+ 	$(MAKE) -C verify21
+ 
+-install: uninstall
++install:
++	-$(INSTALL) -d -m 755 $(INSTALL_TARGET)
++	-$(INSTALL) -d -m 755 $(INSTALL_INCLUDE)
+ 	-$(INSTALL) -m 755 as21/as218x $(INSTALL_BIN)
+ 	-$(INSTALL) -m 755 as21/as219x $(INSTALL_BIN)
+ 	-$(INSTALL) -m 755 ld21/ld21 $(INSTALL_BIN)
+ 	-$(INSTALL) -m 755 ez21/ez21 $(INSTALL_BIN)
+-	-$(INSTALL) -m 644 man1/{as218x,as219x,ld21,ez21}.1 $(INSTALL_MAN1)
+-	-$(INSTALL) -d -m 755 $(INSTALL_INCLUDE)
++	-$(INSTALL) -m 644 man1/as218x.1 $(INSTALL_MAN1)
++	-$(INSTALL) -m 644 man1/as219x.1 $(INSTALL_MAN1)
++	-$(INSTALL) -m 644 man1/ld21.1 $(INSTALL_MAN1)
++	-$(INSTALL) -m 644 man1/ez21.1 $(INSTALL_MAN1)
+ 	-$(INSTALL) -m 644 include/* $(INSTALL_INCLUDE)
+ 	-$(INSTALL) -m 644 *.ldf $(INSTALL_TARGET)
+-	-$(INSTALL) -m 755 open21xx.{sh,csh} $(PROFILE_DIR)
+ 
+ uninstall:
+ 	-rm -f $(INSTALL_BIN)/{as21,as218x,as219x,ld21,ez21}
+ 	-rm -f $(INSTALL_MAN1)/{as21,as218x,as219x,ld21,ez21}.1
+ 	-rm -rf $(INSTALL_DIR)/open21xx
+-	-rm -f $(PROFILE_DIR)/open21xx.{sh,csh}
+ 
+ clean_all:	clean
+ 	-rm *.tar.gz

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/13 08:03:07 ianzag Exp $
+
+SHA1 (open21xx0.7.2.tar.gz) = 164aee04190f3cab969d489641073a20675c3c6f
+Size (open21xx0.7.2.tar.gz) = 161840 bytes
+SHA1 (patch-aa) = b6b0a56c142326fe6220bb6112714fd758a9eaec
+SHA1 (patch-ab) = 976b95d2c35da311a9ff66cdec772b3f2d7450f7
+SHA1 (patch-ac) = f74684f53fbc8c020f3c4d18f5fb7cbfb95ae3d7
+SHA1 (patch-ad) = f89b5a1561afcd6142ea91ca16398ae20c01957e

@@ -1,0 +1,18 @@
+
+Open21xx is an open source, GPLed assembler tool suite for the
+Analog DevicesTM 21xx family of Digital Signal processors.
+The processors and families that are supported are: 
+
+2100 Family
+  ADSP-2101 ADSP-2103 ADSP-2104 ADSP-2105 ADSP-2115 ADSP-2161
+  ADSP-2162 ADSP-2163 ADSP-2164 ADSP-2165 ADSP-2166
+
+217x Family
+  ADSP-21msp58 ADSP-21msp59 ADSP-2171 ADSP-2173
+
+218x Family
+  ADSP-2181 ADSP-2183 ADSP-2184 ADSP-2185 ADSP-2186 ADSP-2187
+  ADSP-2188 ADSP-2189
+
+219x Family
+  ADSP-2191 ADSP-2192 ADSP-2195 ADSP-2196

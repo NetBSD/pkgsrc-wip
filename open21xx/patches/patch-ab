@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/08/13 08:03:08 ianzag Exp $
+
+--- open21xx.csh.orig	2002-10-18 10:19:20.000000000 +0700
++++ open21xx.csh
+@@ -1,8 +1,7 @@
+ # open21xx initialization script (csh)
+ if ( $?OPEN21XXDIR ) then
+-         if ( $OPEN21XXDIR == "/usr/local/open21xx" ) then
++         if ( $OPEN21XXDIR == "@PREFIX@/open21xx" ) then
+          exit
+          endif
+ endif
+-setenv OPEN21XXDIR /usr/local/open21xx
+-
++setenv OPEN21XXDIR @PREFIX@/open21xx

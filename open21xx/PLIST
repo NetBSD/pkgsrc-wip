@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/13 08:03:07 ianzag Exp $
+bin/as218x
+bin/as219x
+bin/ez21
+bin/ld21
+man/man1/as218x.1
+man/man1/as219x.1
+man/man1/ez21.1
+man/man1/ld21.1
+open21xx/ADSP-2181.ldf
+open21xx/ADSP-2183.ldf
+open21xx/ADSP-2184.ldf
+open21xx/ADSP-2185.ldf
+open21xx/ADSP-2186.ldf
+open21xx/ADSP-2187.ldf
+open21xx/ADSP-2188.ldf
+open21xx/ADSP-2189.ldf
+open21xx/ADSP-2191.ldf
+open21xx/ADSP-2195.ldf
+open21xx/ADSP-2196.ldf
+open21xx/ADSP-21990.ldf
+open21xx/ADSP-21991.ldf
+open21xx/ADSP-21992.ldf
+open21xx/include/ad1847.h
+open21xx/include/mmregs.h
+open21xx/include/registers.h
+@dirrm open21xx/include
+@dirrm open21xx
