@@ -1,10 +1,8 @@
-$Id: TODO,v 1.2 2004/01/02 22:07:46 mpasternak Exp $
+$Id: TODO,v 1.3 2004/02/23 22:01:53 mpasternak Exp $
 
 Does it compile on NetBSD-stable?
 
 Does it compile on NetBSD-current?
-
-DISTFILE issue. Please read Makefile.
 
 FreeBSD build breaks at:
 	../gen/firebird/bin/create_db empty.fdb
@@ -21,8 +19,5 @@ Firebird can be compiled as "classic" and "super" version -- I have no idea
 how do they differ; I think, when it is ready, Makefile should be divided to
 Makefile and Makefile.common and package should be split to "firebird" and
 "firebird-super"
-
-Because of the comments I put in Makefile, pkglint screams out loud.
-Remember about silencing it when the comments are not needed.
 
 	-- dotz@irc.pl

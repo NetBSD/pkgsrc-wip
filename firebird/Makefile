@@ -1,26 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:12:09 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/23 22:01:53 mpasternak Exp $
 #
 
-# A few words about DISTFILE:
-#
-# DISTFILE included it *NOT* an official firebird.sf.net source code release.
-# 
-# As Firebird-1.5 sources are unavailable via direct download from SF.net (it
-# is only possible to do cvs checkout), FreeBSD's port maintainer -- Chris
-# Knight <chris(at)e-easy(dot)com(dot)au> -- created a downloadable .tar.bz2
-# file as a checkout of 1.5RC8 tag. I have contacted him; he will be trying to
-# put that DISTFILE on SF.net page . As FreeBSD Ports use the same sources, I
-# think we can trust them. FreeBSD package was commited to FreeBSD Ports
-# repository by developer netchild(at)freebsd(dot)org
-#
-# I think, that in near future either Chris will put the sources on SF.net, or
-# some trusted NetBSD developer will be able to do source checkout and put the
-# tarball somewhere on NetBSD site.
-
-DISTNAME=		firebird15-rc8
-PKGNAME=		${DISTNAME:S/-rc8/-1.5/}
+DISTNAME=		firebird-1.5.0.4290
+PKGNAME=		${DISTNAME:S/.4290//}
 CATEGORIES=		databases
-MASTER_SITES=		http://www.aims.net.au/chris/firebird/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=firebird}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		dotz@irc.pl
