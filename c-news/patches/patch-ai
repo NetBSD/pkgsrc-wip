@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1 2003/09/30 15:39:59 hfath Exp $
+
+--- inject/inews.orig	Thu Sep  8 21:35:42 1994
++++ inject/inews
+@@ -72,6 +72,9 @@
+ 		# instead of the poster (moderator), by leaving the From: line
+ 		# alone (under -h); easy to implement.
+ 		;;
++	-S)	# INN's "ignore the .signature" option for compatible use
++		# with mailpost
++		;;
+ 
+ 	-C)
+ 		cat <<eg >&2

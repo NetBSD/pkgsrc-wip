@@ -1,0 +1,3 @@
+# makefile substitutions file
+# how to include ../include/config.make
+INCLUDE		.include "../include/config.make"

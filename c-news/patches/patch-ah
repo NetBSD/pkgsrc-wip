@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 2003/09/30 15:39:59 hfath Exp $
+
+--- util/report.orig	Thu Sep 15 22:24:57 1994
++++ util/report
+@@ -65,6 +65,6 @@
+ 	else
+ 		cat $r
+ 	fi
+-) | mail $args		# some sites might want "/usr/lib/sendmail -t" instead
++) | /usr/sbin/sendmail -t
+ 
+ # and the trap handles the exit status

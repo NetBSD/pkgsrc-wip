@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1 2003/09/30 15:39:59 hfath Exp $
+
+--- util/dostatfs.c.orig	Fri Apr 28 02:51:39 1995
++++ util/dostatfs.c
+@@ -37,6 +37,11 @@
+ #define	UNIT	f_bsize
+ #endif
+ 
++#ifdef SOLARIS2
++#include <sys/statfs.h>
++#define	UNIT	f_fsize
++#endif
++
+ #ifdef _AIX
+ #include <sys/statfs.h>
+ #define	UNIT	f_fsize
