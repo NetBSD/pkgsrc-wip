@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/17 02:56:33 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/07 02:55:55 mpasternak Exp $
 #
 
 DISTNAME=		PyKyra-0.4.0
@@ -10,19 +10,18 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.alobbs.com/modules.php?op=modload&name=pykyra&file=index
 COMMENT=		Game development framework for Python
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PY_PATCHPLIST=		yes
-PYDISTUTILSPKG=		yes
 
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../audio/SDL_mixer/buildlink2.mk"
-.include "../../devel/smpeg/buildlink2.mk"
-.include "../../wip/kyra/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/smpeg/buildlink3.mk"
+.include "../../wip/kyra/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

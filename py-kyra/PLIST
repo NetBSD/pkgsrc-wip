@@ -1,1 +1,30 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/04 06:32:15 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/07 02:55:55 mpasternak Exp $
+${PYSITELIB}/PyKyra/FPS.py
+${PYSITELIB}/PyKyra/GlIsoMath.py
+${PYSITELIB}/PyKyra/KrCanvas.py
+${PYSITELIB}/PyKyra/KrCanvasResource.py
+${PYSITELIB}/PyKyra/KrColorTransform.py
+${PYSITELIB}/PyKyra/KrEngine.py
+${PYSITELIB}/PyKyra/KrEvents.py
+${PYSITELIB}/PyKyra/KrImNode.py
+${PYSITELIB}/PyKyra/KrImage.py
+${PYSITELIB}/PyKyra/KrImageFile.py
+${PYSITELIB}/PyKyra/KrImageTree.py
+${PYSITELIB}/PyKyra/KrKeys.py
+${PYSITELIB}/PyKyra/KrMPEGBox.py
+${PYSITELIB}/PyKyra/KrPandora.py
+${PYSITELIB}/PyKyra/KrRGBA.py
+${PYSITELIB}/PyKyra/KrRect.py
+${PYSITELIB}/PyKyra/KrResource.py
+${PYSITELIB}/PyKyra/KrResourceVault.py
+${PYSITELIB}/PyKyra/KrSound.py
+${PYSITELIB}/PyKyra/KrSprite.py
+${PYSITELIB}/PyKyra/KrSpriteTimed.py
+${PYSITELIB}/PyKyra/KrTextBox.py
+${PYSITELIB}/PyKyra/KrTile.py
+${PYSITELIB}/PyKyra/KrTileResource.py
+${PYSITELIB}/PyKyra/KrVideo.py
+${PYSITELIB}/PyKyra/SMPEG.py
+${PYSITELIB}/PyKyra/__init__.py
+${PYSITELIB}/PyKyra/_pyKyra.so
+@dirrm ${PYSITELIB}/PyKyra
