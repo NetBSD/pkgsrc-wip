@@ -1,0 +1,6 @@
+* jmmv: This package registers the file pTk/.extraflags (iirc) or something
+  similar in its dynamic PLIST, which conflicts with the p5-Tk package (a
+  dependancy).  This must be fixed, either by not installing that file or
+  managing it in a better way, which I don't know.  Note that it works fine
+  after installed, though.  Any perl packager should know the best way to
+  fix this ;)  (The package is required for xmltv, if you are interested).
