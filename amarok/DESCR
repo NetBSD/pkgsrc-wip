@@ -1,2 +1,24 @@
 
-Empty
+amaroK is the audio player for KDE
+
+Music Collection:
+  Database powered music store, which keeps track of your
+  complete music library, allowing you to find any title
+  in a matter of seconds.
+Intuitive User Interface:
+  User friendly interface. Simply  drag-and-drop files into
+  the playlist. No hassle with complicated buttons or tangled
+  menus.
+Streaming Radio:
+  amaroK provides excellent streaming support, with advanced
+  features, such as displaying titles of the currently playing
+  songs.
+Context Browser:
+  amaroK provides useful information on the music you are
+  currently listening to, and can make listening suggestions,
+  based on your personal music taste.
+Visualizations:
+  amaroK is compatible with XMMS visualization plugins.
+Multiple Audio Systems:
+  With amaroK, you can simply switch between different audio
+  systems at runtime, using a plugin based engine technology.
