@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2003/09/24 21:54:14 tvierling Exp $
-CVS_DATE=	Fri Aug 15 09:09:37 UTC 2003
+# $NetBSD: Makefile,v 1.3 2003/12/05 15:40:05 marc Exp $
+CVS_DATE=	Thu Nov 20 01:28:29 UTC 2003
 
 DISTNAME=	gdbada-5.3
 CATEGORIES=	devel
