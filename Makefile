@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.474 2003/09/18 01:26:43 minskim Exp $
-# $NetBSD: Makefile,v 1.474 2003/09/18 01:26:43 minskim Exp $
+# $Id: Makefile,v 1.475 2003/09/18 14:51:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.475 2003/09/18 14:51:56 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -289,8 +289,6 @@ SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-String-Approx
 SUBDIR+=	p5-Text-Reform
 SUBDIR+=	p5-Tk-TableMatrix
-SUBDIR+=	p5-Unicode-String
-SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-gtk2
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pdb2ldif
