@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.361 2003/08/05 22:23:44 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.361 2003/08/05 22:23:44 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.362 2003/08/06 14:40:20 adrian_p Exp $
+# $NetBSD: Makefile,v 1.362 2003/08/06 14:40:20 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -237,6 +237,7 @@ SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-IO-Tee
 SUBDIR+=	p5-Net-Gnats
 SUBDIR+=	p5-Net-Jabber
+SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
