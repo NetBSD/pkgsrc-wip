@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/07 01:57:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/08 18:43:37 blef Exp $
 #
 
 DISTNAME=	mod_bunzip2
@@ -12,7 +12,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.oldach.net/
 COMMENT=	Apache module for server-side decompression of bzip2 files
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 APACHE_MODULE_NAME=     ${DISTNAME:C|-.*||}.so
 APACHE_MODULE_SRC=      ${DISTNAME:C|-.*||}.c
@@ -23,6 +23,6 @@ pre-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 
-.include "../../archivers/bzip2/buildlink2.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../www/apache/module.mk"
 .include "../../mk/bsd.pkg.mk"

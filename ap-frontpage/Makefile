@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/26 18:09:54 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/08 18:45:12 blef Exp $
 # FreeBSD Id: ports/www/mod_frontpage/Makefile,v 1.12 2002/05/23 22:38:29 mbr Exp
 
 DISTNAME=	mod_frontpage_mirfak-${M_FPVERSION}
@@ -15,7 +15,7 @@ COMMENT=	Improved mod_frontpage for Apache
 
 M_FPVERSION=	1.6.2
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 # APACHE_MODULE_NAME=	mod_frontpage.so
 
 # RUN_DEPENDS=	${FPSETPERM}:../../www/frontpage
@@ -44,5 +44,5 @@ BUILD_DEFS+=	APACHE_USER APACHE_GROUP APACHE_SUEXEC_DOCROOT
 BUILD_DEFS+=	FP_UID_MIN FP_GID_MIN FPOWN FPGRP
 
 .include "../../lang/perl5/module.mk"
-.include "../../www/apache/buildlink2.mk"
+.include "../../www/apache/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/22 03:42:05 jcd Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/08 18:46:06 blef Exp $
 
 DISTNAME=	mod_macro-1.1.2
 PKGNAME=        ${DISTNAME:S/mod_/ap-/}
@@ -11,7 +11,7 @@ COMMENT=        Apache module for using macros in config files
 
 CONFLICTS=      ap2-macro-[0-9]*
 
-USE_BUILDLINK2=         yes
+USE_BUILDLINK3=         yes
 
 APACHE_MODULE_NAME=     ${DISTNAME:C|-.*||}.so
 APACHE_MODULE_SRC=      ${DISTNAME:C|-.*||}.c
