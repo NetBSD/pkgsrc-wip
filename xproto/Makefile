@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/31 17:45:41 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/31 17:56:11 minskim Exp $
 #
 
 DISTNAME=		xproto-6.6.1
@@ -12,7 +12,9 @@ COMMENT=		X protocol and ancillary headers
 
 CONFLICTS+=		XFree86-libs-[0-9]*
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xproto.pc.in
 GNU_CONFIGURE=		yes
 
