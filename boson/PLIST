@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/12 17:51:06 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/10/12 17:59:44 xtraeme Exp $
 bin/bocursor
 bin/bodebugdialog
 bin/boinfo
@@ -1118,7 +1118,6 @@ share/kde/icons/locolor/32x32/apps/boson.png
 @dirrm share/kde/apps/boson/maps
 @dirrm share/kde/apps/boson
 @dirrm share/kde/applnk/Games/TacticStrategy/boson
-@dirrm share/kde/applnk/Games/TacticStrategy
 @dirrm share/doc/kde/HTML/en/boson/units
 @dirrm share/doc/kde/HTML/en/boson/game
 @dirrm share/doc/kde/HTML/en/boson/facilities
