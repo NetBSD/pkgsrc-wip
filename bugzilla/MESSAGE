@@ -1,21 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2004/11/04 00:02:10 adrian_p Exp $
+$NetBSD: MESSAGE,v 1.6 2004/11/04 00:07:57 adrian_p Exp $
 
 To complete the setup you will need to:
 
-	cd ${PREFIX}/share/bugzilla/
+	cd ${BZDIR}
 	./checksetup.pl
 
 You will need to make Bugzilla accessible through your HTTP server.
-If you are running Apache then you may either symlink
-       
-	${BZDIR}
-
-into DocumentRoot, or copy
-
-	${EGDIR}/bugzilla.conf
-
-to ${PKG_SYSCONFDIR}/httpd and add the following lines to httpd.conf:
+If you are running Apache then you may add the following lines to httpd.conf:
 
 	DirectoryIndex index.cgi index.html			
 	Include ${PKG_SYSCONFDIR}/httpd/bugzilla.conf
