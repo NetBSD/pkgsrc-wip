@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/17 18:13:38 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/24 18:55:31 johnrshannon Exp $
 #
 
 PKGNAME=		gcc3${GCC3_PKGMODIF}-c++-${GCC_VERSION}-devel
@@ -8,6 +8,7 @@ COMMENT=		GNU Compiler Collection, version 3-${SNAPDATE}, c++ compiler
 
 CONFIGURE_ARGS+=	--enable-languages="c++"
 CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--enable-threads=posix
 
 post-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} configure-host)
