@@ -1,4 +1,8 @@
-xinetd is a secure replacement for inetd with new features:
+xinetd is a powerful replacement for inetd (with a different configuration
+format). xinetd listens for network connections and transfers to the
+appropriate software.
+
+Some features of xinetd are:
  * access control
  * DoS prevention
  * extensive logging abilities
