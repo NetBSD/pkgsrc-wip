@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/11 09:20:47 shattered Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/11 21:04:48 shattered Exp $
 sbin/biosdecode
 sbin/dmidecode
 sbin/ownership
+sbin/vpddecode
