@@ -1,0 +1,31 @@
+look at
+https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=89145
+http://qa.mandrakesoft.com/show_bug.cgi?id=3781
+
+use configurations under $PREFIX --sysconfdir
+
+maybe install from doc, etc examples
+
+use this buildlink2 for util-linux
+
+pkg_create: Overwriting /usr/bin/groups - pkg sh-utils-2.0nb2 bogus/conflicting?
+pkg_create: Overwriting /usr/man/man1/su.1 - pkg sh-utils-2.0nb2 bogus/conflicti
+ng? 
+<unset_progname>: Overwriting /usr/man/man1/passwd.1 - pkg openssl-0.9.6g bogus/
+conflicting?
+shadow has conflicts with sysutils/user too?
+
+gentoo says
+        # Do not install this login, but rather the one from
+        # pam-login, as this one have a serious root exploit
+        # with pam_limits in use.
+
+INSTALL uses -o ${BINOWN} -g ${BINGRP}
+so setuid root tools don't work!
+suidbins = su
+suidubins = chage chfn chsh expiry gpasswd newgrp passwd
+later consider having dedicated users and/or groups for this
+
+login.defs needed for su and sshd (and others)
+so provide that file
+but the manpage says: no longer used by programs ... handled by PAM now

@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/04 00:20:47 jeremy-c-reed Exp $
+
+--- configure.orig	2002-12-20 15:43:17.000000000 -0800
++++ configure	2002-12-20 15:44:34.000000000 -0800
+@@ -1466,7 +1466,8 @@
+ 		    		    		    ac_config_headers="$ac_config_headers config.h"
+ 
+ test "$prefix" = "NONE" && prefix="/usr"
+-test "$prefix" = "/usr" && exec_prefix=""
++# commented out following so it wouldn't write outside of prefix if /usr
++#test "$prefix" = "/usr" && exec_prefix=""
+ test "$CFLAGS" = "" && CFLAGS="-O2 -Wall"
+ test "$LDFLAGS" = "" && LDFLAGS="-s"
+ 

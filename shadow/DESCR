@@ -1,0 +1,10 @@
+This is the Shadow Password Suite for Linux.  This is the version
+maintained by Tomasz Kloczko.
+
+The Shadow password file utilities package includes the programs necessary
+to convert traditional V7 UNIX password files to the SVR4 shadow password
+format, and additional tools to maintain password and group files (that
+work with both shadow and non-shadow passwords).
+
+These tools include su, vipw, passwd, login, chsh, usermod and many more.
+In addition, this provides the libmisc and libshadow libraries.
