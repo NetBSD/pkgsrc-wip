@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/09/15 04:59:04 cubidou Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/10/07 22:12:41 cubidou Exp $
 
 DISTNAME=	${GKRELLM_DISTBASE}
 PKGNAME=	${GKRELLM_PKGBASE}-${GKRELLM_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://web.wt.net/~billw/gkrellm/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	cube@cubidou.net
+MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://gkrellm.net/
 
 USE_GMAKE=		YES
@@ -14,14 +14,14 @@ USE_PKGLOCALEDIR=	YES
 
 MAKE_ENV+=		LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
-GKRELLM_VERSION=	2.1.19
+GKRELLM_VERSION=	2.1.20
 GKRELLM_DISTBASE=	gkrellm-${GKRELLM_VERSION}
 GKRELLM_SRCDIR=		${WRKDIR}/${GKRELLM_DISTBASE}
 
-FILESDIR=		${PKGDIR}/../gkrellm2/files
-PATCHDIR=		${PKGDIR}/../gkrellm2/patches
-DISTINFO_FILE=		${PKGDIR}/../gkrellm2/distinfo
-DESCR_SRC=		${PKGDIR}/../gkrellm2/DESCR
+FILESDIR=		${.CURDIR}/../gkrellm2/files
+PATCHDIR=		${.CURDIR}/../gkrellm2/patches
+DISTINFO_FILE=		${.CURDIR}/../gkrellm2/distinfo
+DESCR_SRC=		${.CURDIR}/../gkrellm2/DESCR
 
 post-extract:
 	${CP} ${FILESDIR}/top.Makefile ${WRKSRC}/Makefile
