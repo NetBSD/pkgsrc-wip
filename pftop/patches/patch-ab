@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/06/08 12:40:26 ppostma Exp $
+
+--- pftop.c.orig	2003-08-05 03:20:39.000000000 +0200
++++ pftop.c	2004-06-07 14:55:48.000000000 +0200
+@@ -31,6 +31,11 @@
+  */
+ #include "config.h"
+ 
++#ifdef __NetBSD__
++#include <sys/param.h>
++#include <sys/syslimits.h>
++#endif
++
+ #include <sys/types.h>
+ #include <sys/ioctl.h>
+ #include <sys/socket.h>
+@@ -506,7 +511,6 @@
+ 
+ int
+ tbprintf(char *format, ...)
+-	GCC_PRINTFLIKE(1,2)       /* defined in curses.h */
+ {
+ 	int len;
+ 	va_list arg;
