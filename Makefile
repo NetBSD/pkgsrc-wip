@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1545 2004/11/19 20:38:06 larnor Exp $
-# $NetBSD: Makefile,v 1.1545 2004/11/19 20:38:06 larnor Exp $
+# $Id: Makefile,v 1.1546 2004/11/20 04:13:40 minskim Exp $
+# $NetBSD: Makefile,v 1.1546 2004/11/20 04:13:40 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -498,7 +498,6 @@ SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTTP-GHTTP
-SUBDIR+=	p5-IO-LockedFile
 SUBDIR+=	p5-IO-Multiplex
 SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Log-LogLite
