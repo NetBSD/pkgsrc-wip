@@ -1,13 +1,14 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/03/26 20:40:42 cubidou Exp $
+$NetBSD: patch-ac,v 1.2 2003/05/03 11:36:46 cubidou Exp $
 
---- src/Makefile.in.orig	2003-03-18 09:38:39.000000000 +0100
+--- src/Makefile.in.orig	2003-02-06 22:48:36.000000000 +0100
 +++ src/Makefile.in
-@@ -14,7 +14,7 @@ LIBTOOL=libtool
- 
- CDFLAGS=@CFLAGS@ 
+@@ -16,6 +16,9 @@ CDFLAGS=@CFLAGS@ 
  LDFLAGS=@LDFLAGS@
--LIBS=@LIBS@
-+LIBS=@LIBS@ -li386
+ LIBS=@LIBS@
  DEFS=@DEFS@
++ifeq ($(shell uname),NetBSD)
++LIBS+= -li386
++endif
  
  X_CFLAGS=@X_CFLAGS@
+ X_LIBS=@X_LIBS@
