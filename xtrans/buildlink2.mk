@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/11/27 00:08:59 jeremy-c-reed Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/11/27 01:42:10 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use xtrans.
 #
@@ -14,8 +14,7 @@ BUILDLINK_PKGSRCDIR.xtrans?=		../../wip/xtrans
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xtrans=xtrans
 BUILDLINK_PREFIX.xtrans_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.xtrans+=	include/X11/Xtrans/*.h
-BUILDLINK_FILES.xtrans+=	include/X11/Xtrans/transport.c
+BUILDLINK_FILES.xtrans+=	include/X11/Xtrans/*
 
 BUILDLINK_TARGETS+=	xtrans-buildlink
 
