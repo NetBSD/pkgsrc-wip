@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/26 20:40:41 cubidou Exp $
+
+SHA1 (nvtv-0.4.4.tar.gz) = 9d5ac8fbcbb5b4fa48b18e04c47d6a9af6f015d0
+Size (nvtv-0.4.4.tar.gz) = 763349 bytes
+SHA1 (patch-aa) = 7c01ac6264215bd0d8e7bf91af94fb2398a6abdd
+SHA1 (patch-ab) = 64018321a37b746c56886a1262fca4b2768c832e
+SHA1 (patch-ac) = 593d32a01dd76462248d64d153becb82488a1a43
+SHA1 (patch-ad) = 070a477e3aa873ca08cf71d515c529e878210733
+SHA1 (patch-ae) = 9a79ed5920a006ba98db1e8bac312fcb1136c3ff

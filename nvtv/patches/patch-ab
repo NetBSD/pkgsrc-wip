@@ -1,0 +1,146 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/26 20:40:42 cubidou Exp $
+
+--- configure.orig	2003-03-14 10:41:55.000000000 +0100
++++ configure
+@@ -4400,7 +4400,7 @@ _ACEOF
+ 
+   SRCS_EXTRA="$SRCS_EXTRA actions.c"
+   if test ${have_gtk} != no ; then
+-    have_gtk_version=`expr substr ${have_gtk} 4 1`
++    have_gtk_version=`expr ${have_gtk} : '^gtk\([12]\)'`
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_GTK 1
+@@ -4607,13 +4607,13 @@ fi
+ 
+ 
+ if test ${host_flag} = unix ; then
+-  echo "$as_me:$LINENO: checking for pci_init in -lpci" >&5
+-echo $ECHO_N "checking for pci_init in -lpci... $ECHO_C" >&6
++  echo "$as_me:$LINENO: checking for pci_init in -lpciutils" >&5
++echo $ECHO_N "checking for pci_init in -lpciutils... $ECHO_C" >&6
+ if test "${ac_cv_lib_pci_pci_init+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpci  $LIBS"
++LIBS="-lpciutils -lpci  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -4662,7 +4662,7 @@ fi
+ echo "$as_me:$LINENO: result: $ac_cv_lib_pci_pci_init" >&5
+ echo "${ECHO_T}$ac_cv_lib_pci_pci_init" >&6
+ if test $ac_cv_lib_pci_pci_init = yes; then
+-  LIBS="$LIBS -lpci"
++  LIBS="$LIBS -lpciutils -lpci"
+ else
+   { { echo "$as_me:$LINENO: error: pci library required" >&5
+ echo "$as_me: error: pci library required" >&2;}
+@@ -5044,8 +5044,8 @@ done
+ 
+ 
+ if test "${ac_cv_header_pci_pci_h+set}" = set; then
+-  echo "$as_me:$LINENO: checking for pci/pci.h" >&5
+-echo $ECHO_N "checking for pci/pci.h... $ECHO_C" >&6
++  echo "$as_me:$LINENO: checking for pciutils/pci.h" >&5
++echo $ECHO_N "checking for pciutils/pci.h... $ECHO_C" >&6
+ if test "${ac_cv_header_pci_pci_h+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ fi
+@@ -5053,8 +5053,8 @@ echo "$as_me:$LINENO: result: $ac_cv_hea
+ echo "${ECHO_T}$ac_cv_header_pci_pci_h" >&6
+ else
+   # Is the header compilable?
+-echo "$as_me:$LINENO: checking pci/pci.h usability" >&5
+-echo $ECHO_N "checking pci/pci.h usability... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking pciutils/pci.h usability" >&5
++echo $ECHO_N "checking pciutils/pci.h usability... $ECHO_C" >&6
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -5063,7 +5063,7 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ $ac_includes_default
+-#include <pci/pci.h>
++#include <pciutils/pci.h>
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+@@ -5089,8 +5089,8 @@ echo "$as_me:$LINENO: result: $ac_header
+ echo "${ECHO_T}$ac_header_compiler" >&6
+ 
+ # Is the header present?
+-echo "$as_me:$LINENO: checking pci/pci.h presence" >&5
+-echo $ECHO_N "checking pci/pci.h presence... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking pciutils/pci.h presence" >&5
++echo $ECHO_N "checking pciutils/pci.h presence... $ECHO_C" >&6
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -5098,7 +5098,7 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-#include <pci/pci.h>
++#include <pciutils/pci.h>
+ _ACEOF
+ if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
+   (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
+@@ -5131,10 +5131,10 @@ echo "${ECHO_T}$ac_header_preproc" >&6
+ # So?  What about this header?
+ case $ac_header_compiler:$ac_header_preproc in
+   yes:no )
+-    { echo "$as_me:$LINENO: WARNING: pci/pci.h: accepted by the compiler, rejected by the preprocessor!" >&5
+-echo "$as_me: WARNING: pci/pci.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: pci/pci.h: proceeding with the preprocessor's result" >&5
+-echo "$as_me: WARNING: pci/pci.h: proceeding with the preprocessor's result" >&2;}
++    { echo "$as_me:$LINENO: WARNING: pciutils/pci.h: accepted by the compiler, rejected by the preprocessor!" >&5
++echo "$as_me: WARNING: pciutils/pci.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
++    { echo "$as_me:$LINENO: WARNING: pciutils/pci.h: proceeding with the preprocessor's result" >&5
++echo "$as_me: WARNING: pciutils/pci.h: proceeding with the preprocessor's result" >&2;}
+     (
+       cat <<\_ASBOX
+ ## ------------------------------------ ##
+@@ -5145,12 +5145,12 @@ _ASBOX
+       sed "s/^/$as_me: WARNING:     /" >&2
+     ;;
+   no:yes )
+-    { echo "$as_me:$LINENO: WARNING: pci/pci.h: present but cannot be compiled" >&5
+-echo "$as_me: WARNING: pci/pci.h: present but cannot be compiled" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: pci/pci.h: check for missing prerequisite headers?" >&5
+-echo "$as_me: WARNING: pci/pci.h: check for missing prerequisite headers?" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: pci/pci.h: proceeding with the preprocessor's result" >&5
+-echo "$as_me: WARNING: pci/pci.h: proceeding with the preprocessor's result" >&2;}
++    { echo "$as_me:$LINENO: WARNING: pciutils/pci.h: present but cannot be compiled" >&5
++echo "$as_me: WARNING: pciutils/pci.h: present but cannot be compiled" >&2;}
++    { echo "$as_me:$LINENO: WARNING: pciutils/pci.h: check for missing prerequisite headers?" >&5
++echo "$as_me: WARNING: pciutils/pci.h: check for missing prerequisite headers?" >&2;}
++    { echo "$as_me:$LINENO: WARNING: pciutils/pci.h: proceeding with the preprocessor's result" >&5
++echo "$as_me: WARNING: pciutils/pci.h: proceeding with the preprocessor's result" >&2;}
+     (
+       cat <<\_ASBOX
+ ## ------------------------------------ ##
+@@ -5161,8 +5161,8 @@ _ASBOX
+       sed "s/^/$as_me: WARNING:     /" >&2
+     ;;
+ esac
+-echo "$as_me:$LINENO: checking for pci/pci.h" >&5
+-echo $ECHO_N "checking for pci/pci.h... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for pciutils/pci.h" >&5
++echo $ECHO_N "checking for pciutils/pci.h... $ECHO_C" >&6
+ if test "${ac_cv_header_pci_pci_h+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+@@ -5175,8 +5175,8 @@ fi
+ if test $ac_cv_header_pci_pci_h = yes; then
+   :
+ else
+-  { { echo "$as_me:$LINENO: error: pci library header 'pci/pci.h' required" >&5
+-echo "$as_me: error: pci library header 'pci/pci.h' required" >&2;}
++  { { echo "$as_me:$LINENO: error: pci library header 'pciutils/pci.h' required" >&5
++echo "$as_me: error: pci library header 'pciutils/pci.h' required" >&2;}
+    { (exit 1); exit 1; }; }
+ fi
+ 
