@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/11/26 23:57:48 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.4 2004/01/25 22:40:37 minskim Exp $
 
-SHA1 (xproto-6.6.tar.bz2) = c0cae86fe88298343bc78273259e0fa84956876f
-Size (xproto-6.6.tar.bz2) = 83139 bytes
+SHA1 (xproto-6.6.1.tar.bz2) = 128586118f320a7d53f28e6fd3a4357cbf07e7d6
+Size (xproto-6.6.1.tar.bz2) = 84788 bytes

@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2003/11/26 23:58:59 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/25 22:40:25 minskim Exp $
 #
 
-DISTNAME=		xproto-6.6
+DISTNAME=		xproto-6.6.1
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://freedesktop.org/~xlibs/dist/
+MASTER_SITES=		http://freedesktop.org/~xlibs/release/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://www.freedesktop.org/Software/xlibs
-COMMENT=		X protocol and ancilary headers
+HOMEPAGE=		http://xlibs.freedesktop.org/
+COMMENT=		X protocol and ancillary headers
 
 CONFLICTS+=		XFree86-libs-[0-9]*
 
 USE_BUILDLINK2=		yes
-USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xproto.pc.in
 GNU_CONFIGURE=		yes
 
