@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/16 00:21:40 lsed Exp $
-bin/windowlab
-man/man1/windowlab.1
-share/examples/windowlab/menurc.default
-@dirrm share/examples/windowlab
