@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/12/04 18:15:40 jeremy-c-reed Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/04 21:07:16 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use e2fsprogs.
 #
@@ -20,6 +20,7 @@ BUILDLINK_FILES.e2fsprogs+=	include/et/com_err.h
 BUILDLINK_FILES.e2fsprogs+=	include/ext2fs/*.h
 BUILDLINK_FILES.e2fsprogs+=	include/ss/*.h
 BUILDLINK_FILES.e2fsprogs+=	include/uuid/*.h
+.include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Linux"
 BUILDLINK_FILES.e2fsprogs+=	lib/evms/libe2fsim.1.2.1.*
 .endif
