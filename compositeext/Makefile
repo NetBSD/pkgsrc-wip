@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/27 01:25:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 20:07:33 cjep Exp $
 #
 
 DISTNAME=		compositeext-2.0
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://freedesktop.org/
-COMMENT=		Header and documentation files for Composite extension		
+COMMENT=		Header and documentation files for Composite extension
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/11/27 01:20:07 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/30 20:07:34 cjep Exp $
 #
 # This Makefile fragment is included by packages that use fixesext.
 #
@@ -16,7 +16,6 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.fixesext=fixesext
 BUILDLINK_PREFIX.fixesext_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.fixesext+=	include/X11/extensions/xfixesproto.h
 BUILDLINK_FILES.fixesext+=	include/X11/extensions/xfixeswire.h
-
 
 BUILDLINK_TARGETS+=	fixesext-buildlink
 
