@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1707 2005/03/28 14:48:16 lexort Exp $
-# $NetBSD: Makefile,v 1.1707 2005/03/28 14:48:16 lexort Exp $
+# $Id: Makefile,v 1.1708 2005/03/29 00:12:49 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.1708 2005/03/29 00:12:49 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -194,7 +194,6 @@ SUBDIR+=	editline
 SUBDIR+=	edje
 SUBDIR+=	eic
 SUBDIR+=	electricsheep
-SUBDIR+=	emacs-carbon
 SUBDIR+=	emboss
 SUBDIR+=	emboss-base
 SUBDIR+=	emboss-domainatrix
