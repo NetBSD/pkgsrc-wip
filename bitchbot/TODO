@@ -1,13 +1,3 @@
-$NetBSD: TODO,v 1.1.1.1 2003/10/14 20:16:32 adrian_p Exp $
+$NetBSD: TODO,v 1.2 2003/12/05 12:13:08 adrian_p Exp $
 
-This is kind of netcat on steriods.  You can use it with the iisemulator
-package or various other things :)
-
-The iisemulator package will be in pkgsrc/wip if you want to use it to test 
-with this package.
-
-Tested on NetBSD 1.6 i386.
-
-Regards,
-
-Adrian.
+Ready for pkgsrc.
