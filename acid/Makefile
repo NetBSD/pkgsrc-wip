@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/08 11:46:21 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/08 12:07:56 adrian_p Exp $
 #
 
 DISTNAME=	acid-0.9.6b23
@@ -14,11 +14,24 @@ DEPENDS+=       php>=4.0.4:../../www/php4
 DEPENDS+=	apache>=1.3:../../www/apache
 DEPENDS+=	adodb>=1.2:../../wip/adodb
 DEPENDS+=	php-jpgraph>=1.8:../../wip/php-jpgraph
-DEPENDS+=	php-mysql>=4.0.4:../../databases/php4-mysql
 DEPENDS+=	php-gd>=4.0.4:../../graphics/php4-gd
 DEPENDS+=	php-sockets>=4.0.4:../../net/php4-sockets
 
 USE_BUILDLINK2=	YES
+
+.include "../../mk/bsd.prefs.mk"
+
+# This package will default to using mySQL.  If you want to use
+# postgresql set USE_PGSQL=YES in /etc/mk.conf or pass it to
+# make. ie. make install USE_PGSQL=YES
+#
+.if defined(USE_PGSQL) && ${USE_PGSQL} == YES
+DEPENDS+=	php-pgsql>=4.0.4:../../databases/php4-pgsql
+DBTYPE=		postgres
+.else
+DEPENDS+=	php-mysql>=4.0.4:../../databases/php4-mysql
+DBTYPE=		mysql
+.endif
 
 DOC_FILES=	CHANGELOG CREDITS README README.mssql TODO
 ACID_DIR=	${PREFIX}/share/acid
@@ -31,8 +44,9 @@ do-build:
 
 	@${CP} ${WRKSRC}/acid_conf.php ${WRKSRC}/acid_conf.php.orig
 
-	@${SED} -e 's#@PREFIX@#${PREFIX}#g' ${WRKSRC}/acid_conf.php.orig \
-		>${WRKSRC}/acid_conf.php
+	@${SED} -e 's#@PREFIX@#${PREFIX}#g' \
+			-e 's#@DBTYPE@#${DBTYPE}#g' \
+			${WRKSRC}/acid_conf.php.orig >${WRKSRC}/acid_conf.php
 
 do-install:
 	${INSTALL_DATA_DIR} ${ACID_DIR}
