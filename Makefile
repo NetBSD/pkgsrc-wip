@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.222 2003/06/04 16:42:12 xtraeme Exp $
-# $NetBSD: Makefile,v 1.222 2003/06/04 16:42:12 xtraeme Exp $
+# $Id: Makefile,v 1.223 2003/06/05 05:48:17 mjasm Exp $
+# $NetBSD: Makefile,v 1.223 2003/06/05 05:48:17 mjasm Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -207,5 +207,7 @@ SUBDIR+=	xml2doc
 SUBDIR+=	xplore
 SUBDIR+=	yafray
 SUBDIR+=	zebra-pj
+SUBDIR+=	cdpr
+SUBDIR+=	galib
 
 .include "../mk/bsd.pkg.subdir.mk"
