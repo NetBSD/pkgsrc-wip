@@ -1,23 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/30 18:15:11 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/25 16:21:56 jmmv Exp $
 bin/MonitorWharf
 bin/Pager
 bin/Wharf
 bin/WinList
+bin/WinTabs
+bin/afterimage-config
 bin/afterimage-libs
 bin/afterstep
 bin/afterstepdoc
 bin/ascolor
 bin/ascommand.pl
-bin/ascompose
-bin/asflip
-bin/asgrad
-bin/asi18n
-bin/asmerge
-bin/asscale
-bin/astext
-bin/astile
-bin/asvector
-bin/asview
+bin/asimbrowser
 bin/importasmenu
 bin/installastheme.pl
 bin/makeastheme.pl
@@ -176,11 +169,19 @@ share/afterstep/desktop/bars/red
 share/afterstep/desktop/bars/south
 share/afterstep/desktop/bars/southeast
 share/afterstep/desktop/bars/southwest
+share/afterstep/desktop/bars/title_lbtn_qnx
 share/afterstep/desktop/bars/title_lspacer_glass
 share/afterstep/desktop/bars/title_rspacer_glass
 share/afterstep/desktop/bars/title_tile_glass_focused
+share/afterstep/desktop/bars/title_tile_glass_menu
+share/afterstep/desktop/bars/title_tile_glass_menu_focused
+share/afterstep/desktop/bars/title_tile_glass_mi
+share/afterstep/desktop/bars/title_tile_glass_mi_high
 share/afterstep/desktop/bars/title_tile_glass_sticky
 share/afterstep/desktop/bars/title_tile_glass_unfocused
+share/afterstep/desktop/bars/title_tile_qnx_focused
+share/afterstep/desktop/bars/title_tile_qnx_sticky
+share/afterstep/desktop/bars/title_tile_qnx_unfocused
 share/afterstep/desktop/bars/west
 share/afterstep/desktop/buttons/1.xpm
 share/afterstep/desktop/buttons/1p.xpm
@@ -224,14 +225,26 @@ share/afterstep/desktop/buttons/as1.5-shade-p.xpm
 share/afterstep/desktop/buttons/as1.5-shade.xpm
 share/afterstep/desktop/buttons/default-iconize-dark
 share/afterstep/desktop/buttons/default-iconize-dark-pressed
+share/afterstep/desktop/buttons/default-iconize-light
+share/afterstep/desktop/buttons/default-iconize-light-pressed
 share/afterstep/desktop/buttons/default-kill-dark
 share/afterstep/desktop/buttons/default-kill-dark-pressed
+share/afterstep/desktop/buttons/default-kill-light
+share/afterstep/desktop/buttons/default-kill-light-pressed
+share/afterstep/desktop/buttons/default-menu-dark
+share/afterstep/desktop/buttons/default-menu-dark-pressed
 share/afterstep/desktop/buttons/default-menu-light
 share/afterstep/desktop/buttons/default-menu-light-pressed
+share/afterstep/desktop/buttons/default-pin-dark
+share/afterstep/desktop/buttons/default-pin-dark-pressed
 share/afterstep/desktop/buttons/default-pin-light
 share/afterstep/desktop/buttons/default-pin-light-pressed
 share/afterstep/desktop/buttons/default-shade-dark
 share/afterstep/desktop/buttons/default-shade-dark-pressed
+share/afterstep/desktop/buttons/default-shade-light
+share/afterstep/desktop/buttons/default-shade-light-pressed
+share/afterstep/desktop/buttons/default-switchwindow-dark
+share/afterstep/desktop/buttons/default-switchwindow-dark-pressed
 share/afterstep/desktop/buttons/default-switchwindow-light
 share/afterstep/desktop/buttons/default-switchwindow-light-pressed
 share/afterstep/desktop/buttons/fuf-iconify-pressed.xpm
@@ -258,6 +271,18 @@ share/afterstep/desktop/buttons/glass-shade
 share/afterstep/desktop/buttons/glass-shade-pressed
 share/afterstep/desktop/buttons/glass-switchwindow
 share/afterstep/desktop/buttons/glass-switchwindow-pressed
+share/afterstep/desktop/buttons/qnx-close
+share/afterstep/desktop/buttons/qnx-close-pressed
+share/afterstep/desktop/buttons/qnx-iconify
+share/afterstep/desktop/buttons/qnx-iconify-pressed
+share/afterstep/desktop/buttons/qnx-menu
+share/afterstep/desktop/buttons/qnx-menu-pressed
+share/afterstep/desktop/buttons/qnx-pin
+share/afterstep/desktop/buttons/qnx-pin-pressed
+share/afterstep/desktop/buttons/qnx-shade
+share/afterstep/desktop/buttons/qnx-shade-pressed
+share/afterstep/desktop/buttons/qnx-switchwindow
+share/afterstep/desktop/buttons/qnx-switchwindow-pressed
 share/afterstep/desktop/cursors/cursor.xbm
 share/afterstep/desktop/cursors/cursor.xbm.mask
 share/afterstep/desktop/cursors/iconify.xbm
@@ -494,7 +519,6 @@ share/afterstep/desktop/sounds/meepmeep.au
 share/afterstep/desktop/sounds/ploop.au
 share/afterstep/desktop/sounds/train.au
 share/afterstep/desktop/sounds/twang.au
-share/afterstep/desktop/tiles/AfterStep
 share/afterstep/desktop/tiles/Blue
 share/afterstep/desktop/tiles/BlurtsMichelson
 share/afterstep/desktop/tiles/BlurtsMichelson.mini
@@ -540,9 +564,12 @@ share/afterstep/doc/afterstep-7.html
 share/afterstep/doc/afterstep-8.html
 share/afterstep/doc/afterstep-9.html
 share/afterstep/doc/afterstep.html
+share/afterstep/doc/as20new.html
+share/afterstep/doc/asxmlimages.html
 share/afterstep/feels/feel.DEFAULT
 share/afterstep/looks/look.DEFAULT
 share/afterstep/looks/look.Glass
+share/afterstep/looks/look.QNX
 share/afterstep/looks/look.Transparent
 share/afterstep/non-configurable/0_background
 share/afterstep/non-configurable/0_colorscheme
@@ -801,29 +828,6 @@ share/afterstep/themes/DEFAULT.tar.gz
 share/afterstep/themes/Default
 share/afterstep/wharf
 share/afterstep/winlist
-share/libAfterImage/doc/html/afterimage.html
-share/libAfterImage/doc/html/ascmap.html
-share/libAfterImage/doc/html/ascompose.html
-share/libAfterImage/doc/html/asflip.html
-share/libAfterImage/doc/html/asfont.html
-share/libAfterImage/doc/html/asgrad.html
-share/libAfterImage/doc/html/asimage.html
-share/libAfterImage/doc/html/asimagexml.html
-share/libAfterImage/doc/html/asmerge.html
-share/libAfterImage/doc/html/asscale.html
-share/libAfterImage/doc/html/astext.html
-share/libAfterImage/doc/html/astile.html
-share/libAfterImage/doc/html/asview.html
-share/libAfterImage/doc/html/asvisual.html
-share/libAfterImage/doc/html/blender.html
-share/libAfterImage/doc/html/common.html
-share/libAfterImage/doc/html/export.html
-share/libAfterImage/doc/html/import.html
-share/libAfterImage/doc/html/transform.html
-share/libAfterImage/doc/html/ximage.html
-@dirrm share/libAfterImage/doc/html
-@dirrm share/libAfterImage/doc
-@dirrm share/libAfterImage
 @dirrm share/afterstep/themes
 @dirrm share/afterstep/start/7_About_AfterStep
 @dirrm share/afterstep/start/5_Quit

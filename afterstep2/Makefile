@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/30 18:15:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/25 16:21:56 jmmv Exp $
 #
 
-DISTNAME=	AfterStep-2.00.beta1
+DISTNAME=	AfterStep-2.00.beta3
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/:S/.beta/beta/}
 CATEGORIES=	wm
 MASTER_SITES=	ftp://ftp.afterstep.org/devel/
