@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.63 2003/04/11 20:06:39 icmp Exp $
-# $NetBSD: Makefile,v 1.63 2003/04/11 20:06:39 icmp Exp $
+# $Id: Makefile,v 1.64 2003/04/12 19:09:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.64 2003/04/12 19:09:13 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -26,6 +26,7 @@ SUBDIR+=	gtkglarea2
 SUBDIR+=	gtranslator
 SUBDIR+=	honeyd-arpd
 SUBDIR+=	httrack
+SUBDIR+=	ices
 SUBDIR+=	ickle
 SUBDIR+=	ike-scan
 SUBDIR+=	ion-devel
@@ -58,7 +59,7 @@ SUBDIR+=	py-csv
 SUBDIR+=	py-gnome2
 SUBDIR+=	py-gtk2
 SUBDIR+=	py-spreadmodule
+SUBDIR+=	shoutcast
 SUBDIR+=	tex-foiltex
 SUBDIR+=	vim-gtk2
-SUBDIR+=	ices
-SUBDIR+=	shoutcast
+SUBDIR+=	xawtv
