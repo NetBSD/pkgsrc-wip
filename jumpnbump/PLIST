@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/31 18:13:49 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/31 18:34:53 airhead Exp $
 bin/gobpack
-bin/jnbmenu.tcl
 bin/jnbpack
 bin/jnbunpack
 bin/jumpnbump
-bin/jumpnbump.fbcon
-bin/jumpnbump.svgalib
 man/man6/jumpnbump.6
 share/jumpnbump/jumpbump.dat
 @dirrm share/jumpnbump
