@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/10/07 18:30:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2003/10/07 18:32:19 xtraeme Exp $
 
 DISTNAME=	gnome2-extras-2.2.3
 CATEGORIES=	meta-pkgs x11 gnome2
@@ -23,9 +23,6 @@ DEPENDS+=	xchat>=2.0.1:../../chat/xchat2
 DEPENDS+=	gossip>=0.5:../../chat/gossip
 DEPENDS+=	apotheke>=0.2:../../wip/apotheke
 
-USE_X11=	yes
-USE_BUILDLINK2=	yes
-EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
