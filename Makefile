@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1302 2004/05/30 13:37:18 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1302 2004/05/30 13:37:18 xtraeme Exp $
+# $Id: Makefile,v 1.1303 2004/05/30 22:50:29 plunky Exp $
+# $NetBSD: Makefile,v 1.1303 2004/05/30 22:50:29 plunky Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -289,6 +289,7 @@ SUBDIR+=	ladspa
 SUBDIR+=	lammpi
 SUBDIR+=	latex2rtf
 SUBDIR+=	lbdb
+SUBDIR+=	lcab
 SUBDIR+=	ldapbrowser
 SUBDIR+=	ldapdns
 SUBDIR+=	lde
