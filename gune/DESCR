@@ -1,0 +1,6 @@
+Gune is a C utility library which allows you to program in a more high-level
+way.  It contains often-needed functionality which is rewritten time and
+again by C programmers.  People keep re-inventing the wheel and each time
+this is done, new bugs are created.  This is totally unnecessary and that's
+why we've created Gune as a one-stop solution for most widely-used
+functionality.
