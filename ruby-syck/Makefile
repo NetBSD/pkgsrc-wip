@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/26 15:46:54 rasputnik Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/02 21:07:37 blef Exp $
 
 DISTNAME=	syck-${VER}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	rasputnik@hellooperator.net
 HOMEPAGE=	http://www.whytheluckystiff.net/syck/
 COMMENT=		Fast YAML reader/writer for Ruby
 
-USE_BUILDLINK2= # defined
+USE_BUILDLINK3= # defined
 
 DEPENDS+=	ruby-racc>=1.4.3:../../devel/ruby-racc
 VER=	0.42
