@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/28 11:38:39 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/26 10:50:43 johnrshannon Exp $
 CVS_DATE=	Thu Nov 20 01:28:29 UTC 2003
 
 DISTNAME=	gdbada-5.3
@@ -75,6 +75,7 @@ do-extract:
 	${MKDIR} ${WRKSRC}
 	cd ${DISTDIR}/${DIST_SUBDIR}/gdb-5.3 ; ${PAX} -pe -rwt . ${WRKSRC}
 
+.include "../../lang/gcc3-ada/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
