@@ -1,5 +1,8 @@
---- libtool.orig	Mon Dec  1 04:13:26 2003
-+++ libtool	Mon Dec  1 04:14:42 2003
+$NetBSD: patch-aa,v 1.3 2003/12/01 22:08:59 mpasternak Exp $
+$Id: patch-aa,v 1.3 2003/12/01 22:08:59 mpasternak Exp $
+
+--- libtool.orig	Mon Dec  1 21:34:09 2003
++++ libtool	Mon Dec  1 23:08:52 2003
 @@ -59,13 +59,13 @@
  SHELL="/bin/sh"
  
@@ -61,7 +64,7 @@
 -      \$CC -Wl,--base-file,\$output_objdir/\$soname-base \$output_objdir/\$soname-exp -mdll -Wl,-e,_DllMainCRTStartup@12 -o \$output_objdir/\$soname \$output_objdir/\$soname-ltdll.o \$libobjs \$deplibs \$compiler_flags~
 -      \$DLLTOOL --as=\$AS --dllname \$soname --exclude-symbols DllMain@12,_cygwin_dll_entry@12,_cygwin_noncygwin_dll_entry@12,DllMainCRTStartup@12,DllEntryPoint@12 --def \$output_objdir/\$soname-def --base-file \$output_objdir/\$soname-base --output-exp \$output_objdir/\$soname-exp --output-lib \$output_objdir/\$libname.dll.a~
 -      \$CC \$output_objdir/\$soname-exp -mdll -Wl,-e,_DllMainCRTStartup@12 -o \$output_objdir/\$soname \$output_objdir/\$soname-ltdll.o \$libobjs \$deplibs \$compiler_flags"
-+archive_cmds="\$CC -shared -o \$output_objdir/\$soname -Wl,--out-implib=\$output_objdir/\$soname.a \$libobjs \$deplibs"
++archive_cmds="\$CC -shared -o \$output_objdir/\$soname -Wl,--out-implib=\$output_objdir/\$libname.a \$libobjs \$deplibs"
 +archive_expsym_cmds=""
  postinstall_cmds=""
  postuninstall_cmds=""
@@ -87,7 +90,29 @@
  
  # Symbols that should not be listed in the preloaded symbols.
  exclude_expsyms="_GLOBAL_OFFSET_TABLE_"
-@@ -5327,6 +5300,17 @@
+@@ -2590,6 +2563,8 @@
+ 		versuffix="-$major"
+ 		;;
+ 	      esac
++	      echo $soname_spec
++	      exit 1
+ 	      eval soname=\"$soname_spec\"
+ 	    else
+ 	      soname="$realname"
+@@ -5147,6 +5122,12 @@
+ 	  # Install the shared library and build the symlinks.
+ 	  $show "$install_prog $dir/$srcname $destdir/$realname"
+ 	  $run eval "$install_prog $dir/$srcname $destdir/$realname" || exit $?
++	  
++	  # Make sure .dll.a gets copied too -- <dotz@irc.pl>
++	  _basename=`echo "$file" | sed -e 's/\.la//'`
++	  $show "$install_prog $dir/$_basename.a $destdir/$_basename.a"
++	  $run eval "$install_prog $dir/$_basename.a $destdir/$_basename.a" || exit $?
++	  
+ 	  if test -n "$stripme" && test -n "$striplib"; then
+ 	    $show "$striplib $destdir/$realname"
+ 	    $run eval "$striplib $destdir/$realname" || exit $?
+@@ -5327,6 +5308,18 @@
  	    ;;
  	  *:*.exe)
  	    destfile=`echo $destfile | sed -e 's,.exe$,,'`
@@ -95,6 +120,7 @@
 +	  esac
 +	  ;;
 +	# for mingw append .exe for everything that goest to bin/ or sbin/
++	# and while copying .dll, make sure .dll.a gets copied too
 +	*install*,*mingw*)
 +	  case $file:$destfile in
 +	  *:*/bin/*)
