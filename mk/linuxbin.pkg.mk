@@ -1,7 +1,7 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.17 2004/09/22 11:07:51 airhead Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.18 2004/10/07 03:02:09 jlamwww Exp $
 ###########################################################################
 # 
-# $Id: linuxbin.pkg.mk,v 1.17 2004/09/22 11:07:51 airhead Exp $
+# $Id: linuxbin.pkg.mk,v 1.18 2004/10/07 03:02:09 jlamwww Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 #
@@ -217,7 +217,7 @@ do-install:
 	  ${CP} ${PKGDIR}/PLIST ${PLIST_SRC}; \
 	else \
 	  ${RM} -f ${PLIST_SRC}; \
-	  ${CP} ${_PKGSRCDIR}/emulators/suse_linux/PLIST_dynamic ${PLIST_SRC} ; \
+	  ${CP} ${PKGSRCDIR}/emulators/suse_linux/PLIST_dynamic ${PLIST_SRC} ; \
 	fi
 	${RPM2PKG} ${RPM2PKGARGS}
 	@if ${GREP} -q 'lib.*\.so' ${PLIST_SRC}; then \
