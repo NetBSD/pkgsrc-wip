@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/15 20:26:18 daprice Exp $
+
+--- ckit/Makefile.in.orig	Tue Aug 24 11:33:35 2004
++++ ckit/Makefile.in	Tue Aug 24 11:34:50 2004
+@@ -46,7 +46,7 @@
+ 	$(top_srcdir)/m4/sgi.m4 $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+-mkinstalldirs = $(mkdir_p)
++mkinstalldirs = $(SHELL) ../mkinstalldirs
+ CONFIG_CLEAN_FILES =
+ am__installdirs = "$(DESTDIR)$(libdir)"
+ libLTLIBRARIES_INSTALL = $(INSTALL)
+@@ -58,7 +58,7 @@
+ am_libckit_la_OBJECTS = $(am__objects_1)
+ libckit_la_OBJECTS = $(am_libckit_la_OBJECTS)
+ DEFAULT_INCLUDES = -I. -I$(srcdir)
+-depcomp = $(SHELL) $(top_srcdir)/depcomp
++depcomp = $(SHELL) ../depcomp
+ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/datafiles.Plo ./$(DEPDIR)/gcg.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/next.Plo ./$(DEPDIR)/nextseqentry.Plo \

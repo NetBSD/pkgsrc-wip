@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/11/15 20:26:18 daprice Exp $
+
+--- emboss_acd/Makefile.in.orig	Thu Jul 15 09:57:21 2004
++++ emboss_acd/Makefile.in	Tue Aug 24 12:18:37 2004
+@@ -43,7 +43,7 @@
+ 	$(top_srcdir)/m4/sgi.m4 $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+-mkinstalldirs = $(mkdir_p)
++mkinstalldirs = $(SHELL) ../mkinstalldirs
+ CONFIG_CLEAN_FILES =
+ SOURCES =
+ DIST_SOURCES =
+@@ -182,7 +182,7 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-pkgdata_DATA = *.acd
++pkgdata_DATA = mse.acd
+ all: all-am
+ 
+ .SUFFIXES:

@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/11/15 20:26:18 daprice Exp $
+
+--- h/Makefile.in.orig	Tue Aug 24 11:44:20 2004
++++ h/Makefile.in	Tue Aug 24 11:45:38 2004
+@@ -45,7 +45,7 @@
+ 	$(top_srcdir)/m4/sgi.m4 $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+-mkinstalldirs = $(mkdir_p)
++mkinstalldirs = $(SHELL) ../mkinstalldirs
+ CONFIG_CLEAN_FILES =
+ SOURCES =
+ DIST_SOURCES =
+@@ -103,7 +103,7 @@
+ JAVA_OK = @JAVA_OK@
+ LDFLAGS = @LDFLAGS@
+ LIBOBJS = @LIBOBJS@
+-LIBS = @LIBS@
++LIBS = @NCURSES@ @LIBS@
+ LIBTOOL = @LIBTOOL@
+ LN_S = @LN_S@
+ LOCALLINK_FALSE = @LOCALLINK_FALSE@

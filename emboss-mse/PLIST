@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/15 20:26:18 daprice Exp $
+bin/mse
+lib/libckit.a
+lib/libckit.la
+lib/libckit.so
+lib/libckit.so.1
+lib/libckit.so.1.0
+share/EMBOSS/acd/mse.acd

@@ -1,0 +1,59 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/11/15 20:26:18 daprice Exp $
+
+--- source/Makefile.in.orig	Thu Jul 15 09:57:21 2004
++++ source/Makefile.in	Tue Aug 24 12:19:38 2004
+@@ -47,7 +47,7 @@
+ 	$(top_srcdir)/m4/sgi.m4 $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+-mkinstalldirs = $(mkdir_p)
++mkinstalldirs = $(SHELL) ../mkinstalldirs
+ CONFIG_CLEAN_FILES =
+ am__installdirs = "$(DESTDIR)$(bindir)"
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
+@@ -59,12 +59,12 @@
+ @LOCALLINK_FALSE@mse_DEPENDENCIES = ../ckit/libckit.la \
+ @LOCALLINK_FALSE@	$(am__DEPENDENCIES_1)
+ @LOCALLINK_TRUE@mse_DEPENDENCIES = ../ckit/libckit.la \
+-@LOCALLINK_TRUE@	../../../nucleus/libnucleus.la \
+-@LOCALLINK_TRUE@	../../../ajax/libajax.la \
+-@LOCALLINK_TRUE@	../../../plplot/libplplot.la \
++@LOCALLINK_TRUE@	@EMBOSSLIB@/nucleus/libnucleus.la \
++@LOCALLINK_TRUE@	@EMBOSSLIB@/ajax/libajax.la \
++@LOCALLINK_TRUE@	@EMBOSSLIB@/plplot/libplplot.la \
+ @LOCALLINK_TRUE@	$(am__DEPENDENCIES_1)
+ DEFAULT_INCLUDES = -I. -I$(srcdir)
+-depcomp = $(SHELL) $(top_srcdir)/depcomp
++depcomp = $(SHELL) ../depcomp
+ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/mse.Po
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+@@ -130,7 +130,7 @@
+ JAVA_OK = @JAVA_OK@
+ LDFLAGS = @LDFLAGS@
+ LIBOBJS = @LIBOBJS@
+-LIBS = @LIBS@
++LIBS = @NCURSES@ @LIBS@
+ LIBTOOL = @LIBTOOL@
+ LN_S = @LN_S@
+ LOCALLINK_FALSE = @LOCALLINK_FALSE@
+@@ -210,14 +210,14 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-@LOCALLINK_FALSE@INCLUDES = -I../h -I${embprefix}/include
+-@LOCALLINK_TRUE@INCLUDES = -I../h -I../../../ajax
++@LOCALLINK_FALSE@INCLUDES = -I../h -I@INCLUDE@
++@LOCALLINK_TRUE@INCLUDES = -I../h -I@INCLUDE@
+ @ISAIXIA64_FALSE@@ISSHARED_TRUE@AM_CFLAGS = 
+ @ISAIXIA64_TRUE@@ISSHARED_TRUE@@LOCALLINK_FALSE@AM_CFLAGS = -Wl,-bdynamic -Wl,-brtl -L${embprefix}/lib -lajax
+-@ISAIXIA64_TRUE@@ISSHARED_TRUE@@LOCALLINK_TRUE@AM_CFLAGS = -Wl,-bdynamic -Wl,-brtl -L../../../ajax/.libs -lajax
++@ISAIXIA64_TRUE@@ISSHARED_TRUE@@LOCALLINK_TRUE@AM_CFLAGS = -Wl,-bdynamic -Wl,-brtl -L@EMBOSSLIB@ -lajax
+ mse_SOURCES = mse.c 
+-@LOCALLINK_FALSE@LDADD = ../ckit/libckit.la -L${embprefix}/lib -lnucleus -lajax -lplplot $(XLIB)
+-@LOCALLINK_TRUE@LDADD = ../ckit/libckit.la ../../../nucleus/libnucleus.la ../../../ajax/libajax.la ../../../plplot/libplplot.la $(XLIB)
++@LOCALLINK_FALSE@LDADD = ../ckit/libckit.la -L@EMBOSSLIB@/lib -lnucleus -lajax -lplplot $(XLIB)
++@LOCALLINK_TRUE@LDADD = ../ckit/libckit.la @EMBOSSLIB@/nucleus/libnucleus.la @EMBOSSLIB@/ajax/libajax.la @EMBOSSLIB@/plplot/libplplot.la $(XLIB)
+ all: all-am
+ 
+ .SUFFIXES:
