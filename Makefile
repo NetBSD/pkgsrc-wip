@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1536 2004/11/14 15:20:55 lexort Exp $
-# $NetBSD: Makefile,v 1.1536 2004/11/14 15:20:55 lexort Exp $
+# $Id: Makefile,v 1.1537 2004/11/15 00:24:58 lexort Exp $
+# $NetBSD: Makefile,v 1.1537 2004/11/15 00:24:58 lexort Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -197,6 +197,7 @@ SUBDIR+=	gnome-alsamixer
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnomeicu
 SUBDIR+=	gnump3d
+SUBDIR+=	gnucash
 SUBDIR+=	gnunet
 SUBDIR+=	gnupg-1.9
 SUBDIR+=	gnupoc-makesis
