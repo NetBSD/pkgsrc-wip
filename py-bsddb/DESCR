@@ -1,0 +1,3 @@
+This package provides C binding to Sleepycat Software's Berkeley DB version 4,
+necessary for bsddb to work. All other needed files are part of standard
+Python installation.
