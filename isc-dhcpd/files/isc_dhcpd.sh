@@ -1,13 +1,15 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: isc_dhcpd.sh,v 1.5 2004/07/08 15:12:25 jeremy-c-reed Exp $
-# $Id: isc_dhcpd.sh,v 1.5 2004/07/08 15:12:25 jeremy-c-reed Exp $
+# $NetBSD: isc_dhcpd.sh,v 1.6 2005/03/03 11:02:26 hfath Exp $
+# $Id: isc_dhcpd.sh,v 1.6 2005/03/03 11:02:26 hfath Exp $
 
 # PROVIDE: dhcpd
 # REQUIRE: DAEMON
 # BEFORE:  LOGIN
 
-. /etc/rc.subr
+if [ -f /etc/rc.subr ]; then
+        . /etc/rc.subr
+fi
 
 name="dhcpd"
 rcvar="isc_dhcpd"
@@ -15,5 +17,10 @@ command="@PREFIX@/sbin/${name}"
 pidfile="@VARBASE@/run/${name}.pid"
 required_files="@PKG_SYSCONFDIR@/dhcp/${name}.conf @VARBASE@/db/dhcp/${name}.leases"
 
-load_rc_config $name
-run_rc_command "$1"
+if [ -f /etc/rc.subr ]; then
+        load_rc_config $name
+        run_rc_command "$1"
+else
+        @ECHO@ -n " ${name}"
+        ${command} ${isc_dhcpd_flags}
+fi

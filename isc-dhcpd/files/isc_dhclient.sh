@@ -1,7 +1,7 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: isc_dhclient.sh,v 1.2 2004/07/08 15:03:16 jeremy-c-reed Exp $
-# $Id: isc_dhclient.sh,v 1.2 2004/07/08 15:03:16 jeremy-c-reed Exp $
+# $NetBSD: isc_dhclient.sh,v 1.3 2005/03/03 11:02:26 hfath Exp $
+# $Id: isc_dhclient.sh,v 1.3 2005/03/03 11:02:26 hfath Exp $
 
 # PROVIDE: dhclient
 # REQUIRE: network mountcritlocal
@@ -11,12 +11,19 @@
 #	dhclient needs to start before services that syslog depends upon do.
 #
 
-. /etc/rc.subr
+if [ -f /etc/rc.subr ]; then
+        . /etc/rc.subr
+fi
 
 name="dhclient"
 rcvar="isc_dhclient"
 command="@PREFIX@/sbin/${name}"
 pidfile="@VARBASE@/run/${name}.pid"
 
-load_rc_config $name
-run_rc_command "$1"
+if [ -f /etc/rc.subr ]; then
+        load_rc_config $name
+        run_rc_command "$1"
+else
+        @ECHO@ -n " ${name}"
+        ${command} ${isc_dhclient_flags}
+fi
