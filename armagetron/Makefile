@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:11:31 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/07 02:16:32 blef Exp $
 #
 
 DISTNAME=	armagetron-0.2.5.2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://armagetron.sourceforge.net/
 COMMENT=	3D Tron lightcycle clone with network support
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_X11=	YES
 
@@ -35,12 +35,12 @@ do-install:
 		${PREFIX}/share/doc/html/${PKGBASE}/net/
 	${MV} ${PREFIX}/games/${PKGBASE}/bin/starter ${PREFIX}/bin/${PKGBASE}
 
-.include "../../audio/SDL_mixer/buildlink2.mk"
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/SDL_image/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
