@@ -1,0 +1,7 @@
+Binding of the Porter stemming algorithm to Python.
+
+Example usage:
+
+	import Stem, sys
+	print Stem.stem("pythonic")
+	print Stem.delete_stop_words(sys.copyright)
