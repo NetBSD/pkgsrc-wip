@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/07 01:58:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/08 22:57:04 thomasklausner Exp $
 #
 
 DISTNAME=	tr64_oglv078_src
@@ -15,6 +15,9 @@ USE_BUILDLINK3=	yes
 USE_X11=	yes
 
 LIBS+=		${PTHREAD_LDFLAGS}
+
+pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/mupen64-base/plugins
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"

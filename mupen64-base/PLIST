@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/11/06 01:48:00 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/11/08 22:57:03 thomasklausner Exp $
 bin/mupen64
 share/doc/mupen64-base/readme.pdf
 share/mupen64-base/lang/catalan.lng
@@ -21,6 +21,6 @@ share/mupen64-base/roms/fire.bin.gz
 @exec ${MKDIR} %D/share/mupen64-base/scripts
 @dirrm share/mupen64-base/scripts
 @exec ${MKDIR} %D/share/mupen64-base/plugins
-@dirrm share/mupen64-base/plugins
-@dirrm share/mupen64-base
+@unexec ${RMDIR} %D/share/mupen64-base/plugins 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/mupen64-base 2>/dev/null || ${TRUE}
 @dirrm share/doc/mupen64-base
