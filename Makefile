@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1445 2004/08/31 13:26:46 airhead Exp $
-# $NetBSD: Makefile,v 1.1445 2004/08/31 13:26:46 airhead Exp $
+# $Id: Makefile,v 1.1446 2004/08/31 13:41:52 airhead Exp $
+# $NetBSD: Makefile,v 1.1446 2004/08/31 13:41:52 airhead Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -126,6 +126,7 @@ SUBDIR+=	drweb-dc
 SUBDIR+=	drweb-smf
 SUBDIR+=	dumb
 SUBDIR+=	dxmake
+SUBDIR+=	e16menuedit
 SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
 SUBDIR+=	ecl
