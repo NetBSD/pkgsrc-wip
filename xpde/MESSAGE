@@ -1,10 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/11/28 17:07:53 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.2 2003/11/28 22:02:06 mpasternak Exp $
 
 Package has been installed in:
 
-	${PREFIX}/emul/linux/opt/xpde/
-
-Please run ${PREFIX}/emul/linux/bin/ldconfig before using this package.
+	${EMULDIR}/opt/xpde/
 
 ===========================================================================
