@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/10 13:12:26 oherrala Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/10 14:01:10 oherrala Exp $
 #
 
 DISTNAME=	silky-0.5.0
@@ -12,7 +12,7 @@ COMMENT=	Silky is an easy-to-use graphical SILC client
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_GNU_TOOLS+=make
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
@@ -22,7 +22,9 @@ CONFIGURE_ARGS+=	--with-silc-libs=${BUILDLINK_PREFIX.silc-toolkit}/lib/silc-tool
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silky
 CONFIGURE_ARGS+=	--with-included-gettext
 
-.include "../../x11/gtk2/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../wip/silc-toolkit/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../wip/silc-toolkit/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
