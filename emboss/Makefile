@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/16 20:23:37 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/18 21:23:03 daprice Exp $
 #
 
 DISTNAME=		EMBOSS-2.9.0
@@ -7,7 +7,7 @@ CATEGORIES=		biology
 MASTER_SITES=		#empty
 DISTFILES=		#empty
 
-MAINTAINER=		hdp@cs.nmsu.edu
+MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.emboss.org/
 COMMENT=	 	European Molecular Biology Open Software Suite
 
