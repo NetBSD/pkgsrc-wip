@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/21 11:54:08 marmfield Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/21 13:19:13 marmfield Exp $
 #
 
 DISTNAME=		Browser282b2
@@ -17,6 +17,7 @@ USE_BUILDLINK2=		yes
 NO_CONFIGURE=		yes
 LBE_DIR=		${PREFIX}/lib/ldapbrowser
 USE_JAVA=		run
+USE_JAVA2=		yes
 
 do-build:
 	${SED} s%DESTINATION%${LBE_DIR}% ${WRKSRC}/lbe.sh \
