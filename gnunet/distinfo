@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2003/07/18 05:12:55 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2003/10/13 14:25:31 tvierling Exp $
 
 SHA1 (GNUnet-0.5.4a.tar.bz2) = 782d38ba9a7a7c7f609aa6e3ac27f386f2f8e625
 Size (GNUnet-0.5.4a.tar.bz2) = 796466 bytes
-SHA1 (patch-aa) = 0a89157491704e78244f4e258a2b07aa51bf6fd0
+SHA1 (patch-aa) = fd75df07ac253df9749ab61e8201ff150bebc96b
 SHA1 (patch-ab) = 05453693c8cee5770368ea3daea666a8325ba3f2
 SHA1 (patch-ac) = dcd43e24a18982a73e8912b92697823cac15eb62
 SHA1 (patch-ad) = e2a11e4091834729c78033c3862b269bf3cecdcb
