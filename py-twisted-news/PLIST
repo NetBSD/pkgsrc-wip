@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/29 05:05:09 sifu Exp $
+${PYSITELIB}/twisted/news/__init__.py
+${PYSITELIB}/twisted/news/__init__.pyc
+${PYSITELIB}/twisted/news/__init__.pyo
+${PYSITELIB}/twisted/news/database.py
+${PYSITELIB}/twisted/news/database.pyc
+${PYSITELIB}/twisted/news/database.pyo
+${PYSITELIB}/twisted/news/news.py
+${PYSITELIB}/twisted/news/news.pyc
+${PYSITELIB}/twisted/news/news.pyo
+${PYSITELIB}/twisted/news/nntp.py
+${PYSITELIB}/twisted/news/nntp.pyc
+${PYSITELIB}/twisted/news/nntp.pyo
+${PYSITELIB}/twisted/news/tap.py
+${PYSITELIB}/twisted/news/tap.pyc
+${PYSITELIB}/twisted/news/tap.pyo
+${PYSITELIB}/twisted/news/test/__init__.py
+${PYSITELIB}/twisted/news/test/__init__.pyc
+${PYSITELIB}/twisted/news/test/__init__.pyo
+${PYSITELIB}/twisted/news/test/test_news.py
+${PYSITELIB}/twisted/news/test/test_news.pyc
+${PYSITELIB}/twisted/news/test/test_news.pyo
+${PYSITELIB}/twisted/news/test/test_nntp.py
+${PYSITELIB}/twisted/news/test/test_nntp.pyc
+${PYSITELIB}/twisted/news/test/test_nntp.pyo
+${PYSITELIB}/twisted/plugins/twisted_news.py
+${PYSITELIB}/twisted/plugins/twisted_news.pyc
+${PYSITELIB}/twisted/plugins/twisted_news.pyo
+@dirrm ${PYSITELIB}/twisted/news/test
+@dirrm ${PYSITELIB}/twisted/news
