@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/02/04 21:46:56 schnoebe Exp $
+
+    This plugin needs no enabling, it's picked up automatically
+    by those plugins requiring it.
+
+===========================================================================
