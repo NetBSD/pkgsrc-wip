@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2003/10/14 07:34:03 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/10 16:11:02 poppnk Exp $
 
-DISTNAME=		samba-3.0.1pre1
+DISTNAME=		samba-3.0.0
 WRKSRC?=		${WRKDIR}/${DISTNAME}/source
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.samba.org/pub/samba/pre/ \
-			ftp://ring.asahi-net.or.jp/pub/net/samba/pre/ \
-			ftp://samba.anu.edu.au/pub/samba/pre/ \
-			ftp://ftp.sunet.se/pub/unix/utilities/samba/pre/
+MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
+			ftp://ring.asahi-net.or.jp/pub/net/samba/ \
+			ftp://samba.anu.edu.au/pub/samba/ \
+			ftp://ftp.sunet.se/pub/unix/utilities/samba/
 COUNTRY_MIRRORS=	au1 ca fi fr de it pl ru sg se us1 us6
 .for COUNTRY in ${COUNTRY_MIRRORS}
 MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/pre/
