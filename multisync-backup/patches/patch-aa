@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/01/05 13:09:45 mreriksson Exp $
+
+--- Makefile.am.orig	2005-01-05 11:37:23.000000000 +0100
++++ Makefile.am
+@@ -9,7 +9,7 @@ EXTRA_DIST = \
+ install-data-local:
+ 	@$(NORMAL_INSTALL)
+ 	if test -d $(srcdir)/pixmaps; then \
+-	  $(mkinstalldirs) $(DESTDIR)$(datadir)/pixmaps/$(PACKAGE); \
++	  $(install-sh) -d $(DESTDIR)$(datadir)/pixmaps/$(PACKAGE); \
+ 	  for pixmap in $(srcdir)/pixmaps/*; do \
+ 	    if test -f $$pixmap; then \
+ 	      $(INSTALL_DATA) $$pixmap $(DESTDIR)$(datadir)/pixmaps/$(PACKAGE); \
