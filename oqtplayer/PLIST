@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/16 11:21:12 tripledes Exp $
+bin/oqtplayer
+share/oqtplayer/readme
+@dirrm share/oqtplayer
