@@ -1,0 +1,9 @@
+.include "../../wip/php5/Makefile.common"
+
+CONFIGURE_ARGS+=--disable-cgi
+CONFIGURE_ARGS+=--disable-cli
+
+do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/httpd/
+	${INSTALL_DATA} ${WRKSRC}/modules/${MODNAME}.so \
+		${PREFIX}/lib/httpd/mod_${MODNAME}.so

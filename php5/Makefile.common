@@ -1,0 +1,38 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/05 15:49:04 poppnk Exp $
+#
+
+DISTNAME=	php-${PHP5_VERSION}
+CATEGORIES=	wip www
+MASTER_SITES=	http://www.php.net/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pancake@phreaker.net
+HOMEPAGE=	http://www.php.net/
+
+# Did conflicts works?
+USE_BUILDLINK2=	YES
+GNU_CONFIGURE=	YES
+USE_GMAKE=	YES
+
+PHP5_VERSION=	5.0.0b3
+
+.include "../../mk/bsd.prefs.mk"
+
+CONFIGURE_ARGS+=--enable-mbstring
+CONFIGURE_ARGS+=--enable-calendar
+
+.if defined(USE_INET6) && ${USE_INET6} == "NO"
+CONFIGURE_ARGS+=--disable-ipv6
+.else
+CONFIGURE_ARGS+=--enable-ipv6
+.endif
+
+.if defined(PHP5_WITH_FTP) && ${PHP5_WITH_FTP} == "YES"
+CONFIGURE_ARGS+=--enable-ftp
+.endif
+
+.if defined(PHP5_WITH_XML) && ${PHP5_WITH_XML} == "YES"
+.include "../../textproc/libxml2/buildlink2.mk"
+.else
+CONFIGURE_ARGS+=--disable-libxml
+.endif
