@@ -1,5 +1,10 @@
 Reason it's not committed:
-liquidwar isn't working, probably a threading issue.
+liquidwar isn't working, probably a threading issue. (LW now works for me in
+current, aside from sound. My 1.6.1 machine is too slow to do any real testing,
+but it loads, and I get some water noises -Soren)
+
+Sound doesn't work for me in current, but works fine on 1.6.1. Still
+investigating this. (Soren)
 
 patch-aa, patch-ab, and patch-ad are only there to add debug flags --
 they should be removed once the problem with liquid war is found and fixed.
