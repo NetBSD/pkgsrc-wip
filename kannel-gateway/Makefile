@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/06 21:24:19 mjasm Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/10 17:48:39 cjep Exp $
 #
 
 DISTNAME=		gateway-1.2.1
@@ -15,7 +15,7 @@ USE_LIBTOOL=            yes
 GNU_CONFIGURE=          yes
 
 CONFIGURE_ARGS+=		--disable-ssl
-CONFIGURE_ARGS+= 		--disable-docs 
+CONFIGURE_ARGS+= 		--disable-docs
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

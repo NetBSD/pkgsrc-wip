@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2003/11/29 22:49:08 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/01/10 17:48:39 cjep Exp $
 @comment ======================================================
-@comment entries below will be not needed when we manage 
+@comment entries below will be not needed when we manage
 @comment to get it running with chat/ekg shared library
 @comment ======================================================
 include/libgadu.h

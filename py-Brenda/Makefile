@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/02 03:39:42 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/10 17:48:39 cjep Exp $
 #
 
 DISTNAME=		PyBrenda-0.4.1
@@ -25,7 +25,7 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/$$a ${PREFIX}/${PYSITELIB}/$$a; \
 	done
 	${INSTALL_DATA_DIR} ${BRENDA_DIR}
-	${INSTALL_DATA_DIR} ${BRENDA_DIR}/examples	
+	${INSTALL_DATA_DIR} ${BRENDA_DIR}/examples
 	for a in ${BRENDA_SHARE}; do \
 		${INSTALL_DATA} ${WRKSRC}/$$a ${BRENDA_DIR}/$$a; \
 	done

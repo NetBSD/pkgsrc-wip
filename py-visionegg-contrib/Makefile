@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/02 00:15:34 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/10 17:48:39 cjep Exp $
 #
 
 DISTNAME=		visionegg-contrib-0.9.3
@@ -30,6 +30,6 @@ do-install:
 		${INSTALL_DATA} "${WRKSRC}/labview/$$a" \
 			"${PREFIX}/share/VisionEgg-${PYVERSSUFFIX}/labview/$$a"; \
 	done
-		
+
 .include "../../wip/py-visionegg/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

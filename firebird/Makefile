@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/10 06:51:12 mpasternak Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/10 17:48:38 cjep Exp $
 #
 
 # A few words about DISTFILE:
@@ -33,7 +33,7 @@ USE_LIBTOOL=		yes
 USE_GMAKE=		yes
 PREFIX=			${LOCALBASE}/firebird15
 
-CONFIGURE_ARGS+=	--with-lock-manager 
+CONFIGURE_ARGS+=	--with-lock-manager
 CONFIGURE_ARGS+=	--with-editline
 CONFIGURE_ENV+=		AUTOCONF=${AUTOCONF}
 CONFIGURE_ENV+=		AUTOMAKE=${AUTOMAKE}

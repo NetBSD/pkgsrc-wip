@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/01/02 00:15:34 mpasternak Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/01/10 17:48:39 cjep Exp $
 #
 # This Makefile fragment is included by packages that use py-visionegg.
 #
@@ -15,7 +15,7 @@ BUILDLINK_PKGSRCDIR.${PYPKGPREFIX}-visionegg?=		../../wip/py-visionegg
 EVAL_PREFIX+=	BUILDLINK_PREFIX.${PYPKGPREFIX}-visionegg=${PYPKGPREFIX}-visionegg
 BUILDLINK_PREFIX.${PYPKGPREFIX}-visionegg_DEFAULT=	${LOCALBASE}
 
-.if exists(../../mk/opengl.buildlink2.mk) 
+.if exists(../../mk/opengl.buildlink2.mk)
 # see PR 23845 for details
 .include "../../mk/opengl.buildlink2.mk"
 .else

@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/02 03:39:42 mpasternak Exp $
-${PYSITELIB}/Brenda.py 
-${PYSITELIB}/einRpc.py 
-${PYSITELIB}/myMath.py 
+@comment $NetBSD: PLIST,v 1.2 2004/01/10 17:48:39 cjep Exp $
+${PYSITELIB}/Brenda.py
+${PYSITELIB}/einRpc.py
+${PYSITELIB}/myMath.py
 ${PYSITELIB}/niftySocket.py
 share/doc/${PYPKGPREFIX}-Brenda-0.4.1/INSTALL
 share/doc/${PYPKGPREFIX}-Brenda-0.4.1/LICENSE
