@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/28 07:00:07 bjan2 Exp $
+
+SHA1 (libticables.tar.gz) = b128bc351d218a2be005877f90e092f8f1eb8ce7
+Size (libticables.tar.gz) = 524290 bytes
+SHA1 (patch-aa) = b37f37066ee6af9a7942980dc3d716bc4d2b40e2

@@ -1,0 +1,109 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/28 07:00:07 bjan2 Exp $
+
+--- src/ioports.c.orig	2003-05-10 00:43:00.000000000 -0700
++++ src/ioports.c
+@@ -45,6 +45,9 @@
+ #elif defined(__BSD__)
+ #  include <machine/sysarch.h>
+ #  include <machine/cpufunc.h>
++#ifdef __NetBSD__
++#     include <string.h>
++#endif /* __NetBSD__ */
+ #elif defined(__WIN32__)
+ #  include <stdio.h>
+ #  include <windows.h>
+@@ -95,6 +98,24 @@ static void print_last_error(char *s)
+ }
+ #endif				//__WIN32__
+ 
++#ifdef __NetBSD__
++static __inline u_char
++inb(u_int port)
++{
++        u_char  data;
++        __asm __volatile("inb %%dx,%0" : "=a" (data) : "d" (port));
++        return (data);
++}
++
++static __inline void
++outb(u_int port, u_char data)
++{
++        u_char  al;
++        al = data;
++        __asm __volatile("outb %0,%%dx" : : "a" (al), "d" (port));
++}
++#endif
++
+ #ifdef __MACOSX__
+ static int null_read_io(unsigned int addr)
+ {
+@@ -208,6 +229,11 @@ int io_open(unsigned long from, unsigned
+ {
+ #if defined(__I386__) && defined(HAVE_ASM_IO_H) && defined(HAVE_SYS_PERM_H) || defined(__ALPHA__) || defined(__BSD__)
+ 
++#ifdef __NetBSD__
++ u_long iomap[31];
++ int i;
++#endif /* __NetBSD__ */
++
+   if (method & IOM_ASM) {
+     io_rd = linux_asm_read_io;
+     io_wr = linux_asm_write_io;
+@@ -215,7 +241,23 @@ int io_open(unsigned long from, unsigned
+ #ifndef __BSD__
+     return (ioperm(from, num, 1) ? ERR_ROOT : 0);
+ #else
++#ifdef __FreeBSD__
+     return (i386_set_ioperm(from, num, 1) ? ERR_ROOT : 0);
++#endif /* __FreeBSD __ */
++#ifdef __NetBSD__
++
++  if ((from + num) > 1024) {
++     puts("Turd!");
++     return ERR_INVALID_PORT;
++  }
++
++  memset(iomap, 0, sizeof(iomap));
++
++  for (i = 0; i < num; ++i)
++     iomap[(from + num) / 32] |= 1 << (from + num) % 32;
++
++  return (i386_set_ioperm(iomap) ? ERR_ROOT : 0);
++#endif /* __NetBSD__ */
+ #endif
+   } else if (method & IOM_API) {
+     struct termios termset;
+@@ -412,12 +454,32 @@ int io_open(unsigned long from, unsigned
+ int io_close(unsigned long from, unsigned long num)
+ {
+ #if defined(__I386__) && defined(HAVE_ASM_IO_H) && defined(HAVE_SYS_PERM_H) || defined(__ALPHA__) || defined(__BSD__)
+-  if (method & IOM_ASM)
++
++#ifdef __NetBSD__
++ u_long iomap[31];
++ int i;
++#endif /* __NetBSD__ */
++
++  if (method & IOM_ASM) {
+ #ifndef __BSD__
+     return (ioperm(from, num, 0) ? ERR_ROOT : 0);
+ #else
++#ifdef __FreeBSD__
+     return (i386_set_ioperm(from, num, 0) ? ERR_ROOT : 0);
++#endif /* __FreeBSD__ */
++#ifdef __NetBSD__
++    if ((from + num) > 1024)
++      return ERR_INVALID_PORT;
++
++    i386_get_ioperm(iomap);
++
++    for (i = 0; i < num; ++i)
++      iomap[(from + num) / 32] ^= 1 << (from + num) % 32;
++
++    return (i386_set_ioperm(iomap) ? ERR_ROOT : 0);
++#endif /* __NetBSD__ */
+ #endif
++  }
+   else if (method & IOM_API) {
+     if (tty_use) {
+       close(dev_fd);
