@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2004/01/25 02:33:12 grantbeattie Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/02/18 23:17:45 poppnk Exp $
 #
 
 DISTNAME?=	php-${PHP5_VERSION}
 CATEGORIES=	wip www
-MASTER_SITES=	http://www.php.net/
+MASTER_SITES=	http://www.php.net/distributions/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pancake@phreaker.net
@@ -14,7 +14,7 @@ USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
 
-PHP5_VERSION=	5.0.0b3
+PHP5_VERSION=	5.0.0b4
 
 .include "../../mk/bsd.prefs.mk"
 
