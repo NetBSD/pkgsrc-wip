@@ -1,4 +1,4 @@
-# $Id: win32.pkg.mk,v 1.6 2003/12/01 03:50:04 mpasternak Exp $
+# $Id: win32.pkg.mk,v 1.7 2003/12/01 04:31:15 mpasternak Exp $
 # (C) 2003 Michal Pasternak <dotz@irc.pl>
 #
 #
@@ -45,5 +45,10 @@ BUILD_DEPENDS+=	mingw-c>=3.1.1:../../wip/mingw-c
 BUILD_DEPENDS+=	mingw-binutils>=2.14.90:../../wip/mingw-binutils
 BUILD_DEPENDS+=	mingw-runtime-bin>=3.2:../../wip/mingw-runtime-bin
 BUILD_DEPENDS+=	mingw-w32api-bin>=2.2:../../wip/mingw-w32api-bin
+
+.ifndef MINGW_BULK_BUILD
+NO_BIN_ON_CDROM=	"This is win32 package"
+NO_SRC_ON_CDROM=	"This is win32 package source"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
