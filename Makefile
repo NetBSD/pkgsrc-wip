@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.802 2003/12/25 02:14:00 bjan2 Exp $
-# $NetBSD: Makefile,v 1.802 2003/12/25 02:14:00 bjan2 Exp $
+# $Id: Makefile,v 1.803 2003/12/25 02:41:31 bjan2 Exp $
+# $NetBSD: Makefile,v 1.803 2003/12/25 02:41:31 bjan2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -139,6 +139,7 @@ SUBDIR+=	florist
 SUBDIR+=	fluxconf
 SUBDIR+=	fluxspace
 SUBDIR+=	foomatic-filters
+SUBDIR+=	foomatic-filters-cups
 SUBDIR+=	fragroute
 SUBDIR+=	freeglut
 SUBDIR+=	freenet-tools
