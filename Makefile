@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1015 2004/02/23 17:50:03 minskim Exp $
-# $NetBSD: Makefile,v 1.1015 2004/02/23 17:50:03 minskim Exp $
+# $Id: Makefile,v 1.1016 2004/02/23 19:09:13 minskim Exp $
+# $NetBSD: Makefile,v 1.1016 2004/02/23 19:09:13 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -88,7 +88,6 @@ SUBDIR+=	d4x
 SUBDIR+=	damageext
 SUBDIR+=	dancer-ircd
 SUBDIR+=	darcnes-svgalib
-SUBDIR+=	dasher
 SUBDIR+=	dasm
 SUBDIR+=	dbf
 SUBDIR+=	dfbpoint

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/07 23:31:35 mpasternak Exp $
-
-SHA1 (dasher-3.2.0.tar.gz) = cf15777d7a34b100c17f5ffe6734cdddd2e6b8ed
-Size (dasher-3.2.0.tar.gz) = 2312981 bytes
-SHA1 (patch-aa) = 58cc7ae8e66ec11c94d8cbe9c388ceeab2784895
