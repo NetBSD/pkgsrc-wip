@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.805 2003/12/25 14:25:12 minskim Exp $
-# $NetBSD: Makefile,v 1.805 2003/12/25 14:25:12 minskim Exp $
+# $Id: Makefile,v 1.806 2003/12/25 21:13:07 mpasternak Exp $
+# $NetBSD: Makefile,v 1.806 2003/12/25 21:13:07 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -464,7 +464,7 @@ SUBDIR+=	psh
 SUBDIR+=	pts
 SUBDIR+=	pxlib
 SUBDIR+=	pxview
-SUBDIR+=	py-CVSTools
+SUBDIR+=	py-CVSToys
 SUBDIR+=	py-EditObj
 SUBDIR+=	py-Genetic
 SUBDIR+=	py-Impacket
