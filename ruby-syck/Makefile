@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/16 22:19:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/02 16:39:20 minskim Exp $
 
 DISTNAME=	syck-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -17,6 +17,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-racc>=1.4.3:../../devel/ruby-racc
 USE_BUILDLINK3= 	yes
 USE_RUBY_SETUP=		yes
 RUBY_DIST_SUBDIR=	# make it empty
+RUBY_HAS_ARCHLIB=	yes
 RUBY_SETUP=		install.rb
 VER=			0.42
 WRKSRC=			${WRKDIR}/${DISTNAME}/ext/ruby
