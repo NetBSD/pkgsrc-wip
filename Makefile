@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.167 2003/05/16 03:24:16 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.167 2003/05/16 03:24:16 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.168 2003/05/16 04:19:33 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.168 2003/05/16 04:19:33 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -96,6 +96,7 @@ SUBDIR+=	nagios-plugin-pgsql
 SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	navigatrix
+SUBDIR+=	netkit-base
 SUBDIR+=	net-tools
 SUBDIR+=	netbeans-ide
 SUBDIR+=	newsx
@@ -130,6 +131,7 @@ SUBDIR+=	scm
 SUBDIR+=	scponly
 SUBDIR+=	shoutcast
 SUBDIR+=	srvx
+SUBDIR+=	strace
 SUBDIR+=	streamripper
 SUBDIR+=	sysklogd
 SUBDIR+=	sysvinit
