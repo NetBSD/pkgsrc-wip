@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.429 2003/09/05 17:22:04 mjasm Exp $
-# $NetBSD: Makefile,v 1.429 2003/09/05 17:22:04 mjasm Exp $
+# $Id: Makefile,v 1.430 2003/09/06 11:25:12 cjep Exp $
+# $NetBSD: Makefile,v 1.430 2003/09/06 11:25:12 cjep Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -137,7 +137,6 @@ SUBDIR+=	gnucash-docs
 SUBDIR+=	gnunet
 SUBDIR+=	gotmail
 SUBDIR+=	gov2
-SUBDIR+=	libgringotts
 SUBDIR+=	grip
 SUBDIR+=	gstreamer-player
 SUBDIR+=	gtick
@@ -185,6 +184,7 @@ SUBDIR+=	libcroco
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libfwbuilder
+SUBDIR+=	libgringotts
 SUBDIR+=	libogg-nightly
 SUBDIR+=	libshout
 SUBDIR+=	libspectrum
@@ -304,6 +304,7 @@ SUBDIR+=	pts
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-PgSQL
+SUBDIR+=	py-RXP
 SUBDIR+=	py-SimpleParse
 SUBDIR+=	py-albatross
 SUBDIR+=	py-egenix-mx-base
@@ -317,7 +318,6 @@ SUBDIR+=	py-libpcap
 SUBDIR+=	py-spark
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-twisted
-SUBDIR+=	py-RXP
 SUBDIR+=	qinx
 SUBDIR+=	qn-x11
 SUBDIR+=	rapidsvn
@@ -346,7 +346,7 @@ SUBDIR+=	sysklogd
 SUBDIR+=	sysvinit
 SUBDIR+=	tads
 SUBDIR+=	tcc
-SUBDIR+=	tendraa
+SUBDIR+=	tendra
 SUBDIR+=	tetrinet
 SUBDIR+=	tetrinetx
 SUBDIR+=	tex-foiltex
@@ -406,7 +406,6 @@ SUBDIR+=	xml2doc
 SUBDIR+=	xmms-dumb
 SUBDIR+=	xmms-modplug
 SUBDIR+=	xmms-pitch
-SUBDIR+=	xpad
 SUBDIR+=	xplore
 SUBDIR+=	xsh
 SUBDIR+=	yafray
