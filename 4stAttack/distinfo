@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/13 13:44:41 marc Exp $
+
+SHA1 (4stAttack-2.1.4.tar.gz) = ecfe89054202b3c9fea9be4a03de72faaa406f6f
+Size (4stAttack-2.1.4.tar.gz) = 1828247 bytes
+SHA1 (patch-aa) = e98b76fff139c121926c95c06ccff0c4ee85bd71
