@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/22 12:48:37 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/22 14:09:44 mpasternak Exp $
+${PYSITELIB}/ogg/vorbis.so
