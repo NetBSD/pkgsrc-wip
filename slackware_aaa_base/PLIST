@@ -1,0 +1,167 @@
+${EMULSUBDIR}/etc/slackware-version
+${EMULSUBDIR}/var/spool/mail/root
+${EMULSUBDIR}/bin/sh
+${EMULSUBDIR}/usr/X11
+${EMULSUBDIR}/usr/X11R6/lib/X11/app-defaults
+${EMULSUBDIR}/usr/X11R6/lib/X11/fs
+${EMULSUBDIR}/usr/X11R6/lib/X11/lbxproxy
+${EMULSUBDIR}/usr/X11R6/lib/X11/proxymngr
+${EMULSUBDIR}/usr/X11R6/lib/X11/rstart
+${EMULSUBDIR}/usr/X11R6/lib/X11/twm
+${EMULSUBDIR}/usr/X11R6/lib/X11/xdm
+${EMULSUBDIR}/usr/X11R6/lib/X11/xinit
+${EMULSUBDIR}/usr/X11R6/lib/X11/xkb
+${EMULSUBDIR}/usr/X11R6/lib/X11/xserver
+${EMULSUBDIR}/usr/X11R6/lib/X11/xsm
+${EMULSUBDIR}/usr/X11R6/lib/fonts
+${EMULSUBDIR}/usr/X11R6/man/cat1
+${EMULSUBDIR}/usr/X11R6/man/cat2
+${EMULSUBDIR}/usr/X11R6/man/cat3
+${EMULSUBDIR}/usr/X11R6/man/cat4
+${EMULSUBDIR}/usr/X11R6/man/cat5
+${EMULSUBDIR}/usr/X11R6/man/cat6
+${EMULSUBDIR}/usr/X11R6/man/cat7
+${EMULSUBDIR}/usr/X11R6/man/cat8
+${EMULSUBDIR}/usr/X11R6/man/cat9
+${EMULSUBDIR}/usr/X11R6/man/catn
+${EMULSUBDIR}/usr/adm
+${EMULSUBDIR}/usr/bin/X11
+${EMULSUBDIR}/usr/include/X11
+${EMULSUBDIR}/usr/lib/X11
+${EMULSUBDIR}/usr/man/cat1
+${EMULSUBDIR}/usr/man/cat2
+${EMULSUBDIR}/usr/man/cat3
+${EMULSUBDIR}/usr/man/cat4
+${EMULSUBDIR}/usr/man/cat5
+${EMULSUBDIR}/usr/man/cat6
+${EMULSUBDIR}/usr/man/cat7
+${EMULSUBDIR}/usr/man/cat8
+${EMULSUBDIR}/usr/man/cat9
+${EMULSUBDIR}/usr/man/catn
+${EMULSUBDIR}/usr/share/doc
+${EMULSUBDIR}/usr/share/man
+${EMULSUBDIR}/usr/spool
+${EMULSUBDIR}/usr/tmp
+${EMULSUBDIR}/var/X11R6/lib
+${EMULSUBDIR}/var/adm
+${EMULSUBDIR}/var/mail
+${EMULSUBDIR}/var/rwho
+@dirrm ${EMULSUBDIR}/var/tmp
+@dirrm ${EMULSUBDIR}/var/spool/mail
+@dirrm ${EMULSUBDIR}/var/spool
+@dirrm ${EMULSUBDIR}/var/run
+@dirrm ${EMULSUBDIR}/var/man/catn
+@dirrm ${EMULSUBDIR}/var/man/cat9
+@dirrm ${EMULSUBDIR}/var/man/cat8
+@dirrm ${EMULSUBDIR}/var/man/cat7
+@dirrm ${EMULSUBDIR}/var/man/cat6
+@dirrm ${EMULSUBDIR}/var/man/cat5
+@dirrm ${EMULSUBDIR}/var/man/cat4
+@dirrm ${EMULSUBDIR}/var/man/cat3
+@dirrm ${EMULSUBDIR}/var/man/cat2
+@dirrm ${EMULSUBDIR}/var/man/cat1
+@dirrm ${EMULSUBDIR}/var/man
+@dirrm ${EMULSUBDIR}/var/log/scripts
+@dirrm ${EMULSUBDIR}/var/log/removed_scripts
+@dirrm ${EMULSUBDIR}/var/log/removed_packages
+@dirrm ${EMULSUBDIR}/var/log/packages
+@dirrm ${EMULSUBDIR}/var/log
+@dirrm ${EMULSUBDIR}/var/lock
+@dirrm ${EMULSUBDIR}/var/X11R6
+@dirrm ${EMULSUBDIR}/var
+@dirrm ${EMULSUBDIR}/usr/src
+@dirrm ${EMULSUBDIR}/usr/share
+@dirrm ${EMULSUBDIR}/usr/sbin
+@dirrm ${EMULSUBDIR}/usr/man/mann
+@dirrm ${EMULSUBDIR}/usr/man/man9
+@dirrm ${EMULSUBDIR}/usr/man/man8
+@dirrm ${EMULSUBDIR}/usr/man/man7
+@dirrm ${EMULSUBDIR}/usr/man/man6
+@dirrm ${EMULSUBDIR}/usr/man/man5
+@dirrm ${EMULSUBDIR}/usr/man/man4
+@dirrm ${EMULSUBDIR}/usr/man/man3
+@dirrm ${EMULSUBDIR}/usr/man/man2
+@dirrm ${EMULSUBDIR}/usr/man/man1
+@dirrm ${EMULSUBDIR}/usr/man
+@dirrm ${EMULSUBDIR}/usr/local/src
+@dirrm ${EMULSUBDIR}/usr/local/sbin
+@dirrm ${EMULSUBDIR}/usr/local/man/mann
+@dirrm ${EMULSUBDIR}/usr/local/man/man9
+@dirrm ${EMULSUBDIR}/usr/local/man/man8
+@dirrm ${EMULSUBDIR}/usr/local/man/man7
+@dirrm ${EMULSUBDIR}/usr/local/man/man6
+@dirrm ${EMULSUBDIR}/usr/local/man/man5
+@dirrm ${EMULSUBDIR}/usr/local/man/man4
+@dirrm ${EMULSUBDIR}/usr/local/man/man3
+@dirrm ${EMULSUBDIR}/usr/local/man/man2
+@dirrm ${EMULSUBDIR}/usr/local/man/man1
+@dirrm ${EMULSUBDIR}/usr/local/man/catn
+@dirrm ${EMULSUBDIR}/usr/local/man/cat9
+@dirrm ${EMULSUBDIR}/usr/local/man/cat8
+@dirrm ${EMULSUBDIR}/usr/local/man/cat7
+@dirrm ${EMULSUBDIR}/usr/local/man/cat6
+@dirrm ${EMULSUBDIR}/usr/local/man/cat5
+@dirrm ${EMULSUBDIR}/usr/local/man/cat4
+@dirrm ${EMULSUBDIR}/usr/local/man/cat3
+@dirrm ${EMULSUBDIR}/usr/local/man/cat2
+@dirrm ${EMULSUBDIR}/usr/local/man/cat1
+@dirrm ${EMULSUBDIR}/usr/local/man
+@dirrm ${EMULSUBDIR}/usr/local/lib
+@dirrm ${EMULSUBDIR}/usr/local/info
+@dirrm ${EMULSUBDIR}/usr/local/include
+@dirrm ${EMULSUBDIR}/usr/local/games
+@dirrm ${EMULSUBDIR}/usr/local/etc
+@dirrm ${EMULSUBDIR}/usr/local/bin
+@dirrm ${EMULSUBDIR}/usr/local
+@dirrm ${EMULSUBDIR}/usr/lib
+@dirrm ${EMULSUBDIR}/usr/info
+@dirrm ${EMULSUBDIR}/usr/include
+@dirrm ${EMULSUBDIR}/usr/etc
+@dirrm ${EMULSUBDIR}/usr/doc
+@dirrm ${EMULSUBDIR}/usr/dict
+@dirrm ${EMULSUBDIR}/usr/bin
+@dirrm ${EMULSUBDIR}/usr/X11R6/man/mann
+@dirrm ${EMULSUBDIR}/usr/X11R6/man/man9
+@dirrm ${EMULSUBDIR}/usr/X11R6/man/man8
+@dirrm ${EMULSUBDIR}/usr/X11R6/man/man7
+@dirrm ${EMULSUBDIR}/usr/X11R6/man/man6
+@dirrm ${EMULSUBDIR}/usr/X11R6/man/man5
+@dirrm ${EMULSUBDIR}/usr/X11R6/man/man4
+@dirrm ${EMULSUBDIR}/usr/X11R6/man/man3
+@dirrm ${EMULSUBDIR}/usr/X11R6/man/man2
+@dirrm ${EMULSUBDIR}/usr/X11R6/man/man1
+@dirrm ${EMULSUBDIR}/usr/X11R6/man
+@dirrm ${EMULSUBDIR}/usr/X11R6/lib/X11/fonts
+@dirrm ${EMULSUBDIR}/usr/X11R6/lib/X11
+@dirrm ${EMULSUBDIR}/usr/X11R6/lib
+@dirrm ${EMULSUBDIR}/usr/X11R6/include/X11
+@dirrm ${EMULSUBDIR}/usr/X11R6/include
+@dirrm ${EMULSUBDIR}/usr/X11R6/bin
+@dirrm ${EMULSUBDIR}/usr/X11R6
+@dirrm ${EMULSUBDIR}/usr
+@dirrm ${EMULSUBDIR}/tmp
+@dirrm ${EMULSUBDIR}/sbin
+@dirrm ${EMULSUBDIR}/root
+@dirrm ${EMULSUBDIR}/proc
+@dirrm ${EMULSUBDIR}/mnt/hd
+@dirrm ${EMULSUBDIR}/mnt/floppy
+@dirrm ${EMULSUBDIR}/mnt/cdrom
+@dirrm ${EMULSUBDIR}/mnt
+@dirrm ${EMULSUBDIR}/lib
+@dirrm ${EMULSUBDIR}/home
+@dirrm ${EMULSUBDIR}/etc/X11/xsm
+@dirrm ${EMULSUBDIR}/etc/X11/xserver
+@dirrm ${EMULSUBDIR}/etc/X11/xkb
+@dirrm ${EMULSUBDIR}/etc/X11/xinit
+@dirrm ${EMULSUBDIR}/etc/X11/xdm
+@dirrm ${EMULSUBDIR}/etc/X11/twm
+@dirrm ${EMULSUBDIR}/etc/X11/rstart
+@dirrm ${EMULSUBDIR}/etc/X11/proxymngr
+@dirrm ${EMULSUBDIR}/etc/X11/lbxproxy
+@dirrm ${EMULSUBDIR}/etc/X11/fs
+@dirrm ${EMULSUBDIR}/etc/X11/app-defaults
+@dirrm ${EMULSUBDIR}/etc/X11
+@dirrm ${EMULSUBDIR}/etc
+@dirrm ${EMULSUBDIR}/dev
+@dirrm ${EMULSUBDIR}/boot
+@dirrm ${EMULSUBDIR}/bin

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/12 12:42:37 mpasternak Exp $
+
+SHA1 (slackware/glibc-solibs-2.3.2-i486-5.tgz) = 2345352a7d558c163f350ec40432ce1b968cb08c
+Size (slackware/glibc-solibs-2.3.2-i486-5.tgz) = 1049244 bytes
+SHA1 (patch-aa) = f7a2dd894f65c61e1b1d9f51f2b95505f9d0b070

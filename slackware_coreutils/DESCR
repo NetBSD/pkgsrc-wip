@@ -1,0 +1,8 @@
+coreutils (core GNU utilities)
+
+These are the GNU core utilities, the basic command line programs
+such as 'mkdir', 'ls', and 'rm' that are needed for the system to
+run.  This package is the union of the GNU fileutils, sh-utils, and
+textutils packages.  Most of these programs have significant
+advantages over their Unix counterparts, such as greater speed,
+additional options, and fewer arbitrary limits.

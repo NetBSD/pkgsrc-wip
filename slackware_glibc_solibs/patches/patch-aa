@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/12 12:42:37 mpasternak Exp $
+
+--- install/doinst.sh.orig	Fri Mar 12 13:39:40 2004
++++ install/doinst.sh
+@@ -39,7 +39,7 @@ if [ -x /sbin/ldconfig -a -d /lib/incomi
+ else # no ldconfig?  Good, it's safe to just jam it on home (and make links below):
+   ( cd lib/incoming
+     for file in * ; do
+-      cp -a $file ..
++      cp $file ..
+     done
+   )
+ fi

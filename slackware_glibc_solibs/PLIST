@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/12 12:42:37 mpasternak Exp $
+${EMULSUBDIR}/etc/ld.so.conf
+${EMULSUBDIR}/lib/libSegFault.so
+${EMULSUBDIR}/lib/ld-2.3.2.so
+${EMULSUBDIR}/lib/libBrokenLocale-2.3.2.so
+${EMULSUBDIR}/lib/libanl-2.3.2.so
+${EMULSUBDIR}/lib/libc-2.3.2.so
+${EMULSUBDIR}/lib/libcrypt-2.3.2.so
+${EMULSUBDIR}/lib/libdl-2.3.2.so
+${EMULSUBDIR}/lib/libm-2.3.2.so
+${EMULSUBDIR}/lib/libmemusage.so
+${EMULSUBDIR}/lib/libnsl-2.3.2.so
+${EMULSUBDIR}/lib/libnss_compat-2.3.2.so
+${EMULSUBDIR}/lib/libnss_dns-2.3.2.so
+${EMULSUBDIR}/lib/libnss_files-2.3.2.so
+${EMULSUBDIR}/lib/libnss_hesiod-2.3.2.so
+${EMULSUBDIR}/lib/libnss_nis-2.3.2.so
+${EMULSUBDIR}/lib/libnss_nisplus-2.3.2.so
+${EMULSUBDIR}/lib/libpcprofile.so
+${EMULSUBDIR}/lib/libpthread-0.10.so
+${EMULSUBDIR}/lib/libresolv-2.3.2.so
+${EMULSUBDIR}/lib/librt-2.3.2.so
+${EMULSUBDIR}/lib/libthread_db-1.0.so
+${EMULSUBDIR}/lib/libutil-2.3.2.so
+${EMULSUBDIR}/sbin/ldconfig
+${EMULSUBDIR}/usr/bin/ldd
+${EMULSUBDIR}/usr/libexec/pt_chown

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/12 12:42:37 mpasternak Exp $
+${EMULSUBDIR}/bin/csh
+${EMULSUBDIR}/bin/tcsh
+${EMULSUBDIR}/usr/doc/tcsh-6.12.00/FAQ
+${EMULSUBDIR}/usr/doc/tcsh-6.12.00/Fixes
+${EMULSUBDIR}/usr/doc/tcsh-6.12.00/NewThings
+${EMULSUBDIR}/usr/doc/tcsh-6.12.00/Ported
+${EMULSUBDIR}/usr/doc/tcsh-6.12.00/README
+${EMULSUBDIR}/usr/doc/tcsh-6.12.00/README.imake
+${EMULSUBDIR}/usr/doc/tcsh-6.12.00/WishList
+${EMULSUBDIR}/usr/doc/tcsh-6.12.00/Y2K
+${EMULSUBDIR}/usr/man/man1/csh.1.gz
+${EMULSUBDIR}/usr/man/man1/tcsh.1.gz
+@dirrm ${EMULSUBDIR}/usr/doc/tcsh-6.12.00

@@ -1,0 +1,10 @@
+$Id: TODO,v 1.1.1.1 2004/03/12 12:42:35 mpasternak Exp $
+
+1) add MESSAGE for NetBSD
+
+2) why MESSAGE.FreeBSD is not displayed? pkgsrc bug?
+
+3) perhaps ldconfig could be run automatically, like suse_compat
+   does
+   
+	-- dotz@irc.pl

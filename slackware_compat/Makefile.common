@@ -1,0 +1,60 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/03/12 12:42:35 mpasternak Exp $
+# $Id: Makefile.common,v 1.1.1.1 2004/03/12 12:42:35 mpasternak Exp $
+#
+# (C) 2003 Michal Pasternak <dotz@irc.pl>
+
+#
+# TODO: add more MASTER_SITES
+#
+
+SLACKWARE_MASTER_SITES= \
+	ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/${SLACK_GROUP}/ \
+	ftp://sunsite.icm.edu.pl/pub/linux/slackware/slackware-current/slackware/${SLACK_GROUP}/
+
+#
+# SLACK_GROUP is a Slackware directory (on site), where .tgz exists
+#
+# For now, almost all packages we need are in "a" (applications):
+#
+
+SLACK_GROUP?=		a
+
+#
+# Don't clobber our distfile directory:
+#
+
+DIST_SUBDIR=		slackware
+
+#
+# ... and the mirror sites also:
+#
+
+NO_SRC_ON_FTP=		# defined
+NO_SRC_ON_CDROM=	# defined
+
+# 
+# Slackware, yes, you, and no other, baby...
+#
+
+CONFLICTS=		suse_compat-* suse_base-*
+
+#
+# for linuxbin.pkg.mk:
+#
+
+LINUX_BINPKG_FMT?=	slackware
+LINUX_BASE_REQUIRED=	slackware
+
+#
+# manpages are already compressed in Slackware packages
+#
+
+MANCOMPRESSED?=		yes
+
+#
+#
+#
+
+WRKSRC?=		${WRKDIR}
+
+.include "../../wip/mk/linuxbin.pkg.mk"

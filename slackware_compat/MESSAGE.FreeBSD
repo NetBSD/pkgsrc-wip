@@ -1,0 +1,26 @@
+===========================================================================
+$NetBSD: MESSAGE.FreeBSD,v 1.1.1.1 2004/03/12 12:42:35 mpasternak Exp $
+
+* Make sure you have Linux compatibility layer enabled! 
+
+* Please add:
+
+	linux_enable=YES
+	
+   to /etc/rc.conf to make Linux emulation start up at boot time
+   
+* If you want just to test this out, do:
+
+	kldload /modules/linux.ko
+	
+   To remove Linux support, use:
+   
+   	kldunload linux.ko
+	
+* Read about Linux compatibility for FreeBSD in FreeBSD Handbook:
+
+	http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/linuxemu.html
+
+* Have fun!
+
+===========================================================================

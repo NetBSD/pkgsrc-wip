@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/12 12:42:34 mpasternak Exp $
+${EMULSUBDIR}/bin/bash
+${EMULSUBDIR}/usr/doc/bash-2.05b/AUTHORS
+${EMULSUBDIR}/usr/doc/bash-2.05b/CHANGES
+${EMULSUBDIR}/usr/doc/bash-2.05b/COMPAT
+${EMULSUBDIR}/usr/doc/bash-2.05b/COPYING
+${EMULSUBDIR}/usr/doc/bash-2.05b/FAQ
+${EMULSUBDIR}/usr/doc/bash-2.05b/INSTALL
+${EMULSUBDIR}/usr/doc/bash-2.05b/INTRO
+${EMULSUBDIR}/usr/doc/bash-2.05b/MANIFEST
+${EMULSUBDIR}/usr/doc/bash-2.05b/NEWS
+${EMULSUBDIR}/usr/doc/bash-2.05b/NOTES
+${EMULSUBDIR}/usr/doc/bash-2.05b/README
+${EMULSUBDIR}/usr/doc/bash-2.05b/Y2K
+${EMULSUBDIR}/usr/doc/bash-2.05b/article.txt
+${EMULSUBDIR}/usr/info/bash.info.gz
+${EMULSUBDIR}/usr/man/man1/bash.1.gz
+${EMULSUBDIR}/usr/man/man1/builtins.1.gz
+${EMULSUBDIR}/usr/man/man1/rbash.1.gz
+@dirrm ${EMULSUBDIR}/usr/doc/bash-2.05b
+

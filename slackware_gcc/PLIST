@@ -1,0 +1,152 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/12 12:42:37 mpasternak Exp $
+${EMULSUBDIR}/install/doinst.sh
+${EMULSUBDIR}/install/slack-desc
+${EMULSUBDIR}/usr/bin/cpp
+${EMULSUBDIR}/usr/bin/gcc-3.3.3
+${EMULSUBDIR}/usr/bin/gccbug
+${EMULSUBDIR}/usr/bin/gcov
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/BUGS
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/COPYING
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/COPYING.LIB
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/ChangeLog
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/FAQ
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/INSTALL/README
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/INSTALL/binaries.html
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/INSTALL/build.html
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/INSTALL/configure.html
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/INSTALL/download.html
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/INSTALL/finalinstall.html
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/INSTALL/gfdl.html
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/INSTALL/index.html
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/INSTALL/old.html
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/INSTALL/specific.html
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/INSTALL/test.html
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/MAINTAINERS
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/README
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/README.SCO
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/bugs.html
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/faq.html
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/gcc/ABOUT-GCC-NLS
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/gcc/ABOUT-NLS
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/gcc/COPYING
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/gcc/COPYING.LIB
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/gcc/LANGUAGES
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/gcc/NEWS
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/gcc/README-fixinc
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/gcc/README.Portability
+${EMULSUBDIR}/usr/doc/gcc-3.3.3/gcc/SERVICE
+${EMULSUBDIR}/usr/include/ffi.h
+${EMULSUBDIR}/usr/include/ffi_mips.h
+${EMULSUBDIR}/usr/include/fficonfig.h
+${EMULSUBDIR}/usr/info/cpp.info.gz
+${EMULSUBDIR}/usr/info/cppinternals.info.gz
+${EMULSUBDIR}/usr/info/fastjar.info.gz
+${EMULSUBDIR}/usr/info/gcc.info.gz
+${EMULSUBDIR}/usr/info/gccint.info.gz
+${EMULSUBDIR}/usr/info/gnat-style.info.gz
+${EMULSUBDIR}/usr/info/gnat_rm.info.gz
+${EMULSUBDIR}/usr/info/gnat_ug_unx.info.gz
+${EMULSUBDIR}/usr/info/gnat_ug_vms.info.gz
+${EMULSUBDIR}/usr/info/gnat_ug_vxw.info.gz
+${EMULSUBDIR}/usr/info/gnat_ug_wnt.info.gz
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/cc1
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/collect2
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/crtbegin.o
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/crtbeginS.o
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/crtbeginT.o
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/crtend.o
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/crtendS.o
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/README
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/emmintrin.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/float.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/iso646.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/limits.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/mm.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/mmintrin.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/mozilla-1.6/dbm/ncompat.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/net/bpf.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/netatalk/phase2.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/pmmintrin.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/root/usr/X11R6/include/GL/glsmap.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/root/usr/X11R6/include/GL/glut.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/stdarg.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/stdbool.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/stddef.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/syslimits.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/unwind.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/varargs.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/xmmintrin.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/fixinc.sh
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/fixincl
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/gsyslimits.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include/README
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include/emmintrin.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include/float.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include/iso646.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include/limits.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include/mmintrin.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include/pmmintrin.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include/stdarg.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include/stdbool.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include/stddef.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include/unwind.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include/varargs.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include/xmmintrin.h
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/mkheaders
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/mkheaders.conf
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/libgcc.a
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/libgcc_eh.a
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/specs
+${EMULSUBDIR}/usr/lib/libffi-2.00-beta.so
+${EMULSUBDIR}/usr/lib/libffi.a
+${EMULSUBDIR}/usr/lib/libffi.la
+${EMULSUBDIR}/usr/lib/libgcc_s.so.1
+${EMULSUBDIR}/usr/man/man1/cpp.1.gz
+${EMULSUBDIR}/usr/man/man1/gcc.1.gz
+${EMULSUBDIR}/usr/man/man1/gcov.1.gz
+${EMULSUBDIR}/usr/man/man1/grepjar.1.gz
+${EMULSUBDIR}/usr/man/man1/jar.1.gz
+${EMULSUBDIR}/usr/man/man7/fsf-funding.7.gz
+${EMULSUBDIR}/usr/man/man7/gfdl.7.gz
+${EMULSUBDIR}/usr/man/man7/gpl.7.gz
+${EMULSUBDIR}/usr/share/locale/be/LC_MESSAGES/gcc.mo
+${EMULSUBDIR}/usr/share/locale/ca/LC_MESSAGES/gcc.mo
+${EMULSUBDIR}/usr/share/locale/da/LC_MESSAGES/gcc.mo
+${EMULSUBDIR}/usr/share/locale/de/LC_MESSAGES/gcc.mo
+${EMULSUBDIR}/usr/share/locale/de/LC_MESSAGES/libstdc++.mo
+${EMULSUBDIR}/usr/share/locale/el/LC_MESSAGES/gcc.mo
+${EMULSUBDIR}/usr/share/locale/es/LC_MESSAGES/gcc.mo
+${EMULSUBDIR}/usr/share/locale/fr/LC_MESSAGES/gcc.mo
+${EMULSUBDIR}/usr/share/locale/fr/LC_MESSAGES/libstdc++.mo
+${EMULSUBDIR}/usr/share/locale/ja/LC_MESSAGES/gcc.mo
+${EMULSUBDIR}/usr/share/locale/nl/LC_MESSAGES/gcc.mo
+${EMULSUBDIR}/usr/share/locale/sv/LC_MESSAGES/gcc.mo
+${EMULSUBDIR}/usr/share/locale/tr/LC_MESSAGES/gcc.mo
+${EMULSUBDIR}/lib/cpp
+${EMULSUBDIR}/usr/bin/cc
+${EMULSUBDIR}/usr/bin/gcc
+${EMULSUBDIR}/usr/bin/i486-slackware-linux-gcc
+${EMULSUBDIR}/usr/bin/i486-slackware-linux-gcc-3.3.3
+${EMULSUBDIR}/usr/bin/i486-slackware-linux-gcj
+${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/GL
+${EMULSUBDIR}/usr/lib/libffi.so
+${EMULSUBDIR}/usr/lib/libgcc_s.so
+${EMULSUBDIR}/usr/man/man1/cc.1.gz
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools/include
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/install-tools
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/root/usr/X11R6/include/GL
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/root/usr/X11R6/include
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/root/usr/X11R6
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/root/usr
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/root
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/netatalk
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/net
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/mozilla-1.6/dbm
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include/mozilla-1.6
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3/include
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux/3.3.3
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib/i486-slackware-linux
+@dirrm ${EMULSUBDIR}/usr/lib/gcc-lib
+@dirrm ${EMULSUBDIR}/usr/doc/gcc-3.3.3/gcc
+@dirrm ${EMULSUBDIR}/usr/doc/gcc-3.3.3/INSTALL
+@dirrm ${EMULSUBDIR}/usr/doc/gcc-3.3.3
