@@ -1,5 +1,4 @@
-# 
-# $NetBSD: Makefile,v 1.5 2003/07/21 23:50:20 tripledes Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/17 16:04:09 jmmv Exp $
 #
 
 DISTNAME=		openvpn-1.4.2
@@ -10,28 +9,28 @@ MAINTAINER=		tripledes@eslack.org
 HOMEPAGE=		http://openvpn.sourceforge.net/
 COMMENT=		Robust and highly configurable VPN
 
-GNU_CONFIGURE=          yes
-USE_PKGINSTALL=		YES
+GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-CONFIGURE_ARGS+= 	--enable-pthread
+USE_PKGINSTALL=		YES
 
-DOC_FILES=		AUTHORS COPYING COPYRIGHT.GPL ChangeLog NEWS PORTS README
-SAMPLE_FILES=		sample-config-files sample-keys
+CONFIGURE_ARGS+= 	--enable-pthread
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/openvpn
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/openvpn
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/openvpn/config
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/openvpn/keys
-
-	for docfiles in ${DOC_FILES}; do					 \
-		${INSTALL_DATA} ${WRKSRC}/$$docfiles ${PREFIX}/share/doc/openvpn;\
+	for f in AUTHORS COPYING COPYRIGHT.GPL ChangeLog NEWS PORTS README; do \
+		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/openvpn; \
+	done
+	for f in ${WRKSRC}/sample-config-files/*; do \
+		${INSTALL_DATA} $$f ${PREFIX}/share/examples/openvpn/config; \
+	done
+	for f in ${WRKSRC}/sample-keys/*; do \
+		${INSTALL_DATA} $$f ${PREFIX}/share/examples/openvpn/keys; \
 	done
 
-	${INSTALL_DATA} ${WRKSRC}/sample-config-files/* ${PREFIX}/share/examples/openvpn/config
-	${INSTALL_DATA} ${WRKSRC}/sample-keys/* ${PREFIX}/share/examples/openvpn/keys
-
-.include "../../security/openssl/buildlink2.mk"
 .include "../../archivers/liblzo/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
