@@ -1,9 +1,10 @@
-# $Id: Makefile,v 1.81 2003/04/14 05:30:39 xtraeme Exp $
-# $NetBSD: Makefile,v 1.81 2003/04/14 05:30:39 xtraeme Exp $
+# $Id: Makefile,v 1.82 2003/04/14 09:42:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.82 2003/04/14 09:42:12 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	PPower4
+SUBDIR+=	adodb
 SUBDIR+=	allegro
 SUBDIR+=	aolserver
 SUBDIR+=	ap-bandwidth
