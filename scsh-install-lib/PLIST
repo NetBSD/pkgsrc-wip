@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/15 20:54:04 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/15 22:46:55 airhead Exp $
 bin/scsh-install-pkg
-share/doc/scsh-0.6/install-lib-1.${OS_VERSION}/pdf/install-lib.pdf
+share/doc/scsh-0.6/install-lib-1.2.0/pdf/install-lib.pdf
 share/scsh-0.6/modules/install-lib
-share/scsh-0.6/modules/install-lib-1.${OS_VERSION}/load.scm
-share/scsh-0.6/modules/install-lib-1.${OS_VERSION}/scheme/install-lib-module.scm
-share/scsh-0.6/modules/install-lib-1.${OS_VERSION}/scheme/install-lib-version.scm
-share/scsh-0.6/modules/install-lib-1.${OS_VERSION}/scheme/install-lib.scm
-@dirrm share/scsh-0.6/modules/install-lib-1.${OS_VERSION}/scheme
-@dirrm share/scsh-0.6/modules/install-lib-1.${OS_VERSION}
+share/scsh-0.6/modules/install-lib-1.2.0/load.scm
+share/scsh-0.6/modules/install-lib-1.2.0/scheme/install-lib-module.scm
+share/scsh-0.6/modules/install-lib-1.2.0/scheme/install-lib-version.scm
+share/scsh-0.6/modules/install-lib-1.2.0/scheme/install-lib.scm
+@dirrm share/scsh-0.6/modules/install-lib-1.2.0/scheme
+@dirrm share/scsh-0.6/modules/install-lib-1.2.0
 @dirrm share/scsh-0.6/modules
 @dirrm share/scsh-0.6
-@dirrm share/doc/scsh-0.6/install-lib-1.${OS_VERSION}/pdf
-@dirrm share/doc/scsh-0.6/install-lib-1.${OS_VERSION}
+@dirrm share/doc/scsh-0.6/install-lib-1.2.0/pdf
+@dirrm share/doc/scsh-0.6/install-lib-1.2.0
 @dirrm share/doc/scsh-0.6
