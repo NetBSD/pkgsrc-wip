@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/11/25 22:19:07 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/12/15 03:23:16 mpasternak Exp $
 bin/ckeygen
 bin/conch
 bin/im
@@ -105,7 +105,6 @@ ${PYSITELIB}/twisted/conch/ssh/service.py
 ${PYSITELIB}/twisted/conch/ssh/service.pyc
 ${PYSITELIB}/twisted/conch/ssh/service.pyo
 ${PYSITELIB}/twisted/conch/ssh/session.py
-${PYSITELIB}/twisted/conch/ssh/session.py.orig
 ${PYSITELIB}/twisted/conch/ssh/session.pyc
 ${PYSITELIB}/twisted/conch/ssh/session.pyo
 ${PYSITELIB}/twisted/conch/ssh/sexpy.py
