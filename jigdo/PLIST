@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/25 19:52:41 virtus Exp $
+bin/jigdo-file
+bin/jigdo-lite
+bin/jigdo-mirror
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/jigdo.mo
+share/jigdo/debian-mirrors.jigdo
+man/man1/jigdo-file.1
+man/man1/jigdo-lite.1
+man/man1/jigdo-mirror.1
+@dirrm share/jigdo

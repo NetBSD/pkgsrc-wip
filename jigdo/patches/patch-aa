@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/25 19:52:41 virtus Exp $
+
+--- src/cachefile.hh.orig	Tue Feb 12 16:36:16 2002
++++ src/cachefile.hh
+@@ -50,7 +50,7 @@ using namespace std;
+ #include <time.h> /* for time_t */
+ 
+ #if HAVE_LIBDB
+-#include <db.h>
++#include <db3/db.h>
+ #include <stdlib.h> /* free() */
+ #include <string.h> /* memcpy(), memset() */
+ 

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/25 19:52:41 virtus Exp $
+
+SHA1 (jigdo-0.6.9.tar.bz2) = db4d2ad3b07908ab77066d13913cc3c8e7d2566e
+Size (jigdo-0.6.9.tar.bz2) = 452609 bytes
+SHA1 (patch-aa) = ea4b978e6a3b29cc10894f2a8e3fb8213164f1d4
+SHA1 (patch-ab) = 6633b225f4ac53df4e9b68e4ce10681f45ec2d9d
