@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/28 07:55:51 bjan2 Exp $
+include/tilp/calc_def.h
+include/tilp/calc_err.h
+include/tilp/calc_int.h
+include/tilp/calc_ver.h
+include/tilp/headers.h
+include/tilp/intl2.h
+include/tilp/keys73.h
+include/tilp/keys83p.h
+include/tilp/keys89.h
+include/tilp/keys92p.h
+include/tilp/pause.h
+include/tilp/ticalcs.h
+include/tilp/tikeys.h
+include/tilp/update.h
+lib/libticalcs-4.a
+lib/libticalcs-4.la
+lib/libticalcs-4.so
+lib/libticalcs-4.so.4
+lib/libticalcs-4.so.4.9
+libdata/pkgconfig/ticalcs-4.pc
+man/man1/ticalcs-config.1
+@unexec ${RMDIR} libdata/pkgconfig >/dev/null 2>&1 || ${TRUE}
+@dirrm include/tilp
