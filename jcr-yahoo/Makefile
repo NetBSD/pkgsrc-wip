@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/29 00:03:16 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/01 20:44:16 schnoebe Exp $
 #
 
 DISTNAME=		yahoo-transport-2.3.2
@@ -37,14 +37,14 @@ CONF_FILES+=		${EGDIR}/yahoo-jcr.xml ${PKG_SYSCONFDIR}/yahoo-jcr.xml
 post-extract:
 	@${MV} ${XMLCONFIG} ${XMLCONFIG}.in
 
+pre-patch:
+	cd ${WRKDIR} ; ${PAX} -rw -pe ${DISTNAME} ${WRKSRC}
+
 pre-configure:
 	@${SED}	-e "s|\(<logdir>\)[^<]*|\1${JABBERD_LOGDIR}|g" \
 		-e "s|\(<pidfile>\).|\1${JABBERD_PIDDIR}|g" \
 		-e "s|\(<spool>\).|\1${JABBERD_SPOOLDIR}|g" \
 		${XMLCONFIG}.in > ${XMLCONFIG}
-
-pre-build:
-	cd ${WRKDIR} ; ${PAX} -rw -pe ${DISTNAME} ${WRKSRC}
 
 post-build:
 	# ${CP} ${WRKSRC}/src/main.c ${WRKSRC}/src/jcomp.mk ${SUBWRKSRC}

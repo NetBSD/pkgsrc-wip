@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2005/02/01 20:44:23 schnoebe Exp $
+
+--- yahoo-transport-2.3.2/yahoo-session.c.orig	2004-06-25 13:33:56.000000000 -0500
++++ yahoo-transport-2.3.2/yahoo-session.c
+@@ -80,12 +80,12 @@ void yahoo_new_session(char *who, jpacke
+       yd->registration_required = 1;
+       yd->connection_state = YAHOO_NOT_REGISTERED;
+       xhash_put(yi->user, j_strdup(jid_full(u)), (void *)yd);
+-   }
+ #ifdef _JCOMP
+-   g_mutex_unlock(yi->lock);
++      g_mutex_unlock(yi->lock);
+ #else
+-   pth_mutex_release(&yi->lock);
++      pth_mutex_release(&yi->lock);
+ #endif
++   }
+ }
+ 
+ 

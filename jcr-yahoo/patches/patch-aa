@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/02/01 20:44:22 schnoebe Exp $
+
+--- yahoo-transport-2.3.2/yahoo-presence.c.orig	2004-01-16 18:07:12.000000000 -0600
++++ yahoo-transport-2.3.2/yahoo-presence.c
+@@ -68,7 +68,7 @@ void yahoo_set_jabber_buddy(struct yahoo
+    p = pool_new();
+    yd->yi->stats->packets_out++;
+ 
+-   x = jutil_presnew(JPACKET__SUBSCRIBED, jid_full(yd->me), NULL);
++   x = jutil_presnew(JPACKET__SUBSCRIBE, jid_full(yd->me), NULL);
+    xmlnode_put_attrib(x, "from", spools(p, contact_name, "@", yd->yi->i->id, p));
+    xmlnode_put_attrib(x, "name", contact_name);
+    xmlnode_insert_cdata(xmlnode_insert_tag(x, "group"), group, -1);
