@@ -3,7 +3,9 @@
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/httpd/
+.if defined(MODNAME)
 	${INSTALL_DATA} ${WRKSRC}/modules/${MODNAME}.so \
 		${PREFIX}/lib/httpd/mod_${MODNAME}.so
+.endif
 
 .include "../../wip/php5/Makefile.common"
