@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/02 19:48:25 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/02 20:56:11 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -54,7 +54,9 @@ MESSAGE_SRC=	${WRKDIR}/LegalReadme.txt
 NO_MTREE=	YES # since we change PREFIX below
 OWN_DIRS=	${PREFIX} ${PREFIX}/jre ${PREFIX}/jre/lib \
 		${PREFIX}/jre/lib/images ${PREFIX}/jre/lib/images/cursors \
-		${PREFIX}/jre/lib/security
+		${PREFIX}/jre/lib/security \
+		${PREFIX}/jre/lib/applet ${PREFIX}/jre/lib/ext \
+		${PREFIX}/jre/plugin
 PLIST_SRC=	# added to below
 
 .include "../../mk/bsd.prefs.mk"
