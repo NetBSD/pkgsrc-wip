@@ -27,6 +27,26 @@
 	-IPREFIX/include \
 	-ILOCALBASE/include
 
+/* Common build of libs */
+
+#define NormalLibFSa	YES
+#define NormalLibICE	YES
+#define NormalLibPex	YES
+#define NormalLibPhigs	YES
+#define NormalLibSM	YES
+#define NormalLibX11i	YES
+#define NormalLibXau	YES
+#define NormalLibXaw	YES
+#define NormalLibXdmcp	YES
+#define NormalLibXext	YES
+#define NormalLibXi	YES
+#define NormalLibXie	YES       
+#define NormalLibXmu	YES
+#define NormalLibXt	YES
+#define NormalLibXtst	YES
+#define NormalLibXag	YES
+#define NormalOldX	YES
+
 #define UseInstalledPrograms YES
 
 #if !defined(FreeBSDArchitecture)

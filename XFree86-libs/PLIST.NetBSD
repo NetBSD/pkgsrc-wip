@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2003/07/24 04:07:33 xtraeme Exp $
+man/cat3/Xaw.0
+man/cat3/Xcursor.0 
+man/cat3/Xrandr.0
