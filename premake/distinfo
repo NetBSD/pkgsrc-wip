@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/22 16:51:29 poppnk Exp $
+
+SHA1 (premake-src-1.2.zip) = 62e1d5a0c3a032ccd0248b0efb17c989b7a78f74
+Size (premake-src-1.2.zip) = 134951 bytes
+SHA1 (patch-aa) = 4b7e5e36fd5a50cb68ac6ff4db6f0a3ee6989621
+SHA1 (patch-ab) = d29981b0e18c13a44e902271c3dda4e8e7f97d0e
