@@ -32,15 +32,11 @@
 #define HasPam NO
 #endif
 
-#ifdef LinuxArchitecture
-#define LdPostLib LDFLAGS
-#endif
-
 #define InstallXdmConfig YES
 #define InstallXinitConfig YES
 #define InstallAppDefFiles YES
 
-#define UsrLibDir BLNK/lib
+#define ExtraLoadFlags @LDFLAGS@
 #define LibInstallBuild  YES
 #define StandardIncludes -IBLNK/include
 #define DontUseLibPathVar YES
