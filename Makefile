@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.350 2003/07/29 13:57:52 jmmv Exp $
-# $NetBSD: Makefile,v 1.350 2003/07/29 13:57:52 jmmv Exp $
+# $Id: Makefile,v 1.351 2003/07/29 15:37:56 bencollver Exp $
+# $NetBSD: Makefile,v 1.351 2003/07/29 15:37:56 bencollver Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -61,6 +61,7 @@ SUBDIR+=	cops
 SUBDIR+=	cvsd
 SUBDIR+=	cyrus-imapd22
 SUBDIR+=	dancer-ircd
+SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darkice
 SUBDIR+=	devhelp
 SUBDIR+=	dfbpoint
@@ -283,7 +284,6 @@ SUBDIR+=	rosegarden-current
 SUBDIR+=	scm
 SUBDIR+=	scons
 SUBDIR+=	scponly
-SUBDIR+=	sdarcnes
 SUBDIR+=	shoutcast
 SUBDIR+=	slocate
 SUBDIR+=	slrn-pl
