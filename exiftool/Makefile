@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/09/14 23:58:06 lexort Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/15 17:40:21 lexort Exp $
 
 DISTNAME=	Image-ExifTool-3.49
 PKGNAME=	exiftool-3.49
+PKGREVISION=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://owl.phy.queensu.ca/~phil/exiftool/
 
