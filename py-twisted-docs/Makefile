@@ -1,7 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/23 00:27:30 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/15 03:24:11 mpasternak Exp $
 #
 
-PKGNAME=	py-twisted-docs-${TWISTED_VERSION}
+DISTNAME=		${TWISTED_DISTNAME}
+PKGNAME=		py-twisted-docs-${TWISTED_VERSION}
+CATEGORIES=		devel net
+MASTER_SITES=		${TWISTED_MASTER_SITES}
+
+MAINTAINER=		dotz@irc.pl
+HOMEPAGE=		http://www.twistedmatrix.com/
+COMMENT=		Framework for writing networked applications
 
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
