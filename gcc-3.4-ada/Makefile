@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/05/07 11:36:44 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.39 2004/05/07 16:46:30 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
@@ -16,8 +16,6 @@ GCC_VERSION=	3.4.0
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
-USE_MAKEINFO=		YES
-USE_NEW_TEXINFO=	YES
 HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=        --enable-languages="c,ada"
@@ -127,7 +125,5 @@ post-install:
 BUILDLINK_DEPMETHOD.gcc-3.4.0=	build
 .include "../../wip/gcc-3.4/buildlink3.mk"
 .endif
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
