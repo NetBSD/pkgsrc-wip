@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/13 05:00:32 ianzag Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/17 22:08:45 thomasklausner Exp $
 #
 
 DISTNAME=		g21k-binutils-PL4
-PKGNAME=		g21k-binutils
+PKGNAME=		g21k-binutils-0.4
 CATEGORIES=		lang
 MASTER_SITES=	ftp://ftp.kvaleberg.com/pub/
 
