@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/20 17:40:15 tvierling Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/20 20:46:22 tvierling Exp $
 #
 
 DISTNAME=	Sendmail-PMilter-0.90
@@ -13,7 +13,7 @@ COMMENT=	Pure-Perl Milter protocol API
 # Though it doesn't exist yet, just in case:
 CONFLICTS+=	p5-Sendmail-Milter-[0-9]*
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Sendmail/PMilter/.packlist
 PERL5_REQD+=	5.6.0
 

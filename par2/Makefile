@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/06 14:03:45 tvierling Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/20 20:39:03 tvierling Exp $
 #
 
 DISTNAME=		par2cmdline-0.3
@@ -10,7 +10,7 @@ MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://parchive.sourceforge.net/
 COMMENT=		Create or use PAR2 parity volumes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
