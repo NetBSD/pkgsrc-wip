@@ -1,74 +1,42 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/16 16:23:28 hubertf Exp $
-share/doc/prosper/AUTHORS
-share/doc/prosper/ChangeLog
-share/doc/prosper/FAQ
-share/doc/prosper/INSTALL
-share/doc/prosper/NEWS
-share/doc/prosper/README
-share/doc/prosper/TODO
-share/doc/prosper/TROUBLESHOOTINGS
-share/doc/prosper/compilation.eps
-share/doc/prosper/compilation.fig
-share/doc/prosper/prosper-doc.pdf
-share/doc/prosper/prosper-doc.tex
-share/doc/prosper/prosper-structure.eps
-share/doc/prosper/prosper-structure.fig
-share/doc/prosper/prosper-tour.pdf
-share/doc/prosper/prosper-tour.ps
-share/doc/prosper/prosper-tour.tex
-share/doc/prosper/rotation.ps
-share/doc/prosper/rotation.tex
-share/examples/prosper/Example.tex
-share/examples/prosper/ExampleAlienglow.ps
-share/examples/prosper/ExampleAlienglow.tex
-share/examples/prosper/ExampleAutumn.ps
-share/examples/prosper/ExampleAutumn.tex
-share/examples/prosper/ExampleAzure.ps
-share/examples/prosper/ExampleAzure.tex
-share/examples/prosper/ExampleContemporain.ps
-share/examples/prosper/ExampleContemporain.tex
-share/examples/prosper/ExampleDarkblue.ps
-share/examples/prosper/ExampleDarkblue.tex
-share/examples/prosper/ExampleFrames.ps
-share/examples/prosper/ExampleFrames.tex
-share/examples/prosper/ExampleLignesbleues.ps
-share/examples/prosper/ExampleLignesbleues.tex
-share/examples/prosper/ExampleNuanceGris.ps
-share/examples/prosper/ExampleNuanceGris.tex
-share/examples/prosper/ExampleTroisPoints.ps
-share/examples/prosper/ExampleTroisPoints.tex
-share/texmf/tex/latex/misc/prosper/contrib/img/angleHG.ps
-share/texmf/tex/latex/misc/prosper/contrib/img/barre-rico.ps
-share/texmf/tex/latex/misc/prosper/contrib/img/rico_bullet1.ps
-share/texmf/tex/latex/misc/prosper/contrib/img/rico_bullet2.ps
-share/texmf/tex/latex/misc/prosper/contrib/img/rico_bullet3.ps
-share/texmf/tex/latex/misc/prosper/contrib/PPRalcatel.sty
-share/texmf/tex/latex/misc/prosper/contrib/PPRblends.sty
-share/texmf/tex/latex/misc/prosper/contrib/PPRgyom.sty
-share/texmf/tex/latex/misc/prosper/contrib/PPRpascal.sty
-share/texmf/tex/latex/misc/prosper/contrib/PPRrico.sty
-share/texmf/tex/latex/misc/prosper/contrib/gyom.ps
-share/texmf/tex/latex/misc/prosper/contrib/rico.ps
-share/texmf/tex/latex/misc/prosper/contrib/gyom.tex
-share/texmf/tex/latex/misc/prosper/contrib/rico.tex
-share/texmf/tex/latex/misc/prosper/designer/prosper-template.jpg
-share/texmf/tex/latex/misc/prosper/designer/prosper.png
-share/texmf/tex/latex/misc/prosper/designer/prosper.ui
-share/texmf/tex/latex/misc/prosper/img/green-bullet-on-blue.gif
-share/texmf/tex/latex/misc/prosper/img/green-bullet-on-white.gif
-share/texmf/tex/latex/misc/prosper/img/red-bullet-on-blue.gif
-share/texmf/tex/latex/misc/prosper/img/red-bullet-on-white.gif
-share/texmf/tex/latex/misc/prosper/img/yellow-bullet-on-blue.gif
-share/texmf/tex/latex/misc/prosper/img/yellow-bullet-on-white.gif
-share/texmf/tex/latex/misc/prosper/img/arrow-glow.ps
-share/texmf/tex/latex/misc/prosper/img/bullet-glow.ps
-share/texmf/tex/latex/misc/prosper/img/green-bullet-on-blue.ps
-share/texmf/tex/latex/misc/prosper/img/green-bullet-on-white.ps
-share/texmf/tex/latex/misc/prosper/img/red-bullet-on-blue.ps
-share/texmf/tex/latex/misc/prosper/img/red-bullet-on-white.ps
-share/texmf/tex/latex/misc/prosper/img/rule-glow.ps
-share/texmf/tex/latex/misc/prosper/img/yellow-bullet-on-blue.ps
-share/texmf/tex/latex/misc/prosper/img/yellow-bullet-on-white.ps
+@comment $NetBSD: PLIST,v 1.3 2003/12/25 13:25:47 jmmv Exp $
+share/doc/tex-prosper/AUTHORS
+share/doc/tex-prosper/ChangeLog
+share/doc/tex-prosper/FAQ
+share/doc/tex-prosper/INSTALL
+share/doc/tex-prosper/NEWS
+share/doc/tex-prosper/README
+share/doc/tex-prosper/TODO
+share/doc/tex-prosper/TROUBLESHOOTINGS
+share/doc/tex-prosper/compilation.eps
+share/doc/tex-prosper/compilation.fig
+share/doc/tex-prosper/prosper-doc.pdf
+share/doc/tex-prosper/prosper-doc.tex
+share/doc/tex-prosper/prosper-structure.eps
+share/doc/tex-prosper/prosper-structure.fig
+share/doc/tex-prosper/prosper-tour.pdf
+share/doc/tex-prosper/prosper-tour.ps
+share/doc/tex-prosper/prosper-tour.tex
+share/doc/tex-prosper/rotation.ps
+share/doc/tex-prosper/rotation.tex
+share/examples/tex-prosper/Example.tex
+share/examples/tex-prosper/ExampleAlienglow.ps
+share/examples/tex-prosper/ExampleAlienglow.tex
+share/examples/tex-prosper/ExampleAutumn.ps
+share/examples/tex-prosper/ExampleAutumn.tex
+share/examples/tex-prosper/ExampleAzure.ps
+share/examples/tex-prosper/ExampleAzure.tex
+share/examples/tex-prosper/ExampleContemporain.ps
+share/examples/tex-prosper/ExampleContemporain.tex
+share/examples/tex-prosper/ExampleDarkblue.ps
+share/examples/tex-prosper/ExampleDarkblue.tex
+share/examples/tex-prosper/ExampleFrames.ps
+share/examples/tex-prosper/ExampleFrames.tex
+share/examples/tex-prosper/ExampleLignesbleues.ps
+share/examples/tex-prosper/ExampleLignesbleues.tex
+share/examples/tex-prosper/ExampleNuanceGris.ps
+share/examples/tex-prosper/ExampleNuanceGris.tex
+share/examples/tex-prosper/ExampleTroisPoints.ps
+share/examples/tex-prosper/ExampleTroisPoints.tex
 share/texmf/tex/latex/misc/prosper/PPRalienglow.sty
 share/texmf/tex/latex/misc/prosper/PPRautumn.sty
 share/texmf/tex/latex/misc/prosper/PPRazure.sty
@@ -79,13 +47,45 @@ share/texmf/tex/latex/misc/prosper/PPRframes.sty
 share/texmf/tex/latex/misc/prosper/PPRlignesbleues.sty
 share/texmf/tex/latex/misc/prosper/PPRnuancegris.sty
 share/texmf/tex/latex/misc/prosper/PPRtroispoints.sty
+share/texmf/tex/latex/misc/prosper/contrib/PPRalcatel.sty
+share/texmf/tex/latex/misc/prosper/contrib/PPRblends.sty
+share/texmf/tex/latex/misc/prosper/contrib/PPRgyom.sty
+share/texmf/tex/latex/misc/prosper/contrib/PPRpascal.sty
+share/texmf/tex/latex/misc/prosper/contrib/PPRrico.sty
+share/texmf/tex/latex/misc/prosper/contrib/gyom.ps
+share/texmf/tex/latex/misc/prosper/contrib/gyom.tex
+share/texmf/tex/latex/misc/prosper/contrib/img/angleHG.ps
+share/texmf/tex/latex/misc/prosper/contrib/img/barre-rico.ps
+share/texmf/tex/latex/misc/prosper/contrib/img/rico_bullet1.ps
+share/texmf/tex/latex/misc/prosper/contrib/img/rico_bullet2.ps
+share/texmf/tex/latex/misc/prosper/contrib/img/rico_bullet3.ps
+share/texmf/tex/latex/misc/prosper/contrib/rico.ps
+share/texmf/tex/latex/misc/prosper/contrib/rico.tex
+share/texmf/tex/latex/misc/prosper/designer/prosper-template.jpg
+share/texmf/tex/latex/misc/prosper/designer/prosper.png
+share/texmf/tex/latex/misc/prosper/designer/prosper.ui
+share/texmf/tex/latex/misc/prosper/img/arrow-glow.ps
+share/texmf/tex/latex/misc/prosper/img/bullet-glow.ps
+share/texmf/tex/latex/misc/prosper/img/green-bullet-on-blue.gif
+share/texmf/tex/latex/misc/prosper/img/green-bullet-on-blue.ps
+share/texmf/tex/latex/misc/prosper/img/green-bullet-on-white.gif
+share/texmf/tex/latex/misc/prosper/img/green-bullet-on-white.ps
+share/texmf/tex/latex/misc/prosper/img/red-bullet-on-blue.gif
+share/texmf/tex/latex/misc/prosper/img/red-bullet-on-blue.ps
+share/texmf/tex/latex/misc/prosper/img/red-bullet-on-white.gif
+share/texmf/tex/latex/misc/prosper/img/red-bullet-on-white.ps
+share/texmf/tex/latex/misc/prosper/img/rule-glow.ps
+share/texmf/tex/latex/misc/prosper/img/yellow-bullet-on-blue.gif
+share/texmf/tex/latex/misc/prosper/img/yellow-bullet-on-blue.ps
+share/texmf/tex/latex/misc/prosper/img/yellow-bullet-on-white.gif
+share/texmf/tex/latex/misc/prosper/img/yellow-bullet-on-white.ps
 share/texmf/tex/latex/misc/prosper/prosper.cls
-@dirrm share/doc/prosper
-@dirrm share/examples/prosper
+@dirrm share/texmf/tex/latex/misc/prosper/img
+@dirrm share/texmf/tex/latex/misc/prosper/designer
 @dirrm share/texmf/tex/latex/misc/prosper/contrib/img
 @dirrm share/texmf/tex/latex/misc/prosper/contrib
-@dirrm share/texmf/tex/latex/misc/prosper/designer
-@dirrm share/texmf/tex/latex/misc/prosper/img
 @dirrm share/texmf/tex/latex/misc/prosper
 @exec %D/bin/mktexlsr
 @unexec %D/bin/mktexlsr
+@dirrm share/examples/tex-prosper
+@dirrm share/doc/tex-prosper
