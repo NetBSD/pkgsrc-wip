@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1535 2004/11/12 22:47:31 xmor61 Exp $
-# $NetBSD: Makefile,v 1.1535 2004/11/12 22:47:31 xmor61 Exp $
+# $Id: Makefile,v 1.1536 2004/11/14 15:20:55 lexort Exp $
+# $NetBSD: Makefile,v 1.1536 2004/11/14 15:20:55 lexort Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -291,6 +291,7 @@ SUBDIR+=	java-xmlrpc
 SUBDIR+=	javascript-guide
 SUBDIR+=	javascript-reference
 SUBDIR+=	jdk14
+SUBDIR+=	jpegpixi
 SUBDIR+=	kahakai
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
