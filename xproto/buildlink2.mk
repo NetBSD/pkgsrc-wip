@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/11/28 04:54:33 jeremy-c-reed Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/01/25 22:44:54 minskim Exp $
 #
 # This Makefile fragment is included by packages that use xproto.
 #
@@ -15,6 +15,7 @@ BUILDLINK_PKGSRCDIR.xproto?=		../../wip/xproto
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xproto=xproto
 BUILDLINK_PREFIX.xproto_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.xproto+=	include/X11/X.h
+BUILDLINK_FILES.xproto+=	include/X11/XF86keysym.h
 BUILDLINK_FILES.xproto+=	include/X11/Xarch.h
 BUILDLINK_FILES.xproto+=	include/X11/Xatom.h
 BUILDLINK_FILES.xproto+=	include/X11/Xdefs.h
