@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile.common,v 1.2 2005/02/15 21:43:13 airhead Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/02/15 23:05:47 airhead Exp $
 #
 # Common Makefile for packages that are installed using scsh-install-lib
 #
@@ -10,7 +10,7 @@
 #
 SCSH_VERSION?=		0.6
 
-BUILD_DEPENDS+=		scsh=${SCSH_VERSION}:../../shells/scsh
+BUILD_DEPENDS+=		scsh-${SCSH_VERSION}.[0-9]:../../shells/scsh
 BUILD_DEPENDS+=		scsh-install-lib>=1:../../wip/scsh-install-lib
 
 SCSH_LIBPATH=		${PREFIX}/lib/scsh/share/scsh-${SCSH_VERSION}/modules
