@@ -1,0 +1,9 @@
+==========================================================================
+
+To be able to run EiC properly you will now need to set
+the environmental variable HOMEofEiC=${PREFIX}/EiC
+or where ever you have it installed and to make
+the docs you need latex,dvips,bibtex,makeindex
+
+
+==========================================================================
