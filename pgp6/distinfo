@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/08/15 16:51:52 tvierling Exp $
+$NetBSD: distinfo,v 1.4 2003/08/15 17:07:05 tvierling Exp $
 
 SHA1 (pgpsrc658unix.tar.gz) = aefc64e69419560653d143160ab81d046aa66bae
 Size (pgpsrc658unix.tar.gz) = 3633944 bytes
@@ -6,3 +6,4 @@ SHA1 (patch-aa) = ec4f3ecb7e94ba21b2b37540617d392fc6779822
 SHA1 (patch-ab) = 90e5b15293740f0da2d4ed10f639cba7affdd8b1
 SHA1 (patch-ac) = 30d63046ba76810818213e14101ecc84204602fa
 SHA1 (patch-ad) = c07ba9054d8585fba21019f20188461f7ab16a3f
+SHA1 (patch-ae) = cd9966076e142f118d3b53986a041f9678b55029

@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/15 15:25:50 tvierling Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/15 17:07:05 tvierling Exp $
 #
 
 DISTNAME=		pgpsrc658unix
 PKGNAME=		pgp6-6.5.8
+WRKSRC=			${WRKDIR}/pgpsrc
 CATEGORIES=		security
-MASTER_SITES=		ftp://ftp.pgpi.org/pub/pgp/6.5/6.5.8/
+.for C in no ch cz de dk es fi hu nl ru ua
+MASTER_SITES+=		ftp://ftp.$C.pgpi.org/pub/pgp/${PKGVERSION:R}/${PKGVERSION}/
+.endfor
 
 MAINTAINER=		tv@pobox.com
 HOMEPAGE=		http://www.pgpi.org/products/pgp/versions/freeware/unix/6.5.8/
 COMMENT=		Public-key encryption and digital signature utilities (v6)
 
-WRKSRC=			${WRKDIR}/pgpsrc
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
@@ -20,7 +22,7 @@ buildDIRS=		libs/pfl libs/pgpcdk clients/pgp/shared clients/pgp/cmdline
 ALL_TARGET=		headers all
 CONFIGURE_DIRS=		${buildDIRS:C|^|${WRKSRC}/|}
 BUILD_DIRS=		${buildDIRS:C|^|${WRKSRC}/|}
-MAKE_FLAGS+=		DEBUG=0 LDAP_DEBUG= RSALIBRARY=/nonexistent
+MAKE_FLAGS+=		DEBUG=0 LDAP_DEBUG=
 
 .include "../../mk/bsd.prefs.mk"
 
