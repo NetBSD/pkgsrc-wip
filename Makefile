@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.20 2003/04/03 09:43:52 bmeurer Exp $
-# $NetBSD: Makefile,v 1.20 2003/04/03 09:43:52 bmeurer Exp $
+# $Id: Makefile,v 1.21 2003/04/03 13:26:49 marc Exp $
+# $NetBSD: Makefile,v 1.21 2003/04/03 13:26:49 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -17,3 +17,4 @@ SUBDIR+=	pyPgSQL
 SUBDIR+=	pygtk2
 SUBDIR+=	pyorbit
 SUBDIR+=	tex-foiltex
+SUBDIR+=	chktex
