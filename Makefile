@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.142 2003/05/07 22:14:48 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.142 2003/05/07 22:14:48 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.143 2003/05/07 23:34:59 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.143 2003/05/07 23:34:59 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -121,6 +121,7 @@ SUBDIR+=	scponly
 SUBDIR+=	shoutcast
 SUBDIR+=	srvx
 SUBDIR+=	streamripper
+SUBDIR+=	sysklogd
 SUBDIR+=	tendra
 SUBDIR+=	tex-foiltex
 SUBDIR+=	totem
