@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/01/27 20:56:26 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/29 05:59:18 minskim Exp $
 #
 
-DISTNAME=		fixesext-2.0
+DISTNAME=		fixesext-2.0.1
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://freedesktop.org/~xlibs/dist/
+MASTER_SITES=		http://freedesktop.org/~xlibs/release/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		xtraeme@NetBSD.org

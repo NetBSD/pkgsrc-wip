@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/27 01:20:07 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/01/29 05:59:19 minskim Exp $
 
-SHA1 (fixesext-2.0.tar.bz2) = 64d47b511ebc2d749263f27c6a9891389d3f8921
-Size (fixesext-2.0.tar.bz2) = 44323 bytes
+SHA1 (fixesext-2.0.1.tar.bz2) = 0a7b2cb8e9a8ad470eb83d9851ddd644b9e03f65
+Size (fixesext-2.0.1.tar.bz2) = 44335 bytes
