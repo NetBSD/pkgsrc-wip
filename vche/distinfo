@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/14 22:17:17 poppnk Exp $
+
+SHA1 (vche-1.7.2.tar.gz) = e2071b8180af5bba937c556dd224f8dc22cf2f08
+Size (vche-1.7.2.tar.gz) = 44248 bytes
+SHA1 (patch-aa) = bbe56d89059d29c9b84f75a8e9a6ee9cb51ab5e2

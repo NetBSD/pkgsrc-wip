@@ -1,0 +1,7 @@
+It's a hex editor which lets you see all 256 characters
+as found in video ROM, even control and extended ASCII,
+it uses the /dev/vcsa* devices to do it.
+It also could edit non-regular files, like hard disks,
+floppies, CDROMs, ZIPs, RAM, and almost any device.
+It comes with a ncurses and a raw version for people
+who work under X or remotely.
