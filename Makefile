@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1664 2005/02/25 21:40:09 daprice Exp $
-# $NetBSD: Makefile,v 1.1664 2005/02/25 21:40:09 daprice Exp $
+# $Id: Makefile,v 1.1665 2005/02/26 02:09:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1665 2005/02/26 02:09:32 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -611,7 +611,6 @@ SUBDIR+=	p5-Crypt-SmbHash
 SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Devel-Profiler
 SUBDIR+=	p5-Encode-compat
-SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-HTML-Latex
