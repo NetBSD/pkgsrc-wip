@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2004/08/05 02:40:58 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/18 17:27:03 jeremy-c-reed Exp $
 
-DISTNAME=		shadow-4.0.3
-PKGREVISION=		3
+DISTNAME=		shadow-4.0.4.1
 CATEGORIES=		sysutils devel
 MASTER_SITES=		ftp://ftp.pld.org.pl/software/shadow/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,17 +16,17 @@ GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
-# Global and legacy options
-.if defined(USE_PAM) || defined(USE_LIBCRACK)
-.  if !defined(PKG_OPTIONS.shadow)
-.    if defined(USE_PAM)
-PKG_OPTIONS.shadow+=	PAM
-.    endif
-.    if defined(USE_LIBCRACK) && !empty(USE_LIBCRACK:M[yY][eE][sS])
-PKG_OPTIONS.shadow+=	libcrack
-.    endif
-.  endif
+.if defined(USE_PAM) && !empty(USE_PAM:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	PAM
 .endif
+
+.if defined(USE_LIBCRACK) && !empty(USE_LIBCRACK:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	libcrack
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.shadow
+PKG_SUPPORTED_OPTIONS=	PAM libcrack
+.include "../../mk/bsd.options.mk"
 
 ###
 ### PAM support.
@@ -35,8 +34,13 @@ PKG_OPTIONS.shadow+=	libcrack
 .if !empty(PKG_OPTIONS:MPAM)
 .  include "../../security/PAM/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libpam
+MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+MESSAGE_SUBST+=		EGDIR=${EGDIR}
+PLIST_SUBST+=		PAM=
 .else
 CONFIGURE_ARGS+=	--without-libpam
+PLIST_SUBST+=		PAM="@comment"
 .endif
 
 ###
@@ -49,4 +53,12 @@ CONFIGURE_ARGS+=	--with-libcrack
 CONFIGURE_ARGS+=	--without-libcrack
 .endif
 
+.if !empty(PKG_OPTIONS:MPAM)
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/shadow.pam ${EGDIR}/
+	${INSTALL_DATA} ${FILESDIR}/useradd.pam ${EGDIR}/
+.endif
+
 .include "../../mk/bsd.pkg.mk"
+

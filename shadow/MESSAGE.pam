@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE.pam,v 1.1 2004/10/18 17:27:03 jeremy-c-reed Exp $
+
+To use the shadow package tools, like useradd, groupdel, et cetera,
+with PAM, consider adding the contents of these files:
+
+	${EGDIR}/useradd.pam
+
+	${EGDIR}/shadow.pam
+
+to your PAM configuration file (or PAM configuration directory).
+
+===========================================================================

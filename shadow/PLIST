@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/23 06:00:01 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/10/18 17:27:03 jeremy-c-reed Exp $
 bin/chage
 bin/chfn
 bin/chsh
@@ -12,15 +12,24 @@ bin/newgrp
 bin/passwd
 bin/sg
 bin/su
+bin/vigr
 lib/libmisc.la
 lib/libshadow.la
+man/cs/man1/id.1
 man/cs/man5/passwd.5
 man/cs/man5/shadow.5
+man/de/man1/chfn.1
 man/de/man1/chsh.1
+man/de/man1/groups.1
+man/de/man1/login.1
 man/de/man1/passwd.1
+man/es/man1/login.1
+man/es/man1/passwd.1
+man/es/man1/su.1
 man/fr/man1/chage.1
 man/fr/man1/chsh.1
 man/fr/man1/gpasswd.1
+man/fr/man1/groups.1
 man/fr/man1/newgrp.1
 man/fr/man1/passwd.1
 man/fr/man5/faillog.5
@@ -33,10 +42,12 @@ man/fr/man8/userdel.8
 man/fr/man8/usermod.8
 man/hu/man1/chsh.1
 man/hu/man1/gpasswd.1
+man/hu/man1/groups.1
 man/hu/man1/login.1
 man/hu/man1/newgrp.1
 man/hu/man1/passwd.1
 man/hu/man1/sg.1
+man/hu/man1/su.1
 man/id/man1/chsh.1
 man/id/man1/login.1
 man/id/man8/adduser.8
@@ -68,7 +79,9 @@ man/it/man8/vipw.8
 man/ja/man1/chage.1
 man/ja/man1/chfn.1
 man/ja/man1/chsh.1
+man/ja/man1/expiry.1
 man/ja/man1/gpasswd.1
+man/ja/man1/groups.1
 man/ja/man1/login.1
 man/ja/man1/newgrp.1
 man/ja/man1/passwd.1
@@ -105,6 +118,7 @@ man/ja/man8/vigr.8
 man/ja/man8/vipw.8
 man/ko/man1/chfn.1
 man/ko/man1/chsh.1
+man/ko/man1/groups.1
 man/ko/man1/login.1
 man/ko/man1/newgrp.1
 man/ko/man5/passwd.5
@@ -113,12 +127,12 @@ man/man1/chfn.1
 man/man1/chsh.1
 man/man1/expiry.1
 man/man1/gpasswd.1
+man/man1/groups.1
 man/man1/login.1
 man/man1/newgrp.1
 man/man1/passwd.1
 man/man1/sg.1
 man/man1/su.1
-man/man3/getspnam.3
 man/man5/faillog.5
 man/man5/limits.5
 man/man5/login.access.5
@@ -153,12 +167,12 @@ man/pl/man1/chfn.1
 man/pl/man1/chsh.1
 man/pl/man1/expiry.1
 man/pl/man1/gpasswd.1
+man/pl/man1/groups.1
 man/pl/man1/login.1
 man/pl/man1/newgrp.1
 man/pl/man1/passwd.1
 man/pl/man1/sg.1
 man/pl/man1/su.1
-man/pl/man5/d_passwd.5
 man/pl/man5/faillog.5
 man/pl/man5/limits.5
 man/pl/man5/login.access.5
@@ -193,8 +207,25 @@ man/pt_BR/man5/shadow.5
 man/pt_BR/man8/groupadd.8
 man/pt_BR/man8/groupdel.8
 man/pt_BR/man8/groupmod.8
+man/ru/man5/passwd.5
+man/zh_CN/man1/chfn.1
+man/zh_CN/man1/chsh.1
+man/zh_CN/man8/chpasswd.8
+man/zh_CN/man8/groupadd.8
+man/zh_CN/man8/groupdel.8
+man/zh_CN/man8/groupmod.8
+man/zh_CN/man8/useradd.8
+man/zh_CN/man8/userdel.8
+man/zh_CN/man8/usermod.8
+man/zh_TW/man1/chfn.1
+man/zh_TW/man1/chsh.1
+man/zh_TW/man8/groupadd.8
+man/zh_TW/man8/groupdel.8
+man/zh_TW/man8/groupmod.8
+man/zh_TW/man8/useradd.8
+man/zh_TW/man8/userdel.8
+man/zh_TW/man8/usermod.8
 sbin/chpasswd
-sbin/dpasswd
 sbin/groupadd
 sbin/groupdel
 sbin/groupmod
@@ -210,8 +241,9 @@ sbin/pwunconv
 sbin/useradd
 sbin/userdel
 sbin/usermod
-sbin/vigr
 sbin/vipw
+${PAM}share/examples/shadow/shadow.pam
+${PAM}share/examples/shadow/useradd.pam
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/shadow.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/shadow.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/shadow.mo
@@ -219,5 +251,7 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/shadow.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/shadow.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/shadow.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/shadow.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/shadow.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/shadow.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/shadow.mo
+${PAM}@dirrm share/examples/shadow
