@@ -1,4 +1,0 @@
-$Id: TODO,v 1.1.1.1 2003/06/05 15:33:54 bubuchka Exp $
-
-Workaround the warning "locale not supported by C library, locale
-unchanged" (setlocale of "en_US" in the xcircuit-3.1.?/xcircuit.c)
