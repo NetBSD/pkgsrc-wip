@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.382 2003/08/19 07:36:28 xtraeme Exp $
-# $NetBSD: Makefile,v 1.382 2003/08/19 07:36:28 xtraeme Exp $
+# $Id: Makefile,v 1.383 2003/08/20 09:09:28 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.383 2003/08/20 09:09:28 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -190,6 +190,7 @@ SUBDIR+=	lmarbles
 SUBDIR+=	loudmouth
 SUBDIR+=	mailfilter
 SUBDIR+=	mailman21
+SUBDIR+=	man-db
 SUBDIR+=	maradns
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
