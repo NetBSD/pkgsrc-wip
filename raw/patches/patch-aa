@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/05/09 19:25:46 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2004/05/14 15:40:49 dillo Exp $
 
 This includes sound-20040508.diff from the master site.
 
@@ -9,7 +9,7 @@ This includes sound-20040508.diff from the master site.
  SDL_LIBS = `sdl-config --libs`
  
 -DEFINES = -DLITTLE_ENDIAN
-+DEFINES = -DSYS_LITTLE_ENDIAN -DBYPASS_PROTECTION
++DEFINES = -DBYPASS_PROTECTION
  
 -CXX = g++
 -CXXFLAGS:= -g -O2 -Wall -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wstrict-prototypes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/09 19:25:46 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/14 15:40:38 dillo Exp $
 #
 
 DISTNAME=		raw-0.1.0
@@ -12,6 +12,15 @@ COMMENT=		Engine for playing Another World
 
 USE_BUILDLINK3=		yes
 ALL_TARGET=		raw
+
+.include "../../mk/endian.mk"
+.if ${MACHINE_ENDIAN} == "big"
+CFLAGS+=	-DSYS_BIG_ENDIAN
+.elif ${MACHINE_ENDIAN} == "little"
+CFLAGS+=	-DSYS_LITTLE_ENDIAN
+.else
+BROKEN=       "Unknown endianness"
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/raw ${PREFIX}/bin
