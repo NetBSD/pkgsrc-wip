@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/06/11 20:43:52 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.50 2004/06/12 18:13:49 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -15,7 +15,7 @@ COMMENT=	This is the gcc 3.4 Ada compiler
 
 BUILD_USES_MSGFMT=	YES
 
-GCC_VERSION=	3.4-20040604
+GCC_VERSION=	3.4-20040611
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
@@ -49,7 +49,7 @@ PKG_SKIP_REASON=	"An Ada bootstrap compiler must be specified"
 .endif
 
 # Make location overridable, to allow ping-pong bootstraps.
-GCC34_DEFAULT_SUBPREFIX=	${DISTNAME}-ada
+GCC34_DEFAULT_SUBPREFIX=	gcc34-ada
 GCC34_INSTALLTO_SUBPREFIX?=	${GCC34_DEFAULT_SUBPREFIX}
 .if ${GCC34_INSTALLTO_SUBPREFIX} != ${GCC34_DEFAULT_SUBPREFIX}
 GCC34_PKGMODIF=		${GCC34_INSTALLTO_SUBPREFIX}
