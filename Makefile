@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1597 2005/01/07 11:27:43 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1597 2005/01/07 11:27:43 thomasklausner Exp $
+# $Id: Makefile,v 1.1598 2005/01/08 00:29:33 kristerw Exp $
+# $NetBSD: Makefile,v 1.1598 2005/01/08 00:29:33 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -244,6 +244,7 @@ SUBDIR+=	glibc
 SUBDIR+=	glide3
 SUBDIR+=	glkterm
 SUBDIR+=	glulxe
+SUBDIR+=	gmc2mid
 SUBDIR+=	gmfsk
 SUBDIR+=	gnome-alsamixer
 SUBDIR+=	gnome-bluetooth
@@ -483,6 +484,7 @@ SUBDIR+=	mesure
 SUBDIR+=	metatheme
 SUBDIR+=	mg-lsh
 SUBDIR+=	microcom
+SUBDIR+=	mid2gmc
 SUBDIR+=	ming
 SUBDIR+=	mingw
 SUBDIR+=	mingw-binutils
