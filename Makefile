@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.724 2003/12/03 18:55:39 xtraeme Exp $
-# $NetBSD: Makefile,v 1.724 2003/12/03 18:55:39 xtraeme Exp $
+# $Id: Makefile,v 1.725 2003/12/03 19:08:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.725 2003/12/03 19:08:32 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -104,7 +104,6 @@ SUBDIR+=	dasm
 SUBDIR+=	db2latex
 SUBDIR+=	dbf
 SUBDIR+=	dccserver
-SUBDIR+=	devIL
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dfm
@@ -393,8 +392,6 @@ SUBDIR+=	nikto
 SUBDIR+=	noip
 SUBDIR+=	nuppelvideo
 SUBDIR+=	obconf
-SUBDIR+=	ode
-SUBDIR+=	ogre
 SUBDIR+=	oinkmaster
 SUBDIR+=	opax
 SUBDIR+=	openbox3
