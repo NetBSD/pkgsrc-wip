@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/11 20:04:32 icmp Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:25 thomasklausner Exp $
 
 DISTNAME=	shoutcast-1-9-2-linux-glibc6
 PKGNAME=	shoutcast-1.9.2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.shoutcast.com/downloads/sc1-9-2/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.shoutcast.com/
 COMMENT=	Internet Streaming server for MP3 audio
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/16 16:06:58 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:26 thomasklausner Exp $
 
 DISTNAME=		linux.words.2
 PKGNAME=		words-2
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}/usr/dict
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=libs/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 #HOMEPAGE=
 COMMENT=		English word list
 

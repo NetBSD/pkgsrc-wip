@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 17:33:18 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/29 10:31:22 thomasklausner Exp $
 #
 
 DISTNAME=	liquidwar-5.5.9
 CATEGORIES=	games
 MASTER_SITES=	http://savannah.nongnu.org/download/liquidwar/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ufoot.org/liquidwar/
 COMMENT=	Unique multiplayer wargame
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/07 21:36:27 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:24 thomasklausner Exp $
 
 DISTNAME= 	portmap_4
 PKGNAME=	portmap-4
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.porcupine.org/pub/security/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	ftp://ftp.porcupine.org/pub/security/index.html
 COMMENT=	RPC portmapper with access control
 

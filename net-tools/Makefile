@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/07 22:12:54 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:23 thomasklausner Exp $
 
 DISTNAME=		net-tools-1.60
 CATEGORIES=		net sysutils
 MASTER_SITES=		http://www.tazenda.demon.co.uk/phil/net-tools/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 #HOMEPAGE
 COMMENT=		Network configuration and status tools for Linux
 

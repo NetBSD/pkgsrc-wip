@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/16 03:20:43 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:25 thomasklausner Exp $
 
 DISTNAME=		procps-3.0.5
 CATEGORIES=		sysutils
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=procps/}
 MASTER_SITES=		http://procps.sourceforge.net/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://procps.sourceforge.net/
 COMMENT=		The Linux /proc file system utilities
 

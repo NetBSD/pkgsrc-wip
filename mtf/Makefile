@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/20 15:11:22 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:23 thomasklausner Exp $
 # FreeBSD Id: ports/archivers/mtf/Makefile,v 1.1 2002/06/26 06:33:35 ijliao Exp
 
 DISTNAME=	mtf-0.2.1
@@ -6,7 +6,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/backup/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://layton-graphics.com/mtf/
 COMMENT=	Unix reader for the Microsoft Tape Format used by NT Backup
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/05/06 17:46:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/29 10:31:22 thomasklausner Exp $
 #
 
 DISTNAME=	ices-0.2.3
 CATEGORIES=	audio
 MASTER_SITES=	http://www.icecast.org/releases/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.icecast.org/
 COMMENT=	MP3/Vorbis encoder for icecast servers
 

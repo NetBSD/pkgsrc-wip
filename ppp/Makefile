@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/18 21:45:45 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:25 thomasklausner Exp $
 
 DISTNAME=	ppp-2.4.1
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.samba.org/ftp/ppp/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.samba.org/ppp/
 COMMENT=	Point-to-Point Protocol (PPP) over serial lines
 

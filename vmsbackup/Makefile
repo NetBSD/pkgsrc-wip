@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/20 15:14:16 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:26 thomasklausner Exp $
 #
 
 DISTNAME=	vmsbackup
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	http://garbo.uwasa.fi/pub/unix/vmsbackup/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://garbo.uwasa.fi/pub/unix/vmsbackup/
 COMMENT=	Utility to read VMS backup tapes
 

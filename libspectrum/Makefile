@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/21 09:11:16 moubctez Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:22 thomasklausner Exp $
 
 DISTNAME=	libspectrum-0.1.1
 PKGNAME=	${DISTNAME}
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.srcf.ucam.org/~pak21/spectrum/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.srcf.ucam.org/~pak21/spectrum/libspectrum.html
 COMMENT=	ZX Spectrum emulator file format library
 

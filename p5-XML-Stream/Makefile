@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/05/26 15:19:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2003/08/29 10:31:24 thomasklausner Exp $
 #
 
 DISTNAME=	XML-Stream-1.15
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/xmlstream/
 COMMENT=	XML::Stream provides you with access to XML Stream
 
