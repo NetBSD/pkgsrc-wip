@@ -1,0 +1,6 @@
+needs mozilla-gtkmozembed.pc
+different mozilla and firefox packages provide gtkmozembed
+but not all provide the pkg-config file
+this needs Mozilla built with Gtk+2
+
+this package has not been tested
