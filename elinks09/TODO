@@ -1,4 +1,1 @@
-One small problem: unless you create a ~/.elinks/hooks.lua file, you will
-get a warning message when you start elinks, although you will most likely
-only notice it if you use an xterm. Not much I can do about this within my
-remit as a packager.
+Make 256 color xterm feature work.
