@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/04/24 13:41:15 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/05/09 12:08:49 johnrshannon Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCC34_BUILDLINK3_MK:=  ${GCC34_BUILDLINK3_MK}+
@@ -14,6 +14,7 @@ BUILDLINK_PACKAGES+=    gcc34
 .if !empty(GCC34_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gcc34+=      gcc-3.4.0
 BUILDLINK_PKGSRCDIR.gcc34?=    ../../wip/gcc-3.4
+BUILDLINK_ENV+=	PATH=${PATH}:${LOCALBASE}/gcc-3.4.0/bin
 .endif  # GCC34_BUILDLINK3_MK
 
 BUILDLINK_PKGSRCDIR.gcc34?=     ../../wip/gcc-3.4
