@@ -1,5 +1,11 @@
 From project's WWW page:
 
+ViewCVS: Viewing CVS Repositories
+
+ViewCVS can browse directories, change logs, and specific revisions of
+files. It can display diffs between versions and show selections of files
+based on tags or branches. 
+
 Additional features over cvsweb:
   * Template support: you can now customize the look and feel of ViewCVS
     by editing the provided EZT templates, which are used to generate the 
