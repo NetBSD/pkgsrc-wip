@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/11/25 23:14:23 mpasternak Exp $
+
+SHA1 (leo-4.1-beta-4.zip) = c92148c29bc94ca1673d596a87de040c523f0b6c
+Size (leo-4.1-beta-4.zip) = 1609751 bytes
+SHA1 (patch-aa) = 3d056e97ae31dc3ce88b4c317548ba810001cc12

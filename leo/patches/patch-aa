@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/11/25 23:14:24 mpasternak Exp $
+
+--- install	Tue Oct 28 10:24:32 2003
++++ install.new	Tue Nov 25 23:58:49 2003
+@@ -33,7 +33,7 @@
+ ################################
+ # Variables for usage in this script.
+ ################################
+-LEO_PREFIX="/usr/local"
++LEO_PREFIX="${PREFIX}"
+ LEO_RUN_SCRIPT_SOURCE='./scripts/install/leo-script.txt'
+ LEO_RUN_SCRIPT_OUTPUT="${LEO_PREFIX}/bin/leo"
+ LEO_LIB_DIR="${LEO_PREFIX}/lib/leo"
+@@ -48,15 +48,6 @@
+ ################################
+ CURRENT_USER=$(whoami)
+ 
+-if [ "$CURRENT_USER" = "root" ] ; then
+-	echo ""
+-    echo Verified user is root
+-else
+-	echo ""
+-    echo You must be root to run this program
+-    exit 0;
+-fi    
+-   
+ ################################
+ # Step 2
+ # Make the directory structure
+@@ -126,7 +117,7 @@
+ echo ""
+ echo Creating startup script located at: $LEO_RUN_SCRIPT_OUTPUT
+ 
+-echo "python ${LEO_PREFIX}/lib/leo/src/leo.py \$1" > $LEO_RUN_SCRIPT_OUTPUT
++echo "${PYTHONBIN} ${LEO_PREFIX}/lib/leo/src/leo.py \$1" > $LEO_RUN_SCRIPT_OUTPUT
+ 
+ RESULTS=`chmod 755 $LEO_RUN_SCRIPT_OUTPUT`   
+    
+@@ -136,4 +127,4 @@
+ echo "      type 'leo filename.leo' to use it."   
+ echo "                                                 *****"
+ echo ""
+-exit 0;
+\ No newline at end of file
++exit 0;
