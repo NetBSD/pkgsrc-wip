@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.92 2003/04/16 09:29:57 cubidou Exp $
-# $NetBSD: Makefile,v 1.92 2003/04/16 09:29:57 cubidou Exp $
+# $Id: Makefile,v 1.93 2003/04/16 12:47:26 cubidou Exp $
+# $NetBSD: Makefile,v 1.93 2003/04/16 12:47:26 cubidou Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -23,6 +23,7 @@ SUBDIR+=	gkrellm2-launch
 SUBDIR+=	gkrellm2-leds
 SUBDIR+=	gkrellm2-server
 SUBDIR+=	gkrellm2-share
+SUBDIR+=	gkrellm2-snmp
 SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
 SUBDIR+=	golem
