@@ -1,0 +1,4 @@
+PyPE (Python Programmers Editor) was written in order to offer a lightweight
+but powerful editor for those of you who think emacs is too much and idle is
+too little. Syntax highlighting is included out of the box, as is multiple
+open documents via tabs.

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/19 23:17:45 mpasternak Exp $
+bin/pype.py-${PYVERSSUFFIX}
+${PYSITELIB}/pype/configuration.py
+${PYSITELIB}/pype/parsers.py
+${PYSITELIB}/pype/__init__.py
+@dirrm ${PYSITELIB}/pype
