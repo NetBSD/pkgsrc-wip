@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/15 11:45:26 marc Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/15 11:48:22 marc Exp $
 #
 
 DISTNAME=	gtk-sharp-0.10
@@ -37,5 +37,6 @@ post-patch:
 .include "../../graphics/librsvg2/buildlink2.mk"
 .include "../../lang/mono/buildlink2.mk"
 .include "../../www/libgtkhtml/buildlink2.mk"
+
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
