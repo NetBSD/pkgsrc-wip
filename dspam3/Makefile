@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/06/18 02:47:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.22 2004/06/18 12:13:18 adrian_p Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -44,6 +44,7 @@ BUILD_DEFS+=		DSPAM_USE_WEBMAIL
 BUILD_DEFS+=		DSPAM_HOMEDIR_DOTFILES
 BUILD_DEFS+=		DSPAM_USER DSPAM_GROUP
 BUILD_DEFS+=		DSPAM_BINMODE
+BUILD_DEFS+=		DSPAM_CGI_GRAPHS
 
 DSPAM_DELIVERY_AGENT?=		procmail
 DSPAM_DELIVERY_AGENT_ARGS?=	# empty
@@ -147,6 +148,10 @@ SUBST_MESSAGE.large=	"Fixing config options."
 
 .if defined(DSPAM_VIRTUAL_USERS) && !empty(DSPAM_VIRTUAL_USERS:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-virtual-users
+.endif
+
+.if defined(DSPAM_CGI_GRAPHS) && !empty(DSPAM_CGI_GRAPHS:M[Yy][Ee][Ss])
+DEPENDS+=	p5-GDGraph3d-[0-9]*:../../graphics/p5-GDGraph3d
 .endif
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE} \
