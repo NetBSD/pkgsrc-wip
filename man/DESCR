@@ -1,0 +1,11 @@
+This is the version of man written by John Eaton and maintained by
+Andries Brouwer.
+
+This man package provides a man pager that supports compressed
+pages, locales and message catalogs. It also includes makewhatis
+for creating the whatis database, apropos and whatis for searching
+the whatis database, man2dvi for formating manpages to DVI, and
+man2html for converting manpages to HTML.
+
+This package does not include the CGI scripts nor hman utility
+for web-based manpage viewing.

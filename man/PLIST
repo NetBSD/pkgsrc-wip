@@ -1,0 +1,177 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/02 07:09:26 jeremy-c-reed Exp $
+bin/apropos
+bin/man
+bin/man2dvi
+bin/man2html
+bin/whatis
+man/bg/man1/apropos.1
+man/bg/man1/man.1
+man/bg/man1/whatis.1
+man/bg/man5/man.conf.5
+man/cs/man1/apropos.1
+man/cs/man1/man.1
+man/cs/man1/whatis.1
+man/cs/man5/man.conf.5
+man/da/man1/apropos.1
+man/da/man1/man.1
+man/da/man1/whatis.1
+man/da/man5/man.conf.5
+man/de/man1/apropos.1
+man/de/man1/man.1
+man/de/man1/whatis.1
+man/de/man5/man.conf.5
+man/el/man1/apropos.1
+man/el/man1/man.1
+man/el/man1/whatis.1
+man/el/man5/man.conf.5
+man/el/man8/makewhatis.8
+man/es/man1/apropos.1
+man/es/man1/man.1
+man/es/man1/whatis.1
+man/es/man5/man.conf.5
+man/fi/man1/apropos.1
+man/fi/man1/man.1
+man/fi/man1/whatis.1
+man/fi/man5/man.conf.5
+man/fr/man1/apropos.1
+man/fr/man1/man.1
+man/fr/man1/whatis.1
+man/fr/man5/man.conf.5
+man/hr/man1/apropos.1
+man/hr/man1/man.1
+man/hr/man1/whatis.1
+man/hr/man5/man.conf.5
+man/it/man1/apropos.1
+man/it/man1/man.1
+man/it/man1/whatis.1
+man/it/man5/man.conf.5
+man/it/man8/makewhatis.8
+man/ja/man1/apropos.1
+man/ja/man1/man.1
+man/ja/man1/whatis.1
+man/ja/man5/man.conf.5
+man/ko/man1/apropos.1
+man/ko/man1/man.1
+man/ko/man1/whatis.1
+man/ko/man5/man.conf.5
+man/man1/apropos.1
+man/man1/man.1
+man/man1/man2html.1
+man/man1/whatis.1
+man/man5/man.conf.5
+man/man8/makewhatis.8
+man/nl/man1/apropos.1
+man/nl/man1/man.1
+man/nl/man1/whatis.1
+man/nl/man5/man.conf.5
+man/pl/man1/apropos.1
+man/pl/man1/man.1
+man/pl/man1/whatis.1
+man/pl/man5/man.conf.5
+man/pt/man1/apropos.1
+man/pt/man1/man.1
+man/pt/man1/whatis.1
+man/pt/man5/man.conf.5
+man/ro/man1/apropos.1
+man/ro/man1/man.1
+man/ro/man1/whatis.1
+man/ro/man5/man.conf.5
+man/ro/man8/makewhatis.8
+man/sl/man1/apropos.1
+man/sl/man1/man.1
+man/sl/man1/whatis.1
+man/sl/man5/man.conf.5
+sbin/makewhatis
+share/examples/man/man.conf
+${PKGLOCALEDIR}/locale/mess.bg.cat
+${PKGLOCALEDIR}/locale/mess.cs.cat
+${PKGLOCALEDIR}/locale/mess.da.cat
+${PKGLOCALEDIR}/locale/mess.de.cat
+${PKGLOCALEDIR}/locale/mess.el.cat
+${PKGLOCALEDIR}/locale/mess.en.cat
+${PKGLOCALEDIR}/locale/mess.es.cat
+${PKGLOCALEDIR}/locale/mess.fi.cat
+${PKGLOCALEDIR}/locale/mess.fr.cat
+${PKGLOCALEDIR}/locale/mess.hr.cat
+${PKGLOCALEDIR}/locale/mess.it.cat
+${PKGLOCALEDIR}/locale/mess.ja.cat
+${PKGLOCALEDIR}/locale/mess.ko.cat
+${PKGLOCALEDIR}/locale/mess.nl.cat
+${PKGLOCALEDIR}/locale/mess.pl.cat
+${PKGLOCALEDIR}/locale/mess.pt.cat
+${PKGLOCALEDIR}/locale/mess.ro.cat
+${PKGLOCALEDIR}/locale/mess.ru.cat
+${PKGLOCALEDIR}/locale/mess.sl.cat
+@dirrm share/examples/man
+@exec ${MKDIR} %D/man/sl/man8
+@dirrm man/sl/man8
+@dirrm man/sl/man5
+@dirrm man/sl/man1
+@dirrm man/sl
+@dirrm man/ro/man8
+@dirrm man/ro/man5
+@dirrm man/ro/man1
+@dirrm man/ro
+@exec ${MKDIR} %D/man/pt/man8
+@dirrm man/pt/man8
+@dirrm man/pt/man5
+@dirrm man/pt/man1
+@dirrm man/pt
+@dirrm man/pl/man5
+@dirrm man/pl/man1
+@exec ${MKDIR} %D/man/nl/man8
+@dirrm man/nl/man8
+@dirrm man/nl/man5
+@dirrm man/nl/man1
+@dirrm man/nl
+@dirrm man/man8
+@dirrm man/man5
+@dirrm man/man1
+@exec ${MKDIR} %D/man/ko/man8
+@dirrm man/ko/man8
+@dirrm man/ko/man5
+@dirrm man/ko/man1
+@dirrm man/ko
+@dirrm man/ja/man5
+@dirrm man/ja/man1
+@dirrm man/it/man8
+@dirrm man/it/man5
+@dirrm man/it/man1
+@exec ${MKDIR} %D/man/hr/man8
+@dirrm man/hr/man8
+@dirrm man/hr/man5
+@dirrm man/hr/man1
+@dirrm man/hr
+@dirrm man/fr/man5
+@dirrm man/fr/man1
+@exec ${MKDIR} %D/man/fi/man8
+@dirrm man/fi/man8
+@dirrm man/fi/man5
+@dirrm man/fi/man1
+@dirrm man/fi
+@dirrm man/es/man5
+@dirrm man/es/man1
+@dirrm man/el/man8
+@dirrm man/el/man5
+@dirrm man/el/man1
+@dirrm man/el
+@exec ${MKDIR} %D/man/de/man8
+@dirrm man/de/man8
+@dirrm man/de/man5
+@dirrm man/de/man1
+@dirrm man/de
+@exec ${MKDIR} %D/man/da/man8
+@dirrm man/da/man8
+@dirrm man/da/man5
+@dirrm man/da/man1
+@dirrm man/da
+@exec ${MKDIR} %D/man/cs/man8
+@dirrm man/cs/man8
+@dirrm man/cs/man5
+@dirrm man/cs/man1
+@dirrm man/cs
+@exec ${MKDIR} %D/man/bg/man8
+@dirrm man/bg/man8
+@dirrm man/bg/man5
+@dirrm man/bg/man1
+@dirrm man/bg

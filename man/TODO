@@ -1,0 +1,39 @@
+cache directories are hard-coded
+-=-=-=-
+maybe replace with BSD_INSTALL* commands
+
+-=-=-=-
+
+under NetBSD 1.6_STABLE:
+==== Making mess.ru.cat ====
+gencat: unrecognized escape sequence on line 63
+58 "\команда не выполнена:\n  %s\n"
+
+-=-=-=-=
+
+pkglint says:
+WARN: how about using ${MASTER_SITE_SUNSITE:=apps/doctools/man/} instead of "ftp://metalab.unc.edu/pub/Linux/apps/doctools/man/?
+
+-=-=-=
+
+can man-db share whatis database?
+if so maybe use same MAN_GROUP or user for the files.
+
+need to test makewhatis, apropos and whatis
+
+-=-=-=-=
+can't remove some man/XX/ directories because also used by shadow
+or other manpages
+-=-=-
+
+makewhatis manpage needs paths in it fixed
+
+-=-=-=-
+
+./configure: line 582: test: =: unary operator expected
+
+-=-=-=
+
+MESSAGE:
+run makewhatis to install whatis database(s). Run when ever adding new man
+pages

@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/02/02 07:09:26 jeremy-c-reed Exp $
+
+--- msgs/inst.sh.orig	2003-03-11 07:53:30.000000000 -0800
++++ msgs/inst.sh
+@@ -28,7 +28,6 @@ for j in $M; do
+   if [ -f $j ]; then
+     i=`echo $j | sed -e 's/mess.//; s/.cat//'`
+     dest=`echo $locdir | sed -e "s/%N/man/; s/%L/$i/"`
+-    dest=${PREFIX}$dest
+     echo "mkdir -p `dirname $dest`"
+     mkdir -p `dirname $dest`;
+     echo "install -c -m 644 $j $dest"

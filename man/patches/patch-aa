@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/02 07:09:26 jeremy-c-reed Exp $
+
+--- src/Makefile.in.orig	2005-01-07 17:56:13.000000000 -0800
++++ src/Makefile.in
+@@ -97,19 +97,19 @@ makewhatis: makewhatis.sh Makefile
+ 	    -e 's,%awk%,@awk@,' makewhatis.sh > makewhatis
+ 	chmod +x makewhatis
+ 
+-MANCONFIG=$(DESTDIR)$(PREFIX)@man_config_file@
++MANCONFIG=$(DESTDIR)@man_config_file@
+ 
+ install: all apropos whatis makewhatis
+-	mkdir -p $(DESTDIR)$(PREFIX)@bindir@
+-	$(INSTALL) -c @man_install_flags@ man $(DESTDIR)$(PREFIX)@man@
+-	$(INSTALL) -c -m 755 apropos $(DESTDIR)$(PREFIX)@apropos@
+-	$(INSTALL) -c -m 755 whatis $(DESTDIR)$(PREFIX)@whatis@
+-	$(INSTALL) -c -m 755 man2dvi $(DESTDIR)$(PREFIX)@man2dvi@
+-	mkdir -p $(DESTDIR)$(PREFIX)@sbindir@
+-	$(INSTALL) -c -m 754 makewhatis $(DESTDIR)$(PREFIX)@makewhatis@
+-	mkdir -p $(DESTDIR)$(PREFIX)@man_config_dir@
+-	if [ -f $(MANCONFIG) ]; then mv $(MANCONFIG) $(MANCONFIG).orig; fi
+-	$(INSTALL) -c -m 644 man.conf $(MANCONFIG)
++	mkdir -p $(DESTDIR)@bindir@
++	$(INSTALL) -c @man_install_flags@ man $(DESTDIR)@man@
++	$(INSTALL) -c -m 755 apropos $(DESTDIR)@apropos@
++	$(INSTALL) -c -m 755 whatis $(DESTDIR)@whatis@
++	$(INSTALL) -c -m 755 man2dvi $(DESTDIR)@man2dvi@
++	mkdir -p $(DESTDIR)@sbindir@
++	$(INSTALL) -c -m 754 makewhatis $(DESTDIR)@makewhatis@
++#	mkdir -p $(DESTDIR)@man_config_dir@
++#	if [ -f $(MANCONFIG) ]; then mv $(MANCONFIG) $(MANCONFIG).orig; fi
++#	$(INSTALL) -c -m 644 man.conf $(MANCONFIG)
+ 
+ clean:
+ 	rm -f *.o *~ core man apropos whatis makewhatis makemsg

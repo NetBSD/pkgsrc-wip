@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/02/02 07:09:26 jeremy-c-reed Exp $
+
+--- man/Makefile.in.orig	2004-07-15 08:36:03.000000000 -0700
++++ man/Makefile.in
+@@ -19,7 +19,7 @@ MAYBE8 = makewhatis
+ INSTALL = @INSTALL@ -c -m 644
+ 
+ # Where to put the manual pages.
+-mandir = $(DESTDIR)$(PREFIX)@mandir@$(SLANG)
++mandir = $(DESTDIR)@mandir@$(SLANG)
+ 
+ all:	$(ALL)
+ 	for i in $(MAYBE8); \
