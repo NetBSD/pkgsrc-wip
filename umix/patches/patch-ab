@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/04/13 14:37:02 cjep Exp $
+$NetBSD: patch-ab,v 1.2 2004/05/04 02:37:44 blef Exp $
 
---- src/error.c.orig	Thu Aug  1 12:00:49 2002
-+++ src/error.c
-@@ -30,6 +30,15 @@
+--- src/error.c.orig	2003-01-31 06:45:48.000000000 -0800
++++ src/error.c	2004-05-03 19:31:51.000000000 -0700
+@@ -31,6 +31,15 @@
  #include <sys/types.h>
  #include <sys/stat.h>
  
@@ -17,4 +17,4 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/04/13 14:37:02 cjep Exp $
 +
  #include "error.h"
  
- /* error handler */
+ /* internal error handler */

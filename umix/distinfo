@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/08/25 00:00:45 poppnk Exp $
+$NetBSD: distinfo,v 1.3 2004/05/04 02:37:44 blef Exp $
 
 SHA1 (umix-1.0.tar.gz) = ee24bf51bfb866bc42e314a69dc1150cf00a6dea
 Size (umix-1.0.tar.gz) = 192144 bytes
-SHA1 (patch-aa) = 63db1ba79da4e9af625b87a416a6e53dc6e1bd46
-SHA1 (patch-ab) = 85b503c0cdf8baf93a8fd43776aba57a5f39e546
+SHA1 (patch-ab) = b99ab1638669304cc17dcc1e516afac322042357
