@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2004/02/11 21:04:48 shattered Exp $
+$NetBSD: patch-aa,v 1.3 2004/03/27 18:55:40 shattered Exp $
 
---- Makefile.orig	2003-10-19 17:33:06.000000000 +0400
+--- Makefile.orig	2004-02-23 21:56:04.000000000 +0300
 +++ Makefile
-@@ -16,14 +16,12 @@ CFLAGS  = -W -Wall -Wshadow -Wstrict-pro
+@@ -14,14 +14,12 @@ CFLAGS  = -W -Wall -Wshadow -Wstrict-pro
+ #CFLAGS += -DBIGENDIAN
  #CFLAGS += -DALIGNMENT_WORKAROUND
  #CFLAGS += -DTABLE_LITTLEENDIAN
- #CFLAGS += -D__IA64__
 -CFLAGS += -DUSE_MMAP
 +#CFLAGS += -DUSE_MMAP
  
