@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/06 22:08:10 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/27 03:27:46 minskim Exp $
 #
 
 DISTNAME=		gramps-0.99
@@ -15,7 +15,7 @@ DEPENDS+=	yelp>=2.2:../../misc/yelp
 BUILD_DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
 .endif
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 #BUILD_USES_MSGFMT=	yes
@@ -33,8 +33,8 @@ PYTHON_VERSION_REQD=	23pth
 # WITHOUT either PIL or ImageMagick *YOU WILL NOT BE ABLE TO USE THUMBNAILS*
 
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../textproc/py-xml/buildlink2.mk"
-.include "../../x11/py-gtk2/buildlink2.mk"
-.include "../../x11/py-gnome2/buildlink2.mk"
+.include "../../textproc/py-xml/buildlink3.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../x11/py-gnome2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
