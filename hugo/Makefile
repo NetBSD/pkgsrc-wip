@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/05/02 21:39:50 blef Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/21 12:25:31 dillo Exp $
 #
 
 DISTNAME=	hugov30_unix_source
-PKGNAME=	hugo-3.0.06
-WRKSRC=		${WRKDIR}/hugov3.0.06
+PKGNAME=	hugo-3.0.07
 CATEGORIES=	games
 MASTER_SITES=	http://www.ifarchive.org/if-archive/programming/hugo/source/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} hugolib.zip
@@ -14,11 +13,13 @@ COMMENT=	Interactive fiction design system and interpreter
 
 SITES_hugolib.zip=http://www.ifarchive.org/if-archive/programming/hugo/library/
 
+DIST_SUBDIR=	${PKGNAME_NOREV}
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 # uses halfkey (present since 1.6M)
 INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]* NetBSD-1.5* NetBSD-1.6 NetBSD-1.6.*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*
+WRKSRC=		${WRKDIR}/hugov3.0.07
 
 LIBDIR=		${PREFIX}/share/hugo
 
