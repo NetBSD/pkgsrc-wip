@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/18 22:11:41 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/18 22:17:57 poppnk Exp $
 #
 
 DISTNAME=		and-1.2.0
-CATEGORIES=		wip
+CATEGORIES=		wip sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=and/}
 
 MAINTAINER=		pancake@phreaker.net
