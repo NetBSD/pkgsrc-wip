@@ -1,11 +1,16 @@
-$Id: TODO,v 1.4 2004/01/04 11:45:04 mpasternak Exp $
+$Id: TODO,v 1.5 2004/01/04 12:48:44 mpasternak Exp $
 
 Check the fantastic PLIST twice. You can even sort it.
+
+Check if my fantastic local_config.py.example -> etc/freevo/local_config.py
+is done the right way.
 
 E-mail:
 	http://sourceforge.net/mail/?group_id=46652	
 and ask for NetBSD (pkgsrc) package placement at:
 	http://freevo.sourceforge.net/install.html
 _when_ it works. No earlier.
+
+Current crash reason: pygame draw module not available (on fbsd at least)
 
 	-- dotz@irc.pl

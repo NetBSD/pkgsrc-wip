@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2004/01/04 11:45:04 mpasternak Exp $
+$NetBSD: patch-ab,v 1.2 2004/01/04 12:48:44 mpasternak Exp $
 
 --- src/config.py.orig	Sun Dec 14 16:54:14 2003
-+++ src/config.py	Sun Jan  4 11:44:45 2004
++++ src/config.py	Sun Jan  4 12:35:21 2004
 @@ -95,7 +95,8 @@
  import __builtin__
  import version
@@ -20,4 +20,13 @@ $NetBSD: patch-ab,v 1.1 2004/01/04 11:45:04 mpasternak Exp $
 +if PYTHON_VERSION < 2.3:
      __builtin__.__dict__['True']  = 1
      __builtin__.__dict__['False'] = 0
+ 
+@@ -318,7 +319,7 @@
+ #
+ # Config file handling
+ #
+-cfgfilepath = [ '.', os.path.expanduser('~/.freevo'), '/etc/freevo',
++cfgfilepath = [ '.', os.path.expanduser('~/.freevo'), os.path.join(os.environ.get("PKGSRC_SYSCONF_DIR", "/usr/pkg/etc"), "freevo"), '/etc/freevo',
+                 '/usr/local/etc/freevo' ]
+ 
  

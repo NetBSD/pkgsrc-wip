@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/04 11:36:14 mpasternak Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/04 12:48:44 mpasternak Exp $
 #
 
 DISTNAME=		freevo-1.4.1
@@ -15,15 +15,29 @@ USE_BUILDLINK2=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
+PKG_SYSCONFSUBDIR=	freevo
+CONF_FILES=		${PKG_SYSCONFDIR}/local_conf.py
+
+# well, this could be propably done better way I can't think of
+# 	-- dotz@irc.pl
+
 post-patch:
 	${CP} ${WRKSRC}/freevo ${WRKSRC}/freevo.pre
 	sed -e 's|@@PYTHONBIN@@|${PYTHONBIN}|g' < ${WRKSRC}/freevo.pre > \
 		${WRKSRC}/freevo
+	${CP} ${WRKSRC}/freevo ${WRKSRC}/freevo.pre
+	sed -e 's|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g' < ${WRKSRC}/freevo.pre > \
+		${WRKSRC}/freevo
+
+post-install:
+	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
+	${INSTALL_DATA} ${WRKSRC}/local_conf.py.example \
+		${PKG_SYSCONFDIR}/local_conf.py
 
 .include "../../wip/py-game/buildlink2.mk"
 .include "../../wip/py-twisted/buildlink2.mk"
 .include "../../wip/py-mmpython/buildlink2.mk"
-.include "../../wip/py-xml/buildlink2.mk"
+.include "../../textproc/pyxml/buildlink2.mk"
 .include "../../graphics/py-imaging/buildlink2.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/04 11:03:52 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/04 12:48:44 mpasternak Exp $
 bin/freevo
+${PKG_SYSCONFDIR}/local_config.py
 ${PYSITELIB}/freevo/__init__.py
 ${PYSITELIB}/freevo/__init__.pyc
 ${PYSITELIB}/freevo/__init__.pyo
