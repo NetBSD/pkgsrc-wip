@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.367 2003/08/07 18:34:16 adrian_p Exp $
-# $NetBSD: Makefile,v 1.367 2003/08/07 18:34:16 adrian_p Exp $
+# $Id: Makefile,v 1.368 2003/08/08 17:24:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.368 2003/08/08 17:24:24 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -105,6 +105,7 @@ SUBDIR+=	gkrellm2-leds
 SUBDIR+=	gkrellm2-multiping
 SUBDIR+=	gkrellm2-server
 SUBDIR+=	gkrellm2-share
+SUBDIR+=	gkrellm2-shoot
 SUBDIR+=	gkrellm2-snmp
 SUBDIR+=	gkrellm2-volume
 SUBDIR+=	gkrellm2-xmms
@@ -361,6 +362,7 @@ SUBDIR+=	xfce4-trigger-launcher
 SUBDIR+=	xfce4-utils
 SUBDIR+=	xfce4-wm
 SUBDIR+=	xfce4-wm-themes
+SUBDIR+=	xfe
 SUBDIR+=	xmail
 SUBDIR+=	xml2doc
 SUBDIR+=	xmms-dumb
