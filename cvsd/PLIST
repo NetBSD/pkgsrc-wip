@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/05 15:21:05 virtus Exp $
-etc/init.d/cvsd
+@comment $NetBSD: PLIST,v 1.2 2003/04/20 16:14:35 virtus Exp $
+etc/rc.d/cvsd
 man/man5/cvsd.conf.5
 man/man8/cvsd-buildroot.8
 man/man8/cvsd-passwd.8
@@ -7,4 +7,3 @@ man/man8/cvsd.8
 sbin/cvsd
 sbin/cvsd-buildroot
 sbin/cvsd-passwd
-@dirrm etc/init.d

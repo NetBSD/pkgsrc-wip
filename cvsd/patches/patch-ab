@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 2003/04/20 16:14:36 virtus Exp $
+
 --- Makefile.in.orig	Sun Apr  6 22:56:55 2003
 +++ Makefile.in	Sun Apr  6 22:57:37 2003
 @@ -532,13 +532,13 @@
