@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/01/04 07:19:19 jeremy-c-reed Exp $
+
+--- doc/Makefile.in.orig	Fri Mar 31 12:36:32 2000
++++ doc/Makefile.in
+@@ -62,7 +62,6 @@ install: all
+ 	$(top_srcdir)/mkinstalldirs $(mandir)/man1
+ 	$(top_srcdir)/mkinstalldirs $(mandir)/man5
+ 	$(INSTALL) pdq.1 $(mandir)/man1/pdq.1
+-	$(INSTALL) xpdq.1 $(mandir)/man1/xpdq.1
+ 	$(INSTALL) lpd_print.1 $(mandir)/man1/lpd_print.1
+ 	$(INSTALL) lpd_cancel.1 $(mandir)/man1/lpd_cancel.1
+ 	$(INSTALL) lpd_status.1 $(mandir)/man1/lpd_status.1

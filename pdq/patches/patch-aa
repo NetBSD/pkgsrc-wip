@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/04 07:19:19 jeremy-c-reed Exp $
+
+glibc says values.h is obsolete and new programs should use
+limits.h and/or float.h instead.
+
+--- src/parse_rc.c.orig	Fri Mar 31 12:36:30 2000
++++ src/parse_rc.c
+@@ -23,7 +23,7 @@
+ #include <glob.h>
+ #include <string.h>
+ #include <stdlib.h>
+-#include <values.h>
++#include <float.h>
+ 
+ 
+ #include "parse.h"

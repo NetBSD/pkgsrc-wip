@@ -1,0 +1,22 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/04 07:19:19 jeremy-c-reed Exp $
+#
+
+DISTNAME=		pdq-2.2.1
+CATEGORIES=		print
+MASTER_SITES=		http://pdq.sourceforge.net/ftp/ \
+			ftp://feynman.tam.uiuc.edu/pub/pdq/
+EXTRACT_SUFX=		.tgz
+
+MAINTAINER=		reed@reedmedia.net
+HOMEPAGE=		http://pdq.sourceforge.net/
+
+DISTINFO_FILE=		${.CURDIR}/../../wip/pdq/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/pdq/patches
+
+USE_BUILDLINK2=		yes
+GNU_CONFIGURE=		yes
+
+PKG_SYSCONFSUBDIR=	pdq
+
+CONFIGURE_ARGS+=	--enable-printrc=${PKG_SYSCONFDIR}/printrc
+CONFIGURE_ARGS+=	--enable-pdqlibdir=${PREFIX}/share/pdq
