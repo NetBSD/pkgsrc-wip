@@ -1,0 +1,12 @@
+ChBg is used for changing destop background pictures with some period. Each 
+picture should have own settings for mode and period. ChBg have nice 
+configuration UI writen by using of GTK+1.2x libraries. Can handle 
+configuration files simply created by graphical setup or can by started by 
+using of commandline parameters. ChBg now can act as screensaver (use 
+-screesaver option) or can be used as xscreensaver hack (use option 
+-xscreensaver). ChBg can do slideshow of pictures in own toplevel window , 
+or you can redirect it to foreign windown with known windowid. ChBg have very 
+good picture viewing facilities with thumbnail previews and slideshow option. 
+From thumbanil preview windows you can remove, rename, scale selected images 
+or change formats of selected images.
+It runs with Gnome, KDE and Nautilus.

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/18 15:53:38 cetrox Exp $
+
+SHA1 (chbg-1.5.tgz) = 15d7ea75f7de2be30e736d77716710e25eeffb95
+Size (chbg-1.5.tgz) = 322534 bytes
+SHA1 (patch-aa) = 838737a027137069c3ce27231eb48425f1f1c2f7
+SHA1 (patch-ab) = 4557ef6742490f737d8435b064a87607934a4bd4

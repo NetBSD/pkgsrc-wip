@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/07/18 15:53:46 cetrox Exp $
+--- po/Makefile.am.orig	2004-07-15 09:32:58.000000000 -0400
++++ po/Makefile.am	2004-07-15 09:33:28.000000000 -0400
+@@ -1,8 +1,8 @@
+-LANGS = sk ja fr de
++LANGS = sk ja fr de es
+ 
+-POFILES = sk.po ja.po fr.po de.po
+-MOFILES = sk.mo ja.mo fr.mo de.mo
+-POXFILES = sk.pox ja.pox fr.pox de.pox
++POFILES = sk.po ja.po fr.po de.po es.po
++MOFILES = sk.mo ja.mo fr.mo de.mo es.mo
++POXFILES = sk.pox ja.pox fr.pox de.pox es.pox
+ 
+ EXTRA_DIST = $(MOFILES) $(POFILES) chbg.pot
+ DISTCLEANFILES = $(POXFILES)

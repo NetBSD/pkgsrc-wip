@@ -1,0 +1,2329 @@
+# Spanish translations for chbg.
+# Copyright (C) 1999-2001 Free Software Foundation, Inc.
+# César Catrián <ccatrian@eml.cc>, 2004.
+#
+
+#: banner.c:22 chbg.c:1557 chbg.c:1581 setup.c:634 setup.c:681 setup.c:2518
+#: setup.c:2656 setup.c:3152 setup.c:3313 shader.c:798
+msgid "Random"
+msgstr "Aleatorio"
+
+#: config.c:454
+msgid "Use -h option to print full list of available options\n"
+msgstr ""
+"Use la opción -h para ver la lista completa de opciones disponibles\n"
+
+#: config.c:461
+#, c-format
+msgid ""
+"Usage:  %s  [options] [any number of pictures]\n"
+"%s-%s\n"
+msgstr ""
+"Uso:  %s  [opciones] [imágenes]\n"
+"%s-%s\n"
+
+#: config.c:464
+msgid "\t-v                    - print version number and exit\n"
+msgstr "\t-v                    - muestra el número de versión y sale\n"
+
+#: config.c:465
+msgid "\t-h                    - print this help message and exit\n"
+msgstr "\t-h                    - muestra este mensaje de ayuda y sale\n"
+
+#: config.c:466
+msgid "\t-setup                - start setup window\n"
+msgstr "\t-setup                - abre la ventana de configuración\n"
+
+#: config.c:467
+msgid "\t-scenario $file       - fetch parameters from file $file\n"
+msgstr "\t-scenario $file       - carga los parámetros desde el archivo $file\n"
+
+#: config.c:468
+msgid ""
+"\t-mode $type           - set picture rendering mode, mode is\n"
+"\t                        one of following:\n"
+"\t                        : tile\n"
+"\t                        : mirror\n"
+"\t                        : center\n"
+"\t                        : maximize\n"
+"\t                        : smart\n"
+"\t                        : centertile\n"
+"\t                        : inttile\n"
+"\t                        : symtile\n"
+"\t                        : intmirror\n"
+"\t                        : symmirror\n"
+msgstr ""
+"\t-mode $type           - escoge el modo de la imagen, el modo es\n"
+"\t                        uno de los siguientes :\n"
+"\t                        : mosaico\n"
+"\t                        : espejo\n"
+"\t                        : centrado\n"
+"\t                        : maximizar\n"
+"\t                        : personal\n"
+"\t                        : mosaico-centrado\n"
+"\t                        : mosaico-entero\n"
+"\t                        : mosaico-simetrico\n"
+"\t                        : espejo-entero\n"
+"\t                        : espejo-simétrico\n"
+"\n"
+
+#: config.c:480
+#, c-format
+msgid "\t-effect $nr           - effect type for changing pictures [0-%d]\n"
+msgstr "\t-effect $nr            - tipo de efecto para el cambio de imágenes [0-%d]\n"
+
+#: config.c:481
+msgid "\t-bg $color            - set default background color 1\n"
+msgstr "\t-bg $color            - escoge el color de fondo 1 por defecto\n"
+
+#: config.c:482
+msgid "\t-bg2 $color           - set default background color 2\n"
+msgstr "\t-bg2 $color           - escoge el color de fondo 2 por defecto\n"
+
+#: config.c:483
+msgid "\t-rand_colors          - randomize background colors\n"
+msgstr "\t-rand_colors          - colores de fondo aleatorios\n"
+
+#: config.c:484
+#, c-format
+msgid ""
+"\t-shader $nr           - set background color shading effect\n"
+"\t                        type [0-%d]\n"
+msgstr ""
+"\t-shader $nr   - escoge el tipo de efecto de sombreado del color\n"
+"\t                        de fondo [0-%d]\n"
+
+#: config.c:486
+msgid ""
+"\t-interval $start[-$end]\n"
+"\t                      - time between picture changes\n"
+msgstr ""
+"\t-interval $start[-$end]\n"
+"\t                      - tiempo entre cambios de imagen\n"
+
+#: config.c:488
+msgid ""
+"\t-max_grow $nr         - maximal growing ratio of picture in\n"
+"\t                        smart mode\n"
+msgstr ""
+"\t-max_grow $nr         - proporción máxima creciente de imagen \n"
+"\t                        modo personal\n"
+
+#: config.c:490
+msgid ""
+"\t-max_size $nr         - maximal size of picture in %% of screen size\n"
+"\t                        used in smart mode, acceptable value 10-100\n"
+msgstr ""
+"\t-max_size $nr         - tamaño máximo de imagen en %% del tamaño de pantalla\n"
+"\t                        en modo personal, valores aceptables 10-100\n"
+
+#: config.c:492
+msgid "\t-randomize            - randomize picture order\n"
+msgstr "\t-randomize            - orden de imágenes al azar\n"
+
+#: config.c:493
+msgid "\t-screensaver          - act as screensaver\n"
+msgstr "\t-screensaver          - usar como protector de pantalla\n"
+
+#: config.c:495
+msgid "\t-xscreensaver         - act as xscreensaver client\n"
+msgstr "\t-xscreensaver         - usar como cliente xscreensaver\n"
+
+#: config.c:497
+msgid ""
+"\t-speed $nr            - speed ratio for picture changing effects\n"
+"\t                        (lower is faster)\n"
+msgstr ""
+"\t-speed $nr            - velocidad para los efectos de cambio de imágenes\n"
+"\t                        (cifra inferior es más rápido)\n"
+
+#: config.c:499
+msgid "\t-blank                - show blank screen, when can't load picture\n"
+msgstr ""
+"\t-blank                - mostrar pantalla en blanco si la imagen no puede\n"
+"\t                        cargar\n"
+
+#: config.c:500
+msgid ""
+"\t-cycle_blank          - when pictures not present cycle with blanking\n"
+"\t                        screen (optionally with shading)\n"
+msgstr ""
+"\t-cycle_blank          - cuando no hay imagen, presentar pantalla en\n"
+"\t                        blanco (opcionalmente con sombreado)\n"
+
+#: config.c:502
+msgid "\t-R                    - recurse through directory\n"
+msgstr "\t-R                    - incluir los subdirectorios\n"
+
+#: config.c:503
+msgid ""
+"\t-pattern $ptrn        - wildcard pattern for picture selection in\n"
+"\t                        recursion through directories\n"
+msgstr ""
+"\t-pattern $ptrn        - filtrar patrón para selección de imagen\n"
+"\t                        cuando se incluyen subdirectorios\n"
+
+#: config.c:505
+msgid "\t-inwindow             - run in own window not on root\n"
+msgstr "\t-inwindow             - ejecutar en ventana propia, no en root\n"
+
+#: config.c:506
+msgid ""
+"\t-windowid $id         - run in existing X window with known window ID\n"
+msgstr ""
+"\t-windowid $id         - ejecutar en ventana X existente con ID conocida "
+"connu\n"
+
+#: config.c:507
+msgid ""
+"\t-run                  - start runining, after setup window is popped up\n"
+"\t                        (have effect only when used with -setup option)\n"
+msgstr ""
+"\t-run                  - iniciar después que la ventana de configuración\n"
+"\t                        es iniciada (sólo funciona con la opción -setup)\n"
+
+#: config.c:509
+msgid ""
+"\t-min_psize $nr        - minimal allowed size of picture when recursing\n"
+"\t                        directories\n"
+msgstr ""
+"\t-min_psize $nr        - tamaño mínimo permitido de imagen cuando se\n"
+"\t                        incluyen subdirectorios\n"
+
+#: config.c:511
+msgid "\t-deffects $list       - list of disabled effects\n"
+msgstr "\t-deffects $list       - listado de efectos desactivados\n"
+
+#: config.c:512
+msgid "\t-dshaders $list       - list of disabled shaders\n"
+msgstr "\t-dshaders $list       - listado de matices desactivados \n"
+
+#: config.c:513
+msgid "\t-notooltips           - disable tooltips in GUI setup\n"
+msgstr ""
+"\t-notooltips           - desactivar tooltips en la interfaz "
+"gráfica\n"
+
+#: config.c:514
+msgid ""
+"\t-friter $nr           - number of iterations for fractal based shaders\n"
+msgstr ""
+"\t-friter $nr           - número de iteraciones para matices basados en "
+"fractales\n"
+
+#: config.c:515
+msgid ""
+"\t-rect_size $nr        - size of rectangle used in picture changing\n"
+"\t                        effects\n"
+msgstr ""
+"\t-min_psize $nr        - tamaño de rectángulo usado en efectos de\n"
+"\t                        cambio de imágenes\n"
+
+#: config.c:517
+msgid "\t-grad_dir $dir        - supply path to GIMP gradients directory\n"
+msgstr ""
+"\t-grad_dir $dir        - suministrar ruta al directorio de "
+"degradados del GIMP\n"
+
+#: config.c:518
+msgid "\t-use_grad             - use GIMP gradients for shading background\n"
+msgstr ""
+"\t-use_grad             - usar gradientes del GIMP para sombreado de "
+"fondos\n"
+
+#: config.c:519
+msgid "\t-grad $nr             - number of selected gradient (0 = random)\n"
+msgstr "\t-grad $nr             - número de sombreado elegido (0 = al azar)\n"
+
+#: config.c:520
+msgid "\t-remember             - remember last picture\n"
+msgstr "\t-remember             - recordar la última imagen\n"
+
+#: config.c:521
+msgid "\t-sort                 - sort picture alphabeticaly\n"
+msgstr "\t-sort                 - clasificar imágenes alfabéticamente\n"
+
+#: config.c:523
+msgid ""
+"\t-enlightenment        - set desktop background via Enlightenment WM\n"
+"\t                        when available\n"
+msgstr ""
+"\t-enlightenment        - escoger el fondo de pantalla via Enlightenment\n"
+"\t                        cuando se disponga\n"
+
+#: config.c:526
+msgid ""
+"\t-once                 - run one cycle of background changing and exit\n"
+msgstr ""
+"\t-once                 - ejecutar un ciclo de cambio de fondos y salir\n"
+
+#: config.c:527
+msgid ""
+"\t-thumb $type          - show thumbnail view dialog, choose one of\n"
+"\t                        all - all thumbnails in one window\n"
+"\t                        dir - make thumbnail pages by directories\n"
+"\t                        page - show 25 thumbnails per window\n"
+msgstr ""
+"\t-thumb $type          - mostrar diálogo de miniaturas, escoger "
+"uno de :\n"
+"\t                        todos - todas las miniaturas en una ventana\n"
+"\t                        dir - una página de miniaturas por directorio\n"
+"\t                        página - mostrar 25 miniaturas por ventana\n"
+
+#: config.c:531
+msgid ""
+"\t-xpos $pos            - horizontal picture position on screen\n"
+"\t                        in smart mode (0.0-1.0)\n"
+msgstr ""
+"\t-xpos $pos            - posición horizontal de la imagen en pantalla\n"
+"\t                        en modo personal (0.0-1.0)\n"
+
+#: config.c:533
+msgid ""
+"\t-ypos $pos            - vertical picture position on screen\n"
+"\t                        in smart mode (0.0-1.0)\n"
+msgstr ""
+"\t-ypos $pos            - posición vertical de la imagen en pantalla\n"
+"\t                        en modo personal (0.0-1.0)\n"
+
+#: config.c:535
+msgid "\t-use_tiles            - use picture tiles for picture background\n"
+msgstr "\t-use_tiles            - usar mosaico de imágenes para fondo\n"
+
+#: config.c:536
+msgid ""
+"\t-add_tile $file       - directory or file which will be used for tiles\n"
+msgstr ""
+"\t-add_tile $file       - directorio o archivo que será usado para mosaicos "
+"mosaïques\n"
+
+#: config.c:537
+msgid "\t-tile $file           - default tile for picture background\n"
+msgstr "\t-tile $file           - mosaico por defecto para fondo\n"
+
+#: config.c:538
+msgid "\t-use_banners          - put banner on top of background picture\n"
+msgstr ""
+"\t-use_banners          - poner banner por sobre de la imagen de fondo\n"
+
+#: config.c:539
+msgid ""
+"\t-add_banner $file     - directory or file which will be used for banners\n"
+msgstr ""
+"\t-add_banner $file     - directorio o archivo que será usado para "
+"banners\n"
+
+#: config.c:540
+msgid "\t-banner $file         - use image as banner\n"
+msgstr "\t-banner $file         - usar imagen como banner\n"
+
+#: config.c:541
+msgid "\t-banner_xpos $pos     - horizontal banner position on screen\n"
+msgstr ""
+"\t-banner_xpos $pos     - posición horizontal del banner en pantalla\n"
+
+#: config.c:542
+msgid "\t-banner_ypos $pos     - vertical banner position on screen\n"
+msgstr ""
+"\t-banner_ypos $pos     - posición vertical del banner en pantalla\n"
+
+#: config.c:543
+msgid "\t-banner_max_grow $nr  - maximal growing ratio of banner\n"
+msgstr ""
+"\t-banner_max_grow $nr  - proporción máxima para agrandar banner\n"
+
+#: config.c:544
+msgid "\t-banner_max_size $nr  - maximal size of banner in %% of screen size\n"
+msgstr ""
+"\t-banner_max_size $nr  - tamaño máximo del banner en %% del tamaño "
+"de pantalla\n"
+
+#: config.c:545
+#, c-format
+msgid "\t-banner_mode $mode    - banner painting mode (0-%d)\n"
+msgstr "\t-banner_mode $mode    - modo de dibujo de banner (0-%d)\n"
+
+#: config.c:546
+msgid ""
+"\t-to_file              - generate picture into file instead of to window\n"
+msgstr ""
+"\t-to_file            - generar imagen en archivo en lugar de "
+"una ventana\n"
+
+#: config.c:547
+msgid "\t-out_file $file       - name of file in which will be image written\n"
+msgstr ""
+"\t-out_file $file       - nombre de archivo de la nueva imagen\n"
+
+#: config.c:548
+msgid ""
+"\t-out_file_width $nr   - width of picture when writing to file\n"
+"\t                        0 means - take width of root window\n"
+msgstr ""
+"\t-out_file_width $nr   - ancho de la imagen cuando se escribe en "
+"archivo\n"
+"\t                        0 significa - tomar ancho de ventana root\n"
+
+#: config.c:550
+msgid ""
+"\t-out_file_height $nr  - height of picture when writing to file\n"
+"\t                        0 means - take height of root window\n"
+msgstr ""
+"\t-out_file_height $nr   - altura de la imagen cuando se escribe en "
+"archivo\n"
+"\t                        0 significa - tomar altura de ventana root\n"
+
+#: config.c:552
+msgid ""
+"\t-force_nautilus       - force nautilus to use background picture\n"
+"\t                        set by chbg\n"
+msgstr ""
+"\t-force_nautilus        - obligar a nautilus a usar imagen de fondo\n"
+"\t                        configurada por chbg\n"
+
+#: config.c:554
+msgid ""
+"\t-send_expose          - send expose event when running in foreign window\n"
+msgstr ""
+"\t-send_expose          - enviar evento expuesto cuando se ejecuta "
+"en una ventana ajena\n"
+
+#: config.c:676
+#, c-format
+msgid "unknown rendering type : %s\n"
+msgstr "tipo de render desconocido: %s\n"
+
+#: config.c:692
+#, c-format
+msgid "unknown thumbnailview type: %s\n"
+msgstr "tipo de miniatura desconocida : %s\n"
+
+#: config.c:712
+msgid "bug in chbg - contact autor"
+msgstr "bug en chbg - contactar al autor"
+
+#: config.c:814
+#, c-format
+msgid "unknown option : %s\n"
+msgstr "opción desconocida : %s\n"
+
+#: config.c:823
+#, c-format
+msgid "missing parameters for %s option\n"
+msgstr "faltan parámetros para la opción %s\n"
+
+#: config.c:844 config.c:853 config.c:1424 config.c:1444
+#, c-format
+msgid "unknown color: %s\n"
+msgstr "color desconocido : %s\n"
+
+#: config.c:863 config.c:1034 config.c:1404 config.c:1567
+#, c-format
+msgid "bad grow value: %s, (positive float number required)\n"
+msgstr ""
+"valor de crecimiento incorrecto : %s, (número flotante "
+"positivo requerido)\n"
+
+#: config.c:871
+#, c-format
+msgid "bad value: %s for option -min_psize\n"
+msgstr "valor incorrecto : %s para la opción -min_psize\n"
+
+#: config.c:879 config.c:888
+#, c-format
+msgid "bad list: %s for option %s\n"
+msgstr "lista incorrecta : %s para opción %s\n"
+
+#: config.c:897
+#, c-format
+msgid "bad float value: %s\n"
+msgstr "valor flotante incorrecto :%s\n"
+
+#: config.c:906 config.c:1025 config.c:1362 config.c:1577
+#, c-format
+msgid "bad max_size value: %s, (10 - 100 required)\n"
+msgstr ""
+"valor max_size incorrecto : %s, (número requerido "
+"entre 10 y 100)\n"
+
+#: config.c:914 config.c:1378
+#, c-format
+msgid "bad speed value: %s\n"
+msgstr "valor de velocidad incorrecto : %s\n"
+
+#: config.c:922 config.c:1386
+#, c-format
+msgid "bad effect value: %s, (0 - %d required)\n"
+msgstr "valor de efecto incorrecto : %s, (cifra de 0 a %d requerida)\n"
+
+#: config.c:930 config.c:1395
+#, c-format
+msgid "bad shader value: %s, (0 - %d required)\n"
+msgstr "valor de sombreado incorrecto : %s, (cifra de 0 a %d requerida)\n"
+
+#: config.c:939
+#, c-format
+msgid "bad windowid: %s\n"
+msgstr "windowID incorrecta : %s\n"
+
+#: config.c:947
+#, c-format
+msgid "bad value: %s for option -friter\n"
+msgstr "valor incorrecto : %s para opción -friter\n"
+
+#: config.c:955
+#, c-format
+msgid "bad value: %s for option -box_size\n"
+msgstr "valor incorrecto : %s para opción -box_size\n"
+
+#: config.c:963
+#, c-format
+msgid "bad value: %s for option -grad\n"
+msgstr "valor incorrecto : %s para opción -grad\n"
+
+#: config.c:1005 config.c:1015 config.c:1054 config.c:1064 config.c:1230
+#, c-format
+msgid "bad position value: %s, (0.0 - 1.0 required)\n"
+msgstr "valor de posición incorrecto : %s, (cifra de 0.0 a 1.0 requerida)\n"
+
+#: config.c:1044 config.c:1587
+#, c-format
+msgid "bad banner mode value: %s, (0-%d required)\n"
+msgstr "valor de modo banner incorrecto : %s, (cifra de 0 a %d requerida)\n"
+
+#: config.c:1149
+#, c-format
+msgid "using image loader - %s\n"
+msgstr "usando cargador de imagen - %s\n"
+
+#: config.c:1165 config.c:1598
+#, c-format
+msgid "bad width value: %s\n"
+msgstr "valor de ancho incorrecto :%s\n"
+
+#: config.c:1171 config.c:1603
+#, c-format
+msgid "bad height value: %s\n"
+msgstr "valor de altura incorrecto :%s\n"
+
+#: config.c:1290
+#, c-format
+msgid ""
+"Unable to parse line:\n"
+"%s\n"
+msgstr ""
+"No se puede analizar línea :\n"
+"%s\n"
+
+#: config.c:1325 config.c:1341
+#, c-format
+msgid "bad list: %s\n"
+msgstr "lista incorrecta :%s\n"
+
+#: config.c:1350
+#, c-format
+msgid "bad interval value: %s\n"
+msgstr "valor interno incorrecto :%s\n"
+
+#: config.c:1371
+#, c-format
+msgid "bad min_psize value: %s\n"
+msgstr "valor min_psize incorrecto : %s\n"
+
+#: config.c:1456
+#, c-format
+msgid "bad fractal iterations value: %s\n"
+msgstr "valor de interaciones de fractal incorrecto : %s\n"
+
+#: config.c:1463
+#, c-format
+msgid "bad box size value: %s\n"
+msgstr "valor de tamaño de caja incorrecto : %s\n"
+
+#: config.c:1482
+#, c-format
+msgid "bad gradient value: %s\n"
+msgstr "valor de gradiente incorrecto :%s\n"
+
+#: config.c:1668
+msgid ""
+"# this is automaticaly generated chbg scenario file\n"
+"\n"
+msgstr ""
+"# este es un archivo de escenario autogenerado por chbg\n"
+"\n"
+
+#: config.c:1940
+#, c-format
+msgid "Unable to parse: %s\n"
+msgstr "No se puede analizar : %s\n"
+
+#: config.c:1957 config.c:1969
+#, c-format
+msgid "Unable to parse: \"%s\"\n"
+msgstr "No se puede analizar : \"%s\"\n"
+
+#: config.c:1991
+msgid "Unable to create ~/.chbg_prop file"
+msgstr "No se puede crear el archivo ~/.chbg_prop"
+
+#: config.c:1995
+msgid ""
+"# This file was generated by chbg\n"
+"# You may edit it if you're careful!\n"
+"\n"
+msgstr ""
+"# Este archivo fué generado por chbg\n"
+"# Puedes editarlo si eres cuidadoso !\n"
+"\n"
+
+#: chbg.c:256
+msgid "Changing picture"
+msgstr "Cambiando imagen"
+
+#: chbg.c:744
+msgid "Blanking screen"
+msgstr "Blanqueando pantalla"
+
+#: chbg.c:1231 chbg.c:1292
+msgid "Loading image"
+msgstr "Cargando imagen"
+
+#: chbg.c:1259
+msgid "Adjusting image"
+msgstr "Ajustando imagen"
+
+#: chbg.c:1724
+msgid "Scanning directory for pictures"
+msgstr "Buscando imágenes en directorio"
+
+#: chbg.c:1811 chbg.c:1904 chbg.c:1924
+msgid "Sleeping"
+msgstr "En espera"
+
+#: chbg.c:1937
+#, c-format
+msgid "removing picture \"%s\" from list\n"
+msgstr "removiendo imagen \"%s\" de la lista\n"
+
+#: chbg.c:1976
+msgid "only one picture available : changing not required"
+msgstr "sólo una imagen disponible : no se requiere cambio"
+
+#: chbg.c:1980
+msgid "only one picture available : changing not required\n"
+msgstr "sólo una imagen disponible : no se requiere cambio\n"
+
+#: chbg.c:1989
+msgid "unable to find any suitable picture"
+msgstr "no se puede encontrar una imagen adecuada"
+
+#: chbg.c:1993
+msgid "unable to find any suitable picture\n"
+msgstr "no se puede encontrar una imagen adecuada\n"
+
+#: chbg.c:2000
+msgid "Initializing"
+msgstr "Iniciando"
+
+#: chbg.c:2013 chbg.c:2263
+#, c-format
+msgid "Unable to find window id - 0x%08lx\n"
+msgstr "Imposible encontrar id de ventana - 0x%08lx\n"
+
+#: chbg.c:2014
+msgid "Unable to find foreign window"
+msgstr "No se puede encontrar ventana externa"
+
+#: chbg.c:2041
+msgid "Unable to find xscreensaver window"
+msgstr "No se puede encontrar ventana de xscreensaver"
+
+#: chbg.c:2045
+msgid "Unable to find xscreensaver window\n"
+msgstr "No se puede encontrar ventana de xscreensaver\n"
+
+#: chbg.c:2241
+msgid "Requested to use Enlightenment, but Enlightenment not found!\n"
+msgstr "Se solicitó Enlightenment, pero no fué encontrado !\n"
+
+#: gui_tools.c:56
+#, c-format
+msgid "ChBg: select %s"
+msgstr "ChBg: seleccionar %s"
+
+#: gui_tools.c:145
+msgid "Browse ..."
+msgstr "Elegir ..."
+
+#: gui_tools.c:374
+#, c-format
+msgid "Size:  %d x %d  "
+msgstr "Tamaño : %d x %d "
+
+#: gui_tools.c:427
+msgid "preview"
+msgstr "previsualización"
+
+#: gui_tools.c:441
+msgid "Auto preview"
+msgstr "Auto previsualización"
+
+#: gui_tools.c:443
+msgid "Click on image to show a small preview."
+msgstr "Click en una imagen para mostrar una miniatura"
+
+#: gui_tools.c:455 setup.c:2178
+msgid "Select All"
+msgstr "Seleccionar todo"
+
+#: gui_tools.c:464 setup.c:3376 setup.c:3471
+msgid "Append"
+msgstr "Adjuntar"
+
+#: gui_tools.c:466
+msgid "to choose multiple directories...hit OK button when done."
+msgstr "Para escoger múltiples directorios ... click OK."
+
+#: gui_tools.c:472
+msgid "Preview"
+msgstr "Previsualización"
+
+#: gui_tools.c:473
+msgid "Preview last selected picture"
+msgstr "Previsualizar última imagen seleccionada"
+
+#: operations.c:148
+msgid "Images selection"
+msgstr "Selección de imágenes"
+
+#: operations.c:156
+msgid "Source Directory: "
+msgstr "Directorio fuente : "
+
+#: operations.c:161 setup.c:2276
+msgid "Pattern for recursion: "
+msgstr "Patrón de recursión"
+
+#: operations.c:183 setup.c:2300
+msgid "Minimal picture size when recursing directories: "
+msgstr "Tamaño mínimo de la imagen cuando se incluyen subdirectorios:"
+
+#: operations.c:198 setup.c:2301
+msgid "kB"
+msgstr "kB"
+
+#: operations.c:248 settings.c:327 setup.c:1357 thumb.c:1969
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: operations.c:347
+msgid "ChBg: batch scale (scaling ...)"
+msgstr "ChBg : escalar en secuencia (escalando ...)"
+
+#: operations.c:426
+msgid "ChBg: batch scaling"
+msgstr "ChBg : escalar en secuencia"
+
+#: operations.c:427
+msgid "Scaling parameters"
+msgstr "Parámetros de escala"
+
+#: operations.c:427
+msgid "Scale"
+msgstr "Escalar"
+
+#: operations.c:433 operations.c:720
+msgid "Destination directory: "
+msgstr "Directorio destino : "
+
+#: operations.c:437
+msgid "Dimensions: "
+msgstr "Dimensiones : "
+
+#: operations.c:459 operations.c:737
+msgid "Additional convert options: "
+msgstr "Opciones de conversión adicionales : "
+
+#: operations.c:476
+msgid "Keep aspect ratio"
+msgstr "Conservar proporciones"
+
+#: operations.c:660
+msgid "ChBg: batch format conversion (converting ...)"
+msgstr "ChBg : conversión de formato en secuencia (convirtiendo ...)"
+
+#: operations.c:713
+msgid "ChBg: batch format conversion"
+msgstr "ChBg: conversión de formato en secuencia"
+
+#: operations.c:714
+msgid "Format conversion parameters"
+msgstr "Parámetros de la conversión de formato"
+
+#: operations.c:714
+msgid "Convert"
+msgstr "Convertir"
+
+#: operations.c:724
+msgid "Image format: "
+msgstr "Formato de imagen : "
+
+#: setup.c:141
+msgid "0) None"
+msgstr "0) Ninguno"
+
+#: setup.c:142
+msgid "1) Random"
+msgstr "1) Al azar"
+
+#: setup.c:143
+msgid "2) C-Left, C-Right"
+msgstr "2) Centro-izquierda, centro-derecha"
+
+#: setup.c:144
+msgid "3) C-Top, C-Bottom"
+msgstr "3) Centro-arriba, centro-abajo"
+
+#: setup.c:145
+msgid "4) Left-C, Right-C"
+msgstr "4) Izquierda-centro, derecha-centro"
+
+#: setup.c:146
+msgid "5) Top-C, Bottom-C"
+msgstr "5) Arriba-centro, abajo-centro"
+
+#: setup.c:147
+msgid "6) Top-Bottom"
+msgstr "6) Arriba-abajo"
+
+#: setup.c:148
+msgid "7) Left-Right"
+msgstr "7) Izquierda-derecha"
+
+#: setup.c:149
+msgid "8) Expanding Box-Full Screen"
+msgstr "8) Expandiendo a partir del centro"
+
+#: setup.c:150
+msgid "9) Full Screen-Tiny Box"
+msgstr "9) A partir de los bordes"
+
+#: setup.c:151
+msgid "10) Line Mesh Left-Right"
+msgstr "10) Lineas de izquierda-derecha"
+
+#: setup.c:152
+msgid "11) Line Fill Fade In Top-Bottom"
+msgstr "11) Desvanecer llenado de línea en Arriba-abajo"
+
+#: setup.c:153
+msgid "12) Boxed Mesh Fade In TopL-BottomR"
+msgstr "12) Malla desvanecida en Arriba_izquierda-Abajo_derecha"
+
+#: setup.c:154
+msgid "13) TopL-BottomR"
+msgstr "13) Arriba_izquierda-Abajo_derecha "
+
+#: setup.c:155
+msgid "14) All 4 Corners-Center"
+msgstr "14) Todas las 4 esquinas-centro"
+
+#: setup.c:156
+msgid "15) All 4 Corners Scissor Cut-Center"
+msgstr "15) Las 4 esquinas Tijeras Corte-centro"
+
+#: setup.c:157
+msgid "16) Rectangular Border Fill In-Center"
+msgstr "16) Llenado de borde rectangular En-Centro"
+
+#: setup.c:158
+msgid "17) Center-Rectangular Border Fill In"
+msgstr "17) Llenado del borde Centro-rectangular"
+
+#: setup.c:159
+msgid "18) Boxed Mesh Fill Out"
+msgstr "18) Llenado de malla hacia adentro"
+
+#: setup.c:160
+msgid "19) Diagonal Scissor Cut Fill In"
+msgstr "19) Llenado de corte en tijeras diagonal"
+
+#: setup.c:161
+msgid "20) Zigzag Diagonal Scissor Cut Fill In"
+msgstr "20) Llenado de corte en tijeras diagonal zigzag"
+
+#: setup.c:162
+msgid "21) R-C, L-C Center Line Fill In"
+msgstr "21) Bandas horizontales del centro hacia los bordes"
+
+#: setup.c:163
+msgid "22) T-C, B-C Line Fill In"
+msgstr "22) Bandas verticales del centro hacia los bordes"
+
+#: setup.c:164
+msgid "23) Pixel Fill In"
+msgstr "23) Llenado de pixeles"
+
+#: setup.c:165
+msgid "24) Line Draw Top-Bottom"
+msgstr "24) Bandas de arriba hacia abajo"
+
+#: setup.c:166
+msgid "25) Line Draw Left-Right"
+msgstr "25) Bandas de izquierda a derecha"
+
+#: setup.c:167
+msgid "26) Line Mesh Fade In Side-C, C-Side"
+msgstr "26) Fondo de líneas verticales de lado a lado"
+
+#: setup.c:168
+msgid "27) Line Mesh Fade In Top&B-C, C-Top&B"
+msgstr "27) Fondo de líneas horizontales de lado a lado"
+
+#: setup.c:169
+msgid "28) Wiggly Squiggly Left-Right"
+msgstr "28) Cuadrados de un lado a otro"
+
+#: setup.c:170
+msgid "29) Wiggy Jiggy Outer-Inner"
+msgstr "29) Cuadrados del borde hacia el centro"
+
+#: setup.c:174
+msgid "Super fast"
+msgstr "Super rápido"
+
+#: setup.c:175
+msgid "Very fast"
+msgstr "Muy rápido"
+
+#: setup.c:176
+msgid "Fast"
+msgstr "Rápido"
+
+#: setup.c:177
+msgid "Medium"
+msgstr "Medio"
+
+#: setup.c:178
+msgid "Slow"
+msgstr "Lento"
+
+#: setup.c:179
+msgid "Very slow"
+msgstr "Muy lento"
+
+#: setup.c:180
+msgid "Super slow"
+msgstr "Super lento"
+
+#: setup.c:208
+#, c-format
+msgid "ChBg setup [%s]"
+msgstr "ChBg preferencias [%s]"
+
+#: setup.c:211
+msgid "ChBg setup"
+msgstr "ChBg préférences"
+
+#: setup.c:924 setup.c:1103
+msgid "Unable to load scenario"
+msgstr "No se puede cargar escenario"
+
+#: setup.c:1124
+msgid "ChBg: Load scenario"
+msgstr "ChBg: Cargar escenario"
+
+#: setup.c:1194
+msgid "ChBg: Save scenario"
+msgstr "ChBg: Guardar escenario"
+
+#: setup.c:1322
+msgid "ChBg: About"
+msgstr "ChBg: Acerca de"
+
+#: setup.c:1349
+#, c-format
+msgid ""
+"ChBg %s\n"
+"\n"
+"Manager & changer of background pictures\n"
+"\n"
+"By Stefan Ondrejicka\n"
+"\n"
+"(ondrej@idata.sk)\n"
+"\n"
+"URL: http://www.idata.sk/~ondrej/chbg/\n"
+msgstr ""
+"ChBg %s\n"
+"\n"
+"Gestión y cambio de las imágenes de fondo\n"
+"\n"
+"Por Ondrejicka Stefan\n"
+"\n"
+"(ondrej@idata.sk)\n"
+"\n"
+"URL : http://www.idata.sk/~ondrej/chbg/\n"
+
+#: setup.c:1443
+msgid "ChBg: Get pictures"
+msgstr "ChBg: Cargar imágenes"
+
+#: setup.c:1520 setup.c:1635
+msgid "(none)"
+msgstr "(ninguno)"
+
+#: setup.c:1649
+msgid "ChBg: Picture properties"
+msgstr "ChBg: Propiedades de la imagen"
+
+#: setup.c:1684
+msgid "Own properties"
+msgstr "Propiedades de la imagen"
+
+#: setup.c:1706 setup.c:2878
+msgid "Apply"
+msgstr "Aplicar"
+
+#: setup.c:1713
+msgid "Apply to selected"
+msgstr "Aplicar a la selección"
+
+#: setup.c:1719 setup.c:2884 setup.c:3390 setup.c:3485
+msgid "Clear"
+msgstr "Anular"
+
+#: setup.c:1725 setup.c:2890
+msgid "Reset"
+msgstr "Resetear"
+
+#: setup.c:1731 setup.c:2896 shaderpv.c:841 thumb.c:2332 thumb.c:2549
+#: thumb.c:2735
+msgid "Close"
+msgstr "Cerrar"
+
+#: setup.c:1787
+msgid "Open scenario ..."
+msgstr "Abrir escenario ..."
+
+#: setup.c:1795
+msgid "Save scenario ..."
+msgstr "Guardar escenario ..."
+
+#: setup.c:1808
+msgid "Last scenarios"
+msgstr "Ultimos escenarios"
+
+#: setup.c:1822
+msgid "Quit"
+msgstr "Salir"
+
+#: setup.c:1830
+msgid "_File"
+msgstr "_Fichero"
+
+#: setup.c:1838
+msgid "Run"
+msgstr "Ejecutar"
+
+#: setup.c:1847
+msgid "Hide window & run"
+msgstr "Esconder la ventana y ejecutar"
+
+#: setup.c:1855
+msgid "Stop"
+msgstr "Detener"
+
+#: setup.c:1864
+msgid "_Action"
+msgstr "_Acción"
+
+#: setup.c:1873
+msgid "Enable tooltips"
+msgstr "Activar tooltips"
+
+#: setup.c:1885
+msgid "Apply changes"
+msgstr "Aplicar los cambios"
+
+#: setup.c:1893 setup.c:2364
+msgid "Reset configuration"
+msgstr "Resetear la configuración"
+
+#: setup.c:1905
+msgid "Settings ..."
+msgstr "Opciones ..."
+
+#: setup.c:1913
+msgid "_Config"
+msgstr "_Configuración"
+
+#: setup.c:1921
+msgid "Shaders preview page ..."
+msgstr "Previsualización de los efectos de fondo ..."
+
+#: setup.c:1934
+msgid "All thumbnails preview ..."
+msgstr "Previsualización de todas las miniaturas ..."
+
+#: setup.c:1943
+msgid "Page thumbnails preview ..."
+msgstr "Previsualizar las miniaturas por páginas ..."
+
+#: setup.c:1951
+msgid "Dir thumbnails preview ..."
+msgstr "Previsualización de las miniaturas por directorio ..."
+
+#: setup.c:1959
+msgid "_Preview"
+msgstr "_Previsualización"
+
+#: setup.c:1967 thumb.c:2264
+msgid "Batch rescaling ..."
+msgstr "Reescalar en secuencia ..."
+
+#: setup.c:1975 thumb.c:2270
+msgid "Batch conversion ..."
+msgstr "Conversión de formato en secuencia ..."
+
+#: setup.c:1984
+msgid "_Tools"
+msgstr "_Herramientas"
+
+#: setup.c:1992
+msgid "About ..."
+msgstr "Acerca de..."
+
+#: setup.c:2001
+msgid "_Help"
+msgstr "_Ayuda"
+
+#: setup.c:2112
+msgid "Picture list"
+msgstr "Listado de imágenes"
+
+#: setup.c:2125
+msgid "Background pictures"
+msgstr "Imágenes de fondo"
+
+#: setup.c:2162 setup.c:3496
+msgid "Set properties ..."
+msgstr "Modificar las propiedades ..."
+
+#: setup.c:2170
+msgid "Delete selected"
+msgstr "Eliminar selección"
+
+#: setup.c:2186 thumb.c:2120
+msgid "Unselect"
+msgstr "De-seleccionar"
+
+#: setup.c:2194
+msgid "Preview image ..."
+msgstr "Previsualizar imagen ..."
+
+#: setup.c:2201
+msgid "Preview image fullscreen ..."
+msgstr "Previsualizar imagen a pantalla completa ..."
+
+#: setup.c:2212
+msgid "All thumbnails ..."
+msgstr "Todas las miniaturas ..."
+
+#: setup.c:2220
+msgid "Page thumbnails ..."
+msgstr "Miniaturas por página ..."
+
+#: setup.c:2228
+msgid "Dir thumbnails ..."
+msgstr "Miniaturas por directorio ..."
+
+#: setup.c:2237
+msgid "Append pictures ..."
+msgstr "Adjuntar imágenes ..."
+
+#: setup.c:2239
+msgid ""
+"Choose which images or directories of images you wish to add to your picture "
+"list."
+msgstr ""
+"Escoge cuales imágenes o directorios de imágenes deseas añadir a tu "
+"lista de imágenes."
+
+#: setup.c:2247
+msgid "Recursion parameters"
+msgstr "Parámetros de recursión"
+
+#: setup.c:2249
+msgid "Sort pictures"
+msgstr "Clasificar imágenes"
+
+#: setup.c:2250
+msgid "Show pictures in alphabetical order."
+msgstr "Mostrar imágenes en orden alfabético."
+
+#: setup.c:2255
+msgid "Recurse through directories"
+msgstr "Incluir sub-directorios"
+
+#: setup.c:2256
+msgid ""
+"Scans sub-directories for pictures.Example: choose /home/photos only and "
+"it'll display all photos in /home/photos/family and /home/photos/friends."
+msgstr ""
+"Busca imágenes en sub-directorios. Ejemplo : escoge sólo "
+"/home/photos y mostrará todas las fotos en "
+"/home/photos/family y /home/photos/friends ."
+
+#: setup.c:2282
+msgid ""
+"which type(s) of image(s) you wish to display (case-insensitive) (you can "
+"enter multiple space separated wildcard patterns)"
+msgstr ""
+"que tipo(s) de imagen(es) deseas mostrar (mayúsculas o no); puedes "
+"ingresar múltiples comodines separados por espacios"
+
+#: setup.c:2304
+msgid "Useful for excluding small pictures or thumbnails."
+msgstr "Util para excluir imágenes pequeñas o miniaturas."
+
+#: setup.c:2353
+msgid "Open scenario"
+msgstr "Abrir escenario"
+
+#: setup.c:2356
+msgid "Save scenario"
+msgstr "Guardar escenario"
+
+#: setup.c:2361
+msgid "Apply setup changes"
+msgstr "Aplicar cambios de configuración"
+
+#: setup.c:2369
+msgid "Run with actual settings"
+msgstr "Ejecutar con la configuración actual"
+
+#: setup.c:2373
+msgid "Hide Setup window and run with actual settings"
+msgstr "Esconder preferencias y ejecutar con la configuración actual"
+
+#: setup.c:2376
+msgid "Stop changing pictures"
+msgstr "Detener el cambio de imágenes"
+
+#: setup.c:2380
+msgid "Immediately quit"
+msgstr "Salir"
+
+#: setup.c:2482 setup.c:2620
+msgid "ChBg: Get new tiles"
+msgstr "ChBg: Obtener nuevos mosaicos"
+
+#: setup.c:2693
+msgid "Normal"
+msgstr "Normal"
+
+#: setup.c:2694
+msgid "Average"
+msgstr "Promedio"
+
+#: setup.c:2695
+msgid "Lighten only"
+msgstr "Sólo claros"
+
+#: setup.c:2696
+msgid "Darken only"
+msgstr "Sólo oscuros"
+
+#: setup.c:2697
+msgid "Divide"
+msgstr "Dividir"
+
+#: setup.c:2698
+msgid "Multiply"
+msgstr "Multiplicar"
+
+#: setup.c:2699
+msgid "Multiply bg value"
+msgstr "Multiplicar valor bg"
+
+#: setup.c:2700
+msgid "Multiply fg value"
+msgstr "Multiplicar valor fg"
+
+#: setup.c:2701
+msgid "Add"
+msgstr "Añadir"
+
+#: setup.c:2702
+msgid "Subtract bg"
+msgstr "Restar bg"
+
+#: setup.c:2703
+msgid "Subtract fg"
+msgstr "Restar fg"
+
+#: setup.c:2704
+msgid "Grayscale"
+msgstr "Escala de grises"
+
+#: setup.c:2705
+msgid "Bumpmap to bg"
+msgstr "Bumpmap al bg"
+
+#: setup.c:2706
+msgid "Bumpmap self"
+msgstr "Bumpmap al objeto"
+
+#: setup.c:2707
+msgid "Emboss"
+msgstr "Relieve"
+
+#: setup.c:2711
+msgid "Default banner properties"
+msgstr "Propiedades del banner por defecto"
+
+#: setup.c:2720
+msgid "Max grow ratio for banner: "
+msgstr "Relación máxima de aumento de banner : "
+
+#: setup.c:2720 setup.c:3062
+msgid "x"
+msgstr "x"
+
+#: setup.c:2724
+msgid ""
+"Maximal allowed banner scaling factor. (default 1.0)\n"
+"Real scaling factor depends on picture and screen size\n"
+msgstr ""
+"Factor de escala máximo permitido de banner. (por defecto 1.0)\n"
+"Factor de escala real depende de la imagen y el tamaño de pantalla\n"
+
+#: setup.c:2728
+msgid "Maximal size of screen taken by banner: "
+msgstr "Tamaño máximo de la pantalla tomado por el banner"
+
+#: setup.c:2729 setup.c:3071
+#, c-format
+msgid "%"
+msgstr "%"
+
+#: setup.c:2733
+msgid ""
+"Set to below 100% to see background banner background in all cases. (default "
+"90%)"
+msgstr ""
+"Setear bajo 100% para ver el banner de fondo en todos los casos. "
+"(por defecto 90%)"
+
+#: setup.c:2737
+msgid "Horizontal banner position: "
+msgstr "Posición horizontal del banner : "
+
+#: setup.c:2742 setup.c:3084
+msgid "Vertical picture position: "
+msgstr "Posición vertical de la imagen : "
+
+#: setup.c:2746
+msgid "Banner painting mode: "
+msgstr "Modo de dibujado de banner : "
+
+#: setup.c:2857
+msgid "Banner properties"
+msgstr "Propiedades de banner"
+
+#: setup.c:2944
+msgid "Tile picture"
+msgstr "Mosaico"
+
+#: setup.c:2945
+msgid "Tile mirrored picture"
+msgstr "Imagen en mosaico espejado"
+
+#: setup.c:2946
+msgid "Maximize picture"
+msgstr "Maximizar imagen"
+
+#: setup.c:2947
+msgid "Center picture"
+msgstr "Centrar imagen"
+
+#: setup.c:2948
+msgid "Center tiled picture"
+msgstr "Imagen mosaico centrado"
+
+#: setup.c:2949
+msgid "Integer tiled picture"
+msgstr "Mosaico entero"
+
+#: setup.c:2950
+msgid "Symmetrical tiled picture"
+msgstr "Mosaico simétrico"
+
+#: setup.c:2951
+msgid "Integer mirrored picture"
+msgstr "Imagen espejada entera"
+
+#: setup.c:2952
+msgid "Symmetrical mirrored picture"
+msgstr "Mirror simétrico"
+
+#: setup.c:2953
+msgid "Smart resized centered picture"
+msgstr "Redimensión y centrado personal"
+
+#: setup.c:2959
+msgid "Properties"
+msgstr "Propiedades"
+
+#: setup.c:2966
+msgid "Interval: "
+msgstr "Intervalo :"
+
+#: setup.c:2979 setup.c:3007
+msgid ": "
+msgstr ": "
+
+#: setup.c:2992
+msgid "-- "
+msgstr "__ "
+
+#: setup.c:3022
+msgid "Rendering Mode"
+msgstr "Modo de renderizado"
+
+#: setup.c:3051
+msgid "Smart rendering mode setup"
+msgstr "Configuración de renderizado personal"
+
+#: setup.c:3062
+msgid "Max grow ratio for picture: "
+msgstr "Relación de aumento máxima para la imagen : "
+
+#: setup.c:3065
+msgid ""
+"Maximal allowed picture scaling factor. (default 1.0)\n"
+"Real scaling factor depends on picture and screen size\n"
+msgstr ""
+"Factor máximo permitido de escala de imagen. (por defecto 1.0)\n"
+"Factor de escala real depende de imagen y tamaño de pantalla\n"
+
+#: setup.c:3070
+msgid "Maximal size of screen taken by picture: "
+msgstr "Tamaño máximo de pantalla tomado por imagen :"
+
+#: setup.c:3075
+msgid ""
+"Set to below 100% to see background shading effects in all cases. (default "
+"90%)"
+msgstr ""
+"Escoger bajo 100% para ver efectos de sombreado de fondo en todos los "
+"casos. (por defecto 90%)"
+
+#: setup.c:3079
+msgid "Horizontal picture position: "
+msgstr "Posición horizontal de la imagen : "
+
+#: setup.c:3093
+msgid "Effects"
+msgstr "Efectos"
+
+#: setup.c:3104
+msgid "Picture changing effect "
+msgstr "Efectos de cambio de imagen "
+
+#: setup.c:3107
+msgid "[0-29] various transition effects between pictures."
+msgstr "[0-29] varios efectos de transición entre imágenes."
+
+#: setup.c:3135
+msgid "Background shading effect"
+msgstr "Efecto de sombreado de fondo"
+
+#: setup.c:3138
+msgid ""
+"[0-527] Blends color1 & color2 to create various background shades.(see "
+"Randomize background colors)"
+msgstr ""
+"[0-527] Mezcla color1 y color2 para crear varios sombreados de fondo. "
+"(ver la opción \"Colores de fondo aleatorios\" ) "
+
+#: setup.c:3150
+msgid "None"
+msgstr "Ninguno"
+
+#: setup.c:3172
+msgid "Background"
+msgstr "Fondo"
+
+#: setup.c:3182
+msgid "Background coloring mode: "
+msgstr "Modo de coloreado de fondo :"
+
+#: setup.c:3189
+msgid ""
+"Choose if for shading backround use only two blended colors, free colored "
+"GIMP gradients or tiled pictures."
+msgstr ""
+"Escoger si para fondos sombreados usar sólo dos colores mezclados, "
+"sombreados GIMP libremente coloreados o imágenes en mosaico"
+
+#: setup.c:3195
+msgid "Colors"
+msgstr "Colores"
+
+#: setup.c:3200 setup.c:3349 setup.c:3362
+msgid "Tiles"
+msgstr "Mosaicos"
+
+#: setup.c:3207 setup.c:3305
+msgid "Gradient"
+msgstr "Degradado"
+
+#: setup.c:3218
+msgid "Randomize background colors"
+msgstr "Colores de fondo aleatorios"
+
+#: setup.c:3220
+msgid ""
+"Hint: Choose this option, hit checkmark Apply Setup Changes ,choose "
+"Tools/Shaders preview page to see random two colored shading effects each "
+"time it's open."
+msgstr ""
+"Tip : escoge esta opción, hace click en el boton \"Aplicar las "
+"modificaciones\", escoge \"Previsualizacion/Previsualizacion de los efectos de "
+"fondo\" para ver los efectos a dos colores que se lanzarán en cada "
+"cambio."
+
+#: setup.c:3230
+msgid "Background color: "
+msgstr "Color de fondo :"
+
+#: setup.c:3253
+msgid "Background color2: "
+msgstr "Color de fondo 2 :"
+
+#: setup.c:3266
+msgid "This background color applies only when background shading is enabled."
+msgstr ""
+"Este color de fondo se aplica sólo cuando el sombreado de fondo está habilitado."
+
+#: setup.c:3298
+msgid "GIMP gradients"
+msgstr "Gradientes GIMP"
+
+#: setup.c:3308
+msgid ""
+"Various GIMP gradients which should be used for coloring background shading "
+"effects."
+msgstr ""
+"Varios gradientes GIMP que deberían ser usados para colorear el sombreado "
+"del fondo."
+
+#: setup.c:3365
+msgid "Various tilable pixmaps for picture background."
+msgstr "Varias imágenes de mosaico para fondo de imagen."
+
+#: setup.c:3383 setup.c:3478
+msgid "Delete"
+msgstr "Eliminar"
+
+#: setup.c:3401 setup.c:3506
+msgid "View picture ..."
+msgstr "Ver imagen..."
+
+#: setup.c:3421 setup.c:3526
+msgid "Tile: "
+msgstr "Mosaico : "
+
+#: setup.c:3437 setup.c:3457
+msgid "Banners"
+msgstr "Banners"
+
+#: setup.c:3441
+msgid "Use banners"
+msgstr "Usar banners"
+
+#: setup.c:3460
+msgid "Banners which will be drawn on top of background picture."
+msgstr "Banners que serán dibujados por sobre de la imagen de fondo."
+
+#: setup.c:3562
+msgid "Mode"
+msgstr "Modo"
+
+#: setup.c:3565
+msgid "Display mode"
+msgstr "Modo de despliegue"
+
+#: setup.c:3575
+msgid "Run in desktop background (root) window"
+msgstr "Ejecutar en ventana root"
+
+#: setup.c:3576
+msgid "Enable this option to let ChBg manage your desktop background."
+msgstr "Habilitar esta opción para permitir a ChBg manejar tu fondo de escritorio."
+
+#: setup.c:3584
+msgid "Run in own window"
+msgstr "Ejecutar en ventana propia"
+
+#: setup.c:3586
+msgid ""
+"Runs in it's own window and doesn't change the root background (X11 "
+"Wallpaper).\n"
+"Use spacebar to skip forward to next picture, and Q key to hide the window."
+msgstr ""
+"Ejecutar en su propia ventana y no cambiar la imagen root (Wallpaper)\n"
+"Usar barra espaciadora para saltar a la otra imagen, y la tecla Q para "
+"esconder la ventana."
+
+#: setup.c:3596
+msgid "Run in foreign window"
+msgstr "Ejecutar en otra ventana"
+
+#: setup.c:3598
+msgid "Runs in any selected window in your desktop"
+msgstr "Ejecutar en cualquier ventana seleccionada en tu escritorio"
+
+#: setup.c:3606
+msgid "Act as screensaver"
+msgstr "Utilizar como protector de pantalla"
+
+#: setup.c:3608
+msgid "Click mouse once to quit screensaver mode. Runs in full-screen mode."
+msgstr ""
+"Hacer click una vez para salir del modo protector de pantalla. Ejecuta "
+"en modo pantalla completa."
+
+#: setup.c:3618
+msgid "Act as xscreensaver hack"
+msgstr "Generar los archivos de escenario para xscreensaver"
+
+#: setup.c:3620
+msgid ""
+"This option is usable to generate ChBg scenario files for use with "
+"Xscreensaver.\n"
+"When using directly from this ChBg setup, it will not work."
+msgstr ""
+"Esta opción permite generar archivos de escenario ChBg para usar "
+"con Xscreensaver.\n"
+"Esta opción no funciona directamente con Chbg."
+
+#: setup.c:3633
+msgid "Set desktop background via Enlightenment (0.16<)"
+msgstr "Elegir el fondo de pantalla via Enlightenment (0.16<)"
+
+#: setup.c:3635
+msgid ""
+"When you will select this option, ChBg will attempt to use Enlightenemnt WM "
+"capabilities to manage background of your desktop."
+msgstr ""
+"Cuando elijas esta opción, ChBg intentará usar las capacidades Enlightenment "
+"para gestionar el fondo de tu escritorio."
+
+#: setup.c:3647
+msgid "Generate picture into PNG file"
+msgstr "Generar imagen en archivo PNG"
+
+#: setup.c:3649
+msgid ""
+"Store composed picture to file instead of setting desktop window background\n"
+"Don't forget to set the file informations below."
+msgstr ""
+"Almacenar imagen compuesta en archivo en lugar de elegir el fondo de "
+"escritorio de ventana.\n"
+"No olvidar escoger la información de archivo abajo."
+
+#: setup.c:3657
+msgid "PNG file rendering infos"
+msgstr "Información de renderizado de archivo PNG"
+
+#: setup.c:3668
+msgid "File name: "
+msgstr "Nombre de archivo : "
+
+#: setup.c:3671
+msgid "Width: "
+msgstr "Ancho : "
+
+#: setup.c:3674
+msgid "Height: "
+msgstr "Alto : "
+
+#: setup.c:3679
+msgid "Foreign window infos"
+msgstr "Información de ventana externa"
+
+#: setup.c:3690
+msgid "Window ID: "
+msgstr "ID de la ventana : "
+
+#: setup.c:3693
+msgid "Choose ..."
+msgstr "Escoger ..."
+
+#: setup.c:3704
+msgid "Send expose event to window"
+msgstr "Enviar evento expuesto a ventana"
+
+#: setup.c:3724
+msgid "Setup"
+msgstr "Preferencias"
+
+#: setup.c:3727
+msgid "Miscelanous settings"
+msgstr "Opciones varias"
+
+#: setup.c:3736
+msgid "Force background to Nautilus "
+msgstr "Forzar fondo a Nautilus"
+
+#: setup.c:3743
+msgid "Randomize picture order"
+msgstr "Orden de imágenes aleatorio"
+
+#: setup.c:3750
+msgid "Show blank screen when unable to load picture"
+msgstr "Mostrar pantalla en blanco si no carga imagen"
+
+#: setup.c:3752
+msgid ""
+"Useful for determining whether you have files in your picture list which "
+"either images which imlib can't handle or the files are not images such as "
+"html, text, etc."
+msgstr ""
+"Util para saber cuando tienes archivos en tu lista de imágenes que "
+"imlib no puede manejar o no son imágenes (html, texto, etc...)"
+
+#: setup.c:3762
+msgid "Cycle blank screens"
+msgstr "Recorrer pantallas en blanco"
+
+#: setup.c:3764
+msgid ""
+"HINT: To see only pure shading effects, enable this option, clear picture "
+"list and select random shading effect."
+msgstr ""
+"Tip : para ver sólo efectos de sombreado, habilitar esta opción, "
+"limpiar la lista de imágenes y seleccionar efectos de sombreado aleatorios."
+
+#: setup.c:3774
+msgid "Remember last picture"
+msgstr "Recordar la última imagen"
+
+#: setup.c:3776
+msgid ""
+"Usefull when you maintain long picture lists and you want to start next time "
+"where you stops"
+msgstr ""
+"Util cuando mantienes grandes listas de imágenes y quieres empezar "
+"en el lugar donde quedaste la última vez"
+
+#: setup.c:3788
+msgid "Picture changing effect speed ratio: "
+msgstr "Rapidez de cambio de imágenes :"
+
+#: setup.c:3794
+msgid ""
+"Used to change the speed of picture changing effects.\n"
+"On slow machines choose faster and on very fast machines choose slower."
+msgstr ""
+"Usado para cambiar la velocidad de cambio de los efectos de imágenes.\n"
+"En máquinas lentas escoger rápido y en máquinas muy rápidas "
+"escoger lento."
+
+#: setup.c:3817
+msgid "Number of iterations in fractal-based effects: "
+msgstr "Número de iteraciones en efectos basados en fractal : "
+
+#: setup.c:3821
+msgid ""
+"Useful for speedup all fractalbased background shading effects or to "
+"generate more detailed fractals."
+msgstr ""
+"Util para acelerar todos los efectos de sombreado basados en fractales "
+"o para generar fractales más detallados."
+
+#: setup.c:3825
+msgid "Picture changing effects rectangle size: "
+msgstr "Tamaño de rectángulo de los efectos de cambio de imagen :"
+
+#: setup.c:3829
+msgid "Useful for speedup picture changing effects which uses rectangles."
+msgstr ""
+"Util para acelerar los efectos de cambio de imagen que usan "
+"rectángulos."
+
+#: setup.c:3870
+msgid "Random effects"
+msgstr "Efectos aleatorios"
+
+#: setup.c:3873
+msgid "Enabled changing effects in random mode"
+msgstr "Cambiar efectos en modo aleatorio habilitado"
+
+#: setup.c:3888 setup.c:3938 thumb.c:2113
+msgid "Select all"
+msgstr "Seleccionar todo"
+
+#: setup.c:3895 setup.c:3945
+msgid "Unselect all"
+msgstr "Deseleccionar todo"
+
+#: setup.c:3903
+msgid "Eliminate unwanted Picture changing effects [2-29] when randomizing."
+msgstr "Eliminar efectos no deseados [2-29] en modo aleatorio."
+
+#: setup.c:3923
+msgid "Enabled shading effects in random mode"
+msgstr "Efectos de sombreado aleatorio habilitado"
+
+#: setup.c:3953
+msgid "Eliminate unwanted Background shading effects [2-62] when randomizing."
+msgstr "Eliminar efectos de sombreado no deseados [2-62] en modo aleatorio."
+
+#: setup.c:3996
+msgid "Status"
+msgstr "Estado"
+
+#: setup.c:3999
+msgid "Picture informations"
+msgstr "Informacion de imagen"
+
+#: setup.c:4007
+msgid "Status:"
+msgstr "Estado : "
+
+#: setup.c:4020
+msgid "Image:"
+msgstr "Imagen : "
+
+#: setup.c:4033
+msgid "Effect: "
+msgstr "Efecto : "
+
+#: setup.c:4046
+msgid "Shader: "
+msgstr "Sombreado : "
+
+#: setup.c:4060
+msgid "Gradient: "
+msgstr "Gradiente : "
+
+#: setup.c:4075
+msgid "Banner: "
+msgstr "Banner : "
+
+#: setup.c:4087
+msgid "Tille: "
+msgstr "Mosaico : "
+
+#: setup.c:4156
+#, c-format
+msgid "%s"
+msgstr "%s"
+
+#: setup.c:4160 setup.c:4168 setup.c:4175 setup.c:4180 setup.c:4183
+#: setup.c:4185
+msgid "none"
+msgstr "ninguno"
+
+#: settings.c:81
+msgid "Main"
+msgstr "Principales"
+
+#: settings.c:84
+msgid "Slideshow interval: "
+msgstr "Intervalo de diaporama : "
+
+#: settings.c:94
+msgid ""
+"In picture preview you can activate automatic slideshows, this value is used "
+"to determine period for picture changes."
+msgstr ""
+"En previsualización de imágenes puedes activar diaporamas automáticos, este "
+"valor es utilizado para determinar el periodo de cambios de imágenes. "
+
+#: settings.c:100
+msgid " sec."
+msgstr " seg."
+
+#: settings.c:105
+msgid "Shader open width: "
+msgstr "Ancho de los efectos : "
+
+#: settings.c:115
+msgid ""
+"From shader preview dialog, you can create pictures in PNG format and thus "
+"way export it to external image processing programs. This value specifies "
+"the width of shaded picture which will be passed to external program."
+msgstr ""
+"En la ventana \"Previsualización de los efectos de fondo\", puedes crear "
+"las imágenes en formato PNG y así exportarlas a otros programas. "
+"Este valor especifica el ancho de la imagen sombreada la cual será enviada "
+"al programa externo."
+
+#: settings.c:121 settings.c:142 shaderpv.c:381
+msgid " pixels"
+msgstr " pixels"
+
+#: settings.c:126
+msgid "Shader open height: "
+msgstr "Altura de los efectos : "
+
+#: settings.c:136
+msgid ""
+"From shader preview dialog, you can create pictures in PNG format and thus "
+"way export it to external image processing programs. This value specifies "
+"the height of shaded picture which will be passed to external program."
+msgstr ""
+"Dentro de la ventana \"Previsualización de los efectos de fondo\", puedes crear "
+"las imágenes en formato PNG y así exportarlas a otros programas. "
+"Este valor especifica la altura de la imagen sombreada la cual será enviada "
+"al programa externo."
+
+#: settings.c:147
+msgid "Shaders per page: "
+msgstr "Efectos de fondo por página : "
+
+#: settings.c:158
+msgid ""
+"Currently chbg have many shading effects. It takes horrible ammount of time "
+"to render such amount of pictures, so it is clever to let it render per "
+"pages. This value allows you to specify how many shaders will be on one page."
+msgstr ""
+"ChBg dispone de varios efectos de fondo. Toma enorme cantidad de tiempo "
+"renderizar esa cantidad de imágenes, así es mejor dejarlas renderizar por "
+"páginas. Este valor te permite especificar cuantos sombreados habrán por "
+"cada página."
+
+#: settings.c:168
+msgid "Confirm picture remove"
+msgstr "Confirmar la remoción de imagen"
+
+#: settings.c:169
+msgid ""
+"In thumbnail preview dialogs you can select multiple pictures for removing. "
+"At default chbg shows dialog to confirm removing of each picture. With this "
+"option you can turn on/off displaying of that dialog. When picture removing "
+"dialog is disallowed, all selected pictures will be removed without any "
+"question !"
+msgstr ""
+"En el modo de previsualización, puedes seleccionar múltiples imágenes para "
+"demover. Por defecto, ChBg muestra un diálogo para confirmar la remoción "
+"de cada imagen. Con esta opción puedes activar o desactivar el despliegue "
+"de ese diálogo. Cuando el diálogo de remoción de imagen está inhabilitado, "
+"todas las imágenes seleccionadas serán removidas sin ninguna pregunta !"
+
+#: settings.c:175
+msgid "Picture preview window type"
+msgstr "Tipo de ventana de previsualización de imagen"
+
+#: settings.c:186
+msgid "Raw - fullsize window"
+msgstr "Sin modificar - ventana tamaño completo "
+
+#: settings.c:187
+msgid ""
+"With this option you can contol what type of picture preview dialog you will "
+"see. When you will select this option, chbg will display picture always in "
+"window with same size as have picture. This is not good idea when picture is "
+"too big to fit to screen size, but is ideal for normal size pictures."
+msgstr ""
+"Con esta opción puedes controlar el tipo de diálogo de previsualización  "
+"de imagen disponible. Cuando selecciones esta opción, ChBg mostrará la imagen "
+"siempre en la ventana con el mismo tamaño de la que tiene la imagen. Esta"
+"no es buena idea cuando la imagen es muy grande para caber en pantalla "
+"completa, pero es ideal para imágenes de tamaño normal."
+
+#: settings.c:195
+msgid "Scrolled window"
+msgstr "Ventana recogida"
+
+#: settings.c:196
+msgid ""
+"With this option you can contol what type of picture preview dialog you will "
+"see. When you will select this option, chbg will display picture in window "
+"inside which you can scroll picture by draging mouse, when picture is bigger "
+"than current size of window. Size of this dialog always attempt to fit to "
+"screen size."
+msgstr ""
+"Con esta opción puedes controlar que tipo de diálogo de previsualización de "
+"imagen tendrás a disposición. Cuando elijas esta opción, ChBg mostrará la "
+"imagen dentro de la ventana, en la cual tu puedes recorrer la imagen "
+"arrastrando el mouse, cuando la imagen sea mayor que el tamaño actual de la "
+"ventana. El tamaño de este diálogo siempre trata de ajustarse al tamaño "
+"de la pantalla."
+
+#: settings.c:202
+msgid "Picture scrolling type"
+msgstr "Tipo de recorrido de imagen"
+
+#: settings.c:213
+msgid "Smooth drag"
+msgstr "Arrastre suave"
+
+#: settings.c:214
+msgid ""
+"If you have selected above \"Scrolled window\" preview window type. With "
+"this options you can control when will be picture redisplayed when draging "
+"it. If you will select this option, the preview window will be redrawed "
+"immediatly when you move your mouse. I suggest to use it only when you have "
+"fast enough computer."
+msgstr ""
+"Si haz seleccionado el tipo de ventana \"Ventana recorrida\" . Con estas "
+"opciones puedes controlar cuando la imagen será redibujada cuando se "
+"recorre. Si seleccionas esta opción, la ventana de previsualización será "
+"redibujada inmediatamente cuando muevas tu ratón. Se sugiere usarla sólo "
+"en caso de tener un computador lo suficientemente rápido."
+
+#: settings.c:222
+msgid "Jumping drag"
+msgstr "Arrastre a saltos"
+
+#: settings.c:223
+msgid ""
+"If you have selected above \"Scrolled window\" preview window type. With "
+"this options you can control when will be picture redisplayed when draging "
+"it. If you will select this option, the preview window will be redrawed just "
+"when you will finish the mouse drag. I suggest to use it only when you have "
+"slower computer."
+msgstr ""
+"Si haz seleccionado el tipo de previsualización \"Ventana recorrida\". Con "
+"estas opciones puedes controlar cuando la imagen será redibujada cuando la "
+"recorras. Si seleccionas esta opción, la ventana de previsualización será "
+"redibujada sólo cuando termines el arrastre del ratón. Se sugiere usarla "
+"en caso de tener un computador lento."
+
+#: settings.c:243
+msgid "External editors"
+msgstr "Editores externos"
+
+#: settings.c:246
+msgid "No."
+msgstr "Num."
+
+#: settings.c:250
+msgid "Label"
+msgstr "Etiqueta"
+
+#: settings.c:254
+msgid "Command"
+msgstr "Comando"
+
+#: settings.c:295
+msgid "ChBg: Options"
+msgstr "ChBg: Opciones"
+
+#: settings.c:317
+msgid "Ok"
+msgstr "Ok"
+
+#: shader.c:828
+msgid "Generating background shading effect"
+msgstr "Generando efecto de sombreado de fondo"
+
+#: shaderpv.c:84
+#, c-format
+msgid "ChBg: shader %d"
+msgstr "ChBg: sombreado %d"
+
+#: shaderpv.c:324
+msgid "ChBg: save shader"
+msgstr "ChBg: guardar sombreado"
+
+#: shaderpv.c:352
+msgid "Size: "
+msgstr "Tamaño : "
+
+#: shaderpv.c:369
+msgid " x "
+msgstr " x "
+
+#: shaderpv.c:555 shaderpv.c:744
+msgid "Chbg: shaders preview (wait ...)"
+msgstr "Chbg: previsualización de sombreados (esperar ...)"
+
+#: shaderpv.c:613
+#, c-format
+msgid ""
+"Shader number: %d\n"
+"Gradient: %s"
+msgstr ""
+"Sombreado número : %d\n"
+"Gradiente : %s"
+
+#: shaderpv.c:619
+#, c-format
+msgid ""
+"Shader number: %d\n"
+"Color1: #%02x%02x%02x\n"
+"Color2: #%02x%02x%02x"
+msgstr ""
+"Gradiente número %d\n"
+"Color 1 : #%02x%02x%02x\n"
+"Color 2 : #%02x%02x%02x"
+
+#: shaderpv.c:638
+msgid "Chbg: shaders preview"
+msgstr "Chbg: Previsualización de los sombreados"
+
+#: shaderpv.c:773 thumb.c:2515
+msgid "<< previous"
+msgstr "<< previo"
+
+#: shaderpv.c:808 thumb.c:2527
+msgid "next >>"
+msgstr "siguiente >>"
+
+#: shaderpv.c:847 thumb.c:2338 thumb.c:2555 thumb.c:2741
+msgid "Refresh"
+msgstr "Refrescar"
+
+#: shaderpv.c:856 thumb.c:2093
+msgid "View ..."
+msgstr "Ver ..."
+
+#: shaderpv.c:864 thumb.c:979 thumb.c:2156
+msgid "Set wallpaper"
+msgstr "Elegir wallpaper"
+
+#: shaderpv.c:876
+msgid "Save as ..."
+msgstr "Guardar como..."
+
+#: shaderpv.c:889 thumb.c:971 thumb.c:2247
+msgid "Open with"
+msgstr "Abrir con"
+
+#: thumb.c:402
+#, c-format
+msgid "ChBg: picture %s"
+msgstr "ChBg: imagen %s"
+
+#: thumb.c:948
+msgid "(n) Next"
+msgstr "(n) Siguiente"
+
+#: thumb.c:955
+msgid "(p) Previous"
+msgstr "(p) Previo"
+
+#: thumb.c:984 thumb.c:2162
+msgid "Tiled"
+msgstr "Mosaico"
+
+#: thumb.c:992 thumb.c:2170
+msgid "Tiled-mirrored"
+msgstr "Mosaico-espejado"
+
+#: thumb.c:1000 thumb.c:2178
+msgid "Maximized"
+msgstr "Tamaño máximo"
+
+#: thumb.c:1008 thumb.c:2186
+msgid "Centered"
+msgstr "Centrado"
+
+#: thumb.c:1016 thumb.c:2194
+msgid "Smart scaled centered"
+msgstr "Escalar centrado personalizado"
+
+#: thumb.c:1024 thumb.c:2202
+msgid "Center tiled"
+msgstr "Centrado mosaico"
+
+#: thumb.c:1032 thumb.c:2210
+msgid "Integer tiled"
+msgstr "Mosaico entero"
+
+#: thumb.c:1040 thumb.c:2218
+msgid "Symetrical tiled"
+msgstr "Mosaico simétrico"
+
+#: thumb.c:1048 thumb.c:2226
+msgid "Integer mirrored"
+msgstr "Entero espejado"
+
+#: thumb.c:1056 thumb.c:2234
+msgid "Symetrical mirrored"
+msgstr "Espejado simétrico"
+
+#: thumb.c:1068
+msgid "(d) Size double"
+msgstr "(d) Tamaño doble"
+
+#: thumb.c:1075
+msgid "(h) Size half"
+msgstr "(h) Tamaño medio"
+
+#: thumb.c:1082
+#, c-format
+msgid "(+) Size +10 %"
+msgstr "(+) Tamaño +10 %"
+
+#: thumb.c:1089
+#, c-format
+msgid "(-) Size -10 %"
+msgstr "(-) Tamaño -10 %"
+
+#: thumb.c:1096
+msgid "(o) Size original"
+msgstr "(o) Tamaño original"
+
+#: thumb.c:1107
+msgid "(m) Flip horizontal"
+msgstr "(m) Voltear horizontal"
+
+#: thumb.c:1114
+msgid "(v) Flip vertical"
+msgstr "(v) Voltear vertical"
+
+#: thumb.c:1125
+msgid "(s) Toggle slideshow"
+msgstr "(s) diaporama"
+
+#: thumb.c:1136
+msgid "(q) Close"
+msgstr "(q) Cerrar"
+
+#: thumb.c:1488
+msgid "Chbg: all thumbnails preview (wait ...)"
+msgstr "Chbg: previsualización de todas las miniaturas (esperar ...)"
+
+#: thumb.c:1503
+msgid "Chbg: all thumbnails preview"
+msgstr "ChBg: previsualización de todas las miniaturas"
+
+#: thumb.c:1692
+msgid "Remove picture ?"
+msgstr "¿Remover imagen?"
+
+#: thumb.c:1696
+msgid "Do you realy want to remove this picture?"
+msgstr "¿Realmente quieres remover esta imagen?"
+
+#: thumb.c:1719
+msgid "Yes"
+msgstr "Si"
+
+#: thumb.c:1725
+msgid "No"
+msgstr "No"
+
+#: thumb.c:1902
+msgid "ChBg: rename image"
+msgstr "ChBg: renombrar imagen"
+
+#: thumb.c:1910
+msgid "Image to rename"
+msgstr "Imagen a renombrar"
+
+#: thumb.c:1927
+msgid "Original name:"
+msgstr "Nombre original : "
+
+#: thumb.c:1938
+msgid "New name:"
+msgstr "Nombre nuevo : "
+
+#: thumb.c:1954
+msgid "Rename"
+msgstr "Renombrar"
+
+#: thumb.c:1962
+msgid "Don't rename"
+msgstr "No renombrar"
+
+#: thumb.c:2101
+msgid "View fullscreen ..."
+msgstr "Ver a pantalla completa ..."
+
+#: thumb.c:2132
+msgid "Remove ..."
+msgstr "Remover ..."
+
+#: thumb.c:2140
+msgid "Rename ..."
+msgstr "Renombrar ..."
+
+#: thumb.c:2258
+msgid "Tools"
+msgstr "Herramientas"
+
+#: thumb.c:2297
+msgid "Chbg: thumbnails preview (wait ...)"
+msgstr "Chbg: previsualización de las miniaturas (esperar ...)"
+
+#: thumb.c:2364 thumb.c:2490
+msgid "Chbg: page thumbnails preview (wait ...)"
+msgstr "Chbg: previsualización de las miniaturas por página (esperar ...)"
+
+#: thumb.c:2399
+msgid "Chbg: page thumbnails preview"
+msgstr "ChBg: previsualización de las miniaturas por página"
+
+#: thumb.c:2579 thumb.c:2696
+msgid "Chbg: dir thumbnails preview (wait ...)"
+msgstr "Chbg: previsualización de las miniaturas por directorio (esperar ...)"
+
+#: thumb.c:2610
+msgid "Chbg: dir thumbnails preview"
+msgstr "ChBg: previsualización de las miniaturas por directorio"
+
+#~ msgid "ViewPicture"
+#~ msgstr "VerImagen"
+
+#~ msgid "Set properties"
+#~ msgstr "Elegir propiedades"
+
+#~ msgid "bad interval value: %s , (float required)\n"
+#~ msgstr "valor de intervalo incorrecto : %s, (flotante requerido)\n"
+
+#~ msgid " min. "
+#~ msgstr " min. "
+
+#~ msgid "sec."
+#~ msgstr "seg."
+
+#~ msgid "Shader coloring mode :"
+#~ msgstr "Modo del sombreado de fondo : "
+
+#~ msgid "shader %d"
+#~ msgstr "Efecto de fondo %d"
+
+#~ msgid "Cenetr tiled"
+#~ msgstr "Centrado"
+
+#~ msgid ""
+#~ "When pictures aren't present, cycle with blanking screen.(optionally with "
+#~ "shading)"
+#~ msgstr ""
+#~ "Cuando las imágenes no están disponibles, hacer ciclo de pantallas en blanco "
+#~ "(opcionalmente con sombreado)"
+
+#~ msgid "ChBg: Get background color"
+#~ msgstr "ChBg : Obtener el color de fondo"
+
+#~ msgid "ChBg: Get background color 2"
+#~ msgstr "ChBg : Obtener el color de fondo 2"
+
+#~ msgid "ChBg: Get Properties: background color"
+#~ msgstr "ChBg: Obtener Propiedades : color de fondo"
+
+#~ msgid "ChBg: Get Properties: background color 2"
+#~ msgstr "ChBg: Obtener Propiedades : color de fondo 2"
+
+#~ msgid ""
+#~ "This is primary backround color used for plain background or one of colors "
+#~ "used for blend shading."
+#~ msgstr ""
+#~ "Este es el color de fondo primario usado para fondo plano o uno de colores "
+#~ "usado si un efecto de fondo está activo."
+
+#~ msgid "Randomize background colors."
+#~ msgstr "Colores de fondo aleatorios"
+
+#~ msgid "Randomize background color"
+#~ msgstr "Color de fondo aleatorio"
