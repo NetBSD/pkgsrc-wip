@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/27 23:53:45 mpasternak Exp $
+bin/bison-${PKGVERSION}

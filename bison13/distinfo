@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/27 23:53:45 mpasternak Exp $
+
+SHA1 (bison-1.35.tar.bz2) = 083a1f3c153f7358e451a213f0879e98b3aafb1c
+Size (bison-1.35.tar.bz2) = 627723 bytes
+SHA1 (patch-aa) = cd8a987a3da3380bf58b212e80bc7a74bc2dbb6c
+SHA1 (patch-ab) = af903fea6c8f864b5f1fcb26e85e95e5b6fff758

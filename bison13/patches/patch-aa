@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/27 23:53:46 mpasternak Exp $
+
+--- Makefile.in.orig	2004-03-28 01:53:50.000000000 +0100
++++ Makefile.in
+@@ -109,7 +109,7 @@ AUTOMAKE_OPTIONS = 1.6 check-news readme
+ 
+ ACLOCAL_AMFLAGS = -I m4
+ 
+-SUBDIRS = config intl po lib src doc m4 tests
++SUBDIRS = config intl lib src m4 tests
+ 
+ EXTRA_DIST = config/config.rpath  REFERENCES configure.bat OChangeLog Makefile.maint GNUmakefile
+ 

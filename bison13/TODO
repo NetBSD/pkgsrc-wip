@@ -1,0 +1,8 @@
+$Id: TODO,v 1.1.1.1 2004/03/27 23:53:46 mpasternak Exp $
+
+Unsure about PLIST.
+
+Unsure if it will work on a "clean" system with wip/prothon (the package for
+bison-1.35 is stripped), but I have no resources to test this.
+
+	-- dotz@irc.pl

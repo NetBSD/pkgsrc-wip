@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/03/27 23:53:46 mpasternak Exp $
+
+--- src/Makefile.in.orig	2004-03-28 01:52:14.000000000 +0100
++++ src/Makefile.in
+@@ -339,15 +339,8 @@ state_.$(OBJEXT) symtab_.$(OBJEXT) vcg_.
+ warshall_.$(OBJEXT) : $(ANSI2KNR)
+ uninstall-info-am:
+ pkgdataDATA_INSTALL = $(INSTALL_DATA)
+-install-pkgdataDATA: $(pkgdata_DATA)
+-	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)
+-	@list='$(pkgdata_DATA)'; for p in $$list; do \
+-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+-	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(pkgdataDATA_INSTALL) $$d$$p $(DESTDIR)$(pkgdatadir)/$$f"; \
+-	  $(pkgdataDATA_INSTALL) $$d$$p $(DESTDIR)$(pkgdatadir)/$$f; \
+-	done
++install-pkgdataDATA:
++	echo "Bypassing"
+ 
+ uninstall-pkgdataDATA:
+ 	@$(NORMAL_UNINSTALL)

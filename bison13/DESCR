@@ -1,0 +1,7 @@
+Bison is the GNU replacement for yacc(1).  Some programs depend on
+extensions present in Bison.
+
+[WARNING]
+This is old version of GNU Bison, needed to compile some packages, imported
+as a need for backward compatibility. If you plan to use GNU Bison, get a
+recent version of the package from devel/bison.
