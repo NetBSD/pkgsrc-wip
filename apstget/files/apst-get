@@ -122,8 +122,13 @@ do_relink() {
 	echo "==> Looking for broken libs on ${PREFIX}[/bin|/sbin|/lib]"
 		FILES=`find ${PREFIX}/bin ${PREFIX}/sbin ${PREFIX}/lib -type f`
 	else
-	echo "==> Looking for unlinked binaries of package ${1}"
-		FILES=`pkg_info -L $1 | grep -e bin -e lib`
+		lPKG=$1
+		if [ !  "`echo $1 |grep /`" = "" ]; then
+			cd ${PKGSRC_DIR}/$1
+			lPKG="`${MAKE} show-var VARNAME=PKGNAME`"
+		fi
+		echo "==> Looking for unlinked binaries in package ${lPKG}"
+		FILES=`pkg_info -L $lPKG | grep -e bin -e lib`
 	fi
 
 	for A in ${FILES}; do
