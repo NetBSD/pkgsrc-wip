@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/31 22:24:09 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/05/09 04:16:06 minskim Exp $
 #
 # This Makefile fragment is included by packages that use fixesext.
 #
@@ -15,7 +15,7 @@ BUILDLINK_PACKAGES+=			fixesext
 BUILDLINK_DEPENDS.fixesext?=		fixesext>=2.0
 BUILDLINK_PKGSRCDIR.fixesext?=		../../wip/fixesext
 
-.include "../../wip/xextensions/buildlink3.mk"
+.include "../../x11/xextensions/buildlink3.mk"
 
 .endif # FIXESEXT_BUILDLINK3_MK
 

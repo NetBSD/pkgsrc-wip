@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 15:40:57 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/05/09 04:16:12 minskim Exp $
 #
 # This Makefile fragment is included by packages that use xlibs.
 #
@@ -18,7 +18,7 @@ BUILDLINK_DEPENDS.xlibs+=		xlibs>=1.0
 BUILDLINK_PKGSRCDIR.xlibs?=		../../wip/xlibs
 .endif # XLIBS_BUILDLINK3_MK
 
-.include "../../wip/xextensions/buildlink3.mk"
+.include "../../x11/xextensions/buildlink3.mk"
 .include "../../wip/xproto/buildlink3.mk"
 .include "../../wip/xtrans/buildlink3.mk"
 .include "../../wip/libXau/buildlink3.mk"

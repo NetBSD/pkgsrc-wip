@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/09 02:38:58 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/09 04:16:04 minskim Exp $
 #
 
 DISTNAME=		compositeext-2.0
@@ -18,6 +18,6 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	compositeext.pc.in
 
 .include "../../wip/fixesext/buildlink3.mk"
-.include "../../wip/xextensions/buildlink3.mk"
+.include "../../x11/xextensions/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

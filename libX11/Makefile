@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/05/09 02:39:05 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/09 04:16:06 minskim Exp $
 #
 
 DISTNAME=		libX11-6.2.1
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--disable-xthreads
 CONFIGURE_ENV+=		XTHREADS_LIBS=${BUILDLINK_LDADD.pthread}
 .endif
 
-.include "../../wip/xextensions/buildlink3.mk"
+.include "../../x11/xextensions/buildlink3.mk"
 .include "../../wip/xproto/buildlink3.mk"
 .include "../../wip/xtrans/buildlink3.mk"
 .include "../../wip/libXau/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/02/10 18:23:50 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/05/09 04:16:07 minskim Exp $
 #
 # This Makefile fragment is included by packages that use libXext.
 #
@@ -17,7 +17,7 @@ BUILDLINK_PKGSRCDIR.libXext?=		../../wip/libXext
 
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/xproto/buildlink3.mk"
-.include "../../wip/xextensions/buildlink3.mk"
+.include "../../x11/xextensions/buildlink3.mk"
 
 .endif # LIBXEXT_BUILDLINK3_MK
 
