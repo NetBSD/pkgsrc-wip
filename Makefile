@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1528 2004/11/09 13:11:58 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1528 2004/11/09 13:11:58 xtraeme Exp $
+# $Id: Makefile,v 1.1529 2004/11/09 20:37:04 marc Exp $
+# $NetBSD: Makefile,v 1.1529 2004/11/09 20:37:04 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -551,6 +551,11 @@ SUBDIR+=	pointless
 SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postgresql-uniqueidentifier
+SUBDIR+=	postgresql80
+SUBDIR+=	postgresql80-docs
+SUBDIR+=	postgresql80-client
+SUBDIR+=	postgresql80-lib
+SUBDIR+=	postgresql80-server
 SUBDIR+=	ppp
 SUBDIR+=	prelude-lml
 SUBDIR+=	prelude-manager
