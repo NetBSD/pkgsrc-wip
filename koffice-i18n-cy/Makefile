@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/18 05:28:02 ianzag Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/20 12:59:37 ianzag Exp $
 
 DISTNAME=		koffice-i18n-cy-1.3.5
 CATEGORIES=		x11 kde
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://www.koffice.org/
-COMMENT=		Language pack for KOffice
+COMMENT=		Welsh language pack for KOffice
 
 USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES

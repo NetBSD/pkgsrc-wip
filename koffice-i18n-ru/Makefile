@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/13 10:41:21 ianzag Exp $
+# $NetBSD: Makefile,v 1.6 2005/01/20 12:59:44 ianzag Exp $
 
 DISTNAME=		koffice-i18n-ru-1.3.5
 CATEGORIES=		x11 kde
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://www.koffice.org/
-COMMENT=		KOffice ru language pack
+COMMENT=		Russian language pack for KOffice
 
 USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES

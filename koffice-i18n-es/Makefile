@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/01/13 11:25:29 ianzag Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/20 12:59:39 ianzag Exp $
 
 DISTNAME=		koffice-i18n-es-1.3.5
 CATEGORIES=		x11 kde
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.koffice.org/
-COMMENT=		Language bindings for the Koffice
+COMMENT=		es language pack for Koffice
 
 USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
