@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/12/15 05:38:11 shattered Exp $
+
+--- scintilla/src/Document.cxx.orig	Sat Oct 25 13:14:52 2003
++++ scintilla/src/Document.cxx	Wed Nov 12 21:33:58 2003
+@@ -41,7 +41,7 @@
+ 
+ Document::Document() {
+ 	refCount = 0;
+-#ifdef unix
++#if 1
+ 	eolMode = SC_EOL_LF;
+ #else
+ 	eolMode = SC_EOL_CRLF;

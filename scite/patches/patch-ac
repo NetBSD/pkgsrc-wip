@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/12/15 05:38:11 shattered Exp $
+
+--- scite/src/SciTEBase.h.orig	Sat Oct 25 13:14:53 2003
++++ scite/src/SciTEBase.h	Wed Nov 12 21:33:58 2003
+@@ -18,7 +18,7 @@
+ 
+ extern const char menuAccessIndicator[];
+ 
+-#ifdef unix
++#if 1
+ #include <limits.h>
+ #ifdef PATH_MAX
+ #define MAX_PATH PATH_MAX
