@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/11 11:46:56 yeled Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/25 07:24:42 yeled Exp $
 
 DISTNAME=		mutt-1.5.4i
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
@@ -81,6 +81,11 @@ CONFIGURE_ARGS+=	--without-ssl
 .if defined(USE_SASL) && ${USE_SASL} == "YES"
 .include "../../security/cyrus-sasl/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
+.endif
+
+.if defined(USE_SASL2) && ${USE_SASL2} == "YES"
+.include "../../security/cyrus-sasl2/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-sasl2=${BUILDLINK_PREFIX.cyrus-sasl2}
 .endif
 
 BUILD_DEFS+=		MUTT_USE_NCURSES MUTT_USE_SLANG MUTT_USE_SSL USE_SASL
