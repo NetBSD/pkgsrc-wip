@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/23 17:31:31 bencollver Exp $
+
+--- libmpq/mpq.h.orig	Wed Feb 11 16:45:50 2004
++++ libmpq/mpq.h
+@@ -30,7 +30,7 @@
+ #ifndef _MPQ_H
+ #define _MPQ_H
+ 
+-#include <linux/limits.h>
++#include <limits.h>
+ 
+ #define LIBMPQ_MAJOR_VERSION		0		/* Major version number... maybe sometimes we reach version 1 :) */
+ #define LIBMPQ_MINOR_VERSION		3		/* Minor version number - increased only for small changes */

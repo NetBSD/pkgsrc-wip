@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/10/23 17:31:31 bencollver Exp $
+
+SHA1 (mpq-tools-0.3.0.tar.bz2) = 5d85f0b43a7afca70f5528b451f66bcf0b6ec114
+Size (mpq-tools-0.3.0.tar.bz2) = 175467 bytes
+SHA1 (patch-aa) = 3a6058c27015dd60c10d4b91a32f5aec0ab1a1e4
+SHA1 (patch-ab) = 495678442b6be6469f12cec6b0fe77936cfd383d
+SHA1 (patch-ac) = 9b3837dc7277ba481c4a63e624ed1ee5f7ac3a7d
+SHA1 (patch-ad) = 198035568b0378cceb3e77e3d81fa4745e69cbc8

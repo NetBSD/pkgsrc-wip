@@ -1,0 +1,11 @@
+libmpq is a library which can be easily used in own applications
+and a set of tools for manipulating mpq archives.
+
+MPQ, or MoPaQ, is a proprietary archive format created by
+Mike O'Brien, the man hailed as Blizzard's multiplayer engine
+genius, back in 1996 as a general purpose archive for use with
+Diablo, and named narcissistically for its creator
+"Mike O'brien PaCK". The copyrights to it, however, are held by
+Havas Interactive, Blizzard's parent company. The archive format
+is used by many Blizzard titles like Diablo, Diablo 2, Starcraft,
+Warcraft 2: BNE or a newer version in Warcraft 3.
