@@ -1,7 +1,7 @@
-$Id: TODO,v 1.2 2004/10/06 16:24:25 bubuchka Exp $
+$Id: TODO,v 1.3 2005/03/14 15:45:06 bubuchka Exp $
 
 - Test, if it works with SquidGuard (I haven't installed this software).
 
 - SARG doesn't sort index entries correctly in case if date format
   is an European. This is completely SARG issue (see index.c file
-  for details).
+  for details - it insufficiently uses external sort(1) utility).
