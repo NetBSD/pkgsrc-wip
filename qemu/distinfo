@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/02 01:27:45 dhowland Exp $
+
+SHA1 (qemu-0.6.0.tar.gz) = e7e8b30704af11eacad521800d4bf08cdbe5a137
+Size (qemu-0.6.0.tar.gz) = 874397 bytes
