@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/08/05 03:29:08 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/08/05 03:32:19 minskim Exp $
 
 DISTNAME=	bmon-1.2.1
 CATEGORIES=	wip net
@@ -7,6 +7,8 @@ MASTER_SITES=	http://trash.net/~reeler/bmon/files/
 MAINTAINER=	hsaliak@gmail.com
 HOMEPAGE=	http://trash.net/~reeler/bmon/
 COMMENT=	Bmon is an interface bandwidth monitor
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_BUILDLINK3=	yes
