@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.981 2004/02/18 01:26:22 minskim Exp $
-# $NetBSD: Makefile,v 1.981 2004/02/18 01:26:22 minskim Exp $
+# $Id: Makefile,v 1.982 2004/02/18 02:06:41 minskim Exp $
+# $NetBSD: Makefile,v 1.982 2004/02/18 02:06:41 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -17,7 +17,6 @@ SUBDIR+=	acid
 SUBDIR+=	adodb
 SUBDIR+=	adtool
 SUBDIR+=	afterstep2
-SUBDIR+=	aget
 SUBDIR+=	allegro
 SUBDIR+=	amap
 SUBDIR+=	amavisd-new
