@@ -1,0 +1,74 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/16 15:16:34 pulahti Exp $
+
+--- config/targets	4 Nov 2003 17:50:53 -0000	1.17
++++ config/targets	27 Dec 2003 13:37:52 -0000
+@@ -38,7 +38,7 @@
+ 
+ # build ML-Burg
+ #
+-#request ml-burg
++request ml-burg
+ 
+ # pre-compile and install the remaining components of the SML/NJ library
+ # (everything except smlnj-lib.cm, aka Util, itself)
+@@ -47,7 +47,7 @@
+ 
+ # pre-compile and install CM "portable graph" utility library
+ #
+-#request pgraph-util
++request pgraph-util
+ 
+ # pre-compile and install Concurrent ML, which is a library for message-passing
+ # concurrency.
+@@ -62,7 +62,7 @@
+ # pre-compile and install eXene, which is a library for X-Windows programming.
+ # EXene requires CML.
+ #
+-#request eXene
++request eXene
+ 
+ # pre-compile (certain) parts of MLRISC that are not already part of the SML/NJ
+ # compiler itself
+@@ -72,7 +72,7 @@
+ # pre-compile and install the C-Kit, which is a library for parsing and
+ # type-checking C programs
+ #
+-#request ckit
++request ckit
+ 
+ # pre-compile and install the ML-NLFFI Library, which is the core of
+ # a new foreign function interface (where "foreign" functions are
+@@ -81,7 +81,7 @@
+ # the new FFI.
+ # This preview release currently works only under X86/Linux.
+ #
+-#request ml-nlffi-lib
++request ml-nlffi-lib
+ 
+ # build ML-NLFFI-Gen, a program generator tool used in conjunction with
+ # the new "NLFFI" foreign function interface.  The tool generates ML
+@@ -89,13 +89,13 @@
+ # (Requires ckit!)
+ # This preview release currently works only under X86/Linux.
+ #
+-#request ml-nlffigen
++request ml-nlffigen
+ 
+ # pre-compile and install the MLRISC Tools library.
+ # This library is for parsing and pretty printing SML code.
+ # It's used by various MLRISC code generator generator.
+ #
+-#request mlrisc-tools
++request mlrisc-tools
+ 
+ # Build and install the 'nowhere' program translator.
+ # This tool translates programs with conditional patterns (where clauses) 
+@@ -103,7 +103,7 @@
+ # (bad) documentation.
+ # (Requires the mlrisc-tools library!)
+ #
+-#request nowhere
++request nowhere
+ 
+ # Note: autoloading is always enabled.
+ #   In order to customize what is being pre-registered for autoloading
