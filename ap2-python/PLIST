@@ -1,14 +1,24 @@
-@comment $NetBSD: PLIST,v 1.2 2003/11/29 14:11:21 anoncvs_oppn Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/05/31 23:05:25 marc Exp $
 lib/httpd/mod_python.so
+${PYSITELIB}/mod_python/Cookie.py
+${PYSITELIB}/mod_python/Cookie.pyc
+${PYSITELIB}/mod_python/Cookie.pyo
+${PYSITELIB}/mod_python/Session.py
+${PYSITELIB}/mod_python/Session.pyc
+${PYSITELIB}/mod_python/Session.pyo
 ${PYSITELIB}/mod_python/__init__.py
 ${PYSITELIB}/mod_python/__init__.pyc
 ${PYSITELIB}/mod_python/__init__.pyo
+${PYSITELIB}/mod_python/_psp.so
 ${PYSITELIB}/mod_python/apache.py
 ${PYSITELIB}/mod_python/apache.pyc
 ${PYSITELIB}/mod_python/apache.pyo
 ${PYSITELIB}/mod_python/cgihandler.py
 ${PYSITELIB}/mod_python/cgihandler.pyc
 ${PYSITELIB}/mod_python/cgihandler.pyo
+${PYSITELIB}/mod_python/psp.py
+${PYSITELIB}/mod_python/psp.pyc
+${PYSITELIB}/mod_python/psp.pyo
 ${PYSITELIB}/mod_python/publisher.py
 ${PYSITELIB}/mod_python/publisher.pyc
 ${PYSITELIB}/mod_python/publisher.pyo

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/11/29 14:11:21 anoncvs_oppn Exp $
+$NetBSD: distinfo,v 1.3 2004/05/31 23:05:25 marc Exp $
 
-SHA1 (mod_python-3.0.4.tgz) = 1102420fbe01a7cab144bab584ae75ed3b2e73f2
-Size (mod_python-3.0.4.tgz) = 218692 bytes
+SHA1 (mod_python-3.1.3.tgz) = c8d0df6b2a779005b6d32a775294cd742326ddfa
+Size (mod_python-3.1.3.tgz) = 293548 bytes
