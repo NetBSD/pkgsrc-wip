@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/26 18:11:14 schnoebe Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/31 18:55:17 blef Exp $
 # FreeBSD Id: ports/www/frontpage/Makefile,v 1.5 2002/11/03 07:57:25 ijliao Exp
 
 DISTNAME=	frontpage-5.0.2.2623
@@ -16,7 +16,6 @@ COMMENT=	Microsoft Frontpage 2002 Server Extensions
 WRKSRC=		${WRKDIR}/frontpage
 EXTRACT_SFX=	.Z
 USE_PKGINSTALL=	YES
-.include "../../mk/bsd.pkg.install.mk"
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-alpha
 #			Linux-*-i386 \
