@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/01 06:43:12 xtraeme Exp $
-i586-pc-mingw32/bin/iconv.exe
-i586-pc-mingw32/include/iconv.h
-i586-pc-mingw32/include/libcharset.h
-i586-pc-mingw32/include/localcharset.h
-i586-pc-mingw32/lib/charset.alias
-i586-pc-mingw32/lib/libcharset-1.dll
-i586-pc-mingw32/lib/libcharset.la
-i586-pc-mingw32/lib/libiconv-2.dll
-i586-pc-mingw32/lib/libiconv.la
-i586-pc-mingw32/share/doc/libiconv/iconv.1.html
-i586-pc-mingw32/share/doc/libiconv/iconv.3.html
-i586-pc-mingw32/share/doc/libiconv/iconv_close.3.html
-i586-pc-mingw32/share/doc/libiconv/iconv_open.3.html
-i586-pc-mingw32/share/man/man1/iconv.1
-i586-pc-mingw32/share/man/man3/iconv.3
-i586-pc-mingw32/share/man/man3/iconv_close.3
-i586-pc-mingw32/share/man/man3/iconv_open.3
-@dirrm i586-pc-mingw32/share/doc/libiconv
+@comment $NetBSD: PLIST,v 1.3 2003/12/01 06:44:03 xtraeme Exp $
+${MINGWTARGET}/bin/iconv.exe
+${MINGWTARGET}/include/iconv.h
+${MINGWTARGET}/include/libcharset.h
+${MINGWTARGET}/include/localcharset.h
+${MINGWTARGET}/lib/charset.alias
+${MINGWTARGET}/lib/libcharset-1.dll
+${MINGWTARGET}/lib/libcharset.la
+${MINGWTARGET}/lib/libiconv-2.dll
+${MINGWTARGET}/lib/libiconv.la
+${MINGWTARGET}/share/doc/libiconv/iconv.1.html
+${MINGWTARGET}/share/doc/libiconv/iconv.3.html
+${MINGWTARGET}/share/doc/libiconv/iconv_close.3.html
+${MINGWTARGET}/share/doc/libiconv/iconv_open.3.html
+${MINGWTARGET}/share/man/man1/iconv.1
+${MINGWTARGET}/share/man/man3/iconv.3
+${MINGWTARGET}/share/man/man3/iconv_close.3
+${MINGWTARGET}/share/man/man3/iconv_open.3
+@dirrm ${MINGWTARGET}/share/doc/libiconv
