@@ -1,0 +1,73 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/08 17:17:01 daprice Exp $
+share/dataset/geography/${PKGNAME}/PERMANENT/.bash_history
+share/dataset/geography/${PKGNAME}/PERMANENT/.bashrc
+share/dataset/geography/${PKGNAME}/PERMANENT/DEFAULT_WIND
+share/dataset/geography/${PKGNAME}/PERMANENT/DEFAULT_WIND3
+share/dataset/geography/${PKGNAME}/PERMANENT/MYNAME
+share/dataset/geography/${PKGNAME}/PERMANENT/WIND
+share/dataset/geography/${PKGNAME}/PERMANENT/WIND3
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/MASK
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/dem500
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/mask
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/precip
+share/dataset/geography/${PKGNAME}/PERMANENT/cats/precip.topo
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/MASK
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/dem500
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/mask
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/precip
+share/dataset/geography/${PKGNAME}/PERMANENT/cell/precip.topo
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/MASK/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/dem500/f_format
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/dem500/f_quant
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/dem500/f_range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/dem500/null
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/mask/null
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/mask/range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/mask/reclassed_to
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/precip.topo/f_format
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/precip.topo/f_quant
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/precip.topo/f_range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/precip.topo/null
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/precip/f_format
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/precip/f_quant
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/precip/f_range
+share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/precip/null
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/MASK
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/dem500
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/mask
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/precip
+share/dataset/geography/${PKGNAME}/PERMANENT/cellhd/precip.topo
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/precip
+share/dataset/geography/${PKGNAME}/PERMANENT/colr/precip.topo
+share/dataset/geography/${PKGNAME}/PERMANENT/fcell/dem500
+share/dataset/geography/${PKGNAME}/PERMANENT/fcell/precip
+share/dataset/geography/${PKGNAME}/PERMANENT/fcell/precip.topo
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/MASK
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/dem500
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/mask
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/precip
+share/dataset/geography/${PKGNAME}/PERMANENT/hist/precip.topo
+share/dataset/geography/${PKGNAME}/PERMANENT/site_lists/precip3d
+share/dataset/geography/${PKGNAME}/PERMANENT/windows/default
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/windows
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/site_lists
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/hist
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/fcell
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/colr
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cellhd
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/precip.topo
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/precip
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/mask
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/dem500
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/MASK
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cats
+@exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/PERMANENT/.tmp/guyot.meas.ncsu.edu
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/.tmp/guyot.meas.ncsu.edu
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/.tmp
+@dirrm share/dataset/geography/${PKGNAME}/PERMANENT
+@dirrm share/dataset/geography/${PKGNAME}
+@exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}
+@exec ${MKDIR} %D/share/dataset/geography
+@dirrm share/dataset/geography
