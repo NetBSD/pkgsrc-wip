@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1574 2004/12/11 22:30:10 cetrox Exp $
-# $NetBSD: Makefile,v 1.1574 2004/12/11 22:30:10 cetrox Exp $
+# $Id: Makefile,v 1.1575 2004/12/17 08:50:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1575 2004/12/17 08:50:02 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -749,7 +749,6 @@ SUBDIR+=	rlpr
 SUBDIR+=	rosegarden-current
 SUBDIR+=	rox-gtk2
 SUBDIR+=	rssh
-SUBDIR+=	ruby-amrita
 SUBDIR+=	ruby-dpklib
 SUBDIR+=	ruby-ming
 SUBDIR+=	ruby-misen
