@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/03/01 02:21:02 sifu Exp $
+$NetBSD: distinfo,v 1.3 2005/03/19 07:33:41 sifu Exp $
 
-SHA1 (ipython-0.6.11.tar.gz) = fdf67275e625c93a658a234696e1fabc52a2ea1c
-RMD160 (ipython-0.6.11.tar.gz) = ecc8b6ad4a7f08ed12fb68c1566b68bedb16183f
-Size (ipython-0.6.11.tar.gz) = 862138 bytes
+SHA1 (ipython-0.6.12.tar.gz) = c42f9913a6ced50aa9fe4f31c3154fcb2d97e7f8
+RMD160 (ipython-0.6.12.tar.gz) = 6b196764876f17279b044e8c0665a3e8d40c39a6
+Size (ipython-0.6.12.tar.gz) = 870350 bytes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/03/01 02:21:02 sifu Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/19 07:33:40 sifu Exp $
 #
 
-DISTNAME=		ipython-0.6.11
+DISTNAME=		ipython-0.6.12
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel python
 MASTER_SITES=		http://ipython.scipy.org/dist/
