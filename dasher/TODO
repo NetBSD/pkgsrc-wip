@@ -1,6 +1,7 @@
-$Id: TODO,v 1.1.1.1 2004/02/07 23:31:35 mpasternak Exp $
+$Id: TODO,v 1.2 2004/02/08 02:41:53 mpasternak Exp $
 
-Please grep @comments PLIST and see my notes.
+Please grep @comments PLIST and see my notes. No idea what to do about
+share/icons/dasher.png (where should I place it?)
 
 Builds on: FreeBSD-4.9, NetBSD-1.6.1
 
