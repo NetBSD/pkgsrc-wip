@@ -1,3 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/18 18:25:03 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/20 17:31:49 tvierling Exp $
 bin/mix
 man/man1/mix.1
+share/examples/mixmaster/abuse.txt.in
+share/examples/mixmaster/adminkey.txt
+share/examples/mixmaster/blocked.txt.in
+share/examples/mixmaster/dest.alw
+share/examples/mixmaster/dest.blk
+share/examples/mixmaster/end.hlp
+share/examples/mixmaster/header.blk
+share/examples/mixmaster/intro.hlp
+share/examples/mixmaster/mix.cfg
+share/examples/mixmaster/mix.cfg.server
+share/examples/mixmaster/mix.hlp
+share/examples/mixmaster/news.hlp
+share/examples/mixmaster/pgp.hlp
+share/examples/mixmaster/pgponly.hlp
+share/examples/mixmaster/rab.blk
+share/examples/mixmaster/reply.txt.in
+share/examples/mixmaster/type1.hlp
+share/examples/mixmaster/usage.txt.in
+@dirrm share/examples/mixmaster
