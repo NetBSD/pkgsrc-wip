@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/12/28 09:34:03 imilh Exp $
+$NetBSD: MESSAGE,v 1.2 2004/12/31 01:50:55 thomasklausner Exp $
 
 You should read ${EGDIR}/README.TLS to learn how to create
 and install your certificate.
 
-${PKGBASE} can be ran either in daemon mode with the ${RCD_SCRIPTS} script
-or via the super-internet-daemon inetd.
+${PKGBASE} can be run either in daemon mode with the ${RCD_SCRIPTS} script
+or via inetd(8).
 
 ===========================================================================
