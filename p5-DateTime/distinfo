@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/17 12:25:38 cubidou Exp $
+$NetBSD: distinfo,v 1.2 2004/05/11 07:06:20 cubidou Exp $
 
-SHA1 (DateTime-0.12.tar.gz) = b9b3b55055bd622178ccc6010bb4e7b64d9a42bc
-Size (DateTime-0.12.tar.gz) = 61680 bytes
+SHA1 (DateTime-0.21.tar.gz) = fe53b2ebe4e0c2e174bd4eaaac75950af81cde29
+Size (DateTime-0.21.tar.gz) = 75322 bytes
