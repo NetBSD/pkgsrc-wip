@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/04/05 11:39:02 poppnk Exp $
+
+To use luasqlite in your lua programs you must set this environ variable:
+
+   LUA_INIT = "loadlib('${PREFIX}/lib/libluasqlite.so','luaLM_import')();"
+
+===========================================================================
