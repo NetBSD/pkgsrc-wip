@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/04/13 13:37:05 adrian_p Exp $
+
+The Metasploit Framework and associated scripts are now installed in:
+
+	${MSFDIR}
+
+===========================================================================

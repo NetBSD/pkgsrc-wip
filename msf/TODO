@@ -1,0 +1,5 @@
+- Term-ReadLine 1.14 is actually distributed with this package but v1.12 is
+  the one in pkgsrc. This is now under PR# 25163. If you have problems
+  with readline apply the patches in that PR.
+- payloads/external looks like python scripts - maybe we should add python as
+  a depends.
