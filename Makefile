@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.876 2004/01/10 21:50:31 jgoamakf Exp $
-# $NetBSD: Makefile,v 1.876 2004/01/10 21:50:31 jgoamakf Exp $
+# $Id: Makefile,v 1.877 2004/01/10 21:58:37 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.877 2004/01/10 21:58:37 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -419,6 +419,7 @@ SUBDIR+=	p5-GeoIP
 SUBDIR+=	p5-Glib2
 SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-HTML-Latex
+SUBDIR+=	p5-HTML-StickyQuery
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-IO-Tee
 SUBDIR+=	p5-Net-IP
