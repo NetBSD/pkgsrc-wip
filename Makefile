@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.450 2003/09/16 16:07:58 jmmv Exp $
-# $NetBSD: Makefile,v 1.450 2003/09/16 16:07:58 jmmv Exp $
+# $Id: Makefile,v 1.451 2003/09/16 21:12:27 tvierling Exp $
+# $NetBSD: Makefile,v 1.451 2003/09/16 21:12:27 tvierling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -204,7 +204,7 @@ SUBDIR+=	liquidwar
 SUBDIR+=	lletters
 SUBDIR+=	lmarbles
 SUBDIR+=	mailfilter
-SUBDIR+=	mailman21
+SUBDIR+=	mailman
 SUBDIR+=	man-db
 SUBDIR+=	maradns
 SUBDIR+=	mathomatic
