@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/15 01:03:31 riz Exp $
+bin/fxo_test
+bin/ztcfg
+bin/ztmonitor
+bin/zttest
+bin/zttool
+include/tonezone.h
+include/zaptel.h
+lib/libtonezone.a
+lkm/mod_wcfxo.o
+lkm/mod_wcfxs.o
+lkm/mod_zaptel.o
+lkm/mod_ztdummy.o
+sbin/zaptel_postinstall
+share/examples/zaptel/zaptel.conf
+@dirrm share/examples/zaptel
