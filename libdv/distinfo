@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/27 22:46:01 xtraeme Exp $
+
+SHA1 (libdv-0.101.tar.gz) = ecff65f2334c75820706f380dec461e9c8590165
+Size (libdv-0.101.tar.gz) = 476510 bytes
+SHA1 (patch-aa) = e65be0a4ec63b287ec519477e956f80419317083
