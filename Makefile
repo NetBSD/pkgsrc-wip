@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.264 2003/06/24 04:34:05 xtraeme Exp $
-# $NetBSD: Makefile,v 1.264 2003/06/24 04:34:05 xtraeme Exp $
+# $Id: Makefile,v 1.265 2003/06/24 04:51:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.265 2003/06/24 04:51:32 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -264,5 +264,6 @@ SUBDIR+=	xplore
 SUBDIR+=	yafray
 SUBDIR+=	yelp
 SUBDIR+=	zebra-pj
+SUBDIR+=	zenity
 
 .include "../mk/bsd.pkg.subdir.mk"
