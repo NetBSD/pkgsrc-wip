@@ -1,0 +1,5 @@
+The NCBI sequence databases and software tools are designed around
+a particular model of biological sequence data. It is designed to
+provide a few unifying concepts which cross a wide range of domains,
+providing a path between the domains. Specialized objects are
+defined which are appropriate within a domain.
