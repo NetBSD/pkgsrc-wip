@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 18:12:42 marc Exp $
-include/slim_export.h
-include/slim_import.h
-include/slim_internal.h
-lib/pkgconfig/slim.pc

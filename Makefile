@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.898 2004/01/20 21:22:40 marc Exp $
-# $NetBSD: Makefile,v 1.898 2004/01/20 21:22:40 marc Exp $
+# $Id: Makefile,v 1.899 2004/01/20 21:27:35 marc Exp $
+# $NetBSD: Makefile,v 1.899 2004/01/20 21:27:35 marc Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -306,13 +306,11 @@ SUBDIR+=	libdisasm
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgringotts
 SUBDIR+=	libhydrogen
-SUBDIR+=	libic
 SUBDIR+=	libmodplug
 SUBDIR+=	libneural
 SUBDIR+=	libogg-nightly
 SUBDIR+=	libol
 #SUBDIR+=	libpathan	# needs xerces-c-2.3.0 in pkg/23861
-SUBDIR+=	libpixregion
 SUBDIR+=	libpixman
 SUBDIR+=	libprelude
 SUBDIR+=	libstatgrab
@@ -614,7 +612,6 @@ SUBDIR+=	shared-mime-info
 SUBDIR+=	shoutcast
 SUBDIR+=	sks
 SUBDIR+=	sleuthkit # READ TODO #
-SUBDIR+=	slim
 SUBDIR+=	slocate
 SUBDIR+=	slrn-pl
 SUBDIR+=	slune
