@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/07 01:58:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/08 00:04:48 xtraeme Exp $
 #
 
 DISTNAME=	matchbox-common-0.8
@@ -7,8 +7,8 @@ MASTER_SITES=	http://matchbox.handhelds.org/sources/matchbox-common/0.8/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://matchbox.handhelds.org/sources/matchbox-common/0.8/
-COMMENT=	Pixmaps for the Matchbox window manager
+HOMEPAGE=	http://matchbox.handhelds.org/
+COMMENT=	Pixmaps for Matchbox
 
 USE_BUILDLINK3=	yes
 USE_X11=	yes
