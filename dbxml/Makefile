@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/12 02:43:36 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/13 14:00:31 minskim Exp $
 
 DISTNAME=	dbxml-1.2.0
 WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
@@ -9,7 +9,7 @@ MAINTAINER=	minskim@bawi.org
 HOMEPAGE=	http://www.sleepycat.com/products/xml.shtml
 COMMENT=	Native XML data manager built on Berkeley DB
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	../dist/configure
 USE_LIBTOOL=		YES
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ARGS+=	--with-xerces=${BUILDLINK_PREFIX.xerces-c}
 CONFIGURE_ARGS+=	--with-pathan=${BUILDLINK_PREFIX.libpathan}
 
-.include "../../databases/db4/buildlink2.mk"
-.include "../../textproc/libpathan/buildlink2.mk"
-.include "../../textproc/xerces-c/buildlink2.mk"
+.include "../../databases/db4/buildlink3.mk"
+.include "../../textproc/libpathan/buildlink3.mk"
+.include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
