@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/19 22:35:14 matthewluckie Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/23 18:05:36 bencollver Exp $
 
 DISTNAME=		nspr-4.4.1
 CATEGORIES=		devel
@@ -20,6 +20,7 @@ AUTOCONF_REQD=		2.13
 
 MAKE_ENV=		DIST=${WRKSRC}/dist
 CONFIGURE_SCRIPT=	../configure
+CONFIGURE_ENV=		LIBRUNPATH=${PREFIX}/lib
 
 .include		"../../mk/bsd.prefs.mk"
 
