@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/29 17:32:23 marc Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/06 10:18:00 marc Exp $
 #
 
 DISTNAME=		Twisted-1.0.6
@@ -15,7 +15,8 @@ COMMENT=		Framework for writing networked applications
 USE_BUILDLINK2=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSION_REQD=	22pth
+
+PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
 
 post-install:
 	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py \
