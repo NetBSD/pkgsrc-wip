@@ -1,0 +1,12 @@
+The stmpclean utility removes old files (and old empty directories) from the
+specified directory. It'll be typically used to clean directories such as
+/tmp where old files tend to accumulate.
+
+The stmpclean utility never removes files or directories owned by root. It is
+a feature, not a bug. Great care is taken while descending into the directory,
+and the operation is secure. Unlike floating around Perl scripts that do the
+same task stmpclean never forks and consumes limited amount of memory (these
+Perl script easily turn into forking bombs when someone creates a lot a
+directories under /tmp). If your system is attacked and the attacker creates
+an extremely deep file hierarchy, stmpclean won't add to the problem by
+crashing your system trying to remove it.
