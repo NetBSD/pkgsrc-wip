@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.253 2003/06/20 03:46:29 takasan-tt Exp $
-# $NetBSD: Makefile,v 1.253 2003/06/20 03:46:29 takasan-tt Exp $
+# $Id: Makefile,v 1.254 2003/06/21 17:13:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.254 2003/06/21 17:13:13 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -251,6 +251,7 @@ SUBDIR+=	xfce4-wm-themes
 SUBDIR+=	xml2doc
 SUBDIR+=	xplore
 SUBDIR+=	yafray
+SUBDIR+=	yelp
 SUBDIR+=	zebra-pj
 
 
