@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/21 16:40:14 rxg Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/04/02 21:06:43 hubertf Exp $
 bin/bg5+latex
 bin/bg5conv
 bin/bg5latex
@@ -296,7 +296,7 @@ share/texmf/tex/latex/CJK/thai/c90dbss.fd
 share/texmf/tex/latex/CJK/thai/c90enc.def
 share/texmf/tex/latex/CJK/thai/c90nrsr.fd
 share/texmf/tex/latex/CJK/thai/thaicjk.ldf
-share/texmf/ttf2tfm/base/ttfonts.map
+@unexec mktexlsr
 @dirrm share/texmf/tex/latex/CJK/thai
 @dirrm share/texmf/tex/latex/CJK/mule
 @dirrm share/texmf/tex/latex/CJK/UTF8
