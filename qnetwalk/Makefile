@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/04 12:21:02 ianzag Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/06 08:49:49 ianzag Exp $
 #
 
 DISTNAME=		qnetwalk-1.0
@@ -22,7 +22,7 @@ QNETWALK_DATA=	${PREFIX}/share/games/${PKGBASE}
 
 # Should we care about Qt3 package paths here ?
 do-configure:
-	(cd ${WRKSRC} && qmake)
+	(cd ${WRKSRC} && ${QTDIR}/bin/qmake -o Makefile qnetwalk.pro)
 
 # Fix hardcoded paths
 SUBST_CLASSES=		path
