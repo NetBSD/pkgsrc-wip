@@ -4,7 +4,7 @@
  */
 
 #define ProjectRoot @PREFIX@
-#define BuildHtmlManPages YES
+#define BuildHtmlManPages NO
 
 #define MakeCmd @MAKE@
 #define HasGnuMake      NO
