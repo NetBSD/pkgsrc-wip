@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2004/03/03 22:09:40 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/06 08:35:03 johnrshannon Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-ada
+PKGNAME=	gccAda-${GCC_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://gcc.gnu.org/pub/gcc/snapshots/${GCC_VERSION}-${SNAPDATE}/ \
 		ftp://mirrors.rcn.net/pub/sourceware/gcc/snapshots/${GCC_VERSION}-${SNAPDATE}/
@@ -26,12 +27,6 @@ WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}-${SNAPDATE}
 may be used:
 USE_GCC3	=# Define to use lang/gcc3-ada
 #USE_GCC34	=# Define to use gcc-3.4-ada
-.if defined(USE_GCC3)
-BUILDLINK_ENV+=PATH=${PREFIX}/gcc3/bin:${PATH}
-.endif
-.if defined(USE_GCC34)
-BUILDLINK_ENV+=PATH=${GCC_PREFIX}/bin:${PATH}
-.endif
 
 # Make location overridable, to allow ping-pong bootstraps.
 GCC34_DEFAULT_SUBPREFIX=	${PKGNAME_NOREV}
@@ -72,7 +67,7 @@ do-build:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap && cd gcc && ${GMAKE} gnatlib_and_tools)
 
 do-test:
-	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
+	(cd ${WRKDIR}/obj && ${GMAKE} -k check-ada)
 
 do-install:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install \
@@ -92,9 +87,6 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_GCC3)
 .include "../../lang/gcc3-ada/buildlink3.mk"
-.endif
-.if defined(USE_GCC34)
-.include "../../wip/gcc-3.4-ada/buildlink3.mk"
 .endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
