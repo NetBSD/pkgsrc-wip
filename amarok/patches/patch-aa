@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/09/07 10:24:09 ianzag Exp $
+$NetBSD: patch-aa,v 1.2 2004/10/11 06:50:47 ianzag Exp $
 
---- amarok/src/Makefile.in.orig	2004-08-05 08:04:49.000000000 +0700
+--- amarok/src/Makefile.in.orig	2004-10-09 19:52:09.000000000 +0700
 +++ amarok/src/Makefile.in
-@@ -408,7 +408,7 @@ amarokapp_LDADD = \
+@@ -429,7 +429,7 @@ amarokapp_LDADD = \
+     $(top_builddir)/amarok/src/engine/libengine.la \
      $(top_builddir)/amarok/src/plugin/libplugin.la \
-     $(top_builddir)/amarok/src/titleproxy/libtitleproxy.la \
-     $(LIB_KUTILS) $(LIB_KFILE) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_KHTML) \
--    $(taglib_libs) $(gl_libs) $(LIB_SQLITE) $(LIB_SQLITE_LOCAL) 
-+    $(taglib_libs) $(gl_libs) $(LIB_SQLITE) $(LIB_SQLITE_LOCAL) $(LIBOSSAUDIO)
+     $(LIB_KUTILS) $(LIB_KFILE) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_KHTML) $(LIB_KJSEMBED) \
+-    $(taglib_libs) $(gl_libs) $(LIB_SQLITE) $(LIB_SQLITE_LOCAL) $(LIB_MUSICBRAINZ) -lqui
++    $(taglib_libs) $(gl_libs) $(LIB_SQLITE) $(LIB_SQLITE_LOCAL) $(LIB_MUSICBRAINZ) -lqui $(LIBOSSAUDIO)
  
  
  amarokapp_LDFLAGS = \
