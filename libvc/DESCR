@@ -1,0 +1,4 @@
+The vCard library, libvc, was written using Flex and Bison. It
+handles scanning a vCard file, parsing the vCard file into a data
+storage structure, manipulating the data storage structure, and
+writing it back to a file.

@@ -1,0 +1,10 @@
+A mutt query_command utility is included with the rolo package. This
+utility will allow queries to the data file (defaults to
+~/.rolo/contacts.vcf) from mutt using mutt's query_command (see muttrc(5)
+for more info). In order to get this to work, you must add the following
+line to your ~/.muttrc file after installing the rolo package:
+
+set query_command="mutt_vc_query '%s'"
+
+And you will then be able to query email addresses from the data file when
+you use the `Q' command in mutt.
