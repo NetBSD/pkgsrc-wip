@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.692 2003/11/27 21:49:54 marc Exp $
-# $NetBSD: Makefile,v 1.692 2003/11/27 21:49:54 marc Exp $
+# $Id: Makefile,v 1.693 2003/11/27 22:59:56 blef Exp $
+# $NetBSD: Makefile,v 1.693 2003/11/27 22:59:56 blef Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -130,6 +130,7 @@ SUBDIR+=	elvis-x11
 SUBDIR+=	emirror
 SUBDIR+=	entropy
 SUBDIR+=	ezbounce
+SUBDIR+=	fakenes
 SUBDIR+=	festival-gaim
 SUBDIR+=	fisg
 SUBDIR+=	fixesext
