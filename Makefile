@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.320 2003/07/12 12:30:58 lsed Exp $
-# $NetBSD: Makefile,v 1.320 2003/07/12 12:30:58 lsed Exp $
+# $Id: Makefile,v 1.321 2003/07/12 12:39:36 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.321 2003/07/12 12:39:36 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -8,7 +8,6 @@ SUBDIR+=	PPower4
 SUBDIR+=	Radiator
 SUBDIR+=	Radiator-all
 SUBDIR+=	WEPCrack
-SUBDIR+=	abook
 SUBDIR+=	abuse_sdl
 SUBDIR+=	acid
 SUBDIR+=	adodb
@@ -130,6 +129,7 @@ SUBDIR+=	jigdo
 SUBDIR+=	kapital
 SUBDIR+=	kgpg
 SUBDIR+=	korelib
+SUBDIR+=	lash
 SUBDIR+=	lbdb
 SUBDIR+=	ldapdns
 SUBDIR+=	lde
@@ -209,7 +209,6 @@ SUBDIR+=	p5-Set-Infinite
 SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-gtk2
-SUBDIR+=	pag
 SUBDIR+=	pdns
 SUBDIR+=	perltidy
 SUBDIR+=	php-jpgraph
