@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1670 2005/03/02 17:27:56 dillo Exp $
-# $NetBSD: Makefile,v 1.1670 2005/03/02 17:27:56 dillo Exp $
+# $Id: Makefile,v 1.1671 2005/03/02 19:51:36 florian_stoehr Exp $
+# $NetBSD: Makefile,v 1.1671 2005/03/02 19:51:36 florian_stoehr Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -587,6 +587,7 @@ SUBDIR+=	ncbi-bin
 SUBDIR+=	ncbi-lib
 SUBDIR+=	ncc
 SUBDIR+=	ncps
+SUBDIR+=	neb-wipe
 SUBDIR+=	nehe-opengl-tutorials
 SUBDIR+=	nestra
 SUBDIR+=	net-quanta
