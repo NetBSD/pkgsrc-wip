@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1409 2004/07/28 21:17:15 tvierling Exp $
-# $NetBSD: Makefile,v 1.1409 2004/07/28 21:17:15 tvierling Exp $
+# $Id: Makefile,v 1.1410 2004/07/29 14:45:08 tvierling Exp $
+# $NetBSD: Makefile,v 1.1410 2004/07/29 14:45:08 tvierling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -273,8 +273,6 @@ SUBDIR+=	java-swt
 SUBDIR+=	java-xmlrpc
 SUBDIR+=	javascript-guide
 SUBDIR+=	javascript-reference
-SUBDIR+=	jdk13
-SUBDIR+=	jdk13-openjit
 SUBDIR+=	jdk14
 SUBDIR+=	kahakai
 SUBDIR+=	kannel-gateway
