@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/02 11:10:25 drue Exp $
+lib/java/log4j-1.2.8.jar
+share/doc/java/jakarta-log4j/COPYRIGHT
