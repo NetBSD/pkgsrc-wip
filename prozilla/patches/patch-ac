@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2004/06/21 07:49:43 sourceforge_low Exp $
+$NetBSD: patch-ac,v 1.3 2004/06/21 12:34:13 sourceforge_low Exp $
 
 --- src/curses.c.orig	2001-08-18 01:38:26.000000000 +0200
-+++ src/curses.c	2004-06-20 14:49:41.000000000 +0200
++++ src/curses.c	2004-06-21 13:46:53.000000000 +0200
 @@ -25,6 +25,7 @@
  #include <unistd.h>
  #include <stdio.h>
@@ -10,7 +10,82 @@ $NetBSD: patch-ac,v 1.2 2004/06/21 07:49:43 sourceforge_low Exp $
  #include <pthread.h>
  
  #ifdef HAVE_NCURSES_H
-@@ -498,17 +499,6 @@
+@@ -38,6 +39,7 @@
+ #include <ctype.h>
+ #include <assert.h>
+ #include <errno.h>
++#include <poll.h>
+ #include "interface.h"
+ #include "misc.h"
+ #include "runtime.h"
+@@ -340,7 +342,10 @@
+ 
+     int cur_server;
+     extern pthread_t *threads;
++    struct pollfd set[1];
+ 
++    cbreak();
++    timeout(0);
+ 
+     while (1)
+     {
+@@ -348,12 +353,32 @@
+ 	/*
+ 	 * display the URL
+ 	 */
+-	napms(100);
+ 	curses_draw_display(connections, num_connections, mirrors,
+ 			    num_servers);
+ 
++	if (all_dls_complete(connections, num_connections) == TRUE)
++	{
++	    /*
++	     * redraw the display again
++	     */
++	    /*
++	     * Delay a bit to get the proper value
++	     */
++	    napms(300);
++	    curses_draw_display(connections, num_connections, mirrors,
++		num_servers);
++	    refresh();
++	    break;
++	}
++
+ 	refresh();
+ 
++	set[0].fd = STDIN_FILENO;
++	set[0].events = POLLIN;
++	(void)poll(set, 1, 1000);
++	if (!(set[0].revents & POLLIN))
++		continue;
++
+ 	switch (getch())
+ 	{
+ 	case CTRL('R'):
+@@ -432,21 +457,6 @@
+ 	default:
+ 	    break;
+ 	}
+-
+-	if (all_dls_complete(connections, num_connections) == TRUE)
+-	{
+-	    /*
+-	     * redraw the display again 
+-	     */
+-	    /*
+-	     * Delay a bit to get the proper value
+-	     */
+-	    napms(300);
+-	    curses_draw_display(connections, num_connections, mirrors,
+-				num_servers);
+-	    refresh();
+-	    break;
+-	}
+     }
+ 
+     return DONE;
+@@ -498,17 +508,6 @@
  }
  
  
@@ -28,7 +103,7 @@ $NetBSD: patch-ac,v 1.2 2004/06/21 07:49:43 sourceforge_low Exp $
  /* Message: prints a message to the screen */
  void curses_message(const char *args, ...)
  {
-@@ -537,7 +527,7 @@
+@@ -537,7 +536,7 @@
  	 * get the cursor position 
  	 */
  	getyx(stdscr, y, x);
@@ -37,7 +112,7 @@ $NetBSD: patch-ac,v 1.2 2004/06/21 07:49:43 sourceforge_low Exp $
  	move(19, 0);
  	clrtoeol();
  	move(20, 0);
-@@ -551,7 +541,7 @@
+@@ -551,7 +550,7 @@
  	 * Unlock the mutex 
  	 */
  	refresh();
@@ -46,7 +121,7 @@ $NetBSD: patch-ac,v 1.2 2004/06/21 07:49:43 sourceforge_low Exp $
  	/*
  	 * set the cursor to whhere it was */
  
-@@ -569,13 +559,13 @@
+@@ -569,13 +568,13 @@
      attr_t attrs;
      int x, y;
      int ch;
@@ -62,7 +137,7 @@ $NetBSD: patch-ac,v 1.2 2004/06/21 07:49:43 sourceforge_low Exp $
  
      attrset(COLOR_PAIR(PROMPT_PAIR) | A_BOLD);
      move(19, 0);
-@@ -596,7 +586,7 @@
+@@ -596,7 +595,7 @@
  
      refresh();
      noecho();

@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2004/06/21 07:48:03 sourceforge_low Exp $
+$NetBSD: distinfo,v 1.3 2004/06/21 12:34:13 sourceforge_low Exp $
 
 SHA1 (prozilla-1.3.6.tar.gz) = 5678a123c7cc2c96ea89caafe904ebf1990c6e63
 Size (prozilla-1.3.6.tar.gz) = 152755 bytes
 SHA1 (patch-aa) = a5805009fdfa597b04d9abaf5367885b3e714b3b
 SHA1 (patch-ab) = fae9de5594a29a2f730a3960f32b47233b449da9
-SHA1 (patch-ac) = d8cb343533ee5c5dc46a29eb3405ef3928f82f2e
+SHA1 (patch-ac) = 29738e446a0e4a2473535cbb526bba15e4716885
 SHA1 (patch-ad) = d114546cb0ecfa92cef67b4f4e367eef98ade8ce
 SHA1 (patch-ae) = 170edfe8cc118d65cf8ace4f3f9c69f908ae3f82
 SHA1 (patch-af) = c9909eb506a78a5af6d564c309fd9306b0005da3
