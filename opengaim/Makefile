@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/29 19:50:02 tvierling Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/04 14:31:07 tvierling Exp $
 #
 
-DISTNAME=	opengaim-0.75c
+DISTNAME=	opengaim-0.76a
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opengaim/}
 

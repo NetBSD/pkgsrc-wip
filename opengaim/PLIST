@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/29 19:50:02 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/04 14:31:08 tvierling Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim-remote/remote-socket.h
@@ -54,9 +54,6 @@ lib/gaim/libzephyr.so
 lib/gaim/notify.a
 lib/gaim/notify.la
 lib/gaim/notify.so
-lib/gaim/relnot.a
-lib/gaim/relnot.la
-lib/gaim/relnot.so
 lib/gaim/spellchk.a
 lib/gaim/spellchk.la
 lib/gaim/spellchk.so
@@ -86,21 +83,14 @@ lib/libgaim-remote.so.0.0
 man/man1/gaim-remote.1
 man/man1/gaim.1
 share/applications/gaim.desktop
-${PKGLOCALEDIR}/locale/am/LC_MESSAGES/opengaim.mo
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/opengaim.mo
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/opengaim.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/opengaim.mo
-${PKGLOCALEDIR}/locale/he/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/opengaim.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/opengaim.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/opengaim.mo
@@ -109,7 +99,6 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/opengaim.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/opengaim.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/opengaim.mo
@@ -138,6 +127,7 @@ share/pixmaps/gaim/dialogs/gaim_question.png
 share/pixmaps/gaim/dialogs/gaim_warning.png
 share/pixmaps/gaim/icons/away.png
 share/pixmaps/gaim/icons/connect.png
+share/pixmaps/gaim/icons/info.png
 share/pixmaps/gaim/icons/msgpend.png
 share/pixmaps/gaim/icons/msgunread.png
 share/pixmaps/gaim/icons/offline.png
@@ -338,6 +328,7 @@ share/pixmaps/gaim/status/default/secure.png
 share/pixmaps/gaim/status/default/trepia.png
 share/pixmaps/gaim/status/default/wireless.png
 share/pixmaps/gaim/status/default/yahoo.png
+share/pixmaps/gaim/status/default/zephyr.png
 share/pixmaps/gaim/tb_drag_arrow_down.xpm
 share/pixmaps/gaim/tb_drag_arrow_left.xpm
 share/pixmaps/gaim/tb_drag_arrow_right.xpm
