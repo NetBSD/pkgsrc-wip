@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/24 04:25:03 blef Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/24 12:34:24 tripledes Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-clients-${XF_VER}
@@ -27,7 +27,10 @@ REPLACE_PERL=		fonts/util/bdftruncate.pl fonts/util/ucs2any.pl
 # XXX PAM support
 
 .if ${OPSYS} == "Linux"
+PLIST_SRC+=	${.CURDIR}/PLIST.html
 .include "../../security/PAM/buildlink2.mk"
+.elif ${OPSYS} == "FreeBSD"
+PLIST_SRC+=	${.CURDIR}/PLIST.html
 .endif
 
 post-configure:

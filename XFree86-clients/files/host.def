@@ -32,6 +32,10 @@
 #define HasPam NO
 #endif
 
+#ifdef LinuxArchitecture
+#define LdPostLib LDFLAGS
+#endif
+
 #define InstallXdmConfig YES
 #define InstallXinitConfig YES
 #define InstallAppDefFiles YES
