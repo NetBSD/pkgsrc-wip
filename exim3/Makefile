@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/11/30 02:27:39 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2003/11/30 02:37:15 grantbeattie Exp $
 
 DISTNAME=	exim-3.36
 CATEGORIES=	mail net
@@ -10,7 +10,10 @@ MAINTAINER=	ad@NetBSD.org
 HOMEPAGE=	http://www.exim.org/
 COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
-USE_PERL5=	yes
+USE_PERL5=	YES
+USE_PKGINSTALL=	YES
+
+RCD_SCRIPTS=	exim
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
@@ -33,9 +36,6 @@ pre-install:
 	strip ${WRKSRC}/build*/exim_lock
 
 post-install:
-	${SED} -e 's:@PREFIX@:${PREFIX}:' \
-	    ${FILESDIR}/exim \
-	    > ${PREFIX}/etc/rc.d/exim
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    ${FILESDIR}/exim_newaliases \
 	    > ${PREFIX}/sbin/exim_newaliases

@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-#	$NetBSD: exim,v 1.1.1.1 2003/11/30 02:06:28 grantbeattie Exp $
+#	$NetBSD: exim.sh,v 1.1 2003/11/30 02:37:15 grantbeattie Exp $
 #
 # PROVIDE: mail
 # REQUIRE: LOGIN
