@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/02/02 02:39:47 dawszy Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/02/02 17:30:40 dawszy Exp $
 #
 # This Makefile fragment is included by packages that use libetpan.
 #
@@ -10,7 +10,7 @@ LIBETPAN_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libetpan
 BUILDLINK_DEPENDS.libetpan?=		libetpan>=0.32
-BUILDLINK_PKGSRCDIR.libetpan?=		../../foo/libetpan
+BUILDLINK_PKGSRCDIR.libetpan?=		../../wip/libetpan
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libetpan=libetpan
 BUILDLINK_PREFIX.libetpan_DEFAULT=	${LOCALBASE}
