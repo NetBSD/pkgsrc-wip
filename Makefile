@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.961 2004/02/14 22:44:09 minskim Exp $
-# $NetBSD: Makefile,v 1.961 2004/02/14 22:44:09 minskim Exp $
+# $Id: Makefile,v 1.962 2004/02/15 01:59:16 minskim Exp $
+# $NetBSD: Makefile,v 1.962 2004/02/15 01:59:16 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -560,7 +560,6 @@ SUBDIR+=	py-ming
 SUBDIR+=	py-mmpython
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-oak
-SUBDIR+=	py-ogg
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-pexpect
 SUBDIR+=	py-scapy
