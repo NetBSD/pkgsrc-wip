@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/05 17:50:13 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/10/06 13:42:34 adrian_p Exp $
 bin/buildcat
 bin/gensgmlenv
 bin/sgmltools
 bin/sgmlwhich
 etc/sgml/aliases
+etc/sgml/catalog
 etc/sgml/catalog.rh62
 etc/sgml/catalog.suse
 man/man1/sgmltools-lite.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/05 17:50:14 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/06 13:42:34 adrian_p Exp $
 
 DISTNAME=	sgmltools-lite-3.0.3
 CATEGORIES=	net www
@@ -11,6 +11,10 @@ COMMENT=	Friendly Python interface to SGML software
 DEPENDS+=	jade-[0-9]*:../../textproc/jade
 DEPENDS+=	lynx-[0-9]*:../../www/lynx
 DEPENDS+=	docbook-[0-9]*:../../textproc/docbook
+DEPENDS+=	w3m-[0-9]*:../../www/w3m
+DEPENDS+= 	dsssl-docbook-modular-[0-9]*:../../textproc/dsssl-docbook-modular
+DEPENDS+=	iso12083-[0-9]*:../../textproc/iso12083
+DEPENDS+=	iso8879-[0-9]*:../../textproc/iso8879
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
@@ -27,7 +31,14 @@ pre-configure:
 	${SED} -e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g' \
 		< ${WRKSRC}/bin/buildcat.in > ${WRKSRC}/bin/buildcat.in.new
 
+	${SED} -e "s|@PREFIX@|${PREFIX}|g" \
+		< ${FILESDIR}/catalog > ${WRKDIR}/catalog
+
 	${CP} ${WRKSRC}/bin/buildcat.in.new ${WRKSRC}/bin/buildcat.in
+
+post-install:
+
+	${INSTALL_DATA} ${WRKDIR}/catalog ${PKG_SYSCONFDIR}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
