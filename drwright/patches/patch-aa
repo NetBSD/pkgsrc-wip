@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/07/05 19:03:07 bmeurer Exp $
+$NetBSD: patch-aa,v 1.2 2004/02/24 16:52:41 jmmv Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=135300
 
 --- src/drw-monitor.c.orig	Fri Jun 13 19:32:51 2003
 +++ src/drw-monitor.c
