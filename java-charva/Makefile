@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/12/04 21:33:55 poppnk Exp $
+# $NetBSD: Makefile,v 1.6 2005/01/01 05:41:06 poppnk Exp $
 #
 
 DISTNAME=		charva-1.1.0
-PKG_NAME=		java-charva-1.1.0
+PKGNAME=		java-charva-1.1.0
+PKGREVISION=	1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.pitman.co.za/projects/download/
 
