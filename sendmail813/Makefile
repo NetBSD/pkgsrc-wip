@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/08/23 20:11:36 adrian_p Exp $
+# $NetBSD: Makefile,v 1.26 2004/08/30 16:03:55 adrian_p Exp $
 
 .include "../../wip/sendmail813/Makefile.common"
 
@@ -44,6 +44,7 @@ post-patch: make-sendmail-siteconfig
 .endif
 .if !empty(PKG_OPTIONS:Msocketmap)
 	@${CAT} ${FILESDIR}/site.config.m4-socketmap >>${SITECONFIG}
+PLIST_SRC+=	${PKGDIR}/PLIST.socketmap
 .endif
 
 post-extract:
@@ -56,7 +57,7 @@ post-build:
 	@${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
 	@${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
-.if ${USE_DB2} == YES
+.if !empty(PKG_OPTIONS:Mdb2)
 	@${ECHO} "" >>${MESSAGE_SRC}
 	@${ECHO} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all" >>${MESSAGE_SRC}
 	@${ECHO} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"." >>${MESSAGE_SRC}
@@ -75,7 +76,7 @@ post-install:
 	cd ${WRKSRC}/cf && ${PAX} -rw -pp -pm . ${PREFIX}/share/sendmail
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/sendmail
 
-.if ${USE_DB2} == YES
+.if !empty(PKG_OPTIONS:Mdb2)
 	@${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
 .endif
 
@@ -86,7 +87,7 @@ post-install:
 		${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
 		${PREFIX}/lib
 
-.if defined(USE_SOCKETMAP) && ${USE_SOCKETMAP} == YES
+.if !empty(PKG_OPTIONS:Msocketmap)
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmapClient.pl \
 		${PREFIX}/share/examples/sendmail
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmapServer.pl \

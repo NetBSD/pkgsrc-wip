@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/08/23 20:11:44 adrian_p Exp $
+# $NetBSD: options.mk,v 1.2 2004/08/30 16:03:55 adrian_p Exp $
 
 # Global and legacy options
 .if defined(USE_DB2) && !empty(USE_DB2:M[yY][eE][sS])
@@ -76,7 +76,6 @@ PKG_DEFAULT_OPTIONS+=	inet6 tcpwrappers
 .if !empty(PKG_OPTIONS:Msocketmap)
 USE_PERL5=	YES
 REPLACE_PERL=	contrib/socketmapClient.pl contrib/socketmapServer.pl
-PLIST_SRC+=	${PKGDIR}/PLIST.socketmap
 .endif
 
 ###
