@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/18 16:13:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/05 20:25:22 rillig Exp $
 #
 
 DISTNAME=		darcs-0.9.20
@@ -17,8 +17,10 @@ GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 MAKEFLAGS+=		LDFLAGS=
 MAKEFLAGS+=		CPPFLAGS=
+MAKEFLAGS+=		MAKEMANUAL=${TRUE:Q}
 MAKEFILE=		${WRKSRC}/GNUmakefile
 
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/ghc/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
