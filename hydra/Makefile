@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/01/05 20:07:49 adrian_p Exp $
+# $NetBSD: Makefile,v 1.10 2005/01/05 20:29:20 adrian_p Exp $
 #
 
 DISTNAME=	hydra-4.5-src
@@ -22,6 +22,8 @@ SUBST_SED.build=	-e "s|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g" \
 			-e "s|@PREFIX@|${PREFIX}|g" \
 			-e "s|uname|${UNAME}|g"
 SUBST_MESSAGE.build=	"Patching build files."
+
+USE_OLD_DES_API=	YES
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
