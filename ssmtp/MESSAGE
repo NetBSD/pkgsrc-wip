@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/06/06 09:20:54 takasan-tt Exp $
+$NetBSD: MESSAGE,v 1.2 2003/06/06 19:15:26 cubidou Exp $
 
 sSMTP has been installed successfully.
 
-*BEFORE* using the program, edit ${PKG_SYSCONFDIR}/ssmtp/ssmtp.conf and
-${PKG_SYSCONFDIR}/ssmtp/revaliases (especially the former).
+*BEFORE* using the program, edit ${PKG_SYSCONFDIR}/ssmtp.conf and
+${PKG_SYSCONFDIR}/revaliases (especially the former).
 
 ===========================================================================
