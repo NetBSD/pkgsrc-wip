@@ -24,7 +24,7 @@ $DAEMON_REPORT$
 --- Dr.Web report ---
 
 --001-DrWeb-MailFilter-Notification
-Content-Type: text/plain
+Content-Type: text/rfc822-headers
 
 $FULLHEADERS$
 --001-DrWeb-MailFilter-Notification--

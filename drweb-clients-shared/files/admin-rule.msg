@@ -29,7 +29,7 @@ The original message was stored in archive record named:
 $ARCHIVE_RECORD$
 
 --001-DrWeb-MailFilter-Notification
-Content-Type: text/plain
+Content-Type: text/rfc822-headers
 
 $FULLHEADERS$
 --001-DrWeb-MailFilter-Notification--
