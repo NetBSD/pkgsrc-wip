@@ -1,0 +1,48 @@
+$NetBSD: patch-ab,v 1.1 2003/11/29 06:25:20 mpasternak Exp $
+
+--- globdef.py.orig	Tue Jul 22 00:40:50 2003
++++ globdef.py	Sat Nov 29 07:21:15 2003
+@@ -18,39 +18,17 @@
+ import os, gettext
+ 
+ import soya.model as model, soya.soya3d as soya3d
+-APPDIR = os.path.dirname(__file__)
++APPDIR = "/usr/pkg/share/slune/"
+ 
+ model.Image   .PATH = os.path.join(APPDIR, "images")
+ model.Material.PATH = os.path.join(APPDIR, "materials")
+ model.Shape   .PATH = os.path.join(APPDIR, "shapes")
+ soya3d.World  .PATH = os.path.join(APPDIR, "worlds")
+ 
+-
+ LOCALEDIR = os.path.join(APPDIR, "locale")
+-try: gettext.translation("slune", LOCALEDIR).install(1)
+-except IOError:
+-  
+-  LOCALEDIR = os.path.join(APPDIR, "..", "locale")
+-  try: gettext.translation("slune", LOCALEDIR).install(1)
+-  except IOError:
+-    
+-    LOCALEDIR = os.path.join("/", "usr", "share", "locale")
+-    try: gettext.translation("slune", LOCALEDIR).install(1)
+-    except IOError:
+-      
+-      # Non-supported language, defaults to english
+-      LOCALEDIR = os.path.join(APPDIR, "locale")
+-      try: gettext.translation("slune", LOCALEDIR, ("en",)).install(1)
+-      except IOError:
+-        
+-        LOCALEDIR = os.path.join(APPDIR, "..", "locale")
+-        try: gettext.translation("slune", LOCALEDIR, ("en",)).install(1)
+-        except IOError:
+-          
+-          LOCALEDIR = os.path.join("/", "usr", "share", "locale")
+-          gettext.translation("slune", LOCALEDIR, ("en",)).install(1)
+-      
+-
++# gettext.translation("slune", LOCALEDIR).install(1)
++def _(s):
++    return s
+ 
+ VERIFICATION_SERVER = ""
+ 

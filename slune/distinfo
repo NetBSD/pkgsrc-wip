@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/22 13:04:28 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2003/11/29 06:25:20 mpasternak Exp $
 
 SHA1 (Slune-0.5.tar.bz2) = cfa9e770f732756b05d56ac7cc3a70d6b8cebf01
 Size (Slune-0.5.tar.bz2) = 7177565 bytes
+SHA1 (patch-aa) = 8f96376d2c1bec330492b01978be8e862e196848
+SHA1 (patch-ab) = 956450d13faf58ba00b120a9f35712a6c8ca6276
