@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/20 00:26:34 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/18 15:06:34 marc Exp $
 bin/postgres
 bin/postmaster
 etc/rc.d/pgsql
@@ -30,11 +30,26 @@ lib/postgresql/utf8_and_win1256.so
 lib/postgresql/utf8_and_win874.so
 man/man1/postgres.1
 man/man1/postmaster.1
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/postgres.mo
 share/postgresql/conversion_create.sql
-share/postgresql/postgres.bki
-share/postgresql/postgres.description
 share/postgresql/information_schema.sql
 share/postgresql/pg_hba.conf.sample
 share/postgresql/pg_ident.conf.sample
+share/postgresql/postgres.bki
+share/postgresql/postgres.description
 share/postgresql/postgresql.conf.sample
-@unexec ${RMDIR} -p %D/share/postgresql 2>/dev/null || ${TRUE}
+share/postgresql/sql_features.txt
+@comment in postgresql74-client: @dirrm share/postgresql
+@comment in postgresql74-lib: @dirrm lib/postgresql

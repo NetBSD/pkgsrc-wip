@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/04/16 17:29:23 marc Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/04/18 15:06:30 marc Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -25,7 +25,7 @@ HOMEPAGE?=		http://www.postgresql.org/
 CONFLICTS+=		postgresql-[0-6]* postgresql-7.0*
 
 DISTINFO_FILE?=		${.CURDIR}/../postgresql74/distinfo
-COMMON_FILESDIR?=	${.CURDIR}/../../databases/postgresql/files
+COMMON_FILESDIR?=	${.CURDIR}/../postgresql74/files
 PATCHDIR?=		${.CURDIR}/../postgresql74/patches
 
 # Version numbering scheme:
@@ -40,10 +40,10 @@ BASE_VERS?=		${DIST_VERS}
 BUILDLINK_DEPENDS.postgresql-lib?=	postgresql-lib>=${BASE_VERS}
 BUILDLINK_DEPENDS.tcl-postgresql?=	tcl-postgresql>=${BASE_VERS}
 
-BUILD_DEPENDS+=		bison>=1.875:../../devel/bison
-
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
+BUILD_USES_MSGFMT=	yes
+USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make yacc
 PKG_SYSCONFSUBDIR=	postgresql
 
@@ -66,6 +66,7 @@ PGSQL_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 CONFIGURE_ARGS+=	--with-template="${PGSQL_TEMPLATE.${OPSYS}}"
 CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--with-zlib
+CONFIGURE_ARGS+=	--enable-nls
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/html/postgresql
@@ -96,4 +97,5 @@ post-extract:
 			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
 	fi
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

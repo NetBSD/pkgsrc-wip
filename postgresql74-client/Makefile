@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/04/16 17:29:24 marc Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/18 15:06:31 marc Exp $
 
 PKGNAME=		postgresql-client-${BASE_VERS}
 SVR4_PKGNAME=		pstgc
 COMMENT=		PostgreSQL database client programs
-
-DESCR_SRC=		${.CURDIR}/../../databases/postgresql-client/DESCR
 
 .include "../../wip/postgresql74/Makefile.common"
 
@@ -15,18 +13,15 @@ MAKE_ENV+=		INSTALLED_LIBPQ=1
 
 BUILD_DIRS=		${WRKSRC}/src/bin
 
-#pre-build:
-#	${MKDIR} ${WRKSRC}/src/include/parser
-#	${CP} ${WRKSRC}/src/backend/parser/parse.h \
-#	    ${WRKSRC}/src/include/parser
-#	cd ${WRKSRC}/src/bin/psql &&					\
-#	${RM} -f pqsignal.h &&						\
-#	${LN} -sf ${BUILDLINK_DIR}/include/postgresql/server/libpq/pqsignal.h \
-#	    pqsignal.h
-
+pre-build:
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/backend && \
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+		../../src/include/parser/parse.h ../../src/include/utils/fmgroids.h
+	
 post-install:
-	cd ${PREFIX}/man && 						\
-		${PAX} -O -ppm -crzf ${WRKSRC}/doc/man.tar.gz
+	${EGREP} -v "^#" ${FILESDIR}/man.exclude > ${WRKDIR}/man_tar_exclude
+	${TAR} -zxm -C ${PREFIX}/man -X ${WRKDIR}/man_tar_exclude	\
+		-f ${WRKSRC}/doc/man.tar.gz
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "FreeBSD" && ${LOWER_OPSYS_VERSUFFIX} == "4"

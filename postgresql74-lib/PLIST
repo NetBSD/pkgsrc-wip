@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/16 17:29:24 marc Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/18 15:06:33 marc Exp $
 bin/ecpg
 include/ecpg_informix.h
 include/ecpgerrno.h
@@ -131,7 +131,7 @@ include/postgresql/server/executor/hashjoin.h
 include/postgresql/server/executor/instrument.h
 include/postgresql/server/executor/nodeAgg.h
 include/postgresql/server/executor/nodeAppend.h
-include/postgresql/server/executor/nodeConn.h
+${PG_HIER}include/postgresql/server/executor/nodeConn.h
 include/postgresql/server/executor/nodeFunctionscan.h
 include/postgresql/server/executor/nodeGroup.h
 include/postgresql/server/executor/nodeHash.h
@@ -346,7 +346,7 @@ include/postgresql/server/utils/sets.h
 include/postgresql/server/utils/syscache.h
 include/postgresql/server/utils/timestamp.h
 include/postgresql/server/utils/tqual.h
-include/postgresql/server/utils/tupleconn.h
+${PG_HIER}include/postgresql/server/utils/tupleconn.h
 include/postgresql/server/utils/tuplesort.h
 include/postgresql/server/utils/tuplestore.h
 include/postgresql/server/utils/typcache.h
@@ -370,6 +370,20 @@ lib/libpq.so
 lib/libpq.so.3
 lib/libpq.so.3.1
 lib/postgresql/plpgsql.so
+man/man1/ecpg.1
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libpq.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libpq.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libpq.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libpq.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/libpq.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libpq.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libpq.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libpq.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libpq.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libpq.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libpq.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libpq.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libpq.mo
 share/postgresql/pg_service.conf.sample
 @dirrm share/postgresql
 @dirrm lib/postgresql

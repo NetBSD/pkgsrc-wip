@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/16 17:29:25 marc Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/18 15:06:34 marc Exp $
 
 PKGNAME=		postgresql-server-${BASE_VERS}
 SVR4_PKGNAME=		pstgs
@@ -12,10 +12,8 @@ NOT_FOR_PLATFORM=	*-*-mips
 .include "../../wip/postgresql74/Makefile.common"
 
 USE_PKGINSTALL=		yes
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/../../databases/postgresql-server/DEINSTALL
-FILESDIR=		${.CURDIR}/../../databases/postgresql-server/files
-MESSAGE_SRC=		${.CURDIR}/../../databases/postgresql-server/MESSAGE
-DESCR_SRC=		${.CURDIR}/../../databases/postgresql-server/DESCR
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+MESSAGE_SRC=		${.CURDIR}/MESSAGE
 
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 BUILD_DIRS=		${WRKSRC}/src/backend
@@ -55,8 +53,8 @@ post-buildlink:
 
 pre-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/backend && \
-       	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
-	 ../../src/include/parser/parse.h ../../src/include/utils/fmgroids.h
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+		../../src/include/parser/parse.h ../../src/include/utils/fmgroids.h
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/port && \
        	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
 
@@ -74,8 +72,9 @@ pre-install:
 	esac
 
 post-install:
-	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz		\
-		`${SED} -e "s|^#.*||" ${FILESDIR}/man.server`
+	${EGREP} -v "^#" ${FILESDIR}/man.server > ${WRKDIR}/man_tar
+	${TAR} -zxm -C ${PREFIX}/man -T ${WRKDIR}/man_tar  		\
+		-f ${WRKSRC}/doc/man.tar.gz
 
 .include "../../wip/postgresql74-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,4 @@
+# $NetBSD: man.server,v 1.1 2004/04/18 15:06:34 marc Exp $
+#
+man1/postgres.1
+man1/postmaster.1

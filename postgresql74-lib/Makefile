@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/04/16 17:29:24 marc Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/18 15:06:33 marc Exp $
 
 PKGNAME=		postgresql-lib-${BASE_VERS}
 SVR4_PKGNAME=		pstgl
 COMMENT=		PostgreSQL database headers and libraries
-
-DESCR_SRC=		${.CURDIR}/../../databases/postgresql-lib/DESCR
 
 .include "../../wip/postgresql74/Makefile.common"
 
@@ -14,6 +12,13 @@ BUILD_DIRS+=		${WRKSRC}/src/interfaces
 BUILD_DIRS+=		${WRKSRC}/src/pl
 
 .include "../../mk/bsd.prefs.mk"
+
+# handle additional headers installed by hierarchical queries patch
+.if defined(PGSQL_USE_HIER) && !empty(PGSQL_USE_HIER:M[yY][eE][sS])
+PLIST_SUBST+=		PG_HIER=
+.else
+PLIST_SUBST+=		PG_HIER="@comment "
+.endif
 
 post-buildlink:
 #
@@ -27,10 +32,9 @@ post-buildlink:
 post-install:
 	cd ${WRKSRC}/src/include && ${SETENV} ${MAKE_ENV}		\
 		${MAKE_PROGRAM} install-all-headers
-#	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz             \
-#		`${SED} -e "s|^#.*||" ${FILESDIR}/man.lib`
-#	${RM} -f ${PREFIX}/include/pgsql
-#	${LN} -sf postgresql ${PREFIX}/include/pgsql
+	${EGREP} -v "^#" ${FILESDIR}/man.lib > ${WRKDIR}/man_tar
+	${TAR} -zxm -C ${PREFIX}/man -T ${WRKDIR}/man_tar  		\
+		-f ${WRKSRC}/doc/man.tar.gz
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
