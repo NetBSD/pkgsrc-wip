@@ -8,5 +8,3 @@ and a developer's library for mail clients, other anti-spam tools, and similar
 projects requiring drop-in spam filtering. DSPAM has been implemented on many 
 large and small scale systems with the largest systems being reported at about 
 125,000 mailboxes.
-
-This is the development version.
