@@ -1,0 +1,46 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/22 14:18:45 poppnk Exp $
+lib/java/jbluez.jar
+lib/libjbluez.so
+share/doc/jbluez/allclasses-frame.html
+share/doc/jbluez/allclasses-noframe.html
+share/doc/jbluez/com/appliancestudio/jbluez/BTAddress.html
+share/doc/jbluez/com/appliancestudio/jbluez/BTAddressFormatException.html
+share/doc/jbluez/com/appliancestudio/jbluez/BlueZ.html
+share/doc/jbluez/com/appliancestudio/jbluez/BlueZException.html
+share/doc/jbluez/com/appliancestudio/jbluez/HCIDeviceInfo.html
+share/doc/jbluez/com/appliancestudio/jbluez/HCIDeviceStats.html
+share/doc/jbluez/com/appliancestudio/jbluez/HCIFeatures.html
+share/doc/jbluez/com/appliancestudio/jbluez/HCIVersion.html
+share/doc/jbluez/com/appliancestudio/jbluez/InquiryInfo.html
+share/doc/jbluez/com/appliancestudio/jbluez/InquiryInfoDevice.html
+share/doc/jbluez/com/appliancestudio/jbluez/class-use/BTAddress.html
+share/doc/jbluez/com/appliancestudio/jbluez/class-use/BTAddressFormatException.html
+share/doc/jbluez/com/appliancestudio/jbluez/class-use/BlueZ.html
+share/doc/jbluez/com/appliancestudio/jbluez/class-use/BlueZException.html
+share/doc/jbluez/com/appliancestudio/jbluez/class-use/HCIDeviceInfo.html
+share/doc/jbluez/com/appliancestudio/jbluez/class-use/HCIDeviceStats.html
+share/doc/jbluez/com/appliancestudio/jbluez/class-use/HCIFeatures.html
+share/doc/jbluez/com/appliancestudio/jbluez/class-use/HCIVersion.html
+share/doc/jbluez/com/appliancestudio/jbluez/class-use/InquiryInfo.html
+share/doc/jbluez/com/appliancestudio/jbluez/class-use/InquiryInfoDevice.html
+share/doc/jbluez/com/appliancestudio/jbluez/package-frame.html
+share/doc/jbluez/com/appliancestudio/jbluez/package-summary.html
+share/doc/jbluez/com/appliancestudio/jbluez/package-tree.html
+share/doc/jbluez/com/appliancestudio/jbluez/package-use.html
+share/doc/jbluez/constant-values.html
+share/doc/jbluez/deprecated-list.html
+share/doc/jbluez/help-doc.html
+share/doc/jbluez/index-all.html
+share/doc/jbluez/index.html
+share/doc/jbluez/overview-tree.html
+share/doc/jbluez/package-list
+share/doc/jbluez/packages.html
+share/doc/jbluez/resources/inherit.gif
+share/doc/jbluez/serialized-form.html
+share/doc/jbluez/stylesheet.css
+@dirrm share/doc/jbluez/resources
+@dirrm share/doc/jbluez/com/appliancestudio/jbluez/class-use
+@dirrm share/doc/jbluez/com/appliancestudio/jbluez
+@dirrm share/doc/jbluez/com/appliancestudio
+@dirrm share/doc/jbluez/com
+@dirrm share/doc/jbluez

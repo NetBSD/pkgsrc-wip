@@ -1,0 +1,5 @@
+JBlueZ is a Java package which interfaces with the BlueZ Bluetooth protocol
+stack for Linux, providing a simple means in which to add Bluetooth
+functionality to Java applications. It is designed to bring open source
+Bluetooth support to J2SE and J2EE without any reliance on proprietary
+third-party protocol stacks.
