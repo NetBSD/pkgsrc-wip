@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/12/28 01:15:41 poppnk Exp $
+
+To use lua-socket in your lua programs you must set this environ variable:
+
+  LUA_INIT = "loadlib('${PREFIX}/lib/libluasocket.so','luaopen_socket')();"
+
+  You will probably will problems loading the library, then environ that:
+
+  LD_LIBRARY_PATH=${PREFIX}/lib
+
+===========================================================================
