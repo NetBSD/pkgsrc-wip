@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.377 2003/08/16 16:54:31 dillo Exp $
-# $NetBSD: Makefile,v 1.377 2003/08/16 16:54:31 dillo Exp $
+# $Id: Makefile,v 1.378 2003/08/17 07:19:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.378 2003/08/17 07:19:40 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -33,6 +33,7 @@ SUBDIR+=	aolserver
 SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-frontpage
 SUBDIR+=	ap-ometer
+SUBDIR+=	apotheke
 SUBDIR+=	ap2-python
 SUBDIR+=	ap2-xslt
 SUBDIR+=	argouml
