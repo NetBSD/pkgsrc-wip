@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/08 10:37:08 bjan2 Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/24 23:52:34 bjan2 Exp $
 
 DISTNAME=	libvc-003
 CATEGORIES=	databases
