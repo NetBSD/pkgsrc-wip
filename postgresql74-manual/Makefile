@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/15 14:59:26 mpasternak Exp $
-# $Id: Makefile,v 1.1.1.1 2004/03/15 14:59:26 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/20 22:26:52 marc Exp $
+# $Id: Makefile,v 1.2 2004/03/20 22:26:52 marc Exp $
 #
 
-PKGNAME=		postgresql74-manual-${BASE_VERS}
+PKGNAME=		postgresql-manual-${BASE_VERS}
 SVR4_PKGNAME=		pstgm
 COMMENT=		PostgreSQL database system manual
 
@@ -12,7 +12,7 @@ BUILD_DIRS=		${WRKSRC}/doc
 DOCDIR=			${PREFIX}/share/doc/postgresql/manual
 DESCR_SRC=		${.CURDIR}/../../databases/postgresql-docs/DESCR
 
-DEPENDS+=		postgresql74-docs>=${BASE_VERS}:../../wip/postgresql-docs
+DEPENDS+=		postgresql-docs>=${BASE_VERS}:../../wip/postgresql-docs
 
 NO_BUILD=		# defined
 NO_CONFIGURE=		# defined
