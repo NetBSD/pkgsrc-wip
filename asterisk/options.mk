@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/03/16 18:58:22 riz Exp $
+# $NetBSD: options.mk,v 1.2 2005/03/30 21:16:17 riz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=	zaptel
@@ -15,6 +15,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}
 .if !empty(PKG_OPTIONS:Mzaptel)
 # zaptel only supported under NetBSD at the moment
 .  include "../../wip/zaptel-netbsd/buildlink3.mk"
+MAKE_FLAGS+=	ASTERISK_USE_ZAPTEL=1
 PLIST_SRC+=		${PKGDIR}/PLIST.zaptel
 .endif
 
