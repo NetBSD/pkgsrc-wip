@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/11/17 13:17:21 tvierling Exp $
+# $NetBSD: Makefile,v 1.34 2003/11/17 15:37:41 tvierling Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -45,6 +45,11 @@ CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE}
 .include "../../databases/mysql-client/buildlink2.mk"
 .elif ${ENTROPY_STORE_TYPE} != "monolithic"
 .error unknown ENTROPY_STORE_TYPE: ${ENTROPY_STORE_TYPE}
+.endif
+
+# maximum allowed peer connections (and child processes); default 64
+.ifdef ENTROPY_MAX_PEERS
+CONFIGURE_ARGS+=	--enable-max-peers=${ENTROPY_MAX_PEERS}
 .endif
 
 .include "../../devel/zlib/buildlink2.mk"
