@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/06/16 03:44:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/06/16 03:45:27 xtraeme Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -99,4 +99,5 @@ CONFIGURE_ARGS+=	--enable-webmail
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
