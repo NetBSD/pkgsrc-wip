@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/09/16 05:48:11 blef Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/20 16:56:47 blef Exp $
 
 DISTNAME=	openbox-3.0-beta3
 PKGNAME=	${DISTNAME:S/-beta/beta/}
@@ -19,7 +19,7 @@ USE_LIBTOOL=		YES
 USE_X11=		YES
 USE_PKGINSTALL=		YES
 
-PKG_SYSCONFSUBDIR?=	openbox
+PKG_SYSCONFSUBDIR=	openbox
 EGDIR=			${PREFIX}/share/examples/openbox
 CONF_FILES=		${EGDIR}/rc.xml ${PKG_SYSCONFDIR}/rc.xml
 CONF_FILES+=		${EGDIR}/menu.xml ${PKG_SYSCONFDIR}/menu.xml
