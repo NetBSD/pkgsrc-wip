@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1084 2004/03/17 20:18:47 airhead Exp $
-# $NetBSD: Makefile,v 1.1084 2004/03/17 20:18:47 airhead Exp $
+# $Id: Makefile,v 1.1085 2004/03/17 20:58:37 airhead Exp $
+# $NetBSD: Makefile,v 1.1085 2004/03/17 20:58:37 airhead Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -64,6 +64,7 @@ SUBDIR+=	busybox
 SUBDIR+=	bwidget
 SUBDIR+=	byacc
 SUBDIR+=	c-news
+SUBDIR+=	caml-libnum
 SUBDIR+=	caml-libunix
 SUBDIR+=	cawf
 SUBDIR+=	ccrypt
