@@ -1,0 +1,432 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/01 22:46:54 poppnk Exp $
+share/stratagus/bos/LICENSE.txt
+share/stratagus/bos/README.txt
+share/stratagus/bos/graphics/elites/build/development_yard.png
+share/stratagus/bos/graphics/elites/build/development_yard_i.png
+share/stratagus/bos/graphics/elites/build/development_yard_s.png
+share/stratagus/bos/graphics/elites/build/generator.png
+share/stratagus/bos/graphics/elites/build/generator_i.png
+share/stratagus/bos/graphics/elites/build/generator_s.png
+share/stratagus/bos/graphics/elites/build/hospital.png
+share/stratagus/bos/graphics/elites/build/hospital_i.png
+share/stratagus/bos/graphics/elites/build/hospital_s.png
+share/stratagus/bos/graphics/elites/build/missile_silo.png
+share/stratagus/bos/graphics/elites/build/missile_silo_i.png
+share/stratagus/bos/graphics/elites/build/missile_silo_s.png
+share/stratagus/bos/graphics/elites/build/research_facility.png
+share/stratagus/bos/graphics/elites/build/research_facility_i.png
+share/stratagus/bos/graphics/elites/build/research_facility_s.png
+share/stratagus/bos/graphics/elites/build/training_camp.png
+share/stratagus/bos/graphics/elites/build/training_camp_i.png
+share/stratagus/bos/graphics/elites/build/training_camp_s.png
+share/stratagus/bos/graphics/elites/build/vehicle_factory.png
+share/stratagus/bos/graphics/elites/build/vehicle_factory_i.png
+share/stratagus/bos/graphics/elites/build/vehicle_factory_s.png
+share/stratagus/bos/graphics/elites/buildings/Thumbs.db
+share/stratagus/bos/graphics/elites/buildings/plate-i.png
+share/stratagus/bos/graphics/elites/buildings/plate.png
+share/stratagus/bos/graphics/elites/buildings/vault-i.png
+share/stratagus/bos/graphics/elites/buildings/vault.png
+share/stratagus/bos/graphics/elites/missile/grenade.png
+share/stratagus/bos/graphics/elites/missile/mis_plasma_sml.png
+share/stratagus/bos/graphics/elites/missile/nuke.png
+share/stratagus/bos/graphics/elites/missile/rocket.png
+share/stratagus/bos/graphics/elites/research/res_avoid.png
+share/stratagus/bos/graphics/elites/research/res_ddril.png
+share/stratagus/bos/graphics/elites/research/res_expl.png
+share/stratagus/bos/graphics/elites/research/res_expl2.png
+share/stratagus/bos/graphics/elites/research/res_pdril.png
+share/stratagus/bos/graphics/elites/research/res_tdril.png
+share/stratagus/bos/graphics/elites/special/heal.png
+share/stratagus/bos/graphics/elites/special/ico_heal.png
+share/stratagus/bos/graphics/elites/ui/elites_claw.png
+share/stratagus/bos/graphics/elites/ui/ui_1024_bpanel.png
+share/stratagus/bos/graphics/elites/ui/ui_1024_filler.png
+share/stratagus/bos/graphics/elites/ui/ui_1024_respanel.png
+share/stratagus/bos/graphics/elites/ui/ui_1024_stat.png
+share/stratagus/bos/graphics/elites/ui/ui_1280_bpanel.png
+share/stratagus/bos/graphics/elites/ui/ui_1280_filler.png
+share/stratagus/bos/graphics/elites/ui/ui_1280_respanel.png
+share/stratagus/bos/graphics/elites/ui/ui_1280_stat.png
+share/stratagus/bos/graphics/elites/ui/ui_1600_bpanel.png
+share/stratagus/bos/graphics/elites/ui/ui_1600_filler.png
+share/stratagus/bos/graphics/elites/ui/ui_1600_respanel.png
+share/stratagus/bos/graphics/elites/ui/ui_1600_stat.png
+share/stratagus/bos/graphics/elites/ui/ui_640_bpanel.png
+share/stratagus/bos/graphics/elites/ui/ui_640_filler.png
+share/stratagus/bos/graphics/elites/ui/ui_640_respanel.png
+share/stratagus/bos/graphics/elites/ui/ui_640_stat.png
+share/stratagus/bos/graphics/elites/ui/ui_800_bpanel.png
+share/stratagus/bos/graphics/elites/ui/ui_800_filler.png
+share/stratagus/bos/graphics/elites/ui/ui_800_respanel.png
+share/stratagus/bos/graphics/elites/ui/ui_800_stat.png
+share/stratagus/bos/graphics/elites/ui/ui_info.png
+share/stratagus/bos/graphics/elites/ui/ui_minimap.png
+share/stratagus/bos/graphics/elites/ui/ui_res_icons.png
+share/stratagus/bos/graphics/elites/units/engineer_icons.png
+share/stratagus/bos/graphics/elites/units/ico_apcs.png
+share/stratagus/bos/graphics/elites/units/ico_assault.png
+share/stratagus/bos/graphics/elites/units/ico_bazoo.png
+share/stratagus/bos/graphics/elites/units/ico_dorcoz.png
+share/stratagus/bos/graphics/elites/units/ico_engineer.png
+share/stratagus/bos/graphics/elites/units/ico_grenadier.png
+share/stratagus/bos/graphics/elites/units/ico_harv.png
+share/stratagus/bos/graphics/elites/units/ico_medic.png
+share/stratagus/bos/graphics/elites/units/unit_apcs.png
+share/stratagus/bos/graphics/elites/units/unit_apcs_s.png
+share/stratagus/bos/graphics/elites/units/unit_assault.png
+share/stratagus/bos/graphics/elites/units/unit_assault_c.png
+share/stratagus/bos/graphics/elites/units/unit_assault_s.png
+share/stratagus/bos/graphics/elites/units/unit_bazoo.png
+share/stratagus/bos/graphics/elites/units/unit_bazoo_c.png
+share/stratagus/bos/graphics/elites/units/unit_bazoo_s.png
+share/stratagus/bos/graphics/elites/units/unit_dorcoz.png
+share/stratagus/bos/graphics/elites/units/unit_engineer.png
+share/stratagus/bos/graphics/elites/units/unit_engineer_c.png
+share/stratagus/bos/graphics/elites/units/unit_engineer_s.png
+share/stratagus/bos/graphics/elites/units/unit_grenadier.png
+share/stratagus/bos/graphics/elites/units/unit_grenadier_c.png
+share/stratagus/bos/graphics/elites/units/unit_grenadier_s.png
+share/stratagus/bos/graphics/elites/units/unit_harv.png
+share/stratagus/bos/graphics/elites/units/unit_harv_s.png
+share/stratagus/bos/graphics/elites/units/unit_medic.png
+share/stratagus/bos/graphics/elites/units/unit_medic_c.png
+share/stratagus/bos/graphics/elites/units/unit_medic_s.png
+share/stratagus/bos/graphics/elites/x_startpoint.png
+share/stratagus/bos/graphics/general/arrow_E.png
+share/stratagus/bos/graphics/general/arrow_N.png
+share/stratagus/bos/graphics/general/arrow_NE.png
+share/stratagus/bos/graphics/general/arrow_NW.png
+share/stratagus/bos/graphics/general/arrow_S.png
+share/stratagus/bos/graphics/general/arrow_SE.png
+share/stratagus/bos/graphics/general/arrow_SW.png
+share/stratagus/bos/graphics/general/arrow_W.png
+share/stratagus/bos/graphics/general/commands.png
+share/stratagus/bos/graphics/general/cross.png
+share/stratagus/bos/graphics/general/game.png
+share/stratagus/bos/graphics/general/green.png
+share/stratagus/bos/graphics/general/health2.png
+share/stratagus/bos/graphics/general/large.png
+share/stratagus/bos/graphics/general/magnifying_glass.png
+share/stratagus/bos/graphics/general/mana2.png
+share/stratagus/bos/graphics/general/menubutton.png
+share/stratagus/bos/graphics/general/panel_1.png
+share/stratagus/bos/graphics/general/panel_2.png
+share/stratagus/bos/graphics/general/panel_3.png
+share/stratagus/bos/graphics/general/panel_4.png
+share/stratagus/bos/graphics/general/panel_5.png
+share/stratagus/bos/graphics/general/red.png
+share/stratagus/bos/graphics/general/small.png
+share/stratagus/bos/graphics/general/small_green_cross.png
+share/stratagus/bos/graphics/general/spells1.png
+share/stratagus/bos/graphics/general/ui_buttons.png
+share/stratagus/bos/graphics/general/yellow.png
+share/stratagus/bos/graphics/missiles/big_fire.png
+share/stratagus/bos/graphics/missiles/explosion.png
+share/stratagus/bos/graphics/missiles/green_cross.png
+share/stratagus/bos/graphics/missiles/small_fire.png
+share/stratagus/bos/graphics/nature/effects/expl_160x128x1.png
+share/stratagus/bos/graphics/nature/effects/expl_288x288x1.png
+share/stratagus/bos/graphics/nature/effects/expl_64x64x1.png
+share/stratagus/bos/graphics/nature/res/ico_crys.png
+share/stratagus/bos/graphics/nature/res/ico_spike.png
+share/stratagus/bos/graphics/nature/res/res_crys.png
+share/stratagus/bos/graphics/nature/res/res_crys_s.png
+share/stratagus/bos/graphics/nature/res/spike_1.png
+share/stratagus/bos/graphics/nature/res/spike_1_s.png
+share/stratagus/bos/graphics/nature/res/spike_2.png
+share/stratagus/bos/graphics/nature/res/spike_2_s.png
+share/stratagus/bos/graphics/neutral/buildings/land_construction_site.png
+share/stratagus/bos/graphics/neutral/units/corpses.png
+share/stratagus/bos/graphics/screens/general.png
+share/stratagus/bos/graphics/screens/menu.png
+share/stratagus/bos/graphics/tiles/desert.png
+share/stratagus/bos/graphics/tilesets/desert/icons.png
+share/stratagus/bos/graphics/tilesets/desert/neutral/buildings/destroyed_site.png
+share/stratagus/bos/graphics/tilesets/desert/neutral/buildings/small_destroyed_site.png
+share/stratagus/bos/graphics/tilesets/desert/neutral/buildings/wall.png
+share/stratagus/bos/graphics/tilesets/desert/neutral/buildings/wall_construction_site.png
+share/stratagus/bos/graphics/tilesets/desert/terrain/summer.png
+share/stratagus/bos/graphics/tilesets/desert/terras/buildings/barracks.png
+share/stratagus/bos/graphics/tilesets/desert/terras/buildings/farm.png
+share/stratagus/bos/graphics/tilesets/desert/terras/buildings/great_hall.png
+share/stratagus/bos/graphics/tilesets/winter/neutral/buildings/destroyed_site.png
+share/stratagus/bos/graphics/tilesets/winter/neutral/buildings/land_construction_site.png
+share/stratagus/bos/graphics/tilesets/winter/neutral/buildings/small_destroyed_site.png
+share/stratagus/bos/graphics/tilesets/winter/neutral/buildings/wall.png
+share/stratagus/bos/graphics/tilesets/winter/neutral/buildings/wall_construction_site.png
+share/stratagus/bos/graphics/tilesets/winter/terrain/winter.png
+share/stratagus/bos/graphics/tilesets/winter/terras/buildings/barracks.png
+share/stratagus/bos/graphics/tilesets/winter/terras/buildings/farm.png
+share/stratagus/bos/graphics/tilesets/winter/terras/buildings/great_hall.png
+share/stratagus/bos/maps/braza.pud.gz
+share/stratagus/bos/maps/cross.pud.gz
+share/stratagus/bos/maps/default.pud.gz
+share/stratagus/bos/maps/forest.pud.gz
+share/stratagus/bos/maps/laby.pud.gz
+share/stratagus/bos/maps/multiplayer.pud.gz
+share/stratagus/bos/maps/test.pud.gz
+share/stratagus/bos/music/title.ogg
+share/stratagus/bos/scripts/ai.lua
+share/stratagus/bos/scripts/anim.lua
+share/stratagus/bos/scripts/bos.lua
+share/stratagus/bos/scripts/buttons.lua
+share/stratagus/bos/scripts/cheats.lua
+share/stratagus/bos/scripts/constructions.lua
+share/stratagus/bos/scripts/credits.lua
+share/stratagus/bos/scripts/editor.lua
+share/stratagus/bos/scripts/elites/buttons.lua
+share/stratagus/bos/scripts/elites/constructions.lua
+share/stratagus/bos/scripts/elites/ui.lua
+share/stratagus/bos/scripts/elites/units.lua
+share/stratagus/bos/scripts/elites/upgrade.lua
+share/stratagus/bos/scripts/fonts.lua
+share/stratagus/bos/scripts/icons.lua
+share/stratagus/bos/scripts/keystrokes.lua
+share/stratagus/bos/scripts/menus.lua
+share/stratagus/bos/scripts/missiles.lua
+share/stratagus/bos/scripts/ranks.lua
+share/stratagus/bos/scripts/sound.lua
+share/stratagus/bos/scripts/spells.lua
+share/stratagus/bos/scripts/stratagus.lua
+share/stratagus/bos/scripts/tilesets/desert.lua
+share/stratagus/bos/scripts/tips.lua
+share/stratagus/bos/scripts/ui.lua
+share/stratagus/bos/scripts/units.lua
+share/stratagus/bos/scripts/upgrade.lua
+share/stratagus/bos/sounds/elites/buildings/sfx_camp.die.wav
+share/stratagus/bos/sounds/elites/buildings/sfx_camp.select.wav
+share/stratagus/bos/sounds/elites/buildings/sfx_fort.die.wav
+share/stratagus/bos/sounds/elites/buildings/sfx_fort.select.wav
+share/stratagus/bos/sounds/elites/buildings/sfx_hosp.die.wav
+share/stratagus/bos/sounds/elites/buildings/sfx_hosp.select.wav
+share/stratagus/bos/sounds/elites/buildings/sfx_pplnt.die.wav
+share/stratagus/bos/sounds/elites/buildings/sfx_pplnt.select.wav
+share/stratagus/bos/sounds/elites/buildings/sfx_rfac.die.wav
+share/stratagus/bos/sounds/elites/buildings/sfx_rfac.select.wav
+share/stratagus/bos/sounds/elites/buildings/sfx_vfac.die.wav
+share/stratagus/bos/sounds/elites/buildings/sfx_vfac.select.wav
+share/stratagus/bos/sounds/elites/computer_voice/assault.unit.ready.wav
+share/stratagus/bos/sounds/elites/computer_voice/assault.unit.underattack.wav
+share/stratagus/bos/sounds/elites/computer_voice/bazoo.ready.wav
+share/stratagus/bos/sounds/elites/computer_voice/bazoo.underattack.wav
+share/stratagus/bos/sounds/elites/computer_voice/elite.fort.completed.wav
+share/stratagus/bos/sounds/elites/computer_voice/elite.fort.underattack.wav
+share/stratagus/bos/sounds/elites/computer_voice/engineer.ready.wav
+share/stratagus/bos/sounds/elites/computer_voice/engineer.underattack.wav
+share/stratagus/bos/sounds/elites/computer_voice/grenadier.ready.wav
+share/stratagus/bos/sounds/elites/computer_voice/grenadier.underattack.wav
+share/stratagus/bos/sounds/elites/computer_voice/harvester.completed.wav
+share/stratagus/bos/sounds/elites/computer_voice/harvester.underattack.wav
+share/stratagus/bos/sounds/elites/computer_voice/hospital.completed.wav
+share/stratagus/bos/sounds/elites/computer_voice/hospital.underattack.wav
+share/stratagus/bos/sounds/elites/computer_voice/medic.ready.wav
+share/stratagus/bos/sounds/elites/computer_voice/medic.underattack.wav
+share/stratagus/bos/sounds/elites/computer_voice/power.plant.completed.wav
+share/stratagus/bos/sounds/elites/computer_voice/power.plant.underattack.wav
+share/stratagus/bos/sounds/elites/computer_voice/research.completed.wav
+share/stratagus/bos/sounds/elites/computer_voice/research.facility.completed.wav
+share/stratagus/bos/sounds/elites/computer_voice/research.facility.underattack.wav
+share/stratagus/bos/sounds/elites/computer_voice/smolder.completed.wav
+share/stratagus/bos/sounds/elites/computer_voice/smolder.underattack.wav
+share/stratagus/bos/sounds/elites/computer_voice/training.camp.completed.wav
+share/stratagus/bos/sounds/elites/computer_voice/training.camp.underattack.wav
+share/stratagus/bos/sounds/elites/computer_voice/vehicle.factory.completed.wav
+share/stratagus/bos/sounds/elites/computer_voice/vehicle.factory.underattack.wav
+share/stratagus/bos/sounds/elites/units/assault_action.wav
+share/stratagus/bos/sounds/elites/units/assault_attack.wav
+share/stratagus/bos/sounds/elites/units/assault_die.wav
+share/stratagus/bos/sounds/elites/units/assault_select.wav
+share/stratagus/bos/sounds/elites/units/booza_action.wav
+share/stratagus/bos/sounds/elites/units/booza_attack.wav
+share/stratagus/bos/sounds/elites/units/booza_die.wav
+share/stratagus/bos/sounds/elites/units/booza_g_hit.wav
+share/stratagus/bos/sounds/elites/units/booza_select.wav
+share/stratagus/bos/sounds/elites/units/engineer_action.wav
+share/stratagus/bos/sounds/elites/units/engineer_attack.wav
+share/stratagus/bos/sounds/elites/units/engineer_die.wav
+share/stratagus/bos/sounds/elites/units/engineer_select.wav
+share/stratagus/bos/sounds/elites/units/grenadier_action.wav
+share/stratagus/bos/sounds/elites/units/grenadier_attack.wav
+share/stratagus/bos/sounds/elites/units/grenadier_die.wav
+share/stratagus/bos/sounds/elites/units/grenadier_g_hit.wav
+share/stratagus/bos/sounds/elites/units/grenadier_select.wav
+share/stratagus/bos/sounds/elites/units/harvester_action.wav
+share/stratagus/bos/sounds/elites/units/harvester_attack.wav
+share/stratagus/bos/sounds/elites/units/harvester_die.wav
+share/stratagus/bos/sounds/elites/units/harvester_select.wav
+share/stratagus/bos/sounds/elites/units/medic_action.wav
+share/stratagus/bos/sounds/elites/units/medic_attack.wav
+share/stratagus/bos/sounds/elites/units/medic_die.wav
+share/stratagus/bos/sounds/elites/units/medic_select.wav
+share/stratagus/bos/sounds/elites/units/smolder_action.wav
+share/stratagus/bos/sounds/elites/units/smolder_attack.wav
+share/stratagus/bos/sounds/elites/units/smolder_die.wav
+share/stratagus/bos/sounds/elites/units/smolder_select.wav
+share/stratagus/bos/sounds/terras/tempfile
+share/stratagus/bos/sounds/ui/click.wav.gz
+share/stratagus/bos/techtree/even out.rtf
+share/stratagus/bos/video/int_logo_bos.avi
+share/stratagus/bos/video/int_logo_bos.ogg
+share/stratagus/bos/video/int_logo_stratagus.avi
+share/stratagus/bos/video/int_logo_stratagus.ogg
+@dirrm share/stratagus/bos/video
+@dirrm share/stratagus/bos/techtree
+@dirrm share/stratagus/bos/sounds/ui
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/terras/units/peon
+@dirrm share/stratagus/bos/sounds/terras/units/peon
+@dirrm share/stratagus/bos/sounds/terras/units
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/terras/buildings
+@dirrm share/stratagus/bos/sounds/terras/buildings
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/terras/basic_voices/selected
+@dirrm share/stratagus/bos/sounds/terras/basic_voices/selected
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/terras/basic_voices/help
+@dirrm share/stratagus/bos/sounds/terras/basic_voices/help
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/terras/basic_voices/annoyed
+@dirrm share/stratagus/bos/sounds/terras/basic_voices/annoyed
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/terras/basic_voices/acknowledgement
+@dirrm share/stratagus/bos/sounds/terras/basic_voices/acknowledgement
+@dirrm share/stratagus/bos/sounds/terras/basic_voices
+@dirrm share/stratagus/bos/sounds/terras
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/spells
+@dirrm share/stratagus/bos/sounds/spells
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/neutral/units/warthog/selected
+@dirrm share/stratagus/bos/sounds/neutral/units/warthog/selected
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/neutral/units/warthog/annoyed
+@dirrm share/stratagus/bos/sounds/neutral/units/warthog/annoyed
+@dirrm share/stratagus/bos/sounds/neutral/units/warthog
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/neutral/units/sheep/selected
+@dirrm share/stratagus/bos/sounds/neutral/units/sheep/selected
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/neutral/units/sheep/annoyed
+@dirrm share/stratagus/bos/sounds/neutral/units/sheep/annoyed
+@dirrm share/stratagus/bos/sounds/neutral/units/sheep
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/neutral/units/seal/selected
+@dirrm share/stratagus/bos/sounds/neutral/units/seal/selected
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/neutral/units/seal/annoyed
+@dirrm share/stratagus/bos/sounds/neutral/units/seal/annoyed
+@dirrm share/stratagus/bos/sounds/neutral/units/seal
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/neutral/units/pig/selected
+@dirrm share/stratagus/bos/sounds/neutral/units/pig/selected
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/neutral/units/pig/annoyed
+@dirrm share/stratagus/bos/sounds/neutral/units/pig/annoyed
+@dirrm share/stratagus/bos/sounds/neutral/units/pig
+@dirrm share/stratagus/bos/sounds/neutral/units
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/neutral/buildings
+@dirrm share/stratagus/bos/sounds/neutral/buildings
+@dirrm share/stratagus/bos/sounds/neutral
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/missiles/sword_attack
+@dirrm share/stratagus/bos/sounds/missiles/sword_attack
+@dirrm share/stratagus/bos/sounds/missiles
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/misc/tree_chopping
+@dirrm share/stratagus/bos/sounds/misc/tree_chopping
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/misc/building_explosion
+@dirrm share/stratagus/bos/sounds/misc/building_explosion
+@dirrm share/stratagus/bos/sounds/misc
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/elites/units/peasant/selected
+@dirrm share/stratagus/bos/sounds/elites/units/peasant/selected
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/elites/units/peasant/annoyed
+@dirrm share/stratagus/bos/sounds/elites/units/peasant/annoyed
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/elites/units/peasant/acknowledgement
+@dirrm share/stratagus/bos/sounds/elites/units/peasant/acknowledgement
+@dirrm share/stratagus/bos/sounds/elites/units/peasant
+@dirrm share/stratagus/bos/sounds/elites/units
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/elites/cryofarm
+@dirrm share/stratagus/bos/sounds/elites/cryofarm
+@dirrm share/stratagus/bos/sounds/elites/computer_voice
+@dirrm share/stratagus/bos/sounds/elites/buildings
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/elites/basic_voices/selected
+@dirrm share/stratagus/bos/sounds/elites/basic_voices/selected
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/elites/basic_voices/help
+@dirrm share/stratagus/bos/sounds/elites/basic_voices/help
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/elites/basic_voices/annoyed
+@dirrm share/stratagus/bos/sounds/elites/basic_voices/annoyed
+@exec ${MKDIR} %D/share/stratagus/bos/sounds/elites/basic_voices/acknowledgement
+@dirrm share/stratagus/bos/sounds/elites/basic_voices/acknowledgement
+@dirrm share/stratagus/bos/sounds/elites/basic_voices
+@dirrm share/stratagus/bos/sounds/elites
+@dirrm share/stratagus/bos/sounds
+@dirrm share/stratagus/bos/scripts/tilesets
+@exec ${MKDIR} %D/share/stratagus/bos/scripts/terras
+@dirrm share/stratagus/bos/scripts/terras
+@dirrm share/stratagus/bos/scripts/elites
+@dirrm share/stratagus/bos/scripts
+@exec ${MKDIR} %D/share/stratagus/bos/puds
+@dirrm share/stratagus/bos/puds
+@dirrm share/stratagus/bos/music
+@dirrm share/stratagus/bos/maps
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/ui/terras/cursors
+@dirrm share/stratagus/bos/graphics/ui/terras/cursors
+@dirrm share/stratagus/bos/graphics/ui/terras
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/ui/fonts
+@dirrm share/stratagus/bos/graphics/ui/fonts
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/ui/elites/cursors
+@dirrm share/stratagus/bos/graphics/ui/elites/cursors
+@dirrm share/stratagus/bos/graphics/ui/elites
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/ui/cursors
+@dirrm share/stratagus/bos/graphics/ui/cursors
+@dirrm share/stratagus/bos/graphics/ui
+@dirrm share/stratagus/bos/graphics/tilesets/winter/terras/buildings
+@dirrm share/stratagus/bos/graphics/tilesets/winter/terras
+@dirrm share/stratagus/bos/graphics/tilesets/winter/terrain
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/tilesets/winter/neutral/units
+@dirrm share/stratagus/bos/graphics/tilesets/winter/neutral/units
+@dirrm share/stratagus/bos/graphics/tilesets/winter/neutral/buildings
+@dirrm share/stratagus/bos/graphics/tilesets/winter/neutral
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/tilesets/winter/elites/buildings
+@dirrm share/stratagus/bos/graphics/tilesets/winter/elites/buildings
+@dirrm share/stratagus/bos/graphics/tilesets/winter/elites
+@dirrm share/stratagus/bos/graphics/tilesets/winter
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/tilesets/wasteland
+@dirrm share/stratagus/bos/graphics/tilesets/wasteland
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/tilesets/swamp
+@dirrm share/stratagus/bos/graphics/tilesets/swamp
+@dirrm share/stratagus/bos/graphics/tilesets/desert/terras/buildings
+@dirrm share/stratagus/bos/graphics/tilesets/desert/terras
+@dirrm share/stratagus/bos/graphics/tilesets/desert/terrain
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/tilesets/desert/neutral/units
+@dirrm share/stratagus/bos/graphics/tilesets/desert/neutral/units
+@dirrm share/stratagus/bos/graphics/tilesets/desert/neutral/buildings
+@dirrm share/stratagus/bos/graphics/tilesets/desert/neutral
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/tilesets/desert/elites/buildings
+@dirrm share/stratagus/bos/graphics/tilesets/desert/elites/buildings
+@dirrm share/stratagus/bos/graphics/tilesets/desert/elites
+@dirrm share/stratagus/bos/graphics/tilesets/desert
+@dirrm share/stratagus/bos/graphics/tilesets
+@dirrm share/stratagus/bos/graphics/tiles
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/terras/units
+@dirrm share/stratagus/bos/graphics/terras/units
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/terras/ui
+@dirrm share/stratagus/bos/graphics/terras/ui
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/terras/missile
+@dirrm share/stratagus/bos/graphics/terras/missile
+@dirrm share/stratagus/bos/graphics/terras
+@dirrm share/stratagus/bos/graphics/screens
+@dirrm share/stratagus/bos/graphics/neutral/units
+@dirrm share/stratagus/bos/graphics/neutral/buildings
+@dirrm share/stratagus/bos/graphics/neutral
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/nature/thingies
+@dirrm share/stratagus/bos/graphics/nature/thingies
+@dirrm share/stratagus/bos/graphics/nature/res
+@dirrm share/stratagus/bos/graphics/nature/effects
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/nature/build
+@dirrm share/stratagus/bos/graphics/nature/build
+@dirrm share/stratagus/bos/graphics/nature
+@dirrm share/stratagus/bos/graphics/missiles
+@dirrm share/stratagus/bos/graphics/general
+@dirrm share/stratagus/bos/graphics/elites/units
+@dirrm share/stratagus/bos/graphics/elites/ui
+@dirrm share/stratagus/bos/graphics/elites/special
+@dirrm share/stratagus/bos/graphics/elites/research
+@dirrm share/stratagus/bos/graphics/elites/missile
+@dirrm share/stratagus/bos/graphics/elites/buildings
+@dirrm share/stratagus/bos/graphics/elites/build
+@dirrm share/stratagus/bos/graphics/elites
+@exec ${MKDIR} %D/share/stratagus/bos/graphics/buttons
+@dirrm share/stratagus/bos/graphics/buttons
+@dirrm share/stratagus/bos/graphics
+@exec ${MKDIR} %D/share/stratagus/bos/cur_bin
+@dirrm share/stratagus/bos/cur_bin
+@exec ${MKDIR} %D/share/stratagus/bos/campaigns
+@dirrm share/stratagus/bos/campaigns
+@dirrm share/stratagus/bos
+@dirrm share/stratagus
