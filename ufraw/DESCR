@@ -1,0 +1,6 @@
+Raw photo loader plugin for the GIMP.  This plugin incorporates dcraw
+(also available as pkgsrc/graphics/dcraw) to convert a digital camera
+raw file to an image, and then loads the image into the GIMP.  This
+plugin is more featureful thatn the "rawphoto" plugin, and in
+particular shows histograms and supports tone curves.  This plugin
+does not load EXIF data from the raw file into the GIMP.
