@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/22 21:39:25 tomhensel Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/15 09:30:09 tomhensel Exp $
 
---- Makefile.PL.orig	2004-02-14 08:55:02.000000000 +0000
-+++ Makefile.PL	2004-02-22 20:19:10.000000000 +0000
+--- Makefile.PL.orig	2004-03-15 08:55:05.000000000 +0000
++++ Makefile.PL	2004-04-15 09:19:34.000000000 +0000
 @@ -96,7 +96,7 @@
  
  my %opt = (
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/22 21:39:25 tomhensel Exp $
    'run_net_tests'   => undef,
    'destdir'         => undef,
    '__cruft'         => undef,
-@@ -813,7 +813,7 @@
+@@ -819,7 +819,7 @@
  
    return q{} if $path =~ m{
                    (^|/)(CVS|\.svn)(/|$)|
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/22 21:39:25 tomhensel Exp $
                  }ix;
  
    clean_MY_globals($self);
-@@ -1062,15 +1062,16 @@
+@@ -1068,17 +1068,18 @@
  
  
  conf__install:
@@ -30,6 +30,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/22 21:39:25 tomhensel Exp $
 +	@ # manage local.cf through pkgsrc .mk files
 +	@ # $(PERL) -MFile::Spec -MFile::Copy \
  	  -e "copy(q{rules/local.cf}, q{$(B_CONFDIR)/local.cf}) unless -f q{$(B_CONFDIR)/local.cf};"
+-	$(PERL) -MFile::Spec -MFile::Copy \
++	@ # $(PERL) -MFile::Spec -MFile::Copy \
+ 	  -e "copy(q{rules/init.pre}, q{$(B_CONFDIR)/init.pre}) unless -f q{$(B_CONFDIR)/init.pre};"
  
  data__install:
 -	-$(MKPATH) $(B_DATADIR)

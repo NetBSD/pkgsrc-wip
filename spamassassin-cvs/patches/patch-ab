@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/02/22 21:39:25 tomhensel Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/15 09:30:10 tomhensel Exp $
 
---- spamd/spamd.raw.orig	2004-02-12 08:55:05.000000000 +0000
-+++ spamd/spamd.raw	2004-02-22 20:22:21.000000000 +0000
-@@ -219,8 +219,8 @@
+--- spamd/spamd.raw.orig	2004-04-15 01:05:45.000000000 +0000
++++ spamd/spamd.raw	2004-04-15 09:22:03.000000000 +0000
+@@ -236,8 +236,8 @@
  }
  
  # Check for server certs
@@ -10,22 +10,22 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/02/22 21:39:25 tomhensel Exp $
 -$opt{'server-cert'} ||= "$LOCAL_RULES_DIR/certs/server-cert.pem";
 +$opt{'server-key'}  ||= "@SA_SSLCERTS@/server-key.pem";
 +$opt{'server-cert'} ||= "@SA_SSLCERTS@/server-cert.pem";
- if ($opt{'ssl'}) {
+ if ( $opt{'ssl'} ) {
    eval { require IO::Socket::SSL };
-   die "fatal: SSL encryption requested, but IO::Socket::SSL is unavailable\n" if ($@);
-@@ -1417,8 +1417,9 @@
- use POSIX 'setsid';
- sub daemonize
- {
--    # Pretty command line in ps
--    $0 = join(' ', $ORIG_ARG0, @ORIG_ARGV) unless($opt{'debug'});
-+    # no pretty 'ps' command line (easier for NetBSD rc script)
-+    # # Pretty command line in ps
-+    # $0 = join(' ', $ORIG_ARG0, @ORIG_ARGV) unless($opt{'debug'});
+   die "fatal: SSL encryption requested, but IO::Socket::SSL is unavailable\n"
+@@ -1507,8 +1507,9 @@
  
-     # Be a nice daemon and chdir() to the root so we don't block any unmount attempts
-     chdir '/' or die "Can't chdir to /: $!\n";
-@@ -1536,7 +1537,7 @@
+ sub daemonize {
+ 
+-  # Pretty command line in ps
+-  $0 = join ( ' ', $ORIG_ARG0, @ORIG_ARGV ) unless ( $opt{'debug'} );
++  # no pretty 'ps' command line (easier for NetBSD rc script)
++  # # Pretty command line in ps
++  # $0 = join(' ', $ORIG_ARG0, @ORIG_ARGV) unless($opt{'debug'});
+ 
+   # Be a nice daemon and chdir() to the root so we don't block any unmount attempts
+   chdir '/' or die "Can't chdir to /: $!\n";
+@@ -1609,7 +1610,7 @@
  
   -c, --create-prefs                 Create user preferences files
   -C path, --configpath=path         Path for default config files
@@ -34,7 +34,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/02/22 21:39:25 tomhensel Exp $
   -d, --daemonize                    Daemonize
   -h, --help                         Print usage message.
   -i ipaddr, --listen-ip=ipaddr,...  Listen on the IP ipaddr (default: 127.0.0.1)
-@@ -1606,12 +1607,12 @@
+@@ -1678,12 +1679,12 @@
  =item B<-C> I<path>, B<--configpath>=I<path>
  
  Use the specified path for locating the distributed configuration files.

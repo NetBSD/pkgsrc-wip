@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2004/03/05 00:33:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/15 09:30:08 tomhensel Exp $
 
-DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}-cvs
+DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}
 PKGNAME=	spamassassin-cvs-${_SA_CVS_DATE}
 PKGREVISION=	# empty
 SVR4_PKGNAME=	sa
@@ -25,12 +25,13 @@ CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*			\
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+EXTRACT_SUFX?=	.tar.bz2
 NO_CHECKSUM=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
 # which version of SA is current in CVS
-_SA_CVS_VER?=	2.70
+_SA_CVS_VER?=	3.000000-cvs
 _SA_CVS_DATE!=	${DATE} +%Y%m%d
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-cvs//}

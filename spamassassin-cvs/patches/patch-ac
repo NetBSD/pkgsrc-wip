@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/02/22 21:39:25 tomhensel Exp $
+$NetBSD: patch-ac,v 1.2 2004/04/15 09:30:10 tomhensel Exp $
 
 --- README.orig	Sun Sep 28 18:21:54 2003
 +++ README
