@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/05 21:46:30 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/18 11:21:38 marc Exp $
 #
 
 DISTNAME=	pyPgSQL-2.3
@@ -15,8 +15,6 @@ USE_BUILDLINK2=	YES
 PYDISTUTILSPKG=	YES
 PYBINMODULE=	YES
 PY_PATCHPLIST=	YES
-
-PYTHON_VERSION_REQD>=	20
 
 post-install:
 	${PYTHONBIN} -O ${LOCALBASE}/${PYLIB}/compileall.py \
