@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/21 11:41:22 marc Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/21 12:18:12 marc Exp $
 
 DISTNAME=	libfwbuilder-1.0.2
 CATEGORIES=	security
@@ -23,15 +23,9 @@ CONFIGURE_ARGS+=	--with-lwres
 .endif
 BUILD_DEFS+=	FWBUILDER_USE_BIND
 
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/libtoolize --force --copy
-	cd ${WRKSRC} && ${ACLOCAL}
-	cd ${WRKSRC} && ${AUTOCONF}
-
 .include "../../devel/glib/buildlink2.mk"
 .include "../../net/net-snmp/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
 
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
