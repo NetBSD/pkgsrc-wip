@@ -1,4 +1,4 @@
-# $Id: win32.pkg.mk,v 1.16 2003/12/02 05:52:20 mpasternak Exp $
+# $Id: win32.pkg.mk,v 1.17 2003/12/08 17:47:19 mpasternak Exp $
 # (C) 2003 Michal Pasternak <dotz@irc.pl>
 #
 #
@@ -34,6 +34,7 @@ LD=		${CROSSBASE}/${MINGWTARGET}/bin/ld
 AR=		${CROSSBASE}/${MINGWTARGET}/bin/ar
 AS=		${CROSSBASE}/${MINGWTARGET}/bin/as
 NM=		${CROSSBASE}/${MINGWTARGET}/bin/nm
+STRIP=		${CROSSBASE}/${MINGWTARGET}/bin/strip
 LDFLAGS=	-L${CROSSBASE}/${MINGWTARGET}/lib
 CFLAGS=		-I${CROSSBASE}/include
 CPPFLAGS=	-I${CROSSBASE}/include
