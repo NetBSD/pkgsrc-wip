@@ -12,8 +12,6 @@ samba-3.0.1/WHATSNEW.txt says:
 When samba version three is in real pksgrc use "samba" as directory
 name (and not samba3). And maybe reimport samba as samba2?
 
-Update to 3.0.1.
-
 pkglint says:
 FATAL: extra item "COUNTRY_MIRRORS" placed in the DISTNAME section.
 FATAL: extra item ".for COUNTRY in ${COUNTRY_MIRRORS}" placed in the DISTNAME section.
@@ -41,6 +39,8 @@ ln -sf $BINDIR/$p2 /sbin/mount.smbfs (I removed this in patch-aa)
 ? --with-python=PYTHONNAME  build Python libraries
 
 ?? --with-libiconv
+Add option for this. Murray Armfield says that adding libiconv buildlink
+is enough to build in unicode support.
 
 check different builds and make sure the PLIST_SUBSTR is correct
 is ${SAMBA_LDAP} needed for PLIST?
@@ -73,6 +73,6 @@ chmod: failed to get attributes of `/usr/share/samba/swat/lang/ja/images/*.gif':
 default smb.conf needs to be cleaned up, for example:
 log file, printers
 
-need to test 3.0.1pre1
+need to test
 
 smbd links to libssl ... why?
