@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/18 15:46:16 poppnk Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2003/10/26 10:49:01 poppnk Exp $
 #
 
-DISTNAME=	treecc-0.2.4
+DISTNAME=	treecc-0.2.6
 CATEGORIES=	devel
-MASTER_SITES=	http://ftp.gnu.org/gnu/dotgnu/pnet/
+MASTER_SITES=	http://www.southern-storm.com.au/download/
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.gnu.org/projects/dotgnu/
