@@ -1,0 +1,9 @@
+$Id: TODO,v 1.1.1.1 2004/04/18 19:53:54 mpasternak Exp $
+
+ICC .sh scripts needs to have subsituted <INSTALDIR>!
+
+Someone with IA64 - please check if this is useable there.
+
+Messages about bogus conflicts: propably require changes in rpm2pkg.
+
+	-- dotz@irc.pl
