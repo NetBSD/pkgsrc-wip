@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/04 23:52:43 adrian_p Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/05 01:24:51 adrian_p Exp $
 
 DISTNAME=	ettercap-NG-0.7.2
 CATEGORIES=	net
@@ -37,19 +37,24 @@ CONF_FILES=	${PREFIX}/share/examples/ettercap-NG/etter.conf \
 PKG_OPTIONS_VAR=        PKG_OPTIONS.ettercap-NG
 PKG_SUPPORTED_OPTIONS=	gtk
 
-.include "../../mk/bsd.options.mk"
-
 .if !empty(PKG_OPTIONS:Mgtk)
 .	include "../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gtk
 .endif
 
-# Bad hack as I think there's a bug floating round the place
-# with INSTALL_UNSTRIPPED=yes being ignored in cetain cases.
+# See PR# 28772 about INSTALL_STRIPPED=NO being ignored on certain platforms
 .if ${OPSYS} == "Darwin"
-_STRIPFLAG_CC=
-_STRIPFLAG_INSTALL=
+${_STRIPFLAG_CC}=
+${_STRIPFLAG_INSTALL}=
 .endif
+
+.include "../../security/openssl/buildlink3.mk"
+.include "../../devel/libnet11/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ettercap-NG
@@ -57,10 +62,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/share/etter.conf \
 		${PREFIX}/share/examples/ettercap-NG
 
-.include "../../security/openssl/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/libnet11/buildlink3.mk"
-.include "../../net/libpcap/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
