@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/03/26 22:46:51 riz Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/31 00:59:43 riz Exp $
 #
 
-DISTNAME=		zaptel-netbsd-20050320
+DISTNAME=		zaptel-netbsd-20050330
 CATEGORIES=		wip
 MASTER_SITES=		http://www.tastylime.net/netbsd/zaptel/
 EXTRACT_SUFX=		.tar.bz2
