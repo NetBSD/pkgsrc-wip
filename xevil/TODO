@@ -1,0 +1,4 @@
+Test test test!
+
+I'm not sure about the USE_X11BASE, but since it will read resources from
+${X11BASE}/lib/app-defaults/, I think USE_X11BASE is correct.
