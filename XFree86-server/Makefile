@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/24 09:55:31 blef Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/24 10:00:23 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-server-${XF_VER}
@@ -35,8 +35,9 @@ pre-install:
 	@cd ${WRKSRC}/programs/Xserver/hw/xfree86/parser && \
 		${CP} Makefile Makefile.orig && \
 		${SED} -e '/$$(INSTALL).*lib$$(LIBNAME).a/ d' \
-			-e '/$$(RANLIB).*lib$$(LIBNAME).a/ d' Makefile.orig \
-			> Makefile
+		-e '/$$(RANLIB).*lib$$(LIBNAME).a/ d' \
+		-e 's|$$(INSTALL) $$(INSTALLFLAGS) $$(INSTINCFLAGS)|echo|' \
+	       	Makefile.orig > Makefile
 
 .include "../../wip/XFree86/Makefile.common"
 .include "../../wip/XFree86-libs/buildlink2.mk"
