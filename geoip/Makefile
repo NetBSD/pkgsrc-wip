@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/24 23:56:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/09 04:05:52 xtraeme Exp $
 #
 
 DISTNAME=	GeoIP-1.1.9
-PKGNAME=	geoip-1.1.9
+PKGNAME=	${DISTNAME:S/GeoIP/geoip/}
 CATEGORIES=	net
 MASTER_SITES=	http://www.maxmind.com/download/geoip/api/c/
 
@@ -16,8 +16,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
-
-#CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 post-install:
 	${MV} ${PKG_SYSCONFDIR}/GeoIP.conf.default \
