@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/03 15:31:33 cubidou Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/26 05:44:59 cubidou Exp $
 lib/gkrellm2/plugins/volume.so
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gkrellm-volume.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gkrellm-volume.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gkrellm-volume.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gkrellm-volume.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gkrellm-volume.mo
