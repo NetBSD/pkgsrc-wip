@@ -1,4 +1,1 @@
-- use SMART commands' definitions from <dev/ic/wdcreg.h> if(when) they become available
-- ask author to rename struct ata_smart_thresholds (identical struct is defined in <dev/ata/atavar.h>)
-- SCSI support for NetBSD
-- 3Ware support for NetBSD (depends on support of ATA passthrough in twe(4), which is missing)
+- 3Ware support for NetBSD 

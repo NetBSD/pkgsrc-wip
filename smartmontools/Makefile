@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2003/12/30 20:03:00 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/11 17:34:13 shattered Exp $
 #
 
-DISTNAME=		smartmontools-5.26
+DISTNAME=		smartmontools-5.30
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=smartmontools/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		shattered@users.sourceforge.net
 HOMEPAGE=		http://smartmontools.sourceforge.net/
 COMMENT=		Control and monitor storage systems using SMART
 
@@ -14,10 +14,9 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-docdir=${LOCALBASE}/share/doc/smartmontools
+# CONFIGURE_ARGS+=	--enable-sample
 CONF_FILES=		${LOCALBASE}/share/doc/smartmontools/smartd.conf ${LOCALBASE}/etc/smartd.conf
-
-post-extract:
-	${CP} ${FILESDIR}/os_netbsd.* ${WRKSRC}
+USE_GNU_TOOLS+=		make
 
 .include "../../mk/bsd.prefs.mk"
 
