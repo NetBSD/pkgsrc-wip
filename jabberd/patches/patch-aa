@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2003/05/10 07:22:16 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2003/10/09 02:26:23 xtraeme Exp $
 
 --- jabber.xml.in.orig	2003-05-10 00:03:51.000000000 +0200
 +++ jabber.xml.in	2003-05-10 00:06:50.000000000 +0200
@@ -40,8 +40,8 @@ $NetBSD: patch-aa,v 1.3 2003/05/10 07:22:16 jmmv Exp $
 +      <mod_filter>@LIBDIR@/jsm.so</mod_filter>
 +      <mod_offline>@LIBDIR@/jsm.so</mod_offline>
 +      <mod_presence>@LIBDIR@/jsm.so</mod_presence>
-+      <mod_auth_plain>@LIBDIR@/jsm.so</mod_auth_plain>
 +      <mod_auth_digest>@LIBDIR@/jsm.so</mod_auth_digest>
++      <mod_auth_plain>@LIBDIR@/jsm.so</mod_auth_plain>
 +      <mod_auth_0k>@LIBDIR@/jsm.so</mod_auth_0k>
 +      <mod_log>@LIBDIR@/jsm.so</mod_log>
 +      <mod_register>@LIBDIR@/jsm.so</mod_register>
