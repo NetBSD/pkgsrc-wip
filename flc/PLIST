@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/23 09:03:30 poppnk Exp $
+bin/${PKGNAME}

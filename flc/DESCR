@@ -1,0 +1,10 @@
+The Filter Language Compiler (flc) generates rules for the various
+packages which perform packet filtering from a common language.
+
+flc supports:
+    IP Filter (full support - 2.8.1) 
+    ipfw (Linux - 1.3.6Beta3) 
+    ipfwadm (Linux - 1.2) 
+    ipfirewall (Linux/*BSD - 2.0e) 
+    Cisco (extended access-lists) 
+    screend 
