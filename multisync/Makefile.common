@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1 2005/01/05 10:23:23 mreriksson Exp $
+#
+
+DISTNAME=		multisync-0.82-1
+CATEGORIES=		wip
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=multisync/}
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		ola@mrEriksson.net
+HOMEPAGE=		http://multisync.sourceforge.net/
+
+USE_BUILDLINK3=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+USE_X11=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+GNU_CONFIGURE=		yes
+
+.include "../../mk/automake.mk"
+.include "../../mk/bsd.pkg.mk"
