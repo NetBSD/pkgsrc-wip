@@ -1,23 +1,23 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/29 22:05:27 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/26 03:08:01 blef Exp $
 bin/konversation
 share/applications/kde/konversation.desktop
-share/apps/konversation/eventsrc
-share/apps/konversation/images/led_blue_off.png
-share/apps/konversation/images/led_blue_on.png
-share/apps/konversation/images/led_green_off.png
-share/apps/konversation/images/led_green_on.png
-share/apps/konversation/images/led_red_off.png
-share/apps/konversation/images/led_red_on.png
-share/apps/konversation/images/led_yellow_off.png
-share/apps/konversation/images/led_yellow_on.png
-share/apps/konversation/konversationui.rc
-share/icons/hicolor/16x16/apps/konversation.png
-share/icons/hicolor/32x32/apps/konversation.png
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/konversation.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/konversation.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/konversation.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/konversation.mo
-${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/konversation.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/konversation.mo
-@dirrm share/apps/konversation/images
-@dirrm share/apps/konversation
+share/kde/apps/konversation/eventsrc
+share/kde/apps/konversation/images/led_blue_off.png
+share/kde/apps/konversation/images/led_blue_on.png
+share/kde/apps/konversation/images/led_green_off.png
+share/kde/apps/konversation/images/led_green_on.png
+share/kde/apps/konversation/images/led_red_off.png
+share/kde/apps/konversation/images/led_red_on.png
+share/kde/apps/konversation/images/led_yellow_off.png
+share/kde/apps/konversation/images/led_yellow_on.png
+share/kde/apps/konversation/konversationui.rc
+share/kde/icons/hicolor/16x16/apps/konversation.png
+share/kde/icons/hicolor/32x32/apps/konversation.png
+share/kde/locale/de/LC_MESSAGES/konversation.mo
+share/kde/locale/it/LC_MESSAGES/konversation.mo
+share/kde/locale/ko/LC_MESSAGES/konversation.mo
+share/kde/locale/ru/LC_MESSAGES/konversation.mo
+share/kde/locale/sl/LC_MESSAGES/konversation.mo
+share/kde/locale/sv/LC_MESSAGES/konversation.mo
+@dirrm share/kde/apps/konversation/images
+@dirrm share/kde/apps/konversation
