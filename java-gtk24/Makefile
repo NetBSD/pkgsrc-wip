@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/26 12:19:04 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/27 22:42:59 poppnk Exp $
 #
 
-DISTNAME=		libgtk-java-2.4.4
-PKGNAME=		java-gtk24-2.4.4
+DISTNAME=		libgtk-java-2.6.0
+PKGNAME=		java-gtk24-2.6.0
 CATEGORIES=		wip x11
-MASTER_SITES=		ftp://ftp.gnome.org/pub/GNOME/sources/libgtk-java/2.4/
+MASTER_SITES=		ftp://ftp.gnome.org/pub/GNOME/sources/libgtk-java/2.6/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		ftp://ftp.gnome.org/pub/GNOME/sources/libgtk-java/2.4/
+HOMEPAGE=		ftp://ftp.gnome.org/pub/GNOME/sources/libgtk-java/2.6/
 COMMENT=		Java bindings for GTK+2
 
 DEPENDS+=       jikes-[0-9]*:../../lang/jikes
@@ -17,9 +17,7 @@ USE_BUILDLINK3=		yes
 GNU_CONFIGURE=YES
 USE_GNU_TOOLS+=make
 CONFIGURE_ARGS+=--without-gcj-compile
-
-pre-configure:
-	cd ${WRKSRC} && ./autogen.sh
+MAKE_ENV+=CLASSPATH=${PKG_JAVA_HOME}/jre/lib/rt.jar
 
 # db2html isn't 
 SUBST_CLASSES=db au cp

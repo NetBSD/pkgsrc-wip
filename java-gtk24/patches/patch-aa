@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2005-02-27 23:30:40.000000000 +0100
++++ Makefile.in	2005-02-27 23:33:18.000000000 +0100
+@@ -13610,7 +13610,7 @@
+ 
+ 
+ $(gtk_jar_class_files): %.class: %.java
+-	$(JAVAC) -classpath $(srcdir)/src/java:src/java -d src/java $<
++	$(JAVAC) -classpath ${JAVA_HOME}/jre/lib/rt.jar:$(srcdir)/src/java:src/java -d src/java $<
+ 
+ gtk$(gtkapiversion).jar: $(gtk_jar_class_files)
+ 	$(JAR) cf $@ $(patsubst src/java/%.class,-C src/java %.class,$(all_gtk_jar_class_files))
