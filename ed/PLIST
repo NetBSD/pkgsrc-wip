@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/22 16:39:15 xtraeme Exp $
-bin/${GNU_PROGRAM_PREFIX}ed
-bin/${GNU_PROGRAM_PREFIX}red
-info/ed.info
-man/man1/${GNU_PROGRAM_PREFIX}ed.1
-man/man1/${GNU_PROGRAM_PREFIX}red.1
