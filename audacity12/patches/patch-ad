@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/04/09 04:08:52 bencollver Exp $
+
+--- lib-src/libnyquist/snd/sndio.c.orig	Sat Feb 28 11:19:39 2004
++++ lib-src/libnyquist/snd/sndio.c
+@@ -20,7 +20,7 @@
+ #ifdef WIN32
+ #include <sys/stat.h>
+ #include "io.h"
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <sys/stat.h>
+ #else
+ #endif

@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2004/03/06 16:23:09 mpasternak Exp $
-# $Id: Makefile,v 1.2 2004/03/06 16:23:09 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/09 04:08:52 bencollver Exp $
+# $Id: Makefile,v 1.3 2004/04/09 04:08:52 bencollver Exp $
 
 DISTNAME=	audacity-src-1.2.0
 PKGNAME=	audacity-1.2.0
@@ -16,15 +16,14 @@ WRKSRC=			${WRKDIR}/audacity-src-1.2.0
 USE_BUILDLINK3=		# defined
 USE_X11=		# defined
 USE_GNU_TOOLS+=		make
+USE_PKGLOCALEDIR=	# defined
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--without-xaudio
-CONFIGURE_ARGS+=	--with-id3
-CONFIGURE_ARGS+=	--with-libmad
-CONFIGURE_ARGS+=	--with-vorbis
-CONFIGURE_ARGS+=	--with-dev-dsp="${DEVOSSSOUND}"
-CONFIGURE_ARGS+=	--with-helpdir="${PREFIX}/share"
-HAVE_OSS=		NO
+CONFIGURE_ARGS+=	--with-id3=system
+CONFIGURE_ARGS+=	--with-libmad=system
+CONFIGURE_ARGS+=	--with-vorbis=system
+CONFIGURE_ARGS+=	--with-portaudio=system
 
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/lib-src/libsndfile/libtool \
@@ -37,6 +36,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/lib-src/libsndfile/libtool \
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
+.include "../../wip/portaudio/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 
 .include "../../mk/autoconf.mk"
