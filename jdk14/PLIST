@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2004/07/14 18:24:56 absd Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/08/31 21:26:35 marc Exp $
 bin/jdk14-appletviewer
 bin/jdk14-jar
+bin/jdk14-java
 bin/jdk14-javac
 bin/jdk14-javadoc
 bin/jdk14-javah
@@ -1027,12 +1028,11 @@ java/jdk-1.4.2/man/man1/serialver.1
 java/jdk-1.4.2/man/man1/servertool.1
 java/jdk-1.4.2/man/man1/tnameserv.1
 java/jdk-1.4.2/src.zip
-@dirrm java/jdk-1.4.2/bin
-@dirrm java/jdk-1.4.2/lib
+@dirrm java/jdk-1.4.2/man/man1
 @dirrm java/jdk-1.4.2/man/ja_JP.eucJP/man1
 @dirrm java/jdk-1.4.2/man/ja_JP.eucJP
-@dirrm java/jdk-1.4.2/man/man1
 @dirrm java/jdk-1.4.2/man
+@dirrm java/jdk-1.4.2/lib
 @dirrm java/jdk-1.4.2/jre/lib/zi/Pacific
 @dirrm java/jdk-1.4.2/jre/lib/zi/Indian
 @dirrm java/jdk-1.4.2/jre/lib/zi/Europe
@@ -1142,3 +1142,5 @@ java/jdk-1.4.2/src.zip
 @dirrm java/jdk-1.4.2/demo/applets/Animator
 @dirrm java/jdk-1.4.2/demo/applets
 @dirrm java/jdk-1.4.2/demo
+@dirrm java/jdk-1.4.2/bin
+@dirrm java/jdk-1.4.2

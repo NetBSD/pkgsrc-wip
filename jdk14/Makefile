@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/08/03 13:15:15 marc Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/31 21:26:35 marc Exp $
 
 DISTNAME=	j2sdk-1_4_2-src-scsl
-PKGNAME=	jdk14-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
+PKGNAME=	jdk14-${JDK_VERSION}.${JDK_PATCHSET_VERSION}.1
 CATEGORIES=	lang java
 MASTER_SITES=	# http://www.sun.com/software/java2/download.html
 #		http://www.eyesbeyond.com/freebsddom/java/jdk14.html
@@ -87,7 +87,8 @@ SUN_LINUX_JDK_VERSION=  1.4.2
 
 SCSL_SRCFILE=	j2sdk-${JDK_VERSION:S/./_/g}-src-scsl.zip
 SCSL_BINFILE=	j2sdk-${JDK_VERSION:S/./_/g}-bin-scsl.zip
-PATCHSETFILE=	bsd-jdk14-patches-${JDK_PATCHSET_VERSION}.tar.gz
+#PATCHSETFILE=	bsd-jdk14-patches-${JDK_PATCHSET_VERSION}.tar.gz
+PATCHSETFILE=	bsd-jdk14-patches-current.tar.gz
 
 SCSL_DOWNLOAD=	http://wwws.sun.com/software/java2/download.html
 PATCH_DOWNLOAD=	http://www.eyesbeyond.com/freebsddom/java/JDK14SCSLConfirm.html
@@ -171,6 +172,10 @@ do-install:
 	${CHMOD} 644 ${JAVA_HOME}/jre/.systemPrefs/.system.lock
 	${TOUCH} ${JAVA_HOME}/jre/.systemPrefs/.systemRootModFile
 	${CHMOD} 644 ${JAVA_HOME}/jre/.systemPrefs/.systemRootModFile
+	${INSTALL_DATA} ${FILESDIR}/cacerts \
+		${JAVA_HOME}/jre/lib/security/cacerts
+#	 ${INSTALL_DATA} ${FILESDIR}/cacerts \
+#		${JAVA_HOME}/jre/javaws/cacerts
 
 .include "../../mk/java-env.mk"
 .include "../../mk/motif.buildlink3.mk"
