@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/04 22:00:19 marc Exp $
-bin/postgresql_autodoc
-share/postgresql-autodoc/dia.tmpl
-share/postgresql-autodoc/dot.tmpl
-share/postgresql-autodoc/html.tmpl
-share/postgresql-autodoc/xml.tmpl
-@dirrm share/postgresql-autodoc
