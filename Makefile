@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.820 2003/12/29 14:11:41 xtraeme Exp $
-# $NetBSD: Makefile,v 1.820 2003/12/29 14:11:41 xtraeme Exp $
+# $Id: Makefile,v 1.821 2003/12/29 14:48:59 mpasternak Exp $
+# $NetBSD: Makefile,v 1.821 2003/12/29 14:48:59 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -53,6 +53,7 @@ SUBDIR+=	arping
 SUBDIR+=	asfrecorder
 SUBDIR+=	asterisk
 SUBDIR+=	atasm
+SUBDIR+=	atk-devel
 SUBDIR+=	autoproject
 SUBDIR+=	avida2
 SUBDIR+=	axe
@@ -177,6 +178,7 @@ SUBDIR+=	gkrellm2-weather
 SUBDIR+=	gkrellm2-xmms
 SUBDIR+=	gl-117
 SUBDIR+=	glaxium
+SUBDIR+=	glib2-devel
 SUBDIR+=	glide3
 SUBDIR+=	glkterm
 SUBDIR+=	glulxe
@@ -198,6 +200,7 @@ SUBDIR+=	gtick
 SUBDIR+=	gtk-engines-thinice
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtk-theme-switch
+SUBDIR+=	gtk2-devel
 SUBDIR+=	gtk2-engines-bluecurve
 SUBDIR+=	gtk2-engines-dwerg
 SUBDIR+=	gtk2-engines-flat
@@ -410,6 +413,7 @@ SUBDIR+=	p5-Text-Reform
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-gtk2
 SUBDIR+=	palm-db-tools
+SUBDIR+=	pango-devel
 SUBDIR+=	par2
 SUBDIR+=	passepartout
 SUBDIR+=	patchutils
