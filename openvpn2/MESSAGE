@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/06/24 15:13:12 ianzag Exp $
+
+An example config files have been installed in
+${PREFIX}/share/examples/openvpn
+
+===========================================================================

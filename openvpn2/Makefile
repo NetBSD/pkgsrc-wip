@@ -1,0 +1,36 @@
+# $NetBSD: Makefile,v 1.1.1.1 2004/06/24 15:13:11 ianzag Exp $
+#
+
+DISTNAME=			openvpn-2.0_beta6
+PKGNAME=			openvpn-2.0
+CATEGORIES=			net
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openvpn/}
+
+MAINTAINER=			ianzag@mail.ru
+HOMEPAGE=			http://openvpn.sourceforge.net/
+COMMENT=			OpenVPN is an easy-to-use SSL VPN daemon
+
+USE_BUILDLINK3=		YES
+GNU_CONFIGURE=		YES
+USE_PKGINSTAL=		YES
+
+CONFIGURE_ARGS+=	--enable-pthread
+CONFIGURE_ARGS+=	--enable-lzo
+CONFIGURE_ARGS+=	--enable-crypt
+CONFIGURE_ARGS+=	--enable-ssl
+CONFIGURE_ARGS+=	--enable-multi
+
+# Install example config files
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/openvpn
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/openvpn/config
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/openvpn/scripts
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/openvpn/keys
+	${INSTALL_DATA} ${WRKSRC}/sample-config-files/* ${PREFIX}/share/examples/openvpn/config
+	${INSTALL_DATA} ${WRKSRC}/sample-scripts/* ${PREFIX}/share/examples/openvpn/scripts
+	${INSTALL_DATA} ${WRKSRC}/sample-keys/* ${PREFIX}/share/examples/openvpn/keys
+
+.include "../../archivers/liblzo/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
