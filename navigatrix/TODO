@@ -1,4 +1,4 @@
-- Make this use meta-pkgs/kde3/buildlink2.mk.
+- Make this use meta-pkgs/kde3/buildlink3.mk.
 
 - Test the package against the latest version of KDE in pkgsrc.
 
