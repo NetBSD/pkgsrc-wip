@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/05/12 09:50:54 marc Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/06/15 11:45:26 marc Exp $
 #
 
 .if !defined(GTK_SHARP_BUILDLINK2_MK)
 GTK_SHARP_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gtk-sharp
-BUILDLINK_DEPENDS.gtk-sharp?=		gtk-sharp>=0.9
+BUILDLINK_DEPENDS.gtk-sharp?=		gtk-sharp>=0.10
 BUILDLINK_PKGSRCDIR.gtk-sharp?=		../../wip/gtk-sharp
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gtk-sharp=gtk-sharp

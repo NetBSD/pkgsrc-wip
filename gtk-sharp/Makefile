@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/05/12 09:50:54 marc Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/15 11:45:26 marc Exp $
 #
 
-DISTNAME=	gtk-sharp-0.9
+DISTNAME=	gtk-sharp-0.10
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-sharp/}
 
