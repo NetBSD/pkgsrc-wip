@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/20 20:12:18 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/22 00:42:02 xtraeme Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
@@ -9,7 +9,7 @@ lib/galeon/components/libgaleon-xpcom.la
 lib/galeon/components/libgaleon-xpcom.so
 man/man1/galeon.1
 share/applications/galeon.desktop
-share/examples/galeon2/galeon.soundlist
+share/examples/galeon-devel/sound/events/galeon.soundlist
 share/galeon/FAQ.html
 share/galeon/about_logo.png
 share/galeon/autoscroll.xpm
@@ -123,6 +123,51 @@ share/gnome/help/galeon/C/other-tools.xml
 share/gnome/help/galeon/C/plugins.xml
 share/gnome/help/galeon/C/preface.xml
 share/gnome/help/galeon/C/preferences.xml
+share/gnome/help/galeon/es/apx-authors.xml
+share/gnome/help/galeon/es/apx-bugs.xml
+share/gnome/help/galeon/es/apx-command-line.xml
+share/gnome/help/galeon/es/apx-compiling.xml
+share/gnome/help/galeon/es/apx-keyboard-shortcuts.xml
+share/gnome/help/galeon/es/apx-mouse-gestures.xml
+share/gnome/help/galeon/es/apx-troubleshooting.xml
+share/gnome/help/galeon/es/bookmarks.xml
+share/gnome/help/galeon/es/browser-window.xml
+share/gnome/help/galeon/es/figures/bookmarks-editor.png
+share/gnome/help/galeon/es/figures/browser-window.png
+share/gnome/help/galeon/es/figures/find-dialog.png
+share/gnome/help/galeon/es/figures/gesture-back.png
+share/gnome/help/galeon/es/figures/gesture-clone-tab.png
+share/gnome/help/galeon/es/figures/gesture-clone-window.png
+share/gnome/help/galeon/es/figures/gesture-close-2.png
+share/gnome/help/galeon/es/figures/gesture-close.png
+share/gnome/help/galeon/es/figures/gesture-contents.png
+share/gnome/help/galeon/es/figures/gesture-forward.png
+share/gnome/help/galeon/es/figures/gesture-fullscreen.png
+share/gnome/help/galeon/es/figures/gesture-homepage.png
+share/gnome/help/galeon/es/figures/gesture-new-tab.png
+share/gnome/help/galeon/es/figures/gesture-new-window.png
+share/gnome/help/galeon/es/figures/gesture-next-link.png
+share/gnome/help/galeon/es/figures/gesture-next-tab.png
+share/gnome/help/galeon/es/figures/gesture-prev-link.png
+share/gnome/help/galeon/es/figures/gesture-prev-tab.png
+share/gnome/help/galeon/es/figures/gesture-reload-bypass.png
+share/gnome/help/galeon/es/figures/gesture-reload.png
+share/gnome/help/galeon/es/figures/gesture-stop.png
+share/gnome/help/galeon/es/figures/gesture-up.png
+share/gnome/help/galeon/es/figures/gesture-view-source.png
+share/gnome/help/galeon/es/figures/othertools-history.png
+share/gnome/help/galeon/es/figures/othertools-pdm.png
+share/gnome/help/galeon/es/figures/othertools-toolbar-editor.png
+share/gnome/help/galeon/es/figures/statusbar.png
+share/gnome/help/galeon/es/figures/tabbed-browsing.png
+share/gnome/help/galeon/es/figures/toolbars-bookmarks.png
+share/gnome/help/galeon/es/figures/toolbars-main.png
+share/gnome/help/galeon/es/galeon.xml
+share/gnome/help/galeon/es/getting-started.xml
+share/gnome/help/galeon/es/other-tools.xml
+share/gnome/help/galeon/es/plugins.xml
+share/gnome/help/galeon/es/preface.xml
+share/gnome/help/galeon/es/preferences.xml
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/galeon-2.0.mo
@@ -132,6 +177,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/galeon-2.0.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/galeon-2.0.mo
@@ -173,13 +219,18 @@ ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/galeon-2.0.mo
 share/omf/galeon/galeon-C.omf
+share/omf/galeon/galeon-es.omf
 share/pixmaps/galeon.png
 share/sounds/galeon/clicked.wav
 @dirrm share/sounds/galeon
 @dirrm share/omf/galeon
+@dirrm share/gnome/help/galeon/es/figures
+@dirrm share/gnome/help/galeon/es
 @dirrm share/gnome/help/galeon/C/figures
 @dirrm share/gnome/help/galeon/C
+@dirrm share/gnome/help/galeon
 @dirrm share/galeon
-@dirrm share/examples/galeon2
+@dirrm share/examples/galeon-devel/sound/events
+@dirrm share/examples/galeon-devel/sound
+@dirrm share/examples/galeon-devel
 @dirrm lib/galeon/components
-@dirrm lib/galeon
