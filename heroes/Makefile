@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.3 2004/03/08 05:33:35 mpasternak Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/14 18:29:35 minskim Exp $
 #
 
 DISTNAME=		heroes-0.21
-WRKSRC=			${WRKDIR}
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=heroes/}
 DISTFILES=		heroes-0.21.tar.bz2 heroes-data-1.5.tar.bz2 \
 			heroes-sound-tracks-1.0.tar.bz2 \
 			heroes-hq-sound-tracks-1.0.tar.bz2  \
-			heroes-sound-effects-1.0.tar.bz2  
+			heroes-sound-effects-1.0.tar.bz2
 
 MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://heroes.sourceforge.net/
 COMMENT=		Feature-packed game, like Nibbles or Tron clone
 
+WRKSRC=			${WRKDIR}
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 HEROES_DIRS=		heroes-0.21 heroes-data-1.5 \
 			heroes-hq-sound-tracks-1.0 \
-       			heroes-sound-effects-1.0 \
+			heroes-sound-effects-1.0 \
 			heroes-sound-tracks-1.0
 
 CONFIGURE_ARGS+=	--with-sdl-mixer --enable-sound
