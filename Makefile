@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1576 2004/12/17 21:51:13 dolecek Exp $
-# $NetBSD: Makefile,v 1.1576 2004/12/17 21:51:13 dolecek Exp $
+# $Id: Makefile,v 1.1577 2004/12/23 00:06:49 rpereyra Exp $
+# $NetBSD: Makefile,v 1.1577 2004/12/23 00:06:49 rpereyra Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -878,6 +878,7 @@ SUBDIR+=	typhoon
 SUBDIR+=	uade
 SUBDIR+=	uclibc
 SUBDIR+=	udhcp
+SUBDIR+=        uebimiau
 SUBDIR+=	umix
 SUBDIR+=	unmo3
 SUBDIR+=	unrealircd
