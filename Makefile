@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1604 2005/01/09 12:46:57 zul_ Exp $
-# $NetBSD: Makefile,v 1.1604 2005/01/09 12:46:57 zul_ Exp $
+# $Id: Makefile,v 1.1605 2005/01/10 18:26:43 tvierling Exp $
+# $NetBSD: Makefile,v 1.1605 2005/01/10 18:26:43 tvierling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -584,7 +584,6 @@ SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-Geo-IPfree
-SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-IO-Multiplex
@@ -612,7 +611,6 @@ SUBDIR+=	perl59
 SUBDIR+=	perltidy
 SUBDIR+=	pgadmin3
 SUBDIR+=	pgp6
-SUBDIR+=	pgpenvelope
 SUBDIR+=	phlib
 #SUBDIR+=	php-doc			# not a package
 SUBDIR+=	php-doc-ar

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/08/15 19:25:23 tvierling Exp $
-
-SHA1 (GnuPG-Interface-0.34.tar.gz) = 992c521db3ac7d1ca7b727d40c944a02c41bc818
-Size (GnuPG-Interface-0.34.tar.gz) = 38730 bytes
-SHA1 (patch-aa) = 3e050bfd306758e72170c0f353a602cd59345536
