@@ -1,13 +1,15 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/07/18 02:50:09 poppnk Exp $
+$NetBSD: patch-ae,v 1.2 2003/07/18 05:12:55 xtraeme Exp $
 
---- configure.orig	2003-07-18 03:57:51.000000000 +0000
-+++ configure	2003-07-18 03:58:04.000000000 +0000
-@@ -10585,7 +10585,7 @@
- #define SOMEBSD 1
- _ACEOF
+--- src/applications/afs/tools/gnunet-check.c.orig	2003-07-18 05:51:33.000000000 +0200
++++ src/applications/afs/tools/gnunet-check.c	2003-07-18 05:52:23.000000000 +0200
+@@ -38,6 +38,10 @@
+ #include <string.h>
+ #include <unistd.h>
  
--     CFLAGS="-pthread $CFLAGS"
-+     CFLAGS="-lpthread $CFLAGS"
-      ;;
- *solaris*)
- 
++#ifdef HAVE_LIBPTHREAD
++# include <pthread.h>
++#endif /* HAVE_LIBPTHREAD */
++
+ #include "util/configuration.h"
+ #include "util/getopt.h"
+ #include "util/initialize.h"

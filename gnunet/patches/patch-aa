@@ -1,40 +1,41 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/07/18 02:50:09 poppnk Exp $
-
---- src/util/semaphore.c.orig	2003-06-27 00:56:47.000000000 +0000
-+++ src/util/semaphore.c	2003-07-18 04:42:40.000000000 +0000
-@@ -35,7 +35,7 @@
+--- src/util/semaphore.c.orig	2003-07-18 06:52:23.000000000 +0200
++++ src/util/semaphore.c	2003-07-18 06:56:26.000000000 +0200
+@@ -33,10 +33,16 @@
+ #include "util/xmalloc.h"
+ #include "util/returnvalues.h"
  
++#ifdef __NetBSD__
++# include <sys/param.h> /* __NetBSD_Version__ */
++#endif
++
  #include <errno.h>
  #include <string.h>
 -#ifdef SOMEBSD
 +#ifdef __FreeBSD__
  # include <pthread_np.h>
++#elif HAVE_LIBPTHREAD
++# include <pthread.h>
  #endif
  
-@@ -45,7 +45,7 @@
-  * Shall we use error-checking (slow) 
-  * mutexes (e.g. for debugging)
-  **/
--#define USE_CHECKING_MUTEX 1
-+#define USE_CHECKING_MUTEX 0
- 
- 
- #ifndef PTHREAD_MUTEX_NORMAL
-@@ -61,7 +61,9 @@
-  * include files. But we need it and it seems to be available
-  * on all pthread-systems so far. Odd.
-  **/
-+#if USE_CHECKING_MUTEX
- extern int pthread_mutexattr_setkind_np(pthread_mutexattr_t *attr, int kind);
-+#endif
- 
- /* ********************* public methods ******************* */
- 
-@@ -87,10 +89,11 @@
-   pthread_mutexattr_t attr;
- 
-   pthread_mutexattr_init(&attr);
-+#if USE_CHECKING_MUTEX
+ #define DEBUG_SEMUPDOWN NO
+@@ -74,10 +80,14 @@
+   pthread_mutexattr_setkind_np(&attr,
+ 			       PTHREAD_MUTEX_ERRORCHECK_NP);  
+ #endif
+-#else
++#elif __FreeBSD__
+   pthread_mutexattr_setkind_np(&attr,
+ 			       (int)PTHREAD_MUTEX_NORMAL);
+-#endif
++#else
++  pthread_mutexattr_settype(&attr,
++		  		(int)PTHREAD_MUTEX_NORMAL);
++#endif /* POSIX threads */
++  
+   if ( pthread_mutex_init(&mutex->pthreadMutex, &attr) != 0)
+     errexit("FATAL: creation of mutex failed (%s)",
+ 	    strerror(errno));
+@@ -90,16 +100,14 @@
  #ifdef LINUX
    pthread_mutexattr_setkind_np(&attr,  
  			       PTHREAD_MUTEX_RECURSIVE_NP);
@@ -42,15 +43,28 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/18 02:50:09 poppnk Exp $
 +#elif __FreeBSD__
    pthread_mutexattr_setkind_np(&attr,
  			       PTHREAD_MUTEX_RECURSIVE);
- #elif SOLARIS
-@@ -99,6 +102,10 @@
- #elif CYGWIN
+-#elif SOLARIS
+-  pthread_mutexattr_settype(&attr,
+-			    PTHREAD_MUTEX_RECURSIVE);
+-#elif CYGWIN
++#else 
    pthread_mutexattr_settype(&attr,
  			    PTHREAD_MUTEX_RECURSIVE);
-+#else
-+  pthread_mutexattr_settype(&attr,
-+			    PTHREAD_MUTEX_RECURSIVE);
-+#endif
- #endif
+-#endif
++#endif /* POSIX threads */
++
    if ( pthread_mutex_init(&mutex->pthreadMutex, &attr) != 0)
      errexit("FATAL: creation of recursive mutex failed");
+ }
+@@ -288,8 +296,11 @@
+   pthread_attr_t stack_size_custom_attr;
+ 
+   pthread_attr_init(&stack_size_custom_attr);
++#if __NetBSD_Version__ <= 106130000  
+   pthread_attr_setstacksize(&stack_size_custom_attr,
+ 			    stackSize);
++#endif /* NetBSD -current these days hasn't those functions yet */
++
+   return pthread_create(handle, 
+ 			&stack_size_custom_attr,
+ 			main, 
