@@ -43,10 +43,10 @@ build-java-app-${s}:
 	@${MKDIR} ${JAVA_APP_WRKDIR}
 	@${ECHO} "#!/bin/sh" > ${JAVA_APP_WRKDIR}/${JAVA_APP_BIN.${s}}
 .if defined(JAVA_APP_MAIN.${s})
-	@${ECHO} "env CLASSPATH=${JAVA_APP_CLASSPATH.${s}} java ${JAVA_APP_MAIN.${s}}" \
+	@${ECHO} "env CLASSPATH=${JAVA_APP_CLASSPATH.${s}} java ${JAVA_APP_MAIN.${s}} \$$*" \
 	>> ${JAVA_APP_WRKDIR}/${JAVA_APP_BIN.${s}}
 .else
-	@${ECHO} "java -jar ${JAVA_APP_CLASSPATH}" \
+	@${ECHO} "java -jar ${JAVA_APP_CLASSPATH} \$$*" \
 	>> ${JAVA_APP_WRKDIR}/${JAVA_APP_BIN.${s}}
 .endif
 
