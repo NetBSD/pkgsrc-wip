@@ -1,38 +1,29 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/02 06:11:09 xtraeme Exp $
-# $FreeBSD: ports/net/noip/Makefile,v 1.1 2002/06/25 09:32:28 ijliao Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/17 22:46:59 dhowland Exp $
 
-DISTNAME=	noip_updater_v1.6
-PKGNAME=	noip-1.6
+DISTNAME=	noip-duc-linux
+PKGNAME=	noip-2.1.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.no-ip.com/client/linux/
 
-MAINTAINER=	david@netbsd-fr.org
+MAINTAINER=	dhowland@users.sourceforge.net
+HOMEPAGE=	http://www.no-ip.com/
 COMMENT=	Dynamic DNS update client from no-ip.com
 
-ALL_TARGET=	noip
-PKG_GROUPS=	noip
-PKG_USERS=	noip:noip
+USE_BUILDLINK3=	YES
+USE_PKGINSTALL=	YES
+RCD_SCRIPTS=	noip
 
-post-build:
-	${CP} ${FILESDIR}/noip.sh ${WRKSRC}
+.include "../../mk/bsd.prefs.mk"
+
+post-extract:
+	${RM} ${WRKDIR}/${PKGNAME}/Makefile
+	${CP} ${FILESDIR}/makefile.noip ${WRKDIR}/${PKGNAME}/Makefile
+	${MV} ${WRKDIR}/${PKGNAME} ${WRKSRC}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/noip ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/noip.sh ${PREFIX}/etc/rc.d/noip
-
-	${INSTALL_DATA_DIR} ${PREFIX}/share/noip
-	${INSTALL_DATA_DIR} ${PREFIX}/share/noip/doc
-	${INSTALL_MAN} ${WRKSRC}/README.FIRST ${PREFIX}/share/noip/doc
-	${INSTALL_MAN} ${WRKSRC}/COPYING ${PREFIX}/share/noip/doc
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/noip
-	${INSTALL_MAN} ${WRKSRC}/no-ip.conf.sample	\
-		${PREFIX}/share/examples/noip
-	${INSTALL_SCRIPT} ${WRKSRC}/noip.sh ${PREFIX}/share/examples/noip
-	${CP} ${PREFIX}/share/examples/noip/no-ip.conf.sample	\
-		${PREFIX}/etc/no-ip.conf
-	${CHMOD} 0600 ${PREFIX}/etc/no-ip.conf
-	${CHOWN} noip:noip ${PREFIX}/etc/no-ip.conf
-
-USE_PKGINSTALL=	YES
+	${INSTALL_PROGRAM} ${WRKSRC}/noip2 ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/noip
+	${INSTALL_MAN} ${WRKSRC}/README.FIRST ${PREFIX}/share/doc/noip
+	${INSTALL_MAN} ${WRKSRC}/COPYING ${PREFIX}/share/doc/noip
 
 .include "../../mk/bsd.pkg.mk"

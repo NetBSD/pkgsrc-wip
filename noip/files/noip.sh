@@ -1,11 +1,11 @@
 #!/bin/sh
 #
-# PROVIDE: noip
+# PROVIDE: noip2
 # REQUIRE: network
 
-name="noip"
+name="noip2"
 command="/usr/pkg/bin/${name}"
-required_files="/usr/pkg/etc/no-ip.conf"
+required_files="/usr/pkg/etc/no-ip2.conf"
 
 . /etc/rc.subr
 

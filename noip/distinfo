@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/02 06:11:10 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/06/17 22:46:59 dhowland Exp $
 
-SHA1 (noip_updater_v1.6.tar.gz) = 60bea63cfe0996d900b44fe21992bcb214dd7a3d
-Size (noip_updater_v1.6.tar.gz) = 42343 bytes
-SHA1 (patch-aa) = c3dbddd4b32ab83c604b1296b3cc0d15af6197df
-SHA1 (patch-ab) = 09b598f971a63a9a7ca5b7400a80e9247213022b
+SHA1 (noip-duc-linux.tar.gz) = 1ffe0362801d09e332d57d02b29f4ebb372583b8
+Size (noip-duc-linux.tar.gz) = 71210 bytes
