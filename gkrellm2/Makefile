@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2003/04/16 17:36:15 cubidou Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/07 12:53:36 cubidou Exp $
 .include "Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm
+WRKSRC=			${GKRELLM_SRCDIR}
 
-COMMENT=	GTK2 based system monitor
+COMMENT=		GTK2 based system monitor
 
 DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}:../../wip/gkrellm2-share
 
@@ -14,7 +15,7 @@ PTHREAD_OPTS=		require
 
 SPECIAL_PERMS+=		${PREFIX}/bin/gkrellm ${ROOT_USER} kmem 2711
 
-OSVERSION_SPECIFIC=	YES
+ONLY_FOR_PLATFORM=	NetBSD-*
 
 ALL_TARGET=		netbsd
 INSTALL_TARGET=		install_netbsd

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/04/03 15:07:55 cubidou Exp $
+$NetBSD: patch-ab,v 1.2 2003/06/07 12:53:37 cubidou Exp $
 
---- src/Makefile.orig	2002-11-21 17:02:33.000000000 +0100
+--- src/Makefile.orig	2003-06-03 18:50:12.000000000 +0200
 +++ src/Makefile
-@@ -11,7 +11,7 @@ MANMODE ?= 644
+@@ -12,7 +12,7 @@ MANMODE ?= 644
  MANDIRMODE ?= 755
  INSTALL ?= install
  LINK_FLAGS ?= -Wl,-E
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/04/03 15:07:55 cubidou Exp $
  CC ?= gcc
  STRIP ?= -s
  
-@@ -83,7 +83,7 @@ solaris:
+@@ -84,7 +84,7 @@ solaris:
  		SYS_LIBS="-lkstat -lkvm -ldevinfo" gkrellm
  
  install:
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/04/03 15:07:55 cubidou Exp $
  	$(INSTALL) -d -m $(INCLUDEDIRMODE) $(INCLUDEDIR)/gkrellm2
  	$(INSTALL) -c -m $(INCLUDEMODE) $(GKRELLM_INCLUDES) $(INCLUDEDIR)/gkrellm2
  	$(INSTALL) -d -m $(MANDIRMODE) $(MANDIR)
-@@ -94,8 +94,8 @@ install_darwin:
+@@ -100,8 +100,8 @@ install_freebsd:
  
  install_netbsd:
  	$(MAKE) install

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.3 2003/05/10 13:43:07 cubidou Exp $
+# $NetBSD: Makefile.common,v 1.4 2003/06/07 12:53:36 cubidou Exp $
 
-DISTNAME=	gkrellm-${GKRELLM_VERSION}
+DISTNAME=	${GKRELLM_DISTBASE}a
 PKGNAME=	${GKRELLM_PKGBASE}-${GKRELLM_VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://web.wt.net/~billw/gkrellm/
@@ -12,7 +12,12 @@ HOMEPAGE=	http://gkrellm.net/
 USE_GMAKE=		YES
 USE_PKGLOCALEDIR=	YES
 
-MAKE_ENV+=		LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \
-			enable_nls=1
+MAKE_ENV+=		LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale	\
+			enable_nls=1					\
+			INSTALLROOT=${PREFIX}				\
+			MANDIR=${PREFIX}/man/man1			\
+			BINGROUP=kmem
 
-GKRELLM_VERSION=	2.1.10
+GKRELLM_VERSION=	2.1.12
+GKRELLM_DISTBASE=	gkrellm-${GKRELLM_VERSION}
+GKRELLM_SRCDIR=		${WRKDIR}/${GKRELLM_DISTBASE}
