@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1133 2004/03/28 23:13:46 minskim Exp $
-# $NetBSD: Makefile,v 1.1133 2004/03/28 23:13:46 minskim Exp $
+# $Id: Makefile,v 1.1134 2004/03/29 00:45:46 minskim Exp $
+# $NetBSD: Makefile,v 1.1134 2004/03/29 00:45:46 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -338,7 +338,6 @@ SUBDIR+=	libmatchbox
 SUBDIR+=	libmatroska
 SUBDIR+=	libneural
 SUBDIR+=	libogg-nightly
-SUBDIR+=	libol
 SUBDIR+=	libprelude
 SUBDIR+=	libstatgrab
 SUBDIR+=	libticables

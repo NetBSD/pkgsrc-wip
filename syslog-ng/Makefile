@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/29 00:22:39 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/29 00:45:46 minskim Exp $
 
 DISTNAME=	syslog-ng-1.6.0rc4
 CATEGORIES=	sysutils
@@ -45,6 +45,6 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/syslog-ng.conf.netbsd \
 		${PKG_SYSCONFDIR}/syslog-ng
 
-.include "../../wip/libol/buildlink3.mk"
+.include "../../sysutils/libol/buildlink3.mk"
 #.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
