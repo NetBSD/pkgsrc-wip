@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/08 21:34:14 xtraeme Exp $
+bin/dspam
+bin/dspam_2sql
+bin/dspam_clean
+bin/dspam_corpus
+bin/dspam_crc
+bin/dspam_dump
+bin/dspam_genaliases
+bin/dspam_merge
+bin/dspam_stats
+include/dspam/buffer.h
+include/dspam/decode.h
+include/dspam/error.h
+include/dspam/lht.h
+include/dspam/libdspam.h
+include/dspam/libdspam_objects.h
+include/dspam/nodetree.h
+include/dspam/storage_driver.h
+lib/libdspam.a
+lib/libdspam.la
+lib/libdspam.so
+lib/libdspam.so.5
+lib/libdspam.so.5.0
+lib/pkgconfig/dspam.pc
+man/man1/dspam.1
+man/man1/dspam_clean.1
+man/man1/dspam_corpus.1
+man/man1/dspam_dump.1
+man/man1/dspam_merge.1
+man/man1/dspam_stats.1
+@dirrm include/dspam

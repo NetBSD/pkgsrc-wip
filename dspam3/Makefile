@@ -1,0 +1,74 @@
+# $NetBSD: Makefile,v 1.1.1.1 2004/06/08 21:34:14 xtraeme Exp $
+#
+
+DISTNAME=	dspam-3.0.0.rc2
+PKGNAME=	${DISTNAME:S/3.0.0./3.0.0/}
+CATEGORIES=	mail
+MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
+
+MAINTAINER=	xtraeme@NetBSD.org
+HOMEPAGE=	http://www.nuclearelephant.com/projects/dspam/
+COMMENT=	Extremely scalable and statistical hybrid anti-spam filter
+
+USE_BUILDLINK3=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+
+PKGCONFIG_OVERRIDE+=	dspam.pc.in
+
+BDB_ACCEPTED=		db3 db4
+
+BUILD_DEFS+=		DSPAM_DELIVERY_AGENT
+BUILD_DEFS+=		DSPAM_HOME
+BUILD_DEFS+=		DSPAM_STORAGE_DRIVER
+BUILD_DEFS+=		DSPAM_SIGNATURE_LIFE
+BUILD_DEFS+=		DSPAM_USE_WEBMAIL
+
+DSPAM_DELIVERY_AGENT?=	procmail
+DSPAM_HOME?=		${VARBASE}/dspam
+DSPAM_STORAGE_DRIVER?=	${BDB_TYPE}
+DSPAM_SIGNATURE_LIFE?=	15
+
+# Default options
+CONFIGURE_ARGS+=	--enable-client-compression
+CONFIGURE_ARGS+=	--enable-robinson
+CONFIGURE_ARGS+=	--enable-chi-square
+CONFIGURE_ARGS+=	--enable-robinson-pvalues
+CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
+
+.include "../../mk/bsd.prefs.mk"
+
+#
+# Possible: procmail, maildrop or local
+# Default: procmail
+#
+.if !empty(DSPAM_DELIVERY_AGENT:Mprocmail)
+BUILD_DEPENDS+=		procmail-[0-9]*:../../mail/procmail
+CONFIGURE_ARGS+=	--with-delivery-agent="${PREFIX}/bin/procmail $u"
+.elif !empty(DSPAM_DELIVERY_AGENT:Mmaildrop)
+BUILD_DEPENDS+=		maildrop-[0-9]*:../../mail/maildrop
+CONFIGURE_ARGS+=	--with-delivery-agent="${PREFIX}/bin/maildrop $u"
+.endif
+
+#
+# Possible: mysql, pgsql, db3 or db4
+# Default: db3/db4
+#
+.if !empty(DSPAM_STORAGE_DRIVER:Mmysql)
+.  include "../../databases/mysql4-client/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-storage-driver=mysql_drv
+.elif !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
+.  include "../../databases/postgresql74-lib/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-storage-driver=pgsql_drv
+.elif !empty(DSPAM_STORAGE_DRIVER:M${BDB_TYPE})
+CONFIGURE_ARGS+=	--with-storage-driver=lib${BDB_TYPE}_drv
+.endif
+
+.if defined(DSPAM_USE_WEBMAIL) && !empty(DSPAM_USE_WEBMAIL:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-webmail
+.endif
+
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
