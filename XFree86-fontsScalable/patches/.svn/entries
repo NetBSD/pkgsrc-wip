@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="212"
+   name="svn:this_dir"
+   committed-date="2003-07-15T22:14:56.134625Z"
+   url="http://Insomnio:81/repos/xfree86/XFree86-fontsScalable/patches"
+   last-author="xtraeme"
+   kind="dir"
+   uuid="ac33715b-8fc1-0310-aeb0-9980936b5364"
+   revision="335"/>
+<entry
+   committed-rev="212"
+   name="patch-aa"
+   text-time="2003-07-21T22:06:14.000000Z"
+   committed-date="2003-07-15T22:14:56.134625Z"
+   checksum="e70ebe895bf8e8f129f023d0fe325fd8"
+   last-author="xtraeme"
+   kind="file"
+   prop-time="2003-07-21T22:06:14.000000Z"/>
+</wc-entries>
