@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/25 21:15:58 thomasklausner Exp $
+
+--- Makefile.orig	2003-09-25 19:35:54.000000000 +0200
++++ Makefile
+@@ -3,7 +3,7 @@
+ 
+ CC = gcc
+ CFLAGS = 
+-LDFLAGS = -lm
++LDFLAGS = -lm ${LIBOSSAUDIO}
+ PREFIX = /usr/local
+ WANT_DEBUG=TRUE
+ 
