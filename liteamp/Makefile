@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/17 21:01:58 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/17 21:07:31 minskim Exp $
 
 DISTNAME=	liteamp-0.2.4.1
 CATEGORIES=	audio
@@ -15,9 +15,6 @@ USE_PKGLOCALEDIR=	yes
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	libtool
-#post-patch:
-#	${REINPLACE_CMD} -e '15s,^,#include <pthread.h>,' \
-#		${WRKSRC}/src/decoder.c
 
 .include "../../audio/libao/buildlink2.mk"
 .include "../../audio/libid3tag/buildlink2.mk"
