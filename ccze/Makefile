@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/28 00:39:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:11:43 grantbeattie Exp $
 #
 
 DISTNAME=	ccze-0.2.1
@@ -11,7 +11,7 @@ COMMENT=	Log coloriser, fast and light on resources
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/pcre/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/15 14:02:16 amadeus_z Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:12:11 grantbeattie Exp $
 #
 
 DISTNAME=		fluxspace-0.0.3
@@ -11,7 +11,7 @@ COMMENT=		Fluxbox workspace manager, environment
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 USE_X11=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

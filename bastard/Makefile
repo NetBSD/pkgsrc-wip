@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/21 17:33:10 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:11:33 grantbeattie Exp $
 #
 
 DISTNAME=		bastard-0.17-pre
@@ -12,7 +12,7 @@ HOMEPAGE=		http://bastard.sourceforge.net/
 COMMENT=		Disassembler for ELF x86 binarys
 
 USE_BUILDLINK2= YES
-USE_GMAKE= 		YES
+USE_GNU_TOOLS+=	make
 
 .include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

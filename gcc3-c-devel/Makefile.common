@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/01/07 23:15:04 johnrshannon Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/01/25 02:12:37 grantbeattie Exp $
 #
 
 SNAPDATE=	20040107
@@ -16,7 +16,7 @@ NOT_FOR_PLATFORM=	Darwin-*-*
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/05 04:36:10 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:12:06 grantbeattie Exp $
 #
 
 DISTNAME=		e3-2.43
@@ -13,7 +13,7 @@ COMMENT=	        The e3  is a full featured text editor highly optimized for siz
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 CONFIGURE=              no
-USE_GMAKE=              yes
+USE_GNU_TOOLS+=		make
 
 USE_BUILDLINK2=		yes
 

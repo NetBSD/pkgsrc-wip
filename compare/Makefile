@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/26 14:59:37 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:11:49 grantbeattie Exp $
 #
 
 DISTNAME=	compare-1.11
@@ -9,7 +9,7 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	ftp://ftp.berlios.de/pub/compare/AN-1.11
 COMMENT=	Fast binary comparision between two files
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_BUILDLINK2=	yes
 
 do-install:

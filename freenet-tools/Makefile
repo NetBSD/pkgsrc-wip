@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/11/12 03:25:13 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/25 02:12:31 grantbeattie Exp $
 #
 
 DISTNAME=		ft-0.2.17
@@ -14,7 +14,7 @@ HOMEPAGE=		http://entropy.stop1984.com/
 COMMENT=		Freenet Tools, freesite manipulation tools for Freenet and Entropy
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 MAKE_FLAGS+=		CC=${CC:Q} LD=${CC:Q} CFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
 CFLAGS+=		-DFT_BIN=\"${PREFIX}/bin\"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/20 09:12:03 moubctez Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/25 02:12:39 grantbeattie Exp $
 #
 
 DISTNAME=		gimp-${GIMP_VER}
@@ -24,7 +24,7 @@ GIMP_VER=		2.0pre2
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/11 15:07:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:11:34 grantbeattie Exp $
 #
 
 DISTNAME=	BillardGL-1.75
@@ -11,6 +11,6 @@ MAINTAINER=	wojtek@3miasto.net
 HOMEPAGE=	http://www.tobias-nopper.de/BillardGL/
 COMMENT=	3D Billard using OpenGL hardware acceleration
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 
 .include "../../mk/bsd.pkg.mk"

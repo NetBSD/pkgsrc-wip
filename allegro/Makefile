@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/11/27 22:20:08 blef Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/25 02:11:30 grantbeattie Exp $
 #
 
 DISTNAME=	allegro-4.1.12
@@ -10,7 +10,7 @@ HOMEPAGE=	http://alleg.sourceforge.net/
 COMMENT=	Allegro game programming library
 
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 

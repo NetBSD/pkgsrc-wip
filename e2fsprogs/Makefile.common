@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.1 2004/01/10 18:08:40 mpasternak Exp $
-# $Id: Makefile.common,v 1.1 2004/01/10 18:08:40 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/25 02:12:05 grantbeattie Exp $
+# $Id: Makefile.common,v 1.2 2004/01/25 02:12:05 grantbeattie Exp $
 #
 
 E2FSPROGS_DISTNAME=	e2fsprogs-1.34
@@ -10,7 +10,7 @@ E2FSPROGS_MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/} \
 
 BUILD_USES_MSGFMT=      YES
 GNU_CONFIGURE=          YES
-USE_GMAKE=              YES
+USE_GNU_TOOLS+=		make
 USE_MAKEINFO=           YES
 USE_BUILDLINK2=         YES # so USE_PKGLOCALEDIR will work
 USE_PKGLOCALEDIR=       YES

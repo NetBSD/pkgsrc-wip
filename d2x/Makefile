@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/11/06 09:45:04 airhead Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/25 02:11:56 grantbeattie Exp $
 #
 
 DISTNAME=	d2x-0.2.5
@@ -10,7 +10,7 @@ HOMEPAGE=	http://icculus.org/d2x/
 COMMENT=	Descent II port
 
 HAS_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 
 D2X_DATA=		${PREFIX}/share/games/${PKGBASE}

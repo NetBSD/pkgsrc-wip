@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/06/22 10:39:15 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:12:06 grantbeattie Exp $
 #
 
 DISTNAME=		EiCsrc_4.3.0
@@ -12,7 +12,7 @@ MAINTAINER=		adam@monkeybyte.org
 HOMEPAGE=		http://eic.sourceforge.net/download/eicdist/4_3_0/
 COMMENT=		C style scripting lang
 
-USE_GMAKE= YES
+USE_GNU_TOOLS+=		make
 
 do-configure:
 		cd ${WRKSRC} && config/makeconfig

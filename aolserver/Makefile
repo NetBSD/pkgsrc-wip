@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/26 00:05:26 ianharding Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:11:30 grantbeattie Exp $
 #
 
 DISTNAME=	aolserver-3.4.2-src
@@ -12,7 +12,7 @@ COMMENT=	America Online's open-source web server
 
 DEPENDS+=	ptl>=2.1.7:../../devel/ptl2
 
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 WRKSRC=		${WRKDIR}/${PKGNAME}
 MAKE_FLAGS=	NSHOME=${WRKSRC}
 

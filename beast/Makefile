@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/27 06:00:45 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:11:34 grantbeattie Exp $
 #
 
 DISTNAME=		beast-0.5.4
@@ -14,7 +14,7 @@ USE_X11=		yes
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 AUTOCONF_REQD=          2.13
 
 pre-configure:

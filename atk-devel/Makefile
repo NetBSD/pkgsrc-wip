@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/29 14:41:05 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:11:33 grantbeattie Exp $
 #
 
 DISTNAME=		atk-1.4.1
@@ -12,7 +12,7 @@ HOMEPAGE=		http://developer.gnome.org/projects/gap/
 COMMENT=		Version of devel/atk that links with wip/glib2-devel
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/19 02:06:14 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:11:52 grantbeattie Exp $
 #
 
 DISTNAME=	cops104+
@@ -13,7 +13,7 @@ COMMENT=	Computer Oracle and Password System
 
 MAKEFILE=	makefile
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_BUILDLINK2=	yes
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/08/28 09:48:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/25 02:11:57 grantbeattie Exp $
 #
 
 DISTNAME=	dancer-ircd-1.0.31+maint8-fn6
@@ -12,7 +12,7 @@ COMMENT=	Irc daemon based on hybrid ircd
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_PKGINSTALL=	YES
 
 CONFIGURE_ARGS+=	--with-config=dist

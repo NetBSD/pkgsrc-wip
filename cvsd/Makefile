@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/05 15:22:54 virtus Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/25 02:11:54 grantbeattie Exp $
 # FreeBSD Id: ports/devel/cvsd/Makefile,v 1.18 2003/04/26 22:38:53 nork Exp
 
 DISTNAME=	cvsd-1.0.0
@@ -13,7 +13,7 @@ COMMENT=	Run CVS pserver in a chroot-ed environment
 
 USE_BUILDLINK2=	YES
 USE_PERL5=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_PKGINSTALL=	YES
 
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/30 05:59:29 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:12:38 grantbeattie Exp $
 
 DISTNAME=	gcompris-3.2
 CATEGORIES=	games
@@ -9,7 +9,7 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://ofset.sourceforge.net/gcompris/
 COMMENT=	Educational games for children
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES

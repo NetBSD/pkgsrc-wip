@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/08/28 09:48:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/25 02:12:00 grantbeattie Exp $
 #
 
 DISTNAME=	DirectFB-0.9.19
@@ -13,7 +13,7 @@ COMMENT=	Thin library that provides hardware graphics acceleration
 ONLY_FOR_PLATFORM=     Linux-*-* NetBSD-*-*
 
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/11/28 08:29:44 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:11:32 grantbeattie Exp $
 #
 
 DISTNAME=	asterisk-0.4.0
@@ -10,6 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.asteriskpbx.com/
 COMMENT=	Open source PBX
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 
 .include "../../mk/bsd.pkg.mk"

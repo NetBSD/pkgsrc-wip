@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/10 17:48:38 cjep Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/25 02:12:09 grantbeattie Exp $
 #
 
 # A few words about DISTFILE:
@@ -30,7 +30,7 @@ COMMENT=		SQL database, opensource version of InterBase
 WRKSRC=			${WRKDIR}/firebird15
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 PREFIX=			${LOCALBASE}/firebird15
 
 CONFIGURE_ARGS+=	--with-lock-manager

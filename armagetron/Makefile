@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/11/28 20:00:56 blef Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/25 02:11:31 grantbeattie Exp $
 #
 
 DISTNAME=	armagetron-0.2.5.2
@@ -12,7 +12,7 @@ COMMENT=	3D Tron lightcycle clone with network support
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_X11=	YES
 
 CONFIGURE_ARGS+=	--disable-etc

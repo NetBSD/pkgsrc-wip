@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/25 02:11:55 bjan2 Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:12:12 grantbeattie Exp $
 
 DISTNAME=	foomatic-filters-3.0-20031224
 CATEGORIES=	print
@@ -12,7 +12,7 @@ GNU_CONFIGURE=		YES
 CONFIG_GUESS_OVERRIDE=  ${WRKSRC}/config.guess
 CONFIG_SUB_OVERRIDE=    ${WRKSRC}/config.sub
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_PERL5=	yes
 PERL5_REQD=	5.6
 INSTALL_TARGET=	install-bin install-man

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/23 16:18:00 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 02:12:00 grantbeattie Exp $
 #
 
 DISTNAME=	dfm-0.99.9
@@ -13,7 +13,7 @@ COMMENT=	File Manager for Linux and other UNIX like OSs
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

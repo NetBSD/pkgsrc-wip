@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/19 23:42:31 bjan2 Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/25 02:12:07 grantbeattie Exp $
 
 DISTNAME=		elinks-0.9.0
 CATEGORIES=		www
@@ -13,7 +13,7 @@ CONFLICTS=		elinks-[0-9]*
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--without-x --enable-256-colors

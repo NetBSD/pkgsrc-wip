@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/28 09:48:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/25 02:11:59 grantbeattie Exp $
 #
 
 DISTNAME=	DFBSee-0.7.4
@@ -14,7 +14,7 @@ ONLY_FOR_PLATFORM=     Linux-*-* NetBSD-*-*
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=            yes
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool

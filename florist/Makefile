@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/10 12:26:44 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/25 02:12:10 grantbeattie Exp $
 #
 
 DISTNAME=		florist-3.15p-src
@@ -17,7 +17,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_AUTOCONF=		yes
 AUTOCONF_REQD=		2.12
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 GCC_SUBPREFIX=		gcc3
 
 post-extract:
