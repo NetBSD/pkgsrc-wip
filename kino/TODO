@@ -6,5 +6,7 @@ checking for libdv/dv.h... no
 configure: error: dv.h not found, install libdv-devel
 *** Error code 1
 
+libdv is in pkgsrc-wip
+
 
 see http://packages.debian.org/unstable/graphics/kino.html
