@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2003/11/27 00:00:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/29 03:17:17 minskim Exp $
 #
 
 DISTNAME=		libXtrans-0.1
 PKGNAME=		xtrans-0.1
-CATEGORIES=		new
-MASTER_SITES=		http://freedesktop.org/~xlibs/dist/
+CATEGORIES=		x11 net
+MASTER_SITES=		http://freedesktop.org/~xlibs/release/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://freedesktop.org/~xlibs/dist/
+HOMEPAGE=		http://xlibs.freedesktop.org/
 COMMENT=		Network API translation layer to insulate X
 
 USE_BUILDLINK2=		yes
