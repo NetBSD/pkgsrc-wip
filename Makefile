@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.888 2004/01/16 09:51:30 xtraeme Exp $
-# $NetBSD: Makefile,v 1.888 2004/01/16 09:51:30 xtraeme Exp $
+# $Id: Makefile,v 1.889 2004/01/16 15:21:22 pulahti Exp $
+# $NetBSD: Makefile,v 1.889 2004/01/16 15:21:22 pulahti Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -614,6 +614,7 @@ SUBDIR+=	slocate
 SUBDIR+=	slrn-pl
 SUBDIR+=	slune
 SUBDIR+=	smartmontools
+SUBDIR+=	smlnj-working
 SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
