@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/10 15:39:05 dmb_ Exp $
+${EMACS_LISPPREFIX}/php-mode/php-mode.el
+${EMACS_LISPPREFIX}/php-mode/php-mode.elc
+@dirrm ${EMACS_LISPPREFIX}/php-mode
