@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/05 13:36:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/09 05:55:27 minskim Exp $
 #
 
 DISTNAME=	AxKit-1.6.2
@@ -23,7 +23,7 @@ DEPENDS+=	p5-XML-XPath>=1.00:../../textproc/p5-XML-XPath
 DEPENDS+=	p5-XML-LibXML>=1.51:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-XML-LibXSLT>=1.49:../../wip/p5-XML-LibXSLT
 DEPENDS+=	p5-XML-Sablotron>=0.40:../../wip/p5-XML-Sablotron
-DEPENDS+=	p5-Perl-Tidy>=20031021:../../wip/p5-Perl-Tidy
+DEPENDS+=	p5-Perl-Tidy>=20031021:../../devel/p5-Perl-Tidy
 
 .include "../../textproc/libxml2/buildlink2.mk"
 DEPENDS+=	${BUILDLINK_DEPENDS.libxml2}
