@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 2003/04/09 17:55:57 thomasklausner Exp $
+
 --- Makefile.in.orig	2001-12-25 14:27:16.000000000 -0700
 +++ Makefile.in	2003-04-07 02:16:44.000000000 -0600
 @@ -1,5 +1,5 @@
