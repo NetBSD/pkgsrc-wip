@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/16 22:31:33 xtraeme Exp $
+
+--- Makefile.orig	2004-04-17 00:07:28.000000000 +0200
++++ Makefile	2004-04-17 00:08:49.000000000 +0200
+@@ -1,14 +1,15 @@
+-CC = gcc
+-CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -O3 -mcpu=athlon -ffast-math -funroll-loops -fomit-frame-pointer
+-LD = gcc
+-LDFLAGS = -lGL -lGLU -L/usr/X11R6/lib -lSDL
++#CC = gcc
++CFLAGS += -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags`
++#LD = gcc
++LDFLAGS += -lGL -lGLU -L${X11BASE}/lib -lSDL
+ 
+-OBJECTS = 3dmath.o autodet.o combine1.o debug.o display.o driver.o lighting.o rdp.o rdp_gl.o render.o sdlgl.o texture.o
++OBJECTS =   3dmath.o autodet.o combine1.o debug.o display.o driver.o \
++	    lighting.o rdp.o rdp_gl.o render.o sdlgl.o texture.o
+ 
+ all: tr64gl.so instruction
+ 
+ tr64gl.so: $(OBJECTS)
+-	$(LD) -shared -Wl,-Bsymbolic `gtk-config --libs` $(LDFLAGS) -o $@ $(OBJECTS)
++	$(CC) -shared -Wl,-Bsymbolic `gtk-config --libs` $(LDFLAGS) -o $@ $(OBJECTS)
+ 	strip --strip-all $@
+ 
+ instruction:
+@@ -17,6 +18,9 @@
+ .o: .c
+ 	$(CC) $(CFLAGS) -o $@ $<
+ 
++install:
++	$(BSD_INSTALL_DATA) tr64gl.so $(PREFIX)/share/mupen64/plugins
++
+ clean:
+ 	rm -rf $(OBJECTS) $(ALL)
+ 
