@@ -1,9 +1,10 @@
-# $Id: Makefile,v 1.559 2003/10/20 13:25:48 dillo Exp $
-# $NetBSD: Makefile,v 1.559 2003/10/20 13:25:48 dillo Exp $
+# $Id: Makefile,v 1.560 2003/10/21 09:37:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.560 2003/10/21 09:37:54 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	4stAttack
+SUBDIR+=	NeoPop-SDL
 SUBDIR+=	PPower4
 SUBDIR+=	Radiator
 SUBDIR+=	Radiator-all
@@ -38,7 +39,6 @@ SUBDIR+=	ap-frontpage
 SUBDIR+=	ap-ometer
 SUBDIR+=	ap-security
 SUBDIR+=	ap2-python
-SUBDIR+=	ap2-security
 SUBDIR+=	ap2-xslt
 SUBDIR+=	apotheke
 SUBDIR+=	argouml
