@@ -1,114 +1,25 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/04 20:52:18 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/03 15:23:24 poppnk Exp $
+bin/htsserver
 bin/httrack
+bin/webhttrack
 include/httrack/config.h
 include/httrack/htsbasenet.h
 include/httrack/htsbauth.h
 include/httrack/htsconfig.h
 include/httrack/htsglobal.h
+include/httrack/htsmodules.h
 include/httrack/htsopt.h
 include/httrack/htssystem.h
 include/httrack/htswrap.h
 include/httrack/httrack-library.h
-include/httrack/swf2html_define.h
 lib/libhttrack.a
 lib/libhttrack.la
 lib/libhttrack.so
 lib/libhttrack.so.1
-lib/libhttrack.so.1.0
+lib/libhttrack.so.1.32
+man/man1/htsserver.1
 man/man1/httrack.1
 man/man1/webhttrack.1
-share/doc/httrack/history.txt
-share/doc/httrack/html/abuse.html
-share/doc/httrack/html/addurl.html
-share/doc/httrack/html/cmddoc.html
-share/doc/httrack/html/contact.html
-share/doc/httrack/html/dev.html
-share/doc/httrack/html/div/search.sh
-share/doc/httrack/html/faq.html
-share/doc/httrack/html/fcguide.html
-share/doc/httrack/html/filters.html
-share/doc/httrack/html/httrack.man.html
-share/doc/httrack/html/images/bg_rings.gif
-share/doc/httrack/html/images/header_title_4.gif
-share/doc/httrack/html/images/screenshot_01.jpg
-share/doc/httrack/html/img/addurl1.gif
-share/doc/httrack/html/img/addurl2.gif
-share/doc/httrack/html/img/addurl3.gif
-share/doc/httrack/html/img/addurl4.gif
-share/doc/httrack/html/img/addurl5.gif
-share/doc/httrack/html/img/backblue.gif
-share/doc/httrack/html/img/fade.gif
-share/doc/httrack/html/img/httrack.gif
-share/doc/httrack/html/img/snap1_a.gif
-share/doc/httrack/html/img/snap1_b.gif
-share/doc/httrack/html/img/snap1_c.gif
-share/doc/httrack/html/img/snap2_a.gif
-share/doc/httrack/html/img/snap2_b.gif
-share/doc/httrack/html/img/snap3_a.gif
-share/doc/httrack/html/img/snap4_a.gif
-share/doc/httrack/html/img/snap5_a.gif
-share/doc/httrack/html/img/snap9.gif
-share/doc/httrack/html/img/snap9_a.gif
-share/doc/httrack/html/img/snap9_b.gif
-share/doc/httrack/html/img/snap9_c.gif
-share/doc/httrack/html/img/snap9_d.gif
-share/doc/httrack/html/img/snap9_d2.gif
-share/doc/httrack/html/img/snap9_d3.gif
-share/doc/httrack/html/img/snap9_d4.gif
-share/doc/httrack/html/img/snap9_d5.gif
-share/doc/httrack/html/img/snap9_d6.gif
-share/doc/httrack/html/img/snap9_d7.gif
-share/doc/httrack/html/img/snap9_d8.gif
-share/doc/httrack/html/img/snap9_e.gif
-share/doc/httrack/html/img/snap9_f.gif
-share/doc/httrack/html/img/snap9_g.gif
-share/doc/httrack/html/img/snap9_g2.gif
-share/doc/httrack/html/img/snap9_g3.gif
-share/doc/httrack/html/img/snap9_h.gif
-share/doc/httrack/html/img/snap9_i.gif
-share/doc/httrack/html/img/snap9_j.gif
-share/doc/httrack/html/img/snap9_k.gif
-share/doc/httrack/html/index.html
-share/doc/httrack/html/options.html
-share/doc/httrack/html/overview.html
-share/doc/httrack/html/shelldoc.html
-share/doc/httrack/html/start.html
-share/doc/httrack/html/step.html
-share/doc/httrack/html/step1.html
-share/doc/httrack/html/step2.html
-share/doc/httrack/html/step3.html
-share/doc/httrack/html/step4.html
-share/doc/httrack/html/step5.html
-share/doc/httrack/html/step9.html
-share/doc/httrack/html/step9_opt1.html
-share/doc/httrack/html/step9_opt10.html
-share/doc/httrack/html/step9_opt11.html
-share/doc/httrack/html/step9_opt2.html
-share/doc/httrack/html/step9_opt3.html
-share/doc/httrack/html/step9_opt4.html
-share/doc/httrack/html/step9_opt5.html
-share/doc/httrack/html/step9_opt6.html
-share/doc/httrack/html/step9_opt7.html
-share/doc/httrack/html/step9_opt8.html
-share/doc/httrack/html/step9_opt9.html
-share/doc/httrack/httrack-doc.html
-share/doc/httrack/libtest/example.c
-share/doc/httrack/libtest/example.dsp
-share/doc/httrack/libtest/example.dsw
-share/doc/httrack/libtest/example.h
-share/doc/httrack/libtest/htssystem.h
-share/doc/httrack/libtest/readme.txt
-share/doc/httrack/templates/index-body.html
-share/doc/httrack/templates/index-footer.html
-share/doc/httrack/templates/index-header.html
-share/doc/httrack/templates/topindex-body.html
-share/doc/httrack/templates/topindex-footer.html
-share/doc/httrack/templates/topindex-header.html
-@dirrm share/doc/httrack/templates
-@dirrm share/doc/httrack/libtest
-@dirrm share/doc/httrack/html/img
-@dirrm share/doc/httrack/html/images
-@dirrm share/doc/httrack/html/div
-@dirrm share/doc/httrack/html
-@dirrm share/doc/httrack
+@exec ${MKDIR} %D/lib/httrack
+@dirrm lib/httrack
 @dirrm include/httrack
