@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/08/27 06:30:31 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/01 09:53:19 thomasklausner Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -56,7 +56,7 @@ CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
 TEST_TARGET=		test
 
-# Install Perl man3 pages into a private directory under the the normal
+# Install Perl man3 pages into a private directory under the normal
 # Perl installation.  Also install site-specific Perl man3 pages into a
 # private directory within site_perl.  This avoids manpage conflicts
 # between 3rd-party modules, the standard Perl library, and other

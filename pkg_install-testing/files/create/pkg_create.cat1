@@ -147,7 +147,7 @@ OOPPTTIIOONNSS
 
      --ss _s_i_z_e_-_p_k_g_-_f_i_l_e
              Store the given file for later querying with the pkg_info(1) --ss
-             flag.  The file is expected to contain the the size (in bytes) of
+             flag.  The file is expected to contain the size (in bytes) of
              all files of this package added up and stored as a ASCII string,
              terminated by a newline.
 

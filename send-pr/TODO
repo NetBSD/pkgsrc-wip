@@ -1,6 +1,6 @@
 maybe remove send-pr from database/gnats and depend on this instead
 (and get rid of any CONFLICTs)
-but then share/gnats/dist may need to be chowned the the gnats user ??
+but then share/gnats/dist may need to be chowned the gnats user ??
 
 check to make sure defaults are appropriate even on NetBSD
 install-sid should be installed to ${PREFIX}/sbin

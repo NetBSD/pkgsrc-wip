@@ -9,7 +9,7 @@ package umodasu::umodasu;
 # as distributed with Perl.  A copy is available here:
 # http://language.perl.com/misc/Artistic.html
 #
-# $Id: umodasu.pm,v 1.1.1.1 2003/11/13 20:04:43 grantbeattie Exp $
+# $Id: umodasu.pm,v 1.2 2004/12/01 09:53:20 thomasklausner Exp $
 
 use umodasu::Umod;
 use umodasu::Ini;
@@ -321,7 +321,7 @@ if( $#ARGV < 0 ) {
 	# Initialize the umod file object.
 	my( $umodFile ) = getUmodFromFile( $umodName );
 	
-	# Use the the base directory if given on the command line.  If
+	# Use the base directory if given on the command line.  If
 	# it is not given, uses the extractdir option in the rc file.
 	# Last a last resort, extact to the current directory.
 	# Do not use the saved option $pref{basedir} because extracting
@@ -442,7 +442,7 @@ foreach my $umodName ( @ARGV ) {
 
 	} elsif( $argExtract ) {
 
-	    # Use the the base directory if given on the command line.  If
+	    # Use the base directory if given on the command line.  If
 	    # it is not given, uses the extractdir option in the rc file.
 	    # Last a last resort, extact to the current directory.
 	    # Do not use the saved option $pref{basedir} because extracting
