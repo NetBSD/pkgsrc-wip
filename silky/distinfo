@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/03/10 13:12:26 oherrala Exp $
+$NetBSD: distinfo,v 1.3 2004/10/16 21:52:13 koifren Exp $
 
-SHA1 (silky-0.5.0.tar.gz) = deba1f3f4a7e0095ee267893ed1f555f6baebf43
-Size (silky-0.5.0.tar.gz) = 708648 bytes
+SHA1 (silky-0.5.2.tar.gz) = 3a589ecad01f527c694c017a6a3d6072d1de5209
+Size (silky-0.5.2.tar.gz) = 874236 bytes
