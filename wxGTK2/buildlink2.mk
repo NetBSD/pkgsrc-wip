@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/12/08 21:46:55 mpasternak Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/12/23 18:14:43 blef Exp $
 #
 # This Makefile fragment is included by packages that use wxGTK2.
 #
@@ -104,7 +104,6 @@ BUILDLINK_FILES.wxGTK2+=	include/wx/fs_zip.h
 BUILDLINK_FILES.wxGTK2+=	include/wx/gauge.h
 BUILDLINK_FILES.wxGTK2+=	include/wx/gdicmn.h
 BUILDLINK_FILES.wxGTK2+=	include/wx/gdiobj.h
-BUILDLINK_FILES.wxGTK2+=	include/wx/quantize.h
 BUILDLINK_FILES.wxGTK2+=	include/wx/generic/accel.h
 BUILDLINK_FILES.wxGTK2+=	include/wx/generic/calctrl.h
 BUILDLINK_FILES.wxGTK2+=	include/wx/generic/caret.h
@@ -294,6 +293,7 @@ BUILDLINK_FILES.wxGTK2+=	include/wx/protocol/file.h
 BUILDLINK_FILES.wxGTK2+=	include/wx/protocol/ftp.h
 BUILDLINK_FILES.wxGTK2+=	include/wx/protocol/http.h
 BUILDLINK_FILES.wxGTK2+=	include/wx/protocol/protocol.h
+BUILDLINK_FILES.wxGTK2+=	include/wx/quantize.h
 BUILDLINK_FILES.wxGTK2+=	include/wx/radiobox.h
 BUILDLINK_FILES.wxGTK2+=	include/wx/radiobut.h
 BUILDLINK_FILES.wxGTK2+=	include/wx/regex.h

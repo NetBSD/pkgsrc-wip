@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/30 00:55:30 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/23 18:14:43 blef Exp $
 bin/wx-config
 bin/wxgtk2-2.4-config
 include/wx/accel.h
@@ -91,7 +91,6 @@ include/wx/fs_zip.h
 include/wx/gauge.h
 include/wx/gdicmn.h
 include/wx/gdiobj.h
-include/wx/quantize.h
 include/wx/generic/accel.h
 include/wx/generic/calctrl.h
 include/wx/generic/caret.h
@@ -281,6 +280,7 @@ include/wx/protocol/file.h
 include/wx/protocol/ftp.h
 include/wx/protocol/http.h
 include/wx/protocol/protocol.h
+include/wx/quantize.h
 include/wx/radiobox.h
 include/wx/radiobut.h
 include/wx/regex.h
