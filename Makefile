@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1499 2004/10/20 12:16:33 imilh Exp $
-# $NetBSD: Makefile,v 1.1499 2004/10/20 12:16:33 imilh Exp $
+# $Id: Makefile,v 1.1500 2004/10/20 13:18:04 imilh Exp $
+# $NetBSD: Makefile,v 1.1500 2004/10/20 13:18:04 imilh Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -504,6 +504,7 @@ SUBDIR+=	p5-OOTools
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
+SUBDIR+=	p5-Term-ProgressBar
 SUBDIR+=	p5-Text-Tabs+Wrap
 SUBDIR+=	p5-Time-Piece
 SUBDIR+=	p5-Tk-TableMatrix
