@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/02 00:48:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/02 00:58:40 tvierling Exp $
 #
 # Some notes for those working on this package:
 #
@@ -15,12 +15,6 @@
 # * The JDBC-ODBC bridge is not supported, because of the fact that
 #   the pkgsrc build of unixodbc needs userland pthreads (which
 #   messes with green_threads).
-#
-# * Building is indirected through the "release-bundles" target,
-#   which produces wrapped zipfiles.  This is preferred to tarfiles
-#   as they *don't* have file ownership information (and will thus
-#   re-extract as root) and this is Sun's current preferred
-#   distribution format.
 
 DISTNAME=	jdk1_2_2-src
 PKGNAME=	jdk12-2.0.11
