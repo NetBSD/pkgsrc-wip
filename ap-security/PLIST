@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/29 11:36:02 adrian_p Exp $
-lib/httpd/mod_security.so
-share/doc/ap-security/LICENSE
-share/doc/ap-security/modsecurity-manual-v1.6.pdf
-share/examples/ap-security/httpd.conf.example-full
-share/examples/ap-security/httpd.conf.example-minimal
-@dirrm share/doc/ap-security
-@dirrm share/examples/ap-security
