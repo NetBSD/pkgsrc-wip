@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/02/20 20:46:22 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/24 02:09:04 tvierling Exp $
 #
 
-DISTNAME=	Sendmail-PMilter-0.90
-PKGNAME=	p5-${DISTNAME}
+DISTNAME=	Sendmail-PMilter-0.91_01
+PKGNAME=	p5-${DISTNAME:S/_/./}
 CATEGORIES=	wip mail perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmilter/}
 
