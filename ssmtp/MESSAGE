@@ -1,9 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/06/06 19:15:26 cubidou Exp $
+$NetBSD: MESSAGE,v 1.3 2003/06/07 04:26:04 takasan-tt Exp $
 
 sSMTP has been installed successfully.
 
 *BEFORE* using the program, edit ${PKG_SYSCONFDIR}/ssmtp.conf and
-${PKG_SYSCONFDIR}/revaliases (especially the former).
+${PKG_SYSCONFDIR}/revaliases -- especially, the variables `mailhub'
+and `hostname' in ssmtp.conf.
 
 ===========================================================================
