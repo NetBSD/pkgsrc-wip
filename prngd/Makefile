@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2004/05/11 13:19:58 bubuchka Exp $
-#
+# $NetBSD: Makefile,v 1.3 2004/07/11 21:36:21 othyro Exp $
 
-DISTNAME=		prngd-0.9.27
+DISTNAME=		prngd-0.9.28
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/related/prngd/ \
 			ftp://ftp.ayamura.org/pub/prngd/ \
