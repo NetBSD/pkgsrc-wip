@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/26 21:22:28 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/01 15:55:05 mpasternak Exp $
 lib/gtk-2.0/2.2.0/engines/libsmooth.so
 lib/gtk-2.0/2.2.0/engines/libsmooth.la
 lib/gtk-2.0/2.2.0/engines/libsmooth.a
-share/themes/Smooth-Winter/gtk-2.0/gtkrc
-@dirrm share/themes/Smooth-Winter/gtk-2.0
-@dirrm share/themes/Smooth-Winrer
+share/themes/Delightfully-Smooth/gtk-2.0/gtkrc
+@dirrm share/themes/Delightfully-Smooth/gtk-2.0
+@dirrm share/themes/Delightfully-Smooth
