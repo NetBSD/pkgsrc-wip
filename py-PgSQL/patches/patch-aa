@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/05 21:46:30 marc Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/26 13:38:40 marc Exp $
 
---- libpqmodule.c.orig	2002-12-01 05:59:24.000000000 +0100
-+++ libpqmodule.c	2003-02-01 14:30:57.000000000 +0100
-@@ -764,7 +764,7 @@
+--- libpqmodule.c.orig	2003-06-17 03:28:30.000000000 +0200
++++ libpqmodule.c	2003-07-26 15:26:34.000000000 +0200
+@@ -791,7 +791,7 @@
          return PgInt8_FromString(s, (char **)NULL, 10);
      }
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/05 21:46:30 marc Exp $
      return (PyObject *)NULL;
  }
  #endif
-@@ -828,7 +828,7 @@
+@@ -855,7 +855,7 @@
          return PgInt2_FromString(s, (char **)NULL, 10);
      }
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/05 21:46:30 marc Exp $
      return (PyObject *)NULL;
  }
  
-@@ -880,7 +880,7 @@
+@@ -907,7 +907,7 @@
          return libPQbool_FromString(self, args);
      }
  
