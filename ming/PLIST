@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/26 17:08:13 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/03 22:31:36 mpasternak Exp $
 include/ming.h
 include/mingpp.h
+lib/libming.a
 lib/libming.so.0.2
+lib/libming.so.0
+lib/libming.so

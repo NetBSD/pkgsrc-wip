@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2004/01/03 22:24:41 mpasternak Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/01/03 22:31:36 mpasternak Exp $
 #
 # This Makefile fragment is included by packages that use ming.
 #
@@ -17,6 +17,7 @@ BUILDLINK_PREFIX.ming_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.ming+=	include/ming.h
 BUILDLINK_FILES.ming+=	include/mingpp.h
 BUILDLINK_FILES.ming+=	lib/libming.*
+BUILDLINK_FILES.ming+=	lib/libming.a
 
 BUILDLINK_TARGETS+=	ming-buildlink
 

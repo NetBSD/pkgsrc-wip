@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/11/26 17:08:13 mpasternak Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/03 22:31:36 mpasternak Exp $
 
---- Makefile~	Fri Aug 17 19:05:49 2001
-+++ Makefile	Wed Nov 26 17:33:37 2003
-@@ -1,9 +1,9 @@
+--- Makefile.orig	Fri Aug 17 19:05:49 2001
++++ Makefile	Sat Jan  3 22:31:08 2004
+@@ -1,15 +1,15 @@
  #CC = gcc -g -pg -a	# profiling flags
  #CC = gcc -O5
 -CC = gcc -g -Wall
@@ -14,3 +14,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/11/26 17:08:13 mpasternak Exp $
  LIBDIR = ${PREFIX}/lib
  INCLUDEDIR = ${PREFIX}/include
  
+-all: dynamic #static
++all: dynamic static
+ 
+-install: install-common install-dynamic #install-static
++install: install-common install-dynamic install-static
+ 
+ install-common:
+ 	install -d ${LIBDIR}
