@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.511 2003/09/30 11:07:01 xtraeme Exp $
-# $NetBSD: Makefile,v 1.511 2003/09/30 11:07:01 xtraeme Exp $
+# $Id: Makefile,v 1.512 2003/09/30 13:42:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.512 2003/09/30 13:42:42 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -25,6 +25,7 @@ SUBDIR+=	XFree86-server
 SUBDIR+=	abuse_sdl
 SUBDIR+=	acid
 SUBDIR+=	adodb
+SUBDIR+=	adtool
 SUBDIR+=	afterstep2
 SUBDIR+=	aget
 SUBDIR+=	allegro
