@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/01/27 14:23:15 ianzag Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/01/27 14:29:38 ianzag Exp $
 bin/openttd
 share/games/openttd/data/autorail.grf
 share/games/openttd/data/canalsw.grf
@@ -32,6 +32,7 @@ share/games/openttd/lang/slovak.lng
 share/games/openttd/lang/spanish.lng
 share/games/openttd/lang/swedish.lng
 @dirrm share/games/openttd/lang
+@dirrm share/games/openttd/gm
 @dirrm share/games/openttd/docs
 @dirrm share/games/openttd/data
 @dirrm share/games/openttd
