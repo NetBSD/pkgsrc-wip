@@ -1,0 +1,13 @@
+$NetBSD: TODO,v 1.1.1.1 2003/07/09 15:05:52 adrian_p Exp $
+
+This package is a IIS emulator that can be used with honeyd and/or socat.
+I'm working on getting honeyd/socat into pkgsrc at the moment.  
+
+honeyd/socat will be in pkgsrc/wip if you want to use them to test the
+IIS emulator.
+
+Tested on NetBSD 1.6 i386.
+
+Regards,
+
+Adrian.

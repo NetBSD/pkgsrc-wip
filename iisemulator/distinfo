@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/09 15:05:52 adrian_p Exp $
+
+SHA1 (iisemulator-0.95.tar.gz) = 28b38b1e1b4a78ecd88ecd26ef9d2e59171aa9c2
+Size (iisemulator-0.95.tar.gz) = 49914 bytes
+SHA1 (patch-aa) = 90365a97b40616d0952981f352e76dc69c15d86f
