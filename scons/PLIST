@@ -1,0 +1,110 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/25 23:37:03 marc Exp $
+bin/scons
+lib/scons/SCons/Action.pyc
+lib/scons/SCons/Builder.pyc
+lib/scons/SCons/Defaults.pyc
+lib/scons/SCons/Environment.pyc
+lib/scons/SCons/Errors.pyc
+lib/scons/SCons/Executor.pyc
+lib/scons/SCons/Job.pyc
+lib/scons/SCons/Node/Alias.pyc
+lib/scons/SCons/Node/FS.pyc
+lib/scons/SCons/Node/Python.pyc
+lib/scons/SCons/Node/__init__.pyc
+lib/scons/SCons/Optik/__init__.pyc
+lib/scons/SCons/Optik/errors.pyc
+lib/scons/SCons/Optik/option.pyc
+lib/scons/SCons/Optik/option_parser.pyc
+lib/scons/SCons/Options.pyc
+lib/scons/SCons/Platform/__init__.pyc
+lib/scons/SCons/Platform/aix.pyc
+lib/scons/SCons/Platform/cygwin.pyc
+lib/scons/SCons/Platform/hpux.pyc
+lib/scons/SCons/Platform/irix.pyc
+lib/scons/SCons/Platform/os2.pyc
+lib/scons/SCons/Platform/posix.pyc
+lib/scons/SCons/Platform/sunos.pyc
+lib/scons/SCons/Platform/win32.pyc
+lib/scons/SCons/SConf.pyc
+lib/scons/SCons/Scanner/C.pyc
+lib/scons/SCons/Scanner/Fortran.pyc
+lib/scons/SCons/Scanner/IDL.pyc
+lib/scons/SCons/Scanner/Prog.pyc
+lib/scons/SCons/Scanner/__init__.pyc
+lib/scons/SCons/Script/SConscript.pyc
+lib/scons/SCons/Script/__init__.pyc
+lib/scons/SCons/Sig/MD5.pyc
+lib/scons/SCons/Sig/TimeStamp.pyc
+lib/scons/SCons/Sig/__init__.pyc
+lib/scons/SCons/Taskmaster.pyc
+lib/scons/SCons/Tool/386asm.pyc
+lib/scons/SCons/Tool/BitKeeper.pyc
+lib/scons/SCons/Tool/CVS.pyc
+lib/scons/SCons/Tool/JavaCommon.pyc
+lib/scons/SCons/Tool/Perforce.pyc
+lib/scons/SCons/Tool/PharLapCommon.pyc
+lib/scons/SCons/Tool/RCS.pyc
+lib/scons/SCons/Tool/SCCS.pyc
+lib/scons/SCons/Tool/Subversion.pyc
+lib/scons/SCons/Tool/__init__.pyc
+lib/scons/SCons/Tool/aixcc.pyc
+lib/scons/SCons/Tool/aixf77.pyc
+lib/scons/SCons/Tool/aixlink.pyc
+lib/scons/SCons/Tool/ar.pyc
+lib/scons/SCons/Tool/as.pyc
+lib/scons/SCons/Tool/cc.pyc
+lib/scons/SCons/Tool/default.pyc
+lib/scons/SCons/Tool/dvipdf.pyc
+lib/scons/SCons/Tool/dvips.pyc
+lib/scons/SCons/Tool/f77.pyc
+lib/scons/SCons/Tool/g++.pyc
+lib/scons/SCons/Tool/g77.pyc
+lib/scons/SCons/Tool/gas.pyc
+lib/scons/SCons/Tool/gcc.pyc
+lib/scons/SCons/Tool/gnulink.pyc
+lib/scons/SCons/Tool/gs.pyc
+lib/scons/SCons/Tool/hpcc.pyc
+lib/scons/SCons/Tool/hplink.pyc
+lib/scons/SCons/Tool/icc.pyc
+lib/scons/SCons/Tool/ifl.pyc
+lib/scons/SCons/Tool/ilink.pyc
+lib/scons/SCons/Tool/jar.pyc
+lib/scons/SCons/Tool/javac.pyc
+lib/scons/SCons/Tool/javah.pyc
+lib/scons/SCons/Tool/latex.pyc
+lib/scons/SCons/Tool/lex.pyc
+lib/scons/SCons/Tool/link.pyc
+lib/scons/SCons/Tool/linkloc.pyc
+lib/scons/SCons/Tool/masm.pyc
+lib/scons/SCons/Tool/midl.pyc
+lib/scons/SCons/Tool/mingw.pyc
+lib/scons/SCons/Tool/mslib.pyc
+lib/scons/SCons/Tool/mslink.pyc
+lib/scons/SCons/Tool/msvc.pyc
+lib/scons/SCons/Tool/nasm.pyc
+lib/scons/SCons/Tool/pdflatex.pyc
+lib/scons/SCons/Tool/pdftex.pyc
+lib/scons/SCons/Tool/rmic.pyc
+lib/scons/SCons/Tool/sgiar.pyc
+lib/scons/SCons/Tool/sgicc.pyc
+lib/scons/SCons/Tool/sgilink.pyc
+lib/scons/SCons/Tool/sunar.pyc
+lib/scons/SCons/Tool/suncc.pyc
+lib/scons/SCons/Tool/sunlink.pyc
+lib/scons/SCons/Tool/tar.pyc
+lib/scons/SCons/Tool/tex.pyc
+lib/scons/SCons/Tool/yacc.pyc
+lib/scons/SCons/Tool/zip.pyc
+lib/scons/SCons/Util.pyc
+lib/scons/SCons/Warnings.pyc
+lib/scons/SCons/__init__.pyc
+lib/scons/SCons/exitfuncs.pyc
+@dirrm lib/scons/SCons/Tool
+@dirrm lib/scons/SCons/Sig
+@dirrm lib/scons/SCons/Script
+@dirrm lib/scons/SCons/Scanner
+@dirrm lib/scons/SCons/Platform
+@dirrm lib/scons/SCons/Optik
+@dirrm lib/scons/SCons/Node
+@dirrm lib/scons/SCons
+@dirrm lib/scons
