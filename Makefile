@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1315 2004/06/08 12:54:31 ppostma Exp $
-# $NetBSD: Makefile,v 1.1315 2004/06/08 12:54:31 ppostma Exp $
+# $Id: Makefile,v 1.1316 2004/06/08 14:49:09 poppnk Exp $
+# $NetBSD: Makefile,v 1.1316 2004/06/08 14:49:09 poppnk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -421,6 +421,7 @@ SUBDIR+=	netkit-base
 SUBDIR+=	netwib
 SUBDIR+=	netwox
 SUBDIR+=	ninvaders
+SUBDIR+=	n0t
 SUBDIR+=	noip
 SUBDIR+=	noiptun
 SUBDIR+=	nsd
