@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.995 2004/02/20 04:26:32 minskim Exp $
-# $NetBSD: Makefile,v 1.995 2004/02/20 04:26:32 minskim Exp $
+# $Id: Makefile,v 1.996 2004/02/20 04:42:02 minskim Exp $
+# $NetBSD: Makefile,v 1.996 2004/02/20 04:42:02 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -390,7 +390,6 @@ SUBDIR+=	nuppelvideo
 SUBDIR+=	oinkmaster
 SUBDIR+=	oops
 SUBDIR+=	opax
-SUBDIR+=	p5-Apache-Reload
 SUBDIR+=	p5-Apache-Request
 SUBDIR+=	p5-Apache-Test
 SUBDIR+=	p5-AxKit
