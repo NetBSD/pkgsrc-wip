@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/24 05:42:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/30 00:10:12 xtraeme Exp $
 #
 
 DISTNAME=	gob2-2.0.6
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gob2/2.0/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://www.5z.com/jirka/gob.html
 COMMENT=	Preprocessor for making GObjects with inline C
 
