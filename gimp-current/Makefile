@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2003/06/16 09:29:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/24 13:25:34 cjep Exp $
+#
 
 DISTNAME=		gimp-${GIMP_VER}
 PKGNAME=		gimp-current-${GIMP_VER}
@@ -29,8 +30,8 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-perl 
-CONFIGURE_ARGS+=	--disable-print 
+CONFIGURE_ARGS+=	--disable-perl
+CONFIGURE_ARGS+=	--disable-print
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/${PKGNAME}
 
