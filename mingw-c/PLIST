@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2003/11/30 22:39:34 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/11/30 23:27:16 mpasternak Exp $
+bin/${MINGWTARGET}-cc
 bin/${MINGWTARGET}-cpp
 bin/${MINGWTARGET}-gcc
 bin/${MINGWTARGET}-gcc-3.3.1
 bin/${MINGWTARGET}-gccbug
 bin/${MINGWTARGET}-gcov
-${MINGWTARGET}/bin/gcc
+${MINGWTARGET}/bin/cc
 ${MINGWTARGET}/bin/cpp
+${MINGWTARGET}/bin/gcc
 info/cpp.info
 info/cppinternals.info
 info/gcc.info
