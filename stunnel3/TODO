@@ -1,9 +1,0 @@
-# $NetBSD: TODO,v 1.1 2003/11/07 20:39:44 hfath Exp $
-
-(1)  'security/audit-packages' issues a bogus 
-
-Package stunnel-3.26 has a denial-of-service vulnerability, see
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1563
-
-message because it matches on all 3.xx versions for a problem that was
-resolved in v3.25.
