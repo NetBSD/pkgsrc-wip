@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/23 20:38:17 xtraeme Exp $
-# $Id: Makefile,v 1.1.1.1 2003/07/23 20:38:17 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/24 00:14:59 blef Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-fontserver-${XFREE86_VERSION}
