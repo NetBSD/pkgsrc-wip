@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.11 2004/02/17 02:55:58 blef Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/21 11:35:04 marc Exp $
 #
 
-DISTNAME=		libfwbuilder-1.0.1
-CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fwbuilder/}
+DISTNAME=	libfwbuilder-1.0.2
+CATEGORIES=	security
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fwbuilder/}
 
-MAINTAINER=		recht@NetBSD.org
-HOMEPAGE=		http://www.fwbuilder.org/
-COMMENT=		Firewall configuration and management tool
+MAINTAINER=	recht@NetBSD.org
+HOMEPAGE=	http://www.fwbuilder.org/
+COMMENT=	Firewall configuration and management tool
 
-USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		yes
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_GCC_SHLIB=		yes
-GCC_REQD=		2.95.3
+USE_GNU_TOOLS+=	make
+USE_BUILDLINK2=	yes
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_GCC_SHLIB=	yes
+GCC_REQD=	2.95.3
 
 CONFIGURE_ARGS+=	--with-openssl-prefix=${BUILDLINK_PREFIX.openssl}
 
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--with-lwres
 .else
 .include "../../security/openssl/buildlink2.mk"
 .endif
+BUILD_DEFS+=	FWBUILDER_USE_BIND
 
 pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/libtoolize --force --copy

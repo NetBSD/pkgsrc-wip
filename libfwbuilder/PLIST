@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/09/27 18:27:29 marc Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/03/21 11:35:04 marc Exp $
 bin/libfwbuilder-config
 include/fwbuilder/Address.hh
 include/fwbuilder/AddressRange.hh
@@ -93,6 +93,8 @@ share/libfwbuilder/migration/0.9.3/FWObjectDatabase.xslt
 share/libfwbuilder/migration/0.9.4/FWObjectDatabase.xslt
 share/libfwbuilder/migration/0.9.5/FWObjectDatabase.xslt
 share/libfwbuilder/migration/1.0.0/FWObjectDatabase.xslt
+share/libfwbuilder/migration/1.0.1/FWObjectDatabase.xslt
+@dirrm share/libfwbuilder/migration/1.0.1
 @dirrm share/libfwbuilder/migration/1.0.0
 @dirrm share/libfwbuilder/migration/0.9.5
 @dirrm share/libfwbuilder/migration/0.9.4
