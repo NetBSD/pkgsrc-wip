@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 07:59:18 bmeurer Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/04 09:10:49 bmeurer Exp $
 
 DISTNAME=		dbh_1.0-14
 PKGNAME=		dbh-1.0.14
@@ -10,9 +10,10 @@ MAINTAINER=		benedikt.meurer@unix-ag.uni-siegen.de
 HOMEPAGE=		http://dbh.sourceforge.net/
 COMMENT=		Library to create disk based Hashtables
 
+GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE=	${WRKSRC}/src/dbh-1.0.pc.in
 
 .include "../../mk/bsd.pkg.mk"
