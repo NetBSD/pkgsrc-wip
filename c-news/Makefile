@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2003/09/30 15:39:59 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/02 15:30:36 hfath Exp $
 # FreeBSD Id: ports/news/cnews/Makefile,v 1.43 2001/06/24 04:28:36 dinoex Exp
 
 DISTNAME=	c-news
-PKGNAME=        c-news-CR.G
-PKGREVISION=	1
+PKGNAME=        c-news-CR-7
 WRKSRC=		${WRKDIR}
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.cs.toronto.edu/pub/c-news/ \
@@ -24,6 +23,8 @@ PATCHFILES=	c-news-patch-fileart.c c-news-patch-namecheck.awk \
 		c-news-patch-bunzip2 \
 		c-news-patch-ctl-underscore \
 		c-news-patch-y2k-2 \
+		c-news-patch-inews-path \
+		c-news-patch-expovguts.c \
 		c-news-patch-pgpverify-1.12-perl4 \
 		c-news-patch-gawk3
 

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2003/09/30 15:39:59 hfath Exp $
+$NetBSD: distinfo,v 1.2 2003/10/02 15:30:36 hfath Exp $
 
 SHA1 (c-news/c-news.tar.Z) = fee33ba349ab42a547b48fc6f8427c374817dd8d
 Size (c-news/c-news.tar.Z) = 676481 bytes
@@ -28,6 +28,10 @@ SHA1 (c-news/c-news-patch-ctl-underscore) = 72980ca17e34077a9be517af5a1f59eb4d30
 Size (c-news/c-news-patch-ctl-underscore) = 341 bytes
 SHA1 (c-news/c-news-patch-y2k-2) = 4386449d19334f6ff75826862eac58f9207b2e14
 Size (c-news/c-news-patch-y2k-2) = 1459 bytes
+SHA1 (c-news/c-news-patch-inews-path) = 3ecb8902238ede68f1e8a309d2d55101fecb2080
+Size (c-news/c-news-patch-inews-path) = 355 bytes
+SHA1 (c-news/c-news-patch-expovguts.c) = 852f422b57739d6e803505dd31d59ac02bc409b8
+Size (c-news/c-news-patch-expovguts.c) = 646 bytes
 SHA1 (c-news/c-news-patch-pgpverify-1.12-perl4) = d160d97c59dd155c63882734346b8b71926cc887
 Size (c-news/c-news-patch-pgpverify-1.12-perl4) = 1450 bytes
 SHA1 (c-news/c-news-patch-gawk3) = 3d4f724b247571c39b11db73900813af621028b2
