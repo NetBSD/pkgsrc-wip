@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/01/04 06:20:34 mpasternak Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/01/04 06:21:54 mpasternak Exp $
 #
 # This Makefile fragment is included by packages that use kyra.
 #
@@ -72,7 +72,11 @@ BUILDLINK_FILES.kyra+=	lib/libkyra.*
 
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../graphics/SDL_image/buildlink2.mk"
+.if exists(../../mk/opengl.buildlink2.mk)
+.include "../../mk/opengl.buildlink2.mk"
+.else
 .include "../../graphics/MesaLib/buildlink2.mk"
+.endif
 
 BUILDLINK_TARGETS+=	kyra-buildlink
 
