@@ -1,0 +1,8 @@
+$Id: TODO,v 1.1.1.1 2003/11/27 16:23:17 mpasternak Exp $
+
+Thu Nov 27 17:20:43 CET 2003
+
+- make it compile on NetBSD. On Linux it will propably work
+- make PLIST
+
+	-- dotz@irc.pl

@@ -1,0 +1,33 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2003/11/27 16:23:18 mpasternak Exp $
+#
+
+DISTNAME?=		gcl-2.5.3
+CATEGORIES?=		lang
+MASTER_SITES?=		ftp://ftp.gnu.org/pub/gnu/gcl/
+
+MAINTAINER?=		tech-pkg@netbsd.org
+HOMEPAGE?=		http://www.gnu.org/software/gcl/gcl.html
+COMMENT?=		GNU Common Lisp
+
+USE_BUILDLINK2?=       	yes
+USE_PKGLOCALEDIR?=	yes
+USE_X11=		yes
+USE_LIBTOOL?=		yes
+LIBTOOL_OVERRIDE?=	${WRKSRC}/libtool
+GNU_CONFIGURE?=		yes
+MAKEFILE=		makefile
+
+DISTINFO_FILE?=		${.CURDIR}/../gcl/distinfo
+COMMON_FILESDIR?=	${.CURDIR}/../gcl/files
+PATCHDIR?=		${.CURDIR}/../gcl/patches
+
+.include "../../mk/bsd.prefs.mk"
+
+# only for OS which it can't guess. NetBSD currently is one of them.
+
+.if ${OPSYS}=="NetBSD"
+CONFIGURE_ARGS+=--enable-machine=NetBSD
+.endif
+
+.include "../../devel/readline/buildlink2.mk"
+.include "../../lang/tcl/buildlink2.mk"
