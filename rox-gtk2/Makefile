@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2004/07/09 15:02:46 froz Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/19 12:47:26 froz Exp $
 
-DISTNAME=	rox-2.1.2
+DISTNAME=	rox-2.1.4
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Filer/src
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
@@ -48,4 +48,5 @@ do-install:
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
