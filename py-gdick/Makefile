@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/12/27 06:29:04 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/20 03:15:26 minskim Exp $
 
 DISTNAME=	gdick-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,14 +6,14 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gdick/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	minskim@bawi.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://gdick.sourceforge.net/
 COMMENT=	English-Korean Dictionary Client for GNOME2
 
-DEPENDS+=	${PYPKGPREFIX}-cjkcodecs-[0-9]*:../../wip/py-cjkcodecs
+DEPENDS+=	${PYPKGPREFIX}-cjkcodecs-[0-9]*:../../converters/py-cjkcodecs
 
 PYDISTUTILSPKG=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 
 SUBST_CLASSES+=		paths
@@ -22,6 +22,6 @@ SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	GNOME_GDick.server lib/gdick/gdick.py
 SUBST_SED.paths=	-e 's,/usr/,${PREFIX}/,g'
 
-.include "../../x11/py-gnome2/buildlink2.mk"
+.include "../../x11/py-gnome2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
