@@ -1,8 +1,22 @@
-$NetBSD: patch-posix-signals.adb,v 1.1.1.1 2003/12/11 22:02:06 johnrshannon Exp $
+$NetBSD: patch-posix-signals.adb,v 1.2 2004/01/06 21:09:56 johnrshannon Exp $
 
---- posix-signals.adb.orig	2003-12-01 10:20:48.000000000 -0700
+--- posix-signals.adb.orig	2002-10-24 02:03:52.000000000 -0600
 +++ posix-signals.adb
-@@ -941,7 +941,7 @@ package body POSIX.Signals is
+@@ -236,13 +236,6 @@ package body POSIX.Signals is
+    --  Global Data --
+    ------------------
+ 
+-   Last_Unblocker : array (Signal) of Task_ID :=
+-     (others => Null_Task);
+-   pragma Volatile_Components (Last_Unblocker);
+-   --  Holds the ID of the last Task which Unblocked this Interrupt.
+-   --  It contains Null_Task if no tasks have ever requested the
+-   --  Unblocking operation or the Interrupt is currently Blocked.
+-
+    type Signal_Bit_Vector is array (Signal) of Boolean;
+ 
+    --  Reserved_Signal is the union of the following sets of
+@@ -941,7 +934,7 @@ package body POSIX.Signals is
  
     function Get_Data (Info : Signal_Info) return Signal_Data is
     begin
@@ -11,7 +25,7 @@ $NetBSD: patch-posix-signals.adb,v 1.1.1.1 2003/12/11 22:02:06 johnrshannon Exp 
     end Get_Data;
  
     ----------------
-@@ -952,7 +952,7 @@ package body POSIX.Signals is
+@@ -952,7 +945,7 @@ package body POSIX.Signals is
       (Info : in out Signal_Info;
        Data : in Signal_Data) is
     begin

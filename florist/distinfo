@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/11 22:02:06 johnrshannon Exp $
+$NetBSD: distinfo,v 1.2 2004/01/06 21:09:55 johnrshannon Exp $
 
 SHA1 (florist-3.15p-src.tgz) = 1f901f25e4d3d450fa75cd8b0a200e3690282cd7
 Size (florist-3.15p-src.tgz) = 264898 bytes
 SHA1 (patch-c-posix.c) = 622d42742a78bad89f8367f92d4931450ec365e5
 SHA1 (patch-configure.in) = b6e182ae9db5960378c047bf84b3a3fe979027a7
-SHA1 (patch-posix-signals.adb) = bbdf3d1d25a436f870d348d92cf0de90226d5664
+SHA1 (patch-posix-implementation.gpb) = 2b5c58039a2254e36aa450b9b1f69bd9f6d513b4
+SHA1 (patch-posix-process_primitives.gpb) = 9bdba9b09b855c5a46ea3a2329a4c7a952314a18
+SHA1 (patch-posix-signals.adb) = 1b6c29b51cbebb0970f9c0ee376d38fdf8dd4153
+SHA1 (patch-posix-unsafe_process_primitives.gpb) = 4da2f7f5738500d68a5510f6016f4cc17683e83e
