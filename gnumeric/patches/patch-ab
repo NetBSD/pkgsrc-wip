@@ -1,14 +1,15 @@
-$NetBSD: patch-ab,v 1.2 2003/12/18 10:56:17 moubctez Exp $
+$NetBSD: patch-ab,v 1.3 2004/04/01 09:56:40 marc Exp $
 
---- src/cut-n-paste-code/foocanvas/libfoocanvas/foo-canvas-util.c.orig	2003-10-21 18:20:42.000000000 +0000
-+++ src/cut-n-paste-code/foocanvas/libfoocanvas/foo-canvas-util.c
-@@ -41,6 +41,9 @@
- 
- #include <sys/types.h>
- #include <glib.h>
-+#ifndef _XOPEN_SOURCE
+--- plugins/fn-math/functions.c.orig	2003-11-25 22:54:09.000000000 +0100
++++ plugins/fn-math/functions.c
+@@ -21,6 +21,10 @@
+  * along with this program; if not, write to the Free Software
+  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+  */
++#if !defined(_XOPEN_SOURCE) && defined(__NetBSD_Version__) && \
++	(__NetBSD_Version__ < 106200000)   /* NetBSD 1.6T */
 +#define _XOPEN_SOURCE 1
 +#endif
- #include <math.h>
- #include "foo-canvas.h"
- #include "foo-canvas-util.h"
+ #include <gnumeric-config.h>
+ #include <gnumeric-i18n.h>
+ #include <gnumeric.h>

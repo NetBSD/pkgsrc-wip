@@ -1,12 +1,13 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/10/06 12:14:24 thomasklausner Exp $
+$NetBSD: patch-ae,v 1.2 2004/04/01 09:56:41 marc Exp $
 
---- src/sheet-object-graphic.c.orig	Wed Sep 10 20:11:05 2003
+--- src/sheet-object-graphic.c.orig	2004-03-08 22:45:06.000000000 +0100
 +++ src/sheet-object-graphic.c
-@@ -6,6 +6,9 @@
-  * Author:
+@@ -7,6 +7,10 @@
   *   Miguel de Icaza (miguel@kernel.org)
+  *   Jody Goldberg (jody@gnome.org)
   */
-+#ifndef _XOPEN_SOURCE
++#if !defined(_XOPEN_SOURCE) && defined(__NetBSD_Version__) && \
++	(__NetBSD_Version__ < 106200000)   /* NetBSD 1.6T */
 +#define _XOPEN_SOURCE 1
 +#endif
  #include <gnumeric-config.h>
