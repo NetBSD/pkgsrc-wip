@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:32:43 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/14 13:18:46 thomasklausner Exp $
 
 DISTNAME=		man-db-${VERSION}
 CATEGORIES=		misc
@@ -25,7 +25,7 @@ MAN_DB_USER?=		man-db
 PKG_USERS=		${MAN_DB_USER}:${ROOT_GROUP}::man-db\\ user:${MAN_DB_CAT_DIR}
 USE_PKGINSTALL=		YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
@@ -44,7 +44,7 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/man-db
 	${INSTALL_DATA} ${WRKSRC}/src/man_db.conf ${PREFIX}/share/examples/man-db
 
-.include "../../databases/db/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../databases/db/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
