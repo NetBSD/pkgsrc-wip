@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/21 20:59:38 bencollver Exp $
-bin/modplugplay
-lib/xmms/Input/libmodplugxmms.la
-lib/xmms/Input/libmodplugxmms.so
