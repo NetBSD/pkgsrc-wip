@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/15 17:32:29 obache Exp $
+bin/pdumpfs
+man/ja_JP.EUC/man8/pdumpfs.8
+man/man8/pdumpfs.8
+share/doc/html/pdumpfs/images/pdumpfs-ja-mini.png
+share/doc/html/pdumpfs/images/pdumpfs-ja.png
+share/doc/html/pdumpfs/images/pdumpfs-mini.png
+share/doc/html/pdumpfs/images/pdumpfs.png
+share/doc/html/pdumpfs/pdumpfs-ja.html
+share/doc/html/pdumpfs/pdumpfs.html
+@dirrm share/doc/html/pdumpfs/images
+@dirrm share/doc/html/pdumpfs
