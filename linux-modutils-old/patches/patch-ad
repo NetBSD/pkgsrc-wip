@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/04/27 06:11:02 jeremy-c-reed Exp $
+
+--- insmod/Makefile.in.orig	2003-03-22 18:43:54.000000000 -0800
++++ insmod/Makefile.in
+@@ -116,14 +116,14 @@ install install-bin: all
+ 	@set -ex;\
+ 	for i in $(TARGETS_REAL); do \
+ 	$(MKDIR) $(DESTDIR)$(sbindir); \
+-	$(INSTALL) $(STRIP) $$i $(DESTDIR)$(sbindir); done;
++	$(INSTALL) $(STRIP) $$i $(DESTDIR)$(sbindir)/$$i.old ; done;
+ 	set -e; \
+ 	for i in $(srcdir)/insmod_ksymoops_clean $(srcdir)/kernelversion; do \
+ 	$(MKDIR) $(DESTDIR)$(sbindir); \
+ 	$(INSTALL) $$i $(DESTDIR)$(sbindir); done;
+ 	set -e; \
+ 	for i in $(COMB); do \
+-	ln -sf insmod $(DESTDIR)$(sbindir)/$$i; \
++	ln -sf insmod.old $(DESTDIR)$(sbindir)/$$i.old; \
+ 	(test "$(insmod_static)" = yes && \
+ 		ln -sf insmod.static $(DESTDIR)$(sbindir)/$$i.static) || true; \
+ 	done

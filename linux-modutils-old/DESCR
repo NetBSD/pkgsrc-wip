@@ -1,0 +1,8 @@
+Modutils is a collection of utilities for managing Linux kernel
+modules. These tools handle loadable Linux kernel module dependencies,
+installing loadable modules in the running Linux kernel, report on Linux
+kernel symbols, etc.
+
+This installs the tools for Linux kernels before 2.5.48.  It installs
+some tools named with .old extension so they can be installed at
+the same time as the linux-module-init-tools package.

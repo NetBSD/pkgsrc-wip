@@ -1,0 +1,35 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/04/27 06:11:02 jeremy-c-reed Exp $
+
+don't uninstall during install
+and name section 8 pages as foo.old.8
+
+--- man/Makefile.in.orig	2003-01-27 08:25:24.000000000 -0800
++++ man/Makefile.in
+@@ -7,19 +7,19 @@ include	../Makefile.common
+ all install-bin clean dep depend install:
+ 
+ install-man:
+-	@set -e; \
+-	for i in $(srcdir)/*.8 ; do \
+-	  gone=`basename $$i .8`.1; \
+-	  for f in $(DESTDIR)$(mandir)/man1/$${gone}*; \
+-	  do if [ -f $$f ]; then echo Removing old $$f; rm -f $$f; fi; done; \
+-	done
+-	rm -f $(DESTDIR)$(mandir)/man5/conf.modules.5 $(DESTDIR)$(mandir)/man5/conf.modules.5.gz
+ 	set -e; \
+-	for i in $(srcdir)/*.[1-8] ; do \
++	for i in $(srcdir)/*.[1-7] ; do \
+ 	  ext=`echo $$i | sed 's/.*\.//'`; \
+ 	  $(MKDIR) $(DESTDIR)$(mandir)/man$$ext/; \
+ 	  $(INSTALL) -m 644 $$i $(DESTDIR)$(mandir)/man$$ext/; \
+ 	done
++	$(MKDIR) $(DESTDIR)$(mandir)/man8
++	set -e; \
++	for i in $(srcdir)/*.8 ; do \
++	  ext=`echo $$i | sed 's/.*\.//'`; \
++	  name=`echo $$i | sed 's/\.[^.]*$$//'`; \
++	  $(INSTALL) -m 644 $$i $(DESTDIR)$(mandir)/man$$ext/$$name.old.$$ext; \
++	done
+ 
+ realclean: clean
+ 

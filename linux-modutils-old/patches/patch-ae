@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/04/27 06:11:02 jeremy-c-reed Exp $
+
+--- depmod/Makefile.in.orig	2002-11-24 19:23:35.000000000 -0800
++++ depmod/Makefile.in
+@@ -56,7 +56,7 @@ distclean: realclean
+ 
+ install install-bin: all
+ 	$(MKDIR) $(DESTDIR)$(sbindir)
+-	$(INSTALL) $(STRIP) depmod $(DESTDIR)$(sbindir)
++	$(INSTALL) $(STRIP) depmod $(DESTDIR)$(sbindir)/depmod.old
+ 
+ dep depend .depend: depmod.c
+ 	$(CC) -M $(CFLAGS) $(DEFSNOARCH) $(DEFS) $^ > .depend

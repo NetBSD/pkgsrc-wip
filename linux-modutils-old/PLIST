@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/27 06:11:01 jeremy-c-reed Exp $
+man/man1/kernelversion.1
+man/man2/create_module.2
+man/man2/delete_module.2
+man/man2/get_kernel_syms.2
+man/man2/init_module.2
+man/man2/query_module.2
+man/man5/modules.conf.5
+man/man8/depmod.old.8
+man/man8/genksyms.old.8
+man/man8/insmod.old.8
+man/man8/kallsyms.old.8
+man/man8/ksyms.old.8
+man/man8/lsmod.old.8
+man/man8/modinfo.old.8
+man/man8/modprobe.old.8
+man/man8/rmmod.old.8
+sbin/depmod.old
+sbin/genksyms
+sbin/insmod.old
+sbin/insmod_ksymoops_clean
+sbin/kallsyms.old
+sbin/kernelversion
+sbin/ksyms.old
+sbin/lsmod.old
+sbin/modinfo.old
+sbin/modprobe.old
+sbin/rmmod.old
+share/linux-modutils-old/modules.conf.example
+@dirrm share/linux-modutils-old

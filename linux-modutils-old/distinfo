@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/27 06:11:01 jeremy-c-reed Exp $
+
+SHA1 (modutils-2.4.24.tar.bz2) = 43a04427e0e69022a269571139413ecddc24615d
+Size (modutils-2.4.24.tar.bz2) = 220279 bytes
+SHA1 (patch-aa) = ad91eceb50787a4586b3e7fa59eb6a93d72e8164
+SHA1 (patch-ab) = 5bb51423e864890bdd74767efec7c6ebe00e5914
+SHA1 (patch-ac) = 683af39d74d4b5f3078ab90382c1773771a211cc
+SHA1 (patch-ad) = d851efee7d40ce2fb3c58d881ae0becd036c0ceb
+SHA1 (patch-ae) = 2205e58014e3c944839662f8f35fe02473972feb
+SHA1 (patch-af) = 15dada8f1e841ad280adc572c629415551d89b43

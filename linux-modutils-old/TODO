@@ -1,0 +1,19 @@
+make a Makefile.common for linux-modutils and use it
+
+build dependencies: ranlib, ar, bison, flex
+
+/lib/modules/ is hard-coded in man pages and code
+
+should linux-kernel and modutils be in same pkgsrc category?
+
+provide better example of modules.conf
+
+It would be nice if pkgsrc would provide an automatically generated
+MESSAGE about how to enable the rc.d script.
+
+Maybe have a MESSAGE about setting up ${PKG_SYSCONFDIR}/modules
+for boot-time.
+
+maybe a different HOMEPAGE should be used
+
+no rc.d script

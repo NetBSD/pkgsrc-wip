@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/04/27 06:11:02 jeremy-c-reed Exp $
+
+--- util/config.c.orig	Fri Nov 15 19:40:41 2002
++++ util/config.c	Fri Nov 15 19:42:23 2002
+@@ -187,8 +187,8 @@
+ 		gen_file[i].mtime = tmp.st_mtime;
+ 	}
+ 
+-	if (stat ("/etc/modules.conf", &tmp) &&
+-	    stat ("/etc/conf.modules", &tmp))
++	if (stat (ETC_MODULES_CONF, &tmp) &&
++	    stat (SYSCONFDIR "/conf.modules", &tmp))
+ 		return 1;
+ 
+ 	for (i = 0; i < gen_file_count; ++i) {

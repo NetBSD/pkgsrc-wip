@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/27 06:11:02 jeremy-c-reed Exp $
+
+--- include/config.h.orig	Wed Feb 19 16:19:10 2003
++++ include/config.h	Wed Feb 19 16:19:30 2003
+@@ -29,7 +29,7 @@
+ #include <sys/utsname.h>
+ 
+ #define MODUTILS_MACROS        "/lib/modutils/macros"
+-#define ETC_MODULES_CONF	"/etc/modules.conf"
++#define ETC_MODULES_CONF	SYSCONFDIR "/modules.conf"
+ 
+ #define EXEC_PRE_INSTALL 0
+ #define EXEC_POST_INSTALL 1
