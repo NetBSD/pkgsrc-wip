@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/19 18:07:42 daprice Exp $
+
+SHA1 (chrsh.c) = 5daa98bbf9ada9604ddea609abfa839e9d739a3f
+Size (chrsh.c) = 26266 bytes
+SHA1 (patch-aa) = e23fd61088a374bc484e3f3bcb2464604d783429
+SHA1 (patch-ab) = 41b95fa27fb8b98dce5e3b264a7f709da689a96d

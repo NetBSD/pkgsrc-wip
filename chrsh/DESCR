@@ -1,0 +1,2 @@
+Chrsh is a wrapper program around a user's normal shell to restrict 
+access to within a chroot(2) jail.
