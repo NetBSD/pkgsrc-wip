@@ -1,0 +1,22 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/04 14:23:16 jgoamakf Exp $
+
+SHA1 (thunderbird-source-0.3.tar.bz2) = 44eeddfec409738266b7df7bd91010a14089241e
+Size (thunderbird-source-0.3.tar.bz2) = 30518769 bytes
+SHA1 (libart_lgpl.tar.gz) = 8677b826eec871ee6737e24ce3fb61555d3ff3ef
+Size (libart_lgpl.tar.gz) = 124493 bytes
+SHA1 (patch-ab) = 36fa52e9d31e596fac3ff797a6299c5a71c34550
+SHA1 (patch-ac) = ec539828930a98d813f783458bb8b7fabfaa24b3
+SHA1 (patch-ad) = 80e873748f5fcb9fbf1f179d1f68c4e9568aece9
+SHA1 (patch-ae) = 26da0a58f19e8e7fa7bed6a093f15e727bce98e9
+SHA1 (patch-af) = d0726fe020e1d2eb89db9129dd157bf8990c42f1
+SHA1 (patch-ag) = 1efb1d526df39fc46223e2805d364f0639d0fc7c
+SHA1 (patch-am) = 596ac06abb1de21a197a9db93fde0eaec19f36d8
+SHA1 (patch-aw) = 48a240bd793729a534467d9feb23d96a65cdcc64
+SHA1 (patch-ba) = 539b6c690dea4f9c8f7ad67de2f0357b1cdee769
+SHA1 (patch-bb) = 38e4378fcc7b180845ed1e42af828bcce9119aa8
+SHA1 (patch-be) = 20050e778410393b2ac6343b9f8ba2c0affc432b
+SHA1 (patch-bm) = d67723f17ca2ceaab0488798f55a4c621926a029
+SHA1 (patch-bn) = b5a5effc0b427ede79171f167a4110959ed8b064
+SHA1 (patch-bo) = b4c52c0b798e4a3004fe1eee0630eba173204943
+SHA1 (patch-bp) = e8cdd22555b577109ae777410c95f8aeeb5f6f25
+SHA1 (patch-bq) = f81601c6bf7aa3a47d93bd9a24b5d22fd7133e1c
