@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1055 2004/03/07 02:00:02 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1055 2004/03/07 02:00:02 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1056 2004/03/07 02:47:13 mpasternak Exp $
+# $NetBSD: Makefile,v 1.1056 2004/03/07 02:47:13 mpasternak Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -265,6 +265,7 @@ SUBDIR+=	kpanta
 SUBDIR+=	kvirc
 SUBDIR+=	kylix-openedition
 SUBDIR+=	kyra
+SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
 SUBDIR+=	ladspa
 SUBDIR+=	lammpi
