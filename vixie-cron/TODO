@@ -1,0 +1,25 @@
+todo: test on various operating systems; only tested under Linux.
+
+# todo: maybe edit man pages for paths
+
+# todo: maybe setgid crontab instead of setuid root
+
+# todo: look at fixes in *BSD's cron
+#       (and be sure to suggest back to Vixie about any patches)
+
+This defaults to /var/cron; maybe this should be noted in MESSAGE.
+Could set some pkgsrc-wide VAR_DIR; then:
+CPPFLAGS+=              -DCRONDIR='\"${VAR_DIR}/cron\"'
+
+I did not add the rc.d/cron script to the PLIST. Since the install
+is automated, then the PLIST addition should be automated.
+It could be ${RCD_SCRIPTS_EXAMPLEDIR}/cron
+and RCD_SCRIPTS_EXAMPLEDIR be part of system-wide PLIST_SUBST.
+
+Need to have a MESSAGE on how to start cron at boot.
+I didn't add this, because it should be consistent and
+this should be automated too.
+
+Please look at the extract step, this is so it is in own directory,
+because the rc.d mechanism would install binary to rc.d/cron :(
+Or maybe DECOMPRESS_CMD.shar could be defined instead.

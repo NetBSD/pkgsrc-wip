@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/19 17:24:14 jeremy-c-reed Exp $
+
+SHA1 (cron_4.0_b1.shar) = 87894e57931480275bf6f4a1e49f8e1e4a90a00d
+Size (cron_4.0_b1.shar) = 181856 bytes
+SHA1 (patch-aa) = 5b811044276fdb803171046b5cb60fda6e3dd5df
