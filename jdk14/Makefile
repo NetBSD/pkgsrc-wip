@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/01 13:15:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/14 18:24:55 absd Exp $
 
 DISTNAME=	j2sdk-1_4_2-src-scsl
 PKGREVISION=	1
@@ -30,6 +30,7 @@ USE_GNU_TOOLS+=		make m4
 USE_LANGUAGES=		c c++
 EXTRACT_CMD_OPTS.zip=	-q
 WRKSRC=			${WRKDIR}
+PLIST_SRC=      	${WRKDIR}/PLIST
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 
@@ -38,6 +39,12 @@ BUILD_DIRS=		${WRKSRC}/control/make
 CHECK_SHLIBS=		no # scripts set LD_LIBRARY_PATH
 
 .include "../../mk/bsd.prefs.mk"
+
+JDK14_USE_JCE?=NO
+
+.if !empty(JDK14_USE_JCE:M[Yy][Ee][Ss])
+DISTFILES+=	jce_policy-1_4_2.zip
+.endif
 
 JVM_HOME=	${LOCALBASE}/java/jdk-1.4.2
 JAVA_HOME=	${JVM_HOME}
@@ -141,6 +148,14 @@ post-patch:
 pre-build:
 	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
 	${INSTALL_DATA_DIR} ${JAVA_HOME}/jre/lib/i386/server
+
+post-build:
+.if !empty(JDK14_USE_JCE:M[Yy][Ee][Ss])
+	cd ${WRKDIR}/jce ; pax -rw -pe . ${JDKIMAGEDIR}/jre/lib/security
+	${SED} 's/@JDK14_USE_JCE@//' ${PKGDIR}/PLIST > ${PLIST_SRC}
+.else
+	${SED} '/@JDK14_USE_JCE@/d' ${PKGDIR}/PLIST > ${PLIST_SRC}
+.endif
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
