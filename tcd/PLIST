@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2004/06/16 15:28:10 rillig Exp $
+bin/tcd
+man/man1/tcd.1
