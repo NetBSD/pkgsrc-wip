@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/17 02:21:08 mjasm Exp $
+lib/python2p2/site-packages/generic.py
+lib/python2p2/site-packages/spark.py
+share/py-spark/doc/doc.html
+share/py-spark/doc/doc.tex
+share/py-spark/doc/paper.ps.gz
+share/py-spark/examples/auto/ast.py
+share/py-spark/examples/auto/example.py
+share/py-spark/examples/auto/spark.py
+share/py-spark/examples/auto/t1
+share/py-spark/examples/auto/t2
+share/py-spark/examples/auto/t3
+share/py-spark/examples/auto/t4
+share/py-spark/examples/auto/t5
+share/py-spark/examples/auto/t6
+share/py-spark/examples/auto/token.py
+share/py-spark/examples/paper/ast.py
+share/py-spark/examples/paper/example.py
+share/py-spark/examples/paper/spark.py
+share/py-spark/examples/paper/token.py
+share/py-spark/examples/python/main.py
+share/py-spark/examples/python/parse.py
+share/py-spark/examples/python/scan.py
+share/py-spark/examples/python/spark.py
+@dirrm share/py-spark/examples/python
+@dirrm share/py-spark/examples/paper
+@dirrm share/py-spark/examples/auto
+@dirrm share/py-spark/examples
+@dirrm share/py-spark/doc
+@dirrm share/py-spark/
