@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2004/02/18 23:17:45 poppnk Exp $
+# $NetBSD: Makefile.common,v 1.8 2004/05/10 16:59:33 poppnk Exp $
 #
 
 DISTNAME?=	php-${PHP5_VERSION}
@@ -10,7 +10,7 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.php.net/
 
 # Did conflicts works?
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
 
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=--enable-mbstring
 CONFIGURE_ARGS+=--enable-calendar
 ## XXX THIS COULD BE VULN (alert?)
 CONFIGURE_ARGS+=--enable-sockets
+CONFIGURE_ARGS+=--enable-ftp
 
 .if defined(USE_INET6) && ${USE_INET6} == "NO"
 CONFIGURE_ARGS+=--disable-ipv6
@@ -29,12 +30,9 @@ CONFIGURE_ARGS+=--disable-ipv6
 CONFIGURE_ARGS+=--enable-ipv6
 .endif
 
-# XXX This must be a php5-ftp module
-.if defined(PHP5_WITH_FTP) && ${PHP5_WITH_FTP} == "YES"
-CONFIGURE_ARGS+=--enable-ftp
-.endif
-
 CONFIGURE_ARGS+=--enable-xml
 CONFIGURE_ARGS+=--with-libxml-dir=${PREFIX}
+
+
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/14 20:40:32 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/05/10 16:59:33 poppnk Exp $
 bin/pear
 bin/php
 bin/php-config
@@ -187,7 +187,7 @@ include/php/regex/regex.h
 include/php/regex/regex2.h
 include/php/regex/regex_extra.h
 include/php/regex/utils.h
-lib/php.ini
+etc/php.ini
 lib/php/.filemap
 lib/php/.lock
 lib/php/.registry/archive_tar.reg
