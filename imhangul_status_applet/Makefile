@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/02/17 02:55:44 blef Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/17 23:35:02 minskim Exp $
 #
 
 DISTNAME=		imhangul_status_applet-0.2
@@ -12,7 +12,7 @@ COMMENT=		GNOME2 applet to show imhangul status
 DEPENDS=		imhangul>=0.9.6:../../inputmethod/imhangul
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
@@ -20,5 +20,7 @@ USE_LIBTOOL=		yes
 GCONF2_SCHEMAS=		imhangul_status.schemas
 
 .include "../../devel/GConf2/schemas.mk"
-.include "../../x11/gnome-panel/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
