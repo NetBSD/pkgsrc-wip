@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.442 2003/09/11 00:42:45 blef Exp $
-# $NetBSD: Makefile,v 1.442 2003/09/11 00:42:45 blef Exp $
+# $Id: Makefile,v 1.443 2003/09/12 17:54:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.443 2003/09/12 17:54:36 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -130,9 +130,7 @@ SUBDIR+=	glaxium
 SUBDIR+=	gnome2-extras
 SUBDIR+=	gnome2-pkgview
 SUBDIR+=	gnome2-system-monitor
-SUBDIR+=	gnome2-themes
 SUBDIR+=	gnome2-themes-extra
-SUBDIR+=	gnome2-userdocs
 SUBDIR+=	gnomeicu
 SUBDIR+=	gnucash-docs
 SUBDIR+=	gnunet
@@ -144,7 +142,6 @@ SUBDIR+=	gtick
 SUBDIR+=	gtk-engines-thinice
 SUBDIR+=	gtk-sharp
 SUBDIR+=	gtk2-engines-mist
-SUBDIR+=	gtk2-thinice-engine
 SUBDIR+=	gurlchecker
 SUBDIR+=	hasciicam
 SUBDIR+=	ht
@@ -413,7 +410,6 @@ SUBDIR+=	xmms-pitch
 SUBDIR+=	xplore
 SUBDIR+=	xsh
 SUBDIR+=	yafray
-SUBDIR+=	yelp
 SUBDIR+=	zebra-pj
 SUBDIR+=	zenity
 SUBDIR+=	zinf
