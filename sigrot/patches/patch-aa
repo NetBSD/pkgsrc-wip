@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/30 15:32:42 drue Exp $
+$NetBSD: patch-aa,v 1.2 2003/05/02 07:23:15 drue Exp $
 
---- Makefile.orig	Wed Apr 30 17:15:28 2003
-+++ Makefile	Wed Apr 30 17:15:28 2003
-@@ -1,27 +1,18 @@
+--- Makefile.orig	Wed Dec 20 20:17:56 2000
++++ Makefile	Fri May  2 09:07:51 2003
+@@ -1,39 +1,20 @@
 -# Edited for Debian GNU/Linux.
 -DESTDIR	      =
 -
@@ -11,11 +11,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/30 15:32:42 drue Exp $
 -MANDEST	      = $(DESTDIR)/usr/share/man/man1
 +# Edited for NetBSD
  
-+DEST	      = $(PREFIX)/bin
-+MANDEST	      = $(PREFIX)/man/man1
  MANFILE	      = sigrot.1
 -
- INSTALL	      = cp
+-INSTALL	      = cp
 -
  LD	      = $(CC)
 -
@@ -24,6 +22,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/30 15:32:42 drue Exp $
  SHELL	      = /bin/sh
 -
  SRCS	      = sigrot.c
++RM            = rm -f
  
  all:		$(PROGRAM)
  
@@ -31,10 +30,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/30 15:32:42 drue Exp $
  		@$(LD) $(SRCS) -o $(PROGRAM)
 -		@echo "done"
  
- clean:;		@rm -f core
- 		@rm -f sigrot
-@@ -29,11 +20,3 @@
- clobber:;	@rm -f $(PROGRAM) core tags
+-clean:;		@rm -f core
+-		@rm -f sigrot
++clean:;		$(RM) core
++		@$(RM) sigrot
+ 
+-clobber:;	@rm -f $(PROGRAM) core tags
++clobber:;	@$(RM) $(PROGRAM) core tags
  
  install:	$(PROGRAM)
 -		@echo Installing $(PROGRAM) in $(DEST)
