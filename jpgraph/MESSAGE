@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/04/18 04:21:56 adrian_p Exp $
+
+Please read JpGraph license terms in:
+
+${PREFIX}/share/doc/jpgraph/QPL.txt
+
+Further information can be found on:
+
+http://www.aditus.nu/jpgraph/index.php
+
+===========================================================================
