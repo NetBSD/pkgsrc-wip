@@ -1,3 +1,0 @@
-Although it's only a minor update of lang/sun-j{re|dk}-14 it has problem
-with NetBSD 1.6.x. For details see:
-http://mail-index.netbsd.org/tech-pkg/2003/07/20/0007.html
