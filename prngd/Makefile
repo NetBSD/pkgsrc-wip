@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2004/07/12 02:53:29 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/12 16:47:28 othyro Exp $
 
-DISTNAME=		prngd-0.9.28
+DISTNAME=		prngd-0.9.29
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/related/prngd/ \
 			ftp://ftp.ayamura.org/pub/prngd/ \
@@ -22,9 +22,11 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/prngd ${PREFIX}/bin/prngd
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/prngd
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/prngd
 	${INSTALL_DATA} ${WRKSRC}/00README ${PREFIX}/share/doc/prngd
 	${INSTALL_DATA} ${WRKSRC}/00README.gatherers ${PREFIX}/share/doc/prngd
 	${INSTALL_DATA} ${WRKSRC}/00DESIGN ${PREFIX}/share/doc/prngd
+	${INSTALL_DATA} ${WRKSRC}/contrib/NetBSD1/prngd.conf.netbsd ${PREFIX}/share/examples/prngd
 #	${INSTALL_MAN} ${WRKSRC}/prngd.man ${PREFIX}/man/man1/prngd.1
 
 .include "../../mk/bsd.pkg.mk"
