@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.67 2003/04/13 11:03:18 jmmv Exp $
-# $NetBSD: Makefile,v 1.67 2003/04/13 11:03:18 jmmv Exp $
+# $Id: Makefile,v 1.68 2003/04/13 11:47:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.68 2003/04/13 11:47:22 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -39,6 +39,7 @@ SUBDIR+=	jdk13
 SUBDIR+=	jdk13-openjit
 SUBDIR+=	liquidwar
 SUBDIR+=	mailfilter
+SUBDIR+=	mopac
 SUBDIR+=	nagios-base
 SUBDIR+=	nagios-plugin-ldap
 SUBDIR+=	nagios-plugin-mysql
