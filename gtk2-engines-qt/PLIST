@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/06 22:44:42 mpasternak Exp $
-lib/gtk-2.0/2.2.0/engines/libqtengine.a
-lib/gtk-2.0/2.2.0/engines/libqtengine.la
-lib/gtk-2.0/2.2.0/engines/libqtengine.so
+@comment $NetBSD: PLIST,v 1.2 2004/05/09 22:35:59 blef Exp $
+lib/gtk-2.0/2.4.0/engines/libqtengine.a
+lib/gtk-2.0/2.4.0/engines/libqtengine.la
+lib/gtk-2.0/2.4.0/engines/libqtengine.so
 lib/pkgconfig/gtk-qt-engine-2.pc
 share/themes/Qt/ICON.png
 share/themes/Qt/README.html
