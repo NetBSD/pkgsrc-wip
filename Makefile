@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.57 2003/04/11 00:18:39 lsed Exp $
-# $NetBSD: Makefile,v 1.57 2003/04/11 00:18:39 lsed Exp $
+# $Id: Makefile,v 1.58 2003/04/11 07:38:28 lsed Exp $
+# $NetBSD: Makefile,v 1.58 2003/04/11 07:38:28 lsed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -46,7 +46,6 @@ SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	navigatrix
 SUBDIR+=	nvtv
-SUBDIR+=	ogmtools
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Net-Jabber
 SUBDIR+=	p5-Unicode-String
