@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/10/08 23:38:14 adrian_p Exp $
+
+--- include/ec_resolv.h.orig	2004-10-09 00:34:49.000000000 +0100
++++ include/ec_resolv.h	2004-10-09 00:35:34.000000000 +0100
+@@ -8,7 +8,7 @@
+ 
+ #ifdef HAVE_ARPA_NAMESER_H
+    #include <arpa/nameser.h>
+-   #ifndef OS_BSD_OPEN
++   #if !defined OS_BSD_OPEN && !defined __NetBSD__
+       #include <arpa/nameser_compat.h>
+    #endif
+    #include <resolv.h>
