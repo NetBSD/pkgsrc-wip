@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.360 2003/08/05 02:08:20 xtraeme Exp $
-# $NetBSD: Makefile,v 1.360 2003/08/05 02:08:20 xtraeme Exp $
+# $Id: Makefile,v 1.361 2003/08/05 22:23:44 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.361 2003/08/05 22:23:44 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -177,6 +177,7 @@ SUBDIR+=	links-hacked
 SUBDIR+=	linux-modutils
 SUBDIR+=	linux-nfs-utils
 SUBDIR+=	liquidwar
+SUBDIR+=	lletters
 SUBDIR+=	lmarbles
 SUBDIR+=	loudmouth
 SUBDIR+=	mailfilter
@@ -287,6 +288,7 @@ SUBDIR+=	rcorder
 SUBDIR+=	regexxer
 SUBDIR+=	rlpr
 SUBDIR+=	rosegarden-current
+SUBDIR+=	samba3
 SUBDIR+=	scm
 SUBDIR+=	scons
 SUBDIR+=	scponly
