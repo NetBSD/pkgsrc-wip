@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/13 11:46:23 jmmv Exp $
+
+SHA1 (mopac7.tar.Z) = 6d84877e515b95544941bb671cf18ec79e7498ef
+Size (mopac7.tar.Z) = 606379 bytes
+SHA1 (mopac7-man.tar.Z) = da84555d92446b94d20d5200874092d070dbae84
+Size (mopac7-man.tar.Z) = 467295 bytes
+SHA1 (mopac7-linux.diff.Z) = dc4f473c0e841aefee30d13a2e19d63da5c15f78
+Size (mopac7-linux.diff.Z) = 134772 bytes
+SHA1 (patch-aa) = 8ef8e1dd8cc1b61cd24dfad27b2aec276d3ac4be
+SHA1 (patch-ab) = 03ca5e6df0d5f871feb4998af9bb94b3876a06ea
