@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1427 2004/08/13 14:08:50 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1427 2004/08/13 14:08:50 thomasklausner Exp $
+# $Id: Makefile,v 1.1428 2004/08/16 19:38:58 minskim Exp $
+# $NetBSD: Makefile,v 1.1428 2004/08/16 19:38:58 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -785,7 +785,6 @@ SUBDIR+=	vtk-data
 SUBDIR+=	vtk-docs
 SUBDIR+=	vtk-python
 SUBDIR+=	webcleaner
-SUBDIR+=	weewm
 SUBDIR+=	west
 SUBDIR+=	which
 SUBDIR+=	wimon-devel
