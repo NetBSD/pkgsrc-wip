@@ -1,4 +1,0 @@
-fragroute intercepts, modifies, and rewrites egress traffic destined
-for a specified host, implementing most of the attacks described in
-the Secure Networks "Insertion, Evasion, and Denial of Service:
-Eluding Network Intrusion Detection" paper of January 1998.

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/24 23:56:49 poppnk Exp $
-bin/dega
-etc/fragroute.conf
-man/man8/fragroute.8
-man/man8/fragtest.8
-sbin/fragroute
-sbin/fragtest
