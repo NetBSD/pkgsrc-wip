@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/13 04:07:33 cetrox Exp $
+$NetBSD: distinfo,v 1.2 2004/12/14 12:02:14 cetrox Exp $
 
-SHA1 (PyPanel-1.2.tar.gz) = 7cf88c656af9757ed79089c4c490712ecd368e3f
-Size (PyPanel-1.2.tar.gz) = 20459 bytes
+SHA1 (PyPanel-2.0.tar.gz) = ab7cc4b39eb23b9277bc973009b99f4e774717fa
+Size (PyPanel-2.0.tar.gz) = 25904 bytes
+SHA1 (patch-aa) = b8dc2893e2efb060522ab0d65f2bd84719cf67e5

@@ -1,0 +1,18 @@
+--- setup.py.orig	2004-12-13 23:57:59.000000000 -0300
++++ setup.py	2004-12-14 00:28:46.000000000 -0300
+@@ -30,7 +30,6 @@
+         libs = os.popen("%s --libs" % config).read().strip().split()
+         if libs:
+             for lib in libs:
+-                if lib not in largs:
+                     largs.append(lib)
+     else:
+         if config == "imlib2-config":
+@@ -39,7 +38,6 @@
+             sys.exit()
+     
+ cargs.sort()
+-largs.sort()
+ 
+ # Fix the shebang
+ for line in fileinput.input(["pypanel"], inplace=1):

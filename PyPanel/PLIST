@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/13 04:07:33 cetrox Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/14 12:02:14 cetrox Exp $
 bin/pypanel
 ${PYSITELIB}/ppmodule.so
 ${PYSITELIB}/pypanel/COPYING
 ${PYSITELIB}/pypanel/README
+${PYSITELIB}/pypanel/ppicon.png
 ${PYSITELIB}/pypanel/pypanelrc
 @dirrm ${PYSITELIB}/pypanel
