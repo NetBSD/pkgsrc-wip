@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/21 21:16:54 bjan2 Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/19 21:24:36 xtraeme Exp $
 
-DISTNAME=	foomatic-db-current
+DISTNAME=	foomatic-db-20040319
 CATEGORIES=	print
 MASTER_SITES=	http://www.linuxprinting.org/download/foomatic/
 
