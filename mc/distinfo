@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2005/01/15 18:36:39 rillig Exp $
-
-SHA1 (mc-4.6.1-pre2b.tar.gz) = 1e66efa538cd682fca9bee16b4d6b751b4d87bab
-Size (mc-4.6.1-pre2b.tar.gz) = 3903628 bytes
-SHA1 (patch-ab) = 7f6ace2493bc2e453f570153073183a289fbd153
