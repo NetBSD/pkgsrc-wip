@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/24 10:10:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/25 07:20:19 xtraeme Exp $
 
 DISTNAME=	gnome2-extras-2.2.3
 CATEGORIES=	meta-pkgs x11 gnome2
@@ -16,6 +16,7 @@ DEPENDS+=	regexxer>=0.4:../../wip/regexxer
 DEPENDS+=	stickynotes-applet>=1.2.0:../../wip/stickynotes-applet
 DEPENDS+=	zenity>=1.2:../../wip/zenity
 DEPENDS+=	gtranslator>=0.99:../../wip/gtranslator
+DEPENDS+=       tsclient>=0.104:../../wip/tsclient
 
 USE_X11=	yes
 USE_BUILDLINK2=	yes
