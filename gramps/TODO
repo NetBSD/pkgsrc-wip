@@ -1,3 +1,11 @@
+/usr/pkg/libdata/scrollkeeper/db/ru/scrollkeeper_cl.xml:13: parser error : Input is not proper UTF-8, indicate encoding !
+    <title>Приложения</title>
+           ^
+/usr/pkg/libdata/scrollkeeper/db/ru/scrollkeeper_cl.xml:13: error: Bytes: 0xF0 0xD2 0xC9 0xCC
+    <title>Приложения</title>
+
+-=-=-=-=
+
 gnome-help wouldn't start:
 
 (gnome-help:12416): Bonobo-CRITICAL **: file bonobo-running-context.c: line 406 (bonobo_running_context_auto_exit_unref): assertion `object != NULL' failed
