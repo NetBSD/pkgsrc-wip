@@ -1,0 +1,227 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/30 05:59:30 jeremy-c-reed Exp $
+bin/gcompris
+bin/gcompris-edit
+@unexec install-info --delete
+info/gcompris.info
+@exec install-info
+lib/gcompris/libadvanced_colors.la
+lib/gcompris/libadvanced_colors.so
+lib/gcompris/libalgebra.la
+lib/gcompris/libalgebra.so
+lib/gcompris/libalgebra_guesscount.la
+lib/gcompris/libalgebra_guesscount.so
+lib/gcompris/libcanal_lock.la
+lib/gcompris/libcanal_lock.so
+lib/gcompris/libchess.la
+lib/gcompris/libchess.so
+lib/gcompris/libclick_on_letter.la
+lib/gcompris/libclick_on_letter.so
+lib/gcompris/libclickgame.la
+lib/gcompris/libclickgame.so
+lib/gcompris/libclockgame.la
+lib/gcompris/libclockgame.so
+lib/gcompris/libcolors.la
+lib/gcompris/libcolors.so
+lib/gcompris/libdraw.la
+lib/gcompris/libdraw.so
+lib/gcompris/libenumerate.la
+lib/gcompris/libenumerate.so
+lib/gcompris/liberase.la
+lib/gcompris/liberase.so
+lib/gcompris/libgletters.la
+lib/gcompris/libgletters.so
+lib/gcompris/libhanoi.la
+lib/gcompris/libhanoi.so
+lib/gcompris/libimageid.la
+lib/gcompris/libimageid.so
+lib/gcompris/libleftright.la
+lib/gcompris/libleftright.so
+lib/gcompris/libmachpuzzle.la
+lib/gcompris/libmachpuzzle.so
+lib/gcompris/libmaze.la
+lib/gcompris/libmaze.so
+lib/gcompris/libmemory.la
+lib/gcompris/libmemory.so
+lib/gcompris/libmenu.la
+lib/gcompris/libmenu.so
+lib/gcompris/libmissingletter.la
+lib/gcompris/libmissingletter.so
+lib/gcompris/libmoney.la
+lib/gcompris/libmoney.so
+lib/gcompris/libparatrooper.la
+lib/gcompris/libparatrooper.so
+lib/gcompris/libplanegame.la
+lib/gcompris/libplanegame.so
+lib/gcompris/librailroad.la
+lib/gcompris/librailroad.so
+lib/gcompris/libread_colors.la
+lib/gcompris/libread_colors.so
+lib/gcompris/libreading.la
+lib/gcompris/libreading.so
+lib/gcompris/libreversecount.la
+lib/gcompris/libreversecount.so
+lib/gcompris/libshapegame.la
+lib/gcompris/libshapegame.so
+lib/gcompris/libsmallnumbers.la
+lib/gcompris/libsmallnumbers.so
+lib/gcompris/libsubmarine.la
+lib/gcompris/libsubmarine.so
+lib/gcompris/libsuperbrain.la
+lib/gcompris/libsuperbrain.so
+lib/gcompris/libtarget.la
+lib/gcompris/libtarget.so
+lib/gcompris/libtraffic.la
+lib/gcompris/libtraffic.so
+lib/gcompris/libwordsgame.la
+lib/gcompris/libwordsgame.so
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gcompris.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gcompris.mo
+lib/menu/gcompris
+share/gcompris/boards/Makefile
+share/gcompris/boards/advanced_colors/Makefile
+share/gcompris/boards/babymatch/Makefile
+share/gcompris/boards/babyshapes/Makefile
+share/gcompris/boards/doubleentry/Makefile
+share/gcompris/boards/geography/Makefile
+share/gcompris/boards/imageid/Makefile
+share/gcompris/boards/imagename/Makefile
+share/gcompris/boards/missing_letter/Makefile
+share/gcompris/boards/paintings/Makefile
+share/gcompris/boards/read_colors/Makefile
+share/gcompris/boards/scales/Makefile
+share/gcompris/boards/scales/board1.xml
+share/gnome/apps/Games/gcompris-edit.desktop
+share/gnome/apps/Games/gcompris.desktop
+share/gnome/help/gcompris/C/gcompris.html
+share/gnome/help/gcompris/C/overview.jpg
+share/gnome/help/gcompris/C/topic.dat
+share/gnome/help/gcompris/fr/gcompris.html
+share/gnome/help/gcompris/fr/overview.jpg
+share/gnome/help/gcompris/fr/topic.dat
+share/pixmaps/gcompris-edit.png
+share/pixmaps/gcompris.png
+@dirrm share/gnome/help/gcompris/fr
+@dirrm share/gnome/help/gcompris/C
+@dirrm share/gnome/help/gcompris
+@dirrm share/gnome/help
+@dirrm share/gnome/apps/Games
+@dirrm share/gcompris/boards/wordsgame
+@dirrm share/gcompris/boards/target
+@dirrm share/gcompris/boards/sounds/fr
+@dirrm share/gcompris/boards/sounds/es
+@dirrm share/gcompris/boards/sounds/en
+@dirrm share/gcompris/boards/sounds/de
+@dirrm share/gcompris/boards/sounds
+@dirrm share/gcompris/boards/scales
+@dirrm share/gcompris/boards/reading
+@dirrm share/gcompris/boards/read_colors
+@dirrm share/gcompris/boards/railroad
+@dirrm share/gcompris/boards/paintings/level6
+@dirrm share/gcompris/boards/paintings/level5
+@dirrm share/gcompris/boards/paintings/level4
+@dirrm share/gcompris/boards/paintings/level3
+@dirrm share/gcompris/boards/paintings/level2
+@dirrm share/gcompris/boards/paintings/level1
+@dirrm share/gcompris/boards/paintings/kandinky.comp8
+@dirrm share/gcompris/boards/paintings
+@dirrm share/gcompris/boards/music
+@dirrm share/gcompris/boards/missing_letter
+@dirrm share/gcompris/boards/leftright
+@dirrm share/gcompris/boards/imagename
+@dirrm share/gcompris/boards/imageid
+@dirrm share/gcompris/boards/geography
+@dirrm share/gcompris/boards/gcompris/misc
+@dirrm share/gcompris/boards/gcompris/letters
+@dirrm share/gcompris/boards/gcompris/dice
+@dirrm share/gcompris/boards/gcompris/buttons
+@dirrm share/gcompris/boards/gcompris/bonus
+@dirrm share/gcompris/boards/gcompris/animals
+@dirrm share/gcompris/boards/gcompris
+@dirrm share/gcompris/boards/flags
+@dirrm share/gcompris/boards/fishes
+@dirrm share/gcompris/boards/draw
+@dirrm share/gcompris/boards/doubleentry
+@dirrm share/gcompris/boards/colors
+@dirrm share/gcompris/boards/clockgame
+@dirrm share/gcompris/boards/boardicons
+@dirrm share/gcompris/boards/babyshapes
+@dirrm share/gcompris/boards/babymatch
+@dirrm share/gcompris/boards/algebra_guesscount
+@dirrm share/gcompris/boards/advanced_colors
+@dirrm share/gcompris/boards
+@dirrm lib/menu
+@dirrm ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/tr
+@dirrm ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/sv
+@dirrm ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/sk
+@dirrm ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/ru
+@dirrm ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/ro
+@dirrm ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/pt_BR
+@dirrm ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/pt
+@dirrm ${PKGLOCALEDIR}/locale/no/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/no
+@dirrm ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/nl
+@dirrm ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/ms
+@dirrm ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/ml
+@dirrm ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/mk
+@dirrm ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/lt
+@dirrm ${PKGLOCALEDIR}/locale/it/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/it
+@dirrm ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/hu
+@dirrm ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/fr
+@dirrm ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/fi
+@dirrm ${PKGLOCALEDIR}/locale/es/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/es
+@dirrm ${PKGLOCALEDIR}/locale/el/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/el
+@dirrm ${PKGLOCALEDIR}/locale/de/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/de
+@dirrm ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/cs
+@dirrm ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/ca
+@dirrm ${PKGLOCALEDIR}/locale/az/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/az
+@dirrm ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/ar
+@dirrm ${PKGLOCALEDIR}/locale/am/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/am
+@dirrm ${PKGLOCALEDIR}/locale
+@dirrm lib/gcompris
