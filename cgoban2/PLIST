@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2004/06/25 15:09:20 rillig Exp $
+bin/${PKGNAME}
+share/${PKGNAME}/cgoban.jar
+@dirrm share/${PKGNAME}
