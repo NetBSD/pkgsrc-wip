@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.207 2003/06/02 22:25:34 poppnk Exp $
-# $NetBSD: Makefile,v 1.207 2003/06/02 22:25:34 poppnk Exp $
+# $Id: Makefile,v 1.208 2003/06/03 03:16:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.208 2003/06/03 03:16:47 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -31,6 +31,7 @@ SUBDIR+=	dancer-ircd
 SUBDIR+=	darkice
 SUBDIR+=	defendguin
 SUBDIR+=	devhelp
+SUBDIR+=	dfbsee
 SUBDIR+=	directfb
 SUBDIR+=	dosbox
 SUBDIR+=	drweb
