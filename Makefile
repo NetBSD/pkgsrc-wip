@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.696 2003/11/28 10:27:06 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.696 2003/11/28 10:27:06 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.697 2003/11/28 16:38:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.697 2003/11/28 16:38:29 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -26,6 +26,7 @@ SUBDIR+=	XFree86-fontserver
 SUBDIR+=	XFree86-libs
 SUBDIR+=	XFree86-man
 SUBDIR+=	XFree86-server
+SUBDIR+=	abiword2
 SUBDIR+=	abuse_sdl
 SUBDIR+=	acid
 SUBDIR+=	adodb
@@ -613,6 +614,7 @@ SUBDIR+=	wmclockmon
 SUBDIR+=	wmitime
 SUBDIR+=	wmnetload
 SUBDIR+=	words
+SUBDIR+=	wv
 SUBDIR+=	wxhugo
 SUBDIR+=	xawtv
 SUBDIR+=	xbase
