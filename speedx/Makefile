@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:33:40 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/12 22:23:52 blef Exp $
 
 DISTNAME=	SpeedX-0.1.4d
 PKGNAME=	speedx-0.1.4d
@@ -14,7 +14,7 @@ SITES_mercrain.s3m.zip=	http://www.modarchive.com/cgi-bin/download.cgi/M/
 
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 
 post-build:
@@ -34,6 +34,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/speedx
 	${INSTALL_DATA} ${WRKDIR}/mercrain.s3m ${PREFIX}/share/speedx/music/
 
-.include "../../graphics/png/buildlink2.mk"
-.include "../../audio/libmikmod/buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../audio/libmikmod/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
