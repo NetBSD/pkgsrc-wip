@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/30 04:11:12 blef Exp $
+lib/gtk-2.0/2.2.0/engines/libmist.a
+lib/gtk-2.0/2.2.0/engines/libmist.la
+lib/gtk-2.0/2.2.0/engines/libmist.so
+share/themes/Mist/gtk-2.0/gtkrc
+@dirrm share/themes/Mist/gtk-2.0
+@dirrm share/themes/Mist
+@dirrm lib/gtk-2.0/2.2.0/engines
