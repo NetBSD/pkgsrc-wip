@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.6 2004/10/17 10:51:10 rillig Exp $
+
+--- configure.orig	2003-02-05 19:09:04.000000000 +0100
++++ configure	2004-10-17 12:45:00.000000000 +0200
+@@ -5290,7 +5290,7 @@
+     MKINSTALLDIRS="$ac_aux_dir/mkinstalldirs"
+   fi
+   if test -z "$MKINSTALLDIRS"; then
+-    MKINSTALLDIRS="\$(top_srcdir)/mkinstalldirs"
++    MKINSTALLDIRS="\${top_srcdir}/mkinstalldirs"
+   fi
+ 
+ 
+@@ -8384,7 +8384,7 @@
+ 
+ 
+ if test "x$USE_INCLUDED_LIBINTL" = xyes; then
+-    CPPFLAGS="$CPPFLAGS -I\$(top_builddir)/intl -I\$(top_srcdir)/intl"
++    :
+ fi
+ 
+ ALL_DOC_LINGUAS="es hu it pl ru"
+@@ -8406,7 +8406,6 @@ for h_lang in $ALL_DOC_LINGUAS; do
+ done
+ 
+ 
+-CPPFLAGS="$CPPFLAGS -I\$(top_srcdir)"
+ 
+ if test "x$GCC" = xyes; then
+     CFLAGS="$CFLAGS -Wall"
