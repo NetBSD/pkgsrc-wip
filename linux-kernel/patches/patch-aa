@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/27 17:51:09 jeremy-c-reed Exp $
+
+--- Makefile.orig	2003-05-01 10:21:21.000000000 -0700
++++ Makefile	2003-05-01 10:21:42.000000000 -0700
+@@ -16,7 +16,7 @@
+ HPATH   	= $(TOPDIR)/include
+ FINDHPATH	= $(HPATH)/asm $(HPATH)/linux $(HPATH)/scsi $(HPATH)/net $(HPATH)/math-emu
+ 
+-HOSTCC  	= gcc
++HOSTCC  	= $(CC)
+ HOSTCFLAGS	= -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer
+ 
+ CROSS_COMPILE 	=
+@@ -27,7 +27,7 @@
+ 
+ AS		= $(CROSS_COMPILE)as
+ LD		= $(CROSS_COMPILE)ld
+-CC		= $(CROSS_COMPILE)gcc
++#CC		= $(CROSS_COMPILE)gcc
+ CPP		= $(CC) -E
+ AR		= $(CROSS_COMPILE)ar
+ NM		= $(CROSS_COMPILE)nm
+@@ -35,8 +35,8 @@
+ OBJCOPY		= $(CROSS_COMPILE)objcopy
+ OBJDUMP		= $(CROSS_COMPILE)objdump
+ MAKEFILES	= $(TOPDIR)/.config
+-GENKSYMS	= /sbin/genksyms
+-DEPMOD		= /sbin/depmod
++GENKSYMS	= $(PREFIX)/sbin/genksyms
++DEPMOD		= $(PREFIX)/sbin/depmod
+ MODFLAGS	= -DMODULE
+ CFLAGS_KERNEL	=
+ PERL		= perl
