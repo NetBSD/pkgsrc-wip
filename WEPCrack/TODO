@@ -1,0 +1,6 @@
+$Id: TODO,v 1.1 2003/06/03 04:59:01 xtraeme Exp $
+
+* perl is required, so you should add USE_BUILDLINK
+  and the perl5 buildlink too.
+* Replace the url of the sourceforge mirrors with
+  MASTER_SITE_SOURCEFORGE.
