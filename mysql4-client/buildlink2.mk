@@ -1,26 +1,27 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/07/09 21:40:47 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/07/11 20:36:25 marc Exp $
 
 .if !defined(MYSQL_CLIENT_BUILDLINK2_MK)
 MYSQL_CLIENT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			mysql4-client
-BUILDLINK_DEPENDS.mysql-client?=	mysql4-client>=4.0.13
-BUILDLINK_PKGSRCDIR.mysql-client?=	../../databases/mysql-client
+BUILDLINK_DEPENDS.mysql4-client?=	mysql4-client>=4.0.13
+BUILDLINK_PKGSRCDIR.mysql4-client?=	../../wip/mysql4-client
 
-EVAL_PREFIX+=	BUILDLINK_PREFIX.mysql-client=mysql-client
-BUILDLINK_PREFIX.mysql-client_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.mysql-client=	include/mysql/*.h
-BUILDLINK_FILES.mysql-client+=	lib/mysql/libmysqlclient.*
+EVAL_PREFIX+=	BUILDLINK_PREFIX.mysql4-client=mysql4-client
+BUILDLINK_PREFIX.mysql4-client_DEFAULT=	${LOCALBASE}
+BUILDLINK_FILES.mysql4-client=	include/mysql/*.h
+BUILDLINK_FILES.mysql4-client+=	lib/mysql/libmysqlclient.*
 
-FIX_RPATH+=	BUILDLINK_LDFLAGS.mysql-client
-BUILDLINK_LDFLAGS.mysql-client= \
-	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql			\
-	-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql
+FIX_RPATH+=	BUILDLINK_LDFLAGS.mysql4-client
+BUILDLINK_LDFLAGS.mysql4-client= \
+	-L${BUILDLINK_PREFIX.mysql4-client}/lib/mysql			\
+	-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.mysql4-client}/lib/mysql
 
+.include "../../devel/readline/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 
-BUILDLINK_TARGETS+=	mysql-client-buildlink
+BUILDLINK_TARGETS+=	mysql4-client-buildlink
 
-mysql-client-buildlink: _BUILDLINK_USE
+mysql4-client-buildlink: _BUILDLINK_USE
 
 .endif	# MYSQL_CLIENT_BUILDLINK2_MK
