@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/17 16:19:13 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/07 21:38:10 adrian_p Exp $
 
-DISTNAME=	anope-1.7.6
+DISTNAME=	anope-1.7.8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anope/}
 
@@ -13,6 +13,7 @@ USE_BUILDLINK3=		YES
 PTHREAD_OPTS+=		require
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
+USE_PERL5=		build
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/17 16:19:13 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/07 21:38:10 adrian_p Exp $
 share/anope/anoperc
+share/anope/anopesmtp
 share/examples/anope/example.chk
 share/examples/anope/example.conf
 share/anope/languages/cat
