@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/04/22 21:00:40 adrian_p Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/22 14:43:42 adrian_p Exp $
 #
 
-DISTNAME=	hydra-3.1
+DISTNAME=	hydra-4.0-src
+PKGNAME=	hydra-4.0
+WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	security
 MASTER_SITES=	http://www.thc.org/releases/
 
@@ -11,8 +13,20 @@ COMMENT=	Login password cracker
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
+ALL_TARGET=	all ssl
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
+pre-configure:
+	${CP} ${WRKSRC}/Makefile.am ${WRKSRC}/Makefile.am.new
+	${SED} -e 's#@SSLBASE@#${BUILDLINK_PREFIX.openssl}#g' \
+		-e 's#@PREFIX@#${PREFIX}#g' \
+		< ${WRKSRC}/Makefile.am.new > ${WRKSRC}/Makefile.am
+
+	${CP} ${WRKSRC}/configure ${WRKSRC}/configure.new
+	${SED} -e 's#@PREFIX@#${PREFIX}#g' \
+		< ${WRKSRC}/configure.new > ${WRKSRC}/configure
+
 .include "../../security/openssl/buildlink3.mk"
+.include "../../wip/libssh/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

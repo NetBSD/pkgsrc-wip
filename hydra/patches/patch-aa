@@ -1,13 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2004/04/22 21:00:42 adrian_p Exp $
+$NetBSD: patch-aa,v 1.5 2004/05/22 14:43:43 adrian_p Exp $
 
---- Makefile.am.orig	Thu Apr 22 20:49:08 2004
-+++ Makefile.am	Thu Apr 22 20:49:27 2004
-@@ -3,7 +3,7 @@
+--- Makefile.am.orig	Sun Apr 11 10:19:01 2004
++++ Makefile.am	Sat May 22 00:32:55 2004
+@@ -2,9 +2,9 @@
+ # Makefile for Hydra - (c) 2001-2004 by van Hauser / THC <vh@thc.org>
  #
  
- CC = gcc
--OPTS = -O2 -I. -Wall
-+OPTS = ${CFLAGS} -I/usr/pkg/include/openssl
- LIBS = 
- DIR = /bin
+-OPTS=-I. -Wall -O2
++OPTS=-I. ${CFLAGS} -I@SSLBASE@/include/openssl -I${PREFIX}/include/libssh
+ # -ggdb -pedantic
+-LIBS=-lm
++LIBS=-lm -Wl,-R@PREFIX@/lib -Wl,-R/usr/lib
+ DIR=/bin
  
+ SRC = hydra-vnc.c hydra-pcnfs.c hydra-rexec.c hydra-nntp.c hydra-socks5.c \
