@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/05/08 02:17:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2003/05/27 11:51:02 xtraeme Exp $
 #
 
 DISTNAME=	mod_ometer-1.2.0
 PKGNAME=	${DISTNAME:S/mod_/ap-/}
-CATEGORIES=	wip
+CATEGORIES=	www
 MASTER_SITES=	http://www.umich.edu/~umweb/downloads/
 
 MAINTAINER=	jrp@hispabsd.org
