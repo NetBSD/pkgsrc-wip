@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/05/10 15:13:13 arved Exp $
+
+SHA1 (help2man_1.33.1.tar.gz) = 7c94663169aa5df5b732d32dafe34e0090ca8f46
+Size (help2man_1.33.1.tar.gz) = 75293 bytes
+SHA1 (patch-hacklocaledir.c) = fc636f5c68f0d1d3ffb088a3960e739209f15053
+SHA1 (patch-Makefile.in) = b3c399d8ac1ab19ba26a14619cca143a76a51a6c

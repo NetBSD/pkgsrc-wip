@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/10 15:13:13 arved Exp $
+bin/help2man
+lib/hacklocaledir.so
+man/man1/help2man.1
+man/fr/man1/help2man.1
+man/pl/man1/help2man.1
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/help2man.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/help2man.mo
