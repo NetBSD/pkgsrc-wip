@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/04/04 21:29:20 roelants Exp $
-You must configure RT by editing ${PREFIX}/etc/rt3/RT_SiteConfig.pm.
-To initialize the RT database, run
-	${PREFIX}/sbin/rt-setup-database --action init
-as a user in the ${RT_GROUP} group or as superuser.
-See also the manual on ${HOMEPAGE}docs.html
-===========================================================================
