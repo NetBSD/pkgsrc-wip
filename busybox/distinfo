@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/04 03:12:17 poppnk Exp $
+
+SHA1 (busybox-0.60.5.tar.gz) = f36bb8e058e42407f89166ab1720cb5b207ea0a2
+Size (busybox-0.60.5.tar.gz) = 785216 bytes

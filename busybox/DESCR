@@ -1,0 +1,7 @@
+BusyBox combines tiny versions of many common UNIX 
+utilites into a single small executable. It provides 
+minimalist replacements for most of the utlities you
+usually find in GNU fileutils, shellutils, etc.
+
+The utilites in BusyBox generally have fewe options
+thatn their full-featured GNU cousins.
