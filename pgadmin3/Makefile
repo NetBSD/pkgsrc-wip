@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/06 06:15:18 mpasternak Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/07 12:25:35 cjep Exp $
 #
 
 DISTNAME=		pgadmin3-1.0.2
@@ -30,5 +30,5 @@ BROKEN=		Needs wxGTK to be compiled against GTK2 -- unset WXGTK_USE_GTK1 and rei
 
 .include "../../x11/wxGTK/buildlink3.mk"
 .include "../../wip/wxGTK-contrib/buildlink3.mk"
-.include "../../wip/postgresql74-lib/buildlink3.mk"
+.include "../../databases/postgresql74-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
