@@ -1,84 +1,35 @@
-$NetBSD: patch-ab,v 1.1.1.2 2003/06/03 16:38:35 schnoebe Exp $
+$NetBSD: patch-ab,v 1.1.1.3 2003/06/03 16:39:53 schnoebe Exp $
 
---- Makefile.in.orig	Tue Mar 12 15:07:06 2002
-+++ Makefile.in
-@@ -4,6 +4,7 @@
- ##  Hacked in by Jean-Michel Dault <jmdault@mandrakesoft.com>
- ##  Update for Frontpage 5 by <mbr@freebsd.org>
- ##
-+PREFIX=$(prefix)
+--- version5.0/apache-fp/fpexe.c.orig	Mon Apr 16 07:40:49 2001
++++ version5.0/apache-fp/fpexe.c
+@@ -134,11 +134,11 @@ static struct SaveEnvVars
+ #include <time.h>
+ #include <pwd.h>
+ #include <grp.h>
+-#if !defined(bsdi) && !defined(hpux) && !defined(sun) && !defined(linux) && !defined(SCO5) && !defined(UWARE7) && !defined(FREEBSD)
++#if !defined(bsdi) && !defined(hpux) && !defined(sun) && !defined(linux) && !defined(SCO5) && !defined(UWARE7) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+ #include <sys/mode.h>
+ #endif
  
- #   the used tools
- APXS=$(apxs)
-@@ -16,16 +17,17 @@ CFLAGS=$(cflags) -Wall
- DEF=	-DFPEXEC_BIN=\"$(fpexec_bin)\" \
- 	-DFPSTATIC_BIN=\"$(fpstatic_bin)\"
+-#if defined(sun) || defined(bsdi) || defined(sgi) || defined(SCO5) || defined(UWARE7) || defined(FREEBSD) || defined(linux)
++#if defined(sun) || defined(bsdi) || defined(sgi) || defined(SCO5) || defined(UWARE7) || defined(__FreeBSD__) || defined(linux) || defined(__NetBSD__)
+ extern const char ** environ;
+ #endif
+ extern int errno;
+@@ -162,10 +162,13 @@ extern int errno;
  
--DEF2=	-DFP_HTTPD_USER=\"$(fpexec_uidcaller)\" \
--	-DFP_UID_MIN=$(fpexec_uidmin) \
--	-DFP_GID_MIN=$(fpexec_gidmin) \
-+DEF2=	-DFP_HTTPD_USER=\"$(APACHE_USER)\" \
-+	-DFP_UID_MIN=$(FP_UID_MIN) \
-+	-DFP_GID_MIN=$(FP_GID_MIN) \
- 	-DFP_LOG_EXEC=\"$(fpexec_logexec)\" \
- 	-DFP_USERDIR_SUFFIX=\"$(fpexec_userdir)\" \
--	-DFP_DOC_ROOT=\"$(fpexec_docroot)\" \
--	-DFP_SAFE_PATH=\"/usr/local/bin:/usr/bin:/bin\" \
--	-DFPDIR=\"/usr/local/frontpage/version5.0/exes\" \
--	-DFP_USER=\"bin\" \
--	-DFP_GROUP=\"bin\" \
-+	-DFP_DOC_ROOT=\"$(APACHE_SUEXEC_DOCROOT)\" \
-+	-DFP_SAFE_PATH=\"$(PREFIX)/bin:/usr/local/bin:/usr/bin:/bin\" \
-+	-DFPDIR=\"$(PREFIX)/frontpage/version5.0/exes\" \
-+	-DPREFIX=\"$(PREFIX)\" \
-+	-DFP_USER=\"$(BINOWN)\" \
-+	-DFP_GROUP=\"$(BINGRP)\" \
- 	-DFP_HTACCESS=\".htaccess\" \
- 	-DFP_UMASK=022
+ #define KEYLEN 128                  /* Should be a multiple of sizeof(int) */
  
-@@ -40,19 +42,19 @@ mod_frontpage.so: mod_frontpage.c
- 	$(APXS) -Wall -c $(DEF) $(INC) $(LIB) mod_frontpage.c
++#ifndef LOCALDIR
++#define LOCALDIR "/usr/local"
++#endif
  
- fpexec: fpexec.c
--	$(cc) $(CFLAGS) $(DEF2) $(INC) $(LIB) -o fpexec fpexec.c
-+	$(CC) $(CFLAGS) $(DEF2) $(INC) $(LIB) -o fpexec fpexec.c
+-#define FPKEYDIR "/usr/local/frontpage/version5.0/apache-fp"
+-#define KEYFILE  "/usr/local/frontpage/version5.0/apache-fp/suidkey.%d"
+-#define FPDIR    "/usr/local/frontpage/version5.0/exes"
++#define FPKEYDIR LOCALDIR "/frontpage/version5.0/apache-fp"
++#define KEYFILE  LOCALDIR "/frontpage/version5.0/apache-fp/suidkey.%d"
++#define FPDIR    LOCALDIR "/frontpage/version5.0/exes"
  
- fpstatic: fpstatic.c
--	$(cc) $(CFLAGS) $(DEF2) $(INC) $(LIB) -o fpstatic fpstatic.c
-+	$(CC) $(CFLAGS) $(DEF2) $(INC) $(LIB) -o fpstatic fpstatic.c
- 
- #   install the DSO file into the Apache installation
- #   and activate it in the Apache configuration
- install: all
- 	$(APXS) -i -a -n 'frontpage' mod_frontpage.so
--	$(install) -m 4550 -o root -g $(fpexec_gidcaller) fpexec $(sbindir)/fpexec
--	$(install) -m 0555 -o root -g $(fpexec_gidcaller) fpstatic $(sbindir)/fpstatic
-+	$(INSTALL) -m 4550 -o root -g $(APACHE_GROUP) fpexec $(PREFIX)/sbin/fpexec
-+	$(INSTALL) -m 0555 -o root -g $(APACHE_GROUP) fpstatic $(PREFIX)/sbin/fpstatic
- 	touch $(fpexec_logexec)
--	chown $(fpexec_uidcaller) $(fpexec_logexec)
-+	chown $(APACHE_USER) $(fpexec_logexec)
- 
- #   cleanup
- clean:
-@@ -60,20 +62,3 @@ clean:
- 
- realclean:	clean
- 	-rm -f Makefile
--
--#   reload the module by installing and restarting Apache
--reload: install restart
--
--#   the general Apache start/restart/stop procedures
--start:
--	$(APACHECTL) start
--restart:
--	$(APACHECTL) restart
--stop:
--	$(APACHECTL) stop
--
--uninstall:
--	rm -f $(sbindir)/fpexec
--	rm -f $(sbindir)/fpstatic
--	rm -f $(libexecdir)/mod_frontpage.so
--	$(APXS) -e -A -n 'frontpage' mod_frontpage.so
+ /* Legal modules */
+ #define SHTML    "/_vti_bin/shtml.exe"
