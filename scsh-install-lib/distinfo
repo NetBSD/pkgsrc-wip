@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/03/05 16:22:39 airhead Exp $
+$NetBSD: distinfo,v 1.3 2005/03/05 17:31:44 airhead Exp $
 
 SHA1 (scsh-install-lib-1.2.0.tar.gz) = ad5f187b512ae4fa8ee467ff39de8a33a5bc6c14
 Size (scsh-install-lib-1.2.0.tar.gz) = 132656 bytes
-SHA1 (patch-aa) = d632eebc5f65358dec23bae8c8a75560dfbac672
+SHA1 (patch-aa) = bdae1a668435bd707bf2d3376d2a89ff19230208
