@@ -1,5 +1,18 @@
-$Id: TODO,v 1.1.1.1 2004/03/08 05:05:25 mpasternak Exp $
+$Id: TODO,v 1.2 2004/03/08 05:18:44 mpasternak Exp $
 
-Do we have ${PREFIX}/var/games in mtree?
+From: Soren Jacobsen <snj@pobox.com>
+Date: Sun, 7 Mar 2004 21:20:10 -0800
+To: Michal Pasternak <mpasternak@users.sourceforge.net>
+Subject: Re: CVS commit: wip/tenmado
 
-	-- dotz@irc.pl
+On 03/07 21:05, Michal Pasternak wrote:
+> TODO:
+> Do we have ${PREFIX}/var/games in mtree?
+
+We just use /var/games right now.  I don't think this is going to change
+in the future.  However, I spoke briefly with Thomas about this, and I
+believe that shortly we'll have a 'games' package that will handle the
+'games' user and group as well as ensuring that /var/games exists and is
+sane.
+
+Stay tuned.
