@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2003/12/07 14:20:09 tvierling Exp $
+$NetBSD: distinfo,v 1.9 2004/07/29 02:50:04 tvierling Exp $
 
 SHA1 (j2sdk-1_3_1-src.tar.gz) = 90f6f7a7756ca574193ea8f2deaf2d0e095692d1
 Size (j2sdk-1_3_1-src.tar.gz) = 29876595 bytes
-SHA1 (bsd-jdk131-patches-current.tar.gz) = 680c0b027a7188d36fa9baefc7eba24bcf7cbae2
-Size (bsd-jdk131-patches-current.tar.gz) = 639602 bytes
+SHA1 (bsd-jdk131-patches-9.tar.gz) = 7f38ff2c46bcf5563f01d18a17ea2e0d34189b3a
+Size (bsd-jdk131-patches-9.tar.gz) = 642883 bytes
 SHA1 (patch-aa) = d376582d3440d15a78b4479095f88595ca9053f5
 SHA1 (patch-ab) = 9759542a8d331d8003b40b9b38f45f9c84812124
 SHA1 (patch-ac) = 1969c29e778e8cf835c612b12398f9aa5e962ae0
