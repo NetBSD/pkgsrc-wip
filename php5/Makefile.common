@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2004/07/16 18:19:00 ppostma Exp $
+# $NetBSD: Makefile.common,v 1.20 2004/07/16 19:00:33 ppostma Exp $
 #
 
 DISTNAME?=		php-${PHP5_VERSION}
@@ -27,8 +27,6 @@ PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--with-config-file-path=${PREFIX}/etc/
-CONFIGURE_ARGS+=	--enable-mbstring
-CONFIGURE_ARGS+=	--enable-calendar
 
 .if defined(USE_INET6) && ${USE_INET6} == "NO"
 CONFIGURE_ARGS+=	--disable-ipv6
