@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/03/14 20:08:17 mpasternak Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/14 20:26:20 mpasternak Exp $
 #
 
 DISTNAME=		slackware_devel-9.1.2
@@ -16,6 +16,7 @@ DEPENDS+=		slackware_make>=3.80:../../wip/slackware_make
 DEPENDS+=		slackware_sed>=4.0.9:../../wip/slackware_sed
 DEPENDS+=		slackware_awk>=3.1.3:../../wip/slackware_awk
 DEPENDS+=		slackware_grep>=2.5:../../wip/slackware_grep
+DEPENDS+=		slackware_ncurses>=5.4:../../wip/slackware_ncurses
 DEPENDS+=		slackware_kernel_headers>=2.4.25:../../wip/slackware_kernel_headers
 DEPENDS+=		slackware_binutils>=2.14.90.0.8:../../wip/slackware_binutils
 
