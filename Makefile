@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.556 2003/10/19 03:55:45 minskim Exp $
-# $NetBSD: Makefile,v 1.556 2003/10/19 03:55:45 minskim Exp $
+# $Id: Makefile,v 1.557 2003/10/19 18:44:43 bubuchka Exp $
+# $NetBSD: Makefile,v 1.557 2003/10/19 18:44:43 bubuchka Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -158,6 +158,7 @@ SUBDIR+=	gnumeric
 SUBDIR+=	gnunet
 SUBDIR+=	gotmail
 SUBDIR+=	gov2
+SUBDIR+=	grdc
 SUBDIR+=	grip
 SUBDIR+=	gstreamer-player
 SUBDIR+=	gtick
