@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/10 13:08:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2003/04/10 13:16:59 thomasklausner Exp $
 #
 
 DISTNAME=	coreutils-5.0
@@ -10,12 +10,13 @@ MAINTAINER=	marc@informatik.uni-bremen.de
 HOMEPAGE=	http://www.gnu.org/software/coreutils/
 COMMENT=	GNU basic file, shell and text manipulation utilities
 
+BUILD_USES_MSGFMT=	YES
+
 CONFLICTS=	sh-utils-* fileutils-*
 CONFLICTS+=	textutils-*
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-BUILD_USES_MSGFMT=	YES
 USE_PERL5=		build
 
 .include "../../mk/bsd.prefs.mk"
