@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/02/12 06:14:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.31 2004/02/17 02:55:44 blef Exp $
 #
 
 DISTNAME=		jabberd-2.0s2
@@ -26,7 +26,6 @@ SUBST_SED.foo=		-e "s,/usr/local,${PREFIX},g"			\
 			-e "s,$sysconfdir/jabberd,$sysconfdir,g"
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 REPLACE_PERL=		tools/pipe-auth.pl
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:23:37 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/17 02:55:59 blef Exp $
 
 DISTNAME=	libhydrogen-0.8.0
 CATEGORIES=	audio
@@ -10,7 +10,6 @@ COMMENT=	Shared library for the Hydrogen drum machine
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/27 23:47:57 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/17 02:55:17 blef Exp $
 #
 
 DISTNAME=	cherokee-0.4.4-pre3
@@ -15,8 +15,6 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/sbin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/03 02:23:15 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/17 02:55:16 blef Exp $
 #
 
 DISTNAME=		beep-media-player-1.0.0-pre5
@@ -14,7 +14,6 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
 
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 FILESDIR=		${.CURDIR}/../../audio/xmms/files
 
 .include "../../mk/bsd.prefs.mk"

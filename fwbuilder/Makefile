@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:12:36 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/17 02:55:20 blef Exp $
 #
 
 DISTNAME=		fwbuilder-1.0.11
@@ -19,7 +19,6 @@ BUILD_USES_MSGFMT=	yes
 BUILD_USES_GETTEXT_M4=	yes
 USE_GCC_SHLIB=		yes
 GCC_REQD=		2.95.3
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/libtoolize --force --copy

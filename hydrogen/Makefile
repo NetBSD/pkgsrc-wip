@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/25 02:23:10 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/17 02:55:44 blef Exp $
 
 DISTNAME=	hydrogen-0.8.0
 PKGNAME=	${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Real time drum machine/sequencer
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES

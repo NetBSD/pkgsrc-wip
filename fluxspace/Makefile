@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 14:36:25 marc Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/17 02:55:19 blef Exp $
 #
 
 DISTNAME=		fluxspace-0.0.3
@@ -14,7 +14,6 @@ USE_X11=		YES
 USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=       ${EXPORT_SYMBOLS_LDFLAGS}

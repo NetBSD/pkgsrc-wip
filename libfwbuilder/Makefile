@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/25 02:23:36 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/17 02:55:58 blef Exp $
 #
 
 DISTNAME=		libfwbuilder-1.0.1
@@ -15,7 +15,6 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_GCC_SHLIB=		yes
 GCC_REQD=		2.95.3
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--with-openssl-prefix=${BUILDLINK_PREFIX.openssl}
 

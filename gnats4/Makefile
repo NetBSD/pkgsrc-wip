@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/25 03:09:08 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/17 02:55:34 blef Exp $
 #
 
 DISTNAME=	gnats-4.0
@@ -17,7 +17,6 @@ USE_GNU_TOOLS+=		m4 make
 USE_BISON=		yes
 USE_MAKEINFO=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
 INFO_FILES=	gnats.info gnats-faq.info

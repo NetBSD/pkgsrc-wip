@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:23:01 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/17 02:55:37 blef Exp $
 
 DISTNAME=	gtk-thinice-theme-1.0.4
 PKGNAME=	gtk-engines-thinice-1.0.4
@@ -14,8 +14,6 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

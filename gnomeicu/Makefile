@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/25 02:22:57 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/17 02:55:34 blef Exp $
 
 DISTNAME=	gnomeicu-0.99
 CATEGORIES=	chat gnome
@@ -15,8 +15,6 @@ GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GCONF2_SCHEMAS=		gnomeicu.schemas
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/25 02:23:36 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/17 02:55:59 blef Exp $
 #
 
 DISTNAME=	libgringotts-1.2.1
@@ -14,8 +14,6 @@ USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 .include "../../mk/bsd.prefs.mk"
 

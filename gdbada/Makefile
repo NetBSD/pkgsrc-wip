@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/25 02:12:39 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/17 02:55:22 blef Exp $
 CVS_DATE=	Thu Nov 20 01:28:29 UTC 2003
 
 DISTNAME=	gdbada-5.3
@@ -19,8 +19,6 @@ USE_GNU_TOOLS+=		make
 REPLACE_LOCALEDIR_PATTERNS+=    Make-in
 TEST_TARGET=    	check
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-LIBTOOL_OVERRIDE+=       ${WRKSRC}/bfd/libtool ${WRKSRC}/opcodes/libtool
 HAS_CONFIGURE=		YES
 INFO_DIR=		${GDB_PREFIX}/info
 LIB_DIR=		${GDB_PREFIX}/lib

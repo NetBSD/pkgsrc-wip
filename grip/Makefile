@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:23:00 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/17 02:55:36 blef Exp $
 #
 
 DISTNAME=	grip-3.0.7
@@ -18,8 +18,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--disable-id3
 

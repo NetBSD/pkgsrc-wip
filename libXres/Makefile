@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/10 18:37:35 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/17 02:55:55 blef Exp $
 #
 
 DISTNAME=		libXres-1.0.1
@@ -15,7 +15,6 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xres.pc.in
 
 .include "../../wip/libX11/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/04 16:11:23 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/17 02:56:01 blef Exp $
 
 DISTNAME=	vorbis_nightly_cvs
 PKGNAME=	libogg-${PKGVER}
@@ -23,7 +23,6 @@ NO_SRC_ON_FTP=	# defined
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 pre-configure:
 	cd ${WRKSRC} && ${ACLOCAL}

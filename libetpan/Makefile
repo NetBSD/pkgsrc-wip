@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/02 18:22:07 dawszy Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/17 02:55:57 blef Exp $
 #
 
 DISTNAME=		libetpan-0.32
@@ -12,7 +12,6 @@ COMMENT=		Really nice mail library
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
 .include "../../mk/pthread.buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/25 02:22:58 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/17 02:55:36 blef Exp $
 #
 
 DISTNAME=	gnumeric-1.2.2
@@ -27,7 +27,6 @@ CONFIGURE_ARGS+=	--without-psiconv
 LIBS+=      		-lunicode
 
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GCONF2_SCHEMAS=		gnumeric-dialogs.schemas
 GCONF2_SCHEMAS+=	gnumeric-general.schemas

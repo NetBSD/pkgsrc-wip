@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/11 05:24:51 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/17 02:55:20 blef Exp $
 
 DISTNAME=	gDesklets-0.25.1
 CATEGORIES=	x11 gnome
@@ -15,7 +15,6 @@ USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	YES
 USE_X11=	YES
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	gdesklets-core.pc.in
 GCONF2_SCHEMAS=		gdesklets-display-thumbnail.schemas
 

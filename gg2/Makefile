@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/15 16:44:56 moubctez Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/17 02:55:31 blef Exp $
 #
 
 DISTNAME=	gg2-2.0pre6
@@ -12,7 +12,6 @@ COMMENT=	Instant messenger software for Poland; Jabber plugin included
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/lib/gg2_core.pc.in
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 02:23:10 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/17 02:55:43 blef Exp $
 #
 
 DISTNAME=	httrack-3.23
@@ -15,7 +15,5 @@ USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/25 02:11:59 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/17 02:55:17 blef Exp $
 #
 
 DISTNAME=	DFBPoint-0.7.2
@@ -16,8 +16,6 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 .include "../../wip/directfb/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"

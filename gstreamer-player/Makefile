@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/26 20:30:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/17 02:55:37 blef Exp $
 
 DISTNAME=		gst-player-0.5.0
 PKGNAME=		gstreamer-player-0.5.0
@@ -18,7 +18,6 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-x

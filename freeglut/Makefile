@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/25 02:12:31 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/17 02:55:19 blef Exp $
 #
 
 DISTNAME=	freeglut-2.0.0
@@ -16,7 +16,5 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:23:30 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/17 02:55:46 blef Exp $
 #
 
 DISTNAME=		kvirc-3.0.0-beta2
@@ -23,8 +23,6 @@ CONFIGURE_ARGS+=	--without-locale
 CONFIGURE_ARGS+=	--with-big-channels
 CONFIGURE_ARGS+=	--without-arts-support
 CONFIGURE_ARGS+=	--with-aa-fonts
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PTHREAD_OPTS+=		require
 AUTOMAKE_REQD=		1.5

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/28 04:46:38 blef Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/17 02:55:42 blef Exp $
 
 DISTNAME=		gtk-mist-engine-0.10
 PKGNAME=		gtk2-engines-mist-0.10
@@ -13,7 +13,6 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 
 .include "../../x11/gtk2/buildlink2.mk"

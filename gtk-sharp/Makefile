@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/25 02:23:02 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/17 02:55:37 blef Exp $
 #
 
 DISTNAME=	gtk-sharp-0.14
@@ -19,7 +19,6 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 PERL5_SITELIB=	YES
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	gtk-sharp.pc.in
 PKGCONFIG_OVERRIDE+=	parser/gapi.pc.in
 

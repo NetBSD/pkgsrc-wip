@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/09 14:55:55 moubctez Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/17 02:55:32 blef Exp $
 #
 
 DISTNAME=		gimp-${GIMP_VER}
@@ -27,7 +27,6 @@ USE_X11=		yes
 USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PKGCONFIG_OVERRIDE=	gimp-1.3.pc.in
 PKGCONFIG_OVERRIDE+=	gimpthumb-1.3.pc.in

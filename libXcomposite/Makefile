@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/30 20:08:27 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/17 02:55:50 blef Exp $
 #
 
 DISTNAME=		libXcomposite-1.0.0
@@ -14,7 +14,6 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xcomposite.pc.in
 
 .include "../../wip/libXfixes/buildlink2.mk"

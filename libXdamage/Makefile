@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/27 03:19:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/17 02:55:51 blef Exp $
 #
 
 DISTNAME=		libXdamage-1.0.0
@@ -14,7 +14,6 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xdamage.pc.in
 
 .include "../../wip/libX11/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/27 03:33:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/17 02:55:52 blef Exp $
 #
 
 DISTNAME=		libXfont-1.4.1
@@ -14,7 +14,6 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xfont.pc.in
 
 .include "../../wip/libX11/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/25 02:22:58 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/17 02:55:36 blef Exp $
 #
 
 DISTNAME=	GNUnet-0.5.4a
@@ -16,8 +16,6 @@ USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PTHREAD_OPTS=	require
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 14:40:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/17 02:55:18 blef Exp $
 #
 
 DISTNAME=		eag-2.3
@@ -13,7 +13,6 @@ COMMENT=		Transducer generator using affix grammars
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/31 08:50:48 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/17 02:55:55 blef Exp $
 #
 
 DISTNAME=		libXt-0.1.4
@@ -25,7 +25,6 @@ USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xt.pc.in
 
 post-extract:

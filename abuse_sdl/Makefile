@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/25 02:11:29 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/17 02:55:13 blef Exp $
 
 DISTNAME=		abuse_sdl-0.7.0
 CATEGORIES=		games
@@ -13,7 +13,6 @@ COMMENT=		Port of the Abuse side scroller to SDL
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 
 SITES_frabs210_unix.src.tar.bz2=       http://www.cs.uidaho.edu/~cass0664/fRaBs/

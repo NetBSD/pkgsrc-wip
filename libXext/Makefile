@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/01 22:37:36 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/17 02:55:51 blef Exp $
 #
 
 DISTNAME=		libXext-6.4.2
@@ -16,7 +16,6 @@ USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xext.pc.in
 
 .include "../../wip/libX11/buildlink3.mk"
