@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1190 2004/04/12 20:01:55 blef Exp $
-# $NetBSD: Makefile,v 1.1190 2004/04/12 20:01:55 blef Exp $
+# $Id: Makefile,v 1.1191 2004/04/12 22:02:01 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1191 2004/04/12 22:02:01 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -246,6 +246,7 @@ SUBDIR+=	iip
 SUBDIR+=	iisemulator
 SUBDIR+=	ile
 SUBDIR+=	ilohamail
+SUBDIR+=	inkspace
 SUBDIR+=	interbase-docs
 SUBDIR+=	interchange
 SUBDIR+=	iptables
