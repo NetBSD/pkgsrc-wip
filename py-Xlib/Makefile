@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/13 01:46:47 cetrox Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/18 15:12:53 ppostma Exp $
 
 DISTNAME=	python-xlib-0.12
 PKGNAME=	${PYPKGPREFIX}-Xlib-0.12
-CATEGORIES=	wip
+CATEGORIES=	devel x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=python-xlib/}
 
 MAINTAINER=	ccatrian@eml.cc
