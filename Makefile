@@ -1,6 +1,5 @@
-# $Id: Makefile,v 1.6 2003/03/18 22:24:43 thomasklausner Exp $
+# $Id: Makefile,v 1.7 2003/03/20 13:52:34 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 #SUBDIR+=	none yet
-
