@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1287 2004/05/20 21:11:22 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1287 2004/05/20 21:11:22 xtraeme Exp $
+# $Id: Makefile,v 1.1288 2004/05/21 22:51:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1288 2004/05/21 22:51:40 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -682,8 +682,6 @@ SUBDIR+=	stunnel3
 SUBDIR+=	sudoscript
 SUBDIR+=	superkaramba
 SUBDIR+=	svgalib
-SUBDIR+=	swi-prolog-lite
-SUBDIR+=	swi-prolog-packages
 SUBDIR+=	sysklogd
 SUBDIR+=	syslog-ng
 SUBDIR+=	sysvinit
