@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/05/09 06:35:27 blef Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/02 12:29:18 cubidou Exp $
 #
 
-DISTNAME=		Apache-Test-1.07
+DISTNAME=		Apache-Test-1.12
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5apt
 CATEGORIES=		www perl5
@@ -15,5 +15,4 @@ USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/Test/.packlist
 
 .include "../../lang/perl5/module.mk"
-.include "../../www/ap-perl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
