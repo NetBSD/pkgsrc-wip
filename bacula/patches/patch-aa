@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2004/09/12 23:45:54 shattered Exp $
+
+--- autoconf/aclocal.m4.orig	2003-10-15 16:28:56.000000000 +0400
++++ autoconf/aclocal.m4
+@@ -512,10 +512,10 @@ Which DBMS do you want to use (please se
+                    AC_MSG_ERROR(Unable to find sqlite.h in standard locations)
+                 fi
+         else
+-                if test -f $withval/sqlite.h; then
+-                        SQLITE_INCDIR=$withval
+-                        SQLITE_LIBDIR=$withval
+-                        SQLITE_BINDIR=$withval
++                if test -f $withval/include/sqlite.h; then
++                        SQLITE_INCDIR=$withval/include
++                        SQLITE_LIBDIR=$withval/lib
++                        SQLITE_BINDIR=$withval/bin
+                 else
+                    AC_MSG_RESULT(no)
+                    AC_MSG_ERROR(Invalid SQLite directory $withval - unable to find sqlite.h under $withval)

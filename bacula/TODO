@@ -1,13 +1,10 @@
-$Id: TODO,v 1.1.1.1 2004/01/01 22:38:26 mpasternak Exp $
+$Id: TODO,v 1.2 2004/09/12 23:45:53 shattered Exp $
 
 *** ACHTUNG *** This package is very raw.
 
 Does it build / work on NetBSD-stable? 
 
 Does it build / work on NetBSD-current?
-
-${PREFIX}/etc configuration... now it is a mess. Should install configuration files
-in pkgsrc-manner . I don't have time to do this right now.
 
 This package can be compiled with or without gnome support; Same for SQL --
 it can support MySQL or SQLite. Any ideas how we could add such packages

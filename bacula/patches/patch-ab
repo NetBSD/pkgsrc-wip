@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2004/09/12 23:45:54 shattered Exp $
+
+--- configure.orig	2003-12-26 14:21:59.000000000 +0300
++++ configure
+@@ -6988,10 +6988,10 @@ echo "$as_me: error: Unable to find sqli
+    { (exit 1); exit 1; }; }
+                 fi
+         else
+-                if test -f $withval/sqlite.h; then
+-                        SQLITE_INCDIR=$withval
+-                        SQLITE_LIBDIR=$withval
+-                        SQLITE_BINDIR=$withval
++                if test -f $withval/include/sqlite.h; then
++                        SQLITE_INCDIR=$withval/include
++                        SQLITE_LIBDIR=$withval/lib
++                        SQLITE_BINDIR=$withval/bin
+                 else
+                    echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6
