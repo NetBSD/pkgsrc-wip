@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/10 22:40:43 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/10 22:00:15 daprice Exp $
 share/EMBOSS/scripts/config.guess
 share/EMBOSS/scripts/config.sub
 share/EMBOSS/scripts/depcomp
@@ -101,26 +101,10 @@ include/emboss/plplot.h
 include/emboss/plplotP.h
 include/emboss/plstrm.h
 include/emboss/plxwd.h
-lib/libajax.a
 lib/libajax.la
-lib/libajax.so
-lib/libajax.so.1
-lib/libajax.so.1.0
-lib/libajaxg.a
 lib/libajaxg.la
-lib/libajaxg.so
-lib/libajaxg.so.1
-lib/libajaxg.so.1.0
-lib/libnucleus.a
 lib/libnucleus.la
-lib/libnucleus.so
-lib/libnucleus.so.1
-lib/libnucleus.so.1.0
-lib/libplplot.a
 lib/libplplot.la
-lib/libplplot.so
-lib/libplplot.so.5
-lib/libplplot.so.5.0
 share/EMBOSS/acd/aaindexextract.acd
 share/EMBOSS/acd/abiview.acd
 share/EMBOSS/acd/ajbad.acd
@@ -1467,6 +1451,7 @@ share/EMBOSS/test/wormpep/wormpep
 @dirrm share/EMBOSS/test/embl
 @dirrm share/EMBOSS/test/data
 @dirrm share/EMBOSS/test
+@dirrm share/EMBOSS/scripts
 @dirrm share/EMBOSS/doc/tutorials
 @dirrm share/EMBOSS/doc/programs/text
 @dirrm share/EMBOSS/doc/programs/html
@@ -1479,7 +1464,6 @@ share/EMBOSS/test/wormpep/wormpep
 @dirrm share/EMBOSS/data/CODONS
 @dirrm share/EMBOSS/data/AAINDEX
 @dirrm share/EMBOSS/data
-@dirrm share/EMBOSS/scripts
 @dirrm share/EMBOSS/acd
 @dirrm share/EMBOSS
 @dirrm include/emboss
