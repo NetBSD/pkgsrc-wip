@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/03/17 21:04:04 daprice Exp $
+
+--- src/qgsvectorlayer.cpp.orig	2005-03-11 18:46:29.000000000 -0700
++++ src/qgsvectorlayer.cpp
+@@ -1746,7 +1746,7 @@ QgsVectorLayer:: setDataProvider( QStrin
+ 
+         const char * s = rawXML.c_str(); // debugger probe
+ 
+-        if ( ! rendererDOM.setContent( rawXML, &errorMsg, &errorLine, &errorColumn ) )
++        if ( ! rendererDOM.setContent( QString(rawXML.c_str()), &errorMsg, &errorLine, &errorColumn ) )
+         {
+             qDebug( "%s:%d XML import error at line %d column %d " + errorMsg,
+                     __FILE__, __LINE__, errorLine, errorColumn );
+@@ -1815,7 +1815,7 @@ QgsVectorLayer:: setDataProvider( QStrin
+ #endif
+         const char * s = rawXML.c_str(); // debugger probe
+ 
+-        if ( ! labelDOM.setContent( rawXML, &errorMsg, &errorLine, &errorColumn ) )
++        if ( ! labelDOM.setContent( QString(rawXML.c_str()), &errorMsg, &errorLine, &errorColumn ) )
+         {
+             qDebug( "XML import error at line %d column %d " + errorMsg, errorLine, errorColumn );
+ 

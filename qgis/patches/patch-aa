@@ -1,0 +1,60 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/17 21:04:04 daprice Exp $
+
+--- configure.orig	2004-12-19 22:05:17.000000000 -0700
++++ configure
+@@ -20096,6 +20096,7 @@ esac
+ echo "$as_me:$LINENO: result: $QT_VER ($QT_MAJOR)" >&5
+ echo "${ECHO_T}$QT_VER ($QT_MAJOR)" >&6
+ 
++PATH="$PATH:$QTDIR/bin"
+ # Check that moc is in path
+ # Extract the first word of "moc", so it can be a program name with args.
+ set dummy moc; ac_word=$2
+@@ -20114,7 +20115,7 @@ do
+   test -z "$as_dir" && as_dir=.
+   for ac_exec_ext in '' $ac_executable_extensions; do
+   if $as_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_prog_MOC="moc"
++    ac_cv_prog_MOC="$as_dir/$ac_word$ac_exec_ext/moc"
+     echo "$as_me:$LINENO: found $as_dir/$ac_word$ac_exec_ext" >&5
+     break 2
+   fi
+@@ -20124,6 +20125,7 @@ done
+ fi
+ fi
+ MOC=$ac_cv_prog_MOC
++echo "$MOC"
+ if test -n "$MOC"; then
+   echo "$as_me:$LINENO: result: $MOC" >&5
+ echo "${ECHO_T}$MOC" >&6
+@@ -20155,7 +20157,7 @@ do
+   test -z "$as_dir" && as_dir=.
+   for ac_exec_ext in '' $ac_executable_extensions; do
+   if $as_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_prog_UIC="uic"
++    ac_cv_prog_UIC="$as_dir/$ac_word$ac_exec_ext"
+     echo "$as_me:$LINENO: found $as_dir/$ac_word$ac_exec_ext" >&5
+     break 2
+   fi
+@@ -20165,6 +20167,7 @@ done
+ fi
+ fi
+ UIC=$ac_cv_prog_UIC
++echo "$UIC"
+ if test -n "$UIC"; then
+   echo "$as_me:$LINENO: result: $UIC" >&5
+ echo "${ECHO_T}$UIC" >&6
+@@ -20345,6 +20348,13 @@ case "${host}" in
+     fi
+     ;;
+ 
++  *netbsd*)
++    QT_LIBS="$QT_LIB"
++    if test $QT_IS_STATIC = yes && test $QT_IS_EMBEDDED = no; then
++      QT_LIBS="$QT_LIBS -L$x_libraries -lXext -lX11 -lm -lSM -lICE -ldl -ljpeg"
++    fi
++    ;;
++
+   *linux*)
+     QT_LIBS="$QT_LIB"
+     if test $QT_IS_STATIC = yes && test $QT_IS_EMBEDDED = no; then

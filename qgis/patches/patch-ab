@@ -1,0 +1,38 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/03/17 21:04:04 daprice Exp $
+
+--- plugins/scale_bar/plugin.cpp.orig	2004-12-03 10:17:35.000000000 -0700
++++ plugins/scale_bar/plugin.cpp
+@@ -27,6 +27,12 @@ email                : sbr00pwb@users.so
+ #include <math.h>
+ #endif
+ 
++#if defined(__NetBSD__)
++#include <sys/featuretest.h>
++#else
++#include <feature.h>
++#endif
++
+ #include <qgisapp.h>
+ #include <qgsmaplayer.h>
+ #include "plugin.h"
+@@ -74,6 +80,20 @@ static const char * const description_ =
+ static const char * const version_ = "Version 0.1";
+ static const QgisPlugin::PLUGINTYPE type_ = QgisPlugin::UI;
+ 
++#if (!defined _GNU_SOURCE && !defined _ISOC99_SOURCE && !defined _ISOC9X_SOURCE && !(defined __STDC_VERSION__ && __STDC_VERSION__ >= 199901L)) 
++double round(double x) {
++       double t;
++       if (x >= 0.0) {
++               t = ceil(x); 
++               if (t - x > 0.5) t -= 1.0;
++               return t;
++       } else {
++               t = ceil(-x);
++               if (t + x > 0.5) t -= 1.0;
++               return -t;
++       } 
++}
++#endif
+ 
+ /**
+  * Constructor for the plugin. The plugin is passed a pointer to the main app

@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/03/17 21:04:04 daprice Exp $
+
+--- providers/postgres/qgspostgresprovider.h.orig	2005-03-11 19:14:24.000000000 -0700
++++ providers/postgres/qgspostgresprovider.h
+@@ -21,6 +21,7 @@ extern "C"
+ }
+ #include "../../src/qgsvectordataprovider.h"
+ #include <list>
++#include <map>
+ #include<qstring.h>
+ 
+ class QgsFeature;
