@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/22 13:48:41 marc Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/23 00:10:07 marc Exp $
 #
 
 DISTNAME=		ht2html-2.0
@@ -14,20 +14,30 @@ PY_PATCHPLIST=		yes
 
 PYTHON_PATCH_SCRIPTS=	ht2html.py
 
-DOCDIR=			${PREFIX}/share/doc/html/ht2html
-PAX_SUBST=		-s '/calcroot\.py[co]*//' -s '/ht2html\.py[co]*//'
-PY_PAX=			${PAX} ${PAX_SUBST} -rw -pp -pm
+EGDIR=			${PREFIX}/share/examples/ht2html
+EGFILES=		BAWGenerator.py JPyLocalGenerator.py
+EGFILES+=		IPC8Generator.py PDOGenerator.py
+EGFILES+=		JPyGenerator.py SelfGenerator.py
+
+LIBFILES=		Banner.* HTParser.* LinkFixer.*
+LIBFILES+=		Sidebar.* Skeleton.* StandardGenerator.*
 
 do-build:
 	${PYTHONBIN} ${PREFIX}/${PYLIB}/compileall.py \
-		${WRKSRC}
+		${PY_COMPILE_EXCLUDE} ${WRKSRC}
 	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py \
-		${WRKSRC}
+		${PY_COMPILE_EXCLUDE} ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC}/doc && ${PAX} -rw -pp -pm . ${DOCDIR}
-	cd ${WRKSRC} && ${PY_PAX} *.py* ${PREFIX}/${PYSITELIB}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	cd ${WRKSRC}/doc && ${PAX} -rw -pp -pm . ${EGDIR}
+	for egfile in ${EGFILES}; do \
+		${INSTALL_DATA} ${WRKSRC}/$${egfile} ${EGDIR}; \
+	done
+	for libfile in ${LIBFILES}; do \
+		${INSTALL_DATA} ${WRKSRC}/$${libfile} \
+			${PREFIX}/${PYSITELIB}; \
+	done
 	${INSTALL_SCRIPT} ${WRKSRC}/ht2html.py ${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
