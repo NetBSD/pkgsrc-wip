@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2005/03/01 11:01:00 bubuchka Exp $
+# $NetBSD: Makefile,v 1.7 2005/03/14 15:38:55 bubuchka Exp $
 
 DISTNAME=		sarg-2.0.4
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sarg/}
+PKGREVISION=		1
 
 PATCH_SITES=		http://sarg.sourceforge.net/
-PATCHFILES=		sarg-2.0.4-segmentation-fault.patch
+PATCHFILES=		sarg-2.0.4-segmentation-fault.patch		\
+			sarg-2.0.4-rlim-freebsd.patch
 
 MAINTAINER=		mishka@apk.od.ua
 HOMEPAGE=		http://www.sarg-squid.org/

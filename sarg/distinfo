@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2005/03/01 11:01:00 bubuchka Exp $
+$NetBSD: distinfo,v 1.9 2005/03/14 15:39:11 bubuchka Exp $
 
 SHA1 (sarg-2.0.4/sarg-2.0.4.tar.gz) = 7440832c1ada4ac976f30ffc95d143e27ccd9259
 RMD160 (sarg-2.0.4/sarg-2.0.4.tar.gz) = 2391d75dc0a2f6f076cbfaf2a2c4a3f4a7e9c042
@@ -6,10 +6,13 @@ Size (sarg-2.0.4/sarg-2.0.4.tar.gz) = 325125 bytes
 SHA1 (sarg-2.0.4/sarg-2.0.4-segmentation-fault.patch) = de1870eaf6ee9b8b769b723eb0951bca86b84a95
 RMD160 (sarg-2.0.4/sarg-2.0.4-segmentation-fault.patch) = ebcaaccef568c877af09d7f6a14e74bbd77edeb8
 Size (sarg-2.0.4/sarg-2.0.4-segmentation-fault.patch) = 985 bytes
-SHA1 (patch-aa) = d31e0aff0d690f0501cb234bcd8f0f0cb97a586f
+SHA1 (sarg-2.0.4/sarg-2.0.4-rlim-freebsd.patch) = 1b244c0d043b20b7dd22f2c853065147932f783d
+RMD160 (sarg-2.0.4/sarg-2.0.4-rlim-freebsd.patch) = 3915fb5772e64c9dabe83e75312469f1af757f0d
+Size (sarg-2.0.4/sarg-2.0.4-rlim-freebsd.patch) = 1667 bytes
+SHA1 (patch-aa) = 2dbc7fcfdee055a57aa1aeac308503ef52f9829f
 SHA1 (patch-ab) = 5b997545bb98635d1aee0501a3811014b6223d6f
 SHA1 (patch-ac) = 2ce972a6496eab5bd32e3935b07c55b63127994c
-SHA1 (patch-ad) = c39ffb1831bb451688c690abb89a7ef2bebc425d
+SHA1 (patch-ad) = ba6749c3cff4bfb57c71ad563618f84d9cda6b94
 SHA1 (patch-ae) = 58b2cf7f0864d4e35d0c53bac629024778b6a9a5
 SHA1 (patch-af) = 4212b4fa8a8dad5d3e59018137f807ffdc2d9d9d
 SHA1 (patch-ag) = ebf564ad1f2af7df759b0e24dc0cbbfe2cfc833a

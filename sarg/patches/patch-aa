@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2005/03/01 11:01:01 bubuchka Exp $
+$NetBSD: patch-aa,v 1.7 2005/03/14 15:39:12 bubuchka Exp $
 
 --- configure.in.orig	2005-02-21 20:13:21.000000000 +0200
 +++ configure.in
@@ -42,3 +42,12 @@ $NetBSD: patch-aa,v 1.6 2005/03/01 11:01:01 bubuchka Exp $
  
  dnl Check for headers
  AC_HEADER_DIRENT
+@@ -40,7 +13,7 @@ AC_HEADER_STDC
+ 
+ AC_CHECK_HEADERS(stdio.h stdlib.h string.h strings.h sys/time.h time.h unistd.h sys/dirent.h \
+ 		 dirent.h sys/socket.h netdb.h arpa/inet.h sys/types.h netinet/in.h sys/stat.h \
+-		 ctype.h gd.h gdfontl.h gdfontt.h gdfonts.h gdfontmb.h gdfontg.h errno.h)
++		 ctype.h gd.h gdfontl.h gdfontt.h gdfonts.h gdfontmb.h gdfontg.h errno.h sys/resource.h)
+ 
+ AC_CHECK_LIB(gd, gdImagePng,LIBS="-lgd ${LIBS}"; HAVE_GD="yes", HAVE_GD="")
+ 
