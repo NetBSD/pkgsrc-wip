@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/06 15:01:24 peterih Exp $
+usr/X11R6/bin/recordwin
+usr/X11R6/bin/vnc2swf
