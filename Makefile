@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1436 2004/08/19 12:25:18 oherrala Exp $
-# $NetBSD: Makefile,v 1.1436 2004/08/19 12:25:18 oherrala Exp $
+# $Id: Makefile,v 1.1437 2004/08/19 13:03:07 marmfield Exp $
+# $NetBSD: Makefile,v 1.1437 2004/08/19 13:03:07 marmfield Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -700,7 +700,6 @@ SUBDIR+=	sleuthkit
 SUBDIR+=	slocate
 SUBDIR+=	slrn-pl
 SUBDIR+=	slune
-SUBDIR+=	smbldap-tools
 SUBDIR+=	smlnj-current
 SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
