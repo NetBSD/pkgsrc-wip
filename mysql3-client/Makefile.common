@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2003/08/28 18:38:28 adrian_p Exp $
+# $NetBSD: Makefile.common,v 1.4 2003/09/06 12:08:06 cjep Exp $
 
 DISTNAME=		mysql-3.23.57
 CATEGORIES=		databases
@@ -24,8 +24,8 @@ MYSQL_DATADIR?=		/var/mysql
 # MYSQL_CHARSET         default character set 
 # MYSQL_EXTRA_CHARSET   additonal character set to be compiled in. 
 # 
-MYSQL_CHARSET?=		latin1 
-MYSQL_EXTRA_CHARSET?=	all 
+MYSQL_CHARSET?=		latin1
+MYSQL_EXTRA_CHARSET?=	all
 
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
