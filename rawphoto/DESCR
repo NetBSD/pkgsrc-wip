@@ -1,0 +1,3 @@
+Raw photo loader plugin for The gimp.  This plugin calls dcraw (in
+pkgsrc/graphics/dcraw) to convert a digital camera raw file to ppm,
+and then loads the image into the GIMP.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/10/24 13:18:05 lexort Exp $
+
+SHA1 (rawphoto-1.1.5/rawphoto.c) = a6b141f853e9fef9688512918dbd65ceb11e0f3e
+Size (rawphoto-1.1.5/rawphoto.c) = 8530 bytes
+SHA1 (patch-aa) = 908ccd1b208ccdde15a4a63b7638001947654c29
