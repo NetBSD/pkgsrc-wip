@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/05/16 03:20:43 jeremy-c-reed Exp $
+
+--- proc/module.mk.orig	Mon Oct 21 02:13:32 2002
++++ proc/module.mk	Mon Nov  4 23:54:19 2002
+@@ -55,7 +55,7 @@
+ $(lib)/$(SONAME) : proc/$(SONAME)
+ 	$(install) --mode a=rx --strip $< $@
+ 	cd $(lib) && $(ln_sf) $(SONAME) lib$(NAME).so
+-	$(ldconfig)
++#	$(ldconfig)
+ 
+ #$(usr/lib)/lib$(NAME).a : proc/lib$(NAME).a
+ #	$(install) --mode a=r --strip $< $@

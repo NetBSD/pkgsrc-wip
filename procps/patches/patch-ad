@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/05/16 03:20:44 jeremy-c-reed Exp $
+
+--- top.c.orig	Sat Mar 15 23:58:37 2003
++++ top.c	Sat Mar 15 23:58:51 2003
+@@ -21,7 +21,7 @@
+ #include <sys/resource.h>
+ #include <sys/time.h>
+ #include <ctype.h>
+-#include <curses.h>
++#include <ncurses.h>
+ #include <errno.h>
+ #ifndef YIELDCPU_OFF
+ #include <sched.h>

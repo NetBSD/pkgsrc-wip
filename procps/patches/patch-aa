@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/05/16 03:20:43 jeremy-c-reed Exp $
+
+--- Makefile.orig	Mon Oct 21 02:12:43 2002
++++ Makefile	Mon Nov  4 23:56:48 2002
+@@ -30,20 +30,20 @@
+ ln_sf    := ln -sf
+ install  := install -D --owner 0 --group 0
+ 
+-usr/bin                  := $(DESTDIR)/usr/bin/
++usr/bin                  := $(DESTDIR)/bin/
+ bin                      := $(DESTDIR)/bin/
+ sbin                     := $(DESTDIR)/sbin/
+-usr/proc/bin             := $(DESTDIR)/usr/bin/
+-man1                     := $(DESTDIR)/usr/share/man/man1/
+-man5                     := $(DESTDIR)/usr/share/man/man5/
+-man8                     := $(DESTDIR)/usr/share/man/man8/
++usr/proc/bin             := $(DESTDIR)/bin/
++man1                     := $(DESTDIR)/man/man1/
++man5                     := $(DESTDIR)/man/man5/
++man8                     := $(DESTDIR)/man/man8/
+ etc/X11/applnk/Utilities := $(DESTDIR)/etc/X11/applnk/Utilities/
+ usr/X11R6/bin            := $(DESTDIR)/usr/X11R6/bin/
+ lib                      := $(DESTDIR)/lib/
+-usr/lib                  := $(DESTDIR)/usr/lib/
+-usr/include              := $(DESTDIR)/usr/include/
++usr/lib                  := $(DESTDIR)/lib/
++usr/include              := $(DESTDIR)/include/
+ 
+-#SKIP     := $(bin)kill $(man1)kill.1
++SKIP     := $(bin)kill $(man1)kill.1
+ 
+ BINFILES := $(usr/bin)uptime $(usr/bin)tload $(usr/bin)free $(usr/bin)w \
+             $(usr/bin)top $(usr/bin)vmstat $(usr/bin)watch $(usr/bin)skill \
+@@ -63,7 +63,7 @@
+ 
+ CURSES := -I/usr/include/ncurses -lncurses
+ 
+-LDFLAGS := -Wl,-warn-common
++LDFLAGS := -Wl,-warn-common -Wl,-R$(DESTDIR)/lib -L$(DESTDIR)/lib
+ 
+ CFLAGS := -D_GNU_SOURCE -O2 -g3 -fno-common -ffast-math -I proc \
+   -W -Wall -Wshadow -Wcast-align -Wredundant-decls \

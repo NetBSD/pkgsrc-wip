@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/05/16 03:20:44 jeremy-c-reed Exp $
+
+--- ps/module.mk.orig	Tue Nov  5 00:32:41 2002
++++ ps/module.mk	Tue Nov  5 00:32:17 2002
+@@ -37,4 +37,4 @@
+ 
+ $(man1)ps.1 : ps/ps.1
+ 	install --mode a=r $< $@
+-	-rm -f $(DESTDIR)/var/catman/cat1/ps.1.gz $(DESTDIR)/var/man/cat1/ps.1.gz
++#	-rm -f $(DESTDIR)/var/catman/cat1/ps.1.gz $(DESTDIR)/var/man/cat1/ps.1.gz

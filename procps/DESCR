@@ -1,0 +1,9 @@
+The Linux /proc file system utilities are tools for reporting about
+and modifying the state of the system, including memory, processes,
+sending signals to processes, etc. The commands include free, oldps,
+pgrep, pkill, ps, skill, snice, sysctl, tload, top, vmstat, w and watch.
+(kill is not installed; it is available in the sysutils/util-linux
+package.)
+
+This version of procps is maintained by Albert Cahalan, based on
+original code from Michael K. Johnson.

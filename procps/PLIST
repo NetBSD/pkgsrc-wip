@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/16 03:20:43 jeremy-c-reed Exp $
+bin/free
+bin/pgrep
+bin/pkill
+bin/ps
+bin/skill
+bin/snice
+bin/tload
+bin/top
+bin/uptime
+bin/vmstat
+bin/w
+bin/watch
+lib/libproc.so
+lib/libproc.so.${PKGVERSION}
+sbin/sysctl
+man/man1/free.1
+man/man1/pgrep.1
+man/man1/pkill.1
+man/man1/ps.1
+man/man1/skill.1
+man/man1/snice.1
+man/man1/tload.1
+man/man1/top.1
+man/man1/uptime.1
+man/man1/w.1
+man/man1/watch.1
+man/man5/sysctl.conf.5
+man/man8/sysctl.8
+man/man8/vmstat.8
+@dirrm man/man8
+@dirrm man/man5
+@dirrm man/man1
+@dirrm man
