@@ -1,0 +1,10 @@
+FIREHOSE gives you that power. FIREHOSE gives you a basic data transfer over
+multiple network devices supporting TCP/IP layers. Stripe multiple 100Mbit,
+Gigabit, 10 Gigabit, or firewire to give one humungous pipe for firehosing
+your gigabytes and gigabytes of data.
+
+Unlike RAID striping, FIREHOSE striping load balances the network devices so
+every ounce of bandwidth is utilized. Combine a 400Mbit firewire eth device
+with a 100Mbit eth device to get 500Mbits of power. Combine 10 100Mbit
+ethernet ports for a gigabit pipe. The number of devices which can be
+striped is limited only by imagination and budget.
