@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/04 03:12:00 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2003/12/20 18:29:07 marttikuparinen Exp $
 
-SHA1 (mysqlcc-0.9.3-src.tar.gz) = e3aa7af82ed9ac6af4b9c98643255e27ee97a46b
-Size (mysqlcc-0.9.3-src.tar.gz) = 746154 bytes
-SHA1 (patch-aa) = 644e9c04aecabf6ed9bbe9f50b292fe5483236e5
+SHA1 (mysqlcc-0.9.4-src.tar.gz) = 690a9a8f4ad6bdf33673e92d1016b0e4b8cea030
+Size (mysqlcc-0.9.4-src.tar.gz) = 747244 bytes
+SHA1 (patch-aa) = fbb012582b1df2a34572332dc6e682377101d605
+SHA1 (patch-ab) = 9b2540c2eee1d0665a83da360d75bd488510a84b
+SHA1 (patch-ac) = 5978ef78fa5d941370ae779de259757f1e50c9a8

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/11/04 03:12:00 mpasternak Exp $
+$NetBSD: patch-aa,v 1.2 2003/12/20 18:29:08 marttikuparinen Exp $
 
---- acinclude.m4	Tue Nov  4 03:05:18 2003
-+++ acinclude.m4	Tue Nov  4 03:24:35 2003
-@@ -1,3 +1,41 @@
+--- acinclude.m4.orig	2003-12-13 23:10:43.000000000 +0000
++++ acinclude.m4	2003-12-20 18:24:25.000000000 +0000
+@@ -1 +1,39 @@
 +AC_DEFUN(AC_LIB_OPENSSL, [
 +    AC_ARG_WITH(openssl-lib,
 +    [  --with-openssl-lib=DIR    Look for OpenSSL client library in DIR],
@@ -42,26 +42,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/11/04 03:12:00 mpasternak Exp $
 +])
 +
  AC_DEFUN(AC_LIB_MYSQL, [
-     AC_ARG_WITH(mysql-lib,
-     [  --with-mysql-lib=DIR    Look for MySQL client library in DIR],
---- configure.in	Tue Nov  4 03:05:18 2003
-+++ configure.in	Tue Nov  4 03:23:04 2003
-@@ -3,6 +3,7 @@
- AC_PROG_CC
- AC_PROG_CXX
- AC_LIB_Z
-+AC_LIB_OPENSSL
- AC_LIB_MYSQL
- AC_HEADER_MYSQL
- AC_CHECK_QT
---- mysqlcc.pro.in	Tue Nov  4 03:05:18 2003
-+++ mysqlcc.pro.in	Tue Nov  4 03:26:20 2003
-@@ -27,7 +27,7 @@
- }
- 
- unix {
--      LIBS        += @MYSQL_LIB@ 
-+      LIBS        += @MYSQL_LIB@ @OPENSSL_LIB@
-       INCLUDEPATH += @MYSQL_INCLUDE@
-       CONFIG      += x11 
-       OBJECTS_DIR  = tmp

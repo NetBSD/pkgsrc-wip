@@ -1,18 +1,20 @@
-# $NetBSD: Makefile,v 1.3 2003/12/20 16:18:54 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.4 2003/12/20 18:29:07 marttikuparinen Exp $
 #
 
-DISTNAME=		mysqlcc-0.9.3-src
+DISTNAME=		mysqlcc-0.9.4-src
 PKGNAME=		${DISTNAME:S/-src//}
 CATEGORIES=		databases
-MASTER_SITES=		http://mysql.belnet.be/Downloads/MySQLCC/
+MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQLCC/ \
+			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQLCC/  \
+			ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQLCC/
 
 MAINTAINER=		dotz@irc.pl
-HOMEPAGE=		http://mysql.belnet.be/Downloads/MySQLCC/
-COMMENT=		MySQL GUI frontend, utilizing Qt library
+HOMEPAGE=		http://www.mysql.com/
+COMMENT=		MySQL Control Center
 
-USE_BUILDLINK2=		yes
-USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-mysql-lib=${PREFIX}/lib/mysql
 CONFIGURE_ARGS+=	--with-mysql-include=${PREFIX}/include/mysql/
 CONFIGURE_ARGS+=	--with-openssl-includes=${SSLBASE}/include
@@ -29,5 +31,5 @@ do-install:
 .include "../../mk/automake.mk"
 .include "../../databases/mysql4-client/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
-.include "../../x11/qt3-libs/buildlink2.mk"
+.include "../../x11/qt3-tools/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
