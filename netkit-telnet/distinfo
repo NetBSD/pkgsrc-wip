@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/02 22:56:37 poppnk Exp $
+
+SHA1 (netkit-telnet-0.17.tar.gz) = 41213dedaf242126b54a3ac51b905a351eb22b15
+Size (netkit-telnet-0.17.tar.gz) = 133749 bytes
+SHA1 (patch-aa) = 32166de5e1f6a47e828b723099e0d4d788645acd
