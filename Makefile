@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.102 2003/04/19 07:39:38 lsed Exp $
-# $NetBSD: Makefile,v 1.102 2003/04/19 07:39:38 lsed Exp $
+# $Id: Makefile,v 1.103 2003/04/19 08:42:49 lsed Exp $
+# $NetBSD: Makefile,v 1.103 2003/04/19 08:42:49 lsed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -9,7 +9,6 @@ SUBDIR+=	allegro
 SUBDIR+=	aolserver
 SUBDIR+=	ap-bandwidth
 SUBDIR+=	autoproject
-SUBDIR+=	beaver
 SUBDIR+=	billardgl
 SUBDIR+=	bugzilla
 SUBDIR+=	byacc
