@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/15 01:03:31 riz Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/16 20:05:31 riz Exp $
 #
 
 DISTNAME=		zaptel-netbsd-20050314
@@ -17,7 +17,7 @@ ZAPTEL_KERNEL_ENV?=	# empty
 BUILD_DEFS+=		ZAPTEL_KERNEL_ENV
 MAKE_ENV+=		ZAPTEL_KERNEL_ENV=${ZAPTEL_KERNEL_ENV:Q}
 CONF_FILES=		${PREFIX}/share/examples/zaptel/zaptel.conf \
-			${PKG_SYSCONFDIR}
+			${PKG_SYSCONFDIR}/zaptel.conf
 
 USE_BUILDLINK3=		yes
 
