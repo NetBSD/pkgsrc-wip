@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.568 2003/10/25 23:55:44 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.568 2003/10/25 23:55:44 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.569 2003/10/26 05:00:05 mjasm Exp $
+# $NetBSD: Makefile,v 1.569 2003/10/26 05:00:05 mjasm Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -218,6 +218,7 @@ SUBDIR+=	konversation
 SUBDIR+=	korelib
 SUBDIR+=	kvirc
 SUBDIR+=	l2tpd
+SUBDIR+=	lammpi
 SUBDIR+=	lash
 SUBDIR+=	lbdb
 SUBDIR+=	ldapbrowser
