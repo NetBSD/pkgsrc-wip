@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1208 2004/04/16 23:33:15 blef Exp $
-# $NetBSD: Makefile,v 1.1208 2004/04/16 23:33:15 blef Exp $
+# $Id: Makefile,v 1.1209 2004/04/17 00:14:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1209 2004/04/17 00:14:09 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -400,6 +400,7 @@ SUBDIR+=	mtf
 SUBDIR+=	mtrack
 SUBDIR+=	muine
 SUBDIR+=	mupen64
+SUBDIR+=	mupen64-base
 SUBDIR+=	mupen64-plugin-input
 SUBDIR+=	mupen64-plugin-rsp
 SUBDIR+=	mupen64-plugin-sound
