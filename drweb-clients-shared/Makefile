@@ -1,0 +1,49 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/09/13 12:58:42 bubuchka Exp $
+
+DRW_CLIENT_NAME=	clients-shared
+
+MAINTAINER=		mishka@terabyte.com.ua
+COMMENT=		Shared files of clients to DrWeb AntiVirus daemon
+
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
+
+CONF_FILES=								\
+	${EGDIR}/admin-archive.msg ${PKG_SYSCONFDIR}/admin-archive.msg	\
+	${EGDIR}/admin-error.msg ${PKG_SYSCONFDIR}/admin-error.msg	\
+	${EGDIR}/admin-rule.msg ${PKG_SYSCONFDIR}/admin-rule.msg	\
+	${EGDIR}/admin-virus.msg ${PKG_SYSCONFDIR}/admin-virus.msg	\
+	${EGDIR}/rcpts-virus.msg ${PKG_SYSCONFDIR}/rcpts-virus.msg	\
+	${EGDIR}/sender-archive.msg ${PKG_SYSCONFDIR}/sender-archive.msg\
+	${EGDIR}/sender-error.msg ${PKG_SYSCONFDIR}/sender-error.msg	\
+	${EGDIR}/sender-skip.msg ${PKG_SYSCONFDIR}/sender-skip.msg	\
+	${EGDIR}/sender-virus.msg ${PKG_SYSCONFDIR}/sender-virus.msg	\
+	${EGDIR}/addresses.conf	${PKG_SYSCONFDIR}/addresses.conf	\
+	${EGDIR}/users.conf ${PKG_SYSCONFDIR}/users.conf		\
+	${EGDIR}/viruses.conf ${PKG_SYSCONFDIR}/viruses.conf
+
+do-install:
+	# --> Common documentation
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/Acknowledgements ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE.RUS ${DOCDIR}
+
+	# --> Common configuration files
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/admin-archive.msg ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/admin-error.msg ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/admin-rule.msg ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/admin-virus.msg ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/rcpts-virus.msg ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/sender-archive.msg ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/sender-error.msg ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/sender-skip.msg ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/sender-virus.msg ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/addresses.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/users.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/viruses.conf ${EGDIR}
+
+.include "../../wip/drweb-clients-shared/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,69 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/09/13 12:58:44 bubuchka Exp $
+
+--- configure.orig	2003-07-30 17:35:23.000000000 +0300
++++ configure
+@@ -42,6 +42,10 @@ case "`(uname -sr)2>/dev/null`" in
+         OS="FreeBSD"
+         BSD_MAKE="yes"
+         ;;
++	"NetBSD"*)
++        OS="FreeBSD"
++        BSD_MAKE="yes"
++        ;;
+ 	"SunOS 5"*)
+ 		OS="Solaris"
+         echo    
+@@ -117,53 +121,6 @@ if [ "$NEED_SM" = "y" ] ; then    
+             MILTER_VER="FIXED"
+         fi    
+     fi    
+-    if [ $MILTER_VER = "STD" ] ; then
+-        SM_HDR="include/libmilter/mfdef.h"        
+-        SM_LIB="lib/libsm.a"
+-        SM_LIB_CMD="-lsm"
+-    elif [ $MILTER_VER = "FIXED" ] ; then
+-        SM_HDR="include/libmilter/mfdef.h"        
+-        SM_LIB=""
+-        SM_LIB_CMD=""    
+-    elif [ $OS = "Linux" ] ; then
+-        SM_HDR=""        
+-        SM_LIB="lib/libsmutil.a"
+-        SM_LIB_CMD="-lsmutil"
+-    else
+-        SM_HDR=""        
+-        SM_LIB=""
+-        SM_LIB_CMD=""
+-    fi
+-    NO_ADD="no"
+-    if [ ! -f include/libmilter/mfapi.h ] ; then
+-        echo "no include/libmilter/mfapi.h"
+-    fi
+-    if [ "x$SM_HDR" != "x" -a ! -f "$SM_HDR" ] ; then
+-        echo "no $SM_HDR"
+-        NO_ADD="yes"
+-    fi
+-    if [ ! -f lib/libmilter.a ] ; then
+-        echo "no lib/libmilter.a"
+-    fi
+-    if [ "x$SM_LIB" != "x" -a ! -f "$SM_LIB" ] ; then
+-        echo "no $SM_LIB"        
+-        NO_ADD="yes"        
+-    fi
+-    if [ ! -f include/libmilter/mfapi.h\
+-         -o\
+-         ! -f lib/libmilter.a\
+-         -o\
+-         $NO_ADD = "yes" ] ; then
+-        echo
+-        echo "So you should to have next files:"
+-        echo "$SM_HDR"
+-        echo "include/libmilter/mfapi.h"
+-        echo "lib/libmilter.a"
+-        echo "$SM_LIB" 
+-        echo 
+-        echo "Do it and try again"
+-        exit 1
+-    fi
+ else
+     DRWEB_SM=""
+ fi 

@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/13 12:58:43 bubuchka Exp $
+
+--- Makefile.nix.tmpl.orig	2003-07-30 17:35:23.000000000 +0300
++++ Makefile.nix.tmpl
+@@ -47,6 +47,7 @@ OPTFLAGS        = ___OPT_FLAGS___
+ DEFFLAGS        = ___POLL_DEF___ -D__UNIX_DW -D$(OS)_DW -DDW_VERSION="\"___VER___\""
+ INCFLAGS        = -Isrc
+ ADD_CFLAGS      = $(OPTFLAGS) $(DEFFLAGS) $(INCFLAGS) $(ADDFLAGS)
++ADD_CFLAGS	+= ${CFLAGS} ${PTHREAD_CFLAGS}
+ 
+ # Multihtreaded libraries
+ # Hack - under Linux we use in drweb-cgp fork, not threads
+@@ -64,7 +65,10 @@ ADDLIB_Solaris  = -lnsl -lsocket -lresol
+ 
+ # Linking flags
+ LINKLIB     = -Llib -ldwclient-$(VERSION) $(ADDLIB_$(OS))
+-LINKLIBMT   = -Llib -ldwclient-$(VERSION)_r $(ADDLIB_$(OS)) $(MTLIB_$(OS)$(ENV)) 
++LINKLIB    += ${LDFLAGS}
++LINKLIBMT   = -Llib -ldwclient-$(VERSION)_r $(ADDLIB_$(OS))
++LINKLIBMT  += ${LDFLAGS} ${PTHREAD_LDFLAGS}
++
+ 
+ # Milter Library
+ # Hack - add threads for drweb-smf under Linux
+@@ -215,7 +219,7 @@ dw_addresses.o: dw_addresses.c
+ 
+ # DrWebd command line client rules
+ drwebdc : drwebdc.o $(DWLIB)
+-	$(CC) drwebdc.o -static -o $@ $(LINKLIB)
++	$(CC) drwebdc.o -o $@ $(LINKLIB)
+ 
+ drwebdc.o: drwebdc.c 
+ 	$(CC) -c $(ADD_CFLAGS) $(DCOPT) ___SOURCE___ -o $@ $(CCOUTPUT)
