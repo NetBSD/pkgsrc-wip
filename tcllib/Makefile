@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/18 17:44:03 ppostma Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/02 00:40:13 minskim Exp $
 #
 
 DISTNAME=		tcllib-1.6.1
@@ -20,7 +20,7 @@ SUBST_CLASSES=		fix
 SUBST_STAGE.fix=	post-patch
 SUBST_FILES.fix=	modules/doctools/mpformats/_html.tcl
 SUBST_SED.fix=		-e "s,@FETCH_CMD@,${FETCH_CMD},g"
-SUBST_MESSAGE.fix=	"Fixing harcoded ftp binary"
+SUBST_MESSAGE.fix=	"Fixing hardcoded ftp binary"
 
 post-patch:
 	@${FIND} ${WRKSRC} -name \*.orig | ${XARGS} ${RM}
