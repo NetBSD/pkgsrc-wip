@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1578 2004/12/26 17:25:41 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1578 2004/12/26 17:25:41 thomasklausner Exp $
+# $Id: Makefile,v 1.1579 2004/12/26 18:06:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1579 2004/12/26 18:06:22 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -411,6 +411,7 @@ SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libgeotiff
 SUBDIR+=	libgrass5
+SUBDIR+=	liblingoteach
 SUBDIR+=	libmatchbox
 SUBDIR+=	libnet11
 SUBDIR+=	libneural
@@ -433,6 +434,8 @@ SUBDIR+=	libxml++
 SUBDIR+=	lilo
 SUBDIR+=	lilypond20
 SUBDIR+=	lincvs
+SUBDIR+=	lingoteach-lesson
+SUBDIR+=	lingoteach-ui
 SUBDIR+=	links-hacked
 SUBDIR+=	links1
 SUBDIR+=	linux-ch
