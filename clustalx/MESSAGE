@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/02/25 20:19:17 daprice Exp $
+
+After installing ClustalX the environment variable LD_LIBRARY_PATH must be 
+set to: 
+	${PREFIX}/lib/ncbi
+	${PREFIX}/lib
+	/usr/X11R6/lib
+===========================================================================

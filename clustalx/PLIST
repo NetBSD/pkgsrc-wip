@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 20:19:17 daprice Exp $
+bin/clustalx
+bin/clustalx_help
+bin/coldna.par
+bin/colprint.par
+bin/colprot.par
+share/doc/clustalx/README_X
+share/doc/clustalx/clustalx.html
+@dirrm share/doc/clustalx
