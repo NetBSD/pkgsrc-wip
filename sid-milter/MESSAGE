@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/09/01 10:35:53 adrian_p Exp $
+
+sid-milter is now installed.
+The documentation can be found at ${PREFIX}/share/doc/sid-milter/
+
+Please read the instructions in ${PREFIX}/share/doc/sid-milter/INSTALL
+for setting up sid-milter.
+
+At a minmium you will need to specify:
+
+	sidmilter_flags="-p socketfile -d domain"
+
+in your /etc/rc.conf.
+
+For security you may also wish to investigate the use of "-u userid".
+
+THIS IS PRE-RELEASE SOFTWARE, and should not be used in any critical 
+production environments.
+===========================================================================

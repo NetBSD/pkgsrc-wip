@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/01 10:35:53 adrian_p Exp $
+
+--- sid-filter/Makefile.m4.orig	Wed Sep  1 10:00:41 2004
++++ sid-filter/Makefile.m4	Wed Sep  1 10:01:01 2004
+@@ -21,8 +21,8 @@
+ 
+ 
+ bldPRODUCT_START(`executable', `sid-filter')
+-define(`bldSOURCES', `sid-filter.c rfc2822.h util.c ')
+-PREPENDDEF(`confLIBS', `-lmilter ')
++define(`bldSOURCES', `sid-filter.c rfc2822.c util.c ')
++PREPENDDEF(`confLIBS', `-lmilter -lpthread $(COMPILER_RPATH_FLAG)${PREFIX}/lib ')
+ bldPRODUCT_END
+ 
+ bldPRODUCT_START(`manpage', `sid-filter')

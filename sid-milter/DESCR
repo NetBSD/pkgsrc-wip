@@ -1,0 +1,24 @@
+An open source implementation of the Sender ID specification as defined by the 
+Internet Engineering Task Force's (IETF).
+
+The Sender ID proposal includes three different specifications:
+draft-ietf-marid-core-03 
+draft-ietf-marid-protocol-02 
+draft-ietf-marid-submitter-03 
+
+sid-milter implements the -core and -protocol specifications. -submitter 
+requires an optional SMTP extension that would be implemented in the sendmail 
+MTA.
+
+This implementation is part of the Sendmail Messaging Integrity program, a 
+comprehensive testing initiative designed to gather real-world usage data by 
+evaluating several aspects of various leading sender authentication schemes 
+against a wide range of SMTP software operating today.
+
+This software is being provided to the open source community for the purposes 
+of testing the DomainKeys approach against various implementations of mail 
+transport agents, mail list managers, forwarding services, and various other 
+SMTP software.
+
+THIS IS PRE-RELEASE SOFTWARE, and should not be used in any critical 
+production environments.

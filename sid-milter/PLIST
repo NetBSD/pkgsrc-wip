@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/01 10:35:53 adrian_p Exp $
+bin/sid-filter
+man/man8/sid-filter.0
+man/man3/ar.0
+share/doc/sid-milter/INSTALL
+share/doc/sid-milter/LICENSE
+share/doc/sid-milter/README
+share/doc/sid-milter/README-SenderID
+@dirrm share/doc/sid-milter
