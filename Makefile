@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.902 2004/01/23 16:59:13 minskim Exp $
-# $NetBSD: Makefile,v 1.902 2004/01/23 16:59:13 minskim Exp $
+# $Id: Makefile,v 1.903 2004/01/24 16:56:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.903 2004/01/24 16:56:45 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -11,19 +11,6 @@ SUBDIR+=	Radiator
 SUBDIR+=	Radiator-all
 SUBDIR+=	Redland-rdf
 SUBDIR+=	WEPCrack
-SUBDIR+=	XFree86
-SUBDIR+=	XFree86-clients
-SUBDIR+=	XFree86-docs
-SUBDIR+=	XFree86-fonts100dpi
-SUBDIR+=	XFree86-fonts75dpi
-SUBDIR+=	XFree86-fontsCyrillic
-SUBDIR+=	XFree86-fontsEncodings
-SUBDIR+=	XFree86-fontsMisc
-SUBDIR+=	XFree86-fontsScalable
-SUBDIR+=	XFree86-fontserver
-SUBDIR+=	XFree86-libs
-SUBDIR+=	XFree86-man
-SUBDIR+=	XFree86-server
 SUBDIR+=	abuse_sdl
 SUBDIR+=	acid
 SUBDIR+=	adodb

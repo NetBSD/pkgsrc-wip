@@ -1,8 +1,0 @@
-/*
- * XFree86 packages for pkgsrc system
- *
- */ 
-
-#define ProjectRoot @PREFIX@
-#define BuildHtmlManPages NO
-#define MakeCmd @MAKE@
