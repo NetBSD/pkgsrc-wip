@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/03 09:29:50 cubidou Exp $
+
+SHA1 (ion-dock-20030330.tar.gz) = cbb08571988271e10f4838e19e1f52a4dce6a713
+Size (ion-dock-20030330.tar.gz) = 7790 bytes
+SHA1 (patch-aa) = 6619d2fd6d6594f12917e4a080a445cb4cf38b8a
