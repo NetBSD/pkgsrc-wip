@@ -1,4 +1,8 @@
-$Id: TODO,v 1.1 2004/02/27 09:53:19 xtraeme Exp $
+$Id: TODO,v 1.2 2004/05/10 22:52:18 poppnk Exp $
 
-    o Remove duplicated do-install target.
     o Use pkglint to see the errors... (pkgsrc/pkgtools/pkglint).
+
+$ pancake $
+
+* It builds ok, but not the module :P
+* There's a duplicated patch, (php5/patches , ap-php5/patches) <- solve.

@@ -1,4 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/05 15:50:25 poppnk Exp $
-etc/screenrc
+@comment $NetBSD: PLIST,v 1.2 2004/05/10 22:52:18 poppnk Exp $
 lib/httpd/mod_php5.so
-@dirrm lib/httpd
