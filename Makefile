@@ -1,11 +1,12 @@
-# $Id: Makefile,v 1.1339 2004/06/24 15:31:15 dillo Exp $
-# $NetBSD: Makefile,v 1.1339 2004/06/24 15:31:15 dillo Exp $
+# $Id: Makefile,v 1.1340 2004/06/24 17:37:07 ianzag Exp $
+# $NetBSD: Makefile,v 1.1340 2004/06/24 17:37:07 ianzag Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	4stAttack
 SUBDIR+=	Cg-compiler
 SUBDIR+=	Coin
+SUBDIR+=	LabPlot
 SUBDIR+=	OpenGLUT
 SUBDIR+=	PPower4
 SUBDIR+=	PyBabelFish
@@ -279,11 +280,13 @@ SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	kino
 SUBDIR+=	kissme
+SUBDIR+=	kkbswitch
 SUBDIR+=	koffice-i18n-de
 SUBDIR+=	koffice-i18n-es
 SUBDIR+=	konversation
 SUBDIR+=	korelib
 SUBDIR+=	kpanta
+SUBDIR+=	ksambaplugin
 SUBDIR+=	kvirc
 SUBDIR+=	kxmleditor
 SUBDIR+=	kylix-openedition
@@ -443,6 +446,7 @@ SUBDIR+=	octave-nox11
 SUBDIR+=	oops
 SUBDIR+=	opax
 SUBDIR+=	opengaim
+SUBDIR+=	openvpn2
 SUBDIR+=	openvrml
 SUBDIR+=	opera-devel
 SUBDIR+=	oqtplayer
