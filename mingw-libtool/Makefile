@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/30 23:54:33 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/01 01:29:45 mpasternak Exp $
 #
 # This is ripped devel/libtool-base/Makefile, that will generate a libtool 
 # script, that will, in turn, allow cross-compilation with mingw32
@@ -8,10 +8,14 @@
 # quality.
 # 
 
-.include "../../devel/libtool/Makefile.common"
+DISTNAME=	libtool-ml-20010614
+PKGNAME=	mingw-libtool-20010614
+WRKSRC=		${WRKDIR}/libtool-ml
+CATEGORIES=	devel pkgtools
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-PKGNAME=        mingw-${PKGPFX}
-PKGREVISION=	# empty
+MAINTAINER=	dotz@irc.pl
+HOMEPAGE=	http://www.gnu.org/software/libtool/libtool.html
 COMMENT=	Generic shared library support script (the script itself) for mingw
 
 NO_CONFIGURE=	# defined
@@ -20,6 +24,7 @@ NO_BUILDLINK=	# defined
 do-build:
 	cd ${WRKSRC} && ${SETENV} PATH=${PATH} ./configure --host=${MINGWTARGET} --disable-ltdl-install 
 	cd ${WRKSRC} && ${SETENV} PATH=${PATH} ${GMAKE}
+	cd ${WRKSRC} && ${CAT} ${.CURDIR}/files/patch-aa | ${PATCH} -p0
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/libtool ${CROSSBASE}/${MINGWTARGET}/bin
