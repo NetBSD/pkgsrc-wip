@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/12 22:43:06 xmor61 Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/15 07:12:41 xmor61 Exp $
 #
 
 DISTNAME=		STonX-0.6.7.6
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=stonx/}
 
-MAINTAINER=		packages@NetBSD.org
+MAINTAINER=		xmor61@users.sourceforge.net
 HOMEPAGE=		http://stonx.sourceforge.net/
 COMMENT=		Atari ST Emulator
 
