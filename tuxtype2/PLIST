@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/30 23:25:33 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/22 16:52:58 xtraeme Exp $
 bin/tuxtype2
 doc/tuxtype2/AUTHORS
 doc/tuxtype2/COPYING
@@ -273,15 +273,9 @@ share/tuxtype2/data/sounds/tock.wav
 share/tuxtype2/data/sounds/tuxi.ogg
 share/tuxtype2/data/sounds/win.wav
 share/tuxtype2/data/sounds/winfinal.wav
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/share/tuxtype2/data/text/english.info
 share/tuxtype2/data/text/english.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/share/tuxtype2/data/text/english.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/share/tuxtype2/data/text/menu.info
 share/tuxtype2/data/text/menu.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/share/tuxtype2/data/text/menu.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/share/tuxtype2/data/text/spanish.info
 share/tuxtype2/data/text/spanish.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/share/tuxtype2/data/text/spanish.info
 share/tuxtype2/data/text/spanish.other
 share/tuxtype2/data/themes/armenian/fonts/letters.ttf
 share/tuxtype2/data/themes/armenian/fonts/menu.ttf
@@ -326,9 +320,7 @@ share/tuxtype2/data/themes/french/words/words3.txt
 share/tuxtype2/data/themes/french/words/words4.txt
 share/tuxtype2/data/themes/lang.po
 share/tuxtype2/data/themes/nynorsk/images/splat0.png
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/share/tuxtype2/data/themes/nynorsk/text/menu.info
 share/tuxtype2/data/themes/nynorsk/text/menu.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/share/tuxtype2/data/themes/nynorsk/text/menu.info
 share/tuxtype2/data/themes/nynorsk/words/words1.txt
 share/tuxtype2/data/themes/nynorsk/words/words2.txt
 share/tuxtype2/data/themes/nynorsk/words/words3.txt
