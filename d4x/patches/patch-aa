@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/13 06:12:58 mpasternak Exp $
+
+--- main/signal.cc.orig	Mon Apr 21 17:40:27 2003
++++ main/signal.cc	Sat Dec 13 06:53:14 2003
+@@ -119,7 +119,11 @@
+ 	pthread_mutexattr_t ma;
+ 	pthread_mutexattr_init(&ma);
+ #if !defined (__sparc__) && !defined(__mips__)
++#ifdef _POSIX_THREAD_IS_GNU_PTH
++	pthread_mutexattr_settype(&ma,PTHREAD_MUTEX_NORMAL);   
++#else
+ 	pthread_mutexattr_settype(&ma,MUTEX_TYPE_FAST);
++#endif
+ #elif defined(__mips__)
+ 	pthread_mutexattr_settype(&ma,MUTEX_TYPE_NORMAL);	
+ #endif
