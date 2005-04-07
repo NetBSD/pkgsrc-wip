@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/06 19:43:03 ura Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/07 02:31:13 ura Exp $
 
 DISTNAME=	im-147
 CATEGORIES=	mail
@@ -11,6 +11,7 @@ COMMENT=	Set of user interfaces of Email and NetNews
 
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	im_path_perl=${PERL5}
 CONFIGURE_ARGS= --libdir=${PREFIX}/etc
 # If you use RPOP instead of APOP, comment out following line.
 #CONFIGURE_ARGS+=--enable-rpop
