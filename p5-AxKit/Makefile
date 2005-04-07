@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/26 22:21:57 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/07 01:13:13 rillig Exp $
 #
 
 DISTNAME=	AxKit-1.6.2
@@ -15,7 +15,7 @@ COMMENT=	AxKit is an XML Application Server for Apache
 DEPENDS+=	p5-Compress-Zlib>=1.21:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-Digest-MD5>=2.09:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Error>=0.14:../../devel/p5-Error
-DEPENDS+=	p5-libapreq>=0.32:../../wip/p5-Apache-Request
+DEPENDS+=	p5-libapreq>=0.32:../../www/p5-libapreq
 DEPENDS+=	p5-File-Spec>=0.82:../../devel/p5-File-Spec
 DEPENDS+=	p5-Apache-Test>=1.00:../../www/p5-Apache-Test
 DEPENDS+=	p5-XML-Parser>=2.27:../../textproc/p5-XML-Parser
