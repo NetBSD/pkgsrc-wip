@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/01 22:36:19 dolecek Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/08 17:20:20 peterih Exp $
 
 DISTNAME=	moregroupware-0.7.2
 PKGNAME=	${DISTNAME}
@@ -10,7 +10,7 @@ DISTFILES=	moregroupware-core-0.7.2${EXTRACT_SUFX} \
 		moregroupware-addons-0.7.2${EXTRACT_SUFX} \
 		moregroupware-scripts-0.7.2${EXTRACT_SUFX} \
 
-MAINTAINER=	pih@bsdmail.dk
+MAINTAINER=	pih@xbase.dk
 HOMEPAGE=	http://moregroupware.org/
 COMMENT=	Web based GroupWare system
 

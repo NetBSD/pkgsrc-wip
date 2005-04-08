@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2004/05/07 14:37:57 peterih Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/08 17:21:09 peterih Exp $
 #
 
 DISTNAME=		pointless-0.5
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pointless/}
 
-MAINTAINER=		pih@bsdmail.dk
+MAINTAINER=		pih@xbase.dk
 HOMEPAGE=		http://pointless.sourceforge.net/
 COMMENT=		Markup-language presentation tool
 
