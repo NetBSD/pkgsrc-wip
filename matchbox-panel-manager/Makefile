@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2005/01/01 22:43:47 mattd Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/08 14:46:32 bencollver Exp $
 #
 
 DISTNAME=	matchbox-panel-manager-0.1
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.handhelds.org/projects/matchbox/sources/matchbox-panel-manager/0.1/
+MASTER_SITES=	http://projects.o-hand.com/matchbox/sources/matchbox-panel-manager/0.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://matchbox.handhelds.org/
+HOMEPAGE=	http://projects.o-hand.com/matchbox/
 COMMENT=	Manager panel for the Matchbox desktop
 
 USE_BUILDLINK3=	yes
@@ -15,6 +15,6 @@ USE_DIRS+=	gnome2-1.5
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
-.include "../../wip/libmatchbox/buildlink3.mk"
+.include "../../devel/libmatchbox/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
