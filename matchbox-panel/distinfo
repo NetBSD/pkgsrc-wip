@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.3 2005/01/01 22:43:12 mattd Exp $
+$NetBSD: distinfo,v 1.4 2005/04/08 14:22:34 bencollver Exp $
 
-SHA1 (matchbox-panel-0.8.3.tar.bz2) = 095394efca518f01ecc5c38d9f3cf61d24e2fb22
-Size (matchbox-panel-0.8.3.tar.bz2) = 156141 bytes
-SHA1 (patch-ac) = 5cfd619ca9d7660025e88652b94521785892873d
-SHA1 (patch-ad) = 589644f8bdad3313f99168ef2c1c0d2ee2be021d
+SHA1 (matchbox-panel-0.9.1.tar.bz2) = ce0473ed3951c23b380089ae33e982a607925ad0
+RMD160 (matchbox-panel-0.9.1.tar.bz2) = a7e4f7813e5a46a18c08d877d8829b25355b92f1
+Size (matchbox-panel-0.9.1.tar.bz2) = 157685 bytes
+SHA1 (patch-aa) = 58b5fd75675823bd3b8d74e5c782aac146902d26
+SHA1 (patch-ab) = 344b035bc716fad713d70f2e64578b2792799ebb
+SHA1 (patch-ae) = 052c516dd8d3e404f98c2b6233fb43ddda1f38e7
+SHA1 (patch-af) = 994f4097ca63201a7606b75bcca52b366172cf85

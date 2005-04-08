@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/01/01 22:43:12 mattd Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/04/08 14:22:34 bencollver Exp $
 bin/matchbox-panel
 bin/mb-applet-clock
 bin/mb-applet-launcher
@@ -9,7 +9,6 @@ share/applications/mb-applet-battery.desktop
 share/applications/mb-applet-clock.desktop
 share/applications/mb-applet-menu-launcher.desktop
 share/applications/mb-applet-system-monitor.desktop
-share/applications/mb-applet-wireless.desktop
 share/applications/mb-launcher-term.desktop
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/matchbox-panel.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/matchbox-panel.mo
