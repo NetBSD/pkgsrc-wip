@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/01/01 22:34:47 mattd Exp $
+$NetBSD: patch-ab,v 1.2 2005/04/08 14:44:44 bencollver Exp $
 
---- data/Makefile.am.orig	2004-07-22 11:19:50.000000000 +0000
+--- data/Makefile.am.orig	2004-12-01 03:22:33.000000000 -0800
 +++ data/Makefile.am
 @@ -1,10 +1,10 @@
  EXTRA_DIST = mbdesktop_modules.in mbdesktop.png mb-show-desktop.desktop
