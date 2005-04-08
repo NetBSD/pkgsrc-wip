@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1730 2005/04/08 03:26:04 riz Exp $
-# $NetBSD: Makefile,v 1.1730 2005/04/08 03:26:04 riz Exp $
+# $Id: Makefile,v 1.1731 2005/04/08 13:04:22 obache Exp $
+# $NetBSD: Makefile,v 1.1731 2005/04/08 13:04:22 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1029,6 +1029,7 @@ SUBDIR+=	words
 SUBDIR+=	wxGTK-contrib
 SUBDIR+=	wxgtk-devel
 SUBDIR+=	wxgtk-devel-contrib
+SUBDIR+=	x11vnc
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
 SUBDIR+=	xbsql
