@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1729 2005/04/07 03:29:05 ura Exp $
-# $NetBSD: Makefile,v 1.1729 2005/04/07 03:29:05 ura Exp $
+# $Id: Makefile,v 1.1730 2005/04/08 03:26:04 riz Exp $
+# $NetBSD: Makefile,v 1.1730 2005/04/08 03:26:04 riz Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -80,7 +80,6 @@ SUBDIR+=	apstget
 SUBDIR+=	argouml
 SUBDIR+=	artemis
 SUBDIR+=	asfrecorder
-SUBDIR+=	asterisk
 SUBDIR+=	autoproject
 SUBDIR+=	avida2
 SUBDIR+=	avifile-devel
@@ -606,7 +605,6 @@ SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
 SUBDIR+=	netwib
 SUBDIR+=	netwox
-SUBDIR+=	newt
 SUBDIR+=	ninvaders
 SUBDIR+=	nnrpd
 SUBDIR+=	noip
@@ -1065,7 +1063,6 @@ SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	z26
-SUBDIR+=	zaptel-netbsd
 SUBDIR+=	zinf
 SUBDIR+=	zphoto
 SUBDIR+=	zsnes-devel
