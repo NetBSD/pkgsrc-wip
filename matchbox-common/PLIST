@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/19 10:43:20 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/08 14:18:39 bencollver Exp $
 bin/matchbox-session
+share/icons/blondie/48x48/apps/mbfolder.png
+share/icons/blondie/48x48/apps/mbfolderprev.png
 share/matchbox/vfolders/Accessories.directory
 share/matchbox/vfolders/Applications.directory
 share/matchbox/vfolders/Development.directory

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2005/01/01 22:27:12 mattd Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/08 14:18:39 bencollver Exp $
 #
 
-DISTNAME=	matchbox-common-0.8
+DISTNAME=	matchbox-common-0.9.1
 CATEGORIES=	wm
-MASTER_SITES=	ftp://ftp.handhelds.org/projects/matchbox/sources/matchbox-common/0.8/
+MASTER_SITES=	http://projects.o-hand.com/matchbox/sources/matchbox-common/0.9/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://matchbox.handhelds.org/
+HOMEPAGE=	http://projects.o-hand.com/matchbox/
 COMMENT=	Pixmaps for Matchbox
 
 USE_BUILDLINK3=	yes
@@ -22,5 +22,5 @@ SUBST_STAGE.session=	pre-configure
 SUBST_FILES.session=	matchbox-session
 SUBST_SED.session=	-e 's|/etc/matchbox|${PKG_SYSCONFDIR}|g'
 
-.include "../../wip/libmatchbox/buildlink3.mk"
+.include "../../devel/libmatchbox/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
