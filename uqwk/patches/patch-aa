@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/04/09 15:33:32 gschwarz Exp $
+
+# from Debian project (Debian bug #179892)
+
+--- mail.c.orig	2005-04-06 17:05:19.000000000 +0200
++++ mail.c	2005-04-06 17:05:56.000000000 +0200
+@@ -52,7 +52,7 @@
+ {
+   struct stat     st;
+ 
+-  return (stat((char*)s,&st)!=EOF && !(st.st_mode & S_IFDIR));
++  return (stat((char*)s,&st)!=EOF && (st.st_mode & S_IFDIR));
+ }
+ 
+ #define strend(x) ((x) + strlen(x))
+--- misc.c.orig	2005-04-06 17:06:15.000000000 +0200
++++ misc.c	2005-04-06 17:06:52.000000000 +0200
+@@ -110,7 +110,7 @@
+  */
+ void Spaces (char *c, int n)
+ {
+-	sprintf(c,"%*s", n, "");
++	memset(c, ' ', n);
+ }
+ 
+ /*

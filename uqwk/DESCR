@@ -1,0 +1,5 @@
+uqwk collects all a user's unread news and/or mail, and formats it into
+a packet for offline reading, saving telephone and connect charges.
+Simple Offline Usenet Packet (SOUP), ZipNews, and the deprecated QWK
+packet formats are supported. Mail can be read from classic Unix mbox
+format mail files, MMDF mail files, or maildir mailboxes.

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/09 15:33:32 gschwarz Exp $
+bin/uqwk
+man/man1/uqwk.1
