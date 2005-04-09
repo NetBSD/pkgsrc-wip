@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/08 12:40:25 obache Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/09 04:42:00 obache Exp $
 #
 
 DISTNAME=	x11vnc-0.7.1
@@ -11,6 +11,8 @@ COMMENT=	VNC server for real X displays
 
 USE_X11=		yes
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ENV+=	ac_cv_header_pthread_h=no
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
