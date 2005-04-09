@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/09 04:21:38 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/04/09 04:30:34 schnoebe Exp $
 share/squirrelmail/plugins/chg_sasl_passwd/Readme
 share/squirrelmail/plugins/chg_sasl_passwd/chg_sasl_passwd.po
 share/squirrelmail/plugins/chg_sasl_passwd/chgsaslpasswd.c
@@ -20,4 +20,4 @@ share/squirrelmail/plugins/chg_sasl_passwd/version
 @dirrm share/squirrelmail/plugins/chg_sasl_passwd/locale/de_DE/LC_MESSAGES
 @dirrm share/squirrelmail/plugins/chg_sasl_passwd/locale/de_DE
 @dirrm share/squirrelmail/plugins/chg_sasl_passwd/locale
-@dirrm share/squirrelmail/plugins/chg_sasl_passwd
+@unexec ${RMDIR} %D/share/squirrelmail/plugins/chg_sasl_passwd 2>/dev/null || ${TRUE}
