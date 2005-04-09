@@ -1,16 +1,23 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/01/30 19:16:20 schnoebe Exp $
+$NetBSD: MESSAGE,v 1.2 2005/04/09 04:21:38 schnoebe Exp $
 
     As installed, this package will use saslpasswd2 to attempt to make
-    password updates.  It is known to work with the SQL interfaces to 
+    password updates.  It is known to work with the SQL interfaces to
     Cyrus SASL.  If you wish to use the db file authentictaion database,
     modify and build the chgsaslpasswd.c program in
 
-	${SMDIR}/plugins/chg_sasl_passwd.
+	${PIDIR}.
+
+    Arguments may need to be tweaked for your installation of Cyrus
+    SASL.  Modify
+
+	${PIDIR}/config.php
+
+    to make any required changes.
 
     Full instructions are in
 
-	${SMDIR}/plugins/Readme. 
+	${SMDIR}/plugins/Readme.
 
     To enable this plugin:
 

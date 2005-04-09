@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/30 19:16:19 schnoebe Exp $
+$NetBSD: distinfo,v 1.2 2005/04/09 04:21:38 schnoebe Exp $
 
 SHA1 (chg_sasl_passwd-1.4-1.4.x.tar.gz) = 935fc59ebc7f02e637a0b79c42d583288f6d0223
+RMD160 (chg_sasl_passwd-1.4-1.4.x.tar.gz) = da9379382248632a2e943448220f61064005d125
 Size (chg_sasl_passwd-1.4-1.4.x.tar.gz) = 9790 bytes
