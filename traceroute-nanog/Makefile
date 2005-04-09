@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/27 21:03:37 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/09 15:19:37 gschwarz Exp $
 
 DISTNAME=	traceroute-nanog-6.3.10
 CATEGORIES=	net
@@ -23,13 +23,15 @@ EXTRALIBS=
 .if empty(PKGSRC_COMPILER:Mgcc*)
 CPPFLAGS+=	-D__attribute__=
 .endif
-.if ${OS} == "SunOS" && ${OS_VERSION} >= 5.0
+.if ${OPSYS} == "SunOS"
+.if ${OS_VERSION} >= 5.0
 .if ${OS_VERSION} != 5.4
 CPPFLAGS+=	-DSOLARIS
 EXTRALIBS+=	-lresolv -lsocket -lnsl
 .endif
 .if ${LOWER_ARCH} == "i386"
 CPPFLAGS+=	-DBYTESWAP_IP_LEN
+.endif
 .endif
 .endif
 .if ${OPSYS} == "Linux"
