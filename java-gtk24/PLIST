@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/27 22:42:59 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/04/11 10:03:06 poppnk Exp $
 include/libgtk-java/jg_jnu.h
 lib/libgtkjni.la
 lib/pkgconfig/gtk2-java.pc
@@ -659,10 +659,6 @@ share/doc/libgtk-java-${PKGVERSION}/examples/frame/Frame.java
 share/doc/libgtk-java-${PKGVERSION}/examples/image/ImageTest.java
 share/doc/libgtk-java-${PKGVERSION}/examples/image/test.xpm
 share/doc/libgtk-java-${PKGVERSION}/examples/invisible/InvisibleExample.java
-share/doc/libgtk-java-${PKGVERSION}/examples/mandel/JavaGTKMandel.java
-share/doc/libgtk-java-${PKGVERSION}/examples/mandel/JavaGTKMandelGUI.java
-share/doc/libgtk-java-${PKGVERSION}/examples/mandel/JavaGTKMandelMath.java
-share/doc/libgtk-java-${PKGVERSION}/examples/mandel/mandel.glade
 share/doc/libgtk-java-${PKGVERSION}/examples/notebook/NotebookExample.java
 share/doc/libgtk-java-${PKGVERSION}/examples/packbox/Packbox.java
 share/doc/libgtk-java-${PKGVERSION}/examples/paned/PanedExample.java
@@ -719,7 +715,6 @@ share/libgtk-java/macros/jg_gtk_java.m4
 @dirrm share/doc/libgtk-java-${PKGVERSION}/examples/paned
 @dirrm share/doc/libgtk-java-${PKGVERSION}/examples/packbox
 @dirrm share/doc/libgtk-java-${PKGVERSION}/examples/notebook
-@dirrm share/doc/libgtk-java-${PKGVERSION}/examples/mandel
 @dirrm share/doc/libgtk-java-${PKGVERSION}/examples/invisible
 @dirrm share/doc/libgtk-java-${PKGVERSION}/examples/image
 @dirrm share/doc/libgtk-java-${PKGVERSION}/examples/frame
@@ -757,4 +752,13 @@ share/libgtk-java/macros/jg_gtk_java.m4
 @dirrm share/doc/libgtk-java-${PKGVERSION}/api/org
 @dirrm share/doc/libgtk-java-${PKGVERSION}/api
 @dirrm share/doc/libgtk-java-${PKGVERSION}
+@dirrm share/doc/libgtk-java-2.6.0/examples/tree
+@dirrm share/doc/libgtk-java-2.6.0/examples/testgtk
+@dirrm share/doc/libgtk-java-2.6.0/examples/progressbar
+@dirrm share/doc/libgtk-java-2.6.0/examples/filechooser
+@dirrm share/doc/libgtk-java-2.6.0/examples/editor
+@dirrm share/doc/libgtk-java-2.6.0/examples/buttonbox
+@dirrm share/doc/libgtk-java-2.6.0/examples
+@dirrm share/doc/libgtk-java-2.6.0/api
+@dirrm share/doc/libgtk-java-2.6.0
 @dirrm include/libgtk-java

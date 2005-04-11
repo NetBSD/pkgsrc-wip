@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/02/27 22:42:59 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 10:03:06 poppnk Exp $
 #
 
-DISTNAME=		libgtk-java-2.6.0
-PKGNAME=		java-gtk24-2.6.0
+DISTNAME=		libgtk-java-2.6.2
+PKGNAME=		java-gtk24-2.6.2
 CATEGORIES=		wip x11
 MASTER_SITES=		ftp://ftp.gnome.org/pub/GNOME/sources/libgtk-java/2.6/
 EXTRACT_SUFX=		.tar.bz2
