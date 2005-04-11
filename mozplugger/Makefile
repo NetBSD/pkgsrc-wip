@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/12 16:20:07 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:06 tvierling Exp $
 #
 
 DISTNAME=		mozplugger-1.5.2
@@ -9,7 +9,6 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://mozplugger.mozdev.org/
 COMMENT=		Mozilla plugin for launching external viewers
 
-USE_BUILDLINK3=		yes
 USE_X11=		yes
 MAKE_ARGS+=		-DPKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 USE_PKGINSTALL=		yes

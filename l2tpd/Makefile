@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/24 21:13:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:13:39 tvierling Exp $
 
 DISTNAME=	l2tpd-0.69
 CATEGORIES=	net
@@ -8,7 +8,6 @@ MAINTAINER=	hauke@Espresso.Rhein-Neckar.DE
 HOMEPAGE=	http://www.l2tpd.org/
 COMMENT=	Implementation of the layer two tunneling protocol (l2tp)
 
-USE_BUILDLINK3=	YES
 USE_PKGINSTALL= YES
 NO_CONFIGURE=	YES
 

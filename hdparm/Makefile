@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/02 22:08:52 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:00 tvierling Exp $
 #
 
 DISTNAME=		hdparm-5.4
@@ -11,7 +11,6 @@ COMMENT=		Linux tool for view and manipulate IDE drive parameters
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-USE_BUILDLINK3=		yes
 
 SUBST_CLASSES+= prefix
 

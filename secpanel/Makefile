@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/08 19:00:47 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:33 tvierling Exp $
 #
 
 DISTNAME=		secpanel-0.4.3
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.pingx.net/secpanel/
 COMMENT=		GUI front-end for SSH
 
 NO_BUILD=		# defined
-USE_BUILDLINK3=         yes
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/tcl/buildlink3.mk"

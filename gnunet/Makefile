@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/11/08 17:27:39 tvierling Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:12:32 tvierling Exp $
 #
 
 DISTNAME=	GNUnet-0.6.4a
@@ -16,7 +16,6 @@ BUILD_USES_MSGFMT=	yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 PLIST_SRC=		${WRKDIR}/PLIST.src
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
 PTHREAD_OPTS=		require native

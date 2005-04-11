@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/18 15:50:19 ppostma Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:12:26 tvierling Exp $
 #
 
 DISTNAME=		gfontview-0.5.0
@@ -9,7 +9,6 @@ MAINTAINER=		ccatrian@eml.cc
 HOMEPAGE=		http://gfontview.sourceforge.net/
 COMMENT=		Outline font viewer for X11
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-fontdir=${LOCALBASE}/share/ghostscript/fonts

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/02/03 18:55:00 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:14:34 tvierling Exp $
 #
 
 DISTNAME=	oops-1.5.23
@@ -16,7 +16,6 @@ COMMENT=	Multithreaded caching HTTP proxy server
 # with PTHREAD_DIAGASSERT=AEL.
 NOT_FOR_PLATFORM=	NetBSD-1.6[M-Z]-*
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES

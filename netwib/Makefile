@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/09 21:41:50 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:31 tvierling Exp $
 #
 
 DISTNAME=	netwib-5.16.0-src
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.laurentconstantin.com/en/netw/
 COMMENT=	Network library providing network functionality for developers
 
 WRKSRC=         	${WRKDIR}/${DISTNAME}/src
-USE_BUILDLINK3=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./genemake
 ONLY_FOR_PLATFORM=      NetBSD-*-i386

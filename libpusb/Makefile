@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/24 14:38:05 imilh Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:13:50 tvierling Exp $
 #
 
 DISTNAME=		libpusb
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=      FreeBSD-*-* NetBSD-*-* OpenBSD-*-* Linux-*-*
 
 WRKSRC=			${WRKDIR}/libpusb/src
 
-USE_BUILDLINK3=		yes
 INSTALL_TARGET=		install includes
 
 pre-build:

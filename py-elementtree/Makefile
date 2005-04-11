@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/02 21:34:06 blef Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:14:58 tvierling Exp $
 #
 
 DISTNAME=		elementtree-1.2a5-20031115
@@ -13,7 +13,6 @@ COMMENT=		Read XML and HTML files into trees of Element objects
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-USE_BUILDLINK3=		yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

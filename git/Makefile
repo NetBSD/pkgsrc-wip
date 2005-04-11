@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/07 15:24:21 dillo Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:12:27 tvierling Exp $
 #
 
 DISTNAME=		git-110
@@ -12,7 +12,6 @@ HOMEPAGE=		http://diden.net/if/git/
 COMMENT=		Interprter for Glulx interactive fiction
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK3=		yes
 MAKE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 
 .include "../../wip/glkloader/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/07 05:39:32 blef Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:16:04 tvierling Exp $
 
 DISTNAME=		toppler-1.0.6
 CATEGORIES=		games
@@ -8,7 +8,6 @@ MAINTAINER=		snj@NetBSD.org
 HOMEPAGE=		http://toppler.sourceforge.net/
 COMMENT=		Tower climbing game
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/18 16:46:37 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:16:09 tvierling Exp $
 #
 
 DISTNAME=		uqm-0.3-source
@@ -15,7 +15,6 @@ COMMENT=		Star Control 2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_X11=		YES
 USE_GNU_TOOLS=		make
 WRKSRC=			${WRKDIR}/${PKGNAME}

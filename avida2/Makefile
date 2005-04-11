@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/09 21:59:33 blef Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:10:04 tvierling Exp $
 #
 
 DISTNAME=       avida-2.0b1
@@ -9,7 +9,6 @@ MAINTAINER=     adam@monkeybyte.org
 HOMEPAGE=       http://nemus.dllab.caltech.edu/avida/
 COMMENT=        Avida is an auto-adaptive genetic system
 
-USE_BUILDLINK3=         YES
 HAS_CONFIGURE= YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS= --enable-viewer

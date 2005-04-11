@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/29 04:57:42 xmor61 Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:09:39 tvierling Exp $
 #
 
 DISTNAME=		adamem
@@ -13,7 +13,6 @@ COMMENT=		Emulator for the Colecovision game console and Adam computer system
 MAKEFILE=		Makefile.X
 USE_X11=		YES
 WRKSRC=		        ${WRKDIR}
-USE_BUILDLINK3=		yes
 
 SUBST_CLASSES+=         dsp
 SUBST_STAGE.dsp=        post-patch

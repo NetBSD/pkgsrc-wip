@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/06/23 12:33:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:15:59 tvierling Exp $
 #
 
 DISTNAME=		tcd-2.2.0
@@ -10,7 +10,6 @@ MAINTAINER=		roland.illig@gmx.de
 HOMEPAGE=		http://savannah.gnu.org/download/tcd/
 COMMENT=		Audio CD player using ncurses and SDL
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

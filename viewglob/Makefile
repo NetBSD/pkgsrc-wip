@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/17 17:43:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:10 tvierling Exp $
 #
 
 DISTNAME=		viewglob-0.9
@@ -11,7 +11,6 @@ COMMENT=		Utility designed to complement the shell in graphical environments
 
 DEPENDS+=		bash>=2.0:../../shells/bash2
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

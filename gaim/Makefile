@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/25 19:46:33 matthewluckie Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:12:21 tvierling Exp $
 
 DISTNAME=	gaim-1.1.2
 PKGREVISION=	1
@@ -14,7 +14,6 @@ BUILD_USES_MSGFMT=	YES
 
 CONFLICTS+=		gaim-gnome-[0-9]*
 
-USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES

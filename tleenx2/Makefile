@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/22 21:48:21 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:16:03 tvierling Exp $
 #
 
 DISTNAME=	TleenX2-20040214
@@ -10,7 +10,6 @@ MAINTAINER=	dotz@irc.pl
 HOMEPAGE=	http://tleenx.sourceforge.net/
 COMMENT=	Client to tlen.pl - polish IM / chat system
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 LIBS+=			-lm

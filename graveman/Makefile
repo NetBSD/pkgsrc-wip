@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/14 23:07:10 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:35 tvierling Exp $
 #
 
 DISTNAME=		graveman-0.3.7
@@ -13,7 +13,6 @@ COMMENT=		GTK2 frontend for CD writting and audio conversion
 DEPENDS+=		sox>12:../../audio/sox
 DEPENDS+=		dvd+rw-tools>5.21:../../sysutils/dvd+rw-tools
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make

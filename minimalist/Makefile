@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/08/05 14:57:28 poppnk Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:14:03 tvierling Exp $
 #
 
 DISTNAME=	minimalist-2.4
@@ -10,7 +10,6 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.mml.org.ua/LIST/
 COMMENT=	Minimalistic Mailing Lists Manager
 
-USE_BUILDLINK3= YES
 USE_PERL5=	YES
 REPLACE_PERL=	${WRKSRC}/minimalist.pl
 REPLACE_PERL+=	${WRKSRC}/contrib/minimalist_request.pl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/29 18:03:02 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:26 tvierling Exp $
 #
 
 DISTNAME=		readseq
@@ -11,7 +11,6 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		ftp://ftp.ebi.ac.uk/pub/software/unix/
 COMMENT=		Widely Used Tool to Convert Various Sequence Formats
 
-USE_BUILDLINK3=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/readseq ${PREFIX}/bin

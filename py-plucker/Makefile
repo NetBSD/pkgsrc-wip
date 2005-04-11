@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/25 14:48:37 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:17 tvierling Exp $
 
 DISTNAME=	plucker_parser-1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_parser//}
@@ -13,7 +13,6 @@ COMMENT=	Set of tools converting web pages to Plucker format
 CONFLICTS=	py*-plucker-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_parser//}
-USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 NO_BUILD=	yes
 

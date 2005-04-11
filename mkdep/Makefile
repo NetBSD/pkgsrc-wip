@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/06 05:40:54 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:14:03 tvierling Exp $
 
 # Version based on CVS revision number.
 DISTNAME=		mkdep-1.16
@@ -11,7 +11,6 @@ COMMENT=		Fast mkdep
 
 NO_CHECKSUM=		# defined
 NO_CONFIGURE=		YES
-USE_BUILDLINK3=		yes
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}

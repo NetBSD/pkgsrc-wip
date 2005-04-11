@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/25 08:25:47 blef Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:14:49 tvierling Exp $
 
 DISTNAME= 	portmap_4
 PKGNAME=	portmap-4
@@ -13,7 +13,6 @@ COMMENT=	RPC portmapper with access control
 # XXX allow this to install on NetBSD, because this also
 # XXX provides pmap_dump and pmap_set
 
-USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 USE_PKGINSTALL=	yes
 

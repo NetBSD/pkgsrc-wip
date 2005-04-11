@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/31 21:21:31 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:32 tvierling Exp $
 #
 
 DISTNAME=		makesis_2.0.0-1
@@ -15,7 +15,6 @@ USE_GNU_TOOLS+=	make
 ONLY_FOR_PLATFORM+=	Linux-*-* # Need to check swprintf on other OSs
 
 WRKSRC=		${WRKDIR}/makesis-2.0.0
-USE_BUILDLINK3=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/makesis ${PREFIX}/bin/

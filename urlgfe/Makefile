@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/13 15:38:19 cetrox Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:09 tvierling Exp $
 #
 
 DISTNAME=		urlgfe-0.7.1
@@ -9,7 +9,6 @@ MAINTAINER=		ccatrian@eml.cc
 HOMEPAGE=		http://urlget.sourceforge.net/
 COMMENT=		Download manager for X
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

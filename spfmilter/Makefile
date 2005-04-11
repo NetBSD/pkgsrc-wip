@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/01 16:02:12 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:55 tvierling Exp $
 
 DISTNAME=	spfmilter-1.0.8
 CATEGORIES=	mail
@@ -8,7 +8,6 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.acme.com/software/spfmilter/
 COMMENT=	Implementation of the Sender Policy Framework (SPF) as a milter
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 PTHREAD_OPTS+=	require
 USE_PKGINSTALL=	YES

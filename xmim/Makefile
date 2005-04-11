@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 20:59:06 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:18 tvierling Exp $
 #
 
 DISTNAME=		mim-1.2
@@ -11,7 +11,6 @@ HOMEPAGE=	 	http://videolab.uoregon.edu/
 COMMENT=		GUI interface for multicast MPEG-I stream viewer
 
 WRKSRC=			${WRKDIR}/mim-1.2
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gui
 CONFIGURE_ARGS+=	--disable-gtktest

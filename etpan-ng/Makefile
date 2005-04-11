@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/30 02:17:00 dawszy Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:11:51 tvierling Exp $
 #
 
 DISTNAME=		etpan-ng-0.5
@@ -9,7 +9,6 @@ MAINTAINER=		dawszy@arhea.pl
 HOMEPAGE=		http://libetpan.sourceforge.net/etpan/
 COMMENT=		Mail console client with S/MIME, PGP and bogofilter support
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

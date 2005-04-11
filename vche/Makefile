@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/14 21:49:46 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:16:10 tvierling Exp $
 #
 
 DISTNAME=		vche-1.7.2
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.grigna.com/diego/linux/vche/
 COMMENT=		Hex Editor for console
 
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK3=	YES
 
 NOT_FOR_PLATFORM=	NetBSD-*-*
 

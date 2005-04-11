@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/02/02 07:12:38 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:13:57 tvierling Exp $
 
 DISTNAME=		man-db_${VERSION}.orig
 PKGNAME=		man-db-${VERSION}
@@ -32,7 +32,6 @@ MAN_DB_USER?=		man-db
 PKG_USERS=		${MAN_DB_USER}:${ROOT_GROUP}::man-db\\ user:${MAN_DB_CAT_DIR}
 USE_PKGINSTALL=		YES
 
-USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make

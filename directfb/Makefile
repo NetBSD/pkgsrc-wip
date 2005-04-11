@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/05/07 01:57:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:11:07 tvierling Exp $
 #
 
 DISTNAME=	DirectFB-0.9.19
@@ -14,7 +14,6 @@ ONLY_FOR_PLATFORM=     Linux-*-* NetBSD-*-*
 
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK3=	YES
 USE_X11=	YES
 
 CONFIGURE_ARGS+=	--with-gfxdrivers=all

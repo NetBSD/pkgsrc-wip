@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/03/02 13:24:37 poppnk Exp $
+# $NetBSD: Makefile,v 1.29 2005/04/11 21:09:48 tvierling Exp $
 
 DISTNAME=	apstget-20050302
 CATEGORIES=	pkgtools
@@ -13,7 +13,6 @@ DEPENDS+=	pkg_tarup>=1.6.3:../../pkgtools/pkg_tarup
 DEPENDS+=	pkg_chk>=1.54:../../pkgtools/pkg_chk
 DEPENDS+=	pkglint>=3.94:../../pkgtools/pkglint
 
-NO_BUILDLINK=	yes
 NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
 NO_BUILD=	yes

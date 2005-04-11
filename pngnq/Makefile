@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/15 08:20:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:48 tvierling Exp $
 #
 
 DISTNAME=		${PKGNAME}-src
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.cybertherial.com/pngnq/pngnq.html
 COMMENT=		Tool for quantizing PNG images in RGBA format
 
 WRKSRC=		${WRKDIR}/pngnq
-USE_BUILDLINK3=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pngnq ${PREFIX}/bin

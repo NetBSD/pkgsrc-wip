@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/07/31 05:35:34 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:14:03 tvierling Exp $
 #
 # XXX WIP: only installs parts necessary for client operation.
 # Server parts still in work (need to add informational texts into
@@ -14,7 +14,6 @@ MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://mixmaster.sourceforge.net/
 COMMENT=		The Mixmaster anonymous remailer client
 
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 
 BUILD_DEFS+=		USE_IDEA

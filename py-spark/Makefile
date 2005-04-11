@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/23 21:39:33 marc Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:15:20 tvierling Exp $
 #
 
 DISTNAME=		spark-0.6.1
@@ -11,7 +11,6 @@ HOMEPAGE=		http://pages.cpsc.ucalgary.ca/~aycock/spark/
 COMMENT=		Scanning, Parsing, and Rewriting Kit for Python
 
 NO_BUILD=	YES
-USE_BUILDLINK3= YES
 PY_PATCHPLIST=	YES
 PYTHON_VERSIONS_ACCEPTED=    23 22
 

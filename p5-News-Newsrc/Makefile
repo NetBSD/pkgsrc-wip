@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/11 12:43:38 imilh Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:41 tvierling Exp $
 #
 
 DISTNAME=	News-Newsrc-1.08
@@ -12,7 +12,6 @@ COMMENT=	Perl module to manage newsrc files
 
 DEPENDS+=	p5-Set-IntSpan>=1.07:../../devel/p5-Set-IntSpan
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/News/Newsrc/.packlist
 
 .include "../../lang/perl5/module.mk"

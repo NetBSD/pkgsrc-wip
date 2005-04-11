@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/18 15:25:58 ppostma Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:11 tvierling Exp $
 #
 
 DISTNAME=		n0t-1.87
@@ -11,7 +11,6 @@ HOMEPAGE=		http://r3b00t.itsec.pl/n0t/
 COMMENT=		Network OS Tracer
 
 WRKSRC=		${WRKDIR}/n0t
-USE_BUILDLINK3=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/n0t ${PREFIX}/sbin/n0t

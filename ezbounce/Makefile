@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/05/07 01:57:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:11:57 tvierling Exp $
 #
 
 DISTNAME=	ezbounce-1.04a
@@ -14,7 +14,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://druglord.freelsd.org/ezbounce/
 COMMENT=	Highly Configurable IRC Proxy
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 

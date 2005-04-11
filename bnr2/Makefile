@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/01/05 19:44:06 dhowland Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/11 21:10:20 tvierling Exp $
 #
 
 DISTNAME=		BNR2beta-0.14.6
@@ -16,7 +16,6 @@ COMMENT=		USENET bulk binary downloader (X11)
 CONFLICTS+=		BNR2beta-0.*
 
 NO_BUILD=		# defined
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 
 ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-*-i386

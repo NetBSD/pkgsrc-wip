@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/13 14:26:22 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:32 tvierling Exp $
 
 DISTNAME=		inn-1.7.2.insync-1.1d
 PKGNAME=		nnrpd-1.7.2
@@ -11,7 +11,6 @@ MAINTAINER=		hauke@Espresso.Rhein-Neckar.DE
 HOMEPAGE=		http://www.isc.org/inn.html
 COMMENT=		NNTP reader daemon from release 1.7 of InterNet News (INN)
 
-USE_BUILDLINK3=		YES
 USE_PERL5=      	YES
 
 USE_PKGINSTALL=		YES

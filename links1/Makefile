@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/04 08:43:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:13:53 tvierling Exp $
 #
 
 DISTNAME=		links-1.00pre13
@@ -10,7 +10,6 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://artax.karlin.mff.cuni.cz/~mikulas/links/
 COMMENT=		Text browser with tables (original version)
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_PKG_CONFIG=""
 

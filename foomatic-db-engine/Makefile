@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/13 18:56:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:12:16 tvierling Exp $
 
 DISTNAME=	foomatic-db-engine-3.0.1
 CATEGORIES=	print
@@ -11,7 +11,6 @@ COMMENT=	Spooler independent postscript printing filter
 DEPENDS+=	foomatic-filters>=3.0.1:../../wip/foomatic-filters
 #DEPENDS+=	foomatic-db-[0-9]*:../../wip/foomatic-db # XXX
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 USE_GNU_TOOLS+=	make

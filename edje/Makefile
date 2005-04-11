@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/15 14:53:19 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:11:48 tvierling Exp $
 #
 
 DISTNAME=		edje-0.5.0
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.enlightenment.org/pages/edje.html
 COMMENT=		Complex Graphical Design/Layout Engine
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
 

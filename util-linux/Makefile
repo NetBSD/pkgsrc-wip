@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/19 20:01:19 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:16:09 tvierling Exp $
 
 # newest version may be util-linux-2.12h but not on mirrors
 DISTNAME=	util-linux-2.12b
@@ -17,7 +17,6 @@ COMMENT=	Miscellaneous essential utilities for Linux systems
 
 ONLY_FOR_PLATFORM=	Linux-*-* # Uses Linux kernel headers
 
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES

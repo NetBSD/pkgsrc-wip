@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/24 21:13:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:10:25 tvierling Exp $
 
 DISTNAME=	c-news
 PKGNAME=        c-news-CR-7
@@ -30,7 +30,6 @@ MAINTAINER=	hauke@Espresso.Rhein-Neckar.DE
 HOMEPAGE=	http://www.dinoex.net/c-news.html
 COMMENT=	The 3rd generation USENET news server
 
-USE_BUILDLINK3= YES
 CONFLICTS+=	nntpclnt-[0-9]* inn*
 
 WRKSRC=		${WRKDIR}

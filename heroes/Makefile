@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/14 18:59:25 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:13:01 tvierling Exp $
 #
 
 DISTNAME=		heroes-0.21
@@ -16,7 +16,6 @@ COMMENT=		Feature-packed game, like Nibbles or Tron clone
 BUILDLINK_DEPENDS.gettext+=	gettext-lib>=0.10.36
 
 WRKSRC=			${WRKDIR}
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

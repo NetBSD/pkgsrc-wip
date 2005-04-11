@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/08 14:22:32 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:18 tvierling Exp $
 #
 
 DISTNAME=		gnujaxp-1.0beta1
@@ -11,7 +11,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.gnu.org/software/classpathx/jaxp/
 COMMENT=		XML extensions for GNU classpath
 
-USE_BUILDLINK3=		yes
 
 do-build:
 

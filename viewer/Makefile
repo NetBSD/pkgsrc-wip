@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/13 18:56:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:16:10 tvierling Exp $
 
 DISTNAME=		viewer-0.7.3
 CATEGORIES=		graphics
@@ -8,7 +8,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www-users.cs.umn.edu/~wburdick
 COMMENT=		OpenGL based multipurpose image viewer
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIG_STATUS_OVERRIDE= # defined
 

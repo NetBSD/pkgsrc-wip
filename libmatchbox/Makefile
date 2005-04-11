@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/01/01 22:23:14 mattd Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:13:48 tvierling Exp $
 #
 
 DISTNAME=	libmatchbox-1.4
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://matchbox.handhelds.org/
 COMMENT=	Library used by Matchbox
 
-USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes

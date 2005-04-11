@@ -5,7 +5,6 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.emboss.org/
 
 USE_X11=		yes
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/29 17:12:37 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:36 tvierling Exp $
 
 DISTNAME=		Cache-Mmap-0.081
 PKGNAME=		p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=		Shared data cache using memory mapped files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Cache/Mmap/.packlist
 
 .include "../../lang/perl5/module.mk"

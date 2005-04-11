@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/25 20:09:57 lexort Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:39 tvierling Exp $
 
 DISTNAME=	IO-Multiplex-1.08
 PKGNAME=	p5-IO-Multiplex-1.08
@@ -11,7 +11,6 @@ COMMENT=	Front end to select loop for perl
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/IO/Multiplex/.packlist
 

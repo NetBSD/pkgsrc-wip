@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/23 16:38:13 ivaniclixx Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:43 tvierling Exp $
 #
 
 DISTNAME=		pasmo-0.5.1
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.arrakis.es/~ninsesabe/pasmo/
 COMMENT=		Z80 cross assembler written in C++
 
 WRKSRC=		${WRKDIR}/pasmo-0.5.1
-USE_BUILDLINK3=		yes
 
 INSTALLATION_DIRS=	bin
 

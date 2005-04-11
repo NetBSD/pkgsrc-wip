@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 20:28:52 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:02 tvierling Exp $
 #
 
 DISTNAME=		mim-1.2
@@ -12,7 +12,6 @@ COMMENT=		Multicast MPEG-I stream viewer
 DEPENDS+=		mpg123>=0.59.18:../../audio/mpg123
 DEPENDS+=		mtv>=1.2.5:../../graphics/mtv
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 post-install:

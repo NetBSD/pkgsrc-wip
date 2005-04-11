@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/06 15:47:19 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:00 tvierling Exp $
 #
 
 DISTNAME=		tcpspy-1.7
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://freshmeat.net/projects/tcpspy/
 COMMENT=		TCP/IP connections logger
 
-USE_BUILDLINK3=		yes
 
 ONLY_FOR_PLATFORM=	Linux-*-* # It uses /proc and some linux-defines
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/26 23:48:37 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:30 tvierling Exp $
 #
 
 DISTNAME=		rssh-2.1.1
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.pizzashack.org/rssh/
 COMMENT=		Restricted shell allowing only scp and/or sftp
 
-USE_BUILDLINK3=         yes
 GNU_CONFIGURE=		yes
 
 # TODO THIS MUST BE PORTED TO BSD!!!! f*cking wordexp.? !!!

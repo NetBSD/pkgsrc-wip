@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/10 22:54:18 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:14:51 tvierling Exp $
 
 DISTNAME=		procps-3.0.5
 CATEGORIES=		sysutils
@@ -16,7 +16,6 @@ ONLY_FOR_PLATFORM=	Linux-*-*
 CONFLICTS+=		top-[0-9]*
 
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK3=		YES
 MAKE_ENV+=		DESTDIR=${PREFIX}
 
 .include "../../devel/ncurses/buildlink3.mk"

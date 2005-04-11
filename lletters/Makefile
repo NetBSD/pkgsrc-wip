@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/04 02:26:31 blef Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:55 tvierling Exp $
 
 DISTNAME=	lletters-0.1.9
 CATEGORIES=	games
@@ -10,7 +10,6 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://lln.sourceforge.net/
 COMMENT=	Linux Letters and Numbers childrens game
 
-USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make

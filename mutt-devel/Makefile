@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/03 21:37:03 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:14:11 tvierling Exp $
 
 DISTNAME=		mutt-1.5.4i
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
@@ -19,7 +19,6 @@ CONFLICTS+=		mutt-[0-9]*
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

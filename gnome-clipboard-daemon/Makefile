@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/08 19:20:19 blef Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:12:31 tvierling Exp $
 
 DISTNAME=	gnome-clipboard-daemon-1.0
 CATEGORIES=	x11 gnome
@@ -9,7 +9,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://members.chello.nl/~h.lai/gnome-clipboard-daemon/
 COMMENT=	Program that keeps the content of your X clipboard in memory
 
-USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 USE_X11=	yes
 

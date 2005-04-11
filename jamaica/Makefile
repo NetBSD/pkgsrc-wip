@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/10 19:36:41 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:15 tvierling Exp $
 #
 
 DISTNAME=		jamaica-1.0
@@ -14,7 +14,6 @@ COMMENT=		JVM Macro Assembler language
 DEPENDS+=		java-bcel>=5.1:../../wip/java-bcel
 DEPENDS+=		java-asm>=1.4.2:../../wip/java-asm
 
-USE_BUILDLINK3=		yes
 
 do-build:
 

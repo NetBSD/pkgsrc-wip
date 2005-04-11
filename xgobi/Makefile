@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/29 18:06:30 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:17 tvierling Exp $
 #
 
 DISTNAME=		xgobi
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.research.att.com/areas/stat/xgobi/
 COMMENT=		Data Visualization Systems for viewing high-dimensional data
 
 USE_X11=                yes
-USE_BUILDLINK3=		yes
 
 do-configure:
 	cd ${WRKSRC}/src; \

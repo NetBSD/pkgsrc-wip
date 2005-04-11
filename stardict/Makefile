@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/04 00:42:50 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:56 tvierling Exp $
 #
 
 DISTNAME=		stardict-2.4.4
@@ -10,7 +10,6 @@ MAINTAINER=		rxg@NetBSD.org
 HOMEPAGE=		http://stardict.sourceforge.net/
 COMMENT=		Cross-Platform and international dictionary written in Gtk2
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_X11=		yes

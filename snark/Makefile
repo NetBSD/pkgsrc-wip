@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/14 19:17:54 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:53 tvierling Exp $
 #
 
 DISTNAME=		snark-0.5
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.klomp.org/snark/
 COMMENT=		BitTorrent application suite in Java
 
-USE_BUILDLINK3=		yes
 BUILD_TARGET=	snark.jar
 
 # yet defined in java-sh

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/08 18:11:50 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:15 tvierling Exp $
 #
 
 DISTNAME=		jakarta-struts-1.1
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://apache.rediris.es/jakarta/struts/binaries/
 COMMENT=		struts is struts xD
 
-USE_BUILDLINK3=		yes
 
 do-build:
 

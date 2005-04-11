@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/14 13:32:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:16:37 tvierling Exp $
 #
 
 DISTNAME=		ypserv-2.9
@@ -15,7 +15,6 @@ DEPENDS+=		portmap>=4:../../wip/portmap
 # rc.d scripts use domainname from yp-tools or net-tools
 #DEPENDS+=		yp-tools-[0-9]*:../../wip/yp-tools
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 

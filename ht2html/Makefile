@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/25 09:30:28 blef Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:13:03 tvierling Exp $
 #
 
 DISTNAME=		ht2html-2.0
@@ -9,7 +9,6 @@ MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://ht2html.sourceforge.net/
 COMMENT=		Simple web page templating system
 
-USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 
 PYTHON_PATCH_SCRIPTS=	ht2html.py

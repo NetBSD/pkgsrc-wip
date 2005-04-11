@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/24 21:13:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:33 tvierling Exp $
 
 DISTNAME=	scponly-3.9
 CATEGORIES=	shells
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.sublimation.org/scponly/
 COMMENT=	Tiny shell which only permits scp and sftp
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 PKG_SHELL=	${PREFIX}/bin/scponly
 
 .include "../../mk/bsd.pkg.install.mk"

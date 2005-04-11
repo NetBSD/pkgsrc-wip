@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/19 12:47:26 froz Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:30 tvierling Exp $
 
 DISTNAME=	rox-2.1.4
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Filer/src
@@ -12,7 +12,6 @@ COMMENT=	RISC OS-like filer for X
 
 DEPENDS+=	shared-mime-info>=0.12:../../databases/shared-mime-info
 
-USE_BUILDLINK3=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-rox

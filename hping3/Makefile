@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/13 16:21:55 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:02 tvierling Exp $
 #
 
 DISTNAME=		hping3-alpha-2
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://wiki.hping.org/uploadedfiles/101/
 COMMENT=		Command-line oriented TCP/IP packet assembler/analyzer
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 

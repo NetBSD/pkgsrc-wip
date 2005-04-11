@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/19 19:23:31 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:36 tvierling Exp $
 #
 
 DISTNAME=	gstat-2.4.3
@@ -12,7 +12,6 @@ COMMENT=	Geostatistical modelling, prediction and simulation
 GNU_CONFIGURE=	YES
 MAKEFILE=	makefile
 
-USE_BUILDLINK3= YES
 # TODO:  detects ncurses instead of curses
 CONFIGURE_ARGS+=	--without-curses
 # TODO:  does not detect gd properly; needs INCLUDES set properly

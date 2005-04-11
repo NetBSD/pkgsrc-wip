@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/13 18:20:32 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:09:50 tvierling Exp $
 #
 
 DISTNAME=		artemis_compiled_v6
@@ -13,7 +13,6 @@ COMMENT=
 WRKSRC=			${WRKDIR}/artemis
 USE_JAVA=		yes
 USE_JAVA2=		yes
-USE_BUILDLINK3=		yes
 
 NO_BUILD=		#DEFINED
 INSTALL_DIR=		${PREFIX}/share/Artemis

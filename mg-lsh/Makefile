@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/18 14:13:56 bencollver Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:01 tvierling Exp $
 #
 #
 
@@ -13,7 +13,6 @@ COMMENT=	DOS compatible command line interpreter
 
 DEPENDS+=	free-[0-9]*:../../sysutils/free
 
-USE_BUILDLINK3=	YES
 BUILD_TARGET=	lsh
 WRKSRC=		${WRKDIR}/lsh-0.70
 CFLAGS+=	-DLSH_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""

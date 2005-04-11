@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/02 16:38:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:10:25 tvierling Exp $
 #
 
 DISTNAME=	cdpr-1.0.8
@@ -10,7 +10,6 @@ MAINTAINER=	adam@monkeybyte.org
 HOMEPAGE=	http://www.monkeymental.com/
 COMMENT=	Cisco Discovery Protocol Reporter
 
-USE_BUILDLINK3=         yes
 BUILD_TARGET=		cdpr
 
 do-install:

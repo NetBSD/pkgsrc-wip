@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/08 07:20:31 dyeske Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:11:48 tvierling Exp $
 
 DISTNAME=		electricsheep-2.5
 CATEGORIES=		x11
@@ -11,7 +11,6 @@ COMMENT=		Distributed fractal flame screensaver
 DEPENDS+=		xli-[0-9]*:../../graphics/xli
 DEPENDS+=		curl>=7.12.1:../../www/curl
 
-USE_BUILDLINK3=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 

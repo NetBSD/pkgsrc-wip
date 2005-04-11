@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/13 08:45:10 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:57 tvierling Exp $
 #
 
 DISTNAME=		stmpclean-0.3
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.internet2.edu/~shalunov/stmpclean/
 COMMENT=		Secure /tmp cleaner
 
-USE_BUILDLINK3=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/stmpclean ${PREFIX}/sbin/stmpclean

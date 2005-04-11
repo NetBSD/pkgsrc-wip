@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/19 21:52:41 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:36 tvierling Exp $
 #
 
 DISTNAME=		AcePerl-1.86
@@ -10,7 +10,6 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.cpan.org/authors/id/L/LD/LDS/
 COMMENT=		Perl interface for the ACEDB object-oriented database
 
-USE_BUILDLINK3=		yes
 PERL5_PACKLIST=         ${PERL5_SITEARCH}/auto/Ace/.packlist
 
 pre-build:

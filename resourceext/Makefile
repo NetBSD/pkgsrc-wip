@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/09 02:39:47 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:29 tvierling Exp $
 #
 
 DISTNAME=		resourceext-1.0
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://xlibs.freedesktop.org/
 COMMENT=		X Resource usage extension headers
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	resourceext.pc.in

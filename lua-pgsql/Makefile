@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/02 16:39:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:56 tvierling Exp $
 #
 
 DISTNAME=		luasql-2.0b
@@ -10,7 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.keplerproject.org/luasql/
 COMMENT=		PostgreSQL bindings for LUA
 
-USE_BUILDLINK3=		yes
 
 BUILD_TARGET=		pglinux
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/04 14:26:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:14:56 tvierling Exp $
 #
 
 DISTNAME=		PyPE1.8.2
@@ -18,7 +18,6 @@ PYTHON_PATCH_SCRIPTS=   pype.py
 NO_BUILD=		# defined
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 PY_PATCHPLIST=		yes
-NO_BUILDLINK=		yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${PYSITELIB}/pype

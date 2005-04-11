@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/02 22:10:25 blef Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:54 tvierling Exp $
 #
 
 DISTNAME=		Fnorb-1.3
@@ -10,7 +10,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://fnorb.sourceforge.net/
 COMMENT=		CORBA 2.0 ORB for Python
 
-USE_BUILDLINK3=		yes
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

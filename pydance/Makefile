@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/11/27 22:44:47 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:23 tvierling Exp $
 #
 
 DISTNAME=		pydance-1.0.2
@@ -12,7 +12,6 @@ COMMENT=		Dance Dance Revolution, Pump It Up and similar dance machines emulator
 
 DEPENDS+=		${PYPKGPREFIX}-game>=1.6:../../wip/py-game
 
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 
 EXAMPLESDIR=	${PREFIX}/share/examples/pydance

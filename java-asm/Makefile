@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/10 19:39:54 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:16 tvierling Exp $
 #
 
 DISTNAME=		asm-1.4.2-bin
@@ -13,7 +13,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://asm.objectweb.org/
 COMMENT=		Java bytecode manipulation framework
 
-USE_BUILDLINK3=		yes
 
 do-build:
 

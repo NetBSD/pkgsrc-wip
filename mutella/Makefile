@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/03/14 22:27:00 poppnk Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:14:10 tvierling Exp $
 #
 
 DISTNAME=	mutella-0.4.3
@@ -10,7 +10,6 @@ HOMEPAGE=	http://mutella.sourceforge.net
 COMMENT=	Console mode Gnutella client with optional HTTP interface
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 

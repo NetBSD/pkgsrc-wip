@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/24 17:11:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:12:30 tvierling Exp $
 
 DISTNAME=	gmfsk-0.6beta2
 CATEGORIES=	ham
@@ -10,7 +10,6 @@ COMMENT=	gMFSK is a multimode HF terminal program for radio amateurs
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 
 .include "../../devel/libgnomeui/buildlink3.mk"

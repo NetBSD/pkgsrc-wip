@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/28 00:39:13 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:31 tvierling Exp $
 #
 
 DISTNAME=		gnome-jabber-0.4
@@ -10,7 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://ftp.gnome.org/pub/GNOME/sources/gnome-jabber/0.4/
 COMMENT=		Instant message client for Gnome using the Jabber protocol.
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

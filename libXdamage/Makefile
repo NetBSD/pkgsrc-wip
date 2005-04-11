@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/09/30 12:32:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:13:42 tvierling Exp $
 #
 
 DISTNAME=		libXdamage-1.0.0
@@ -11,7 +11,6 @@ HOMEPAGE=		http://freedesktop.org/
 COMMENT=		Xdamage extension (Library)
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	xdamage.pc.in

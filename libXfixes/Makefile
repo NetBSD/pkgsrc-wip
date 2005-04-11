@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/09/23 05:59:46 jlamwww Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:13:43 tvierling Exp $
 #
 
 DISTNAME=		libXfixes-2.0.1
@@ -12,7 +12,6 @@ COMMENT=		Xfixes extension of X RandR
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 

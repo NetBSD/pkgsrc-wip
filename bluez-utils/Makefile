@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/28 16:55:21 poppnk Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:10:20 tvierling Exp $
 #
 
 DISTNAME=		bluez-utils-2.15
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.bluez.org/
 COMMENT=		Linux Bluetooth Stack utilities
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

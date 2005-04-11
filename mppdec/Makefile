@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/19 16:06:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:06 tvierling Exp $
 #
 
 DISTNAME=		mppdec-1.1
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.personal.uni-jena.de/~pfk/mpp/
 COMMENT=		Musepack (MPC) audio file decoder
 
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK3=		YES
 
 MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO:Q}
 

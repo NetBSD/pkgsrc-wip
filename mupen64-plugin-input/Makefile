@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/14 20:19:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:14:09 tvierling Exp $
 #
 
 DISTNAME=	mupen64_input
@@ -13,7 +13,6 @@ COMMENT=	Input plugin for mupen64 emulator
 
 BUILD_DEPENDS+=	mupen64-base-[0-9]*:../../wip/mupen64-base
 
-USE_BUILDLINK3=	yes
 USE_X11=	yes
 
 .include "../../devel/SDL/buildlink3.mk"

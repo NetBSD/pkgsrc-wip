@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/22 22:13:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:14:11 tvierling Exp $
 #
 
 DISTNAME=		mythtv-0.11
@@ -10,7 +10,6 @@ MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.mythtv.org/
 COMMENT=		TV/video recorder with many features
 
-USE_BUILDLINK3=		yes
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 

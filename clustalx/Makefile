@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 20:19:17 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:10:45 tvierling Exp $
 #
 
 DISTNAME=		clustalx1.83.sun
@@ -15,7 +15,6 @@ MESSAGE_SUBST+=         PREFIX=${PREFIX}
 MAKEFILE=		makefile
 USE_X11=		yes
 
-USE_BUILDLINK3=		yes
 
 do-install:
 .for PROGRAM in clustalx

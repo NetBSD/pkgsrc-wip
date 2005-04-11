@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/27 00:24:39 rockpiper Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:59 tvierling Exp $
 #
 
 DISTNAME=		FXPy-1.0.5
@@ -11,7 +11,6 @@ HOMEPAGE=		http://fxpy.sourceforge.net/
 COMMENT=		Python bindings for the FOX toolkit
 
 USE_X11=		YES
-USE_BUILDLINK3=		YES
 PYDISTUTILSPKG=		YES
 
 pre-configure:

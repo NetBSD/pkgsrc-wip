@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/02 16:38:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:09:42 tvierling Exp $
 #
 
 DISTNAME=		and-1.2.0
@@ -9,11 +9,9 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://and.sourceforge.net/
 COMMENT=		auto nice daemon
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=	make
 BUILD_TARGET=	default
 
-USE_BUILDLINK3=		yes
 MYARCH=${OPSYS}
 .if ${MYARCH} == "NetBSD"
 MYARCH=OpenBSD

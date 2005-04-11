@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/09/02 22:35:43 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:32 tvierling Exp $
 #
 
 DISTNAME=		sawfish-${SF_VERS}
@@ -19,7 +19,6 @@ CONFLICTS+=		sawfish-replibs-*
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 BUILD_USES_MSGFMT=	YES
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 USE_X11=		# defined
 CONFIGURE_ARGS+=	--without-audiofile --without-esd

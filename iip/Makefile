@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/20 20:41:37 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:12 tvierling Exp $
 #
 
 DISTNAME=		iip-1.1.0
@@ -10,7 +10,6 @@ MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://www.invisiblenet.net/iip/
 COMMENT=		The Invisible IRC Project
 
-USE_BUILDLINK3=		yes
 
 BUILD_DIRS=		${WRKSRC}/src
 MAKE_FLAGS+=		CC=${CC:Q} LD=${CC:Q} LDFLAGS=${LDFLAGS:Q}

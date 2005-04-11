@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/08 14:44:44 bencollver Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:13:58 tvierling Exp $
 #
 
 DISTNAME=	matchbox-desktop-0.9.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://project.o-hand.com/matchbox/
 COMMENT=	Desktop manager for Matchbox
 
 USE_PKGINSTALL=	yes
-USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes

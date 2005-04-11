@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/11/22 22:12:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:12:19 tvierling Exp $
 #
 
 DISTNAME=		fwbuilder-1.0.11
@@ -11,7 +11,6 @@ COMMENT=		Firewall configuration and management tool
 
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

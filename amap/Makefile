@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/01 21:47:44 adrian_p Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:09:41 tvierling Exp $
 #
 
 DISTNAME=       amap-4.7
@@ -9,7 +9,6 @@ MAINTAINER=     adam@monkeybyte.org
 HOMEPAGE=       http://www.thc.org/
 COMMENT=        Applications and Services scanner
 
-USE_BUILDLINK3=	YES
 HAS_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}

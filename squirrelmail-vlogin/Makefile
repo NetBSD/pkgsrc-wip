@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/04 23:03:11 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:56 tvierling Exp $
 #
 
 DISTNAME=	vlogin-3.5-1.2.7
@@ -12,7 +12,6 @@ COMMENT=	Easy Virtual domain support plugin for SquirrelMail
 
 DEPENDS+=   squirrelmail-compatibility>=1.3:../../wip/squirrelmail-compatibility
 
-USE_BUILDLINK3=	# defined
 
 WRKSRC=		${WRKDIR}
 

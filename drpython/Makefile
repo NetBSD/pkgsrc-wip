@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/03 14:19:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:11:37 tvierling Exp $
 #
 
 DISTNAME=		drpython-2.1.9
@@ -10,7 +10,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://drpython.sourceforge.net/
 COMMENT=		Source code editor, written in Python, for Python
 
-USE_BUILDLINK3=		yes
 NO_CONFIGURE=
 NO_BUILD=
 

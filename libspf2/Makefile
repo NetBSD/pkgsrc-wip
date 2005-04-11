@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/01 16:01:22 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:50 tvierling Exp $
 
 DISTNAME=	libspf2-1.0.4
 CATEGORIES=	mail
@@ -8,7 +8,6 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.libspf2.org/
 COMMENT=	Implementation of the Sender Policy Framework
 
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 

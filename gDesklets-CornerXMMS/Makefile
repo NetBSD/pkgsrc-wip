@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/14 14:49:51 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:12:20 tvierling Exp $
 
 DISTNAME=	CornerXMMS-0.0.5
 PKGNAME=	gDesklets-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Fancy desklet that allows you to control XMMS
 DEPENDS+=	gDesklets-[0-9]*:../../wip/gDesklets
 DEPENDS+=	${PYPKGPREFIX}-xmms-[0-9]*:../../audio/py-xmms
 
-USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

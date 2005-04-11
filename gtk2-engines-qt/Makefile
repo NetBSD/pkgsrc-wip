@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/09/23 05:59:41 jlamwww Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:12:41 tvierling Exp $
 #
 
 DISTNAME=		9714-gtk-qt-engine-0.2
@@ -12,7 +12,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.kde-look.org/content/show.php?content=9714
 COMMENT=		GTK+ 2.x theme, which looks just like Qt toolkit
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make

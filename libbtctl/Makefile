@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/11 15:10:06 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:46 tvierling Exp $
 #
 
 DISTNAME=		libbtctl-0.4.1
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://downloads.usefulinc.com/libbtctl/
 COMMENT=		GObject Bluetooth controller
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS=make
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

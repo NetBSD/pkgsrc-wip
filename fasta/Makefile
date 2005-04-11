@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 20:22:40 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:11:57 tvierling Exp $
 #
 
 DISTNAME=		fasta3
@@ -12,7 +12,6 @@ HOMEPAGE=		http://fasta.bioch.virginia.edu/
 COMMENT=		FASTA sequence comparison programs
 
 MAKEFILE=		Makefile.NetBSD
-USE_BUILDLINK3=		yes
 
 WRKSRC=			${WRKDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/15 14:53:19 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:11:49 tvierling Exp $
 #
 
 DISTNAME=		embryo-0.9.0
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.enlightenment.org/pages/embryo.html
 COMMENT=		Tiny scripting language for Enlightenment
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 
 .include "../../devel/libltdl/buildlink3.mk"

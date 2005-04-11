@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/02/23 22:05:04 lexort Exp $
+# $NetBSD: Makefile,v 1.18 2005/04/11 21:15:25 tvierling Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -18,7 +18,6 @@ WRKSRC=		${WRKDIR}/quagga-0.99.0
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		YES
 

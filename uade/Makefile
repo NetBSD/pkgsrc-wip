@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/03 18:49:25 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:07 tvierling Exp $
 #
 
 DISTNAME=		uade-1.00
@@ -10,7 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://uade.ton.tut.fi/
 COMMENT=		Unix Amiga Delitracker Emulator
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 

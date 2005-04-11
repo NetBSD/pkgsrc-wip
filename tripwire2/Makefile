@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/02 16:39:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:16:05 tvierling Exp $
 #
 
 DISTNAME=	tripwire-2.3.1-2
@@ -13,7 +13,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src/
 CONFLICTS+=	tripwire-1*
 BUILD_TARGET=	release
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK3=	yes
 ONLY_FOR_PLATFORM= Linux-*-* OpenBSD-*-* FreeBSD-*-*
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/02 16:38:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:10:06 tvierling Exp $
 #
 
 DISTNAME=		balance-3.15
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.inlab.de/balance.html
 COMMENT=		TCP loadbalancer with roundrobin and failover
 
-USE_BUILDLINK3=		yes
 
 BUILD_TARGET=balance
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/23 21:39:29 marc Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:09:34 tvierling Exp $
 #
 
 DISTNAME=		4stAttack-2.1.4
@@ -10,7 +10,6 @@ MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://forcedattack.sourceforge.net/
 COMMENT=		Game in which you have to try to out-smart your opponent
 
-USE_BUILDLINK3=		yes
 
 PYTHON_PATCH_SCRIPTS=	4stattack.py
 

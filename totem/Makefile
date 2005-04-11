@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/05/07 01:58:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:16:04 tvierling Exp $
 #
 
 DISTNAME=	totem-0.99.9
@@ -12,7 +12,6 @@ COMMENT=	Movie player for the GNOME desktop based on xine
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES

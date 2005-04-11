@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/07 01:58:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:15:35 tvierling Exp $
 #
 
 DISTNAME=		SimGear-0.3.4
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		ftp://ftp.simgear.org/pub/simgear/Source/
 COMMENT=		Simulator Construction Tools
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes

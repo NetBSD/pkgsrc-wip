@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/02 21:04:13 blef Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:09 tvierling Exp $
 #
 
 DISTNAME=	icecast-1.3.12
@@ -10,7 +10,6 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.icecast.org/
 COMMENT=	Internet broadcasting system using Mpeg Layer III streaming
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 USE_PKGINSTALL=		yes
 

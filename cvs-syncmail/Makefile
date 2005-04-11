@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/08/10 21:30:12 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:10:47 tvierling Exp $
 #
 
 DISTNAME=		syncmail
@@ -12,7 +12,6 @@ HOMEPAGE=		http://optusnet.dl.sourceforge.net/sourceforge/cvs-syncmail/
 COMMENT=		Automatically send cvs commit messages via mail
 
 WRKSRC=			${WRKDIR}
-USE_BUILDLINK3=		yes
 EXTRACT_CMD=		${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 NO_BUILD=		yes
 PYTHON_PATCH_SCRIPTS=	syncmail

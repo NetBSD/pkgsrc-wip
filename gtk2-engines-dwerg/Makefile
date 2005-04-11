@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/09/23 05:59:40 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:12:39 tvierling Exp $
 
 DISTNAME=		gtk-engines-dwerg-0.6
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -10,7 +10,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://art.gnome.org/
 COMMENT=		Theme engine for GTK+ 2.x
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES

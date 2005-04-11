@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.2 2005/03/03 17:29:50 airhead Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:16:14 tvierling Exp $
 #
 
 DISTNAME=		WordNet-2.0
@@ -15,7 +15,6 @@ COMMENT=		English lexical reference system
 BUILD_TARGET=		SrcWorld
 
 USE_X11=		yes
-USE_BUILDLINK3=		yes
 
 PTHREAD_OPTS+=		require
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/18 15:25:57 ppostma Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:35 tvierling Exp $
 
 DISTNAME=	opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
 PKGNAME=	opera-${OPERA_PKG_VERSION}beta${OPERA_VER_DATE}
@@ -20,7 +20,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc FreeBSD-*-i386
 
 LICENSE=	opera-license
 
-NO_BUILDLINK=		yes
 NO_CONFGURE=		yes
 NO_TOOLS=		yes
 USE_LANGUAGES=		# empty

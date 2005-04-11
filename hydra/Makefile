@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/03 15:13:54 adrian_p Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/11 21:13:06 tvierling Exp $
 #
 
 DISTNAME=	${PKGNAME}-src
@@ -14,7 +14,6 @@ COMMENT=	Login password cracker
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 BUILD_TARGET=	all ssl
 
 SUBST_CLASSES=		build

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/15 23:38:49 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:13 tvierling Exp $
 #
 
 DISTNAME=		ncc-2.1
@@ -9,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://students.ceid.upatras.gr/~sxanth/ncc/index.html
 COMMENT=		Compiler that produces program analysis information
 
-USE_BUILDLINK3=		yes
 BUILD_TARGET=		tout
 CFLAGS+=		-DNOGNU='"${PREFIX}/share/ncc/nognu"'
 

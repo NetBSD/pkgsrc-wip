@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/13 18:56:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:16:02 tvierling Exp $
 #
 
 DISTNAME=		tilp
@@ -12,7 +12,6 @@ COMMENT=		Database of TI calculator model information
 
 WRKSRC=			${WRKDIR}/${PKGNAME}
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-nls --enable-exit-homedir

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/05 05:33:24 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:05 tvierling Exp $
 #
 
 DISTNAME=		hugo-2.11-preview
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.zeograd.com/parse.php?src=hugof&path=0,1,
 COMMENT=		PC Engine emulator (with CD support)
 
 WRKSRC=			${WRKDIR}/hugo-2.11
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

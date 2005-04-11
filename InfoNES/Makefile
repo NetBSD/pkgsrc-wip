@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/19 19:42:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:09:35 tvierling Exp $
 #
 
 DISTNAME=		InfoNES093J_Src
@@ -11,7 +11,6 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.geocities.co.jp/SiliconValley/5604/infones.html
 COMMENT=		Portable NES emulator
 
-USE_BUILDLINK3=		yes
 BUILD_DIRS=		${WRKSRC}/linux
 MAKE_VARS+=		INCLUDES="${CFLAGS} ${LIBOSSAUDIO}"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/19 02:36:29 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:31 tvierling Exp $
 #
 
 DISTNAME=	netwox-5.16.0-src
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.laurentconstantin.com/en/netw/
 COMMENT=	Toolbox that helps to find and solve network problems
 
 WRKSRC=         	${WRKDIR}/${DISTNAME}/src
-USE_BUILDLINK3=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./genemake
 ONLY_FOR_PLATFORM=      NetBSD-*-i386

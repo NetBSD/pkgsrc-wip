@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/23 17:31:31 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:07 tvierling Exp $
 #
 
 DISTNAME=		mpq-tools-0.3.0
@@ -12,7 +12,6 @@ COMMENT=		Tools for manipulating MPQ (MoPaQ) archives
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/08 17:20:20 peterih Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:14:06 tvierling Exp $
 
 DISTNAME=	moregroupware-0.7.2
 PKGNAME=	${DISTNAME}
@@ -23,7 +23,6 @@ DEPENDS+=	php-gd>=4.3.4:../../graphics/php-gd
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/moregroupware
 
-USE_BUILDLINK3=	YES
 
 do-install:
 	${CP} -r ${WRKSRC} ${PREFIX}/share

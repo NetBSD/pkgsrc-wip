@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/13 14:43:40 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:09:40 tvierling Exp $
 #
 
 DISTNAME=		airsnort-0.2.6
@@ -12,7 +12,6 @@ COMMENT=		WLAN sniffer and realtime WEP cracker
 
 DEPENDS+=		linux-wlan-ng>=0.2:../../wip/linux-wlan-ng/
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

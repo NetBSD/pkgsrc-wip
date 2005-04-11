@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 20:17:28 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:10:05 tvierling Exp $
 #
 
 DISTNAME=		azara-2.7-src
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.bio.cam.ac.uk/azara
 COMMENT=		Programs to process and view NMR data
 
 WRKSRC=			${WRKDIR}/azara-2.7
-USE_BUILDLINK3=		YES
 USE_X11=		YES
 
 MAKEFILE=		makefile

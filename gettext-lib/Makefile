@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/22 21:05:48 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:12:25 tvierling Exp $
 
 .include "../../wip/gettext-runtime/Makefile.common"
 
@@ -9,7 +9,6 @@ COMMENT=		Internationalized Message Handling Library (libintl)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/27 21:42:02 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:10:56 tvierling Exp $
 #
 
 DISTNAME=		cvsutils-0.2.1
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.red-bean.com/cvsutils/releases/
 COMMENT=		CVS utilities to facilitate working
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

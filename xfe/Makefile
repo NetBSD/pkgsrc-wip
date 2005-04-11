@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/09/09 02:59:00 cetrox Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:16:15 tvierling Exp $
 #
 
 DISTNAME=		xfe-0.70
@@ -9,7 +9,6 @@ MAINTAINER=		ccatrian@eml.cc
 HOMEPAGE=		http://xfe.sourceforge.net/
 COMMENT=		MS-Explorer like file manager for X
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

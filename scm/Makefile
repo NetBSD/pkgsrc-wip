@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/02 16:39:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:15:32 tvierling Exp $
 #
 
 DISTNAME=	scm5d6
@@ -18,7 +18,6 @@ COMMENT=	Portable scheme interpreter
 
 DEPENDS+=	slib>=2.4.4:../../devel/slib
 
-USE_BUILDLINK3=	# defined
 USE_GNU_TOOLS+=	make
 
 BUILD_TARGET=	scmlit

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/18 15:09:24 ppostma Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:15:36 tvierling Exp $
 #
 
 DISTNAME=		sleuthkit-1.66
@@ -10,7 +10,6 @@ HOMEPAGE=		http://sleuthkit.sourceforge.net/
 COMMENT=		OpenSource Forensic Toolkit
 
 USE_PERL5=		YES
-USE_BUILDLINK3=	YES
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/sorter ${PREFIX}/bin/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/02 16:39:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:02 tvierling Exp $
 #
 
 DISTNAME=		m102
@@ -11,7 +11,6 @@ HOMEPAGE=		http://microcom.port5.com/
 COMMENT=		Minicom-like serial terminal emulator with scripting
 
 WRKSRC=		${WRKDIR}/
-USE_BUILDLINK3=		yes
 BUILD_TARGET=microcom
 
 do-install:

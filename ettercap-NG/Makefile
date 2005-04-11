@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/03/05 14:01:30 adrian_p Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:11:52 tvierling Exp $
 
 DISTNAME=	ettercap-NG-0.7.2
 CATEGORIES=	net
@@ -15,7 +15,6 @@ BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.8.1
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 PTHREAD_OPTS+=		require
 USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES

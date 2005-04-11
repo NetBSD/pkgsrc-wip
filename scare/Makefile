@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/07 15:01:58 dillo Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:15:32 tvierling Exp $
 #
 
 DISTNAME=		scare-1.3.3
@@ -10,7 +10,6 @@ MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://www.geocities.com/legion_if/scare.html
 COMMENT=		Interpreter for interactive fiction written in Adrift
 
-USE_BUILDLINK3=		yes
 BUILD_TARGET=		glkscare
 MAKE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 

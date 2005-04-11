@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/09/23 05:59:48 jlamwww Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:13:45 tvierling Exp $
 #
 
 DISTNAME=		libXres-1.0.1
@@ -11,7 +11,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://xlibs.freedesktop.org/
 COMMENT=		X Resource usage library
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 

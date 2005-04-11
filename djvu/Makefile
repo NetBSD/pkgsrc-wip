@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/03/14 15:10:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:11:08 tvierling Exp $
 
 DISTNAME=	djvulibre-3.5.14
 CATEGORIES=	graphics
@@ -13,7 +13,6 @@ CONFIGURE_ARGS+=         --enable-djview
 CFLAG+=		-I${PREFIX}/include
 
 GNU_CONFIGURE=  YES
-USE_BUILDLINK3= YES
 
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/06/30 12:39:35 johnrshannon Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:12:41 tvierling Exp $
 #
 
 DISTNAME=		GtkAda-2.2.1
@@ -10,7 +10,6 @@ MAINTAINER=		john@johnrshannon.com
 HOMEPAGE=		http://libre.act-europe.fr/GtkAda/
 COMMENT=		Ada95 graphical toolkit
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make

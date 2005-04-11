@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/27 22:13:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:36 tvierling Exp $
 #
 
 DISTNAME=		kino-0.7.1
@@ -9,7 +9,6 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://kino.schirmacher.de/
 COMMENT=		Non-linear editor for Digital Video data
 
-USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

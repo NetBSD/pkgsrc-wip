@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/26 23:13:52 ppostma Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:13:49 tvierling Exp $
 
 DISTNAME=		libpcap-0.8.3
 SVR4_PKGNAME=		lpcap
@@ -11,7 +11,6 @@ COMMENT=		System-independent interface for user-level packet capture
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		lex yacc m4
 USE_LIBTOOL=		yes

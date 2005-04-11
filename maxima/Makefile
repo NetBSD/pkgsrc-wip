@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/09 20:56:38 blef Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:14:00 tvierling Exp $
 #
 
 DISTNAME=		maxima-5.9.0
@@ -9,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://maxima.sourceforge.net/
 COMMENT=		Sophisticated computer algebra system
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

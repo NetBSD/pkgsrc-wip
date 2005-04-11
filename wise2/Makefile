@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/29 18:05:57 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:13 tvierling Exp $
 #
 
 DISTNAME=		wise2.2.0
@@ -13,7 +13,6 @@ COMMENT=		Tool for Comparing bio polymers like DNA and Protein sequences
 
 MAKEFILE=		makefile
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
-USE_BUILDLINK3=		yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/wise2/wisecfg

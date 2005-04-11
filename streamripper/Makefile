@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/07/29 15:48:40 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:15:57 tvierling Exp $
 #
 
 DISTNAME=	streamripper-1.60
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://streamripper.sourceforge.net/
 COMMENT=	Splits SHOUTcast stream into tracks
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 MAKE_ENV+=		SH=${SH:Q}

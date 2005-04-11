@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/09/23 06:00:02 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:58 tvierling Exp $
 #
 
 DISTNAME=		swami-0.9.2
@@ -11,7 +11,6 @@ COMMENT=		SoundFont2 instrument editor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 USE_LOCALEDIR=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

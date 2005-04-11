@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/22 09:50:29 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:15:34 tvierling Exp $
 
 DISTNAME=	sid-milter-0.2.5
 CATEGORIES=	mail
@@ -12,7 +12,6 @@ DEPENDS+=	sendmail>=8.13.0:../../mail/sendmail
 
 BUILDLINK_DEPENDS.libmilter+=	libmilter>=8.13.0
 
-USE_BUILDLINK3=		YES
 
 USE_BUILTIN.libmilter=	NO
 LICENSE=		no-profit

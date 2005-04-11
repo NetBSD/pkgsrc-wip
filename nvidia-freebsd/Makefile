@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/02 07:36:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:33 tvierling Exp $
 #
 
 DISTNAME=	NVIDIA-FreeBSD-x86-${DIST_VERSION}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.nvidia.com/
 COMMENT=	NVIDIA Graphic drivers for FreeBSD/i386
 
 ONLY_FOR_PLATFORM=	FreeBSD-5*-i386 # Yeah I don't use 4.x, sorry.
-NO_BUILDLINK=		yes
 USE_X11=		yes
 DIST_VERSION=		1.0-4365
 LINUX_DISTVER=		1.0.4365

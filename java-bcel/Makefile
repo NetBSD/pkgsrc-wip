@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/10 19:29:50 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:16 tvierling Exp $
 #
 
 DISTNAME=		bcel-5.1
@@ -10,7 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://jakarta.apache.org/bcel/
 COMMENT=		ByteCode Engineering Library
 
-USE_BUILDLINK3=		yes
 
 do-build:
 

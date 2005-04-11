@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/22 08:20:39 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:11:03 tvierling Exp $
 #
 
 DISTNAME=	dclib-0.3.7
@@ -11,7 +11,6 @@ HOMEPAGE=	http://dcgui.berlios.de/
 COMMENT=	Direct Connect P2P library
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/06/26 23:33:29 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:12:57 tvierling Exp $
 #
 
 DISTNAME=	gtkpod-0.51-2
@@ -11,7 +11,6 @@ COMMENT=	GUI for iPod using GTK2
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_X11=		yes
 USE_PKGLOCALEDIR=	yes

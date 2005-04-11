@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2005/02/24 17:27:16 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:14 tvierling Exp $
 #
 
 DISTNAME=		JacORB_${DIST_VERSION}-src
@@ -19,7 +19,6 @@ PKG_JVMS_ACCEPTED+=	sun-jdk14
 DIST_VERSION=           1_4_1
 PKG_VERSION=            1.4.1
 
-USE_BUILDLINK3=		yes
 MAKEFILE=	        build.xml
 
 do-install:

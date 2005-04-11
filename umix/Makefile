@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/09/27 14:50:47 tvierling Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:16:08 tvierling Exp $
 
 DISTNAME=	umix-1.0
 CATEGORIES=	audio
@@ -8,7 +8,6 @@ MAINTAINER=	cez@compsoc.man.ac.uk
 HOMEPAGE=	http://umix.sourceforge.net/
 COMMENT=	Replacement for aumix
 
-USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 
 GNU_CONFIGURE=          yes

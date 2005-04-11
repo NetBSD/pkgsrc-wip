@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/02 16:39:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:14:00 tvierling Exp $
 #
 
 DISTNAME=	mcats-0.1.0
@@ -16,7 +16,6 @@ DEPENDS+=	mcats>=0.1.0:../../wip/mcats
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-USE_BUILDLINK3=		YES
 CONFIGURE_ARGS+=	--enable-iodbc
 
 do-build:

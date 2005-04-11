@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/02 16:39:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:57 tvierling Exp $
 #
 
 DISTNAME=		lwc-1.3.2
@@ -10,7 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://students.ceid.upatras.gr/~sxanth/lwc/
 COMMENT=		Lightweight C++
 
-USE_BUILDLINK3=		yes
 
 BUILD_TARGET= objdir/lwc
 SUBST_CLASSES=gcc

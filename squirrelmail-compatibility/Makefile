@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/04 21:46:56 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:56 tvierling Exp $
 #
 
 DISTNAME=	compatibility-1.3
@@ -10,7 +10,6 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://www.squirrelmail.org/
 COMMENT=	Previous version compatibility plugin for SquirrelMail
 
-USE_BUILDLINK3=	# defined
 
 WRKSRC=		${WRKDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/10 14:28:04 ianzag Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:35 tvierling Exp $
 #
 
 DISTNAME=		sim-0.9.3
@@ -10,7 +10,6 @@ MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://sim-icq.sourceforge.net/
 COMMENT=		SIM (Simple Instant Messenger)
 
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES

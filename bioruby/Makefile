@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 20:18:24 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:10:10 tvierling Exp $
 #
 
 DISTNAME=		bioruby-0.4.0
@@ -11,7 +11,6 @@ HOMEPAGE=		http://bioruby.org
 COMMENT=		Intergrated environment for Bioinformatics using Ruby
 
 NO_BUILD=		yes
-USE_BUILDLINK3=		yes
 
 do-configure:
 	cd ${WRKSRC}; \

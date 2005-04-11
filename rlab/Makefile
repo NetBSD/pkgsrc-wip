@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/29 11:11:12 airhead Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:15:29 tvierling Exp $
 #
 
 DISTNAME=		rlab-2.1.05
@@ -13,7 +13,6 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.rlab
 PKG_SUPPORTED_OPTIONS=	gnuplot plplot
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_LANGUAGES=		fortran c
 
 .if !defined(PKG_OPTIONS.rlab)

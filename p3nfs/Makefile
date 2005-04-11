@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/22 14:42:56 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:35 tvierling Exp $
 #
 
 DISTNAME=		p3nfs-5.16
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.koeniglich.de/packages/
 COMMENT=		Symbian to UNIX NFS daemon
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

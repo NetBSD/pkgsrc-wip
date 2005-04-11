@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/30 15:10:44 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:10:28 tvierling Exp $
 #
 
 DISTNAME=		chromium-src-0.9.12
@@ -13,7 +13,6 @@ COMMENT=		Fast paced, arcade-style, top-scrolling space shooter
 DEPENDS=		chromium-data>=0.9:../../wip/chromium-data
 
 WRKSRC=		${WRKDIR}/Chromium-0.9
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+= HOME=${PREFIX}

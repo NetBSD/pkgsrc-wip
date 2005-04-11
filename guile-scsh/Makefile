@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/06 14:32:53 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:58 tvierling Exp $
 #
 
 DISTNAME=		guile-scsh-2.0.1
@@ -9,7 +9,6 @@ MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://arglist.com/guile/
 COMMENT=		Scheme Shell that runs in Guile
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../lang/guile/buildlink3.mk"

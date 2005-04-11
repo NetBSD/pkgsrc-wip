@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/08/12 20:23:06 rockpiper Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:16:14 tvierling Exp $
 #
 
 DISTNAME=		WMmp-0.10.0
@@ -13,7 +13,6 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
-USE_BUILDLINK3=		YES
 
 pre-configure:
 	cd ${WRKSRC};                                           \

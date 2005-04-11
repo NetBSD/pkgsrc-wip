@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 18:17:39 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:24 tvierling Exp $
 #
 
 DISTNAME=		GDElinux
@@ -13,7 +13,6 @@ COMMENT=		Genetic Data Environment
 WRKSRC=			${WRKDIR}/GDE
 USE_LINUX=		YES
 USE_X11=		YES
-USE_BUILDLINK3=		YES
 
 post-extract:
 	${MV} ${WRKSRC}/HGL_SRC/global_defs.h.orig \

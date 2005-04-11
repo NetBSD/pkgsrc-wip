@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/30 15:11:40 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:10:29 tvierling Exp $
 #
 
 DISTNAME=		chromium-data-0.9.12
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.reptilelabour.com/software/chromium/
 COMMENT=		Data files for chromium scrollshooter
 
 WRKSRC=		${WRKDIR}/Chromium-0.9
-USE_BUILDLINK3=		yes
 NO_BUILD=#
 
 do-install:

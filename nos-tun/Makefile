@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/05 12:29:38 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:32 tvierling Exp $
 #
 
 DISTNAME=	nos-tun
@@ -15,7 +15,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 ONLY_FOR_PLATFORM=      FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
 
 WRKSRC=		${WRKDIR}/nos-tun
-USE_BUILDLINK3=	yes
 
 INSTALLATION_DIRS=	sbin man/man8
 

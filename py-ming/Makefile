@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/02 16:39:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:16 tvierling Exp $
 #
 
 DISTNAME=		${MING_DISTNAME}
@@ -11,7 +11,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://ming.sourceforge.net/
 COMMENT=		Python bindings for Ming library
 
-USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 
 BUILD_TARGET=		mingcmodule.so

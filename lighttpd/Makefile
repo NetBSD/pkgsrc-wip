@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/02 16:28:24 socrtp Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:13:51 tvierling Exp $
 
 DISTNAME=		lighttpd-1.3.12
 CATEGORIES=		www
@@ -8,7 +8,6 @@ MAINTAINER=		socrtp@soclab.eu.org
 HOMEPAGE=		http://lighttpd.net/
 COMMENT=		Fast as lightning HTTP server
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_PKGINSTALL=		YES

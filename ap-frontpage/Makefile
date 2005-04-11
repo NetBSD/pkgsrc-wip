@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/24 21:13:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:09:45 tvierling Exp $
 
 DISTNAME=	mod_frontpage_mirfak-${M_FPVERSION}
 PKGNAME=	ap-frontpage-${M_FPVERSION}
@@ -14,7 +14,6 @@ COMMENT=	Improved mod_frontpage for Apache
 
 M_FPVERSION=	1.6.2
 
-USE_BUILDLINK3=	YES
 # APACHE_MODULE_NAME=	mod_frontpage.so
 
 # RUN_DEPENDS=	${FPSETPERM}:../../www/frontpage

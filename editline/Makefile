@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/12 19:29:00 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:11:47 tvierling Exp $
 #
 
 DISTNAME=		libedit-20041207-2.9
@@ -10,7 +10,6 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.thrysoee.dk/editline/
 COMMENT=		NetBSD Editline library (libedit) for generic line editing
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes

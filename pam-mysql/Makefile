@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/09 20:48:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:14:42 tvierling Exp $
 
 DISTNAME=	pam_mysql-0.5
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://pam-mysql.sourceforge.net/
 COMMENT=	PAM module for authenticating with MySQL
 
 WRKSRC=		${WRKDIR}/pam_mysql
-USE_BUILDLINK3=	YES
 
 DOCDIR=		${PREFIX}/share/doc/pam-mysql
 

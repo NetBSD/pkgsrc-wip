@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/19 19:26:01 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:15 tvierling Exp $
 #
 
 DISTNAME=		jalview_1.8
@@ -15,7 +15,6 @@ COMMENT=		Jalview is a multiple alignment editor written in java
 USE_JAVA=		run
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
-USE_BUILDLINK3=		yes
 
 post-extract:
 	${MV} ${WRKSRC}/jalview.sh ${WRKSRC}/jalview.sh.in

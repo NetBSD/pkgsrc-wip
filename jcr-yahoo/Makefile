@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/01 20:44:16 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:35 tvierling Exp $
 #
 
 DISTNAME=		yahoo-transport-2.3.2
@@ -17,9 +17,7 @@ WRKSRC=			${WRKDIR}/jcr-0.2.4
 SUBWRKSRC=		${WRKSRC}/${DISTNAME}
 XMLCONFIG=		${WRKDIR}/${DISTNAME}/yahoo-jcr.xml
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK3=         yes
 USE_PKGINSTALL=		yes
 
 PKG_SYSCONFSUBDIR=      jabberd

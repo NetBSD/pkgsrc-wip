@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/18 15:50:19 ppostma Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:11:36 tvierling Exp $
 #
 
 DISTNAME=		drow-0.2.22
@@ -11,7 +11,6 @@ COMMENT=		low-level ELF file analyzer
 
 GNU_CONFIGURE=		YES
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

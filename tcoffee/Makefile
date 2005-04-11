@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/18 19:46:36 daprice Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:16:00 tvierling Exp $
 #
 
 DISTNAME=		T-COFFEE_distribution
@@ -16,7 +16,6 @@ WRKSRC=		 	${WRKDIR}/T-COFFEE_distribution_Version_1.37/t_coffee_source
 
 MESSAGE_SUBST+=         PREFIX=${PREFIX}
 MAKEFILE=               makefile
-USE_BUILDLINK3=         yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/tcoffee

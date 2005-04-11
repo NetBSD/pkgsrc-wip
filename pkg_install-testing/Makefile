@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/06 05:40:54 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:14:48 tvierling Exp $
 
 # Notes to package maintainers:
 #
@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	--with-pax=${PAX}
 CONFIGURE_ARGS+=	--with-tar=${TAR}
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
-NO_BUILDLINK=		# defined
 NO_CHECKSUM=		# defined
 NO_MTREE=		# defined
 # Removing this package would break pkgsrc, so allow this package to

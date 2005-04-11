@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/13 18:56:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:34 tvierling Exp $
 
 DISTNAME=	openvrml-0.14.3
 CATEGORIES=	graphics
@@ -9,7 +9,6 @@ HOMEPAGE=	http://www.openvrml.org/
 COMMENT=	Portable C++ library for displaying VRML97 files
 
 USE_X11=	YES
-USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--disable-script-node-java --disable-script-node-javascript
 USE_GNU_TOOLS+=	make

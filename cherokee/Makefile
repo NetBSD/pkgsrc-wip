@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/09/23 05:59:31 jlamwww Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/11 21:10:26 tvierling Exp $
 #
 
 DISTNAME=	cherokee-0.4.4-pre3
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.alobbs.com/cherokee/
 COMMENT=	Extremely fast and tiny web server
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/19 21:49:17 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:40 tvierling Exp $
 #
 
 DISTNAME=		libGenome-0.5.2
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.libgenome.org/releases/
 COMMENT=		A development library for bioinformatic software
 
 WRKSRC=			${WRKDIR}/libgenome-0.5.2
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/24 13:18:05 lexort Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:26 tvierling Exp $
 
 DISTNAME=	rawphoto.c
 PKGNAME=	rawphoto-1.1.5
@@ -15,7 +15,6 @@ DEPENDS+=	dcraw>=1.208:../../graphics/dcraw
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
-USE_BUILDLINK3=	yes
 
 do-extract:
 	(cd ${DISTDIR}/${DIST_SUBDIR} && ${CP} ${DISTNAME} ${WRKSRC})

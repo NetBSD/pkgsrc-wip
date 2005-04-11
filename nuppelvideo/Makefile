@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/02 22:31:25 blef Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:33 tvierling Exp $
 #
 
 DISTNAME=		NuppelVideo-0.52a
@@ -9,7 +9,6 @@ MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://frost.htu.tuwien.ac.at/~roman/nuppelvideo/
 COMMENT=		Fast and simple RTjpeg-based video capture program
 
-USE_BUILDLINK3=		YES
 USE_X11=		YES
 
 CFLAGS+=		${CPPFLAGS}

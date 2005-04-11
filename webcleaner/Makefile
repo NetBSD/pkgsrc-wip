@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/27 17:09:31 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:12 tvierling Exp $
 #
 
 DISTNAME=		webcleaner-2.8
@@ -12,7 +12,6 @@ COMMENT=		Filtering HTTP proxy
 DEPENDS+=		${PYPKGPREFIX}-amkCrypto>=0:../../security/py-amkCrypto
 DEPENDS+=		${PYPKGPREFIX}-imaging>=0:../../graphics/py-imaging
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

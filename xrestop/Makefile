@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/20 01:25:51 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:34 tvierling Exp $
 #
 
 DISTNAME=		xrestop-0.2
@@ -9,7 +9,6 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.freedesktop.org/Software/xrestop
 COMMENT=		X11 clients' server-side resource usage statistics
 
-USE_BUILDLINK3=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 

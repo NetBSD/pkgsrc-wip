@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/01 09:53:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:14:44 tvierling Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -39,7 +39,6 @@ CONFLICTS=	perl-5.00* perl-base-[0-9]* \
 		p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
 		perl-mk-[0-9]*
 
-USE_BUILDLINK3=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde

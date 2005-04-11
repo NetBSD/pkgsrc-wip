@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/15 12:50:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:13:00 tvierling Exp $
 #
 
 DISTNAME=		hasciicam-0.9
@@ -11,7 +11,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ascii.dyne.org/
 COMMENT=		Live ascii video on the web
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 

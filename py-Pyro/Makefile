@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/02 21:15:46 blef Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:56 tvierling Exp $
 #
 
 DISTNAME=		Pyro-3.3
@@ -10,7 +10,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://pyro.sourceforge.net/
 COMMENT=		Distributed Object Technology system in Python
 
-USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 

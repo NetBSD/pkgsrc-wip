@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/02 16:38:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:12:27 tvierling Exp $
 #
 
 DISTNAME=		ghostpcl_1.38p1
@@ -11,7 +11,6 @@ MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://www.artifex.com/downloads/
 COMMENT=		PCL-5 and PCL-XL interpreter
 
-USE_BUILDLINK3=		yes
 
 USE_GNU_TOOLS+=make
 BUILD_TARGET=pcl6

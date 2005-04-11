@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/24 15:09:15 ianzag Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:09:36 tvierling Exp $
 #
 
 DISTNAME=		LabPlot-1.3.0
@@ -9,7 +9,6 @@ MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://mitarbeiter.mbi-berlin.de/gerlach/Linux/LabPlot/
 COMMENT=	Data analysis and visualisation
 
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 

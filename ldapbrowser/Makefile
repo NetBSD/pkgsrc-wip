@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/07/02 13:15:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:13:39 tvierling Exp $
 #
 
 DISTNAME=		Browser282b2
@@ -14,7 +14,6 @@ COMMENT=		Java based LDAP browser and editor
 USE_JAVA=		run
 USE_JAVA2=		yes
 
-NO_BUILDLINK=		yes
 NO_CONFIGURE=		yes
 
 LBE_DIR=		${PREFIX}/lib/ldapbrowser

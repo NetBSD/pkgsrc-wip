@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/06 23:19:43 adrian_p Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:59 tvierling Exp $
 
 DISTNAME=	syslog-ng-1.6.6
 CATEGORIES=	sysutils
@@ -9,7 +9,6 @@ HOMEPAGE= 	http://www.balabit.com/products/syslog_ng/
 COMMENT=	Syslog-ng tries to fill the gaps original syslogd's were lacking
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		syslogng
 PKG_SYSCONFSUBDIR=	syslog-ng

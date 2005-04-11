@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/14 09:55:57 imilh Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:12:18 tvierling Exp $
 #
 
 DISTNAME=	ftpd-tls-20031008
@@ -13,7 +13,6 @@ COMMENT=	Ftp server supporting FTP AUTH TLS
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
 
 USE_PKGINSTALL=	yes
 RCD_SCRIPTS=	ftpdtls

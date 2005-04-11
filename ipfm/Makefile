@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/13 12:35:56 ppostma Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:12 tvierling Exp $
 
 DISTNAME=		ipfm-0.11.5
 CATEGORIES=		net
@@ -9,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://robert.cheramy.net/ipfm/
 COMMENT=		Bandwidth analysis tool
 
-USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 
 GNU_CONFIGURE=		yes

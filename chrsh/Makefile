@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/13 20:02:54 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:10:29 tvierling Exp $
 #
 
 DISTNAME=	chrsh
@@ -12,10 +12,9 @@ HOMEPAGE=	http://www.aarongifford.com/computers/chrsh.html
 COMMENT=	Chroot jail wrapper for ordinary Unix shells
 
 WRKSRC=         ${WRKDIR}
-USE_BUILDLINK3=	YES
 EXTRACT_CMD=	${CP} $${extract_file} .
 
-RCS_HEAD=	$$NetBSD: Makefile,v 1.2 2004/12/13 20:02:54 daprice Exp $$
+RCS_HEAD=	$$NetBSD: Makefile,v 1.3 2005/04/11 21:10:29 tvierling Exp $$
 
 do-build:
 	cd ${WRKSRC} && \

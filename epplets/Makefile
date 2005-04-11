@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/31 13:24:10 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:11:50 tvierling Exp $
 #
 
 DISTNAME=		epplets-0.7
@@ -20,7 +20,6 @@ COMMENT=		Epplets for Enlightenment
 DEPENDS+=		enlightenment>=0.16.7:../../wm/enlightenment
 
 USE_LIBTOOL=		YES
-USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 

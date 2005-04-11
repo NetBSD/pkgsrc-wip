@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/18 20:31:07 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:04 tvierling Exp $
 #
 
 DISTNAME=		molmol-2k.2.0-src
@@ -12,7 +12,6 @@ COMMENT=		Graphics Program for manipulating 3D biological macromolecules
 
 USE_X11=		yes
 USE_LIBTOOLS=		yes
-USE_BUILDLINK3=		yes
 
 WRKSRC=			${WRKDIR}
 

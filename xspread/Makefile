@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/08/27 06:30:36 jlamwww Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:16:35 tvierling Exp $
 #
 
 DISTNAME=		xspread3.1.1c
@@ -13,7 +13,6 @@ HOMEPAGE=		http://www.chemie.fu-berlin.de/chemnet/use/xspread.html
 COMMENT=		X11 spreadsheet based on sc
 
 USE_X11=		yes
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_HAS_MANDIR=	no
 

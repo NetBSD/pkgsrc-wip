@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/01 20:53:28 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:31 tvierling Exp $
 #
 
 DISTNAME=		ninvaders-0.1.1
@@ -10,7 +10,6 @@ HOMEPAGE=		http://ninvaders.sourceforge.net/
 COMMENT=		ncurses based invaders game
 
 WRKSRC=		${WRKDIR}/*
-USE_BUILDLINK3=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nInvaders ${PREFIX}/bin/

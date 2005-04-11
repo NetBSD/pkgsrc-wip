@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/18 15:50:23 ppostma Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:15 tvierling Exp $
 #
 
 DISTNAME=		decimal
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www2.hursley.ibm.com/decimalj/
 COMMENT=		Decimal arithmetic for Java
 
 WRKSRC=			${WRKDIR}/
-USE_BUILDLINK3=		yes
 
 do-build:
 

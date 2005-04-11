@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/13 08:03:07 ianzag Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:34 tvierling Exp $
 #
 
 DISTNAME=		open21xx0.7.2
@@ -10,7 +10,6 @@ MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://www3.telus.net/sharpshin/adi.html
 COMMENT=		Assembler tool suite for the Analog Devices 21xx family of DSP
 
-USE_BUILDLINK3=	YES
 USE_LANGUAGES=	c
 USE_GNU_TOOLS+=	make
 USE_GNU_TOOLS+= yacc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/03 14:19:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:11:55 tvierling Exp $
 #
 
 DISTNAME=		evidence-0.9.8
@@ -10,7 +10,6 @@ HOMEPAGE=		http://evidence.sourceforge.net/
 COMMENT=		Enlightened file manager
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/18 15:50:22 ppostma Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:13:02 tvierling Exp $
 #
 
 DISTNAME=		host-20031203
@@ -10,7 +10,6 @@ MAINTAINER=		cjep@NetBSD.org
 HOMEPAGE=		http://www.weird.com/~woods/projects/host.html
 COMMENT=		Enhanced version of the host DNS query tool
 
-USE_BUILDLINK3=		yes
 MAKEFILE=		Makefile.BSD
 #
 #MAKE_FLAGS+=		FILES=

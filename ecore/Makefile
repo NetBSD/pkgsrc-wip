@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/15 14:53:18 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:11:46 tvierling Exp $
 #
 
 DISTNAME=		ecore-1.0.0_pre7
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.enlightenment.org/pages/ecore.html
 COMMENT=		Core events/X abstraction layer for Enlightenment
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
 

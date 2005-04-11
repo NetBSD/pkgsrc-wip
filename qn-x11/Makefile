@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/09/23 06:00:00 jlamwww Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:15:25 tvierling Exp $
 
 DISTNAME=	qnx11__-1.2.x
 PKGNAME=	qn-x11-0.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://themes.freshmeat.net/projects/qnx11__/?topic_id=923%2C954
 COMMENT=	GTK theme-engine to yield a QNX look and feel
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
 

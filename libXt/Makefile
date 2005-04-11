@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/09/23 05:59:48 jlamwww Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/11 21:13:45 tvierling Exp $
 #
 
 DISTNAME=		libXt-0.1.5
@@ -21,7 +21,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 #BUILD_DEPENDS+=		imake-[0-9]*:../../wip/imake
 #.endif
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

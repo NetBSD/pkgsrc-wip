@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/16 21:52:13 koifren Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:34 tvierling Exp $
 #
 
 DISTNAME=	silky-0.5.2
@@ -12,7 +12,6 @@ COMMENT=	Silky is an easy-to-use graphical SILC client
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_GNU_TOOLS+=make
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES

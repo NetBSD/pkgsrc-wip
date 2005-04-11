@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/02 22:42:28 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:11:04 tvierling Exp $
 #
 
 DISTNAME=		dia2code-0.8.1
@@ -9,7 +9,6 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://dia2code.sourceforge.net/
 COMMENT=		Small utility used to generate code from a Dia diagram
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 pre-build:

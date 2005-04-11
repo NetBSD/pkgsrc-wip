@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/15 14:53:20 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:11:52 tvierling Exp $
 #
 
 DISTNAME=		evas-1.0.0_pre13
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.enlightenment.org/pages/evas.html
 COMMENT=		High level display-independent canvas API
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
 

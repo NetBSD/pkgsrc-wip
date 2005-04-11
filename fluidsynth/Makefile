@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/18 14:12:37 bencollver Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:12:15 tvierling Exp $
 #
 
 DISTNAME=		fluidsynth-1.0.5
@@ -12,7 +12,6 @@ COMMENT=		Software synthesizer based on SoundFont2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 
 CFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 LDFLAGS+=		${LIBOSSAUDIO}

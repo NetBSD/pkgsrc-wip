@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/10 00:44:42 blef Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:15:21 tvierling Exp $
 #
 
 DISTNAME=		visionegg-0.9.9-demo
@@ -10,7 +10,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://visionegg.sourceforge.net/
 COMMENT=		Demonstration programs for py-visionegg
 
-USE_BUILDLINK3=		yes
 NO_BUILD=		# defined
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 MESSAGE_SUBST+=		PY_VE_DIR=${PY_VE_DEMO_DIR}

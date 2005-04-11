@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/02 16:39:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:14:32 tvierling Exp $
 #
 
 DISTNAME=		noiptun-1.0
@@ -10,7 +10,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://noiptun.sourceforge.net/
 COMMENT=		Allows communication with computers that do not have an IP address
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		noiptun

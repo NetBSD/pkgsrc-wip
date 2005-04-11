@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/23 21:39:28 marc Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:11:59 tvierling Exp $
 #
 
 DISTNAME=	festival-gaim-0.64
@@ -16,7 +16,6 @@ DEPENDS+=	festlex-poslex>=1.4.0:../../audio/festlex-poslex
 DEPENDS+=	festvox-el11>=1.4.0:../../audio/festvox-el11
 DEPENDS+=	gaim>=0.64:../../chat/gaim
 
-USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/27 21:16:58 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:53 tvierling Exp $
 #
 
 DISTNAME=		soundtracker-0.6.6
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.soundtracker.org/
 COMMENT=		Music tracker for XM and MOD files
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 LIBS+=	${LIBOSSAUDIO}

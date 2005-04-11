@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/01 17:10:25 blef Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:19 tvierling Exp $
 #
 
 DISTNAME=		jflex_small-1.3.5
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.jflex.de/
 COMMENT=		The Fast Scanner Generator for Java
 
 WRKSRC=		${WRKDIR}/JFlex
-USE_BUILDLINK3=		yes
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/JFlex.jar \

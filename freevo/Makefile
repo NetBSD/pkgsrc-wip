@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/10 01:49:05 blef Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:12:18 tvierling Exp $
 #
 
 DISTNAME=		freevo-1.4.1
@@ -12,7 +12,6 @@ COMMENT=		Fancy-lookging digital video jukebox
 DEPENDS+=		mplayer>=1.0rc3:../../multimedia/mplayer
 DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
-USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 

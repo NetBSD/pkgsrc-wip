@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/10/05 14:40:27 lexort Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:11:56 tvierling Exp $
 
 DISTNAME=	Image-ExifTool-3.60
 PKGNAME=	exiftool-3.60
@@ -9,7 +9,6 @@ MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://owl.phy.queensu.ca/~phil/exiftool/
 COMMENT=	Perl module and program to read EXIF information
 
-USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Image/ExifTool/.packlist
 
 REPLACE_PERL=	exiftool

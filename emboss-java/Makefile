@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/16 20:50:06 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:11:49 tvierling Exp $
 #
 
 DISTNAME=	 	EMBOSS-2.9.0
@@ -20,7 +20,6 @@ DEPENDS+=		cross-binutils>=2.15.0.0:../../cross/binutils
 
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
-USE_BUILDLINK3=		YES
 USE_JAVA=		YES
 USE_X11=		yes
 USE_PKGLOCALEDIR=	yes

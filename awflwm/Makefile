@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/22 02:44:05 sourceforge_low Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:10:04 tvierling Exp $
 #
 
 DISTNAME=	awflwm-0.0
@@ -11,7 +11,6 @@ MAINTAINER=	low@ameba6.com
 HOMEPAGE=	http://awflwm.berlios.de/
 COMMENT=	Fork of the flwm project
 
-USE_BUILDLINK3=	yes
 USE_X11=	# defined
 
 GNU_CONFIGURE=	# defined

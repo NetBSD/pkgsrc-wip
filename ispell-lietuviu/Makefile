@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/02 16:39:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:13 tvierling Exp $
 #
 
 DISTNAME=		ispell-lt-1.0
@@ -14,6 +14,5 @@ BUILD_DEPENDS+=		python23-[0-9]*:../../lang/python23
 DEPENDS+=		ispell-base-[0-9]*:../../textproc/ispell-base
 
 BUILD_TARGET=		lietuviu.hash
-USE_BUILDLINK3=		yes
 
 .include "../../mk/bsd.pkg.mk"

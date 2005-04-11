@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 21:41:33 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:29 tvierling Exp $
 #
 
 DISTNAME=		GlimmerM-2.5.1
@@ -14,7 +14,6 @@ USE_GNU_TOOLS+=		make
 
 WRKSRC=         	${WRKDIR}/GlimmerM/sources
 
-USE_BUILDLINK3=         yes
 
 post-build:
 	cd ${WRKSRC}/../train; ${GMAKE}

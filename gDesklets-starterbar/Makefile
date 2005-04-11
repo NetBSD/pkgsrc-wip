@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/21 04:24:15 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:21 tvierling Exp $
 
 DISTNAME=	starterbar-desklet-0.22.1
 PKGNAME=	gDesklets-${DISTNAME:S/-desklet//}
@@ -12,7 +12,6 @@ COMMENT=	Icon bar for GNOME where you can put starters into
 
 DEPENDS=	gDesklets-[0-9]*:../../wip/gDesklets
 
-USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/13 19:03:38 bencollver Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:10 tvierling Exp $
 #
 
 DISTNAME=		mpcsv7-src-1.15t
@@ -16,7 +16,6 @@ MAKEFILE=		Makefile.bsd
 MAKE_ENV+=		LIBOSSAUDIO="${LIBOSSAUDIO}"
 MAKE_ENV+=		PREFIX="${PREFIX}"
 
-USE_BUILDLINK3=		yes
 
 SUBST_CLASSES+=		osconf
 SUBST_MESSAGE.osconf=	"Configuring os-specific build-time definitions."

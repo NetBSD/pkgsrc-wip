@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/07 01:49:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:15:57 tvierling Exp $
 #
 
 DISTNAME=		STonX-0.6.7.6
@@ -9,7 +9,6 @@ MAINTAINER=		xmor61@users.sourceforge.net
 HOMEPAGE=		http://stonx.sourceforge.net/
 COMMENT=		Atari ST Emulator
 
-USE_BUILDLINK3=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 

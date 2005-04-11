@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/31 13:45:25 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:11:40 tvierling Exp $
 #
 
 DISTNAME=		e16keyedit-0.2
@@ -12,7 +12,6 @@ COMMENT=		Keys setup program for Enlightenment
 DEPENDS+=		enlightenment-0.16.*:../../wm/enlightenment
 
 USE_LIBTOOL=		YES
-USE_BUILDLINK3=		YES
 USE_X11=		YES
 
 do-install:

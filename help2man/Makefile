@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/10 15:13:13 arved Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:01 tvierling Exp $
 #
 
 DISTNAME=		help2man_1.33.1
@@ -12,7 +12,6 @@ COMMENT=		Generate simple manual pages from program output
 
 DEPENDS+=       	p5-gettext>=1.01:../../devel/p5-gettext
 
-USE_BUILDLINK3=		yes
 WRKSRC=			${WRKDIR}/${PKGNAME}
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

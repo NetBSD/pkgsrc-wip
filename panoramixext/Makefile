@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/07 16:58:48 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:42 tvierling Exp $
 
 DISTNAME=	panoramixext-1.1
 CATEGORIES=	x11
@@ -13,7 +13,6 @@ CONFLICTS+=	XFree86-libs-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 
 PKGCONFIG_OVERRIDE+=	panoramixext.pc.in

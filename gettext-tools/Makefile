@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/05 05:21:59 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:12:26 tvierling Exp $
 
 .include "../../wip/gettext-runtime/Makefile.common"
 
@@ -14,7 +14,6 @@ CONFLICTS=	gettext-[0-9]*
 #CONFLICTS+=	gettext-lib-[0-9]*
 CONFLICTS+=	gettext-m4-[0-9]*
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

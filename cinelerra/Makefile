@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/27 22:13:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:10:30 tvierling Exp $
 #
 
 #DISTNAME=		cinelerra-1.2.0-src
@@ -21,7 +21,6 @@ COMMENT=		Non-linear video and audio editor and compositor (unofficial)
 #WRKSRC=			${WRKDIR}/cinelerra-1.2.0
 WRKSRC=			${WRKDIR}/hvirtual
 USE_X11=		yes
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make

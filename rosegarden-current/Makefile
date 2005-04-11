@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/09 22:32:05 blef Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:29 tvierling Exp $
 #
 
 DISTNAME=	rosegarden-4-0.9.1
@@ -9,7 +9,6 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://www.all-day-breakfast.com/rosegarden/
 COMMENT=	Development release of rosegarden
 
-USE_BUILDLINK3=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 

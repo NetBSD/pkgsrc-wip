@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/27 02:49:54 matthewluckie Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:14:33 tvierling Exp $
 
 DISTNAME=		nss-3.9.2
 CATEGORIES=		security
@@ -12,7 +12,6 @@ BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla/security/nss
 
-USE_BUILDLINK3=		YES
 USE_PERL5=		build
 USE_GNU_TOOLS+=		make
 CFLAGS+=		-I${LOCALBASE}/include/nspr

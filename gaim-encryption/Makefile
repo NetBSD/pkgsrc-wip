@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/31 00:09:43 geeohgeegeeoh Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:21 tvierling Exp $
 
 DISTNAME=	gaim-encryption-2.34
 CATEGORIES=	chat 
@@ -10,7 +10,6 @@ COMMENT=	Plugin for gaim to add TLS/SSL via nss/nspr
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES

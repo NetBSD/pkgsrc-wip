@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/02 19:28:19 chriswareham Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:12:36 tvierling Exp $
 
 DISTNAME=		gsoap-2.7
 CATEGORIES=		devel
@@ -8,7 +8,6 @@ MAINTAINER=		chriswareham@chriswareham.demon.co.uk
 HOMEPAGE=		http://gsoap2.sourceforge.net/
 COMMENT=		Tools for coding SOAP XML Web Services in C and C++
 
-USE_BUILDLINK3=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gsoap++.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gsoap.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gsoapck++.pc.in

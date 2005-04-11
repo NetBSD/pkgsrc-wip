@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/15 14:53:21 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:15:59 tvierling Exp $
 #
 
 DISTNAME=		taskbar-1.0.3
@@ -9,7 +9,6 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://taskbar.sourceforge.net/
 COMMENT=		Panel for X11 for menu and to show windows
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

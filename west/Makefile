@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/03 17:15:09 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:12 tvierling Exp $
 #
 
 DISTNAME=		west_0.9
@@ -12,7 +12,6 @@ HOMEPAGE=		http://west.sourceforge.net/
 COMMENT=		Web scripting/stress tool
 
 WRKSRC=		${WRKDIR}/west
-USE_BUILDLINK3=		yes
 
 SUBST_CLASSES+=make
 SUBST_STAGE.make=pre-build

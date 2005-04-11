@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/02 16:39:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:16:38 tvierling Exp $
 #
 
 DISTNAME=		ZSNESS_0920
@@ -14,7 +14,6 @@ COMMENT=		Super NES emulator, development version
 BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 
 WRKSRC=			${WRKDIR}/zsnes/src
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 USE_GNU_TOOLS+=		make
 ONLY_FOR_PLATFORM=	*-*-i386

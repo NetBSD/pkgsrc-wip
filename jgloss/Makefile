@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/26 16:57:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:35 tvierling Exp $
 #
 
 DISTNAME=		jgloss-1.0.10
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://jgloss.sourceforge.net/
 COMMENT=		Add reading and translation annotations in a Japanese text document
 
-NO_BUILDLINK=		yes
 NO_BUILD=		yes
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk14

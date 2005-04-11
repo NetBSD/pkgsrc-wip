@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/15 18:45:45 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:20 tvierling Exp $
 #
 
 DISTNAME=	swt-2.1.3-linux-gtk
@@ -14,7 +14,6 @@ COMMENT=	Standard Widget Toolkit for Java
 DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 WRKSRC=			${WRKDIR}
-USE_BUILDLINK3=		yes
 USE_JAVA2=		yes
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 jdk13 kaffe
 PKG_JVM_DEFAULT=	kaffe

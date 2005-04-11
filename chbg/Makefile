@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/02 15:21:01 cetrox Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:10:26 tvierling Exp $
 #
 
 DISTNAME=		chbg-1.5
@@ -13,7 +13,6 @@ COMMENT=		Changes destop background pictures with some period
 
 DEPENDS+=		ImageMagick>=6.0.2.7:../../graphics/ImageMagick
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-image-library=imlib2

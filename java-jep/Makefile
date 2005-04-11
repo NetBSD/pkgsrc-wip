@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/08/13 09:12:03 poppnk Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:13:19 tvierling Exp $
 #
 
 DISTNAME=		jep-2.24
@@ -10,7 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.singularsys.com/jep/
 COMMENT=		Java Mathematical Expression Parser
 
-USE_BUILDLINK3=		yes
 NO_BUILD=		#defined
 
 do-install:

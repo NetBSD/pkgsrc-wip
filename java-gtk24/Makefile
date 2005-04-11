@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 10:03:06 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:19 tvierling Exp $
 #
 
 DISTNAME=		libgtk-java-2.6.2
@@ -13,7 +13,6 @@ COMMENT=		Java bindings for GTK+2
 
 DEPENDS+=       jikes-[0-9]*:../../lang/jikes
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=YES
 USE_GNU_TOOLS+=make
 CONFIGURE_ARGS+=--without-gcj-compile

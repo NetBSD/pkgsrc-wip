@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/02 22:41:29 blef Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:43 tvierling Exp $
 #
 
 DISTNAME=		passepartout-0.3
@@ -10,7 +10,6 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.stacken.kth.se/project/pptout/
 COMMENT=		Desktop publishing for X
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

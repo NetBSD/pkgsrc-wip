@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/02/15 13:23:02 fabinator Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:16:35 tvierling Exp $
 #
 
 DISTNAME=	yafray-0.0.7
@@ -9,7 +9,6 @@ MAINTAINER=	fab@gnux.info
 HOMEPAGE=	http://www.yafray.org/
 COMMENT=	Yet Another Free Raytracer
 
-USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

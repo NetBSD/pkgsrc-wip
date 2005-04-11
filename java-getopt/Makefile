@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/18 15:50:23 ppostma Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:18 tvierling Exp $
 #
 
 DISTNAME=		java-getopt-1.0.9
@@ -19,6 +19,5 @@ do-install:
 		${PREFIX}/share/classpath/java-getopt.jar
 
 WRKSRC=		${WRKDIR}/
-USE_BUILDLINK3=		yes
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/02/09 23:46:21 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:16:06 tvierling Exp $
 #
 
 DISTNAME=	TUTOS-php-1.2.20040906
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.tutos.org/homepage/about.html
 COMMENT=	Time and team management software
 
-USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 
 TUTOS_USER?=	tutos

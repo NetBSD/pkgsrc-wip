@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/16 11:21:12 tripledes Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:35 tvierling Exp $
 #
 
 DISTNAME=		oqtplayer-0.5-src
@@ -11,7 +11,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.openquicktime.org/
 COMMENT=		Small OpenQuickTime (TM) player, using SDL
 
-USE_BUILDLINK3=		yes
 
 WRKSRC=			${WRKDIR}/OQTPlayer-0.5
 

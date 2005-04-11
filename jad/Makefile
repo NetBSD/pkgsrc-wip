@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/03 17:49:07 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:14 tvierling Exp $
 #
 
 DISTNAME=		jadlx158
@@ -13,7 +13,6 @@ HOMEPAGE=		http://www.kpdus.com/jad.html
 COMMENT=		The fast JAva Decompiler
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK3=		yes
 
 LICENSE=no-commercial-use
 NO_BUILD=YES

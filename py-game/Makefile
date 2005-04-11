@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/01/23 21:39:31 marc Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:15:00 tvierling Exp $
 #
 
 DISTNAME=		pygame-1.6
@@ -12,7 +12,6 @@ COMMENT=		Set of Python modules designed for writing games
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-USE_BUILDLINK3=		yes
 
 PYTHON_VERSIONS_ACCEPTED= 23 22
 

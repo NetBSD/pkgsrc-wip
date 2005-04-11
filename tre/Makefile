@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/25 10:02:02 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:16:05 tvierling Exp $
 
 DISTNAME=	tre-0.7.2
 CATEGORIES=	devel
@@ -9,7 +9,6 @@ HOMEPAGE=	http://laurikari.net/tre/
 COMMENT=	Lightweight and robust POSIX compliant regexp matching library
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 
 CONFIGURE_ARGS+=	--disable-agrep
 CONFIGURE_ARGS+=	--disable-shared

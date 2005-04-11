@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/02 16:39:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/11 21:13:39 tvierling Exp $
 
 DISTNAME=	ldapdns-cvs-snapshot
 PKGNAME=	ldapdns-cvs-0.0.1
@@ -14,7 +14,6 @@ USE_PKGINSTALL=	YES
 USE_GNU_TOOLS+=	make
 BUILD_TARGET=	it
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 RCD_SCRIPTS=	ldapdns
 
 do-install:

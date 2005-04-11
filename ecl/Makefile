@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/28 01:28:35 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:11:46 tvierling Exp $
 #
 
 DISTNAME=		ecl-0.9c
@@ -12,7 +12,6 @@ COMMENT=		Embeddable Common Lisp
 
 WRKSRC=			${WRKDIR}/${DISTNAME}-build/
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../${DISTNAME}/src/configure

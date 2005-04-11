@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/03/07 15:12:37 dillo Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:12:30 tvierling Exp $
 #
 
 DISTNAME=	glulxe-035
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.eblong.com/zarf/glulx/index.html
 COMMENT=	Interpreter for Glulx text adventures
 
 WRKSRC=		${WRKDIR}/glulxe
-USE_BUILDLINK3=	yes
 MAKE_ENV+=	BUILDLINK_DIR=${BUILDLINK_DIR}
 
 .include "../../wip/glkloader/buildlink3.mk"

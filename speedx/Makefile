@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/04/12 22:23:52 blef Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:15:54 tvierling Exp $
 
 DISTNAME=	SpeedX-0.1.4d
 PKGNAME=	speedx-0.1.4d
@@ -14,7 +14,6 @@ SITES_mercrain.s3m.zip=	http://www.modarchive.com/cgi-bin/download.cgi/M/
 
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK3=	YES
 USE_X11=	YES
 
 post-build:

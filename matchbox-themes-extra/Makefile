@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/08 15:28:08 bencollver Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:14:00 tvierling Exp $
 #
 
 DISTNAME=	matchbox-themes-extra-0.3
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://projects.o-hand.com/matchbox/
 COMMENT=	Collection of themes for Matchbox
 
-USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

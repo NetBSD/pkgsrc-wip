@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/10 23:44:31 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:54 tvierling Exp $
 #
 
 DISTNAME=		module-init-tools-3.0
@@ -17,7 +17,6 @@ ONLY_FOR_PLATFORM=	Linux-*-* # configure: error: Linux only, dude!
 
 USE_PKGINSTALL= 	YES
 
-USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 
 RCD_SCRIPTS=		modutils

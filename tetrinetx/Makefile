@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/25 23:47:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/11 21:16:02 tvierling Exp $
 
 DISTNAME=	tetrinetx-1.13.16+qirc-1.40c
 PKGNAME=	tetrinetx-1.13.16
@@ -11,7 +11,6 @@ COMMENT=	Server for an addictive 6 player tetris game
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 SHAREDIR=	${PREFIX}/share/tetrinetx
-USE_BUILDLINK3=	YES
 BINARY=		tetrix.netbsd
 
 LIBS.SunOS=	-lsocket -lnsl -lresolv

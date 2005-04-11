@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/07/18 15:50:20 ppostma Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:12:29 tvierling Exp $
 #
 
 DISTNAME=		Glide_V3-2.60-18
@@ -12,7 +12,6 @@ COMMENT=		Software needed for 3dfx voodoo3 cards
 
 NO_CONFIGURE=		yes
 
-USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
 USE_LIBTOOL=		yes

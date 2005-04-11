@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/10 00:01:10 blef Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:14:59 tvierling Exp $
 #
 
 DISTNAME=		F2PY-2-latest
@@ -13,7 +13,6 @@ COMMENT=		Fortran to Python interface generator
 
 DEPENDS+=		${PYPKGPREFIX}-scipy_distutils-[0-9]*:../../wip/py-scipy_distutils
 
-USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 

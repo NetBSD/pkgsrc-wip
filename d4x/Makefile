@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/04 02:11:35 blef Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:10:58 tvierling Exp $
 #
 
 DISTNAME=		d4x-2.5.0beta2
@@ -9,7 +9,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.krasu.ru/soft/chuchelo/files/
 COMMENT=		Download files using a nice GUI
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

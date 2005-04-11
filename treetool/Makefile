@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 20:51:42 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:05 tvierling Exp $
 #
 
 DISTNAME=	treetool2.0.2
@@ -13,7 +13,6 @@ COMMENT=	Treetool is for displaying, editing, and printing phylogenetic trees
 DECOMPRESS_CMD=	${CAT}
 USE_GNU_TOOLS+=	make
 
-USE_BUILDLINK3=	yes
 USE_X11=	yes
 MAKE_ENV+=	CFLAGS="-g -O0"
 

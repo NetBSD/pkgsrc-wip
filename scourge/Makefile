@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/30 14:17:17 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:33 tvierling Exp $
 #
 
 DISTNAME=		scourge-0.4
@@ -11,7 +11,6 @@ COMMENT=		Graphical 3D roguelike, vermin extermination
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 MAKEFILE=		Makefile.Fedora
 
 post-extract:

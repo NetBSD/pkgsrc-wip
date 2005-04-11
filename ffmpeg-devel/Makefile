@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/15 01:11:49 zul_ Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:00 tvierling Exp $
 
 DISTNAME=	ffmpeg-0.4.9-pre1
 PKGNAME=	ffmpeg-devel-0.4.9pre1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://ffmpeg.sourceforge.net/
 COMMENT=	MPEG decoding, encoding and streaming software
 
 HAS_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	YES
 

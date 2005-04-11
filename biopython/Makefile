@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/08 11:40:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:10:08 tvierling Exp $
 #
 
 DISTNAME=		biopython-1.30
@@ -13,7 +13,6 @@ COMMENT=		Python libraries for computational molecular biology
 DEPENDS+=		py22-mxDateTime>=2.0.4:../../time/py-mxDateTime
 DEPENDS+=		py22-Numeric>=23.3:../../math/py-Numeric
 
-USE_BUILDLINK3=		yes
 NO_CONFIGURE=		yes
 
 LICENSE=		non-commercial-use

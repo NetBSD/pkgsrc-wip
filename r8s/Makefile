@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/16 18:54:25 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:26 tvierling Exp $
 #
 
 DISTNAME=		r8s1.7.dist
@@ -12,7 +12,6 @@ HOMEPAGE=		http://ginger.ucdavis.edu/r8s/
 COMMENT=		Estimate rates of molecular evolution
 
 WRKSRC=		${WRKDIR}/dist/src
-USE_BUILDLINK3=		yes
 BUILD_TARGET=		r8s
 
 BINDIR=			${PREFIX}/bin

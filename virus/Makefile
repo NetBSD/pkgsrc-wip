@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/18 15:05:50 ppostma Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:16:10 tvierling Exp $
 #
 
 DISTNAME=	virus-0.0.6
@@ -10,7 +10,6 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.rocklinux.net/people/ripclaw/projects/software/virus/
 COMMENT=	VI resembling utility skeleton
 
-USE_BUILDLINK3=		yes
 
 do-build:
 	cd ${WRKSRC} && ${SH} mkvirus

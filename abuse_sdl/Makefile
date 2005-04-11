@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/04/12 02:30:11 blef Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/11 21:09:38 tvierling Exp $
 
 DISTNAME=		abuse_sdl-0.7.0
 CATEGORIES=		games
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.labyrinth.net.au/~trandor/abuse/
 COMMENT=		Port of the Abuse side scroller to SDL
 
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 

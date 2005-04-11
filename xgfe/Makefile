@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 21:00:02 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:15 tvierling Exp $
 #
 
 DISTNAME=		xgfe-2.1
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.bl.physik.uni-muenchen.de/rechner/grafik/xgfe/xgfe.html
 COMMENT=		GUI front end for Gnuplot plotting package
 
 USE_X11=		yes
-USE_BUILDLINK3=		yes
 
 WRKSRC=			${WRKDIR}/xgfe-2.1/source
 

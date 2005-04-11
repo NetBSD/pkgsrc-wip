@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/02 05:18:48 blef Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:40 tvierling Exp $
 #
 
 DISTNAME=		leo-4.1-beta-4
@@ -10,7 +10,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://leo.sourceforge.net/
 COMMENT=		Programmer's editor and a flexible browser
 
-USE_BUILDLINK3=		yes
 NO_BUILD=	# defined
 PYTHON_PATCH_SCRIPTS=	src/leo.py
 

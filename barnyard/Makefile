@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/29 06:01:21 dolecek Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/11 21:10:07 tvierling Exp $
 
 DISTNAME=	barnyard-0.2.0
 CATEGORIES=	net
@@ -10,7 +10,6 @@ COMMENT=	Fast output system for snort
 
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 
 PKG_SYSCONFSUBDIR=	snort
 

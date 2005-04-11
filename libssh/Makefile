@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/07 09:36:04 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:50 tvierling Exp $
 #
 
 DISTNAME=	libssh-0.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://0xbadc0de.be/
 COMMENT=	Working SSH implementation by the mean of a library
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 
 post-install:
 

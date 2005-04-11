@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/07 01:57:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/11 21:11:04 tvierling Exp $
 #
 
 DISTNAME=	DFBSee-0.7.4
@@ -12,7 +12,6 @@ COMMENT=	Image viewer for DirectFB
 
 ONLY_FOR_PLATFORM=     Linux-*-* NetBSD-*-*
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 

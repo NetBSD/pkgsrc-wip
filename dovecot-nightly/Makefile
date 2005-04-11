@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/08/08 18:05:47 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/11 21:11:35 tvierling Exp $
 
 DISTNAME=		dovecot-${_DOVECOT_VER}
 PKGNAME=		dovecot-nightly-${_DOVECOT_VER}
@@ -13,7 +13,6 @@ NO_CHECKSUM=		YES
 
 CONFLICTS=		dovecot
 
-USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_PKGINSTALL= 	YES
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/01/23 21:39:30 marc Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/11 21:15:58 tvierling Exp $
 
 DISTNAME=       superkaramba-0.33
 CATEGORIES=     x11 misc
@@ -9,7 +9,6 @@ HOMEPAGE=       http://netdragon.sourceforge.net/
 COMMENT=        Interactive eyecandy for your KDE desktop
 
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK3= YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-pythondir=${PREFIX}
 USE_LIBTOOL=	yes

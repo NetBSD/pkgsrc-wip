@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/27 23:38:57 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/11 21:11:50 tvierling Exp $
 #
 
 DISTNAME=		ethtool-1.6
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://gkernel.sourceforge.net/
 COMMENT=		Display or change ethernet card settings
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

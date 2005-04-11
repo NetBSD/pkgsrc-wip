@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/02 21:53:01 blef Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/11 21:14:50 tvierling Exp $
 #
 
 DISTNAME=		premake-src-1.2
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.scons.org/
 COMMENT=		Build script generator
 
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK3=		yes
 WRKSRC=			${WRKDIR}/Premake-1.2
 
 do-install:
