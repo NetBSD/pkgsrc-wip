@@ -1,0 +1,47 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/11 17:12:11 poppnk Exp $
+bin/ccgnu2-config
+include/cc++2/cc++/address.h
+include/cc++2/cc++/buffer.h
+include/cc++2/cc++/cmdoptns.h
+include/cc++2/cc++/common.h
+include/cc++2/cc++/config.h
+include/cc++2/cc++/counter.h
+include/cc++2/cc++/digest.h
+include/cc++2/cc++/exception.h
+include/cc++2/cc++/export.h
+include/cc++2/cc++/file.h
+include/cc++2/cc++/functions.h
+include/cc++2/cc++/mime.h
+include/cc++2/cc++/misc.h
+include/cc++2/cc++/missing.h
+include/cc++2/cc++/network.h
+include/cc++2/cc++/numbers.h
+include/cc++2/cc++/objcount.h
+include/cc++2/cc++/objlink.h
+include/cc++2/cc++/objmap.h
+include/cc++2/cc++/objsync.h
+include/cc++2/cc++/oststring.h
+include/cc++2/cc++/persist.h
+include/cc++2/cc++/pointer.h
+include/cc++2/cc++/process.h
+include/cc++2/cc++/serial.h
+include/cc++2/cc++/slog.h
+include/cc++2/cc++/socket.h
+include/cc++2/cc++/socketport.h
+include/cc++2/cc++/strchar.h
+include/cc++2/cc++/string.h
+include/cc++2/cc++/template.h
+include/cc++2/cc++/thread.h
+include/cc++2/cc++/tokenizer.h
+include/cc++2/cc++/unix.h
+include/cc++2/cc++/url.h
+include/cc++2/cc++/xml.h
+include/cc++2/cc++/zstream.h
+info/commoncpp2.info
+lib/libccext2.la
+lib/libccgnu2.la
+lib/pkgconfig/libccext2.${LOWER_VENDOR}
+lib/pkgconfig/libccgnu2.${LOWER_VENDOR}
+share/aclocal/ost_check2.m4
+@dirrm include/cc++2/cc++
+@dirrm include/cc++2
