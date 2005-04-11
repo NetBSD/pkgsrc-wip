@@ -6,7 +6,7 @@
    
   
   
-* Fix the 3 error shown by pkglint. These errors seem to be existant in all
+* Fix the 2 errors shown by pkglint. These errors seem to be existant in all
   packages using emacs.mk ?
    These warnings are :
    WARN: "BUILD_DEPENDS" has to appear earlier.
