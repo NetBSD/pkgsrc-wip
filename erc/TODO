@@ -1,3 +1,14 @@
 * Fix some compile issues that are raised
+  - surpress openssl related warnings.  - emacs with openssl support requires
+    more work outside the scope of this package ( and additional elisp package)
+    emacs-current has this support
+  - fix other erc related errors 
+   
+  
+  
 * Fix the 3 error shown by pkglint. These errors seem to be existant in all
   packages using emacs.mk ?
+   These warnings are :
+   WARN: "BUILD_DEPENDS" has to appear earlier.
+   WARN: "DEPENDS" has to appear earlier.
+  Perhaps fix emacs.mk to solve these?  

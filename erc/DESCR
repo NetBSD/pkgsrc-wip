@@ -1,4 +1,4 @@
-ERC is an Emacs extension package which allows you to connect to 
+ERC is an Emacs extension package which allows you to connect to
 multiple different IRC networks simultaneously and have chat conversations
 from within Emacs. ERC provides all features expected of a modern IRC client
 such as nick completion, word highlighting and status change notifications.
