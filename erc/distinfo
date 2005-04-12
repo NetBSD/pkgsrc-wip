@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/04 11:41:10 hsaliak Exp $
+$NetBSD: distinfo,v 1.2 2005/04/12 03:35:02 hsaliak Exp $
 
 SHA1 (erc-5.0.1.tar.gz) = b645ddc05ac4de3ad9f62564b22d572449eb5c34
+RMD160 (erc-5.0.1.tar.gz) = 36d514b6dfdf969a531046f8125b8282528f9988
 Size (erc-5.0.1.tar.gz) = 267505 bytes
