@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2005/04/10 21:53:57 rillig Exp $
-man/man5/ntpd.conf.5
-man/man8/ntpd.8
-sbin/ntpd
