@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2003/07/17 19:53:10 xtraeme Exp $
+$NetBSD: distinfo,v 1.5 2005/04/12 18:35:12 airhead Exp $
 
-SHA1 (mutella-0.4.3.tar.gz) = 73bbadddfaa6db29ed7da02dae86bd32899ff2ae
-Size (mutella-0.4.3.tar.gz) = 425040 bytes
+SHA1 (mutella-0.4.5.tar.gz) = 83a788d06eb24805605c46ff9ce14a5202ae38b8
+RMD160 (mutella-0.4.5.tar.gz) = f870ba5ed5c3bf7b852fca49ef358a69bad4da74
+Size (mutella-0.4.5.tar.gz) = 471839 bytes
 SHA1 (patch-aa) = 9e0d747c75c89bf7790147b9387816f9aba9cb41
 SHA1 (patch-ab) = bedda96438265b4bc62c22cf5db21dac9c5acc4e
 SHA1 (patch-ac) = 5fc6e282752a387e3de7c96ebb0359e2aefcd2c3
