@@ -1,21 +1,86 @@
-$NetBSD: patch-aa,v 1.2 2005/03/31 19:37:25 airhead Exp $
+$NetBSD: patch-aa,v 1.3 2005/04/12 17:47:06 airhead Exp $
 
 --- Makefile.in.orig	1999-04-30 16:32:04.000000000 +0200
 +++ Makefile.in
-@@ -54,6 +54,7 @@ TAR = 		tar
- # The name of an install program, either install(1), or cp(1)
- INSTALL = 	@INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
-+INSTALL_SCRIPT = @INSTALL_SCRIPT@
+@@ -51,10 +51,6 @@ AWK = 		@AWK@
+ # This must be the name of a GNU tar program (not necessary)
+ TAR = 		tar
  
+-# The name of an install program, either install(1), or cp(1)
+-INSTALL = 	@INSTALL@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@
+-
  # File name extension used for archive library files (DON'T include leading ".")
  A = 		a
-@@ -330,7 +331,7 @@ install:	rlab mkdir
+ 
+@@ -301,53 +297,37 @@ rlab-dist:	rlab
+ COPYDIR =	rlib toolbox controls-toolbox doc examples .rlab config.h test.r \
+ 		test.getline test.input Makefile
+ 
+-install:	rlab mkdir
+-		-if [ `/bin/pwd` != `(cd ${TOPDIR}; /bin/pwd)` ] ; then \
+-		tar cf - ${COPYDIR} [A-Z]* | (cd ${TOPDIR}; umask 022; tar xf - ) ;\
+-		fi
++install:	rlab
++		$(BSD_INSTALL_DATA_DIR) ${TOPDIR}/rlib
++		$(BSD_INSTALL_DATA_DIR) ${DOCDIR}
++		$(BSD_INSTALL_DATA_DIR) ${RHELPDIR}
++
+ 		if test "$(PLOT_PROG)" = "plplot" ; then\
+-		  cp misc/plplot.r ${TOPDIR}/rlib/plot.r;\
+-		  cd misc/plhelp; tar cf - . | (cd ${RHELPDIR}; umask 022; tar xf - ) ;\
++		  $(BSD_INSTALL_DATA) misc/plplot.r ${TOPDIR}/rlib;\
++		  $(BSD_INSTALL_DATA) misc/plhelp/* ${RHELPDIR};\
+ 		fi
+ 		if test "$(PLOT_PROG)" = "pgplot" ; then\
+-		  cp misc/pgplot.r ${TOPDIR}/rlib/plot.r;\
+-		  cd misc/pghelp; tar cf - . | (cd ${RHELPDIR}; umask 022; tar xf - ) ;\
++		  $(BSD_INSTALL_DATA) misc/pgplot.r ${TOPDIR}/rlib;\
++		  $(BSD_INSTALL_DATA) misc/pghelp/* ${RHELPDIR};\
+ 		fi
+ 		if test "$(PLOT_PROG)" = "gnuplot" ; then\
+-		  cp misc/gnuplot.r ${TOPDIR}/rlib/plot.r;\
+-		  cp misc/gp-compat.r ${TOPDIR}/rlib/gp-compat.r;\
+-		  cd misc/gnuplothelp; tar cf - . | (cd ${RHELPDIR}; umask 022; tar xf - ) ;\
++		  $(BSD_INSTALL_DATA) misc/gnuplot.r ${TOPDIR}/rlib;\
++		  $(BSD_INSTALL_DATA) misc/gp-compat.r ${TOPDIR}/rlib;\
++		  $(BSD_INSTALL_DATA) misc/gnuplothelp/* ${RHELPDIR};\
+ 		fi
+ 		if test "$(PLOT_PROG)" = "plotmtv" ; then\
+-		  cp misc/plotmtv.r ${TOPDIR}/rlib/plotmtv.r;\
+-		fi
+-		$(INSTALL_PROGRAM) rlab $(bindir)/rlab-$(VER)
+-		if test -x "$(bindir)/rlab2" ; then\
+-		  rm -f $(bindir)/rlab2;\
++		  $(BSD_INSTALL_DATA) misc/plotmtv.r ${TOPDIR}/rlib;\
+ 		fi
++
+ 		sed 's@rlab_exec_prefix@$(exec_prefix)@' ./misc/rlab > ./misc/rlab.tmp.0
+ 		sed 's@rlab_ver_string@$(VER)@' ./misc/rlab.tmp.0 > ./misc/rlab.tmp.1
  		sed 's@plot_dir@$(PLOT_DIR)@' ./misc/rlab.tmp.1 > ./misc/rlab.tmp.2
  		sed 's@plot_prog@$(PLOT_PROG)@' ./misc/rlab.tmp.2 > ./misc/rlab2
  		rm -f ./misc/rlab.tmp.0 ./misc/rlab.tmp.1 ./misc/rlab.tmp.2
 -		$(INSTALL_PROGRAM) ./misc/rlab2 $(bindir)/rlab2
-+		$(INSTALL_SCRIPT) ./misc/rlab2 $(bindir)/rlab2
- 		if test "$(LN)" = "ln" ; then\
- 		  @echo "RECOMMENDED YOU MV $(TOPDIR) to $(libdir)/rlab2";\
- 		fi
+-		if test "$(LN)" = "ln" ; then\
+-		  @echo "RECOMMENDED YOU MV $(TOPDIR) to $(libdir)/rlab2";\
+-		fi
+-		if test "$(LN)" = "ln -s" ; then\
+-		  if test -r "$(libdir)/rlab2" ; then\
+-		    mv $(libdir)/rlab2 $(libdir)/rlab2.old;\
+-		  fi;\
+-		  cd $(libdir); $(LN) ./rlab-$(VER) ./rlab2;\
+-		fi
+-		cd $(buildir); $(INSTALL) doc/rlab2.1 $(mandir)/rlab2.1
+-
+-mkdir:		
+-		-mkdir $(exec_prefix) $(bindir) $(libdir) $(mand) \
+-			$(mandir) $(TOPDIR) $(RLIBDIR) $(DOCDIR) \
+-			$(RHELPDIR) $(TOOLBOX) $(CTOOLBOX)
+ 
+-FRC:		
++		$(BSD_INSTALL_PROGRAM) rlab $(bindir)/rlab-$(VER)
++		$(BSD_INSTALL_SCRIPT) ./misc/rlab2 $(bindir)/rlab2
++		$(BSD_INSTALL_MAN) doc/rlab2.1 $(mandir)/rlab2.1
+ 
+ tags:		$(SRC)
+ 		etags $(SRC) *.h

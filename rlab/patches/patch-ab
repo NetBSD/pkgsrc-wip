@@ -1,14 +1,104 @@
-$NetBSD: patch-ab,v 1.2 2005/03/31 19:37:25 airhead Exp $
+$NetBSD: patch-ab,v 1.3 2005/04/12 17:47:07 airhead Exp $
 
---- Makefile.orig	2005-03-29 13:16:17.000000000 +0200
-+++ Makefile
-@@ -304,9 +304,6 @@ COPYDIR =	rlib toolbox controls-toolbox 
- 		test.getline test.input Makefile
+--- configure.orig	1999-12-17 17:01:06.000000000 +0100
++++ configure
+@@ -618,15 +618,15 @@ echo "Build Directory is: $BUILD_DIR"
+ # Check whether --with-LIBS or --without-LIBS was given.
+ if test "${with_LIBS+set}" = set; then
+   withval="$with_LIBS"
+-  LIBS="-L$withval "
+-  LLIBS="-L$withval "
++  LIBS="-L$withval -R$withval "
++  LLIBS="-L$withval -R$withval "
+   LIB_PATH="$withval"
+-]
++
+ else
+   
+-  LIBS="-L/usr/local/lib "
+-  LLIBS="-L/usr/local/lib "
+-  LIB_PATH="/usr/local/lib"
++  LIBS="-L/usr/local/lib -R/usr/local/lib "
++  LLIBS="-L/usr/local/lib -R/usr/local/lib "
++  LIB_PATH="/usr/local/lib -R/usr/local/lib"
  
- install:	rlab mkdir
--		-if [ `/bin/pwd` != `(cd ${TOPDIR}; /bin/pwd)` ] ; then \
--		tar cf - ${COPYDIR} [A-Z]* | (cd ${TOPDIR}; umask 022; tar xf - ) ;\
--		fi
- 		if test "$(PLOT_PROG)" = "plplot" ; then\
- 		  cp misc/plplot.r ${TOPDIR}/rlib/plot.r;\
- 		  cd misc/plhelp; tar cf - . | (cd ${RHELPDIR}; umask 022; tar xf - ) ;\
+ fi
+ 
+@@ -831,7 +831,7 @@ echo "$ac_t""$INSTALL" 1>&6
+ # It thinks the first close brace ends the variable substitution.
+ test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
+ 
+-test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
++test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_SCRIPT}'
+ 
+ test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
+ 
+@@ -1126,7 +1126,7 @@ fi
+ 	SunOS-* )
+ 	    case "$system" in 
+ 		*5.* )
+-		   F77LIBS="-L/opt/SUNWspro/SC4.0/lib -lF77 -lM77 -lsunmath"
++		   F77LIBS="-L/opt/SUNWspro/SC4.0/lib -R/opt/SUNWspro/SC4.0/lib -lF77 -lM77 -lsunmath"
+ 		   F77CONV="-DUSE_F2C"
+ 		   C_SH_FLAGS="-K PIC"	
+ 		   F_SH_FLAGS="-KPIC"
+@@ -1135,7 +1135,7 @@ fi
+                    FFLAGS="-O"
+ 		   ;;
+ 		*4* )
+-		   F77LIBS="-L/usr/lang/SC1.0 -lF77"
++		   F77LIBS="-L/usr/lang/SC1.0 -R/usr/lang/SC1.0 -lF77"
+ 		   F77CONV="-DUSE_F2C"
+ 		   C_SH_FLAGS="-pic"	
+ 		   F_SH_FLAGS="-pic"
+@@ -1149,7 +1149,7 @@ fi
+ 	;;
+ 	ultrix*|ULTRIX* ) 
+ 	    F77LIBS="-L. -lF77 -lI77 -lUfor -lfor -lutil -lots \
+-		     -L/usr/lib/cmplrs/fort -li_31"
++		     -L/usr/lib/cmplrs/fort -R/usr/lib/cmplrs/fort -li_31"
+ 	    F77CONV=-DUSE_F2C
+             CFLAGS="-O"
+             FFLAGS="-O"
+@@ -3542,8 +3542,8 @@ fi
+ if test "${with_NALIBS+set}" = set; then
+   withval="$with_NALIBS"
+    
+-  LIBS="$LIBS -L$withval"
+-  NALIB_DIR="-L$withval "
++  LIBS="$LIBS -L$withval -R$withval "
++  NALIB_DIR="-L$withval -R$withval "
+ 
+ else
+   
+@@ -3926,7 +3926,7 @@ fi
+ if test -z "$x_libraries" ; then
+   xlibdir=""
+ else
+-  xlibdir="-L$x_libraries"
++  xlibdir="-L$x_libraries -R$x_libraries "
+ fi
+ 
+ X11LIB="$xlibdir -lX11"
+@@ -4074,10 +4074,10 @@ if test "${with_plplot+set}" = set; then
+   fi
+ 
+   PLOT_PROG="plplot"
+-  PLIB_DIR=-L$withval
++  PLIB_DIR=-L$withval -R$withval
+   PLOT_DIR="$withval"
+   PLIB_INC_DIR="-I$withval"
+-  PLIBS="-L$withval -lplplotdX $X11LIB"
++  PLIBS="-L$withval -R$withval -lplplotdX $X11LIB"
+ 
+ fi
+ 
+@@ -4196,7 +4196,7 @@ if test "${with_pgplot+set}" = set; then
+   fi
+ 
+   PLOT_PROG="pgplot"
+-  PLIBS="-L$withval -lcpgplot -lpgplot $X11LIB"
++  PLIBS="-L$withval -R$withval -lcpgplot -lpgplot $X11LIB"
+   PLIB_INC_DIR="-I$withval"
+   PLOT_DIR="$withval"
+   cat >> confdefs.h <<\EOF

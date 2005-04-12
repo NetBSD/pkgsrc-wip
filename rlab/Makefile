@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:15:29 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/12 17:46:55 airhead Exp $
 #
 
 DISTNAME=		rlab-2.1.05
@@ -24,11 +24,13 @@ PKG_DEFAULT_OPTIONS+=	gnuplot
 .if !empty(PKG_OPTIONS:Mgnuplot)
 DEPENDS+=		gnuplot-[0-9]*:../../graphics/gnuplot
 CONFIGURE_ARGS+=	--with-gnuplot
+PLIST_SRC+=		PLIST.gnuplot
 .endif
 
 .if !empty(PKG_OPTIONS:Mplplot)
 .  include "../../graphics/plplot/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-plplot=${BUILDLINK_PREFIX.plplot}/lib
+PLIST_SRC+=		PLIST.plplot
 .endif
 
 CONFIGURE_ARGS+=	--with-LIBS=${PREFIX}/lib

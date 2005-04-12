@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/22 14:17:51 airhead Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/04/12 17:47:05 airhead Exp $
 bin/${PKGNAME}
 bin/rlab2
-lib/${PKGNAME}/Makefile
-lib/${PKGNAME}/Makefile.in
-lib/${PKGNAME}/config.h
-lib/${PKGNAME}/rlib/gp-compat.r
 lib/${PKGNAME}/rlib/plot.r
-lib/rlab2
 man/man1/rlab2.1
+@dirrm lib/${PKGNAME}/rlib/doc/help
+@dirrm lib/${PKGNAME}/rlib/doc
+@dirrm lib/${PKGNAME}/rlib
 @dirrm lib/${PKGNAME}
