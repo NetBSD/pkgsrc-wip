@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/04/12 17:47:05 airhead Exp $
+$NetBSD: distinfo,v 1.4 2005/04/12 18:02:32 airhead Exp $
 
 SHA1 (rlab-2.1.05.tar.gz) = 5b465b45ac1225c89f8375fc0945c485c0b1fa4b
 Size (rlab-2.1.05.tar.gz) = 2767728 bytes
-SHA1 (patch-aa) = 9b2a8fbce3e0560c6240ec006e3b0584cacd6791
+SHA1 (patch-aa) = 189c070abea8fe87cd97d31ff1f0d16e9ce6f33d
 SHA1 (patch-ab) = 0ae7d58975bbaac03f7f28872c9253a9cee1c97e
 SHA1 (patch-ac) = 131ca3067d0b82b4388461d437ed20dc61994c1a
 SHA1 (patch-ad) = d06d0897a309039ae8b19c6a8579c62565c534d0

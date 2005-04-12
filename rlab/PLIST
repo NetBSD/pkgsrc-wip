@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2005/04/12 17:47:05 airhead Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/04/12 18:02:32 airhead Exp $
 bin/${PKGNAME}
 bin/rlab2
-lib/${PKGNAME}/rlib/plot.r
+share/${PKGNAME}/rlib/plot.r
 man/man1/rlab2.1
-@dirrm lib/${PKGNAME}/rlib/doc/help
-@dirrm lib/${PKGNAME}/rlib/doc
-@dirrm lib/${PKGNAME}/rlib
-@dirrm lib/${PKGNAME}
+@dirrm share/${PKGNAME}/doc/help
+@dirrm share/${PKGNAME}/doc
+@dirrm share/${PKGNAME}/rlib
+@dirrm share/${PKGNAME}
