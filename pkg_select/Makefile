@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/13 08:44:45 imilh Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/13 12:40:25 imilh Exp $
 #
 
 DISTNAME=		pkg_select-20050403
@@ -11,7 +11,8 @@ COMMENT=	Curses based pkgsrc system browser / manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-ONLY_FOR_PLATFORM=      NetBSD-[2-9]*-* FreeBSD-*-* Darwin-*-*
+INCOMPAT_CURSES=		NetBSD-1.5* NetBSD-1.6[-_.]* NetBSD-1.6[A-U]-*
+ONLY_FOR_PLATFORM=      NetBSD-*-* FreeBSD-*-* Darwin-*-*
 
 NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
@@ -45,4 +46,5 @@ SUBST_SED.path=		-e "s|/usr/pkgsrc|${PKGSRCDIR}|g" \
 			-e "s|/usr/bin/make|${MAKE}|g"
 SUBST_MESSAGE.path=     "Adjusting path."
 
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
