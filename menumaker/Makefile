@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/19 07:54:01 sourceforge_low Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/13 04:36:07 tvierling Exp $
 #
 
 DISTNAME=		MenuMaker-0.17
@@ -12,7 +12,6 @@ COMMENT=		MenuMaker is written in Python and generates menu for XWindow managers
 PYDISTUTILSPKG=		yes
 PYBINMODULE=    	yes
 PYSETUPOPTARGS?=       
-#USE_BUILDLINK3=        yes
 PY_PATCHPLIST=          yes
 
 .include "../../lang/python/extension.mk"
