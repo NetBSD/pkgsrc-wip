@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1732 2005/04/12 04:00:47 jeremy-c-reed Exp $
-# $NetBSD: Makefile,v 1.1732 2005/04/12 04:00:47 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1733 2005/04/15 14:41:15 mwdavies Exp $
+# $NetBSD: Makefile,v 1.1733 2005/04/15 14:41:15 mwdavies Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -51,7 +51,6 @@ SUBDIR+=	WEPCrack
 SUBDIR+=	abuse_sdl
 SUBDIR+=	acpid
 SUBDIR+=	acr
-SUBDIR+=	acroread7
 SUBDIR+=	adamem
 SUBDIR+=	aircrack
 SUBDIR+=	airsnort
