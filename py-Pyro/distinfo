@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/01 22:38:26 mpasternak Exp $
-
-SHA1 (Pyro-3.3.tar.gz) = 659ce5104a530520ceef760269f220b623c6d083
-Size (Pyro-3.3.tar.gz) = 199251 bytes
-SHA1 (patch-aa) = 3298dd9fe932169dc7914b8d0658ac6ce1506a66

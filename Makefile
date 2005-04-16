@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1750 2005/04/16 13:03:35 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1750 2005/04/16 13:03:35 thomasklausner Exp $
+# $Id: Makefile,v 1.1751 2005/04/16 13:05:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1751 2005/04/16 13:05:30 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -737,7 +737,6 @@ SUBDIR+=	py-Protocols
 SUBDIR+=	py-Protocols-docs
 SUBDIR+=	py-Py2Play
 SUBDIR+=	py-PyPE
-SUBDIR+=	py-Pyro
 SUBDIR+=	py-PythonDirector
 SUBDIR+=	py-Quotient
 SUBDIR+=	py-RXP
