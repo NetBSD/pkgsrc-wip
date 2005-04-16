@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/19 12:58:28 bmeurer Exp $
-
-SHA1 (gnomeicu-0.99.tar.bz2) = cd03fc9caddf832c1d8d6be6c33b491de493b424
-Size (gnomeicu-0.99.tar.bz2) = 1368468 bytes
-SHA1 (patch-aa) = fedde37807f4c36d475f6e488d26e721ecc48ed8
