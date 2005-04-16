@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1742 2005/04/16 12:34:15 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1742 2005/04/16 12:34:15 thomasklausner Exp $
+# $Id: Makefile,v 1.1743 2005/04/16 12:35:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1743 2005/04/16 12:35:56 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -104,6 +104,7 @@ SUBDIR+=	bluez-utils
 SUBDIR+=	bnr2
 SUBDIR+=	boa
 SUBDIR+=	bridge-utils
+SUBDIR+=	briquolo
 SUBDIR+=	bscript
 SUBDIR+=	bsfilter
 SUBDIR+=	bub-n-bros
@@ -132,6 +133,7 @@ SUBDIR+=	cjk-latex-wadalab
 SUBDIR+=	clustalx
 SUBDIR+=	com_err
 SUBDIR+=	common-mml
+SUBDIR+=	commoncpp2
 SUBDIR+=	compare
 SUBDIR+=	cops
 SUBDIR+=	copytape
@@ -865,6 +867,7 @@ SUBDIR+=	sim-kde
 SUBDIR+=	sim-qt
 SUBDIR+=	simgear
 SUBDIR+=	simplec
+SUBDIR+=	sipsak
 SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc
 SUBDIR+=	slackware_aaa_base
@@ -981,6 +984,7 @@ SUBDIR+=	unrealtournament-server
 SUBDIR+=	unshield
 SUBDIR+=	up-imapproxy
 SUBDIR+=	uqm
+SUBDIR+=	uqwk
 SUBDIR+=	urlgfe
 SUBDIR+=	util-linux
 SUBDIR+=	valgrind
