@@ -1,0 +1,3 @@
+${PKG_SYSCONFDIR}/siproxd.conf.example
+${PKG_SYSCONFDIR}/siproxd_passwd.cfg
+sbin/siproxd
