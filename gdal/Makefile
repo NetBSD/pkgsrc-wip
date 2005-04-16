@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/30 17:04:50 daprice Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/16 13:39:24 thomasklausner Exp $
 
 DISTNAME=		gdal-1.2.5
 CATEGORIES=		wip
@@ -10,7 +10,7 @@ HOMEPAGE=		http://gdal.org/
 COMMENT=		Translator library for raster geospatial data formats
 
 DEPENDS+=       	gdal-lib-1.2.5:../../wip/gdal-lib
-DEPENDS+=       	gdal-doc-1.2.5:../../wip/gdal-docs
+DEPENDS+=       	gdal-docs-1.2.5:../../wip/gdal-docs
 
 NO_BUILD=		yes
 
