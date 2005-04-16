@@ -1,3 +1,0 @@
-- Add ham/hamlib. ham/hamlib build was broken for me, so I don't 
-  include it now.
-- Test in real life radio amateur band: RX, TX, PTT, etc.
