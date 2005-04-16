@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/09 05:17:23 obache Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/16 14:32:15 thomasklausner Exp $
 #
 
 DISTNAME=		vnc2swf-0.4.2
@@ -9,7 +9,7 @@ MAINTAINER=		obata@lins.jp
 HOMEPAGE=		http://www.unixuser.org/~euske/vnc2swf/
 COMMENT=		Record vnc session as flash movie
 
-DEPENDS+=               x11rec-[0-9]*:../../wip/x11vnc
+DEPENDS+=               x11vnc-[0-9]*:../../wip/x11vnc
 
 GNU_CONFIGURE=		yes
 USE_X11=                yes
