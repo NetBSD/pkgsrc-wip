@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1749 2005/04/16 13:02:26 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1749 2005/04/16 13:02:26 thomasklausner Exp $
+# $Id: Makefile,v 1.1750 2005/04/16 13:03:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1750 2005/04/16 13:03:35 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -632,7 +632,6 @@ SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTTP-BrowserDetect
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-HTTP-Server-Simple
-SUBDIR+=	p5-IO-Multiplex
 SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Mail-Webmail-Gmail
