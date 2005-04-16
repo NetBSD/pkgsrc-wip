@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/01 16:58:44 cjep Exp $
-bin/host
-bin/mxlookup
-bin/nscheck
-bin/rblookup
-man/cat1/host.0
-man/man1/host.1

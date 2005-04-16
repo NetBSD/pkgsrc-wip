@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/01/01 17:37:20 cjep Exp $
-
-SHA1 (host-20031203.tar.gz) = d092f4b090a6d529a3dbe56c5ad777dc1170d3a4
-Size (host-20031203.tar.gz) = 148890 bytes
-SHA1 (patch-aa) = 5247e3b8ed17208d853d9b0b89c6ecb06f81d47e
-SHA1 (patch-ab) = bd5d238c6b5b3570fffe55abb715e77f20af3811
