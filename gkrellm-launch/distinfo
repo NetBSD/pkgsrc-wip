@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/17 20:30:55 xtraeme Exp $
-
-SHA1 (gkrellmlaunch-0.4.tar.gz) = 9f2f31c6cfb11da893aea6117868f575837965b2
-Size (gkrellmlaunch-0.4.tar.gz) = 22310 bytes
-SHA1 (patch-aa) = 90dee8c17b1079b7f30dea599f2d107beaa32477

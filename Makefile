@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1739 2005/04/16 12:29:05 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1739 2005/04/16 12:29:05 thomasklausner Exp $
+# $Id: Makefile,v 1.1740 2005/04/16 12:32:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1740 2005/04/16 12:32:19 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -265,7 +265,6 @@ SUBDIR+=	gfontview
 SUBDIR+=	gforge
 SUBDIR+=	ghostpcl
 SUBDIR+=	git
-SUBDIR+=	gkrellm-launch
 SUBDIR+=	gkrellm-reminder
 SUBDIR+=	glade2-nognome
 SUBDIR+=	glibc
