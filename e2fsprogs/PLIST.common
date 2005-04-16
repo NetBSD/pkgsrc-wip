@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST.common,v 1.4 2004/05/12 12:39:46 thomasklausner Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2005/04/16 21:35:27 jeremy-c-reed Exp $
 bin/chattr
+bin/compile_et
 bin/lsattr
 bin/mk_cmds
+bin/uuidgen
 include/blkid/blkid.h
 include/blkid/blkid_types.h
 include/e2p/e2p.h
+include/et/com_err.h
 include/ext2fs/bitops.h
 include/ext2fs/ext2_err.h
 include/ext2fs/ext2_ext_attr.h
@@ -14,11 +17,16 @@ include/ext2fs/ext2_types.h
 include/ext2fs/ext2fs.h
 include/ss/ss.h
 include/ss/ss_err.h
-info/libext2fs.info.gz
+include/uuid/uuid.h
+lib/e2initrd_helper
 lib/libblkid.a
 lib/libblkid.so
 lib/libblkid.so.1
 lib/libblkid.so.1.0
+lib/libcom_err.a
+lib/libcom_err.so
+lib/libcom_err.so.2
+lib/libcom_err.so.2.1
 lib/libe2p.a
 lib/libe2p.so
 lib/libe2p.so.2
@@ -31,10 +39,34 @@ lib/libss.a
 lib/libss.so
 lib/libss.so.2
 lib/libss.so.2.0
+lib/libuuid.a
+lib/libuuid.so
+lib/libuuid.so.1
+lib/libuuid.so.1.2
+lib/pkgconfig/blkid.pc
+lib/pkgconfig/com_err.pc
+lib/pkgconfig/e2p.pc
+lib/pkgconfig/ext2fs.pc
+lib/pkgconfig/ss.pc
+lib/pkgconfig/uuid.pc
 man/man1/chattr.1
+man/man1/compile_et.1
 man/man1/lsattr.1
 man/man1/mk_cmds.1
+man/man1/uuidgen.1
+man/man3/com_err.3
 man/man3/libblkid.3
+man/man3/uuid.3
+man/man3/uuid_clear.3
+man/man3/uuid_compare.3
+man/man3/uuid_copy.3
+man/man3/uuid_generate.3
+man/man3/uuid_generate_random.3
+man/man3/uuid_generate_time.3
+man/man3/uuid_is_null.3
+man/man3/uuid_parse.3
+man/man3/uuid_time.3
+man/man3/uuid_unparse.3
 man/man8/badblocks.8
 man/man8/blkid.8
 man/man8/debugfs.8
@@ -71,17 +103,15 @@ sbin/mkfs.ext3
 sbin/mklost+found
 sbin/resize2fs
 sbin/tune2fs
+share/et/et_c.awk
+share/et/et_h.awk
 share/ss/ct_c.awk
 share/ss/ct_c.sed
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/e2fsprogs.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/e2fsprogs.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/e2fsprogs.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/e2fsprogs.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/e2fsprogs.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/e2fsprogs.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/e2fsprogs.mo
 @dirrm share/ss
+@dirrm share/et
+@dirrm include/uuid
 @dirrm include/ss
 @dirrm include/ext2fs
+@dirrm include/et
 @dirrm include/e2p
 @dirrm include/blkid

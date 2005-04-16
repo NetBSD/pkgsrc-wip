@@ -1,13 +1,11 @@
-# $NetBSD: Makefile.common,v 1.8 2005/04/11 21:11:41 tvierling Exp $
-# $Id: Makefile.common,v 1.8 2005/04/11 21:11:41 tvierling Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/04/16 21:35:27 jeremy-c-reed Exp $
+# $Id: Makefile.common,v 1.9 2005/04/16 21:35:27 jeremy-c-reed Exp $
 #
 
 # XXX When changing, be sure to run "make makesum" in libuuid directory too.
-E2FSPROGS_VERSION=	1.35
+E2FSPROGS_VERSION=	1.36
 E2FSPROGS_DISTNAME=	e2fsprogs-${E2FSPROGS_VERSION}
 E2FSPROGS_MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/} \
-			ftp://ftp.dei.uc.pt/.d4/linuxberg/files/console/system/ \
-			ftp://tsx-11.mit.edu/pub/linux/packages/ext2fs/ \
 			ftp://ftp.gwdg.de/pub/linux/mirrors/tsx-11/packages/ext2fs/
 
 BUILD_USES_MSGFMT=      YES

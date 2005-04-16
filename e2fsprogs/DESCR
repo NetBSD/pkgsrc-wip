@@ -1,6 +1,7 @@
-The filesystem utilities for the EXT2 filesystem, including e2fsck,
-mke2fs, debugfs, dumpe2fs, chattr, fsck.ext3, mkfs.ext3, resize2fs,
-tune2fs, and others.
+The filesystem utilities for the second extended file system (EXT2),
+including e2fsck, mke2fs, debugfs, dumpe2fs, chattr, fsck.ext3,
+mkfs.ext3, resize2fs, tune2fs, and other tools. It also supports
+the ext3 filesystem with journaling support.
 
 The e2fsprogs package also provides headers, libraries, and
 documentation for libblkid, libcom_err, libe2p, libext2fs, and libss.
