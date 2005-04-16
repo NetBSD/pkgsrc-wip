@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/16 16:59:36 obache Exp $
+bin/x11rec
+share/doc/html/x11rec/index.html.en
+share/doc/html/x11rec/index.html.ja
+@dirrm share/doc/html/x11rec
