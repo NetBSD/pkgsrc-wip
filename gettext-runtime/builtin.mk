@@ -1,4 +1,8 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/18 15:38:03 jeremy-c-reed Exp $
+# $NetBSD: builtin.mk,v 1.2 2005/04/16 23:49:59 jeremy-c-reed Exp $
+
+# 14/Apr/2004 reed needed for ghostscript-esp
+# somehow this is set to "no" somewhere
+USE_BUILTIN.gettext=yes
 
 .if !defined(_BLNK_LIBINTL_FOUND)
 _BLNK_LIBINTL_FOUND!=	\
@@ -7,35 +11,44 @@ _BLNK_LIBINTL_FOUND!=	\
 	else								\
 		${ECHO} "yes";						\
 	fi
-MAKEFLAGS+=	_BLNK_LIBINTL_FOUND=${_BLNK_LIBINTL_FOUND}
+BUILDLINK_VARS+=	_BLNK_LIBINTL_FOUND
 .endif
 
 _LIBINTL_H=	/usr/include/libintl.h
 
 .if !defined(IS_BUILTIN.gettext)
 IS_BUILTIN.gettext=	no
-.  if !empty(_BLNK_LIBINTL_FOUND:M[yY][eE][sS]) && exists(${_LIBINTL_H})
+.  if  exists(${_LIBINTL_H})
+.    if !empty(_BLNK_LIBINTL_FOUND:M[Nn][Oo])
+IS_BUILTIN.gettext!=	\
+	if ${GREP} -q "This file is part of the GNU C Library" ${_LIBINTL_H}; then \
+		${ECHO} "yes";						\
+	else								\
+		${ECHO} "no";						\
+	fi
+.    endif
+.    if !empty(_BLNK_LIBINTL_FOUND:M[yY][eE][sS])
 IS_BUILTIN.gettext!=	\
 	if ${GREP} -q "\#define[ 	]*__USE_GNU_GETTEXT" ${_LIBINTL_H}; then \
 		${ECHO} "yes";						\
 	else								\
 		${ECHO} "no";						\
 	fi
+.    endif
 .    if !empty(IS_BUILTIN.gettext:M[yY][eE][sS])
-#
-# XXX Consider the base system libintl to be gettext-runtime-0.14.1
-#
+# XXX
+# XXX Consider the native libintl to be gettext-runtime-0.14.1
+# XXX
 BUILTIN_PKG.gettext=	gettext-runtime-0.14.1
-MAKEFLAGS+=		BUILTIN_PKG.gettext=${BUILTIN_PKG.gettext}
+BUILDLINK_VARS+=	BUILTIN_PKG.gettext
 .    endif
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.gettext=${IS_BUILTIN.gettext}
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.gettext
+.endif # IS_BUILTIN.gettext
 
-CHECK_BUILTIN.gettext?=	no
-.if !empty(CHECK_BUILTIN.gettext:M[yY][eE][sS])
-USE_BUILTIN.gettext=	yes
-.endif
+#.if defined(USE_BUILTIN.iconv) && !empty(USE_BUILTIN.iconv:M[nN][oO])
+#USE_BUILTIN.gettext=	no
+#.endif
 
 .if !defined(USE_BUILTIN.gettext)
 USE_BUILTIN.gettext?=	${IS_BUILTIN.gettext}
@@ -74,13 +87,16 @@ USE_BUILTIN.gettext=   no
 .    endif
 .  endif
 
-.  if defined(USE_GNU_GETTEXT)
-.    if !empty(IS_BUILTIN.gettext:M[nN][oO]) || \
-        (${PREFER.gettext} == "pkgsrc")
-USE_BUILTIN.gettext=	no
-.    endif
-.  endif
+#.  if defined(USE_GNU_GETTEXT)
+#.    if !empty(IS_BUILTIN.gettext:M[nN][oO]) || \
+#        (${PREFER.gettext} == "pkgsrc")
+#USE_BUILTIN.gettext=	no
+#.    endif
+#.  endif
 .endif	# USE_BUILTIN.gettext
+
+CHECK_BUILTIN.gettext?=	no
+.if !empty(CHECK_BUILTIN.gettext:M[nN][oO])
 
 .if !empty(USE_BUILTIN.gettext:M[nN][oO])
 _BLNK_LIBINTL=		-lintl
@@ -106,7 +122,9 @@ _GETTEXT_NEEDS_ICONV!=	\
 .  if ${_GETTEXT_NEEDS_ICONV} == "yes"
 .    for _mkfile_ in buildlink3.mk builtin.mk
 .      if exists(../../converters/libiconv/${_mkfile_})
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 .        include "../../converters/libiconv/${_mkfile_}"
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 .      endif
 .    endfor
 BUILDLINK_DEPENDS.gettext+=	${_GETTEXT_ICONV_DEPENDS}
@@ -144,3 +162,5 @@ CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 CONFIGURE_ARGS+=	--without-libintl-prefix
 .  endif
 .endif
+
+.endif # CHECK_BUILTIN.gettext
