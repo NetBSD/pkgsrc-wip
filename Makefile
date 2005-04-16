@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1738 2005/04/16 12:27:54 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1738 2005/04/16 12:27:54 thomasklausner Exp $
+# $Id: Makefile,v 1.1739 2005/04/16 12:29:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1739 2005/04/16 12:29:05 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -245,7 +245,6 @@ SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-CornerXMMS
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
-SUBDIR+=	gaim-encryption
 SUBDIR+=	gaim-otr
 SUBDIR+=	galib
 #SUBDIR+=	gcl		# see TODO
