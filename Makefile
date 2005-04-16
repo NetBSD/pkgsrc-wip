@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1744 2005/04/16 12:45:49 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1744 2005/04/16 12:45:49 thomasklausner Exp $
+# $Id: Makefile,v 1.1745 2005/04/16 12:48:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1745 2005/04/16 12:48:15 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -414,7 +414,6 @@ SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
 SUBDIR+=	lammpi
-SUBDIR+=	lbdb
 SUBDIR+=	lcrack
 SUBDIR+=	ldapbrowser
 SUBDIR+=	ldapdns
