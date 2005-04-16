@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/17 20:56:59 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/16 13:29:33 thomasklausner Exp $
 #
 
 DISTNAME=		msworkbench-0.3
@@ -24,6 +24,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/test/*.* ${PREFIX}/share/examples/${DISTNAME}
 
 .include "../../lang/tcl/buildlink3.mk"
-.include "../../geography/mapserver/buildlink3.mk"
+.include "../../wip/mapserver/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
