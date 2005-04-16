@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1 2005/04/16 14:49:00 thomasklausner Exp $
+
+--- src/easytag.c.orig	2005-01-20 22:10:26.000000000 +0100
++++ src/easytag.c
+@@ -1151,15 +1151,17 @@ void Mini_Button_Clicked (GObject *objec
+         /* Used of Track and Total Track values */
+         while (selfilelist)
+         {
+-            gchar *path;
++            gchar *path_utf8, *filename_utf8;
+             etfile = Browser_List_Get_ETFile_From_Path(selfilelist->data);
+ 
+-            path = g_path_get_dirname( ((File_Name *)etfile->FileNameNew->data)->value );
++            filename_utf8 = filename_to_display( ((File_Name *)etfile->FileNameNew->data)->value );
++            path_utf8 = g_path_get_dirname(filename_utf8);
+             if (NUMBER_TRACK_FORMATED)
+-                string_to_set = g_strdup_printf("%.*d",NUMBER_TRACK_FORMATED_SPIN_BUTTON,ET_Get_Number_Of_Files_In_Directory(path));
++                string_to_set = g_strdup_printf("%.*d",NUMBER_TRACK_FORMATED_SPIN_BUTTON,ET_Get_Number_Of_Files_In_Directory(path_utf8));
+             else
+-                string_to_set = g_strdup_printf("%d",ET_Get_Number_Of_Files_In_Directory(path));
+-            g_free(path);
++                string_to_set = g_strdup_printf("%d",ET_Get_Number_Of_Files_In_Directory(path_utf8));
++            g_free(filename_utf8);
++            g_free(path_utf8);
+             if (!string_to_set1)
+                 string_to_set1 = g_strdup(string_to_set); // Just for the message below...
+ 
