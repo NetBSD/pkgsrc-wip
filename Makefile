@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1751 2005/04/16 13:05:30 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1751 2005/04/16 13:05:30 thomasklausner Exp $
+# $Id: Makefile,v 1.1752 2005/04/16 13:12:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1752 2005/04/16 13:12:48 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -843,7 +843,6 @@ SUBDIR+=	scare
 SUBDIR+=	scite
 SUBDIR+=	scm
 SUBDIR+=	scourge
-SUBDIR+=	scponly
 SUBDIR+=	scsh-install-lib
 SUBDIR+=	scx
 SUBDIR+=	secpanel
