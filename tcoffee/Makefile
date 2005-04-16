@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:16:00 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/16 13:45:33 thomasklausner Exp $
 #
 
 DISTNAME=		T-COFFEE_distribution
@@ -10,7 +10,7 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://igs-server.cnrs-mrs.fr/~cnotred/Packages/
 COMMENT=		Multiple Sequence Alignment Package
 
-DEPENDS+=               clustalw-1.8:../../biology/clustalw
+DEPENDS+=               clustalw>=1.8:../../biology/clustalw
 
 WRKSRC=		 	${WRKDIR}/T-COFFEE_distribution_Version_1.37/t_coffee_source
 
