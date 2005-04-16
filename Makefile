@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1752 2005/04/16 13:12:48 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1752 2005/04/16 13:12:48 thomasklausner Exp $
+# $Id: Makefile,v 1.1753 2005/04/16 13:16:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1753 2005/04/16 13:16:25 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -993,10 +993,6 @@ SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
 SUBDIR+=	vnc2swf
 SUBDIR+=	vorbisgain
-SUBDIR+=	vtk
-SUBDIR+=	vtk-data
-SUBDIR+=	vtk-docs
-SUBDIR+=	vtk-python
 SUBDIR+=	wang-ttf
 SUBDIR+=	webcleaner
 SUBDIR+=	west

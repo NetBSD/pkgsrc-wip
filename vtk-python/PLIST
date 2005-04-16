@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/23 00:54:31 mpasternak Exp $
-lib/vtk/libvtkCommonPython.so
-lib/vtk/libvtkFilteringPython.so
-lib/vtk/libvtkGraphicsPython.so
-lib/vtk/libvtkIOPython.so
-lib/vtk/libvtkImagingPython.so
-lib/vtk/libvtkRenderingPython.so
-lib/vtk/libvtkRenderingPythonTkWidgets.so
