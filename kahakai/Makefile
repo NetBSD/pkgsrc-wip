@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:36 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/16 13:27:14 thomasklausner Exp $
 #
 
 DISTNAME=		kahakai-0.6.2
@@ -17,5 +17,5 @@ USE_X11=		yes
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
-.include "../../devel/boost/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
