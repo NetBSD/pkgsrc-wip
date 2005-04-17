@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1754 2005/04/16 17:01:05 obache Exp $
-# $NetBSD: Makefile,v 1.1754 2005/04/16 17:01:05 obache Exp $
+# $Id: Makefile,v 1.1755 2005/04/17 12:31:52 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1755 2005/04/17 12:31:52 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -334,7 +334,6 @@ SUBDIR+=	ht2html
 SUBDIR+=	html2latex
 SUBDIR+=	httrack
 SUBDIR+=	hu-go
-SUBDIR+=	hydra
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
 SUBDIR+=	icc
@@ -453,7 +452,6 @@ SUBDIR+=	libprelude
 SUBDIR+=	libpusb
 SUBDIR+=	libraw1394
 SUBDIR+=	libspf2
-SUBDIR+=	libssh
 SUBDIR+=	libticables
 SUBDIR+=	libticalcs
 SUBDIR+=	libtifiles
