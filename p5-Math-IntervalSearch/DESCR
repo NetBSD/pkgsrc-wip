@@ -1,0 +1,3 @@
+This is the Math::Interpolate package.  This module contains several
+useful routines for interpolating data sets and finding where a given
+value lies in a sorted list.
