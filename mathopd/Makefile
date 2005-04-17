@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2005/03/24 21:13:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/17 16:53:58 ishit Exp $
 
-DISTNAME=	mathopd-1.5p4
+DISTNAME=	mathopd-1.5p5
 CATEGORIES=	www
 MASTER_SITES=	http://www.mathopd.org/dist/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	ishit@users.sourceforge.jp
 HOMEPAGE=	http://www.mathopd.org/
 COMMENT=	Very small, yet very fast HTTP server
 
