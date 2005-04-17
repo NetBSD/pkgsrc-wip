@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:13:06 tvierling Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/17 11:25:17 adrian_p Exp $
 #
 
 DISTNAME=	${PKGNAME}-src
@@ -24,12 +24,12 @@ SUBST_SED.build=	-e "s|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g" \
 			-e "s|uname|${UNAME}|g" \
 			-e "s|\./hydra|${PREFIX}/bin/hydra|g" \
 			-e "s|LIBS=-lm|LIBS=-lm -Wl,-R${PREFIX}/lib -Wl,-R/usr/lib|g"
-
 SUBST_MESSAGE.build=	"Patching build files."
 
 USE_OLD_DES_API=	YES
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+BUILDLINK_DEPENDS.libssh+=	libssh-0.1
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hydra
 PKG_SUPPORTED_OPTIONS=	gtkfe
@@ -55,6 +55,9 @@ post-install:
 PLIST_SRC+=	${PKGDIR}/PLIST.xhydra
 .endif
 
+.include "../../security/openssl/buildlink3.mk"
+.include "../../wip/libssh/buildlink3.mk"
+
 pre-build:
 	 @${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
@@ -62,6 +65,4 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hydra ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/pw-inspector ${PREFIX}/bin
 
-.include "../../security/openssl/buildlink3.mk"
-.include "../../wip/libssh/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
