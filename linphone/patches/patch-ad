@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/04/17 00:35:28 gschwarz Exp $
+
+--- gnome/linphone.c.orig	Thu Apr 14 23:30:57 2005
++++ gnome/linphone.c	Thu Apr 14 23:32:33 2005
+@@ -252,12 +252,12 @@
+ }
+ 
+ void linphone_refresh_proxy_combo_box(GtkWidget *window){
++	GtkWidget *combo, *hbox;
+ 	LinphoneCore *lc=get_core();
+ 	GList *elem=linphone_core_get_proxy_config_list(lc);
+ 	LinphoneProxyConfig *cfg=NULL;
+ 	linphone_core_get_default_proxy(lc,&cfg);
+-	GtkWidget *combo;
+-	GtkWidget *hbox=lookup_widget(window,"proxy_hbox");
++	hbox=lookup_widget(window,"proxy_hbox");
+ 	if (elem==NULL){
+ 		gtk_widget_hide(hbox);
+ 		return;

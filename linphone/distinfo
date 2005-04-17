@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/04/17 00:35:28 gschwarz Exp $
+
+SHA1 (linphone-1.0.1.tar.gz) = e0daf783fed681d2cdfcf163e5e3e9514b4a4b5e
+RMD160 (linphone-1.0.1.tar.gz) = 3af945524d18f11f80fbbbb38ebda4fd9eaf6f6b
+Size (linphone-1.0.1.tar.gz) = 7315742 bytes
+SHA1 (patch-aa) = 08c0e6489bb1ffb628e4536798eec502d9ef5ee9
+SHA1 (patch-ab) = 013c1fcdcf85b60a8cd24990a9a1db388890cc75
+SHA1 (patch-ac) = 105512101eae7a442ac228d8074f08e527d3f3cf
+SHA1 (patch-ad) = fd75c996593ea7055b52acc16c27cde51f0399be
+SHA1 (patch-ae) = ea93256c5d8269738945fbb4e42213c697be4f41

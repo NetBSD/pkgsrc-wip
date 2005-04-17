@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/04/17 00:35:28 gschwarz Exp $
+
+--- coreapi/proxy.c.orig	Thu Apr 14 23:06:25 2005
++++ coreapi/proxy.c	Thu Apr 14 23:17:38 2005
+@@ -60,8 +60,8 @@
+ 
+ gint linphone_proxy_config_set_server_addr(LinphoneProxyConfig *obj, const gchar *server_addr){
+ 	int err;
+-	if (server_addr==NULL || strlen(server_addr)==0) return -1;
+ 	osip_from_t *url;
++	if (server_addr==NULL || strlen(server_addr)==0) return -1;
+ 	osip_from_init(&url);
+ 	err=osip_from_parse(url,server_addr);
+ 	if (err<0){

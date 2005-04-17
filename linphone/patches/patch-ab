@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/04/17 00:35:28 gschwarz Exp $
+
+--- coreapi/lpconfig.c.orig	Thu Apr 14 23:21:29 2005
++++ coreapi/lpconfig.c	Thu Apr 14 23:23:26 2005
+@@ -266,9 +266,9 @@
+ }
+ 
+ int lp_config_sync(LpConfig *lpconfig){
++	FILE *file;
+ 	if (lpconfig->filename==NULL) return;
+-	FILE *file=fopen(lpconfig->filename,"w");
+-	if (file==NULL){
++	if ((file=fopen(lpconfig->filename,"w"))==NULL){
+ 		g_warning("Could not write %s !",lpconfig->filename);
+ 		return -1;
+ 	}

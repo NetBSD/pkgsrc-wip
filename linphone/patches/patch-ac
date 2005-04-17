@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/04/17 00:35:28 gschwarz Exp $
+
+--- console/commands.c.orig	Thu Apr 14 23:26:41 2005
++++ console/commands.c	Thu Apr 14 23:27:29 2005
+@@ -112,9 +112,9 @@
+ 
+ void linphonec_proxy_list(LinphoneCore *lc){
+ 	GList *proxies;
+-	int n;
++	int n, def;
+ 	proxies=linphone_core_get_proxy_config_list(lc);
+-	int def=linphone_core_get_default_proxy(lc,NULL);
++	def=linphone_core_get_default_proxy(lc,NULL);
+ 	for(n=0;proxies!=NULL;proxies=g_list_next(proxies),n++){
+ 		if (n==def)
+ 			printf("****** Proxy %i - this is the default one - *******\n",n);
