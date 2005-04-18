@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/18 18:47:17 daprice Exp $
+bin/t_coffee
+share/doc/html/tcoffee/t_coffee.html
+share/doc/html/tcoffee/t_coffee4html.cgi
+share/doc/html/tcoffee/t_coffee_doc.html
+share/doc/tcoffee/README4T-COFFEE
+share/doc/tcoffee/t_coffee.pdf
+share/doc/tcoffee/t_coffee_doc.doc
+share/doc/tcoffee/t_coffee_doc.html
+share/doc/tcoffee/t_coffee_doc.pdf
+share/doc/tcoffee/t_coffee_doc.ps
+@dirrm share/doc/tcoffee
+@dirrm share/doc/html/tcoffee
