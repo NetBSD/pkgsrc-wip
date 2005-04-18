@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/11/29 18:05:21 daprice Exp $
-
-After Installing T-COFFEE, the environment variable CLUSTALW_4_TCOFFEE 
-must be set to:
-             ${PREFIX}/bin
-
-===========================================================================
