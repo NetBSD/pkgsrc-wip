@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:13 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/19 23:52:42 daprice Exp $
 #
 
 DISTNAME=		ncbi
-PKG_VER=		20040505
 PKGNAME=		ncbi-lib-${PKG_VER}
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools/old/20040505/
@@ -12,6 +11,7 @@ MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://www.ncbi.nlm.nih.gov/IEB/ToolBox
 COMMENT=		Portable, modular software for molecular biology
 
+PKG_VER=		20040505
 WRKSRC=			${WRKDIR}/ncbi
 DIST_SUBDIR=		${PKGNAME}
 USE_X11=		yes
