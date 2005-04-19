@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:17 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/19 23:40:07 daprice Exp $
 #
 
 DISTNAME=		xgobi
 PKGNAME=		xgobi-20030626
-WRKSRC=			${WRKDIR}/${DISTNAME}
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.research.att.com/areas/stat/xgobi/
 
@@ -11,6 +10,7 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.research.att.com/areas/stat/xgobi/
 COMMENT=		Data Visualization Systems for viewing high-dimensional data
 
+WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_X11=                yes
 
 do-configure:
