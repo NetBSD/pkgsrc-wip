@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/18 20:18:11 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/19 23:49:17 daprice Exp $
 #
 
 DISTNAME=		qgis-0.6.0
@@ -9,7 +9,6 @@ MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://www.qgis.org/
 COMMENT=		QuantumGIS supports vector, raster and DB format data
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
