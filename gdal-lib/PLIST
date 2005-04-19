@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/17 21:53:23 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/19 22:32:27 daprice Exp $
 bin/gdal-config
 bin/gdal_contour
 bin/gdal_translate
@@ -24,8 +24,10 @@ include/gdal.h
 include/gdal_alg.h
 include/gdal_frmts.h
 include/gdal_priv.h
+include/gdal_version.h
 include/gdalwarper.h
 include/gvgcpfit.h
+include/memdataset.h
 include/ogr_api.h
 include/ogr_core.h
 include/ogr_feature.h
@@ -35,9 +37,12 @@ include/ogr_p.h
 include/ogr_spatialref.h
 include/ogr_srs_api.h
 include/ogrsf_frmts.h
+include/rawdataset.h
 include/thinplatespline.h
+include/vrtdataset.h
 lib/libgdal.la
 man/man1/gdal-config.1
+man/man1/gdal_contour.1
 man/man1/gdal_merge.py.1
 man/man1/gdal_translate.1
 man/man1/gdal_utilities.1
@@ -49,6 +54,7 @@ man/man1/ogr2ogr.1
 man/man1/ogr_utilities.1
 man/man1/ogrinfo.1
 man/man1/ogrtindex.1
+man/man1/pct2rgb.py.1
 man/man1/rgb2pct.py.1
 share/gdal/cubewerx_extra.wkt
 share/gdal/ecw_cs.dat
