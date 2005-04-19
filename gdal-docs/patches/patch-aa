@@ -1,25 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/03/17 21:16:52 daprice Exp $
+$NetBSD: patch-aa,v 1.2 2005/04/19 21:02:49 daprice Exp $
 
---- configure.in.orig	2004-11-22 12:54:18.000000000 -0700
-+++ configure.in
-@@ -1111,9 +1111,9 @@ else
-       AC_MSG_ERROR([--with-mysql argument is a not an executable file.  It should be the path to the mysql_config script, often somewhere like /usr/local/bin/mysql_config.])
+--- configure.orig	2005-03-02 21:42:33.000000000 -0700
++++ configure
+@@ -24845,7 +24845,7 @@ echo "$as_me: error: --with-mysql argume
+    { (exit 1); exit 1; }; }
    fi
  
 -  MYSQL_VERSION="`$MYSQL_CONFIG --version`"
 +  MYSQL_VERSION="`$MYSQL_CONFIG --version | sed -n 's/\(.*\)\..*\..*/\1/p'`"
  
--  if test ${MYSQL_VERSION:0:1} -ge 4 ; then
-+  if test $MYSQL_VERSION -ge 4 ; then
-       HAVE_MYSQL=yes
-       MYSQL_LIB="`$MYSQL_CONFIG --libs`"
-       MYSQL_INC="`$MYSQL_CONFIG --include`"
-@@ -1388,7 +1388,7 @@ fi
+   case ${MYSQL_VERSION} in
+     [0-3]*)
+@@ -25346,7 +25346,7 @@ fi
  if test "$GEOS_CONFIG" != "no" ; then
  
    VERSION=`$GEOS_CONFIG --version`
 -  if test "${VERSION:0:1}" -lt 2 ; then
 +  if test `echo $VERSION | sed -n 's/\(.*\)\..*\..*/\1/p'` -lt 2 ; then
-     AC_MSG_ERROR([geos-config reports version $VERSION, need at least 2.0 or configure --without-geos])
-   fi
- 
+     { { echo "$as_me:$LINENO: error: geos-config reports version $VERSION, need at least 2.0 or configure --without-geos" >&5
+ echo "$as_me: error: geos-config reports version $VERSION, need at least 2.0 or configure --without-geos" >&2;}
+    { (exit 1); exit 1; }; }

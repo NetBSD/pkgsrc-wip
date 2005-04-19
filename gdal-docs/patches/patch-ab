@@ -1,43 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/03/17 21:16:52 daprice Exp $
+$NetBSD: patch-ab,v 1.2 2005/04/19 21:02:49 daprice Exp $
 
---- configure.orig	2004-11-22 12:54:17.000000000 -0700
-+++ configure
-@@ -24724,7 +24724,7 @@ if test "$PG_CONFIG" = "no" ; then
-   PG_INC=
+--- GDALmake.opt.in.orig	2005-03-10 15:42:54.000000000 -0700
++++ GDALmake.opt.in
+@@ -52,7 +52,7 @@ INST_DATA 	=	@datadir@
+ INST_LIB	=	@libdir@
+ INST_BIN	=	@bindir@
+ INST_PYMOD      =       @pymoddir@
+-INST_DOCS	=	@exec_prefix@/doc
++INST_DOCS	=	@exec_prefix@/share/doc/gdal
+ INST_MAN	=	@mandir@
  
-   echo "$as_me:$LINENO: result: no" >&5
--echo "${ECHO_T}no" >&6LIBZ
-+echo "${ECHO_T}no" >&6
- 
- else
-   if test -d $PG_CONFIG ; then
-@@ -24843,9 +24843,9 @@ echo "$as_me: error: --with-mysql argume
-    { (exit 1); exit 1; }; }
-   fi
- 
--  MYSQL_VERSION="`$MYSQL_CONFIG --version`"
-+  MYSQL_VERSION="`$MYSQL_CONFIG --version | sed -n 's/\(.*\)\..*\..*/\1/p`"
- 
--  if test ${MYSQL_VERSION:0:1} -ge 4 ; then
-+  if test $MYSQL_VERSION -ge 4 ; then
-       HAVE_MYSQL=yes
-       MYSQL_LIB="`$MYSQL_CONFIG --libs`"
-       MYSQL_INC="`$MYSQL_CONFIG --include`"
-@@ -25341,7 +25341,7 @@ fi
- if test "$GEOS_CONFIG" != "no" ; then
- 
-   VERSION=`$GEOS_CONFIG --version`
--  if test "${VERSION:0:1}" -lt 2 ; then
-+  if test `echo $VERSION | sed -n 's/\(.*\)\..*\..*/\1/p'` -lt 2 ; then
-     { { echo "$as_me:$LINENO: error: geos-config reports version $VERSION, need at least 2.0 or configure --without-geos" >&5
- echo "$as_me: error: geos-config reports version $VERSION, need at least 2.0 or configure --without-geos" >&2;}
-    { (exit 1); exit 1; }; }
-@@ -25950,7 +25950,7 @@ if test "${with_python+set}" = set; then
- 
- fi;
- 
--for ac_prog in python python1.5 python1.4 python1.3
-+for ac_prog in python python2.4 python2.3 python1.5 python1.4 python1.3
- do
-   # Extract the first word of "$ac_prog", so it can be a program name with args.
- set dummy $ac_prog; ac_word=$2
+ #
