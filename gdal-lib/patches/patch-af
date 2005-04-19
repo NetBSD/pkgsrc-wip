@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1.1.1 2005/03/17 21:53:23 daprice Exp $
+$NetBSD: patch-af,v 1.2 2005/04/19 22:30:24 daprice Exp $
 
---- frmts/gxf/GNUmakefile.orig	2004-10-06 07:04:10.000000000 -0600
+--- frmts/gxf/GNUmakefile.orig	2005-04-09 11:35:07.000000000 -0600
 +++ frmts/gxf/GNUmakefile
 @@ -28,10 +28,10 @@ $(SHARED_LIB):	$(OBJ)
  install-lib:	$(SHARED_LIB)
@@ -22,7 +22,7 @@ $NetBSD: patch-af,v 1.1.1.1 2005/03/17 21:53:23 daprice Exp $
  
  
 -dist:	docs
-+dist:
++dist:	
  	rm -rf $(DISTDIR)
  	mkdir $(DISTDIR)
  	mkdir $(DISTDIR)/html

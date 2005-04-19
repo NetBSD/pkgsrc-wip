@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2005/03/17 21:53:23 daprice Exp $
+$NetBSD: patch-ad,v 1.2 2005/04/19 22:30:24 daprice Exp $
 
---- GNUmakefile.orig	2004-09-01 13:19:10.000000000 -0600
+--- GNUmakefile.orig	2005-03-01 10:55:40.000000000 -0700
 +++ GNUmakefile
 @@ -21,7 +21,7 @@ LIBGDAL-$(HAVE_LD_SHARED)	+=	$(GDAL_SLIB
  # override if we are using libtool
@@ -42,7 +42,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2005/03/17 21:53:23 daprice Exp $
  
  lclean:
  	rm -f *.a *.so config.log config.cache html/*.*
-@@ -112,13 +112,13 @@ configure:	configure.in aclocal.m4
+@@ -112,15 +112,15 @@ configure:	configure.in aclocal.m4
  GDALmake.opt:	GDALmake.opt.in config.status
  	./config.status
  
@@ -52,18 +52,22 @@ $NetBSD: patch-ad,v 1.1.1.1 2005/03/17 21:53:23 daprice Exp $
 -	doxygen
 -	doxygen Doxyfile.man
 -	cp data/gdalicon.png html
+-	cp doc/ERMapperlogo_small.gif html
 -	cp frmts/*.html frmts/*/frmt_*.html html
+-	python doc/mkindex.py
 +#docs:
 +#	(cd ogr; $(MAKE) docs)
 +#	(cd html; rm -f *.*)
 +#	doxygen
 +#	doxygen Doxyfile.man
 +#	cp data/gdalicon.png html
++#	cp doc/ERMapperlogo_small.gif html
 +#	cp frmts/*.html frmts/*/frmt_*.html html
++#	python doc/mkindex.py
  
  all:	default ogr-all
  
-@@ -144,7 +144,7 @@ install-actions: install-lib
+@@ -146,7 +146,7 @@ install-actions: install-lib
  	(cd apps; $(MAKE) install)
  	(cd man; $(MAKE) install)
  ifneq ($(PYTHON),no)

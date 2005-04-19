@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1.1.1 2005/03/17 21:53:23 daprice Exp $
+$NetBSD: patch-ah,v 1.2 2005/04/19 22:30:24 daprice Exp $
 
---- frmts/pcraster/GNUmakefile.orig	2004-11-10 03:09:19.000000000 -0700
+--- frmts/pcraster/GNUmakefile.orig	2005-04-09 11:36:40.000000000 -0600
 +++ frmts/pcraster/GNUmakefile
 @@ -14,8 +14,8 @@ clean:
  

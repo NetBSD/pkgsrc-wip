@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2005/03/17 21:53:23 daprice Exp $
+$NetBSD: patch-ae,v 1.2 2005/04/19 22:30:24 daprice Exp $
 
---- frmts/dods/GNUmakefile.orig	2004-10-15 07:27:31.000000000 -0600
+--- frmts/dods/GNUmakefile.orig	2005-04-09 11:34:35.000000000 -0600
 +++ frmts/dods/GNUmakefile
 @@ -23,8 +23,8 @@ dodsdataset_test: dodsdataset_test.o dod
  	$(LD) $(LNK_FLAGS) -static -g3 $^ $(XTRAOBJ) $(LIBS) $(LIBGDAL) \

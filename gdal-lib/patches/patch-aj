@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.1.1.1 2005/03/17 21:53:23 daprice Exp $
+$NetBSD: patch-aj,v 1.2 2005/04/19 22:30:24 daprice Exp $
 
---- ogr/GNUmakefile.orig	2005-03-14 15:19:38.000000000 -0700
+--- ogr/GNUmakefile.orig	2005-04-09 11:32:39.000000000 -0600
 +++ ogr/GNUmakefile
 @@ -16,7 +16,7 @@ CPPFLAGS	:=	-Iogrsf_frmts -I. $(GDAL_INC
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2005/03/17 21:53:23 daprice Exp $
  
  ifeq ($(OGR_ENABLED),yes)
  
-@@ -71,11 +71,11 @@ sublibs:
+@@ -71,12 +71,12 @@ sublibs:
  
  endif
  
@@ -20,11 +20,22 @@ $NetBSD: patch-aj,v 1.1.1.1 2005/03/17 21:53:23 daprice Exp $
 -	doxygen
 -	cp ogrsf_frmts/*/drv_*.html html
 -	cp ogrsf_frmts/ogr_formats.html html
+-	cp ogr_feature_style.html html
 +#docs:
 +#	rm -rf html/*
 +#	doxygen
 +#	cp ogrsf_frmts/*/drv_*.html html
 +#	cp ogrsf_frmts/ogr_formats.html html
++#	cp ogr_feature_style.html html
  
  install-docs:
  	$(INSTALL_DIR) $(INST_DOCS)/ogr
+@@ -87,7 +87,7 @@ gdalso:	$(GDAL_SLIB)
+ $(GDAL_SLIB):
+ 	(cd ..; $(MAKE) check-lib)
+ 
+-web-update:	docs
++web-update:
+ 	cp html/* /u/www/projects/opengis/ogrhtml
+ 	cp ogrsf_frmts/*/drv_*.html /u/www/projects/opengis/ogrhtml
+ 	cp ogrsf_frmts/ogr_formats.html /u/www/projects/opengis/ogrhtml
