@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/16 22:19:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/19 23:24:15 minskim Exp $
 
 DISTNAME=	raggle-${VER}
 CATEGORIES=	www textproc
@@ -8,7 +8,7 @@ MAINTAINER=	rasputnik@hellooperator.net
 HOMEPAGE=	http://www.raggle.org/
 COMMENT=	Console-based screen(1)-aware RSS reader written in Ruby
 
-DEPENDS+=	${RUBY_PKGPREFIX}-syck>=0.42:../../wip/ruby-syck
+DEPENDS+=	${RUBY_PKGPREFIX}-syck>=0.42:../../textproc/ruby-syck
 DEPENDS+=	${RUBY_PKGPREFIX}-ncurses>=0.8:../../wip/ruby-ncurses
 
 .include "../../lang/ruby/rubyversion.mk"
