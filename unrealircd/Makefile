@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:16:08 tvierling Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/19 21:52:10 adrian_p Exp $
 
 DISTNAME=	Unreal3.2.3
 PKGNAME=	unrealircd-3.2.3
@@ -23,7 +23,7 @@ CONFIGURE_ENV+=	TRELIBS="-L${PREFIX}/lib -ltre"
 
 CONFIGURE_ARGS+=	--with-dpath=${IRCD_HOME}
 CONFIGURE_ARGS+=	--with-spath=${PREFIX}/sbin/ircd
-CONFIGURE_ARGS+=	--with-permissions=0600
+CONFIGURE_ARGS+=	--with-permissions=0660
 CONFIGURE_ARGS+=	--enable-dynamic-linking
 #
 CONFIGURE_ARGS+=	--with-hostname=${IRCD_HOST}
@@ -62,7 +62,7 @@ IRCD_HOME?=	${VARBASE}/unrealircd
 DOC_FILES=	doc/Authors doc/coding-guidelines doc/tao.of.irc LICENSE
 
 CONF_FILES_PERMS=	${IRCD_EG}/example.conf ${IRCD_HOME}/unrealircd.conf \
-			${IRCD_USER} ${IRCD_GROUP} 0600
+			${IRCD_USER} ${IRCD_GROUP} 0660
 
 PKG_USERS=	${IRCD_USER}:${IRCD_GROUP}::UnrealIRCD\\ user:${IRCD_HOME}:${NOLOGIN}
 PKG_GROUPS=	${IRCD_GROUP}
@@ -80,7 +80,8 @@ SUBST_SED.homedir=	-e "s|src/modules|${IRCD_SHARE}/modules|g" \
 			-e "s|include \"|include \"${IRCD_SHARE}/|g"
 SUBST_MESSAGE.homedir=	"Fixing home directory of IRC server."
 
-OWN_DIRS_PERMS=		${IRCD_HOME} ${IRCD_USER} ${IRCD_GROUP} 0700
+OWN_DIRS_PERMS+=	${IRCD_HOME} ${IRCD_USER} ${IRCD_GROUP} 0770
+OWN_DIRS_PERMS+=	${IRCD_HOME}/tmp ${IRCD_USER} ${IRCD_GROUP} 0770
 
 # Do an explicit disable of inet6 as --disable-inet6 does not do the job
 .if empty(PKG_OPTIONS:Minet6)
@@ -122,6 +123,5 @@ do-install:
 		${PREFIX}/share/doc/html/unrealircd
 
 	${INSTALL_DATA} ${WRKSRC}/doc/example.conf ${IRCD_EG}
-	#${INSTALL_DATA} ${WRKSRC}/doc/example.settings ${IRCD_EG}
 
 .include "../../mk/bsd.pkg.mk"
