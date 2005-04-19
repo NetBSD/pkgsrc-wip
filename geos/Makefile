@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:12:24 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/19 22:41:22 daprice Exp $
 #
 
 DISTNAME=		geos-2.0.0
@@ -14,5 +14,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
+
+USE_LANGUAGES+=		c++
 
 .include "../../mk/bsd.pkg.mk"
