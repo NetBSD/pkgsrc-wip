@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:34 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/19 23:04:35 daprice Exp $
 #
 
 DISTNAME=		spearfish_grass50data
 PKGNAME=		grass-Spearfish-20030825
-WRKSRC=			${WRKDIR}/
 CATEGORIES=		geography
 MASTER_SITES+=		http://grass.itc.it/sampledata/
 MASTER_SITES+=		http://grass.ibiblio.org/sampledata/
@@ -12,6 +11,7 @@ MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://grass.itc.it/sampledata/
 COMMENT=		Example data set for Grass 5.0
 
+WRKSRC=			${WRKDIR}/
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
