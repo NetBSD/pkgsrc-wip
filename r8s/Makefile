@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:26 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/19 23:45:57 daprice Exp $
 #
 
 DISTNAME=		r8s1.7.dist
@@ -11,7 +11,7 @@ MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://ginger.ucdavis.edu/r8s/
 COMMENT=		Estimate rates of molecular evolution
 
-WRKSRC=		${WRKDIR}/dist/src
+WRKSRC=			${WRKDIR}/dist/src
 BUILD_TARGET=		r8s
 
 BINDIR=			${PREFIX}/bin
@@ -32,10 +32,10 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/../doc/$f ${DOCDIR}/$f
+	${INSTALL_DATA} ${WRKSRC}/../doc/${f} ${DOCDIR}/${f}
 .endfor
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/../sample/$f ${EXAMPLESDIR}/$f
+	${INSTALL_DATA} ${WRKSRC}/../sample/${f} ${EXAMPLESDIR}/${f}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
