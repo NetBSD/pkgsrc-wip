@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:26 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/19 23:44:17 daprice Exp $
 #
 
 DISTNAME=		readseq
@@ -10,7 +10,6 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		ftp://ftp.ebi.ac.uk/pub/software/unix/
 COMMENT=		Widely Used Tool to Convert Various Sequence Formats
-
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/readseq ${PREFIX}/bin
