@@ -1,8 +1,28 @@
-$NetBSD: patch-aa,v 1.1 2005/03/31 20:29:32 daprice Exp $
+$NetBSD: patch-aa,v 1.2 2005/04/19 22:57:03 daprice Exp $
 
 --- configure.orig	2004-12-17 13:22:04.000000000 -0700
 +++ configure
-@@ -8207,7 +8207,7 @@ echo "configure:8207: checking for Tcl_I
+@@ -639,7 +639,8 @@ for ac_site_file in $CONFIG_SITE; do
+   fi
+ done
+ 
+-
++ac_save_ldflags="$LDFLAGS -L${PREFIX}/grass-6.0.0/lib -Wl,-R${PREFIX}/grass-6.0.0/lib"
++LDFLAGS="${ac_save_ldflags}"
+ ac_ext=c
+ # CFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
+ ac_cpp='$CPP $CPPFLAGS'
+@@ -1106,7 +1107,8 @@ fi
+ 
+ GISBASE=${DSTDIR}/dist.${ARCH}
+ GRASS_BIN=${DSTDIR}/bin.${ARCH}
+-
++ac_save_ldflags="$LDFLAGS -L${GISBASE}/lib -Wl,-R${GISBASE}/lib"
++LDFLAGS="$ac_save_ldflags"
+ 
+ 
+ 
+@@ -8207,7 +8209,7 @@ echo "configure:8207: checking for Tcl_I
  ac_lib_var=`echo tcl'_'Tcl_Init | sed 'y%./+-%__p_%'`
  
  ac_save_LIBS="$LIBS"
@@ -11,7 +31,7 @@ $NetBSD: patch-aa,v 1.1 2005/03/31 20:29:32 daprice Exp $
  cat > conftest.$ac_ext <<EOF
  #line 8213 "configure"
  #include "confdefs.h"
-@@ -8234,7 +8234,7 @@ LIBS="$ac_save_LIBS"
+@@ -8234,7 +8236,7 @@ LIBS="$ac_save_LIBS"
  
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
@@ -20,7 +40,7 @@ $NetBSD: patch-aa,v 1.1 2005/03/31 20:29:32 daprice Exp $
  else
    echo "$ac_t""no" 1>&6
  
-@@ -8498,7 +8498,7 @@ echo "configure:8498: checking for Tk_Ma
+@@ -8498,7 +8500,7 @@ echo "configure:8498: checking for Tk_Ma
  ac_lib_var=`echo tk'_'Tk_MainWindow | sed 'y%./+-%__p_%'`
  
  ac_save_LIBS="$LIBS"
@@ -29,7 +49,7 @@ $NetBSD: patch-aa,v 1.1 2005/03/31 20:29:32 daprice Exp $
  cat > conftest.$ac_ext <<EOF
  #line 8504 "configure"
  #include "confdefs.h"
-@@ -8525,7 +8525,7 @@ LIBS="$ac_save_LIBS"
+@@ -8525,7 +8527,7 @@ LIBS="$ac_save_LIBS"
  
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
