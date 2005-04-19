@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:12:34 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/19 22:53:20 daprice Exp $
 #
 
 DISTNAME=		grass-6.0.0
@@ -9,6 +9,7 @@ MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://grass.itc.it/
 COMMENT=		Open source, free software geographical information system (GIS)
 
+USE_PERL5=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
