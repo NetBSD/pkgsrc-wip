@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: unrealircd.sh,v 1.3 2004/09/29 23:38:39 adrian_p Exp $
+# $NetBSD: unrealircd.sh,v 1.4 2005/04/19 22:20:18 adrian_p Exp $
 #
 # PROVIDE: unrealircd
 # REQUIRE: DAEMON
@@ -13,10 +13,11 @@ then
 fi
 
 name="unrealircd"
-rcvar=$name
+rcvar=${name}
 command="@PREFIX@/sbin/ircd"
 required_files="@IRCD_HOME@/unrealircd.conf"
-command_args="-u @IRCD_USER@:@IRCD_GROUP@"
+unrealircd_user="@IRCD_USER@"
+unrealircd_group="@IRCD_GROUP@"
 
 load_rc_config $name
 run_rc_command "$1"
