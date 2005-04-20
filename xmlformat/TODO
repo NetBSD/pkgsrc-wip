@@ -1,0 +1,6 @@
+$Id: TODO,v 1.1.1.1 2005/04/20 08:37:23 bubuchka Exp $
+
+Now we explicitly install the Perl version of xmlfromat, while the
+Ruby-based variant is available too. Possible, this should be done
+using ALTERNATIVES framework and breaking this package on three
+ones: xmlformat-perl, xmlformat-ruby, xmlformat-share.
