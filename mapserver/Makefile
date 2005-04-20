@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2005/04/16 13:29:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/20 00:12:16 daprice Exp $
 #
 
-DISTNAME=		mapserver-4.4.1
+DISTNAME=		mapserver-4.4.2
 CATEGORIES=		wip
 MASTER_SITES=		http://cvs.gis.umn.edu/dist/
 
-MAINTAINER=		pshah@nmsu.edu
-HOMEPAGE=		http://cvs.gis.umn.edu/dist/
+MAINTAINER=		mchittur@cs.nmsu.edu
+HOMEPAGE=		http://mapserver.gis.umn.edu/
 COMMENT=		Environment for building spatially enabled Internet apps
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
@@ -57,7 +56,7 @@ do-install:
 .include "../../www/php4/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
 .include "../../wip/gdal-lib/buildlink3.mk"
-.include "../../wip/postgis/buildlink3.mk"
+.include "../../wip/mk/postgis.buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
