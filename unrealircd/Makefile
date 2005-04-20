@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/20 12:52:10 adrian_p Exp $
+# $NetBSD: Makefile,v 1.14 2005/04/20 12:53:41 adrian_p Exp $
 
 DISTNAME=	Unreal3.2.3
 PKGNAME=	unrealircd-3.2.3
@@ -14,7 +14,7 @@ USE_PKGINSTALL=	YES
 WRKSRC=		${WRKDIR}/Unreal3.2
 TRE_NEEDED=	0.7.2
 
-BUILDLINK_DEPENDS.tre+=	tre>=${TRE_NEEDED}
+BUILDLINK_DEPENDS.tre+=	tre-${TRE_NEEDED}
 
 .include "../../mk/bsd.prefs.mk"
 
