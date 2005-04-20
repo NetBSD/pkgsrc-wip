@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/20 14:47:30 bubuchka Exp $
+bin/xmlformat.pl
