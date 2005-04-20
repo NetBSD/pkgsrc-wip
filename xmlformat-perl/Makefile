@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/20 14:47:30 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/20 15:08:44 bubuchka Exp $
 #
 
-DISTNAME=		xmlformat-1.03
-PKGNAME=		xmlformat-perl-1.03
+DISTNAME=		xmlformat-${XMLFORMAT_VERSION}
+PKGNAME=		xmlformat-perl-${XMLFORMAT_VERSION}
 CATEGORIES=		textproc wip
 MASTER_SITES=		http://www.kitebird.com/software/xmlformat/
 
@@ -23,4 +23,5 @@ DESCR_SRC=		${.CURDIR}/../../wip/xmlformat-docs/DESCR.common \
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/xmlformat.pl ${PREFIX}/bin
 
+.include "../../wip/xmlformat-docs/version.mk"
 .include "../../mk/bsd.pkg.mk"
