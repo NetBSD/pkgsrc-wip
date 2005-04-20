@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/19 21:52:10 adrian_p Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/20 12:52:10 adrian_p Exp $
 
 DISTNAME=	Unreal3.2.3
 PKGNAME=	unrealircd-3.2.3
@@ -68,6 +68,7 @@ PKG_USERS=	${IRCD_USER}:${IRCD_GROUP}::UnrealIRCD\\ user:${IRCD_HOME}:${NOLOGIN}
 PKG_GROUPS=	${IRCD_GROUP}
 RCD_SCRIPTS=	unrealircd
 
+MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
 MESSAGE_SUBST+=	IRCD_HOME=${IRCD_HOME}
 FILES_SUBST+=	IRCD_HOME=${IRCD_HOME}
 FILES_SUBST+=	IRCD_USER=${IRCD_USER}
@@ -86,6 +87,8 @@ OWN_DIRS_PERMS+=	${IRCD_HOME}/tmp ${IRCD_USER} ${IRCD_GROUP} 0770
 # Do an explicit disable of inet6 as --disable-inet6 does not do the job
 .if empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ENV+=		ac_cv_ip6=no
+.else
+MESSAGE_SRC+=		${WRKDIR}/.MESSAGE_SRC.inet6
 .endif
 
 .if ${OPSYS} == "Darwin"
@@ -95,6 +98,12 @@ INSTALL_UNSTRIPPED=YES
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../wip/tre/buildlink3.mk"
+
+post-build:
+	@${CP} ${PKGDIR}/MESSAGE ${WRKDIR}/.MESSAGE_SRC
+.if !empty(PKG_OPTIONS:Minet6)
+	@${CP} ${PKGDIR}/MESSAGE.inet6 ${WRKDIR}/.MESSAGE_SRC.inet6
+.endif
 
 do-install:
 	${INSTALL_DATA_DIR} ${IRCD_SHARE}

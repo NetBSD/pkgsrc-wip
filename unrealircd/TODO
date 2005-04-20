@@ -1,2 +1,3 @@
-- Decide on chrooted/non-chrooted install
-- Look at IPv6 support issues
+- Try and hunt down and remove the line causing:
+	gcc: -R/usr/pkg/lib: linker input file unused because linking not done
+  during builds.  Not a show-stopper.
