@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2005/04/21 11:12:01 obache Exp $
+$NetBSD: patch-af,v 1.3 2005/04/21 13:04:58 obache Exp $
 
 --- pmlist.cpp.orig	2003-01-03 04:14:24.000000000 +0900
 +++ pmlist.cpp
@@ -15,17 +15,17 @@ $NetBSD: patch-af,v 1.2 2005/04/21 11:12:01 obache Exp $
  {
  	char command[255];
  
-+#ifdef __linux__
++#if FILTER_CMD==iptables
  	sprintf(command,"/usr/sbin/iptables -t nat -A PREROUTING -p %s -d %s --dport %d -j DNAT --to %s:%d", Proto, ExtIP, ExtPort, IntIP, IntPort);
  	system(command);
-+#elif defined(__OpenBSD__)
++#elif FILTER_CMD==pf
 +	snprintf(command, 255, "/sbin/pfctl -a upnpd:%s-%s-%d -f -", ExtIf, Proto, ExtPort);
 +	FILE *ipf = popen(command, "w");
 +	if (ipf == NULL) return 0;
 +	snprintf(command, 255, "rdr pass on %s proto %s from any to %s port %d -> %s port %d\n", ExtIf, Proto, ExtIP, ExtPort, IntIP, IntPort);
 +	fprintf(ipf, command);
 +	pclose(ipf);
-+#else
++#elif FILTER_CMD==ipfilter
 +	FILE *ipnat = popen("/usr/sbin/ipnat -f -", "w");
 +	if (ipnat == NULL) return 0;
 +	snprintf(command, 255, "rdr %s %s/32 port %d -> %s port %d %s\n", ExtIf, ExtIP, ExtPort, IntIP, IntPort, Proto);
