@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2005/03/13 12:48:22 obache Exp $
+$NetBSD: patch-af,v 1.2 2005/04/21 11:12:01 obache Exp $
 
 --- pmlist.cpp.orig	2003-01-03 04:14:24.000000000 +0900
 +++ pmlist.cpp
@@ -22,7 +22,7 @@ $NetBSD: patch-af,v 1.1.1.1 2005/03/13 12:48:22 obache Exp $
 +	snprintf(command, 255, "/sbin/pfctl -a upnpd:%s-%s-%d -f -", ExtIf, Proto, ExtPort);
 +	FILE *ipf = popen(command, "w");
 +	if (ipf == NULL) return 0;
-+	snprintf(command, 255, "rdr pass on %s protp %s from any to %s port %d -> %s port %d\n", ExtIf, Protp, ExtIP, ExtPort, IntIP, IntPort);
++	snprintf(command, 255, "rdr pass on %s proto %s from any to %s port %d -> %s port %d\n", ExtIf, Proto, ExtIP, ExtPort, IntIP, IntPort);
 +	fprintf(ipf, command);
 +	pclose(ipf);
 +#else
