@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/04/21 13:04:58 obache Exp $
+# $NetBSD: options.mk,v 1.2 2005/04/21 13:08:51 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.linuxigd
 PKG_SUPPORTED_OPTIONS=	iptables pf ipfilter
@@ -25,4 +25,3 @@ CFLAGS+=	-DFILTER_CMD="ipfilter"
 PKG_FAIL_REASON+=	"${PKG_OPTIONS_VAR} must contaion one of" \
 			"\"iptables\" or \"pf\" or \"ipfilter\"!"
 .endif
-
