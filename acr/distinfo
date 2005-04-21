@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/20 17:15:05 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/04/21 18:07:53 poppnk Exp $
 
-SHA1 (acr-0.2.tar.gz) = 3189a5acb317ba4f86a69379245bfdef8fc0e514
-Size (acr-0.2.tar.gz) = 31464 bytes
+SHA1 (acr-0.3.tar.gz) = 02f693433bc83716486f3de5d9ab516b4b98ca98
+RMD160 (acr-0.3.tar.gz) = 9dfd059842425accf4775c9e254688532a8ee452
+Size (acr-0.3.tar.gz) = 38486 bytes
