@@ -1,0 +1,11 @@
+--- configure.orig	2005-04-21 13:26:53.375932632 +0200
++++ configure	2005-04-21 13:27:02.498545784 +0200
+@@ -1926,7 +1926,7 @@
+ 
+ 
+ case "$host" in
+-i[456]86-*-linux*) host_cpu=i386 host_os=linux ;;
++i[3456]86-*-linux-*) host_cpu=i386 host_os=linux ;;
+ arm*-*-linux*) host_cpu=arm host_os=linux ;;
+ powerpc-*-linux*) host_os=linux ;;
+ powerpc-*-darwin*) host_os=darwin ;;

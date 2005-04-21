@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/21 14:39:45 poppnk Exp $
+bin/jamvm
+include/jni.h
+share/jamvm/classes/gnu/classpath/VMStackWalker.class
+share/jamvm/classes/gnu/classpath/VMSystemProperties.class
+share/jamvm/classes/java/lang/reflect/Constructor.class
+share/jamvm/classes/java/lang/reflect/Field.class
+share/jamvm/classes/java/lang/reflect/Method.class
+share/jamvm/classes/java/lang/VMRuntime.class
+share/jamvm/classes/java/lang/VMClassLoader.class
+share/jamvm/classes/java/lang/VMThrowable.class
+share/jamvm/classes/java/lang/VMThread.class
+share/jamvm/classes/java/lang/VMString.class
+share/jamvm/classes/java/security/VMAccessController.class
+share/jamvm/classes/jamvm/java/lang/JarLauncher.class
+@dirrm share/jamvm/classes/java/security
+@dirrm share/jamvm/classes/java/lang/reflect
+@dirrm share/jamvm/classes/java/lang
+@dirrm share/jamvm/classes/jamvm/java/lang
+@dirrm share/jamvm/classes/gnu/classpath
+@dirrm share/jamvm/classes
+@dirrm share/jamvm
