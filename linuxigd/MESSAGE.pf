@@ -1,0 +1,2 @@
+You must add following line to /etc/pf.conf:
+	rdr-anchor "upnpd/*"
