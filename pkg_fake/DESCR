@@ -1,0 +1,5 @@
+pkg_fake allows you to create fake packages into the pkgsrc database.
+
+By this way you'll be able to deceive pkgsrc and skip some dependencies or
+just to solve problems on packages that can't be installed fine because
+portability problems in the target package, etc.

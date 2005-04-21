@@ -1,0 +1,118 @@
+#!/bin/sh
+#
+# pancake@phreaker.net
+#
+# installs or removes fake packages
+# into pkgsrc database
+
+PKGDB=/var/db/pkg
+PREFIX=/usr/pkg
+
+show_help()
+{
+cat <<EOF
+pkg_fake [-alrih] [pkgname]
+   -l : list all fake packages
+   -i : install a new fake package
+   -r : remove a fake package
+   -h : show this message
+   -a : adds new files to 
+EOF
+}
+
+list_all()
+{
+	cd ${PKGDB}
+	for A in `ls`; do
+		if [ -e "${A}/+FAKE" ]; then
+		COMMENT="`cat ${A}/+COMMENT`"
+		printf "${A}\t\t${COMMENT}\n"
+		fi
+	done
+}
+
+if [ -z "${1}" ]; then
+	show_help
+fi
+
+while : ; do
+	if [ -z "$1" ]; then break; fi
+	case $1 in
+	"-l") # list all fake packages installed
+		list_all
+		exit 0
+	;;
+	"-i") # install new fake package
+		if [ "${2}" = "" ]; then
+			echo "pkgname required";
+			exit 1
+		fi
+		PKGNAME="${2}"
+		if [ -d "${PKGDB}/${2}" ]; then
+			echo "package ${2} yet exists."
+			exit 1
+		fi
+		printf "comment: "
+		read COMMENT
+		# create package
+		
+		mkdir -p "${PKGDB}/${2}"
+		:> "${PKGDB}/${2}/+FAKE"
+		echo "@name ${2}"       > "${PKGDB}/${2}/+CONTENTS"
+		echo "@cwd ${PREFIX}"   > "${PKGDB}/${2}/+CONTENTS"
+		echo "OBJECT_FMT=ELF"   > "${PKGDB}/${2}/+BUILD_INFO"
+		echo "OPSYS=`uname -s`" > "${PKGDB}/${2}/+BUILD_INFO" 
+		:> "${PKGDB}/${2}/+DESC"
+		:> "${PKGDB}/${2}/+SIZE_ALL"
+		:> "${PKGDB}/${2}/+SIZE_PKG"
+		echo "${COMMENT}" > "${PKGDB}/${2}/+COMMENT"
+
+		echo "[i] package created."
+		exit 0
+	;;
+	"-r") # removes a fake package
+		if [ "${2}" = "" ]; then
+			echo "pkgname required";
+			exit 1
+		fi
+		A=${2}
+		if [ -e "${PKGDB}/${A}" ]; then
+			if [ -e "${PKGDB}/${A}/+FAKE" ]; then
+				rm -rf "${PKGDB}/${A}"
+				if [ "$?" = "0" ]; then
+				echo "package removed."
+				exit 0
+				else
+				echo "cannot remove pacakge. check permissions."
+				exit 1
+				fi
+			else
+				echo "target package isn't fake. not removed."
+				exit 1
+			fi
+		else
+			cd ${PKGDB}
+			for B in * ; do
+			case $B in ${A}*) OTH="${OTH} ${B}"; ;; esac
+			done
+			if [ -z "${OTH}" ]; then
+				echo "package not found."
+				exit 1
+			else
+				echo "[i] did you mean?"
+				for A in ${OTH}; do
+				echo ${A}
+				done
+				exit 0
+			fi
+		fi
+	;;
+	""|*|"-h") # shows help message
+		show_help
+		exit 0
+	;;
+	esac
+	shift;
+done
+
+exit 1
