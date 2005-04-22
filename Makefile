@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1757 2005/04/22 13:42:32 jgoamakf Exp $
-# $NetBSD: Makefile,v 1.1757 2005/04/22 13:42:32 jgoamakf Exp $
+# $Id: Makefile,v 1.1758 2005/04/22 14:19:25 bubuchka Exp $
+# $NetBSD: Makefile,v 1.1758 2005/04/22 14:19:25 bubuchka Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1024,6 +1024,9 @@ SUBDIR+=	xlibs
 SUBDIR+=	xmail
 SUBDIR+=	xmake
 SUBDIR+=	xmim
+SUBDIR+=	xmlformat-docs
+SUBDIR+=	xmlformat-perl
+SUBDIR+=	xmlformat-ruby
 SUBDIR+=	xmms-dumb
 SUBDIR+=	xmms-infopipe
 SUBDIR+=	xmms-pitch
