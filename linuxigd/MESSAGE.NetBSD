@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2005/04/22 02:30:56 obache Exp $
+for the multicast address, add fllowing lines in /etc/route.conf
+	net 239.0.0.0 -netmask 255.0.0.0 <INT_IP>
+where <INT_IP> is internal interface ip address (ex. 192.168.1.1).
+===========================================================================

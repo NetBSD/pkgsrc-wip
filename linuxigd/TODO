@@ -1,9 +1,9 @@
-$Id: TODO,v 1.1.1.1 2005/03/13 12:48:21 obache Exp $
+$Id: TODO,v 1.2 2005/04/22 02:30:56 obache Exp $
 
 Core dumped when stopping on NetBSD 2.0(i386).
 
 Can compile on FreeBSD/OpenBSD/Linux ?
 
-Can work with pf on OpenBSD?
+Can work with pf?
 
-Startup script (how to do multicast routing?)
+Startup script (how to specify required packet filtering tool?)

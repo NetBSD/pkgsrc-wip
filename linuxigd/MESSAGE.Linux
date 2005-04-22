@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE.Linux,v 1.1 2005/04/22 02:30:56 obache Exp $
+for the multicast address, add fllowing lines in startup script
+	route add -net 239.0.0.0 netmask 255.0.0.0 <INT_IF>
+where <INT_IF> is internal interface name (ex. eth1).
+===========================================================================

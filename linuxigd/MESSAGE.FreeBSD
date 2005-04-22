@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE.FreeBSD,v 1.1 2005/04/22 02:30:56 obache Exp $
+for the multicast address, add fllowing lines in /etc/rc.conf
+	static_route="upnp"
+	route_upnp="-net 239.0.0.0 -netmask 255.0.0.0 -interface <INT_IF>
+where <INT_IF> is internal interface name (ex. fxp1).
+===========================================================================

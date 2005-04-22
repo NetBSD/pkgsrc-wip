@@ -1,0 +1,5 @@
+===========================================================================
+$NetBSD: MESSAGE.common,v 1.1 2005/04/22 02:30:56 obache Exp $
+You will need to make sure you have a route in your routing table for the
+multicast address.
+===========================================================================
