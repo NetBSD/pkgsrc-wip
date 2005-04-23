@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/11 12:10:33 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/23 16:51:43 poppnk Exp $
 bin/firefox
+share/examples/firefox-wrapper/firefox-wrapper.conf
 etc/firefox-wrapper.conf
