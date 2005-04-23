@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/14 21:46:39 hfath Exp $
+$NetBSD: distinfo,v 1.2 2005/04/23 18:27:50 hfath Exp $
 
 SHA1 (natali-1.25.tar.gz) = cb5d6352ba860c9eb0245698dc9869902589e10d
+RMD160 (natali-1.25.tar.gz) = fee6ca683f494f100738f1d4f6288004e5fecdf1
 Size (natali-1.25.tar.gz) = 32969 bytes
 SHA1 (patch-aa) = ec8a23d373c93628ea48872aa19d625fadc59dc3

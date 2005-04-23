@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/02/28 00:35:35 rillig Exp $
+$NetBSD: distinfo,v 1.5 2005/04/23 18:30:07 hfath Exp $
 
 SHA1 (l2tpd-0.69.tar.gz) = 09cbbc63ce0f644805ecc50c943e144351941f88
+RMD160 (l2tpd-0.69.tar.gz) = 62c4b787c52822882611f5eb65af4a58be3b0b9d
 Size (l2tpd-0.69.tar.gz) = 127693 bytes
 SHA1 (patch-ab) = d0516530554402de057002d6c27e4f944c0d0f64
 SHA1 (patch-ac) = f0ee59b5ebf10af814bc27c7688b9fa258eeffca
