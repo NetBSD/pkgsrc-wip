@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1758 2005/04/22 14:19:25 bubuchka Exp $
-# $NetBSD: Makefile,v 1.1758 2005/04/22 14:19:25 bubuchka Exp $
+# $Id: Makefile,v 1.1759 2005/04/23 14:24:32 kristerw Exp $
+# $NetBSD: Makefile,v 1.1759 2005/04/23 14:24:32 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -26,6 +26,7 @@ SUBDIR+=	R-Rdbi
 SUBDIR+=	R-Rdbi.PgSQL
 SUBDIR+=	R-Rserve
 SUBDIR+=	R-VR
+SUBDIR+=	R-abind
 SUBDIR+=	R-chron
 SUBDIR+=	R-clim.pact
 SUBDIR+=	R-date
@@ -368,6 +369,7 @@ SUBDIR+=	jakarta-struts
 SUBDIR+=	jalbum
 SUBDIR+=	jalview
 SUBDIR+=	jamaica
+SUBDIR+=	jamvm
 SUBDIR+=	java-BigDecimal
 SUBDIR+=	java-asm
 SUBDIR+=	java-bcel
@@ -472,6 +474,7 @@ SUBDIR+=	lingoteach-lesson
 SUBDIR+=	lingoteach-ui
 SUBDIR+=	links-hacked
 SUBDIR+=	links1
+SUBDIR+=	linphone
 SUBDIR+=	linux-ch
 SUBDIR+=	linux-chprofessional
 SUBDIR+=	linux-hotplug
@@ -635,6 +638,7 @@ SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Mail-Webmail-Gmail
 SUBDIR+=	p5-MasonX-Apache2Handler
+SUBDIR+=	p5-Math-IntervalSearch
 SUBDIR+=	p5-Module-Pluggable-Fast
 SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-PcapUtils
@@ -688,6 +692,7 @@ SUBDIR+=	picasm
 SUBDIR+=	picprog
 SUBDIR+=	pinball
 SUBDIR+=	pizza
+SUBDIR+=	pkg_fake
 SUBDIR+=	pkg_install-testing
 SUBDIR+=	pkg_select
 SUBDIR+=	planner
@@ -857,6 +862,7 @@ SUBDIR+=	sim-kde
 SUBDIR+=	sim-qt
 SUBDIR+=	simgear
 SUBDIR+=	simplec
+SUBDIR+=	siproxd
 SUBDIR+=	sipsak
 SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc
@@ -921,11 +927,11 @@ SUBDIR+=	swami
 SUBDIR+=	sysklogd
 SUBDIR+=	syslog-ng
 SUBDIR+=	sysvinit
+SUBDIR+=	t-coffee
 SUBDIR+=	t-gnus
 SUBDIR+=	taskbar
 SUBDIR+=	tcc
 SUBDIR+=	tcd
-SUBDIR+=	tcoffee
 SUBDIR+=	tcpdump-latest
 SUBDIR+=	tcpspy
 SUBDIR+=	tcptrack
