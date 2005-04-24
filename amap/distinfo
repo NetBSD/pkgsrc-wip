@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/11/01 21:47:44 adrian_p Exp $
-
-SHA1 (amap-4.7.tar.gz) = 147ac122748bbbd4c637a8dd1999a989d774cbe5
-Size (amap-4.7.tar.gz) = 253217 bytes
-SHA1 (patch-aa) = 92e2bbe59cc6bb09fd7223d357b09c01f8a57998
-SHA1 (patch-ac) = 81fef072f72184e689c553cf5a73447bce699faa

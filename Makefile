@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1760 2005/04/23 17:44:31 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1760 2005/04/23 17:44:31 adrian_p Exp $
+# $Id: Makefile,v 1.1761 2005/04/24 12:19:40 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1761 2005/04/24 12:19:40 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -58,7 +58,6 @@ SUBDIR+=	airsnort
 SUBDIR+=	alive
 SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-utils
-SUBDIR+=	amap
 SUBDIR+=	and
 SUBDIR+=	anope
 SUBDIR+=	aols-freetds
