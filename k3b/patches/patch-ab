@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1 2005/04/24 19:43:30 martijnb Exp $
+
+--- src/core/k3bprocess.cpp.orig	2004-02-01 09:18:58.000000000 +0100
++++ src/core/k3bprocess.cpp
+@@ -124,7 +124,7 @@ void K3bProcess::slotSplitStderr( KProce
+ }
+ 
+ 
+-void K3bProcess::splitOutput( char* data, int len, bool stdout )
++void K3bProcess::splitOutput( char* data, int len, bool use_stdout )
+ {
+   //
+   // The stderr splitting is mainly used for parsing of messages
+@@ -153,7 +153,7 @@ void K3bProcess::splitOutput( char* data
+   if( m_suppressEmptyLines && buffer[0] == '\n' )
+     lines.prepend( QString::null );
+ 
+-  QString* unfinishedLine = ( stdout ? &d->unfinishedStdoutLine : &d->unfinishedStderrLine );
++  QString* unfinishedLine = ( use_stdout ? &d->unfinishedStdoutLine : &d->unfinishedStderrLine );
+ 
+   if( !unfinishedLine->isEmpty() ) {
+     lines.first().prepend( *unfinishedLine );
+@@ -184,7 +184,7 @@ void K3bProcess::splitOutput( char* data
+     if( str.isEmpty() )
+       continue;
+ 
+-    if( stdout )
++    if( use_stdout )
+       emit stdoutLine( str );
+     else
+       emit stderrLine( str );

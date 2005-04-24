@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2005/04/24 19:43:30 martijnb Exp $
+
+--- configure.in.orig	2005-03-24 13:57:49.000000000 +0100
++++ configure.in
+@@ -336,6 +336,10 @@ if test x$compile_k3bsetup = xyes; then
+         AC_DEFINE(HAVE_K3BSETUP,1,[defined if K3bSetup is compiled])
+ fi
+ 
++AC_CHECK_HEADERS(sys/statfs.h sys/statvfs.h)
++
++AC_CHECK_FUNCS(statfs statvfs)
++
+ AM_CONDITIONAL(with_k3bsetup1, [test x$compile_k3bsetup = xyes])
+ dnl =======================================================
+ dnl FILE: ./src/plugin/libsamplerate/configure.in.in

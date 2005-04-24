@@ -1,0 +1,96 @@
+$NetBSD: patch-ad,v 1.1 2005/04/24 19:43:30 martijnb Exp $
+
+--- src/device/k3bdevicemanager.cpp.orig	2004-11-28 13:27:24.000000000 +0100
++++ src/device/k3bdevicemanager.cpp
+@@ -194,6 +194,34 @@ QPtrList<K3bDevice>& K3bCdDevice::Device
+ 
+ int K3bCdDevice::DeviceManager::scanbus()
+ {
++#ifdef __NetBSD__
++  // Generate entries for /dev/cd* devices
++  // Note: As there are only 10 possible /dev/(r)cd devices,
++  // only these will be found.
++  
++  int	 i;
++
++  // Whole disk mask (According to cd(4), the AMD64, i386 and BeBox ports use
++  // 'd' as whole-disk partition, the rest uses 'c'.)
++
++#if defined(__i386__) || defined (__amd64__) || defined (__bebox__)
++  char   slicename = 'd';
++#else
++  char   slicename = 'c';
++#endif
++
++  char devicename[11]; // /dev/rcdXd + trailing zero
++  
++  for (i = 0; i < 10; i++ ) // cd(4) claims there are max. 10 CD devices.
++  {
++    snprintf(devicename,11,"/dev/rcd%d%c",i, slicename);
++    if (addDevice(QString(devicename))) // let addDevice figure it out.
++    {
++      m_foundDevices++;
++    }
++  }
++  
++#else
+   m_foundDevices = 0;
+ 
+   QFile info("/proc/sys/dev/cdrom/info");
+@@ -268,7 +296,7 @@ int K3bCdDevice::DeviceManager::scanbus(
+   }
+   // FIXME: also scan /dev/scsi/hostX.... for devfs without symlinks
+ #endif
+-
++#endif // __NetBSD__
+   scanFstab();
+ 
+   return m_foundDevices;
+@@ -601,6 +629,47 @@ void K3bCdDevice::DeviceManager::slotCol
+ 
+ bool K3bCdDevice::DeviceManager::determineBusIdLun( const QString& dev, int& bus, int& id, int& lun )
+ {
++#ifdef __NetBSD__
++  
++  int cdromfd = K3bCdDevice::openDevice (dev.ascii() );
++  
++  if (cdromfd < 0) {
++    int local_errno = errno; // For all we know, kdDebug() destroys errno
++    kdDebug() << "could not open device " << dev << " (" << strerror(local_errno) << ")" << endl;
++    return false;
++  }
++
++  struct scsi_addr my_addr;
++ 
++  if (::ioctl(cdromfd, SCIOCIDENTIFY, &my_addr))
++  {
++    int local_errno = errno; // For all we know, kdDebug() destroys errno
++    kdDebug() << "ioctl(SCIOCIDENTIFY) failed on device " << dev << " (" << strerror(local_errno) << ")" << endl;
++    
++    ::close(cdromfd);
++    return false;
++  }
++   
++  if (my_addr.type == TYPE_ATAPI)
++  {
++    // XXX Re-map atapibus, so it doesn't conflict with "real" scsi
++    // busses
++
++    bus = 15;
++    id  = my_addr.addr.atapi.drive + 2 * my_addr.addr.atapi.atbus;
++    lun = 0;
++  }
++  else
++  {
++    bus = my_addr.addr.scsi.scbus;
++    id  = my_addr.addr.scsi.target;
++    lun = my_addr.addr.scsi.lun;
++  }
++
++  ::close(cdromfd);
++
++  return true;
++#endif
+ #ifdef Q_OS_LINUX
+   int ret = false;
+   int cdromfd = K3bCdDevice::openDevice( dev.ascii() );

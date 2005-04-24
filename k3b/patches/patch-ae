@@ -1,0 +1,65 @@
+$NetBSD: patch-ae,v 1.1 2005/04/24 19:43:30 martijnb Exp $
+
+--- src/device/k3bscsicommand.cpp.orig	2004-08-15 11:58:23.000000000 +0200
++++ src/device/k3bscsicommand.cpp
+@@ -88,11 +88,15 @@ K3bCdDevice::ScsiCommand::~ScsiCommand()
+ 
+ void K3bCdDevice::ScsiCommand::clear()
+ {
++#ifdef __NetBSD__
++  ::memset( &m_cmd, 0, sizeof(struct scsireq ) );
++#else
+   ::memset( &m_cmd, 0, sizeof(struct cdrom_generic_command) );
+   ::memset( &m_sense, 0, sizeof(struct request_sense) );
+ 
+   m_cmd.quiet = 1;
+   m_cmd.sense = &m_sense;
++#endif
+ }
+ 
+ 
+@@ -115,7 +119,35 @@ int K3bCdDevice::ScsiCommand::transport(
+   if( m_fd == -1 ) {
+     return -1;
+   }
+-
++#ifdef __NetBSD__
++  m_cmd.databuf = (caddr_t) data;
++  m_cmd.datalen = len;
++  m_cmd.datalen_used = len;
++  m_cmd.senselen = SENSEBUFLEN;
++  switch (dir)
++  {
++    case TR_DIR_READ:
++      m_cmd.flags = SCCMD_READ;
++      break;
++    case TR_DIR_WRITE:
++      m_cmd.flags = SCCMD_WRITE;
++      break;
++    default:
++      m_cmd.flags = 0;
++      break;
++  }
++  if( ::ioctl( m_fd, SCIOCCOMMAND, &m_cmd) ) {
++    kdDebug() << "(K3bCdDevice::ScsiCommand) failed: fd: " << m_fd << endl
++	      << "                           command:    " << QString("%1 (%2)")
++      .arg( MMC::commandString( m_cmd.cmd[0] ) )
++      .arg( QString::number(m_cmd.cmd[0], 16) ) << endl
++	      << "                           errorcode:  " << QString::number( (int) m_cmd.retsts, 16) << endl
++	      << "                           status:     " << QString::number( (int) m_cmd.status, 16) << endl;
++     return -1;
++  }
++  else
++    return 0;
++#else
+   m_cmd.buffer = (unsigned char*)data;
+   m_cmd.buflen = len;
+   if( dir == TR_DIR_READ )
+@@ -139,6 +171,7 @@ int K3bCdDevice::ScsiCommand::transport(
+   }
+   else
+     return 0;
++#endif
+ }
+ 
+ 
