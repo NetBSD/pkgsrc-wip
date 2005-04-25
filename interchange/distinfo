@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/03/29 22:38:10 schnoebe Exp $
+$NetBSD: distinfo,v 1.4 2005/04/25 03:42:04 schnoebe Exp $
 
-SHA1 (interchange-5.0.1.tar.gz) = 2f0746affa73b458eabe6b7949d5f70f2ae3dba1
-Size (interchange-5.0.1.tar.gz) = 1956411 bytes
+SHA1 (interchange-5.2.0.tar.gz) = f7dd26440bc0f30ac6bba3d1fb3fac518cc18696
+RMD160 (interchange-5.2.0.tar.gz) = b77fa1e5be57006dc7f5a5f21a94069bab1c8809
+Size (interchange-5.2.0.tar.gz) = 2007576 bytes
 SHA1 (patch-aa) = 271181b08d8bddf95ba2569e00c7fc8be29e78ff
 SHA1 (patch-ab) = 8063702a0d5133fb3af8c3e13ae484ef10c2e657

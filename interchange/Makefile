@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2004/04/06 20:44:40 schnoebe Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/25 03:42:04 schnoebe Exp $
 #
 
-DISTNAME=       interchange-5.0.1
+DISTNAME=       interchange-5.2.0
 PKGNAME=        ${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	http://ftp.icdevgroup.org/interchange/5.0/tar/
+MASTER_SITES=	http://ftp.icdevgroup.org/interchange/5.2/tar/
 
 MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://www.icdevgroup.org
