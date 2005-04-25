@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/09 15:34:45 gschwarz Exp $
+$NetBSD: distinfo,v 1.2 2005/04/25 20:06:13 gschwarz Exp $
 
-SHA1 (sipsak-0.8.11.tar.gz) = 5b10a22ef1c95d657138f7be6ff5e8aaa92813b7
-RMD160 (sipsak-0.8.11.tar.gz) = f4b156553983f7acd107253fa30a7b58dbac568d
-Size (sipsak-0.8.11.tar.gz) = 133219 bytes
+SHA1 (sipsak-0.8.12.tar.gz) = 929f01ebf862860e9c395763f5a51487df0f1e0d
+RMD160 (sipsak-0.8.12.tar.gz) = 370c6bede054dc68db863d4142598ca3040058d2
+Size (sipsak-0.8.12.tar.gz) = 140783 bytes
