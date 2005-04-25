@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/03 19:52:33 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/04/25 13:36:32 poppnk Exp $
 
 SHA1 (acpid-1.0.4.tar.gz) = 229376815a861d798755c789727151dc0b2bc8a0
+RMD160 (acpid-1.0.4.tar.gz) = ddf3cb4e2df7126c71130f89086473b1aa8656b1
 Size (acpid-1.0.4.tar.gz) = 23416 bytes
