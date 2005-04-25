@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/24 21:13:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2005/04/25 03:39:44 schnoebe Exp $
 
 DISTNAME=	frontpage-5.0.2.2623
 CATEGORIES=	www
@@ -20,18 +20,23 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-alpha
 #			Linux-*-i386 \
 #			SunOS-*-sparc64 SunOS-*-x86
 
-.if	${OPSYS} == "NetBSD"
+.if make(makesum)
+FRONTPAGE=  fp${FP_VER:S/.//}.bsdi.tar.Z \
+	    fp${FP_VER:S/.//}.alpha.tar.Z \
+	    fp${FP_VER:S/.//}.solaris.tar.Z
+.else
+. if	${OPSYS} == "NetBSD"
 DEPENDS+=	ap-frontpage>=1.6.2:../../wip/ap-frontpage
-. if	${MACHINE_ARCH} == "i386"
+.  if	${MACHINE_ARCH} == "i386"
 FRONTPAGE=	fp${FP_VER:S/.//}.bsdi.tar.Z
-. elif	${MACHINE_ARCH} == "alpha"
+.  elif	${MACHINE_ARCH} == "alpha"
 FRONTPAGE=	fp${FP_VER:S/.//}.alpha.tar.Z
 RUN_DEPENDS+=	osf1-lib:../../emulators/osf1-lib
-. elif	${MACHINE_ARCH} == "sparc64"
+.  elif	${MACHINE_ARCH} == "sparc64"
 FRONTPAGE=	fp${FP_VER:S/.//}.solaris.tar.Z
-. elif	${MACHINE_ARCH} == "sparc"
+.  elif	${MACHINE_ARCH} == "sparc"
 FRONTPAGE=	fp${FP_VER:S/.//}.solaris.tar.Z
-. endif
+.  endif
 # .elif	${OPSYS} == "SunOS"
 # . if	${MACHINE_ARCH} == "i386"
 # FRONTPAGE=	fp${FP_VER:S/.//}.solarisx86.tar.Z
@@ -40,6 +45,7 @@ FRONTPAGE=	fp${FP_VER:S/.//}.solaris.tar.Z
 # . elif	${MACHINE_ARCH} == "sparc"
 # FRONTPAGE=	fp${FP_VER:S/.//}.solaris.tar.Z
 # . endif
+. endif
 .endif
 
 FP_VER=		5.0

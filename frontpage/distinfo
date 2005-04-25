@@ -1,7 +1,14 @@
-$NetBSD: distinfo,v 1.1.1.3 2003/06/03 16:39:53 schnoebe Exp $
+$NetBSD: distinfo,v 1.2 2005/04/25 03:39:44 schnoebe Exp $
 
+SHA1 (fp50.bsdi.tar.Z) = 8358c04023d50a998fc3b8b26d1aa378b8bc9f51
+RMD160 (fp50.bsdi.tar.Z) = 1dcef7e16a53d03d8fd8b4716cd23b3a14c0c1df
+Size (fp50.bsdi.tar.Z) = 18001487 bytes
 SHA1 (fp50.alpha.tar.Z) = c7c3fbf304ea66cd597d2dd31ea3cf54e90d7429
+RMD160 (fp50.alpha.tar.Z) = cf51d5d7b3df857a27c827f6d2aa7274bf0ad738
 Size (fp50.alpha.tar.Z) = 21958011 bytes
+SHA1 (fp50.solaris.tar.Z) = fca76d73d978228c1f7d9c88b349f46e24d4159c
+RMD160 (fp50.solaris.tar.Z) = c2a65337d1b049ffa12b160f274000a45b3f7b97
+Size (fp50.solaris.tar.Z) = 15763685 bytes
 SHA1 (patch-aa) = d87aac36dec9ef6ec700e2da119a2ebabb1b73e3
 SHA1 (patch-ab) = ee84bc5e979054cafea9d250ed318e47348f943b
 SHA1 (patch-ac) = 3664c36853dc20c7a08b4285e1631b4ade6242b5
