@@ -1,4 +1,5 @@
-bin/linphone
+@comment $NetBSD: PLIST,v 1.2 2005/04/25 19:49:40 gschwarz Exp $
+${GUI}bin/linphone
 bin/linphonec
 include/linphone/config.h
 include/linphone/glist.h
@@ -18,28 +19,36 @@ include/ortp/rtpsignaltable.h
 include/ortp/sessionset.h
 include/ortp/str_utils.h
 include/ortp/telephonyevents.h
-libexec/linphone_applet
-lib/liblinphone.so.1.0.1
-lib/liblinphone.so.1
-lib/liblinphone.so
+${GUI}libexec/linphone_applet
 lib/liblinphone.la
-lib/liblinphone.a
-lib/libortp.a
 lib/libortp.la
-lib/libortp.so
-lib/libortp.so.0
-lib/libortp.so.0.7.0
 man/man1/linphone.1
 man/man1/linphonec.1
 share/gnome/apps/Internet/linphone.desktop
-share/locale/cs/LC_MESSAGES/linphone.mo
-share/locale/de/LC_MESSAGES/linphone.mo
-share/locale/es/LC_MESSAGES/linphone.mo
-share/locale/fr/LC_MESSAGES/linphone.mo
-share/locale/it/LC_MESSAGES/linphone.mo
-share/locale/ja/LC_MESSAGES/linphone.mo
-share/locale/nl/LC_MESSAGES/linphone.mo
-share/locale/pl/LC_MESSAGES/linphone.mo
+share/gtk-doc/html/ortp/book1.html
+share/gtk-doc/html/ortp/ortp-library-management-functions.html
+share/gtk-doc/html/ortp/ortp-multiplexing-sessions---in-a-one-thread-design.html
+share/gtk-doc/html/ortp/ortp-rtp-payloads-and-profiles.html
+share/gtk-doc/html/ortp/ortp-rtpsession-api.html
+share/gtk-doc/html/ortp/ortp-telephone-events---rfc2833-.html
+share/gtk-doc/html/ortp/ortpapi.html
+share/gtk-doc/html/mediastreamer/book1.html
+share/gtk-doc/html/mediastreamer/coreapi.html
+share/gtk-doc/html/mediastreamer/mediastreamer-filters.html
+share/gtk-doc/html/mediastreamer/mediastreamer-msringplayer.html
+share/gtk-doc/html/mediastreamer/mediastreamer-mssync.html
+share/gtk-doc/html/mediastreamer/mediastreamer-running-processing-chains.html
+share/gtk-doc/html/mediastreamer/msfilterimplementations.html
+share/gtk-doc/html/mediastreamer/userapi.html
+share/gtk-doc/html/mediastreamer/index.sgml
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/linphone.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/linphone.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/linphone.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/linphone.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/linphone.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/linphone.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/linphone.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/linphone.mo
 share/applications/linphone.desktop
 share/pixmaps/linphone/linphone.png
 share/pixmaps/linphone/linphone2.png
@@ -65,6 +74,8 @@ share/sounds/linphone/rings/tapping.wav
 share/sounds/linphone/rings/toy.wav
 @dirrm include/linphone
 @dirrm include/ortp
+@dirrm share/gtk-doc/html/ortp
+@dirrm share/gtk-doc/html/mediastreamer
 @dirrm share/pixmaps/linphone
 @dirrm share/sounds/linphone/rings
 @dirrm share/sounds/linphone
