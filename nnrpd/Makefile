@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:32 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/25 09:57:47 hfath Exp $
 
 DISTNAME=		inn-1.7.2.insync-1.1d
 PKGNAME=		nnrpd-1.7.2
@@ -16,15 +16,16 @@ USE_PERL5=      	YES
 USE_PKGINSTALL=		YES
 INN_DATA_DIR?=		/var/news
 
-# How do we know we have perl? Catch22...
-PERL_LDOPTS!=		eval "perl -MExtUtils::Embed -e ldopts"
-
 CONFLICTS+=		nntpclnt-[0-9]* \
 			inn-[1-9].*
 RCD_SCRIPTS=		actived
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../wip/c-news/Makefile.common"
+
+.if (exists(${PERL5}))
+PERL_LDOPTS!=		eval "perl -MExtUtils::Embed -e ldopts"
+.endif
 
 # Given foo=${bar}, replace @foo@ with ${bar}.
 #

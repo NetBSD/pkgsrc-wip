@@ -3,11 +3,7 @@
 - Make sure we got all the relevant patches from 
   http://www.mibsoftware.com/userkt/inn/patches/
 
-- To obtain PERL_LDOPTS, we need to run Perl - but at that point we
-don't know if we actually have it?!
-
 - Should we try to keep clear of INN heritage (/var/news etc.) to
-allow installing INN and C News at the same time?
+  allow installing INN and C News at the same time?
 
 - Fix rc.d script installation
-
