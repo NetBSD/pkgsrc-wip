@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/20 14:48:48 bubuchka Exp $
-bin/xmlformat.rb
+@comment $NetBSD: PLIST,v 1.2 2005/04/25 07:30:52 bubuchka Exp $
+bin/xmlformat
