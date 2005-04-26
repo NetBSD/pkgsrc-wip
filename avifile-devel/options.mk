@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/03/23 11:11:21 obache Exp $
+# $NetBSD: options.mk,v 1.2 2005/04/26 10:54:12 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avifile-devel
 PKG_SUPPORTED_OPTIONS=	sdl faad qt vorbis xvid mad a52 lame jpeg ac3_passthrough
@@ -72,7 +72,7 @@ SUBST_CLASSES+=		xvidlib
 SUBST_STAGE.xvidlib=	pre-configure
 SUBST_MESSAGE.xvidlib=	add -lm to XVID4LIBS
 SUBST_FILES.xvidlib=	configure
-SUBST_SED.xvidlib=	-E -e 's|(XVID4_LIBS -lxvidcore)|\1 -lm|'
+SUBST_SED.xvidlib=	-e 's|XVID4_LIBS -lxvidcore|XVID4_LIBS -Wl,-lxvidcore -lm|'
 .else
 CONFIGURE_ARGS+=	--disable-xvid4 \
 			--without-xvid4-prefix

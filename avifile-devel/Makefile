@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2005/03/31 02:58:48 obache Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/26 10:54:12 obache Exp $
 
-DISTNAME=	avifile-0.7-0.7.41
-PKGNAME=	avifile-devel-0.7.41
+DISTNAME=	avifile-0.7-0.7.43
+PKGNAME=	avifile-devel-0.7.43
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=avifile/}
+EXTRACT_SUFX=   .tar.bz2
 
 MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://avifile.sourceforge.net/
