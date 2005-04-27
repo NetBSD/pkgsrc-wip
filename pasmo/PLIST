@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/23 16:38:13 ivaniclixx Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/27 20:25:31 ivaniclixx Exp $
 bin/pasmo
+share/doc/pasmo/NEWS
 share/doc/pasmo/README
 share/doc/pasmo/pasmodoc.html
-share/doc/pasmo/NEWS
 @dirrm share/doc/pasmo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/23 16:38:13 ivaniclixx Exp $
+$NetBSD: distinfo,v 1.2 2005/04/27 20:25:31 ivaniclixx Exp $
 
-SHA1 (pasmo-0.5.1.tgz) = 206861f92d8993ec23b5a48a2008996742498676
-Size (pasmo-0.5.1.tgz) = 73408 bytes
-SHA1 (patch-aa) = 51cd5ebc29e34ba2a0daf69c057b258c81954fc5
+SHA1 (pasmo-0.5.2.tgz) = e3c052080a1d675a8e3096b84a36b6f540fc12d9
+RMD160 (pasmo-0.5.2.tgz) = ad0bf13a997f70320f2353327e4ec81575881a32
+Size (pasmo-0.5.2.tgz) = 127937 bytes
