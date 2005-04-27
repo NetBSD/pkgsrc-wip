@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/01/26 15:30:19 lexort Exp $
+$NetBSD: distinfo,v 1.5 2005/04/27 13:45:51 lexort Exp $
 
-SHA1 (guile-gnome-platform-2.7.96.tar.gz) = 9ffdc6138584ed08c7f68c4f16464156bd39f6aa
-Size (guile-gnome-platform-2.7.96.tar.gz) = 1032436 bytes
-SHA1 (patch-aa) = b4fedea537affcd782d1967e077fb2f08ae72aa3
-SHA1 (patch-ab) = 9bac526d4c0846f2d439e934f7845bd9d7a7e9a8
-SHA1 (patch-ac) = e80bba861e64a6e5ca89a4ec06820480a14b5c01
+SHA1 (guile-gnome-platform-2.7.99.tar.gz) = 942f32a4d654199f4b4731861b1139fca0f5c4b4
+RMD160 (guile-gnome-platform-2.7.99.tar.gz) = 5aae8870ec03f011b265e2ced84830c40079bf3a
+Size (guile-gnome-platform-2.7.99.tar.gz) = 1058284 bytes
