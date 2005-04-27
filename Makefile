@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1762 2005/04/25 14:27:33 moubctez Exp $
-# $NetBSD: Makefile,v 1.1762 2005/04/25 14:27:33 moubctez Exp $
+# $Id: Makefile,v 1.1763 2005/04/27 15:54:24 cetrox Exp $
+# $NetBSD: Makefile,v 1.1763 2005/04/27 15:54:24 cetrox Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -421,6 +421,7 @@ SUBDIR+=	leo
 SUBDIR+=	libGenome
 SUBDIR+=	libICE
 SUBDIR+=	libSM
+SUBDIR+=	libSoundTouch
 SUBDIR+=	libX11
 SUBDIR+=	libXau
 SUBDIR+=	libXcursor
