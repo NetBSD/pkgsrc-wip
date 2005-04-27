@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/27 15:51:36 cetrox Exp $
+bin/soundstretch
+include/soundtouch/BPMDetect.h
+include/soundtouch/FIFOSampleBuffer.h
+include/soundtouch/FIFOSamplePipe.h
+include/soundtouch/STTypes.h
+include/soundtouch/SoundTouch.h
+lib/libBPM.la
+lib/libSoundTouch.la
+share/aclocal/soundtouch.m4
+share/doc/soundtouch/COPYING.TXT
+share/doc/soundtouch/README.html
+@dirrm share/doc/soundtouch
+@dirrm include/soundtouch
