@@ -1,3 +1,9 @@
-Filter scripts used by printer spoolers to convert incoming PostScript
-data into the printer's native format using a printer/driver specific,
-but spooler-independent PPD file.
+The foomatic-filters package provides foomatic-rip and foomatic-gswrapper.
+
+foomatic-rip uses an external renderer (like GhostScript) to
+translate PostScript to printer's native language. The printer
+capabilities are described in PPD files.  foomatic-rip works with
+every known spooler.
+
+foomatic-gswrapper massages arguments to make Ghostscript execute
+properly as a filter.
