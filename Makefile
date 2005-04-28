@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1763 2005/04/27 15:54:24 cetrox Exp $
-# $NetBSD: Makefile,v 1.1763 2005/04/27 15:54:24 cetrox Exp $
+# $Id: Makefile,v 1.1764 2005/04/28 20:38:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.1764 2005/04/28 20:38:15 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -395,6 +395,7 @@ SUBDIR+=	jdk14
 SUBDIR+=	jemboss-standalone
 SUBDIR+=	jgloss
 SUBDIR+=	jumpnbump
+SUBDIR+=	k3b
 SUBDIR+=	kahakai
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
