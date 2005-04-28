@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1764 2005/04/28 20:38:15 kristerw Exp $
-# $NetBSD: Makefile,v 1.1764 2005/04/28 20:38:15 kristerw Exp $
+# $Id: Makefile,v 1.1765 2005/04/28 20:40:53 kristerw Exp $
+# $NetBSD: Makefile,v 1.1765 2005/04/28 20:40:53 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -154,7 +154,7 @@ SUBDIR+=	dclib
 SUBDIR+=	debian_base
 SUBDIR+=	debian_glib
 SUBDIR+=	debian_gtk
-SUBDIR+=	debian_linux
+#SUBDIR+=	debian_linux	# not a real package
 SUBDIR+=	debian_x11
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
