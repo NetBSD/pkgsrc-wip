@@ -1,0 +1,47 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/04/30 17:13:21 gschwarz Exp $
+
+--- httpd.c.orig	2005-04-30 16:50:48.000000000 +0200
++++ httpd.c	2005-04-30 17:11:20.000000000 +0200
+@@ -23,6 +23,7 @@
+ #include "buffer.h"
+ #include "byte.h"
+ #include "scan.h"
++#include <alloca.h>
+ 
+ /* uncomment the following line to enable support for CGI */
+ // #define CGI
+@@ -116,12 +117,16 @@
+ #undef USE_MMAP
+ #endif
+ 
++#ifndef MAP_FAILED
++#define MAP_FAILED	((void *) -1)
++#endif
++
+ enum { UNKNOWN, GET, HEAD, POST } method;
+ 
+ #ifdef TCP_CORK
+ static int corked;
+ #endif
+-static long retcode=404;	/* used for logging code */
++static unsigned long retcode=404;	/* used for logging code */
+ char *host="?";			/* Host: header */
+ char *port;			/* also Host: header, :80 part */
+ char *args;			/* URL behind ? (for CGIs) */
+@@ -1240,14 +1245,14 @@
+     char *tmp;
+     if (chdir("/")) goto error500;
+     if ((tmp=getenv("GID"))) {
+-      long gid;
++      unsigned long gid;
+       if (tmp[scan_ulong(tmp,&gid)]==0) {
+ 	gid_t gi=gid;
+ 	if (setgroups(1,&gi)) goto error500;
+       } else goto error500;
+     }
+     if ((tmp=getenv("UID"))) {
+-      long uid;
++      unsigned long uid;
+       if (tmp[scan_ulong(tmp,&uid)]==0) {
+ 	if (setuid(uid)) goto error500;
+       } else goto error500;

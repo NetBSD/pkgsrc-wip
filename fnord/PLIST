@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/30 17:13:21 gschwarz Exp $
+sbin/fnord
+sbin/fnord-cgi
+sbin/fnord-idx
