@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/01 18:39:15 bubuchka Exp $
+bin/pwsafe
+man/man1/pwsafe.1

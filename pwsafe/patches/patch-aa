@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/05/01 18:39:15 bubuchka Exp $
+
+--- configure.ac.orig	2004-02-27 13:49:09.000000000 +0200
++++ configure.ac
+@@ -66,7 +66,7 @@ dnl Checks for libraries.
+ dnl AM_WITH_REGEX
+ AC_CHECK_LIB(crypto, SHA1_Init, [], [AC_MSG_ERROR(openssl (libssl) is required)])
+ if test "$with_readline" != no; then
+-AC_CHECK_LIB(ncurses, initscr, [], [AC_MSG_ERROR(libncurses (required by readline) can't be found)])
++AC_SEARCH_LIBS(initscr, ncurses curses, [], [AC_MSG_ERROR(lib[n]curses (required by readline) can't be found)])
+ AC_CHECK_LIB(readline, readline, [], [AC_MSG_ERROR(libreadline can't be found)])
+ fi
+ dnl check for the X libraries
