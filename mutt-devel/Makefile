@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:14:11 tvierling Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/01 17:46:56 yeled Exp $
 
 DISTNAME=		mutt-1.5.4i
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
@@ -33,11 +33,11 @@ LDFLAGS+=		${_STRIPFLAG_CC}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MUTT_USE_SLANG} == YES
+.if defined(MUTT_USE_SLANG) && ${MUTT_USE_SLANG} == YES
 . include "../../devel/libslang/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang}
 .else
-. if ${MUTT_USE_NCURSES} == YES
+. if defined(MUTT_USE_NCURSES) && ${MUTT_USE_NCURSES} == YES
 USE_NCURSES=		yes
 . endif
 . include "../../devel/ncurses/buildlink3.mk"
@@ -72,7 +72,7 @@ MESSAGE_SRC+=	${.CURDIR}/MESSAGE.date_conditional
 CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh
 .endif
 
-.if ${MUTT_USE_SSL} == YES
+.if defined(MUTT_USE_SSL) && ${MUTT_USE_SSL} == YES
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 .else
