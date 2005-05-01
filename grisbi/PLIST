@@ -1,25 +1,52 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/27 00:10:28 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/01 22:05:07 thomasklausner Exp $
 bin/grisbi
-share/gnome/apps/Applications/grisbi.desktop
-share/gnome/help/grisbi/C/contents_motif.gif
-share/gnome/help/grisbi/C/grisbi-manuel.html
-share/gnome/help/grisbi/C/next_motif.gif
-share/gnome/help/grisbi/C/previous_motif.gif
-share/gnome/help/grisbi/C/quickstart.html
-share/gnome/help/grisbi/C/topic.dat
-share/gnome/help/grisbi/C/translation.html
-share/gnome/help/grisbi/fr/contents_motif.gif
-share/gnome/help/grisbi/fr/grisbi-manuel.html
-share/gnome/help/grisbi/fr/next_motif.gif
-share/gnome/help/grisbi/fr/previous_motif.gif
-share/gnome/help/grisbi/fr/quickstart.html
-share/gnome/help/grisbi/fr/topic.dat
-share/gnome/help/grisbi/fr/translation.html
+man/man1/grisbi.1
+share/doc/grisbi/help/C/contents_motif.gif
+share/doc/grisbi/help/C/grisbi-manuel.html
+share/doc/grisbi/help/C/next_motif.gif
+share/doc/grisbi/help/C/previous_motif.gif
+share/doc/grisbi/help/C/quickstart.html
+share/doc/grisbi/help/C/topic.dat
+share/doc/grisbi/help/C/translation.html
+share/doc/grisbi/help/de/contents_motif.gif
+share/doc/grisbi/help/de/grisbi-manuel.html
+share/doc/grisbi/help/de/next_motif.gif
+share/doc/grisbi/help/de/previous_motif.gif
+share/doc/grisbi/help/de/quickstart.html
+share/doc/grisbi/help/de/topic.dat
+share/doc/grisbi/help/de/translation.html
+share/doc/grisbi/help/fr/contents_motif.gif
+share/doc/grisbi/help/fr/grisbi-manuel.html
+share/doc/grisbi/help/fr/next_motif.gif
+share/doc/grisbi/help/fr/previous_motif.gif
+share/doc/grisbi/help/fr/quickstart.html
+share/doc/grisbi/help/fr/topic.dat
+share/doc/grisbi/help/fr/translation.html
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/grisbi.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/grisbi.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/grisbi.mo
 share/mime-info/grisbi.keys
 share/mime-info/grisbi.mime
-share/pixmaps/grisbi.png
-share/pixmaps/logo_grisbi.xpm
-@dirrm share/gnome/help/grisbi/fr
-@dirrm share/gnome/help/grisbi/C
-@dirrm share/gnome/help/grisbi
+share/pixmaps/grisbi/addresses.png
+share/pixmaps/grisbi/banks.png
+share/pixmaps/grisbi/currencies.png
+share/pixmaps/grisbi/dollar.gif
+share/pixmaps/grisbi/euro.gif
+share/pixmaps/grisbi/exec.png
+share/pixmaps/grisbi/files.png
+share/pixmaps/grisbi/financial-years.png
+share/pixmaps/grisbi/fonts.png
+share/pixmaps/grisbi/form.png
+share/pixmaps/grisbi/grisbi-logo.png
+share/pixmaps/grisbi/grisbi.png
+share/pixmaps/grisbi/import.png
+share/pixmaps/grisbi/payment-methods.png
+share/pixmaps/grisbi/reconciliation.png
+share/pixmaps/grisbi/transaction-list.png
+share/pixmaps/grisbi/warnings.png
+@dirrm share/pixmaps/grisbi
+@dirrm share/doc/grisbi/help/fr
+@dirrm share/doc/grisbi/help/de
+@dirrm share/doc/grisbi/help/C
+@dirrm share/doc/grisbi/help
+@dirrm share/doc/grisbi
