@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/13 22:47:58 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:04 jeremy-c-reed Exp $
+share/examples/rc.d/SERVERS
+share/examples/rc.d/NETWORKING
+share/examples/rc.d/LOGIN
+share/examples/rc.d/DAEMON
 share/examples/rc.subr/rc.conf.example
 share/examples/rc.subr/rc.subr
 @dirrm share/examples/${PKGBASE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/06 12:10:35 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:06 jeremy-c-reed Exp $
 bin/syslog2ng
 man/man5/syslog-ng.conf.5
 man/man8/syslog-ng.8
@@ -20,6 +20,7 @@ share/doc/html/syslog-ng/x97.html
 share/doc/syslog-ng/INSTALL
 share/doc/syslog-ng/README
 share/doc/syslog-ng/syslog-ng.conf.doc
+share/examples/rc.d/syslogng
 share/examples/syslog-ng/syslog-ng.conf.demo
 share/examples/syslog-ng/syslog-ng.conf.sample
 share/examples/syslog-ng/syslog-ng.conf.solaris

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST_SRC,v 1.3 2004/04/06 20:44:40 schnoebe Exp $
+@comment $NetBSD: PLIST_SRC,v 1.4 2005/05/02 20:33:58 jeremy-c-reed Exp $
 interchange/_session_storable
 interchange/_uid
 interchange/catalog_after.cfg
@@ -1190,6 +1190,7 @@ man/man1/makecat.1
 man/man1/offline.1
 man/man1/restart.1
 man/man1/update.1
+share/examples/rc.d/interchange
 @dirrm interchange/src/mod_interchange
 @dirrm interchange/src
 @dirrm interchange/lib/UI/vars

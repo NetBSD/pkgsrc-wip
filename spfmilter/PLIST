@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/01 16:02:12 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:06 jeremy-c-reed Exp $
 man/man8/spfmilter.8
 sbin/spfmilter
+share/examples/rc.d/spfmilter

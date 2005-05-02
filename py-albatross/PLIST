@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/12 15:23:43 marc Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:03 jeremy-c-reed Exp $
 bin/al-httpd
 bin/al-session-daemon
 ${PYSITELIB}/albatross/__init__.py
@@ -167,6 +167,7 @@ share/examples/albatross/tree2/tree.py
 share/examples/albatross/tree3/install.py
 share/examples/albatross/tree3/tree.html
 share/examples/albatross/tree3/tree.py
+share/examples/rc.d/al_session_daemon
 @dirrm share/examples/albatross/tree3
 @dirrm share/examples/albatross/tree2
 @dirrm share/examples/albatross/tree1

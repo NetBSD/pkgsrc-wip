@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/24 04:13:34 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:33:59 jeremy-c-reed Exp $
 bin/omshell
 include/dhcpctl.h
 include/isc-dhcp/boolean.h
@@ -26,6 +26,7 @@ man/man8/dhcrelay.8
 sbin/dhcpd
 sbin/dhcrelay
 share/doc/isc-dhcpd/README
+share/examples/rc.d/isc_dhcpd
 @dirrm share/doc/isc-dhcpd
 @dirrm include/omapip
 @dirrm include/isc-dhcp

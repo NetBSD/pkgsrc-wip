@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/02/22 09:50:24 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:34:05 jeremy-c-reed Exp $
 bin/sid-filter
 lib/libar.a
 man/cat3/ar.0
@@ -8,4 +8,5 @@ share/doc/sid-milter/LICENSE
 share/doc/sid-milter/README
 share/doc/sid-milter/README-SenderID
 share/doc/sid-milter/RELEASE_NOTES
+share/examples/rc.d/sidmilter
 @dirrm share/doc/sid-milter

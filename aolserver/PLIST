@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/24 18:34:31 ianharding Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:33:38 jeremy-c-reed Exp $
+share/examples/rc.d/nsd

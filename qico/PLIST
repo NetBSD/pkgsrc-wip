@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/24 04:13:35 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:03 jeremy-c-reed Exp $
 bin/qico
 ${QCC}bin/qcc
 share/examples/qico/qico.conf
+share/examples/rc.d/qico
 @dirrm share/examples/qico

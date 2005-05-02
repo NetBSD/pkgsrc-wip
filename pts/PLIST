@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/13 08:25:30 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:03 jeremy-c-reed Exp $
 sbin/pts
+share/examples/rc.d/pts
 share/pts/locale/en.msg
 share/pts/locale/ja.msg
 share/pts/pts.ban

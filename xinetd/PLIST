@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/07/18 14:40:13 ppostma Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:34:07 jeremy-c-reed Exp $
 man/man5/xinetd.conf.5
 man/man8/itox.8
 man/man8/xconv.pl.8
@@ -7,6 +7,7 @@ man/man8/xinetd.log.8
 sbin/itox
 sbin/xconv.pl
 sbin/xinetd
+share/examples/rc.d/xinetd
 share/examples/xinetd/xinetd.conf
 share/examples/xinetd/xinetd.d/chargen-dgram
 share/examples/xinetd/xinetd.d/chargen-stream

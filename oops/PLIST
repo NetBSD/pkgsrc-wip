@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 20:24:02 shattered Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:02 jeremy-c-reed Exp $
 etc/oops/tables/koi-alt.tab
 etc/oops/tables/koi-iso.tab
 etc/oops/tables/koi-win.tab
@@ -34,6 +34,7 @@ share/examples/oops/select.sql
 share/examples/oops/auth_template.html
 share/examples/oops/err_template.html
 share/examples/oops/redir_template.html
+share/examples/rc.d/oops
 @dirrm share/examples/oops
 @dirrm etc/oops/tables
 @dirrm etc/oops

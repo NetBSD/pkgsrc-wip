@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/25 10:36:06 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:07 jeremy-c-reed Exp $
 sbin/ircd
 share/doc/html/unrealircd/unreal32docs.html
 share/doc/unrealircd/Authors
 share/doc/unrealircd/LICENSE
 share/doc/unrealircd/coding-guidelines
 share/doc/unrealircd/tao.of.irc
+share/examples/rc.d/unrealircd
 share/examples/unrealircd/example.conf
 share/unrealircd/aliases/aliases.conf
 share/unrealircd/aliases/anope.conf

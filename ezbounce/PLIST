@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/24 04:13:34 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:33:56 jeremy-c-reed Exp $
 man/man1/ezbounce.1
 sbin/ezbchk
 sbin/ezbounce
@@ -10,5 +10,6 @@ share/doc/ezbounce/TODO
 share/doc/ezbounce/sample.MOTD
 share/doc/ezbounce/sample.conf
 share/examples/ezbounce/ezbounce.conf.default
+share/examples/rc.d/ezbounce
 @dirrm share/examples/ezbounce
 @dirrm share/doc/ezbounce

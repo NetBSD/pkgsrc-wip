@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/14 09:55:57 imilh Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:33:57 jeremy-c-reed Exp $
 libexec/ftpd-tls
 man/man8/ftpd-tls.8
 share/doc/${PKGBASE}/README.TLS
+share/examples/rc.d/ftpdtls
 @dirrm share/doc/${PKGBASE}

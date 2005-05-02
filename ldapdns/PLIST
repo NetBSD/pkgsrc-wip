@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/27 03:21:37 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:33:59 jeremy-c-reed Exp $
 sbin/${PKGNAME}-dg
 sbin/${PKGNAME}-hosts
 sbin/${PKGNAME}-vc
@@ -6,4 +6,5 @@ share/doc/${PKGNAME}/INSTALL
 share/doc/${PKGNAME}/README.axfr
 share/doc/${PKGNAME}/README.charset
 share/doc/${PKGNAME}/README.generic-rr
+share/examples/rc.d/ldapdns
 @dirrm share/doc/${PKGNAME}

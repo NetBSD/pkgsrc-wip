@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/18 03:03:50 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:01 jeremy-c-reed Exp $
 bin/ping
 man/man8/inetd.8
 man/man8/ping.8
@@ -26,5 +26,6 @@ share/examples/${PKGBASE}/etc.sample/services
 share/examples/${PKGBASE}/etc.sample/slip.hosts
 share/examples/${PKGBASE}/etc.sample/slip.login
 share/examples/${PKGBASE}/inetd.conf
+share/examples/rc.d/inetd
 @dirrm share/examples/${PKGBASE}/etc.sample
 @dirrm share/examples/${PKGBASE}

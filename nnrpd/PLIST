@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/13 14:26:21 hfath Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:01 jeremy-c-reed Exp $
 libexec/filter_nnrpd.pl
 sbin/mailpost
 sbin/actived
@@ -9,4 +9,5 @@ man/man5/moderators.5
 man/man8/nnrpd.8
 share/examples/nnrpd/nnrp.access
 share/examples/nnrpd/moderators
+share/examples/rc.d/actived
 @dirrm share/examples/nnrpd

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/13 06:45:32 ishit Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:00 jeremy-c-reed Exp $
 sbin/mathopd
 share/doc/mathopd/CHANGES
 share/doc/mathopd/COPYING
@@ -9,5 +9,6 @@ share/doc/mathopd/running.txt
 share/doc/mathopd/sample.cfg
 share/doc/mathopd/syntax.txt
 share/examples/mathopd/mathopd.conf
+share/examples/rc.d/mathopd
 @dirrm share/examples/mathopd
 @dirrm share/doc/mathopd

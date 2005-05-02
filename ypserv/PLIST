@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/06 00:28:10 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:08 jeremy-c-reed Exp $
 include/rpcsvc/ypxfrd.x
 sbin/create_printcap
 sbin/makedbm
@@ -16,6 +16,8 @@ sbin/ypxfr
 sbin/ypxfr_1perday
 sbin/ypxfr_1perhour
 sbin/ypxfr_2perday
+share/examples/rc.d/ypserv
+share/examples/rc.d/yppasswdd
 share/man/man5/netgroup.5
 share/man/man5/ypserv.conf.5
 share/man/man8/makedbm.8

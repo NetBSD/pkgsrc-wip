@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/05/20 14:22:10 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:33:57 jeremy-c-reed Exp $
 bin/gnump3d
 bin/gnump3d-index
 bin/gnump3d-top
@@ -36,6 +36,7 @@ man/man1/gnump3d-index.1
 man/man1/gnump3d-top.1
 man/man1/gnump3d.1
 man/man1/gnump3d.conf.1
+share/examples/rc.d/gnump3d
 share/gnump3d/Clean/AUTHOR
 share/gnump3d/Clean/COPYING.html
 share/gnump3d/Clean/bug.html

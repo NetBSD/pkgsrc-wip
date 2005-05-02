@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/18 13:01:08 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:05 jeremy-c-reed Exp $
 sbin/shapecfg
 share/doc/shaper/README.shaper
+share/examples/rc.d/shaper
 share/examples/shaper/shaper.conf
 @dirrm share/examples/shaper
 @dirrm share/doc/shaper

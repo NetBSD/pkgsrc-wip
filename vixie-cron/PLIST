@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/19 17:24:14 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:07 jeremy-c-reed Exp $
 bin/crontab
 man/man1/crontab.1
 man/man5/crontab.5
 man/man8/cron.8
 sbin/cron
+share/examples/rc.d/cron
