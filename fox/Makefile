@@ -1,31 +1,22 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:12:17 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/02 13:51:19 cetrox Exp $
 #
 
-DISTNAME=		fox-1.2.11
-CATEGORIES=		devel
+DISTNAME=		fox-1.2.16
+CATEGORIES=		x11
 MASTER_SITES=		http://www.fox-toolkit.org/ftp/
 
-MAINTAINER=		ccatrian@eml.cc
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.fox-toolkit.org/
 COMMENT=		Fast and extensive C++ GUI toolkit
 
-SUBST_CLASSES+=		art sshots
-SUBST_MESSAGE.art=	"Fixing dir in doc/art/Makefile.in"
-SUBST_FILES.art=	doc/art/Makefile.in
-SUBST_SED.art=		-e \
-	's|$(prefix)/@PACKAGE@/html/art|$(prefix)/share/@PACKAGE@/html/art|'
-SUBST_STAGE.art=	pre-patch
-SUBST_MESSAGE.sshots=	"Fixing dir in doc/screenshots/Makefile.in"
-SUBST_FILES.sshots=	doc/screenshots/Makefile.in
-SUBST_SED.sshots=	-e \
-	's|$(prefix)/@PACKAGE@/html/screenshots|$(prefix)/share/@PACKAGE@/html/screenshots|'
-SUBST_STAGE.sshots=	pre-patch
+CONFIGURE_ARGS+=	--disable-opengl	\
+			--disable-static	\
+			--enable-release
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-GNU_CONFIGURE=		yes
 USE_X11=		yes
+GNU_CONFIGURE=		yes
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

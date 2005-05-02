@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/05/02 13:51:20 cetrox Exp $
+
+--- doc/screenshots/Makefile.in.orig	2005-05-01 23:22:23.000000000 -0400
++++ doc/screenshots/Makefile.in	2005-05-01 23:24:21.000000000 -0400
+@@ -97,7 +97,7 @@
+ VERSION = @VERSION@
+ X_BASE_LIBS = @X_BASE_LIBS@
+ 
+-screenshotsdir = $(prefix)/@PACKAGE@/html/screenshots
++screenshotsdir = $(prefix)/share/@PACKAGE@/html/screenshots
+ 
+ # Icons
+ SCREENSHOTS_FILES =  adie_colors.gif adie_edit.gif adie_font.gif adie.gif adie_sty.gif analysisview.png aqx_linux_visualizacao_peq.jpg arithmedrill-screenshot.png arithmedrill-screenshot_small.png boskalisday.gif boskalisnite.gif clview_icon.gif colordialog.png cometassay.jpg contact.gif dlgedit1.png dlgedit2.png dirdialog.png emso_screen.png emso_screen_small.jpg filedialog.png fontdialog.png foxcalc.jpg foxcalc_prefdialog_01_small.jpg foxcalc_prefdialog_02_small.jpg foxcalc_prefdialog_03_small.jpg glview.png goggles.png imagedebugger.gif pathfinder.png printdialog.png replacedialog.png SbSScreen1.jpg SbSScreen1_small.jpg scenegraphnavigator.gif scriptolutions.gif searchdialog.png ss1.png ss1_small.png ss2.png ss2_small.png ss3.png ss3_small.png rezound_thumb.gif table.png tmp_vision_snap.jpg tux.jpg tux_small.jpg udine_physics.jpg vorhour1.jpg vorhour1_small.jpg vorhour2.jpg vorhour2_small.jpg xfe.png xfe_small.png
