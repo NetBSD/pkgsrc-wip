@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/20 18:53:14 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/05/02 09:35:30 marttikuparinen Exp $
 JAlbum/JAlbum.jar
 JAlbum/StartJAlbum.bat
 JAlbum/filetypes.xml
@@ -82,7 +82,6 @@ JAlbum/help/images/xbfexample.jpg
 JAlbum/help/images/xborderexample.jpg
 JAlbum/help/images/zoomexample.jpg
 JAlbum/help/index.html
-JAlbum/help/index.ico
 JAlbum/help/misc.html
 JAlbum/help/quickstart.html
 JAlbum/help/scripting.html
@@ -106,6 +105,8 @@ JAlbum/plugins/GrayscaleFilter.java
 JAlbum/plugins/LogoFilter.class
 JAlbum/plugins/LogoFilter.java
 JAlbum/plugins/LogoFilter.jbx
+JAlbum/plugins/Printing.class
+JAlbum/plugins/Printing.java
 JAlbum/plugins/PropertySettingFilterWrapper.class
 JAlbum/plugins/PropertySettingFilterWrapper.java
 JAlbum/plugins/RotationFilter.class
@@ -143,21 +144,66 @@ JAlbum/res/unknown.gif
 JAlbum/res/xls.gif
 JAlbum/res/xml.gif
 JAlbum/res/zip.gif
-JAlbum/skins/BluPlusPlus/bsh/base.bsh
-JAlbum/skins/BluPlusPlus/bsh/common.bsh
 JAlbum/skins/BluPlusPlus/bsh/index.bsh
-JAlbum/skins/BluPlusPlus/bsh/photographic-meta-info.bsh
 JAlbum/skins/BluPlusPlus/bsh/slide-original.bsh
 JAlbum/skins/BluPlusPlus/bsh/slide.bsh
-JAlbum/skins/BluPlusPlus/bsh/vars.bsh
 JAlbum/skins/BluPlusPlus/cameras.properties
+JAlbum/skins/BluPlusPlus/connect.pht
 JAlbum/skins/BluPlusPlus/docs/ChangesHistory.txt
 JAlbum/skins/BluPlusPlus/docs/ReadMe.txt
 JAlbum/skins/BluPlusPlus/docs/UserGuide.txt
+JAlbum/skins/BluPlusPlus/frames/border_01.xbp
+JAlbum/skins/BluPlusPlus/frames/border_02.xbp
+JAlbum/skins/BluPlusPlus/frames/border_03.xbp
+JAlbum/skins/BluPlusPlus/frames/bracket.xbp
+JAlbum/skins/BluPlusPlus/frames/bracket_horizontal.xbp
+JAlbum/skins/BluPlusPlus/frames/bracket_vertical.xbp
+JAlbum/skins/BluPlusPlus/frames/elaborate_01.xbp
+JAlbum/skins/BluPlusPlus/frames/elaborate_02.xbp
+JAlbum/skins/BluPlusPlus/frames/frame.xbp
+JAlbum/skins/BluPlusPlus/frames/glow_01.xbp
+JAlbum/skins/BluPlusPlus/frames/glow_02.xbp
+JAlbum/skins/BluPlusPlus/frames/glow_03.xbp
+JAlbum/skins/BluPlusPlus/frames/hakki.xbp
+JAlbum/skins/BluPlusPlus/frames/images/corner_d4d4d4_5.gif
+JAlbum/skins/BluPlusPlus/frames/images/corner_d4d4d4_5l.gif
+JAlbum/skins/BluPlusPlus/frames/images/eos_cdw30.gif
+JAlbum/skins/BluPlusPlus/frames/images/eos_mosaic15.gif
+JAlbum/skins/BluPlusPlus/frames/images/eos_mosaic9.gif
+JAlbum/skins/BluPlusPlus/frames/images/eos_networking4b.gif
+JAlbum/skins/BluPlusPlus/frames/images/eos_networking5.gif
+JAlbum/skins/BluPlusPlus/frames/images/parchment_01.gif
+JAlbum/skins/BluPlusPlus/frames/images/tape_orange5.gif
+JAlbum/skins/BluPlusPlus/frames/images/tape_orange6.gif
+JAlbum/skins/BluPlusPlus/frames/images/wood_02.jpg
+JAlbum/skins/BluPlusPlus/frames/none.xbp
+JAlbum/skins/BluPlusPlus/frames/oval_01.xbp
+JAlbum/skins/BluPlusPlus/frames/oval_02.xbp
+JAlbum/skins/BluPlusPlus/frames/oval_03.xbp
+JAlbum/skins/BluPlusPlus/frames/oval_04.xbp
+JAlbum/skins/BluPlusPlus/frames/preview.jpg
+JAlbum/skins/BluPlusPlus/frames/shadow.xbp
+JAlbum/skins/BluPlusPlus/frames/shadow_full.xbp
+JAlbum/skins/BluPlusPlus/frames/shadow_nw.xbp
+JAlbum/skins/BluPlusPlus/frames/simple_01.xbp
+JAlbum/skins/BluPlusPlus/frames/simple_02.xbp
+JAlbum/skins/BluPlusPlus/frames/simple_03.xbp
+JAlbum/skins/BluPlusPlus/frames/simple_04.xbp
+JAlbum/skins/BluPlusPlus/frames/simple_05.xbp
+JAlbum/skins/BluPlusPlus/frames/simple_06.xbp
+JAlbum/skins/BluPlusPlus/frames/soft_01.xbp
+JAlbum/skins/BluPlusPlus/frames/soft_02.xbp
+JAlbum/skins/BluPlusPlus/frames/soft_03.xbp
+JAlbum/skins/BluPlusPlus/frames/soft_04.xbp
+JAlbum/skins/BluPlusPlus/frames/soft_05.xbp
+JAlbum/skins/BluPlusPlus/frames/soft_06.xbp
+JAlbum/skins/BluPlusPlus/frames/soft_07.xbp
+JAlbum/skins/BluPlusPlus/frames/tape_01.xbp
 JAlbum/skins/BluPlusPlus/hints.jap
 JAlbum/skins/BluPlusPlus/includes/footer.inc
 JAlbum/skins/BluPlusPlus/includes/header.inc
 JAlbum/skins/BluPlusPlus/includes/help.inc
+JAlbum/skins/BluPlusPlus/includes/html-header.inc
 JAlbum/skins/BluPlusPlus/includes/index-bottom-navigation.inc
 JAlbum/skins/BluPlusPlus/includes/index-top-navigation.inc
 JAlbum/skins/BluPlusPlus/includes/index-topbar.inc
@@ -169,11 +215,95 @@ JAlbum/skins/BluPlusPlus/includes/slide-bottom-navigation.inc
 JAlbum/skins/BluPlusPlus/includes/slide-comment.inc
 JAlbum/skins/BluPlusPlus/includes/slide-info.inc
 JAlbum/skins/BluPlusPlus/includes/slide-photographic-meta-info.inc
+JAlbum/skins/BluPlusPlus/includes/slide-remarks.inc
 JAlbum/skins/BluPlusPlus/includes/slide-top-navigation.inc
 JAlbum/skins/BluPlusPlus/includes/slide-topbar.inc
 JAlbum/skins/BluPlusPlus/index.htt
 JAlbum/skins/BluPlusPlus/init.bsh
 JAlbum/skins/BluPlusPlus/onload.bsh
+JAlbum/skins/BluPlusPlus/plugins/AbstractSlide.class
+JAlbum/skins/BluPlusPlus/plugins/AbstractSlide.java
+JAlbum/skins/BluPlusPlus/plugins/BPPCompiledScript.class
+JAlbum/skins/BluPlusPlus/plugins/BPPCompiledScript.java
+JAlbum/skins/BluPlusPlus/plugins/BPPFilterGroup.class
+JAlbum/skins/BluPlusPlus/plugins/BPPFilterGroup.java
+JAlbum/skins/BluPlusPlus/plugins/BPPFilterProperties.class
+JAlbum/skins/BluPlusPlus/plugins/BPPFilterProperties.java
+JAlbum/skins/BluPlusPlus/plugins/BPPFrameHandler.class
+JAlbum/skins/BluPlusPlus/plugins/BPPFrameHandler.java
+JAlbum/skins/BluPlusPlus/plugins/BPPStyleSheet.class
+JAlbum/skins/BluPlusPlus/plugins/BPPStyleSheet.java
+JAlbum/skins/BluPlusPlus/plugins/Base.class
+JAlbum/skins/BluPlusPlus/plugins/Base.java
+JAlbum/skins/BluPlusPlus/plugins/Common.class
+JAlbum/skins/BluPlusPlus/plugins/Common.java
+JAlbum/skins/BluPlusPlus/plugins/Compile.bat
+JAlbum/skins/BluPlusPlus/plugins/Constants.class
+JAlbum/skins/BluPlusPlus/plugins/Constants.java
+JAlbum/skins/BluPlusPlus/plugins/DynamicComboBoxModel.class
+JAlbum/skins/BluPlusPlus/plugins/DynamicComboBoxModel.java
+JAlbum/skins/BluPlusPlus/plugins/FramePreviewPanel.class
+JAlbum/skins/BluPlusPlus/plugins/FramePreviewPanel.java
+JAlbum/skins/BluPlusPlus/plugins/FrameTypeComboBox$1.class
+JAlbum/skins/BluPlusPlus/plugins/FrameTypeComboBox$FrameTypeComboBoxModel.class
+JAlbum/skins/BluPlusPlus/plugins/FrameTypeComboBox.class
+JAlbum/skins/BluPlusPlus/plugins/FrameTypeComboBox.java
+JAlbum/skins/BluPlusPlus/plugins/Index.class
+JAlbum/skins/BluPlusPlus/plugins/Index.java
+JAlbum/skins/BluPlusPlus/plugins/LanguageComboBox$1.class
+JAlbum/skins/BluPlusPlus/plugins/LanguageComboBox$LanguageComboBoxModel.class
+JAlbum/skins/BluPlusPlus/plugins/LanguageComboBox.class
+JAlbum/skins/BluPlusPlus/plugins/LanguageComboBox.java
+JAlbum/skins/BluPlusPlus/plugins/OriginalSlide.class
+JAlbum/skins/BluPlusPlus/plugins/OriginalSlide.java
+JAlbum/skins/BluPlusPlus/plugins/PhotographicMetaInformation.class
+JAlbum/skins/BluPlusPlus/plugins/PhotographicMetaInformation.java
+JAlbum/skins/BluPlusPlus/plugins/SkinAboutSection.class
+JAlbum/skins/BluPlusPlus/plugins/SkinAboutSection.java
+JAlbum/skins/BluPlusPlus/plugins/SkinAbstractSection.class
+JAlbum/skins/BluPlusPlus/plugins/SkinAbstractSection.java
+JAlbum/skins/BluPlusPlus/plugins/SkinAdvancedSection.class
+JAlbum/skins/BluPlusPlus/plugins/SkinAdvancedSection.java
+JAlbum/skins/BluPlusPlus/plugins/SkinFilterManagementSection.class
+JAlbum/skins/BluPlusPlus/plugins/SkinFilterManagementSection.java
+JAlbum/skins/BluPlusPlus/plugins/SkinFramesSection$EditAction.class
+JAlbum/skins/BluPlusPlus/plugins/SkinFramesSection$PreviewAction.class
+JAlbum/skins/BluPlusPlus/plugins/SkinFramesSection.class
+JAlbum/skins/BluPlusPlus/plugins/SkinFramesSection.java
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$1.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$10.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$11.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$12.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$13.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$14.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$15.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$16.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$17.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$18.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$19.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$2.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$20.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$3.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$4.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$5.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$6.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$7.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$8.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI$9.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGUI.java
+JAlbum/skins/BluPlusPlus/plugins/SkinGeneralSection.class
+JAlbum/skins/BluPlusPlus/plugins/SkinGeneralSection.java
+JAlbum/skins/BluPlusPlus/plugins/SkinIndexSection.class
+JAlbum/skins/BluPlusPlus/plugins/SkinIndexSection.java
+JAlbum/skins/BluPlusPlus/plugins/SkinPanel.class
+JAlbum/skins/BluPlusPlus/plugins/SkinPanel.java
+JAlbum/skins/BluPlusPlus/plugins/SkinRemarksSection.class
+JAlbum/skins/BluPlusPlus/plugins/SkinRemarksSection.java
+JAlbum/skins/BluPlusPlus/plugins/SkinSlideSection.class
+JAlbum/skins/BluPlusPlus/plugins/SkinSlideSection.java
+JAlbum/skins/BluPlusPlus/plugins/Slide.class
+JAlbum/skins/BluPlusPlus/plugins/Slide.java
 JAlbum/skins/BluPlusPlus/preview.jpg
 JAlbum/skins/BluPlusPlus/res/actions/black/download.gif
 JAlbum/skins/BluPlusPlus/res/actions/black/first.gif
@@ -290,164 +420,20 @@ JAlbum/skins/BluPlusPlus/res/actions/white/previous_disabled.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/sound.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/sound_small.gif
 JAlbum/skins/BluPlusPlus/res/actions/white/up.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_black/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_black/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_black/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_black/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_black/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_black/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_black/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_black/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_black/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_black/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_black/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_black/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_black/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_black/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_black/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_black/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_white/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_white/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_white/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_white/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_white/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_white/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_white/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_white/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_black/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_black/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_black/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_black/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_black/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_black/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_black/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_black/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_white/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_white/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_white/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_white/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_white/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_white/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_white/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_white/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_white/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_white/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_white/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_white/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_white/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_white/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_white/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/bracket_white/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/frame/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/frame/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/frame/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/frame/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/frame/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/frame/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/frame/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/frame/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/none/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/none/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/none/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/none/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/none/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/none/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/none/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/none/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_artsy/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_artsy/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_artsy/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_artsy/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_artsy/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_artsy/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_artsy/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_artsy/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_autumn/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_autumn/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_autumn/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_autumn/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_autumn/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_autumn/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_autumn/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_autumn/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_canvas/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_canvas/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_canvas/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_canvas/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_canvas/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_canvas/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_canvas/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_canvas/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_christmas/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_christmas/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_christmas/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_christmas/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_christmas/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_christmas/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_christmas/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_christmas/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_dark/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_dark/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_dark/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_dark/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_dark/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_dark/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_dark/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_dark/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_expedition/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_expedition/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_expedition/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_expedition/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_expedition/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_expedition/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_expedition/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_expedition/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_gray/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_gray/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_gray/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_gray/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_gray/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_gray/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_gray/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_gray/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_hakki/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_hakki/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_hakki/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_hakki/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_hakki/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_hakki/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_hakki/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/shadow_hakki/border_top_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/solid/border_bottom_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/solid/border_bottom_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/solid/border_bottom_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/solid/border_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/solid/border_right.gif
-JAlbum/skins/BluPlusPlus/res/borders/solid/border_top_left.gif
-JAlbum/skins/BluPlusPlus/res/borders/solid/border_top_middle.gif
-JAlbum/skins/BluPlusPlus/res/borders/solid/border_top_right.gif
 JAlbum/skins/BluPlusPlus/res/empty.gif
 JAlbum/skins/BluPlusPlus/res/favicon.ico
 JAlbum/skins/BluPlusPlus/res/folder.gif
 JAlbum/skins/BluPlusPlus/res/js/common.js
-JAlbum/skins/BluPlusPlus/res/js/help.js
 JAlbum/skins/BluPlusPlus/res/js/keyboard.js
 JAlbum/skins/BluPlusPlus/res/js/nav-index.js
 JAlbum/skins/BluPlusPlus/res/js/nav-slide.js
-JAlbum/skins/BluPlusPlus/res/js/photographic-meta-info.js
+JAlbum/skins/BluPlusPlus/res/js/remarks.js
 JAlbum/skins/BluPlusPlus/res/js/save-protection.js
 JAlbum/skins/BluPlusPlus/res/js/shadow.js
 JAlbum/skins/BluPlusPlus/res/js/slideshow.js
 JAlbum/skins/BluPlusPlus/res/js/statusbar.js
 JAlbum/skins/BluPlusPlus/res/movie.gif
+JAlbum/skins/BluPlusPlus/res/php/remarks.php
 JAlbum/skins/BluPlusPlus/res/styles/arcs.css
 JAlbum/skins/BluPlusPlus/res/styles/arcs/background.jpg
 JAlbum/skins/BluPlusPlus/res/styles/arcs/rule.gif
@@ -483,6 +469,10 @@ JAlbum/skins/BluPlusPlus/res/styles/gray.css
 JAlbum/skins/BluPlusPlus/res/styles/gray/theme.properties
 JAlbum/skins/BluPlusPlus/res/styles/hakki.css
 JAlbum/skins/BluPlusPlus/res/styles/hakki/theme.properties
+JAlbum/skins/BluPlusPlus/res/styles/scrapbook.css
+JAlbum/skins/BluPlusPlus/res/styles/scrapbook/background.gif
+JAlbum/skins/BluPlusPlus/res/styles/scrapbook/rule.gif
+JAlbum/skins/BluPlusPlus/res/styles/scrapbook/theme.properties
 JAlbum/skins/BluPlusPlus/res/styles/white.css
 JAlbum/skins/BluPlusPlus/res/styles/white/theme.properties
 JAlbum/skins/BluPlusPlus/res/topbars/black/classic.gif
@@ -523,6 +513,7 @@ JAlbum/skins/BluPlusPlus/styles/expedition.css
 JAlbum/skins/BluPlusPlus/styles/glacier.css
 JAlbum/skins/BluPlusPlus/styles/gray.css
 JAlbum/skins/BluPlusPlus/styles/hakki.css
+JAlbum/skins/BluPlusPlus/styles/scrapbook.css
 JAlbum/skins/BluPlusPlus/styles/white.css
 JAlbum/skins/BluPlusPlus/texts/photo-metadata.properties
 JAlbum/skins/BluPlusPlus/texts/photo-metadata_en.properties
@@ -536,6 +527,7 @@ JAlbum/skins/BluPlusPlus/texts/texts_es.properties
 JAlbum/skins/BluPlusPlus/texts/texts_fr.properties
 JAlbum/skins/BluPlusPlus/texts/texts_it.properties
 JAlbum/skins/BluPlusPlus/texts/texts_nl.properties
+JAlbum/skins/BluPlusPlus/texts/texts_no.properties
 JAlbum/skins/BluPlusPlus/texts/texts_pl.properties
 JAlbum/skins/BluPlusPlus/texts/texts_pl.properties_original
 JAlbum/skins/BluPlusPlus/texts/texts_pt.properties
@@ -922,17 +914,28 @@ JAlbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/slideshowstart.
 JAlbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/slideshowstop.gif
 JAlbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/up.gif
 JAlbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground/zoom.gif
+JAlbum/skins/ExhibitPlus/cameras.properties
 JAlbum/skins/ExhibitPlus/changelog.txt
+JAlbum/skins/ExhibitPlus/guestbook.inc
+JAlbum/skins/ExhibitPlus/guestbook/processXML.php
 JAlbum/skins/ExhibitPlus/hints.jap
+JAlbum/skins/ExhibitPlus/index.bsh
 JAlbum/skins/ExhibitPlus/index.htt
 JAlbum/skins/ExhibitPlus/init.bsh
+JAlbum/skins/ExhibitPlus/next_version.txt
 JAlbum/skins/ExhibitPlus/onload.bsh
 JAlbum/skins/ExhibitPlus/originalslide.htt
 JAlbum/skins/ExhibitPlus/originalslide2.htt
+JAlbum/skins/ExhibitPlus/plugins/Compile.bat
+JAlbum/skins/ExhibitPlus/plugins/Utils.class
+JAlbum/skins/ExhibitPlus/plugins/Utils.java
+JAlbum/skins/ExhibitPlus/promotion.properties
 JAlbum/skins/ExhibitPlus/res/basestyle.css
 JAlbum/skins/ExhibitPlus/res/download.gif
 JAlbum/skins/ExhibitPlus/res/folder.gif
+JAlbum/skins/ExhibitPlus/res/folder2.gif
 JAlbum/skins/ExhibitPlus/res/foldernew.gif
+JAlbum/skins/ExhibitPlus/res/guestbook.swf
 JAlbum/skins/ExhibitPlus/res/help.gif
 JAlbum/skins/ExhibitPlus/res/info.gif
 JAlbum/skins/ExhibitPlus/res/keyboard.js
@@ -943,7 +946,9 @@ JAlbum/skins/ExhibitPlus/res/navslideorig.js
 JAlbum/skins/ExhibitPlus/res/navslideorig2.js
 JAlbum/skins/ExhibitPlus/res/orderprints.gif
 JAlbum/skins/ExhibitPlus/res/purplestripe.gif
+JAlbum/skins/ExhibitPlus/res/warning_icon.gif
 JAlbum/skins/ExhibitPlus/shutterfly_xhtml.inc
+JAlbum/skins/ExhibitPlus/slide.bsh
 JAlbum/skins/ExhibitPlus/slide.htt
 JAlbum/skins/ExhibitPlus/styles/black.css
 JAlbum/skins/ExhibitPlus/styles/black.jpg
@@ -957,15 +962,21 @@ JAlbum/skins/ExhibitPlus/styles/light.css
 JAlbum/skins/ExhibitPlus/styles/light.jpg
 JAlbum/skins/ExhibitPlus/styles/metodi-black.css
 JAlbum/skins/ExhibitPlus/styles/metodi-black.jpg
-JAlbum/skins/ExhibitPlus/texts.properties
-JAlbum/skins/ExhibitPlus/texts_de.properties
-JAlbum/skins/ExhibitPlus/texts_en.properties
-JAlbum/skins/ExhibitPlus/texts_fr.properties
-JAlbum/skins/ExhibitPlus/texts_hu.properties
-JAlbum/skins/ExhibitPlus/texts_is.properties
-JAlbum/skins/ExhibitPlus/texts_nl.properties
-JAlbum/skins/ExhibitPlus/texts_sr.properties
-JAlbum/skins/ExhibitPlus/texts_sv.properties
+JAlbum/skins/ExhibitPlus/texts/texts.properties
+JAlbum/skins/ExhibitPlus/texts/texts_cs.properties
+JAlbum/skins/ExhibitPlus/texts/texts_de.properties
+JAlbum/skins/ExhibitPlus/texts/texts_en.properties
+JAlbum/skins/ExhibitPlus/texts/texts_es.properties
+JAlbum/skins/ExhibitPlus/texts/texts_fr.properties
+JAlbum/skins/ExhibitPlus/texts/texts_hu.properties
+JAlbum/skins/ExhibitPlus/texts/texts_is.properties
+JAlbum/skins/ExhibitPlus/texts/texts_it.properties
+JAlbum/skins/ExhibitPlus/texts/texts_ja.properties
+JAlbum/skins/ExhibitPlus/texts/texts_nl.properties
+JAlbum/skins/ExhibitPlus/texts/texts_pt.properties
+JAlbum/skins/ExhibitPlus/texts/texts_sr.properties
+JAlbum/skins/ExhibitPlus/texts/texts_sv.properties
+JAlbum/skins/ExhibitPlus/texts/xlat.pl
 JAlbum/skins/Experience/about.txt
 JAlbum/skins/Experience/hints.jap
 JAlbum/skins/Experience/index.htt
@@ -1073,24 +1084,6 @@ JAlbum/skins/Film/slide.htt
 JAlbum/skins/Film/styles/Gray.css
 JAlbum/skins/Film/styles/Night.css
 JAlbum/skins/Film/styles/Paper.css
-JAlbum/skins/Flowing/about.txt
-JAlbum/skins/Flowing/index.htt
-JAlbum/skins/Flowing/res/camera.gif
-JAlbum/skins/Flowing/res/folder.gif
-JAlbum/skins/Flowing/res/index.gif
-JAlbum/skins/Flowing/res/movie.gif
-JAlbum/skins/Flowing/res/next.gif
-JAlbum/skins/Flowing/res/next_disabled.gif
-JAlbum/skins/Flowing/res/previous.gif
-JAlbum/skins/Flowing/res/previous_disabled.gif
-JAlbum/skins/Flowing/res/up.gif
-JAlbum/skins/Flowing/slide.htt
-JAlbum/skins/Flowing/styles/3D.css
-JAlbum/skins/Flowing/styles/Black.css
-JAlbum/skins/Flowing/styles/Blue.css
-JAlbum/skins/Flowing/styles/Khaki.css
-JAlbum/skins/Flowing/styles/Plain.css
-JAlbum/skins/Flowing/styles/White.css
 JAlbum/skins/Horizontal/about.txt
 JAlbum/skins/Horizontal/frameset.htt
 JAlbum/skins/Horizontal/hints.jap
@@ -1214,6 +1207,7 @@ JAlbum/skins/Polaroid/styles/Leather.css
 JAlbum/skins/Polaroid/styles/Paper.css
 JAlbum/skins/Polaroid/styles/Romance.css
 JAlbum/skins/Polaroid/styles/Sky.css
+JAlbum/skins/ShowOff/Kopia av hints.jap
 JAlbum/skins/ShowOff/about.txt
 JAlbum/skins/ShowOff/hints.jap
 JAlbum/skins/ShowOff/index.htt
@@ -1234,6 +1228,31 @@ JAlbum/skins/ShowOff/slide.htt
 JAlbum/skins/ShowOff/styles/Custom.css
 JAlbum/skins/ShowOff/styles/Dark.css
 JAlbum/skins/ShowOff/styles/Sunset.css
+JAlbum/skins/Simple/bottom.htt
+JAlbum/skins/Simple/frameset.htt
+JAlbum/skins/Simple/hints.jap
+JAlbum/skins/Simple/index.htt
+JAlbum/skins/Simple/init.bsh
+JAlbum/skins/Simple/onload.bsh
+JAlbum/skins/Simple/res/au.gif
+JAlbum/skins/Simple/res/b_pil.gif
+JAlbum/skins/Simple/res/f_pil.gif
+JAlbum/skins/Simple/res/folder.gif
+JAlbum/skins/Simple/res/la.gif
+JAlbum/skins/Simple/res/movie.gif
+JAlbum/skins/Simple/res/ra.gif
+JAlbum/skins/Simple/res/sb_pil.gif
+JAlbum/skins/Simple/res/sf_pil.gif
+JAlbum/skins/Simple/res/t.gif
+JAlbum/skins/Simple/slide.htt
+JAlbum/skins/Simple/styles/black.css
+JAlbum/skins/Simple/styles/black.jpg
+JAlbum/skins/Simple/styles/white.css
+JAlbum/skins/Simple/styles/white.jpg
+JAlbum/skins/Simple/texts/texts.properties
+JAlbum/skins/Simple/texts/texts_sk.properties
+JAlbum/skins/Simple/texts/texts_sv.properties
+JAlbum/skins/Simple/top.htt
 JAlbum/skins/Slide show/index.htt
 JAlbum/skins/Slide show/onload.bsh
 JAlbum/skins/Slide show/res/camera.gif
@@ -1322,6 +1341,7 @@ JAlbum/skins/Wedding/styles/white.css
 JAlbum/skins/Wedding/styles/white.jpg
 JAlbum/skins/Wedding/styles/white/background.jpg
 JAlbum/skins/Wedding/texts/texts.properties
+JAlbum/skins/Wedding/texts/texts_sk.properties
 JAlbum/skins/Wedding/texts/texts_sv.properties
 JAlbum/skins/Whitey/index.htt
 JAlbum/skins/Whitey/res/camera.gif
@@ -1399,13 +1419,16 @@ JAlbum/texts/texts_fr.properties
 JAlbum/texts/texts_hu.properties
 JAlbum/texts/texts_it.properties
 JAlbum/texts/texts_ja.properties
+JAlbum/texts/texts_ko.properties
 JAlbum/texts/texts_nl.properties
+JAlbum/texts/texts_no.properties
 JAlbum/texts/texts_pl.properties
 JAlbum/texts/texts_pt.properties
 JAlbum/texts/texts_ru.properties
 JAlbum/texts/texts_sk.properties
 JAlbum/texts/texts_sv.properties
 JAlbum/texts/texts_th.properties
+JAlbum/texts/texts_uk.properties
 JAlbum/tools/Adjust image orientation.bsh
 JAlbum/tools/Calculate album size.bsh
 JAlbum/tools/Clear user defined variables.bsh
@@ -1418,38 +1441,20 @@ JAlbum/tools/Sample tool.bsh
 bin/jalbum
 @dirrm JAlbum/res
 @dirrm JAlbum/includes
-@dirrm JAlbum/skins/Bluepro/res
-@dirrm JAlbum/skins/Bluepro/styles
-@dirrm JAlbum/skins/Bluepro
 @dirrm JAlbum/skins/BluPlusPlus/bsh
 @dirrm JAlbum/skins/BluPlusPlus/docs
+@dirrm JAlbum/skins/BluPlusPlus/frames/images
+@dirrm JAlbum/skins/BluPlusPlus/frames
 @dirrm JAlbum/skins/BluPlusPlus/includes
+@dirrm JAlbum/skins/BluPlusPlus/plugins
 @dirrm JAlbum/skins/BluPlusPlus/res/actions/black
 @dirrm JAlbum/skins/BluPlusPlus/res/actions/bright-matte
 @dirrm JAlbum/skins/BluPlusPlus/res/actions/dark-matte
 @dirrm JAlbum/skins/BluPlusPlus/res/actions/universal
 @dirrm JAlbum/skins/BluPlusPlus/res/actions/white
 @dirrm JAlbum/skins/BluPlusPlus/res/actions
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/bracket_black
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_black
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/bracket_horizontal_white
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_black
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/bracket_vertical_white
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/bracket_white
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/frame
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/none
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/shadow
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/shadow_artsy
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/shadow_autumn
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/shadow_canvas
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/shadow_christmas
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/shadow_dark
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/shadow_expedition
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/shadow_gray
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/shadow_hakki
-@dirrm JAlbum/skins/BluPlusPlus/res/borders/solid
-@dirrm JAlbum/skins/BluPlusPlus/res/borders
 @dirrm JAlbum/skins/BluPlusPlus/res/js
+@dirrm JAlbum/skins/BluPlusPlus/res/php
 @dirrm JAlbum/skins/BluPlusPlus/res/styles/arcs
 @dirrm JAlbum/skins/BluPlusPlus/res/styles/artsy
 @dirrm JAlbum/skins/BluPlusPlus/res/styles/autumn
@@ -1460,9 +1465,10 @@ bin/jalbum
 @dirrm JAlbum/skins/BluPlusPlus/res/styles/canvas
 @dirrm JAlbum/skins/BluPlusPlus/res/styles/christmas
 @dirrm JAlbum/skins/BluPlusPlus/res/styles/expedition
-@dirrm JAlbum/skins/BluPlusPlus/res/styles/white
 @dirrm JAlbum/skins/BluPlusPlus/res/styles/glacier
 @dirrm JAlbum/skins/BluPlusPlus/res/styles/gray
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/white
+@dirrm JAlbum/skins/BluPlusPlus/res/styles/scrapbook
 @dirrm JAlbum/skins/BluPlusPlus/res/styles
 @dirrm JAlbum/skins/BluPlusPlus/res/topbars/black
 @dirrm JAlbum/skins/BluPlusPlus/res/topbars/blue
@@ -1479,6 +1485,9 @@ bin/jalbum
 @dirrm JAlbum/skins/BluPlusPlus/styles
 @dirrm JAlbum/skins/BluPlusPlus/texts
 @dirrm JAlbum/skins/BluPlusPlus
+@dirrm JAlbum/skins/Bluepro/res
+@dirrm JAlbum/skins/Bluepro/styles
+@dirrm JAlbum/skins/Bluepro
 @dirrm JAlbum/skins/Camera Geek/res
 @dirrm JAlbum/skins/Camera Geek/styles
 @dirrm JAlbum/skins/Camera Geek
@@ -1502,9 +1511,12 @@ bin/jalbum
 @dirrm JAlbum/skins/ExhibitPlus/button-sets/silver-32px-darkbackground
 @dirrm JAlbum/skins/ExhibitPlus/button-sets/silver-32px-lightbackground
 @dirrm JAlbum/skins/ExhibitPlus/button-sets
+@dirrm JAlbum/skins/ExhibitPlus/guestbook
+@dirrm JAlbum/skins/ExhibitPlus/plugins
 @dirrm JAlbum/skins/ExhibitPlus/Optional files to be copied to image source directory
 @dirrm JAlbum/skins/ExhibitPlus/res
 @dirrm JAlbum/skins/ExhibitPlus/styles
+@dirrm JAlbum/skins/ExhibitPlus/texts
 @dirrm JAlbum/skins/ExhibitPlus
 @dirrm JAlbum/skins/Experience/res
 @dirrm JAlbum/skins/Experience/styles
@@ -1519,9 +1531,6 @@ bin/jalbum
 @dirrm JAlbum/skins/Film/res
 @dirrm JAlbum/skins/Film/styles
 @dirrm JAlbum/skins/Film
-@dirrm JAlbum/skins/Flowing/res
-@dirrm JAlbum/skins/Flowing/styles
-@dirrm JAlbum/skins/Flowing
 @dirrm JAlbum/skins/Horizontal/res
 @dirrm JAlbum/skins/Horizontal/styles
 @dirrm JAlbum/skins/Horizontal
@@ -1545,6 +1554,10 @@ bin/jalbum
 @dirrm JAlbum/skins/ShowOff/res
 @dirrm JAlbum/skins/ShowOff/styles
 @dirrm JAlbum/skins/ShowOff
+@dirrm JAlbum/skins/Simple/res
+@dirrm JAlbum/skins/Simple/styles
+@dirrm JAlbum/skins/Simple/texts
+@dirrm JAlbum/skins/Simple
 @dirrm JAlbum/skins/Slide show/res
 @dirrm JAlbum/skins/Slide show/styles
 @dirrm JAlbum/skins/Slide show
