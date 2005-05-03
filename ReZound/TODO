@@ -1,0 +1,2 @@
+· The sound does not reproduce correctly. Sounds like under buffered.
+· /dev/dsp was hardcoded in the source, it was replaced by /dev/sound.

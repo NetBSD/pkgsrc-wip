@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/03 17:13:50 cetrox Exp $
+
+SHA1 (rezound-0.11.1beta.tar.gz) = ce4cf6e55d55c9f094accc6e7b9038ddc69f77ad
+RMD160 (rezound-0.11.1beta.tar.gz) = 76e0d42c8d919d8dea84d7b90099cdc241d782ce
+Size (rezound-0.11.1beta.tar.gz) = 1487896 bytes
+SHA1 (patch-aa) = e0e3d55dfdb5f88426498d9377e3cb88b601ef82
+SHA1 (patch-ab) = e2475a2f3c6c483ab473642c32b8624994b7b93c
+SHA1 (patch-ac) = 9137e091913590421745f7f6916a757394498cb3
+SHA1 (patch-ad) = 6959f0c87eda19e73db4a249eeae6c4d59229736
+SHA1 (patch-ae) = 72cf7d48016cdfb0f743860adfee91a9f82a81d6

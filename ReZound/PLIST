@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/03 17:13:50 cetrox Exp $
+bin/rezound
+share/doc/rezound/AUTHORS
+share/doc/rezound/COPYING
+share/doc/rezound/Features.txt
+share/doc/rezound/FrontendFoxFeatures.txt
+share/doc/rezound/NEWS
+share/doc/rezound/README
+share/rezound/icon_logo_32.gif
+share/rezound/impulse_hall1.wav
+share/rezound/menu.dat
+share/rezound/presets.dat
+@dirrm share/rezound
+@dirrm share/doc/rezound
