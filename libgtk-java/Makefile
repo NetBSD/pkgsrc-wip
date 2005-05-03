@@ -1,0 +1,19 @@
+# $NetBSD: Makefile,v 1.1.1.1 2005/05/03 16:53:43 poppnk Exp $
+#
+
+DISTNAME=		libgtk-java-2.6.2
+CATEGORIES=		wip x11
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtk-java/2.6/}
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		pancake@phreaker.net
+HOMEPAGE=		http://java-gnome.sourceforge.net/
+COMMENT=		Gtk2 bindings for Java
+
+GNU_CONFIGURE=		yes
+USE_GNU_TOOLS+=		make
+CONFIGURE_ARGS+=	--without-gcj-compile
+
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../wip/mk/java-app.mk"
+.include "../../mk/bsd.pkg.mk"
