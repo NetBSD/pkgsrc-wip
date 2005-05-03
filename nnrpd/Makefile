@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/25 09:57:47 hfath Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/03 14:52:39 hfath Exp $
 
 DISTNAME=		inn-1.7.2.insync-1.1d
 PKGNAME=		nnrpd-1.7.2
@@ -50,6 +50,7 @@ FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/-e s!@/}
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
+RCD_SCRIPTS=		actived.sh
 
 BUILD_DEFS+=		INN_DATA_DIR
 
@@ -88,7 +89,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/nnrpd.8  ${PREFIX}/man/man8/
 
 post-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/actived.sh ${PREFIX}/etc/rc.d/actived
 	PKG_PREFIX=${PREFIX} ${SH} ${WRKDIR}/INSTALL ${PKGNAME} POST-INSTALL
 
 .include "../../wip/c-news/buildlink3.mk"
