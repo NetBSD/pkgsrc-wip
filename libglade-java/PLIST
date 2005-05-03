@@ -1,0 +1,63 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/03 16:51:18 poppnk Exp $
+lib/libgladejni.la
+lib/pkgconfig/glade-java.pc
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/api/allclasses-frame.html
+share/doc/${PKGNAME}/api/allclasses-noframe.html
+share/doc/${PKGNAME}/api/constant-values.html
+share/doc/${PKGNAME}/api/deprecated-list.html
+share/doc/${PKGNAME}/api/help-doc.html
+share/doc/${PKGNAME}/api/index-all.html
+share/doc/${PKGNAME}/api/index.html
+share/doc/${PKGNAME}/api/org/gnu/glade/CellEditableDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/CheckMenuItemDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/ColorButtonDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/ComboBoxDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/ExpanderDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/ExposeDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/FontButtonDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/GenerateStubs.html
+share/doc/${PKGNAME}/api/org/gnu/glade/GladeXMLException.html
+share/doc/${PKGNAME}/api/org/gnu/glade/ItemDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/LibGlade.html
+share/doc/${PKGNAME}/api/org/gnu/glade/LibGladeStubs.html
+share/doc/${PKGNAME}/api/org/gnu/glade/MouseMotionDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/OptionMenuDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/ToolBarDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/ToolButtonDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/TreeModelDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/TreeViewDelegate.html
+share/doc/${PKGNAME}/api/org/gnu/glade/package-frame.html
+share/doc/${PKGNAME}/api/org/gnu/glade/package-summary.html
+share/doc/${PKGNAME}/api/org/gnu/glade/package-tree.html
+share/doc/${PKGNAME}/api/overview-tree.html
+share/doc/${PKGNAME}/api/packages.html
+share/doc/${PKGNAME}/api/serialized-form.html
+share/doc/${PKGNAME}/examples/glade/Example1.java
+share/doc/${PKGNAME}/examples/glade/LibGladeTest.java
+share/doc/${PKGNAME}/examples/glade/Test.java
+share/doc/${PKGNAME}/examples/glade/custom.glade
+share/doc/${PKGNAME}/examples/glade/example1.glade
+share/doc/${PKGNAME}/examples/glade/gtk.glade
+share/doc/${PKGNAME}/examples/glade/simple.glade
+share/doc/${PKGNAME}/examples/glade/test.glade
+share/doc/${PKGNAME}/examples/overholt/Simple.java
+share/doc/${PKGNAME}/examples/overholt/simple.glade
+share/java/glade2.10-${PKGVERSION}.jar
+share/java/glade2.10.jar
+@dirrm share/java
+@dirrm share/doc/${PKGNAME}/examples/overholt
+@exec ${MKDIR} %D/share/doc/${PKGNAME}/examples/glade-gnome
+@dirrm share/doc/${PKGNAME}/examples/glade-gnome
+@dirrm share/doc/${PKGNAME}/examples/glade
+@dirrm share/doc/${PKGNAME}/examples
+@exec ${MKDIR} %D/share/doc/${PKGNAME}/api/resources
+@dirrm share/doc/${PKGNAME}/api/resources
+@dirrm share/doc/${PKGNAME}/api/org/gnu/glade
+@dirrm share/doc/${PKGNAME}/api/org/gnu
+@dirrm share/doc/${PKGNAME}/api/org
+@dirrm share/doc/${PKGNAME}/api
+@dirrm share/doc/${PKGNAME}

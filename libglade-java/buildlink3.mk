@@ -1,0 +1,18 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/05/03 16:51:18 poppnk Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+LIBGLADE_JAVA_BUILDLINK3_MK:=	${LIBGLADE_JAVA_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	libglade-java
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibglade-java}
+BUILDLINK_PACKAGES+=	libglade-java
+
+.if !empty(LIBGLADE_JAVA_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.libglade-java+=	libglade-java>=2.10.1
+BUILDLINK_PKGSRCDIR.libglade-java?=	../../wip/libglade-java
+.endif	# LIBGLADE_JAVA_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
