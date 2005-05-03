@@ -15,10 +15,16 @@
 #  better documentation
 #  add jar dependencies with bl3
 #  check JAVA_APP_CLASSPATH when no JAVA_APP_MAIN defined.
-#  80 cols width
+
+.include "../../mk/java-vm.mk"
 
 .if !defined(JAVA_APP_MK)
 JAVA_APP_MK=		# defined
+
+MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
+CONFIGURE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
+MAKE_ENV+=	CLASSPATH=${PKG_JAVA_HOME}/jre/lib/rt.jar:${CLASSPATH}:.
+CONFIGURE_ENV+=	CLASSPATH=${PKG_JAVA_HOME}/jre/lib/rt.jar:${CLASSPATH}:.
 
 JAR_MAIN_PREFIX?=	share/classpath
 JAR_PREFIX?=		${LOCALBASE}/${JAR_MAIN_PREFIX}
@@ -46,7 +52,8 @@ build-java-app-${s}:
 	${MKDIR} ${JAVA_APP_WRKDIR}
 	@${ECHO} "#!/bin/sh" > ${JAVA_APP_WRKDIR}/${JAVA_APP_BIN.${s}}
 .if defined(JAVA_APP_MAIN.${s})
-	@${ECHO} "env CLASSPATH=${JAVA_APP_CLASSPATH.${s}} java ${JAVA_APP_MAIN.${s}} \$$*" \
+	@${ECHO} "env CLASSPATH=${JAVA_APP_CLASSPATH.${s}} \
+	java ${JAVA_APP_MAIN.${s}} \$$*" \
 	>> ${JAVA_APP_WRKDIR}/${JAVA_APP_BIN.${s}}
 .else
 	@${ECHO} "java -jar ${JAVA_APP_CLASSPATH} \$$*" \
@@ -54,11 +61,13 @@ build-java-app-${s}:
 .endif
 
 install-java-app-${s}:
-	${INSTALL_SCRIPT} ${JAVA_APP_WRKDIR}/${JAVA_APP_BIN.${s}} ${JAVA_APP_PATH}
+	${INSTALL_SCRIPT} ${JAVA_APP_WRKDIR}/${JAVA_APP_BIN.${s}} \
+		${JAVA_APP_PATH}
 
 .endfor
 .undef s
 
+.if defined(JAVA_APP_TARGETS)
 .PHONY:		install-required-dirs
 pre-install:	install-required-dirs
 
@@ -69,5 +78,7 @@ install-required-dirs:
 .if !exists(${JAR_PREFIX})
 	${INSTALL_DATA_DIR} ${JAR_PREFIX}
 .endif
+
+.endif # defined JAVA_APP_TARGETS
 
 .endif # JAVA_APP_MK
