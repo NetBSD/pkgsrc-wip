@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/13 04:36:07 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/04 01:06:06 jeremy-c-reed Exp $
 #
 
 DISTNAME=		MenuMaker-0.17
@@ -6,8 +6,8 @@ CATEGORIES=		wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=menumaker/}
 
 MAINTAINER=		low@ameba6.com
-HOMEPAGE=		http://belnet.dl.sourceforge.net/sourceforge/menumaker/
-COMMENT=		MenuMaker is written in Python and generates menu for XWindow managers
+HOMEPAGE=		http://menumaker.sourceforge.net/
+COMMENT=		Generates menus for X Window managers by scanning for installed programs
 
 PYDISTUTILSPKG=		yes
 PYBINMODULE=    	yes
