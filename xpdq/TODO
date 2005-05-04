@@ -1,4 +1,6 @@
-give patch-aa to developers
+give patch-aa and part of patch-ab to developers
 ask developers about gtk2 (and using pkgconfig instead of gtk-config)
 
 need to test
+
+and also use PAPERSIZE variable

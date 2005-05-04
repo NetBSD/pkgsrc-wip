@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/01/04 07:19:19 jeremy-c-reed Exp $
+$NetBSD: patch-ab,v 1.2 2005/05/04 01:13:27 jeremy-c-reed Exp $
 
---- doc/Makefile.in.orig	Fri Mar 31 12:36:32 2000
+--- doc/Makefile.in.orig	2000-03-31 12:36:32.000000000 -0800
 +++ doc/Makefile.in
+@@ -35,7 +35,7 @@ INSTALL = @INSTALL@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ bindir = $(exec_prefix)/bin
+-mandir = $(exec_prefix)/man
++mandir = @mandir@
+ libdir = $(prefix)/lib
+ infodir = $(prefix)/info
+ 
 @@ -62,7 +62,6 @@ install: all
  	$(top_srcdir)/mkinstalldirs $(mandir)/man1
  	$(top_srcdir)/mkinstalldirs $(mandir)/man5
