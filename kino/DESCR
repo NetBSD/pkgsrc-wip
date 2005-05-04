@@ -9,4 +9,4 @@ of video/audio, and save it to a playlist.  This program uses many
 keyboard commands for fast navigating and editing inside the movie.
 Kino can load playlists and save the composite playlist as a new DV
 AVI file.  Kino can save a single frame of video (a still) in numerous
-file formats.
+file formats. Currently only support OSS audio.

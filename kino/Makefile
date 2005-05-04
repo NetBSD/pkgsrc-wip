@@ -1,17 +1,26 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:36 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/04 00:52:37 jeremy-c-reed Exp $
 #
 
-DISTNAME=		kino-0.7.1
+# XXX You must update MASTER_SITES download number when updating
+# XXX or you will download old file with new filename.
+DISTNAME=		kino-0.7.5
 CATEGORIES=		multimedia
-MASTER_SITES=		http://kino.schirmacher.de/filemanager/download/31/
+MASTER_SITES=		http://kino.schirmacher.de/filemanager/download/42/
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://kino.schirmacher.de/
 COMMENT=		Non-linear editor for Digital Video data
 
-USE_X11=		yes
+USE_DIRS+=		xdg-1.1
+USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
 GNU_CONFIGURE=		yes
+
+# maybe need to do CONF_DIRS for this? Is this important?
+CONFIGURE_ARGS+=	--with-hotplug-script-dir=${PREFIX}/share/examples/kino/hotplug/usb
+# or should the following be used to not use default PREFIX/lib/hotplug/kino ?
+#CONFIGURE_ARGS+=	--with-hotplug-usermap-dir=${PREFIX}/libdata/hotplug/kino
 
 # Use FFMPEG libavcodec for DV video decoding instead of libdv.  
 # XXX maybe should be an option
@@ -23,13 +32,14 @@ GNU_CONFIGURE=		yes
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-# maybe configure should not use old glib?
+## maybe configure should not use old glib?
+# objdump of kino shows NEEDED of both libglib-2.0.so.0 and libglib.so.13
 .include "../../devel/glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
+#.include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
