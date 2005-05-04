@@ -1,0 +1,8 @@
+complete. My understanding of Makefile/pkglint may not be up to snuff so some
+warnings may need to be fixed.
+
+I glommed the dependency out of the CPAN require/use clauses in the installed
+.pm, since the CPAN for Digest::MD5 was already installed and so it wasn't
+an 'unsatisfied' dependency before I began.
+
+-George

@@ -1,0 +1,18 @@
+This is Crypt::PasswdMD5, an MD5 Password support package.
+
+From the perldoc:
+
+Crypt::PasswdMD5 - Provides interoperable MD5-based crypt() functions
+
+SYNOPSIS
+           use Crypt::PasswdMD5;
+
+           $cryptedpassword = unix_md5_crypt($password, $salt);
+           $apachepassword = apache_md5_crypt($password, $salt);
+
+DESCRIPTION
+
+       the "unix_md5_crypt()" provides a crypt()-compatible interface to the
+       rather new MD5-based crypt() function found in modern operating sys-
+       tems.  It's based on the implementation found on FreeBSD
+       2.2.[56]-RELEASE and contains the following license in it:
