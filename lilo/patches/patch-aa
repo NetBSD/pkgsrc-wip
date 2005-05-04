@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/10/01 02:35:00 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.2 2005/05/04 01:00:00 jeremy-c-reed Exp $
 
---- Makefile.or	Fri Nov  1 18:25:33 2002
-+++ Makefile	Fri Nov  1 18:27:05 2002
-@@ -70,9 +70,8 @@
+--- Makefile.orig	2004-04-08 16:36:15.000000000 -0700
++++ Makefile
+@@ -65,9 +65,8 @@ OPT=-O2
  SBIN_DIR=/sbin
  CFG_DIR=/etc
  BOOT_DIR=/boot
 -USRSBIN_DIR=/usr/sbin
--MAN_DIR=`if [ -f /usr/man/manpath ]; then \
+-MAN_DIR=`if [ -f /usr/bin/manpath ]; then \
 -  manpath | sed "s/:.*//"; else echo /usr/man; fi`
 +USRSBIN_DIR=/sbin
-+MAN_DIR=/man
- BUILTIN=`./lilo -X | grep CFLAGS | grep LCF_BUILTIN | wc -l | sed "s/ //g"`
++MAN_DIR=/${PKGMANDIR}
+ BUILTIN=1
  
- PCONFIG=`( if [ -r $$ROOT/etc/lilo.defines ]; then \
+ PCONFIG=$(LILO) `( if [ -r $$ROOT/etc/lilo.defines ]; then \

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:23:39 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/04 01:00:00 jeremy-c-reed Exp $
 
-DISTNAME=		lilo-22.5
-PKGREVISION=		1
+DISTNAME=		lilo-22.5.9
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/boot/lilo/}
 
@@ -13,7 +12,9 @@ COMMENT=		Generic boot loader for Linux
 # Build untested on other operating systems.
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-USE_PERL5=		YES
+# Don't force perl for extra tool -- maybe a MESSAGE?
+#USE_PERL5=		YES
+
 # bin86 builds under Linux but not NetBSD, and
 # bcc builds under NetBSD, but not Linux -- both need to be fixed
 #BUILD_DEPENDS+=		bcc>=95.3.12:../../devel/bcc
@@ -23,6 +24,8 @@ BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 USE_GNU_TOOLS+=		make
 MAKE_ENV+=		ROOT=${PREFIX}
 MAKE_ENV+=		SYSCONFDIR=${PKG_SYSCONFDIR}
+PKGMANDIR?=		man
+MAKE_ENV+=		PKGMANDIR+=${PKGMANDIR}
 
 MAKE_COMMAND=		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
@@ -50,20 +53,13 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lilo ${PREFIX}/sbin/lilo
 	${INSTALL_SCRIPT} ${WRKSRC}/mkrescue ${PREFIX}/sbin/mkrescue
 	${INSTALL_SCRIPT} ${WRKSRC}/keytab-lilo.pl ${PREFIX}/sbin/keytab-lilo
-	${INSTALL_MAN} ${WRKSRC}/manPages/lilo.8 ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/manPages/lilo.conf.5 ${PREFIX}/man/man5
-	${INSTALL_MAN} ${WRKSRC}/manPages/mkrescue.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/manPages/lilo.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/manPages/lilo.conf.5 ${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKSRC}/manPages/mkrescue.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/lilo
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/lilo
 	${INSTALL_DATA_DIR} ${PREFIX}/share/lilo
 	${INSTALL_DATA} ${WRKSRC}/sample/lilo.sample.conf ${PREFIX}/share/lilo
 	${INSTALL_DATA} ${FILESDIR}/lilo.conf.example ${PREFIX}/share/lilo
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/boot
-	${INSTALL_DATA} ${WRKSRC}/boot-text.b ${PREFIX}/boot
-	${INSTALL_DATA} ${WRKSRC}/boot-menu.b ${PREFIX}/boot
-	${INSTALL_DATA} ${WRKSRC}/boot-bmp.b ${PREFIX}/boot
-	${INSTALL_DATA} ${WRKSRC}/chain.b ${PREFIX}/boot
-	${INSTALL_DATA} ${WRKSRC}/mbr.b ${PREFIX}/boot
-	${LN} -sf boot-menu.b ${PREFIX}/boot/boot.b
 
 .include "../../mk/bsd.pkg.mk"

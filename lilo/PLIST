@@ -1,13 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/01 02:35:00 jeremy-c-reed Exp $
-boot/boot-bmp.b
-boot/boot-menu.b
-boot/boot-text.b
-boot/boot.b
-boot/chain.b
-boot/mbr.b
-man/man5/lilo.conf.5
-man/man8/lilo.8
-man/man8/mkrescue.8
+@comment $NetBSD: PLIST,v 1.2 2005/05/04 01:00:00 jeremy-c-reed Exp $
+man5/lilo.conf.5
+man8/lilo.8
+man8/mkrescue.8
 sbin/keytab-lilo
 sbin/lilo
 sbin/mkrescue
@@ -16,4 +10,3 @@ share/lilo/lilo.conf.example
 share/lilo/lilo.sample.conf
 @dirrm share/lilo
 @dirrm share/doc/lilo
-@dirrm boot
