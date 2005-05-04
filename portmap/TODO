@@ -1,4 +1,11 @@
-What package should provide rpcinfo tool?
+does the rc.d script really need the pid file part?
+ does not appear to exist
+
+also rc.d scripts depends on named and ppp -- is this okay?
+
+should I look at fixes in portmap_5beta ??
+
+What package should provide rpcinfo tool? (It is in glibc package.)
 maybe for DESCR: (The rpcinfo command included in the **** package can
 tell you what RPC services your system offers.)
 
@@ -8,3 +15,8 @@ look at man page include with NetBSD
 test under NetBSD and other operating systems
 
 figure out pidfile and location (for rc.d script)
+
+don't hardcode /usr/lib in patch-aa
++WRAP_DIR= /usr/lib
+
+this was running as UID 1 (not existent in passwd file)

@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/05/07 21:36:27 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.2 2005/05/04 01:17:05 jeremy-c-reed Exp $
 
---- Makefile.orig	2003-03-19 23:40:29.000000000 -0800
-+++ Makefile	2003-03-19 23:42:37.000000000 -0800
+--- Makefile.orig	1996-05-31 06:50:40.000000000 -0700
++++ Makefile
 @@ -8,7 +8,7 @@
  # if you disagree. See `man 3 syslog' for examples. Some syslog versions
  # do not provide this flexibility.
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/05/07 21:36:27 jeremy-c-reed Exp $
  
  # To disable host access control, comment out the following macro definition.
  # Note: host access control requires the strtok() and strchr() routines.
-@@ -36,7 +36,7 @@
+@@ -36,7 +36,7 @@ CHECK_PORT = -DCHECK_PORT
  # With verbose logging on, HP-UX 9.x and AIX 4.1 leave zombies behind when
  # SIGCHLD is not ignored. Enable next macro for a fix.
  #
@@ -20,13 +20,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/05/07 21:36:27 jeremy-c-reed Exp $
  
  # Uncomment the following macro if your system does not have u_long.
  #
-@@ -46,11 +46,12 @@
+@@ -46,11 +46,11 @@ CHECK_PORT = -DCHECK_PORT
  # libwrap.a object library. WRAP_DIR should specify the directory with
  # that library.
  
 -WRAP_DIR= ../tcp_wrappers
 +#WRAP_DIR= ../tcp_wrappers
-+WRAP_DIR= /usr/lib
  
  # Auxiliary object files that may be missing from your C library.
  #
