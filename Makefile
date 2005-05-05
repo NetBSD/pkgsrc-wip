@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1772 2005/05/05 20:09:16 xtraeme Exp $
-# $NetBSD: Makefile,v 1.1772 2005/05/05 20:09:16 xtraeme Exp $
+# $Id: Makefile,v 1.1773 2005/05/05 20:20:38 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1773 2005/05/05 20:20:38 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -649,7 +649,6 @@ SUBDIR+=	p5-Text-Glob
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-UNIVERSAL-exports
 SUBDIR+=	palm-db-tools
-SUBDIR+=	pam-mysql
 SUBDIR+=	pam-pop3
 SUBDIR+=	panoramixext
 SUBDIR+=	pasmo
