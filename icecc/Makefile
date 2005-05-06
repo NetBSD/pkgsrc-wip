@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:13:09 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/06 20:47:43 plunky Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
@@ -26,7 +26,6 @@ COMMENT=		IceWM Control Centre
 DEPENDS+=		vim-{gtk,gtk2,kde,motif,xaw}>=6.3.0:../../editors/vim-xaw
 
 USE_GNU_TOOLS+=		make
-USE_LIBTOOL=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,6 +33,8 @@ WRKSRC=			${WRKDIR}
 
 QSRC=			icecc-2.9 icebgset-1.3 iceked-1.5 icemc-2.1
 QSRC+=			icesndcfg-1.3 icets-1.4 icewoed-1.8
+
+BUILD_DIRS=		${QSRC:S/^/${WRKSRC}\//}
 
 PYTHON_PATCH_SCRIPTS=	icecursorscfg-0.6/icecurcfg.py iceiconcvt-1.0/iceiconcvt.py
 PYTHON_PATCH_SCRIPTS+=	icemergeprefs-0.5/icemergeprefs.py icerrun-0.5/icerrrun.py
@@ -49,9 +50,7 @@ SUBST_FILES.path+=	icemergeprefs-0.5/icemergeprefs.py
 SUBST_SED.path=		"s|/usr/local|${PREFIX}|g"
 SUBST_MESSAGE.path=	"Fixing hardcoded paths."
 
-BUILD_DIRS=		${QSRC:S/^/${WRKSRC}\//}
-
-# This should really come from "../../editors/vim-share" automagically
+# Would like to get this directly out of the vim package eventually..
 VIM_SUBDIR?=		vim63
 PLIST_SUBST+=		VIM_SUBDIR=${VIM_SUBDIR}
 
