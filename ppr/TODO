@@ -1,4 +1,4 @@
-# $NetBSD: TODO,v 1.1 2005/05/06 08:58:00 hfath Exp $
+# $NetBSD: TODO,v 1.2 2005/05/06 09:01:34 hfath Exp $
 #
 # PPR is a print spooler for PostScript printers
 
@@ -45,3 +45,5 @@ out of the way.
 target. Find it and root it out.
 
 (12) Keep PPR from adding to /etc/services.
+
+(13) - Sic! - Yes, I should have 'cvs import'ed the package. Sorry.
