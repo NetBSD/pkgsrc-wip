@@ -1,0 +1,724 @@
+@comment $NetBSD: PLIST,v 1.1 2005/05/06 08:58:00 hfath Exp $
+bin/ppr-config
+bin/ppr-followme
+bin/ppr-index
+bin/ppr-panel
+bin/ppr-passwd
+bin/ppr-popup
+bin/ppr-testpage
+bin/ppr-web
+bin/ppr-xgrant
+libexec/ppr/bin/lprsrv-test
+libexec/ppr/bin/papd
+libexec/ppr/bin/papsrv
+libexec/ppr/bin/ppad
+libexec/ppr/bin/ppd2macosdrv
+libexec/ppr/bin/ppd2win95drv
+libexec/ppr/bin/ppd2windrv
+libexec/ppr/bin/ppdoc
+libexec/ppr/bin/ppop
+libexec/ppr/bin/ppr
+libexec/ppr/bin/ppr-clean
+libexec/ppr/bin/ppr-config
+libexec/ppr/bin/ppr-followme
+libexec/ppr/bin/ppr-hexdump
+libexec/ppr/bin/ppr-index
+libexec/ppr/bin/ppr-panel
+libexec/ppr/bin/ppr-passwd
+libexec/ppr/bin/ppr-popup
+libexec/ppr/bin/ppr-sync
+libexec/ppr/bin/ppr-tclsh
+libexec/ppr/bin/ppr-testpage
+libexec/ppr/bin/ppr-ttf2ps
+libexec/ppr/bin/ppr-web
+libexec/ppr/bin/ppr-xfm
+libexec/ppr/bin/ppr-xgrant
+libexec/ppr/bin/ppr2samba
+libexec/ppr/bin/pprd
+libexec/ppr/bin/ppuser
+libexec/ppr/bin/uprint-cancel
+libexec/ppr/bin/uprint-lp
+libexec/ppr/bin/uprint-lpc
+libexec/ppr/bin/uprint-lpq
+libexec/ppr/bin/uprint-lpr
+libexec/ppr/bin/uprint-lprm
+libexec/ppr/bin/uprint-lpstat
+libexec/ppr/bin/uprint-newconf
+libexec/ppr/browsers/atalk
+libexec/ppr/browsers/ip_scan_snmp
+libexec/ppr/browsers/parallel
+libexec/ppr/browsers/usb
+libexec/ppr/cgi-bin/about.cgi
+libexec/ppr/cgi-bin/alias_addwiz.cgi
+libexec/ppr/cgi-bin/alias_properties.cgi
+libexec/ppr/cgi-bin/cliconf.cgi
+libexec/ppr/cgi-bin/commentary_select.cgi
+libexec/ppr/cgi-bin/commentary_speach.cgi
+libexec/ppr/cgi-bin/delete_queue.cgi
+libexec/ppr/cgi-bin/df_html.cgi
+libexec/ppr/cgi-bin/docs_cat.cgi
+libexec/ppr/cgi-bin/docs_info.cgi
+libexec/ppr/cgi-bin/docs_man.cgi
+libexec/ppr/cgi-bin/docs_plain.cgi
+libexec/ppr/cgi-bin/docs_rpm.cgi
+libexec/ppr/cgi-bin/docs_rpms_list.cgi
+libexec/ppr/cgi-bin/grp_addwiz.cgi
+libexec/ppr/cgi-bin/grp_control.cgi
+libexec/ppr/cgi-bin/grp_properties.cgi
+libexec/ppr/cgi-bin/job_log.cgi
+libexec/ppr/cgi-bin/job_modify.cgi
+libexec/ppr/cgi-bin/job_public.cgi
+libexec/ppr/cgi-bin/login_cookie.cgi
+libexec/ppr/cgi-bin/pprpopup_register.cgi
+libexec/ppr/cgi-bin/prn_addwiz.cgi
+libexec/ppr/cgi-bin/prn_control.cgi
+libexec/ppr/cgi-bin/prn_media.cgi
+libexec/ppr/cgi-bin/prn_properties.cgi
+libexec/ppr/cgi-bin/prn_testpage.cgi
+libexec/ppr/cgi-bin/responder_speach.cgi
+libexec/ppr/cgi-bin/scoreboard.cgi
+libexec/ppr/cgi-bin/show_jobs.cgi
+libexec/ppr/cgi-bin/show_log.cgi
+libexec/ppr/cgi-bin/show_printlog.cgi
+libexec/ppr/cgi-bin/show_queues.cgi
+libexec/ppr/cgi-bin/test_cgi.cgi
+libexec/ppr/cgi-bin/test_components.cgi
+libexec/ppr/cgi-bin/test_tail_status.cgi
+libexec/ppr/cgi-bin/window_open.cgi
+libexec/ppr/commentators/audio
+libexec/ppr/commentators/mail
+libexec/ppr/commentators/pager
+libexec/ppr/commentators/pprpopup
+libexec/ppr/commentators/samba
+libexec/ppr/commentators/write
+libexec/ppr/commentators/xwin
+libexec/ppr/editps/ADOBEPS4.DRV_Version_4.24
+libexec/ppr/editps/Adobe_NT_5.0
+libexec/ppr/editps/LaserWriter_8_8.4
+libexec/ppr/editps/MATLAB
+libexec/ppr/editps/Mozilla_1.0
+libexec/ppr/editps/Mozilla_1.6
+libexec/ppr/editps/Qt_2.2.0
+libexec/ppr/editps/Qt_3.1.1
+libexec/ppr/editps/Windows_95_4.0
+libexec/ppr/editps/Windows_NT_4.0
+libexec/ppr/editps/Windows_XP
+libexec/ppr/editps/dvipsk_5.58f
+libexec/ppr/editps/editps.conf
+libexec/ppr/filters/filter_bmp
+libexec/ppr/filters/filter_ditroff
+libexec/ppr/filters/filter_dotmatrix
+libexec/ppr/filters/filter_dvi
+libexec/ppr/filters/filter_fig
+libexec/ppr/filters/filter_fortran
+libexec/ppr/filters/filter_gif
+libexec/ppr/filters/filter_hexdump
+libexec/ppr/filters/filter_jpeg
+libexec/ppr/filters/filter_lp
+libexec/ppr/filters/filter_lp_autolf
+libexec/ppr/filters/filter_png
+libexec/ppr/filters/filter_pnm
+libexec/ppr/filters/filter_pr
+libexec/ppr/filters/filter_tex
+libexec/ppr/filters/filter_texinfo
+libexec/ppr/filters/filter_tiff
+libexec/ppr/filters/filter_troff
+libexec/ppr/filters/filter_xbm
+libexec/ppr/filters/filter_xpm
+libexec/ppr/filters/filter_xwd
+libexec/ppr/fixup/filter_bmp
+libexec/ppr/fixup/filter_ditroff_groff
+libexec/ppr/fixup/filter_ditroff_real
+libexec/ppr/fixup/filter_dvi
+libexec/ppr/fixup/filter_fig
+libexec/ppr/fixup/filter_gif
+libexec/ppr/fixup/filter_html_htmldoc
+libexec/ppr/fixup/filter_jpeg
+libexec/ppr/fixup/filter_pdf_acroread
+libexec/ppr/fixup/filter_pdf_xpdf
+libexec/ppr/fixup/filter_plot_plot2ps
+libexec/ppr/fixup/filter_plot_postplot
+libexec/ppr/fixup/filter_png
+libexec/ppr/fixup/filter_pnm
+libexec/ppr/fixup/filter_pr
+libexec/ppr/fixup/filter_tex
+libexec/ppr/fixup/filter_texinfo
+libexec/ppr/fixup/filter_tiff
+libexec/ppr/fixup/filter_troff_groff
+libexec/ppr/fixup/filter_troff_real
+libexec/ppr/fixup/filter_xbm
+libexec/ppr/fixup/filter_xpm
+libexec/ppr/fixup/filter_xwd
+libexec/ppr/interfaces/appsocket
+libexec/ppr/interfaces/atalk
+libexec/ppr/interfaces/dummy
+libexec/ppr/interfaces/jetdirect
+libexec/ppr/interfaces/lpr
+libexec/ppr/interfaces/parallel
+libexec/ppr/interfaces/pros
+libexec/ppr/interfaces/serial
+libexec/ppr/interfaces/simple
+libexec/ppr/interfaces/smb
+libexec/ppr/interfaces/socketapi
+libexec/ppr/interfaces/tcpip
+libexec/ppr/interfaces/usb
+libexec/ppr/lib/MD5pp.pm
+libexec/ppr/lib/PPR.pm
+libexec/ppr/lib/PPR/PPOP.pm
+libexec/ppr/lib/PrintDesk.pm
+libexec/ppr/lib/PrintDesk/BatchDialog.pm
+libexec/ppr/lib/PrintDesk/GENfolder.pm
+libexec/ppr/lib/PrintDesk/GENjobbuttons.pm
+libexec/ppr/lib/PrintDesk/GENprnbuttons.pm
+libexec/ppr/lib/PrintDesk/PPRlistqueue.pm
+libexec/ppr/lib/PrintDesk/PPRprintdialog.pm
+libexec/ppr/lib/PrintDesk/PPRprnstatus.pm
+libexec/ppr/lib/PrintDesk/PPRstateupdate.pm
+libexec/ppr/lib/PrintDesk/group.xbm
+libexec/ppr/lib/PrintDesk/printer.xbm
+libexec/ppr/lib/acl.pl
+libexec/ppr/lib/alert
+libexec/ppr/lib/cgi_auth.pl
+libexec/ppr/lib/cgi_back.pl
+libexec/ppr/lib/cgi_data.pl
+libexec/ppr/lib/cgi_digest.pl
+libexec/ppr/lib/cgi_error.pl
+libexec/ppr/lib/cgi_intl.pl
+libexec/ppr/lib/cgi_membership.pl
+libexec/ppr/lib/cgi_redirect.pl
+libexec/ppr/lib/cgi_run.pl
+libexec/ppr/lib/cgi_tabbed.pl
+libexec/ppr/lib/cgi_time.pl
+libexec/ppr/lib/cgi_user_agent.pl
+libexec/ppr/lib/cgi_widgets.pl
+libexec/ppr/lib/cgi_wizard.pl
+libexec/ppr/lib/commentary.ph
+libexec/ppr/lib/commentary.sh
+libexec/ppr/lib/cron_daily
+libexec/ppr/lib/cron_hourly
+libexec/ppr/lib/cron_run_daily
+libexec/ppr/lib/custom_hook_docutech
+libexec/ppr/lib/docs_util.pl
+libexec/ppr/lib/file_outdated
+libexec/ppr/lib/indexfilters
+libexec/ppr/lib/indexfonts
+libexec/ppr/lib/indexppds
+libexec/ppr/lib/interface.sh
+libexec/ppr/lib/libppr_int.sh
+libexec/ppr/lib/lprsrv
+libexec/ppr/lib/make_dvips_conf
+libexec/ppr/lib/mkstemp
+libexec/ppr/lib/nbp_lookup
+libexec/ppr/lib/paths.ph
+libexec/ppr/lib/ppd_select.pl
+libexec/ppr/lib/ppr-gs
+libexec/ppr/lib/ppr-httpd
+libexec/ppr/lib/ppr-push-httpd
+libexec/ppr/lib/ppr-respond
+libexec/ppr/lib/ppr_conf_query
+libexec/ppr/lib/pprd-question
+libexec/ppr/lib/pprdrv
+libexec/ppr/lib/pprpopup.pl
+libexec/ppr/lib/qquery_xlate.pl
+libexec/ppr/lib/query_wrapper
+libexec/ppr/lib/readppd.pl
+libexec/ppr/lib/respond.ph
+libexec/ppr/lib/respond.sh
+libexec/ppr/lib/responder_argv.pl
+libexec/ppr/lib/rewind_stdin
+libexec/ppr/lib/samba_submitter
+libexec/ppr/lib/sambaprint
+libexec/ppr/lib/signal.sh
+libexec/ppr/lib/smb-protos.conf
+libexec/ppr/lib/speach.pl
+libexec/ppr/lib/speach_commentary.pl
+libexec/ppr/lib/speach_play.pl
+libexec/ppr/lib/speach_response.pl
+libexec/ppr/lib/tail_status
+libexec/ppr/lib/tbcp2bin
+libexec/ppr/lib/tcpserver.pl
+libexec/ppr/lib/time_elapsed
+libexec/ppr/lib/uprint_rfc1179
+libexec/ppr/lib/xmessage
+libexec/ppr/responders/audio
+libexec/ppr/responders/errmail
+libexec/ppr/responders/mail
+libexec/ppr/responders/netsend
+libexec/ppr/responders/pprpopup
+libexec/ppr/responders/samba
+libexec/ppr/responders/write
+libexec/ppr/responders/xwin
+man/man1/UPRINT.1
+man/man1/ppdoc.1
+man/man1/ppop.1
+man/man1/ppr-filters.1
+man/man1/ppr-followme.1
+man/man1/ppr-hexdump.1
+man/man1/ppr-panel.1
+man/man1/ppr-passwd.1
+man/man1/ppr-popup.1
+man/man1/ppr-testpage.1
+man/man1/ppr-ttf2ps.1
+man/man1/ppr-web.1
+man/man1/ppr-xfm.1
+man/man1/ppr-xgrant.1
+man/man1/ppr.1
+man/man1/uprint-cancel.1
+man/man1/uprint-lp.1
+man/man1/uprint-lpq.1
+man/man1/uprint-lpr.1
+man/man1/uprint-lprm.1
+man/man1/uprint-lpstat.1
+man/man5/uprint-remote.conf.5
+man/man8/lprsrv.8
+man/man8/olprsrv.8
+man/man8/papd.8
+man/man8/papsrv.8
+man/man8/ppad-interfaces.8
+man/man8/ppad.8
+man/man8/ppd2macosdrv.8
+man/man8/ppr-clean.8
+man/man8/ppr-config.8
+man/man8/ppr-index.8
+man/man8/ppr2samba.8
+man/man8/pprd.8
+man/man8/ppuser.8
+share/examples/ppr/ppr/lprsrv.conf.sample
+share/examples/ppr/ppr/media.db
+share/examples/ppr/ppr/media.german
+share/examples/ppr/ppr/media.sample
+share/examples/ppr/ppr/ppr-crontab
+share/examples/ppr/ppr/ppr.conf.sample
+share/examples/ppr/ppr/uprint-remote.conf.sample
+share/examples/ppr/ppr/uprint.conf.sample
+share/ppr/PPDFiles/Apple LaserWriter
+share/ppr/PPDFiles/Apple LaserWriter II NT
+share/ppr/PPDFiles/Apple LaserWriter Plus
+share/ppr/PPDFiles/Apple LaserWriter Plus v42.2
+share/ppr/PPDFiles/Apple Personal LaserWriter NTR
+share/ppr/PPDFiles/Canon iR330-400 PS Print Server Ver 1.0
+share/ppr/PPDFiles/ColorPASS-Z76 Color Server
+share/ppr/PPDFiles/EFNC9111.PPD
+share/ppr/PPDFiles/Epson Stylus C62 Ghostscript
+share/ppr/PPDFiles/HP DeskJet 1200C PS
+share/ppr/PPDFiles/HP DeskJet 2500CM
+share/ppr/PPDFiles/HP DeskJet 500 Ghostscript
+share/ppr/PPDFiles/HP DeskJet 550C Ghostscript
+share/ppr/PPDFiles/HP LaserJet 4
+share/ppr/PPDFiles/HP LaserJet 4M DSC
+share/ppr/PPDFiles/HP LaserJet 4M Plus DSC
+share/ppr/PPDFiles/HP LaserJet 4ML
+share/ppr/PPDFiles/HP LaserJet 4MP
+share/ppr/PPDFiles/HP LaserJet 4Si 4SiMX PS 600dpi
+share/ppr/PPDFiles/HP LaserJet 4V
+share/ppr/PPDFiles/HP LaserJet 5000 Series
+share/ppr/PPDFiles/HP LaserJet 5M
+share/ppr/PPDFiles/HP LaserJet III Ghostscript
+share/ppr/PPDFiles/HP LaserJet IIISi PostScript
+share/ppr/PPDFiles/HP LaserJet IIISi Postscript 2
+share/ppr/PPDFiles/LaserWriter Select 360
+share/ppr/PPDFiles/NEC Pinwriter 6 Ghostscript
+share/ppr/PPDFiles/PPR Generic
+share/ppr/PPDFiles/PPR Generic Level 2
+share/ppr/PPDFiles/PPR Generic Level 2 TTF
+share/ppr/PPDFiles/Personal LaserWriter 320
+share/ppr/PPDFiles/QMS-PS 410
+share/ppr/PPDFiles/QMS-PS 410 DSC
+share/ppr/PPDFiles/QMS-PS 800
+share/ppr/PPDFiles/QMS-PS 800 II
+share/ppr/PPDFiles/QMS-PS 800 Plus
+share/ppr/PPDFiles/QMS-PS 810
+share/ppr/PPDFiles/QMS-PS 820
+share/ppr/PPDFiles/Ricoh Aficio 401 PS v2015
+share/ppr/PPDFiles/Tektronix Phaser 220i
+share/ppr/PPDFiles/Xerox DocuTech 135
+share/ppr/PPDFiles/hp_LaserJet_1300_series.ppd
+share/ppr/PPDFiles/hp_LaserJet_2300.ppd
+share/ppr/PPDFiles/hp_LaserJet_4200_Series.ppd
+share/ppr/PPDFiles/hp_LaserJet_4300_Series.ppd
+share/ppr/PPDFiles/hp_business_inkjet_2250.ppd
+share/ppr/PPDFiles/hp_business_inkjet_2300.ppd
+share/ppr/PPDFiles/hp_color_LaserJet_5500.ppd
+share/ppr/PPDFiles/hp_color_laserjet.ppd
+share/ppr/PPDFiles/hp_color_laserjet_4500.ppd
+share/ppr/PPDFiles/hp_color_laserjet_4550.ppd
+share/ppr/PPDFiles/hp_color_laserjet_5m.ppd
+share/ppr/PPDFiles/hp_color_laserjet_8500.ppd
+share/ppr/PPDFiles/hp_color_laserjet_8550.ppd
+share/ppr/PPDFiles/hp_laserjet_1200.ppd
+share/ppr/PPDFiles/hp_laserjet_2100_series.ppd
+share/ppr/PPDFiles/hp_laserjet_2200.ppd
+share/ppr/PPDFiles/hp_laserjet_3020_3030.ppd
+share/ppr/PPDFiles/hp_laserjet_3200.ppd
+share/ppr/PPDFiles/hp_laserjet_3380.ppd
+share/ppr/PPDFiles/hp_laserjet_4.ppd
+share/ppr/PPDFiles/hp_laserjet_4000_series.ppd
+share/ppr/PPDFiles/hp_laserjet_4050_series.ppd
+share/ppr/PPDFiles/hp_laserjet_4100_series.ppd
+share/ppr/PPDFiles/hp_laserjet_4_plus.ppd
+share/ppr/PPDFiles/hp_laserjet_4ml.ppd
+share/ppr/PPDFiles/hp_laserjet_4mp.ppd
+share/ppr/PPDFiles/hp_laserjet_4si.ppd
+share/ppr/PPDFiles/hp_laserjet_4v.ppd
+share/ppr/PPDFiles/hp_laserjet_5mp.ppd
+share/ppr/PPDFiles/hp_laserjet_5si.ppd
+share/ppr/PPDFiles/hp_laserjet_5si_mopier.ppd
+share/ppr/PPDFiles/hp_laserjet_6mp.ppd
+share/ppr/PPDFiles/hp_laserjet_8000_series.ppd
+share/ppr/PPDFiles/hp_laserjet_8100_series.ppd
+share/ppr/PPDFiles/hp_laserjet_8150_series.ppd
+share/ppr/PPDFiles/hp_laserjet_9000_series.ppd
+share/ppr/PPDFiles/hp_laserjet_9055_9065_mfp.ppd
+share/ppr/PPDFiles/hp_mopier_240.ppd
+share/ppr/PPDFiles/hp_mopier_320.ppd
+share/ppr/PPDFiles/hpc9500s.ppd
+share/ppr/cache/encoding/ISOLatin1Encoding
+share/ppr/cache/encoding/PPR-ASCII
+share/ppr/cache/encoding/PPR-CP1250
+share/ppr/cache/encoding/PPR-CP437
+share/ppr/cache/encoding/PPR-ISOLatin2
+share/ppr/cache/encoding/PPR-ISOLatin3
+share/ppr/cache/encoding/PPR-ISOLatin4
+share/ppr/cache/encoding/PPR-ISOLatin5
+share/ppr/cache/encoding/PPR-KOI8-R
+share/ppr/cache/encoding/PPR-Macintosh
+share/ppr/cache/procset/TrinColl-PPR-Dotmatrix-1-2
+share/ppr/cache/procset/TrinColl-PPR-Dotmatrix-Colour-1-0
+share/ppr/cache/procset/TrinColl-PPR-Dotmatrix-G1-1-0
+share/ppr/cache/procset/TrinColl-PPR-Dotmatrix-G2-1-0
+share/ppr/cache/procset/TrinColl-PPR-Dotmatrix-MetricsEpson1-1-0
+share/ppr/cache/procset/TrinColl-PPR-Dotmatrix-MetricsEpson2-1-0
+share/ppr/cache/procset/TrinColl-PPR-Dotmatrix-MetricsEpson3-1-0
+share/ppr/cache/procset/TrinColl-PPR-Dotmatrix-MetricsEpson4-1-0
+share/ppr/cache/procset/TrinColl-PPR-NewMetrics-1-0
+share/ppr/cache/procset/TrinColl-PPR-ReEncode-1.1-0
+share/ppr/cache/procset/TrinColl-PPR-dmm-nup-3-6
+share/ppr/cache/procset/TrinColl-PPR-dmm-nup-3-7
+share/ppr/cache/procset/TrueDict-27-0
+share/ppr/fonts/IBMCourier-Bold.afm
+share/ppr/fonts/IBMCourier-Bold.pfa
+share/ppr/fonts/IBMCourier-BoldItalic.afm
+share/ppr/fonts/IBMCourier-BoldItalic.pfa
+share/ppr/fonts/IBMCourier-Italic.afm
+share/ppr/fonts/IBMCourier-Italic.pfa
+share/ppr/fonts/IBMCourier.afm
+share/ppr/fonts/IBMCourier.pfa
+share/ppr/fonts/Times-Bold.afm
+share/ppr/fonts/Times-BoldItalic.afm
+share/ppr/fonts/Times-Italic.afm
+share/ppr/fonts/Times-Roman.afm
+share/ppr/fonts/crr35__i.afm
+share/ppr/fonts/crr35__i.pfb
+share/ppr/fonts/crr36__i.afm
+share/ppr/fonts/crr36__i.pfb
+share/ppr/fonts/crr55__i.afm
+share/ppr/fonts/crr55__i.pfb
+share/ppr/fonts/crr56__i.afm
+share/ppr/fonts/crr56__i.pfb
+share/ppr/lib/charsets.conf
+share/ppr/lib/fonts.conf
+share/ppr/lib/fontsub.conf
+share/ppr/lib/lw-messages.conf
+share/ppr/lib/mfmodes.conf
+share/ppr/lib/pagesizes.conf
+share/ppr/lib/pjl-messages.conf
+share/ppr/lib/pserrors.conf
+share/ppr/locale/de_DE/LC_MESSAGES/PAPD.mo
+share/ppr/locale/de_DE/LC_MESSAGES/PAPSRV.mo
+share/ppr/locale/de_DE/LC_MESSAGES/PPR.mo
+share/ppr/locale/de_DE/LC_MESSAGES/PPRD.mo
+share/ppr/locale/de_DE/LC_MESSAGES/PPRDRV.mo
+share/ppr/locale/de_DE/LC_MESSAGES/PPRWWW.mo
+share/ppr/locale/fr_FR/LC_MESSAGES/PAPSRV.mo
+share/ppr/locale/fr_FR/LC_MESSAGES/PPR.mo
+share/ppr/locale/fr_FR/LC_MESSAGES/PPRD.mo
+share/ppr/locale/fr_FR/LC_MESSAGES/PPRDRV.mo
+share/ppr/locale/fr_FR/LC_MESSAGES/PPRWWW.mo
+share/ppr/locale/ru_RU/LC_MESSAGES/PAPD.mo
+share/ppr/locale/ru_RU/LC_MESSAGES/PAPSRV.mo
+share/ppr/locale/ru_RU/LC_MESSAGES/PPR.mo
+share/ppr/locale/ru_RU/LC_MESSAGES/PPRD.mo
+share/ppr/locale/ru_RU/LC_MESSAGES/PPRDRV.mo
+share/ppr/locale/ru_RU/LC_MESSAGES/PPRWWW.mo
+share/ppr/www/clientsoft/pprpopup.tcl
+share/ppr/www/docs/index.html
+share/ppr/www/docs/misc/INSTALL.txt
+share/ppr/www/docs/misc/LICENSE.txt
+share/ppr/www/docs/misc/PORTING.txt
+share/ppr/www/docs/misc/announce.txt
+share/ppr/www/docs/misc/docs_history.txt
+share/ppr/www/docs/misc/index.html
+share/ppr/www/docs/misc/internationalization.txt
+share/ppr/www/docs/misc/lpr-ext-notes.html
+share/ppr/www/docs/misc/main_history.txt
+share/ppr/www/docs/misc/misc_dir_contents.txt
+share/ppr/www/docs/misc/release_steps.html
+share/ppr/www/docs/misc/tcl_cross_platform.html
+share/ppr/www/docs/pprdoc/pprdoc-enter.eps
+share/ppr/www/docs/pprdoc/pprdoc-enter.png
+share/ppr/www/docs/pprdoc/pprdoc-printing1.eps
+share/ppr/www/docs/pprdoc/pprdoc-printing1.png
+share/ppr/www/docs/pprdoc/pprdoc-printing2.eps
+share/ppr/www/docs/pprdoc/pprdoc-printing2.png
+share/ppr/www/docs/pprdoc/pprdoc.html
+share/ppr/www/docs/pprdoc/pprdoc.pdf
+share/ppr/www/docs/pprhack/pprhack.html
+share/ppr/www/docs/pprhack/pprhack.pdf
+share/ppr/www/docs/pprhack/pprhack_interfaces1.eps
+share/ppr/www/docs/pprhack/pprhack_interfaces1.png
+share/ppr/www/docs/pprinst/perltk_control.png
+share/ppr/www/docs/pprinst/perltk_prn_status.png
+share/ppr/www/docs/pprinst/perltk_queue.png
+share/ppr/www/docs/pprinst/perltk_submit.png
+share/ppr/www/docs/pprinst/pprinst.html
+share/ppr/www/docs/pprinst/pprinst.pdf
+share/ppr/www/docs/pprinst/web_control.png
+share/ppr/www/docs/pprinst/web_jobs.png
+share/ppr/www/docs/pprinst/web_prn_addwiz.png
+share/ppr/www/docs/pprinst/web_prn_control.png
+share/ppr/www/docs/pprinst/web_prn_properties1.png
+share/ppr/www/docs/pprinst/web_start.png
+share/ppr/www/docs/pprpopup/index.html
+share/ppr/www/docs/refman/index.html
+share/ppr/www/docs/refman/lprsrv.8.html
+share/ppr/www/docs/refman/olprsrv.8.html
+share/ppr/www/docs/refman/papd.8.html
+share/ppr/www/docs/refman/papsrv.8.html
+share/ppr/www/docs/refman/ppad-interfaces.8.html
+share/ppr/www/docs/refman/ppad.8.html
+share/ppr/www/docs/refman/ppd2macosdrv.8.html
+share/ppr/www/docs/refman/ppdoc.1.html
+share/ppr/www/docs/refman/ppop.1.html
+share/ppr/www/docs/refman/ppr-clean.8.html
+share/ppr/www/docs/refman/ppr-config.8.html
+share/ppr/www/docs/refman/ppr-filters.1.html
+share/ppr/www/docs/refman/ppr-followme.1.html
+share/ppr/www/docs/refman/ppr-hexdump.1.html
+share/ppr/www/docs/refman/ppr-index.8.html
+share/ppr/www/docs/refman/ppr-panel.1.html
+share/ppr/www/docs/refman/ppr-passwd.1.html
+share/ppr/www/docs/refman/ppr-popup.1.html
+share/ppr/www/docs/refman/ppr-testpage.1.html
+share/ppr/www/docs/refman/ppr-ttf2ps.1.html
+share/ppr/www/docs/refman/ppr-web.1.html
+share/ppr/www/docs/refman/ppr-xfm.1.html
+share/ppr/www/docs/refman/ppr-xgrant.1.html
+share/ppr/www/docs/refman/ppr.1.html
+share/ppr/www/docs/refman/ppr2samba.8.html
+share/ppr/www/docs/refman/pprd.8.html
+share/ppr/www/docs/refman/ppuser.8.html
+share/ppr/www/help/prn_properties.en.html
+share/ppr/www/help/prn_properties.ru.html
+share/ppr/www/help/show_jobs.en.html
+share/ppr/www/help/show_jobs.ru.html
+share/ppr/www/help/show_queues.en.html
+share/ppr/www/help/show_queues.ru.html
+share/ppr/www/html/commentary_select.html
+share/ppr/www/html/login_cookie.html
+share/ppr/www/html/login_cookie_frame2.html
+share/ppr/www/html/robots.txt
+share/ppr/www/html/show_logs.html
+share/ppr/www/html/test-audio-commentary.html
+share/ppr/www/html/test-audio-responder.html
+share/ppr/www/html/test-cgi.html
+share/ppr/www/html/test-css.html
+share/ppr/www/html/test-css.ru.html
+share/ppr/www/html/test.html
+share/ppr/www/images/cliconf1.png
+share/ppr/www/images/exclaim.png
+share/ppr/www/images/icon-16.ico
+share/ppr/www/images/icon-16.png
+share/ppr/www/images/icon-16.xpm
+share/ppr/www/images/icon-32.xpm
+share/ppr/www/images/icon-48.xpm
+share/ppr/www/images/pixel-blue.png
+share/ppr/www/images/pixel-clear.png
+share/ppr/www/images/pixel-green.png
+share/ppr/www/images/pixel-red.png
+share/ppr/www/images/pixel-white.png
+share/ppr/www/images/pprlogo.jpg
+share/ppr/www/images/pprlogo2-large.png
+share/ppr/www/images/pprlogo2-medium.png
+share/ppr/www/images/pprlogo2-small.png
+share/ppr/www/images/pprlogo2.eps
+share/ppr/www/images/prn_testpage1.png
+share/ppr/www/images/prn_testpage2.png
+share/ppr/www/images/progress-0.png
+share/ppr/www/images/progress-1.png
+share/ppr/www/images/progress-2.png
+share/ppr/www/images/progress-3.png
+share/ppr/www/images/wiz-address.jpg
+share/ppr/www/images/wiz-interface.jpg
+share/ppr/www/images/wiz-membership.jpg
+share/ppr/www/images/wiz-name.jpg
+share/ppr/www/images/wiz-newgrp.jpg
+share/ppr/www/images/wiz-newprn.jpg
+share/ppr/www/images/wiz-ppd.jpg
+share/ppr/www/images/wiz-save.jpg
+share/ppr/www/index.html
+share/ppr/www/js/md5.js
+share/ppr/www/js/show_jobs.js
+share/ppr/www/js/show_queues.js
+share/ppr/www/q_icons/00000.png
+share/ppr/www/q_icons/00001.png
+share/ppr/www/q_icons/00002.png
+share/ppr/www/q_icons/00003.png
+share/ppr/www/q_icons/00004.png
+share/ppr/www/q_icons/00005.png
+share/ppr/www/q_icons/00006.png
+share/ppr/www/q_icons/00007.png
+share/ppr/www/q_icons/00008.png
+share/ppr/www/q_icons/00009.png
+share/ppr/www/q_icons/0000a.png
+share/ppr/www/q_icons/0000b.png
+share/ppr/www/q_icons/00010.png
+share/ppr/www/q_icons/00011.png
+share/ppr/www/q_icons/00012.png
+share/ppr/www/q_icons/00013.png
+share/ppr/www/q_icons/00014.png
+share/ppr/www/q_icons/00015.png
+share/ppr/www/q_icons/00016.png
+share/ppr/www/q_icons/00017.png
+share/ppr/www/q_icons/00018.png
+share/ppr/www/q_icons/00019.png
+share/ppr/www/q_icons/0001a.png
+share/ppr/www/q_icons/0001b.png
+share/ppr/www/q_icons/00100.png
+share/ppr/www/q_icons/00101.png
+share/ppr/www/q_icons/00102.png
+share/ppr/www/q_icons/00103.png
+share/ppr/www/q_icons/00104.png
+share/ppr/www/q_icons/00105.png
+share/ppr/www/q_icons/00106.png
+share/ppr/www/q_icons/00107.png
+share/ppr/www/q_icons/00108.png
+share/ppr/www/q_icons/00109.png
+share/ppr/www/q_icons/0010a.png
+share/ppr/www/q_icons/0010b.png
+share/ppr/www/q_icons/00110.png
+share/ppr/www/q_icons/00111.png
+share/ppr/www/q_icons/00112.png
+share/ppr/www/q_icons/00113.png
+share/ppr/www/q_icons/00114.png
+share/ppr/www/q_icons/00115.png
+share/ppr/www/q_icons/00116.png
+share/ppr/www/q_icons/00117.png
+share/ppr/www/q_icons/00118.png
+share/ppr/www/q_icons/00119.png
+share/ppr/www/q_icons/0011a.png
+share/ppr/www/q_icons/0011b.png
+share/ppr/www/q_icons/01000.png
+share/ppr/www/q_icons/01001.png
+share/ppr/www/q_icons/01002.png
+share/ppr/www/q_icons/01003.png
+share/ppr/www/q_icons/01004.png
+share/ppr/www/q_icons/01005.png
+share/ppr/www/q_icons/01006.png
+share/ppr/www/q_icons/01007.png
+share/ppr/www/q_icons/01008.png
+share/ppr/www/q_icons/01009.png
+share/ppr/www/q_icons/0100a.png
+share/ppr/www/q_icons/0100b.png
+share/ppr/www/q_icons/01010.png
+share/ppr/www/q_icons/01011.png
+share/ppr/www/q_icons/01012.png
+share/ppr/www/q_icons/01013.png
+share/ppr/www/q_icons/01014.png
+share/ppr/www/q_icons/01015.png
+share/ppr/www/q_icons/01016.png
+share/ppr/www/q_icons/01017.png
+share/ppr/www/q_icons/01018.png
+share/ppr/www/q_icons/01019.png
+share/ppr/www/q_icons/0101a.png
+share/ppr/www/q_icons/0101b.png
+share/ppr/www/q_icons/01100.png
+share/ppr/www/q_icons/01101.png
+share/ppr/www/q_icons/01102.png
+share/ppr/www/q_icons/01103.png
+share/ppr/www/q_icons/01104.png
+share/ppr/www/q_icons/01105.png
+share/ppr/www/q_icons/01106.png
+share/ppr/www/q_icons/01107.png
+share/ppr/www/q_icons/01108.png
+share/ppr/www/q_icons/01109.png
+share/ppr/www/q_icons/0110a.png
+share/ppr/www/q_icons/0110b.png
+share/ppr/www/q_icons/01110.png
+share/ppr/www/q_icons/01111.png
+share/ppr/www/q_icons/01112.png
+share/ppr/www/q_icons/01113.png
+share/ppr/www/q_icons/01114.png
+share/ppr/www/q_icons/01115.png
+share/ppr/www/q_icons/01116.png
+share/ppr/www/q_icons/01117.png
+share/ppr/www/q_icons/01118.png
+share/ppr/www/q_icons/01119.png
+share/ppr/www/q_icons/0111a.png
+share/ppr/www/q_icons/0111b.png
+share/ppr/www/q_icons/10000.png
+share/ppr/www/q_icons/10010.png
+share/ppr/www/q_icons/10100.png
+share/ppr/www/q_icons/10110.png
+share/ppr/www/q_icons/11000.png
+share/ppr/www/q_icons/11010.png
+share/ppr/www/q_icons/11100.png
+share/ppr/www/q_icons/11110.png
+share/ppr/www/q_icons/20000.png
+share/ppr/www/robots.txt
+share/ppr/www/style/cgi_tabbed.css
+share/ppr/www/style/cgi_wizard.css
+share/ppr/www/style/help.css
+share/ppr/www/style/prn_control.css
+share/ppr/www/style/prn_media.css
+share/ppr/www/style/shared.css
+share/ppr/www/style/show_jobs.css
+share/ppr/www/style/show_queues.css
+@dirrm share/ppr/www/style
+@dirrm share/ppr/www/q_icons
+@dirrm share/ppr/www/js
+@dirrm share/ppr/www/images
+@dirrm share/ppr/www/html
+@dirrm share/ppr/www/help
+@dirrm share/ppr/www/docs/refman
+@dirrm share/ppr/www/docs/pprpopup
+@dirrm share/ppr/www/docs/pprinst
+@dirrm share/ppr/www/docs/pprhack
+@dirrm share/ppr/www/docs/pprdoc
+@dirrm share/ppr/www/docs/misc
+@dirrm share/ppr/www/docs
+@dirrm share/ppr/www/clientsoft
+@dirrm share/ppr/www
+@exec ${MKDIR} %D/share/ppr/man
+@dirrm share/ppr/man
+@dirrm share/ppr/locale/ru_RU/LC_MESSAGES
+@dirrm share/ppr/locale/ru_RU
+@dirrm share/ppr/locale/fr_FR/LC_MESSAGES
+@dirrm share/ppr/locale/fr_FR
+@dirrm share/ppr/locale/de_DE/LC_MESSAGES
+@dirrm share/ppr/locale/de_DE
+@dirrm share/ppr/locale
+@dirrm share/ppr/lib
+@dirrm share/ppr/fonts
+@dirrm share/ppr/cache/procset
+@exec ${MKDIR} %D/share/ppr/cache/font
+@dirrm share/ppr/cache/font
+@exec ${MKDIR} %D/share/ppr/cache/file
+@dirrm share/ppr/cache/file
+@dirrm share/ppr/cache/encoding
+@dirrm share/ppr/cache
+@dirrm share/ppr/PPDFiles
+@dirrm share/ppr
+@dirrm share/examples/ppr/ppr
+@dirrm libexec/ppr/responders
+@dirrm libexec/ppr/lib/PrintDesk
+@dirrm libexec/ppr/lib/PPR
+@dirrm libexec/ppr/lib
+@dirrm libexec/ppr/interfaces
+@dirrm libexec/ppr/fixup
+@dirrm libexec/ppr/filters
+@dirrm libexec/ppr/editps
+@dirrm libexec/ppr/commentators
+@dirrm libexec/ppr/cgi-bin
+@dirrm libexec/ppr/browsers
+@dirrm libexec/ppr/bin
+@dirrm libexec/ppr

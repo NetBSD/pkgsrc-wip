@@ -1,0 +1,28 @@
+$NetBSD: patch-af,v 1.1 2005/05/06 08:58:01 hfath Exp $
+
+--- include/sysdep.h.orig	2004-02-04 06:03:54.000000000 +0100
++++ include/sysdep.h
+@@ -295,13 +295,23 @@ int select(int nfds, fd_set *readfds, fd
+ #ifdef PPR_NETBSD
+ #ifdef PASS1
+ 
++#include <sys/param.h>
++#if defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 300000000)
++#define HAVE_STATVFS 1
++#else
+ #define HAVE_STATFS 1
++#endif
++
+ #define HAVE_INITGROUPS 1
+ 
+ #endif
+ #ifdef PASS2
+ 
++/* This must be really old information... */
++#if 0
+ #define setsid() setpgrp(0, getpid()) /* setsid() (Posix?) is missing */
++#endif
++
+ #undef SENDMAIL_PATH
+ #define SENDMAIL_PATH "/usr/sbin/sendmail"
+ 

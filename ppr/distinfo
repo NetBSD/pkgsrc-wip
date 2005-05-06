@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2005/05/06 08:58:00 hfath Exp $
+
+SHA1 (ppr-1.53.tar.gz) = f7e7cb1ea43396cdd0e0f6a9422f84bff2e6c566
+RMD160 (ppr-1.53.tar.gz) = caf82a4330310e777b58d28002f3b97b53efa72d
+Size (ppr-1.53.tar.gz) = 4808655 bytes
+SHA1 (patch-aa) = 766cefb81610f9f43ab9cd5228e5aa78ba165c50
+SHA1 (patch-ab) = 6f070822ccf6072208222cbc10ee6d8feb08c5c9
+SHA1 (patch-ad) = 548b78ec1a3312db6a8d2a401e4ff2d7719fdd8c
+SHA1 (patch-ae) = 05bec45a7999a6f8b6ad268bae1c681a9d08ce93
+SHA1 (patch-af) = a2e235e1f841159f884451e164f1f0dc68f6d884
+SHA1 (patch-ag) = ac2d2460ba08b25e0bc93773f6e57beffe058b13
+SHA1 (patch-ah) = 8e15a066eaaa4a6561a35946036114995ec8ec86
+SHA1 (patch-ai) = 38f559328ea165722e909e78f7974159e79d33b7
+SHA1 (patch-aj) = 69b9dfdfec67683799e5be3ca5c2eab039bb45a6
+SHA1 (patch-ak) = cf514489007dc24396b65f57779c6a1c6dfe436b

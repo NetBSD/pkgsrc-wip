@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2005/05/06 08:58:01 hfath Exp $
+
+--- nonppr_misc/c2lib/config.h.orig	Thu Jul 31 20:47:58 2003
++++ nonppr_misc/c2lib/config.h
+@@ -5,7 +5,6 @@
+ 
+ #define PACKAGE "c2lib"
+ #define VERSION "1.4.1"
+-#define HAVE_ALLOCA_H 1
+ #define HAVE_ASSERT_H 1
+ #define HAVE_CTYPE_H 1
+ #define HAVE_FCNTL_H 1

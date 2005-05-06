@@ -1,0 +1,24 @@
+$NetBSD: patch-ah,v 1.1 2005/05/06 08:58:01 hfath Exp $
+
+--- z_install_end/Makefile.orig	2004-12-10 21:50:27.000000000 +0100
++++ z_install_end/Makefile
+@@ -50,7 +50,8 @@ install: $(ALL)
+ 	$(INSTALLPROGS) $(USER_PPR) $(GROUP_PPR) 755 $(CONFDIR) ppr.conf.sample
+ 	./install_sample_config.sh
+ 	./install_bin_links.sh
+-	./install_init_script.sh
++	##pkgsrc takes care of the init script
++	##./install_init_script.sh
+ 	[ -z "$(RPM_BUILD_ROOT)" ] && $(MAKE) install-real || true
+ 
+ # These are operations which are defered if we are building a package.
+@@ -62,7 +63,8 @@ install-real:
+ 	# Create PPR's crontab.
+ 	./install_crontab.sh
+ 	# Fix things left by previous installations.
+-	./fixup_obsolete.sh
++	## Not for pkgsrc
++	##./fixup_obsolete.sh
+ 	# Initialize the media database.
+ 	$(HOMEDIR)/bin/ppad media import $(CONFDIR)/media.sample >/dev/null
+ 	$(HOMEDIR)/bin/ppad media import $(CONFDIR)/media.german >/dev/null

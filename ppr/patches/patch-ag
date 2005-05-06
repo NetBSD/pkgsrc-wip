@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1 2005/05/06 08:58:01 hfath Exp $
+
+--- papd/papd.c.orig	2004-11-09 17:15:39.000000000 +0100
++++ papd/papd.c
+@@ -114,6 +114,17 @@ void debug(const char string[], ... )
+ 	va_end(va);
+ 	} /* end of debug() */
+ 
++/* This is needed by try_fontindex(). */
++void error(const char string[], ... )
++	{
++	va_list va;
++	char temp[256];
++	va_start(va,string);
++	vsnprintf(temp, sizeof(temp), string, va);
++	write_logline("ERROR", temp);
++	va_end(va);
++	} /* end of error() */
++
+ /*
+ ** Return a copy of a string with control characters
+ ** (non-printable characters) replaced with dots.

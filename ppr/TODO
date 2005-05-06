@@ -1,0 +1,47 @@
+# $NetBSD: TODO,v 1.1 2005/05/06 08:58:00 hfath Exp $
+#
+# PPR is a print spooler for PostScript printers
+
+Work-to-do in random order:
+
+(1) Set up a working files/pprd.sh rc.d start script.
+
+(2) Pick and install example config files.
+
+(2a) Handle installation to /etc/ppr properly, including example files
+in share/examples/ppr.
+
+(2b) Do not install *.sample files.
+
+(3) Fix PLIST. [DONE]
+
+(4) Figure out how everything goes together and test.  :)
+
+(5) Install ipp server (patch top-level Makefile to include ipp in
+build) plus notify inetd.conf addition.
+
+(6) Handle Samba, LaTeX etc. support by using bsd.options.mk
+
+(7) During installation, ppr sets up filters by searching for a lot of
+print- and graphics-relate dtools (LaTex, jpeg/png/tiff,
+converters/filters). How to handle that pkgsrc-like?
+
+(7a) Keep PPR from installing a crontab for user ppr. [DONE]
+
+(7b) MESSAGE: Mention the crontab for ppr user during {,un}install.
+
+(8) Resolve naming conflict between Netatalk papd and PPR papd.
+
+(9) Decide on using the UPRINT script to move the native lp{,r} tools
+out of the way.
+
+(10) Make PPR install the man pages under {PREFIX}/man. [DONE]
+
+(10a) Make sure the PRR install scripts don't remove anything essential...
+
+(10b) Fix the crufty manpage install.
+
+(11) There's a bogus bash call somewhere in the install make
+target. Find it and root it out.
+
+(12) Keep PPR from adding to /etc/services.

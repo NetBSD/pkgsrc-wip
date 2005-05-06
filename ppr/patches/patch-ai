@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1 2005/05/06 08:58:01 hfath Exp $
+
+--- z_install_begin/Makefile.orig	2004-09-01 20:42:47.000000000 +0200
++++ z_install_begin/Makefile
+@@ -41,7 +41,8 @@ all: $(ALL)
+ #=== Install ================================================================
+ 
+ install: $(ALL)
+-	[ -z "$(RPM_BUILD_ROOT)" ] && ./install_create_accounts.sh $(HOMEDIR) $(USER_PPR) $(USER_PPRWWW) $(GROUP_PPR) || true
++	## pkgsrc sets up users and group
++	##[ -z "$(RPM_BUILD_ROOT)" ] && ./install_create_accounts.sh $(HOMEDIR) $(USER_PPR) $(USER_PPRWWW) $(GROUP_PPR) || true
+ 	./install_create_dirs.sh $(USER_PPR) $(USER_PPRWWW) $(GROUP_PPR) $(CONFDIR) $(HOMEDIR) $(SHAREDIR) $(VAR_SPOOL_PPR) $(TEMPDIR)
+ 
+ #=== Housekeeping ===========================================================

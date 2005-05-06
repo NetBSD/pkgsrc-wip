@@ -1,0 +1,30 @@
+$NetBSD: patch-aj,v 1.1 2005/05/06 08:58:01 hfath Exp $
+
+--- z_install_end/install_crontab.sh.orig	2003-08-11 16:20:47.000000000 +0200
++++ z_install_end/install_crontab.sh
+@@ -43,16 +43,6 @@ if [ ! -x ../z_install_begin/id ]
+ 	exit 1
+ 	fi
+ 
+-./puts "  Making sure we are $USER_PPR..."
+-if [ "`../z_install_begin/id -un`" = "$USER_PPR" ]
+-	then
+-	echo "    OK"
+-	else
+-	echo "    Nope, guess we are root, doing su $USER_PPR..."
+-	su $USER_PPR -c $0	  
+-	exit $?
+-	fi
+-
+ echo "  Installing crontab for the user $USER_PPR..."
+ 
+ #
+@@ -71,7 +61,7 @@ cat - >$tempname <<===EndOfHere===
+ 17 * * * * $HOMEDIR/lib/cron_hourly
+ ===EndOfHere===
+ 
+-crontab $tempname
++cp $tempname $CONFDIR/$USER_PPR-crontab
+ 
+ rm $tempname
+ 
