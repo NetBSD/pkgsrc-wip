@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:37 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/06 05:19:18 marmfield Exp $
 #
 
-DISTNAME=		Crypt-SmbHash-0.02
+DISTNAME=		Crypt-SmbHash-0.12
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5csm
 CATEGORIES=		security perl5

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/26 05:28:27 marmfield Exp $
+$NetBSD: distinfo,v 1.2 2005/05/06 05:19:19 marmfield Exp $
 
-SHA1 (Crypt-SmbHash-0.02.tar.gz) = 7dadc8ceeb40823b5545bf860dd393b79e8b2165
-Size (Crypt-SmbHash-0.02.tar.gz) = 7940 bytes
+SHA1 (Crypt-SmbHash-0.12.tar.gz) = 2fa36d9e6ef661876f5433e56c3803212a13a838
+RMD160 (Crypt-SmbHash-0.12.tar.gz) = ddded936c573062d8e21f4c3cc8278ff08ec7d4b
+Size (Crypt-SmbHash-0.12.tar.gz) = 8840 bytes
