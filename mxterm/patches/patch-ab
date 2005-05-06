@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/05/06 21:27:03 gregschenzel Exp $
+
+--- scrollbar.c.orig	2004-11-05 18:30:00.000000000 -0700
++++ scrollbar.c	2004-11-05 18:23:46.000000000 -0700
+@@ -235,7 +235,7 @@
+ 	   {XmNheight,		(XtArgVal) 0},
+ 	   /* motif widget doesn't have reverse video garbage */
+ 	   {XmNorientation,	(XtArgVal) XmVERTICAL},
+-	   {XmNsliderMark,	(XtArgVal) XmTHUMB_MARK},
++	   {XmNsliderMark,	(XtArgVal) XmNONE},
+ 	   {XmNborderWidth,	(XtArgVal) 1},
+ 	};
+ 

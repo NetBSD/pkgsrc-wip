@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/06 21:27:02 gregschenzel Exp $
+
+SHA1 (mxterm-src.tar.bz2) = a8ac432789e5c897b0816a12c9e1ed285d0b38b0
+Size (mxterm-src.tar.bz2) = 513462 bytes
+SHA1 (patch-aa) = f3976a6aa351bf72a0f9b1f7f34c37dee8edcfe9
+SHA1 (patch-ab) = f951c71515cd6714be0af2e6da8c7c1833071302
+SHA1 (patch-ac) = a17480747e7d322d084a8c248dbb8b3624d350de
