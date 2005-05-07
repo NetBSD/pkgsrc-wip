@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/05/02 13:51:19 cetrox Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/07 00:02:29 jeremy-c-reed Exp $
 #
 
 DISTNAME=		fox-1.2.16
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://www.fox-toolkit.org/ftp/
 
@@ -22,4 +23,5 @@ GNU_CONFIGURE=		yes
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
