@@ -1,2 +1,53 @@
+use rezound as directory name not ReZound
+
+montecristo:~/netbsd/htdocs$ rezound 
+using path '/usr/share/rezound' for share data directory
+Notice: You do not have a LADSPA_PATH environment variable set.  Defaulting to "/usr/local/lib/ladspa:/usr/lib/ladspa"
+'lame' executable not found in $PATH -- mp3 support will be disabled
+
+but it is in the path!
+
+
+on netbsd 1.6.2:
+
+c++ -DHAVE_CONFIG_H -I. -I. -I../../../config -I../../../src/misc -I../../../src/misc/missing/generated -I../../../src/PoolFile -DDEVOSSSOUND=\"/dev/sound\" -I/usr/pkg/include -I/usr/include -g -Wall -Wno-unused -I/usr/pkg/include -I/usr/pkg/include -I/usr/pkg/include -c CAdaptiveNormalizeAction.cpp -Wp,-MD,.deps/CAdaptiveNormalizeAction.TPlo
+CAdaptiveNormalizeAction.cpp: In method `bool CAdaptiveNormalizeAction::doActionSizeSafe(CActionSound &, bool)':
+CAdaptiveNormalizeAction.cpp:79: implicit declaration of function `int printf(...)'
+gmake[3]: *** [CAdaptiveNormalizeAction.lo] Error 1
+gmake[3]: Leaving directory `/usr/pkg/tmp/pkgsrc/wip/ReZound/work.rainier/rezound-0.11.1beta/src/backend/Remaster'
+
 · The sound does not reproduce correctly. Sounds like under buffered.
 · /dev/dsp was hardcoded in the source, it was replaced by /dev/sound.
+
+Look at the following and add includes for these prerequisites
+as needed:
+  NEEDED      libpthread.so.0
+  NEEDED      libaudiofile.so.0
+  NEEDED      libvorbisfile.so.3
+  NEEDED      libvorbisenc.so.2
+  NEEDED      libvorbis.so.0
+  NEEDED      libogg.so.0
+  NEEDED      libFLAC++.so.4
+  NEEDED      libFLAC.so.6
+  NEEDED      libstdc++.so.5
+  NEEDED      libgcc_s.so.1
+  NEEDED      libFOX-1.2.so.0
+  NEEDED      libXext.so.6
+  NEEDED      libXcursor.so.1
+  NEEDED      libXrender.so.1
+  NEEDED      libXfixes.so.3
+  NEEDED      libX11.so.6
+  NEEDED      libpng.so.3
+  NEEDED      libtiff.so.3
+  NEEDED      libjpeg.so.62
+  NEEDED      libz.so.1
+  NEEDED      libbz2.so.0
+  NEEDED      libGL.so.1
+  NEEDED      libGLU.so.1
+  NEEDED      librfftw.so.2
+  NEEDED      libfftw.so.2
+  NEEDED      libportaudio.so.0
+  NEEDED      libasound.so.2
+  NEEDED      libdl.so.2
+  NEEDED      libm.so.6
+  NEEDED      libc.so.6
