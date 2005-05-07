@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1774 2005/05/06 08:57:54 hfath Exp $
-# $NetBSD: Makefile,v 1.1774 2005/05/06 08:57:54 hfath Exp $
+# $Id: Makefile,v 1.1775 2005/05/07 15:05:50 kristerw Exp $
+# $NetBSD: Makefile,v 1.1775 2005/05/07 15:05:50 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -46,8 +46,8 @@ SUBDIR+=	R-statmod
 SUBDIR+=	R-wle
 SUBDIR+=	Radiator
 SUBDIR+=	Radiator-all
-SUBDIR+=	Redland-rdf
 SUBDIR+=	ReZound
+SUBDIR+=	Redland-rdf
 SUBDIR+=	Siesta
 SUBDIR+=	WEPCrack
 SUBDIR+=	abuse_sdl
