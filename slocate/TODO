@@ -1,4 +1,4 @@
-$Id: TODO,v 1.1 2004/02/12 07:30:12 minskim Exp $
+$Id: TODO,v 1.2 2005/05/07 22:25:54 thomasklausner Exp $
 
 * Do not use bash.
-* Use PKG_GROUPS.  See 10.22 in Packages.txt.
+* Use PKG_GROUPS.  See 12.5.4 of doc/pkgsrc.html
