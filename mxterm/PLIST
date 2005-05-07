@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/06 21:27:03 gregschenzel Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/07 08:29:06 gregschenzel Exp $
 bin/mxterm
 bin/resize
+lib/X11/app-defaults/MXTerm
+lib/X11/app-defaults/MXTerm-color
 man/man1/mxterm.1
 man/man1/resize.1
-lib/X11/app-defaults/MXTerm 
-lib/X11/app-defaults/MXTerm-color 

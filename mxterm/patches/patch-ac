@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/05/06 21:27:03 gregschenzel Exp $
+$NetBSD: patch-ac,v 1.2 2005/05/07 08:29:06 gregschenzel Exp $
 
 --- Makefile.in.orig	2004-11-05 18:53:48.000000000 -0700
 +++ Makefile.in	2004-11-05 20:50:47.000000000 -0700
@@ -7,10 +7,10 @@ $NetBSD: patch-ac,v 1.1.1.1 2005/05/06 21:27:03 gregschenzel Exp $
  INSTALL_DATA	= @INSTALL_DATA@
  
 -X_CFLAGS	= @X_CFLAGS@
-+X_CFLAGS	= @X_CFLAGS@ -I/usr/pkg/include
++X_CFLAGS	= @X_CFLAGS@ @CPPFLAGS@
  X_LIBS		= @X_LIBS@
 -X_EXTRA_LIBS	= @X_EXTRA_LIBS@
-+X_EXTRA_LIBS	= @X_EXTRA_LIBS@ -L/usr/pkg/lib -Wl,-R/usr/X11R6/lib -Wl,-R/usr/pkg/lib
++X_EXTRA_LIBS	= @X_EXTRA_LIBS@ @LDFLAGS@
  
  IMAKE_CFLAGS	= @IMAKE_CFLAGS@
  EXTRA_CFLAGS	= @EXTRA_CFLAGS@
