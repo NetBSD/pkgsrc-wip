@@ -1,8 +1,0 @@
-$Id: TODO,v 1.1.1.1 2003/11/27 16:27:59 mpasternak Exp $
-
-Thu Nov 27 17:26:39 CET 2003
-
-- unable to build because wip/gcl, which is needed to compile it is not ready
-- PLIST
-
-	-- dotz@irc.pl
