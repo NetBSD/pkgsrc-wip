@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1775 2005/05/07 15:05:50 kristerw Exp $
-# $NetBSD: Makefile,v 1.1775 2005/05/07 15:05:50 kristerw Exp $
+# $Id: Makefile,v 1.1776 2005/05/07 15:18:05 kristerw Exp $
+# $NetBSD: Makefile,v 1.1776 2005/05/07 15:18:05 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -230,12 +230,14 @@ SUBDIR+=	flightgear
 SUBDIR+=	flightgear-base
 SUBDIR+=	fluxconf
 SUBDIR+=	fluxspace
+SUBDIR+=	fnord
 SUBDIR+=	foomatic-db
 SUBDIR+=	foomatic-db-engine
 SUBDIR+=	foomatic-filters-cups
 SUBDIR+=	fox
 SUBDIR+=	fragrouter
 SUBDIR+=	freevo
+SUBDIR+=	freevrrpd
 SUBDIR+=	frontpage
 SUBDIR+=	ftpd-tls
 SUBDIR+=	ftpsesame
@@ -377,8 +379,6 @@ SUBDIR+=	java-getopt
 SUBDIR+=	java-gnucrypto
 SUBDIR+=	java-gnujaf
 SUBDIR+=	java-gnujaxp
-SUBDIR+=	java-gtk2
-SUBDIR+=	java-gtk24
 SUBDIR+=	java-jbluez
 SUBDIR+=	java-jep
 SUBDIR+=	java-jflex
@@ -441,7 +441,10 @@ SUBDIR+=	libbtctl
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libgeotiff
+SUBDIR+=	libglade-java
+SUBDIR+=	libgnome-java
 SUBDIR+=	libgrass5
+SUBDIR+=	libgtk-java
 SUBDIR+=	libhttpd
 SUBDIR+=	liblingoteach
 SUBDIR+=	libneural
@@ -568,6 +571,7 @@ SUBDIR+=	mupen64-plugin-video
 SUBDIR+=	musepack
 SUBDIR+=	mutella
 SUBDIR+=	mutt-devel
+SUBDIR+=	mxterm
 SUBDIR+=	mysql-docs
 SUBDIR+=	mythtv
 SUBDIR+=	n0t
@@ -620,6 +624,7 @@ SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-Cache-Mmap
 SUBDIR+=	p5-Class-Date
+SUBDIR+=	p5-Crypt-PasswdMD5
 SUBDIR+=	p5-Crypt-SmbHash
 SUBDIR+=	p5-Curses-UI
 SUBDIR+=	p5-Data-Properties
