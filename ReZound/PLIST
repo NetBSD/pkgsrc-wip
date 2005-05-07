@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/03 17:13:50 cetrox Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/07 00:11:48 jeremy-c-reed Exp $
 bin/rezound
 share/doc/rezound/AUTHORS
 share/doc/rezound/COPYING
@@ -6,6 +6,9 @@ share/doc/rezound/Features.txt
 share/doc/rezound/FrontendFoxFeatures.txt
 share/doc/rezound/NEWS
 share/doc/rezound/README
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/rezound.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/rezound.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/rezound.mo
 share/rezound/icon_logo_32.gif
 share/rezound/impulse_hall1.wav
 share/rezound/menu.dat

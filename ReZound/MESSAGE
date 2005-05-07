@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2005/05/07 00:11:48 jeremy-c-reed Exp $
+
+Install the sysutils/cdrdao package for rezound to burn audio files to CD.
+
+===========================================================================
+

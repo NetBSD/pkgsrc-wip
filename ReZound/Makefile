@@ -1,29 +1,40 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/03 17:13:49 cetrox Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/07 00:11:48 jeremy-c-reed Exp $
 #
 
 DISTNAME=		rezound-0.11.1beta
-PKGNAME=		ReZound-0.11.1
+PKGREVISION=		1
 CATEGORIES=		audio
-MASTER_SITES=		http://aleron.dl.sourceforge.net/sourceforge/rezound/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rezound/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://rezound.sourceforge.net/
-COMMENT=		Audio editor
+COMMENT=		Audio editor with graphical interface
 
-BUILD_DEPENDS+= 	bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+=		cdrdao>=1.1.9:../../sysutils/cdrdao
+# needs real bison and not yacc
+#BUILD_DEPENDS+= 	bison-[0-9]*:../../devel/bison
 
-CONFIGURE_ARGS+=	--disable-alsa
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-jack
 CONFIGURE_ARGS+=	--enable-oss
 CONFIGURE_ARGS+=	--enable-portaudio
-LDFLAGS+=		-lcompat
-USE_GNU_TOOLS+=		lex make
+CPPFLAGS+=		-DDEVOSSSOUND="\"${DEVOSSSOUND}\""
+#LDFLAGS+=		-lcompat
+USE_GNU_TOOLS+=		lex make yacc
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
 USE_X11=		yes
-YACC=			bison
+
+PKG_SUPPORTED_OPTIONS= alsa
+PKG_OPTIONS_VAR=       PKG_OPTIONS.rezound
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Malsa)
+CONFIGURE_ARGS+=	--enable-alsa=yes
+.include "../../wip/alsa-lib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-alsa
+.endif
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
@@ -35,4 +46,6 @@ YACC=			bison
 .include "../../wip/libSoundTouch/buildlink3.mk"
 .include "../../wip/fox/buildlink3.mk"
 
+.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

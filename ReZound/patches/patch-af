@@ -1,0 +1,11 @@
+--- configure.orig	2005-05-04 23:33:53.646743088 +0000
++++ configure	2005-05-04 23:34:26.301778768 +0000
+@@ -5744,7 +5744,7 @@
+ done
+ test -n "$YACC" || YACC="yacc"
+ 
+-	expr z"$YACC" : z"bison.*" >/dev/null || { { echo "$as_me:$LINENO: error: bison not found (and yacc will not work)" >&5
++	expr "$YACC" : ".*bison.*" >/dev/null || { { echo "$as_me:$LINENO: error: bison not found (and yacc will not work)" >&5
+ echo "$as_me: error: bison not found (and yacc will not work)" >&2;}
+    { (exit 1); exit 1; }; }
+ 
