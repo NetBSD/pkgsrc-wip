@@ -1,13 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/11/13 09:14:00 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.2 2005/05/08 08:16:46 obache Exp $
 
---- xbelmark.py.orig	2003-11-13 00:57:56.000000000 -0800
+--- xbelmark.py.orig	2005-05-08 16:58:10.000000000 +0900
 +++ xbelmark.py
-@@ -1,4 +1,4 @@
--#!/usr/bin/python2.1
-+#!/usr/bin/python
- 
- ## This program is free software; you can redistribute it and/or modify
- ## it under the terms of the GNU General Public License as published by
 @@ -196,7 +196,7 @@ class MyHandler(handler.ContentHandler):
  		return s
  		

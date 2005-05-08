@@ -1,3 +1,3 @@
-xbelmark.py is a short script written in python2 for converting              
-Galeon/XBEL XML bookmarks into readable HTML. It is compatible with         
+xbelmark.py is a short script written in python2 for converting
+Galeon/XBEL XML bookmarks into readable HTML. It is compatible with
 Galeon version >= 1.2.

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/13 09:14:00 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2005/05/08 08:16:45 obache Exp $
 
-SHA1 (xbelmark.py) = 42eda9ae4526f532be413caf6be0f398b461b7b5
+SHA1 (xbelmark.py) = cdb40f4611cdb5ade90b161075a740c676449a4e
+RMD160 (xbelmark.py) = d8d23baca4d662dc9e34d7ed3d37a2509031cc69
 Size (xbelmark.py) = 6572 bytes
-SHA1 (patch-aa) = 2decbacfc72db8e1c70354b8d639ea90bd9f7f29
+SHA1 (patch-aa) = cdd6ed48b27a793358065461f4e2650288ce4651
