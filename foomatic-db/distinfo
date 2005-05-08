@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/21 21:16:54 bjan2 Exp $
+$NetBSD: distinfo,v 1.2 2005/05/08 07:33:19 obache Exp $
 
-SHA1 (foomatic-db-current.tar.gz) = 4f4692a7939a0a86a7aafc5773015bf76c159660
-Size (foomatic-db-current.tar.gz) = 480406 bytes
+SHA1 (foomatic-db-20050508.tar.gz) = d0b11f893173e09e8ea3e8c13b451dc874308119
+RMD160 (foomatic-db-20050508.tar.gz) = bd75616b897c992ac92cc5271e9e39f1b16b6e84
+Size (foomatic-db-20050508.tar.gz) = 533940 bytes
