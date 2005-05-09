@@ -1,24 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2005/05/07 08:29:06 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/09 08:25:29 gregschenzel Exp $
 
-DISTNAME=	mxterm
-PKGNAME=	mxterm-129
+DISTNAME=	mxterm_129
+PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	wip
-MASTER_SITES=	http://programming.ccp14.ac.uk/ftp-mirror/programming/cygwin/pub/cygwin/xfree/contrib/
-EXTRACT_SUFX=	-src.tar.bz2
+MASTER_SITES=	http://inittab.netizenweb.com/downloads/
 
 MAINTAINER=	inittab@netizenweb.com
-HOMEPAGE=	http://www.fh-wilhelmshaven.de/~akcaagaa/index_mxterm.html
+#HOMEPAGE=	http://www.fh-wilhelmshaven.de/~akcaagaa/index_mxterm.html
+HOMEPAGE=	http://inittab.netizenweb.com/software.jsp
 COMMENT=	Motif XTerm
 
 GNU_CONFIGURE=	YES
 USE_X11=	YES
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
-
-pre-configure:
-	@(cd ${WRKSRC}; \
-	make clean || ${TRUE}; \
-	[ -f config.cache ] && ${RM} config.cache)
+WRKSRC=		${WRKDIR}/${PKGNAME}
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

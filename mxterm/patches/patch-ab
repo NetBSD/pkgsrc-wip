@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/05/06 21:27:03 gregschenzel Exp $
+$NetBSD: patch-ab,v 1.2 2005/05/09 08:25:30 gregschenzel Exp $
 
---- scrollbar.c.orig	2004-11-05 18:30:00.000000000 -0700
-+++ scrollbar.c	2004-11-05 18:23:46.000000000 -0700
-@@ -235,7 +235,7 @@
- 	   {XmNheight,		(XtArgVal) 0},
- 	   /* motif widget doesn't have reverse video garbage */
- 	   {XmNorientation,	(XtArgVal) XmVERTICAL},
--	   {XmNsliderMark,	(XtArgVal) XmTHUMB_MARK},
-+	   {XmNsliderMark,	(XtArgVal) XmNONE},
- 	   {XmNborderWidth,	(XtArgVal) 1},
- 	};
+--- Makefile.in.orig	2005-05-08 18:56:07.000000000 -0600
++++ Makefile.in	2005-05-08 19:01:51.000000000 -0600
+@@ -30,7 +30,7 @@
+ manext		= 1
+ bindir		= $(exec_prefix)/bin
+ libdir		= $(exec_prefix)/lib
+-mandir		= $(prefix)/share/man/man$(manext)
++mandir		= $(prefix)/man/man$(manext)
+ appsdir		= $(libdir)/X11/app-defaults
  
+ #### End of system configuration section. ####
