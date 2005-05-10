@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/06 20:47:43 plunky Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/10 20:28:24 plunky Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
@@ -26,8 +26,6 @@ COMMENT=		IceWM Control Centre
 DEPENDS+=		vim-{gtk,gtk2,kde,motif,xaw}>=6.3.0:../../editors/vim-xaw
 
 USE_GNU_TOOLS+=		make
-
-.include "../../mk/bsd.prefs.mk"
 
 WRKSRC=			${WRKDIR}
 
