@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1777 2005/05/07 15:29:42 kristerw Exp $
-# $NetBSD: Makefile,v 1.1777 2005/05/07 15:29:42 kristerw Exp $
+# $Id: Makefile,v 1.1778 2005/05/10 21:31:50 yeled Exp $
+# $NetBSD: Makefile,v 1.1778 2005/05/10 21:31:50 yeled Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -833,6 +833,7 @@ SUBDIR+=	regexxer
 #SUBDIR+=	rekall # doesn't compile yet; see TODO
 SUBDIR+=	rep-gtk2
 SUBDIR+=	resourceext
+SUBDIR+=	ripole
 SUBDIR+=	rlab
 SUBDIR+=	rlpr
 SUBDIR+=	rosegarden-current
