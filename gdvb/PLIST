@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/12 12:46:48 poppnk Exp $
+bin/gdvb
+share/gdvb/gdvb.jar
+share/gdvb/icons/cfg.png
+share/gdvb/icons/dir.png
+share/gdvb/icons/gdvb.png
+share/gdvb/icons/sat.png
+share/gdvb/icons/sch.png
+@dirrm share/gdvb/icons
+@dirrm share/gdvb
