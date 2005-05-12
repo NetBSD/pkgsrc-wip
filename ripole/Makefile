@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/10 21:28:18 yeled Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/12 01:18:09 yeled Exp $
 #
 
 DISTNAME=		ripole-0.1.4
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
-BUILD_TARGET=
+BUILD_TARGET=		default
 
 do-configure: # empty
 
