@@ -1,8 +1,0 @@
-pkgsrcdir		/usr/pkgsrc
-pkg_dbdir		/var/db/pkg
-cvs_mirrors		:pserver:anoncvs@anoncvs.fr.netbsd.org:/cvsroot
-ftp_mirrors		ftp://ftp.fr.netbsd.org/pub/NetBSD
-pkg_path		ftp://ftp.fr.netbsd.org/pub/NetBSD
-cvs_branch		current
-shell_output	yes
-live_ftp_read_makefiles		no
