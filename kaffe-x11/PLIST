@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/12 17:31:00 jtonio Exp $
+java/kaffe/jre/lib/${MACHINE_ARCH}/libgtkpeer.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libjawt.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libxawt.la
+java/kaffe/lib/awt/font.properties
+@comment in kaffe: @dirrm java/kaffe/lib/awt
+@comment in kaffe: @dirrm java/kaffe/lib
+@comment in kaffe: @dirrm java/kaffe/jre/lib/${MACHINE_ARCH}
