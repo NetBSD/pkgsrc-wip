@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.12 2005/04/13 12:40:25 imilh Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/12 20:01:42 imilh Exp $
 #
 
-DISTNAME=		pkg_select-20050403
+DISTNAME=		pkg_select-20050512
 CATEGORIES=		pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
+MASTER_SITES=	http://imil.net/NetBSD/
 
 MAINTAINER=	imil@gcu.info
+HOMEPAGE=	http://imil.net/
 COMMENT=	Curses based pkgsrc system browser / manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INCOMPAT_CURSES=		NetBSD-1.5* NetBSD-1.6[-_.]* NetBSD-1.6[A-U]-*
-ONLY_FOR_PLATFORM=      NetBSD-*-* FreeBSD-*-* Darwin-*-*
+ONLY_FOR_PLATFORM=      NetBSD-*-* FreeBSD-*-* Darwin-*-* DragonFly-*-*
 
+WRKSRC=			${WRKDIR}/pkg_select
 NO_CONFIGURE=	yes
-NO_CHECKSUM=	yes
 
 INSTALLATION_DIRS=	bin man/man1
 
@@ -24,9 +24,6 @@ PKG_DBDIR?=	/var/db/pkg
 EXAMPLEDIR=	${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=	${EXAMPLEDIR}/${PKGBASE}.conf.example	\
 			${PKG_SYSCONFDIR}/${PKGBASE}.conf
-
-do-extract:
-	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pkg_select ${PREFIX}/bin
