@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/05/12 17:22:25 jtonio Exp $
+
+--- config/i386/netbsd1/jit-md.h.orig	2005-04-24 20:01:15.000000000 +0200
++++ config/i386/netbsd1/jit-md.h	2005-04-24 20:01:46.000000000 +0200
+@@ -26,7 +26,7 @@
+ 
+ /* Get the first exception frame from a signal handler */
+ #define	EXCEPTIONFRAME(f, c)						\
+-	(f).retbp = (c)->sc_ebp;					\
+-	(f).retpc = (c)->sc_eip + 1
++       (f).retbp = (c)->uc_mcontext.__gregs[_REG_EBP];                 \
++       (f).retpc = (c)->uc_mcontext.__gregs[_REG_EIP] + 1
+ 
+ #endif
