@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2005/05/13 05:35:44 imilh Exp $
+
+SHA1 (pkg_select-20050512.tar.gz) = 43a28a9ef49a1e06790b863591ce92d87ebaa901
+RMD160 (pkg_select-20050512.tar.gz) = 7446950dc2d2e9c5ca53d6ee610eea63dd84a206
+Size (pkg_select-20050512.tar.gz) = 45773 bytes
