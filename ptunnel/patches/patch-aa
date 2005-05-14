@@ -1,0 +1,21 @@
+--- Makefile.orig	2005-04-17 17:06:46.000000000 +0200
++++ Makefile	2005-05-14 04:39:52.315452648 +0200
+@@ -1,13 +1,13 @@
+ # Makefile for the pingtunnel utility
+ # (c) 2004-2005 Daniel Stødle, daniels@stud.cs.uit.no
+ 
+-CC	 		= gcc
+-CFLAGS		= -Wall -g
+-LDOPTS		= -lpthread -lpcap
++CC	 	?= gcc
++CFLAGS		?= -Wall -g
++LDOPTS		+= -lpthread -lpcap
+ PT_OBJS		= ptunnel.o md5.o
+-prefix		= /usr
++prefix		= ${PREFIX}
+ bindir		= $(prefix)/bin
+-mandir		= $(prefix)/share/man/man8
++mandir		= $(prefix)/man/man8
+ 
+ all: ptunnel
+ 
