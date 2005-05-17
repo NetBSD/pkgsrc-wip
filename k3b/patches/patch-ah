@@ -1,0 +1,46 @@
+$NetBSD: patch-ah,v 1.1 2005/05/17 21:36:21 martijnb Exp $
+
+--- src/rip/k3bdvdripperwidget.cpp.orig	2004-09-27 09:18:03.000000000 +0200
++++ src/rip/k3bdvdripperwidget.cpp
+@@ -52,6 +52,7 @@
+ #include <kmessagebox.h>
+ #include <kcombobox.h>
+ #include <kurlrequester.h>
++#include <config.h>
+ 
+ // OS determination and specific includes. Unsupported systems
+ // will fail on the statfs() call below. Per-OS support is as
+@@ -60,10 +61,14 @@
+ //	FreeBSD	- kde@freebsd.org or groot@kde.org
+ #include <qglobal.h>
+ 
+-#ifdef Q_OS_LINUX
++#if defined(Q_OS_LINUX) || defined(HAVE_SYS_STATFS_H)
+ #include <sys/vfs.h>
+ #endif
+ 
++#ifdef HAVE_SYS_STATVFS_H
++#include <sys/statvfs.h>
++#endif
++
+ #ifdef Q_OS_FREEBSD
+ #include <sys/param.h>
+ #include <sys/mount.h>
+@@ -241,8 +246,17 @@ void K3bDvdRipperWidget::slotSetDependDi
+         tmp = p.left( index+1 );
+         kdDebug() << "(K3bDvdRipperWidget) new directory. Check existing: " << tmp << endl;
+     }
++#ifdef HAVE_STATVFS
++    struct statvfs fs;
++    ::statvfs( QFile::encodeName( tmp ), &fs );
++#else
++  #ifdef HAVE_STATFS
+     struct statfs fs;
+     ::statfs( QFile::encodeName( tmp ), &fs );
++  #else
++    #error "No statfs, no statvfs? Help!"
++  #endif
++#endif
+     unsigned int kBfak = (unsigned int)(fs.f_bsize/1024);
+     slotFreeTempSpace( tmp, fs.f_blocks*kBfak, (fs.f_blocks-fs.f_bfree)*kBfak, fs.f_bavail*kBfak );
+ }
