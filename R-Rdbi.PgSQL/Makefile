@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/18 22:44:17 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/18 09:15:00 rillig Exp $
 #
 
 CATEGORIES=	databases math
@@ -26,7 +26,7 @@ post-patch:
 	${SED} -e 's:@PG_LIB_PATH@:${PREFIX}/lib:g' ${WRKSRC}/configure > ${WRKSRC}/configure.tmp
 	${MV} ${WRKSRC}/configure.tmp ${WRKSRC}/configure
 	${CHMOD} 755 ${WRKSRC}/configure
-	
+
 .include "../../math/R/Makefile.extension"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

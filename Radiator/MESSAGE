@@ -1,19 +1,19 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/06/22 11:58:59 cjep Exp $
+$NetBSD: MESSAGE,v 1.2 2005/05/18 09:16:43 rillig Exp $
 
-If you plan to use SQL for authentication and/or accouting, install 
+If you plan to use SQL for authentication and/or accouting, install
 databases/p5-DBI and the relevant Perl DBD driver.
 
 If you plan to use MS-CHAP/MS-CHAP2, install security/p5-Digest-MD4.
 
-If you plan to use LDAP for authentication and/or accounting, install 
+If you plan to use LDAP for authentication and/or accounting, install
 databases/p5-perl-ldap.
 
-If you plan to use EAP TLS, TTLS or PEAP for 802.1x authentication, install 
+If you plan to use EAP TLS, TTLS or PEAP for 802.1x authentication, install
 security/p5-Net_SSLeay, security/p5-Digest-HMAC and
 security/p5-Digest-SHA1.
 
-If you plan to use the GUI interface to radpwtst obtain and install 
+If you plan to use the GUI interface to radpwtst obtain and install
 x11/p5-Tk.
 
 ===========================================================================
