@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:09:43 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/18 09:28:33 rillig Exp $
 #
 
 DISTNAME=		nsopenssl-3.0b23-src
@@ -7,7 +7,7 @@ CATEGORIES=             www
 MASTER_SITES=           ${MASTER_SITE_SOURCEFORGE:=aolserver/}
 
 MAINTAINER=		iharding@destinydata.com
-HOMEPAGE=		www.scottg.net
+HOMEPAGE=		http://www.scottg.net/
 COMMENT=		OpenSSL module for aolserver
 
 WRKSRC=                 ${WRKDIR}/${DISTNAME:S/-src//}
