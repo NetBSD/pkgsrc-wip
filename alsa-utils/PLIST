@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/12 22:43:43 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/18 09:23:37 rillig Exp $
 bin/aconnect
 bin/alsamixer
 bin/amidi
@@ -9,8 +9,6 @@ bin/arecord
 bin/arecordmidi
 bin/aseqnet
 bin/iecset
-sbin/alsaconf
-sbin/alsactl
 man/man1/aconnect.1
 man/man1/alsactl.1
 man/man1/alsamixer.1
@@ -23,3 +21,5 @@ man/man1/arecordmidi.1
 man/man1/aseqnet.1
 man/man1/iecset.1
 man/man8/alsaconf.8
+sbin/alsaconf
+sbin/alsactl
