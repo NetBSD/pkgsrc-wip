@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/26 21:39:22 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/18 21:58:59 minskim Exp $
 #
 
 DISTNAME=		firelib-1.0.1
@@ -12,9 +12,9 @@ COMMENT=		Library for predicting fire spread rate, intensity, and more
 WRKSRC=			${WRKDIR}
 
 MAKEFILE=		makefile
+BUILD_TARGET=		fireSim
 
-do-build:
-	cd  ${WRKSRC} && ${MAKE} -f ${MAKEFILE}
+post-build:
 	cd  ${WRKSRC} && ${AR} cru libfire.a fireLib.o
 	cd  ${WRKSRC} && ${RANLIB} libfire.a
 
