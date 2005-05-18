@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:09:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/18 09:08:10 rillig Exp $
 
 DISTNAME=		Coin-2.2.1
 CATEGORIES=		graphics
@@ -21,7 +21,7 @@ USE_X11=		yes
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"
-CONFIGURE_ARGS+=        --with-pthreads=yes --enable-threadsafe 
+CONFIGURE_ARGS+=        --with-pthreads=yes --enable-threadsafe
 .endif
 
 .include "../../mk/bsd.pkg.mk"
