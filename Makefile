@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1780 2005/05/18 16:09:17 awrede Exp $
-# $NetBSD: Makefile,v 1.1780 2005/05/18 16:09:17 awrede Exp $
+# $Id: Makefile,v 1.1781 2005/05/18 22:28:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1781 2005/05/18 22:28:15 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -196,6 +196,7 @@ SUBDIR+=	editline
 SUBDIR+=	edje
 SUBDIR+=	eic
 SUBDIR+=	electricsheep
+SUBDIR+=	emacs-jabber
 SUBDIR+=	emboss
 SUBDIR+=	emboss-base
 SUBDIR+=	emboss-domainatrix
@@ -258,6 +259,7 @@ SUBDIR+=	gdal-docs
 SUBDIR+=	gdal-lib
 SUBDIR+=	gdam
 SUBDIR+=	gde
+SUBDIR+=	gdvb
 SUBDIR+=	geeklog
 SUBDIR+=	geos
 SUBDIR+=	geos2
@@ -396,6 +398,8 @@ SUBDIR+=	jemboss-standalone
 SUBDIR+=	jgloss
 SUBDIR+=	jumpnbump
 SUBDIR+=	k3b
+SUBDIR+=	kaffe
+SUBDIR+=	kaffe-x11
 SUBDIR+=	kahakai
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
@@ -590,6 +594,7 @@ SUBDIR+=	ncbi-lib
 SUBDIR+=	ncc
 SUBDIR+=	ncps
 SUBDIR+=	neb-cd512
+SUBDIR+=	neb-hdtoolbox
 SUBDIR+=	neb-wipe
 SUBDIR+=	nehe-opengl-tutorials
 SUBDIR+=	nestra
@@ -702,6 +707,7 @@ SUBDIR+=	pkg_install-testing
 SUBDIR+=	pkg_select
 SUBDIR+=	planner
 SUBDIR+=	plugger
+SUBDIR+=	png2ico
 SUBDIR+=	pngnq
 SUBDIR+=	pointless
 SUBDIR+=	poppler
@@ -728,6 +734,7 @@ SUBDIR+=	proxychains
 SUBDIR+=	prozilla
 SUBDIR+=	prtunnel
 SUBDIR+=	pts
+SUBDIR+=	ptunnel
 SUBDIR+=	pwsafe
 SUBDIR+=	pxlib
 SUBDIR+=	pxview
