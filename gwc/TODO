@@ -5,3 +5,6 @@ o A test for lrint is needed, maybe a config.h.in too and the necessary
   configure changes.
 o Testing on other platforms needed.
 o There might be something to do about gnome-core dependency
+
+Needs to be updated to the gnome2 version, since gnome-core
+has been removed from pkgsrc.
