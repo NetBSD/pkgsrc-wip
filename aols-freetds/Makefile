@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:09:43 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/18 09:26:57 rillig Exp $
 #
 
 DISTNAME=		nsfreetds-0.4-src
@@ -7,7 +7,7 @@ CATEGORIES=             www
 MASTER_SITES=           ${MASTER_SITE_SOURCEFORGE:=aolserver/}
 
 MAINTAINER=		iharding@destinydata.com
-HOMEPAGE=		www.aolserver.com
+HOMEPAGE=		http://www.aolserver.com/
 COMMENT=		FreeTDS database access module for aolserver
 
 WRKSRC=                 ${WRKDIR}/${DISTNAME:S/-src//}
