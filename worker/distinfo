@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/19 13:02:14 poppnk Exp $
+
+SHA1 (worker-2.10.0.tar.bz2) = 3d5ac4ff1474c4dbf221dd74e6f5940b1e09c1ec
+RMD160 (worker-2.10.0.tar.bz2) = 99e74d49230970ba51bf438393bae4b3b4b40208
+Size (worker-2.10.0.tar.bz2) = 559736 bytes

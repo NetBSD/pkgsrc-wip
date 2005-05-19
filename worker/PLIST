@@ -1,0 +1,38 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/19 13:02:14 poppnk Exp $
+bin/worker
+man/man1/worker.1
+share/pixmaps/WorkerIcon.xpm
+share/pixmaps/WorkerIcon16.xpm
+share/pixmaps/WorkerIcon32.xpm
+share/pixmaps/WorkerIcon48.xpm
+share/worker/catalogs/deutsch.catalog
+share/worker/catalogs/deutsch.catalog.coms
+share/worker/catalogs/deutsch.catalog.flags
+share/worker/catalogs/francais.catalog
+share/worker/catalogs/francais.catalog.coms
+share/worker/catalogs/francais.catalog.flags
+share/worker/catalogs/italiano.catalog
+share/worker/catalogs/italiano.catalog.coms
+share/worker/catalogs/italiano.catalog.flags
+share/worker/catalogs/polski.catalog
+share/worker/catalogs/polski.catalog.coms
+share/worker/catalogs/polski.catalog.flags
+share/worker/catalogs/russian.catalog
+share/worker/catalogs/russian.catalog.coms
+share/worker/catalogs/russian.catalog.flags
+share/worker/config-deutsch
+share/worker/config-english
+share/worker/scripts/aa.pattern_rename.sh
+share/worker/scripts/cd2flac.sh
+share/worker/scripts/cd2mp3.sh
+share/worker/scripts/cd2ogg.sh
+share/worker/scripts/cd2wav.sh
+share/worker/scripts/displaywrapper_worker
+share/worker/scripts/xeditor
+share/worker/scripts/xliwrapper_worker
+@dirrm share/worker/scripts
+@dirrm share/worker/catalogs
+@dirrm share/worker
+@dirrm share/pixmaps
+@exec ${MKDIR} %D/share/desktop-directories
+@dirrm share/desktop-directories

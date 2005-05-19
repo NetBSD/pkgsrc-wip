@@ -1,0 +1,10 @@
+Worker is a file manager for X-Window on UNIX.
+The dirs and files are shown in two independent panels.
+
+features:
+- runs directly under X11, so it's fast and has low requirements.
+- completely graphical.
+- many built-in functions.
+- With the so called "own command" any external program can be integrated
+  into the GUI and they can also use the selected files to work with them.
+- Support for a virtual file system to enter archives, ftp sites, ...
