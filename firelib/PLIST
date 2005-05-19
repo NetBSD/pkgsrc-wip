@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/19 12:56:23 minskim Exp $
-bin/fireSim
-include/fireLib.h
-lib/libfire.a
-share/doc/firelib/firelib.ps
-share/doc/firelib/license.txt
-@dirrm share/doc/firelib
