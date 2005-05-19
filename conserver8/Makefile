@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/18 16:06:32 awrede Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/19 23:34:10 awrede Exp $
 #
 
 DISTNAME=	conserver-8.1.11
@@ -26,12 +26,16 @@ CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/conserver
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.conserver8
-PKG_SUPPORTED_OPTIONS=  PAM
+PKG_SUPPORTED_OPTIONS=  PAM UDS
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:MPAM)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=        --with-pam
+.endif
+
+.if !empty(PKG_OPTIONS:MUDS)
+CONFIGURE_ARGS+=        --with-uds
 .endif
 
 BUILD_DEFS+=	CONSERVER_DEFAULTPORT CONSERVER_DEFAULTHOST
