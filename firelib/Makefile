@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2005/05/19 12:51:41 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/19 12:52:31 minskim Exp $
 #
 
 DISTNAME=		firelib-1.0.1
 CATEGORIES=		wip
-MASTER_SITES=		http://fire.org/firelib//
+MASTER_SITES=		http://fire.org/firelib/
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://fire.org/firelib//
+HOMEPAGE=		http://fire.org/firelib/
 COMMENT=		Library for predicting fire spread rate, intensity, and more
 
 WRKSRC=			${WRKDIR}
