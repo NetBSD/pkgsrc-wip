@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/18 21:58:59 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/19 12:51:41 minskim Exp $
 #
 
 DISTNAME=		firelib-1.0.1
@@ -22,8 +22,8 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/libfire.a ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/fireLib.h ${PREFIX}/include
 	${INSTALL_PROGRAM} ${WRKSRC}/fireSim ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/firelib/
-	${INSTALL_DATA} ${WRKSRC}/firelib.ps ${PREFIX}/share/doc/firelib/firelib.ps
-	${INSTALL_DATA} ${WRKSRC}/license.txt ${PREFIX}/share/doc/firelib/license.txt
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/firelib
+	${INSTALL_DATA} ${WRKSRC}/firelib.ps ${PREFIX}/share/doc/firelib
+	${INSTALL_DATA} ${WRKSRC}/license.txt ${PREFIX}/share/doc/firelib
 
 .include "../../mk/bsd.pkg.mk"
