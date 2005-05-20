@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/20 20:11:06 rillig Exp $
 
 DISTNAME=	opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
 PKGNAME=	opera-${OPERA_PKG_VERSION}beta${OPERA_VER_DATE}
@@ -92,7 +92,7 @@ PLIST_SUBST+=		OPERA_PKG_VERSION=${OPERA_PKG_VERSION}
 
 SUBST_CLASSES+=		opera7
 SUBST_STAGE.opera7=	post-build
-SUBST_FILES.opera7=	${WRKSRC}/man/opera.1
+SUBST_FILES.opera7=	man/opera.1
 SUBST_SED.opera7=	-e 's,/usr/,${PREFIX}/,g'
 .endif
 
