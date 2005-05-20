@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/05/17 21:36:21 martijnb Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/20 12:09:19 martijnb Exp $
 #
 
-DISTNAME=		k3b-0.11.23
+DISTNAME=		k3b-0.11.24
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=k3b/}
 EXTRACT_SUFX=		.tar.bz2
