@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/05/21 20:10:26 christian_gall Exp $
+
+--- mutt_libesmtp.c.orig	2005-05-21 20:36:57.000000000 +0200
++++ mutt_libesmtp.c
+@@ -196,7 +196,7 @@ int mutt_invoke_libesmtp (ADDRESS * from
+   if (SmtpAuthUser) {
+     if ((authctx = auth_create_context ()) == NULL)
+       MSGFAIL ("auth_create_context failed");
+-    auth_set_mechanism_flags (authctx, AUTH_PLUGIN_PLAIN, 0);
++    auth_set_mechanism_flags (authctx, AUTH_PLUGIN_EXTERNAL, 0);
+     auth_set_interact_cb (authctx, _mutt_libesmtp_auth_interact, NULL);
+ 
+     if (!smtp_auth_set_context (session, authctx))

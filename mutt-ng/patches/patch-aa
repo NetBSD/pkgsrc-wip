@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1 2005/05/21 20:10:26 christian_gall Exp $
+
+--- smime_keys.pl.orig	2005-02-01 14:10:54.000000000 +0100
++++ smime_keys.pl
+@@ -1,4 +1,4 @@
+-#! /usr/bin/perl -w
++#!/usr/bin/perl -w
+ 
+ # Copyright (C) 2001,2002 Oliver Ehli <elmy@acm.org>
+ # Copyright (C) 2001 Mike Schiraldi <raldi@research.netsol.com>

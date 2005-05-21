@@ -1,0 +1,12 @@
+# $Id: TODO,v 1.1 2005/05/21 20:10:26 christian_gall Exp $
+
+* more tests
+* patch-ab is to disable AUTH PLAIN and use CRAM-MD5 with
+  libesmtp. Works for me, but should be discussed with
+  muttng developers.
+* maybe the includes are not correct for all possible
+  options.
+
+
+tested on:
+	* NetBSD 3.0_BETA
