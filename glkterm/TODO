@@ -1,3 +1,0 @@
-build shared lib
-fix Make.glkterm to include correct -L and -l (depending on curses used)
-test on >=1.6M (native curses with halfdelay)
