@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/19 23:34:10 awrede Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/22 18:33:37 awrede Exp $
 #
 
 DISTNAME=	conserver-8.1.11
@@ -23,10 +23,9 @@ CONFIGURE_ARGS+=	--with-port=${CONSERVER_DEFAULTPORT}
 CONFIGURE_ARGS+=	--with-regex
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/conserver
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.conserver8
-PKG_SUPPORTED_OPTIONS=  PAM UDS
+PKG_SUPPORTED_OPTIONS=  NOSSL PAM UDS
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:MPAM)
@@ -38,6 +37,12 @@ CONFIGURE_ARGS+=        --with-pam
 CONFIGURE_ARGS+=        --with-uds
 .endif
 
+.if !empty(PKG_OPTIONS:MNOSSL)
+CONFIGURE_ARGS+=	--without-openssl
+.else
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+. include "../../security/openssl/buildlink3.mk"
+.endif
 BUILD_DEFS+=	CONSERVER_DEFAULTPORT CONSERVER_DEFAULTHOST
 
 RCD_SCRIPTS=	conserver8
@@ -66,5 +71,4 @@ post-install:
 	done
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
