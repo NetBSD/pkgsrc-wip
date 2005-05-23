@@ -1,4 +1,4 @@
 The NCBI sequence databases and software tools are designed around
 a particular model of biological sequence data. This package contains
-various libraries and include files of NCBI, which can be used by 
+various libraries and include files of NCBI, which can be used by
 programs like blast, clustalx.

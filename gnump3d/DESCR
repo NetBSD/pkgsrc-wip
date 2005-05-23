@@ -1,4 +1,4 @@
-GNUMP3d is a streaming server for MP3's, OGG vorbis files, movies and 
+GNUMP3d is a streaming server for MP3's, OGG vorbis files, movies and
 other media. It is designed to be:
 
     * Small, stable, portable, self-contained, and secure.

@@ -2,4 +2,4 @@ Frontier::RPC implements UserLand Software's XML RPC (Remote
 Procedure Calls using Extensible Markup Language).  Frontier::RPC
 includes both a client module for making requests to a server and
 a daemon module for implementing servers.  Frontier::RPC uses RPC2
-format messages. 
+format messages.

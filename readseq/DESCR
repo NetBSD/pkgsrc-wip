@@ -1,6 +1,6 @@
 readseq is a widely used tool to convert various sequence
 data formats written by D.G. Gilbert at Indiana University,
-Bloomington. Besides the interconversion to make the 
-sequences palatable for a specific application, readseq 
+Bloomington. Besides the interconversion to make the
+sequences palatable for a specific application, readseq
 can be used to extract the raw sequence from any supported
 database format.

@@ -7,4 +7,4 @@ PySNMP is written entirely in Python and is self-sufficient in terms
 that it does not rely on any third party tool (it is not a wrapper!).
 
 The PySNMP package is distributed under terms and conditions of BSD-style
-license. 
+license.

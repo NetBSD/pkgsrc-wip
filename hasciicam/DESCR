@@ -1,8 +1,8 @@
-HasciiCam makes it possible to have live ascii video on the web. It captures 
-video from a tv card and renders it into ascii, formatting the output into an 
-html page with a refresh tag or in a live ascii window or in a simple text 
-file as well, giving the possiblity to anybody that has a bttv card, a linux 
-box and a cheap modem line to show a live asciivideo feed that can be 
+HasciiCam makes it possible to have live ascii video on the web. It captures
+video from a tv card and renders it into ascii, formatting the output into an
+html page with a refresh tag or in a live ascii window or in a simple text
+file as well, giving the possiblity to anybody that has a bttv card, a linux
+box and a cheap modem line to show a live asciivideo feed that can be
 browsable without any need for plugin, java etc.
 
 Features:
@@ -11,4 +11,4 @@ Features:
  - customizable refresh rate
  - amazing live mode
  - gives you the coolest .plan you ever had
- - draws nifty symbols on your face 
+ - draws nifty symbols on your face

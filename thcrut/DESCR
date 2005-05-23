@@ -6,8 +6,8 @@ address mask request, OS fingerprintings, high-speed host discovery, ...
 THC-RUT now comes with a new OS Fingerprint implementation. It gathers
 tcp stack informations, banners, open/closed port characteristics and
 timing values and tosses them through a perl regular expression matrix to
-determine the OS with high accuracy. The tool is capable of discovering 
-a Class B network within 10 minutes. Banner information are taken from 
-(amoung others) SNMP replies, telnetd (NVT) negotiation options, 
+determine the OS with high accuracy. The tool is capable of discovering
+a Class B network within 10 minutes. Banner information are taken from
+(amoung others) SNMP replies, telnetd (NVT) negotiation options,
 generic Banner Matching, HTTP-Server version, DCE request and tcp options.
 

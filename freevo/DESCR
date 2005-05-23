@@ -6,15 +6,15 @@ TV+remote, as well as on a regular desktop computer using the monitor and
 keyboard.
 
 Current features
-- Watching TV, with TV Guide (using XMLTV). 
-- TV recording, both immediate mode and a background schedule task. 
-- Playing Movies (AVI, MPEG, Quicktime, Ogg, etc.) and DVDs. 
-- Playing Music (MP3, Ogg, AAC, WMA). 
-- Playing audio CD's with CDDB support. 
-- Viewing Pictures. 
-- Skins are configurable using XML files. 
-- Movie and Music file info using XML files. 
-- Preliminary Mame support. 
-- Web interface for TV recording. 
-- Easy plugin based interface for adding new features 
+- Watching TV, with TV Guide (using XMLTV).
+- TV recording, both immediate mode and a background schedule task.
+- Playing Movies (AVI, MPEG, Quicktime, Ogg, etc.) and DVDs.
+- Playing Music (MP3, Ogg, AAC, WMA).
+- Playing audio CD's with CDDB support.
+- Viewing Pictures.
+- Skins are configurable using XML files.
+- Movie and Music file info using XML files.
+- Preliminary Mame support.
+- Web interface for TV recording.
+- Easy plugin based interface for adding new features
 - Toolbar with email notification, clock and weather plugins

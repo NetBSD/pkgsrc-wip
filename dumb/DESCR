@@ -1,28 +1,28 @@
 DUMB is an IT, XM, S3M and MOD player library developed by
 Robert J Ohannessian and Ben Davis.
-* Freeware 
+* Freeware
 * Supports playback of Impulse Tracker (IT), Scream Tracker 3 (S3M),
-  Fast Tracker 2 (XM) and Amiga Module (MOD) files 
+  Fast Tracker 2 (XM) and Amiga Module (MOD) files
 * Faithful to the original trackers, especially IT; if it plays your module
   wrongly, please tell me so I can fix the bug! (But please don't complain
-  about differences between DUMB and ModPlug Tracker) 
-* Accurate support for low-pass resonant filters for IT files 
-* Very accurate timing and pitching; completely deterministic playback 
-* Click removal 
-* Facility to embed music files in other files (e.g. Allegro datafiles) 
+  about differences between DUMB and ModPlug Tracker)
+* Accurate support for low-pass resonant filters for IT files
+* Very accurate timing and pitching; completely deterministic playback
+* Click removal
+* Facility to embed music files in other files (e.g. Allegro datafiles)
 * Three resampling quality settings: aliasing, linear interpolation and
-  cubic interpolation 
+  cubic interpolation
 * Number of samples playing at once can be limited to reduce processor
-  usage, but samples will come back in when other louder ones stop 
+  usage, but samples will come back in when other louder ones stop
 * All notes will be present and correct even if you start a piece of music
-  in the middle 
+  in the middle
 * Fast seeking to any point before the music first loops (seeking time
-  increases beyond this point) 
+  increases beyond this point)
 * Audio generated can be used in any way; DUMB does not necessarily send it
-  straight to a sound output system 
+  straight to a sound output system
 * Makefile provided for DJGPP, MinGW, Linux, BeOS and Mac OS X; project
   file provided for MSVC 6 (please contact me if you'd like to submit or
   request a makefile for a new platform; the code itself should port
-  anywhere that has a 32-bit C compiler) 
+  anywhere that has a 32-bit C compiler)
 * Can be used with Allegro, can be used without (if you'd like to make DUMB
-  more approachable to people who aren't using Allegro, please contact me) 
+  more approachable to people who aren't using Allegro, please contact me)

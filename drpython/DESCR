@@ -20,4 +20,4 @@ Features:
   Styling Built In Folding, Drag and Drop, Brace Matching
 * Uses a Custom FindReplace Dialog that supports (beyond the default
   wxWindows dialogs): In Selection, From Cursor, Prompt on Replace, Regular
-  Expressions 
+  Expressions

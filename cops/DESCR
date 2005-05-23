@@ -1,14 +1,14 @@
-Welcome! This is a quick intro to COPS (Computer Oracle and Password System.) 
-COPS is a collection of security tools that are designed specifically to aid 
+Welcome! This is a quick intro to COPS (Computer Oracle and Password System.)
+COPS is a collection of security tools that are designed specifically to aid
 the typical UNIX systems administrator, programmer, operator, or consultant
 in the oft neglected area of computer security.
 
-The package can be broken down into three key parts. The first is the actual 
-set of programs that attempt to automate security checks that are often 
-performed manually (or perhaps with self written short shell scripts or 
-programs) by a systems administrator. The second part is the documentation, 
-which details how to set up, operate, and to interpret any results given by 
-the programs. Finally, COPS is an evolving beast. It includes a list of 
-possible extensions that might appear in future releases, as well as pointers 
-to other works in UNIX security that could not be included at this time, due 
-to space or other restrictions. 
+The package can be broken down into three key parts. The first is the actual
+set of programs that attempt to automate security checks that are often
+performed manually (or perhaps with self written short shell scripts or
+programs) by a systems administrator. The second part is the documentation,
+which details how to set up, operate, and to interpret any results given by
+the programs. Finally, COPS is an evolving beast. It includes a list of
+possible extensions that might appear in future releases, as well as pointers
+to other works in UNIX security that could not be included at this time, due
+to space or other restrictions.

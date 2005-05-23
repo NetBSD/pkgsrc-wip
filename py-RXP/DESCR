@@ -9,4 +9,4 @@ pyRXP is a wrapper around this which constructs a lightweight in-memory
 define in Python, and it is constructed entirely in C code, resulting in
 unprecedented speed. It is a core part of ReportLab's forthcoming XML
 toolkit, which aims to offer simple, fast and pythonic tools for common XML
-processing tasks. 
+processing tasks.

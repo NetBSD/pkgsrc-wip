@@ -1,4 +1,4 @@
-BioRuby project aims to implement integrated environment for Bioinformatics 
-by using Ruby, which is the object-oriented interpreted scripting language. 
-It supports classes for sequence (translation, splicing, window search etc), 
+BioRuby project aims to implement integrated environment for Bioinformatics
+by using Ruby, which is the object-oriented interpreted scripting language.
+It supports classes for sequence (translation, splicing, window search etc),
 for applications (homology search), and more.

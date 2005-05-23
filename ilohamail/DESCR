@@ -1,5 +1,5 @@
 IlohaMail (pronounced: e-lo-ha-mail) is a light weight yet full featured
-multilingual webmail program that is easy to use and install. It runs on a 
-stock build of PHP, and does not require databases (although database support 
-is available) or the IMAP library (it is powered by a custom IMAP/POP3 
+multilingual webmail program that is easy to use and install. It runs on a
+stock build of PHP, and does not require databases (although database support
+is available) or the IMAP library (it is powered by a custom IMAP/POP3
 library).

@@ -1,18 +1,18 @@
 From project's WWW page:
 
 SuperKaramba is, in simple terms, a tool that allows you to easily create
-interactive eye-candy on your KDE desktop. 
+interactive eye-candy on your KDE desktop.
 
 How does it work?
 
 Theme writers create themes, or text files that define their widget. Then,
 they can optionally add python scripting to make their widget interactive.
-The possibilities are endless! 
+The possibilities are endless!
 
-Here are just some examples of the things that can be done: 
+Here are just some examples of the things that can be done:
 * Display system information such as CPU Usage, MP3 playing, etc.
 * Create cool custom toolbars that work any way imaginable
 * Create little games or virtual pets that live on your desktop
 * Display information from the internet, such as weather and headlines
 
-The possibilities really are endless! 
+The possibilities really are endless!

@@ -1,7 +1,7 @@
-A disassembler -- or, more appropriately, a disassembly environment. 
-The idea is that you have an interpreter, much as you would in Perl 
-or Python, which allows you to load files, disassemble them, dump 
-the disassembly, write/run macros, and various other operations. The 
-x86 instruction disassembler written for this project has been packaged 
-separately as libdisasm, and is intended to be used in other open source 
+A disassembler -- or, more appropriately, a disassembly environment.
+The idea is that you have an interpreter, much as you would in Perl
+or Python, which allows you to load files, disassemble them, dump
+the disassembly, write/run macros, and various other operations. The
+x86 instruction disassembler written for this project has been packaged
+separately as libdisasm, and is intended to be used in other open source
 projects.

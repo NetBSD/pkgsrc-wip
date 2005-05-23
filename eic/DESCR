@@ -1,8 +1,8 @@
-EiC is a freely available C language interpreter in both 
-source and binary form. EiC allows you to write C programs, 
-and then "execute" them as if they were a script (like a Perl 
-script or a shell script). You can even embed EiC in your 
-own programs, allowing your application to have a "scripting" 
-language that is syntactically equivalent to C. It is also 
-possible to let an EiC "script" call compiled library code and 
-for compiled code to make callbacks to EiC user defined functions. 
+EiC is a freely available C language interpreter in both
+source and binary form. EiC allows you to write C programs,
+and then "execute" them as if they were a script (like a Perl
+script or a shell script). You can even embed EiC in your
+own programs, allowing your application to have a "scripting"
+language that is syntactically equivalent to C. It is also
+possible to let an EiC "script" call compiled library code and
+for compiled code to make callbacks to EiC user defined functions.

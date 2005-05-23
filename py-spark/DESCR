@@ -1,5 +1,5 @@
-Spark is a powerful and general parser/compiler 
-framework written in Python. In some respects, 
-Spark offers more than SimpleParse or other Python 
-parsers. Being pure Python, however, it is also 
-slower. 
+Spark is a powerful and general parser/compiler
+framework written in Python. In some respects,
+Spark offers more than SimpleParse or other Python
+parsers. Being pure Python, however, it is also
+slower.

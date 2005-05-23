@@ -7,7 +7,7 @@ window managers.
 
 What Can It Do Now?
 
-    * Add per-workspace desktop icons and panels to Fluxbox by integrating 
+    * Add per-workspace desktop icons and panels to Fluxbox by integrating
 	  tools like Rox Filer and Idesk.
     * Decorate each workspace with different wallpaper.
     * Manage your startup applications.

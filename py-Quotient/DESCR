@@ -1,10 +1,10 @@
 Quotient is an open source product that combines a multi-protocol messaging
 server with tools for information management and retrieval.
- 
+
 Quotient brings together your email, IM/IRC and IP telephony.
- 
+
 Quotient is a multi-user server and can currently step in as:
- 
+
 * Simple to install email server
 * Email consolidation hub
 * Cleansing of email using whitelisting and Bayesian classification
@@ -12,7 +12,7 @@ Quotient is a multi-user server and can currently step in as:
 * Google-like index of your email archive
 * Private voice over IP telephony exchange
 * Information extraction
- 
+
 Quotient is alpha software, so you should not depend on it for any of your
 email. Quotient is non-destructive and will always leave messages intact on
 your email. server. Quotient never deletes your email.

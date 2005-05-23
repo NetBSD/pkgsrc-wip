@@ -1,5 +1,5 @@
 MPC (MusePack) is a new format for compressing audio data, like mp3 or ogg.
-  
+
 This package contains a MPC decoder, that allows you to listen or uncompress
 MPC audio data.
 

@@ -1,11 +1,11 @@
-Manatee is a web-based gene evaluation and genome annotation tool. 
-Manatee can store and view annotation for prokaryotic and eukaryotic 
-genomes. The Manatee interface allows biologists to quickly identify 
-genes and make high quality functional assignments, such as GO 
-classifications, using search data, paralogous families, and 
+Manatee is a web-based gene evaluation and genome annotation tool.
+Manatee can store and view annotation for prokaryotic and eukaryotic
+genomes. The Manatee interface allows biologists to quickly identify
+genes and make high quality functional assignments, such as GO
+classifications, using search data, paralogous families, and
 annotation suggestions generated from automated analysis.
-Manatee is written in Perl and run under the CGI area of a web server, 
-such as Apache. Manatee also requires at least one Mysql (or Sybase) 
-project database and associated search files. The project databases 
-use a data model and schema developed at TIGR for representing 
+Manatee is written in Perl and run under the CGI area of a web server,
+such as Apache. Manatee also requires at least one Mysql (or Sybase)
+project database and associated search files. The project databases
+use a data model and schema developed at TIGR for representing
 Eukaryotic or Prokaryotic data.

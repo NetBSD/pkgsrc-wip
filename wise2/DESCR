@@ -1,8 +1,8 @@
-	Wise2 is a package focused on comparisons of bio polymers, commonly DNA 
-sequence and protein sequence. Wise2's particular forte is the comparison 
-of DNA sequence at the level of its protein translation. This comparison 
-allows the simultaneous prediction of say gene structure with homology 
+	Wise2 is a package focused on comparisons of bio polymers, commonly DNA
+sequence and protein sequence. Wise2's particular forte is the comparison
+of DNA sequence at the level of its protein translation. This comparison
+allows the simultaneous prediction of say gene structure with homology
 based alignment.
-	Wise2 also contains other algorithms, such as the venerable Smith-Waterman 
-algorithm, or more modern ones such as Stephen Altschul's generalised gap 
+	Wise2 also contains other algorithms, such as the venerable Smith-Waterman
+algorithm, or more modern ones such as Stephen Altschul's generalised gap
 penalties, or even experimental ones developed in house, such as dba.

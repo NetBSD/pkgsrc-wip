@@ -3,15 +3,15 @@ lot of heat. This is mainly because it consumes a lot of electric power.
 However, there is an another reason: Generally CPU goes into power-save mode
 when it is in the idle state, but in almost all the mother boards this is
 prohibited in the case of Athlon/Duron mother boards in their original BIOS
-settings. 
+settings.
 
 This software changes the PCI configuration data of the chipset (north
 bridge), and allow Athlon/Duron to go into power-save mode. The principle is
 very simple if you have information. Actually, you can do exactly the same
 thing as this software manually by using the "pciconf" command in FreeBSD.
- 
+
 Supported chipsets:
    AMD 751/761/762
    Sis 730, 735
    VIA KT266/A/333
-   VIA KT133/A/KX133 
+   VIA KT133/A/KX133

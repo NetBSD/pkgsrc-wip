@@ -1,7 +1,7 @@
 This is my program ncps. When you run it, you basically see the same thing that
-you see when you run ps, except for the fact that you can now move up and down 
-a highlight to the process you want to kill. It can also display processes in 
-tree form, and you can search for processes that contain a user specified 
+you see when you run ps, except for the fact that you can now move up and down
+a highlight to the process you want to kill. It can also display processes in
+tree form, and you can search for processes that contain a user specified
 string.
 
 festures:

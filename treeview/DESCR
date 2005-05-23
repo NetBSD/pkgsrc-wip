@@ -1,4 +1,4 @@
-TREEVIEW is a program for displaying and printing phylogenies. The program 
-reads most NEXUS tree files (such as those produced by PAUP and COMPONENT) 
-and PHYLIP style tree files (including those produced by fastDNAml and 
+TREEVIEW is a program for displaying and printing phylogenies. The program
+reads most NEXUS tree files (such as those produced by PAUP and COMPONENT)
+and PHYLIP style tree files (including those produced by fastDNAml and
 CLUSTALW).

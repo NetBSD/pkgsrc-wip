@@ -1,14 +1,14 @@
-Directory administrator is not a comprehensive and technical tool (e.g. 
-Novell ConsoleOne). On the contrary, Directory administrator minimizes 
+Directory administrator is not a comprehensive and technical tool (e.g.
+Novell ConsoleOne). On the contrary, Directory administrator minimizes
 what's shown and maximizes functionality and ease of use.
 
-Directory administrator is built for everyday system management: technical 
-expertise is not mandatory. Not even understanding how an LDAP directory 
-works is needed. Fire it up, create, delete and change your users and groups, 
-and that's it. Features such as type ahead find and keyboard navigation let 
-you quickly locate what you're looking for, while drag-and-drop and multiple 
+Directory administrator is built for everyday system management: technical
+expertise is not mandatory. Not even understanding how an LDAP directory
+works is needed. Fire it up, create, delete and change your users and groups,
+and that's it. Features such as type ahead find and keyboard navigation let
+you quickly locate what you're looking for, while drag-and-drop and multiple
 selections make your job easier,
 
-In tandem with OpenLDAP or any other directory server, you can deploy a 
-solution equivalent to Microsoft's Active Directory, with no proprietary 
+In tandem with OpenLDAP or any other directory server, you can deploy a
+solution equivalent to Microsoft's Active Directory, with no proprietary
 traps, zero licensing fees and using secure, freely distributed software.

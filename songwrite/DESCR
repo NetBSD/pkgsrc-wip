@@ -1,7 +1,7 @@
 Songwrite is a tablature (guitar partition) editor.
 
 Songwrite is coded in Python and uses Tk (Tkinter); it relies on Timidity to
-play midi and on GNU Lilypond for printing. 
+play midi and on GNU Lilypond for printing.
 
 Songwrite was previously known as GTablature. Due to many incompatibilities
 between Gnome 1 and Gnome 2, it is no longer a part of Gnome, and has been

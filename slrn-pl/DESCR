@@ -3,7 +3,7 @@ It supports threads and is highly customizable through S-Lang functions.
 
 Slrn-pl is enchanced slrn version, contains useful functions and macros.
 
-This version support local spool, secure (over SSL) connections and X-Face: 
-headers (under xterm or text console). 
+This version support local spool, secure (over SSL) connections and X-Face:
+headers (under xterm or text console).
 
 X-Face support depends on 'faces' package and is DISABLED for default.

@@ -7,8 +7,8 @@ or software libre, I decided to impelement Pyzor with a new protocol and
 release the entire system as Open Source and software libre.
 
 Since the entire system is released under the GPL,
-people are free to host their own independent servers. 
-Server peering is planned for a future release. 
+people are free to host their own independent servers.
+Server peering is planned for a future release.
 
 For more information on Pyzor see:
 http://pyzor.sourceforge.net/

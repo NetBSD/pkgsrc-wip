@@ -2,14 +2,14 @@ Willow is a content-filtering proxy server. It bears one similarity to the
 many other pieces of software available for web filtering in that it is
 designed to filter web content. That, however, is where the similarities
 end. The differences between Willow and other solutions are significant, and
-these differences make Willow the first really usable internet filter. 
+these differences make Willow the first really usable internet filter.
 
 In addition to being the first web filter to really work, Willow was also
 designed to make life easy on network administrators. To this end Willow
 supports the following:
 * HTTPS tunneling
 * response caching
-* filtering based on any part of the request or response (domain, url, 
+* filtering based on any part of the request or response (domain, url,
   headers, etc.)
 * through-the-web management
 * authentication to a Windows NT/2000 domain

@@ -1,6 +1,6 @@
 Shtoom is a open-source, cross-platform VoIP softphone, implemented in
 Python. As well as the basic phone, the package also includes a number of
-other applications - 
+other applications -
 
  * shtoom - the end-user phone
  * shtam - a simple answering machine/voicemail application

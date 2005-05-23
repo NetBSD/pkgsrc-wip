@@ -7,7 +7,7 @@ gtkpod allows you to
  * Remove songs from the iPod
  * Create and modify playlists
  * Modify ID3 tags -- changes are also updated in the original file (option)
- * Refresh ID3 tags from file 
+ * Refresh ID3 tags from file
  * Write the updated iTunesDB and added songs to your iPod
- * Work offline and synchronize your new playlists / songs with the iPod 
+ * Work offline and synchronize your new playlists / songs with the iPod
    at a later time

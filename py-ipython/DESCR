@@ -1,5 +1,5 @@
 IPython is a free software project (released under the GNU LGPL) which tries
-to: 
+to:
 
 * Provide an interactive shell superior to Python's default. IPython has many
   features for object introspection, system shell access, and its own special
@@ -7,14 +7,14 @@ to:
   to be a very efficient environment both for Python code development and for
   exploration of problems using Python objects (in situations like data
   analysis).
-  
+
 * Serve as an embeddable, ready to use interpreter for your own programs.
   IPython can be started with a single call from inside another program,
   providing access to the current namespace. This can be very useful both for
   debugging purposes and for situations where a blend of batch-processing and
-  interactive exploration are needed. 
+  interactive exploration are needed.
 
 * Offer a flexible framework which can be used as the base environment for
   other systems with Python as the underlying language. Specifically
   scientific environments like Mathematica, IDL and Mathcad inspired its
-  design, but similar ideas can be useful in many fields. 
+  design, but similar ideas can be useful in many fields.

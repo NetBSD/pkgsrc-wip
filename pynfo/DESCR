@@ -2,4 +2,4 @@ Pynfo is a combination IRC info, search, and network relay bot. It supports
 basic fact definition (with persistence between runs) and searching of
 Google and Dict.org. In the network relay mode it "bridges" channels on
 different networks by passing messages between them. It also has a plugin
-interface, allowing users to easily define new commands. 
+interface, allowing users to easily define new commands.

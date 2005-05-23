@@ -1,20 +1,20 @@
 Scapy is a powerful interactive packet manipulation tool, packet generator,
 network scanner, network discovery, packet sniffer, etc. It can for the
 moment replace hping, 85% of nmap, arpspoof, arp-sk, arping, tcpdump,
-tethereal, p0f, .... 
+tethereal, p0f, ....
 
 Scapy uses the python interpreter as a command board. That means that you
 can use directly python language (assign variables, use loops, define
 functions, etc.) If you give a file as parameter when you run scapy, your
 session (variables, functions, intances, ...) will be saved when you leave
-the interpretor, and restored the next time you launch scapy. 
+the interpretor, and restored the next time you launch scapy.
 
 Scapy is not user proof yet. But it is almost reliable. Some more things
-need to be done to support more platforms. 
+need to be done to support more platforms.
 
 The idea is simple. Those kind of tools do two things : sending packets and
 receiving answers. That's what scapy does : you define a set of packets, it
 sends them, receives answers, matches requests with answers and returns a
 list of packet couples (request, answer) and a list of unmatched packets.
 This has the big advantage over tools like nmap or hping that an answer is
-not reduced to (open/closed/filtered), but is the whole packet. 
+not reduced to (open/closed/filtered), but is the whole packet.

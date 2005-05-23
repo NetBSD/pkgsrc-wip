@@ -15,8 +15,8 @@ libGenome can access sequence data in several different file formats:
 3. Reads DNAStar '.SEQ' file format
 4. Reads and writes raw sequence data
 5. Reads ABI file format
- 
-libGenome can manipulate sequence data in the following ways: 
+
+libGenome can manipulate sequence data in the following ways:
 Append, Truncate, Erase subsequences, Insert subsequences, Reverse, Complement,
-Ambiguity sensitive and insensitive comparison, Translate DNA to RNA, DNA to 
+Ambiguity sensitive and insensitive comparison, Translate DNA to RNA, DNA to
 Protein, RNA to DNA, RNA to Protein, and vice versa.

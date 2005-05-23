@@ -1,12 +1,12 @@
 Modern Nameserver Technology
 
 The PowerDNS Nameserver is a modern, advanced and high performance
-authoritative-only nameserver. It is written from scratch and 
-conforms to all the relevant DNS standards documents. 
+authoritative-only nameserver. It is written from scratch and
+conforms to all the relevant DNS standards documents.
 PowerDNS is Open Source.
 
 Backend Architecture
 
 The PowerDNS Nameserver utilizes, a flexible backend architecture
-can access DNS information from any data source. This includes file 
+can access DNS information from any data source. This includes file
 formats, Bind zone files, relational databases or LDAP directories.

@@ -1,13 +1,13 @@
 Features of Dia2code:
--* Reads UML diagrams. 
+-* Reads UML diagrams.
 -* Can handle
 	* UML - Generalization
 	* UML - Realization
    	* UML - Implements
 	* UML - Association
-	* UML - Dependency 
--* Selective code generation 
--* User-defined output directory 
+	* UML - Dependency
+-* Selective code generation
+-* User-defined output directory
 -* Stereotype handling: interfaces, abstract classes
 -* "Import" and "include" based on the parent classes, the type of
    attributes and return type of methods iff they're declared in the

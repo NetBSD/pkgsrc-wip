@@ -6,4 +6,4 @@ profiling, to speed up and reduce memory use of your programs.
 
 The Valgrind distribution includes five tools: two memory error detectors,
 a thread error detector, a cache profiler and a heap profiler. Several other
-tools have been built with Valgrind. 
+tools have been built with Valgrind.

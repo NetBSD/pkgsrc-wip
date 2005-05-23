@@ -10,8 +10,8 @@ concurrency control and recovery. Fundamental characteristics include:
 * Commit/Rollback and recovery support.
 * A variety of underlying storage implementations with configurable
   features and performance characteristics.
-* No intrinsic database size limitations. 
-    
+* No intrinsic database size limitations.
+
 General Technical Notes: The xsdb package is implemented in Python, and the
 server mode requires stackless python. An xsdb database (not in server mode)
 will run using standard C Python or Java Python (Jython), and in particular

@@ -1,4 +1,4 @@
-SMTPScan is a tool to guess which MTA is used, by sending several "special" 
-SMTP requests and by comparing error codes returned with those in the 
-fingerprint database. It does not take into account banners and other 
+SMTPScan is a tool to guess which MTA is used, by sending several "special"
+SMTP requests and by comparing error codes returned with those in the
+fingerprint database. It does not take into account banners and other
 text information, that cannot be trusted, only error code.

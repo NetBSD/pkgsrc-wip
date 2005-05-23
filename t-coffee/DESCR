@@ -1,11 +1,11 @@
-T-Coffee is a multiple sequence alignment package. Given a set of 
+T-Coffee is a multiple sequence alignment package. Given a set of
 sequences (Proteins or DNA), T-Coffee generates a multiple sequence alignment.
-Multiple sequence alignment programs are to align a set of sequences 
+Multiple sequence alignment programs are to align a set of sequences
 previously gathered using other programs such as blast, fasta, etc.
-T-Coffee allows one to combine results obtained with several aligment 
+T-Coffee allows one to combine results obtained with several aligment
 methods. If one alignment is from ClustalW and second is from Dialigni,
 T-Coffee will combine all that information and produce a new multiple
-sequence having the best alignment from these methods. 
+sequence having the best alignment from these methods.
 By default, T-Coffee will compare all your sequences two by two,
-producing a global alignment and a series of local alignments (using lalign). 
+producing a global alignment and a series of local alignments (using lalign).
 The program will then combine all these alignments into amultiple alignment.

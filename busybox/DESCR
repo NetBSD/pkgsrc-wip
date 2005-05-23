@@ -1,5 +1,5 @@
-BusyBox combines tiny versions of many common UNIX 
-utilites into a single small executable. It provides 
+BusyBox combines tiny versions of many common UNIX
+utilites into a single small executable. It provides
 minimalist replacements for most of the utlities you
 usually find in GNU coreutils.
 

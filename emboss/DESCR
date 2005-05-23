@@ -1,10 +1,10 @@
-EMBOSS stands for "The European Molecular Biology Open Software Suite" 
-and is  a new, free Open Source software analysis  package specially 
-developed for the needs of  the molecular biology (e.g. EMBnet) user 
-community. The software automatically copes with data in a variety of 
-formats and even allows transparent retrieval of sequence data from 
-the web. Also, as extensive  libraries are provided with the  package, 
-it is a platform to allow other scientists to  develop and  release 
-software  in true open  source spirit.  EMBOSS also  integrates a  
-range  of currently available packages and tools for sequence analysis 
-into a seamless whole. 
+EMBOSS stands for "The European Molecular Biology Open Software Suite"
+and is  a new, free Open Source software analysis  package specially
+developed for the needs of  the molecular biology (e.g. EMBnet) user
+community. The software automatically copes with data in a variety of
+formats and even allows transparent retrieval of sequence data from
+the web. Also, as extensive  libraries are provided with the  package,
+it is a platform to allow other scientists to  develop and  release
+software  in true open  source spirit.  EMBOSS also  integrates a
+range  of currently available packages and tools for sequence analysis
+into a seamless whole.

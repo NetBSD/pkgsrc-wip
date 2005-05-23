@@ -1,8 +1,8 @@
-A gene finder derived from Glimmer, but developed specifically for 
-eukaryotes. It is based on a dynamic programing algorithm that 
-considers all combinations of possible exons for inclusion in a gene 
-model and chooses the best of these combinations. It uses Interpolated 
-Markov Model(IMM) for selecting the best gene model. The system has 
-been trained for Arabidopsis thaliana, Oryza sativa (rice), and 
-Plasmodium falciparum (the malaria parasite), and should work well on 
+A gene finder derived from Glimmer, but developed specifically for
+eukaryotes. It is based on a dynamic programing algorithm that
+considers all combinations of possible exons for inclusion in a gene
+model and chooses the best of these combinations. It uses Interpolated
+Markov Model(IMM) for selecting the best gene model. The system has
+been trained for Arabidopsis thaliana, Oryza sativa (rice), and
+Plasmodium falciparum (the malaria parasite), and should work well on
 closely related organisms.

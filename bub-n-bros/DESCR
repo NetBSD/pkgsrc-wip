@@ -6,4 +6,4 @@ fun. The game is written in the Python programming language.
 non-graphical program that computes the gameplay and sends display data to the
 clients via the network.
 
-* The client is the display program that must be executed on every machine. 
+* The client is the display program that must be executed on every machine.

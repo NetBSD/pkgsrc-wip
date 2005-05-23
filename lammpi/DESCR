@@ -2,7 +2,7 @@ LAM/MPI is an implementation of the Message
 Passing Interface (MPI) parallel standard that is
 especially friendly to clusters. It includes a
 persistent runtime environment for parallel
-programs, support for all of MPI-1, and a good                       
+programs, support for all of MPI-1, and a good
 chunk of MPI-2, such as all of the dynamic
-functions, one-way communication, C++ bindings,             
+functions, one-way communication, C++ bindings,
 and MPI-IO.

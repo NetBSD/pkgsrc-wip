@@ -2,7 +2,7 @@ Firebird is a relational database offering many ANSI SQL-92 features that
 runs on Linux, Windows, and a variety of Unix platforms. Firebird offers
 excellent concurrency, high performance, and powerful language support for
 stored procedures and triggers. It has been used in production systems,
-under a variety of names since 1981. 
+under a variety of names since 1981.
 
 Firebird is a commercially independent project of C and C++ programmers,
 technical advisors and supporters developing and enhancing a multi-platform

@@ -10,9 +10,9 @@ Silky is an easy-to-use graphical SILC client. Key features follow:
  * Supports binary MIME-messages.
  * Open source, GPL licence.
  * Translated already to 7 languages, including Italian, Finnish, German and
-   Russian. 
+   Russian.
 
 The aim of this project is to create a simple and easy to use graphical,
 os-independent SILC client. Silky contains, or will eventually contain, all
 necessary features of a SILC client. The user interface will be kept as simple
-and clean as possible. 
+and clean as possible.
