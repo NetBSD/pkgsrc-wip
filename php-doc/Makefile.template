@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.template,v 1.2 2003/12/15 17:43:06 mpasternak Exp $
-# $Id: Makefile.template,v 1.2 2003/12/15 17:43:06 mpasternak Exp $
+# $NetBSD: Makefile.template,v 1.3 2005/05/23 09:43:21 rillig Exp $
+# $Id: Makefile.template,v 1.3 2005/05/23 09:43:21 rillig Exp $
 
 DISTNAME=	php_manual_${PHP_DOC_LANG}
 PKGNAME=       	php-doc-${PHP_DOC_LANG}-20031217
@@ -11,9 +11,9 @@ MAINTAINER=	dotz@irc.pl
 HOMEPAGE=      	http://www.php.net/
 COMMENT=       	${PHP_DOC_LANG_DESC} documentation for PHP
 
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
-NO_CHECKSUM=	# defined
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+NO_CHECKSUM=	yes
 
 HTMLDIR=	share/doc/${PKGNAME}
 DOC_SRCDIR=	${WRKSRC}
