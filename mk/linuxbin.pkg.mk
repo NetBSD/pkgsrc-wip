@@ -1,13 +1,13 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.18 2004/10/07 03:02:09 jlamwww Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.19 2005/05/23 09:38:33 rillig Exp $
 ###########################################################################
-# 
-# $Id: linuxbin.pkg.mk,v 1.18 2004/10/07 03:02:09 jlamwww Exp $
+#
+# $Id: linuxbin.pkg.mk,v 1.19 2005/05/23 09:38:33 rillig Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 #
 # Currently supports:
 #   * rpm
-#   * "plain" -> .tgz, .tbz2, 
+#   * "plain" -> .tgz, .tbz2,
 #   * slackware packages (.tgz, but need slackware_compat)
 #
 # TODO:
@@ -104,7 +104,7 @@ LINUX_USE_X11?=			NO
 
 ###########################################################################
 #
-# format of Linux binary packages. only rpm, slack and tgz are supported, 
+# format of Linux binary packages. only rpm, slack and tgz are supported,
 # but in future we could try adding more
 #
 
@@ -131,9 +131,9 @@ LINUX_BINPKG_FILES?=    # empty
 
 .if ( ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFlyBSD")
 
-# 
-# LINUX_BASE_NODEPS is useful only for Linux binary packages, which are 
-# base package itself, or come so statically compiled, that don't need 
+#
+# LINUX_BASE_NODEPS is useful only for Linux binary packages, which are
+# base package itself, or come so statically compiled, that don't need
 # linux_base packages (rar3 for Linux?)
 #
 
@@ -141,7 +141,7 @@ LINUX_BINPKG_FILES?=    # empty
 DEPENDS+=${LINUX_BASE_PREFIX}_compat>=${LINUX_BASE_VERSION.${LINUX_BASE_REQUIRED}}:../../${LINUX_PKGSRCDIR.${LINUX_BASE_REQUIRED}}/${LINUX_BASE_PREFIX}_compat
 .endif
 
-.if ${LINUX_USE_X11} == "yes" || ${LINUX_USE_X11} == "YES" 
+.if ${LINUX_USE_X11} == "yes" || ${LINUX_USE_X11} == "YES"
 DEPENDS+=${LINUX_BASE_PREFIX}_x11>=${LINUX_BASE_VERSION.${LINUX_BASE_REQUIRED}}:../../${LINUX_PKGSRCDIR.${LINUX_BASE_REQUIRED}}/${LINUX_BASE_PREFIX}_x11
 .endif
 
@@ -163,8 +163,8 @@ NO_BUILD?=		YES
 #   say, LINUX_BASE_PREFERRED in /etc/mk.conf
 #
 # - some RPMs will work with work with Suse, some other with Redhat. Debs
-#   will work with Debian. 
-# 
+#   will work with Debian.
+#
 # - we will need different EMULSUBDIR in the future
 #
 # - for now, i'm leaving this as default, but this _should_ be changed to,
@@ -240,7 +240,7 @@ do-install:
 #
 # so what we want to do is move all files to ${EMULSUBDIR},
 # chroot to ${EMULSUBDIR} and launch doinst.sh
-# 
+#
 # only slackware_base packages for slackware won't use this method (eg. we can't
 # chroot without shell and shared libs - so for them there is SLACK_NO_INSTALL
 # setting)
@@ -252,7 +252,7 @@ do-install:
 #
 # WARNING: this is a bit lame - warn-on-freebsd target is in
 # slackware_compat/Makefile.common, while this file (linuxbin.pkg.mk) never
-# includes this directly (but slackware_* apps do include this file via 
+# includes this directly (but slackware_* apps do include this file via
 # slackware_compat/Makefile.common)
 #
 # This should be rewritten properly before it gets imported to pkgsrc
