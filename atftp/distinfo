@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/23 20:21:27 poppnk Exp $
+
+SHA1 (atftp-0.7.tar.gz) = 83726e552ca10a164f1a7b344b0c51ca33423fe9
+RMD160 (atftp-0.7.tar.gz) = 06bd2ba663a87fabb79e1536275ad23f60c68636
+Size (atftp-0.7.tar.gz) = 202234 bytes
