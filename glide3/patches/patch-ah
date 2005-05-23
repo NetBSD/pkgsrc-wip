@@ -1,9 +1,8 @@
-$NetBSD: patch-ah,v 1.4 2004/06/26 23:32:13 rillig Exp $
+$NetBSD: patch-ah,v 1.5 2005/05/23 10:33:49 rillig Exp $
 
 --- glide2x/h3/incsrc/h3info.h.orig	Wed Mar  3 10:25:00 2004
 +++ glide2x/h3/incsrc/h3info.h	Wed Mar  3 10:26:28 2004
-@@ -24,7 +24,7 @@
- ** $Date: 2004/06/26 23:32:13 $
+@@ -25,6 +25,6 @@
  */
  
 -#if defined(__unix__) && ! defined(__H3REGS_H__)
