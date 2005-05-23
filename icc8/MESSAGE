@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/04/18 19:53:54 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.2 2005/05/23 09:40:01 rillig Exp $
 
 Please obtain a license file, via registration at:
 
 	http://www.intel.com/software/products/compilers/clin/noncom.htm
-	
+
 then put the file received to:
-	
+
 	${EMULDIR}/opt/intel/licenses/
 
 and remember to set environment variable INTEL_LICENSE_FILE point to that
