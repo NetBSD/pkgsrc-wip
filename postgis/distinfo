@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/05/23 09:44:52 rillig Exp $
-
-SHA1 (postgis-0.7.5.tar.gz) = 7b3417790010dd3ce8bbcfc21ccab772107c3527
-Size (postgis-0.7.5.tar.gz) = 336368 bytes
-SHA1 (postgresql-7.3.6.tar.gz) = 5135ed429a22f8290eece18d67a459716a80871a
-Size (postgresql-7.3.6.tar.gz) = 11288430 bytes
