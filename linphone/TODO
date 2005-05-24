@@ -1,7 +1,3 @@
-$NetBSD: TODO,v 1.3 2005/05/24 15:15:14 thomasklausner Exp $
-
-Fix gtk-doc installation:
-
         o Fix remaining packages to install documentation into
           share/doc instead of share/gtk-doc (usually,
                 CONFIGURE_ARGS+=        --with-html-dir=${PREFIX}/share/doc/html
