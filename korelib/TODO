@@ -8,6 +8,8 @@ configure says:
  configure: WARNING: `missing' script is too old or missing
 (but probably doesn't matter)
 
+Use LIBTOOL_OVERRIDE (if still necessary) instead of LTCONFIG_OVERRIDE;
+but:
 LIBTOOL_OVERRIDE=${WRKSRC}/libtool
 causes:
 ltconfig: unrecognized option `--build=i386-unknown-netbsdelf1.6'

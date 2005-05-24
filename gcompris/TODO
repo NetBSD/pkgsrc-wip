@@ -13,3 +13,5 @@ It has problem with tar --exclude when extracting some files.
 
 This version has a known bug where it repeatedly loops when doing
 boards/music/background ogg file.
+
+Use LIBTOOL_OVERRIDE (if still necessary) instead of LTCONFIG_OVERRIDE.
