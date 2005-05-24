@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/05/24 13:21:39 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.2 2005/05/24 13:28:38 leonardschmidt Exp $
 
 --- Makefile.orig	2005-04-09 22:48:01.000000000 +0000
 +++ Makefile
@@ -21,4 +21,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/05/24 13:21:39 leonardschmidt Exp $
 -	install -c $(EXENAME)   $(DESTDIR)/$(BINDIR)
 +	strip $(EXENAME)
 +	${BSD_INSTALL_DATA_DIR} $(BINDIR)
-+	${BSD_INSTALL_PROGRAM} -c $(EXENAME) $(BINDIR)
++	${BSD_INSTALL_PROGRAM} dirsize $(BINDIR)
