@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/24 09:19:51 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/24 10:54:31 leonardschmidt Exp $
 #
 
 DISTNAME=	esmtp-0.5.1
@@ -14,15 +14,17 @@ BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
 GNU_CONFIGURE=	yes
 
-EGDIR=	${PREFIX}/share/examples/esmtp
+SUBST_CLASSES+=	paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	sample.esmtprc
+SUBST_SED.paths=	-e 's,/usr/bin,${LOCALBASE}/bin,g'
 
-post-patch:
-	${SED} 's|/usr/bin|${LOCALBASE}/bin|g' \
-		${WRKSRC}/sample.esmtprc > ${WRKSRC}/sample.esmtprc.new
+EGDIR=	${PREFIX}/share/examples/esmtp
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/sample.esmtprc.new ${EGDIR}/sample.esmtprc
+	${INSTALL_DATA} ${WRKSRC}/sample.esmtprc ${EGDIR}
 
 .include "../../mail/libesmtp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
