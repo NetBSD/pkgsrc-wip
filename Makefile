@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1784 2005/05/24 09:23:52 leonardschmidt Exp $
-# $NetBSD: Makefile,v 1.1784 2005/05/24 09:23:52 leonardschmidt Exp $
+# $Id: Makefile,v 1.1785 2005/05/24 09:51:49 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.1785 2005/05/24 09:51:49 leonardschmidt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -208,6 +208,7 @@ SUBDIR+=	emboss-mse
 SUBDIR+=	emboss-phylip
 SUBDIR+=	emboss-topo
 SUBDIR+=	embryo
+SUBDIR+=	emelfm2
 SUBDIR+=	emirror
 SUBDIR+=	epplets
 SUBDIR+=	erc
