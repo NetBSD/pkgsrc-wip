@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/31 20:20:42 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:49:02 rillig Exp $
 #
 
 VERSION=		1.0.0-rc2
@@ -51,7 +51,7 @@ pre-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${EXAMPLEDIR} ${HTMLDIR} ${SQLDIR}
-	cd ${BUILD_DIRS} && ${GMAKE} ${INSTALL}
+	cd ${BUILD_DIRS} && ${GMAKE} install
 	${CP} -r ${BUILD_DIRS}/examples/* ${EXAMPLEDIR}
 	${INSTALL_DATA} ${BUILD_DIRS}/README.postgis ${DOCDIR}
 	${INSTALL_DATA} ${BUILD_DIRS}/doc/postgis.xml ${DOCDIR}
