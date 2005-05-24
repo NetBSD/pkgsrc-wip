@@ -1,5 +1,5 @@
-Package compiles and install cleanly, it is, however, still under
-heavy developement.
+Package compiles and installs cleanly, it is, however, still under
+heavy development.
 
-A wmii-cairo package would be nice (unfortunately, the cairo backend
+* A wmii-cairo package would be nice (unfortunately, the cairo backend
 is quite unstable).
