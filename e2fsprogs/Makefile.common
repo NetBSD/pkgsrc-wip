@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.9 2005/04/16 21:35:27 jeremy-c-reed Exp $
-# $Id: Makefile.common,v 1.9 2005/04/16 21:35:27 jeremy-c-reed Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/05/24 11:21:24 rillig Exp $
+# $Id: Makefile.common,v 1.10 2005/05/24 11:21:24 rillig Exp $
 #
 
 # XXX When changing, be sure to run "make makesum" in libuuid directory too.
@@ -10,7 +10,7 @@ E2FSPROGS_MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/} \
 
 BUILD_USES_MSGFMT=      YES
 GNU_CONFIGURE=          YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_MAKEINFO=           YES
 USE_PKGLOCALEDIR=       YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/04/11 21:16:15 tvierling Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/05/24 11:21:38 rillig Exp $
 
 DISTNAME=	wxGTK-2.5.1
 CATEGORIES=	x11
@@ -16,7 +16,7 @@ PATCHDIR=		${.CURDIR}/../../wip/wxgtk-devel/patches
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 USE_LANGUAGES=		c c++
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-opengl
 CONFIGURE_ARGS+=	--with-sdl
