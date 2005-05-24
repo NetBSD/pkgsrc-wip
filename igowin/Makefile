@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/24 18:37:57 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/24 18:43:08 rillig Exp $
 #
 
 DISTNAME=		igowin
@@ -11,13 +11,11 @@ MAINTAINER=		roland.illig@gmx.de
 HOMEPAGE=		http://www.smart-games.com/
 COMMENT=		Go playing program
 
-BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
-DEPENDS+=		wine-[0-9]*:../../emulators/wine
-
 WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${EXTRACT_CMD.zip}
 NO_TOOLS=		yes
 NO_BUILD=		yes
+USE_TOOLS+=		unzip
 
 IGOWIN_FILES=		grain.bmp igowin.exe igowin.hlp readme.txt tutor.hlp
 IGOWIN_DIR=		${PREFIX}/libdata/${PKGNAME}
@@ -42,4 +40,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${_F_} ${IGOWIN_DIR}/${_F_}
 .endfor
 
+.include "../../emulators/wine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
