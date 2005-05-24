@@ -3,5 +3,4 @@ Package compiles, installs and deinstalls without a problem.
 Concerns:
 - Is bison really needed? esmtp also works without BUILD_DEPENDS.
 - esmtp uses openssl which is included in libesmtp's Makefile;
-do I need to include it in esmtp's Makefile?
-- does the post-patch stage look okay? Any better way doing this?
+  do I need to include it in esmtp's Makefile?
