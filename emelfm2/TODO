@@ -1,1 +1,7 @@
 Package compiles, installs and deinstalls without a problem.
+
+Problems:
+- when executing a command using emelfm2's built-in command line,
+it sometimes just freezes.
+- it also freezes when one selects a filetype for which
+no internal viewer is set.
