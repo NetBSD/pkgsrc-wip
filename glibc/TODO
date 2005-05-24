@@ -2,3 +2,5 @@
   into /usr/pkg and after ldconfig is run other applications might not
   run anymore. The solution is to delete the installed files after which
   everything is okay again.
+
+- Set USE_PKGLOCALEDIR and adapt PLIST.
