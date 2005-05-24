@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/19 22:32:51 daprice Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/24 10:14:35 rillig Exp $
 #
 
 DISTNAME=		gdal-1.2.6
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 MAKEFILE=		GNUmakefile
 
