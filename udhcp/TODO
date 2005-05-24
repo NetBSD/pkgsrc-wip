@@ -1,2 +1,3 @@
 - Patch to be multiplatform?
 - update to the latest version
+- Do not install man pages to share/man, but man.

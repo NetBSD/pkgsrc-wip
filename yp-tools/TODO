@@ -9,3 +9,5 @@ has conflicts with net-tools:
 With net-tools this is the same as hostname(1) via symlink.
 And hostname is already provided with coreutils.
 So maybe make net-tools not install hostname, etc.
+
+Do not install man pages to share/man, but man.

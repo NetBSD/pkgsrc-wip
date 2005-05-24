@@ -1,3 +1,5 @@
 add support for xmms/bmp plugin with PKG_OPTIONS
 
 1.02 is out.
+
+Do not install man pages to share/man, but man.

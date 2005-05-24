@@ -10,3 +10,5 @@ doesn't build under NetBSD.
 
 The README says it uses gdbm or ndbm, but to
 "NEVER use libdb1-libdb4 in ndbm compat mode, this does NOT work!"
+
+Do not install man pages to share/man, but man.
