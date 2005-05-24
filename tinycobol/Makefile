@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:45 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/24 10:44:36 rillig Exp $
 #
 
 DISTNAME=		tinycobol-0.61
@@ -14,8 +14,7 @@ CONFIGURE_ARGS+=	--with-libdb=2
 
 ONLY_FOR_PLATFORM= *-*-i386
 
-USE_TOOLS+= gmake
-USE_GNU_TOOLS+= yacc
+USE_TOOLS+=		gmake bison
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

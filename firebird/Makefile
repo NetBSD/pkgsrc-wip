@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/24 10:29:41 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/24 10:44:36 rillig Exp $
 #
 
 DISTNAME=		firebird-1.5.0.4290
@@ -25,7 +25,7 @@ CONFIGURE_ENV+=		AUTOMAKE=${AUTOMAKE}
 # those:
 AUTOCONF_REQD=		2.53
 GCC_REQD=		3.3.0
-USE_GNU_TOOLS+=		m4 		# needs GNU M4 version 4.14
+USE_TOOLS+=		gm4 		# needs GNU M4 version 4.14
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \

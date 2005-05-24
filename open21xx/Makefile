@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:14 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/24 10:44:36 rillig Exp $
 #
 
 DISTNAME=		open21xx0.7.2
@@ -11,8 +11,7 @@ HOMEPAGE=		http://www3.telus.net/sharpshin/adi.html
 COMMENT=		Assembler tool suite for the Analog Devices 21xx family of DSP
 
 USE_LANGUAGES=	c
-USE_TOOLS+=	gmake
-USE_GNU_TOOLS+= yacc
+USE_TOOLS+=	gmake bison
 
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/libelf/buildlink3.mk"

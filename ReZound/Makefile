@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/07 00:11:48 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:44:35 rillig Exp $
 #
 
 DISTNAME=		rezound-0.11.1beta
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--enable-oss
 CONFIGURE_ARGS+=	--enable-portaudio
 CPPFLAGS+=		-DDEVOSSSOUND="\"${DEVOSSSOUND}\""
 #LDFLAGS+=		-lcompat
-USE_GNU_TOOLS+=		lex make yacc
+USE_TOOLS+=		flex gmake bison
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
