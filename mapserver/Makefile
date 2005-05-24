@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/20 00:12:16 daprice Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/24 10:56:14 rillig Exp $
 #
 
 DISTNAME=		mapserver-4.4.2
@@ -41,6 +41,12 @@ CFLAGS+=		-I${PREFIX}/include/php/regex
 CFLAGS+=		-I${PREFIX}/include/php
 CFLAGS+=		-I${WRKSRC}
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.mapserver
+PKG_SUPPORTED_OPTIONS=	postgresql73 postgresql74 postgresql80
+PKG_SUGGESTED_OPTIONS=	postgresql80
+
+.include "../../mk/bsd.options.mk"
+
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libmap.a ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/map.h ${PREFIX}/include
@@ -56,8 +62,8 @@ do-install:
 .include "../../www/php4/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
 .include "../../wip/gdal-lib/buildlink3.mk"
-.include "../../wip/mk/postgis.buildlink3.mk"
-.include "../../mk/pgsql.buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk" # this must come before the next line
+.include "../../wip/postgresql${PGSQL_VERSION}-postgis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
