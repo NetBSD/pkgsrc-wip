@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1786 2005/05/24 12:08:48 leonardschmidt Exp $
-# $NetBSD: Makefile,v 1.1786 2005/05/24 12:08:48 leonardschmidt Exp $
+# $Id: Makefile,v 1.1787 2005/05/24 13:22:38 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.1787 2005/05/24 13:22:38 leonardschmidt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -166,6 +166,7 @@ SUBDIR+=	ding
 SUBDIR+=	dirb
 SUBDIR+=	directfb
 SUBDIR+=	directory-administrator
+SUBDIR+=	dirsize
 SUBDIR+=	distella
 SUBDIR+=	diveintopython
 SUBDIR+=	djvu
