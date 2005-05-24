@@ -1,0 +1,28 @@
+# $NetBSD: Makefile,v 1.1.1.1 2005/05/24 12:07:05 leonardschmidt Exp $
+#
+
+DISTNAME=	wmii-0-20050510
+PKGNAME=	wmii-20050510
+CATEGORIES=	wm
+MASTER_SITES=	http://wmi.modprobe.de/snaps/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	lems@gmx.net
+HOMEPAGE=	http://wmi.modprobe.de/
+COMMENT=	Modular, minimalist and highly customizable window manager
+
+USE_PKGINSTALL=	yes
+USE_X11=	yes
+NO_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}/wmii-0-20050510
+
+PKG_SYSCONFSUBDIR=	wmii
+
+EGDIR=		${PREFIX}/share/examples/wmii
+CONF_FILES=
+.for f in actions bar input keys rc rc.conf status.sh wmii
+CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+.endfor
+.undef f
+
+.include "../../mk/bsd.pkg.mk"

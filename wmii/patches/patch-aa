@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/05/24 12:07:05 leonardschmidt Exp $
+
+--- config.mk.orig	2005-05-10 19:33:04.000000000 +0000
++++ config.mk
+@@ -1,17 +1,17 @@
+ # Customize to fit your system
+ 
+ # paths
+-PREFIX      = /usr/local
+-CONFPREFIX  = ${PREFIX}/etc
+-MANPREFIX   = ${PREFIX}/share/man
++#PREFIX      = /usr/local
++CONFPREFIX  = ${PREFIX}/share/examples
++MANPREFIX   = ${PREFIX}/man
+ 
+ INCDIR      = ${PREFIX}/include
+ LIBDIR      = ${PREFIX}/lib
+-X11DIR      = /usr/X11R6
++X11DIR      = ${X11BASE}
+ 
+ # includes and libs
+ INCLUDES    = -I. -I${INCDIR} -I/usr/include -I${X11DIR}/include
+-LIBS        = -L${LIBDIR} -L/usr/lib -lc -lm -L${X11DIR}/lib -lX11
++LIBS        = -L${LIBDIR} -L/usr/lib -lc -lm -Wl,-R${X11DIR}/lib -lX11
+ DRAW        = xlib
+ 
+ # cairo support
+@@ -25,18 +25,18 @@ STRLCAT     = strncat
+ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTRLCAT=${STRLCAT}
+ 
+ # compiler
+-CFLAGS      = -O0 -g -Wall -pedantic ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\"
+-LDFLAGS     = -g ${LIBS}
++CFLAGS      = ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\"
++LDFLAGS     = ${LIBS}
+ #CFLAGS      = -Os ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\"
+ #LDFLAGS     = ${LIBS}
+ 
+ # userland
+ AR          = ar cr
+-CC          = cc
++#CC          = cc
+ CP          = cp -f
+ COMPRESS    = bzip2
+-INSTBIN     = ${CP}
+-INSTDATA    = ${CP}
++INSTBIN     = ${BSD_INSTALL_PROGRAM}
++INSTDATA    = ${BSD_INSTALL_DATA}
+ MODBIN      = chmod 755
+ MODDATA     = chmod 444
+ #INSTBIN     = install -d -c -o root -g wheel -m 755

@@ -1,0 +1,5 @@
+Package compiles and install cleanly, it is, however, still under
+heavy developement.
+
+A wmii-cairo package would be nice (unfortunately, the cairo backend
+is quite unstable).
