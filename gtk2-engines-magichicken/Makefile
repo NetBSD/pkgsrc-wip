@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:12:40 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/24 10:30:03 rillig Exp $
 
 DISTNAME=		GTK2-mgicchikn-1.0.2
 PKGNAME=		gtk2-engines-magichicken-1.0.2
@@ -11,7 +11,7 @@ HOMEPAGE=		http://art.gnome.org/
 COMMENT=		MagicChicken theme engine for GTK+ 2.x
 
 USE_LIBTOOL=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 
 .include "../../x11/gtk2/buildlink3.mk"

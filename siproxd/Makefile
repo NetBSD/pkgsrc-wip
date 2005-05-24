@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/17 18:41:24 gschwarz Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:41 rillig Exp $
 
 DISTNAME=	siproxd-17Apr2005
 CATEGORIES=	net
@@ -10,7 +10,7 @@ COMMENT=	a SIP ALG
 
 WRKSRC=		${WRKDIR}/siproxd-0.5.11
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libosip-prefix=${BUILDLINK_PREFIX.libosip2}

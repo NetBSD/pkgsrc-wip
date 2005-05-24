@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/27 15:41:44 lexort Exp $
+# $NetBSD: Makefile,v 1.21 2005/05/24 10:31:23 rillig Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=	--enable-opaque-lsa
 PLIST_CAT+=		${PKGDIR}/PLIST.opaquelsa
 .endif
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 BUILD_DEFS+=		USE_INET6
 

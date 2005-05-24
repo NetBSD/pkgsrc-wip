@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:13:17 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/24 10:30:24 rillig Exp $
 #
 
 DISTNAME=		charva-1.1.0
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.pitman.co.za/projects/charva/
 COMMENT=		Java Windowing Toolkit for Text Terminals
 
 USE_JAVA=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 do-build:
 	${RM} -f c/src/libTerminal.so

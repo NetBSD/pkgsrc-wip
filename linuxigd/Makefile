@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/21 13:04:57 obache Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/24 10:30:51 rillig Exp $
 #
 
 DISTNAME=	linuxigd-0.92
@@ -12,7 +12,7 @@ COMMENT=	Linux UPnP Internet Gateway Device
 
 USE_LANGUAGES=	c c++
 USE_PKGINSTALL=	yes
-USE_GNU_TOOLS+= make
+USE_TOOLS+= gmake
 
 .include "options.mk"
 

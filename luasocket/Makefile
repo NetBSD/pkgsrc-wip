@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:13:56 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/24 10:31:00 rillig Exp $
 #
 
 DISTNAME=		luasocket-2.0-beta2
@@ -12,7 +12,7 @@ COMMENT=		Gives socket capabilities to lua50
 
 MAKEFILE=		${WRKSRC}/makefile.Linux
 BUILD_TARGET=		all
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/luasocket.so.2.0 ${PREFIX}/lib/libluasocket.so.2.0

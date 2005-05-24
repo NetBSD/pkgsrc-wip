@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:09:42 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:22 rillig Exp $
 #
 
 DISTNAME=		and-1.2.0
@@ -9,7 +9,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://and.sourceforge.net/
 COMMENT=		auto nice daemon
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 BUILD_TARGET=	default
 
 MYARCH=${OPSYS}

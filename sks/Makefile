@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/24 10:31:42 rillig Exp $
 #
 
 DISTNAME=	sks-1.0.9
@@ -13,7 +13,7 @@ COMMENT=	Self Replicating PGP Key Server
 BUILDLINK_DEPENDS.ocaml+=	ocaml>=3.08.2
 BUILDLINK_DEPENDS.db4+=		db4>=4.3.0
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 BDB_ACCEPTED=	db4
 USE_PERL5=	YES
 

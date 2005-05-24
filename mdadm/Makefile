@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:01 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:01 rillig Exp $
 #
 
 DISTNAME=		mdadm-1.8.1
@@ -11,7 +11,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.cse.unsw.edu.au/~neilb/source/mdadm/ANNOUNCE
 COMMENT=		RAID management for Linux systems
 
-USE_GNU_TOOLS+= make
+USE_TOOLS+= gmake
 
 ONLY_FOR_PLATFORM=Linux-*-*
 

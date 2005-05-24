@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:13:57 tvierling Exp $
+# $NetBSD: Makefile,v 1.12 2005/05/24 10:31:00 rillig Exp $
 
 DISTNAME=		man-db_${VERSION}.orig
 PKGNAME=		man-db-${VERSION}
@@ -34,7 +34,7 @@ USE_PKGINSTALL=		YES
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 MAKEFILE=		GNUmakefile
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

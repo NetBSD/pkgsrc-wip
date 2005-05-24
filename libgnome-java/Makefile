@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/03 16:52:49 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/24 10:30:34 rillig Exp $
 #
 
 DISTNAME=		libgnome-java-2.10.1
@@ -14,7 +14,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gnome2-java.pc.in
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--without-gcj-compile
 
 .include "../../devel/libgnome/buildlink3.mk"

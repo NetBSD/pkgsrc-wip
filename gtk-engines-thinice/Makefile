@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:12:37 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/24 10:30:00 rillig Exp $
 
 DISTNAME=	gtk-thinice-theme-1.0.4
 PKGNAME=	gtk-engines-thinice-1.0.4
@@ -11,7 +11,7 @@ COMMENT=	Simple, clean theme engine for gtk+ 1.2.x
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11BASE=		YES
 
 .include "../../x11/gtk/buildlink3.mk"

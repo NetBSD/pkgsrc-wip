@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/25 02:23:50 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:30:42 rillig Exp $
 
 DISTNAME=		kbd-1.08
 PKGNAME=		linux-${DISTNAME}
@@ -16,7 +16,7 @@ ONLY_FOR_PLATFORM=	Linux-*-* # Uses Linux kernel headers
 
 BUILD_USES_MSGFMT=	YES	# and xgettext
 HAS_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}

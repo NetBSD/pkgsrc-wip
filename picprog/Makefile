@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:14:47 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:31:18 rillig Exp $
 #
 
 DISTNAME=		picprog-1.1
@@ -9,6 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://hyvatti.iki.fi/~jaakko/pic/picprog.html
 COMMENT=		pic16xxx microcontroller programmer for JDM (TE-20)
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.pkg.mk"

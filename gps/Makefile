@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:12:34 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/24 10:29:57 rillig Exp $
 #
 
 DISTNAME=		gps-0.9.2
@@ -9,7 +9,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://gps.sourceforge.net/
 COMMENT=		Ghost Port Scan
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 MISCDIR=		${PREFIX}/share/gps

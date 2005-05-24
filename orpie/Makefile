@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:15 rillig Exp $
 #
 
 DISTNAME=	orpie-1.4.1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.eecs.umich.edu/~pelzlpj/orpie/
 COMMENT=	Curses-based reverse polish notation (RPN) calculator
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--with-ncurses
 

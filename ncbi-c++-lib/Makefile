@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/17 21:16:12 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/24 10:31:11 rillig Exp $
 #
 
 DISTNAME=		ncbi_cxx--Nov_30_2004
@@ -15,7 +15,7 @@ USE_X11=		YES
 USE_BUILDLINK3=		YES
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 do-configure:
 	cd ${WRKSRC} && ${CONFIGURE_SCRIPT} --prefix=${PREFIX} --without-debug --with-fltk=${PREFIX} --with-wxwin=${PREFIX}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/05 16:50:36 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/24 10:31:04 rillig Exp $
 #
 
 DISTNAME=	mrxvt-0.4.1
@@ -12,7 +12,7 @@ COMMENT=	Multi-tabbed terminal emulator with Xft support
 GNU_CONFIGURE=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--enable-xft
 CONFIGURE_ARGS+=	--enable-text-shadow

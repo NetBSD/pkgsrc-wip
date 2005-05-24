@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:44 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:16 rillig Exp $
 #
 
 DISTNAME=	pekwm-cvs
@@ -12,7 +12,7 @@ HOMEPAGE=	http://pekwm.org/
 COMMENT=	Window manager based on aewm++ (CVS version)
 
 GNU_CONFIGURE=	    yes
-USE_GNU_TOOLS+=	    make
+USE_TOOLS+=	    gmake
 USE_X11=	    yes
 USE_PERL5=	    run
 USE_LANGUAGES=	    c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:15:32 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/24 10:31:24 rillig Exp $
 #
 
 DISTNAME=		scite161
@@ -12,7 +12,7 @@ MAINTAINER=		shattered@users.sourceforge.net
 HOMEPAGE=		http://www.scintilla.org/
 COMMENT=		Editor with facilities for building and running programs
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 do-build:
 	cd ${WRKSRC}/scintilla/gtk && ${GMAKE} GTK2=1 CPPFLAGS=-Dunix

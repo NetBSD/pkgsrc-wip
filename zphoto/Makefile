@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/31 03:02:24 obache Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:50 rillig Exp $
 #
 
 DISTNAME=	zphoto-1.2
@@ -12,7 +12,7 @@ COMMENT=	Flash-based photo album generator
 USE_X11=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PERL5=		build
 
 .include "options.mk"

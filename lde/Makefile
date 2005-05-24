@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:13:40 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/24 10:30:31 rillig Exp $
 #
 
 DISTNAME=	lde-2.6.0
@@ -12,7 +12,7 @@ COMMENT=	Curses based file system viewer/editor for Linux
 
 USE_NCURSES=	YES # missing function termname
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 CONFIGURE_ARGS+=--with-ncurses=${PREFIX} \
 		--disable-root-sbin
 

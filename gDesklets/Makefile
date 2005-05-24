@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:12:19 tvierling Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/24 10:29:52 rillig Exp $
 
 DISTNAME=	gDesklets-0.26
 CATEGORIES=	x11 gnome
@@ -10,7 +10,7 @@ HOMEPAGE=	http://gdesklets.gnomedesktop.org/
 COMMENT=	Advanced architecture for desktop applets
 
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
 USE_X11=	YES
 

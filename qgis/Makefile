@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/19 23:49:17 daprice Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/24 10:31:22 rillig Exp $
 #
 
 DISTNAME=		qgis-0.6.0
@@ -13,7 +13,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--with-grass=${PREFIX}/grass-6.0.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:13:05 tvierling Exp $
+# $NetBSD: Makefile,v 1.15 2005/05/24 10:30:22 rillig Exp $
 #
 
 DISTNAME=	httrack-3.32-2
@@ -13,7 +13,7 @@ COMMENT=	Easy-to-use offline browser utility
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 LIBTOOL_OVERRIDE=${WRKSRC}/libtool
 LDFLAGS+=-L${WRKSRC}/./src/.libs/
 

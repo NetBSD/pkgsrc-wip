@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:13:55 tvierling Exp $
+# $NetBSD: Makefile,v 1.13 2005/05/24 10:30:58 rillig Exp $
 #
 
 DISTNAME=	liquidwar-5.6.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.ufoot.org/liquidwar/
 COMMENT=	Unique multiplayer wargame
 
 USE_DIRS+=	gnome2-1.5
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 
 #CONFIGURE_ARGS+=	--enable-debug

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:14:45 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/24 10:31:17 rillig Exp $
 #
 
 DISTNAME=		pgpsrc658unix
@@ -14,7 +14,7 @@ HOMEPAGE=		http://www.pgpi.org/products/pgp/versions/freeware/unix/6.5.8/
 COMMENT=		Public-key encryption and digital signature utilities (v6)
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 buildDIRS=		libs/pfl libs/pgpcdk clients/pgp/shared clients/pgp/cmdline
 

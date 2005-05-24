@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:11:46 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:29:37 rillig Exp $
 #
 
 DISTNAME=		ecl-0.9c
@@ -15,7 +15,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}-build/
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../${DISTNAME}/src/configure
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 post-extract:
 	${MKDIR} ${WRKSRC}

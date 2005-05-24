@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/25 02:32:54 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:31:13 rillig Exp $
 
 DISTNAME=		net-tools-1.60
 CATEGORIES=		net sysutils
@@ -9,7 +9,7 @@ MAINTAINER=		reed@reedmedia.net
 #HOMEPAGE
 COMMENT=		Network configuration and status tools for Linux
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 # build uses linux/if_ether.h for example
 ONLY_FOR_PLATFORM=	Linux-*-*
 

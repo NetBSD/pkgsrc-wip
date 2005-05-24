@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:04 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/24 10:31:03 rillig Exp $
 #
 
 DISTNAME=		mksend-0.5.3
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.nopcode.org/?t=mksend
 COMMENT=		Network testing tool for capture and generate packets
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 ONLY_FOR_PLATFORM=	Linux-*-* FreeBSD-*-*
 

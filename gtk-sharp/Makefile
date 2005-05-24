@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:12:38 tvierling Exp $
+# $NetBSD: Makefile,v 1.21 2005/05/24 10:30:01 rillig Exp $
 #
 
 DISTNAME=	gtk-sharp-0.99
@@ -11,7 +11,7 @@ COMMENT=	.Net language binding for gtk+
 
 DEPENDS+=	p5-XML-LibXML>=1.31:../../textproc/p5-XML-LibXML
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_PERL5=	yes
 USE_X11=	yes
 USE_LIBTOOL=	yes

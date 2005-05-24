@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:29:58 rillig Exp $
 #
 
 DISTNAME=		graveman-0.3.7
@@ -15,7 +15,7 @@ DEPENDS+=		dvd+rw-tools>5.21:../../sysutils/dvd+rw-tools
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:11:03 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/24 10:29:27 rillig Exp $
 #
 
 DISTNAME=	dclib-0.3.7
@@ -12,7 +12,7 @@ COMMENT=	Direct Connect P2P library
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 PKGCONFIG_OVERRIDE+=	dclib.pc.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:13 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:48 rillig Exp $
 #
 
 DISTNAME=		wireless_tools.27
@@ -12,6 +12,6 @@ COMMENT=		Tools for manipulating Linux Wireless Extensions
 
 
 ONLY_FOR_PLATFORM= Linux-*-*
-USE_GNU_TOOLS+= make
+USE_TOOLS+= gmake
 
 .include "../../mk/bsd.pkg.mk"

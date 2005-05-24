@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:10:04 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/24 10:29:24 rillig Exp $
 #
 
 DISTNAME=       avida-2.0b1
@@ -12,7 +12,7 @@ COMMENT=        Avida is an auto-adaptive genetic system
 HAS_CONFIGURE= YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS= --enable-viewer
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 pre-configure:
 	${ECHO} DESTDIR=${LOCALBASE}/share/avida >> ${WRKSRC}/doc/Makefile.in; \

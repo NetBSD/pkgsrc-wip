@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/09/23 05:59:53 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/24 10:31:01 rillig Exp $
 #
 
 DISTNAME=	mcats-0.1.0
@@ -10,7 +10,7 @@ HOMEPAGE=	http://mcats.net/
 COMMENT=	Catalog converter
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 
 .include "../../mk/bsd.pkg.mk"

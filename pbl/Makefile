@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:43 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/24 10:31:16 rillig Exp $
 #
 
 DISTNAME=	pbl_1_03
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 NO_CONFIGURE=	#defined
 
-USE_GNU_TOOLS+=make
+USE_TOOLS+=gmake
 MAKEFILE=makefile
 
 INSTALLATION_DIRS= lib include

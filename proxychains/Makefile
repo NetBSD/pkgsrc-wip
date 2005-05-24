@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:14:51 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:31:21 rillig Exp $
 #
 
 DISTNAME=		proxychains-2.1
@@ -10,7 +10,7 @@ HOMEPAGE=		http://proxychains.sourceforge.net/
 COMMENT=			Chain multiple proxies in a transparent way
 
 USE_PKGLOCALEDIR=	yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes

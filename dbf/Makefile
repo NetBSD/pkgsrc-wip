@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:11:02 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/24 10:29:27 rillig Exp $
 #
 
 DISTNAME=	dbf-0.8.1.src
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://dbf.sourceforge.net/
 COMMENT=	Converts dBASE files to comma separated values text files
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 BUILD_DIRS=	${WRKSRC}/src
 INSTALL_DIRS=	${WRKSRC}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:14:50 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/24 10:31:20 rillig Exp $
 
 DISTNAME=	prelude-nids-0.8.6
 CATEGORIES=	net www
@@ -9,7 +9,7 @@ HOMEPAGE= 	http://www.prelude-ids.org/
 COMMENT=	Prelude NIDS sensor
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGINSTALL=		YES
 
 PTHREAD_OPTS=		require

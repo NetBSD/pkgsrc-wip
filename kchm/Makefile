@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/03/30 09:15:25 ianzag Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/24 10:30:28 rillig Exp $
 #
 
 DISTNAME=		kchm-0.6.5
@@ -14,7 +14,7 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
 USE_X11=		YES
 USE_LIBTOOL=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 # Note: put app specific data files into kde dir
 CONFIGURE_ARGS+= --datadir=${PREFIX}/share/kde

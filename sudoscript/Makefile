@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/24 21:16:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:31:43 rillig Exp $
 
 DISTNAME=	sudoscript-2.1.1
 CATEGORIES=	security
@@ -19,6 +19,6 @@ PERMIT_DISTFILES_FTP=	Yes
 
 NO_BUILD=		Yes
 NO_REGRESS=		Yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.pkg.mk"

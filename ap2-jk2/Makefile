@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:09:46 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:23 rillig Exp $
 #
 
 DISTNAME=	jakarta-tomcat-connectors-jk2-${AP_JK_VER}-src
@@ -12,7 +12,7 @@ COMMENT=	Apache2 JK2 module for connecting to Tomcat using AJP1X
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/jk/native2
 GNU_CONFIGURE=	yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 
 AP_JK_VER=	2.0.4

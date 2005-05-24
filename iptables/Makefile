@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/15 13:21:10 poppnk Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:30:23 rillig Exp $
 
 DISTNAME=		iptables-1.3.0
 CATEGORIES=		security
@@ -13,7 +13,7 @@ COMMENT=		Interface to Linux netfilter firewalling subsystem
 # This package requires a Linux 2.4.4 kernel, or above.
 ONLY_FOR_PLATFORM=	Linux-[2-9]*-*
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 NO_CONFIGURE=		YES
 PKGMANDIR?=		man  # until this in official pkgsrc
 

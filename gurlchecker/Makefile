@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:12:59 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/24 10:30:20 rillig Exp $
 #
 
 DISTNAME=	gurlchecker-0.4.1
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11=		yes
 
 .include "../../devel/libgnomeui/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:55 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:30:58 rillig Exp $
 
 DISTNAME=	lletters-0.1.9
 CATEGORIES=	games
@@ -12,7 +12,7 @@ COMMENT=	Linux Letters and Numbers childrens game
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 CPPFLAGS+=		-DDEVOSSAUDIO=\"\\\"${DEVOSSAUDIO}\\\"\"
 
 pre-configure:

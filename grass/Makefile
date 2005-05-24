@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/19 22:53:20 daprice Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:58 rillig Exp $
 #
 
 DISTNAME=		grass-6.0.0
@@ -13,7 +13,7 @@ USE_PERL5=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 BUILD_TARGET=		default
 

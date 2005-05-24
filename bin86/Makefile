@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/25 02:11:35 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/24 10:29:25 rillig Exp $
 
 DISTNAME=		bin86-0.16.11
 CATEGORIES=		devel
@@ -15,7 +15,7 @@ CONFLICTS=		bcc-*
 # XXX maybe patches under devel/bcc will help
 ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 do-build:
 	cd ${WRKSRC} && ${GMAKE} PREFIX=${PREFIX}

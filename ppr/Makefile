@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/05/06 08:58:00 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/24 10:31:19 rillig Exp $
 
 DISTNAME=		ppr-1.53
 CATEGORIES=		print
@@ -14,7 +14,7 @@ CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]* cups-[0-9]*
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_PERL5=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure

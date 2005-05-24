@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:16:08 tvierling Exp $
+# $NetBSD: Makefile,v 1.11 2005/05/24 10:31:47 rillig Exp $
 
 DISTNAME=	umix-1.0
 CATEGORIES=	audio
@@ -11,7 +11,7 @@ COMMENT=	Replacement for aumix
 USE_LIBTOOL=	YES
 
 GNU_CONFIGURE=          yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 PLIST_SUBST+=           DISTNAME=${DISTNAME}
 

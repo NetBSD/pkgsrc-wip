@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/03 16:53:43 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/24 10:30:35 rillig Exp $
 #
 
 DISTNAME=		libgtk-java-2.6.2
@@ -11,7 +11,7 @@ HOMEPAGE=		http://java-gnome.sourceforge.net/
 COMMENT=		Gtk2 bindings for Java
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--without-gcj-compile
 
 .include "../../x11/gtk2/buildlink3.mk"

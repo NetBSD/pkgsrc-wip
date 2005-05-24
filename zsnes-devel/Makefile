@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/03 16:32:57 dillo Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/24 10:31:50 rillig Exp $
 #
 
 DISTNAME=		ZSNESS_0411
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 
 WRKSRC=			${WRKDIR}/zsnes/src
 GNU_CONFIGURE=		# defined
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 ONLY_FOR_PLATFORM=	*-*-i386
 BUILD_TARGET=		zsnes
 USE_X11=		# defined

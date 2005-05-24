@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:55 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:30:59 rillig Exp $
 
 DISTNAME=		${PKGNAME}-4.1.src.rpm
 PKGNAME=		logrotate-3.7
@@ -12,7 +12,7 @@ COMMENT=		Daemon to rotate, compress, remove and mail system log files
 
 BUILD_DEPENDS+=		rpm2pkg>=2.0:../../pkgtools/rpm2pkg
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 NO_EXPORT_CPP=		yes
 MAKE_ENV+=		"BASEDIR=${PREFIX}"
 MAKE_ENV+=		"INSTALL_PROGRAM=${INSTALL_PROGRAM}"

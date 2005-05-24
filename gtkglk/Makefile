@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:12:41 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/24 10:30:05 rillig Exp $
 #
 
 DISTNAME=	gtkglk-0.2
@@ -9,7 +9,7 @@ MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://mirror.ifarchive.org/if-archiveXprogrammingXglkXimplementations.html
 COMMENT=	Gtk+ 2 port of Glk interface for text adventures
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 BUILD_TARGET=	default
 

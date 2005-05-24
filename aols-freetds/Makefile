@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/18 09:26:57 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:22 rillig Exp $
 #
 
 DISTNAME=		nsfreetds-0.4-src
@@ -16,7 +16,7 @@ MAKE_FLAGS+=		NSHOME=/${PREFIX}/include/nsd \
 			TCL_CC=gcc
 CFLAGS+=		-I/usr/pkg/include/nsd/include
 
-USE_GNU_TOOLS+=         make
+USE_TOOLS+=         gmake
 
 .include "../../wip/aolserver4/buildlink3.mk"
 .include "../../databases/freetds/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:09:44 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:23 rillig Exp $
 #
 
 DISTNAME=		aolserver-4.01-src
@@ -19,7 +19,7 @@ USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 OWN_DIRS=		?
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 EGDIR=                  ${PREFIX}/share/examples/nsd
 PKG_SYSCONFSUBDIR=      nsd

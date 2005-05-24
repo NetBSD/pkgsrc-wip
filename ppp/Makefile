@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/27 03:05:20 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/24 10:31:19 rillig Exp $
 
 DISTNAME=	ppp-2.4.1
 CATEGORIES=	net
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.samba.org/ppp/
 COMMENT=	Point-to-Point Protocol (PPP) over serial lines
 
 HAS_CONFIGURE=	yes
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ppp

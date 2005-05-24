@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:14:44 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/24 10:31:17 rillig Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -90,7 +90,7 @@ CONFIGURE_ARGS+=	-Dcc="${PERL5_CC}"
 # The perl build attempts to work around case-insensitivity problems on
 # HFS filesystems by using GNUmakefiles, so we need to use GNU make.
 #
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 #
 # Perl is _always_ built using shared libraries on Darwin; there's no
 # way to build a statically-linked perl binary.

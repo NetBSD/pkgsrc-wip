@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:15:24 tvierling Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/24 10:31:23 rillig Exp $
 #
 
 DISTNAME=	qinx-0.3
@@ -11,7 +11,7 @@ COMMENT=	Widget style and window decoration for KDE3
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_X11=		YES
 
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}

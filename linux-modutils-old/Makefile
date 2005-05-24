@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/27 06:11:01 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/24 10:30:44 rillig Exp $
 
 DISTNAME=		modutils-2.4.24
 PKGNAME=		linux-${DISTNAME:S/modutils/modutils-old/}
@@ -20,7 +20,7 @@ ONLY_FOR_PLATFORM=      Linux-*-* # This is for the Linux kernel
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX} --sysconfdir=${PKG_SYSCONFDIR}
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/linux-modutils-old

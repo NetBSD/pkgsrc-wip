@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/10 20:28:24 plunky Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/24 10:30:23 rillig Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
@@ -25,7 +25,7 @@ COMMENT=		IceWM Control Centre
 
 DEPENDS+=		vim-{gtk,gtk2,kde,motif,xaw}>=6.3.0:../../editors/vim-xaw
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 WRKSRC=			${WRKDIR}
 

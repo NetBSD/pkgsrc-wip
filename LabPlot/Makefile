@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:09:36 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:29:21 rillig Exp $
 #
 
 DISTNAME=		LabPlot-1.3.0
@@ -9,7 +9,7 @@ MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://mitarbeiter.mbi-berlin.de/gerlach/Linux/LabPlot/
 COMMENT=	Data analysis and visualisation
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+= --enable-gsl

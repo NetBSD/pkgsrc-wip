@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/01 18:39:15 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/24 10:31:22 rillig Exp $
 #
 
 DISTNAME=		pwsafe-0.1.6
@@ -11,7 +11,7 @@ HOMEPAGE=		http://nsd.dyndns.org/pwsafe/
 COMMENT=		CLI based PasswordSafe compatible password manager
 
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pwsafe
 PKG_SUPPORTED_OPTIONS=	readline x11

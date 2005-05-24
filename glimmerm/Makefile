@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/19 22:48:10 daprice Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:55 rillig Exp $
 #
 
 DISTNAME=		GlimmerM-2.5.1
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.tigr.org/software/glimmerm/
 COMMENT=		Gene finder developed specifically for eukaryotes
 
 MAKEFILE=		makefile
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 WRKSRC=         	${WRKDIR}/GlimmerM/sources
 

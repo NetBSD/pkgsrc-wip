@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/03 17:40:13 pulahti Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/24 10:31:43 rillig Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -30,7 +30,7 @@ SML_VERSION=	110.51
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	smlnj-${SML_VERSION}
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 SML_BASE=	${PREFIX}/lib/smlnj
 SML_LIBDIR=	${SML_BASE}/lib

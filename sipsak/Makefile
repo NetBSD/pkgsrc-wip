@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/25 20:06:12 gschwarz Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:41 rillig Exp $
 
 DISTNAME=	sipsak-0.8.12
 CATEGORIES=	net
@@ -9,7 +9,7 @@ HOMEPAGE=	http://sipsak.org
 COMMENT=	a command-line SIP testing utility
 
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin man/man1
 

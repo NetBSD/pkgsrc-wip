@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/18 09:28:33 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:22 rillig Exp $
 #
 
 DISTNAME=		nsopenssl-3.0b23-src
@@ -17,7 +17,7 @@ MAKE_FLAGS+=		INST=/${PREFIX}/include/nsd \
 			TCL_CC=gcc
 CFLAGS+=		-I/usr/pkg/include/nsd/include
 
-USE_GNU_TOOLS+=         make
+USE_TOOLS+=         gmake
 
 .include "../../wip/aolserver4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/14 02:44:39 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/24 10:31:22 rillig Exp $
 #
 
 DISTNAME=		PingTunnel-0.60
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.cs.uit.no/~daniels/PingTunnel/
 COMMENT=		TCP tunnel over ICMP
 
 WRKSRC=			${WRKDIR}/PingTunnel
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

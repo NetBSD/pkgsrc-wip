@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:13:37 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/24 10:30:29 rillig Exp $
 #
 
 DISTNAME=		ksambaplugin-0.5
@@ -9,7 +9,7 @@ MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://ksambakdeplugin.sourceforge.net/
 COMMENT=		KSambaPlugin is a KDE 3 plugin for configuring a SAMBA server
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:14:49 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/24 10:31:19 rillig Exp $
 #
 
 DISTNAME=		uniqueidentifier-0.2
@@ -15,7 +15,7 @@ COMMENT=		Allows PostgreSQL databases to use Global Unique Identifier (GUID)
 DEPENDS=		postgresql74-server>=7.4.1:../../databases/postgresql74-server
 
 WRKSRC=			${PGSQL_CONTRIBSRC}/${DISTNAME:S/-0.2//}
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 post-extract: postgresql-post-extract
 	${MV} ${WRKDIR}/uniqueidentifier ${PGSQL_CONTRIBSRC}

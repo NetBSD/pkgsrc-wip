@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:11:50 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:29:38 rillig Exp $
 #
 
 DISTNAME=	erc-5.0.1
@@ -9,7 +9,7 @@ MAINTAINER=	hsaliak@gmail.com
 HOMEPAGE=	http://www.emacswiki.org/cgi-bin/wiki?EmacsIRCClient
 COMMENT=	IRC client for Emacs
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 .include "../../mk/emacs.mk"
 .if ${EMACS_FLAVOR} == "xemacs"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:14:05 tvierling Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/24 10:31:03 rillig Exp $
 #
 #
 
@@ -19,7 +19,7 @@ COMMENT=	Molecular energy calculation program
 
 WRKSRC=			${WRKDIR}/mopac7
 BUILD_TARGET=		MOPAC7
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_FORTRAN=		yes
 PKG_FC?=		f2c-f77
 

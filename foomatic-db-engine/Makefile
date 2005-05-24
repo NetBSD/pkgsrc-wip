@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/08 07:35:37 obache Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:42 rillig Exp $
 
 DISTNAME=	foomatic-db-engine-3.0.1
 CATEGORIES=	print
@@ -13,7 +13,7 @@ DEPENDS+=	foomatic-filters>=3.0.1:../../print/foomatic-filters
 
 GNU_CONFIGURE=	YES
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_PERL5=	yes
 PERL5_REQD=	5.6
 REPLACE_PERL+=	makeMan makeDefaults

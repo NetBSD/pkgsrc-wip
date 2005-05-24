@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:14:00 tvierling Exp $
+# $NetBSD: Makefile,v 1.10 2005/05/24 10:31:01 rillig Exp $
 #
 
 DISTNAME=	mcats-0.1.0
@@ -14,7 +14,7 @@ COMMENT=	iODBC module for MCatS
 DEPENDS+=	mcats>=0.1.0:../../wip/mcats
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 CONFIGURE_ARGS+=	--enable-iodbc
 

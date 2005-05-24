@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:11:57 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/24 10:29:39 rillig Exp $
 #
 
 DISTNAME=		fakenes-0.3.1
@@ -12,7 +12,7 @@ COMMENT=		Portable Open Source NES emulator
 
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 # disable netplay support: needs nl.h

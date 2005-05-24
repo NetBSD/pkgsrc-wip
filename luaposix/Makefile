@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:56 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:30:59 rillig Exp $
 #
 
 DISTNAME=		lposix
@@ -11,7 +11,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.tecgraf.puc-rio.br/~diego/luasocket/new/
 COMMENT=		POSIX library for Lua
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/lposix.so ${PREFIX}/lib/libluaposix.so

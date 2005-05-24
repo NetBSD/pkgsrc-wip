@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/09/23 05:59:51 jlamwww Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:30:39 rillig Exp $
 #
 
 DISTNAME=		libticalcs
@@ -15,6 +15,6 @@ WRKSRC=			${WRKDIR}/${PKGNAME}
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-nls
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:16:37 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/24 10:31:50 rillig Exp $
 #
 
 DISTNAME=		z26v213
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 ONLY_FOR_PLATFORM+=	*-i386
 
 WRKSRC=			${WRKDIR}/z26_snapshot-20040523
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PERL5+=		build
 BUILD_TARGET=		netbsd
 MAKE_ENV+=		"INSTALL_BINDIR=${PREFIX}/bin"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/12 12:46:48 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/24 10:29:54 rillig Exp $
 #
 
 DISTNAME=	gdvb-0.2
@@ -13,7 +13,7 @@ COMMENT=	DVB channels manager frontend using JavaGTK
 DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
 DEPENDS+=	linuxtv-dvb-apps>=1.0:../../wip/linuxtv-dvb-apps
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

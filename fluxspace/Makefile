@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:12:16 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/24 10:29:42 rillig Exp $
 #
 
 DISTNAME=		fluxspace-0.0.3
@@ -10,7 +10,7 @@ COMMENT=		Fluxbox workspace manager, environment
 
 GNU_CONFIGURE=	YES
 USE_X11=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 USE_LIBTOOL=		YES
 

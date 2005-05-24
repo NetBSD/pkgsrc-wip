@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/18 22:15:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:56 rillig Exp $
 #
 
 DISTNAME=		gnome-bluetooth-0.5.1
@@ -11,7 +11,7 @@ COMMENT=		Gnome Bluetooth Manager
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_GNU_TOOLS=	make
+USE_TOOLS=	gmake
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gnome-bluetooth.pc.in
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/20 20:05:01 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/24 10:29:56 rillig Exp $
 #
 
 DISTNAME=		gnump3d-2.8
@@ -15,7 +15,7 @@ RCD_SCRIPTS=		gnump3d
 CONF_FILES=		none ${PREFIX}/etc/gnump3d/gnump3d.conf
 
 USE_PERL5=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 REPLACE_PERL=   	${WRKSRC}/bin/*
 NO_BUILD=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:50 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:30:37 rillig Exp $
 #
 
 DISTNAME=		libraw1394-0.10.1
@@ -14,6 +14,6 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libraw1394.pc.in
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.pkg.mk"

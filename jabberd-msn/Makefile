@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:14 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:30:24 rillig Exp $
 
 DISTNAME=	msn-transport-1.2.8rc1
 PKGNAME=	jabberd-msn-1.2.8
@@ -8,7 +8,7 @@ MASTER_SITES=	http://msn-transport.jabberstudio.org/
 MAINTAINER=	david@netbsd-fr.org
 COMMENT=	Jabber MSN-Transport module
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+= --with-jabberd=${PREFIX}/include/jabberd \
 		 --with-pth=${PREFIX}/include \

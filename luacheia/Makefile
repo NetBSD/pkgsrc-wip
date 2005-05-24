@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:13:56 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/24 10:30:59 rillig Exp $
 #
 
 DISTNAME=		luacheia5-5.0.1a4
@@ -10,7 +10,7 @@ HOMEPAGE=		http://luacheia.sourceforge.net/
 COMMENT=		Extension libraries for LUA
 
 GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 USE_X11=	YES
 CPPFLAGS+=	"-I${PREFIX}/include"
 CPPFLAGS+=	"-I/usr/X11R6/include"

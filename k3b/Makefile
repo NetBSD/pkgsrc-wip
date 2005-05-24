@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/20 12:09:19 martijnb Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/24 10:30:26 rillig Exp $
 #
 
 DISTNAME=		k3b-0.11.24
@@ -16,7 +16,7 @@ DEPENDS+=  		{cdrecord,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrecord
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_LIBTOOL=            yes
 USE_LANGUAGES=          c c++
 

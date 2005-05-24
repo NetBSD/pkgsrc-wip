@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/19 21:03:32 daprice Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:53 rillig Exp $
 #
 
 DISTNAME=		gdal-1.2.6
@@ -12,7 +12,7 @@ COMMENT=		Documentation for GDAL
 
 DEPENDS+=		doxygen>=1.4.1:../../devel/doxygen
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 
 MAKEFILE=		GNUmakefile

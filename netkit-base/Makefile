@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/25 02:32:55 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/24 10:31:13 rillig Exp $
 
 DISTNAME=		netkit-base-0.17
 PKGREVISION=		1
@@ -12,7 +12,7 @@ COMMENT=		The inetd super server and ping for Linux
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_PKGINSTALL=		YES
 
 MAKE_ENV+=		_PATH_INETDCONF=${PKG_SYSCONFDIR}

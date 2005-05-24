@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:14:46 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/24 10:31:17 rillig Exp $
 #
 
 DISTNAME=	picasm105
@@ -14,7 +14,7 @@ MAKEFILE=	makefile.uni
 BUILD_TARGET=	picasm
 WRKSRC=		${WRKDIR}
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/picasm ${PREFIX}/bin/

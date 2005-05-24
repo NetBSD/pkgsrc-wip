@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/08/17 22:08:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:29:43 rillig Exp $
 #
 
 DISTNAME=		g21k-binutils-PL4
@@ -10,7 +10,7 @@ MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://www.kvaleberg.com/g21.html
 COMMENT=		Assemblre and linker tools for Analog Devices 21k series DSPs
 
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+= --with-adidsp=${PREFIX}
 

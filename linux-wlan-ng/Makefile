@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/20 20:09:16 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/24 10:30:50 rillig Exp $
 #
 
 DISTNAME=		linux-wlan-ng-0.2.1pre23
@@ -10,7 +10,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.linux-wlan.com/
 COMMENT=		Linux utilities for wireless prism2 cards
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-d

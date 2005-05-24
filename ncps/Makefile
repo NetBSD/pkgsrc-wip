@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:14:13 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/24 10:31:12 rillig Exp $
 
 DISTNAME=	ncps-0.55
 CATEGORIES=	sysutils
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.math.ohio-state.edu/~pschan/ncps/
 COMMENT=	ncurses based process-killer
 
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 USE_NCURSES=		YES
 
 # It uses /proc...could be emulated, but not tested

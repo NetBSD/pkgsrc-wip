@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:12:22 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/05/24 10:29:52 rillig Exp $
 #
 
 DISTNAME=       galib245
@@ -10,7 +10,7 @@ MAINTAINER=     adam@monkeybyte.org
 HOMEPAGE=       http://lancet.mit.edu/ga/
 COMMENT=        GAlib contains a set of C++ genetic algorithm objects
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 pre-configure:
 	cd ${WRKSRC}; 					\

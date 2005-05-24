@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:16:09 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/05/24 10:31:48 rillig Exp $
 #
 
 DISTNAME=	valknut-0.3.7
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=         qt3-tools-3.*:../../x11/qt3-tools
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../security/openssl/buildlink3.mk"

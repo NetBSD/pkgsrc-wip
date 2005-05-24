@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:14 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/24 10:29:41 rillig Exp $
 #
 
 DISTNAME=		firehose-0.6.0-src
@@ -12,7 +12,7 @@ HOMEPAGE=		http://heroinewarrior.com/firehose.php3
 COMMENT=		Super fast throughput over cheap ethernet
 
 WRKSRC=		${WRKDIR}/firehose-0.6.0
-USE_GNU_TOOLS+=make
+USE_TOOLS+=gmake
 
 SUBST_CLASSES=gcc
 SUBST_SED.gcc=-e 's,TARGET\ =\ mips,TARGET\ =\ i686,g'
