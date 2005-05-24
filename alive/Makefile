@@ -1,4 +1,4 @@
-# $NetBSD $
+# $NetBSD: Makefile,v 1.2 2005/05/24 16:22:08 rillig Exp $
 #
 
 DISTNAME=	alive-1.4.0
