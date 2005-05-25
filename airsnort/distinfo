@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/27 23:42:45 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/05/25 15:16:10 poppnk Exp $
 
-SHA1 (airsnort-0.2.6.tar.gz) = 68e8911666bdb13d99642120891ac2ebbb3404c0
-Size (airsnort-0.2.6.tar.gz) = 188908 bytes
+SHA1 (airsnort-0.2.7e.tar.gz) = 311f252793a123d476d98115edb8eb1d9f698a30
+RMD160 (airsnort-0.2.7e.tar.gz) = da8a97fb4cdc47a422d682d4999b45a809a173ad
+Size (airsnort-0.2.7e.tar.gz) = 208383 bytes
