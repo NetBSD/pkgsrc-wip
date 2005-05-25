@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1789 2005/05/25 14:15:47 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1789 2005/05/25 14:15:47 thomasklausner Exp $
+# $Id: Makefile,v 1.1790 2005/05/25 22:37:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1790 2005/05/25 22:37:48 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -285,7 +285,6 @@ SUBDIR+=	gnome-alsamixer
 SUBDIR+=	gnome-bluetooth
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnome-jabber
-SUBDIR+=	gnome-pilot
 SUBDIR+=	gnump3d
 SUBDIR+=	gnunet
 SUBDIR+=	gnupoc-makesis
