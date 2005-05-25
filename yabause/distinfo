@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/29 23:58:08 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2005/05/25 14:15:08 thomasklausner Exp $
 
 SHA1 (yabause-0.0.6.tar.gz) = 7db578d7b30e9dbd496422dbb61707b7de34aa38
+RMD160 (yabause-0.0.6.tar.gz) = fdf5789b154da8986cb702a3c23e7e0d1cedd9c9
 Size (yabause-0.0.6.tar.gz) = 132985 bytes
 SHA1 (patch-aa) = 270141afb3f2ccb909052ad55b71679deac500fe

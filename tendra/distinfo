@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/29 09:22:27 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2005/05/25 14:14:53 thomasklausner Exp $
 
 SHA1 (TenDRA-4.1.2.tar.gz) = 89f0ebb34020d5f2bc132a71f8fa996e3e8dc461
+RMD160 (TenDRA-4.1.2.tar.gz) = 348a83e30a7eef9dbb02dde6e663e8cf46dbf70c
 Size (TenDRA-4.1.2.tar.gz) = 3960306 bytes
 SHA1 (patch-aa) = 6fb9777775a6564acc10309c3daff9322f0e7a0b
 SHA1 (patch-ab) = 8fbb7d0d16b11c83a1ab63c7069119a1e208c8a9
