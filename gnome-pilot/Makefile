@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/25 02:09:04 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/25 22:34:10 thomasklausner Exp $
 #
 
 DISTNAME=		gnome-pilot-2.0.12
@@ -16,19 +16,13 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-USE_PERL5=		build
-USE_TOOLS+=		gmake
-
-#CONFIGURE_ARGS+=	--with-pisock=${LOCALBASE}
-
-# According to README, is a 'buildorder bug', and this is the recommended
-# workaround.
-#do-build:
-#	(cd ${WRKSRC} && ${MAKE} -k && ${MAKE})
+USE_TOOLS+=		gmake perl
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
+.include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/25 02:09:04 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/25 22:34:10 thomasklausner Exp $
 bin/gnome-pilot-make-password
 bin/gpilot-install-file
 bin/gpilotd-control-applet
 bin/gpilotd-session-wrapper
-etc/gconf/schemas/pilot.schemas
 include/gpilotd/gnome-pilot-client.h
 include/gpilotd/gnome-pilot-conduit-backup.h
 include/gpilotd/gnome-pilot-conduit-file.h
@@ -29,6 +28,7 @@ libexec/gpilot-applet
 libexec/gpilotd
 man/man1/gpilot-install-file.1
 share/control-center-2.0/capplets/gpilotd-control-applet.desktop
+share/gconf/schemas/pilot.schemas
 share/gnome-pilot/conduits/backup.conduit
 share/gnome-pilot/conduits/file.conduit
 share/gnome-pilot/conduits/test.conduit
