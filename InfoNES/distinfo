@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/19 19:42:21 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2005/05/25 14:01:13 thomasklausner Exp $
 
 SHA1 (InfoNES093J_Src.zip) = c6e7183be2ed41b590a1e79c9032598027661d70
+RMD160 (InfoNES093J_Src.zip) = fb2eb6895f5406406e7a915ee21be5e80051442a
 Size (InfoNES093J_Src.zip) = 253566 bytes
 SHA1 (patch-aa) = b903cb71de49626d52155ba86a5c9e616691e118
