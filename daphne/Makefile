@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:29:26 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/26 06:28:39 dillo Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}-src
-PKGNAME=		daphne-0.99.6
+PKGNAME=		daphne-0.99.6c
 CATEGORIES=		emulators
 MASTER_SITES=		http://daphne.rulecity.com/download/
 
@@ -12,7 +12,7 @@ COMMENT=		Emulator for Laserdisc arcade games
 
 WRKSRC=			${WRKDIR}/daphne/src
 USE_TOOLS+=		gmake
-GNU_CONFIGURE=		#defined
+GNU_CONFIGURE=		YES
 CONFIGURE_DIRS=		${WRKSRC}/vldp2
 
 MAKE_ENV+=		DATA_DIR=${LOCALBASE}/share/daphne
