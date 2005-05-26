@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:54 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/26 00:16:32 jeremy-c-reed Exp $
 #
 
-DISTNAME=		module-init-tools-3.0
+DISTNAME=		module-init-tools-3.1
 PKGNAME=		linux-${DISTNAME}
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.kernel.org/pub/linux/kernel/people/rusty/modules/
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.kernel.org/pub/linux/kernel/people/rusty/modules/
-COMMENT=		Linux kernel module utilities (versions 2.5.48 and above)
+COMMENT=		Linux kernel module utilities (kernel 2.5.48 and above)
 
 CONFLICTS+=		linux-modutils-[0-9]*
 
