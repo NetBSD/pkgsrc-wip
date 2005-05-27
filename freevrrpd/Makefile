@@ -1,17 +1,17 @@
 # New ports collection makefile for:	freevrrpd
 # Date created:				Tue Jan 29 18:44:25 EST 2002
-# Whom:					Sebastien Petit <spe@bsdfr.org>
+# Whom:					Sebastien Petit <spe@phear.org>
 #
-# $FreeBSD: ports/net/freevrrpd/Makefile,v 1.16 2004/05/26 22:20:17 pav Exp $
+# $Id: Makefile,v 1.2 2005/05/27 11:30:08 spetit Exp $
 #
 
 PORTNAME=	freevrrpd
 DISTNAME=	freevrrpd-0.9.1
 CATEGORIES=	net
 PKGREVISION=	1
-MASTER_SITES=	http://www.b0l.org/download/
+MASTER_SITES=	http://bmw2002.hexod.net/opensource/
 
-MAINTAINER=	spe@b0l.org
+MAINTAINER=	spe@phear.org
 COMMENT=	This a VRRP RFC2338 Compliant implementation under FreeBSD
 
 MAKE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
