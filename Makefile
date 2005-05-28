@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1792 2005/05/28 07:24:17 minskim Exp $
-# $NetBSD: Makefile,v 1.1792 2005/05/28 07:24:17 minskim Exp $
+# $Id: Makefile,v 1.1793 2005/05/28 16:38:59 minskim Exp $
+# $NetBSD: Makefile,v 1.1793 2005/05/28 16:38:59 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1043,7 +1043,6 @@ SUBDIR+=	xgobi
 SUBDIR+=	xinetd
 SUBDIR+=	xlibs
 SUBDIR+=	xmail
-SUBDIR+=	xmake
 SUBDIR+=	xmim
 SUBDIR+=	xmlformat-docs
 SUBDIR+=	xmlformat-perl
