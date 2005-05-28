@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/24 13:21:38 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/28 07:15:03 minskim Exp $
 #
 
 DISTNAME=	dirsize-0.6
@@ -9,5 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://plasmasturm.org/code/dirsize/
 COMMENT=	Outputs aggregate size of all files in one or more directories
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.pkg.mk"
