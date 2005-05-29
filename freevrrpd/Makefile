@@ -2,11 +2,11 @@
 # Date created:				Tue Jan 29 18:44:25 EST 2002
 # Whom:					Sebastien Petit <spe@phear.org>
 #
-# $Id: Makefile,v 1.2 2005/05/27 11:30:08 spetit Exp $
+# $Id: Makefile,v 1.3 2005/05/29 19:40:37 spetit Exp $
 #
 
 PORTNAME=	freevrrpd
-DISTNAME=	freevrrpd-0.9.1
+DISTNAME=	freevrrpd-0.9.3
 CATEGORIES=	net
 PKGREVISION=	1
 MASTER_SITES=	http://bmw2002.hexod.net/opensource/
