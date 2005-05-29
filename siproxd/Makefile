@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:41 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/05/29 15:09:50 gschwarz Exp $
 
-DISTNAME=	siproxd-17Apr2005
+DISTNAME=	siproxd-0.5.11
 CATEGORIES=	net
-MASTER_SITES=	http://home.tiscalinet.ch/ries/siproxd/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siproxd/}
 
 MAINTAINER=     schwarz@NetBSD.org
 HOMEPAGE=	http://siproxd.sourceforge.net/
 COMMENT=	a SIP ALG
 
-WRKSRC=		${WRKDIR}/siproxd-0.5.11
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 
