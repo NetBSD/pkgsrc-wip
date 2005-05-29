@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1793 2005/05/28 16:38:59 minskim Exp $
-# $NetBSD: Makefile,v 1.1793 2005/05/28 16:38:59 minskim Exp $
+# $Id: Makefile,v 1.1794 2005/05/29 12:50:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.1794 2005/05/29 12:50:25 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -80,6 +80,7 @@ SUBDIR+=	apstget
 SUBDIR+=	argouml
 SUBDIR+=	artemis
 SUBDIR+=	asfrecorder
+SUBDIR+=	atftp
 SUBDIR+=	autoproject
 SUBDIR+=	avida2
 SUBDIR+=	avifile-devel
@@ -604,6 +605,7 @@ SUBDIR+=	net-tools
 SUBDIR+=	netkit-base
 SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
+SUBDIR+=	netkit-tftp
 SUBDIR+=	netwib
 SUBDIR+=	netwox
 SUBDIR+=	ninvaders
@@ -714,7 +716,6 @@ SUBDIR+=	pointless
 SUBDIR+=	poppler
 SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
-SUBDIR+=	postgis
 SUBDIR+=	postgis74
 SUBDIR+=	postgresql-uniqueidentifier
 SUBDIR+=	postgresql73-postgis
@@ -1027,6 +1028,7 @@ SUBDIR+=	wmmp
 SUBDIR+=	wmnetload
 SUBDIR+=	wordnet
 SUBDIR+=	words
+SUBDIR+=	worker
 SUBDIR+=	wxGTK-contrib
 SUBDIR+=	wxgtk-devel
 SUBDIR+=	wxgtk-devel-contrib
