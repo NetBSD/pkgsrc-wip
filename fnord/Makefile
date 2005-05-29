@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/24 10:29:42 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/29 14:40:33 gschwarz Exp $
 
 DISTNAME=	fnord-1.9
 CATEGORIES=	www
@@ -11,6 +11,10 @@ COMMENT=	A small HTTP server
 
 USE_TOOLS+=	gmake
 DEPENDS+=	ucspi-tcp-*:../../net/ucspi-tcp
+
+.if exists(/usr/include/alloca.h)
+CFLAGS+=	-DNEED_ALLOCA_H
+.endif
 
 INSTALLATION_DIRS=	sbin
 

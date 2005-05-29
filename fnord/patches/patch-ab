@@ -1,16 +1,18 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/04/30 17:13:21 gschwarz Exp $
+$NetBSD: patch-ab,v 1.2 2005/05/29 14:40:35 gschwarz Exp $
 
---- httpd.c.orig	2005-04-30 16:50:48.000000000 +0200
-+++ httpd.c	2005-04-30 17:11:20.000000000 +0200
-@@ -23,6 +23,7 @@
+--- httpd.c.orig	Mon Jan 31 17:10:39 2005
++++ httpd.c	Sat May 21 22:04:04 2005
+@@ -23,6 +23,9 @@
  #include "buffer.h"
  #include "byte.h"
  #include "scan.h"
++#ifdef NEED_ALLOCA_H
 +#include <alloca.h>
++#endif
  
  /* uncomment the following line to enable support for CGI */
  // #define CGI
-@@ -116,12 +117,16 @@
+@@ -116,12 +119,16 @@
  #undef USE_MMAP
  #endif
  
@@ -28,7 +30,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/04/30 17:13:21 gschwarz Exp $
  char *host="?";			/* Host: header */
  char *port;			/* also Host: header, :80 part */
  char *args;			/* URL behind ? (for CGIs) */
-@@ -1240,14 +1245,14 @@
+@@ -1240,14 +1247,14 @@
      char *tmp;
      if (chdir("/")) goto error500;
      if ((tmp=getenv("GID"))) {
