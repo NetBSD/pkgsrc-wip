@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/30 12:28:40 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.3 2005/05/30 16:55:26 leonardschmidt Exp $
 #
 
 DISTNAME=	wmii-0-20050529
@@ -16,6 +16,12 @@ USE_X11=	yes
 NO_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/wmii-0-20050529
 
+SUBST_CLASSES+=	paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	rc/rc
+SUBST_SED.paths=	-e 's,CONFPREFIX/wmii,${PKG_SYSCONFDIR},'
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Solaris"
@@ -30,11 +36,5 @@ CONF_FILES=
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 .undef f
-
-SUBST_CLASSES+=	paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
-SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	rc/rc
-SUBST_SED.paths=	-e 's,CONFPREFIX/wmii,${PKG_SYSCONFDIR},'
 
 .include "../../mk/bsd.pkg.mk"
