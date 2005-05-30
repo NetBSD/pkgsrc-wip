@@ -12,3 +12,5 @@
     SetSemaphore (Semaphore sem)
     [...]
     i = NativeSetSemaphore ((NativeSemaphore) sem);
+
+0.4.0 out.
