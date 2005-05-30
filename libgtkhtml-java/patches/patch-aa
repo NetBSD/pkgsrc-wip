@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2005-05-30 16:30:46.842311960 +0200
++++ Makefile.in	2005-05-30 16:31:13.317287152 +0200
+@@ -1292,7 +1292,7 @@
+ 
+ 
+ $(gtkhtml_jar_class_files): %.class: %.java
+-	$(JAVAC) -classpath $(GTKJAR):$(srcdir)/src/java:src/java -d src/java $<
++	$(JAVAC) -classpath $(CLASSPATH):$(GTKJAR):$(srcdir)/src/java:src/java -d src/java $<
+ 
+ gtkhtml2.6.jar: $(gtkhtml_jar_class_files)
+ 	$(JAR) cf $@ $(patsubst src/java/%.class,-C src/java %.class,$(all_gtkhtml_jar_class_files))

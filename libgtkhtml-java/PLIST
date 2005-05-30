@@ -1,0 +1,48 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/30 15:22:34 poppnk Exp $
+lib/libgtkhtmljni.la
+lib/pkgconfig/gtkhtml-java.pc
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/api/allclasses-frame.html
+share/doc/${PKGNAME}/api/allclasses-noframe.html
+share/doc/${PKGNAME}/api/constant-values.html
+share/doc/${PKGNAME}/api/deprecated-list.html
+share/doc/${PKGNAME}/api/help-doc.html
+share/doc/${PKGNAME}/api/index-all.html
+share/doc/${PKGNAME}/api/index.html
+share/doc/${PKGNAME}/api/org/gnu/gtkhtml/HTMLContext.html
+share/doc/${PKGNAME}/api/org/gnu/gtkhtml/HTMLDocument.html
+share/doc/${PKGNAME}/api/org/gnu/gtkhtml/HTMLParser.html
+share/doc/${PKGNAME}/api/org/gnu/gtkhtml/HTMLParserType.html
+share/doc/${PKGNAME}/api/org/gnu/gtkhtml/HTMLStream.html
+share/doc/${PKGNAME}/api/org/gnu/gtkhtml/HTMLView.html
+share/doc/${PKGNAME}/api/org/gnu/gtkhtml/package-frame.html
+share/doc/${PKGNAME}/api/org/gnu/gtkhtml/package-summary.html
+share/doc/${PKGNAME}/api/org/gnu/gtkhtml/package-tree.html
+share/doc/${PKGNAME}/api/overview-tree.html
+share/doc/${PKGNAME}/api/packages.html
+share/doc/${PKGNAME}/examples/TestHTML/TestHTML.java
+share/doc/${PKGNAME}/examples/html/HTMLExample.java
+share/doc/${PKGNAME}/examples/html/c102.html
+share/doc/${PKGNAME}/examples/html/c278.html
+share/doc/${PKGNAME}/examples/html/c28.html
+share/doc/${PKGNAME}/examples/html/c312.html
+share/doc/${PKGNAME}/examples/html/x133.html
+share/doc/${PKGNAME}/examples/html/x297.html
+share/doc/${PKGNAME}/examples/html/x438.html
+share/doc/${PKGNAME}/examples/html/x525.html
+share/java/gtkhtml2.6-${PKGVERSION}.jar
+share/java/gtkhtml2.6.jar
+@dirrm share/java
+@dirrm share/doc/${PKGNAME}/examples/html
+@dirrm share/doc/${PKGNAME}/examples/TestHTML
+@dirrm share/doc/${PKGNAME}/examples
+@exec ${MKDIR} %D/share/doc/${PKGNAME}/api/resources
+@dirrm share/doc/${PKGNAME}/api/resources
+@dirrm share/doc/${PKGNAME}/api/org/gnu/gtkhtml
+@dirrm share/doc/${PKGNAME}/api/org/gnu
+@dirrm share/doc/${PKGNAME}/api/org
+@dirrm share/doc/${PKGNAME}/api
+@dirrm share/doc/${PKGNAME}

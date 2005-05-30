@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/05/30 15:22:34 poppnk Exp $
+
+SHA1 (libgtkhtml-java-2.6.0.tar.bz2) = 8a9f6f16b059b4f8f9f6f4bf93257f19db62c85d
+RMD160 (libgtkhtml-java-2.6.0.tar.bz2) = a2d9f4ca92128d3435147f2f6d906eb84b15e23d
+Size (libgtkhtml-java-2.6.0.tar.bz2) = 250153 bytes
+SHA1 (patch-aa) = be753e54e7bb39028cd37dba846657add991e90b
