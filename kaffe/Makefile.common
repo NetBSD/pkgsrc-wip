@@ -1,14 +1,15 @@
-# $NetBSD: Makefile.common,v 1.5 2005/05/24 11:21:26 rillig Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/05/30 21:23:49 jtonio Exp $
 
-DISTNAME=		kaffe-1.1.5
-CATEGORIES=		lang java
-MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.1.x-development/
+DISTNAME=     kaffe-1.1.5
+CATEGORIES=   wip lang java
+MASTER_SITES= ftp://ftp.kaffe.org/pub/kaffe/v1.1.x-development/
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.kaffe.org/
-COMMENT=		Virtual machine capable of running Java(tm) code
+MAINTAINER= tech-pkg@NetBSD.org
+HOMEPAGE=   http://www.kaffe.org/
+COMMENT=    Virtual machine capable of running Java(tm) code
 
-DEPENDS+=		jikes>=1.22:../../lang/jikes
+BUILD_DEPENDS=  unzip-[0-9]*:../../archivers/unzip
+DEPENDS+=       jikes>=1.22:../../lang/jikes
 GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
 JAVA_HOME=		${PREFIX}/java/kaffe
 JAVA_NAME=		kaffe
