@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1794 2005/05/29 12:50:25 kristerw Exp $
-# $NetBSD: Makefile,v 1.1794 2005/05/29 12:50:25 kristerw Exp $
+# $Id: Makefile,v 1.1795 2005/05/30 17:17:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1795 2005/05/30 17:17:33 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -150,7 +150,6 @@ SUBDIR+=	damageext
 SUBDIR+=	dansguardian
 SUBDIR+=	daphne
 SUBDIR+=	darcnes-svgalib
-SUBDIR+=	darcs
 SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dclib
