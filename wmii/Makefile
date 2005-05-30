@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/24 12:07:05 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/30 12:28:40 leonardschmidt Exp $
 #
 
-DISTNAME=	wmii-0-20050510
-PKGNAME=	wmii-20050510
-CATEGORIES=	wm
+DISTNAME=	wmii-0-20050529
+PKGNAME=	wmii-20050529
+CATEGORIES=	wm x11
 MASTER_SITES=	http://wmi.modprobe.de/snaps/
 EXTRACT_SUFX=	.tar.bz2
 
@@ -14,7 +14,13 @@ COMMENT=	Modular, minimalist and highly customizable window manager
 USE_PKGINSTALL=	yes
 USE_X11=	yes
 NO_CONFIGURE=	yes
-WRKSRC=		${WRKDIR}/wmii-0-20050510
+WRKSRC=		${WRKDIR}/wmii-0-20050529
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Solaris"
+CFLAGS+=	-D__EXTENSIONS__
+.endif
 
 PKG_SYSCONFSUBDIR=	wmii
 
@@ -24,5 +30,11 @@ CONF_FILES=
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 .undef f
+
+SUBST_CLASSES+=	paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	rc/rc
+SUBST_SED.paths=	-e 's,CONFPREFIX/wmii,${PKG_SYSCONFDIR},'
 
 .include "../../mk/bsd.pkg.mk"

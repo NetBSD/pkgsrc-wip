@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/05/24 12:07:05 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.2 2005/05/30 12:28:41 leonardschmidt Exp $
 
---- config.mk.orig	2005-05-10 19:33:04.000000000 +0000
+--- config.mk.orig	2005-05-28 23:39:35.000000000 +0000
 +++ config.mk
 @@ -1,17 +1,17 @@
  # Customize to fit your system
@@ -25,14 +25,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/05/24 12:07:05 leonardschmidt Exp $
  DRAW        = xlib
  
  # cairo support
-@@ -25,18 +25,18 @@ STRLCAT     = strncat
- STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTRLCAT=${STRLCAT}
+@@ -26,18 +26,18 @@ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTR
  
  # compiler
+ # Note: under Solaris add -D__EXTENSIONS__ to CFLAGS
 -CFLAGS      = -O0 -g -Wall -pedantic ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\"
 -LDFLAGS     = -g ${LIBS}
-+CFLAGS      = ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\"
-+LDFLAGS     = ${LIBS}
++CFLAGS      += ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\"
++LDFLAGS     += ${LIBS}
  #CFLAGS      = -Os ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\"
  #LDFLAGS     = ${LIBS}
  

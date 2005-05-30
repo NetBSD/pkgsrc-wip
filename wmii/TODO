@@ -1,5 +1,6 @@
 Package compiles and installs cleanly. wmii is, however, still under
 heavy development.
 
+* OpenBSD can use strlcpy and strlcat through config.mk
 * A wmii-cairo package would be nice (unfortunately, the cairo backend
 is quite unstable).
