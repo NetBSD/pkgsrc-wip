@@ -9,3 +9,5 @@ of the plan9 operating system. The core distribution of wmii contains the
 window manager itself, a pager (wmipager), a generic status bar (wmibar), a
 shortcut handler (wmirat), and a generic ex-alike interaction menu (wmiinput)
 beside several tiny utilities like wmir, wmiplumb, wmitw, and wmimulti.
+
+This package is built with xlib support only.
