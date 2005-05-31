@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/23 16:47:50 awrede Exp $
+# $NetBSD: Makefile,v 1.5 2005/05/31 11:25:25 dillo Exp $
 #
 
 DISTNAME=	conserver-8.1.11
@@ -25,11 +25,11 @@ CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/conserver
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.conserver8
-PKG_SUPPORTED_OPTIONS=	PAM ssl uds
+PKG_SUPPORTED_OPTIONS=	pam ssl uds
 PKG_SUGGESTED_OPTIONS=	ssl
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:MPAM)
+.if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam
 .endif

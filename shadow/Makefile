@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/31 10:02:13 dillo Exp $
+# $NetBSD: Makefile,v 1.9 2005/05/31 11:25:25 dillo Exp $
 
 DISTNAME=		shadow-4.0.4.1
 CATEGORIES=		sysutils devel
@@ -16,14 +16,14 @@ GNU_CONFIGURE=		YES
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.shadow
-PKG_SUPPORTED_OPTIONS=	PAM libcrack
+PKG_SUPPORTED_OPTIONS=	pam libcrack
 
 .include "../../mk/bsd.options.mk"
 
 ###
 ### PAM support.
 ###
-.if !empty(PKG_OPTIONS:MPAM)
+.if !empty(PKG_OPTIONS:Mpam)
 .  include "../../security/PAM/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libpam
 MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=	--with-libcrack
 CONFIGURE_ARGS+=	--without-libcrack
 .endif
 
-.if !empty(PKG_OPTIONS:MPAM)
+.if !empty(PKG_OPTIONS:Mpam)
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/shadow.pam ${EGDIR}/
