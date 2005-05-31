@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1795 2005/05/30 17:17:33 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1795 2005/05/30 17:17:33 thomasklausner Exp $
+# $Id: Makefile,v 1.1796 2005/05/31 10:50:21 ianzag Exp $
+# $NetBSD: Makefile,v 1.1796 2005/05/31 10:50:21 ianzag Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -48,6 +48,17 @@ SUBDIR+=	Radiator
 SUBDIR+=	Radiator-all
 SUBDIR+=	ReZound
 SUBDIR+=	Redland-rdf
+SUBDIR+=	SDL-intro
+SUBDIR+=	SDL-intro-cn
+SUBDIR+=	SDL-intro-de
+SUBDIR+=	SDL-intro-en
+SUBDIR+=	SDL-intro-es
+SUBDIR+=	SDL-intro-fr
+SUBDIR+=	SDL-intro-it
+SUBDIR+=	SDL-intro-jp
+SUBDIR+=	SDL-intro-ko
+SUBDIR+=	SDL-intro-pt
+SUBDIR+=	SDL-intro-ru
 SUBDIR+=	Siesta
 SUBDIR+=	WEPCrack
 SUBDIR+=	abuse_sdl
