@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2005/05/31 09:44:14 ianzag Exp $
+share/doc/SDL-intro/ru/author.html
+share/doc/SDL-intro/ru/index.html
+share/doc/SDL-intro/ru/toc.html
+share/doc/SDL-intro/ru/usingcdrom.html
+share/doc/SDL-intro/ru/usingendian.html
+share/doc/SDL-intro/ru/usingevents.html
+share/doc/SDL-intro/ru/usinginit.html
+share/doc/SDL-intro/ru/usingsound.html
+share/doc/SDL-intro/ru/usingthreads.html
+share/doc/SDL-intro/ru/usingtimers.html
+share/doc/SDL-intro/ru/usingvideo.html
+share/doc/SDL-intro/ru/whatcanitdo.html
+share/doc/SDL-intro/ru/whatisit.html
+share/doc/SDL-intro/ru/whatplatforms.html
+@exec ${MKDIR} %D/share/doc/SDL-intro-ru
+@dirrm share/doc/SDL-intro/ru
+@dirrm share/doc/SDL-intro
