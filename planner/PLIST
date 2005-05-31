@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/25 22:32:30 ondratu Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/05/31 00:12:45 thomasklausner Exp $
 bin/planner
 include/planner-1.0/libplanner/mrp-application.h
 include/planner-1.0/libplanner/mrp-assignment.h
@@ -36,9 +36,9 @@ share/applications/planner.desktop
 share/doc/planner/README.sql
 share/doc/planner/sample-1.planner
 share/gnome/help/planner/C/figures/calendar-new.png
-share/gnome/help/planner/C/figures/calendar.png
 share/gnome/help/planner/C/figures/calendar-week.png
 share/gnome/help/planner/C/figures/calendar-working-time.png
+share/gnome/help/planner/C/figures/calendar.png
 share/gnome/help/planner/C/figures/day-types.png
 share/gnome/help/planner/C/figures/gantt-view.png
 share/gnome/help/planner/C/figures/group1-subtask-dialog.png
@@ -49,15 +49,15 @@ share/gnome/help/planner/C/figures/group1-task.png
 share/gnome/help/planner/C/figures/group1-tasks-linked.png
 share/gnome/help/planner/C/figures/new-project.png
 share/gnome/help/planner/C/figures/print-project-paper.png
-share/gnome/help/planner/C/figures/print-project.png
 share/gnome/help/planner/C/figures/print-project-selectviews.png
+share/gnome/help/planner/C/figures/print-project.png
 share/gnome/help/planner/C/figures/project-properties-custom-add.png
 share/gnome/help/planner/C/figures/project-properties-custom.png
 share/gnome/help/planner/C/figures/project-properties.png
 share/gnome/help/planner/C/figures/project-zoom-fit.png
 share/gnome/help/planner/C/figures/project-zoom-up.png
-share/gnome/help/planner/C/figures/resource-editor.png
 share/gnome/help/planner/C/figures/resource-editor-sorted.png
+share/gnome/help/planner/C/figures/resource-editor.png
 share/gnome/help/planner/C/figures/resource-group-editor.png
 share/gnome/help/planner/C/figures/resource-insert.png
 share/gnome/help/planner/C/figures/resource-properties-calendar.png
@@ -69,12 +69,12 @@ share/gnome/help/planner/C/figures/task-custom-properties-add.png
 share/gnome/help/planner/C/figures/task-custom-properties.png
 share/gnome/help/planner/C/figures/task-edit-advanced.png
 share/gnome/help/planner/C/figures/task-edit-note.png
-share/gnome/help/planner/C/figures/task-edit.png
-share/gnome/help/planner/C/figures/task-edit-predecessors-add.png
 share/gnome/help/planner/C/figures/task-edit-predecessors-add-remove.png
+share/gnome/help/planner/C/figures/task-edit-predecessors-add.png
 share/gnome/help/planner/C/figures/task-edit-predecessors.png
 share/gnome/help/planner/C/figures/task-edit-resource-assigned.png
 share/gnome/help/planner/C/figures/task-edit-resources.png
+share/gnome/help/planner/C/figures/task-edit.png
 share/gnome/help/planner/C/figures/task-insert.png
 share/gnome/help/planner/C/figures/task-properties-dialog.png
 share/gnome/help/planner/C/figures/task-up.png
@@ -130,10 +130,6 @@ share/mime/packages/planner.xml
 share/omf/planner/planner-C.omf
 share/pixmaps/gnome-application-x-planner.png
 share/pixmaps/gnome-planner.png
-share/pixmaps/planner/gantt.png
-share/pixmaps/planner/resources.png
-share/pixmaps/planner/resources_usage.png
-share/pixmaps/planner/tasks.png
 share/pixmaps/planner/24_edit_resource.png
 share/pixmaps/planner/24_groups.png
 share/pixmaps/planner/24_indent_task.png
@@ -146,6 +142,10 @@ share/pixmaps/planner/24_task_down.png
 share/pixmaps/planner/24_task_up.png
 share/pixmaps/planner/24_unindent_task.png
 share/pixmaps/planner/24_unlink_task.png
+share/pixmaps/planner/gantt.png
+share/pixmaps/planner/resources.png
+share/pixmaps/planner/resources_usage.png
+share/pixmaps/planner/tasks.png
 share/planner/dtd/mrproject-0.5.1.dtd
 share/planner/dtd/mrproject-0.6.dtd
 share/planner/glade/add-predecessor.glade
@@ -160,8 +160,8 @@ share/planner/glade/resource-input-dialog.glade
 share/planner/glade/sql.glade
 share/planner/glade/task-dialog.glade
 share/planner/glade/task-input-dialog.glade
-share/planner/sql/database.sql
 share/planner/sql/database-0.11.sql
+share/planner/sql/database.sql
 share/planner/sql/upgrade-0.6.x-0.11.sql
 share/planner/stylesheets/html1_css.xsl
 share/planner/stylesheets/html1_gantt.xsl
