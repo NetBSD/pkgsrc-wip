@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/31 12:53:28 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.2 2005/05/31 15:56:30 leonardschmidt Exp $
 #
 
 .include "../../wip/wmii/Makefile.common"
 
-PKGNAME=	${DISTNAME:S/wmii/wmii-cairo/}
+PKGNAME=	${DISTNAME:S/wmii-0/wmii-cairo/}
 
 COMMENT+=	(built with cairo support)
 
