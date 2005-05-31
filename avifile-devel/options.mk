@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2005/04/26 10:54:12 obache Exp $
+# $NetBSD: options.mk,v 1.3 2005/05/31 10:02:10 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avifile-devel
 PKG_SUPPORTED_OPTIONS=	sdl faad qt vorbis xvid mad a52 lame jpeg ac3_passthrough
-PKG_DEFAULT_OPTIONS+=	sdl xvid vorbis mad jpeg a52
+PKG_SUGGESTED_OPTIONS=	sdl xvid vorbis mad jpeg a52
 
 .include "../../mk/bsd.options.mk"
 

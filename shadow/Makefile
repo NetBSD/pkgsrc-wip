@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:15:34 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2005/05/31 10:02:13 dillo Exp $
 
 DISTNAME=		shadow-4.0.4.1
 CATEGORIES=		sysutils devel
@@ -15,16 +15,9 @@ GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_PAM) && !empty(USE_PAM:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	PAM
-.endif
-
-.if defined(USE_LIBCRACK) && !empty(USE_LIBCRACK:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	libcrack
-.endif
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.shadow
 PKG_SUPPORTED_OPTIONS=	PAM libcrack
+
 .include "../../mk/bsd.options.mk"
 
 ###

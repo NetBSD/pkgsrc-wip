@@ -1,11 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2004/11/17 16:19:13 adrian_p Exp $
+# $NetBSD: options.mk,v 1.2 2005/05/31 10:02:09 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.anope
 PKG_SUPPORTED_OPTIONS=	mysql unrealircd
-
-.if !defined(PKG_OPTIONS.anope)
-PKG_DEFAULT_OPTIONS+=	unrealircd
-.endif
+PKG_SUGGESTED_OPTIONS=	unrealircd
 
 .include "../../mk/bsd.options.mk"
 

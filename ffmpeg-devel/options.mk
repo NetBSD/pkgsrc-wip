@@ -13,10 +13,6 @@ PKG_SUPPORTED_OPTIONS=  bktr lame mmx vorbis faac faad a52
 ### MMX support 
 ###
 
-.if !empty(USE_MMX:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=   mmx
-.endif
-
 .include "../../mk/compiler.mk"
 
 .if !empty(MACHINE_ARCH:Mi386)
