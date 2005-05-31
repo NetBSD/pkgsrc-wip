@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/29 04:52:59 sifu Exp $
+# $NetBSD: Makefile,v 1.16 2005/05/31 00:58:39 sifu Exp $
 
 DISTNAME=		Twisted-${TWISTED_VERSION}
 PKGNAME=		${PYPKGPREFIX}-twisted-${TWISTED_VERSION}
@@ -14,7 +14,7 @@ DEPENDS+=               ${PYPKGPREFIX}-ZopeInterface>=3.0.1:../../wip/py-ZopeInt
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-TWISTED_VERSION=	2.0.0
+TWISTED_VERSION=	2.0.1
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
