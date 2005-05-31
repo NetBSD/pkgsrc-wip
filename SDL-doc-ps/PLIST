@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2005/05/31 12:20:02 ianzag Exp $
+share/doc/SDL-doc/ps/sdldoc.ps
+@exec ${MKDIR} %D/share/doc/SDL-doc/ps
+@dirrm share/doc/SDL-doc/ps
+@dirrm share/doc/SDL-doc
