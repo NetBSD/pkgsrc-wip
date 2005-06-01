@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2005/05/30 12:28:41 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.3 2005/06/01 10:28:29 leonardschmidt Exp $
 
 --- config.mk.orig	2005-05-28 23:39:35.000000000 +0000
 +++ config.mk
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.2 2005/05/30 12:28:41 leonardschmidt Exp $
  DRAW        = xlib
  
  # cairo support
-@@ -26,18 +26,18 @@ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTR
+@@ -26,25 +26,25 @@ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTR
  
  # compiler
  # Note: under Solaris add -D__EXTENSIONS__ to CFLAGS
@@ -39,8 +39,9 @@ $NetBSD: patch-aa,v 1.2 2005/05/30 12:28:41 leonardschmidt Exp $
  # userland
  AR          = ar cr
 -CC          = cc
+-CP          = cp -f
 +#CC          = cc
- CP          = cp -f
++CP          = ${CP} -f
  COMPRESS    = bzip2
 -INSTBIN     = ${CP}
 -INSTDATA    = ${CP}
@@ -49,3 +50,14 @@ $NetBSD: patch-aa,v 1.2 2005/05/30 12:28:41 leonardschmidt Exp $
  MODBIN      = chmod 755
  MODDATA     = chmod 444
  #INSTBIN     = install -d -c -o root -g wheel -m 755
+ #INSTDATA    = install -d -c -o root -g wheel -m 444
+-MKDIR       = mkdir
++#MKDIR       = mkdir
+ RANLIB      = ranlib
+-RM          = rm -f
+-TAR         = tar
++RM          = ${RM} -f
++#TAR         = tar
+ PYTHON      = python
+-SED         = sed
++#SED         = sed
