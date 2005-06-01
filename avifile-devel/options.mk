@@ -1,8 +1,14 @@
-# $NetBSD: options.mk,v 1.3 2005/05/31 10:02:10 dillo Exp $
+# $NetBSD: options.mk,v 1.4 2005/06/01 20:18:23 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avifile-devel
 PKG_SUPPORTED_OPTIONS=	sdl faad qt vorbis xvid mad a52 lame jpeg ac3_passthrough
 PKG_SUGGESTED_OPTIONS=	sdl xvid vorbis mad jpeg a52
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "amd64"
+PKG_SUPPORTED_OPTIONS+=	mmx
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -127,3 +133,9 @@ PLIST_SUBST+=		JPEG_COMMENT=
 .else
 PLIST_SUBST+=		JPEG_COMMENT="@comment "
 .endif
+
+.if !empty(PKG_OPTIONS:Mmmx)
+CONFIGURE_ARGS+=	--enable-x86opt
+. else
+CONFIGURE_ARGS+=	--disable-x86opt
+. endif

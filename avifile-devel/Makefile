@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/24 10:29:24 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/01 20:18:23 thomasklausner Exp $
 
 DISTNAME=	avifile-0.7-0.7.43
 PKGNAME=	avifile-devel-0.7.43
@@ -34,12 +34,6 @@ CONFIGURE_ARGS+=	--disable-win32
 PLIST_SUBST+=	WIN32_COMMENT="@comment "
 .endif
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "amd64"
-BUILD_DEFS+=            USE_MMX
-. if !empty(USE_MMX:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-x86opt
-. else
-CONFIGURE_ARGS+=	--disable-x86opt
-. endif
 CONFIGURE_ARGS+=	--enable-ffmpeg
 PLIST_SUBST+=	FFMPEG_COMMENT=
 .else
