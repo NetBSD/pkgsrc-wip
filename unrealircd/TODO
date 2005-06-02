@@ -1,3 +1,4 @@
 - Try and hunt down and remove the line causing:
 	gcc: -R/usr/pkg/lib: linker input file unused because linking not done
   during builds.  Not a show-stopper.
+- Decide on if the security warning in the MESSAGE.inet6 is needed
