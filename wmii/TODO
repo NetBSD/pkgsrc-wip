@@ -1,5 +1,9 @@
 Package compiles and installs cleanly. wmii is, however, still under
 heavy development.
 
+* I have to substitute CONFPREFIX with ${LOCALBASE}/share/examples and
+not ${PKG_SYSCONFDIR} since status.sh loses its permissions (755) when
+getting copied over to ${LOCALBASE}/etc/wmii. Do not know if that is a
+big problem, though.
 * Through config.mk, one can choose between strncat/strncpy and strlcat/strlcpy
 * The wmii-cairo package seems not to be right

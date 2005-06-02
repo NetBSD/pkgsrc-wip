@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/06/02 14:30:19 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.5 2005/06/02 18:03:00 leonardschmidt Exp $
 
 --- config.mk.orig	2005-06-01 22:44:48.000000000 +0000
 +++ config.mk
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.4 2005/06/02 14:30:19 leonardschmidt Exp $
  
  # includes and libs
  INCLUDES    = -I. -I${INCDIR} -I/usr/include -I${X11DIR}/include
-@@ -27,25 +27,25 @@ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTR
+@@ -27,18 +27,18 @@ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTR
  
  # compiler
  # Note: under Solaris add -D__EXTENSIONS__ to CFLAGS
@@ -35,27 +35,13 @@ $NetBSD: patch-aa,v 1.4 2005/06/02 14:30:19 leonardschmidt Exp $
  # userland
  AR          = ar cr
 -CC          = cc
--CP          = cp -f
 +#CC          = cc
-+CP          = ${CP} -f
+ CP          = cp -f
  COMPRESS    = bzip2
 -INSTBIN     = ${CP}
 -INSTDATA    = ${CP}
--MODBIN      = chmod 755
--MODDATA     = chmod 444
 +INSTBIN     = ${BSD_INSTALL_PROGRAM}
 +INSTDATA    = ${BSD_INSTALL_DATA}
-+MODBIN      = ${CHMOD} 755
-+MODDATA     = ${CHMOD} 444
+ MODBIN      = chmod 755
+ MODDATA     = chmod 444
  #INSTBIN     = install -d -c -o root -g wheel -m 755
- #INSTDATA    = install -d -c -o root -g wheel -m 444
--MKDIR       = mkdir
-+#MKDIR       = mkdir
- RANLIB      = ranlib
--RM          = rm -f
--TAR         = tar
-+RM          = ${RM} -f
-+#TAR         = tar
- PYTHON      = python
--SED         = sed
-+#SED         = sed
