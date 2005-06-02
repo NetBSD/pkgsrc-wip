@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/06/01 10:31:10 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.3 2005/06/02 14:48:46 leonardschmidt Exp $
 
---- config.mk.orig	2005-05-28 23:39:35.000000000 +0000
+--- config.mk.orig	2005-06-01 22:44:48.000000000 +0000
 +++ config.mk
-@@ -1,23 +1,23 @@
+@@ -1,24 +1,24 @@
  # Customize to fit your system
  
  # paths
@@ -12,6 +12,7 @@ $NetBSD: patch-aa,v 1.2 2005/06/01 10:31:10 leonardschmidt Exp $
 +#PREFIX      = /usr/local
 +CONFPREFIX  = ${PREFIX}/share/examples
 +MANPREFIX   = ${PREFIX}/man
+ SHAREPREFIX = ${PREFIX}/share
  
  INCDIR      = ${PREFIX}/include
  LIBDIR      = ${PREFIX}/lib
@@ -35,7 +36,7 @@ $NetBSD: patch-aa,v 1.2 2005/06/01 10:31:10 leonardschmidt Exp $
  
  # str{l,n}{cat,cpy} support, if you have OpenBSD you can use strl*
  STRLCPY     = strncpy
-@@ -26,25 +26,25 @@ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTR
+@@ -27,25 +27,25 @@ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTR
  
  # compiler
  # Note: under Solaris add -D__EXTENSIONS__ to CFLAGS
