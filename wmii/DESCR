@@ -1,13 +1,15 @@
 Window manager improved 2 (wmii) is an improved, modularized and lightweight
 X11 window manager which supports tabbed, tiled and conventional window
-management. If build with cairo support, it also provides extended rendering
-capabilities like alpha blending and UTF-8 capable anti-aliased font rendering.
+management through layouts. If build with cairo support, it also provides
+anti-aliased font rendering.
 
-Wmii consists of components which are independent processes and communicate
-via a socket-based virtual filesystem, inspired by the filesystem paradigm
-of the plan9 operating system. The core distribution of wmii contains the
-window manager itself, a pager (wmipager), a generic status bar (wmibar), a
-shortcut handler (wmirat), and a generic ex-alike interaction menu (wmiinput)
-beside several tiny utilities like wmir, wmiplumb, wmitw, and wmimulti.
+Wmii consists of components that are independent processes and communicate
+via a socket-based virtual filesystem which is oriented on the "everything is a
+file" paradigm of the plan9 operating system.
+
+The core distribution of wmii contains the window manager itself, a master file
+system routing utility (wmifs), a generic bar (wmibar), a shortcut handler
+(wmikeys), and a generic interaction menu (wmiinput) beside several tiny
+utilities like wmir, wmiplumb, and wmiwarp.
 
 This package is built with xlib support only.
