@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:14:03 tvierling Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/03 13:25:15 thomasklausner Exp $
 #
 # XXX WIP: only installs parts necessary for client operation.
 # Server parts still in work (need to add informational texts into
@@ -33,9 +33,12 @@ installed_confs=	abuse.txt.in adminkey.txt blocked.txt.in \
 			mix.hlp news.hlp pgp.hlp pgponly.hlp \
 			rab.blk reply.txt.in type1.hlp usage.txt.in
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.mixmaster
+PKG_SUPPORTED_OPTIONS=	idea
 
-.if defined(USE_IDEA) && ${USE_IDEA} == YES
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Midea)
 .include "../../security/libidea/buildlink3.mk"
 CFLAGS+=		-DUSE_IDEA
 LDFLAGS+=		-lidea # must go before -lcrypto to override

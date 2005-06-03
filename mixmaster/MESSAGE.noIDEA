@@ -1,13 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE.noIDEA,v 1.2 2003/08/18 19:16:51 tvierling Exp $
+$NetBSD: MESSAGE.noIDEA,v 1.3 2005/06/03 13:25:15 thomasklausner Exp $
 
 PLEASE NOTE:
 
 This package was compiled without support for the IDEA encryption
-algorithm (USE_IDEA=NO).  Therefore, this version of Mixmaster is not
-capable of communication with Type I (cypherpunk) remailers using RSA
-keys, among other things.  To enable these features, re-build this
-package with USE_IDEA=YES (requires acceptance of the license terms
-for libidea).
+algorithm.  Therefore, this version of Mixmaster is not capable of
+communication with Type I (cypherpunk) remailers using RSA keys,
+among other things.  To enable these features, re-build this package
+with "PKG_OPTIONS.mixmaster=idea" set in /etc/mk.conf (requires
+acceptance of the license terms for libidea).
 
 ===========================================================================
