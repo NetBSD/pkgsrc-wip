@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/11 22:00:14 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/06/03 11:04:38 poppnk Exp $
 
-SHA1 (minimalist-2.4.tgz) = 05f132d30692ccf2ae2c25b86d2a9d8b7e0ae901
-Size (minimalist-2.4.tgz) = 28745 bytes
+SHA1 (minimalist-2.5.2.3.tgz) = 74edb3c3f74813c58907146f8d7cd775258f2902
+RMD160 (minimalist-2.5.2.3.tgz) = 72bbc02ec66a3a06e36c3529c85e68d39a3158cd
+Size (minimalist-2.5.2.3.tgz) = 36030 bytes

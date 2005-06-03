@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:14:03 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/03 11:04:31 poppnk Exp $
 #
 
-DISTNAME=	minimalist-2.4
+DISTNAME=	minimalist-2.5.2.3
 CATEGORIES=	wip mail
 MASTER_SITES=	http://www.mml.org.ua/LIST/
 EXTRACT_SUFX=	.tgz
