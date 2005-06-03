@@ -1,0 +1,26 @@
+CATEGORIES=		wip lang
+MASTER_SITES=		http://io.urbanape.com/release/ \
+			http://www.sigusr1.org/~steve/
+
+MAINTAINER=		pancake@phreaker.net
+HOMEPAGE=		http://www.iolanguage.com/
+
+USE_PKGLOCALEDIR=	yes
+HAS_CONFIGURE=		yes
+USE_TOOLS+=		gmake
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/IoVM/io ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/IoVM/io2c ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/io-vm/
+	${CP} -rf ${WRKSRC}/IoVM/_docs/* ${PREFIX}/share/doc/io-vm/
+	${CP} -rf ${WRKSRC}/_docs/*.html ${PREFIX}/share/doc/io-vm/
+	${INSTALL_DATA_DIR} ${PREFIX}/include/io
+	${CP} -rf ${WRKSRC}/IoVM/*.h ${PREFIX}/include/io/
+	${INSTALL_DATA_DIR} ${PREFIX}/include/io/base
+	${CP} -rf ${WRKSRC}/IoVM/base/*.h ${PREFIX}/include/io/base
+	${INSTALL_DATA_DIR} ${PREFIX}/include/io/SkipDB
+	${CP} -rf ${WRKSRC}/IoVM/SkipDB/*.h ${PREFIX}/include/io/SkipDB
+	${INSTALL_LIB} ${WRKSRC}/IoVM/_libs/libIoVM.a ${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/IoVM/_libs/libSkipDB.a ${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/IoVM/base/libIoBase.a ${PREFIX}/lib
