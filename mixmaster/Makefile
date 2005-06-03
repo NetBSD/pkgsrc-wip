@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/03 13:25:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/03 13:25:43 thomasklausner Exp $
 #
 # XXX WIP: only installs parts necessary for client operation.
 # Server parts still in work (need to add informational texts into
@@ -16,7 +16,6 @@ COMMENT=		The Mixmaster anonymous remailer client
 
 USE_PKGINSTALL=		yes
 
-BUILD_DEFS+=		USE_IDEA
 BUILD_DIRS=		${WRKSRC}/Src
 MAKE_FLAGS+=		CC=${CC} CFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q} LIBS=
 MAKEFILE=		Makefile.in
