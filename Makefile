@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1800 2005/06/02 08:11:50 ura Exp $
-# $NetBSD: Makefile,v 1.1800 2005/06/02 08:11:50 ura Exp $
+# $Id: Makefile,v 1.1801 2005/06/03 20:10:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1801 2005/06/03 20:10:16 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -152,7 +152,6 @@ SUBDIR+=	com_err
 SUBDIR+=	common-mml
 SUBDIR+=	commoncpp2
 SUBDIR+=	compare
-SUBDIR+=	conserver8
 SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	cream
