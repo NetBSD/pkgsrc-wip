@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/06/05 13:39:07 jtonio Exp $
+
+To use the tuareg-mode for editing caml or ocaml files, you may want to
+put the following into your .emacs:
+
+(setq auto-mode-alist
+  (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist))
+(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code." t)
+(autoload 'camldebug "cameldeb" "Run the Caml debugger." t)
+
+===========================================================================

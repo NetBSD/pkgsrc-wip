@@ -1,0 +1,4 @@
+Tuareg is a Caml mode for GNU Emacs  and XEmacs. It handles automatic
+indentation of Objective Caml and Camllight codes. Key parts of the code are
+hilighted using Font-Lock. Support to run an interactive Caml toplevel and
+debbuger is provided.
