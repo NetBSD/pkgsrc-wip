@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/28 00:11:09 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/06 12:37:25 minskim Exp $
 
-.include "../../chat/xchat2/Makefile.common"
+.include "../../chat/xchat/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tcl-/}
 
-COMMENT=	TCL scripting plugin for xchat2
+COMMENT=	TCL scripting plugin for xchat
 
-DEPENDS+=	xchat>=2.0.0:../../chat/xchat2
+DEPENDS+=	xchat>=2.0.0:../../chat/xchat
 
 BUILD_DIRS?=	${WRKSRC}/plugins/tcl
 
