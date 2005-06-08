@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:16:14 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/08 15:47:01 dillo Exp $
 #
 
 DISTNAME=		WMmp-0.10.0
@@ -13,11 +13,10 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
+USE_TOOLS+=		autoconf
 
 pre-configure:
-	cd ${WRKSRC};                                           \
-	${AUTOCONF}
+	cd ${WRKSRC} && autoconf
 
-.include "../../mk/autoconf.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 10:30:04 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/08 15:47:01 dillo Exp $
 #
 
 DISTNAME=		GtkAda-2.2.1
@@ -12,7 +12,7 @@ COMMENT=		Ada95 graphical toolkit
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake autoconf
 USE_AUTOCONF=		yes
 USE_X11=		yes
 
@@ -26,7 +26,8 @@ BUILD_DEFS=	USE_GCC_34
 USE_GCC_34?=	NO
 
 pre-configure:
-	cd ${WRKSRC}; ${AUTOCONF}
+	cd ${WRKSRC} && autoconf
+
 .if !empty(USE_GCC_34:M[Yy][Ee][Ss])
 .  include "../../lang/gcc34/preconfigure.mk"
 .else
@@ -42,5 +43,4 @@ pre-configure:
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/24 10:30:30 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/08 15:47:00 dillo Exp $
 #
 
 DISTNAME=		kvirc-3.0.0-beta2
@@ -13,7 +13,7 @@ COMMENT=		QT based irc client
 
 BUILD_USES_MSGFMT=	yes
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake automake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -26,11 +26,10 @@ CONFIGURE_ARGS+=	--with-aa-fonts
 PTHREAD_OPTS+=		require
 
 pre-configure:
-	cd ${WRKSRC};			\
-	${ACLOCAL};			\
-	${AUTOHEADER};			\
-	${AUTOMAKE} -a --foreign -i;	\
-	${AUTOCONF}
+	cd ${WRKSRC} && aclocal
+	cd ${WRKSRC} && autoheader
+	cd ${WRKSRC} && automake -a --foreign -i
+	cd ${WRKSRC} && autoconf
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -48,6 +47,5 @@ CONFIGURE_ARGS+=	--with-ix86-asm
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 
-.include "../../mk/automake.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

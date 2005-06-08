@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:51 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/08 15:47:02 dillo Exp $
 #
 
 DISTNAME=		wbxml2-0.9.0-patched
@@ -15,16 +15,15 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		automake
 
 pre-configure:
 	cd ${WRKSRC} && \
-		${ACLOCAL} && \
+		aclocal && \
 		${PREFIX}/bin/libtoolize --force --copy && \
-		${AUTOHEADER} && \
-		${AUTOCONF} && \
-		${AUTOMAKE} -acf
+		autoheader && \
+		autoconf && \
+		automake -acf
 
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../mk/autoconf.mk"
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

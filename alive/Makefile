@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/24 16:22:08 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/08 15:47:01 dillo Exp $
 #
 
 DISTNAME=	alive-1.4.0
@@ -12,16 +12,15 @@ COMMENT=	Login software for Swedish Telia ADSL/Comhem cable Internet users
 AUTOMAKE_REQD=  1.7.1
 MANCOMPRESSED=	yes
 GNU_CONFIGURE=  yes
+USE_TOOLS+=	automake
 
 LIBS.SunOS=	-lnsl -lsocket
 
 pre-configure:
-	cd ${WRKSRC};                                           \
-	${ACLOCAL};                                             \
-	${AUTOHEADER};                                          \
-	${AUTOMAKE} -a --foreign -i;                            \
-	${AUTOCONF}
+	cd ${WRKSRC} && aclocal
+	cd ${WRKSRC} && autoheader
+	cd ${WRKSRC} && automake -a --foreign -i
+	cd ${WRKSRC} && autoconf
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

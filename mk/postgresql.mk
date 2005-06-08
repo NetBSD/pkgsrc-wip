@@ -1,6 +1,6 @@
-# $NetBSD: postgresql.mk,v 1.1 2004/01/10 19:11:32 mpasternak Exp $
+# $NetBSD: postgresql.mk,v 1.2 2005/06/08 15:47:01 dillo Exp $
 
-# $Id: postgresql.mk,v 1.1 2004/01/10 19:11:32 mpasternak Exp $
+# $Id: postgresql.mk,v 1.2 2005/06/08 15:47:01 dillo Exp $
 #
 # This is a copycat of databases/postgresql/Makefile.common, updated in 
 # such way so it allows building 1st- and 3rd-party contrib packages 
@@ -58,6 +58,8 @@ PGSQL_CONFIGURE_ARGS+=	--without-python
 PGSQL_CONFIGURE_ARGS+=	--without-tcl
 PGSQL_CONFIGURE_ARGS+=	--without-tk
 
+USE_TOOLS+=	autoconf
+
 # Postgresql explicitly forbids any use of -ffast-math
 CFLAGS:=		${CFLAGS:S/-ffast-math//}
 
@@ -79,8 +81,6 @@ postgresql-post-extract:
 	fi
 
 postgresql-do-configure:
-	cd ${PGSQL_WRKSRC} && ${AUTOCONF} && ${SETENV} \
+	cd ${PGSQL_WRKSRC} && autoconf && ${SETENV} \
 		${PGSQL_CONFIGURE_ENV} ./configure \
 		${PGSQL_CONFIGURE_ARGS}
-
-.include "../../mk/autoconf.mk"

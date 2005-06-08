@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/24 10:29:24 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/08 15:47:00 dillo Exp $
 #
 
 DISTNAME=	beast-0.5.4
@@ -9,17 +9,15 @@ MAINTAINER=	collver1@comcast.net
 HOMEPAGE=	http://beast.gtk.org/
 COMMENT=	Bedevilled Audio System
 
-AUTOCONF_REQD=	2.13
-
 USE_X11=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake autoconf213
 GNU_CONFIGURE=	yes
 
 LDFLAGS+=	${LIBOSSAUDIO}
 
 pre-configure:
-	cd ${WRKSRC} && ${AUTOCONF}
+	cd ${WRKSRC} && autoconf
 
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
@@ -28,7 +26,6 @@ pre-configure:
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
-.include "../../mk/autoconf.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
