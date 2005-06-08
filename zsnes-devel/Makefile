@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/06/08 15:13:18 dillo Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/08 15:19:27 dillo Exp $
 #
 
-DISTNAME=		ZSNESS_0411
-PKGNAME=		zsnes-20050411
+DISTNAME=		ZSNESS_0519
+PKGNAME=		zsnes-20050519
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.ipherswipsite.com/files/zsnes/
 EXTRACT_SUFX=		.tar.bz2
@@ -24,6 +24,7 @@ USE_X11=		# defined
 .include "../../graphics/png/buildlink3.mk"
 
 pre-configure:
-	cd ${WRKSRC} && aclocal && autoconf
+	cd ${WRKSRC} && aclocal
+	cd ${WRKSRC} && autoconf
 
 .include "../../mk/bsd.pkg.mk"
