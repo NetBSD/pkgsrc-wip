@@ -1,0 +1,7 @@
+CGI and mail interface for [RAA:RubyPhoto] and zphoto.
+
+This include extended RubyPhoto. But this is not include RubyPhoto's samples.
+
+Good for zphoto if your zphoto version is >= 1.1.
+
+You can make galleries for some languages if you want.

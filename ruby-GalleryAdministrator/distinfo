@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/06/09 13:08:24 obache Exp $
+
+SHA1 (ruby/gallery-0.0.8.tar.gz) = 2f782b72772b2178928f0ae7df1566afa163f506
+RMD160 (ruby/gallery-0.0.8.tar.gz) = 188494996a2e8ae9e09013eaa7cae885b582f6ab
+Size (ruby/gallery-0.0.8.tar.gz) = 154879 bytes
