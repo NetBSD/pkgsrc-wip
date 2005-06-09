@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/06/09 12:34:51 obache Exp $
+$NetBSD: distinfo,v 1.2 2005/06/09 13:48:51 obache Exp $
 
-SHA1 (topless) = 81f8922058f17db98887a1e176a85e195175693d
-RMD160 (topless) = c989de936c116f6361650301b41d4b5500597f91
-Size (topless) = 6275 bytes
+SHA1 (topless-1.36/topless) = 81f8922058f17db98887a1e176a85e195175693d
+RMD160 (topless-1.36/topless) = c989de936c116f6361650301b41d4b5500597f91
+Size (topless-1.36/topless) = 6275 bytes
