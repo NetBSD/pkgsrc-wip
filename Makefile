@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1803 2005/06/09 12:36:23 obache Exp $
-# $NetBSD: Makefile,v 1.1803 2005/06/09 12:36:23 obache Exp $
+# $Id: Makefile,v 1.1804 2005/06/09 13:10:27 obache Exp $
+# $NetBSD: Makefile,v 1.1804 2005/06/09 13:10:27 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -865,6 +865,7 @@ SUBDIR+=	rosegarden-current
 SUBDIR+=	rox-gtk2
 SUBDIR+=	rssh
 SUBDIR+=	rtorrent
+SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-dpklib
 SUBDIR+=	ruby-ming
 SUBDIR+=	ruby-misen
