@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/02 09:35:30 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/09 17:24:12 marttikuparinen Exp $
 
 DISTNAME=		JAlbum
 PKGNAME=		jalbum-5.2
@@ -10,8 +10,7 @@ MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.jalbum.net/
 COMMENT=		Web photo album generator
 
-DIST_SUBDIR=		${PKGNAME}
-USE_JAVA2=		YES
+DIST_SUBDIR=		${PKGNAME_NOREV}
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	blackdown-jdk13 kaffe sun-jdk13 sun-jdk14 sun-jdk15
 
@@ -22,7 +21,7 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/jalbum ${PREFIX}/bin
-	(cd ${WRKDIR} && ${TAR} -cf - JAlbum) | ${TAR} -xf - -C ${PREFIX}
+	(cd ${WRKDIR} && ${PAX} -rw JAlbum) ${PREFIX})
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
