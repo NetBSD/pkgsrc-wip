@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:58 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/10 20:34:32 thomasklausner Exp $
 #
 
 DISTNAME=		grass-6.0.0
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=        --with-fftw=no
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../misc/proj/buildlink3.mk"
 .include "../../wip/gdal-lib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
