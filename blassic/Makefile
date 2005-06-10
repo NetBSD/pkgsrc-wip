@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:10:12 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/10 23:02:32 ivaniclixx Exp $
 #
 
 DISTNAME=		blassic-0.10.0
@@ -13,4 +13,5 @@ COMMENT=		Blassic is a classic Basic interpreter
 GNU_CONFIGURE=		yes
 USE_X11=                yes
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
