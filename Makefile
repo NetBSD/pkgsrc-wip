@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1804 2005/06/09 13:10:27 obache Exp $
-# $NetBSD: Makefile,v 1.1804 2005/06/09 13:10:27 obache Exp $
+# $Id: Makefile,v 1.1805 2005/06/10 13:22:06 ghen Exp $
+# $NetBSD: Makefile,v 1.1805 2005/06/10 13:22:06 ghen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -965,6 +965,7 @@ SUBDIR+=	tcc
 SUBDIR+=	tcd
 SUBDIR+=	tcpspy
 SUBDIR+=	tcptrack
+SUBDIR+=	teTeX3
 SUBDIR+=	teamspeak
 SUBDIR+=	tendra
 SUBDIR+=	tenmado
@@ -975,6 +976,7 @@ SUBDIR+=	tex-foiltex
 SUBDIR+=	tex-hlatex
 SUBDIR+=	tex-passivetex
 SUBDIR+=	tex-xmltex
+SUBDIR+=	texmaker
 SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
