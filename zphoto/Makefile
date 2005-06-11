@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:50 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/11 11:10:32 obache Exp $
 #
 
 DISTNAME=	zphoto-1.2
@@ -9,13 +9,12 @@ MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://namazu.org/~satoru/zphoto/
 COMMENT=	Flash-based photo album generator
 
-USE_X11=		yes
+.include "options.mk"
+
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
-USE_PERL5=		build
-
-.include "options.mk"
+USE_TOOLS+=		gmake perl
+TOOLS_DEPMETHOD.perl?=	BUILD_DEPENDS
 
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.libiconv}
@@ -25,4 +24,5 @@ CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext-lib}
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../wip/ming/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
