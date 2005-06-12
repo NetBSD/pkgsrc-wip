@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/06/12 14:39:15 dillo Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/06/12 14:53:15 dillo Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBZIP_BUILDLINK3_MK:=	${LIBZIP_BUILDLINK3_MK}+
@@ -15,7 +15,6 @@ BUILDLINK_DEPENDS.libzip+=	libzip>=0.6
 BUILDLINK_PKGSRCDIR.libzip?=	../../archivers/libzip
 .endif	# LIBZIP_BUILDLINK3_MK
 
-# XXX: not exposed, i think
-#.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
