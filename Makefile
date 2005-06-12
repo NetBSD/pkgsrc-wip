@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1806 2005/06/12 12:14:18 kristerw Exp $
-# $NetBSD: Makefile,v 1.1806 2005/06/12 12:14:18 kristerw Exp $
+# $Id: Makefile,v 1.1807 2005/06/12 12:18:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.1807 2005/06/12 12:18:25 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -80,6 +80,7 @@ SUBDIR+=	aols-openssl
 SUBDIR+=	aols-postgres
 SUBDIR+=	aolserver
 SUBDIR+=	aolserver4
+SUBDIR+=	aop
 SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-choke
 SUBDIR+=	ap-frontpage
@@ -371,6 +372,8 @@ SUBDIR+=	ilohamail
 SUBDIR+=	im
 SUBDIR+=	interbase-docs
 SUBDIR+=	interchange
+SUBDIR+=	io-server
+SUBDIR+=	io-vm
 SUBDIR+=	ipfm
 SUBDIR+=	iptables
 SUBDIR+=	iptstate
@@ -465,6 +468,7 @@ SUBDIR+=	libglade-java
 SUBDIR+=	libgnome-java
 SUBDIR+=	libgrass5
 SUBDIR+=	libgtk-java
+SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libhttpd
 SUBDIR+=	liblingoteach
 SUBDIR+=	libneural
@@ -998,6 +1002,7 @@ SUBDIR+=	tripwire2
 SUBDIR+=	tsh
 SUBDIR+=	tsm
 SUBDIR+=	ttysnoop
+SUBDIR+=	tuareg-mode
 SUBDIR+=	tutos
 SUBDIR+=	tuxtype2
 SUBDIR+=	typhoon
