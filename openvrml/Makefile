@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/24 10:31:15 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/12 23:51:25 kristerw Exp $
 
 DISTNAME=	openvrml-0.14.3
 CATEGORIES=	graphics
@@ -8,7 +8,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.openvrml.org/
 COMMENT=	Portable C++ library for displaying VRML97 files
 
-USE_X11=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--disable-script-node-java --disable-script-node-javascript
 USE_TOOLS+=	gmake
@@ -19,4 +18,5 @@ USE_TOOLS+=	gmake
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/05/24 10:30:01 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2005/06/12 23:51:20 kristerw Exp $
 #
 
 DISTNAME=	gtk-sharp-0.99
@@ -13,7 +13,6 @@ DEPENDS+=	p5-XML-LibXML>=1.31:../../textproc/p5-XML-LibXML
 
 USE_TOOLS+=	gmake
 USE_PERL5=	yes
-USE_X11=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 PERL5_SITELIB=	yes
@@ -61,4 +60,5 @@ MAKE_FLAGS+=	RUNTIME=${MONO:Q}
 .include "../../x11/vte/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

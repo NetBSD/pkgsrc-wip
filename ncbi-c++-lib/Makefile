@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/24 10:31:11 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/12 23:51:24 kristerw Exp $
 #
 
 DISTNAME=		ncbi_cxx--Nov_30_2004
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.ncbi.nlm.nih.gov/IEB/ToolBox/index.cgi
 COMMENT=		Libraries needed by apps dependent on NCBI C++ toolkit
 
 CONFLICTS=		ncbi_cxx-lib-[0-9]*
-USE_X11=		YES
 USE_BUILDLINK3=		YES
 
 GNU_CONFIGURE=		YES
@@ -24,4 +23,5 @@ do-configure:
 .include "../../wip/ncbi-lib/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

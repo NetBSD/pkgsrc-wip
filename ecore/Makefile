@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:11:46 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:17 kristerw Exp $
 #
 
 DISTNAME=		ecore-1.0.0_pre7
@@ -13,9 +13,9 @@ COMMENT=		Core events/X abstraction layer for Enlightenment
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_X11=		YES
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../wip/evas/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 10:56:14 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/12 23:51:22 kristerw Exp $
 #
 
 DISTNAME=		mapserver-4.4.2
@@ -10,7 +10,6 @@ HOMEPAGE=		http://mapserver.gis.umn.edu/
 COMMENT=		Environment for building spatially enabled Internet apps
 
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-curl-config		\
@@ -72,4 +71,5 @@ do-install:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../wip/geos/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

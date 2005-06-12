@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/24 10:31:43 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/12 23:51:28 kristerw Exp $
 
 DISTNAME=	SpeedX-0.1.4d
 PKGNAME=	speedx-0.1.4d
@@ -14,7 +14,6 @@ SITES_mercrain.s3m.zip=	http://www.modarchive.com/cgi-bin/download.cgi/M/
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
-USE_X11=	YES
 
 post-build:
 # XXX should just use find and cpio instead, but cpio isn't on all systems
@@ -35,4 +34,5 @@ post-install:
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../audio/libmikmod/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

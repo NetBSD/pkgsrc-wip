@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 10:31:04 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/12 23:51:23 kristerw Exp $
 #
 
 DISTNAME=	mupen64_src-0.4
@@ -12,7 +12,6 @@ HOMEPAGE=	http://mupen64.emulation64.com/
 COMMENT=	Free Nintendo 64(TM) emulator for unix-like OS 
 
 USE_TOOLS+=	gmake
-USE_X11=	yes
 WRKSRC=		${WRKDIR}/emu64
 
 # Ensure we export symbols in the linked shared object.
@@ -49,4 +48,5 @@ do-install:
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

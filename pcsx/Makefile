@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/24 10:31:16 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/12 23:51:25 kristerw Exp $
 #
 
 DISTNAME=	PcsxSrc-1.5
@@ -13,7 +13,6 @@ COMMENT=	Free Playstation(TM) emulator
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-USE_X11=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/Linux
 
 INSTALLATION_DIRS=	bin
@@ -22,4 +21,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pcsx ${PREFIX}/bin
 
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

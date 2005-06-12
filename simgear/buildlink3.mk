@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/03/19 02:21:36 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/06/12 23:51:28 kristerw Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SIMGEAR_BUILDLINK3_MK:=	${SIMGEAR_BUILDLINK3_MK}+
@@ -19,5 +19,6 @@ BUILDLINK_DEPMETHOD.simgear?=	build
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

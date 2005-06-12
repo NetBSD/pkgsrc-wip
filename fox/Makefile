@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/07 00:02:29 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/12 23:51:18 kristerw Exp $
 #
 
 DISTNAME=		fox-1.2.16
@@ -16,7 +16,6 @@ CONFIGURE_ARGS+=	--disable-opengl	\
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../graphics/jpeg/buildlink3.mk"
@@ -24,4 +23,5 @@ GNU_CONFIGURE=		yes
 .include "../../graphics/tiff/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

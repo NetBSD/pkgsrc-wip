@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:24 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/12 23:51:19 kristerw Exp $
 #
 
 DISTNAME=		GDElinux
@@ -12,7 +12,6 @@ COMMENT=		Genetic Data Environment
 
 WRKSRC=			${WRKDIR}/GDE
 USE_LINUX=		YES
-USE_X11=		YES
 
 post-extract:
 	${MV} ${WRKSRC}/HGL_SRC/global_defs.h.orig \
@@ -42,4 +41,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/db/* ${PREFIX}/gde/db/
 
 .include "../../x11/xview-lib/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 10:31:49 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/12 23:51:29 kristerw Exp $
 #
 
 DISTNAME=	wmitime-0.3
@@ -12,6 +12,6 @@ COMMENT=	Windowmaker dockapp for time/date/itime
 WRKSRC=         ${WRKDIR}/wmitime/wmitime
 
 USE_TOOLS+=	gmake
-USE_X11=	YES
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:25 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/12 23:51:15 kristerw Exp $
 #
 
 #DISTNAME=		cinelerra-1.2.0-src
@@ -20,7 +20,6 @@ COMMENT=		Non-linear video and audio editor and compositor (unofficial)
 #WRKSRC=			${WRKDIR}/cinelerra-1.2.0/cinelerra
 #WRKSRC=			${WRKDIR}/cinelerra-1.2.0
 WRKSRC=			${WRKDIR}/hvirtual
-USE_X11=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
@@ -56,4 +55,5 @@ USE_TOOLS+=		gmake
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:31:11 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/12 23:51:24 kristerw Exp $
 #
 
 DISTNAME=		mythtv-0.11
@@ -17,7 +17,6 @@ HAS_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
-USE_X11=		YES
 
 USE_TOOLS+=		gmake
 
@@ -45,4 +44,5 @@ pre-install:
 
 .include "../../audio/lame/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

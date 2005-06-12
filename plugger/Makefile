@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/18 08:17:00 airhead Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/12 23:51:25 kristerw Exp $
 #
 
 DISTNAME=	plugger-5.0
@@ -9,7 +9,6 @@ MAINTAINER=	airhead@users.sourceforge.net
 HOMEPAGE=	http://fredrik.hubbe.net/plugger.html
 COMMENT=	Plugin for multimedia types in Mozilla, Netscape and Opera
 
-USE_X11=		YES
 USE_PKGINSTALL=		YES
 
 REL_EGDIR=		share/examples/plugger
@@ -26,4 +25,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/plugger.7 ${PREFIX}/man/man7/
 	${INSTALL_DATA} ${WRKSRC}/pluggerrc ${EGDIR}/
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

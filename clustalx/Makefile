@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/19 20:25:26 daprice Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:16 kristerw Exp $
 #
 
 DISTNAME=		clustalx1.83.sun
@@ -13,7 +13,6 @@ COMMENT=		X-Windows interface for ClustalW
 WRKSRC=                 ${WRKDIR}/clustalx1.83.sun
 MESSAGE_SUBST+=         PREFIX=${PREFIX}
 MAKEFILE=		makefile
-USE_X11=		yes
 
 do-install:
 .for PROGRAM in clustalx
@@ -30,4 +29,5 @@ do-install:
 .include "../../wip/ncbi-lib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

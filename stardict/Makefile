@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:43 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:28 kristerw Exp $
 #
 
 DISTNAME=		stardict-2.4.4
@@ -12,7 +12,6 @@ COMMENT=		Cross-Platform and international dictionary written in Gtk2
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_X11=		yes
 USE_TOOLS+=		gmake
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
@@ -25,4 +24,5 @@ GCONF2_SCHEMAS+=	stardict.schemas
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

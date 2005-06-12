@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/07/02 12:52:16 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/06/12 23:51:20 kristerw Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 JDK14_BUILDLINK3_MK:=	${JDK14_BUILDLINK3_MK}+
@@ -21,5 +21,7 @@ BUILDLINK_CPPFLAGS.jdk14= \
 	-I${BUILDLINK_JAVA_PREFIX.jdk14}/include				\
 	-I${BUILDLINK_JAVA_PREFIX.jdk14}/include/netbsd
 .endif	# JDK14_BUILDLINK3_MK
+
+.include "../../mk/x11.buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

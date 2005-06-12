@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/24 10:30:29 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/12 23:51:21 kristerw Exp $
 #
 
 DISTNAME=	konversation-0.15
@@ -12,7 +12,6 @@ COMMENT=	KDE IRC Client
 
 GNU_CONFIGURE=	YES
 USE_PERL5=	YES
-USE_X11=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake
 
@@ -31,4 +30,5 @@ CONFIGURE_ARGS+=	--disable-threading
 
 CONFIGURE_ARGS+=	--with-extra-includes=${BUILDLINK_PREFIX.jpeg}/include
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:14:10 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/12 23:51:23 kristerw Exp $
 #
 
 DISTNAME=	mupen64_sound
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mupen64.emulation64.com/
 COMMENT=	Sound plugin for mupen64 emulator
-
-USE_X11=	yes
 
 LDFLAGS+=	${LIBOSSAUDIO}
 
@@ -28,4 +26,5 @@ pre-install:
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

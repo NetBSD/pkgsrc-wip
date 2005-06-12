@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/08 15:47:00 dillo Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/12 23:51:21 kristerw Exp $
 #
 
 DISTNAME=	links-hacked-${VER}
@@ -13,7 +13,6 @@ COMMENT=        Enhanced version of Links with tabs and more
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake automake
-USE_X11=		yes
 
 VER=			030709
 
@@ -70,4 +69,5 @@ pre-configure:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

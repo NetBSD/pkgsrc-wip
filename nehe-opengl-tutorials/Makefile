@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:31:12 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/12 23:51:24 kristerw Exp $
 #
 
 DISTNAME=	nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}-0
@@ -23,7 +23,6 @@ COMMENT=		OpenGL tutorials from NeHe.gamedev.net - ${NEHE_OPENGL_TUT_FLAVOUR} ve
 
 DIST_SUBDIR=   		nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}
 USE_TOOLS+=		gmake
-USE_X11=		yes
 RESTRICTED=		"I am not sure if we can redistribute it"
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -73,4 +72,5 @@ do-install:
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

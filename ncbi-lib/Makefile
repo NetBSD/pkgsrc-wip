@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/19 23:52:42 daprice Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/12 23:51:24 kristerw Exp $
 #
 
 DISTNAME=		ncbi
@@ -14,7 +14,6 @@ COMMENT=		Portable, modular software for molecular biology
 PKG_VER=		20040505
 WRKSRC=			${WRKDIR}/ncbi
 DIST_SUBDIR=		${PKGNAME}
-USE_X11=		yes
 
 MAKE_ENV+=		PREFIX=${PREFIX}
 
@@ -53,5 +52,5 @@ do-install:
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-

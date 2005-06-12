@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/24 10:31:25 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/12 23:51:27 kristerw Exp $
 #
 
 DISTNAME=	scm5d6
@@ -26,13 +26,13 @@ SCM_DATA=	scm.info hobbit.info
 INFO_FILES=	${SCM_INFO}
 
 .if defined(USE_X) && defined(USE_NCURSES)
-USE_X11=	yes
+.include "../../mk/x11.buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 PLIST_SRC=	${PKGDIR}/PLIST.X_ncurses
 SCM_INFO=	${SCM_DATA} Xlibscm.info
 BUILD_SCRIPT=	${FILESDIR}/buildscm_X_ncurses.sh
 .elif defined(USE_X)
-USE_X11=	yes
+.include "../../mk/x11.buildlink3.mk"
 PLIST_SRC=	${PKGDIR}/PLIST.X
 SCM_INFO=	${SCM_DATA} Xlibscm.info
 BUILD_SCRIPT=	${FILESDIR}/buildscm_X.sh

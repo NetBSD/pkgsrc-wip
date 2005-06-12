@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/03/17 21:16:12 daprice Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/06/12 23:51:24 kristerw Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -35,5 +35,6 @@ BUILDLINK_PKGSRCDIR.ncbi_cxx-lib?=	../../wip/ncbi-c++-lib
 #.include "../../wip/ncbi-lib/buildlink3.mk"
 #.include "../../x11/fltk/buildlink3.mk"
 #.include "../../x11/wxGTK/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

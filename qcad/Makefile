@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 10:31:22 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/12 23:51:26 kristerw Exp $
 #
 
 DISTNAME=		qcad-2.0.4.0-1.src
@@ -11,7 +11,6 @@ PKGNAME=		qcad-2.0.4.0
 
 COMMENT=		2D CAD system
 
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+= 	gmake
 
@@ -72,4 +71,5 @@ do-install:
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

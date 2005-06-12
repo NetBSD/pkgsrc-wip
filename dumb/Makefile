@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 10:29:36 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/12 23:51:16 kristerw Exp $
 #
 
 DISTNAME=		dumb-0.9.2-fixed
@@ -13,7 +13,6 @@ COMMENT=		IT, XM, S3M and MOD player library
 
 LICENSE=		dumb-license
 USE_TOOLS+=		gmake
-USE_X11=		yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dumb
@@ -25,4 +24,5 @@ post-install:
 
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:11:05 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:16 kristerw Exp $
 #
 
 DISTNAME=		dicom3tools_1.00.snapshot.20030501.helgray
@@ -10,7 +10,6 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.dclunie.com/
 COMMENT=		Library for dealing with DICOM 3 files
 
-USE_X11=		yes
 USE_IMAKE=		yes
 
 do-configure:

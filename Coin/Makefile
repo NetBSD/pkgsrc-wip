@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/18 09:08:10 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/12 23:51:13 kristerw Exp $
 
 DISTNAME=		Coin-2.2.1
 CATEGORIES=		graphics
@@ -11,8 +11,6 @@ COMMENT=		Free, portable, Open Inventor API implementation
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-3ds-import --disable-debug
 
-USE_X11=		yes
-
 .include "../../graphics/simage/buildlink3.mk"
 #.include "../../audio/openal/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
@@ -24,4 +22,5 @@ USE_X11=		yes
 CONFIGURE_ARGS+=        --with-pthreads=yes --enable-threadsafe
 .endif
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

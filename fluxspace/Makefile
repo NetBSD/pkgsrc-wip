@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/24 10:29:42 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/12 23:51:18 kristerw Exp $
 #
 
 DISTNAME=		fluxspace-0.0.3
@@ -9,7 +9,6 @@ MAINTAINER=		poff@sixbit.org
 COMMENT=		Fluxbox workspace manager, environment
 
 GNU_CONFIGURE=	YES
-USE_X11=		YES
 USE_TOOLS+=		gmake
 
 USE_LIBTOOL=		YES
@@ -24,4 +23,5 @@ CONFIGURE_ENV+= PYTHON_LDFLAGS="${BUILDLINK_LDFLAGS.python22}"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../lang/python22/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

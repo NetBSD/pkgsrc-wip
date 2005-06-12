@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/24 10:30:00 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/12 23:51:20 kristerw Exp $
 
 DISTNAME=		gtk-gnutella-current-${GTK_GNUTELLA_VER}
 PKGREVISION=		2
@@ -11,7 +11,6 @@ COMMENT=		GTK-based gnutella client, CVS snapshot
 
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-d -e -r -s -D prefix="${PREFIX}" -D cc="${CC}" \
@@ -40,4 +39,5 @@ NO_CHECKSUM=		# defined
 .include "../../wip/gettext-tools/buildlink3.mk"
 
 .include "../../wip/mk/cvs-package.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/08 15:47:01 dillo Exp $
+# $NetBSD: Makefile,v 1.8 2005/06/12 23:51:20 kristerw Exp $
 #
 
 DISTNAME=		GtkAda-2.2.1
@@ -14,7 +14,6 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake autoconf
 USE_AUTOCONF=		yes
-USE_X11=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,4 +42,5 @@ pre-configure:
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

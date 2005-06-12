@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/06/30 12:39:35 johnrshannon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/06/12 23:51:20 kristerw Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTKADA_BUILDLINK3_MK:=	${GTKADA_BUILDLINK3_MK}+
@@ -18,5 +18,6 @@ BUILDLINK_PKGSRCDIR.GtkAda?=	../../wip/gtkada
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

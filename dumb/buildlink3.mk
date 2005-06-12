@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/04 02:47:26 blef Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/06/12 23:51:16 kristerw Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DUMB_BUILDLINK3_MK:=	${DUMB_BUILDLINK3_MK}+
@@ -14,5 +14,7 @@ BUILDLINK_PACKAGES+=	dumb
 BUILDLINK_DEPENDS.dumb+=	dumb>=0.9.2
 BUILDLINK_PKGSRCDIR.dumb?=	../../wip/dumb
 .endif	# DUMB_BUILDLINK3_MK
+
+.include "../../mk/x11.buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

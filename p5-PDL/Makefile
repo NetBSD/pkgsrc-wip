@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/01 10:25:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/12 23:51:25 kristerw Exp $
 
 DISTNAME=	PDL-2.4.2
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,6 @@ DEPENDS+=	p5-Term-ReadLine-[0-9]*:../../devel/p5-Term-ReadLine
 DEPENDS+=	p5-Filter-[0-9]*:../../textproc/p5-Filter
 DEPENDS+=	p5-Text-Balanced-[0-9]*:../../textproc/p5-Text-Balanced
 
-USE_X11=	YES
-
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/PDL/.packlist
 
 #
@@ -28,4 +26,5 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/PDL/.packlist
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

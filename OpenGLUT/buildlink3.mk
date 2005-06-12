@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/08/07 10:23:49 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/06/12 23:51:13 kristerw Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENGLUT_BUILDLINK3_MK:=	${OPENGLUT_BUILDLINK3_MK}+
@@ -19,5 +19,6 @@ MESA_REQD+=     6.0
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

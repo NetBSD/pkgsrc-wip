@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/07 01:58:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:26 kristerw Exp $
 #
 
 DISTNAME=	urbanterror3
@@ -29,7 +29,7 @@ ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386 Linux-*-i386
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
-USE_X11=	yes
+.include "../../mk/x11.buildlink3.mk"
 .else
 .include "../../emulators/suse_linux/Makefile.application"
 .endif

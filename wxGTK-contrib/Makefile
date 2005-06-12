@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:49 rillig Exp $
-# $Id: Makefile,v 1.3 2005/05/24 10:31:49 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:30 kristerw Exp $
+# $Id: Makefile,v 1.4 2005/06/12 23:51:30 kristerw Exp $
 #
 
 DISTNAME=		wxGTK-2.4.2
@@ -13,7 +13,6 @@ HOMEPAGE=		http://www.wxwindows.org/
 COMMENT=		wxWindows GUI library 3rd party contributions
 
 USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
@@ -59,4 +58,5 @@ do-install:
 .include "../../graphics/tiff/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

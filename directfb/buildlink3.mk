@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/12 02:47:02 blef Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/06/12 23:51:16 kristerw Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 DIRECTFB_BUILDLINK3_MK:=	${DIRECTFB_BUILDLINK3_MK}+
@@ -19,5 +19,6 @@ BUILDLINK_PKGSRCDIR.DirectFB?=	../../wip/directfb
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

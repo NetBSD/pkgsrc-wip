@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/09 08:25:29 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:24 kristerw Exp $
 
 DISTNAME=	mxterm_129
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -11,10 +11,9 @@ HOMEPAGE=	http://inittab.netizenweb.com/software.jsp
 COMMENT=	Motif XTerm
 
 GNU_CONFIGURE=	YES
-USE_X11=	YES
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
 .include "../../mk/motif.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-

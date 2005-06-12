@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:44:35 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:14 kristerw Exp $
 #
 
 DISTNAME=		rezound-0.11.1beta
@@ -22,7 +22,6 @@ CPPFLAGS+=		-DDEVOSSSOUND="\"${DEVOSSSOUND}\""
 USE_TOOLS+=		flex gmake bison
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 
 PKG_SUPPORTED_OPTIONS= alsa
 PKG_OPTIONS_VAR=       PKG_OPTIONS.rezound
@@ -48,4 +47,5 @@ CONFIGURE_ARGS+=	--disable-alsa
 
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

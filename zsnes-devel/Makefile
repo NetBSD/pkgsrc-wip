@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/08 15:19:27 dillo Exp $
+# $NetBSD: Makefile,v 1.12 2005/06/12 23:51:31 kristerw Exp $
 #
 
 DISTNAME=		ZSNESS_0519
@@ -18,10 +18,10 @@ GNU_CONFIGURE=		# defined
 USE_TOOLS+=		gmake automake
 ONLY_FOR_PLATFORM=	*-*-i386
 BUILD_TARGET=		zsnes
-USE_X11=		# defined
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 pre-configure:
 	cd ${WRKSRC} && aclocal

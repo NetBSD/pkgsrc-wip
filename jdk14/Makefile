@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/24 10:30:26 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/12 23:51:20 kristerw Exp $
 
 DISTNAME=	j2sdk-1_4_2-src-scsl
 PKGNAME=	jdk14-${JDK_VERSION}.${JDK_PATCHSET_VERSION}.1
@@ -22,7 +22,6 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 LICENSE=	scsl-2.3-license
 
-USE_X11=		yes
 USE_PKGINSTALL=		yes
 USE_TOOLS+=		gmake m4
 USE_LANGUAGES=		c c++

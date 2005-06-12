@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 10:30:29 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/12 23:51:21 kristerw Exp $
 #
 
 # XXX You must update MASTER_SITES download number when updating
@@ -14,7 +14,6 @@ COMMENT=		Non-linear editor for Digital Video data
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 # maybe need to do CONF_DIRS for this? Is this important?
@@ -54,4 +53,5 @@ CONFIGURE_ARGS+=	--with-hotplug-script-dir=${PREFIX}/share/examples/kino/hotplug
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/24 10:31:50 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/06/12 23:51:31 kristerw Exp $
 #
 
 DISTNAME=	zinf-2.2.0
@@ -15,7 +15,6 @@ PTHREAD_OPTS=	require
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-USE_X11=	yes
 #USE_PERL5=	yes
 
 CONFIGURE_ARGS+=--enable-cmdline \
@@ -34,4 +33,5 @@ CONFIGURE_ARGS+=--enable-cmdline \
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/10 20:34:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/12 23:51:19 kristerw Exp $
 #
 
 DISTNAME=		grass-6.0.0
@@ -12,7 +12,6 @@ COMMENT=		Open source, free software geographical information system (GIS)
 USE_PERL5=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
-USE_X11=		YES
 USE_TOOLS+=		gmake
 
 BUILD_TARGET=		default
@@ -29,4 +28,5 @@ CONFIGURE_ARGS+=        --with-fftw=no
 .include "../../wip/gdal-lib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

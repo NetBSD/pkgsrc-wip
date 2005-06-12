@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:16 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:25 kristerw Exp $
 #
 
 DISTNAME=	pekwm-cvs
@@ -13,7 +13,6 @@ COMMENT=	Window manager based on aewm++ (CVS version)
 
 GNU_CONFIGURE=	    yes
 USE_TOOLS+=	    gmake
-USE_X11=	    yes
 USE_PERL5=	    run
 USE_LANGUAGES=	    c c++
 NO_CHECKSUM=	    # defined
@@ -39,4 +38,5 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

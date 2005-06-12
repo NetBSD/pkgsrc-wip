@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/08 15:47:03 dillo Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:26 kristerw Exp $
 #
 
 DISTNAME=		pwsafe-0.1.6
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--without-readline
 
 .if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--with-x
-USE_X11=		yes
+.include "../../mk/x11.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/20 17:17:36 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/06/12 23:51:22 kristerw Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 MATCHBOX_DESKTOP_BUILDLINK3_MK:=	${MATCHBOX_DESKTOP_BUILDLINK3_MK}+
@@ -17,5 +17,6 @@ BUILDLINK_PKGSRCDIR.matchbox-desktop?=	../../wip/matchbox-desktop
 
 .include "../../wip/libmatchbox/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

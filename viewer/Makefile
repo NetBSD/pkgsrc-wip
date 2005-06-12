@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:16:10 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:29 kristerw Exp $
 
 DISTNAME=		viewer-0.7.3
 CATEGORIES=		graphics
@@ -11,11 +11,10 @@ COMMENT=		OpenGL based multipurpose image viewer
 GNU_CONFIGURE=		yes
 CONFIG_STATUS_OVERRIDE= # defined
 
-USE_X11=		yes
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/viewer ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/viewer.1 ${PREFIX}/man/man1
 
 .include "../../graphics/glut/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
