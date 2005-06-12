@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/19 23:40:07 daprice Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/12 14:04:02 kristerw Exp $
 #
 
 DISTNAME=		xgobi
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.research.att.com/areas/stat/xgobi/
 COMMENT=		Data Visualization Systems for viewing high-dimensional data
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
-USE_X11=                yes
+USE_IMAKE=		yes
 
 do-configure:
 	cd ${WRKSRC}/src; \
@@ -48,4 +48,3 @@ do-install:
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
-
