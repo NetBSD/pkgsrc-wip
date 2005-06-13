@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/25 03:42:04 schnoebe Exp $
+# $NetBSD: Makefile,v 1.7 2005/06/13 00:51:09 kristerw Exp $
 #
 
 DISTNAME=       interchange-5.2.0
@@ -39,7 +39,7 @@ MESSAGE_SUBST+= 	ICUSER=${INTERCHANGE_USER}	\
 			ICDIR=${INTERCHANGE_DIR}
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.pkg.install.mk"
+.include "../../mk/install/bsd.pkginstall.mk"
 
 USE_PERL5=	# defined
 

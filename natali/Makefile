@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:12 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/13 00:47:00 kristerw Exp $
 
 DISTNAME=	natali-1.25
 CATEGORIES=	net
@@ -27,5 +27,5 @@ do-install:
 
 .include "../../net/netatalk/buildlink3.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
+.include "../../mk/install/bsd.pkginstall.mk"
 .include "../../mk/bsd.pkg.mk"
