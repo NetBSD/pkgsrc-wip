@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/30 23:51:10 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/13 11:29:24 kristerw Exp $
 
 DISTNAME=	chprofessional-4.0.0.linux2.2.5.intel
 PKGNAME=	linux-chproffessional-4.0.0
@@ -36,7 +36,7 @@ do-install:
 	cd ${PREFIX} && ${FIND} -d chprofessional4.0.0  -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../emulators/suse_linux/Makefile.application"
 
 .if ${OPSYS} == "NetBSD"
 DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
