@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:49:02 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/13 00:09:12 kristerw Exp $
 #
 
 VERSION=		1.0.0-rc2
@@ -8,8 +8,6 @@ CATEGORIES=		databases geography
 MAINTAINER=		mchittur@nmsu.edu
 HOMEPAGE=		http://postgis.refractions.net/
 COMMENT=		Spatial database capabilities for PostgreSQL
-
-USE_BUILDLINK3=		YES
 
 # XXX - Override these so they work correctly with Makefile.common.
 #       The last two don't really need changing, except that Makefile.common
@@ -25,7 +23,6 @@ MASTER_SITES+=  	${PGSQL_SITES:=source/v${DIST_VERS}/}
 MASTER_SITES+=  	http://postgis.refractions.net/
 
 USE_PERL5=		YES
-USE_BUILDLINK3=		YES
 
 PGSQL_VERSION_REQD+=	74
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/12 23:51:24 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/13 00:09:10 kristerw Exp $
 #
 
 DISTNAME=		ncbi_cxx--Nov_30_2004
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.ncbi.nlm.nih.gov/IEB/ToolBox/index.cgi
 COMMENT=		Libraries needed by apps dependent on NCBI C++ toolkit
 
 CONFLICTS=		ncbi_cxx-lib-[0-9]*
-USE_BUILDLINK3=		YES
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/11 17:12:11 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:08 kristerw Exp $
 #
 
 DISTNAME=		commoncpp2-1.3.8
@@ -9,7 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://cplusplus.sourceforge.net/
 COMMENT=		Portable and highly optimized class framework for C++
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libccgnu2.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libccext2.pc.in

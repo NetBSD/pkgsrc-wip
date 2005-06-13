@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/16 15:08:46 florian_stoehr Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:10 kristerw Exp $
 #
 
 DISTNAME=		neb-hdtoolbox-src-0.9
@@ -15,7 +15,6 @@ NO_CONFIGURE=		yes
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 WRKSRC=			${WRKDIR}
-USE_BUILDLINK3=		yes
 
 INSTALLATION_DIRS=	bin man/man1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/16 00:57:54 dmb_ Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:07 kristerw Exp $
 #
 
 DISTNAME=		mod_choke-0.06
@@ -9,8 +9,6 @@ MASTER_SITES=		http://os.cyberheatinc.com/mod_choke/
 MAINTAINER=		dmb@except.one.pl
 HOMEPAGE=		http://os.cyberheatinc.com/mod_choke.php
 COMMENT=		Limit resource usage by greedy clients
-
-USE_BUILDLINK3=		yes
 
 APACHE_MODULE_NAME=	mod_choke.so
 

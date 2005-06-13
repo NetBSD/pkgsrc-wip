@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/12 23:51:21 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/13 00:09:09 kristerw Exp $
 #
 
 DISTNAME=		kchm-0.6.5
@@ -11,7 +11,6 @@ HOMEPAGE=		http://kchmnew.sourceforge.net/
 COMMENT=		KDE CHM file viewer
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake
 

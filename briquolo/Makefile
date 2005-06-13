@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/02 19:40:34 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:08 kristerw Exp $
 #
 
 DISTNAME=		briquolo-0.5.2
@@ -10,7 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://briquolo.free.fr/
 COMMENT=		3D breakout based on OpenGL
 
-USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

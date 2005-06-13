@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/04/02 08:50:47 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:13 kristerw Exp $
 #
 
 DISTNAME=		ts2_client_rc2_2032
@@ -11,7 +11,6 @@ MAINTAINER=		rillig@NetBSD.org
 HOMEPAGE=		ftp://ftp.freenet.de/pub/4players/teamspeak.org/releases/
 COMMENT=		Talk to other people over the internet
 
-USE_BUILDLINK3=		yes
 NO_BUILD=		yes
 LICENSE=		fee-based-commercial-use
 

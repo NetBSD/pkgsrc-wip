@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.2 2005/05/26 14:20:39 christian_gall Exp $
-# $NetBSD: Makefile,v 1.2 2005/05/26 14:20:39 christian_gall Exp $
+# $Id: Makefile,v 1.3 2005/06/13 00:09:10 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/06/13 00:09:10 kristerw Exp $
 
 DISTNAME=	muttng-20050526
 CATEGORIES=	mail
@@ -9,7 +9,6 @@ MAINTAINER=	cg@cgall.de
 HOMEPAGE=	http://mutt-ng.berlios.de/
 COMMENT=	Fork of the well-known email client mutt
 
-USE_BUILDLINK3=		yes
 CONFLICTS+=		mutt-[0-9]*
 CONFLICTS+=		mutt-devel-[0-9]*
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/08 12:08:29 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/13 00:09:09 kristerw Exp $
 
 DISTNAME=	libtorrent-0.6.4
 CATEGORIES=	net
@@ -9,7 +9,6 @@ HOMEPAGE=	http://libtorrent.rakshasa.no/
 COMMENT=	BitTorrent library written in C++ for *nix
 
 USE_LIBTOOL=		yes
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 

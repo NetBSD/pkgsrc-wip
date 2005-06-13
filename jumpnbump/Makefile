@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/31 18:13:49 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:09 kristerw Exp $
 #
 
 DISTNAME=		jumpnbump-1.50
@@ -9,7 +9,6 @@ MAINTAINER=		Peter.Bex@student.kun.nl
 HOMEPAGE=		http://jumpbump.mine.nu/
 COMMENT=		Game with cute rabbits and lots of blood
 
-USE_BUILDLINK3=		yes
 MAKE_ENV+=		SDL_PREFIX="${BUILDLINK_PREFIX.SDL}"
 MAKE_ENV+=		SDL_mixer_PREFIX="${BUILDLINK_PREFIX.SDL_mixer}"
 MAKE_ENV+=		SDL_net_PREFIX="${BUILDLINK_PREFIX.SDL_net}"

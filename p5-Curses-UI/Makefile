@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/28 09:12:41 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:10 kristerw Exp $
 #
 
 DISTNAME=	Curses-UI-0.95
@@ -17,7 +17,6 @@ DEPENDS+=	p5-Test-Pod>=1.20:../../devel/p5-Test-Pod
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Curses/UI/.packlist
 
 .include "../../lang/perl5/module.mk"

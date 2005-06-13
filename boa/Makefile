@@ -9,7 +9,6 @@ MAINTAINER=	schwarz@netbsd.org
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/boa
 EGDIR=		${PREFIX}/share/examples/boa
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 USE_TOOLS+=	gmake lex
 WRKSRC=		${WRKDIR}/${DISTNAME}/src	
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/09 15:33:32 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:13 kristerw Exp $
 
 DISTNAME=	uqwk-2.21
 CATEGORIES=	news
@@ -9,7 +9,6 @@ COMMENT=	tool to collect news and mail packets for offline reading
 MAINTAINER=	schwarz@netbsd.org
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 
 INSTALLATION_DIRS=	bin man/man1
 
