@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/24 10:31:23 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/13 00:56:31 kristerw Exp $
 #
 
 DISTNAME=	qico-0.48.5
@@ -48,5 +48,5 @@ pre-install:
 	${INSTALL_DATA} ${WRKSRC}/qico.conf.sample \
 		${PREFIX}/share/examples/qico/qico.conf
 
-.include "../../mk/bsd.pkg.install.mk"
+.include "../../mk/install/bsd.pkginstall.mk"
 .include "../../mk/bsd.pkg.mk"
