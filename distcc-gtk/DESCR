@@ -1,0 +1,2 @@
+This package provides a graphical monitor for distcc, much like
+distcc-textmon, but based on GTK+.
