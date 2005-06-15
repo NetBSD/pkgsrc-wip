@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/06/15 10:57:26 jmmv Exp $
+
+--- sim-cmd.c.orig	2005-02-09 20:18:49.000000000 +0200
++++ sim-cmd.c	2005-03-29 17:34:33.000000000 +0200
+@@ -118,7 +118,7 @@
+   PRINTF("dh <fromaddr> [<toaddr>]             - dumps memory as hex code (use redirect)\n");
+   PRINTF("<cmd> > <filename> - redirect simulator stdout to <filename> (and not emulated PRINTF)\n");
+ #if !FAST_SIM
+-  PRINTF("set <section> <item> = <param>  - set configuration.  See sim.cfg for more information.\n");
++  PRINTF("set <section> <item> = <param>  - set configuration.  See or1ksim.cfg for more information.\n");
+   PRINTF("debug      - toggles simulator debug mode\n");
+   mp_help ();
+   prof_help ();

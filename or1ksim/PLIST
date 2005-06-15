@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/15 10:57:26 jmmv Exp $
+bin/or1ksim
+share/doc/or1ksim/AUTHORS
+share/doc/or1ksim/BUGS
+share/doc/or1ksim/COPYING
+share/doc/or1ksim/INSTALL
+share/doc/or1ksim/ChangeLog
+share/doc/or1ksim/NEWS
+share/doc/or1ksim/README
+share/doc/or1ksim/README.gdb
+share/doc/or1ksim/TODO
+share/examples/or1ksim/or1ksim.cfg
+share/examples/or1ksim/virtex.tim
+@dirrm share/doc/or1ksim
+@dirrm share/examples/or1ksim

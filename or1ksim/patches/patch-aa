@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/06/15 10:57:26 jmmv Exp $
+
+--- configure.orig	2005-03-29 16:32:55.000000000 +0200
++++ configure	2005-03-29 16:33:43.000000000 +0200
+@@ -1422,7 +1422,7 @@
+ 
+ SIMVERSION=1.2
+ 
+-case "$target_cpu" in
++case "$OR1KSIM_CPU" in
+ or32*)	CPU_ARCH=or32;
+ 	ARCH_ISA=OR32;;
+ dlx*)	CPU_ARCH=dlx;

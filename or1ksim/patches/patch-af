@@ -1,0 +1,109 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/06/15 10:57:26 jmmv Exp $
+
+--- sim-config.c.orig	2005-02-09 20:18:51.000000000 +0200
++++ sim-config.c	2005-03-29 19:36:19.000000000 +0200
+@@ -1016,6 +1016,17 @@
+   return x == 1;
+ }
+ 
++int log2 (int x) {
++  int log=-1;
++  while (x)
++  {
++    x >>= 1;
++    log++;
++  }
++  return log;
++}
++
++
+ void immu_enabled () {
+   setsprbits (SPR_UPR, SPR_UPR_IMP, tempL & 1);
+   config.immu.enabled = tempL;
+@@ -1102,8 +1113,10 @@
+ }
+ 
+ void ic_nsets () {
+-  if (is_power2(tempL) && tempL <= MAX_IC_SETS)
++  if (is_power2(tempL) && tempL <= MAX_IC_SETS){
+     config.ic.nsets = tempL;
++    setsprbits (SPR_ICCFGR, SPR_ICCFGR_NCS,log2(tempL));
++  }
+   else {
+     char tmp[200];
+     sprintf (tmp, "value of power of two and lower or equal than %i expected.", MAX_IC_SETS);
+@@ -1112,15 +1125,22 @@
+ }
+ 
+ void ic_nways () {
+-  if (tempL >= 1 && tempL <= MAX_IC_WAYS)
++  if (tempL >= 1 && tempL <= MAX_IC_WAYS){
+     config.ic.nways = tempL;
+-  else
+-    ERROR("value 1, 2, 3 or 4 expected.");
++    setsprbits (SPR_ICCFGR, SPR_ICCFGR_NCW, log2(tempL));
++  }
++  else{
++    char tmp[200];
++    sprintf (tmp, "value of power of two and lower or equal than %i expected.",MAX_IC_WAYS);
++    ERROR(tmp);
++  }
+ }
+ 
+ void ic_blocksize () {
+-  if (is_power2(tempL))
++  if (is_power2(tempL)){
+     config.ic.blocksize = tempL;
++    setsprbits (SPR_ICCFGR, SPR_ICCFGR_CBS,log2(tempL));
++  }
+   else
+     ERROR("value of power of two expected.");
+ }
+@@ -1138,8 +1158,10 @@
+ }
+ 
+ void dc_nsets () {
+-  if (is_power2(tempL) && tempL <= MAX_DC_SETS)
++  if (is_power2(tempL) && tempL <= MAX_DC_SETS){
+     config.dc.nsets = tempL;
++    setsprbits (SPR_DCCFGR, SPR_DCCFGR_NCS, log2(tempL));
++  }
+   else {
+     char tmp[200];
+     sprintf (tmp, "value of power of two and lower or equal than %i expected.", MAX_DC_SETS);
+@@ -1148,15 +1170,22 @@
+ }
+ 
+ void dc_nways () {
+-  if (tempL >= 1 && tempL <= MAX_IC_WAYS)
++    if (is_power2(tempL) && tempL<= MAX_DC_WAYS){ 
+     config.dc.nways = tempL;
+-  else
+-    ERROR("value 1, 2, 3 or 4 expected.");
++    setsprbits (SPR_DCCFGR, SPR_DCCFGR_NCW, log2(tempL));
++  }
++  else {
++    char tmp[200];
++    sprintf (tmp, "value of power of two and lower or equal than %i expected.",MAX_DC_WAYS);
++    ERROR(tmp);
++  }
+ }
+ 
+ void dc_blocksize () {
+-  if (is_power2(tempL))
++  if (is_power2(tempL)){
+     config.dc.blocksize = tempL;
++    setsprbits (SPR_DCCFGR, SPR_DCCFGR_CBS,log2(tempL));
++  }
+   else
+     ERROR("value of power of two expected.");
+ }
+@@ -1322,7 +1351,7 @@
+   int local = 1;
+   section = 0;
+   
+-  sprintf(ctmp, "%s/.or1k/%s", home, filename);
++  sprintf(ctmp, "%s/.or1ksim/%s", home, filename);
+   if ((f = fopen (filename, "rt")) != NULL
+       || home != NULL && !(local = 0) && (f = fopen (ctmp, "rt")) != NULL) {
+     if (config.sim.verbose && !runtime.sim.output_cfg)

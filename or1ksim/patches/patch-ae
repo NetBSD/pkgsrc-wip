@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/06/15 10:57:26 jmmv Exp $
+
+--- toplevel.c.orig	2005-03-29 17:46:28.000000000 +0200
++++ toplevel.c	2005-03-29 17:48:33.000000000 +0200
+@@ -348,7 +348,7 @@
+     PRINTF(" --nosrv              do not launch JTAG proxy server\n"); /* (CZ) */
+     PRINTF(" --srv <n>            launch JTAG proxy server on port <n>; [random]\n"); /* (CZ) */
+ #if !FAST_SIM
+-    PRINTF(" -f or --file         load script file [sim.cfg]\n");
++    PRINTF(" -f or --file         load script file [or1ksim.cfg]\n");
+     PRINTF(" --enable-profile     enable profiling.\n"); 
+     PRINTF(" --enable-mprofile    enable memory profiling.\n"); 
+ #endif
+@@ -364,7 +364,7 @@
+ #if !FAST_SIM
+   /* Read configuration file.  */
+   if (!runtime.sim.script_file_specified)
+-    read_script_file ("sim.cfg");
++    read_script_file ("or1ksim.cfg");
+ 
+   /* Overide parameters with command line ones */
+   if (runtime.simcmd.profile) config.sim.profile = 1;

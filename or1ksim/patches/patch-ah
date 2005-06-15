@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1.1.1 2005/06/15 10:57:26 jmmv Exp $
+
+--- cache/dcache_model.h.orig	2005-02-09 19:40:58.000000000 +0200
++++ cache/dcache_model.h	2005-03-29 18:45:53.000000000 +0200
+@@ -17,8 +17,8 @@
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA. */
+ 
+-#define MAX_DC_SETS 8192
+-#define MAX_DC_WAYS 4
++#define MAX_DC_SETS 1024
++#define MAX_DC_WAYS 32
+ #define MAX_DC_BLOCK_SIZE 4 /* In words */
+ 
+ uint32_t dc_simulate_read(oraddr_t dataaddr, int width);

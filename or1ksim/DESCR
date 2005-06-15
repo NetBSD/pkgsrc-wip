@@ -1,0 +1,4 @@
+or1ksim is a OpenRISC machine emulator. The goals are to emulate 32-bit and 
+64-bit OpenRISC CPUs and enough surrounding hardware to fake real machines, 
+capable of running real (unmodified) operating systems, such as NetBSD,RTEMS, 
+eCos and Linux. 

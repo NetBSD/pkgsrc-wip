@@ -1,0 +1,65 @@
+$NetBSD: patch-ag,v 1.1.1.1 2005/06/15 10:57:26 jmmv Exp $
+
+--- cpu/or1k/spr_defs.h.orig	2004-10-16 00:53:01.000000000 +0200
++++ cpu/or1k/spr_defs.h	2005-03-29 18:12:59.000000000 +0200
+@@ -257,6 +257,60 @@
+ #define SPR_ICCR_EW	0x000000ff  /* Enable ways */
+ 
+ /*
++ * Bit definitions for Data Cache Configuration Register
++ *
++ */
++
++#define SPR_DCCFGR_NCW		0x00000007
++#define SPR_DCCFGR_NCS		0x00000078
++#define SPR_DCCFGR_CBS		0x00000080
++#define SPR_DCCFGR_CWS		0x00000100
++#define SPR_DCCFGR_CCRI		0x00000200
++#define SPR_DCCFGR_CBIRI	0x00000400
++#define SPR_DCCFGR_CBPRI	0x00000800
++#define SPR_DCCFGR_CBLRI	0x00001000
++#define SPR_DCCFGR_CBFRI	0x00002000
++#define SPR_DCCFGR_CBWBRI	0x00004000
++
++/*
++ * Bit definitions for Instruction Cache Configuration Register
++ *
++ */
++#define SPR_ICCFGR_NCW		0x00000007
++#define SPR_ICCFGR_NCS		0x00000078
++#define SPR_ICCFGR_CBS		0x00000080
++#define SPR_ICCFGR_CCRI		0x00000200
++#define SPR_ICCFGR_CBIRI	0x00000400
++#define SPR_ICCFGR_CBPRI	0x00000800
++#define SPR_ICCFGR_CBLRI	0x00001000
++
++/*
++ * Bit definitions for Data MMU Configuration Register
++ *
++ */
++
++#define SPR_DMMUCFGR_NTW	0x00000003
++#define SPR_DMMUCFGR_NTS	0x0000001C
++#define SPR_DMMUCFGR_NAE	0x000000E0
++#define SPR_DMMUCFGR_CRI	0x00000100
++#define SPR_DMMUCFGR_PRI        0x00000200
++#define SPR_DMMUCFGR_TEIRI	0x00000400
++#define SPR_DMMUCFGR_HTR	0x00000800
++
++/*
++ * Bit definitions for Instruction MMU Configuration Register
++ *
++ */
++
++#define SPR_IMMUCFGR_NTW	0x00000003
++#define SPR_IMMUCFGR_NTS	0x0000001C
++#define SPR_IMMUCFGR_NAE	0x000000E0
++#define SPR_IMMUCFGR_CRI	0x00000100
++#define SPR_IMMUCFGR_PRI	0x00000200
++#define SPR_IMMUCFGR_TEIRI	0x00000400
++#define SPR_IMMUCFGR_HTR	0x00000800
++
++/*
+  * Bit definitions for Debug Control registers
+  *
+  */

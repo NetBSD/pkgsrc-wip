@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/06/15 10:57:26 jmmv Exp $
+
+SHA1 (or1k_or1ksim-stable_0_1_x.tar.gz) = 8f3f70e39596a823fd4fdc83f58fa3dfc51adcdd
+Size (or1k_or1ksim-stable_0_1_x.tar.gz) = 515640 bytes 
+SHA1 (patch-aa) = d493460e67a1d5236f71231109b030c98c8b2797
+SHA1 (patch-ab) = 73e22785bd11078d8dbf6a94155b1e36575915d8
+SHA1 (patch-ac) = 0dbad1456fa643236a457d3d08eac291e2cb1922
+SHA1 (patch-ad) = 0f578d4c36557aee5d79c15edcfe72e2d043a92e
+SHA1 (patch-ae) = 6be3293a4f5130f014728a0ab359565e9259c16e
+SHA1 (patch-af) = 19ed41da8b04f92d15f636b8507f0856b52983e3
+SHA1 (patch-ag) = 1acafda9399599c9d49af2d9b603eba1683ab0ce
+SHA1 (patch-ah) = 47919f6e53e8ee04f21dac99ed2e5bf04fd5239c
+SHA1 (patch-ai) = 5b928716fda3c6472f4254b38143b2e642dde85f

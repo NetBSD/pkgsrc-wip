@@ -1,0 +1,2 @@
+- The fetch process uses wget, but it's not available until a later stage in
+  the build (due to BUILD_DEPENDS).

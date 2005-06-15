@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/06/15 10:57:26 jmmv Exp $
+
+--- port/port.h.orig	2005-02-09 19:41:19.000000000 +0200
++++ port/port.h	2005-03-29 14:34:54.000000000 +0200
+@@ -3,6 +3,10 @@
+ 
+ #include <stdlib.h>
+ 
++#ifdef HAVE_SYS_TYPES_H
++#include <sys/types.h>
++#endif /* HAVE_SYS_TYPES_H */
++
+ #if !defined(HAVE_STRNDUP)
+ char * strndup (const char *s, size_t n);
+ #endif
+@@ -61,6 +65,8 @@
+ # endif
+ #endif
+ 
++#ifndef  HAVE_SYS_TYPES_H
++
+ #ifndef HAVE_UINT32_T
+ # if SIZEOF_INT == 4
+ typedef unsigned int uint32_t;
+@@ -106,3 +112,5 @@
+ typedef signed char int8_t;
+ # endif
+ #endif
++
++#endif /* HAVE_SYS_TYPES_H */
