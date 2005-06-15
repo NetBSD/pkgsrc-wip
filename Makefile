@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1810 2005/06/15 06:45:55 ura Exp $
-# $NetBSD: Makefile,v 1.1810 2005/06/15 06:45:55 ura Exp $
+# $Id: Makefile,v 1.1811 2005/06/15 10:59:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.1811 2005/06/15 10:59:51 jmmv Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -641,6 +641,7 @@ SUBDIR+=	open21xx
 SUBDIR+=	openvrml
 SUBDIR+=	opera-devel
 SUBDIR+=	oqtplayer
+SUBDIR+=	or1ksim
 SUBDIR+=	orion
 SUBDIR+=	orpie
 SUBDIR+=	p3nfs
