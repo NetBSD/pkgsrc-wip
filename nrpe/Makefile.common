@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2005/06/15 06:23:26 ura Exp $
+
+.include "../../wip/nagios-base/Makefile.common"
+
+NRPE_USER?=		${NAGIOS_USER}
+NRPE_GROUP?=		${NAGIOS_GROUP}
+
+CONFIGURE_ARGS+=	--with-nrpe-user=${NRPE_USER}
+CONFIGURE_ARGS+=	--with-nrpe-group=${NRPE_GROUP}
+
+.include "../../mk/bsd.prefs.mk"
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.nrpe
+PKG_SUPPORTED_OPTIONS=	args
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Margs)
+CONFIGURE_ARGS+=	--enable-command-args
+.endif

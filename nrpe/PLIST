@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/15 06:23:26 ura Exp $
+libexec/nagios/check_nrpe
+sbin/nrpe
+share/examples/nagios/nrpe.cfg
+share/examples/rc.d/nrpe
+@dirrm share/examples/nagios
