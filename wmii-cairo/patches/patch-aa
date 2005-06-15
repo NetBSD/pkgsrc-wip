@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2005/06/02 18:02:49 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.5 2005/06/15 15:26:48 leonardschmidt Exp $
 
---- config.mk.orig	2005-06-01 22:44:48.000000000 +0000
+--- config.mk.orig	2005-06-13 05:36:42.000000000 +0000
 +++ config.mk
 @@ -1,24 +1,24 @@
  # Customize to fit your system
@@ -20,9 +20,10 @@ $NetBSD: patch-aa,v 1.4 2005/06/02 18:02:49 leonardschmidt Exp $
 +X11DIR      = ${X11BASE}
  
  # includes and libs
- INCLUDES    = -I. -I${INCDIR} -I/usr/include -I${X11DIR}/include
+-INCLUDES    = -I. -I${INCDIR} -I/usr/include -I${X11DIR}/include
 -LIBS        = -L${LIBDIR} -L/usr/lib -lc -lm -L${X11DIR}/lib -lX11
 -DRAW        = xlib
++INCLUDES    = -I. -I${INCDIR} -I${PREFIX}/include -I${X11DIR}/include
 +LIBS        = -L${LIBDIR} -L/usr/lib -lc -lm -Wl,-R${X11DIR}/lib -lX11
 +#DRAW        = xlib
  

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.3 2005/06/02 18:02:59 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.4 2005/06/15 15:26:49 leonardschmidt Exp $
 #
 
-DISTNAME=	wmii-1
+DISTNAME=	wmii-1.1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://wmi.modprobe.de/download/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://wmi.modprobe.de/
@@ -15,7 +16,6 @@ USE_PKGINSTALL=	yes
 NO_CONFIGURE=	yes
 
 SUBST_CLASSES+=	paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	rc/rc
 SUBST_SED.paths=	-e 's|CONFPREFIX|${LOCALBASE}/share/examples|;s|SHAREPREFIX|${LOCALBASE}/share|'

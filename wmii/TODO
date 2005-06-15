@@ -1,5 +1,4 @@
-Package compiles and installs cleanly. wmii is, however, still under
-heavy development.
+Package compiles and installs cleanly.
 
 * I have to substitute CONFPREFIX with ${LOCALBASE}/share/examples and
 not ${PKG_SYSCONFDIR} since status.sh loses its permissions (755) when
