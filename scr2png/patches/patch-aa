@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/06/16 08:37:29 jeremy-c-reed Exp $
+
+--- Makefile.orig	Sun May 20 13:19:02 2001
++++ Makefile	Thu Jun 16 01:10:42 2005
+@@ -4,9 +4,9 @@
+ 
+ SRCS=		scr2png.c decode.c
+ 
+-COPTS=		-I/usr/local/include
++COPTS=		-I${LOCALBASE}/include
+ LDADD=		-lgd -lm
+-LDFLAGS=	-L/usr/local/lib
++LDFLAGS?=	-L${LOCALBASE}/lib
+ 
+ scr2png-${VERSION}.tar: scr2png.c decode.c decode.h Makefile shot1.scr shot2.scr scr2png.1
+ 	tar cf ${.TARGET} ${.ALLSRC}

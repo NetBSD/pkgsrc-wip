@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/06/16 08:37:29 jeremy-c-reed Exp $
+
+--- scr2png.1.orig	Thu Jun 16 00:47:09 2005
++++ scr2png.1	Thu Jun 16 00:48:30 2005
+@@ -35,7 +35,8 @@
+ .Sh DESCRIPTION
+ The
+ .Nm
+-utility reads a video memory dump, such as that created by the
++utility reads a FreeBSD video memory dump, such as that created by the
++FreeBSD
+ .Xr vidcontrol 1
+ utility, and converts it to a PNG image, using the font file specified by the
+ user, or a default font if none is specified.
+@@ -55,7 +56,7 @@
+ reads the same font files used by the
+ .Xr vidcontrol 1
+ utility.  The default font file is
+-.Li /usr/share/syscons/fonts/cp850-8x16.fnt .
++.Li cp850-8x16.fnt .
+ .Sh EXAMPLES
+ The command sequence:
+ .Bd -literal -offset indent
