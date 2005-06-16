@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2005/05/21 20:10:26 christian_gall Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/16 12:33:41 christian_gall Exp $
 bin/fleang
 bin/muttng
 bin/muttngbug
@@ -14,7 +14,6 @@ man/man5/muttng-mbox.5
 man/man5/muttngrc.5
 share/doc/muttng/COPYRIGHT
 share/doc/muttng/ChangeLog
-share/doc/muttng/ChangeLog.mutt-ng
 share/doc/muttng/ChangeLog.old
 share/doc/muttng/GPL
 share/doc/muttng/INSTALL
