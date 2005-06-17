@@ -1,12 +1,12 @@
-$NetBSD: patch-ad,v 1.1 2004/06/08 20:53:37 ianharding Exp $
+$NetBSD: patch-ad,v 1.2 2005/06/17 19:48:08 ianharding Exp $
 
---- include/Makefile.module.in.orig	2003-06-02 16:51:53.000000000 +0000
+--- include/Makefile.module.in.orig	2004-11-15 13:38:49.000000000 +0000
 +++ include/Makefile.module.in
 @@ -104,7 +104,7 @@ endif
  ifdef NSBUILD
      include ../include/Makefile.global
  else
--    include @prefix@/include/Makefile.global
+-    include $(AOLSERVER)/include/Makefile.global
 +    include @prefix@/include/nsd/include/Makefile.global
  endif
  
