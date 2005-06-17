@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.4 2005/06/14 08:37:22 christian_gall Exp $
-# $NetBSD: Makefile,v 1.4 2005/06/14 08:37:22 christian_gall Exp $
+# $Id: Makefile,v 1.5 2005/06/17 20:17:08 christian_gall Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/17 20:17:08 christian_gall Exp $
 
 DISTNAME=	muttng-20050614
 CATEGORIES=	mail
@@ -17,12 +17,18 @@ INSTALL_UNSTRIPPED=	yes
 USE_PERL5=		yes
 REPLACE_PERL=		smime_keys.pl
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/muttng/ \
-			--enable-pop --enable-imap --with-slang \
-			--with-gss
+			--enable-pop --enable-imap --with-slang
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.muttng
-PKG_SUPPORTED_OPTIONS=	ssl gpgme sasl2 idn esmtp hcache
+PKG_SUPPORTED_OPTIONS=	ssl gpgme sasl2 idn esmtp hcache gssapi
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mgssapi)
+CONFIGURE_ARGS+=	--with-gss=${KRB5BASE}
+.include "../../mk/krb5.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-gss
+.endif
 
 .if !empty(PKG_OPTIONS:Mssl)
 CONFIGURE_ARGS+=	--with-ssl
@@ -52,12 +58,11 @@ CONFIGURE_ARGS+=	--with-libesmtp
 .endif
 
 .if !empty(PKG_OPTIONS:Mhcache)
-CONFIGURE_ARGS+=	--enable-hcache --with-bdb
+CONFIGURE_ARGS+=	--enable-hcache --with-bdb --without-qdbm --without-gdbm
 .include "../../databases/db4/buildlink3.mk"
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/krb5.buildlink3.mk"
 .include "../../devel/libslang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
