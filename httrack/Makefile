@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/05/24 10:30:22 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2005/06/17 18:36:06 poppnk Exp $
 #
 
-DISTNAME=	httrack-3.32-2
-WRKSRC=         ${WRKDIR}/httrack-3.32.03
+DISTNAME=	httrack-3.33
+WRKSRC=         ${WRKDIR}/httrack-3.33.16
 CATEGORIES=	www
 MASTER_SITES=	http://www.httrack.com/ \
 		http://httrack.free.fr/mirror/

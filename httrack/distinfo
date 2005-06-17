@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/09/29 23:28:54 poppnk Exp $
+$NetBSD: distinfo,v 1.4 2005/06/17 18:36:06 poppnk Exp $
 
-SHA1 (httrack-3.32-2.tar.gz) = 2721b4ee23965624b3c5668d3f4db0f5ecfd5518
-Size (httrack-3.32-2.tar.gz) = 1427495 bytes
+SHA1 (httrack-3.33.tar.gz) = 349b68ea94c1d8d440ef0abe825da2ee03c59bb8
+RMD160 (httrack-3.33.tar.gz) = 6bd2127ec718d7bcf4937c697c507db06f4b0435
+Size (httrack-3.33.tar.gz) = 1432715 bytes
+SHA1 (patch-aa) = 3953736e549eccc81a88707c72f72137d683f156

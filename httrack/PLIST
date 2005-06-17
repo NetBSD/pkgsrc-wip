@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/29 23:28:54 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/06/17 18:36:06 poppnk Exp $
 bin/htsserver
 bin/httrack
 bin/webhttrack
@@ -16,7 +16,8 @@ lib/httrack/libbaselinks.la
 lib/httrack/libcontentfilter.la
 lib/httrack/libdisplayheader.la
 lib/httrack/libfilename.la
-lib/httrack/libfilename${PKGVERSION}.la
+lib/httrack/libfilename2.la
+lib/httrack/libfilenameiisbug.la
 lib/httrack/liblistlinks.la
 lib/libhttrack.la
 man/man1/htsserver.1
@@ -43,7 +44,7 @@ share/doc/httrack/html/images/header_title_4.gif
 share/doc/httrack/html/images/screenshot_01.jpg
 share/doc/httrack/html/images/screenshot_01b.jpg
 share/doc/httrack/html/img/addurl1.gif
-share/doc/httrack/html/img/addurl${PKGVERSION}.gif
+share/doc/httrack/html/img/addurl2.gif
 share/doc/httrack/html/img/addurl3.gif
 share/doc/httrack/html/img/addurl4.gif
 share/doc/httrack/html/img/addurl5.gif
@@ -53,8 +54,8 @@ share/doc/httrack/html/img/httrack.gif
 share/doc/httrack/html/img/snap1_a.gif
 share/doc/httrack/html/img/snap1_b.gif
 share/doc/httrack/html/img/snap1_c.gif
-share/doc/httrack/html/img/snap${PKGVERSION}_a.gif
-share/doc/httrack/html/img/snap${PKGVERSION}_b.gif
+share/doc/httrack/html/img/snap2_a.gif
+share/doc/httrack/html/img/snap2_b.gif
 share/doc/httrack/html/img/snap3_a.gif
 share/doc/httrack/html/img/snap4_a.gif
 share/doc/httrack/html/img/snap5_a.gif
@@ -63,7 +64,7 @@ share/doc/httrack/html/img/snap9_a.gif
 share/doc/httrack/html/img/snap9_b.gif
 share/doc/httrack/html/img/snap9_c.gif
 share/doc/httrack/html/img/snap9_d.gif
-share/doc/httrack/html/img/snap9_d${PKGVERSION}.gif
+share/doc/httrack/html/img/snap9_d2.gif
 share/doc/httrack/html/img/snap9_d3.gif
 share/doc/httrack/html/img/snap9_d4.gif
 share/doc/httrack/html/img/snap9_d5.gif
@@ -73,7 +74,7 @@ share/doc/httrack/html/img/snap9_d8.gif
 share/doc/httrack/html/img/snap9_e.gif
 share/doc/httrack/html/img/snap9_f.gif
 share/doc/httrack/html/img/snap9_g.gif
-share/doc/httrack/html/img/snap9_g${PKGVERSION}.gif
+share/doc/httrack/html/img/snap9_g2.gif
 share/doc/httrack/html/img/snap9_g3.gif
 share/doc/httrack/html/img/snap9_h.gif
 share/doc/httrack/html/img/snap9_i.gif
@@ -100,8 +101,8 @@ share/doc/httrack/html/server/index.html
 share/doc/httrack/html/server/option1.html
 share/doc/httrack/html/server/option10.html
 share/doc/httrack/html/server/option11.html
-share/doc/httrack/html/server/option${PKGVERSION}.html
-share/doc/httrack/html/server/option${PKGVERSION}b.html
+share/doc/httrack/html/server/option2.html
+share/doc/httrack/html/server/option2b.html
 share/doc/httrack/html/server/option3.html
 share/doc/httrack/html/server/option4.html
 share/doc/httrack/html/server/option5.html
@@ -110,14 +111,15 @@ share/doc/httrack/html/server/option7.html
 share/doc/httrack/html/server/option8.html
 share/doc/httrack/html/server/option9.html
 share/doc/httrack/html/server/refresh.html
-share/doc/httrack/html/server/step${PKGVERSION}.html
+share/doc/httrack/html/server/sfx/finished.wav
+share/doc/httrack/html/server/step2.html
 share/doc/httrack/html/server/step3.html
 share/doc/httrack/html/server/step4.html
 share/doc/httrack/html/shelldoc.html
 share/doc/httrack/html/start.html
 share/doc/httrack/html/step.html
 share/doc/httrack/html/step1.html
-share/doc/httrack/html/step${PKGVERSION}.html
+share/doc/httrack/html/step2.html
 share/doc/httrack/html/step3.html
 share/doc/httrack/html/step4.html
 share/doc/httrack/html/step5.html
@@ -125,7 +127,7 @@ share/doc/httrack/html/step9.html
 share/doc/httrack/html/step9_opt1.html
 share/doc/httrack/html/step9_opt10.html
 share/doc/httrack/html/step9_opt11.html
-share/doc/httrack/html/step9_opt${PKGVERSION}.html
+share/doc/httrack/html/step9_opt2.html
 share/doc/httrack/html/step9_opt3.html
 share/doc/httrack/html/step9_opt4.html
 share/doc/httrack/html/step9_opt5.html
@@ -168,7 +170,8 @@ share/httrack/libtest/callbacks-example-baselinks.c
 share/httrack/libtest/callbacks-example-contentfilter.c
 share/httrack/libtest/callbacks-example-displayheader.c
 share/httrack/libtest/callbacks-example-filename.c
-share/httrack/libtest/callbacks-example-filename${PKGVERSION}.c
+share/httrack/libtest/callbacks-example-filename2.c
+share/httrack/libtest/callbacks-example-filenameiisbug.c
 share/httrack/libtest/callbacks-example-listlinks.c
 share/httrack/libtest/example.c
 share/httrack/libtest/example.dsp
@@ -184,12 +187,12 @@ share/httrack/templates/topindex-bodycat.html
 share/httrack/templates/topindex-footer.html
 share/httrack/templates/topindex-header.html
 share/pixmaps/httrack.xpm
-@dirrm share/pixmaps
 @dirrm share/httrack/templates
 @dirrm share/httrack/libtest
 @dirrm share/httrack/lang
 @dirrm share/httrack/icons
 @dirrm share/httrack
+@dirrm share/doc/httrack/html/server/sfx
 @dirrm share/doc/httrack/html/server/images
 @dirrm share/doc/httrack/html/server
 @dirrm share/doc/httrack/html/img
@@ -197,6 +200,5 @@ share/pixmaps/httrack.xpm
 @dirrm share/doc/httrack/html/div
 @dirrm share/doc/httrack/html
 @dirrm share/doc/httrack
-@dirrm share/applications
 @dirrm lib/httrack
 @dirrm include/httrack
