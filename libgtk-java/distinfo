@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/05/03 16:53:46 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/06/18 05:00:46 poppnk Exp $
 
 SHA1 (libgtk-java-2.6.2.tar.bz2) = 47751e68b03e21e2e5572178011925887a18c64f
 RMD160 (libgtk-java-2.6.2.tar.bz2) = 0bcf81750dfdef9f938c4fff35ecd48f3c5d37e2
 Size (libgtk-java-2.6.2.tar.bz2) = 801951 bytes
+SHA1 (patch-aa) = 7d56d2ca95529b3334c72bc69c5441538ec399b7

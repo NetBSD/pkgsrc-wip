@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2005/06/18 05:00:47 poppnk Exp $
+--- Makefile.in.orig	2005-06-18 06:44:50.000000000 +0200
++++ Makefile.in	2005-06-18 06:45:14.000000000 +0200
+@@ -13620,7 +13620,7 @@
+ 
+ 
+ $(gtk_jar_class_files): %.class: %.java
+-	$(JAVAC) -classpath "src/java$(PLATFORM_CLASSPATH_SEPARATOR)$(srcdir)/src/java" -d src/java $<
++	$(JAVAC) -classpath "src/java$(PLATFORM_CLASSPATH_SEPARATOR)$(srcdir)/src/java:$(CLASSPATH):." -d src/java $<
+ 
+ gtk$(gtkapiversion).jar: $(gtk_jar_class_files)
+ 	$(JAR) cf $@ $(patsubst src/java/%.class,-C src/java %.class,$(all_gtk_jar_class_files))
