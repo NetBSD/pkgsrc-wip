@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/06/19 09:12:09 poppnk Exp $
+
+SHA1 (unix2tcp-0.8.2.tar.gz) = 231bbf0e677817dd77077795def484f59f01dc52
+RMD160 (unix2tcp-0.8.2.tar.gz) = b94098f77471f95ec7e2df7fd21244afa971fdb0
+Size (unix2tcp-0.8.2.tar.gz) = 31647 bytes
