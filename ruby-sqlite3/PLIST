@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/19 06:30:26 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/19 14:50:18 obache Exp $
+${RUBY_DOCDIR}/sqlite3/ChangeLog
+${RUBY_DOCDIR}/sqlite3/LICENSE
+${RUBY_DOCDIR}/sqlite3/README
 ${RUBY_DOCDIR}/sqlite3/api/blank.html
 ${RUBY_DOCDIR}/sqlite3/api/classes/DL.html
 ${RUBY_DOCDIR}/sqlite3/api/classes/DL/PtrData.html
@@ -76,6 +79,7 @@ ${RUBY_DOCDIR}/sqlite3/api/rdoc-style.css
 ${RUBY_DOCDIR}/sqlite3/faq/faq.html
 ${RUBY_DOCDIR}/sqlite3/faq/faq.rb
 ${RUBY_DOCDIR}/sqlite3/faq/faq.yml
+${RUBY_SITEARCHLIBDIR}/sqlite3_api.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/sqlite3.rb
 ${RUBY_SITELIBDIR}/sqlite3/constants.rb
 ${RUBY_SITELIBDIR}/sqlite3/database.rb
