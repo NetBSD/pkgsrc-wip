@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1814 2005/06/19 06:31:42 obache Exp $
-# $NetBSD: Makefile,v 1.1814 2005/06/19 06:31:42 obache Exp $
+# $Id: Makefile,v 1.1815 2005/06/19 22:24:40 hisazumi Exp $
+# $NetBSD: Makefile,v 1.1815 2005/06/19 22:24:40 hisazumi Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -548,6 +548,7 @@ SUBDIR+=	mdadm
 SUBDIR+=	memgrep
 SUBDIR+=	menumaker
 SUBDIR+=	mesure
+SUBDIR+=	metalog
 SUBDIR+=	metatheme
 SUBDIR+=	mg-lsh
 SUBDIR+=	microcom
