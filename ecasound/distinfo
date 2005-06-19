@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/06/19 09:13:57 poppnk Exp $
+
+SHA1 (ecasound-2.4.1.tar.gz) = 51bd39684d3087d1ddd706f25c8b3405020aaa8e
+RMD160 (ecasound-2.4.1.tar.gz) = 63ffeb84f81795f3cc85ede8c0526edfeadb4af3
+Size (ecasound-2.4.1.tar.gz) = 1103065 bytes
