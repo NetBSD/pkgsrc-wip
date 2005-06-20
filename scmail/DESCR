@@ -1,0 +1,3 @@
+The scmail is a mail filter using Gauche.
+scmail provides baysian filter and rule-based refiling.
+scmail can use as a replacement of procmail and/or MH.
