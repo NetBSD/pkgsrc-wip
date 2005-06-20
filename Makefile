@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1816 2005/06/20 00:05:34 hisazumi Exp $
-# $NetBSD: Makefile,v 1.1816 2005/06/20 00:05:34 hisazumi Exp $
+# $Id: Makefile,v 1.1817 2005/06/20 00:21:06 hisazumi Exp $
+# $NetBSD: Makefile,v 1.1817 2005/06/20 00:21:06 hisazumi Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -421,6 +421,7 @@ SUBDIR+=	k3b
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
 SUBDIR+=	kahakai
+SUBDIR+=	kahua
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	kazehakase
