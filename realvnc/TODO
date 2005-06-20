@@ -1,3 +1,6 @@
+- Update package for security issue:
+	http://secunia.com/advisories/15742/
+
 ** This package is not functional at this time.
 
 RealVNC is the continuation of the original VNC project.  The old VNC
