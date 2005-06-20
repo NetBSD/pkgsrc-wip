@@ -1,41 +1,47 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/05/18 04:44:34 marmfield Exp $
+$NetBSD: patch-ac,v 1.2 2005/06/20 07:00:36 marmfield Exp $
 
---- smbldap.conf.orig	2004-02-10 06:05:33.000000000 +1100
+--- smbldap.conf.orig	2005-05-31 18:49:26.000000000 +1000
 +++ smbldap.conf
-@@ -74,15 +74,15 @@ verify="require"
+@@ -85,15 +85,15 @@ verify="require"
  
  # CA certificate
  # see "man Net::LDAP" in start_tls section for more details
--cafile="/etc/smbldap-tools/ca.pem"
-+cafile="/etc/openssl/cacert.pem"
+-cafile="/etc/opt/IDEALX/smbldap-tools/ca.pem"
++cafile="@PREFIX@/etc/smbldap-tools/ca.pem"
  
  # certificate to use to connect to the ldap server
  # see "man Net::LDAP" in start_tls section for more details
--clientcert="/etc/smbldap-tools/smbldap-tools.pem"
+-clientcert="/etc/opt/IDEALX/smbldap-tools/smbldap-tools.pem"
 +clientcert="@PREFIX@/etc/smbldap-tools/smbldap-tools.pem"
  
  # key certificate to use to connect to the ldap server
  # see "man Net::LDAP" in start_tls section for more details
--clientkey="/etc/smbldap-tools/smbldap-tools.key"
+-clientkey="/etc/opt/IDEALX/smbldap-tools/smbldap-tools.key"
 +clientkey="@PREFIX@/etc/smbldap-tools/smbldap-tools.key"
  
  # LDAP Suffix
  # Ex: suffix=dc=IDEALX,dc=ORG
-@@ -115,7 +115,7 @@ hash_encrypt="SSHA"
+@@ -145,7 +145,7 @@ crypt_salt_format="%s"
  # Login defs
  # Default Login Shell
  # Ex: userLoginShell="/bin/bash"
 -userLoginShell="/bin/bash"
-+userLoginShell="/bin/csh"
++userLoginShell="/bin/sh"
  
- # Home directory prefix (without username)
- # Ex: userHomePrefix="/home/"
-@@ -178,6 +178,6 @@ userScript="" 
+ # Home directory
+ # Ex: userHome="/home/%U"
+@@ -214,12 +214,12 @@ mailDomain="idealx.com"
  # Allows not to use smbpasswd (if with_smbpasswd == 0 in smbldap_conf.pm) but
- # prefer mkntpwd... most of the time, it's a wise choice :-) 
+ # prefer Crypt::SmbHash library
  with_smbpasswd="0"
 -smbpasswd="/usr/bin/smbpasswd"
--mk_ntpasswd="/usr/local/sbin/mkntpwd"
 +smbpasswd="@PREFIX@/bin/smbpasswd"
-+mk_ntpasswd="@PREFIX@/sbin/mkntpwd"
  
+ # Allows not to use slappasswd (if with_slappasswd == 0 in smbldap_conf.pm)
+ # but prefer Crypt:: libraries
+ with_slappasswd="0"
+-slappasswd="/usr/sbin/slappasswd"
++slappasswd="@PREFIX@/sbin/slappasswd"
+ 
+ # comment out the following line to get rid of the default banner
+ # no_banner="1"

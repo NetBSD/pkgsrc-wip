@@ -1,22 +1,51 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/05/18 04:44:34 marmfield Exp $
+$NetBSD: patch-ad,v 1.2 2005/06/20 07:00:36 marmfield Exp $
 
---- smbldap-populate.orig	2004-02-10 06:05:33.000000000 +1100
+--- smbldap-populate.orig	2005-05-31 18:49:26.000000000 +1000
 +++ smbldap-populate
-@@ -153,7 +153,7 @@ sambaLMPassword: XXX
+@@ -205,7 +205,7 @@ uidNumber: $adminUidNumber\n";
+     $userHome=~s/\%U/$adminName/;
+     $entries.="homeDirectory: $userHome\n";
+   } else {
+-    $entries.="homeDirectory: /dev/null\n";
++    $entries.="homeDirectory: /nonexistant\n";
+   }
+   $entries.="sambaPwdLastSet: 0
+ sambaLogonTime: 0
+@@ -231,7 +231,7 @@ sambaLMPassword: XXX
  sambaNTPassword: XXX
  sambaAcctFlags: [U          ]
- sambaSID: $config{SID}-2996
+ sambaSID: $config{SID}-$adminrid
 -loginShell: /bin/false
 +loginShell: /sbin/nologin
  gecos: Netbios Domain Administrator
  
  dn: uid=$guestName,$config{usersdn}
-@@ -185,7 +185,7 @@ sambaLMPassword: NO PASSWORDXXXXXXXXXXXX
- sambaNTPassword: NO PASSWORDXXXXXXXXXXXXXXXXXXXXX
- sambaAcctFlags: [NU         ]
+@@ -244,7 +244,7 @@ objectClass: shadowAccount
+ gidNumber: 514
+ uid: $guestName
+ uidNumber: $guestUidNumber
+-homeDirectory: /dev/null
++homeDirectory: /nonexistant
+ sambaPwdLastSet: 0
+ sambaLogonTime: 0
+ sambaLogoffTime: 2147483647
+@@ -270,7 +270,7 @@ sambaNTPassword: NO PASSWORDXXXXXXXXXXXX
+ # account disabled by default
+ sambaAcctFlags: [NUD        ]
  sambaSID: $config{SID}-2998
 -loginShell: /bin/false
 +loginShell: /sbin/nologin
  
  dn: cn=Domain Admins,$config{groupsdn}
  objectClass: posixGroup
+@@ -517,8 +517,8 @@ The smbldap-populate command helps to po
+ 
+ =head1 FILES
+ 
+-       /etc/opt/IDEALX/smbldap-tools/smbldap.conf : main configuration
+-       /etc/opt/IDEALX/smbldap-tools/smbldap_bind.conf : credentials for binding to the directory
++       @PREFIX@/etc/smbldap-tools/smbldap.conf : main configuration
++       @PREFIX@/etc/smbldap-tools/smbldap_bind.conf : credentials for binding to the directory
+ 
+ =head1 SEE ALSO
+ 

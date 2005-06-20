@@ -1,33 +1,44 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/05/18 04:44:34 marmfield Exp $
+$NetBSD: patch-ab,v 1.2 2005/06/20 07:00:36 marmfield Exp $
 
---- smbldap_tools.pm.orig	2004-02-10 06:05:33.000000000 +1100
+--- smbldap_tools.pm.orig	2005-05-31 18:49:26.000000000 +1000
 +++ smbldap_tools.pm
-@@ -95,7 +95,7 @@ sub read_parameter
- sub read_conf
- {
- my %conf;
--my $smbldap_conf="/etc/smbldap-tools/smbldap.conf";
-+my $smbldap_conf="@PREFIX@/etc/smbldap-tools/smbldap.conf";
- open (CONFIGFILE, "$smbldap_conf") || die "Unable to open $smbldap_conf for reading !\n";
- while (<CONFIGFILE>) {
-         chomp($_);
-@@ -108,7 +108,7 @@ while (<CONFIGFILE>) {
- close (CONFIGFILE);
+@@ -31,20 +31,20 @@ use Crypt::SmbHash;
+ # ugly funcs using global variables and spawning openldap clients
  
- if ($< == 0) {
--        $smbldap_conf="/etc/smbldap-tools/smbldap_bind.conf";
-+        $smbldap_conf="@PREFIX@/etc/smbldap-tools/smbldap_bind.conf";
-         open (CONFIGFILE, "$smbldap_conf") || die "Unable to open $smbldap_conf for reading !\n";
-         while (<CONFIGFILE>) {
-                 chomp($_);
-@@ -357,8 +357,8 @@ sub add_posix_machine
+ my $smbldap_conf;
+-if (-e "/etc/smbldap-tools/smbldap.conf") {
+-	$smbldap_conf="/etc/smbldap-tools/smbldap.conf";
++if (-e "@PREFIX@/etc/smbldap-tools/smbldap.conf") {
++	$smbldap_conf="@PREFIX@/etc/smbldap-tools/smbldap.conf";
+ } else {
+ 	$smbldap_conf="/etc/opt/IDEALX/smbldap-tools/smbldap.conf";
+ }
+ my $smbldap_bind_conf;
+-if (-e "/etc/smbldap-tools/smbldap_bind.conf") {
+-	$smbldap_bind_conf="/etc/smbldap-tools/smbldap_bind.conf";
++if (-e "@PREFIX@/etc/smbldap-tools/smbldap_bind.conf") {
++	$smbldap_bind_conf="@PREFIX@/etc/smbldap-tools/smbldap_bind.conf";
+ } else {
+ 	$smbldap_bind_conf="/etc/opt/IDEALX/smbldap-tools/smbldap_bind.conf";
+ }
+ my $samba_conf;
+-if (-e "/etc/samba/smb.conf") {
+-	$samba_conf="/etc/samba/smb.conf";
++if (-e "@PREFIX@/etc/samba/smb.conf") {
++	$samba_conf="@PREFIX@/etc/samba/smb.conf";
+ } else {
+ 	$samba_conf="/usr/local/samba/lib/smb.conf";
+ }
+@@ -498,9 +498,9 @@ sub add_posix_machine
  										   'uid'   => "$user",
  										   'uidNumber'   => "$uid",
  										   'gidNumber'   => "$gid",
 -										   'homeDirectory'   => '/dev/null',
 -										   'loginShell'   => '/bin/false',
+-										   'description'   => 'Computer',
 +										   'homeDirectory'   => '/nonexistant',
-+										   'loginShell'   => 'sbin/nologin',
- 										   'description'   => 'Computer',
++										   'loginShell'   => '/sbin/nologin',
++										   'description'   => 'Samba machine account',
+                                                                                   'gecos'   => 'Computer',
  										  ]
  								);

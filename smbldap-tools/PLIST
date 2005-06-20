@@ -1,18 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/18 04:44:33 marmfield Exp $
-sbin/mkntpwd
+@comment $NetBSD: PLIST,v 1.2 2005/06/20 07:00:35 marmfield Exp $
 sbin/smbldap-groupadd
 sbin/smbldap-groupdel
 sbin/smbldap-groupmod
 sbin/smbldap-groupshow
-sbin/smbldap-migrate-accounts
-sbin/smbldap-migrate-groups
 sbin/smbldap-passwd
 sbin/smbldap-populate
 sbin/smbldap-useradd
 sbin/smbldap-userdel
+sbin/smbldap-userinfo
 sbin/smbldap-usermod
 sbin/smbldap-usershow
 sbin/smbldap_tools.pm
 share/examples/smbldap-tools/smbldap.conf
 share/examples/smbldap-tools/smbldap_bind.conf
+share/smbldap-tools/configure.pl
+share/smbldap-tools/smbldap-migrate-pwdump-accounts
+share/smbldap-tools/smbldap-migrate-pwdump-groups
+share/smbldap-tools/smbldap-migrate-unix-accounts
+share/smbldap-tools/smbldap-migrate-unix-groups
+share/smbldap-tools/smbldap-tools.pdf
 @dirrm share/examples/smbldap-tools
+@dirrm share/smbldap-tools

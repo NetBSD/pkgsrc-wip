@@ -1,13 +1,24 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/05/18 04:44:34 marmfield Exp $
+$NetBSD: patch-ae,v 1.2 2005/06/20 07:00:36 marmfield Exp $
 
---- mkntpwd/Makefile.orig	2001-12-14 23:22:26.000000000 +1100
-+++ mkntpwd/Makefile
-@@ -47,7 +47,7 @@ XLIBS=
- #OPTIMIZE=
- #XLIBS=
+--- Makefile.orig	2005-05-31 18:49:26.000000000 +1000
++++ Makefile
+@@ -10,13 +10,13 @@ GPG_PATH=/home/jtournier/.gnupg
+ #BUILD_CMD=rpmbuild -ba
+ BUILD_CMD=rpmbuild -ba --sign
  
--CFLAGS= $(DEBUG) $(OPTIMIZE) $(ARCH) $(VISUAL) $(PERMUTE) $(STATIC) 
-+CFLAGS= $(DEBUG) $(OPTIMIZE) $(ARCH) $(PERMUTE) $(STATIC) 
+-prefix=/opt/IDEALX
++prefix=${PREFIX}
+ sbindir=$(prefix)/sbin
+-sysconfdir=/etc/opt/IDEALX
+-make=/usr/bin/make
+-install=/usr/bin/install
+-rm=/bin/rm
+-sed=/bin/sed
++sysconfdir=${PREFIX}/share/examples
++make=${MAKE}
++install=${INSTALL}
++rm=${RM}
++sed=${SED}
  
- OBJS = getopt.o        md4.o           mkntpwd.o       smbdes.o
- 
+ prep:
+ 	$(sed) -e 's|@SBINDIR@|$(sbindir)|g' smb.conf.in > smb.conf
