@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/20 00:03:47 hisazumi Exp $
+lib/gauche/site/${GAUCHE_VERSION}/${MACHINE_GNU_PLATFORM}/fastcgi.so
+share/gauche/site/lib/www/fastcgi.scm
