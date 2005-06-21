@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1819 2005/06/21 19:06:25 marttikuparinen Exp $
-# $NetBSD: Makefile,v 1.1819 2005/06/21 19:06:25 marttikuparinen Exp $
+# $Id: Makefile,v 1.1820 2005/06/21 21:40:11 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1820 2005/06/21 21:40:11 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -897,6 +897,7 @@ SUBDIR+=	scsh-install-lib
 SUBDIR+=	scx
 SUBDIR+=	secpanel
 SUBDIR+=	send-pr
+SUBDIR+=	sendmailX
 SUBDIR+=	serlook
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shadow
