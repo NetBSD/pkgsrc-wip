@@ -1,3 +1,4 @@
-A windowmaker dockapp to display date and time in your locale. Contains alarm
-feature. Similar in style to wmcpuload and wmmemmon. Works for blackbox/fluxbox
-window managers too.
+A stylish windowmaker dockapp which displays date and time in your locale in
+varying formats, including internet time. Contains alarm, calendar and
+configuration utilities. Works under {black,flux}box too. Similar in style to
+wmmemmon, wmcpuload.

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/02 22:32:21 amadeus_z Exp $
+$NetBSD: distinfo,v 1.2 2005/06/21 20:27:27 amadeus_z Exp $
 
-SHA1 (wmclockmon-0.2.2.tar.gz) = c8b6daffd5f7e48cae5607e023ed341db87b4700
-Size (wmclockmon-0.2.2.tar.gz) = 105695 bytes
-SHA1 (patch-aa) = e90a846b964321657808410bb977415479b53207
+SHA1 (wmclockmon-0.8.1.tar.gz) = dd2a8f15d6dc49311741739ec5983ad29ade2c71
+RMD160 (wmclockmon-0.8.1.tar.gz) = 6d763c445da48650bde5c34c2297c1406d2de3b2
+Size (wmclockmon-0.8.1.tar.gz) = 138662 bytes
