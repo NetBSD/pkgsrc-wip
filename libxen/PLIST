@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/21 18:59:34 marttikuparinen Exp $
+include/xc.h
+lib/libxc.a
+lib/libxc.so
+lib/libxc.so.2.0
+lib/libxc.so.2.0.0
+lib/libxutil.a
+lib/libxutil.so
+lib/libxutil.so.2.0
+lib/libxutil.so.2.0.0

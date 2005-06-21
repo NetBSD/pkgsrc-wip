@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/06/21 18:59:34 marttikuparinen Exp $
+
+--- Makefile.orig	2005-05-22 13:56:29.000000000 +0300
++++ Makefile	2005-06-21 21:30:03.000000000 +0300
+@@ -4,25 +4,20 @@
+ SUBDIRS :=
+ SUBDIRS += libxutil
+ SUBDIRS += libxc
+-SUBDIRS += misc
+-SUBDIRS += examples
+-SUBDIRS += xentrace
+-SUBDIRS += python
+-SUBDIRS += xfrd
+ 
+ .PHONY: all install clean check check_clean
+ 
+-all: check
++all:
+ 	@set -e; for subdir in $(SUBDIRS); do \
+ 		$(MAKE) -C $$subdir $@; \
+ 	done
+ 
+-install: check
++install:
+ 	@set -e; for subdir in $(SUBDIRS); do \
+ 		$(MAKE) -C $$subdir $@; \
+ 	done
+ 
+-clean: check_clean
++clean:
+ 	@set -e; for subdir in $(SUBDIRS); do \
+ 		$(MAKE) -C $$subdir $@; \
+ 	done

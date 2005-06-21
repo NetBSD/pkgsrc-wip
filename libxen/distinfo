@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/06/21 18:59:34 marttikuparinen Exp $
+
+SHA1 (xen-2.0.6-src.tgz) = 3808b8ff57decc3dea0c65c5a80665516a000487
+RMD160 (xen-2.0.6-src.tgz) = ebcdd95e3c74fb71bf732ff04694abe4fe3b6876
+Size (xen-2.0.6-src.tgz) = 2456215 bytes
+SHA1 (patch-aa) = 3863ade0caf7407dbb4827496704a3c05d1097cb
+SHA1 (patch-ab) = 876bcc0723ff7e12e096ca1bff749f8a2ff23b16
+SHA1 (patch-ah) = 610be8e20e2ef27ce838519144b7b0678b7d6830
+SHA1 (patch-aj) = 8712a2641e9aad2468d46d0f554cefca2259b230
+SHA1 (patch-ao) = 2f3fb89cf3209e19d3f5e2e13017981f7c98b8b3
+SHA1 (patch-as) = 333da168af43dae9a4e8695409cbd006e7fcf097
