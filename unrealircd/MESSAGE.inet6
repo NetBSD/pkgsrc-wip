@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE.inet6,v 1.2 2005/06/02 18:37:46 adrian_p Exp $
+$NetBSD: MESSAGE.inet6,v 1.3 2005/06/21 21:52:41 adrian_p Exp $
 
-In order to support IPv6 addresses with unrealircd your system must support
-IPv4-mapped address.  On NetBSD this can be achieved by placing
-the following in your sysctl.conf:
+In order to support IPv6 addresses with unrealircd your system must be
+configured to support IPv4-mapped address.  On NetBSD this can be achieved 
+by placing the following in your sysctl.conf:
 
 	net.inet6.ip6.v6only=0
 
