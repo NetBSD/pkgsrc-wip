@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/06/21 21:37:58 adrian_p Exp $
+
+SHA1 (smX-0.0.Alpha3.0.tar.gz) = 25a8cf08a01b2db339e23602ab096fc139795d90
+RMD160 (smX-0.0.Alpha3.0.tar.gz) = 5d70e034e0c732def9b717e2a47845dad76fd105
+Size (smX-0.0.Alpha3.0.tar.gz) = 2229077 bytes
+SHA1 (patch-aa) = f4293f55306b649d4455512db651f0e73ddad708

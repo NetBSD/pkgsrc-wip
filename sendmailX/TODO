@@ -1,0 +1,7 @@
+- This package is really raw but it's a start, don't expect it to work
+  out of the box
+
+- Test TLS support
+- Test SASL support
+- Test on 1.6.x
+- Test on 3.0_BETA

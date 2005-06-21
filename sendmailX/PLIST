@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/21 21:37:58 adrian_p Exp $
+bin/mailq
+bin/qmgrctl
+bin/runas
+bin/smconf
+bin/t-mm
+bin/t-unixcl
+include/smX/mfapi.h
+include/smX/smreplycodes.h
+libexec/qmgr
+libexec/smar
+libexec/smtpc
+libexec/smtps
+sbin/mcp
+@dirrm include/smX

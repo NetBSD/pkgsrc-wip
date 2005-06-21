@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/06/21 21:37:58 adrian_p Exp $
+
+--- configure.orig	2005-06-10 23:41:45.000000000 +0100
++++ configure
+@@ -2469,7 +2469,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ #
+ case "$host" in
+   *-netbsdelf2*) ;;
+-  *-netbsd*)
++  *-netbsdelf1*)
+ 	# NetBSD 1.x has multiple pthreads implementations.  The
+ 	# recommended one to use is "unproven-pthreads".  The
+ 	# older "mit-pthreads" may also work on some NetBSD
+@@ -2489,7 +2489,7 @@ else
+   use_ptl2="no"
+ fi;
+ 
+-	: ${LOCALBASE:=/usr/pkg}
++	: ${LOCALBASE:=@PREFIX@}
+ 
+ 	if test "X$use_ptl2" = "Xyes"
+ 	then
