@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/06/22 10:11:49 marttikuparinen Exp $
+
+--- xenctld/xenctld.h.orig	2005-06-21 22:09:08.000000000 +0300
++++ xenctld/xenctld.h	2005-06-21 22:12:14.000000000 +0300
+@@ -23,6 +23,7 @@
+ 
+ #include <stdint.h>
+ #include <sys/socket.h>
++#include <sys/types.h>
+ #include <sys/un.h>
+ 
+ #ifdef __cplusplus

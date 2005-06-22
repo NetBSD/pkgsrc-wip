@@ -1,0 +1,2 @@
+Lightweight management framework for Xen. Use this instead of
+pkgsrc/sysutils/xentools20 if you do not want python on your host.

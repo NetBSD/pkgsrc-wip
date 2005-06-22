@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/06/22 10:11:49 marttikuparinen Exp $
+
+SHA1 (vm-tools-0.1.6.tar.gz) = 6002fdcab9eedcadf7fba116227e0b6f14c3455b
+RMD160 (vm-tools-0.1.6.tar.gz) = 40c402027cd0a2f9f60ffdc5ad38c5f74f5b48ff
+Size (vm-tools-0.1.6.tar.gz) = 101973 bytes
+SHA1 (patch-aa) = 6fddb25c178df9075f0833cd5b9298ba2d9e5c15
