@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1820 2005/06/21 21:40:11 adrian_p Exp $
-# $NetBSD: Makefile,v 1.1820 2005/06/21 21:40:11 adrian_p Exp $
+# $Id: Makefile,v 1.1821 2005/06/22 10:12:03 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.1821 2005/06/22 10:12:03 marttikuparinen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1044,6 +1044,7 @@ SUBDIR+=	virus
 SUBDIR+=	vixie-cron
 SUBDIR+=	vkeybd
 SUBDIR+=	vm-pop3d
+SUBDIR+=	vm-tools
 SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
 SUBDIR+=	vnc2swf
