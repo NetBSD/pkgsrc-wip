@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/06/22 15:06:14 tvierling Exp $
+
+--- Makefile.in.orig	2005-06-20 22:05:24.000000000 -0400
++++ Makefile.in
+@@ -202,7 +202,7 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ SUBDIRS = src doc
+ confdir = $(sysconfdir)
+-conf_DATA = dovecot-example.conf
++conf_DATA = 
+ EXTRA_DIST = \
+ 	dovecot.spec \
+ 	dovecot.spec.in \
