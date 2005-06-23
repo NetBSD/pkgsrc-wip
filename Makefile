@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1825 2005/06/23 13:19:32 emil_s Exp $
-# $NetBSD: Makefile,v 1.1825 2005/06/23 13:19:32 emil_s Exp $
+# $Id: Makefile,v 1.1826 2005/06/23 17:09:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1826 2005/06/23 17:09:02 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -498,7 +498,6 @@ SUBDIR+=	libwhisker2
 SUBDIR+=	libwpd
 SUBDIR+=	libxen
 SUBDIR+=	libxml++
-SUBDIR+=	libzip
 SUBDIR+=	lighttpd
 SUBDIR+=	lilo
 SUBDIR+=	lincvs
