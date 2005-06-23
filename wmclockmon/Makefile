@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/06/21 20:27:27 amadeus_z Exp $
+# $NetBSD: Makefile,v 1.6 2005/06/23 22:02:42 minskim Exp $
 #
 
 DISTNAME=	wmclockmon-0.8.1
-CATEGORIES=	x11 sysutils
+CATEGORIES=	time x11
 MASTER_SITES=   http://tnemeth.free.fr/projets/programmes/
 
 MAINTAINER=	poff@sixbit.org
