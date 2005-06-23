@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/29 04:32:01 sifu Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/23 23:43:07 minskim Exp $
 #
 
 DISTNAME=		ZopeInterface-3.0.1
@@ -11,7 +11,6 @@ MAINTAINER=		sifu@0xx0.net
 HOMEPAGE=		http://www.zope.org/
 COMMENT=		The zope.interface package used in Zope 3 and Twisted
 
-PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
 .include "../../lang/python/extension.mk"
