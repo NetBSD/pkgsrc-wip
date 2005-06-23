@@ -1,0 +1,15 @@
+$NetBSD: patch-am,v 1.1.1.1 2005/06/23 04:00:38 shattered Exp $
+
+--- src/Makefile.am.orig	2004-09-08 10:48:45.000000000 +0400
++++ src/Makefile.am
+@@ -140,8 +140,10 @@ endif
+ if UNIX
+ ArchHooks += arch/ArchHooks/ArchHooks_Unix.cpp arch/ArchHooks/ArchHooks_Unix.h
+ Threads += arch/Threads/Threads_Pthreads.cpp arch/Threads/Threads_Pthreads.h
++if LINUX
+ Lights += arch/Lights/LightsDriver_LinuxWeedTech.cpp arch/Lights/LightsDriver_LinuxWeedTech.h
+ Lights += arch/Lights/LightsDriver_LinuxParallel.cpp arch/Lights/LightsDriver_LinuxParallel.h
++endif
+ 
+ ArchUtils +=    archutils/Unix/AssertionHandler.cpp \
+ 		archutils/Unix/GetSysInfo.cpp archutils/Unix/GetSysInfo.h \

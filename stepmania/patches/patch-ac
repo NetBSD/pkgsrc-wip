@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/06/23 04:00:38 shattered Exp $
+
+--- src/arch/arch.h.orig	2004-07-08 00:11:29.000000000 +0400
++++ src/arch/arch.h
+@@ -24,6 +24,8 @@ RageSoundDriver *MakeRageSoundDriver(CSt
+  * OK to list drivers that may not be available. */
+ #if defined(LINUX)
+ 	#define DEFAULT_SOUND_DRIVER_LIST "ALSA,ALSA-sw,OSS"
++#elif defined(BSD)
++	#define DEFAULT_SOUND_DRIVER_LIST "OSS"
+ #elif defined(DARWIN)
+ 	#define DEFAULT_SOUND_DRIVER_LIST "CoreAudio,QT1"
+ #elif defined(_WINDOWS)

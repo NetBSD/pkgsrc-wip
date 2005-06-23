@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/06/23 04:00:38 shattered Exp $
+
+--- configure.ac.orig	2004-11-07 10:26:53.000000000 +0300
++++ configure.ac
+@@ -57,11 +57,19 @@ case $host in
+ 	unix=yes
+ 	;;
+ 
++*-freebsd*|*-netbsd*)
++	AC_DEFINE(BSD, 1, [BSD])
++	AC_DEFINE(UNIX, 1, [Unix])
++	BSD=yes
++	unix=yes
++	;;
++
+ *)
+ 	AC_DEFINE(UNIX, 1, [Unix])
+ 	unix=yes
+ 	;;
+ esac
++AM_CONDITIONAL(BSD, test "$bsd" = "yes" )
+ AM_CONDITIONAL(UNIX, test "$unix" = "yes" )
+ AM_CONDITIONAL(LINUX, test "$linux" = "yes" )
+ 

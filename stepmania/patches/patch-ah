@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2005/06/23 04:00:38 shattered Exp $
+
+--- src/RageSurface_Load_PNG.cpp.orig	2004-10-03 17:27:30.000000000 +0400
++++ src/RageSurface_Load_PNG.cpp
+@@ -17,7 +17,7 @@
+ 
+ #if defined(_XBOX)
+ #  include <malloc.h>	// for alloca
+-#elif !defined(WIN32)
++#elif !defined(WIN32) && !defined(BSD)
+ #  include <alloca.h>
+ #endif
+ 

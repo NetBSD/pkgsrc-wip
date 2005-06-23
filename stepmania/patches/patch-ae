@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/06/23 04:00:38 shattered Exp $
+
+--- src/arch/arch_platform.h.orig	2005-05-16 00:18:31.000000000 +0400
++++ src/arch/arch_platform.h
+@@ -9,6 +9,8 @@
+ /* Override them with arch-specific drivers, as available. */
+ #if defined(LINUX)
+ #include "arch_linux.h"
++#elif defined(BSD)
++#include "arch_bsd.h"
+ #elif defined(DARWIN)
+ #include "arch_darwin.h"
+ #elif defined(_XBOX)

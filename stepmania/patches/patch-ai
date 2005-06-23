@@ -1,0 +1,138 @@
+$NetBSD: patch-ai,v 1.1.1.1 2005/06/23 04:00:38 shattered Exp $
+
+--- configure.orig	2004-11-07 10:26:53.000000000 +0300
++++ configure
+@@ -309,7 +309,7 @@
+ # include <unistd.h>
+ #endif"
+ 
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM AWK SET_MAKE am__leading_dot MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE RANLIB ac_ct_RANLIB UNIX_TRUE UNIX_FALSE LINUX_TRUE LINUX_FALSE CPP XCFLAGS XLIBS SDL_CONFIG SDL_CFLAGS SDL_LIBS HAVE_SDL_TRUE HAVE_SDL_FALSE EGREP WITHOUT_NETWORKING_TRUE WITHOUT_NETWORKING_FALSE LUA_CONFIG LUA_CFLAGS LUA_LIBS HAVE_VORBIS_TRUE HAVE_VORBIS_FALSE AUDIO_LIBS HAVE_MP3_TRUE HAVE_MP3_FALSE HAVE_FFMPEG_TRUE HAVE_FFMPEG_FALSE ALSA_CFLAGS ALSA_LIBS PKG_CONFIG GTK_CFLAGS GTK_LIBS HAVE_ALSA_TRUE HAVE_ALSA_FALSE HAVE_GTK_TRUE HAVE_GTK_FALSE HAVE_OSS_TRUE HAVE_OSS_FALSE USE_CRASH_HANDLER_TRUE USE_CRASH_HANDLER_FALSE BUILD_TESTS_TRUE BUILD_TESTS_FALSE LIBOBJS LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM AWK SET_MAKE am__leading_dot MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE RANLIB ac_ct_RANLIB BSD_TRUE BSD_FALSE UNIX_TRUE UNIX_FALSE LINUX_TRUE LINUX_FALSE CPP XCFLAGS XLIBS SDL_CONFIG SDL_CFLAGS SDL_LIBS HAVE_SDL_TRUE HAVE_SDL_FALSE EGREP WITHOUT_NETWORKING_TRUE WITHOUT_NETWORKING_FALSE LUA_CONFIG LUA_CFLAGS LUA_LIBS HAVE_VORBIS_TRUE HAVE_VORBIS_FALSE AUDIO_LIBS HAVE_MP3_TRUE HAVE_MP3_FALSE HAVE_FFMPEG_TRUE HAVE_FFMPEG_FALSE ALSA_CFLAGS ALSA_LIBS PKG_CONFIG GTK_CFLAGS GTK_LIBS HAVE_ALSA_TRUE HAVE_ALSA_FALSE HAVE_GTK_TRUE HAVE_GTK_FALSE HAVE_OSS_TRUE HAVE_OSS_FALSE USE_CRASH_HANDLER_TRUE USE_CRASH_HANDLER_FALSE BUILD_TESTS_TRUE BUILD_TESTS_FALSE LIBOBJS LTLIBOBJS'
+ ac_subst_files=''
+ 
+ # Initialize some variables set by options.
+@@ -3541,6 +3551,21 @@
+ 	unix=yes
+ 	;;
+ 
++*-freebsd*|*-netbsd*)
++
++cat >>confdefs.h <<\_ACEOF
++#define BSD 1
++_ACEOF
++
++
++cat >>confdefs.h <<\_ACEOF
++#define UNIX 1
++_ACEOF
++
++	BSD=yes
++	unix=yes
++	;;
++
+ *)
+ 
+ cat >>confdefs.h <<\_ACEOF
+@@ -3552,6 +3577,16 @@
+ esac
+ 
+ 
++if test "$bsd" = "yes" ; then
++  BSD_TRUE=
++  BSD_FALSE='#'
++else
++  BSD_TRUE='#'
++  BSD_FALSE=
++fi
++
++
++
+ if test "$unix" = "yes" ; then
+   UNIX_TRUE=
+   UNIX_FALSE='#'
+@@ -4471,7 +4471,7 @@ if test "${ac_cv_lib_GL_glPushMatrix+set
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lGL $XLIBS $LIBS"
++LIBS="-lm -lGL $XLIBS $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -4542,7 +4542,7 @@ if test "${ac_cv_lib_GLU_gluGetString+se
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lGLU $XLIBS $LIBS"
++LIBS="-lm -lGLU $XLIBS $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -5867,7 +5867,7 @@ if test "${ac_cv_lib_lualib_luaopen_base
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-llualib $LIB_LUA -ldl $LIBS"
++LIBS="-llualib $LIB_LUA $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -5936,7 +5936,7 @@ if test "${ac_cv_lib_lualib50_luaopen_ba
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-llualib50 $LIB_LUA -ldl $LIBS"
++LIBS="-llualib50 $LIB_LUA $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -7813,9 +7813,8 @@ if test "$alsa_prefix" != "" ; then
+ 	LDFLAGS="$LDFLAGS $ALSA_LIBS"
+ fi
+ 
+-ALSA_LIBS="$ALSA_LIBS -lasound -lm -ldl -lpthread"
++ALSA_LIBS="$ALSA_LIBS -lasound -lm -lpthread"
+ ALSA_LIBS=`echo $ALSA_LIBS | sed 's/-lm//'`
+-ALSA_LIBS=`echo $ALSA_LIBS | sed 's/-ldl//'`
+ ALSA_LIBS=`echo $ALSA_LIBS | sed 's/-lpthread//'`
+ ALSA_LIBS=`echo $ALSA_LIBS | sed 's/  / /g'`
+ LIBS="$ALSA_LIBS $LIBS"
+@@ -9746,6 +9771,7 @@ fi
+           ac_config_files="$ac_config_files Makefile"
+ 
+           ac_config_files="$ac_config_files src/Makefile"
++          ac_config_files="$ac_config_files src/libresample/Makefile"
+ 
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+@@ -9867,6 +9952,13 @@
+ Usually this means the macro was only invoked conditionally." >&2;}
+    { (exit 1); exit 1; }; }
+ fi
++if test -z "${BSD_TRUE}" && test -z "${BSD_FALSE}"; then
++  { { echo "$as_me:$LINENO: error: conditional \"BSD\" was never defined.
++Usually this means the macro was only invoked conditionally." >&5
++echo "$as_me: error: conditional \"BSD\" was never defined.
++Usually this means the macro was only invoked conditionally." >&2;}
++   { (exit 1); exit 1; }; }
++fi
+ if test -z "${UNIX_TRUE}" && test -z "${UNIX_FALSE}"; then
+   { { echo "$as_me:$LINENO: error: conditional \"UNIX\" was never defined.
+ Usually this means the macro was only invoked conditionally." >&5
+@@ -10396,6 +10429,7 @@ do
+   # Handling of arguments.
+   "Makefile" ) CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+   "src/Makefile" ) CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
++  "src/libresample/Makefile" ) CONFIG_FILES="$CONFIG_FILES src/libresample/Makefile" ;;
+   "depfiles" ) CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
+   "src/config.h" ) CONFIG_HEADERS="$CONFIG_HEADERS src/config.h" ;;
+   *) { { echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
+@@ -10542,6 +10634,8 @@
+ s,@am__fastdepCXX_FALSE@,$am__fastdepCXX_FALSE,;t t
+ s,@RANLIB@,$RANLIB,;t t
+ s,@ac_ct_RANLIB@,$ac_ct_RANLIB,;t t
++s,@BSD_TRUE@,$BSD_TRUE,;t t
++s,@BSD_FALSE@,$BSD_FALSE,;t t
+ s,@UNIX_TRUE@,$UNIX_TRUE,;t t
+ s,@UNIX_FALSE@,$UNIX_FALSE,;t t
+ s,@LINUX_TRUE@,$LINUX_TRUE,;t t

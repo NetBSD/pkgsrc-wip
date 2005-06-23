@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/06/23 04:00:38 shattered Exp $
+
+SHA1 (StepMania-3.9-rc2a-src.tar.gz) = d52ad2180e9d78f94df66458b8c5443ed3de0a0f
+RMD160 (StepMania-3.9-rc2a-src.tar.gz) = 21228620fcd9d81d14601bc5692a5e024a22bf7c
+Size (StepMania-3.9-rc2a-src.tar.gz) = 3083935 bytes
+SHA1 (patch-aa) = a3dce2eaa37bb8714ad794b2f5a88844c6ae4a2e
+SHA1 (patch-ab) = 4b6c38aa12bcde51c2edc11240cb2d215a4a6c98
+SHA1 (patch-ac) = 431d2c3800fc87a3eea5d86a599de2b989a20a97
+SHA1 (patch-ad) = aad0979bf472260f5e1492e2e61436693ec343f6
+SHA1 (patch-ae) = f9766e14ebc0f8403daded65d3029f69792ea53b
+SHA1 (patch-ag) = 78dcdf3cb46467da376084a2e0fb0c70b495651b
+SHA1 (patch-ah) = 5b63fd1bf37a0b4a6f8e867b940049c230040f10
+SHA1 (patch-ai) = 499a79c361752fa45aaebd3bd711b988240dd2be
+SHA1 (patch-aj) = 6dee3da73ffe62b74c023a55738ba9d5fb5e67c7
+SHA1 (patch-ak) = 03f7c346b39f49c0238c388d542add81a7265a4a
+SHA1 (patch-al) = 0092bdb555a92e14fcd05b2b5d40a26611aab222
+SHA1 (patch-am) = 6df9845194ccf61d61f44a47b47bd10cb6f0cff7
+SHA1 (patch-an) = 0fb70a2042547580d340dbf0f7829894c84cc0e1

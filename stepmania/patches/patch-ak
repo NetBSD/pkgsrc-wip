@@ -1,0 +1,53 @@
+$NetBSD: patch-ak,v 1.1.1.1 2005/06/23 04:00:38 shattered Exp $
+
+--- src/RageUtil.h.orig	2004-10-07 21:56:16.000000000 +0400
++++ src/RageUtil.h	2005-05-03 23:09:00.000000000 +0400
+@@ -4,6 +4,7 @@
+ #define RAGEUTIL_H
+ 
+ #include <map>
++#include <string>
+ 
+ #define SAFE_DELETE(p)       { if(p) { delete (p);     (p)=NULL; } }
+ #define SAFE_DELETE_ARRAY(p) { if(p) { delete[] (p);   (p)=NULL; } }
+diff -ru -x 'config.*' work.i386/StepMania-3.9-rc2a-src/src/arch/Sound/RageSoundDriver_OSS.cpp src/arch/Sound/RageSoundDriver_OSS.cpp
+--- src/arch/Sound/RageSoundDriver_OSS.cpp.orig	2004-05-24 01:16:22.000000000 +0400
++++ src/arch/Sound/RageSoundDriver_OSS.cpp	2005-05-03 23:09:01.000000000 +0400
+@@ -90,8 +90,10 @@
+ 	ASSERT( fd != -1 );
+ 	
+ 	int delay;
++#if defined(SNDCTL_DSP_GETODELAY)
+ 	if(ioctl(fd, SNDCTL_DSP_GETODELAY, &delay) == -1)
+ 		RageException::ThrowNonfatal("RageSound_OSS: ioctl(SNDCTL_DSP_GETODELAY): %s", strerror(errno));
++#endif
+ 
+ 	return last_cursor_pos - (delay / bytes_per_frame);
+ }
+diff -ru -x 'config.*' work.i386/StepMania-3.9-rc2a-src/src/archutils/Unix/SignalHandler.cpp src/archutils/Unix/SignalHandler.cpp
+--- src/archutils/Unix/SignalHandler.cpp.orig	2004-05-27 08:57:15.000000000 +0400
++++ src/archutils/Unix/SignalHandler.cpp	2005-05-03 23:09:02.000000000 +0400
+@@ -16,6 +16,8 @@
+ 
+ #if defined(DARWIN)
+ extern "C" int sigaltstack( const struct sigaltstack *ss, struct sigaltstack *oss );
++#endif
++#if !defined(MAP_ANONYMOUS) && defined(MAP_ANON)
+ #define MAP_ANONYMOUS MAP_ANON
+ #endif
+ 
+diff -ru -x 'config.*' work.i386/StepMania-3.9-rc2a-src/src/archutils/Unix/arch_setup.h src/archutils/Unix/arch_setup.h
+--- src/archutils/Unix/arch_setup.h.orig	2004-06-15 04:31:12.000000000 +0400
++++ src/archutils/Unix/arch_setup.h	2005-05-03 23:09:02.000000000 +0400
+@@ -5,6 +5,11 @@
+ #include <stdint.h>
+ #endif
+ 
++#ifdef __NetBSD__
++#define	NEED_STRTOF
++#define lrintf(x)	((int)rint(x))
++#endif
++
+ #if defined(CPU_X86)
+ 
+ inline uint32_t ArchSwap32( uint32_t n )

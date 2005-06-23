@@ -1,0 +1,24 @@
+$NetBSD: patch-an,v 1.1.1.1 2005/06/23 04:00:38 shattered Exp $
+
+--- src/Makefile.in.orig	2004-10-23 02:21:52.000000000 +0400
++++ src/Makefile.in
+@@ -51,7 +51,7 @@ host_triplet = @host@
+ @HAVE_SDL_TRUE@am__append_9 = SDL_utils.cpp SDL_utils.h
+ @UNIX_TRUE@am__append_10 = arch/ArchHooks/ArchHooks_Unix.cpp arch/ArchHooks/ArchHooks_Unix.h
+ @UNIX_TRUE@am__append_11 = arch/Threads/Threads_Pthreads.cpp arch/Threads/Threads_Pthreads.h
+-@UNIX_TRUE@am__append_12 = arch/Lights/LightsDriver_LinuxWeedTech.cpp arch/Lights/LightsDriver_LinuxWeedTech.h arch/Lights/LightsDriver_LinuxParallel.cpp arch/Lights/LightsDriver_LinuxParallel.h
++@LINUX_TRUE@am__append_12 = arch/Lights/LightsDriver_LinuxWeedTech.cpp arch/Lights/LightsDriver_LinuxWeedTech.h arch/Lights/LightsDriver_LinuxParallel.cpp arch/Lights/LightsDriver_LinuxParallel.h
+ @UNIX_TRUE@am__append_13 = archutils/Unix/AssertionHandler.cpp \
+ @UNIX_TRUE@		archutils/Unix/GetSysInfo.cpp archutils/Unix/GetSysInfo.h \
+ @UNIX_TRUE@		archutils/Unix/SignalHandler.cpp archutils/Unix/SignalHandler.h \
+@@ -899,8 +899,8 @@ am__objects_15 = InputHandler.$(OBJEXT) 
+ @HAVE_FFMPEG_TRUE@am__objects_16 = MovieTexture_FFMpeg.$(OBJEXT)
+ am__objects_17 = MovieTexture.$(OBJEXT) MovieTexture_Null.$(OBJEXT) \
+ 	$(am__objects_16)
+-@UNIX_TRUE@am__objects_18 = LightsDriver_LinuxWeedTech.$(OBJEXT) \
+-@UNIX_TRUE@	LightsDriver_LinuxParallel.$(OBJEXT)
++@LINUX_TRUE@am__objects_18 = LightsDriver_LinuxWeedTech.$(OBJEXT) \
++@LINUX_TRUE@	LightsDriver_LinuxParallel.$(OBJEXT)
+ am__objects_19 = LightsDriver.$(OBJEXT) \
+ 	LightsDriver_SystemMessage.$(OBJEXT) $(am__objects_18)
+ @LINUX_TRUE@am__objects_20 = MemoryCardDriverThreaded_Linux.$(OBJEXT)

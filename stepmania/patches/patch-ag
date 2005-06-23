@@ -1,0 +1,47 @@
+$NetBSD: patch-ag,v 1.1.1.1 2005/06/23 04:00:38 shattered Exp $
+
+--- src/archutils/Unix/LinuxThreadHelpers.cpp.orig	2004-10-23 02:23:38.000000000 +0400
++++ src/archutils/Unix/LinuxThreadHelpers.cpp
+@@ -7,6 +7,8 @@
+ #include "Backtrace.h"
+ #include "archutils/Unix/RunningUnderValgrind.h"
+ 
++#if defined(LINUX)
++
+ #include <unistd.h>
+ #include <stdlib.h>
+ #include <fcntl.h>
+@@ -238,6 +240,33 @@ bool GetThreadBacktraceContext( uint64_t
+ }
+ #endif
+ 
++#elif defined(BSD)
++
++#include <pthread.h>
++#include <signal.h>
++
++CString ThreadsVersion()
++{
++	return "(unknown)";
++}
++
++PTHREAD_T GetCurrentThreadId()
++{
++	return pthread_self();
++}
++
++int SuspendThread( PTHREAD_T ThreadID )
++{
++	return pthread_kill( ThreadID, SIGSTOP );
++}
++
++int ResumeThread( PTHREAD_T ThreadID )
++{
++	return pthread_kill( ThreadID, SIGCONT );
++}
++
++#endif
++
+ /*
+  * (c) 2004 Glenn Maynard
+  * All rights reserved.

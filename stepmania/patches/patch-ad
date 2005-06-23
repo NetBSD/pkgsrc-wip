@@ -1,0 +1,25 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/06/23 04:00:38 shattered Exp $
+
+--- src/arch/ArchHooks/ArchHooks_Unix.cpp.orig	2004-09-20 10:12:51.000000000 +0400
++++ src/arch/ArchHooks/ArchHooks_Unix.cpp
+@@ -78,9 +78,11 @@ static int TestTLSThread( void *p )
+ 
+ static void TestTLS()
+ {
++#if defined(LINUX)
+ 	/* TLS won't work on older threads libraries, and may crash. */
+ 	if( !UsingNPTL() )
+ 		return;
++#endif
+ 
+ 	/* TLS won't work on older Linux kernels.  Do a simple check. */
+ 	g_iTestTLS = 1;
+@@ -110,7 +112,7 @@ ArchHooks_Unix::ArchHooks_Unix()
+ 	 * This might blow up, so be sure to do it after the crash handler. */
+ 	SignalHandler::OnClose( EmergencyShutdown );
+ 
+-#if defined(HAVE_TLS)
++#if defined(HAVE_TLS) && !defined(__NetBSD__)
+ 	TestTLS();
+ #endif
+ }
