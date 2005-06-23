@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/23 13:08:52 emil_s Exp $
+bin/check-files
+bin/gmap2cache
+bin/mkcache
+man/man1/gmap2cache.1
+man/man1/gofish.1
+man/man1/gopherd.1
+man/man1/mkcache.1
+man/man5/dotcache.5
+man/man5/gofish.5
+sbin/gofish
+sbin/gopherd
+share/examples/rc.d/gopherd
+var/gopher/.cache
+var/gopher/.gopher+
+var/gopher/Configure_GoFish
+var/gopher/icons/gofish.gif
+var/gopher/icons/gopher_binary.gif
+var/gopher/icons/gopher_html.gif
+var/gopher/icons/gopher_image.gif
+var/gopher/icons/gopher_menu.gif
+var/gopher/icons/gopher_text.gif
+var/gopher/icons/gopher_unknown.gif
+@dirrm var/gopher/icons
+@dirrm var/gopher
+@dirrm var

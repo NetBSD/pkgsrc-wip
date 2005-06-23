@@ -1,0 +1,3 @@
+* Why aren't Configure_GoFish and .cache installed?
+
+* Fix so it builds on Interix (initgroups(3) missing)
