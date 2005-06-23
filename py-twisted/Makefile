@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/05/31 00:58:39 sifu Exp $
+# $NetBSD: Makefile,v 1.17 2005/06/23 23:59:28 minskim Exp $
 
 DISTNAME=		Twisted-${TWISTED_VERSION}
 PKGNAME=		${PYPKGPREFIX}-twisted-${TWISTED_VERSION}
@@ -10,7 +10,7 @@ MAINTAINER=		sifu@0xx0.net
 HOMEPAGE=		http://www.twistedmatrix.com/
 COMMENT=		Event-driven networking framework for Python
 
-DEPENDS+=               ${PYPKGPREFIX}-ZopeInterface>=3.0.1:../../wip/py-ZopeInterface
+DEPENDS+=               ${PYPKGPREFIX}-ZopeInterface>=3.0.1:../../devel/py-ZopeInterface
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
