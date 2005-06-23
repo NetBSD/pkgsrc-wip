@@ -1,5 +1,4 @@
-#
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:30 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/06/23 23:18:59 minskim Exp $
 #
 
 DISTNAME=		WordNet-2.0
