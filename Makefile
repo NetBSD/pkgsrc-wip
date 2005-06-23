@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1823 2005/06/23 04:04:18 shattered Exp $
-# $NetBSD: Makefile,v 1.1823 2005/06/23 04:04:18 shattered Exp $
+# $Id: Makefile,v 1.1824 2005/06/23 07:33:10 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.1824 2005/06/23 07:33:10 marttikuparinen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -389,7 +389,6 @@ SUBDIR+=	jacorb-lib
 SUBDIR+=	jad
 SUBDIR+=	jakarta-log4j
 SUBDIR+=	jakarta-struts
-SUBDIR+=	jalbum
 SUBDIR+=	jalview
 SUBDIR+=	jamaica
 SUBDIR+=	jamvm
