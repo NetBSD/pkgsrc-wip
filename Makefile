@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1822 2005/06/22 15:07:36 tvierling Exp $
-# $NetBSD: Makefile,v 1.1822 2005/06/22 15:07:36 tvierling Exp $
+# $Id: Makefile,v 1.1823 2005/06/23 04:04:18 shattered Exp $
+# $NetBSD: Makefile,v 1.1823 2005/06/23 04:04:18 shattered Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -962,6 +962,7 @@ SUBDIR+=	squirrelmail-compatibility
 SUBDIR+=	squirrelmail-vlogin
 SUBDIR+=	srvx
 SUBDIR+=	stardict
+#SUBDIR+=	stepmania	# not ready for prime-time yet
 SUBDIR+=	stmpclean
 SUBDIR+=	stonx
 SUBDIR+=	streamripper
