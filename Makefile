@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1829 2005/06/24 02:17:59 marmfield Exp $
-# $NetBSD: Makefile,v 1.1829 2005/06/24 02:17:59 marmfield Exp $
+# $Id: Makefile,v 1.1830 2005/06/24 17:21:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1830 2005/06/24 17:21:49 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -663,7 +663,6 @@ SUBDIR+=	p5-Devel-Profiler
 SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-Exporter-Lite
 SUBDIR+=	p5-File-Find-Rule
-SUBDIR+=	p5-File-Slurp
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-HTML-Latex
