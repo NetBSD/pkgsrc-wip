@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1832 2005/06/24 17:35:53 thomasklausner Exp $
-# $Id: Makefile,v 1.1832 2005/06/24 17:35:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1833 2005/06/24 17:39:35 thomasklausner Exp $
+# $Id: Makefile,v 1.1833 2005/06/24 17:39:35 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -127,6 +127,7 @@ SUBDIR+=	bsfilter
 SUBDIR+=	bub-n-bros
 SUBDIR+=	busybox
 SUBDIR+=	bwidget
+SUBDIR+=	bwm-ng
 SUBDIR+=	c-ares
 SUBDIR+=	c-news
 SUBDIR+=	caml-libnum
@@ -206,6 +207,7 @@ SUBDIR+=	e3
 SUBDIR+=	easytag-gtk2
 SUBDIR+=	eboard
 SUBDIR+=	eboard-extras
+SUBDIR+=	ecasound
 SUBDIR+=	eciadsl-usermode
 SUBDIR+=	ecl
 SUBDIR+=	ecore
@@ -963,9 +965,9 @@ SUBDIR+=	stonx
 SUBDIR+=	streamripper
 SUBDIR+=	stunnel3
 SUBDIR+=	sudoscript
+SUBDIR+=	sugarCRM
 SUBDIR+=	sun-j2me
 SUBDIR+=	sunterlib
-SUBDIR+=	sugarCRM
 SUBDIR+=	superkaramba
 SUBDIR+=	svgalib
 SUBDIR+=	swami
@@ -1022,6 +1024,7 @@ SUBDIR+=	uclibc
 SUBDIR+=	udhcp
 SUBDIR+=	uebimiau
 SUBDIR+=	umix
+SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
 SUBDIR+=	unrealircd
 SUBDIR+=	unrealtournament-server
