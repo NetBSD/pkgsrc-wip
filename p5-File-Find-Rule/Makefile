@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/04 08:19:48 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2005/06/24 17:41:55 thomasklausner Exp $
 
 DISTNAME=	File-Find-Rule-0.28
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,8 @@ MAINTAINER=	hiramatu@boreas.dti.ne.jp
 HOMEPAGE=	http://search.cpan.org/dist/File-Find-Rule/
 COMMENT=	Alternative interface to File::Find
 
-DEPENDS+=	p5-Number-Compare>=0.01:../../wip/p5-Number-Compare
-DEPENDS+=	p5-Text-Glob>=0.06:../../wip/p5-Text-Glob
+DEPENDS+=	p5-Number-Compare>=0.01:../../math/p5-Number-Compare
+DEPENDS+=	p5-Text-Glob>=0.06:../../textproc/p5-Text-Glob
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
