@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1831 2005/06/24 17:29:13 thomasklausner Exp $
-# $Id: Makefile,v 1.1831 2005/06/24 17:29:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1832 2005/06/24 17:35:53 thomasklausner Exp $
+# $Id: Makefile,v 1.1832 2005/06/24 17:35:53 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -682,7 +682,6 @@ SUBDIR+=	p5-PDL
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Term-Screen
 SUBDIR+=	p5-Text-ASCIITable
-SUBDIR+=	p5-Text-Glob
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-Tree-Simple-VisitorFactory
 SUBDIR+=	p5-UNIVERSAL-exports
