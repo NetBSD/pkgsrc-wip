@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1828 2005/06/23 23:54:46 minskim Exp $
-# $NetBSD: Makefile,v 1.1828 2005/06/23 23:54:46 minskim Exp $
+# $Id: Makefile,v 1.1829 2005/06/24 02:17:59 marmfield Exp $
+# $NetBSD: Makefile,v 1.1829 2005/06/24 02:17:59 marmfield Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -968,6 +968,7 @@ SUBDIR+=	stunnel3
 SUBDIR+=	sudoscript
 SUBDIR+=	sun-j2me
 SUBDIR+=	sunterlib
+SUBDIR+=	sugarCRM
 SUBDIR+=	superkaramba
 SUBDIR+=	svgalib
 SUBDIR+=	swami
