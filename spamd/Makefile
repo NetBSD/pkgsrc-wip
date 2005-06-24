@@ -1,19 +1,33 @@
-# $NetBSD: Makefile,v 1.9 2004/07/18 17:50:24 ppostma Exp $
+# $NetBSD: Makefile,v 1.10 2005/06/24 12:04:08 ppostma Exp $
 
-DISTNAME=		spamd-20040609
+DISTNAME=		spamd-20050624
 CATEGORIES=		mail
 MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
 
 MAINTAINER=		peter@pointless.nl
-HOMEPAGE=		http://nedbsd.nl/~ppostma/pf-lkm.html
+HOMEPAGE=		http://www.benzedrine.cx/relaydb.html
 COMMENT=		OpenBSD spamd daemon which rejects false mail
 
-ONLY_FOR_PLATFORM=	NetBSD-2*-*
+ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-*
 
-USE_PKGINSTALL=		YES
+USE_PKGINSTALL=		yes
+NO_CONFIGURE=		yes
+
+PKG_USERS=		_spamd:_spamd::Spam\\ Daemon:${VARBASE}/chroot/spamd:/sbin/nologin
+PKG_GROUPS=		_spamd
+
+OWN_DIRS=		${VARBASE}/chroot/spamd
+RCD_SCRIPTS=            spamd
 
 CONF_FILES=		${PREFIX}/share/examples/spamd/spamd.conf \
 			    ${PKG_SYSCONFDIR}/spamd.conf
+
+SUBST_CLASSES=		fix
+SUBST_STAGE.fix=	post-patch
+SUBST_FILES.fix=	spamd/spamd.8
+SUBST_FILES.fix+=	spamd-setup/spamd-setup.c spamd-setup/spamd-setup.8
+SUBST_SED.fix=		-e 's,/etc/spamd.conf,${PKG_SYSCONFDIR}/spamd.conf,g'
+SUBST_MESSAGE.fix=	"Fixing configuration paths."
 
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/spamd.conf.5 ${PREFIX}/man/man5
@@ -34,4 +48,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/spamd
 	${INSTALL_DATA} ${WRKSRC}/etc/spamd.conf ${PREFIX}/share/examples/spamd
 
+.include "../../security/pflkm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

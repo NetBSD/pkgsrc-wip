@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/08 23:07:41 tripledes Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/24 12:04:08 ppostma Exp $
 libexec/spamd
 libexec/spamd-setup
 libexec/spamlogd
@@ -13,5 +13,6 @@ man/man8/spamd.8
 man/man8/spamdb.8
 man/man8/spamlogd.8
 sbin/spamdb
+share/examples/rc.d/spamd
 share/examples/spamd/spamd.conf
 @dirrm share/examples/spamd
