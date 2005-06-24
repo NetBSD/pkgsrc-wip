@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.1830 2005/06/24 17:21:49 thomasklausner Exp $
-# $NetBSD: Makefile,v 1.1830 2005/06/24 17:21:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1831 2005/06/24 17:29:13 thomasklausner Exp $
+# $Id: Makefile,v 1.1831 2005/06/24 17:29:13 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -678,7 +678,6 @@ SUBDIR+=	p5-Module-Pluggable-Fast
 SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-PcapUtils
 SUBDIR+=	p5-News-Newsrc
-SUBDIR+=	p5-Number-Compare
 SUBDIR+=	p5-PDL
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Term-Screen
