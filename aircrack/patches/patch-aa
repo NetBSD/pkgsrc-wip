@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2004/11/24 21:09:08 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2005/06/25 23:10:33 ishit Exp $
 
 --- Makefile.orig	2004-11-24 15:00:53.000000000 -0600
 +++ Makefile
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.1 2004/11/24 21:09:08 minskim Exp $
 -CFLAGS          = -s -W -Wall -O2
  OPTFLAGS        = -D_FILE_OFFSET_BITS=64
  
--prefix          = /usr/pkg
+-prefix          = /usr/local
 +prefix          = ${PREFIX}
  bindir          = $(prefix)/bin
  datadir         = $(prefix)/share
