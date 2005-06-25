@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1836 2005/06/25 03:07:02 minskim Exp $
-# $Id: Makefile,v 1.1836 2005/06/25 03:07:02 minskim Exp $
+# $NetBSD: Makefile,v 1.1837 2005/06/25 12:58:45 leonardschmidt Exp $
+# $Id: Makefile,v 1.1837 2005/06/25 12:58:45 leonardschmidt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -298,6 +298,7 @@ SUBDIR+=	glimmerm
 SUBDIR+=	glkloader
 SUBDIR+=	glkterm
 SUBDIR+=	glulxe
+SUBDIR+=	glurp
 SUBDIR+=	gmc2mid
 SUBDIR+=	gnome-alsamixer
 SUBDIR+=	gnome-bluetooth
