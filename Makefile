@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1835 2005/06/25 02:01:39 jeremy-c-reed Exp $
-# $Id: Makefile,v 1.1835 2005/06/25 02:01:39 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1836 2005/06/25 03:07:02 minskim Exp $
+# $Id: Makefile,v 1.1836 2005/06/25 03:07:02 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -54,7 +54,6 @@ SUBDIR+=	SDL-doc-ps
 SUBDIR+=	SDL-intro
 SUBDIR+=	SDL-intro-cn
 SUBDIR+=	SDL-intro-de
-SUBDIR+=	SDL-intro-en
 SUBDIR+=	SDL-intro-es
 SUBDIR+=	SDL-intro-fr
 SUBDIR+=	SDL-intro-it
