@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1837 2005/06/25 12:58:45 leonardschmidt Exp $
-# $Id: Makefile,v 1.1837 2005/06/25 12:58:45 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.1838 2005/06/25 14:17:09 lexort Exp $
+# $Id: Makefile,v 1.1838 2005/06/25 14:17:09 lexort Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -282,7 +282,6 @@ SUBDIR+=	gde
 SUBDIR+=	gdvb
 SUBDIR+=	geeklog
 SUBDIR+=	geos
-SUBDIR+=	geos2
 SUBDIR+=	gettext-lib
 SUBDIR+=	gettext-runtime
 SUBDIR+=	gettext-tools
