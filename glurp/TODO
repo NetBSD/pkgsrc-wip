@@ -1,0 +1,5 @@
+I get this when configuring:
+
+/usr/pkgsrc/wip/glurp/work/glurp-0.11.6/missing: Unknown `--run' option
+Try `/usr/pkgsrc/wip/glurp/work/glurp-0.11.6/missing --help' for more information
+configure: WARNING: `missing' script is too old or missing
