@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.2 2003/06/03 15:55:34 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/06/25 23:28:35 ishit Exp $
 
-SHA1 (WEPCrack-0.0.10.tar.gz) = e406376ba17b932a373035157df95cc7f638c809
-Size (WEPCrack-0.0.10.tar.gz) = 4660 bytes
+SHA1 (WEPCrack-0.1.0.tar.gz) = 5a34a02cbe769b7822d868b0599e5d2f8da57de2
+RMD160 (WEPCrack-0.1.0.tar.gz) = 261a411f1a1a7a7c28cbfe0b5660cd108c23b352
+Size (WEPCrack-0.1.0.tar.gz) = 6277 bytes

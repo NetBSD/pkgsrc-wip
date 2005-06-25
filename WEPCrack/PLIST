@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/07 21:52:11 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/25 23:28:35 ishit Exp $
 bin/WEPCrack.pl
 bin/WeakIVGen.pl
-bin/prism-decode.pl
-bin/prism-getIV.pl
+bin/pcap-getIV.pl
