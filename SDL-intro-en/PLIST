@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/31 10:51:23 ianzag Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/06/25 02:55:08 minskim Exp $
 share/doc/SDL-intro/en/author.html
 share/doc/SDL-intro/en/index.html
 share/doc/SDL-intro/en/toc.html
@@ -13,6 +13,5 @@ share/doc/SDL-intro/en/usingvideo.html
 share/doc/SDL-intro/en/whatcanitdo.html
 share/doc/SDL-intro/en/whatisit.html
 share/doc/SDL-intro/en/whatplatforms.html
-@exec ${MKDIR} %D/share/doc/SDL-intro/en
 @dirrm share/doc/SDL-intro/en
 @dirrm share/doc/SDL-intro
