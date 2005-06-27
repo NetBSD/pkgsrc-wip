@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/06/27 13:56:22 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/06/27 13:57:10 thomasklausner Exp $
 bin/biofetch
 bin/bioflat
 bin/biogetseq
@@ -152,4 +152,3 @@ ${RUBY_EXAMPLESDIR}/bioruby/tdiary.rb
 ${RUBY_EXAMPLESDIR}/bioruby/tfastx2tab.rb
 ${RUBY_EXAMPLESDIR}/bioruby/vs-genes.rb
 @dirrm ${RUBY_EXAMPLESDIR}/bioruby
-

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/27 13:56:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/06/27 13:57:10 thomasklausner Exp $
 #
 
 DISTNAME=		bioruby-0.6.2
@@ -39,4 +39,3 @@ post-install:
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
-
