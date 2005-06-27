@@ -1,18 +1,18 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: spamd.sh,v 1.1 2005/06/24 12:04:08 ppostma Exp $
+# $NetBSD: pfspamd.sh,v 1.1 2005/06/27 17:17:15 ppostma Exp $
 #
-# PROVIDE: spamd
+# PROVIDE: pfspamd
 # REQUIRE: DAEMON
 #
 
 . /etc/rc.subr
 
-name="spamd"
+name="pfspamd"
 rcvar=$name
-command="@PREFIX@/libexec/${name}"
+command="@PREFIX@/libexec/spamd"
 
-spamd_postcmd()
+pfspamd_postcmd()
 {
 	if [ -x @PREFIX@/libexec/spamd-setup ]; then
 		@PREFIX@/libexec/spamd-setup
