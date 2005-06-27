@@ -1,99 +1,155 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 20:18:24 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/27 13:56:22 thomasklausner Exp $
 bin/biofetch
 bin/bioflat
-bin/dbget
-lib/ruby/site_ruby/1.6/bio.rb
-lib/ruby/site_ruby/1.6/bio/appl/blast.rb
-lib/ruby/site_ruby/1.6/bio/appl/blast/format8.rb
-lib/ruby/site_ruby/1.6/bio/appl/blast/rexml.rb
-lib/ruby/site_ruby/1.6/bio/appl/blast/xmlparser.rb
-lib/ruby/site_ruby/1.6/bio/appl/emboss.rb
-lib/ruby/site_ruby/1.6/bio/appl/fasta.rb
-lib/ruby/site_ruby/1.6/bio/appl/fasta/format10.rb
-lib/ruby/site_ruby/1.6/bio/appl/fasta/format6.rb
-lib/ruby/site_ruby/1.6/bio/appl/hmmer.rb
-lib/ruby/site_ruby/1.6/bio/appl/hmmer/report.rb
-lib/ruby/site_ruby/1.6/bio/data/aa.rb
-lib/ruby/site_ruby/1.6/bio/data/codontable.rb
-lib/ruby/site_ruby/1.6/bio/data/keggorg.rb
-lib/ruby/site_ruby/1.6/bio/data/na.rb
-lib/ruby/site_ruby/1.6/bio/db.rb
-lib/ruby/site_ruby/1.6/bio/db/aaindex.rb
-lib/ruby/site_ruby/1.6/bio/db/embl.rb
-lib/ruby/site_ruby/1.6/bio/db/embl/embl.rb
-lib/ruby/site_ruby/1.6/bio/db/embl/sptr.rb
-lib/ruby/site_ruby/1.6/bio/db/embl/swissprot.rb
-lib/ruby/site_ruby/1.6/bio/db/embl/trembl.rb
-lib/ruby/site_ruby/1.6/bio/db/fasta.rb
-lib/ruby/site_ruby/1.6/bio/db/genbank.rb
-lib/ruby/site_ruby/1.6/bio/db/genbank/ddbj.rb
-lib/ruby/site_ruby/1.6/bio/db/genbank/genbank.rb
-lib/ruby/site_ruby/1.6/bio/db/genbank/genpept.rb
-lib/ruby/site_ruby/1.6/bio/db/genbank/refseq.rb
-lib/ruby/site_ruby/1.6/bio/db/kegg/brite.rb
-lib/ruby/site_ruby/1.6/bio/db/kegg/cell.rb
-lib/ruby/site_ruby/1.6/bio/db/kegg/compound.rb
-lib/ruby/site_ruby/1.6/bio/db/kegg/enzyme.rb
-lib/ruby/site_ruby/1.6/bio/db/kegg/genes.rb
-lib/ruby/site_ruby/1.6/bio/db/kegg/genome.rb
-lib/ruby/site_ruby/1.6/bio/db/kegg/keggtab.rb
-lib/ruby/site_ruby/1.6/bio/db/kegg/microarray.rb
-lib/ruby/site_ruby/1.6/bio/db/litdb.rb
-lib/ruby/site_ruby/1.6/bio/db/medline.rb
-lib/ruby/site_ruby/1.6/bio/db/prosite.rb
-lib/ruby/site_ruby/1.6/bio/db/transfac.rb
-lib/ruby/site_ruby/1.6/bio/extend.rb
-lib/ruby/site_ruby/1.6/bio/feature.rb
-lib/ruby/site_ruby/1.6/bio/io/brdb.rb
-lib/ruby/site_ruby/1.6/bio/io/dbget.rb
-lib/ruby/site_ruby/1.6/bio/io/fetch.rb
-lib/ruby/site_ruby/1.6/bio/io/flatfile.rb
-lib/ruby/site_ruby/1.6/bio/io/flatfile/bdb.rb
-lib/ruby/site_ruby/1.6/bio/io/flatfile/index.rb
-lib/ruby/site_ruby/1.6/bio/io/flatfile/indexer.rb
-lib/ruby/site_ruby/1.6/bio/io/pubmed.rb
-lib/ruby/site_ruby/1.6/bio/io/registry.rb
-lib/ruby/site_ruby/1.6/bio/io/sql.rb
-lib/ruby/site_ruby/1.6/bio/location.rb
-lib/ruby/site_ruby/1.6/bio/pathway.rb
-lib/ruby/site_ruby/1.6/bio/reference.rb
-lib/ruby/site_ruby/1.6/bio/sequence.rb
-share/doc/bioruby/BioRuby.rd.ja
-share/doc/bioruby/COPYING
-share/doc/bioruby/COPYING.LIB
-share/doc/bioruby/Design.rd.ja
-share/doc/bioruby/README
-share/doc/bioruby/TODO.rd.ja
-share/doc/bioruby/Tutorial.rd.ja
-share/examples/bioruby/biofetch.rb
-share/examples/bioruby/fasta2tab.rb
-share/examples/bioruby/fsplit.rb
-share/examples/bioruby/gb2fasta.rb
-share/examples/bioruby/gb2tab.rb
-share/examples/bioruby/gbtab2mysql.rb
-share/examples/bioruby/genes2nuc.rb
-share/examples/bioruby/genes2pep.rb
-share/examples/bioruby/genes2tab.rb
-share/examples/bioruby/genome2rb.rb
-share/examples/bioruby/genome2tab.rb
-share/examples/bioruby/gt2fasta.rb
-share/examples/bioruby/pmfetch.rb
-share/examples/bioruby/pmsearch.rb
-share/examples/bioruby/ssearch2tab.rb
-share/examples/bioruby/tfastx2tab.rb
-share/examples/bioruby/vs-genes.rb
-@dirrm share/examples/bioruby
-@dirrm share/doc/bioruby
-@dirrm lib/ruby/site_ruby/1.6/bio/io/flatfile
-@dirrm lib/ruby/site_ruby/1.6/bio/io
-@dirrm lib/ruby/site_ruby/1.6/bio/db/kegg
-@dirrm lib/ruby/site_ruby/1.6/bio/db/genbank
-@dirrm lib/ruby/site_ruby/1.6/bio/db/embl
-@dirrm lib/ruby/site_ruby/1.6/bio/db
-@dirrm lib/ruby/site_ruby/1.6/bio/data
-@dirrm lib/ruby/site_ruby/1.6/bio/appl/hmmer
-@dirrm lib/ruby/site_ruby/1.6/bio/appl/fasta
-@dirrm lib/ruby/site_ruby/1.6/bio/appl/blast
-@dirrm lib/ruby/site_ruby/1.6/bio/appl
-@dirrm lib/ruby/site_ruby/1.6/bio
-@dirrm lib/ruby/site_ruby/1.6
+bin/biogetseq
+bin/pmfetch
+${RUBY_SITELIBDIR}/bio/alignment.rb
+${RUBY_SITELIBDIR}/bio/appl/alignfactory.rb
+${RUBY_SITELIBDIR}/bio/appl/blast/format0.rb
+${RUBY_SITELIBDIR}/bio/appl/blast/format8.rb
+${RUBY_SITELIBDIR}/bio/appl/blast/report.rb
+${RUBY_SITELIBDIR}/bio/appl/blast/rexml.rb
+${RUBY_SITELIBDIR}/bio/appl/blast/wublast.rb
+${RUBY_SITELIBDIR}/bio/appl/blast/xmlparser.rb
+${RUBY_SITELIBDIR}/bio/appl/blast.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/appl/blast
+${RUBY_SITELIBDIR}/bio/appl/blat/report.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/appl/blat
+${RUBY_SITELIBDIR}/bio/appl/clustalw/report.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/appl/clustalw
+${RUBY_SITELIBDIR}/bio/appl/clustalw.rb
+${RUBY_SITELIBDIR}/bio/appl/emboss.rb
+${RUBY_SITELIBDIR}/bio/appl/fasta/format10.rb
+${RUBY_SITELIBDIR}/bio/appl/fasta/format6.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/appl/fasta
+${RUBY_SITELIBDIR}/bio/appl/fasta.rb
+${RUBY_SITELIBDIR}/bio/appl/genscan/report.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/appl/genscan
+${RUBY_SITELIBDIR}/bio/appl/hmmer/report.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/appl/hmmer
+${RUBY_SITELIBDIR}/bio/appl/hmmer.rb
+${RUBY_SITELIBDIR}/bio/appl/mafft/report.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/appl/mafft
+${RUBY_SITELIBDIR}/bio/appl/mafft.rb
+${RUBY_SITELIBDIR}/bio/appl/psort/report.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/appl/psort
+${RUBY_SITELIBDIR}/bio/appl/psort.rb
+${RUBY_SITELIBDIR}/bio/appl/sim4/report.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/appl/sim4
+${RUBY_SITELIBDIR}/bio/appl/sim4.rb
+${RUBY_SITELIBDIR}/bio/appl/sosui/report.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/appl/sosui
+${RUBY_SITELIBDIR}/bio/appl/spidey/report.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/appl/spidey
+${RUBY_SITELIBDIR}/bio/appl/targetp/report.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/appl/targetp
+${RUBY_SITELIBDIR}/bio/appl/tmhmm/report.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/appl/tmhmm
+@dirrm ${RUBY_SITELIBDIR}/bio/appl
+${RUBY_SITELIBDIR}/bio/data/aa.rb
+${RUBY_SITELIBDIR}/bio/data/codontable.rb
+${RUBY_SITELIBDIR}/bio/data/na.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/data
+${RUBY_SITELIBDIR}/bio/db/aaindex.rb
+${RUBY_SITELIBDIR}/bio/db/embl/common.rb
+${RUBY_SITELIBDIR}/bio/db/embl/embl.rb
+${RUBY_SITELIBDIR}/bio/db/embl/sptr.rb
+${RUBY_SITELIBDIR}/bio/db/embl/swissprot.rb
+${RUBY_SITELIBDIR}/bio/db/embl/trembl.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/db/embl
+${RUBY_SITELIBDIR}/bio/db/embl.rb
+${RUBY_SITELIBDIR}/bio/db/fantom.rb
+${RUBY_SITELIBDIR}/bio/db/fasta.rb
+${RUBY_SITELIBDIR}/bio/db/genbank/common.rb
+${RUBY_SITELIBDIR}/bio/db/genbank/ddbj.rb
+${RUBY_SITELIBDIR}/bio/db/genbank/genbank.rb
+${RUBY_SITELIBDIR}/bio/db/genbank/genpept.rb
+${RUBY_SITELIBDIR}/bio/db/genbank/refseq.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/db/genbank
+${RUBY_SITELIBDIR}/bio/db/genbank.rb
+${RUBY_SITELIBDIR}/bio/db/gff.rb
+${RUBY_SITELIBDIR}/bio/db/go.rb
+${RUBY_SITELIBDIR}/bio/db/kegg/brite.rb
+${RUBY_SITELIBDIR}/bio/db/kegg/cell.rb
+${RUBY_SITELIBDIR}/bio/db/kegg/compound.rb
+${RUBY_SITELIBDIR}/bio/db/kegg/enzyme.rb
+${RUBY_SITELIBDIR}/bio/db/kegg/genes.rb
+${RUBY_SITELIBDIR}/bio/db/kegg/genome.rb
+${RUBY_SITELIBDIR}/bio/db/kegg/glycan.rb
+${RUBY_SITELIBDIR}/bio/db/kegg/keggtab.rb
+${RUBY_SITELIBDIR}/bio/db/kegg/ko.rb
+${RUBY_SITELIBDIR}/bio/db/kegg/microarray.rb
+${RUBY_SITELIBDIR}/bio/db/kegg/reaction.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/db/kegg
+${RUBY_SITELIBDIR}/bio/db/litdb.rb
+${RUBY_SITELIBDIR}/bio/db/medline.rb
+${RUBY_SITELIBDIR}/bio/db/nbrf.rb
+${RUBY_SITELIBDIR}/bio/db/pdb/atom.rb
+${RUBY_SITELIBDIR}/bio/db/pdb/chain.rb
+${RUBY_SITELIBDIR}/bio/db/pdb/model.rb
+${RUBY_SITELIBDIR}/bio/db/pdb/pdb.rb
+${RUBY_SITELIBDIR}/bio/db/pdb/residue.rb
+${RUBY_SITELIBDIR}/bio/db/pdb/utils.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/db/pdb
+${RUBY_SITELIBDIR}/bio/db/pdb.rb
+${RUBY_SITELIBDIR}/bio/db/prosite.rb
+${RUBY_SITELIBDIR}/bio/db/transfac.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/db
+${RUBY_SITELIBDIR}/bio/db.rb
+${RUBY_SITELIBDIR}/bio/extend.rb
+${RUBY_SITELIBDIR}/bio/feature.rb
+${RUBY_SITELIBDIR}/bio/io/brdb.rb
+${RUBY_SITELIBDIR}/bio/io/das.rb
+${RUBY_SITELIBDIR}/bio/io/dbget.rb
+${RUBY_SITELIBDIR}/bio/io/ddbjxml.rb
+${RUBY_SITELIBDIR}/bio/io/fetch.rb
+${RUBY_SITELIBDIR}/bio/io/flatfile/bdb.rb
+${RUBY_SITELIBDIR}/bio/io/flatfile/index.rb
+${RUBY_SITELIBDIR}/bio/io/flatfile/indexer.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/io/flatfile
+${RUBY_SITELIBDIR}/bio/io/flatfile.rb
+${RUBY_SITELIBDIR}/bio/io/keggapi.rb
+${RUBY_SITELIBDIR}/bio/io/pubmed.rb
+${RUBY_SITELIBDIR}/bio/io/registry.rb
+${RUBY_SITELIBDIR}/bio/io/soapwsdl.rb
+${RUBY_SITELIBDIR}/bio/io/sql.rb
+@dirrm ${RUBY_SITELIBDIR}/bio/io
+${RUBY_SITELIBDIR}/bio/location.rb
+${RUBY_SITELIBDIR}/bio/pathway.rb
+${RUBY_SITELIBDIR}/bio/reference.rb
+${RUBY_SITELIBDIR}/bio/sequence.rb
+@dirrm ${RUBY_SITELIBDIR}/bio
+${RUBY_SITELIBDIR}/bio.rb
+${RUBY_DOCDIR}/bioruby/ChangeLog
+${RUBY_DOCDIR}/bioruby/COPYING
+${RUBY_DOCDIR}/bioruby/COPYING.LIB
+${RUBY_DOCDIR}/bioruby/README
+${RUBY_DOCDIR}/bioruby/ja/BioRuby.rd.ja
+${RUBY_DOCDIR}/bioruby/ja/Design.rd.ja
+${RUBY_DOCDIR}/bioruby/ja/KEGG_API.rd.ja
+${RUBY_DOCDIR}/bioruby/ja/TODO.rd.ja
+${RUBY_DOCDIR}/bioruby/ja/Tutorial.rd.ja
+@dirrm ${RUBY_DOCDIR}/bioruby/ja
+@dirrm ${RUBY_DOCDIR}/bioruby
+${RUBY_EXAMPLESDIR}/bioruby/biofetch.rb
+${RUBY_EXAMPLESDIR}/bioruby/dbget
+${RUBY_EXAMPLESDIR}/bioruby/fasta2tab.rb
+${RUBY_EXAMPLESDIR}/bioruby/fsplit.rb
+${RUBY_EXAMPLESDIR}/bioruby/gb2fasta.rb
+${RUBY_EXAMPLESDIR}/bioruby/gb2tab.rb
+${RUBY_EXAMPLESDIR}/bioruby/gbtab2mysql.rb
+${RUBY_EXAMPLESDIR}/bioruby/genes2nuc.rb
+${RUBY_EXAMPLESDIR}/bioruby/genes2pep.rb
+${RUBY_EXAMPLESDIR}/bioruby/genes2tab.rb
+${RUBY_EXAMPLESDIR}/bioruby/genome2rb.rb
+${RUBY_EXAMPLESDIR}/bioruby/genome2tab.rb
+${RUBY_EXAMPLESDIR}/bioruby/goslim.rb
+${RUBY_EXAMPLESDIR}/bioruby/gt2fasta.rb
+${RUBY_EXAMPLESDIR}/bioruby/pmfetch.rb
+${RUBY_EXAMPLESDIR}/bioruby/pmsearch.rb
+${RUBY_EXAMPLESDIR}/bioruby/ssearch2tab.rb
+${RUBY_EXAMPLESDIR}/bioruby/tdiary.rb
+${RUBY_EXAMPLESDIR}/bioruby/tfastx2tab.rb
+${RUBY_EXAMPLESDIR}/bioruby/vs-genes.rb
+@dirrm ${RUBY_EXAMPLESDIR}/bioruby
+
