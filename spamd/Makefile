@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/24 12:04:08 ppostma Exp $
+# $NetBSD: Makefile,v 1.11 2005/06/27 11:46:00 ppostma Exp $
 
 DISTNAME=		spamd-20050624
 CATEGORIES=		mail
@@ -8,6 +8,7 @@ MAINTAINER=		peter@pointless.nl
 HOMEPAGE=		http://www.benzedrine.cx/relaydb.html
 COMMENT=		OpenBSD spamd daemon which rejects false mail
 
+CONFLICTS=		spamassassin-[1-9]*
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-*
 
 USE_PKGINSTALL=		yes
