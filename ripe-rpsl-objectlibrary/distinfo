@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/06/28 05:52:11 geeohgeegeeoh Exp $
+
+SHA1 (RPSL-OL-3.1.1.tar.gz) = edb0cb93fc3cfc997a62106de7ef0f30c92af4c8
+RMD160 (RPSL-OL-3.1.1.tar.gz) = 6ba7279c4455c4b96ea9ee80845ab7ba8b2ba3ad
+Size (RPSL-OL-3.1.1.tar.gz) = 1176141 bytes
+SHA1 (patch-aa) = c5b45ec21dd24a3459468cce61acc13e898ad01c
+SHA1 (patch-ab) = 268ba5a887d031270e8cbc1d633cf21c8e0c795e

@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/28 05:52:11 geeohgeegeeoh Exp $
+include/syntax_api.h
+lib/librpsl.a
+lib/perl5/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/perllocal.pod
+lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Net/Whois/RIPE/RPSL/.packlist
+lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Net/Whois/RIPE/RPSL/RPSL.so
+lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Net/Whois/RIPE/RPSL/RPSL.bs
+lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Net/Whois/RIPE/RPSL/autosplit.ix
+lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Net/Whois/RIPE/RPSL.pm
+lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Net/Whois/RIPE/RPSL/Attribute.pm
+lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Net/Whois/RIPE/RPSL/Error.pm
+lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Net/Whois/RIPE/RPSL/TemplateAttribute.pm
+lib/perl5/site_perl/man/man3/Net::Whois::RIPE::RPSL::Attribute.3
+lib/perl5/site_perl/man/man3/Net::Whois::RIPE::RPSL::Error.3
+lib/perl5/site_perl/man/man3/Net::Whois::RIPE::RPSL::TemplateAttribute.3
+lib/perl5/site_perl/man/man3/Net::Whois::RIPE::RPSL.3
+@dirrm lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Net/Whois/RIPE/RPSL
