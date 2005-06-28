@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1840 2005/06/28 11:03:46 mwdavies Exp $
-# $Id: Makefile,v 1.1840 2005/06/28 11:03:46 mwdavies Exp $
+# $NetBSD: Makefile,v 1.1841 2005/06/28 12:49:00 ppostma Exp $
+# $Id: Makefile,v 1.1841 2005/06/28 12:49:00 ppostma Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -943,7 +943,6 @@ SUBDIR+=	snes9express
 SUBDIR+=	songwrite
 SUBDIR+=	soundtracker
 SUBDIR+=	spamassassin-cvs
-SUBDIR+=	spamd
 SUBDIR+=	spamprobe-pbl
 SUBDIR+=	spe
 SUBDIR+=	speedx
