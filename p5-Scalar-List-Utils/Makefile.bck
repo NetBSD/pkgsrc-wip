@@ -1,0 +1,13 @@
+DISTNAME=	Scalar-List-Utils-1.14
+PKGNAME=	p5-${DISTNAME}
+CATEGORIES=	lang perl5
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Scalar/}
+
+MAINTAINER=	geeogeegeeoh.sourceforge.net
+COMMENT=	Perl subroutines that would be nice to have in the perl core
+
+PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/List/Util/.packlist
+
+.include "../../lang/perl5/module.mk"
+.include "../../mk/bsd.pkg.mk"
+
