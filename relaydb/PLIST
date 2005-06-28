@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/28 17:07:23 ppostma Exp $
+bin/relaydb
+man/cat8/relaydb.cat8
+man/man8/relaydb.8

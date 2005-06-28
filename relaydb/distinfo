@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/06/28 17:07:23 ppostma Exp $
+
+SHA1 (relaydb-1.7.tar.gz) = 8f2be5df3c71141ba26c0a5e5b74c649b9032540
+RMD160 (relaydb-1.7.tar.gz) = 2e99056494d96c42ff684d32a0bd9ab6584fb883
+Size (relaydb-1.7.tar.gz) = 6590 bytes
