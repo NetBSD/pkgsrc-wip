@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1841 2005/06/28 12:49:00 ppostma Exp $
-# $Id: Makefile,v 1.1841 2005/06/28 12:49:00 ppostma Exp $
+# $NetBSD: Makefile,v 1.1842 2005/06/28 17:08:48 ppostma Exp $
+# $Id: Makefile,v 1.1842 2005/06/28 17:08:48 ppostma Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -861,6 +861,7 @@ SUBDIR+=	readseq
 SUBDIR+=	realvnc
 SUBDIR+=	regexxer
 #SUBDIR+=	rekall # doesn't compile yet; see TODO
+SUBDIR+=	relaydb
 SUBDIR+=	rep-gtk2
 SUBDIR+=	resourceext
 SUBDIR+=	ripole
