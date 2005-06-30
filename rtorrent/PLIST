@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/21 14:24:51 imilh Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/06/30 11:28:30 imilh Exp $
 bin/rtorrent
-share/doc/rtorrent/README
+man/man1/rtorrent.1
+share/doc/rtorrent/rtorrent.rc
+share/doc/rtorrent/faq.xml
 @dirrm share/doc/rtorrent
