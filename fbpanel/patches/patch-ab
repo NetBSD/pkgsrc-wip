@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.3 2005/06/30 22:38:09 leonardschmidt Exp $
+
+--- Makefile.orig	2005-05-31 14:55:50.000000000 +0000
++++ Makefile
+@@ -48,8 +48,8 @@ distclean: 
+ 	$(RM) Makefile.config config.h
+ 
+ install: 
+-	install -d $(PREFIX)/bin
+-	install -m 755 $(TARGET) $(PREFIX)/bin
++	${BSD_INSTALL_PROGRAM_DIR} $(PREFIX)/bin
++	${BSD_INSTALL_PROGRAM} $(TARGET) $(PREFIX)/bin
+ 
+ uninstall:
+ 	$(RM) $(PREFIX)/bin/$(TARGET)

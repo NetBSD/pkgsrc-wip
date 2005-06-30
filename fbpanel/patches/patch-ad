@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2005/06/30 22:38:09 leonardschmidt Exp $
+
+--- man/Makefile.orig	2005-05-22 00:51:08.000000000 +0000
++++ man/Makefile
+@@ -17,8 +17,8 @@ $(TARGET): $(SRC)
+ 
+ 
+ install: all
+-	install -d  $(PREFIX)/share/man/man1
+-	install -m 644 $(TARGET) $(PREFIX)/share/man/man1
++	${BSD_INSTALL_MAN_DIR} $(PREFIX)/${PKGMANDIR}/man1
++	${BSD_INSTALL_MAN} $(TARGET) $(PREFIX)/${PKGMANDIR}/man1
+ 
+ uninstall:
+ 	$(RM) $(PREFIX)/share/man/man1/$(TARGET)

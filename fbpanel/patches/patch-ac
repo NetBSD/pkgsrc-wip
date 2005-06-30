@@ -1,15 +1,21 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/05/22 02:38:01 jeremy-c-reed Exp $
+$NetBSD: patch-ac,v 1.2 2005/06/30 22:38:09 leonardschmidt Exp $
 
---- man/Makefile.orig	2004-04-16 12:34:50.000000000 -0700
-+++ man/Makefile
-@@ -20,8 +20,8 @@ clean:
+--- config/Makefile.orig	2005-05-22 00:46:13.000000000 +0000
++++ config/Makefile
+@@ -17,11 +17,11 @@ all: $(TARGET)
  
  
- install: all
--	install -d  $(PREFIX)/share/man/man1
--	install -m 644 $(TARGET) $(PREFIX)/share/man/man1
-+	install -d  $(PREFIX)/${PKGMANDIR}/man1
-+	install -m 644 $(TARGET) $(PREFIX)/${PKGMANDIR}/man1
+ install: 
+-	install -d  $(PREFIX)/share/fbpanel
+-	install -m 644 $(TARGET) $(PREFIX)/share/fbpanel
+-	install -d  $(PREFIX)/share/fbpanel/images
+-	install -m 644 images/*.png $(PREFIX)/share/fbpanel/images
+-	install -m 644 images/*.xpm $(PREFIX)/share/fbpanel/images
++	${BSD_INSTALL_DATA_DIR}  $(PREFIX)/share/fbpanel
++	${BSD_INSTALL_DATA} $(TARGET) $(PREFIX)/share/fbpanel
++	${BSD_INSTALL_DATA_DIR} $(PREFIX)/share/fbpanel/images
++	${BSD_INSTALL_DATA} images/*.png $(PREFIX)/share/fbpanel/images
++	${BSD_INSTALL_DATA} images/*.xpm $(PREFIX)/share/fbpanel/images
  
  uninstall:
- 	rm -f $(PREFIX)/share/man/man1/$(TARGET)
+ 	$(RM) -r $(PREFIX)/share/fbpanel/images/
