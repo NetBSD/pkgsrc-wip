@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/07/01 15:22:52 leonardschmidt Exp $
+
+--- Makefile.config.orig	2004-07-15 19:36:56.000000000 +0000
++++ Makefile.config
+@@ -32,7 +32,7 @@ CC ?= gcc
+ #CFLAGS += -O2 -Wall
+ #CFLAGS += -O3 -Wall -march=athlon-tbird -mtune=athlon-tbird 
+ #CFLAGS += -O3 -Wall -march=pentium -mtune=pentium4
+-CFLAGS += -Wall
++#CFLAGS += -Wall
+ 
+ # gettext/internationalisation support
+ # (is automatically turned off if you don't have gettext)
