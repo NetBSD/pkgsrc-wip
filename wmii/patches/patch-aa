@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2005/06/15 15:26:49 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.7 2005/07/01 13:09:41 leonardschmidt Exp $
 
 --- config.mk.orig	2005-06-13 05:36:42.000000000 +0000
 +++ config.mk
@@ -21,9 +21,11 @@ $NetBSD: patch-aa,v 1.6 2005/06/15 15:26:49 leonardschmidt Exp $
  
  # includes and libs
 -INCLUDES    = -I. -I${INCDIR} -I/usr/include -I${X11DIR}/include
+-LIBS        = -L${LIBDIR} -L/usr/lib -lc -lm -L${X11DIR}/lib -lX11
+-DRAW        = xlib
 +INCLUDES    = -I. -I${INCDIR} -I${PREFIX}/include -I${X11DIR}/include
- LIBS        = -L${LIBDIR} -L/usr/lib -lc -lm -L${X11DIR}/lib -lX11
- DRAW        = xlib
++LIBS        = -L${LIBDIR} -L${PREFIX}/lib -lc -lm -L${X11DIR}/lib -lX11
++#DRAW        = xlib
  
  # cairo support
  #DRAW        = cairo
@@ -33,7 +35,7 @@ $NetBSD: patch-aa,v 1.6 2005/06/15 15:26:49 leonardschmidt Exp $
  
  # str{l,n}{cat,cpy} support, if you have OpenBSD you can use strl*
  STRLCPY     = strncpy
-@@ -27,18 +27,18 @@ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTR
+@@ -27,14 +27,14 @@ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTR
  
  # compiler
  # Note: under Solaris add -D__EXTENSIONS__ to CFLAGS
@@ -50,10 +52,4 @@ $NetBSD: patch-aa,v 1.6 2005/06/15 15:26:49 leonardschmidt Exp $
 +#CC          = cc
  CP          = cp -f
  COMPRESS    = bzip2
--INSTBIN     = ${CP}
--INSTDATA    = ${CP}
-+INSTBIN     = ${BSD_INSTALL_PROGRAM}
-+INSTDATA    = ${BSD_INSTALL_DATA}
- MODBIN      = chmod 755
- MODDATA     = chmod 444
- #INSTBIN     = install -d -c -o root -g wheel -m 755
+ INSTBIN     = ${CP}

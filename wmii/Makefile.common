@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/06/15 15:26:49 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/07/01 13:09:40 leonardschmidt Exp $
 #
 
 DISTNAME=	wmii-1.1
@@ -10,10 +10,14 @@ MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://wmi.modprobe.de/
 COMMENT=	Modular, minimalist and highly customizable window manager
 
+DISTINFO_FILE=	${.CURDIR}/../../wip/wmii/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/wmii/patches
 PLIST_SRC=	${.CURDIR}/../../wip/wmii/PLIST
 
 USE_PKGINSTALL=	yes
 NO_CONFIGURE=	yes
+
+MAKE_ENV+=	DRAW=xlib
 
 SUBST_CLASSES+=	paths
 SUBST_STAGE.paths=	post-patch
