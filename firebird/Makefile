@@ -1,32 +1,26 @@
-# $NetBSD: Makefile,v 1.13 2005/06/08 15:42:57 dillo Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/01 02:05:11 hisazumi Exp $
 #
 
-DISTNAME=		firebird-1.5.0.4290
-PKGNAME=		${DISTNAME:S/.4290//}
-CATEGORIES=		databases
+DISTNAME=		firebird-1.5.2.4731
+CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=firebird/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		dotz@irc.pl
-HOMEPAGE=		http://firebird.sf.net/
+MAINTAINER=		nel@soraneko.com
+HOMEPAGE=		http://jaist.dl.sourceforge.net/sourceforge/firebird/
 COMMENT=		SQL database, opensource version of InterBase
 
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
-PREFIX=			${LOCALBASE}/firebird15
+DEPENDS=		autoconf>=2.58:../../devel/autoconf
 
-CONFIGURE_ARGS+=	--with-lock-manager
-CONFIGURE_ARGS+=	--with-editline
+USE_PKGLOCALEDIR=	yes
+HAS_CONFIGURE=          yes
+CONFIGURE_SCRIPT=       AUTOCONF=/usr/pkg/bin/autoconf ./autogen.sh
+CONFIGURE_ARGS+=        --prefix=/usr/pkg/firebird
+USE_TOOLS+=             gmake
+USE_TOOLS+=             gm4
+TOOLS_DEPMETHOD.gm4=    DEPENDS
 
-# Yes, such versions are required, you won't build this package without
-# those:
-AUTOCONF_REQD=		2.53
-GCC_REQD=		3.3.0
-USE_TOOLS+=		gm4 		# needs GNU M4 version 4.14
-USE_TOOLS+=		automake
-
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		./autogen.sh ${CONFIGURE_ARGS}
+PKG_USERS=		firebird:firebird
+PKG_GROUPS=		firebird
 
 .include "../../mk/bsd.pkg.mk"

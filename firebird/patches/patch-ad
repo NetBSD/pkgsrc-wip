@@ -1,0 +1,40 @@
+$NetBSD$
+
+*** /home/nel/firebird-1.5.2.4731/configure.in	Thu Dec  9 23:43:18 2004
+--- configure.in	Thu Jun 30 16:32:04 2005
+***************
+*** 102,108 ****
+      PLATFORM=NETBSD
+      AC_DEFINE(NETBSD)
+      LOCK_MANAGER_FLG=Y
+!     EDITLINE_FLG=N
+      SHRLIB_EXT=so
+      ;;
+  
+--- 102,108 ----
+      PLATFORM=NETBSD
+      AC_DEFINE(NETBSD)
+      LOCK_MANAGER_FLG=Y
+!     EDITLINE_FLG=Y
+      SHRLIB_EXT=so
+      ;;
+  
+***************
+*** 842,849 ****
+      ;;
+  
+  
+!   FREEBSD)
+!     AC_CONFIG_FILES([gen/install/install.sh:src/install/arch-specific/freebsd/install.sh.in
+        ],[chmod a+x gen/install/install.sh 2>/dev/null])
+      ;;
+  
+--- 842,849 ----
+      ;;
+  
+  
+!   NETBSD)
+!     AC_CONFIG_FILES([gen/install/install.sh:src/install/arch-specific/netbsd/install.sh.in
+        ],[chmod a+x gen/install/install.sh 2>/dev/null])
+      ;;
+  

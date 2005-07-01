@@ -1,0 +1,96 @@
+$NetBSD$
+
+diff -Nur ../firebird-1.5.2.4731/src/jrd/common.h ./src/jrd/common.h
+--- ../firebird-1.5.2.4731/src/jrd/common.h	2004-03-29 12:50:10.000000000 +0900
++++ ./src/jrd/common.h	2005-06-18 11:05:02.000000000 +0900
+@@ -318,7 +318,7 @@
+ #define MOVE_FASTER(from,to,length)     memcpy (to, from, (int) (length))
+ #define MOVE_CLEAR(to,length)           memset (to, 0, (int) (length))
+ 
+-typedef RETSIGTYPE (*SIG_FPTR) ();
++typedef RETSIGTYPE (*SIG_FPTR) (int);
+ #endif /* NETBSD */
+ 
+ 
+diff -Nur ../firebird-1.5.2.4731/src/jrd/isc_sync.cpp ./src/jrd/isc_sync.cpp
+--- ../firebird-1.5.2.4731/src/jrd/isc_sync.cpp	2004-04-06 16:51:12.000000000 +0900
++++ ./src/jrd/isc_sync.cpp	2005-06-27 14:19:03.000000000 +0900
+@@ -653,7 +653,7 @@
+ 		pthread_cond_init(event->event_semnum, pthread_condattr_default);
+ #else
+ /* RITTER - added HP11 to the preprocessor condition below */
+-#if (defined LINUX || defined DARWIN || defined HP11 || defined FREEBSD)
++#if (defined LINUX || defined DARWIN || defined HP11 || defined FREEBSD || defined NETBSD)
+ 		pthread_mutex_init(event->event_mutex, NULL);
+ 		pthread_cond_init(event->event_semnum, NULL);
+ #else
+@@ -782,7 +782,7 @@
+ 		if (micro_seconds > 0 && (ret == -1) && (errno == EAGAIN))
+ #else
+ /* RITTER - added HP11 to the preprocessor condition below */
+-#if (defined LINUX || defined DARWIN || defined HP11 || defined FREEBSD)
++#if (defined LINUX || defined DARWIN || defined HP11 || defined FREEBSD || defined NETBSD)
+ 		if (micro_seconds > 0 && (ret == ETIMEDOUT))
+ #else
+ 		if (micro_seconds > 0 && (ret == ETIME))
+@@ -3235,7 +3235,7 @@
+ 	int state;
+ 
+ /* RITTER - replaced HP10 with HPUX in the line below */
+-#if (!defined HPUX && !defined LINUX && !defined DARWIN && !defined FREEBSD)
++#if (!defined HPUX && !defined LINUX && !defined DARWIN && !defined FREEBSD && !defined NETBSD)
+ 
+ 	pthread_mutexattr_t mattr;
+ 
+@@ -3256,7 +3256,7 @@
+ 	 memory in which case we need interprocess thread sync.
+ */
+ /* RITTER - added HP11 */
+-#if (defined LINUX || defined DARWIN || defined HP11 || defined FREEBSD)
++#if (defined LINUX || defined DARWIN || defined HP11 || defined FREEBSD || defined NETBSD)
+ 	return pthread_mutex_init(mutex->mtx_mutex, NULL);
+ #else
+ 	state = pthread_mutex_init(mutex->mtx_mutex, pthread_mutexattr_default);
+diff -Nur ../firebird-1.5.2.4731/src/jrd/thd.cpp ./src/jrd/thd.cpp
+--- ../firebird-1.5.2.4731/src/jrd/thd.cpp	2004-09-18 08:34:14.000000000 +0900
++++ ./src/jrd/thd.cpp	2005-06-27 15:14:14.000000000 +0900
+@@ -1555,9 +1555,9 @@
+    in <unistd.h>.  Darwin defined _POSIX_THREAD_PRIORITY_SCHEDULING
+    instead of _POSIX_PRIORITY_SCHEDULING.
+ */
+-#if (defined _POSIX_PRIORITY_SCHEDULING || defined _POSIX_THREAD_PRIORITY_SCHEDULING)
++#if (defined _POSIX_PRIORITY_SCHEDULING || defined _POSIX_THREAD_PRIORITY_SCHEDULING || defined NETBSD)
+ 	sched_yield();
+-#else
++#else	
+ 	pthread_yield();
+ #endif /* _POSIX_PRIORITY_SCHEDULING */
+ #endif
+diff -Nur ../firebird-1.5.2.4731/src/jrd/thd.h ./src/jrd/thd.h
+--- ../firebird-1.5.2.4731/src/jrd/thd.h	2004-09-18 08:34:14.000000000 +0900
++++ ./src/jrd/thd.h	2005-06-27 14:35:53.000000000 +0900
+@@ -73,6 +73,10 @@
+ #define POSIX_THREADS           1
+ #endif
+ 
++#if (defined(NETBSD) && defined(SUPERCLIENT))
++#define POSIX_THREADS           1
++#endif
++
+ #if (defined(DARWIN) && defined(SUPERCLIENT))
+ #define POSIX_THREADS           1
+ #endif
+diff -Nur ../firebird-1.5.2.4731/src/remote/inet.cpp ./src/remote/inet.cpp
+--- ../firebird-1.5.2.4731/src/remote/inet.cpp	2004-10-21 02:25:14.000000000 +0900
++++ ./src/remote/inet.cpp	2005-06-18 11:20:22.000000000 +0900
+@@ -101,6 +101,10 @@
+ extern "C" int innetgr(const char *, const char *, const char *, const char *);
+ #endif
+ 
++#ifdef NETBSD
++#include <netgroup.h>
++#endif
++
+ #define INET_RETRY_CALL		5
+ 
+ #include "../remote/remote.h"

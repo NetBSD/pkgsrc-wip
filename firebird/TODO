@@ -1,19 +1,12 @@
-$Id: TODO,v 1.3 2004/02/23 22:01:53 mpasternak Exp $
+$Id: TODO,v 1.4 2005/07/01 02:05:11 hisazumi Exp $
 
-Does it compile on NetBSD-stable?
+install appropreate destination (/usr/pkg/bin, etc...) insted of /usr/pkg/firebird.
 
-Does it compile on NetBSD-current?
+Fix pkglint warnings.
 
-FreeBSD build breaks at:
-	../gen/firebird/bin/create_db empty.fdb
-	operating system directive semget failed
-	-No space left on device
-	gmake[3]: *** [empty.fdb] B³±d 254
-... and this has nothing to do with disk space. I am unable to debug it, as
-my gdb seems to have problems with gcc-3.3-compiled binaries. Possibly a job
-for someone with NetBSD-current or FreeBSD 5.x box
+Create PLIST.
 
-Create PLIST, when it finally builds.
+	-- nel@soraneko.com
 
 Firebird can be compiled as "classic" and "super" version -- I have no idea
 how do they differ; I think, when it is ready, Makefile should be divided to

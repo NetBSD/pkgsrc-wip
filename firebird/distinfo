@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.2 2005/06/08 15:42:57 dillo Exp $
+$NetBSD: distinfo,v 1.3 2005/07/01 02:05:11 hisazumi Exp $
 
-SHA1 (firebird-1.5.0.4290.tar.bz2) = 2f058a687f0fb21584af663ec45100c56c9e4c84
-RMD160 (firebird-1.5.0.4290.tar.bz2) = 5bcac6e6320aefb3f66f7d83675c940ccd9ea59c
-Size (firebird-1.5.0.4290.tar.bz2) = 4364535 bytes
+SHA1 (firebird-1.5.2.4731.tar.bz2) = e82b5bde94c760a5922eedeac2b7b1de1b57fb94
+RMD160 (firebird-1.5.2.4731.tar.bz2) = fd82dc9dbc5ada51847011cec4f0f9d6f510bc53
+Size (firebird-1.5.2.4731.tar.bz2) = 4764015 bytes
+SHA1 (patch-aa) = 7a5eb958669753318a8e1c31a4a782d4f2dd5d63
+SHA1 (patch-ab) = 03cabe2132f90ef0871bd37c66ca592c45807277
+SHA1 (patch-ac) = c383643913c20ba5a0e1266b3d0bd90d04dd2163
+SHA1 (patch-ad) = 455038a2f80bc855b6a24dba2395e6bb0e8653c4
