@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/24 10:54:31 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/01 13:18:14 leonardschmidt Exp $
 #
 
 DISTNAME=	esmtp-0.5.1
@@ -20,6 +20,8 @@ SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	sample.esmtprc
 SUBST_SED.paths=	-e 's,/usr/bin,${LOCALBASE}/bin,g'
 
+PTHREAD_OPTS+=	require
+
 EGDIR=	${PREFIX}/share/examples/esmtp
 
 post-install:
@@ -28,4 +30,5 @@ post-install:
 
 .include "../../mail/libesmtp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
