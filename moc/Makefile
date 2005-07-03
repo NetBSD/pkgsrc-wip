@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/02 23:49:44 scode Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/03 03:07:40 poppnk Exp $
 
 DISTNAME=		moc-2.3.0-beta2
 CATEGORIES=		audio
@@ -10,7 +10,6 @@ HOMEPAGE=		http://moc.daper.net/
 COMMENT=		Curses based console audio player
 
 GNU_CONFIGURE=		YES
-HAS_CONFIGURE=          YES
 
 # We require ncurses because with curses arrow key navigation is buggy
 CONFIGURE_ARGS+=        --with-ncurses
