@@ -1,4 +1,4 @@
-A GTK2-based graphical client with a simple and clean interface.
+A GTK2-based musicpd client with a simple and clean interface.
 
 Features include:
     * Support for loading/saving playlists
