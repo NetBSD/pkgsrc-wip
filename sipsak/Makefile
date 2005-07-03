@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:41 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/03 19:39:37 gschwarz Exp $
 
-DISTNAME=	sipsak-0.8.12
+DISTNAME=	sipsak-0.8.13
 CATEGORIES=	net
 MASTER_SITES=	http://download.berlios.de/sipsak/
 
