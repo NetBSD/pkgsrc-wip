@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1842 2005/06/28 17:08:48 ppostma Exp $
-# $Id: Makefile,v 1.1842 2005/06/28 17:08:48 ppostma Exp $
+# $NetBSD: Makefile,v 1.1843 2005/07/06 12:35:03 marttikuparinen Exp $
+# $Id: Makefile,v 1.1843 2005/07/06 12:35:03 marttikuparinen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -934,6 +934,9 @@ SUBDIR+=	sleuthkit
 SUBDIR+=	slocate
 SUBDIR+=	slrn-pl
 SUBDIR+=	slune
+SUBDIR+=	sm-change_ldappass
+SUBDIR+=	sm-change_qldforward
+SUBDIR+=	sm-compatibility
 SUBDIR+=	smbldap-tools
 SUBDIR+=	smlnj-current
 SUBDIR+=	smtprc
