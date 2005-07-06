@@ -1,0 +1,183 @@
+$NetBSD: patch-local-aa,v 1.1.1.1 2005/07/06 12:32:50 marttikuparinen Exp $
+
+--- options.php.orig	2005-05-27 17:18:37.000000000 +0200
++++ options.php
+@@ -48,6 +48,10 @@ if (compatibility_check_sm_version(1, 3)
+    include_once ('../functions/imap.php');
+ }
+ 
++   $current_forward = "";
++   $current_msg = "";
++   $current_interval = "";
++   $vacation_enabled = 0;
+ 
+    if ($_POST['plugin_change_qldforward'] != null) $Messages = change_qldforward_check();
+  
+@@ -55,6 +59,7 @@ if (compatibility_check_sm_version(1, 3)
+ 
+ // At start, get current setting and add it to messages if any and grab the dn for rebind later.
+   if (! $Messages){
++      $debug = 0;
+       include(SM_PATH . "plugins/change_qldforward/config.php");
+       if ($debug) array_push($Messages, "Connecting to LDAP Server");
+       $username = $_SESSION['username'];
+@@ -94,6 +99,20 @@ if (compatibility_check_sm_version(1, 3)
+           $Messages = array();
+           array_push($Messages,"Email for $username is currently forwarded to $current_forward.");
+       }
++      $val = @ldap_get_values($ds,$info,"vacationenabled");
++      if ($val){
++	  if ($val[0] == "TRUE") {
++          	$vacation_enabled = 1;
++	  }
++          $val = @ldap_get_values($ds,$info,"vacationMessage");
++	  if ($val) {
++		$current_msg = $val[0];
++	  }
++          $val = @ldap_get_values($ds,$info,"vacationInterval");
++	  if ($val) {
++		$current_interval = $val[0];
++	  }
++      }
+       @ldap_close($ds);
+   }
+ 
+@@ -122,6 +141,18 @@ if (isset($Messages) && count($Messages)
+         <td><input type=text name=cp_forward value="<?php if (isset($current_forward)) print $current_forward; ?>"  size=22>(Leave blank to cancel forwarding.)</td>
+       </tr>
+       <tr>
++	<th align="right">Out-of-office message:</th>
++        <td><textarea name="vac_msg" cols="72" rows="20"><?php if (isset($current_msg)) print $current_msg; ?></textarea></td>
++      </tr>
++      <tr>
++        <th align="right">Out-of-office options:</th>
++        <td><input type="checkbox" name="vac_enabled" <?php if ($vacation_enabled) print 'checked="1"'; ?> value="vac_enable" />Enabled</td>
++      </tr>
++      <tr>
++        <th>&nbsp;</th>
++        <td>Interval: <input type="text" name="vac_interval" value="<?= $current_interval ?>" /></td>
++      </tr>
++      <tr>
+         <th align=right>Password:</th>
+         <td><input type=password name=cp_oldpass value="" size=22></td>
+       </tr>
+@@ -139,6 +170,14 @@ function change_qldforward_check($debug 
+ 	$newforward = $_POST['cp_forward'];
+ 	$plugin_change_qldforward = $_POST['plugin_change_qldforward'];
+ 	$username = $_SESSION['username'];
++	$new_vacmsg = $_POST['vac_msg'];
++	$new_vacenabled = $_POST['vac_enabled'];
++	$new_vacinterval = $_POST['vac_interval'];
++
++	$GLOBALS['current_forward'] = $newforward;
++	$GLOBALS['current_msg'] = $new_vacmsg;
++	$GLOBALS['vacation_enabled'] = $new_vacenabled;
++	$GLOBALS['current_interval'] = $new_vacinterval;
+ 
+ 	$Messages = array();
+ 
+@@ -154,10 +193,14 @@ function change_qldforward_go($debug) {
+ 	        $dn = $_SESSION['dn'];
+ 		$cp_oldpass = $_POST['cp_oldpass'];
+ 		$newforward = $_POST['cp_forward'];
++		$new_vacmsg = $_POST['vac_msg'];
++		$new_vacenabled = $_POST['vac_enabled'];
++		$new_vacinterval = $_POST['vac_interval'];
+ 
+ 		include_once(SM_PATH . "plugins/change_qldforward/config.php");
+ 	
+                 $Messages = array();
++
+                 if ($debug) array_push($Messages, "Connecting to LDAP Server");
+ 
+  		$ds=ldap_connect($ldap_server);
+@@ -169,50 +212,52 @@ function change_qldforward_go($debug) {
+ 		}
+ 		if ($debug) array_push($Messages,"New forward: $newforward");
+ 		$newentry=array();
+-                if ($newforward == "") {
+-			$user_filter = "($ldap_user_field=$username)";
+-			if ($ldap_filter != "") {
+-				$user_filter = "(&($ldap_filter)$user_filter)";
+-			}
+-			if ($ldap_scope == "onelevel") {
+-                        	$sr = ldap_list($ds,$dn,$user_filter);
+-			} else {
+-                        	$sr = ldap_search($ds,$dn,$user_filter);
+-			}
+-                        $info = ldap_first_entry($ds,$sr);
+-			$current_forward = @ldap_get_values($ds,$info,$forwarding_field);
+-			if (!$current_forward) {
+-				array_push($Messages,"Error: No forward found to delete.");
+-                                return $Messages;
+-			} else {
+-                        	$dele_attribs[$forwarding_field] = array() ;
+-				$result2 = ldap_mod_del($ds,$dn,$dele_attribs);
+-				if ( $delivery_mode_field ) {
+-					$add_attribs[$delivery_mode_field] = $delivery_mode_local_val ;
+-			        	$result2 .= ldap_modify($ds,$dn,$add_attribs);
+-				}
+-			}
+-                } else {
+-			$add_attribs[$forwarding_field][0] = $newforward;
+-			if ( $delivery_mode_field ) {
+-				$add_attribs[$delivery_mode_field] = $delivery_mode_forward_val ;
++
++		$sr = ldap_read($ds, $dn, '(objectClass=*)');
++		$info = ldap_first_entry($ds,$sr);
++
++		$current_forward = @ldap_get_values($ds,$info,$forwarding_field);
++		if ($current_forward && $newforward == "") {
++			$dele_attribs[$forwarding_field] = array();
++		} elseif ($newforward != "") {
++			$mod_attribs[$forwarding_field][0] = $newforward;
++		}
++
++		if ($new_vacenabled == "vac_enable") {
++			$mod_attribs['vacationEnabled'][0] = 'TRUE';
++		} else {
++			$mod_attribs['vacationEnabled'][0] = 'FALSE';
++		}
++
++		$current_msg = @ldap_get_values($ds,$info,"vacationMessage");
++		if ($current_msg && $new_vacmsg == "") {
++			$dele_attribs['vacationMessage'] = array();
++		} elseif ($new_vacmsg != "") {
++			$mod_attribs['vacationMessage'][0] = $new_vacmsg;
++		}
++
++		$current_interval = @ldap_get_values($ds,$info,"vacationInterval");
++		if ($current_interval && $new_vacinterval == "") {
++			$dele_attribs['vacationInterval'] = array();
++		} elseif ($new_vacinterval != "") {
++			$mod_attribs['vacationInterval'][0] = $new_vacinterval;
++		}
++
++		if ($dele_attribs) {
++			$result2 = @ldap_modify($ds,$dn,$dele_attribs);
++			if (!$result2) {
++				array_push($Messages, "LDAP Delete failed: " . ldap_error($ds));
+ 			}
+-                        $result2 = ldap_modify($ds,$dn,$add_attribs);
+-                }
++		}
++		$result2 .= @ldap_modify($ds,$dn,$mod_attribs);
+ 
+                 if ($result2) {
+-                        if ($newforward == "") {
+-	                        array_push($Messages,"Email to $username no longer forwarded.");
+-       		                return $Messages;
+-                        } else {
+-	                        array_push($Messages,"Email to $username now forwarded to $newforward.");
+-       		                return $Messages;
+-                	}
++			array_push($Messages,"New parameters saved.");
+ 		} else {
+ 	                array_push($Messages,"LDAP Modify failed :" . ldap_error($ds));
+-       		        return $Messages;
+                 }
+ 		@ldap_close($ds);
++       		return $Messages;
+ }
+ 
+ ?>

@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/06 12:32:50 marttikuparinen Exp $
+
+--- options.php.orig	2003-05-03 22:39:13.000000000 +0200
++++ options.php
+@@ -64,7 +64,15 @@ if (compatibility_check_sm_version(1, 3)
+           return $Messages;
+       }
+       $r=ldap_bind($ds,"","");
+-      $sr=ldap_search($ds,$ldap_base_dn,"($ldap_user_field=$username)"); //search for uid
++      $user_filter = "($ldap_user_field=$username)";
++      if ($ldap_filter != "") {
++      	$user_filter = "(&($ldap_filter)$user_filter)";
++      }
++      if ($ldap_scope == "onelevel") {
++      	$sr=ldap_list($ds,$ldap_base_dn,$user_filter); //search for uid
++      } else {
++      	$sr=ldap_search($ds,$ldap_base_dn,$user_filter); //search for uid
++      }
+       if (ldap_count_entries($ds,$sr)>1) {
+           array_push($Messages,'Duplicate mailaddress entries detected, cannot change forwarding!');
+           return $Messages;
+@@ -162,7 +170,15 @@ function change_qldforward_go($debug) {
+ 		if ($debug) array_push($Messages,"New forward: $newforward");
+ 		$newentry=array();
+                 if ($newforward == "") {
+-                        $sr = ldap_search($ds,$dn,"($ldap_user_field=$username)");
++			$user_filter = "($ldap_user_field=$username)";
++			if ($ldap_filter != "") {
++				$user_filter = "(&($ldap_filter)$user_filter)";
++			}
++			if ($ldap_scope == "onelevel") {
++                        	$sr = ldap_list($ds,$dn,$user_filter);
++			} else {
++                        	$sr = ldap_search($ds,$dn,$user_filter);
++			}
+                         $info = ldap_first_entry($ds,$sr);
+ 			$current_forward = @ldap_get_values($ds,$info,$forwarding_field);
+ 			if (!$current_forward) {
