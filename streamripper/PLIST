@@ -1,8 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2003/10/11 23:49:47 roelants Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/07/06 15:39:48 leonardschmidt Exp $
 bin/streamripper
-share/doc/streamripper/CHANGES
-share/doc/streamripper/COPYING
-share/doc/streamripper/README
-share/doc/streamripper/THANKS
-share/doc/streamripper/TODO
-@dirrm share/doc/streamripper
+man/man1/streamripper.1

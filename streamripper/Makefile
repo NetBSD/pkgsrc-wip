@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:15:57 tvierling Exp $
+# $NetBSD: Makefile,v 1.10 2005/07/06 15:39:48 leonardschmidt Exp $
 #
 
-DISTNAME=	streamripper-1.60
+DISTNAME=	streamripper-1.61.9
 CATEGORIES=	audio
-MASTER_SITES=	http://streamripper.sourceforge.net/files/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=streamripper/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://streamripper.sourceforge.net/
@@ -11,18 +11,10 @@ COMMENT=	Splits SHOUTcast stream into tracks
 
 GNU_CONFIGURE=		yes
 
-MAKE_ENV+=		SH=${SH:Q}
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/streamripper ${PREFIX}/bin
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/streamripper
-	${INSTALL_DATA} ${WRKSRC}/CHANGES ${PREFIX}/share/doc/streamripper
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/streamripper
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/streamripper
-	${INSTALL_DATA} ${WRKSRC}/THANKS ${PREFIX}/share/doc/streamripper
-	${INSTALL_DATA} ${WRKSRC}/TODO ${PREFIX}/share/doc/streamripper
-
 PTHREAD_OPTS+=	require
 
+.include "../../audio/libmad/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
