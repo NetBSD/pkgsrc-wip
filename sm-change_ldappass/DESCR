@@ -1,0 +1,7 @@
+The change_ldappass SquirrelMail plugin allows you to change your account
+password which is stored on an LDAP server.  It complements the LDAP address
+book and (LDAP) Retreive User Data plugins on systems where IMAP authentication
+is done via LDAP.  An extra tweak allows this plugin to update Samba encrypted
+password files as well (smbpasswd) for systems that also do Samba
+authentication via LDAP.  This keeps the LDAP user account and the samba
+password file in sync.
