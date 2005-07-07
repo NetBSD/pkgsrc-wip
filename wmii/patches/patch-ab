@@ -1,39 +1,54 @@
-$NetBSD: patch-ab,v 1.3 2005/06/02 14:30:19 leonardschmidt Exp $
+$NetBSD: patch-ab,v 1.4 2005/07/07 09:53:47 leonardschmidt Exp $
 
---- Makefile.orig	2005-06-01 22:44:48.000000000 +0000
+--- Makefile.orig	2005-07-05 17:40:08.000000000 +0000
 +++ Makefile
-@@ -44,7 +44,7 @@ RM_BIN      = wmii wmibar wmiinput wmir 
-               wmiplumb wmiwarp
+@@ -12,12 +12,12 @@ SRC         = Makefile config.mk LICENSE
+ DOC         = doc/welcome.txt
  
- RC          = rc/actions rc/bar rc/input rc/keys rc/rc.conf \
--              rc/status.sh rc/wmii
-+              rc/wmii
- RM_RC       = actions bar input keys rc rc.conf status.sh \
-               wmii
+ BIN         = base/wmiiwm util/wmibar util/wmimenu util/wmir \
+-              util/wmira util/wmikeys util/wmifs util/wmiplumb \
+-              util/wmiwarp util/wmirefcard
++              util/wmikeys util/wmifs util/wmiplumb \
++              util/wmiwarp 
+ RM_BIN      = wmii wmiiwm wmibar wmimenu wmir wmira wmifs wmikeys \
+               wmiplumb wmiwarp wmirefcard
  
-@@ -114,26 +114,21 @@ version:
+-RC          = rc/bar rc/menu rc/keys rc/rc.conf rc/status.sh rc/wm
++RC          = rc/bar rc/menu rc/keys rc/rc.conf rc/wm
+ RM_RC       = bar menu keys rc rc.conf status.sh wm
+ 
+ RM_ACTION   = action
+@@ -86,33 +86,22 @@ clean:
  install: all
  	@echo -------------------------------------------------------
  	@echo Installing configuration files to ${DESTDIR}${CONFPREFIX}/wmii
--	@${MKDIR} -p ${DESTDIR}${CONFPREFIX}/wmii
+-	@${MKDIR} -p ${DESTDIR}${CONFPREFIX}/wmii/action
 -	@${INSTDATA} ${RC} ${DESTDIR}${CONFPREFIX}/wmii
--	@${SED} 's|CONFPREFIX|${CONFPREFIX}|;s|SHAREPREFIX|${SHAREPREFIX}|' < rc/rc > ${DESTDIR}${CONFPREFIX}/wmii/rc
+-	@for i in rc/action/*; do ${INSTDATA} $$i ${DESTDIR}${CONFPREFIX}/wmii/action; done
+-	@${MODBIN} ${DESTDIR}${CONFPREFIX}/wmii/action/*
+-	@${SED} 's|SHAREPREFIX|${SHAREPREFIX}|' < rc/rc > ${DESTDIR}${CONFPREFIX}/wmii/rc
 -	@${MODBIN} ${DESTDIR}${CONFPREFIX}/wmii/rc
 -	@${MODBIN} ${DESTDIR}${CONFPREFIX}/wmii/status.sh
-+	@${BSD_INSTALL_DATA_DIR} ${DESTDIR}${CONFPREFIX}/wmii
++	@${BSD_INSTALL_DATA_DIR} ${DESTDIR}${CONFPREFIX}/wmii/action
++	@${BSD_INSTALL_SCRIPT} rc/rc rc/status.sh ${DESTDIR}${CONFPREFIX}/wmii
 +	@${BSD_INSTALL_DATA} ${RC} ${DESTDIR}${CONFPREFIX}/wmii
-+	@${BSD_INSTALL_SCRIPT} rc/status.sh ${DESTDIR}${CONFPREFIX}/wmii
-+	@${BSD_INSTALL_SCRIPT} rc/rc ${DESTDIR}${CONFPREFIX}/wmii
- 	@echo Installing docs to ${DESTDIR}${SHAREPREFIX}/wmii
++	@for i in rc/action/*; do ${BSD_INSTALL_SCRIPT} $$i ${DESTDIR}${CONFPREFIX}/wmii/action; done
+ 	@echo Installing doc to ${DESTDIR}${SHAREPREFIX}/wmii
 -	@${MKDIR} -p ${DESTDIR}${SHAREPREFIX}/wmii
 -	@${INSTDATA} ${SHARE} ${DESTDIR}${SHAREPREFIX}/wmii
 +	@${BSD_INSTALL_DATA_DIR} ${DESTDIR}${SHAREPREFIX}/wmii
-+	@${BSD_INSTALL_DATA} ${SHARE} ${DESTIDR}${SHAREPREFIX}/wmii
++	@${BSD_INSTALL_DATA} ${SHARE} ${DESTDIR}${SHAREPREFIX}/wmii
  	@echo Installing executable files to ${DESTDIR}${PREFIX}/bin
 -	@${MKDIR} -p ${DESTDIR}${PREFIX}/bin
 -	@${INSTBIN} ${BIN} ${DESTDIR}${PREFIX}/bin
+-	@${RM} ${DESTDIR}${PREFIX}/bin/wmii
+-	@${SED} 's|CONFPREFIX|${CONFPREFIX}|' < base/wmii > ${DESTDIR}${PREFIX}/bin/wmii
+-	@${MODBIN} ${DESTDIR}${PREFIX}/bin/wmii
+-	@${MODBIN} ${DESTDIR}${PREFIX}/bin/wmira
+-	@${MODBIN} ${DESTDIR}${PREFIX}/bin/wmirefcard
 +	@${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 +	@${BSD_INSTALL_PROGRAM} ${BIN} ${DESTDIR}${PREFIX}/bin
++	@${BSD_INSTALL_SCRIPT} base/wmii util/wmira util/wmirefcard ${DESTDIR}${PREFIX}/bin
  	@echo Installing manual pages to ${DESTDIR}${MANPREFIX}/man1
 -	@${MKDIR} -p ${DESTDIR}${MANPREFIX}/man1
 -	@${INSTDATA} ${MAN1} ${DESTDIR}${MANPREFIX}/man1
@@ -44,7 +59,7 @@ $NetBSD: patch-ab,v 1.3 2005/06/02 14:30:19 leonardschmidt Exp $
 -	@${INSTDATA} ${MAN5} ${DESTDIR}${MANPREFIX}/man5
 -	@${MODDATA} ${DESTDIR}${MANPREFIX}/man5/wmii.rc.5
 +	@${BSD_INSTALL_MAN_DIR} ${DESTDIR}${MANPREFIX}/man1
-+	@${BSD_INSTALL_MAN} ${MAN1} ${DESTIDR}${MANPREFIX}/man1
++	@${BSD_INSTALL_MAN} ${MAN1} ${DESTDIR}${MANPREFIX}/man1
 +	@${BSD_INSTALL_MAN_DIR} ${DESTDIR}${MANPREFIX}/man5
 +	@${BSD_INSTALL_MAN} ${MAN5} ${DESTDIR}${MANPREFIX}/man5
  	@echo "wmii successfully installed"

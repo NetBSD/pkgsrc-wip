@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.5 2005/07/01 13:09:40 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/07/07 09:53:46 leonardschmidt Exp $
 #
 
-DISTNAME=	wmii-1.1
+DISTNAME=	wmii-2-rc1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://wmi.modprobe.de/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,8 +21,9 @@ MAKE_ENV+=	DRAW=xlib
 
 SUBST_CLASSES+=	paths
 SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	rc/rc
-SUBST_SED.paths=	-e 's|CONFPREFIX|${LOCALBASE}/share/examples|;s|SHAREPREFIX|${LOCALBASE}/share|'
+SUBST_FILES.paths=	base/wmii rc/rc
+SUBST_SED.paths+=	-e 's,SHAREPREFIX,${PREFIX}/share,'
+SUBST_SED.paths+=	-e 's,CONFPREFIX,${PREFIX}/share/examples,'
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,11 +31,26 @@ SUBST_SED.paths=	-e 's|CONFPREFIX|${LOCALBASE}/share/examples|;s|SHAREPREFIX|${L
 CFLAGS+=	-D__EXTENSIONS__
 .endif
 
-PKG_SYSCONFSUBDIR=	wmii
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/action
 
-EGDIR=		${PREFIX}/share/examples/wmii
-CONF_FILES=
-.for f in actions bar input keys rc rc.conf status.sh wmii
+PKG_SYSCONFSUBDIR=	wmii
+EGDIR=			${PREFIX}/share/examples/wmii
+EGFILES=		bar keys menu rc rc.conf status.sh wm
+.for f in ${EGFILES}
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+.endfor
+.undef f
+
+ACDIR=			${PREFIX}/share/examples/wmii/action
+ACFILES=		actions attach border clientupdate		\
+			close cnext cprev detach fnext fprev		\
+			fresize ftoggle	icons kbare kmove		\
+			knorm kresize lfloat lgrid lmax lock		\
+			ltiled lvsplit max mouse p pager		\
+			pageupdate plumbgoogle plumburl pnew		\
+			pprev presize prm programs ptoggle		\
+			quit scr tab term www zoom
+.for f in ${ACFILES}
+CONF_FILES+=	${ACDIR}/${f} ${PKG_SYSCONFDIR}/action/${f}
 .endfor
 .undef f
