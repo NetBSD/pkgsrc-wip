@@ -1,0 +1,5 @@
+gs running whole time when displaying postscript -- why doesn't it exit?
+
+depend on gs
+
+depend on a teTex-bin also
