@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1843 2005/07/06 12:35:03 marttikuparinen Exp $
-# $Id: Makefile,v 1.1843 2005/07/06 12:35:03 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.1844 2005/07/08 20:36:05 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1844 2005/07/08 20:36:05 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -732,7 +732,6 @@ SUBDIR+=	plugger
 SUBDIR+=	png2ico
 SUBDIR+=	pngnq
 SUBDIR+=	pointless
-SUBDIR+=	poppler
 SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postgis74
