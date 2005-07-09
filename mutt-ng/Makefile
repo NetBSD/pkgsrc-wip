@@ -1,7 +1,7 @@
-# $Id: Makefile,v 1.5 2005/06/17 20:17:08 christian_gall Exp $
-# $NetBSD: Makefile,v 1.5 2005/06/17 20:17:08 christian_gall Exp $
+# $Id: Makefile,v 1.6 2005/07/09 19:51:28 christian_gall Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/09 19:51:28 christian_gall Exp $
 
-DISTNAME=	muttng-20050614
+DISTNAME=	muttng-20050709
 CATEGORIES=	mail
 MASTER_SITES=	http://nion.modprobe.de/mutt-ng/snapshots/
 
@@ -9,13 +9,12 @@ MAINTAINER=	cg@cgall.de
 HOMEPAGE=	http://mutt-ng.berlios.de/
 COMMENT=	Fork of the well-known email client mutt
 
-CONFLICTS+=		mutt-[0-9]*
-CONFLICTS+=		mutt-devel-[0-9]*
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 INSTALL_UNSTRIPPED=	yes
 USE_PERL5=		yes
-REPLACE_PERL=		smime_keys.pl
+REPLACE_PERL+=		smime_keys.pl
+REPLACE_PERL+=		contrib/update-config.pl
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/muttng/ \
 			--enable-pop --enable-imap --with-slang
 
