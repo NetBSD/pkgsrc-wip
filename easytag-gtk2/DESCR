@@ -1,9 +1,9 @@
 EasyTAG is a utility for easily and quickly viewing, editing and writing
-the ID3 tags of your MP3 files, using a nice GTK+ interface.
+the ID3 tags of your MP3 files, using a nice GTK+2 interface.
 
 Some of EasyTAG's features:
 o View, edit, write tags of MP3, MP2, FLAC files (supporting
-  ID3v2.3 and ID3v1.x specifications) and OGG files
+  ID3v2.3 and ID3v1.x specifications) and Ogg files
 o Auto tagging: parse filename and directory to complete
   automatically the fields (using masks)
 o Ability to rename files from the tag (using masks) or by
