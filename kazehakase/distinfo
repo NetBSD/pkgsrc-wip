@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/23 05:05:17 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2005/07/14 22:10:04 leonardschmidt Exp $
 
-SHA1 (kazehakase-0.1.7.tar.gz) = 56d98298f2ef353b31355fc8f2e486f5519db67a
-Size (kazehakase-0.1.7.tar.gz) = 955754 bytes
+SHA1 (kazehakase-0.2.8.tar.gz) = 27eccc899f2f53514678d2257ec69337947d4db8
+RMD160 (kazehakase-0.2.8.tar.gz) = 3a892dbb3ec8f5bef5766d19f7932d971b9f9e48
+Size (kazehakase-0.2.8.tar.gz) = 1209861 bytes

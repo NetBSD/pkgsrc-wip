@@ -1,6 +1,6 @@
-Kazehakase is a GTK+2 based web browser with plans to support rendering
+Kazehakase is a GTK+2-based web browser with plans to support rendering
 engine choices, such as Gecko, dillo, and w3m engines. Currently only
 supporting Mozilla's Gecko engine.
 
-It provides tabbed windows support, bookmark editor, remote bookmarks,
-search window, find as you type, cookie manager, and password manager.
+It provides tabbed windows support, a bookmark editor, remote and smart
+bookmarks, a search window, find as you type, a cookie and a password manager.
