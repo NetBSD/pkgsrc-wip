@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1847 2005/07/09 00:41:06 kristerw Exp $
-# $Id: Makefile,v 1.1847 2005/07/09 00:41:06 kristerw Exp $
+# $NetBSD: Makefile,v 1.1848 2005/07/15 15:48:50 kristerw Exp $
+# $Id: Makefile,v 1.1848 2005/07/15 15:48:50 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -670,6 +670,7 @@ SUBDIR+=	p5-Exporter-Lite
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-HTML-Latex
+SUBDIR+=	p5-HTML-Stream
 SUBDIR+=	p5-HTTP-BrowserDetect
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-HTTP-Lite
