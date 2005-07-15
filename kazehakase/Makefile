@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/14 22:10:04 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/15 14:56:36 leonardschmidt Exp $
 #
 
 DISTNAME=		kazehakase-0.2.8
@@ -16,9 +16,12 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
+USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,6 +30,19 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 .else
 .include "../../www/mozilla-gtk2/buildlink3.mk"
 .endif
+
+PKG_SYSCONFSUBDIR=	kazehakase
+EGDIR=		${PREFIX}/share/examples/kazehakase
+EGFILES=	bookmarkbar.xml bookmarks.xml kz-ui-beginner.xml	\
+		kz-ui-bookmarks.xml kz-ui-expert.xml kz-ui-medium.xml	\
+		kzrc proxyrc smartbookmarks.xml
+.for f in ${EGFILES}
+CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+.endfor
+.undef f
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mozilla
+CONF_FILES+=	${EGDIR}/mozilla/encodings.xml ${PKG_SYSCONFDIR}/mozilla/encodings.xml
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

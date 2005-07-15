@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2005/07/15 14:56:36 leonardschmidt Exp $
+
+--- src/actions/Makefile.in.orig	2005-06-28 00:17:36.000000000 +0000
++++ src/actions/Makefile.in
+@@ -82,7 +82,7 @@ AMTAR = @AMTAR@
+ AM_CFLAGS = @AM_CFLAGS@
+ AM_CPPFLAGS = \
+ 	-DSYSCONFDIR=\""$(sysconfdir)"\" \
+-        -DKZ_SYSCONFDIR=\""$(sysconfdir)/$(PACKAGE)"\" \
++        -DKZ_SYSCONFDIR=\""$(sysconfdir)"\" \
+ 	-DGTK_DISABLE_DEPRECATED=1 \
+ 	-DGDK_DISABLE_DEPRECATED=1 \
+ 	-DG_DISABLE_DEPRECATED=1

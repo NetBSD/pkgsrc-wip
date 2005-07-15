@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2005/07/14 22:10:04 leonardschmidt Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/07/15 14:56:36 leonardschmidt Exp $
 bin/kazehakase
-etc/kazehakase/bookmarkbar.xml
-etc/kazehakase/bookmarks.xml
-etc/kazehakase/kz-ui-beginner.xml
-etc/kazehakase/kz-ui-bookmarks.xml
-etc/kazehakase/kz-ui-expert.xml
-etc/kazehakase/kz-ui-medium.xml
-etc/kazehakase/kzrc
-etc/kazehakase/mozilla/encodings.xml
-etc/kazehakase/proxyrc
-etc/kazehakase/smartbookmarks.xml
 man/man1/kazehakase.1
 share/applications/kazehakase.desktop
+share/examples/kazehakase/bookmarkbar.xml
+share/examples/kazehakase/bookmarks.xml
+share/examples/kazehakase/kz-ui-beginner.xml
+share/examples/kazehakase/kz-ui-bookmarks.xml
+share/examples/kazehakase/kz-ui-expert.xml
+share/examples/kazehakase/kz-ui-medium.xml
+share/examples/kazehakase/kzrc
+share/examples/kazehakase/mozilla/encodings.xml
+share/examples/kazehakase/proxyrc
+share/examples/kazehakase/smartbookmarks.xml
 share/kazehakase/icons/autoscroll.xpm
 share/kazehakase/icons/kz-anchor.png
 share/kazehakase/icons/kz-book-search.png
@@ -64,6 +64,8 @@ share/pixmaps/kazehakase-icon.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/kazehakase/icons
 @dirrm share/kazehakase
+@dirrm share/examples/kazehakase/mozilla
+@dirrm share/examples/kazehakase
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm etc/kazehakase/mozilla
 @dirrm etc/kazehakase
