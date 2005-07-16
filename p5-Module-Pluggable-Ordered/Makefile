@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/15 21:07:12 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/16 10:57:12 kristerw Exp $
 
 DISTNAME=	Module-Pluggable-Ordered-1.4
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Module-Pluggable-Ordered/
 COMMENT=	Call module plugins in a specified order
 
 BUILD_DEPENDS=	p5-Module-Pluggable>=1.9:../../devel/p5-Module-Pluggable
-DEPENDS+=	p5-UNIVERSAL-exports>=0:../../devel/p5-UNIVERSAL-exports
+DEPENDS+=	p5-UNIVERSAL-exports>=0:../../wip/p5-UNIVERSAL-exports
 
 PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Module/Pluggable/Ordered/.packlist
 
