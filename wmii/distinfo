@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2005/07/07 09:53:46 leonardschmidt Exp $
+$NetBSD: distinfo,v 1.9 2005/07/16 20:04:39 leonardschmidt Exp $
 
-SHA1 (wmii-2-rc1.tar.bz2) = e5bb9ea65c190aae9b42472583b3b064cac1d222
-RMD160 (wmii-2-rc1.tar.bz2) = c3aa34006882eac8fe24429da0737eba8497a4bd
-Size (wmii-2-rc1.tar.bz2) = 71930 bytes
-SHA1 (patch-aa) = 8d74c7efdc7db3ad3a03ecaf1fa67ba3653ec041
-SHA1 (patch-ab) = ae089a7a8195e42fd9e54734964134541d6eac0b
+SHA1 (wmii-2-rc2.tar.bz2) = 7dfb4766bdd025562bbba54dc901f4c53b0e9490
+RMD160 (wmii-2-rc2.tar.bz2) = fe69c8cdaf7bd81909d915e2b91c41c466aa15b7
+Size (wmii-2-rc2.tar.bz2) = 71028 bytes
+SHA1 (patch-aa) = 63d13f3ffdf29d0e4a28f24228e2730205d52a75
+SHA1 (patch-ab) = 36f20c6f7264f81aa4d45f312c35b15c9de4cce3

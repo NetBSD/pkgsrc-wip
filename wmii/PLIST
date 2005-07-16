@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/07/07 09:53:46 leonardschmidt Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/07/16 20:04:39 leonardschmidt Exp $
 bin/wmibar
 bin/wmifs
 bin/wmii
@@ -15,9 +15,7 @@ man/man1/wmifs.1
 man/man1/wmii.1
 man/man1/wmikeys.1
 man/man1/wmimenu.1
-man/man1/wmiplumb.1
 man/man1/wmir.1
-man/man1/wmiwarp.1
 man/man5/wmii.rc.5
 share/examples/wmii/action/actions
 share/examples/wmii/action/attach
@@ -52,8 +50,8 @@ share/examples/wmii/action/plumburl
 share/examples/wmii/action/pnew
 share/examples/wmii/action/pnext
 share/examples/wmii/action/pprev
+share/examples/wmii/action/premove
 share/examples/wmii/action/presize
-share/examples/wmii/action/prm
 share/examples/wmii/action/programs
 share/examples/wmii/action/ptoggle
 share/examples/wmii/action/quit

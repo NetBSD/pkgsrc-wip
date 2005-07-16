@@ -1,38 +1,39 @@
-$NetBSD: patch-ab,v 1.4 2005/07/07 09:53:47 leonardschmidt Exp $
+$NetBSD: patch-ab,v 1.5 2005/07/16 20:04:40 leonardschmidt Exp $
 
---- Makefile.orig	2005-07-05 17:40:08.000000000 +0000
+--- Makefile.orig	2005-07-15 10:27:07.000000000 +0000
 +++ Makefile
-@@ -12,12 +12,12 @@ SRC         = Makefile config.mk LICENSE
- DOC         = doc/welcome.txt
+@@ -13,12 +13,11 @@ DOC         = doc/welcome.txt
  
  BIN         = base/wmiiwm util/wmibar util/wmimenu util/wmir \
--              util/wmira util/wmikeys util/wmifs util/wmiplumb \
--              util/wmiwarp util/wmirefcard
-+              util/wmikeys util/wmifs util/wmiplumb \
-+              util/wmiwarp 
- RM_BIN      = wmii wmiiwm wmibar wmimenu wmir wmira wmifs wmikeys \
+               util/wmikeys util/wmifs util/wmiplumb util/wmiwarp \
+-              util/wmira util/wmirefcard
+ 
+ DEST_BIN    = wmii wmiiwm wmibar wmimenu wmir wmira wmifs wmikeys \
                wmiplumb wmiwarp wmirefcard
  
--RC          = rc/bar rc/menu rc/keys rc/rc.conf rc/status.sh rc/wm
-+RC          = rc/bar rc/menu rc/keys rc/rc.conf rc/wm
- RM_RC       = bar menu keys rc rc.conf status.sh wm
+-RC          = rc/bar rc/menu rc/keys rc/rc rc/rc.conf rc/status.sh rc/wm
++RC          = rc/bar rc/menu rc/keys rc/rc rc/rc.conf rc/wm
  
- RM_ACTION   = action
-@@ -86,33 +86,22 @@ clean:
- install: all
+ SHARE       = doc/welcome.txt
+ 
+@@ -82,35 +81,23 @@ clean:
+ install_rc:
  	@echo -------------------------------------------------------
  	@echo Installing configuration files to ${DESTDIR}${CONFPREFIX}/wmii
 -	@${MKDIR} -p ${DESTDIR}${CONFPREFIX}/wmii/action
--	@${INSTDATA} ${RC} ${DESTDIR}${CONFPREFIX}/wmii
--	@for i in rc/action/*; do ${INSTDATA} $$i ${DESTDIR}${CONFPREFIX}/wmii/action; done
+-	@for i in ${RC}; do \
+-	${SED} 's|SHAREPREFIX|${SHAREPREFIX}|' <$$i >${DESTDIR}${CONFPREFIX}/wmii/`basename $$i`; \
+-	done
+-	@${CP} rc/action/* ${DESTDIR}${CONFPREFIX}/wmii/action
 -	@${MODBIN} ${DESTDIR}${CONFPREFIX}/wmii/action/*
--	@${SED} 's|SHAREPREFIX|${SHAREPREFIX}|' < rc/rc > ${DESTDIR}${CONFPREFIX}/wmii/rc
 -	@${MODBIN} ${DESTDIR}${CONFPREFIX}/wmii/rc
 -	@${MODBIN} ${DESTDIR}${CONFPREFIX}/wmii/status.sh
+-
 +	@${BSD_INSTALL_DATA_DIR} ${DESTDIR}${CONFPREFIX}/wmii/action
-+	@${BSD_INSTALL_SCRIPT} rc/rc rc/status.sh ${DESTDIR}${CONFPREFIX}/wmii
-+	@${BSD_INSTALL_DATA} ${RC} ${DESTDIR}${CONFPREFIX}/wmii
-+	@for i in rc/action/*; do ${BSD_INSTALL_SCRIPT} $$i ${DESTDIR}${CONFPREFIX}/wmii/action; done
++	@${BSD_INSTALL_SCRIPT} rc/status.sh ${RC} ${DESTDIR}${CONFPREFIX}/wmii
++	@${BSD_INSTALL_SCRIPT} rc/action/* ${DESTDIR}${CONFPREFIX}/wmii/action
+ 
+ install: all install_rc
  	@echo Installing doc to ${DESTDIR}${SHAREPREFIX}/wmii
 -	@${MKDIR} -p ${DESTDIR}${SHAREPREFIX}/wmii
 -	@${INSTDATA} ${SHARE} ${DESTDIR}${SHAREPREFIX}/wmii
@@ -42,10 +43,8 @@ $NetBSD: patch-ab,v 1.4 2005/07/07 09:53:47 leonardschmidt Exp $
 -	@${MKDIR} -p ${DESTDIR}${PREFIX}/bin
 -	@${INSTBIN} ${BIN} ${DESTDIR}${PREFIX}/bin
 -	@${RM} ${DESTDIR}${PREFIX}/bin/wmii
--	@${SED} 's|CONFPREFIX|${CONFPREFIX}|' < base/wmii > ${DESTDIR}${PREFIX}/bin/wmii
--	@${MODBIN} ${DESTDIR}${PREFIX}/bin/wmii
--	@${MODBIN} ${DESTDIR}${PREFIX}/bin/wmira
--	@${MODBIN} ${DESTDIR}${PREFIX}/bin/wmirefcard
+-	@${SED} 's|CONFPREFIX|${CONFPREFIX}|' <base/wmii >${DESTDIR}${PREFIX}/bin/wmii
+-	@for i in ${DEST_BIN}; do ${MODBIN} ${DESTDIR}${PREFIX}/bin/$$i; done
 +	@${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 +	@${BSD_INSTALL_PROGRAM} ${BIN} ${DESTDIR}${PREFIX}/bin
 +	@${BSD_INSTALL_SCRIPT} base/wmii util/wmira util/wmirefcard ${DESTDIR}${PREFIX}/bin

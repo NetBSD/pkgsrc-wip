@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2005/07/07 09:53:46 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.9 2005/07/16 20:04:40 leonardschmidt Exp $
 
---- config.mk.orig	2005-07-05 17:40:08.000000000 +0000
+--- config.mk.orig	2005-07-15 10:27:07.000000000 +0000
 +++ config.mk
 @@ -1,24 +1,24 @@
  # Customize to fit your system
@@ -36,20 +36,20 @@ $NetBSD: patch-aa,v 1.8 2005/07/07 09:53:46 leonardschmidt Exp $
  # str{l,n}{cat,cpy} support, if you have OpenBSD you can use strl*
  STRLCPY     = strncpy
 @@ -29,14 +29,14 @@ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTR
- VERSION     = 2-rc1
+ VERSION     = 2-rc2
  #VERSION     = 2-current
  # Note: - under Solaris add -D__EXTENSIONS__ to CFLAGS
 -CFLAGS      = -O0 -g -Wall -pedantic ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\" -DVERSION=\"${VERSION}\"
 -LDFLAGS     = -g ${LIBS}
-+CFLAGS      += -pedantic ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\" -DVERSION=\"${VERSION}\"
++CFLAGS      += ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\" -DVERSION=\"${VERSION}\"
 +LDFLAGS     += ${LIBS}
- #CFLAGS      = -Os ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\"-DVERSION=\"${VERSION}\"
+ #CFLAGS      = -Os ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\" -DVERSION=\"${VERSION}\"
  #LDFLAGS     = ${LIBS}
  
  # userland
  AR          = ar cr
 -CC          = cc
 +#CC          = cc
+ YACC        = yacc
  CP          = cp -f
  COMPRESS    = bzip2
- INSTBIN     = ${CP}
