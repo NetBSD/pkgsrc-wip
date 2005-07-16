@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/07/16 20:04:39 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/07/16 20:09:35 leonardschmidt Exp $
 #
 
 DISTNAME=	wmii-2-rc2
@@ -41,7 +41,6 @@ CONF_FILES=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 .undef f
 
-ACDIR=			${PREFIX}/share/examples/wmii/action
 ACFILES=		actions attach border clientupdate	\
 			close cnext cprev detach fnext fprev	\
 			fresize ftoggle	icons kbare kmove	\
@@ -51,6 +50,6 @@ ACFILES=		actions attach border clientupdate	\
 			pprev premove presize programs ptoggle  \
 			quit scr tab term www zoom
 .for f in ${ACFILES}
-CONF_FILES+=		${ACDIR}/${f} ${PKG_SYSCONFDIR}/action/${f}
+CONF_FILES+=		${EGDIR}/action/${f} ${PKG_SYSCONFDIR}/action/${f}
 .endfor
 .undef f
