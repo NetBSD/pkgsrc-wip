@@ -1,6 +1,0 @@
-This needs a real Glk implementation to run.   We can either have
-the user do this and note it in MESSAGE, or depend on one.  If we
-decide to depend on one, we can either depend on glkterm, which
-pulls in ncurses on NetBSD 1.6 and below, or create a package for
-cheapglk, which probably no one will use.  For now, it depends on
-glkterm.
