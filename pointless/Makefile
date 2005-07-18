@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/12 23:51:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/18 14:38:41 peterih Exp $
 #
 
 DISTNAME=		pointless-0.5
@@ -13,6 +13,7 @@ DEPENDS+=               a2ps>=4.1:../../print/a2ps
 DEPENDS+=               gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=               teTeX>=2.0:../../print/teTeX
 DEPENDS+=               Mesa>=6.0:../../graphics/Mesa
+DEPENDS+=               ghostscript-esp-nox11>=7.0:../../print/ghostscript-esp-nox11
 
 USE_PKGLOCALEDIR=       yes
 GNU_CONFIGURE=		yes
