@@ -1,12 +1,30 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/21 21:37:58 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/07/18 13:22:07 adrian_p Exp $
+bin/createmap
+bin/db_archive
+bin/db_checkpoint
+bin/db_deadlock
+bin/db_dump
+bin/db_load
+bin/db_printlog
+bin/db_recover
+bin/db_stat
+bin/db_upgrade
+bin/db_verify
+bin/log2time
 bin/mailq
 bin/qmgrctl
+bin/rcvrenvfromlog.sh
 bin/runas
 bin/smconf
 bin/t-mm
 bin/t-unixcl
+include/db.h
 include/smX/mfapi.h
+include/smX/pmfapi.h
+include/smX/pmfdef.h
 include/smX/smreplycodes.h
+lib/libdb-4.3.a
+lib/libdb.a
 libexec/qmgr
 libexec/smar
 libexec/smtpc

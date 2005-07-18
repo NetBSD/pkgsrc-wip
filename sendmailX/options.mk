@@ -1,11 +1,7 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/06/21 21:37:58 adrian_p Exp $
+# $NetBSD: options.mk,v 1.2 2005/07/18 13:22:07 adrian_p Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmailX
 PKG_SUPPORTED_OPTIONS=	starttls sasl2
-
-.if !defined(PKG_OPTIONS.sendmailX)
-PKG_DEFAULT_OPTIONS+=	starttls
-.endif
 
 .include "../../mk/bsd.options.mk"
 
