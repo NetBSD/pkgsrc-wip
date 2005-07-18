@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2005/07/18 13:55:22 ianharding Exp $
+
+--- configure.orig	2005-06-17 12:06:18.000000000 +0000
++++ configure
+@@ -774,7 +774,7 @@ case "$system" in
+ 	LDRPATHS=
+ 	;;
+     *)
+-	LDLIB="$TCL_SHLIB_LD"
++	LDLIB="$TCL_SHLIB_LD -nostartfiles"
+ 	case "$LDLIB" in
+ 	    *gcc*)
+ 		LDLIB="$LDLIB -nostartfiles"
