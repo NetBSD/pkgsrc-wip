@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/16 08:37:28 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/18 19:01:23 jeremy-c-reed Exp $
 
 DISTNAME=		scr2png-1.1
 CATEGORIES=		graphics
@@ -15,6 +15,7 @@ CFLAGS+=		-DPREFIX=\"${PREFIX}\"
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gd}/lib
 LDFLAGS+=		-L${LOCALBASE}/lib
 MAKE_ENV+=		MKMAN=no
+PKGMANDIR?=		man
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/scr2png
 
