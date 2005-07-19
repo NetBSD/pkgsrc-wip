@@ -1,0 +1,9 @@
+This package is not ready for "production".
+
+Problems are listed as follows:
+* XFree86 4.4.0 (tested: NetBSD/i386 2.0.2) dies frequently, when game is used 
+  in fullscreen mode, at least when using wide-screen resolutions.
+  - fullscreen mode is (as workaround) disabled by default
+* Sound/Music cannot be used because the game claims to not found a file.
+ - starting the game works using the --disable-sound parameter, it dumps core
+   otherwise
