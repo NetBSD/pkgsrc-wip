@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/19 01:44:49 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/19 22:49:42 adrian_p Exp $
 
 DISTNAME=	smX-${VERSION}
 PKGNAME=	sendmailX-${VERSION}
@@ -20,7 +20,7 @@ VERSION=	0.0.Alpha8.0
 # the functionality ATM to add a user to a group and that's what we need
 # this for.
 #
-USERMOD=	/usr/sbin/usermod
+USERMOD?=	/usr/sbin/usermod
 
 EGDIR=		${PREFIX}/share/examples/smX
 FILES_SUBST+=	PREFIX=${PREFIX} SMXCNF=${SMXCNF} USERMOD=${USERMOD}
@@ -57,6 +57,7 @@ RCD_SCRIPTS=		sendmailx
 CONF_FILES_PERMS=	${EGDIR}/smx.conf ${SMXCNF} smx smx 0644
 CONF_FILES_PERMS+=	${EGDIR}/aliases ${SMXCNFDIR}/aliases smxm smxm 0644
 CONF_FILES_PERMS+=	${EGDIR}/Makefile ${SMXCNFDIR}/Makefile smxm smxm 0644
+CONF_FILES_PERMS+=	${EGDIR}/mt ${SMXCNFDIR}/mt smxm smxm 0644
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
@@ -74,5 +75,6 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/smx.conf ${EGDIR}/smx.conf
 	${INSTALL_DATA} ${WRKDIR}/Makefile ${EGDIR}/Makefile
 	${INSTALL_DATA} ${FILESDIR}/aliases ${EGDIR}/aliases
+	${INSTALL_DATA} ${FILESDIR}/mt ${EGDIR}/mt
 
 .include "../../mk/bsd.pkg.mk"

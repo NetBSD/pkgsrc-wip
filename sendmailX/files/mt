@@ -1,0 +1,4 @@
+# $NetBSD: mt,v 1.1 2005/07/19 22:49:42 adrian_p Exp $
+
+local.host	lmtp:                 
+localhost	lmtp:
