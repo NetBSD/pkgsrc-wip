@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1850 2005/07/16 10:43:05 kristerw Exp $
-# $Id: Makefile,v 1.1850 2005/07/16 10:43:05 kristerw Exp $
+# $NetBSD: Makefile,v 1.1851 2005/07/19 15:47:58 kristerw Exp $
+# $Id: Makefile,v 1.1851 2005/07/19 15:47:58 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -658,6 +658,8 @@ SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-Cache-Mmap
 SUBDIR+=	p5-Class-Date
+SUBDIR+=	p5-Class-ISA
+SUBDIR+=	p5-Class-Virtual
 SUBDIR+=	p5-Convert-ASN1
 SUBDIR+=	p5-Crypt-PasswdMD5
 SUBDIR+=	p5-Crypt-SmbHash
@@ -677,6 +679,13 @@ SUBDIR+=	p5-HTTP-BrowserDetect
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-HTTP-Lite
 SUBDIR+=	p5-HTTP-Server-Simple
+SUBDIR+=	p5-Lingua-PT-Stemmer
+SUBDIR+=	p5-Lingua-Stem-It
+SUBDIR+=	p5-Lingua-Stem-Ru
+SUBDIR+=	p5-Lingua-Stem-Snowball-Da
+SUBDIR+=	p5-Lingua-Stem-Snowball-No
+SUBDIR+=	p5-Lingua-Stem-Snowball-Se
+SUBDIR+=	p5-Linua-Stem-Fr
 SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Mail-Webmail-Gmail
 SUBDIR+=	p5-MasonX-Apache2Handler
@@ -693,6 +702,7 @@ SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Pod-Tree
 SUBDIR+=	p5-Term-Screen
 SUBDIR+=	p5-Text-ASCIITable
+SUBDIR+=	p5-Text-German
 SUBDIR+=	p5-Tie-Array-Sorted
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-Tree-Simple-VisitorFactory
