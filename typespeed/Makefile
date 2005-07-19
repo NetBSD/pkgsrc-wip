@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/19 16:52:50 h2m Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/19 18:28:59 h2m Exp $
 #
 
 DISTNAME=		typespeed-0.4.4
@@ -12,7 +12,7 @@ COMMENT=		Game to measure your typing speed, with network mode
 
 MAKEFILE=		${FILESDIR}/Makefile
 
-CONFDIR=		${PKG_SYSCONFDIR}/typespeedrc
+CONF_FILES=		${PKG_SYSCONFDIR}/typespeedrc
 
 pre-patch:
 	${MV} ${WRKSRC}/typespeed.1 ${WRKSRC}/typespeed.6
