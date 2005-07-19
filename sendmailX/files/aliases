@@ -1,0 +1,6 @@
+# $NetBSD: aliases,v 1.1 2005/07/19 01:44:49 adrian_p Exp $
+
+# Replace user with a valid user who is responsible for this MTS
+postmaster:	user                  
+root:		user                          
+user:		local:

@@ -1,6 +1,13 @@
 - This package is really raw but it's a start, don't expect it to work
   out of the box
 
+- sendmailx, sendailX, smx or smX - choose one and stick to it
+- move all the config files to @PKG_SYSCONFDIR@/smx
+- write a proper startup script
+- fix the current example smx.conf file (see TODO in the file)
+- fix files/Makefile (createmap)
+- fix HOSTNAME in INSTALL
+
 - Test TLS support
 - Test SASL support
 - Test on 1.6.x

@@ -1,13 +1,68 @@
-# $NetBSD: INSTALL,v 1.1 2005/07/18 19:13:20 adrian_p Exp $
+# $NetBSD: INSTALL,v 1.2 2005/07/19 01:44:48 adrian_p Exp $
+
+# directories and files
+SMXQD=@VARBASE@/spool/smx
+DEFEDB=${SMXQD}/defedb
+SMXETC=/etc/smx
+MT=@SMXETC@/mt
+LOGDIR=${SMXQD}
+
+# get the hostname
+MYHOST=`@HOSTNAME@`
 
 case ${STAGE} in
 
 POST-INSTALL)
-	${CAT} <<EOF
-==========================================================================
-POST-INSTALL
-==========================================================================
+
+	# Put the users in the right groups
+	# usermod -G <group> <user>
+	#
+	@USERMOD@ -G smxc smxs
+	@USERMOD@ -G smxm smxs
+	@USERMOD@ -G smxm smxq
+
+	# Create the directories and set the permissions
+	#
+	${MKDIR} ${SMXQD}
+	${CHMOD} 0755 ${SMXQD}
+
+	for i in 0 1 2 3 4 5 6 7 8 9 A B C D E F
+	do
+		${MKDIR} ${SMXQD}/${i}
+		${CHOWN} smxs:smxq ${SMXQD}/${i}
+		${CHMOD} 0771 ${SMXQD}/${i}
+	done
+
+	${MKDIR} ${DEFEDB}
+	${CHOWN} smxq:smxq ${DEFEDB}
+	${CHMOD} 0700 ${DEFEDB}
+
+	for i in qmsmtps qmsmtpc qmsmar smtps ibdb ibdb/ibdb
+	do
+		${MKDIR} ${SMXQD}/${i}
+		${CHMOD} 2770 ${SMXQD}/${i}
+	done
+
+	${CHOWN} smxq:smxm ${SMXQD}/qmsmar
+	${CHOWN} smxq:smxc ${SMXQD}/qmsmtpc
+	${CHOWN} smxq:smxs ${SMXQD}/qmsmtps
+	${CHOWN} smxs:smxs ${SMXQD}/smtps
+	${CHOWN} smxq:smxq ${SMXQD}/ibdb
+	${CHOWN} smxq:smxq ${SMXQD}/ibdb/ibdb
+
+	${CHOWN} smxq:smxq ${SMXQD}/ibdb
+	${CHMOD} 0700 ${SMXQD}/ibdb 
+	${CHMOD} 0700 ${SMXQD}/ibdb/ibdb
+	${CHMOD} 0750 ${SMXQD}/smtps 
+
+	# create initial mailertable
+	${CAT} > ${MT} <<EOF
+local.host	lmtp:
+${MYHOST}	lmtp:
 EOF
+
+	${CHMOD} 0644 ${MT}
+	${CHOWN} smxm:smxm ${MT}
 
 	;;
 

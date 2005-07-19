@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/18 19:13:20 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/19 01:44:49 adrian_p Exp $
 
 DISTNAME=	smX-${VERSION}
 PKGNAME=	sendmailX-${VERSION}
@@ -15,13 +15,30 @@ USE_PKGINSTALL=	YES
 PTHREAD_OPTS+=	require
 VERSION=	0.0.Alpha8.0
 
+# Note: This will work on Linux, NetBSD, OpenBSD, SunOS, OSF1 and UnixWare but
+# it will not work on Darwin and Interix.  Basically pkgsrc does not have
+# the functionality ATM to add a user to a group and that's what we need
+# this for.
+#
+USERMOD=	/usr/sbin/usermod
+
+EGDIR=		${PREFIX}/share/examples/smX
+FILES_SUBST+=	PREFIX=${PREFIX} SMXCNF=${SMXCNF} USERMOD=${USERMOD}
+FILES_SUBST+=	VARBASE=${VARBASE} HOSTNAME=${HOSTNAME} 
+FILES_SUBST+=	SMXETC=${PKG_SYSCONFDIR}
+
+PKG_SYSCONFSUBDIR=	smx
+SMXCNFDIR=		${PKG_SYSCONFDIR}
+SMXCNF=			${SMXCNFDIR}/smx.conf
+
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 PKG_GROUPS=     smxs smxq smxc smxm smx
-PKG_USERS=      smxs:smxs::Sendmail\\ X\\ SMTPS
-PKG_USERS+=	smxq:smxq::Sendmail\\ X\\ QMGR
-PKG_USERS+=	smxc:smxc::Sendmail\\ X\\ SMTPC
-PKG_USERS+=	smxm:smxm::Sendmail\\ X\\ misc
+PKG_USERS=      smxs:smxs::Sendmail\\ X\\ SMTP\\ Server
+PKG_USERS+=	smxq:smxq::Sendmail\\ X\\ Queue\\ Manager
+PKG_USERS+=	smxc:smxc::Sendmail\\ X\\ SMTP\\ Client
+PKG_USERS+=	smxm:smxm::Sendmail\\ X\\ Address\\ Resolver
+PKG_USERS+=	smx:smx::Sendmail\\ X\\ Misc
 
 CONFIGURE_ARGS+=	--disable-TLS
 CONFIGURE_ARGS+=	--disable-SASL
@@ -36,7 +53,26 @@ CONFIGURE_ARGS+=	--disable-included-bdb
 
 .include "options.mk"
 
+RCD_SCRIPTS=		sendmailx
+CONF_FILES_PERMS=	${EGDIR}/smx.conf ${SMXCNF} smx smx 0644
+CONF_FILES_PERMS+=	${EGDIR}/aliases ${SMXCNFDIR}/aliases smxm smxm 0644
+CONF_FILES_PERMS+=	${EGDIR}/Makefile ${SMXCNFDIR}/Makefile smxm smxm 0644
+
 .include "../../security/openssl/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+
+post-extract:
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/smx.conf \
+		> ${WRKDIR}/smx.conf
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/Makefile \
+		> ${WRKDIR}/Makefile
+
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
+	${INSTALL_DATA} ${WRKDIR}/smx.conf ${EGDIR}/smx.conf
+	${INSTALL_DATA} ${WRKDIR}/Makefile ${EGDIR}/Makefile
+	${INSTALL_DATA} ${FILESDIR}/aliases ${EGDIR}/aliases
+
 .include "../../mk/bsd.pkg.mk"
