@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1.1.1 2005/07/20 03:46:44 udontknow Exp $
+$NetBSD: TODO,v 1.2 2005/07/20 17:22:14 udontknow Exp $
 To-do list for OpenCT
-- Hack for USB support
+- Hack for "hotplug" USB support 
 - fix buildlink3.mk for optional dependency
