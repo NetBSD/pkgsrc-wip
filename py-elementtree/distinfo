@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/05/02 21:34:06 blef Exp $
+$NetBSD: distinfo,v 1.5 2005/07/20 22:44:57 thomasklausner Exp $
 
-SHA1 (elementtree-1.2a5-20031115.zip) = 8fed4f116d87d5fbd13b9c9481741dca54b95a45
-Size (elementtree-1.2a5-20031115.zip) = 35789 bytes
+SHA1 (elementtree-1.2.6-20050316.tar.gz) = 7d1f6fb534f177623a0482ef192a6170fd21fb1c
+RMD160 (elementtree-1.2.6-20050316.tar.gz) = 887cb1c4a3b62874b76841ae5109d0153d61a548
+Size (elementtree-1.2.6-20050316.tar.gz) = 41752 bytes
