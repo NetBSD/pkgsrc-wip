@@ -1,9 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/19 05:15:53 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2005/07/20 18:26:38 rillig Exp $
 
 --- src/FDM/JSBSim/FGGroundReactions.cpp.orig	2004-03-19 03:56:42.000000000 +0100
 +++ src/FDM/JSBSim/FGGroundReactions.cpp	2004-03-19 03:56:56.000000000 +0100
-@@ -43,7 +43,7 @@
- static const char *IdSrc = "$Id: patch-aa,v 1.1.1.1 2004/03/19 05:15:53 xtraeme Exp $";
+@@ -44,6 +44,6 @@
  static const char *IdHdr = ID_GROUNDREACTIONS;
  
 -#if defined (__APPLE__)
