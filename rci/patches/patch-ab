@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/07/20 16:14:54 leonardschmidt Exp $
+
+--- Makefile.orig	2005-07-20 08:27:46.000000000 +0000
++++ Makefile
+@@ -48,12 +48,11 @@ indent: cosmetic clean
+ 
+ install: all
+ 	@echo Installing executable files to ${DESTDIR}${PREFIX}/bin
+-	@${MKDIR} -p ${DESTDIR}${PREFIX}/bin
+-	@${INSTBIN} ${BIN} ${DESTDIR}${PREFIX}/bin
++	@${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
++	@${BSD_INSTALL_PROGRAM} ${BIN} ${DESTDIR}${PREFIX}/bin
+ 	@echo Installing manual pages to ${DESTDIR}${MANPREFIX}/man1
+-	@${MKDIR} -p ${DESTDIR}${MANPREFIX}/man1
+-	@${INSTDATA} ${MAN1} ${DESTDIR}${MANPREFIX}/man1
+-	@${MODDATA} ${DESTDIR}${MANPREFIX}/man1/rci.1
++	@${BSD_INSTALL_MAN_DIR} ${DESTDIR}${MANPREFIX}/man1
++	@${BSD_INSTALL_MAN} ${MAN1} ${DESTDIR}${MANPREFIX}/man1
+ 	@echo "rci successfully installed"
+ 
+ uninstall:
