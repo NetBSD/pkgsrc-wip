@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/17 20:58:04 jtonio Exp $
-#
+# $NetBSD: Makefile,v 1.2 2005/07/20 16:24:40 jtonio Exp $
 
 DISTNAME=     emacs-jabber-0.6.1
 CATEGORIES=   chat
 MASTER_SITES= ${MASTER_SITE_SOURCEFORGE:=emacs-jabber/}
 
-MAINTAINER=   reilles@loria.fr
+MAINTAINER=   tonio@NetBSD.org
 HOMEPAGE=     http://intellectronica.net/emacs-jabber/
 COMMENT=      Minimal jabber client for emacs
 
