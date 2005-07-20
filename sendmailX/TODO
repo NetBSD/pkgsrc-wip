@@ -2,7 +2,6 @@
   out of the box
 
 - sendmailx, sendailX, smx or smX - choose one and stick to it
-- write a proper startup script
 - fix the current example smx.conf file (see TODO in the file)
 - fix files/Makefile (createmap)
 

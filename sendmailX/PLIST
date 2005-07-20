@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/07/19 22:49:42 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/07/20 00:21:00 adrian_p Exp $
 bin/mailq
 bin/qmgrctl
 bin/runas
@@ -14,9 +14,11 @@ libexec/smar
 libexec/smtpc
 libexec/smtps
 sbin/mcp
+share/doc/smX/README.txt
+share/doc/smX/README.html
 share/examples/smX/Makefile
 share/examples/smX/aliases
-share/examples/smX/smx.conf
 share/examples/smX/mt
+share/examples/smX/smx.conf
 @dirrm include/smX
 @dirrm share/examples/smX

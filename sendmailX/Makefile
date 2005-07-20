@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/19 22:49:42 adrian_p Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/20 00:21:00 adrian_p Exp $
 
 DISTNAME=	smX-${VERSION}
 PKGNAME=	sendmailX-${VERSION}
@@ -23,6 +23,7 @@ VERSION=	0.0.Alpha8.0
 USERMOD?=	/usr/sbin/usermod
 
 EGDIR=		${PREFIX}/share/examples/smX
+DOCDIR=		${PREFIX}/share/doc/smX
 FILES_SUBST+=	PREFIX=${PREFIX} SMXCNF=${SMXCNF} USERMOD=${USERMOD}
 FILES_SUBST+=	VARBASE=${VARBASE} HOSTNAME=${HOSTNAME} 
 FILES_SUBST+=	SMXETC=${PKG_SYSCONFDIR}
@@ -71,10 +72,13 @@ post-extract:
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
 	${INSTALL_DATA} ${WRKDIR}/smx.conf ${EGDIR}/smx.conf
 	${INSTALL_DATA} ${WRKDIR}/Makefile ${EGDIR}/Makefile
 	${INSTALL_DATA} ${FILESDIR}/aliases ${EGDIR}/aliases
 	${INSTALL_DATA} ${FILESDIR}/mt ${EGDIR}/mt
+	${INSTALL_DATA} ${WRKSRC}/doc/README.txt ${DOCDIR}/README.txt
+	${INSTALL_DATA} ${WRKSRC}/doc/README.html ${DOCDIR}/README.html
 
 .include "../../mk/bsd.pkg.mk"

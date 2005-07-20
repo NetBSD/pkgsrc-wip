@@ -1,44 +1,30 @@
-#!/bin/sh
-# start sendmail X via MCP
+#!@RCD_SCRIPTS_SHELL@
+#
+# $NetBSD: sendmailx.sh,v 1.2 2005/07/20 00:21:01 adrian_p Exp $
+#
+# PROVIDE: sendmailx
+# REQUIRE: DAEMON
+# KEYWORD: shutdown
 
-MCPPID=mcp.pid
-MCPOUT=mcp.out
-
-start_mcp()
-{
-	${sbindir}/mcp -l -p \${MCPPID} ${SMXCNF} > \${MCPOUT} 2>&1 &
-}
-
-stop_mcp()
-{
-	if test -s \${MCPPID}; then
-		kill \`head -1 \${MCPPID}\`
-	else
-		echo "\$0: pid file \${MCPPID} does not exist or is empty"
-	fi
-}
-
-if cd "${SMXQD}"; then
-	:
-else
-	echo "\$0: cd ${SMXQD} failed"
-	exit 1
+if [ -f /etc/rc.subr ]
+then
+	. /etc/rc.subr
 fi
 
-case "\$1" in
-'start')
-	start_mcp
-	;;
-'stop')
-	stop_mcp
-	;;
-'restart')
-	stop_mcp
-	start_mcp
-	;;
-*)
-	echo "Usage: \$0 { start | stop | restart }"
-	exit 1
-	;;
-esac
-exit 0
+name="sendmailx"
+rcvar=$name
+ctl_command="@PREFIX@/sbin/mcp"
+conf_file="@PKG_SYSCONFDIR@/smx.conf"
+required_files=$conf_file
+extra_commands="restart"
+start_cmd="sendmailx_start"
+pidfile="/var/run/${name}.pid"
+# restart_cmd="sendmailx_restart"
+
+sendmailx_start()
+{
+	${ctl_command} -l -p ${pidfile} ${conf_files}
+}
+
+load_rc_config $name
+run_rc_command "$1"
