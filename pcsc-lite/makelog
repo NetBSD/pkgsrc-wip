@@ -1,0 +1,137 @@
+===> Checking for vulnerabilities in pcsc-lite-1.2.9
+===> Installing for pcsc-lite-1.2.9
+Making install in m4
+gmake[1]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/m4'
+gmake[2]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/m4'
+gmake[2]: Nothing to be done for `install-exec-am'.
+gmake[2]: Nothing to be done for `install-data-am'.
+gmake[2]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/m4'
+gmake[1]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/m4'
+Making install in win32
+gmake[1]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/win32'
+gmake[2]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/win32'
+gmake[2]: Nothing to be done for `install-exec-am'.
+gmake[2]: Nothing to be done for `install-data-am'.
+gmake[2]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/win32'
+gmake[1]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/win32'
+Making install in src
+gmake[1]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/src'
+Making install in .
+gmake[2]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/src'
+gmake[3]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/src'
+test -z "/usr/pkg/lib" || /bin/sh ../mkinstalldirs "/usr/pkg/lib"
+ /bin/sh ../libtool --mode=install /usr/bin/install -c -o root -g wheel  'libpcsclite.la' '/usr/pkg/lib/libpcsclite.la'
+/usr/bin/install -c -o root -g wheel .libs/libpcsclite.so.1.0.0 /usr/pkg/lib/libpcsclite.so.1.0.0
+(cd /usr/pkg/lib && rm -f libpcsclite.so.1 && ln -s libpcsclite.so.1.0.0 libpcsclite.so.1)
+(cd /usr/pkg/lib && rm -f libpcsclite.so && ln -s libpcsclite.so.1.0.0 libpcsclite.so)
+/usr/bin/install -c -o root -g wheel .libs/libpcsclite.lai /usr/pkg/lib/libpcsclite.la
+/usr/bin/install -c -o root -g wheel .libs/libpcsclite.a /usr/pkg/lib/libpcsclite.a
+ranlib /usr/pkg/lib/libpcsclite.a
+chmod 644 /usr/pkg/lib/libpcsclite.a
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/pkg/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,--rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+test -z "/usr/pkg/sbin" || /bin/sh ../mkinstalldirs "/usr/pkg/sbin"
+  /bin/sh ../libtool --mode=install /usr/bin/install -c -s -o root -g wheel -m 555 'pcscd' '/usr/pkg/sbin/pcscd'
+/usr/bin/install -c -o root -g wheel -m 555 -s pcscd /usr/pkg/sbin/pcscd
+/usr/bin/install -c -o root -g wheel -d /usr/pkg/include/PCSC
+test -z "/usr/pkg/include" || /bin/sh ../mkinstalldirs "/usr/pkg/include"
+ /usr/bin/install -c -m 644 'PCSC/debuglog.h' '/usr/pkg/include/PCSC/debuglog.h'
+ /usr/bin/install -c -m 644 'PCSC/dyn_generic.h' '/usr/pkg/include/PCSC/dyn_generic.h'
+ /usr/bin/install -c -m 644 'PCSC/ifdhandler.h' '/usr/pkg/include/PCSC/ifdhandler.h'
+ /usr/bin/install -c -m 644 'PCSC/pcsclite.h' '/usr/pkg/include/PCSC/pcsclite.h'
+ /usr/bin/install -c -m 644 'PCSC/winscard.h' '/usr/pkg/include/PCSC/winscard.h'
+ /usr/bin/install -c -m 644 'PCSC/wintypes.h' '/usr/pkg/include/PCSC/wintypes.h'
+ /usr/bin/install -c -m 644 'PCSC/parser.h' '/usr/pkg/include/PCSC/parser.h'
+ /usr/bin/install -c -m 644 'PCSC/sys_generic.h' '/usr/pkg/include/PCSC/sys_generic.h'
+ /usr/bin/install -c -m 644 'PCSC/thread_generic.h' '/usr/pkg/include/PCSC/thread_generic.h'
+test -z "/usr/pkg/lib/pkgconfig" || /bin/sh ../mkinstalldirs "/usr/pkg/lib/pkgconfig"
+ /usr/bin/install -c -o root -g wheel -m 444 'libpcsclite.pc' '/usr/pkg/lib/pkgconfig/libpcsclite.pc'
+gmake[3]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/src'
+gmake[2]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/src'
+Making install in utils
+gmake[2]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/src/utils'
+gmake[3]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/src/utils'
+test -z "/usr/pkg/bin" || /bin/sh ../../mkinstalldirs "/usr/pkg/bin"
+  /bin/sh ../../libtool --mode=install /usr/bin/install -c -s -o root -g wheel -m 555 'formaticc' '/usr/pkg/bin/formaticc'
+/usr/bin/install -c -o root -g wheel -m 555 -s .libs/formaticc /usr/pkg/bin/formaticc
+test -z "/usr/pkg/sbin" || /bin/sh ../../mkinstalldirs "/usr/pkg/sbin"
+  /bin/sh ../../libtool --mode=install /usr/bin/install -c -s -o root -g wheel -m 555 'installifd' '/usr/pkg/sbin/installifd'
+/usr/bin/install -c -o root -g wheel -m 555 -s installifd /usr/pkg/sbin/installifd
+gmake[3]: Nothing to be done for `install-data-am'.
+gmake[3]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/src/utils'
+gmake[2]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/src/utils'
+gmake[1]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/src'
+Making install in etc
+gmake[1]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/etc'
+gmake[2]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/etc'
+test -z "/usr/pkg/sbin" || /bin/sh ../mkinstalldirs "/usr/pkg/sbin"
+ /usr/bin/install -c -o root -g wheel -m 555 'update-reader.conf' '/usr/pkg/sbin/update-reader.conf'
+test -z "/usr/pkg/etc/reader.conf.d" || /bin/sh ../mkinstalldirs "/usr/pkg/etc/reader.conf.d"
+mkdir -p -- /usr/pkg/etc/reader.conf.d
+ /usr/bin/install -c -o root -g wheel -m 444 'reader.conf' '/usr/pkg/etc/reader.conf.d/reader.conf'
+gmake[2]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/etc'
+gmake[1]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/etc'
+Making install in doc
+gmake[1]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/doc'
+Making install in .
+gmake[2]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/doc'
+gmake[3]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/doc'
+gmake[3]: Nothing to be done for `install-exec-am'.
+test -z "/usr/pkg/share/doc/pcsc-lite" || /bin/sh ../mkinstalldirs "/usr/pkg/share/doc/pcsc-lite"
+mkdir -p -- /usr/pkg/share/doc/pcsc-lite
+ /usr/bin/install -c -o root -g wheel -m 444 'pcsc-lite.tex' '/usr/pkg/share/doc/pcsc-lite/pcsc-lite.tex'
+ /usr/bin/install -c -o root -g wheel -m 444 'pcsc-lite.bib' '/usr/pkg/share/doc/pcsc-lite/pcsc-lite.bib'
+ /usr/bin/install -c -o root -g wheel -m 444 'pcsc-lite.pdf' '/usr/pkg/share/doc/pcsc-lite/pcsc-lite.pdf'
+ /usr/bin/install -c -o root -g wheel -m 444 'ifdhandler-3.tex' '/usr/pkg/share/doc/pcsc-lite/ifdhandler-3.tex'
+ /usr/bin/install -c -o root -g wheel -m 444 'ifdhandler-3.pdf' '/usr/pkg/share/doc/pcsc-lite/ifdhandler-3.pdf'
+ /usr/bin/install -c -o root -g wheel -m 444 'README.DAEMON' '/usr/pkg/share/doc/pcsc-lite/README.DAEMON'
+test -z "/usr/pkg/man/man1" || /bin/sh ../mkinstalldirs "/usr/pkg/man/man1"
+ /usr/bin/install -c -o root -g wheel -m 444 './formaticc.1' '/usr/pkg/man/man1/formaticc.1'
+test -z "/usr/pkg/man/man5" || /bin/sh ../mkinstalldirs "/usr/pkg/man/man5"
+ /usr/bin/install -c -o root -g wheel -m 444 './reader.conf.5' '/usr/pkg/man/man5/reader.conf.5'
+test -z "/usr/pkg/man/man8" || /bin/sh ../mkinstalldirs "/usr/pkg/man/man8"
+ /usr/bin/install -c -o root -g wheel -m 444 './pcscd.8' '/usr/pkg/man/man8/pcscd.8'
+gmake[3]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/doc'
+gmake[2]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/doc'
+Making install in example
+gmake[2]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/doc/example'
+gmake[3]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/doc/example'
+gmake[3]: Nothing to be done for `install-exec-am'.
+gmake[3]: Nothing to be done for `install-data-am'.
+gmake[3]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/doc/example'
+gmake[2]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/doc/example'
+gmake[1]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7/doc'
+gmake[1]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7'
+gmake[2]: Entering directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7'
+gmake[2]: Nothing to be done for `install-exec-am'.
+gmake[2]: Nothing to be done for `install-data-am'.
+gmake[2]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7'
+gmake[1]: Leaving directory `/usr/pkgsrc/evaldo/pcsc-lite/work.winston/pcsc-lite-1.2.9-beta7'
+===========================================================================
+The following files should be created for pcsc-lite-1.2.9:
+
+	/etc/rc.d/pcscd (m=0755)
+	    [/usr/pkg/share/examples/rc.d/pcscd]
+
+===========================================================================
+===> [Automatic manual page handling]
+===> Compressing manual pages for pcsc-lite-1.2.9
+===> [Automatic ELF shared object handling]
+===> Registering installation for pcsc-lite-1.2.9
+pcsc-lite-1.2.9 requires installed package libusb-0.1.10a

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/20 21:07:06 udontknow Exp $
+
+--- doc/Makefile.am.orig	2004-10-06 13:43:25.000000000 -0300
++++ doc/Makefile.am
+@@ -2,7 +2,7 @@
+ 
+ SUBDIRS = . example
+ 
+-datadir = $(prefix)/doc
++datadir = $(prefix)/share/doc/pcsc-lite
+ data_DATA = pcsc-lite.tex pcsc-lite.bib pcsc-lite.pdf \
+ 			ifdhandler-3.tex ifdhandler-3.pdf \
+ 			README.DAEMON

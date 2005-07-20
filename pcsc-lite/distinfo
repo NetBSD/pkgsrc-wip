@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/07/20 21:07:06 udontknow Exp $
+
+SHA1 (pcsc-lite-1.2.9-beta7.tar.gz) = 9569b6072b9199d44e7c41c7df8044209609b1f5
+RMD160 (pcsc-lite-1.2.9-beta7.tar.gz) = 91fcf8642b72a5218a468117b05dae8ec819680c
+Size (pcsc-lite-1.2.9-beta7.tar.gz) = 771887 bytes
+SHA1 (patch-aa) = 72deef389533a2ee4a3e9d329b78e04373af1f09
+SHA1 (patch-ab) = 6dec620974d937c6f07ba4abcdd549444e9d4844
+SHA1 (patch-ac) = 2c68e89a8c2401e14df6a5bdb7a9714159c2ce99

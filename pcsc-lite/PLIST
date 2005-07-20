@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/20 21:07:06 udontknow Exp $
+bin/formaticc
+include/PCSC/debuglog.h
+include/PCSC/dyn_generic.h
+include/PCSC/ifdhandler.h
+include/PCSC/parser.h
+include/PCSC/pcsclite.h
+include/PCSC/sys_generic.h
+include/PCSC/thread_generic.h
+include/PCSC/winscard.h
+include/PCSC/wintypes.h
+lib/libpcsclite.la
+lib/pkgconfig/libpcsclite.pc
+man/man1/formaticc.1.gz
+man/man5/reader.conf.5.gz
+man/man8/pcscd.8.gz
+sbin/installifd
+sbin/pcscd
+share/doc/pcsc-lite/README.DAEMON
+share/doc/pcsc-lite/ifdhandler-3.pdf
+share/doc/pcsc-lite/ifdhandler-3.tex
+share/doc/pcsc-lite/pcsc-lite.bib
+share/doc/pcsc-lite/pcsc-lite.pdf
+share/doc/pcsc-lite/pcsc-lite.tex
+share/examples/pcsc-lite/reader.conf
+share/examples/rc.d/pcscd
+@dirrm share/examples/pcsc-lite
+@dirrm share/doc/pcsc-lite
+@exec ${MKDIR} %D/lib/pcsc-lite/drivers
+@dirrm lib/pcsc-lite/drivers
+@dirrm lib/pcsc-lite
+@dirrm include/PCSC
+@dirrm etc/pcsc-lite

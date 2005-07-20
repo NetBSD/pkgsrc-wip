@@ -1,0 +1,18 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/07/20 21:07:06 udontknow Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+PCSC_LITE_BUILDLINK3_MK:=	${PCSC_LITE_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	pcsc-lite
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npcsc-lite}
+BUILDLINK_PACKAGES+=	pcsc-lite
+
+.if !empty(PCSC_LITE_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.pcsc-lite+=	pcsc-lite>=1.2.9
+BUILDLINK_PKGSRCDIR.pcsc-lite?=	../../wip/pcsc-lite
+.endif	# PCSC_LITE_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
