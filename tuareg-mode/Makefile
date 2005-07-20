@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/05 13:39:07 jtonio Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/20 16:27:34 jtonio Exp $
 #
 
 DISTNAME=		tuareg-mode-1.45.0
@@ -6,7 +6,7 @@ CATEGORIES=		wip devel editors
 MASTER_SITES=		http://www-rocq.inria.fr/~acohen/tuareg/mode/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		reilles@loria.fr
+MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www-rocq.inria.fr/~acohen/tuareg/
 COMMENT=		GNU Emacs/XEmacs major mode for editing Caml and OCaml programs
 
