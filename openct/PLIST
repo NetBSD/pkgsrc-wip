@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/20 03:46:44 udontknow Exp $
+bin/openct-tool
+include/openct/apdu.h
+include/openct/buffer.h
+include/openct/conf.h
+include/openct/ctapi.h
+include/openct/device.h
+include/openct/driver.h
+include/openct/error.h
+include/openct/ifd.h
+include/openct/logging.h
+include/openct/openct.h
+include/openct/protocol.h
+include/openct/server.h
+include/openct/socket.h
+include/openct/tlv.h
+include/openct/types.h
+lib/libifd.la
+lib/libopenct.la
+lib/libopenctapi.la
+lib/pkgconfig/libopenct.pc
+man/man1/openct-tool.1.gz
+sbin/ifdhandler
+sbin/ifdproxy
+sbin/openct-control
+share/examples/openct/openct.conf
+share/examples/rc.d/openct
+@dirrm share/examples/openct
+@dirrm include/openct
