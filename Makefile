@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1859 2005/07/21 12:31:48 thomasklausner Exp $
-# $Id: Makefile,v 1.1859 2005/07/21 12:31:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1860 2005/07/21 14:12:48 kristerw Exp $
+# $Id: Makefile,v 1.1860 2005/07/21 14:12:48 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -273,8 +273,8 @@ SUBDIR+=	gDesklets-starterbar
 SUBDIR+=	gaim-otr
 SUBDIR+=	galib
 SUBDIR+=	gauche-fastcgi
-SUBDIR+=	gcl		# see TODO
-SUBDIR+=	gcl-nox11	# see gcl/TODO
+SUBDIR+=	gcl
+SUBDIR+=	gcl-nox11
 SUBDIR+=	gcompris
 SUBDIR+=	gdal
 SUBDIR+=	gdal-docs
