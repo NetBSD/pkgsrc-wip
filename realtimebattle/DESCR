@@ -1,0 +1,18 @@
+RealTimeBattle is a programming game, in which robots controlled by programs
+are fighting each other. The goal is to destroy the enemies, using the radar
+to examine the environment and the cannon to shoot.
+
+Here is a list of features of RealTimeBattle:
+* Game progresses in real time, with the robot programs running as child
+  processes to RealTimeBattle.
+* The robots communicate with the main program using the standard input
+  and output.
+* Robots can be constructed in almost any programming language.
+* Any number of robots can compete simultaneously if allowed by your operating
+  system.
+* A simple messaging language is used for communication, which makes it easy
+  to start constructing robots.
+* Robots behave like real physical object.
+* You can create your own arenas.
+* Highly configurable.
+* It is distributed under the General Public License (GPL). 

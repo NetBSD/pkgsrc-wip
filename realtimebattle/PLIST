@@ -1,0 +1,74 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/21 23:56:25 poppnk Exp $
+bin/realtimebattle
+games/RealTimeBattle/Arenas/Circle.arena
+games/RealTimeBattle/Arenas/Circles.arena
+games/RealTimeBattle/Arenas/Cross.arena
+games/RealTimeBattle/Arenas/Diamond.arena
+games/RealTimeBattle/Arenas/Flower.arena
+games/RealTimeBattle/Arenas/Forest.arena
+games/RealTimeBattle/Arenas/Labyrinth.arena
+games/RealTimeBattle/Arenas/Nippon.arena
+games/RealTimeBattle/Arenas/Pool.arena
+games/RealTimeBattle/Arenas/Rooms.arena
+games/RealTimeBattle/Arenas/Square.arena
+games/RealTimeBattle/Arenas/Star.arena
+games/RealTimeBattle/Arenas/Triangle.arena
+games/RealTimeBattle/Documentation/ABOUT-NLS
+games/RealTimeBattle/Documentation/AUTHORS
+games/RealTimeBattle/Documentation/COPYING
+games/RealTimeBattle/Documentation/ChangeLog
+games/RealTimeBattle/Documentation/INSTALL
+games/RealTimeBattle/Documentation/NEWS
+games/RealTimeBattle/Documentation/README
+games/RealTimeBattle/Documentation/RealTimeBattle-1.html
+games/RealTimeBattle/Documentation/RealTimeBattle-2.html
+games/RealTimeBattle/Documentation/RealTimeBattle-3.html
+games/RealTimeBattle/Documentation/RealTimeBattle-4.html
+games/RealTimeBattle/Documentation/RealTimeBattle-5.html
+games/RealTimeBattle/Documentation/RealTimeBattle-6.html
+games/RealTimeBattle/Documentation/RealTimeBattle.dvi
+games/RealTimeBattle/Documentation/RealTimeBattle.html
+games/RealTimeBattle/Documentation/RealTimeBattle.sgml
+games/RealTimeBattle/Documentation/RealTimeBattle.txt
+games/RealTimeBattle/Documentation/TODO
+games/RealTimeBattle/Documentation/next.gif
+games/RealTimeBattle/Documentation/next.png
+games/RealTimeBattle/Documentation/prev.gif
+games/RealTimeBattle/Documentation/prev.png
+games/RealTimeBattle/Documentation/toc.gif
+games/RealTimeBattle/Documentation/toc.png
+games/RealTimeBattle/RealTimeBattle.xpm
+games/RealTimeBattle/Robots/empty.robot
+games/RealTimeBattle/Robots/empty/Makefile.am
+games/RealTimeBattle/Robots/empty/empty.c
+games/RealTimeBattle/Robots/rotate_and_fire/Makefile.am
+games/RealTimeBattle/Robots/rotate_and_fire/rotate_and_fire.cc
+games/RealTimeBattle/Robots/rotate_and_fire/rotate_and_fire.h
+games/RealTimeBattle/Robots/rotate_and_fire/rotate_and_fire_blocking.cc
+games/RealTimeBattle/Robots/rotate_and_fire/rotate_and_fire_select.cc
+games/RealTimeBattle/Robots/rotate_and_fire/rotate_and_fire_signal.cc
+games/RealTimeBattle/Robots/rotate_and_fire_blocking.robot
+games/RealTimeBattle/Robots/rotate_and_fire_select.robot
+games/RealTimeBattle/Robots/rotate_and_fire_signal.robot
+games/RealTimeBattle/Robots/seek_and_destroy.robot
+games/RealTimeBattle/Robots/seek_and_destroy/Makefile.am
+games/RealTimeBattle/Robots/seek_and_destroy/seek_and_destroy.cc
+games/RealTimeBattle/tournament.txt
+include/RealTimeBattle/Messagetypes.h
+info/RealTimeBattle.info.gz
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/RealTimeBattle.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/RealTimeBattle.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/RealTimeBattle.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/RealTimeBattle.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/RealTimeBattle.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/RealTimeBattle.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/RealTimeBattle.mo
+@dirrm include/RealTimeBattle
+@dirrm games/RealTimeBattle/Robots/seek_and_destroy
+@dirrm games/RealTimeBattle/Robots/rotate_and_fire
+@dirrm games/RealTimeBattle/Robots/empty
+@dirrm games/RealTimeBattle/Robots
+@dirrm games/RealTimeBattle/Documentation
+@dirrm games/RealTimeBattle/Arenas
+@dirrm games/RealTimeBattle
+@dirrm games
