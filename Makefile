@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1858 2005/07/21 12:15:46 thomasklausner Exp $
-# $Id: Makefile,v 1.1858 2005/07/21 12:15:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1859 2005/07/21 12:31:48 thomasklausner Exp $
+# $Id: Makefile,v 1.1859 2005/07/21 12:31:48 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -273,8 +273,8 @@ SUBDIR+=	gDesklets-starterbar
 SUBDIR+=	gaim-otr
 SUBDIR+=	galib
 SUBDIR+=	gauche-fastcgi
-#SUBDIR+=	gcl		# see TODO
-#SUBDIR+=	gcl-nox11	# see gcl/TODO
+SUBDIR+=	gcl		# see TODO
+SUBDIR+=	gcl-nox11	# see gcl/TODO
 SUBDIR+=	gcompris
 SUBDIR+=	gdal
 SUBDIR+=	gdal-docs
@@ -887,7 +887,7 @@ SUBDIR+=	rdiff-backup-devel
 SUBDIR+=	readseq
 SUBDIR+=	realvnc
 SUBDIR+=	regexxer
-#SUBDIR+=	rekall # doesn't compile yet; see TODO
+SUBDIR+=	rekall
 SUBDIR+=	relaydb
 SUBDIR+=	rep-gtk2
 SUBDIR+=	resourceext
@@ -986,12 +986,13 @@ SUBDIR+=	squirrelmail-compatibility
 SUBDIR+=	squirrelmail-vlogin
 SUBDIR+=	srvx
 SUBDIR+=	stardict
-#SUBDIR+=	stepmania	# not ready for prime-time yet
+SUBDIR+=	stepmania
 SUBDIR+=	stmpclean
 SUBDIR+=	stonx
 SUBDIR+=	streamripper
 SUBDIR+=	stunnel3
 SUBDIR+=	sudoscript
+SUBDIR+=	sugarCRM
 SUBDIR+=	sun-j2me
 SUBDIR+=	sunterlib
 SUBDIR+=	superkaramba
