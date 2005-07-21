@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1857 2005/07/20 21:09:02 udontknow Exp $
-# $Id: Makefile,v 1.1857 2005/07/20 21:09:02 udontknow Exp $
+# $NetBSD: Makefile,v 1.1858 2005/07/21 12:15:46 thomasklausner Exp $
+# $Id: Makefile,v 1.1858 2005/07/21 12:15:46 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -812,7 +812,6 @@ SUBDIR+=	py-albatross
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-dateutil
-SUBDIR+=	py-elementtree
 SUBDIR+=	py-f2py2e
 SUBDIR+=	py-fastaudio
 SUBDIR+=	py-fox
