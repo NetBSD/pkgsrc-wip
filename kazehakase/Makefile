@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/15 14:56:36 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/21 14:54:05 dillo Exp $
 #
 
 DISTNAME=		kazehakase-0.2.8
@@ -23,13 +23,9 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${GECKO_PROVIDER} == "firefox"
-.include "../../www/firefox/buildlink3.mk"
-.else
-.include "../../www/mozilla-gtk2/buildlink3.mk"
-.endif
+PKG_OPTIONS_VAR=	PKG_OPTIONS.kazehakase
+.include "../../www/mozilla/gecko-options.mk"
+.include "../../mk/bsd.options.mk"
 
 PKG_SYSCONFSUBDIR=	kazehakase
 EGDIR=		${PREFIX}/share/examples/kazehakase
@@ -50,4 +46,5 @@ CONF_FILES+=	${EGDIR}/mozilla/encodings.xml ${PKG_SYSCONFDIR}/mozilla/encodings.
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../www/mozilla/gecko-depends.mk"
 .include "../../mk/bsd.pkg.mk"
