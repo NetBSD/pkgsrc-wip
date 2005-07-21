@@ -1,7 +1,7 @@
-# $Id: Makefile,v 1.6 2005/07/09 19:51:28 christian_gall Exp $
-# $NetBSD: Makefile,v 1.6 2005/07/09 19:51:28 christian_gall Exp $
+# $Id: Makefile,v 1.7 2005/07/21 14:15:43 christian_gall Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/21 14:15:43 christian_gall Exp $
 
-DISTNAME=	muttng-20050709
+DISTNAME=	muttng-20050721
 CATEGORIES=	mail
 MASTER_SITES=	http://nion.modprobe.de/mutt-ng/snapshots/
 
@@ -17,6 +17,9 @@ REPLACE_PERL+=		smime_keys.pl
 REPLACE_PERL+=		contrib/update-config.pl
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/muttng/ \
 			--enable-pop --enable-imap --with-slang
+AUTOCONF_REQD=		2.50
+USE_TOOLS+=		gmake autoconf automake
+
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.muttng
 PKG_SUPPORTED_OPTIONS=	ssl gpgme sasl2 idn esmtp hcache gssapi
@@ -60,6 +63,9 @@ CONFIGURE_ARGS+=	--with-libesmtp
 CONFIGURE_ARGS+=	--enable-hcache --with-bdb --without-qdbm --without-gdbm
 .include "../../databases/db4/buildlink3.mk"
 .endif
+
+pre-configure:
+	cd ${WRKSRC}; ./autogen.sh
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/libslang/buildlink3.mk"
