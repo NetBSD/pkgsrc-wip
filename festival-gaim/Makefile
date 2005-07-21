@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/24 10:29:40 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/21 16:33:59 thomasklausner Exp $
 #
 
 DISTNAME=	festival-gaim-0.64
@@ -25,6 +25,6 @@ MAKE_ENV+=	PLUGIN_GAIM_PATH="${PREFIX}/lib/gaim"
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/festival.so ${PREFIX}/lib/gaim
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/13 00:53:33 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/21 16:34:07 thomasklausner Exp $
 #
 
 DISTNAME=		swami-0.9.2
@@ -18,7 +18,7 @@ USE_LIBTOOL=		YES
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"

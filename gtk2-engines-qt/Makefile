@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/24 10:30:04 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/21 16:34:00 thomasklausner Exp $
 #
 
 DISTNAME=		9714-gtk-qt-engine-0.2
@@ -25,6 +25,6 @@ MAKE_ENV+=		QTDIR=${QTDIR}
 MAKE_FLAGS+=		QTDIR=${QTDIR}
 
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

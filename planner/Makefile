@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/31 23:48:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/21 16:34:07 thomasklausner Exp $
 #
 
 DISTNAME=	planner-0.13
@@ -37,7 +37,7 @@ PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"

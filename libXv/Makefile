@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/24 10:30:33 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/21 16:34:05 thomasklausner Exp $
 #
 
 DISTNAME=		libXv-2.2.1
@@ -18,5 +18,5 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
 .include "../../wip/libX11/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

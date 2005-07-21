@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:30 kristerw Exp $
-# $Id: Makefile,v 1.4 2005/06/12 23:51:30 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/21 16:34:08 thomasklausner Exp $
+# $Id: Makefile,v 1.5 2005/07/21 16:34:08 thomasklausner Exp $
 #
 
 DISTNAME=		wxGTK-2.4.2
@@ -50,7 +50,7 @@ do-install:
 
 .include "../../x11/wxGTK/buildlink3.mk"
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

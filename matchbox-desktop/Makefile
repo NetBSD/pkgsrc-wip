@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/12 23:51:22 kristerw Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/21 16:34:06 thomasklausner Exp $
 #
 
 DISTNAME=	matchbox-desktop-0.9.1
@@ -22,7 +22,7 @@ PKG_SYSCONFSUBDIR=	matchbox
 EGDIR=			${PREFIX}/share/examples/matchbox-desktop
 CONF_FILES=		${EGDIR}/mbdesktop_modules ${PKG_SYSCONFDIR}/mbdesktop_modules
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/libmatchbox/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

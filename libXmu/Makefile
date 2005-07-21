@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/24 10:30:32 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/21 16:34:04 thomasklausner Exp $
 #
 
 DISTNAME=		libXmu-6.2.3
@@ -18,7 +18,7 @@ PKGCONFIG_OVERRIDE+=	xmuu.pc.in
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../wip/libXext/buildlink3.mk"
 .include "../../wip/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

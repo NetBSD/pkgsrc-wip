@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/20 12:53:41 adrian_p Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/21 16:34:08 thomasklausner Exp $
 
 DISTNAME=	Unreal3.2.3
 PKGNAME=	unrealircd-3.2.3
@@ -95,7 +95,7 @@ MESSAGE_SRC+=		${WRKDIR}/.MESSAGE_SRC.inet6
 INSTALL_UNSTRIPPED=YES
 .endif
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../wip/tre/buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:29:39 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/21 16:33:59 thomasklausner Exp $
 #
 
 DISTNAME=	evolution-sharp-0.2
@@ -15,7 +15,7 @@ PKGCONFIG_OVERRIDE+=	evolution-sharp.pc.in
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../wip/gtk-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

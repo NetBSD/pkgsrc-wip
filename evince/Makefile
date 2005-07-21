@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/12 08:39:42 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/21 16:33:58 thomasklausner Exp $
 #
 
 DISTNAME=		evince-0.3.2
@@ -39,7 +39,7 @@ GCONF2_SCHEMAS+=	evince.schemas
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"

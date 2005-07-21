@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/12 23:51:16 kristerw Exp $
+# $NetBSD: Makefile,v 1.16 2005/07/21 16:33:58 thomasklausner Exp $
 #
 
 DISTNAME=	DirectFB-0.9.19
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-gfxdrivers=all
 .include "../../devel/SDL/buildlink3.mk"
 .endif
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

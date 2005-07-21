@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/08 15:46:59 dillo Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/21 16:34:07 thomasklausner Exp $
 
 DISTNAME=	umix-1.0
 CATEGORIES=	audio
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake automake
 
 PLIST_SUBST+=           DISTNAME=${DISTNAME}
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 

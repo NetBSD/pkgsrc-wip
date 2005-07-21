@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/06/12 23:51:20 kristerw Exp $
+# $NetBSD: Makefile,v 1.23 2005/07/21 16:34:00 thomasklausner Exp $
 #
 
 DISTNAME=	gtk-sharp-0.99
@@ -49,7 +49,7 @@ MAKE_FLAGS+=	RUNTIME=${MONO:Q}
 .include "../../databases/libgnomedb/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgdiplus/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"

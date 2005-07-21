@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:47 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/21 16:34:05 thomasklausner Exp $
 #
 
 DISTNAME=		liblingoteach-0.2.1
@@ -13,6 +13,6 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/liblingoteach.pc.in
 GNU_CONFIGURE=		yes
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
