@@ -1,0 +1,69 @@
+$NetBSD: patch-ad,v 1.1 2005/07/22 17:59:16 udontknow Exp $
+
+--- configure.in.orig	2005-03-01 17:15:59.000000000 -0300
++++ configure.in
+@@ -62,21 +62,38 @@ AC_PATH_PROG(TEST_MINUS_S_SH, ksh)
+ AC_PATH_PROG(TEST_MINUS_S_SH, sh)
+ 
+ dnl Special check for pthread support
+-ACX_PTHREAD(
+-[
+- AC_DEFINE(HAVE_PTHREAD, 1,
+-  [Define if you have POSIX threads libraries and header files.])
+-], [
+- AC_MSG_ERROR([POSIX thread support required])
+-])
+-
+-LIBS="$PTHREAD_LIBS $LIBS"
+-CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
+-CC="$PTHREAD_CC"
++dnl ACX_PTHREAD(
++dnl [
++dnl AC_DEFINE(HAVE_PTHREAD, 1,
++dnl  [Define if you have POSIX threads libraries and header files.])
++dnl ], [
++dnl  AC_MSG_ERROR([POSIX thread support required])
++dnl ])
++
++dnl LIBS="$PTHREAD_LIBS $LIBS"
++dnl CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
++dnl CC="$PTHREAD_CC"
+ 
+ AC_SUBST(PTHREAD_LIBS)
+ AC_SUBST(PTHREAD_CFLAGS)
+ 
++    for pthread_lib in pthread pthreads c c_r; do
++ 	AC_CHECK_LIB($pthread_lib, pthread_kill)
++    done
++
++    AC_DEFINE(HAVE_LIBPTHREAD,1, [Define if you have the pthread library.])
++	case $pthread_lib in
++	c)
++	    MAINLIBS="-pthread $MAINLIBS"
++	    ;;
++	c_r)
++	    MAINLIBS="-pthread $MAINLIBS"
++	    ;;
++	*)
++      	    LIBS="-l$pthread_lib $LIBS"
++	    ;;
++	esac
++
+ dnl Add libtool support
+ AM_PROG_LIBTOOL
+ dnl Automatically update the libtool script if it becomes out-of-date
+@@ -284,10 +301,10 @@ AC_SUBST(usbdropdir)
+ AC_SUBST(confdir)
+ AC_SUBST(runpid)
+ AC_SUBST(extended_apdu)
+-AS_AC_EXPAND(confdir_exp,$confdir)
+-AS_AC_EXPAND(sysconfdir_exp,$sysconfdir)
+-AS_AC_EXPAND(sbindir_exp,$sbindir)
+-AS_AC_EXPAND(localstatedir_exp,$localstatedir)
++dnl AS_AC_EXPAND(confdir_exp,$confdir)
++dnl AS_AC_EXPAND(sysconfdir_exp,$sysconfdir)
++dnl AS_AC_EXPAND(sbindir_exp,$sbindir)
++dnl AS_AC_EXPAND(localstatedir_exp,$localstatedir)
+ 
+ dnl Write Makefiles
+ AC_CONFIG_FILES([

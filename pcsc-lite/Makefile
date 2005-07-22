@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/20 21:07:06 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/22 17:59:10 udontknow Exp $
 
 DISTNAME=	pcsc-lite-1.2.9-beta7
 PKGNAME=	pcsc-lite-1.2.9
@@ -31,9 +31,10 @@ CONF_FILES+=		${EGDIR}/reader.conf ${PKG_SYSCONFDIR}/pcsc-lite/reader.conf
 
 pre-configure:
 	cd ${WRKSRC} && \
+	aclocal && \
 	autoheader && \
-	libtoolize --automake && \
-	automake && \
+	libtoolize --force && \
+	automake --copy --add-missing && \
 	autoconf
 
 post-install:
