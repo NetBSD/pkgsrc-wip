@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1860 2005/07/21 14:12:48 kristerw Exp $
-# $Id: Makefile,v 1.1860 2005/07/21 14:12:48 kristerw Exp $
+# $NetBSD: Makefile,v 1.1861 2005/07/22 22:33:10 moubctez Exp $
+# $Id: Makefile,v 1.1861 2005/07/22 22:33:10 moubctez Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -489,7 +489,6 @@ SUBDIR+=	libticables
 SUBDIR+=	libticalcs
 SUBDIR+=	libtifiles
 SUBDIR+=	libtlen2
-SUBDIR+=	libtorrent
 SUBDIR+=	libupnp
 SUBDIR+=	libuuid
 SUBDIR+=	libvg
@@ -898,7 +897,6 @@ SUBDIR+=	rlpr
 SUBDIR+=	rosegarden-current
 SUBDIR+=	rox-gtk2
 SUBDIR+=	rssh
-SUBDIR+=	rtorrent
 SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-dpklib
 SUBDIR+=	ruby-ming

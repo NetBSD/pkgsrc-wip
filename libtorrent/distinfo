@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/06/30 11:27:17 imilh Exp $
-
-SHA1 (libtorrent-0.6.6.tar.gz) = 672b48aee13a60bcf39cd758c8939539e5d738f8
-RMD160 (libtorrent-0.6.6.tar.gz) = fbafc54e088712aa3f5225cadfc6b4f38a98231b
-Size (libtorrent-0.6.6.tar.gz) = 310904 bytes
