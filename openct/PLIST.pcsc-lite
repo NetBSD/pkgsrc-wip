@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.pcsc-lite,v 1.1 2005/07/23 16:31:21 udontknow Exp $
+lib/openct-ifd.bundle/Contents/Info.plist
+lib/openct-ifd.bundle/Contents/${OPSYS}/openct-ifd.so
+lib/openct-ifd.bundle/Contents/PkgInfo
+lib/openct-ifd.la
+@dirrm lib/openct-ifd.bundle/Contents/${OPSYS}
+@dirrm lib/openct-ifd.bundle/Contents
+@dirrm lib/openct-ifd.bundle

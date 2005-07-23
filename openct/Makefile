@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/20 19:53:21 udontknow Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/23 16:31:21 udontknow Exp $
 
 DISTNAME=      		openct-0.6.5
 CATEGORIES=     	security
@@ -23,6 +23,8 @@ MAKE_DIRS+=		${VARBASE}/openct
 MAKE_DIRS+=		${VARBASE}/openct/run
 MAKE_DIRS+=		${VARBASE}/openct/run/openct
 CONF_FILES+=		${EGDIR}/openct.conf ${PKG_SYSCONFDIR}/openct.conf
+
+PLIST_SRC+=		${PKGDIR}/PLIST.common
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
