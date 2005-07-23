@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/20 21:07:06 udontknow Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/07/23 22:07:04 udontknow Exp $
 bin/formaticc
 include/PCSC/debuglog.h
 include/PCSC/dyn_generic.h
@@ -30,4 +30,3 @@ share/examples/rc.d/pcscd
 @dirrm lib/pcsc-lite/drivers
 @dirrm lib/pcsc-lite
 @dirrm include/PCSC
-@dirrm etc/pcsc-lite

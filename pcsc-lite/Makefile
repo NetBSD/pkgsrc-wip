@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/22 17:59:10 udontknow Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/23 22:07:04 udontknow Exp $
 
 DISTNAME=	pcsc-lite-1.2.9-beta7
 PKGNAME=	pcsc-lite-1.2.9
@@ -17,7 +17,7 @@ USE_TOOLS+=             automake gmake
 .include "options.mk"
 
 RCD_SCRIPTS=		pcscd
-CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR}/pcsc-lite/
+CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-confdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-ipcdir=${VARBASE}/pcsc-lite
 CONFIGURE_ARGS+=	--enable-usbdropdir=${PREFIX}/lib/pcsc-lite/drivers
@@ -26,12 +26,11 @@ MAKE_DIRS+=		${PREFIX}/lib/pcsc-lite
 MAKE_DIRS+=		${PREFIX}/lib/pcsc-lite/drivers
 
 EGDIR=			${PREFIX}/share/examples/pcsc-lite
-OWN_DIRS+=		${PKG_SYSCONFDIR}/pcsc-lite
-CONF_FILES+=		${EGDIR}/reader.conf ${PKG_SYSCONFDIR}/pcsc-lite/reader.conf
+CONF_FILES+=		${EGDIR}/reader.conf ${PKG_SYSCONFDIR}/reader.conf
 
 pre-configure:
 	cd ${WRKSRC} && \
-	aclocal && \
+	aclocal -I ./m4 && \
 	autoheader && \
 	libtoolize --force && \
 	automake --copy --add-missing && \

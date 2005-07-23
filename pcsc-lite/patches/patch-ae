@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2005/07/23 22:07:04 udontknow Exp $
+
+--- etc/reader.conf.in.orig	2004-05-14 04:01:01.000000000 -0300
++++ etc/reader.conf.in
+@@ -10,4 +10,9 @@
+ #LIBPATH          @usbdropdir@/libgen_ifd.so
+ #CHANNELID        0x0103F8
+ 
++#FRIENDLYNAME     "OpenCT handled reader"
++#DEVICENAME       /dev/null
++#LIBPATH          @prefix@/lib/openct-ifd.bundle/Contents/NetBSD/openct-ifd.so
++#CHANNELID        0
++
+ # End of file
