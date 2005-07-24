@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1862 2005/07/24 11:18:39 oherrala Exp $
-# $Id: Makefile,v 1.1862 2005/07/24 11:18:39 oherrala Exp $
+# $NetBSD: Makefile,v 1.1863 2005/07/24 11:21:13 oherrala Exp $
+# $Id: Makefile,v 1.1863 2005/07/24 11:21:13 oherrala Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -712,7 +712,6 @@ SUBDIR+=	pam-pop3
 SUBDIR+=	panoramixext
 SUBDIR+=	pasmo
 SUBDIR+=	passepartout
-SUBDIR+=	pbl
 SUBDIR+=	pcsc-lite
 SUBDIR+=	pcsx
 SUBDIR+=	pdb2ldif
