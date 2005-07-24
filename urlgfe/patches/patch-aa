@@ -1,0 +1,11 @@
+--- urlglib/msg_server.h.orig	2005-07-24 16:09:10.000000000 -0400
++++ urlglib/msg_server.h	2005-07-24 16:12:20.000000000 -0400
+@@ -3,6 +3,8 @@
+ 
+ #include <glib.h>
+ 
++#define u_int8_t unsigned char
++
+ #ifdef _WIN32
+ # include <winsock.h>
+ #else
