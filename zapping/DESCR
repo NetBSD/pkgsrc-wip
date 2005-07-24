@@ -1,0 +1,11 @@
+Some time ago Inaki G. Etxebarria, the original author of this
+program, bought a TV card for his computer.  In his Linux box there
+were only a few TV viewing programs, and none of them for Gnome.
+So he built a TV viewer following V4L2 spec (at that time not part
+of stable kernels), trying to make it as complete as possible. This
+is the latest version of that software.
+
+Zapping requires an analog TV card, with a driver supporting the
+- V4L or V4L2 API on Linux, or the
+- BKTR API on FreeBSD, or the
+- XVideo API.

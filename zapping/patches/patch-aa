@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/24 23:48:57 thomasklausner Exp $
+
+--- configure.orig	2005-07-14 08:01:07.000000000 +0200
++++ configure
+@@ -24128,6 +24128,7 @@ fi
+ 
+ 
+ HAVE_ARTS="no"
++if 0; then
+ echo "$as_me:$LINENO: checking for ARTS" >&5
+ echo $ECHO_N "checking for ARTS... $ECHO_C" >&6
+ 
+@@ -24184,6 +24185,7 @@ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+   CFLAGS="$SAVE_CFLAGS"
+ fi
++fi
+ 
+ if test "x$HAVE_ARTS" = "xno"; then
+   echo "$as_me:$LINENO: result: no" >&5
+@@ -27570,7 +27572,7 @@ fi
+ 
+ 
+ 	python_val=""
+-	python_prog="python"
++	python_prog=${PYTHON}
+ 	# Extract the first word of ""$python_prog"", so it can be a program name with args.
+ set dummy "$python_prog"; ac_word=$2
+ echo "$as_me:$LINENO: checking for $ac_word" >&5

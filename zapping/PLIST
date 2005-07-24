@@ -1,0 +1,63 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/24 23:48:57 thomasklausner Exp $
+bin/zapping
+bin/zapping_remote
+lib/zapping/plugins/libalirc.zapping.la
+lib/zapping/plugins/libdeinterlace.zapping.la
+lib/zapping/plugins/libmpeg.zapping.la
+lib/zapping/plugins/libscreenshot.zapping.la
+lib/zapping/plugins/libteletext.zapping.la
+man/man1/zapping.1
+man/man1/zapping_remote.1
+man/man1/zapping_setup_fb.1
+share/applications/zapping.desktop
+share/gconf/schemas/zapping.schemas
+share/gnome/help/zapping/C/channel-editor.xml
+share/gnome/help/zapping/C/commands.xml
+share/gnome/help/zapping/C/fdl-appendix.xml
+share/gnome/help/zapping/C/figures/channel-editor.png
+share/gnome/help/zapping/C/figures/zapping-context.png
+share/gnome/help/zapping/C/figures/zapping.png
+share/gnome/help/zapping/C/figures/zapzilla-context.png
+share/gnome/help/zapping/C/figures/zapzilla-export.png
+share/gnome/help/zapping/C/figures/zapzilla-search.png
+share/gnome/help/zapping/C/figures/zapzilla.png
+share/gnome/help/zapping/C/settings.xml
+share/gnome/help/zapping/C/zapping.xml
+share/gnome/help/zapping/C/zapzilla.xml
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/zapping.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/zapping.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/zapping.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/zapping.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/zapping.mo
+share/omf/zapping/zapping-C.omf
+share/pixmaps/zapping/gnome-digital-camera.png
+share/pixmaps/zapping/gnome-grecord.png
+share/pixmaps/zapping/gnome-info.png
+share/pixmaps/zapping/gnome-keyboard.png
+share/pixmaps/zapping/gnome-media-player.png
+share/pixmaps/zapping/gnome-monitor.png
+share/pixmaps/zapping/gnome-oscilloscope.png
+share/pixmaps/zapping/gnome-session.png
+share/pixmaps/zapping/gnome-shutdown.png
+share/pixmaps/zapping/gnome-television.png
+share/pixmaps/zapping/interlace48.png
+share/pixmaps/zapping/logo.png
+share/pixmaps/zapping/teletext48.png
+share/pixmaps/zapping/vt_loading1.jpeg
+share/pixmaps/zapping/vt_loading2.jpeg
+share/zapping/mpeg_properties.glade2
+share/zapping/screenshot.glade2
+share/zapping/zapping.glade2
+@dirrm share/zapping
+@dirrm share/pixmaps/zapping
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/omf/zapping
+@comment in scrollkeeper: @dirrm share/omf
+@dirrm share/gnome/help/zapping/C/figures
+@dirrm share/gnome/help/zapping/C
+@dirrm share/gnome/help/zapping
+@comment in gnome-dirs: @dirrm share/gnome/help
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/zapping/plugins
+@dirrm lib/zapping
