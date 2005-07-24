@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1863 2005/07/24 11:21:13 oherrala Exp $
-# $Id: Makefile,v 1.1863 2005/07/24 11:21:13 oherrala Exp $
+# $NetBSD: Makefile,v 1.1864 2005/07/24 21:53:50 cetrox Exp $
+# $Id: Makefile,v 1.1864 2005/07/24 21:53:50 cetrox Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -11,7 +11,6 @@ SUBDIR+=	LabPlot
 SUBDIR+=	OpenGLUT
 SUBDIR+=	PPower4
 SUBDIR+=	PyBabelFish
-SUBDIR+=	PyPanel
 SUBDIR+=	Pythonol
 SUBDIR+=	R-CGIwithR
 SUBDIR+=	R-DAAG
