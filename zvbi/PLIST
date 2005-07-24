@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/24 23:43:17 thomasklausner Exp $
+include/libzvbi.h
+lib/libzvbi.la
+lib/pkgconfig/zvbi-0.2.pc
