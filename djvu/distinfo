@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/14 06:01:31 oht Exp $
+$NetBSD: distinfo,v 1.2 2005/07/24 23:17:47 thomasklausner Exp $
 
 SHA1 (djvulibre-3.5.14.tar.gz) = 15425f6f866d9d8ade2ba7e8b11f3dcf96b10374
+RMD160 (djvulibre-3.5.14.tar.gz) = 6f5724f177e1080ad5b853335f069bebaba5c548
 Size (djvulibre-3.5.14.tar.gz) = 1742428 bytes
 SHA1 (patch-aa) = 287c15b9f99287d7dabc52a198fcc086133d994c
 SHA1 (patch-ab) = 7560b08adaf9acbf2b709dfa2fbc460c63b5f592
