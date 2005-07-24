@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1865 2005/07/24 22:58:19 cetrox Exp $
-# $Id: Makefile,v 1.1865 2005/07/24 22:58:19 cetrox Exp $
+# $NetBSD: Makefile,v 1.1866 2005/07/24 23:49:31 thomasklausner Exp $
+# $Id: Makefile,v 1.1866 2005/07/24 23:49:31 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -896,6 +896,7 @@ SUBDIR+=	rlpr
 SUBDIR+=	rosegarden-current
 SUBDIR+=	rox-gtk2
 SUBDIR+=	rssh
+SUBDIR+=	rte
 SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-dpklib
 SUBDIR+=	ruby-ming
@@ -1129,9 +1130,11 @@ SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	z26
+SUBDIR+=	zapping
 SUBDIR+=	zinf
 SUBDIR+=	zphoto
 SUBDIR+=	zsnes-devel
+SUBDIR+=	zvbi
 
 ${.CURDIR}/PKGDB:
 	@${RM} -f ${.CURDIR}/PKGDB
