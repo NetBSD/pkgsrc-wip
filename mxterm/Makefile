@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/07/06 23:30:54 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/24 18:03:31 thomasklausner Exp $
 
 DISTNAME=	mxterm_129
 PKGNAME=	${DISTNAME:S/_/-/}
-CATEGORIES=	wip
+CATEGORIES=	x11
 MASTER_SITES=	http://www.unixdev.net/downloads/mxterm/129/
 
 MAINTAINER=	inittab@netizenweb.com
