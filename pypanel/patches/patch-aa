@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/24 22:55:21 cetrox Exp $
+--- setup.py.orig	2005-07-24 18:43:11.000000000 -0400
++++ setup.py	2005-07-24 18:43:37.000000000 -0400
+@@ -53,14 +53,7 @@
+             flag = lib[:2]
+             opt  = lib[2:]
+             
+-            if flag == "-L" and opt not in ldirs:
+-                ldirs.append(opt)
+-            elif flag == "-l":
+-                if opt not in libs:
+-                    libs.append(opt)
+-            else:
+-                if lib not in largs:
+-                    largs.append(lib)
++            largs.append(lib)
+                 
+         if package == "freetype-config":
+             defs.append(("HAVE_XFT", 1))
