@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/24 23:47:11 thomasklausner Exp $
+include/librte.h
+lib/librte.la
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/rte.mo
+${PKGLOCALEDIR}/locale/en@boldquot/LC_MESSAGES/rte.mo
+${PKGLOCALEDIR}/locale/en@quot/LC_MESSAGES/rte.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/rte.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/rte.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/rte.mo

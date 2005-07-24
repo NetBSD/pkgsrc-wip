@@ -1,0 +1,5 @@
+The RTE library is a frontend or wrapper of other libraries or
+programs for real time video and audio compression on Linux.
+Currently it works on x86 CPUs only, sorry. The library is designed
+to interface between codecs and the Zapping TV viewer:
+http://zapping.sourceforge.net, precisely its recording plugin.
