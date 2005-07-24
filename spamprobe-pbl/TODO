@@ -1,2 +1,0 @@
-- This package should be OK. Only difference to mail/spamprobe is the use
-  of wip/pbl as backend database.
