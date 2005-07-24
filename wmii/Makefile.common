@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/07/16 20:09:35 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.81 2005/07/24 22:58:09 leonardschmidt Exp $
 #
 
 DISTNAME=	wmii-2-rc2
@@ -10,9 +10,9 @@ MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://wmi.modprobe.de/
 COMMENT=	Modular, minimalist and highly customizable window manager
 
-DISTINFO_FILE=		${.CURDIR}/../../wip/wmii/distinfo
-PATCHDIR=		${.CURDIR}/../../wip/wmii/patches
-PLIST_SRC=		${.CURDIR}/../../wip/wmii/PLIST
+DISTINFO_FILE=	${.CURDIR}/../../wip/wmii/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/wmii/patches
+PLIST_SRC=	${.CURDIR}/../../wip/wmii/PLIST
 
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
