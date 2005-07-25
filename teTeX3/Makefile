@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/08 16:43:06 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/25 13:13:35 ghen Exp $
 #
 
 DISTNAME=	teTeX-3.0
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Thomas Esser's TeX distribution for UNIX compatible systems, version 3
 
 DEPENDS+=	teTeX-texmf>=3:../../print/teTeX3-texmf
-DEPENDS+=	teTeX-texmfsrc>=3:../../print/teTeX3-texmfsrc
 DEPENDS+=	teTeX-bin>=3:../../print/teTeX3-bin
 
 CONFLICTS+=	teTeX-[1-2]*
