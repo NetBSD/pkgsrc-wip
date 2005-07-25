@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1869 2005/07/25 13:54:51 thomasklausner Exp $
-# $Id: Makefile,v 1.1869 2005/07/25 13:54:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1870 2005/07/25 14:11:17 thomasklausner Exp $
+# $Id: Makefile,v 1.1870 2005/07/25 14:11:17 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -810,7 +810,6 @@ SUBDIR+=	py-buildbot
 SUBDIR+=	py-dateutil
 SUBDIR+=	py-f2py2e
 SUBDIR+=	py-fastaudio
-SUBDIR+=	py-fox
 SUBDIR+=	py-game
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gettext-tools
