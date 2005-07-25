@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/16 11:13:19 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/25 21:42:38 kuli0020 Exp $
 
 DISTNAME=	Pod-Tree-1.11
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Create a static syntax tree for a POD
 BUILD_DEPENDS=	p5-HTML-Stream>=1.49:../../wip/p5-HTML-Stream
 DEPENDS+=	p5-Pod-Escapes>=1.02:../../textproc/p5-Pod-Escapes
 
-PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pod/Tree/.packlist
+PERL5_PACKLIST= auto/Pod/Tree/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
