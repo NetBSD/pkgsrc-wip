@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1871 2005/07/25 17:36:33 udontknow Exp $
-# $Id: Makefile,v 1.1871 2005/07/25 17:36:33 udontknow Exp $
+# $NetBSD: Makefile,v 1.1872 2005/07/25 20:31:27 thomasklausner Exp $
+# $Id: Makefile,v 1.1872 2005/07/25 20:31:27 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1091,7 +1091,6 @@ SUBDIR+=	wmnetload
 SUBDIR+=	wordnet
 SUBDIR+=	words
 SUBDIR+=	worker
-SUBDIR+=	wxGTK-contrib
 SUBDIR+=	wxgtk-devel
 SUBDIR+=	wxgtk-devel-contrib
 SUBDIR+=	x11vnc
