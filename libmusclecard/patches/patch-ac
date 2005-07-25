@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/07/25 19:52:23 udontknow Exp $
+
+--- src/PCSC/musclecard.h.orig	2004-08-06 09:12:19.000000000 -0300
++++ src/PCSC/musclecard.h
+@@ -24,7 +24,7 @@ extern "C"
+ #include "PCSC.h"
+ #endif
+ 
+-#include <mscdefines.h>
++#include <PCSC/mscdefines.h>
+ 
+ /*
+  * PCSC_API is defined for Windows but is a no-op on other

@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2005/07/25 19:55:22 udontknow Exp $
+
+--- src/PCSC/pcsclite.h.in.orig	2004-08-24 18:46:57.000000000 -0300
++++ src/PCSC/pcsclite.h.in
+@@ -13,7 +13,7 @@
+ #ifndef __pcsclite_h__
+ #define __pcsclite_h__
+ 
+-#include <wintypes.h>
++#include <PCSC/wintypes.h>
+ 
+ #ifdef __cplusplus
+ extern "C"

@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2005/07/25 19:55:22 udontknow Exp $
+
+--- src/PCSC/winscard.h.orig	2004-08-06 09:12:19.000000000 -0300
++++ src/PCSC/winscard.h
+@@ -13,7 +13,7 @@
+ #ifndef __winscard_h__
+ #define __winscard_h__
+ 
+-#include <pcsclite.h>
++#include <PCSC/pcsclite.h>
+ 
+ #ifdef __cplusplus
+ extern "C"

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/07/25 19:52:23 udontknow Exp $
+
+--- src/PCSC/mscdefines.h.orig	2004-08-06 09:12:19.000000000 -0300
++++ src/PCSC/mscdefines.h
+@@ -20,7 +20,7 @@ extern "C"
+ {
+ #endif
+ 
+-#include <winscard.h>
++#include <PCSC/winscard.h>
+ 
+ #ifndef MAX_BUFFER_SIZE
+ #define MAX_BUFFER_SIZE		265

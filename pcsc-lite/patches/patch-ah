@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2005/07/25 19:55:22 udontknow Exp $
+
+--- src/PCSC/ifdhandler.h.orig	2004-08-06 09:12:19.000000000 -0300
++++ src/PCSC/ifdhandler.h
+@@ -13,7 +13,7 @@
+ #ifndef _ifd_handler_h_
+ #define _ifd_handler_h_
+ 
+-#include <pcsclite.h>
++#include <PCSC/pcsclite.h>
+ 
+ #ifdef __cplusplus
+ extern "C"
