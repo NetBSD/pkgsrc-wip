@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1870 2005/07/25 14:11:17 thomasklausner Exp $
-# $Id: Makefile,v 1.1870 2005/07/25 14:11:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1871 2005/07/25 17:36:33 udontknow Exp $
+# $Id: Makefile,v 1.1871 2005/07/25 17:36:33 udontknow Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -474,6 +474,7 @@ SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libhttpd
 SUBDIR+=	liblingoteach
+SUBDIR+=	libmusclecard
 SUBDIR+=	libneural
 SUBDIR+=	libotr
 SUBDIR+=	libpano12
