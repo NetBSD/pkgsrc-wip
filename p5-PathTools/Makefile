@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/25 16:54:43 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/25 21:48:02 kuli0020 Exp $
 
 DISTNAME=	PathTools-3.09
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ BUILD_DEPENDS=	p5-Scalar-List-Utils>=1.14:../../devel/p5-Scalar-List-Utils
 
 CONFIGURE_ARGS+=	DEFINE="-DHAS_GETCWD"
 
-PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/PathTools/.packlist
+PERL5_PACKLIST= auto/PathTools/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
