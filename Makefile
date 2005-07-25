@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1868 2005/07/25 13:44:54 thomasklausner Exp $
-# $Id: Makefile,v 1.1868 2005/07/25 13:44:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1869 2005/07/25 13:54:51 thomasklausner Exp $
+# $Id: Makefile,v 1.1869 2005/07/25 13:54:51 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -677,12 +677,12 @@ SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-HTTP-Lite
 SUBDIR+=	p5-HTTP-Server-Simple
 SUBDIR+=	p5-Lingua-PT-Stemmer
+SUBDIR+=	p5-Lingua-Stem-Fr
 SUBDIR+=	p5-Lingua-Stem-It
 SUBDIR+=	p5-Lingua-Stem-Ru
 SUBDIR+=	p5-Lingua-Stem-Snowball-Da
 SUBDIR+=	p5-Lingua-Stem-Snowball-No
 SUBDIR+=	p5-Lingua-Stem-Snowball-Se
-SUBDIR+=	p5-Linua-Stem-Fr
 SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Mail-Webmail-Gmail
 SUBDIR+=	p5-MasonX-Apache2Handler
@@ -882,6 +882,7 @@ SUBDIR+=	rc.subr
 SUBDIR+=	rci
 SUBDIR+=	rdiff-backup-devel
 SUBDIR+=	readseq
+SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
 SUBDIR+=	regexxer
 SUBDIR+=	rekall
