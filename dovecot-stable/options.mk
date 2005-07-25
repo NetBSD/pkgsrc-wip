@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/06/22 15:06:14 tvierling Exp $
+# $NetBSD: options.mk,v 1.2 2005/07/25 20:56:20 tvierling Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pgsql sasl
@@ -38,6 +38,8 @@ CPPFLAGS+=		-I${BUILDLINK_DIR}/include/pgsql
 ###
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 ###
@@ -46,12 +48,4 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .if !empty(PKG_OPTIONS:Mldap)
 CONFIGURE_ARGS+=	--with-ldap
 .  include "../../databases/openldap/buildlink3.mk"
-.endif
-
-###
-### IMAP-AUTH via SASL.
-###
-.if !empty(PKG_OPTIONS:Msasl)
-CONFIGURE_ARGS+=	--with-cyrus-sasl2
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
 .endif
