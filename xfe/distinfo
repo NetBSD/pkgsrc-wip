@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/09/09 01:29:54 cetrox Exp $
-
-SHA1 (xfe-0.70.tar.gz) = af63fb8034b751b21bf8e0460e42f9614e9aec46
-Size (xfe-0.70.tar.gz) = 805921 bytes
-SHA1 (patch-aa) = 8cca96fe7471703f332694d88015dec7d87e826a
-SHA1 (patch-ab) = 380c5cdc76df057ded528a4a841de4c35d621838
-SHA1 (patch-ac) = 73ef9ecdc1d8cc2985f082423d3fa1c344ed2cdd
-SHA1 (patch-ad) = b93ce31654655cbdbe74746c9206c59d11e925f0
