@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/07/25 17:33:10 udontknow Exp $
+
+SHA1 (libmusclecard-1.2.9-beta7.tar.gz) = 550ba453c4f128c9caa4687a8fb1f6353ff4b153
+RMD160 (libmusclecard-1.2.9-beta7.tar.gz) = 5b0486e3942ebd9a27b0234ed34903f4950cdc2c
+Size (libmusclecard-1.2.9-beta7.tar.gz) = 508734 bytes
+SHA1 (patch-aa) = 34b66095ba0fdab7ec7bc76bc277e07aba605b42
