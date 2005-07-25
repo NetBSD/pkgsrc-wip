@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/25 21:28:57 udontknow Exp $
+include/crackcert.h
+include/cryptoki.h
+include/cryptoki_unix.h
+include/cryptoki_win32.h
+include/p11x_msc.h
+include/pkcs11.h
+include/pkcs11f.h
+include/pkcs11t.h
+include/thread_generic.h
+lib/libmusclepkcs11.la
+share/examples/muscle-pkcs11/pkcs11rc.example
+@dirrm share/examples/muscle-pkcs11
