@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1867 2005/07/25 11:01:51 thomasklausner Exp $
-# $Id: Makefile,v 1.1867 2005/07/25 11:01:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1868 2005/07/25 13:44:54 thomasklausner Exp $
+# $Id: Makefile,v 1.1868 2005/07/25 13:44:54 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -256,7 +256,6 @@ SUBDIR+=	fnord
 SUBDIR+=	foomatic-db
 SUBDIR+=	foomatic-db-engine
 SUBDIR+=	foomatic-filters-cups
-SUBDIR+=	fox
 SUBDIR+=	fragrouter
 SUBDIR+=	freevo
 SUBDIR+=	freevrrpd

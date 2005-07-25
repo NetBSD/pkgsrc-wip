@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/05/02 13:51:19 cetrox Exp $
-
-SHA1 (fox-1.2.16.tar.gz) = 93b0aafaef8ffca4cdff07ffd80d951f130e3622
-RMD160 (fox-1.2.16.tar.gz) = 75114768b23eefa9300f4af94ec0ccb590a7c645
-Size (fox-1.2.16.tar.gz) = 3896051 bytes
-SHA1 (patch-aa) = db22f8c936777b47599cd3423a18305736764167
-SHA1 (patch-ab) = 96ecb5baa56e09ef42a6584cfdefc14be1695b39
