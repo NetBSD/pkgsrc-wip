@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/07/25 23:12:23 udontknow Exp $
+
+--- Makefile.orig	2003-09-30 18:07:19.000000000 -0300
++++ Makefile
+@@ -1,7 +1,5 @@
+ # by default install in /usr/local
+-ifeq ($(DESTDIR),)
+-DESTDIR=/usr/local
+-endif
++DESTDIR=$(PREFIX)
+ 
+ CC = gcc
+ CFLAGS = -g -Wall
+@@ -17,7 +15,8 @@ clean:
+ distclean: clean
+ 
+ install: muscleTool
+-	install --mode=0755 --strip $^ $(DESTDIR)/bin/$^
++	install -m 0755 -s $^ $(DESTDIR)/bin/$^
++	install -m 0644 man/muscleTool.1 $(DESTDIR)/man/man1 
+ 
+ muscleToolOSX: muscleTool.c
+ 	$(CC) -g -o muscleTool muscleTool.c -framework PCSC
