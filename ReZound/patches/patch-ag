@@ -1,0 +1,21 @@
+$NetBSD: patch-ag,v 1.1 2005/07/25 13:41:54 thomasklausner Exp $
+
+--- src/backend/AStatusComm.cpp.orig	2005-05-01 04:53:40.000000000 +0200
++++ src/backend/AStatusComm.cpp
+@@ -94,12 +94,12 @@ void endAllProgressBars()
+ 
+ // --- CStatusBar --------------------------------------
+ 
+-#include <sys/timeb.h>
++#include <sys/time.h>
+ static unsigned long getCurrentMilliseconds()
+ {
+-	struct timeb tb;
+-	ftime(&tb);
+-	return (unsigned long)tb.time*1000UL+(unsigned long)tb.millitm;
++	struct timeval tv;
++	gettimeofday(&tv, NULL);
++	return (unsigned long)tv.tv_sec*1000UL+(unsigned long)tv.tv_usec/1000;
+ }
+ 
+ CStatusBar::CStatusBar(const string title,const sample_pos_t firstValue,const sample_pos_t lastValue,const bool showCancelButton) :
