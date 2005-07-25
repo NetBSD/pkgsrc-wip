@@ -1,2 +1,100 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/14 06:01:31 oht Exp $
-@comment This PLIST is intentionally left empty.
+@comment $NetBSD: PLIST,v 1.2 2005/07/25 09:37:57 thomasklausner Exp $
+bin/bzz
+bin/c44
+bin/cjb2
+bin/cpaldjvu
+bin/csepdjvu
+bin/ddjvu
+bin/djview
+bin/djvm
+bin/djvmcvt
+bin/djvudigital
+bin/djvudump
+bin/djvuextract
+bin/djvumake
+bin/djvups
+bin/djvused
+bin/djvuserve
+bin/djvutoxml
+bin/djvutxt
+bin/djvuxmlparser
+include/libdjvu/ddjvuapi.h
+lib/libdjvulibre.la
+lib/netscape/plugins/nsdejavu.so
+man/ja/man1/bzz.1
+man/ja/man1/c44.1
+man/ja/man1/cjb2.1
+man/ja/man1/cpaldjvu.1
+man/ja/man1/csepdjvu.1
+man/ja/man1/ddjvu.1
+man/ja/man1/djview.1
+man/ja/man1/djvm.1
+man/ja/man1/djvmcvt.1
+man/ja/man1/djvu.1
+man/ja/man1/djvudump.1
+man/ja/man1/djvuextract.1
+man/ja/man1/djvumake.1
+man/ja/man1/djvups.1
+man/ja/man1/djvused.1
+man/ja/man1/djvuserve.1
+man/ja/man1/djvutxt.1
+man/ja/man1/nsdejavu.1
+man/man1/any2djvu.1
+man/man1/bzz.1
+man/man1/c44.1
+man/man1/cjb2.1
+man/man1/cpaldjvu.1
+man/man1/csepdjvu.1
+man/man1/ddjvu.1
+man/man1/djview.1
+man/man1/djvm.1
+man/man1/djvmcvt.1
+man/man1/djvu.1
+man/man1/djvudigital.1
+man/man1/djvudump.1
+man/man1/djvuextract.1
+man/man1/djvumake.1
+man/man1/djvups.1
+man/man1/djvused.1
+man/man1/djvuserve.1
+man/man1/djvutoxml.1
+man/man1/djvutxt.1
+man/man1/djvuxml.1
+man/man1/djvuxmlparser.1
+man/man1/nsdejavu.1
+share/djvu/languages.xml
+share/djvu/osi/de/djview.qm
+share/djvu/osi/de/libdjvu++.xml
+share/djvu/osi/de/messages.xml
+share/djvu/osi/de/qt.qm
+share/djvu/osi/en/djvutools-reference.xml
+share/djvu/osi/en/libdjvu++.xml
+share/djvu/osi/en/messages.xml
+share/djvu/osi/en/unixgui-shared.xml
+share/djvu/osi/en/unixgui-viewer.xml
+share/djvu/osi/fr/djview.qm
+share/djvu/osi/fr/libdjvu++.xml
+share/djvu/osi/fr/messages.xml
+share/djvu/osi/fr/qt.qm
+share/djvu/osi/ja/djview.qm
+share/djvu/osi/ja/libdjvu++.xml
+share/djvu/osi/ja/messages.xml
+share/djvu/osi/ja/qt.qm
+share/djvu/osi/zh/libdjvu++.xml
+share/djvu/osi/zh/messages.xml
+share/djvu/pubtext/DjVuMessages.dtd
+share/djvu/pubtext/DjVuOCR.dtd
+share/djvu/pubtext/DjVuXML-s.dtd
+@dirrm share/djvu/pubtext
+@dirrm share/djvu/osi/zh
+@dirrm share/djvu/osi/ja
+@dirrm share/djvu/osi/fr
+@dirrm share/djvu/osi/en
+@dirrm share/djvu/osi/de
+@dirrm share/djvu/osi
+@dirrm share/djvu
+@unexec ${RMDIR} %D/man/ja/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/ja 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/netscape/plugins 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/netscape 2>/dev/null || ${TRUE}
+@dirrm include/libdjvu
