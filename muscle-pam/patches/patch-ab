@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/07/26 20:06:49 udontknow Exp $
+
+--- pam_smartcard.c.orig	2003-10-03 16:32:35.000000000 -0300
++++ pam_smartcard.c
+@@ -24,8 +24,11 @@
+ #define PAM_SM_PASSMSCULong32
+ 
+ #include <security/pam_modules.h>
++#ifdef _OPENPAM
++#include <security/pam_appl.h>
++#endif
+ #include <syslog.h>
+-#include <musclecard.h>
++#include <PCSC/musclecard.h>
+ #include "cardtools.h"
+ #include "certutils.h"
+ #include <openssl/evp.h>

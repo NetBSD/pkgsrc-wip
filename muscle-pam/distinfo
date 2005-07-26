@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/07/26 20:06:49 udontknow Exp $
+
+SHA1 (muscleframework-1.1.5.tar.gz) = d93266734e9081cd7779ae547995c1f171663c20
+RMD160 (muscleframework-1.1.5.tar.gz) = feb7661492b789862ad4112e4b76920daa0ad7da
+Size (muscleframework-1.1.5.tar.gz) = 1022040 bytes
+SHA1 (patch-aa) = bc17333f787d07a95b802e447ef0ec77aee699da
+SHA1 (patch-ab) = d0510120d6af000b646b4ad8eec968658cf0e241
+SHA1 (patch-ac) = 04d9eabaf4dc2c78ce0a5d6f7b70b6d88dba275b
+SHA1 (patch-ad) = d2b984173c1d30e02dcab99ea3325fe02bc6e9d0
+SHA1 (patch-ae) = ad880c5d20b0200798a603aebf1cd82bf084b6f6

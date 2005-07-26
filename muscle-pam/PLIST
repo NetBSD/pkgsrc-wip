@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/26 20:06:49 udontknow Exp $
+lib/security/pam_musclecard.so
+share/examples/muscle-pam/pam-muscle.conf
+@dirrm share/examples/muscle-pam

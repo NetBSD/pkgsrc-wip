@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/26 20:06:49 udontknow Exp $
+
+--- certutils.h.orig	2003-10-03 16:32:35.000000000 -0300
++++ certutils.h
+@@ -11,7 +11,7 @@
+ #include <stdlib.h>
+ #include <errno.h>
+ #include <openssl/evp.h>
+-#include <musclecard.h>
++#include <PCSC/musclecard.h>
+ #include <openssl/x509.h>
+ 
+ #define MSC_KEY_SIZE 128
