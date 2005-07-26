@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/17 10:53:50 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/26 05:58:14 jgoamakf Exp $
 
 DISTNAME=		Tree-Simple-VisitorFactory-0.05
 PKGNAME=		p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=		p5-Tree-Simple>=1.00:../../devel/p5-Tree-Simple
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Tree/Simple/VisitorFactory/.packlist
+PERL5_PACKLIST=		auto/Tree/Simple/VisitorFactory/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

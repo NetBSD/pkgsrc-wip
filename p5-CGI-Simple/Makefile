@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/06 11:06:58 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/26 05:58:12 jgoamakf Exp $
 
 DISTNAME=		Cgi-Simple-0.077
 PKGNAME=		p5-CGI-Simple-0.077
@@ -12,7 +12,7 @@ COMMENT=		Simple totally OO CGI interface that is CGI.pm compliant
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/CGI/Simple/.packlist
+PERL5_PACKLIST=		auto/CGI/Simple/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

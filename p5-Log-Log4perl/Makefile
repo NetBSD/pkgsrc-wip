@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:39 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/26 05:58:13 jgoamakf Exp $
 
 DISTNAME=	Log-Log4perl-0.51
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Log4j implementation for Perl
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Log/Log4perl/.packlist
+PERL5_PACKLIST=		auto/Log/Log4perl/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

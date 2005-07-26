@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/01 09:45:56 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/26 05:58:13 jgoamakf Exp $
 
 DISTNAME=	Exporter-Lite-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Lightweight exporting of variables
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Exporter/Lite/.packlist
+PERL5_PACKLIST=		auto/Exporter/Lite/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

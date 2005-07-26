@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/16 10:55:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/26 05:58:13 jgoamakf Exp $
 
 DISTNAME=	Module-Pluggable-Fast-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-File-Find-Rule>=0.28:../../devel/p5-File-Find-Rule
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Module/Pluggable/Fast/.packlist
+PERL5_PACKLIST=	auto/Module/Pluggable/Fast/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

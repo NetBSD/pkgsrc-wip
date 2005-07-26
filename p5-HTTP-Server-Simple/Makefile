@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/01 09:47:09 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/26 05:58:13 jgoamakf Exp $
 
 DISTNAME=	HTTP-Server-Simple-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Simple standalone http dameon
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTTP/Server/Simple/.packlist
+PERL5_PACKLIST=		auto/HTTP/Server/Simple/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
