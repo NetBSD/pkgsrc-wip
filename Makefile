@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1876 2005/07/27 02:49:47 kristerw Exp $
-# $Id: Makefile,v 1.1876 2005/07/27 02:49:47 kristerw Exp $
+# $NetBSD: Makefile,v 1.1877 2005/07/27 02:52:49 kristerw Exp $
+# $Id: Makefile,v 1.1877 2005/07/27 02:52:49 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -656,6 +656,7 @@ SUBDIR+=	p5-Accessor-Chained
 SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-Apache-AuthenNTLM
 SUBDIR+=	p5-AxKit
+SUBDIR+=	p5-Bit-Vector-Minimal
 SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-Cache-Mmap
 SUBDIR+=	p5-Class-Date
@@ -681,6 +682,7 @@ SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-HTTP-Lite
 SUBDIR+=	p5-HTTP-Server-Simple
 SUBDIR+=	p5-Lingua-PT-Stemmer
+SUBDIR+=	p5-Lingua-Stem
 SUBDIR+=	p5-Lingua-Stem-Fr
 SUBDIR+=	p5-Lingua-Stem-It
 SUBDIR+=	p5-Lingua-Stem-Ru
@@ -699,7 +701,10 @@ SUBDIR+=	p5-Net-Whois-RIPE
 SUBDIR+=	p5-News-Newsrc
 SUBDIR+=	p5-PDL
 SUBDIR+=	p5-Parallel-ForkManager
+SUBDIR+=	p5-PathTools
 SUBDIR+=	p5-Pod-Tree
+SUBDIR+=	p5-Snowball-Norwegian
+SUBDIR+=	p5-Snowball-Swedish
 SUBDIR+=	p5-Term-Screen
 SUBDIR+=	p5-Text-ASCIITable
 SUBDIR+=	p5-Text-German
