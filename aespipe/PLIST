@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/27 19:04:09 udontknow Exp $
+bin/aespipe
+bin/bz2aespipe
+man/man1/aespipe.1
+share/doc/aespipe/README
+@dirrm share/doc/aespipe
