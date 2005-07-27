@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1878 2005/07/27 17:43:10 lexort Exp $
-# $Id: Makefile,v 1.1878 2005/07/27 17:43:10 lexort Exp $
+# $NetBSD: Makefile,v 1.1879 2005/07/27 19:06:20 udontknow Exp $
+# $Id: Makefile,v 1.1879 2005/07/27 19:06:20 udontknow Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -66,6 +66,7 @@ SUBDIR+=	abuse_sdl
 SUBDIR+=	acpid
 SUBDIR+=	acr
 SUBDIR+=	adamem
+SUBDIR+=	aespipe
 SUBDIR+=	aircrack
 SUBDIR+=	airsnort
 SUBDIR+=	alive
