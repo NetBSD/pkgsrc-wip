@@ -1,16 +1,22 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/24 09:50:04 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/27 16:00:58 leonardschmidt Exp $
 #
 
-DISTNAME=	emelfm2-0.0.9
+DISTNAME=	emelfm2-tom-20050726
+PKGNAME=	${DISTNAME:S/-tom-/-/}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://emelfm2.org/rel/
+MASTER_SITES=	http://emelfm2.org/rel/pre/
 
 MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://emelfm2.org/
-COMMENT=	Fast, two-pane filemanager using GTK2
+COMMENT=	Fast two-pane file manager using GTK2
 
-USE_DIRS+=	xdg-1.1
-USE_TOOLS+=	gmake
+BUILD_USES_MSGFMT=	yes
 
+USE_DIRS+=		xdg-1.1
+USE_TOOLS+=		gmake
+USE_PKGLOCALEDIR=	yes
+
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
