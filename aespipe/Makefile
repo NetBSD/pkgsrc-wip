@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/27 19:04:09 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/27 23:17:58 udontknow Exp $
 #
 
 DISTNAME=		aespipe-v2.3b
@@ -17,6 +17,8 @@ CRYPTO=			YES
 GNU_CONFIGURE=          YES
 
 .include "../../mk/bsd.prefs.mk"
+
+ONLY_FOR_PLATFORM+=     Linux-*-i[3-6]86
 
 .if (${MACHINE_ARCH} == "amd64")
 BUILD_TARGET=		amd64
