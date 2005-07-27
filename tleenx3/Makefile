@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:16:03 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/27 16:31:20 thomasklausner Exp $
 #
 
 DISTNAME=		TleenX3-0.1
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/T/t/:S/X/x/}
 CATEGORIES=	        chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tleenx/}
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://tleenx.sourceforge.net/
 COMMENT=		Polish IM communication client
 

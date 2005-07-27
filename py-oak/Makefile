@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/23 21:39:32 marc Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/27 16:28:48 thomasklausner Exp $
 #
 
 DISTNAME=		oak-1.2
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		net
 MASTER_SITES=		http://www.digitallumber.com/TAR/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.digitallumber.com/TAR/
 COMMENT=		Authoritative/recursive DNS server
 

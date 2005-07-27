@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:16:01 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/27 16:31:07 thomasklausner Exp $
 #
 
 DISTNAME=		terminus-font-4.06
 CATEGORIES=		fonts
 MASTER_SITES=		http://www.is-vn.bg/hamster/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.is-vn.bg/hamster/jimmy-en.html
 COMMENT=		Clean fixed width font
 

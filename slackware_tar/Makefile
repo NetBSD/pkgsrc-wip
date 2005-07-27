@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2004/03/16 21:32:55 mpasternak Exp $
-# $Id: Makefile,v 1.2 2004/03/16 21:32:55 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/27 16:30:56 thomasklausner Exp $
+# $Id: Makefile,v 1.3 2005/07/27 16:30:56 thomasklausner Exp $
 #
 
 DISTNAME=		tar-1.13.25-i386-1
@@ -7,7 +7,7 @@ PKGNAME=		slackware_tar-1.13.25
 CATEGORIES=		emulators
 MASTER_SITES=		${SLACKWARE_MASTER_SITES}
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://slackware.com/
 COMMENT=		tar for Slackware development
 

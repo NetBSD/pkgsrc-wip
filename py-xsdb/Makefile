@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:15:22 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/27 16:29:32 thomasklausner Exp $
 #
 
 DISTNAME=		xsdb
@@ -7,7 +7,7 @@ CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xsdb/}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://xsdb.sourceforge.net/
 COMMENT=		Concurrent database with concurrency control and recovery
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/23 21:39:33 marc Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/27 16:29:28 thomasklausner Exp $
 #
 
 DISTNAME=		willow-1.4
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		www
 MASTER_SITES=		http://www.digitallumber.com/TAR/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.digitallumber.com/
 COMMENT=		Content-filtering proxy server
 

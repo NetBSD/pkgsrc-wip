@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:15:23 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/27 16:29:33 thomasklausner Exp $
 #
 
 DISTNAME=		pywm-0.1
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		wm
 MASTER_SITES=		http://www.freenet.org.nz/python/pywm/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.freenet.org.nz/python/pywm/
 COMMENT=		Window manager in Python
 

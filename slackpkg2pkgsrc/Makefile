@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:15:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/27 16:29:50 thomasklausner Exp $
 #
 
 DISTNAME=		slackpkg2pkgsrc-1.0
@@ -7,7 +7,7 @@ CATEGORIES=		pkgtools
 MASTER_SITES=		# none
 DISTFILES=		# none
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		# none
 COMMENT=		Simple script for easy generation of Slackware binary packages
 

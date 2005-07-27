@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/23 21:39:33 marc Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/27 16:29:02 thomasklausner Exp $
 #
 
 DISTNAME=		scapy-0.9.15
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://www.cartel-securite.fr/pbiondi/python/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.cartel-securite.fr/pbiondi/projects/scapy.html
 COMMENT=		Interactive packet manipulation tool
 

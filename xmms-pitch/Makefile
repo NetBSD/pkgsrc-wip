@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:16:18 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/27 16:31:34 thomasklausner Exp $
 #
 
 DISTNAME=		pitch-plugin-xmms
@@ -6,7 +6,7 @@ PKGNAME=		xmms-${DISTNAME:S/-xmms//}-0.0.1
 CATEGORIES=		audio
 MASTER_SITES=		http://www.lionking.org/%7Ejammet/temp/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.lionking.org/%7Ejammet/temp/
 COMMENT=		Pitch control plugin for xmms
 

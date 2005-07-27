@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:28 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/27 16:29:49 thomasklausner Exp $
 #
 
 DISTNAME=		rekall-2.2.0-beta0
@@ -7,7 +7,7 @@ CATEGORIES=		databases
 MASTER_SITES=		http://www.rekallrevealed.org/packages/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.rekallrevealed.org/packages/
 COMMENT=		KDE database frontend
 

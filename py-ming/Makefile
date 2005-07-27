@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:16 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/27 16:28:33 thomasklausner Exp $
 #
 
 DISTNAME=		${MING_DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		${MING_MASTER_SITES}
 EXTRACT_SUFX=		${MING_EXTRACT_SUFX}
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ming.sourceforge.net/
 COMMENT=		Python bindings for Ming library
 

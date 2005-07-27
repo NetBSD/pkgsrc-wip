@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2005/05/24 10:31:44 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/27 16:31:07 thomasklausner Exp $
 
 DISTNAME=       superkaramba-0.33
 CATEGORIES=     x11 misc
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=netdragon/}
 
-MAINTAINER=     dotz@irc.pl
+MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=       http://netdragon.sourceforge.net/
 COMMENT=        Interactive eyecandy for your KDE desktop
 

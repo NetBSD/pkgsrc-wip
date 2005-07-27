@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:16:01 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/27 16:31:07 thomasklausner Exp $
 #
 
 DISTNAME=		tenmado-0.6
 CATEGORIES=		games
 MASTER_SITES=		http://www.interq.or.jp/libra/oohara/tenmado/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.interq.or.jp/libra/oohara/tenmado/
 COMMENT=		Vertical scrolling shoot'em-up game
 

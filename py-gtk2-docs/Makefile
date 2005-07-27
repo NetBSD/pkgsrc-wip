@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/27 15:16:12 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/27 16:28:31 thomasklausner Exp $
 #
 
 DISTNAME=		py-gtk2-docs
@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.moeraki.com/pygtktutorial/ \
 			http://www.moeraki.com/pygtkreference/
 DISTFILES=		pygtk2tutorial.tgz pygtk2reference.tgz
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.moeraki.com/
 COMMENT=		Tutorial and reference manual for PyGTK 2.0
 

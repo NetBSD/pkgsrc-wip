@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:15:53 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/27 16:31:04 thomasklausner Exp $
 #
 
 DISTNAME=		Songwrite-0.12
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/S/s/}
 CATEGORIES=		misc
 MASTER_SITES=		http://oomadness.tuxfamily.org/downloads/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://oomadness.tuxfamily.org/en/songwrite/index.html
 COMMENT=		Tablature (guitar partition) editor
 

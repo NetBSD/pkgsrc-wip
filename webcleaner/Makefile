@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:12 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/27 16:31:28 thomasklausner Exp $
 #
 
 DISTNAME=		webcleaner-2.8
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=webcleaner/}
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://webcleaner.sourceforge.net/
 COMMENT=		Filtering HTTP proxy
 

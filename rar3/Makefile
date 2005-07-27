@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/10 23:48:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/27 16:29:35 thomasklausner Exp $
 #
 
 DISTNAME=		rarbsd-3.3.0
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/rar
 CATEGORIES=		archivers
 MASTER_SITES=		http://files10.rarlab.com/rar/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://files10.rarlab.com/rar/
 COMMENT=		File archiver (binary only)
 

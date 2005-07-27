@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:36 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/27 16:30:11 thomasklausner Exp $
 #
 
 DISTNAME=		slackware_compat-9.1.2
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		# none
 DISTFILES=		# none
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://slackware.com/
 COMMENT=		Slackware emulation base
 

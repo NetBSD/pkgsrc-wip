@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:15:18 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/27 16:29:06 thomasklausner Exp $
 #
 
 DISTNAME=		SciPy-0.2.0_alpha_200.4161_src
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME:S/_src//}
 CATEGORIES=		devel
 MASTER_SITES=		http://www.scipy.org/site_content/downloads/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.scipy.org/
 COMMENT=		SciPy distutils: standalone package
 

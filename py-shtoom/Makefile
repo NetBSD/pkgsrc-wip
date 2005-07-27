@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/27 10:58:58 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/27 16:29:07 thomasklausner Exp $
 #
 
 DISTNAME=		shtoom-0.2
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-shtoom-0.2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=shtoom/}
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://shtoom.sourceforge.net/
 COMMENT=		Software VoIP telephony in Python
 

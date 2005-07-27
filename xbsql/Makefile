@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:16:15 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/27 16:31:31 thomasklausner Exp $
 #
 
 DISTNAME=		xbsql-0.11
@@ -6,7 +6,7 @@ CATEGORIES=		database
 MASTER_SITES=		http://www.rekallrevealed.org/packages/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.rekallrevealed.org/packages/
 COMMENT=		SQL frontend for DB4 (DBF) files with xbase
 
