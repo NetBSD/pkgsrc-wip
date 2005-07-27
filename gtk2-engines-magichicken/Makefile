@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/24 10:30:03 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/07/27 16:25:46 thomasklausner Exp $
 
 DISTNAME=		GTK2-mgicchikn-1.0.2
 PKGNAME=		gtk2-engines-magichicken-1.0.2
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}/mgicchikn-1.0.2/
 CATEGORIES=		x11
 MASTER_SITES=		http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/themes/gtk2/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://art.gnome.org/
 COMMENT=		MagicChicken theme engine for GTK+ 2.x
 

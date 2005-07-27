@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/11/28 21:19:44 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/27 16:25:51 thomasklausner Exp $
 
 DISTNAME=	l_cc_p_7.1.006
 PKGNAME=	icc-7.1
@@ -11,7 +11,7 @@ MASTER_SITES=	http://www.intel.com/software/products/compilers/downloads/ \
 		ftp://download.intel.co.jp/software/products/compilers/downloads/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	dotz@irc.pl
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://developer.intel.com/software/products/compilers/
 COMMENT=	Intel C++ Compiler for Linux
 

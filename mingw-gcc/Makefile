@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/24 10:31:02 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/27 16:26:39 thomasklausner Exp $
 #
 
 DISTNAME=		mingw-gcc-${DIST_VERSION}
@@ -10,7 +10,7 @@ DISTFILES=		gcc-core-${DIST_VERSION}-src.tar.gz \
 			gcc-g++-${DIST_VERSION}-src.tar.gz \
 			gcc-objc-${DIST_VERSION}-src.tar.gz
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://mingw.sf.net/
 COMMENT=		GNU C Compiler ported to win32 platforms
 

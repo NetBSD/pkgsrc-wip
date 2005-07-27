@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:26 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/27 16:27:52 thomasklausner Exp $
 #
 
 DISTNAME=		SciPy-0.2.0_alpha_200.4161_src
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-SciPy-0.2.0
 CATEGORIES=		math
 MASTER_SITES=		http://www.scipy.org/site_content/downloads/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.scipy.org/
 COMMENT=		Open source library of scientific tools for Python
 

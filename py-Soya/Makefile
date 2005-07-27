@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:14:57 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/27 16:27:53 thomasklausner Exp $
 #
 
 DISTNAME=		Soya-0.6.1
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://oomadness.tuxfamily.org/downloads/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://oomadness.tuxfamily.org/en/soya/index.html
 COMMENT=		High level 3D engine for Python
 

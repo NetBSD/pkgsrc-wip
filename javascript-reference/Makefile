@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/14 22:38:44 mpasternak Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/27 16:25:54 thomasklausner Exp $
 #
 
 DISTNAME=		CoreReferenceJS15
@@ -7,7 +7,7 @@ CATEGORIES=		misc
 MASTER_SITES=		http://devedge.netscape.com/library/manuals/2000/javascript/1.5/reference/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://devedge.netscape.com/
 COMMENT=		JavaScript Reference from Netscape Devedge
 

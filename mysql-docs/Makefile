@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/15 14:46:47 mpasternak Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/27 16:26:41 thomasklausner Exp $
 #
 
 DISTNAME=		manual-split
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}
 CATEGORIES=		misc
 MASTER_SITES=		http://mysql.belnet.be/Downloads/Manual/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://mysql.com/
 COMMENT=		Latest documentation for MySQL database server
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/21 16:34:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/27 16:25:48 thomasklausner Exp $
 #
 
 DISTNAME=		9714-gtk-qt-engine-0.2
@@ -8,7 +8,7 @@ CATEGORIES=		devel x11
 MASTER_SITES=		http://www.kde-look.org/content/files/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.kde-look.org/content/show.php?content=9714
 COMMENT=		GTK+ 2.x theme, which looks just like Qt toolkit
 

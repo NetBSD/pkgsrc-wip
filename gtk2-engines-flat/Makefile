@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/24 10:30:03 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/07/27 16:25:34 thomasklausner Exp $
 
 DISTNAME=		GTK2-Flat-Engine
 PKGNAME=		gtk2-engines-flat-2.0
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}/gtk-flat-theme-2.0
 CATEGORIES=		x11
 MASTER_SITES=		http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/themes/gtk2/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://art.gnome.org/
 COMMENT=		Flat theme engine for GTK+ 2.x
 

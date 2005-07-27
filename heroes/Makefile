@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:13:01 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/27 16:25:50 thomasklausner Exp $
 #
 
 DISTNAME=		heroes-0.21
@@ -9,7 +9,7 @@ DISTFILES=		heroes-0.21.tar.bz2 heroes-data-1.5.tar.bz2 \
 			heroes-hq-sound-tracks-1.0.tar.bz2  \
 			heroes-sound-effects-1.0.tar.bz2
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://heroes.sourceforge.net/
 COMMENT=		Feature-packed game, like Nibbles or Tron clone
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:23 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/27 16:25:30 thomasklausner Exp $
 #
 
 DISTNAME=		gdam-0.942
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gdam/}
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://gdam.sourceforge.net/
 COMMENT=		Digital DJ audio mixer
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:12:37 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/27 16:25:31 thomasklausner Exp $
 #
 
 DISTNAME=		gtick-0.2.13
@@ -6,7 +6,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://www.antcom.de/gtick/download/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.antcom.de/gtick/
 COMMENT=		GTK+ metronome
 

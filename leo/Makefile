@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:40 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/27 16:26:13 thomasklausner Exp $
 #
 
 DISTNAME=		leo-4.1-beta-4
@@ -6,7 +6,7 @@ CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=leo/}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://leo.sourceforge.net/
 COMMENT=		Programmer's editor and a flexible browser
 

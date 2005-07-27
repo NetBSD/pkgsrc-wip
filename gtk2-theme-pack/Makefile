@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/01/03 14:41:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/27 16:25:49 thomasklausner Exp $
 #
 
 DISTNAME=      	gtk2-theme-pack
@@ -107,7 +107,7 @@ DISTFILES=	GKT2-Quantumcurve.tar.gz \
 		GTK2-red-onion.tar.gz \
 		GTK2-yglacier.tgz
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://art.gnome.org/
 COMMENT=		Art for your GTK+ 2.x desktop
 

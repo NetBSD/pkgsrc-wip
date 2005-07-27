@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:09:37 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/27 16:25:01 thomasklausner Exp $
 #
 
 DISTNAME=		Pythonol-2.0_i586
@@ -8,7 +8,7 @@ CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pythonol/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://pythonol.sourceforge.net/
 COMMENT=		Learn Spanish (with a little help of Python)
 

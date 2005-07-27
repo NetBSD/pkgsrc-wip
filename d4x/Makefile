@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:10:58 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/27 16:25:05 thomasklausner Exp $
 #
 
 DISTNAME=		d4x-2.5.0beta2
 CATEGORIES=		net
 MASTER_SITES=		http://www.krasu.ru/soft/chuchelo/files/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.krasu.ru/soft/chuchelo/files/
 COMMENT=		Download files using a nice GUI
 

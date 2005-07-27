@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/24 10:30:02 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/27 16:25:34 thomasklausner Exp $
 
 DISTNAME=		gtk-engines-dwerg-0.6
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/themes/gtk2/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://art.gnome.org/
 COMMENT=		Theme engine for GTK+ 2.x
 

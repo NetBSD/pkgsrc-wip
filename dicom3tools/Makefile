@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:16 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/27 16:25:08 thomasklausner Exp $
 #
 
 DISTNAME=		dicom3tools_1.00.snapshot.20030501.helgray
@@ -6,7 +6,7 @@ PKGNAME=		dicom3tools-20030501
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.dclunie.com/dicom3tools/workinprogress/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.dclunie.com/
 COMMENT=		Library for dealing with DICOM 3 files
 

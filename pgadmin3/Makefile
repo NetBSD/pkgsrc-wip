@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/27 05:52:13 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/27 16:26:42 thomasklausner Exp $
 #
 
 DISTNAME=		pgadmin3-1.0.2
@@ -10,7 +10,7 @@ MASTER_SITES=		http://www.postgresql.org/ftpsite/pgadmin3/release/src/ \
 			ftp://ftp.sunsite.auc.dk/mirrors/postgresql/pgadmin3/release/src/ \
 			ftp://ftp6.pl.postgresql.org/pub/postgresql/pgadmin3/release/src/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://pgadmin.postgresql.org/
 COMMENT=		GUI administration tool for PostgreSQL RDBMS
 

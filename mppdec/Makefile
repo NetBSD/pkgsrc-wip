@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/24 10:31:04 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/27 16:26:41 thomasklausner Exp $
 #
 
 DISTNAME=		mppdec-1.1
@@ -6,7 +6,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://www.personal.uni-jena.de/~pfk/mpp/src/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.personal.uni-jena.de/~pfk/mpp/
 COMMENT=		Musepack (MPC) audio file decoder
 

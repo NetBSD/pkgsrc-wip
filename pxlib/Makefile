@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:14:52 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/27 16:26:59 thomasklausner Exp $
 #
 
 DISTNAME=		pxlib_0.2.0.orig
@@ -6,7 +6,7 @@ PKGNAME=		pxlib-0.2.0
 CATEGORIES=		databases devel
 MASTER_SITES=		http://cesnet.dl.sourceforge.net/sourceforge/pxlib/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://cesnet.dl.sourceforge.net/sourceforge/pxlib/
 COMMENT=		C language library for reading Paradox database files
 

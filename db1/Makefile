@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/02 16:38:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/27 16:25:07 thomasklausner Exp $
 #
 
 DISTNAME=		db.1.86
@@ -6,7 +6,7 @@ PKGNAME=		db1-1.86
 CATEGORIES=		databases
 MASTER_SITES=		http://www.sleepycat.com/update/snapshot/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.sleepycat.com/
 COMMENT=		Berkeley DB 1.86
 

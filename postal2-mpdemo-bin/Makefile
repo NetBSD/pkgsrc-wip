@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/17 20:17:27 blef Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/27 16:26:45 thomasklausner Exp $
 #
 
 DISTNAME=		postal2mpdemo-lnx-1407
@@ -8,7 +8,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://files3.worthplaying.com/postal2/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://files3.worthplaying.com/postal2/
 COMMENT=		Demo of a violent 3D game
 

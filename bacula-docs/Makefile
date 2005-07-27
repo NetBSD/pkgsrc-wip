@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/09/13 21:10:33 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/27 16:25:03 thomasklausner Exp $
 #
 
 DISTNAME=		rel-bacula-doc
@@ -8,7 +8,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://www.bacula.org/
 DIST_SUBDIR=		${PKGNAME}
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.bacula.org/
 COMMENT=		Documentation for Bacula - The Network Backup Solution
 

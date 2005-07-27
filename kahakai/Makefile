@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:21 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/27 16:25:55 thomasklausner Exp $
 #
 
 DISTNAME=		kahakai-0.6.2
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kahakai/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://kahakai.sourceforge.net/
 COMMENT=		Window manager with Python scripting
 

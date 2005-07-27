@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:38 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/27 16:26:11 thomasklausner Exp $
 #
 
 DISTNAME=		kyra_src_2_0_7
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/kyra
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kyra/}
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://kyra.sourceforge.net/
 COMMENT=		Sprite engine
 

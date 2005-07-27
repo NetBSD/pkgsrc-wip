@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:14:53 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/27 16:27:05 thomasklausner Exp $
 #
 
 DISTNAME=		CVSToys-1.0.9
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://twistedmatrix.com/users/acapnotic/wares/code/CVSToys/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://twistedmatrix.com/users/acapnotic/wares/code/CVSToys/
 COMMENT=		Watch CVS tree changes on web, RSS, list or IRC
 

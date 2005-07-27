@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:37 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/27 16:25:56 thomasklausner Exp $
 #
 
 DISTNAME=		kpanta_1_0
@@ -8,7 +8,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://www.geocities.com/anil_rvce/kpanta/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.geocities.com/anil_rvce/kpanta.html
 COMMENT=		AntiChess - like ordinary chess, but the objective is to loose pieces
 
