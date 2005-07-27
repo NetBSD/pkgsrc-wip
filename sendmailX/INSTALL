@@ -1,9 +1,10 @@
-# $NetBSD: INSTALL,v 1.3 2005/07/19 22:49:42 adrian_p Exp $
+# $NetBSD: INSTALL,v 1.4 2005/07/27 16:04:22 adrian_p Exp $
 
-# directories and files
+# Directories and files
+#
 SMXQD=@VARBASE@/spool/smx
 DEFEDB=${SMXQD}/defedb
-LOGDIR=${SMXQD}
+LOGDIR=@VARBASE@/log/smx
 
 case ${STAGE} in
 
@@ -28,9 +29,9 @@ POST-INSTALL)
 		${CHMOD} 0771 ${SMXQD}/${i}
 	done
 
-	${MKDIR} ${DEFEDB}
-	${CHOWN} smxq:smxq ${DEFEDB}
-	${CHMOD} 0700 ${DEFEDB}
+	${MKDIR} ${SMXQD}/defedb
+	${CHOWN} smxq:smxq ${SMXQD}/defedb
+	${CHMOD} 0700 ${SMXQD}/defedb
 
 	for i in qmsmtps qmsmtpc qmsmar smtps ibdb ibdb/ibdb
 	do
@@ -45,10 +46,27 @@ POST-INSTALL)
 	${CHOWN} smxq:smxq ${SMXQD}/ibdb
 	${CHOWN} smxq:smxq ${SMXQD}/ibdb/ibdb
 
-	${CHOWN} smxq:smxq ${SMXQD}/ibdb
 	${CHMOD} 0700 ${SMXQD}/ibdb 
 	${CHMOD} 0700 ${SMXQD}/ibdb/ibdb
 	${CHMOD} 0750 ${SMXQD}/smtps 
+
+	# Setup logging and permissions on log files
+	#
+	${MKDIR} ${LOGDIR}
+	${TOUCH} ${LOGDIR}/qmgr.log
+	${TOUCH} ${LOGDIR}/smar.log
+	${TOUCH} ${LOGDIR}/smtpc.log
+	${TOUCH} ${LOGDIR}/smtps.log
+
+	${CHOWN} smxq:operator ${LOGDIR}/qmgr.log
+	${CHOWN} smxm:operator ${LOGDIR}/smar.log
+	${CHOWN} smxc:operator ${LOGDIR}/smtpc.log
+	${CHOWN} smxs:operator ${LOGDIR}/smtps.log
+
+	${CHMOD} 0755 ${LOGDIR}/qmgr.log
+	${CHMOD} 0755 ${LOGDIR}/smar.log
+	${CHMOD} 0755 ${LOGDIR}/smtpc.log
+	${CHMOD} 0755 ${LOGDIR}/smtps.log
 
 	;;
 

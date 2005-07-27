@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2005/07/20 00:21:00 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/07/27 16:04:21 adrian_p Exp $
+bin/createmap
+bin/log2time
 bin/mailq
 bin/qmgrctl
+bin/rcvrenvfromlog.sh
 bin/runas
 bin/smconf
 bin/t-mm

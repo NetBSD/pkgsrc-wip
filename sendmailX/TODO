@@ -3,7 +3,6 @@
 
 - sendmailx, sendailX, smx or smX - choose one and stick to it
 - fix the current example smx.conf file (see TODO in the file)
-- fix files/Makefile (createmap)
 
 - Test TLS support
 - Test SASL support

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sendmailx.sh,v 1.2 2005/07/20 00:21:01 adrian_p Exp $
+# $NetBSD: sendmailx.sh,v 1.3 2005/07/27 16:04:23 adrian_p Exp $
 #
 # PROVIDE: sendmailx
 # REQUIRE: DAEMON
@@ -18,12 +18,13 @@ conf_file="@PKG_SYSCONFDIR@/smx.conf"
 required_files=$conf_file
 extra_commands="restart"
 start_cmd="sendmailx_start"
-pidfile="/var/run/${name}.pid"
+pidfile="@VARBASE@/run/${name}.pid"
+logdir="@VARBASE@/log/smx/"
 # restart_cmd="sendmailx_restart"
 
 sendmailx_start()
 {
-	${ctl_command} -l -p ${pidfile} ${conf_files}
+	${ctl_command} -l -p ${pidfile} -L ${logdir} ${conf_file} &
 }
 
 load_rc_config $name
