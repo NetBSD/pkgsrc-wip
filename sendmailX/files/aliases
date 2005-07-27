@@ -1,6 +1,29 @@
-# $NetBSD: aliases,v 1.1 2005/07/19 01:44:49 adrian_p Exp $
+# $NetBSD: aliases,v 1.2 2005/07/27 00:09:01 adrian_p Exp $
 
-# Replace user with a valid user who is responsible for this MTS
-postmaster:	user                  
-root:		user                          
-user:		local:
+MAILER-DAEMON:	postmaster
+postmaster: 	root
+
+toor:		root
+daemon:		root
+bin:		root
+games:		root
+postfix:	postmaster
+named:		root
+ntpd:		root
+sshd:		root
+smmsp:		postmaster
+nobody:		root
+
+# root:		adrianp@stindustries.net
+# operator:	adrianp@stindustries.net
+
+abuse:		postmaster
+noc:		root
+security:	root
+hostmaster:	root
+usenet:		root
+news:		usenet
+webmaster:	root
+www:		webmaster
+uucp:		root
+ftp:		root
