@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/25 16:24:10 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/27 18:02:03 kuli0020 Exp $
 
 DISTNAME=		Lingua-Stem-0.81
 PKGNAME=		p5-${DISTNAME}
@@ -20,7 +20,7 @@ DEPENDS+=	p5-Text-German>=0:../../textproc/p5-Text-German
 
 MAN3PREFIX=		${PREFIX}/lib/perl5/${PERL_VERSION}
 
-PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Lingua/Stem/.packlist
+PERL5_PACKLIST= auto/Lingua/Stem/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
