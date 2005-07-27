@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1877 2005/07/27 02:52:49 kristerw Exp $
-# $Id: Makefile,v 1.1877 2005/07/27 02:52:49 kristerw Exp $
+# $NetBSD: Makefile,v 1.1878 2005/07/27 17:43:10 lexort Exp $
+# $Id: Makefile,v 1.1878 2005/07/27 17:43:10 lexort Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -268,7 +268,6 @@ SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-CornerXMMS
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
-SUBDIR+=	gaim-otr
 SUBDIR+=	galib
 SUBDIR+=	gauche-fastcgi
 SUBDIR+=	gcl
@@ -476,7 +475,6 @@ SUBDIR+=	libhttpd
 SUBDIR+=	liblingoteach
 SUBDIR+=	libmusclecard
 SUBDIR+=	libneural
-SUBDIR+=	libotr
 SUBDIR+=	libpano12
 SUBDIR+=	libparsifal
 SUBDIR+=	libpcap-latest
