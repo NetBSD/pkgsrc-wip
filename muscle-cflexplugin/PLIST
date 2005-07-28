@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/28 19:38:07 udontknow Exp $
+lib/pcsc-lite/drivers/slbCryptoflex.bundle/Contents/Info.plist
+lib/pcsc-lite/drivers/slbCryptoflex.bundle/Contents/${OPSYS}/libcryptoflex.so
+lib/pcsc-lite/drivers/slbCryptoflex.bundle/Contents/PkgInfo
+lib/pcsc-lite/drivers/slbCryptoflex.bundle/Contents/Resources/English.lproj/InfoPlist.strings
+@dirrm lib/pcsc-lite/drivers/slbCryptoflex.bundle/Contents/Resources/English.lproj
+@dirrm lib/pcsc-lite/drivers/slbCryptoflex.bundle/Contents/Resources
+@dirrm lib/pcsc-lite/drivers/slbCryptoflex.bundle/Contents/${OPSYS}
+@dirrm lib/pcsc-lite/drivers/slbCryptoflex.bundle/Contents
+@dirrm lib/pcsc-lite/drivers/slbCryptoflex.bundle
