@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1879 2005/07/27 19:06:20 udontknow Exp $
-# $Id: Makefile,v 1.1879 2005/07/27 19:06:20 udontknow Exp $
+# $NetBSD: Makefile,v 1.1880 2005/07/28 19:12:50 udontknow Exp $
+# $Id: Makefile,v 1.1880 2005/07/28 19:12:50 udontknow Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -593,6 +593,7 @@ SUBDIR+=	mupen64-plugin-input
 SUBDIR+=	mupen64-plugin-rsp
 SUBDIR+=	mupen64-plugin-sound
 SUBDIR+=	mupen64-plugin-video
+SUBDIR+=	muscle-mcardplugin
 SUBDIR+=	muscle-pam
 SUBDIR+=	muscle-pkcs11
 SUBDIR+=	muscle-tools
