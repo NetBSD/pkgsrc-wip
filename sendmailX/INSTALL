@@ -1,10 +1,12 @@
-# $NetBSD: INSTALL,v 1.4 2005/07/27 16:04:22 adrian_p Exp $
+# $NetBSD: INSTALL,v 1.5 2005/07/28 11:33:59 adrian_p Exp $
 
 # Directories and files
 #
 SMXQD=@VARBASE@/spool/smx
 DEFEDB=${SMXQD}/defedb
 LOGDIR=@VARBASE@/log/smx
+SED=@SED@
+SMXETC=@SMXETC@
 
 case ${STAGE} in
 
@@ -67,6 +69,17 @@ POST-INSTALL)
 	${CHMOD} 0755 ${LOGDIR}/smar.log
 	${CHMOD} 0755 ${LOGDIR}/smtpc.log
 	${CHMOD} 0755 ${LOGDIR}/smtps.log
+
+	# Fix the GID in smx.conf
+	#
+	GID=`@PREFIX@/bin/runas smxc @PREFIX@/bin/t-getgroup smxc 2>/dev/null`
+
+	${SED} "s/@SMXCGID@/${GID}/g" ${SMXETC}/smx.conf \
+		> ${SMXETC}/smx.conf.new
+	${MV} ${SMXETC}/smx.conf.new ${SMXETC}/smx.conf
+
+	${CHOWN} smx:smx ${SMXETC}/smx.conf 
+	${CHMOD} 0644 ${SMXETC}/smx.conf
 
 	;;
 

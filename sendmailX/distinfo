@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2005/07/18 13:22:07 adrian_p Exp $
+$NetBSD: distinfo,v 1.3 2005/07/28 11:34:03 adrian_p Exp $
 
 SHA1 (smX-0.0.Alpha8.0.tar.gz) = 47e3f7020805ecc658c7ff8a8062da0ffc3df838
 RMD160 (smX-0.0.Alpha8.0.tar.gz) = 62abfab180b48b5672916201be839ea5e29fbdda
 Size (smX-0.0.Alpha8.0.tar.gz) = 3655879 bytes
-SHA1 (patch-aa) = f4293f55306b649d4455512db651f0e73ddad708
+SHA1 (patch-aa) = a3fd418dd7204b42bab2ac0e84e989467882c2ea
 SHA1 (patch-ab) = 76e025b9080db4489d070be2d3fd0a9b83820579
+SHA1 (patch-ac) = 173e3b889754435537e81d5f3d894c4acaee33fa

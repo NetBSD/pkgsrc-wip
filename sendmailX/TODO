@@ -2,7 +2,6 @@
   out of the box
 
 - sendmailx, sendailX, smx or smX - choose one and stick to it
-- fix the current example smx.conf file (see TODO in the file)
 
 - Test TLS support
 - Test SASL support

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/20 00:21:00 adrian_p Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/28 11:34:03 adrian_p Exp $
 
 DISTNAME=	smX-${VERSION}
 PKGNAME=	sendmailX-${VERSION}
@@ -14,6 +14,7 @@ GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 PTHREAD_OPTS+=	require
 VERSION=	0.0.Alpha8.0
+USE_TOOLS+=	sed
 
 # Note: This will work on Linux, NetBSD, OpenBSD, SunOS, OSF1 and UnixWare but
 # it will not work on Darwin and Interix.  Basically pkgsrc does not have
@@ -25,7 +26,7 @@ USERMOD?=	/usr/sbin/usermod
 EGDIR=		${PREFIX}/share/examples/smX
 DOCDIR=		${PREFIX}/share/doc/smX
 FILES_SUBST+=	PREFIX=${PREFIX} SMXCNF=${SMXCNF} USERMOD=${USERMOD}
-FILES_SUBST+=	VARBASE=${VARBASE} HOSTNAME=${HOSTNAME} 
+FILES_SUBST+=	VARBASE=${VARBASE} HOSTNAME=${HOSTNAME} SED=${SED}
 FILES_SUBST+=	SMXETC=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	smx
@@ -70,6 +71,9 @@ post-extract:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/Makefile \
 		> ${WRKDIR}/Makefile
 
+post-build:
+	@cd ${WRKSRC}/checks && ${MAKE} check
+
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -80,5 +84,6 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/mt ${EGDIR}/mt
 	${INSTALL_DATA} ${WRKSRC}/doc/README.txt ${DOCDIR}/README.txt
 	${INSTALL_DATA} ${WRKSRC}/doc/README.html ${DOCDIR}/README.html
+	${INSTALL_PROGRAM} ${WRKSRC}/checks/t-getgroup ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
