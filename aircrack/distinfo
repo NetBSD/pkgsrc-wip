@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/06/25 23:14:13 ishit Exp $
+$NetBSD: distinfo,v 1.4 2005/07/28 17:34:48 poppnk Exp $
 
-SHA1 (aircrack-2.1.tgz) = 7271b3ffe7d068ca8a11c8a62536cab2f131bcc4
-RMD160 (aircrack-2.1.tgz) = 1f5126611820d77355dde8256979ca74ed3263d9
-Size (aircrack-2.1.tgz) = 113683 bytes
-SHA1 (patch-aa) = 523dff7118850446e7910117d9271b343635debe
+SHA1 (aircrack-2.2-beta11.tgz) = 1dff8a40d18cad04e626bb17421892d9b5827c3b
+RMD160 (aircrack-2.2-beta11.tgz) = 00845f13546103316a22da4762107778229a4072
+Size (aircrack-2.2-beta11.tgz) = 223330 bytes
+SHA1 (patch-aa) = e99b90a276d497613d0b0ca75e3bad4d0f50420c

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/09 19:41:53 poppnk Exp $
-bin/802ether
+@comment $NetBSD: PLIST,v 1.2 2005/07/28 17:34:48 poppnk Exp $
 bin/aircrack
+bin/airdecap
+bin/arpforge
 bin/aireplay
 bin/airodump
-bin/hopper.sh
