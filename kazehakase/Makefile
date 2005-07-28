@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/21 16:34:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/28 23:16:19 jeremy-c-reed Exp $
 #
 
 DISTNAME=		kazehakase-0.2.8
@@ -6,7 +6,7 @@ CATEGORIES=		www
 MASTER_SITES=		http://osdn.dl.sourceforge.jp/kazehakase/15343/ \
 			http://keihanna.dl.sourceforge.jp/kazehakase/15343/
 
-MAINTAINER=		reed@reedmedia.net
+MAINTAINER=		lems@gmx.net
 HOMEPAGE=		http://kazehakase.sourceforge.jp/
 COMMENT=		Web browser with multiple layout engines support
 
