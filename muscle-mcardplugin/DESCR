@@ -1,0 +1,4 @@
+MuscleCard applet plugin for the MUSCLE framework
+This package allows you to develop applications to the card edge
+interface plug-in and begin deploying the card edge applet to JavaCard
+compliant smartcards.
