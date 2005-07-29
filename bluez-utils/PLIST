@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/22 09:43:15 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/07/29 17:59:14 poppnk Exp $
 bin/bluepin
 bin/ciptool
 bin/dund
@@ -8,9 +8,12 @@ bin/l2ping
 bin/pand
 bin/rfcomm
 bin/sdptool
+etc/bluetooth/hcid.conf
+etc/bluetooth/rfcomm.conf
 man/man1/ciptool.1
 man/man1/dund.1
 man/man1/hcitool.1
+man/man1/hidd.1
 man/man1/l2ping.1
 man/man1/pand.1
 man/man1/rfcomm.1
@@ -24,3 +27,6 @@ sbin/hciattach
 sbin/hciconfig
 sbin/hcid
 sbin/sdpd
+@exec ${MKDIR} %D/var/lib/bluetooth
+@dirrm var/lib/bluetooth
+@dirrm var/lib
