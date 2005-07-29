@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/11 17:12:11 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/07/29 08:32:46 ianzag Exp $
 bin/ccgnu2-config
 include/cc++2/cc++/address.h
 include/cc++2/cc++/buffer.h
@@ -40,8 +40,8 @@ include/cc++2/cc++/zstream.h
 info/commoncpp2.info
 lib/libccext2.la
 lib/libccgnu2.la
-lib/pkgconfig/libccext2.${LOWER_VENDOR}
-lib/pkgconfig/libccgnu2.${LOWER_VENDOR}
+lib/pkgconfig/libccext2.pc
+lib/pkgconfig/libccgnu2.pc
 share/aclocal/ost_check2.m4
 @dirrm include/cc++2/cc++
 @dirrm include/cc++2

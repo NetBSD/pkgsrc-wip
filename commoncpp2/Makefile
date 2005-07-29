@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:08 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/29 08:32:46 ianzag Exp $
 #
 
-DISTNAME=		commoncpp2-1.3.8
+DISTNAME=		commoncpp2-1.3.16
 CATEGORIES=		wip devel
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cplusplus/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnutelephony/}
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://cplusplus.sourceforge.net/
