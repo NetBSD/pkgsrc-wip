@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2005/05/08 07:33:18 obache Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/29 13:54:18 obache Exp $
 
-DISTNAME=	foomatic-db-20050508
+DISTNAME=	foomatic-db-3.0-20050729
 CATEGORIES=	print
 MASTER_SITES=	http://www.linuxprinting.org/download/foomatic/
 
@@ -10,7 +10,7 @@ COMMENT=	Spooler independent postscript printing filter
 
 DEPENDS+=	foomatic-filters-[0-9]*:../../print/foomatic-filters
 
-WRKSRC=		${WRKDIR}/foomatic-db-20050508		# XXX HACK ALERT
+WRKSRC=		${WRKDIR}/foomatic-db-20050729		# XXX HACK ALERT
 
 GNU_CONFIGURE=	YES
 
