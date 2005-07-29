@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2005/07/26 05:58:14 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/29 01:25:30 jgoamakf Exp $
 
-DISTNAME=		Tree-Simple-VisitorFactory-0.05
+DISTNAME=		Tree-Simple-VisitorFactory-0.07
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5trs
 CATEGORIES=		devel perl5
