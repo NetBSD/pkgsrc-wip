@@ -1,0 +1,5 @@
+This is a subclass of Date::Range that uses Time::Piece objects rather than Date::Simple objects.
+
+It only works at the precision of complete days - times are ignored in all calculations.
+
+WWW: http://search.cpan.org/~tmtm/Time-Piece-Range-1.1/
