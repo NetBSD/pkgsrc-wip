@@ -1,0 +1,73 @@
+$NetBSD: patch-af,v 1.1 2005/07/29 21:32:38 gschwarz Exp $
+
+--- oRTP/src/rtpsession.c.orig	2005-07-28 23:19:49.000000000 +0200
++++ oRTP/src/rtpsession.c	2005-07-28 23:26:19.000000000 +0200
+@@ -383,10 +383,9 @@
+ 		    case AF_INET:
+ 		      if (IN_MULTICAST(ntohl(((struct sockaddr_in *) res->ai_addr)->sin_addr.s_addr)))
+ 			{
+-		          struct ip_mreqn mreq;
++		          struct ip_mreq mreq;
+ 			  mreq.imr_multiaddr.s_addr = ((struct sockaddr_in *) res->ai_addr)->sin_addr.s_addr;
+-			  mreq.imr_address.s_addr = INADDR_ANY;
+-			  mreq.imr_ifindex = 0;
++			  mreq.imr_interface.s_addr = INADDR_ANY;
+ 			  err = setsockopt(session->rtp.socket, IPPROTO_IP, IP_ADD_MEMBERSHIP, &mreq, sizeof(mreq));
+ 			  if (err < 0)
+ 			    {
+@@ -397,12 +396,12 @@
+ 			}
+ 		      break;
+ 		    case AF_INET6:
+-		      if (IN6_IS_ADDR_MULTICAST((((struct sockaddr_in6 *) res->ai_addr)->sin6_addr.s6_addr)))
++		      if (IN6_IS_ADDR_MULTICAST(&(((struct sockaddr_in6 *) res->ai_addr)->sin6_addr)))
+ 			{
+ 			  struct ipv6_mreq mreq;
+ 			  mreq.ipv6mr_multiaddr = ((struct sockaddr_in6 *) res->ai_addr)->sin6_addr;
+ 			  mreq.ipv6mr_interface = 0;
+-			  err = setsockopt(session->rtp.socket, IPPROTO_IPV6, IPV6_ADD_MEMBERSHIP, &mreq, sizeof(mreq));
++			  err = setsockopt(session->rtp.socket, IPPROTO_IPV6, IPV6_JOIN_GROUP, &mreq, sizeof(mreq));
+ 			  if (err < 0)
+ 			    {
+ 			      g_warning ("Fail to join address group: %s.", getSocketError());
+@@ -460,10 +459,9 @@
+ 		    case AF_INET:
+ 		      if (IN_MULTICAST(ntohl(((struct sockaddr_in *) res->ai_addr)->sin_addr.s_addr)))
+ 			{
+-		          struct ip_mreqn mreq;
++		          struct ip_mreq mreq;
+ 			  mreq.imr_multiaddr.s_addr = ((struct sockaddr_in *) res->ai_addr)->sin_addr.s_addr;
+-			  mreq.imr_address.s_addr = INADDR_ANY;
+-			  mreq.imr_ifindex = 0;
++			  mreq.imr_interface.s_addr = INADDR_ANY;
+ 			  err = setsockopt(session->rtcp.socket, IPPROTO_IP, IP_ADD_MEMBERSHIP, &mreq, sizeof(mreq));
+ 			  if (err < 0)
+ 			    {
+@@ -475,12 +473,12 @@
+ 			}
+ 		      break;
+ 		    case AF_INET6:
+-		      if (IN6_IS_ADDR_MULTICAST((((struct sockaddr_in6 *) res->ai_addr)->sin6_addr.s6_addr)))
++		      if (IN6_IS_ADDR_MULTICAST(&(((struct sockaddr_in6 *) res->ai_addr)->sin6_addr)))
+ 			{
+ 			  struct ipv6_mreq mreq;
+ 			  mreq.ipv6mr_multiaddr = ((struct sockaddr_in6 *) res->ai_addr)->sin6_addr;
+ 			  mreq.ipv6mr_interface = 0;
+-			  err = setsockopt(session->rtcp.socket, IPPROTO_IPV6, IPV6_ADD_MEMBERSHIP, &mreq, sizeof(mreq));
++			  err = setsockopt(session->rtcp.socket, IPPROTO_IPV6, IPV6_JOIN_GROUP, &mreq, sizeof(mreq));
+ 			  if (err < 0)
+ 			    {
+ 			      g_warning ("Fail to join address group: %s.", getSocketError());
+@@ -558,10 +556,9 @@
+ #ifndef __hpux
+ 	if (IN_MULTICAST(ntohl(session->rtp.loc_addr.sin_addr.s_addr)))
+ 	  {
+-	    struct ip_mreqn mreq;
++	    struct ip_mreq mreq;
+ 	    mreq.imr_multiaddr.s_addr = session->rtp.loc_addr.sin_addr.s_addr;
+-	    mreq.imr_address.s_addr = INADDR_ANY;
+-	    mreq.imr_ifindex = 0;
++	    mreq.imr_interface.s_addr = INADDR_ANY;
+ 	    err = setsockopt(session->rtp.socket, IPPROTO_IP, IP_ADD_MEMBERSHIP, &mreq, sizeof(mreq));
+ 	    if (err == 0)
+ 	      err = setsockopt(session->rtcp.socket, IPPROTO_IP, IP_ADD_MEMBERSHIP, &mreq, sizeof(mreq));

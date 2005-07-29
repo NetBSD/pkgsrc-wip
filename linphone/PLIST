@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/25 19:49:40 gschwarz Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/07/29 21:32:38 gschwarz Exp $
 ${GUI}bin/linphone
 bin/linphonec
 include/linphone/config.h
@@ -25,22 +25,22 @@ lib/libortp.la
 man/man1/linphone.1
 man/man1/linphonec.1
 share/gnome/apps/Internet/linphone.desktop
-share/gtk-doc/html/ortp/book1.html
-share/gtk-doc/html/ortp/ortp-library-management-functions.html
-share/gtk-doc/html/ortp/ortp-multiplexing-sessions---in-a-one-thread-design.html
-share/gtk-doc/html/ortp/ortp-rtp-payloads-and-profiles.html
-share/gtk-doc/html/ortp/ortp-rtpsession-api.html
-share/gtk-doc/html/ortp/ortp-telephone-events---rfc2833-.html
-share/gtk-doc/html/ortp/ortpapi.html
-share/gtk-doc/html/mediastreamer/book1.html
-share/gtk-doc/html/mediastreamer/coreapi.html
-share/gtk-doc/html/mediastreamer/mediastreamer-filters.html
-share/gtk-doc/html/mediastreamer/mediastreamer-msringplayer.html
-share/gtk-doc/html/mediastreamer/mediastreamer-mssync.html
-share/gtk-doc/html/mediastreamer/mediastreamer-running-processing-chains.html
-share/gtk-doc/html/mediastreamer/msfilterimplementations.html
-share/gtk-doc/html/mediastreamer/userapi.html
-share/gtk-doc/html/mediastreamer/index.sgml
+share/doc/html/ortp/book1.html
+share/doc/html/ortp/ortp-library-management-functions.html
+share/doc/html/ortp/ortp-multiplexing-sessions---in-a-one-thread-design.html
+share/doc/html/ortp/ortp-rtp-payloads-and-profiles.html
+share/doc/html/ortp/ortp-rtpsession-api.html
+share/doc/html/ortp/ortp-telephone-events---rfc2833-.html
+share/doc/html/ortp/ortpapi.html
+share/doc/html/mediastreamer/book1.html
+share/doc/html/mediastreamer/coreapi.html
+share/doc/html/mediastreamer/mediastreamer-filters.html
+share/doc/html/mediastreamer/mediastreamer-msringplayer.html
+share/doc/html/mediastreamer/mediastreamer-mssync.html
+share/doc/html/mediastreamer/mediastreamer-running-processing-chains.html
+share/doc/html/mediastreamer/msfilterimplementations.html
+share/doc/html/mediastreamer/userapi.html
+share/doc/html/mediastreamer/index.sgml
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/linphone.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/linphone.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/linphone.mo
@@ -74,8 +74,8 @@ share/sounds/linphone/rings/tapping.wav
 share/sounds/linphone/rings/toy.wav
 @dirrm include/linphone
 @dirrm include/ortp
-@dirrm share/gtk-doc/html/ortp
-@dirrm share/gtk-doc/html/mediastreamer
+@dirrm share/doc/html/ortp
+@dirrm share/doc/html/mediastreamer
 @dirrm share/pixmaps/linphone
 @dirrm share/sounds/linphone/rings
 @dirrm share/sounds/linphone

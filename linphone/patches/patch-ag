@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1 2005/07/29 21:32:38 gschwarz Exp $
+
+--- mediastreamer/osscard.c.orig	2005-07-28 23:46:08.000000000 +0200
++++ mediastreamer/osscard.c	2005-07-28 23:47:05.000000000 +0200
+@@ -430,8 +430,12 @@
+ 	return base;
+ }
+ 
++#ifndef DSP_NAME
+ #define DSP_NAME "/dev/dsp"
++#endif
++#ifndef MIXER_NAME
+ #define MIXER_NAME "/dev/mixer"
++#endif
+ 
+ gint oss_card_manager_init(SndCardManager *manager, gint tabindex)
+ {
