@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1881 2005/07/28 19:40:20 udontknow Exp $
-# $Id: Makefile,v 1.1881 2005/07/28 19:40:20 udontknow Exp $
+# $NetBSD: Makefile,v 1.1882 2005/07/29 02:17:55 jgoamakf Exp $
+# $Id: Makefile,v 1.1882 2005/07/29 02:17:55 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -671,8 +671,10 @@ SUBDIR+=	p5-DBD-ODBC
 SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Date-Simple
 SUBDIR+=	p5-Devel-Profiler
+SUBDIR+=	p5-Email-FolderType
 SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-Exporter-Lite
+SUBDIR+=	p5-File-Path-Expand
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-HTML-Latex
