@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1882 2005/07/29 02:17:55 jgoamakf Exp $
-# $Id: Makefile,v 1.1882 2005/07/29 02:17:55 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.1883 2005/07/29 06:33:36 jgoamakf Exp $
+# $Id: Makefile,v 1.1883 2005/07/29 06:33:36 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -660,6 +660,7 @@ SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-Bit-Vector-Minimal
 SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-Cache-Mmap
+SUBDIR+=	p5-Class-DBI-Loader
 SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Class-ISA
 SUBDIR+=	p5-Class-Virtual
@@ -672,6 +673,7 @@ SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Date-Simple
 SUBDIR+=	p5-Devel-Profiler
 SUBDIR+=	p5-Email-FolderType
+SUBDIR+=	p5-Email-LocalDelivery
 SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-Exporter-Lite
 SUBDIR+=	p5-File-Path-Expand
