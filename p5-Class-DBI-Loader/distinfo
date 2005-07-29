@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/07/29 06:19:27 jgoamakf Exp $
+
+SHA1 (Class-DBI-Loader-0.22.tar.gz) = 09265de333a8c204413d14236d32ebac0a18d124
+RMD160 (Class-DBI-Loader-0.22.tar.gz) = 310e37deec76b823d2ec8e40964ccf6d4c6f5d04
+Size (Class-DBI-Loader-0.22.tar.gz) = 7896 bytes

@@ -1,0 +1,2 @@
+Class::DBI::Loader automate the definition of Class::DBI sub-classes.
+scan table schemas and setup columns, primary key.
