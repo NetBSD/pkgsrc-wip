@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:10:12 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/29 17:51:32 poppnk Exp $
 #
 
-DISTNAME=		bluez-hcidump-1.18
+DISTNAME=		bluez-hcidump-1.24
 CATEGORIES=		wip net
 MASTER_SITES=		http://bluez.sf.net/download/
 
