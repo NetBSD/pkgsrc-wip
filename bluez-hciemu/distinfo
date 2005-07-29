@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/07/29 18:09:52 poppnk Exp $
+
+SHA1 (bluez-hciemu-1.2.tar.gz) = 2bae4b1949f919ec616c35b3c322e28d6ba5763f
+RMD160 (bluez-hciemu-1.2.tar.gz) = 5f3c0c396f8785c7798444078612d06ec2cba76c
+Size (bluez-hciemu-1.2.tar.gz) = 76130 bytes
