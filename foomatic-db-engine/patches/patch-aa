@@ -1,15 +1,28 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/21 21:28:25 bjan2 Exp $
+$NetBSD: patch-aa,v 1.2 2005/07/30 02:28:21 obache Exp $
 
---- configure.orig	2004-02-18 19:15:46.000000000 -0700
+--- configure.orig	2004-09-15 06:27:41.000000000 +0900
 +++ configure
-@@ -1869,10 +1869,10 @@ done
+@@ -524,10 +524,6 @@ fi
+ 
+ 
+ 
+-if [ x$sysconfdir = 'x${prefix}/etc' ]; then
+-  sysconfdir=/etc
+-fi
+-
+ # Extract the first word of "gcc", so it can be a program name with args.
+ set dummy gcc; ac_word=$2
+ echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+@@ -1414,11 +1410,11 @@ done
+ 
  SPOOLSEARCHPATH=/var/spool:/usr/spool/:/usr/local/spool:/usr/local/var/spool:/var/local/spool:/var/local
  LOGSEARCHPATH=/var/log:/usr/log:/usr/local/log:/usr/local/var/log:/var/local/log:/var/local
- SYSCONFSEARCHPATH=/etc:/usr/etc:/usr/local/etc:/var/etc
+-SYSCONFSEARCHPATH=/etc:/usr/etc:/usr/local/etc:/var/etc
 -SBINSEARCHPATH=/usr/sbin:/sbin:/usr/local/sbin:/etc/sbin
 -BINSEARCHPATH=/usr/bin:/bin:/usr/local/bin
 -DATASEARCHPATH=/usr/share:/usr/local/share:/usr/lib:/usr/local/lib:/opt
 -LIBSEARCHPATH=/usr/lib:/lib:/usr/local/lib:/usr/local/libexec:/opt
++SYSCONFSEARCHPATH=${prefix}/etc:/usr/etc:/usr/local/etc:/var/etc
 +SBINSEARCHPATH=${prefix}/sbin:/usr/sbin:/sbin:/usr/local/sbin:/etc/sbin
 +BINSEARCHPATH=${prefix}/bin:/usr/bin:/bin:/usr/local/bin
 +DATASEARCHPATH=${prefix}/share:/usr/share:/usr/local/share:/usr/lib:/usr/local/lib:/opt
@@ -17,3 +30,28 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/21 21:28:25 bjan2 Exp $
  PTALPIPESSEARCHPATH=/var/run:/var:/var/ptal:/usr/var/run:/usr/var:/usr/var/ptal:/usr/local/var/run:/usr/local/var:/usr/local/var/ptal:/dev:/dev/ptal
  MTINKPIPESSEARCHPATH=/var:/var/run:/usr/var/:/usr/var/run:/usr/local/var:/usr/local/var/run:/dev
  
+@@ -1429,24 +1425,6 @@ BSB=$BINSEARCHPATH:$SBINSEARCHPATH
+ SBB=$SBINSEARCHPATH:$BINSEARCHPATH
+ SYS_LIB_PATH=$SYSCONFSEARCHPATH:$LIBSEARCHPATH
+ 
+-uname=`uname`
+-uversion=`uname -r | sed -e '1,$s/[^0-9]//g'`
+-if test x$uname = xIRIX64; then
+-  uname="IRIX"
+-fi
+-
+-if test x$uname = xIRIX; then
+-  SPOOLSEARCHPATH="/usr/freeware/var/spool:$SPOOLSEARCHPATH"
+-  LOGSEARCHPATH="/usr/freeware/var/log:$LOGSEARCHPATH"
+-  SYSCONFSEARCHPATH="/usr/freeware/etc:$SYSCONFSEARCHPATH"
+-  BINSEARCHPATH="/usr/freeware/bin:$BINSEARCHPATH"
+-  SBINSEARCHPATH="/usr/freeware/sbin:$BINSEARCHPATH"
+-  DATASEARCHPATH="/usr/freeware/share:$DATASEARCHPATH"
+-  LIBSEARCHPATH="/usr/freeware/lib32:/usr/freeware/lib:$LIBSEARCHPATH"
+-  PTALPIPESSEARCHPATH="/usr/freeware/var/run:$PTALPIPESSEARCHPATH"
+-  MTINKPIPESSEARCHPATH="/usr/freeware/var/run:$MTINKPIPESSEARCHPATH"
+-fi
+-
+ v="cannot open";
+ # Extract the first word of "file", so it can be a program name with args.
+ set dummy file; ac_word=$2

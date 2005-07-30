@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/21 21:28:25 bjan2 Exp $
+$NetBSD: distinfo,v 1.2 2005/07/30 02:28:21 obache Exp $
 
-SHA1 (foomatic-db-engine-3.0.1.tar.gz) = 256aa8b227889942e5c5aee9c0046e6ac22b7399
-Size (foomatic-db-engine-3.0.1.tar.gz) = 290338 bytes
-SHA1 (patch-aa) = 176809ebe2b383cd427fa940d699ffd89fed9ff3
+SHA1 (foomatic-db-engine-3.0.2.tar.gz) = 6c3d228cfe7d698e63575b6311ab485ebe7c3e61
+RMD160 (foomatic-db-engine-3.0.2.tar.gz) = 7160ce989e80c84090eccac4b3fb0052116a258c
+Size (foomatic-db-engine-3.0.2.tar.gz) = 286367 bytes
+SHA1 (patch-aa) = 9190b2a3177d9a771d7ca94cd9355509c0157e8f

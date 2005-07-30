@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/21 21:28:25 bjan2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/07/30 02:28:21 obache Exp $
 bin/foomatic-combo-xml
 bin/foomatic-compiledb
 bin/foomatic-configure
@@ -7,8 +7,6 @@ bin/foomatic-perl-data
 bin/foomatic-ppd-options
 bin/foomatic-ppdfile
 bin/foomatic-printjob
-lib/perl5/site_perl/5.6.1/Foomatic/Defaults.pm
-lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Foomatic/.packlist
 man/man1/foomatic-combo-xml.1
 man/man1/foomatic-compiledb.1
 man/man1/foomatic-configure.1
@@ -32,8 +30,3 @@ share/foomatic/templates/pjl_enum_choice.xml
 share/foomatic/templates/pjl_enum_option.xml
 share/foomatic/templates/pjl_num_option.xml
 @dirrm share/foomatic/templates
-@dirrm share/foomatic
-@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Foomatic
-@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto
-@dirrm lib/perl5/site_perl/5.6.1/Foomatic
-@dirrm lib/perl5/site_perl/5.6.1
