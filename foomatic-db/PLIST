@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2005/07/29 13:54:18 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/07/30 01:21:56 obache Exp $
+share/foomatic/db/oldprinterids
 share/foomatic/db/source/driver/PM760p.upp.xml
 share/foomatic/db/source/driver/PM760pl.upp.xml
 share/foomatic/db/source/driver/PM820p.upp.xml
@@ -75,7 +76,6 @@ share/foomatic/db/source/driver/deskjet.xml
 share/foomatic/db/source/driver/dj505j.xml
 share/foomatic/db/source/driver/djet500.xml
 share/foomatic/db/source/driver/dnj650c.xml
-share/foomatic/db/source/driver/driver.dtd
 share/foomatic/db/source/driver/drv_x125.xml
 share/foomatic/db/source/driver/drv_z42.xml
 share/foomatic/db/source/driver/epl5700l.xml
@@ -586,7 +586,6 @@ share/foomatic/db/source/opt/min12xxw-PageSize.xml
 share/foomatic/db/source/opt/min12xxw-Resolution.xml
 share/foomatic/db/source/opt/oki4w-PageSize.xml
 share/foomatic/db/source/opt/oki4w-Resolution.xml
-share/foomatic/db/source/opt/opt.dtd
 share/foomatic/db/source/opt/pbmtozjs-PageSize.xml
 share/foomatic/db/source/opt/pcl3-ConfigureEveryPage.xml
 share/foomatic/db/source/opt/pentaxpj-Density.xml
@@ -1771,7 +1770,7 @@ share/foomatic/db/source/printer/Lanier-LP127n_LP128n_PS.xml
 share/foomatic/db/source/printer/Lanier-LP128_PS.xml
 share/foomatic/db/source/printer/Lanier-LP135n_PS.xml
 share/foomatic/db/source/printer/Lanier-LP138c_PS.xml
-share/foomatic/db/source/printer/Lanier-LP175n_LP175hdn_PS.xml
+share/foomatic/db/source/printer/Lanier-LP175_LP175hdn_PS.xml
 share/foomatic/db/source/printer/Lanier-LP235c_PS.xml
 share/foomatic/db/source/printer/Lanier-LP_020c_PS.xml
 share/foomatic/db/source/printer/Lanier-LP_036c_PS.xml
@@ -2298,9 +2297,6 @@ share/foomatic/db/source/printer/Xerox-WorkCentre_XD120f.xml
 share/foomatic/db/source/printer/Xerox-WorkCentre_XE80.xml
 share/foomatic/db/source/printer/Xerox-WorkCentre_XE90fx.xml
 share/foomatic/db/source/printer/Xerox-WorkCentre_XK35c.xml
-share/foomatic/db/source/printer/printer.dtd
-share/foomatic/db/source/printer/printer.rnc
-@dirrm share/foomatic/db/oldprinterids
 @dirrm share/foomatic/db/source/driver
 @dirrm share/foomatic/db/source/opt
 @dirrm share/foomatic/db/source/printer
