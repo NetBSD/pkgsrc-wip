@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2003/12/25 20:37:34 mpasternak Exp $
+$NetBSD: patch-ac,v 1.2 2005/07/31 19:36:22 shattered Exp $
 
 --- main/locstr.cc.orig	Thu Dec 25 20:14:34 2003
 +++ main/locstr.cc	Thu Dec 25 20:21:44 2003
@@ -11,17 +11,3 @@ $NetBSD: patch-ac,v 1.1 2003/12/25 20:37:34 mpasternak Exp $
  	DBC_RETVAL_IF_FAIL(src!=NULL,0);
  	char data[MAX_LEN];
  	char *tmp=extract_string(src,data);
-@@ -746,7 +746,12 @@
- 			sscanf_int(tmpdata,&(date.tm_sec));
- 		};
- 	};
--	return(mktime(&date)+timezone);
-+   
-+        /* earlier call to localtime_r should attach timezone, which is 
-+	 * obsolete --
-+	 * http://www.freebsd.org/cgi/man.cgi?query=timezone&apropos=0&sektion=3&manpath=NetBSD+1.6&format=html
-+	 */
-+	return(mktime(&date)); /* +timezone); */
- };
- 
- /* check_mask();

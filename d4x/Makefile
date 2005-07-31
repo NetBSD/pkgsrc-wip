@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/07/27 16:25:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/31 19:36:16 shattered Exp $
 #
 
-DISTNAME=		d4x-2.5.0beta2
+DISTNAME=		d4x-2.5.0final
+PKGNAME=		d4x-2.5.0
 CATEGORIES=		net
 MASTER_SITES=		http://www.krasu.ru/soft/chuchelo/files/
 

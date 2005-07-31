@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.2 2004/02/02 22:12:24 mpasternak Exp $
+$NetBSD: distinfo,v 1.3 2005/07/31 19:36:16 shattered Exp $
 
-SHA1 (d4x-2.5.0beta2.tar.gz) = 7d9750959527d8fd9fbc83d9ae5ebb64aec49e38
-Size (d4x-2.5.0beta2.tar.gz) = 1451792 bytes
+SHA1 (d4x-2.5.0final.tar.gz) = e6a3763fdc8c6f24035528997c579a4391bdea83
+RMD160 (d4x-2.5.0final.tar.gz) = cc5a8e92668f8648d377b57133eccfeee94afab1
+Size (d4x-2.5.0final.tar.gz) = 1766770 bytes
 SHA1 (patch-aa) = f414b5ea6fac6d507386c481100f89705c290ac9
 SHA1 (patch-ab) = 62adf0ecd554eaf3acc7ed6fa8e905e9c714e6d4
-SHA1 (patch-ac) = 844339e86c9440e0d90802a57742470388c0b241
+SHA1 (patch-ac) = 78aea646de81dca5616f8bbf51e3ade5abf00776
 SHA1 (patch-ad) = 667700d011861899dd893f4ea4d143b1dd04a25b
