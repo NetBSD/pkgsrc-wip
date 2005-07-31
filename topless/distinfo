@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/06/09 13:48:51 obache Exp $
+$NetBSD: distinfo,v 1.3 2005/07/31 09:34:05 obache Exp $
 
-SHA1 (topless-1.36/topless) = 81f8922058f17db98887a1e176a85e195175693d
-RMD160 (topless-1.36/topless) = c989de936c116f6361650301b41d4b5500597f91
-Size (topless-1.36/topless) = 6275 bytes
+SHA1 (topless-1.46.tar.gz) = 004dd69313ccfbc0fd52fdff5ff76e0dd682cb76
+RMD160 (topless-1.46.tar.gz) = 84e2aea40429ebcf3511353830fbbf8f950bd29a
+Size (topless-1.46.tar.gz) = 4254 bytes
