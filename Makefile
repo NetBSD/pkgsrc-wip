@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1885 2005/07/31 11:07:59 obache Exp $
-# $Id: Makefile,v 1.1885 2005/07/31 11:07:59 obache Exp $
+# $NetBSD: Makefile,v 1.1886 2005/07/31 16:32:19 scode Exp $
+# $Id: Makefile,v 1.1886 2005/07/31 16:32:19 scode Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -760,6 +760,7 @@ SUBDIR+=	picasm
 SUBDIR+=	picprog
 SUBDIR+=	pinball
 SUBDIR+=	pizza
+SUBDIR+=	pkgmanager
 SUBDIR+=	pkg_fake
 SUBDIR+=	pkg_install-testing
 SUBDIR+=	pkg_select
