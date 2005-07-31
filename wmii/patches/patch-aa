@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2005/07/16 20:04:40 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.10 2005/07/31 10:03:28 leonardschmidt Exp $
 
---- config.mk.orig	2005-07-15 10:27:07.000000000 +0000
+--- config.mk.orig	2005-07-30 22:14:00.000000000 +0000
 +++ config.mk
 @@ -1,24 +1,24 @@
  # Customize to fit your system
@@ -35,9 +35,9 @@ $NetBSD: patch-aa,v 1.9 2005/07/16 20:04:40 leonardschmidt Exp $
  
  # str{l,n}{cat,cpy} support, if you have OpenBSD you can use strl*
  STRLCPY     = strncpy
-@@ -29,14 +29,14 @@ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTR
- VERSION     = 2-rc2
- #VERSION     = 2-current
+@@ -28,14 +28,14 @@ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTR
+ # compiler
+ VERSION     = 2
  # Note: - under Solaris add -D__EXTENSIONS__ to CFLAGS
 -CFLAGS      = -O0 -g -Wall -pedantic ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\" -DVERSION=\"${VERSION}\"
 -LDFLAGS     = -g ${LIBS}

@@ -1,14 +1,14 @@
-# $NetBSD: Makefile.common,v 1.81 2005/07/24 22:58:09 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.82 2005/07/31 10:03:28 leonardschmidt Exp $
 #
 
-DISTNAME=	wmii-2-rc2
+DISTNAME=	wmii-2
 CATEGORIES=	wm x11
 MASTER_SITES=	http://wmi.modprobe.de/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://wmi.modprobe.de/
-COMMENT=	Modular, minimalist and highly customizable window manager
+COMMENT=	Modular and keyboard-friendly window manager
 
 DISTINFO_FILE=	${.CURDIR}/../../wip/wmii/distinfo
 PATCHDIR=	${.CURDIR}/../../wip/wmii/patches
