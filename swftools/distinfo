@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/07/31 11:05:47 obache Exp $
+
+SHA1 (swftools-0.6.3.tar.gz) = 431f2716341486d68c89c5c4439c3efa305e5f00
+RMD160 (swftools-0.6.3.tar.gz) = cc11e6c7e597f511d4129dd1fa4f42f45fc2419b
+Size (swftools-0.6.3.tar.gz) = 1496603 bytes
