@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/07/31 16:30:54 scode Exp $
+$NetBSD: distinfo,v 1.2 2005/07/31 17:42:03 scode Exp $
 
-SHA1 (pkgmanager-0.1.0.tar.gz) = 9e67ab0f5d99248b192872a585211bcf0e3b10e8
-RMD160 (pkgmanager-0.1.0.tar.gz) = 3a00da123212b7571bc72a4ea8872a21eff120a6
-Size (pkgmanager-0.1.0.tar.gz) = 7091 bytes
+SHA1 (pkgmanager-0.1.1.tar.gz) = b1c680c7736eb8285d10e43681e840ad4ea49bad
+RMD160 (pkgmanager-0.1.1.tar.gz) = 9d7eb68bcd0975468ef40b291b29666f9b8f5231
+Size (pkgmanager-0.1.1.tar.gz) = 7197 bytes
 SHA1 (clocc-06-24-05.tgz) = 557adea95d1c2844054fe45d41c40ea7b4383239
 RMD160 (clocc-06-24-05.tgz) = b00b1630d64b2b942d8eeb885bb2e2b4ce0e3051
 Size (clocc-06-24-05.tgz) = 4516087 bytes

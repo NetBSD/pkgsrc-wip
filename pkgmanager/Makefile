@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/31 16:30:54 scode Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/31 17:42:03 scode Exp $
 #
 
-PKGMGR_VERSION= 0.1.0
+PKGMGR_VERSION= 0.1.1
 DISTNAME=	pkgmanager-${PKGMGR_VERSION}
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://starfury.scode.org/pkgmanager/
@@ -15,12 +15,13 @@ MAINTAINER=	peter.schuller@infidyne.com
 HOMEPAGE=	http://www.scode.org/pkgmanager/
 COMMENT=	Package manager for pkgsrc
 
+USE_TOOLS+=     gmake
 DEPENDS+=       clisp>=2.33.2:../../lang/clisp
-BUILD_DEPENDS+=	gmake>=2.80:../../devel/gmake
 
-CLISP=          ${PREFIX}/bin/clisp
-PKGMGR_SRC=     ${WRKDIR}/pkgmanager-${PKGMGR_VERSION}/src
-
+CLISP=		${PREFIX}/bin/clisp
+PKGMGR_SRC=	${WRKDIR}/pkgmanager-${PKGMGR_VERSION}/src
+PKGMGR_LIBDIR=	${PREFIX}/lib/pkgmanager
+PKGMGR_BINDIR=	${PREFIX}/bin
 SUBST_CLASSES+=		clocc
 SUBST_STAGE.clocc=	post-patch
 SUBST_FILES.clocc=	clocc/clocc.lisp
@@ -36,7 +37,8 @@ SUBST_MESSAGE.wrapper=	"Fixing prefix in pkgmanager shell script wrapper"
 SUBST_CLASSES+=		runner
 SUBST_STAGE.runner=	post-patch
 SUBST_FILES.runner=	pkgmanager-${PKGMGR_VERSION}/src/run.lisp
-SUBST_SED.runner=	-e "s|\*base-dir\* \\\"\.\\\"|\*base-dir\* \\\"${PREFIX}/lib/pkgmanager\\\"|g"
+SUBST_SED.runner=	-e "s|\*base-dir\* \\\"\.\\\"|\*base-dir\* \
+				\\\"${PREFIX}/lib/pkgmanager\\\"|g"
 SUBST_MESSAGE.runner=	"Fixing load base in runner"
 
 post-extract:
@@ -54,12 +56,13 @@ do-build: prepare-clocc
 	                                          ${PKGMGR_SRC}/pkgmanager.lisp
 
 do-install:
-	${MKDIR} -p /etc/pkgmanager/
-	${MKDIR} -p ${PREFIX}/lib/pkgmanager/
-	${INSTALL} -o root -g wheel ${WRKDIR}/init.mem ${PREFIX}/lib/pkgmanager/init.mem
-	${INSTALL} -o root -g wheel ${PKGMGR_SRC}/run.lisp ${PREFIX}/lib/pkgmanager/run.lisp
-	${INSTALL} -o root -g wheel ${PKGMGR_SRC}/packages.fas ${PREFIX}/lib/pkgmanager/packages.fas
-	${INSTALL} -o root -g wheel ${PKGMGR_SRC}/pkgmanager.fas ${PREFIX}/lib/pkgmanager/pkgmanager.fas
-	${INSTALL} -o root -g wheel ${PKGMGR_SRC}/pkgmanager-wrapper.sh ${PREFIX}/bin/pkgmanager
+	${INSTALL_DATA_DIR} /etc/pkgmanager/
+	${INSTALL_DATA_DIR} ${PKGMGR_LIBDIR}
+	${INSTALL_DATA} ${WRKDIR}/init.mem ${PKGMGR_LIBDIR}/init.mem
+	${INSTALL_DATA} ${PKGMGR_SRC}/run.lisp ${PKGMGR_LIBDIR}/run.lisp
+	${INSTALL_DATA} ${PKGMGR_SRC}/packages.fas ${PKGMGR_LIBDIR}/packages.fas
+	${INSTALL_DATA} ${PKGMGR_SRC}/pkgmanager.fas ${PKGMGR_LIBDIR}/pkgmanager.fas
+	${INSTALL_SCRIPT} ${PKGMGR_SRC}/pkgmanager-wrapper.sh \
+		${PKGMGR_BINDIR}/pkgmanager
 
 .include "../../mk/bsd.pkg.mk"
