@@ -3,7 +3,7 @@ X11 window manager which supports tabbed, tiled and conventional window
 management through layouts. If build with cairo support, it also provides
 anti-aliased font rendering.
 
-Wmii consists of components that are independent processes and communicate
+wmii consists of components that are independent processes and communicate
 via a socket-based virtual filesystem which is oriented on the "everything is a
 file" paradigm of the plan9 operating system.
 
