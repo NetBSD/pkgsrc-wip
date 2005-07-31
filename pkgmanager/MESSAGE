@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/07/31 16:30:54 scode Exp $
+
+pkgmanager is currently EXPERIMENTAL software! Only use it if you can
+risk breakage on the system. Read the documentation at
+http://www.scode.org/pkgmanager before proceeding.
+
+===========================================================================
