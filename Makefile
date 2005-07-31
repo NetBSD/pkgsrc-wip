@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1883 2005/07/29 06:33:36 jgoamakf Exp $
-# $Id: Makefile,v 1.1883 2005/07/29 06:33:36 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.1884 2005/07/31 01:08:16 thomasklausner Exp $
+# $Id: Makefile,v 1.1884 2005/07/31 01:08:16 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -791,7 +791,6 @@ SUBDIR+=	prozilla
 SUBDIR+=	prtunnel
 SUBDIR+=	pts
 SUBDIR+=	ptunnel
-SUBDIR+=	pwsafe
 SUBDIR+=	pxlib
 SUBDIR+=	pxview
 SUBDIR+=	py-Brenda
