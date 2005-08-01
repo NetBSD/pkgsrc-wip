@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:11:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/01 10:51:31 thomasklausner Exp $
 
 DISTNAME=		dovecot-${_DOVECOT_VER}
 PKGNAME=		dovecot-nightly-${_DOVECOT_VER}
@@ -17,8 +17,6 @@ USE_LIBTOOL=		YES
 USE_PKGINSTALL= 	YES
 GNU_CONFIGURE=		YES
 
-.include "../../mk/bsd.prefs.mk"
-
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--localstatedir=/var \
 			--with-ssldir=${SSLCERTS} \
@@ -27,47 +25,14 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--without-passwd-file \
 			--without-bsdauth \
 
-WRKSRC=			${WRKDIR}/dovecot-0.99.11-test4
+WRKSRC=			${WRKDIR}/dovecot-1.0-test77
+
+# for ${DATE}
+.include "../../mk/bsd.prefs.mk"
 
 _DOVECOT_VER!=		${DATE} +%Y%m%d
 
-BUILD_DEFS+=		DOVECOT_USE_GNUTLS DOVECOT_USE_PGSQL	\
-			USE_PAM USE_INET6 USE_OPENLDAP
-
-.if defined(USE_PAM) && !empty(USE_PAM:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--with-pam
-.else
-CONFIGURE_ARGS+=        --without-pam
-.endif
-
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-
-.if !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--with-ldap
-.  include "../../databases/openldap/buildlink3.mk"
-.endif
-
-.if defined(DOVECOT_USE_POP3D) && !empty(DOVECOT_USE_POP3D:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--with-pop3d
-.else
-CONFIGURE_ARGS+=        --without-pop3d
-.endif
-
-.if defined(DOVECOT_USE_GNUTLS) && !empty(DOVECOT_USE_GNUTLS:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ssl=gnutls
-.  include "../../security/gnutls/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=        --enable-ssl=openssl
-.  include "../../security/openssl/buildlink3.mk"
-.endif
-
-.if defined(DOVECOT_USE_PGSQL) && !empty(DOVECOT_USE_PGSQL:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--with-pgsql
-CPPFLAGS=		-I${BUILDLINK_DIR}/include/pgsql
-.  include "../../mk/pgsql.buildlink3.mk"
-.endif
+.include "options.mk"
 
 RCD_SCRIPTS=	dovecot
 
