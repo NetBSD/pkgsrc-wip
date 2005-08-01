@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:33:56 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/08/01 15:02:47 tvierling Exp $
+libexec/dovecot/checkpassword-reply
+libexec/dovecot/deliver
 libexec/dovecot/dovecot-auth
 libexec/dovecot/imap
 libexec/dovecot/imap-login
 libexec/dovecot/pop3
 libexec/dovecot/pop3-login
+libexec/dovecot/rawlog
 sbin/dovecot
+sbin/dovecotpw
+share/doc/dovecot/USE-WIKI-INSTEAD
+share/doc/dovecot/auth-protocol.txt
 share/doc/dovecot/auth.txt
 share/doc/dovecot/configuration.txt
 share/doc/dovecot/design.txt
@@ -12,9 +18,11 @@ share/doc/dovecot/index.txt
 share/doc/dovecot/mail-storages.txt
 share/doc/dovecot/multiaccess.txt
 share/doc/dovecot/nfs.txt
+share/doc/dovecot/securecoding.txt
+share/doc/dovecot/variables.txt
 share/examples/dovecot/dovecot-ldap.conf
 share/examples/dovecot/dovecot-openssl.cnf
-share/examples/dovecot/dovecot-pgsql.conf
+share/examples/dovecot/dovecot-sql.conf
 share/examples/dovecot/dovecot.conf.default
 share/examples/dovecot/mkcert.sh
 share/examples/rc.d/dovecot
