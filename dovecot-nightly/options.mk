@@ -1,13 +1,25 @@
-# $NetBSD: options.mk,v 1.1 2005/08/01 10:51:31 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.2 2005/08/01 10:54:32 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
-PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pgsql sasl
+PKG_SUPPORTED_OPTIONS=	dovecot-pop3d gnutls inet6 ldap mysql pam pgsql sasl
+
 .include "../../mk/bsd.options.mk"
+
+###
+### Build with pop3 server.
+### XXX: PLIST correct?
+###
+.if !empty(PKG_OPTIONS:Mdovecot-pop3d)
+CONFIGURE_ARGS+=	--with-pop3d
+.else
+CONFIGURE_ARGS+=	--without-pop3d
+.endif
 
 ###
 ### Build with GNU TLS or OpenSSL as the underlying crypto library.
 ###
 .if !empty(PKG_OPTIONS:Mgnutls)
+# XXX still true?
 PKG_FAIL_REASON+=	"GNU TLS support is currently broken."
 CONFIGURE_ARGS+=	--enable-ssl=gnutls
 .  include "../../security/gnutls/buildlink3.mk"
@@ -46,6 +58,15 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .if !empty(PKG_OPTIONS:Mldap)
 CONFIGURE_ARGS+=	--with-ldap
 .  include "../../databases/openldap/buildlink3.mk"
+.endif
+
+###
+### PAM support
+###
+.if !empty(PKG_OPTIONS:Mpam)
+CONFIGURE_ARGS+=	--with-pam
+.else
+CONFIGURE_ARGS+=	--without-pam
 .endif
 
 ###
