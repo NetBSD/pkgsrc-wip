@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/07/31 17:42:03 scode Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/01 23:32:27 scode Exp $
 #
 
-PKGMGR_VERSION= 0.1.1
+PKGMGR_VERSION= 0.2.0
 DISTNAME=	pkgmanager-${PKGMGR_VERSION}
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://starfury.scode.org/pkgmanager/
@@ -14,6 +14,10 @@ WRKSRC=         ${WRKDIR}
 MAINTAINER=	peter.schuller@infidyne.com
 HOMEPAGE=	http://www.scode.org/pkgmanager/
 COMMENT=	Package manager for pkgsrc
+BROKEN=         Broken until lang/clisp is updated in pkgsrc. You can fix \
+                it locally by applying \
+                http://starfury.scode.org/pkgmanager/lang_clisp.diff and \
+                commenting out this line from wip/pkgmanager/Makefile
 
 USE_TOOLS+=     gmake
 DEPENDS+=       clisp>=2.33.2:../../lang/clisp
