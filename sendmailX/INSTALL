@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.5 2005/07/28 11:33:59 adrian_p Exp $
+# $NetBSD: INSTALL,v 1.6 2005/08/02 21:39:07 adrian_p Exp $
 
 # Directories and files
 #
@@ -7,6 +7,7 @@ DEFEDB=${SMXQD}/defedb
 LOGDIR=@VARBASE@/log/smx
 SED=@SED@
 SMXETC=@SMXETC@
+UNAME=@UNAME@
 
 case ${STAGE} in
 
@@ -65,10 +66,10 @@ POST-INSTALL)
 	${CHOWN} smxc:operator ${LOGDIR}/smtpc.log
 	${CHOWN} smxs:operator ${LOGDIR}/smtps.log
 
-	${CHMOD} 0755 ${LOGDIR}/qmgr.log
-	${CHMOD} 0755 ${LOGDIR}/smar.log
-	${CHMOD} 0755 ${LOGDIR}/smtpc.log
-	${CHMOD} 0755 ${LOGDIR}/smtps.log
+	${CHMOD} 0644 ${LOGDIR}/qmgr.log
+	${CHMOD} 0644 ${LOGDIR}/smar.log
+	${CHMOD} 0644 ${LOGDIR}/smtpc.log
+	${CHMOD} 0644 ${LOGDIR}/smtps.log
 
 	# Fix the GID in smx.conf
 	#
@@ -80,6 +81,11 @@ POST-INSTALL)
 
 	${CHOWN} smx:smx ${SMXETC}/smx.conf 
 	${CHMOD} 0644 ${SMXETC}/smx.conf
+
+	# Fix the hostname in mt
+	#
+	HOSTNAME=`${UNAME} -n`
+	${ECHO} "${HOSTNAME} 	lmtp:" >> ${SMXETC}/mt
 
 	;;
 

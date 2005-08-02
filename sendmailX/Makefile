@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/07/28 11:34:03 adrian_p Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/02 21:39:07 adrian_p Exp $
 
 DISTNAME=	smX-${VERSION}
 PKGNAME=	sendmailX-${VERSION}
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/
+MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/.alpha/allnew/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.sendmail.org/
@@ -13,7 +13,7 @@ CONFLICTS+=	postfix-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 PTHREAD_OPTS+=	require
-VERSION=	0.0.Alpha8.0
+VERSION=	0.0.Alpha9.0
 USE_TOOLS+=	sed
 
 # Note: This will work on Linux, NetBSD, OpenBSD, SunOS, OSF1 and UnixWare but
@@ -26,8 +26,9 @@ USERMOD?=	/usr/sbin/usermod
 EGDIR=		${PREFIX}/share/examples/smX
 DOCDIR=		${PREFIX}/share/doc/smX
 FILES_SUBST+=	PREFIX=${PREFIX} SMXCNF=${SMXCNF} USERMOD=${USERMOD}
-FILES_SUBST+=	VARBASE=${VARBASE} HOSTNAME=${HOSTNAME} SED=${SED}
-FILES_SUBST+=	SMXETC=${PKG_SYSCONFDIR}
+FILES_SUBST+=	VARBASE=${VARBASE} SED=${SED}
+FILES_SUBST+=	SMXETC=${PKG_SYSCONFDIR} UNAME=${UNAME}
+MESSAGE_SUBST+=	SMXCNF=${SMXCNF}
 
 PKG_SYSCONFSUBDIR=	smx
 SMXCNFDIR=		${PKG_SYSCONFDIR}

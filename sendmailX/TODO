@@ -1,9 +1,18 @@
 - This package is really raw but it's a start, don't expect it to work
   out of the box
 
-- sendmailx, sendailX, smx or smX - choose one and stick to it
+- Status:
+NetBSD 2.0   (x86) 	- Builds with and without SSL support
+NetBSD 1.6.2 (x86) 	- Builds with and without SSL support
+NetBSD 3.0_BETA (x86) 	- Untested
+
+- TODO:
+sendmailx, sendailX, smx or smX - choose one and stick to it
+finalise smx.conf file to be used
+populate aliases more entries perhaps pulling ones from sendmail 8.13.x
+build databases e.g. aliases
+import usermod changes - it won't work without them
+use a few more if's in INSTALL e.g. if [ -d foo ]; then
 
 - Test TLS support
 - Test SASL support
-- Test on 1.6.x
-- Test on 3.0_BETA
