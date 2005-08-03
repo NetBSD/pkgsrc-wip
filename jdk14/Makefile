@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2005/06/12 23:51:20 kristerw Exp $
+# $NetBSD: Makefile,v 1.12 2005/08/03 12:43:22 ghen Exp $
 
 DISTNAME=	j2sdk-1_4_2-src-scsl
-PKGNAME=	jdk14-${JDK_VERSION}.${JDK_PATCHSET_VERSION}.1
+PKGNAME=	jdk14-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
 CATEGORIES=	lang java
 MASTER_SITES=	# http://www.sun.com/software/java2/download.html
 #		http://www.eyesbeyond.com/freebsddom/java/jdk14.html
@@ -64,10 +64,12 @@ MAKE_ENV+=	ALT_BOOTDIR=${LOCALBASE}/java/sun-1.4
 
 MOTIF_TYPE=	openmotif
 
+UNLIMIT_RESOURCES=	datasize
+
 # used to find "zip" and "unzipsfx"
 MAKE_FLAGS+=	M4=${M4}
 MAKE_FLAGS+=	ALT_DEVTOOLS_PATH=${LOCALBASE}/bin
-MAKE_FLAGS+=	ALT_COMPILER_PATH=${BUILDLINK_DIR}/bin
+MAKE_FLAGS+=	ALT_COMPILER_PATH=${WRAPPER_BINDIR}
 MAKE_ENV+=	LANG=C
 MAKE_ENV+=	JAVA_HOME=
 MAKE_ENV+=	CLASSPATH=
@@ -80,13 +82,12 @@ MAKE_ENV+=	NO_PLUGIN=YES
 BUILDLINK_PASSTHRU_DIRS+= ${JVM_HOME}
 
 JDK_VERSION=    1.4.2
-JDK_PATCHSET_VERSION=   6
+JDK_PATCHSET_VERSION=   7
 SUN_LINUX_JDK_VERSION=  1.4.2
 
 SCSL_SRCFILE=	j2sdk-${JDK_VERSION:S/./_/g}-src-scsl.zip
 SCSL_BINFILE=	j2sdk-${JDK_VERSION:S/./_/g}-bin-scsl.zip
-#PATCHSETFILE=	bsd-jdk14-patches-${JDK_PATCHSET_VERSION}.tar.gz
-PATCHSETFILE=	bsd-jdk14-patches-current.tar.gz
+PATCHSETFILE=	bsd-jdk14-patches-${JDK_PATCHSET_VERSION}.tar.gz
 
 SCSL_DOWNLOAD=	http://wwws.sun.com/software/java2/download.html
 PATCH_DOWNLOAD=	http://www.eyesbeyond.com/freebsddom/java/JDK14SCSLConfirm.html

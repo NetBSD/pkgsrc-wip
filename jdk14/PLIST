@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/08/31 21:26:35 marc Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/08/03 12:43:23 ghen Exp $
 bin/jdk14-appletviewer
 bin/jdk14-jar
 bin/jdk14-java
@@ -483,6 +483,37 @@ java/jdk-1.4.2/jre/bin/rmid
 java/jdk-1.4.2/jre/bin/rmiregistry
 java/jdk-1.4.2/jre/bin/servertool
 java/jdk-1.4.2/jre/bin/tnameserv
+java/jdk-1.4.2/jre/javaws/cacerts
+java/jdk-1.4.2/jre/javaws/javalogo52x88.gif
+java/jdk-1.4.2/jre/javaws/javaws
+java/jdk-1.4.2/jre/javaws/javaws-l10n.jar
+java/jdk-1.4.2/jre/javaws/javaws.jar
+java/jdk-1.4.2/jre/javaws/javaws.policy
+java/jdk-1.4.2/jre/javaws/javawsbin
+java/jdk-1.4.2/jre/javaws/readme.html
+java/jdk-1.4.2/jre/javaws/readme_de.html
+java/jdk-1.4.2/jre/javaws/readme_es.html
+java/jdk-1.4.2/jre/javaws/readme_fr.html
+java/jdk-1.4.2/jre/javaws/readme_it.html
+java/jdk-1.4.2/jre/javaws/readme_ja.html
+java/jdk-1.4.2/jre/javaws/readme_ko.html
+java/jdk-1.4.2/jre/javaws/readme_sv.html
+java/jdk-1.4.2/jre/javaws/readme_zh_CN.html
+java/jdk-1.4.2/jre/javaws/readme_zh_TW.html
+java/jdk-1.4.2/jre/javaws/resources/copyright.jpg
+java/jdk-1.4.2/jre/javaws/resources/messages.properties
+java/jdk-1.4.2/jre/javaws/resources/messages_de.properties
+java/jdk-1.4.2/jre/javaws/resources/messages_es.properties
+java/jdk-1.4.2/jre/javaws/resources/messages_fr.properties
+java/jdk-1.4.2/jre/javaws/resources/messages_it.properties
+java/jdk-1.4.2/jre/javaws/resources/messages_ja.properties
+java/jdk-1.4.2/jre/javaws/resources/messages_ko.properties
+java/jdk-1.4.2/jre/javaws/resources/messages_sv.properties
+java/jdk-1.4.2/jre/javaws/resources/messages_zh_CN.properties
+java/jdk-1.4.2/jre/javaws/resources/messages_zh_TW.properties
+java/jdk-1.4.2/jre/javaws/resources/miniSplash.jpg
+java/jdk-1.4.2/jre/javaws/resources/splash.jpg
+java/jdk-1.4.2/jre/javaws/sunlogo64x30.gif
 java/jdk-1.4.2/jre/lib/audio/soundbank.gm
 java/jdk-1.4.2/jre/lib/charsets.jar
 java/jdk-1.4.2/jre/lib/cmm/CIEXYZ.pf
@@ -562,8 +593,6 @@ java/jdk-1.4.2/jre/lib/logging.properties
 java/jdk-1.4.2/jre/lib/psfont.properties.ja
 java/jdk-1.4.2/jre/lib/psfontj2d.properties
 java/jdk-1.4.2/jre/lib/rt.jar
-@JDK14_USE_JCE@java/jdk-1.4.2/jre/lib/security/COPYRIGHT.html
-@JDK14_USE_JCE@java/jdk-1.4.2/jre/lib/security/README.txt
 java/jdk-1.4.2/jre/lib/security/US_export_policy.jar
 java/jdk-1.4.2/jre/lib/security/cacerts
 java/jdk-1.4.2/jre/lib/security/java.policy
@@ -1062,6 +1091,8 @@ java/jdk-1.4.2/src.zip
 @exec ${MKDIR} %D/java/jdk-1.4.2/jre/lib/applet
 @dirrm java/jdk-1.4.2/jre/lib/applet
 @dirrm java/jdk-1.4.2/jre/lib
+@dirrm java/jdk-1.4.2/jre/javaws/resources
+@dirrm java/jdk-1.4.2/jre/javaws
 @dirrm java/jdk-1.4.2/jre/bin
 @dirrm java/jdk-1.4.2/jre/.systemPrefs
 @dirrm java/jdk-1.4.2/jre
