@@ -1,5 +1,6 @@
 This package is vulnerable to a known security issue:
-	http://xforce.iss.net/xforce/xfdb/1836
+	http://xforce.iss.net/xforce/xfdb/18369
+	http://xforce.iss.net/xforce/xfdb/18718
 	http://archives.neohapsis.com/archives/bugtraq/2002-05/0161.html
 
 It must be patched before being imported into pkgsrc.
