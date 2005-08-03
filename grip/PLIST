@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/29 18:00:20 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/08/03 18:38:57 jmmv Exp $
 bin/grip
 share/applications/grip.desktop
 share/gnome/help/grip/C/cdconfig.png
@@ -69,4 +69,5 @@ share/pixmaps/gripicon.png
 @dirrm ${PKGLOCALEDIR}/locale/zh_HK
 @dirrm share/gnome/help/grip/C
 @dirrm share/gnome/help/grip
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in xdg-dirs: @dirrm share/applications

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/12 23:51:19 kristerw Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/03 18:38:57 jmmv Exp $
 #
 
 DISTNAME=		grip-3.2.0
@@ -11,7 +11,7 @@ COMMENT=		CD-player and CD-ripper for the Gnome desktop
 
 BUILD_USES_MSGFMT=	yes
 
-USE_DIRS+=		xdg-1.1
+USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
