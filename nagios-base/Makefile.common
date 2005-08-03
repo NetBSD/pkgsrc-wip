@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/05/24 11:21:37 rillig Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/08/03 20:14:20 scott8586 Exp $
 #
 
 NAGIOS_USER?=		nagios
@@ -6,7 +6,6 @@ NAGIOS_GROUP?=		${NAGIOS_USER}
 
 NAGIOSADM_USER?=	nagadmin
 NAGIOSADM_GROUP?=	${NAGIOSADM_USER}
-
 
 USE_X11=                YES
 GNU_CONFIGURE=          YES

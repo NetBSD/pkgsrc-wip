@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/11/03 10:40:27 cubidou Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/08/03 20:14:20 scott8586 Exp $
 bin/nagios
 bin/p1.pl
 libexec/nagios/cgi-bin/avail.cgi
@@ -30,6 +30,7 @@ share/examples/nagios/nagios.cfg-sample
 share/examples/nagios/resource.cfg-sample
 share/examples/nagios/services.cfg-sample
 share/examples/nagios/timeperiods.cfg-sample
+share/examples/rc.d/nagios
 share/nagios/contexthelp/A1.html
 share/nagios/contexthelp/A2.html
 share/nagios/contexthelp/A3.html
@@ -222,7 +223,6 @@ share/nagios/images/history.gif
 share/nagios/images/hostevent.gif
 share/nagios/images/info.png
 share/nagios/images/left.gif
-share/nagios/images/logofullsize.gif
 share/nagios/images/logofullsize.jpg
 share/nagios/images/logos/nagios.gd2
 share/nagios/images/logos/nagios.gif
@@ -243,7 +243,6 @@ share/nagios/images/restart.gif
 share/nagios/images/right.gif
 share/nagios/images/sbconfig.png
 share/nagios/images/sbgeneral.png
-share/nagios/images/sblogo.gif
 share/nagios/images/sblogo.jpg
 share/nagios/images/sbmonitor.png
 share/nagios/images/sbreport.png

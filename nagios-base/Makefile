@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/11/03 14:19:57 cubidou Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/03 20:14:20 scott8586 Exp $
 #
 
 DISTNAME=	nagios-1.2
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--with-command-user=${ROOT_USER}
 CONFIGURE_ARGS+=	--with-command-grp=${ROOT_GROUP}
 CONFIGURE_ARGS+=	--with-init-dir=${PREFIX}/etc/rc.d
 CONFIGURE_ARGS+=	--with-lockfile=/var/run/nagios/nagios.lock
+
+RCD_SCRIPTS+=		nagios
 
 INSTALL_TARGET=		install install-config
 
