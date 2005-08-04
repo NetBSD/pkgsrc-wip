@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/08/04 19:34:05 scott8586 Exp $
+
+--- nsca.cfg.in.orig	2003-01-07 18:57:23.000000000 -0800
++++ nsca.cfg.in	2005-08-03 11:13:47.000000000 -0700
+@@ -70,7 +70,7 @@
+ # This is the location of the Nagios command file that the daemon
+ # should write all service check results that it receives.
+ 
+-command_file=@localstatedir@/rw/nagios.cmd
++command_file=@localstatedir@/run/nagios/rw/nagios.cmd
+ 
+ 
+ # ALTERNATE DUMP FILE
+@@ -83,7 +83,7 @@
+ # it starts Nagios.  Or you may simply choose to ignore any
+ # check results received while Nagios was not running...
+ 
+-alternate_dump_file=@localstatedir@/rw/nsca.dump
++alternate_dump_file=@localstatedir@/run/nagios/rw/nsca.dump
+ 
+ 
+ 

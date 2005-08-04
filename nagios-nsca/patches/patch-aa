@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/08/04 19:34:05 scott8586 Exp $
+
+--- src/nsca.c.orig	2005-08-03 10:55:47.000000000 -0700
++++ src/nsca.c	2005-08-03 10:55:05.000000000 -0700
+@@ -864,7 +864,7 @@
+ /* handle reading from a client connection */
+ static void handle_connection_read(int sock, void *data){
+         data_packet receive_packet;
+-        u_int32_t long packet_crc32;
++        u_int32_t packet_crc32;
+         u_int32_t calculated_crc32;
+         struct crypt_instance *CI;
+         time_t packet_time;
