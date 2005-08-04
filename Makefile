@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1886 2005/07/31 16:32:19 scode Exp $
-# $Id: Makefile,v 1.1886 2005/07/31 16:32:19 scode Exp $
+# $NetBSD: Makefile,v 1.1887 2005/08/04 19:44:26 scott8586 Exp $
+# $Id: Makefile,v 1.1887 2005/08/04 19:44:26 scott8586 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -606,6 +606,7 @@ SUBDIR+=	mysql-docs
 SUBDIR+=	mythtv
 SUBDIR+=	n0t
 SUBDIR+=	nagios-base
+SUBDIR+=	nagios-nsca
 SUBDIR+=	nagios-plugin-ldap
 SUBDIR+=	nagios-plugin-mysql
 SUBDIR+=	nagios-plugin-pgsql
