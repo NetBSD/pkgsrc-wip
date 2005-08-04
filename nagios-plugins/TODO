@@ -1,10 +1,53 @@
-# $NetBSD: TODO,v 1.2 2004/02/14 00:00:49 blef Exp $
+# $NetBSD: TODO,v 1.3 2005/08/04 18:25:00 scott8586 Exp $
 #
 
+plugins now at version 1.4.1
+
 TODO file for nagios-plugins:
-	- I think there is a problem with the mailq check.
-	- There is a problem with the sensors check.
-	- Testing, glorious testing. Yes I want some more...
-	- There are a couple of checks which use other pkgs. We may want
-to either included a dependency or create another nagios-plugin-XXX pkg.
-I have not looked at the checks that aren't compiled/installed.
+
+     check_by_ssh tested and works
+     check_dhcp tested and works
+     check_dig tested and works
+     check_disk tested and works
+     check_dns tested and works
+     check_dummy tested and works
+     check_ftp tested and works+
+     check_http tested and works+
+     check_icmp tested and works+
+     check_imap tested and works+
+     check_ircd ?
+     check_jabber ?
+     check_load tested and works.
+     check_log was broken, patched, now works.
+     check_mailq works (atleast with sendmail).
+     check_mrtg ?
+     check_mrtgtraf ?
+     check_nagios seems to work?
+     check_nntp tested and works.
+     check_ntp was broken, patched, now works+
+     check_nwstat ?
+     check_overcr ?
+     check_ping tested and works+
+     check_pop ?
+     check_procs tested and works+
+     check_real ?
+     check_rpc tested and works
+     check_smtp tested and works+
+     check_simap ? 
+     check_spop ?
+     check_ssh ?
+     check_ssmtp ?
+     check_swap tested and works
+     check_tcp tested and works
+     check_time tested and works
+     check_udp tested and works
+     check_udp2 ?
+     check_ups ?  - requires smart upsd - remove?
+     check_users tested and works+
+     check_sensors - there isn't currently a NetBSD package for
+          sensors, so this is not installed.
+
+- Testing, glorious testing. Yes I want some more...
+
+(if 'works' has a '+' it was tested in my configuration, else it was tested
+"offline").

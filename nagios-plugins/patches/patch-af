@@ -1,14 +1,22 @@
-$NetBSD: patch-af,v 1.1 2004/06/10 08:26:07 cubidou Exp $
+$NetBSD: patch-af,v 1.2 2005/08/04 18:25:01 scott8586 Exp $
 
---- plugins/Makefile.in.orig	Fri Jul 11 08:30:59 2003
-+++ plugins/Makefile.in
-@@ -165,8 +165,8 @@ TESTS_ENVIRONMENT = perl -I $(top_buildd
- 
+--- plugins/Makefile.in.orig	2005-08-01 14:34:42.000000000 -0700
++++ plugins/Makefile.in	2005-08-03 17:51:55.000000000 -0700
+@@ -404,7 +404,7 @@
+ NETLIBS = $(NETOBJS) $(SOCKETLIBS)
+ TESTS_ENVIRONMENT = perl -I $(top_builddir) -I $(top_srcdir)
  TESTS = @PLUGIN_TEST@
- 
 -AM_INSTALL_PROGRAM_FLAGS = @INSTALL_OPTS@
- 
 +#AM_INSTALL_PROGRAM_FLAGS = @INSTALL_OPTS@
  
  ##############################################################################
  # the actual targets
+@@ -979,7 +979,7 @@
+ install-exec-hook:
+ 	cd $(DESTDIR)$(libexecdir) && \
+ 	for i in $(check_tcp_programs) ; do rm -f $$i; ln -s check_tcp $$i ; done ;\
+-	rm -f check_ldaps ; ln -s -f check_ldap check_ldaps
++#	rm -f check_ldaps ; ln -s -f check_ldap check_ldaps
+ 
+ clean-local:
+ 	rm -f $(check_tcp_programs)

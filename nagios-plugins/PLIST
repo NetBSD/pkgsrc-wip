@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/10 08:26:07 cubidou Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/08/04 18:25:00 scott8586 Exp $
 libexec/nagios/check_by_ssh
+libexec/nagios/check_dhcp
 libexec/nagios/check_dig
 libexec/nagios/check_disk
 libexec/nagios/check_dns
 libexec/nagios/check_dummy
+libexec/nagios/check_file_age
 libexec/nagios/check_ftp
 libexec/nagios/check_http
+libexec/nagios/check_icmp
 libexec/nagios/check_imap
 libexec/nagios/check_ircd
+libexec/nagios/check_jabber
 libexec/nagios/check_load
 libexec/nagios/check_log
 libexec/nagios/check_mailq
@@ -15,6 +19,7 @@ libexec/nagios/check_mrtg
 libexec/nagios/check_mrtgtraf
 libexec/nagios/check_nagios
 libexec/nagios/check_nntp
+libexec/nagios/check_nntps
 libexec/nagios/check_ntp
 libexec/nagios/check_nwstat
 libexec/nagios/check_overcr
@@ -23,15 +28,18 @@ libexec/nagios/check_pop
 libexec/nagios/check_procs
 libexec/nagios/check_real
 libexec/nagios/check_rpc
-libexec/nagios/check_sensors
+libexec/nagios/check_simap
 libexec/nagios/check_smtp
+libexec/nagios/check_spop
 libexec/nagios/check_ssh
+libexec/nagios/check_ssmtp
+libexec/nagios/check_swap
 libexec/nagios/check_tcp
 libexec/nagios/check_time
 libexec/nagios/check_udp
+libexec/nagios/check_udp2
 libexec/nagios/check_ups
 libexec/nagios/check_users
-libexec/nagios/check_vsz
 libexec/nagios/negate
 libexec/nagios/urlize
 libexec/nagios/utils.pm
