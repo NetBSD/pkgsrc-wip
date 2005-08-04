@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 00:34:23 marmfield Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/08/04 19:00:41 scott8586 Exp $
+libexec/nagios/check_breeze
 libexec/nagios/check_hpjd
 libexec/nagios/check_ifoperstatus
 libexec/nagios/check_ifstatus
 libexec/nagios/check_snmp
+libexec/nagios/check_wave
