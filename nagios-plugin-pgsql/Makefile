@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.5 2004/07/25 16:22:58 marc Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/04 19:09:11 scott8586 Exp $
 #
-
-.include "../../wip/nagios-plugins/Makefile.common"
 
 PKGNAME=	nagios-plugin-pgsql-${PLUGINSVERSION}
 PKGREVISION=	# not defined
+CATEGORIES=   	net sysutil databases
 
 MAINTAINER=     murray@river-styx.org
 COMMENT=	Nagios pgsql plugin
 
-BINARY_TARGET=	utils.o check_pgsql
+DEPENDS+=       nagios-plugins-${PLUGINSVERSION}:../../wip/nagios-plugins
 
-CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX}
-CPPFLAGS+=		-I${PGSQL_PREFIX}/include/pgsql
+CONFIGURE_ARGS+=	--with-pgsql=${BUILDLINK_PREFIX.pgsql-lib}
+#CPPFLAGS+=		-I${PGSQL_PREFIX}/include/pgsql
+
+.include "../../wip/nagios-plugins/Makefile.common"
+
+BINARY_TARGET=	check_pgsql
 
 .include "../../wip/nagios-plugins/Makefile.plugin"
-
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

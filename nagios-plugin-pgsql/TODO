@@ -1,7 +1,5 @@
-# $NetBSD: TODO,v 1.1 2003/04/06 01:12:17 marmfield Exp $
+# $NetBSD: TODO,v 1.2 2005/08/04 19:09:11 scott8586 Exp $
 #
 
 TODO file for nagios-plugin-pgsql:
-	- Makefile structure has been done to handle multiple pkg's from
-the one plugins package.
-	- Untested, not compiled for quite a while. It's literally wip.
+	check_pgsql compiles but is untested.
