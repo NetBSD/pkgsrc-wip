@@ -1,7 +1,8 @@
-# $NetBSD: TODO,v 1.1 2003/04/06 01:10:28 marmfield Exp $
+# $NetBSD: TODO,v 1.2 2005/08/04 19:12:10 scott8586 Exp $
 #
 
 TODO file for nagios-plugin-ldap:
-	- Makefile structure has been done to handle multiple pkg's from
-the one plugins package.
-	- Untested, not compiled for quite a while. It's literally wip.
+     check_ldap tested and works+.
+
+(if 'works' has a '+' it was tested in my configuration, else it was tested
+"offline").
