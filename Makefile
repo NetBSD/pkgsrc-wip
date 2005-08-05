@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1888 2005/08/05 00:13:09 xtraeme Exp $
-# $Id: Makefile,v 1.1888 2005/08/05 00:13:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1889 2005/08/05 04:22:46 jgoamakf Exp $
+# $Id: Makefile,v 1.1889 2005/08/05 04:22:46 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -660,6 +660,7 @@ SUBDIR+=	p5-Apache-AuthenNTLM
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-Bit-Vector-Minimal
 SUBDIR+=	p5-CGI-Simple
+SUBDIR+=	p5-Cache-FastMmap
 SUBDIR+=	p5-Cache-Mmap
 SUBDIR+=	p5-Class-DBI-Loader
 SUBDIR+=	p5-Class-Date
@@ -709,6 +710,7 @@ SUBDIR+=	p5-PDL
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-PathTools
 SUBDIR+=	p5-Pod-Tree
+SUBDIR+=	p5-Template-Timer
 SUBDIR+=	p5-Snowball-Norwegian
 SUBDIR+=	p5-Snowball-Swedish
 SUBDIR+=	p5-Term-Screen
@@ -718,6 +720,7 @@ SUBDIR+=	p5-Tie-Array-Sorted
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-Tree-Simple-VisitorFactory
 SUBDIR+=	p5-UNIVERSAL-exports
+SUBDIR+=	p5-URI-Find
 SUBDIR+=	p5-X500-DN
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-pop3
