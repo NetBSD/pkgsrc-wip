@@ -8,7 +8,6 @@ NetBSD 3.0_BETA (x86) 	- Untested
 
 - TODO:
 sendmailx, sendailX, smx or smX - choose one and stick to it
-finalise smx.conf file to be used
 populate aliases more entries perhaps pulling ones from sendmail 8.13.x
 build databases e.g. aliases
 import usermod changes - it won't work without them
