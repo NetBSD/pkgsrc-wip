@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/29 14:28:37 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/05 18:12:33 kuli0020 Exp $
 
 DISTNAME=	Date-Range-1.2
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,8 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Date-Range/
 COMMENT=	Date::Range - deal with a range of dates
 
-BUILD_DEPENDS=  p5-Date-Simple>=0.03:../../time/p5-Date-Simple
-DEPENDS+=       p5-Test-Simple>=0.54:../../devel/p5-Test-Simple
+DEPENDS+=  	p5-Date-Simple>=0.03:../../time/p5-Date-Simple
+BUILD_DEPENDS+= p5-Test-Simple>=0.54:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=	auto/Date/Range/.packlist
 
