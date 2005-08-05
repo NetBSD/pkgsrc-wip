@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1887 2005/08/04 19:44:26 scott8586 Exp $
-# $Id: Makefile,v 1.1887 2005/08/04 19:44:26 scott8586 Exp $
+# $NetBSD: Makefile,v 1.1888 2005/08/05 00:13:09 xtraeme Exp $
+# $Id: Makefile,v 1.1888 2005/08/05 00:13:09 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1107,7 +1107,6 @@ SUBDIR+=	words
 SUBDIR+=	worker
 SUBDIR+=	wxgtk-devel
 SUBDIR+=	wxgtk-devel-contrib
-SUBDIR+=	x11vnc
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
 SUBDIR+=	xbsql
