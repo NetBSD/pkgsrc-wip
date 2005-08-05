@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/29 13:20:25 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/05 18:51:25 kuli0020 Exp $
 
 DISTNAME=	Plucene-1.21
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Plucene/
 HOMEPAGE=	http://jakarta.apache.org/lucene
 COMMENT=	Perl port of the Java Lucene search engine
 
-BUILD_DEPENDS=	p5-Memoize>=1.01:../../devel/p5-Memoize
+DEPENDS=	p5-Memoize>=1.01:../../devel/p5-Memoize
 DEPENDS+=	p5-Tie-Array-Sorted>=1.1:../../devel/p5-Tie-Array-Sorted
 DEPENDS+=	p5-PathTools>=1.1:../../devel/p5-PathTools
 DEPENDS+=	p5-Encode-compat>=0:../../devel/p5-Encode-compat
@@ -18,7 +18,7 @@ DEPENDS+=	p5-File-Slurp>=2002.1031:../../devel/p5-File-Slurp
 DEPENDS+=	p5-Class-Virtual>=0.03:../../devel/p5-Class-Virtual
 DEPENDS+=	p5-Class-Accessor>=0.18:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Time-Piece>=1.08:../../time/p5-Time-Piece
-# DEPENDS+=	p5-Test-Harness>=2.30:../../devel/p5-Test-Harness
+# BUILD_DEPENDS+=	p5-Test-Harness>=2.30:../../devel/p5-Test-Harness
 DEPENDS+=	p5-Scalar-List-Utils>=1.13:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Lingua-Stem>=0.81:../../textproc/p5-Lingua-Stem
 DEPENDS+=	p5-Bit-Vector-Minimal>=1.0:../../math/p5-Bit-Vector-Minimal
