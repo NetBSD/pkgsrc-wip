@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/27 17:54:03 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/05 18:44:48 kuli0020 Exp $
 
 DISTNAME=	Data-Page-2.00
 PKGNAME=	p5-${DISTNAME}
@@ -9,9 +9,9 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Data-Page/
 COMMENT=	Pager utility for Class::DBI
 
-BUILD_DEPENDS=	p5-Class-Accessor-Chained>=0:../../devel/p5-Class-Accessor-Chained
-DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
-DEPENDS+=	p5-Test-Simple>=0:../../devel/p5-Test-Simple
+DEPENDS+=	p5-Class-Accessor-Chained>=0:../../devel/p5-Class-Accessor-Chained
+BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=	p5-Test-Simple>=0:../../devel/p5-Test-Simple
 
 PERL_MODBUILD=	yes
 
