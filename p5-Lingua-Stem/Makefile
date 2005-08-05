@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2005/07/27 19:00:48 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/05 19:10:34 kuli0020 Exp $
 
 DISTNAME=		Lingua-Stem-0.81
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		textproc perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Lingua/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Lingua/}
 
-MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/~snowhare/Lingua-Stem/
-COMMENT=	Provides word stemming algorithms localized by language
+MAINTAINER=		kuli0020@umn.edu
+HOMEPAGE=		http://search.cpan.org/~snowhare/Lingua-Stem/
+COMMENT=		Provides word stemming algorithms localized by language
 
-BUILD_DEPENDS=	p5-Lingua-PT-Stemmer>=0:../../textproc/p5-Lingua-PT-Stemmer
+DEPENDS+=	p5-Lingua-PT-Stemmer>=0:../../textproc/p5-Lingua-PT-Stemmer
 DEPENDS+=	p5-Lingua-Stem-Fr>=0.02:../../textproc/p5-Lingua-Stem-Fr
 DEPENDS+=	p5-Lingua-Stem-It>=0:../../textproc/p5-Lingua-Stem-It
 DEPENDS+=	p5-Lingua-Stem-Ru>=0:../../textproc/p5-Lingua-Stem-Ru
