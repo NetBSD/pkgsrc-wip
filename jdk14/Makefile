@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/08/03 12:43:22 ghen Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/06 08:16:51 ghen Exp $
 
 DISTNAME=	j2sdk-1_4_2-src-scsl
 PKGNAME=	jdk14-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
@@ -129,7 +129,7 @@ SUBST_FILES.paths+=	deploy/make/plugin/common/config.gmk
 SUBST_FILES.paths+=	deploy/make/plugin/ns6/Makefile
 SUBST_FILES.paths+=	hotspot/src/os/bsd/vm/os_bsd.cpp
 SUBST_FILES.paths+=	j2se/make/common/Defs-bsd.gmk
-SUBST_FILES.paths+=	deploy/make/common/Defs-bsd.gmk 
+SUBST_FILES.paths+=	deploy/make/common/Defs-bsd.gmk
 SUBST_FILES.paths+=	motif/lib/Xm/Makefile
 SUBST_FILES.paths+=	motif/lib/Xm/util/Makefile
 SUBST_FILES.paths+=	j2se/src/solaris/native/sun/awt/fontpath.c
