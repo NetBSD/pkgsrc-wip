@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/08/06 08:16:51 ghen Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/06 08:17:31 ghen Exp $
 
 DISTNAME=	j2sdk-1_4_2-src-scsl
 PKGNAME=	jdk14-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
@@ -157,7 +157,7 @@ pre-build:
 
 post-build:
 .if !empty(JDK14_USE_JCE:M[Yy][Ee][Ss])
-	cd ${WRKDIR}/jce ; pax -rw -pe . ${JDKIMAGEDIR}/jre/lib/security
+	cd ${WRKDIR}/jce ; ${PAX} -rw -pe . ${JDKIMAGEDIR}/jre/lib/security
 	${SED} 's/@JDK14_USE_JCE@//' ${PKGDIR}/PLIST > ${PLIST_SRC}
 .else
 	${SED} '/@JDK14_USE_JCE@/d' ${PKGDIR}/PLIST > ${PLIST_SRC}
