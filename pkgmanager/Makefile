@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/08/04 11:23:35 scode Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/06 23:18:06 scode Exp $
 #
 
-PKGMGR_VERSION= 0.2.0
+PKGMGR_VERSION= 0.3.0
 DISTNAME=	pkgmanager-${PKGMGR_VERSION}
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://starfury.scode.org/pkgmanager/
@@ -52,8 +52,8 @@ do-build: prepare-clocc
 		${WRKDIR}/init.mem \
 		${WRKDIR}/clocc/ \
 		${WRKDIR}/cl-ppcre-${PPCRE_VERSION}/
-	${CLISP} -K full -M ${WRKDIR}/init.mem -c ${PKGMGR_SRC}/packages.lisp \
-	                                          ${PKGMGR_SRC}/pkgmanager.lisp
+	${CLISP} -K full -M ${WRKDIR}/init.mem \
+		${PKGMGR_SRC}/compile-all.lisp ${PKGMGR_SRC}
 
 do-install:
 	${INSTALL_DATA_DIR} /etc/pkgmanager/
@@ -61,6 +61,10 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/init.mem ${PKGMGR_LIBDIR}/init.mem
 	${INSTALL_DATA} ${PKGMGR_SRC}/run.lisp ${PKGMGR_LIBDIR}/run.lisp
 	${INSTALL_DATA} ${PKGMGR_SRC}/packages.fas ${PKGMGR_LIBDIR}/packages.fas
+	${INSTALL_DATA} ${PKGMGR_SRC}/pkgmgr-except.fas ${PKGMGR_LIBDIR}/pkgmgr-except.fas
+	${INSTALL_DATA} ${PKGMGR_SRC}/pkgmgr-print.fas ${PKGMGR_LIBDIR}/pkgmgr-print.fas
+	${INSTALL_DATA} ${PKGMGR_SRC}/pkgmgr-util.fas ${PKGMGR_LIBDIR}/pkgmgr-util.fas
+	${INSTALL_DATA} ${PKGMGR_SRC}/pkgmgr-pkgdb.fas ${PKGMGR_LIBDIR}/pkgmgr-pkgdb.fas
 	${INSTALL_DATA} ${PKGMGR_SRC}/pkgmanager.fas ${PKGMGR_LIBDIR}/pkgmanager.fas
 	${INSTALL_SCRIPT} ${PKGMGR_SRC}/pkgmanager-wrapper.sh \
 		${PKGMGR_BINDIR}/pkgmanager
