@@ -1,33 +1,40 @@
-$NetBSD: patch-ac,v 1.4 2004/09/13 11:36:25 marttikuparinen Exp $
+$NetBSD: patch-ac,v 1.5 2005/08/06 04:45:57 schnoebe Exp $
 
---- Makefile.in.orig	2004-08-07 23:11:19.000000000 +0300
-+++ Makefile.in	2004-09-13 14:25:57.000000000 +0300
-@@ -190,2 +190,4 @@
+--- Makefile.in.orig	2005-07-24 09:19:45.000000000 -0500
++++ Makefile.in
+@@ -184,6 +184,8 @@ libdir = @libdir@
+ libexecdir = @libexecdir@
+ localstatedir = @localstatedir@
  mandir = @mandir@
 +exampledir = $(prefix)/share/examples/@PACKAGE@
 +docdir = $(prefix)/share/doc/@PACKAGE@
  mkdir_p = @mkdir_p@
-@@ -769,13 +771,15 @@
+ oldincludedir = @oldincludedir@
+ prefix = @prefix@
+@@ -763,17 +765,19 @@ uninstall-man: uninstall-man5 uninstall-
+ 
+ 
  #  install configuration files
 -install-data-local: install-configfile install-initscript
 +install-data-local: install-configfile install-readme
- 
--install-configfile:
--	if [ ! -d $(DESTDIR)$(sysconfdir)/cvsd ]; then \
--	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/cvsd;\
++
 +install-readme:
 +	if [ ! -d $(DESTDIR)$(docdir) ]; then \
-+	  $(mkinstalldirs) $(DESTDIR)$(docdir); \
- 	fi
++	    $(mkinstalldirs) $(DESTDIR)$(docdir); \
++	fi
++	$(INSTALL_DATA) $(srcdir)/README $(DESTDIR)$(docdir)
+ 
+ install-configfile:
+ 	if [ ! -d $(DESTDIR)$(sysconfdir)/cvsd ]; then \
+-	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/cvsd;\
+-	fi
 -	if [ ! -f $(DESTDIR)$(CONFIGFILE) ]; then \
--	  $(INSTALL_DATA) cvsd.conf-dist $(DESTDIR)$(CONFIGFILE); \
+-	  $(INSTALL_DATA) $(srcdir)/cvsd.conf-dist $(DESTDIR)$(CONFIGFILE); \
 -	else \
 -	  echo "$(DESTDIR)$(CONFIGFILE) already exists, install will not overwrite"; \
-+	$(INSTALL_DATA) README $(DESTDIR)$(docdir)
-+
-+install-configfile:
-+	if [ ! -d $(DESTDIR)$(sysconfdir) ]; then \
-+	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir); \
++	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir);\
  	fi
-+	$(INSTALL_DATA) cvsd.conf-dist $(DESTDIR)$(exampledir)/cvsd.conf.example
++	$(INSTALL_DATA) $(srcdir)/cvsd.conf-dist $(DESTDIR)$(exampledir)/cvsd.conf.example
  
+ install-initscript:
+ 	if [ ! -d $(DESTDIR)$(sysconfdir)/init.d ]; then \
