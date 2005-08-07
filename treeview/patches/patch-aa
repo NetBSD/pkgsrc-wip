@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/08/07 11:40:47 thomasklausner Exp $
+
+--- Makefile.in.orig	2005-03-21 18:58:57.000000000 +0100
++++ Makefile.in
+@@ -91,7 +91,7 @@ GPORTDIR = $(TREELIBDIR)/gport
+ NCLDIR = ncl-2.0/src
+ #LIBDIRS	= -L$(NCLDIR) 
+ #-L$(XMLPARSEDIR)
+-LIBS = @LIBS@ -lwx_gtk_dcsvg-2.4 -L$(NCLDIR) -lncl -L$(TREELIBDIR) -ltreelib
++LIBS = @LIBS@ -lwx_gtk2_svg-2.6 -L$(NCLDIR) -lncl -L$(TREELIBDIR) -ltreelib
+ #-lexpat
+ INCLUDES = -I$(NCLDIR) -I$(TREELIBDIR) -I$(GPORTDIR) 
+ #-I$(EXPATPPDIR) -I$(XMLPARSEDIR) -I$(EXPATPPDIR)/xmltok
