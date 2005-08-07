@@ -1,0 +1,59 @@
+$NetBSD: patch-aa,v 1.1 2005/08/07 20:19:46 thomasklausner Exp $
+
+--- configure.orig	2005-03-31 16:11:37.000000000 +0200
++++ configure
+@@ -5025,6 +5025,9 @@ echo "$as_me: error: Could not find wx-c
+     # Which version of wxWindows is this?
+     WX_VERSION=`${WX_CONFIG} --version`
+     case "${WX_VERSION}" in
++        2.6*)
++            WX_VERSION="2.6"
++            ;;
+         2.5*)
+             WX_VERSION="2.5"
+             ;;
+@@ -5103,6 +5106,10 @@ echo "$as_me: error: Could not find wx-c
+                 LIBS="$LIBS ${WX_HOME}/lib/libwx_gtk2u_stc-${WX_VERSION}.a"
+                 LIBS="$LIBS $WX_NEW_LDFLAGS"
+                 ;;
++            *libwx_gtk2*)
++                LIBS="$LIBS ${WX_HOME}/lib/libwx_gtk2_stc-${WX_VERSION}.a"
++                LIBS="$LIBS $WX_NEW_LDFLAGS"
++                ;;
+             *libwx_gtk2u_core*)
+                 LIBS="$LIBS ${WX_HOME}/lib/libwx_gtk2u_stc-${WX_VERSION}.a"
+                 LIBS="$LIBS $WX_NEW_LDFLAGS"
+@@ -5200,6 +5207,10 @@ echo "$as_me: error: Could not find wx-c
+                 LIBS="$LIBS -lwx_gtk2u_stc-${WX_VERSION}"
+                 LIBS="$LIBS $WX_NEW_LDFLAGS"
+                 ;;
++            *wx_gtk2*)
++                LIBS="$LIBS -lwx_gtk2_stc-${WX_VERSION}"
++                LIBS="$LIBS $WX_NEW_LDFLAGS"
++                ;;
+             *wx_gtk2u_core*)
+                 LIBS="$LIBS -lwx_gtk2u_stc-${WX_VERSION}"
+                 LIBS="$LIBS $WX_NEW_LDFLAGS"
+@@ -5238,7 +5249,7 @@ echo "$as_me: error: Could not find wx-c
+     fi
+ 
+     WX_NEW_CPPFLAGS=`${WX_CONFIG} --cxxflags`
+-    CPPFLAGS="$CPPFLAGS $WX_NEW_CPPFLAGS -I${WX_HOME}/include/wx-2.5"
++    CPPFLAGS="$CPPFLAGS $WX_NEW_CPPFLAGS -I${WX_HOME}/include/wx-2.6"
+     case "${host}" in
+         *-apple-darwin*)
+             CPPFLAGS="$CPPFLAGS -no-cpp-precomp -fno-rtti"
+@@ -5247,11 +5258,11 @@ echo "$as_me: error: Could not find wx-c
+             ;;
+     esac
+     wx_wx_h="yes"
+-    if test ! -f "${WX_HOME}/include/wx-2.5/wx/version.h"
++    if test ! -f "${WX_HOME}/include/wx-2.6/wx/version.h"
+     then
+         wx_wx_h="no"
+     fi
+-    if test ! -f "${WX_HOME}/include/wx-2.5/wx/stc/stc.h"
++    if test ! -f "${WX_HOME}/include/wx-2.6/wx/stc/stc.h"
+     then
+         { { echo "$as_me:$LINENO: error: you need to install the stc package from wxWindows/contrib/src/stc" >&5
+ echo "$as_me: error: you need to install the stc package from wxWindows/contrib/src/stc" >&2;}
