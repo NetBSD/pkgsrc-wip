@@ -1,2 +1,0 @@
-Change the lines "include "../../wip/fttk/buildlink2.mk" and "include "../../wip/wxGTK/buildlink2.mk"
-to "include ../../X11/fttk/buildlink2.mk" and "include "../../x11/wxGTK/buildlink2.mk" accordingly.
