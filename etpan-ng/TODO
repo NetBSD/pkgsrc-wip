@@ -1,3 +1,0 @@
-- it seems that this package has broken creating dirs? to run it you need to
-  create ~/.libetpan/tmp (I started investigation on it)
-- does not compile on 1.6.1 ...
