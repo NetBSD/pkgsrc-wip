@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:16:34 tvierling Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/07 05:13:03 jeremy-c-reed Exp $
 #
 
-DISTNAME=		xproto-6.6.2
+DISTNAME=		xproto-7.0
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://freedesktop.org/~xlibs/release/
+MASTER_SITES=		http://xorg.freedesktop.org/X11R7.0-RC0/proto/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://xlibs.freedesktop.org/
-COMMENT=		X protocol and ancillary headers
-
-CONFLICTS+=		XFree86-libs-[0-9]*
+HOMEPAGE=		http://xorg.freedesktop.org/
+COMMENT=		X protocol and ancillary headers from Xorg X11
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PKGCONFIG_OVERRIDE+=	xproto.pc.in
 GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE+=	xproto.pc.in
+USE_LANGUAGES=		# empty
 
 .include "../../mk/bsd.pkg.mk"
