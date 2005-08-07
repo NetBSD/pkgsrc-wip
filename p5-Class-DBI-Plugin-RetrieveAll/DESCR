@@ -1,0 +1,5 @@
+Simple plugin to a Class::DBI subclass which allows for simple
+sorting of retrieve_all calls. There are two main ways to use this.
+Firstly, we create a new method 'retrieve_all_sorted_by' which takes an
+argument of how to sort. We also add a way to set a default field that
+any retrieve_all() should use to sort by.
