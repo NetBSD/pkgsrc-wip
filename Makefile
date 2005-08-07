@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1891 2005/08/07 12:31:26 xtraeme Exp $
-# $Id: Makefile,v 1.1891 2005/08/07 12:31:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1892 2005/08/07 20:20:39 jgoamakf Exp $
+# $Id: Makefile,v 1.1892 2005/08/07 20:20:39 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -661,7 +661,11 @@ SUBDIR+=	p5-Bit-Vector-Minimal
 SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-Cache-FastMmap
 SUBDIR+=	p5-Cache-Mmap
+SUBDIR+=	p5-Class-DBI-AsForm
+SUBDIR+=	p5-Class-DBI-FromForm
 SUBDIR+=	p5-Class-DBI-Loader
+SUBDIR+=	p5-Class-DBI-Plugin-RetrieveAll
+SUBDIR+=	p5-Class-DBI-Plugin-Type
 SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Class-ISA
 SUBDIR+=	p5-Class-Virtual
