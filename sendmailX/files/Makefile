@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/27 16:04:22 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/07 20:30:59 adrian_p Exp $
 
 # Simple Makefile to create smX maps
 
@@ -11,7 +11,7 @@ all: aliases.db access.db conf.db
 #all: aliases.db
 
 aliases.db:aliases
-        -@TEST@ -f aliases.db && @MV@ aliases.db aliases.db-
+	-@TEST@ -f aliases.db && @MV@ aliases.db aliases.db-
 	@GREP@ -v '^#' aliases | ${MM}
 	@CHOWN@ smxm aliases.db
 	@CHMOD@ 664 aliases.db
