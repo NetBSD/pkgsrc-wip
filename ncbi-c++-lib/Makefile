@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/13 00:09:10 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/07 11:38:26 thomasklausner Exp $
 #
 
 DISTNAME=		ncbi_cxx--Nov_30_2004
@@ -21,6 +21,6 @@ do-configure:
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../wip/ncbi-lib/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"
-.include "../../x11/wxGTK/buildlink3.mk"
+.include "../../x11/wxGTK24/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
