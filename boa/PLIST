@@ -1,6 +1,9 @@
 sbin/boa
 sbin/boa_indexer
 share/examples/boa/boa.conf
+share/examples/boa/cgi-test.cgi
+share/examples/boa/nph-test.cgi
+share/examples/boa/resolver.pl
 share/doc/boa/CREDITS
 share/doc/boa/README
 man/man8/boa.8
