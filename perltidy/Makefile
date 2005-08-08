@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:14:45 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/08 11:17:31 absd Exp $
 #
 
-DISTNAME=	Perl-Tidy-20021130
+DISTNAME=	Perl-Tidy-20031021
 PKGNAME=	${DISTNAME:S/Perl-Tidy/perltidy/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=perltidy/}
