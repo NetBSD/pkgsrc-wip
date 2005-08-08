@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/08/07 20:19:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/08 12:02:51 absd Exp $
 #
 
 DISTNAME=		pgadmin3-1.2.1
@@ -19,8 +19,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--with-pgsql=${PREFIX} \
 			--with-pgsql-include=${PREFIX}/include/postgresql \
 			--with-wx=${PREFIX} \
+			--with-wx-config=wx24-config \
 			--with-pgsql=${PREFIX}
 USE_TOOLS+=		gmake
+
 
 PGDIR=			${PREFIX}/share/pgadmin3
 
@@ -57,6 +59,9 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PGDIR}/docs/en_US/images
 	${INSTALL_DATA_DIR} ${PGDIR}/docs/en_US/pg
 
-.include "../../databases/postgresql74-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-.include "../../x11/wxGTK-contrib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
+.include "../../x11/wxGTK24/buildlink3.mk"
+
+# XXX Need a wxGTK24-contrib package
+ .include "../../x11/wxGTK-contrib/buildlink3.mk"
