@@ -1,0 +1,60 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/08/08 19:14:32 gschwarz Exp $
+
+--- Makefile.orig	2004-09-20 17:30:03.000000000 +0200
++++ Makefile	2005-08-08 20:45:45.000000000 +0200
+@@ -67,7 +67,7 @@
+ CC_tru64=cc  
+ CC_SunOS=gcc
+ CC_Cygwin=cc  
+-CC=$(CC_$(SYSTEM))
++#CC=$(CC_$(SYSTEM))
+ 
+ # C++ compiler mapping
+ CPP_hpux=aCC  
+@@ -76,7 +76,8 @@
+ CPP_tru64=cxx  
+ CPP_SunOS=gcc
+ CPP_Cygwin=g++  
+-CPP=$(CPP_$(SYSTEM))
++#CPP=$(CPP_$(SYSTEM))
++CPP=$(CXX)
+ 
+ #Model specific flags
+ MFLAGS_ia64=+DD64
+@@ -95,7 +96,7 @@
+ CFLAGS_tru64=-D__OSF1 -pthread
+ CFLAGS_SunOS=-g
+ CFLAGS_Cygwin=-D__CYGWIN
+-CFLAGS=$(CFLAGS_$(SYSTEM)) -D__3PCC__
++CFLAGS=$(CFLAGS_$(SYSTEM)) -D__3PCC__ $(PKGSRC_CFLAGS)
+ 
+ #C++ Compiler Flags
+ CPPFLAGS_hpux=-AA -mt -D__HPUX 
+@@ -104,7 +105,7 @@
+ CPPFLAGS_tru64=-D__OSF1 -pthread
+ CPPFLAGS_SunOS=-g
+ CPPFLAGS_Cygwin=-D__CYGWIN
+-CPPFLAGS=$(CPPFLAGS_$(SYSTEM)) -D__3PCC__
++CPPFLAGS=$(CPPFLAGS_$(SYSTEM)) -D__3PCC__ $(CXXFLAGS)
+ 
+ #Linker mapping
+ CCLINK_hpux=aCC
+@@ -113,7 +114,8 @@
+ CCLINK_tru64=cxx
+ CCLINK_SunOS=gcc
+ CCLINK_Cygwin=g++
+-CCLINK=$(CCLINK_$(SYSTEM))
++#CCLINK=$(CCLINK_$(SYSTEM))
++CCLINK=$(CXX)
+ 
+ #Linker Flags
+ LFLAGS_hpux=-AA -mt
+@@ -122,7 +124,7 @@
+ LFLAGS_tru64=
+ LFLAGS_SunOS=
+ LFLAGS_Cygwin=
+-LFLAGS=$(LFLAGS_$(SYSTEM))
++LFLAGS=$(LFLAGS_$(SYSTEM) $(LDFLAGS)
+ 
+ #Link Libraries
+ LIBS_linux= -ldl -lpthread -lcurses -lstdc++

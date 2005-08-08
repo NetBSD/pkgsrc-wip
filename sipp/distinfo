@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/08/08 19:14:32 gschwarz Exp $
+
+SHA1 (sipp.1.0.tar.gz) = d9d75fc5a3d238bec8e3975870ef9da162ed2447
+RMD160 (sipp.1.0.tar.gz) = cfbbc1f40371a8e5bfb276e595f51d84dde78952
+Size (sipp.1.0.tar.gz) = 69330 bytes
+SHA1 (patch-aa) = 9a9fa973c4faecc1bc0b709dafa0e77be3ff6f10
