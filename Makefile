@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1894 2005/08/09 06:15:17 kristerw Exp $
-# $Id: Makefile,v 1.1894 2005/08/09 06:15:17 kristerw Exp $
+# $NetBSD: Makefile,v 1.1895 2005/08/09 06:16:47 kristerw Exp $
+# $Id: Makefile,v 1.1895 2005/08/09 06:16:47 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -722,8 +722,6 @@ SUBDIR+=	p5-Plucene
 SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
 SUBDIR+=	p5-Plucene-Simple
 SUBDIR+=	p5-Pod-Tree
-SUBDIR+=	p5-Snowball-Norwegian
-SUBDIR+=	p5-Snowball-Swedish
 SUBDIR+=	p5-Template-Timer
 SUBDIR+=	p5-Term-Screen
 SUBDIR+=	p5-Test-Class
