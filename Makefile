@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1893 2005/08/08 06:39:33 kristerw Exp $
-# $Id: Makefile,v 1.1893 2005/08/08 06:39:33 kristerw Exp $
+# $NetBSD: Makefile,v 1.1894 2005/08/09 06:15:17 kristerw Exp $
+# $Id: Makefile,v 1.1894 2005/08/09 06:15:17 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -661,6 +661,7 @@ SUBDIR+=	p5-Bit-Vector-Minimal
 SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-Cache-FastMmap
 SUBDIR+=	p5-Cache-Mmap
+SUBDIR+=	p5-Class-Accessor-Chained
 SUBDIR+=	p5-Class-DBI-AsForm
 SUBDIR+=	p5-Class-DBI-FromForm
 SUBDIR+=	p5-Class-DBI-Loader
@@ -674,7 +675,9 @@ SUBDIR+=	p5-Crypt-PasswdMD5
 SUBDIR+=	p5-Crypt-SmbHash
 SUBDIR+=	p5-Curses-UI
 SUBDIR+=	p5-DBD-ODBC
+SUBDIR+=	p5-Data-Page
 SUBDIR+=	p5-Data-Properties
+SUBDIR+=	p5-Date-Range
 SUBDIR+=	p5-Date-Simple
 SUBDIR+=	p5-Devel-Profiler
 SUBDIR+=	p5-Email-FolderType
@@ -696,8 +699,11 @@ SUBDIR+=	p5-Lingua-Stem
 SUBDIR+=	p5-Lingua-Stem-Fr
 SUBDIR+=	p5-Lingua-Stem-It
 SUBDIR+=	p5-Lingua-Stem-Ru
+SUBDIR+=	p5-Lingua-Stem-Snowball
 SUBDIR+=	p5-Lingua-Stem-Snowball-Da
+SUBDIR+=	p5-Lingua-Stem-Snowball-No
 SUBDIR+=	p5-Lingua-Stem-Snowball-Se
+SUBDIR+=	p5-Lingua-StopWords
 SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Mail-Webmail-Gmail
 SUBDIR+=	p5-MasonX-Apache2Handler
@@ -712,14 +718,23 @@ SUBDIR+=	p5-News-Newsrc
 SUBDIR+=	p5-PDL
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-PathTools
+SUBDIR+=	p5-Plucene
+SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
+SUBDIR+=	p5-Plucene-Simple
 SUBDIR+=	p5-Pod-Tree
 SUBDIR+=	p5-Snowball-Norwegian
 SUBDIR+=	p5-Snowball-Swedish
 SUBDIR+=	p5-Template-Timer
 SUBDIR+=	p5-Term-Screen
+SUBDIR+=	p5-Test-Class
+SUBDIR+=	p5-Test-Differences
 SUBDIR+=	p5-Text-ASCIITable
+SUBDIR+=	p5-Text-Context
+SUBDIR+=	p5-Text-Context-EitherSide
+SUBDIR+=	p5-Text-Emoticon-MSN
 SUBDIR+=	p5-Text-German
 SUBDIR+=	p5-Tie-Array-Sorted
+SUBDIR+=	p5-Time-Piece-Range
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-Tree-Simple-VisitorFactory
 SUBDIR+=	p5-UNIVERSAL-exports
