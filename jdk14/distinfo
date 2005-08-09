@@ -1,14 +1,20 @@
-$NetBSD: distinfo,v 1.7 2005/08/03 12:43:24 ghen Exp $
+$NetBSD: distinfo,v 1.8 2005/08/09 14:59:12 ghen Exp $
 
 SHA1 (j2sdk-1_4_2-src-scsl.zip) = a48f7df999e27a23071e259bd11f2eac18d99d3c
+RMD160 (j2sdk-1_4_2-src-scsl.zip) = 4214219cb1a7d20e2049193d1eaf3f31c1ff6edc
 Size (j2sdk-1_4_2-src-scsl.zip) = 49269919 bytes
 SHA1 (j2sdk-1_4_2-bin-scsl.zip) = 6d304be453abf477c793005d6f5b12ebc9e7be57
+RMD160 (j2sdk-1_4_2-bin-scsl.zip) = 3f6cd458efcbe49d30bbd5e80167e3e5d3fe5e45
 Size (j2sdk-1_4_2-bin-scsl.zip) = 2513462 bytes
 SHA1 (bsd-jdk14-patches-7.tar.gz) = 168c10f94e87ac097c7ab1dc551f94eddad91e05
+RMD160 (bsd-jdk14-patches-7.tar.gz) = 0d9721a10ef2188cd5b8f6e84a99dee9c886370f
 Size (bsd-jdk14-patches-7.tar.gz) = 1137785 bytes
+SHA1 (jce_policy-1_4_2.zip) = ea17b649ebcaaf4246e9dd28dbc77926176c64ee
+RMD160 (jce_policy-1_4_2.zip) = 323340fa8a96f315a35b0ebc918731e6fe56c370
+Size (jce_policy-1_4_2.zip) = 12195 bytes
 SHA1 (patch-aa) = 4ac7b8d528a3ec0e22539a3d0db5b2a232ffd215
 SHA1 (patch-ac) = 02ec598f435e43cc4c1436626ff1c73f51b774c2
-SHA1 (patch-ad) = 21a2a790af077d17afc7de233d5c056112ed6e9c
+SHA1 (patch-ad) = 4173f1a200466ee81fc0e80051bc7bbf3d33ec87
 SHA1 (patch-af) = b80610cfa7cd6aac29275ae8d2c05ae035efdd63
 SHA1 (patch-ag) = c7cc1ff360eff3e3049124745b2b38ef9aa7d552
 SHA1 (patch-aj) = 118507738f4d3fef0203721c6834131dadc6a3d3

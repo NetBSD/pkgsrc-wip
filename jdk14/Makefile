@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/08/06 08:17:31 ghen Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/09 14:59:12 ghen Exp $
 
 DISTNAME=	j2sdk-1_4_2-src-scsl
 PKGNAME=	jdk14-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
@@ -27,7 +27,7 @@ USE_TOOLS+=		gmake m4
 USE_LANGUAGES=		c c++
 EXTRACT_CMD_OPTS.zip=	-q
 WRKSRC=			${WRKDIR}
-PLIST_SRC=      	${WRKDIR}/PLIST
+PLIST_SRC=      	PLIST
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 
@@ -36,12 +36,6 @@ BUILD_DIRS=		${WRKSRC}/control/make
 CHECK_SHLIBS=		no # scripts set LD_LIBRARY_PATH
 
 .include "../../mk/bsd.prefs.mk"
-
-JDK14_USE_JCE?=NO
-
-.if !empty(JDK14_USE_JCE:M[Yy][Ee][Ss])
-DISTFILES+=	jce_policy-1_4_2.zip
-.endif
 
 JVM_HOME=	${LOCALBASE}/java/jdk-1.4.2
 JAVA_HOME=	${JVM_HOME}
@@ -77,7 +71,6 @@ MAKE_ENV+=	ALT_MOTIF_DIR=${MOTIFBASE}
 MAKE_ENV+=	DEV_ONLY=YES
 MAKE_ENV+=	SYS_CFLAGS=${CFLAGS:Q}
 MAKE_ENV+=	LD_LIBRARY_PATH=
-MAKE_ENV+=	NO_PLUGIN=YES
 
 BUILDLINK_PASSTHRU_DIRS+= ${JVM_HOME}
 
@@ -121,6 +114,8 @@ _FETCH_MESSAGE= \
 	${ECHO} "======================================================================"
 .endif
 
+MESSAGE_SUBST+=		LOCALBASE=${LOCALBASE}
+
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 
@@ -140,6 +135,8 @@ SUBST_SED.paths+=	-e 's,%%JVM_HOME%%,${JVM_HOME},g'
 
 BUILDLINK_PASSTHRU_DIRS+=	${JAVA_HOME}
 
+.include "options.mk"
+
 post-extract:
 	${CHMOD} -R u+w ${WRKSRC}
 
@@ -154,14 +151,6 @@ post-patch:
 pre-build:
 	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
 	${INSTALL_DATA_DIR} ${JAVA_HOME}/jre/lib/i386/server
-
-post-build:
-.if !empty(JDK14_USE_JCE:M[Yy][Ee][Ss])
-	cd ${WRKDIR}/jce ; ${PAX} -rw -pe . ${JDKIMAGEDIR}/jre/lib/security
-	${SED} 's/@JDK14_USE_JCE@//' ${PKGDIR}/PLIST > ${PLIST_SRC}
-.else
-	${SED} '/@JDK14_USE_JCE@/d' ${PKGDIR}/PLIST > ${PLIST_SRC}
-.endif
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
