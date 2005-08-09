@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/29 14:34:44 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/09 07:41:13 kristerw Exp $
 
 DISTNAME=	Time-Piece-Range-1.1
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Time-Piece-Range/
 COMMENT=	Time::Piece::Range - deal with a range of Time::Piece objects
 
 DEPENDS+=       p5-Time-Piece>=1.08:../../time/p5-Time-Piece
-DEPENDS+=       p5-Date-Range>=1.2:../../time/p5-Date-Range
+DEPENDS+=       p5-Date-Range>=1.2:../../wip/p5-Date-Range
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
