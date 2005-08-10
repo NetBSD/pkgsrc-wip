@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/21 20:41:38 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/08/10 06:59:59 poppnk Exp $
 bin/mesure
+man/man1/mesure.1
