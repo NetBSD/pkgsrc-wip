@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/08/10 11:16:16 ghen Exp $
+# $NetBSD: Makefile,v 1.18 2005/08/10 11:26:08 ghen Exp $
 
 DISTNAME=	j2sdk-1_4_2-src-scsl
 PKGNAME=	jdk14-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
@@ -118,6 +118,7 @@ _FETCH_MESSAGE= \
 	${ECHO} "======================================================================"
 .endif
 
+MESSAGE_SUBST+=		LOCALBASE=${LOCALBASE}
 MESSAGE_SUBST+=		JAVA_HOME=${JAVA_HOME}
 
 SUBST_CLASSES+=		paths
