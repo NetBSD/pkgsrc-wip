@@ -1,9 +1,9 @@
-$NetBSD: patch-ah,v 1.1 2005/07/15 14:56:36 leonardschmidt Exp $
+$NetBSD: patch-ah,v 1.2 2005/08/10 10:54:53 leonardschmidt Exp $
 
---- src/actions/Makefile.in.orig	2005-06-28 00:17:36.000000000 +0000
+--- src/actions/Makefile.in.orig	2005-07-28 06:40:48.000000000 +0000
 +++ src/actions/Makefile.in
-@@ -82,7 +82,7 @@ AMTAR = @AMTAR@
- AM_CFLAGS = @AM_CFLAGS@
+@@ -46,7 +46,7 @@ AM_CFLAGS = @AM_CFLAGS@
+ 
  AM_CPPFLAGS = \
  	-DSYSCONFDIR=\""$(sysconfdir)"\" \
 -        -DKZ_SYSCONFDIR=\""$(sysconfdir)/$(PACKAGE)"\" \

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2005/07/28 23:16:19 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/10 10:54:53 leonardschmidt Exp $
 #
 
-DISTNAME=		kazehakase-0.2.8
+DISTNAME=		kazehakase-0.2.9
 CATEGORIES=		www
-MASTER_SITES=		http://osdn.dl.sourceforge.jp/kazehakase/15343/ \
-			http://keihanna.dl.sourceforge.jp/kazehakase/15343/
+MASTER_SITES=		http://osdn.dl.sourceforge.jp/kazehakase/15824/ \
+			http://keihanna.dl.sourceforge.jp/kazehakase/15824/
 
 MAINTAINER=		lems@gmx.net
 HOMEPAGE=		http://kazehakase.sourceforge.jp/
@@ -21,6 +21,7 @@ USE_PKGLOCALEDIR=	yes
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+CONFIGURE_ARGS+=	--disable-ssl
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kazehakase
