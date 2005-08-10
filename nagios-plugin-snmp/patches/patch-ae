@@ -1,7 +1,5 @@
-$NetBSD: patch-ae,v 1.1 2005/08/04 19:00:41 scott8586 Exp $
-
---- plugins-scripts/check_wave.pl.orig	2005-08-04 07:38:50.000000000 -0700
-+++ plugins-scripts/check_wave.pl	2005-08-04 07:45:47.000000000 -0700
+--- plugins-scripts/check_wave.pl.orig	2002-10-28 05:05:08.000000000 -0800
++++ plugins-scripts/check_wave.pl	2005-08-10 13:50:01.000000000 -0700
 @@ -8,7 +8,7 @@
  use utils qw($TIMEOUT %ERRORS &print_revision &support);
  use vars qw($PROGNAME);
@@ -20,7 +18,7 @@ $NetBSD: patch-ae,v 1.1 2005/08/04 19:00:41 scott8586 Exp $
 +	 "C=s" => \$opt_C, "community=s" => \$opt_C);
  
  if ($opt_V) {
- 	print_revision($PROGNAME,'$Revision: 1.1 $'); #'
+ 	print_revision($PROGNAME,'$Revision: 1.2 $'); #'
 @@ -40,6 +41,7 @@
  }
  
