@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/07/20 16:22:54 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/11 22:44:37 leonardschmidt Exp $
 #
 
-DISTNAME=	rci-20050720
+DISTNAME=	rci-20050809
 CATEGORIES=	shells
 MASTER_SITES=	http://wmi.modprobe.de/snaps/
 EXTRACT_SUFX=	.tar.bz2
