@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/08/10 11:26:08 ghen Exp $
+# $NetBSD: Makefile,v 1.19 2005/08/11 12:00:16 ghen Exp $
 
 DISTNAME=	j2sdk-1_4_2-src-scsl
 PKGNAME=	jdk14-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
@@ -76,7 +76,8 @@ MAKE_ENV+=	DEV_ONLY=YES
 MAKE_ENV+=	SYS_CFLAGS=${CFLAGS:Q}
 MAKE_ENV+=	LD_LIBRARY_PATH=
 
-BUILDLINK_PASSTHRU_DIRS+= ${JVM_HOME}
+BUILDLINK_PASSTHRU_DIRS+= 	${JVM_HOME}
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${JAVA_HOME}/jre/lib/i386/server
 
 JDK_VERSION=    1.4.2
 JDK_PATCHSET_VERSION=   7
@@ -151,11 +152,6 @@ pre-patch:
 
 post-patch:
 	${MKDIR} ${WRKSRC}/control/build/bsd-i586/lib/i386/server
-
-# XXX make directory so that -rpath won't fail
-pre-build:
-	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
-	${INSTALL_DATA_DIR} ${JAVA_HOME}/jre/lib/i386/server
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
