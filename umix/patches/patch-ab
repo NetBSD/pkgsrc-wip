@@ -1,16 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2004/05/04 02:37:44 blef Exp $
+$NetBSD: patch-ab,v 1.3 2005/08/11 15:01:56 leonardschmidt Exp $
 
---- src/error.c.orig	2003-01-31 06:45:48.000000000 -0800
-+++ src/error.c	2004-05-03 19:31:51.000000000 -0700
-@@ -31,6 +31,15 @@
+--- src/error.c.orig	2003-08-23 12:37:42.000000000 +0000
++++ src/error.c
+@@ -31,6 +31,12 @@
  #include <sys/types.h>
  #include <sys/stat.h>
  
-+/* Hmm not sure about the *BSD includes */
-+#if defined(__linux__)
++#if defined(__linux__) || defined(__FreeBSD__)
 +  #include <sys/soundcard.h>
-+#elif defined(__FreeBSD__)
-+  #include "machine/soundcard.h"
 +#elif defined(__NetBSD__)
 +  #include <soundcard.h>
 +#endif
