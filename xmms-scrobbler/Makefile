@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:18 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/11 05:18:44 tnn2 Exp $
 #
 
-DISTNAME=	xmms-scrobbler-0.3.6
+DISTNAME=	xmms-scrobbler-0.3.8
 CATEGORIES=	audio
-MASTER_SITES=	http://static.audioscrobbler.com/plugins/
+MASTER_SITES=	http://static.audioscrobbler.com/plugins/ \
+		http://www.pipian.com/stuffforchat/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tnn@netilium.org
