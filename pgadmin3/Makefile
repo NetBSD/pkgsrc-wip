@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/08/09 15:49:27 gson Exp $
+# $NetBSD: Makefile,v 1.12 2005/08/11 08:15:58 absd Exp $
 #
 
 DISTNAME=		pgadmin3-1.2.1
@@ -57,6 +57,6 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PGDIR}/docs/en_US/images
 	${INSTALL_DATA_DIR} ${PGDIR}/docs/en_US/pg
 
-.include "../../databases/postgresql74-lib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../x11/wxGTK-contrib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
