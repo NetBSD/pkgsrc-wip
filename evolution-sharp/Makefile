@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/21 16:33:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/11 10:08:22 absd Exp $
 #
 
 DISTNAME=	evolution-sharp-0.2
@@ -12,10 +12,9 @@ COMMENT=	.NET language binding for various Evolution libraries
 
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	evolution-sharp.pc.in
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../wip/gtk-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

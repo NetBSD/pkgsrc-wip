@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/21 16:33:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/11 10:08:21 absd Exp $
 
 DISTNAME=	avifile-0.7-0.7.43
 PKGNAME=	avifile-devel-0.7.43
@@ -14,7 +14,7 @@ COMMENT=	MPEG-4 (DivX) video player library
 DEPENDS=	win32-codecs>=010122:../../multimedia/win32-codecs
 .endif
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++ fortran
 
@@ -93,7 +93,6 @@ SUBST_FILES.dsp=	ffmpeg/libavformat/audio.c \
 SUBST_SED.dsp=		-e 's|/dev/dsp|${DEVOSSSOUND}|'
 .include "../../converters/libiconv/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

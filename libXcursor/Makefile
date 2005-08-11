@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/21 16:34:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2005/08/11 10:08:22 absd Exp $
 #
 
 DISTNAME=		libXcursor-1.1.1
@@ -13,12 +13,12 @@ COMMENT=		Client-side cursor loading library for X
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xcursor.pc.in
 
 .include "../../wip/xproto/buildlink3.mk"
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXrender/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/Xfixes/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

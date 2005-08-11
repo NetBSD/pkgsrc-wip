@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/21 16:34:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/11 10:08:23 absd Exp $
 #
 
 DISTNAME=		snes9express-1.42
@@ -12,8 +12,7 @@ COMMENT=		Frontend for snes9x written in GTK2
 DEPENDS+=		snes9x>=1.39:../../emulators/snes9x
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		autoconf
+USE_TOOLS+=		autoconf pkg-config
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

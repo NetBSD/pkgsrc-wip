@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/25 13:41:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/11 10:08:21 absd Exp $
 #
 
 DISTNAME=		rezound-0.12.0beta
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--enable-oss
 CONFIGURE_ARGS+=	--enable-portaudio
 CPPFLAGS+=		-DDEVOSSSOUND="\"${DEVOSSSOUND}\""
 #LDFLAGS+=		-lcompat
-USE_TOOLS+=		flex gmake bison
+USE_TOOLS+=		flex gmake bison pkg-config
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 
@@ -39,7 +39,6 @@ CONFIGURE_ARGS+=	--disable-alsa
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../math/fftw2/buildlink3.mk"
 .include "../../wip/libSoundTouch/buildlink3.mk"
 .include "../../x11/fox/buildlink3.mk"

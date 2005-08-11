@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/21 16:33:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/11 10:08:21 absd Exp $
 #
 
 DISTNAME=	dclib-0.3.7
@@ -12,13 +12,12 @@ COMMENT=	Direct Connect P2P library
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	dclib.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

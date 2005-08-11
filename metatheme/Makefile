@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/21 16:34:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2005/08/11 10:08:23 absd Exp $
 #
 
 DISTNAME=		metatheme-0.9.7
@@ -10,7 +10,7 @@ MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Themes for GNOME 2
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 BUILD_USES_MSGFMT=	yes
@@ -22,7 +22,6 @@ GNU_CONFIGURE=		yes
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gnome2-control-center/buildlink3.mk"

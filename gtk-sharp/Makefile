@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/07/21 16:34:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.24 2005/08/11 10:08:22 absd Exp $
 #
 
 DISTNAME=	gtk-sharp-0.99
@@ -11,7 +11,7 @@ COMMENT=	.Net language binding for gtk+
 
 DEPENDS+=	p5-XML-LibXML>=1.31:../../textproc/p5-XML-LibXML
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 USE_PERL5=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
@@ -49,7 +49,6 @@ MAKE_FLAGS+=	RUNTIME=${MONO:Q}
 .include "../../databases/libgnomedb/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgdiplus/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"

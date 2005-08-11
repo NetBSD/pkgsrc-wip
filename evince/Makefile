@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/21 16:33:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/11 10:08:22 absd Exp $
 #
 
 DISTNAME=		evince-0.3.2
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 USE_MSGFMT_PLURALS=	yes
 USE_PKGLOCALEDIR=	yes
@@ -39,7 +39,6 @@ GCONF2_SCHEMAS+=	evince.schemas
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"

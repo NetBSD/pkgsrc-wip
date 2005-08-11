@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/21 16:34:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2005/08/11 10:08:22 absd Exp $
 #
 
 DISTNAME=		libSM-6.0.3
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	sm.pc.in
 
@@ -24,5 +25,4 @@ PKGCONFIG_OVERRIDE+=	sm.pc.in
 
 .include "../../wip/libICE/buildlink3.mk"
 .include "../../wip/libX11/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

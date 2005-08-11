@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/07/21 16:34:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2005/08/11 10:08:24 absd Exp $
 
 DISTNAME=	Unreal3.2.3
 PKGNAME=	unrealircd-3.2.3
@@ -11,6 +11,7 @@ COMMENT=	Advanced IRC server with IPv6 and SSL support
 
 GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
+USE_TOOLS+=		pkg-config
 WRKSRC=		${WRKDIR}/Unreal3.2
 TRE_NEEDED=	0.7.2
 
@@ -95,7 +96,6 @@ MESSAGE_SRC+=		${WRKDIR}/.MESSAGE_SRC.inet6
 INSTALL_UNSTRIPPED=YES
 .endif
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../wip/tre/buildlink3.mk"
 
