@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/08/03 12:43:23 ghen Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2005/08/11 15:17:05 ghen Exp $
 bin/jdk14-appletviewer
 bin/jdk14-jar
 bin/jdk14-java
@@ -417,6 +417,194 @@ java/jdk-1.4.2/demo/jfc/SwingApplet/src/SwingApplet.java
 java/jdk-1.4.2/demo/jfc/SwingSet2/README.txt
 java/jdk-1.4.2/demo/jfc/SwingSet2/SwingSet2.html
 java/jdk-1.4.2/demo/jfc/SwingSet2/SwingSet2.jar
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/ant.html
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/bug.html
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/About.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/COPYRIGHT
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/apple.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/asparagus.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/banana.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/broccoli.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/cantaloupe.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/carrot.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/corn.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/grapefruit.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/grapes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/kiwi.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/onion.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/peach.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/pear.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/pepper.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/pickle.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/pineapple.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/raspberry.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/strawberry.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/tomato.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food/watermelon.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/misc/cab.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/misc/cab_small.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/misc/fish.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/misc/fish_small.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/misc/moon.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/misc/moon_small.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/misc/sun.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/misc/sun_small.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/Octavo/COPYRIGHT
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/Octavo/ant.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/Octavo/book.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/Octavo/bug.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/Octavo/bug2.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/Octavo/crest.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/Octavo/king.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/Octavo/micro.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/Octavo/seaweed.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/Splash.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/b1.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/b1d.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/b1p.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/b1r.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/b2.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/b2d.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/b2p.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/b2r.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/b3.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/b3d.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/b3p.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/b3r.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/bl.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/bldn.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/bm.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/bmdn.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/br.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/brdn.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/c.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/cb.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/cbr.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/cbrs.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/cbs.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/cdn.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/ml.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/mldn.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/mr.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/mrdn.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/rb.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/rbp.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/rbr.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/rbrs.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/rbs.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/tl.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/tldn.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/tm.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/tmdn.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/toggle.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/toggledn.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/tr.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons/trdn.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/brenteyes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/brenthair.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/brentmouth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/georgeseyes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/georgeshair.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/georgesmouth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/hanseyes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/hanshair.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/hansmouth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/howardeyes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/howardhair.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/howardmouth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/jameseyes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/jameshair.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/jamesmouth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/jeffeyes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/jeffhair.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/jeffmouth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/joneyes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/jonhair.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/jonmouth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/laraeyes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/larahair.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/laramouth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/larryeyes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/larryhair.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/larrymouth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/lisaeyes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/lisahair.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/lisamouth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/michaeleyes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/michaelhair.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/michaelmouth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/philipeyes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/philiphair.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/philipmouth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/scotteyes.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/scotthair.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox/scottmouth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/filechooser/find.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/filechooser/gifIcon.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/filechooser/help.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/filechooser/jpgIcon.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/htmldemo/back.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/htmldemo/forward.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/htmldemo/header.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/list/blue.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/list/cyan.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/list/gray.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/list/green.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/list/magenta.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/list/red.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/list/yellow.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/optionpane/bottle.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/optionpane/ibd.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/optionpane/ibu.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/scrollpane/COPYRIGHT
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/scrollpane/colheader.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/scrollpane/crayons.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/scrollpane/lowerleft.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/scrollpane/rowheader.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/scrollpane/upperleft.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/scrollpane/upperright.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/splitpane/README
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/splitpane/earth.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/splitpane/moon.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/tabbedpane/blake.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/tabbedpane/brooke.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/tabbedpane/david.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/tabbedpane/ewan.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/tabbedpane/ewan.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/tabbedpane/hania.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/tabbedpane/laine.jpg
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/tabbedpane/matthew.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/tabbedpane/stephen.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JButton.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JColorChooser.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JComboBox.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JDesktop.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JDialog.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JEditorPane.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JFileChooser.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JList.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JMenu.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JOptionPane.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JProgressBar.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JRadioButton.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JScrollBar.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JScrollPane.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JSlider.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JSplitPane.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JTabbedPane.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JTable.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/JTree.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar/ToolTip.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/tooltip/cow.gif
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/index.html
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/king.html
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/preface.html
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/seaweed.html
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/swingset.properties
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/swingset_ja_JP.properties
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/swingset_zh_CN.properties
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/title.html
+java/jdk-1.4.2/demo/jfc/SwingSet2/resources/tree.txt
 java/jdk-1.4.2/demo/jfc/SwingSet2/src/AquaTheme.java
 java/jdk-1.4.2/demo/jfc/SwingSet2/src/BezierAnimationPanel.java
 java/jdk-1.4.2/demo/jfc/SwingSet2/src/ButtonDemo.java
@@ -1057,121 +1245,3 @@ java/jdk-1.4.2/man/man1/serialver.1
 java/jdk-1.4.2/man/man1/servertool.1
 java/jdk-1.4.2/man/man1/tnameserv.1
 java/jdk-1.4.2/src.zip
-@dirrm java/jdk-1.4.2/man/man1
-@dirrm java/jdk-1.4.2/man/ja_JP.eucJP/man1
-@dirrm java/jdk-1.4.2/man/ja_JP.eucJP
-@dirrm java/jdk-1.4.2/man
-@dirrm java/jdk-1.4.2/lib
-@dirrm java/jdk-1.4.2/jre/lib/zi/Pacific
-@dirrm java/jdk-1.4.2/jre/lib/zi/Indian
-@dirrm java/jdk-1.4.2/jre/lib/zi/Europe
-@dirrm java/jdk-1.4.2/jre/lib/zi/Etc
-@dirrm java/jdk-1.4.2/jre/lib/zi/Australia
-@dirrm java/jdk-1.4.2/jre/lib/zi/Atlantic
-@dirrm java/jdk-1.4.2/jre/lib/zi/Asia
-@dirrm java/jdk-1.4.2/jre/lib/zi/Antarctica
-@dirrm java/jdk-1.4.2/jre/lib/zi/America/North_Dakota
-@dirrm java/jdk-1.4.2/jre/lib/zi/America/Kentucky
-@dirrm java/jdk-1.4.2/jre/lib/zi/America/Indiana
-@dirrm java/jdk-1.4.2/jre/lib/zi/America
-@dirrm java/jdk-1.4.2/jre/lib/zi/Africa
-@dirrm java/jdk-1.4.2/jre/lib/zi
-@dirrm java/jdk-1.4.2/jre/lib/security
-@dirrm java/jdk-1.4.2/jre/lib/images/cursors
-@dirrm java/jdk-1.4.2/jre/lib/images
-@dirrm java/jdk-1.4.2/jre/lib/im
-@dirrm java/jdk-1.4.2/jre/lib/${MACHINE_ARCH}/server
-@dirrm java/jdk-1.4.2/jre/lib/${MACHINE_ARCH}/native_threads
-@dirrm java/jdk-1.4.2/jre/lib/${MACHINE_ARCH}/client
-@dirrm java/jdk-1.4.2/jre/lib/${MACHINE_ARCH}
-@dirrm java/jdk-1.4.2/jre/lib/fonts
-@dirrm java/jdk-1.4.2/jre/lib/ext
-@dirrm java/jdk-1.4.2/jre/lib/cmm
-@dirrm java/jdk-1.4.2/jre/lib/audio
-@exec ${MKDIR} %D/java/jdk-1.4.2/jre/lib/applet
-@dirrm java/jdk-1.4.2/jre/lib/applet
-@dirrm java/jdk-1.4.2/jre/lib
-@dirrm java/jdk-1.4.2/jre/javaws/resources
-@dirrm java/jdk-1.4.2/jre/javaws
-@dirrm java/jdk-1.4.2/jre/bin
-@dirrm java/jdk-1.4.2/jre/.systemPrefs
-@dirrm java/jdk-1.4.2/jre
-@dirrm java/jdk-1.4.2/include/${LOWER_OPSYS}
-@dirrm java/jdk-1.4.2/include
-@dirrm java/jdk-1.4.2/demo/jpda
-@dirrm java/jdk-1.4.2/demo/jfc/TableExample/src
-@dirrm java/jdk-1.4.2/demo/jfc/TableExample
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/src
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2
-@dirrm java/jdk-1.4.2/demo/jfc/SwingApplet/src
-@dirrm java/jdk-1.4.2/demo/jfc/SwingApplet
-@dirrm java/jdk-1.4.2/demo/jfc/Stylepad/src
-@dirrm java/jdk-1.4.2/demo/jfc/Stylepad/resources
-@dirrm java/jdk-1.4.2/demo/jfc/Stylepad
-@dirrm java/jdk-1.4.2/demo/jfc/SampleTree/src
-@dirrm java/jdk-1.4.2/demo/jfc/SampleTree/images
-@dirrm java/jdk-1.4.2/demo/jfc/SampleTree
-@dirrm java/jdk-1.4.2/demo/jfc/Notepad/src
-@dirrm java/jdk-1.4.2/demo/jfc/Notepad/resources
-@dirrm java/jdk-1.4.2/demo/jfc/Notepad
-@dirrm java/jdk-1.4.2/demo/jfc/Metalworks/src
-@dirrm java/jdk-1.4.2/demo/jfc/Metalworks/images
-@dirrm java/jdk-1.4.2/demo/jfc/Metalworks/HelpFiles
-@dirrm java/jdk-1.4.2/demo/jfc/Metalworks
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src/java2d/demos/Transforms
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src/java2d/demos/Paths
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src/java2d/demos/Paint
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src/java2d/demos/Mix
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src/java2d/demos/Lines
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src/java2d/demos/Images
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src/java2d/demos/Fonts
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src/java2d/demos/Composite
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src/java2d/demos/Colors
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src/java2d/demos/Clipping
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src/java2d/demos/Arcs_Curves
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src/java2d/demos
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src/java2d
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D/src
-@dirrm java/jdk-1.4.2/demo/jfc/Java2D
-@dirrm java/jdk-1.4.2/demo/jfc/Font2DTest/src
-@dirrm java/jdk-1.4.2/demo/jfc/Font2DTest
-@dirrm java/jdk-1.4.2/demo/jfc/FileChooserDemo/src
-@dirrm java/jdk-1.4.2/demo/jfc/FileChooserDemo/images
-@dirrm java/jdk-1.4.2/demo/jfc/FileChooserDemo
-@dirrm java/jdk-1.4.2/demo/jfc
-@dirrm java/jdk-1.4.2/demo/applets/WireFrame/models
-@dirrm java/jdk-1.4.2/demo/applets/WireFrame
-@dirrm java/jdk-1.4.2/demo/applets/TicTacToe/images
-@dirrm java/jdk-1.4.2/demo/applets/TicTacToe/audio
-@dirrm java/jdk-1.4.2/demo/applets/TicTacToe
-@dirrm java/jdk-1.4.2/demo/applets/SpreadSheet
-@dirrm java/jdk-1.4.2/demo/applets/SortDemo
-@dirrm java/jdk-1.4.2/demo/applets/SimpleGraph
-@dirrm java/jdk-1.4.2/demo/applets/NervousText
-@dirrm java/jdk-1.4.2/demo/applets/MoleculeViewer/models
-@dirrm java/jdk-1.4.2/demo/applets/MoleculeViewer
-@dirrm java/jdk-1.4.2/demo/applets/JumpingBox/sounds
-@dirrm java/jdk-1.4.2/demo/applets/JumpingBox
-@dirrm java/jdk-1.4.2/demo/applets/ImageMap/images
-@dirrm java/jdk-1.4.2/demo/applets/ImageMap/audio
-@dirrm java/jdk-1.4.2/demo/applets/ImageMap
-@dirrm java/jdk-1.4.2/demo/applets/GraphicsTest
-@dirrm java/jdk-1.4.2/demo/applets/GraphLayout/audio
-@dirrm java/jdk-1.4.2/demo/applets/GraphLayout
-@dirrm java/jdk-1.4.2/demo/applets/Fractal
-@dirrm java/jdk-1.4.2/demo/applets/DrawTest
-@dirrm java/jdk-1.4.2/demo/applets/DitherTest
-@dirrm java/jdk-1.4.2/demo/applets/Clock
-@dirrm java/jdk-1.4.2/demo/applets/CardTest
-@dirrm java/jdk-1.4.2/demo/applets/Blink
-@dirrm java/jdk-1.4.2/demo/applets/BarChart
-@dirrm java/jdk-1.4.2/demo/applets/ArcTest
-@dirrm java/jdk-1.4.2/demo/applets/Animator/images/SimpleAnimation
-@dirrm java/jdk-1.4.2/demo/applets/Animator/images/Beans
-@dirrm java/jdk-1.4.2/demo/applets/Animator/images
-@dirrm java/jdk-1.4.2/demo/applets/Animator/audio
-@dirrm java/jdk-1.4.2/demo/applets/Animator
-@dirrm java/jdk-1.4.2/demo/applets
-@dirrm java/jdk-1.4.2/demo
-@dirrm java/jdk-1.4.2/bin
-@dirrm java/jdk-1.4.2

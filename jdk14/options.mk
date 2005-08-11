@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/08/09 14:59:12 ghen Exp $
+# $NetBSD: options.mk,v 1.2 2005/08/11 15:17:05 ghen Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk14
 PKG_SUPPORTED_OPTIONS=		jdk14-jce jdk14-plugin
@@ -23,7 +23,7 @@ post-build:
 .if !empty(PKG_OPTIONS:Mjdk14-plugin)
 .include "../../devel/nspr/buildlink3.mk"
 BUILDLINK_DEPMETHOD.nspr=	build
-PLIST_SCR+=			PLIST.plugin
+PLIST_SRC+=			PLIST.plugin
 .else
 MAKE_ENV+=			NO_PLUGIN=YES
 .endif
