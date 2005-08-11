@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/03/16 13:09:11 ura Exp $
+$NetBSD: distinfo,v 1.3 2005/08/11 11:18:26 jgoamakf Exp $
 
-SHA1 (bsfilter-1.0.6.tgz) = e3e1a7347ef6b09d5ad5702de76ef587265f8ed3
-RMD160 (bsfilter-1.0.6.tgz) = bb19343d95cd63caf8b28fe73151b0cc37fc3831
-Size (bsfilter-1.0.6.tgz) = 863767 bytes
+SHA1 (bsfilter-1.0.9.tgz) = 2ba96b66cff6f5af902a769100d3831ea65f8ff9
+RMD160 (bsfilter-1.0.9.tgz) = f130b8e660c9349d69341b7cbcd75c0f118df2f2
+Size (bsfilter-1.0.9.tgz) = 1133529 bytes
