@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1896 2005/08/09 06:22:22 kristerw Exp $
-# $Id: Makefile,v 1.1896 2005/08/09 06:22:22 kristerw Exp $
+# $NetBSD: Makefile,v 1.1897 2005/08/11 17:21:27 udontknow Exp $
+# $Id: Makefile,v 1.1897 2005/08/11 17:21:27 udontknow Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -230,6 +230,7 @@ SUBDIR+=	emboss-topo
 SUBDIR+=	embryo
 SUBDIR+=	emelfm2
 SUBDIR+=	emirror
+SUBDIR+=	ent
 SUBDIR+=	epplets
 SUBDIR+=	erc
 SUBDIR+=	esmtp
