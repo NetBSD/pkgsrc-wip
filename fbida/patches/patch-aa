@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/08/12 22:46:55 thomasklausner Exp $
+
+--- GNUmakefile.orig	2004-06-30 15:41:54.000000000 +0200
++++ GNUmakefile
+@@ -29,7 +29,7 @@ include $(srcdir)/mk/Autoconf.mk
+ 
+ define make-config
+ LIB		:= $(LIB)
+-RESDIR		:= $(call ac_resdir)
++RESDIR		:= $(prefix)/lib/X11
+ HAVE_ENDIAN_H	:= $(call ac_header,endian.h)
+ HAVE_LINUX_FB_H	:= $(call ac_header,linux/fb.h)
+ HAVE_NEW_EXIF	:= $(call ac_header,libexif/exif-log.h)
