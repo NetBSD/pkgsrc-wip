@@ -1,0 +1,15 @@
+GNU Parted is a program that allows you to create, destroy, resize,
+move and copy hard disk partitions. This is useful for creating
+space for new operating systems, reorganising disk usage, and
+copying data to new hard disks.
+
+Parted currently supports DOS, Mac, Sun, BSD, GPT, MIPS and PC98
+disklabels/partition tables, as well as a 'loop' (raw disk) type
+which allows use on RAID/LVM.  Filesystems which are currently
+fully supported are ext2, ext3, fat (FAT16 and FAT32), ReiserFS
+(with libreiserfs) and linux-swap.  Parted can also detect and
+remove HFS (Mac OS), JFS, NTFS, UFS (Sun and HP), XFS and ASFS/AFFS/
+APFS (Amiga) filesystems, but cannot create, resize or check these
+filesystems yet.
+
+Use at your own risk.
