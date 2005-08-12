@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1897 2005/08/11 17:21:27 udontknow Exp $
-# $Id: Makefile,v 1.1897 2005/08/11 17:21:27 udontknow Exp $
+# $NetBSD: Makefile,v 1.1898 2005/08/12 04:40:17 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1898 2005/08/12 04:40:17 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -428,7 +428,6 @@ SUBDIR+=	kahakai
 SUBDIR+=	kahua
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
-SUBDIR+=	kazehakase
 SUBDIR+=	kbproto
 SUBDIR+=	kino
 SUBDIR+=	kissme
@@ -748,6 +747,7 @@ SUBDIR+=	p5-X500-DN
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-pop3
 SUBDIR+=	panoramixext
+SUBDIR+=	parted
 SUBDIR+=	pasmo
 SUBDIR+=	passepartout
 SUBDIR+=	pcsc-lite
