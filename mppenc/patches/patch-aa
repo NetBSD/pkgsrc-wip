@@ -1,0 +1,11 @@
+--- mppenc.c.orig	2005-08-13 18:35:24.983587784 +0200
++++ mppenc.c	2005-08-13 18:35:34.520138008 +0200
+@@ -1864,7 +1864,7 @@
+ }
+ 
+ 
+-static void
++void
+ OverdriveReport ( void )
+ {
+     if ( Overflows > 0 ) {                                                // report internal clippings
