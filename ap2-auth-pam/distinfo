@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2005/08/13 15:33:35 lkundrak Exp $
+
+SHA1 (mod_auth_pam-2.0-1.1.1.tar.gz) = 9c7f5c552490d5d26e64401987291046714b870e
+RMD160 (mod_auth_pam-2.0-1.1.1.tar.gz) = 4dbc4daae2e696b44767577d63ccf24aec397f2c
+Size (mod_auth_pam-2.0-1.1.1.tar.gz) = 11456 bytes
+SHA1 (patch-aa) = b080d0b8941e35cb841869b70fef34a8a6b38d17
