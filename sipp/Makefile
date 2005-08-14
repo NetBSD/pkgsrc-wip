@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/08 19:14:32 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/14 08:35:17 thomasklausner Exp $
 
 DISTNAME=	sipp.1.0
+PKGNAME=	sipp-1.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sipp/}
 
