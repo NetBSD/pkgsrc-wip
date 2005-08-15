@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1901 2005/08/15 18:55:41 leonardschmidt Exp $
-# $Id: Makefile,v 1.1901 2005/08/15 18:55:41 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.1902 2005/08/15 18:58:54 leonardschmidt Exp $
+# $Id: Makefile,v 1.1902 2005/08/15 18:58:54 leonardschmidt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	4stAttack
+SUBDIR+=	9rc
 SUBDIR+=	Chinput
 SUBDIR+=	Coin
 SUBDIR+=	InfoNES
