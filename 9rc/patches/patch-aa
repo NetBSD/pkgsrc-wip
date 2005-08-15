@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/08/15 18:57:06 leonardschmidt Exp $
+
+--- config.mk.orig	2005-08-14 12:30:12.000000000 +0000
++++ config.mk
+@@ -1,10 +1,10 @@
+ # edit this file to match your system
+-PREFIX=/usr/local
+-MANPREFIX=${PREFIX}/share/man
++#PREFIX=/usr/local
++MANPREFIX=${PREFIX}/man
+ VERSION=20050814
+ 
+-CC=gcc
+-CFLAGS+=-Wall -Wno-missing-braces -Wno-parentheses -Wno-switch -Os -c -I. -DPREFIX="\"${PREFIX}\""
++#CC=gcc
++CFLAGS+=-c -I. -DPREFIX="\"${PREFIX}\""
+ O=o
+ AR=ar
+ ARFLAGS=rc

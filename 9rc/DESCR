@@ -1,0 +1,18 @@
+This is a port of the original rc shell from plan9 to Unix, based on
+plan9ports[1], mk-with-libs.tgz[2] and wmii[3].
+
+To use this shell the plan9ish way, a rcmain is needed which bootstraps a
+shell environment. In contrast to the version of plan9ports[1] by Russ Cox,
+this version checks for the $RCMAIN environment variable and uses that
+file for bootstrapping. If that variable is not present, $PREFIX/lib/rcmain
+is used as fallback. Like in plan9, you can supply
+rc -m /path/to/alternate/rcmain file for interactive shells.
+
+Many thanks go to Lucent, the Bell Labs which developed this fine shell
+and to Russ Cox for his plan9ports. Since Lucent made plan9 open source,
+we can get rid of Brian Rakitzis rc/unix implementation which behaves
+not rc-standard-compliant.
+
+[1]: http://www.swtch.com/plan9port/
+[2]: http://swtch.com/plan9port/unix/
+[3]: http://www.wmii.net/

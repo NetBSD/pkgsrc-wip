@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/15 18:57:06 leonardschmidt Exp $
+bin/rc
+lib/rcmain
+man/man1/rc.1
