@@ -1,4 +1,4 @@
-* I have to substitute CONFPREFIX with ${LOCALBASE}/share/examples and
-not ${PKG_SYSCONFDIR} since status.sh loses its permissions (755) when
-getting copied over to ${LOCALBASE}/etc/wmii. Do not know if that is a
-big problem, though.
+- I have to substitute CONFPREFIX with ${PREFIX}/share/examples instead
+of ${PKG_SYSCONFDIR} since status.sh loses its permissions (755) when
+getting copied over to ${PREFIX}/etc/wmii.
+Do not know if that is a big problem, though.
