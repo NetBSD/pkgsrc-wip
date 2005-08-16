@@ -1,1 +1,168 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/09 22:43:52 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/08/16 02:52:15 jgoamakf Exp $
+share/chora/COPYING
+share/chora/README
+share/chora/annotate.php
+share/chora/co.php
+share/chora/config/.htaccess
+share/chora/config/README
+share/chora/config/conf.php.dist
+share/chora/config/cvsroots.php.dist
+share/chora/config/html.php.dist
+share/chora/config/longIntro.txt.dist
+share/chora/config/mime_drivers.php.dist
+share/chora/config/prefs.php.dist
+share/chora/cvs.php
+share/chora/diff.php
+share/chora/docs/BUGS
+share/chora/docs/CHANGES
+share/chora/docs/CREDITS
+share/chora/docs/GOALS
+share/chora/docs/INSTALL
+share/chora/docs/RELEASE_NOTES
+share/chora/graphics/back.gif
+share/chora/graphics/chora.gif
+share/chora/graphics/deleted.gif
+share/chora/graphics/down.gif
+share/chora/graphics/folder.gif
+share/chora/graphics/mime/text.gif
+share/chora/graphics/up.gif
+share/chora/history.php
+share/chora/index.php
+share/chora/lib/.htaccess
+share/chora/lib/CVSLib.php
+share/chora/lib/CVSLib/Annotate.php
+share/chora/lib/CVSLib/Checkout.php
+share/chora/lib/CVSLib/Diff.php
+share/chora/lib/CVSLib/Directory.php
+share/chora/lib/CVSLib/Error.php
+share/chora/lib/CVSLib/File.php
+share/chora/lib/CVSLib/Log.php
+share/chora/lib/CVSLib/Rev.php
+share/chora/lib/Chora.php
+share/chora/lib/MIME/Viewer/text.php
+share/chora/lib/README.CVSLib
+share/chora/lib/base.php
+share/chora/lib/constants.php
+share/chora/lib/version.php
+share/chora/locale/.htaccess
+share/chora/locale/cs_CZ/LC_MESSAGES/chora.mo
+share/chora/locale/de_DE/LC_MESSAGES/chora.mo
+share/chora/locale/en_US/help.xml
+share/chora/locale/es_ES/LC_MESSAGES/chora.mo
+share/chora/locale/fi_FI/LC_MESSAGES/chora.mo
+share/chora/locale/fr_FR/LC_MESSAGES/chora.mo
+share/chora/locale/nb_NO/LC_MESSAGES/chora.mo
+share/chora/locale/nl_NL/LC_MESSAGES/chora.mo
+share/chora/locale/pl_PL/LC_MESSAGES/chora.mo
+share/chora/locale/pt_BR/LC_MESSAGES/chora.mo
+share/chora/locale/ro_RO/LC_MESSAGES/chora.mo
+share/chora/locale/sv_SE/LC_MESSAGES/chora.mo
+share/chora/locale/zh_CN/LC_MESSAGES/chora.mo
+share/chora/locale/zh_TW/LC_MESSAGES/chora.mo
+share/chora/menu.php
+share/chora/po/.htaccess
+share/chora/po/Makefile
+share/chora/po/README
+share/chora/po/chora.pot
+share/chora/po/cs_CZ.po
+share/chora/po/de_DE.po
+share/chora/po/es_ES.po
+share/chora/po/extract.pl
+share/chora/po/fi_FI.po
+share/chora/po/fr_FR.po
+share/chora/po/nb_NO.po
+share/chora/po/nl_NL.po
+share/chora/po/pl_PL.po
+share/chora/po/pt_BR.po
+share/chora/po/ro_RO.po
+share/chora/po/shtool
+share/chora/po/sv_SE.po
+share/chora/po/xgettext.sh
+share/chora/po/zh_CN.po
+share/chora/po/zh_TW.po
+share/chora/prefs.php
+share/chora/status.php
+share/chora/templates/.htaccess
+share/chora/templates/annotate/footer.inc
+share/chora/templates/annotate/header.inc
+share/chora/templates/annotate/line.inc
+share/chora/templates/checkout/footer.inc
+share/chora/templates/checkout/header.inc
+share/chora/templates/common-footer.inc
+share/chora/templates/common-header.inc
+share/chora/templates/diff/hr/add.inc
+share/chora/templates/diff/hr/change.inc
+share/chora/templates/diff/hr/empty.inc
+share/chora/templates/diff/hr/footer.inc
+share/chora/templates/diff/hr/header.inc
+share/chora/templates/diff/hr/nochange.inc
+share/chora/templates/diff/hr/remove.inc
+share/chora/templates/diff/hr/row.inc
+share/chora/templates/directory/back.inc
+share/chora/templates/directory/dir.inc
+share/chora/templates/directory/file.inc
+share/chora/templates/directory/footer.inc
+share/chora/templates/directory/header.inc
+share/chora/templates/error_page.inc
+share/chora/templates/headerbar.inc
+share/chora/templates/history/blank.inc
+share/chora/templates/history/branch_cell.inc
+share/chora/templates/history/footer.inc
+share/chora/templates/history/header.inc
+share/chora/templates/history/rev.inc
+share/chora/templates/history/row_end.inc
+share/chora/templates/history/row_start.inc
+share/chora/templates/index/css.inc
+share/chora/templates/index/notconfigured.inc
+share/chora/templates/log/header.inc
+share/chora/templates/log/request.inc
+share/chora/templates/log/rev.inc
+share/chora/templates/menu/menu.inc
+@dirrm share/chora/templates/menu
+@dirrm share/chora/templates/log
+@dirrm share/chora/templates/index
+@dirrm share/chora/templates/history
+@dirrm share/chora/templates/directory
+@dirrm share/chora/templates/diff/hr
+@dirrm share/chora/templates/diff
+@dirrm share/chora/templates/checkout
+@dirrm share/chora/templates/annotate
+@dirrm share/chora/templates
+@dirrm share/chora/po
+@dirrm share/chora/locale/zh_TW/LC_MESSAGES
+@dirrm share/chora/locale/zh_TW
+@dirrm share/chora/locale/zh_CN/LC_MESSAGES
+@dirrm share/chora/locale/zh_CN
+@dirrm share/chora/locale/sv_SE/LC_MESSAGES
+@dirrm share/chora/locale/sv_SE
+@dirrm share/chora/locale/ro_RO/LC_MESSAGES
+@dirrm share/chora/locale/ro_RO
+@dirrm share/chora/locale/pt_BR/LC_MESSAGES
+@dirrm share/chora/locale/pt_BR
+@dirrm share/chora/locale/pl_PL/LC_MESSAGES
+@dirrm share/chora/locale/pl_PL
+@dirrm share/chora/locale/nl_NL/LC_MESSAGES
+@dirrm share/chora/locale/nl_NL
+@dirrm share/chora/locale/nb_NO/LC_MESSAGES
+@dirrm share/chora/locale/nb_NO
+@dirrm share/chora/locale/fr_FR/LC_MESSAGES
+@dirrm share/chora/locale/fr_FR
+@dirrm share/chora/locale/fi_FI/LC_MESSAGES
+@dirrm share/chora/locale/fi_FI
+@dirrm share/chora/locale/es_ES/LC_MESSAGES
+@dirrm share/chora/locale/es_ES
+@dirrm share/chora/locale/en_US
+@dirrm share/chora/locale/de_DE/LC_MESSAGES
+@dirrm share/chora/locale/de_DE
+@dirrm share/chora/locale/cs_CZ/LC_MESSAGES
+@dirrm share/chora/locale/cs_CZ
+@dirrm share/chora/locale
+@dirrm share/chora/lib/MIME/Viewer
+@dirrm share/chora/lib/MIME
+@dirrm share/chora/lib/CVSLib
+@dirrm share/chora/lib
+@dirrm share/chora/graphics/mime
+@dirrm share/chora/graphics
+@dirrm share/chora/docs
+@dirrm share/chora/config
+@dirrm share/chora

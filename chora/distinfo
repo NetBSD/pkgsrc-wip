@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/09 22:43:52 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/08/16 02:52:15 jgoamakf Exp $
 
-SHA1 (chora-1.2.tar.gz) = 2b03cc971ce2b372f7fdf6b83522a75cea98c290
-Size (chora-1.2.tar.gz) = 154090 bytes
+SHA1 (chora-1.2.3.tar.gz) = 04413b8fbc23772d901fc5abcd4de9522053495c
+RMD160 (chora-1.2.3.tar.gz) = 4a6b31eed392beec288c25cd7fcbc277b141a450
+Size (chora-1.2.3.tar.gz) = 199545 bytes
