@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/06/12 23:51:20 kristerw Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/16 14:50:04 larnor Exp $
 
 DISTNAME=		gtk-gnutella-current-${GTK_GNUTELLA_VER}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		# not defined
 
@@ -34,9 +34,10 @@ NO_CHECKSUM=		# defined
 
 .include "../../wip/gtk-gnutella-current/Makefile.version"
 
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../wip/gettext-tools/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../wip/mk/cvs-package.mk"
 .include "../../mk/x11.buildlink3.mk"
