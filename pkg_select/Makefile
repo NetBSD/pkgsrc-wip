@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/05/12 20:01:42 imilh Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/17 08:29:36 imilh Exp $
 #
 
-DISTNAME=		pkg_select-20050512
+DISTNAME=		pkg_select-20050817
 CATEGORIES=		pkgtools
 MASTER_SITES=	http://imil.net/NetBSD/
 

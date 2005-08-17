@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2005/05/13 05:35:44 imilh Exp $
+$NetBSD: distinfo,v 1.2 2005/08/17 08:29:36 imilh Exp $
 
-SHA1 (pkg_select-20050512.tar.gz) = 43a28a9ef49a1e06790b863591ce92d87ebaa901
-RMD160 (pkg_select-20050512.tar.gz) = 7446950dc2d2e9c5ca53d6ee610eea63dd84a206
-Size (pkg_select-20050512.tar.gz) = 45773 bytes
+SHA1 (pkg_select-20050817.tar.gz) = a7e22c666e4098c44cf6100a3b5e1cbcbeb48375
+RMD160 (pkg_select-20050817.tar.gz) = 0a16ea710303471730b7dbc0399a34d5e7cfff8b
+Size (pkg_select-20050817.tar.gz) = 45184 bytes
