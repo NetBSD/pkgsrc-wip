@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1903 2005/08/15 23:39:02 mnsanghvi Exp $
-# $Id: Makefile,v 1.1903 2005/08/15 23:39:02 mnsanghvi Exp $
+# $NetBSD: Makefile,v 1.1904 2005/08/19 16:38:47 tvierling Exp $
+# $Id: Makefile,v 1.1904 2005/08/19 16:38:47 tvierling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -193,6 +193,7 @@ SUBDIR+=	dnsmasq
 SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	doorman
+SUBDIR+=	dovecot
 SUBDIR+=	dovecot-nightly
 SUBDIR+=	drow
 SUBDIR+=	drpython
