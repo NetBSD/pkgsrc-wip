@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/06/13 00:09:12 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/20 20:16:11 mchittur Exp $
 #
 
-VERSION=		1.0.0-rc2
+VERSION=		1.0.3
 PKGNAME=		postgresql80-postgis-${VERSION}
 CATEGORIES=		databases geography
 
@@ -22,7 +22,7 @@ PATCHDIR=		${.CURDIR}/../../databases/postgresql80/patches
 .include "../../databases/postgresql80/Makefile.common"
 
 MASTER_SITES+=  	${PGSQL_SITES:=source/v${DIST_VERS}/}
-MASTER_SITES+=  	http://postgis.refractions.net/
+MASTER_SITES+=  	http://postgis.refractions.net/download/
 
 USE_PERL5=		YES
 
@@ -46,7 +46,8 @@ MAKE_ENV+=		GEOS_DIR=${PREFIX}
 
 # install postgis source within contrib directory
 pre-build:
-	${MV} ${WRKDIR}/postgis-1.0.0-rc2 ${WRKSRC}/contrib
+	${MV} ${WRKDIR}/postgis-${VERSION} ${WRKSRC}/contrib
+	cd ${WRKSRC}/contrib/postgis-${VERSION}/ && ${CONFIGURE_SCRIPT} --enable-autoconf --with-geos=${PREFIX}/bin/geos-config
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${EXAMPLEDIR} ${HTMLDIR} ${SQLDIR}

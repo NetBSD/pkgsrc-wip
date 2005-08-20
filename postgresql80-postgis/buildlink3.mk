@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/03/31 20:18:04 daprice Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/08/20 20:16:11 mchittur Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -25,12 +25,6 @@ BUILDLINK_DEPENDS.postgresql80-postgis-1.0.0+=	postgresql80-postgis-1.0.0>=rc2
 BUILDLINK_PKGSRCDIR.postgresql80-postgis-1.0.0?=	../../wip/postgresql80-postgis
 .endif	# POSTGRESQL80_POSTGIS_1.0.0_BUILDLINK3_MK
 
-# XXX
-# XXX Uncomment and keep only the buildlink3 lines below which are directly
-# XXX needed for dependencies to compile, link, and run.  If this package
-# XXX provides a wrappered API or otherwise does not expose the APIs of the
-# XXX buildlink3 lines below to dependencies, remove them.
-# XXX
 .include "../../wip/geos/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
