@@ -1,7 +1,7 @@
-# $Id: Makefile,v 1.7 2005/07/21 14:15:43 christian_gall Exp $
-# $NetBSD: Makefile,v 1.7 2005/07/21 14:15:43 christian_gall Exp $
+# $Id: Makefile,v 1.8 2005/08/21 11:41:07 christian_gall Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/21 11:41:07 christian_gall Exp $
 
-DISTNAME=	muttng-20050721
+DISTNAME=	muttng-20050820
 CATEGORIES=	mail
 MASTER_SITES=	http://nion.modprobe.de/mutt-ng/snapshots/
 
@@ -22,8 +22,12 @@ USE_TOOLS+=		gmake autoconf automake
 
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.muttng
-PKG_SUPPORTED_OPTIONS=	ssl gpgme sasl2 idn esmtp hcache gssapi
+PKG_SUPPORTED_OPTIONS=	ssl gpgme sasl2 idn esmtp hcache gssapi debug
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-debug
+.endif
 
 .if !empty(PKG_OPTIONS:Mgssapi)
 CONFIGURE_ARGS+=	--with-gss=${KRB5BASE}
