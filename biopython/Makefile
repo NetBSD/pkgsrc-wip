@@ -1,45 +1,49 @@
-# $NetBSD: Makefile,v 1.4 2005/05/15 02:52:05 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/22 19:48:41 mchittur Exp $
 #
 
-DISTNAME=		biopython-1.30
+DISTNAME=		biopython-1.40b
+WRKSRC=                 ${WRKDIR}/${DISTNAME}
 CATEGORIES=		biology
 MASTER_SITES=		http://biopython.org/files/
 
 MAINTAINER=		dprice@cs.nmsu.edu
-HOMEPAGE=		http://biopython.org/
+HOMEPAGE=		http://biopython.org
 COMMENT=		Python libraries for computational molecular biology
 
-DEPENDS+=		py22-mxDateTime>=2.0.4:../../time/py-mxDateTime
-DEPENDS+=		py22-Numeric>=23.3:../../math/py-Numeric
-
-NO_CONFIGURE=		yes
-
 LICENSE=		non-commercial-use
-PYTHON=			python2.2
 
-do-build:
-	cd ${WRKSRC} && \
-	${PYTHON} setup.py build
+PY_PATCHPLIST=		YES
+PYDISTUTILSPKG=         YES
+NO_CONFIGURE=		YES
 
-do-install:
-	cd ${WRKSRC} && \
-	${PYTHON} setup.py install
+post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/biopython
-	${INSTALL_DATA} ${WRKSRC}/Doc/*.txt ${PREFIX}/share/doc/biopython
-.for doc in README LICENSE CONTRIB
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${PREFIX}/share/doc/biopython
+.for DOC in *.txt
+	${INSTALL_DATA} ${WRKSRC}/Doc/${DOC} ${PREFIX}/share/doc/biopython
+.endfor
+.for DOC in README LICENSE CONTRIB
+	${INSTALL_DATA} ${WRKSRC}/${DOC} ${PREFIX}/share/doc/biopython
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/biopython
-	${INSTALL_DATA} ${WRKSRC}/Doc/examples/*.py \
+.for EXAPY in *.py
+	${INSTALL_DATA} ${WRKSRC}/Doc/examples/${EXAPY} \
 		${PREFIX}/share/examples/biopython
-	${INSTALL_DATA} ${WRKSRC}/Doc/examples/*.fasta \
+.endfor
+.for EXAFS in *.fasta
+	${INSTALL_DATA} ${WRKSRC}/Doc/examples/${EXAFS} \
 		${PREFIX}/share/examples/biopython
-	${INSTALL_DATA} ${WRKSRC}/Doc/examples/*.aln \
+.endfor
+.for EXAALN in *.aln
+	${INSTALL_DATA} ${WRKSRC}/Doc/examples/${EXAALN} \
 		${PREFIX}/share/examples/biopython
+.endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/biopython/nmr
-	${INSTALL_DATA} ${WRKSRC}/Doc/examples/nmr/* \
+.for NMR in *
+	${INSTALL_DATA} ${WRKSRC}/Doc/examples/nmr/${NMR} \
 		${PREFIX}/share/examples/biopython/nmr
+.endfor
 
-.include "../../lang/python22/buildlink3.mk"
+.include "../../time/py-mxDateTime/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
