@@ -1,0 +1,5 @@
+This adds some more useful features for AJAX development based on
+the Prototype library, as L<HTML::Prototype> is a straight port
+of the ruby implementation.
+
+WWW: http://search.cpan.org/dist/HTML-Prototype-Useful/
