@@ -1,0 +1,5 @@
+The distribution file is: Image-EXIF-1.00.3.tgz
+
+During build package source looks for: Image-EXIF-1.00.3.tar.gz
+
+Is there an option to tell pkgsrc to look for $distname.tgz file instead of $distname.tar.gz ?
