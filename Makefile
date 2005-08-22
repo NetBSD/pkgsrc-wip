@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1904 2005/08/19 16:38:47 tvierling Exp $
-# $Id: Makefile,v 1.1904 2005/08/19 16:38:47 tvierling Exp $
+# $NetBSD: Makefile,v 1.1905 2005/08/22 14:00:39 goteki Exp $
+# $Id: Makefile,v 1.1905 2005/08/22 14:00:39 goteki Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1120,7 +1120,6 @@ SUBDIR+=	vm-tools
 SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
 SUBDIR+=	vnc2swf
-SUBDIR+=	vorbisgain
 SUBDIR+=	vtwm
 SUBDIR+=	wang-ttf
 SUBDIR+=	webcleaner
