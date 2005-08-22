@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/08/22 16:26:46 kuli0020 Exp $
+
+SHA1 (Class-DBI-SQLite-0.09.tar.gz) = 0c98b4cd7e467cab978822acfde202fc8bafba1b
+RMD160 (Class-DBI-SQLite-0.09.tar.gz) = 4ef5b7fed7e09ab975a32129a55564f91078b41b
+Size (Class-DBI-SQLite-0.09.tar.gz) = 3653 bytes
