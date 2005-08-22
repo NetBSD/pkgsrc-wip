@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:09:50 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/22 18:08:27 mchittur Exp $
 #
 
 DISTNAME=		artemis_compiled_v6
@@ -17,11 +17,13 @@ USE_JAVA2=		yes
 NO_BUILD=		#DEFINED
 INSTALL_DIR=		${PREFIX}/share/Artemis
 
+USE_TOOLS+=		gtar
+
 do-install:
 
 	${INSTALL_DATA_DIR} ${INSTALL_DIR}
 
-	(cd ${WRKSRC} && ${GTAR} cf - .) | (cd ${INSTALL_DIR} && ${GTAR} xf -)
+	(cd ${WRKSRC} && ${GTAR} -cf - .) | (cd ${INSTALL_DIR} && ${GTAR} -xf -)
 
 	${MKDIR} ${WRKSRC}/qwerty
 
