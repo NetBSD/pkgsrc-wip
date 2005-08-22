@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:48 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/22 13:41:08 rillig Exp $
 
 DISTNAME=		vorbisgain-0.34
 CATEGORIES=		audio
@@ -16,4 +16,3 @@ EXTRACT_CMD_OPTS.zip=   -aqo
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
