@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/13 00:09:12 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/22 18:13:45 mchittur Exp $
 #
 
 VERSION=		1.0.0-rc2
@@ -20,7 +20,7 @@ PATCHDIR=		${.CURDIR}/../../databases/postgresql74/patches
 .include "../../databases/postgresql74/Makefile.common"
 
 MASTER_SITES+=  	${PGSQL_SITES:=source/v${DIST_VERS}/}
-MASTER_SITES+=  	http://postgis.refractions.net/
+MASTER_SITES+=  	http://postgis.refractions.net/download/
 
 USE_PERL5=		YES
 
