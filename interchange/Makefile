@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/13 00:51:09 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/23 11:49:44 rillig Exp $
 #
 
 DISTNAME=       interchange-5.2.0
@@ -53,7 +53,7 @@ INTERCHANGE_GROUP?=${INTERCHANGE_USER}
 INTERCHANGE_DIR?=${PREFIX}/interchange
 
 PKG_GROUPS=	${INTERCHANGE_GROUP}
-PKG_USERS=${INTERCHANGE_USER}:${INTERCHANGE_GROUP}::Interchange\\ Catalog\\ User:${INTERCHANGE_DIR}
+PKG_USERS=${INTERCHANGE_USER}:${INTERCHANGE_GROUP}::Interchange\ Catalog\ User:${INTERCHANGE_DIR}
 
 RCD_SCRIPTS=	interchange
 

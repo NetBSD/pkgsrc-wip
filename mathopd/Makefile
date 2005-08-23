@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/17 16:53:58 ishit Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/23 11:49:44 rillig Exp $
 
 DISTNAME=	mathopd-1.5p5
 CATEGORIES=	www
@@ -25,7 +25,7 @@ MAKE_DIRS=	${PREFIX}/share/mathopd
 OWN_DIRS_PERMS+=	${VARBASE}/log/mathopd ${MATHOPD_USER} ${MATHOPD_GROUP} 0755
 
 PKG_GROUPS=	${MATHOPD_GROUP}
-PKG_USERS=	${MATHOPD_USER}:${MATHOPD_GROUP}::mathopd\\ user
+PKG_USERS=	${MATHOPD_USER}:${MATHOPD_GROUP}::mathopd\ user
 
 DOCS=	CHANGES cgi.txt config.txt running.txt sample.cfg syntax.txt
 

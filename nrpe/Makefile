@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/15 06:23:26 ura Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/23 11:49:44 rillig Exp $
 
 DISTNAME=		nrpe-2.0
 CATEGORIES=		net sysutils
@@ -18,7 +18,7 @@ USE_REINPLACE=		yes
 
 RCD_SCRIPTS=		nrpe
 PKG_GROUPS?=		${NRPE_GROUP}
-PKG_USERS?=		${NRPE_USER}:${NRPE_GROUP}::Nagios\\ Runtime\\ User
+PKG_USERS?=		${NRPE_USER}:${NRPE_GROUP}::Nagios\ Runtime\ User
 
 INSTALLATION_DIRS=	sbin libexec/nagios share/examples/nagios
 

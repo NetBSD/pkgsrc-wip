@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:14:34 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/23 11:49:44 rillig Exp $
 #
 
 DISTNAME=	oops-1.5.23
@@ -42,7 +42,7 @@ OOPSVAR?=	/var/run/oops
 OOPSUSER?=	oops
 OOPSGROUP?=	oops
 PKG_GROUPS=	${OOPSGROUP}
-PKG_USERS=	${OOPSUSER}:${OOPSGROUP}::Oops\\ proxy\\ server
+PKG_USERS=	${OOPSUSER}:${OOPSGROUP}::Oops\ proxy\ server
 OWN_DIRS_PERMS+=	${OOPSVAR} ${OOPSUSER} ${OOPSGROUP} 755
 MAKE_DIRS_PERMS+=	${PREFIX}/oops/storages ${OOPSUSER} ${OOPSGROUP} 700
 MAKE_DIRS_PERMS+=	${PREFIX}/oops/DB ${OOPSUSER} ${OOPSGROUP} 700

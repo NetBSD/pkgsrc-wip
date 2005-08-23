@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/24 10:31:00 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/23 11:49:44 rillig Exp $
 
 DISTNAME=		man-db_${VERSION}.orig
 PKGNAME=		man-db-${VERSION}
@@ -29,7 +29,7 @@ MAN_DB_CAT_DIR?=	/var/cache/man
 
 # for modifying cat and database files
 MAN_DB_USER?=		man-db
-PKG_USERS=		${MAN_DB_USER}:${ROOT_GROUP}::man-db\\ user:${MAN_DB_CAT_DIR}
+PKG_USERS=		${MAN_DB_USER}:${ROOT_GROUP}::man-db\ user:${MAN_DB_CAT_DIR}
 USE_PKGINSTALL=		YES
 
 USE_PKGLOCALEDIR=	YES

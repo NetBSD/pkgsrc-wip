@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/09 14:52:50 adrian_p Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/23 11:49:44 rillig Exp $
 
 DISTNAME=	smX-${VERSION}
 PKGNAME=	sendmailX-${VERSION}
@@ -37,11 +37,11 @@ SMXCNF=			${SMXCNFDIR}/smx.conf
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 PKG_GROUPS=     smxs smxq smxc smxm smx
-PKG_USERS=      smxs:smxs::Sendmail\\ X\\ SMTP\\ Server
-PKG_USERS+=	smxq:smxq::Sendmail\\ X\\ Queue\\ Manager
-PKG_USERS+=	smxc:smxc::Sendmail\\ X\\ SMTP\\ Client
-PKG_USERS+=	smxm:smxm::Sendmail\\ X\\ Address\\ Resolver
-PKG_USERS+=	smx:smx::Sendmail\\ X\\ Misc
+PKG_USERS=      smxs:smxs::Sendmail\ X\ SMTP\ Server
+PKG_USERS+=	smxq:smxq::Sendmail\ X\ Queue\ Manager
+PKG_USERS+=	smxc:smxc::Sendmail\ X\ SMTP\ Client
+PKG_USERS+=	smxm:smxm::Sendmail\ X\ Address\ Resolver
+PKG_USERS+=	smx:smx::Sendmail\ X\ Misc
 
 CONFIGURE_ARGS+=	--disable-TLS
 CONFIGURE_ARGS+=	--disable-SASL

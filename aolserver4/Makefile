@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/17 19:48:08 ianharding Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/23 11:49:43 rillig Exp $
 #
 
 DISTNAME=		aolserver-4.0.10-src
@@ -27,7 +27,7 @@ NSD_USER?=		nsadmin
 NSD_GROUP?=		nsadmin
 
 PKG_GROUPS=		${NSD_GROUP}
-PKG_USERS=		${NSD_USER}:${NSD_GROUP}::Aolserver\\ User
+PKG_USERS=		${NSD_USER}:${NSD_GROUP}::Aolserver\ User
 
 EGDIR=                  ${PREFIX}/share/examples/nsd
 CONF_FILES=		${EGDIR}/sample-config.tcl ${PKG_SYSCONFDIR}/nsd.tcl

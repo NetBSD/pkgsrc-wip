@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/08/11 10:08:24 absd Exp $
+# $NetBSD: Makefile,v 1.17 2005/08/23 11:49:44 rillig Exp $
 
 DISTNAME=	Unreal3.2.3
 PKGNAME=	unrealircd-3.2.3
@@ -65,7 +65,7 @@ DOC_FILES=	doc/Authors doc/coding-guidelines doc/tao.of.irc LICENSE
 CONF_FILES_PERMS=	${IRCD_EG}/example.conf ${IRCD_HOME}/unrealircd.conf \
 			${IRCD_USER} ${IRCD_GROUP} 0660
 
-PKG_USERS=	${IRCD_USER}:${IRCD_GROUP}::UnrealIRCD\\ user:${IRCD_HOME}:${NOLOGIN}
+PKG_USERS=	${IRCD_USER}:${IRCD_GROUP}::UnrealIRCD\ user:${IRCD_HOME}:${NOLOGIN}
 PKG_GROUPS=	${IRCD_GROUP}
 RCD_SCRIPTS=	unrealircd
 

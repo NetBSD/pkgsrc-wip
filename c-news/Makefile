@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:10:25 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/23 11:49:43 rillig Exp $
 
 DISTNAME=	c-news
 PKGNAME=        c-news-CR-7
@@ -34,7 +34,7 @@ CONFLICTS+=	nntpclnt-[0-9]* inn*
 
 WRKSRC=		${WRKDIR}
 USE_PKGINSTALL=	YES
-PKG_USERS=	news:news::Internet\\ News:${CNEWSDATA}:${SH}
+PKG_USERS=	news:news::Internet\ News:${CNEWSDATA}:${SH}
 PKG_GROUPS=	news
 
 PKG_SYSCONFDIR.c-news=     ${CNEWSDATA}/etc

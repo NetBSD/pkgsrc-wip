@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:12:19 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/23 11:49:44 rillig Exp $
 
 DISTNAME=		ftpsesame-0.95
 CATEGORIES=		net
@@ -11,7 +11,7 @@ COMMENT=                Automatic packet filter configurator for FTP
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 
-PKG_USERS=		proxy:nogroup::proxy\\ pseudo-user:${VARBASE}/chroot/proxy:/sbin/nologin
+PKG_USERS=		proxy:nogroup::proxy\ pseudo-user:${VARBASE}/chroot/proxy:/sbin/nologin
 
 OWN_DIRS=		${VARBASE}/chroot/proxy
 

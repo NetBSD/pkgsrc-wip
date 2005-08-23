@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:11:57 tvierling Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/23 11:49:44 rillig Exp $
 #
 
 DISTNAME=	ezbounce-1.04a
@@ -26,7 +26,7 @@ EZBOUNCE_USER=		ezbounce
 EZBOUNCE_GROUP=		ezbounce
 
 PKG_GROUPS=             ${EZBOUNCE_GROUP}
-PKG_USERS=		${EZBOUNCE_USER}:${EZBOUNCE_GROUP}::Ezbounce\\ user
+PKG_USERS=		${EZBOUNCE_USER}:${EZBOUNCE_GROUP}::Ezbounce\ user
 
 RCD_SCRIPTS=            ezbounce
 
