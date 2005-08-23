@@ -1,6 +1,4 @@
-$Id: TODO,v 1.3 2005/02/05 19:31:20 shattered Exp $
-
-Does it build / work on NetBSD-stable? 
+$Id: TODO,v 1.4 2005/08/23 20:08:41 shattered Exp $
 
 This package can be compiled with or without gnome support; Same for SQL --
 it can support MySQL or SQLite. Any ideas how we could add such packages

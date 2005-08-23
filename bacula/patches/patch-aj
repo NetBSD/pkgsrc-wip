@@ -1,0 +1,37 @@
+$NetBSD: patch-aj,v 1.1 2005/08/23 20:08:41 shattered Exp $
+
+--- src/findlib/fstype.c.orig	2005-02-25 12:47:06.000000000 +0300
++++ src/findlib/fstype.c
+@@ -61,7 +61,7 @@
+  */
+ #if defined(HAVE_DARWIN_OS) \
+    || defined(HAVE_FREEBSD_OS ) \
+-   || defined(HAVE_NETBSD_OS) \
++   || (defined(HAVE_NETBSD_OS) && defined(FSTYPE_STATFS)) \
+    || defined(HAVE_OPENBSD_OS)
+ 
+ #include <sys/param.h>
+@@ -79,6 +79,7 @@ bool fstype(const char *fname, char *fs,
+ }
+ 
+ #elif defined(HAVE_HPUX_OS) \
++   || (defined(HAVE_NETBSD_OS) && defined(FSTYPE_STATVFS)) \
+    || defined(HAVE_IRIX_OS)
+ 
+ #include <sys/types.h>
+@@ -88,10 +89,14 @@ bool fstype(const char *fname, char *fs,
+ {
+    struct statvfs st;
+    if (statvfs(fname, &st) == 0) {
++#ifdef HAVE_NETBSD_OS
++      bstrncpy(fs, st.f_fstypename, fslen);
++#else
+       bstrncpy(fs, st.f_basetype, fslen);
++#endif
+       return true;
+    }
+-   Dmsg1(50, "statfs() failed for \"%s\"\n", fname);
++   Dmsg1(50, "statvfs() failed for \"%s\"\n", fname);
+    return false;
+ }
+ 

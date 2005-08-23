@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2005/07/27 16:25:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/23 20:08:41 shattered Exp $
 #
 
-DISTNAME=		bacula-1.34.6
-PKGREVISION=		2
+DISTNAME=		bacula-1.36.2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		shattered@users.sourceforge.net
 HOMEPAGE=		http://www.bacula.org/
 COMMENT=		Network Backup Solution
 
@@ -43,6 +42,7 @@ CONFIGURE_ARGS+=	--with-dir-user=${BACULA_DIR_USER}	\
 			--with-dir-group=${BACULA_GROUP}
 CONFIGURE_ARGS+=	--with-sd-user=${BACULA_SD_USER}	\
 			--with-sd-group=${BACULA_GROUP}
+CONFIGURE_ARGS+=	--with-tcp-wrappers=${PREFIX}
 .if ${BACULA_DB} == "sqlite"
 CONFIGURE_ARGS+=	--with-sqlite=${PREFIX}
 .endif
