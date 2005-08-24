@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/23 20:08:41 shattered Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/08/24 20:31:11 shattered Exp $
 share/examples/bacula/bacula-dir.conf
 share/examples/bacula/bacula-fd.conf
 share/examples/bacula/bacula-sd.conf
@@ -6,6 +6,7 @@ share/examples/bacula/bconsole.conf
 libexec/bacula/query.sql
 libexec/bacula/bacula
 libexec/bacula/bconsole
+libexec/bacula/btraceback.dbx
 libexec/bacula/btraceback.gdb
 libexec/bacula/create_${BACULA_DB}_database
 libexec/bacula/create_bacula_database
