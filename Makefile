@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1905 2005/08/22 14:00:39 goteki Exp $
-# $Id: Makefile,v 1.1905 2005/08/22 14:00:39 goteki Exp $
+# $NetBSD: Makefile,v 1.1906 2005/08/24 09:36:55 ghen Exp $
+# $Id: Makefile,v 1.1906 2005/08/24 09:36:55 ghen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -86,6 +86,7 @@ SUBDIR+=	ap-choke
 SUBDIR+=	ap-frontpage
 SUBDIR+=	ap-macro
 SUBDIR+=	ap-ometer
+SUBDIR+=	ap2-auth-pam
 SUBDIR+=	ap2-jk2
 SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-macro
@@ -307,6 +308,7 @@ SUBDIR+=	gnome-alsamixer
 SUBDIR+=	gnome-bluetooth
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnome-jabber
+SUBDIR+=	gnormalize
 SUBDIR+=	gnump3d
 SUBDIR+=	gnunet
 SUBDIR+=	gnupoc-makesis
@@ -582,6 +584,7 @@ SUBDIR+=	moregroupware
 SUBDIR+=	mozplugger
 SUBDIR+=	mpgedit
 SUBDIR+=	mppdec
+SUBDIR+=	mppenc
 SUBDIR+=	mpq-tools
 SUBDIR+=	msworkbench
 SUBDIR+=	mtf
@@ -1052,6 +1055,7 @@ SUBDIR+=	tcd
 SUBDIR+=	tcpspy
 SUBDIR+=	tcptrack
 SUBDIR+=	teTeX3
+SUBDIR+=	tea
 SUBDIR+=	teamspeak
 SUBDIR+=	tendra
 SUBDIR+=	tenmado
@@ -1104,6 +1108,7 @@ SUBDIR+=	up-imapproxy
 SUBDIR+=	uqm
 SUBDIR+=	uqwk
 SUBDIR+=	urlgfe
+SUBDIR+=	ussp-push
 SUBDIR+=	util-linux
 SUBDIR+=	valgrind
 SUBDIR+=	valknut
