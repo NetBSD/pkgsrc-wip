@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/22 20:58:23 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/24 14:40:49 kuli0020 Exp $
 
 DISTNAME=	Image-EXIF-1.00.3
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Image/}
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://cpan.uwinnipeg.ca/dist/Image-EXIF
