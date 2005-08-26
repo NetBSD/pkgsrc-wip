@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/08/10 08:43:18 poppnk Exp $
+$NetBSD: distinfo,v 1.6 2005/08/26 17:59:14 poppnk Exp $
 
-SHA1 (mesure-0.4.tar.gz) = dab023c01b0aeda423e3e59f7bf5ea3f95e1d022
-RMD160 (mesure-0.4.tar.gz) = 5807a2a25144045cc5e4d4eddf3654b22c6b6826
-Size (mesure-0.4.tar.gz) = 12041 bytes
+SHA1 (mesure-0.5.tar.gz) = 587f4cb2132b748cd127b0307269e658756a6ae3
+RMD160 (mesure-0.5.tar.gz) = 8c8a60fe903bdb220f427f444b3fc80b840f5b38
+Size (mesure-0.5.tar.gz) = 13374 bytes
