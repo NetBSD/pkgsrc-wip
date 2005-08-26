@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1 2005/08/26 22:33:48 shattered Exp $
+
+--- src/RageSound.h.orig	2004-08-21 11:01:54.000000000 +0400
++++ src/RageSound.h	2005-05-15 18:36:07.000000000 +0400
+@@ -109,7 +109,7 @@
+ 	bool SetPositionSeconds( float fSeconds );
+ 	CString GetLoadedFilePath() const { return m_sFilePath; }
+ 	bool IsPlaying() const { return playing; }
+-	uint64_t GetPlayingThread() const { return playing_thread; }
++	PTHREAD_T GetPlayingThread() const { return playing_thread; }
+ 
+ 	/* Lock and unlock this sound. */
+ 	void LockSound();
+@@ -157,7 +157,7 @@
+ 	mutable int64_t max_driver_frame;
+ 
+ 	/* If playing, record the thread that called Play(). */
+-	uint64_t playing_thread;
++	PTHREAD_T playing_thread;
+ 
+ 	/* Unique ID number for this instance of RageSound. */
+ 	int ID;

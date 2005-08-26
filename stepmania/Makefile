@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/23 04:00:38 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/26 22:33:48 shattered Exp $
 #
 
 DISTNAME=		StepMania-3.9-rc2a-src
@@ -13,7 +13,7 @@ COMMENT=		Music/rhythm game (Dance Dance Revolution) simulator
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tests
 USE_X11=		YES
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake autoconf
 
 post-extract:
 	${CP} ${FILESDIR}/arch_bsd.h ${WRKSRC}/src/arch

@@ -1,0 +1,25 @@
+$NetBSD: patch-au,v 1.1 2005/08/26 22:33:48 shattered Exp $
+
+--- src/archutils/Unix/LinuxThreadHelpers.h.orig	2004-09-08 08:45:16.000000000 +0400
++++ src/archutils/Unix/LinuxThreadHelpers.h	2005-05-15 18:36:07.000000000 +0400
+@@ -4,16 +4,16 @@
+ CString ThreadsVersion();
+ 
+ /* Get the current thread's ThreadID. */
+-uint64_t GetCurrentThreadId();
++PTHREAD_T GetCurrentThreadId();
+ 
+ /* Return true if NPTL libraries are in use, false if linuxthreads. */
+ bool UsingNPTL();
+ 
+-int SuspendThread( uint64_t ThreadID );
+-int ResumeThread( uint64_t ThreadID );
++int SuspendThread( PTHREAD_T ThreadID );
++int ResumeThread( PTHREAD_T ThreadID );
+ 
+ struct BacktraceContext;
+-int GetThreadContext( uint64_t ThreadID, BacktraceContext *ctx );
++int GetThreadContext( PTHREAD_T ThreadID, BacktraceContext *ctx );
+ 	
+ #endif
+ 

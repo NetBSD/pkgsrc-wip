@@ -1,0 +1,25 @@
+$NetBSD: patch-as,v 1.1 2005/08/26 22:33:48 shattered Exp $
+
+--- src/arch/Threads/Threads_Pthreads.h.orig	2004-09-07 16:49:49.000000000 +0400
++++ src/arch/Threads/Threads_Pthreads.h	2005-05-15 18:36:07.000000000 +0400
+@@ -16,17 +16,17 @@
+ 	 * added bonus: if this is corrupted, we'll just send signals and they'll
+ 	 * fail; we won't blow up (unless we're root).
+ 	 */
+-	uint64_t threadHandle;
++	PTHREAD_T threadHandle;
+ 
+ 	/* These are only used during initialization. */
+ 	int (*m_pFunc)( void *pData );
+ 	void *m_pData;
+-	uint64_t *m_piThreadID;
++	PTHREAD_T *m_piThreadID;
+ 	SemaImpl *m_StartFinishedSem;
+ 
+ 	void Halt( bool Kill );
+ 	void Resume();
+-	uint64_t GetThreadId() const;
++	PTHREAD_T GetThreadId() const;
+ 	int Wait();
+ };
+ 

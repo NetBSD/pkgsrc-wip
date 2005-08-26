@@ -1,0 +1,85 @@
+$NetBSD: patch-ap,v 1.1 2005/08/26 22:33:48 shattered Exp $
+
+--- src/RageThreads.cpp.orig	2004-09-09 06:28:05.000000000 +0400
++++ src/RageThreads.cpp	2005-05-15 18:36:07.000000000 +0400
+@@ -44,7 +44,7 @@
+ 	char ThreadFormattedOutput[1024];
+ 
+ 	bool used;
+-	uint64_t id;
++	PTHREAD_T id;
+ 
+ 	ThreadImpl *pImpl;
+ 
+@@ -165,7 +165,7 @@
+ }
+ 
+ 
+-static ThreadSlot *GetThreadSlotFromID( uint64_t iID )
++static ThreadSlot *GetThreadSlotFromID( PTHREAD_T iID )
+ {
+ 	InitThreads();
+ 
+@@ -263,7 +263,7 @@
+ 	return GetThreadNameByID( GetCurrentThreadID() );
+ }
+ 
+-const char *RageThread::GetThreadNameByID( uint64_t iID )
++const char *RageThread::GetThreadNameByID( PTHREAD_T iID )
+ {
+ 	ThreadSlot *slot = GetThreadSlotFromID( iID );
+ 	if( slot == NULL )
+@@ -272,7 +272,7 @@
+ 	return slot->GetThreadName();
+ }
+ 
+-bool RageThread::EnumThreadIDs( int n, uint64_t &iID )
++bool RageThread::EnumThreadIDs( int n, PTHREAD_T &iID )
+ {
+ 	if( n >= MAX_THREADS )
+ 		return false;
+@@ -307,7 +307,7 @@
+ 
+ void RageThread::HaltAllThreads( bool Kill )
+ {
+-	const uint64_t ThisThreadID = GetThisThreadId();
++	const PTHREAD_T ThisThreadID = GetThisThreadId();
+ 	for( int entry = 0; entry < MAX_THREADS; ++entry )
+ 	{
+ 		if( !g_ThreadSlots[entry].used )
+@@ -320,7 +320,7 @@
+ 
+ void RageThread::ResumeAllThreads()
+ {
+-	const uint64_t ThisThreadID = GetThisThreadId();
++	const PTHREAD_T ThisThreadID = GetThisThreadId();
+ 	for( int entry = 0; entry < MAX_THREADS; ++entry )
+ 	{
+ 		if( !g_ThreadSlots[entry].used )
+@@ -332,7 +332,7 @@
+ 	}
+ }
+ 
+-uint64_t RageThread::GetCurrentThreadID()
++PTHREAD_T RageThread::GetCurrentThreadID()
+ {
+ 	return GetThisThreadId();
+ }
+@@ -554,7 +554,7 @@
+ 
+ void RageMutex::Lock()
+ {
+-	if( m_LockedBy == (uint64_t) GetThisThreadId() )
++	if( m_LockedBy == GetThisThreadId() )
+ 	{
+ 		++m_LockCnt;
+ 		return;
+@@ -596,7 +596,7 @@
+ 
+ bool RageMutex::TryLock()
+ {
+-	if( m_LockedBy == (uint64_t) GetThisThreadId() )
++	if( m_LockedBy == GetThisThreadId() )
+ 	{
+ 		++m_LockCnt;
+ 		return true;
