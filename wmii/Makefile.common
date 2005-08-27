@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.84 2005/08/27 10:33:12 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.85 2005/08/27 16:56:56 leonardschmidt Exp $
 #
 
 DISTNAME=	wmii-20050823
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://wmi.modprobe.de/snaps/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,10 +16,14 @@ DEPENDS+=		9rc-[0-9]*:../../wip/9rc
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	rc/wmii
-SUBST_SED.paths+=	-e 's,SHAREPREFIX,${PREFIX}/share,'
+SUBST_CLASSES+=		vars
+SUBST_STAGE.vars=	post-patch
+SUBST_FILES.vars=	rc/status
+SUBST_FILES.vars+=	rc/wmii
+SUBST_FILES.vars+=	rc/wmirefcard
+SUBST_SED.vars=		-e 's|SHAREPREFIX|${PREFIX}/share|g'
+SUBST_SED.vars+=	-e 's|CONFPREFIX|${PREFIX}/share/examples|g'
+SUBST_SED.vars+=	-e 's|9PREFIX|${PREFIX}|g'
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -42,3 +47,5 @@ EGFILES=		actions attach border clientupdate	\
 CONF_FILES+=		${EGDIR}/action/${f} ${PKG_SYSCONFDIR}/action/${f}
 .endfor
 .undef f
+
+CONF_FILES+=		${EGDIR}/status ${PKG_SYSCONFDIR}/status
