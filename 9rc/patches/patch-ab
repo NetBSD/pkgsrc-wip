@@ -1,18 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2005/08/27 09:01:56 leonardschmidt Exp $
+$NetBSD: patch-ab,v 1.2 2005/08/27 17:01:11 leonardschmidt Exp $
 
---- Makefile.orig	2005-08-23 21:38:52.000000000 +0000
-+++ Makefile
-@@ -6,11 +6,9 @@
+--- lib9/libc.h.orig	2005-08-23 21:38:52.000000000 +0000
++++ lib9/libc.h
+@@ -832,7 +832,7 @@ extern	int	post9pservice(int, char*);
+ #	endif
+ #endif
  
- include config.mk
- 
--SUBDIRS  = lib9 basename cat cleanname echo grep rc \
--           sed seq sleep sort tee test touch tr uniq
-+SUBDIRS  = lib9 rc
- 
--INSTDIRS = basename cat cleanname echo grep rc \
--           sed seq sleep sort tee test touch tr uniq
-+INSTDIRS = rc
- 
- ########################################################################
- # target definitions
+-#if defined(__OpenBSD__)
++#if defined(__OpenBSD__) || defined(__NetBSD__)
+ #define sched_yield() \
+ 	do { \
+ 		struct timespec ts; \
