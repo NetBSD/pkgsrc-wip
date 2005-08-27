@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/01 13:11:11 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/27 10:45:12 leonardschmidt Exp $
 #
 
 .include "../../wip/wmii/Makefile.common"
@@ -10,6 +10,8 @@ COMMENT+=	(built with cairo support)
 CONFLICTS=	wmii-[0-9]*
 
 MAKE_ENV+=	DRAW=cairo
+
+BROKEN=		Current version lacks cairo support
 
 SUBST_CLASSES+=	conf
 SUBST_STAGE.conf=	post-patch
