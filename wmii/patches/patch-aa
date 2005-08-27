@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2005/07/31 10:03:28 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.11 2005/08/27 10:00:19 leonardschmidt Exp $
 
---- config.mk.orig	2005-07-30 22:14:00.000000000 +0000
+--- config.mk.orig	2005-08-23 21:36:08.000000000 +0000
 +++ config.mk
-@@ -1,24 +1,24 @@
+@@ -1,34 +1,34 @@
  # Customize to fit your system
  
  # paths
@@ -13,43 +13,38 @@ $NetBSD: patch-aa,v 1.10 2005/07/31 10:03:28 leonardschmidt Exp $
 +CONFPREFIX  = ${PREFIX}/share/examples
 +MANPREFIX   = ${PREFIX}/man
  SHAREPREFIX = ${PREFIX}/share
+-9PREFIX     = ${PREFIX}/9
++9PREFIX     = ${PREFIX}
  
  INCDIR      = ${PREFIX}/include
  LIBDIR      = ${PREFIX}/lib
--X11DIR      = /usr/X11R6
-+X11DIR      = ${X11BASE}
+-X11INC      = /usr/X11R6/include
+-X11LIB      = /usr/X11R6/lib
++X11INC      = ${X11BASE}/include
++X11LIB      = ${X11BASE}/lib
  
  # includes and libs
--INCLUDES    = -I. -I${INCDIR} -I/usr/include -I${X11DIR}/include
--LIBS        = -L${LIBDIR} -L/usr/lib -lc -lm -L${X11DIR}/lib -lX11
--DRAW        = xlib
-+INCLUDES    = -I. -I${INCDIR} -I${PREFIX}/include -I${X11DIR}/include
-+LIBS        = -L${LIBDIR} -L${PREFIX}/lib -lc -lm -L${X11DIR}/lib -lX11
-+#DRAW        = xlib
+-INCLUDES    = -I. -I${INCDIR} -I/usr/include -I${X11INC}
+-LIBS        = -L${LIBDIR} -L/usr/lib -lc -lm -L${X11LIB} -lX11
++INCLUDES    = -I. -I${INCDIR} -I${PREFIX}/include -I${X11INC}
++LIBS        = -L${LIBDIR} -L${PREFIX}/lib -lc -lm -L${X11LIB} -lX11
+ RCPREFIX    = rc
  
- # cairo support
- #DRAW        = cairo
- #CAIROFLAGS  = -lcairo
--#CAIROINC    = -I/usr/include/cairo -I${INCDIR}/cairo
-+#CAIROINC    = -I${PREFIX}/include/cairo -I${INCDIR}/cairo
- 
- # str{l,n}{cat,cpy} support, if you have OpenBSD you can use strl*
- STRLCPY     = strncpy
-@@ -28,14 +28,14 @@ STRLFLAGS   = -DSTRLCPY=${STRLCPY} -DSTR
  # compiler
- VERSION     = 2
+ #VERSION     = 3-current
+ VERSION     = 20050823
  # Note: - under Solaris add -D__EXTENSIONS__ to CFLAGS
--CFLAGS      = -O0 -g -Wall -pedantic ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\" -DVERSION=\"${VERSION}\"
+-CFLAGS      = -O0 -g -Wall ${INCLUDES} -DVERSION=\"${VERSION}\"
 -LDFLAGS     = -g ${LIBS}
-+CFLAGS      += ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\" -DVERSION=\"${VERSION}\"
++CFLAGS      += ${INCLUDES} -DVERSION=\"${VERSION}\"
 +LDFLAGS     += ${LIBS}
- #CFLAGS      = -Os ${INCLUDES} ${STRLFLAGS} -DDRAW=\"${DRAW}\" -DVERSION=\"${VERSION}\"
+ #CFLAGS      = -Os ${INCLUDES} -DVERSION=\"${VERSION}\"
  #LDFLAGS     = ${LIBS}
  
  # userland
  AR          = ar cr
 -CC          = cc
 +#CC          = cc
- YACC        = yacc
  CP          = cp -f
  COMPRESS    = bzip2
+ INSTBIN     = ${CP}

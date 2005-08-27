@@ -1,29 +1,24 @@
-# $NetBSD: Makefile.common,v 1.82 2005/07/31 10:03:28 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.83 2005/08/27 10:00:18 leonardschmidt Exp $
 #
 
-DISTNAME=	wmii-2
+DISTNAME=	wmii-20050823
 CATEGORIES=	wm x11
-MASTER_SITES=	http://wmi.modprobe.de/download/
+MASTER_SITES=	http://wmi.modprobe.de/snaps/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://wmi.modprobe.de/
 COMMENT=	Modular and keyboard-friendly window manager
 
-DISTINFO_FILE=	${.CURDIR}/../../wip/wmii/distinfo
-PATCHDIR=	${.CURDIR}/../../wip/wmii/patches
-PLIST_SRC=	${.CURDIR}/../../wip/wmii/PLIST
+DEPENDS+=	9rc-[0-9]*:../../wip/9rc
 
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 
-MAKE_ENV+=		DRAW=xlib
-
 SUBST_CLASSES+=	paths
 SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	base/wmii rc/rc
+SUBST_FILES.paths=	rc/wmii
 SUBST_SED.paths+=	-e 's,SHAREPREFIX,${PREFIX}/share,'
-SUBST_SED.paths+=	-e 's,CONFPREFIX,${PREFIX}/share/examples,'
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,21 +30,15 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/action
 
 PKG_SYSCONFSUBDIR=	wmii
 EGDIR=			${PREFIX}/share/examples/wmii
-EGFILES=		bar keys menu rc rc.conf status.sh wm
-.for f in ${EGFILES}
-CONF_FILES=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
-.endfor
-.undef f
-
-ACFILES=		actions attach border clientupdate	\
+EGFILES=		actions attach border clientupdate	\
 			close cnext cprev detach fnext fprev	\
-			fresize ftoggle	icons kbare kmove	\
+			fresize ftoggle	icons kbare kmove 	\
 			knorm kresize lfloat lgrid lmax lock	\
-			ltiled lvsplit max mouse p pager	\
-			pageupdate plumbgoogle plumburl pnew	\
-			pprev premove presize programs ptoggle  \
-			quit scr tab term www zoom
-.for f in ${ACFILES}
+			ltiled lvsplit max p pager pageupdate	\
+			plumbgoogle plumburl pnew pnext pprev 	\
+			premove presize programs ptoggle quit	\
+			scr tab term wmirc wmire www zoom
+.for f in ${EGFILES}
 CONF_FILES+=		${EGDIR}/action/${f} ${PKG_SYSCONFDIR}/action/${f}
 .endfor
 .undef f
