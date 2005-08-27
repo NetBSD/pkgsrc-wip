@@ -1,19 +1,32 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/08/15 18:57:06 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.2 2005/08/27 09:01:56 leonardschmidt Exp $
 
---- config.mk.orig	2005-08-14 12:30:12.000000000 +0000
+--- config.mk.orig	2005-08-23 21:38:52.000000000 +0000
 +++ config.mk
-@@ -1,10 +1,10 @@
- # edit this file to match your system
--PREFIX=/usr/local
--MANPREFIX=${PREFIX}/share/man
-+#PREFIX=/usr/local
-+MANPREFIX=${PREFIX}/man
- VERSION=20050814
+@@ -1,22 +1,22 @@
+ # Customize to fit your system
  
--CC=gcc
--CFLAGS+=-Wall -Wno-missing-braces -Wno-parentheses -Wno-switch -Os -c -I. -DPREFIX="\"${PREFIX}\""
-+#CC=gcc
-+CFLAGS+=-c -I. -DPREFIX="\"${PREFIX}\""
- O=o
- AR=ar
- ARFLAGS=rc
+ # paths
+-PREFIX      = /usr/local/9
+-MANPREFIX   = ${PREFIX}/share/man
++#PREFIX      = /usr/local/9
++MANPREFIX   = ${PREFIX}/man
+ 
+ #INCDIR      = ${PREFIX}/include
+ #LIBDIR      = ${PREFIX}/lib
+ 
+ # compiler
+ VERSION     = 20050823
+-CFLAGS      = -Wall -Wno-missing-braces -Wno-parentheses -Wno-switch -Os -c -I. -DPREFIX="\"${PREFIX}\""
+-LDFLAGS     =
++CFLAGS      += -c -I. -DPREFIX="\"${PREFIX}\""
++LDFLAGS     +=
+ ARFLAGS     = rc
+ O           = o
+ 
+ # userland
+ AR          = ar
+-CC          = cc
++#CC          = cc
+ CP          = cp -f
+ COMPRESS    = gzip
+ INSTBIN     = ${CP}

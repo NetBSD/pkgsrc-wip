@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/08/16 12:13:26 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/27 09:01:56 leonardschmidt Exp $
 #
 
-DISTNAME=	9rc-20050814
+DISTNAME=	9rc-20050823
 CATEGORIES=	shells
 MASTER_SITES=	http://wmi.modprobe.de/snaps/
 
