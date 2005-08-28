@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2005/08/23 11:49:44 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/08/28 20:56:31 adrian_p Exp $
 
 DISTNAME=	smX-${VERSION}
 PKGNAME=	sendmailX-${VERSION}
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/.alpha/brc/
+MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/.beta/fnlly/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.sendmail.org/
@@ -13,7 +13,7 @@ CONFLICTS+=	postfix-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 PTHREAD_OPTS+=	require
-VERSION=	0.0.Alpha11.0
+VERSION=	0.0.Beta0.0
 USE_TOOLS+=	sed
 
 # Note: This will work on Linux, NetBSD, OpenBSD, SunOS, OSF1 and UnixWare but

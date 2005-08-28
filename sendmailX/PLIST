@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/08/09 14:52:50 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/08/28 20:56:31 adrian_p Exp $
 bin/createmap
 bin/log2time
 bin/mailq
@@ -7,8 +7,6 @@ bin/rcvrenvfromlog.sh
 bin/runas
 bin/smconf
 bin/t-getgroup
-bin/t-mm
-bin/t-unixcl
 include/smX/mfapi.h
 include/smX/pmfapi.h
 include/smX/pmfdef.h
@@ -22,8 +20,10 @@ man/man5/smx.conf.5
 man/man8/createmap.8
 man/man8/mailq.8
 man/man8/mcp.8
+man/man8/milter-spamd.8
 man/man8/qmgr.8
 man/man8/runas.8
+man/man8/sendmailX.8
 man/man8/sendmailx.8
 man/man8/smar.8
 man/man8/smtpc.8
