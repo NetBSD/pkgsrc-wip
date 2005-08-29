@@ -1,18 +1,22 @@
-# $NetBSD: options.mk,v 1.4 2005/08/21 18:48:43 tvierling Exp $
+# $NetBSD: options.mk,v 1.5 2005/08/29 13:04:33 tvierling Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
-PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pam pgsql
+PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pam pgsql ssl
+PKG_SUGGESTED_OPTIONS=	ssl
+
 .include "../../mk/bsd.options.mk"
 
 ###
 ### Build with GNU TLS or OpenSSL as the underlying crypto library.
 ###
-.if !empty(PKG_OPTIONS:Mgnutls)
-CONFIGURE_ARGS+=	--enable-ssl=gnutls
+.if !empty(PKG_OPTIONS:Mssl)
+CONFIGURE_ARGS+=        --with-ssl=openssl
+.  include "../../security/openssl/buildlink3.mk"
+.elif !empty(PKG_OPTIONS:Mgnutls)
+CONFIGURE_ARGS+=	--with-ssl=gnutls
 .  include "../../security/gnutls/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=        --enable-ssl=openssl
-.  include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--without-ssl
 .endif
 
 ###
