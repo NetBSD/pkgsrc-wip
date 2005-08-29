@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/08/29 20:52:57 kuli0020 Exp $
+
+SHA1 (Catalyst-Plugin-FormValidator-0.02.tar.gz) = 1e94418077f7e6e52863554ae2a355ca9606f25b
+RMD160 (Catalyst-Plugin-FormValidator-0.02.tar.gz) = d3eacf03b646fed26f658ce8a45afd261032cc3d
+Size (Catalyst-Plugin-FormValidator-0.02.tar.gz) = 1872 bytes
