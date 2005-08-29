@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/05/31 10:02:10 dillo Exp $
+# $NetBSD: options.mk,v 1.3 2005/08/29 13:34:35 tvierling Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.barnyard
 PKG_SUPPORTED_OPTIONS=	mysql pgsql
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS=	mysql
 ###
 ### Use PostgreSQL for storing user details
 ###
-.if !empty(PKG_OPTIONS:Mpostgresql)
+.if !empty(PKG_OPTIONS:Mpgsql)
 .	include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-postgres
 CONFIGURE_ARGS+=	--with-postgres-includes=${PREFIX}/include/postgresql
