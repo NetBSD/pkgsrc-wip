@@ -1,0 +1,21 @@
+# $NetBSD: Makefile,v 1.1.1.1 2005/08/29 20:34:52 kuli0020 Exp $
+
+DISTNAME=	Catalyst-Plugin-FillInForm-0.06
+PKGNAME=	p5-${DISTNAME}
+CATEGORIES=	www perl5
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
+#MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/SR/SRI/}
+
+MAINTAINER=	kuli0020@umn.edu
+HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-FillInForm/
+COMMENT=	Automatically fill in forms in Catalyst using HTML::FillInForms
+PERL5_REQD+=    5.8
+
+DEPENDS+=	p5-Catalyst>=2.99:../../www/p5-Catalyst
+DEPENDS+=	p5-HTML-FillInForm>=0:../../www/p5-HTML-FillInForm
+DEPENDS+=	p5-NEXT>=0.00:../../devel/p5-NEXT
+
+PERL5_PACKLIST= auto/Catalyst/Plugin/FillInForm/.packlist
+
+.include "../../lang/perl5/module.mk"
+.include "../../mk/bsd.pkg.mk"
