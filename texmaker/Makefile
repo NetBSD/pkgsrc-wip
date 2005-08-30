@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/09 09:38:48 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/30 14:51:32 ghen Exp $
 
 DISTNAME=	texmaker-1.12
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
+MASTER_SITES=	http://www.epidauros.be/pkgsrc/	### TEMPORARY!
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	geert.hendrickx@ua.ac.be
