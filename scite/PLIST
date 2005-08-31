@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/27 19:40:17 shattered Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/08/31 20:08:43 shattered Exp $
 bin/SciTE
 man/man1/scite.1
 share/pixmaps/Sci48M.png
@@ -10,27 +10,38 @@ share/scite/SciTEDirector.html
 share/scite/SciTEDoc.html
 share/scite/SciTEDownload.html
 share/scite/SciTEExtension.html
+share/scite/SciTEExternalLexer.html
 share/scite/SciTEExtras.html
+share/scite/SciTEFAQ.html
 share/scite/SciTEGlobal.properties
 share/scite/SciTEIco.png
 share/scite/SciTEImage.html
 share/scite/SciTELexer.html
+share/scite/SciTELua.html
 share/scite/SciTERegEx.html
-share/scite/SciTETranslation.html
 share/scite/abbrev.properties
 share/scite/ada.properties
 share/scite/asm.properties
+share/scite/asn1.properties
+share/scite/au3.properties
 share/scite/ave.properties
 share/scite/baan.properties
+share/scite/blitzbasic.properties
 share/scite/bullant.properties
+share/scite/caml.properties
 share/scite/conf.properties
 share/scite/cpp.properties
+share/scite/csound.properties
 share/scite/css.properties
 share/scite/eiffel.properties
+share/scite/erlang.properties
 share/scite/escript.properties
+share/scite/flagship.properties
 share/scite/forth.properties
 share/scite/fortran.properties
+share/scite/freebasic.properties
 share/scite/html.properties
+share/scite/kix.properties
 share/scite/latex.properties
 share/scite/lisp.properties
 share/scite/lot.properties
@@ -46,12 +57,18 @@ share/scite/pascal.properties
 share/scite/perl.properties
 share/scite/pov.properties
 share/scite/ps.properties
+share/scite/purebasic.properties
 share/scite/python.properties
+share/scite/rebol.properties
 share/scite/ruby.properties
 share/scite/scriptol.properties
+share/scite/smalltalk.properties
+share/scite/specman.properties
 share/scite/sql.properties
 share/scite/tcl.properties
 share/scite/tex.properties
 share/scite/vb.properties
+share/scite/verilog.properties
+share/scite/vhdl.properties
 share/scite/yaml.properties
 @dirrm share/scite
