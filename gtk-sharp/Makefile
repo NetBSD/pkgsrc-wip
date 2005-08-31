@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2005/08/11 10:08:22 absd Exp $
+# $NetBSD: Makefile,v 1.25 2005/08/31 12:59:03 leonardschmidt Exp $
 #
 
-DISTNAME=	gtk-sharp-0.99
+DISTNAME=	gtk-sharp-1.0.10
 CATEGORIES=	x11
-MASTER_SITES=	http://www.go-mono.com/archive/rc/
+MASTER_SITES=	http://www.go-mono.com/sources/gtk-sharp/
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://gtk-sharp.sourceforge.net/
@@ -11,8 +11,7 @@ COMMENT=	.Net language binding for gtk+
 
 DEPENDS+=	p5-XML-LibXML>=1.31:../../textproc/p5-XML-LibXML
 
-USE_TOOLS+=	gmake pkg-config
-USE_PERL5=	yes
+USE_TOOLS+=	gmake perl:run pkg-config
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 PERL5_SITELIB=	yes
@@ -34,13 +33,6 @@ REPLACE_PERL+=	parser/gapi.pl
 REPLACE_PERL+=	parser/gapi2xml.pl
 REPLACE_PERL+=	parser/gapi_pp.pl
 
-PARSER_MK=	${WRKSRC}/parser/GAPI/Makefile.in
-
-SUBST_CLASSES+=		gapi
-SUBST_STAGE.gapi=	pre-configure
-SUBST_FILES.gapi=	parser/GAPI/Makefile.in
-SUBST_SED.gapi=		-e 's,%%PERL5_SITELIB%%,${PERL5_SITELIB},'
-
 # XXX work around a known mono bug
 MONO=		${BUILDLINK_PREFIX.mono}/bin/mono --optimize=loop
 MAKE_FLAGS+=	RUNTIME=${MONO:Q}
@@ -55,7 +47,7 @@ MAKE_FLAGS+=	RUNTIME=${MONO:Q}
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../www/gtkhtml3/buildlink3.mk"
+.include "../../www/gtkhtml36/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
