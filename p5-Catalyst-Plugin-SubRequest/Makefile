@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/31 14:59:39 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/31 21:27:38 kuli0020 Exp $
 
 DISTNAME=	Catalyst-Plugin-SubRequest-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-SubRequest/
 COMMENT=	Serve static files from config->{root}.
 PERL5_REQD+=    5.8.0
 
-DEPENDS+=	p5-Catalyst>=2.99:../../www/p5-Catalyst
+DEPENDS+=	p5-Catalyst>=2.99:../../wip/p5-Catalyst
 
 PERL5_PACKLIST= auto/Catalyst/Plugin/SubRequest/.packlist
 
