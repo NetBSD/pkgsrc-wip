@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/31 16:52:11 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/31 21:24:53 kuli0020 Exp $
 
 DISTNAME=	Catalyst-Plugin-Static-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Serve static files with Catalyst
 
 PERL5_REQD+=    5.8.0
 
-DEPENDS+=	p5-Catalyst>=2.99:../../www/p5-Catalyst
+DEPENDS+=	p5-Catalyst>=2.99:../../wip/p5-Catalyst
 DEPENDS+=	p5-File-MimeInfo>=0.11:../../devel/p5-File-MimeInfo
 DEPENDS+=	p5-File-Slurp>=0:../../devel/p5-File-Slurp
 

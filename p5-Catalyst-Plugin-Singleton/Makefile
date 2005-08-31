@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/29 21:27:16 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/31 21:23:00 kuli0020 Exp $
 
 DISTNAME=	Catalyst-Plugin-Singleton-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Singleton to context.
 
 PERL5_REQD+=    5.7.3
 
-DEPENDS+=	p5-Catalyst>=0:../../www/p5-Catalyst
+DEPENDS+=	p5-Catalyst>=0:../../wip/p5-Catalyst
 DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
 
 BUILDING_MODULE_BUILD=  yes
