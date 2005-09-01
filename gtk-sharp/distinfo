@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2005/08/31 12:59:03 leonardschmidt Exp $
+$NetBSD: distinfo,v 1.11 2005/09/01 07:05:15 leonardschmidt Exp $
 
 SHA1 (gtk-sharp-1.0.10.tar.gz) = 6965559e2e3b741f587a41d286935c73a2c2c437
 RMD160 (gtk-sharp-1.0.10.tar.gz) = 53db7e93424b2429cf825390633ede4d7c511564
 Size (gtk-sharp-1.0.10.tar.gz) = 1841067 bytes
-SHA1 (patch-aa) = ccc08bf0130e6005f66be61516aadc335c789feb
