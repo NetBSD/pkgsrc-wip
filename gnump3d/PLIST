@@ -1,37 +1,40 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:33:57 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/09/01 23:03:13 poppnk Exp $
 bin/gnump3d
 bin/gnump3d-index
 bin/gnump3d-top
 bin/gnump3d2
 etc/gnump3d/gnump3d.conf
 etc/gnump3d/mime.types
-etc/rc.d/gnump3d
-lib/perl5/5.8.4/gnump3d/IP.pm
-lib/perl5/5.8.4/gnump3d/MD5.pm
-lib/perl5/5.8.4/gnump3d/base64.pm
-lib/perl5/5.8.4/gnump3d/config.pm
-lib/perl5/5.8.4/gnump3d/files.pm
-lib/perl5/5.8.4/gnump3d/lang/de.pm
-lib/perl5/5.8.4/gnump3d/lang/en.pm
-lib/perl5/5.8.4/gnump3d/lang/lookup.pm
-lib/perl5/5.8.4/gnump3d/mp3info.pm
-lib/perl5/5.8.4/gnump3d/ogginfo.pm
-lib/perl5/5.8.4/gnump3d/oggtagreader.pm
-lib/perl5/5.8.4/gnump3d/plugins/COPYING.pm
-lib/perl5/5.8.4/gnump3d/plugins/bug.pm
-lib/perl5/5.8.4/gnump3d/plugins/info.pm
-lib/perl5/5.8.4/gnump3d/plugins/now.pm
-lib/perl5/5.8.4/gnump3d/plugins/playlist.pm
-lib/perl5/5.8.4/gnump3d/plugins/prefs.pm
-lib/perl5/5.8.4/gnump3d/plugins/random.pm
-lib/perl5/5.8.4/gnump3d/plugins/recent.pm
-lib/perl5/5.8.4/gnump3d/plugins/search.pm
-lib/perl5/5.8.4/gnump3d/plugins/size.pm
-lib/perl5/5.8.4/gnump3d/plugins/stats.pm
-lib/perl5/5.8.4/gnump3d/plugins/tagbrowse.pm
-lib/perl5/5.8.4/gnump3d/sorting.pm
-lib/perl5/5.8.4/gnump3d/tagcache.pm
-lib/perl5/5.8.4/gnump3d/url.pm
+lib/perl5/5.8.0/gnump3d/IP.pm
+lib/perl5/5.8.0/gnump3d/MD5.pm
+lib/perl5/5.8.0/gnump3d/WMA.pm
+lib/perl5/5.8.0/gnump3d/base64.pm
+lib/perl5/5.8.0/gnump3d/config.pm
+lib/perl5/5.8.0/gnump3d/files.pm
+lib/perl5/5.8.0/gnump3d/lang/de.pm
+lib/perl5/5.8.0/gnump3d/lang/en.pm
+lib/perl5/5.8.0/gnump3d/lang/fr.pm
+lib/perl5/5.8.0/gnump3d/lang/lookup.pm
+lib/perl5/5.8.0/gnump3d/mp3info.pm
+lib/perl5/5.8.0/gnump3d/mp4info.pm
+lib/perl5/5.8.0/gnump3d/ogginfo.pm
+lib/perl5/5.8.0/gnump3d/oggtagreader.pm
+lib/perl5/5.8.0/gnump3d/plugins/COPYING.pm
+lib/perl5/5.8.0/gnump3d/plugins/bug.pm
+lib/perl5/5.8.0/gnump3d/plugins/info.pm
+lib/perl5/5.8.0/gnump3d/plugins/now.pm
+lib/perl5/5.8.0/gnump3d/plugins/playlist.pm
+lib/perl5/5.8.0/gnump3d/plugins/prefs.pm
+lib/perl5/5.8.0/gnump3d/plugins/random.pm
+lib/perl5/5.8.0/gnump3d/plugins/recent.pm
+lib/perl5/5.8.0/gnump3d/plugins/search.pm
+lib/perl5/5.8.0/gnump3d/plugins/size.pm
+lib/perl5/5.8.0/gnump3d/plugins/stats.pm
+lib/perl5/5.8.0/gnump3d/plugins/tagbrowse.pm
+lib/perl5/5.8.0/gnump3d/readtags.pm
+lib/perl5/5.8.0/gnump3d/sorting.pm
+lib/perl5/5.8.0/gnump3d/tagcache.pm
+lib/perl5/5.8.0/gnump3d/url.pm
 man/man1/gnump3d-index.1
 man/man1/gnump3d-top.1
 man/man1/gnump3d.1
@@ -74,6 +77,30 @@ share/gnump3d/LaFrere/search.html
 share/gnump3d/LaFrere/size.html
 share/gnump3d/LaFrere/stats.html
 share/gnump3d/LaFrere/tagbrowse.html
+share/gnump3d/Nomad/COPYING.html
+share/gnump3d/Nomad/ClubNomadLogo.gif
+share/gnump3d/Nomad/GNUMP3dLogo.jpg
+share/gnump3d/Nomad/Nomad_theme.css
+share/gnump3d/Nomad/SmallHome.gif
+share/gnump3d/Nomad/bg.gif
+share/gnump3d/Nomad/bug.html
+share/gnump3d/Nomad/config.ini
+share/gnump3d/Nomad/error.html
+share/gnump3d/Nomad/gnump3d_themes_footer.tmpl
+share/gnump3d/Nomad/gnump3d_themes_header.tmpl
+share/gnump3d/Nomad/index.html
+share/gnump3d/Nomad/info.html
+share/gnump3d/Nomad/logo.png
+share/gnump3d/Nomad/now.html
+share/gnump3d/Nomad/playlist.html
+share/gnump3d/Nomad/prefs.html
+share/gnump3d/Nomad/random.html
+share/gnump3d/Nomad/recent.html
+share/gnump3d/Nomad/results.html
+share/gnump3d/Nomad/search.html
+share/gnump3d/Nomad/size.html
+share/gnump3d/Nomad/stats.html
+share/gnump3d/Nomad/tagbrowse.html
 share/gnump3d/README
 share/gnump3d/SchwartzNGrau/AUTHOR
 share/gnump3d/SchwartzNGrau/COPYING.html
@@ -197,6 +224,13 @@ share/gnump3d/dotNET/results.html
 share/gnump3d/dotNET/search.html
 share/gnump3d/dotNET/stats.html
 share/gnump3d/dotNET/style.css
+share/gnump3d/handheld/AUTHOR
+share/gnump3d/handheld/config.ini
+share/gnump3d/handheld/error.html
+share/gnump3d/handheld/index.html
+share/gnump3d/handheld/random.html
+share/gnump3d/handheld/results.html
+share/gnump3d/handheld/search.html
 share/gnump3d/nausicaa/AUTHOR
 share/gnump3d/nausicaa/COPYING.html
 share/gnump3d/nausicaa/bug.html
@@ -232,13 +266,17 @@ share/gnump3d/redgrey/stats.html
 share/gnump3d/redgrey/tagbrowse.html
 @dirrm share/gnump3d/redgrey
 @dirrm share/gnump3d/nausicaa
+@dirrm share/gnump3d/handheld
 @dirrm share/gnump3d/dotNET/images
 @dirrm share/gnump3d/dotNET
 @dirrm share/gnump3d/default
 @dirrm share/gnump3d/Thexder
 @dirrm share/gnump3d/Tabular
 @dirrm share/gnump3d/SchwartzNGrau
+@dirrm share/gnump3d/Nomad
 @dirrm share/gnump3d/LaFrere
 @dirrm share/gnump3d/Clean
 @dirrm share/gnump3d
+@dirrm lib/perl5/5.8.0/gnump3d/lang
+@dirrm lib/perl5/5.8.0/gnump3d
 @dirrm etc/gnump3d
