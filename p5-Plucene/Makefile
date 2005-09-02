@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/02 20:08:19 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/02 20:23:17 kuli0020 Exp $
 
 DISTNAME=	Plucene-1.24
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	p5-PathTools>=1.1:../../wip/p5-PathTools
 DEPENDS+=	p5-IO-stringy>=2.104:../../devel/p5-IO-stringy
 DEPENDS+=	p5-Lingua-Stem>=0.81:../../wip/p5-Lingua-Stem
 DEPENDS+=	p5-Scalar-List-Utils>=1.13:../../devel/p5-Scalar-List-Utils
-DEPENDS=	p5-Memoize>=1.01:../../devel/p5-Memoize
+DEPENDS+=	p5-Memoize>=1.01:../../devel/p5-Memoize
 DEPENDS+=	p5-Tie-Array-Sorted>=1.1:../../wip/p5-Tie-Array-Sorted
 DEPENDS+=	p5-Time-Piece>=1.08:../../time/p5-Time-Piece
 DEPENDS+=	p5-Encode-compat>=0:../../wip/p5-Encode-compat
