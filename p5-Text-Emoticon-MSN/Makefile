@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/01 22:00:27 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/02 18:11:41 kuli0020 Exp $
 
 DISTNAME=       Text-Emoticon-MSN-0.02
 PKGNAME=        p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	kuli0020@NetBSD.org
 HOMEPAGE=	http://cpan.uwinnipeg.ca/dist/Text-Emoticon-MSN
 COMMENT=	Emoticon filter of MSN Messenger
 
-BUILD_DEPENDS=	p5-Test-Simple>=0.32:../../devel/p5-Test-Simple
+DEPENDS+=       {perl>=5.7.3,p5-Test-Simple>=0.32}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/Text/Emoticon/MSN/.packlist
 
