@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1907 2005/08/31 19:39:26 kristerw Exp $
-# $Id: Makefile,v 1.1907 2005/08/31 19:39:26 kristerw Exp $
+# $NetBSD: Makefile,v 1.1908 2005/09/02 19:16:55 tnn2 Exp $
+# $Id: Makefile,v 1.1908 2005/09/02 19:16:55 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1220,6 +1220,7 @@ SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	z26
 SUBDIR+=	zapping
+SUBDIR+=	zidrav
 SUBDIR+=	zinf
 SUBDIR+=	zphoto
 SUBDIR+=	zsnes-devel
