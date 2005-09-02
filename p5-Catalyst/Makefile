@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/08/31 20:59:46 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/02 17:06:58 kuli0020 Exp $
 
 DISTNAME=	Catalyst-5.30
 PKGNAME=	p5-${DISTNAME}
@@ -25,7 +25,6 @@ DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../wip/p5-Tree-Simple-VisitorFacto
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 DEPENDS+=	p5-Path-Class>=0.09:../../wip/p5-Path-Class
 
-BUILDING_MODULE_BUILD=  yes
 PERL5_MODULE_TYPE=      Module::Build
 PERL5_PACKLIST= auto/Catalyst/.packlist
 
