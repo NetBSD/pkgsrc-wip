@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2005/09/02 19:37:07 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/02 20:08:19 kuli0020 Exp $
 
 DISTNAME=	Plucene-1.24
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/T/TM/TMTM/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plucene/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Plucene/
 HOMEPAGE=	http://jakarta.apache.org/lucene
 COMMENT=	Perl port of the Java Lucene search engine
+PERL5_REQD+=    5.6.0
 
 DEPENDS+=	p5-Bit-Vector-Minimal>=1.0:../../wip/p5-Bit-Vector-Minimal
 DEPENDS+=	p5-Class-Accessor>=0.18:../../devel/p5-Class-Accessor
@@ -22,7 +23,6 @@ DEPENDS+=	p5-Tie-Array-Sorted>=1.1:../../wip/p5-Tie-Array-Sorted
 DEPENDS+=	p5-Time-Piece>=1.08:../../time/p5-Time-Piece
 DEPENDS+=	p5-Encode-compat>=0:../../wip/p5-Encode-compat
 BUILD_DEPENDS+=	p5-File-Slurp>=2002.1031:../../devel/p5-File-Slurp
-DEPENDS+=	p5-Text-Balanced>=0:../../textproc/p5-Text-Balanced
 
 PERL5_MODULE_TYPE=      Module::Build
 PERL5_PACKLIST= auto/Plucene/.packlist
