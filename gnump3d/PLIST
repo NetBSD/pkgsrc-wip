@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/09/01 23:03:13 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/09/02 17:06:42 poppnk Exp $
 bin/gnump3d
 bin/gnump3d-index
 bin/gnump3d-top
@@ -276,7 +276,8 @@ share/gnump3d/redgrey/tagbrowse.html
 @dirrm share/gnump3d/Nomad
 @dirrm share/gnump3d/LaFrere
 @dirrm share/gnump3d/Clean
+@dirrm share/gnump3d/simple
 @dirrm share/gnump3d
+@dirrm lib/perl5/5.8.0/gnump3d/plugins
 @dirrm lib/perl5/5.8.0/gnump3d/lang
 @dirrm lib/perl5/5.8.0/gnump3d
-@dirrm etc/gnump3d

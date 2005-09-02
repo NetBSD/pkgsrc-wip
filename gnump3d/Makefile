@@ -1,18 +1,20 @@
-# $NetBSD: Makefile,v 1.9 2005/09/01 23:03:13 poppnk Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/02 17:06:42 poppnk Exp $
 #
 
 DISTNAME=		gnump3d-2.9.4
 CATEGORIES=		audio
 MASTER_SITES=		http://savannah.gnu.org/download/gnump3d/
 EXTRACT_SUFX=		.tar.bz2
+PKGREVISION=	1
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://savannah.gnu.org/download/gnump3d/
 COMMENT=		The GNU Streaming MP3 / Media Server
 
+CFGFILE=		${PKG_SYSCONFDIR}/gnump3d/gnump3d.conf
 USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		gnump3d
-CONF_FILES=		none ${PREFIX}/etc/gnump3d/gnump3d.conf
+CONF_FILES=		none ${CFGFILE}
 
 USE_PERL5=		YES
 USE_TOOLS+=		gmake
@@ -28,5 +30,9 @@ SUBST_SED.gnump3d+=	-e s!/etc\/!${PREFIX}/etc/!
 
 pre-install:
 	${FIND} ${WRKSRC} -type f -name \*.sav |${XARGS} ${RM} -f
+
+post-install:
+	cp ${CFGFILE} ${CFGFILE}.default
+	if [ -e ${CFGFILE}-orig ]; then cp ${CFGFILE}-orig ${CFGFILE} ; fi
 
 .include "../../mk/bsd.pkg.mk"
