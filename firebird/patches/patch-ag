@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1 2005/09/03 23:30:30 rillig Exp $
+
+--- src/jrd/thd.cpp	2004-09-18 08:34:14.000000000 +0900
++++ src/jrd/thd.cpp	2005-06-27 15:14:14.000000000 +0900
+@@ -1555,9 +1555,9 @@
+    in <unistd.h>.  Darwin defined _POSIX_THREAD_PRIORITY_SCHEDULING
+    instead of _POSIX_PRIORITY_SCHEDULING.
+ */
+-#if (defined _POSIX_PRIORITY_SCHEDULING || defined _POSIX_THREAD_PRIORITY_SCHEDULING)
++#if (defined _POSIX_PRIORITY_SCHEDULING || defined _POSIX_THREAD_PRIORITY_SCHEDULING || defined NETBSD)
+ 	sched_yield();
+-#else
++#else	
+ 	pthread_yield();
+ #endif /* _POSIX_PRIORITY_SCHEDULING */
+ #endif

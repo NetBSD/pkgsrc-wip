@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2005/09/03 23:30:30 rillig Exp $
+
+--- src/jrd/common.h	2004-03-29 12:50:10.000000000 +0900
++++ src/jrd/common.h	2005-06-18 11:05:02.000000000 +0900
+@@ -318,7 +318,7 @@
+ #define MOVE_FASTER(from,to,length)     memcpy (to, from, (int) (length))
+ #define MOVE_CLEAR(to,length)           memset (to, 0, (int) (length))
+ 
+-typedef RETSIGTYPE (*SIG_FPTR) ();
++typedef RETSIGTYPE (*SIG_FPTR) (int);
+ #endif /* NETBSD */
+ 
+ 

@@ -1,7 +1,6 @@
-$NetBSD$
+$NetBSD: patch-am,v 1.1 2005/09/03 23:30:30 rillig Exp $
 
-diff -Nur /home/nel/firebird-1.5.2.4731/builds/posix/prefix.netbsd builds/posix/prefix.netbsd
---- /home/nel/firebird-1.5.2.4731/builds/posix/prefix.netbsd	1970-01-01 09:00:00.000000000 +0900
+--- builds/posix/prefix.netbsd	1970-01-01 09:00:00.000000000 +0900
 +++ builds/posix/prefix.netbsd	2005-06-27 16:19:39.000000000 +0900
 @@ -0,0 +1,32 @@
 +# The contents of this file are subject to the Interbase Public
@@ -21,7 +20,7 @@ diff -Nur /home/nel/firebird-1.5.2.4731/builds/posix/prefix.netbsd builds/posix/
 +# All Rights Reserved.
 +# Contributor(s): ______________________________________.
 +# Start of file prefix.netbsd:	$(VERSION)	@PLATFORM@
-+#$Id: prefix.netbsd,v 1.6.2.2 2003/10/09 23:08:34 skidder Exp $
++# Id: prefix.netbsd,v 1.6.2.2 2003/10/09 23:08:34 skidder Exp
 +
 +LD=@CXX@
 +

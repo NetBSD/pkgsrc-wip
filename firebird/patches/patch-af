@@ -1,0 +1,40 @@
+$NetBSD: patch-af,v 1.1 2005/09/03 23:30:30 rillig Exp $
+
+--- src/jrd/isc_sync.cpp	2004-04-06 16:51:12.000000000 +0900
++++ src/jrd/isc_sync.cpp	2005-06-27 14:19:03.000000000 +0900
+@@ -653,7 +653,7 @@
+ 		pthread_cond_init(event->event_semnum, pthread_condattr_default);
+ #else
+ /* RITTER - added HP11 to the preprocessor condition below */
+-#if (defined LINUX || defined DARWIN || defined HP11 || defined FREEBSD)
++#if (defined LINUX || defined DARWIN || defined HP11 || defined FREEBSD || defined NETBSD)
+ 		pthread_mutex_init(event->event_mutex, NULL);
+ 		pthread_cond_init(event->event_semnum, NULL);
+ #else
+@@ -782,7 +782,7 @@
+ 		if (micro_seconds > 0 && (ret == -1) && (errno == EAGAIN))
+ #else
+ /* RITTER - added HP11 to the preprocessor condition below */
+-#if (defined LINUX || defined DARWIN || defined HP11 || defined FREEBSD)
++#if (defined LINUX || defined DARWIN || defined HP11 || defined FREEBSD || defined NETBSD)
+ 		if (micro_seconds > 0 && (ret == ETIMEDOUT))
+ #else
+ 		if (micro_seconds > 0 && (ret == ETIME))
+@@ -3235,7 +3235,7 @@
+ 	int state;
+ 
+ /* RITTER - replaced HP10 with HPUX in the line below */
+-#if (!defined HPUX && !defined LINUX && !defined DARWIN && !defined FREEBSD)
++#if (!defined HPUX && !defined LINUX && !defined DARWIN && !defined FREEBSD && !defined NETBSD)
+ 
+ 	pthread_mutexattr_t mattr;
+ 
+@@ -3256,7 +3256,7 @@
+ 	 memory in which case we need interprocess thread sync.
+ */
+ /* RITTER - added HP11 */
+-#if (defined LINUX || defined DARWIN || defined HP11 || defined FREEBSD)
++#if (defined LINUX || defined DARWIN || defined HP11 || defined FREEBSD || defined NETBSD)
+ 	return pthread_mutex_init(mutex->mtx_mutex, NULL);
+ #else
+ 	state = pthread_mutex_init(mutex->mtx_mutex, pthread_mutexattr_default);

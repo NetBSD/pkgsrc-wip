@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2005/09/03 23:30:30 rillig Exp $
+
+--- src/jrd/thd.h	2004-09-18 08:34:14.000000000 +0900
++++ src/jrd/thd.h	2005-06-27 14:35:53.000000000 +0900
+@@ -73,6 +73,10 @@
+ #define POSIX_THREADS           1
+ #endif
+ 
++#if (defined(NETBSD) && defined(SUPERCLIENT))
++#define POSIX_THREADS           1
++#endif
++
+ #if (defined(DARWIN) && defined(SUPERCLIENT))
+ #define POSIX_THREADS           1
+ #endif
