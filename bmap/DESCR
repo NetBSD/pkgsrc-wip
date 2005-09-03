@@ -1,0 +1,5 @@
+The Linux kernel includes a powerful, filesystem independant mechanism for
+mapping logical files onto the sectors they occupy on disk, which can be
+subverted (with bmap and friends) to perform a variety of functions
+interesting to the computer forensics community and the computer security
+community.

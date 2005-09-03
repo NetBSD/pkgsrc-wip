@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/03 00:21:31 poppnk Exp $
+bin/bmap
+bin/slacker
+man/man2/libbmap.2
+share/doc/bmap/bmap-invoke.sgml
+share/doc/bmap/bmap.sgml
+share/doc/bmap/slacker-invoke.sgml
+@dirrm share/doc/bmap
