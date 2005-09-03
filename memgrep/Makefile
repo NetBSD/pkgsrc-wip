@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:10 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/03 00:33:57 poppnk Exp $
 #
 
 DISTNAME=		memgrep-0.8.0
@@ -6,7 +6,7 @@ CATEGORIES=		wip devel
 MASTER_SITES=		http://www.hick.org/code/skape/memgrep/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://www.hick.org/code/skape/memgrep/
+HOMEPAGE=		http://www.hick.org/code.html
 COMMENT=		Tool to modify applications on-the-fly
 
 USE_PKGLOCALEDIR=	yes

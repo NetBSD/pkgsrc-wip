@@ -1,0 +1,15 @@
+--- src/memgrep.c.orig	2003-12-30 02:08:09.000000000 -0400
++++ src/memgrep.c	2005-09-03 02:32:00.000000000 -0400
+@@ -88,11 +88,11 @@
+ 
+ 	int myPtrace(MEM_CTX *ctx, int command, int pid, unsigned long addr, unsigned long data);
+ #else
++#include <sys/ptrace.h>
+ 	#include <linux/user.h>
+ 	
+ 	#define PTRACE_ADDR_CAST void *
+ 
+-	extern long int ptrace (unsigned long int cmd, unsigned long int pid, void *param, unsigned long int data);
+ #endif
+ 
+ const char memgrepVersion[] = "v0.8.0 12/21/2003";
