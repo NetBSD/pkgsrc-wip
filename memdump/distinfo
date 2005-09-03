@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/09/03 15:49:30 poppnk Exp $
+
+SHA1 (memdump-1.01.tar.gz) = bc5f0a132f41a3606697e874e942e6588398a3a8
+RMD160 (memdump-1.01.tar.gz) = 437585744012de5c6f88743c05428ca9bc9cf9b1
+Size (memdump-1.01.tar.gz) = 12713 bytes

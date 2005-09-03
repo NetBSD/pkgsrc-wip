@@ -1,0 +1,21 @@
+What can you expect to find in a system memory dump? Bits from the
+operating system, from running processes, and from every file and
+directory that has been accessed recently. Depending on the operating
+system you may even find some information from deleted files and
+exited processes, although that information tends to be short-lived.
+
+To dump physical memory: 
+
+    memdump | nc host port
+    memdump | openssl s_client -connect host:port
+
+For best results send output off-host over the network. Writing to      
+file risks clobbering all the memory in the file system cache. Use
+netcat, stunnel, or openssl, depending on your requirements.
+
+With the exception of Linux, dumping UNIX system memory is a tricky
+business because /dev/mem has holes that one has to carefully skip
+around in order not to read nonsense or even miss information.
+
+This software was tested on Linux, Solaris, FreeBSD, OpenBSD, and
+is distributed under the IBM Public License.
