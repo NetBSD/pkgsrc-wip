@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/28 03:56:14 geeohgeegeeoh Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/03 14:00:52 minskim Exp $
 #
 
 DISTNAME=		Date-Simple-3.02
@@ -13,4 +13,3 @@ PERL5_PACKLIST=         ${PERL5_SITEARCH}/auto/Date/Simple/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
-
