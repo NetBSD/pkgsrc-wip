@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2005/08/28 20:56:31 adrian_p Exp $
+$NetBSD: distinfo,v 1.8 2005/09/04 13:10:08 adrian_p Exp $
 
-SHA1 (smX-0.0.Beta0.0.tar.gz) = b1456e4d7774d19061bc1f9da742820146ca0bc9
-RMD160 (smX-0.0.Beta0.0.tar.gz) = 61a3c74591940feaa52eeada8047a3c20aca2b7b
-Size (smX-0.0.Beta0.0.tar.gz) = 3870757 bytes
+SHA1 (smX-0.0.Beta1.0.tar.gz) = 7eaad78e55016fcfe64a2b4605cd2007e869d4e5
+RMD160 (smX-0.0.Beta1.0.tar.gz) = 63c67df41589931baefca3c0eb3693470afffa80
+Size (smX-0.0.Beta1.0.tar.gz) = 3875394 bytes
 SHA1 (patch-ab) = 76e025b9080db4489d070be2d3fd0a9b83820579

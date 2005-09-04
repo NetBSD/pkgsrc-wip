@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/08/28 20:56:31 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/09/04 13:10:08 adrian_p Exp $
 bin/createmap
 bin/log2time
 bin/mailq
@@ -29,6 +29,7 @@ man/man8/smar.8
 man/man8/smtpc.8
 man/man8/smtps.8
 sbin/greyprint
+sbin/greyrm
 sbin/mcp
 share/doc/smX/README.html
 share/doc/smX/README.txt
