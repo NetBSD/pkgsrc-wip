@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/13 16:33:04 jtonio Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/04 17:43:32 jtonio Exp $
 #
 
 .include "Makefile.common"
@@ -8,7 +8,7 @@ CONFLICTS+=		kaffe-nox11-[0-9]*
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javakey \
 			javap jdb rmic rmiregistry serialver
 
-SUPPORT_FILES=		${JAVA_HOME}/jre/lib/security/java.security.default \
+CONF_FILES=		${JAVA_HOME}/jre/lib/security/java.security.default \
 			${JAVA_HOME}/jre/lib/security/java.security
 
 .include "../../mk/bsd.prefs.mk"
@@ -19,6 +19,6 @@ PRINT_PLIST_AWK+=	/^java\/kaffe\/jre\/lib\/security\/java.security$$/ \
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/license.terms ${JAVA_HOME}
 
-.include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/libltdl/convenience.mk"
 .include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"

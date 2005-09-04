@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/09/04 17:06:23 jtonio Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/09/04 17:43:32 jtonio Exp $
 
 DISTNAME=     kaffe-1.1.5
 CATEGORIES=   lang java
@@ -18,7 +18,6 @@ NO_MTREE=		yes
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 TEST_TARGET=		check
 
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips*	\
