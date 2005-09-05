@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/23 13:08:52 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/05 15:18:06 emil_s Exp $
 
 DISTNAME=		gofish-1.0
 CATEGORIES=		wip
@@ -13,10 +13,11 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
+			--localstatedir=${VARBASE}
 
-EXAMPLESDIR=		${PREFIX}/share/examples
-RUNTIMEDIR=     	${PREFIX}/var/gopher
+EXAMPLESDIR=		${PREFIX}/share/examples/gofish
+RUNTIMEDIR=     	${VARBASE}/gopher
 
 GOPHER_USER=    	gopher
 GOPHER_GROUP=   	gopher
@@ -28,6 +29,8 @@ OWN_DIRS_PERMS= 	${RUNTIMEDIR} ${GOPHER_USER} ${GOPHER_GROUP} 0750
 
 RCD_SCRIPTS=		gopherd
 
+#CONF_FILES=		${EXAMPLESDIR}/gofish.conf ${EXAMPLESDIR}/gofish-www.conf
+ 
 FILES_SUBST+=   	RUNTIMEDIR=${RUNTIMEDIR}
 FILES_SUBST+=		PKG_USERS=${PKG_USERS}
 
@@ -37,5 +40,19 @@ post-configure:
 		-e "s/;gid = -1/gid = ${GOPHER_GID}/g"  \
 		${WRKSRC}/gofish.conf.orig		\
 		> ${WRKSRC}/gofish.conf
+
+#post-install:
+#	${RM} -f ${PKG_SYSCONFDIR}/gofish-www.conf.new \
+#
+#                ${PKG_SYSCONFDIR}/gofish.conf.new
+
+pre-install:
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gofish
+	${INSTALL_DATA} ${WRKSRC}/gofish.conf ${PKG_SYSCONFDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.conf ${EXAMPLESDIR}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gofish
+	${INSTALL_DATA} ${WRKSRC}/Configure_GoFish ${PREFIX}/share/doc/gofish
 
 .include "../../mk/bsd.pkg.mk"
