@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/09/09 21:56:14 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/05 19:49:14 rillig Exp $
 
 .include "../../wip/p5-HTML-Latex/Makefile.common"
 
@@ -12,7 +12,6 @@ DISTINFO_FILE=		${.CURDIR}/../../wip/p5-HTML-Latex/distinfo
 
 REPLACE_PERL=		html2latex
 
-NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
 do-install:
