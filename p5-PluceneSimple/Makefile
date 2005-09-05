@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/02 20:50:04 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/05 09:50:56 thomasklausner Exp $
 
 DISTNAME=	PluceneSimple-1.04
-PKGNAME=	p5-{DISTNAME}
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/ST/STRYTOAST/}
 
