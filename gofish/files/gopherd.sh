@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gopherd.sh,v 1.1.1.1 2005/06/23 13:08:52 emil_s Exp $
+# $NetBSD: gopherd.sh,v 1.2 2005/09/05 15:15:12 emil_s Exp $
 #
 # PROVIDE: gopherd
 # REQUIRE: DAEMON
@@ -15,7 +15,7 @@ command_args="-d ${conf_file}"
 pidfile="/var/run/${name}.pid"
 required_files="${conf_file}"
 
-start_precmd="${name}_precmd"
+# start_precmd="${name}_precmd"
 
 load_rc_config $name
 run_rc_command "$1"
