@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2004/06/21 07:49:43 sourceforge_low Exp $
+$NetBSD: patch-ab,v 1.3 2005/09/06 08:12:07 absd Exp $
 
 --- src/connection.c.orig	2001-08-18 01:38:25.000000000 +0200
 +++ src/connection.c	2004-06-19 20:07:39.000000000 +0200
@@ -9,7 +9,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/21 07:49:43 sourceforge_low Exp $
 -#include <sys/vfs.h>
 +#include <sys/param.h>
 +
-+#if (defined(__NetBSD__) &&  __NetBSD_Version__ >= 200040000)
++#if (defined(__NetBSD__) &&  __NetBSD_Version__ >= 299000900)
 +#include <sys/statvfs.h>
 +#else
 +#include <sys/statfs.h>
@@ -21,7 +21,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/21 07:49:43 sourceforge_low Exp $
    long long main_file_size = connections[0].main_file_size;
  
    char *prefixed_file = get_prefixed_file(output_file);
-+#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000)
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900)
 +  struct statvfs fs_info;
 +#else
    struct statfs fs_info;
@@ -33,7 +33,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/21 07:49:43 sourceforge_low Exp $
    
    
    /* Stat file system */
-+#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000)
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900)
 +  if(statvfs(prefixed_file, &fs_info)!=0)
 +#else
    if(statfs(prefixed_file, &fs_info)!=0)
