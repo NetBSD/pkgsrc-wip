@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/08/11 10:08:23 absd Exp $
+# $NetBSD: Makefile,v 1.14 2005/09/07 16:24:56 leonardschmidt Exp $
 #
 
 DISTNAME=		libXv-2.2.1
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://freedesktop.org/~xlibs/release/
+MASTER_SITES=		http://xlibs.freedesktop.org/release/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net

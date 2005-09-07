@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/08/11 10:08:23 absd Exp $
+# $NetBSD: Makefile,v 1.7 2005/09/07 16:24:56 leonardschmidt Exp $
 
 DISTNAME=	libXinerama-1.0.2
 CATEGORIES=	x11
-MASTER_SITES=	http://freedesktop.org/~xlibs/release/
+MASTER_SITES=	http://xlibs.freedesktop.org/release/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org

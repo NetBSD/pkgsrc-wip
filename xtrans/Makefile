@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:16:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2005/09/07 16:24:57 leonardschmidt Exp $
 #
 
 DISTNAME=		libXtrans-0.1
 PKGNAME=		xtrans-0.1
 CATEGORIES=		x11 net
-MASTER_SITES=		http://freedesktop.org/~xlibs/release/
+MASTER_SITES=		http://xlibs.freedesktop.org/release/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net

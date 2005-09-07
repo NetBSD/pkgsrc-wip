@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2005/08/11 10:08:22 absd Exp $
+# $NetBSD: Makefile,v 1.17 2005/09/07 16:24:55 leonardschmidt Exp $
 #
 
 DISTNAME=		libICE-6.3.3
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://freedesktop.org/~xlibs/release/
+MASTER_SITES=		http://xlibs.freedesktop.org/release/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org

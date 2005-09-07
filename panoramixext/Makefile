@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:42 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/07 16:24:57 leonardschmidt Exp $
 
 DISTNAME=	panoramixext-1.1
 CATEGORIES=	x11
-MASTER_SITES=	http://freedesktop.org/~xlibs/release/
+MASTER_SITES=	http://xlibs.freedesktop.org/release/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
