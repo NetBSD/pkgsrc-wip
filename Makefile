@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1910 2005/09/08 10:23:14 leonardschmidt Exp $
-# $Id: Makefile,v 1.1910 2005/09/08 10:23:14 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.1911 2005/09/08 21:04:05 ghen Exp $
+# $Id: Makefile,v 1.1911 2005/09/08 21:04:05 ghen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1107,7 +1107,6 @@ SUBDIR+=	tex-foiltex
 SUBDIR+=	tex-hlatex
 SUBDIR+=	tex-passivetex
 SUBDIR+=	tex-xmltex
-SUBDIR+=	texmaker
 SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
