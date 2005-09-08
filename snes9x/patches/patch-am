@@ -1,0 +1,62 @@
+$NetBSD: patch-am,v 1.1.1.1 2005/09/08 10:22:24 leonardschmidt Exp $
+
+--- configure.orig	2004-12-30 22:15:48.000000000 +0000
++++ configure
+@@ -3063,6 +3063,39 @@ fi
+ 
+ echo "$ac_t""$snes9x_cv_win32_os" 1>&6
+ 
++echo $ac_n "checking if the OS is NetBSD""... $ac_c" 1>&6
++echo "configure:3068: checking if the OS is NetBSD" >&5
++if eval "test \"`echo '$''{'snes9x_cv_netbsd_os'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  
++  cat > conftest.$ac_ext <<EOF
++#line 3074 "configure"
++#include "confdefs.h"
++
++#ifdef __NetBSD__
++/* */
++#else
++#error Not NetBSD.
++#endif
++  
++int main() {
++
++; return 0; }
++EOF
++if { (eval echo configure:3086: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
++  rm -rf conftest*
++  snes9x_cv_netbsd_os=yes
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  snes9x_cv_netbsd_os=no
++fi
++rm -f conftest*
++fi
++
++echo "$ac_t""$snes9x_cv_netbsd_os" 1>&6
+ 
+ # Check whether --with-assembler or --without-assembler was given.
+ if test "${with_assembler+set}" = set; then
+@@ -3183,6 +3216,8 @@ fi
+ 
+ if test yes = "$snes9x_cv_linux_os" -a yes = "$with_joystick"; then
+    JOYDEFINES=' -DJOYSTICK_SUPPORT'
++elif test yes = "$snes9x_cv_netbsd_os" -a yes = "$with_joystick"; then
++   # gets handled by the Makefile; this is only to prevent confusion
+ else
+    with_joystick="no"
+ fi
+@@ -4648,7 +4683,7 @@ else
+ #line 4649 "configure"
+ #include "confdefs.h"
+ 
+-#if defined(__linux) || defined(__sun) || defined(__sgi)
++#if defined(__linux) || defined(__sun) || defined(__sgi) || defined(__NetBSD__)
+ /* */
+ #else
+ #error No sound for this platform

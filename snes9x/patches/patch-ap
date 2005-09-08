@@ -1,0 +1,28 @@
+$NetBSD: patch-ap,v 1.1.1.1 2005/09/08 10:22:25 leonardschmidt Exp $
+
+--- unix/xf86.cpp.orig	2004-12-30 22:15:47.000000000 +0000
++++ unix/xf86.cpp
+@@ -92,16 +92,21 @@
+    Question/comments regarding this file only: maciej@imsa.edu
+  */
+ 
+-#ifdef __linux
++#if defined(__linux) || defined(__NetBSD__)
+ //#define USE_XF86VIDMODE
+ 
++#if defined(__linux)
+ #include <asm/ioctls.h>
++#endif
++
++#include <sys/types.h>
+ #include <sys/ioctl.h>
+ #include <sys/time.h>
++#if defined(__linux)
+ #include <linux/ioctl.h>
++#endif
+ 
+ #include <fcntl.h>
+-#include <sys/types.h>
+ 
+ #include <string.h>
+ #include <ctype.h>

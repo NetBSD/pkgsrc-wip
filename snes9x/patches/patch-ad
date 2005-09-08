@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/09/08 10:22:23 leonardschmidt Exp $
+
+--- netplay.cpp.orig	2004-12-30 22:15:45.000000000 +0000
++++ netplay.cpp
+@@ -126,9 +126,13 @@
+ 
+ #ifdef USE_THREADS
+ #include <pthread.h>
++#ifdef __NetBSD__
++#include <sys/sched.h>
++#else
+ #include <sched.h>
+ #include <semaphore.h>
+ #endif
++#endif
+ 
+ #include "snes9x.h"
+ #include "cpuexec.h"

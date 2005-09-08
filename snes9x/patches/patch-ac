@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/09/08 10:22:23 leonardschmidt Exp $
+--- 2xsai.cpp.orig	2004-12-30 22:15:47.000000000 +0000
++++ 2xsai.cpp
+@@ -95,13 +95,6 @@
+ #include "port.h"
+ #include "gfx.h"
+ 
+-#if (defined(USE_X86_ASM) && (defined (__i386__) || defined (__i486__) || \
+-               defined (__i586__) || defined (__WIN32__) || defined (__DJGPP)))
+-#  ifndef MMX
+-#    define MMX
+-#  endif
+-#endif
+-
+ extern "C"
+ {
+ 

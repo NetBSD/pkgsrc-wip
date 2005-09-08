@@ -1,0 +1,3 @@
+* Black screen and no sound on NetBSD/sparc64.
+* Loading/saving is broken.
+* PNG support for screenshots.

@@ -1,0 +1,19 @@
+$NetBSD: patch-ah,v 1.1.1.1 2005/09/08 10:22:24 leonardschmidt Exp $
+
+--- unzip/unz.h.orig	2004-12-30 22:15:45.000000000 +0000
++++ unzip/unz.h
+@@ -11,6 +11,14 @@
+   ---------------------------------------------------------------------------*/
+ 
+ #include "zlib.h"
++/* removed in NetBSD around 2001/01/18 */
++#ifndef OF
++#  ifdef STDC
++#    define OF(args)  args
++#  else
++#    define OF(args)  ()
++#  endif
++#endif
+ 
+ /*****************************************/
+ /*  Predefined, Machine-specific Macros  */
