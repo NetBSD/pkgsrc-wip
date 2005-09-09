@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1911 2005/09/08 21:04:05 ghen Exp $
-# $Id: Makefile,v 1.1911 2005/09/08 21:04:05 ghen Exp $
+# $NetBSD: Makefile,v 1.1912 2005/09/09 12:40:38 ghen Exp $
+# $Id: Makefile,v 1.1912 2005/09/09 12:40:38 ghen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -613,6 +613,8 @@ SUBDIR+=	mutella
 SUBDIR+=	mutt-ng
 SUBDIR+=	muttvcquery
 SUBDIR+=	mxterm
+SUBDIR+=	mydns-mysql
+SUBDIR+=	mydns-pgsql
 SUBDIR+=	mysql-docs
 SUBDIR+=	mythtv
 SUBDIR+=	n0t
