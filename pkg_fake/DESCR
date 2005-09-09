@@ -1,5 +1,8 @@
 pkg_fake allows you to create fake packages into the pkgsrc database.
 
+pkg_fake also permits you to create fake alternatives on already existing
+packages. This is so useful for the 'python' package for example.
+
 By this way you'll be able to deceive pkgsrc and skip some dependencies or
 just to solve problems on packages that can't be installed fine because
 portability problems in the target package, etc.

@@ -11,12 +11,20 @@ PREFIX=/usr/pkg
 show_help()
 {
 cat <<EOF
-pkg_fake [-alrih] [pkgname]
+pkg_fake [-alrihARL] [pkgname]
+
+ fake packages:
    -l : list all fake packages
    -i : install a new fake package
    -r : remove a fake package
    -h : show this message
    -a : adds new files to 
+
+ fake alternatives:
+   -A : adds fake alternatives to a package
+   -R : remove fake alternative support to a package
+   -L : list all fake alternatives
+
 EOF
 }
 
@@ -31,6 +39,29 @@ list_all()
 	done
 }
 
+list_all_alternatives()
+{
+	cd ${PKGDB}
+	for A in `ls`; do
+		if [ -e "${A}/+FAKE_ALT" ]; then
+		COMMENT="`cat ${A}/+COMMENT`"
+		printf "${A}\t\t${COMMENT}\n"
+		fi
+	done
+}
+
+edit_alternatives()
+{
+	PKG="$1"
+	echo "Type in editor the wrapper lines in format:"
+	echo "\"bin/python /usr/pkg/bin/python2p3\""
+	echo
+	echo "press enter" 
+	read
+	${EDITOR} "${PKGDB}/${PKG}/+ALTERNATIVES"
+	pkg_alternatives register "${PKGDB}/${PKG}/+ALTERNATIVES"
+}
+
 if [ -z "${1}" ]; then
 	show_help
 fi
@@ -40,6 +71,10 @@ while : ; do
 	case $1 in
 	"-l") # list all fake packages installed
 		list_all
+		exit 0
+	;;
+	"-L") # list all fake alternatives
+		list_all_alternatives
 		exit 0
 	;;
 	"-i") # install new fake package
@@ -70,9 +105,38 @@ while : ; do
 		echo "[i] package created."
 		exit 0
 	;;
+	"-A") # creates a new fake alternative
+		if [ -z "${2}" ]; then
+			echo "pkgname required"
+			exit 1
+		fi
+
+		if [ ! -d "${PKGDB}/${2}" ]; then
+			echo "This package does not exists."
+			exit 1
+		fi
+		PKGNAME="${2}"
+
+		if [ -e "${PKGDB}/${2}/+ALTERNATIVES" ]; then
+			if [ -e "${PKGDB}/${2}/+FAKE_ALT" ]; then
+				edit_alternatives ${2}
+			else
+				echo "This is not a valid fake alternatives package."
+			fi
+		else
+			:> "${PKGDB}/${2}/+FAKE_ALT"
+			edit_alternatives ${2}
+		fi
+		exit 0
+	;;
 	"-r") # removes a fake package
 		if [ "${2}" = "" ]; then
 			echo "pkgname required";
+			exit 1
+		fi
+
+		if [ ! -d "${PKGDB}/${2}" ]; then
+			echo "This package does not exists."
 			exit 1
 		fi
 		A=${2}
@@ -106,6 +170,26 @@ while : ; do
 				exit 0
 			fi
 		fi
+	;;
+	"-R") # removes a fake alternatives
+		if [ -z "${2}" ]; then
+			echo "pkgname required";
+			exit 1
+		fi
+		if [ ! -d "${PKGDB}/${2}" ]; then
+			echo "This package does not exists."
+			exit 1
+		fi
+
+		if [ -e "${PKGDB}/${2}/+FAKE_ALT" ]; then
+			pkg_alternatives -gs unregister "${PKGDB}/${2}/+ALTERNATIVES"
+			rm -f "${PKGDB}/${2}/+ALTERNATIVES" &&
+			rm -f "${PKGDB}/${2}/+FAKE_ALT" &&\
+			echo "Fake alternatives removed from ${2}"
+		else
+			echo "this is not a fake alternative package"
+		fi
+		exit 0;
 	;;
 	""|*|"-h") # shows help message
 		show_help
