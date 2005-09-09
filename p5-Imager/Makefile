@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/09/09 20:37:50 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/09 20:41:14 kuli0020 Exp $
 
 DISTNAME=	Imager-0.45
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	jpeg>=0:../../graphics/jpeg
 
 USE_FREETYPE=	yes
 CONFIGURE_ENV=	IM_LIBPATH="${LOCALBASE}/lib:${X11BASE}/lib" \
-		IM_INCPATH="${X11BASE}/include:${LOCALBASE}/include"
+		IM_INCPATH="${LOCALBASE}/include:${X11BASE}/include"
 
 USE_TOOLS+=	gmake
 
