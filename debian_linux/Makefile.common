@@ -1,12 +1,13 @@
-# $Id: Makefile.common,v 1.1.1.1 2004/06/11 10:00:38 grantbeattie Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/09/09 11:55:25 rillig Exp $
+# $Id: Makefile.common,v 1.2 2005/09/09 11:55:25 rillig Exp $
 
 MAINTAINER?=		grant@NetBSD.org
 HOMEPAGE?=		http://www.debian.org/
 
 DIST_SUBDIR=		debian_linux
 
-NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
 DEBIAN_EMUL_DIR=	${PREFIX}/emul/debian_linux
 
