@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/09/04 17:43:32 jtonio Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/10 17:37:55 jtonio Exp $
 #
 
 .include "Makefile.common"
@@ -19,6 +19,6 @@ PRINT_PLIST_AWK+=	/^java\/kaffe\/jre\/lib\/security\/java.security$$/ \
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/license.terms ${JAVA_HOME}
 
-.include "../../devel/libltdl/convenience.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"

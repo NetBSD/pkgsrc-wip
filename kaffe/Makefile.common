@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2005/09/04 17:43:32 jtonio Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/09/10 17:37:55 jtonio Exp $
 
 DISTNAME=     kaffe-1.1.5
 CATEGORIES=   lang java
@@ -45,11 +45,12 @@ CONFIGURE_ARGS+=	--disable-native-awt
 CONFIGURE_ENV+=		VM_LIBS="-lc"
 .endif
 
-.if (${OPSYS} == "NetBSD") && (${MACHINE_ARCH} == "alpha")
+.if (((${OPSYS} == "NetBSD") && (${MACHINE_ARCH} == "alpha")) || (${MACHINE_ARCH} == "powerpc") || ((${OPSYS} == "SunOS") && ${MACHINE_ARCH} == "i386"))
 # On these systems, jit3 is not working.
 CONFIGURE_ARGS+=	--with-engine=intrp
 .endif
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
