@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/02 19:08:17 gschwarz Exp $
-bin/shohmesh
+@comment $NetBSD: PLIST,v 1.2 2005/09/11 19:09:18 gschwarz Exp $
+bin/showmesh
