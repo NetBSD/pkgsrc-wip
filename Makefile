@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1913 2005/09/11 04:09:32 udontknow Exp $
-# $Id: Makefile,v 1.1913 2005/09/11 04:09:32 udontknow Exp $
+# $NetBSD: Makefile,v 1.1914 2005/09/11 04:20:31 udontknow Exp $
+# $Id: Makefile,v 1.1914 2005/09/11 04:20:31 udontknow Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -641,6 +641,7 @@ SUBDIR+=	nehe-opengl-tutorials
 SUBDIR+=	nestra
 SUBDIR+=	net-quanta
 SUBDIR+=	net-tools
+SUBDIR+=	net6
 SUBDIR+=	netkit-base
 SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
