@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/11 04:18:07 udontknow Exp $
+include/net6/address.hpp
+include/net6/client.hpp
+include/net6/connection.hpp
+include/net6/default_accumulator.hpp
+include/net6/error.hpp
+include/net6/host.hpp
+include/net6/main.hpp
+include/net6/non_copyable.hpp
+include/net6/packet.hpp
+include/net6/peer.hpp
+include/net6/select.hpp
+include/net6/server.hpp
+include/net6/socket.hpp
+lib/libnet6.la
+lib/pkgconfig/net6-1.1.pc
+@dirrm include/net6
