@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.zeroconf,v 1.1.1.1 2005/09/11 05:26:43 udontknow Exp $
+include/obby/zeroconf.hpp
