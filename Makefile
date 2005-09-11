@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1914 2005/09/11 04:20:31 udontknow Exp $
-# $Id: Makefile,v 1.1914 2005/09/11 04:20:31 udontknow Exp $
+# $NetBSD: Makefile,v 1.1915 2005/09/11 05:31:12 udontknow Exp $
+# $Id: Makefile,v 1.1915 2005/09/11 05:31:12 udontknow Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -484,6 +484,7 @@ SUBDIR+=	libhttpd
 SUBDIR+=	liblingoteach
 SUBDIR+=	libmusclecard
 SUBDIR+=	libneural
+SUBDIR+=	libobby
 SUBDIR+=	libpano12
 SUBDIR+=	libparsifal
 SUBDIR+=	libpcap-latest
