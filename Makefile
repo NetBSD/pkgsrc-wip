@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1915 2005/09/11 05:31:12 udontknow Exp $
-# $Id: Makefile,v 1.1915 2005/09/11 05:31:12 udontknow Exp $
+# $NetBSD: Makefile,v 1.1916 2005/09/11 06:34:33 udontknow Exp $
+# $Id: Makefile,v 1.1916 2005/09/11 06:34:33 udontknow Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -312,6 +312,7 @@ SUBDIR+=	gnormalize
 SUBDIR+=	gnump3d
 SUBDIR+=	gnunet
 SUBDIR+=	gnupoc-makesis
+SUBDIR+=	gobby
 SUBDIR+=	gofish
 SUBDIR+=	goldwater
 SUBDIR+=	gotmail
