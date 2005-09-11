@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/15 18:52:33 leonardschmidt Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/11 09:24:57 leonardschmidt Exp $
 bin/urxvt
 bin/urxvtc
 bin/urxvtd
@@ -6,5 +6,3 @@ man/man1/urxvt.1
 man/man1/urxvtc.1
 man/man1/urxvtd.1
 man/man7/urxvt.7
-share/terminfo/r/rxvt-unicode
-@unexec ${RMDIR} %D/share/terminfo/r 2> /dev/null || ${TRUE}
