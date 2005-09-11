@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.gnome,v 1.1.1.1 2005/09/11 06:32:14 udontknow Exp $
+share/applications/gobby.desktop
+share/pixmaps/gobby.png
