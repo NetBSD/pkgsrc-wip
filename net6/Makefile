@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/11 04:18:07 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/11 04:31:01 udontknow Exp $
 #
 
 DISTNAME=		net6-1.1.0
-CATEGORIES=		wip
+CATEGORIES=		devel net
 MASTER_SITES=		http://releases.0x539.de/net6/
 
 MAINTAINER=		evaldo@gardenali.biz
