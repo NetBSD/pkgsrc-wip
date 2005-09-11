@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1912 2005/09/09 12:40:38 ghen Exp $
-# $Id: Makefile,v 1.1912 2005/09/09 12:40:38 ghen Exp $
+# $NetBSD: Makefile,v 1.1913 2005/09/11 04:09:32 udontknow Exp $
+# $Id: Makefile,v 1.1913 2005/09/11 04:09:32 udontknow Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -504,6 +504,7 @@ SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libwhisker2
 SUBDIR+=	libxen
 SUBDIR+=	libxml++
+SUBDIR+=	libxml++2
 SUBDIR+=	lighttpd
 SUBDIR+=	lilo
 SUBDIR+=	lincvs
