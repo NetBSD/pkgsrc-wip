@@ -1,0 +1,53 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/09/12 19:34:47 ghen Exp $
+
+--- mixxx.pro.orig	2004-10-22 09:29:25.000000000 +0200
++++ mixxx.pro	2005-08-21 10:55:45.000000000 +0200
+@@ -82,6 +82,7 @@
+ unix:!macx:SOURCES += midiobjectoss.cpp
+ unix:!macx:HEADERS += midiobjectoss.h
+ unix:!macx:DEFINES += __OSSMIDI__
++unix:!macx:LIBS += -lossaudio
+ 
+ # Windows MIDI
+ win32:SOURCES += midiobjectwin.cpp
+@@ -136,8 +137,8 @@
+ # PowerMate
+ SOURCES += powermate.cpp
+ HEADERS += powermate.h
+-unix:!macx:SOURCES += powermatelinux.cpp
+-unix:!macx:HEADERS += powermatelinux.h
++#unix:!macx:SOURCES += powermatelinux.cpp
++#unix:!macx:HEADERS += powermatelinux.h
+ win32:SOURCES += powermatewin.cpp
+ win32:HEADERS += powermatewin.h
+ win32:LIBS += setupapi.lib
+@@ -145,16 +146,16 @@
+ # Mouse
+ SOURCES += mouse.cpp
+ HEADERS += mouse.h
+-unix:!macx:SOURCES += mouselinux.cpp
+-unix:!macx:HEADERS += mouselinux.h
++#unix:!macx:SOURCES += mouselinux.cpp
++#unix:!macx:HEADERS += mouselinux.h
+ #win32:SOURCES += mousewin.cpp
+ #win32:HEADERS += mousewin.h
+ 
+ # Joystick
+ SOURCES += joystick.cpp
+ HEADERS += joystick.h
+-unix:!macx:SOURCES += joysticklinux.cpp
+-unix:!macx:HEADERS += joysticklinux.h
++#unix:!macx:SOURCES += joysticklinux.cpp
++#unix:!macx:HEADERS += joysticklinux.h
+ 
+ # KissFFT
+ KISSFFT_DIR = ../lib/kissfft
+@@ -197,7 +198,7 @@
+ 
+   SETTINGS_FILE = \".mixxx.cfg\"
+   TRACK_FILE = \".mixxxtrack.xml\"
+-  DEFINES += __LINUX__
++#  DEFINES += __LINUX__
+ }
+ 
+ unix {
