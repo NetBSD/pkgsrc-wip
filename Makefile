@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1916 2005/09/11 06:34:33 udontknow Exp $
-# $Id: Makefile,v 1.1916 2005/09/11 06:34:33 udontknow Exp $
+# $NetBSD: Makefile,v 1.1917 2005/09/12 19:36:23 ghen Exp $
+# $Id: Makefile,v 1.1917 2005/09/12 19:36:23 ghen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -575,6 +575,7 @@ SUBDIR+=	mingw-w32api-bin
 SUBDIR+=	minimalist
 SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
+SUBDIR+=	mixxx
 #SUBDIR+=	mk 		# not a package
 SUBDIR+=	mkdep
 SUBDIR+=	mksend
