@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/09/12 21:19:17 leonardschmidt Exp $
+
+SHA1 (xmms2-0.1DR2.2.tar.gz) = 913a7bf908eb6164ef4b8920f6e239f34fb2d45c
+RMD160 (xmms2-0.1DR2.2.tar.gz) = 56f68df7f97fcd93e756ddd4c8dd3db02b0246c1
+Size (xmms2-0.1DR2.2.tar.gz) = 672961 bytes
+SHA1 (patch-aa) = e523563453f298b6982134ab478e0c536509b945

@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/09/12 21:19:17 leonardschmidt Exp $
+
+--- SConstruct.orig	2005-09-06 19:06:19.000000000 +0000
++++ SConstruct
+@@ -32,9 +32,9 @@ if sys.platform == 'win32':
+ 	default_cpppath = ['z:\\xmms2\\winlibs\\include']
+ else:
+ 	default_pyrex = 'pyrexc'
+-	default_prefix = '/usr/local/'
+-	default_cxxflags = ['-g', '-Wall', '-O0']
+-	default_cflags = ['-g', '-Wall', '-O0']
++	default_prefix = os.getenv('PREFIX')
++	default_cxxflags = os.getenv('CXXFLAGS')
++	default_cflags = os.getenv('CFLAGS')
+ 	if sys.platform == 'darwin':
+ 		default_cpppath = ['/sw/lib']
+ 	else:
