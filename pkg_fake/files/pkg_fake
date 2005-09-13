@@ -101,7 +101,7 @@ package_autocompletion()
 	fi
 
 	MAYBE="`ls ${TDIR} | grep "^${NAME}"`"
-	if [ "1" = "`echo ${MAYBE} | wc -w`" ]; then
+	if [ "1" = `echo ${MAYBE} | wc -w` ]; then
 		echo "Autocomplenting package name to: ${MAYBE}" >/dev/stderr
 		echo ${MAYBE}
 	else
@@ -179,7 +179,17 @@ case $1 in
 		echo "done"
 	;;
 	"-p") # shows the PLIST of a installed or not package.
-		PKG=`package_autocompletion "${2}" "${PKGDB}"`
+		PKG=$2
+		if [ -n "`echo ${PKG}| grep /`" ]; then
+			if [ ! -d "${PKGSRC}/${PKG}" ]; then
+				echo "This package does not exists."
+				exit 1
+			fi
+			# TODO dupped code
+			cd ${PKGSRC}/${PKG}
+			`bmake show-var VARNAME=_GENERATE_PLIST | sed -e 's,; true;,,'` | eval awk `bmake show-var VARNAME=_PLIST_AWK_SCRIPT`
+		else
+			PKG=`package_autocompletion "${2}" "${PKGDB}"`
 		if [ -z "${PKG}" ]; then
 			echo "Package not installed. looking in the pkgsrc tree." > /dev/stderr
 			PKG=`pkgfind -qxn1 "${2}"`
@@ -187,10 +197,12 @@ case $1 in
 				echo "No target package found." >/dev/stderr
 				exit 1
 			fi
+			# TODO dupped code
 			cd ${PKGSRC}/${PKG}
 			`bmake show-var VARNAME=_GENERATE_PLIST | sed -e 's,; true;,,'` | eval awk `bmake show-var VARNAME=_PLIST_AWK_SCRIPT`
 		else
 			cat ${PKGDB}/${PKG}/+CONTENTS
+		fi
 		fi
 	;;
 	"-i") # install new fake package
@@ -303,9 +315,9 @@ case $1 in
 		fini_hide
 	;;
 	"-H") # list all hidding packages.
-		init_hide
+		if [ -d "${PKGHIDE}" ]; then
 		ls ${PKGHIDE}
-		fini_hide
+		fi
 	;;
 	*) # shows help message
 		show_help
