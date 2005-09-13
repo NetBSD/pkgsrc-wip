@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/12 19:34:46 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/13 06:17:58 ghen Exp $
 
 DISTNAME=	mixxx-1.4.2
 CATEGORIES=	audio
@@ -15,11 +15,6 @@ CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
 CONFIGURE_ARGS+=	--dependency-dir=${LOCALBASE}/bin\;${LOCALBASE}/lib\;${LOCALBASE}/include
 CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--disable-jack
-
-SUBST_CLASSES+=		machine
-SUBST_STAGE.machine=	post-patch
-SUBST_FILES.machine=	../lib/portaudio-v18/pa_unix_oss/pa_unix_oss.c
-SUBST_SED.machine=	-e 's,machine/soundcard.h,soundcard.h,g'
 
 SUBST_CLASSES+=		bash
 SUBST_STAGE.bash=	pre-configure
