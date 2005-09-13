@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/13 01:05:44 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/13 01:26:26 poppnk Exp $
 
 DISTNAME=	pkg_fake-0.2
 CATEGORIES=	pkgtools
@@ -13,7 +13,7 @@ NO_CHECKSUM=	yes
 NO_BUILD=	yes
 
 DEPENDS+=  pkg_alternatives>=1.3:../../pkgtools/pkg_alternatives/
-DEPENDS+=  pkg_find>=20050302:../../pkgtools/pkgfind/
+DEPENDS+=  pkgfind>=20050804:../../pkgtools/pkgfind/
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
