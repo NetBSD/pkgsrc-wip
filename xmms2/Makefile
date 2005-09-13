@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/09/13 09:07:00 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/13 21:18:09 leonardschmidt Exp $
 #
 
 DISTNAME=	xmms2-0.1DR2.2
@@ -9,12 +9,17 @@ MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://xmms2.xmms.org/
 COMMENT=	Audio player using a client-server model
 
+BUILD_DEPENDS+=		scons>=0.96.1nb1:../../devel/scons
+
 NO_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
-
 MANCOMPRESSED=		yes
 
-BUILD_DEPENDS+=		scons>=0.96.1nb1:../../devel/scons
+PKGCONFIG_OVERRIDE=	xmms2-client-ecore.pc
+PKGCONFIG_OVERRIDE+=	xmms2-client-glib.pc
+PKGCONFIG_OVERRIDE+=	xmms2-client.pc
+PKGCONFIG_OVERRIDE+=	xmms2-plugin.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "options.mk"
 

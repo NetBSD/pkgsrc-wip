@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2005/09/13 09:07:55 leonardschmidt Exp $
+# $NetBSD: options.mk,v 1.2 2005/09/13 21:18:09 leonardschmidt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
 PKG_SUPPORTED_OPTIONS=	curl flac ogg pyrex ruby sid
-PKG_SUGGESTED_OPTIONS=	curl flac ogg
+PKG_SUGGESTED_OPTIONS=	curl flac ogg pyrex
 
 .include "../../mk/bsd.options.mk"
 
@@ -10,28 +10,28 @@ PKG_SUGGESTED_OPTIONS=	curl flac ogg
 .  include "../../www/curl/buildlink3.mk"
 PLIST_SUBST+=		CURL=""
 .else
-EXCLUDE+=		curl
 PLIST_SUBST+=		CURL="@comment "
+EXCLUDE+=		curl
 .endif
 
 .if !empty(PKG_OPTIONS:Mflac)
 .  include "../../audio/flac/buildlink3.mk"
 PLIST_SUBST+=		FLAC=""
 .else
-EXCLUDE+=		flac
 PLIST_SUBST+=		FLAC="@comment "
+EXCLUDE+=		flac
 .endif
 
 .if !empty(PKG_OPTIONS:Mogg)
 .  include "../../audio/libvorbis/buildlink3.mk"
 PLIST_SUBST+=		OGG=""
 .else
-EXCLUDE+=		ogg
 PLIST_SUBST+=		OGG="@comment "
+EXCLUDE+=		ogg
 .endif
 
 .if !empty(PKG_OPTIONS:Mpyrex)
-PYPATCHPLIST=		yes
+PY_PATCHPLIST=		yes
 BUILD_DEPENDS=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
 .  include "../../lang/python/extension.mk"
 PLIST_SUBST+=		PYREX=""
