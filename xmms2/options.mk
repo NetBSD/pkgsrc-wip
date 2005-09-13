@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2005/09/13 21:18:09 leonardschmidt Exp $
+# $NetBSD: options.mk,v 1.3 2005/09/13 23:46:55 leonardschmidt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
-PKG_SUPPORTED_OPTIONS=	curl flac ogg pyrex ruby sid
-PKG_SUGGESTED_OPTIONS=	curl flac ogg pyrex
+PKG_SUPPORTED_OPTIONS=	curl flac ogg pyrex ruby
+PKG_SUGGESTED_OPTIONS=	curl flac ogg pyrex ruby
 
 .include "../../mk/bsd.options.mk"
 
@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS=	curl flac ogg pyrex
 PLIST_SUBST+=		CURL=""
 .else
 PLIST_SUBST+=		CURL="@comment "
-EXCLUDE+=		curl
+EXCLUDES+=		curl
 .endif
 
 .if !empty(PKG_OPTIONS:Mflac)
@@ -19,7 +19,7 @@ EXCLUDE+=		curl
 PLIST_SUBST+=		FLAC=""
 .else
 PLIST_SUBST+=		FLAC="@comment "
-EXCLUDE+=		flac
+EXCLUDES+=		flac
 .endif
 
 .if !empty(PKG_OPTIONS:Mogg)
@@ -27,7 +27,7 @@ EXCLUDE+=		flac
 PLIST_SUBST+=		OGG=""
 .else
 PLIST_SUBST+=		OGG="@comment "
-EXCLUDE+=		ogg
+EXCLUDES+=		ogg
 .endif
 
 .if !empty(PKG_OPTIONS:Mpyrex)
@@ -36,25 +36,26 @@ BUILD_DEPENDS=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
 .  include "../../lang/python/extension.mk"
 PLIST_SUBST+=		PYREX=""
 .else
-EXCLUDE+=		python
+EXCLUDES+=		python
 PLIST_SUBST+=		PYREX="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mruby)
+RUBY_DIST_SUBDIR=
 RUBY_VERSION_SUPPORTED=	18
-.  include "../../lang/ruby/buildlink3.mk"
-.  include "../../lang/ruby/rubyversion.mk"
+.  include "../../lang/ruby/modules.mk"
 PLIST_SUBST+=		RUBY=""
 .else
-EXCLUDE+=		ruby
+EXCLUDES+=		ruby
 PLIST_SUBST+=		RUBY="@comment "
 .endif
 
+# this is currently disabled by the package itself.
 .if !empty(PKG_OPTIONS:Msid)
 .  include "../../audio/libsidplay/buildlink3.mk"
 DEPENDS+=		sidplay-[0-9]*:../../audio/sidplay
 PLIST_SUBST+=		SID=""
 .else
-EXCLUDE+=		sid
+EXCLUDES+=		sid
 PLIST_SUBST+=		SID="@comment "
 .endif

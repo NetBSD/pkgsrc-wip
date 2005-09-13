@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/13 21:18:09 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/13 23:46:55 leonardschmidt Exp $
 #
 
 DISTNAME=	xmms2-0.1DR2.2
@@ -25,7 +25,8 @@ PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 do-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} \
-		&& ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons EXCLUDE="${EXCLUDE}"
+		&& ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons \
+		EXCLUDE="${EXCLUDES}"
 
 do-install:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} \

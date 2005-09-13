@@ -1,1 +1,2 @@
-- Fix Ruby and sid options
+- patches/patch-a{b,c} need to be replaced with something better, no?
+- add ecore support.
