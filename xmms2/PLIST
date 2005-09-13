@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/12 21:19:17 leonardschmidt Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/13 09:07:00 leonardschmidt Exp $
 bin/xmms2
 bin/xmms2d
 include/xmms2/xmms/xmms_config.h
@@ -45,18 +45,19 @@ lib/pkgconfig/xmms2-client-ecore.pc
 lib/pkgconfig/xmms2-client-glib.pc
 lib/pkgconfig/xmms2-client.pc
 lib/pkgconfig/xmms2-plugin.pc
-lib/xmms2/libxmms_curl_http.so
+${PYREX}${PYSITELIB}/xmmsclient.so
+${CURL}lib/xmms2/libxmms_curl_http.so
 lib/xmms2/libxmms_diskwrite.so
 lib/xmms2/libxmms_eq.so
 lib/xmms2/libxmms_file.so
-lib/xmms2/libxmms_flac.so
+${FLAC}lib/xmms2/libxmms_flac.so
 lib/xmms2/libxmms_html.so
 lib/xmms2/libxmms_m3u.so
 lib/xmms2/libxmms_mad.so
 lib/xmms2/libxmms_oss.so
 lib/xmms2/libxmms_pls.so
 lib/xmms2/libxmms_replaygain.so
-lib/xmms2/libxmms_vorbisfile.so
+${OGG}lib/xmms2/libxmms_vorbisfile.so
 lib/xmms2/libxmms_wave.so
 man/man1/xmms2.1
 man/man8/xmms2d.8

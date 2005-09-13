@@ -1,2 +1,2 @@
+- Fix Python, Ruby and sid options
 - Have to set LD_LIBRARY_PATH to $PREFIX/lib.
-- Convert to options framework.
