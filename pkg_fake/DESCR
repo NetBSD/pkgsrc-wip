@@ -1,7 +1,8 @@
-pkg_fake allows you to create fake packages into the pkgsrc database.
+pkg_fake is a low-level administration tool for pkgsrc.
 
-pkg_fake also permits you to create fake alternatives on already existing
-packages. This is so useful for the 'python' package for example.
+- create and manage fake packages into the pkgsrc database.
+- hide or unhide packages. 
+- create and manage fake alternatives on already existing packages. 
 
 By this way you'll be able to deceive pkgsrc and skip some dependencies or
 just to solve problems on packages that can't be installed fine because

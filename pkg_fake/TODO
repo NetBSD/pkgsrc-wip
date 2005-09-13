@@ -1,0 +1,3 @@
+add manpage
+add support for rehash binaries (pkg_admin check/rebuild) ??
+subst hardcoded tags like PREFIX, PKGDB, ...

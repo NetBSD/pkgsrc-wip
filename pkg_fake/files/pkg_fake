@@ -5,27 +5,53 @@
 # installs or removes fake packages
 # into pkgsrc database
 
-PKGDB=/var/db/pkg
 PREFIX=/usr/pkg
+PKGDB=/var/db/pkg
+PKGSRC=/usr/pkgsrc
+PKGHIDE=${PKGDB}/../pkg_hide
+if [ -z "${EDITOR}" ]; then
+	EDITOR=vi
+fi
 
 show_help()
 {
 cat <<EOF
-pkg_fake [-alrihARL] [pkgname]
+Usage: pkg_fake [-aAclLprRihH] [pkgname]
+Version: 0.2
 
  fake packages:
-   -l : list all fake packages
-   -i : install a new fake package
-   -r : remove a fake package
-   -h : show this message
-   -a : adds new files to 
+   -a : append files to the target fake package PLIST.
+   -c : clears target package fake PLIST.
+	(useful for pkg_fake -p ezm3 | pkg_fake -a ezm3)
+   -i : install a new fake package.
+   -l : list all fake packages.
+   -p : shows the PLIST of an installed or not package.
+   -r : remove a fake package.
 
  fake alternatives:
-   -A : adds fake alternatives to a package
-   -R : remove fake alternative support to a package
-   -L : list all fake alternatives
+   -A : adds fake alternatives to a package.
+   -L : list all fake alternatives.
+   -R : remove fake alternative support to a package.
 
+ hidding utilities:
+   -h : hides the desired package. 
+   -H : list all hide packages.
+   -u : unhide the selected package.
 EOF
+}
+
+init_hide()
+{
+	mkdir -p ${PKGHIDE} 2>&1 >/dev/null || \
+	( echo "Cannot create '${PKGHIDE}' directory." && \
+	exit 1 )
+}
+
+fini_hide()
+{
+	if [ ! "`ls ${PKGHIDE}`" ]; then
+		rm -rf ${PKGHIDE} 2>&1 >/dev/null
+	fi
 }
 
 list_all()
@@ -62,13 +88,61 @@ edit_alternatives()
 	pkg_alternatives register "${PKGDB}/${PKG}/+ALTERNATIVES"
 }
 
+package_autocompletion()
+{
+	NAME=$1
+	TDIR=$2
+
+	# XXX this check is redundant
+	if [ -z "${NAME}" ]; then
+		echo "" >/dev/stderr
+		echo "Target package name is mandatory." >/dev/stderr
+		exit 1
+	fi
+
+	MAYBE="`ls ${TDIR} | grep "^${NAME}"`"
+	if [ "1" = "`echo ${MAYBE} | wc -w`" ]; then
+		echo "Autocomplenting package name to: ${MAYBE}" >/dev/stderr
+		echo ${MAYBE}
+	else
+		if [ -z "${MAYBE}" ]; then
+			echo "Target package does not exists." > /dev/stderr
+		else
+			echo "There'r more than one alternative for this package:" >/dev/stderr
+			echo ${MAYBE} >/dev/stderr
+			exit 1
+		fi
+	fi
+}
+
+clear_contents()
+{
+	PKG=$1
+	echo "@name ${PKG}" > ${PKGDB}/${PKG}/+CONTENTS
+	echo "@cwd ${PREFIX}" >> ${PKGDB}/${PKG}/+CONTENTS
+}
+
 if [ -z "${1}" ]; then
 	show_help
+	exit 1
 fi
 
-while : ; do
-	if [ -z "$1" ]; then break; fi
-	case $1 in
+case "${1}" in
+"-l"|"-L")
+;;
+*)
+	if [ -z "${2}" ]; then
+	show_help
+	echo ""
+	echo "!! Target package name is mandatory. !!"
+	exit 1
+	fi
+;;
+esac
+
+if [ -z "$1" ]; then break; fi
+
+case $1 in
 	"-l") # list all fake packages installed
 		list_all
 		exit 0
@@ -77,126 +151,166 @@ while : ; do
 		list_all_alternatives
 		exit 0
 	;;
+	"-a") # adds files to a fake package
+		PKG=`package_autocompletion "${2}" "${PKGDB}"`
+		if [ -z "${PKG}" ]; then 
+			echo "Target package required"
+			exit 1
+		fi
+		if [ -e "${PKGDB}/${PKG}/+FAKE" ]; then
+			if [ ! "1" = "`cat ${PKGDB}/${PKG}/+CONTENTS | wc -l`" ]; then
+				echo "Target package already have PLIST."
+				echo "Press ^C to cancel the append."
+			fi
+			echo "^D or EOF finishes."
+			cat >> ${PKGDB}/${PKG}/+CONTENTS
+			echo "done"
+		else
+			echo "This is not a fake package."
+		fi
+	;;
+	"-c") # clears the PLIST file
+		PKG=`package_autocompletion "${2}" "${PKGDB}"`
+		if [ -z "${PKG}" ]; then 
+			echo "Target package required"
+			exit 1
+		fi
+		clear_contents ${PKG}
+		echo "done"
+	;;
+	"-p") # shows the PLIST of a installed or not package.
+		PKG=`package_autocompletion "${2}" "${PKGDB}"`
+		if [ -z "${PKG}" ]; then
+			echo "Package not installed. looking in the pkgsrc tree." > /dev/stderr
+			PKG=`pkgfind -qxn1 "${2}"`
+			if [ -z "${PKG}" ]; then
+				echo "No target package found." >/dev/stderr
+				exit 1
+			fi
+			cd ${PKGSRC}/${PKG}
+			`bmake show-var VARNAME=_GENERATE_PLIST | sed -e 's,; true;,,'` | eval awk `bmake show-var VARNAME=_PLIST_AWK_SCRIPT`
+		else
+			cat ${PKGDB}/${PKG}/+CONTENTS
+		fi
+	;;
 	"-i") # install new fake package
-		if [ "${2}" = "" ]; then
-			echo "pkgname required";
+		PKG="${2}"
+		if [ -z "${PKG}" ]; then 
+			echo "Target package required"
 			exit 1
 		fi
-		PKGNAME="${2}"
-		if [ -d "${PKGDB}/${2}" ]; then
-			echo "package ${2} yet exists."
+		if [ -d "${PKGDB}/${PKG}" ]; then
+			echo "package ${PKG} yet exists."
 			exit 1
 		fi
-		printf "comment: "
+		printf "COMMENT="
 		read COMMENT
+		COMMENT="FAKE ${COMMENT}"
 		# create package
 		
-		mkdir -p "${PKGDB}/${2}"
-		:> "${PKGDB}/${2}/+FAKE"
-		echo "@name ${2}"       > "${PKGDB}/${2}/+CONTENTS"
-		echo "@cwd ${PREFIX}"   > "${PKGDB}/${2}/+CONTENTS"
-		echo "OBJECT_FMT=ELF"   > "${PKGDB}/${2}/+BUILD_INFO"
-		echo "OPSYS=`uname -s`" > "${PKGDB}/${2}/+BUILD_INFO" 
-		:> "${PKGDB}/${2}/+DESC"
-		:> "${PKGDB}/${2}/+SIZE_ALL"
-		:> "${PKGDB}/${2}/+SIZE_PKG"
-		echo "${COMMENT}" > "${PKGDB}/${2}/+COMMENT"
+		mkdir -p "${PKGDB}/${PKG}"
+		:> "${PKGDB}/${PKG}/+FAKE"
+		clear_contents ${PKG}
+		#echo "@name ${PKG}" > "${PKGDB}/${PKG}/+CONTENTS"
+		#echo "@cwd ${PREFIX}"   > "${PKGDB}/${PKG}/+CONTENTS"
+		echo "OBJECT_FMT=ELF"   > "${PKGDB}/${PKG}/+BUILD_INFO"
+		echo "OPSYS=`uname -s`" > "${PKGDB}/${PKG}/+BUILD_INFO" 
+		:> "${PKGDB}/${PKG}/+DESC"
+		:> "${PKGDB}/${PKG}/+SIZE_ALL"
+		:> "${PKGDB}/${PKG}/+SIZE_PKG"
+		echo "${COMMENT}" > "${PKGDB}/${PKG}/+COMMENT"
 
 		echo "[i] package created."
 		exit 0
 	;;
 	"-A") # creates a new fake alternative
-		if [ -z "${2}" ]; then
-			echo "pkgname required"
-			exit 1
-		fi
+		PKG=`package_autocompletion "${2}" "${PKGDB}"`
+		if [ -z "${PKG}" ]; then exit 1; fi
 
-		if [ ! -d "${PKGDB}/${2}" ]; then
-			echo "This package does not exists."
-			exit 1
-		fi
-		PKGNAME="${2}"
-
-		if [ -e "${PKGDB}/${2}/+ALTERNATIVES" ]; then
-			if [ -e "${PKGDB}/${2}/+FAKE_ALT" ]; then
-				edit_alternatives ${2}
+		if [ -e "${PKGDB}/${PKG}/+ALTERNATIVES" ]; then
+			if [ -e "${PKGDB}/${PKG}/+FAKE_ALT" ]; then
+				edit_alternatives ${PKG}
 			else
 				echo "This is not a valid fake alternatives package."
 			fi
 		else
-			:> "${PKGDB}/${2}/+FAKE_ALT"
-			edit_alternatives ${2}
+			:> "${PKGDB}/${PKG}/+FAKE_ALT"
+			edit_alternatives ${PKG}
 		fi
 		exit 0
 	;;
 	"-r") # removes a fake package
-		if [ "${2}" = "" ]; then
-			echo "pkgname required";
-			exit 1
-		fi
+		PKG=`package_autocompletion "${2}" "${PKGDB}"`
+		if [ -z "${PKG}" ]; then exit 1; fi
 
-		if [ ! -d "${PKGDB}/${2}" ]; then
-			echo "This package does not exists."
-			exit 1
-		fi
-		A=${2}
-		if [ -e "${PKGDB}/${A}" ]; then
-			if [ -e "${PKGDB}/${A}/+FAKE" ]; then
-				rm -rf "${PKGDB}/${A}"
-				if [ "$?" = "0" ]; then
+		if [ -e "${PKGDB}/${PKG}/+FAKE" ]; then
+			rm -rf "${PKGDB}/${PKG}" 2>&1 >/dev/null
+			if [ "$?" = "0" ]; then
 				echo "package removed."
 				exit 0
-				else
-				echo "cannot remove pacakge. check permissions."
-				exit 1
-				fi
 			else
-				echo "target package isn't fake. not removed."
+				echo "cannot remove pacakge. check permissions."
 				exit 1
 			fi
 		else
-			cd ${PKGDB}
-			for B in * ; do
-			case $B in ${A}*) OTH="${OTH} ${B}"; ;; esac
-			done
-			if [ -z "${OTH}" ]; then
-				echo "package not found."
-				exit 1
-			else
-				echo "[i] did you mean?"
-				for A in ${OTH}; do
-				echo ${A}
-				done
-				exit 0
-			fi
+			echo "target package isn't fake. not removed."
+			exit 1
 		fi
 	;;
 	"-R") # removes a fake alternatives
-		if [ -z "${2}" ]; then
-			echo "pkgname required";
-			exit 1
-		fi
-		if [ ! -d "${PKGDB}/${2}" ]; then
+		PKG=`package_autocompletion "${2}" "${PKGDB}"`
+		if [ -z "${PKG}" ]; then exit 1; fi
+		if [ ! -d "${PKGDB}/${PKG}" ]; then
 			echo "This package does not exists."
 			exit 1
 		fi
 
-		if [ -e "${PKGDB}/${2}/+FAKE_ALT" ]; then
-			pkg_alternatives -gs unregister "${PKGDB}/${2}/+ALTERNATIVES"
-			rm -f "${PKGDB}/${2}/+ALTERNATIVES" &&
-			rm -f "${PKGDB}/${2}/+FAKE_ALT" &&\
-			echo "Fake alternatives removed from ${2}"
+		if [ -e "${PKGDB}/${PKG}/+FAKE_ALT" ]; then
+			pkg_alternatives -gs unregister "${PKGDB}/${PKG}/+ALTERNATIVES"
+			rm -f "${PKGDB}/${PKG}/+ALTERNATIVES" &&
+			rm -f "${PKGDB}/${PKG}/+FAKE_ALT" &&\
+			echo "Fake alternatives removed from ${PKG}"
 		else
 			echo "this is not a fake alternative package"
 		fi
 		exit 0;
 	;;
-	""|*|"-h") # shows help message
+# Hidding
+	"-h"|"--hide") # hides the desired package.
+		init_hide
+		PKG=`package_autocompletion "${2}" "${PKGDB}"`
+		if [ -z "${PKG}" ]; then exit 1; fi
+		if [ -e "${PKGDB}/${PKG}" ]; then
+			mv ${PKGDB}/${PKG} ${PKGHIDE}/${PKG}
+			exit 0
+		else
+			echo "Target package is not installed in your system."
+			exit 1
+		fi
+		fini_hide
+	;;
+	"-u"|"--unhide") # unhides the target package.
+		init_hide
+		PKG=`package_autocompletion "${2}" "${PKGHIDE}"`
+		if [ -z "${PKG}" ]; then exit 1; fi
+		if [ -e ${PKGHIDE}/${PKG} ]; then
+			mv ${PKGHIDE}/${PKG} ${PKGDB}/${PKG}
+			exit 0
+		else
+			echo "Target package is not installed in your system."
+			exit 1
+		fi
+		fini_hide
+	;;
+	"-H") # list all hidding packages.
+		init_hide
+		ls ${PKGHIDE}
+		fini_hide
+	;;
+	*) # shows help message
 		show_help
 		exit 0
 	;;
-	esac
-	shift;
-done
+esac
 
 exit 1
