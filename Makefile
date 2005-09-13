@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1918 2005/09/12 20:51:12 leonardschmidt Exp $
-# $Id: Makefile,v 1.1918 2005/09/12 20:51:12 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.1919 2005/09/13 15:45:42 adrian_p Exp $
+# $Id: Makefile,v 1.1919 2005/09/13 15:45:42 adrian_p Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -85,6 +85,7 @@ SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-choke
 SUBDIR+=	ap-frontpage
 SUBDIR+=	ap-macro
+SUBDIR+=	ap-modsecurity
 SUBDIR+=	ap-ometer
 SUBDIR+=	ap2-auth-pam
 SUBDIR+=	ap2-jk2
