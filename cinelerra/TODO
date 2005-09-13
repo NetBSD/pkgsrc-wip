@@ -1,3 +1,5 @@
+Update to 2.0.
+
 this should not be installed: lib/pkgconfig/sndfile.pc
 
 some build options:
