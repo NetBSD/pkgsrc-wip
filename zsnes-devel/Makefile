@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/09/05 11:00:54 dillo Exp $
+# $NetBSD: Makefile,v 1.16 2005/09/13 23:05:55 dillo Exp $
 #
 
-DISTNAME=		ZSNESS_0904
-PKGNAME=		zsnes-2005904
+DISTNAME=		ZSNESS_0909
+PKGNAME=		zsnes-2005909
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.ipherswipsite.com/files/zsnes/
 EXTRACT_SUFX=		.tar.bz2
