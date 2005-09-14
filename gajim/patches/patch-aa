@@ -1,21 +1,23 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/09/14 10:59:40 vstakhov Exp $
---- Makefile.orig	2005-08-19 11:47:32.000000000 +0400
-+++ Makefile	2005-08-23 14:17:47.000000000 +0400
-@@ -3,10 +3,10 @@
+$NetBSD: patch-aa,v 1.2 2005/09/14 14:13:59 vstakhov Exp $
+--- Makefile.orig	2005-09-06 19:30:19.000000000 +0400
++++ Makefile	2005-09-14 16:37:30.000000000 +0400
+@@ -3,13 +3,13 @@
  GAJIM_AP	= 0 # do we build Autopackage?
  
  MODULES		= src src/common po
 -PREFIX		= /usr/local
 +PREFIX		?= /usr/local
  DESTDIR		= 
--LIBDIR		= /lib
+ OPTFLAGS	= 
+ export OPTFLAGS
+ LIBDIR		= /lib
+ export LIBDIR
 -MANDIR		= $(DESTDIR)$(PREFIX)/share/man
-+LIBDIR		?= /lib
 +MANDIR		= $(DESTDIR)$(PREFIX)/man
  
- FIND		= find . \( -name '*.glade' -o -name '*.py' -o -name '*.xpm' -o -name '*.gif' -o -name '*.png' -o -name '*.mo' -o -name '*.wav' \)
+ FIND		= find . \( -name '*.glade' -o -name '*.py' -o -name '*.xpm' -o -name '*.gif' -o -name '*.png' -o -name '*.wav' \)
  
-@@ -19,7 +19,7 @@
+@@ -25,7 +25,7 @@
  	scripts/gajim \
  	scripts/gajim-remote
  
