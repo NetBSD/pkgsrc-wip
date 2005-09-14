@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/09/14 07:32:24 udontknow Exp $
+
+--- Quota.xs.orig	2005-07-10 15:18:58.000000000 -0300
++++ Quota.xs
+@@ -29,7 +29,11 @@ extern "C" {
+ #ifndef NO_MNTENT
+ FILE *mtab = NULL;
+ #else
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 300000000)
++struct statvfs *mntp, *mtab = NULL;
++#else
+ struct statfs *mntp, *mtab = NULL;
++#endif
+ int mtab_size = 0;
+ #endif
+ #else /* AIX */
+@@ -788,13 +792,17 @@ getmntent()
+               PUSHs(sv_2mortal(newSVpv(fstype, strlen(fstype))));
+             else
+ #endif
+-#ifndef __OpenBSD__
++#if (!defined(__OpenBSD__) && (!defined(__NetBSD__) || __NetBSD_Version__ < 3000000))
+               PUSHs(sv_2mortal(newSViv((IV)mntp->f_type)));
+ #else
+               /* OpenBSD struct statfs lacks the f_type member (starting with release 2.7) */
+               PUSHs(sv_2mortal(newSViv((IV)"")));
+ #endif
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 3000000)
++            PUSHs(sv_2mortal(newSViv((IV)mntp->f_flag)));
++#else
+ 	    PUSHs(sv_2mortal(newSViv((IV)mntp->f_flags)));
++#endif
+ 	    mtab_size--;
+ 	    mntp++;
+ 	  }

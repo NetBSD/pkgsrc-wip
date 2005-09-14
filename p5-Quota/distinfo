@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/09/14 07:32:24 udontknow Exp $
+
+SHA1 (Quota-1.5.1.tar.gz) = 4a565a6ce98c0417569e2d5cd1f6ed9cd8e1f9eb
+RMD160 (Quota-1.5.1.tar.gz) = 37b8392725d62d84632e26a30b92368a965d28f1
+Size (Quota-1.5.1.tar.gz) = 42615 bytes
+SHA1 (patch-aa) = 565de7518643b74c80f6ec56a53a01687fbf528e
