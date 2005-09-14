@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1920 2005/09/14 07:34:42 udontknow Exp $
-# $Id: Makefile,v 1.1920 2005/09/14 07:34:42 udontknow Exp $
+# $NetBSD: Makefile,v 1.1921 2005/09/14 11:01:35 vstakhov Exp $
+# $Id: Makefile,v 1.1921 2005/09/14 11:01:35 vstakhov Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -275,6 +275,7 @@ SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-CornerXMMS
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
+SUBDIR+=	gajim
 SUBDIR+=	galib
 SUBDIR+=	gauche-fastcgi
 SUBDIR+=	gcl
