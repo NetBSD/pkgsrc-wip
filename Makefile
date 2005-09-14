@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1919 2005/09/13 15:45:42 adrian_p Exp $
-# $Id: Makefile,v 1.1919 2005/09/13 15:45:42 adrian_p Exp $
+# $NetBSD: Makefile,v 1.1920 2005/09/14 07:34:42 udontknow Exp $
+# $Id: Makefile,v 1.1920 2005/09/14 07:34:42 udontknow Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -777,6 +777,7 @@ SUBDIR+=	p5-Plucene
 SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
 SUBDIR+=	p5-Plucene-Simple
 SUBDIR+=	p5-Pod-Tree
+SUBDIR+=	p5-Quota
 SUBDIR+=	p5-Return-Value 
 SUBDIR+=	p5-Template-Timer
 SUBDIR+=	p5-Term-Screen
