@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/09/15 12:49:51 elvstone Exp $
+
+SHA1 (libmemcache-1.4.0.b5.tar.bz2) = 4b59e41f0e5ecad8a279cc2d9ecf9bf72b959315
+RMD160 (libmemcache-1.4.0.b5.tar.bz2) = a271190d54b172ec86c04561af82155063660d24
+Size (libmemcache-1.4.0.b5.tar.bz2) = 274900 bytes
+SHA1 (patch-aa) = 70e4a314ada017466ad985d98a30066b2d6fa4af
+SHA1 (patch-ab) = 469f3d783c7ee42bdff7f649716ab3e7a2d7200a
