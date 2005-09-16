@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/07/27 16:00:59 leonardschmidt Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/09/16 21:53:06 leonardschmidt Exp $
 bin/emelfm2
 lib/emelfm2/plugins/e2p_clone.so
 lib/emelfm2/plugins/e2p_cpbar.so
@@ -51,6 +51,7 @@ share/pixmaps/emelfm2/hidden_noshow_48.png
 share/pixmaps/emelfm2/hidden_show_48.png
 share/pixmaps/emelfm2/mirror_horiz_48.png
 share/pixmaps/emelfm2/mirror_vert_48.png
+share/pixmaps/emelfm2/mounts_48.png
 share/pixmaps/emelfm2/move_48.png
 share/pixmaps/emelfm2/move_as_48.png
 share/pixmaps/emelfm2/open_with_48.png
@@ -82,7 +83,6 @@ share/pixmaps/emelfm2/trash_48.png
 share/pixmaps/emelfm2/user_commands_48.png
 share/pixmaps/emelfm2/view_48.png
 @dirrm share/pixmaps/emelfm2
-@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/doc/emelfm2
 @comment in xdg-dirs: @dirrm share/applications
 @comment in xdg-dirs: @dirrm share/application-registry
