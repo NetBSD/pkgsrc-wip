@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1922 2005/09/15 13:01:40 elvstone Exp $
-# $Id: Makefile,v 1.1922 2005/09/15 13:01:40 elvstone Exp $
+# $NetBSD: Makefile,v 1.1923 2005/09/16 00:48:28 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1923 2005/09/16 00:48:28 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1097,6 +1097,7 @@ SUBDIR+=	swami
 SUBDIR+=	swftools
 SUBDIR+=	sysklogd
 SUBDIR+=	syslog-ng
+SUBDIR+=	sysstat
 SUBDIR+=	sysvinit
 SUBDIR+=	t-coffee
 SUBDIR+=	t-gnus
