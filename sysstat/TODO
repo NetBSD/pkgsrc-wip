@@ -1,0 +1,9 @@
+need to test
+
+need to send some patches to upstream developer
+
+need Makefile to replace the config file for manpages and scripts too
+
+is USE_PKGLOCALEDIR required?
+
+make this platform specific

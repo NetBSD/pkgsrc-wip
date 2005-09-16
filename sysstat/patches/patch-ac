@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/09/16 00:26:07 jeremy-c-reed Exp $
+
+--- ioconf.h.orig	2005-09-15 23:12:24.805904880 +0000
++++ ioconf.h	2005-09-15 23:13:33.542455336 +0000
+@@ -20,7 +20,9 @@
+ #define MAX_BLKDEV	255
+ #endif
+ 
++#ifndef IOCONF
+ #define IOCONF	"/etc/sysconfig/sysstat.ioconf"
++#endif
+ 
+ #define K_NODEV	"nodev"
+ 
