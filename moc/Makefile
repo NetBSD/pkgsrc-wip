@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/08/27 17:51:19 scode Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/17 19:21:14 xtraeme Exp $
 
 DISTNAME=		moc-2.3.1
 CATEGORIES=		audio
@@ -9,19 +9,20 @@ MAINTAINER=		peter.schuller@infidyne.com
 HOMEPAGE=		http://moc.daper.net/
 COMMENT=		Curses based console audio player
 
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+USE_NCURSES=		yes
 
 # We require ncurses because with curses arrow key navigation is buggy
 CONFIGURE_ARGS+=        --with-ncurses
-USE_NCURSES=            YES
 
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
-.include "../../audio/speex/buildlink3.mk"
+.include "options.mk"
+
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../audio/flac/buildlink3.mk"
-.include "../../audio/libsndfile/buildlink3.mk"
-
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
