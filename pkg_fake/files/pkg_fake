@@ -1,23 +1,26 @@
 #!/bin/sh
 #
-# pancake@phreaker.net
+# author: pancake@phreaker.net
 #
-# installs or removes fake packages
-# into pkgsrc database
+# installs or removes fake packages into the pkgsrc database.
+# creates and manages fake alternatives on pkgsrc.
+# allows to hide and show packages from the pkgsrc database.
 
-PREFIX=/usr/pkg
-PKGDB=/var/db/pkg
-PKGSRC=/usr/pkgsrc
+# variable initialization #
+PREFIX=@PREFIX@
+PKGDB=@PKGDB@
+PKGSRC=@PKGSRC@
 PKGHIDE=${PKGDB}/../pkg_hide
 if [ -z "${EDITOR}" ]; then
 	EDITOR=vi
 fi
 
+# help functions #
 show_help()
 {
 cat <<EOF
 Usage: pkg_fake [-aAclLprRihH] [pkgname]
-Version: 0.2
+Version: 0.3
 
  fake packages:
    -a : append files to the target fake package PLIST.
@@ -122,6 +125,14 @@ clear_contents()
 	echo "@cwd ${PREFIX}" >> ${PKGDB}/${PKG}/+CONTENTS
 }
 
+print_plist()
+{
+	PKGDIR=$1
+	cd ${PKGSRC}/${PKG}
+	`bmake show-var VARNAME=_GENERATE_PLIST | sed -e 's,; true;,,'` | eval awk `bmake show-var VARNAME=_PLIST_AWK_SCRIPT`
+}
+
+# main #
 if [ -z "${1}" ]; then
 	show_help
 	exit 1
@@ -185,24 +196,20 @@ case $1 in
 				echo "This package does not exists."
 				exit 1
 			fi
-			# TODO dupped code
-			cd ${PKGSRC}/${PKG}
-			`bmake show-var VARNAME=_GENERATE_PLIST | sed -e 's,; true;,,'` | eval awk `bmake show-var VARNAME=_PLIST_AWK_SCRIPT`
+			print_plist ${PKGSRC}/${PKG}
 		else
 			PKG=`package_autocompletion "${2}" "${PKGDB}"`
-		if [ -z "${PKG}" ]; then
-			echo "Package not installed. looking in the pkgsrc tree." > /dev/stderr
-			PKG=`pkgfind -qxn1 "${2}"`
 			if [ -z "${PKG}" ]; then
-				echo "No target package found." >/dev/stderr
-				exit 1
+				echo "Package not installed. looking in the pkgsrc tree." > /dev/stderr
+				PKG=`pkgfind -qxn1 "${2}"`
+				if [ -z "${PKG}" ]; then
+					echo "No target package found." >/dev/stderr
+					exit 1
+				fi
+				print_plist ${PKGSRC}/${PKG}
+			else
+				cat ${PKGDB}/${PKG}/+CONTENTS
 			fi
-			# TODO dupped code
-			cd ${PKGSRC}/${PKG}
-			`bmake show-var VARNAME=_GENERATE_PLIST | sed -e 's,; true;,,'` | eval awk `bmake show-var VARNAME=_PLIST_AWK_SCRIPT`
-		else
-			cat ${PKGDB}/${PKG}/+CONTENTS
-		fi
 		fi
 	;;
 	"-i") # install new fake package
@@ -243,7 +250,7 @@ case $1 in
 			if [ -e "${PKGDB}/${PKG}/+FAKE_ALT" ]; then
 				edit_alternatives ${PKG}
 			else
-				echo "This is not a valid fake alternatives package."
+				echo "This is not a valid fake alternatives package (already have a valid ALTERNATIVES)."
 			fi
 		else
 			:> "${PKGDB}/${PKG}/+FAKE_ALT"
