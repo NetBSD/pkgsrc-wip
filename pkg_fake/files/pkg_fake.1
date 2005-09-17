@@ -1,0 +1,48 @@
+.Dd September 17, 2005
+.Dt PKG_FAKE 1
+.Os
+.Sh NAME
+.Nm pkg_fake
+.Nd pkgsrc utility to perform hacks on the database.
+.Sh SYNOPSIS
+.Nm pkg_fake
+.Op Fl acilprALRhHu Ar package-name
+.Pp
+.Sh FAKE PACKAGES
+.Bl -tag -width Fl
+.It Fl a
+Appends a list of relative $PREFIX filenames to the target fake package. (must be a fake package)
+.It Fl c
+Clears the target PLIST (must be a fake package)
+.It Fl i
+Install a new fake package (reads the COMMENT string from stdin).
+.It Fl l
+List all fake packages inside the pkgsrc database.
+.It Fl p
+Shows the PLIST of a target pkgsrc package (the aim of this option is to allow end-users to know what files installs a package before installing).
+.It Fl r
+Removes a fake package.
+.El
+.Sh FAKE ALTERNATIVES
+.Bl -tag -width Fl
+.It Fl A
+Creates a new fake alternative on a yet installed package. The target package can't have a valid pkgsrc ALTERNATIVES.
+.It Fl L
+List all packages with fake alternatives inside.
+.It Fl R
+Removes the fake ALTERNATIVES support of a valid target package.
+.El
+.Sh HIDDING PACKAGES
+.Bl -tag -width Fl
+.It Fl h
+Hides the target package from the pkgsrc view.
+.It Fl H
+List all hidded packages.
+.It Fl u
+Unhide the selected hidden package.
+.El
+.Sh SEE ALSO
+.Xr pkgfind 1
+.Xr pkg_alternatives 8
+.Sh AUTHORS
+.An pancake Aq pancake@phreaker.net
