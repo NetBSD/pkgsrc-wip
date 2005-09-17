@@ -1,2 +1,4 @@
+automatize the change of the version of a package
+management for duppend packages system/pkgsrc (f.e perl) wrapper for other package systems:?
 rename to pkg_hack ??
 add support for rehash binaries (pkg_admin check/rebuild) ??
