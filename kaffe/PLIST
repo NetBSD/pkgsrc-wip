@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2005/09/18 20:36:44 jtonio Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/09/18 20:53:49 jtonio Exp $
 bin/kaffe-appletviewer
 bin/kaffe-jar
 bin/kaffe-java
 bin/kaffe-javac
 bin/kaffe-javadoc
 bin/kaffe-javah
+bin/kaffe-javakey
 bin/kaffe-javap
 bin/kaffe-jdb
 bin/kaffe-rmic
