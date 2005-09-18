@@ -1,7 +1,7 @@
-# $Id: Makefile,v 1.8 2005/08/21 11:41:07 christian_gall Exp $
-# $NetBSD: Makefile,v 1.8 2005/08/21 11:41:07 christian_gall Exp $
+# $Id: Makefile,v 1.9 2005/09/18 22:20:09 poppnk Exp $
+# $NetBSD: Makefile,v 1.9 2005/09/18 22:20:09 poppnk Exp $
 
-DISTNAME=	muttng-20050820
+DISTNAME=	muttng-20050916
 CATEGORIES=	mail
 MASTER_SITES=	http://nion.modprobe.de/mutt-ng/snapshots/
 
@@ -16,14 +16,22 @@ USE_PERL5=		yes
 REPLACE_PERL+=		smime_keys.pl
 REPLACE_PERL+=		contrib/update-config.pl
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/muttng/ \
-			--enable-pop --enable-imap --with-slang
+			--enable-pop --enable-imap
 AUTOCONF_REQD=		2.50
 USE_TOOLS+=		gmake autoconf automake
 
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.muttng
-PKG_SUPPORTED_OPTIONS=	ssl gpgme sasl2 idn esmtp hcache gssapi debug
+PKG_SUPPORTED_OPTIONS=	ssl gpgme sasl2 idn esmtp hcache gssapi debug curses
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mcurses)
+CONFIGURE_ARGS+=--with-curses
+.include "../../devel/ncurses/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=--with-slang
+.include "../../devel/libslang/buildlink3.mk"
+.endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
@@ -72,6 +80,5 @@ pre-configure:
 	cd ${WRKSRC}; ./autogen.sh
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../devel/libslang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 

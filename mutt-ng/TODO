@@ -1,4 +1,4 @@
-# $Id: TODO,v 1.1 2005/05/21 20:10:26 christian_gall Exp $
+# $Id: TODO,v 1.2 2005/09/18 22:20:09 poppnk Exp $
 
 * more tests
 * patch-ab is to disable AUTH PLAIN and use CRAM-MD5 with
@@ -10,3 +10,4 @@
 
 tested on:
 	* NetBSD 3.0_BETA
+	* Debian GNU/Linux/pkgsrc (x86/ppc)
