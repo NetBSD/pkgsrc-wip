@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/08/23 11:49:43 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/09/19 03:17:02 tvierling Exp $
 
 DISTNAME=		dovecot-${DOVECOT_VER}
 PKGNAME=		${DISTNAME:S/-/-nightly-/}
@@ -12,7 +12,7 @@ COMMENT=		Secure IMAP and POP3 server
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 # generate WRKSRC on demand
-WRKSRC_CMD=		${ECHO} ${WRKDIR}/dovecot-1.0-test*
+WRKSRC_CMD=		${ECHO} ${WRKDIR}/dovecot-1.0*
 WRKSRC=			${WRKSRC_CMD:sh}
 
 USE_LIBTOOL=		yes
