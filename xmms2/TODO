@@ -1,2 +1,7 @@
-- patches/patch-a{b,c} need to be replaced with something better, no?
+- Is there a cleaner way to enable ruby support?
+  (see patches/patch-a{b,c})
 - add ecore support.
+- add gnomevfs support.
+- add samba support.
+- the pyrex option breaks the buildlink3 file (prints "No valid Python
+  version" and skips the xmms2 package).

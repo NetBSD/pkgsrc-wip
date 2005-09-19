@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2005/09/13 23:46:55 leonardschmidt Exp $
+# $NetBSD: options.mk,v 1.4 2005/09/19 08:24:10 leonardschmidt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
 PKG_SUPPORTED_OPTIONS=	curl flac ogg pyrex ruby
-PKG_SUGGESTED_OPTIONS=	curl flac ogg pyrex ruby
+PKG_SUGGESTED_OPTIONS=	curl flac ogg ruby
 
 .include "../../mk/bsd.options.mk"
 

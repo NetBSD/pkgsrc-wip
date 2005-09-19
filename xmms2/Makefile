@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/09/13 23:46:55 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/19 08:24:10 leonardschmidt Exp $
 #
 
 DISTNAME=	xmms2-0.1DR2.2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmms2/}
 
 MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://xmms2.xmms.org/
-COMMENT=	Audio player using a client-server model
+COMMENT=	Audio player featuring a client-server model
 
 BUILD_DEPENDS+=		scons>=0.96.1nb1:../../devel/scons
 
