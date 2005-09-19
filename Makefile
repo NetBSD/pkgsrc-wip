@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1923 2005/09/16 00:48:28 jeremy-c-reed Exp $
-# $Id: Makefile,v 1.1923 2005/09/16 00:48:28 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1924 2005/09/19 09:41:23 leonardschmidt Exp $
+# $Id: Makefile,v 1.1924 2005/09/19 09:41:23 leonardschmidt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -355,6 +355,7 @@ SUBDIR+=	guilerxspencer
 SUBDIR+=	gune
 SUBDIR+=	gurlchecker
 SUBDIR+=	gwc
+SUBDIR+=	gxmms2
 SUBDIR+=	hanzim
 SUBDIR+=	hasciicam
 SUBDIR+=	hdparm
