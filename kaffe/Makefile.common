@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.12 2005/09/18 20:53:49 jtonio Exp $
+# $NetBSD: Makefile.common,v 1.13 2005/09/19 08:30:35 jtonio Exp $
 
-DISTNAME=     kaffe-1.1.6-pre1
+DISTNAME=     kaffe-1.1.6-pre2
 CATEGORIES=   lang java
 MASTER_SITES= http://kaffe.org/~robilad/
 
@@ -31,6 +31,7 @@ DISTINFO_FILE=		${.CURDIR}/../../wip/kaffe/distinfo
 BUILDLINK_PASSTHRU_DIRS+=	${JAVA_HOME}/jre/lib/${MACHINE_ARCH}
 
 CONFIGURE_ARGS+=	--with-gc=kaffe-gc
+CONFIGURE_ARGS+=	--disable-boehm-gc-configuration
 CONFIGURE_ARGS+=	--without-alsa
 CONFIGURE_ARGS+=	--without-esd
 CONFIGURE_ARGS+=	--disable-esdtest
