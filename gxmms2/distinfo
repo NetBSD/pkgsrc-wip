@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/09/19 09:40:13 leonardschmidt Exp $
+
+SHA1 (gxmms2-0.4.2.tar.gz) = 56879e329cbe95da8cd3f5b3cee3f1b5839f068f
+RMD160 (gxmms2-0.4.2.tar.gz) = af831be2ef17729897bf16e672c13bc042c0e8b6
+Size (gxmms2-0.4.2.tar.gz) = 29111 bytes
+SHA1 (patch-aa) = 1f3d2e44c2bd010505c693f14d975c5139c77699

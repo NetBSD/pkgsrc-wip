@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/09/19 09:40:13 leonardschmidt Exp $
+
+--- Makefile.orig	2005-07-22 16:23:33.000000000 +0000
++++ Makefile
+@@ -1,17 +1,17 @@
+ # Makefile for gxmms2
+ 
+ #Installation directory
+-INSTALLPATH=/usr/local/bin
++INSTALLPATH=${PREFIX}/bin
+ 
+ # Path to XMMS2 header files
+-XMMS2_INCLUDE_DIR=/usr/local/include/xmms2
++XMMS2_INCLUDE_DIR=${PREFIX}/include/xmms2
+ 
+ ALLFILES=*.c *.h *.xpm Makefile README COPYING CHANGELOG
+ 
+ GTK_INCLUDE = `pkg-config gtk+-2.0 --cflags`
+ GTK_LIB = `pkg-config gtk+-2.0 --libs`
+ 
+-FLAGS = -O2 -Wall -fPIC $(GTK_INCLUDE) -I${XMMS2_INCLUDE_DIR}
++FLAGS = -fPIC $(GTK_INCLUDE) -I${XMMS2_INCLUDE_DIR}
+ LIBS = $(GTK_LIB) -lxmmsclient -lxmmsclient-glib
+ 
+ LFLAGS =
+@@ -22,7 +22,7 @@ OBJS = gxmms2.o xmms2ctrl.o trackinfo.o 
+ 
+ projname := gxmms2-$(shell awk '/define VERSION_NUMBER/ { print $$3 }' gxmms2.c )
+ 
+-gxmms2: $(OBJS)
++all: $(OBJS)
+ 	$(CC) $(OBJS) -o gxmms2 $(LFLAGS) $(LIBS)
+ 
+ dist: $(ALLFILES)
+@@ -45,7 +45,8 @@ gmlbrowser.o: gmlbrowser.c
+ gmlsearch.o: gmlsearch.c
+ 
+ install:
+-	install -D gxmms2 $(INSTALLPATH)/gxmms2
++	${BSD_INSTALL_PROGRAM_DIR} $(INSTALLPATH)
++	${BSD_INSTALL_PROGRAM} gxmms2 $(INSTALLPATH)/gxmms2
+ 
+ uninstall:
+ 	-rm $(INSTALLPATH)/gxmms2
