@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1926 2005/09/20 08:48:28 obache Exp $
-# $Id: Makefile,v 1.1926 2005/09/20 08:48:28 obache Exp $
+# $NetBSD: Makefile,v 1.1927 2005/09/20 12:14:16 obache Exp $
+# $Id: Makefile,v 1.1927 2005/09/20 12:14:16 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -438,6 +438,7 @@ SUBDIR+=	kahua
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	kbproto
+SUBDIR+=	kcc
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	konversation
