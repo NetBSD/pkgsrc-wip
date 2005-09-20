@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/20 16:46:33 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/20 18:00:59 thomasklausner Exp $
 
 DISTNAME=	Imager-0.45
 PKGNAME=	p5-${DISTNAME}
@@ -7,18 +7,15 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Imager/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/~tonyc/Imager/
-COMMENT=	A Perl module for manipulating gray, color and rgba format images
-
-DEPENDS+=	t1lib>=0:../../fonts/t1lib
-DEPENDS+=	tiff>=0:../../graphics/tiff
-DEPENDS+=	png>=0:../../graphics/png
-DEPENDS+=	jpeg>=0:../../graphics/jpeg
-
-MAKE_ENV+=	IM_LIBPATH="${X11BASE}/lib:${LOCALBASE}/lib"
-MAKE_ENV+=	IM_INCPATH="${X11BASE}/include:${LOCALBASE}/include"
-MAKE_ENV+=	IM_CFLAGS="${CFLAGS}"
+COMMENT=	Perl module for manipulating gray, color, and RGBA format images
 
 PERL5_PACKLIST= auto/Imager/.packlist
 
+.include "../../fonts/t1lib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,0 @@
-Needs to fix path to the required libraries.
-
-Get an error:
-../image.h:274:19: t1lib.h: No such file or directory
-
-The problem comes up because of the PATH that environment has when bmake is running.
-The part of the path that gives problem is: /netbsd-pkgsrc/pkg/tmp/wip/p5-Imager/work/.wrapper/bin
-
