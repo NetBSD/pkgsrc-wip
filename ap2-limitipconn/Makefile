@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:09:46 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/20 18:46:59 tvierling Exp $
 #
 
 DISTNAME=		mod_limitipconn-0.22
@@ -10,7 +10,7 @@ MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://dominia.org/djao/limitipconn2.html
 COMMENT=		Limits per-IP connections to an Apache 2 server
 
-
+APACHE_MODULE=		# defined
 MAKE_FLAGS+=		APXS=${APXS:Q}
 
 post-install:
