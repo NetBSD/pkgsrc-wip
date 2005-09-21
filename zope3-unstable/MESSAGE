@@ -1,17 +1,17 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/09/20 03:22:15 ykomatsu Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/21 15:32:47 ykomatsu Exp $
 
 To run Zope, you need to make a new Zope instance home.
 
   1) If you want to run standalone Zope or ZEO client,
      please run the following command:
 
-    ${PREFIX}/share/zope3/bin/mkzopeinstance --dir=/var/zope3
+    ${PREFIX}/bin/mkzopeinstance --dir=/var/zope3
 
   2) If you want to run ZEO storage server,
      please run the following command:
 
-    ${PREFIX}/share/zope3/bin/mkzeoinstance /var/zss3
+    ${PREFIX}/bin/mkzeoinstance /var/zss3
 
 If you want to run Zope under the ${ZOPE3_USER} user account,
 you need to change the owner and group of Zope instance home

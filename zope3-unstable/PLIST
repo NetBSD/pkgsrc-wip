@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/20 03:22:16 ykomatsu Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/21 15:32:47 ykomatsu Exp $
 ${PYINC}/persistent/cPersistence.h
 ${PYINC}/persistent/ring.h
 ${PYINC}/zope.proxy/proxy.h
@@ -8109,15 +8109,15 @@ ${PYSITELIB}/zope/thread/_zope_thread.so
 ${PYSITELIB}/zope/thread/tests.py
 ${PYSITELIB}/zope/thread/tests.pyc
 ${PYSITELIB}/zope/thread/tests.pyo
+bin/mkzeoinstance
+bin/mkzopeinstance
+bin/zconfig
+bin/zconfig_schema2html
+bin/zdctl.py
+bin/zdrun.py
+bin/zopetest
 share/examples/rc.d/zope3
 share/examples/rc.d/zss3
-share/zope3/bin/mkzeoinstance
-share/zope3/bin/mkzopeinstance
-share/zope3/bin/zconfig
-share/zope3/bin/zconfig_schema2html
-share/zope3/bin/zdctl.py
-share/zope3/bin/zdrun.py
-share/zope3/bin/zopetest
 share/zope3/zopeskel/README.txt
 share/zope3/zopeskel/bin/debugzope.bat.in
 share/zope3/zopeskel/bin/debugzope.in
@@ -8191,7 +8191,6 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/zopeskel/etc
 @dirrm share/zope3/zopeskel/bin
 @dirrm share/zope3/zopeskel
-@dirrm share/zope3/bin
 @dirrm share/zope3
 @dirrm ${PYSITELIB}/zope/thread
 @dirrm ${PYSITELIB}/zope/testing
