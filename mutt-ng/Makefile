@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.9 2005/09/18 22:20:09 poppnk Exp $
-# $NetBSD: Makefile,v 1.9 2005/09/18 22:20:09 poppnk Exp $
+# $Id: Makefile,v 1.10 2005/09/23 07:00:32 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/23 07:00:32 rillig Exp $
 
 DISTNAME=	muttng-20050916
 CATEGORIES=	mail
@@ -81,4 +81,3 @@ pre-configure:
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
