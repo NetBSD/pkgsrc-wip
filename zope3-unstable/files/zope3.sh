@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: zope3.sh,v 1.2 2005/09/21 15:32:47 ykomatsu Exp $
+# $NetBSD: zope3.sh,v 1.3 2005/09/23 02:19:10 ykomatsu Exp $
 #
 # PROVIDE: zope3
 # REQUIRE: DAEMON
@@ -11,7 +11,7 @@ $_rc_subr_loaded .  /etc/rc.subr
 name="zope3"
 rcvar=$name
 extra_commands="status"
-command="@PREFIX@/bin/zdctl.py"
+command="@PREFIX@/share/zope3/bin/zdctl.py"
 start_cmd="zope3_start"
 start_precmd="zope3_precmd"
 stop_cmd="zope3_stop"
