@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/23 02:19:10 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/23 07:03:27 rillig Exp $
 
 DISTNAME=	Zope-3.1.0c3
 PKGNAME=	zope3-unstable-3.1.0c3
@@ -32,9 +32,9 @@ pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -type f -print | ${XARGS} ${RM} -f
 
 post-install:
-	$(LN) -s ${PREFIX}/share/zope3/bin/mkzeoinstance ${PREFIX}/bin
-	$(LN) -s ${PREFIX}/share/zope3/bin/mkzopeinstance ${PREFIX}/bin
-	$(LN) -s ${PREFIX}/share/zope3/bin/zopetest ${PREFIX}/bin
+	${LN} -s ${PREFIX}/share/zope3/bin/mkzeoinstance ${PREFIX}/bin
+	${LN} -s ${PREFIX}/share/zope3/bin/mkzopeinstance ${PREFIX}/bin
+	${LN} -s ${PREFIX}/share/zope3/bin/zopetest ${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
 .include "../../textproc/py-xml/buildlink3.mk"
