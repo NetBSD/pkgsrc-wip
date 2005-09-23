@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/23 03:00:43 poppnk Exp $
+bin/flexbackup
+etc/flexbackup.conf
+man/man1/flexbackup.1
+man/man5/flexbackup.conf.5
