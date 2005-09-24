@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/09/24 07:43:09 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/24 07:59:29 gregschenzel Exp $
 #
 
 DISTNAME=		tzosdclock_1.0.2
@@ -15,4 +15,3 @@ GNU_CONFIGURE=		yes
 
 .include "../../x11/xosd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
