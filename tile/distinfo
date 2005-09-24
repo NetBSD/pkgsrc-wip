@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/09/24 07:07:43 gregschenzel Exp $
+$NetBSD: distinfo,v 1.2 2005/09/24 08:18:05 gregschenzel Exp $
 
-SHA1 (tile_0.7.1.tar.gz) = af3727fe2dbf7fd58f4236d0820aa625e7e5af78
-RMD160 (tile_0.7.1.tar.gz) = 279e65e8ef99661f1649cb8aaed354f9e4b736f7
-Size (tile_0.7.1.tar.gz) = 50121 bytes
+SHA1 (tile_0.7.3.tar.gz) = 4f1d0e9eacca9c0fca98b36e45fbb925ddd0c4ff
+RMD160 (tile_0.7.3.tar.gz) = 414931082aa29621afd80abd39d17310eae27538
+Size (tile_0.7.3.tar.gz) = 111272 bytes
