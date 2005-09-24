@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2005/06/03 11:04:31 poppnk Exp $
+# $NetBSD: Makefile,v 1.7 2005/09/24 22:54:39 poppnk Exp $
 #
 
-DISTNAME=	minimalist-2.5.2.3
+DISTNAME=	minimalist-2.5.3
 CATEGORIES=	wip mail
 MASTER_SITES=	http://www.mml.org.ua/LIST/
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pancake@phreaker.net
-HOMEPAGE=	http://www.mml.org.ua/LIST/
+HOMEPAGE=	http://www.mml.org.ua/
 COMMENT=	Minimalistic Mailing Lists Manager
 
 USE_PERL5=	YES
@@ -27,13 +26,13 @@ SUBST_SED.path= -e 's,/usr/local,${PREFIX},'
 do-build:
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/minimalist/sample
 	# cfgfiles
 	${INSTALL_DATA} ${WRKSRC}/minimalist.conf-sample \
 		${PREFIX}/etc/minimalist.conf
 	${INSTALL_DATA} ${WRKSRC}/minimalist.conf-sample \
 		${PREFIX}/share/examples/minimalist/minimalist.conf
 	# examples
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/minimalist/sample
 	${INSTALL_DATA} ${WRKSRC}/sample/lists.lst \
 		${PREFIX}/share/examples/minimalist/
 	${INSTALL_DATA} ${WRKSRC}/sample/sample/* \
