@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/24 08:26:23 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/24 11:21:05 gregschenzel Exp $
 #
 
 DISTNAME=		tile_0.7.3
@@ -10,7 +10,7 @@ MAINTAINER=		inittab@unixdev.net
 HOMEPAGE=		http://tile.unixdev.net/
 COMMENT=		X11 Window Tiler
 
-WRKSRC=		${WRKDIR}/tile-0.7.3
+WRKSRC=		${WRKDIR}/${PKGNAME}
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
