@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/24 07:07:43 gregschenzel Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/24 08:14:50 gregschenzel Exp $
 bin/tile
+share/applications/horizontal.desktop
+share/applications/vertical.desktop
 share/tile/rc
 share/tile/wmprofiles
 man/man1/tile.1
