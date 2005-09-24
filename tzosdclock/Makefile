@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/09/24 07:59:29 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/24 08:32:10 gregschenzel Exp $
 #
 
 DISTNAME=		tzosdclock_1.0.2
-CATEGORIES=		wip
+PKGNAME=		tzosdclock-1.0.2
+CATEGORIES=		x11
 MASTER_SITES=		http://www.unixdev.net/downloads/tzosdclock/1.0.2/
 
 MAINTAINER=		inittab@unixdev.net
