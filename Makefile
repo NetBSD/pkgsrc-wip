@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1927 2005/09/20 12:14:16 obache Exp $
-# $Id: Makefile,v 1.1927 2005/09/20 12:14:16 obache Exp $
+# $NetBSD: Makefile,v 1.1928 2005/09/24 07:26:49 gregschenzel Exp $
+# $Id: Makefile,v 1.1928 2005/09/24 07:26:49 gregschenzel Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1124,6 +1124,7 @@ SUBDIR+=	tex-xmltex
 SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
+SUBDIR+=	tile
 SUBDIR+=	tilp
 SUBDIR+=	tinycobol
 SUBDIR+=	tinyfugue-beta
@@ -1148,6 +1149,7 @@ SUBDIR+=	tutos
 SUBDIR+=	tuxtype2
 SUBDIR+=	typespeed
 SUBDIR+=	typhoon
+SUBDIR+=	tzosdclock
 SUBDIR+=	uade
 SUBDIR+=	uclibc
 SUBDIR+=	udhcp
