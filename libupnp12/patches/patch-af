@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+
+--- upnp/src/api/upnpapi.c.orig	2003-02-14 01:19:09.000000000 +0900
++++ upnp/src/api/upnpapi.c
+@@ -43,7 +43,11 @@
+ #include "ThreadPool.h"
+ #include "membuffer.h"
+ #include <sys/ioctl.h>
++#ifdef __linux__
+ #include <linux/if.h>
++#else
++#include <net/if.h>
++#endif
+ #include <sys/utsname.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>

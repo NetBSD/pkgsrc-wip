@@ -1,0 +1,74 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+
+--- threadutil/src/Makefile.orig	2003-02-14 01:18:58.000000000 +0900
++++ threadutil/src/Makefile
+@@ -82,9 +82,9 @@ CLEAN_PATH=$(DIR_PATH)
+ endif
+ 
+ CXX =$(CROSS_COMPILER)g++
+-CFLAGS += -fPIC -Wall -D_REENTRANT -I../inc
++CFLAGS += -fPIC -Wall $(PTHREAD_CFLAGS) -I../inc
+ INCLUDE =
+-SHAREDFLAGS = -rdynamic -shared -Wl,-soname,
++SHAREDFLAGS = $(PTHREAD_LDFLAGS) -rdynamic -shared -Wl,-soname,
+ 
+ libthreadutil.so_objects = $(OBJ_DIR)FreeList.o    \
+                            $(OBJ_DIR)LinkedList.o  \
+@@ -92,7 +92,7 @@ libthreadutil.so_objects = $(OBJ_DIR)Fre
+                            $(OBJ_DIR)TimerThread.o \
+ 			   $(OBJ_DIR)iasnprintf.o
+ 
+-libthreadutil.so_libs = -lpthread 
++libthreadutil.so_libs = $(PTHREAD_LIBS)
+ 
+ ifeq ($(EFENCE),1)
+ libthreadutil.so_libs += -lefence
+@@ -116,29 +116,29 @@ libthread%.so:
+ all: depdir $(TARGET_OUTPUT)
+ 
+ install: $(TARGET_OUTPUT)
+-	@if [ ! -d $(PREFIX)/usr/include/upnp ]; then \
+-		@install -d $(PREFIX)/usr/include/upnp; \
++	@if [ ! -d $(PREFIX)/include/upnp ]; then \
++		@install -d $(PREFIX)/include/upnp; \
+ 	fi
+-	@install ../inc/LinkedList.h  $(PREFIX)/usr/include/upnp
+-	@install ../inc/FreeList.h    $(PREFIX)/usr/include/upnp
+-	@install ../inc/ThreadPool.h  $(PREFIX)/usr/include/upnp
+-	@install ../inc/TimerThread.h $(PREFIX)/usr/include/upnp
+-	@install ../inc/iasnprintf.h  $(PREFIX)/usr/include/upnp
+-	@install ../inc/ithread.h     $(PREFIX)/usr/include/upnp
+-	@if [ ! -d $(PREFIX)/usr/lib ]; then \
+-		@install -d $(PREFIX)/usr/lib; \
++	@install ../inc/LinkedList.h  $(PREFIX)/include/upnp
++	@install ../inc/FreeList.h    $(PREFIX)/include/upnp
++	@install ../inc/ThreadPool.h  $(PREFIX)/include/upnp
++	@install ../inc/TimerThread.h $(PREFIX)/include/upnp
++	@install ../inc/iasnprintf.h  $(PREFIX)/include/upnp
++	@install ../inc/ithread.h     $(PREFIX)/include/upnp
++	@if [ ! -d $(PREFIX)/lib ]; then \
++		@install -d $(PREFIX)/lib; \
+ 	fi
+-	@install $(TARGET_OUTPUT) $(PREFIX)/usr/lib
++	@install $(TARGET_OUTPUT) $(PREFIX)/lib
+ 
+ uninstall:
+-	@rm -f $(PREFIX)/usr/include/upnp/LinkedList.h
+-	@rm -f $(PREFIX)/usr/include/upnp/FreeList.h
+-	@rm -f $(PREFIX)/usr/include/upnp/ThreadPool.h
+-	@rm -f $(PREFIX)/usr/include/upnp/TimerThread.h
+-	@rm -f $(PREFIX)/usr/include/upnp/iasnprintf.h
+-	@rm -f $(PREFIX)/usr/include/upnp/ithread.h
+-	@rm -f $(PREFIX)/usr/include/upnp/withread.h
+-	@rm -f $(PREFIX)/usr/lib/$(TARGET_OUTPUT)
++	@rm -f $(PREFIX)/include/upnp/LinkedList.h
++	@rm -f $(PREFIX)/include/upnp/FreeList.h
++	@rm -f $(PREFIX)/include/upnp/ThreadPool.h
++	@rm -f $(PREFIX)/include/upnp/TimerThread.h
++	@rm -f $(PREFIX)/include/upnp/iasnprintf.h
++	@rm -f $(PREFIX)/include/upnp/ithread.h
++	@rm -f $(PREFIX)/include/upnp/withread.h
++	@rm -f $(PREFIX)/lib/$(TARGET_OUTPUT)
+ 
+ depdir:
+ 	@-mkdir -p .deps

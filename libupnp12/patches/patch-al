@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+
+--- upnp/src/genlib/net/http/httpreadwrite.c.orig	2003-02-14 01:19:13.000000000 +0900
++++ upnp/src/genlib/net/http/httpreadwrite.c
+@@ -2107,7 +2107,7 @@ http_OpenHttpGetEx( IN const char *url_s
+         }
+ 
+         memset( &rangeBuf, 0, sizeof( rangeBuf ) );
+-        sprintf( rangeBuf.RangeHeader, "Range: bytes=%d-%ld\r\n",
++        sprintf( rangeBuf.RangeHeader, "Range: bytes=%d-%d\r\n",
+                  lowRange, highRange );
+ 
+         membuffer_init( &request );

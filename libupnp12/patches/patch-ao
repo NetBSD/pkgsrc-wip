@@ -1,0 +1,42 @@
+$NetBSD: patch-ao,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+
+--- upnp/src/genlib/net/uri/uri.c.orig	2003-02-14 01:19:15.000000000 +0900
++++ upnp/src/genlib/net/uri/uri.c
+@@ -600,10 +600,37 @@ parse_hostport( char *in,
+         int errCode = 0;
+ 
+         //call gethostbyname_r (reentrant form of gethostbyname)
++ #if defined(__osf1__)
++	h = gethostbyname( temp_host_name );
++	errCode = h == NULL ? -1 : 0;
++ #elif defined(__hpux) || defined(_AIX)
++	errCode = gethostbyname_r( temp_host_name,
++				   &h_buf,
++				   (struct hostent_data*)temp_hostbyname_buff)
++	h = &h_buf;
++ #elif defined(__GLIBC__)
+         errCode = gethostbyname_r( temp_host_name,
+                                    &h_buf,
+                                    temp_hostbyname_buff,
+                                    BUFFER_SIZE, &h, &errcode );
++ #elif defined(SOLARIS)
++	errCode = gethostbyname_r( temp_host_name,
++				   &h_buf,
++				   temp_hostbyname_buff,
++				   BUFFER_SIZE, &errcode );
++	h = &h_buf;
++ #else
++	struct hostent *h2;
++	static pthread_mutex_t hostname_mutex = PTHREAD_MUTEX_INITIALIZER;
++	pthread_mutex_lock( &hostname_mutex );
++	if (( h2 = gethostbyname( temp_host_name)) == NULL) {
++		errCode = -1;
++	} else {
++		memcpy(&h_buf, h2, sizeof(struct hostent));
++		h = &h_buf;
++	}
++	pthread_mutex_unlock(&hostname_mutex);
++ #endif
+ 
+         if( errCode == 0 ) {
+             if( h ) {

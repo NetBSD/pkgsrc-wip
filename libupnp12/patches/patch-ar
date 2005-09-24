@@ -1,0 +1,14 @@
+$NetBSD: patch-ar,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+
+--- upnp/src/inc/sysdep.h.orig	2003-02-14 01:19:19.000000000 +0900
++++ upnp/src/inc/sysdep.h
+@@ -19,7 +19,9 @@
+ 
+ #include <sys/types.h>
+ #include <sys/time.h>
++#ifdef __linux__
+ #include <sys/sysinfo.h>
++#endif
+ #include "ithread.h"
+ 
+ /* change to point to where MD5 .h's live */

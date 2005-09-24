@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+
+--- threadutil/src/ThreadPool.c.orig	2003-02-14 01:19:00.000000000 +0900
++++ threadutil/src/ThreadPool.c
+@@ -341,7 +341,7 @@ tp->stats.totalJobsLQ++; tp->stats.total
+     struct timeb t;
+ 
+     ftime( &t );
+-    srand( ( unsigned int )t.millitm + ithread_get_current_thread_id(  ) );
++    srand( ( unsigned int )t.millitm + ( unsigned int )ithread_get_current_thread_id(  ) );
+     }
+ 
+ /****************************************************************************

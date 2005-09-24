@@ -1,0 +1,15 @@
+$NetBSD: patch-am,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+
+--- upnp/src/genlib/net/sock.c.orig	2003-02-14 01:19:11.000000000 +0900
++++ upnp/src/genlib/net/sock.c
+@@ -48,6 +48,10 @@
+ #include <unistd.h>
+ #include "unixutil.h"
+ 
++#ifndef MSG_NOSIGNAL
++#define MSG_NOSIGNAL 0
++#endif
++
+ /************************************************************************
+ *	Function :	sock_init
+ *

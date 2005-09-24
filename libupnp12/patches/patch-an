@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+
+--- upnp/src/genlib/net/uri/makefile.orig	2003-02-14 01:19:14.000000000 +0900
++++ upnp/src/genlib/net/uri/makefile
+@@ -52,7 +52,7 @@ UPNP_INC_DIR = -I ../../../../inc -I ../
+ 	-I ../../../../../threadutil/src -I ../../../../../ixml/inc
+ 
+ 
+-CFLAGS += -fPIC -Wall -c -D_REENTRANT $(UPNP_INC_DIR) 
++CFLAGS += -fPIC -Wall -c $(PTHREAD_CFLAGS) $(UPNP_INC_DIR) 
+ 
+ ifeq ($(DEBUG),1)
+ CFLAGS += -g -O -DDEBUG

@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+
+--- upnp/src/genlib/net/Makefile.orig	2003-02-14 01:19:11.000000000 +0900
++++ upnp/src/genlib/net/Makefile
+@@ -52,7 +52,7 @@ ifeq ($(INSURE),1)
+ CC=insure
+ endif
+ 
+-CFLAGS += -fPIC -Wall -c -D_REENTRANT $(UPNP_INC_DIR) 
++CFLAGS += -fPIC -Wall -c $(PTHREAD_CFLAGS) $(UPNP_INC_DIR) 
+ 
+ ifeq ($(DEBUG),1)
+ CFLAGS += -g -O -DDEBUG

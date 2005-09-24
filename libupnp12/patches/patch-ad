@@ -1,0 +1,47 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+
+--- upnp/makefile.orig	2003-02-14 01:19:01.000000000 +0900
++++ upnp/makefile
+@@ -171,27 +171,27 @@ clean:
+ 	@$(MAKE) -C $(THREADUTIL_DIR) clean
+ 
+ install: upnp
+-	@if [ ! -d $(PREFIX)/usr/include/upnp ]; then \
+-		install -d $(PREFIX)/usr/include/upnp; \
++	@if [ ! -d $(PREFIX)/include/upnp ]; then \
++		install -d $(PREFIX)/include/upnp; \
+ 	fi
+-	@if [ ! -d $(PREFIX)/usr/lib ]; then \
+-		install -d $(PREFIX)/usr/lib; \
++	@if [ ! -d $(PREFIX)/lib ]; then \
++		install -d $(PREFIX)/lib; \
+ 	fi
+ 	@if [ -f bin/$(DIR_PATH)upnp.jar ]; then \
+-		install bin/$(DIR_PATH)upnp.jar $(PREFIX)/usr/lib; \
++		install bin/$(DIR_PATH)upnp.jar $(PREFIX)/lib; \
+ 	fi
+-	@install bin/$(DIR_PATH)libupnp.so $(PREFIX)/usr/lib/libupnp.so.$(VERSION)
+-	@ln -s $(PREFIX)/usr/lib/libupnp.so.$(VERSION) $(PREFIX)/usr/lib/libupnp.so
+-	@install inc/upnp.h $(PREFIX)/usr/include/upnp
+-	@install inc/config.h $(PREFIX)/usr/include/upnp
+-	@install inc/upnptools.h $(PREFIX)/usr/include/upnp
++	@install bin/$(DIR_PATH)libupnp.so $(PREFIX)/lib/libupnp.so.$(VERSION)
++	@ln -s $(PREFIX)/lib/libupnp.so.$(VERSION) $(PREFIX)/lib/libupnp.so
++	@install inc/upnp.h $(PREFIX)/include/upnp
++	@install inc/config.h $(PREFIX)/include/upnp
++	@install inc/upnptools.h $(PREFIX)/include/upnp
+ 
+ uninstall:
+-	@rm -f $(PREFIX)/usr/include/upnp/upnp.h
+-	@rm -f $(PREFIX)/usr/include/upnp/config.h
+-	@rm -f $(PREFIX)/usr/include/upnp/upnptools.h
+-	@rm -f $(PREFIX)/usr/lib/libupnp.so
+-	@rm -f $(PREFIX)/usr/lib/libupnp.so.$(VERSION)
++	@rm -f $(PREFIX)/include/upnp/upnp.h
++	@rm -f $(PREFIX)/include/upnp/config.h
++	@rm -f $(PREFIX)/include/upnp/upnptools.h
++	@rm -f $(PREFIX)/lib/libupnp.so
++	@rm -f $(PREFIX)/lib/libupnp.so.$(VERSION)
+ 
+ test: upnp
+ 	if [ ! -d bin/tests ]; then mkdir -p bin/tests ; fi

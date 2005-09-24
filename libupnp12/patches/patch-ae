@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+
+--- upnp/src/api/makefile.orig	2003-02-14 01:19:08.000000000 +0900
++++ upnp/src/api/makefile
+@@ -69,7 +69,7 @@ OBJ_DIR = obj/$(DIR_PATH)
+ UPNP_LIB_DIR = ../lib/$(DIR_PATH)
+ endif
+ 
+-CFLAGS += -fPIC -Wall -c -D_REENTRANT $(INCLUDES) 
++CFLAGS += -fPIC -Wall -c $(PTHREAD_CFLAGS) $(INCLUDES) 
+ 
+ TARGET_OUTPUT=$(UPNP_LIB_DIR)api.o 
+ 
