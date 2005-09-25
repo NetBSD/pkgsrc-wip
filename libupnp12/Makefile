@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/09/25 05:03:12 obache Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/25 05:32:16 obache Exp $
 #
 
 DISTNAME=	libupnp-1.2.1a
@@ -17,7 +17,7 @@ MAKEFILE=       makefile
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin" || ${OPSYS} == "BSDOS"
 MAKE_ENV+=	EXTRA_LIBS="-lcompat"      # XXX need this for ftime(3)
 .else
 MAKE_ENV+=	EXTRA_LIBS=""
