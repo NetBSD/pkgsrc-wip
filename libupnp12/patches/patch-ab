@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+$NetBSD: patch-ab,v 1.2 2005/09/25 05:03:13 obache Exp $
 
 --- threadutil/src/Makefile.orig	2003-02-14 01:18:58.000000000 +0900
 +++ threadutil/src/Makefile
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
  			   $(OBJ_DIR)iasnprintf.o
  
 -libthreadutil.so_libs = -lpthread 
-+libthreadutil.so_libs = $(PTHREAD_LIBS)
++libthreadutil.so_libs = $(PTHREAD_LIBS) $(EXTRA_LIBS)
  
  ifeq ($(EFENCE),1)
  libthreadutil.so_libs += -lefence

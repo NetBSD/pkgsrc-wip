@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/25 05:03:12 obache Exp $
 #
 
 DISTNAME=	libupnp-1.2.1a
@@ -14,6 +14,14 @@ USE_TOOLS+= gmake gcc
 
 BUILD_DIRS=	${WRKDIR}/${DISTNAME}/upnp
 MAKEFILE=       makefile
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+MAKE_ENV+=	EXTRA_LIBS="-lcompat"      # XXX need this for ftime(3)
+.else
+MAKE_ENV+=	EXTRA_LIBS=""
+.endif
 
 do-install:
 .for d in upnp ixml threadutil
