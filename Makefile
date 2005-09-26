@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1931 2005/09/26 23:29:48 xtraeme Exp $
-# $Id: Makefile,v 1.1931 2005/09/26 23:29:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1932 2005/09/26 23:37:35 xtraeme Exp $
+# $Id: Makefile,v 1.1932 2005/09/26 23:37:35 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -65,7 +65,6 @@ SUBDIR+=	Siesta
 SUBDIR+=	WEPCrack
 SUBDIR+=	abuse_sdl
 SUBDIR+=	acpid
-SUBDIR+=	acr
 SUBDIR+=	adamem
 SUBDIR+=	aespipe
 SUBDIR+=	aircrack
