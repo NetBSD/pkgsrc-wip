@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1930 2005/09/26 23:21:48 xtraeme Exp $
-# $Id: Makefile,v 1.1930 2005/09/26 23:21:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1931 2005/09/26 23:29:48 xtraeme Exp $
+# $Id: Makefile,v 1.1931 2005/09/26 23:29:48 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -565,7 +565,6 @@ SUBDIR+=	mcats-iodbc
 SUBDIR+=	mdadm
 SUBDIR+=	memgrep
 SUBDIR+=	menumaker
-SUBDIR+=	mesure
 SUBDIR+=	metalog
 SUBDIR+=	metatheme
 SUBDIR+=	mg-lsh
