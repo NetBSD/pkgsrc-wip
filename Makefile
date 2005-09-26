@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1929 2005/09/24 14:47:24 obache Exp $
-# $Id: Makefile,v 1.1929 2005/09/24 14:47:24 obache Exp $
+# $NetBSD: Makefile,v 1.1930 2005/09/26 23:21:48 xtraeme Exp $
+# $Id: Makefile,v 1.1930 2005/09/26 23:21:48 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -586,7 +586,6 @@ SUBDIR+=	mixxx
 SUBDIR+=	mkdep
 SUBDIR+=	mksend
 SUBDIR+=	mnogosearch
-SUBDIR+=	moc
 SUBDIR+=	molmol
 SUBDIR+=	monkey-bubble
 SUBDIR+=	monodoc
