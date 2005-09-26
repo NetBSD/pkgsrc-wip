@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2005/09/17 19:21:14 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/09/26 02:19:40 xtraeme Exp $
 bin/mocp
 ${FLAC}lib/moc/decoder_plugins/libflac_decoder.la
 lib/moc/decoder_plugins/libmp3_decoder.la
 ${VORBIS}lib/moc/decoder_plugins/libogg_decoder.la
 ${SNDFILE}lib/moc/decoder_plugins/libsndfile_formats_decoder.la
 ${SPEEX}lib/moc/decoder_plugins/libspeex_decoder.la
-man/man8/mocp.8
+man/man1/mocp.1
 share/doc/moc/README
 share/doc/moc/THANKS
 share/doc/moc/config.example

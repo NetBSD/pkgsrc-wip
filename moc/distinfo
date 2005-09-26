@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/08/27 17:51:19 scode Exp $
+$NetBSD: distinfo,v 1.4 2005/09/26 02:19:40 xtraeme Exp $
 
-SHA1 (moc-2.3.1.tar.bz2) = 7d3df6f127b1f670220a43df7cf9f1234d0d0c05
-RMD160 (moc-2.3.1.tar.bz2) = d9a0ae2f78088ff8fa9b98a134ff53051b1185f3
-Size (moc-2.3.1.tar.bz2) = 403800 bytes
-SHA1 (patch-aa) = 4471a16e2de0e6649b61b459628faeee48c9f70c
+SHA1 (moc-2.3.2.tar.bz2) = ca1a331ea9ea3699d76d4771416587190a814516
+RMD160 (moc-2.3.2.tar.bz2) = 1da768dbb625bbeedd960eb7c09c0113eeba7482
+Size (moc-2.3.2.tar.bz2) = 406058 bytes

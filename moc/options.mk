@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2005/09/17 19:21:14 xtraeme Exp $
+# $NetBSD: options.mk,v 1.2 2005/09/26 02:19:40 xtraeme Exp $
 
-PKG_OPTIONS_VAR=	moc
+PKG_OPTIONS_VAR=	PKG_OPTIONS.moc
 PKG_SUPPORTED_OPTIONS=	sndfile flac vorbis speex curl
 PKG_SUGGESTED_OPTIONS=	vorbis curl sndfile
 
