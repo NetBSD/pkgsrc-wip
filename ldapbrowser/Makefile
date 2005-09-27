@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:13:39 tvierling Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/27 16:10:01 thomasklausner Exp $
 #
 
 DISTNAME=		Browser282b2
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/ldapbrowser
 CATEGORIES=		wip sysutils
 MASTER_SITES=		http://www-unix.mcs.anl.gov/~gawor/ldapcommon/bin/
 
-MAINTAINER=		murray@river-styx.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.iit.edu/~gawojar/ldap/
 COMMENT=		Java based LDAP browser and editor
 

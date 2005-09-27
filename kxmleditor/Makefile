@@ -7,7 +7,7 @@ PKGREVISION=	# not defined
 CATEGORIES=	textproc kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kxmleditor/}
 
-MAINTAINER=	murray@river-styx.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://kxmleditor.sourceforge.net/
 COMMENT=	KDE xml editor
 
