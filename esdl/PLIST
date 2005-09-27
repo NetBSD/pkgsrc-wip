@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/27 16:15:06 ghen Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/27 21:05:56 ghen Exp $
 lib/erlang/lib/${PKGNAME}/Readme
 lib/erlang/lib/${PKGNAME}/Readme.MacOSX-Cocoa
 lib/erlang/lib/${PKGNAME}/Readme.win32
@@ -88,4 +88,3 @@ lib/erlang/lib/${PKGNAME}/vsn
 @dirrm lib/erlang/lib/${PKGNAME}/doc
 @dirrm lib/erlang/lib/${PKGNAME}/c_src
 @dirrm lib/erlang/lib/${PKGNAME}
-@dirrm lib/erlang/lib
