@@ -1,7 +1,22 @@
-@comment $NetBSD: PLIST,v 1.3 2005/09/23 02:19:10 ykomatsu Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/09/27 04:03:33 ykomatsu Exp $
 bin/mkzeoinstance
 bin/mkzopeinstance
 bin/zopetest
+share/doc/zope3/CHANGES.txt
+share/doc/zope3/CREDITS.txt
+share/doc/zope3/DEBUG.txt
+share/doc/zope3/ENVIRONMENT.txt
+share/doc/zope3/FAQ.txt
+share/doc/zope3/FTEST.txt
+share/doc/zope3/INSTALL.txt
+share/doc/zope3/LICENSES.txt
+share/doc/zope3/LOGGING.txt
+share/doc/zope3/ROADMAP.txt
+share/doc/zope3/TODO.txt
+share/doc/zope3/TODOLATER.txt
+share/doc/zope3/UNITTEST.txt
+share/doc/zope3/ZopePublicLicense.txt
+share/doc/zope3/index.txt
 share/examples/rc.d/zope3
 share/examples/rc.d/zss3
 share/zope3/bin/mkzeoinstance
@@ -8540,3 +8555,4 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/include
 @dirrm share/zope3/bin
 @dirrm share/zope3
+@dirrm share/doc/zope3
