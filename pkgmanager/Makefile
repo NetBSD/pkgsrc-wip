@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/08/15 21:03:26 scode Exp $
+# $NetBSD: Makefile,v 1.7 2005/09/27 21:09:03 scode Exp $
 #
 
-PKGMGR_VERSION= 0.4.0
+PKGMGR_VERSION= 0.5.0
 DISTNAME=	pkgmanager-${PKGMGR_VERSION}
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://starfury.scode.org/pkgmanager/
@@ -31,7 +31,8 @@ SUBST_MESSAGE.clocc=	"Fixing clocc root directory in clocc.lisp"
 SUBST_CLASSES+=         wrapper
 SUBST_STAGE.wrapper= 	post-patch
 SUBST_FILES.wrapper=	pkgmanager-${PKGMGR_VERSION}/src/pkgmanager-wrapper.sh
-SUBST_SED.wrapper=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_SED.wrapper=	-e "s|@PREFIX@|${PREFIX}|g" -e "s|@MAKE@|${MAKE}|g" \
+                        -e "s|@DBDIR@|${PKG_DBDIR}|g"
 SUBST_MESSAGE.wrapper=	"Fixing prefix in pkgmanager shell script wrapper"
 
 SUBST_CLASSES+=		runner
