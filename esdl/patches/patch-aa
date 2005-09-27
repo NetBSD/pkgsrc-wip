@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/09/27 16:15:06 ghen Exp $
+
+--- c_src/Makefile.orig	2005-06-30 21:27:20.000000000 +0200
++++ c_src/Makefile
+@@ -26,7 +26,7 @@ else
+ 
+   LIBS			= $(GL_LIBS) $(SDL_LIBS) -lm 
+ 
+-  CFLAGS		= -g -O2 -funroll-loops -Wall -ffast-math -fpic \
++  CFLAGS		+= -g -O2 -funroll-loops -Wall -ffast-math -fpic \
+ 			-fomit-frame-pointer $(USE_GL_INCLUDE_DIR) -DSHM \
+ 			-DPTHREADS $(GL_INCS) $(SDL_INCS) $(ERL_INCS)
+ 
+@@ -38,7 +38,7 @@ else
+   ERL_DIR := $(shell echo 'io:format("~s~n",[code:root_dir()]),halt().' | erl | grep '1>' | sed 's,^[0-9]*> *,,g')
+   ERL_INCS = -I$(ERL_DIR)/usr/include
+ 
+-  CC = gcc
++  CC ?= gcc
+ 
+ endif
+ 
