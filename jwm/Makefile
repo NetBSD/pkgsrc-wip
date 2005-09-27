@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.2 2005/09/27 16:52:38 pippijn Exp $
+# $NetBSD: Makefile,v 1.1.1.3 2005/09/27 17:55:11 pippijn Exp $
 #
 
 DISTNAME=	jwm-0.24
-PKGNAME=	${DISTNAME:S/-/-/}
 PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://www.joewing.net/programs/jwm/
