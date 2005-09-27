@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1932 2005/09/26 23:37:35 xtraeme Exp $
-# $Id: Makefile,v 1.1932 2005/09/26 23:37:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.1933 2005/09/27 16:18:05 ghen Exp $
+# $Id: Makefile,v 1.1933 2005/09/27 16:18:05 ghen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -235,6 +235,7 @@ SUBDIR+=	emirror
 SUBDIR+=	ent
 SUBDIR+=	epplets
 SUBDIR+=	erc
+SUBDIR+=	esdl
 SUBDIR+=	esmtp
 SUBDIR+=	ethtool
 SUBDIR+=	evas
