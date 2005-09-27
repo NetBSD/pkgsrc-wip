@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/27 16:47:13 pippijn Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2005/09/27 16:52:38 pippijn Exp $
 #
 
 DISTNAME=	jwm-0.24
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pip88nl@gmail.com
 HOMEPAGE=	http://joewing.net/programs/jwm
 COMMENT=	Lightweight window manager with virtual desktops
+SUBDIR+=	jwm
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
