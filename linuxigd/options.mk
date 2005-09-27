@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/05/31 10:02:12 dillo Exp $
+# $NetBSD: options.mk,v 1.5 2005/09/27 14:28:05 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.linuxigd
 PKG_SUPPORTED_OPTIONS=	iptables pf ipfilter
@@ -16,12 +16,12 @@ PKG_SUGGESTED_OPTIONS=	ipfilter
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Miptables)
-CFLAGS+=	-DFILTER_CMD="iptables"
+CFLAGS+=	-DUSE_IPTABLES
 .elif !empty(PKG_OPTIONS:Mpf)
-CFLAGS+=	-DFILTER_CMD="pf"
+CFLAGS+=	-DUSE_PF
 MESSAGE_SRC+=	${.CURDIR}/MESSAGE.pf
 .elif !empty(PKG_OPTIONS:Mipfilter)
-CFLAGS+=	-DFILTER_CMD="ipfilter"
+CFLAGS+=	-DUSE_IPFILTER
 .else
 PKG_FAIL_REASON+=	"${PKG_OPTIONS_VAR} must contaion one of" \
 			"\"iptables\" or \"pf\" or \"ipfilter\"!"
