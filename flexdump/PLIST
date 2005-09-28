@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/23 03:00:43 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/28 13:01:43 rillig Exp $
 bin/flexbackup
-etc/flexbackup.conf
 man/man1/flexbackup.1
 man/man5/flexbackup.conf.5
+share/examples/flexbackup/flexbackup.conf
