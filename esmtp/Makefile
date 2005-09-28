@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/07/24 22:34:22 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.42 2005/09/28 06:23:20 leonardschmidt Exp $
 #
 
 DISTNAME=	esmtp-0.5.1
@@ -8,11 +8,13 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://esmtp.sourceforge.net/
-COMMENT=	Relay-only Mail Transfer Agent with sendmail compatible syntax
+COMMENT=	Relay-only Mail Transfer Agent with sendmail-compatible syntax
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 GNU_CONFIGURE=		yes
+USE_PKGINSTALL=		yes
+PTHREAD_OPTS+=		require
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
@@ -23,10 +25,11 @@ SUBST_FILES.paths=	sample.esmtprc
 SUBST_FILES.paths+=	esmtprc.5
 SUBST_SED.paths=	-e 's,/usr/bin,${PREFIX}/bin,g'
 
-PTHREAD_OPTS+=		require
+PKG_SYSCONFSUBDIR=	esmtp
 
 EGDIR=			${PREFIX}/share/examples/esmtp
-
+CONF_FILES=		${EGDIR}/sample.esmtprc \
+			${PKG_SYSCONFDIR}/sample-esmtprc
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/sample.esmtprc ${EGDIR}
