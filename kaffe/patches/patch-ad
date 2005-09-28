@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.3 2005/09/28 17:02:23 jtonio Exp $
+
+--- config/config.alias.orig	2005-07-04 00:02:55.000000000 +0200
++++ config/config.alias
+@@ -29,6 +29,7 @@ bsdi*)		Khost_os=bsdi ;;
+ cygwin*)	Khost_os=cygwin32 ;;
+ darwin*)	Khost_os=darwin ;;
+ freebsd*)	Khost_os=freebsd2 ;;
++dragonfly*) Khost_os=freebsd2 ;;
+ hpux*)		Khost_os=hpux ;;
+ gnu*)		Khost_os=gnu ;;
+ irix*)		Khost_os=irix5 ;;
