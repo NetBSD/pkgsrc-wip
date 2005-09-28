@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:16 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 05:23:36 rillig Exp $
 #
 
 DISTNAME=		bcel-5.1
@@ -10,10 +10,10 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://jakarta.apache.org/bcel/
 COMMENT=		ByteCode Engineering Library
 
-
-do-build:
+NO_BUILD=		yes
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/bcel-5.1.jar ${PREFIX}/lib/java/bcel.jar
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java-bcel/
 	${CP} -rf ${WRKSRC}/docs/* ${PREFIX}/share/doc/java-bcel/
