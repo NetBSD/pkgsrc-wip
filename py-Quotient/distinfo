@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/05/25 20:32:05 mpasternak Exp $
+$NetBSD: distinfo,v 1.6 2005/09/28 06:09:47 rillig Exp $
 
 SHA1 (Quotient-0.9.0.tar.gz) = 4d43a02e3bd92e7edffbe6511aa25c309d043f1b
+RMD160 (Quotient-0.9.0.tar.gz) = 12f8d91141d7b3ddc7d3a924408e958c7fd9fc7f
 Size (Quotient-0.9.0.tar.gz) = 3039852 bytes
-SHA1 (patch-aa) = c81caacd6a57272dcdac880ef93511983a21b34d
