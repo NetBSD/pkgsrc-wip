@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2005/06/21 18:59:34 marttikuparinen Exp $
+#	$NetBSD: Makefile,v 1.2 2005/09/28 12:09:15 marttikuparinen Exp $
 
 DISTNAME=		xen-${VERSION}-src
 PKGNAME=		libxen-${VERSION}
@@ -12,7 +12,7 @@ COMMENT=		Xen libraries
 
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/xen-2.0/tools
-VERSION=		2.0.6
+VERSION=		2.0.7
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
