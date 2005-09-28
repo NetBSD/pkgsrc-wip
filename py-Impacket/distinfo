@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/18 22:29:05 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:36 rillig Exp $
 
 SHA1 (Impacket-0.9.5.1.tar.gz) = f4ff21d2c5649e53b14efc9cc509652d0dfe2721
+RMD160 (Impacket-0.9.5.1.tar.gz) = b049cccf3be7e69d5c4d98221f48d5fc18324056
 Size (Impacket-0.9.5.1.tar.gz) = 65260 bytes

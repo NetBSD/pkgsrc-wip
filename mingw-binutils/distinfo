@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2004/11/30 17:32:52 xtraeme Exp $
+$NetBSD: distinfo,v 1.4 2005/09/28 06:41:30 rillig Exp $
 
 SHA1 (binutils-2.15.91-20040904-1-src.tar.gz) = c1aecee838cd36228e27304550b0f977d921ee8d
+RMD160 (binutils-2.15.91-20040904-1-src.tar.gz) = d58d35d2d151387e67c386a1fd6bda9c1e260876
 Size (binutils-2.15.91-20040904-1-src.tar.gz) = 14507299 bytes

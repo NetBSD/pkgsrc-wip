@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/17 18:07:09 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:40 rillig Exp $
 
 SHA1 (qico-0.48.5.tar.gz) = 2c5aba404d1cdc3037ac2bbf0bb6cedfc165995e
+RMD160 (qico-0.48.5.tar.gz) = dae47578d698a477b0f599fa2866f8a1db9e5df6
 Size (qico-0.48.5.tar.gz) = 103893 bytes
 SHA1 (patch-aa) = fded64b6b898d22b7b49ccaf137e92cb9b5a822d
 SHA1 (patch-ab) = 6e8b4f3c7134fe8244d3b6c6fcbf1fb20434aa40

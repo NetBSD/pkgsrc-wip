@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/15 14:02:16 amadeus_z Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:13 rillig Exp $
 
 SHA1 (fluxspace-0.0.3.tar.gz) = 29ae69384656c104ed202f7124d9bf881524eaf4
+RMD160 (fluxspace-0.0.3.tar.gz) = 3e8aabdbff63c112037d35b540f85ef045e786b2
 Size (fluxspace-0.0.3.tar.gz) = 2228750 bytes
 SHA1 (patch-aa) = 99e2c833313f589e2f725b0b7073fe100c000cba

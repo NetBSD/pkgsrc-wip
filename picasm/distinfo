@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/12 13:48:46 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:34 rillig Exp $
 
 SHA1 (picasm105.tar.gz) = 968061bb0d606dcb357aedd259ca27ac086a67e1
+RMD160 (picasm105.tar.gz) = 85be693d068b8733e402a965255fce38008a1b03
 Size (picasm105.tar.gz) = 26530 bytes

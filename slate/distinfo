@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/28 01:40:21 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:41 rillig Exp $
 
 SHA1 (slate-0.2.2.tgz) = 578ff14b3bbe67404796551258505ab6ea6b684d
+RMD160 (slate-0.2.2.tgz) = ab7f28fa78b8b8f98ae81b54b0e57a0839c9bb9d
 Size (slate-0.2.2.tgz) = 522185 bytes

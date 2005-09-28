@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/05/13 20:26:00 bmeurer Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:44 rillig Exp $
 
 SHA1 (xplore-1.2a.tar.bz2) = b856f4440d5c5d522d087a4b1d9f8fc6e89db8f1
+RMD160 (xplore-1.2a.tar.bz2) = db451cdc456ba59deb15f9bbb191710415d43800
 Size (xplore-1.2a.tar.bz2) = 570144 bytes
 SHA1 (patch-aa) = 23c7fec2f20456125652820f465936b68d71421d

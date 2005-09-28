@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/30 15:10:44 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:10 rillig Exp $
 
 SHA1 (chromium-src-0.9.12.tar.gz) = d333f4100c9b5b4eb6d6bdf4bc4ebd3a7066c5a0
+RMD160 (chromium-src-0.9.12.tar.gz) = f422098a67efedb53fafbbb08119596c6b87a1d8
 Size (chromium-src-0.9.12.tar.gz) = 640283 bytes
 SHA1 (patch-aa) = 7aec1e1ffea2edb127d8e0583a4a589c77fff94b
 SHA1 (patch-ab) = 7fbe48ad06f456ad785cd86adae2f57987abe55b

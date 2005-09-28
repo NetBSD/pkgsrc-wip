@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/19 07:54:02 sourceforge_low Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:29 rillig Exp $
 
 SHA1 (MenuMaker-0.17.tar.gz) = 3abe59454941e70de2b6b4b80bb7049fbed6f7a8
+RMD160 (MenuMaker-0.17.tar.gz) = 070d6381d92f63cc95064b3743ddfe88cc5f157d
 Size (MenuMaker-0.17.tar.gz) = 49745 bytes

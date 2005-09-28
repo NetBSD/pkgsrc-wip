@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/26 18:45:20 daprice Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:06 rillig Exp $
 
 SHA1 (R/RArcInfo_0.4-4.tar.gz) = eb1aee2c46d10a1dd9d57d851bc7239f4783c112
+RMD160 (R/RArcInfo_0.4-4.tar.gz) = 1bcb33e9600b045a68425d0b88c3d593b5b4b7bf
 Size (R/RArcInfo_0.4-4.tar.gz) = 652555 bytes

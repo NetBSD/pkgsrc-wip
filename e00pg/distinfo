@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/19 18:18:27 daprice Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:11 rillig Exp $
 
 SHA1 (e00pg-1.0.1.tar.gz) = 0b6cde6e0a447dec9a205b9ecf6fbcbddf39c45e
+RMD160 (e00pg-1.0.1.tar.gz) = 997412bdc40067656cb3da017e18d5227753f088
 Size (e00pg-1.0.1.tar.gz) = 82044 bytes

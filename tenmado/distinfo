@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/08 05:05:25 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:42 rillig Exp $
 
 SHA1 (tenmado-0.6.tar.gz) = 2e366f57441c328dd670892aedad772e952c88d1
+RMD160 (tenmado-0.6.tar.gz) = 83601b93aad0265c95672e6cc105a5d9cdb2047a
 Size (tenmado-0.6.tar.gz) = 288065 bytes

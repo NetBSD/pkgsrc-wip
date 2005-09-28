@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/02 06:22:46 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:36 rillig Exp $
 
 SHA1 (pyRXP-0-9.tgz) = 5bab28e4b550181e4cca829e217c9e4e7128f1da
+RMD160 (pyRXP-0-9.tgz) = a642d6cc71d09798ba5b2b304c3cf5c74c8e2d10
 Size (pyRXP-0-9.tgz) = 290915 bytes

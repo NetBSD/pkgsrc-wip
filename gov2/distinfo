@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/24 05:42:56 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:19 rillig Exp $
 
 SHA1 (gob2-2.0.6.tar.bz2) = dc8b8f520cc65e82b130c4011d1b1c403556d091
+RMD160 (gob2-2.0.6.tar.bz2) = e663bbb9ea932b22b3b161e8f8c75fb77c7a24bc
 Size (gob2-2.0.6.tar.bz2) = 181187 bytes

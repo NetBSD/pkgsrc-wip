@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/17 18:18:48 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:42 rillig Exp $
 
 SHA1 (sudoscript-2.1.1.tar.gz) = 20e5d846ae1b3e8f7f855bb2b1e0bffa45760e8f
+RMD160 (sudoscript-2.1.1.tar.gz) = 63d3db19929c34b6a2c308c14951231b77e3096a
 Size (sudoscript-2.1.1.tar.gz) = 336096 bytes

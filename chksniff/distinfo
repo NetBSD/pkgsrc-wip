@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2004/02/27 23:16:03 rillig Exp $
+$NetBSD: distinfo,v 1.5 2005/09/28 06:41:10 rillig Exp $
 
 SHA1 (chksniff-0.2.tar.gz) = 008a63e429dc0c12c0ba760e6476623ca99ad85a
+RMD160 (chksniff-0.2.tar.gz) = ad7475a9c8acc5d527e2abe28b352c1375c6bb11
 Size (chksniff-0.2.tar.gz) = 28419 bytes
 SHA1 (patch-aa) = 5b7d16f14bcf0c9b6aae09017750b89dfa799da7

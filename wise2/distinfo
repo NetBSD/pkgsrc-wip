@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/29 18:05:57 daprice Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:43 rillig Exp $
 
 SHA1 (wise2.2.0.tar.gz) = 77cc08e9cda9416641370c9b45191192fc7cacd3
+RMD160 (wise2.2.0.tar.gz) = a4292fbfb405d19b628fe5c829d746297e740862
 Size (wise2.2.0.tar.gz) = 2108151 bytes
 SHA1 (patch-aa) = b13514741e474988af9a9c75b15f6e7e801acf2c

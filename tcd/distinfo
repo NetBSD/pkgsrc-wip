@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2004/06/16 15:28:10 rillig Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:42 rillig Exp $
 
 SHA1 (tcd-2.2.0.tar.bz2) = 8ad1b9201d94554fe4d96b60da1cab577eae77cf
+RMD160 (tcd-2.2.0.tar.bz2) = f00702cfe496f85248534e155dc1d58ae88213b5
 Size (tcd-2.2.0.tar.bz2) = 90157 bytes

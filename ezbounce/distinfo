@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.3 2003/07/31 02:26:19 xtraeme Exp $
+$NetBSD: distinfo,v 1.4 2005/09/28 06:41:13 rillig Exp $
 
 SHA1 (ezbounce-1.04a.tar.gz) = 673e9ffce7c0e964b2a041b49d2f0d5d69c58ecc
+RMD160 (ezbounce-1.04a.tar.gz) = f71e09914d2c0e289f33af5b284c9ebb3883613d
 Size (ezbounce-1.04a.tar.gz) = 189147 bytes
 SHA1 (ezb-1.04a-crash-fix-patch) = 446107bbccb472f1fbc52d5818626e487952d31f
+RMD160 (ezb-1.04a-crash-fix-patch) = c6afc48189ee3f92199b982678658266708d8012
 Size (ezb-1.04a-crash-fix-patch) = 945 bytes

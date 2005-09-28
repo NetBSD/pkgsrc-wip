@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/11 04:46:42 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:10 rillig Exp $
 
 SHA1 (diveintopython-html-4.4-2.zip) = a7169142b23a5df9e68f8704b0a57ac2f56bd908
+RMD160 (diveintopython-html-4.4-2.zip) = 7975d3765458bb19e631e4770c00b430894e47ea
 Size (diveintopython-html-4.4-2.zip) = 634206 bytes

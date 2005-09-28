@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/25 20:19:17 daprice Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:10 rillig Exp $
 
 SHA1 (clustalx1.83.sun.tar.gz) = 456e850f24c59b6bbe9944864711257106205329
+RMD160 (clustalx1.83.sun.tar.gz) = d64c2bc17204b7c9dc08a0ea0050e68b57d37283
 Size (clustalx1.83.sun.tar.gz) = 860205 bytes
 SHA1 (patch-aa) = c252ab1a082f3a976fd23a9082ca06e8a520c962

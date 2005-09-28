@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/10 19:30:00 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:23 rillig Exp $
 
 SHA1 (bcel-5.1.tar.gz) = 6d361b9356267731866c09cf13bc9b2b0efa6ed8
+RMD160 (bcel-5.1.tar.gz) = 2ff3ff4bb8ba09a671ecc6636fe214e44696bf64
 Size (bcel-5.1.tar.gz) = 2230306 bytes

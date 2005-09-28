@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/05 04:36:10 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:11 rillig Exp $
 
 SHA1 (e3-2.43.tar.gz) = 119ffb9418e429d02bf2e091ffcb73e5f8dc2055
+RMD160 (e3-2.43.tar.gz) = 411f6708b9bfc34b4e7998baa9a3f169ef4a3901
 Size (e3-2.43.tar.gz) = 215540 bytes
 SHA1 (patch-aa) = 9b38573d63ec706b2ec79b730a34d3b4a40ffc4f

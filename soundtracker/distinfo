@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/27 21:16:59 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:41 rillig Exp $
 
 SHA1 (soundtracker-0.6.6.tar.gz) = b07eb09603146996f384f060f594d9c516c933ac
+RMD160 (soundtracker-0.6.6.tar.gz) = e1de47cd9f0849814ccc5485c6c3b07f5b464b6b
 Size (soundtracker-0.6.6.tar.gz) = 673631 bytes

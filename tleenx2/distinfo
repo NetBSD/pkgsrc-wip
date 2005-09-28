@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/03/20 07:53:31 mpasternak Exp $
+$NetBSD: distinfo,v 1.4 2005/09/28 06:41:42 rillig Exp $
 
 SHA1 (TleenX2-20040214.tar.gz) = 13c65c148e47fbca8951bf56ba6650a681d2ef31
+RMD160 (TleenX2-20040214.tar.gz) = 8a3897b91f43a952df97a04718af2a31438a3790
 Size (TleenX2-20040214.tar.gz) = 267091 bytes
 SHA1 (patch-aa) = 48f6c172561d88fa18c16bf182a8960fede9fe3d

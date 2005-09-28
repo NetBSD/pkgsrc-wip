@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/12 13:54:34 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:34 rillig Exp $
 
 SHA1 (picprog-1.1.tar.gz) = a8298b23ee8ea87033d373a865a7db4f8cfd6b4b
+RMD160 (picprog-1.1.tar.gz) = 1ea58d69b5477d39a9c827f6e82dfc88bd12061a
 Size (picprog-1.1.tar.gz) = 44377 bytes
 SHA1 (patch-aa) = 1f81bdae45b621b58366da04341c2c0a20c3858b
 SHA1 (patch-ab) = dac2991b57c5cd60b5d5eee8e86d25fb69bef439

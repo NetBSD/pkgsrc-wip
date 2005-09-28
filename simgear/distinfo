@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/19 02:21:36 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:41 rillig Exp $
 
 SHA1 (SimGear-0.3.4.tar.gz) = 007b5bc53b87587c01967bf101059325818ca774
+RMD160 (SimGear-0.3.4.tar.gz) = 79b82de9c4b3eeb770d32ade7b0db4cca1703cf3
 Size (SimGear-0.3.4.tar.gz) = 892220 bytes

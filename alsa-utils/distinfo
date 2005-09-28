@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/12 22:43:43 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:08 rillig Exp $
 
 SHA1 (alsa-utils-1.0.4.tar.bz2) = b4f8d8eaf21f83fde811782d03cf8bbc3fa8f5f6
+RMD160 (alsa-utils-1.0.4.tar.bz2) = 185a64fe2c8bceccdab571172a1c520acc97f519
 Size (alsa-utils-1.0.4.tar.bz2) = 142685 bytes

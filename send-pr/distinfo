@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/13 23:23:33 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:41 rillig Exp $
 
 SHA1 (gnats-3.113.1.tar.gz) = ad4dbafae3e643c61dbcacb721a1e11a803c67aa
+RMD160 (gnats-3.113.1.tar.gz) = 047f455d91f3bb452435a9ccdc6eb5823d8a8138
 Size (gnats-3.113.1.tar.gz) = 1120985 bytes
 SHA1 (patch-aa) = 1ffbeaf401fc678b758db76c612f57472dbffa73
 SHA1 (patch-ab) = 71ef64a0ec6b657f7d3ed07b87417d249be78c3f

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/13 14:47:42 cjep Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:29 rillig Exp $
 
 SHA1 (mcats-0.1.0.tar.gz) = a984acbcb302ae189175d4c0034f80922ee47c1a
+RMD160 (mcats-0.1.0.tar.gz) = caaa185b9732343c2706eda11e20275cdf5a43bf
 Size (mcats-0.1.0.tar.gz) = 167322 bytes

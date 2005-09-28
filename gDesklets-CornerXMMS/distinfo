@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/26 04:46:20 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:15 rillig Exp $
 
 SHA1 (CornerXMMS-0.0.5.tar.bz2) = 4a4d55cc5ccf3bef9378bd39308b2c9e46de0cb6
+RMD160 (CornerXMMS-0.0.5.tar.bz2) = 823af90a64da4dc2cdc58d2a459970138cb60568
 Size (CornerXMMS-0.0.5.tar.bz2) = 48846 bytes

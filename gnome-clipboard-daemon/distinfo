@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/25 19:27:37 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:18 rillig Exp $
 
 SHA1 (gnome-clipboard-daemon-1.0.tar.bz2) = 5df30c8c5252a2d21aa1abf2ef72f511a88d51b5
+RMD160 (gnome-clipboard-daemon-1.0.tar.bz2) = abbb132797daee029c4b96486c5ec9e0f9f11039
 Size (gnome-clipboard-daemon-1.0.tar.bz2) = 3815 bytes
 SHA1 (patch-aa) = 96ccaa549ba798754b1713b995e3d7d16f8230f3

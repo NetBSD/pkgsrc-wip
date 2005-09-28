@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/25 21:00:02 daprice Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:44 rillig Exp $
 
 SHA1 (xgfe-2.1.tar.gz) = cffbe403f9cb8a16c6fa966627a9894b54d89807
+RMD160 (xgfe-2.1.tar.gz) = e7f0030e53e2e7ef6e52e84df93cebcdcd0f1e9c
 Size (xgfe-2.1.tar.gz) = 438146 bytes
 SHA1 (patch-aa) = 38981f49fb0be3e27f1f0cfa0af8c0cfda0ea0fc
 SHA1 (patch-ab) = 2c60e712af502c612baf175675d13d8b6943cbcc

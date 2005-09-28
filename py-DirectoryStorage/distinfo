@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/24 16:59:26 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:35 rillig Exp $
 
 SHA1 (DirectoryStorage_1_1_7.tgz) = 0599c68e0fa6a1279e4c60140f007bccb34c6b4d
+RMD160 (DirectoryStorage_1_1_7.tgz) = 7a833d871cbbaa27b7a4d34e2d35e00f142b1c0c
 Size (DirectoryStorage_1_1_7.tgz) = 84299 bytes

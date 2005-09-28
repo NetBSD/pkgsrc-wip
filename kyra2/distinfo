@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/07 02:46:24 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:24 rillig Exp $
 
 SHA1 (kyra_src_2_0_7.tar.gz) = 09e02a072aa3db874593e65c0255842df3e379c4
+RMD160 (kyra_src_2_0_7.tar.gz) = e9e78a67d452cdc5082da5e16113f4ccd910c70b
 Size (kyra_src_2_0_7.tar.gz) = 1994743 bytes

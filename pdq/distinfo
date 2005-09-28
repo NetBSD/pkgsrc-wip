@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/05/04 01:13:27 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.3 2005/09/28 06:41:33 rillig Exp $
 
 SHA1 (pdq-2.2.1.tgz) = 706d73eef23ac2c370e2fb338746770d24c93193
+RMD160 (pdq-2.2.1.tgz) = 1983f08bd8b5fc7b68aa46b6bf1be130da78a79c
 Size (pdq-2.2.1.tgz) = 125454 bytes
 SHA1 (patch-aa) = db1e41db056bff4cbce0ce0439a9a6863b28dc54
 SHA1 (patch-ab) = deb0b6b5000935946e6eefc019e98ef56a91bce3

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/01 16:01:22 adrian_p Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:26 rillig Exp $
 
 SHA1 (libspf2-1.0.4.tar.gz) = 572e6eb9319185ec59ded91fb5743b5ccfd90d01
+RMD160 (libspf2-1.0.4.tar.gz) = c74183965b1853d6bb31f1d34a62d2e4ee2430f0
 Size (libspf2-1.0.4.tar.gz) = 427613 bytes

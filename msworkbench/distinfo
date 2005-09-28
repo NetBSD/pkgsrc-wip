@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/17 20:56:59 daprice Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:30 rillig Exp $
 
 SHA1 (msworkbench-0.3.tar.gz) = 1e3aa90fdfb19aa69682222f4347ec6a46bd2ced
+RMD160 (msworkbench-0.3.tar.gz) = a38a00518a6766468654acd7db0ccc71089500a5
 Size (msworkbench-0.3.tar.gz) = 181015 bytes
 SHA1 (patch-aa) = 89a6a41276a1acdae101874005537bce45669759

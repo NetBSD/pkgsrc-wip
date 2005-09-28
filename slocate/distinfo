@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/02/07 15:11:44 rillig Exp $
+$NetBSD: distinfo,v 1.3 2005/09/28 06:41:41 rillig Exp $
 
 SHA1 (slocate-2.7.tar.gz) = b5de4668b61b137f3f5fa9f17b334f56b9424f90
+RMD160 (slocate-2.7.tar.gz) = 0aa08da7b958be5c8fec7c4655e42373d8faf2cc
 Size (slocate-2.7.tar.gz) = 87240 bytes
 SHA1 (patch-aa) = 43fb7f678ea16aa68709852c2e88adafbf7d8d01
 SHA1 (patch-ab) = f007ae8c388a70859b62f2f68f72b135eebb9d86

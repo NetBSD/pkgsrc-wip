@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/05/14 01:22:35 minskim Exp $
+$NetBSD: distinfo,v 1.3 2005/09/28 06:41:25 rillig Exp $
 
 SHA1 (libSM-6.0.3.tar.bz2) = f2bc39cad96be2b08efdb2c11bf644d061869903
+RMD160 (libSM-6.0.3.tar.bz2) = e439296926700c54019acdaca523fd3a895b7d25
 Size (libSM-6.0.3.tar.bz2) = 200225 bytes

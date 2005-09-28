@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/07 16:58:48 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:33 rillig Exp $
 
 SHA1 (panoramixext-1.1.tar.bz2) = 819f1d6173646bd228c200f600014a7d4abba8fc
+RMD160 (panoramixext-1.1.tar.bz2) = 8750d090a99f3745581054f39f624e9ddf9d170e
 Size (panoramixext-1.1.tar.bz2) = 40839 bytes

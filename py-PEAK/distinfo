@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/26 21:03:04 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:36 rillig Exp $
 
 SHA1 (PEAK-0.5a3.tar.gz) = 8361719342211dbdd4cfd973118a4d0b7a755310
+RMD160 (PEAK-0.5a3.tar.gz) = 438a32e21a9f5c816e9abefbc54d77dc2fccb3d0
 Size (PEAK-0.5a3.tar.gz) = 1457398 bytes
 SHA1 (patch-aa) = 59d3b4bc3e72625143bc7d24dcfffdcf7c8ed2ed

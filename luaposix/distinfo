@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/26 23:28:42 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:27 rillig Exp $
 
 SHA1 (lposix.tar.gz) = 85b58f90e225c15f512bd2f341086580f8c7e09c
+RMD160 (lposix.tar.gz) = c5c2366b9864773b350c02e032a1c6a433dcdbe5
 Size (lposix.tar.gz) = 9651 bytes
 SHA1 (patch-aa) = 5a9f33a69a7f2d212109005b5c187c421a8c910d

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/23 00:28:05 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:27 rillig Exp $
 
 SHA1 (luacheia5-5.0.1a4.tar.gz) = 43017f78ef5cc8cbe50ababa5279f4b042fa3481
+RMD160 (luacheia5-5.0.1a4.tar.gz) = 84817fe1d7f69604aa468adbde4eb4d816ad9979
 Size (luacheia5-5.0.1a4.tar.gz) = 1891312 bytes
 SHA1 (patch-aa) = e26834119d9dc85a5df20d0a8b1902cd5e550d2c

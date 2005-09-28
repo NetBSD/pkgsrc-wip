@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/05/08 04:07:29 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:08 rillig Exp $
 
 SHA1 (mod_bunzip2.tar.bz2) = 49186a4864c853105bda3db4c3b122ad6fd4e179
+RMD160 (mod_bunzip2.tar.bz2) = b3f315369462d4cfbcdfd53ac0dc974b10b6766e
 Size (mod_bunzip2.tar.bz2) = 11087 bytes

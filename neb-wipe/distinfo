@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/02 19:30:04 florian_stoehr Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:31 rillig Exp $
 
 SHA1 (neb-wipe-src-0.9.tgz) = 9d5866500ba68e848a9b504e72c67ae77bdd4658
+RMD160 (neb-wipe-src-0.9.tgz) = 8e362061b37b52969f605ae6c4c3c6d41b7a75f5
 Size (neb-wipe-src-0.9.tgz) = 4504 bytes

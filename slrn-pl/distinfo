@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2003/07/02 08:32:29 anielski Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:41 rillig Exp $
 
 SHA1 (slrn-pl-1.4.3-2.tar.bz2) = 0a1419a53774bd99222d8a383153e49ed38818ae
+RMD160 (slrn-pl-1.4.3-2.tar.bz2) = 67a68ef001dc8520877ef674d8a3515125a8fcc5
 Size (slrn-pl-1.4.3-2.tar.bz2) = 1128032 bytes
 SHA1 (patch-aa) = 2fe15ab7455f366554e530a0bb2e25758440af4c
 SHA1 (patch-ae) = 2b32d4f5c3cc6b5f703119e202349aff7d979b4b

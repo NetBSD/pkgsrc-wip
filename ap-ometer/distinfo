@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/05/08 01:54:35 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:08 rillig Exp $
 
 SHA1 (mod_ometer-1.2.0.tar.gz) = 4a4974ab54e79de8f50f8999624a77737a8a3e8f
+RMD160 (mod_ometer-1.2.0.tar.gz) = 90245eecb2258b2161903c66f277a70cc3b4b4bf
 Size (mod_ometer-1.2.0.tar.gz) = 32220 bytes
 SHA1 (patch-aa) = ef1c4d2208c67da088d924e48885f4dfd78e0f05
 SHA1 (patch-ab) = 94233c3296eb37b1976fc3ee19932874a13db586

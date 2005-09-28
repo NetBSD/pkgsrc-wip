@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/02 07:09:26 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:27 rillig Exp $
 
 SHA1 (man-1.5p.tar.gz) = 0dcdcf7d4aa8b81da1bbac3229e64fbe3abaf24c
+RMD160 (man-1.5p.tar.gz) = f338f34392d4a38449e57383f9ba85d22580f6ff
 Size (man-1.5p.tar.gz) = 233732 bytes
 SHA1 (patch-aa) = 75546b21e1645827083fea366cf720ae5a0e1b98
 SHA1 (patch-ab) = a4fbbd6c782985024abdcc6a8192d8060230e5a9

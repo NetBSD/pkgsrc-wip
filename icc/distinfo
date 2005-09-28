@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/28 21:19:44 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:21 rillig Exp $
 
 SHA1 (l_cc_p_7.1.006.tar) = 5a47193fff335bc86a0a0da33bb8a4d3fa2766fb
+RMD160 (l_cc_p_7.1.006.tar) = 35c69048bba1c724fea6a87e6822155ad1c62d96
 Size (l_cc_p_7.1.006.tar) = 63406080 bytes

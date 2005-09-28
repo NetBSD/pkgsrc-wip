@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/12 12:49:08 virtus Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:43 rillig Exp $
 
 SHA1 (vcdgear16_static-e.tar.gz) = 73015a39d47f7b7d7e046f7d1e138ae5877314b0
+RMD160 (vcdgear16_static-e.tar.gz) = cb3fcbefb8ebe25bcfe8d49e77b0c1e09a00a4c2
 Size (vcdgear16_static-e.tar.gz) = 212660 bytes

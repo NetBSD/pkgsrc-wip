@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/17 20:10:59 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:23 rillig Exp $
 
 SHA1 (jflex_small-1.3.5.tar.gz) = c6ca856127e64bcbc079d3c80d4340b47312524d
+RMD160 (jflex_small-1.3.5.tar.gz) = 67f6f94e7e4b7827b3e8725c50988322e1eceb3b
 Size (jflex_small-1.3.5.tar.gz) = 343579 bytes

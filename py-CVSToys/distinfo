@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/25 21:00:24 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:35 rillig Exp $
 
 SHA1 (CVSToys-1.0.9.tar.bz2) = 7d49ea0acdfe9a9dce0ba25ce13067d8a7cd9a6b
+RMD160 (CVSToys-1.0.9.tar.bz2) = 3afbfb50af61fd44f4c0386d1a4d7a8e6e24f4b9
 Size (CVSToys-1.0.9.tar.bz2) = 39093 bytes

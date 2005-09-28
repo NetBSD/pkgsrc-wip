@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2003/12/26 00:18:46 mpasternak Exp $
+$NetBSD: distinfo,v 1.3 2005/09/28 06:41:36 rillig Exp $
 
 SHA1 (PyPE1.8.2.zip) = 6582449a7bb8aab6801f4b5ba6465444f8c87060
+RMD160 (PyPE1.8.2.zip) = 3ba2842b845c80be4cac55b3d972cdcdc80f3abd
 Size (PyPE1.8.2.zip) = 90282 bytes
 SHA1 (patch-aa) = e65ee6c319e83b7675f4fb61270c4f3968391038

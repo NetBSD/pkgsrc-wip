@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2004/05/14 05:52:27 yeled Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:21 rillig Exp $
 
 SHA1 (ifstat-1.1.tar.gz) = 4ebf59207d24e53461f841a2480a6710d774fce2
+RMD160 (ifstat-1.1.tar.gz) = dd3449590f3b5caf0a4190579518e1014b34be68
 Size (ifstat-1.1.tar.gz) = 67920 bytes

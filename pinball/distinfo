@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/12 12:34:11 virtus Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:34 rillig Exp $
 
 SHA1 (pinball-0.2.0a.tar.gz) = 7bf3b5aae189f4d23cc7de5089466471c1e3fd55
+RMD160 (pinball-0.2.0a.tar.gz) = df31b7b923e0319474d823717043d835393d293f
 Size (pinball-0.2.0a.tar.gz) = 1497194 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/16 19:28:56 virtus Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:40 rillig Exp $
 
 SHA1 (rosegarden-4-0.9.1.tar.gz) = 0791f44fa0a1d2ed6f24df91b9c713bf43aebcfb
+RMD160 (rosegarden-4-0.9.1.tar.gz) = 495c0604ac32e79f2efad1685c9832d022822d74
 Size (rosegarden-4-0.9.1.tar.gz) = 2681936 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/28 07:55:51 bjan2 Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:26 rillig Exp $
 
 SHA1 (libticalcs.tar.gz) = 683a7da2fefd846a6cc2230cfb578932314c5e1b
+RMD160 (libticalcs.tar.gz) = 588b2a7373b94a76627077887515690aad7d2bd4
 Size (libticalcs.tar.gz) = 550452 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/09/24 12:10:06 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2005/09/28 06:41:42 rillig Exp $
 
 SHA1 (thcrut-1.2.4g.tar.gz) = 2b9bac2c06509f0e6618870267d0c7f75d5d48bc
+RMD160 (thcrut-1.2.4g.tar.gz) = 9682733beb2fec526dfd7ce796d7e1bf0d092472
 Size (thcrut-1.2.4g.tar.gz) = 660639 bytes

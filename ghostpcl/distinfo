@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/29 18:40:05 roelants Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:18 rillig Exp $
 
 SHA1 (ghostpcl_1.38p1.tar.bz2) = 8fb5afdebe829a93b9b65b310f02a7d9995c2062
+RMD160 (ghostpcl_1.38p1.tar.bz2) = b96c1eff10e607948569e04e78929cb311058f8d
 Size (ghostpcl_1.38p1.tar.bz2) = 8515075 bytes
 SHA1 (patch-aa) = 22923f4c7044442ee3a6150c2455ba5135b41e1c
 SHA1 (patch-ab) = d5f041f964fe61f8a35a315925f00a9b1113aeab

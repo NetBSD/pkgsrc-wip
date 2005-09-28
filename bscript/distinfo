@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/09 19:54:59 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:09 rillig Exp $
 
 SHA1 (bscript-0.3.tar.gz) = 77de954f383d3ee5c3c400a0315da929b3b0d333
+RMD160 (bscript-0.3.tar.gz) = 6aa86bc3e127dcc3d7a7afdf40da37654a04e0c8
 Size (bscript-0.3.tar.gz) = 118163 bytes

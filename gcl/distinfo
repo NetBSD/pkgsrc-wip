@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/27 16:23:17 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:18 rillig Exp $
 
 SHA1 (gcl-2.5.3.tar.gz) = f0dc949ae732092a9f059c5711149fd099e6a2c9
+RMD160 (gcl-2.5.3.tar.gz) = 55b57ff0e49698add8503e298bbddc1b3b800f25
 Size (gcl-2.5.3.tar.gz) = 9846811 bytes
 SHA1 (patch-aa) = 250a138b57a9a38c94bc3c153741fe93999d61d8

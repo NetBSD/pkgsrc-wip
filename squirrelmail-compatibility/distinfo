@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/04 21:46:56 schnoebe Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:41 rillig Exp $
 
 SHA1 (compatibility-1.3.tar.gz) = e9fab8143a28999c1811d68508426918c462c2b6
+RMD160 (compatibility-1.3.tar.gz) = e36cffcc937c0e95441e6bf9a6806d6d85e7cec3
 Size (compatibility-1.3.tar.gz) = 5966 bytes

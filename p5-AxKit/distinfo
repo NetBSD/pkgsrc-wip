@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/30 06:21:26 amigus Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:32 rillig Exp $
 
 SHA1 (AxKit-1.6.2.tar.gz) = 36cdd6e913c59d5d9ba527f31202a6dfbb9f6def
+RMD160 (AxKit-1.6.2.tar.gz) = 794a0d18e2e0f025d4f2b3059cad76f2a37f8c3d
 Size (AxKit-1.6.2.tar.gz) = 305698 bytes

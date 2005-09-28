@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/27 10:58:58 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:38 rillig Exp $
 
 SHA1 (shtoom-0.2.tar.gz) = 2a8bae8b3e3bbbff6240c83884fdd7fd016f09cb
+RMD160 (shtoom-0.2.tar.gz) = 85e23ac6846879c96b0dad00bafc9a4fee36b886
 Size (shtoom-0.2.tar.gz) = 73953 bytes

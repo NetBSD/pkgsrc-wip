@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/26 18:35:45 marc Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:30 rillig Exp $
 
 SHA1 (metatheme-0.9.7.tar.bz2) = 95d34f49b566ae1296e64a460c454272956ce6b4
+RMD160 (metatheme-0.9.7.tar.bz2) = f395c68bd5b2af9b45982f8454c3c42ce383b24b
 Size (metatheme-0.9.7.tar.bz2) = 321848 bytes

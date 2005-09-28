@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/05 18:44:24 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:33 rillig Exp $
 
 SHA1 (phlib-1.20.tgz) = ecd73113c24fd25ef25c249002ab825d4f9794d5
+RMD160 (phlib-1.20.tgz) = 67e0263870355a5348d7219e6c2a8a9c2dafb780
 Size (phlib-1.20.tgz) = 86172 bytes

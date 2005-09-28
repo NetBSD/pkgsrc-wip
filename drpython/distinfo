@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/05 11:59:43 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:11 rillig Exp $
 
 SHA1 (drpython-2.1.9.zip) = fe9e4985cc3b94f875271bf2235e7371f98d8488
+RMD160 (drpython-2.1.9.zip) = 06c9b7e7d6044965bc1e341a75bcb7f05f214741
 Size (drpython-2.1.9.zip) = 244990 bytes
 SHA1 (patch-aa) = c7a4eb180e32415b3442bbe9cc619b963c4fe596

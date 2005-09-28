@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/20 15:14:16 cjep Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:43 rillig Exp $
 
 SHA1 (vmsbackup.tar.Z) = 403ddc9feeb32d558314db3e9a7a8a504a044d77
+RMD160 (vmsbackup.tar.Z) = 006f9b99b40d16ed506afa4519746ca5ef7b0a71
 Size (vmsbackup.tar.Z) = 16042 bytes
 SHA1 (patch-aa) = 368a9b2fb77968cb02626af75ec242c4e4ecc335
 SHA1 (patch-ab) = 2410603b3b33b5fe37fc43f214c37e2f08c3c80f

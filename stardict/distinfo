@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/04 00:42:50 rxg Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:42 rillig Exp $
 
 SHA1 (stardict-2.4.4.tar.bz2) = 94cfd202cb07ab6046601b37782b4a4c2a195ad7
+RMD160 (stardict-2.4.4.tar.bz2) = 328f99dfca5841607d8f4ec8573aeb36f3e74465
 Size (stardict-2.4.4.tar.bz2) = 1051468 bytes
 SHA1 (patch-aa) = fb74e313ccc627e751916ef1f6df98139a925868

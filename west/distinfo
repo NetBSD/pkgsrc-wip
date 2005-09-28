@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/08/03 17:15:09 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:43 rillig Exp $
 
 SHA1 (west_0.9.tgz) = 58944896802e22db3fca619306d3a46c3824ea73
+RMD160 (west_0.9.tgz) = ee061a13626a11cfd489f6836116c839940b12cb
 Size (west_0.9.tgz) = 35663 bytes
 SHA1 (patch-aa) = 3bd0d5ee696fb488e283178a63925f66eee0823c

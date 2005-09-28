@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/08 08:58:37 cjep Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:22 rillig Exp $
 
 SHA1 (ispell-lt-1.0.tar.gz) = 9b7987ec36a38ffb86764576eb6ba342e58cf469
+RMD160 (ispell-lt-1.0.tar.gz) = a726c9182313cf7a22089d0288626c411e096f0b
 Size (ispell-lt-1.0.tar.gz) = 471617 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2003/11/10 15:05:22 mpasternak Exp $
+$NetBSD: distinfo,v 1.3 2005/09/28 06:41:42 rillig Exp $
 
 SHA1 (superkaramba-0.33.tar.gz) = 61e448642cff16d8137be2dc5e3fb97a9e94ef65
+RMD160 (superkaramba-0.33.tar.gz) = 093e3300a0ac288266422095b69913d49deb0c87
 Size (superkaramba-0.33.tar.gz) = 1343029 bytes
 SHA1 (patch-aa) = db9b591c6693cc15eb5cf50f99f2fc96158e335c

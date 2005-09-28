@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/03 09:41:20 bmeurer Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:08 rillig Exp $
 
 SHA1 (autoproject-0.17.tar.gz) = d89cebc9864f8c73eaa6df4f52cf2109f87e3aad
+RMD160 (autoproject-0.17.tar.gz) = bec5d7e8198dff55c5bab5e87964c5af240d655a
 Size (autoproject-0.17.tar.gz) = 145511 bytes
 SHA1 (patch-aa) = 201fdd0f703249011aa3e5889a66b9183babefcd
 SHA1 (patch-ab) = 1034174c8f490311169eda43bcc1e7be20c27722

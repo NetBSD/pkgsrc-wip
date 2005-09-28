@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/29 18:06:30 daprice Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:44 rillig Exp $
 
 SHA1 (xgobi.tar.gz) = d8739d337e7c3993cd831dbf894a1511f26b9fe9
+RMD160 (xgobi.tar.gz) = 00d6b8ac046bd2e2a0419058293deb793d135398
 Size (xgobi.tar.gz) = 799731 bytes

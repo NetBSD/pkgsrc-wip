@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/31 13:30:12 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:32 rillig Exp $
 
 SHA1 (Frontier-RPC-0.06.tar.gz) = 684ed67790c935c52879fc9a6229f722dbc4fc45
+RMD160 (Frontier-RPC-0.06.tar.gz) = 40ecd17bb3734703dfcf0cd2068fe36f0f75dfbd
 Size (Frontier-RPC-0.06.tar.gz) = 13869 bytes

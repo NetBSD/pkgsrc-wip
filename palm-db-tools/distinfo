@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/17 16:21:01 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:33 rillig Exp $
 
 SHA1 (palm-db-tools-0_3_4.tar.gz) = 7686eb686fe9cf7708152f55f035db4d1bba6d58
+RMD160 (palm-db-tools-0_3_4.tar.gz) = 953d36257722c0d24144e3f79d1b90f902825430
 Size (palm-db-tools-0_3_4.tar.gz) = 580261 bytes
 SHA1 (patch-aa) = 62a9508c4007d514d50bb850be84096082b32535
 SHA1 (patch-ab) = 5c194fe7ac56e37278cf3836ed79222acadd8db0

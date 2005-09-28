@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/04 03:13:02 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:43 rillig Exp $
 
 SHA1 (udhcp-0.9.8.tar.gz) = 57f5fcd18effe77cff48e8221a20976a3be1f55a
+RMD160 (udhcp-0.9.8.tar.gz) = 55f3c346e39bc65d6941afccb5ef51a4b5239b37
 Size (udhcp-0.9.8.tar.gz) = 43889 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/13 18:44:33 oht Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:43 rillig Exp $
 
 SHA1 (vkeybd-0.1.17.tar.gz) = 7b7e6a1dcbe9f9d68d928b9c078285400c13dd6a
+RMD160 (vkeybd-0.1.17.tar.gz) = 3dcec5b994ed5a438218d725974ed9718f7166ff
 Size (vkeybd-0.1.17.tar.gz) = 32838 bytes
 SHA1 (patch-aa) = a74a3a84e66aeb4de459bb9923da6953a94eb5c5
 SHA1 (patch-ab) = 81bb4dab345fa6266c6513b7dfdb8dc17d702444

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/11/25 11:53:13 imilh Exp $
+$NetBSD: distinfo,v 1.3 2005/09/28 06:41:12 rillig Exp $
 
 SHA1 (eciadsl-usermode-0.10.tar.gz) = cd93ed7719e2a119c86d026890873c4d13115dd8
+RMD160 (eciadsl-usermode-0.10.tar.gz) = 6954e54c6c5447ac186289b0ead4f3924625c164
 Size (eciadsl-usermode-0.10.tar.gz) = 566606 bytes
 SHA1 (patch-aa) = 8decf574b9869e2af05d44f952dfa060f0d87cca
 SHA1 (patch-ab) = 1df32e04952c9179604d18ef77d023da9bf360a6

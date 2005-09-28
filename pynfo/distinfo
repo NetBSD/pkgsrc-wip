@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/26 18:38:00 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:39 rillig Exp $
 
 SHA1 (pynfo-0.6.3.tar.bz2) = 31ad9ab91cdf9a352bfa81bab37da80b0745719f
+RMD160 (pynfo-0.6.3.tar.bz2) = aee61a067fda3c454355c4016da3d8be69eec123
 Size (pynfo-0.6.3.tar.bz2) = 47631 bytes

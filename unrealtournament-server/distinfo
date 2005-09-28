@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/13 20:03:50 grantbeattie Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:43 rillig Exp $
 
 SHA1 (ut-server-436.tar.gz) = e949133cdc19f7bf374a45a86dbbbe4d49827ae7
+RMD160 (ut-server-436.tar.gz) = 76332924697f71a2b5ebabff3921c01615210d82
 Size (ut-server-436.tar.gz) = 92769123 bytes

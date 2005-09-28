@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/05 18:42:04 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:18 rillig Exp $
 
 SHA1 (goldwater-1.4.0.tgz) = ec2bd73b4e038af51b94a619caa8f20ae38a9d16
+RMD160 (goldwater-1.4.0.tgz) = 53d907550824d2efdd161b123c3edb0eeb9f5cab
 Size (goldwater-1.4.0.tgz) = 415782 bytes

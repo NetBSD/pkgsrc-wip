@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/25 20:30:06 daprice Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:30 rillig Exp $
 
 SHA1 (molmol-2k.2.0-src.tar.gz) = 09482a1dea601563ca64e773dc0ec47019e22c63
+RMD160 (molmol-2k.2.0-src.tar.gz) = b1de89953631dd9b11928751d7853cb511bf45f0
 Size (molmol-2k.2.0-src.tar.gz) = 1088805 bytes
 SHA1 (patch-aa) = 915aadf9d63749688e934b9fb9f8c34a844c87a7
 SHA1 (patch-ab) = 6d6ab854c7e7ae90a782b505c871a1c3c4f4a9c5

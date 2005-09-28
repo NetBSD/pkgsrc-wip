@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/02/07 14:32:58 adrian_p Exp $
+$NetBSD: distinfo,v 1.4 2005/09/28 06:41:34 rillig Exp $
 
 SHA1 (prelude-nids-0.8.6.tar.gz) = 9929ef6f1fb00e60a1a5184a6eb638557cdf2560
+RMD160 (prelude-nids-0.8.6.tar.gz) = a0387cfa8c1a7466205dd83dd1a25d6b95c0526c
 Size (prelude-nids-0.8.6.tar.gz) = 818441 bytes
 SHA1 (patch-aa) = d8d8edd5ca5f8f1f6ecb83157bbae7e7a1326a77

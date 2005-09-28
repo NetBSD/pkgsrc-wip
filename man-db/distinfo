@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/05/21 07:27:32 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.5 2005/09/28 06:41:27 rillig Exp $
 
 SHA1 (man-db_2.4.2.orig.tar.gz) = 2e6ebf1397709648e07c2493571b4165e6a83edc
+RMD160 (man-db_2.4.2.orig.tar.gz) = b3081d2b5a4d8d924a8b238ccd8d0b0377cffda3
 Size (man-db_2.4.2.orig.tar.gz) = 730134 bytes
 SHA1 (patch-aa) = 99202bb1f378a0bf120284be507c2d87d8968df7
 SHA1 (patch-ab) = df42ee19216b7b9de43e252e22688b3d8b8525e8

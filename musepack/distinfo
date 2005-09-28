@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/13 18:57:19 bencollver Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:31 rillig Exp $
 
 SHA1 (mpcsv7-src-1.15t.tar.bz2) = 07d5828763196c9beaae3763858bba6f7fc4a9db
+RMD160 (mpcsv7-src-1.15t.tar.bz2) = eb59c0c0d40133aa9021ce5c8e63a073f23e58ed
 Size (mpcsv7-src-1.15t.tar.bz2) = 463474 bytes
 SHA1 (patch-aa) = 46ae5d34fea330eb0d93b527e902ddc2a9dc699c

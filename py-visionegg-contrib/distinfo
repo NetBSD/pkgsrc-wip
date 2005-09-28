@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/02 00:15:34 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:39 rillig Exp $
 
 SHA1 (visionegg-contrib-0.9.3.zip) = 2a95e815f19dbe5d3ffc3e1e83596a1952898f84
+RMD160 (visionegg-contrib-0.9.3.zip) = 2dc38a0621d167fc6d5d5b61d1df1a7669323672
 Size (visionegg-contrib-0.9.3.zip) = 329790 bytes

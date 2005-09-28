@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/28 11:48:26 drue Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:21 rillig Exp $
 
 SHA1 (igal-1.4.tar.gz) = 80312d100a12c84d4b9117e76ce9839b92a938b9
+RMD160 (igal-1.4.tar.gz) = 870087e12039aaae4f1c7d636603de95b4df012b
 Size (igal-1.4.tar.gz) = 22181 bytes
 SHA1 (patch-aa) = 6dd6dc0c83a4c2b450246a6fb1948b9d33d81c1b
 SHA1 (patch-ab) = afe83a09fb5fc77c8c358b60436f21df3d7cc098

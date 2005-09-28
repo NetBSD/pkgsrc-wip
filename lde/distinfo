@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/05 13:20:49 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:24 rillig Exp $
 
 SHA1 (lde-2.6.0.tar.gz) = 9a946f8f2f3bba0de17db5c2dff83c3e7ad5de0e
+RMD160 (lde-2.6.0.tar.gz) = 472f2e07171aad94a9ee81b6ecf91f05837597db
 Size (lde-2.6.0.tar.gz) = 436665 bytes

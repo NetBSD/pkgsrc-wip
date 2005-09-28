@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/04 19:04:20 oht Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:08 rillig Exp $
 
 SHA1 (alive-1.4.0.tar.gz) = 181f279e3b761beb0797d8e7d167b91ca0b7b3b9
+RMD160 (alive-1.4.0.tar.gz) = a712a6c2c7a854afeb007d5a794751ce7f358667
 Size (alive-1.4.0.tar.gz) = 466869 bytes
 SHA1 (patch-aa) = 48ccaa75329ea1ff9287a7846a45a9b0943d2d01
 SHA1 (patch-ab) = 83ba303b671377556708eada8513e7a56c0ecf82

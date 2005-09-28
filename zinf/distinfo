@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/06 19:52:53 rxg Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 06:41:44 rillig Exp $
 
 SHA1 (zinf-2.2.0.tar.gz) = 614da273c35df3b0f2dcf1aeb1eeeeded64d894d
+RMD160 (zinf-2.2.0.tar.gz) = 44894f70184b4ff0379da80e1009d1d30769ee7b
 Size (zinf-2.2.0.tar.gz) = 2163858 bytes
 SHA1 (patch-aa) = 1e2d128acb7cdc0d35afb26b9c783d12dc370276
 SHA1 (patch-ab) = bccf2dbbc80bfb018332d02dd8ad5773ea7b6342
