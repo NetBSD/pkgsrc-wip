@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:15 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 05:36:13 rillig Exp $
 #
 
 DISTNAME=		jamaica-1.0
-WRKSRC=		${WRKDIR}/
 CATEGORIES=		wip lang
 MASTER_SITES=		http://www.judoscript.com/store/
 EXTRACT_SUFX=		.zip
@@ -13,20 +12,21 @@ COMMENT=		JVM Macro Assembler language
 
 DEPENDS+=		java-bcel>=5.1:../../wip/java-bcel
 DEPENDS+=		java-asm>=1.4.2:../../wip/java-asm
+NO_BUILD=		yes
 
+SUBST_CLASSES+=		jamaica
+SUBST_STAGE.jamaica=	do-configure
+SUBST_FILES.jamaica=	jamaica.sh
+SUBST_SED.jamaica+=	-e 's,@PREFIX@,${PREFIX},g'
 
-do-build:
+post-extract:
+	${CP} ${FILESDIR}/jamaica.sh.in ${WRKSRC}/jamaica.sh
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/jamaica.jar ${PREFIX}/lib/java/
-	${ECHO} export CLASSPATH=${PREFIX}/lib/java/bcel.jar:\$$CLASSPATH > \
-		${PREFIX}/bin/jamaica
-	${ECHO} export CLASSPATH=${PREFIX}/lib/java/asm/asm.jar:\$$CLASSPATH >> \
-		${PREFIX}/bin/jamaica
-	${ECHO} java -jar ${PREFIX}/lib/java/jamaica.jar \$$@ >> ${PREFIX}/bin/jamaica
-	${CHMOD} +x ${PREFIX}/bin/jamaica
+	${INSTALL_SCRIPT} ${WRKSRC}/jamaica.sh ${PREFIX}/bin/jamaica
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/jamaica/
-	${INSTALL_DATA} ${WRKSRC}/test/* \
+	${INSTALL_DATA} ${WRKSRC}/examples/* \
 			${PREFIX}/share/examples/jamaica/
 
 .include "../../mk/java-vm.mk"

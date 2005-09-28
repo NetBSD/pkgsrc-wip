@@ -1,0 +1,8 @@
+#! /bin/sh
+set -e
+
+libdir="@PREFIX@/lib/java"
+CLASSPATH="${libdir}/bcel.jar:${libdir}/asm/asm.jar:${CLASSPATH}"
+export CLASSPATH
+
+exec java -jar "${libdir}/jamaica.jar" "$@"
