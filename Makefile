@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1934 2005/09/28 07:42:40 rillig Exp $
-# $Id: Makefile,v 1.1934 2005/09/28 07:42:40 rillig Exp $
+# $NetBSD: Makefile,v 1.1935 2005/09/28 13:59:05 ghen Exp $
+# $Id: Makefile,v 1.1935 2005/09/28 13:59:05 ghen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -429,6 +429,7 @@ SUBDIR+=	javascript-reference
 SUBDIR+=	jc
 SUBDIR+=	jcr-yahoo
 SUBDIR+=	jdk14
+SUBDIR+=	jdk15
 SUBDIR+=	jemboss-standalone
 SUBDIR+=	jgloss
 SUBDIR+=	jpgtn
