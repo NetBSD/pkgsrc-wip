@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/12 23:51:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/28 20:50:09 rillig Exp $
 #
 
 DISTNAME=	awflwm-0.0
@@ -11,7 +11,7 @@ MAINTAINER=	low@ameba6.com
 HOMEPAGE=	http://awflwm.berlios.de/
 COMMENT=	Fork of the flwm project
 
-GNU_CONFIGURE=	# defined
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	X_LIBS="-lGL"
 MAKE_ENV+=	CXXFLAGS="${CXXFLAGS}"
 CXXFLAGS+=	-DFLTK_1_0_COMPAT

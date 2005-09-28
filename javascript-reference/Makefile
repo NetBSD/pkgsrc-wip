@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/27 16:25:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 20:50:10 rillig Exp $
 #
 
 DISTNAME=		CoreReferenceJS15
@@ -14,7 +14,7 @@ COMMENT=		JavaScript Reference from Netscape Devedge
 HTMLDIR=		share/doc/${PKGNAME}
 NO_BIN_ON_CDROM=	"I am not sure if we can redistribute it"
 NO_SRC_ON_CDROM=	"I am not sure if we can redistribute it"
-NO_BUILD=		# defined
+NO_BUILD=		yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}

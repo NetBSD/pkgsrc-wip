@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/11 20:23:31 ppostma Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 20:50:11 rillig Exp $
 
 # this code is from NetBSD's src/usr.bin/whereis/ with slight changes
 
@@ -12,7 +12,7 @@ MAINTAINER=	reed@reedmedia.net
 COMMENT=	Locate a command
 
 NO_CONFIGURE=	yes
-NO_CHECKSUM=	# defined
+NO_CHECKSUM=	yes
 PKGMANDIR?=	man  # this will be removed once PKGMANDIR is in real pkgsrc
 
 do-extract:

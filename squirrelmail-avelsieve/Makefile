@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:55 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/09/28 20:50:11 rillig Exp $
 #
 
 DISTNAME=	avelsieve-1.9.1
@@ -10,7 +10,7 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://www.squirrelmail.org/
 COMMENT=	Sieve Script editing plugin for SquirrelMail
 
-NO_CONFIGURE=	# defined
+NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/11/19 00:08:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 20:50:11 rillig Exp $
 #
 
 DISTNAME=	ut-server-436
@@ -11,7 +11,7 @@ MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://files.sobservers.com/UnrealTournament/UTServerOnly/
 COMMENT=	Server for Unreal Tournament first person shooter
 
-NO_BUILD=		# defined
+NO_BUILD=		yes
 SHLIB_HANDLING=		NO
 
 ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386

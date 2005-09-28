@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/27 16:25:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/28 20:50:10 rillig Exp $
 #
 
 DISTNAME=		kpanta_1_0
@@ -12,7 +12,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.geocities.com/anil_rvce/kpanta.html
 COMMENT=		AntiChess - like ordinary chess, but the objective is to loose pieces
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 
 # propably ${TAR} options include extraction to a specified dir
 # look it up in man :)

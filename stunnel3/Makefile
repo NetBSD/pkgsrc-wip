@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:15:57 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 20:50:11 rillig Exp $
 
 DISTNAME=		stunnel-3.26
 CATEGORIES=		security
@@ -11,7 +11,7 @@ COMMENT=		Universal SSL tunnel
 CONFLICTS=		stunnel-[4-9]*
 
 USE_PKGINSTALL=		yes
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
 			--with-cert-dir="${SSLCERTS}" \
 			--with-pem-dir="${SSLCERTS}" \

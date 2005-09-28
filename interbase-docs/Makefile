@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/27 16:25:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/28 20:50:10 rillig Exp $
 #
 
 DISTNAME=		60All
@@ -14,7 +14,7 @@ COMMENT=		Documentation for InterBase 6.0 in PDF format
 
 NO_BIN_ON_CDROM=	"I am not sure if we can redistribute it"
 NO_SRC_ON_CDROM=	${NO_BIN_ON_CDROM}
-NO_BUILD=		# defined
+NO_BUILD=		yes
 
 ID6_DIR=       		${PREFIX}/share/doc/${PKGNAME}
 ID6_FILES=		apiguide.pdf datadef.pdf devguide.pdf embedsql.pdf \

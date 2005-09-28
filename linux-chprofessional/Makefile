@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/09/28 14:24:41 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/28 20:50:10 rillig Exp $
 
 DISTNAME=	chprofessional-4.0.0.linux2.2.5.intel
 PKGNAME=	linux-chproffessional-4.0.0
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.softintegration.com/products/chprofessional/
 COMMENT=	Ch is an interactive C development environment
 
-NO_BUILD=	# defined
+NO_BUILD=	yes
 
 #
 # I have included chpro-license for pkgsrc-wip purposes as

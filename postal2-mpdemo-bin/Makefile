@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/27 16:26:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/28 20:50:10 rillig Exp $
 #
 
 DISTNAME=		postal2mpdemo-lnx-1407
@@ -16,7 +16,7 @@ DEPENDS+=		suse_glx>=7.3:../../emulators/suse_glx/
 
 NO_SRC_ON_CDROM=	"It's huge, it's demo, it's a game, I'm not sure if we can redistribute it"
 NO_PKG_ON_CDROM=	${NO_SRC_ON_CDROM}
-NO_BUILD=		# defined
+NO_BUILD=		yes
 LICENSE=		postal2mpdemo-license
 
 POSTAL_DIR=		${PREFIX}/emul/linux/usr/games/postal

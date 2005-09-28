@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/23 11:49:44 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/28 20:50:11 rillig Exp $
 #
 
 DISTNAME=	TUTOS-php-1.2.20040906
@@ -19,8 +19,8 @@ TUTOS_GROUP?=	${TUTOS_USER}
 PKG_GROUPS+=	${TUTOS_GROUP}
 PKG_USERS+=     ${TUTOS_USER}:${TUTOS_GROUP}::Tutos\ Runtime\ User
 
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 do-install:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' -e 's|@X11BASE@|${X11BASE}|g' \

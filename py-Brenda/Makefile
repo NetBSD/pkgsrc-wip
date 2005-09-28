@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/27 16:27:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 20:50:10 rillig Exp $
 #
 
 DISTNAME=		PyBrenda-0.4.1
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.snurgle.org/~pybrenda/
 COMMENT=		Paralell computation system
 
 PY_PATCHPLIST=		yes
-NO_BUILD=		# defined
+NO_BUILD=		yes
 
 PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/27 16:27:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/28 20:50:10 rillig Exp $
 #
 
 DISTNAME=		PyPE1.8.2
@@ -15,7 +15,7 @@ COMMENT=		Lightweight, but powerful editor for Python
 DEPENDS=	${PYPKGPREFIX}-wxWidgets>=2.4.2.4:../../x11/py-wxWidgets
 
 PYTHON_PATCH_SCRIPTS=   pype.py
-NO_BUILD=		# defined
+NO_BUILD=		yes
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 PY_PATCHPLIST=		yes
 

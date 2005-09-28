@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:14:08 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 20:50:10 rillig Exp $
 #
 
 DISTNAME=	# empty
@@ -17,10 +17,10 @@ DEPENDS+=	mupen64-plugin-rsp-[0-9]*:../mupen64-plugin-rsp
 DEPENDS+=	mupen64-plugin-sound-[0-9]*:../mupen64-plugin-sound
 DEPENDS+=	mupen64-plugin-video-[0-9]*:../mupen64-plugin-video
 
-NO_BUILD=	# defined
-NO_CHECKSUM=	# defined
-NO_MTREE=	# defined
-NO_CONFIGURE=	# defined
+NO_BUILD=	yes
+NO_CHECKSUM=	yes
+NO_MTREE=	yes
+NO_CONFIGURE=	yes
 
 do-install:
 	# empty

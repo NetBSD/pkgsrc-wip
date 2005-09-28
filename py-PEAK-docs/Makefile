@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/27 16:27:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 20:50:10 rillig Exp $
 #
 
 DISTNAME=		PEAK-0.5a3
@@ -10,8 +10,8 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://peak.telecommunity.com/
 COMMENT=		Python Enterprise Application Kit
 
-NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
 HTMLDIR=		share/doc/${PKGNAME}
 DOC_SRCDIR=		${WRKSRC}/docs

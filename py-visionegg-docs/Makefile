@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/27 16:29:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/28 20:50:10 rillig Exp $
 #
 
 DISTNAME=		visionegg-0.9.9-demo
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://visionegg.sourceforge.net/
 COMMENT=		Documentation for py-visionegg in HTML format
 
-NO_BUILD=		# defined
+NO_BUILD=		yes
 
 PY_VE_DOC_DIR=		${PREFIX}/share/doc/${PKGNAME}
 

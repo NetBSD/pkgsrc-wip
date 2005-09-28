@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/29 20:02:59 dmb_ Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 20:50:10 rillig Exp $
 #
 
 DISTNAME=	php-mode-1.1.0
@@ -10,7 +10,7 @@ MAINTAINER=	dmb@except.one.pl
 HOMEPAGE=	http://php-mode.sourceforge.net/
 COMMENT=	PHP editing mode for Emacs
 
-NO_CONFIGURE=	# defined
+NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}
 

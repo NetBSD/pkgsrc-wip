@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/27 16:25:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 20:50:09 rillig Exp $
 #
 
 DISTNAME=		diveintopython-html-4.4-2
@@ -15,8 +15,8 @@ COMMENT=		Free book for experienced Python programmers
 HTMLDIR=		share/doc/diveintopython
 DOC_SRCDIR=		${WRKSRC}
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
-NO_BUILD= 		# defined
-NO_CONFIGURE=		# defined
+NO_BUILD= 		yes
+NO_CONFIGURE=		yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}

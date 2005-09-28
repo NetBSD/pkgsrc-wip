@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/06 04:15:01 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/28 20:50:09 rillig Exp $
 #
 
 DISTNAME=		cream-0.30
@@ -11,7 +11,7 @@ COMMENT=		Usability add-on for Vim
 
 DEPENDS+=		vim-gtk2-6.*:../../editors/vim-gtk2
 
-NO_BUILD=		# defined
+NO_BUILD=		yes
 
 VIM_SUBDIR=		vim63
 VIMRUNTIME=		${PREFIX}/share/vim/${VIM_SUBDIR}

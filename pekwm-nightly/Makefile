@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/28 20:50:10 rillig Exp $
 #
 
 DISTNAME=	pekwm-cvs
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	    yes
 USE_TOOLS+=	    gmake
 USE_PERL5=	    run
 USE_LANGUAGES=	    c c++
-NO_CHECKSUM=	    # defined
+NO_CHECKSUM=	    yes
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/27 16:29:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/28 20:50:10 rillig Exp $
 #
 
 DISTNAME=		scapy-0.9.15
@@ -15,7 +15,7 @@ PYTHON_VERSIONS_ACCEPTED=	23 22
 
 PYTHON_PATCH_SCRIPTS=		scapy.py
 
-NO_BUILD=	# defined
+NO_BUILD=	yes
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 

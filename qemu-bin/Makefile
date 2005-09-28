@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/27 18:55:08 dhowland Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/28 20:50:11 rillig Exp $
 #
 
 DISTNAME=		qemu-0.6.1-i386
@@ -10,7 +10,7 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://fabrice.bellard.free.fr/qemu/
 COMMENT=		CPU emulator using dynamic translation
 
-NO_BUILD=		# defined
+NO_BUILD=		yes
 
 CONFLICTS+=             qemu-*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/27 16:29:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 20:50:10 rillig Exp $
 #
 
 DISTNAME=		visionegg-contrib-0.9.3
@@ -11,7 +11,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://visionegg.sourceforge.net/
 COMMENT=		Additional modules for py-visionegg package
 
-NO_BUILD=		# defined
+NO_BUILD=		yes
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 PY_VC_FILES_LABVIEW=	"Edit Grating C.vi" \

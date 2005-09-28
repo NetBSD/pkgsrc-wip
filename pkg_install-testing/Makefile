@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:14:48 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 20:50:10 rillig Exp $
 
 # Notes to package maintainers:
 #
@@ -18,7 +18,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.pkgsrc.org/
 COMMENT=		Package management and administration tools for pkgsrc
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
 CONFIGURE_ARGS+=	--with-ftp=${FETCH_CMD}
 CONFIGURE_ARGS+=	--with-mtree=${MTREE}
@@ -26,8 +26,8 @@ CONFIGURE_ARGS+=	--with-pax=${PAX}
 CONFIGURE_ARGS+=	--with-tar=${TAR}
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
-NO_CHECKSUM=		# defined
-NO_MTREE=		# defined
+NO_CHECKSUM=		yes
+NO_MTREE=		yes
 # Removing this package would break pkgsrc, so allow this package to
 # reinstall over itself.
 # XXX need to figure out a way not to have multiple pkg entries for old ones.

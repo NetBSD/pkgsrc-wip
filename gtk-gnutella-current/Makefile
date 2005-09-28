@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/16 14:50:04 larnor Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/28 20:50:09 rillig Exp $
 
 DISTNAME=		gtk-gnutella-current-${GTK_GNUTELLA_VER}
 PKGREVISION=		3
@@ -26,7 +26,7 @@ CVS_MODULE=		gtk-gnutella-current
 
 # Dynamic plist is a pkgviews feature.
 #PLIST_TYPE=		dynamic
-NO_CHECKSUM=		# defined
+NO_CHECKSUM=		yes
 
 # Not pkgviews-enabled yet because of problems generating the date-like version
 # number.
