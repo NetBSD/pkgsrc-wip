@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.5 2004/03/15 10:17:12 mpasternak Exp $
-# $Id: Makefile.common,v 1.5 2004/03/15 10:17:12 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/09/28 06:59:22 rillig Exp $
+# $Id: Makefile.common,v 1.6 2005/09/28 06:59:22 rillig Exp $
 #
 # (C) 2004 Michal Pasternak <dotz@irc.pl>
 
@@ -38,7 +38,7 @@ DIST_SUBDIR=		slackware
 NO_SRC_ON_FTP=		# defined
 NO_SRC_ON_CDROM=	# defined
 
-# 
+#
 # Slackware, yes, you, and no other, baby...
 #
 
@@ -71,7 +71,7 @@ WRKSRC?=		${WRKDIR}
 
 warn-on-freebsd:
 .if ${OPSYS} == "FreeBSD"
-.if ${LOWER_OPSYS_VERSUFFIX} == "4" 
+.if ${LOWER_OPSYS_VERSUFFIX} == "4"
 	@echo ===========================================================================
 	@echo "* WARNING * WARNING * WARNING * WARNING * WARNING * WARNING * WARNING"
 	@echo
@@ -86,12 +86,10 @@ warn-on-freebsd:
 	@echo
 	@echo ===========================================================================
 .else
-	@# do nothing
+	@${DO_NADA}
 .endif       
 .else
-	@# do nothing
+	@${DO_NADA}
 .endif
-
-http://www.freebsd.org/cgi/query-pr.cgi?pr=64169
 
 .include "../../wip/mk/linuxbin.pkg.mk"
