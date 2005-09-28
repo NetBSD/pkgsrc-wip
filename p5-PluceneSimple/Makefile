@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/09/05 09:50:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 13:05:13 rillig Exp $
 
 DISTNAME=	PluceneSimple-1.04
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/ST/STRYTOAST/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/PluceneSimple/
-COMMENT=	An interface to Plucene
+COMMENT=	Perl interface to Plucene
 
 DEPENDS+=	p5-PathTools>=1.2:../../wip/p5-PathTools
 DEPENDS+=	p5-Plucene>=1.09:../../wip-p5-Plucene
