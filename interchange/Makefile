@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/09/23 02:05:36 schnoebe Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/28 14:24:41 rillig Exp $
 #
 
 DISTNAME=       interchange-5.2.1
@@ -23,13 +23,13 @@ DEPENDS+=	p5-Business-UPS>=1.0.6:../../misc/p5-Business-UPS
 #	Interchange uses the following if they are available
 # DEPENDS+=	p5-Term-ReadKey>=2.14:../../devel/p5-Term-ReadKey
 
-#	This could also depend upon a web server (apache), but 
-#	I'm not sure how reasonable _that_ is, a the web server 
+#	This could also depend upon a web server (apache), but
+#	I'm not sure how reasonable _that_ is, a the web server
 #	could be on another machine.  Additionally, it could also
 #	depend upon a database, but which one (postgresql or mysql or ...)
 
-# 	The huge number of depends are to keep the installation program 
-#	(Makefile.PL, which is called as part of the install) from 
+# 	The huge number of depends are to keep the installation program
+#	(Makefile.PL, which is called as part of the install) from
 #	having the CPAN module install a large number of modules
 #	outside the control of pkg_*
 
@@ -79,7 +79,7 @@ do-configure:
 # operate correctly, while allowing NetBSD to mount this filesystem
 # read-only (if desired.)
 #
-#   The symlinks are for the (error and access) log, 
+#   The symlinks are for the (error and access) log,
 #   the daemon configuration file,
 #   the makecat (make catalog) configuration file and the daemon
 #   communication unix domain socket

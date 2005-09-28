@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/11/19 13:14:23 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:24:42 rillig Exp $
 
 Configuration files have been installed to:
 
 	${PREFIX}/etc/willow
-	
+
 The will not be automatically removed at deinstall. Remove this directory by
 hand if you will not be planning to use py-willow in future.
 

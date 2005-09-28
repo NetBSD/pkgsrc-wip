@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/09/05 15:18:06 emil_s Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 14:24:40 rillig Exp $
 
 DISTNAME=		gofish-1.0
 CATEGORIES=		wip
@@ -30,7 +30,7 @@ OWN_DIRS_PERMS= 	${RUNTIMEDIR} ${GOPHER_USER} ${GOPHER_GROUP} 0750
 RCD_SCRIPTS=		gopherd
 
 #CONF_FILES=		${EXAMPLESDIR}/gofish.conf ${EXAMPLESDIR}/gofish-www.conf
- 
+
 FILES_SUBST+=   	RUNTIMEDIR=${RUNTIMEDIR}
 FILES_SUBST+=		PKG_USERS=${PKG_USERS}
 

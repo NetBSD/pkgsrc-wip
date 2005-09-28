@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/27 16:26:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/09/28 14:24:41 rillig Exp $
 
 DISTNAME=	chprofessional-4.0.0.linux2.2.5.intel
 PKGNAME=	linux-chproffessional-4.0.0
@@ -13,7 +13,7 @@ NO_BUILD=	# defined
 
 #
 # I have included chpro-license for pkgsrc-wip purposes as
-# linux-chprofessional/licenses/chpro-license. Basically, 
+# linux-chprofessional/licenses/chpro-license. Basically,
 # this tool is free for academic purposes *only*. For personal
 # or commercial use, go for Ch standard edition
 #
@@ -24,7 +24,7 @@ LICENSE=	chpro-license
 # Webpage claims, that there are ports for Solaris, HP-UX, MacOS
 # and Windows. Unfortunatley, I can't test on those, so until someone
 # does this... :
-# 
+#
 
 ONLY_FOR_PLATFORM=	*-i386
 

@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/03/27 22:53:30 xtraeme Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:24:40 rillig Exp $
 
 You will need to make GForge accessible through your HTTP server.
 For this:
 
 	- Add these lines to ${PKG_SYSCONFDIR}/etc/httpd/httpd.conf
-	
+
 	<IfModule mod_alias.c>
 		Alias /gforge/ "${PREFIX}/share/gforge/www/"
 	</IfModule>

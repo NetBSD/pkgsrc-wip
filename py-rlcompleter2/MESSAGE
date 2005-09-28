@@ -1,13 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/04/23 03:15:19 mpasternak Exp $
-$Id: MESSAGE,v 1.1 2004/04/23 03:15:19 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:24:42 rillig Exp $
+$Id: MESSAGE,v 1.2 2005/09/28 14:24:42 rillig Exp $
 
 To enable completion, type:
 
 	import readline, rlcompleter
 	readline.parse_and_bind("tab: complete")
-	
-... in interactive mode.	
+
+... in interactive mode.
 
 Happy hacking!
 

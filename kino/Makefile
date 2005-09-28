@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/12 23:51:21 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/28 14:24:41 rillig Exp $
 #
 
 # XXX You must update MASTER_SITES download number when updating
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--with-hotplug-script-dir=${PREFIX}/share/examples/kino/hotplug
 # or should the following be used to not use default PREFIX/lib/hotplug/kino ?
 #CONFIGURE_ARGS+=	--with-hotplug-usermap-dir=${PREFIX}/libdata/hotplug/kino
 
-# Use FFMPEG libavcodec for DV video decoding instead of libdv.  
+# Use FFMPEG libavcodec for DV video decoding instead of libdv.
 # XXX maybe should be an option
 #CONFIGURE_ARGS+=	--with-avcodec
 #.include "../../multimedia/ffmpeg/buildlink3.mk"

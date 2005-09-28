@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:09:45 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 14:24:39 rillig Exp $
 
 DISTNAME=	mod_frontpage_mirfak-${M_FPVERSION}
 PKGNAME=	ap-frontpage-${M_FPVERSION}
@@ -22,7 +22,7 @@ M_FPVERSION=	1.6.2
 
 PKG_PREFIX=	${PREFIX}
 
-# minimum UID and GID's for fpexec..  
+# minimum UID and GID's for fpexec..
 # you probably want to use the same values as for suexec
 FP_UID_MIN?=	100
 FP_GID_MIN?=	100

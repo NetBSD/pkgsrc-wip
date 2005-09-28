@@ -1,14 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/12/20 01:56:42 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:24:42 rillig Exp $
 
-Files have been installed in 
+Files have been installed in
 
 	${PREFIX}/share/${PKGNAME}
 
 You can also download PDF version of tutorial from:
 
 	http://nehe.gamedev.net/files/resources/nehe_opengl_pdf.zip
-	
+
 or browse tutorial pages at:
 
 	http://nehe.gamedev.net/lesson.asp?index=LESSON_NUMBER

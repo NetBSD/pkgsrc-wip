@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/20 20:11:06 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/28 14:24:42 rillig Exp $
 
 DISTNAME=	opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
 PKGNAME=	opera-${OPERA_PKG_VERSION}beta${OPERA_VER_DATE}
@@ -127,7 +127,7 @@ USE_PKGINSTALL=		YES
 
 do-install:
 	@cd ${WRKSRC} && ${ECHO} "n" | PKGSRC_PREFIX=${PREFIX} ./install.sh --prefix=${PREFIX}
-	@${ECHO} 
+	@${ECHO}
 	@${ECHO} "=> You can ignore any previous lines about '... cannot be prefixed'"
 	@${ECHO}
 

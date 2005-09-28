@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:13:09 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2005/09/28 14:24:41 rillig Exp $
 #
 
 DISTNAME=	ices-0.2.3
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--with-lame=${BUILDLINK_PREFIX.lame} \
 #.if defined(USE_PYTHON)
 #.   include "../../lang/python/application.mk"
 #CONFIGURE_ARGS+=	--with-python
-#CPPFLAGS+=		${BUILDLINK_CPPFLAGS.${PYPACKAGE}}	
+#CPPFLAGS+=		${BUILDLINK_CPPFLAGS.${PYPACKAGE}}
 #LDFLAGS+=		${BUILDLINK_LDFLAGS.${PYPACKAGE}}
 #.else
 CONFIGURE_ARGS+=	--without-python

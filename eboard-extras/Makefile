@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/09 12:44:17 zul_ Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/28 14:24:39 rillig Exp $
 #
 
-DISTNAME=		eboard-extras-2	
+DISTNAME=		eboard-extras-2
 CATEGORIES=             wip games
 MASTER_SITES=           ${MASTER_SITE_SOURCEFORGE:=eboard/}
 
@@ -14,7 +14,7 @@ NO_BUILD=YES
 DISTFILES+=		${EXTRA2}${EXTRACT_SUFX}
 DISTFILES+=		${EXTRA1}${EXTRACT_SUFX}
 
-DEPENDS+=		eboard-[0-9\.]*:../../wip/eboard 
+DEPENDS+=		eboard-[0-9\.]*:../../wip/eboard
 
 EXTRA2=			eboard-extras-2
 EXTRA1=			eboard-extras-1pl2

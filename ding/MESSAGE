@@ -1,13 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2004/02/10 05:04:24 minskim Exp $
+$NetBSD: MESSAGE,v 1.3 2005/09/28 14:24:39 rillig Exp $
 
 - Note that ${PREFIX}/bin/ding uses a defined path to access it's
   dictionary file.
 
-  If your LOCALBASE variable is not set to /usr/pkg, you'll have to change 
+  If your LOCALBASE variable is not set to /usr/pkg, you'll have to change
   manually the path to ${PREFIX}/share/dict/ger-eng.txt .
 
-- The dictionary file can be frequently updated. You can always fetch a 
+- The dictionary file can be frequently updated. You can always fetch a
   newer one at http://dict.tu-chemnitz.de/ .
 
 - Have fun!

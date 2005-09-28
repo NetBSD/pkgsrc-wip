@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:15:54 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/28 14:24:43 rillig Exp $
 
 DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}
 PKGNAME=	spamassassin-cvs-${_SA_CVS_DATE}
@@ -42,7 +42,7 @@ USE_PKGINSTALL=		YES
 PKG_SYSCONFSUBDIR=	spamassassin
 
 # Set contact address (e-mail, URL, ...) for use in spam report messages
-# See "perldoc Mail::SpamAssassin::Conf" for option "report_contact" 
+# See "perldoc Mail::SpamAssassin::Conf" for option "report_contact"
 SPAMASSASSIN_CONTACT_ADDRESS?=		'postmaster'
 
 # Use "NO" to turn off warnings and taint checks in spamd/spamassassin

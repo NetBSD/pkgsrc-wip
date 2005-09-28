@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/06/13 05:32:06 schnoebe Exp $
+$NetBSD: MESSAGE,v 1.3 2005/09/28 14:24:40 rillig Exp $
 
     This port requires an Frontpage enabled Apache web server.
 
@@ -8,7 +8,7 @@ $NetBSD: MESSAGE,v 1.2 2003/06/13 05:32:06 schnoebe Exp $
 
     For the FrontPage Server Extentions to operate properly, the
     following directives need to be set in your Apache web server
-    Configuration.  
+    Configuration.
 
     At the global level:
 

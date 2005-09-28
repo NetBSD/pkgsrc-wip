@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/27 16:27:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/28 14:24:42 rillig Exp $
 #
 
 DISTNAME=		Soya-0.6.1
@@ -16,7 +16,7 @@ PYDISTUTILSPKG=		yes
 
 PYTHON_VERSIONS_ACCEPTED=	23
 
-.include "../../lang/python/extension.mk" 
+.include "../../lang/python/extension.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

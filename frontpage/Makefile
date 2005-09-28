@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/25 03:39:44 schnoebe Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/28 14:24:40 rillig Exp $
 
 DISTNAME=	frontpage-5.0.2.2623
 CATEGORIES=	www
@@ -82,7 +82,7 @@ do-build:
 metalog: ${METALOG}
 
 #	some rather ugly scripting to generate a METALOG file
-#	to be fed to pax. On the other hand, we're kinda clever 
+#	to be fed to pax. On the other hand, we're kinda clever
 #	to build the metalog file from the PLIST :-)
 #
 #	note, the file ownerships have to match those used

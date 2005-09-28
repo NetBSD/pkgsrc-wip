@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/01/02 03:52:07 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:24:43 rillig Exp $
 
-If you would like to play sounds created in songwrite, please install 
+If you would like to play sounds created in songwrite, please install
 package:
 
 	audio/timidity
-	
+
 If you would like to be able to print them, please install package:
 
 	print/lilypond

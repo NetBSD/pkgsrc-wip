@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/28 14:24:42 rillig Exp $
 #
 
 DISTNAME=	NVIDIA-FreeBSD-x86-${DIST_VERSION}
@@ -84,7 +84,7 @@ do-install:
 	${MV} ${X11BASE}/lib/${nlib}.so.1.bak ${X11BASE}/lib/${nlib}.so.1
 .    else
 	${CP} ${X11BASE}/lib/${nlib}.so.1 ${X11BASE}/lib/${nlib}.so.1.bak
-.    endif  
+.    endif
 .  endif
 	${LN} -sf ${X11BASE}/lib/${nlib}.so.1 ${X11BASE}/lib/${nlib}.so
 .endfor

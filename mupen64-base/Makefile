@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/12 23:51:23 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/28 14:24:42 rillig Exp $
 #
 
 DISTNAME=	mupen64_src-0.4
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mupen64.emulation64.com/
-COMMENT=	Free Nintendo 64(TM) emulator for unix-like OS 
+COMMENT=	Free Nintendo 64(TM) emulator for unix-like OS
 
 USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/emu64

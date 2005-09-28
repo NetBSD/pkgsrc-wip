@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/12/19 14:00:53 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:24:42 rillig Exp $
 
 You will find a lot of examples for scapy at
 
 	http://www.cartel-securite.net/pbiondi/scapy.html
- 
+
 or in the source code.
 
 ===========================================================================

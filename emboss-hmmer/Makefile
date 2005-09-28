@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/14 19:11:47 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 14:24:40 rillig Exp $
 #
 
 .include "../emboss-base/Makefile.common"
@@ -10,7 +10,7 @@ PKGNAME=		emboss-hmmer-2.1.1
 COMMENT=		A collection of bioinformatic programs that is supplimentary to EMBOSS package
 
 DIST_SUBDIR=		emboss/hmmer-2.1.1-20041107
-BUILD_TARGET=		#EMPTY 
+BUILD_TARGET=		#EMPTY
 
 pre-configure:
 	${SED} -e 's|../../../ajax/libajax.la|${PREFIX}/lib/libajax.la|' \

@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/02/25 18:17:39 daprice Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:24:40 rillig Exp $
 
-		gde-linux-20031111		
+		gde-linux-20031111
 
 Please, copy ${PREFIX}/gde/scripts/.GDEmenus to your
 home directory.

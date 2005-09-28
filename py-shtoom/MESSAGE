@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/05/27 10:58:58 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:24:42 rillig Exp $
 
 Shtoom supports variety of GUI (including command-line). If you are
 interested in running GUI, make sure you launch shtoom properly: use --ui
 parameter, for example:
 
 	${PREFIX}/shtoom.py --ui=tk
-	
+
 or:
 
 	${PREFIX}/shtoom.py --ui=text

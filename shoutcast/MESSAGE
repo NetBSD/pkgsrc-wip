@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/04/11 20:04:31 icmp Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:24:42 rillig Exp $
 
  Shoutcast requires ${PKG_SYSCONFDIR}/sc_serv.conf to be configured.
  The server may then be started through the following command:
-	
+
 	${LOCALBASE}/bin/sc_serv ${PKG_SYSCONFDIR}/sc_serv.conf
 
  This package modifies sc_serv.conf in the following ways automatically:

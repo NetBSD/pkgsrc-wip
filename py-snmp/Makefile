@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:15:18 tvierling Exp $
-# 
+# $NetBSD: Makefile,v 1.4 2005/09/28 14:24:42 rillig Exp $
+#
 
 DISTNAME=		pysnmp-3.4.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}

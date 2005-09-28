@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/04 01:06:06 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/28 14:24:41 rillig Exp $
 #
 
 DISTNAME=		MenuMaker-0.17
@@ -11,7 +11,7 @@ COMMENT=		Generates menus for X Window managers by scanning for installed progra
 
 PYDISTUTILSPKG=		yes
 PYBINMODULE=    	yes
-PYSETUPOPTARGS?=       
+PYSETUPOPTARGS?=
 PY_PATCHPLIST=          yes
 
 .include "../../lang/python/extension.mk"

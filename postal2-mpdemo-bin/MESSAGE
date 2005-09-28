@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/12/30 11:27:07 mpasternak Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:24:42 rillig Exp $
 
-Game has been installed. You can run it via 
+Game has been installed. You can run it via
 
 	cd ${PREFIX}/emul/linux/usr/games/postal/System && ./postal2-bin
 

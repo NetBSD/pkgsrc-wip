@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2005/07/27 16:30:18 thomasklausner Exp $
-# $Id: Makefile,v 1.3 2005/07/27 16:30:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/28 14:24:42 rillig Exp $
+# $Id: Makefile,v 1.4 2005/09/28 14:24:42 rillig Exp $
 #
 
 DISTNAME=		glibc-2.3.2-i486-5
@@ -21,7 +21,7 @@ pre-install:
 	# warnings from pkg_add
 	#
 	${RM} -rf ${WRKSRC}/lib
-	${RM} -rf ${WRKSRC}/sbin	
+	${RM} -rf ${WRKSRC}/sbin
 
 .include "../../wip/slackware_compat/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

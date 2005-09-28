@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:14:45 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/28 14:24:42 rillig Exp $
 #
 
 PKGNAME=		php-fcgi-${PHP_BASE_VERS}
 COMMENT=		FastCGI interface for ${PKG_PHP}
 
-LIBTOOL_OVERRIDE=	
+LIBTOOL_OVERRIDE=
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/Makefile.php"

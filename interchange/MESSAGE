@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/01/26 18:32:54 schnoebe Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:24:41 rillig Exp $
 
 Your Interchange main software installation appears to have been successful.
 
@@ -23,7 +23,7 @@ comand line:
 		--cgibase=/cgi-bin \
 		--permtype=user \
 		--linkmode=UNIX \
-		--catalogname=construct 
+		--catalogname=construct
 
 The `default' master administrative user is `interchange', and the
 password is `pass' (according to the documentation, it should be

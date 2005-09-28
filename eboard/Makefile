@@ -1,5 +1,5 @@
 
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:37 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 14:24:39 rillig Exp $
 #
 
 DISTNAME=		eboard-0.9.5
@@ -25,7 +25,7 @@ SUBST_MESSAGE.sox_dev=  "Fixing hard-coded device used by sox with ${DEVOSSAUDIO
 
 do-configure:
 	 cd ${WRKSRC} && ${PERL5} ${WRKSRC}/configure \
-		--prefix=${PREFIX}  --libossaudio=${LIBOSSAUDIO} 
+		--prefix=${PREFIX}  --libossaudio=${LIBOSSAUDIO}
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../graphics/imlib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/27 16:26:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/28 14:24:42 rillig Exp $
 #
 
 DISTNAME=	nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}-0
@@ -35,20 +35,20 @@ NEHE_OPENGL_TUT_FLAVOUR?=	sdl
 NEHE_OPENGL_TUT_DIR?=		share/${DISTNAME}
 
 .if ${NEHE_OPENGL_TUT_FLAVOUR} == "sdl"
-# Those lessons are available for sdl, but there are compile trouble with 
+# Those lessons are available for sdl, but there are compile trouble with
 # them, that I haven't yet solved:
 #
 # lesson13.tar.gz
 # lesson43.tar.gz
-# 
+#
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk" # for lesson 21
 .else
 .error "Flavour ${NEHE_OPENGL_TUT_FLAVOUR} unknown!"
-# 
+#
 # In case you want to create new Flavour: remember:
 # not found in SDL, but propably found in GLX are:
-# lesson14.tar.gz lesson15.tar.gz lesson26.tar.gz lesson27.tar.gz 	
+# lesson14.tar.gz lesson15.tar.gz lesson26.tar.gz lesson27.tar.gz
 # lesson28.tar.gz lesson29.tar.gz lesson30.tar.gz lesson31.tar.gz
 # lesson33.tar.gz lesson34.tar.gz lesson35.tar.gz lesson38.tar.gz
 # lesson39.tar.gz lesson44.tar.gz lesson45.tar.gz lesson46.tar.gz

@@ -1,21 +1,21 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/12/11 23:05:20 johnrshannon Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:24:41 rillig Exp $
 
 You should also modify your PATH variable to include the installation
 directory, or copy the gtkada-config script somewhere in your path
-     
+
    $ setenv PATH <installation_directory>:$PATH
 or
    $ export PATH=<installation_directory>:$PATH
-     
+
 Finally, update your LD_LIBRARY_PATH variable to include that
 directory, so that the linker can find the libraries.  The other
 alternative if you have access to root priviledges is to add this
 'prefix' directory added in /etc/ld.conf and then run ldconfig.
-     
+
 Then, when you want to compile your application, simply use the
 gtkada-config script:
-     
+
    $ gnatmake <your_application> <your_switches> `gtkada-config`
 
 This will automatically submit the correct paths to gnatmake so that
