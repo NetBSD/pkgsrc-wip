@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2005/07/27 16:25:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2005/09/28 07:34:38 rillig Exp $
 #
 
 DISTNAME=      	gtk2-theme-pack
 PKGNAME=       	gtk2-theme-pack-0.1
 CATEGORIES=    	x11
-MASTER_SITES=	http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/themes/gtk2/
+MASTER_SITES=	http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/themes/gtk2/ \
+		http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/archive/themes/gtk2/
 DISTFILES=	GKT2-Quantumcurve.tar.gz \
 		GTK2-6nome.tar.gz \
 		GTK2-Angelistic.tar.gz \
