@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/09/28 13:56:35 ghen Exp $
+
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2005-09-07 10:16:01.000000000 +0200
++++ hotspot/src/os/bsd/vm/os_bsd.cpp
+@@ -429,7 +429,7 @@ void os::init_system_properties_values()
+ #define malloc(n) (char*)NEW_C_HEAP_ARRAY(char, (n))
+ #define getenv(n) ::getenv(n)
+ 
+-#define DEFAULT_LD_LIBRARY_PATH "/usr/lib" /* See ld.so.1(1) */
++#define DEFAULT_LD_LIBRARY_PATH "/usr/lib:%%LOCALBASE%%/lib:%%X11BASE%%/lib" /* See ld.so.1(1) */
+ #define EXTENSIONS_DIR "/lib/ext"
+ #define ENDORSED_DIR "/lib/endorsed"
+ 

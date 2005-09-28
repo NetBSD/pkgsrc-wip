@@ -1,0 +1,45 @@
+$NetBSD: patch-ag,v 1.1.1.1 2005/09/28 13:56:35 ghen Exp $
+
+--- j2se/make/common/Defs-bsd.gmk.orig	2005-09-07 10:48:51.000000000 +0200
++++ j2se/make/common/Defs-bsd.gmk
+@@ -178,9 +178,9 @@ endif
+ # DEVTOOLS_PATH is for other tools required for building (such as
+ # zip, etc.)
+ ifeq ($(TRUE_PLATFORM), NetBSD)
+-DEVTOOLS_PATH = /usr/pkg/bin/
++DEVTOOLS_PATH = %%LOCALBASE%%/bin/
+ else
+-DEVTOOLS_PATH = /usr/local/bin/
++DEVTOOLS_PATH = %%LOCALBASE%%/bin/
+ endif
+ # Allow the user to override the default value...
+ ifdef ALT_DEVTOOLS_PATH
+@@ -348,7 +348,8 @@ EXTRA_LIBS += -pthread
+ #
+ LDFLAGS_COMMON += -L$(LIBDIR)/$(LIBARCH)
+ ifeq ($(TRUE_PLATFORM), NetBSD)
+-LDFLAGS_COMMON += -Wl,-R$(LIBDIR)/$(LIBARCH) 
++LDFLAGS_COMMON += -Wl,-rpath $(LIBDIR)/$(LIBARCH) 
++LDFLAGS_COMMON += -Wl,-rpath %%JVM_HOME%%/jre/lib/$(LIBARCH) 
+ endif
+ LDFLAGS_OPT     = -Xlinker -O1 -Wl,-soname=$(LIB_PREFIX)$(LIBRARY)$(OPT_SUFFIX).$(LIBRARY_SUFFIX)
+ LDFLAGS_DBG     = -Wl,-soname=$(LIB_PREFIX)$(LIBRARY)$(DBG_SUFFIX).$(LIBRARY_SUFFIX)
+@@ -401,7 +402,8 @@ endif
+ VM_NAME         = server
+ JVMLIB          = -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME)
+ ifeq ($(TRUE_PLATFORM), NetBSD)
+-JVMLIB		+= -Wl,-R$(LIBDIR)/$(LIBARCH)/$(VM_NAME)
++JVMLIB		+= -Wl,-rpath $(LIBDIR)/$(LIBARCH)/$(VM_NAME)
++JVMLIB		+= -Wl,-rpath %%JVM_HOME%%/jre/lib/$(LIBARCH)/$(VM_NAME)
+ endif
+ JVMLIB		+= -ljvm$(SUFFIX)
+ JAVALIB         = -ljava$(SUFFIX) $(JVMLIB)
+@@ -434,7 +436,7 @@ override LIBSOCKET               =
+ override LIBTHREAD               =
+ override MOOT_PRIORITIES         = true
+ override NO_INTERRUPTIBLE_IO     = false
+-override OPENWIN_HOME            = /usr/X11R6
++override OPENWIN_HOME            = %%X11BASE%%
+ override OPENWIN_LIB             = $(OPENWIN_HOME)/lib
+ override OTHER_M4FLAGS           = -DGNU_ASSEMBLER
+ override SUN_CMM_SUBDIR          =

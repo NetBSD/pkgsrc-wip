@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/09/28 13:56:35 ghen Exp $
+
+--- deploy/make/common/Sanity.gmk.orig	2005-09-19 15:26:47.000000000 +0200
++++ deploy/make/common/Sanity.gmk
+@@ -191,7 +191,7 @@ ifeq ($(ARCH_DATA_MODEL), 32)
+ 	        "" >> $(ERROR_FILE) ; \
+ 	    fi
+         else
+-	    @if [ ! -r $(subst \,/,$(MOZILLA_HEADERS_PATH))/$(BROWSER)/java/bool.h ]; then \
++	    @if [ ! -r $(subst \,/,$(MOZILLA_HEADERS_PATH))/java/bool.h ]; then \
+ 	      $(ECHO) "ERROR: You do not have access to valid Mozilla header files. \n" \
+ 	        "      Please check your access to \n" \
+ 	        "          $(subst \,/,$(MOZILLA_HEADERS_PATH))/java/bool.h \n" \
