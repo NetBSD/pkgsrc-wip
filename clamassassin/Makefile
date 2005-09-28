@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/02 18:11:52 ura Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 08:02:28 rillig Exp $
 
 DISTNAME=	clamassassin-1.2.2
 CATEGORIES=	mail
@@ -12,10 +12,10 @@ DEPENDS+=	clamav>=0.84:../../mail/clamav
 DEPENDS+=	procmail>=3.22nb1:../../mail/procmail
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	CONF_RM=/bin/rm
-CONFIGURE_ENV+=	CONF_CAT=/bin/cat
-CONFIGURE_ENV+=	CONF_SED=/usr/bin/sed
-CONFIGURE_ENV+=	CONF_ECHO=/bin/echo
+CONFIGURE_ENV+=	CONF_RM=${RM:Q}
+CONFIGURE_ENV+=	CONF_CAT=${CAT:Q}
+CONFIGURE_ENV+=	CONF_SED=${SED:Q}
+CONFIGURE_ENV+=	CONF_ECHO=${ECHO:Q}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clamassassin
 PKG_SUPPORTED_OPTIONS=  clamdscan subject_rewrite
