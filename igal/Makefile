@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:11 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/28 21:08:32 rillig Exp $
 #
 
 DISTNAME=	igal-1.4
@@ -14,7 +14,7 @@ DEPENDS+=	ImageMagick>=5.0:../../graphics/ImageMagick
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
 REPLACE_PERL=		igal
-USE_PERL5=		# defined
+USE_TOOLS+=		perl5:run
 USE_PKGLOCALEDIR=	YES
 
 post-patch:
