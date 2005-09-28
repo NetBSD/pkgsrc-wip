@@ -1,5 +1,5 @@
 Aims:
-* to listen on a local UNIX socket and tunnel any incoming connections and 
+* to listen on a local UNIX socket and tunnel any incoming connections and
   traffic to a (remote) IP address/port
 
 What it does:

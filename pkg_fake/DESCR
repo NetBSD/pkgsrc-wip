@@ -1,8 +1,8 @@
 pkg_fake is a low-level administration tool for pkgsrc.
 
 - create and manage fake packages into the pkgsrc database.
-- hide or unhide packages. 
-- create and manage fake alternatives on already existing packages. 
+- hide or unhide packages.
+- create and manage fake alternatives on already existing packages.
 
 By this way you'll be able to deceive pkgsrc and skip some dependencies or
 just to solve problems on packages that can't be installed fine because
