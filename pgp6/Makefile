@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/24 10:31:17 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/09/28 06:54:40 rillig Exp $
 #
 
 DISTNAME=		pgpsrc658unix
@@ -6,7 +6,7 @@ PKGNAME=		pgp6-6.5.8
 WRKSRC=			${WRKDIR}/pgpsrc
 CATEGORIES=		security
 .for C in no ch cz de dk es fi hu nl ru ua
-MASTER_SITES+=		ftp://ftp.$C.pgpi.org/pub/pgp/${PKGVERSION:R}/${PKGVERSION}/
+MASTER_SITES+=		ftp://ftp.${C}.pgpi.org/pub/pgp/${PKGVERSION:R}/${PKGVERSION}/
 .endfor
 
 MAINTAINER=		tv@duh.org
