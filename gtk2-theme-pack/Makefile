@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/09/28 07:34:38 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/09/28 07:41:20 rillig Exp $
 #
 
 DISTNAME=      	gtk2-theme-pack
@@ -121,7 +121,7 @@ DEPENDS+=	gtk2-engines-galaxy>=0:../../wip/gtk2-engines-galaxy
 DEPENDS+=	gtk2-engines-magichicken>=1.0.2:../../wip/gtk2-engines-magichicken
 
 WRKSRC=		${WRKDIR}
-NO_BUILD=      	# defined
+NO_BUILD=	yes
 
 # clean up a bit. remove .xvpics (GIMP and xv thumbnail directories) and
 # backup files

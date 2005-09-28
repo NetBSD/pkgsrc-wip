@@ -4,12 +4,12 @@ directory that has been accessed recently. Depending on the operating
 system you may even find some information from deleted files and
 exited processes, although that information tends to be short-lived.
 
-To dump physical memory: 
+To dump physical memory:
 
     memdump | nc host port
     memdump | openssl s_client -connect host:port
 
-For best results send output off-host over the network. Writing to      
+For best results send output off-host over the network. Writing to
 file risks clobbering all the memory in the file system cache. Use
 netcat, stunnel, or openssl, depending on your requirements.
 

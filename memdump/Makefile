@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/03 15:49:30 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/28 07:38:35 rillig Exp $
 #
 
 DISTNAME=		memdump-1.01
@@ -7,10 +7,10 @@ MASTER_SITES=		http://www.porcupine.org/forensics/
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.porcupine.org/forensics/tct.html
-COMMENT=		memory dumper for UNIX-like systems
+COMMENT=		Memory dumper for UNIX-like systems
 
-USE_TOOLS+=	gmake
-BUILD_TARGET=what
+USE_TOOLS+=		gmake
+BUILD_TARGET=		what
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/memdump ${PREFIX}/sbin
