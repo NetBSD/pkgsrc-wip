@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/07 15:41:29 ura Exp $
+$NetBSD: distinfo,v 1.2 2005/09/28 05:48:00 rillig Exp $
 
 SHA1 (logrotate-3.7-4.1.src.rpm) = 1a73cf3b22e4de746337a827652bed4093a68758
 Size (logrotate-3.7-4.1.src.rpm) = 44012 bytes
 SHA1 (patch-aa) = 27e494bafacde203a4b99fec9a597b6e53cd3443
-SHA1 (patch-ab) = e7ac0d55b509e4b4d08fef9f6327551a0522516d
+SHA1 (patch-ab) = b1581d1d42a1dc8a248a0b1aef222b0e93fcec7f
 SHA1 (patch-ac) = de3cc2e5334af02bffa3d86377782cf915499ffa
+SHA1 (patch-ad) = ce2109e6a7c7a96094a6ff6e13faeede80efdea9
