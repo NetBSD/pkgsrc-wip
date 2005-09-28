@@ -1,4 +1,5 @@
-# $Id: Makefile,v 1.1.1.1 2004/06/11 09:59:39 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/28 06:32:31 rillig Exp $
+# $Id: Makefile,v 1.2 2005/09/28 06:32:31 rillig Exp $
 
 DISTNAME=		# empty
 DISTFILES=		${DEBS}
