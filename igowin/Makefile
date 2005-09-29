@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/24 18:44:02 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/29 13:34:43 rillig Exp $
 #
 
 DISTNAME=		igowin
@@ -13,7 +13,6 @@ COMMENT=		Go playing program
 
 WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${EXTRACT_CMD.zip}
-NO_TOOLS=		yes
 NO_BUILD=		yes
 USE_TOOLS+=		unzip
 
