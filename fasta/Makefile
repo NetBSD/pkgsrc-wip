@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:11:57 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/29 13:47:31 thomasklausner Exp $
 #
 
 DISTNAME=		fasta3
@@ -15,7 +15,7 @@ MAKEFILE=		Makefile.NetBSD
 
 WRKSRC=			${WRKDIR}
 
-LICENSE= 		non-commercial-use
+LICENSE= 		no-commercial-use
 
 post-extract:
 	${SED} -e 's:/seqprg/slib/bin:@PREFIX@:' \

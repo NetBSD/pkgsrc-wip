@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/08/22 19:48:41 mchittur Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/29 13:47:28 thomasklausner Exp $
 #
 
 DISTNAME=		biopython-1.40b
@@ -10,7 +10,7 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://biopython.org
 COMMENT=		Python libraries for computational molecular biology
 
-LICENSE=		non-commercial-use
+LICENSE=		no-commercial-use
 
 PY_PATCHPLIST=		YES
 PYDISTUTILSPKG=         YES
