@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/28 15:28:16 imilh Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/29 07:34:46 imilh Exp $
 man/man8/dkim-milter.8
 sbin/dkim-milter
 share/doc/dkim-milter/FEATURES

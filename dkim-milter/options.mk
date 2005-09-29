@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/09/28 15:28:16 imilh Exp $
+# $NetBSD: options.mk,v 1.2 2005/09/29 07:34:46 imilh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dk-milter
 PKG_SUPPORTED_OPTIONS=	inet6
