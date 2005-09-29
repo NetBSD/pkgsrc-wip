@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.6 2005/09/28 06:59:22 rillig Exp $
-# $Id: Makefile.common,v 1.6 2005/09/28 06:59:22 rillig Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/09/29 00:18:34 rillig Exp $
+# $Id: Makefile.common,v 1.7 2005/09/29 00:18:34 rillig Exp $
 #
 # (C) 2004 Michal Pasternak <dotz@irc.pl>
 
@@ -72,22 +72,22 @@ WRKSRC?=		${WRKDIR}
 warn-on-freebsd:
 .if ${OPSYS} == "FreeBSD"
 .if ${LOWER_OPSYS_VERSUFFIX} == "4"
-	@echo ===========================================================================
+	@echo "==========================================================================="
 	@echo "* WARNING * WARNING * WARNING * WARNING * WARNING * WARNING * WARNING"
-	@echo
-	@echo It appears you're running FreeBSD-4 stable system, which is
-	@echo known to have trouble running applications linked agains glibc 2.3.2
+	@echo ""
+	@echo "It appears you're running FreeBSD-4 stable system, which is"
+	@echo "known to have trouble running applications linked agains glibc 2.3.2"
 	@echo "(just like the package you are instaling)"
 	@echo
-	@echo If build breaks with Signal 12 while running Linux application,
-	@echo be sure to review the FreeBSD PR 64169 here:
+	@echo "If build breaks with Signal 12 while running Linux application,"
+	@echo "be sure to review the FreeBSD PR 64169 here:"
 	@echo "    http://www.freebsd.org/cgi/query-pr.cgi?pr=64169"
-	@echo and install needed patches.
-	@echo
-	@echo ===========================================================================
+	@echo "and install needed patches."
+	@echo ""
+	@echo "==========================================================================="
 .else
 	@${DO_NADA}
-.endif       
+.endif
 .else
 	@${DO_NADA}
 .endif
