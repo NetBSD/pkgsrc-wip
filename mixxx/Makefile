@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/09/13 06:17:58 ghen Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/29 14:38:16 ghen Exp $
 
 DISTNAME=	mixxx-1.4.2
 CATEGORIES=	audio
@@ -15,6 +15,8 @@ CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
 CONFIGURE_ARGS+=	--dependency-dir=${LOCALBASE}/bin\;${LOCALBASE}/lib\;${LOCALBASE}/include
 CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--disable-jack
+
+USE_TOOLS+=		bash
 
 SUBST_CLASSES+=		bash
 SUBST_STAGE.bash=	pre-configure
