@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/09/29 12:16:12 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.44 2005/09/29 16:03:37 leonardschmidt Exp $
 #
 
 DISTNAME=	esmtp-0.5.1
@@ -10,20 +10,23 @@ MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://esmtp.sourceforge.net/
 COMMENT=	Relay-only Mail Transfer Agent with sendmail-compatible syntax
 
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+.if !exists(/usr/bin/flex)
+BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
+.endif
 
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
+USE_TOOLS+=		bison
 PTHREAD_OPTS+=		require
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-SUBST_CLASSES+=	paths
+SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	sample.esmtprc
 SUBST_FILES.paths+=	esmtprc.5
-SUBST_SED.paths=	-e 's,/usr/bin,${PREFIX}/bin,g'
+SUBST_SED.paths=	-e 's|/usr/bin|${PREFIX}/bin|g'
 
 PKG_SYSCONFSUBDIR=	esmtp
 
@@ -32,7 +35,9 @@ CONF_FILES=		${EGDIR}/sample.esmtprc \
 			${PKG_SYSCONFDIR}/sample.esmtprc
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/esmtp
 	${INSTALL_DATA} ${WRKSRC}/sample.esmtprc ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/esmtp
 
 .include "../../mail/libesmtp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
