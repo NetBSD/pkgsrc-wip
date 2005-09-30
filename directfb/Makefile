@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2005/08/11 10:08:22 absd Exp $
-#
+# $NetBSD: Makefile,v 1.18 2005/09/30 14:10:18 moubctez Exp $
 
-DISTNAME=	DirectFB-0.9.19
-PKGNAME=	${DISTNAME:S/DFB/dfb/}
+DISTNAME=	DirectFB-0.9.22
+PKGNAME=	directfb-0.9.22
 CATEGORIES=	devel
 MASTER_SITES=	http://www.directfb.org/download/DirectFB/
 
@@ -12,9 +11,11 @@ COMMENT=	Thin library that provides hardware graphics acceleration
 
 ONLY_FOR_PLATFORM=     Linux-*-* NetBSD-*-*
 
-GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake pkg-config
-
+USE_LIBTOOL+=		yes
+USE_TOOLS+=		gmake pkg-config
+PKGCONFIG_OVERRIDE=	directfb.pc.in lib/direct/direct.pc.in \
+			lib/fusion/fusion.pc.in lib/voodoo/voodoo.pc.in
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gfxdrivers=all
 
 .include "../../mk/bsd.prefs.mk"
@@ -23,10 +24,8 @@ CONFIGURE_ARGS+=	--with-gfxdrivers=all
 .include "../../devel/SDL/buildlink3.mk"
 .endif
 
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
