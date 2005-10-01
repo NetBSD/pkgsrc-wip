@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/10/01 00:49:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/01 04:25:32 xtraeme Exp $
 #
 
 DISTNAME=		vm-tools-0.1.9
@@ -10,6 +10,8 @@ HOMEPAGE=		http://www.cs.utexas.edu/users/aliguori/vm-tools/
 COMMENT=		Lightweight management framework for Xen
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
+
+CONFLICTS+=		xentools20-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
