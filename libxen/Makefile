@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.2 2005/09/28 12:09:15 marttikuparinen Exp $
+#	$NetBSD: Makefile,v 1.3 2005/10/01 04:28:23 xtraeme Exp $
 
 DISTNAME=		xen-${VERSION}-src
 PKGNAME=		libxen-${VERSION}
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.cl.cam.ac.uk/Research/SRG/netos/xen/
 COMMENT=		Xen libraries
+
+CONFLICTS+=		xentools20-[0-9]*
 
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/xen-2.0/tools
