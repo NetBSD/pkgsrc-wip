@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/10/01 00:49:31 xtraeme Exp $
+
+--- xenctld/blkif.c.orig	2005-10-01 02:12:20.000000000 +0200
++++ xenctld/blkif.c	2005-10-01 02:12:34.000000000 +0200
+@@ -12,7 +12,7 @@
+ #include <stdio.h>
+ #include <sys/types.h>
+ #include <unistd.h>
+-
++#include <string.h>
+ 
+ struct domain *get_domain(struct xen_info *info, domid_t domid)
+ {

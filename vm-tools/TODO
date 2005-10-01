@@ -1,1 +1,4 @@
-NOTE: this is incomplete and does not build yet!
+$Id: TODO,v 1.2 2005/10/01 00:49:31 xtraeme Exp $
+
+- Actually it can be built on NetBSD, but I have not tested it
+  yet.

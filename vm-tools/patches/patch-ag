@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2005/10/01 00:49:31 xtraeme Exp $
+
+--- xenctld/netif.c.orig	2005-10-01 02:35:02.000000000 +0200
++++ xenctld/netif.c	2005-10-01 02:35:15.000000000 +0200
+@@ -7,6 +7,7 @@
+ #include "common.h"
+ 
+ #include <malloc.h>
++#include <string.h>
+ 
+ #include "dump.h"
+ 

@@ -1,0 +1,12 @@
+$NetBSD: patch-al,v 1.1 2005/10/01 00:49:31 xtraeme Exp $
+
+--- tools/vm-vif.c.orig	2005-10-01 02:39:28.000000000 +0200
++++ tools/vm-vif.c	2005-10-01 02:39:39.000000000 +0200
+@@ -28,6 +28,7 @@
+ #include <time.h>
+ #include <fcntl.h>
+ #include <getopt.h>
++#include <string.h>
+ 
+ #include <xc.h>
+ #include "../xenctld/xenctld.h"

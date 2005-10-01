@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2005/10/01 00:49:31 xtraeme Exp $
+
+--- xenctld/dump.c.orig	2005-10-01 02:29:09.000000000 +0200
++++ xenctld/dump.c	2005-10-01 02:29:56.000000000 +0200
+@@ -360,9 +360,11 @@
+ 		} else if (msg->subtype == CMSG_SHUTDOWN_SUSPEND) {
+ 			debug_begin("SHUTDOWN", "SUSPEND");
+ 			debug_end("SHUTDOWN", "SUSPEND");
++#ifdef __linux__
+ 		} else if (msg->subtype == CMSG_SHUTDOWN_SYSRQ) {
+ 			debug_begin("SHUTDOWN", "SYSRQ");
+ 			debug_end("SHUTDOWN", "SYSRQ");
++#endif
+ 		} else {
+ 			debug_begin("SHUTDOWN", "UNKNOWN");
+ 			debug_field(msg, subtype, "%u");

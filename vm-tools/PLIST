@@ -1,1 +1,35 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/22 10:11:49 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/01 00:49:31 xtraeme Exp $
+man/man1/vm-build.linux.1
+man/man1/vm-build.vmx.1
+man/man1/vm-console.1
+man/man1/vm-cpu.1
+man/man1/vm-create.1
+man/man1/vm-destroy.1
+man/man1/vm-dmesg.1
+man/man1/vm-info.1
+man/man1/vm-list.1
+man/man1/vm-memory.1
+man/man1/vm-pause.1
+man/man1/vm-restore.linux.1
+man/man1/vm-save.linux.1
+man/man1/vm-shutdown.1
+man/man1/vm-tools.1
+man/man1/vm-vbd.1
+man/man1/vm-vif.1
+sbin/vm-build.linux
+sbin/vm-console
+sbin/vm-cpu
+sbin/vm-create
+sbin/vm-destroy
+sbin/vm-dmesg
+sbin/vm-info
+sbin/vm-list
+sbin/vm-memory
+sbin/vm-pause
+sbin/vm-restore.linux
+sbin/vm-save.linux
+sbin/vm-shutdown
+sbin/vm-vbd
+sbin/vm-vif
+sbin/vm-xs
+sbin/xenctld
