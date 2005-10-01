@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/28 22:39:56 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/01 05:41:33 minskim Exp $
 #
 
 DISTNAME=		heme-0.4
@@ -9,8 +9,12 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://keihanna.dl.sourceforge.net/sourceforge/heme/
 COMMENT=		Fast and portable console hex editor
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 BUILD_TARGET=		heme
 USE_TOOLS+=		gmake
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/heme ${PREFIX}/bin
