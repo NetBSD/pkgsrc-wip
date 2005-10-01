@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1938 2005/09/28 23:36:08 rillig Exp $
-# $Id: Makefile,v 1.1938 2005/09/28 23:36:08 rillig Exp $
+# $NetBSD: Makefile,v 1.1939 2005/10/01 05:59:37 minskim Exp $
+# $Id: Makefile,v 1.1939 2005/10/01 05:59:37 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -364,7 +364,6 @@ SUBDIR+=	hanzim
 SUBDIR+=	hasciicam
 SUBDIR+=	hdparm
 SUBDIR+=	help2man
-SUBDIR+=	heme
 SUBDIR+=	heroes
 SUBDIR+=	hol-light
 SUBDIR+=	hping3
