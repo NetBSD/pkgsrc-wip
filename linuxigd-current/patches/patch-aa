@@ -1,0 +1,52 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/10/02 13:35:54 obache Exp $
+
+--- Makefile.orig	2004-11-14 05:05:43.000000000 +0900
++++ Makefile
+@@ -1,33 +1,34 @@
+ CC=gcc
+-INCLUDES= -I/usr/include/upnp  -I../include
+-LIBS= -lpthread -lupnp -lixml -lthreadutil -L../libs
++LIBS= $(PTHREAD_LIBS) -lupnp -lixml -lthreadutil -L../libs
+ FILES= main.o gatedevice.o pmlist.o util.o config.o
+ 
+-CFLAGS += -Wall -g
++CFLAGS += -Wall -g $(PTHREAD_CFLAGS)
++LDFLAGS += $(PTHREAD_LDFLAGS)
+ 
+ ifdef HAVE_LIBIPTC
+ LIBS += -liptc
+-INCLUDES += -DHAVE_LIBIPTC
++CFLAGS += -DHAVE_LIBIPTC
+ FILES += iptc.o
+ endif
+ 
+ all: upnpd
+ 
+ upnpd: $(FILES)
+-	$(CC) $(CFLAGS) $(FILES) $(LIBS) -o  $@ 
++	$(CC) $(LDFLAGS) $(FILES) $(LIBS) -o  $@ 
+ 	@echo "make $@ finished on `date`"
+ 
+ %.o:	%.c
+-	$(CC) $(CFLAGS) $(INCLUDES) -c $<
++	$(CC) $(CFLAGS) -c $<
+ 
+ clean:
+ 	rm -f *.o upnpd
+ 
+ install: upnpd
+-	@install -d /etc/linuxigd
+-	@install etc/gatedesc.xml /etc/linuxigd
+-	@install etc/gateconnSCPD.xml  /etc/linuxigd
+-	@install etc/gateicfgSCPD.xml /etc/linuxigd
+-	@install etc/dummy.xml /etc/linuxigd
+-	@install upnpd /usr/sbin
+-	@install etc/upnpd.conf /etc
++	@install -d ${PREFIX}/share/examples/linuxigd
++	@install etc/gatedesc.xml ${PREFIX}/share/examples/linuxigd
++	@install etc/gateconnSCPD.xml  ${PREFIX}/share/examples/linuxigd
++	@install etc/gateicfgSCPD.xml ${PREFIX}/share/examples/linuxigd
++	@install etc/dummy.xml ${PREFIX}/share/examples/linuxigd
++	@install etc/ligd.gif ${PREFIX}/share/examples/linuxigd
++	@install upnpd ${PREFIX}/sbin
++	@install etc/upnpd.conf ${PREFIX}/share/examples/linuxigd

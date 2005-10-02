@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/10/02 13:35:54 obache Exp $
+
+--- util.c.orig	2003-09-19 14:16:32.000000000 +0900
++++ util.c
+@@ -2,7 +2,12 @@
+ #include <stdio.h>
+ #include <syslog.h>
+ #include <arpa/inet.h>
++#ifdef __linux__
+ #include <linux/sockios.h>
++#else
++#include <sys/sockio.h>
++#include <sys/socket.h>
++#endif
+ #include <net/if.h>
+ #include <netinet/in.h>
+ #include <sys/ioctl.h>

@@ -1,0 +1,7 @@
+$Id: TODO,v 1.1.1.1 2005/10/02 13:35:54 obache Exp $
+
+Can compile on FreeBSD/OpenBSD/Linux ?
+
+Can work with pf?
+
+Startup script (how to specify required packet filtering tool?)

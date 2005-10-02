@@ -1,0 +1,85 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/10/02 13:35:54 obache Exp $
+
+--- pmlist.c.orig	2005-09-26 22:15:44.000000000 +0900
++++ pmlist.c
+@@ -255,21 +255,39 @@ int pmlist_AddPortMapping (int enabled, 
+ 	char command[500];
+ 	int status;
+ 	
++#if defined(USE_IPTABLES)
+ 	sprintf(command, "%s -t nat -A %s -i %s -p %s --dport %s -j DNAT --to %s:%s", g_iptables, g_preroutingChainName, g_extInterfaceName, protocol, externalPort, internalClient, internalPort);
++#elif defined(USE_PF)
++	GetIpAddressStr(ExternalIPAddress, g_extInterfaceName);
++	snprintf(command, sizeof(command), "echo rdr pass on %s proto %s from any to %s port %d '->' %s port %d | /sbin/pfctl -a upnpd/%s-%s-%s-%d-%s-%d -f -",
++ 		g_extInterfaceName, protocol, ExternalIPAddress, externalPort, internalClient, internalPort,
++ 		g_extInterfaceName, protocol, ExternalIPAddress, externalPort, internalClient, internalPort);
++#elif defined(USE_IPFILTER)
++	GetIpAddressStr(ExternalIPAddress, g_extInterfaceName);
++	snprintf(command, sizeof(command), "echo rdr %s %s/32 port %s -\\> %s port %s %s | /usr/sbin/ipnat -f -",
++		g_extInterfaceName, ExternalIPAddress, externalPort,
++		internalClient, internalPort, protocol);
++#endif
+ 	if (g_debug) syslog(LOG_DEBUG, command);
+ 
+ 	if (!fork()) {
+-		system (command);
++		_exit(system(command));
+ 	} else {
+ 		wait(&status);		
+ 	}
+ 
+ 	if (g_forwardRules)
+ 	{
++#if defined(USE_IPTABLES)
+ 	    sprintf(command,"%s -I %s -p %s -d %s --dport %s -j ACCEPT", g_iptables,g_forwardChainName, protocol, internalClient, internalPort);
++#elif defined(USE_PF)
++	    sprintf(command,"echo");
++#elif defined(USE_IPFILTER)
++	    sprintf(command,"echo");
++#endif
+ 	    if (g_debug) syslog(LOG_DEBUG, command);
+ 			if (!fork()) {
+-				system (command);
++				_exit(system(command));
+ 			} else {
+ 				wait(&status);		
+ 			}
+@@ -298,22 +316,36 @@ int pmlist_DeletePortMapping(int enabled
+ 	char command[500];
+ 	int status;
+ 	
++#if defined(USE_IPTABLES)
+ 	sprintf(command, "%s -t nat -D %s -i %s -p %s --dport %s -j DNAT --to %s:%s",
+ 			g_iptables, g_preroutingChainName, g_extInterfaceName, protocol, externalPort, internalClient, internalPort);
++#elif defined(USE_PF)
++	sprintf(command,"/sbin/pfctl -a upnpd/%s-%s-%s-%s-%s-%s -F all", g_extInterfaceName, ExternalIPAddress, externalPort, internalClient, internalPort, protocol)
++#elif defined(USE_IPFILTER)
++	snprintf(command, sizeof(command), "echo rdr %s %s/32 port %s -\\> %s port %s %s | /usr/sbin/ipnat -rf -",
++		g_extInterfaceName, ExternalIPAddress, externalPort,
++		internalClient, internalPort, protocol);
++#endif
+ 	if (g_debug) syslog(LOG_DEBUG, command);
+ 
+ 	if (!fork()) {
+-		system (command);
++		_exit(system(command));
+ 	} else {
+ 		wait(&status);		
+ 	}
+ 
+ 	if (g_forwardRules)
+ 	{
++#if defined(USE_IPTABLES)
+ 	    sprintf(command,"%s -D %s -p %s -d %s --dport %s -j ACCEPT", g_iptables, g_forwardChainName, protocol, internalClient, internalPort);
++#elif defined(USE_PF)
++	    sprintf(command,"echo");
++#elif defined(USE_IPFILTER)
++	    sprintf(command,"echo");
++#endif
+ 	    if (g_debug) syslog(LOG_DEBUG, command);
+ 			if (!fork()) {
+-				system (command);
++				_exit(system(command));
+ 			} else {
+ 				wait(&status);		
+ 			}
