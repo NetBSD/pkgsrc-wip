@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1939 2005/10/01 05:59:37 minskim Exp $
-# $Id: Makefile,v 1.1939 2005/10/01 05:59:37 minskim Exp $
+# $NetBSD: Makefile,v 1.1940 2005/10/02 13:37:47 obache Exp $
+# $Id: Makefile,v 1.1940 2005/10/02 13:37:47 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -542,6 +542,7 @@ SUBDIR+=	linux-wlan-ng
 SUBDIR+=	linux24-kernel
 SUBDIR+=	linux24-kernel-headers
 SUBDIR+=	linuxigd
+SUBDIR+=	linuxigd-current
 SUBDIR+=	linuxtv-dvb-apps
 SUBDIR+=	lletters
 SUBDIR+=	lmarbles
