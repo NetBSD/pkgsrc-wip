@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/08/23 20:08:41 shattered Exp $
+# $NetBSD: Makefile,v 1.14 2005/10/02 16:29:38 shattered Exp $
 #
 
 DISTNAME=		bacula-1.36.2
@@ -42,7 +42,6 @@ CONFIGURE_ARGS+=	--with-dir-user=${BACULA_DIR_USER}	\
 			--with-dir-group=${BACULA_GROUP}
 CONFIGURE_ARGS+=	--with-sd-user=${BACULA_SD_USER}	\
 			--with-sd-group=${BACULA_GROUP}
-CONFIGURE_ARGS+=	--with-tcp-wrappers=${PREFIX}
 .if ${BACULA_DB} == "sqlite"
 CONFIGURE_ARGS+=	--with-sqlite=${PREFIX}
 .endif
@@ -86,6 +85,5 @@ pre-install:
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
