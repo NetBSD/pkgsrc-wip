@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/09/27 16:10:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/03 08:41:24 marmfield Exp $
 #
 
 DISTNAME=		Crypt-SmbHash-0.12
@@ -13,7 +13,9 @@ COMMENT=		Perl5 module for generating LM/NT hashes
 
 DEPENDS+=		p5-Digest-MD4>=1.3:../../security/p5-Digest-MD4
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/SmbHash/.packlist
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+PERL5_PACKLIST=		auto/Crypt/SmbHash/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
