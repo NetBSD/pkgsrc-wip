@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1940 2005/10/02 13:37:47 obache Exp $
-# $Id: Makefile,v 1.1940 2005/10/02 13:37:47 obache Exp $
+# $NetBSD: Makefile,v 1.1941 2005/10/03 02:05:53 ykomatsu Exp $
+# $Id: Makefile,v 1.1941 2005/10/03 02:05:53 ykomatsu Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1250,6 +1250,7 @@ SUBDIR+=	z26
 SUBDIR+=	zapping
 SUBDIR+=	zidrav
 SUBDIR+=	zinf
+SUBDIR+=	zope3
 SUBDIR+=	zope3-unstable
 SUBDIR+=	zphoto
 SUBDIR+=	zsnes-devel
