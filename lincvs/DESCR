@@ -1,5 +1,5 @@
 LinCVS is a graphical Interface for the cvs client commandline tool on the
-Unix, Windows and Mac OS X platform. It allows ato load modules from a
+Unix, Windows and Mac OS X platform. It allows to load modules from a
 server (checkout), create modules on the server (import), as well as
 checking the state of directories and individual files or updating them.
 Basic operations like add, remove and commit are supported as matter of
