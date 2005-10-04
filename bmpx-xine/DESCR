@@ -1,0 +1,5 @@
+BMPx is an audio player that can be either used with a built-in frontend
+which currently utilizes Winamp 2.x-compatible skins, or as a daemon for
+other frontends to connect via a DBus interface.
+
+This package is built using the xine backend.
