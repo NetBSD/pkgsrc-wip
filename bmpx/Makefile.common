@@ -1,0 +1,36 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2005/10/04 12:30:24 leonardschmidt Exp $
+#
+
+DISTNAME=	bmpx-0.12-RC0
+CATEGORIES=	audio
+MASTER_SITES=	http://download.berlios.de/bmpx/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	lems@gmx.net
+HOMEPAGE=	http://bmpx.berlios.de/
+COMMENT=	Audio player to be used with a frontend or as a daemon
+
+DISTINFO_FILE=	${.CURDIR}/../../wip/bmpx/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/bmpx/patches
+PLIST_SRC=	${.CURDIR}/../../wip/bmpx/PLIST
+
+GNU_CONFIGURE=		yes
+USE_DIRS+=		xdg-1.1
+USE_TOOLS+=		gmake pkg-config
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+
+# needs dbus >= 0.35.2
+CONFIGURE_ARGS+=	--disable-dbus
+
+SUBST_CLASSES+=		shebang
+SUBST_STAGE.shebang=	pre-configure
+SUBST_FILES.shebang=	scripts/mkrevision.sh
+SUBST_SED.shebang=	-e 's|/bin/bash|${SH}|g'
+
+.include "../../audio/taglib/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/fam.buildlink3.mk"

@@ -1,0 +1,3 @@
+- bits/signum.h does not exist on NetBSD.
+- Cannot play Oggs:
+/usr/pkg/lib/libvorbis.so.0: Undefined PLT symbol "ldexp" (symnum = 58)

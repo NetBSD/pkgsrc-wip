@@ -1,0 +1,112 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/04 12:30:24 leonardschmidt Exp $
+bin/bmp-remote
+bin/bmpx
+lib/libskinned.la
+man/man1/bmpx.1
+share/applications/bmpx.desktop
+share/bmp-remote/bmp-remote-image.png
+share/bmp-remote/bmp_remote.glade
+share/bmpx/data/GPL.txt
+share/bmpx/glade/dialog_add_files.glade
+share/bmpx/glade/dialog_add_from_library.glade
+share/bmpx/glade/dialog_add_url.glade
+share/bmpx/glade/dialog_file_info.glade
+share/bmpx/glade/dialog_preferences.glade
+share/bmpx/glade/dialog_rename_playlist.glade
+share/bmpx/icons/darksphere/icon_player_128.png
+share/bmpx/icons/darksphere/icon_player_16.png
+share/bmpx/icons/darksphere/icon_player_32.png
+share/bmpx/icons/darksphere/icon_player_48.png
+share/bmpx/icons/darksphere/icon_player_64.png
+share/bmpx/icons/darksphere/icon_playlist_128.png
+share/bmpx/icons/darksphere/icon_playlist_16.png
+share/bmpx/icons/darksphere/icon_playlist_32.png
+share/bmpx/icons/darksphere/icon_playlist_48.png
+share/bmpx/icons/darksphere/icon_playlist_64.png
+share/bmpx/icons/display/icon_player_128.png
+share/bmpx/icons/display/icon_player_16.png
+share/bmpx/icons/display/icon_player_32.png
+share/bmpx/icons/display/icon_player_48.png
+share/bmpx/icons/display/icon_player_64.png
+share/bmpx/icons/display/icon_playlist_128.png
+share/bmpx/icons/display/icon_playlist_16.png
+share/bmpx/icons/display/icon_playlist_32.png
+share/bmpx/icons/display/icon_playlist_48.png
+share/bmpx/icons/display/icon_playlist_64.png
+share/bmpx/icons/plastic/icon_player_128.png
+share/bmpx/icons/plastic/icon_player_16.png
+share/bmpx/icons/plastic/icon_player_32.png
+share/bmpx/icons/plastic/icon_player_48.png
+share/bmpx/icons/plastic/icon_player_64.png
+share/bmpx/icons/plastic/icon_playlist_128.png
+share/bmpx/icons/plastic/icon_playlist_16.png
+share/bmpx/icons/plastic/icon_playlist_32.png
+share/bmpx/icons/plastic/icon_playlist_48.png
+share/bmpx/icons/plastic/icon_playlist_64.png
+share/bmpx/icons/red/icon_player_128.png
+share/bmpx/icons/red/icon_player_16.png
+share/bmpx/icons/red/icon_player_32.png
+share/bmpx/icons/red/icon_player_48.png
+share/bmpx/icons/red/icon_player_64.png
+share/bmpx/icons/red/icon_playlist_128.png
+share/bmpx/icons/red/icon_playlist_16.png
+share/bmpx/icons/red/icon_playlist_32.png
+share/bmpx/icons/red/icon_playlist_48.png
+share/bmpx/icons/red/icon_playlist_64.png
+share/bmpx/images/about_logo.png
+share/bmpx/images/appearance.png
+share/bmpx/images/appearance_ia.png
+share/bmpx/images/audio.png
+share/bmpx/images/eq.png
+share/bmpx/images/eq_ia.png
+share/bmpx/images/library.png
+share/bmpx/images/library_ia.png
+share/bmpx/images/logo-experimental.png
+share/bmpx/images/mouse.png
+share/bmpx/images/mouse_ia.png
+share/bmpx/images/playback.png
+share/bmpx/images/playback_ia.png
+share/bmpx/images/playlist.png
+share/bmpx/images/playlist_ia.png
+share/bmpx/images/preferences-logo.png
+share/bmpx/images/wait.gif
+share/bmpx/skins/default/README
+share/bmpx/skins/default/balance.bmp
+share/bmpx/skins/default/cbuttons.bmp
+share/bmpx/skins/default/eq_ex.bmp
+share/bmpx/skins/default/eqmain.bmp
+share/bmpx/skins/default/main.bmp
+share/bmpx/skins/default/monoster.bmp
+share/bmpx/skins/default/nums_ex.bmp
+share/bmpx/skins/default/playpaus.bmp
+share/bmpx/skins/default/pledit.bmp
+share/bmpx/skins/default/pledit.txt
+share/bmpx/skins/default/posbar.bmp
+share/bmpx/skins/default/shufrep.bmp
+share/bmpx/skins/default/text.bmp
+share/bmpx/skins/default/titlebar.bmp
+share/bmpx/skins/default/viscolor.txt
+share/bmpx/skins/default/volume.bmp
+share/bmpx/ui/main.ui
+share/bmpx/ui/playlist.ui
+share/icons/hicolor/48x48/apps/bmpx.png
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/bmpx.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/bmpx.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bmpx.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/bmpx.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bmpx.mo
+@comment @dirrm share/icons/hicolor/48x48/apps
+@dirrm share/bmpx/ui
+@dirrm share/bmpx/skins/default
+@dirrm share/bmpx/skins
+@dirrm share/bmpx/images
+@dirrm share/bmpx/icons/red
+@dirrm share/bmpx/icons/plastic
+@dirrm share/bmpx/icons/display
+@dirrm share/bmpx/icons/darksphere
+@dirrm share/bmpx/icons
+@dirrm share/bmpx/glade
+@dirrm share/bmpx/data
+@dirrm share/bmpx
+@dirrm share/bmp-remote
+@comment in xdg-dirs: @dirrm share/applications
