@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1941 2005/10/03 02:05:53 ykomatsu Exp $
-# $Id: Makefile,v 1.1941 2005/10/03 02:05:53 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.1942 2005/10/04 08:26:06 jgoamakf Exp $
+# $Id: Makefile,v 1.1942 2005/10/04 08:26:06 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -770,6 +770,7 @@ SUBDIR+=	p5-Lingua-Stem-Snowball-No
 SUBDIR+=	p5-Lingua-Stem-Snowball-Se
 SUBDIR+=	p5-Lingua-StopWords
 SUBDIR+=	p5-Log-Log4perl
+SUBDIR+=	p5-MKDoc-XML
 SUBDIR+=	p5-Mail-Webmail-Gmail
 SUBDIR+=	p5-MasonX-Apache2Handler
 SUBDIR+=	p5-Math-FixedPrecision
@@ -786,6 +787,7 @@ SUBDIR+=	p5-PDL
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Path-Class
 SUBDIR+=	p5-PathTools
+SUBDIR+=	p5-Petal
 SUBDIR+=	p5-Plucene
 SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
 SUBDIR+=	p5-PluceneSimple
