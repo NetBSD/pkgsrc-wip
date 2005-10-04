@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/10/04 17:11:09 ghen Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/04 17:12:33 ghen Exp $
 #
 
 DISTNAME=		lincvs-1.4.3-0-generic-src
@@ -17,7 +17,7 @@ SUBST_STAGE.qmake=	post-patch
 SUBST_FILES.qmake=	lincvs.pro
 SUBST_SED.qmake=	-e 's,%%QTDIR%%,${PREFIX}${QTDIR},'
 
-pre-build:
+do-configure:
 	 ${QTDIR}/bin/qmake -o ${WRKSRC}/Makefile ${WRKSRC}/lincvs.pro
 
 do-install:
