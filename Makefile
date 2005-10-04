@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1942 2005/10/04 08:26:06 jgoamakf Exp $
-# $Id: Makefile,v 1.1942 2005/10/04 08:26:06 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.1943 2005/10/04 12:32:38 leonardschmidt Exp $
+# $Id: Makefile,v 1.1943 2005/10/04 12:32:38 leonardschmidt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -122,6 +122,8 @@ SUBDIR+=	bluez-hciemu
 SUBDIR+=	bluez-libs
 SUBDIR+=	bluez-utils
 SUBDIR+=	bmap
+SUBDIR+=	bmpx
+SUBDIR+=	bmpx-xine
 SUBDIR+=	bnr2
 SUBDIR+=	boa
 SUBDIR+=	bridge-utils
