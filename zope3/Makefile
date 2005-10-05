@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/03 02:00:23 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/05 13:59:38 ykomatsu Exp $
 
 DISTNAME=	Zope-3.1.0
 PKGNAME=	zope3-3.1.0
@@ -16,7 +16,7 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-python ${PYTHONBIN} \
 		--prefix ${PREFIX}/share/zope3 \
 		--force
-BUILD_TARGET=
+BUILD_TARGET=	build
 
 USE_PKGINSTALL=	yes
 RCD_SCRIPTS=	zope3 zss3
