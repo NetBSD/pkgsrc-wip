@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2005/10/06 20:40:01 ghen Exp $
+
+--- man/prozilla.1.orig	2001-08-17 16:38:55.000000000 +0200
++++ man/prozilla.1
+@@ -1,7 +1,7 @@
+ .TH PROZILLA 1 "May 30, 2001"
+ .SH "NAME"
+ .LP
+-\fBProZilla\fR \- a download accelerator for GNU/Linux
++\fBProZilla\fR \- a download accelerator for UNIX
+ .SH "SYNTAX"
+ .B proz
+ [OPTIONS] <URL>
