@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.1 2005/10/06 16:58:31 ghen Exp $
+
+--- Makefile.in.orig	2005-10-06 17:26:44.000000000 +0200
++++ Makefile.in
+@@ -367,10 +367,6 @@ installdirs mostlyclean-generic distclea
+ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 
+-install:
+-	 $(INSTALL) -d $(sysconfdir)
+-	if [ ! -e $(sysconfdir)/prozilla.conf ]; then cp prozrc.sample $(sysconfdir)/prozilla.conf; fi; cp prozrc.sample $(sysconfdir)/prozilla.conf-sample
+-
+ #Rule to build tar-gzipped distribution package
+ $(PACKAGE)-$(VERSION).tar.gz: dist
+ 
