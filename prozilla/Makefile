@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:31:21 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/06 15:14:40 ghen Exp $
 #
 
 DISTNAME=		prozilla-1.3.6
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://prozilla.genesys.ro/downloads/prozilla/tarballs/
 
