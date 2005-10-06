@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2005/10/04 12:30:24 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/10/06 08:34:01 leonardschmidt Exp $
 #
 
-DISTNAME=	bmpx-0.12-RC0
+DISTNAME=	bmpx-0.12-RC3
 CATEGORIES=	audio
 MASTER_SITES=	http://download.berlios.de/bmpx/
 EXTRACT_SUFX=	.tar.bz2
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--disable-dbus
 
 SUBST_CLASSES+=		shebang
 SUBST_STAGE.shebang=	pre-configure
-SUBST_FILES.shebang=	scripts/mkrevision.sh
+SUBST_FILES.shebang=	scripts/mkrevision.sh scripts/mkgets.sh
 SUBST_SED.shebang=	-e 's|/bin/bash|${SH}|g'
 
 .include "../../audio/taglib/buildlink3.mk"
