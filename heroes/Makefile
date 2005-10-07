@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2005/07/27 16:25:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/07 13:32:50 rillig Exp $
 #
 
 DISTNAME=		heroes-0.21
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=heroes/}
-DISTFILES=		heroes-0.21.tar.bz2 heroes-data-1.5.tar.bz2 \
-			heroes-sound-tracks-1.0.tar.bz2 \
-			heroes-hq-sound-tracks-1.0.tar.bz2  \
-			heroes-sound-effects-1.0.tar.bz2
+DISTFILES=		${HEROES_DIRS:=.tar.bz2}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://heroes.sourceforge.net/
@@ -18,28 +15,16 @@ BUILDLINK_DEPENDS.gettext+=	gettext-lib>=0.10.36
 WRKSRC=			${WRKDIR}
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-sdl-mixer --enable-sound
 
 HEROES_DIRS=		heroes-0.21 heroes-data-1.5 \
 			heroes-hq-sound-tracks-1.0 \
 			heroes-sound-effects-1.0 \
 			heroes-sound-tracks-1.0
+HEROES_WORKDIRS=	${HEROES_DIRS:C,^,${WRKSRC}/,}
 
-CONFIGURE_ARGS+=	--with-sdl-mixer --enable-sound
-
-do-configure:
-	@for dir in ${HEROES_DIRS}; do \
-		cd ${WRKSRC}/$$dir && ${SETENV} ${CONFIGURE_ENV} ./configure \
-			${CONFIGURE_ARGS}; done
-
-do-build:
-	@for dir in ${HEROES_DIRS}; do \
-		cd ${WRKSRC}/$$dir && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS}; \
-	done
-
-do-install:
-	@for dir in ${HEROES_DIRS}; do \
-		cd ${WRKSRC}/$$dir && ${SETENV} ${MAKE_ENV} ${MAKE} \
-			${MAKE_FLAGS} install; done
+CONFIGURE_DIRS=		${HEROES_WORKDIRS}
+BUILD_DIRS=		${HEROES_WORKDIRS}
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
