@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:11:32 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/07 12:00:13 rillig Exp $
 #
 
 DISTNAME=		dnswalk-2.0.2
@@ -12,9 +12,8 @@ COMMENT=		DNS debugger
 
 DEPENDS+=		p5-Net-DNS>=0.42:../../net/p5-Net-DNS
 
-USE_PERL5=		YES
-
-REPLACE_PERL=	dnswalk makereports
+USE_TOOLS+=		perl:run
+REPLACE_PERL=		dnswalk makereports
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/dnswalk     ${PREFIX}/bin/
