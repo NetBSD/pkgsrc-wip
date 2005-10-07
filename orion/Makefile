@@ -1,5 +1,4 @@
-#
-# $NetBSD: Makefile,v 1.3 2005/02/16 22:24:26 airhead Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/07 14:06:57 rillig Exp $
 #
 
 DISTNAME=		orion-0.2
