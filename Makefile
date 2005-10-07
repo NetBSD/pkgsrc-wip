@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1944 2005/10/07 09:47:01 leonardschmidt Exp $
-# $Id: Makefile,v 1.1944 2005/10/07 09:47:01 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.1945 2005/10/07 09:52:56 leonardschmidt Exp $
+# $Id: Makefile,v 1.1945 2005/10/07 09:52:56 leonardschmidt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1204,7 +1204,6 @@ SUBDIR+=	wireless-tools
 SUBDIR+=	wise2
 SUBDIR+=	wkf
 SUBDIR+=	wmii
-SUBDIR+=	wmii-cairo
 SUBDIR+=	wmitime
 SUBDIR+=	wmmp
 SUBDIR+=	wmnetload
