@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1943 2005/10/04 12:32:38 leonardschmidt Exp $
-# $Id: Makefile,v 1.1943 2005/10/04 12:32:38 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.1944 2005/10/07 09:47:01 leonardschmidt Exp $
+# $Id: Makefile,v 1.1944 2005/10/07 09:47:01 leonardschmidt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -988,7 +988,6 @@ SUBDIR+=	r8s
 SUBDIR+=	rar3
 SUBDIR+=	rawphoto
 SUBDIR+=	rc.subr
-SUBDIR+=	rci
 SUBDIR+=	rdiff-backup-devel
 SUBDIR+=	readseq
 SUBDIR+=	realtimebattle
