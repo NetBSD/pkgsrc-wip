@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/08/11 22:44:37 leonardschmidt Exp $
-
-SHA1 (rci-20050809.tar.bz2) = 9555ece2c3b59c1beba171de08e52d43e6ba1a1f
-RMD160 (rci-20050809.tar.bz2) = 90419dbd239814053c6419dda16b9169238dc285
-Size (rci-20050809.tar.bz2) = 53868 bytes
-SHA1 (patch-aa) = 18ec64b2c3da35046f6295f1e432eaa7eae6f011
-SHA1 (patch-ab) = 03ec12cee1f3e62d5224c73cf691d1ee30df78fd
