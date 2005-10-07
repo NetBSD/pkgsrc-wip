@@ -1,29 +1,45 @@
-$NetBSD: patch-ab,v 1.6 2005/08/27 10:00:19 leonardschmidt Exp $
+$NetBSD: patch-ab,v 1.7 2005/10/07 10:07:45 leonardschmidt Exp $
 
---- Makefile.orig	2005-08-23 21:36:08.000000000 +0000
-+++ Makefile
-@@ -76,18 +76,14 @@ clean:
- install: all
- 	@cd ${RCPREFIX}; make install
- 	@echo Installing doc to ${DESTDIR}${SHAREPREFIX}/wmii
--	@${MKDIR} -p ${DESTDIR}${SHAREPREFIX}/wmii
--	@${INSTDATA} ${SHARE} ${DESTDIR}${SHAREPREFIX}/wmii
-+	@${BSD_INSTALL_DATA_DIR} ${DESTDIR}${SHAREPREFIX}/wmii
-+	@${BSD_INSTALL_DATA} ${SHARE} ${DESTDIR}${SHAREPREFIX}/wmii
- 	@echo Installing executable files to ${DESTDIR}${PREFIX}/bin
--	@${MKDIR} -p ${DESTDIR}${PREFIX}/bin
--	@${INSTBIN} ${BIN} ${DESTDIR}${PREFIX}/bin
--	@for i in ${DEST_BIN}; do ${MODBIN} ${DESTDIR}${PREFIX}/bin/$$i; done
-+	@${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
-+	@${BSD_INSTALL_PROGRAM} ${BIN} ${DESTDIR}${PREFIX}/bin
- 	@echo Installing manual pages to ${DESTDIR}${MANPREFIX}/man1
--	@${MKDIR} -p ${DESTDIR}${MANPREFIX}/man1
--	@${INSTDATA} ${MAN1} ${DESTDIR}${MANPREFIX}/man1
--	@${MODDATA} ${DESTDIR}${MANPREFIX}/man1/wmii.1
--	@${MODDATA} ${DESTDIR}${MANPREFIX}/man1/wmir.1
--	@${MODDATA} ${DESTDIR}${MANPREFIX}/man1/wmibar.1
-+	@${BSD_INSTALL_MAN_DIR} ${DESTDIR}${MANPREFIX}/man1
-+	@${BSD_INSTALL_MAN} ${MAN1} ${DESTDIR}${MANPREFIX}/man1
- 	@echo "wmii successfully installed"
+--- config.mk.orig	2005-10-06 17:31:12.000000000 +0000
++++ config.mk
+@@ -1,16 +1,16 @@
+ # Customize to fit your system
  
- uninstall:
+ # paths
+-PREFIX      = /usr/local
+-CONFPREFIX  = ${PREFIX}/etc
+-MANPREFIX   = ${PREFIX}/share/man
++#PREFIX      = /usr/local
++CONFPREFIX  = ${PREFIX}/share/examples
++MANPREFIX   = ${PREFIX}/man
+ SHAREPREFIX = ${PREFIX}/share
+-9PREFIX     = ${PREFIX}/9
++9PREFIX     = ${PREFIX}
+ 
+ INCDIR      = ${PREFIX}/include
+ LIBDIR      = ${PREFIX}/lib
+-X11INC      = /usr/X11R6/include
+-X11LIB      = /usr/X11R6/lib
++X11INC      = ${X11BASE}/include
++X11LIB      = ${X11BASE}/lib
+ 
+ # includes and libs
+ INCLUDES    = -I. -I${INCDIR} -I/usr/include -I${X11INC}
+@@ -20,14 +20,14 @@ LIBS        = -L${LIBDIR} -L/usr/lib -lc
+ VERSION     = 3-current
+ VERSION     = 20051007
+ # Note: - under Solaris add -D__EXTENSIONS__ to CFLAGS
+-CFLAGS      = -O0 -g -Wall ${INCLUDES} -DVERSION=\"${VERSION}\"
+-LDFLAGS     = -g ${LIBS}
++CFLAGS      += ${INCLUDES} -DVERSION=\"${VERSION}\"
++LDFLAGS     += ${LIBS}
+ #CFLAGS      = -Os ${INCLUDES} -DVERSION=\"${VERSION}\"
+ #LDFLAGS     = ${LIBS}
+ 
+ # userland
+ AR          = ar cr
+-CC          = cc
++#CC          = cc
+ CP          = cp -f
+ COMPRESS    = bzip2
+ DARCS		= darcs

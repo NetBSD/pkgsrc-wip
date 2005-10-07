@@ -1,50 +1,54 @@
-$NetBSD: patch-aa,v 1.11 2005/08/27 10:00:19 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.12 2005/10/07 10:07:45 leonardschmidt Exp $
 
---- config.mk.orig	2005-08-23 21:36:08.000000000 +0000
-+++ config.mk
-@@ -1,34 +1,34 @@
- # Customize to fit your system
+--- Makefile.orig	2005-10-06 17:27:26.000000000 +0000
++++ Makefile
+@@ -7,9 +7,9 @@ include config.mk
  
- # paths
--PREFIX      = /usr/local
--CONFPREFIX  = ${PREFIX}/etc
--MANPREFIX   = ${PREFIX}/share/man
-+#PREFIX      = /usr/local
-+CONFPREFIX  = ${PREFIX}/share/examples
-+MANPREFIX   = ${PREFIX}/man
- SHAREPREFIX = ${PREFIX}/share
--9PREFIX     = ${PREFIX}/9
-+9PREFIX     = ${PREFIX}
+ SUBDIRS     = libcext liblitz libixp libixp2 libwmii base util
  
- INCDIR      = ${PREFIX}/include
- LIBDIR      = ${PREFIX}/lib
--X11INC      = /usr/X11R6/include
--X11LIB      = /usr/X11R6/lib
-+X11INC      = ${X11BASE}/include
-+X11LIB      = ${X11BASE}/lib
+-BIN         = base/wmii base/wmiiwm util/wmibar util/wmifs \
++BIN         = base/wmiiwm util/wmibar util/wmifs \
+               util/wmikeys util/wmimenu util/wmiplumb util/wmir \
+-              util/wmirefcard util/wmiwarp
++              util/wmiwarp
  
- # includes and libs
--INCLUDES    = -I. -I${INCDIR} -I/usr/include -I${X11INC}
--LIBS        = -L${LIBDIR} -L/usr/lib -lc -lm -L${X11LIB} -lX11
-+INCLUDES    = -I. -I${INCDIR} -I${PREFIX}/include -I${X11INC}
-+LIBS        = -L${LIBDIR} -L${PREFIX}/lib -lc -lm -L${X11LIB} -lX11
- RCPREFIX    = rc
+ MAN1        = base/wmii.1 base/wmiiwm.1 util/wmibar.1 util/wmifs.1 \
+               util/wmikeys.1 util/wmimenu.1 util/wmir.1
+@@ -52,28 +52,17 @@ clean:
  
- # compiler
- #VERSION     = 3-current
- VERSION     = 20050823
- # Note: - under Solaris add -D__EXTENSIONS__ to CFLAGS
--CFLAGS      = -O0 -g -Wall ${INCLUDES} -DVERSION=\"${VERSION}\"
--LDFLAGS     = -g ${LIBS}
-+CFLAGS      += ${INCLUDES} -DVERSION=\"${VERSION}\"
-+LDFLAGS     += ${LIBS}
- #CFLAGS      = -Os ${INCLUDES} -DVERSION=\"${VERSION}\"
- #LDFLAGS     = ${LIBS}
+ install: all
+ 	@echo Installing executable files to ${DESTDIR}${PREFIX}/bin
+-	@${MKDIR} -p ${DESTDIR}${PREFIX}/bin
+-	@${INSTBIN} ${BIN} ${DESTDIR}${PREFIX}/bin
+-	@${SED} 's|SHAREPREFIX|${SHAREPREFIX}|; s|CONFPREFIX|${CONFPREFIX}|; s|9PREFIX|${9PREFIX}|' <base/wmii >${DESTDIR}${PREFIX}/bin/wmii
+-	@${SED} 's|9PREFIX|${9PREFIX}|' <util/wmirefcard >${DESTDIR}${PREFIX}/bin/wmirefcard
+-	@for i in ${BIN}; do \
+-		${MODBIN} ${DESTDIR}${PREFIX}/bin/`basename $$i`; \
+-	done
++	@${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
++	@${BSD_INSTALL_PROGRAM} ${BIN} ${DESTDIR}${PREFIX}/bin
++	@${BSD_INSTALL_SCRIPT} util/wmirefcard base/wmii ${DESTDIR}${PREFIX}/bin
+ 	@echo Installing actions to ${DESTDIR}${CONFPREFIX}/wmii
+-	@${MKDIR} -p ${DESTDIR}${CONFPREFIX}/wmii
+-	@cd action; for i in *; do \
+-		${SED} 's|9PREFIX|${9PREFIX}|' <$$i >${DESTDIR}${CONFPREFIX}/wmii/$$i; \
+-		${MODBIN} ${DESTDIR}${CONFPREFIX}/wmii/$$i; \
+-	done
+-	@${MKDIR} -p ${DESTDIR}${SHAREPREFIX}/wmii
+-	@${INSTDATA} README ${DESTDIR}${SHAREPREFIX}/wmii
++	@${BSD_INSTALL_DATA_DIR} ${DESTDIR}${CONFPREFIX}/wmii
++	@${BSD_INSTALL_SCRIPT} action/* ${DESTDIR}${CONFPREFIX}/wmii
++	@${BSD_INSTALL_DATA_DIR} ${DESTDIR}${SHAREPREFIX}/wmii
++	@${BSD_INSTALL_DATA} README ${DESTDIR}${SHAREPREFIX}/wmii
+ 	@echo Installing manual pages to ${DESTDIR}${MANPREFIX}/man1
+-	@${MKDIR} -p ${DESTDIR}${MANPREFIX}/man1
+-	@${INSTDATA} ${MAN1} ${DESTDIR}${MANPREFIX}/man1
+-	@sed 's|CONFPREFIX|${CONFPREFIX}|' <base/wmii.1 >${DESTDIR}${MANPREFIX}/man1/wmii.1
+-	@for i in ${MAN1}; do \
+-		${MODDATA} ${DESTDIR}${MANPREFIX}/man1/`basename $$i`; \
+-	done
++	@${BSD_INSTALL_MAN_DIR} ${DESTDIR}${MANPREFIX}/man1
++	@${BSD_INSTALL_MAN} ${MAN1} ${DESTDIR}${MANPREFIX}/man1
+ 	@echo "wmii successfully installed"
  
- # userland
- AR          = ar cr
--CC          = cc
-+#CC          = cc
- CP          = cp -f
- COMPRESS    = bzip2
- INSTBIN     = ${CP}
+ uninstall:
