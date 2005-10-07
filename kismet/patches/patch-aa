@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2005/10/07 12:35:00 lsed Exp $
+
+--- configure.orig	2005-08-16 01:22:51.000000000 +0000
++++ configure
+@@ -6942,6 +6942,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
+ 	    #include <stdio.h>
++	    #include <sys/param.h>
+ 	    #include <sys/socket.h>
+ 	    #include <net/if.h>
+ 	    #include <net/if_media.h>
+@@ -8515,9 +8516,6 @@ if test "$wantopto" != "yes"; then
+ 	CXXFLAGS=`echo $CXXFLAGS | sed -e 's/-O.//g'`
+ fi
+ 
+-LIBS="$LIBS -lstdc++"
+-
+-
+ 
+ sharedatadir=$datadir
+ sharedatadir=`(

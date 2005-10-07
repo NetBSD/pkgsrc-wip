@@ -1,27 +1,61 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/03 15:53:38 poppnk Exp $
-#
+# $NetBSD: Makefile,v 1.2 2005/10/07 12:35:00 lsed Exp $
 
 DISTNAME=		kismet-2005-08-R1
-CATEGORIES=		wip net
+PKGNAME=		kismet-2005.08.01
+CATEGORIES=		net
 MASTER_SITES=		http://www.kismetwireless.net/code/
 
-MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://www.kismetwireless.net/code/
-COMMENT=		802.11 wireless network detector, sniffer and IDS.
+MAINTAINER=		skrll@NetBSD.org
+HOMEPAGE=		http://www.kismetwireless.net/
+COMMENT=		802.11 wireless network detector, sniffer and IDS
 
-USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+USE_NCURSES=		# needs libpanel
+USE_PKGINSTALL=		yes
 USE_TOOLS+=		gmake
 
-USE_LANGUAGES+=		c c++
-# On Debian I had to `ln -s /usr/lib/libstdc++.so.6 /usr/liblibstc++.so
+KISMET_USER?=		kismet
+KISMET_GROUP?=		kismet
+PKG_GROUPS=		${KISMET_GROUP}
+PKG_USERS=		${KISMET_USER}:${KISMET_GROUP}::Kismet\ user:${VARBASE}/log/kismet
 
-pre-build:
-	cd ${WRKSRC} && ${GMAKE} dep
+PKG_SYSCONFSUBDIR?=	${PKGBASE}
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=		${EGDIR}/ap_manuf ${PKG_SYSCONFDIR}/ap_manuf
+CONF_FILES+=		${EGDIR}/client_manuf ${PKG_SYSCONFDIR}/client_manuf
+CONF_FILES+=		${EGDIR}/kismet.conf.default		\
+				${PKG_SYSCONFDIR}/kismet.conf
+CONF_FILES+=		${EGDIR}/kismet_drone.conf.default	\
+				${PKG_SYSCONFDIR}/kismet_drone.conf
+CONF_FILES+=		${EGDIR}/kismet_ui.conf.default		\
+				${PKG_SYSCONFDIR}/kismet_ui.conf
+OWN_DIRS_PERMS+=	${VARBASE}/log/kismet ${KISMET_USER} ${KISMET_GROUP} 0700
 
-ONLY_FOR_PLATFORM=	Linux-*-* FreeBSD-*-* OpenBSD-*-*
-# NetBSD ?
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-.include "../../devel/gmp/buildlink3.mk"
+SUBST_CLASSES+=		user
+SUBST_MESSAGE.user=	"Fixing user name."
+SUBST_STAGE.user=	pre-configure
+SUBST_FILES.user=	conf/kismet.conf.in
+SUBST_SED.user=		's/your_user_here/${KISMET_USER}/'
+
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/ap_manuf ${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/conf/client_manuf ${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/conf/kismet.conf		\
+		${EGDIR}/kismet.conf.default
+	${INSTALL_DATA} ${WRKSRC}/conf/kismet_drone.conf	\
+		${EGDIR}/kismet_drone.conf.default
+	${INSTALL_DATA} ${WRKSRC}/conf/kismet_ui.conf		\
+		${EGDIR}/kismet_ui.conf.default
+
+.include "options.mk"
+
+.include "../../devel/glib/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.gps,v 1.1 2005/10/07 12:35:00 lsed Exp $
+bin/gpsmap
+bin/gpsmap-helper-earthamaps
+man/man1/gpsmap.1

@@ -1,21 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/03 15:53:38 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/07 12:35:00 lsed Exp $
 bin/kismet
 bin/kismet_client
 bin/kismet_drone
 bin/kismet_server
-etc/ap_manuf
-etc/client_manuf
-etc/kismet.conf
-etc/kismet_drone.conf
-etc/kismet_ui.conf
 man/man1/kismet.1
 man/man1/kismet_drone.1
 man/man5/kismet.conf.5
 man/man5/kismet_drone.conf.5
 man/man5/kismet_ui.conf.5
+share/examples/kismet/ap_manuf
+share/examples/kismet/client_manuf
+share/examples/kismet/kismet.conf.default
+share/examples/kismet/kismet_drone.conf.default
+share/examples/kismet/kismet_ui.conf.default
 share/kismet/wav/alert.wav
 share/kismet/wav/junk_traffic.wav
 share/kismet/wav/new_network.wav
 share/kismet/wav/traffic.wav
 @dirrm share/kismet/wav
 @dirrm share/kismet
+@dirrm share/examples/kismet
