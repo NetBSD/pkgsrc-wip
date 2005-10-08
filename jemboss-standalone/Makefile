@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:21 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/08 21:56:59 rillig Exp $
 #
 
 DISTNAME=		EMBOSS-2.9.0
@@ -18,7 +18,7 @@ DEPENDS+=		apache-ant>=1.5.3.1:../../devel/apache-ant
 
 DIST_SUBDIR=		emboss/emboss-2.9.0
 
-PKG_JVM=        	sun-jdk13
+PKG_DEFAULT_JVM=	sun-jdk13
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_JAVA=		yes
