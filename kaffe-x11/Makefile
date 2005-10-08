@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/12 23:51:21 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/08 11:13:17 jtonio Exp $
 #
 
 .include "../../wip/kaffe/Makefile.common"
@@ -12,7 +12,6 @@ CONFIGURE_ARGS:=  ${CONFIGURE_ARGS:S/--disable-native-awt/--with-kaffe-x-awt/}
 BUILD_DIRS=     ${WRKSRC}/config
 BUILD_DIRS+=    ${WRKSRC}/libraries/javalib
 BUILD_DIRS+=    ${WRKSRC}/include
-BUILD_DIRS+=    ${WRKSRC}/libltdl
 BUILD_DIRS+=    ${WRKSRC}/replace
 BUILD_DIRS+=    ${WRKSRC}/kaffe/kaffevm
 BUILD_DIRS+=    ${WRKSRC}/libraries/clib/classpath
