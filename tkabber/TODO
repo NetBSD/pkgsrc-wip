@@ -1,5 +1,5 @@
-$Id: TODO,v 1.1.1.1 2003/11/28 18:02:03 xtraeme Exp $
+$Id: TODO,v 1.2 2005/10/09 01:47:34 poppnk Exp $
 
 	o gnupg support
 	o ssl support
-	o others...
+	o others... (FMI: read makefile comments)
