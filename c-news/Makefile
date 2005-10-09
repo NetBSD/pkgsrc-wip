@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/08/23 11:49:43 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/09 01:14:51 rillig Exp $
 
 DISTNAME=	c-news
 PKGNAME=        c-news-CR-7
@@ -114,7 +114,7 @@ do-install:
 	cd ${WRKSRC}; ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} setup
 	cd ${WRKSRC}; ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ui readpostcheck
 .for f in checknews cnewsdo inews injnews postnews readnews
-	${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/bin/$f
+	${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/bin/${f}
 .endfor
 	${CHOWN} -R news:news ${CNEWSARTS} ${CNEWSOV} ${CNEWSCTL}
 	${CHOWN} news:news ${CNEWSBIN}/input/newsspool
