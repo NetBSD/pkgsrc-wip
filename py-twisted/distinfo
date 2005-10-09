@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2005/05/31 00:58:39 sifu Exp $
+$NetBSD: distinfo,v 1.11 2005/10/09 10:13:29 sifu Exp $
 
-SHA1 (Twisted-2.0.1.tar.bz2) = 617a1e2e053ad8825f3abdad602bc135bfeb35ba
-RMD160 (Twisted-2.0.1.tar.bz2) = e67033a2a936d2252c7e039bfc41d4f74012a6ef
-Size (Twisted-2.0.1.tar.bz2) = 1061899 bytes
+SHA1 (Twisted-2.1.0.tar.bz2) = 464c877179fa1e5a0a60120b5ce699457d208fa4
+RMD160 (Twisted-2.1.0.tar.bz2) = d4048661396c25392b048ed2b74200757b1e63c0
+Size (Twisted-2.1.0.tar.bz2) = 1078044 bytes
