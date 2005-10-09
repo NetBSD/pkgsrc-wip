@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:30 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/09 01:22:21 rillig Exp $
 
 DISTNAME=	ming-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ming-${VER}
@@ -21,7 +21,7 @@ REPLACE_RUBY_DIRS=	${WRKSRC}/examples
 post-install:
 		${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/ming
 .for f in ${EXAMPLES}
-		${INSTALL_DATA} ${WRKSRC}/examples/$f ${RUBY_EXAMPLESDIR}/ming
+		${INSTALL_DATA} ${WRKSRC}/examples/${f} ${RUBY_EXAMPLESDIR}/ming
 .endfor
 
 .include "../../wip/ming/buildlink3.mk"
