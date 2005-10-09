@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/07 02:31:13 ura Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/09 23:27:12 rillig Exp $
 
 DISTNAME=	im-147
 CATEGORIES=	mail
@@ -9,7 +9,7 @@ MAINTAINER=	ura@jp.NetBSD.org
 HOMEPAGE=	http://tats.haun.org/im/
 COMMENT=	Set of user interfaces of Email and NetNews
 
-USE_PERL5=	yes
+USE_TOOLS+=	perl:run
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	im_path_perl=${PERL5}
 CONFIGURE_ARGS= --libdir=${PREFIX}/etc

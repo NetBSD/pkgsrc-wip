@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1.1.1 2004/10/22 19:04:22 johnrshannon Exp $
+# $NetBSD: builtin.mk,v 1.2 2005/10/09 23:30:07 rillig Exp $
 
 .if !defined(_BLNK_LIBINTL_FOUND)
 _BLNK_LIBINTL_FOUND!=	\
@@ -172,7 +172,7 @@ CONFIGURE_ARGS+=	--without-libintl-prefix
 .endif
 
 .if defined(USE_MSGFMT_PLURALS) && !empty(USE_MSGFMT_PLURALS:M[Yy][Ee][Ss])
-USE_PERL5?=		build
+USE_TOOLS+=		perl
 CONFIGURE_ENV+=		MSGFMT=${BUILDLINK_DIR}/bin/msgfmt
 
 SUBST_CLASSES+=			fix-msgfmt

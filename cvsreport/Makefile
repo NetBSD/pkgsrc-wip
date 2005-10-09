@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:10:49 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/09 23:27:12 rillig Exp $
 #
 
 DISTNAME=		cvsreport-0.3.5
@@ -10,8 +10,8 @@ HOMEPAGE=		http://home.gna.org/report/
 COMMENT=		Message reports from CVS activity
 
 REPLACE_PERL+=		cvsreport
-USE_PERL5=		yes
-NO_BUILD=#
+USE_TOOLS+=		perl:run
+NO_BUILD=		yes
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cvsreport ${PREFIX}/bin/
