@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/24 10:29:57 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/10/09 01:18:05 rillig Exp $
 #
 
 DISTNAME=	GNUnet-0.6.4a
@@ -39,7 +39,7 @@ post-patch:
 post-build:
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 .for f in ${GNUNET_PLIST_ADD}
-	${ECHO} '$f' >>${PLIST_SRC}
+	${ECHO} ${f:Q} >>${PLIST_SRC}
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
