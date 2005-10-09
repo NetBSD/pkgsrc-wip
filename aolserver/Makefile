@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/08/23 11:49:43 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/09 23:18:00 rillig Exp $
 #
 
 DISTNAME=		aolserver-4.01-src
@@ -13,7 +13,7 @@ COMMENT=		America Online's open source web server
 MAKE_FLAGS=		NSHOME=${WRKSRC}
 CONFIGURE_ARGS+=	--with-tcl=${LOCALBASE}/lib
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
