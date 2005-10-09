@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:11 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/09 01:21:35 rillig Exp $
 #
 
 VERSION=		0.8.2
@@ -21,7 +21,7 @@ PATCHDIR=		${.CURDIR}/../../databases/postgresql74/patches
 
 .include "../../databases/postgresql74/Makefile.common"
 
-USE_PERL5=		YES
+USE_TOOLS+=		perl:run
 
 # Add postgis to the postgresql distfile
 DISTFILES+=      	postgis-${VERSION}.tar.gz ${DISTNAME}${EXTRACT_SUFX}
@@ -46,17 +46,17 @@ pre-build:
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${EXAMPLEDIR} ${HTMLDIR} ${SQLDIR}
 .for f in libpostgis.a libpostgis.so.0.8
-	${INSTALL_DATA} ${BUILD_DIRS}/$f ${LIBDIR}/$f
+	${INSTALL_DATA} ${BUILD_DIRS}/${f} ${LIBDIR}/${f}
 .endfor
 	${RM} -f ${LIBDIR}/libpostgis.so.0
 	${RM} -f ${LIBDIR}/libpostgis.so
 	${LN} -s libpostgis.so.0.8 ${LIBDIR}/libpostgis.so.0
 	${LN} -s libpostgis.so.0.8 ${LIBDIR}/libpostgis.so
 .for f in postgis.sql postgis_undef.sql spatial_ref_sys.sql
-	${INSTALL_DATA} ${BUILD_DIRS}/$f ${SQLDIR}/$f
+	${INSTALL_DATA} ${BUILD_DIRS}/${f} ${SQLDIR}/${f}
 .endfor
 .for f in pgsql2shp shp2pgsql
-	${INSTALL_PROGRAM} ${BUILD_DIRS}/loader/$f ${PREFIX}/bin/$f
+	${INSTALL_PROGRAM} ${BUILD_DIRS}/loader/${f} ${PREFIX}/bin/${f}
 .endfor
 	${CP} -r ${BUILD_DIRS}/examples/* ${EXAMPLEDIR}
 	${INSTALL_DATA} ${BUILD_DIRS}/README.postgis ${DOCDIR}
