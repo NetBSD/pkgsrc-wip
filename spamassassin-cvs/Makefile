@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/09/28 14:24:43 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/09 01:26:50 rillig Exp $
 
 DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}
 PKGNAME=	spamassassin-cvs-${_SA_CVS_DATE}
-PKGREVISION=	# empty
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail
 MASTER_SITES=	http://www.spamassassin.org/devel/		\
@@ -186,13 +185,13 @@ post-install:
 		CREDITS PACKAGING STATUS BUGS Changes			\
 		sample-nonspam.txt sample-spam.txt spamd/README		\
 		spamd/README.vpopmail
-	@${INSTALL_DATA} ${WRKSRC}/$f ${DOCDIR}/$f
-	@${ECHO} "${DOC_SUBDIR}/$f" >> ${PLIST_ADD}
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}/${f}
+	@${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
 .endfor
 .for f in STATISTICS.txt STATISTICS-set1.txt STATISTICS-set2.txt	\
 		STATISTICS-set3.txt
-	@${INSTALL_DATA} ${WRKSRC}/rules/$f ${DOCDIR}/
-	@${ECHO} "${DOC_SUBDIR}/$f" >> ${PLIST_ADD}
+	@${INSTALL_DATA} ${WRKSRC}/rules/${f} ${DOCDIR}/
+	@${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
 .endfor
 .for DIR in masses sql ldap tools
 	@cd ${WRKSRC};							\

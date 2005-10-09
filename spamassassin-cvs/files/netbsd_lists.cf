@@ -1,4 +1,4 @@
-# $NetBSD: netbsd_lists.cf,v 1.1.1.1 2004/02/22 21:39:25 tomhensel Exp $
+# $NetBSD: netbsd_lists.cf,v 1.2 2005/10/09 01:26:50 rillig Exp $
 
 #
 # Rules to minimize false positives of NetBSD related emails
@@ -27,4 +27,3 @@ score NETBSD_PR		-5
 meta NETBSD_PR_COMMENT	(! __NETBSD_SEND_PR && __NETBSD_PR_SUBJECT && __NETBSD_BUGS_SENDER && __NETBSD_RCVD && __NETBSD_BUGS_DELIVERED)
 describe NETBSD_PR_COMMENT   Message concerns a problem report from netbsd-bugs
 score NETBSD_PR_COMMENT	-2.5
-
