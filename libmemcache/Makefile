@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/09/15 15:44:29 elvstone Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/10 23:40:13 jsonn Exp $
 #
 
-DISTNAME=		libmemcache-1.4.0.b5
+DISTNAME=		libmemcache-1.4.0.b9
 PKGNAME=		${DISTNAME:S/.b/beta/}
 CATEGORIES=		devel
 MASTER_SITES=		http://people.freebsd.org/~seanc/libmemcache/
