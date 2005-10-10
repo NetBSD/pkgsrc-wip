@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:48 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/10 13:42:30 rillig Exp $
 #
 
-DISTNAME=		${PKGNAME}-src
+DISTNAME=		pngnq-0.3-src
 PKGNAME=		pngnq-0.3
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.cybertherial.com/pngnq/
