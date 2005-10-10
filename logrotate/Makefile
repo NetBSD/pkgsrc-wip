@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:30:59 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/10 13:58:46 rillig Exp $
 
-DISTNAME=		${PKGNAME}-4.1.src.rpm
-PKGNAME=		logrotate-3.7
+DISTNAME=		logrotate-3.7.2-4.src.rpm
+PKGNAME=		logrotate-3.7.2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/
 EXTRACT_SUFX=		# empty
@@ -12,12 +12,12 @@ COMMENT=		Daemon to rotate, compress, remove and mail system log files
 
 BUILD_DEPENDS+=		rpm2pkg>=2.0:../../pkgtools/rpm2pkg
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake gzcat tar
 NO_EXPORT_CPP=		yes
 MAKE_ENV+=		"BASEDIR=${PREFIX}"
 MAKE_ENV+=		"INSTALL_PROGRAM=${INSTALL_PROGRAM}"
 MAKE_ENV+=		"INSTALL_MAN=${INSTALL_MAN}"
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 do-extract:
 	rpm2pkg -d ${WRKDIR} ${DISTDIR}/${DISTNAME}
