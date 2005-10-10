@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/08/23 11:49:44 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/10/10 14:00:13 rillig Exp $
 
 DISTNAME=		man-db_${VERSION}.orig
 PKGNAME=		man-db-${VERSION}
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/man-db/}
 
@@ -12,6 +11,8 @@ HOMEPAGE=		http://www.chiark.greenend.org.uk/~cjwatson/code/man-db/
 COMMENT=		Manual pager and related man page utilities
 
 CONFLICTS+=		man-[0-9]*
+
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:30:39 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/10 14:00:13 rillig Exp $
 #
 
 DISTNAME=		libticalcs
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://tilp.info/
 COMMENT=		Database of TI calculator model information
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

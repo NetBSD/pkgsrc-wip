@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/12 23:51:29 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/10 14:00:15 rillig Exp $
 #
 
 DISTNAME=		uqm-0.3-source
@@ -16,7 +16,7 @@ COMMENT=		Star Control 2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS=		gmake
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 DIST_SUBDIR=		uqm
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 

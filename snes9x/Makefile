@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/09/08 15:43:01 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/10 14:00:14 rillig Exp $
 #
 
 DISTNAME=		snes9x-${S9X_VER}-src
@@ -12,7 +12,7 @@ MAINTAINER=		jmcneill@NetBSD.org
 HOMEPAGE=		http://www.snes9x.com/
 COMMENT=		Super Nintendo Entertainment System (SNES) emulator
 
-WRKSRC=			${WRKDIR}/${PKGNAME}-src/snes9x
+WRKSRC=			${WRKDIR}/${DISTNAME}/snes9x
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 PTHREAD_OPTS=		require

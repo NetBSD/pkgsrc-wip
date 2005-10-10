@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/24 11:17:37 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/10 14:00:14 rillig Exp $
 #
 
 DISTNAME=		tzosdclock_1.0.2
@@ -10,7 +10,7 @@ MAINTAINER=		inittab@unixdev.net
 HOMEPAGE=		http://www.unixdev.net/projects/tzosdclock
 COMMENT=		OnScreen Display Clock for Multiple Timezones
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

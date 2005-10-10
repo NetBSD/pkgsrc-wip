@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/27 16:15:06 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/10 14:00:12 rillig Exp $
 
 DISTNAME=	esdl-0.95.0630.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -9,7 +9,7 @@ MAINTAIER=	geert.hendrickx@ua.ac.be
 HOMEPAGE=	http://esdl.sourceforge.net/
 COMMENT=	SDL and OpenGL library for Erlang
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_TOOLS+=	gmake
 BUILD_TARGET=	target

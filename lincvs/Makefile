@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/10/06 09:16:47 ghen Exp $
+# $NetBSD: Makefile,v 1.10 2005/10/10 14:00:13 rillig Exp $
 #
 
 DISTNAME=		lincvs-1.4.3-0-generic-src
 PKGNAME=		${DISTNAME:S/-0-generic-src//}
-WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		devel x11
 MASTER_SITES=	        http://lincvs.com/download/
 EXTRACT_SUFX=		.tgz
@@ -16,6 +15,8 @@ SUBST_CLASSES+=		qmake
 SUBST_STAGE.qmake=	post-patch
 SUBST_FILES.qmake=	lincvs.pro
 SUBST_SED.qmake=	-e 's,%%QTDIR%%,${PREFIX}${QTDIR},'
+
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 do-configure:
 	 ${QTDIR}/bin/qmake -o ${WRKSRC}/Makefile ${WRKSRC}/lincvs.pro
