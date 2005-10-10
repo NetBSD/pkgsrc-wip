@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1945 2005/10/07 09:52:56 leonardschmidt Exp $
-# $Id: Makefile,v 1.1945 2005/10/07 09:52:56 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.1946 2005/10/10 17:47:07 mchittur Exp $
+# $Id: Makefile,v 1.1946 2005/10/10 17:47:07 mchittur Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -499,6 +499,7 @@ SUBDIR+=	libmemcache
 SUBDIR+=	libmusclecard
 SUBDIR+=	libneural
 SUBDIR+=	libobby
+SUBDIR+=	libopenmodeller
 SUBDIR+=	libpano12
 SUBDIR+=	libparsifal
 SUBDIR+=	libpcap-latest
