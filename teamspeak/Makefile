@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:13 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/10 13:48:06 rillig Exp $
 #
 
 DISTNAME=		ts2_client_rc2_2032
@@ -17,11 +17,10 @@ LICENSE=		fee-based-commercial-use
 SUBST_CLASSES+=		ts
 SUBST_STAGE.ts=		post-configure
 SUBST_FILES.ts+=	teamspeak.sh
-SUBST_SED.ts+=		-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_SED.ts+=		-e 's|@BASEDIR@|${TS_BASEDIR}|g'
 SUBST_SED.ts+=		-e 's|@SH@|${SH}|g'
-SUBST_SED.ts+=		-e 's|@PKGNAME@|${PKGNAME}|g'
 
-TS_BASEDIR=		${PREFIX}/lib/${PKGNAME}
+TS_BASEDIR=		${PREFIX}/lib/${PKGNAME_NOREV}
 TS_SRCDIR=		${WRKSRC}/setup.data/image
 
 do-configure:
