@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2005/07/27 16:25:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/10 12:39:41 rillig Exp $
 #
 
-DISTNAME=		rel-bacula-doc
-PKGNAME=		bacula-docs-1.34.5
-WRKSRC=			${WRKDIR}/html-manual
+DISTNAME=		bacula-doc-1.36.3
+PKGNAME=		bacula-docs-1.36.3
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.bacula.org/
-DIST_SUBDIR=		${PKGNAME}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.bacula.org/
