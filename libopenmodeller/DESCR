@@ -1,0 +1,5 @@
+OpenModeller is a spatial distribution modelling library, providing a
+uniform method for modelling distribution patterns using a variety of
+modelling algorithms. openModeller can be used via programatic
+interfaces, including SOAP and SWIG-python, as well as via a user
+friendly desktop grapical user interface and a GIS plugin.
