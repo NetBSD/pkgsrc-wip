@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:24 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/10 13:36:45 rillig Exp $
 #
 
 DISTNAME=		ncbi
@@ -13,7 +13,7 @@ COMMENT=		Portable, modular software for molecular biology
 
 PKG_VER=		20040505
 WRKSRC=			${WRKDIR}/ncbi
-DIST_SUBDIR=		${PKGNAME}
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 MAKE_ENV+=		PREFIX=${PREFIX}
 
