@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/11 04:09:25 poppnk Exp $
+
+SHA1 (opd-v0.2-2003-03-18.tgz) = c11572534f8a3c75499b861f008891ef77aa2876
+RMD160 (opd-v0.2-2003-03-18.tgz) = a7cbaf41b601afb0b6c11e241377aa9a28ac91dc
+Size (opd-v0.2-2003-03-18.tgz) = 9499 bytes
+SHA1 (patch-aa) = 9368fa695c357f0107a804ab4d1c52eb26eea97a
