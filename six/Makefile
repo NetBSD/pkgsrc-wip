@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/11 12:36:06 gizm00 Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/11 14:50:18 gizm00 Exp $
 
 MASTER_SITES=	http://six.retes.hu/download/
 DISTNAME=	six-0.5.2
 EXTRACT_SUFX=	.tar.gz
-CATEGORIES=	wip
+CATEGORIES=	games
 COMMENT=	Six is a Hex playing program for Linux/Un*x systems running KDE
 HOMEPAGE=	http://six.retes.hu/
+SUBDIR+=	six
 MANTAINER=	gizm0@inbox.lv
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
