@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1946 2005/10/10 17:47:07 mchittur Exp $
-# $Id: Makefile,v 1.1946 2005/10/10 17:47:07 mchittur Exp $
+# $NetBSD: Makefile,v 1.1947 2005/10/11 20:49:02 jsonn Exp $
+# $Id: Makefile,v 1.1947 2005/10/11 20:49:02 jsonn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -495,7 +495,6 @@ SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libhttpd
 SUBDIR+=	liblingoteach
-SUBDIR+=	libmemcache
 SUBDIR+=	libmusclecard
 SUBDIR+=	libneural
 SUBDIR+=	libobby
@@ -522,7 +521,6 @@ SUBDIR+=	libwhisker2
 SUBDIR+=	libxen
 SUBDIR+=	libxml++
 SUBDIR+=	libxml++2
-SUBDIR+=	lighttpd
 SUBDIR+=	lilo
 SUBDIR+=	lincvs
 SUBDIR+=	lingoteach-lesson
