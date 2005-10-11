@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/11 12:36:06 gizm00 Exp $
+bin/six
+share/doc/kde/HTML/en/six/common
+share/doc/kde/HTML/en/six/filter.png
+share/doc/kde/HTML/en/six/index.cache.bz2
+share/doc/kde/HTML/en/six/index.docbook
+share/kde/applnk/Games/Board/six.desktop
+share/kde/apps/six/sixui.rc
+share/kde/icons/hicolor/32x32/actions/blackplayer.png
+share/kde/icons/hicolor/32x32/actions/swap.png
+share/kde/icons/hicolor/32x32/actions/whiteplayer.png
+share/kde/icons/hicolor/32x32/apps/six.png
+share/kde/icons/hicolor/48x48/apps/six.png
+share/kde/icons/locolor/16x16/actions/blackplayer.png
+share/kde/icons/locolor/16x16/actions/swap.png
+share/kde/icons/locolor/16x16/actions/whiteplayer.png
+share/kde/icons/locolor/16x16/apps/six.png
+share/kde/icons/locolor/22x22/actions/blackplayer.png
+share/kde/icons/locolor/22x22/actions/swap.png
+share/kde/icons/locolor/22x22/actions/whiteplayer.png
+share/kde/icons/locolor/32x32/apps/six.png
+share/kde/mimelnk/application/vnd.kde.six.desktop
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/22x22/actions
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/six
+@comment in kde: @dirrm share/kde/apps
+@dirrm share/kde/applnk/Games/Board
+@dirrm share/kde/applnk/Games
+@comment in kde: @dirrm share/kde/applnk
+@dirrm share/doc/kde/HTML/en/six
+@comment in kde: @dirrm share/doc/kde/HTML/en
