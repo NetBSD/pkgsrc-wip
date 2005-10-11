@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/09/18 20:53:49 jtonio Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/10/11 08:07:30 jtonio Exp $
 bin/kaffe-appletviewer
 bin/kaffe-jar
 bin/kaffe-java
@@ -62,9 +62,7 @@ java/kaffe/jre/lib/rt.jar
 java/kaffe/jre/lib/security/java.security
 java/kaffe/lib/tools.jar
 java/kaffe/license.terms
-java/kaffe/man/man1/kaffe.1
-@dirrm java/kaffe/man/man1
-@dirrm java/kaffe/man
+man/man1/kaffe.1
 @dirrm java/kaffe/lib
 @dirrm java/kaffe/jre/lib/security
 @dirrm java/kaffe/jre/lib/${MACHINE_ARCH}
