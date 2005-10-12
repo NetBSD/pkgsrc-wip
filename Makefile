@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1947 2005/10/11 20:49:02 jsonn Exp $
-# $Id: Makefile,v 1.1947 2005/10/11 20:49:02 jsonn Exp $
+# $NetBSD: Makefile,v 1.1948 2005/10/12 13:50:28 ghen Exp $
+# $Id: Makefile,v 1.1948 2005/10/12 13:50:28 ghen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1210,6 +1210,7 @@ SUBDIR+=	wordnet
 SUBDIR+=	words
 SUBDIR+=	worker
 SUBDIR+=	wxGTK-contrib
+SUBDIR+=	xaralx-bin
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
 SUBDIR+=	xbsql
