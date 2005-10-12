@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/21 11:48:20 poppnk Exp $
-lib/iText.jar
+@comment $NetBSD: PLIST,v 1.2 2005/10/12 22:31:13 poppnk Exp $
+lib/java/itext.jar
