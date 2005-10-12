@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1948 2005/10/12 13:50:28 ghen Exp $
-# $Id: Makefile,v 1.1948 2005/10/12 13:50:28 ghen Exp $
+# $NetBSD: Makefile,v 1.1949 2005/10/12 22:06:33 rillig Exp $
+# $Id: Makefile,v 1.1949 2005/10/12 22:06:33 rillig Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -448,6 +448,7 @@ SUBDIR+=	kapital
 SUBDIR+=	kbproto
 SUBDIR+=	kcc
 SUBDIR+=	kino
+SUBDIR+=	kismet
 SUBDIR+=	kissme
 SUBDIR+=	konversation
 SUBDIR+=	korelib
@@ -677,8 +678,10 @@ SUBDIR+=	octave-nox11
 SUBDIR+=	omniORB
 SUBDIR+=	oops
 SUBDIR+=	opax
+SUBDIR+=	opd
 SUBDIR+=	open21xx
 SUBDIR+=	openct
+SUBDIR+=	opendchub
 SUBDIR+=	openvrml
 SUBDIR+=	opera-devel
 SUBDIR+=	oqtplayer
@@ -1042,6 +1045,7 @@ SUBDIR+=	simplec
 SUBDIR+=	sipp
 SUBDIR+=	siproxd
 SUBDIR+=	sipsak
+SUBDIR+=	six
 SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc
 SUBDIR+=	slackware_aaa_base
@@ -1209,7 +1213,6 @@ SUBDIR+=	wmnetload
 SUBDIR+=	wordnet
 SUBDIR+=	words
 SUBDIR+=	worker
-SUBDIR+=	wxGTK-contrib
 SUBDIR+=	xaralx-bin
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
