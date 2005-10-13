@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/15 18:52:33 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/13 20:24:41 leonardschmidt Exp $
 #
 
 DISTNAME=		rxvt-unicode-5.7
@@ -11,6 +11,7 @@ HOMEPAGE=		http://software.schmorp.de/#rxvt-unicode
 COMMENT=		A rxvt clone supporting Xft fonts and Unicode
 
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	--enable-combining		\
