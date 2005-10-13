@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/10/13 08:17:36 ghen Exp $
+
+--- xxdiff.1.orig	2004-11-06 00:32:00.000000000 +0100
++++ xxdiff.1
+@@ -17,7 +17,7 @@
+ .\" Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ .\"
+ .na
+-.TH XXDIFF 3.1
++.TH XXDIFF 1
+ .SH NAME
+ xxdiff \- a graphical file comparator and merge tool
+ .SH SYNOPSIS
