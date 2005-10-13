@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:11:33 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/13 21:32:56 minskim Exp $
 
 DISTNAME=	docbook-xsl-ko-0.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.kldp.net/docbook/
 
-MAINTAINER=	minskim@bawi.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://docbook.or.kr/
 COMMENT=	DocBook XSL customization layer for Korean
 

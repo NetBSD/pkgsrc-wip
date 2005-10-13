@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/19 03:54:18 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/13 21:32:56 minskim Exp $
 #
 
 DISTNAME=	passivetex
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	http://www.tei-c.org.uk/Software/passivetex/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	minskim@bawi.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tei-c.org.uk/Software/passivetex/
 COMMENT=	TeX macros for formatting objects
 
