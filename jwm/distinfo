@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/09/27 16:47:13 pippijn Exp $
+$NetBSD: distinfo,v 1.2 2005/10/13 15:46:25 ghen Exp $
 
 SHA1 (jwm-0.24.tar.bz2) = 3059e3a3c03b7c4b619818a19997280ee0f56b6c
 RMD160 (jwm-0.24.tar.bz2) = 12e7aa89dcd867d622d220c28f2cd108bd1814e7
 Size (jwm-0.24.tar.bz2) = 101478 bytes
+SHA1 (patch-aa) = 982532b3f62e2de04a21a9683629602af105dc25
+SHA1 (patch-ab) = 37dde771f21eb0ae63af01ecd53f2f201dd1c6fc

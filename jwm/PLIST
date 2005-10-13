@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/27 16:47:13 pippijn Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/13 15:46:25 ghen Exp $
 bin/jwm
-man/man1/jwm.1.gz
-@exec ${MKDIR} %D/etc/jwm
-@dirrm etc/jwm
+man/man1/jwm.1
+share/examples/jwm/system.jwmrc
+@dirrm share/examples/jwm

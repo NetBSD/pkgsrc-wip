@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.5 2005/09/27 19:24:11 pippijn Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/13 15:46:24 ghen Exp $
 #
 
 DISTNAME=	jwm-0.24
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://www.joewing.net/programs/jwm/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,25 +11,21 @@ MAINTAINER=	pip88nl@gmail.com
 HOMEPAGE=	http://joewing.net/programs/jwm
 COMMENT=	Lightweight window manager with virtual desktops
 
-CONFLICTS+=	jwm<=0.23
-
-#USE_PKGINSTALL=	YES
+USE_PKGINSTALL=		YES
 GNU_CONFIGURE=          yes
-CONFIGURE_ARGS+=        --prefix=${PREFIX} \
-			--sysconfdir=${EGDIR}
-
-CFLAGS+=	-DPKG_SYSCONFDIR="\"${EGDIR}\""
+CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	jwm
 
 INSTALLATION_DIRS=	share/examples/jwm
 
 EGDIR=		${PREFIX}/share/examples/jwm
-CONF_FILES= 	${EGDIR}/example.jwmrc ${PKG_SYSCONFDIR}/system.jwmrc
+CONF_FILES= 	${EGDIR}/system.jwmrc ${PKG_SYSCONFDIR}/system.jwmrc
 
-post-install:
-	${MKDIR} ${PKG_SYSCONFDIR}
-	${INSTALL_DATA} ${WRKSRC}/example.jwmrc ${PKG_SYSCONFDIR}/system.jwmrc
+SUBST_CLASSES+=		egdir
+SUBST_STAGE.egdir=	post-patch
+SUBST_FILES.egdir=	Makefile.in
+SUBST_SED.egdir=	-e 's,@@EGDIR@@,${EGDIR},g'
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
