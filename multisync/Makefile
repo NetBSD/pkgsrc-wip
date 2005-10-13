@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/01/05 10:23:23 mreriksson Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/13 20:56:22 thomasklausner Exp $
 #
 
 PKGNAME=		multisync-0.82
@@ -8,10 +8,10 @@ WRKSRC=			${WRKDIR}/multisync-0.82
 
 pre-configure:
 	cd ${WRKSRC} && \
-		${ACLOCAL} && \
-		${AUTOHEADER} && \
-		${AUTOCONF} && \
-		${AUTOMAKE} -acf
+		aclocal && \
+		autoheader && \
+		autoconf && \
+		automake -acf
 
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
