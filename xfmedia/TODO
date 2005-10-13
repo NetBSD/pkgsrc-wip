@@ -1,0 +1,3 @@
+* unsure about PLIST and my use of CONF_FILES
+* website mentioned D-BUS and TagLib which aren't currently required
+  by this package
