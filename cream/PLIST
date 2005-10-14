@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/06 04:15:02 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/14 00:09:54 dhowland Exp $
 bin/cream
 share/icons/cream/cream.png
 share/icons/cream/cream.svg
@@ -29,6 +29,11 @@ share/vim/${VIM_SUBDIR}/cream/addons/cream-spell-french.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-str-invert.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-text2html.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-timestamp.vim
+share/vim/${VIM_SUBDIR}/cream/addons/cream-cream-vim-deformat.vim
+share/vim/${VIM_SUBDIR}/cream/addons/cream-helptags.vim
+share/vim/${VIM_SUBDIR}/cream/addons/cream-stamp-filename.vim
+share/vim/${VIM_SUBDIR}/cream/addons/cream-table.vim
+share/vim/${VIM_SUBDIR}/cream/addons/cream-typingtutor.vim
 @dirrm share/vim/${VIM_SUBDIR}/cream/addons
 share/vim/${VIM_SUBDIR}/cream/bitmaps/book.xpm
 share/vim/${VIM_SUBDIR}/cream/bitmaps/broken_image.xpm
@@ -54,40 +59,101 @@ share/vim/${VIM_SUBDIR}/cream/bitmaps/text_align_left.xpm
 share/vim/${VIM_SUBDIR}/cream/bitmaps/text_align_right.xpm
 share/vim/${VIM_SUBDIR}/cream/bitmaps/undo.xpm
 @dirrm share/vim/${VIM_SUBDIR}/cream/bitmaps
-share/vim/${VIM_SUBDIR}/cream/docs/BUGS.txt
 share/vim/${VIM_SUBDIR}/cream/docs/CHANGELOG.txt
 share/vim/${VIM_SUBDIR}/cream/docs/COPYING.txt
 share/vim/${VIM_SUBDIR}/cream/docs/DEVELOPER.txt
-share/vim/${VIM_SUBDIR}/cream/docs/FILELIST.txt
 share/vim/${VIM_SUBDIR}/cream/docs/KEYBOARD.txt
 share/vim/${VIM_SUBDIR}/cream/docs/PressRelease.txt
 share/vim/${VIM_SUBDIR}/cream/docs/README.txt
 share/vim/${VIM_SUBDIR}/cream/docs/RELEASE.txt
-share/vim/${VIM_SUBDIR}/cream/docs/SPELLDICTS.txt
-share/vim/${VIM_SUBDIR}/cream/docs/SPELLTEST-ENG.txt
 share/vim/${VIM_SUBDIR}/cream/docs/TODO.txt
 share/vim/${VIM_SUBDIR}/cream/docs/WINDOWS.txt
 @dirrm share/vim/${VIM_SUBDIR}/cream/docs
+share/vim/${VIM_SUBDIR}/cream/docs-html/contribute.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/cream.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/downloads.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/faq.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/favicon.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/features.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/index.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/installation.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/keyboardshortcuts.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/license.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/links.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/maillist.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/main.css
+share/vim/${VIM_SUBDIR}/cream/docs-html/otherfiles.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot-popup.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot1-thumb.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot1.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot2-thumb.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot2.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot3-thumb.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot3.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot4-thumb.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot4.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot5-thumb.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot5.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot6-thumb.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot6.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot7-thumb.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot7.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot8-thumb.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot8.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshots.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshots1-closeup.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshots2-closeup.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshots3-closeup.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshots4-closeup.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshots5-closeup.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshots6-closeup.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshots7-closeup.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/screenshots8-closeup.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/spellcheck.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/statusline-closeup.html
+share/vim/${VIM_SUBDIR}/cream/docs-html/statusline-thumb.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/statusline.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/vim.html
+@dirrm share/vim/${VIM_SUBDIR}/cream/docs-html
+share/vim/${VIM_SUBDIR}/cream/filetypes/c.vim
+share/vim/${VIM_SUBDIR}/cream/filetypes/html.vim
+share/vim/${VIM_SUBDIR}/cream/filetypes/lisp.vim
+share/vim/${VIM_SUBDIR}/cream/filetypes/txt.vim
+share/vim/${VIM_SUBDIR}/cream/filetypes/vim.vim
+@dirrm share/vim/${VIM_SUBDIR}/cream/filetypes
 share/vim/${VIM_SUBDIR}/cream/help/EnhancedCommentify.txt
 share/vim/${VIM_SUBDIR}/cream/help/opsplorer.txt
 @dirrm share/vim/${VIM_SUBDIR}/cream/help
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-br_1.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-br_2.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-br_3.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-br_4.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-ca_1.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-ca_2.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-ca_3.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-ca_4.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-us_1.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-us_2.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-us_3.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-us_4.vim
+share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-CA_1.vim
+share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-CA_2.vim
+share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-CA_3.vim
+share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-CA_4.vim
+share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-GB_1.vim
+share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-GB_2.vim
+share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-GB_3.vim
+share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-GB_4.vim
+share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-US_1.vim
+share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-US_2.vim
+share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-US_3.vim
+share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-US_4.vim
 share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s_1.vim
 share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s_2.vim
 share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s_3.vim
 share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s_4.vim
+share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict.vim
 @dirrm share/vim/${VIM_SUBDIR}/cream/spelldicts
+share/vim/${VIM_SUBDIR}/cream/lang/menu_chinese_gb.936.vim
+share/vim/${VIM_SUBDIR}/cream/lang/menu_fr_fr.latin1.vim
+share/vim/${VIM_SUBDIR}/cream/lang/menu_zh.cp936.vim
+share/vim/${VIM_SUBDIR}/cream/lang/menu_zh.cp950.vim
+share/vim/${VIM_SUBDIR}/cream/lang/menu_zh.gb2312.vim
+share/vim/${VIM_SUBDIR}/cream/lang/menu_zh_cn.18030.vim
+share/vim/${VIM_SUBDIR}/cream/lang/menu_zh_cn.cp936.vim
+share/vim/${VIM_SUBDIR}/cream/lang/menu_zh_cn.gb2312.vim
+share/vim/${VIM_SUBDIR}/cream/lang/menu_zh_cn.gbk.vim
+share/vim/${VIM_SUBDIR}/cream/lang/menu_zh_cn.utf-8.vim
+share/vim/${VIM_SUBDIR}/cream/lang/strings_en_us.utf-8.vim
+@dirrm share/vim/${VIM_SUBDIR}/cream/lang
 share/vim/${VIM_SUBDIR}/cream/EasyHtml.vim
 share/vim/${VIM_SUBDIR}/cream/EnhancedCommentify.vim
 share/vim/${VIM_SUBDIR}/cream/calendar.vim
@@ -116,10 +182,6 @@ share/vim/${VIM_SUBDIR}/cream/cream-conf.example.vim
 share/vim/${VIM_SUBDIR}/cream/cream-devel.vim
 share/vim/${VIM_SUBDIR}/cream/cream-expertmode.vim
 share/vim/${VIM_SUBDIR}/cream/cream-explorer.vim
-share/vim/${VIM_SUBDIR}/cream/cream-filetype-c.vim
-share/vim/${VIM_SUBDIR}/cream/cream-filetype-html.vim
-share/vim/${VIM_SUBDIR}/cream/cream-filetype-txt.vim
-share/vim/${VIM_SUBDIR}/cream/cream-filetype-vim.vim
 share/vim/${VIM_SUBDIR}/cream/cream-filetype.vim
 share/vim/${VIM_SUBDIR}/cream/cream-find.vim
 share/vim/${VIM_SUBDIR}/cream/cream-gui.vim
@@ -155,9 +217,13 @@ share/vim/${VIM_SUBDIR}/cream/cream-statusline.vim
 share/vim/${VIM_SUBDIR}/cream/cream-window-buffer.vim
 share/vim/${VIM_SUBDIR}/cream/cream.vim
 share/vim/${VIM_SUBDIR}/cream/genutils.vim
-share/vim/${VIM_SUBDIR}/cream/imaps.vim
 share/vim/${VIM_SUBDIR}/cream/multvals.vim
 share/vim/${VIM_SUBDIR}/cream/opsplorer.vim
 share/vim/${VIM_SUBDIR}/cream/taglist.vim
 share/vim/${VIM_SUBDIR}/cream/creamrc
+share/vim/${VIM_SUBDIR}/cream/Rndm.vim
+share/vim/${VIM_SUBDIR}/cream/cream-iso3166-1.vim
+share/vim/${VIM_SUBDIR}/cream/cream-iso639.vim
+share/vim/${VIM_SUBDIR}/cream/cream-loremipsum.vim
+share/vim/${VIM_SUBDIR}/cream/cream-templates.vim
 @dirrm share/vim/${VIM_SUBDIR}/cream

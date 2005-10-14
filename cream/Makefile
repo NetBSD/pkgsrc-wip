@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2005/09/28 20:50:09 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/14 00:09:54 dhowland Exp $
 #
 
-DISTNAME=		cream-0.30
+DISTNAME=		cream-0.33
 CATEGORIES=		editors
-MASTER_SITES=		http://cream.sourceforge.net/
+MASTER_SITES=           ${MASTER_SITE_SOURCEFORGE:=cream/}
 
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://cream.sourceforge.net/
 COMMENT=		Usability add-on for Vim
 
-DEPENDS+=		vim-gtk2-6.*:../../editors/vim-gtk2
+DEPENDS+=		{vim-gtk2,vim-gtk,vim-kde,vim-motif}>=6.0:../../editors/vim-gtk2
 
 NO_BUILD=		yes
 
-VIM_SUBDIR=		vim63
+.include "../../editors/vim-share/version.mk"
 VIMRUNTIME=		${PREFIX}/share/vim/${VIM_SUBDIR}
 PLIST_SUBST+=		VIM_SUBDIR=${VIM_SUBDIR}
 
@@ -24,14 +24,20 @@ do-install:
 	${INSTALL_DATA_DIR} ${VIMRUNTIME}/cream/addons
 	${INSTALL_DATA_DIR} ${VIMRUNTIME}/cream/bitmaps
 	${INSTALL_DATA_DIR} ${VIMRUNTIME}/cream/docs
+	${INSTALL_DATA_DIR} ${VIMRUNTIME}/cream/docs-html
+	${INSTALL_DATA_DIR} ${VIMRUNTIME}/cream/filetypes
 	${INSTALL_DATA_DIR} ${VIMRUNTIME}/cream/help
+	${INSTALL_DATA_DIR} ${VIMRUNTIME}/cream/lang
 	${INSTALL_DATA_DIR} ${VIMRUNTIME}/cream/spelldicts
 	${INSTALL_DATA} ${WRKSRC}/creamrc ${VIMRUNTIME}/cream/
 	${INSTALL_DATA} ${WRKSRC}/*.vim ${VIMRUNTIME}/cream/
 	${INSTALL_DATA} ${WRKSRC}/addons/*.vim ${VIMRUNTIME}/cream/addons/
 	${INSTALL_DATA} ${WRKSRC}/bitmaps/*.xpm ${VIMRUNTIME}/cream/bitmaps/
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${VIMRUNTIME}/cream/docs/
+	${INSTALL_DATA} ${WRKSRC}/docs-html/* ${VIMRUNTIME}/cream/docs-html/
+	${INSTALL_DATA} ${WRKSRC}/filetypes/*.vim ${VIMRUNTIME}/cream/filetypes/
 	${INSTALL_DATA} ${WRKSRC}/help/*.txt ${VIMRUNTIME}/cream/help/
+	${INSTALL_DATA} ${WRKSRC}/lang/*.vim ${VIMRUNTIME}/cream/lang/
 	${INSTALL_DATA} ${WRKSRC}/spelldicts/*.vim ${VIMRUNTIME}/cream/spelldicts/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/icons/cream
 	${INSTALL_DATA} ${WRKSRC}/cream.png ${PREFIX}/share/icons/cream/
