@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/09/06 20:26:33 scode Exp $
-
-rdiff-backup 0.13.x and 1.0.x use a different archive format than 0.12.x.
-If you upgrade to (or begin using) 0.13.x, downgrading to 0.12.x will
-require re-doing the initial seed!
-
-===========================================================================

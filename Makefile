@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1953 2005/10/14 17:39:16 dhowland Exp $
-# $Id: Makefile,v 1.1953 2005/10/14 17:39:16 dhowland Exp $
+# $NetBSD: Makefile,v 1.1954 2005/10/14 18:08:30 scode Exp $
+# $Id: Makefile,v 1.1954 2005/10/14 18:08:30 scode Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -989,7 +989,6 @@ SUBDIR+=	r8s
 SUBDIR+=	rar3
 SUBDIR+=	rawphoto
 SUBDIR+=	rc.subr
-SUBDIR+=	rdiff-backup-devel
 SUBDIR+=	readseq
 SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
