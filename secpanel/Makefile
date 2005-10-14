@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/10/14 00:59:32 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/14 01:01:35 minskim Exp $
 #
 
 DISTNAME=		secpanel-0.5.1
@@ -12,8 +12,6 @@ COMMENT=		GUI front-end for SSH
 DEPENDS+=		tk>=8.4:../../x11/tk
 
 NO_BUILD=		yes
-
-.include "../../mk/bsd.prefs.mk"
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/secpanel
