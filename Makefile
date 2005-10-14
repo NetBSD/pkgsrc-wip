@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1951 2005/10/14 00:44:41 minskim Exp $
-# $Id: Makefile,v 1.1951 2005/10/14 00:44:41 minskim Exp $
+# $NetBSD: Makefile,v 1.1952 2005/10/14 01:07:09 minskim Exp $
+# $Id: Makefile,v 1.1952 2005/10/14 01:07:09 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1025,7 +1025,6 @@ SUBDIR+=	scourge
 SUBDIR+=	scr2png
 SUBDIR+=	scsh-install-lib
 SUBDIR+=	scx
-SUBDIR+=	secpanel
 SUBDIR+=	send-pr
 SUBDIR+=	sendmailX
 SUBDIR+=	serlook
