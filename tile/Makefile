@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/10/10 14:00:14 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/14 15:42:03 minskim Exp $
 #
 
 DISTNAME=		tile_0.7.3
@@ -11,7 +11,7 @@ HOMEPAGE=		http://tile.unixdev.net/
 COMMENT=		X11 Window Tiler
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_PKGLOCALEDIR=	yes
+USE_DIRS+=		xdg-1.2
 GNU_CONFIGURE=		yes
 
 .include "../../devel/libgetopt/buildlink3.mk"
