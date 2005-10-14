@@ -1,0 +1,9 @@
+$NetBSD: patch-aa,v 1.1 2005/10/14 15:49:05 minskim Exp $
+
+--- Makefile.in.orig	2005-09-24 01:09:25.000000000 -0700
++++ Makefile.in
+@@ -62,3 +62,4 @@ install:
+ 	-mkdir -p $(SHARE)/applications
+ 	cp *.desktop $(SHARE)/applications
+ 
++.PHONY: install
