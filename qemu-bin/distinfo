@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 06:41:40 rillig Exp $
+$NetBSD: distinfo,v 1.4 2005/10/14 01:02:58 dhowland Exp $
 
-SHA1 (qemu-0.6.1-i386.tar.gz) = 7ff61ee4605ee5b636be22257710bf20f1ff32ff
-RMD160 (qemu-0.6.1-i386.tar.gz) = 907659031b2dffc69123d0cdc1982c5780bffe8e
-Size (qemu-0.6.1-i386.tar.gz) = 4739785 bytes
+SHA1 (qemu-0.7.2-i386.tar.gz) = e63e8bae525bc27d5c2b05346fcd0564423b7a1d
+RMD160 (qemu-0.7.2-i386.tar.gz) = 310d0f12be8c33398b623985b6bf9441b3369076
+Size (qemu-0.7.2-i386.tar.gz) = 1993265 bytes
