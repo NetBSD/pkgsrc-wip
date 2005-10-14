@@ -1,3 +1,2 @@
-* website mentioned D-BUS and TagLib which aren't currently required
-  by this package and probably should be... also should check for other
-  missing dependencies
+Tested and working on NetBSD-3.0_BETA (i386).
+Needs testing on other platforms.
