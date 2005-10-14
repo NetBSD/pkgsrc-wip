@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1950 2005/10/14 00:34:04 minskim Exp $
-# $Id: Makefile,v 1.1950 2005/10/14 00:34:04 minskim Exp $
+# $NetBSD: Makefile,v 1.1951 2005/10/14 00:44:41 minskim Exp $
+# $Id: Makefile,v 1.1951 2005/10/14 00:44:41 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -185,7 +185,6 @@ SUBDIR+=	dfbsee
 SUBDIR+=	dia2code
 SUBDIR+=	dicom3tools
 SUBDIR+=	ding
-SUBDIR+=	dirb
 SUBDIR+=	directfb
 SUBDIR+=	directory-administrator
 SUBDIR+=	distcc-gtk
