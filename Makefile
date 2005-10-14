@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1952 2005/10/14 01:07:09 minskim Exp $
-# $Id: Makefile,v 1.1952 2005/10/14 01:07:09 minskim Exp $
+# $NetBSD: Makefile,v 1.1953 2005/10/14 17:39:16 dhowland Exp $
+# $Id: Makefile,v 1.1953 2005/10/14 17:39:16 dhowland Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1220,6 +1220,7 @@ SUBDIR+=	xchat2-tcl
 SUBDIR+=	xcmiscproto
 SUBDIR+=	xextproto
 SUBDIR+=	xf86bigfontproto
+SUBDIR+=	xfmedia
 SUBDIR+=	xgfe
 SUBDIR+=	xgobi
 SUBDIR+=	xinetd
