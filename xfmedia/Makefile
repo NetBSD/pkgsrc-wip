@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/13 21:40:56 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/14 16:38:12 dhowland Exp $
 #
 
 DISTNAME=		xfmedia-0.9.1
@@ -10,6 +10,7 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://spuriousinterrupt.org/projects/xfmedia/
 COMMENT=		Xfce media player based on xine
 
+USE_PKGINSTALL=         yes
 USE_PKGLOCALEDIR=       yes
 USE_LIBTOOL=            yes
 GNU_CONFIGURE=          yes
@@ -23,8 +24,6 @@ post-install:
 	${INSTALL} ${WRKSRC}/src/keybindings.rc \
 	    ${PREFIX}/share/xfmedia/keybindings.rc
 
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libxfce4gui/buildlink3.mk"
 .include "../../x11/libexo/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
