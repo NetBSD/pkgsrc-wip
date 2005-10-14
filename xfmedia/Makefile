@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/14 17:13:54 dhowland Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/14 17:30:14 dhowland Exp $
 #
 
 DISTNAME=		xfmedia-0.9.1
@@ -28,5 +28,4 @@ post-install:
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/libexo/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
