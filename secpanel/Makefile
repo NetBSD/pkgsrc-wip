@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/09/28 20:50:11 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/14 00:38:14 dhowland Exp $
 #
 
-DISTNAME=		secpanel-0.4.3
+DISTNAME=		secpanel-0.5.1
 CATEGORIES=		security x11
 MASTER_SITES=		http://www.pingx.net/secpanel/
 
