@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/09/27 21:10:27 scode Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/15 20:31:04 scode Exp $
 #
 
 PKGMGR_VERSION= 0.5.0
 DISTNAME=	pkgmanager-${PKGMGR_VERSION}
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://starfury.scode.org/pkgmanager/
 PPCRE_VERSION=  1.2.10
@@ -17,6 +18,7 @@ COMMENT=	Package manager for pkgsrc
 
 USE_TOOLS+=     gmake
 DEPENDS+=       clisp>=2.33.2nb1:../../lang/clisp
+DEPENDS+=	pkg_tarup>=1.6.5:../../pkgtools/pkg_tarup
 
 CLISP=		${PREFIX}/bin/clisp
 PKGMGR_SRC=	${WRKDIR}/pkgmanager-${PKGMGR_VERSION}/src
