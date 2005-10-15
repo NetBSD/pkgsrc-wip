@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1956 2005/10/15 02:36:55 ykomatsu Exp $
-# $Id: Makefile,v 1.1956 2005/10/15 02:36:55 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.1957 2005/10/15 13:41:38 minskim Exp $
+# $Id: Makefile,v 1.1957 2005/10/15 13:41:38 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1134,7 +1134,6 @@ SUBDIR+=	tex-xmltex
 SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
-SUBDIR+=	tile
 SUBDIR+=	tilp
 SUBDIR+=	tinycobol
 SUBDIR+=	tinyfugue-beta

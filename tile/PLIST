@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2005/10/14 15:42:48 minskim Exp $
-bin/tile
-man/man1/tile.1
-share/applications/horizontal.desktop
-share/applications/vertical.desktop
-share/tile/rc
-share/tile/wmprofiles
-@dirrm share/tile
-@comment in xdg-dirs: @dirrm share/applications
