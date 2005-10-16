@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/07/20 16:24:40 jtonio Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/16 12:06:49 jtonio Exp $
 
 DISTNAME=     emacs-jabber-0.6.1
+PKGNAME=      ${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=   chat
 MASTER_SITES= ${MASTER_SITE_SOURCEFORGE:=emacs-jabber/}
 
