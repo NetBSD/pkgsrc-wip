@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1957 2005/10/15 13:41:38 minskim Exp $
-# $Id: Makefile,v 1.1957 2005/10/15 13:41:38 minskim Exp $
+# $NetBSD: Makefile,v 1.1958 2005/10/16 04:48:34 minskim Exp $
+# $Id: Makefile,v 1.1958 2005/10/16 04:48:34 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -797,7 +797,6 @@ SUBDIR+=	p5-Pod-Tree
 SUBDIR+=	p5-Quota
 SUBDIR+=	p5-Return-Value 
 SUBDIR+=	p5-Template-Timer
-SUBDIR+=	p5-Term-Screen
 SUBDIR+=	p5-Test-Class
 SUBDIR+=	p5-Test-Differences
 SUBDIR+=	p5-Text-ASCIITable
