@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1959 2005/10/16 05:02:59 minskim Exp $
-# $Id: Makefile,v 1.1959 2005/10/16 05:02:59 minskim Exp $
+# $NetBSD: Makefile,v 1.1960 2005/10/16 17:40:54 scode Exp $
+# $Id: Makefile,v 1.1960 2005/10/16 17:40:54 scode Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -770,6 +770,7 @@ SUBDIR+=	p5-Lingua-Stem-Snowball-Da
 SUBDIR+=	p5-Lingua-Stem-Snowball-No
 SUBDIR+=	p5-Lingua-Stem-Snowball-Se
 SUBDIR+=	p5-Lingua-StopWords
+SUBDIR+=	p5-Locale-libintl
 SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-MKDoc-XML
 SUBDIR+=	p5-Mail-Webmail-Gmail
