@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/08 18:59:02 larnor Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/17 19:03:21 jeremy-c-reed Exp $
 #
 
 DISTNAME=		xcmiscproto-1.1
@@ -8,10 +8,10 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		lars.nordlund@hem.utfors.se
 HOMEPAGE=		http://xorg.freedesktop.org/
-COMMENT=		TBD
+COMMENT=		XCMisc extension headers from X.org
 
 CONFLICTS+=		xextensions-[0-9]*
-CONFLICTS+=		xorg-libs-[0-9]*
+#CONFLICTS+=		xorg-libs-[0-9]*
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xcmiscproto.pc.in
