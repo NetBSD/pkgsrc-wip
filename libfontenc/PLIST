@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/17 18:40:44 jeremy-c-reed Exp $
+include/X11/fonts/fontenc.h
+lib/libfontenc.la
+lib/pkgconfig/fontenc.pc
+@comment @dirrm include/X11/fonts
