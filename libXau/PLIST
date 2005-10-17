@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/23 05:59:45 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/10/17 19:10:49 jeremy-c-reed Exp $
 include/X11/Xauth.h
 lib/libXau.la
 lib/pkgconfig/xau.pc
+man/man3/Xau.3
