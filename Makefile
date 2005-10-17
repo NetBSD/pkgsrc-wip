@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1961 2005/10/17 14:43:27 ghen Exp $
-# $Id: Makefile,v 1.1961 2005/10/17 14:43:27 ghen Exp $
+# $NetBSD: Makefile,v 1.1962 2005/10/17 18:21:17 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1962 2005/10/17 18:21:17 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -243,7 +243,6 @@ SUBDIR+=	esmtp
 SUBDIR+=	ethtool
 SUBDIR+=	evas
 SUBDIR+=	evidence
-SUBDIR+=	evince
 SUBDIR+=	evolution-sharp
 SUBDIR+=	exiftool
 SUBDIR+=	ez-ipupdate
