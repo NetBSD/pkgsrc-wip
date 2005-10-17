@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: dnsmasq.sh,v 1.1.1.1 2003/07/24 14:16:32 poppnk Exp $
+# $NetBSD: dnsmasq.sh,v 1.2 2005/10/17 17:03:29 dhowland Exp $
 #
 
 # PROVIDE: dnsmasq
@@ -15,4 +15,3 @@ pidfile="/var/run/${name}.pid"
 
 load_rc_config $name
 run_rc_command "$1"
-
