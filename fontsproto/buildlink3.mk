@@ -1,0 +1,20 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/10/17 18:34:12 jeremy-c-reed Exp $
+
+BUILDLINK_DEPMETHOD.fontsproto?=	build
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+FONTSPROTO_BUILDLINK3_MK:=	${FONTSPROTO_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	fontsproto
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfontsproto}
+BUILDLINK_PACKAGES+=	fontsproto
+
+.if !empty(FONTSPROTO_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.fontsproto+=	fontsproto>=2.0
+BUILDLINK_PKGSRCDIR.fontsproto?=	../../new/fontsproto
+.endif	# FONTSPROTO_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
