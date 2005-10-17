@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1962 2005/10/17 18:21:17 jeremy-c-reed Exp $
-# $Id: Makefile,v 1.1962 2005/10/17 18:21:17 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.1963 2005/10/17 19:31:33 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1963 2005/10/17 19:31:33 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -263,6 +263,8 @@ SUBDIR+=	flightgear-base
 SUBDIR+=	fluxconf
 SUBDIR+=	fluxspace
 SUBDIR+=	fnord
+SUBDIR+=	fontcacheproto
+SUBDIR+=	fontsproto
 SUBDIR+=	foomatic-db
 SUBDIR+=	foomatic-db-engine
 SUBDIR+=	foomatic-filters-cups
@@ -471,6 +473,7 @@ SUBDIR+=	libX11
 SUBDIR+=	libXau
 SUBDIR+=	libXcursor
 SUBDIR+=	libXdamage
+SUBDIR+=	libXdmcp
 SUBDIR+=	libXext
 SUBDIR+=	libXfixes
 SUBDIR+=	libXfont
@@ -485,6 +488,7 @@ SUBDIR+=	libavc1394
 SUBDIR+=	libbtctl
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
+SUBDIR+=	libfontenc
 SUBDIR+=	libgeotiff
 SUBDIR+=	libglade-java
 SUBDIR+=	libgnome-java
@@ -1232,6 +1236,7 @@ SUBDIR+=	xmms-pitch
 SUBDIR+=	xmms-scrobbler
 SUBDIR+=	xmms-status
 SUBDIR+=	xmms2
+SUBDIR+=	xorg-server
 SUBDIR+=	xpde
 SUBDIR+=	xpdq
 SUBDIR+=	xpilot-ng
