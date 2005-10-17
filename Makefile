@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1963 2005/10/17 19:31:33 jeremy-c-reed Exp $
-# $Id: Makefile,v 1.1963 2005/10/17 19:31:33 jeremy-c-reed Exp $
+ $NetBSD: Makefile,v 1.1964 2005/10/17 19:43:45 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.1964 2005/10/17 19:43:45 jeremy-c-reed Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1224,7 +1224,6 @@ SUBDIR+=	xfmedia
 SUBDIR+=	xgfe
 SUBDIR+=	xgobi
 SUBDIR+=	xinetd
-SUBDIR+=	xlibs
 SUBDIR+=	xmail
 SUBDIR+=	xmim
 SUBDIR+=	xmlformat-docs
