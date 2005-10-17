@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/09/19 08:24:10 leonardschmidt Exp $
+# $NetBSD: options.mk,v 1.5 2005/10/17 08:40:02 leonardschmidt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
 PKG_SUPPORTED_OPTIONS=	curl flac ogg pyrex ruby
@@ -41,9 +41,9 @@ PLIST_SUBST+=		PYREX="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mruby)
-RUBY_DIST_SUBDIR=
+USE_RUBY_DIST_SUBDIR=	no
 RUBY_VERSION_SUPPORTED=	18
-.  include "../../lang/ruby/modules.mk"
+.  include "../../lang/ruby/buildlink3.mk"
 PLIST_SUBST+=		RUBY=""
 .else
 EXCLUDES+=		ruby

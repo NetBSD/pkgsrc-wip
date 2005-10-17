@@ -1,5 +1,3 @@
-- Is there a cleaner way to enable ruby support?
-  (see patches/patch-a{b,c})
 - add ecore support.
 - add gnomevfs support.
 - add samba support.
