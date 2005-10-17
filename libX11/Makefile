@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/10/17 19:19:00 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.22 2005/10/17 19:27:02 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libX11-0.99.0
@@ -35,7 +35,7 @@ CPPFLAGS+=		-DXUSE_MTSAFE_API -DXNO_MTSAFE_PWDAPI -D_REENTRANT
 .include "../../wip/inputproto/buildlink3.mk"
 .include "../../wip/kbproto/buildlink3.mk"
 .include "../../wip/libXau/buildlink3.mk"
-.include "../../new/libXdmcp/buildlink3.mk"
+.include "../../wip/libXdmcp/buildlink3.mk"
 .include "../../wip/xcmiscproto/buildlink3.mk"
 .include "../../wip/xextproto/buildlink3.mk"
 .include "../../wip/xf86bigfontproto/buildlink3.mk"
