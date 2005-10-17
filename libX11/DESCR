@@ -1,11 +1,4 @@
 This is the libX11 library that is the C binding to the X protocol. It
 is the foundation of practically every X Window System program out there.
 
-This is the freedesktop.org version. It is based on libX11 from XFree86.
-
-The goals of this project are (1) to get libX11 out of the huge XF86
-hunk of code, (2) to make it buildable with autotools, (3) keep the
-ability to easily merge bug fixes from libX11 in XF86 into this code,
-(4) make it possible for people to work with Xlib without having to deal
-with the entire XFree86 distribution, so that bugs can get detected and
-fixed, and (5) provide a place to move the X library forward.
+This is from the X.org X11 project.
