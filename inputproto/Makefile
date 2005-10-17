@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/08 18:54:48 larnor Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/17 19:00:26 jeremy-c-reed Exp $
 #
 
 DISTNAME=		inputproto-1.3
@@ -8,10 +8,10 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		lars.nordlund@hem.utfors.se
 HOMEPAGE=		http://xorg.freedesktop.org/
-COMMENT=		TBD
+COMMENT=		Input extension headers from X.org
 
 CONFLICTS+=		xextensions-[0-9]*
-CONFLICTS+=		xorg-libs-[0-9]*
+#CONFLICTS+=		xorg-libs-[0-9]* # not in same PREFIX
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/inputproto.pc.in
