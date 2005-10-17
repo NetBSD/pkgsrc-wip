@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2005/09/07 16:24:56 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.15 2005/10/17 19:21:55 jeremy-c-reed Exp $
 #
 
-DISTNAME=		libXext-6.4.2
+DISTNAME=		libXext-0.99.0
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://xlibs.freedesktop.org/release/
+MASTER_SITES=		http://xorg.freedesktop.org/X11R7.0-RC0/lib/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://xlibs.freedesktop.org/
+HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Extension library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -19,6 +19,8 @@ USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	xext.pc.in
 
 .include "../../wip/libX11/buildlink3.mk"
+.include "../../wip/libXau/buildlink3.mk"  ## configure didn't check for this
+.include "../../wip/xextproto/buildlink3.mk"
 .include "../../wip/xproto/buildlink3.mk"
-.include "../../x11/xextensions/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
