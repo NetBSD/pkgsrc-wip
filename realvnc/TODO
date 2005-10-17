@@ -1,38 +1,33 @@
+- PACKAGE DOESNT BUILD
+  There is something wrong with the build of XFree where the several
+  files fail to compile.  The errors are ignored and when I go back
+  to look at the files, the lines that caused errors are gone.  Going
+  into xc/programs/Xserver and typing "make" causes it to finish the
+  build just fine.  I think this problem may be with imake but I'll
+  look later.
+
 - Update package for security issue:
 	http://secunia.com/advisories/15742/
+  (dhowland)-updated to 4.1.1 but I dont think this will ever be fixed
 
-** This package is not functional at this time.
+- USE_PERL5 is deprecated.
 
-RealVNC is the continuation of the original VNC project.  The old VNC
-version in pkgsrc (3.3.3) is awfully outdated.  I made this package
-to get the new version (4.0) on my machine.  RealVNC is a different
-project than TightVNC.  The pkgsrc version is a much better package
-than I could probably manage, so this is more just a standin.
+- Doesn't install the shared module for X, the manpage, or the java
+  classes for the webserver yet
 
-The old version came with a customized Xfree tree to build Xvnc, the
-VNC server that acts as a real X server with a virtual frambuffer.  The
-new version does not.  It now requires the user to provide an entire 
-XFree tree which is then patched and built.  It produces the VNC server
-(Xvnc) and a regular X server that has VNC ablities built in.
+- Allow an option to prevent the building of the X11 server
+    (like FreeBSD ports)
 
-I could have made a package that downloads the Xfree sources, and builds
-everything, but I'm not sure this is appropriate, so I left it out,
-which is why the package does not work at this time.
+  This package downloads and builds XFree 4.3.0 in order to create a
+  VNC enabled X11 server.  The download is large, the work directory
+  becomes very large, and the build takes a very long time.  It would
+  be good to include a warning about this and include an option to
+  safely turn off the building of the X server.
 
-As it stands right now, the package will work if you "make" it.  It
-will fail if you try to "make install" because the Xvnc executable is
-not built.
+  Should also make a MESSAGE about this when it is done.
 
-If all you need is the viewer, the package will build fine, just go
-into the makefile and remove the line that installs Xvnc.  If you want
-to build the VNC server (I have done it), you have to "make" the package,
-then go in and follow the directions in the README file.  Once Xvnc is
-built, then do a "make install" and "make clean".
+- Make the package more generalized (like FreeBSD ports)
+  they do several replacements of "cc" and "cxx" with ${CC} and ${CXX}
+  and stuff like that
 
-I can send you the Xvnc compiled for i386 NetBSD 1.6.2 if you have a
-similar system and would like to save yourself the trouble.
-email: dhowland@users.sourceforge.net
-
-** There is no IPv6 support like the pkgsrc version.
-
-** It doesn't install any documentation, but it does download it.
+- Still havn't looked into IPv6 support.
