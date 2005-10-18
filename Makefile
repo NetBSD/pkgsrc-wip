@@ -1,5 +1,5 @@
- $NetBSD: Makefile,v 1.1964 2005/10/17 19:43:45 jeremy-c-reed Exp $
-# $Id: Makefile,v 1.1964 2005/10/17 19:43:45 jeremy-c-reed Exp $
+ $NetBSD: Makefile,v 1.1965 2005/10/18 04:48:09 minskim Exp $
+# $Id: Makefile,v 1.1965 2005/10/18 04:48:09 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -193,7 +193,6 @@ SUBDIR+=	diveintopython
 SUBDIR+=	djvu
 SUBDIR+=	dkim-milter
 SUBDIR+=	dmd-bin
-SUBDIR+=	dnsmasq
 SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	doorman
