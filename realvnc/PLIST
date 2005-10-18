@@ -1,7 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/18 21:49:56 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/18 17:59:29 dhowland Exp $
 bin/vncserver
 bin/vncpasswd
 bin/vncviewer
 bin/vncconfig
 bin/x0vncserver
 bin/Xvnc
+lib/modules/extensions/vnc.so
+man/man1/vncviewer.1
+man/man1/x0vncserver.1
+man/man1/vncpasswd.1
+man/man1/vncconfig.1
+man/man1/vncserver.1
+share/vnc/classes/index.vnc
+share/vnc/classes/logo150x150.gif
+share/vnc/classes/vncviewer.jar
+@dirrm share/vnc/classes
+@dirrm share/vnc

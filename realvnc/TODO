@@ -1,33 +1,10 @@
-- PACKAGE DOESNT BUILD
-  There is something wrong with the build of XFree where the several
-  files fail to compile.  The errors are ignored and when I go back
-  to look at the files, the lines that caused errors are gone.  Going
-  into xc/programs/Xserver and typing "make" causes it to finish the
-  build just fine.  I think this problem may be with imake but I'll
-  look later.
-
 - Update package for security issue:
 	http://secunia.com/advisories/15742/
   (dhowland)-updated to 4.1.1 but I dont think this will ever be fixed
 
-- USE_PERL5 is deprecated.
-
-- Doesn't install the shared module for X, the manpage, or the java
-  classes for the webserver yet
-
-- Allow an option to prevent the building of the X11 server
-    (like FreeBSD ports)
-
-  This package downloads and builds XFree 4.3.0 in order to create a
-  VNC enabled X11 server.  The download is large, the work directory
-  becomes very large, and the build takes a very long time.  It would
-  be good to include a warning about this and include an option to
-  safely turn off the building of the X server.
-
-  Should also make a MESSAGE about this when it is done.
-
-- Make the package more generalized (like FreeBSD ports)
-  they do several replacements of "cc" and "cxx" with ${CC} and ${CXX}
-  and stuff like that
+- We should be like vnc and tightvnc in pkgsrc and split the viewer
+  and server.  Remove the viewer from this package and either move
+  wip/vncviewer4 to wip/realvncviewer or move this package from
+  wip/realvnc to wip/vnc4.  I prefer keeping the realvnc name.
 
 - Still havn't looked into IPv6 support.

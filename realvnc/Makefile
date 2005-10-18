@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/17 05:02:28 dhowland Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/18 17:59:29 dhowland Exp $
 #
 
 DISTNAME=		vnc-4_1_1-unixsrc
@@ -17,24 +17,24 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://www.realvnc.com/
 COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 
-PKG_SKIP_REASON=	See TODO
-
 CONFLICTS+=		vnc-*
 CONFLICTS+=		vncviewer-*
+CONFLICTS+=		vncviewer4-*
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 
-#USE_IMAKE=		yes
-USE_PERL5=		yes
-REPLACE_PERL=		vncserver
 GNU_CONFIGURE=		yes
-#USE_PKGINSTALL=		yes
+CONFIGURE_ARGS+=        --with-installed-zlib
+NO_INSTALL_MANPAGES=    yes
+
+USE_TOOLS+=		perl:run
+REPLACE_PERL=		vncserver
 
 SUBST_CLASSES=		pl
 SUBST_STAGE.pl=		pre-install
 SUBST_FILES.pl=		vncserver
 SUBST_MESSAGE.pl=	"Fixing paths..."
-SUBST_SED.pl=		-e "s|/usr/local/vnc/classes|${X11PREFIX}/share/vnc/classes|g"
+SUBST_SED.pl=		-e "s|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -47,14 +47,14 @@ pre-fetch:
 
 # This is also lifted from FreeBSD Ports.
 post-extract:
-	cd ${WRKSRC} && ${TAR} -cf - -C ${WRKDIR} xc | ${TAR} -xf - && \
+	@cd ${WRKSRC} && ${TAR} -cf - -C ${WRKDIR} xc | ${TAR} -xf - && \
 	${RM} -rf ${WRKDIR}/xc
 
 post-patch:
-	cd ${WRKSRC} && ${TOOLS_PLATFORM.patch} -Np0 <xc.patch
+	@cd ${WRKSRC} && ${TOOLS_PLATFORM.patch} -Np0 <xc.patch
 
 post-build:
-	cd ${WRKSRC}/xc && ${IMAKE_MAKE} World
+	@cd ${WRKSRC}/xc && ${MAKE} World
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/vncserver ${PREFIX}/bin/vncserver
@@ -63,6 +63,17 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vncconfig/vncconfig ${PREFIX}/bin/vncconfig
 	${INSTALL_PROGRAM} ${WRKSRC}/x0vncserver/x0vncserver ${PREFIX}/bin/x0vncserver
 	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/Xvnc ${PREFIX}/bin/Xvnc
+	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/Xvnc ${PREFIX}/bin/Xvnc
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/modules/extensions
+	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/vnc/module/vnc.so ${PREFIX}/lib/modules/extensions/vnc.so
+	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.man ${PREFIX}/man/man1/vncviewer.1
+	${INSTALL_MAN} ${WRKSRC}/x0vncserver/x0vncserver.man ${PREFIX}/man/man1/x0vncserver.1
+	${INSTALL_MAN} ${WRKSRC}/vncpasswd/vncpasswd.man ${PREFIX}/man/man1/vncpasswd.1
+	${INSTALL_MAN} ${WRKSRC}/vncconfig/vncconfig.man ${PREFIX}/man/man1/vncconfig.1
+	${INSTALL_MAN} ${WRKSRC}/vncserver.man ${PREFIX}/man/man1/vncserver.1
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vnc/classes
+	${INSTALL_DATA} ${WRKSRC}/../common/javabin/* ${PREFIX}/share/vnc/classes
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
