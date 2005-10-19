@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/10/17 15:34:55 ghen Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/19 03:31:01 minskim Exp $
 
 DISTNAME=	wsbasic-1_2_4
-PKGNAME=	${DISTNAME:S/_/./}
-PKGREVISION=	1
+PKGNAME=	${DISTNAME:S/_/./g}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wsbasic/}
 
