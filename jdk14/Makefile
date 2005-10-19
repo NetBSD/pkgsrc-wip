@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/08/11 15:46:26 ghen Exp $
+# $NetBSD: Makefile,v 1.22 2005/10/19 14:01:32 ghen Exp $
 
 JDK_VERSION=    1.4.2
 JDK_PATCHSET_VERSION=   7
@@ -12,7 +12,7 @@ MASTER_SITES=	# http://www.sun.com/software/java2/download.html
 EXTRACT_SUFX=	.zip
 DISTFILES=	${SCSL_SRCFILE} ${SCSL_BINFILE} ${PATCHSETFILE}
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	geert.hendrickx@ua.ac.be
 HOMEPAGE=	http://www.eyesbeyond.com/freebsddom/java/
 COMMENT=	Java Development Kit 1.4.2
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.1 2005/08/11 15:17:05 ghen Exp $
+@comment $NetBSD: PLIST.common_end,v 1.2 2005/10/19 14:01:32 ghen Exp $
 @dirrm java/jdk-1.4.2/man/man1
 @dirrm java/jdk-1.4.2/man/ja_JP.eucJP/man1
 @dirrm java/jdk-1.4.2/man/ja_JP.eucJP
@@ -43,23 +43,6 @@
 @dirrm java/jdk-1.4.2/demo/jfc/TableExample/src
 @dirrm java/jdk-1.4.2/demo/jfc/TableExample
 @dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/src
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/tooltip
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/toolbar
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/tabbedpane
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/splitpane
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/scrollpane
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/optionpane
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/list
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/htmldemo
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/filechooser
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/combobox
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/buttons
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/Octavo
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/misc
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub/food
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images/ImageClub
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources/images
-@dirrm java/jdk-1.4.2/demo/jfc/SwingSet2/resources
 @dirrm java/jdk-1.4.2/demo/jfc/SwingSet2
 @dirrm java/jdk-1.4.2/demo/jfc/SwingApplet/src
 @dirrm java/jdk-1.4.2/demo/jfc/SwingApplet
