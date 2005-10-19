@@ -1,5 +1,5 @@
- $NetBSD: Makefile,v 1.1965 2005/10/18 04:48:09 minskim Exp $
-# $Id: Makefile,v 1.1965 2005/10/18 04:48:09 minskim Exp $
+ $NetBSD: Makefile,v 1.1966 2005/10/19 03:37:16 minskim Exp $
+# $Id: Makefile,v 1.1966 2005/10/19 03:37:16 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1208,7 +1208,6 @@ SUBDIR+=	wmnetload
 SUBDIR+=	wordnet
 SUBDIR+=	words
 SUBDIR+=	worker
-SUBDIR+=	wsbasic
 SUBDIR+=	xaralx-bin
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
