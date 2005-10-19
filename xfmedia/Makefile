@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/10/19 04:32:02 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/19 04:37:15 minskim Exp $
 #
 
 DISTNAME=		xfmedia-0.9.1
@@ -15,7 +15,6 @@ USE_PKGINSTALL=         yes
 USE_PKGLOCALEDIR=       yes
 USE_LIBTOOL=            yes
 GNU_CONFIGURE=          yes
-USE_X11=                yes
 USE_TOOLS+=             gmake pkg-config
 
 OWN_DIRS=	${PKG_SYSCONFDIR}/xdg/xfmedia
@@ -30,6 +29,7 @@ post-install:
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../x11/libexo/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
+.include "../../x11/libexo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
