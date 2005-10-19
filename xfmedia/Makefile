@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/10/19 04:25:58 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/19 04:32:02 minskim Exp $
 #
 
 DISTNAME=		xfmedia-0.9.1
@@ -17,6 +17,8 @@ USE_LIBTOOL=            yes
 GNU_CONFIGURE=          yes
 USE_X11=                yes
 USE_TOOLS+=             gmake pkg-config
+
+OWN_DIRS=	${PKG_SYSCONFDIR}/xdg/xfmedia
 
 CONF_FILES=    ${PREFIX}/share/xfmedia/keybindings.rc \
 	       ${PKG_SYSCONFDIR}/xdg/xfmedia/keybindings.rc
