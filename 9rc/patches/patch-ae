@@ -1,23 +1,21 @@
-$NetBSD: patch-ae,v 1.1 2005/08/27 17:01:11 leonardschmidt Exp $
+$NetBSD: patch-ae,v 1.2 2005/10/19 11:14:25 leonardschmidt Exp $
 
---- cat/Makefile.orig	2005-08-23 21:38:52.000000000 +0000
+--- cat/Makefile.orig	2005-10-17 12:08:07.000000000 +0000
 +++ cat/Makefile
-@@ -18,13 +18,11 @@ MANFILES  = cat.1
+@@ -12,12 +12,10 @@ MANFILES  = cat.1
  all: ${TARG}
  
  install: ${TARG}
--	@${MKDIR} -p ${DESTDIR}${PREFIX}/bin
--	@${INSTBIN} ${TARG} ${DESTDIR}${PREFIX}/bin/
--	@${MODBIN} ${DESTDIR}${PREFIX}/bin/${TARG}
--	@${MKDIR} -p ${DESTDIR}${PREFIX}/lib
--	@${MKDIR} -p ${DESTDIR}${MANPREFIX}/man1
--	@${INSTDATA} ${MANFILES} ${DESTDIR}${MANPREFIX}/man1
--	@${MODDATA} ${DESTDIR}${MANPREFIX}/man1/${MANFILES}
+-	@mkdir -p ${DESTDIR}${PREFIX}/bin
+-	@cp -f ${TARG} ${DESTDIR}${PREFIX}/bin/
+-	@chmod 755 ${DESTDIR}${PREFIX}/bin/${TARG}
+-	@mkdir -p ${DESTDIR}${MANPREFIX}/man1
+-	@cp -f ${MANFILES} ${DESTDIR}${MANPREFIX}/man1
+-	@chmod 444 ${DESTDIR}${MANPREFIX}/man1/${MANFILES}
 +	@${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 +	@${BSD_INSTALL_PROGRAM} ${TARG} ${DESTDIR}${PREFIX}/bin/
-+	@${BSD_INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib
 +	@${BSD_INSTALL_MAN_DIR} ${DESTDIR}${MANPREFIX}/man1
 +	@${BSD_INSTALL_MAN} ${MANFILES} ${DESTDIR}${MANPREFIX}/man1
  
  uninstall:
- 	@${RM} ${DESTDIR}${PREFIX}/bin/${TARG}
+ 	@rm -f ${DESTDIR}${PREFIX}/bin/${TARG}

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/08/27 09:01:56 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.3 2005/10/19 11:14:25 leonardschmidt Exp $
 
---- config.mk.orig	2005-08-23 21:38:52.000000000 +0000
+--- config.mk.orig	2005-10-17 12:08:07.000000000 +0000
 +++ config.mk
-@@ -1,22 +1,22 @@
+@@ -1,16 +1,16 @@
  # Customize to fit your system
  
  # paths
@@ -11,22 +11,16 @@ $NetBSD: patch-aa,v 1.2 2005/08/27 09:01:56 leonardschmidt Exp $
 +#PREFIX      = /usr/local/9
 +MANPREFIX   = ${PREFIX}/man
  
- #INCDIR      = ${PREFIX}/include
- #LIBDIR      = ${PREFIX}/lib
- 
- # compiler
- VERSION     = 20050823
+ # flags
+ VERSION     = 20051017
 -CFLAGS      = -Wall -Wno-missing-braces -Wno-parentheses -Wno-switch -Os -c -I. -DPREFIX="\"${PREFIX}\""
 -LDFLAGS     =
 +CFLAGS      += -c -I. -DPREFIX="\"${PREFIX}\""
 +LDFLAGS     +=
- ARFLAGS     = rc
  O           = o
  
- # userland
- AR          = ar
+ # compiler
+ AR          = ar rc
 -CC          = cc
 +#CC          = cc
- CP          = cp -f
- COMPRESS    = gzip
- INSTBIN     = ${CP}
+ YACC        = yacc
