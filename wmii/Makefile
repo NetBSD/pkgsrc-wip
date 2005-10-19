@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2005/10/07 10:07:45 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/19 11:12:49 leonardschmidt Exp $
 #
 
-DISTNAME=	wmii-20051007
+DISTNAME=	wmii-20051017
 CATEGORIES=	wm x11
 MASTER_SITES=	http://wmi.modprobe.de/snaps/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://wmi.modprobe.de/
