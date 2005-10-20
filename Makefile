@@ -1,5 +1,5 @@
- $NetBSD: Makefile,v 1.1968 2005/10/19 08:23:36 ghen Exp $
-# $Id: Makefile,v 1.1968 2005/10/19 08:23:36 ghen Exp $
+ $NetBSD: Makefile,v 1.1969 2005/10/20 20:00:18 xtraeme Exp $
+# $Id: Makefile,v 1.1969 2005/10/20 20:00:18 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1096,7 +1096,6 @@ SUBDIR+=	stardict
 SUBDIR+=	stepmania
 SUBDIR+=	stmpclean
 SUBDIR+=	stonx
-SUBDIR+=	streamripper
 SUBDIR+=	stunnel3
 SUBDIR+=	sudoscript
 SUBDIR+=	sugarCRM
