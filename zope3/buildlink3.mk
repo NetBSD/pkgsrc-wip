@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/10/03 02:00:23 ykomatsu Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/10/21 09:11:31 ykomatsu Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 ZOPE3_UNSTABLE_BUILDLINK3_MK:=	${ZOPE3_UNSTABLE_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_DEPENDS.zope3-unstable+=	zope3-unstable>=3.1.0c3
 BUILDLINK_PKGSRCDIR.zope3-unstable?=	../../wip/zope3-unstable
 .endif	# ZOPE3_UNSTABLE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

@@ -1,36 +1,40 @@
-# $NetBSD: Makefile,v 1.2 2005/10/05 13:59:38 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/21 09:11:31 ykomatsu Exp $
+#
 
-DISTNAME=	Zope-3.1.0
-PKGNAME=	zope3-3.1.0
-CATEGORIES=	wip www
-MASTER_SITES=	http://www.zope.org/Products/Zope3/3.1.0final/
-EXTRACT_SUFX=	.tgz
+DISTNAME=		Zope-3.1.0
+PKGNAME=		zope3-3.1.0
+CATEGORIES=		wip www
+MASTER_SITES=		http://www.zope.org/Products/Zope3/3.1.0final/
+EXTRACT_SUFX=		.tgz
 
-MAINTAINER=	ykomatsu@akaumigame.org
-HOMEPAGE=	http://dev.zope.org/Zope3/
-COMMENT=	Zope 3 Application Server
+MAINTAINER=		ykomatsu@akaumigame.org
+HOMEPAGE=		http://dev.zope.org/Zope3/
+COMMENT=		Zope 3 Application Server
 
-CONFLICTS=	zope3-unstable-3.1.0*
+CONFLICTS=		zope3-unstable-3.1.0*
 
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-python ${PYTHONBIN} \
-		--prefix ${PREFIX}/share/zope3 \
-		--force
-BUILD_TARGET=	build
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS=		--with-python ${PYTHONBIN} \
+			--prefix ${PREFIX}/share/zope3 \
+			--force
+BUILD_TARGET=		build
 
-USE_PKGINSTALL=	yes
-RCD_SCRIPTS=	zope3 zss3
-ZOPE3_GROUP?=	zope3
-ZOPE3_USER?=	zope3
-PKG_GROUPS=	${ZOPE3_GROUP}
-PKG_USERS=	${ZOPE3_USER}:${ZOPE3_GROUP}::Zope3\ user
+USE_PKGINSTALL=		yes
+RCD_SCRIPTS=		zope3 zss3
+ZOPE3_GROUP?=		zope3
+ZOPE3_USER?=		zope3
+PKG_GROUPS=		${ZOPE3_GROUP}
+PKG_USERS=		${ZOPE3_USER}:${ZOPE3_GROUP}::Zope3\ user
 
 PYTHON_VERSION_DEFAULT=		23
 PYTHON_VERSION_ACCEPTED=	24 23
 
-MESSAGE_SUBST+=	ZOPE3_USER=${ZOPE3_USER} ZOPE3_GROUP=${ZOPE3_GROUP}
+MESSAGE_SUBST+=		ZOPE3_USER=${ZOPE3_USER} ZOPE3_GROUP=${ZOPE3_GROUP} \
+			VARBASE=${VARBASE}
+RCD_SCRIPT.zope3=	files/zope3.sh
+RCD_SCRIPT.zss3=	files/zss3.sh
 
-ZOPE3_DOCDIR=	${PREFIX}/share/doc/zope3
+ZOPE3_DOCDIR=		${PREFIX}/share/doc/zope3
 
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -type f -print | ${XARGS} ${RM} -f

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: zope3.sh,v 1.1.1.1 2005/10/03 02:00:25 ykomatsu Exp $
+# $NetBSD: zope3.sh,v 1.2 2005/10/21 09:11:31 ykomatsu Exp $
 #
 # PROVIDE: zope3
 # REQUIRE: DAEMON
@@ -20,7 +20,7 @@ restart_cmd="zope3_restart"
 restart_precmd="zope3_precmd"
 status_cmd="zope3_status"
 status_precmd="zope3_precmd"
-zope3_instance_home="/var/zope3"
+zope3_instance_home="@VARBASE@/zope3"
 required_dirs="${zope3_instance_home}"
 command_args="--daemon --socket-name ${zope3_instance_home}/var/zdsock --program ${zope3_instance_home}/bin/runzope"
 
