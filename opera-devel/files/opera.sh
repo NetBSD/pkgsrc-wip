@@ -1,6 +1,4 @@
 #!/bin/sh
-# $NetBSD: opera.sh,v 1.1.1.1 2004/04/28 22:41:41 kheinz Exp $
-#
 LINUX_KERN_OSREL=`/sbin/sysctl -n emul.linux.kern.osrelease 2>/dev/null`
 if [ -z "$LINUX_KERN_OSREL" -o "$LINUX_KERN_OSREL" = "2.0.38" ]
 then
@@ -8,7 +6,7 @@ then
  mkdir -p $OPERADIR || exit 1
  for FILE in $OPERADIR/opera6.ini $OPERADIR/opera.ini
  do
-  if [ -e ${FILE} ]
+  if [ -f ${FILE} ]
   then
    if grep -q '^Synchronous DNS Lookup=0$' ${FILE}
    then

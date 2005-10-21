@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1.1.1 2004/04/28 22:41:41 kheinz Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.2 2005/10/21 19:15:21 ghen Exp $
 bin/opera
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/missingsyms.so
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/opera
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/spellcheck.so
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/works
 lib/opera/plugins/libnpp.so
-lib/opera/plugins/operamotifwrapper
+lib/opera/plugins/operamotifwrapper-1
+lib/opera/plugins/operamotifwrapper-2
+lib/opera/plugins/operamotifwrapper-3
+lib/opera/plugins/operamotifwrapper-4
 lib/opera/plugins/operaplugincleaner
 man/man1/opera.1
 share/doc/opera/LICENSE
@@ -22,7 +25,6 @@ share/opera/help/fonts.html
 share/opera/help/glossary.html
 share/opera/help/help.css
 share/opera/help/history.html
-share/opera/help/hotlist.html
 share/opera/help/index.html
 share/opera/help/input.html
 share/opera/help/keyboard.html
