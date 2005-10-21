@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/02 19:12:40 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/21 03:55:00 minskim Exp $
 #
 
 DISTNAME=	zidrav4unix-1.2.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zidrav/}
 
 MAINTAINER=	tnn@netilium.org
 HOMEPAGE=	http://sourceforge.net/projects/zidrav
-COMMENT=	file corruption detection and repair program
+COMMENT=	File corruption detection and repair program
 
 USE_LANGUAGES=  c c++
 BUILD_TARGET=	zidrav
