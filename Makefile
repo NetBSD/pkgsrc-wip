@@ -1,5 +1,5 @@
- $NetBSD: Makefile,v 1.1969 2005/10/20 20:00:18 xtraeme Exp $
-# $Id: Makefile,v 1.1969 2005/10/20 20:00:18 xtraeme Exp $
+ $NetBSD: Makefile,v 1.1970 2005/10/21 03:52:16 minskim Exp $
+# $Id: Makefile,v 1.1970 2005/10/21 03:52:16 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1244,7 +1244,6 @@ SUBDIR+=	yafray
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
-SUBDIR+=	z26
 SUBDIR+=	zapping
 SUBDIR+=	zidrav
 SUBDIR+=	zinf
