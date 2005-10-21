@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/21 09:11:31 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/21 09:33:33 ykomatsu Exp $
 #
 
 DISTNAME=		Zope-3.1.0
@@ -31,8 +31,6 @@ PYTHON_VERSION_ACCEPTED=	24 23
 
 MESSAGE_SUBST+=		ZOPE3_USER=${ZOPE3_USER} ZOPE3_GROUP=${ZOPE3_GROUP} \
 			VARBASE=${VARBASE}
-RCD_SCRIPT.zope3=	files/zope3.sh
-RCD_SCRIPT.zss3=	files/zss3.sh
 
 ZOPE3_DOCDIR=		${PREFIX}/share/doc/zope3
 
