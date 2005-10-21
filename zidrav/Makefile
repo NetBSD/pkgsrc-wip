@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/10/21 03:55:00 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/21 03:57:11 minskim Exp $
 #
 
 DISTNAME=	zidrav4unix-1.2.0
@@ -20,6 +20,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 .if ${MACHINE_ENDIAN} == "big"
   CXXFLAGS+=-DCPU_BIGENDIAN
 .endif
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/zidrav ${PREFIX}/bin/zidrav
