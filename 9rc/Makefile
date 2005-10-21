@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2005/10/19 11:14:25 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/21 20:34:14 leonardschmidt Exp $
 #
 
 DISTNAME=	9rc-20051017
 CATEGORIES=	shells
-MASTER_SITES=	http://wmi.modprobe.de/snaps/
+MASTER_SITES=	http://wmii.de/snaps/
 
 MAINTAINER=	lems@gmx.net
-HOMEPAGE=	http://wmi.modprobe.de/
+HOMEPAGE=	http://wmii.de/
 COMMENT=	Port of various original plan9 tools
 
 CONFLICTS=		rc-[0-9]*
