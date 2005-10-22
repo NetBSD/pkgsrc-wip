@@ -1,5 +1,5 @@
- $NetBSD: Makefile,v 1.1973 2005/10/22 12:56:52 obache Exp $
-# $Id: Makefile,v 1.1973 2005/10/22 12:56:52 obache Exp $
+ $NetBSD: Makefile,v 1.1974 2005/10/22 13:01:18 obache Exp $
+# $Id: Makefile,v 1.1974 2005/10/22 13:01:18 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -372,6 +372,7 @@ SUBDIR+=	ht2html
 SUBDIR+=	html2latex
 SUBDIR+=	httrack
 SUBDIR+=	hu-go
+SUBDIR+=	hyperestraier
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
 SUBDIR+=	icc
