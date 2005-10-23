@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1977 2005/10/23 19:14:20 minskim Exp $
-# $Id: Makefile,v 1.1977 2005/10/23 19:14:20 minskim Exp $
+# $NetBSD: Makefile,v 1.1978 2005/10/23 19:32:46 minskim Exp $
+# $Id: Makefile,v 1.1978 2005/10/23 19:32:46 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -62,7 +62,6 @@ SUBDIR+=	SDL-intro-ko
 SUBDIR+=	SDL-intro-pt
 SUBDIR+=	SDL-intro-ru
 SUBDIR+=	Siesta
-SUBDIR+=	Teg
 SUBDIR+=	WEPCrack
 SUBDIR+=	abuse_sdl
 SUBDIR+=	acpid
