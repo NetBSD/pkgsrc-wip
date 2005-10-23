@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/24 10:29:21 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/10/23 21:02:26 blef Exp $
 
 DISTNAME=		abuse_sdl-0.7.0
 CATEGORIES=		games
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		YES
 
 SITES_frabs210_unix.src.tar.bz2=       http://www.cs.uidaho.edu/~cass0664/fRaBs/
 
-CPPFLAGS+=-DPREFIX=\"\\\"${PREFIX}\\\"\"
+CPPFLAGS+=-DPREFIX="\"${PREFIX}\""
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/abuse_sdl
