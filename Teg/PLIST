@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/21 15:50:34 wrzymski Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/23 19:30:21 minskim Exp $
 bin/tegclient
 bin/tegrobot
 bin/tegserver
+share/gconf/schemas/teg.schemas
 share/gnome/apps/Games/teg.desktop
 share/gnome/help/teg/C/figures/connect.png
 share/gnome/help/teg/C/figures/dices.png
@@ -260,7 +261,7 @@ share/pixmaps/teg_pix/themes/sentimental/zaire.png
 @dirrm share/pixmaps/teg_pix/themes/draco
 @dirrm share/pixmaps/teg_pix/themes
 @dirrm share/pixmaps/teg_pix
-@dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/pixmaps
 @exec ${MKDIR} %D/share/gnome/help/teg/pl/stylesheet-images
 @dirrm share/gnome/help/teg/pl/stylesheet-images
 @dirrm share/gnome/help/teg/pl/figures
@@ -270,5 +271,7 @@ share/pixmaps/teg_pix/themes/sentimental/zaire.png
 @dirrm share/gnome/help/teg/C/figures
 @dirrm share/gnome/help/teg/C
 @dirrm share/gnome/help/teg
-@dirrm share/gnome/help
-@dirrm share/gnome/apps/Games
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome/apps/Games
+@comment in gnome2-dirs: @dirrm share/gnome/apps
+@comment in GConf2: @dirrm share/gconf/schemas
