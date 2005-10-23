@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/10/21 20:35:06 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/23 20:27:49 minskim Exp $
 #
 
 DISTNAME=	wmii-20051017
@@ -9,7 +9,7 @@ MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://wmii.de/
 COMMENT=	Modular and keyboard-friendly window manager
 
-DEPENDS+=		9rc-[0-9]*:../../wip/9rc
+DEPENDS+=		9rc-[0-9]*:../../shells/9rc
 
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
