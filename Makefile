@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1975 2005/10/23 11:42:28 rillig Exp $
-# $Id: Makefile,v 1.1975 2005/10/23 11:42:28 rillig Exp $
+# $NetBSD: Makefile,v 1.1976 2005/10/23 19:02:59 minskim Exp $
+# $Id: Makefile,v 1.1976 2005/10/23 19:02:59 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -979,7 +979,6 @@ SUBDIR+=	qcad-manual-de
 SUBDIR+=	qcad-manual-en
 SUBDIR+=	qcad-manual-hu
 SUBDIR+=	qcad-partlibrary
-SUBDIR+=	qdbm
 SUBDIR+=	qemu-bin
 SUBDIR+=	qgis
 SUBDIR+=	qhacc
