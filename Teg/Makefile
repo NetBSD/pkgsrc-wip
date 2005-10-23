@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/21 15:50:34 wrzymski Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/23 19:24:53 minskim Exp $
 
 DISTNAME=		teg-0.11.1
 CATEGORIES=		wip
@@ -11,9 +11,6 @@ COMMENT=		Round-based computer board game
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-
-CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
-MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
 GCONF2_SCHEMAS+=	teg.schemas
 
