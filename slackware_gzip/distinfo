@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/14 21:01:09 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/10/23 14:59:03 rillig Exp $
 
 SHA1 (slackware/gzip-1.3.3-i386-2.tgz) = 11b2a6433e1b5a98f2f7d061788b587d2fe208e2
+RMD160 (slackware/gzip-1.3.3-i386-2.tgz) = 083506f184e4eebb1232ae2e2c44225bddd2d173
 Size (slackware/gzip-1.3.3-i386-2.tgz) = 76231 bytes

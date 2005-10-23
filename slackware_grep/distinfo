@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2004/03/12 16:11:22 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2005/10/23 14:59:03 rillig Exp $
 
 SHA1 (slackware/grep-2.5-i386-2.tgz) = 9be860c9861ef6830df0c7543a2ddba60eccbbae
+RMD160 (slackware/grep-2.5-i386-2.tgz) = 6587cbebf84cbe4dc595b4d558e78930103edb67
 Size (slackware/grep-2.5-i386-2.tgz) = 178734 bytes
