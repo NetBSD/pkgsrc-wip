@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/10/23 19:24:53 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/23 19:25:36 minskim Exp $
 
 DISTNAME=		teg-0.11.1
-CATEGORIES=		wip
+CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=teg/}
 
 MAINTAINER=		wrzymski@gmail.com
