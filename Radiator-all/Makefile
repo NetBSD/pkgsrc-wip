@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/29 11:49:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/24 17:18:15 rillig Exp $
 #
 
 DISTNAME=	Radiator-all-3.6
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Net-SSLeay>=0.22:../../security/p5-Net-SSLeay
 DEPENDS+=	p5-Digest-HMAC>=1.01:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-Digest-SHA1>=2.01:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-Tk>=800.002:../../x11/p5-Tk
-DEPENDS+=	Radiator>=3.6:../Radiator
+DEPENDS+=	Radiator>=3.6:../../wip/Radiator
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
