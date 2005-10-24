@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/12 13:48:35 ghen Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/24 08:19:56 ghen Exp $
 bin/XaraLX
 share/XaraLX/Designs/BLUECAR.xar
 share/XaraLX/Designs/CatWoman graphs.xar
 share/XaraLX/Designs/EngineTimings.xar
+share/XaraLX/Designs/Fill Types simple.xar
 share/XaraLX/Designs/Girard_simple.xar
 share/XaraLX/Designs/JagSS100 simple3.xar
 share/XaraLX/Designs/Phil Hill-fontsremoved.xar
@@ -11,7 +12,9 @@ share/XaraLX/Designs/Simple Sphere.xar
 share/XaraLX/Designs/Spitfire.xar
 share/XaraLX/Designs/WATCH.xar
 share/XaraLX/Designs/WATCH2.xar
+share/XaraLX/Designs/amurdove.xar
 share/XaraLX/Designs/leafgirl.xar
+share/XaraLX/Designs/scope3 simple.xar
 share/XaraLX/Resources/LPush32.png
 share/XaraLX/Resources/deffill.bmp
 share/XaraLX/Resources/lbeveltool32.png
