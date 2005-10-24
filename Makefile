@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1980 2005/10/23 20:39:41 minskim Exp $
-# $Id: Makefile,v 1.1980 2005/10/23 20:39:41 minskim Exp $
+# $NetBSD: Makefile,v 1.1981 2005/10/24 02:26:39 minskim Exp $
+# $Id: Makefile,v 1.1981 2005/10/24 02:26:39 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1244,7 +1244,6 @@ SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	zapping
 SUBDIR+=	zinf
-SUBDIR+=	zope3
 SUBDIR+=	zphoto
 SUBDIR+=	zsnes-devel
 SUBDIR+=	zvbi
