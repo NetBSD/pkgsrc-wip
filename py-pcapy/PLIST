@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/18 22:52:31 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/24 20:52:15 rillig Exp $
 ${PYSITELIB}/pcapy.so
-
 share/doc/pcapy/LICENSE
 share/doc/pcapy/README
 share/doc/pcapy/pcapy.html

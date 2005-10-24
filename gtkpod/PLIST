@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/17 15:40:12 xtraeme Exp $
-
+@comment $NetBSD: PLIST,v 1.2 2005/10/24 20:52:15 rillig Exp $
 bin/gtkpod
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtkpod.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtkpod.mo

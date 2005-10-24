@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/20 17:23:59 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/24 20:52:15 rillig Exp $
 bin/sb_client.py
 bin/sb_dbexpimp.py
 bin/sb_filter.py
@@ -13,7 +13,6 @@ bin/sb_unheader.py
 bin/sb_upload.py
 bin/sb_xmlrpcserver.py
 bin/sb_chkopts.py
-
 ${PYSITELIB}/spambayes/Corpus.py
 ${PYSITELIB}/spambayes/Corpus.pyc
 ${PYSITELIB}/spambayes/Corpus.pyo

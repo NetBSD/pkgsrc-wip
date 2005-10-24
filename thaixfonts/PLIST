@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/17 16:29:24 xtraeme Exp $
-
+@comment $NetBSD: PLIST,v 1.2 2005/10/24 20:52:16 rillig Exp $
 lib/X11/fonts/thaixfonts/Phaisarn97-14.pcf.gz
 lib/X11/fonts/thaixfonts/PnThai.pcf.gz
 lib/X11/fonts/thaixfonts/PsMule.pcf.gz

@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/27 21:03:37 gschwarz Exp $
-
+@comment $NetBSD: PLIST,v 1.2 2005/10/24 20:52:16 rillig Exp $
 sbin/traceroute-nanog
 man/man8/traceroute-nanog.8

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2003/09/30 08:59:20 hfath Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/24 20:52:15 rillig Exp $
 bin/l2tpd
 share/examples/l2tpd/l2tp-secrets.sample
 share/examples/l2tpd/l2tpd.conf.sample
@@ -6,6 +6,5 @@ share/doc/l2tpd/README
 man/man5/l2tpd.conf.5
 man/man5/l2tp-secrets.5
 man/man8/l2tpd.8
-
 @dirrm share/doc/l2tpd
 @dirrm share/examples/l2tpd
