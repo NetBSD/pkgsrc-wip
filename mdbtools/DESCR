@@ -1,0 +1,6 @@
+The MDB Tools project is a effort to document the MDB file format used in
+Microsoft's Access database package, and to provide a set of tools and
+applications to make that data available on other platforms.
+
+Specifically, MDB Tools includes programs to export schema and data to other
+databases such as MySQL, Oracle, Sybase, PostgreSQL, and others.

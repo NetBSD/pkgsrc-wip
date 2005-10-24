@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/24 00:27:17 poppnk Exp $
+
+SHA1 (mdbtools-0.6pre1.tar.gz) = 37a50d623a444ec690d2677b12b59c2f11e497c0
+RMD160 (mdbtools-0.6pre1.tar.gz) = e6a89d6984ba84aa9895ab0b6e6b68ac86881be3
+Size (mdbtools-0.6pre1.tar.gz) = 611756 bytes
+SHA1 (patch-aa) = d910fa8e9f121b7896ed7b04761bf3a3d535a1c1
