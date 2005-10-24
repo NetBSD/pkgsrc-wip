@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/15 10:57:26 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/24 19:17:58 rillig Exp $
 bin/or1ksim
 share/doc/or1ksim/AUTHORS
 share/doc/or1ksim/BUGS
 share/doc/or1ksim/COPYING
-share/doc/or1ksim/INSTALL
 share/doc/or1ksim/ChangeLog
+share/doc/or1ksim/INSTALL
 share/doc/or1ksim/NEWS
 share/doc/or1ksim/README
 share/doc/or1ksim/README.gdb

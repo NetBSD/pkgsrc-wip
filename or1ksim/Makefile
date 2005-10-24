@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/15 10:57:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/24 19:17:58 rillig Exp $
 #
 
 DISTNAME=	or1k_or1ksim-stable_0_1_x
@@ -16,8 +16,6 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 WRKSRC=       ${WRKDIR}/or1k/or1ksim
 
-USE_BUILDLINK3=	YES
-HAS_CONFIGURE=	YES
 GNU_CONFIGURE=  YES
 
 CONFIGURE_ENV+=	OR1KSIM_CPU="or32"
@@ -38,4 +36,3 @@ do-install:
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
-
