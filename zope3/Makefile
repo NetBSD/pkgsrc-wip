@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/10/24 02:13:10 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2005/10/24 02:21:49 minskim Exp $
 #
 
 DISTNAME=		Zope-3.1.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		ykomatsu@akaumigame.org
 HOMEPAGE=		http://dev.zope.org/Zope3/
 COMMENT=		Zope 3 Application Server
+
+DEPENDS=		${PYPKGPREFIX}-xml>=0.8.3nb1:../../textproc/py-xml
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-python ${PYTHONBIN} \
@@ -32,7 +34,6 @@ MESSAGE_SUBST+=		ZOPE3_USER=${ZOPE3_USER} ZOPE3_GROUP=${ZOPE3_GROUP} \
 ZOPE3_DOCDIR=		${PREFIX}/share/doc/zope3
 
 .include "../../lang/python/application.mk"
-.include "../../textproc/py-xml/buildlink3.mk"
 
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -type f -print | ${XARGS} ${RM} -f
