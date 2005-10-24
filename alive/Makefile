@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/08 15:47:01 dillo Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/24 17:25:16 rillig Exp $
 #
 
 DISTNAME=	alive-1.4.0
@@ -14,7 +14,7 @@ MANCOMPRESSED=	yes
 GNU_CONFIGURE=  yes
 USE_TOOLS+=	automake
 
-LIBS.SunOS=	-lnsl -lsocket
+LIBS.SunOS+=	-lnsl -lsocket
 
 pre-configure:
 	cd ${WRKSRC} && aclocal
