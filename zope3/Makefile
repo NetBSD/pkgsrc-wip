@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/10/24 02:05:46 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/24 02:06:37 minskim Exp $
 #
 
 DISTNAME=		Zope-3.1.0
@@ -14,7 +14,7 @@ COMMENT=		Zope 3 Application Server
 CONFLICTS=		zope3-unstable-3.1.0*
 
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS=		--with-python ${PYTHONBIN} \
+CONFIGURE_ARGS+=	--with-python ${PYTHONBIN} \
 			--prefix ${PREFIX}/share/zope3 \
 			--force
 BUILD_TARGET=		build
