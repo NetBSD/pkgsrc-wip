@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/10/25 09:14:22 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/10/25 20:25:14 rillig Exp $
 bin/check-files
 bin/gmap2cache
 bin/mkcache
@@ -10,9 +10,9 @@ man/man5/dotcache.5
 man/man5/gofish.5
 sbin/gofish
 sbin/gopherd
-share/examples/rc.d/gopherd
-share/examples/gofish/gofish.conf
-share/examples/gofish/gofish-www.conf
 share/doc/gofish/Configure_GoFish
+share/examples/gofish/gofish-www.conf
+share/examples/gofish/gofish.conf
+share/examples/rc.d/gopherd
 @dirrm share/examples/gofish
 @dirrm share/doc/gofish
