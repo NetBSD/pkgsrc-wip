@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/25 17:45:53 dhowland Exp $
+lib/xfce4/panel-plugins/libquicklauncher.la
