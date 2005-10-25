@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2005/07/27 16:28:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/25 00:30:43 rillig Exp $
 #
 
 DISTNAME=		oak-1.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		net
-MASTER_SITES=		http://www.digitallumber.com/TAR/
+MASTER_SITES=		http://www.digitallumber.com/software/oak/code/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.digitallumber.com/TAR/
