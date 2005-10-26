@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/10/25 09:14:22 emil_s Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/26 03:39:59 minskim Exp $
 
 DISTNAME=		gofish-1.0
-CATEGORIES=		wip
+CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gofish/}
 
 MAINTAINER=		emil@math.su.se
