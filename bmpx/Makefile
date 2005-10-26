@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/04 12:30:24 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/26 07:32:57 leonardschmidt Exp $
 #
 
 .include "Makefile.common"
@@ -10,7 +10,6 @@ CONFLICTS+=	bmpx-xine-[0-9]*
 CONFIGURE_ARGS+=	--enable-gst
 CONFIGURE_ARGS+=	--disable-xine
 
-BROKEN=			GStreamer 0.9 is needed
 
 .include "../../multimedia/gst-plugins/buildlink3.mk"
 .include "../../multimedia/gstreamer/buildlink3.mk"
