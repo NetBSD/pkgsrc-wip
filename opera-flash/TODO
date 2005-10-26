@@ -1,0 +1,1 @@
+Remove emulators/suse*_openmotif dependency once PR#31882 is resolved.
