@@ -1,6 +1,6 @@
-$Id: TODO,v 1.4 2005/06/01 06:23:36 bubuchka Exp $
+$Id: TODO,v 1.5 2005/10/27 14:58:45 bubuchka Exp $
 
-- Upgrade to SARG version 2.0.8.
+- Upgrade to SARG version 2.0.9.
 
 - Test, if it works with SquidGuard (I haven't installed this software).
 
