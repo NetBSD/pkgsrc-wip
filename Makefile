@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1985 2005/10/26 19:28:04 ghen Exp $
-# $Id: Makefile,v 1.1985 2005/10/26 19:28:04 ghen Exp $
+# $NetBSD: Makefile,v 1.1986 2005/10/27 05:26:21 obache Exp $
+# $Id: Makefile,v 1.1986 2005/10/27 05:26:21 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -863,6 +863,7 @@ SUBDIR+=	plugger
 SUBDIR+=	png2ico
 SUBDIR+=	pngnq
 SUBDIR+=	pointless
+SUBDIR+=	pop-before-smtp
 SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postgis74
