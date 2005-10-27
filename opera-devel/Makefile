@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2005/10/21 19:15:20 ghen Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/27 14:26:45 ghen Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=	www
 MASTER_SITES=	http://snapshot.opera.com/${OPERA_DIR}/
 DISTFILES=	opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}${EXTRACT_SUFX}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	geert.hendrickx@ua.ac.be
 HOMEPAGE=	http://snapshot.opera.com/
 COMMENT=	Small, fast and customizable WWW client
 
