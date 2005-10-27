@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/27 04:43:27 dhowland Exp $
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce4-taskmanager.mo
+bin/xfce4-taskmanager
