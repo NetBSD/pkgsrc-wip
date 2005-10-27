@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1987 2005/10/27 14:22:23 ghen Exp $
-# $Id: Makefile,v 1.1987 2005/10/27 14:22:23 ghen Exp $
+# $NetBSD: Makefile,v 1.1988 2005/10/27 19:52:00 minskim Exp $
+# $Id: Makefile,v 1.1988 2005/10/27 19:52:00 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -188,7 +188,6 @@ SUBDIR+=	directory-administrator
 SUBDIR+=	distella
 SUBDIR+=	diveintopython
 SUBDIR+=	djvu
-SUBDIR+=	dkim-milter
 SUBDIR+=	dmd-bin
 SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
