@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/28 02:41:32 dhowland Exp $
+bin/xarchiver
+share/applications/xarchiver.desktop
+share/xarchiver/pixmaps/add.png
+share/xarchiver/pixmaps/add_folder.png
+share/xarchiver/pixmaps/extract.png
+@dirrm share/xarchiver/pixmaps
+@dirrm share/xarchiver
+@comment in xdg-dirs: @dirrm share/applications
