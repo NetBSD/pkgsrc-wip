@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/09/01 23:03:13 poppnk Exp $
+$NetBSD: distinfo,v 1.5 2005/10/28 17:34:03 poppnk Exp $
 
-SHA1 (gnump3d-2.9.4.tar.bz2) = 9ea882257c74e4643bc9f576ecbfbaf963dd2c6d
-RMD160 (gnump3d-2.9.4.tar.bz2) = faa06f80020afc3af57b6b2165fd6325234d06e3
-Size (gnump3d-2.9.4.tar.bz2) = 591566 bytes
+SHA1 (gnump3d-2.9.7.tar.bz2) = cfaa35ed61fb2f010dae4eeed2debda1d2b5ff04
+RMD160 (gnump3d-2.9.7.tar.bz2) = 68cc98137e1b254fd9a4cbcdbbb84c0f82393b70
+Size (gnump3d-2.9.7.tar.bz2) = 617906 bytes
 SHA1 (patch-aa) = 61d14628e4a08f4091a77711891d576cf16c766e

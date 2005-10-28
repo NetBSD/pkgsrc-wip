@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2005/09/02 17:06:42 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/10/28 17:34:03 poppnk Exp $
 bin/gnump3d
 bin/gnump3d-index
 bin/gnump3d-top
 bin/gnump3d2
 etc/gnump3d/gnump3d.conf
+etc/gnump3d/gnump3d.conf.default
 etc/gnump3d/mime.types
 lib/perl5/5.8.0/gnump3d/IP.pm
 lib/perl5/5.8.0/gnump3d/MD5.pm
@@ -19,8 +20,8 @@ lib/perl5/5.8.0/gnump3d/mp3info.pm
 lib/perl5/5.8.0/gnump3d/mp4info.pm
 lib/perl5/5.8.0/gnump3d/ogginfo.pm
 lib/perl5/5.8.0/gnump3d/oggtagreader.pm
-lib/perl5/5.8.0/gnump3d/plugins/COPYING.pm
 lib/perl5/5.8.0/gnump3d/plugins/bug.pm
+lib/perl5/5.8.0/gnump3d/plugins/copying.pm
 lib/perl5/5.8.0/gnump3d/plugins/info.pm
 lib/perl5/5.8.0/gnump3d/plugins/now.pm
 lib/perl5/5.8.0/gnump3d/plugins/playlist.pm
@@ -40,6 +41,29 @@ man/man1/gnump3d-top.1
 man/man1/gnump3d.1
 man/man1/gnump3d.conf.1
 share/examples/rc.d/gnump3d
+share/gnump3d/BlueBox/AUTHOR
+share/gnump3d/BlueBox/BlueBox.css
+share/gnump3d/BlueBox/COPYING.html
+share/gnump3d/BlueBox/bug.html
+share/gnump3d/BlueBox/config.ini
+share/gnump3d/BlueBox/error.html
+share/gnump3d/BlueBox/extras.html
+share/gnump3d/BlueBox/footer.tmpl
+share/gnump3d/BlueBox/header.tmpl
+share/gnump3d/BlueBox/index.html
+share/gnump3d/BlueBox/info.html
+share/gnump3d/BlueBox/now.html
+share/gnump3d/BlueBox/playlist.html
+share/gnump3d/BlueBox/prefs.html
+share/gnump3d/BlueBox/random.html
+share/gnump3d/BlueBox/recent.html
+share/gnump3d/BlueBox/results.html
+share/gnump3d/BlueBox/search.html
+share/gnump3d/BlueBox/size.html
+share/gnump3d/BlueBox/statistics.html
+share/gnump3d/BlueBox/stats.html
+share/gnump3d/BlueBox/tagbrowse.html
+share/gnump3d/BlueBox/template.ini
 share/gnump3d/Clean/AUTHOR
 share/gnump3d/Clean/COPYING.html
 share/gnump3d/Clean/bug.html
@@ -77,6 +101,80 @@ share/gnump3d/LaFrere/search.html
 share/gnump3d/LaFrere/size.html
 share/gnump3d/LaFrere/stats.html
 share/gnump3d/LaFrere/tagbrowse.html
+share/gnump3d/Liquid/AUTHOR
+share/gnump3d/Liquid/COPYING.html
+share/gnump3d/Liquid/bck.gif
+share/gnump3d/Liquid/bug.html
+share/gnump3d/Liquid/cel-bar-anthrazite-act.gif
+share/gnump3d/Liquid/cel-bar-anthrazite.gif
+share/gnump3d/Liquid/cel-bar-aqua-act.gif
+share/gnump3d/Liquid/cel-bar-aqua.gif
+share/gnump3d/Liquid/cel-bar-lime-act.gif
+share/gnump3d/Liquid/cel-bar-lime.gif
+share/gnump3d/Liquid/cel-bar-purple-act.gif
+share/gnump3d/Liquid/cel-bar-purple.gif
+share/gnump3d/Liquid/cel-bar-ruby-act.gif
+share/gnump3d/Liquid/cel-bar-ruby.gif
+share/gnump3d/Liquid/cel-bar-tangerine-act.gif
+share/gnump3d/Liquid/cel-bar-tangerine.gif
+share/gnump3d/Liquid/cel-bar-turqois-act.gif
+share/gnump3d/Liquid/cel-bar-turqois.gif
+share/gnump3d/Liquid/cel-bar-yellow-act.gif
+share/gnump3d/Liquid/cel-bar-yellow.gif
+share/gnump3d/Liquid/config.ini
+share/gnump3d/Liquid/error.html
+share/gnump3d/Liquid/footer.tmpl
+share/gnump3d/Liquid/gnump3dskin.webprj
+share/gnump3d/Liquid/header.tmpl
+share/gnump3d/Liquid/index.html
+share/gnump3d/Liquid/info.html
+share/gnump3d/Liquid/now.html
+share/gnump3d/Liquid/playlist.html
+share/gnump3d/Liquid/prefs.html
+share/gnump3d/Liquid/random.html
+share/gnump3d/Liquid/recent.html
+share/gnump3d/Liquid/results.html
+share/gnump3d/Liquid/search.html
+share/gnump3d/Liquid/size.html
+share/gnump3d/Liquid/stats.html
+share/gnump3d/Liquid/style.css
+share/gnump3d/Liquid/tab-aqua-act.gif
+share/gnump3d/Liquid/tab-athrazite-act.gif
+share/gnump3d/Liquid/tab-lime-act.gif
+share/gnump3d/Liquid/tab-purple-act.gif
+share/gnump3d/Liquid/tab-ruby-act.gif
+share/gnump3d/Liquid/tab-tangerine-act.gif
+share/gnump3d/Liquid/tab-turqois-act.gif
+share/gnump3d/Liquid/tab-white-act.gif
+share/gnump3d/Liquid/tab-white-mo.gif
+share/gnump3d/Liquid/tab-yellow-act.gif
+share/gnump3d/Liquid/tabel-header-left-ruby.gif
+share/gnump3d/Liquid/tabel-header-middle-ruby.gif
+share/gnump3d/Liquid/tabel-header-middle-white.gif
+share/gnump3d/Liquid/tabel-header-right-ruby.gif
+share/gnump3d/Liquid/tagbrowse.html
+share/gnump3d/Musicus/AUTHOR
+share/gnump3d/Musicus/COPYING.html
+share/gnump3d/Musicus/bug.html
+share/gnump3d/Musicus/config.ini
+share/gnump3d/Musicus/error.html
+share/gnump3d/Musicus/extras.html
+share/gnump3d/Musicus/footer.tmpl
+share/gnump3d/Musicus/index.html
+share/gnump3d/Musicus/info.html
+share/gnump3d/Musicus/now.html
+share/gnump3d/Musicus/playlist.html
+share/gnump3d/Musicus/prefs.html
+share/gnump3d/Musicus/random.html
+share/gnump3d/Musicus/recent.html
+share/gnump3d/Musicus/results.html
+share/gnump3d/Musicus/search.html
+share/gnump3d/Musicus/size.html
+share/gnump3d/Musicus/statistics.html
+share/gnump3d/Musicus/stats.html
+share/gnump3d/Musicus/style.css
+share/gnump3d/Musicus/tagbrowse.html
+share/gnump3d/Musicus/template.ini
 share/gnump3d/Nomad/COPYING.html
 share/gnump3d/Nomad/ClubNomadLogo.gif
 share/gnump3d/Nomad/GNUMP3dLogo.jpg
@@ -264,6 +362,8 @@ share/gnump3d/redgrey/results.html
 share/gnump3d/redgrey/search.html
 share/gnump3d/redgrey/stats.html
 share/gnump3d/redgrey/tagbrowse.html
+@exec ${MKDIR} %D/share/gnump3d/simple
+@dirrm share/gnump3d/simple
 @dirrm share/gnump3d/redgrey
 @dirrm share/gnump3d/nausicaa
 @dirrm share/gnump3d/handheld
@@ -276,7 +376,9 @@ share/gnump3d/redgrey/tagbrowse.html
 @dirrm share/gnump3d/Nomad
 @dirrm share/gnump3d/LaFrere
 @dirrm share/gnump3d/Clean
-@dirrm share/gnump3d/simple
+@dirrm share/gnump3d/BlueBox
+@dirrm share/gnump3d/Liquid
+@dirrm share/gnump3d/Musicus
 @dirrm share/gnump3d
 @dirrm lib/perl5/5.8.0/gnump3d/plugins
 @dirrm lib/perl5/5.8.0/gnump3d/lang
