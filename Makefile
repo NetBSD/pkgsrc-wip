@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1988 2005/10/27 19:52:00 minskim Exp $
-# $Id: Makefile,v 1.1988 2005/10/27 19:52:00 minskim Exp $
+# $NetBSD: Makefile,v 1.1989 2005/10/28 02:46:59 minskim Exp $
+# $Id: Makefile,v 1.1989 2005/10/28 02:46:59 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1155,7 +1155,6 @@ SUBDIR+=	tutos
 SUBDIR+=	tuxtype2
 SUBDIR+=	typespeed
 SUBDIR+=	typhoon
-SUBDIR+=	tzosdclock
 SUBDIR+=	uade
 SUBDIR+=	uclibc
 SUBDIR+=	udhcp
