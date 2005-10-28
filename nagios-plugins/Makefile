@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/10/28 15:34:32 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/28 15:41:16 ykomatsu Exp $
 #
 
 CATEGORIES=	net sysutils
@@ -9,6 +9,7 @@ HOMEPAGE=       http://sourceforge.net/projects/nagiosplug/
 COMMENT=	Nagios plugins
 
 .include "Makefile.common"
+.include "../../mk/bsd.pkg.mk"
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=      --with-df-command="/bin/df -Pklt nokernfs,procfs,fdesc"
@@ -22,4 +23,3 @@ DEPENDS+=	{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/ssh
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../mk/bsd.pkg.mk"
