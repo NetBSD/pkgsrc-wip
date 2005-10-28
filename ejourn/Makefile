@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/28 04:06:53 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/28 04:11:47 dhowland Exp $
 #
 
 DISTNAME=		ejourn-0.2.5
@@ -11,8 +11,6 @@ COMMENT=		Application to help track a journal or diary
 
 WRKSRC=			${WRKDIR}/ejourn
 
-#USE_DIRS+=              xdg-1.2
-#USE_TOOLS+=		pkg-config
 USE_TOOLS+=		gmake
 
 do-configure:
