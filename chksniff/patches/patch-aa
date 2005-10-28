@@ -1,27 +1,19 @@
-$NetBSD: patch-aa,v 1.2 2003/09/28 03:28:35 virtus Exp $
+$NetBSD: patch-aa,v 1.3 2005/10/28 20:56:58 minskim Exp $
 
---- src/Makefile.in.orig	Sat Sep 27 21:29:51 2003
-+++ src/Makefile.in		Sat Sep 27 21:32:37 2003
-@@ -1,7 +1,7 @@
+--- src/Makefile.in.orig	2003-04-06 13:22:35.000000000 -0700
++++ src/Makefile.in
+@@ -1,4 +1,4 @@
 -CC=gcc
 +CC=@CC@
  CFLAGS=@CFLAGS@
  INC=-I../include
--INSDIR=@prefix@/bin
-+INSDIR=@prefix@/bin
- LIBS=@LIBS@
- OBJS=chksniff.o
- 
-@@ -12,10 +12,10 @@
+ INSDIR=@prefix@/bin
+@@ -12,7 +12,7 @@ chksniff.o:	chksniff.c
  		$(CC) $(CFLAGS) $(INC) -c chksniff.c
  
  install:	
 -		cp chksniff $(INSDIR)
-+		${INSTALL} -c -m 0755 chksniff $(INSDIR)
++		$(BSD_INSTALL_PROGRAM) chksniff $(INSDIR)
  
  uninstall:	
--		rm $(INSDIR)/chksniff
-+		rm -f $(INSDIR)/chksniff
- 
- clean:		
- 		rm -f *.o chksniff
+ 		rm $(INSDIR)/chksniff
