@@ -1,21 +1,21 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2005/08/03 20:14:20 scott8586 Exp $
+$NetBSD: MESSAGE,v 1.4 2005/10/28 10:59:00 ykomatsu Exp $
 
 Apache Configuration:
 You must add this in your httpd.conf file
 
-    ScriptAlias /nagios/cgi-bin/ "/usr/pkg/libexec/nagios/cgi-bin/"
+    ScriptAlias /nagios/cgi-bin/ "${PREFIX}/libexec/nagios/cgi-bin/"
 
-    <Directory "/usr/pkg/libexec/nagios/cgi-bin/">
+    <Directory "${PREFIX}/libexec/nagios/cgi-bin/">
         AllowOverride AuthConfig
         order allow,deny
         allow from all
         Options ExecCGI
     </Directory>
 
-    Alias /nagios/ "/usr/pkg/share/nagios/"
+    Alias /nagios/ "${PREFIX}/share/nagios/"
 
-    <Directory "/usr/pkg/share/nagios/">
+    <Directory "${PREFIX}/share/nagios/">
         AllowOverride AuthConfig
         order allow,deny
         allow from all
@@ -24,6 +24,6 @@ You must add this in your httpd.conf file
 See the manual for more instructions.
 
 /etc/rc.d startup script:
-Please look in /usr/pkg/share/examples/rc.d/ for a nagios startup script.
+Please look in ${PREFIX}/share/examples/rc.d/ for a nagios startup script.
 
 ===========================================================================

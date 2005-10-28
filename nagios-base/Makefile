@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/10/28 10:25:24 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.19 2005/10/28 10:59:00 ykomatsu Exp $
 #
 
 DISTNAME=	nagios-1.2
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-nagios-grp=${NAGIOS_GROUP}
 CONFIGURE_ARGS+=	--with-command-user=${ROOT_USER}
 CONFIGURE_ARGS+=	--with-command-grp=${ROOT_GROUP}
 CONFIGURE_ARGS+=	--with-init-dir=${PREFIX}/etc/rc.d
-CONFIGURE_ARGS+=	--with-lockfile=/var/run/nagios/nagios.lock
+CONFIGURE_ARGS+=	--with-lockfile=${VARBASE}/run/nagios/nagios.lock
 
 RCD_SCRIPTS+=		nagios
 
@@ -51,6 +51,8 @@ NAGIOS_DIRS=	log/nagios log/nagios/archives run/nagios run/nagios/rw
 OWN_DIRS_PERMS+=	${VARBASE}/${_d_} ${NAGIOS_USER} ${NAGIOS_GROUP} 0775
 .endfor
 .undef _d_
+
+MESSAGE_SUBST+=	PREFIX=${PREFIX}
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
