@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1990 2005/10/28 02:54:06 minskim Exp $
-# $Id: Makefile,v 1.1990 2005/10/28 02:54:06 minskim Exp $
+# $NetBSD: Makefile,v 1.1991 2005/10/28 20:47:19 minskim Exp $
+# $Id: Makefile,v 1.1991 2005/10/28 20:47:19 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -104,7 +104,6 @@ SUBDIR+=	awflwm
 SUBDIR+=	axe
 SUBDIR+=	azara
 SUBDIR+=	backplane
-SUBDIR+=	balance
 SUBDIR+=	barnyard
 SUBDIR+=	bastard
 SUBDIR+=	beast
