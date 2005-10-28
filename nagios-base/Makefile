@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/09/28 08:17:00 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2005/10/28 10:25:24 ykomatsu Exp $
 #
 
 DISTNAME=	nagios-1.2
@@ -10,8 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nagios.org/
 COMMENT=	Network monitor
 
-.include "../../mk/bsd.prefs.mk"
-.include "../../wip/nagios-base/Makefile.common"
+.include "Makefile.common"
 .include "options.mk"
 
 CONFIGURE_ARGS+=	--with-gd-lib=${LOCALBASE}/lib		\
