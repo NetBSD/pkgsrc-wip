@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/27 04:43:27 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/28 20:26:21 minskim Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -9,5 +9,6 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://download.berlios.de/xfce-goodies/
 COMMENT=	XFce4 task manager
 
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/libxfce4gui/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
