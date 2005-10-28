@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1991 2005/10/28 20:47:19 minskim Exp $
-# $Id: Makefile,v 1.1991 2005/10/28 20:47:19 minskim Exp $
+# $NetBSD: Makefile,v 1.1992 2005/10/28 21:10:30 kristerw Exp $
+# $Id: Makefile,v 1.1992 2005/10/28 21:10:30 kristerw Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -125,6 +125,7 @@ SUBDIR+=	bnr2
 SUBDIR+=	boa
 SUBDIR+=	bridge-utils
 SUBDIR+=	briquolo
+SUBDIR+=	brltty
 SUBDIR+=	bscript
 SUBDIR+=	bsfilter
 SUBDIR+=	bub-n-bros
@@ -214,6 +215,7 @@ SUBDIR+=	ecore
 SUBDIR+=	editline
 SUBDIR+=	edje
 SUBDIR+=	eic
+SUBDIR+=	ejourn
 SUBDIR+=	electricsheep
 SUBDIR+=	emacs-jabber
 SUBDIR+=	emboss
@@ -567,6 +569,7 @@ SUBDIR+=	mathopd
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	mdadm
+SUBDIR+=	mdbtools
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
 SUBDIR+=	menumaker
@@ -811,6 +814,7 @@ SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-XML-Clean
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-pop3
+SUBDIR+=	panda
 SUBDIR+=	panoramixext
 SUBDIR+=	parted
 SUBDIR+=	pasmo
@@ -1201,6 +1205,7 @@ SUBDIR+=	wordnet
 SUBDIR+=	words
 SUBDIR+=	worker
 SUBDIR+=	xaralx-bin
+SUBDIR+=	xarchiver
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
 SUBDIR+=	xbsql
@@ -1210,6 +1215,8 @@ SUBDIR+=	xchat2-tcl
 SUBDIR+=	xcmiscproto
 SUBDIR+=	xextproto
 SUBDIR+=	xf86bigfontproto
+SUBDIR+=	xfce4-genmon-plugin
+SUBDIR+=	xfce4-taskmanager
 SUBDIR+=	xgfe
 SUBDIR+=	xgobi
 SUBDIR+=	xinetd
@@ -1233,6 +1240,7 @@ SUBDIR+=	xproto
 SUBDIR+=	xscribble-fs
 SUBDIR+=	xspread
 SUBDIR+=	xtrans
+SUBDIR+=	xxdiff
 SUBDIR+=	yabause
 SUBDIR+=	yafray
 SUBDIR+=	yp-tools
