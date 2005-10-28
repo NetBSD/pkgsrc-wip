@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/10/10 14:00:14 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/28 02:39:52 minskim Exp $
 #
 
 DISTNAME=		tzosdclock_1.0.2
@@ -14,5 +14,6 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../x11/xosd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
