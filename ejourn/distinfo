@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/28 04:06:53 dhowland Exp $
+
+SHA1 (ejourn-0.2.5.tar.gz) = 59c35afbd9e09d352e940f0fe80842c7ffa4040a
+RMD160 (ejourn-0.2.5.tar.gz) = 91b615f2a5e338dc28b6296c2228eabe3eccd2d5
+Size (ejourn-0.2.5.tar.gz) = 224459 bytes
+SHA1 (patch-aa) = 820de48f436d0acab68558fc180bdfdcbd85e793

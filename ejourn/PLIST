@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/28 04:06:53 dhowland Exp $
+bin/ejourn
+bin/ejourn-gui
+lib/libejourn.so
+lib/libejourn.so.1
+share/ejourn/dict/nouns.dict
+share/ejourn/dict/pronoun.dict
+share/ejourn/dict/verbs.dict
+share/ejourn/img/add.png
+share/ejourn/img/add.png.svg
+share/ejourn/img/ejourn.png
+share/ejourn/img/empty.png
+share/ejourn/img/folder_32.png
+share/ejourn/img/page_32.png
+share/ejourn/img/rect1076.png
+share/ejourn/img/rect1699.png
+share/ejourn/modules/cli_integration.so
+share/ejourn/modules/mult_journ.so
+share/ejourn/page/latex.html
+share/ejourn/page/latex.html~
+@dirrm share/ejourn/page
+@dirrm share/ejourn/modules
+@dirrm share/ejourn/img
+@dirrm share/ejourn/dict
+@dirrm share/ejourn
