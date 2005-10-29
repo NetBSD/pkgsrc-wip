@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2005/10/29 02:07:30 ykomatsu Exp $
+
+--- lib/mountlist.c.orig	2004-11-12 09:49:51.000000000 +0900
++++ lib/mountlist.c
+@@ -173,6 +173,11 @@ xatoi (char *cp)
+ 
+ #if MOUNTED_GETMNTINFO
+ 
++# if defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)
++# define statfs statvfs
++# define HAVE_F_FSTYPENAME_IN_STATFS 1
++# endif
++
+ # if ! HAVE_F_FSTYPENAME_IN_STATFS
+ static char *
+ fstype_to_string (short t)
