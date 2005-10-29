@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/08/09 07:43:03 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/29 13:29:58 obache Exp $
 #
 
-DISTNAME=		vnc2swf-0.4.2
-CATEGORIES=		wip
+DISTNAME=		vnc2swf-0.5.0
+CATEGORIES=		multimedia
 MASTER_SITES=		http://www.unixuser.org/~euske/vnc2swf/
 
 MAINTAINER=		obata@lins.jp
@@ -36,6 +36,5 @@ post-install:
 	${PAX} -rw -pp -pm . ${PREFIX}/share/doc/html/vnc2swf
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../wip/ming/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
