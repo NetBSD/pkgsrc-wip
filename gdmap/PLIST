@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/29 05:55:29 dhowland Exp $
+bin/gdmap
+man/man1/gdmap.1
+share/applications/gdmap.desktop
+share/pixmaps/gdmap_icon.png
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/GdMap.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/GdMap.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/GdMap.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/GdMap.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/GdMap.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/GdMap.mo

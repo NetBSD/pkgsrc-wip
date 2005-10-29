@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/10/29 05:55:29 dhowland Exp $
+
+--- src/gui_main.c.orig	2005-10-21 09:18:42.000000000 -0400
++++ src/gui_main.c
+@@ -11,7 +11,7 @@
+ #  include <config.h>
+ #endif
+ 
+-#include <sys/vfs.h>
++#include <sys/statvfs.h>
+ #include <stdlib.h>
+ #include <math.h>
+ #include <string.h>
