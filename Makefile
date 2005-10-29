@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1992 2005/10/28 21:10:30 kristerw Exp $
-# $Id: Makefile,v 1.1992 2005/10/28 21:10:30 kristerw Exp $
+# $NetBSD: Makefile,v 1.1993 2005/10/29 01:07:17 minskim Exp $
+# $Id: Makefile,v 1.1993 2005/10/29 01:07:17 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -141,7 +141,6 @@ SUBDIR+=	ccrypt
 SUBDIR+=	cdpr
 SUBDIR+=	chbg
 SUBDIR+=	cherokee
-SUBDIR+=	chksniff
 SUBDIR+=	chora
 SUBDIR+=	chromium
 SUBDIR+=	chromium-data
