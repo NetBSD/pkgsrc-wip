@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2005/08/04 19:00:41 scott8586 Exp $
+$NetBSD: patch-ad,v 1.2 2005/10/29 02:06:09 ykomatsu Exp $
 
---- plugins-scripts/check_breeze.pl.orig	2005-08-04 07:37:19.000000000 -0700
-+++ plugins-scripts/check_breeze.pl	2005-08-04 07:47:00.000000000 -0700
-@@ -47,7 +47,7 @@
+--- plugins-scripts/check_breeze.pl.orig	2004-02-21 12:42:43.000000000 +0900
++++ plugins-scripts/check_breeze.pl
+@@ -47,7 +47,7 @@ my $critical = $1 if ($opt_c =~ /([0-9]{
  ($opt_C) || ($opt_C = "public") ;
  
  my $sig=0;
