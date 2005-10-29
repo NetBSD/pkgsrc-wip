@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1994 2005/10/29 02:01:54 minskim Exp $
-# $Id: Makefile,v 1.1994 2005/10/29 02:01:54 minskim Exp $
+# $NetBSD: Makefile,v 1.1995 2005/10/29 14:36:22 xtraeme Exp $
+# $Id: Makefile,v 1.1995 2005/10/29 14:36:22 xtraeme Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1185,7 +1185,6 @@ SUBDIR+=	vm-pop3d
 SUBDIR+=	vm-tools
 SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
-SUBDIR+=	vnc2swf
 SUBDIR+=	vncviewer4
 SUBDIR+=	vtwm
 SUBDIR+=	wang-ttf
