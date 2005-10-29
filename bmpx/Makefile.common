@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/10/26 07:32:57 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/10/29 02:59:20 minskim Exp $
 #
 
 DISTNAME=	bmpx-0.12.1
@@ -23,8 +23,11 @@ USE_PKGLOCALEDIR=	yes
 # needs dbus >= 0.35.2
 CONFIGURE_ARGS+=	--disable-dbus
 
+MAKE_ENV+=	SED=${SED}
+
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
