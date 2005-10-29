@@ -1,58 +1,90 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/04 12:30:24 leonardschmidt Exp $
-bin/bmp-remote
+@comment $NetBSD: PLIST,v 1.2 2005/10/29 03:21:57 minskim Exp $
+bin/bmp-remote-pygtk
+bin/bmpty
 bin/bmpx
+include/bmpx/dbus.h
+include/bmpx/file_utils.h
+include/bmpx/interfaces/plugin_interface_container.h
+include/bmpx/interfaces/plugin_interface_flow.h
+include/bmpx/interfaces/plugin_interface_plug_meta.h
+include/bmpx/interfaces/plugin_interface_transport.h
+include/bmpx/list.h
+include/bmpx/metadata.h
+include/bmpx/playlist.h
+include/bmpx/plugin.h
+include/bmpx/plugin_interfaces.h
+include/bmpx/sanity.h
+include/bmpx/uri.h
+include/bmpx/util.h
+include/bmpx/vfs.h
+include/bmpx/xml.h
+lib/bmpx/plugins/container/libcontainer_folder.la
+lib/bmpx/plugins/container/libcontainer_m3u.la
+lib/bmpx/plugins/container/libcontainer_pls.la
+lib/bmpx/plugins/container/libcontainer_xspf.la
+lib/bmpx/plugins/flow/libflow_linear.la
+lib/bmpx/plugins/flow/libflow_shuffle.la
+lib/bmpx/plugins/transport/libtransport_cdda.la
+lib/bmpx/plugins/transport/libtransport_file.la
+lib/bmpx/plugins/transport/libtransport_http.la
 lib/libskinned.la
 man/man1/bmpx.1
 share/applications/bmpx.desktop
-share/bmp-remote/bmp-remote-image.png
-share/bmp-remote/bmp_remote.glade
+share/bmp-remote/pygtk/bmp-remote-image.png
+share/bmp-remote/pygtk/bmp_remote.glade
 share/bmpx/data/GPL.txt
 share/bmpx/glade/dialog_add_files.glade
 share/bmpx/glade/dialog_add_from_library.glade
 share/bmpx/glade/dialog_add_url.glade
+share/bmpx/glade/dialog_export_tracklist.glade
 share/bmpx/glade/dialog_file_info.glade
+share/bmpx/glade/dialog_new_list_from_selection.glade
 share/bmpx/glade/dialog_preferences.glade
-share/bmpx/glade/dialog_rename_playlist.glade
-share/bmpx/icons/darksphere/icon_player_128.png
-share/bmpx/icons/darksphere/icon_player_16.png
-share/bmpx/icons/darksphere/icon_player_32.png
-share/bmpx/icons/darksphere/icon_player_48.png
-share/bmpx/icons/darksphere/icon_player_64.png
-share/bmpx/icons/darksphere/icon_playlist_128.png
-share/bmpx/icons/darksphere/icon_playlist_16.png
-share/bmpx/icons/darksphere/icon_playlist_32.png
-share/bmpx/icons/darksphere/icon_playlist_48.png
-share/bmpx/icons/darksphere/icon_playlist_64.png
-share/bmpx/icons/display/icon_player_128.png
-share/bmpx/icons/display/icon_player_16.png
-share/bmpx/icons/display/icon_player_32.png
-share/bmpx/icons/display/icon_player_48.png
-share/bmpx/icons/display/icon_player_64.png
-share/bmpx/icons/display/icon_playlist_128.png
-share/bmpx/icons/display/icon_playlist_16.png
-share/bmpx/icons/display/icon_playlist_32.png
-share/bmpx/icons/display/icon_playlist_48.png
-share/bmpx/icons/display/icon_playlist_64.png
-share/bmpx/icons/plastic/icon_player_128.png
-share/bmpx/icons/plastic/icon_player_16.png
-share/bmpx/icons/plastic/icon_player_32.png
-share/bmpx/icons/plastic/icon_player_48.png
-share/bmpx/icons/plastic/icon_player_64.png
-share/bmpx/icons/plastic/icon_playlist_128.png
-share/bmpx/icons/plastic/icon_playlist_16.png
-share/bmpx/icons/plastic/icon_playlist_32.png
-share/bmpx/icons/plastic/icon_playlist_48.png
-share/bmpx/icons/plastic/icon_playlist_64.png
-share/bmpx/icons/red/icon_player_128.png
-share/bmpx/icons/red/icon_player_16.png
-share/bmpx/icons/red/icon_player_32.png
-share/bmpx/icons/red/icon_player_48.png
-share/bmpx/icons/red/icon_player_64.png
-share/bmpx/icons/red/icon_playlist_128.png
-share/bmpx/icons/red/icon_playlist_16.png
-share/bmpx/icons/red/icon_playlist_32.png
-share/bmpx/icons/red/icon_playlist_48.png
-share/bmpx/icons/red/icon_playlist_64.png
+share/bmpx/glade/dialog_rename_tracklist.glade
+share/bmpx/icons/themes/darksphere/icon_player_128.png
+share/bmpx/icons/themes/darksphere/icon_player_16.png
+share/bmpx/icons/themes/darksphere/icon_player_32.png
+share/bmpx/icons/themes/darksphere/icon_player_48.png
+share/bmpx/icons/themes/darksphere/icon_player_64.png
+share/bmpx/icons/themes/darksphere/icon_playlist_128.png
+share/bmpx/icons/themes/darksphere/icon_playlist_16.png
+share/bmpx/icons/themes/darksphere/icon_playlist_32.png
+share/bmpx/icons/themes/darksphere/icon_playlist_48.png
+share/bmpx/icons/themes/darksphere/icon_playlist_64.png
+share/bmpx/icons/themes/display/icon_player_128.png
+share/bmpx/icons/themes/display/icon_player_16.png
+share/bmpx/icons/themes/display/icon_player_32.png
+share/bmpx/icons/themes/display/icon_player_48.png
+share/bmpx/icons/themes/display/icon_player_64.png
+share/bmpx/icons/themes/display/icon_playlist_128.png
+share/bmpx/icons/themes/display/icon_playlist_16.png
+share/bmpx/icons/themes/display/icon_playlist_32.png
+share/bmpx/icons/themes/display/icon_playlist_48.png
+share/bmpx/icons/themes/display/icon_playlist_64.png
+share/bmpx/icons/themes/plastic/icon_player_128.png
+share/bmpx/icons/themes/plastic/icon_player_16.png
+share/bmpx/icons/themes/plastic/icon_player_32.png
+share/bmpx/icons/themes/plastic/icon_player_48.png
+share/bmpx/icons/themes/plastic/icon_player_64.png
+share/bmpx/icons/themes/plastic/icon_playlist_128.png
+share/bmpx/icons/themes/plastic/icon_playlist_16.png
+share/bmpx/icons/themes/plastic/icon_playlist_32.png
+share/bmpx/icons/themes/plastic/icon_playlist_48.png
+share/bmpx/icons/themes/plastic/icon_playlist_64.png
+share/bmpx/icons/themes/red/icon_player_128.png
+share/bmpx/icons/themes/red/icon_player_16.png
+share/bmpx/icons/themes/red/icon_player_32.png
+share/bmpx/icons/themes/red/icon_player_48.png
+share/bmpx/icons/themes/red/icon_player_64.png
+share/bmpx/icons/themes/red/icon_playlist_128.png
+share/bmpx/icons/themes/red/icon_playlist_16.png
+share/bmpx/icons/themes/red/icon_playlist_32.png
+share/bmpx/icons/themes/red/icon_playlist_48.png
+share/bmpx/icons/themes/red/icon_playlist_64.png
+share/bmpx/icons/tray-icons/tray-icon-default.png
+share/bmpx/icons/tray-icons/tray-icon-exit.png
+share/bmpx/icons/tray-icons/tray-icon-paused.png
+share/bmpx/icons/tray-icons/tray-icon-playing.png
 share/bmpx/images/about_logo.png
 share/bmpx/images/appearance.png
 share/bmpx/images/appearance_ia.png
@@ -68,6 +100,8 @@ share/bmpx/images/playback.png
 share/bmpx/images/playback_ia.png
 share/bmpx/images/playlist.png
 share/bmpx/images/playlist_ia.png
+share/bmpx/images/plugins.png
+share/bmpx/images/plugins_ia.png
 share/bmpx/images/preferences-logo.png
 share/bmpx/images/wait.gif
 share/bmpx/skins/default/README
@@ -89,24 +123,36 @@ share/bmpx/skins/default/viscolor.txt
 share/bmpx/skins/default/volume.bmp
 share/bmpx/ui/main.ui
 share/bmpx/ui/playlist.ui
+share/bmpx/ui/trayicon.ui
 share/icons/hicolor/48x48/apps/bmpx.png
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/bmpx.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/bmpx.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bmpx.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/bmpx.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bmpx.mo
-@comment @dirrm share/icons/hicolor/48x48/apps
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bmpx.mo
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @dirrm share/bmpx/ui
 @dirrm share/bmpx/skins/default
 @dirrm share/bmpx/skins
 @dirrm share/bmpx/images
-@dirrm share/bmpx/icons/red
-@dirrm share/bmpx/icons/plastic
-@dirrm share/bmpx/icons/display
-@dirrm share/bmpx/icons/darksphere
+@dirrm share/bmpx/icons/tray-icons
+@dirrm share/bmpx/icons/themes/red
+@dirrm share/bmpx/icons/themes/plastic
+@dirrm share/bmpx/icons/themes/display
+@dirrm share/bmpx/icons/themes/darksphere
+@dirrm share/bmpx/icons/themes
 @dirrm share/bmpx/icons
 @dirrm share/bmpx/glade
 @dirrm share/bmpx/data
 @dirrm share/bmpx
+@dirrm share/bmp-remote/pygtk
 @dirrm share/bmp-remote
 @comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/bmpx/plugins/transport
+@dirrm lib/bmpx/plugins/flow
+@dirrm lib/bmpx/plugins/container
+@dirrm lib/bmpx/plugins
+@dirrm lib/bmpx
+@dirrm include/bmpx/interfaces
+@dirrm include/bmpx
