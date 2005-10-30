@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:29:58 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/30 13:49:16 poppnk Exp $
 #
 
-DISTNAME=		graveman-0.3.7
-CATEGORIES=		wip
-MASTER_SITES=		http://savannah.nongnu.org/download/graveman/
+DISTNAME=		graveman-0.3.12-4
+CATEGORIES=		wip sysutils
+MASTER_SITES=		http://graveman.tuxfamily.org/sources/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pancake@phreaker.net
@@ -17,6 +17,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
+.include "../../graphics/mng/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
