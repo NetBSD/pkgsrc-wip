@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:12:33 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/30 14:01:11 poppnk Exp $
 #
 
-DISTNAME=		gotmail-0.8.1
+DISTNAME=		gotmail-0.8.6
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gotmail/}
 
@@ -13,9 +13,8 @@ DEPENDS+=		p5-URI>=1.03:../../www/p5-URI
 DEPENDS+=		curl>=7.10.4:../../www/curl
 DEPENDS+=		p5-Net-[0-9]*:../../net/p5-Net
 
-NO_BUILD=		YES
 USE_PERL5=		YES
-REPLACE_PERL=		${WRKSRC}/gotmail
+REPLACE_PERL=		${WRKSRC}/gotmail.in
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/gotmail ${PREFIX}/bin
