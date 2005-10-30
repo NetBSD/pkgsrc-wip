@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/07/31 02:43:47 ivaniclixx Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/30 12:44:51 ivaniclixx Exp $
 #
 
 DISTNAME=		blassic-0.10.0
 CATEGORIES=		lang
-MASTER_SITES=		http://www.arrakis.es/~ninsesabe/blassic/
+MASTER_SITES=		http://www.blassic.org/bin/
 EXTRACT_SUFX=		.tgz
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.blassic
