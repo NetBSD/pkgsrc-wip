@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/31 11:05:47 obache Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/31 03:02:50 obache Exp $
 #
 
 DISTNAME=	swftools-0.6.3
 CATEGORIES=	graphics converters
-MASTER_SITES=	http://www.quiss.org/swftools/
+MASTER_SITES=	http://www.swftools.org/
 
 MAINTAINER=	obata@lins.jp
-HOMEPAGE=	http://www.quiss.org/swftools/
+HOMEPAGE=	http://www.swftools.org/
 COMMENT=	Collection of SWF manipulation and creation utilities
 
 GNU_CONFIGURE=		yes
