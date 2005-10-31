@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/10/31 08:23:31 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/31 20:31:14 minskim Exp $
 #
 
 DISTNAME=		gotmail-0.8.6
@@ -9,6 +9,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://sourceforge.net/projects/gotmail
 COMMENT=		Script to download mail from hotmail.com
 
+DEPENDS+=		curl-[0-9]*:../../www/curl
 DEPENDS+=		p5-URI>=1.03:../../www/p5-URI
 DEPENDS+=		p5-Net-[0-9]*:../../net/p5-Net
 
@@ -30,5 +31,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/sample.gotmailrc ${EGDIR}
 	${INSTALL_MAN} ${WRKSRC}/gotmail.1 ${PREFIX}/man/man1
 
-.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
