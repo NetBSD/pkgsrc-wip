@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/09/19 09:40:13 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.2 2005/10/31 09:07:00 leonardschmidt Exp $
 
---- Makefile.orig	2005-07-22 16:23:33.000000000 +0000
+--- Makefile.orig	2005-09-22 11:02:50.000000000 +0000
 +++ Makefile
-@@ -1,17 +1,17 @@
+@@ -1,28 +1,28 @@
  # Makefile for gxmms2
  
  #Installation directory
@@ -23,7 +23,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/09/19 09:40:13 leonardschmidt Exp $
  LIBS = $(GTK_LIB) -lxmmsclient -lxmmsclient-glib
  
  LFLAGS =
-@@ -22,7 +22,7 @@ OBJS = gxmms2.o xmms2ctrl.o trackinfo.o 
+ 
+-CC = gcc $(CFLAGS) $(FLAGS)
++CC = cc $(CFLAGS) $(FLAGS)
+ 
+ OBJS = gxmms2.o xmms2ctrl.o trackinfo.o gtrackinfo.o gmlplaylist.o gmedialib.o gmlbrowser.o gmlsearch.o gmlplaylists.o gmladdfiles.o sdecode.o
  
  projname := gxmms2-$(shell awk '/define VERSION_NUMBER/ { print $$3 }' gxmms2.c )
  
@@ -32,8 +36,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/09/19 09:40:13 leonardschmidt Exp $
  	$(CC) $(OBJS) -o gxmms2 $(LFLAGS) $(LIBS)
  
  dist: $(ALLFILES)
-@@ -45,7 +45,8 @@ gmlbrowser.o: gmlbrowser.c
- gmlsearch.o: gmlsearch.c
+@@ -48,7 +48,8 @@ gmladdfiles.o: gmladdfiles.c
+ sdecode.o: sdecode.c
  
  install:
 -	install -D gxmms2 $(INSTALLPATH)/gxmms2

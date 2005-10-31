@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/19 09:40:13 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/31 09:07:00 leonardschmidt Exp $
 #
 
-DISTNAME=	gxmms2-0.4.2
+DISTNAME=	gxmms2-0.5.1
 CATEGORIES=	audio
 MASTER_SITES=	http://wejp.homelinux.org/wejp/xmms2/
 
