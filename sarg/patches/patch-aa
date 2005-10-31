@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2005/03/14 15:39:12 bubuchka Exp $
+$NetBSD: patch-aa,v 1.8 2005/10/31 15:37:37 bubuchka Exp $
 
---- configure.in.orig	2005-02-21 20:13:21.000000000 +0200
+--- configure.in.orig	2005-08-05 01:24:37.000000000 +0300
 +++ configure.in
 @@ -2,37 +2,10 @@ dnl Process this file with autoconf to p
  AC_INIT(log.c)
@@ -46,8 +46,8 @@ $NetBSD: patch-aa,v 1.7 2005/03/14 15:39:12 bubuchka Exp $
  
  AC_CHECK_HEADERS(stdio.h stdlib.h string.h strings.h sys/time.h time.h unistd.h sys/dirent.h \
  		 dirent.h sys/socket.h netdb.h arpa/inet.h sys/types.h netinet/in.h sys/stat.h \
--		 ctype.h gd.h gdfontl.h gdfontt.h gdfonts.h gdfontmb.h gdfontg.h errno.h)
-+		 ctype.h gd.h gdfontl.h gdfontt.h gdfonts.h gdfontmb.h gdfontg.h errno.h sys/resource.h)
+-		 ctype.h gd.h gdfontl.h gdfontt.h gdfonts.h gdfontmb.h gdfontg.h iconv.h errno.h)
++		 ctype.h gd.h gdfontl.h gdfontt.h gdfonts.h gdfontmb.h gdfontg.h iconv.h errno.h sys/resource.h)
  
  AC_CHECK_LIB(gd, gdImagePng,LIBS="-lgd ${LIBS}"; HAVE_GD="yes", HAVE_GD="")
  

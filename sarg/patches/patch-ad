@@ -1,28 +1,28 @@
-$NetBSD: patch-ad,v 1.8 2005/03/31 06:38:21 bubuchka Exp $
+$NetBSD: patch-ad,v 1.9 2005/10/31 15:37:37 bubuchka Exp $
 
---- log.c.orig	2005-03-31 09:20:06.000000000 +0300
+--- log.c.orig	2005-08-05 01:33:46.000000000 +0300
 +++ log.c
-@@ -146,8 +146,8 @@ int main(argc,argv)
+@@ -147,8 +147,8 @@ int main(argc,argv)
     ExternalCSSFile[0]='\0';
     SquidGuardLogFormat[0]='\0';
  
 -   strcpy(AccessLog,"/usr/local/squid/var/logs/access.log");
 -   sprintf(ExcludeCodes,"%s/exclude_codes",SYSCONFDIR);
-+   strcpy(AccessLog,"@SQUID_ACCESSLOG@");
-+   strcpy(ExcludeCodes,"@PKG_SYSCONFDIR@/exclude_codes");
++   strcpy(AccessLog,"/var/squid/logs/access.log");
++   strcpy(ExcludeCodes,"/usr/pkg/etc/sarg/exclude_codes");
     strcpy(GraphDaysBytesBarColor,"orange");
     strcpy(BgColor,"#FFFFFF");
     strcpy(TxColor,"#000000");
-@@ -160,7 +160,7 @@ int main(argc,argv)
-    strcpy(HeaderBgColor,"#DDDDDD");
+@@ -162,7 +162,7 @@ int main(argc,argv)
+    strcpy(LogoTextColor,"#006699");
     strcpy(FontSize,"9px");
     strcpy(TempDir,"/tmp");
 -   strcpy(OutputDir,"/usr/local/etc/httpd/htdocs/squid-reports");
-+   strcpy(OutputDir,"@SARG_REPORTSDIR@");
++   strcpy(OutputDir,"/var/sarg");
     strcpy(Ip2Name,"no");
     strcpy(DateFormat,"u");
     strcpy(OverwriteReport,"no");
-@@ -197,11 +197,11 @@ int main(argc,argv)
+@@ -199,11 +199,11 @@ int main(argc,argv)
     strcpy(ShowSargInfo,"yes");
     strcpy(ShowSargLogo,"yes");
     strcpy(ParsedOutputLog,"no");
@@ -32,16 +32,16 @@ $NetBSD: patch-ad,v 1.8 2005/03/31 06:38:21 bubuchka Exp $
     strcpy(HeaderFontSize,"9px");
     strcpy(TitleFontSize,"11px");
 -   strcpy(AuthUserFile,"/usr/local/sarg/passwd");
-+   strcpy(AuthUserFile,"@PKG_SYSCONFDIR@/passwd");
++   strcpy(AuthUserFile,"/usr/pkg/etc/sarg/passwd");
     strcpy(AuthName,"SARG, Restricted Access");
     strcpy(AuthType,"basic");
     strcpy(Require,"require user admin %u");
-@@ -360,7 +360,7 @@ int main(argc,argv)
+@@ -390,7 +390,7 @@ int main(argc,argv)
        debuga("Init");
  
     if(ConfigFile[0] == '\0')
 -      sprintf(ConfigFile,"%s/sarg.conf",SYSCONFDIR);
-+      strcpy(ConfigFile,"@PKG_SYSCONFDIR@/sarg.conf");
++      strcpy(ConfigFile,"/usr/pkg/etc/sarg/sarg.conf");
      else {
        if(access(ConfigFile, R_OK) != 0) {
           sprintf(msg,"Cannot open config file: %s - %s",ConfigFile,strerror(errno));

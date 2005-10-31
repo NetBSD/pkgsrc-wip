@@ -1,17 +1,17 @@
-$NetBSD: patch-af,v 1.6 2005/03/01 11:01:01 bubuchka Exp $
+$NetBSD: patch-af,v 1.7 2005/10/31 15:37:37 bubuchka Exp $
 
---- sarg.conf.orig	2005-02-22 14:24:44.000000000 +0200
+--- sarg.conf.orig	2005-08-05 01:24:37.000000000 +0300
 +++ sarg.conf
-@@ -29,7 +29,7 @@
+@@ -31,7 +31,7 @@
  #       Where is the access.log file
  #       sarg -l file
  #
 -#access_log /usr/local/squid/var/logs/access.log
-+#access_log @SQUID_ACCESSLOG@
++#access_log /var/squid/logs/access.log
  
  # TAG: graphs yes|no
  #	Use graphics where is possible.
-@@ -136,7 +136,7 @@
+@@ -138,7 +138,7 @@
  #       The reports will be saved in that directory
  #       sarg -o dir
  #
@@ -20,16 +20,16 @@ $NetBSD: patch-af,v 1.6 2005/03/01 11:01:01 bubuchka Exp $
  
  # TAG:  output_email
  #       Email address to send the reports. If you use this tag, no html reports will be generated.
-@@ -261,7 +261,7 @@
+@@ -263,7 +263,7 @@
  # TAG: exclude_codes file
  #      Ignore records with these codes. Eg.: NONE/400
  #
 -#exclude_codes /usr/local/sarg/exclude_codes
-+#exclude_codes @PKG_SYSCONFDIR@/exclude_codes
++#exclude_codes /usr/pkg/etc/sarg/exclude_codes
  
  # TAG: replace_index string
  #      Replace "index.html" in the main index file with this string
-@@ -455,10 +455,10 @@ max_elapsed 28800000
+@@ -465,10 +465,10 @@ max_elapsed 28800000
  #
  #parsed_output_log none
  
@@ -42,39 +42,39 @@ $NetBSD: patch-af,v 1.6 2005/03/01 11:01:01 bubuchka Exp $
  
  # TAG displayed_values bytes|abbreviation
  #      how the values will be displayed in reports.
-@@ -487,7 +487,7 @@ max_elapsed 28800000
+@@ -501,7 +501,7 @@ max_elapsed 28800000
  #     Sarg will create sarg-php directory with some PHP modules:
  #     - sarg-squidguard-block.php - add urls from user reports to squidGuard DB
  #
 -#www_document_root /var/www/html
-+#www_document_root @SARG_REPORTSDIR@
++#www_document_root /var/sarg
  
  # TAG block_it module_url
  #     This tag allow you to pass urls from user reports to a cgi or php module,
-@@ -495,7 +495,7 @@ max_elapsed 28800000
+@@ -509,7 +509,7 @@ max_elapsed 28800000
  #
  #     Eg.: block_it /sarg-php/sarg-block-it.php
  #     sarg-block-it is a php that will append a url to a flat file.
 -#     You must change /var/www/html/sarg-php/sarg-block-it to point to your file
-+#     You must change @SARG_REPORTSDIR@/sarg-php/sarg-block-it to point to your file
++#     You must change /var/sarg/sarg-php/sarg-block-it to point to your file
  #     in $filename variable, and chown to a httpd owner.
  #
  #     sarg will pass http://module_url?url=url
-@@ -516,7 +516,7 @@ max_elapsed 28800000
+@@ -530,7 +530,7 @@ max_elapsed 28800000
  #	.data2		table text class, align:right, border colors
  #	.link  		link class
  #
 -#     There is a sample in /usr/local/sarg/etc/css.tpl
-+#     There is a sample in @PKG_SYSCONFDIR@/css.tpl
++#     There is a sample in /usr/pkg/etc/sarg/css.tpl
  #
  #external_css_file none
  
-@@ -530,7 +530,7 @@ max_elapsed 28800000
+@@ -544,7 +544,7 @@ max_elapsed 28800000
  #                                          %u - user report
  #
  # user_authentication no
 -# AuthUserFile /usr/local/sarg/passwd
-+# AuthUserFile @PKG_SYSCONFDIR@/passwd
++# AuthUserFile /usr/pkg/etc/sarg/passwd
  # AuthName "SARG, Restricted Access"
  # AuthType Basic
  # Require user admin %u

@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.5 2005/03/01 11:01:01 bubuchka Exp $
+$NetBSD: patch-ac,v 1.6 2005/10/31 15:37:37 bubuchka Exp $
 
---- htaccess.orig	2005-02-21 20:13:22.000000000 +0200
+--- htaccess.orig	2005-08-05 01:24:37.000000000 +0300
 +++ htaccess
 @@ -1,4 +1,4 @@
 -AuthUserFile /usr/local/sarg/passwd
-+AuthUserFile @PKG_SYSCONFDIR@/passwd
++AuthUserFile /usr/pkg/etc/sarg/passwd
  AuthName "SARG, Squid Analysis Report Generator"
  AuthType Basic
  <Limit GET POST>

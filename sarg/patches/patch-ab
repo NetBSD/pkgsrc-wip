@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2005/03/01 11:01:01 bubuchka Exp $
+$NetBSD: patch-ab,v 1.6 2005/10/31 15:37:37 bubuchka Exp $
 
---- convlog.c.orig	2005-02-21 20:13:21.000000000 +0200
+--- convlog.c.orig	2005-08-05 01:29:51.000000000 +0300
 +++ convlog.c
-@@ -36,7 +36,7 @@ void convlog(char *arq, char *df, int df
+@@ -39,7 +39,7 @@ void convlog(char *arq, char *df, int df
     struct tm *t;
  
     if(arq[0] == '\0')
 -      strcpy(arq,"/usr/local/squid/logs/access.log");
-+      strcpy(arq,"@SQUID_ACCESSLOG@");
++      strcpy(arq,"/var/squid/logs/access.log");
  
     if((fp_in=fopen(arq,"r"))==NULL) {
        fprintf(stderr, "SARG: (convlog) %s: %s\n",text[8],arq);

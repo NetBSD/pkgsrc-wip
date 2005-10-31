@@ -1,8 +1,7 @@
-$Id: TODO,v 1.5 2005/10/27 14:58:45 bubuchka Exp $
+$Id: TODO,v 1.6 2005/10/31 15:37:36 bubuchka Exp $
 
-- Upgrade to SARG version 2.0.9.
-
-- Test, if it works with SquidGuard (I haven't installed this software).
+- Month sorting was temporary disabled (because not supported by
+  my NetBSD-current sort(1) at prime time).
 
 - SARG doesn't sort index entries correctly in case if date format
   is an European. This is completely SARG issue (see index.c file

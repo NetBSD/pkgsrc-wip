@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/06/08 15:47:03 dillo Exp $
+# $NetBSD: Makefile,v 1.11 2005/10/31 15:37:36 bubuchka Exp $
 
-DISTNAME=		sarg-2.0.5
+DISTNAME=		sarg-2.0.9
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sarg/}
-
-PATCH_SITES=		http://sarg.sourceforge.net/
-PATCHFILES=		freebsd.patch
 
 MAINTAINER=		mishka@apk.od.ua
 HOMEPAGE=		http://www.sarg-squid.org/
@@ -77,7 +74,7 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/sarg.conf ${EGDIR}
 		${INSTALL_DATA} ${WRKSRC}/exclude_codes ${EGDIR}
 		${INSTALL_DATA} ${WRKSRC}/css.tpl ${EGDIR}
-		${INSTALL_DATA} ${WRKSRC}/fonts/Verdana.TTF ${DATADIR}/fonts
+		${INSTALL_DATA} ${WRKSRC}/fonts/FreeSans.ttf ${DATADIR}/fonts
 		${INSTALL_DATA} ${WRKSRC}/images/* ${DATADIR}/images
 		${INSTALL_DATA} ${WRKSRC}/languages/* ${DATADIR}/languages
 
