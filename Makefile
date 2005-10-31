@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1997 2005/10/31 08:19:41 ghen Exp $
-# $Id: Makefile,v 1.1997 2005/10/31 08:19:41 ghen Exp $
+# $NetBSD: Makefile,v 1.1998 2005/10/31 20:35:05 minskim Exp $
+# $Id: Makefile,v 1.1998 2005/10/31 20:35:05 minskim Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -315,7 +315,6 @@ SUBDIR+=	gnunet
 SUBDIR+=	gnupoc-makesis
 SUBDIR+=	gobby
 SUBDIR+=	goldwater
-SUBDIR+=	gotmail
 SUBDIR+=	gov2
 SUBDIR+=	gps
 SUBDIR+=	grass
