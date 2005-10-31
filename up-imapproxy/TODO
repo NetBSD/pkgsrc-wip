@@ -1,2 +1,3 @@
 - Investigate ./configure message:
    WARNING: nsl library not found!!!  Wrappers will be disabled.
+- Security issue: http://www.debian.org/security/2005/dsa-852
