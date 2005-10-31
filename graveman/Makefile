@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/10/30 13:49:16 poppnk Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/31 07:21:49 leonardschmidt Exp $
 #
 
 DISTNAME=		graveman-0.3.12-4
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://graveman.tuxfamily.org/
-COMMENT=		GTK2 frontend for CD writting and audio conversion
+COMMENT=		GTK2 frontend for CD writing and audio conversion
 
 DEPENDS+=		sox>12:../../audio/sox
 DEPENDS+=		dvd+rw-tools>5.21:../../sysutils/dvd+rw-tools
