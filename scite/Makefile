@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/08/31 20:08:43 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2005/10/31 08:09:30 leonardschmidt Exp $
 #
 
 DISTNAME=		scite166
 PKGNAME=		scite-1.66
-WRKSRC=			${WRKDIR}
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scintilla/}
 EXTRACT_SUFX=		.tgz
@@ -12,6 +11,9 @@ MAINTAINER=		shattered@users.sourceforge.net
 HOMEPAGE=		http://www.scintilla.org/SciTE.html
 COMMENT=		Editor with facilities for building and running programs
 
+WRKSRC=			${WRKDIR}
+USE_DIRS+=		xdg-1.2
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
 do-build:
