@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/29 04:18:26 dhowland Exp $
+$NetBSD: distinfo,v 1.2 2005/11/01 05:34:51 dhowland Exp $
 
-SHA1 (di-4.3f.tar.gz) = fa501f7728481c4df1a2d8b1101f41568d473f6c
-RMD160 (di-4.3f.tar.gz) = ad35affd7bae0ea2fbcae969b8abda02d22fb36b
-Size (di-4.3f.tar.gz) = 65470 bytes
+SHA1 (di-4.3.tar.gz) = 8327ceae626d14d87a03ea180e7fe02228564a56
+RMD160 (di-4.3.tar.gz) = 1d5436c2abdb838300561839c9b0b6954d60b747
+Size (di-4.3.tar.gz) = 65775 bytes

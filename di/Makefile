@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/29 04:18:26 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/01 05:34:51 dhowland Exp $
 
-DISTNAME=	di-4.3f
+DISTNAME=	di-4.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.gentoo.com/di/
 
