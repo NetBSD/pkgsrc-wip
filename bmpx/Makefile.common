@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2005/11/01 11:54:44 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.11 2005/11/01 12:51:04 leonardschmidt Exp $
 #
 
 DISTNAME=	bmpx-0.12.2
@@ -31,9 +31,11 @@ MAKE_ENV+=	SED=${SED}
 
 .include "options.mk"
 
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.8.0
 BUILDLINK_DEPENDS.taglib+=	taglib>=1.4
 
 .include "../../audio/taglib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
