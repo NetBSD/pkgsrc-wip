@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/11/01 12:51:04 leonardschmidt Exp $
+# $NetBSD: options.mk,v 1.3 2005/11/01 12:54:25 leonardschmidt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bmpx
 PKG_SUPPORTED_OPTIONS=	gui
@@ -12,7 +12,6 @@ BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.5.1
 .  include "../../devel/libglade2/buildlink3.mk"
 .  include "../../devel/pango/buildlink3.mk"
 .  include "../../graphics/cairo/buildlink3.mk"
-.  include "../../textproc/libxml2/buildlink3.mk"
 .  include "../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gui
 .else
