@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2005/10/17 08:40:02 leonardschmidt Exp $
+# $NetBSD: options.mk,v 1.6 2005/11/01 13:26:55 leonardschmidt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
 PKG_SUPPORTED_OPTIONS=	curl flac ogg pyrex ruby
@@ -32,7 +32,7 @@ EXCLUDES+=		ogg
 
 .if !empty(PKG_OPTIONS:Mpyrex)
 PY_PATCHPLIST=		yes
-BUILD_DEPENDS=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
+BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
 .  include "../../lang/python/extension.mk"
 PLIST_SUBST+=		PYREX=""
 .else
