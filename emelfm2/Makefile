@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/09/16 21:53:06 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/01 13:19:27 leonardschmidt Exp $
 #
 
 DISTNAME=	emelfm2-0.1.2
@@ -16,6 +16,7 @@ USE_TOOLS+=		gmake
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
