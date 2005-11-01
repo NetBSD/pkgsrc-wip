@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/29 03:21:57 minskim Exp $
-bin/bmp-remote-pygtk
-bin/bmpty
+@comment $NetBSD: PLIST,v 1.3 2005/11/01 11:54:44 leonardschmidt Exp $
 bin/bmpx
+bin/hrel-demo
 include/bmpx/dbus.h
 include/bmpx/file_utils.h
 include/bmpx/interfaces/plugin_interface_container.h
@@ -18,6 +17,13 @@ include/bmpx/uri.h
 include/bmpx/util.h
 include/bmpx/vfs.h
 include/bmpx/xml.h
+include/libhrel/libhrel/relation.h
+include/libhrel/libhrel/relation_base.h
+include/libhrel/libhrel/relation_restrict.h
+include/libhrel/libhrel/relation_sort.h
+include/libhrel/libhrel/stack.h
+include/libhrel/libhrel/tuple.h
+include/libhrel/libhrel/types.h
 lib/bmpx/plugins/container/libcontainer_folder.la
 lib/bmpx/plugins/container/libcontainer_m3u.la
 lib/bmpx/plugins/container/libcontainer_pls.la
@@ -27,11 +33,11 @@ lib/bmpx/plugins/flow/libflow_shuffle.la
 lib/bmpx/plugins/transport/libtransport_cdda.la
 lib/bmpx/plugins/transport/libtransport_file.la
 lib/bmpx/plugins/transport/libtransport_http.la
+lib/libhrel.la
 lib/libskinned.la
+lib/pkgconfig/hrel.pc
 man/man1/bmpx.1
 share/applications/bmpx.desktop
-share/bmp-remote/pygtk/bmp-remote-image.png
-share/bmp-remote/pygtk/bmp_remote.glade
 share/bmpx/data/GPL.txt
 share/bmpx/glade/dialog_add_files.glade
 share/bmpx/glade/dialog_add_from_library.glade
@@ -124,6 +130,27 @@ share/bmpx/skins/default/volume.bmp
 share/bmpx/ui/main.ui
 share/bmpx/ui/playlist.ui
 share/bmpx/ui/trayicon.ui
+share/gtk-doc/html/libhrel/ch06.html
+share/gtk-doc/html/libhrel/fundamentals.html
+share/gtk-doc/html/libhrel/home.png
+share/gtk-doc/html/libhrel/index.html
+share/gtk-doc/html/libhrel/index.sgml
+share/gtk-doc/html/libhrel/left.png
+share/gtk-doc/html/libhrel/libhrel-BTree.html
+share/gtk-doc/html/libhrel/libhrel-Relation.html
+share/gtk-doc/html/libhrel/libhrel-Restricted-Relation.html
+share/gtk-doc/html/libhrel/libhrel-Sorted-Relation.html
+share/gtk-doc/html/libhrel/libhrel-Stack.html
+share/gtk-doc/html/libhrel/libhrel-Tuple.html
+share/gtk-doc/html/libhrel/libhrel-Type-system.html
+share/gtk-doc/html/libhrel/libhrel.devhelp
+share/gtk-doc/html/libhrel/overview.html
+share/gtk-doc/html/libhrel/relations.html
+share/gtk-doc/html/libhrel/right.png
+share/gtk-doc/html/libhrel/style.css
+share/gtk-doc/html/libhrel/tuple.html
+share/gtk-doc/html/libhrel/type-system.html
+share/gtk-doc/html/libhrel/up.png
 share/icons/hicolor/48x48/apps/bmpx.png
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/bmpx.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/bmpx.mo
@@ -132,6 +159,9 @@ ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/bmpx.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bmpx.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bmpx.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@dirrm share/gtk-doc/html/libhrel
+@dirrm share/gtk-doc/html
+@dirrm share/gtk-doc
 @dirrm share/bmpx/ui
 @dirrm share/bmpx/skins/default
 @dirrm share/bmpx/skins
@@ -146,13 +176,13 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bmpx.mo
 @dirrm share/bmpx/glade
 @dirrm share/bmpx/data
 @dirrm share/bmpx
-@dirrm share/bmp-remote/pygtk
-@dirrm share/bmp-remote
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/bmpx/plugins/transport
 @dirrm lib/bmpx/plugins/flow
 @dirrm lib/bmpx/plugins/container
 @dirrm lib/bmpx/plugins
 @dirrm lib/bmpx
+@dirrm include/libhrel/libhrel
+@dirrm include/libhrel
 @dirrm include/bmpx/interfaces
 @dirrm include/bmpx
