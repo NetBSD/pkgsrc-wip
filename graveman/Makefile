@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/10/31 12:24:44 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/01 21:24:30 leonardschmidt Exp $
 #
 
 DISTNAME=		graveman-0.3.12-4
@@ -17,6 +17,8 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 
 .include "options.mk"
+
+BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
