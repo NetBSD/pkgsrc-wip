@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/09/27 16:10:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/01 03:12:20 marmfield Exp $
 #
 
 DISTNAME=		smbldap-tools-0.9.1
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils net databases
 MASTER_SITES=		http://www.idealx.org/prj/samba/dist/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		murray@river-styx.org
 HOMEPAGE=		http://www.idealx.org/prj/samba/index.en.html
 COMMENT=		Set of ldap administration scripts for samba
 
