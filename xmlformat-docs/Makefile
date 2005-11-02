@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/04/20 15:08:43 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:32 thomasklausner Exp $
 #
 
 DISTNAME=		xmlformat-${XMLFORMAT_VERSION}
 PKGNAME=		xmlformat-docs-${XMLFORMAT_VERSION}
-CATEGORIES=		textproc wip
+CATEGORIES=		textproc
 MASTER_SITES=		http://www.kitebird.com/software/xmlformat/
 
 MAINTAINER=		mishka@apk.od.ua

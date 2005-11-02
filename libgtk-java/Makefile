@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/05/24 10:30:35 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:20 thomasklausner Exp $
 #
 
 DISTNAME=		libgtk-java-2.6.2
-CATEGORIES=		wip x11
+CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtk-java/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 

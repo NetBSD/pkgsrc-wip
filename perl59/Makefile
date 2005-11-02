@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/24 10:31:17 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/02 18:00:25 thomasklausner Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -25,7 +25,7 @@ SNAPSHOT_SITES=	http://www.cpan.org/authors/id/J/JH/JHI/
 .endif
 
 PERL5_VERS=	5.9.0
-CATEGORIES=	lang devel perl5 wip
+CATEGORIES=	lang devel perl5
 MASTER_SITES=	${SNAPSHOT_SITES} \
 		${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 

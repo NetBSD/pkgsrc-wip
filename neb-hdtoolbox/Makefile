@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:10 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:23 thomasklausner Exp $
 #
 
 DISTNAME=		neb-hdtoolbox-src-0.9
 PKGNAME=		neb-hdtoolbox-0.9
-CATEGORIES=		wip
+CATEGORIES=		sysutils
 MASTER_SITES=		http://binary.florian-stoehr.de/
 EXTRACT_SUFX=		.tgz
 

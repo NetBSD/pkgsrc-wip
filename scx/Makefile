@@ -1,9 +1,9 @@
 #
-# $NetBSD: Makefile,v 1.5 2005/06/12 23:51:27 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:26 thomasklausner Exp $
 #
 
 DISTNAME=		scx-0.2
-CATEGORIES=		wip devel x11
+CATEGORIES=		devel x11
 MASTER_SITES=		ftp://ftp.scsh.net/pub/scsh/packages/scx/
 
 MAINTAINER=		airhead@users.sf.net

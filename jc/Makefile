@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:21 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/02 18:00:19 thomasklausner Exp $
 #
 
 DISTNAME=		jc-1.2.3
-CATEGORIES=		wip lang
+CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jcvm/}
 
 MAINTAINER=		pancake@phreaker.net

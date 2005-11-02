@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2005/10/13 20:56:22 thomasklausner Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/11/02 18:00:22 thomasklausner Exp $
 #
 
 DISTNAME=		multisync-0.82-1
-CATEGORIES=		wip
+CATEGORIES=		comms
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=multisync/}
 EXTRACT_SUFX=		.tar.bz2
 

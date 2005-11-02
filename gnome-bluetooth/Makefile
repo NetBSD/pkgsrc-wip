@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:56 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:14 thomasklausner Exp $
 #
 
 DISTNAME=		gnome-bluetooth-0.5.1
-CATEGORIES=		wip net
+CATEGORIES=		net
 MASTER_SITES=		http://downloads.usefulinc.com/gnome-bluetooth/
 
 MAINTAINER=		pancake@phreaker.net

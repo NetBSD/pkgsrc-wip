@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2004/03/24 21:21:59 airhead Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:16 thomasklausner Exp $
 #
 
 DISTNAME=		holl-1.0
 PKGNAME=		hol-light-1.0
 WRKSRC=			${WRKDIR}/hol-light
-CATEGORIES=		wip math
+CATEGORIES=		math
 MASTER_SITES=		http://www.cl.cam.ac.uk/users/jrh/hol-light/
 
 MAINTAINER=		airhead@users.sf.net

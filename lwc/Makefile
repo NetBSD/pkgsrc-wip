@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:57 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/02 18:00:21 thomasklausner Exp $
 #
 
 DISTNAME=		lwc-1.3.2
-CATEGORIES=		wip lang
+CATEGORIES=		lang
 MASTER_SITES=		http://students.ceid.upatras.gr/~sxanth/lwc/
 EXTRACT_SUFX=		.tar.bz2
 

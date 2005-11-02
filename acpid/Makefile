@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/05/24 10:29:22 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/02 17:59:55 thomasklausner Exp $
 #
 
 DISTNAME=		acpid-1.0.4
-CATEGORIES=		wip linux sysutils
+CATEGORIES=		linux sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=acpid/}
 PKGREVISION=		1
 

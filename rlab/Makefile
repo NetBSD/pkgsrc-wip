@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/05/31 10:02:13 dillo Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:25 thomasklausner Exp $
 #
 
 DISTNAME=		rlab-2.1.05
-CATEGORIES=		wip math
+CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rlab/}
 
 MAINTAINER=		Peter.Bex@student.kun.nl

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/10/16 12:23:54 jtonio Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 17:59:58 thomasklausner Exp $
 
 DISTNAME=      aop-0.6
-CATEGORIES=    wip games
+CATEGORIES=    games
 MASTER_SITES=  http://raffi.at/code/aop/
 
 MAINTAINER=    tonio@NetBSD.org

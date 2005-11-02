@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/09/28 07:38:35 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:22 thomasklausner Exp $
 #
 
 DISTNAME=		memdump-1.01
-CATEGORIES=		wip sysutils
+CATEGORIES=		sysutils
 MASTER_SITES=		http://www.porcupine.org/forensics/
 
 MAINTAINER=		pancake@phreaker.net

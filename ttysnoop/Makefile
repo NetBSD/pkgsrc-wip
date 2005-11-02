@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2005/11/02 17:24:20 poppnk Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/02 18:00:30 thomasklausner Exp $
 #
 
 # TODO : wrong name ?
 DISTNAME=		ttysnoop-0.12d.k26
 PKGREVISION=	2
-CATEGORIES=		wip sysutils
+CATEGORIES=		sysutils
 MASTER_SITES=		http://grad.icmc.usp.br/~duker/ttysnoop/
 
 MAINTAINER=		pancake@phreaker.net

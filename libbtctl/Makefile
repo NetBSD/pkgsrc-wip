@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:30:33 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:19 thomasklausner Exp $
 #
 
 DISTNAME=		libbtctl-0.4.1
-CATEGORIES=		wip net
+CATEGORIES=		net
 MASTER_SITES=		http://downloads.usefulinc.com/libbtctl/
 
 MAINTAINER=		pancake@phreaker.net

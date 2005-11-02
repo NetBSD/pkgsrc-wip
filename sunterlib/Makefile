@@ -1,9 +1,9 @@
 #
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/15 22:56:23 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:27 thomasklausner Exp $
 #
 
 DISTNAME=		sunterlib-0.7
-CATEGORIES=		wip devel
+CATEGORIES=		devel
 MASTER_SITES=		http://savannah.nongnu.org/download/sunterlib/
 
 MAINTAINER=		airhead@users.sf.net

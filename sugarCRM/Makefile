@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/24 02:16:06 marmfield Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:27 thomasklausner Exp $
 #
 
 DISTNAME=	SugarSuite-Full-${VERSION}
 PKGNAME=	sugarCRM-${VERSION}
-CATEGORIES=	wip misc
+CATEGORIES=	misc
 MASTER_SITES=	http://www.sugarforge.org/frs/download.php/235/
 EXTRACT_SUFX=	.zip
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/12 22:01:33 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:21 thomasklausner Exp $
 #
 
 DISTNAME=		matanza-0.13
-CATEGORIES=		wip games
+CATEGORIES=		games
 MASTER_SITES=		http://bachue.com/matanza/
 
 MAINTAINER=		pancake@phreaker.net

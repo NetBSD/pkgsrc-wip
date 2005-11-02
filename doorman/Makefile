@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:44:35 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:08 thomasklausner Exp $
 #
 
 DISTNAME=		doorman-0.8
-CATEGORIES=		wip
+CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=doorman/}
 EXTRACT_SUFX=		.tgz
 

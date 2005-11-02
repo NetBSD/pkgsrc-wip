@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2005/10/10 17:46:00 mchittur Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:21 thomasklausner Exp $
 #
 
 DISTNAME=		libopenmodeller-0.3.3
-CATEGORIES=		wip
+CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openmodeller/}
 
 MAINTAINER=		mchittur@cs.nmsu.edu

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/13 15:57:24 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:14 thomasklausner Exp $
 #
 
 DISTNAME=		gnormalize-0.35
-CATEGORIES=		wip audio
+CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnormalize/}
 
 MAINTAINER=		pancake@phreaker.net

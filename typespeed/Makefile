@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/07/19 18:44:00 h2m Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:31 thomasklausner Exp $
 #
 
 DISTNAME=		typespeed-0.4.4
 PKGREVISION=		1
-CATEGORIES=		wip games
+CATEGORIES=		games
 MASTER_SITES=		http://ls.purkki.org/typespeed/
 
 MAINTAINER=		hernani@vecirex.net

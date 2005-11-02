@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/08/05 21:04:58 poppnk Exp $
+# $NetBSD: Makefile,v 1.11 2005/11/02 18:00:26 thomasklausner Exp $
 #
 
 DISTNAME=		rolo-011
-CATEGORIES=		wip mail
+CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rolo/}
 
 MAINTAINER=		pancake@phreaker.net

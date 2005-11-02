@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:39 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:19 thomasklausner Exp $
 #
 
 DISTNAME=		lcrack-20040914
-CATEGORIES=		wip security
+CATEGORIES=		security
 MASTER_SITES=		http://usuarios.lycos.es/reinob/lcrack/
 
 MAINTAINER=		pancake@phreaker.net

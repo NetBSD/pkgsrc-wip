@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:30 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:26 thomasklausner Exp $
 #
 
 DISTNAME=		sara-5.0.5b
-CATEGORIES=		wip security
+CATEGORIES=		security
 MASTER_SITES=		http://www-arc.com/sara/downloads/
 EXTRACT_SUFX=		.tgz
 

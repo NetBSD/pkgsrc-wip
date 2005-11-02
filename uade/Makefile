@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:07 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:31 thomasklausner Exp $
 #
 
 DISTNAME=		uade-1.00
-CATEGORIES=		wip audio
+CATEGORIES=		audio
 MASTER_SITES=		http://uade.ton.tut.fi/uade/
 EXTRACT_SUFX=		.tar.bz2
 

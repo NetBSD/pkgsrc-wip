@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/11 04:09:25 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:24 thomasklausner Exp $
 #
 
 DISTNAME=		opd-v0.2-2003-03-18
 PKGNAME=		opd-0.2
-CATEGORIES=		wip comms
+CATEGORIES=		comms
 MASTER_SITES=		http://oss.bdit.de/download/
 EXTRACT_SUFX=		.tgz
 

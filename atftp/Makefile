@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/05/31 12:10:47 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 17:59:59 thomasklausner Exp $
 #
 
 DISTNAME=		atftp-0.7
 PKGREVISION=		1
-CATEGORIES=		wip net
+CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.mamalinux.com/pub/atftp/
 
 MAINTAINER=		pancake@phreaker.net

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:48 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:32 thomasklausner Exp $
 #
 
 DISTNAME=		wireless_tools.27
 PKGNAME=		wireless-tools-27
-CATEGORIES=		wip net linux
+CATEGORIES=		net linux
 MASTER_SITES=		http://pcmcia-cs.sourceforge.net/ftp/contrib/
 
 MAINTAINER=		pancake@phreaker.net

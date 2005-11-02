@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/09/28 05:36:13 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:17 thomasklausner Exp $
 #
 
 DISTNAME=		jamaica-1.0
-CATEGORIES=		wip lang
+CATEGORIES=		lang
 MASTER_SITES=		http://www.judoscript.com/store/
 EXTRACT_SUFX=		.zip
 

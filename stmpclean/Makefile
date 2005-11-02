@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:57 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:27 thomasklausner Exp $
 #
 
 DISTNAME=		stmpclean-0.3
-CATEGORIES=		wip sysutils
+CATEGORIES=		sysutils
 MASTER_SITES=		http://www.internet2.edu/~shalunov/stmpclean/
 
 MAINTAINER=		pancake@phreaker.net

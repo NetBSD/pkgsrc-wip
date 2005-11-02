@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/05/24 10:31:22 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:25 thomasklausner Exp $
 #
 
 DISTNAME=		PingTunnel-0.60
 PKGNAME=		ptunnel-0.60
-CATEGORIES=		wip net
+CATEGORIES=		net
 MASTER_SITES=		http://www.cs.uit.no/~daniels/PingTunnel/ \
 			http://dag.wieers.com/packages/ptunnel/
 

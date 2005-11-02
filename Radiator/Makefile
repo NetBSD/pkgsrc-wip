@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:09:37 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/02 17:59:55 thomasklausner Exp $
 #
 
 DISTNAME=		Radiator-3.6
-CATEGORIES=		net wip
+CATEGORIES=		net
 MASTER_SITES=		# Need to get it yourself.
 EXTRACT_SUFX=		.tgz
 

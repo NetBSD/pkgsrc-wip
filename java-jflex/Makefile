@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:19 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:19 thomasklausner Exp $
 #
 
 DISTNAME=		jflex_small-1.3.5
 PKGNAME=		java-jflex-1.3.5
-CATEGORIES=		wip textproc
+CATEGORIES=		textproc
 MASTER_SITES=		http://www.jflex.de/
 
 MAINTAINER=		pancake@phreaker.net

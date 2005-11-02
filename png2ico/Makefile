@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/15 17:31:26 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:25 thomasklausner Exp $
 #
 
 DISTNAME=		png2ico-src-2002-12-08
 PKGNAME=		png2ico-20021208
-CATEGORIES=		wip graphics
+CATEGORIES=		graphics
 MASTER_SITES=		http://www.winterdrache.de/freeware/png2ico/data/
 
 MAINTAINER=		pancake@phreaker.net

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2005/06/12 23:51:18 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:11 thomasklausner Exp $
 #
 
 DISTNAME=		evas-1.0.0_pre13
 PKGNAME=		evas-1.0.0
 PKGREVISION=		1
-CATEGORIES=		wip x11 devel
+CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
 MAINTAINER=		Peter.Bex@student.kun.nl

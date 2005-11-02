@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/04/03 21:46:52 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/02 18:00:31 thomasklausner Exp $
 #
 
 DISTNAME=		uebimiau-2.7.2
-CATEGORIES=		wip
+CATEGORIES=		www mail
 MASTER_SITES=		http://www.contenidosonline.com.ar/pkgsrc/
 
 MAINTAINER=		rpereyra@users.sourceforge.net

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/10/24 08:58:24 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:22 thomasklausner Exp $
 #
 
 DISTNAME=		mdbtools-0.6pre1
-CATEGORIES=		wip databases
+CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mdbtools/}
 
 MAINTAINER=		pancake@phreaker.net

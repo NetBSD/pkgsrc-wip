@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/09/28 13:01:43 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:13 thomasklausner Exp $
 #
 
 DISTNAME=		flexbackup-1.2.1
 PKGREVISION=		1
-CATEGORIES=		wip sysutils
+CATEGORIES=		sysutils
 MASTER_SITES=		http://flexbackup.sourceforge.net/tarball/
 
 MAINTAINER=		pancake@phreaker.net

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:00 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:16 thomasklausner Exp $
 #
 
 DISTNAME=		hdparm-5.4
-CATEGORIES=		wip linux sysutils
+CATEGORIES=		linux sysutils
 MASTER_SITES=		http://www.ibiblio.org/pub/Linux/system/hardware/
 
 MAINTAINER=		pancake@phreaker.net

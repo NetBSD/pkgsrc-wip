@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/30 15:22:34 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:20 thomasklausner Exp $
 #
 
 DISTNAME=		libgtkhtml-java-2.6.0
-CATEGORIES=		wip www
+CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtkhtml-java/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 

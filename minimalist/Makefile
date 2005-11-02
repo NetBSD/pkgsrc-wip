@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/09/24 22:54:39 poppnk Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/02 18:00:22 thomasklausner Exp $
 #
 
 DISTNAME=	minimalist-2.5.3
-CATEGORIES=	wip mail
+CATEGORIES=	mail
 MASTER_SITES=	http://www.mml.org.ua/LIST/
 
 MAINTAINER=	pancake@phreaker.net

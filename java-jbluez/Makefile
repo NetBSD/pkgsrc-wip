@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:30:25 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:19 thomasklausner Exp $
 #
 
 DISTNAME=		jbluez-1.0
 PKGNAME=		java-${DISTNAME}
-CATEGORIES=		wip net
+CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jbluez/}
 
 MAINTAINER=		pancake@phreaker.net

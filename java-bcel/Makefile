@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/09/28 05:23:36 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:18 thomasklausner Exp $
 #
 
 DISTNAME=		bcel-5.1
 PKGNAME=		java-bcel-5.1
-CATEGORIES=		wip devel
+CATEGORIES=		devel
 MASTER_SITES=	http://apache.rediris.es/jakarta/bcel/binaries/
 
 MAINTAINER=		pancake@phreaker.net

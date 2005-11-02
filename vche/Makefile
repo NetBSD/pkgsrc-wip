@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/05/24 10:31:48 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/02 18:00:32 thomasklausner Exp $
 #
 
 DISTNAME=		vche-1.7.2
-CATEGORIES=		wip editors
+CATEGORIES=		editors
 MASTER_SITES=	http://www.grigna.com/diego/linux/vche/
 
 MAINTAINER=		pancake@phreaker.net

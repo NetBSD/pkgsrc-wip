@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2005/06/23 23:18:59 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:32 thomasklausner Exp $
 #
 
 DISTNAME=		WordNet-2.0
 PKGNAME=		wordnet-2.0
-CATEGORIES=		wip misc
+CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.cogsci.princeton.edu/pub/wordnet/2.0/	\
 			ftp://ftp.ims.uni-stuttgart.de/pub/wordnet/2.0/
 

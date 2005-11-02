@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:14 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/02 18:00:17 thomasklausner Exp $
 #
 
 DISTNAME=		jadlx158
 PKGNAME=		jad-1.5.8
-CATEGORIES=		wip
+CATEGORIES=		lang
 MASTER_SITES=		http://www.kpdus.com/jad/${JAD_OSDIR}
 EXTRACT_SUFX=		.zip
 JAD_OSDIR=		linux # Default one
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.kpdus.com/jad.html
-COMMENT=		The fast JAva Decompiler
+COMMENT=		The fast Java Decompiler
 
 WRKSRC=		${WRKDIR}
 

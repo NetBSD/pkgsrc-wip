@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/02 02:25:37 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:07 thomasklausner Exp $
 #
 
 DISTNAME=		btscanner-2.0
-CATEGORIES=		wip net security
+CATEGORIES=		net security
 MASTER_SITES=		http://www.pentest.co.uk/src/
 EXTRACT_SUFX=		.tar.bz2
 

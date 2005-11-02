@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:09 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:19 thomasklausner Exp $
 #
 
 DISTNAME=		jumpnbump-1.50
-CATEGORIES=		wip games
+CATEGORIES=		games
 MASTER_SITES=		http://jumpbump.mine.nu/port/
 
 MAINTAINER=		Peter.Bex@student.kun.nl

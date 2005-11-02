@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:31:21 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:25 thomasklausner Exp $
 #
 
 DISTNAME=		proxychains-2.1
-CATEGORIES=		wip
+CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=proxychains/}
 
 MAINTAINER=		pancake@phreaker.net

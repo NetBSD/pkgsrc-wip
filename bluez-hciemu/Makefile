@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/29 18:09:52 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:00 thomasklausner Exp $
 #
 
 DISTNAME=		bluez-hciemu-1.2
-CATEGORIES=		wip net
+CATEGORIES=		net
 MASTER_SITES=		http://bluez.sf.net/download/
 
 MAINTAINER=		pancake@phreaker.net

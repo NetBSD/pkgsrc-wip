@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2005/09/27 16:10:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2005/11/02 18:00:19 thomasklausner Exp $
 #
 
 DISTNAME=		Browser282b2
 PKGNAME=		ldapbrowser-2.8.2b2
 WRKSRC=			${WRKDIR}/ldapbrowser
-CATEGORIES=		wip sysutils
+CATEGORIES=		sysutils
 MASTER_SITES=		http://www-unix.mcs.anl.gov/~gawor/ldapcommon/bin/
 
 MAINTAINER=		tech-pkg@NetBSD.org

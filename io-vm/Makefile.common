@@ -1,4 +1,4 @@
-CATEGORIES=		wip lang
+CATEGORIES=		lang
 MASTER_SITES=		http://io.urbanape.com/release/ \
 			http://www.sigusr1.org/~steve/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2005/07/01 02:05:11 hisazumi Exp $
+# $NetBSD: Makefile,v 1.15 2005/11/02 18:00:13 thomasklausner Exp $
 #
 
 DISTNAME=		firebird-1.5.2.4731
-CATEGORIES=		wip
+CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=firebird/}
 EXTRACT_SUFX=		.tar.bz2
 

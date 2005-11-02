@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:53 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:27 thomasklausner Exp $
 #
 
 DISTNAME=		snark-0.5
-CATEGORIES=		wip net
+CATEGORIES=		net
 MASTER_SITES=		http://www.klomp.org/snark/
 
 MAINTAINER=		pancake@phreaker.net

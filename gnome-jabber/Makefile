@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:31 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:14 thomasklausner Exp $
 #
 
 DISTNAME=		gnome-jabber-0.4
-CATEGORIES=		wip chat
+CATEGORIES=		chat
 MASTER_SITES=		http://ftp.gnome.org/pub/GNOME/sources/gnome-jabber/0.4/
 EXTRACT_SUFX=		.tar.bz2
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/06/12 23:51:30 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:32 thomasklausner Exp $
 #
 
 DISTNAME=		worker-2.10.0
-CATEGORIES=		wip sysutils
+CATEGORIES=		sysutils
 MASTER_SITES=		http://www.boomerangsworld.de/worker/downloads/
 EXTRACT_SUFX=		.tar.bz2
 

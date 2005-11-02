@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:16 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:18 thomasklausner Exp $
 #
 
 DISTNAME=		asm-1.4.2-bin
 PKGNAME=		java-asm-1.4.2
 WRKSRC=		${WRKDIR}/asm-1.4.2
-CATEGORIES=		wip devel
+CATEGORIES=		devel
 MASTER_SITES=		http://download.forge.objectweb.org/asm/ \
 				http://download.us.forge.objectweb.org/asm/
 EXTRACT_SUFX=	.zip

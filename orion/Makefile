@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/10/07 14:06:57 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/02 18:00:24 thomasklausner Exp $
 #
 
 DISTNAME=		orion-0.2
-CATEGORIES=		wip wm
+CATEGORIES=		wm
 MASTER_SITES=		ftp://ftp.scsh.net/pub/scsh/packages/orion-wm/
 
 MAINTAINER=		airhead@users.sf.net

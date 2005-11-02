@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/06/12 23:51:17 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:11 thomasklausner Exp $
 #
 
 DISTNAME=		edje-0.5.0
-CATEGORIES=		wip graphics x11
+CATEGORIES=		graphics x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
 MAINTAINER=		Peter.Bex@student.kun.nl

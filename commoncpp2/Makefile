@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/07/29 08:32:46 ianzag Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:08 thomasklausner Exp $
 #
 
 DISTNAME=		commoncpp2-1.3.16
-CATEGORIES=		wip devel
+CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnutelephony/}
 
 MAINTAINER=		pancake@phreaker.net

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/20 19:13:20 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:07 thomasklausner Exp $
 #
 
 DISTNAME=		bwm-ng-0.5
-CATEGORIES=		wip net
+CATEGORIES=		net
 MASTER_SITES=		http://www.gropp.org/bwm-ng/
 
 MAINTAINER=		pancake@phreaker.net

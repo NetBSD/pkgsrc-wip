@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:10:29 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:07 thomasklausner Exp $
 #
 
 DISTNAME=		chromium-data-0.9.12
-CATEGORIES=		wip games
+CATEGORIES=		games
 MASTER_SITES=		http://www.reptilelabour.com/software/files/chromium/
 
 MAINTAINER=		pancake@phreaker.net

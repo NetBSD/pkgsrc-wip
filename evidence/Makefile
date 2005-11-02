@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/06/12 23:51:18 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:12 thomasklausner Exp $
 #
 
 DISTNAME=		evidence-0.9.8
-CATEGORIES=		wip sysutils x11
+CATEGORIES=		sysutils x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=evidence/}
 
 MAINTAINER=		Peter.Bex@student.kun.nl

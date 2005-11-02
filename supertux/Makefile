@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/19 16:51:48 h2m Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:28 thomasklausner Exp $
 #
 
 DISTNAME=		supertux-0.1.3
 PKGREVISION=		1
-CATEGORIES=		wip games
+CATEGORIES=		games
 MASTER_SITES=		http://download.berlios.de/supertux/
 EXTRACT_SUFX=		.tar.bz2
 

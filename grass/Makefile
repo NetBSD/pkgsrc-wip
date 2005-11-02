@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/10/06 00:57:48 mchittur Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/02 18:00:15 thomasklausner Exp $
 #
 
 DISTNAME=		grass-6.0.0
-CATEGORIES=		wip
+CATEGORIES=		geography
 MASTER_SITES=		http://grass.itc.it/grass60/source/
 
 MAINTAINER=		mchittur@cs.nmsu.edu

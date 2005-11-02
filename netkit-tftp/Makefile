@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/23 17:19:11 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:24 thomasklausner Exp $
 #
 
 DISTNAME=		netkit-tftp-0.17
-CATEGORIES=		wip net
+CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
 
 MAINTAINER=		pancake@phreaker.net

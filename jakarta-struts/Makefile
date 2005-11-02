@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:15 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:17 thomasklausner Exp $
 #
 
 DISTNAME=		jakarta-struts-1.1
-CATEGORIES=		wip www
+CATEGORIES=		www
 MASTER_SITES=		http://apache.rediris.es/jakarta/struts/binaries/
 
 MAINTAINER=		pancake@phreaker.net

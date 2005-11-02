@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/10/24 19:17:58 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:24 thomasklausner Exp $
 #
 
 DISTNAME=	or1k_or1ksim-stable_0_1_x
 PKGNAME=	or1ksim-0.1.x
-CATEGORIES=	wip emulators
+CATEGORIES=	emulators
 DYNAMIC_MASTER_SITES=YES
 
 MAINTAINER=	tech-pkg@NetBSD.org

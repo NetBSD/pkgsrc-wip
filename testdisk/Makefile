@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/08/30 17:14:22 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:29 thomasklausner Exp $
 #
 
 DISTNAME=		testdisk-5.8
-CATEGORIES=		wip sysutils
+CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cgsecurity.org/
 
 MAINTAINER=		pancake@phreaker.net

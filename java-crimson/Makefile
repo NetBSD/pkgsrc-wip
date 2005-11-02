@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:17 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:18 thomasklausner Exp $
 #
 
 DISTNAME=		crimson-1.1.3-bin
 PKGNAME=	java-crimson-1.1.3
-CATEGORIES=		wip
+CATEGORIES=		textproc
 MASTER_SITES=		http://xml.apache.org/dist/crimson/
 EXTRACT_SUFX=		.zip
 

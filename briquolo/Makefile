@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:08 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:06 thomasklausner Exp $
 #
 
 DISTNAME=		briquolo-0.5.2
-CATEGORIES=		wip games
+CATEGORIES=		games
 MASTER_SITES=		http://briquolo.free.fr/download/
 EXTRACT_SUFX=		.tar.bz2
 

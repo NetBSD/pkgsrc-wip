@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/13 19:23:28 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:32 thomasklausner Exp $
 #
 
 DISTNAME=		ussp-push-0.4
-CATEGORIES=		wip comms
+CATEGORIES=		comms
 MASTER_SITES=		http://xmailserver.org/
 
 MAINTAINER=		pancake@phreaker.net
