@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 02:35:31 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 03:01:18 poppnk Exp $
 #
 
 # TODO : wrong name
@@ -9,6 +9,11 @@ MASTER_SITES=		http://grad.icmc.usp.br/~duker/ttysnoop/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://grad.icmc.usp.br/~duker/ttysnoop/
 COMMENT=		Snoop TTYs on Linux for kernels 2.6
+
+SUBST_CLASSES=etc
+SUBST_FILES.etc=config.h
+SUBST_STAGE.etc=configure
+SUBST_SED.etc=-e 's,/etc,${PKG_SYSCONFDIR},'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ttysnoop ${PREFIX}/sbin
