@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1999 2005/11/01 01:03:10 rillig Exp $
-# $Id: Makefile,v 1.1999 2005/11/01 01:03:10 rillig Exp $
+# $Id: Makefile,v 1.2000 2005/11/02 23:23:19 rillig Exp $
+#
 
 COMMENT=	WIP pkgsrc packages
 
