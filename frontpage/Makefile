@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/02 23:14:49 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/02 23:17:17 rillig Exp $
 
 DISTNAME=	frontpage-5.0.2.2623
 CATEGORIES=	www
@@ -31,7 +31,7 @@ DEPENDS+=	ap-frontpage>=1.6.2:../../wip/ap-frontpage
 FRONTPAGE=	fp${FP_VER:S/.//}.bsdi.tar.Z
 .  elif	${MACHINE_ARCH} == "alpha"
 FRONTPAGE=	fp${FP_VER:S/.//}.alpha.tar.Z
-DEPENDS+=	osf1-lib:../../emulators/osf1-lib
+DEPENDS+=	osf1-lib:../../emulators/osf1_lib
 .  elif	${MACHINE_ARCH} == "sparc64"
 FRONTPAGE=	fp${FP_VER:S/.//}.solaris.tar.Z
 .  elif	${MACHINE_ARCH} == "sparc"
