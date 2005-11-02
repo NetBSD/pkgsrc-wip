@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+
+--- lib/goodreply.c	2002-02-19 18:40:06.000000000 -0500
++++ lib/goodreply.c	2005-05-09 18:40:42.000000000 -0400
+@@ -76,7 +76,9 @@
+ 	/* if asked to do so, store the thing in the directory		*/
+ 	if (ldap_store_cert(scep) < 0) {
+ 		BIO_printf(bio_err, "%s:%d: there was a problem storing the "
+-			"certificate in the directory\n", __FILE__, __LINE__);
++			"certificate in the LDAP directory\n", __FILE__, __LINE__);
++		syslog(LOG_ERR, "%s:%d: there was a problem storing the "
++			"certificate in the LDAP directory\n", __FILE__, __LINE__);
+ 		goto err;
+ 	}
+ 

@@ -1,0 +1,26 @@
+$NetBSD: patch-ao,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+
+--- man/crl2ldap.8.in	2001-03-04 17:31:21.000000000 -0500
++++ man/crl2ldap.8.in	2005-10-11 17:19:52.000000000 -0400
+@@ -10,9 +10,7 @@
+ ] [
+ .BI \-w bindpassword
+ ] [
+-.BI \-h ldaphost
+-] [
+-.BI \-p ldapport
++.BI \-H ldapuri
+ ]
+ .I distinguished-name
+ .SH DESCRIPTION
+@@ -33,9 +31,7 @@
+ .TP
+ .BI \-w bindpassword
+ .TP
+-.BI \-h ldaphost
+-.TP
+-.BI \-p ldapport
++.BI \-H ldapuri like ldapi:/// or ldap://localhost:389/
+ 
+ .SH VERSION
+ This page documents

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+
+--- Makefile.am	2001-04-04 19:36:31.000000000 -0400
++++ Makefile.am	2005-05-09 18:40:44.000000000 -0400
+@@ -12,7 +12,7 @@
+ 
+ # it is important to go into openssl before scepd, or a configuration
+ # file will not be available for tests
+-SUBDIRS = libltdl include openssl ldap lib scepd scep cgi-bin doc 	\
++SUBDIRS = include openssl ldap lib scepd scep cgi-bin doc 	\
+ 	html man package rpm
+ 
+ update-tools:

@@ -1,0 +1,246 @@
+$NetBSD: patch-ar,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+
+--- openssl/openscep.cnf.in	2002-02-19 18:40:07.000000000 -0500
++++ openssl/openscep.cnf.in	2005-10-11 17:47:17.000000000 -0400
+@@ -14,6 +14,15 @@
+ 
+ oid_section	= scep_oids
+ 
++# how to sign client certs by hand (not using SCEP)
++#openssl ca -config /usr/pkg/etc/openscep/openscep.cnf -extensions scep_cert -policy policy_user -in client-rsa-pubkey.req -out signed-client-cert.pem -days 2619
++#openssl x509 -in signed-client-cert.pem -out signed-client-cert.der
++#openssl x509 -in signed-client-cert.der -text |less
++#
++# how to revoke a certificate
++#openssl x509 -in /usr/pkg/etc/openscep/newcerts/09.pem -text |less
++#openssl ca -config /usr/pkg/etc/openscep/openscep.cnf -revoke /usr/pkg/etc/openscep/newcerts/09.pem
++
+ [ ca ]
+ default_ca	= OpenSCEP
+ 
+@@ -31,26 +40,42 @@
+ RANDFILE	= $dir/.rnd
+ 
+ x509_extensions	= scep_cert
++copy_extensions = copy			# see [ scep_cert ] subjectAltName
+ default_md	= md5
+ 
+-default_days	= 1827
+-default_crl_days	= 10
++default_days		= @OPENSCEP_CERT_EXPIRY@
++default_crl_days	= @OPENSCEP_CRL_EXPIRY@
+ 
++# in my setup, crl expires in 1 day and is rebuilt 3 times per day
++#
++#  1. the most stale downloaded CRL has 16 hours of life in it.  so, an 
++#     PIX <-> CA network outage longer than 16 hours can shut down the VPN.
++#
++#  2. in terms of how long it takes to disable someone's certificate, the 
++#     idea of ``expiry'' is the only thing that matters---it matters just as 
++#     little when the CRL is fetched as when it is rebuilt. 
++#     rebuilding, like fetching, is the process of moving revocation data 
++#     from the instantaneous internal database, into a crl, then onto the pix, 
++#     and the maximum delay in this overall process is bounded by the expiry.
++#     so the expiry time is all that matters:  it takes max. 1 day to disable 
++#     a cert.
++
++# in my setup, the PIX certificate granted through SCEP follows 
++# policy_unstructured putting FQDN into both unstructuredName and 
++# commonName, and also needs subjectAltName = DNS:... below.  
+ [ policy_unstructured ]
+ unstructuredName	= optional
+-#commonName		= optional
+-#organizationalUnitName	= optional
+-#organizationName	= optional
+-#countryName		= optional
++commonName		= optional
++serialNumber		= optional
+ 
++# ...and the Unity 4.0 Windows clients I granted by hand using the 'openssl ca' 
++# commands above, not with SCEP, and follow policy_user, and don't use 
++# subjectAltName.
+ [ policy_user ]
+ countryName		= match
+-#stateOrProvinceName	= optional
+-#localityName		= optional
+ organizationName	= match
+-#organizationalUnitName	= optional
++organizationalUnitName	= optional
+ commonName		= supplied
+-#emailAddress		= optional
+ 
+ [ scep_oids ]
+ messageType=2.16.840.1.113733.1.9.2
+@@ -62,6 +87,7 @@
+ extensionReq=2.16.840.1.113733.1.9.8
+ proxyAuthenticator=1.3.6.1.4.1.4263.5.5	# from othello enterprise number range
+ 
++# these are the X.509 extensions for the certificates the CA issues
+ [ scep_cert ]
+ basicConstraints	= CA:FALSE
+ nsComment		= "OpenSCEP certificate"
+@@ -69,16 +95,67 @@
+ authorityKeyIdentifier	= keyid,issuer:always
+ keyUsage = digitalSignature, nonRepudiation, keyEncipherment
+ 
++# Cisco's v4.0 Unity client for Windows expects this extension in the 
++# VPN gateway's certificate to match the FQDN to which it's been 
++# configured to connect (the one the user double-clicks on in the list 
++# box), or it will say ``certificate doesn't match Phase 1 identifier''.  
++# unfortunately the openssl prompting scheme, AFAICT, will only prompt 
++# for DN components, not for subjectAltName.  I got it to sorta prompt 
++# for subjectAltName using [ req ] attributes, but using 'derdump' you 
++# can see it's not the same thing as specifying an x509 extension in 
++# this file because the DNS: is entered as plain old Internet-style 
++# text rather than encoded into some abstract OSI garbage as it needs.
++# If you specify it here, it'll be encoded right, but you can't be 
++# prompted.
++#
++# so, we hope the PIX or IOS or whatever VPN gateway will put its 
++# 'hostname' and 'domain-name' into the certificate request as 
++# subjectAltName = DNS:<hostname>.<domain-name> so we can rely on 
++# [ OpenSCEP ] copy_extensions.  
++#
++# here is the output of 'show ca cert' on a PIX that works with Unity 
++# Client 4.0 configured to connect to nagita-pix.cs.Colorado.EDU  I don't 
++# know if the UNSTRUCTURED NAME line actually corresponds to this 
++# subjectAltName setting, or if it is yet a third place the fqdn gets 
++# copied:
++#Certificate
++#  Status: Available
++#  Certificate Serial Number: 02
++#  Key Usage: General Purpose
++#  Subject Name:
++#    Serial Number = 12345678
++#    CN = nagita-pix.cs.colorado.edu
++#    UNSTRUCTURED NAME =<16> nagita-pix.cs.colorado.edu
++#  Validity Date: 
++#    start date: 22:05:35 UTC Jan 11 2005
++#    end   date: 22:05:35 UTC Nov 15 2013
++#
++# Here is the line you need to add to this file if the device's certificate 
++# request turns out it doesn't include the DNS name in the right way.
++# remember we are talking about the VPN gateway's certificate only, not 
++# certificates handed out to road warriors.  and it is the road warrior 
++# client that insists on this extension---I would guess the PIX 6.3 itself 
++# cares only that the cert is signed directly by its CA (no chains) and 
++# passes verifycertdn, and will otherwise accept any cert from anyone. :/
++#subjectAltName		= DNS:nagita-pix.cs.Colorado.EDU
++
++# these are the X.509 extensions for the CA certificate
+ [ v3_ca ]
+ subjectKeyIdentifier=hash
+ authorityKeyIdentifier=keyid:always,issuer:always
+ basicConstraints = CA:true
+-crlDistributionPoints	= @crldp
++#crlDistributionPoints	= @crldp
+ 
+ # Certificate Revocation List distribution points
+-[ crldp ]
+-URI = ldap://bosco.othello.ch/CN=OpenSCEP,O=othello,C=CH?certificateRevocationList
++# OpenSCEP actually _will_ check your CRLs into LDAP, but, eh,...unless 
++# I know either the security gateway or the roadwarrior client can 
++# interoperably read them out of LDAP, I think it unwise to cumber the 
++# CA cert with untested X.509 cruft.
++#[ crldp ]
++#URI = ldap://@OPENSCEP_LDAP_HOST@/CN=OpenSCEP,@OPENSCEP_LDAP_BASE@?certificateRevocationList
+ 
++# this is for the CA certificate, which is the only certificate we 
++# will actually generate (as in 'openssl req -new') with openssl.
+ [ req ]
+ distinguished_name	= req_distinguished_name
+ attributes		= req_attributes
+@@ -86,7 +163,7 @@
+ 
+ [ req_distinguished_name ]
+ countryName			= Country Name
+-countryName_default		= CH
++countryName_default		= US
+ countryName_min			= 2
+ countryName_max			= 2
+ 
+@@ -97,18 +174,25 @@
+ #localityName_default		= Bosco/Gurin
+ 
+ 0.organizationName		= Organization Name (eg, company)
+-0.organizationName_default	= Othello
++0.organizationName_default	= Boulder CSOps
++
++# Cisco PIX uses organizationalUnitName as an index to look up IKE Mode Config 
++# data (``vpngroup'') to send to the client, such as what tunnel inner address 
++# the client should use and Windows network browsing garbage.  This DN 
++# component should be in the certificates handed out to road warriors, but 
++# isn't convenient to put in the CA cert nor in the VPN gateway's cert, and 
++# therefore is commented out below since these settings are used only to 
++# generate the CA cert.
++#organizationalUnitName		= EasyVPN_vpngroup
+ 
+ commonName			= Common Name (eg, your name)
+ commonName_max			= 64
+-
+-#emailAddress			= Email Address
+-#emailAddress_max		= 40
++commonName_default		= OpenSCEP CA signing certificate
+ 
+ [ req_attributes ]
+-challengePassword		= A challenge password
+-challengePassword_min		= 4
+-challengePassword_max		= 20
++#challengePassword		= A challenge password
++#challengePassword_min		= 4
++#challengePassword_max		= 20
+ 
+ unstructuredName		= optional company name (unstructured)
+ 
+@@ -117,21 +201,40 @@
+ cacert = $DIR/cacert.pem
+ cakey = $DIR/cakey.pem
+ crl =  $DIR/crl.pem
+-grantcmd = /usr/local/sbin/scepgrant
+-automatic = true
++grantcmd = @PREFIX@/sbin/scepgrant
++automatic = false
+ debug = 0
+ logfile = /var/log/sceplog
+ openssl = OPENSSLCMD
+-crlusers = carmen afm
+-crlpublic = true
+-transidcheck = yes
+-proxycommunity = cvurg3nfnbvbt75
++crlusers = root		# must be set
++crlpublic = false	# some goofy way of revoking certificates based on 
++			# ``challenge password'' rather than proving you hold 
++			# the private key.
++
++transidcheck = yes	# using find and grep, this seems to appear nowhere in 
++			# the source distribution except openscep.cnf
++
++#For the time being, the source code is the only documentation of this
++#extension. The authors have written a SCEP client library in Java and
++#a SCEP proxy that uses both features to distribute certificates to 
++#standard browsers. Their package will eventually be integrated in
++#OpenSCEP, and a paper detailing the protocol extension and its
++#implementation will appear shortly.
++#	-- 2002/02/19
++#proxycommunity = thanksForCommittingUndocumentedIncompleteDevelopmentWorkToTheStableBranch
+ 
+ [ ldap ]
+-ldaphost = bosco.othello.ch
+-ldapport = 389
+-ldapbase = "O=othello,C=CH"
+-binddn = "cn=root,O=othello,C=CH"
+-bindpw = "secret"
++ldapuri = ldapi:///
++ldapbase = "@OPENSCEP_LDAP_BASE@"
++# matches slapd.conf rootdn
++binddn = "cn=Manager,@OPENSCEP_LDAP_BASE@"
++# quick-and-dirty password guide
++# 1. make random password
++# 2. put that password here
++# 3. invoke 'slappasswd -h {SSHA}' to hash the password you put here
++# 4. copy the hashed password including prefix '{SSHA}blahblah' into 
++#    the 'rootpw' field of slapd.conf
++# openscep.cnf needs to be mode 600 to protect this stupid password.
++bindpw = "XXX"
+ ldapmodify = LDAPMODIFYCMD
+ ldapsearch = LDAPSEARCHCMD

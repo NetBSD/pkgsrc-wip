@@ -1,0 +1,25 @@
+$NetBSD: patch-ay,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+
+--- cgi-bin/add.pl.in.orig	2005-10-21 19:13:20.000000000 -0400
++++ cgi-bin/add.pl.in
+@@ -31,8 +31,7 @@ sub	scepconf {
+ 	return $value;
+ }
+ $ldapmodify = &scepconf("ldap", "ldapmodify");
+-$ldaphost = &scepconf("ldap", "ldaphost");
+-$ldapport = &scepconf("ldap", "ldapport");
++$ldapuri = &scepconf("ldap", "ldapuri");
+ $ldapbase = &scepconf("ldap", "ldapbase");
+ $binddn = &scepconf("ldap", "binddn");
+ $bindpw = &scepconf("ldap", "bindpw");
+@@ -54,8 +53,8 @@ if (param("add") eq "Add") {
+ 	} else {
+ 		$dn = "CN=".$CN.",".$ldapbase;
+ 	}
+-	$cmd = "$ldapmodify -a -D \"$binddn\" -w \"$bindpw\" -h ".
+-                "\"$ldaphost\" -p \"$ldapport\"";
++	$cmd = "$ldapmodify -a -D \"$binddn\" -w \"$bindpw\" -H ".
++                "\"$ldapuri\"";
+ 	open(LDAP, "|$cmd >/dev/null 2>&1")
+ 		|| die "cannot connect to LDAP: $!\n";
+ 	printf(LDAP "dn: %s\n", $dn);

@@ -1,0 +1,24 @@
+$NetBSD: patch-bd,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+
+--- cgi-bin/Makefile.am.orig	2005-11-01 13:57:37.000000000 -0500
++++ cgi-bin/Makefile.am
+@@ -34,15 +34,17 @@ revoked.pl:	revoked.pl.in ../config.sh
+ 	sh ../config.sh revoked.pl.in >revoked.pl
+ 
+ install-exec-local:	$(CGIS)
++	if [ X${WEBUI} = XYES ]; then					\
+ 	if [ ! -d $(CGIINSTALLDIR) ];					\
+ 	then								\
+ 		mkdir -p $(CGIINSTALLDIR);				\
+-	fi
++	fi;								\
+ 	for c in $(CGIS);						\
+ 	do 								\
+ 		cp $${c} $(CGIINSTALLDIR);  				\
+ 		chmod 755 $(CGIINSTALLDIR)/$${c};			\
+-	done
++	done;								\
++	fi
+ 	d=`dirname $(PKICLIENTEXE)`;					\
+ 	if [ ! -d "$${d}" ];						\
+ 	then								\

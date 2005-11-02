@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+
+--- lib/payload.c	2002-02-24 16:40:01.000000000 -0500
++++ lib/payload.c	2005-05-09 18:40:44.000000000 -0400
+@@ -68,7 +68,7 @@
+ 	p->rt = -1;
+ 	p->od.req = NULL;
+ 	return p;
+-	M_ASN1_New_Error(ASN1_F_X509_REQ_INFO_NEW);	/* wrong error code */
++	M_ASN1_New_Error(ASN1_F_X509_INFO_NEW);	/* wrong error code */
+ }
+ 
+ void	payload_free(payload_t *a) {
+@@ -171,7 +171,7 @@
+ 		ret->od.spki = d2i_NETSCAPE_SPKI(&r2, &u, l);
+ 		break;
+ 	}
+-	M_ASN1_D2I_Finish(a, payload_free, ASN1_F_D2I_X509_REQ_INFO);
++	M_ASN1_D2I_Finish(a, payload_free, ASN1_F_D2I_X509);
+ }
+ 
+ /*

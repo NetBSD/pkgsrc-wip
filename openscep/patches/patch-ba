@@ -1,0 +1,22 @@
+$NetBSD: patch-ba,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+
+--- man/openscep.cnf.5.in.orig	2001-05-16 19:18:52.000000000 -0400
++++ man/openscep.cnf.5.in
+@@ -110,14 +110,9 @@ be set in the configuration file (this s
+ CGI programs a little bit).
+ 
+ .TP
+-.BI "ldaphost = " ldapservername
+-Specifies the name of the LDAP server used as back end for the
+-certificate data.
+-
+-.TP
+-.BI "ldapport = " ldapserverport
+-Specifies the TCP port number of the LDAP server used as back end for the
+-certificate data.
++.BI "ldapuri = " ldapservername
++Specifies the URI for the LDAP server used as back end for the
++certificate data such as ldap://localhost:389/ or ldapi:///.
+ 
+ .TP
+ .BI "ldapbase = " basedn

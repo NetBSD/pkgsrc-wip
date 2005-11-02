@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+
+--- lib/decode.c	2002-02-25 18:01:06.000000000 -0500
++++ lib/decode.c	2005-05-09 18:40:43.000000000 -0400
+@@ -439,7 +439,7 @@
+ 		if (debug)
+ 			BIO_printf(bio_err, "%s:%d: decoding issuer and "
+ 				"serial\n", __FILE__, __LINE__);
+-		msg->rd.iser = d2i_PKCS7_ISSUER_AND_SERIAL_bio(NULL, outbio);
++		msg->rd.iser = d2i_PKCS7_ISSUER_AND_SERIAL_bio(outbio, NULL);
+ 		break;
+ 	default:
+ 		BIO_printf(bio_err, "%s:%d: unknown message type: %s\n",

@@ -1,0 +1,83 @@
+$NetBSD: patch-av,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+
+--- scepd/crl2ldap.c.orig	2001-03-03 17:23:22.000000000 -0500
++++ scepd/crl2ldap.c
+@@ -15,8 +15,7 @@
+ extern int	optind;
+ extern char	*optarg;
+ 
+-char	*ldaphost = "localhost";
+-int	ldapport = LDAP_PORT;
++char	*ldapuri = NULL;
+ char	*binddn = NULL;
+ char	*bindpw = NULL;
+ int	debug = 0;
+@@ -24,14 +23,15 @@ int	debug = 0;
+ int	main(int argc, char *argv[]) {
+ 	int		c, used, bytes;
+ 	LDAP		*ldap;
+-	LDAPMod		crlmod, *mods[2];
++	LDAPMod		crlmod, arlmod, *mods[3];
+ 	struct berval	crlval;
+ 	struct berval	*crlvals[2];
+ 	unsigned char 	*buffer;
+ 	char		*dn;
++	int		version3 = 3, rc;
+ 
+ 	/* parse command line						*/
+-	while (EOF != (c = getopt(argc, argv, "D:w:b:h:p:d")))
++	while (EOF != (c = getopt(argc, argv, "D:w:b:H:d")))
+ 		switch (c) {
+ 		case 'd':
+ 			debug++;
+@@ -42,13 +42,8 @@ int	main(int argc, char *argv[]) {
+ 		case 'w':
+ 			bindpw = optarg;
+ 			break;
+-		case 'h':
+-			ldaphost = optarg;
+-			break;
+-		case 'p':
+-			ldapport = atoi(optarg);
+-			if ((ldapport <= 0) || (ldapport > 65535))
+-				ldapport = LDAP_PORT;
++		case 'H':
++			ldapuri = optarg;
+ 			break;
+ 		}
+ 
+@@ -70,9 +65,15 @@ int	main(int argc, char *argv[]) {
+ 	}
+ 
+ 	/* bind to the directory					*/
+-	ldap = ldap_init(ldaphost, ldapport);
+-	if (ldap == NULL) {
+-		fprintf(stderr, "%s:%d: cannot create LDAP structure\n",
++	rc = ldap_initialize(&ldap, ldapuri);
++	if (rc || ldap == NULL) {
++		fprintf(stderr, "%s:%d: cannot initialize LDAP connection to %s: %s (%d)\n",
++			__FILE__, __LINE__, ldapuri != NULL ? ldapuri : "<DEFAULT>", ldap_err2string(rc), rc);
++		exit(EXIT_FAILURE);
++        }
++	if (ldap_set_option(ldap, LDAP_OPT_PROTOCOL_VERSION, &version3) 
++		!= LDAP_OPT_SUCCESS ) {
++		fprintf(stderr, "%s:%d: couldn't set LDAP protocol version 3\n",
+ 			__FILE__, __LINE__);
+ 		exit(EXIT_FAILURE);
+ 	}
+@@ -88,10 +89,14 @@ int	main(int argc, char *argv[]) {
+ 	crlvals[0] = &crlval;
+ 	crlvals[1] = NULL;
+ 	crlmod.mod_op = LDAP_MOD_REPLACE | LDAP_MOD_BVALUES;
++	arlmod.mod_op = LDAP_MOD_REPLACE | LDAP_MOD_BVALUES;
+ 	crlmod.mod_type = "certificateRevocationList;binary";
++	arlmod.mod_type = "authorityRevocationList;binary";
+ 	crlmod.mod_bvalues = crlvals;
++	arlmod.mod_bvalues = crlvals;
+ 	mods[0] = &crlmod;
+-	mods[1] = NULL;
++	mods[1] = &arlmod;
++	mods[2] = NULL;
+ 
+ 	if (LDAP_SUCCESS != ldap_modify_s(ldap, dn, mods)) {
+ 		fprintf(stderr, "%s:%d: pushing CRL to LDAP failed\n",

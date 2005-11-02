@@ -1,0 +1,29 @@
+$NetBSD$
+
+--- html/man2html.sh	2001-03-18 17:09:10.000000000 -0500
++++ html/man2html.sh	2005-05-09 18:40:44.000000000 -0400
+@@ -1,17 +1,8 @@
+ #!/bin/sh
+-#
+-# this script is here to work arround the problem that man2html is
+-# not a standard componente of every unix system. So we just touch
+-# the html files if the Makefile tries to rebuild them.
+-#
+-# (c) 2001 Dr. Andreas Mueller, Beratung und Entwicklung
+-#
+-# $Id: man2html.sh,v 1.1 2001/03/18 22:09:10 afm Exp $
+-#
+-if type man2html 2>&1 >/dev/null
+-then
+-	tbl $1 | nroff -man | man2html > $2
+-else
+-	touch $2
+-	exit 0
+-fi
++
++tbl $1 | nroff -man > man2html.tmp.$$
++W3MMAN_MAN="cat man2html.tmp.$$" \
++QUERY_STRING="man=$(echo $1 | sed -e 's,^.*/,,' -e 's,^\([^/]*\)\.[0-9][0-9A-Za-z]*$,\1,')&section=$(echo $1 | sed 's/.*\.//')" \
++${PREFIX}/libexec/w3m/cgi-bin/w3mman2html.cgi | \
++	awk "/<html>/ { pr = 1 } { if (pr == 1) { print } }" > $2
++rm man2html.tmp.$$

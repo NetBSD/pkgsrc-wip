@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+
+--- include/scep.h	2002-02-19 18:40:05.000000000 -0500
++++ include/scep.h	2005-10-11 17:03:53.000000000 -0400
+@@ -22,8 +22,7 @@
+ #define	FORMAT_PEM	3
+ 
+ typedef struct {
+-	char	*ldaphost;	/* LDAP host name			*/
+-	int	ldapport;	/* LDAP port, usually 389		*/
++	char	*ldapuri;	/* url like ldapi:/// for UNIX socket	*/
+ 	char	*binddn;	/* bind distinguished name, NULL = anon	*/
+ 	char	*bindpw;	/* bind password, NULL = anon		*/
+ 	char	*ldapbase;	/* base for SCEP			*/
