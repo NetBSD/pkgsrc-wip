@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/02 04:21:29 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/02 04:28:41 minskim Exp $
 #
 
 DISTNAME=		graveman-0.3.12-4
@@ -13,6 +13,7 @@ COMMENT=		GTK2 frontend for CD writing and audio conversion
 DEPENDS+=		dvd+rw-tools>5.21:../../sysutils/dvd+rw-tools
 
 GNU_CONFIGURE=		yes
+USE_DIRS+=		xdg-1.2
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 
