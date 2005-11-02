@@ -1,0 +1,10 @@
+btscanner is a tool designed specifically to extract as much information as
+possible from a Bluetooth device without the requirement to pair. A detailed
+information screen extracts HCI and SDP information, and maintains an open
+connection to monitor the RSSI and link quality. btscanner is based on the
+BlueZ Bluetooth stack, which is included with recent Linux kernels, and the
+BlueZ toolset.
+
+btscanner also contains a complete listing of the IEEE OUI numbers and class
+lookup tables. Using the information gathered from these sources it is
+possible to make educated guesses as to the host device type.
