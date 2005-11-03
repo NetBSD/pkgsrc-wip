@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/12 23:51:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/03 12:20:43 rillig Exp $
 #
 
 DISTNAME=		bub-n-bros-1.1
@@ -12,8 +12,8 @@ COMMENT=		Multiplayer crazy clone of Bubble Bobble
 WRKSRC=			${WRKDIR}/bub-n-bros
 PY_PATCHPLIST=		yes
 
-MAKE_ENV=		CFLAGS="${CFLAGS}"
-MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
+MAKE_ENV+=		CFLAGS=${CFLAGS:Q}
+MAKE_ENV+=		LDFLAGS=${LDFLAGS:Q}
 
 PYTHON_VERSIONS_ACCEPTED= 23 23pth 22 22pth
 
