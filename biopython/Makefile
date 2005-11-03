@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2005/09/29 13:47:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/03 13:18:36 rillig Exp $
 #
 
 DISTNAME=		biopython-1.40b
-WRKSRC=                 ${WRKDIR}/${DISTNAME}
 CATEGORIES=		biology
 MASTER_SITES=		http://biopython.org/files/
 
 MAINTAINER=		dprice@cs.nmsu.edu
-HOMEPAGE=		http://biopython.org
+HOMEPAGE=		http://biopython.org/
 COMMENT=		Python libraries for computational molecular biology
 
 LICENSE=		no-commercial-use
