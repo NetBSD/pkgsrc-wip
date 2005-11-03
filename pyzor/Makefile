@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/01/23 21:39:33 marc Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/03 14:45:09 rillig Exp $
 
 DISTNAME=	pyzor-0.4.0
-PKGREVISION=    # empty
 CATEGORIES=	mail
-MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=pyzor/)
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyzor/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tom@replic8.net
