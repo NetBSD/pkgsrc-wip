@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/08 05:55:13 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/03 11:52:33 rillig Exp $
 bin/chinput
-etc/Chinput.ad
 share/doc/Chinput/API
 share/doc/Chinput/BUGS
 share/doc/Chinput/CHANGES
@@ -9,4 +8,6 @@ share/doc/Chinput/FAQ
 share/doc/Chinput/INSTALL
 share/doc/Chinput/README
 share/doc/Chinput/USAGE
+share/examples/Chinput/Chinput.ad
 @dirrm share/doc/Chinput
+@dirrm share/examples/Chinput

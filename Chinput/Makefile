@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:09:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/03 11:52:33 rillig Exp $
+#
 
 DISTNAME=	Chinput-3.0.2
+PKGREVISION=	1
 CATEGORIES=	inputmethod
 MASTER_SITES=	ftp://linux.nctu.edu.tw/dists/gentoo/distfiles/ \
 		http://www.opencjk.org/~yumj/download/
@@ -12,6 +14,10 @@ COMMENT=	Chinese input server
 USE_X11BASE=	yes
 
 BUILD_TARGET=	chinput
+
+USE_PKGINSTALL=	yes
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES=	${EGDIR}/Chinput.ad ${PKG_SYSCONFDIR}/Chinput.ad
 
 post-patch:
 	${SED} -e 's:/usr/dict:'${LOCALBASE}/lib/unicon':g' < \
@@ -25,7 +31,8 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/chinput ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/resource/Chinput.ad ${PREFIX}/etc
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/resource/Chinput.ad ${EGDIR}/
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Chinput
