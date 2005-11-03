@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/03 11:06:12 ghen Exp $
 
 DISTNAME=		openscep-0.4.2
 CATEGORIES=		local
@@ -125,5 +125,5 @@ post-install:
 .include "../../databases/openldap/buildlink3.mk"
 .include "../../mk/apache.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../mk/automake.mk"
+.include "../../mk/tools/automake.mk"
 .include "../../mk/bsd.pkg.mk"
