@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2005/09/19 08:24:10 leonardschmidt Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/11/03 09:53:44 leonardschmidt Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XMMS2_BUILDLINK3_MK:=	${XMMS2_BUILDLINK3_MK}+
@@ -29,6 +29,14 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.xmms2
 
 .if !empty(PKG_BUILD_OPTIONS.xmms2:Mflac)
 .  include "../../audio/flac/buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mgnomevfs)
+.  include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mmodplug)
+.  include "../../audio/modplug/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.xmms2:Mogg)

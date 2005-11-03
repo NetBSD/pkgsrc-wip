@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.7 2005/11/03 08:31:35 leonardschmidt Exp $
+# $NetBSD: options.mk,v 1.8 2005/11/03 09:53:44 leonardschmidt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
-PKG_SUPPORTED_OPTIONS=	curl flac ogg pyrex ruby
-PKG_SUGGESTED_OPTIONS=	curl flac ogg ruby
+PKG_SUPPORTED_OPTIONS=	curl flac gnomevfs modplug ogg pyrex ruby
+PKG_SUGGESTED_OPTIONS=	curl flac gnomevfs modplug ogg
 
 .include "../../mk/bsd.options.mk"
 
@@ -20,6 +20,22 @@ PLIST_SUBST+=		FLAC=""
 .else
 PLIST_SUBST+=		FLAC="@comment "
 EXCLUDES+=		flac
+.endif
+
+.if !empty(PKG_OPTIONS:Mgnomevfs)
+.  include "../../sysutils/gnome-vfs2/buildlink3.mk"
+PLIST_SUBST+=		GNOMEVFS=""
+.else
+PLIST_SUBST+=		GNOMEVFS="@comment "
+EXCLUDES+=		gnomevfs
+.endif
+
+.if !empty(PKG_OPTIONS:Mmodplug)
+.  include "../../audio/libmodplug/buildlink3.mk"
+PLIST_SUBST+=		MODPLUG=""
+.else
+PLIST_SUBST+=		MODPLUG="@comment "
+EXCLUDES+=		modplug
 .endif
 
 .if !empty(PKG_OPTIONS:Mogg)
