@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2005/04/23 15:51:58 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/03 14:44:08 rillig Exp $
 #
 
 DISTNAME=		manatee-1.8.4.1
 CATEGORIES=		biology
-MASTER_SITES=		http://easynews.dl.sourceforge.net/sourceforge/manatee/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=manatee/}
 
 MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://easynews.dl.sourceforge.net/sourceforge/manatee/
