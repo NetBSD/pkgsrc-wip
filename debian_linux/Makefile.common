@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.3 2005/11/03 14:29:57 rillig Exp $
-# $Id: Makefile.common,v 1.3 2005/11/03 14:29:57 rillig Exp $
+# $NetBSD: Makefile.common,v 1.4 2005/11/03 14:34:40 rillig Exp $
+# $Id: Makefile.common,v 1.4 2005/11/03 14:34:40 rillig Exp $
 
 MAINTAINER?=		grant@NetBSD.org
 HOMEPAGE?=		http://www.debian.org/
@@ -29,7 +29,7 @@ do-extract-deb: ${WRKDIR}
 .PHONY: do-install-deb
 .if !target(do-install-deb)
 do-install-deb: ${WRKDIR}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${DEBIAN_EMUL_DIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${INSTALL_BIN_DIR} ${DEBIAN_EMUL_DIR}
 .  for _deb_ in ${DEBS}
 	cd ${DEBIAN_EMUL_DIR} && \
 		${TAR} -zxpf ${WRKDIR}/${_deb_}/data.tar.gz
