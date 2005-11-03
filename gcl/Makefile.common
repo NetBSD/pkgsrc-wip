@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2005/04/11 21:12:22 tvierling Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/11/03 14:48:34 rillig Exp $
 #
 
 DISTNAME?=		gcl-2.5.3
 CATEGORIES?=		lang
-MASTER_SITES?=		ftp://ftp.gnu.org/pub/gnu/gcl/
+MASTER_SITES?=		${MASTER_SITE_GNU:=gcl/}
 
 MAINTAINER?=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.gnu.org/software/gcl/gcl.html
