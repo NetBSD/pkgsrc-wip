@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/25 00:07:50 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/03 12:23:45 rillig Exp $
 #
 
 CATEGORIES=             databases math
 MASTER_SITES=           ${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=             mchittur@cs.nmsu.edu
-HOMEPAGE=               ${MASTER_SITE_R_CRAN:=contrib/Descriptions/ISwR.html}
+HOMEPAGE=               ${R_HOMEPAGE_BASE}/ISwR.html
 COMMENT=		Data sets and scripts for 'Introductory Statistics with R'
 
 R_PKGNAME=              ISwR

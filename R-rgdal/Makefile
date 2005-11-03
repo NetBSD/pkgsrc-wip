@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2005/04/25 20:37:13 daprice Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/03 12:23:46 rillig Exp $
 #
 
 CATEGORIES=             databases math
 MASTER_SITES=           ${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=             mchittur@cs.nmsu.edu
-HOMEPAGE=               ${MASTER_SITE_R_CRAN:=contrib/Descriptions/rgdal.html}
+HOMEPAGE=               ${R_HOMEPAGE_BASE}/rgdal.html
 COMMENT=		Provides bindings to GDAL and R
 
 R_PKGNAME=              rgdal
