@@ -1,23 +1,27 @@
-# $NetBSD: Makefile,v 1.2 2005/09/28 06:32:31 rillig Exp $
-# $Id: Makefile,v 1.2 2005/09/28 06:32:31 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/03 14:38:23 rillig Exp $
+# $Id: Makefile,v 1.3 2005/11/03 14:38:23 rillig Exp $
 
 DISTNAME=		# empty
 DISTFILES=		${DEBS}
 PKGNAME=		debian_base-3.1
+PKGREVISION=		1
 CATEGORIES=		emulators
-MASTER_SITES=		http://ftp.wa.au.debian.org/debian/pool/main/g/glibc/
-MASTER_SITES+=		http://ftp.wa.au.debian.org/debian/pool/main/z/zlib/
-MASTER_SITES+=		http://ftp.wa.au.debian.org/debian/pool/main/g/gcc-3.3/
+MASTER_SITES=		# none
 
 MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.debian.org/
 COMMENT=		Debian Linux compatibility base package
 
-# these are from the latest unstable packages in /debian/pool/main/
-# dated 20040607.
-DEBS+=			libc6_2.3.2.ds1-13_${MACHINE_ARCH}.deb
-DEBS+=			zlib1g_1.2.1.1-3_${MACHINE_ARCH}.deb
-DEBS+=			libstdc++5_3.3.3-9_${MACHINE_ARCH}.deb
+# Last updated: 2005-11-03.
+DISTFILE_LIBC=			libc6_2.3.2.ds1-22_${MACHINE_ARCH}.deb
+SITES_${DISTFILE_LIBC}=		${MASTER_SITE_DEBIAN:=pool/main/g/glibc/}
+DEBS+=				${DISTFILE_LIBC}
+DISTFILE_ZLIB=			zlib1g_1.2.3-6_${MACHINE_ARCH}.deb
+SITES_${DISTFILE_ZLIB}=		${MASTER_SITE_DEBIAN:=pool/main/z/zlib/}
+DEBS+=				${DISTFILE_ZLIB}
+DISTFILE_LIBSTDCXX=		libstdc++5_3.3.6-7_${MACHINE_ARCH}.deb
+SITES_${DISTFILE_LIBSTDCXX}=	${MASTER_SITE_DEBIAN:=pool/main/g/gcc-3.3/}
+DEBS+=				${DISTFILE_LIBSTDCXX}
 
 do-extract:		do-extract-deb
 do-install:		do-install-deb
