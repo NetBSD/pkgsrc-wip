@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2005/07/28 16:01:08 obache Exp $
+$NetBSD: patch-aa,v 1.3 2005/11/03 15:32:26 rillig Exp $
 
---- ../../MCONFIG.in.orig	2005-02-05 00:43:57.000000000 +0900
-+++ ../../MCONFIG.in
+--- MCONFIG.in.orig	2005-02-05 00:43:57.000000000 +0900
++++ MCONFIG.in
 @@ -38,8 +38,7 @@ CPPFLAGS =  -I$(top_builddir)/lib -I$(to
  INTL_FLAGS = @INTL_FLAGS@
  ALL_CFLAGS = $(CPPFLAGS) $(DEFS) $(USE_WFLAGS) $(CFLAGS) $(XTRA_CFLAGS) \
