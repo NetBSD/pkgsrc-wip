@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/11 11:53:51 obache Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/03 08:32:44 leonardschmidt Exp $
 #
 
 DISTNAME=	gallery-0.0.8
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.cozmixng.org/~kou/download/
 MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://www.cozmixng.org/~rwiki/?cmd=view;name=GalleryAdministrator
 COMMENT=	CGI and mail interface for [RAA:RubyPhoto] and zphoto
-
-RUBY_VERSION_SUPPORTED= 18
 
 DEPENDS+=	{${RUBY_PKGPREFIX}-imlib2>=0.4.3,${RUBY_PKGPREFIX}-RMagick>=1.8.1}:../../graphics/ruby-imlib2
 DEPENDS+=	{${RUBY_PKGPREFIX}-uconv-[0-9]*,${RUBY_PKGPREFIX}-iconv-[0-9]*}:../../converters/ruby-uconv

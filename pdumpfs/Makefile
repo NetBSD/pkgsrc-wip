@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/15 17:32:29 obache Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/03 08:33:21 leonardschmidt Exp $
 #
 
 DISTNAME=	pdumpfs-${VER}
@@ -11,8 +11,6 @@ COMMENT=	Simple daily backup system similar to Plan9's dumpfs
 
 VER=		1.3
 BUILD_TARGET=	pdumpfs
-
-RUBY_VERSION_SUPPORTED=	18
 
 REPLACE_RUBY=	pdumpfs.in
 
