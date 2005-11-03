@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/26 18:48:27 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/03 12:55:34 rillig Exp $
 #
 
 CATEGORIES=	databases math
-MASTER_SITES=	http://easynews.dl.sourceforge.net/sourceforge/rdbi/ \
-		http://aleron.dl.sourceforge.net/sourceforge/rdbi/ \
-		http://umn.dl.sourceforge.net/sourceforge/rdbi/ \
-		http://unc.dl.sourceforge.net/sourceforge/rdbi/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rdbi/}
 
 MAINTAINER=    	hdp@cs.nmsu.edu
 HOMEPAGE=	http://rdbi.sourceforge.net/
