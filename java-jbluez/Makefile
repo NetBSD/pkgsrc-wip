@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=		jbluez-1.0
@@ -16,7 +16,7 @@ MAKE_ENV=JDK_HOME=${PKG_JAVA_HOME}
 
 WRKSRC=		${WRKDIR}/src
 
-SUBST_CLASSES=jh
+SUBST_CLASSES+=jh
 SUBST_STAGE.jh=pre-build
 SUBST_FILES.jh= c/Makefile
 SUBST_SED.jh= -e 's,/usr/lib/java,${PKG_JAVA_HOME},g'

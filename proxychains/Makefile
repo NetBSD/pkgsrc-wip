@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=		proxychains-2.1
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
-SUBST_CLASSES=ooo
+SUBST_CLASSES+=ooo
 SUBST_STAGE.ooo=pre-build
 SUBST_FILES.ooo=proxychains/Makefile
 SUBST_SED.ooo=-e s!OBJEXT\ =!OBJEXT=o!

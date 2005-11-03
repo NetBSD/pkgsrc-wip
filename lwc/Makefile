@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/02 18:00:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=		lwc-1.3.2
@@ -12,7 +12,7 @@ COMMENT=		Lightweight C++
 
 
 BUILD_TARGET= objdir/lwc
-SUBST_CLASSES=gcc
+SUBST_CLASSES+=gcc
 SUBST_STAGE.gcc=pre-build
 SUBST_FILES.gcc=Makefile
 SUBST_SED.gcc= -e 's,CCC\ \=,\#,g' -e 's,CC\ =\ ,CC+=-c ${CFLAGS}\#,' \

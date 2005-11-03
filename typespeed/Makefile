@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/03 13:01:53 rillig Exp $
 #
 
 DISTNAME=		typespeed-0.4.4
@@ -27,7 +27,7 @@ do-install:
 	cd ${PREFIX}/share/typespeed && ${PREFIX}/bin/typespeed --makescore
 	${ECHO} ${PREFIX}/share/typespeed/ > ${PKG_SYSCONFDIR}/typespeedrc
 
-SUBST_CLASSES=		datapath etcpath man
+SUBST_CLASSES+=		datapath etcpath man
 SUBST_STAGE.etcpath=	post-patch
 SUBST_FILES.etcpath=	typespeed.6 typespeed.h
 SUBST_SED.etcpath=	-e 's|/etc/typespeedrc|${PKG_SYSCONFDIR}/typespeedrc|g'

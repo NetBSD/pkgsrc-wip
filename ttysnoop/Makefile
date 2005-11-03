@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/02 18:00:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/03 13:01:53 rillig Exp $
 #
 
 # TODO : wrong name ?
@@ -11,7 +11,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://grad.icmc.usp.br/~duker/ttysnoop/
 COMMENT=		Snoop TTYs on Linux for kernels 2.6
 
-SUBST_CLASSES=etc
+SUBST_CLASSES+=etc
 SUBST_FILES.etc=config.h
 SUBST_STAGE.etc=configure
 SUBST_SED.etc=-e 's,/var/,${VARBASE}/,'

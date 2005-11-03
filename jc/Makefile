@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/02 18:00:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=		jc-1.2.3
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=--disable-assertions
 
 DEPENDS+=   classpath>=0.12:../../lang/classpath
 
-SUBST_CLASSES=uname gcc
+SUBST_CLASSES+=uname gcc
 SUBST_FILES.uname=configure
 SUBST_STAGE.uname=pre-configure
 SUBST_SED.uname=-e 's/uname -p/uname -m/g'

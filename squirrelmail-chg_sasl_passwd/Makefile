@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:15:56 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=	chg_sasl_passwd-1.4-1.4.x
@@ -33,7 +33,7 @@ do-install:
 	cd ${WRKDIR} && ${TAR} -cf - ${DISTNAME:C/-.*$//} | \
 		${TAR} -xf - -C ${SMDIR}/plugins
 
-SUBST_CLASSES=		prefix
+SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	chg_sasl_passwd/chgsaslpasswd.c
 SUBST_SED.prefix+=	-e "s,/usr/local,${PREFIX},g"

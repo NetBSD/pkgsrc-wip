@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:08 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/03 13:01:53 rillig Exp $
 
 DISTNAME=	up-imapproxy-1.2.2rc2
 CATEGORIES=	mail
@@ -12,7 +12,7 @@ GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 RCD_SCRIPTS=	upimapproxy
 
-SUBST_CLASSES=		paths
+SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	include/imapproxy.h
 SUBST_SED.paths=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"

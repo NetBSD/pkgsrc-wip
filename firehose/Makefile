@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=		firehose-0.6.0-src
@@ -14,7 +14,7 @@ COMMENT=		Super fast throughput over cheap ethernet
 WRKSRC=		${WRKDIR}/firehose-0.6.0
 USE_TOOLS+=gmake
 
-SUBST_CLASSES=gcc
+SUBST_CLASSES+=gcc
 SUBST_SED.gcc=-e 's,TARGET\ =\ mips,TARGET\ =\ i686,g'
 SUBST_FILES.gcc=Makefile
 SUBST_STAGE.gcc=configure

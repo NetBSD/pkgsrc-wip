@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:20 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=	swt-2.1.3-linux-gtk
@@ -28,7 +28,7 @@ post-extract:
 do-build:
 	cd ${WRKSRC} && ${SH} build.sh
 
-SUBST_CLASSES=	    foo
+SUBST_CLASSES+=	    foo
 SUBST_STAGE.foo=    post-patch
 SUBST_FILES.foo=    make_gtk.mak
 SUBST_SED.foo=	    -e s,@PKG_JVM_HOME@,${PKG_JAVA_HOME},

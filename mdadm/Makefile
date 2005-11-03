@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=		mdadm-1.8.1
@@ -15,7 +15,7 @@ USE_TOOLS+= gmake
 
 ONLY_FOR_PLATFORM=Linux-*-*
 
-SUBST_CLASSES=pfx
+SUBST_CLASSES+=pfx
 SUBST_FILES.pfx=Makefile
 SUBST_STAGE.pfx=configure
 SUBST_SED.pfx=-e 's,DESTDIR\ =,DESTDIR=\"${PREFIX}\",'

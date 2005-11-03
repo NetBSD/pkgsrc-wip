@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=		gnome-bluetooth-0.5.1
@@ -16,7 +16,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gnome-bluetooth.pc.in
 GNU_CONFIGURE=		yes
 
-SUBST_CLASSES= py
+SUBST_CLASSES+= py
 SUBST_FILES.py=src/Makefile
 SUBST_STAGE.py=post-configure
 SUBST_SED.py=-e 's,/usr/share/,${PREFIX}/share/,g' \

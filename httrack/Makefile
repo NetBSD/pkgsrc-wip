@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/17 18:36:06 poppnk Exp $
+# $NetBSD: Makefile,v 1.17 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=	httrack-3.33
@@ -17,7 +17,7 @@ USE_TOOLS+=	gmake
 LIBTOOL_OVERRIDE=${WRKSRC}/libtool
 LDFLAGS+=-L${WRKSRC}/./src/.libs/
 
-SUBST_CLASSES=html
+SUBST_CLASSES+=html
 SUBST_STAGE.html=pre-install
 SUBST_FILES.html=html/Makefile
 SUBST_SED.html=-e 's,install-data-hook,,'

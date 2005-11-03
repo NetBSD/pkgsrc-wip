@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/24 10:31:45 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=	tcc-0.9.22
@@ -18,7 +18,7 @@ HAS_CONFIGURE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"
-SUBST_CLASSES=ldl
+SUBST_CLASSES+=ldl
 SUBST_FILES.ldl=Makefile
 SUBST_STAGE.ldl=post-patch
 SUBST_SED.ldl=-e 's,LIBS=,\#LIBS,'

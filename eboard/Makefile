@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/02 18:00:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/03 13:01:51 rillig Exp $
 #
 
 DISTNAME=		eboard-0.9.5
@@ -16,7 +16,7 @@ USE_TOOLS+=		gmake
 
 .include "../../mk/ossaudio.buildlink3.mk"
 
-SUBST_CLASSES=		sox_dev
+SUBST_CLASSES+=		sox_dev
 SUBST_STAGE.sox_dev=	post-patch
 SUBST_FILES.sox_dev=	sound.cc
 SUBST_SED.sox_dev=	-e 's,/dev/dsp,${DEVOSSAUDIO},g'

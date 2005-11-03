@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/28 14:24:42 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=	NVIDIA-FreeBSD-x86-${DIST_VERSION}
@@ -30,7 +30,7 @@ COMPAT_LINUX?=		no		# Linux compat libraries.
 CHECK_SHLIBS=		no
 
 .if !empty(X11_TYPE:MXFree86)
-SUBST_CLASSES=		fixme
+SUBST_CLASSES+=		fixme
 SUBST_STAGE.fixme=	post-patch
 SUBST_FILES.fixme=	doc/Makefile driver/Makefile \
 			extension/Makefile lib/libGL/Makefile \

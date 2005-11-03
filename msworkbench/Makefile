@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/20 00:08:45 daprice Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=		msworkbench-0.3
@@ -11,7 +11,7 @@ COMMENT=		Set of tools for development of MapServer web mapping applications
 
 WRKSRC=			${WRKDIR}/msworkbench
 
-SUBST_CLASSES=		wishpath
+SUBST_CLASSES+=		wishpath
 SUBST_STAGE.wishpath=	pre-install
 SUBST_FILES.wishpath=	install.sh
 SUBST_SED.qtbindir=	's:$${PREFIX}:${PREFIX}:g'

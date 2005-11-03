@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/10/28 17:34:03 poppnk Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=		gnump3d-2.9.7
@@ -20,7 +20,7 @@ USE_TOOLS+=		gmake
 REPLACE_PERL=   	${WRKSRC}/bin/*
 NO_BUILD=		yes
 
-SUBST_CLASSES=		gnump3d
+SUBST_CLASSES+=		gnump3d
 SUBST_FILES.gnump3d=	bin/gnump3d-index bin/gnump3d-top bin/gnump3d2 \
 			etc/gnump3d.conf
 SUBST_STAGE.gnump3d=	pre-patch

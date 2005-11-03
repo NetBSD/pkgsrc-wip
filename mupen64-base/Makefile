@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/09/28 14:24:42 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=	mupen64_src-0.4
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/emu64
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
-SUBST_CLASSES=	    fixme
+SUBST_CLASSES+=	    fixme
 SUBST_STAGE.fixme=  post-patch
 SUBST_FILES.fixme=  Makefile
 SUBST_SED.fixme=    -e "s|@BLNK@|${BUILDLINK_DIR}|g" \

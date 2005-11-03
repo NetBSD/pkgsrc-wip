@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/02 18:00:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/03 13:01:52 rillig Exp $
 #
 
 DISTNAME=	minimalist-2.5.3
@@ -16,7 +16,7 @@ REPLACE_PERL+=	${WRKSRC}/contrib/minimalist_request.pl
 EGDIR=		${PREFIX}/share/examples/minimalist/
 CONF_FILES=	${EGDIR}/minimalist.conf ${PKG_SYSCONFDIR}/minimalist.conf
 
-SUBST_CLASSES=	path
+SUBST_CLASSES+=	path
 SUBST_STAGE.path=post-patch
 SUBST_FILES.path=minimalist.conf-sample
 SUBST_FILES.path+=minimalist.pl
