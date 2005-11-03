@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/02 17:59:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/03 12:18:06 rillig Exp $
 #
 
 DISTNAME=		acpid-1.0.4
@@ -14,7 +14,7 @@ EGDIR=			${PKG_SYSCONFDIR}/acpid ${PREFIX}/share/examples/acpid
 USE_PKGINSTALL=		yes
 RCD_SCRIPTS=		acpid
 
-USE_TOOLS=		gmake
+USE_TOOLS+=		gmake
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/acpid ${PREFIX}/sbin
