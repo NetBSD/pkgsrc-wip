@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/03 14:47:25 rillig Exp $
 #
 
 DISTNAME=		shaper_2.2.12-0.7.3.orig
-PKGNAME=	shaper-2.2.12
+PKGNAME=		shaper-2.2.12
 CATEGORIES=		net linux
-MASTER_SITES=		http://ftp.debian.org/debian/pool/main/s/shaper/
+MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/s/shaper/}
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://ftp.debian.org/debian/pool/main/s/shaper/
 COMMENT=		Bandwidth limiter for Linux
 
-WRKSRC=		${WRKDIR}/shaper-2.2.12-0.7.3/shaper/
+WRKSRC=			${WRKDIR}/shaper-2.2.12-0.7.3/shaper/
 
-ONLY_FOR_PLATFORM=Linux-*-*
+ONLY_FOR_PLATFORM=	Linux-*-*
 
-USE_PKGINSTALL=YES
-RCD_SCRIPTS=shaper
-EGDIR=${PREFIX}/share/examples/shaper
-CONF_FILES=${EGDIR}/shaper.conf ${PKG_SYSCONFDIR}/shaper.conf
+USE_PKGINSTALL=		YES
+RCD_SCRIPTS=		shaper
+EGDIR=			${PREFIX}/share/examples/shaper
+CONF_FILES=		${EGDIR}/shaper.conf ${PKG_SYSCONFDIR}/shaper.conf
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/shapecfg ${PREFIX}/sbin/
