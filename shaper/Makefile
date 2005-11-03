@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/03 14:47:25 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/03 14:57:35 rillig Exp $
 #
 
 DISTNAME=		shaper_2.2.12-0.7.3.orig
@@ -7,7 +7,7 @@ CATEGORIES=		net linux
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/s/shaper/}
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://ftp.debian.org/debian/pool/main/s/shaper/
+HOMEPAGE=		http://freshmeat.net/projects/cbq.init
 COMMENT=		Bandwidth limiter for Linux
 
 WRKSRC=			${WRKDIR}/shaper-2.2.12-0.7.3/shaper/

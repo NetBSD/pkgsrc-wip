@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/03 14:44:08 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/03 14:57:35 rillig Exp $
 #
 
 DISTNAME=		manatee-1.8.4.1
@@ -6,7 +6,7 @@ CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=manatee/}
 
 MAINTAINER=		hdp@cs.nmsu.edu
-HOMEPAGE=		http://easynews.dl.sourceforge.net/sourceforge/manatee/
+HOMEPAGE=		http://sourceforge.net/projects/manatee/
 COMMENT=		Web-based gene evaluation and genome annotation tool
 
 WRKSRC=			${WRKDIR}/manatee
