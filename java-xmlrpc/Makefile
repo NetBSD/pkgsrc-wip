@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:13:20 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/03 14:43:30 rillig Exp $
 #
 
 DISTNAME=		xmlrpc-1.2-b1
@@ -6,7 +6,7 @@ PKGNAME=		java-xmlrpc-1.2
 CATEGORIES=		net
 MASTER_SITES=		http://apache.rediris.es/ws/xmlrpc/v1.2-b1/ \
 			http://nagoya.apache.org/mirror/ws/xmlrpc/ \
-			http://www.apache.org/dist/ws/xmlrpc/
+			${MASTER_SITE_APACHE:=ws/xmlrpc/}
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://ws.apache.org/xmlrpc/
