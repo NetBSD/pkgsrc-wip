@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:12:36 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/03 10:48:48 rillig Exp $
 #
 
 DISTNAME=	gstat-2.4.3
-CATEGORIES=	gis,math
+CATEGORIES=	geography math
 MASTER_SITES=	http://www.gstat.org/bin/
 
 MAINTAINER=	brook@nmsu.edu
