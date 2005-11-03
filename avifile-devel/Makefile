@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/11 10:08:21 absd Exp $
+# $NetBSD: Makefile,v 1.10 2005/11/03 12:20:08 rillig Exp $
 
 DISTNAME=	avifile-0.7-0.7.43
 PKGNAME=	avifile-devel-0.7.43
@@ -11,7 +11,7 @@ HOMEPAGE=	http://avifile.sourceforge.net/
 COMMENT=	MPEG-4 (DivX) video player library
 
 .if ${MACHINE_ARCH} == "i386"
-DEPENDS=	win32-codecs>=010122:../../multimedia/win32-codecs
+DEPENDS+=	win32-codecs>=010122:../../multimedia/win32-codecs
 .endif
 
 USE_TOOLS+=		gmake pkg-config
