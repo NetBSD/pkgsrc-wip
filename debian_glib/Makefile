@@ -1,10 +1,10 @@
-# $Id: Makefile,v 1.1.1.1 2004/06/11 10:02:24 grantbeattie Exp $
+# $Id: Makefile,v 1.2 2005/11/03 14:39:35 rillig Exp $
 
 DISTNAME=		# empty
 DISTFILES=		${DEBS}
 PKGNAME=		debian_glib-1.2.10.9
 CATEGORIES=		emulators
-MASTER_SITES=		http://ftp.wa.au.debian.org/debian/pool/main/g/glib1.2/
+MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/g/glib1.2/}
 
 MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.debian.org/

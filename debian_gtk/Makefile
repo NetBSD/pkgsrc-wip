@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/11 10:03:06 grantbeattie Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/03 14:40:18 rillig Exp $
 
 DISTNAME=		# empty
 DISTFILES=		${DEBS}
 PKGNAME=		debian_gtk-1.2.10.16
 CATEGORIES=		emulators
-MASTER_SITES=		http://ftp.wa.au.debian.org/debian/pool/main/g/gtk+1.2/
+MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/g/gtk+1.2/}
 
 COMMENT=		Debian Linux gtk1.2 package
 
