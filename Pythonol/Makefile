@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/27 16:25:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/03 12:17:36 rillig Exp $
 #
 
 DISTNAME=		Pythonol-2.0_i586
@@ -12,7 +12,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://pythonol.sourceforge.net/
 COMMENT=		Learn Spanish (with a little help of Python)
 
-DEPENDS=		${PYPKGPREFIX}-sqlite>=0.4.3:../../databases/py-sqlite
+DEPENDS+=		${PYPKGPREFIX}-sqlite>=0.4.3:../../databases/py-sqlite
 
 PY_PATCHPLIST=		yes
 
