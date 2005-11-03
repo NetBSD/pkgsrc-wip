@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/30 13:45:03 poppnk Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/03 12:21:10 rillig Exp $
 
 DISTNAME=		valgrind-2.4.0
 CATEGORIES=		devel
@@ -12,6 +12,6 @@ COMMENT=		System for debugging and profiling x86-Linux programs
 ONLY_FOR_PLATFORM=	Linux-*-*
 
 GNU_CONFIGURE=		YES
-USE_TOOLS=		gmake
+USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.pkg.mk"
