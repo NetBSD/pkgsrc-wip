@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:10:47 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/03 14:21:49 rillig Exp $
 #
 
 DISTNAME=		syncmail
 PKGNAME=		cvs-syncmail-2.1
 CATEGORIES=		devel
-MASTER_SITES=		http://optusnet.dl.sourceforge.net/sourceforge/cvs-syncmail/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cvs-syncmail/}
 EXTRACT_SUFX=		# empty
 
 MAINTAINER=		roland.illig@gmx.de
-HOMEPAGE=		http://optusnet.dl.sourceforge.net/sourceforge/cvs-syncmail/
+HOMEPAGE=		http://sourceforge.net/projects/cvs-syncmail/
 COMMENT=		Automatically send cvs commit messages via mail
 
 WRKSRC=			${WRKDIR}
