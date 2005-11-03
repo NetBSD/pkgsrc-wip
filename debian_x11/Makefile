@@ -1,10 +1,10 @@
-# $Id: Makefile,v 1.1.1.1 2004/06/11 10:01:54 grantbeattie Exp $
+# $Id: Makefile,v 1.2 2005/11/03 14:42:11 rillig Exp $
 
 DISTNAME=		# empty
 DISTFILES=		${DEBS}
 PKGNAME=		debian_x11-3.0.1
 CATEGORIES=		emulators
-MASTER_SITES=		http://ftp.wa.au.debian.org/debian/pool/main/x/xfree86/ \
+MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/x/xfree86/} \
 			http://security.debian.org/debian-security/pool/updates/main/x/xfree86/
 
 MAINTAINER=		grant@NetBSD.org
