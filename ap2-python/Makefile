@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/05/24 10:29:23 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/11/03 13:52:12 rillig Exp $
 
 DISTNAME=	mod_python-3.1.3
 CATEGORIES=	www python
-MASTER_SITES=	http://www.apache.org/dist/httpd/modpython/
+MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/modpython/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	recht@NetBSD.org
