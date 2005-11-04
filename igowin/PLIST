@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2004/07/01 01:23:40 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/11/04 08:50:33 rillig Exp $
 bin/igowin
-libdata/${PKGNAME}/grain.bmp
-libdata/${PKGNAME}/igowin.exe
-libdata/${PKGNAME}/igowin.hlp
-libdata/${PKGNAME}/readme.txt
-libdata/${PKGNAME}/tutor.hlp
-@dirrm libdata/${PKGNAME}
+share/${PKGBASE}/grain.bmp
+share/${PKGBASE}/igowin.exe
+share/${PKGBASE}/igowin.hlp
+share/${PKGBASE}/readme.txt
+share/${PKGBASE}/tutor.hlp
+@dirrm share/${PKGBASE}
