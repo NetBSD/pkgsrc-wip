@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2007 2005/11/04 04:53:58 minskim Exp $
+# $Id: Makefile,v 1.2008 2005/11/04 10:32:30 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -418,6 +418,7 @@ SUBDIR+=	java-jbluez
 SUBDIR+=	java-jep
 SUBDIR+=	java-jflex
 SUBDIR+=	java-muse
+SUBDIR+=	java-qdbm
 SUBDIR+=	java-swingwt
 SUBDIR+=	java-swt
 SUBDIR+=	java-xmlrpc
@@ -809,6 +810,7 @@ SUBDIR+=	p5-UNIVERSAL-exports
 SUBDIR+=	p5-URI-Find
 SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-XML-Clean
+SUBDIR+=	p5-qdbm
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-pop3
 SUBDIR+=	panda
@@ -972,6 +974,9 @@ SUBDIR+=	qcad-manual-de
 SUBDIR+=	qcad-manual-en
 SUBDIR+=	qcad-manual-hu
 SUBDIR+=	qcad-partlibrary
+SUBDIR+=	qdbm
+SUBDIR+=	qdbm-cgi
+SUBDIR+=	qdbm-plus
 SUBDIR+=	qemu-bin
 SUBDIR+=	qgis
 SUBDIR+=	qhacc
@@ -1004,6 +1009,7 @@ SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-dpklib
 SUBDIR+=	ruby-misen
 SUBDIR+=	ruby-ncurses
+SUBDIR+=	ruby-qdbm
 SUBDIR+=	ruby-raggle
 SUBDIR+=	ruby-sqlite3
 SUBDIR+=	sara
