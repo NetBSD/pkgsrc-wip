@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2005/02/13 20:09:33 rillig Exp $
-include/ming.h
-include/mingpp.h
-lib/libming.a
-lib/libming.so
-lib/libming.so.0
-lib/libming.so.0.2

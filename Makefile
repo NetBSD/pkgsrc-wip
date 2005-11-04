@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2003 2005/11/04 02:39:04 minskim Exp $
+# $Id: Makefile,v 1.2004 2005/11/04 02:53:13 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -579,7 +579,6 @@ SUBDIR+=	mg-lsh
 SUBDIR+=	microcom
 SUBDIR+=	mid2gmc
 SUBDIR+=	mim
-SUBDIR+=	ming
 SUBDIR+=	mingw
 SUBDIR+=	mingw-binutils
 SUBDIR+=	mingw-gcc

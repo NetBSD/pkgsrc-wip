@@ -1,3 +1,0 @@
-Ming is a c library for generating SWF ("Flash") format movies, plus a set
-of wrappers for using the library from c++ and popular scripting languages
-like PHP, Python, and Ruby.

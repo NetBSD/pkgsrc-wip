@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/03 15:08:45 obache Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/04 02:53:13 minskim Exp $
 #
 
 DISTNAME=		${MING_DISTNAME}
@@ -19,7 +19,7 @@ BUILD_DIRS=		${WRKSRC}/py_ext
 
 MAKE_ENV+=		PYSITELIB=${PYSITELIB}
 
-.include "../../wip/ming/buildlink3.mk"
-.include "../../wip/ming/Makefile.common"
+.include "../../graphics/ming/buildlink3.mk"
+.include "../../graphics/ming/Makefile.common"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
