@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2004 2005/11/04 02:53:13 minskim Exp $
+# $Id: Makefile,v 1.2005 2005/11/04 04:29:53 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -924,7 +924,6 @@ SUBDIR+=	py-gtk2-docs
 SUBDIR+=	py-ipython
 SUBDIR+=	py-kyra
 SUBDIR+=	py-libpcap
-SUBDIR+=	py-ming
 SUBDIR+=	py-mmpython
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-nevow
