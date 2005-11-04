@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2005/11/04 10:16:14 obache Exp $
+
+--- ruby/Makefile.in.orig	2004-05-12 20:36:57.000000000 +0900
++++ ruby/Makefile.in
+@@ -21,7 +21,7 @@ MYDOCS = rbspex.html rbspex-ja.html rbap
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ MYBINDIR = @bindir@
+-MYDATADIR = @datadir@/$(PACKAGE)/ruby
++MYDATADIR = @datadir@/doc/$(PACKAGE)/ruby
+ DESTDIR =
+ 
+ # Building binaries
