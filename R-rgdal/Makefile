@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/03 12:23:46 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/04 08:44:47 rillig Exp $
 #
 
 CATEGORIES=             databases math
@@ -12,8 +12,8 @@ R_PKGNAME=              rgdal
 R_PKGVER=               0.2-7
 
 DEPENDS+=		gdal>=1.1.9:../../wip/gdal
-DEPENDS+=		R-abind>=1.1.0:../../wip/R-abind
-DEPENDS+=		R-pixmap>=0.4.1:../../wip/R-pixmap
+DEPENDS+=		R-abind>=1.1.0:../../math/R-abind
+DEPENDS+=		R-pixmap>=0.4.1:../../math/R-pixmap
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
