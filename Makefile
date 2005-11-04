@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2005 2005/11/04 04:29:53 minskim Exp $
+# $Id: Makefile,v 1.2006 2005/11/04 04:36:22 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1003,7 +1003,6 @@ SUBDIR+=	rssh
 SUBDIR+=	rte
 SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-dpklib
-SUBDIR+=	ruby-ming
 SUBDIR+=	ruby-misen
 SUBDIR+=	ruby-ncurses
 SUBDIR+=	ruby-raggle
