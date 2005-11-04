@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/04 02:53:13 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/04 03:08:15 minskim Exp $
 
 DISTNAME=	ming-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ming-${VER}
@@ -24,6 +24,6 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/examples/${f} ${RUBY_EXAMPLESDIR}/ming
 .endfor
 
-.include "../../graphics/ming/buildlink3.mk"
+.include "../../multimedia/ming/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
