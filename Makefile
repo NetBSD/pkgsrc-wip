@@ -1,48 +1,19 @@
-# $Id: Makefile,v 1.2008 2005/11/04 10:32:30 obache Exp $
+# $Id: Makefile,v 1.2009 2005/11/04 11:47:21 rillig Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
 
-SUBDIR+=	4stAttack
 SUBDIR+=	Chinput
-SUBDIR+=	Coin
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
 SUBDIR+=	OpenGLUT
 SUBDIR+=	PPower4
 SUBDIR+=	PyBabelFish
 SUBDIR+=	Pythonol
-SUBDIR+=	R-CGIwithR
-SUBDIR+=	R-DAAG
-SUBDIR+=	R-GRASS
-SUBDIR+=	R-ISwR
-SUBDIR+=	R-Matrix
-SUBDIR+=	R-PHYLOGR
-SUBDIR+=	R-R2HTML
-SUBDIR+=	R-RArcInfo
-SUBDIR+=	R-Rcmdr
 SUBDIR+=	R-Rdbi
 SUBDIR+=	R-Rdbi.PgSQL
 SUBDIR+=	R-Rserve
-SUBDIR+=	R-VR
-SUBDIR+=	R-abind
-SUBDIR+=	R-chron
-SUBDIR+=	R-clim.pact
-SUBDIR+=	R-date
-SUBDIR+=	R-genetics
-SUBDIR+=	R-geoR
-SUBDIR+=	R-gstat
-SUBDIR+=	R-httpRequest
-SUBDIR+=	R-hwde
-SUBDIR+=	R-lmm
-SUBDIR+=	R-mapproj
-SUBDIR+=	R-maps
-SUBDIR+=	R-pixmap
 SUBDIR+=	R-rgdal
-SUBDIR+=	R-sgeostat
-SUBDIR+=	R-shapefiles
-SUBDIR+=	R-statmod
-SUBDIR+=	R-wle
 SUBDIR+=	Radiator
 SUBDIR+=	Radiator-all
 SUBDIR+=	ReZound
@@ -918,7 +889,6 @@ SUBDIR+=	py-buildbot
 SUBDIR+=	py-dateutil
 SUBDIR+=	py-f2py2e
 SUBDIR+=	py-fastaudio
-SUBDIR+=	py-game
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gettext-tools
 SUBDIR+=	py-gtk2-docs
