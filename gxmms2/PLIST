@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/19 09:40:13 leonardschmidt Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/05 10:34:21 leonardschmidt Exp $
 bin/gxmms2
+share/doc/gxmms2/README
+@dirrm share/doc/gxmms2
