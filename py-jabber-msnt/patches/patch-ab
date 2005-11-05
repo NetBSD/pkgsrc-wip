@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/11/05 02:25:42 schnoebe Exp $
+
+--- PyMSNt.tac.orig	2005-10-28 22:10:37.000000000 -0500
++++ PyMSNt.tac
+@@ -1,19 +1,19 @@
+ # Path to the PyMSNt installed directory
+-PATH = "/usr/local/PyMSNt/"
++PATH = "@PREFIX@/@TRANSPORTDIR@"
+ 
+ # Path to the configuration file
+-CONFIG = "/usr/local/PyMSNt/config.xml"
++CONFIG = "@PKG_SYSCONFDIR@/pymsnt.xml"
+ 
+ ####
+ # You shouldn't need to modify below this line
+ ####
+ 
+ 
+-# Make 'cwd'/src in the PYTHONPATH
++# Make PATH (@PREFIX@/@TRANSPORTDIR@) is in the PYTHONPATH
+ import sys
+ import os
+ import os.path
+-sys.path[0] = os.path.abspath(PATH + "/src/")
++sys.path[0] = os.path.abspath(PATH)
+ os.chdir(PATH)
+ 
+ # Set up the service

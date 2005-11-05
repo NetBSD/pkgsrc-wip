@@ -1,0 +1,48 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/05 02:25:41 schnoebe Exp $
+${TRANSPORTDIR}/PyMSNt.tac
+${TRANSPORTDIR}/avatar.py
+${TRANSPORTDIR}/baseproto/__init__.py
+${TRANSPORTDIR}/baseproto/glue.py
+${TRANSPORTDIR}/config.py
+${TRANSPORTDIR}/contact.py
+${TRANSPORTDIR}/debug.py
+${TRANSPORTDIR}/disco.py
+${TRANSPORTDIR}/groupchat.py
+${TRANSPORTDIR}/housekeep.py
+${TRANSPORTDIR}/jabw.py
+${TRANSPORTDIR}/lang.py
+${TRANSPORTDIR}/legacy/__init__.py
+${TRANSPORTDIR}/legacy/defaultAvatar.png
+${TRANSPORTDIR}/legacy/defaultJabberAvatar.png
+${TRANSPORTDIR}/legacy/glue.py
+${TRANSPORTDIR}/legacy/legacylist.py
+${TRANSPORTDIR}/legacy/msnw.py
+${TRANSPORTDIR}/main.py
+${TRANSPORTDIR}/misciq.py
+${TRANSPORTDIR}/msnp11chl.py
+${TRANSPORTDIR}/msnp2p.py
+${TRANSPORTDIR}/register.py
+${TRANSPORTDIR}/session.py
+${TRANSPORTDIR}/tlib/__init__.py
+${TRANSPORTDIR}/tlib/domish.py
+${TRANSPORTDIR}/tlib/jabber/__init__.py
+${TRANSPORTDIR}/tlib/jabber/client.py
+${TRANSPORTDIR}/tlib/jabber/component.py
+${TRANSPORTDIR}/tlib/jabber/jid.py
+${TRANSPORTDIR}/tlib/jabber/jstrports.py
+${TRANSPORTDIR}/tlib/jabber/xmpp_stringprep.py
+${TRANSPORTDIR}/tlib/msn.py
+${TRANSPORTDIR}/tlib/msnp11chl.py
+${TRANSPORTDIR}/tlib/msnp2p.py
+${TRANSPORTDIR}/tlib/proxy.py
+${TRANSPORTDIR}/tlib/xmlstream.py
+${TRANSPORTDIR}/utils.py
+${TRANSPORTDIR}/xdb.py
+${TRANSPORTDIR}/xmlconfig.py
+share/examples/jabberd/pymsnt.xml
+share/examples/rc.d/pymsnt
+@dirrm ${TRANSPORTDIR}/baseproto
+@dirrm ${TRANSPORTDIR}/legacy
+@dirrm ${TRANSPORTDIR}/tlib/jabber
+@dirrm ${TRANSPORTDIR}/tlib
+@dirrm ${TRANSPORTDIR}

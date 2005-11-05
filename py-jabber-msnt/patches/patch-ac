@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/11/05 02:25:42 schnoebe Exp $
+
+--- src/legacy/glue.py.orig	2005-11-01 23:55:29.000000000 -0600
++++ src/legacy/glue.py
+@@ -27,7 +27,7 @@ id = "msn"               # The transport
+ 
+ 
+ # Load the default avatar
+-f = open("src/legacy/defaultJabberAvatar.png")
++f = open("legacy/defaultJabberAvatar.png")
+ defaultJabberAvatarData = f.read()
+ f.close()
+ 
