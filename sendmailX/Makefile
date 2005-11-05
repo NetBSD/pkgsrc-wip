@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2005/10/14 08:59:45 adrian_p Exp $
+# $NetBSD: Makefile,v 1.16 2005/11/05 00:25:17 adrian_p Exp $
 
 DISTNAME=	smX-${VERSION}
 PKGNAME=	sendmailX-${VERSION}
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/.beta/better/
+MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.sendmail.org/
@@ -13,7 +13,7 @@ CONFLICTS+=	postfix-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 PTHREAD_OPTS+=	require
-VERSION=	0.0.Beta4.0
+VERSION=	0.0.0.0
 USE_TOOLS+=	sed
 
 # Note: This will work on Linux, NetBSD, OpenBSD, SunOS, OSF1 and UnixWare but
@@ -26,8 +26,7 @@ USERMOD?=	/usr/sbin/usermod
 EGDIR=		${PREFIX}/share/examples/smX
 DOCDIR=		${PREFIX}/share/doc/smX
 FILES_SUBST+=	PREFIX=${PREFIX} SMXCNF=${SMXCNF} USERMOD=${USERMOD}
-FILES_SUBST+=	VARBASE=${VARBASE} SED=${SED}
-FILES_SUBST+=	SMXETC=${PKG_SYSCONFDIR} UNAME=${UNAME}
+FILES_SUBST+=	VARBASE=${VARBASE} SED=${SED} UNAME=${UNAME}
 MESSAGE_SUBST+=	SMXCNF=${SMXCNF}
 
 PKG_SYSCONFSUBDIR=	smx
@@ -42,9 +41,6 @@ PKG_USERS+=	smxq:smxq::Sendmail\ X\ Queue\ Manager
 PKG_USERS+=	smxc:smxc::Sendmail\ X\ SMTP\ Client
 PKG_USERS+=	smxm:smxm::Sendmail\ X\ Address\ Resolver
 PKG_USERS+=	smx:smx::Sendmail\ X\ Misc
-
-CONFIGURE_ARGS+=	--disable-TLS
-CONFIGURE_ARGS+=	--disable-SASL
 
 # Note: Do not use Berkeley DB 4.3.27/28 in 64 bit mode on Solaris 5.8/9 as
 # it crashes at least in those configurations. This bug is fixed in the
