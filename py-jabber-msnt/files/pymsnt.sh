@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pymsnt.sh,v 1.3 2005/11/05 02:55:59 schnoebe Exp $
+# $NetBSD: pymsnt.sh,v 1.4 2005/11/05 05:15:19 schnoebe Exp $
 #
 #   startup script for the PyMSNt MSN transport for Jabber
 #   uses the twistd application engine
@@ -12,6 +12,7 @@
 name="pymsnt"
 rcvar=$name
 command=@PREFIX@/bin/twistd
+command_interpreter="@PYTHONBIN@"
 required_files="@PREFIX@/@TRANSPORTDIR@/PyMSNt.tac"
 pymsnt_user="@JABBERD_USER@"
 pidfile="@JABBERD_PIDDIR@/${name}.pid"

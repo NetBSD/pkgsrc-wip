@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/05 03:22:52 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/05 05:15:19 schnoebe Exp $
 
 DISTNAME=		pymsnt-0.10.2
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -37,6 +37,7 @@ RCD_SCRIPTS=	pymsnt
 TRANSPORTDIR=		${JABBERD_TRANSDIR}/pymsnt
 
 FILES_SUBST+=		TRANSPORTDIR=${TRANSPORTDIR}
+FILES_SUBST+=		PYTHONBIN=${PYTHONBIN}
 PLIST_SUBST+=		TRANSPORTDIR=${TRANSPORTDIR}
 
 .include "../../wip/jabberd/transports.mk"
