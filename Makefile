@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2012 2005/11/05 01:59:38 minskim Exp $
+# $Id: Makefile,v 1.2013 2005/11/05 06:51:39 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -690,6 +690,7 @@ SUBDIR+=	p5-Convert-ASN1
 SUBDIR+=	p5-Crypt-PasswdMD5
 SUBDIR+=	p5-Crypt-SmbHash
 SUBDIR+=	p5-Curses-UI
+SUBDIR+=	p5-Curses-UI-POE
 SUBDIR+=	p5-DBD-ODBC
 SUBDIR+=	p5-Data-Page
 SUBDIR+=	p5-Data-Properties
