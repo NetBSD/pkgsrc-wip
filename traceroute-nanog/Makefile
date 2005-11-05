@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/13 00:09:13 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/05 18:30:49 gschwarz Exp $
 
 DISTNAME=	traceroute-nanog-6.3.10
 CATEGORIES=	net
@@ -10,7 +10,7 @@ DIST_SUBDIR=	traceroute-nanog
 PATCH_SITES=	http://ftp.debian.org/debian/pool/main/t/traceroute-nanog/
 PATCHFILES=	traceroute-nanog_6.3.10-2.diff.gz
 
-COMMENT=	a traceroute implementation
+COMMENT=	Traceroute implementation
 MAINTAINER=	schwarz@NetBSD.org
 
 WRKSRC=		${WRKDIR}
@@ -37,7 +37,7 @@ CPPFLAGS+=	-DBYTESWAP_IP_LEN
 EXTRALIBS+=	-lresolv
 .endif
 
-INSTALLATION_DIRS=	sbin man/man8
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
 do-extract:
 		${CP} ${DISTDIR}/${DIST_SUBDIR}/traceroute.c ${WRKSRC}
@@ -46,6 +46,6 @@ do-build:
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/traceroute-nanog ${PREFIX}/sbin
-		${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/debian/traceroute-nanog.8 ${PREFIX}/man/man8
+		${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/debian/traceroute-nanog.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
