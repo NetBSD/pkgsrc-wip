@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/05 01:45:16 minskim Exp $
 #
 
 DISTNAME=		azara-2.7-src
@@ -7,7 +7,7 @@ CATEGORIES=		biology
 MASTER_SITES=		ftp://www.bio.cam.ac.uk/pub/azara/
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://www.bio.cam.ac.uk/azara
+HOMEPAGE=		http://www.bio.cam.ac.uk/azara/
 COMMENT=		Programs to process and view NMR data
 
 WRKSRC=			${WRKDIR}/azara-2.7
