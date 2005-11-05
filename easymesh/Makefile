@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/02 19:05:51 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/05 17:24:09 gschwarz Exp $
 
 DISTNAME=	easymesh-1.4
 CATEGORIES=	graphics
@@ -7,7 +7,7 @@ DISTFILES=	easymesh_1_4.c
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www-dinma.univ.trieste.it/nirftc/research/easymesh/
-COMMENT=	a mesh generator
+COMMENT=	Mesh generator
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	YES
