@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/08/08 19:14:32 gschwarz Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/05 20:21:01 gschwarz Exp $
 
 --- Makefile.orig	2004-09-20 17:30:03.000000000 +0200
-+++ Makefile	2005-08-08 20:45:45.000000000 +0200
-@@ -67,7 +67,7 @@
++++ Makefile	2005-11-05 21:04:52.000000000 +0100
+@@ -58,6 +58,7 @@
+ SYSTEM_OSF1=tru64
+ SYSTEM_SunOS=SunOS
+ SYSTEM_CYGWIN=Cygwin
++SYSTEM_Darwin=Darwin
+ SYSTEM=$(SYSTEM_$(OSNAME))
+ 
+ # C compiler
+@@ -67,7 +68,7 @@
  CC_tru64=cc  
  CC_SunOS=gcc
  CC_Cygwin=cc  
@@ -11,7 +19,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/08/08 19:14:32 gschwarz Exp $
  
  # C++ compiler mapping
  CPP_hpux=aCC  
-@@ -76,7 +76,8 @@
+@@ -76,7 +77,8 @@
  CPP_tru64=cxx  
  CPP_SunOS=gcc
  CPP_Cygwin=g++  
@@ -21,25 +29,35 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/08/08 19:14:32 gschwarz Exp $
  
  #Model specific flags
  MFLAGS_ia64=+DD64
-@@ -95,7 +96,7 @@
+@@ -86,6 +88,7 @@
+ MFLAGS_i586=
+ MFLAGS_i486=
+ MFLAGS_i386=
++MFLAGS_powerpc=
+ MFLAGS=$(MFLAGS_$(MODELNAME))
+ 
+ #C Compiler Flags
+@@ -95,7 +98,8 @@
  CFLAGS_tru64=-D__OSF1 -pthread
  CFLAGS_SunOS=-g
  CFLAGS_Cygwin=-D__CYGWIN
 -CFLAGS=$(CFLAGS_$(SYSTEM)) -D__3PCC__
++CFLAGS_Darwin=
 +CFLAGS=$(CFLAGS_$(SYSTEM)) -D__3PCC__ $(PKGSRC_CFLAGS)
  
  #C++ Compiler Flags
  CPPFLAGS_hpux=-AA -mt -D__HPUX 
-@@ -104,7 +105,7 @@
+@@ -104,7 +108,8 @@
  CPPFLAGS_tru64=-D__OSF1 -pthread
  CPPFLAGS_SunOS=-g
  CPPFLAGS_Cygwin=-D__CYGWIN
 -CPPFLAGS=$(CPPFLAGS_$(SYSTEM)) -D__3PCC__
++CPPFLAGS_Darwin=
 +CPPFLAGS=$(CPPFLAGS_$(SYSTEM)) -D__3PCC__ $(CXXFLAGS)
  
  #Linker mapping
  CCLINK_hpux=aCC
-@@ -113,7 +114,8 @@
+@@ -113,7 +118,8 @@
  CCLINK_tru64=cxx
  CCLINK_SunOS=gcc
  CCLINK_Cygwin=g++
@@ -49,12 +67,27 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/08/08 19:14:32 gschwarz Exp $
  
  #Linker Flags
  LFLAGS_hpux=-AA -mt
-@@ -122,7 +124,7 @@
+@@ -122,7 +128,8 @@
  LFLAGS_tru64=
  LFLAGS_SunOS=
  LFLAGS_Cygwin=
 -LFLAGS=$(LFLAGS_$(SYSTEM))
++LFLAGS_Darwin=
 +LFLAGS=$(LFLAGS_$(SYSTEM) $(LDFLAGS)
  
  #Link Libraries
  LIBS_linux= -ldl -lpthread -lcurses -lstdc++
+@@ -131,11 +138,12 @@
+ LIBS_freebsd= -lcurses -pthread
+ LIBS_SunOS= -lcurses -lpthread -lnsl -lsocket -lstdc++ -ldl
+ LIBS_Cygwin= -lcurses -lpthread -lstdc++ 
++LIBS_Darwin= -lcurses
+ LIBS=$(LIBS_$(SYSTEM))
+ 
+ # Operating system detection rule
+ all:
+-	make OSNAME=`uname|sed -e "s/CYGWIN.*/CYGWIN/"` MODELNAME=`uname -m` $(OUTPUT)
++	make OSNAME=`uname|sed -e "s/CYGWIN.*/CYGWIN/"` MODELNAME=`uname -m|sed -e "s/Power Macintosh/powerpc/"` $(OUTPUT)
+ 
+ $(OUTPUT): $(OBJ)
+ 	$(CCLINK) $(LFLAGS) $(MFLAGS) $(LIBDIR_$(SYSTEM)) \
