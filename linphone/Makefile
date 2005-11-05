@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/29 21:32:38 gschwarz Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/05 17:41:46 gschwarz Exp $
 
 DISTNAME=	linphone-1.0.1
 CATEGORIES=	net
@@ -6,12 +6,12 @@ MASTER_SITES=	http://simon.morlat.free.fr/download/1.0.x/source/
 
 MAINTAINER=     schwarz@NetBSD.org
 HOMEPAGE=	http://www.linphone.org
-COMMENT=	a SIP-based IP telephony client
+COMMENT=	SIP-based IP telephony client
 
 BUILD_DEFS+=	USE_INET6
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl
 USE_LIBTOOL=
 USE_PKGLOCALEDIR=	yes
 
@@ -44,7 +44,6 @@ CONFIGURE_ARGS+=	--enable-gnome_ui=yes
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
-USE_PERL5+=	build
 BUILD_DEPENDS+=	p5-XML-Parser-*:../../textproc/p5-XML-Parser
 
 LIBS+=		${LIBOSSAUDIO}

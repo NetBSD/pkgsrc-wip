@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/07/29 21:32:38 gschwarz Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/11/05 17:41:46 gschwarz Exp $
 ${GUI}bin/linphone
 bin/linphonec
 include/linphone/config.h
@@ -22,8 +22,8 @@ include/ortp/telephonyevents.h
 ${GUI}libexec/linphone_applet
 lib/liblinphone.la
 lib/libortp.la
-man/man1/linphone.1
-man/man1/linphonec.1
+${PKGMANDIR}/man1/linphone.1
+${PKGMANDIR}/man1/linphonec.1
 share/gnome/apps/Internet/linphone.desktop
 share/doc/html/ortp/book1.html
 share/doc/html/ortp/ortp-library-management-functions.html
