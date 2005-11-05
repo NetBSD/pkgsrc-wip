@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/05 17:56:08 gschwarz Exp $
+
+--- Makefile.in.orig	2005-10-10 18:07:40.000000000 +0200
++++ Makefile.in	2005-10-15 19:59:05.000000000 +0200
+@@ -1,17 +1,17 @@
+ exec_prefix = $(prefix)
+ bindir = $(exec_prefix)/bin
+-rcdir = $(prefix)/etc
++rcdir = $(PKG_SYSCONFDIR)
+ 
+ DISTNAME = moe-0.5
+ 
+-CXX = g++
+-INSTALL = install
+-INSTALL_PROGRAM = $(INSTALL) -p -m 755
+-INSTALL_DATA = $(INSTALL) -p -m 644
+-SHELL = /bin/sh
+-CPPFLAGS =
+-CXXFLAGS = -Wall -W -O2
+-LDFLAGS = -lncurses
++#CXX = g++
++#INSTALL = install
++#INSTALL_PROGRAM = $(INSTALL) -p -m 755
++#INSTALL_DATA = $(INSTALL) -p -m 644
++#SHELL = /bin/sh
++#CPPFLAGS =
++#CXXFLAGS = -Wall -W -O2
++LDFLAGS+= -lncurses
+ 
+ objs = block.o basic_buffer.o buffer.o iso_8859.o main.o \
+        menu_file.o menu_help.o menu_opts.o \
+@@ -52,9 +52,8 @@
+ 
+ install : all install-info
+ 	if test ! -d $(DESTDIR)$(bindir) ; then $(INSTALL) -d $(DESTDIR)$(bindir) ; fi
+-	if test ! -d $(DESTDIR)$(rcdir) ; then $(INSTALL) -d $(DESTDIR)$(rcdir) ; fi
+ 	$(INSTALL_PROGRAM) ./moe $(DESTDIR)$(bindir)/moe
+-	$(INSTALL_DATA) $(VPATH)/moerc $(DESTDIR)$(rcdir)/moerc
++	$(INSTALL_DATA) $(VPATH)/moerc $(DESTDIR)$(prefix)/share/examples/moe/moerc
+ 
+ install-info :
+ 	if test ! -d $(DESTDIR)$(infodir) ; then $(INSTALL) -d $(DESTDIR)$(infodir) ; fi
+@@ -63,7 +62,7 @@
+ 
+ install-man :
+ 	if test ! -d $(DESTDIR)$(mandir)/man1 ; then $(INSTALL) -d $(DESTDIR)$(mandir)/man1 ; fi
+-	$(INSTALL_DATA) $(VPATH)/doc/moe.1 $(DESTDIR)$(mandir)/man1/moe.1
++	$(INSTALL_MAN) $(VPATH)/doc/moe.1 $(DESTDIR)$(mandir)/man1/moe.1
+ 
+ install-strip : all
+ 	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' install
