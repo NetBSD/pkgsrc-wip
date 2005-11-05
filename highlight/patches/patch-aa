@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/05 23:28:40 dhowland Exp $
+
+--- makefile.orig	2005-10-30 08:01:02.000000000 -0500
++++ makefile
+@@ -6,23 +6,22 @@
+ DESTDIR =
+ 
+ # Location where the highlight data files will be installed:
+-data_dir = ${DESTDIR}/usr/share/highlight/
++data_dir = ${PREFIX}/share/highlight/
+ 
+ # Location where the highlight binary will be installed:
+-#bin_dir = ${DESTDIR}/usr/local/bin/
+-bin_dir = ${DESTDIR}/usr/bin/
++bin_dir = ${PREFIX}/bin/
+ 
+ # Location where the highlight man page will be installed:
+-man_dir = ${DESTDIR}/usr/share/man/man1/
++man_dir = ${PREFIX}/man/man1/
+ 
+ # Location where the highlight documentation will be installed:
+-doc_dir = ${DESTDIR}/usr/share/doc/highlight/
++doc_dir = ${PREFIX}/share/highlight/doc/
+ 
+ # Location where the highlight examples will be installed:
+-examples_dir = ${DESTDIR}/usr/share/doc/highlight/examples/
++examples_dir = ${PREFIX}/share/highlight/examples/
+ 
+ # Location where the highlight config files will be installed:
+-conf_dir = $(DESTDIR)/etc/highlight/
++conf_dir = ${PREFIX}/share/highlight/etc/
+ 
+ # Commands:
+ INSTALL_DATA=install -m644
+@@ -66,7 +65,7 @@ install:
+ 	${INSTALL_DATA} ./themes/*.style ${data_dir}themes/
+ 	${INSTALL_DATA} ./indentSchemes/*.indent ${data_dir}indentSchemes/
+ 	${INSTALL_DATA} ./helpmsg/*.help ${data_dir}helpmsg/
+-	${INSTALL_DATA} ./man/highlight.1.gz ${man_dir}
++	${INSTALL_DATA} ./man/highlight.1 ${man_dir}
+ 	${INSTALL_DATA} ./AUTHORS ${doc_dir}
+ 	${INSTALL_DATA} ./README ${doc_dir}
+ 	${INSTALL_DATA} ./README_DE ${doc_dir}

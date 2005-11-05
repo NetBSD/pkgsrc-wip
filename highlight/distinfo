@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/05 23:28:40 dhowland Exp $
+
+SHA1 (highlight-2.4.3.tar.gz) = 56f3bce01e0bf4772e3f38b096f808f84b5ac407
+RMD160 (highlight-2.4.3.tar.gz) = 3f98b43b7638cd7b2a4c4b1df50b3262e65e71f0
+Size (highlight-2.4.3.tar.gz) = 332492 bytes
+SHA1 (patch-aa) = c732a30a41d8fba536b4faefdef120f4347b4233
