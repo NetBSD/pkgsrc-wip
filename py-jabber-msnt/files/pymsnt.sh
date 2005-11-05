@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pymsnt.sh,v 1.2 2005/11/05 02:47:38 schnoebe Exp $
+# $NetBSD: pymsnt.sh,v 1.3 2005/11/05 02:55:59 schnoebe Exp $
 #
 #   startup script for the PyMSNt MSN transport for Jabber
 #   uses the twistd application engine
@@ -34,6 +34,7 @@ remove_pidfile()
 }
 
 if [ -f /etc/rc.subr ]; then
+	. /etc/rc.subr
 	load_rc_config $name
 	run_rc_command "$1"
 else
