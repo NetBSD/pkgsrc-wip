@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/04/30 17:13:21 gschwarz Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/05 17:30:54 gschwarz Exp $
 
---- Makefile.orig	2005-01-31 19:33:58.000000000 +0100
-+++ Makefile	2005-04-30 16:29:20.000000000 +0200
+--- Makefile.orig	2005-09-28 17:06:16.000000000 +0200
++++ Makefile	2005-10-15 15:14:50.000000000 +0200
 @@ -1,10 +1,11 @@
 -CC=gcc
 -CXX=g++
@@ -43,4 +43,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/30 17:13:21 gschwarz Exp $
 +VERSION=fnord-$(shell head -1 CHANGES|sed 's/://')
  
  tar: rename
- 	cd .. && tar cvvf $(VERSION).tar.bz2 --use=bzip2 --exclude CVS --exclude bin-* --exclude .cvsignore $(VERSION)
+ 	cd .. && tar cvvf $(VERSION).tar.bz2 --use=bzip2 --exclude CVS --exclude bin-* --exclude .cvsignore --exclude default $(VERSION)

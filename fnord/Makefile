@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2005/05/29 14:40:33 gschwarz Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/05 17:30:54 gschwarz Exp $
 
-DISTNAME=	fnord-1.9
+DISTNAME=	fnord-1.10
 CATEGORIES=	www
 MASTER_SITES=	http://www.fefe.de/fnord/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.fefe.de/fnord/
-COMMENT=	A small HTTP server
+COMMENT=	Small HTTP server
 
 USE_TOOLS+=	gmake
 DEPENDS+=	ucspi-tcp-*:../../net/ucspi-tcp
