@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/05 02:25:41 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/05 03:22:52 schnoebe Exp $
 
 DISTNAME=		pymsnt-0.10.2
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -46,13 +46,14 @@ CONF_FILES=	${EGDIR}/pymsnt.xml ${PKG_SYSCONFDIR}/pymsnt.xml
 do-install:
 	@ ${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
 	@ cd ${WRKSRC}/src && \
-	for i in `find . \( -type d -name .svn -prune \) -o -type f -print` ;\
+	for i in `find . \( \( -type f -name '*.orig' -o \
+			-type d -name .svn \) -prune \) -o -type f -print` ;\
 	do \
 	    ${ECHO} "Installing $$i -> ${PREFIX}/${TRANSPORTDIR}/$$i";\
 	    ${INSTALL_SCRIPT_DIR} `${DIRNAME} ${PREFIX}/${TRANSPORTDIR}/$$i` ;\
 	    ${INSTALL_SCRIPT} $$i ${PREFIX}/${TRANSPORTDIR}/$$i ;\
 	done
-	cd ${WRKSRC}; \
+	@ cd ${WRKSRC}; \
 	${INSTALL_SCRIPT} PyMSNt.tac ${PREFIX}/${TRANSPORTDIR}
 	${INSTALL_DATA_DIR} ${EGDIR};\
 	${INSTALL_DATA} ${WRKSRC}/config-example.xml ${EGDIR}/pymsnt.xml
