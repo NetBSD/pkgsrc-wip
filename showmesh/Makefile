@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/02 19:08:17 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/05 18:11:07 gschwarz Exp $
 
 DISTNAME=	showmesh-1.0
 CATEGORIES=	graphics
@@ -7,7 +7,7 @@ DISTFILES=	showmesh_1_0.c
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www-dinma.univ.trieste.it/nirftc/research/easymesh/
-COMMENT=	a display program for easymesh
+COMMENT=	Display program for easymesh
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	YES
