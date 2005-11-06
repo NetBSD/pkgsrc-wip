@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/05 06:49:51 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/06 06:09:44 marttikuparinen Exp $
 #
 
 DISTNAME=	Curses-UI-POE-0.02801
@@ -10,10 +10,11 @@ MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Curses-UI-POE
 COMMENT=	Subclass for Curses::UI that enables it to work with POE
 
+DEPENDS+=	p5-Curses-UI>=0:../../wip/p5-Curses-UI
+
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Curses/UI/POE/.packlist
 
 .include "../../lang/perl5/module.mk"
-.include "../../wip/p5-Curses-UI/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
