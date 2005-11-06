@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/11/06 16:39:07 leonardschmidt Exp $
+# $NetBSD: options.mk,v 1.2 2005/11/06 17:22:25 leonardschmidt Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pornview
 PKG_SUPPORTED_OPTIONS=		exif
@@ -9,7 +9,6 @@ PKG_SUGGESTED_OPTIONS=		exif xine
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mexif)
-.  include "../../graphics/libexif/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-exif
 .else
 CONFIGURE_ARGS+=	--disable-exif
