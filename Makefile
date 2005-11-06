@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2017 2005/11/06 07:07:39 marttikuparinen Exp $
+# $Id: Makefile,v 1.2018 2005/11/06 07:19:48 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -694,6 +694,7 @@ SUBDIR+=	p5-Curses-UI-POE
 SUBDIR+=	p5-DBD-ODBC
 SUBDIR+=	p5-Data-Page
 SUBDIR+=	p5-Data-Properties
+SUBDIR+=	p5-Data-Table
 SUBDIR+=	p5-Date-Range
 SUBDIR+=	p5-DateTime-Format-Mail
 SUBDIR+=	p5-Devel-Profiler
