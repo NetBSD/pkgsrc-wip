@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/06 05:56:28 dhowland Exp $
+bin/cb2bib
+share/cb2bib/AUTHORS
+share/cb2bib/COPYRIGHT
+share/cb2bib/LICENSE
+share/cb2bib/c2btools/bib2pdf
+share/cb2bib/data/abbreviations.txt
+share/cb2bib/data/netqinf.txt
+share/cb2bib/data/regexps.txt
+share/cb2bib/testPDFImport/nomeaning1.pdf
+share/cb2bib/testPDFImport/nomeaning2.pdf
+share/cb2bib/testPDFImport/nomeaning3.pdf
+share/cb2bib/testPDFImport/nomeaning4.pdf
+share/pixmaps/cb2bib.png
+share/applications/cb2bib.desktop
+@dirrm share/cb2bib/testPDFImport
+@dirrm share/cb2bib/data
+@dirrm share/cb2bib/c2btools
+@dirrm share/cb2bib

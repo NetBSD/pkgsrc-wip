@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/11/06 05:56:28 dhowland Exp $
+
+--- src/referencelist.cpp.orig	2005-11-06 00:04:27.000000000 -0500
++++ src/referencelist.cpp
+@@ -28,6 +28,7 @@
+ 
+ #ifndef Q_WS_WIN
+ #include <fcntl.h>  // fifo to lyx
++#include <unistd.h>
+ #endif
+ 
+ 
