@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/06 06:15:54 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/06 07:24:11 marttikuparinen Exp $
 
 DISTNAME=	POE-Component-SNMP-0.93
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	devel perl5
+CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POE/}
 
 MAINTAINER=	martti@NetBSD.org
