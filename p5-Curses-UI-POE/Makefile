@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/06 06:09:44 marttikuparinen Exp $
-#
+# $NetBSD: Makefile,v 1.3 2005/11/06 06:49:33 marttikuparinen Exp $
 
 DISTNAME=	Curses-UI-POE-0.02801
 PKGNAME=	p5-${DISTNAME}
