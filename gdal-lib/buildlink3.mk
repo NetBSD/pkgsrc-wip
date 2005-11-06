@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2005/04/19 22:32:27 daprice Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2005/11/06 10:41:45 minskim Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -32,7 +32,7 @@ BUILDLINK_PKGSRCDIR.gdal-lib?=	../../wip/gdal-lib
 # XXX buildlink3 lines below to dependencies, remove them.
 # XXX
 #.include "../../misc/proj/buildlink3.mk"
-#.include "../../wip/geos/buildlink3.mk"
+#.include "../../geography/geos/buildlink3.mk"
 #.include "../../textproc/xerces-c/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

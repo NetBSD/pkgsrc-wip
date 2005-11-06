@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/08/20 20:16:11 mchittur Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2005/11/06 10:41:45 minskim Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -25,7 +25,7 @@ BUILDLINK_DEPENDS.postgresql80-postgis-1.0.0+=	postgresql80-postgis-1.0.0>=rc2
 BUILDLINK_PKGSRCDIR.postgresql80-postgis-1.0.0?=	../../wip/postgresql80-postgis
 .endif	# POSTGRESQL80_POSTGIS_1.0.0_BUILDLINK3_MK
 
-.include "../../wip/geos/buildlink3.mk"
+.include "../../geography/geos/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

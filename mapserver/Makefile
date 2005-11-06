@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/02 18:00:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/06 10:41:45 minskim Exp $
 #
 
 DISTNAME=		mapserver-4.4.2
@@ -70,6 +70,6 @@ do-install:
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../wip/geos/buildlink3.mk"
+.include "../../geography/geos/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

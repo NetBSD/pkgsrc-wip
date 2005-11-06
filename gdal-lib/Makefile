@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/02 18:00:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/06 10:41:45 minskim Exp $
 #
 
 DISTNAME=		gdal-1.2.6
@@ -29,6 +29,6 @@ CONFIGURE_ARGS+=	--without-python
 
 .include "../../misc/proj/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
-.include "../../wip/geos/buildlink3.mk"
+.include "../../geography/geos/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
