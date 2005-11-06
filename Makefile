@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2018 2005/11/06 07:19:48 marttikuparinen Exp $
+# $Id: Makefile,v 1.2019 2005/11/06 07:31:51 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1183,6 +1183,7 @@ SUBDIR+=	xchat2-perl
 SUBDIR+=	xchat2-python
 SUBDIR+=	xchat2-tcl
 SUBDIR+=	xcmiscproto
+SUBDIR+=	xenconsole
 SUBDIR+=	xextproto
 SUBDIR+=	xf86bigfontproto
 SUBDIR+=	xfce4-genmon-plugin
