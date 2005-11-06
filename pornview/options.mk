@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2005/11/06 17:22:25 leonardschmidt Exp $
+# $NetBSD: options.mk,v 1.3 2005/11/06 17:23:27 leonardschmidt Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pornview
 PKG_SUPPORTED_OPTIONS=		exif
 PKG_OPTIONS_OPTIONAL_GROUPS=	movie
 PKG_OPTIONS_GROUP.movie=	mplayer xine
-PKG_SUGGESTED_OPTIONS=		exif xine
+PKG_SUGGESTED_OPTIONS=		exif
 
 .include "../../mk/bsd.options.mk"
 
