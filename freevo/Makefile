@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/27 16:25:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/06 18:09:03 rillig Exp $
 #
 
 DISTNAME=		freevo-1.4.1
@@ -17,25 +17,20 @@ PYDISTUTILSPKG=		yes
 
 PKG_SYSCONFSUBDIR=	freevo
 CONF_FILES=		${PKG_SYSCONFDIR}/local_conf.py
-PLIST_SUBST=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
-# well, this could be propably done better way I can't think of
-# 	-- tech-pkg@NetBSD.org
-
-post-patch:
-	${CP} ${WRKSRC}/freevo ${WRKSRC}/freevo.pre
-	sed -e 's|@@PYTHONBIN@@|${PYTHONBIN}|g' < ${WRKSRC}/freevo.pre > \
-		${WRKSRC}/freevo
-	${CP} ${WRKSRC}/freevo ${WRKSRC}/freevo.pre
-	sed -e 's|@@PKGSRC_SYSCONF_DIR@@|${PKG_SYSCONFDIR}|g' < ${WRKSRC}/freevo.pre > \
-		${WRKSRC}/freevo
+SUBST_CLASSES+=		freevo
+SUBST_STAGE.freevo=	post-patch
+SUBST_FILES.freevo=	freevo
+SUBST_SED.freevo+=	-e 's|@@PYTHONBIN@@|${PYTHONBIN}|g'
+SUBST_SED.freevo+=	-e 's|@@PKGSRC_SYSCONF_DIR@@|${PKG_SYSCONFDIR}|g'
 
 post-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
 	${INSTALL_DATA} ${WRKSRC}/local_conf.py.example \
 		${PKG_SYSCONFDIR}/local_conf.py
 
-.include "../../wip/py-game/buildlink3.mk"
+.include "../../devel/py-game/buildlink3.mk"
 .include "../../wip/py-mmpython/buildlink3.mk"
 .include "../../textproc/py-xml/buildlink3.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
