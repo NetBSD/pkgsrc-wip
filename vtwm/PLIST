@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/16 00:49:05 mnsanghvi Exp $
-bin/vtwm
-lib/X11/vtwm/system.vtwmrc
-man/cat1/vtwm.0.gz
-@dirrm lib/X11/vtwm
