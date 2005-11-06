@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2005/11/06 16:39:07 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/11/06 16:40:07 leonardschmidt Exp $
 #
 
 PKGNAME=	pornview-0.2
@@ -20,6 +20,7 @@ PLIST_SRC=		${.CURDIR}/../../wip/pornview/PLIST
 
 GNU_CONFIGURE=          yes
 USE_DIRS+=              xdg-1.2
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=            yes
 USE_PKGLOCALEDIR=	yes
 
