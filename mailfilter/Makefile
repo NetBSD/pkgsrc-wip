@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/06 12:22:34 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/06 12:54:09 leonardschmidt Exp $
 #
 
 DISTNAME=	mailfilter-0.7.1
@@ -15,7 +15,12 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 
 post-extract:
-	@${RM} -f ${WRKSRC}/src/getopt.h
+	${RM} -f ${WRKSRC}/src/getopt.h
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mailfilter
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/mailfilter
+	${INSTALL_DATA} ${WRKSRC}/doc/FAQ ${PREFIX}/share/doc/mailfilter
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
