@@ -1,1 +1,2 @@
 - Enable support for using optional features with pdftotext and tetex
+- Verify the portability of patch-ab
