@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/05 18:30:49 gschwarz Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/06 22:16:41 gschwarz Exp $
 
 DISTNAME=	traceroute-nanog-6.3.10
 CATEGORIES=	net
@@ -35,6 +35,9 @@ CPPFLAGS+=	-DBYTESWAP_IP_LEN
 .endif
 .if ${OPSYS} == "Linux"
 EXTRALIBS+=	-lresolv
+.endif
+.if ${OPSYS} == "Darwin"
+CPPFLAGS+=	-DBIND_8_COMPAT -DRA_SERVICE=\"nicname\"
 .endif
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
