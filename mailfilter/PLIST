@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/05 16:14:38 virtus Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/06 11:25:57 leonardschmidt Exp $
 bin/mailfilter
 man/man1/mailfilter.1
 man/man5/mailfilterex.5
 man/man5/mailfilterrc.5
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/mailfilter.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/mailfilter.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/mailfilter.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/mailfilter.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/mailfilter.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/mailfilter.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/mailfilter.mo
