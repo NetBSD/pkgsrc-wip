@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/06 00:39:05 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/06 00:40:47 minskim Exp $
 #
 
 DISTNAME=	vtwm-5.4.7
@@ -13,4 +13,5 @@ USE_IMAKE=	YES
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../audio/rplay/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
