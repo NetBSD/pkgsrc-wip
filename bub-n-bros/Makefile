@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/03 12:20:43 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/06 18:03:58 rillig Exp $
 #
 
 DISTNAME=		bub-n-bros-1.1
@@ -46,7 +46,7 @@ do-install:
 		-rwpe . ${PREFIX}/games/${PKGBASE}
 
 .include "../../lang/python/application.mk"
-.include "../../wip/py-game/buildlink3.mk"
+.include "../../devel/py-game/buildlink3.mk"
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
