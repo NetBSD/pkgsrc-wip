@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2016 2005/11/06 06:24:24 marttikuparinen Exp $
+# $Id: Makefile,v 1.2017 2005/11/06 07:07:39 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -766,6 +766,7 @@ SUBDIR+=	p5-Quota
 SUBDIR+=	p5-Return-Value 
 SUBDIR+=	p5-Sys-CpuLoad
 SUBDIR+=	p5-Template-Timer
+SUBDIR+=	p5-Term-Size
 SUBDIR+=	p5-Test-Class
 SUBDIR+=	p5-Test-Differences
 SUBDIR+=	p5-Text-ASCIITable
