@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:14 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/06 16:00:14 rillig Exp $
 #
 
 DISTNAME=		adamem
@@ -19,14 +19,21 @@ SUBST_MESSAGE.dsp=      Adjusting sound device path.
 SUBST_FILES.dsp=        dev_dsp.h
 SUBST_SED.dsp=          -e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
-.if ${MACHINE_ARCH} == "i386"
-CPPFLAGS+=		-DX86_ASM
-.endif
+SUBST_CLASSES+=		adam
+SUBST_STAGE.adam=	pre-configure
+SUBST_FILES.adam=	adam
+SUBST_SED.adam+=	-e 's|<!--ADAMEM_DIR-->|${PREFIX}/share/adamem|g'
+SUBST_SED.adam+=	-e 's|<!--BIN_DIR-->|${PREFIX}/bin|g'
+
+CPPFLAGS.i386+=		-DX86_ASM
 
 .include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN} == "little"
 CPPFLAGS+=		-DLSB_FIRST
 .endif
+
+post-extract:
+	${CP} ${FILESDIR}/adam ${WRKSRC}/
 
 do-install:
 .for EXE in adamem cvem z80dasm snapedit
@@ -38,11 +45,9 @@ do-install:
 .for ROM in OS7 EOS WP
 	${INSTALL_DATA} ${WRKSRC}/${ROM}.rom ${PREFIX}/share/adamem
 .endfor
-	${SED} 	-e "s|<!--ADAMEM_DIR-->|${PREFIX}/share/adamem|" \
-		-e "s|<!--BIN_DIR-->|${PREFIX}/bin|" \
-		${FILESDIR}/adam > ${PREFIX}/bin/adam
-	${CHMOD} 755 ${PREFIX}/bin/adam
-	${LN} -s ${PREFIX}/bin/adam ${PREFIX}/bin/coleco
+	${INSTALL_SCRIPT} ${WRKSRC}/adam ${PREFIX}/bin/adam
+	${RM} -f ${PREFIX}/bin/coleco
+	${LN} -s adam ${PREFIX}/bin/coleco
 
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
