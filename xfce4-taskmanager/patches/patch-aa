@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1 2005/11/06 16:33:43 marttikuparinen Exp $
+
+--- src/functions.c.orig	2005-11-06 16:15:54.000000000 +0200
++++ src/functions.c	2005-11-06 16:23:30.000000000 +0200
+@@ -61,10 +61,22 @@
+ 			struct task task;
+ 			struct passwd *passwdp;
+ 					
++			memset(&task, 0, sizeof(task));
+ 			if((task_file_status = fopen(task_file_name_status,"r")) != NULL)
+ 			{				
+ 				while(fgets(buffer_status, sizeof buffer_status, task_file_status) != NULL)
+ 				{
++#if defined(__NetBSD__)
++					/*
++					 * NetBSD: /proc/number/status
++					 * init 1 0 1 1 -1,-1 sldr 1131254603,930043 0,74940 0,87430 wait 0 0,0
++					 */
++					gchar dummy[255];
++
++					sscanf(buffer_status, "%s %i %i %s %s %s %s %s %s %s %s %i %s",
++					       &task.name, &task.pid, &task.ppid, &dummy, &dummy, &dummy,
++					       &dummy, &dummy, &dummy, &dummy, &dummy, &task.uid, &dummy);
++#else
+ 					sscanf(buffer_status,"Uid: %i",&task.uid);
+ 					sscanf(buffer_status,"Pid: %i",&task.pid);
+ 					sscanf(buffer_status,"PPid: %i",&task.ppid);
+@@ -74,6 +86,7 @@
+ 					// fix for freebsd with linux emo
+ 					sscanf(buffer_status,"VmRss: %i",&task.rss);
+ 					sscanf(buffer_status,"State: %c",&task.state);
++#endif
+ 				}
+ 					
+ 				passwdp = getpwuid(task.uid);
