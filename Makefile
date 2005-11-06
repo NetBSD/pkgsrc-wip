@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2015 2005/11/06 06:16:21 marttikuparinen Exp $
+# $Id: Makefile,v 1.2016 2005/11/06 06:24:24 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -764,6 +764,7 @@ SUBDIR+=	p5-Pod-Tree
 SUBDIR+=	p5-POE-Component-SNMP
 SUBDIR+=	p5-Quota
 SUBDIR+=	p5-Return-Value 
+SUBDIR+=	p5-Sys-CpuLoad
 SUBDIR+=	p5-Template-Timer
 SUBDIR+=	p5-Test-Class
 SUBDIR+=	p5-Test-Differences
