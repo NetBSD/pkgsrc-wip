@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/11/07 15:06:46 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/07 15:07:55 marttikuparinen Exp $
 
-PKGNAME=	xenconsole-0.15b1.1
 DISTNAME=	xenConsole-r0.15b1-1
+PKGNAME=	xenconsole-0.15b1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ucck/}
 
