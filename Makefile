@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2021 2005/11/06 16:36:55 leonardschmidt Exp $
+# $Id: Makefile,v 1.2022 2005/11/07 12:03:21 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -688,12 +688,9 @@ SUBDIR+=	p5-Class-Virtual
 SUBDIR+=	p5-Convert-ASN1
 SUBDIR+=	p5-Crypt-PasswdMD5
 SUBDIR+=	p5-Crypt-SmbHash
-SUBDIR+=	p5-Curses-UI
-SUBDIR+=	p5-Curses-UI-POE
 SUBDIR+=	p5-DBD-ODBC
 SUBDIR+=	p5-Data-Page
 SUBDIR+=	p5-Data-Properties
-SUBDIR+=	p5-Data-Table
 SUBDIR+=	p5-Date-Range
 SUBDIR+=	p5-DateTime-Format-Mail
 SUBDIR+=	p5-Devel-Profiler
@@ -761,12 +758,9 @@ SUBDIR+=	p5-Plucene
 SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
 SUBDIR+=	p5-PluceneSimple
 SUBDIR+=	p5-Pod-Tree
-SUBDIR+=	p5-POE-Component-SNMP
 SUBDIR+=	p5-Quota
 SUBDIR+=	p5-Return-Value 
-SUBDIR+=	p5-Sys-CpuLoad
 SUBDIR+=	p5-Template-Timer
-SUBDIR+=	p5-Term-Size
 SUBDIR+=	p5-Test-Class
 SUBDIR+=	p5-Test-Differences
 SUBDIR+=	p5-Text-ASCIITable
