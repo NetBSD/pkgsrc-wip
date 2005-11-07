@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/07 16:51:51 emil_s Exp $
+
+--- GNUmakefile.orig	2005-09-13 05:02:09.000000000 +0100
++++ GNUmakefile
+@@ -3,11 +3,11 @@ KIND=rc
+ #KIND=latest
+ GHCFLAGS= --make -Wall -fno-warn-unused-matches -cpp
+ # later: -Wall
+-PREF=/usr/local
++PREF=/usr/pkg
+ USER_FLAG =
+ GHCPKGFLAGS = 
+ #HCBASE=/tmp/ghc/bin/
+-HCBASE=/usr/bin/
++HCBASE=/usr/pkg/bin/
+ HC=$(HCBASE)ghc
+ HC_PKG=$(HCBASE)/ghc-pkg
+ # Comment out this line if your system doesn't have System.Posix.

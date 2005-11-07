@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/07 16:51:51 emil_s Exp $
+
+SHA1 (cabal-1.1.3.tar.gz) = e86f41403ea2d02b5d409195647ff97dec7557da
+RMD160 (cabal-1.1.3.tar.gz) = e361b676184d2f553cf5761c544ac4c32eefcb69
+Size (cabal-1.1.3.tar.gz) = 382024 bytes
+SHA1 (patch-aa) = d62062843fe75cfeb3289178f0d55db6aab8411e

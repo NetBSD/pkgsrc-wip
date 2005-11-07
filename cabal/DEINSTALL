@@ -1,0 +1,14 @@
+#!/bin/sh
+# $NetBSD: DEINSTALL,v 1.1.1.1 2005/11/07 16:51:51 emil_s Exp $
+
+PKGVERSION=@PKGVERSION@
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in 
+    POST-DEINSTALL )
+    ghc-pkg unregister Cabal-${PKGVERSION}
+    ;;
+esac
+exit 0

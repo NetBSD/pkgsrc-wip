@@ -1,0 +1,72 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/07 16:51:51 emil_s Exp $
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Compat/Directory.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Compat/Exception.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Compat/FilePath.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Compat/RawSystem.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Compat/ReadP.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Compiler.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Extension.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/GetOpt.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/InstalledPackageInfo.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/License.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Make.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Package.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/PackageDescription.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/ParseUtils.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/PreProcess.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/PreProcess/Unlit.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Setup.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Simple.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Simple/Build.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Simple/Configure.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Simple/GHCPackageConfig.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Simple/Install.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Simple/LocalBuildInfo.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Simple/Register.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Simple/SrcDist.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Simple/Utils.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Version.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/HSCabal-${PKGVERSION}.o
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Language/Haskell/Extension.hi
+lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/libHSCabal-${PKGVERSION}.a
+share/doc/cabal/pkg-spec-html/a818.html
+share/doc/cabal/pkg-spec-html/a825.html
+share/doc/cabal/pkg-spec-html/index.html
+share/doc/cabal/pkg-spec-html/x138.html
+share/doc/cabal/pkg-spec-html/x272.html
+share/doc/cabal/pkg-spec-html/x444.html
+share/doc/cabal/pkg-spec-html/x611.html
+share/doc/cabal/pkg-spec-html/x853.html
+share/doc/cabal/pkg-spec-html/x863.html
+share/doc/cabal/pkg-spec-html/x881.html
+share/doc/cabal/pkg-spec-html/x886.html
+share/doc/cabal/pkg-spec-html/x895.html
+share/doc/cabal/pkg-spec-html/x904.html
+share/doc/cabal/users-guide/index.html
+share/doc/cabal/users-guide/x29.html
+share/doc/cabal/users-guide/x478.html
+share/doc/cabal/users-guide/x519.html
+share/doc/cabal/users-guide/x525.html
+share/doc/cabal/users-guide/x526.html
+share/doc/cabal/users-guide/x529.html
+share/doc/cabal/users-guide/x531.html
+share/doc/cabal/users-guide/x541.html
+share/doc/cabal/users-guide/x723.html
+share/doc/cabal/users-guide/x791.html
+share/doc/cabal/users-guide/x826.html
+share/doc/cabal/users-guide/x833.html
+share/doc/cabal/users-guide/x834.html
+share/doc/cabal/users-guide/x837.html
+share/doc/cabal/users-guide/x839.html
+share/doc/cabal/users-guide/x850.html
+@dirrm share/doc/cabal/users-guide
+@dirrm share/doc/cabal/pkg-spec-html
+@dirrm share/doc/cabal
+@dirrm lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Language/Haskell
+@dirrm lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Language
+@dirrm lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Simple
+@dirrm lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/PreProcess
+@dirrm lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution/Compat
+@dirrm lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}/Distribution
+@dirrm lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}
+@dirrm lib/Cabal-${PKGVERSION}
