@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2005/11/07 14:14:16 marttikuparinen Exp $
+$NetBSD: patch-ac,v 1.2 2005/11/07 18:21:58 ykomatsu Exp $
 
---- xsnmp.pm.orig	2005-11-07 16:01:15.000000000 +0200
-+++ xsnmp.pm	2005-11-07 16:01:36.000000000 +0200
+--- xsnmp.pm.orig	2005-11-05 05:23:18.000000000 +0900
++++ xsnmp.pm
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env perl
 +#!@PERL@

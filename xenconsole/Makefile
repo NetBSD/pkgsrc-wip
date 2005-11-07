@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/07 15:07:55 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/07 18:21:58 ykomatsu Exp $
 
 DISTNAME=	xenConsole-r0.15b1-1
 PKGNAME=	xenconsole-0.15b1.1
@@ -29,6 +29,10 @@ SUBST_FILES.xenconsole=		xcon.pl xen_list.pm xsnmp.pm
 SUBST_SED.xenconsole=		-e "s,@PERL@,${PERL5},g"
 SUBST_SED.xenconsole+=		-e "s,@PREFIX@,${PREFIX},g"
 
+USE_PKGINSTALL=		yes
+EGDIR=			${PREFIX}/share/examples/xenconsole
+CONF_FILES=		${EGDIR}/xcon.ini ${PKG_SYSCONFDIR}/xcon.ini
+
 do-build:
 	${SED} -e "s,@PREFIX@,${PREFIX},g" \
 		< ${FILESDIR}/xcon.sh > ${WRKDIR}/xcon
@@ -39,9 +43,8 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/xcon.pl ${PREFIX}/share/xenconsole/xcon
 
 	# Configuration file
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xenconsole
-	${INSTALL_DATA} ${WRKSRC}/sample-inifile \
-		${PREFIX}/share/examples/xenconsole/xcon.ini
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/sample-inifile ${EGDIR}/xcon.ini
 
 	# Documentation
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xenconsole

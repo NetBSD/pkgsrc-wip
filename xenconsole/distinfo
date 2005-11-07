@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2005/11/07 14:14:16 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.3 2005/11/07 18:21:58 ykomatsu Exp $
 
 SHA1 (xenConsole-r0.15b1-1.tar.gz) = 7f8cbd97d24fdb7e7c9bb9a0e8af69c01bb69f3a
 RMD160 (xenConsole-r0.15b1-1.tar.gz) = 88959d0a564f1355d09d49e76000ea6aad27f34f
 Size (xenConsole-r0.15b1-1.tar.gz) = 36083 bytes
-SHA1 (patch-aa) = 03fb3e7d778d7dc7042991296c94def8d064f4e6
-SHA1 (patch-ab) = 5cc9ff11c41dc90445045c5d1f7083cc13f94383
-SHA1 (patch-ac) = c4a7006fd40f1329ccdec416f34a08b452b6edfe
+SHA1 (patch-aa) = 7d68f78f0c2977d03f0e239041e97f4c40702b92
+SHA1 (patch-ab) = 69aaa2c6bdd5b80202d97890c03df2134a1244b3
+SHA1 (patch-ac) = b4e3eb61e153d344e3790a0db9e6f56634a252b3

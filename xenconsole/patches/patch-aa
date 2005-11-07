@@ -1,10 +1,19 @@
-$NetBSD: patch-aa,v 1.1 2005/11/07 14:14:16 marttikuparinen Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/07 18:21:58 ykomatsu Exp $
 
---- xcon.pl.orig	2005-11-07 16:01:07.000000000 +0200
-+++ xcon.pl	2005-11-07 16:01:33.000000000 +0200
+--- xcon.pl.orig	2005-11-05 05:23:18.000000000 +0900
++++ xcon.pl
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env perl
 +#!@PERL@
  # vim:aw:
  # 
  # xcon.pl - xenConsole main executable
+@@ -561,7 +561,7 @@ sub read_config {
+    foreach my $cfn (
+                      './inifile.xcon',
+                      $ENV{HOME} . '/.xcon.ini',
+-                     '/etc/xcon.ini',
++                     '@PREFIX@/etc/xcon.ini',
+                    ) {
+       if (-r $cfn) {
+          conmsg('sys', "Use configuration from $cfn");

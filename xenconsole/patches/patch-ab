@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2005/11/07 14:14:16 marttikuparinen Exp $
+$NetBSD: patch-ab,v 1.2 2005/11/07 18:21:58 ykomatsu Exp $
 
---- xen_list.pm.orig	2005-11-07 16:01:55.000000000 +0200
-+++ xen_list.pm	2005-11-07 16:02:16.000000000 +0200
-@@ -59,7 +59,7 @@
+--- xen_list.pm.orig	2005-11-05 05:23:18.000000000 +0900
++++ xen_list.pm
+@@ -59,7 +59,7 @@ our @ISA = qw( gothix::oobase );
  
  # --- Globals -------------------------------------------------------------
      
