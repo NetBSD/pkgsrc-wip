@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/07 11:52:47 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/07 14:14:16 marttikuparinen Exp $
 
 PKGNAME=	xenconsole-0.15b1.1
 DISTNAME=	xenConsole-r0.15b1-1
@@ -23,6 +23,13 @@ DEPENDS+=	p5-POE-Component-SNMP>=0.93:../../net/p5-POE-Component-SNMP
 DEPENDS+=	p5-Sys-CpuLoad>=0.03:../../sysutils/p5-Sys-CpuLoad
 DEPENDS+=	p5-Term-Size>=0.2:../../devel/p5-Term-Size
 DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
+
+SUBST_CLASSES+=			xenconsole
+SUBST_STAGE.xenconsole=		pre-configure
+SUBST_MESSAGE.xenconsole=	"Fixing paths."
+SUBST_FILES.xenconsole=		xcon.pl xen_list.pm xsnmp.pm
+SUBST_SED.xenconsole=		-e "s,@PERL@,${PERL5},g"
+SUBST_SED.xenconsole+=		-e "s,@PREFIX@,${PREFIX},g"
 
 do-install:
 	@echo ""

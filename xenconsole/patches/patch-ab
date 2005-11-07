@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/11/07 14:14:16 marttikuparinen Exp $
+
+--- xen_list.pm.orig	2005-11-07 16:01:55.000000000 +0200
++++ xen_list.pm	2005-11-07 16:02:16.000000000 +0200
+@@ -59,7 +59,7 @@
+ 
+ # --- Globals -------------------------------------------------------------
+     
+-our $pn_xen_xm = '/usr/sbin/xm';
++our $pn_xen_xm = '@PREFIX@/sbin/xm';
+ my $pn_xm_list = $pn_xen_xm . ' list|';
+ my $pn_xm_info = $pn_xen_xm . ' info|';
+ 

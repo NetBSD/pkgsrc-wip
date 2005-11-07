@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1 2005/11/07 14:14:16 marttikuparinen Exp $
+
+--- xsnmp.pm.orig	2005-11-07 16:01:15.000000000 +0200
++++ xsnmp.pm	2005-11-07 16:01:36.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env perl
++#!@PERL@
+ # vim:aw:
+ # 
+ # xcon.pl - xenConsole main executable
