@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/04 10:23:23 obache Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/07 13:09:37 obache Exp $
 #
 
 .include "../../wip/qdbm/Makefile.common"
 
 PKGNAME=	p5-qdbm-1.0.0.${QDBM_VERSION}
 CATEGORIES=	databases perl5
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qdbm/}
 
 MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://qdbm.sourceforge.net/
