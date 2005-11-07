@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2005/11/04 10:16:14 obache Exp $
+$NetBSD: distinfo,v 1.4 2005/11/07 13:01:57 obache Exp $
 
 SHA1 (qdbm-1.8.33.tar.gz) = cac04ceb3b10b024cd3d34af4984643247e54141
 RMD160 (qdbm-1.8.33.tar.gz) = 28f74519675ed711132e8d0556b0520c56abef4c
@@ -7,5 +7,5 @@ SHA1 (patch-aa) = 4e9cc93351f577c33663065fcb8e8919bd1a873e
 SHA1 (patch-ab) = cfd59f30dc058766357461ca3265748c52665fd6
 SHA1 (patch-ac) = 31164f476b2e092b2a2664e2599a87e340550f6d
 SHA1 (patch-ad) = 1ee5fc49f49435c3df06b855d76c6cc1e4f89621
-SHA1 (patch-ae) = 177a6635727a0fd42d23c96b9c19e6cdc3ccdb59
+SHA1 (patch-ae) = 06543315d0c9350b024a10cd4747107626de3526
 SHA1 (patch-af) = 7d0abc9b93ff36ad2474712b9b8baf754a8053aa
