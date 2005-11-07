@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/04 10:21:12 obache Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/07 13:04:14 obache Exp $
 #
 
 .include "../../wip/qdbm/Makefile.common"
 
 PKGNAME=	qdbm-plus-1.0.0.${QDBM_VERSION}
 CATEGORIES=	databases devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qdbm/}
 
 MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://qdbm.sourceforge.net/
@@ -17,6 +16,7 @@ CONFIGURE_DIRS=	${MY_SUBDIR}
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c++
+TEST_TARGET=            check
 
 .include "../../databases/qdbm/buildlink3.mk"
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"
