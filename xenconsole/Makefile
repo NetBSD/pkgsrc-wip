@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/06 07:31:32 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/07 11:52:47 marttikuparinen Exp $
 
 PKGNAME=	xenconsole-0.15b1.1
 DISTNAME=	xenConsole-r0.15b1-1
@@ -14,14 +14,14 @@ NO_BUILD=	YES
 WRKSRC=		${WRKDIR}/xenConsole
 
 DEPENDS+=	p5-Config-IniFiles>=2.38:../../devel/p5-Config-IniFiles
-DEPENDS+=	p5-Curses-UI>=0.95:../../wip/p5-Curses-UI
-DEPENDS+=	p5-Curses-UI-POE>=0.02801:../../wip/p5-Curses-UI-POE
-DEPENDS+=	p5-Data-Table>=1.43:../../wip/p5-Data-Table
+DEPENDS+=	p5-Curses-UI>=0.95:../../devel/p5-Curses-UI
+DEPENDS+=	p5-Curses-UI-POE>=0.02801:../../devel/p5-Curses-UI-POE
+DEPENDS+=	p5-Data-Table>=1.43:../../databases/p5-Data-Table
 DEPENDS+=	p5-Net-SNMP>=5.0.1:../../net/p5-Net-SNMP
 DEPENDS+=	p5-POE>=0.3101:../../devel/p5-POE
-DEPENDS+=	p5-POE-Component-SNMP>=0.93:../../wip/p5-POE-Component-SNMP
-DEPENDS+=	p5-Sys-CpuLoad>=0.03:../../wip/p5-Sys-CpuLoad
-DEPENDS+=	p5-Term-Size>=0.2:../../wip/p5-Term-Size
+DEPENDS+=	p5-POE-Component-SNMP>=0.93:../../net/p5-POE-Component-SNMP
+DEPENDS+=	p5-Sys-CpuLoad>=0.03:../../sysutils/p5-Sys-CpuLoad
+DEPENDS+=	p5-Term-Size>=0.2:../../devel/p5-Term-Size
 DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
 
 do-install:
