@@ -1,22 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/05 23:28:40 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/08 21:17:32 leonardschmidt Exp $
 bin/highlight
 man/man1/highlight.1
-share/highlight/doc/AUTHORS
-share/highlight/doc/COPYING
-share/highlight/doc/ChangeLog
-share/highlight/doc/INSTALL
-share/highlight/doc/README
-share/highlight/doc/README_DE
-share/highlight/doc/README_INDENT
-share/highlight/doc/README_SWIG
-share/highlight/etc/extensions.conf
-share/highlight/etc/scriptre.conf
-share/highlight/examples/cgi/perl/highlight.cgi
-share/highlight/examples/cgi/php/SyntaxHighlighter.php
-share/highlight/examples/swig/highlight.i
-share/highlight/examples/swig/makefile
-share/highlight/examples/swig/testmod.pl
-share/highlight/examples/swig/testmod.py
+share/doc/highlight/AUTHORS
+share/doc/highlight/COPYING
+share/doc/highlight/ChangeLog
+share/doc/highlight/INSTALL
+share/doc/highlight/README
+share/doc/highlight/README_DE
+share/doc/highlight/README_INDENT
+share/doc/highlight/README_SWIG
+share/doc/highlight/examples/cgi/perl/highlight.cgi
+share/doc/highlight/examples/cgi/php/SyntaxHighlighter.php
+share/doc/highlight/examples/swig/highlight.i
+share/doc/highlight/examples/swig/makefile
+share/doc/highlight/examples/swig/testmod.pl
+share/doc/highlight/examples/swig/testmod.py
+share/examples/highlight/extensions.conf
+share/examples/highlight/scriptre.conf
 share/highlight/helpmsg/br.help
 share/highlight/helpmsg/cs.help
 share/highlight/helpmsg/de.help
@@ -184,11 +184,11 @@ share/highlight/themes/zellner.style
 @dirrm share/highlight/langDefs
 @dirrm share/highlight/indentSchemes
 @dirrm share/highlight/helpmsg
-@dirrm share/highlight/examples/swig
-@dirrm share/highlight/examples/cgi/php
-@dirrm share/highlight/examples/cgi/perl
-@dirrm share/highlight/examples/cgi
-@dirrm share/highlight/examples
-@dirrm share/highlight/etc
-@dirrm share/highlight/doc
 @dirrm share/highlight
+@dirrm share/examples/highlight
+@dirrm share/doc/highlight/examples/swig
+@dirrm share/doc/highlight/examples/cgi/php
+@dirrm share/doc/highlight/examples/cgi/perl
+@dirrm share/doc/highlight/examples/cgi
+@dirrm share/doc/highlight/examples
+@dirrm share/doc/highlight

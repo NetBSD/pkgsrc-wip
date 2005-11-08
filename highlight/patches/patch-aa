@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/11/05 23:28:40 dhowland Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/08 21:17:32 leonardschmidt Exp $
 
---- makefile.orig	2005-10-30 08:01:02.000000000 -0500
+--- makefile.orig	2005-10-30 13:01:02.000000000 +0000
 +++ makefile
-@@ -6,23 +6,22 @@
+@@ -6,28 +6,28 @@
  DESTDIR =
  
  # Location where the highlight data files will be installed:
@@ -10,34 +10,53 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/11/05 23:28:40 dhowland Exp $
 +data_dir = ${PREFIX}/share/highlight/
  
  # Location where the highlight binary will be installed:
--#bin_dir = ${DESTDIR}/usr/local/bin/
+ #bin_dir = ${DESTDIR}/usr/local/bin/
 -bin_dir = ${DESTDIR}/usr/bin/
 +bin_dir = ${PREFIX}/bin/
  
  # Location where the highlight man page will be installed:
 -man_dir = ${DESTDIR}/usr/share/man/man1/
-+man_dir = ${PREFIX}/man/man1/
++man_dir = ${PREFIX}/${PKGMANDIR}/man1
  
  # Location where the highlight documentation will be installed:
 -doc_dir = ${DESTDIR}/usr/share/doc/highlight/
-+doc_dir = ${PREFIX}/share/highlight/doc/
++doc_dir = ${PREFIX}/share/doc/highlight/
  
  # Location where the highlight examples will be installed:
 -examples_dir = ${DESTDIR}/usr/share/doc/highlight/examples/
-+examples_dir = ${PREFIX}/share/highlight/examples/
++examples_dir = ${PREFIX}/share/doc/highlight/examples/
  
  # Location where the highlight config files will be installed:
 -conf_dir = $(DESTDIR)/etc/highlight/
-+conf_dir = ${PREFIX}/share/highlight/etc/
++conf_dir = ${PREFIX}/share/examples/highlight/
  
  # Commands:
- INSTALL_DATA=install -m644
-@@ -66,7 +65,7 @@ install:
- 	${INSTALL_DATA} ./themes/*.style ${data_dir}themes/
- 	${INSTALL_DATA} ./indentSchemes/*.indent ${data_dir}indentSchemes/
- 	${INSTALL_DATA} ./helpmsg/*.help ${data_dir}helpmsg/
--	${INSTALL_DATA} ./man/highlight.1.gz ${man_dir}
-+	${INSTALL_DATA} ./man/highlight.1 ${man_dir}
- 	${INSTALL_DATA} ./AUTHORS ${doc_dir}
- 	${INSTALL_DATA} ./README ${doc_dir}
- 	${INSTALL_DATA} ./README_DE ${doc_dir}
+-INSTALL_DATA=install -m644
+-INSTALL_PROGRAM=install -m755
+-MKDIR=mkdir -p -m 755
++INSTALL_DATA=${BSD_INSTALL_DATA}
++INSTALL_PROGRAM=${BSD_INSTALL_PROGRAM}
++MKDIR=${BSD_INSTALL_DATA_DIR}
+ RMDIR=rm -r -f
+ 
+ all:
+@@ -58,8 +58,8 @@ install:
+ 		${data_dir}langDefs \
+ 		${data_dir}indentSchemes \
+ 		${data_dir}helpmsg
+-	${MKDIR} ${man_dir}
+-	${MKDIR} ${bin_dir}
++	${BSD_INSTALL_MAN_DIR} ${man_dir}
++	${BSD_INSTALL_PROGRAM_DIR} ${bin_dir}
+ 
+ 	${INSTALL_DATA} ./langDefs/*.lang ${data_dir}langDefs/
+ 	${INSTALL_DATA} ./*.conf ${conf_dir}
+@@ -78,7 +78,7 @@ install:
+ 	${INSTALL_DATA} ./examples/swig/*.py ./examples/swig/*.pl ${examples_dir}swig
+ 	${INSTALL_DATA} ./examples/swig/*.i ./examples/swig/makefile ${examples_dir}swig
+ 	${INSTALL_DATA} ./examples/swig/README_SWIG ${doc_dir}
+-	${INSTALL_PROGRAM} ./examples/cgi/perl/highlight.cgi ${examples_dir}cgi/perl
++	${BSD_INSTALL_SCRIPT} ./examples/cgi/perl/highlight.cgi ${examples_dir}cgi/perl
+ 	${INSTALL_PROGRAM} ./highlight/highlight ${bin_dir}
+ 
+ 	@echo
