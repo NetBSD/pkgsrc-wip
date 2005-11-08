@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
+
+--- hcidump/Makefile.orig	2004-03-12 22:16:58.000000000 +0000
++++ hcidump/Makefile
+@@ -2,10 +2,10 @@
+ # $FreeBSD$
+ 
+ PROG=		hcidump
+-BINDIR=		/usr/local/bin
+-MANDIR=		/usr/local/man/man
+ MAN1=		hcidump.1
+ SRCS=		hcidump.c
++BINDIR=		${PREFIX}/bin
++MANDIR=		${PREFIX}/man
+ WARNS?=		2
+ DEBUG_FLAGS=	-g
+ CFLAGS=		-O2 -I../parser
