@@ -1,0 +1,10 @@
+This package has not been tested much, feel free to work on it (as
+with all packages containing MAINTAINER=lems@gmx.net).
+
+NetBSD 2.1.0/i386:
+
+/include -I../../intl -I../fidlib   -I/usr/X11R6/include  -pthread  -DFIDLIB_LINUX -I/usr/pkg/include -DGLX_GLXEXT_LEGACY -I/usr/include -Wall -Winline -ffast-math -I/usr/pkg/include -I/usr/pkg/include/SDL -D_REENTRANT  -O2 -I/usr/pkg/include -DGLX_GLXEXT_LEGACY -I/usr/include -c -o sound/filter.o `test -f 'sound/filter.cpp' || echo './'`sound/filter.cpp
+/var/tmp//cchH7cVa.s: Assembler messages:
+/var/tmp//cchH7cVa.s:2317: Error: no such instruction: `haddps %xmm1,%xmm1'
+/var/tmp//cchH7cVa.s:2318: Error: no such instruction: `haddps %xmm1,%xmm1'
+*** Error code 1
