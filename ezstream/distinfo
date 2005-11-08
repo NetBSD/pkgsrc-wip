@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/08 20:31:31 poppnk Exp $
+
+SHA1 (ezstream-0.2.0.tar.gz) = 55ca72c2030e96fea2ecc7c42af1034ec1bfb5da
+RMD160 (ezstream-0.2.0.tar.gz) = c90f37762676cbc2d531e3065d4b32f9aac3863a
+Size (ezstream-0.2.0.tar.gz) = 307409 bytes

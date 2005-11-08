@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/08 20:31:31 poppnk Exp $
+bin/ezstream
+share/doc/ezstream/README
+@dirrm share/doc/ezstream
