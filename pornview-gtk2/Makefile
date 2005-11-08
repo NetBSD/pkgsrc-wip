@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/11/06 17:05:21 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/08 11:23:44 leonardschmidt Exp $
 #
 
 .include "../../wip/pornview/Makefile.common"
 
-PKGNAME=		${DISTNAME:S/_0.2pre1.orig/-gtk2/}
+PKGNAME=		${DISTNAME:S/_0.2pre1.orig/-gtk2-0.2.0pre1/}
 
 COMMENT=		(GTK+ 2.0 interface)
 
