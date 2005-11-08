@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/07 18:21:58 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/08 02:01:39 ykomatsu Exp $
 
 DISTNAME=	xenConsole-r0.15b1-1
 PKGNAME=	xenconsole-0.15b1.1
@@ -25,9 +25,11 @@ DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
 SUBST_CLASSES+=			xenconsole
 SUBST_STAGE.xenconsole=		pre-configure
 SUBST_MESSAGE.xenconsole=	"Fixing paths."
-SUBST_FILES.xenconsole=		xcon.pl xen_list.pm xsnmp.pm
-SUBST_SED.xenconsole=		-e "s,@PERL@,${PERL5},g"
-SUBST_SED.xenconsole+=		-e "s,@PREFIX@,${PREFIX},g"
+SUBST_FILES.xenconsole=		xcon.pl xen_list.pm
+SUBST_SED.xenconsole=		-e "s,@PREFIX@,${PREFIX},g"
+SUBST_SED.xenconsole+=		-e "s,@LOCALBASE@,${LOCALBASE},g"
+
+REPLACE_PERL=		xcon.pl xsnmp.pm
 
 USE_PKGINSTALL=		yes
 EGDIR=			${PREFIX}/share/examples/xenconsole

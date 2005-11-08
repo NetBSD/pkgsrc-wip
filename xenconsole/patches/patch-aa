@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2005/11/07 18:21:58 ykomatsu Exp $
+$NetBSD: patch-aa,v 1.3 2005/11/08 02:01:39 ykomatsu Exp $
 
 --- xcon.pl.orig	2005-11-05 05:23:18.000000000 +0900
 +++ xcon.pl
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env perl
-+#!@PERL@
++#!/usr/bin/perl
  # vim:aw:
  # 
  # xcon.pl - xenConsole main executable
