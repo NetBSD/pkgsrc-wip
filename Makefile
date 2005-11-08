@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2025 2005/11/08 10:22:41 ghen Exp $
+# $Id: Makefile,v 1.2026 2005/11/08 14:04:26 leonardschmidt Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -109,6 +109,7 @@ SUBDIR+=	cabal
 SUBDIR+=	caml-libnum
 SUBDIR+=	caml-libunix
 SUBDIR+=	cawf
+SUBDIR+=	cb2bib
 SUBDIR+=	ccrypt
 SUBDIR+=	cdpr
 SUBDIR+=	chbg
@@ -332,6 +333,7 @@ SUBDIR+=	hasciicam
 SUBDIR+=	hdparm
 SUBDIR+=	help2man
 SUBDIR+=	heroes
+SUBDIR+=	highlight
 SUBDIR+=	hol-light
 SUBDIR+=	hping3
 SUBDIR+=	hpoj
@@ -542,6 +544,7 @@ SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	mdadm
 SUBDIR+=	mdbtools
+SUBDIR+=	mednafen
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
 SUBDIR+=	menumaker
@@ -564,6 +567,7 @@ SUBDIR+=	mixxx
 SUBDIR+=	mkdep
 SUBDIR+=	mksend
 SUBDIR+=	mnogosearch
+SUBDIR+=	moe
 SUBDIR+=	molmol
 SUBDIR+=	monkey-bubble
 SUBDIR+=	monodoc
