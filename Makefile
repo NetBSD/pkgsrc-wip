@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2027 2005/11/08 21:04:28 plunky Exp $
+# $Id: Makefile,v 1.2028 2005/11/09 11:43:14 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -271,6 +271,7 @@ SUBDIR+=	gfontview
 SUBDIR+=	gforge
 SUBDIR+=	ghostpcl
 SUBDIR+=	git
+SUBDIR+=	givaro
 SUBDIR+=	gkrellm-reminder
 SUBDIR+=	glade2-nognome
 SUBDIR+=	glibc
