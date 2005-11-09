@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.12 2005/11/01 12:54:25 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.13 2005/11/09 21:35:15 leonardschmidt Exp $
 #
 
-DISTNAME=	bmpx-0.12.2
+DISTNAME=	bmpx-0.12.3
 CATEGORIES=	audio
-MASTER_SITES=	http://download.berlios.de/bmpx/
+MASTER_SITES=	http://19.alcyone.zettai.net/downloads/0.12/	
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	lems@gmx.net
-HOMEPAGE=	http://bmpx.berlios.de/
+HOMEPAGE=	http://19.alcyone.zettai.net/
 COMMENT=	Audio player to be used with a frontend or as a daemon
 
 DISTINFO_FILE=	${.CURDIR}/../../wip/bmpx/distinfo
@@ -26,8 +26,6 @@ PKGCONFIG_OVERRIDE=	libhrel/hrel.pc.in
 
 # needs dbus >= 0.35.2
 CONFIGURE_ARGS+=	--disable-dbus
-
-MAKE_ENV+=	SED=${SED}
 
 .include "options.mk"
 
