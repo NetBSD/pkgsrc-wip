@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/15 12:50:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/09 09:23:05 jtonio Exp $
 
 DISTNAME=	# empty
 PKGNAME=	tex-foiltex-2.1.4a
@@ -10,8 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.tex.ac.uk/tex-archive/help/Catalogue/entries/foiltex.html
 COMMENT=	LaTeX2e class for overhead transparencies
 
-DEPENDS+=	teTeX-bin>=1.0.2:../../print/teTeX-bin
-
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
@@ -20,7 +18,7 @@ EVAL_PREFIX+=	MKTEXLSR_PREFIX=mktexlsr
 LATEX_PREFIX_DEFAULT=${LOCALBASE}
 MKTEXLSR_PREFIX_DEFAULT=${LOCALBASE}
 
-STYDIR=		${PREFIX}/share/texmf/tex/latex/foiltex
+STYDIR=		${PKG_LOCALTEXMFPREFIX}/tex/latex/foiltex
 
 do-extract:
 	for f in ${DISTFILES}; do \
@@ -37,4 +35,5 @@ do-install:
 post-install:
 	@${MKTEXLSR_PREFIX}/bin/mktexlsr
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

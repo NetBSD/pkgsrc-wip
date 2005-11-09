@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/02 21:00:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/09 09:15:55 jtonio Exp $
 
 DISTNAME=	cjk-4.5.2
 PKGNAME=	cjk-latex-4.5.2
@@ -9,7 +9,6 @@ MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
 HOMEPAGE=	http://cjk.ffii.org/
 COMMENT=	The CJK (Chinese, Japanese, Korean) package for LaTeX
 
-DEPENDS+=	teTeX-bin>=2:../../print/teTeX-bin
 DEPENDS+=	ttf2pk>=1.3.1:../../fonts/ttf2pk
 
 TEXMFMAIN=	${PREFIX}/share/texmf
@@ -41,5 +40,5 @@ post-install:
 	# Update ls-R
 	@${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
-.include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

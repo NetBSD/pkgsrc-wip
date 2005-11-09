@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/18 14:38:41 peterih Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/09 09:16:42 jtonio Exp $
 #
 
 DISTNAME=		pointless-0.5
@@ -11,7 +11,6 @@ COMMENT=		Markup-language presentation tool
 
 DEPENDS+=               a2ps>=4.1:../../print/a2ps
 DEPENDS+=               gnuplot>=3.7:../../graphics/gnuplot
-DEPENDS+=               teTeX>=2.0:../../print/teTeX
 DEPENDS+=               Mesa>=6.0:../../graphics/Mesa
 DEPENDS+=               ghostscript-esp-nox11>=7.0:../../print/ghostscript-esp-nox11
 
@@ -24,4 +23,5 @@ INSTALL_TARGET=		${INSTALL} install-modules
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python22/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

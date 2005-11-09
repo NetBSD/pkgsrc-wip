@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/15 12:50:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/09 09:14:15 jtonio Exp $
 
 DISTNAME=	# empty
 PKGNAME=	PPower4-0.9.4
@@ -11,11 +11,11 @@ HOMEPAGE=	http://www-sp.iti.informatik.tu-darmstadt.de/software/ppower4/
 COMMENT=	PDF presentation post processor
 
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
-DEPENDS+=	teTeX-bin>=1.0.6:../../print/teTeX-bin
 
 # This requires Java 1.2 or better
 USE_JAVA=	run
 USE_JAVA2=	YES
+LATEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
@@ -44,4 +44,5 @@ post-install:
 	@${MKTEXLSR_PREFIX}/bin/mktexlsr
 
 .include "../../mk/java-vm.mk"
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
