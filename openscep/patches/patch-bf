@@ -1,0 +1,35 @@
+$NetBSD: patch-bf,v 1.1 2005/11/09 19:50:17 aolcarton Exp $
+
+--- scepd/sceplist.c.orig	Wed Nov  9 19:22:43 2005
++++ scepd/sceplist.c
+@@ -96,10 +96,6 @@
+ /*
+  * convert ASN1 time string to a struct tm
+  */
+-extern time_t	timezone; /* compiler does not like it inside func */
+-#ifdef HAVE_ALTZONE
+-extern time_t	altzone;
+-#endif /* HAVE_ALTZONE */
+ static time_t	asn1_time_to_time(ASN1_TIME *tm) {
+ 	struct tm	rtm;
+ 	char		work[3];
+@@ -125,18 +121,9 @@
+ 	if (rtm.tm_year < 70)
+ 		rtm.tm_year += 100;
+ 
+-	/* set the time zone to GMT, as mktime uses the local time zone	*/
+-	timezone = 0;
+-#ifdef HAVE_ALTZONE
+-	altzone = 0;
+-#endif /* HAVE_ALTZONE */
+-
+ 	/* use mktime to normalize the structure and t convert to a	*/
+ 	/* time_t value							*/
+-	rt = mktime(&rtm);
+-
+-	/* reset the time zone to local settings			*/
+-	tzset();
++	rt = timegm(&rtm);
+ 
+ 	return rt;
+ }
