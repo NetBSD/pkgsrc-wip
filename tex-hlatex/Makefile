@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/10/13 21:32:56 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/09 09:31:34 jtonio Exp $
 #
 
 DISTNAME=	HLaTeX-0.991
 PKGNAME=	tex-hlatex-0.991
-WRKSRC=		${WRKDIR}/hlatex
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.bsdforum.or.kr/pub/distfiles/			\
 		${MASTER_SITE_TEX_CTAN:=fonts/korean/HLaTeX/}
@@ -13,10 +12,9 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ftp.ktug.or.kr/mirrors/HLaTeX/hlatex.html
 COMMENT=	LaTeX package to use Hangul (UHC/KSX1001)
 
-DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
-
+WRKSRC=		${WRKDIR}/hlatex
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-TEXMF=		${LOCALBASE}/share/texmf
+TEXMF=		${PKG_TEXMFPREFIX}
 
 # default fonts.
 HLATEX_FONTS_BASE=	uhc-myoungjo.tar.gz \
@@ -113,4 +111,5 @@ do-install:
 	# Part 5: rehash
 	${PREFIX}/bin/texhash
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
