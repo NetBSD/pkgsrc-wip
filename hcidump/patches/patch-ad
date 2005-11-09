@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
+$NetBSD: patch-ad,v 1.2 2005/11/09 19:00:27 plunky Exp $
 
 --- parser/Makefile.orig	2004-03-12 22:16:59.000000000 +0000
 +++ parser/Makefile
-@@ -2,13 +2,13 @@
+@@ -2,13 +2,14 @@
  # $FreeBSD$
  
  LIB=		parser
@@ -14,6 +14,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
  WARNS?=		2
  DEBUG_FLAGS=	-g
  CFLAGS=		-O2
++CPPFLAGS+=	-I..
 +NOLINT=		1
  
  NOPROFILE=	1
