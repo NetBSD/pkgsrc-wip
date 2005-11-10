@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/10 01:59:59 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/10 03:12:56 jeremy-c-reed Exp $
 
 DISTNAME=	xorg-server-0.99.2
 CATEGORIES=	x11
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 COMMENT=	Xorg X11 Server from modular X.org X11
 
 GNU_CONFIGURE=	YES
+PKGCONFIG_OVERRIDE+=	xorg-server.pc.in
 USE_TOOLS+=	pkg-config
 
 #.include "../../devel/zlib/buildlink3.mk"
@@ -24,6 +25,9 @@ USE_TOOLS+=	pkg-config
 .include "../../wip/libXfont/buildlink3.mk"
 .include "../../wip/randrproto/buildlink3.mk"
 .include "../../wip/renderproto/buildlink3.mk"
+.include "../../wip/resourceproto/buildlink3.mk"
+.include "../../wip/scrnsaverproto/buildlink3.mk"
+.include "../../wip/videoproto/buildlink3.mk"
 .include "../../wip/xcmiscproto/buildlink3.mk"
 .include "../../wip/xextproto/buildlink3.mk"
 .include "../../wip/xf86bigfontproto/buildlink3.mk"
@@ -35,6 +39,6 @@ USE_TOOLS+=	pkg-config
 
 # xf86dgaproto xf86rushproto panoramixproto
 
-# scrnsaverproto resourceproto videoproto compositeproto recordproto xineramaproto xkbfile
+# compositeproto recordproto xineramaproto xkbfile
 
 .include "../../mk/bsd.pkg.mk"
