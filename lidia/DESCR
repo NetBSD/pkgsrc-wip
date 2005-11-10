@@ -1,0 +1,4 @@
+LiDIA is a C++ library for computational number theory which provides
+a collection of highly optimized implementations of various multiprecision
+data types and time-intensive algorithms. LiDIA is developed by the LiDIA
+Group at the Darmstadt University of Technology.
