@@ -1,0 +1,20 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/10 01:38:01 jeremy-c-reed Exp $
+
+BUILDLINK_DEPMETHOD.randrproto?=	build
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+RANDRPROTO_BUILDLINK3_MK:=	${RANDRPROTO_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	randrproto
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nrandrproto}
+BUILDLINK_PACKAGES+=	randrproto
+
+.if !empty(RANDRPROTO_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.randrproto+=	randrproto>=1.1.1
+BUILDLINK_PKGSRCDIR.randrproto?=	../../wip/randrproto
+.endif	# RANDRPROTO_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
