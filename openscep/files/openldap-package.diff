@@ -1,11 +1,46 @@
+Index: MESSAGE
+===================================================================
+RCS file: MESSAGE
+diff -N MESSAGE
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ MESSAGE	9 Nov 2005 22:12:02 -0000	1.1
+@@ -0,0 +1,21 @@
++===========================================================================
++$NetBSD: openldap-package.diff,v 1.2 2005/11/10 00:16:01 aolcarton Exp $
++
++ * Before starting the OpenLDAP server slapd, you must either make 
++   ${VARBASE}/openldap, or else set slapd_chrootdir in /etc/rc.conf to a 
++   chroot jail for slapd.  I suggest the chroot jail.
++
++ * You should set the rootdn password in ${PKG_SYSCONFDIR}/slapd.conf 
++   before starting slapd.
++
++ * slapd listens by default on a Unix-domain socket.  To listen on all 
++   interfaces, add 
++
++	slapd_flags="-h ldapi:/// -h ldap:///"
++
++   to /etc/rc.conf
++
++ * slapd logs diagnostics to syslog with priority LOG_DEBUG, so you may 
++   have to edit /etc/syslog.conf to see its error messages.
++
++===========================================================================
 Index: Makefile
 ===================================================================
 RCS file: /scratch/cvsroot/netbsd/pkgsrc/databases/openldap/Makefile,v
 retrieving revision 1.1.1.10
-diff -u -r1.1.1.10 Makefile
+retrieving revision 1.3
+diff -u -r1.1.1.10 -r1.3
 --- Makefile	29 Aug 2005 20:04:10 -0000	1.1.1.10
-+++ Makefile	1 Nov 2005 22:35:27 -0000
-@@ -20,10 +20,19 @@
++++ Makefile	9 Nov 2005 22:18:04 -0000	1.3
+@@ -15,23 +15,41 @@
+ 
+ PKG_INSTALLATION_TYPES=	overwrite pkgviews
+ 
++USE_TOOLS+=		gtar
+ USE_LIBTOOL=		yes
+ GNU_CONFIGURE=		yes
  TEST_TARGET=		test
  
  MAKE_ENV+=		LIBMODE=${LIBMODE}
@@ -26,7 +61,14 @@ diff -u -r1.1.1.10 Makefile
  
  .include "../../mk/bsd.prefs.mk"
  .include "options.mk"
-@@ -32,6 +41,8 @@
+ 
++.if ${OPSYS} == "FreeBSD"
++FILES_SUBST+=		FREEBSD_PWDMKDB_ETC=/etc
++.else
++FILES_SUBST+=		FREEBSD_PWDMKDB_ETC=
++.endif
++
+ CPPFLAGS.Darwin+=	-DBIND_8_COMPAT
  
  CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
  CONFIGURE_ARGS+=	--localstatedir=${OPENLDAP_VARDIR:Q}
@@ -35,7 +77,7 @@ diff -u -r1.1.1.10 Makefile
  CONFIGURE_ARGS+=	--enable-dynamic   # link servers against shared libs
  CONFIGURE_ARGS+=	--with-tls=openssl
  
-@@ -53,16 +64,13 @@
+@@ -53,16 +71,13 @@
  .endfor
  .undef _mod_
  
@@ -55,7 +97,7 @@ diff -u -r1.1.1.10 Makefile
  
  CNFS=			ldap.conf ${CNFS_SCHEMAS_cmd:sh}
  CNFS_SCHEMAS_cmd=	${SED} -ne "/\.schema$$/{ s,share/examples/openldap/,,; p; }" ${PKGDIR}/PLIST
-@@ -79,6 +87,20 @@
+@@ -79,6 +94,20 @@
  .endfor
  RCD_SCRIPTS=		slapd
  
@@ -80,9 +122,10 @@ Index: PLIST
 ===================================================================
 RCS file: /scratch/cvsroot/netbsd/pkgsrc/databases/openldap/PLIST,v
 retrieving revision 1.1.1.9
-diff -u -r1.1.1.9 PLIST
+retrieving revision 1.2
+diff -u -r1.1.1.9 -r1.2
 --- PLIST	29 Aug 2005 20:04:10 -0000	1.1.1.9
-+++ PLIST	1 Nov 2005 22:36:54 -0000
++++ PLIST	9 Nov 2005 22:12:02 -0000	1.2
 @@ -233,8 +233,6 @@
  share/examples/openldap/schema/nis.schema
  share/examples/openldap/schema/openldap.schema
@@ -104,9 +147,10 @@ Index: distinfo
 ===================================================================
 RCS file: /scratch/cvsroot/netbsd/pkgsrc/databases/openldap/distinfo,v
 retrieving revision 1.1.1.8
-diff -u -r1.1.1.8 distinfo
+retrieving revision 1.2
+diff -u -r1.1.1.8 -r1.2
 --- distinfo	29 Aug 2005 20:04:10 -0000	1.1.1.8
-+++ distinfo	1 Nov 2005 23:24:05 -0000
++++ distinfo	9 Nov 2005 22:12:02 -0000	1.2
 @@ -5,10 +5,13 @@
  Size (openldap-2.2.27.tgz) = 2628140 bytes
  SHA1 (patch-ac) = 473ad88f580ef60d520647033901d8070382ba11
@@ -128,9 +172,10 @@ Index: files/slapd.sh
 ===================================================================
 RCS file: /scratch/cvsroot/netbsd/pkgsrc/databases/openldap/files/slapd.sh,v
 retrieving revision 1.1.1.4
-diff -u -r1.1.1.4 slapd.sh
+retrieving revision 1.3
+diff -u -r1.1.1.4 -r1.3
 --- files/slapd.sh	16 Aug 2004 00:20:04 -0000	1.1.1.4
-+++ files/slapd.sh	1 Nov 2005 22:37:27 -0000
++++ files/slapd.sh	9 Nov 2005 22:18:04 -0000	1.3
 @@ -6,20 +6,136 @@
  #
  # PROVIDE: slapd
@@ -232,7 +277,7 @@ diff -u -r1.1.1.4 slapd.sh
 +		fi
 +		@MV@ "@OPENLDAP_ETCDIR@/${name}.conf" \
 +		   "${slapd_chrootdir}/etc/${name}.conf"
-+		@CHOWN@ @ROOT_USER@.@OPENLDAP_GROUP@ "${slapd_chrootdir}/etc/${name}.conf"
++		@CHOWN@ @ROOT_USER@:@OPENLDAP_GROUP@ "${slapd_chrootdir}/etc/${name}.conf"
 +		@CHMOD@ 640 "${slapd_chrootdir}/etc/${name}.conf"
 +	fi
 +	@LN@ -fs "${slapd_chrootdir}/etc/${name}.conf" \
@@ -243,7 +288,7 @@ diff -u -r1.1.1.4 slapd.sh
 +	@EGREP@ "^(@ROOT_USER@|@OPENLDAP_USER@):" /etc/master.passwd | \
 +		@SED@ 's/^\([^:]*\):[^:]*:/\1:*:/' > \
 +		"${slapd_chrootdir}/etc/t0"
-+	pwd_mkdb -p -d "${slapd_chrootdir}" "${slapd_chrootdir}/etc/t0"
++	pwd_mkdb -p -d "${slapd_chrootdir}@FREEBSD_PWDMKDB_ETC@" "${slapd_chrootdir}/etc/t0"
 +
 +	#	Change run_rc_commands()'s internal copy of $slapd_flags
 +	#
@@ -252,7 +297,7 @@ diff -u -r1.1.1.4 slapd.sh
 +
 +    for t in openldap-data run; do
 +	@MKDIR@ -p "${slapd_chrootdir}/var/openldap/${t}"
-+	@CHOWN@ @OPENLDAP_USER@.@OPENLDAP_GROUP@ "${slapd_chrootdir}/var/openldap/${t}"
++	@CHOWN@ @OPENLDAP_USER@:@OPENLDAP_GROUP@ "${slapd_chrootdir}/var/openldap/${t}"
 +    done
 +    @CHMOD@ 700 "${slapd_chrootdir}/var/openldap/openldap-data"
 +    @CHMOD@ 775 "${slapd_chrootdir}/var/openldap/run"
@@ -281,12 +326,13 @@ Index: patches/patch-af
 ===================================================================
 RCS file: /scratch/cvsroot/netbsd/pkgsrc/databases/openldap/patches/patch-af,v
 retrieving revision 1.1.1.4
-diff -u -r1.1.1.4 patch-af
+retrieving revision 1.2
+diff -u -r1.1.1.4 -r1.2
 --- patches/patch-af	29 Aug 2005 20:04:10 -0000	1.1.1.4
-+++ patches/patch-af	1 Nov 2005 22:46:36 -0000
++++ patches/patch-af	9 Nov 2005 22:12:02 -0000	1.2
 @@ -1,8 +1,8 @@
--$NetBSD: openldap-package.diff,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
-+$NetBSD: openldap-package.diff,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+-$NetBSD: openldap-package.diff,v 1.2 2005/11/10 00:16:01 aolcarton Exp $
++$NetBSD: openldap-package.diff,v 1.2 2005/11/10 00:16:01 aolcarton Exp $
  
 ---- libraries/libldap/Makefile.in.orig	2005-01-20 12:01:01.000000000 -0500
 +--- libraries/libldap/Makefile.in.orig	Thu Jan  1 13:16:29 2004
@@ -316,12 +362,13 @@ Index: patches/patch-ag
 ===================================================================
 RCS file: /scratch/cvsroot/netbsd/pkgsrc/databases/openldap/patches/patch-ag,v
 retrieving revision 1.1.1.4
-diff -u -r1.1.1.4 patch-ag
+retrieving revision 1.2
+diff -u -r1.1.1.4 -r1.2
 --- patches/patch-ag	29 Aug 2005 20:04:10 -0000	1.1.1.4
-+++ patches/patch-ag	1 Nov 2005 22:48:02 -0000
++++ patches/patch-ag	9 Nov 2005 22:12:02 -0000	1.2
 @@ -1,8 +1,8 @@
--$NetBSD: openldap-package.diff,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
-+$NetBSD: openldap-package.diff,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+-$NetBSD: openldap-package.diff,v 1.2 2005/11/10 00:16:01 aolcarton Exp $
++$NetBSD: openldap-package.diff,v 1.2 2005/11/10 00:16:01 aolcarton Exp $
  
  --- servers/slapd/Makefile.in.orig	2004-07-25 18:31:04.000000000 -0400
 -+++ servers/slapd/Makefile.in
@@ -367,12 +414,13 @@ Index: patches/patch-ak
 ===================================================================
 RCS file: /scratch/cvsroot/netbsd/pkgsrc/databases/openldap/patches/patch-ak,v
 retrieving revision 1.1.1.1
-diff -u -r1.1.1.1 patch-ak
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
 --- patches/patch-ak	2 Apr 2005 21:37:16 -0000	1.1.1.1
-+++ patches/patch-ak	1 Nov 2005 22:50:32 -0000
++++ patches/patch-ak	9 Nov 2005 22:12:02 -0000	1.2
 @@ -1,8 +1,8 @@
--$NetBSD: openldap-package.diff,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
-+$NetBSD: openldap-package.diff,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+-$NetBSD: openldap-package.diff,v 1.2 2005/11/10 00:16:01 aolcarton Exp $
++$NetBSD: openldap-package.diff,v 1.2 2005/11/10 00:16:01 aolcarton Exp $
  
  --- servers/slurpd/Makefile.in.orig	2004-01-01 13:16:42.000000000 -0500
 -+++ servers/slurpd/Makefile.in
@@ -399,9 +447,9 @@ Index: patches/patch-la
 RCS file: patches/patch-la
 diff -N patches/patch-la
 --- /dev/null	1 Jan 1970 00:00:00 -0000
-+++ patches/patch-la	11 Mar 2005 22:47:27 -0000
++++ patches/patch-la	9 Nov 2005 22:12:02 -0000	1.1
 @@ -0,0 +1,14 @@
-+$NetBSD: openldap-package.diff,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
++$NetBSD: openldap-package.diff,v 1.2 2005/11/10 00:16:01 aolcarton Exp $
 +
 +--- include/ldap_defaults.h.orig	2005-03-11 17:45:45.000000000 -0500
 ++++ include/ldap_defaults.h	2005-03-11 17:46:11.000000000 -0500
@@ -420,9 +468,9 @@ Index: patches/patch-lb
 RCS file: patches/patch-lb
 diff -N patches/patch-lb
 --- /dev/null	1 Jan 1970 00:00:00 -0000
-+++ patches/patch-lb	27 Oct 2005 22:08:42 -0000
++++ patches/patch-lb	9 Nov 2005 22:12:02 -0000	1.1
 @@ -0,0 +1,15 @@
-+$NetBSD: openldap-package.diff,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
++$NetBSD: openldap-package.diff,v 1.2 2005/11/10 00:16:01 aolcarton Exp $
 +
 +--- libraries/libldap/ldap.conf.orig	2003-05-24 22:09:37.000000000 -0400
 ++++ libraries/libldap/ldap.conf
@@ -442,9 +490,9 @@ Index: patches/patch-lc
 RCS file: patches/patch-lc
 diff -N patches/patch-lc
 --- /dev/null	1 Jan 1970 00:00:00 -0000
-+++ patches/patch-lc	27 Oct 2005 22:21:43 -0000
++++ patches/patch-lc	9 Nov 2005 22:12:02 -0000	1.1
 @@ -0,0 +1,44 @@
-+$NetBSD: openldap-package.diff,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
++$NetBSD: openldap-package.diff,v 1.2 2005/11/10 00:16:01 aolcarton Exp $
 +
 +--- servers/slapd/slapd.conf.orig	2004-06-29 17:45:50.000000000 -0400
 ++++ servers/slapd/slapd.conf
