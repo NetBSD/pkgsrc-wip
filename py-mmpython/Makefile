@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/07/27 16:28:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/10 22:34:45 dhowland Exp $
 #
 
-DISTNAME=		mmpython-0.3
+DISTNAME=		mmpython-0.4.9
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mmpython/}
