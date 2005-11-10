@@ -1,21 +1,14 @@
+fix the COMMENT
+
 This needs to have these available.
 They are probably all different distfiles.
 For examples, please see the other related wip/*proto* files.
 (Note that the buildlink3.mk files to be made are probably all
 "build" only dependencies.)
-randrproto
-renderproto
-fixesproto
-damageproto
 xf86dgaproto
-xf86miscproto
 xf86rushproto
-xf86vidmodeproto
-xf86bigfontproto
-xkbfile
-recordproto
-resourceproto
 panoramixproto
+and others
 
 Need to finish this.
 Need a PLIST.
