@@ -1,0 +1,20 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/10 03:10:13 jeremy-c-reed Exp $
+
+BUILDLINK_DEPMETHOD.videoproto?=	build
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+VIDEOPROTO_BUILDLINK3_MK:=	${VIDEOPROTO_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	videoproto
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nvideoproto}
+BUILDLINK_PACKAGES+=	videoproto
+
+.if !empty(VIDEOPROTO_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.videoproto+=	videoproto>=2.2.1
+BUILDLINK_PKGSRCDIR.videoproto?=	../../wip/videoproto
+.endif	# VIDEOPROTO_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
