@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2005/11/10 06:00:47 dhowland Exp $
+
+--- disc/cdrommodule.c.orig	2005-11-10 00:57:23.000000000 -0500
++++ disc/cdrommodule.c
+@@ -41,7 +41,7 @@
+ #include <linux/cdrom.h>
+ #endif
+ 
+-#if defined(sun) || defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(sun) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
+ #include <sys/cdio.h>
+ #endif
+ 
+@@ -67,7 +67,7 @@
+ #define CDDB_DEFAULT_CDROM_DEVICE "/dev/cdrom"
+ #define CDDB_DEFAULT_CDROM_FLAGS 0
+ 
+-#elif defined(__OpenBSD__)
++#elif defined(__OpenBSD__) || defined(__NetBSD__)
+ 
+ #define CDDB_TOC_HEADER_STRUCT ioc_toc_header 
+ #define CDDB_STARTING_TRACK_FIELD starting_track 
