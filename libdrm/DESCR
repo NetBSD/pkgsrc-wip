@@ -1,0 +1,2 @@
+A library that provides a userspace interface to kernel DRM
+services.  No X11 libraries are needed.
