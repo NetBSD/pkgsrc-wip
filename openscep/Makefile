@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/09 19:50:17 aolcarton Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/10 19:50:42 aolcarton Exp $
 
 DISTNAME=		openscep-0.4.2
 CATEGORIES=		local
@@ -12,7 +12,7 @@ BUILD_DEPENDS+=		w3m>=0.5.1:../../www/w3m
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		automake autoconf
+USE_TOOLS+=		automake autoconf grep
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		YES
 OPENSCEP_USER?=		openscep
