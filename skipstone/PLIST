@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/10 13:07:46 ghen Exp $
+bin/skipdownload
+bin/skipstone
+bin/skipstone-bin
+share/skipstone/pixmaps/default/back.png
+share/skipstone/pixmaps/default/config.png
+share/skipstone/pixmaps/default/forward.png
+share/skipstone/pixmaps/default/home.png
+share/skipstone/pixmaps/default/logo.png
+share/skipstone/pixmaps/default/mini_folder.png
+share/skipstone/pixmaps/default/mini_link.png
+share/skipstone/pixmaps/default/reload.png
+share/skipstone/pixmaps/default/skipstone.png
+share/skipstone/pixmaps/default/stop.png
+share/skipstone/pixmaps/default/tab_loading.gif
+share/skipstone/pixmaps/default/tab_loading_alternative.gif
+share/skipstone/pixmaps/default/up.png
+@dirrm share/skipstone/pixmaps/default
+@dirrm share/skipstone/pixmaps
+@dirrm share/skipstone

@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/11/10 13:07:46 ghen Exp $
+
+To download files from the Internet, SkipStone by default uses SkipDownload
+(included in this packages), which in turn invokes wget.  For this to work,
+you  must install the net/wget package,  but since it's not strictly needed
+for SkipStone to run, it's not added as a dependency for this package.  You
+can change the download program via Settings -> Preferences -> Helper Apps.
+===========================================================================
