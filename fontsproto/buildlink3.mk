@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/10/17 18:34:12 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/11/11 22:47:34 kristerw Exp $
 
 BUILDLINK_DEPMETHOD.fontsproto?=	build
 
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	fontsproto
 
 .if !empty(FONTSPROTO_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.fontsproto+=	fontsproto>=2.0
-BUILDLINK_PKGSRCDIR.fontsproto?=	../../new/fontsproto
+BUILDLINK_PKGSRCDIR.fontsproto?=	../../wip/fontsproto
 .endif	# FONTSPROTO_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
