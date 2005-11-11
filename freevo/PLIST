@@ -1,9 +1,49 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/04 12:48:44 mpasternak Exp $
-bin/freevo
-${PKG_SYSCONFDIR}/local_config.py
+@comment $NetBSD: PLIST,v 1.3 2005/11/11 06:34:54 dhowland Exp $
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/freevo.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/freevo.po
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/freevo.po
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/freevo.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/freevo.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/freevo.po
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/freevo.po
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/freevo.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/freevo.po
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/freevo.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/freevo.po
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/freevo.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/freevo.po
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/freevo.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/freevo.po
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/freevo.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/freevo.po
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/freevo.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/freevo.po
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/freevo.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/freevo.po
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/freevo.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/freevo.po
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/freevo.mo
 ${PYSITELIB}/freevo/__init__.py
 ${PYSITELIB}/freevo/__init__.pyc
 ${PYSITELIB}/freevo/__init__.pyo
+${PYSITELIB}/freevo/animation/__init__.py
+${PYSITELIB}/freevo/animation/__init__.pyc
+${PYSITELIB}/freevo/animation/__init__.pyo
+${PYSITELIB}/freevo/animation/base.py
+${PYSITELIB}/freevo/animation/base.pyc
+${PYSITELIB}/freevo/animation/base.pyo
+${PYSITELIB}/freevo/animation/marquee.py
+${PYSITELIB}/freevo/animation/marquee.pyc
+${PYSITELIB}/freevo/animation/marquee.pyo
+${PYSITELIB}/freevo/animation/render.py
+${PYSITELIB}/freevo/animation/render.pyc
+${PYSITELIB}/freevo/animation/render.pyo
+${PYSITELIB}/freevo/animation/screensaver.py
+${PYSITELIB}/freevo/animation/screensaver.pyc
+${PYSITELIB}/freevo/animation/screensaver.pyo
+${PYSITELIB}/freevo/animation/transition.py
+${PYSITELIB}/freevo/animation/transition.pyc
+${PYSITELIB}/freevo/animation/transition.pyo
 ${PYSITELIB}/freevo/audio/__init__.py
 ${PYSITELIB}/freevo/audio/__init__.pyc
 ${PYSITELIB}/freevo/audio/__init__.pyo
@@ -28,9 +68,24 @@ ${PYSITELIB}/freevo/audio/plugins/coversearch.pyo
 ${PYSITELIB}/freevo/audio/plugins/detach.py
 ${PYSITELIB}/freevo/audio/plugins/detach.pyc
 ${PYSITELIB}/freevo/audio/plugins/detach.pyo
+${PYSITELIB}/freevo/audio/plugins/detachbar.py
+${PYSITELIB}/freevo/audio/plugins/detachbar.pyc
+${PYSITELIB}/freevo/audio/plugins/detachbar.pyo
+${PYSITELIB}/freevo/audio/plugins/fxmms.py
+${PYSITELIB}/freevo/audio/plugins/fxmms.pyc
+${PYSITELIB}/freevo/audio/plugins/fxmms.pyo
+${PYSITELIB}/freevo/audio/plugins/logger.py
+${PYSITELIB}/freevo/audio/plugins/logger.pyc
+${PYSITELIB}/freevo/audio/plugins/logger.pyo
 ${PYSITELIB}/freevo/audio/plugins/mplayer.py
 ${PYSITELIB}/freevo/audio/plugins/mplayer.pyc
 ${PYSITELIB}/freevo/audio/plugins/mplayer.pyo
+${PYSITELIB}/freevo/audio/plugins/mplayervbr.py
+${PYSITELIB}/freevo/audio/plugins/mplayervbr.pyc
+${PYSITELIB}/freevo/audio/plugins/mplayervbr.pyo
+${PYSITELIB}/freevo/audio/plugins/mplayervis.py
+${PYSITELIB}/freevo/audio/plugins/mplayervis.pyc
+${PYSITELIB}/freevo/audio/plugins/mplayervis.pyo
 ${PYSITELIB}/freevo/audio/plugins/playlist.py
 ${PYSITELIB}/freevo/audio/plugins/playlist.pyc
 ${PYSITELIB}/freevo/audio/plugins/playlist.pyo
@@ -43,15 +98,9 @@ ${PYSITELIB}/freevo/audio/plugins/radioplayer.pyo
 ${PYSITELIB}/freevo/audio/plugins/vux.py
 ${PYSITELIB}/freevo/audio/plugins/vux.pyc
 ${PYSITELIB}/freevo/audio/plugins/vux.pyo
-${PYSITELIB}/freevo/audio/plugins/webradio.py
-${PYSITELIB}/freevo/audio/plugins/webradio.pyc
-${PYSITELIB}/freevo/audio/plugins/webradio.pyo
 ${PYSITELIB}/freevo/audio/plugins/xine.py
 ${PYSITELIB}/freevo/audio/plugins/xine.pyc
 ${PYSITELIB}/freevo/audio/plugins/xine.pyo
-${PYSITELIB}/freevo/audio/xmms.py
-${PYSITELIB}/freevo/audio/xmms.pyc
-${PYSITELIB}/freevo/audio/xmms.pyo
 ${PYSITELIB}/freevo/childapp.py
 ${PYSITELIB}/freevo/childapp.pyc
 ${PYSITELIB}/freevo/childapp.pyo
@@ -64,6 +113,9 @@ ${PYSITELIB}/freevo/directory.pyo
 ${PYSITELIB}/freevo/event.py
 ${PYSITELIB}/freevo/event.pyc
 ${PYSITELIB}/freevo/event.pyo
+${PYSITELIB}/freevo/fxditem.py
+${PYSITELIB}/freevo/fxditem.pyc
+${PYSITELIB}/freevo/fxditem.pyo
 ${PYSITELIB}/freevo/games/__init__.py
 ${PYSITELIB}/freevo/games/__init__.pyc
 ${PYSITELIB}/freevo/games/__init__.pyo
@@ -88,6 +140,9 @@ ${PYSITELIB}/freevo/games/mameitem.pyo
 ${PYSITELIB}/freevo/games/snesitem.py
 ${PYSITELIB}/freevo/games/snesitem.pyc
 ${PYSITELIB}/freevo/games/snesitem.pyo
+${PYSITELIB}/freevo/games/zipped_rom.py
+${PYSITELIB}/freevo/games/zipped_rom.pyc
+${PYSITELIB}/freevo/games/zipped_rom.pyo
 ${PYSITELIB}/freevo/gui/AlertBox.py
 ${PYSITELIB}/freevo/gui/AlertBox.pyc
 ${PYSITELIB}/freevo/gui/AlertBox.pyo
@@ -109,9 +164,6 @@ ${PYSITELIB}/freevo/gui/Container.pyo
 ${PYSITELIB}/freevo/gui/GUIObject.py
 ${PYSITELIB}/freevo/gui/GUIObject.pyc
 ${PYSITELIB}/freevo/gui/GUIObject.pyo
-${PYSITELIB}/freevo/gui/Image.py
-${PYSITELIB}/freevo/gui/Image.pyc
-${PYSITELIB}/freevo/gui/Image.pyo
 ${PYSITELIB}/freevo/gui/InputBox.py
 ${PYSITELIB}/freevo/gui/InputBox.pyc
 ${PYSITELIB}/freevo/gui/InputBox.pyo
@@ -121,9 +173,6 @@ ${PYSITELIB}/freevo/gui/Label.pyo
 ${PYSITELIB}/freevo/gui/LayoutManagers.py
 ${PYSITELIB}/freevo/gui/LayoutManagers.pyc
 ${PYSITELIB}/freevo/gui/LayoutManagers.pyo
-${PYSITELIB}/freevo/gui/LetterBox.py
-${PYSITELIB}/freevo/gui/LetterBox.pyc
-${PYSITELIB}/freevo/gui/LetterBox.pyo
 ${PYSITELIB}/freevo/gui/LetterBoxGroup.py
 ${PYSITELIB}/freevo/gui/LetterBoxGroup.pyc
 ${PYSITELIB}/freevo/gui/LetterBoxGroup.pyo
@@ -139,12 +188,6 @@ ${PYSITELIB}/freevo/gui/OptionBox.pyo
 ${PYSITELIB}/freevo/gui/Panel.py
 ${PYSITELIB}/freevo/gui/Panel.pyc
 ${PYSITELIB}/freevo/gui/Panel.pyo
-${PYSITELIB}/freevo/gui/PasswordInputBox.py
-${PYSITELIB}/freevo/gui/PasswordInputBox.pyc
-${PYSITELIB}/freevo/gui/PasswordInputBox.pyo
-${PYSITELIB}/freevo/gui/PasswordLetterBox.py
-${PYSITELIB}/freevo/gui/PasswordLetterBox.pyc
-${PYSITELIB}/freevo/gui/PasswordLetterBox.pyo
 ${PYSITELIB}/freevo/gui/PopupBox.py
 ${PYSITELIB}/freevo/gui/PopupBox.pyc
 ${PYSITELIB}/freevo/gui/PopupBox.pyo
@@ -160,39 +203,24 @@ ${PYSITELIB}/freevo/gui/RegionScroller.pyo
 ${PYSITELIB}/freevo/gui/Scrollbar.py
 ${PYSITELIB}/freevo/gui/Scrollbar.pyc
 ${PYSITELIB}/freevo/gui/Scrollbar.pyo
-${PYSITELIB}/freevo/gui/VideoBox.py
-${PYSITELIB}/freevo/gui/VideoBox.pyc
-${PYSITELIB}/freevo/gui/VideoBox.pyo
-${PYSITELIB}/freevo/gui/ZIndexRenderer.py
-${PYSITELIB}/freevo/gui/ZIndexRenderer.pyc
-${PYSITELIB}/freevo/gui/ZIndexRenderer.pyo
+${PYSITELIB}/freevo/gui/Window.py
+${PYSITELIB}/freevo/gui/Window.pyc
+${PYSITELIB}/freevo/gui/Window.pyo
 ${PYSITELIB}/freevo/gui/__init__.py
 ${PYSITELIB}/freevo/gui/__init__.pyc
 ${PYSITELIB}/freevo/gui/__init__.pyo
-${PYSITELIB}/freevo/gui/debug.py
-${PYSITELIB}/freevo/gui/debug.pyc
-${PYSITELIB}/freevo/gui/debug.pyo
 ${PYSITELIB}/freevo/gui/exceptions.py
 ${PYSITELIB}/freevo/gui/exceptions.pyc
 ${PYSITELIB}/freevo/gui/exceptions.pyo
-${PYSITELIB}/freevo/gui/listboxdemo.py
-${PYSITELIB}/freevo/gui/listboxdemo.pyc
-${PYSITELIB}/freevo/gui/listboxdemo.pyo
-${PYSITELIB}/freevo/gui/optiondemo.py
-${PYSITELIB}/freevo/gui/optiondemo.pyc
-${PYSITELIB}/freevo/gui/optiondemo.pyo
-${PYSITELIB}/freevo/gui/scrolldemo.py
-${PYSITELIB}/freevo/gui/scrolldemo.pyc
-${PYSITELIB}/freevo/gui/scrolldemo.pyo
 ${PYSITELIB}/freevo/helpers/__init__.py
 ${PYSITELIB}/freevo/helpers/__init__.pyc
 ${PYSITELIB}/freevo/helpers/__init__.pyo
-${PYSITELIB}/freevo/helpers/bluetooth.py
-${PYSITELIB}/freevo/helpers/bluetooth.pyc
-${PYSITELIB}/freevo/helpers/bluetooth.pyo
 ${PYSITELIB}/freevo/helpers/cache.py
 ${PYSITELIB}/freevo/helpers/cache.pyc
 ${PYSITELIB}/freevo/helpers/cache.pyo
+${PYSITELIB}/freevo/helpers/convert_config.py
+${PYSITELIB}/freevo/helpers/convert_config.pyc
+${PYSITELIB}/freevo/helpers/convert_config.pyo
 ${PYSITELIB}/freevo/helpers/daemon.py
 ${PYSITELIB}/freevo/helpers/daemon.pyc
 ${PYSITELIB}/freevo/helpers/daemon.pyo
@@ -241,9 +269,9 @@ ${PYSITELIB}/freevo/image/imageitem.pyo
 ${PYSITELIB}/freevo/image/plugins/__init__.py
 ${PYSITELIB}/freevo/image/plugins/__init__.pyc
 ${PYSITELIB}/freevo/image/plugins/__init__.pyo
-${PYSITELIB}/freevo/image/plugins/camera.py
-${PYSITELIB}/freevo/image/plugins/camera.pyc
-${PYSITELIB}/freevo/image/plugins/camera.pyo
+${PYSITELIB}/freevo/image/plugins/apod.py
+${PYSITELIB}/freevo/image/plugins/apod.pyc
+${PYSITELIB}/freevo/image/plugins/apod.pyo
 ${PYSITELIB}/freevo/image/plugins/gphoto.py
 ${PYSITELIB}/freevo/image/plugins/gphoto.pyc
 ${PYSITELIB}/freevo/image/plugins/gphoto.pyo
@@ -259,9 +287,6 @@ ${PYSITELIB}/freevo/main.pyo
 ${PYSITELIB}/freevo/menu.py
 ${PYSITELIB}/freevo/menu.pyc
 ${PYSITELIB}/freevo/menu.pyo
-${PYSITELIB}/freevo/objectcache.py
-${PYSITELIB}/freevo/objectcache.pyc
-${PYSITELIB}/freevo/objectcache.pyo
 ${PYSITELIB}/freevo/osd.py
 ${PYSITELIB}/freevo/osd.pyc
 ${PYSITELIB}/freevo/osd.pyo
@@ -277,27 +302,27 @@ ${PYSITELIB}/freevo/plugins/__init__.pyo
 ${PYSITELIB}/freevo/plugins/autocolor.py
 ${PYSITELIB}/freevo/plugins/autocolor.pyc
 ${PYSITELIB}/freevo/plugins/autocolor.pyo
-${PYSITELIB}/freevo/plugins/base.py
-${PYSITELIB}/freevo/plugins/base.pyc
-${PYSITELIB}/freevo/plugins/base.pyo
-${PYSITELIB}/freevo/plugins/commands.py
-${PYSITELIB}/freevo/plugins/commands.pyc
-${PYSITELIB}/freevo/plugins/commands.pyo
+${PYSITELIB}/freevo/plugins/command.py
+${PYSITELIB}/freevo/plugins/command.pyc
+${PYSITELIB}/freevo/plugins/command.pyo
 ${PYSITELIB}/freevo/plugins/df.py
 ${PYSITELIB}/freevo/plugins/df.pyc
 ${PYSITELIB}/freevo/plugins/df.pyo
 ${PYSITELIB}/freevo/plugins/file_ops.py
 ${PYSITELIB}/freevo/plugins/file_ops.pyc
 ${PYSITELIB}/freevo/plugins/file_ops.pyo
+${PYSITELIB}/freevo/plugins/freevo-rendezvous.py
+${PYSITELIB}/freevo/plugins/freevo-rendezvous.pyc
+${PYSITELIB}/freevo/plugins/freevo-rendezvous.pyo
+${PYSITELIB}/freevo/plugins/freevoscreensaver.py
+${PYSITELIB}/freevo/plugins/freevoscreensaver.pyc
+${PYSITELIB}/freevo/plugins/freevoscreensaver.pyo
 ${PYSITELIB}/freevo/plugins/headlines.py
 ${PYSITELIB}/freevo/plugins/headlines.pyc
 ${PYSITELIB}/freevo/plugins/headlines.pyo
 ${PYSITELIB}/freevo/plugins/icecast.py
 ${PYSITELIB}/freevo/plugins/icecast.pyc
 ${PYSITELIB}/freevo/plugins/icecast.pyo
-${PYSITELIB}/freevo/plugins/icecastchanger.py
-${PYSITELIB}/freevo/plugins/icecastchanger.pyc
-${PYSITELIB}/freevo/plugins/icecastchanger.pyo
 ${PYSITELIB}/freevo/plugins/idlebar/MultiMail.py
 ${PYSITELIB}/freevo/plugins/idlebar/MultiMail.pyc
 ${PYSITELIB}/freevo/plugins/idlebar/MultiMail.pyo
@@ -307,6 +332,9 @@ ${PYSITELIB}/freevo/plugins/idlebar/__init__.pyo
 ${PYSITELIB}/freevo/plugins/idlebar/system.py
 ${PYSITELIB}/freevo/plugins/idlebar/system.pyc
 ${PYSITELIB}/freevo/plugins/idlebar/system.pyo
+${PYSITELIB}/freevo/plugins/idlebar/volume.py
+${PYSITELIB}/freevo/plugins/idlebar/volume.pyc
+${PYSITELIB}/freevo/plugins/idlebar/volume.pyo
 ${PYSITELIB}/freevo/plugins/joy.py
 ${PYSITELIB}/freevo/plugins/joy.pyc
 ${PYSITELIB}/freevo/plugins/joy.pyo
@@ -325,12 +353,27 @@ ${PYSITELIB}/freevo/plugins/ossmixer.pyo
 ${PYSITELIB}/freevo/plugins/rom_drives.py
 ${PYSITELIB}/freevo/plugins/rom_drives.pyc
 ${PYSITELIB}/freevo/plugins/rom_drives.pyo
+${PYSITELIB}/freevo/plugins/shoppingcart.py
+${PYSITELIB}/freevo/plugins/shoppingcart.pyc
+${PYSITELIB}/freevo/plugins/shoppingcart.pyo
+${PYSITELIB}/freevo/plugins/shutdown.py
+${PYSITELIB}/freevo/plugins/shutdown.pyc
+${PYSITELIB}/freevo/plugins/shutdown.pyo
 ${PYSITELIB}/freevo/plugins/tiny_osd.py
 ${PYSITELIB}/freevo/plugins/tiny_osd.pyc
 ${PYSITELIB}/freevo/plugins/tiny_osd.pyo
+${PYSITELIB}/freevo/plugins/tiny_xosd.py
+${PYSITELIB}/freevo/plugins/tiny_xosd.pyc
+${PYSITELIB}/freevo/plugins/tiny_xosd.pyo
 ${PYSITELIB}/freevo/plugins/usb.py
 ${PYSITELIB}/freevo/plugins/usb.pyc
 ${PYSITELIB}/freevo/plugins/usb.pyo
+${PYSITELIB}/freevo/plugins/usbstorage.py
+${PYSITELIB}/freevo/plugins/usbstorage.pyc
+${PYSITELIB}/freevo/plugins/usbstorage.pyo
+${PYSITELIB}/freevo/plugins/yac.py
+${PYSITELIB}/freevo/plugins/yac.pyc
+${PYSITELIB}/freevo/plugins/yac.pyo
 ${PYSITELIB}/freevo/rc.py
 ${PYSITELIB}/freevo/rc.pyc
 ${PYSITELIB}/freevo/rc.pyo
@@ -349,6 +392,9 @@ ${PYSITELIB}/freevo/skins/main/__init__.pyo
 ${PYSITELIB}/freevo/skins/main/area.py
 ${PYSITELIB}/freevo/skins/main/area.pyc
 ${PYSITELIB}/freevo/skins/main/area.pyo
+${PYSITELIB}/freevo/skins/main/default_areas.py
+${PYSITELIB}/freevo/skins/main/default_areas.pyc
+${PYSITELIB}/freevo/skins/main/default_areas.pyo
 ${PYSITELIB}/freevo/skins/main/info_area.py
 ${PYSITELIB}/freevo/skins/main/info_area.pyc
 ${PYSITELIB}/freevo/skins/main/info_area.pyo
@@ -358,6 +404,9 @@ ${PYSITELIB}/freevo/skins/main/listing_area.pyo
 ${PYSITELIB}/freevo/skins/main/main.py
 ${PYSITELIB}/freevo/skins/main/main.pyc
 ${PYSITELIB}/freevo/skins/main/main.pyo
+${PYSITELIB}/freevo/skins/main/screen.py
+${PYSITELIB}/freevo/skins/main/screen.pyc
+${PYSITELIB}/freevo/skins/main/screen.pyo
 ${PYSITELIB}/freevo/skins/main/skin_utils.py
 ${PYSITELIB}/freevo/skins/main/skin_utils.pyc
 ${PYSITELIB}/freevo/skins/main/skin_utils.pyo
@@ -370,6 +419,9 @@ ${PYSITELIB}/freevo/skins/main/view_area.pyo
 ${PYSITELIB}/freevo/skins/main/xml_skin.py
 ${PYSITELIB}/freevo/skins/main/xml_skin.pyc
 ${PYSITELIB}/freevo/skins/main/xml_skin.pyo
+${PYSITELIB}/freevo/skins/plugins/__init__.py
+${PYSITELIB}/freevo/skins/plugins/__init__.pyc
+${PYSITELIB}/freevo/skins/plugins/__init__.pyo
 ${PYSITELIB}/freevo/tv/__init__.py
 ${PYSITELIB}/freevo/tv/__init__.pyc
 ${PYSITELIB}/freevo/tv/__init__.pyo
@@ -400,21 +452,36 @@ ${PYSITELIB}/freevo/tv/plugins/generic_record.pyo
 ${PYSITELIB}/freevo/tv/plugins/irsend_echostar.py
 ${PYSITELIB}/freevo/tv/plugins/irsend_echostar.pyc
 ${PYSITELIB}/freevo/tv/plugins/irsend_echostar.pyo
-${PYSITELIB}/freevo/tv/plugins/ivtv_basic_tv.py
-${PYSITELIB}/freevo/tv/plugins/ivtv_basic_tv.pyc
-${PYSITELIB}/freevo/tv/plugins/ivtv_basic_tv.pyo
+${PYSITELIB}/freevo/tv/plugins/irsend_generic.py
+${PYSITELIB}/freevo/tv/plugins/irsend_generic.pyc
+${PYSITELIB}/freevo/tv/plugins/irsend_generic.pyo
 ${PYSITELIB}/freevo/tv/plugins/ivtv_record.py
 ${PYSITELIB}/freevo/tv/plugins/ivtv_record.pyc
 ${PYSITELIB}/freevo/tv/plugins/ivtv_record.pyo
+${PYSITELIB}/freevo/tv/plugins/manual_record.py
+${PYSITELIB}/freevo/tv/plugins/manual_record.pyc
+${PYSITELIB}/freevo/tv/plugins/manual_record.pyo
 ${PYSITELIB}/freevo/tv/plugins/mplayer.py
 ${PYSITELIB}/freevo/tv/plugins/mplayer.pyc
 ${PYSITELIB}/freevo/tv/plugins/mplayer.pyo
-${PYSITELIB}/freevo/tv/plugins/timeshift.py
-${PYSITELIB}/freevo/tv/plugins/timeshift.pyc
-${PYSITELIB}/freevo/tv/plugins/timeshift.pyo
+${PYSITELIB}/freevo/tv/plugins/scheduled_recordings.py
+${PYSITELIB}/freevo/tv/plugins/scheduled_recordings.pyc
+${PYSITELIB}/freevo/tv/plugins/scheduled_recordings.pyo
 ${PYSITELIB}/freevo/tv/plugins/tvtime.py
 ${PYSITELIB}/freevo/tv/plugins/tvtime.pyc
 ${PYSITELIB}/freevo/tv/plugins/tvtime.pyo
+${PYSITELIB}/freevo/tv/plugins/view_favorites.py
+${PYSITELIB}/freevo/tv/plugins/view_favorites.pyc
+${PYSITELIB}/freevo/tv/plugins/view_favorites.pyo
+${PYSITELIB}/freevo/tv/plugins/view_line_in.py
+${PYSITELIB}/freevo/tv/plugins/view_line_in.pyc
+${PYSITELIB}/freevo/tv/plugins/view_line_in.pyo
+${PYSITELIB}/freevo/tv/plugins/xawtv.py
+${PYSITELIB}/freevo/tv/plugins/xawtv.pyc
+${PYSITELIB}/freevo/tv/plugins/xawtv.pyo
+${PYSITELIB}/freevo/tv/plugins/xine.py
+${PYSITELIB}/freevo/tv/plugins/xine.pyc
+${PYSITELIB}/freevo/tv/plugins/xine.pyo
 ${PYSITELIB}/freevo/tv/program_display.py
 ${PYSITELIB}/freevo/tv/program_display.pyc
 ${PYSITELIB}/freevo/tv/program_display.pyo
@@ -439,36 +506,57 @@ ${PYSITELIB}/freevo/tv/tvmenu.pyo
 ${PYSITELIB}/freevo/tv/v4l2.py
 ${PYSITELIB}/freevo/tv/v4l2.pyc
 ${PYSITELIB}/freevo/tv/v4l2.pyo
-${PYSITELIB}/freevo/tv/view_favorites.py
-${PYSITELIB}/freevo/tv/view_favorites.pyc
-${PYSITELIB}/freevo/tv/view_favorites.pyo
 ${PYSITELIB}/freevo/tv/xmltv.py
 ${PYSITELIB}/freevo/tv/xmltv.pyc
 ${PYSITELIB}/freevo/tv/xmltv.pyo
+${PYSITELIB}/freevo/util/Rendezvous.py
+${PYSITELIB}/freevo/util/Rendezvous.pyc
+${PYSITELIB}/freevo/util/Rendezvous.pyo
 ${PYSITELIB}/freevo/util/__init__.py
 ${PYSITELIB}/freevo/util/__init__.pyc
 ${PYSITELIB}/freevo/util/__init__.pyo
 ${PYSITELIB}/freevo/util/amazon.py
 ${PYSITELIB}/freevo/util/amazon.pyc
 ${PYSITELIB}/freevo/util/amazon.pyo
+${PYSITELIB}/freevo/util/dbutil.py
+${PYSITELIB}/freevo/util/dbutil.pyc
+${PYSITELIB}/freevo/util/dbutil.pyo
 ${PYSITELIB}/freevo/util/distribution.py
 ${PYSITELIB}/freevo/util/distribution.pyc
 ${PYSITELIB}/freevo/util/distribution.pyo
 ${PYSITELIB}/freevo/util/distutils.py
 ${PYSITELIB}/freevo/util/distutils.pyc
 ${PYSITELIB}/freevo/util/distutils.pyo
+${PYSITELIB}/freevo/util/extendedmeta.py
+${PYSITELIB}/freevo/util/extendedmeta.pyc
+${PYSITELIB}/freevo/util/extendedmeta.pyo
 ${PYSITELIB}/freevo/util/fileops.py
 ${PYSITELIB}/freevo/util/fileops.pyc
 ${PYSITELIB}/freevo/util/fileops.pyo
+${PYSITELIB}/freevo/util/fxdimdb.py
+${PYSITELIB}/freevo/util/fxdimdb.pyc
+${PYSITELIB}/freevo/util/fxdimdb.pyo
+${PYSITELIB}/freevo/util/fxdparser.py
+${PYSITELIB}/freevo/util/fxdparser.pyc
+${PYSITELIB}/freevo/util/fxdparser.pyo
 ${PYSITELIB}/freevo/util/ioctl.py
 ${PYSITELIB}/freevo/util/ioctl.pyc
 ${PYSITELIB}/freevo/util/ioctl.pyo
 ${PYSITELIB}/freevo/util/lirc.py
 ${PYSITELIB}/freevo/util/lirc.pyc
 ${PYSITELIB}/freevo/util/lirc.pyo
+${PYSITELIB}/freevo/util/marmalade.py
+${PYSITELIB}/freevo/util/marmalade.pyc
+${PYSITELIB}/freevo/util/marmalade.pyo
+${PYSITELIB}/freevo/util/mediainfo.py
+${PYSITELIB}/freevo/util/mediainfo.pyc
+${PYSITELIB}/freevo/util/mediainfo.pyo
 ${PYSITELIB}/freevo/util/misc.py
 ${PYSITELIB}/freevo/util/misc.pyc
 ${PYSITELIB}/freevo/util/misc.pyo
+${PYSITELIB}/freevo/util/objectcache.py
+${PYSITELIB}/freevo/util/objectcache.pyc
+${PYSITELIB}/freevo/util/objectcache.pyo
 ${PYSITELIB}/freevo/util/popen3.py
 ${PYSITELIB}/freevo/util/popen3.pyc
 ${PYSITELIB}/freevo/util/popen3.pyo
@@ -478,6 +566,12 @@ ${PYSITELIB}/freevo/util/pymetar.pyo
 ${PYSITELIB}/freevo/util/tv_util.py
 ${PYSITELIB}/freevo/util/tv_util.pyc
 ${PYSITELIB}/freevo/util/tv_util.pyo
+${PYSITELIB}/freevo/util/vfs.py
+${PYSITELIB}/freevo/util/vfs.pyc
+${PYSITELIB}/freevo/util/vfs.pyo
+${PYSITELIB}/freevo/util/videothumb.py
+${PYSITELIB}/freevo/util/videothumb.pyc
+${PYSITELIB}/freevo/util/videothumb.pyo
 ${PYSITELIB}/freevo/version.py
 ${PYSITELIB}/freevo/version.pyc
 ${PYSITELIB}/freevo/version.pyo
@@ -487,9 +581,9 @@ ${PYSITELIB}/freevo/video/__init__.pyo
 ${PYSITELIB}/freevo/video/configure.py
 ${PYSITELIB}/freevo/video/configure.pyc
 ${PYSITELIB}/freevo/video/configure.pyo
-${PYSITELIB}/freevo/video/fxdimdb.py
-${PYSITELIB}/freevo/video/fxdimdb.pyc
-${PYSITELIB}/freevo/video/fxdimdb.pyo
+${PYSITELIB}/freevo/video/fxdhandler.py
+${PYSITELIB}/freevo/video/fxdhandler.pyc
+${PYSITELIB}/freevo/video/fxdhandler.pyo
 ${PYSITELIB}/freevo/video/plugins/__init__.py
 ${PYSITELIB}/freevo/video/plugins/__init__.pyc
 ${PYSITELIB}/freevo/video/plugins/__init__.pyo
@@ -499,12 +593,12 @@ ${PYSITELIB}/freevo/video/plugins/bmovl.pyo
 ${PYSITELIB}/freevo/video/plugins/bookmarker.py
 ${PYSITELIB}/freevo/video/plugins/bookmarker.pyc
 ${PYSITELIB}/freevo/video/plugins/bookmarker.pyo
+${PYSITELIB}/freevo/video/plugins/details.py
+${PYSITELIB}/freevo/video/plugins/details.pyc
+${PYSITELIB}/freevo/video/plugins/details.pyo
 ${PYSITELIB}/freevo/video/plugins/imdb.py
 ${PYSITELIB}/freevo/video/plugins/imdb.pyc
 ${PYSITELIB}/freevo/video/plugins/imdb.pyo
-${PYSITELIB}/freevo/video/plugins/imdb_info.py
-${PYSITELIB}/freevo/video/plugins/imdb_info.pyc
-${PYSITELIB}/freevo/video/plugins/imdb_info.pyo
 ${PYSITELIB}/freevo/video/plugins/linkbrowser.py
 ${PYSITELIB}/freevo/video/plugins/linkbrowser.pyc
 ${PYSITELIB}/freevo/video/plugins/linkbrowser.pyo
@@ -520,9 +614,6 @@ ${PYSITELIB}/freevo/video/plugins/xine.pyo
 ${PYSITELIB}/freevo/video/videoitem.py
 ${PYSITELIB}/freevo/video/videoitem.pyc
 ${PYSITELIB}/freevo/video/videoitem.pyo
-${PYSITELIB}/freevo/video/xml_parser.py
-${PYSITELIB}/freevo/video/xml_parser.pyc
-${PYSITELIB}/freevo/video/xml_parser.pyo
 ${PYSITELIB}/freevo/www/__init__.py
 ${PYSITELIB}/freevo/www/__init__.pyc
 ${PYSITELIB}/freevo/www/__init__.pyo
@@ -532,24 +623,75 @@ ${PYSITELIB}/freevo/www/wap_types.pyo
 ${PYSITELIB}/freevo/www/web_types.py
 ${PYSITELIB}/freevo/www/web_types.pyc
 ${PYSITELIB}/freevo/www/web_types.pyo
-@dirrm ${PYSITELIB}/freevo/www
-@dirrm ${PYSITELIB}/freevo/video/plugins
-@dirrm ${PYSITELIB}/freevo/video
-@dirrm ${PYSITELIB}/freevo/util
-@dirrm ${PYSITELIB}/freevo/tv/plugins
-@dirrm ${PYSITELIB}/freevo/tv
-@dirrm ${PYSITELIB}/freevo/skins/main
-@dirrm ${PYSITELIB}/freevo/skins
-@dirrm ${PYSITELIB}/freevo/plugins/idlebar
-@dirrm ${PYSITELIB}/freevo/plugins
-@dirrm ${PYSITELIB}/freevo/image/plugins
-@dirrm ${PYSITELIB}/freevo/image
-@dirrm ${PYSITELIB}/freevo/helpers
-@dirrm ${PYSITELIB}/freevo/gui
-@dirrm ${PYSITELIB}/freevo/games
-@dirrm ${PYSITELIB}/freevo/audio/plugins
-@dirrm ${PYSITELIB}/freevo/audio
-@dirrm ${PYSITELIB}/freevo
+bin/freevo
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/CREDITS
+share/doc/${PKGNAME}/ChangeLog
+share/doc/${PKGNAME}/INSTALL
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/installation/a354.html
+share/doc/${PKGNAME}/installation/c170.html
+share/doc/${PKGNAME}/installation/c19.html
+share/doc/${PKGNAME}/installation/c206.html
+share/doc/${PKGNAME}/installation/c223.html
+share/doc/${PKGNAME}/installation/c249.html
+share/doc/${PKGNAME}/installation/c303.html
+share/doc/${PKGNAME}/installation/c323.html
+share/doc/${PKGNAME}/installation/c63.html
+share/doc/${PKGNAME}/installation/index.html
+share/doc/${PKGNAME}/installation/x184.html
+share/doc/${PKGNAME}/installation/x217.html
+share/doc/${PKGNAME}/installation/x229.html
+share/doc/${PKGNAME}/installation/x234.html
+share/doc/${PKGNAME}/installation/x245.html
+share/doc/${PKGNAME}/installation/x25.html
+share/doc/${PKGNAME}/installation/x256.html
+share/doc/${PKGNAME}/installation/x263.html
+share/doc/${PKGNAME}/installation/x274.html
+share/doc/${PKGNAME}/installation/x28.html
+share/doc/${PKGNAME}/installation/x289.html
+share/doc/${PKGNAME}/installation/x32.html
+share/doc/${PKGNAME}/installation/x334.html
+share/doc/${PKGNAME}/installation/x344.html
+share/doc/${PKGNAME}/installation/x349.html
+share/doc/${PKGNAME}/installation/x364.html
+share/doc/${PKGNAME}/installation/x376.html
+share/doc/${PKGNAME}/installation/x38.html
+share/doc/${PKGNAME}/installation/x380.html
+share/doc/${PKGNAME}/installation/x386.html
+share/doc/${PKGNAME}/installation/x425.html
+share/doc/${PKGNAME}/installation/x431.html
+share/doc/${PKGNAME}/installation/x435.html
+share/doc/${PKGNAME}/installation/x439.html
+share/doc/${PKGNAME}/installation/x443.html
+share/doc/${PKGNAME}/installation/x446.html
+share/doc/${PKGNAME}/installation/x450.html
+share/doc/${PKGNAME}/installation/x59.html
+share/doc/${PKGNAME}/installation/x71.html
+share/doc/${PKGNAME}/installation/x90.html
+share/doc/${PKGNAME}/plugin_writing/c145.html
+share/doc/${PKGNAME}/plugin_writing/c223.html
+share/doc/${PKGNAME}/plugin_writing/c27.html
+share/doc/${PKGNAME}/plugin_writing/c314.html
+share/doc/${PKGNAME}/plugin_writing/c50.html
+share/doc/${PKGNAME}/plugin_writing/index.html
+share/doc/${PKGNAME}/plugin_writing/x105.html
+share/doc/${PKGNAME}/plugin_writing/x109.html
+share/doc/${PKGNAME}/plugin_writing/x153.html
+share/doc/${PKGNAME}/plugin_writing/x187.html
+share/doc/${PKGNAME}/plugin_writing/x200.html
+share/doc/${PKGNAME}/plugin_writing/x211.html
+share/doc/${PKGNAME}/plugin_writing/x219.html
+share/doc/${PKGNAME}/plugin_writing/x232.html
+share/doc/${PKGNAME}/plugin_writing/x245.html
+share/doc/${PKGNAME}/plugin_writing/x276.html
+share/doc/${PKGNAME}/plugin_writing/x301.html
+share/doc/${PKGNAME}/plugin_writing/x33.html
+share/doc/${PKGNAME}/plugin_writing/x36.html
+share/doc/${PKGNAME}/plugin_writing/x41.html
+share/doc/${PKGNAME}/plugin_writing/x55.html
+share/doc/${PKGNAME}/plugin_writing/x69.html
+share/examples/freevo/local_conf.py.example
 share/freevo/contrib/fbcon/fbset.db
 share/freevo/contrib/fbcon/mgafb
 share/freevo/fonts/Vera.ttf
@@ -563,7 +705,10 @@ share/freevo/fonts/VeraMono.ttf
 share/freevo/fonts/VeraSe.ttf
 share/freevo/fonts/VeraSeBd.ttf
 share/freevo/freevo_config.py
-share/freevo/gxine-mediamarks
+share/freevo/fxd/examples/german-news.fxd
+share/freevo/fxd/examples/playlist.fxd
+share/freevo/fxd/examples/slideshow.fxd
+share/freevo/fxd/webradio.fxd
 share/freevo/htdocs/edit_favorite.rpy
 share/freevo/htdocs/favorites.rpy
 share/freevo/htdocs/genre.rpy
@@ -575,23 +720,30 @@ share/freevo/htdocs/help/plugins.rpy
 share/freevo/htdocs/help/wiki/FxdFiles.html
 share/freevo/htdocs/help/wiki/SkinInfo.html
 share/freevo/htdocs/help/wiki/faq.html
+share/freevo/htdocs/help/wiki/recording.html
 share/freevo/htdocs/iceslistchanger.rpy
-share/freevo/htdocs/images/LeftArrow.png
-share/freevo/htdocs/images/RightArrow.png
 share/freevo/htdocs/images/attention.gif
-share/freevo/htdocs/images/headerbg.png
-share/freevo/htdocs/images/headerfreevo.png
+share/freevo/htdocs/images/bg.gif
+share/freevo/htdocs/images/freevoheader2.jpg
+share/freevo/htdocs/images/headerfreevo.jpg
 share/freevo/htdocs/images/headertxtbg.png
 share/freevo/htdocs/images/icon-info.gif
+share/freevo/htdocs/images/library/library-images.jpg
+share/freevo/htdocs/images/library/library-movies.jpg
+share/freevo/htdocs/images/library/library-music.jpg
+share/freevo/htdocs/images/library/library-tv.jpg
 share/freevo/htdocs/images/logo_200x100.png
 share/freevo/htdocs/images/moin-www.gif
 share/freevo/htdocs/images/pix.gif
-share/freevo/htdocs/images/round_left.png
-share/freevo/htdocs/images/round_right.png
 share/freevo/htdocs/images/smile.gif
+share/freevo/htdocs/images/tab/left.gif
+share/freevo/htdocs/images/tab/left_on.gif
+share/freevo/htdocs/images/tab/right.gif
+share/freevo/htdocs/images/tab/right_on.gif
 share/freevo/htdocs/index.rpy
 share/freevo/htdocs/library.rpy
 share/freevo/htdocs/manualrecord.rpy
+share/freevo/htdocs/proginfo.rpy
 share/freevo/htdocs/record.rpy
 share/freevo/htdocs/scripts/display_prog-head.js
 share/freevo/htdocs/search.rpy
@@ -611,6 +763,7 @@ share/freevo/icons/misc/clock.png
 share/freevo/icons/misc/cpu.png
 share/freevo/icons/misc/freevo_app.png
 share/freevo/icons/misc/memory.png
+share/freevo/icons/misc/osd_busy.png
 share/freevo/icons/popup/popup_alert.png
 share/freevo/icons/popup/popup_wait.png
 share/freevo/icons/popup/popup_warn.png
@@ -628,6 +781,9 @@ share/freevo/icons/status/television_active.png
 share/freevo/icons/status/television_expired.png
 share/freevo/icons/status/television_inactive.png
 share/freevo/icons/status/television_near_expired.png
+share/freevo/icons/status/volume_bar.png
+share/freevo/icons/status/volume_mute.png
+share/freevo/icons/status/volume_out.png
 share/freevo/icons/themes/AquaFusion/AquaFusion_Icons.txt
 share/freevo/icons/themes/AquaFusion/AquaFusion_Icons_LICENSE
 share/freevo/icons/themes/AquaFusion/auto.png
@@ -665,9 +821,11 @@ share/freevo/icons/themes/Noia/left.png
 share/freevo/icons/themes/Noia/mimetypes/audio.png
 share/freevo/icons/themes/Noia/mimetypes/audiocd.png
 share/freevo/icons/themes/Noia/mimetypes/cdrom.png
+share/freevo/icons/themes/Noia/mimetypes/detached_player.png
 share/freevo/icons/themes/Noia/mimetypes/dvd.png
 share/freevo/icons/themes/Noia/mimetypes/empty_cdrom.png
 share/freevo/icons/themes/Noia/mimetypes/folder.png
+share/freevo/icons/themes/Noia/mimetypes/news.png
 share/freevo/icons/themes/Noia/mimetypes/playlist.png
 share/freevo/icons/themes/Noia/mimetypes/unknown.png
 share/freevo/icons/themes/Noia/mimetypes/vcd.png
@@ -675,16 +833,32 @@ share/freevo/icons/themes/Noia/mimetypes/video.png
 share/freevo/icons/themes/Noia/mimetypes/video_quicktime.png
 share/freevo/icons/themes/Noia/mimetypes/video_real.png
 share/freevo/icons/themes/Noia/mimetypes/webradio.png
+share/freevo/icons/themes/Noia/misc/osd_busy.png
 share/freevo/icons/themes/Noia/off.png
 share/freevo/icons/themes/Noia/on.png
 share/freevo/icons/themes/Noia/right.png
 share/freevo/icons/themes/Noia/up.png
-share/freevo/icons/themes/blurr/blurr-down.png
-share/freevo/icons/themes/blurr/blurr-up.png
+share/freevo/icons/themes/blurr/down.png
 share/freevo/icons/themes/blurr/left.png
+share/freevo/icons/themes/blurr/mimetypes/audiocd.png
+share/freevo/icons/themes/blurr/mimetypes/cdrom.png
+share/freevo/icons/themes/blurr/mimetypes/empty_cdrom.png
+share/freevo/icons/themes/blurr/mimetypes/folder_image.png
+share/freevo/icons/themes/blurr/mimetypes/playlist.png
+share/freevo/icons/themes/blurr/mimetypes/playlist_image.png
+share/freevo/icons/themes/blurr/mimetypes/unknown.png
 share/freevo/icons/themes/blurr/recordinglater.png
 share/freevo/icons/themes/blurr/recordingnow.png
 share/freevo/icons/themes/blurr/right.png
+share/freevo/icons/themes/blurr/status/cd_audio.png
+share/freevo/icons/themes/blurr/status/cd_inactive.png
+share/freevo/icons/themes/blurr/status/cd_mixed.png
+share/freevo/icons/themes/blurr/status/cd_video.png
+share/freevo/icons/themes/blurr/status/newmail_active.png
+share/freevo/icons/themes/blurr/status/newmail_dimmed.png
+share/freevo/icons/themes/blurr/status/television_active.png
+share/freevo/icons/themes/blurr/status/television_inactive.png
+share/freevo/icons/themes/blurr/up.png
 share/freevo/icons/themes/tuxntosh/down.png
 share/freevo/icons/themes/tuxntosh/left.png
 share/freevo/icons/themes/tuxntosh/mainmenu/54x54/images.png
@@ -749,9 +923,24 @@ share/freevo/icons/weather/suncloud.png
 share/freevo/icons/weather/tstorms.png
 share/freevo/icons/weather/wind.png
 share/freevo/images/aubin_bg2.jpg
-share/freevo/images/barbieri/bg.png
+share/freevo/images/barbieri/bg.jpg
 share/freevo/images/blurr_naxos.jpg
 share/freevo/images/blurrback.jpg
+share/freevo/images/blurrsplash.jpg
+share/freevo/images/frame.png
+share/freevo/images/gant/chat.png
+share/freevo/images/gant/commands.png
+share/freevo/images/gant/games.png
+share/freevo/images/gant/headlines.png
+share/freevo/images/gant/image.png
+share/freevo/images/gant/logo.png
+share/freevo/images/gant/movie.png
+share/freevo/images/gant/music.png
+share/freevo/images/gant/scheduledtv.png
+share/freevo/images/gant/shutdown.png
+share/freevo/images/gant/tv.png
+share/freevo/images/gant/weather.png
+share/freevo/images/idlebar.png
 share/freevo/images/logo.png
 share/freevo/images/logo_david.png
 share/freevo/images/splashscreen-bsd.png
@@ -762,21 +951,45 @@ share/freevo/images/watermarks/music.png
 share/freevo/images/watermarks/shutdown.png
 share/freevo/images/watermarks/tv.png
 share/freevo/skins/main/README
-share/freevo/skins/main/barbieri_blue.fxd
-share/freevo/skins/main/barbieri_blue_friends.fxd
-share/freevo/skins/main/blue.fxd
-share/freevo/skins/main/blue.jpg
-share/freevo/skins/main/blue_round1.fxd
-share/freevo/skins/main/blue_round1.jpg
+share/freevo/skins/main/basic.fxd
 share/freevo/skins/main/blurr.fxd
 share/freevo/skins/main/blurr.jpg
 share/freevo/skins/main/image.fxd
 share/freevo/skins/main/info.fxd
 share/freevo/skins/main/info.jpg
 share/freevo/skins/main/noia.fxd
+share/freevo/skins/main/noia.jpg
+share/freevo/skins/plugins/video_details.fxd
+share/fxd/webradio.fxd
+@dirrm ${PYSITELIB}/freevo/www
+@dirrm ${PYSITELIB}/freevo/video/plugins
+@dirrm ${PYSITELIB}/freevo/video
+@dirrm ${PYSITELIB}/freevo/util
+@dirrm ${PYSITELIB}/freevo/tv/plugins
+@dirrm ${PYSITELIB}/freevo/tv
+@dirrm ${PYSITELIB}/freevo/skins/plugins
+@dirrm ${PYSITELIB}/freevo/skins/main
+@dirrm ${PYSITELIB}/freevo/skins
+@dirrm ${PYSITELIB}/freevo/plugins/idlebar
+@dirrm ${PYSITELIB}/freevo/plugins
+@dirrm ${PYSITELIB}/freevo/image/plugins
+@dirrm ${PYSITELIB}/freevo/image
+@dirrm ${PYSITELIB}/freevo/helpers
+@dirrm ${PYSITELIB}/freevo/gui
+@dirrm ${PYSITELIB}/freevo/games
+@dirrm ${PYSITELIB}/freevo/audio/plugins
+@dirrm ${PYSITELIB}/freevo/audio
+@dirrm ${PYSITELIB}/freevo/animation
+@dirrm ${PYSITELIB}/freevo
+@dirrm share/doc/${PKGNAME}/plugin_writing
+@dirrm share/doc/${PKGNAME}/installation
+@dirrm share/doc/${PKGNAME}
+@dirrm share/examples/freevo
+@dirrm share/freevo/skins/plugins
 @dirrm share/freevo/skins/main
 @dirrm share/freevo/skins
 @dirrm share/freevo/images/watermarks
+@dirrm share/freevo/images/gant
 @dirrm share/freevo/images/barbieri
 @dirrm share/freevo/images
 @dirrm share/freevo/icons/weather
@@ -784,7 +997,10 @@ share/freevo/skins/main/noia.fxd
 @dirrm share/freevo/icons/themes/tuxntosh/mainmenu/54x54
 @dirrm share/freevo/icons/themes/tuxntosh/mainmenu
 @dirrm share/freevo/icons/themes/tuxntosh
+@dirrm share/freevo/icons/themes/blurr/status
+@dirrm share/freevo/icons/themes/blurr/mimetypes
 @dirrm share/freevo/icons/themes/blurr
+@dirrm share/freevo/icons/themes/Noia/misc
 @dirrm share/freevo/icons/themes/Noia/mimetypes
 @dirrm share/freevo/icons/themes/Noia
 @dirrm share/freevo/icons/themes/AquaFusion/mimetypes
@@ -797,80 +1013,16 @@ share/freevo/skins/main/noia.fxd
 @dirrm share/freevo/icons
 @dirrm share/freevo/htdocs/styles
 @dirrm share/freevo/htdocs/scripts
+@dirrm share/freevo/htdocs/images/tab
+@dirrm share/freevo/htdocs/images/library
 @dirrm share/freevo/htdocs/images
 @dirrm share/freevo/htdocs/help/wiki
 @dirrm share/freevo/htdocs/help
 @dirrm share/freevo/htdocs
+@dirrm share/freevo/fxd/examples
+@dirrm share/freevo/fxd
 @dirrm share/freevo/fonts
 @dirrm share/freevo/contrib/fbcon
 @dirrm share/freevo/contrib
 @dirrm share/freevo
-share/doc/freevo-1.4.1/BUGS
-share/doc/freevo-1.4.1/COPYING
-share/doc/freevo-1.4.1/CREDITS
-share/doc/freevo-1.4.1/ChangeLog
-share/doc/freevo-1.4.1/INSTALL
-share/doc/freevo-1.4.1/README
-share/doc/freevo-1.4.1/installation/a354.html
-share/doc/freevo-1.4.1/installation/c170.html
-share/doc/freevo-1.4.1/installation/c19.html
-share/doc/freevo-1.4.1/installation/c206.html
-share/doc/freevo-1.4.1/installation/c223.html
-share/doc/freevo-1.4.1/installation/c249.html
-share/doc/freevo-1.4.1/installation/c303.html
-share/doc/freevo-1.4.1/installation/c323.html
-share/doc/freevo-1.4.1/installation/c63.html
-share/doc/freevo-1.4.1/installation/index.html
-share/doc/freevo-1.4.1/installation/x184.html
-share/doc/freevo-1.4.1/installation/x217.html
-share/doc/freevo-1.4.1/installation/x229.html
-share/doc/freevo-1.4.1/installation/x234.html
-share/doc/freevo-1.4.1/installation/x245.html
-share/doc/freevo-1.4.1/installation/x25.html
-share/doc/freevo-1.4.1/installation/x256.html
-share/doc/freevo-1.4.1/installation/x263.html
-share/doc/freevo-1.4.1/installation/x274.html
-share/doc/freevo-1.4.1/installation/x28.html
-share/doc/freevo-1.4.1/installation/x289.html
-share/doc/freevo-1.4.1/installation/x32.html
-share/doc/freevo-1.4.1/installation/x334.html
-share/doc/freevo-1.4.1/installation/x344.html
-share/doc/freevo-1.4.1/installation/x349.html
-share/doc/freevo-1.4.1/installation/x364.html
-share/doc/freevo-1.4.1/installation/x376.html
-share/doc/freevo-1.4.1/installation/x38.html
-share/doc/freevo-1.4.1/installation/x380.html
-share/doc/freevo-1.4.1/installation/x386.html
-share/doc/freevo-1.4.1/installation/x425.html
-share/doc/freevo-1.4.1/installation/x431.html
-share/doc/freevo-1.4.1/installation/x435.html
-share/doc/freevo-1.4.1/installation/x439.html
-share/doc/freevo-1.4.1/installation/x443.html
-share/doc/freevo-1.4.1/installation/x446.html
-share/doc/freevo-1.4.1/installation/x450.html
-share/doc/freevo-1.4.1/installation/x59.html
-share/doc/freevo-1.4.1/installation/x71.html
-share/doc/freevo-1.4.1/installation/x90.html
-share/doc/freevo-1.4.1/plugin_writing/c101.html
-share/doc/freevo-1.4.1/plugin_writing/c170.html
-share/doc/freevo-1.4.1/plugin_writing/c20.html
-share/doc/freevo-1.4.1/plugin_writing/c261.html
-share/doc/freevo-1.4.1/plugin_writing/c43.html
-share/doc/freevo-1.4.1/plugin_writing/index.html
-share/doc/freevo-1.4.1/plugin_writing/x109.html
-share/doc/freevo-1.4.1/plugin_writing/x143.html
-share/doc/freevo-1.4.1/plugin_writing/x155.html
-share/doc/freevo-1.4.1/plugin_writing/x166.html
-share/doc/freevo-1.4.1/plugin_writing/x179.html
-share/doc/freevo-1.4.1/plugin_writing/x192.html
-share/doc/freevo-1.4.1/plugin_writing/x223.html
-share/doc/freevo-1.4.1/plugin_writing/x248.html
-share/doc/freevo-1.4.1/plugin_writing/x26.html
-share/doc/freevo-1.4.1/plugin_writing/x29.html
-share/doc/freevo-1.4.1/plugin_writing/x34.html
-share/doc/freevo-1.4.1/plugin_writing/x49.html
-share/doc/freevo-1.4.1/plugin_writing/x63.html
-share/doc/freevo-1.4.1/plugin_writing/x97.html
-@dirrm share/doc/freevo-1.4.1/plugin_writing
-@dirrm share/doc/freevo-1.4.1/installation
-@dirrm share/doc/freevo-1.4.1
+@dirrm share/fxd

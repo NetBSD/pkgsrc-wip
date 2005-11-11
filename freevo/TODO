@@ -1,9 +1,28 @@
-$Id: TODO,v 1.5 2004/01/04 12:48:44 mpasternak Exp $
+- Did I miss anything in the PLIST ?  I'm tired, I may have forgotten
+  something.
 
-Check the fantastic PLIST twice. You can even sort it.
+- Most of the patches were removed.  Most of them simply changed the check
+  for the python version.  It works fine on my box without the patches.
+  Is that a freebsd thing?
 
-Check if my fantastic local_config.py.example -> etc/freevo/local_config.py
-is done the right way.
+  Specificly:
+  original maintainer had replaced all instances of 
+            sys.version[0:3]
+  with
+            sys.version[0:3].replace("p", ".")
+
+  However, I find that sys.version[0:3] returns a perfectly formed "2.3"
+  does the "p" show up often?
+
+- Lots of testing to do.  Dunno what is up with dotz's error, below, but
+  it may be fixed by now in FreeBSD.
+
+- I think some of freevo's device support will need fixing for netbsd.
+  (remote control, game pad, etc)
+
+
+    -- dhowland@users.sourceforge.net
+
 
 E-mail:
 	http://sourceforge.net/mail/?group_id=46652	
