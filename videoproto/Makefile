@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/10 03:10:13 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/11 23:22:12 jeremy-c-reed Exp $
 #
 
 DISTNAME=		videoproto-2.2.1
@@ -10,9 +10,9 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Video extension headers from modular X.org X11
 
-USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/videoproto.pc.in
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		# empty
 
 BUILDLINK_DEPMETHOD.libX11?=        build # uses headers
 .include "../../wip/libX11/buildlink3.mk"
