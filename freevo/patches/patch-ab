@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2005/11/11 06:34:54 dhowland Exp $
+$NetBSD: patch-ab,v 1.5 2005/11/11 06:57:04 dhowland Exp $
 
 --- src/config.py.orig	2004-08-28 13:07:42.000000000 -0400
 +++ src/config.py
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.4 2005/11/11 06:34:54 dhowland Exp $
  #
  cfgfilepath = [ '.', os.path.expanduser('~/.freevo'), '/etc/freevo',
 -                '/usr/local/etc/freevo' ]
-+                '@@PKG_SYSCONFDIR@@/freevo' ]
++                '@@PKG_SYSCONFDIR@@' ]
  
  
  #
