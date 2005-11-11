@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/31 14:45:55 obache Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/11 22:55:17 kristerw Exp $
 #
 
 DISTNAME=	swftools-0.7.0
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+= --disable-lame
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
-.include "../../wip/ming/buildlink3.mk"
+.include "../../multimedia/ming/buildlink3.mk"
 .include "../../fonts/t1lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
