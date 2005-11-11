@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.13 2005/11/09 21:35:15 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.14 2005/11/11 21:35:12 leonardschmidt Exp $
 #
 
-DISTNAME=	bmpx-0.12.3
+DISTNAME=	bmpx-0.12.4
 CATEGORIES=	audio
 MASTER_SITES=	http://19.alcyone.zettai.net/downloads/0.12/	
 EXTRACT_SUFX=	.tar.bz2
