@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/27 16:29:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/11 23:04:02 kristerw Exp $
 #
 
 DISTNAME=		visionegg-0.9.9
@@ -23,7 +23,7 @@ PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 .endif
 
 .include "../../math/py-Numeric/buildlink3.mk"
-.include "../../wip/py-game/buildlink3.mk"
+.include "../../devel/py-game/buildlink3.mk"
 .include "../../x11/py-Tk/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

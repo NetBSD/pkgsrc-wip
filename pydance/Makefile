@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:23 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/11 23:02:24 kristerw Exp $
 #
 
 DISTNAME=		pydance-1.0.2
@@ -10,7 +10,7 @@ MAINTAINER=		shattered@users.sourceforge.net
 HOMEPAGE=		http://icculus.org/pyddr/
 COMMENT=		Dance Dance Revolution, Pump It Up and similar dance machines emulator
 
-DEPENDS+=		${PYPKGPREFIX}-game>=1.6:../../wip/py-game
+DEPENDS+=		${PYPKGPREFIX}-game>=1.6:../../devel/py-game
 
 USE_PKGINSTALL=		yes
 

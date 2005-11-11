@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/10 01:40:50 blef Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/11/11 23:04:02 kristerw Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 PY_VISIONEGG_BUILDLINK3_MK:=	${PY_VISIONEGG_BUILDLINK3_MK}+
@@ -23,7 +23,7 @@ BUILDLINK_PKGSRCDIR.pyvisionegg?=	../../wip/py-visionegg
 .else
 .include "../../graphics/MesaLib/buildlink3.mk"
 .endif
-.include "../../wip/py-game/buildlink3.mk"
+.include "../../devel/py-game/buildlink3.mk"
 .include "../../x11/py-Tk/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 
