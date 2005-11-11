@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2005/11/11 06:34:54 dhowland Exp $
+$NetBSD: distinfo,v 1.9 2005/11/11 06:53:38 dhowland Exp $
 
 SHA1 (freevo-1.5.3.tar.gz) = 40623f704581ba48ce8e1a6775c7979e1a527131
 RMD160 (freevo-1.5.3.tar.gz) = 75ee5d440c035d1f0c62df91b3e2778126eea7bd
 Size (freevo-1.5.3.tar.gz) = 4378836 bytes
+SHA1 (patch-aa) = f26206473fedba193a8eac373e9338de9896ce12
 SHA1 (patch-ab) = 001d4ec0693d0eb4d4ce2910321fd343bcdb4f4c
