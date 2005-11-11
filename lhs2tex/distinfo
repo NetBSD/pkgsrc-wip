@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/11 23:58:54 emil_s Exp $
+
+SHA1 (lhs2tex-1.10pre.tar.bz2) = 1add6d4d9fb637f446ab7aa67df311ba4f777b4e
+RMD160 (lhs2tex-1.10pre.tar.bz2) = 10f14fe9aa6415ca6e8641ef3817473562e56d31
+Size (lhs2tex-1.10pre.tar.bz2) = 525904 bytes
+SHA1 (patch-aa) = 0abbc06b689eba7bcbb8c71fcd617d4c1e4e16e5
