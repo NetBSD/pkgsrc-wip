@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/10 19:50:42 aolcarton Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/11 01:43:17 aolcarton Exp $
 
 DISTNAME=		openscep-0.4.2
 CATEGORIES=		local
@@ -78,7 +78,7 @@ SETUPSH_SUBST+=		${def:Q}=${${def}:Q}
 BUILD_DEFS+=	${def}
 .endfor
 .for def in \
-	PREFIX SSLBASE CHOWN MKDIR CHMOD RM TOUCH SED PKG_SYSCONFDIR
+	PREFIX SSLBASE CHOWN MKDIR CHMOD RM TOUCH SED GREP PKG_SYSCONFDIR
 SETUPSH_SUBST+=		${def:Q}=${${def}:Q}
 .endfor
 

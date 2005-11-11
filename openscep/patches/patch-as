@@ -1,6 +1,6 @@
-$NetBSD: patch-as,v 1.2 2005/11/10 00:16:01 aolcarton Exp $
+$NetBSD: patch-as,v 1.3 2005/11/11 01:43:18 aolcarton Exp $
 
---- openssl/openscepsetup.in.orig
+--- openssl/openscepsetup.in.orig	Wed Apr  4 23:36:37 2001
 +++ openssl/openscepsetup.in
 @@ -16,40 +16,45 @@
  	esac
@@ -91,7 +91,7 @@ $NetBSD: patch-as,v 1.2 2005/11/10 00:16:01 aolcarton Exp $
  
  # make sure all the directories exist
 -for d in certs granted pending rejected newcerts revoked
-+for d in granted pending rejected revoked
++for d in granted pending rejected newcerts revoked
  do
  	if [ ! -d ${openscepdir}/${d} ]
  	then

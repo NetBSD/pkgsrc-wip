@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+$NetBSD: patch-am,v 1.2 2005/11/11 01:43:18 aolcarton Exp $
 
---- lib/scepldap.c.orig	2002-02-19 18:40:06.000000000 -0500
-+++ lib/scepldap.c
+--- scepldap.c.orig	Tue Feb 19 23:40:06 2002
++++ scepldap.c
 @@ -7,2 +7,3 @@
   */
 +#include <syslog.h>
@@ -67,7 +67,7 @@ $NetBSD: patch-am,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
 +			syslog(LOG_ERR, "%s:%d: cannot create name entry "
 +				"%s=%s\n", __FILE__, __LINE__, name, value);
  			goto err;
-@@ -182,13 +206,27 @@ err:
+@@ -182,26 +206,45 @@ err:
  int	scep_ldap_init(scep_t *scep) {
 +	int version3 = 3, rc;
 +
@@ -103,10 +103,17 @@ $NetBSD: patch-am,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
 +		goto err;
 +	}
  	/* perform a bind, if required by the configuration		*/
-@@ -199,9 +237,14 @@ int	scep_ldap_init(scep_t *scep) {
- 				__LINE__);
-+			syslog(LOG_ERR, "%s:%d: bind failed\n", __FILE__,
-+				__LINE__);
+ 	if ((scep->l.binddn) && (scep->l.bindpw)) {
+-		if (LDAP_SUCCESS != ldap_simple_bind_s(scep->l.ldap,
+-			scep->l.binddn, scep->l.bindpw)) {
+-			BIO_printf(bio_err, "%s:%d: bind failed\n", __FILE__,
+-				__LINE__);
++		if (LDAP_SUCCESS != (rc = ldap_simple_bind_s(scep->l.ldap,
++			scep->l.binddn, scep->l.bindpw))) {
++			BIO_printf(bio_err, "%s:%d: bind failed: %s\n", __FILE__,
++				__LINE__, ldap_err2string(rc));
++			syslog(LOG_ERR, "%s:%d: bind failed: %s\n", __FILE__,
++				__LINE__, ldap_err2string(rc));
  			goto err;
  		}
 -		if (debug)
@@ -378,8 +385,8 @@ $NetBSD: patch-am,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
 +			"filter '%s'\n", __FILE__, __LINE__, filter);
 +	}
  
-@@ -551,2 +746,4 @@ int	ldap_get_cert_from_issuer_and_subjec
- 			__FILE__, __LINE__);
-+		syslog(LOG_ERR, "%s:%d: cannot get cert common\n", 
+@@ -550,2 +745,4 @@ int	ldap_get_cert_from_issuer_and_subjec
+ 		BIO_printf(bio_err, "%s:%d: cannot get cert common\n", 
 +			__FILE__, __LINE__);
- 		goto err;
++		syslog(LOG_ERR, "%s:%d: cannot get cert common\n", 
+ 			__FILE__, __LINE__);
