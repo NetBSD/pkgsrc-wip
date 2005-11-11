@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/28 05:52:11 geeohgeegeeoh Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/11 22:52:27 kristerw Exp $
 #
 
 DISTNAME=	RPSL-OL-3.1.1
@@ -16,7 +16,7 @@ BUILD_DIRS=             ${WRKSRC} ${WRKSRC}/perl
 
 USE_LIBTOOL=            YES
 
-BUILD_DEPENDS+=       p5-Net-Whois-RIPE-[0-9]*:../p5-Net-Whois-RIPE
+BUILD_DEPENDS+=       p5-Net-Whois-RIPE-[0-9]*:../../wip/p5-Net-Whois-RIPE
 
 post-configure: perl5-configure
 
