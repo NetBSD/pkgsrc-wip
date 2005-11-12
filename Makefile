@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2034 2005/11/12 00:33:13 kristerw Exp $
+# $Id: Makefile,v 1.2035 2005/11/12 04:14:19 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -211,7 +211,6 @@ SUBDIR+=	ent
 SUBDIR+=	epplets
 SUBDIR+=	erc
 SUBDIR+=	esdl
-SUBDIR+=	esmtp
 SUBDIR+=	ethtool
 SUBDIR+=	evas
 SUBDIR+=	evidence
