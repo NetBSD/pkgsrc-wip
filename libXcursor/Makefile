@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.13 2005/09/07 16:24:56 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/12 03:38:45 jeremy-c-reed Exp $
 #
 
-DISTNAME=		libXcursor-1.1.1
+DISTNAME=		libXcursor-1.1.5
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://xlibs.freedesktop.org/release/
+MASTER_SITES=		http://xorg.freedesktop.org/releases/X11R7.0-RC2/lib/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.freedesktop.org/Software/xlibs
+HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Client-side cursor loading library for X
 
-USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xcursor.pc.in
 
+.include "../../wip/fixesproto/buildlink3.mk"
 .include "../../wip/xproto/buildlink3.mk"
 .include "../../wip/libX11/buildlink3.mk"
+.include "../../wip/libXfixes/buildlink3.mk"
 .include "../../wip/libXrender/buildlink3.mk"
-.include "../../x11/Xfixes/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
