@@ -1,7 +1,7 @@
-$NetBSD: patch-ar,v 1.2 2005/11/11 01:43:18 aolcarton Exp $
+$NetBSD: patch-ar,v 1.3 2005/11/12 16:49:24 aolcarton Exp $
 
---- openscep.cnf.in.orig	Tue Feb 19 23:40:07 2002
-+++ openscep.cnf.in
+--- openssl/openscep.cnf.in.orig	Tue Feb 19 23:40:07 2002
++++ openssl/openscep.cnf.in
 @@ -14,6 +14,15 @@ DIR		= OPENSCEPDIR		# where everything i
  
  oid_section	= scep_oids
@@ -22,7 +22,7 @@ $NetBSD: patch-ar,v 1.2 2005/11/11 01:43:18 aolcarton Exp $
  RANDFILE	= $dir/.rnd
  
  x509_extensions	= scep_cert
-+copy_extensions = copy			# see [ scep_cert ] subjectAltName
++#copy_extensions = copy			# see [ scep_cert ] subjectAltName
  default_md	= md5
  
 -default_days	= 1827
@@ -79,33 +79,41 @@ $NetBSD: patch-ar,v 1.2 2005/11/11 01:43:18 aolcarton Exp $
  [ scep_cert ]
  basicConstraints	= CA:FALSE
  nsComment		= "OpenSCEP certificate"
-@@ -69,16 +95,67 @@ subjectKeyIdentifier	= hash
+@@ -69,16 +95,75 @@ subjectKeyIdentifier	= hash
  authorityKeyIdentifier	= keyid,issuer:always
  keyUsage = digitalSignature, nonRepudiation, keyEncipherment
  
 +# Cisco's v4.0 Unity client for Windows expects this extension in the 
 +# VPN gateway's certificate to match the FQDN to which it's been 
 +# configured to connect (the one the user double-clicks on in the list 
-+# box), or it will say ``certificate doesn't match Phase 1 identifier''.  
-+# unfortunately the openssl prompting scheme, AFAICT, will only prompt 
++# box).  If the cert doesn't match the list box, it will say ``certificate 
++# doesn't match Phase 1 identifier''.  kudos for them for actually binding 
++# endpoint identifiers all the way to things the user sees clearly---I 
++# wish mutt's PGP integration did the same with PGP signatures and names 
++# in the folder index.
++#
++# unfortunately the PIX does not add this extension to certificate 
++# requests it generates, so [ OpenSCEP ] copy_extensions won't help.
++#
++# openssl can't prompt for it, either.  AFAICT, it will only prompt 
 +# for DN components, not for subjectAltName.  I got it to sorta prompt 
 +# for subjectAltName using [ req ] attributes, but using 'derdump' you 
 +# can see it's not the same thing as specifying an x509 extension in 
-+# this file because the DNS: is entered as plain old Internet-style 
++# this file because the DNS: prefix is entered as plain old Internet-style 
 +# text rather than encoded into some abstract OSI garbage as it needs.
-+# If you specify it here, it'll be encoded right, but you can't be 
++# If you specify the DNS: here, it'll be encoded right, but you can't be 
 +# prompted.
 +#
-+# so, we hope the PIX or IOS or whatever VPN gateway will put its 
-+# 'hostname' and 'domain-name' into the certificate request as 
-+# subjectAltName = DNS:<hostname>.<domain-name> so we can rely on 
-+# [ OpenSCEP ] copy_extensions.  
++# The only way I found to make Unity work is to edit this 
++# extension into openssl.cnf before running 'scepgrant' to grant the 
++# device's certificate request.
 +#
 +# here is the output of 'show ca cert' on a PIX that works with Unity 
-+# Client 4.0 configured to connect to nagita-pix.cs.Colorado.EDU  I don't 
-+# know if the UNSTRUCTURED NAME line actually corresponds to this 
-+# subjectAltName setting, or if it is yet a third place the fqdn gets 
-+# copied:
++# Client 4.0.  I don't know how that <16> got there, but the 
++# subjectAltName isn't displayed in this output at all---the output 
++# looks exactly the same whether the subjectAltName extension is 
++# present or not.
++#
 +#Certificate
 +#  Status: Available
 +#  Certificate Serial Number: 02
@@ -118,8 +126,8 @@ $NetBSD: patch-ar,v 1.2 2005/11/11 01:43:18 aolcarton Exp $
 +#    start date: 22:05:35 UTC Jan 11 2005
 +#    end   date: 22:05:35 UTC Nov 15 2013
 +#
-+# Here is the line you need to add to this file if the device's certificate 
-+# request turns out it doesn't include the DNS name in the right way.
++# Here is the line you need.
++#
 +# remember we are talking about the VPN gateway's certificate only, not 
 +# certificates handed out to road warriors.  and it is the road warrior 
 +# client that insists on this extension---I would guess the PIX 6.3 itself 
@@ -150,7 +158,7 @@ $NetBSD: patch-ar,v 1.2 2005/11/11 01:43:18 aolcarton Exp $
  [ req ]
  distinguished_name	= req_distinguished_name
  attributes		= req_attributes
-@@ -86,7 +163,7 @@ x509_extensions		= v3_ca
+@@ -86,7 +171,7 @@ x509_extensions		= v3_ca
  
  [ req_distinguished_name ]
  countryName			= Country Name
@@ -159,7 +167,7 @@ $NetBSD: patch-ar,v 1.2 2005/11/11 01:43:18 aolcarton Exp $
  countryName_min			= 2
  countryName_max			= 2
  
-@@ -97,18 +174,25 @@ countryName_max			= 2
+@@ -97,18 +182,25 @@ countryName_max			= 2
  #localityName_default		= Bosco/Gurin
  
  0.organizationName		= Organization Name (eg, company)
@@ -192,7 +200,7 @@ $NetBSD: patch-ar,v 1.2 2005/11/11 01:43:18 aolcarton Exp $
  
  unstructuredName		= optional company name (unstructured)
  
-@@ -117,21 +201,45 @@ name = OpenSCEP
+@@ -117,21 +209,45 @@ name = OpenSCEP
  cacert = $DIR/cacert.pem
  cakey = $DIR/cakey.pem
  crl =  $DIR/crl.pem

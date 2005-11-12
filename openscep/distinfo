@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/11/11 01:43:17 aolcarton Exp $
+$NetBSD: distinfo,v 1.5 2005/11/12 16:49:24 aolcarton Exp $
 
 SHA1 (openscep-0.4.2.tar.gz) = c3867a3518c66462cb6b468cefee65d2f8949330
 Size (openscep-0.4.2.tar.gz) = 416294 bytes
@@ -14,12 +14,12 @@ SHA1 (patch-ai) = a00ffb5addc6fed2aa7f33d5584e170fc941b598
 SHA1 (patch-aj) = 9c10f5506a24bb9211e832b73f4fe0148b14dbdc
 SHA1 (patch-ak) = 7c323d31b45b31ea738f066b6ad8f19d17bdb136
 SHA1 (patch-al) = f1421e5af1f10939067652f21f331d6f07536e87
-SHA1 (patch-am) = 9e4e1657be1b3d2728e265fe626755e6167fef5e
+SHA1 (patch-am) = afd7ce38c766a1769c0b1527668c815daa547840
 SHA1 (patch-an) = 64f00937deb21113de80a8bbd8c541a2efa8fe84
 SHA1 (patch-ao) = 00d2d8f83c0db8ce9d68ac7d02b7269b40c237eb
 SHA1 (patch-ap) = 2c61d433163610227ae7cd7a28ef04ae3b1c1a11
 SHA1 (patch-aq) = b6e8eb9766649e1e4b9c30c7baaba3dfcd8e34e4
-SHA1 (patch-ar) = 5a0c22359bcba9cd05721abf560ffda776d96599
+SHA1 (patch-ar) = 2e7e05cd15b090789eb5fccdfa0b282ab3d96e2d
 SHA1 (patch-as) = 903284962a732ad671334003dce317ce1fc94bca
 SHA1 (patch-at) = 02a7c436d1e764263e7638935e2b01f0ec1cd00b
 SHA1 (patch-au) = f104b0e9b0c6471c5f7d719d61fa899ec79beaab
@@ -35,3 +35,4 @@ SHA1 (patch-bd) = 008f10e0ce0916ab258289c983e6a4009d09c903
 SHA1 (patch-be) = 57f98748672e390b8c93c80cf8945beb75dc1528
 SHA1 (patch-bf) = 9c04c40c90e237865c3ebdd2ad91fc87ee28f210
 SHA1 (patch-bg) = 6e22aab2974a13e59fe441d872c2a5087d4a916d
+SHA1 (patch-bh) = c1638b6c1ed5be434699a4f142b2abed96ce9bdf
