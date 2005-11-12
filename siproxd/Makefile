@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/29 15:09:50 gschwarz Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/12 21:55:23 gschwarz Exp $
 
 DISTNAME=	siproxd-0.5.11
 CATEGORIES=	net
@@ -6,17 +6,22 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siproxd/}
 
 MAINTAINER=     schwarz@NetBSD.org
 HOMEPAGE=	http://siproxd.sourceforge.net/
-COMMENT=	a SIP ALG
+COMMENT=	Siproxd is a SIP ALG (Application-Level Gateway)
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libosip-prefix=${BUILDLINK_PREFIX.libosip2}
+EGDIR=		${PREFIX}/share/examples/siproxd
 
-PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:S|^${PREFIX}/||}
+CONF_FILES=	${EGDIR}/siproxd.conf.example ${PKG_SYSCONFDIR}/siproxd.conf \
+		${EGDIR}/siproxd_passwd.cfg \
+		${PKG_SYSCONFDIR}/siproxd_passwd.cfg
 
-INSTALLATION_DIRS=	sbin ${PKG_SYSCONFDIR:S|^${PREFIX}/||}
+USE_PKGINSTALL=	YES
+
+INSTALLATION_DIRS=	sbin share/examples/siproxd
 
 .include "../../devel/libosip/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
