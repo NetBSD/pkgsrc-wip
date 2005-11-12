@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/12 23:59:31 jtonio Exp $
+
+SHA1 (cabot-0.0.20050504.tar.gz) = 3a3b87aa5527a0e6f41b6223206fed04f6cb08a6
+RMD160 (cabot-0.0.20050504.tar.gz) = 71d6f58d3a74607c262f267b22cc0c7dd271a1c3
+Size (cabot-0.0.20050504.tar.gz) = 85714 bytes
+SHA1 (patch-aa) = 58a5137e7740adee7ec9c26d7e6e10d8951c050b

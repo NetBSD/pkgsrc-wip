@@ -1,0 +1,3 @@
+CABot is a set of scripts that help managing some parts of a PGP keysigning
+process. It sends encrypted challenges to UIDs of an OpenPGP key, analyses the
+replies and assists the key owner in signing them.

@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/12 23:59:31 jtonio Exp $
+bin/ca-createsendout
+bin/ca-dosign
+bin/ca-recv
+bin/ca-sendout
+man/man1/ca-createsendout.1
+man/man1/ca-dosign.1
+man/man1/ca-recv.1
+man/man1/ca-sendout.1
+man/man5/ca-config.5
+man/man7/ca-bot-noroot.7
+man/man7/ca-bot.7
+share/examples/cabot/cabot.conf
+share/doc/cabot/AUTHORS
+share/doc/cabot/COPYING
+share/doc/cabot/ChangeLog
+share/doc/cabot/README
+share/doc/cabot/TODO
+share/doc/cabot/ca-bot-noroot.html
+share/doc/cabot/ca-bot-noroot.txt
+share/doc/cabot/ca-bot.html
+share/doc/cabot/ca-bot.txt
+share/doc/cabot/ca-config.html
+share/doc/cabot/ca-config.txt
+share/doc/cabot/ca-createsendout.html
+share/doc/cabot/ca-createsendout.txt
+share/doc/cabot/ca-dosign.html
+share/doc/cabot/ca-dosign.txt
+share/doc/cabot/ca-recv.html
+share/doc/cabot/ca-recv.txt
+share/doc/cabot/ca-sendout.html
+share/doc/cabot/ca-sendout.txt
+share/doc/cabot/cabot-micro-howto.txt
+share/doc/cabot/examples/cabotrc
+${PERL5_SUB_INSTALLVENDORLIB}/Cabot.pm
+@dirrm share/doc/cabot/examples
+@dirrm share/doc/cabot
