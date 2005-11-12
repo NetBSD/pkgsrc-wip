@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2005/11/12 16:56:14 thomasklausner Exp $
 ${PKG_SYSCONFDIR}/siproxd.conf.example
 ${PKG_SYSCONFDIR}/siproxd_passwd.cfg
 sbin/siproxd
