@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2005/09/07 16:24:55 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/12 01:35:13 jeremy-c-reed Exp $
 #
 
-DISTNAME=		libSM-6.0.3
+DISTNAME=		libSM-0.99.2
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://xlibs.freedesktop.org/release/
+MASTER_SITES=		http://xorg.freedesktop.org/releases/X11R7.0-RC2/lib/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://xlibs.freedesktop.org/
-COMMENT=		SM Extension
+COMMENT=		X Session Management Library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -18,11 +18,11 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	sm.pc.in
 
-# XXX does not have an option to disable xthread;
-# XXX it is based on how libX11 was built.
-#PTHREAD_OPTS+=		require
-.include "../../mk/pthread.buildlink3.mk"
+# XXX it is based on how libX11 was built ?
+#.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../wip/libICE/buildlink3.mk"
-.include "../../wip/libX11/buildlink3.mk"
+.include "../../wip/xproto/buildlink3.mk"
+.include "../../wip/xtrans/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
