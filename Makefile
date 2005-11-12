@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2032 2005/11/11 22:25:35 kristerw Exp $
+# $Id: Makefile,v 1.2033 2005/11/12 00:01:33 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -439,6 +439,7 @@ SUBDIR+=	ldapbrowser
 SUBDIR+=	ldapdns
 SUBDIR+=	lde
 SUBDIR+=	leo
+SUBDIR+=	lhs2tex
 SUBDIR+=	libGenome
 SUBDIR+=	libICE
 SUBDIR+=	libSM
