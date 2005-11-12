@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/11 05:00:26 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/12 13:19:45 ghen Exp $
 
 DISTNAME=		skipstone-0.9.3
 PKGREVISION=		1
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.muhri.net/skipstone/
 COMMENT=		Light and fast Gecko-based browser
 
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake
 
 # it doesn't build with firefox headers, otherwise I'd make it an option
 MOZILLA=		mozilla-gtk2
