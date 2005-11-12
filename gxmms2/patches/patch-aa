@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/11/12 15:10:18 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.5 2005/11/12 21:54:28 leonardschmidt Exp $
 
 --- Makefile.orig	2005-09-22 11:02:50.000000000 +0000
 +++ Makefile
-@@ -1,22 +1,22 @@
+@@ -1,7 +1,7 @@
  # Makefile for gxmms2
  
  #Installation directory
@@ -10,16 +10,13 @@ $NetBSD: patch-aa,v 1.4 2005/11/12 15:10:18 leonardschmidt Exp $
 +INSTALLPATH=${PREFIX}/bin
  
  # Path to XMMS2 header files
--XMMS2_INCLUDE_DIR=/usr/local/include/xmms2
-+XMMS2_INCLUDE_DIR=%%BUILDLINK_DIR%%/include/xmms2
- 
- ALLFILES=*.c *.h *.xpm Makefile README COPYING CHANGELOG
- 
+ XMMS2_INCLUDE_DIR=/usr/local/include/xmms2
+@@ -11,12 +11,12 @@ ALLFILES=*.c *.h *.xpm Makefile README C
  GTK_INCLUDE = `pkg-config gtk+-2.0 --cflags`
  GTK_LIB = `pkg-config gtk+-2.0 --libs`
  
 -FLAGS = -O2 -Wall -fPIC $(GTK_INCLUDE) -I${XMMS2_INCLUDE_DIR}
-+FLAGS = -fPIC $(GTK_INCLUDE) -I${XMMS2_INCLUDE_DIR}
++FLAGS = $(GTK_INCLUDE)
  LIBS = $(GTK_LIB) -lxmmsclient -lxmmsclient-glib
  
  LFLAGS =
