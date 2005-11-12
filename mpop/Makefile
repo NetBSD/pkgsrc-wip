@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/12 16:52:04 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/12 21:06:53 leonardschmidt Exp $
 #
 
 DISTNAME=	mpop-0.8.2
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
+
+CONFIGURE_ARGS+=	--enable-nls
 
 PKG_SYSCONFSUBDIR=	mpop
 
