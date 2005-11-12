@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2037 2005/11/12 12:40:18 thomasklausner Exp $
+# $Id: Makefile,v 1.2038 2005/11/12 16:52:27 leonardschmidt Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -582,6 +582,7 @@ SUBDIR+=	mopac
 SUBDIR+=	moregroupware
 SUBDIR+=	mozplugger
 SUBDIR+=	mpgedit
+SUBDIR+=	mpop
 SUBDIR+=	mppdec
 SUBDIR+=	mppenc
 SUBDIR+=	mpq-tools
