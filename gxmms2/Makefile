@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/12 15:10:17 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/12 17:52:25 leonardschmidt Exp $
 #
 
 DISTNAME=	gxmms2-0.5.1
@@ -16,7 +16,7 @@ BUILD_TARGET=		gxmms2
 SUBST_CLASSES+=		var
 SUBST_STAGE.var=	post-patch
 SUBST_FILES.var=	Makefile
-SUBST_SED.var=		-e 's,%%BUILDLINK_DIR%%,${BUILDLINK_DIR}/include,g'
+SUBST_SED.var=		-e 's,%%BUILDLINK_DIR%%,${BUILDLINK_DIR},g'
 
 INSTALLATION_DIRS=	bin
 
