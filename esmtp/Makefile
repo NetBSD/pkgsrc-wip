@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/11/12 00:22:21 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.48 2005/11/12 04:10:48 minskim Exp $
 #
 
 DISTNAME=	esmtp-0.5.1
@@ -29,13 +29,15 @@ PKG_SYSCONFSUBDIR=	esmtp
 EGDIR=			${PREFIX}/share/examples/esmtp
 CONF_FILES=		${EGDIR}/sample.esmtprc \
 			${PKG_SYSCONFDIR}/sample.esmtprc
+
+.include "../../mail/libesmtp/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/esmtp
 	${INSTALL_DATA} ${WRKSRC}/sample.esmtprc ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/esmtp
 
-.include "../../mail/libesmtp/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
