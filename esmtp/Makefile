@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/09/29 16:19:01 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.47 2005/11/12 00:22:21 leonardschmidt Exp $
 #
 
 DISTNAME=	esmtp-0.5.1
@@ -10,13 +10,9 @@ MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://esmtp.sourceforge.net/
 COMMENT=	Relay-only Mail Transfer Agent with sendmail-compatible syntax
 
-.if !exists(/usr/bin/flex)
-BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
-.endif
-
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
-USE_TOOLS+=		bison
+USE_TOOLS+=		bison flex
 PTHREAD_OPTS+=		require
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
