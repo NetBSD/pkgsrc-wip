@@ -1,6 +1,4 @@
-Problems:
-
-* when executing a command using emelfm2's built-in command line,
-  it sometimes just freezes.
-* it also freezes when one selects a filetype for which no internal
+- sometimes just freezes when executing a command (e.g., ls) using
+  emelfm2's built-in command line.
+- also freezes when one selects a filetype for which no internal
   viewer is set.
