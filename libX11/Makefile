@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2005/10/17 19:27:02 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.23 2005/11/12 02:09:01 jeremy-c-reed Exp $
 #
 
-DISTNAME=		libX11-0.99.0
+# todo: do PLIST again
+DISTNAME=		libX11-0.99.3
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://xorg.freedesktop.org/X11R7.0-RC0/lib/
+MASTER_SITES=		http://xorg.freedesktop.org/releases/X11R7.0-RC2/lib/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
