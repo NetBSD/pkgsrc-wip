@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/12 12:02:15 shattered Exp $
+
+--- gst/gst.override.orig	2005-06-14 15:58:20.000000000 +0000
++++ gst/gst.override
+@@ -760,6 +760,13 @@ _gst_get_libxml2_module(void)
+ {
+     PyObject *xml = NULL;
+     
++    xml = PyImport_ImportModule("libxml2mod");
++    if (!xml) {
++	PyErr_Clear();
++	PyErr_SetString(PyExc_RuntimeError,"libxml2mod bindings required");
++	return NULL;
++    }
++    
+     xml = PyImport_ImportModule("libxml2");
+     if (!xml) {
+ 	PyErr_Clear();
