@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/11/12 21:06:53 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/12 21:53:09 leonardschmidt Exp $
 #
 
 DISTNAME=	mpop-0.8.2
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpop/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,12 +21,12 @@ CONFIGURE_ARGS+=	--enable-nls
 PKG_SYSCONFSUBDIR=	mpop
 
 EGDIR=		${PREFIX}/share/examples/mpop
-CONF_FILES=	${EGDIR}/mpoprc.example ${PKG_SYSCONFDIR}/sample.mpoprc
+CONF_FILES=	${EGDIR}/mpoprc.example ${PKG_SYSCONFDIR}/mpoprc
 
 INFO_FILES=	mpop.info
 
 .include "options.mk"
-.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 
 post-install:
