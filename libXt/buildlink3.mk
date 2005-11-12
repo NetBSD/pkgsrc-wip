@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/05/09 04:16:10 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2005/11/12 01:42:32 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXt.
 #
@@ -14,20 +14,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibXt}
 BUILDLINK_PACKAGES+=	libXt
 
 .if !empty(LIBXT_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libXt+=		libXt>=0.1.4
+BUILDLINK_DEPENDS.libXt+=		libXt>=0.99.2
 BUILDLINK_PKGSRCDIR.libXt?=		../../wip/libXt
 .endif # LIBXT_BUILDLINK3_MK
-
-.include "../../wip/libICE/buildlink3.mk"
-.include "../../wip/libSM/buildlink3.mk"
-.include "../../wip/libX11/buildlink3.mk"
-.include "../../wip/xproto/buildlink3.mk"
-.include "../../x11/xextensions/buildlink3.mk"
-
-.include "../../mk/pthread.buildlink3.mk"
-LIBS+=		${BUILDLINK_LDADD.pthread}
-
-# libXt needs IceProcessMessages and SmcSaveYourselfDone and others
-LDFLAGS+=	-lICE -lSM
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

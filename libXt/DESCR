@@ -3,4 +3,4 @@ of C routines (based on Xlib) used for designing user interfaces
 with widgets. It also provides functions for handling events,
 initializing windows, and interpreting resource files.
 
-This is the portable version based on libXt from XFree86.
+This is from the modular X.org project.
