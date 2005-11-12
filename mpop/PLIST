@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/12 16:52:04 leonardschmidt Exp $
+bin/mpop
+man/man1/mpop.1
+share/examples/mpop/mpoprc.example
+${NLS}${PKGLOCALEDIR}/locale/de/LC_MESSAGES/mpop.mo
+@dirrm share/examples/mpop
