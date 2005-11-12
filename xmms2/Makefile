@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/19 08:24:10 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/12 14:59:29 leonardschmidt Exp $
 #
 
 DISTNAME=	xmms2-0.1DR2.2
@@ -22,6 +22,11 @@ PKGCONFIG_OVERRIDE+=	xmms2-plugin.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "options.mk"
+.include "../../audio/libmad/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 do-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} \
@@ -32,9 +37,4 @@ do-install:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} \
 		&& ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons install
 
-.include "../../audio/libmad/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
