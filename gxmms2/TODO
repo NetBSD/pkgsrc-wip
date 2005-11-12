@@ -1,0 +1,2 @@
+- Patch the Makefile to not only accept cc as compiler.  Also, is
+  there a better way to specify the path to XMMS2's includes?

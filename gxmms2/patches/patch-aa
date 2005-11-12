@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2005/11/05 10:34:21 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.4 2005/11/12 15:10:18 leonardschmidt Exp $
 
 --- Makefile.orig	2005-09-22 11:02:50.000000000 +0000
 +++ Makefile
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2005/11/05 10:34:21 leonardschmidt Exp $
  
  # Path to XMMS2 header files
 -XMMS2_INCLUDE_DIR=/usr/local/include/xmms2
-+XMMS2_INCLUDE_DIR=%%BUILDLINK_DIR%%/xmms2
++XMMS2_INCLUDE_DIR=%%BUILDLINK_DIR%%/include/xmms2
  
  ALLFILES=*.c *.h *.xpm Makefile README COPYING CHANGELOG
  
@@ -29,12 +29,11 @@ $NetBSD: patch-aa,v 1.3 2005/11/05 10:34:21 leonardschmidt Exp $
  
  OBJS = gxmms2.o xmms2ctrl.o trackinfo.o gtrackinfo.o gmlplaylist.o gmedialib.o gmlbrowser.o gmlsearch.o gmlplaylists.o gmladdfiles.o sdecode.o
  
-@@ -48,7 +48,8 @@ gmladdfiles.o: gmladdfiles.c
+@@ -48,7 +48,7 @@ gmladdfiles.o: gmladdfiles.c
  sdecode.o: sdecode.c
  
  install:
 -	install -D gxmms2 $(INSTALLPATH)/gxmms2
-+	${BSD_INSTALL_PROGRAM_DIR} $(INSTALLPATH)
 +	${BSD_INSTALL_PROGRAM} gxmms2 $(INSTALLPATH)/gxmms2
  
  uninstall:
