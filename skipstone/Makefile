@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/12 13:19:45 ghen Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/12 13:21:16 ghen Exp $
 
 DISTNAME=		skipstone-0.9.3
 PKGREVISION=		1
@@ -18,6 +18,8 @@ MOZILLA=		mozilla-gtk2
 CONFIGURE_ARGS+=	--with-mozilla-includes=${PREFIX}/include/${MOZILLA}
 CONFIGURE_ARGS+=	--with-mozilla-libs=${PREFIX}/lib/${MOZILLA}
 CONFIGURE_ARGS+=	--enable-cvs-mozilla
+CONFIGURE_ARGS+=	--enable-nls
+CONFIGURE_ARGS+=	--with-localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${MOZILLA}
 
 .include "../../www/${MOZILLA}/buildlink3.mk"
