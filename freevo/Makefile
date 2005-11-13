@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/11/11 06:34:53 dhowland Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/13 03:57:33 dhowland Exp $
 #
 
 DISTNAME=		freevo-1.5.3
@@ -9,13 +9,18 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://freevo.sourceforge.net/
 COMMENT=		Fancy-lookging digital video jukebox
 
+DEPENDS+=		aumix>=2.8:../../audio/aumix
+DEPENDS+=		lsdvd>=0.10:../../multimedia/lsdvd
 DEPENDS+=		mplayer>=1.0rc7:../../multimedia/mplayer
-DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
+DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
+DEPENDS+=		${PYPKGPREFIX}-twisted-web>=0.5.0:../../wip/py-twisted-web
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
+
+PYTHON_VERSIONS_ACCEPTED=	23
 
 PKG_SYSCONFSUBDIR=	freevo
 EGDIR=			${PREFIX}/share/examples/freevo
@@ -33,8 +38,11 @@ post-install:
 		${PREFIX}/share/examples/freevo/local_conf.py.example
 
 .include "../../devel/py-game/buildlink3.mk"
-.include "../../wip/py-mmpython/buildlink3.mk"
-.include "../../textproc/py-xml/buildlink3.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
+.include "../../multimedia/libdvdcss/buildlink3.mk"  # not default by libdvdread
+.include "../../textproc/py-xml/buildlink3.mk"
+.include "../../time/py-mxDateTime/buildlink3.mk"
+.include "../../wip/py-mmpython/buildlink3.mk"
+#.include "../../wip/py-osd/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
