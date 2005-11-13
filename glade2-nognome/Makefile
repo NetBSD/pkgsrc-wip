@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.8 2005/08/11 10:08:22 absd Exp $
-# $Id: Makefile,v 1.8 2005/08/11 10:08:22 absd Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/13 17:00:30 kristerw Exp $
+# $Id: Makefile,v 1.9 2005/11/13 17:00:30 kristerw Exp $
 #
 
 DISTNAME=		glade-2.0.1
@@ -22,7 +22,6 @@ USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
