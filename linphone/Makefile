@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/05 17:41:46 gschwarz Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/13 17:17:39 gschwarz Exp $
 
 DISTNAME=	linphone-1.0.1
 CATEGORIES=	net
@@ -8,19 +8,19 @@ MAINTAINER=     schwarz@NetBSD.org
 HOMEPAGE=	http://www.linphone.org
 COMMENT=	SIP-based IP telephony client
 
-BUILD_DEFS+=	USE_INET6
+BUILD_DEPENDS+= p5-XML-Parser-*:../../textproc/p5-XML-Parser
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake perl
-USE_LIBTOOL=
+USE_LIBTOOL=	YES
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--with-osip=${BUILDLINK_PREFIX.libosip2}
 CONFIGURE_ARGS+=        --with-speex=${BUILDLINK_PREFIX.speex}
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/linphone
 CONFIGURE_ARGS+=	--disable-manual --enable-glib
 
-PKG_SUPPORTED_OPTIONS=	alsa nogui
+PKG_SUPPORTED_OPTIONS=	alsa nogui inet6
 PKG_OPTIONS_VAR=	PKG_OPTIONS.linphone
 
 .include "../../mk/bsd.options.mk"
@@ -38,13 +38,9 @@ CONFIGURE_ARGS+=	--enable-gnome_ui=yes
 .include "../../x11/gnome-panel/buildlink3.mk"
 .endif
 
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
-
-BUILD_DEPENDS+=	p5-XML-Parser-*:../../textproc/p5-XML-Parser
 
 LIBS+=		${LIBOSSAUDIO}
 CPPFLAGS+=	-DDSP_NAME="\"${DEVOSSAUDIO}\""
