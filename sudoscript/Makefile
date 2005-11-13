@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/09/28 22:36:42 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/13 06:45:53 minskim Exp $
 
 DISTNAME=	sudoscript-2.1.1
 CATEGORIES=	security
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.egbok.com/sudoscript/
 COMMENT=	Audited shells with sudo(8) and script(1)
 
 MESSAGE_SUBST+=	DISTNAME=${DISTNAME}
-MESSAGE_SUBST+=	PREFIX=${PREFIX}
 
 PERMIT_PACKAGE_CDROM=	Yes
 PERMIT_PACKAGE_FTP=	Yes
