@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/12 23:59:31 jtonio Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/13 00:09:54 jtonio Exp $
 
 DISTNAME=		cabot-0.0.20050504
 CATEGORIES=		misc security
@@ -17,7 +17,7 @@ USE_PKGINSTALL=         yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
-REPLACE_PERL=		Cabot.pm
+REPLACE_PERL=		Cabot.pm ca-createsendout ca-recv ca-sendout ca-dosign
 
 EGDIR=			${PREFIX}/share/examples/cabot
 CONF_FILES+=            ${EGDIR}/cabot.conf ${PKG_SYSCONFDIR}/cabot.conf
