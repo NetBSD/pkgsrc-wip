@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/11 22:50:24 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/13 06:17:47 minskim Exp $
 #
 
 DISTNAME=	passivetex
@@ -11,7 +11,7 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tei-c.org.uk/Software/passivetex/
 COMMENT=	TeX macros for formatting objects
 
-DEPENDS+=	tex-xmltex>=1.9:../../wip/tex-xmltex
+DEPENDS+=	tex-xmltex>=1.9:../../textproc/tex-xmltex
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
