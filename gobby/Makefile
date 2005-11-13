@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/11 06:32:14 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/13 22:27:24 kristerw Exp $
 #
 
 DISTNAME=		gobby-0.2.2
@@ -23,5 +23,5 @@ PLIST_SRC+=		${PKGDIR}/PLIST.common
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
-.include "../../wip/libxml++2/buildlink3.mk"
+.include "../../textproc/libxml++2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
