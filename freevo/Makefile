@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/11/13 03:57:33 dhowland Exp $
+# $NetBSD: Makefile,v 1.15 2005/11/13 05:08:34 dhowland Exp $
 #
 
 DISTNAME=		freevo-1.5.3
@@ -15,7 +15,6 @@ DEPENDS+=		mplayer>=1.0rc7:../../multimedia/mplayer
 DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
 DEPENDS+=		${PYPKGPREFIX}-twisted-web>=0.5.0:../../wip/py-twisted-web
 
-PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
