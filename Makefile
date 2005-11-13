@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2042 2005/11/13 16:56:53 kristerw Exp $
+# $Id: Makefile,v 1.2043 2005/11/13 18:40:44 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1083,7 +1083,6 @@ SUBDIR+=	spfmilter
 SUBDIR+=	squirrelmail-avelsieve
 SUBDIR+=	squirrelmail-chg_sasl_passwd
 SUBDIR+=	squirrelmail-compatibility
-SUBDIR+=	squirrelmail-decode
 SUBDIR+=	squirrelmail-vlogin
 SUBDIR+=	srvx
 SUBDIR+=	stardict
@@ -1204,7 +1203,6 @@ SUBDIR+=	xchat2-perl
 SUBDIR+=	xchat2-python
 SUBDIR+=	xchat2-tcl
 SUBDIR+=	xcmiscproto
-SUBDIR+=	xenconsole
 SUBDIR+=	xextproto
 SUBDIR+=	xf86bigfontproto
 SUBDIR+=	xf86driproto
