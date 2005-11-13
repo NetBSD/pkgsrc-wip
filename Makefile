@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2041 2005/11/13 06:37:04 minskim Exp $
+# $Id: Makefile,v 1.2042 2005/11/13 16:56:53 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -106,6 +106,7 @@ SUBDIR+=	bwm-ng
 SUBDIR+=	c-ares
 SUBDIR+=	c-news
 SUBDIR+=	cabal
+SUBDIR+=	cabot
 SUBDIR+=	caml-libnum
 SUBDIR+=	caml-libunix
 SUBDIR+=	cawf
@@ -574,6 +575,7 @@ SUBDIR+=	mixxx
 SUBDIR+=	mkdep
 SUBDIR+=	mksend
 SUBDIR+=	mnogosearch
+SUBDIR+=	modular-xorg-libs
 SUBDIR+=	moe
 SUBDIR+=	molmol
 SUBDIR+=	monkey-bubble
@@ -658,6 +660,7 @@ SUBDIR+=	opd
 SUBDIR+=	open21xx
 SUBDIR+=	openct
 SUBDIR+=	opendchub
+SUBDIR+=	openlogos
 SUBDIR+=	openscep
 SUBDIR+=	openvrml
 SUBDIR+=	opera-devel
@@ -909,9 +912,11 @@ SUBDIR+=	py-jabber-msnt
 SUBDIR+=	py-kyra
 SUBDIR+=	py-libpcap
 SUBDIR+=	py-mmpython
+SUBDIR+=	py-mssql
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-oak
 SUBDIR+=	py-orm
+SUBDIR+=	py-osd
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-plucker
 SUBDIR+=	py-rlcompleter2
