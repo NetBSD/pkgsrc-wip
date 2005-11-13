@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/11/03 13:01:53 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/13 21:34:52 adrian_p Exp $
 
 DISTNAME=	Unreal3.2.3
 PKGNAME=	unrealircd-3.2.3
@@ -9,9 +9,11 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE= 	http://www.unrealircd.com/
 COMMENT=	Advanced IRC server with IPv6 and SSL support
 
+CONFLICTS+=	ircu-[0-9]*
+
 GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/Unreal3.2
 TRE_NEEDED=	0.7.2
 
@@ -45,7 +47,7 @@ IRCD_EG=	${PREFIX}/share/examples/unrealircd
 BUILD_DEFS+=	IRCD_SENDQ IRCD_LISTEN IRCD_BUFFER IRCD_USER IRCD_HOST
 BUILD_DEFS+=	IRCD_HOME IRCD_NICKHIST IRCD_FDSIZE IRCD_GROUP
 
-PTHREAD_OPTS=	require
+PTHREAD_OPTS+=	require
 
 # The defaults for most of these here are from the standard Conf
 # script supplied with the UnrealIRCd package.
