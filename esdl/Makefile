@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/10/10 14:00:12 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/14 13:37:04 ghen Exp $
 
 DISTNAME=	esdl-0.95.0630.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=esdl/}
 
-MAINTAIER=	geert.hendrickx@ua.ac.be
+MAINTAINER=	geert.hendrickx@ua.ac.be
 HOMEPAGE=	http://esdl.sourceforge.net/
 COMMENT=	SDL and OpenGL library for Erlang
 
