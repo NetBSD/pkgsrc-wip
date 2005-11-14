@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/11/14 23:51:42 plunky Exp $
+
+--- lib/libunshield.c.orig	2005-11-14 23:45:57.000000000 +0000
++++ lib/libunshield.c
+@@ -27,7 +27,7 @@ static bool unshield_create_filename_pat
+ 
+     for (; *p != '\0'; p++)
+     {
+-      if ('.' == *p || isdigit(*p))
++      if ('.' == *p || isdigit((int)*p))
+       {
+         *p = '\0';
+         break;
