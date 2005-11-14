@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/11/14 17:07:23 dhowland Exp $
+# $NetBSD: options.mk,v 1.3 2005/11/14 17:13:20 dhowland Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freevo
 PKG_SUPPORTED_OPTIONS=		mencoder xine lame flac oggenc xmltv
@@ -31,7 +31,7 @@ DEPENDS+=		vorbis-tools>=1.1.1:../../audio/vorbis-tools
 .endif
 
 .if !empty(PKG_OPTIONS:Mxmltv)
-DEPENDS+=		xmltv>=0.5.40:../../multimedia/xmltv
+DEPENDS+=		xmltv>=0.5.40:../../multimedia/p5-xmltv
 .endif
 
 .if !empty(PKG_OPTIONS:Mxmame)
