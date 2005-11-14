@@ -1,3 +1,7 @@
+- nearly all the pkg-options (except for mame and snes groups) are used for
+  viewing or recording TV.  Maybe they should all be combined into one
+  option "tv" ?
+
 - port Lirc (Linux infrared remote control) to netbsd, make a package,
   then make a package for py-lirc and then add dependency to freevo.
 
