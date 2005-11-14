@@ -1,10 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2005/11/14 17:13:20 dhowland Exp $
+# $NetBSD: options.mk,v 1.4 2005/11/14 17:21:13 dhowland Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freevo
-PKG_SUPPORTED_OPTIONS=		mencoder xine lame flac oggenc xmltv
-PKG_OPTIONS_OPTIONAL_GROUPS=	mame
-PKG_OPTIONS_GROUP.mame=		xmame xmame-sdl
-PKG_OPTIONS_OPTIONAL_GROUPS+=	snes
+PKG_SUPPORTED_OPTIONS=		mencoder xine lame flac oggenc xmltv xmame
+PKG_OPTIONS_OPTIONAL_GROUPS=	snes
 PKG_OPTIONS_GROUP.snes=		snes9x zsnes
 PKG_SUGGESTED_OPTIONS=		mencoder lame oggenc
 
@@ -35,9 +33,6 @@ DEPENDS+=		xmltv>=0.5.40:../../multimedia/p5-xmltv
 .endif
 
 .if !empty(PKG_OPTIONS:Mxmame)
-DEPENDS+=		xmame>=0.101:../../emulators/xmame
-.elif !empty(PKG_OPTIONS:Mxmame-sdl)
-PKG_OPTIONS.xmame+=	sdl
 DEPENDS+=		xmame>=0.101:../../emulators/xmame
 .endif
 
