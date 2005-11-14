@@ -1,3 +1,6 @@
+- port Lirc (Linux infrared remote control) to netbsd, make a package,
+  then make a package for py-lirc and then add dependency to freevo.
+
 - Did I miss anything in the PLIST ?  I'm tired, I may have forgotten
   something.
 

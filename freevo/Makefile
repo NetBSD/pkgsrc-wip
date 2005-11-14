@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/11/13 06:27:25 dhowland Exp $
+# $NetBSD: Makefile,v 1.17 2005/11/14 06:17:15 dhowland Exp $
 #
 
 DISTNAME=		freevo-1.5.3
@@ -20,6 +20,8 @@ USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 
 PYTHON_VERSIONS_ACCEPTED=	23
+
+.include "options.mk"
 
 PKG_SYSCONFSUBDIR=	freevo
 EGDIR=			${PREFIX}/share/examples/freevo
