@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/17 18:32:03 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/14 18:29:24 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXdmcp-0.99.0
@@ -10,8 +10,8 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Display Manager Control Protocol library from X.org
 
-USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xdmcp.pc.in
 GNU_CONFIGURE=		yes
 

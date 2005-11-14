@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/17 18:40:44 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/14 18:30:53 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libfontenc-0.99.0
@@ -10,8 +10,8 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		The fontenc Library from X.org
 
-USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/fontenc.pc.in
 GNU_CONFIGURE=		yes
 
