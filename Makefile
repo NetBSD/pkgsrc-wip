@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2044 2005/11/14 03:10:44 minskim Exp $
+# $Id: Makefile,v 1.2045 2005/11/14 16:32:53 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -332,6 +332,7 @@ SUBDIR+=	gune
 SUBDIR+=	gurlchecker
 SUBDIR+=	gwc
 SUBDIR+=	gxmms2
+SUBDIR+=	haddock
 SUBDIR+=	hanzim
 SUBDIR+=	hasciicam
 SUBDIR+=	hcidump
