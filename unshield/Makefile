@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/09/23 06:00:03 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/14 23:49:43 plunky Exp $
 #
 
 DISTNAME=		unshield-0.3
@@ -10,7 +10,7 @@ HOMEPAGE=		http://synce.sourceforge.net/
 COMMENT=		Extractor for InstallShield cabinet files
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		CPPFLAGS=-I${WRKSRC}/lib
+CONFIGURE_ARGS+=	CPPFLAGS=-I${WRKSRC}/lib
 USE_LIBTOOL=		yes
 
 pre-configure:
