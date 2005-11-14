@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/13 08:07:11 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/14 03:04:27 minskim Exp $
 #
 
 DISTNAME=		pymssql-0.7.3
@@ -13,7 +13,6 @@ COMMENT=		Python interface to MS SQL
 BUILDLINK_DEPENDS.freetds+=	freetds>=0.63
 
 PYTHON_VERSION_REQD=	24
-PY_PATCHPLIST=		yes
 PYBINMODULE=		yes
 PYDISTUTILSPKG=		yes
 
