@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/09 09:14:15 jtonio Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/14 15:22:52 jtonio Exp $
 
 DISTNAME=	# empty
 PKGNAME=	PPower4-0.9.4
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 # This requires Java 1.2 or better
 USE_JAVA=	run
 USE_JAVA2=	YES
-LATEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
+TEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
