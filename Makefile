@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2043 2005/11/13 18:40:44 marttikuparinen Exp $
+# $Id: Makefile,v 1.2044 2005/11/14 03:10:44 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -912,7 +912,6 @@ SUBDIR+=	py-jabber-msnt
 SUBDIR+=	py-kyra
 SUBDIR+=	py-libpcap
 SUBDIR+=	py-mmpython
-SUBDIR+=	py-mssql
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-oak
 SUBDIR+=	py-orm

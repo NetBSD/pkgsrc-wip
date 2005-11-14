@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/13 08:07:11 bartoszkuzma Exp $
-${PYSITELIB}/_mssql.so
-${PYSITELIB}/pymssql.py
-${PYSITELIB}/pymssql.pyc
-${PYSITELIB}/pymssql.pyo
