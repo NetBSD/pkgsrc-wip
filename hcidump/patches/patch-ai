@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
+$NetBSD: patch-ai,v 1.2 2005/11/14 23:43:28 plunky Exp $
 
 --- parser/l2cap.c.orig	2003-09-13 00:38:11.000000000 +0100
 +++ parser/l2cap.c
-@@ -25,9 +25,11 @@
+@@ -25,13 +25,16 @@
   */
  
  #include <sys/types.h>
@@ -10,13 +10,18 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  #include <sys/endian.h>
 -#include <netgraph/bluetooth/include/ng_hci.h>
 -#include <netgraph/bluetooth/include/ng_l2cap.h>
-+#include <bluetooth/bluetooth.h>
-+#include <bluetooth/hci.h>
-+#include <bluetooth/l2cap.h>
  #include <stdio.h>
  #include <string.h>
  #include <stdlib.h>
-@@ -123,7 +125,7 @@ static uint16_t get_psm(int in, uint16_t
+ 
++#include <bluetooth/bluetooth.h>
++#include <bluetooth/hci.h>
++#include <bluetooth/l2cap.h>
++
+ #include "parser.h"
+ 
+ typedef struct {
+@@ -123,7 +126,7 @@ static uint16_t get_psm(int in, uint16_t
  
  static void command_rej(int level, struct frame *frm)
  {
@@ -25,7 +30,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  
  	printf("Command rej: reason %d\n", 
  			le16toh(h->reason));
-@@ -131,7 +133,7 @@ static void command_rej(int level, struc
+@@ -131,7 +134,7 @@ static void command_rej(int level, struc
  
  static void conn_req(int level, struct frame *frm)
  {
@@ -34,7 +39,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  
  	add_cid(frm->in, le16toh(h->scid), le16toh(h->psm));
  
-@@ -144,7 +146,7 @@ static void conn_req(int level, struct f
+@@ -144,7 +147,7 @@ static void conn_req(int level, struct f
  
  static void conn_rsp(int level, struct frame *frm)
  {
@@ -43,7 +48,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  	uint16_t psm;
  
  	if ((psm = get_psm(!frm->in, le16toh(h->scid))))
-@@ -177,16 +179,16 @@ static void conf_opt(int level, void *pt
+@@ -177,16 +180,16 @@ static void conf_opt(int level, void *pt
  {
  	p_indent(level, 0);
  	while (len > 0) {
@@ -64,7 +69,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  			printf("FlushTO %d ", conf_opt_val((uint8_t *)(h + 1), h->length));
  			break;
  		default:
-@@ -197,9 +199,9 @@ static void conf_opt(int level, void *pt
+@@ -197,9 +200,9 @@ static void conf_opt(int level, void *pt
  	printf("\n");
  }
  
@@ -76,7 +81,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  	int clen = le16toh(cmd->length) - sizeof(*h);
  
  	if (p_filter(FILT_L2CAP))
-@@ -211,9 +213,9 @@ static void conf_req(int level, ng_l2cap
+@@ -211,9 +214,9 @@ static void conf_req(int level, ng_l2cap
  		conf_opt(level, (void *)(h + 1), clen);
  }
  
@@ -88,7 +93,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  	int clen = le16toh(cmd->length) - sizeof(*h);
  
  	if (p_filter(FILT_L2CAP))
-@@ -227,7 +229,7 @@ static void conf_rsp(int level, ng_l2cap
+@@ -227,7 +230,7 @@ static void conf_rsp(int level, ng_l2cap
  
  static void disconn_req(int level, struct frame *frm)
  {
@@ -97,7 +102,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  
  	if (p_filter(FILT_L2CAP))
  		return;
-@@ -238,7 +240,7 @@ static void disconn_req(int level, struc
+@@ -238,7 +241,7 @@ static void disconn_req(int level, struc
  
  static void disconn_rsp(int level, struct frame *frm)
  {
@@ -106,7 +111,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  	del_cid(frm->in, le16toh(h->dcid), le16toh(h->scid));
  
  	if (p_filter(FILT_L2CAP))
-@@ -248,7 +250,7 @@ static void disconn_rsp(int level, struc
+@@ -248,7 +251,7 @@ static void disconn_rsp(int level, struc
  			le16toh(h->dcid), le16toh(h->scid));
  }
  
@@ -115,7 +120,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  {
  	if (p_filter(FILT_L2CAP))
  		return;
-@@ -258,7 +260,7 @@ static void echo_req(int level, ng_l2cap
+@@ -258,7 +261,7 @@ static void echo_req(int level, ng_l2cap
  	raw_dump(level, frm);
  }
  
@@ -124,7 +129,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  {
  	if (p_filter(FILT_L2CAP))
  		return;
-@@ -268,7 +270,7 @@ static void echo_rsp(int level, ng_l2cap
+@@ -268,7 +271,7 @@ static void echo_rsp(int level, ng_l2cap
  	raw_dump(level, frm);
  }
  
@@ -133,7 +138,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  {
  	if (p_filter(FILT_L2CAP))
  		return;
-@@ -278,7 +280,7 @@ static void info_req(int level, ng_l2cap
+@@ -278,7 +281,7 @@ static void info_req(int level, ng_l2cap
  	raw_dump(level, frm);
  }
  
@@ -142,7 +147,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  {
  	if (p_filter(FILT_L2CAP))
  		return;
-@@ -290,7 +292,7 @@ static void info_rsp(int level, ng_l2cap
+@@ -290,7 +293,7 @@ static void info_rsp(int level, ng_l2cap
  
  static void l2cap_parse(int level, struct frame *frm)
  {
@@ -151,7 +156,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  	uint16_t dlen = le16toh(hdr->length);
  	uint16_t cid  = le16toh(hdr->dcid);
  	uint16_t psm;
-@@ -301,71 +303,71 @@ static void l2cap_parse(int level, struc
+@@ -301,71 +304,71 @@ static void l2cap_parse(int level, struc
  	if (cid == 0x1) {
  		/* Signaling channel */
  
@@ -248,7 +253,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  		}
  	} else if (cid == 0x2) {
  		/* Connectionless channel */
-@@ -381,16 +383,16 @@ static void l2cap_parse(int level, struc
+@@ -381,16 +384,16 @@ static void l2cap_parse(int level, struc
  		raw_dump(level, frm);
  	} else {
  		/* Connection oriented channel */
@@ -268,7 +273,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
  		case 0x01:
  			if (!p_filter(FILT_SDP))
  				sdp_dump(level+1, frm);
-@@ -440,11 +442,11 @@ static void l2cap_parse(int level, struc
+@@ -440,11 +443,11 @@ static void l2cap_parse(int level, struc
  void l2cap_dump(int level, struct frame *frm)
  {
  	struct frame *fr;

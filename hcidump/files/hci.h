@@ -1,4 +1,4 @@
-/* $NetBSD: hci.h,v 1.1 2005/11/09 19:00:27 plunky Exp $ */
+/* $NetBSD: hci.h,v 1.2 2005/11/14 23:43:28 plunky Exp $ */
 /*
  * Copyright (c) 2005 NetBSD Foundation
  * All rights reserved.
@@ -30,8 +30,8 @@
  * This information originated in the Bluetooth v1.1 specification
  */
 
-#ifndef _BLUETOOTH_HCI_H_
-#define _BLUETOOTH_HCI_H_
+#ifndef _NETBT_HCI_H_
+#define _NETBT_HCI_H_
 
 /**************************************************************************
  **************************************************************************
@@ -137,9 +137,8 @@
 
 /* Scan enable */
 #define HCI_NO_SCAN_ENABLE			0x00
-#define HCI_INQUIRY_ENABLE_PAGE_DISABLE		0x01
-#define HCI_INQUIRY_DISABLE_PAGE_ENABLE		0x02
-#define HCI_INQUIRY_ENABLE_PAGE_ENABLE		0x03
+#define HCI_INQUIRY_SCAN_ENABLE			0x01
+#define HCI_PAGE_SCAN_ENABLE			0x02
 /* 0x04 - 0xFF - reserved for future use */
 
 /* Hold mode activities */
@@ -1500,9 +1499,11 @@ typedef struct {
 
 /**************************************************************************
  **************************************************************************
- **                 Socket definitions
+ **                 HCI Socket Definitions
  **************************************************************************
  **************************************************************************/
+
+// XXX move this to bluetooth.h
 
 /* HCI socket options */
 #define SO_HCI_EVT_FILTER		1	/* get/set event filter */
@@ -1596,6 +1597,7 @@ struct btreq {
 #define BTF_XMIT		(BTF_XMIT_CMD | BTF_XMIT_ACL | BTF_XMIT_SCO)
 #define BTF_INIT_BDADDR		(1<<5)	/* waiting for bdaddr */
 #define BTF_INIT_BUFFER_SIZE	(1<<6)	/* waiting for buffer size */
+#define BTF_INIT		(BTF_INIT_BDADDR | BTF_INIT_BUFFER_SIZE)
 
 #define SIOCGBTINFO	_IOWR('b', 5, struct btreq)	/* get unit info */
 #define SIOCNBTINFO	_IOWR('b', 6, struct btreq)	/* next unit info */
@@ -1604,4 +1606,6 @@ struct btreq {
 #define SIOCGBTSTATS	_IOWR('b', 8, struct btreq)	/* get unit statistics */
 #define SIOCZBTSTATS	_IOWR('b', 9, struct btreq)	/* zero unit statistics */
 
-#endif /* _BLUETOOTH_HCI_H_ */
+#define SIOCDBTCONN	_IOW('b', 10, struct btreq)	/* dump connection info for unit */
+
+#endif /* _NETBT_HCI_H_ */

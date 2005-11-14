@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
+$NetBSD: patch-ag,v 1.2 2005/11/14 23:43:28 plunky Exp $
 
 --- parser/hci.c.orig	2003-09-13 00:38:11.000000000 +0100
 +++ parser/hci.c
-@@ -25,10 +25,13 @@
+@@ -25,9 +25,13 @@
   */
  
  #include <sys/types.h>
@@ -10,14 +10,14 @@ $NetBSD: patch-ag,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
  #include <sys/endian.h>
 -#include <netgraph/bluetooth/include/ng_hci.h>
  #include <stdio.h>
- 
++#include <string.h>
++
 +#include <bluetooth/bluetooth.h>
 +#include <bluetooth/hci.h>
-+
+ 
  #include "parser.h"
  
- char *event_map[] = {
-@@ -215,56 +218,56 @@ char *cmd_status_map[] = {
+@@ -215,56 +219,56 @@ char *cmd_status_map[] = {
  
  static void command_dump(int level, struct frame *frm)
  {
@@ -84,7 +84,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
  		cmd = "Vendor";
  		break;
  
-@@ -286,7 +289,7 @@ static void command_dump(int level, stru
+@@ -286,7 +290,7 @@ static void command_dump(int level, stru
  
  static void event_dump(int level, struct frame *frm)
  {
@@ -93,7 +93,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
  
  	if (p_filter(FILT_HCI))
  		return;
-@@ -296,9 +299,9 @@ static void event_dump(int level, struct
+@@ -296,9 +300,9 @@ static void event_dump(int level, struct
  	if (hdr->event <= EVENT_NUM)
  		printf("HCI Event: %s(0x%2.2x) plen %d\n",
  			event_map[hdr->event], hdr->event, hdr->length);
@@ -105,7 +105,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
  		printf("HCI Event: Vendor(0x%2.2x) plen %d\n", hdr->event, hdr->length);
  	else
  		printf("HCI Event: code 0x%2.2x plen %d\n", hdr->event, hdr->length);
-@@ -311,22 +314,22 @@ static void event_dump(int level, struct
+@@ -311,22 +315,22 @@ static void event_dump(int level, struct
  
  static void acl_dump(int level, struct frame *frm)
  {
@@ -132,7 +132,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
  
  	if (parser.filter & ~FILT_HCI)
  		l2cap_dump(level, frm);
-@@ -336,13 +339,13 @@ static void acl_dump(int level, struct f
+@@ -336,13 +340,13 @@ static void acl_dump(int level, struct f
  
  static void sco_dump(int level, struct frame *frm)
  {
@@ -149,7 +149,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
  		level++;
  
  		frm->ptr += sizeof(*hdr);
-@@ -356,19 +359,19 @@ void hci_dump(int level, struct frame *f
+@@ -356,19 +360,19 @@ void hci_dump(int level, struct frame *f
  	uint8_t type = *(uint8_t *)frm->ptr; 
  
  	switch (type) {

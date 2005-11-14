@@ -1,4 +1,4 @@
-/* $NetBSD: bluetooth.h,v 1.1 2005/11/09 19:00:27 plunky Exp $ */
+/* $NetBSD: bluetooth.h,v 1.2 2005/11/14 23:43:28 plunky Exp $ */
 /*
  * Copyright (c) 2005 Iain D. Hibbert,
  * All rights reserved.
@@ -26,11 +26,10 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _BLUETOOTH_BLUETOOTH_H_
-#define _BLUETOOTH_BLUETOOTH_H_
+#ifndef _NETBT_BLUETOOTH_H_
+#define _NETBT_BLUETOOTH_H_
 
 #include <sys/socket.h>
-#include <string.h>
 
 /*
  * Bluetooth Protocol Numbers
@@ -77,4 +76,4 @@ static inline void bdaddr_copy(bdaddr_t *d, bdaddr_t *s)
 	memcpy(d, s, sizeof(bdaddr_t));
 }
 
-#endif	/* _BLUETOOTH_BLUETOOTH_H_ */
+#endif	/* _NETBT_BLUETOOTH_H_ */

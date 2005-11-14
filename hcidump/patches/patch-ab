@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
+$NetBSD: patch-ab,v 1.2 2005/11/14 23:43:28 plunky Exp $
 
 --- hcidump/hcidump.c.orig	2004-03-03 18:52:10.000000000 +0000
 +++ hcidump/hcidump.c
@@ -62,7 +62,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
  		perror("Can't open output file");
  		exit(1);
  	}
-@@ -228,12 +229,12 @@ static int open_file(char *file, int mod
+@@ -228,8 +229,8 @@ static int open_file(char *file, int mod
  
  static int open_socket(char *dev)
  {
@@ -73,11 +73,6 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
  	int s, opt;
  
  	/* Create HCI socket */
--	if ((s=socket(AF_BLUETOOTH, SOCK_RAW, BLUETOOTH_PROTO_HCI)) < 0) {
-+	if ((s=socket(AF_BLUETOOTH, SOCK_DGRAM, BLUETOOTH_PROTO_HCI)) < 0) {
- 		perror("Can't create HCI socket");
- 		exit(1);
- 	}
 @@ -245,37 +246,55 @@ static int open_socket(char *dev)
  	}
  

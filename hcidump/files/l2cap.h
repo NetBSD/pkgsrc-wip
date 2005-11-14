@@ -1,4 +1,4 @@
-/*	$NetBSD: l2cap.h,v 1.1 2005/11/09 19:00:27 plunky Exp $	*/
+/*	$NetBSD: l2cap.h,v 1.2 2005/11/14 23:43:28 plunky Exp $	*/
 /*-
  * Copyright (c) Maksim Yevmenkin <m_evmenkin@yahoo.com>
  * All rights reserved.
@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $Id: l2cap.h,v 1.1 2005/11/09 19:00:27 plunky Exp $
+ * $Id: l2cap.h,v 1.2 2005/11/14 23:43:28 plunky Exp $
  * $FreeBSD: src/sys/netgraph/bluetooth/include/l2cap.h,v 1.4 2005/08/31 18:13:23 emax Exp $
  */
 
@@ -36,8 +36,8 @@
  * This file can be included by both kernel and userland applications.
  */
 
-#ifndef _BLUETOOTH_L2CAP_H_
-#define _BLUETOOTH_L2CAP_H_
+#ifndef _NETBT_L2CAP_H_
+#define _NETBT_L2CAP_H_
 
 /**************************************************************************
  **************************************************************************
@@ -52,12 +52,12 @@
  * does not depend on number of connections.
  */
 
-#define L2CAP_NULL_CID	0x0000	/* DO NOT USE THIS CID */
-#define L2CAP_SIGNAL_CID	0x0001	/* signaling channel ID */
-#define L2CAP_CLT_CID	0x0002	/* connectionless channel ID */
+#define L2CAP_NULL_CID			0x0000	/* DO NOT USE THIS CID */
+#define L2CAP_SIGNAL_CID		0x0001	/* signaling channel ID */
+#define L2CAP_CLT_CID			0x0002	/* connectionless channel ID */
 	/* 0x0003 - 0x003f Reserved */
-#define L2CAP_FIRST_CID	0x0040	/* dynamically alloc. (start) */
-#define L2CAP_LAST_CID	0xffff	/* dynamically alloc. (end) */
+#define L2CAP_FIRST_CID			0x0040	/* dynamically alloc. (start) */
+#define L2CAP_LAST_CID			0xffff	/* dynamically alloc. (end) */
 
 /* L2CAP MTU */
 #define L2CAP_MTU_MINIMUM		48
@@ -66,35 +66,35 @@
 
 /* L2CAP flush and link timeouts */
 #define L2CAP_FLUSH_TIMO_DEFAULT	0xffff /* always retransmit */
-#define L2CAP_LINK_TIMO_DEFAULT	0xffff
+#define L2CAP_LINK_TIMO_DEFAULT		0xffff
 
 /* L2CAP Command Reject reasons */
 #define L2CAP_REJ_NOT_UNDERSTOOD	0x0000
-#define L2CAP_REJ_MTU_EXCEEDED	0x0001
-#define L2CAP_REJ_INVALID_CID	0x0002
+#define L2CAP_REJ_MTU_EXCEEDED		0x0001
+#define L2CAP_REJ_INVALID_CID		0x0002
 /* 0x0003 - 0xffff - reserved for future use */
 
 /* Protocol/Service Multioplexor (PSM) values */
-#define L2CAP_PSM_ANY		0x0000	/* Any/Invalid PSM */
-#define L2CAP_PSM_SDP		0x0001	/* Service Discovery Protocol */
-#define L2CAP_PSM_RFCOMM	0x0003	/* RFCOMM protocol */
-#define L2CAP_PSM_TCP		0x0005	/* Telephony Control Protocol */
+#define L2CAP_PSM_ANY			0x0000	/* Any/Invalid PSM */
+#define L2CAP_PSM_SDP			0x0001	/* Service Discovery Protocol */
+#define L2CAP_PSM_RFCOMM		0x0003	/* RFCOMM protocol */
+#define L2CAP_PSM_TCP			0x0005	/* Telephony Control Protocol */
 /* 0x0006 - 0x1000 - reserved for future use */
 
 /* L2CAP Connection response command result codes */
-#define L2CAP_SUCCESS		0x0000
-#define L2CAP_PENDING		0x0001
-#define L2CAP_PSM_NOT_SUPPORTED	0x0002
-#define L2CAP_SEQUIRY_BLOCK	0x0003
-#define L2CAP_NO_RESOURCES	0x0004
-#define L2CAP_TIMEOUT		0xeeee
-#define L2CAP_UNKNOWN		0xffff
+#define L2CAP_SUCCESS			0x0000
+#define L2CAP_PENDING			0x0001
+#define L2CAP_PSM_NOT_SUPPORTED		0x0002
+#define L2CAP_SEQUIRY_BLOCK		0x0003
+#define L2CAP_NO_RESOURCES		0x0004
+#define L2CAP_TIMEOUT			0xeeee
+#define L2CAP_UNKNOWN			0xffff
 /* 0x0005 - 0xffff - reserved for future use */
 
 /* L2CAP Connection response status codes */
-#define L2CAP_NO_INFO		0x0000
-#define L2CAP_AUTH_PENDING	0x0001
-#define L2CAP_AUTZ_PENDING	0x0002
+#define L2CAP_NO_INFO			0x0000
+#define L2CAP_AUTH_PENDING		0x0001
+#define L2CAP_AUTZ_PENDING		0x0002
 /* 0x0003 - 0xffff - reserved for future use */
 
 /* L2CAP Configuration response result codes */
@@ -165,7 +165,7 @@ typedef struct {
 } __attribute__ ((packed)) l2cap_cmd_hdr_t;
 
 /* L2CAP Command Reject */
-#define L2CAP_CMD_REJ	0x01
+#define L2CAP_CMD_REJ			0x01
 typedef struct {
 	u_int16_t	reason; /* reason to reject command */
 /*	u_int8_t	data[]; -- optional data (depends on reason) */
@@ -186,14 +186,14 @@ typedef union {
 typedef l2cap_cmd_rej_data_t * l2cap_cmd_rej_data_p;
 
 /* L2CAP Connection Request */
-#define L2CAP_CON_REQ	0x02
+#define L2CAP_CON_REQ			0x02
 typedef struct {
 	u_int16_t	psm;  /* Protocol/Service Multiplexor (PSM) */
 	u_int16_t	scid; /* source channel ID */
 } __attribute__ ((packed)) l2cap_con_req_cp;
 
 /* L2CAP Connection Response */
-#define L2CAP_CON_RSP	0x03
+#define L2CAP_CON_RSP			0x03
 typedef struct {
 	u_int16_t	dcid;   /* destination channel ID */
 	u_int16_t	scid;   /* source channel ID */
@@ -202,7 +202,7 @@ typedef struct {
 } __attribute__ ((packed)) l2cap_con_rsp_cp;
 
 /* L2CAP Configuration Request */
-#define L2CAP_CFG_REQ	0x04
+#define L2CAP_CFG_REQ			0x04
 typedef struct {
 	u_int16_t	dcid;  /* destination channel ID */
 	u_int16_t	flags; /* flags */
@@ -210,7 +210,7 @@ typedef struct {
 } __attribute__ ((packed)) l2cap_cfg_req_cp;
 
 /* L2CAP Configuration Response */
-#define L2CAP_CFG_RSP	0x05
+#define L2CAP_CFG_RSP			0x05
 typedef struct {
 	u_int16_t	scid;   /* source channel ID */
 	u_int16_t	flags;  /* flags */
@@ -235,34 +235,34 @@ typedef union {
 typedef l2cap_cfg_opt_val_t * l2cap_cfg_opt_val_p;
 
 /* L2CAP Disconnect Request */
-#define L2CAP_DISCON_REQ	0x06
+#define L2CAP_DISCON_REQ		0x06
 typedef struct {
 	u_int16_t	dcid; /* destination channel ID */
 	u_int16_t	scid; /* source channel ID */
 } __attribute__ ((packed)) l2cap_discon_req_cp;
 
 /* L2CAP Disconnect Response */
-#define L2CAP_DISCON_RSP	0x07
+#define L2CAP_DISCON_RSP		0x07
 typedef l2cap_discon_req_cp	l2cap_discon_rsp_cp;
 
 /* L2CAP Echo Request */
-#define L2CAP_ECHO_REQ	0x08
+#define L2CAP_ECHO_REQ			0x08
 /* No command parameters, only optional data */
 
 /* L2CAP Echo Response */
-#define L2CAP_ECHO_RSP	0x09
+#define L2CAP_ECHO_RSP			0x09
 #define L2CAP_MAX_ECHO_SIZE \
 	(L2CAP_MTU_MAXIMUM - sizeof(l2cap_cmd_hdr_t))
 /* No command parameters, only optional data */
 
 /* L2CAP Information Request */
-#define L2CAP_INFO_REQ	0x0a
+#define L2CAP_INFO_REQ			0x0a
 typedef struct {
 	u_int16_t	type; /* requested information type */
 } __attribute__ ((packed)) l2cap_info_req_cp;
 
 /* L2CAP Information Response */
-#define L2CAP_INFO_RSP	0x0b
+#define L2CAP_INFO_RSP			0x0b
 typedef struct {
 	u_int16_t	type;   /* requested information type */
 	u_int16_t	result; /* 0x00 - success */
@@ -282,32 +282,24 @@ typedef l2cap_info_rsp_data_t *	l2cap_info_rsp_data_p;
 
 /**************************************************************************
  **************************************************************************
- **        Upper layer protocol interface. L2CA_xxx messages 
+ **        	L2CAP Socket Definitions
  **************************************************************************
  **************************************************************************/
 
-/*
- * NOTE! NOTE! NOTE!
- *
- * Bluetooth specification says that L2CA_xxx request must block until
- * response is ready. We are not allowed to block in Netgraph, so we 
- * need to queue request and save some information that can be used 
- * later and help match request and response.
- *
- * The idea is to use "token" field from Netgraph message header. The
- * upper layer protocol _MUST_ populate "token". L2CAP will queue request
- * (using L2CAP command descriptor) and start processing. Later, when
- * response is ready or timeout has occur L2CAP layer will create new 
- * Netgraph message, set "token" and RESP flag and send the message to
- * the upper layer protocol. 
- *
- * L2CA_xxx_Ind messages _WILL_NOT_ populate "token" and _WILL_NOT_
- * set RESP flag. There is no reason for this, because they are just
- * notifications and do not require acknowlegment.
- *
- * NOTE: This is _NOT_ what NG_MKRESPONSE and NG_RESPOND_MSG do, however
- *       it is somewhat similar.
- */
+#define SO_L2CAP_PSM		1
+#define SO_L2CAP_IMTU		2
+#define SO_L2CAP_OMTU		3
+#define SO_L2CAP_IFLOW		4
+#define SO_L2CAP_OFLOW		5
+#define SO_L2CAP_FLUSH		6
+
+#endif /* _NETBT_L2CAP_H_ */
+
+/**************************************************************************
+ **************************************************************************
+ **        Upper layer protocol interface. L2CA_xxx messages 
+ **************************************************************************
+ **************************************************************************/
 
 /* L2CA data packet header */
 typedef struct {
@@ -550,97 +542,3 @@ typedef struct {
  * 	u_int16_t	result; /* 0x00 - success */
  * } l2cap_l2ca_enable_clt_op;
 #endif
-
-#endif /* _BLUETOOTH_L2CAP_H_ */
-
-/**************************************************************************
- **************************************************************************
- **                          L2CAP node messages
- **************************************************************************
- **************************************************************************/
-
-/* L2CAP connection states */
-#define NG_L2CAP_CON_CLOSED		0	/* connection closed */
-#define NG_L2CAP_W4_LP_CON_CFM		1	/* waiting... */
-#define NG_L2CAP_CON_OPEN		2	/* connection open */
-
-/* L2CAP channel states */
-#define NG_L2CAP_CLOSED			0	/* channel closed */
-#define NG_L2CAP_W4_L2CAP_CON_RSP	1	/* wait for L2CAP resp. */
-#define NG_L2CAP_W4_L2CA_CON_RSP	2	/* wait for upper resp. */
-#define NG_L2CAP_CONFIG			3	/* L2CAP configuration */
-#define NG_L2CAP_OPEN			4	/* channel open */
-#define NG_L2CAP_W4_L2CAP_DISCON_RSP	5	/* wait for L2CAP discon. */
-#define NG_L2CAP_W4_L2CA_DISCON_RSP	6	/* wait for upper discon. */
-
-/* Node flags */
-#define NG_L2CAP_CLT_SDP_DISABLED	(1 << 0)      /* disable SDP CLT */
-#define NG_L2CAP_CLT_RFCOMM_DISABLED	(1 << 1)      /* disable RFCOMM CLT */
-#define NG_L2CAP_CLT_TCP_DISABLED	(1 << 2)      /* disable TCP CLT */
-
-/* Debug levels */
-#define NG_L2CAP_ALERT_LEVEL		1
-#define NG_L2CAP_ERR_LEVEL		2
-#define NG_L2CAP_WARN_LEVEL		3
-#define NG_L2CAP_INFO_LEVEL		4
-
-/* Get node flags (see flags above) */
-#define	NGM_L2CAP_NODE_GET_FLAGS	0x400	/* L2CAP -> User */
-typedef u_int16_t	l2cap_node_flags_ep;
-
-/* Get/Set debug level (see levels above) */
-#define	NGM_L2CAP_NODE_GET_DEBUG	0x401	/* L2CAP -> User */
-#define	NGM_L2CAP_NODE_SET_DEBUG	0x402	/* User -> L2CAP */
-typedef u_int16_t	l2cap_node_debug_ep;
-
-#define NGM_L2CAP_NODE_HOOK_INFO	0x409	/* L2CAP -> Upper */
-/* bdaddr_t bdaddr; -- local (source BDADDR) */
-
-#define NGM_L2CAP_NODE_GET_CON_LIST	0x40a	/* L2CAP -> User */
-typedef struct {
-	u_int32_t	num_connections; /* number of connections */
-} l2cap_node_con_list_ep;
-
-/* Connection flags */
-#define NG_L2CAP_CON_TX			(1 << 0) /* sending data */
-#define NG_L2CAP_CON_RX			(1 << 1) /* receiving data */
-#define NG_L2CAP_CON_OUTGOING		(1 << 2) /* outgoing connection */
-#define NG_L2CAP_CON_LP_TIMO		(1 << 3) /* LP timeout */
-#define NG_L2CAP_CON_AUTO_DISCON_TIMO	(1 << 4) /* auto discon. timeout */
-#define NG_L2CAP_CON_DYING		(1 << 5) /* connection is dying */
-
-typedef struct {
-	u_int8_t	state;      /* connection state */
-	u_int8_t	flags;      /* flags */
-	int16_t		pending;    /* num. pending packets */
-	u_int16_t	con_handle; /* connection handle */
-	bdaddr_t	remote;     /* remote bdaddr */
-} l2cap_node_con_ep;
-
-#define NG_L2CAP_MAX_CON_NUM \
-	((0xffff - sizeof(l2cap_node_con_list_ep))/sizeof(l2cap_node_con_ep))
-
-#define NGM_L2CAP_NODE_GET_CHAN_LIST	0x40b	/* L2CAP -> User */
-typedef struct {
-	u_int32_t	num_channels;	/* number of channels */
-} l2cap_node_chan_list_ep;
-
-typedef struct {
-	u_int32_t	state;		/* channel state */
-
-	u_int16_t	scid;		/* source (local) channel ID */
-	u_int16_t	dcid;		/* destination (remote) channel ID */
-
-	u_int16_t	imtu;		/* incomming MTU */
-	u_int16_t	omtu;		/* outgoing MTU */
-
-	u_int16_t	psm;		/* PSM */
-	bdaddr_t	remote;		/* remote bdaddr */
-} l2cap_node_chan_ep;
-
-#define NG_L2CAP_MAX_CHAN_NUM \
-	((0xffff - sizeof(l2cap_node_chan_list_ep))/sizeof(l2cap_node_chan_ep))
-
-#define NGM_L2CAP_NODE_GET_AUTO_DISCON_TIMO 0x40c /* L2CAP -> User */
-#define NGM_L2CAP_NODE_SET_AUTO_DISCON_TIMO 0x40d /* User -> L2CAP */
-typedef u_int16_t	l2cap_node_auto_discon_ep;
