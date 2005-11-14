@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/11 23:58:54 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/14 14:04:00 emil_s Exp $
 #
 
 DISTNAME=		lhs2tex-1.10pre
@@ -13,22 +13,26 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
-DOCDIR=			${PREFIX}/share/doc/lhs2tex
 
 
-# We must convert ${PREFIX}/share to a comma separated list of quoted strings
-# e.g. /usr/pkg/share -> "usr","pkg","share"
-PREFIX_HS_cmd=		${ECHO} ${PREFIX}/share | \
-			${SED} -e 's;^/;;'  \
-			-e 's;/;\\",\\";g' \
-			-e 's;\(.*\);\\"\1\\";'
+# We must convert ${PREFIX} to a comma separated list of quoted strings
+# e.g. /usr/pkg -> "usr","pkg"
+PREFIX_HS_cmd=		${ECHO} ${PREFIX} |             \
+			${SED}  -e 's|^/*||'            \
+				-e 's|/*$$||'		\
+				-e 's|/|","|g'    	\
+				-e 's|\(.*\)|"\1"|'
 PREFIX_HS=		${PREFIX_HS_cmd:sh}
 
-post-patch:
-	${MV} ${WRKSRC}/FileNameUtils.lhs ${WRKSRC}/FileNameUtils.lhs.orig
-	${SED} -e "s/@PREFIX_HS@/${PREFIX_HS}/"  \
-		${WRKSRC}/FileNameUtils.lhs.orig \
-		> ${WRKSRC}/FileNameUtils.lhs
+# and then hardcode the path to directory where the latex format file is found
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-configure
+SUBST_MESSAGE.path=	Fixing hardcoded path
+SUBST_FILES.path=	FileNameUtils.lhs
+SUBST_SED.path=		-e 's|@PREFIX_HS@|${PREFIX_HS}|'
+
+DOCDIR=			${PREFIX}/share/doc/lhs2tex
+
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}

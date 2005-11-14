@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/11/11 23:58:54 emil_s Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/14 14:04:00 emil_s Exp $
 
 --- FileNameUtils.lhs.orig	2004-04-01 22:06:34.000000000 +0100
 +++ FileNameUtils.lhs
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/11/11 23:58:54 emil_s Exp $
  >                                  ,deep (relPath [env "HOME","lhs2TeX"])
  >                                  ,deep (relPath [env "HOME",".lhs2TeX"])
  >                                  ,deep (relPath [env "LHS2TEX"])
-+>                                  ,deep (absPath [@PREFIX_HS@,"lhs2tex"])
++>                                  ,deep (absPath [@PREFIX_HS@, "share", "lhs2tex"])
  >                                  ,deep (absPath ["usr","local","share","lhs2tex"])
  >                                  ,deep (absPath ["usr","local","share","lhs2TeX"])
  >                                  ,deep (absPath ["usr","local","lib","lhs2tex"])
