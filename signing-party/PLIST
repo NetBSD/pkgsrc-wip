@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/14 15:16:58 jtonio Exp $
+bin/caff
+bin/pgp-fixkey
+bin/pgp-clean
+bin/gpg-key2ps
+bin/gpgsigs
+bin/gpglist
+bin/keylookup
+bin/gpg-mailkeys
+man/man1/caff.1
+man/man1/pgp-fixkey.1
+man/man1/pgp-clean.1
+man/man1/gpg-key2ps.1
+man/man1/gpgsigs.1
+man/man1/gpglist.1
+man/man1/keylookup.1
+man/man1/gpg-mailkeys.1
