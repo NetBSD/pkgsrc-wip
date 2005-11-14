@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/11/13 09:28:08 leonardschmidt Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/11/14 09:22:43 leonardschmidt Exp $
 bin/bmpx
 bin/ctt
 bin/hash_index
@@ -94,6 +94,11 @@ share/bmpx/icons/themes/plastic/icon_playlist_16.png
 share/bmpx/icons/themes/plastic/icon_playlist_32.png
 share/bmpx/icons/themes/plastic/icon_playlist_48.png
 share/bmpx/icons/themes/plastic/icon_playlist_64.png
+share/bmpx/icons/themes/red/icon_library_128.png
+share/bmpx/icons/themes/red/icon_library_16.png
+share/bmpx/icons/themes/red/icon_library_32.png
+share/bmpx/icons/themes/red/icon_library_48.png
+share/bmpx/icons/themes/red/icon_library_64.png
 share/bmpx/icons/themes/red/icon_player_128.png
 share/bmpx/icons/themes/red/icon_player_16.png
 share/bmpx/icons/themes/red/icon_player_32.png
@@ -126,6 +131,7 @@ share/bmpx/images/plugins.png
 share/bmpx/images/plugins_ia.png
 share/bmpx/images/preferences-logo.png
 share/bmpx/images/shoutcast.png
+share/bmpx/images/splash.png
 share/bmpx/images/wait.gif
 share/bmpx/images/xiph.png
 share/bmpx/skins/default/README
@@ -154,6 +160,7 @@ ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/bmpx.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bmpx.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/bmpx.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bmpx.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/bmpx.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bmpx.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/bmpx.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bmpx.mo

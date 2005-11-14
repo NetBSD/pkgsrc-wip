@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.15 2005/11/13 09:28:08 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.16 2005/11/14 09:22:43 leonardschmidt Exp $
 #
 
-DISTNAME=	bmpx-0.12.5
+DISTNAME=	bmpx-0.12.6.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=beepmp/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +17,7 @@ PLIST_SRC=	${.CURDIR}/../../wip/bmpx/PLIST
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		gnome2-1.5 xdg-1.2
+USE_DIRS+=		xdg-1.2
 USE_TOOLS+=		bison gmake pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
