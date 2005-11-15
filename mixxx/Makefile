@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/15 09:44:54 ghen Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/15 10:48:19 ghen Exp $
 
 DISTNAME=		mixxx-1.4.2
 CATEGORIES=		audio
@@ -34,4 +34,5 @@ BUILDLINK_DEPMETHOD.qt3-tools=	build
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
