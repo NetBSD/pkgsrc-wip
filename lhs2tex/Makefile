@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/14 14:04:00 emil_s Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/15 01:56:22 minskim Exp $
 #
 
 DISTNAME=		lhs2tex-1.10pre
@@ -33,6 +33,8 @@ SUBST_SED.path=		-e 's|@PREFIX_HS@|${PREFIX_HS}|'
 
 DOCDIR=			${PREFIX}/share/doc/lhs2tex
 
+.include "../../print/teTeX/module.mk"
+.include "../../lang/ghc/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -46,10 +48,5 @@ post-install:
 		${PKG_LOCALTEXMFPREFIX}/tex/latex/polytable
 	${INSTALL_DATA} ${WRKSRC}/polytable/lazylist.sty \
 		${PKG_LOCALTEXMFPREFIX}/tex/latex/lazylist
-	${LOCALBASE}/bin/texconfig rehash
-	${LOCALBASE}/bin/mktexlsr
 
-
-.include "../../mk/tex.buildlink3.mk"
-.include "../../lang/ghc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

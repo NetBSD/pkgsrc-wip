@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/11 23:58:54 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/15 01:56:22 minskim Exp $
 bin/lhs2TeX
 share/doc/lhs2tex/Guide2.pdf
 share/doc/lhs2tex/INSTALL
@@ -8,10 +8,6 @@ share/lhs2tex/lhs2TeX.fmt
 share/lhs2tex/lhs2TeX.sty
 share/texmf/tex/latex/lazylist/lazylist.sty
 share/texmf/tex/latex/polytable/polytable.sty
-@exec %D/bin/texconfig rehash
-@unexec %D/bin/texconfig rehash
-@exec %D/bin/mktexlsr
-@unexec %D/bin/mktexlsr
 @dirrm share/texmf/tex/latex/polytable
 @dirrm share/texmf/tex/latex/lazylist
 @dirrm share/lhs2tex
