@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2046 2005/11/14 19:08:11 lexort Exp $
+# $Id: Makefile,v 1.2047 2005/11/15 03:02:27 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1118,7 +1118,6 @@ SUBDIR+=	terminus-font
 SUBDIR+=	testdisk
 SUBDIR+=	tetrinet
 SUBDIR+=	tetrinetx
-SUBDIR+=	tex-foiltex
 SUBDIR+=	tex-hlatex
 SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
