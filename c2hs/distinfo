@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/15 13:57:36 emil_s Exp $
+
+SHA1 (c2hs-0.14.3.tar.gz) = 11508e235c4a78f04f85b8932ea22f8b62c74747
+RMD160 (c2hs-0.14.3.tar.gz) = d020f0224cfe56cdd2613887480186d57fbd858e
+Size (c2hs-0.14.3.tar.gz) = 306118 bytes
+SHA1 (patch-aa) = ee3fe5a4d3438a955a10999975d4b6d7bfcb849e

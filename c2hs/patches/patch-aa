@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/15 13:57:36 emil_s Exp $
+
+--- c2hs.cabal.orig	2005-11-07 13:00:14.000000000 +0000
++++ c2hs.cabal
+@@ -15,6 +15,7 @@ Description:	C->Haskell assists in the d
+ 	libraries.  It extracts C interface information from vanilla header 
+ 	files and generates marshaling and signature code in Haskell.
+ Category:       Development tool
++Build-Depends:  base, haskell98
+ 
+ Executable:     c2hs
+ Hs-Source-Dirs:	base/admin 
