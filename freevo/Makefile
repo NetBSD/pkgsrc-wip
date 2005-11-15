@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/11/14 06:17:15 dhowland Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/15 01:29:48 dhowland Exp $
 #
 
 DISTNAME=		freevo-1.5.3
@@ -12,6 +12,7 @@ COMMENT=		Fancy-lookging digital video jukebox
 DEPENDS+=		aumix>=2.8:../../audio/aumix
 DEPENDS+=		lsdvd>=0.10:../../multimedia/lsdvd
 DEPENDS+=		mplayer>=1.0rc7:../../multimedia/mplayer
+DEPENDS+=		${PYPKGPREFIX}-sqlite>=1.0.1:../../databases/py-sqlite
 DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
 DEPENDS+=		${PYPKGPREFIX}-twisted-web>=0.5.0:../../wip/py-twisted-web
 
