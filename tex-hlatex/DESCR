@@ -1,7 +1,0 @@
-HLaTeX is a TeX macro package to use Hangul with LaTeX.  With this
-package, you can run latex on a UHC-based Korean LaTeX file to produce
-a Korean document.  You can typeset all Korean characters defined in
-UHC, including Korean Symbol, Hangul and Hanja.  UHC means Unified
-Hangul Code, Microsoft's own Hangul code including EUC-KR.  Currently,
-HLaTeX can be used with Lambda/Omega.  tetex-1.0 and above include
-them.

@@ -1,2 +1,0 @@
-This package causes an error when teTeX-share is deinstalled, because
-it modifies ${TEXMF}/dvips/config/psfonts.map
