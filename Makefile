@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2048 2005/11/15 07:16:42 minskim Exp $
+# $Id: Makefile,v 1.2049 2005/11/15 14:03:26 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -105,6 +105,7 @@ SUBDIR+=	bwidget
 SUBDIR+=	bwm-ng
 SUBDIR+=	c-ares
 SUBDIR+=	c-news
+SUBDIR+=	c2hs
 SUBDIR+=	cabal
 SUBDIR+=	cabot
 SUBDIR+=	caml-libnum
