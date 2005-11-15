@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/15 14:32:42 emil_s Exp $
+
+SHA1 (alex-2.0.1-src.tar.gz) = 9314815e100eee84cd3d308a6b2d0ef9d000b9bd
+RMD160 (alex-2.0.1-src.tar.gz) = a5afc29d4a8d709815cbe6ed171bde6129a3e7bc
+Size (alex-2.0.1-src.tar.gz) = 346724 bytes
+SHA1 (alex-html.tar.gz) = 3b53fe9b323b250bb2b8813866fae414bfa2700e
+RMD160 (alex-html.tar.gz) = 0f89b0ee5cdd5ce9b4346e7ae068bfcb897a87be
+Size (alex-html.tar.gz) = 17500 bytes
+SHA1 (alex.ps) = 2ad9b2b8dffa3e5f5ccbba885ada219fe258692f
+RMD160 (alex.ps) = 8c33be346041c7a98686c0798518a65475b7f5e7
+Size (alex.ps) = 130871 bytes

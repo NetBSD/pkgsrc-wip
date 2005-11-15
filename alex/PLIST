@@ -1,0 +1,43 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/15 14:32:42 emil_s Exp $
+bin/alex
+bin/${PKGNAME}
+lib/${PKGNAME}/AlexTemplate
+lib/${PKGNAME}/AlexTemplate-debug
+lib/${PKGNAME}/AlexTemplate-ghc
+lib/${PKGNAME}/AlexTemplate-ghc-debug
+lib/${PKGNAME}/AlexWrapper-basic
+lib/${PKGNAME}/AlexWrapper-gscan
+lib/${PKGNAME}/AlexWrapper-monad
+lib/${PKGNAME}/AlexWrapper-posn
+lib/${PKGNAME}/alex.bin
+share/doc/alex/about.html
+share/doc/alex/alex-files.html
+share/doc/alex/alex.ps
+share/doc/alex/api.html
+share/doc/alex/bug-reports.html
+share/doc/alex/charsets.html
+share/doc/alex/fptools.css
+share/doc/alex/index.html
+share/doc/alex/introduction.html
+share/doc/alex/invoking.html
+share/doc/alex/license.html
+share/doc/alex/regexps.html
+share/doc/alex/syntax.html
+share/doc/alex/wrappers.html
+share/examples/alex/Makefile
+share/examples/alex/Tokens.x
+share/examples/alex/Tokens_gscan.x
+share/examples/alex/Tokens_posn.x
+share/examples/alex/examples.x
+share/examples/alex/haskell.x
+share/examples/alex/lit.x
+share/examples/alex/pp.x
+share/examples/alex/state.x
+share/examples/alex/tiny.y
+share/examples/alex/tkns.hs
+share/examples/alex/words.x
+share/examples/alex/words_monad.x
+share/examples/alex/words_posn.x
+@dirrm share/examples/alex
+@dirrm share/doc/alex
+@dirrm lib/${PKGNAME}
