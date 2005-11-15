@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/10 17:14:55 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/15 09:56:15 emil_s Exp $
 #
 
 DISTNAME=		LiDIA-2.1.3
-PKGNAME=		lidia-2.1.3
 CATEGORIES=		math
 MASTER_SITES=		ftp://ftp.informatik.tu-darmstadt.de/pub/TI/systems/LiDIA/current/
 
