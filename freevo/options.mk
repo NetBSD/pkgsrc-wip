@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.4 2005/11/14 17:21:13 dhowland Exp $
+# $NetBSD: options.mk,v 1.5 2005/11/16 17:14:22 dhowland Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freevo
 PKG_SUPPORTED_OPTIONS=		mencoder xine lame flac oggenc xmltv xmame
 PKG_OPTIONS_OPTIONAL_GROUPS=	snes
 PKG_OPTIONS_GROUP.snes=		snes9x zsnes
-PKG_SUGGESTED_OPTIONS=		mencoder lame oggenc
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 

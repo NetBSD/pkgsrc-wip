@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2005/11/15 01:29:48 dhowland Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/16 17:14:22 dhowland Exp $
 #
 
-DISTNAME=		freevo-1.5.3
+DISTNAME=		freevo-1.5.4
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=freevo/}
 
