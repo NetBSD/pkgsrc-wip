@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/13 08:17:36 ghen Exp $
+$NetBSD: distinfo,v 1.2 2005/11/16 13:31:25 ghen Exp $
 
 SHA1 (xxdiff-3.1.tar.gz) = 90e503cf05bdfab960cc57b55b31e345277a6aaf
 RMD160 (xxdiff-3.1.tar.gz) = 3b6c2955ebc5d22b7fde4a81fb5deffde65f1427
 Size (xxdiff-3.1.tar.gz) = 1074150 bytes
-SHA1 (patch-aa) = e322fb594aaf9d9b7c9b9e59b324b5d44dc127bc
+SHA1 (patch-aa) = d93b505e0c042252b0aca5b081ac8f68318da952

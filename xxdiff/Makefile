@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/16 13:11:00 ghen Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/16 13:31:25 ghen Exp $
 
 DISTNAME=		xxdiff-3.1
 CATEGORIES=		devel
@@ -13,22 +13,22 @@ USE_TOOLS+=		bison
 USE_TOOLS+=		flex
 BUILD_DEPENDS+=		tmake>=1.7:../../devel/tmake
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/src
+BUILD_DIRS=		src
 
 #BUILDLINK_TRANSFORM+=	S:-lqt:-lqt.mt:
 
 SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	post-configure
-SUBST_FILES.libs=	Makefile
+SUBST_FILES.libs=	src/Makefile
 SUBST_SED.libs=		-e 's,-lqt,-lqt-mt,'
 
 do-configure:
-	cd ${WRKSRC} && \
+	cd ${WRKSRC}/src && \
 	tmake -o Makefile xxdiff.pro
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/../bin/xxdiff ${PREFIX}/bin/
-	${INSTALL_DATA} ${WRKSRC}/xxdiff.1 ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/xxdiff ${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/src/xxdiff.1 ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
