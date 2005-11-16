@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/05 05:15:19 schnoebe Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/16 15:33:56 schnoebe Exp $
 
 DISTNAME=		pymsnt-0.10.2
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -15,6 +15,7 @@ COMMENT=		Transport connecting Jabber to the MSN network
 # do that..)
 #
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-twisted>=2.1.0:../../wip/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-twisted-words>=0.1.0:../../wip/py-twisted-words
 DEPENDS+=	${PYPKGPREFIX}-twisted-web>=0.1.0:../../wip/py-twisted-web
