@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.6 2005/08/02 21:39:07 adrian_p Exp $
+# $NetBSD: INSTALL,v 1.7 2005/11/16 23:07:30 adrian_p Exp $
 
 # Directories and files
 #
@@ -6,7 +6,7 @@ SMXQD=@VARBASE@/spool/smx
 DEFEDB=${SMXQD}/defedb
 LOGDIR=@VARBASE@/log/smx
 SED=@SED@
-SMXETC=@SMXETC@
+SMXETC=@PKG_SYSCONFDIR@
 UNAME=@UNAME@
 
 case ${STAGE} in
@@ -33,24 +33,31 @@ POST-INSTALL)
 	done
 
 	${MKDIR} ${SMXQD}/defedb
-	${CHOWN} smxq:smxq ${SMXQD}/defedb
-	${CHMOD} 0700 ${SMXQD}/defedb
+	${MKDIR} ${SMXQD}/ibdb
+	${MKDIR} ${SMXQD}/ibdb/ibdb
 
-	for i in qmsmtps qmsmtpc qmsmar smtps ibdb ibdb/ibdb
-	do
-		${MKDIR} ${SMXQD}/${i}
-		${CHMOD} 2770 ${SMXQD}/${i}
-	done
+	${CHOWN} smxq:smxq ${SMXQD}/defedb
+	${CHOWN} smxq:smxq ${SMXQD}/ibdb
+	${CHOWN} smxq:smxq ${SMXQD}/ibdb/ibdb
+
+	${CHMOD} 0700 ${SMXQD}/defedb
+	${CHMOD} 0700 ${SMXQD}/ibdb 
+	${CHMOD} 0700 ${SMXQD}/ibdb/ibdb
+
+	${MKDIR} ${SMXQD}/qmsmar
+	${MKDIR} ${SMXQD}/qmsmtpc
+	${MKDIR} ${SMXQD}/qmsmtps
 
 	${CHOWN} smxq:smxm ${SMXQD}/qmsmar
 	${CHOWN} smxq:smxc ${SMXQD}/qmsmtpc
 	${CHOWN} smxq:smxs ${SMXQD}/qmsmtps
-	${CHOWN} smxs:smxs ${SMXQD}/smtps
-	${CHOWN} smxq:smxq ${SMXQD}/ibdb
-	${CHOWN} smxq:smxq ${SMXQD}/ibdb/ibdb
 
-	${CHMOD} 0700 ${SMXQD}/ibdb 
-	${CHMOD} 0700 ${SMXQD}/ibdb/ibdb
+	${CHMOD} 2770 ${SMXQD}/qmsmar
+	${CHMOD} 2770 ${SMXQD}/qmsmtpc
+	${CHMOD} 2770 ${SMXQD}/qmsmtps
+
+	${MKDIR} ${SMXQD}/smtps
+	${CHOWN} smxs:smxs ${SMXQD}/smtps
 	${CHMOD} 0750 ${SMXQD}/smtps 
 
 	# Setup logging and permissions on log files
@@ -66,10 +73,10 @@ POST-INSTALL)
 	${CHOWN} smxc:operator ${LOGDIR}/smtpc.log
 	${CHOWN} smxs:operator ${LOGDIR}/smtps.log
 
-	${CHMOD} 0644 ${LOGDIR}/qmgr.log
-	${CHMOD} 0644 ${LOGDIR}/smar.log
-	${CHMOD} 0644 ${LOGDIR}/smtpc.log
-	${CHMOD} 0644 ${LOGDIR}/smtps.log
+	${CHMOD} 0640 ${LOGDIR}/qmgr.log
+	${CHMOD} 0640 ${LOGDIR}/smar.log
+	${CHMOD} 0640 ${LOGDIR}/smtpc.log
+	${CHMOD} 0640 ${LOGDIR}/smtps.log
 
 	# Fix the GID in smx.conf
 	#
