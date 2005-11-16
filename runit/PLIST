@@ -1,0 +1,83 @@
+@comment $NetBSD: PLIST,v 1.1 2005/11/16 13:01:40 akihabara Exp $
+man/man8/chpst.8
+man/man8/runit-init.8
+man/man8/runit.8
+man/man8/runsv.8
+man/man8/runsvchdir.8
+man/man8/runsvctrl.8
+man/man8/runsvdir.8
+man/man8/runsvstat.8
+man/man8/sv.8
+man/man8/svlogd.8
+man/man8/svwaitdown.8
+man/man8/svwaitup.8
+man/man8/utmpset.8
+sbin/chpst
+sbin/runit
+sbin/runit-init
+sbin/runsv
+sbin/runsvchdir
+sbin/runsvctrl
+sbin/runsvdir
+sbin/runsvstat
+sbin/sv
+sbin/svlogd
+sbin/svwaitdown
+sbin/svwaitup
+sbin/utmpset
+share/doc/runit/CHANGES
+share/doc/runit/COPYING
+share/doc/runit/README
+share/doc/runit/THANKS
+share/doc/runit/benefits.html
+share/doc/runit/chpst.8.html
+share/doc/runit/dependencies.html
+share/doc/runit/index.html
+share/doc/runit/install.html
+share/doc/runit/replaceinit.html
+share/doc/runit/runit-init.8.html
+share/doc/runit/runit.8.html
+share/doc/runit/runlevels.html
+share/doc/runit/runscripts.html
+share/doc/runit/runsv.8.html
+share/doc/runit/runsvchdir.8.html
+share/doc/runit/runsvctrl.8.html
+share/doc/runit/runsvdir.8.html
+share/doc/runit/runsvstat.8.html
+share/doc/runit/sv.8.html
+share/doc/runit/svlogd.8.html
+share/doc/runit/svwaitdown.8.html
+share/doc/runit/svwaitup.8.html
+share/doc/runit/upgrade.html
+share/doc/runit/usedietlibc.html
+share/doc/runit/useinit.html
+share/doc/runit/utmpset.8.html
+share/examples/runit/2
+share/examples/runit/debian/1
+share/examples/runit/debian/3
+share/examples/runit/debian/ctrlaltdel
+share/examples/runit/debian/getty-tty5/finish
+share/examples/runit/debian/getty-tty5/run
+share/examples/runit/freebsd/1
+share/examples/runit/freebsd/3
+share/examples/runit/freebsd/ctrlaltdel
+share/examples/runit/freebsd/getty-ttyv4/finish
+share/examples/runit/freebsd/getty-ttyv4/run
+share/examples/runit/macosx/StartupItems/StartupParameters.plist
+share/examples/runit/macosx/StartupItems/runit
+share/examples/runit/macosx/org.smarden.runit.plist
+share/examples/runit/openbsd/1
+share/examples/runit/openbsd/3
+share/examples/runit/openbsd/ctrlaltdel
+share/examples/runit/openbsd/getty-ttyC4/finish
+share/examples/runit/openbsd/getty-ttyC4/run
+@dirrm share/examples/runit/openbsd/getty-ttyC4
+@dirrm share/examples/runit/openbsd
+@dirrm share/examples/runit/macosx/StartupItems
+@dirrm share/examples/runit/macosx
+@dirrm share/examples/runit/freebsd/getty-ttyv4
+@dirrm share/examples/runit/freebsd
+@dirrm share/examples/runit/debian/getty-tty5
+@dirrm share/examples/runit/debian
+@dirrm share/examples/runit
+@dirrm share/doc/runit

@@ -1,0 +1,2 @@
+Runit provides service supervision with reliable logging.  It can be
+used as a replacement for daemontools, sysvinit and other init schemes.

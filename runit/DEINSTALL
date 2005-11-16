@@ -1,0 +1,13 @@
+# $NetBSD: DEINSTALL,v 1.1 2005/11/16 13:01:40 akihabara Exp $
+
+case "$2" in
+	DEINSTALL) rmdir 2>/dev/null @@SERVICEDIR@@ || cat <<EOF
+
+=============================================================
+Your service directory @@SERVICEDIR@@ was not removed.
+If you no longer need it, remove it by hand.
+=============================================================
+
+EOF
+	;;
+esac
