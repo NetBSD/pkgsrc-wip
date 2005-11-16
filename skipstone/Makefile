@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/12 13:21:16 ghen Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/16 13:53:02 ghen Exp $
 
 DISTNAME=		skipstone-0.9.3
 PKGREVISION=		1
@@ -11,6 +11,8 @@ COMMENT=		Light and fast Gecko-based browser
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
+
+USE_PKGLOCALEDIR=	yes
 
 # it doesn't build with firefox headers, otherwise I'd make it an option
 MOZILLA=		mozilla-gtk2
