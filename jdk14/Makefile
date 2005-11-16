@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/10/19 14:01:32 ghen Exp $
+# $NetBSD: Makefile,v 1.23 2005/11/16 13:38:54 ghen Exp $
 
 JDK_VERSION=    1.4.2
 JDK_PATCHSET_VERSION=   7
@@ -61,7 +61,7 @@ BUILD_DEPENDS+=	sun-jdk14>=1:../../lang/sun-jdk14
 MAKE_ENV+=	ALT_BOOTDIR=${LOCALBASE}/java/sun-1.4
 
 .if !exists(/emul/linux/proc/curproc/cmdline)
-PKG_FAIL_REASON=	"Please mount /emul/linux/proc (fstype procfs, options linux)."
+PKG_FAIL_REASON+=	"Please mount /emul/linux/proc (fstype procfs, options linux)."
 .endif
 
 MOTIF_TYPE=	openmotif
