@@ -1,30 +1,30 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/28 13:56:35 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/16 13:47:34 ghen Exp $
 
-JDK_VERSION=    1.5.0
+JDK_VERSION=    	1.5.0
 JDK_PATCHSET_VERSION=   2
 SUN_LINUX_JDK_VERSION=  1.5.0
 
-DISTNAME=	jdk-1_5_0-src-scsl
-PKGNAME=	jdk15-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
-CATEGORIES=	lang java
-MASTER_SITES=	# http://www.sun.com/software/java2/download.html
-#		http://www.eyesbeyond.com/freebsddom/java/jdk15.html
-EXTRACT_SUFX=	.zip
-DISTFILES=	${SCSL_SRCFILE} ${SCSL_BINFILE} ${PATCHSETFILE}
+DISTNAME=		jdk-1_5_0-src-scsl
+PKGNAME=		jdk15-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
+CATEGORIES=		lang java
+MASTER_SITES=		# http://www.sun.com/software/java2/download.html
+#			http://www.eyesbeyond.com/freebsddom/java/jdk15.html
+EXTRACT_SUFX=		.zip
+DISTFILES=		${SCSL_SRCFILE} ${SCSL_BINFILE} ${PATCHSETFILE}
 
-MAINTAINER=	geert.hendrickx@ua.ac.be
-HOMEPAGE=	http://www.eyesbeyond.com/freebsddom/java/
-COMMENT=	Java Development Kit ${JDK_VERSION}
+MAINTAINER=		geert.hendrickx@ua.ac.be
+HOMEPAGE=		http://www.eyesbeyond.com/freebsddom/java/
+COMMENT=		Java Development Kit ${JDK_VERSION}
 
-BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
-BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
+BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
+BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 
-RESTRICTED=	"Redistribution of source or binaries permitted only by license terms"
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_SRC_ON_FTP=	${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-LICENSE=	scsl-2.3-license
+RESTRICTED=		"Redistribution of source or binaries permitted only by license terms"
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+LICENSE=		scsl-2.3-license
 
 USE_PKGINSTALL=		yes
 USE_TOOLS+=		gmake m4
@@ -41,52 +41,52 @@ CHECK_SHLIBS=		no # scripts set LD_LIBRARY_PATH
 
 .include "../../mk/bsd.prefs.mk"
 
-JVM_HOME=	${LOCALBASE}/java/jdk-${JDK_VERSION}
-JAVA_HOME=	${JVM_HOME}
-JAVA_NAME=	jdk15
-JAVA_UNLIMIT=	datasize
-JAVA_WRAPPERS=	appletviewer jar java javac javadoc javah javap
+JVM_HOME=		${LOCALBASE}/java/jdk-${JDK_VERSION}
+JAVA_HOME=		${JVM_HOME}
+JAVA_NAME=		jdk15
+JAVA_UNLIMIT=		datasize
+JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
 
 # Let an installed version of this package bootstrap a later version
 # (skips having to reinstall sun-jdk15 again)
 #
 #.if exists(${JVM_HOME}/LICENSE)
-#BUILD_DEPENDS+=	jdk15>=1
-#MAKE_ENV+=	ALT_BOOTDIR=${JVM_HOME}
+#BUILD_DEPENDS+=		jdk15>=1
+#MAKE_ENV+=		ALT_BOOTDIR=${JVM_HOME}
 #.else
-BUILD_DEPENDS+=	sun-jdk15>=1:../../lang/sun-jdk15
-MAKE_ENV+=	ALT_BOOTDIR=${LOCALBASE}/java/sun-1.5
+BUILD_DEPENDS+=		sun-jdk15>=1:../../lang/sun-jdk15
+MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/sun-1.5
 #.endif
 
-MOTIF_TYPE=	openmotif
+MOTIF_TYPE=		openmotif
 
 UNLIMIT_RESOURCES=	datasize
 
 # used to find "zip" and "unzipsfx"
-MAKE_FLAGS+=	M4=${M4}
-MAKE_FLAGS+=	ALT_DEVTOOLS_PATH=${LOCALBASE}/bin
-MAKE_FLAGS+=	ALT_COMPILER_PATH=${WRAPPER_BINDIR}
-MAKE_ENV+=	LANG=C
-MAKE_ENV+=	JAVA_HOME=
-MAKE_ENV+=	CLASSPATH=
-MAKE_ENV+=	ALT_MOTIF_DIR=${MOTIFBASE}
-MAKE_ENV+=	DEV_ONLY=YES
-MAKE_ENV+=	SYS_CFLAGS=${CFLAGS:Q}
-MAKE_ENV+=	LD_LIBRARY_PATH=
-MAKE_ENV+=	ALT_MOZILLA_PATH=${LOCALBASE}
+MAKE_FLAGS+=		M4=${M4}
+MAKE_FLAGS+=		ALT_DEVTOOLS_PATH=${LOCALBASE}/bin
+MAKE_FLAGS+=		ALT_COMPILER_PATH=${WRAPPER_BINDIR}
+MAKE_ENV+=		LANG=C
+MAKE_ENV+=		JAVA_HOME=
+MAKE_ENV+=		CLASSPATH=
+MAKE_ENV+=		ALT_MOTIF_DIR=${MOTIFBASE}
+MAKE_ENV+=		DEV_ONLY=YES
+MAKE_ENV+=		SYS_CFLAGS=${CFLAGS:Q}
+MAKE_ENV+=		LD_LIBRARY_PATH=
+MAKE_ENV+=		ALT_MOZILLA_PATH=${LOCALBASE}
 
 BUILDLINK_PASSTHRU_DIRS+= 	${JVM_HOME}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${JAVA_HOME}/jre/lib/i386/server
 
-SCSL_SRCFILE=	jdk-${JDK_VERSION:S/./_/g}-src-scsl.zip
-SCSL_BINFILE=	jdk-${JDK_VERSION:S/./_/g}-bin-scsl.zip
-PATCHSETFILE=	bsd-jdk15-patches-${JDK_PATCHSET_VERSION}.tar.bz2
+SCSL_SRCFILE=		jdk-${JDK_VERSION:S/./_/g}-src-scsl.zip
+SCSL_BINFILE=		jdk-${JDK_VERSION:S/./_/g}-bin-scsl.zip
+PATCHSETFILE=		bsd-jdk15-patches-${JDK_PATCHSET_VERSION}.tar.bz2
 
-SCSL_DOWNLOAD=	http://wwws.sun.com/software/java2/download.html
-PATCH_DOWNLOAD=	http://www.eyesbeyond.com/freebsddom/java/JDK15SCSLConfirm.html
+SCSL_DOWNLOAD=		http://wwws.sun.com/software/java2/download.html
+PATCH_DOWNLOAD=		http://www.eyesbeyond.com/freebsddom/java/JDK15SCSLConfirm.html
 
-JDKIMAGEDIR=	${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
-JDKIMAGEDIR_G=	${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
+JDKIMAGEDIR=		${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
+JDKIMAGEDIR_G=		${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
 
 .if !exists(${DISTDIR}/${SCSL_SRCFILE}) ||	\
 	 !exists(${DISTDIR}/${SCSL_BINFILE}) ||	\
@@ -165,7 +165,7 @@ do-install:
 #	 ${INSTALL_DATA} ${FILESDIR}/cacerts \
 #		${JAVA_HOME}/jre/javaws/cacerts
 
-BROKEN=	This doesn't build yet.  No bug-reports please.  
+BROKEN=			"This doesn't build yet. No bug-reports please."
 
 .include "../../mk/java-env.mk"
 .include "../../mk/motif.buildlink3.mk"
