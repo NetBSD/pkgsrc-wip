@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2005/05/31 10:02:14 dillo Exp $
+# $NetBSD: options.mk,v 1.9 2005/11/17 00:03:21 adrian_p Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
 PKG_SUPPORTED_OPTIONS=	inet6 nospoof hub leaf ziplinks remoteinc ssl chroot
-PKG_SUGGESTED_OPTIONS=	hub
+PKG_SUGGESTED_OPTIONS=	leaf
 
 .include "../../mk/bsd.options.mk"
 
@@ -19,6 +19,9 @@ PKG_FAIL_REASON+=	"The server cannot be both a hub and a leaf." \
 ###
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-inet6
+MESSAGE_SRC+=		${WRKDIR}/.MESSAGE_SRC.inet6
+.else
+CONFIGURE_ENV+= 	ac_cv_ip6=no
 .endif
 
 ###
@@ -42,7 +45,7 @@ CONFIGURE_ARGS+=	--enable-nospoof
 .if !empty(PKG_OPTIONS:Mhub)
 CONFIGURE_ARGS+=	--enable-hub
 .	elif !empty(PKG_OPTIONS:Mleaf)
-	CONFIGURE_ARGS+=	--enable-leaf
+CONFIGURE_ARGS+=	--enable-leaf
 .endif
 
 ###
