@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/14 16:28:48 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/17 14:05:34 emil_s Exp $
 #
 
-DISTNAME=		haddock-0.7-src
+DISTNAME=		haddock-${VERSION}
 CATEGORIES=		devel
 MASTER_SITES=		http://www.haskell.org/haddock/
-DISTFILES=		haddock-0.7-src.tar.gz
-DISTFILES+=		haddock-html-0.7.tar.gz
+DISTFILES=		haddock-${VERSION}-src.tar.gz
+DISTFILES+=		haddock-html-${VERSION}.tar.gz
 
 MAINTAINER=		emil@math.su.se
 HOMEPAGE=		http://www.haskell.org/haddock/
 COMMENT=		Documentation tool for Haskell
 
-WRKSRC=			${WRKDIR}/haddock-0.7
+VERSION=		0.7
+
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake

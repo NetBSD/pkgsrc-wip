@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/14 16:28:48 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/17 14:05:34 emil_s Exp $
 bin/haddock
-bin/haddock-0.7
-lib/haddock-0.7/haddock.bin
+bin/${PKGNAME}
+lib/${PKGNAME}/haddock.bin
 share/doc/haddock/ch01s03.html
 share/doc/haddock/ch03s02.html
 share/doc/haddock/ch03s03.html
@@ -17,11 +17,11 @@ share/doc/haddock/ix01.html
 share/doc/haddock/license.html
 share/doc/haddock/markup.html
 share/doc/haddock/module-attributes.html
-share/haddock-0.7/haddock.css
-share/haddock-0.7/haddock.js
-share/haddock-0.7/haskell_icon.gif
-share/haddock-0.7/minus.gif
-share/haddock-0.7/plus.gif
-@dirrm share/haddock-0.7
+share/${PKGNAME}/haddock.css
+share/${PKGNAME}/haddock.js
+share/${PKGNAME}/haskell_icon.gif
+share/${PKGNAME}/minus.gif
+share/${PKGNAME}/plus.gif
+@dirrm share/${PKGNAME}
 @dirrm share/doc/haddock
-@dirrm lib/haddock-0.7
+@dirrm lib/${PKGNAME}
