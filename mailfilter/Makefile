@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/06 12:54:09 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/17 20:56:16 leonardschmidt Exp $
 #
 
 DISTNAME=	mailfilter-0.7.1
@@ -22,7 +22,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/mailfilter
 	${INSTALL_DATA} ${WRKSRC}/doc/FAQ ${PREFIX}/share/doc/mailfilter
 
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
