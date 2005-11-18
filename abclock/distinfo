@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/18 10:43:04 ghen Exp $
+
+SHA1 (abclock-1.0c.tar.gz) = 1513b53ff98f49400b713e704061a7a5967e5760
+RMD160 (abclock-1.0c.tar.gz) = c37f1ceef6b2badf39849c1ca56dda64976c2562
+Size (abclock-1.0c.tar.gz) = 17927 bytes
+SHA1 (patch-aa) = 038887a124c5110ea97902a6158e77e2b62647f4
+SHA1 (patch-ab) = c15f9ea30c6662baa357d0864159b3825a2d7e97
