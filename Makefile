@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2052 2005/11/16 10:42:17 emil_s Exp $
+# $Id: Makefile,v 1.2053 2005/11/18 10:43:53 ghen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -33,6 +33,7 @@ SUBDIR+=	SDL-intro-pt
 SUBDIR+=	SDL-intro-ru
 SUBDIR+=	Siesta
 SUBDIR+=	WEPCrack
+SUBDIR+=	abclock
 SUBDIR+=	abook-devel
 SUBDIR+=	abuse_sdl
 SUBDIR+=	acpid
