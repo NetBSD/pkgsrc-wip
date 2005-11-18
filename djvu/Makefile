@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:11:08 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/18 18:17:27 thomasklausner Exp $
 
 DISTNAME=	djvulibre-3.5.14
 CATEGORIES=	graphics
@@ -6,11 +6,9 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djvu/}
 
 MAINTAINER=	oht@users.sourceforge.net
 HOMEPAGE=   	http://djvulibre.djvuzone.org/
-COMMENT=	DjVu is a format & software platform for distributing doc's & images
+COMMENT=	Format and software platform for distributing documents and images
 
 CONFIGURE_ARGS+=         --enable-djview
-
-CFLAG+=		-I${PREFIX}/include
 
 GNU_CONFIGURE=  YES
 
