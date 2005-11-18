@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/12 23:51:30 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/18 21:37:20 thomasklausner Exp $
 #
 
 DISTNAME=		WMmp-0.10.0
@@ -13,6 +13,7 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		autoconf
+CONFIGURE_ARGS+=	--with-default-port=6600
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
