@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/05 17:18:17 gschwarz Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/19 21:53:14 gschwarz Exp $
 #
 
 DISTNAME=	boa-0.94.14rc21
@@ -21,8 +21,12 @@ USE_TOOLS+=	gmake lex
 CPPFLAGS+=	-Dsocklen_t=int
 .endif
 
-BUILD_DEFS+=	USE_INET6
-.if defined (USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
+PKG_SUPPORTED_OPTIONS=	inet6
+PKG_OPTIONS_VAR=	PKG_OPTIONS.boa
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
 CPPFLAGS+=	-DINET6
 .endif
 
