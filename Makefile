@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2055 2005/11/19 11:38:29 ianzag Exp $
+# $Id: Makefile,v 1.2056 2005/11/19 15:06:46 rillig Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -738,14 +738,12 @@ SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTML-Prototype
 SUBDIR+=	p5-HTML-Prototype-Useful
-SUBDIR+=	p5-HTML-Stream
 SUBDIR+=	p5-HTML-Strip
 SUBDIR+=	p5-HTML-TagCloud
 SUBDIR+=	p5-HTTP-BrowserDetect
 SUBDIR+=	p5-HTTP-Lite
 SUBDIR+=	p5-HTTP-Server-Simple
 SUBDIR+=	p5-Image-EXIF
-SUBDIR+=	p5-Image-ExifTool
 SUBDIR+=	p5-Imager
 SUBDIR+=	p5-Lingua-PT-Stemmer
 SUBDIR+=	p5-Lingua-Stem
