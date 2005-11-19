@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/08 04:07:29 xtraeme Exp $
-lib/httpd/mod_${PKGVERSION}.so
+@comment $NetBSD: PLIST,v 1.2 2005/11/19 05:36:31 obache Exp $
+lib/httpd/mod_bunzip2.so
 share/doc/${PKGNAME}/README
 @dirrm share/doc/${PKGNAME}
