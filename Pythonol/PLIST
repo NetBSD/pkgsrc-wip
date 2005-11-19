@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/11/26 19:43:47 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/11/19 05:19:26 obache Exp $
 bin/pythonol
 ${PYSITELIB}/Pythonol/INSTALL-ME.sh
 ${PYSITELIB}/Pythonol/PyInstallShield
@@ -207,7 +207,6 @@ ${PYSITELIB}/Pythonol/pythonol_help.py
 ${PYSITELIB}/Pythonol/pythonol_help_anim.py
 ${PYSITELIB}/Pythonol/pythonol_icon2.ico
 ${PYSITELIB}/Pythonol/pythonol_setup.py
-${PYSITELIB}/Pythonol/pythonol_setup.py.orig
 ${PYSITELIB}/Pythonol/pythonol_sqlite.py
 ${PYSITELIB}/Pythonol/pythonolui.py
 ${PYSITELIB}/Pythonol/pytrans.py
