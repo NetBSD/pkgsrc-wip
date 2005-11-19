@@ -1,0 +1,49 @@
+$NetBSD: patch-ac,v 1.1 2005/11/19 21:26:23 gschwarz Exp $
+
+--- sipp.cpp.orig	2005-11-19 00:41:45.000000000 +0100
++++ sipp.cpp	2005-11-19 00:44:20.000000000 +0100
+@@ -1241,7 +1241,7 @@
+           sipp_socklen_t len = sizeof(twinSipp_sockaddr);
+           twinSippSocket = accept(s,
+                                   (sockaddr *)(void *)&twinSipp_sockaddr,
+-                                  &len);
++                                  (socklen_t *) &len);
+           
+           pollset_add(0, twinSippSocket);
+           return(-2);
+@@ -1271,7 +1271,7 @@
+           sipp_socklen_t len = sizeof(remote_sockaddr);
+           int new_sock = accept(s,
+                                 (sockaddr *)(void *)&remote_sockaddr,
+-                                &len);
++                                (socklen_t *) &len);
+           
+           pollset_add(0, new_sock);
+           return -2;
+@@ -1316,7 +1316,7 @@
+                            buffer_size,
+                            0,
+                            (sockaddr *)(void *)&remote_sockaddr,
+-                           &len);
++                           (socklen_t *) &len);
+           
+         } else {
+           size  = recvfrom(s, 
+@@ -1648,7 +1648,7 @@
+                   msg, 
+                   sizeof(msg), 0, 
+                   (sockaddr *)(void *) &remote_rtp_addr, 
+-                  &len);
++                  (socklen_t *) &len);
+ 
+     if (((long)nr) < 0) {
+       WARNING_P2("%s %i", 
+@@ -2665,7 +2665,7 @@
+     sipp_socklen_t len = sizeof(local_sockaddr);
+     getsockname(main_socket,
+                 (sockaddr *)(void *)&local_sockaddr,
+-                &len);
++                (socklen_t *) &len);
+ #ifdef __hpux
+     local_port = local_sockaddr.sin_port;
+ #else

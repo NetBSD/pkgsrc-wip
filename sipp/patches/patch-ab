@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/11/19 21:26:23 gschwarz Exp $
+
+--- call.cpp.orig	2005-11-19 00:38:47.000000000 +0100
++++ call.cpp	2005-11-19 00:39:55.000000000 +0100
+@@ -249,7 +249,7 @@
+     
+     getsockname(call_socket, 
+                 (sockaddr *)(void *)&saddr,
+-                &len);
++                (socklen_t *) &len);
+ #ifdef __hpux
+     call_port = saddr.sin_port;
+ #else
