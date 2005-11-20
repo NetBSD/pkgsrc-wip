@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/12 22:46:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/20 01:38:02 obache Exp $
 #
 
 DISTNAME=		fbida-2.03
@@ -11,7 +11,7 @@ COMMENT=		Image viewer and editor
 
 MAKEFILE=		GNUmakefile
 MAKE_ENV+=		prefix=${PREFIX:Q}
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 
 # not used, even though the configure output claims it
 #.include "../../graphics/ImageMagick/buildlink3.mk"
