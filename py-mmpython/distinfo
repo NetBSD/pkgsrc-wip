@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.4 2005/11/10 22:34:45 dhowland Exp $
+$NetBSD: distinfo,v 1.5 2005/11/20 20:10:44 dhowland Exp $
 
 SHA1 (mmpython-0.4.9.tar.gz) = 537fd18de6cbd4400faf62ac5744393de32e9d72
 RMD160 (mmpython-0.4.9.tar.gz) = d7096d74dfea2e0b0c7fae0b8d50d0306b578b30
 Size (mmpython-0.4.9.tar.gz) = 127953 bytes
-SHA1 (patch-aa) = 61ddeafa973f24f0c7794bb61a2d0c8fc388d176
+SHA1 (patch-aa) = d3d7ddbac1dc3bf4a198f2d6d6b2c193eb1d2eb1
+SHA1 (patch-ab) = 61a51cc047d70bfc2bdd94026820a860e7e79144
+SHA1 (patch-ac) = feea09af083f49c1c9cbc7306eae854fee7642f3
