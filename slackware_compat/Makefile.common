@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.7 2005/09/29 00:18:34 rillig Exp $
-# $Id: Makefile.common,v 1.7 2005/09/29 00:18:34 rillig Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/11/20 01:30:32 obache Exp $
+# $Id: Makefile.common,v 1.8 2005/11/20 01:30:32 obache Exp $
 #
 # (C) 2004 Michal Pasternak <dotz@irc.pl>
 
@@ -8,8 +8,8 @@
 #
 
 SLACKWARE_MASTER_SITES= \
-	ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/${SLACK_GROUP}/ \
-	ftp://sunsite.icm.edu.pl/pub/linux/slackware/slackware-current/slackware/${SLACK_GROUP}/
+	ftp://ftp.slackware.com/pub/slackware/slackware-9.1/slackware/${SLACK_GROUP}/ \
+	ftp://sunsite.icm.edu.pl/pub/linux/slackware/slackware-9.1/slackware/${SLACK_GROUP}/
 
 #
 # All slackware packages are .tgz
