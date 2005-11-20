@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/20 17:25:42 bencollver Exp $
+
+--- makefile.orig	2005-09-19 22:17:56.000000000 -0700
++++ makefile
+@@ -39,8 +39,8 @@ STRIP = strip
+ #STRIP = true
+ 
+ # Should the executable be compressed?
+-DJP = upx -9 -qq	# djgpp users should use v1.23.
+-#DJP = true
++#DJP = upx -9 -qq	# djgpp users should use v1.23.
++DJP = true
+ 
+ # Comment the following to see the compilation commands.
+ BRIEF = @
+@@ -55,8 +55,6 @@ endif
+ endif
+ 
+ CFLAGS	= -Wall -g
+-CFLAGS += -O2 -finline-functions
+-CFLAGS += -mtune=pentiumpro -fomit-frame-pointer
+ CFLAGS += -DNDEBUG
+ 
+ ifeq ($(OS),unix)
+@@ -66,7 +64,7 @@ CFLAGS += -D__UNIX__
+ #CFLAGS += -DPC_CHARS
+ PROJ	= tde
+ DBG	= tdedbg
+-LIBS	= -lncurses
++LIBS	= -lcurses
+ else
+ ifeq ($(OS),win32)
+ PROJ	= tdew.exe

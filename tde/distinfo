@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/20 17:25:42 bencollver Exp $
+
+SHA1 (tde-5.1s.tar.gz) = 57883f0f3ba44b642fdcc8fe24b6bb9bef2eb3ea
+RMD160 (tde-5.1s.tar.gz) = bc153623811c2c0f3848e6f7b22743d3b187ee14
+Size (tde-5.1s.tar.gz) = 548824 bytes
+SHA1 (51s1.txt) = 47833d55bc0974f7f79e5114c6c74151333b6289
+RMD160 (51s1.txt) = fd5f4664974e7c2fc468d1a686cc847ef7dbc4d1
+Size (51s1.txt) = 2943 bytes
+SHA1 (patch-aa) = 2488657fb92f702be402962a8e389018d5611a49
+SHA1 (patch-ab) = b9f703078dedc7d9f414e1c05f0105886bda9de7
+SHA1 (patch-ac) = 12b9ef77eb6fc888c12a1177e1fe2c14c5b96207

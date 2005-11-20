@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/11/20 17:25:42 bencollver Exp $
+
+--- tdestr.h.orig	2005-08-16 19:17:58.000000000 -0700
++++ tdestr.h
+@@ -39,7 +39,7 @@
+    #include <dirent.h>             /* walking down directories */
+    #include <limits.h>             /* NAME_MAX and PATH_MAX, POSIX stuff */
+    #include <malloc.h>             /* for memory allocation */
+-   #include <ncurses.h>
++   #include <curses.h>
+    #include <unistd.h>             /* chdir, getcwd, etc... */
+    #include <sys/types.h>
+    #include <sys/stat.h>

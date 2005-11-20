@@ -1,0 +1,9 @@
+TDE is a simple, public domain, multi-file/multi-window binary and text
+file editor written for IBM PCs and close compatibles running DOS, Win32
+(console) or Linux. TDE is suitable for editing batch files, binary
+files, text files, and various computer language source code files (with
+configurable syntax highlighting). The only limit on the number and size
+of files that TDE can handle is the amount of memory. Likewise, the only
+limit on the number of windows is the amount of memory. There is no
+preset maximum number of files or windows that may be open at any one
+time.
