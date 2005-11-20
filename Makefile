@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2056 2005/11/19 15:06:46 rillig Exp $
+# $Id: Makefile,v 1.2057 2005/11/20 16:07:13 rillig Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1111,7 +1111,6 @@ SUBDIR+=	t-coffee
 SUBDIR+=	t-gnus
 SUBDIR+=	taskbar
 SUBDIR+=	tcc
-SUBDIR+=	tcd
 SUBDIR+=	tcpspy
 SUBDIR+=	tcptrack
 SUBDIR+=	teTeX3
