@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/14 15:16:58 jtonio Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/20 12:41:43 rillig Exp $
 #
 
 DISTNAME=	signing-party_0.4.4.orig
+PKGNAME=	signing-party-0.4.4
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
 
