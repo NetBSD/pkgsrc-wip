@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2005/11/11 06:57:04 dhowland Exp $
+$NetBSD: patch-ab,v 1.6 2005/11/20 18:19:04 dhowland Exp $
 
---- src/config.py.orig	2004-08-28 13:07:42.000000000 -0400
+--- src/config.py.orig	2005-10-16 05:18:50.000000000 -0400
 +++ src/config.py
 @@ -307,7 +307,7 @@ __builtin__.__dict__['_debug_']= _debug_
  # Config file handling
@@ -11,3 +11,24 @@ $NetBSD: patch-ab,v 1.5 2005/11/11 06:57:04 dhowland Exp $
  
  
  #
+@@ -391,7 +391,7 @@ for program, valname, needed in setup_fr
+ #
+ # Under Linux, use /var/cache. Under FreeBSD, use /var/db.
+ #
+-if os.uname()[0] == 'FreeBSD':
++if ((os.uname()[0] == 'FreeBSD') or (os.uname()[0] == 'NetBSD')):
+     OS_CACHEDIR = '/var/db'
+ else:
+     OS_CACHEDIR = '/var/cache'
+@@ -690,7 +690,10 @@ if ROM_DRIVES == None:
+                     devname = devname[:-1]
+                 # Use native FreeBSD device names
+                 dispname = devname[5:]
+- 
++            if os.uname()[0] == 'NetBSD':
++                # Use native NetBSD device names
++                dispname = devname[5:]
++
+             # Weed out duplicates
+             for rd_mntdir, rd_devname, rd_dispname in ROM_DRIVES:
+                 if os.path.realpath(rd_devname) == os.path.realpath(devname):
