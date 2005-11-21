@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/21 22:53:02 poppnk Exp $
+
+SHA1 (rhapsody_0.26b.tgz) = 83442f218eee6b00892dbc4cb569a34bb77495b9
+RMD160 (rhapsody_0.26b.tgz) = 880df8baba8d03b0c6b18c9702dbd74d9fdf1746
+Size (rhapsody_0.26b.tgz) = 102736 bytes
+SHA1 (patch-aa) = 68e8e71e4486b026ab2fc24fbefa5e6ea604c7fa
