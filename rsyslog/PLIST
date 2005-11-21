@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/21 20:50:32 bartoszkuzma Exp $
+man/man5/rsyslog.conf.5
+man/man8/rsyslogd.8
+sbin/rsyslogd
+share/doc/rsyslog/bugs.html
+share/doc/rsyslog/features.html
+share/doc/rsyslog/history.html
+share/doc/rsyslog/how2help.html
+share/doc/rsyslog/install.html
+share/doc/rsyslog/manual.html
+share/doc/rsyslog/property_replacer.html
+share/doc/rsyslog/rsyslog_conf.html
+share/doc/rsyslog/rsyslog_mysql.html
+share/doc/rsyslog/rsyslog_php_syslog_ng.html
+share/doc/rsyslog/rsyslog_stunnel.html
+share/doc/rsyslog/status.html
+share/doc/rsyslog/version_naming.html
+share/examples/rc.d/rsyslogd
+share/examples/rsyslog/createDB.sql
+share/examples/rsyslog/rsyslog.conf
+@dirrm share/doc/rsyslog
+@dirrm share/examples/rsyslog
