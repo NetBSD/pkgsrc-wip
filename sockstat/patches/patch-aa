@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/22 10:43:52 ghen Exp $
+
+--- sockstat.pl.orig	2005-11-22 10:43:37.000000000 +0100
++++ sockstat.pl
+@@ -53,7 +53,7 @@ sub gather() {
+     if (!defined($pid = open(PIPE, "-|"))) {
+ 	die("open(netstat): $!\n");
+     } elsif ($pid == 0) {
+-	exec("/usr/bin/netstat", "-AanW");
++	exec("/usr/bin/netstat", "-Aan");
+ 	die("exec(netstat): $!\n");
+     }
+     while ($line = <PIPE>) {
+@@ -114,7 +114,6 @@ sub print_inet($$$) {
+ 	       substr($fsd->[3], 0, -1),
+ 	       $nsd->[1], addr($nsd->[4]), addr($nsd->[5]));
+     }
+-    print("\n");
+ }
+ 
+ #
+@@ -128,12 +127,12 @@ sub print_unix($$) {
+     my $fsd;			# Fstat data
+     my $nsd;			# Netstat data
+ 
+-    foreach $fsd (@{$fstat{"local"}}) {
++    foreach $fsd (@{$fstat{"unix"}}) {
+ 	$endpoint{$fsd->[6]} = "$fsd->[1]\[$fsd->[2]\]:" .
+ 	    substr($fsd->[3], 0, -1);
+     }
+     printf($unix_fmt, "USER", "COMMAND", "PID", "FD", "PROTO", "ADDRESS");
+-    foreach $fsd (@{$fstat{"local"}}) {
++    foreach $fsd (@{$fstat{"unix"}}) {
+ 	next unless defined($fsd->[6]);
+ 	next if (!$conn && defined($fsd->[8]));
+ 	next if (!$listen && !defined($fsd->[8]));
+@@ -142,7 +141,6 @@ sub print_unix($$) {
+ 	       substr($fsd->[3], 0, -1), $fsd->[5],
+ 	       $nsd->[8] || (($fsd->[8] && $endpoint{$fsd->[8]}) ? $endpoint{$fsd->[8]} : "(none)"));
+     }
+-    print("\n");
+ }
+ 
+ #

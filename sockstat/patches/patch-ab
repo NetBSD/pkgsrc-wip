@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/11/22 10:43:52 ghen Exp $
+
+--- sockstat.1.orig	2005-11-22 11:37:29.000000000 +0100
++++ sockstat.1
+@@ -124,7 +124,9 @@ The
+ command appeared in
+ .Fx 3.1 .
+ .Sh AUTHORS
+-The
++The Perl version of
+ .Nm
+-command and this manual page were written by
++(this version) and this manual page were written by
+ .An Dag-Erling Sm\(/orgrav Aq des@FreeBSD.org .
++.Nm
++has later been rewritten in C for FreeBSD 5.0 and that version also appeared in NetBSD 3.0.

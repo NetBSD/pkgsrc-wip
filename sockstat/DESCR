@@ -1,0 +1,2 @@
+This is a port of the sockstat(1) command from FreeBSD 4.x, written in Perl.
+NetBSD 3.x has a native implementation, written in C, from FreeBSD 5.x.
