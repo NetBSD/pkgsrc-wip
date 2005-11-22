@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2005/11/19 22:25:26 gschwarz Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/22 19:20:22 rillig Exp $
 
 DISTNAME=	linphone-1.0.1
 CATEGORIES=	net
 MASTER_SITES=	http://simon.morlat.free.fr/download/1.0.x/source/
 
 MAINTAINER=     schwarz@NetBSD.org
-HOMEPAGE=	http://www.linphone.org
+HOMEPAGE=	http://www.linphone.org/
 COMMENT=	SIP-based IP telephony client
 
 BUILD_DEPENDS+= p5-XML-Parser-*:../../textproc/p5-XML-Parser
@@ -21,8 +21,8 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/linphone
 CONFIGURE_ARGS+=	--disable-manual --enable-glib
 
 PKG_SUPPORTED_OPTIONS=	alsa inet6 linphone-gui
+PKG_SUGGESTED_OPTIONS=	linphone-gui
 PKG_OPTIONS_VAR=	PKG_OPTIONS.linphone
-PKG_DEFAULT_OPTIONS+=	linphone-gui
 
 .include "../../mk/bsd.options.mk"
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/11/13 17:17:39 gschwarz Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/11/22 19:20:22 rillig Exp $
 ${GUI}bin/linphone
 bin/linphonec
 include/linphone/config.h
@@ -24,7 +24,16 @@ lib/liblinphone.la
 lib/libortp.la
 ${PKGMANDIR}/man1/linphone.1
 ${PKGMANDIR}/man1/linphonec.1
-share/gnome/apps/Internet/linphone.desktop
+share/applications/linphone.desktop
+share/doc/linphone/mediastreamer/book1.html
+share/doc/linphone/mediastreamer/coreapi.html
+share/doc/linphone/mediastreamer/index.sgml
+share/doc/linphone/mediastreamer/mediastreamer-filters.html
+share/doc/linphone/mediastreamer/mediastreamer-msringplayer.html
+share/doc/linphone/mediastreamer/mediastreamer-mssync.html
+share/doc/linphone/mediastreamer/mediastreamer-running-processing-chains.html
+share/doc/linphone/mediastreamer/msfilterimplementations.html
+share/doc/linphone/mediastreamer/userapi.html
 share/doc/linphone/ortp/book1.html
 share/doc/linphone/ortp/ortp-library-management-functions.html
 share/doc/linphone/ortp/ortp-multiplexing-sessions---in-a-one-thread-design.html
@@ -32,15 +41,7 @@ share/doc/linphone/ortp/ortp-rtp-payloads-and-profiles.html
 share/doc/linphone/ortp/ortp-rtpsession-api.html
 share/doc/linphone/ortp/ortp-telephone-events---rfc2833-.html
 share/doc/linphone/ortp/ortpapi.html
-share/doc/linphone/mediastreamer/book1.html
-share/doc/linphone/mediastreamer/coreapi.html
-share/doc/linphone/mediastreamer/mediastreamer-filters.html
-share/doc/linphone/mediastreamer/mediastreamer-msringplayer.html
-share/doc/linphone/mediastreamer/mediastreamer-mssync.html
-share/doc/linphone/mediastreamer/mediastreamer-running-processing-chains.html
-share/doc/linphone/mediastreamer/msfilterimplementations.html
-share/doc/linphone/mediastreamer/userapi.html
-share/doc/linphone/mediastreamer/index.sgml
+share/gnome/apps/Internet/linphone.desktop
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/linphone.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/linphone.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/linphone.mo
@@ -49,7 +50,6 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/linphone.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/linphone.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/linphone.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/linphone.mo
-share/applications/linphone.desktop
 share/pixmaps/linphone/linphone.png
 share/pixmaps/linphone/linphone2.png
 share/pixmaps/linphone/linphone2.xpm
