@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/24 08:19:56 ghen Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/11/22 14:40:01 ghen Exp $
 bin/XaraLX
 share/XaraLX/Designs/BLUECAR.xar
 share/XaraLX/Designs/CatWoman graphs.xar
 share/XaraLX/Designs/EngineTimings.xar
 share/XaraLX/Designs/Fill Types simple.xar
 share/XaraLX/Designs/Girard_simple.xar
-share/XaraLX/Designs/JagSS100 simple3.xar
+share/XaraLX/Designs/JagSS100 simple.xar
 share/XaraLX/Designs/Phil Hill-fontsremoved.xar
 share/XaraLX/Designs/Probe.xar
 share/XaraLX/Designs/Simple Sphere.xar
