@@ -1,5 +1,5 @@
 ===========================================================================
-$Id: MESSAGE,v 1.1 2005/05/04 13:15:01 spetit Exp $
+$Id: MESSAGE,v 1.2 2005/11/23 04:43:56 rillig Exp $
 
 	${PREFIX}/sbin/freevrrpd must be run as "root".
 
@@ -10,4 +10,3 @@ $Id: MESSAGE,v 1.1 2005/05/04 13:15:01 spetit Exp $
 	Add freevrrpd=YES to /etc/rc.conf for automatic startup
 
 ===========================================================================
-
