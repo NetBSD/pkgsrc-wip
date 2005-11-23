@@ -8,3 +8,7 @@ NetBSD 2.1.0/i386:
 /var/tmp//cchH7cVa.s:2317: Error: no such instruction: `haddps %xmm1,%xmm1'
 /var/tmp//cchH7cVa.s:2318: Error: no such instruction: `haddps %xmm1,%xmm1'
 *** Error code 1
+
+in src/nes/sound/filter.cpp, the TMP_FSSE3 macro gets defined -- this
+results in the inclusion of filter-sse.h --, though
+my processor (Intel Pentium III (686-class)) does not know SSE3 instructions.
