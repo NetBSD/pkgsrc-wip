@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2058 2005/11/22 10:45:01 ghen Exp $
+# $Id: Makefile,v 1.2059 2005/11/23 06:25:26 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -964,7 +964,6 @@ SUBDIR+=	qcad-manual-de
 SUBDIR+=	qcad-manual-en
 SUBDIR+=	qcad-manual-hu
 SUBDIR+=	qcad-partlibrary
-SUBDIR+=	qdbm
 SUBDIR+=	qdbm-cgi
 SUBDIR+=	qdbm-plus
 SUBDIR+=	qemu-bin

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/11/07 13:07:59 obache Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/23 06:25:27 minskim Exp $
 #
 
-.include "../../wip/qdbm/Makefile.common"
+.include "../../databases/qdbm/Makefile.common"
 
 PKGNAME=	qdbm-cgi-0.0.1.${QDBM_VERSION}
 CATEGORIES=	databases www

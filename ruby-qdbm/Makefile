@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/11/07 13:10:51 obache Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/23 06:25:27 minskim Exp $
 #
 
-.include "../../wip/qdbm/Makefile.common"
+.include "../../databases/qdbm/Makefile.common"
 
 PKGNAME=	${RUBY_PKGPREFIX}-qdbm-1.0.0.${QDBM_VERSION}
 CATEGORIES=	databases ruby

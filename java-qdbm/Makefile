@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/04 10:26:37 obache Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/23 06:25:27 minskim Exp $
 #
 
-.include "../../wip/qdbm/Makefile.common"
+.include "../../databases/qdbm/Makefile.common"
 
 PKGNAME=	java-qdbm-1.0.0.${QDBM_VERSION}
 CATEGORIES=	databases java
