@@ -1,7 +1,6 @@
-This package has not been tested much, feel free to work on it (as
-with all packages containing MAINTAINER=lems@gmx.net).
+- ldd gives "-lintl.3 => not found".  Might be easy to fix (-Wl,-R).
 
-NetBSD 2.1.0/i386:
+- Fails to build on NetBSD 2.1.0/i386:
 
 /include -I../../intl -I../fidlib   -I/usr/X11R6/include  -pthread  -DFIDLIB_LINUX -I/usr/pkg/include -DGLX_GLXEXT_LEGACY -I/usr/include -Wall -Winline -ffast-math -I/usr/pkg/include -I/usr/pkg/include/SDL -D_REENTRANT  -O2 -I/usr/pkg/include -DGLX_GLXEXT_LEGACY -I/usr/include -c -o sound/filter.o `test -f 'sound/filter.cpp' || echo './'`sound/filter.cpp
 /var/tmp//cchH7cVa.s: Assembler messages:
@@ -9,6 +8,6 @@ NetBSD 2.1.0/i386:
 /var/tmp//cchH7cVa.s:2318: Error: no such instruction: `haddps %xmm1,%xmm1'
 *** Error code 1
 
-in src/nes/sound/filter.cpp, the TMP_FSSE3 macro gets defined -- this
+in src/nes/sound/filter.cpp, TMP_FSSE3 gets defined -- this
 results in the inclusion of filter-sse.h --, though
 my processor (Intel Pentium III (686-class)) does not know SSE3 instructions.
