@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/04 10:26:37 obache Exp $
-bin/plcrtest
-bin/pldptest
-bin/plvltest
+@comment $NetBSD: PLIST,v 1.2 2005/11/23 07:40:40 obache Exp $
 lib/qdbm.jar
 lib/libjqdbm.so.1.0.0
 lib/libjqdbm.so.1
@@ -32,7 +29,7 @@ share/doc/qdbm/java/japidoc/qdbm/package-tree.html
 share/doc/qdbm/java/japidoc/resources/inherit.gif
 share/doc/qdbm/java/japidoc/serialized-form.html
 share/doc/qdbm/java/japidoc/stylesheet.css
-@dirrm share/doc/qdbm/java/qdbm
-@dirrm share/doc/qdbm/java/resources
+@dirrm share/doc/qdbm/java/javadoc/qdbm
+@dirrm share/doc/qdbm/java/javadoc/resources
 @dirrm share/doc/qdbm/java/japidoc
 @dirrm share/doc/qdbm/java
