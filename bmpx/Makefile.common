@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2005/11/19 10:12:16 leonardschmidt Exp $
+# $NetBSD: Makefile.common,v 1.19 2005/11/23 18:18:21 leonardschmidt Exp $
 #
 
 DISTNAME=	bmpx-0.12.8
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=beepmp/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	lems@gmx.net
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://beep-media-player.org/
 COMMENT=	Audio player to be used with a frontend or as a daemon
 
