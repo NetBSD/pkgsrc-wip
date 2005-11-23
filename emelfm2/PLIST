@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/09/16 21:53:06 leonardschmidt Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/11/23 18:16:14 leonardschmidt Exp $
 bin/emelfm2
 lib/emelfm2/plugins/e2p_clone.so
 lib/emelfm2/plugins/e2p_cpbar.so
@@ -26,7 +26,6 @@ share/doc/emelfm2/INSTALL
 share/doc/emelfm2/LGPL
 share/doc/emelfm2/PLUGINS
 share/doc/emelfm2/README
-share/doc/emelfm2/ROADMAP
 share/doc/emelfm2/SPEC
 share/doc/emelfm2/TODO
 share/doc/emelfm2/USAGE
@@ -36,13 +35,8 @@ share/pixmaps/emelfm2/apply_all_48.png
 share/pixmaps/emelfm2/bookmark_48.png
 share/pixmaps/emelfm2/cl_clear_48.png
 share/pixmaps/emelfm2/copy_as_48.png
-share/pixmaps/emelfm2/emelfm2_1_24.png
-share/pixmaps/emelfm2/emelfm2_1_32.png
-share/pixmaps/emelfm2/emelfm2_1_48.png
+share/pixmaps/emelfm2/dragsel.png
 share/pixmaps/emelfm2/emelfm2_24.png
-share/pixmaps/emelfm2/emelfm2_2_24.png
-share/pixmaps/emelfm2/emelfm2_2_32.png
-share/pixmaps/emelfm2/emelfm2_2_48.png
 share/pixmaps/emelfm2/emelfm2_32.png
 share/pixmaps/emelfm2/emelfm2_48.png
 share/pixmaps/emelfm2/filter_48.png
