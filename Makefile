@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2059 2005/11/23 06:25:26 minskim Exp $
+# $Id: Makefile,v 1.2060 2005/11/23 06:34:19 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -798,7 +798,6 @@ SUBDIR+=	p5-UNIVERSAL-exports
 SUBDIR+=	p5-URI-Find
 SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-XML-Clean
-SUBDIR+=	p5-qdbm
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-pop3
 SUBDIR+=	panda
