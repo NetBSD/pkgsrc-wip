@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2066 2005/11/24 13:44:10 udontknow Exp $
+# $Id: Makefile,v 1.2067 2005/11/24 15:17:33 udontknow Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -115,6 +115,7 @@ SUBDIR+=	caml-libnum
 SUBDIR+=	caml-libunix
 SUBDIR+=	cawf
 SUBDIR+=	cb2bib
+SUBDIR+=	ccid
 SUBDIR+=	ccrypt
 SUBDIR+=	cdpr
 SUBDIR+=	chbg
