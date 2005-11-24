@@ -1,0 +1,3 @@
+$NetBSD: TODO,v 1.1.1.1 2005/11/24 15:15:50 udontknow Exp $
+To-Do list for ccid:
+- Test, since I don't own CCID hardware

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/24 15:15:50 udontknow Exp $
+lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/Info.plist
+lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/Linux/libccid.so.${PKGVERSION}
+@dirrm lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/Linux
+@dirrm lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents
+@dirrm lib/pcsc-lite/drivers/ifd-ccid.bundle
