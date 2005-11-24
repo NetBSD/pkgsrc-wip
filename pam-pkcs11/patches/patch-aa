@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/24 13:42:36 udontknow Exp $
+
+--- etc/Makefile.in.orig	2005-09-12 06:14:19.000000000 -0300
++++ etc/Makefile.in
+@@ -19,7 +19,7 @@
+ srcdir = @srcdir@
+ top_srcdir = @top_srcdir@
+ VPATH = @srcdir@
+-pkgdatadir = $(datadir)/@PACKAGE@
++pkgdatadir = $(datadir)/examples/pam-pkcs11
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+ top_builddir = ..

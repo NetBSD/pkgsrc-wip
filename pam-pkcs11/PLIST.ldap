@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.ldap,v 1.1.1.1 2005/11/24 13:42:36 udontknow Exp $
+lib/pam_pkcs11/ldap_mapper.la

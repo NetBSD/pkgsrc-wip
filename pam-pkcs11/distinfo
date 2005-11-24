@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/24 13:42:36 udontknow Exp $
+
+SHA1 (pam_pkcs11-0.5.3.tar.gz) = b57dec1ef358f36ba1e38611f37de87f752da6b7
+RMD160 (pam_pkcs11-0.5.3.tar.gz) = b755b1d5d8c666a44944119df74515a206efc1cd
+Size (pam_pkcs11-0.5.3.tar.gz) = 576432 bytes
+SHA1 (patch-aa) = c88f5d7a3ca903b223a33f3ea8eb6cc3e0e2d9f6
