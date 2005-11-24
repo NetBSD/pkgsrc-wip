@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/24 03:55:22 udontknow Exp $
+include/libp11.h
+lib/libp11.la
+lib/pkgconfig/libp11.pc

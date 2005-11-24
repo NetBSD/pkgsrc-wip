@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/24 03:55:22 udontknow Exp $
+
+SHA1 (libp11-0.2.1.tar.gz) = 0326260589abb62c74fc742ed00f6439e873e403
+RMD160 (libp11-0.2.1.tar.gz) = 43623e94a330d0503c21e2522ba0e880a735d3c8
+Size (libp11-0.2.1.tar.gz) = 393794 bytes
