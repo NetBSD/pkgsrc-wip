@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2005/07/23 16:31:21 udontknow Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2005/11/24 02:12:05 udontknow Exp $
 bin/openct-tool
 include/openct/apdu.h
 include/openct/buffer.h
@@ -15,11 +15,10 @@ include/openct/server.h
 include/openct/socket.h
 include/openct/tlv.h
 include/openct/types.h
-lib/libifd.la
 lib/libopenct.la
 lib/libopenctapi.la
 lib/pkgconfig/libopenct.pc
-man/man1/openct-tool.1.gz
+man/man1/openct-tool.1
 sbin/ifdhandler
 sbin/ifdproxy
 sbin/openct-control

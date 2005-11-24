@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/07/23 16:31:21 udontknow Exp $
+# $NetBSD: options.mk,v 1.4 2005/11/24 02:12:05 udontknow Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openct
 PKG_SUPPORTED_OPTIONS=	pcsc-lite usb
@@ -7,6 +7,7 @@ PKG_SUPPORTED_OPTIONS=	pcsc-lite usb
 
 .if !empty(PKG_OPTIONS:Mpcsc-lite)
 .include "../../wip/pcsc-lite/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-pcsclite
 PLIST_SRC+=		${PKGDIR}/PLIST.pcsc-lite
 .else
 CONFIGURE_ARGS+=	--with-pcsclite=no
