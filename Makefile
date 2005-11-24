@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2065 2005/11/24 03:56:55 udontknow Exp $
+# $Id: Makefile,v 1.2066 2005/11/24 13:44:10 udontknow Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -801,6 +801,7 @@ SUBDIR+=	p5-URI-Find
 SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-XML-Clean
 SUBDIR+=	palm-db-tools
+SUBDIR+=	pam-pkcs11
 SUBDIR+=	pam-pop3
 SUBDIR+=	panda
 SUBDIR+=	panoramixext
