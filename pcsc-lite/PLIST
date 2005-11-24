@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/07/23 22:07:04 udontknow Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/11/24 02:05:52 udontknow Exp $
 bin/formaticc
 include/PCSC/debuglog.h
 include/PCSC/dyn_generic.h
@@ -11,9 +11,9 @@ include/PCSC/winscard.h
 include/PCSC/wintypes.h
 lib/libpcsclite.la
 lib/pkgconfig/libpcsclite.pc
-man/man1/formaticc.1.gz
-man/man5/reader.conf.5.gz
-man/man8/pcscd.8.gz
+man/man1/formaticc.1
+man/man5/reader.conf.5
+man/man8/pcscd.8
 sbin/installifd
 sbin/pcscd
 share/doc/pcsc-lite/README.DAEMON

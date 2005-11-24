@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/07/23 22:07:04 udontknow Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/24 02:05:52 udontknow Exp $
 
-DISTNAME=	pcsc-lite-1.2.9-beta7
-PKGNAME=	pcsc-lite-1.2.9
+DISTNAME=	pcsc-lite-1.2.9-beta8
+PKGNAME=	pcsc-lite-1.2.9b8
 CATEGORIES=	security
 MASTER_SITES=	http://alioth.debian.org/download.php/975/
 
@@ -9,6 +9,7 @@ MAINTAINER=	evaldo@gardenali.biz
 HOMEPAGE=	http://www.linuxnet.com/
 COMMENT=	PC/SC Architecture support for Smart Cards
 
+WRKSRC=                 ${WRKDIR}/pcsc-lite-1.2.9-beta7
 GNU_CONFIGURE=          YES
 USE_PKGINSTALL=		YES
 USE_LIBTOOL=            YES
