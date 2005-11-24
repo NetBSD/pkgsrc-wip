@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/25 17:33:10 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/24 14:54:21 udontknow Exp $
 
 DISTNAME=		libmusclecard-1.2.9-beta7
 PKGNAME=		libmusclecard-1.2.9
@@ -12,7 +12,7 @@ COMMENT=		MUSCLE SmartCard framework support library
 GNU_CONFIGURE=          YES
 USE_PKGINSTALL=         YES
 USE_LIBTOOL=            YES
-USE_TOOLS+=             automake gmake
+USE_TOOLS+=             automake gmake pkg-config
 
 CONFIGURE_ARGS+=	--enable-muscledropdir=${PREFIX}/lib/pcsc-lite/drivers
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
