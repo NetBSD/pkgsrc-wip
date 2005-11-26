@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/26 23:38:47 hugor Exp $
+
+SHA1 (physfs-1.0.1.tar.gz) = 48803ceb60b44a4d3b7511b7a2d66a020d86e95a
+RMD160 (physfs-1.0.1.tar.gz) = 3a3fc6f66b397fe966e5aa661e3aa415055ef3b1
+Size (physfs-1.0.1.tar.gz) = 539978 bytes

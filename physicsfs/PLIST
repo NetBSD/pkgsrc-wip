@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/26 23:38:47 hugor Exp $
+include/physfs.h
+lib/libphysfs-1.0.so
+lib/libphysfs-1.0.so.1
+lib/libphysfs-1.0.so.1.0
+lib/libphysfs.a
+lib/libphysfs.la
+lib/libphysfs.so
