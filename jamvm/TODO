@@ -1,2 +1,3 @@
-port to *BSD, etc..
-it seems that can't find the GNU classpath...may depend on it?
+it doesn't work yet. (test build with libffi)
+
+lang/classpath must be update to the latest 0.19!!

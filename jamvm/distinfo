@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/08/25 14:46:38 poppnk Exp $
+$NetBSD: distinfo,v 1.3 2005/11/27 00:27:54 poppnk Exp $
 
-SHA1 (jamvm-1.3.2.tar.gz) = 587da3c57daa65d6a4003906a449044a74352ef6
-RMD160 (jamvm-1.3.2.tar.gz) = 0c0798cb88ff0cdaa8fc46d02d61976dcf450b60
-Size (jamvm-1.3.2.tar.gz) = 254866 bytes
-SHA1 (patch-aa) = f0dcfe600b21a7b60bb9ac049fa6806345691ee3
+SHA1 (jamvm-1.4.0.tar.gz) = 4b9c8702c7da110a08668efd9db0ca83cc4d0b7f
+RMD160 (jamvm-1.4.0.tar.gz) = 4d51baba1e1246546c7f326f068a39fb8922fd96
+Size (jamvm-1.4.0.tar.gz) = 278041 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/21 14:39:45 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/27 00:27:54 poppnk Exp $
 bin/jamvm
 include/jni.h
 share/jamvm/classes/gnu/classpath/VMStackWalker.class
@@ -17,6 +17,9 @@ share/jamvm/classes/jamvm/java/lang/JarLauncher.class
 @dirrm share/jamvm/classes/java/lang/reflect
 @dirrm share/jamvm/classes/java/lang
 @dirrm share/jamvm/classes/jamvm/java/lang
+@dirrm share/jamvm/classes/jamvm/java
+@dirrm share/jamvm/classes/jamvm
 @dirrm share/jamvm/classes/gnu/classpath
+@dirrm share/jamvm/classes/gnu
 @dirrm share/jamvm/classes
 @dirrm share/jamvm
