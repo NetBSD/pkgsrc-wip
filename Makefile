@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2067 2005/11/24 15:17:33 udontknow Exp $
+# $Id: Makefile,v 1.2068 2005/11/27 11:46:45 bartoszkuzma Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -159,6 +159,7 @@ SUBDIR+=	debian_glib
 SUBDIR+=	debian_gtk
 #SUBDIR+=	debian_linux	# not a real package
 SUBDIR+=	debian_x11
+SUBDIR+=	detox
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	di
