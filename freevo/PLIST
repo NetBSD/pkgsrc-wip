@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/11 06:34:54 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/11/28 05:01:34 dhowland Exp $
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/freevo.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/freevo.po
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/freevo.po
@@ -350,6 +350,9 @@ ${PYSITELIB}/freevo/plugins/mixer.pyo
 ${PYSITELIB}/freevo/plugins/ossmixer.py
 ${PYSITELIB}/freevo/plugins/ossmixer.pyc
 ${PYSITELIB}/freevo/plugins/ossmixer.pyo
+${PYSITELIB}/freevo/plugins/pygamejoy.py
+${PYSITELIB}/freevo/plugins/pygamejoy.pyc
+${PYSITELIB}/freevo/plugins/pygamejoy.pyo
 ${PYSITELIB}/freevo/plugins/rom_drives.py
 ${PYSITELIB}/freevo/plugins/rom_drives.pyc
 ${PYSITELIB}/freevo/plugins/rom_drives.pyo
