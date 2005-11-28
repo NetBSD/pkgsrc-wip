@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:31 rillig Exp $
+$NetBSD: distinfo,v 1.3 2005/11/28 21:36:42 florian_stoehr Exp $
 
-SHA1 (neb-cd512-src-0.9.tgz) = d46583f541a97d6b3b9be54f1f8c6c28838c5655
-RMD160 (neb-cd512-src-0.9.tgz) = 9fd98164227816a80de7da05d8a64be83b62eb9a
-Size (neb-cd512-src-0.9.tgz) = 3269 bytes
+SHA1 (neb-cd512-src-0.9.1.tgz) = 771ef0e2ed7ae820b0441b2e0dde08e1a33c09f3
+RMD160 (neb-cd512-src-0.9.1.tgz) = eea9044965f4b87a5994eebc5b2ff81f1dc1b471
+Size (neb-cd512-src-0.9.1.tgz) = 3267 bytes

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:13 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/28 21:36:42 florian_stoehr Exp $
 #
 
-DISTNAME=		neb-cd512-src-0.9
-PKGNAME=		neb-cd512-0.9
+DISTNAME=		neb-cd512-src-0.9.1
+PKGNAME=		neb-cd512-0.9.1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=neb-stoehr/}
 EXTRACT_SUFX=		.tgz
