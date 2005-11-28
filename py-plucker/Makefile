@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:17 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/28 00:27:27 rillig Exp $
 
 DISTNAME=	plucker_parser-1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_parser//}
@@ -28,7 +28,7 @@ SUBST_SED.paths=	-e 's,/usr/local,${PREFIX},g'
 
 PYTHON_PATCH_SCRIPTS=	PyPlucker/Spider.py PyPlucker/PluckerDocs.py	\
 			PyPlucker/Decode.py
-PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
+PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
 
 .include "../../lang/python/application.mk"
 

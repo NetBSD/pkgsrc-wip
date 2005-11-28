@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 16:29:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/28 00:27:28 rillig Exp $
 #
 
 DISTNAME=	thaixfonts-1.1-3.noarch
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	rpm-[0-9]*:../../misc/rpm
 
 USE_X11BASE=	yes
 
-MAKE_ENV+=	FONTDIR=${FONTDIR}
+MAKE_ENV+=	FONTDIR=${FONTDIR:Q}
 
 FONTDIR=	${PREFIX}/lib/X11/fonts/thaixfonts/
 

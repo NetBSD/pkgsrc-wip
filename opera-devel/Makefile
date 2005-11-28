@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/11/16 13:51:22 ghen Exp $
+# $NetBSD: Makefile,v 1.11 2005/11/28 00:27:26 rillig Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=		www
@@ -72,7 +72,7 @@ CONF_FILES+=		${PREFIX}/share/opera/config/opera6rc.fixed \
 			/etc/opera6rc.fixed
 .  endif
 
-PLIST_SUBST+=		OPERA_VER_DATE=${OPERA_VER_DATE}
+PLIST_SUBST+=		OPERA_VER_DATE=${OPERA_VER_DATE:Q}
 PLIST_SUBST+=		OPERA_PKG_VERSION=${OPERA_PKG_VERSION:C/u.*//}
 
 .endif

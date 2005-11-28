@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/10/15 16:18:40 dhowland Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/28 00:27:24 rillig Exp $
 #
 
 DISTNAME=		cream-0.33.1
@@ -15,7 +15,7 @@ NO_BUILD=		yes
 
 .include "../../editors/vim-share/version.mk"
 VIMRUNTIME=		${PREFIX}/share/vim/${VIM_SUBDIR}
-PLIST_SUBST+=		VIM_SUBDIR=${VIM_SUBDIR}
+PLIST_SUBST+=		VIM_SUBDIR=${VIM_SUBDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/28 20:50:10 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:27 rillig Exp $
 #
 
 DISTNAME=		visionegg-0.9.9-demo
@@ -11,7 +11,7 @@ HOMEPAGE=		http://visionegg.sourceforge.net/
 COMMENT=		Demonstration programs for py-visionegg
 
 NO_BUILD=		yes
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 MESSAGE_SUBST+=		PY_VE_DIR=${PY_VE_DEMO_DIR}
 
 PY_VE_DEMO_DIR=		${PREFIX}/share/VisionEgg-${PYVERSSUFFIX}/demo

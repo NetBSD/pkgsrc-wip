@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:22 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:22 rillig Exp $
 #
 
 DISTNAME=		nsopenssl-3.0b23-src
@@ -12,8 +12,8 @@ COMMENT=		OpenSSL module for aolserver
 
 WRKSRC=                 ${WRKDIR}/${DISTNAME:S/-src//}
 
-MAKE_FLAGS+=		INST=/${PREFIX}/include/nsd \
-			OPENSSL=${PREFIX} \
+MAKE_FLAGS+=		INST=/${PREFIX:Q}/include/nsd \
+			OPENSSL=${PREFIX:Q} \
 			TCL_CC=gcc
 CFLAGS+=		-I/usr/pkg/include/nsd/include
 

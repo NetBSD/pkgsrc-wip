@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/11/16 13:01:40 akihabara Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/28 00:27:28 rillig Exp $
 
 DISTNAME=	runit-1.3.1
 CATEGORIES=	sysutils
@@ -17,7 +17,7 @@ DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 DOCS=		package/CHANGES package/COPYING package/README \
 		package/THANKS doc/*.html
 
-PLIST_SUBST+=	SERVICEDIR=${SERVICEDIR}
+PLIST_SUBST+=	SERVICEDIR=${SERVICEDIR:Q}
 DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
 
 INSTALLATION_DIRS= man man/man8 sbin share/examples/runit

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/11/03 13:01:51 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/28 00:27:23 rillig Exp $
 #
 
 DISTNAME=		aolserver-4.0.10-src
@@ -10,7 +10,7 @@ MAINTAINER=		iharding@destinydata.com
 HOMEPAGE=		http://www.aolserver.com/
 COMMENT=		America Online's open source web server
 
-MAKE_FLAGS+=		NSHOME=${WRKSRC}
+MAKE_FLAGS+=		NSHOME=${WRKSRC:Q}
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/23 09:41:34 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/28 00:27:25 rillig Exp $
 
 DISTNAME=	icmpchat-0.6
 CATEGORIES=	chat
@@ -10,7 +10,7 @@ COMMENT=	Simple chat using ICMP and Rijndael-256 encryptation
 
 USE_TOOLS+=	gmake
 
-MAKE_ENV+=	LIBS=${LIBS:Q}
+MAKE_ENV+=	LIBS=${LIBS:M*:Q}
 LIBS.SunOS+=	-lnsl -lsocket -lresolv
 
 .include	"../../mk/bsd.pkg.mk"

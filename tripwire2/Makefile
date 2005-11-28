@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:31:46 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:28 rillig Exp $
 #
 
 DISTNAME=	tripwire-2.3.1-2
@@ -23,7 +23,7 @@ SYSPRE=i386-unknown-openbsd
 SYSPRE=i386-unknown-freebsd
 .endif
 
-MAKE_ENV+=	SYSPRE=${SYSPRE}
+MAKE_ENV+=	SYSPRE=${SYSPRE:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/../bin/${SYSPRE}/* \

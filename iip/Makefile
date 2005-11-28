@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:12 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/28 00:27:25 rillig Exp $
 #
 
 DISTNAME=		iip-1.1.0
@@ -12,7 +12,7 @@ COMMENT=		The Invisible IRC Project
 
 
 BUILD_DIRS=		${WRKSRC}/src
-MAKE_FLAGS+=		CC=${CC:Q} LD=${CC:Q} LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=		CC=${CC:Q} LD=${CC:Q} LDFLAGS=${LDFLAGS:M*:Q}
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:Q}" "${CPPFLAGS:Q}" -I."
 
 do-install:

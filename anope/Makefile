@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/16 23:46:00 adrian_p Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:22 rillig Exp $
 
 DISTNAME=	anope-1.7.12
 CATEGORIES=	net
@@ -18,7 +18,7 @@ USE_TOOLS+=		gmake perl:run
 ANOPE_GROUP?=		anope
 PKG_GROUPS=		${ANOPE_GROUP}
 BUILD_DEFS+=		ANOPE_GROUP
-MAKE_ENV+=		RUNGROUP=${ANOPE_GROUP}
+MAKE_ENV+=		RUNGROUP=${ANOPE_GROUP:Q}
 
 CONF_FILES+=		${PREFIX}/share/examples/anope/example.conf \
 			${PREFIX}/share/anope/services.conf

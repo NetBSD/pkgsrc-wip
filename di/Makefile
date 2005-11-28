@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/01 05:34:51 dhowland Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/28 00:27:24 rillig Exp $
 
 DISTNAME=	di-4.3
 CATEGORIES=	sysutils
@@ -8,7 +8,7 @@ MAINTAINER=	dhowland@users.sourceforge.net
 HOMEPAGE=	http://www.gentoo.com/di/
 COMMENT=	Command-line disk information utility
 
-MAKE_ENV+=	prefix=${PREFIX}
+MAKE_ENV+=	prefix=${PREFIX:Q}
 
 USE_PKGLOCALEDIR=	yes
 

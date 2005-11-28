@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/10/24 17:10:40 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/28 00:27:22 rillig Exp $
 #
 
 CATEGORIES=	databases math
@@ -15,7 +15,7 @@ DEPENDS+=	R-Rdbi>=0.1.2:../../wip/R-Rdbi
 .include "../../mk/bsd.prefs.mk"
 
 WRKSRC=		${WRKDIR}/Rdbi.PgSQL
-MAKE_ENV+=	PREFIX=${PREFIX}
+MAKE_ENV+=	PREFIX=${PREFIX:Q}
 
 post-patch:
 	${SED} -e 's:@PG_INC_PATH@:${PREFIX}/include:g' ${WRKSRC}/configure > ${WRKSRC}/configure.tmp

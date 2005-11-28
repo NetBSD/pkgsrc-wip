@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/09/28 20:50:10 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:26 rillig Exp $
 
 # Notes to package maintainers:
 #
@@ -44,8 +44,8 @@ PKG_PRESERVE=		# defined
 USE_NATIVE_GCC=		yes
 USE_DIGEST=		no
 
-PLIST_SUBST+=		MANDIR=${MANDIR}
-PLIST_SUBST+=		PKG_TOOLS_BIN=${PKG_TOOLS_BIN}
+PLIST_SUBST+=		MANDIR=${MANDIR:Q}
+PLIST_SUBST+=		PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}
 
 LIBNBCOMPAT_FILESDIR=	${.CURDIR}/../../pkgtools/libnbcompat/files
 LIBNBCOMPAT_SRCDIR=	${WRKDIR}/libnbcompat
@@ -56,8 +56,8 @@ LIBS+=			-lnbcompat
 
 CPPFLAGS+=		-DDEF_UMASK=${DEF_UMASK}
 
-MAKE_ENV+=		MACHINE_ARCH="${MACHINE_ARCH}"
-MAKE_ENV+=		OPSYS="${OPSYS}"
+MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
+MAKE_ENV+=		OPSYS=${OPSYS:Q}
 
 MAKE_DIRS+=		${PKG_DBDIR}
 

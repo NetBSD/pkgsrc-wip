@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/09/28 20:50:10 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:27 rillig Exp $
 #
 
 DISTNAME=		PyBrenda-0.4.1
@@ -13,7 +13,7 @@ COMMENT=		Paralell computation system
 PY_PATCHPLIST=		yes
 NO_BUILD=		yes
 
-PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
+PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX:Q}
 
 BRENDA_FILES=		Brenda.py einRpc.py myMath.py niftySocket.py
 BRENDA_SHARE=		INSTALL LICENSE NEWS QuickStart README TODO examples/hello.py

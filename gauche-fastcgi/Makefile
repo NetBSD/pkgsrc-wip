@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/20 00:03:47 hisazumi Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/28 00:27:24 rillig Exp $
 #
 
 DISTNAME=		Gauche-fastcgi-0.1
@@ -13,7 +13,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 GAUCHE_VERSION!=	gauche-config -V
-PLIST_SUBST+=		GAUCHE_VERSION=${GAUCHE_VERSION}
+PLIST_SUBST+=		GAUCHE_VERSION=${GAUCHE_VERSION:Q}
 
 .include "../../lang/gauche/buildlink3.mk"
 .include "../../www/fcgi/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/06/12 22:44:24 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:26 rillig Exp $
 
 .include "Makefile.common"
 
@@ -27,7 +27,7 @@ LINUXBASE?=	${PREFIX}
 
 NO_MTREE=	YES
 
-PLIST_SUBST+=		LINUXBASE=${LINUXBASE}
+PLIST_SUBST+=		LINUXBASE=${LINUXBASE:Q}
 MESSAGE_SUBST+=		PKGBASE=${PKGBASE}
 
 MAKE_DIRS+=	${LINUXBASE}/lib/modules

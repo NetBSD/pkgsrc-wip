@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/06 10:41:45 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/28 00:27:27 rillig Exp $
 #
 
 VERSION=		0.8.2
@@ -36,8 +36,8 @@ EXAMPLEDIR=		${PREFIX}/share/examples/postgis
 HTMLDIR=		${PREFIX}/share/doc/html/postgis
 SQLDIR=			${PREFIX}/share/postgresql
 
-MAKE_ENV+=		PROJ_DIR=${PREFIX}
-MAKE_ENV+=		GEOS_DIR=${PREFIX}
+MAKE_ENV+=		PROJ_DIR=${PREFIX:Q}
+MAKE_ENV+=		GEOS_DIR=${PREFIX:Q}
 
 # install postgis source within contrib directory
 pre-build:

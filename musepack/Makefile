@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:10 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/28 00:27:26 rillig Exp $
 #
 
 DISTNAME=		mpcsv7-src-1.15t
@@ -13,8 +13,8 @@ COMMENT=		MPEG-Plus and MusePack decoder
 
 WRKSRC=			${WRKDIR}/sv7
 MAKEFILE=		Makefile.bsd
-MAKE_ENV+=		LIBOSSAUDIO="${LIBOSSAUDIO}"
-MAKE_ENV+=		PREFIX="${PREFIX}"
+MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO:Q}
+MAKE_ENV+=		PREFIX=${PREFIX:Q}
 
 
 SUBST_CLASSES+=		osconf

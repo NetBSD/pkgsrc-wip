@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:44:36 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:28 rillig Exp $
 
 DISTNAME=	sid-milter-0.2.5
 CATEGORIES=	mail
@@ -16,7 +16,7 @@ BUILDLINK_DEPENDS.libmilter+=	libmilter>=8.13.0
 USE_BUILTIN.libmilter=	NO
 LICENSE=		no-profit
 USE_TOOLS+=		gm4
-MAKE_ENV+=		M4="${M4}"
+MAKE_ENV+=		M4=${M4:Q}
 PTHREAD_OPTS+=		require
 USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		sidmilter

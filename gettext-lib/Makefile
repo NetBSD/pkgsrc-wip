@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/24 10:29:54 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/28 00:27:25 rillig Exp $
 
 .include "../../wip/gettext-runtime/Makefile.common"
 
@@ -15,8 +15,8 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--with-included-gettext
 
-CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
-MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
+MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 
 BUILD_DIRS=             ${WRKSRC}/gettext-runtime/intl
 

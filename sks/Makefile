@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/24 10:31:42 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/28 00:27:28 rillig Exp $
 #
 
 DISTNAME=	sks-1.0.9
@@ -20,8 +20,8 @@ USE_PERL5=	YES
 MAKE_ENV+=	LIBDB=-ldb4 \
 		BDBINCLUDE=-I${BUILDLINK_DIR}/include \
 		BDBLIB=-L${BUILDLINK_DIR}/lib \
-		PREFIX=${PREFIX} \
-		MANDIR=${PREFIX}/man
+		PREFIX=${PREFIX:Q} \
+		MANDIR=${PREFIX:Q}/man
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"

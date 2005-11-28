@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:15:33 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/28 00:27:28 rillig Exp $
 
 DISTNAME=	sgmltools-lite-3.0.3
 CATEGORIES=	net www
@@ -17,7 +17,7 @@ DEPENDS+=	iso12083-[0-9]*:../../textproc/iso12083
 DEPENDS+=	iso8879-[0-9]*:../../textproc/iso8879
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV=	PYTHON=${PYTHONBIN}
+CONFIGURE_ENV=	PYTHON=${PYTHONBIN:Q}
 
 PKG_SYSCONFSUBDIR=	sgml
 CONFIGURE_ARGS+=	--with-etcsgml=${PKG_SYSCONFDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/20 17:49:12 ianharding Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:22 rillig Exp $
 #
 
 DISTNAME=	nspostgres-4.0
@@ -10,7 +10,7 @@ MAINTAINER=	iharding@destinydata.com
 HOMEPAGE=	http://www.aolserver.com/
 COMMENT=	Postgres database access module for aolserver
 
-MAKE_FLAGS+=	POSTGRES=${PREFIX} INST=/${PREFIX}/include/nsd \
+MAKE_FLAGS+=	POSTGRES=${PREFIX:Q} INST=/${PREFIX:Q}/include/nsd \
 		TCL_CC=gcc
 CFLAGS+=	-I/usr/pkg/include/nsd/include
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/28 00:27:24 rillig Exp $
 
 DISTNAME=	ffmpeg-0.4.9-pre1
 PKGNAME=	ffmpeg-devel-0.4.9pre1
@@ -20,9 +20,9 @@ REPLACE_PERL=	doc/texi2pod.pl
 CONF_FILES=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
 		${PKG_SYSCONFDIR}/ffserver.conf
 
-MAKE_ENV+=	EXTRA_LIBS="${LIBGETOPT}" \
+MAKE_ENV+=	EXTRA_LIBS=${LIBGETOPT:Q} \
 		FFSERVER_CONF=${PKG_SYSCONFDIR}/ffserver.conf \
-		LOCALBASE="${LOCALBASE}"
+		LOCALBASE=${LOCALBASE:Q}
 
 CONFIGURE_ARGS=		--cc=${CC} --prefix=${PREFIX}
 CONFIGURE_ARGS+=	--enable-pp --disable-vhook --disable-debug

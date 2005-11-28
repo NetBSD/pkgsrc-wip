@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/25 13:51:03 jtonio Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/28 00:27:23 rillig Exp $
 #
 
 DISTNAME=		brltty-3.7
@@ -19,7 +19,7 @@ EGDIR=			${PREFIX}/share/examples/brltty
 CONF_FILES=		${EGDIR}/brlapi.key ${PKG_SYSCONFDIR}/brlapi.key
 CONF_FILES+=		${EGDIR}/brltty.conf ${PKG_SYSCONFDIR}/brltty.conf
 
-MAKE_ENV+=		EGDIR=${EGDIR}
+MAKE_ENV+=		EGDIR=${EGDIR:Q}
 CONFIGURE_ARGS+=	--without-viavoice
 CONFIGURE_ARGS+=	--without-theta
 CONFIGURE_ARGS+=	--without-swift

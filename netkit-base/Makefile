@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 10:31:13 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:26 rillig Exp $
 
 DISTNAME=		netkit-base-0.17
 PKGREVISION=		1
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	Linux-*-*
 USE_TOOLS+=		gmake
 USE_PKGINSTALL=		YES
 
-MAKE_ENV+=		_PATH_INETDCONF=${PKG_SYSCONFDIR}
+MAKE_ENV+=		_PATH_INETDCONF=${PKG_SYSCONFDIR:Q}
 
 RCD_SCRIPTS=		inetd
 CONF_FILES=		${PREFIX}/share/examples/${PKGBASE}/inetd.conf ${PKG_SYSCONFDIR}/inetd.conf

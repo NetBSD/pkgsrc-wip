@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/12 23:51:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.11 2005/11/28 00:27:27 rillig Exp $
 #
 
 DISTNAME=	plugger-5.0
@@ -15,7 +15,7 @@ REL_EGDIR=		share/examples/plugger
 EGDIR=			${PREFIX}/${REL_EGDIR}
 CONF_FILES=		${EGDIR}/pluggerrc ${PKG_SYSCONFDIR}/pluggerrc
 
-PLIST_SUBST+=		EGDIR=${REL_EGDIR}
+PLIST_SUBST+=		EGDIR=${REL_EGDIR:Q}
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}

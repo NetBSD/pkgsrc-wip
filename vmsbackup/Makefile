@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:16:11 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:29 rillig Exp $
 #
 
 DISTNAME=	vmsbackup
@@ -12,7 +12,7 @@ HOMEPAGE=	http://garbo.uwasa.fi/pub/unix/vmsbackup/
 COMMENT=	Utility to read VMS backup tapes
 
 BUILD_TARGET=	vmsbackup
-MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
 
 .include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN} == "big"

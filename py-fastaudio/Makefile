@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/27 16:28:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/28 00:27:27 rillig Exp $
 #
 
 DISTNAME=		fastaudio
@@ -18,7 +18,7 @@ BUILD_DEPENDS=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-MAKE_ENV+=		PTHREAD_LDFLAGS="${PTHREAD_LDFLAGS}"
+MAKE_ENV+=		PTHREAD_LDFLAGS=${PTHREAD_LDFLAGS:Q}
 
 EXTRACT_CMD_OPTS.zip=	-aqo
 

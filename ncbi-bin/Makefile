@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/10/10 13:36:45 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:26 rillig Exp $
 #
 
 DISTNAME=		ncbi
@@ -15,7 +15,7 @@ PKG_VER=		20040505
 WRKSRC=			${WRKDIR}/ncbi
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
-MAKE_ENV+=		PREFIX=${PREFIX}
+MAKE_ENV+=		PREFIX=${PREFIX:Q}
 
 do-build:
 	cd ${WRKSRC}/.. && ${SETENV} ${MAKE_ENV} ${CSH} ncbi/make/makedis.csh

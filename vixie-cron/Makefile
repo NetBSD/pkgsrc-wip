@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/04 01:19:28 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/28 00:27:29 rillig Exp $
 
 DISTNAME=		cron_4.0_b1
 PKGNAME=		vixie-cron-4.0.1
@@ -13,7 +13,7 @@ USE_PKGINSTALL=		YES
 
 #WRKSRC=			${WRKDIR}
 EXTRACT_CMD=	${MKDIR} ${WRKSRC} && cd ${WRKSRC} && ${CAT} ${DOWNLOADED_DISTFILE} | ${SH}
-MAKE_ENV+=		DESTDIR=${PREFIX}
+MAKE_ENV+=		DESTDIR=${PREFIX:Q}
 
 RCD_SCRIPTS=		cron
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/30 22:38:09 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:24 rillig Exp $
 #
 
 DISTNAME=		fbpanel-4.3
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--cpu=off
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 PKGMANDIR?=		man
-MAKE_ENV+=		PKGMANDIR=${PKGMANDIR}
+MAKE_ENV+=		PKGMANDIR=${PKGMANDIR:Q}
 MANCOMPRESSED=		yes
 
 .include "../../x11/gtk2/buildlink3.mk"

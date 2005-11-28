@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/08/11 10:08:22 absd Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/28 00:27:25 rillig Exp $
 #
 
 DISTNAME=		9714-gtk-qt-engine-0.2
@@ -20,9 +20,9 @@ GNU_CONFIGURE=		yes
 
 # needed
 CONFIGURE_ENV+=		PKG_CONFIG=${PREFIX}/bin/pkg-config \
-			QTDIR=${QTDIR}
-MAKE_ENV+=		QTDIR=${QTDIR}
-MAKE_FLAGS+=		QTDIR=${QTDIR}
+			QTDIR=${QTDIR:Q}
+MAKE_ENV+=		QTDIR=${QTDIR:Q}
+MAKE_FLAGS+=		QTDIR=${QTDIR:Q}
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"

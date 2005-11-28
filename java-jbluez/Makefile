@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:25 rillig Exp $
 #
 
 DISTNAME=		jbluez-1.0
@@ -12,7 +12,7 @@ COMMENT=		Java interface for BlueZ stack
 
 USE_TOOLS=gmake
 USE_JAVA= YES
-MAKE_ENV=JDK_HOME=${PKG_JAVA_HOME}
+MAKE_ENV=JDK_HOME=${PKG_JAVA_HOME:Q}
 
 WRKSRC=		${WRKDIR}/src
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/09/28 20:50:10 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/28 00:27:27 rillig Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-gettext-tools-0
@@ -16,7 +16,7 @@ PYTHON_PATCH_SCRIPTS=		Tools/i18n/msgfmt.py Tools/i18n/pygettext.py
 
 # Why the hell it is not declared in python/pyvers.mk ?!
 # 	-- tech-pkg@NetBSD.org
-PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 do-patch:
 	@echo "Patches ignored"

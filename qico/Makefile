@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/13 00:56:31 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:27 rillig Exp $
 #
 
 DISTNAME=	qico-0.48.5
@@ -10,7 +10,7 @@ COMMENT=	FidoNet mailer
 
 USE_TOOLS+=	gmake
 
-MAKE_ENV+=	SH="${SH}" AWK="${AWK}" MORDA="${QCC}"
+MAKE_ENV+=	SH=${SH:Q} AWK=${AWK:Q} MORDA=${QCC:Q}
 
 .if defined(WITH_QCC)
 QCC=		1

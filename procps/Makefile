@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/24 10:31:20 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/11/28 00:27:27 rillig Exp $
 
 DISTNAME=		procps-3.0.5
 CATEGORIES=		sysutils
@@ -16,7 +16,7 @@ ONLY_FOR_PLATFORM=	Linux-*-*
 CONFLICTS+=		top-[0-9]*
 
 USE_TOOLS+=		gmake
-MAKE_ENV+=		DESTDIR=${PREFIX}
+MAKE_ENV+=		DESTDIR=${PREFIX:Q}
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

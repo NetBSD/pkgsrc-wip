@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/24 10:31:47 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/28 00:27:29 rillig Exp $
 
 # newest version may be util-linux-2.12h but not on mirrors
 DISTNAME=	util-linux-2.12b
@@ -20,7 +20,7 @@ ONLY_FOR_PLATFORM=	Linux-*-* # Uses Linux kernel headers
 USE_PKGINSTALL=		YES
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
-MAKE_ENV+=		DESTDIR=${PREFIX}
+MAKE_ENV+=		DESTDIR=${PREFIX:Q}
 MAKE_ENV+=		ETCDIR=${PREFIX}/share/examples/util-linux
 MAKE_ENV+=		FDPRMFILE=${PKG_SYSCONFDIR}/fdprm
 MAKE_ENV+=		INFO_DIR=/${INFO_DIR}

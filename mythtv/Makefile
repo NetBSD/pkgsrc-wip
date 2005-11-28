@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/12 23:51:24 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:26 rillig Exp $
 #
 
 DISTNAME=		mythtv-0.11
@@ -28,8 +28,8 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 # Slackware 9, so build without MMX support for now.
 CONFIGURE_ARGS+=	--disable-mmx
 
-MAKE_ENV+=		QTPREFIX=${QTPREFIX}
-MAKE_ENV+=		QTDIR=${QTPREFIX}
+MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
+MAKE_ENV+=		QTDIR=${QTPREFIX:Q}
 
 # needed to find qmake
 PATH:=			${PATH}:${QTPREFIX}/bin

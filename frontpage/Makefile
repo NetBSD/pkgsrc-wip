@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/11/02 23:17:17 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/11/28 00:27:24 rillig Exp $
 
 DISTNAME=	frontpage-5.0.2.2623
 CATEGORIES=	www
@@ -65,7 +65,7 @@ FPGRP?=		${BINGRP}
 
 MOD_FPDOCDIR=	share/httpd/htdocs/manual/frontpage
 
-PLIST_SUBST+=	FP_VER=${FP_VER}
+PLIST_SUBST+=	FP_VER=${FP_VER:Q}
 
 METALOG=	${WRKDIR}/.METALOG
 

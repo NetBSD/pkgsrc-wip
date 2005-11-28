@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/10/09 01:26:50 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/11/28 00:27:28 rillig Exp $
 
 DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}
 PKGNAME=	spamassassin-cvs-${_SA_CVS_DATE}
@@ -168,8 +168,8 @@ INTERPRETER_SUPPORT=	YES
 .endif
 
 # These values are substituted into netbsd-rc-script.sh.
-FILES_SUBST+=		INTERPRETER_SUPPORT="${INTERPRETER_SUPPORT}"
-FILES_SUBST+=		OPSYS="${OPSYS}"
+FILES_SUBST+=		INTERPRETER_SUPPORT=${INTERPRETER_SUPPORT:Q}
+FILES_SUBST+=		OPSYS=${OPSYS:Q}
 
 pre-configure: perl5-configure
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/08/14 08:35:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/28 00:27:28 rillig Exp $
 
 DISTNAME=	sipp.1.0
 PKGNAME=	sipp-1.0
@@ -13,7 +13,7 @@ WRKSRC=		${WRKDIR}/sipp
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
-MAKE_ENV+=	PKGSRC_CFLAGS="${CFLAGS}"
+MAKE_ENV+=	PKGSRC_CFLAGS=${CFLAGS:M*:Q}
 
 INSTALLATION_DIRS=	bin
 

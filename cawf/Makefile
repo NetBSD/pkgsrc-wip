@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/08/18 13:42:45 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/28 00:27:23 rillig Exp $
 
 DISTNAME=	cawf
 PKGNAME=	cawf-4.10
@@ -15,7 +15,7 @@ COMMENT=	nroff-like text formatter
 CAWFLIB=	${PREFIX}/share/cawf
 PLIST_SUBST+=   CAWFLIB=share/cawf
 BUILD_DEFS+=	CAWFLIB
-MAKE_FLAGS+=	CAWFLIB=${CAWFLIB}
+MAKE_FLAGS+=	CAWFLIB=${CAWFLIB:Q}
 
 post-extract:
 	${MV} ${WRKSRC}/cawf.1 ${WRKSRC}/cawf.1.orig && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/24 10:30:42 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/28 00:27:26 rillig Exp $
 
 DISTNAME=		lilo-22.5.9
 CATEGORIES=		sysutils
@@ -22,8 +22,8 @@ BUILD_DEPENDS+=		bin86>=0.16.9:../../wip/bin86
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 USE_TOOLS+=		gmake
-MAKE_ENV+=		ROOT=${PREFIX}
-MAKE_ENV+=		SYSCONFDIR=${PKG_SYSCONFDIR}
+MAKE_ENV+=		ROOT=${PREFIX:Q}
+MAKE_ENV+=		SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 PKGMANDIR?=		man
 MAKE_ENV+=		PKGMANDIR+=${PKGMANDIR}
 

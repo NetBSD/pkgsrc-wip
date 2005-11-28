@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/10/31 15:37:36 bubuchka Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/28 00:27:28 rillig Exp $
 
 DISTNAME=		sarg-2.0.9
 CATEGORIES=		www
@@ -38,9 +38,9 @@ PKG_SUPPORTED_OPTIONS=	gd
 .  include "../../graphics/gd/buildlink3.mk"
 .endif
 
-FILES_SUBST+=		SARG_REPORTSDIR=${SARG_REPORTSDIR}		\
-			SG_LOG=${SG_LOG}				\
-			SQUID_ACCESSLOG=${SQUID_ACCESSLOG}
+FILES_SUBST+=		SARG_REPORTSDIR=${SARG_REPORTSDIR:Q}		\
+			SG_LOG=${SG_LOG:Q}				\
+			SQUID_ACCESSLOG=${SQUID_ACCESSLOG:Q}
 SUBST_CLASSES+=		sargconf sargsrc
 SUBST_MESSAGE.sargconf=	"[Adjust values in SARG configuration files]"
 SUBST_MESSAGE.sargsrc=	"[Adjust values in SARG sources]"

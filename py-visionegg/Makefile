@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/11 23:04:02 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:27 rillig Exp $
 #
 
 DISTNAME=		visionegg-0.9.9
@@ -12,8 +12,8 @@ COMMENT=		Visual stimulus creation and control in Python
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-MAKE_ENV+=		PYVERSSUFFIX=${PYVERSSUFFIX}
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+MAKE_ENV+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .if exists(../../mk/opengl.buildlink3.mk)
 # see PR 23845 for details

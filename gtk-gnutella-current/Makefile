@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/09/28 20:50:09 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/11/28 00:27:25 rillig Exp $
 
 DISTNAME=		gtk-gnutella-current-${GTK_GNUTELLA_VER}
 PKGREVISION=		3
@@ -13,11 +13,11 @@ USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
-CONFIGURE_ARGS+=	-d -e -r -s -D prefix="${PREFIX}" -D cc="${CC}" \
+CONFIGURE_ARGS+=	-d -e -r -s -D prefix=${PREFIX:Q} -D cc=${CC:Q} \
 			-D privlib="${PREFIX}/share/gtk-gnutella" \
-			-D sysman="${PREFIX}/man" -D cflags="${CFLAGS}" \
+			-D sysman="${PREFIX}/man" -D cflags=${CFLAGS:M*:Q} \
 			-D locale="${PREFIX}/${PKGLOCALEDIR}/locale" \
-			-D optimize="${COPTS}" -D gtkversion=2 -D yacc="yacc"
+			-D optimize=${COPTS:Q} -D gtkversion=2 -D yacc="yacc"
 
 CONFLICTS=		gtk-gnutella-*
 

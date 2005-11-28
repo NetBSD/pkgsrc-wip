@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/27 16:28:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:27 rillig Exp $
 #
 
 DISTNAME=		PyKyra-0.4.0
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PY_PATCHPLIST=		yes
 
-CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"

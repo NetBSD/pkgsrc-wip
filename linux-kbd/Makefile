@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:30:42 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/28 00:27:26 rillig Exp $
 
 DISTNAME=		kbd-1.08
 PKGNAME=		linux-${DISTNAME}
@@ -25,13 +25,13 @@ CONFIGURE_ARGS+=	--mandir=/man
 .if !exists(/usr/bin/lex)
 BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
 LEX=			${LOCALBASE}/bin/flex -8
-MAKE_ENV+=		LEX="${LEX}"
+MAKE_ENV+=		LEX=${LEX:Q}
 .endif
 
 .if !exists(/usr/bin/yacc)
 BUILD_DEPENDS+= 	bison-[0-9]*:../../devel/bison
 YACC=			${LOCALBASE}/bin/bison -y
-MAKE_ENV+=		YACC="${YACC}"
+MAKE_ENV+=		YACC=${YACC:Q}
 .endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/08/11 10:08:22 absd Exp $
+# $NetBSD: Makefile,v 1.17 2005/11/28 00:27:24 rillig Exp $
 
 DISTNAME=	gDesklets-0.26
 CATEGORIES=	x11 gnome
@@ -16,7 +16,7 @@ USE_LIBTOOL=	YES
 PKGCONFIG_OVERRIDE=	gdesklets-core.pc.in
 GCONF2_SCHEMAS=		gdesklets-display-thumbnail.schemas
 
-CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 PYTHON_VERSIONS_ACCEPTED=	23 22 21
 PYTHON_PATCH_SCRIPTS=		gdesklets

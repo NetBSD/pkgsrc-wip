@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/16 00:26:07 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/28 00:27:28 rillig Exp $
 #
 
 DISTNAME=		sysstat-6.0.1
@@ -20,7 +20,7 @@ MAKE_ENV+=		DOC_DIR=${PREFIX}/share/doc/sysstat
 MAKE_ENV+=		NLS_DIR=${PREFIX}/${PKGLOCALEDIR}/locale
 MAKE_ENV+=		SYSCONFIG_DIR=${PREFIX}/share/examples/sysstat
 MAKE_ENV+=		MAN_DIR=${PREFIX}/${PKGMANDIR}
-MAKE_ENV+=		MAN_GROUP=${MANGRP}
+MAKE_ENV+=		MAN_GROUP=${MANGRP:Q}
 MAKE_ENV+=		IOCONF=${PKG_SYSCONFDIR}/sysstat/sysstat.ioconf
 
 CONF_FILES=		${PREFIX}/share/examples/sysstat/sysstat.ioconf \

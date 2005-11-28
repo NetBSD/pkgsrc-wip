@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/09/28 20:50:10 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/28 00:27:27 rillig Exp $
 #
 
 DISTNAME=		scapy-0.9.15
@@ -17,7 +17,7 @@ PYTHON_PATCH_SCRIPTS=		scapy.py
 
 NO_BUILD=	yes
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scapy.py ${PREFIX}/bin/scapy.py-${PYVERSSUFFIX}

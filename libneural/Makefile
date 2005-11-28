@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/28 17:12:37 rasputnik Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/28 00:27:25 rillig Exp $
 
 DISTNAME= libneural-1.0.3
 CATEGORIES=	devel
@@ -9,7 +9,7 @@ HOMEPAGE= http://ieee.uow.edu.au/~daniel/software/libneural/
 COMMENT=	C++ library for creating 3-layer backpropagation neural networks
 
 CONFIGURE_PREFIX+= ${PREFIX}
-MAKE_FLAGS+= prefix=${PREFIX}
+MAKE_FLAGS+= prefix=${PREFIX:Q}
 
 post-patch:
 	${CHMOD} +x ${WRKSRC}/configure

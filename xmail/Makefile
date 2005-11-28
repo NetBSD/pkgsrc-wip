@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 10:31:49 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:29 rillig Exp $
 #
 
 DISTNAME=	xmail-1.18
@@ -11,7 +11,7 @@ COMMENT=	SMTP, POP3 and finder server
 
 USE_TOOLS+=	gmake
 
-MAKE_ENV+=	OSTYPE=${OPSYS}
+MAKE_ENV+=	OSTYPE=${OPSYS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
