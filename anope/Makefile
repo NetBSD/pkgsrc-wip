@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:22 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/28 23:12:39 adrian_p Exp $
 
 DISTNAME=	anope-1.7.12
 CATEGORIES=	net
@@ -23,8 +23,6 @@ MAKE_ENV+=		RUNGROUP=${ANOPE_GROUP:Q}
 CONF_FILES+=		${PREFIX}/share/examples/anope/example.conf \
 			${PREFIX}/share/anope/services.conf
 
-CONFIGURE_ARGS+=	--without-encryption
-CONFIGURE_ARGS+=	--without-mysql
 CONFIGURE_ARGS+=	--with-permissions=077
 CONFIGURE_ARGS+=	--with-bindir=${PREFIX}/share/anope
 CONFIGURE_ARGS+=	--with-datadir=${PREFIX}/share/anope
