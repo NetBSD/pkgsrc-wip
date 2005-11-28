@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2005/11/28 20:36:11 gschwarz Exp $
+
+--- lpc10-1.5/f2c.h.orig	2005-11-28 14:49:58.000000000 +0100
++++ lpc10-1.5/f2c.h	2005-11-28 14:50:16.000000000 +0100
+@@ -186,7 +186,7 @@
+ 	};
+ typedef struct Namelist Namelist;
+ 
+-#define abs(x) ((x) >= 0 ? (x) : -(x))
++/*#define abs(x) ((x) >= 0 ? (x) : -(x))*/
+ #define dabs(x) (doublereal)abs(x)
+ #define min(a,b) ((a) <= (b) ? (a) : (b))
+ #define max(a,b) ((a) >= (b) ? (a) : (b))
