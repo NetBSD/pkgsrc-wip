@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/10/16 18:36:57 scode Exp $
+# $NetBSD: Makefile,v 1.11 2005/11/28 22:40:40 scode Exp $
 #
 
-PKGMGR_VERSION= 0.6.0
+PKGMGR_VERSION= 0.7.0
 DISTNAME=	pkgmanager-${PKGMGR_VERSION}
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://starfury.scode.org/pkgmanager/
