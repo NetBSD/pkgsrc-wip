@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/26 18:53:06 hugor Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/29 19:06:26 hugor Exp $
 #
 
 DISTNAME=		gate-2.06
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.unixpapa.com/gate.html
 COMMENT=		Lightweight text editor
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
 BUILD_TARGET=		# empty
 
 .include	"../../mk/bsd.pkg.mk"
