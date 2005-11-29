@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2070 2005/11/28 00:23:28 rillig Exp $
+# $Id: Makefile,v 1.2071 2005/11/29 22:52:17 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -844,7 +844,6 @@ SUBDIR+=	php-doc-sl
 SUBDIR+=	php-doc-sv
 SUBDIR+=	php-fcgi
 SUBDIR+=	php-mode
-SUBDIR+=	physicsfs
 SUBDIR+=	picasm
 SUBDIR+=	picprog
 SUBDIR+=	pinball
@@ -1144,7 +1143,6 @@ SUBDIR+=	toppler
 SUBDIR+=	tops-bin
 SUBDIR+=	tr2latex
 SUBDIR+=	traceroute-nanog
-SUBDIR+=	tre
 SUBDIR+=	treetool
 SUBDIR+=	treeview
 SUBDIR+=	tripwire2
@@ -1163,7 +1161,6 @@ SUBDIR+=	uebimiau
 SUBDIR+=	umix
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
-SUBDIR+=	unrealircd
 SUBDIR+=	unrealtournament-server
 SUBDIR+=	unshield
 SUBDIR+=	up-imapproxy
