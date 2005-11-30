@@ -1,0 +1,2 @@
+* use buildlink3.mk for pyrex.
+* fix the warning messages during building.
