@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2005/11/14 09:22:43 leonardschmidt Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/11/30 09:40:08 leonardschmidt Exp $
 bin/bmpx
-bin/ctt
 bin/hash_index
 bin/hash_table
 bin/hrel-demo
@@ -19,11 +18,6 @@ include/bmpx/sanity.h
 include/bmpx/uri.h
 include/bmpx/util.h
 include/bmpx/vfs.h
-include/bmpx/xml.h
-include/libchroma/chroma-list-column.h
-include/libchroma/chroma-list-selection.h
-include/libchroma/chroma-list.h
-include/libchroma/chroma-vscrollbar.h
 include/libhrel/libhrel/attr_map.h
 include/libhrel/libhrel/avl_tree_index.h
 include/libhrel/libhrel/btree.h
@@ -38,6 +32,11 @@ include/libhrel/libhrel/relation_sort.h
 include/libhrel/libhrel/stack.h
 include/libhrel/libhrel/tuple.h
 include/libhrel/libhrel/types.h
+include/libskinned/libskinned/bmp_button.h
+include/libskinned/libskinned/bmp_button_toggle.h
+include/libskinned/libskinned/bmp_slider.h
+include/libskinned/libskinned/bmp_tooltips.h
+include/libskinned/libskinned/bmp_window.h
 lib/bmpx/plugins/container/libcontainer_folder.la
 lib/bmpx/plugins/container/libcontainer_m3u.la
 lib/bmpx/plugins/container/libcontainer_pls.la
@@ -47,9 +46,10 @@ lib/bmpx/plugins/flow/libflow_shuffle.la
 lib/bmpx/plugins/transport/libtransport_cdda.la
 lib/bmpx/plugins/transport/libtransport_file.la
 lib/bmpx/plugins/transport/libtransport_http.la
-lib/libchroma.la
+lib/libgoa.a
 lib/libhrel.la
 lib/libskinned.la
+lib/libxcs.a
 lib/pkgconfig/hrel.pc
 man/man1/bmpx.1
 share/applications/bmpx.desktop
@@ -186,8 +186,9 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/bmpx.mo
 @dirrm lib/bmpx/plugins/container
 @dirrm lib/bmpx/plugins
 @dirrm lib/bmpx
+@dirrm include/libskinned/libskinned
+@dirrm include/libskinned
 @dirrm include/libhrel/libhrel
 @dirrm include/libhrel
-@dirrm include/libchroma
 @dirrm include/bmpx/interfaces
 @dirrm include/bmpx
