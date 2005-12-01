@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/01 03:51:36 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/01 03:53:00 minskim Exp $
 #
 
 DISTNAME=		clex-3.14
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.clex.sk/download/
 COMMENT=		File manager with a full-screen user interface
 
 USE_NCURSES=		# enter_{bold,reverse,underline}_mode
-USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 .include "../../devel/ncurses/buildlink3.mk"
