@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/09/02 18:11:41 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/01 22:10:41 kuli0020 Exp $
 
 DISTNAME=       Text-Emoticon-MSN-0.02
 PKGNAME=        p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MIYAGAWA/}
 
-MAINTAINER=	kuli0020@NetBSD.org
+MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://cpan.uwinnipeg.ca/dist/Text-Emoticon-MSN
 COMMENT=	Emoticon filter of MSN Messenger
 
