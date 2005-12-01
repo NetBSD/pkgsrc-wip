@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2073 2005/12/01 03:33:28 minskim Exp $
+# $Id: Makefile,v 1.2074 2005/12/01 03:55:00 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -131,7 +131,6 @@ SUBDIR+=	cjk-latex-japanese
 SUBDIR+=	cjk-latex-korean
 SUBDIR+=	cjk-latex-wadalab
 SUBDIR+=	clamassassin
-SUBDIR+=	clex
 SUBDIR+=	clustalx
 SUBDIR+=	com_err
 SUBDIR+=	common-mml
