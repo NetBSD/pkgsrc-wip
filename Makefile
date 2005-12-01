@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2072 2005/11/30 13:48:33 rxg Exp $
+# $Id: Makefile,v 1.2073 2005/12/01 03:33:28 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -161,7 +161,6 @@ SUBDIR+=	debian_glib
 SUBDIR+=	debian_gtk
 #SUBDIR+=	debian_linux	# not a real package
 SUBDIR+=	debian_x11
-SUBDIR+=	detox
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	di
