@@ -12,7 +12,7 @@ sometimes crashes at startup with:
 speedx in free(): warning: junk pointer, too high to make sense.
 Error (Bad Attached memory shared)
 
-should honor USE_OSS
+should have oss option
 
 getopt (or whatever) is broken
 speedx --help # doesn't work, but -h says it does
