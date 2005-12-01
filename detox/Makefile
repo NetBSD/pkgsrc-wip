@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/26 20:35:30 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/01 03:29:36 minskim Exp $
 #
 
 DISTNAME=		detox-1.2.0-rc1
+PKGNAME=		${DISTNAME:S/-rc/rc}
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=detox/}
 EXTRACT_SUFX=		.tar.bz2
