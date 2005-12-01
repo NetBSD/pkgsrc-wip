@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/30 06:58:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/01 20:23:52 thomasklausner Exp $
 
 DISTNAME=	Test-Class-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Test-Class/
 COMMENT=	Test::Class - Easily create test classes in an xUnit style
 
-BUILD_DEPENDS=	p5-Test-Simple>=0.62:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	p5-Test-Simple>=0.62:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Test-Exception>=0.10:../../devel/p5-Test-Exception
 DEPENDS+=	p5-Devel-Symdump>=2.03:../../devel/p5-Devel-Symdump
 DEPENDS+=	p5-Test-Differences>=0.43:../../wip/p5-Test-Differences
