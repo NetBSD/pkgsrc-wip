@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/27 21:43:47 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/01 03:51:36 minskim Exp $
 #
 
 DISTNAME=		clex-3.14
@@ -9,7 +9,7 @@ MAINTAINER=		bartosz@atom.eu.org
 HOMEPAGE=		http://www.clex.sk/download/
 COMMENT=		File manager with a full-screen user interface
 
-USE_NCURSES=		yes
+USE_NCURSES=		# enter_{bold,reverse,underline}_mode
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
