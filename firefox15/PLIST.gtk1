@@ -1,0 +1,47 @@
+@comment $NetBSD: PLIST.gtk1,v 1.1.1.1 2005/12/02 10:59:14 ghen Exp $
+include/${PKGNAME}/accessibility/nsHTMLFormControlAccessibleWrap.h
+include/${PKGNAME}/gfx/nsGfxXPrintCID.h
+include/${PKGNAME}/gfx/nsIDeviceContextSpecXPrint.h
+include/${PKGNAME}/gfx/nsIDeviceContextXPrint.h
+include/${PKGNAME}/gfx/nsIFontCatalogService.h
+include/${PKGNAME}/gfx/nsIFreeType2.h
+include/${PKGNAME}/gtkembedmoz/gtkmozembed.h
+include/${PKGNAME}/gtkembedmoz/gtkmozembed_internal.h
+include/${PKGNAME}/gtkxtbin/gtk2xtbin.h
+include/${PKGNAME}/gtkxtbin/gtkxtbin.h
+include/${PKGNAME}/toolkitcomps/nsIRemoteService.h
+include/${PKGNAME}/widget/gdksuperwin.h
+include/${PKGNAME}/widget/gtkmozarea.h
+include/${PKGNAME}/widget/gtkmozbox.h
+include/${PKGNAME}/xlibrgb/xlibrgb.h
+include/${PKGNAME}/xprintutil/xprintutil.h
+lib/${PKGNAME}/TestGtkEmbed
+lib/${PKGNAME}/TestGtkEmbedChild
+lib/${PKGNAME}/TestGtkEmbedNotebook
+lib/${PKGNAME}/TestGtkEmbedSocket
+lib/${PKGNAME}/components/libgfx_gtk.so
+lib/${PKGNAME}/components/libgfxxprint.so
+lib/${PKGNAME}/components/libremoteservice.so
+lib/${PKGNAME}/components/libwidget_gtk.so
+lib/${PKGNAME}/components/toolkitremote.xpt
+lib/${PKGNAME}/icons/document.png
+lib/${PKGNAME}/icons/mozicon128.png
+lib/${PKGNAME}/icons/mozicon16.xpm
+lib/${PKGNAME}/icons/mozicon50.xpm
+lib/${PKGNAME}/libgtkembedmoz.so
+lib/${PKGNAME}/libgtksuperwin.so
+lib/${PKGNAME}/libgtkxtbin.so
+lib/${PKGNAME}/libxlibrgb.so
+lib/${PKGNAME}/mozilla-xremote-client
+lib/${PKGNAME}/plugins/libnullplugin.so
+lib/${PKGNAME}/plugins/libunixprintplugin.so
+lib/${PKGNAME}/res/samples/embed-test.html
+share/idl/${PKGNAME}/nsIFontCatalogService.idl
+share/idl/${PKGNAME}/nsIFreeType2.idl
+share/idl/${PKGNAME}/nsIRemoteService.idl
+@dirrm lib/${PKGNAME}/plugins
+@dirrm lib/${PKGNAME}/icons
+@dirrm include/${PKGNAME}/xprintutil
+@dirrm include/${PKGNAME}/xlibrgb
+@dirrm include/${PKGNAME}/gtkxtbin
+@dirrm include/${PKGNAME}/gtkembedmoz

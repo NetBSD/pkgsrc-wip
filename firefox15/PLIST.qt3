@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST.qt3,v 1.1.1.1 2005/12/02 10:59:14 ghen Exp $
+include/${PKGNAME}/accessibility/nsHTMLFormControlAccessibleWrap.h
+include/${PKGNAME}/gfx/nsGfxXPrintCID.h
+include/${PKGNAME}/gfx/nsIDeviceContextSpecXPrint.h
+include/${PKGNAME}/gfx/nsIDeviceContextXPrint.h
+include/${PKGNAME}/gfx/nsIFontCatalogService.h
+include/${PKGNAME}/gfx/nsIFreeType2.h
+include/${PKGNAME}/xlibrgb/xlibrgb.h
+include/${PKGNAME}/xprintutil/xprintutil.h
+lib/${PKGNAME}/components/libgfx_qt.so
+lib/${PKGNAME}/components/libgfxxprint.so
+lib/${PKGNAME}/components/libwidget_qt.so
+lib/${PKGNAME}/libxlibrgb.so
+share/idl/${PKGNAME}/nsIFontCatalogService.idl
+share/idl/${PKGNAME}/nsIFreeType2.idl
+@dirrm include/${PKGNAME}/xprintutil
+@dirrm include/${PKGNAME}/xlibrgb
