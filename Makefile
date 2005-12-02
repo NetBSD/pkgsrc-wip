@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2075 2005/12/01 19:05:22 adrian_p Exp $
+# $Id: Makefile,v 1.2076 2005/12/02 04:08:46 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -791,7 +791,6 @@ SUBDIR+=	p5-Test-Differences
 SUBDIR+=	p5-Text-ASCIITable
 SUBDIR+=	p5-Text-Context
 SUBDIR+=	p5-Text-Context-EitherSide
-SUBDIR+=	p5-Text-Emoticon-MSN
 SUBDIR+=	p5-Text-German
 SUBDIR+=	p5-Tie-Array-Sorted
 SUBDIR+=	p5-Time-Local
