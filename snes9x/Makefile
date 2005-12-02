@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2005/11/04 20:39:21 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/02 14:07:41 leonardschmidt Exp $
 #
 
 DISTNAME=		snes9x-${S9X_VER}-src
 PKGNAME=		${DISTNAME:S/-src//}
 CATEGORIES=		emulators
-MASTER_SITES=		http://www.lysator.liu.se/snes9x/${S9X_VER}/ \
-			http://www.ipherswipsite.com/files/snes9x/ \
-			http://www.zophar.net/Files/ \
+MASTER_SITES=		http://www.lysator.liu.se/snes9x/${S9X_VER}/	\
+			http://files.ipherswipsite.com/snes9x/		\
+			http://www.zophar.net/Files/			\
 			http://vincent.grigorieff.free.fr/snes9x/
 MAINTAINER=		jmcneill@NetBSD.org
 HOMEPAGE=		http://www.snes9x.com/
