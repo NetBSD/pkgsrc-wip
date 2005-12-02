@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/11/06 10:41:45 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/02 17:16:05 thomasklausner Exp $
 #
 
 DISTNAME=		mapserver-4.4.2
@@ -39,12 +39,6 @@ CFLAGS+=		-I${PREFIX}/include/php/TSRM
 CFLAGS+=		-I${PREFIX}/include/php/regex
 CFLAGS+=		-I${PREFIX}/include/php
 CFLAGS+=		-I${WRKSRC}
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mapserver
-PKG_SUPPORTED_OPTIONS=	postgresql73 postgresql74 postgresql80
-PKG_SUGGESTED_OPTIONS=	postgresql80
-
-.include "../../mk/bsd.options.mk"
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libmap.a ${PREFIX}/lib
