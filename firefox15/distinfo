@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/02 10:59:14 ghen Exp $
+$NetBSD: distinfo,v 1.2 2005/12/02 14:14:43 ghen Exp $
 
 SHA1 (firefox-1.5-source.tar.bz2) = 7437c6a351787ec8762e598ae1852e22bcca3220
 RMD160 (firefox-1.5-source.tar.bz2) = 5e7475846e9c92e36167a384e1e8a3d699b0b62f
 Size (firefox-1.5-source.tar.bz2) = 34491496 bytes
+SHA1 (patch-ab) = 2c0292e2d265d972f7946f1285a27cb349e5c938
+SHA1 (patch-ac) = d9039d09cc713794e2d3e709a09994c2952fedb9
 SHA1 (patch-ah) = 2f359264aad103ebae2de8b3b113caa09d808759
 SHA1 (patch-ai) = 89b0fb6fb691a6d40e7f1a5bdc8335d63e491c7b
 SHA1 (patch-aj) = 951b5ea63116d876a6fcef586256a5728a2df2cf
@@ -10,3 +12,21 @@ SHA1 (patch-ak) = f867ca0973fb4d0ca325b25f83586f10f6e85e32
 SHA1 (patch-al) = d916f38de2fa0ca1993ec75c457fccc60ee6d612
 SHA1 (patch-an) = 47aa51ede91e0a89299385fd68111f1633946b48
 SHA1 (patch-ao) = 01e9831e144a1073bd579bf5f1e03b60629bef7f
+SHA1 (patch-aq) = a7ef8ef6e49d315a2f5f11e602606020c24df41d
+SHA1 (patch-bo) = d8d7e7c327aa8b4547368a68d6a94478092a38fb
+SHA1 (patch-bq) = f393e9e02d23094a795f88c28dcc11d1a74a0cc2
+SHA1 (patch-bs) = 080b8a38ed60fabc817e7108c2e79c1852e4598d
+SHA1 (patch-db) = 7fb5fcee2691d27275ad75eedb5a54c127d79636
+SHA1 (patch-dc) = eec6623f0b7cf59faff2b89d3350b91bb5ce9073
+SHA1 (patch-dd) = dea852b67ebf11febb4ad9a98a96c7181585e30a
+SHA1 (patch-df) = 578639185421e9a4d87d3a7570be7646cb282849
+SHA1 (patch-dh) = 3e661f26cf4c520efdbd158f59efde66ba6eacd0
+SHA1 (patch-dk) = fe399a5a0d0c97a9dcdcb33be01bffe68eaba50f
+SHA1 (patch-dl) = 68287c1fe478eb221af4a43a3dea585b46ebe421
+SHA1 (patch-dm) = 26bcc85fbf273698bd8029c97826721709646fb1
+SHA1 (patch-do) = e12ba005ecbaf066275e5410ca97244cb8f729e7
+SHA1 (patch-dr) = 893998997f6b6053db996f5ecd289ce23798fd14
+SHA1 (patch-ds) = bc0e294423ab9e6b209508b1f27290a288d66f4e
+SHA1 (patch-dt) = 3eda8acee1189cb4839f0131627e4b112dfb1f3d
+SHA1 (patch-du) = 5344fcc27056589c21150ca902dd7bc351c1aadc
+SHA1 (patch-dv) = d67a9908c726f76a4f0be765bff3b45a7ed0d7e6

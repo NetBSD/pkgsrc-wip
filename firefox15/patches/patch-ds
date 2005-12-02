@@ -1,0 +1,13 @@
+$NetBSD: patch-ds,v 1.1 2005/12/02 14:14:43 ghen Exp $
+
+--- security/coreconf/arch.mk.orig	2005-10-11 01:30:12.000000000 +0200
++++ security/coreconf/arch.mk
+@@ -145,7 +145,7 @@ endif
+ # IRIX 6.5-ALPHA-1289139620.
+ #
+ 
+-ifeq (,$(filter-out Linux FreeBSD IRIX,$(OS_ARCH)))
++ifeq (,$(filter-out Linux DragonFly FreeBSD IRIX,$(OS_ARCH)))
+     OS_RELEASE := $(shell echo $(OS_RELEASE) | sed 's/-.*//')
+ endif
+ 

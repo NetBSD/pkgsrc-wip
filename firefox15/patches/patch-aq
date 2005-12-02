@@ -1,0 +1,31 @@
+$NetBSD: patch-aq,v 1.1 2005/12/02 14:14:43 ghen Exp $
+
+--- directory/c-sdk/configure.in.orig	2005-06-14 23:27:33.000000000 +0200
++++ directory/c-sdk/configure.in
+@@ -907,7 +907,7 @@ case "$target" in
+     PR_MD_CSRCS=dgux.c
+     ;;
+ 
+-*-freebsd*)
++*-freebsd*|*-dragonfly*)
+     if test -z "$USE_NSPR_THREADS"; then
+         USE_PTHREADS=1
+     fi
+@@ -2061,7 +2061,7 @@ if test -n "$USE_PTHREADS"; then
+             _PTHREAD_LDFLAGS=
+         fi
+ 	    ;;
+-    *-freebsd*|*-openbsd*|*-bsdi*|*-netbsd*)
++    *-freebsd*|*-openbsd*|*-bsdi*|*-netbsd*|*-dragonfly*)
+ 	    AC_DEFINE(_THREAD_SAFE)
+ 	    dnl -pthread links in -lc_r, so don't specify it explicitly.
+ 	    if test "$ac_cv_have_dash_pthread" = "yes"; then
+@@ -2114,7 +2114,7 @@ case "$target" in
+         AC_DEFINE(_PR_NEED_PTHREAD_INIT)
+     fi
+     ;;
+-*-freebsd*)
++*-freebsd*|*-dragonfly*)
+     if test -n "$USE_NSPR_THREADS"; then
+         AC_DEFINE(_PR_LOCAL_THREADS_ONLY)
+     fi

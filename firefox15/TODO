@@ -4,7 +4,4 @@
   be nice if it were possible to install e.g. -gtk2 and -qt3 packages
   concurrently.
 
-- DragonFly support.  I already have the patches for that (from Jeroen
-  Ruigrok), I only need to merge them into this pkg.
-
 - Can we --enable-official-branding by default? (ask the Mozilla Foundation)
