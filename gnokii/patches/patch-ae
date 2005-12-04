@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/12/04 13:41:54 shattered Exp $
+
+--- common/Makefile.orig	2005-11-09 00:11:42.000000000 +0000
++++ common/Makefile
+@@ -70,7 +70,7 @@ devices/libDEVICES.la:
+ 	$(MAKE) -C devices libDEVICES.la
+ 
+ libgnokii.la: $(OBJS) phones/libPHONES.la links/libLINKS.la devices/libDEVICES.la
+-	$(LIBTOOL) --mode=link $(CC) $(LIBTOOL_UNDEF) -o libgnokii.la $(OBJS) phones/libPHONES.la links/libLINKS.la devices/libDEVICES.la $(LIBTOOL_VER) $(LIBTOOL_RPATH) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CC) $(LIBTOOL_UNDEF) -o libgnokii.la $(OBJS) phones/libPHONES.la links/libLINKS.la devices/libDEVICES.la $(LIBTOOL_VER) $(LIBTOOL_RPATH) $(LDFLAGS) $(LDLIBS)
+ 
+ gnvcal.c: vcal.lx
+ 	$(LEX) -ognvcal.c vcal.lx
