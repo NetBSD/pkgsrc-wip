@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/02 10:59:14 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/04 12:10:16 rxg Exp $
 
 FF_VER=			1.5
 PKGNAME=		firefox-${FF_VER}
@@ -15,6 +15,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		geert.hendrickx@ua.ac.be
 COMMENT=		Standalone web-browser by Mozilla
 HOMEPAGE=		http://www.mozilla.com/firefox/
+
+BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
 WRKSRC=			${WRKDIR}/mozilla
 
