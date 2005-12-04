@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/04 22:15:46 shattered Exp $
+bin/mp3check.py
+${PYSITELIB}/tagger/__init__.pyc
+${PYSITELIB}/tagger/__init__.pyo
+${PYSITELIB}/tagger/constants.pyc
+${PYSITELIB}/tagger/constants.pyo
+${PYSITELIB}/tagger/debug.pyc
+${PYSITELIB}/tagger/debug.pyo
+${PYSITELIB}/tagger/encoding.pyc
+${PYSITELIB}/tagger/encoding.pyo
+${PYSITELIB}/tagger/exceptions.pyc
+${PYSITELIB}/tagger/exceptions.pyo
+${PYSITELIB}/tagger/id3v1.pyc
+${PYSITELIB}/tagger/id3v1.pyo
+${PYSITELIB}/tagger/id3v2.pyc
+${PYSITELIB}/tagger/id3v2.pyo
+${PYSITELIB}/tagger/id3v2frame.pyc
+${PYSITELIB}/tagger/id3v2frame.pyo
+${PYSITELIB}/tagger/utility.pyc
+${PYSITELIB}/tagger/utility.pyo
+@dirrm ${PYSITELIB}/tagger
