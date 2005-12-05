@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2079 2005/12/04 22:26:58 shattered Exp $
+# $Id: Makefile,v 1.2080 2005/12/05 17:30:46 udontknow Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -844,6 +844,7 @@ SUBDIR+=	php-doc-sl
 SUBDIR+=	php-doc-sv
 SUBDIR+=	php-fcgi
 SUBDIR+=	php-mode
+SUBDIR+=	php-recode
 SUBDIR+=	picasm
 SUBDIR+=	picprog
 SUBDIR+=	pinball
