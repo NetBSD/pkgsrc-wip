@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/03 17:24:47 bencollver Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/05 14:34:50 bencollver Exp $
 #
 
 DISTNAME=		xace-0.4
@@ -10,7 +10,7 @@ HOMEPAGE=		${MASTER_SITES}ace.html
 COMMENT=		Jupiter Ace emulator
 
 EXTR_PREFIX=		.tar.gz
-ONLY_FOR_PLATFORM+=	*-i386
+ONLY_FOR_PLATFORM+=	*-i386 *-hpcmips
 USE_IMAKE=		YES
 
 SUBST_CLASSES+=		prefix
@@ -18,6 +18,16 @@ SUBST_MESSAGE.prefix=	"Configuring to use PREFIX."
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	xmain.c
 SUBST_SED.prefix=	-e "s,XXXPREFIXXXX,${PREFIX},g"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "hpcmips"
+SUBST_CLASSES+=		scale
+SUBST_MESSAGE.prefix=	"Fixing scale."
+SUBST_STAGE.scale=	post-patch
+SUBST_FILES.scale=	Imakefile
+SUBST_SED.scale=	-e 's,SCALE=2,SCALE=1,'
+.endif
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xace
