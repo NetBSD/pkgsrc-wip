@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/28 00:27:26 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 22:27:46 rillig Exp $
 
 DISTNAME=		kbd-1.08
 PKGNAME=		linux-${DISTNAME}
@@ -19,7 +19,7 @@ HAS_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	YES
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--mandir=/man
 
 .if !exists(/usr/bin/lex)

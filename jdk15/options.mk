@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/09/28 13:56:35 ghen Exp $
+# $NetBSD: options.mk,v 1.2 2005/12/05 22:27:45 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk15
 PKG_SUPPORTED_OPTIONS=		jdk15-jce jdk15-plugin
@@ -25,7 +25,7 @@ post-build:
 ###
 MOZILLA=	${PKG_OPTIONS:@opt@${PKG_OPTIONS_GROUP.mozilla:M${opt}}@}
 .include "../../www/${MOZILLA}/buildlink3.mk"
-MAKE_ENV+=	BROWSER=${MOZILLA}
+MAKE_ENV+=	BROWSER=${MOZILLA:Q}
 
 ###
 ### Mozilla plugin

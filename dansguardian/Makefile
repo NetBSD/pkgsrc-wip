@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:11:00 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 22:27:45 rillig Exp $
 
 DISTNAME=	DansGuardian-2.6.1-11.source
 PKGNAME=	dansguardian-2.6.1-11
@@ -15,7 +15,7 @@ MANCOMPRESSED=	yes
 RCD_SCRIPTS=	dansguardian
 USE_PKGINSTALL= YES
 
-CONFIGURE_ARGS=		--prefix=${PREFIX} \
+CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 			--cgidir=/libexec/cgi-bin/ \
 			--sysconfdir=/etc/dansguardian/ \
 			--bindir=/sbin/ \

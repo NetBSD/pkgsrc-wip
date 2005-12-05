@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/15 10:48:19 ghen Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 22:27:46 rillig Exp $
 
 DISTNAME=		mixxx-1.4.2
 CATEGORIES=		audio
@@ -14,7 +14,7 @@ NOT_FOR_PLATFORM=	NetBSD-[0-2]*-* FreeBSD-[0-4]*-* OpenBSD-*-* DragonFly-*-*
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	--prefix=${LOCALBASE:Q}
 CONFIGURE_ARGS+=	--dependency-dir=${LOCALBASE}/bin\;${LOCALBASE}/lib\;${LOCALBASE}/include
 CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--disable-jack

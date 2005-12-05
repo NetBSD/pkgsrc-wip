@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/10/10 14:00:13 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 22:27:46 rillig Exp $
 
 DISTNAME=		man-db_${VERSION}.orig
 PKGNAME=		man-db-${VERSION}
@@ -38,8 +38,8 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 MAKEFILE=		GNUmakefile
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--enable-setuid=${MAN_DB_USER}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--enable-setuid=${MAN_DB_USER:Q}
 
 CONF_FILES=		${PREFIX}/share/examples/man-db/man_db.conf ${PKG_SYSCONFDIR}/man_db.conf
 
@@ -54,7 +54,7 @@ pre-install:
 USE_DB185=	YES
 .include "../../mk/bdb.buildlink3.mk"
 .if ${BDB_TYPE} != "native"
-CONFIGURE_ARGS+=	--with-db=${BDB_TYPE}
+CONFIGURE_ARGS+=	--with-db=${BDB_TYPE:Q}
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"

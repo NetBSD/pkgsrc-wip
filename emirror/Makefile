@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/18 19:22:22 hweiss Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/05 22:27:45 rillig Exp $
 #
 
 DISTNAME=	emirror-2.1.21
@@ -14,8 +14,8 @@ COMMENT=	FTP mirroring tool with nice HTML logfiles
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
-			--with-python=${PYTHONBIN}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
+			--with-python=${PYTHONBIN:Q}
 
 post-extract:
 		${MV} ${WRKSRC}/man/emirror.1 ${WRKSRC}/man/emirror.1.in

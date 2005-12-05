@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/09 09:15:55 jtonio Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 22:27:44 rillig Exp $
 
 DISTNAME=	cjk-4.5.2
 PKGNAME=	cjk-latex-4.5.2
@@ -14,12 +14,12 @@ DEPENDS+=	ttf2pk>=1.3.1:../../fonts/ttf2pk
 TEXMFMAIN=	${PREFIX}/share/texmf
 TTFDIR=		${TEXMFMAIN}/fonts/truetype
 
-MAKE_ENV+=	TEXMFMAIN=${TEXMFMAIN}
+MAKE_ENV+=	TEXMFMAIN=${TEXMFMAIN:Q}
 
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
 
-FILES_SUBST=		TEXMFMAIN=${TEXMFMAIN}
+FILES_SUBST=		TEXMFMAIN=${TEXMFMAIN:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 post-extract:

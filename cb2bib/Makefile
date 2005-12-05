@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/06 05:56:28 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/05 22:27:44 rillig Exp $
 #
 
 DISTNAME=		cb2bib-0.5.0
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.molspaces.com/cb2bib/
 COMMENT=		Extract and organize bibliographic references
 
 QTPREFIX=		${PREFIX}/qt3
-CONFIGURE_ENV+=		QTDIR=${QTPREFIX}
+CONFIGURE_ENV+=		QTDIR=${QTPREFIX:Q}
 
 USE_DIRS+=              xdg-1.2
 USE_TOOLS+=		gmake

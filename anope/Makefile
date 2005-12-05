@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/11/30 19:40:29 adrian_p Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 22:27:44 rillig Exp $
 
 DISTNAME=	anope-1.7.12
 CATEGORIES=	net
@@ -16,7 +16,7 @@ USE_TOOLS+=		gmake perl:run
 .include "../../mk/bsd.prefs.mk"
 
 PKG_GROUPS=		anope
-MAKE_ENV+=		RUNGROUP=${PKG_GROUPS}
+MAKE_ENV+=		RUNGROUP=${PKG_GROUPS:Q}
 
 CONF_FILES+=		${PREFIX}/share/examples/anope/example.conf \
 			${PREFIX}/lib/anope/services.conf
@@ -24,7 +24,7 @@ CONF_FILES+=		${PREFIX}/share/examples/anope/example.conf \
 CONFIGURE_ARGS+=	--with-permissions=077
 CONFIGURE_ARGS+=	--with-bindir=${PREFIX}/lib/anope
 CONFIGURE_ARGS+=	--with-datadir=${PREFIX}/lib/anope
-CONFIGURE_ARGS+=	--with-rungroup=${PKG_GROUPS}
+CONFIGURE_ARGS+=	--with-rungroup=${PKG_GROUPS:Q}
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:14:04 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 22:27:46 rillig Exp $
 
 DISTNAME=	mnogosearch-3.1.21
 CATEGORIES=	www databases
@@ -27,8 +27,8 @@ CONF_FILES+=		${EGDIR}/spelld.conf-dist \
 			${PKG_SYSCONFDIR}/spelld.conf
 
 CONFIGURE_ARGS+=        --with-openssl=${BUILDLINK_PREFIX.openssl}
-CONFIGURE_ARGS+=	--localstatedir=${MNOGOSEARCH_DATADIR}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${MNOGOSEARCH_DATADIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 .if defined(USE_MYSQL) && ${USE_MYSQL} == YES
 .include "../../databases/mysql4-client/buildlink3.mk"

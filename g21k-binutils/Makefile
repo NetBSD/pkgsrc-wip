@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:29:43 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 22:27:45 rillig Exp $
 #
 
 DISTNAME=		g21k-binutils-PL4
@@ -12,6 +12,6 @@ COMMENT=		Assemblre and linker tools for Analog Devices 21k series DSPs
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+= --with-adidsp=${PREFIX}
+CONFIGURE_ARGS+= --with-adidsp=${PREFIX:Q}
 
 .include "../../mk/bsd.pkg.mk"

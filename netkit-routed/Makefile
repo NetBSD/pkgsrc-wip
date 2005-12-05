@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 22:27:46 rillig Exp $
 #
 
 DISTNAME=		netkit-routed-0.17
@@ -14,6 +14,6 @@ USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
-CONFIGURE_ARGS+=--prefix=${PREFIX}
+CONFIGURE_ARGS+=--prefix=${PREFIX:Q}
 
 .include "../../mk/bsd.pkg.mk"

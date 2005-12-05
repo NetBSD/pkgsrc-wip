@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/08/23 11:49:43 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 22:27:45 rillig Exp $
 
 DISTNAME=		cvsd-1.0.8
 CATEGORIES=		devel
@@ -14,7 +14,7 @@ USE_TOOLS+=		gmake perl
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-libwrap
 
 RCD_SCRIPTS=		cvsd

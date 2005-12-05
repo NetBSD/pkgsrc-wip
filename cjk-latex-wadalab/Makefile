@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/14 02:39:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 22:27:45 rillig Exp $
 
 DISTNAME=	cjk-latex-wadalab-4.5.2
 CATEGORIES=	print
@@ -38,13 +38,13 @@ PFBDIR=		${TEXMFMAIN}/fonts/type1/public/wadalab
 MAPDIR=		${TEXMFMAIN}/dvips/config
 WRKSRC=		${WRKDIR}
 
-MAKE_ENV+=	TEXMFMAIN=${TEXMFMAIN}
+MAKE_ENV+=	TEXMFMAIN=${TEXMFMAIN:Q}
 
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
 
-FILES_SUBST=		MAPDIR=${MAPDIR} \
-			TEXMFMAIN=${TEXMFMAIN}
+FILES_SUBST=		MAPDIR=${MAPDIR:Q} \
+			TEXMFMAIN=${TEXMFMAIN:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 post-extract:

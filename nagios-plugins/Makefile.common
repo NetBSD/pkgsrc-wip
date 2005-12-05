@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/08/04 18:25:00 scott8586 Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/12/05 22:27:46 rillig Exp $
 #
 
 PLUGINSVERSION=	1.4.1
@@ -6,5 +6,5 @@ DISTNAME=	nagios-plugins-${PLUGINSVERSION}
 
 .include "../../wip/nagios-base/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-nagios-user=${NAGIOS_USER}
-CONFIGURE_ARGS+=	--with-nagios-group=${NAGIOS_GROUP}
+CONFIGURE_ARGS+=	--with-nagios-user=${NAGIOS_USER:Q}
+CONFIGURE_ARGS+=	--with-nagios-group=${NAGIOS_GROUP:Q}

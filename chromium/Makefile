@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 22:27:44 rillig Exp $
 #
 
 DISTNAME=		chromium-src-0.9.12
@@ -15,7 +15,7 @@ DEPENDS=		chromium-data>=0.9:../../wip/chromium-data
 WRKSRC=		${WRKDIR}/Chromium-0.9
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
-CONFIGURE_ENV+= HOME=${PREFIX}
+CONFIGURE_ENV+= HOME=${PREFIX:Q}
 CONFIGURE_ARGS+=--disable-setup
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:16:37 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 22:27:48 rillig Exp $
 #
 
 DISTNAME=		ypserv-2.9
@@ -21,7 +21,7 @@ USE_PKGINSTALL=		yes
 RCD_SCRIPTS=		yppasswdd ypserv
 
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/sbin
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

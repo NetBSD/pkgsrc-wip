@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/13 10:20:14 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/05 22:27:47 rillig Exp $
 
 DISTNAME=	openlogos-1.0.1
 CATEGORIES=	misc
@@ -13,7 +13,7 @@ USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_JAVA=	YES
-CONFIGURE_ARGS+=	--with-java=${PKG_JAVA_HOME}
+CONFIGURE_ARGS+=	--with-java=${PKG_JAVA_HOME:Q}
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"

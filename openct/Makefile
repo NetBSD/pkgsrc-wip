@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/24 02:12:05 udontknow Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 22:27:47 rillig Exp $
 
 DISTNAME=      		openct-0.6.6
 CATEGORIES=     	security
@@ -16,7 +16,7 @@ USE_TOOLS+= 		gmake pkg-config
 .include "options.mk"
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/openct
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 EGDIR=			${PREFIX}/share/examples/openct
 RCD_SCRIPTS=		openct
 MAKE_DIRS+=		${VARBASE}/openct

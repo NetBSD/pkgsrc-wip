@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/08/23 11:49:44 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 22:27:47 rillig Exp $
 
 DISTNAME=		ppr-1.53
 CATEGORIES=		print
@@ -23,20 +23,20 @@ EGDIR=			${PREFIX}/share/examples
 PKG_SYSCONFSUBDIR=	ppr
 PPR_CONFDIR=		${PKG_SYSCONFDIR}
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 # Use the EGDIR here?
 #CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${EGDIR:Q}
 
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=	--spooldir=${VARBASE}/spool
 CONFIGURE_ARGS+=	--x11bindir=${X11BASE}/bin
-CONFIGURE_ARGS+=	--user-ppr=${PPR_USER}
-CONFIGURE_ARGS+=	--user-pprwww=${PPRWEB_USER}
-CONFIGURE_ARGS+=	--group-ppr=${PPR_GROUP}
+CONFIGURE_ARGS+=	--user-ppr=${PPR_USER:Q}
+CONFIGURE_ARGS+=	--user-pprwww=${PPRWEB_USER:Q}
+CONFIGURE_ARGS+=	--group-ppr=${PPR_GROUP:Q}
 CONFIGURE_ARGS+=	--with-gettext
 CONFIGURE_ARGS+=	--with-tdb
 CONFIGURE_ARGS+=	--with-gdbm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/27 16:31:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 22:27:48 rillig Exp $
 
 DISTNAME=       superkaramba-0.33
 CATEGORIES=     x11 misc
@@ -10,7 +10,7 @@ COMMENT=        Interactive eyecandy for your KDE desktop
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--with-pythondir=${PREFIX}
+CONFIGURE_ARGS+=--with-pythondir=${PREFIX:Q}
 USE_LIBTOOL=	yes
 
 PYTHON_VERSIONS_ACCEPTED=	23

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/19 10:43:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 22:27:45 rillig Exp $
 
 DISTNAME=	cjk-latex-chinese-20020721
 WRKSRC=		${WRKDIR}
@@ -32,7 +32,7 @@ SFDDIR=         ${TEXMFMAIN}/ttf2tfm/base
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
 
-FILES_SUBST=		TEXMFMAIN=${TEXMFMAIN}
+FILES_SUBST=		TEXMFMAIN=${TEXMFMAIN:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 pre-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 22:27:48 rillig Exp $
 #
 
 DISTNAME=	tcc-0.9.22
@@ -24,6 +24,6 @@ SUBST_STAGE.ldl=post-patch
 SUBST_SED.ldl=-e 's,LIBS=,\#LIBS,'
 .endif
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 .include "../../mk/bsd.pkg.mk"

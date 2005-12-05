@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:26 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 22:27:47 rillig Exp $
 
 DISTNAME=		openscep-0.4.2
 CATEGORIES=		local
@@ -23,18 +23,18 @@ PKG_USERS=      	${OPENSCEP_USER}:${OPENSCEP_GROUP}
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR?=     openscep # it installs more subdirectories under this
-CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-openscep-dir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-openscep-dir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-html-dir=/openscep
 CONFIGURE_ARGS+=	--with-cgi-dir=/cgi-bin/openscep
 CONFIGURE_ARGS+=	--with-html-install-dir=${PREFIX}/share/httpd/htdocs/openscep
 CONFIGURE_ARGS+=	--with-cgi-install-dir=${PREFIX}/libexec/cgi-bin/openscep
 CONFIGURE_ARGS+=	--with-pkiclientexe=${PREFIX}/libexec/cgi-bin/pkiclient.exe
 CONFIGURE_ARGS+=	--with-log-facility=LOG_DAEMON
-CONFIGURE_ARGS+=	--with-caowner=${OPENSCEP_USER}
-CONFIGURE_ARGS+=	--with-cagroup=${OPENSCEP_GROUP}
-CONFIGURE_ARGS+=	--with-group=${APACHE_GROUP}
-CONFIGURE_ARGS+=	--with-user=${APACHE_USER}
+CONFIGURE_ARGS+=	--with-caowner=${OPENSCEP_USER:Q}
+CONFIGURE_ARGS+=	--with-cagroup=${OPENSCEP_GROUP:Q}
+CONFIGURE_ARGS+=	--with-group=${APACHE_GROUP:Q}
+CONFIGURE_ARGS+=	--with-user=${APACHE_USER:Q}
 MAKE_ENV+=		INSTALL_DATA=${INSTALL_DATA:Q} INSTALL_DATA_DIR=${INSTALL_DATA_DIR:Q}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openscep

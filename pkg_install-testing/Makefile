@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:26 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 22:27:47 rillig Exp $
 
 # Notes to package maintainers:
 #
@@ -19,11 +19,11 @@ HOMEPAGE=		http://www.pkgsrc.org/
 COMMENT=		Package management and administration tools for pkgsrc
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
-CONFIGURE_ARGS+=	--with-ftp=${FETCH_CMD}
-CONFIGURE_ARGS+=	--with-mtree=${MTREE}
-CONFIGURE_ARGS+=	--with-pax=${PAX}
-CONFIGURE_ARGS+=	--with-tar=${TAR}
+CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR:Q}
+CONFIGURE_ARGS+=	--with-ftp=${FETCH_CMD:Q}
+CONFIGURE_ARGS+=	--with-mtree=${MTREE:Q}
+CONFIGURE_ARGS+=	--with-pax=${PAX:Q}
+CONFIGURE_ARGS+=	--with-tar=${TAR:Q}
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
 NO_CHECKSUM=		yes

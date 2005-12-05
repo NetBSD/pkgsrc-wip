@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/11/01 20:10:36 tvierling Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/05 22:27:45 rillig Exp $
 
 DISTNAME=		dovecot-1.0.alpha4
 PKGNAME=		${DISTNAME:S/1.0.alpha/0.991./}
@@ -15,9 +15,9 @@ USE_LIBTOOL=		yes
 USE_PKGINSTALL= 	yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--with-ssldir=${SSLCERTS}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--with-ssldir=${SSLCERTS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/02 17:16:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 22:27:46 rillig Exp $
 #
 
 DISTNAME=		mapserver-4.4.2
@@ -15,14 +15,14 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-curl-config		\
 			--with-tiff			\
 			--with-pdf			\
-			--with-php=${PREFIX}		\
+			--with-php=${PREFIX:Q}		\
 			--with-proj			\
 			--with-ogr			\
 			--with-gdal			\
 			--with-postgis			\
 			--with-libiconv			\
 			--with-zlib			\
-			--with-gd=${PREFIX}		\
+			--with-gd=${PREFIX:Q}		\
 			--with-tiff			\
 			--with-xpm=${PREFIX}/lib	\
 			--with-jpeg			\

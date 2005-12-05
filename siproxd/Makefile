@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/14 21:21:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 22:27:47 rillig Exp $
 
 DISTNAME=	siproxd-0.5.11
 CATEGORIES=	net
@@ -11,7 +11,7 @@ COMMENT=	Session Initiation Protocol Application-Level Gateway (SIP ALG)
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-libosip-prefix=${BUILDLINK_PREFIX.libosip2}
 EGDIR=		${PREFIX}/share/examples/siproxd
 

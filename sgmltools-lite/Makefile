@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/28 00:27:28 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 22:27:47 rillig Exp $
 
 DISTNAME=	sgmltools-lite-3.0.3
 CATEGORIES=	net www
@@ -20,7 +20,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV=	PYTHON=${PYTHONBIN:Q}
 
 PKG_SYSCONFSUBDIR=	sgml
-CONFIGURE_ARGS+=	--with-etcsgml=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-etcsgml=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--datadir=${LOCALBASE}/share
 
 PYTHON_VERSIONS_ACCEPTED=	22 23 21 20

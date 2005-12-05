@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/24 10:30:43 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 22:27:46 rillig Exp $
 
 DISTNAME=		modutils-2.4.24
 PKGNAME=		linux-${DISTNAME}
@@ -20,7 +20,7 @@ USE_PKGINSTALL=		YES
 ONLY_FOR_PLATFORM=      Linux-*-* # This is for the Linux kernel
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--exec-prefix=${PREFIX} --sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--exec-prefix=${PREFIX:Q} --sysconfdir=${PKG_SYSCONFDIR:Q}
 USE_TOOLS+=		gmake
 
 RCD_SCRIPTS=		modutils

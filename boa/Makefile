@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/19 21:53:14 gschwarz Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 22:27:44 rillig Exp $
 #
 
 DISTNAME=	boa-0.94.14rc21
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.boa.org/
 COMMENT=	Small HTTP server
 
 PKG_SYSCONFSUBDIR=	boa
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 EGDIR=		${PREFIX}/share/examples/boa
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake lex

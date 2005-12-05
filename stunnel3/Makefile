@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/09/28 20:50:11 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 22:27:48 rillig Exp $
 
 DISTNAME=		stunnel-3.26
 CATEGORIES=		security
@@ -12,9 +12,9 @@ CONFLICTS=		stunnel-[4-9]*
 
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
-			--with-cert-dir="${SSLCERTS}" \
-			--with-pem-dir="${SSLCERTS}" \
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q} \
+			--with-cert-dir=${SSLCERTS:Q} \
+			--with-pem-dir=${SSLCERTS:Q} \
 			--with-tcp-wrappers
 
 .include "../../security/openssl/buildlink3.mk"

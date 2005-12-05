@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/12 23:51:28 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 22:27:48 rillig Exp $
 # based on slrn-pl.spec from PLD Linux (http://www.pld-linux.org)
 #
 # SLRN_PL_FACES - build both slrnfaces (x11) and txtfaces extensions
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=--disable-inews \
 		--with-ssl-library=/usr \
 		--with-ssl-includes=/usr \
 		--with-libdir=${PREFIX}/lib/slrn \
-		--sysconfdir=${PKG_SYSCONFDIR} \
+		--sysconfdir=${PKG_SYSCONFDIR:Q} \
 		--with-localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
 .include "../../mk/bsd.prefs.mk"

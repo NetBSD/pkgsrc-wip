@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/05/31 10:02:11 dillo Exp $
+# $NetBSD: options.mk,v 1.3 2005/12/05 22:27:45 rillig Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnunet
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .if !empty(PKG_OPTIONS:Mbdb)
 BDB_ACCEPTED=		db4 db3 db2
 .include "../../mk/bdb.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
+CONFIGURE_ARGS+=	--with-bdb=${BDBBASE:Q}
 GNUNET_PLIST_ADD+=	lib/libgnunetafs_database_bdb.la
 .else
 CONFIGURE_ARGS+=	--without-bdb
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--without-gdbm
 
 .if !empty(PKG_OPTIONS:Mtdb)
 .include "../../databases/tdb/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-tdb=${BDBBASE}
+CONFIGURE_ARGS+=	--with-tdb=${BDBBASE:Q}
 GNUNET_PLIST_ADD+=	lib/libgnunetafs_database_tdb.la
 .else
 CONFIGURE_ARGS+=	--without-tdb

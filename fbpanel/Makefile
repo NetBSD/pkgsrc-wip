@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:24 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 22:27:45 rillig Exp $
 #
 
 DISTNAME=		fbpanel-4.3
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--cpu=on
 CONFIGURE_ARGS+=	--cpu=off
 .endif
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 PKGMANDIR?=		man
 MAKE_ENV+=		PKGMANDIR=${PKGMANDIR:Q}

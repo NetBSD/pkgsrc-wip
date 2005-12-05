@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/11/03 14:52:17 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 22:27:47 rillig Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -41,10 +41,10 @@ CONFLICTS=	perl-5.00* perl-base-[0-9]* \
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
-CONFIGURE_ARGS+=	-Dprefix="${PREFIX}"
+CONFIGURE_ARGS+=	-Dprefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	-Dscriptdir="${PREFIX}/bin"
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
-CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
+CONFIGURE_ARGS+=	-Doptimize=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	-Dinstallstyle="lib/perl5"
 CONFIGURE_ARGS+=	-Dusethreads="y"
 CONFIGURE_ARGS+=	-Dusedevel="y"
@@ -65,7 +65,7 @@ CONFIGURE_ARGS+=	-Dman3dir="${PERL5_PRIVLIB}/man/man3"
 CONFIGURE_ARGS+=	-Dsiteman3dir="${PERL5_SITEPERL}/man/man3"
 
 # The site directories are all relative to the perl view.
-CONFIGURE_ARGS+=	-Dsiteprefix="${VIEWBASE}"
+CONFIGURE_ARGS+=	-Dsiteprefix=${VIEWBASE:Q}
 CONFIGURE_ARGS+=	-Dinstallsiteman1dir="${VIEWBASE}/man/man1"
 
 .include "../../mk/bsd.prefs.mk"
@@ -82,7 +82,7 @@ CONFIGURE_ARGS+=	-Duse64bitint
 .else
 PERL5_CC=		${CC:T}
 .endif
-CONFIGURE_ARGS+=	-Dcc="${PERL5_CC}"
+CONFIGURE_ARGS+=	-Dcc=${PERL5_CC:Q}
 
 .if ${OPSYS} == "Darwin"
 #

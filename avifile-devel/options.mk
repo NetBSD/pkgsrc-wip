@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/06/01 20:18:23 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.5 2005/12/05 22:27:44 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avifile-devel
 PKG_SUPPORTED_OPTIONS=	sdl faad qt vorbis xvid mad a52 lame jpeg ac3_passthrough
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=	--without-faad-prefix
 
 .if !empty(PKG_OPTIONS:Mqt)
 .include "../../x11/qt3-libs/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-qt-prefix=${QTDIR}
+CONFIGURE_ARGS+=	--with-qt-prefix=${QTDIR:Q}
 PLIST_SUBST+=		QT_COMMENT=
 .else
 CONFIGURE_ARGS+=	--without-qt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/10/09 01:18:05 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 22:27:45 rillig Exp $
 #
 
 DISTNAME=	GNUnet-0.6.4a
@@ -26,7 +26,7 @@ LDFLAGS+=		-lpthread -lintl
 
 CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
 CONFIGURE_ARGS+=        --without-gtk
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 post-patch:
 	cd ${WRKSRC} && for f in contrib/gnunet.* src/include/gnunet_util.h doc/man/*.?; do \

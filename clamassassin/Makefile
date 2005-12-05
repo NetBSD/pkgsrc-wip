@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/28 08:02:28 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 22:27:45 rillig Exp $
 
 DISTNAME=	clamassassin-1.2.2
 CATEGORIES=	mail
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--enable-clamdscan
 .if empty(CLAMASSASSIN_SUBJECT_REWRITE)
 CONFIGURE_ARGS+=	--enable-subject-rewrite
 .else
-CONFIGURE_ARGS+=	--enable-subject-rewrite=${CLAMASSASSIN_SUBJECT_REWRITE}
+CONFIGURE_ARGS+=	--enable-subject-rewrite=${CLAMASSASSIN_SUBJECT_REWRITE:Q}
 .endif
 .endif
 

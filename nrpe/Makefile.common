@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2005/06/15 06:23:26 ura Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/12/05 22:27:46 rillig Exp $
 
 .include "../../wip/nagios-base/Makefile.common"
 
 NRPE_USER?=		${NAGIOS_USER}
 NRPE_GROUP?=		${NAGIOS_GROUP}
 
-CONFIGURE_ARGS+=	--with-nrpe-user=${NRPE_USER}
-CONFIGURE_ARGS+=	--with-nrpe-group=${NRPE_GROUP}
+CONFIGURE_ARGS+=	--with-nrpe-user=${NRPE_USER:Q}
+CONFIGURE_ARGS+=	--with-nrpe-group=${NRPE_GROUP:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

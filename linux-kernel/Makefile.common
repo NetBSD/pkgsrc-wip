@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/05/24 11:21:27 rillig Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/12/05 22:27:46 rillig Exp $
 
 LINUX_VERSION=		2.6.6
 
@@ -15,9 +15,9 @@ HOMEPAGE=		http://www.kernel.org/
 ONLY_FOR_PLATFORM=	Linux-*-*
 
 USE_TOOLS+=		gmake
-PLIST_SUBST+=		LINUX_VERSION=${LINUX_VERSION}
+PLIST_SUBST+=		LINUX_VERSION=${LINUX_VERSION:Q}
 CFLAGS+=		-I${WRKSRC}/include
-MAKE_ENV+=		INSTALL_MOD_PATH=${LINUXBASE}
+MAKE_ENV+=		INSTALL_MOD_PATH=${LINUXBASE:Q}
 
 DISTINFO_FILE?=		${.CURDIR}/../../wip/linux-kernel/distinfo
 PATCHDIR?=		${.CURDIR}/../../wip/linux-kernel/patches

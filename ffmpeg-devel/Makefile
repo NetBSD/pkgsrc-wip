@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/28 00:27:24 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 22:27:45 rillig Exp $
 
 DISTNAME=	ffmpeg-0.4.9-pre1
 PKGNAME=	ffmpeg-devel-0.4.9pre1
@@ -24,7 +24,7 @@ MAKE_ENV+=	EXTRA_LIBS=${LIBGETOPT:Q} \
 		FFSERVER_CONF=${PKG_SYSCONFDIR}/ffserver.conf \
 		LOCALBASE=${LOCALBASE:Q}
 
-CONFIGURE_ARGS=		--cc=${CC} --prefix=${PREFIX}
+CONFIGURE_ARGS=		--cc=${CC:Q} --prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-pp --disable-vhook --disable-debug
 CONFIGURE_ARGS+=	--enable-gpl
 CONFIGURE_ARGS+=	--enable-ffplay

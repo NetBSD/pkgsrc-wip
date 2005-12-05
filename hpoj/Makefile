@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/02 18:00:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 22:27:45 rillig Exp $
 #
 
 DISTNAME=		hpoj-0.91
@@ -19,7 +19,7 @@ USE_TOOLS+=		gmake
 USE_PERL5=		YES
 GNU_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=	--prefix="${PREFIX}" \
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
 			--with-cups-backend=${PREFIX}/libexec/cups/backend \
 			--with-sane-backend=${PREFIX}/lib/sane \
 			--with-sane-etc=${PREFIX}/etc/sane.d \

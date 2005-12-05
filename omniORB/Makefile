@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:14 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 22:27:46 rillig Exp $
 #
 
 DISTNAME=		omniORB-4.0.4
@@ -23,7 +23,7 @@ PTHREAD_OPTS=	require native
 OMNIORB_ETCDIR?= ${PKG_SYSCONFDIR}
 OMNIORB_CONFIG=	${OMNIORB_ETCDIR}/omniORB.cfg
 
-CONFIGURE_ARGS+= --with-omniORB-config=${OMNIORB_CONFIG}
+CONFIGURE_ARGS+= --with-omniORB-config=${OMNIORB_CONFIG:Q}
 #CONFIGURE_ARGS+= --with-omniNames-logdir=
 #CONFIGURE_ARGS+= --with-openssl
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:12 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/05 22:27:45 rillig Exp $
 
 DISTNAME=		ipfm-0.11.5
 CATEGORIES=		net
@@ -12,8 +12,8 @@ COMMENT=		Bandwidth analysis tool
 USE_PKGINSTALL=		yes
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 
 EGDIR=			${PREFIX}/share/examples/ipfm
 CONF_FILES=		${EGDIR}/ipfm.conf ${PKG_SYSCONFDIR}/ipfm.conf

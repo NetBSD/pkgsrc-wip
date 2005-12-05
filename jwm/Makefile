@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/27 21:49:51 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 22:27:45 rillig Exp $
 #
 
 DISTNAME=		jwm-1.1
@@ -19,7 +19,7 @@ USE_PKGINSTALL=		yes
 CONFIGURE_ARGS+=	--enable-xinerama
 .endif
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 SUBST_CLASSES+=		egdir
 SUBST_STAGE.egdir=	pre-configure
