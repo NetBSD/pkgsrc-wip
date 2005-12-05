@@ -1,0 +1,4 @@
+$NetBSD: TODO,v 1.1.1.1 2005/12/05 17:29:19 udontknow Exp $
+To-do list for php-recode:
+- Fix pkg/32253 before importing this package
+- Package should be ready for deployment
