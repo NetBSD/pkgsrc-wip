@@ -1,2 +1,2 @@
-This is an authentication module for Apache2 that allows you to authenticate
-HTTP clients using Pluggable Authentication Modules (PAM).
+This is an authentication module for Apache2 that allows you to
+authenticate HTTP clients using Pluggable Authentication Modules (PAM).
