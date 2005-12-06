@@ -1,0 +1,11 @@
+Remove NetBSD patches when official GNU GRUB release supports NetBSD.
+Handle configuration file with SYSCONF when grub supports it.
+Test GRUB on supported architectures and port it to other.
+Make fixed locations like '/grub' configurable when GRUB does so.
+Stay current.
+Our patches are 500K, which is really big. It is because NetBSD port was
+not made against the release, but against current.
+check MASTER_SITE and add mirrors
+add plattform dependencies
+resolve grub-install conflict with grub legacy. probably call grub utils
+grub2-* to prevent confusion?

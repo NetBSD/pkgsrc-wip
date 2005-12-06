@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2005/12/06 09:09:17 lkundrak Exp $
+
+SHA1 (grub.tar.gz) = f58b815dd8edc8bfe2feefea47ea1ff88ab665f1
+RMD160 (grub.tar.gz) = adf706bff7850d0f1a4a8c7af78b8cb40dff6b30
+Size (grub.tar.gz) = 438064 bytes

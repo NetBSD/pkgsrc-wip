@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2005/12/06 09:09:17 lkundrak Exp $
+
+GRUB 2 is in relatively early development stage and is still neither
+complete nor well tested. Anyways, just installing this package can do no
+harm.
+
+To actually install GRUB to disk, use grub-setup utility. Do not do it
+unless you understand what does it actually do, for it may lead to loss of
+data when used improperly. Refer to the address below for more information.
+
+Be sure co consult GRUB wiki at http://grub.enbug.org/ before using GRUB.
+This website should be also considered primary source of information about
+GRUB until the manual is complete.
+
+Using package emulator/qemu for testing GRUB is a good idea, indeed.
+
+Enjoy GRUB. Your feedback is welcome.
+===========================================================================
