@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/06 15:36:49 imilh Exp $
 #
 
-DISTNAME=		pkg_select-20050817
+DISTNAME=		pkg_select-20051206
 CATEGORIES=		pkgtools
 MASTER_SITES=	http://imil.net/NetBSD/
 
 MAINTAINER=	imil@gcu.info
-HOMEPAGE=	http://imil.net/
+HOMEPAGE=	http://imil.net/wp/pkg_select/
 COMMENT=	Curses based pkgsrc system browser / manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
