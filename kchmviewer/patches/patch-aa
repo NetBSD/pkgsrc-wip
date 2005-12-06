@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/12/06 08:29:41 ianzag Exp $
+
+--- src/kqrunprocess.h.orig	2005-11-23 12:35:51.000000000 +0600
++++ src/kqrunprocess.h
+@@ -19,6 +19,8 @@
+  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+  ***************************************************************************/
+ 
++#include <stdlib.h>
++#include <unistd.h>
+ 
+ static bool run_process( const QString& command, const QString& filename )
+ {
