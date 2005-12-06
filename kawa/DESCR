@@ -1,0 +1,11 @@
+A framework written in Java for implementing high-level and dynamic languages
+compiling them into Java bytecodes.
+
+An implementation of Scheme, which is in the Lisp family of programming
+languages. Kawa is a featureful dialect in its own right, and additionally
+provides very useful integration with Java. It can be used as a cscripting
+language, but includes a compiler and all the benefits of a real programming
+language, including optional static typing.
+
+Implementations of other programming languages, including XQuery (Qexo) and
+Emacs Lisp (JEmacs)
