@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/11/29 19:06:26 hugor Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/06 22:40:10 thomasklausner Exp $
 #
 
 DISTNAME=		gate-2.06
 CATEGORIES=		editors
 MASTER_SITES=		http://www.unixpapa.com/software/
-EXTRACT_SUFX=		.tar.gz
 
 MAINTAINER=		hugor@users.sourceforge.net
 HOMEPAGE=		http://www.unixpapa.com/gate.html
