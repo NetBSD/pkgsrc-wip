@@ -5,10 +5,10 @@ Netcat6 is a total rewrite of netcat, with several advantages:
    no) data copying or analysis.
  * The source is well structured, documented and very easy to follow. One of
    the main objectives of netcat6 is to produce an excellent example of AF
-   independant networking and efficient data transfer. The code has minimal
-   dependancy on the address family or protocol type and can be trivially
+   independent networking and efficient data transfer. The code has minimal
+   dependency on the address family or protocol type and can be trivially
    extended to talk many layer 3 protocols.
- * Greatly improved configuration and platform indipendence.
+ * Greatly improved configuration and platform independence.
  * Can support servers or clients that use TCP half-close.
 
 Some features of the original netcat are not present in netcat6, either because
