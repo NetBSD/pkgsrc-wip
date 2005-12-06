@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/26 18:53:07 hugor Exp $
-bin/gate
-man/man1/gate.1
-share/gate.help

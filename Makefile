@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2084 2005/12/06 17:16:08 ghen Exp $
+# $Id: Makefile,v 1.2085 2005/12/06 22:44:09 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -261,7 +261,6 @@ SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
 SUBDIR+=	gajim
 SUBDIR+=	galib
-SUBDIR+=	gate
 SUBDIR+=	gauche-fastcgi
 SUBDIR+=	gcl
 SUBDIR+=	gcl-nox11
