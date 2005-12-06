@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2005/12/06 08:04:11 lkundrak Exp $
+include/argp.h
+lib/libargp.a
