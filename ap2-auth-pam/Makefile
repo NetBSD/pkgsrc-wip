@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2005/08/13 15:33:35 lkundrak Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/06 07:39:34 lkundrak Exp $
 
 DISTNAME=	mod_auth_pam-2.0-1.1.1
 PKGNAME=	ap2-auth-pam-1.1.1
 CATEGORIES=	www
 MASTER_SITES=	http://pam.sourceforge.net/mod_auth_pam/dist/
+# Even though it is on sourceforge, it is in web pages repository!
 
 MAINTAINER=	lkundrak@elvraba.edu.sk
 HOMEPAGE=	http://pam.sourceforge.net/mod_auth_pam/
-COMMENT=	Module to allow Apache2 authentication using PAM
+COMMENT=	Apache2 module for PAM authentification
 
 APACHE_MODULE_NAME=	mod_auth_pam
 USE_TOOLS+=		gmake
