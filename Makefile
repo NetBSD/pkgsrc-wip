@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2085 2005/12/06 22:44:09 thomasklausner Exp $
+# $Id: Makefile,v 1.2086 2005/12/06 22:56:52 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -719,7 +719,6 @@ SUBDIR+=	p5-Class-ISA
 SUBDIR+=	p5-Class-Virtual
 SUBDIR+=	p5-Convert-ASN1
 SUBDIR+=	p5-Crypt-PasswdMD5
-SUBDIR+=	p5-Crypt-SmbHash
 SUBDIR+=	p5-DBD-ODBC
 SUBDIR+=	p5-Data-Page
 SUBDIR+=	p5-Data-Properties
