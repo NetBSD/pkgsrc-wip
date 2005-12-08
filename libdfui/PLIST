@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/08 16:50:33 jsonn Exp $
+include/dfui/dfui.h
+include/dfui/dump.h
+include/dfui/lang.h
+include/dfui/system.h
+lib/libdfui.la
