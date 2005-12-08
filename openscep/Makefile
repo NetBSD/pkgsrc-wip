@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 22:27:47 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/08 15:47:44 leonardschmidt Exp $
 
 DISTNAME=		openscep-0.4.2
-CATEGORIES=		local
+CATEGORIES=		security
 MASTER_SITES=		http://openscep.othello.ch/download/
 
 MAINTAINER=		carton@Ivy.NET
@@ -12,15 +12,14 @@ BUILD_DEPENDS+=		w3m>=0.5.1:../../www/w3m
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		automake autoconf grep
-USE_BUILDLINK3=		yes
+USE_TOOLS+=		automake autoconf grep perl:run
 USE_PKGINSTALL=		YES
 OPENSCEP_USER?=		openscep
 OPENSCEP_GROUP?=	openscep
 PKG_GROUPS=     	${OPENSCEP_USER}
 PKG_USERS=      	${OPENSCEP_USER}:${OPENSCEP_GROUP}
 
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR?=     openscep # it installs more subdirectories under this
 CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -50,7 +49,6 @@ PLIST_SUBST+=		WEBUI="@comment "
 MAKE_ENV+=		WEBUI=no
 .endif
 
-USE_PERL5=		run
 REPLACE_PERL+=		cgi-bin/pending.pl
 REPLACE_PERL+=		cgi-bin/log.pl
 REPLACE_PERL+=		cgi-bin/add.pl

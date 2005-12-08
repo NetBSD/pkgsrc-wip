@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/11/12 16:49:24 aolcarton Exp $
+$NetBSD: distinfo,v 1.6 2005/12/08 15:47:44 leonardschmidt Exp $
 
 SHA1 (openscep-0.4.2.tar.gz) = c3867a3518c66462cb6b468cefee65d2f8949330
+RMD160 (openscep-0.4.2.tar.gz) = fa9fc9b7c142e0025213756d09913f17bfaff1cf
 Size (openscep-0.4.2.tar.gz) = 416294 bytes
 SHA1 (patch-aa) = a82d478deafc39d9d15dc70219c4b173102c6ea0
 SHA1 (patch-ab) = 5dfe53e59a1d3514601497cf92cc8b0475b309fc
