@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2086 2005/12/06 22:56:52 thomasklausner Exp $
+# $Id: Makefile,v 1.2087 2005/12/08 22:36:32 ykomatsu Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1250,6 +1250,7 @@ SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	zapping
 SUBDIR+=	zinf
+SUBDIR+=	zope3-unstable
 SUBDIR+=	zphoto
 SUBDIR+=	zsnes-devel
 SUBDIR+=	zvbi
