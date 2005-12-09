@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2005/06/12 23:51:22 kristerw Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/09 20:43:06 ppostma Exp $
 #
 
-DISTNAME=	matchbox-common-0.9.1
-CATEGORIES=	wm
-MASTER_SITES=	http://projects.o-hand.com/matchbox/sources/matchbox-common/0.9/
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		matchbox-common-0.9.1
+CATEGORIES=		wm
+MASTER_SITES=		http://projects.o-hand.com/matchbox/sources/matchbox-common/0.9/
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://projects.o-hand.com/matchbox/
-COMMENT=	Pixmaps for Matchbox
+MAINTAINER=		tech-pkg@NetBSD.org
+HOMEPAGE=		http://projects.o-hand.com/matchbox/
+COMMENT=		Shared icons and configuration data for Matchbox
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR=	matchbox
 
