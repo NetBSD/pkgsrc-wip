@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2005/06/12 23:51:22 kristerw Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/09 21:29:25 ppostma Exp $
 #
 
-DISTNAME=	matchbox-panel-0.9.1
-CATEGORIES=	x11
-MASTER_SITES=	http://projects.o-hand.com/matchbox/sources/matchbox-panel/0.9/
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		matchbox-panel-0.9.2
+CATEGORIES=		x11
+MASTER_SITES=		http://projects.o-hand.com/matchbox/sources/matchbox-panel/0.9/
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://projects.o-hand.com/matchbox/
-COMMENT=	Panel for Matchbox
+MAINTAINER=		tech-pkg@NetBSD.org
+HOMEPAGE=		http://projects.o-hand.com/matchbox/
+COMMENT=		Panel for Matchbox
 
 BUILD_USES_MSGFMT=	yes
 
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--enable-small-icons
 CONFIGURE_ARGS+=	--enable-startup-notification
 CONFIGURE_ARGS+=	--enable-nls
 
-BUILD_DEPENDS+=		gettext>=0.11.5:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
 
 CONFIGURE_ENV+=		XGETTEXT=${LOCALBASE}/bin/xgettext
 CONFIGURE_ENV+=		GMSGFMT=${LOCALBASE}/bin/msgfmt

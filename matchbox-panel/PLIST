@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2005/04/08 14:22:34 bencollver Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/12/09 21:29:25 ppostma Exp $
 bin/matchbox-panel
+bin/mb-applet-battery
 bin/mb-applet-clock
 bin/mb-applet-launcher
 bin/mb-applet-menu-launcher
