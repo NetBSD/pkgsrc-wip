@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2005/12/09 20:49:42 ppostma Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/09 21:32:27 ppostma Exp $
 #
 
 DISTNAME=		matchbox-desktop-0.9.1
-CATEGORIES=		wm
+CATEGORIES=		x11
 MASTER_SITES=		http://projects.o-hand.com/matchbox/sources/matchbox-desktop/0.9/
 EXTRACT_SUFX=		.tar.bz2
 
