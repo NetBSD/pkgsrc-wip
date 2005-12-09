@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2087 2005/12/08 22:36:32 ykomatsu Exp $
+# $Id: Makefile,v 1.2088 2005/12/09 17:36:25 lsed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -472,7 +472,6 @@ SUBDIR+=	libXt
 SUBDIR+=	libXv
 SUBDIR+=	libavc1394
 SUBDIR+=	libbtctl
-SUBDIR+=	libdca
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdrm
