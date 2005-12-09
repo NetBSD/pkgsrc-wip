@@ -1,4 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/14 21:22:04 shattered Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/12/09 17:17:06 lsed Exp $
+#
+
+BUILDLINK_DEPMETHOD.libdca?=	build
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBDTS_BUILDLINK3_MK:=	${LIBDTS_BUILDLINK3_MK}+
