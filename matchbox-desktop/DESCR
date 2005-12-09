@@ -1,1 +1,2 @@
-This is the desktop manager (ala nautilus) for the Matchbox desktop.
+A PDA style application launcher or 'item browser'. Its functionality
+can be extended by means of dynamically loadable plugins.
