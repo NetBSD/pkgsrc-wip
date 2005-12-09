@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2005/01/01 22:27:12 mattd Exp $
+$NetBSD: MESSAGE,v 1.2 2005/12/09 20:43:42 ppostma Exp $
 
-To customise what is run at startup in a matchbox session system-wide,
+To customize what is run at startup in a matchbox session system-wide,
 create the following:
 
 	${PKG_SYSCONFDIR}/session
