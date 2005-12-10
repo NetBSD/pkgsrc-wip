@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/12/08 07:42:46 ykomatsu Exp $
+$NetBSD: MESSAGE,v 1.5 2005/12/10 17:54:03 ykomatsu Exp $
 
 To run Zope, you need to make a new Zope instance home.
 
@@ -20,14 +20,14 @@ and edit /etc/rc.conf.
   1) If you want to run standalone Zope or ZEO client,
      please run the following commands:
 
-    chown -R ${ZOPE3_USER}:${ZOPE3_GROUP} ${VARBASE}/zope3
-    echo 'zope3_user="${ZOPE3_USER}"' >> /etc/rc.conf
+    ${CHOWN} -R ${ZOPE3_USER}:${ZOPE3_GROUP} ${VARBASE}/zope3
+    ${ECHO} 'zope3_user="${ZOPE3_USER}"' >> /etc/rc.conf
 
   2) If you want to run ZEO storage server,
      please run the following commands:
 
-    chown -R ${ZOPE3_USER}:${ZOPE3_GROUP} ${VARBASE}/zss3
-    echo 'zss3_user="${ZOPE3_USER}"' >> /etc/rc.conf
+    ${CHOWN} -R ${ZOPE3_USER}:${ZOPE3_GROUP} ${VARBASE}/zss3
+    ${ECHO} 'zss3_user="${ZOPE3_USER}"' >> /etc/rc.conf
 
 If you want to run Zope with following protocols, you need to
 install corresponding packages.

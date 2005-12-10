@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/10 02:01:41 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/10 17:54:03 ykomatsu Exp $
 #
 
 DISTNAME=		Zope-3.2.0b1
@@ -14,9 +14,12 @@ COMMENT=		Zope 3 Application Server
 CONFLICTS=		zope3-3.1.0* zope3-unstable-3.1.0*
 DEPENDS+=		${PYPKGPREFIX}-xml>=0.8.4:../../textproc/py-xml
 
+ZOPE3_DIR=		${PREFIX}/share/zope3
+ZOPE3_DOCDIR=		${PREFIX}/share/doc/zope3
+
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-python ${PYTHONBIN} \
-			--prefix ${PREFIX}/share/zope3 \
+			--prefix ${ZOPE3_DIR} \
 			--force
 
 .include "../../mk/bsd.prefs.mk"
@@ -36,10 +39,10 @@ PKG_USERS=		${ZOPE3_USER}:${ZOPE3_GROUP}::Zope3\ user
 
 PYTHON_VERSIONS_ACCEPTED=	24
 
-MESSAGE_SUBST+=		ZOPE3_USER=${ZOPE3_USER} ZOPE3_GROUP=${ZOPE3_GROUP} \
-			VARBASE=${VARBASE}
-
-ZOPE3_DOCDIR=		${PREFIX}/share/doc/zope3
+MESSAGE_SUBST+=		ZOPE3_USER="${ZOPE3_USER}" \
+			ZOPE3_GROUP="${ZOPE3_GROUP}" \
+			VARBASE="${VARBASE}" \
+			CHOWN="${CHOWN}" ECHO="${ECHO}"
 
 .include "../../lang/python/application.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -48,9 +51,9 @@ pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -type f -print | ${XARGS} ${RM} -f
 
 post-install:
-	${LN} -s ${PREFIX}/share/zope3/bin/mkzeoinstance ${PREFIX}/bin
-	${LN} -s ${PREFIX}/share/zope3/bin/mkzopeinstance ${PREFIX}/bin
-	${LN} -s ${PREFIX}/share/zope3/bin/zopetest ${PREFIX}/bin
+	${LN} -s ${ZOPE3_DIR}/bin/mkzeoinstance ${PREFIX}/bin
+	${LN} -s ${ZOPE3_DIR}/bin/mkzopeinstance ${PREFIX}/bin
+	${LN} -s ${ZOPE3_DIR}/bin/zopetest ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${ZOPE3_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/Zope/LICENSES.txt ${ZOPE3_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/Zope/ZopePublicLicense.txt ${ZOPE3_DOCDIR}
