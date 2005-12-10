@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/10 17:32:23 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/10 18:31:40 shattered Exp $
 
 DISTNAME=
 PKGNAME=	xanim-codecs-19990322
 CATEGORIES=	multimedia
-MASTER_SITES=	ftp://ftp.informatik.uni-hamburg.de/pub/soft/graphics/xanim/dlls/
+MASTER_SITES=	ftp://ftp.informatik.uni-hamburg.de/pub/soft/graphics/xanim/dlls/ \
+		ftp://ftp.mayn.de/pub/unix/graphic/xanim/dll-glibc2.0/ \
+		ftp://ftp.sai.msu.su/pub/unix/mpeg/xanim/dlls/ \
+		ftp://ftp.nstu.ru/pub/mirrors/xanim.va.pubnix.com/dlls/
 DISTFILES=	${CODEC_DLL_FILES}
 
 MAINTAINER=	shattered@users.sourceforge.net
