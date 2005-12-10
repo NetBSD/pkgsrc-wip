@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/08 07:42:46 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/10 02:01:41 ykomatsu Exp $
 #
 
 DISTNAME=		Zope-3.2.0b1
@@ -12,7 +12,7 @@ HOMEPAGE=		http://dev.zope.org/Zope3/
 COMMENT=		Zope 3 Application Server
 
 CONFLICTS=		zope3-3.1.0* zope3-unstable-3.1.0*
-DEPENDS+=		${PYPKGPREFIX}-xml>=0.8.3nb1:../../textproc/py-xml
+DEPENDS+=		${PYPKGPREFIX}-xml>=0.8.4:../../textproc/py-xml
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-python ${PYTHONBIN} \
@@ -34,7 +34,7 @@ ZOPE3_USER?=		zope3
 PKG_GROUPS=		${ZOPE3_GROUP}
 PKG_USERS=		${ZOPE3_USER}:${ZOPE3_GROUP}::Zope3\ user
 
-PYTHON_VERSION_ACCEPTED=	24
+PYTHON_VERSIONS_ACCEPTED=	24
 
 MESSAGE_SUBST+=		ZOPE3_USER=${ZOPE3_USER} ZOPE3_GROUP=${ZOPE3_GROUP} \
 			VARBASE=${VARBASE}
