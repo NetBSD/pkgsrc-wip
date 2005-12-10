@@ -1,2 +1,0 @@
-- Add an option to handle only automatically installed leaf packages
-  (according to pkg_info -Qautomatic), hinted by dillo@.  
