@@ -1,0 +1,23 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/12/10 17:32:27 shattered Exp $
+
+SHA1 (xanim/vid_cvid_2.0_linuxELFx86.tgz) = f2589e86c566a6502aa20dc3e37e780d13ba1701
+RMD160 (xanim/vid_cvid_2.0_linuxELFx86.tgz) = 7163d39bc3805e9bce961f29b6a978a2909eda20
+Size (xanim/vid_cvid_2.0_linuxELFx86.tgz) = 6093 bytes
+SHA1 (xanim/vid_cyuv_1.0_linuxELFx86.tgz) = d7fd73e8e0d67979ed14cd94d59602041b3e38cc
+RMD160 (xanim/vid_cyuv_1.0_linuxELFx86.tgz) = ddb46021645a51b6cf56628b5c4789a40b5ccba9
+Size (xanim/vid_cyuv_1.0_linuxELFx86.tgz) = 3550 bytes
+SHA1 (xanim/vid_h261_1.0_linuxELFx86.tgz) = da16b8e4702c79ec5299a99e4251f0cbfc4e3959
+RMD160 (xanim/vid_h261_1.0_linuxELFx86.tgz) = f26996e8b564d89cdf46d7602de6bd7a03a85dd5
+Size (xanim/vid_h261_1.0_linuxELFx86.tgz) = 29439 bytes
+SHA1 (xanim/vid_h263_1.0_linuxELFx86.tgz) = f841bc937a81227e591241bb471974096bbce2a7
+RMD160 (xanim/vid_h263_1.0_linuxELFx86.tgz) = 2a686f6d7f69d4363bde79cb7d5ddc96eec30285
+Size (xanim/vid_h263_1.0_linuxELFx86.tgz) = 60016 bytes
+SHA1 (xanim/vid_iv32_2.1_linuxELFx86.tgz) = 950145f2f9000660f2c5a208b77d712b12ae7d3c
+RMD160 (xanim/vid_iv32_2.1_linuxELFx86.tgz) = afc99b113a8e1bc30a4bc16f80f628eb2e347058
+Size (xanim/vid_iv32_2.1_linuxELFx86.tgz) = 31211 bytes
+SHA1 (xanim/vid_iv41_1.1_linuxELFx86.tgz) = 5ec3e8f64f1122656ddc9511d81dafca556d4453
+RMD160 (xanim/vid_iv41_1.1_linuxELFx86.tgz) = 9f264f63ed07632febc67e34342e450f9974f1b2
+Size (xanim/vid_iv41_1.1_linuxELFx86.tgz) = 60657 bytes
+SHA1 (xanim/vid_iv50_1.0_linuxELFx86.tgz) = c411eff4d64fb62794bda3a8bbbb75d463b7b2ae
+RMD160 (xanim/vid_iv50_1.0_linuxELFx86.tgz) = e144dff9d0aba185224cea3ced5984de18fb9c8f
+Size (xanim/vid_iv50_1.0_linuxELFx86.tgz) = 38087 bytes

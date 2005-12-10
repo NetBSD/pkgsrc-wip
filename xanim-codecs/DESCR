@@ -1,0 +1,5 @@
+As of revision 2.80, XAnim will scan the directory "/usr/local/xanim/mods"
+(or directories listed in the XANIM_MOD_DIR env variable if set) for
+xanim specific dynamically loadable libraries(dll's).  It will
+automatically load these at start up. This way new video codecs for
+AVI and Quicktime can be added without having to recompile XAnim.
