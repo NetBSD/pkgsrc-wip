@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2089 2005/12/09 19:26:49 kristerw Exp $
+# $Id: Makefile,v 1.2090 2005/12/10 20:56:06 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -437,6 +437,7 @@ SUBDIR+=	kawa
 SUBDIR+=	kbproto
 SUBDIR+=	kcc
 SUBDIR+=	kchmviewer
+SUBDIR+=	kid3
 SUBDIR+=	kino
 SUBDIR+=	kismet
 SUBDIR+=	kissme
@@ -797,7 +798,7 @@ SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
 SUBDIR+=	p5-PluceneSimple
 SUBDIR+=	p5-Pod-Tree
 SUBDIR+=	p5-Quota
-SUBDIR+=	p5-Return-Value 
+SUBDIR+=	p5-Return-Value
 SUBDIR+=	p5-Template-Timer
 SUBDIR+=	p5-Test-Class
 SUBDIR+=	p5-Test-Differences
@@ -1211,6 +1212,7 @@ SUBDIR+=	wordnet
 SUBDIR+=	words
 SUBDIR+=	worker
 SUBDIR+=	xace
+SUBDIR+=	xanim-codec
 SUBDIR+=	xaralx-bin
 SUBDIR+=	xarchiver
 SUBDIR+=	xbase
