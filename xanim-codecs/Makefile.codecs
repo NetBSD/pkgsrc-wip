@@ -1,0 +1,115 @@
+# $NetBSD: Makefile.codecs,v 1.1.1.1 2005/12/10 18:21:40 shattered Exp $
+
+.include "../../mk/bsd.prefs.mk"
+
+# cvid	Radius Cinepak video decompression for AVI and Quicktime
+# cyuv	Creative CYUV video decompression for AVI
+# iv32	Intel YVU9 and Indeo 3.2 decompression for AVI and Quicktime
+#
+XANIM_CODECS?=			${_XANIM_UNRESTRICTED_CODECS}
+#XANIM_CODECS?=			${_XANIM_UNRESTRICTED_CODECS} ${_XANIM_RESTRICTED_CODECS}
+_XANIM_RESTRICTED_CODECS=	cyuv iv32
+_XANIM_UNRESTRICTED_CODECS=	cvid
+
+_XANIM_CODEC.cvid.i386-a.out=	xa2.0_cvid_netbsd386.o.gz
+_XANIM_CODEC.cyuv.i386-a.out=	xa1.0_cyuv_netbsd386.o.gz
+_XANIM_CODEC.iv32.i386-a.out=	xa2.0_iv32_netbsd386.o.gz
+
+_XANIM_CODEC.cvid.m68k-a.out=	xa2.0_cvid_netbsd68k.o.gz
+_XANIM_CODEC.cyuv.m68k-a.out=	xa1.0_cyuv_netbsd68k.o.gz
+_XANIM_CODEC.iv32.m68k-a.out=	xa2.0_iv32_netbsd68k.o.gz
+
+_XANIM_CODEC.cvid.i386-ELF=	xa2.0_cvid_linuxELF.o.gz
+_XANIM_CODEC.cyuv.i386-ELF=	xa1.0_cyuv_linuxELF.o.gz
+_XANIM_CODEC.iv32.i386-ELF=	xa2.0_iv32_linuxELF.o.gz
+
+_XANIM_CODEC.cvid.sparc-a.out=	xa2.0_cvid_sparcCOFF.o.gz
+_XANIM_CODEC.cyuv.sparc-a.out=	xa1.0_cyuv_sparcAOUT.o.gz
+_XANIM_CODEC.iv32.sparc-a.out=	xa2.0_iv32_sparcCOFF.o.gz
+
+_XANIM_CODEC.cvid.sparc-ELF=	xa2.0_cvid_sparcELF.o.gz
+_XANIM_CODEC.cyuv.sparc-ELF=	xa1.0_cyuv_sparcELF.o.gz
+_XANIM_CODEC.iv32.sparc-ELF=	xa2.0_iv32_sparcELF.o.gz
+
+_XANIM_CODEC.cvid.powerpc-ELF=	xa2.0_cvid_linuxPPC.o.gz
+_XANIM_CODEC.cyuv.powerpc-ELF=	xa1.0_cyuv_linuxPPC.o.gz
+
+_XANIM_DEF.cvid=	XA_CVID_DEF="-DXA_CVID"
+_XANIM_DEF.cyuv=	XA_CYUV_DEF="-DXA_CYUV"
+_XANIM_DEF.iv32=	XA_IV32_DEF="-DXA_IV32"
+
+_XANIM_LIB.cvid=	XA_CVID_LIB
+_XANIM_LIB.cyuv=	XA_CYUV_LIB
+_XANIM_LIB.iv32=	XA_IV32_LIB
+
+XANIM_DLL_CODECS?=	cvid cyuv h261 h263 iv32 iv41 iv50
+
+_XANIM_DLL_CODEC.cvid.alpha=	vid_cvid_2.1_linuxELFalpha.tgz
+_XANIM_DLL_CODEC.cvid.i386=	vid_cvid_2.0_linuxELFx86.tgz
+_XANIM_DLL_CODEC.cvid.mips=	vid_cvid_2.0_sgiO32mips.tgz
+_XANIM_DLL_CODEC.cvid.powerpc=	vid_cvid_2.0_linuxELFppc.tgz
+_XANIM_DLL_CODEC.cvid.sparc=	vid_cvid_2.0_sunELFsparc.tgz
+
+_XANIM_DLL_CODEC.cyuv.alpha=	vid_cyuv_1.0_linuxELFalpha.tgz
+_XANIM_DLL_CODEC.cyuv.i386=	vid_cyuv_1.0_linuxELFx86.tgz
+_XANIM_DLL_CODEC.cyuv.mips=	vid_cyuv_1.0_sgiO32mips.tgz
+_XANIM_DLL_CODEC.cyuv.powerpc=	vid_cyuv_1.0_linuxELFppc.tgz
+_XANIM_DLL_CODEC.cyuv.sparc=	vid_cyuv_1.0_sunELFsparc.tgz
+
+_XANIM_DLL_CODEC.h261.alpha=	vid_h261_1.0_linuxELFalpha.tgz
+_XANIM_DLL_CODEC.h261.i386=	vid_h261_1.0_linuxELFx86.tgz
+_XANIM_DLL_CODEC.h261.mips=	vid_h261_1.0_sgiO32mips.tgz
+_XANIM_DLL_CODEC.h261.powerpc=	vid_h261_1.0_linuxELFppc.tgz
+_XANIM_DLL_CODEC.h261.sparc=	vid_h261_1.0_sunELFsparc.tgz
+
+_XANIM_DLL_CODEC.h263.alpha=	vid_h263_1.0_linuxELFalpha.tgz
+_XANIM_DLL_CODEC.h263.i386=	vid_h263_1.0_linuxELFx86.tgz
+_XANIM_DLL_CODEC.h263.mips=	vid_h263_1.0_sgiO32mips.tgz
+_XANIM_DLL_CODEC.h263.powerpc=	vid_h263_1.0_linuxELFppc.tgz
+_XANIM_DLL_CODEC.h263.sparc=	vid_h263_1.0_sunELFsparc.tgz
+
+_XANIM_DLL_CODEC.iv32.alpha=	vid_iv32_2.1_linuxELFalpha.tgz
+_XANIM_DLL_CODEC.iv32.i386=	vid_iv32_2.1_linuxELFx86.tgz
+_XANIM_DLL_CODEC.iv32.mips=	vid_iv32_2.1_sgiO32mips.tgz
+_XANIM_DLL_CODEC.iv32.powerpc=	vid_iv32_2.1_linuxELFppc.tgz
+_XANIM_DLL_CODEC.iv32.sparc=	vid_iv32_2.1_sunELFsparc.tgz
+
+_XANIM_DLL_CODEC.iv41.alpha=	vid_iv41_1.1_linuxELFalpha.tgz
+_XANIM_DLL_CODEC.iv41.i386=	vid_iv41_1.1_linuxELFx86.tgz
+_XANIM_DLL_CODEC.iv41.mips=	vid_iv41_1.0_sgiO32mips.tgz
+_XANIM_DLL_CODEC.iv41.powerpc=	vid_iv41_1.1_linuxELFppc.tgz
+_XANIM_DLL_CODEC.iv41.sparc=	vid_iv41_1.0_sunELFsparc.tgz
+
+_XANIM_DLL_CODEC.iv50.alpha=	vid_iv50_1.0_linuxELFalpha.tgz
+_XANIM_DLL_CODEC.iv50.i386=	vid_iv50_1.0_linuxELFx86.tgz
+_XANIM_DLL_CODEC.iv50.mips=	vid_iv50_1.0_sgiO32mips.tgz
+_XANIM_DLL_CODEC.iv50.powerpc=	vid_iv50_1.0_linuxELFppc.tgz
+_XANIM_DLL_CODEC.iv50.sparc=	vid_iv50_1.0_sunELFsparc.tgz
+
+_XANIM_MACH_TYPE=	${MACHINE_ARCH}-${OBJECT_FMT}
+
+.for _codec_ in ${XANIM_CODECS}
+.  if defined(_XANIM_CODEC.${_codec_}.${_XANIM_MACH_TYPE})
+CODECS+=	${_codec_}
+CODEC_FILES+=	${_XANIM_CODEC.${_codec_}.${_XANIM_MACH_TYPE}}
+MAKE_ENV+=	${_XANIM_DEF.${_codec_}}
+MAKE_ENV+=	${_XANIM_LIB.${_codec_}}="mods/${_XANIM_CODEC.${_codec_}.${_XANIM_MACH_TYPE}:S/.Z$//}"
+.    if !empty(_XANIM_RESTRICTED_CODECS:M${_codec_})
+_RESTRICTED_CODECS+=	${_codec_}
+.    endif
+.  endif
+.endfor
+
+.for _codec_ in ${XANIM_DLL_CODECS}
+.  if defined(_XANIM_DLL_CODEC.${_codec_}.${MACHINE_ARCH})
+CODEC_DLL_FILES+=	${_XANIM_DLL_CODEC.${_codec_}.${MACHINE_ARCH}}
+.  endif
+.endfor
+
+.if defined(_RESTRICTED_CODECS)
+RESTRICTED=	"Can't mirror/distribute object modules: ${_RESTRICTED_CODECS}"
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+.endif
