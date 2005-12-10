@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/10 21:25:02 shattered Exp $
+bin/jbmgen
+lib/ruby/site_ruby/1.8/jbmgen/BinaryStuff.rb
+lib/ruby/site_ruby/1.8/jbmgen/Dictionary.rb
+lib/ruby/site_ruby/1.8/jbmgen/FileEntry.rb
+lib/ruby/site_ruby/1.8/jbmgen/JBMFile.rb
+lib/ruby/site_ruby/1.8/jbmgen/Path.rb
+lib/ruby/site_ruby/1.8/jbmgen/Pointable.rb
+lib/ruby/site_ruby/1.8/jbmgen/TreeNode.rb
+lib/ruby/site_ruby/1.8/jbmgen/TreeNodeTypes.rb
+lib/ruby/site_ruby/1.8/jbmgen/mp3info.rb
+@dirrm lib/ruby/site_ruby/1.8/jbmgen
