@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/12/10 22:10:28 shattered Exp $
+
+--- jbmgen.orig	2005-01-25 17:57:46.000000000 +0000
++++ jbmgen
+@@ -19,7 +19,7 @@
+ #
+ 
+ 
+-require "JBMFile.rb"
++require "jbmgen/JBMFile"
+ 
+ def traverse_files(root_path)
+     begin
