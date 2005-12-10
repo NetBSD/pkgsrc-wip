@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/03 09:55:00 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/10 17:38:21 shattered Exp $
 #
 
 DISTNAME=	Apache-AuthenNTLM-2.10
@@ -13,7 +13,7 @@ COMMENT=	Perl5/Apache module for NTLM authorization
 
 DEPENDS+=	p5-MIME-Base64>=3:../../converters/p5-MIME-Base64
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/ASP/.packlist
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/AuthenNTLM/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../www/ap-perl/buildlink3.mk"
