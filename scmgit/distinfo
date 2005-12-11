@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/12/11 12:26:28 poppnk Exp $
+
+SHA1 (git-0.99.9l.tar.gz) = 4d8fd0216aa3a3d32dc4697a450c71252fbd707e
+RMD160 (git-0.99.9l.tar.gz) = 3aab871899647ccf1deba4720f4119612938fa53
+Size (git-0.99.9l.tar.gz) = 546505 bytes
