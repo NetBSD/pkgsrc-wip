@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1 2005/12/11 11:15:13 lkundrak Exp $
+
+--- shed.c.orig	2005-09-06 00:41:00.000000000 +0200
++++ shed.c
+@@ -231,8 +231,8 @@ int mainloop(int getstrmode) {
+         case 8:   /* ^H */
+           if(strlen(reply)) {
+             reply[strlen(reply)-1] = 0;
+-            mvaddch(stdscr->_cury,stdscr->_curx-1,' ');
+-            move(stdscr->_cury,stdscr->_curx-1);
++            mvaddch(getcury(stdscr),getcurx(stdscr)-1,' ');
++            move(getcury(stdscr),getcurx(stdscr)-1);
+           }
+           break;
+ 
+@@ -271,7 +271,9 @@ int mainloop(int getstrmode) {
+ 
+       redraw();
+ 
+-      key = toupper(getch());
++      key = getch();
++      if (isalpha (key))
++        key = toupper(key);
+ 
+       switch(key) {
+ 
