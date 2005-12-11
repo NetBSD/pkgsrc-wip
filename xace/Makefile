@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 14:34:50 bencollver Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/11 23:22:37 bencollver Exp $
 #
 
 DISTNAME=		xace-0.4
@@ -10,7 +10,6 @@ HOMEPAGE=		${MASTER_SITES}ace.html
 COMMENT=		Jupiter Ace emulator
 
 EXTR_PREFIX=		.tar.gz
-ONLY_FOR_PLATFORM+=	*-i386 *-hpcmips
 USE_IMAKE=		YES
 
 SUBST_CLASSES+=		prefix
