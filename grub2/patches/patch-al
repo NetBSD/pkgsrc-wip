@@ -1,0 +1,25 @@
+$NetBSD: patch-al,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
+
+--- util/misc.c.orig	2005-02-27 22:19:06.000000000 +0100
++++ util/misc.c
+@@ -226,13 +226,15 @@ grub_realloc (void *ptr, grub_size_t siz
+ 
+ void *
+ grub_memalign (grub_size_t align, grub_size_t size)
+-{
++{ 
+   void *p;
+-  
+-  p = memalign (align, size);
+-  if (! p)
++
++  p = malloc (size + align - 1);
++  if (p)
++    p = (void *)(((int)p/align + 1) * align);
++  else
+     grub_util_error ("out of memory");
+-  
++
+   return p;
+ }
+ 

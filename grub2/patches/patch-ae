@@ -1,0 +1,51 @@
+$NetBSD: patch-ae,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
+
+--- configure.ac.orig	2005-12-10 06:24:58.000000000 +0100
++++ configure.ac
+@@ -131,7 +131,6 @@ if test "x$build" != "x$host"; then
+ 		 [AC_MSG_ERROR([none of gcc, egcs and cc is found. set BUILD_CC manually.])])
+ else
+   BUILD_CC="$CC"
+-  AC_SUBST(BUILD_CC)
+ fi
+ 
+ # Test the C compiler for the build environment.
+@@ -139,10 +138,24 @@ tmp_CC="$CC"
+ tmp_CFLAGS="$CFLAGS"
+ tmp_LDFLAGS="$LDFLAGS"
+ tmp_CPPFLAGS="$CPPFLAGS"
++
+ CC="$BUILD_CC"
+ CFLAGS="$BUILD_CFLAGS"
+ CPPFLAGS="$BUILD_CPPFLAGS"
+-LDFLAGS="$BUILD_LDDFLAGS"
++LDFLAGS="$BUILD_LDFLAGS"
++
++if test "x$BUILD_CFLAGS" = x; then
++  BUILD_CFLAGS="-g -O2"
++fi
++
++if test "x$BUILD_CPPFLAGS" = x; then
++  BUILD_CPPFLAGS="-Wall -W"
++fi
++   
++AC_SUBST(BUILD_CC)
++AC_SUBST(BUILD_CFLAGS)
++AC_SUBST(BUILD_CPPFLAGS)
++AC_SUBST(BUILD_LDFLAGS)
+ 
+ # Identify characteristics of the build architecture.
+ AC_C_BIGENDIAN
+@@ -171,6 +184,12 @@ AC_CHECK_LIB(ncurses, wgetch, [LIBCURSES
+   [AC_CHECK_LIB(curses, wgetch, [LIBCURSES="-lcurses"])])
+ AC_SUBST(LIBCURSES)
+ 
++# Check for argp
++AC_CHECK_FUNC(argp_parse,,
++  AC_CHECK_LIB(argp, argp_parse, [LIBARGP="-largp"],
++    AC_MSG_ERROR([Argp required. Either use glibc or install argp-standalone.])))
++AC_SUBST(LIBARGP)
++
+ # Check for headers.
+ AC_CHECK_HEADERS(ncurses/curses.h ncurses.h curses.h)
+ 

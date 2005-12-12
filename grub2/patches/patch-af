@@ -1,0 +1,239 @@
+$NetBSD: patch-af,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
+
+--- configure.orig	2005-12-10 06:24:58.000000000 +0100
++++ configure
+@@ -311,7 +311,7 @@ ac_includes_default="\
+ # include <unistd.h>
+ #endif"
+ 
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS build build_cpu build_vendor build_os host host_cpu host_vendor host_os CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT YACC INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA SET_MAKE OBJCOPY ac_ct_OBJCOPY STRIP ac_ct_STRIP NM ac_ct_NM LD ac_ct_LD RUBY BUILD_CC CPP EGREP LIBLZO LIBCURSES LIBOBJS LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS build build_cpu build_vendor build_os host host_cpu host_vendor host_os CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT YACC INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA SET_MAKE OBJCOPY ac_ct_OBJCOPY STRIP ac_ct_STRIP NM ac_ct_NM LD ac_ct_LD RUBY BUILD_CC BUILD_CFLAGS BUILD_CPPFLAGS BUILD_LDFLAGS CPP EGREP LIBLZO LIBCURSES LIBARGP LIBOBJS LTLIBOBJS'
+ ac_subst_files=''
+ 
+ # Initialize some variables set by options.
+@@ -4268,7 +4268,6 @@ echo "$as_me: error: none of gcc, egcs a
+ 
+ else
+   BUILD_CC="$CC"
+-
+ fi
+ 
+ # Test the C compiler for the build environment.
+@@ -4276,10 +4275,24 @@ tmp_CC="$CC"
+ tmp_CFLAGS="$CFLAGS"
+ tmp_LDFLAGS="$LDFLAGS"
+ tmp_CPPFLAGS="$CPPFLAGS"
++
+ CC="$BUILD_CC"
+ CFLAGS="$BUILD_CFLAGS"
+ CPPFLAGS="$BUILD_CPPFLAGS"
+-LDFLAGS="$BUILD_LDDFLAGS"
++LDFLAGS="$BUILD_LDFLAGS"
++
++if test "x$BUILD_CFLAGS" = x; then
++  BUILD_CFLAGS="-g -O2"
++fi
++
++if test "x$BUILD_CPPFLAGS" = x; then
++  BUILD_CPPFLAGS="-Wall -W"
++fi
++
++
++
++
++
+ 
+ # Identify characteristics of the build architecture.
+ echo "$as_me:$LINENO: checking whether byte ordering is bigendian" >&5
+@@ -6438,6 +6451,176 @@ fi
+ 
+ 
+ 
++# Check for argp
++echo "$as_me:$LINENO: checking for argp_parse" >&5
++echo $ECHO_N "checking for argp_parse... $ECHO_C" >&6
++if test "${ac_cv_func_argp_parse+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++/* Define argp_parse to an innocuous variant, in case <limits.h> declares argp_parse.
++   For example, HP-UX 11i <limits.h> declares gettimeofday.  */
++#define argp_parse innocuous_argp_parse
++
++/* System header to define __stub macros and hopefully few prototypes,
++    which can conflict with char argp_parse (); below.
++    Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
++    <limits.h> exists even on freestanding compilers.  */
++
++#ifdef __STDC__
++# include <limits.h>
++#else
++# include <assert.h>
++#endif
++
++#undef argp_parse
++
++/* Override any gcc2 internal prototype to avoid an error.  */
++#ifdef __cplusplus
++extern "C"
++{
++#endif
++/* We use char because int might match the return type of a gcc2
++   builtin and then its argument prototype would still apply.  */
++char argp_parse ();
++/* The GNU C library defines this for functions which it implements
++    to always fail with ENOSYS.  Some functions are actually named
++    something starting with __ and the normal name is an alias.  */
++#if defined (__stub_argp_parse) || defined (__stub___argp_parse)
++choke me
++#else
++char (*f) () = argp_parse;
++#endif
++#ifdef __cplusplus
++}
++#endif
++
++int
++main ()
++{
++return f != argp_parse;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  ac_cv_func_argp_parse=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++ac_cv_func_argp_parse=no
++fi
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
++fi
++echo "$as_me:$LINENO: result: $ac_cv_func_argp_parse" >&5
++echo "${ECHO_T}$ac_cv_func_argp_parse" >&6
++if test $ac_cv_func_argp_parse = yes; then
++  :
++else
++  echo "$as_me:$LINENO: checking for argp_parse in -largp" >&5
++echo $ECHO_N "checking for argp_parse in -largp... $ECHO_C" >&6
++if test "${ac_cv_lib_argp_argp_parse+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-largp  $LIBS"
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++
++/* Override any gcc2 internal prototype to avoid an error.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++/* We use char because int might match the return type of a gcc2
++   builtin and then its argument prototype would still apply.  */
++char argp_parse ();
++int
++main ()
++{
++argp_parse ();
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  ac_cv_lib_argp_argp_parse=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++ac_cv_lib_argp_argp_parse=no
++fi
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++echo "$as_me:$LINENO: result: $ac_cv_lib_argp_argp_parse" >&5
++echo "${ECHO_T}$ac_cv_lib_argp_argp_parse" >&6
++if test $ac_cv_lib_argp_argp_parse = yes; then
++  LIBARGP="-largp"
++else
++  { { echo "$as_me:$LINENO: error: Argp required. Either use glibc or install argp-standalone." >&5
++echo "$as_me: error: Argp required. Either use glibc or install argp-standalone." >&2;}
++   { (exit 1); exit 1; }; }
++fi
++
++fi
++
++
++
+ # Check for headers.
+ 
+ 
+@@ -7251,10 +7434,14 @@ s,@LD@,$LD,;t t
+ s,@ac_ct_LD@,$ac_ct_LD,;t t
+ s,@RUBY@,$RUBY,;t t
+ s,@BUILD_CC@,$BUILD_CC,;t t
++s,@BUILD_CFLAGS@,$BUILD_CFLAGS,;t t
++s,@BUILD_CPPFLAGS@,$BUILD_CPPFLAGS,;t t
++s,@BUILD_LDFLAGS@,$BUILD_LDFLAGS,;t t
+ s,@CPP@,$CPP,;t t
+ s,@EGREP@,$EGREP,;t t
+ s,@LIBLZO@,$LIBLZO,;t t
+ s,@LIBCURSES@,$LIBCURSES,;t t
++s,@LIBARGP@,$LIBARGP,;t t
+ s,@LIBOBJS@,$LIBOBJS,;t t
+ s,@LTLIBOBJS@,$LTLIBOBJS,;t t
+ CEOF

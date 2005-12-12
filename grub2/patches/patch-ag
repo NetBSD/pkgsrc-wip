@@ -1,0 +1,37 @@
+$NetBSD: patch-ag,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
+
+--- geninit.sh.orig	2005-11-13 16:47:08.000000000 +0100
++++ geninit.sh
+@@ -41,12 +41,10 @@ void
+ grub_init_all (void)
+ {
+ EOF
+-(
+-  cat grub_modules_init.lst
+-  for i in $*; do
+-    echo $i':'
+-  done
+-) | sort -r | uniq -d -W1 -t':' | sed -n '/GRUB_MOD_INIT *([a-zA-Z0-9_]*)/{s/.*GRUB_MOD_INIT *(\([a-zA-Z0-9_]*\)).*/  grub_\1_init ();/;p;}'
++
++for i in $*; do
++  (sed -n '/GRUB_MOD_INIT *([a-zA-Z0-9_]*)/{s/.*GRUB_MOD_INIT *(\([a-zA-Z0-9_]*\)).*/  grub_\1_init ();/;p;}' < $i)
++done
+ 
+ cat <<EOF
+ }
+@@ -58,12 +56,9 @@ grub_fini_all (void)
+ {
+ EOF
+ 
+-(
+-  cat grub_modules_init.lst
+-  for i in $*; do
+-    echo $i':'
+-  done
+-) | sort -r | uniq -d -W1 -t':' | sed -n '/GRUB_MOD_INIT *([a-zA-Z0-9_]*)/{s/.*GRUB_MOD_INIT *(\([a-zA-Z0-9_]*\)).*/  grub_\1_fini ();/;p;}'
++for i in $*; do
++  (sed -n '/GRUB_MOD_INIT *([a-zA-Z0-9_]*)/{s/.*GRUB_MOD_INIT *(\([a-zA-Z0-9_]*\)).*/  grub_\1_fini ();/;p;}' < $i)
++done
+ 
+ cat <<EOF
+ }

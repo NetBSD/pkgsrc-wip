@@ -1,5 +1,14 @@
-$NetBSD: distinfo,v 1.1 2005/12/06 09:09:17 lkundrak Exp $
+$NetBSD: distinfo,v 1.2 2005/12/12 17:42:17 lkundrak Exp $
 
-SHA1 (grub.tar.gz) = f58b815dd8edc8bfe2feefea47ea1ff88ab665f1
-RMD160 (grub.tar.gz) = adf706bff7850d0f1a4a8c7af78b8cb40dff6b30
-Size (grub.tar.gz) = 438064 bytes
+SHA1 (patch-aa) = 00a49604b1f944c221b48eb252a49b8b20dcc655
+SHA1 (patch-ab) = 167e0d0b9325f034bd87c9f05f80b604515b4964
+SHA1 (patch-ac) = b0655482cad3b9613f709dd0368c8bc0e93ce873
+SHA1 (patch-ad) = 31231dd240279e9c241b82d3bf43b7d48f9568a8
+SHA1 (patch-ae) = bac1de11152f012cf2e03fd9aece493d47947884
+SHA1 (patch-af) = 0e7bbfd630d2ed5a772e17d2ab61db3ca120c164
+SHA1 (patch-ag) = 4b709feff4494788353290b1f4dde9068fe4f174
+SHA1 (patch-ah) = 9cb7cf6faded4cb63f92ee1768967df426e7a1a7
+SHA1 (patch-ai) = e6b0a55b9c3e19368b0013646f627c0dfd875117
+SHA1 (patch-aj) = e0d810b7b400cad53d3ccc8b41d21b2056424b7b
+SHA1 (patch-ak) = d09d717bd737ed0707253e4a292e5a4abace2c62
+SHA1 (patch-al) = b69aede9f29978fb7d2186caf9014e9dc2bf427d

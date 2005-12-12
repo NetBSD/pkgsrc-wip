@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2005/12/06 09:09:17 lkundrak Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/12 17:42:17 lkundrak Exp $
 bin/grub-mkimage
 sbin/grub-emu
 sbin/grub-install
@@ -26,6 +26,7 @@ share/grub/i386-pc/fat.mod
 share/grub/i386-pc/font.mod
 share/grub/i386-pc/fs.lst
 share/grub/i386-pc/fshelp.mod
+share/grub/i386-pc/gpt.mod
 share/grub/i386-pc/gzio.mod
 share/grub/i386-pc/halt.mod
 share/grub/i386-pc/hello.mod
@@ -42,6 +43,7 @@ share/grub/i386-pc/moddep.lst
 share/grub/i386-pc/multiboot.mod
 share/grub/i386-pc/normal.mod
 share/grub/i386-pc/pc.mod
+share/grub/i386-pc/play.mod
 share/grub/i386-pc/pxeboot.img
 share/grub/i386-pc/reboot.mod
 share/grub/i386-pc/search.mod

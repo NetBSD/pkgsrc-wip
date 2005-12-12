@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
+
+--- Makefile.in.orig	2005-11-18 15:56:55.000000000 +0100
++++ Makefile.in
+@@ -57,17 +57,23 @@ mkinstalldirs = $(srcdir)/mkinstalldirs
+ CC = @CC@
+ CFLAGS = @CFLAGS@
+ CPPFLAGS = -I. -Iinclude -I$(srcdir)/include -Wall -W
++
+ BUILD_CC = @BUILD_CC@
+-BUILD_CFLAGS = -g -O2
+-BUILD_CPPFLAGS = -I. -Iinclude -I$(srcdir)/include -Wall -W \
+-	-DGRUB_DATADIR=\"$(pkgdatadir)\"
++BUILD_CFLAGS = @BUILD_CFLAGS@
++BUILD_CPPFLAGS = @BUILD_CPPFLAGS@
++BUILD_CPPFLAGS += -I. -Iinclude -I$(srcdir)/include -DGRUB_DATADIR=\"$(pkgdatadir)\"
++BUILD_LDFLAGS = @BUILD_LDFLAGS@
++
+ OBJCOPY = @OBJCOPY@
+ STRIP = @STRIP@
+ NM = @NM@
+ LD = @LD@
+ RUBY = @RUBY@
++YACC = @YACC@
+ LIBCURSES = @LIBCURSES@
+ LIBLZO = @LIBLZO@
++LIBARGP = @LIBARGP@
++LIBMALLOC = @LIBMALLOC@
+ 
+ ### General variables.
+ 
