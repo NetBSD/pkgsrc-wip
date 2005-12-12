@@ -1,7 +1,0 @@
-- Merge this package into the www/mozilla framework?  To be honest; I tried
-  that, and it's a mess.  The package didn't work.  This one does.  So for now
-  I'll keep it here in pkgsrc-wip for the people who want it.  Anyway it would
-  be nice if it were possible to install e.g. -gtk2 and -qt3 packages
-  concurrently.
-
-- Can we --enable-official-branding by default? (ask the Mozilla Foundation)
