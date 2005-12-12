@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2091 2005/12/10 22:29:27 shattered Exp $
+# $Id: Makefile,v 1.2092 2005/12/12 10:04:55 ghen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -235,7 +235,6 @@ SUBDIR+=	festival-gaim
 SUBDIR+=	ffmpeg-devel
 SUBDIR+=	firebird
 SUBDIR+=	firefox-wrapper
-SUBDIR+=	firefox15
 SUBDIR+=	firehose
 SUBDIR+=	fixesproto
 SUBDIR+=	flc
@@ -863,6 +862,7 @@ SUBDIR+=	pinball
 SUBDIR+=	pizza
 SUBDIR+=	pkg_fake
 SUBDIR+=	pkg_install-testing
+SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_select
 SUBDIR+=	pkgmanager
 SUBDIR+=	planner
