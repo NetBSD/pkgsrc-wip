@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/28 11:09:56 chriswareham Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/13 12:00:56 thomasklausner Exp $
 #
 
 DISTNAME=	easytag-1.99.9
@@ -21,6 +21,7 @@ USE_LIBTOOL=            yes
 .include "options.mk"
 
 .include "../../audio/id3lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
