@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/20 22:06:01 ghen Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/13 12:16:13 ghen Exp $
 
 DISTNAME=		lincvs-1.4.3-0-generic-src
 PKGNAME=		${DISTNAME:S/-0-generic-src//}
@@ -6,7 +6,7 @@ CATEGORIES=		devel x11
 MASTER_SITES=	        http://lincvs.com/download/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		geert.hendrickx@ua.ac.be
+MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://lincvs.org/
 COMMENT=		Nice GUI front-end to CVS (using Qt)
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/22 10:43:52 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/13 12:16:14 ghen Exp $
 
 DISTNAME=		sockstat-1.0
 CATEGORIES=		sysutils
 DISTFILES=		# empty
 MASTER_SITES=		# empty
 
-MAINTAINER=		geert.hendrickx@ua.ac.be
+MAINTAINER=		ghen@NetBSD.org
 COMMENT=		Tool to list open/connected sockets
 HOMEPAGE=		#
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2005/11/16 13:31:25 ghen Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/13 12:16:15 ghen Exp $
 
 DISTNAME=		xxdiff-3.1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xxdiff/}
 
-MAINTAINER=		geert.hendrickx@ua.ac.be
+MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://xxdiff.sourceforge.net/
 COMMENT=		Graphical file comparator and merge tool
 

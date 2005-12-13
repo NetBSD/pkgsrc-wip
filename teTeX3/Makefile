@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/25 13:13:35 ghen Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/13 12:16:15 ghen Exp $
 #
 
 DISTNAME=	teTeX-3.0
@@ -6,7 +6,7 @@ CATEGORIES=	print meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	geert.hendrickx@ua.ac.be
+MAINTAINER=	ghen@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Thomas Esser's TeX distribution for UNIX compatible systems, version 3
 

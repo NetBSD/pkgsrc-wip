@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/22 14:40:01 ghen Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/13 12:16:15 ghen Exp $
 
 DISTNAME=		XaraLX0.1c
 PKGNAME=		${DISTNAME:S,LX,LX-,}
@@ -6,7 +6,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		http://www.cconcepts.co.uk/downloads/
 EXTRACT_SUFX=		.tbz2
 
-MAINTAINER=		geert.hendrickx@ua.ac.be
+MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.xaraxtreme.org/
 COMMENT=		Vector graphics program
 

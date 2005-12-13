@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/10/27 14:26:45 ghen Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/13 12:16:12 ghen Exp $
 #
 
 DISTNAME=	abook-0.5.5pre1
 CATEGORIES=	databases
 MASTER_SITES=	http://abook.sourceforge.net/devel/
 
-MAINTAINER=	geert.hendrickx@ua.ac.be
+MAINTAINER=	ghen@NetBSD.org
 HOMEPAGE=	http://abook.sourceforge.net/
 COMMENT=	Text-based addressbook program
 

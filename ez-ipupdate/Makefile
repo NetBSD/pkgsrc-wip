@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/13 12:16:12 ghen Exp $
 
 DISTNAME=		ez-ipupdate-3.0.11b7
 CATEGORIES=		net
 MASTER_SITES=		http://www.ez-ipupdate.com/dist/
 
-MAINTAINER=		geert.hendrickx@ua.ac.be
+MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.ez-ipupdate.com/
 COMMENT=		Client to update dynamic DNS entries
 

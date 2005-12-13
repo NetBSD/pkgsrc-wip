@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/18 10:43:04 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/13 12:16:11 ghen Exp $
 
 DISTNAME=	abclock-1.0c
 CATEGORIES=	time
 MASTER_SITES=	${HOMEPAGE}
 
-MAINTAINER=	geert.hendrickx@ua.ac.be
+MAINTAINER=	ghen@NetBSD.org
 COMMENT=	Analogue Bitmap Clock
 HOMEPAGE=	http://odur.let.rug.nl/~kleiweg/abclock/
 
