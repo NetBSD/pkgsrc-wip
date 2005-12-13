@@ -1,0 +1,2 @@
+* This meta-pkg is obsolete now that we have mk/tex.buildlink3.mk.
+  Remove it after the pkgsrc-2005Q4 branch.
