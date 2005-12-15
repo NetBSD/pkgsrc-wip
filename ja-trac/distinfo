@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/06 13:22:59 obache Exp $
+$NetBSD: distinfo,v 1.2 2005/12/15 04:36:54 obache Exp $
 
-SHA1 (trac-0.9.1-ja-1.zip) = c4e02b0207286e6cc59cebd92c7a6eb190d0eb76
-RMD160 (trac-0.9.1-ja-1.zip) = db48f6256fc586b94dc6697eabd88278f80d92fc
-Size (trac-0.9.1-ja-1.zip) = 495264 bytes
+SHA1 (trac-0.9.2-ja-1.zip) = 1c2d9e09efc525176e6801541d334560d998b77f
+RMD160 (trac-0.9.2-ja-1.zip) = 5e7c93925300d1653f3f90f8a40eaf09b52e87da
+Size (trac-0.9.2-ja-1.zip) = 485516 bytes
 SHA1 (patch-aa) = 577475956c91ae995bbffb03ac5f8e8752912475
