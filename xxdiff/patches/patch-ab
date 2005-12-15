@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/12/15 18:54:38 ghen Exp $
+
+--- src/xxdiff.pro.orig	2004-11-05 23:29:46.000000000 +0000
++++ src/xxdiff.pro
+@@ -34,6 +34,8 @@ CONFIG = release qt warn_on thread
+ #TMAKE_CXXFLAGS += -DXX_KDE -I/usr/include/kde
+ #TMAKE_LIBS += -lkdeui -lkio -lqt-mt
+ 
++TMAKE_LIBS += -pthread
++
+ debug:TMAKE_CFLAGS += -DXX_DEBUG
+ debug:TMAKE_CXXFLAGS += -DXX_DEBUG
+ 
