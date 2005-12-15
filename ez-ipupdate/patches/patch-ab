@@ -1,18 +1,19 @@
-$NetBSD: patch-ab,v 1.1 2005/12/15 14:37:50 ghen Exp $
+$NetBSD: patch-ab,v 1.2 2005/12/15 15:23:10 ghen Exp $
 
---- error.h.orig	2000-11-24 22:46:37.000000000 +0000
+--- error.h.orig	2000-11-24 23:46:37.000000000 +0100
 +++ error.h
-@@ -2,11 +2,11 @@
+@@ -1,12 +1,12 @@
+ #ifndef _ERROR_H
  #define _ERROR_H
  
++#include <errno.h>
++
  #if HAVE_STRERROR
 -extern int errno;
-+#  include <errno.h>
  #  define error_string strerror(errno)
  #elif HAVE_SYS_ERRLIST
  extern const char *const sys_errlist[];
 -extern int errno;
-+#  include <errno.h>
  #  define error_string (sys_errlist[errno])
  #else
  #  define error_string "error message not found"
