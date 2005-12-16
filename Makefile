@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2094 2005/12/16 15:42:11 rxg Exp $
+# $Id: Makefile,v 1.2095 2005/12/16 23:13:08 zul_ Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -695,6 +695,7 @@ SUBDIR+=	oqtplayer
 SUBDIR+=	or1ksim
 SUBDIR+=	orion
 SUBDIR+=	orpie
+SUBDIR+=	ortp
 SUBDIR+=	p3nfs
 SUBDIR+=	p5-Accessor-Chained
 SUBDIR+=	p5-Aceperl
