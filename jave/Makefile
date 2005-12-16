@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/16 13:58:10 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/16 14:17:34 marttikuparinen Exp $
 
 DISTNAME=		jave5
 PKGNAME=		jave-5.0
 CATEGORIES=		editors
-MASTER_SITES=		http://www.jave.de/download/
+MASTER_SITES=		http://www.jave.de/download/ http://www.jave.de/figlet/
+DISTFILES=		jave5${EXTRACT_SUFX} figletfonts37${EXTRACT_SUFX}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		martti@NetBSD.org

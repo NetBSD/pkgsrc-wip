@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/16 13:58:10 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.2 2005/12/16 14:17:34 marttikuparinen Exp $
 
 SHA1 (jave5.zip) = 5e69b39da6bc78dbd4b35aa4e7508ea3aca3053f
 RMD160 (jave5.zip) = 92777b8dc9569fe56358db686c806d283b17a6a6
 Size (jave5.zip) = 1089274 bytes
+SHA1 (figletfonts37.zip) = 6842b306053216afc081cd7d825ceef96dd65d65
+RMD160 (figletfonts37.zip) = 1a5fa3cc48eb7fbb8ea9ec48e244daa56a67eb14
+Size (figletfonts37.zip) = 492726 bytes
