@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2093 2005/12/16 13:58:31 marttikuparinen Exp $
+# $Id: Makefile,v 1.2094 2005/12/16 15:42:11 rxg Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -231,6 +231,7 @@ SUBDIR+=	fakenes
 SUBDIR+=	fasta
 SUBDIR+=	fbida
 SUBDIR+=	fbpanel
+SUBDIR+=	fcitx
 SUBDIR+=	festival-gaim
 SUBDIR+=	ffmpeg-devel
 SUBDIR+=	firebird
