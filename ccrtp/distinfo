@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/12/16 10:14:26 poppnk Exp $
+
+SHA1 (ccrtp-1.3.5.tar.gz) = 3bb285d20aaa48b09dd0bf9363292f79a5c84595
+RMD160 (ccrtp-1.3.5.tar.gz) = 776665205ad734048135a3e86016a427a1d828de
+Size (ccrtp-1.3.5.tar.gz) = 560385 bytes
