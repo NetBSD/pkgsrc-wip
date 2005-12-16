@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/16 23:03:38 zul_ Exp $
+include/ortp/ortp-config.h
+include/ortp/ortp.h
+include/ortp/payloadtype.h
+include/ortp/rtcp.h
+include/ortp/rtp.h
+include/ortp/rtpport.h
+include/ortp/rtpsession.h
+include/ortp/rtpsignaltable.h
+include/ortp/sessionset.h
+include/ortp/str_utils.h
+include/ortp/telephonyevents.h
+lib/libortp.la
+lib/pkgconfig/ortp.pc
+share/gtk-doc/html/ortp/book1.html
+share/gtk-doc/html/ortp/ortp-library-management-functions.html
+share/gtk-doc/html/ortp/ortp-multiplexing-sessions---in-a-one-thread-design.html
+share/gtk-doc/html/ortp/ortp-rtp-payloads-and-profiles.html
+share/gtk-doc/html/ortp/ortp-rtpsession-api.html
+share/gtk-doc/html/ortp/ortp-telephone-events---rfc2833-.html
+share/gtk-doc/html/ortp/ortpapi.html
+@dirrm share/gtk-doc/html/ortp
+@dirrm share/gtk-doc/html
+@dirrm include/ortp
