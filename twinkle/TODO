@@ -1,0 +1,43 @@
+* Use options.mk -> to choose kde or not kde.
+* Fix MASTER_SITES.
+
+* x11/qt3-libs must be fixed: Thanks to ghen:
+
+x11/qt3-libs :: send patch, to ghen
+Index: Makefile
+===================================================================
+RCS file: /pub/NetBSD-CVS/pkgsrc/x11/qt3-libs/Makefile,v
+retrieving revision 1.41
+diff -u -r1.41 Makefile
+--- Makefile    1 Nov 2005 20:18:36 -0000       1.41
++++ Makefile    16 Dec 2005 13:43:33 -0000
+ -24,6 +24,8 @@
+ 
+ BUILDLINK_PASSTHRU_DIRS+= ${QTPREFIX}
+ 
++PKGCONFIG_OVERRIDE=    lib/qt-mt.pc
++
+ do-install:
+        ${INSTALL_DATA_DIR} ${QTPREFIX}
+        ${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
+ -38,6 +40,7 @@
+        ${INSTALL_LIB_DIR} ${QTPREFIX}/plugins/imageformats
+        ${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqjpeg.la ${QTPREFIX}/plugins/imageformats/
+        ${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqmng.la ${QTPREFIX}/plugins/imageformats/
++       ${INSTALL_DATA} ${WRKSRC}/lib/qt-mt.pc ${PREFIX}/lib/pkgconfig/
+ 
+ .if ${OPSYS} == "Darwin" && empty(MACHINE_PLATFORM:MDarwin-[567].*)
+ SUBST_CLASSES+=                socklen
+Index: PLIST
+===================================================================
+RCS file: /pub/NetBSD-CVS/pkgsrc/x11/qt3-libs/PLIST,v
+retrieving revision 1.15
+diff -u -r1.15 PLIST
+--- PLIST       22 Sep 2004 08:10:07 -0000      1.15
++++ PLIST       16 Dec 2005 13:43:33 -0000
+ -1,4 +1,5 @@
+ @comment $NetBSD: TODO,v 1.1.1.1 2005/12/16 18:48:17 poppnk Exp $
++lib/pkgconfig/qt-mt.pc
+ qt3/bin/moc
+ qt3/include/jri.h
+ qt3/include/jri_md.h
