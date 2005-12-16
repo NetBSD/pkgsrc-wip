@@ -1,0 +1,5 @@
+#/bin/sh
+#
+# $NetBSD: jave,v 1.1.1.1 2005/12/16 13:58:10 marttikuparinen Exp $
+#
+@PKG_JAVA_HOME@/bin/java -jar @PREFIX@/share/jave/jave5.jar

@@ -1,0 +1,92 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/16 13:58:10 marttikuparinen Exp $
+bin/jave
+share/jave/clipart/animals.jcf
+share/jave/clipart/chemistry.jcf
+share/jave/clipart/clouds.jcf
+share/jave/clipart/electronic.jcf
+share/jave/clipart/flags.jcf
+share/jave/clipart/glasses.jcf
+share/jave/clipart/hands.jcf
+share/jave/clipart/holiday.jcf
+share/jave/clipart/logos.jcf
+share/jave/clipart/misc.jcf
+share/jave/clipart/planes.jcf
+share/jave/clipart/plants.jcf
+share/jave/clipart/politic.jcf
+share/jave/clipart/shapes.jcf
+share/jave/clipart/signs.jcf
+share/jave/config/charsets.txt
+share/jave/config/convert.txt
+share/jave/config/convert_thick.txt
+share/jave/config/fonts.cfg
+share/jave/config/general.txt
+share/jave/config/gradients.txt
+share/jave/config/greyscaletables/_courier new.jgt
+share/jave/config/greyscaletables/andale mono.jgt
+share/jave/config/greyscaletables/courier german (daisywheel).jgt
+share/jave/config/greyscaletables/crystal.jgt
+share/jave/config/greyscaletables/elite german (daisywheel).jgt
+share/jave/config/greyscaletables/elronet monospace.jgt
+share/jave/config/greyscaletables/fixedsys.jgt
+share/jave/config/greyscaletables/hyperfont.jgt
+share/jave/config/greyscaletables/lucida console.jgt
+share/jave/config/greyscaletables/monaco.jgt
+share/jave/config/greyscaletables/monotype.jgt
+share/jave/config/greyscaletables/ms gothic.jgt
+share/jave/config/greyscaletables/netextmo.jgt
+share/jave/config/greyscaletables/ocr a.jgt
+share/jave/config/greyscaletables/ocr b.jgt
+share/jave/config/greyscaletables/pica german (daisywheel).jgt
+share/jave/config/greyscaletables/readme.txt
+share/jave/config/greyscaletables/terminal.jgt
+share/jave/config/greyscaletables/topaz new.jgt
+share/jave/config/greyscaletables/vt8x13.jgt
+share/jave/config/greyscaletables/web hebrew monospace.jgt
+share/jave/config/mix.txt
+share/jave/config/repair.txt
+share/jave/config/replace_illegal.txt
+share/jave/demos/jave_anim_hires.jmov
+share/jave/demos/tshilp.jmov
+share/jave/docs/faq.html
+share/jave/docs/figfont.txt
+share/jave/docs/figletexport/export_1a.gif
+share/jave/docs/figletexport/export_1b.gif
+share/jave/docs/figletexport/export_1c.gif
+share/jave/docs/figletexport/export_2a.gif
+share/jave/docs/figletexport/figletexport.html
+share/jave/docs/formula2/formula2.html
+share/jave/docs/history.txt
+share/jave/docs/image2ascii_commandline.html
+share/jave/docs/index.html
+share/jave/docs/license.txt
+share/jave/docs/paper.gif
+share/jave/docs/spelling.gif
+share/jave/docs/tutorial1/ellipse_generic.gif
+share/jave/docs/tutorial1/fill.gif
+share/jave/docs/tutorial1/fill_gradient.gif
+share/jave/docs/tutorial1/fill_options.gif
+share/jave/docs/tutorial1/mouse_char.gif
+share/jave/docs/tutorial1/move_sel_back.gif
+share/jave/docs/tutorial1/move_selection.gif
+share/jave/docs/tutorial1/selection.gif
+share/jave/docs/tutorial1/tutorial.html
+share/jave/docs/tutorial2/index.html
+share/jave/fonts/fonts_readme.txt
+share/jave/icon.bmp
+share/jave/icon.gif
+share/jave/icon.ico
+share/jave/jave5.jar
+share/jave/pattern/pattern.jcf
+share/jave/readme.txt
+@dirrm share/jave/clipart
+@dirrm share/jave/config/greyscaletables
+@dirrm share/jave/config
+@dirrm share/jave/demos
+@dirrm share/jave/docs/tutorial2
+@dirrm share/jave/docs/tutorial1
+@dirrm share/jave/docs/figletexport
+@dirrm share/jave/docs/formula2
+@dirrm share/jave/docs
+@dirrm share/jave/fonts
+@dirrm share/jave/pattern
+@dirrm share/jave
