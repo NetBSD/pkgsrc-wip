@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2005/12/17 18:47:41 lkundrak Exp $
+
+--- argp.h.orig	2005-12-17 19:47:47.000000000 +0100
++++ argp.h
+@@ -28,9 +28,11 @@
+ #include <errno.h>
+ 
+ #ifndef __THROW
+-# define __THROW
++#undef __THROW
+ #endif
+ 
++#define __THROW
++
+ #ifndef __const
+ # define __const const
+ #endif
