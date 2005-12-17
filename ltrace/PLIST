@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/17 05:51:55 jeremy-c-reed Exp $
+bin/ltrace
+man/man1/ltrace.1
+share/doc/ltrace/COPYING
+share/doc/ltrace/README
+share/doc/ltrace/TODO
+share/doc/ltrace/BUGS
+share/doc/ltrace/ChangeLog
+share/examples/ltrace/ltrace.conf
+@dirrm share/examples/ltrace
+@dirrm doc/ltrace
