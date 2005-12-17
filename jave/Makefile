@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2005/12/16 14:17:34 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/17 06:09:23 marttikuparinen Exp $
 
-DISTNAME=		jave5
-PKGNAME=		jave-5.0
+DISTNAME=		jave_6.0_M7
+PKGNAME=		jave-6.0m7
 CATEGORIES=		editors
-MASTER_SITES=		http://www.jave.de/download/ http://www.jave.de/figlet/
-DISTFILES=		jave5${EXTRACT_SUFX} figletfonts37${EXTRACT_SUFX}
+MASTER_SITES=		http://www.jave.de/developer/ http://www.jave.de/figlet/
+DISTFILES=		jave_6.0_M7${EXTRACT_SUFX} figletfonts37${EXTRACT_SUFX}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		martti@NetBSD.org
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.jave.de/
 COMMENT=		Java ASCII Versatile Editor
 
 USE_JAVA=		run
-PKG_JVMS_ACCEPTED=	blackdown-jdk13 kaffe sun-jdk13 sun-jdk14 sun-jdk15
+PKG_JVMS_ACCEPTED=	sun-jdk14 sun-jdk15
 
 WRKSRC=			${WRKDIR}
 
