@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:11 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/18 21:37:06 rillig Exp $
 
 DISTNAME=	vkeybd-0.1.17
 CATEGORIES=	audio
@@ -8,13 +8,14 @@ MAINTAINER=	oht@users.sourceforge.net
 HOMEPAGE=   	http://www.alsa-project.org/~iwai/
 COMMENT=	Virtual midi keyboard
 
-R?=		0
-RAWMIDI=	"\\\"/dev/rmidi${R}\\\""
+RAWMIDI=	/dev/rmidi0
 WRKSRC=         ${WRKDIR}/vkeybd
-VKB_TCLFILE =	"\\\"${PREFIX}/share/vkeybd/vkeybd.tcl\\\""
+VKB_TCLFILE =	${PREFIX}/share/vkeybd/vkeybd.tcl
 NO_CONFIGURE=   yes
-CFLAGS+= -Wall -O2 -DVKB_TCLFILE=${VKB_TCLFILE} \
- 	-DVKB_USE_MIDI -DMIDI_DEV=${RAWMIDI}
+CFLAGS+=	-Wall -O2
+CFLAGS+=	-DVKB_TCLFILE=\"${VKB_TCLFILE:Q}\"
+CFLAGS+=	-DVKB_USE_MIDI
+CFLAGS+=	-DMIDI_DEV=\"${RAWMIDI:Q}\"
 
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
