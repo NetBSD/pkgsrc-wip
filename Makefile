@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2095 2005/12/16 23:13:08 zul_ Exp $
+# $Id: Makefile,v 1.2096 2005/12/18 13:57:04 hugor Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -132,6 +132,7 @@ SUBDIR+=	cjk-latex-wadalab
 SUBDIR+=	clamassassin
 SUBDIR+=	clustalx
 SUBDIR+=	com_err
+SUBDIR+=	comix
 SUBDIR+=	common-mml
 SUBDIR+=	commoncpp2
 SUBDIR+=	compare
