@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/18 13:54:18 hugor Exp $
+bin/comix
+share/applications/comix.desktop
+man/man1/comix.1
+share/pixmaps/comix.png
+@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/pixmaps 2>/dev/null || ${TRUE}

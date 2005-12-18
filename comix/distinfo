@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/12/18 13:54:18 hugor Exp $
+
+SHA1 (comix-2.2.1.tar.gz) = 9685b4217bfb90c087f335ec781a02c5d14c2c53
+RMD160 (comix-2.2.1.tar.gz) = de8aa473ea564eedf7be33e1b46881ea3f233034
+Size (comix-2.2.1.tar.gz) = 45511 bytes
+SHA1 (patch-aa) = 5c42958365a4123a11da71171bf72efd3f7a412e
