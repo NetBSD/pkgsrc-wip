@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:30:58 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/18 21:56:15 rillig Exp $
 
 DISTNAME=	lletters-0.1.9
 CATEGORIES=	games
@@ -13,7 +13,9 @@ COMMENT=	Linux Letters and Numbers childrens game
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
-CPPFLAGS+=		-DDEVOSSAUDIO=\"\\\"${DEVOSSAUDIO}\\\"\"
+# Note: although pkglint warns about the following line, this exact form
+# is required for autoconf2.12.
+CPPFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 
 pre-configure:
 	${MV} ${WRKDIR}/sounds/* ${WRKSRC}/sounds/
