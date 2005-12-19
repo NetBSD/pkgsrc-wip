@@ -1,7 +1,7 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.19 2005/05/23 09:38:33 rillig Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.20 2005/12/19 08:13:30 rillig Exp $
 ###########################################################################
 #
-# $Id: linuxbin.pkg.mk,v 1.19 2005/05/23 09:38:33 rillig Exp $
+# $Id: linuxbin.pkg.mk,v 1.20 2005/12/19 08:13:30 rillig Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 #
@@ -19,12 +19,12 @@
 # (C) 2003, 2004 Michal Pasternak <dotz@irc.pl>
 #
 
-.ifndef LINUXBIN_MK
+.if !defined(LINUXBIN_MK)
 LINUXBIN_MK=		# defined
 
 # look below for explanation on this:
-.ifdef LINUX_DOWNLOAD
-INTERACTIVE_STAGE=	fetch
+.if defined(LINUX_DOWNLOAD)
+INTERACTIVE_STAGE+=	fetch
 .endif
 
 .include "../../mk/bsd.prefs.mk"
@@ -137,11 +137,11 @@ LINUX_BINPKG_FILES?=    # empty
 # linux_base packages (rar3 for Linux?)
 #
 
-.ifndef LINUX_BASE_NODEPS
+.if !defined(LINUX_BASE_NODEPS)
 DEPENDS+=${LINUX_BASE_PREFIX}_compat>=${LINUX_BASE_VERSION.${LINUX_BASE_REQUIRED}}:../../${LINUX_PKGSRCDIR.${LINUX_BASE_REQUIRED}}/${LINUX_BASE_PREFIX}_compat
 .endif
 
-.if ${LINUX_USE_X11} == "yes" || ${LINUX_USE_X11} == "YES"
+.if !empty(LINUX_USE_X11:M[Yy][Ee][Ss])
 DEPENDS+=${LINUX_BASE_PREFIX}_x11>=${LINUX_BASE_VERSION.${LINUX_BASE_REQUIRED}}:../../${LINUX_PKGSRCDIR.${LINUX_BASE_REQUIRED}}/${LINUX_BASE_PREFIX}_x11
 .endif
 
@@ -182,10 +182,10 @@ EMULOPTDIR?=		${PREFIX}/${EMULOPTSUBDIR}
 #
 # little messy, but it makes porting packages easier:
 
-PLIST_SUBST+=		EMULDIR=${EMULDIR} EMULSUBDIR=${EMULSUBDIR} \
-			EMULOPTDIR=${EMULOPTDIR} EMULOPTSUBDIR=${EMULOPTSUBDIR}
-MESSAGE_SUBST+=		EMULDIR=${EMULDIR} EMULSUBDIR=${EMULSUBDIR} \
-			EMULOPTDIR=${EMULOPTDIR} EMULOPTSUBDIR=${EMULOPTSUBDIR}
+PLIST_SUBST+=		EMULDIR=${EMULDIR:Q} EMULSUBDIR=${EMULSUBDIR:Q} \
+			EMULOPTDIR=${EMULOPTDIR:Q} EMULOPTSUBDIR=${EMULOPTSUBDIR:Q}
+MESSAGE_SUBST+=		EMULDIR=${EMULDIR:Q} EMULSUBDIR=${EMULSUBDIR:Q} \
+			EMULOPTDIR=${EMULOPTDIR:Q} EMULOPTSUBDIR=${EMULOPTSUBDIR:Q}
 
 ###########################################################################
 #
@@ -205,22 +205,24 @@ PLIST_SRC?=		${WRKDIR}/PLIST_DYNAMIC
 RPM2PKG?=		${PREFIX}/sbin/rpm2pkg
 BUILD_DEPENDS+=		rpm2pkg>=1.3:../../pkgtools/rpm2pkg
 RPM2PKGARGS=		-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
-.for TEMP in ${RPMIGNOREPATH}
-RPM2PKGARGS+=		-i ${TEMP}
+.for temp in ${RPMIGNOREPATH}
+RPM2PKGARGS+=		-i ${temp:Q}
 .endfor
-.for TEMP in ${LINUX_BINPKG_FILES}
-RPM2PKGARGS+=		${LINUX_BINPKG_PATH}/${TEMP}
+.for temp in ${LINUX_BINPKG_FILES}
+RPM2PKGARGS+=		${LINUX_BINPKG_PATH:Q}/${temp:Q}
 .endfor
 .if !target(do-install)
 do-install:
-	@if [ -f ${PKGDIR}/PLIST ]; then \
+	${_PKG_SILENT}${_PKG_DEBUG} set -e; \
+	if [ -f ${PKGDIR}/PLIST ]; then \
 	  ${CP} ${PKGDIR}/PLIST ${PLIST_SRC}; \
 	else \
 	  ${RM} -f ${PLIST_SRC}; \
 	  ${CP} ${PKGSRCDIR}/emulators/suse_linux/PLIST_dynamic ${PLIST_SRC} ; \
 	fi
 	${RPM2PKG} ${RPM2PKGARGS}
-	@if ${GREP} -q 'lib.*\.so' ${PLIST_SRC}; then \
+	${_PKG_SILENT}${_PKG_DEBUG} set -e; \
+	if ${GREP} -q 'lib.*\.so' ${PLIST_SRC}; then \
 	  ${ECHO_MSG} "===> [Automatic Linux shared object handling]"; \
 	  ${EMULDIR}/sbin/ldconfig -r ${EMULDIR} || ${TRUE}; \
 	  ${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" >> ${PLIST_SRC}; \
@@ -267,7 +269,7 @@ do-install: warn-on-freebsd
 .endif
 .endif
 .else
-.error "Please add support for this kind of package!"
+PKG_FAIL_REASON+=	"[linuxbin.pkg.mk] Please add support for this kind of package!"
 .endif
 
 ###########################################################################
@@ -277,7 +279,7 @@ do-install: warn-on-freebsd
 # in your Makefile and you're off with that step.
 #
 
-.ifdef LINUX_DOWNLOAD
+.if defined(LINUX_DOWNLOAD)
 _FETCH_MESSAGE?= \
 	${ECHO} "======================================================================"; \
 	${ECHO} ; \
