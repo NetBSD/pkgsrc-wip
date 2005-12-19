@@ -1,4 +1,4 @@
-# $NetBSD: cvs-package.mk,v 1.6 2005/12/19 07:56:14 rillig Exp $
+# $NetBSD: cvs-package.mk,v 1.7 2005/12/19 07:58:30 rillig Exp $
 
 # Written by:
 #     Roland Illig <roland.illig@gmx.de>, 2004.
@@ -48,9 +48,9 @@ _CVS_FLAGS=		-Q
 _CVS_CHECKOUT_FLAGS=	-P -d ${DISTNAME:Q} -r ${CVS_TAG:Q}
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
 .if !defined(CVS_REPOSITORY)
-PKG_FAIL_REASON+=	"[cvs-package.mk] No CVS repository specified."
+PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_REPOSITORY must be set."
 .elif !defined(CVS_MODULE)
-PKG_FAIL_REASON+=	"[cvs-package.mk] No CVS module specified."
+PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_MODULE must be set."
 .else
 .endif
 
