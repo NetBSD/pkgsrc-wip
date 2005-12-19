@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2005/12/13 12:16:12 ghen Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/19 13:32:01 ghen Exp $
 
 JDK_VERSION=    	1.4.2
-JDK_PATCHSET_VERSION=   7
+JDK_PATCHSET_VERSION=   8
 SUN_LINUX_JDK_VERSION=  1.4.2
 
 DISTNAME=		j2sdk-1_4_2-src-scsl
@@ -33,7 +33,7 @@ EXTRACT_CMD_OPTS.zip=	-q
 WRKSRC=			${WRKDIR}
 PLIST_SRC=      	PLIST.common
 
-ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386 DragonFly-*-i386
 
 BUILD_TARGET=		all # added to below
 BUILD_DIRS=		${WRKSRC}/control/make
@@ -54,14 +54,14 @@ JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
 #BUILD_DEPENDS+=		jdk14>=1
 #MAKE_ENV+=		ALT_BOOTDIR=${JVM_HOME}
 #.else
-#BUILD_DEPENDS+=		sun-jdk14>=1:../../lang/sun-jdk14
-#MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/sun-1.4
-#.endif
 BUILD_DEPENDS+=		sun-jdk14>=1:../../lang/sun-jdk14
 MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/sun-1.4
+#.endif
 
-.if !exists(/emul/linux/proc/curproc/cmdline)
-PKG_FAIL_REASON+=	"Please mount /emul/linux/proc (fstype procfs, options linux)."
+.if ${OPSYS} == "NetBSD" && !exists(/emul/linux/proc/curproc/cmdline)
+PKG_FAIL_REASON=	"Please mount /emul/linux/proc (fstype procfs, options linux)."
+.elif ${OPSYS} == "DragonFly" && !exists(/compat/linux/proc/cpuinfo)
+PKG_FAIL_REASON=	"Please mount /compat/linux/proc (fstype linprocfs)."
 .endif
 
 MOTIF_TYPE=		openmotif
@@ -141,6 +141,13 @@ SUBST_SED.paths+=	-e 's,%%JVM_HOME%%,${JVM_HOME},g'
 
 BUILDLINK_PASSTHRU_DIRS+=	${JAVA_HOME}
 
+# Needed to get dynamically linked programs to work
+.if !defined(LD_LIBRARY_PATH) || empty(LD_LIBRARY_PATH)
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/control/build/bsd-i586/lib/i386:${WRKSRC}/control/build/bsd-i586/lib/i386/server
+.else
+MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${WRKSRC}/control/build/bsd-i586/lib/i386:${WRKSRC}/control/build/bsd-i586/lib/i386/server
+.endif
+
 .include "options.mk"
 
 PLIST_SRC+=		PLIST.common_end
@@ -169,5 +176,7 @@ do-install:
 #		${JAVA_HOME}/jre/javaws/cacerts
 
 .include "../../mk/java-env.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,3 +1,1 @@
-- HACK: usage of -Wl,-rpath $(LIBDIR)/$(LIBARCH) (patch-ag).
-This way a reference to ${WRKDIR} is stored in the resulting
-executables/libs.
+- Generate wrappers to avoid directly setting LD_LIBRARY_PATH.

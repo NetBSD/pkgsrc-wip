@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2005/08/09 14:59:12 ghen Exp $
+$NetBSD: patch-ad,v 1.5 2005/12/19 13:32:01 ghen Exp $
 
---- deploy/make/plugin/ns6/Makefile.orig	2005-08-01 15:57:58.000000000 +0200
-+++ deploy/make/plugin/ns6/Makefile	2005-08-01 16:00:46.000000000 +0200
-@@ -49,10 +49,10 @@
+--- deploy/make/plugin/ns6/Makefile.orig	2005-11-03 13:33:59.000000000 +0100
++++ deploy/make/plugin/ns6/Makefile
+@@ -49,13 +49,13 @@ endif
  ifeq ($(TRUE_PLATFORM), FreeBSD)
  # XXXBSD: is there any differences between nspr for ns610 and ns4
  # XXXBSD: direct /usr/local/include/nspr path is used!!!
@@ -10,6 +10,10 @@ $NetBSD: patch-ad,v 1.4 2005/08/09 14:59:12 ghen Exp $
 +EXTRA_CPPFLAGS += -I%%LOCALBASE%%/include/nspr
  endif
  ifeq ($(TRUE_PLATFORM), NetBSD)
+-EXTRA_CPPFLAGS += -I/usr/pkg/include/mozilla/nspr
++EXTRA_CPPFLAGS += -I%%LOCALBASE%%/include/nspr
+ endif
+ ifeq ($(TRUE_PLATFORM), DragonFly)
 -EXTRA_CPPFLAGS += -I/usr/pkg/include/mozilla/nspr
 +EXTRA_CPPFLAGS += -I%%LOCALBASE%%/include/nspr
  endif
