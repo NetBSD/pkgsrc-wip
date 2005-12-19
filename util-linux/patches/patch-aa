@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2004/10/19 20:01:18 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.4 2005/12/19 19:13:10 jeremy-c-reed Exp $
 
---- MCONFIG.orig	2004-03-04 12:14:17.000000000 -0800
-+++ MCONFIG
-@@ -92,7 +92,7 @@ HAVE_RESET=yes
+--- MCONFIG.orig	2004-12-12 15:15:48.000000000 -0800
++++ MCONFIG	2005-12-19 10:06:28.521518024 -0800
+@@ -102,7 +102,7 @@
  # If HAVE_SLN is set to "yes", then sln won't be installed
  # (but the man page sln.8 will be installed anyway).
  # sln also comes with libc and glibc.
@@ -11,16 +11,7 @@ $NetBSD: patch-aa,v 1.3 2004/10/19 20:01:18 jeremy-c-reed Exp $
  
  # If HAVE_FDUTILS is set to "yes", then setfdprm won't be installed.
  HAVE_FDUTILS=no
-@@ -104,7 +104,7 @@ SILENT_PG=no
- # If configure decides that Native Language Support (NLS) is available,
- # it sets MAY_ENABLE_NLS in defines.h. If you don't want NLS, set
- # DISABLE_NLS to "yes".
--DISABLE_NLS=no
-+DISABLE_NLS=yes
- 
- # Different optimizations for different cpus.
- # gcc 3.0 likes options -mcpu=i486 instead of -m486
-@@ -150,23 +150,24 @@ LIBSLANG=-lslang
+@@ -168,23 +168,24 @@
  DEV_DIR=	/dev
  ETC_DIR=	/etc
  SBIN_DIR=	/sbin
@@ -54,7 +45,7 @@ $NetBSD: patch-aa,v 1.3 2004/10/19 20:01:18 jeremy-c-reed Exp $
  SBINDIR=	$(DESTDIR)$(SBIN_DIR)
  USRSBINDIR=	$(DESTDIR)$(USRSBIN_DIR)
  USRLIBDIR=      $(DESTDIR)$(USRLIB_DIR)
-@@ -216,6 +217,7 @@ CFLAGS := $(OPT) -I$(LIB) $(WARNFLAGS) \
+@@ -234,6 +235,7 @@
  			-DLOGDIR=\"$(LOG_DIR)\" \
  			-DVARPATH=\"$(VAR_PATH)\" \
  			-DLOCALEDIR=\"$(LOCALE_DIR)\" \
