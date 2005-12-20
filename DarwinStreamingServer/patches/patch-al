@@ -1,0 +1,466 @@
+--- Install.orig	2005-05-27 09:55:01.000000000 +0000
++++ Install	2005-12-19 13:06:08.000000000 +0000
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ # Install script for the Darwin Streaming Server
+ # source release
+@@ -16,6 +16,7 @@
+ 
+ if [ $USERID = 0 ]; then
+ 
++if false; then
+ 	echo Checking for and Killing currently running Darwin Streaming Server
+ 	if [ `uname` = "FreeBSD" ]; then
+ 		ps -ax | awk '/DarwinStreamingServer/ {print $1}' | xargs kill -9  
+@@ -32,100 +33,48 @@
+ 		ps -aef | awk '/streamingadminserver.pl/ {print $2}' | xargs -n 1 kill -9 
+ 	fi
+ 
+-## REMOVED OLD VERSION ##
+-
+-	echo Removing previous versions of Darwin Streaming Server
+-	if [ -f /usr/local/sbin/DarwinStreamingServer ]; then
+-		echo removing /usr/local/sbin/DarwinStreamingServer
+-		rm -f /usr/local/sbin/DarwinStreamingServer 
+-	fi
+-	
+-	if [ -f /usr/local/bin/PlaylistBroadcaster ]; then
+-		echo removing /usr/local/bin/PlaylistBroadcaster
+-		rm -f /usr/local/bin/PlaylistBroadcaster
+-	fi
+-	
+-	if [ -f /usr/local/bin/MP3Broadcaster ]; then
+-		echo removing /usr/local/bin/MP3Broadcaster
+-		rm -f /usr/local/bin/MP3Broadcaster
+-	fi
+-	
+-	if [ -f /usr/local/bin/qtpasswd ]; then
+-		echo removing /usr/local/bin/qtpasswd
+-		rm -f /usr/local/bin/qtpasswd
+-	fi
+-
+-	if [ -f /usr/local/sbin/streamingadminserver.pl ]; then
+-		echo removing /usr/local/sbin/streamingadminserver.pl
+-		rm -f /usr/local/sbin/streamingadminserver.pl
+-	fi
+-
+-	if [ -f /usr/local/bin/streamingadminserver.pl ]; then
+-		echo removing /usr/local/bin/streamingadminserver.pl
+-		rm -f /usr/local/bin/streamingadminserver.pl
+-	fi
+-
+-	if [ -f /usr/local/bin/SpamPro ]; then
+-		echo removing /usr/local/bin/SpamPro
+-		rm -f /usr/local/bin/SpamPro
+-	fi
+-
+-if [ -e StreamingLoadTool ]; then
+-	if [ -f /usr/local/bin/StreamingLoadTool ]; then
+-		echo removing /usr/local/bin/StreamingLoadTool
+-		rm -f /usr/local/bin/StreamingLoadTool
+-	fi
+-fi
+-	echo
+-	
+ ## BACKUP OLD CONFIG FILES ##
+ 	echo Backing up previous config files
+ 
+-	if [ -f /etc/streaming/streamingserver.xml ]; then
+-		echo backing up /etc/streaming/streamingserver.xml to /etc/streaming/streamingserver.xml.backup
+-		mv /etc/streaming/streamingserver.xml /etc/streaming/streamingserver.xml.backup
++	if [ -f ${PKG_SYSCONFDIR}/streaming/streamingserver.xml ]; then
++		echo backing up ${PKG_SYSCONFDIR}/streaming/streamingserver.xml to ${PKG_SYSCONFDIR}/streaming/streamingserver.xml.backup
++		mv ${PKG_SYSCONFDIR}/streaming/streamingserver.xml ${PKG_SYSCONFDIR}/streaming/streamingserver.xml.backup
+ 	fi
+ 
+-	if [ -f /etc/streaming/streamingadminserver.pem ]; then
+-		echo backing up /etc/streaming/streamingadminserver.pem to /etc/streaming/streamingadminserver.pem.backup
+-		mv /etc/streaming/streamingadminserver.pem /etc/streaming/streamingadminserver.pem.backup
++	if [ -f ${PKG_SYSCONFDIR}/streaming/streamingadminserver.pem ]; then
++		echo backing up ${PKG_SYSCONFDIR}/streaming/streamingadminserver.pem to ${PKG_SYSCONFDIR}/streaming/streamingadminserver.pem.backup
++		mv ${PKG_SYSCONFDIR}/streaming/streamingadminserver.pem ${PKG_SYSCONFDIR}/streaming/streamingadminserver.pem.backup
+ 	fi
+ 	
+-	if [ -f /etc/streaming/qtusers ]; then
+-		echo backing up /etc/streaming/qtusers to /etc/streaming/qtusers.backup
+-		mv /etc/streaming/qtusers /etc/streaming/qtusers.backup
++	if [ -f ${PKG_SYSCONFDIR}/streaming/qtusers ]; then
++		echo backing up ${PKG_SYSCONFDIR}/streaming/qtusers to ${PKG_SYSCONFDIR}/streaming/qtusers.backup
++		mv ${PKG_SYSCONFDIR}/streaming/qtusers ${PKG_SYSCONFDIR}/streaming/qtusers.backup
+ 	fi
+ 
+-	if [ -f /etc/streaming/qtgroups ]; then
+-		echo backing up /etc/streaming/qtgroups to /etc/streaming/qtgroups.backup
+-		mv /etc/streaming/qtgroups /etc/streaming/qtgroups.backup
++	if [ -f ${PKG_SYSCONFDIR}/streaming/qtgroups ]; then
++		echo backing up ${PKG_SYSCONFDIR}/streaming/qtgroups to ${PKG_SYSCONFDIR}/streaming/qtgroups.backup
++		mv ${PKG_SYSCONFDIR}/streaming/qtgroups ${PKG_SYSCONFDIR}/streaming/qtgroups.backup
+ 	fi
+ 	
+ if [ -e StreamingLoadTool ]; then
+-	if [ -f /etc/streaming/streamingloadtool.conf ]; then
+-		echo backing up /etc/streaming/streamingloadtool.conf to /etc/streaming/streamingloadtool.conf.backup
+-		mv /etc/streaming/streamingloadtool.conf /etc/streaming/streamingloadtool.conf.backup
++	if [ -f ${PKG_SYSCONFDIR}/streaming/streamingloadtool.conf ]; then
++		echo backing up ${PKG_SYSCONFDIR}/streaming/streamingloadtool.conf to ${PKG_SYSCONFDIR}/streaming/streamingloadtool.conf.backup
++		mv ${PKG_SYSCONFDIR}/streaming/streamingloadtool.conf ${PKG_SYSCONFDIR}/streaming/streamingloadtool.conf.backup
+ 	fi
+ fi
+-	if [ -f /etc/streaming/relayconfig.xml ]; then
+-		echo backing up /etc/streaming/relayconfig.xml to /etc/streaming/relayconfig.xml.backup
+-		mv /etc/streaming/relayconfig.xml /etc/streaming/relayconfig.xml.backup
++	if [ -f ${PKG_SYSCONFDIR}/streaming/relayconfig.xml ]; then
++		echo backing up ${PKG_SYSCONFDIR}/streaming/relayconfig.xml to ${PKG_SYSCONFDIR}/streaming/relayconfig.xml.backup
++		mv ${PKG_SYSCONFDIR}/streaming/relayconfig.xml ${PKG_SYSCONFDIR}/streaming/relayconfig.xml.backup
+ 	fi
+ 
+ 	echo
++fi
+ 
++if false; then
+ ## CHANGE PERL PATH IN streamingadminserver.pl AND parse_xml.cgi ##
+ 
+-# Look for perl in the default locations
+-if [ -x /usr/freeware/bin/perl ]; then
+-	perldef=/usr/freeware/bin/perl
+-elif [ -x /usr/local/bin/perl ]; then
+-	perldef=/usr/local/bin/perl
+-elif [ -x /usr/bin/perl ]; then
+-	perldef=/usr/bin/perl
+-else
+-	perldef=""
+-fi
++# Look for perl in the pkgsrc location
++perldef=${PREFIX}/bin/perl
+ 
+ # Test if it is really perl
+ $perldef -e 'print "foobar\n"' 2>/dev/null | grep foobar >/dev/null
+@@ -187,6 +136,7 @@
+ 	$perl perlpath.pl $perl streamingadminserver.pl AdminHtml/parse_xml.cgi 
+     echo ""
+ fi
++fi
+ 
+ # Add the unprivileged user qtss as the server's run user
+ 	echo "Creating unprivileged user to run the server = \"qtss\"."
+@@ -197,163 +147,185 @@
+     fi
+ 	
+ ## INSTALL NEW VERSION ##
+-    if [ ! -d /usr/local/sbin ]; then
+-            echo creating "/usr/local/sbin" directory
+-            mkdir -p /usr/local/sbin
++    if [ ! -d ${PREFIX}/sbin ]; then
++            echo creating "${PREFIX}/sbin" directory
++            mkdir -p ${PREFIX}/sbin
+     fi              
+-    if [ ! -d /usr/local/bin ]; then
+-            echo creating "/usr/local/bin" directory
+-            mkdir -p /usr/local/bin
++    if [ ! -d ${PREFIX}/bin ]; then
++            echo creating "${PREFIX}/bin" directory
++            mkdir -p ${PREFIX}/bin
+     fi              
+ 
+-	echo copying "DarwinStreamingServer" to "/usr/local/sbin/DarwinStreamingServer"
+-	cp -f DarwinStreamingServer /usr/local/sbin/
++	echo copying "DarwinStreamingServer" to "${PREFIX}/sbin/DarwinStreamingServer"
++	${BSD_INSTALL_PROGRAM} DarwinStreamingServer ${PREFIX}/sbin/
+ 	
+ 	
+-	echo copying "PlaylistBroadcaster" to "/usr/local/bin/PlaylistBroadcaster"
+-	cp -f PlaylistBroadcaster /usr/local/bin/
++	echo copying "PlaylistBroadcaster" to "${PREFIX}/bin/PlaylistBroadcaster"
++	${BSD_INSTALL_PROGRAM} PlaylistBroadcaster.tproj/PlaylistBroadcaster ${PREFIX}/bin/
+ 	
+-	echo copying "MP3Broadcaster" to "/usr/local/bin/MP3Broadcaster"
+-	cp -f MP3Broadcaster /usr/local/bin/
++	echo copying "MP3Broadcaster" to "${PREFIX}/bin/MP3Broadcaster"
++	${BSD_INSTALL_PROGRAM} MP3Broadcaster/MP3Broadcaster ${PREFIX}/bin/
+ 	
+-	echo copying "qtpasswd" to "/usr/local/bin/qtpasswd"
+-	cp -f qtpasswd /usr/local/bin/
++	echo copying "qtpasswd" to "${PREFIX}/bin/qtpasswd"
++	${BSD_INSTALL_PROGRAM} qtpasswd.tproj/qtpasswd ${PREFIX}/bin/
+ 
+ 	# For now, do not copy modules as there are no supported dynamic modules
+-	# echo copying modules to "/usr/local/sbin/StreamingServerModules"
+-	if [ ! -d /usr/local/sbin/StreamingServerModules ]; then
+-		echo creating "/usr/local/sbin/StreamingServerModules" directory
+-		mkdir /usr/local/sbin/StreamingServerModules
++	echo copying modules to "${PREFIX}/sbin/StreamingServerModules"
++	if [ ! -d ${PREFIX}/sbin/StreamingServerModules ]; then
++		echo creating "${PREFIX}/sbin/StreamingServerModules" directory
++		mkdir ${PREFIX}/sbin/StreamingServerModules
+ 	fi
+-	cp -f StreamingServerModules/* /usr/local/sbin/StreamingServerModules/
++	${BSD_INSTALL_PROGRAM} StreamingServerModules/* ${PREFIX}/sbin/StreamingServerModules/
+ 
+-	if [ -e /usr/local/sbin/StreamingServerModules/QTSSHomeDirectoryModule ]; then
+-		echo copying "createuserstreamingdir" to "/usr/local/bin/createuserstreamingdir"
+-		cp -f createuserstreamingdir $INSTALLROOT/usr/local/bin/
++	if [ -e ${PREFIX}/sbin/StreamingServerModules/QTSSHomeDirectoryModule ]; then
++		echo copying "createuserstreamingdir" to "${PREFIX}/bin/createuserstreamingdir"
++		${BSD_INSTALL_PROGRAM} createuserstreamingdir $INSTALLROOT${PREFIX}/bin/
+ 	fi
+ 	
+-	if [ ! -d /etc/streaming ]; then
+-		echo creating "/etc/streaming" directory
+-		mkdir -p /etc/streaming
++	if [ ! -d ${PKG_SYSCONFDIR}/streaming ]; then
++		echo creating "${PKG_SYSCONFDIR}/streaming" directory
++		mkdir -p ${PKG_SYSCONFDIR}/streaming
+ 	fi
+ 	
+-	if [ ! -e /etc/streaming/streamingserver.xml ]; then
+-		/usr/local/sbin/DarwinStreamingServer -x
+-	fi
+-	
+-	chmod 600 /etc/streaming/streamingserver.xml
+-	chown qtss /etc/streaming/streamingserver.xml
+-	
+-	echo;echo copying "relayconfig.xml-Sample" to "/etc/streaming/relayconfig.xml-Sample"
+-	cp -f relayconfig.xml-Sample /etc/streaming/relayconfig.xml-Sample
+-	chmod 600 /etc/streaming/relayconfig.xml-Sample
+-	if [ -e /etc/streaming/relayconfig.xml ]; then
+-		chown qtss /etc/streaming/relayconfig.xml
++	if [ ! -e ${PKG_SYSCONFDIR}/streaming/streamingserver.xml ]; then
++	    echo copying "streamingserver.xml-POSIX" to "${PKG_SYSCONFDIR}/streaming/streamingserver.xml"
++	    ${BSD_INSTALL_DATA} streamingserver.xml-POSIX ${PKG_SYSCONFDIR}/streaming/streamingserver.xml
++if false; then
++		${PREFIX}/sbin/DarwinStreamingServer -x
++fi
+ 	fi
+ 	
+-	echo;echo copying "qtusers" to "/etc/streaming/qtusers"
+-	cp -f qtusers /etc/streaming/qtusers
+-	chmod 600 /etc/streaming/qtusers
+-	chown qtss /etc/streaming/qtusers
++	chmod 600 ${PKG_SYSCONFDIR}/streaming/streamingserver.xml
++	chown qtss ${PKG_SYSCONFDIR}/streaming/streamingserver.xml
+ 
+-	echo;echo copying "qtgroups" to "/etc/streaming/qtgroups"
+-	cp -f qtgroups /etc/streaming/qtgroups
+-	chmod 600 /etc/streaming/qtgroups
+-	chown qtss /etc/streaming/qtgroups
+-
+-	#echo;echo copying "streamingadminserver.pem" to "/etc/streaming/streamingadminserver.pem"
+-	#cp -f streamingadminserver.pem /etc/streaming/streamingadminserver.pem
+-	#chmod 400 /etc/streaming/streamingadminserver.pem
++	echo;echo copying "relayconfig.xml-Sample" to "${PKG_SYSCONFDIR}/streaming/relayconfig.xml-Sample"
++	${BSD_INSTALL_DATA} relayconfig.xml-Sample ${PKG_SYSCONFDIR}/streaming/relayconfig.xml-Sample
++	chmod 600 ${PKG_SYSCONFDIR}/streaming/relayconfig.xml-Sample
++	if [ ! -e ${PKG_SYSCONFDIR}/streaming/relayconfig.xml ]; then
++	    echo copying "relayconfig.xml-Sample" to "${PKG_SYSCONFDIR}/streaming/relayconfig.xml"
++	    ${BSD_INSTALL_DATA} relayconfig.xml-Sample ${PKG_SYSCONFDIR}/streaming/relayconfig.xml
++	    chown qtss ${PKG_SYSCONFDIR}/streaming/relayconfig.xml
++	    chmod 600 ${PKG_SYSCONFDIR}/streaming/relayconfig.xml
++	fi
++	
++	echo;echo copying "streamingadminserver.conf" to "${PKG_SYSCONFDIR}/streaming/streamingadminserver.conf-dist"
++	${BSD_INSTALL_DATA} WebAdmin/streamingadminserver.conf ${PKG_SYSCONFDIR}/streaming/streamingadminserver.conf-dist
++	chmod 600 ${PKG_SYSCONFDIR}/streaming/streamingadminserver.conf-dist
++	if [ ! -e ${PKG_SYSCONFDIR}/streaming/streamingadminserver.conf ]; then
++	    echo copying streamingadminserver.conf-dist to "${PKG_SYSCONFDIR}/streaming/streamingadminserver.conf"
++	    ${BSD_INSTALL_DATA} WebAdmin/streamingadminserver.conf ${PKG_SYSCONFDIR}/streaming/streamingadminserver.conf
++	    chown qtss ${PKG_SYSCONFDIR}/streaming/streamingadminserver.conf
++	    chmod 600 ${PKG_SYSCONFDIR}/streaming/streamingadminserver.conf
++	fi
++
++	echo;echo copying "qtusers" to "${PKG_SYSCONFDIR}/streaming/qtusers-dist"
++	${BSD_INSTALL_DATA} qtusers ${PKG_SYSCONFDIR}/streaming/qtusers-dist
++	chmod 600 ${PKG_SYSCONFDIR}/streaming/qtusers-dist
++	chown qtss ${PKG_SYSCONFDIR}/streaming/qtusers-dist
++
++	echo;echo copying "qtgroups" to "${PKG_SYSCONFDIR}/streaming/qtgroups-dist"
++	${BSD_INSTALL_DATA} qtgroups ${PKG_SYSCONFDIR}/streaming/qtgroups-dist
++	chmod 600 ${PKG_SYSCONFDIR}/streaming/qtgroups-dist
++	chown qtss ${PKG_SYSCONFDIR}/streaming/qtgroups-dist
++
++	#echo;echo copying "streamingadminserver.pem" to "${PKG_SYSCONFDIR}/streaming/streamingadminserver.pem"
++	#${BSD_INSTALL_DATA} streamingadminserver.pem ${PKG_SYSCONFDIR}/streaming/streamingadminserver.pem
++	#chmod 400 ${PKG_SYSCONFDIR}/streaming/streamingadminserver.pem
+ 
+ 	if [ ! -d /var/streaming ]; then
+-		echo creating "/var/streaming" directory
+-		mkdir -p /var/streaming
++		echo creating "${PREFIX}/share/doc/streaming/" directory
++		mkdir -p ${PREFIX}/share/doc/streaming/
+ 	fi
+ 	
+-	echo copying "readme.txt" to "/var/streaming/readme.txt"
+-	cp -f readme.txt /var/streaming/readme.txt
++	echo copying "readme.txt" to "${PREFIX}/share/doc/streaming/readme.txt"
++	${BSD_INSTALL_DATA} Documentation/readme.txt ${PREFIX}/share/doc/streaming/readme.txt
+ 	
+-	echo copying "3rdPartyAcknowledgements.rtf" to "/var/streaming/3rdPartyAcknowledgements.rtf"
+-	cp -f 3rdPartyAcknowledgements.rtf /var/streaming/3rdPartyAcknowledgements.rtf
++	echo copying "3rdPartyAcknowledgements.rtf" to "${PREFIX}/share/doc/streaming/3rdPartyAcknowledgements.rtf"
++	${BSD_INSTALL_DATA} Documentation/3rdPartyAcknowledgements.rtf ${PREFIX}/share/doc/streaming/3rdPartyAcknowledgements.rtf
+ 	
+-	if [ ! -d /var/streaming/logs ]; then
+-		echo creating "/var/streaming/logs" directory
+-		mkdir -p /var/streaming/logs
++	if [ ! -d /var/log/streaming ]; then
++		echo creating "/var/log/streaming" directory
++		mkdir -p /var/log/streaming
+ 	fi
+ 	
+-	if [ ! -d /usr/local/movies ]; then
+-		echo creating "/usr/local/movies" directory
+-		mkdir -p /usr/local/movies
++	if [ ! -d ${PREFIX}/share/streaming/movies ]; then
++		echo creating "${PREFIX}/share/streaming/movies" directory
++		mkdir -p ${PREFIX}/share/streaming/movies
+ 	fi
+ 	
+-	if [ ! -d /var/streaming/playlists ]; then
+-		echo creating "/var/streaming/playlists" directory
+-		mkdir -p /var/streaming/playlists
++	if [ ! -d ${PREFIX}/share/streaming/playlists ]; then
++		echo creating "${PREFIX}/share/streaming/playlists" directory
++		mkdir -p ${PREFIX}/share/streaming/playlists
+ 	fi
+-	chmod 770 /var/streaming/playlists
+-	chmod 775 /usr/local/movies
++	chmod 770 ${PREFIX}/share/streaming/playlists
++	chmod 775 ${PREFIX}/share/streaming/movies
+ 	
+-    echo copying "sample_100kbit.mov" into "/usr/local/movies/sample_100kbit.mov"
+-    cp -f sample_100kbit.mov /usr/local/movies/
++    echo copying "sample_100kbit.mov" into "${PREFIX}/share/streaming/movies/sample_100kbit.mov"
++    ${BSD_INSTALL_DATA} sample_100kbit.mov ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_300kbit.mov" into "/usr/local/movies/sample_300kbit.mov"
+-    cp -f sample_300kbit.mov /usr/local/movies/
++    echo copying "sample_300kbit.mov" into "${PREFIX}/share/streaming/movies/sample_300kbit.mov"
++    ${BSD_INSTALL_DATA} sample_300kbit.mov ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_100kbit.mp4" into "/usr/local/movies/sample_100kbit.mp4"
+-    cp -f sample_100kbit.mp4 /usr/local/movies/
++    echo copying "sample_100kbit.mp4" into "${PREFIX}/share/streaming/movies/sample_100kbit.mp4"
++    ${BSD_INSTALL_DATA} sample_100kbit.mp4 ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_300kbit.mp4" into "/usr/local/movies/sample_300kbit.mp4"
+-    cp -f sample_300kbit.mp4 /usr/local/movies/
++    echo copying "sample_300kbit.mp4" into "${PREFIX}/share/streaming/movies/sample_300kbit.mp4"
++    ${BSD_INSTALL_DATA} sample_300kbit.mp4 ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample.mp3" into "/usr/local/movies/sample.mp3"
+-    cp -f sample.mp3 /usr/local/movies/
++    echo copying "sample.mp3" into "${PREFIX}/share/streaming/movies/sample.mp3"
++    ${BSD_INSTALL_DATA} sample.mp3 ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_50kbit.3gp" into "/usr/local/movies/sample_50kbit.3gp"
+-    cp -f sample_50kbit.3gp /usr/local/movies/
++    echo copying "sample_50kbit.3gp" into "${PREFIX}/share/streaming/movies/sample_50kbit.3gp"
++    ${BSD_INSTALL_DATA} sample_50kbit.3gp ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_h264_100kbit.mp4" into "/usr/local/movies/sample_h264_100kbit.mp4"
+-    cp -f sample_h264_100kbit.mp4 /usr/local/movies/
++    echo copying "sample_h264_100kbit.mp4" into "${PREFIX}/share/streaming/movies/sample_h264_100kbit.mp4"
++    ${BSD_INSTALL_DATA} sample_h264_100kbit.mp4 ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_h264_300kbit.mp4" into "/usr/local/movies/sample_h264_300kbit.mp4"
+-    cp -f sample_h264_300kbit.mp4 /usr/local/movies/
++    echo copying "sample_h264_300kbit.mp4" into "${PREFIX}/share/streaming/movies/sample_h264_300kbit.mp4"
++    ${BSD_INSTALL_DATA} sample_h264_300kbit.mp4 ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_h264_1mbit.mp4" into "/usr/local/movies/sample_h264_1mbit.mp4"
+-    cp -f sample_h264_1mbit.mp4 /usr/local/movies/
++    echo copying "sample_h264_1mbit.mp4" into "${PREFIX}/share/streaming/movies/sample_h264_1mbit.mp4"
++    ${BSD_INSTALL_DATA} sample_h264_1mbit.mp4 ${PREFIX}/share/streaming/movies/
+ 
++if false; then
+ if [ -e StreamingLoadTool ]; then
+-	echo copying "StreamingLoadTool" to "/usr/local/bin/StreamingLoadTool"
+-	cp -f StreamingLoadTool /usr/local/bin/
++	echo copying "StreamingLoadTool" to "${PREFIX}/bin/StreamingLoadTool"
++	${BSD_INSTALL_PROGRAM} StreamingLoadTool ${PREFIX}/bin/
+ 	
+-	echo copying "streamingloadtool.conf" to "/etc/streaming/streamingloadtool.conf"
+-	cp -f streamingloadtool.conf /etc/streaming/
++	echo copying "streamingloadtool.conf" to "${PKG_SYSCONFDIR}/streaming/streamingloadtool.conf"
++	${BSD_INSTALL_DATA} streamingloadtool.conf ${PKG_SYSCONFDIR}/streaming/
++fi
+ fi
+ 	
+ 	#WebAdmin install
+-	echo copying "streamingadminserver.pl" into "/usr/local/sbin/streamingadminserver.pl"
+-	cp -f streamingadminserver.pl /usr/local/sbin/streamingadminserver.pl
++	echo copying "streamingadminserver.pl" into "${PREFIX}/sbin/streamingadminserver.pl"
++	${BSD_INSTALL_SCRIPT} WebAdmin/src/streamingadminserver.pl ${PREFIX}/sbin/streamingadminserver.pl
+ 	
+-	if [ -d /var/streaming/AdminHtml/ ]; then
+-	    echo removing old version of html from "/var/streaming/AdminHtml"
+-	    rm -r -f /var/streaming/AdminHtml/*
++	if [ -d ${PREFIX}/share/streaming/AdminHtml/ ]; then
++	    echo removing old version of html from "${PREFIX}/share/streaming/AdminHtml"
++	    rm -r -f ${PREFIX}/share/streaming/AdminHtml/*
+ 	fi    
+ 	
+-	if [ ! -d /var/streaming/ ]; then
+-		echo creating "/var/streaming/AdminHtml" directory
+-		mkdir -p /var/streaming/AdminHtml
++	if [ ! -d ${PREFIX}/share/streaming/AdminHtml ]; then
++		echo creating "${PREFIX}/share/streaming/AdminHtml" directory
++		mkdir -p ${PREFIX}/share/streaming/AdminHtml
+ 	fi
+-	echo copying Admin HTML to "/var/streaming/AdminHtml" directory
+-	cp -f -r AdminHtml /var/streaming/
++	echo copying Admin HTML to "${PREFIX}/share/streaming/AdminHtml" directory
++	cd WebAdmin/WebAdminHtml
++	tar -cf - * | tar -xf - -C ${PREFIX}/share/streaming/AdminHtml
++	cd ../..
+ 	
+ 
+-	chown -R -f qtss /var/streaming/
+-	chown -R -f qtss /etc/streaming/
+-	chown -R -f qtss /usr/local/movies/
++	chown -R -f qtss ${PREFIX}/share/streaming
++	chown -R -f qtss ${PKG_SYSCONFDIR}/streaming/
++	chown -R -f qtss ${PREFIX}/share/streaming/movies/
+ 
+-	echo;echo "Launching streamingadminserver.pl"
+-	/usr/local/sbin/streamingadminserver.pl
++#	echo;echo "Launching streamingadminserver.pl"
++#	${PREFIX}/sbin/streamingadminserver.pl
+ 	
+ 	echo;echo Installation Complete
+ 
++if false; then
+ 	# Setup for DSS
+ 	# Prompts for a username and password
+ 	# that can be used to administer the server
+@@ -402,20 +374,21 @@
+ 	done
+ 	echo ""
+ 	
+-	# Add the new admin username to /etc/streaming/qtusers
+-	/usr/local/bin/qtpasswd -p $password $username
++	# Add the new admin username to ${PKG_SYSCONFDIR}/streaming/qtusers
++	${PREFIX}/bin/qtpasswd -p $password $username
+ 	
+-	# Add the new admin username to /etc/streaming/qtgroups
++	# Add the new admin username to ${PKG_SYSCONFDIR}/streaming/qtgroups
+ 	# and delete the default admin username
+-	echo admin: $username > /etc/streaming/qtgroups.tmp
+-	mv /etc/streaming/qtgroups.tmp /etc/streaming/qtgroups
++	echo admin: $username > ${PKG_SYSCONFDIR}/streaming/qtgroups.tmp
++	mv ${PKG_SYSCONFDIR}/streaming/qtgroups.tmp ${PKG_SYSCONFDIR}/streaming/qtgroups
+ 	
+-	# Remove the default admin username to /etc/streaming/qtusers
+-	/usr/local/bin/qtpasswd -F -d 'aGFja21l' > /dev/null
++	# Remove the default admin username to ${PKG_SYSCONFDIR}/streaming/qtusers
++	${PREFIX}/bin/qtpasswd -F -d 'aGFja21l' > /dev/null
+ 		
+-	chown -R -f qtss /etc/streaming/
++	chown -R -f qtss ${PKG_SYSCONFDIR}/streaming/
+ 	
+ 	echo Setup Complete!
++fi
+ 	
+ else
+ 

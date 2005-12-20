@@ -1,0 +1,215 @@
+$NetBSD: patch-am,v 1.1.1.1 2005/12/20 19:03:10 danieleggert Exp $
+--- DSS_MakeRoot.orig	2005-05-27 11:54:45.000000000 +0200
++++ DSS_MakeRoot	2005-12-17 22:40:35.000000000 +0100
+@@ -34,95 +34,95 @@
+ if [ $FLATTEN != 1 ]; then
+ 	# Install each file into it's appropriate location relative to "$INSTALLROOT"
+ 
+-	echo creating "$INSTALLROOT/usr/local/sbin" directory
+-	mkdir -p $INSTALLROOT/usr/local/sbin
++	echo creating "${PREFIX}/sbin" directory
++	mkdir -p ${PREFIX}/sbin
+ 
+-	echo copying "DarwinStreamingServer" to "$INSTALLROOT/usr/local/sbin/DarwinStreamingServer"
+-	cp -f DarwinStreamingServer $INSTALLROOT/usr/local/sbin/
++	echo copying "DarwinStreamingServer" to "${PREFIX}/sbin/DarwinStreamingServer"
++	cp -f DarwinStreamingServer ${PREFIX}/sbin/
+ 	
+-	echo creating "$INSTALLROOT/usr/local/bin" directory
+-	mkdir -p $INSTALLROOT/usr/local/bin
++	echo creating "${PREFIX}/bin" directory
++	mkdir -p ${PREFIX}/bin
+ 
+-	echo copying "PlaylistBroadcaster" to "$INSTALLROOT/usr/local/bin/PlaylistBroadcaster"
+-	cp -f PlaylistBroadcaster.tproj/PlaylistBroadcaster $INSTALLROOT/usr/local/bin/
++	echo copying "PlaylistBroadcaster" to "${PREFIX}/bin/PlaylistBroadcaster"
++	cp -f PlaylistBroadcaster.tproj/PlaylistBroadcaster ${PREFIX}/bin/
+ 	
+-	echo copying "MP3Broadcaster" to "$INSTALLROOT/usr/local/bin/MP3Broadcaster"
+-	cp -f MP3Broadcaster/MP3Broadcaster $INSTALLROOT/usr/local/bin/
++	echo copying "MP3Broadcaster" to "${PREFIX}/bin/MP3Broadcaster"
++	cp -f MP3Broadcaster/MP3Broadcaster ${PREFIX}/bin/
+ 	
+-	echo copying "qtpasswd" to "$INSTALLROOT/usr/local/bin/qtpasswd"
+-	cp -f qtpasswd.tproj/qtpasswd $INSTALLROOT/usr/local/bin/
++	echo copying "qtpasswd" to "${PREFIX}/bin/qtpasswd"
++	cp -f qtpasswd.tproj/qtpasswd ${PREFIX}/bin/
+ 	
+-	echo creating "$INSTALLROOT/usr/local/sbin/StreamingServerModules" directory
+-	mkdir -p $INSTALLROOT/usr/local/sbin/StreamingServerModules
+-	cp -f APIModules/QTSSHomeDirectoryModule/QTSSHomeDirectoryModule $INSTALLROOT/usr/local/sbin/StreamingServerModules/
+-	cp -f APIModules/QTSSRefMovieModule/QTSSRefMovieModule $INSTALLROOT/usr/local/sbin/StreamingServerModules/
++	echo creating "${PREFIX}/sbin/StreamingServerModules" directory
++	mkdir -p ${PREFIX}/sbin/StreamingServerModules
++	cp -f APIModules/QTSSHomeDirectoryModule/QTSSHomeDirectoryModule ${PREFIX}/sbin/StreamingServerModules/
++	cp -f APIModules/QTSSRefMovieModule/QTSSRefMovieModule ${PREFIX}/sbin/StreamingServerModules/
+ 
+-	echo copying "createuserstreamingdir" to "$INSTALLROOT/usr/local/bin/createuserstreamingdir"
+-	cp -f APIModules/QTSSHomeDirectoryModule/createuserstreamingdir $INSTALLROOT/usr/local/bin/
++	echo copying "createuserstreamingdir" to "${PREFIX}/bin/createuserstreamingdir"
++	cp -f APIModules/QTSSHomeDirectoryModule/createuserstreamingdir ${PREFIX}/bin/
+ 
+-	echo creating "$INSTALLROOT/etc/streaming" directory
+-	mkdir -p $INSTALLROOT/etc/streaming
++	echo creating "${PKG_SYSCONFDIR}/streaming" directory
++	mkdir -p ${PKG_SYSCONFDIR}/streaming
+ 	
+-	echo copying "streamingserver.xml-POSIX" to "$INSTALLROOT/etc/streaming/streamingserver.xml"
+-	cp -f streamingserver.xml-POSIX $INSTALLROOT/etc/streaming/streamingserver.xml
+-	echo copying "streamingserver.xml-POSIX" to "$INSTALLROOT/etc/streaming/streamingserver.xml-sample"
+-	cp -f streamingserver.xml-POSIX $INSTALLROOT/etc/streaming/streamingserver.xml-sample
++	echo copying "streamingserver.xml-POSIX" to "${PKG_SYSCONFDIR}/streaming/streamingserver.xml"
++	cp -f streamingserver.xml-POSIX ${PKG_SYSCONFDIR}/streaming/streamingserver.xml
++	echo copying "streamingserver.xml-POSIX" to "${PKG_SYSCONFDIR}/streaming/streamingserver.xml-sample"
++	cp -f streamingserver.xml-POSIX ${PKG_SYSCONFDIR}/streaming/streamingserver.xml-sample
+ 	
+-	echo copying "relayconfig.xml-Sample" to "$INSTALLROOT/etc/streaming/relayconfig.xml-Sample"
+-	cp -f relayconfig.xml-Sample $INSTALLROOT/etc/streaming/
++	echo copying "relayconfig.xml-Sample" to "${PKG_SYSCONFDIR}/streaming/relayconfig.xml-Sample"
++	cp -f relayconfig.xml-Sample ${PKG_SYSCONFDIR}/streaming/
+ 
+-	echo copying "qtusers" to "$INSTALLROOT/etc/streaming/qtusers"
+-	cp -f qtusers $INSTALLROOT/etc/streaming/
++	echo copying "qtusers" to "${PKG_SYSCONFDIR}/streaming/qtusers"
++	cp -f qtusers ${PKG_SYSCONFDIR}/streaming/
+ 	
+-	echo copying "qtgroups" to "$INSTALLROOT/etc/streaming/qtgroups"
+-	cp -f qtgroups $INSTALLROOT/etc/streaming/
++	echo copying "qtgroups" to "${PKG_SYSCONFDIR}/streaming/qtgroups"
++	cp -f qtgroups ${PKG_SYSCONFDIR}/streaming/
+ 
+-	echo creating "$INSTALLROOT/var/streaming/logs" directory
+-	mkdir -p $INSTALLROOT/var/streaming/logs
++	echo creating "/var/streaming/logs" directory
++	mkdir -p /var/streaming/logs
+ 	
+-	echo copying "Documentation/readme.txt" into "$INSTALLROOT/var/streaming/readme.txt"
+-	cp -f Documentation/readme.txt $INSTALLROOT/var/streaming/readme.txt
++	echo copying "Documentation/readme.txt" into "${PREFIX}/share/doc/streaming/readme.txt"
++	cp -f Documentation/readme.txt ${PREFIX}/share/doc/streaming/
+ 	
+-	echo copying "Documentation/3rdPartyAcknowledgements.rtf" into "$INSTALLROOT/var/streaming/3rdPartyAcknowledgements.rtf"
+-	cp -f Documentation/3rdPartyAcknowledgements.rtf $INSTALLROOT/var/streaming/3rdPartyAcknowledgements.rtf
++	echo copying "Documentation/3rdPartyAcknowledgements.rtf" into "${PREFIX}/share/doc/streaming/3rdPartyAcknowledgements.rtf"
++	cp -f Documentation/3rdPartyAcknowledgements.rtf ${PREFIX}/share/doc/streaming/
+ 	
+-	echo creating "$INSTALLROOT/usr/local/movies" directory
+-	mkdir -p $INSTALLROOT/usr/local/movies
++	echo creating "${PREFIX}/share/streaming/movies" directory
++	mkdir -p ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_100kbit.mov" into "$INSTALLROOT/usr/local/movies"
+-    cp -f sample_100kbit.mov $INSTALLROOT/usr/local/movies/
++    echo copying "sample_100kbit.mov" into "${PREFIX}/share/streaming/movies"
++    cp -f sample_100kbit.mov ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_300kbit.mov" into "$INSTALLROOT/usr/local/movies"
+-    cp -f sample_300kbit.mov $INSTALLROOT/usr/local/movies/
++    echo copying "sample_300kbit.mov" into "${PREFIX}/share/streaming/movies"
++    cp -f sample_300kbit.mov ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_100kbit.mp4" into "$INSTALLROOT/usr/local/movies"
+-    cp -f sample_100kbit.mp4 $INSTALLROOT/usr/local/movies/
++    echo copying "sample_100kbit.mp4" into "${PREFIX}/share/streaming/movies"
++    cp -f sample_100kbit.mp4 ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_300kbit.mp4" into "$INSTALLROOT/usr/local/movies"
+-    cp -f sample_300kbit.mp4 $INSTALLROOT/usr/local/movies/
++    echo copying "sample_300kbit.mp4" into "${PREFIX}/share/streaming/movies"
++    cp -f sample_300kbit.mp4 ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample.mp3" into "$INSTALLROOT/usr/local/movies"
+-    cp -f sample.mp3 $INSTALLROOT/usr/local/movies/
++    echo copying "sample.mp3" into "${PREFIX}/share/streaming/movies/"
++    cp -f sample.mp3 ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_50kbit.3gp" into "$INSTALLROOT/usr/local/movies"
+-    cp -f sample_50kbit.3gp $INSTALLROOT/usr/local/movies/
++    echo copying "sample_50kbit.3gp" into "${PREFIX}/share/streaming/movies/"
++    cp -f sample_50kbit.3gp ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_h264_100kbit.mp4" into "$INSTALLROOT/usr/local/movies"
+-    cp -f sample_h264_100kbit.mp4 $INSTALLROOT/usr/local/movies/
++    echo copying "sample_h264_100kbit.mp4" into "${PREFIX}/share/streaming/movies/"
++    cp -f sample_h264_100kbit.mp4 ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_h264_1mbit.mp4" into "$INSTALLROOT/usr/local/movies"
+-    cp -f sample_h264_1mbit.mp4 $INSTALLROOT/usr/local/movies/
++    echo copying "sample_h264_1mbit.mp4" into "${PREFIX}/share/streaming/movies/"
++    cp -f sample_h264_1mbit.mp4 ${PREFIX}/share/streaming/movies/
+ 
+-    echo copying "sample_h264_300kbit.mp4" into "$INSTALLROOT/usr/local/movies"
+-    cp -f sample_h264_300kbit.mp4 $INSTALLROOT/usr/local/movies/
++    echo copying "sample_h264_300kbit.mp4" into "${PREFIX}/share/streaming/movies/"
++    cp -f sample_h264_300kbit.mp4 ${PREFIX}/share/streaming/movies/
+ 
+ if [ $DSS = 0 ]; then
+     if [ -d StreamingLoadTool ]; then
+-		echo copying "StreamingLoadTool" to "$INSTALLROOT/usr/local/bin/StreamingLoadTool"
+-		cp -f StreamingLoadTool/StreamingLoadTool $INSTALLROOT/usr/local/bin/
++		echo copying "StreamingLoadTool" to "${PREFIX}/bin/StreamingLoadTool"
++		cp -f StreamingLoadTool/StreamingLoadTool ${PREFIX}/bin/
+ 		
+-		echo copying "streamingloadtool.conf" to "$INSTALLROOT/etc/streaming/streamingloadtool.conf"
+-		cp -f StreamingLoadTool/streamingloadtool.conf $INSTALLROOT/etc/streaming/streamingloadtool.conf
++		echo copying "streamingloadtool.conf" to "${PKG_SYSCONFDIR}/streaming/streamingloadtool.conf"
++		cp -f StreamingLoadTool/streamingloadtool.conf ${PKG_SYSCONFDIR}/streaming/streamingloadtool.conf
+ 	else
+                 echo "Warning: there is no StreamingLoadTool folder"
+     fi
+@@ -130,32 +130,32 @@
+         
+ 	#WebAdmin install
+ 
+-	echo copying "streamingadminserver.pl" into "$INSTALLROOT/usr/local/sbin/"
+-	cp -f WebAdmin/src/streamingadminserver.pl $INSTALLROOT/usr/local/sbin/streamingadminserver.pl
++	echo copying "streamingadminserver.pl" into "${PREFIX}/sbin/"
++	cp -f WebAdmin/src/streamingadminserver.pl ${PREFIX}/sbin/streamingadminserver.pl
+ 
+-	#echo copying "streamingadminserver.pem" into "$INSTALLROOT/etc/streaming/"
+-	#cp -f WebAdmin/streamingadminserver.pem $INSTALLROOT/etc/streaming/streamingadminserver.pem
++	#echo copying "streamingadminserver.pem" into "${PKG_SYSCONFDIR}/streaming/"
++	#cp -f WebAdmin/streamingadminserver.pem ${PKG_SYSCONFDIR}/streaming/streamingadminserver.pem
+ 	
+-	echo creating "$INSTALLROOT/var/streaming/AdminHtml" directory
+-	mkdir -p $INSTALLROOT/var/streaming/AdminHtml
++	echo creating "${PREFIX}/share/streaming/AdminHtml" directory
++	mkdir -p ${PREFIX}/share/streaming/AdminHtml
+ 	
+-	echo copying Admin HTML to "$INSTALLROOT/var/streaming/AdminHtml" directory
+-	cp -f WebAdmin/WebAdminHtml/*.pl $INSTALLROOT/var/streaming/AdminHtml/
+-	cp -f WebAdmin/WebAdminHtml/*.cgi $INSTALLROOT/var/streaming/AdminHtml/
+-	cp -f WebAdmin/WebAdminHtml/*.html $INSTALLROOT/var/streaming/AdminHtml/
+-    
+-	echo creating "$INSTALLROOT/var/streaming/AdminHtml/images/" directory
+-	mkdir -p $INSTALLROOT/var/streaming/AdminHtml/images/
+-	cp -f WebAdmin/WebAdminHtml/images/*.gif $INSTALLROOT/var/streaming/AdminHtml/images/
+-	
+-	echo creating "$INSTALLROOT/var/streaming/AdminHtml/includes/" directory
+-	mkdir -p $INSTALLROOT/var/streaming/AdminHtml/includes/
+-	cp -f WebAdmin/WebAdminHtml/includes/*.js $INSTALLROOT/var/streaming/AdminHtml/includes/
+-	
+-	echo creating "$INSTALLROOT/var/streaming/AdminHtml/html_en/" directory
+-	mkdir -p $INSTALLROOT/var/streaming/AdminHtml/html_en/
+-	cp -f WebAdmin/WebAdminHtml/html_en/messages $INSTALLROOT/var/streaming/AdminHtml/html_en/
+-	cp -f WebAdmin/WebAdminHtml/html_en/genres $INSTALLROOT/var/streaming/AdminHtml/html_en/
++	echo copying Admin HTML to "${PREFIX}/share/streaming/AdminHtml" directory
++	cp -f WebAdmin/WebAdminHtml/*.pl ${PREFIX}/share/streaming/AdminHtml/
++	cp -f WebAdmin/WebAdminHtml/*.cgi ${PREFIX}/share/streaming/AdminHtml/
++	cp -f WebAdmin/WebAdminHtml/*.html ${PREFIX}/share/streaming/AdminHtml/
++    
++	echo creating "${PREFIX}/share/streaming/AdminHtml/images/" directory
++	mkdir -p ${PREFIX}/share/streaming/AdminHtml/images/
++	cp -f WebAdmin/WebAdminHtml/images/*.gif ${PREFIX}/share/streaming/AdminHtml/images/
++	
++	echo creating "${PREFIX}/share/streaming/AdminHtml/includes/" directory
++	mkdir -p ${PREFIX}/share/streaming/AdminHtml/includes/
++	cp -f WebAdmin/WebAdminHtml/includes/*.js ${PREFIX}/share/streaming/AdminHtml/includes/
++	
++	echo creating "${PREFIX}/share/streaming/AdminHtml/html_en/" directory
++	mkdir -p ${PREFIX}/share/streaming/AdminHtml/html_en/
++	cp -f WebAdmin/WebAdminHtml/html_en/messages ${PREFIX}/share/streaming/AdminHtml/html_en/
++	cp -f WebAdmin/WebAdminHtml/html_en/genres ${PREFIX}/share/streaming/AdminHtml/html_en/
+ 	
+ else
+ 	# Build a "flat" directory containing an "Install" script
