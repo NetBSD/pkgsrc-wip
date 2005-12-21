@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2005/12/21 11:33:31 martijnb Exp $
+
+--- FileDownloader.cpp.orig	2005-09-02 09:00:41.000000000 +0200
++++ FileDownloader.cpp
+@@ -384,7 +384,7 @@ void FileDownloader::JoinFileParts()
+ 			snprintf(brokenfn, 1024, "%s_broken", ofn);
+ 			rename(ofn, brokenfn);
+ 
+-			nzblog( "Renaming broken file from %f to %f", ofn, brokenfn );
++			nzblog( "Renaming broken file from %s to %s", ofn, brokenfn );
+ 		}
+ 		else
+ 		{

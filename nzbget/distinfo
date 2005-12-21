@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2005/12/21 10:28:27 martijnb Exp $
+$NetBSD: distinfo,v 1.2 2005/12/21 11:33:31 martijnb Exp $
 
 SHA1 (nzbget-0.2.3.tar.gz) = 114f0e8663ec88b63b9fae6a16d102e085eb32be
 RMD160 (nzbget-0.2.3.tar.gz) = 3d519bc0f8aff5e03b52edb16509954e020285b6
@@ -15,3 +15,4 @@ SHA1 (patch-ai) = 57ac0fd9339070898a182a7a365a2ba7faafe135
 SHA1 (patch-aj) = 33bf5841a722f473c1f50e5cb8e1d8e62c3b8979
 SHA1 (patch-ak) = e5a837fc7ceb68dad2e51e351aea9c3c9c9e7027
 SHA1 (patch-al) = f3814cd5a1c1ba1a2dfded389ca9fd78151472bf
+SHA1 (patch-am) = c7f5dc6d619544498985bd75618792866f9b83ca
