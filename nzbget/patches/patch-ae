@@ -1,0 +1,43 @@
+$NetBSD: patch-ae,v 1.1 2005/12/21 10:28:27 martijnb Exp $
+
+--- NCursesFrontend.cpp.orig	2005-09-02 09:00:41.000000000 +0200
++++ NCursesFrontend.cpp
+@@ -27,7 +27,7 @@
+ #include <unistd.h>
+ #include <stdarg.h>
+ #include <signal.h>
+-
++#include "config.h"
+ #include "NCursesFrontend.h"
+ 
+ #include "NZBQueueCoordinator.h"
+@@ -449,7 +449,17 @@ void NCursesFrontend::PrintQueue()
+ 			const char* szPause = pQueue->GetPause() ? "(paused)" : "";
+ 			const char* szCanceled = pQueue->GetCancelDownload() ? "(canceled)" : "";
+ 
+-			sprintf( szBuffer, "%s (%i/%i) %s%s", basename( pQueue->GetFileName() )
++			const char *QueueBase = strrchr(pQueue->GetFileName(), '/');
++			if (!QueueBase)
++			{
++			  QueueBase = pQueue->GetFileName();
++			}
++			else
++			{
++			  QueueBase++;
++			}
++
++			sprintf( szBuffer, "%s (%i/%i) %s%s", QueueBase
+ 								, pQueue->GetNumberOfJobs()
+ 								, pQueue->GetOriginalNumberOfJobs()
+ 								, szPause
+@@ -500,7 +510,9 @@ void NCursesFrontend::UpdateInput()
+ 		{
+ 			// Key 'q' for quit
+ 			case 'q':
+-				kill( GlobalControl::GetInstance()->GetProgramPID(), SIGINT );  // send a kill signal
++				//kill( GlobalControl::GetInstance()->GetProgramPID(), SIGINT );  // send a kill signal
++				endwin(); // restore terminal settings
++				exit(1); // don't be so harsh!
+ 				break;
+ 			// Key 'p' for pause
+ 			case 'p':
