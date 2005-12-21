@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/20 19:03:10 danieleggert Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/21 12:02:46 adrian_p Exp $
 
 DSS_VERSION=	5.5
 DISTNAME=	DarwinStreamingSrvr${DSS_VERSION}
@@ -66,7 +66,7 @@ SUBST_SED.dss-conf=	\
 	-e "s|/Library/QuickTimeStreaming/Playlists|${PREFIX}/share/streaming/playlists|" \
 	-e "s|host=foo.bar.com|host=`hostname`|"	\
 	-e "s|/usr/sbin/QuickTimeStreamingServer|${PREFIX}/sbin/DarwinStreamingServer|" \
-	-e "s|/Library/QuickTimeStreaming/Logs|/var/log/streaming|"
+	-e "s|/Library/QuickTimeStreaming/Logs|${VARBASE}/log/streaming|"
 
 SUBST_CLASSES+=		dss
 SUBST_STAGE.dss=	post-configure
@@ -86,7 +86,7 @@ SUBST_SED.dss=		\
 	-e "s|/usr/local|${PREFIX}|"					\
 	-e "s|\$INSTALLROOT/var/streaming/AdminHtml|${PREFIX}/share/streaming/AdminHtml|" \
 	-e "s|/var/streaming/playlists|${PREFIX}/share/streaming/playlists|" \
-	-e "s|/var/streaming/logs|/var/log/streaming|"
+	-e "s|/var/streaming/logs|${VARBASE}/log/streaming|"
 
 CONF_FILES=	${PKG_SYSCONFDIR}/streaming/qtgroups-dist ${PKG_SYSCONFDIR}/streaming/qtgroups
 CONF_FILES+=	${PKG_SYSCONFDIR}/streaming/qtusers-dist ${PKG_SYSCONFDIR}/streaming/qtusers
