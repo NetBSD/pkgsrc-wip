@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/12/21 10:28:27 martijnb Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/24 17:07:09 thomasklausner Exp $
 #
 
 DISTNAME=		nzbget-0.2.3
@@ -14,7 +14,8 @@ USE_TOOLS+=		autoconf
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-EGDIR=          	${LOCALBASE}/share/examples/nzbget
+EGDIR=          	${PREFIX}/share/examples/nzbget
+MESSAGE_SUBST+=		EGDIR=${EGDIR}
 
 pre-configure:
 	cd ${WRKSRC}; autoconf
