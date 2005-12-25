@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/25 11:25:22 yeled Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/25 12:21:31 yeled Exp $
 
 DISTNAME=	Net-Delicious-0.94
 PKGNAME=	p5-${DISTNAME}
@@ -20,6 +20,8 @@ DEPENDS+=	p5-File-Spec>=0.80}:../../devel/p5-File-Spec
 DEPENDS+=	p5-YAML>=0.39}:../../textproc/p5-YAML
 
 PERL5_PACKLIST= auto/Net/Delicious/.packlist
+
+PERL5_MODULE_TYPE= Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
