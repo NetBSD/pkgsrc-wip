@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/25 12:46:14 yeled Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/25 12:49:14 yeled Exp $
 
 DISTNAME=	URI-Find-Rule-0.8
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	uri perl5
+CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=URI/}
 
 MAINTAINER=	charlie@rubberduck.com
