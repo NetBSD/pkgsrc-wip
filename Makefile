@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2096 2005/12/18 13:57:04 hugor Exp $
+# $Id: Makefile,v 1.2097 2005/12/25 11:28:50 yeled Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -789,6 +789,7 @@ SUBDIR+=	p5-Module-Pluggable-Ordered
 SUBDIR+=	p5-NEXT
 SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-Amazon
+SUBDIR+=	p5-Net-Delicious
 SUBDIR+=	p5-Net-PcapUtils
 SUBDIR+=	p5-Net-Whois-RIPE
 SUBDIR+=	p5-News-Newsrc
