@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2097 2005/12/25 11:28:50 yeled Exp $
+# $Id: Makefile,v 1.2098 2005/12/25 12:49:50 yeled Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -818,6 +818,7 @@ SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-Tree-Simple-VisitorFactory
 SUBDIR+=	p5-UNIVERSAL-exports
 SUBDIR+=	p5-URI-Find
+SUBDIR+=	p5-URI-Find-Rule
 SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-XML-Clean
 SUBDIR+=	palm-db-tools
