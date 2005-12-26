@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/23 18:40:39 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/26 17:14:30 thomasklausner Exp $
 #
 
 DISTNAME=	mednafen-0.3.7
@@ -28,6 +28,7 @@ post-install:
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
