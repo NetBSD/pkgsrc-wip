@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2005/12/10 17:54:03 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/26 10:17:38 ykomatsu Exp $
 #
 
-DISTNAME=		Zope-3.2.0b1
-PKGNAME=		zope3-unstable-3.2.0b1
+DISTNAME=		Zope-3.2.0b2
+PKGNAME=		zope3-unstable-3.2.0b2
 CATEGORIES=		www
-MASTER_SITES=		http://www.zope.org/Products/Zope3/3.2.0b1/
+MASTER_SITES=		http://www.zope.org/Products/Zope3/3.2.0b2/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		ykomatsu@akaumigame.org
@@ -14,15 +14,13 @@ COMMENT=		Zope 3 Application Server
 CONFLICTS=		zope3-3.1.0* zope3-unstable-3.1.0*
 DEPENDS+=		${PYPKGPREFIX}-xml>=0.8.4:../../textproc/py-xml
 
-ZOPE3_DIR=		${PREFIX}/share/zope3
-ZOPE3_DOCDIR=		${PREFIX}/share/doc/zope3
+.include "Makefile.common"
+.include "../../mk/bsd.prefs.mk"
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-python ${PYTHONBIN} \
 			--prefix ${ZOPE3_DIR} \
 			--force
-
-.include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.[0-6]*)
 EXTRACT_USING=		gtar
@@ -32,20 +30,12 @@ BUILD_TARGET=		build
 
 USE_PKGINSTALL=		yes
 RCD_SCRIPTS=		zope3 zss3
-ZOPE3_GROUP?=		zope3
-ZOPE3_USER?=		zope3
 PKG_GROUPS=		${ZOPE3_GROUP}
 PKG_USERS=		${ZOPE3_USER}:${ZOPE3_GROUP}::Zope3\ user
 
-PYTHON_VERSIONS_ACCEPTED=	24
-
 MESSAGE_SUBST+=		ZOPE3_USER="${ZOPE3_USER}" \
 			ZOPE3_GROUP="${ZOPE3_GROUP}" \
-			VARBASE="${VARBASE}" \
-			CHOWN="${CHOWN}" ECHO="${ECHO}"
-
-.include "../../lang/python/application.mk"
-.include "../../devel/zlib/buildlink3.mk"
+			VARBASE="${VARBASE}"
 
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -type f -print | ${XARGS} ${RM} -f
@@ -59,4 +49,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/Zope/ZopePublicLicense.txt ${ZOPE3_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/Zope/doc/*.txt ${ZOPE3_DOCDIR}
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.3 2005/12/08 07:42:48 ykomatsu Exp $
+$NetBSD: patch-ac,v 1.4 2005/12/26 10:17:38 ykomatsu Exp $
 
---- Dependencies/zdaemon-Zope-3.2.0b1/zdaemon/zdctl.py.orig	2005-12-06 01:38:49.000000000 +0900
-+++ Dependencies/zdaemon-Zope-3.2.0b1/zdaemon/zdctl.py
+--- Dependencies/zdaemon-Zope-3.2.0b2/zdaemon/zdctl.py.orig	2005-12-24 08:08:03.000000000 +0900
++++ Dependencies/zdaemon-Zope-3.2.0b2/zdaemon/zdctl.py
 @@ -60,2 +60,13 @@
          sys.path.append(dirname(scriptdir))
 +    # Add the zope3 library directory to the module search path

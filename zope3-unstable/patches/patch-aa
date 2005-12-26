@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2005/12/08 07:42:48 ykomatsu Exp $
+$NetBSD: patch-aa,v 1.4 2005/12/26 10:17:38 ykomatsu Exp $
 
---- Dependencies/ZConfig-Zope-3.2.0b1/ZConfig/scripts/zconfig.orig	2005-12-06 01:38:10.000000000 +0900
-+++ Dependencies/ZConfig-Zope-3.2.0b1/ZConfig/scripts/zconfig
+--- Dependencies/ZConfig-Zope-3.2.0b2/ZConfig/scripts/zconfig.orig	2005-12-24 08:07:53.000000000 +0900
++++ Dependencies/ZConfig-Zope-3.2.0b2/ZConfig/scripts/zconfig
 @@ -41,2 +41,15 @@
  
 +if __name__ == "__main__":
