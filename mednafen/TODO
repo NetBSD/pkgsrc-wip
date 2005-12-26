@@ -1,3 +1,5 @@
+0.4.1 out.
+
 - ldd gives "-lintl.3 => not found".  Might be easy to fix (-Wl,-R).
 
 - Fails to build on NetBSD 2.1.0/i386:
