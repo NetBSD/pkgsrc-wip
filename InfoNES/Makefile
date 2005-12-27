@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:09:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/27 21:59:24 thomasklausner Exp $
 #
 
 DISTNAME=		InfoNES093J_Src
