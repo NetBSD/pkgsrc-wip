@@ -1,17 +1,25 @@
-$NetBSD: patch-ag,v 1.1 2005/08/04 18:25:01 scott8586 Exp $
+$NetBSD: patch-ag,v 1.2 2005/12/27 21:41:30 absd Exp $
 
---- plugins-scripts/utils.sh.in.orig	2002-06-05 21:16:56.000000000 -0700
-+++ plugins-scripts/utils.sh.in	2005-08-04 10:58:12.000000000 -0700
-@@ -14,10 +14,10 @@
+--- plugins-scripts/utils.sh.in.orig	2002-06-06 05:16:56.000000000 +0100
++++ plugins-scripts/utils.sh.in
+@@ -12,12 +12,18 @@ else
+ 	ECHO=echo
+ fi
  
++if test -x /bin/sed; then
++	SED=/bin/sed
++else
++	SED=/usr/bin/sed
++fi
++
  print_revision() {
  	echo "$1 (@PACKAGE@ @VERSION@) $2"
 -	$ECHO "@WARRANTY@" | /bin/sed -e 's/\n/ /g'
-+	$ECHO "@WARRANTY@" | /usr/bin/sed -e 's/\n/ /g'
++	$ECHO "@WARRANTY@" | $SED -e 's/\n/ /g'
  }
  
  support() {
 -	$ECHO "@SUPPORT@" | /bin/sed -e 's/\n/ /g'
-+	$ECHO "@SUPPORT@" | /usr/bin/sed -e 's/\n/ /g'
++	$ECHO "@SUPPORT@" | $SED -e 's/\n/ /g'
  }
  

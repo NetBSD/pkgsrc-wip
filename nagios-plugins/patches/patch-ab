@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2005/08/04 18:25:01 scott8586 Exp $
+$NetBSD: patch-ab,v 1.4 2005/12/27 21:41:30 absd Exp $
 
---- configure.orig	2005-08-01 14:34:46.000000000 -0700
-+++ configure	2005-08-03 17:03:52.000000000 -0700
-@@ -8406,7 +8406,7 @@
+--- configure.orig	2005-09-19 14:58:16.000000000 +0100
++++ configure
+@@ -8406,7 +8406,7 @@ _ACEOF
  
  fi
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.3 2005/08/04 18:25:01 scott8586 Exp $
    if test -n "$PGSQL"; then
      LDFLAGS="$LDFLAGS -L$PGSQL/lib"
      CPPFLAGS="$CPPFLAGS -I$PGSQL/include"
-@@ -9051,7 +9051,7 @@
+@@ -9051,7 +9051,7 @@ _ACEOF
  
  fi
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.3 2005/08/04 18:25:01 scott8586 Exp $
    EXTRAS="$EXTRAS check_radius"
  	RADIUSLIBS="-lradiusclient"
  
-@@ -9132,7 +9132,7 @@
+@@ -9132,7 +9132,7 @@ _ACEOF
  
  fi
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.3 2005/08/04 18:25:01 scott8586 Exp $
    LDAPLIBS="-lldap -llber"\
    LDAPINCLUDE="-I/usr/include/ldap"
  
-@@ -9362,7 +9362,7 @@
+@@ -9362,7 +9362,7 @@ if test "${with_mysql+set}" = set; then
    withval="$with_mysql"
    MYSQL=$withval
  fi;
@@ -38,7 +38,7 @@ $NetBSD: patch-ab,v 1.3 2005/08/04 18:25:01 scott8586 Exp $
    MYSQLLIBDIR=$MYSQL/lib/mysql
    CPPFLAGS="-I$MYSQL/include"
    echo "$as_me:$LINENO: checking for mysql_init in -lmysqlclient" >&5
-@@ -10050,7 +10050,7 @@
+@@ -10050,7 +10050,7 @@ if test $ac_cv_lib_mysqlclient_mysql_clo
  fi
  
  fi
@@ -47,7 +47,7 @@ $NetBSD: patch-ab,v 1.3 2005/08/04 18:25:01 scott8586 Exp $
  
  
  for ac_header in mysql/mysql.h mysql/errmsg.h
-@@ -14789,7 +14789,7 @@
+@@ -14787,7 +14787,7 @@ echo "$as_me:$LINENO: checking for nsloo
  echo $ECHO_N "checking for nslookup syntax... $ECHO_C" >&6
  if test -n "$PATH_TO_NSLOOKUP"
  then
@@ -56,7 +56,7 @@ $NetBSD: patch-ab,v 1.3 2005/08/04 18:25:01 scott8586 Exp $
  	then
  		ac_cv_nslookup_command="$PATH_TO_NSLOOKUP"
  		echo "$as_me:$LINENO: result: $ac_cv_nslookup_command" >&5
-@@ -15131,7 +15131,7 @@
+@@ -15129,7 +15129,7 @@ else
  echo "${ECHO_T}no" >&6
  fi
  
@@ -65,7 +65,7 @@ $NetBSD: patch-ab,v 1.3 2005/08/04 18:25:01 scott8586 Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -15182,7 +15182,7 @@
+@@ -15180,7 +15180,7 @@ else
  echo "${ECHO_T}no" >&6
  fi
  
@@ -74,7 +74,7 @@ $NetBSD: patch-ab,v 1.3 2005/08/04 18:25:01 scott8586 Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -15287,7 +15287,7 @@
+@@ -15285,7 +15285,7 @@ else
  echo "${ECHO_T}no" >&6
  fi
  
@@ -83,7 +83,7 @@ $NetBSD: patch-ab,v 1.3 2005/08/04 18:25:01 scott8586 Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -15339,7 +15339,7 @@
+@@ -15337,7 +15337,7 @@ else
  echo "${ECHO_T}no" >&6
  fi
  
@@ -92,7 +92,7 @@ $NetBSD: patch-ab,v 1.3 2005/08/04 18:25:01 scott8586 Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -15348,7 +15348,7 @@
+@@ -15346,7 +15346,7 @@ _ACEOF
  
  fi
  
@@ -101,7 +101,7 @@ $NetBSD: patch-ab,v 1.3 2005/08/04 18:25:01 scott8586 Exp $
  then
  	echo "$as_me:$LINENO: checking for Net::SNMP perl module" >&5
  echo $ECHO_N "checking for Net::SNMP perl module... $ECHO_C" >&6
-@@ -15500,7 +15500,7 @@
+@@ -15498,7 +15498,7 @@ else
  echo "${ECHO_T}no" >&6
  fi
  
@@ -110,7 +110,7 @@ $NetBSD: patch-ab,v 1.3 2005/08/04 18:25:01 scott8586 Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -16657,7 +16657,7 @@
+@@ -16655,7 +16655,7 @@ if test -n "$PATH_TO_DIG"; then
  	EXTRAS="$EXTRAS check_dig"
  fi
  

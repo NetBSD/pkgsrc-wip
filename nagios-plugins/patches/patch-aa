@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2005/10/28 16:42:19 ykomatsu Exp $
+$NetBSD: patch-aa,v 1.5 2005/12/27 21:41:30 absd Exp $
 
---- lib/mountlist.c.orig	2004-11-12 09:49:51.000000000 +0900
+--- lib/mountlist.c.orig	2004-11-12 00:49:51.000000000 +0000
 +++ lib/mountlist.c
 @@ -173,6 +173,11 @@ xatoi (char *cp)
  

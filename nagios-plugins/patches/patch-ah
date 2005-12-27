@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2005/08/04 18:25:01 scott8586 Exp $
+$NetBSD: patch-ah,v 1.2 2005/12/27 21:41:30 absd Exp $
 
---- plugins-scripts/check_ntp.pl.orig	2005-08-04 08:07:01.000000000 -0700
-+++ plugins-scripts/check_ntp.pl	2005-08-04 08:08:39.000000000 -0700
-@@ -307,6 +307,7 @@
+--- plugins-scripts/check_ntp.pl.orig	2005-05-25 15:05:41.000000000 +0100
++++ plugins-scripts/check_ntp.pl
+@@ -307,6 +307,7 @@ if ($have_ntpq) {
  				} else {
  					$jitter_error = $ERRORS{'OK'};
  				}
