@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/27 21:59:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/27 22:00:13 thomasklausner Exp $
 #
 
 DISTNAME=		InfoNES093J_Src
@@ -24,7 +24,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/linux/InfoNES ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/InfoNES
 	${INSTALL_DATA} ${FILESDIR}/keys.txt ${PREFIX}/share/doc/InfoNES
-
+ 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
