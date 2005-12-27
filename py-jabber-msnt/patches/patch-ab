@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/11/05 02:25:42 schnoebe Exp $
+$NetBSD: patch-ab,v 1.2 2005/12/27 19:39:22 schnoebe Exp $
 
---- PyMSNt.tac.orig	2005-10-28 22:10:37.000000000 -0500
+--- PyMSNt.tac.orig	2005-12-19 00:18:53.000000000 -0600
 +++ PyMSNt.tac
-@@ -1,19 +1,19 @@
+@@ -1,31 +1,39 @@
  # Path to the PyMSNt installed directory
 -PATH = "/usr/local/PyMSNt/"
 +PATH = "@PREFIX@/@TRANSPORTDIR@"
@@ -10,6 +10,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/11/05 02:25:42 schnoebe Exp $
  # Path to the configuration file
 -CONFIG = "/usr/local/PyMSNt/config.xml"
 +CONFIG = "@PKG_SYSCONFDIR@/pymsnt.xml"
+ 
+ # User privileges to switch to if run as root
+-UID=1
+-GID=1
++USER="@JABBERD_USER@"
++GROUP="@JABBERD_GROUP@"
  
  ####
  # You shouldn't need to modify below this line
@@ -22,7 +28,24 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/11/05 02:25:42 schnoebe Exp $
  import os
  import os.path
 -sys.path[0] = os.path.abspath(PATH + "/src/")
++# sys.path[0] = os.path.abspath(PATH + "/src/")
 +sys.path[0] = os.path.abspath(PATH)
  os.chdir(PATH)
  
++# gather the translation from the name to the UID/GID
++import pwd
++pw=pwd.getpwnam(USER)
++
++import grp
++gp=grp.getgrnam(GROUP)
++
  # Set up the service
+ import config
+ config.configFile = CONFIG
+ import main
+ from twisted.application import service
+-application = service.Application("PyMSNt", uid=UID, gid=GID)
++application = service.Application("PyMSNt", uid=pw.pw_uid, gid=gp.gr_gid)
+ service = main.App()
+ service.c.setServiceParent(application)
+ 
