@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/27 19:39:22 schnoebe Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/27 21:11:27 schnoebe Exp $
 
 DISTNAME=		pymsnt-0.10.3
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -60,7 +60,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${EGDIR};\
 	${INSTALL_DATA} ${WRKSRC}/config-example.xml ${EGDIR}/pymsnt.xml
 
-SUBST_CLASSES=		paths
+SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	"Localizing Paths"
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	config-example.xml PyMSNt.tac
