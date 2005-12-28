@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2100 2005/12/28 03:58:46 christian_gall Exp $
+# $Id: Makefile,v 1.2101 2005/12/28 17:50:45 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1021,7 +1021,6 @@ SUBDIR+=	rlpr
 SUBDIR+=	rolo
 SUBDIR+=	rosegarden-current
 SUBDIR+=	rox-gtk2
-SUBDIR+=	rssh
 SUBDIR+=	rsyslog
 SUBDIR+=	rte
 SUBDIR+=	ruby-GalleryAdministrator
