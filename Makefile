@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2101 2005/12/28 17:50:45 thomasklausner Exp $
+# $Id: Makefile,v 1.2102 2005/12/28 20:56:24 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -142,7 +142,6 @@ SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	cpphs
 SUBDIR+=	cream
-SUBDIR+=	cripple
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvsd
 SUBDIR+=	cvsutils
@@ -226,7 +225,6 @@ SUBDIR+=	ethtool
 SUBDIR+=	evas
 SUBDIR+=	evidence
 SUBDIR+=	evolution-sharp
-SUBDIR+=	ez-ipupdate
 SUBDIR+=	ezbounce
 SUBDIR+=	ezstream
 SUBDIR+=	fakenes
@@ -528,7 +526,6 @@ SUBDIR+=	libxkbfile
 SUBDIR+=	libxml++
 SUBDIR+=	lidia
 SUBDIR+=	lilo
-SUBDIR+=	lincvs
 SUBDIR+=	lingoteach-lesson
 SUBDIR+=	lingoteach-ui
 SUBDIR+=	links-hacked
@@ -665,7 +662,6 @@ SUBDIR+=	nestra
 SUBDIR+=	net-quanta
 SUBDIR+=	net-tools
 SUBDIR+=	net6
-SUBDIR+=	netcat6
 SUBDIR+=	netkit-base
 SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
@@ -1061,7 +1057,6 @@ SUBDIR+=	sipp
 SUBDIR+=	siproxd
 SUBDIR+=	sipsak
 SUBDIR+=	six
-SUBDIR+=	skipstone
 SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc
 SUBDIR+=	slackware_aaa_base
