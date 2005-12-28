@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2102 2005/12/28 20:56:24 kristerw Exp $
+# $Id: Makefile,v 1.2103 2005/12/28 21:00:10 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1215,7 +1215,7 @@ SUBDIR+=	wordnet
 SUBDIR+=	words
 SUBDIR+=	worker
 SUBDIR+=	xace
-SUBDIR+=	xanim-codec
+SUBDIR+=	xanim-codecs
 SUBDIR+=	xaralx-bin
 SUBDIR+=	xarchiver
 SUBDIR+=	xbase
