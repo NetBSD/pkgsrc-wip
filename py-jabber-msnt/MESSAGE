@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2005/12/28 06:31:50 schnoebe Exp $
+$NetBSD: MESSAGE,v 1.2 2005/12/28 06:38:21 schnoebe Exp $
 
 You will need to customize the following file to get pyicqt to work
 with jabber:
@@ -16,7 +16,7 @@ Quick start for jabberd2:
 	${PKG_SYSCONFDIR}/pymsnt.xml:
 
 	<jid>...</jid>		--  Set to the public name of the service
-				    ex: aim.jabber.example
+				    ex: msn.jabber.example
 	<mainServer>...</mainServer>
 				--  Set to the hostname or IP address
 				    of the main jabber server
