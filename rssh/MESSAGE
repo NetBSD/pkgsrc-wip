@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/02/26 23:48:37 poppnk Exp $
-
-You should configure PermitUserEnvironment in your sshd_config to no.
-If you do not do this, it will be possible for users to circumvent rssh.
-
-===========================================================================
