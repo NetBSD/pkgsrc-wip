@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/12/28 06:15:01 schnoebe Exp $
+
+--- src/main.py.orig	2005-03-11 18:09:44.000000000 -0600
++++ src/main.py
+@@ -1,3 +1,5 @@
++#!/usr/pkg/bin/python
++#
+ # Copyright 2004 James Bunton <james@delx.cjb.net>
+ # Licensed for distribution under the GPL version 2, check COPYING for details
+ 

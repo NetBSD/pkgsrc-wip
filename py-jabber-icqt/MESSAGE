@@ -1,0 +1,27 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/12/28 06:15:01 schnoebe Exp $
+
+You will need to customize the following file to get pyicqt to work
+with jabber:
+
+	${PKG_SYSCONFDIR}/pyicqt.xml
+
+For details see:
+
+	${HOMEPAGE}install.php
+
+Quick start for jabberd2:
+
+	Verify and update the following fields in
+	${PKG_SYSCONFDIR}/pyicqt.xml:
+
+	<jid>...</jid>		--  Set to the public name of the service
+				    ex: icq.jabber.example
+	<mainServer>...</mainServer>
+				--  Set to the hostname or IP address
+				    of the main jabber server
+	<secret>...</secret>	--  should be set to the legacy components
+				    shared secret in jabber2's router.xml
+				    (look for <secret>...</secret>
+
+===========================================================================
