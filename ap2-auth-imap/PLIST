@@ -1,0 +1,5 @@
+lib/httpd/mod_auth_imap.so
+share/examples/ap2-auth-imap/htaccess-example
+share/examples/ap2-auth-imap/httpd.conf-append-example
+@dirrm share/examples/ap2-auth-imap
+
