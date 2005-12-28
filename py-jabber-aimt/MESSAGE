@@ -1,0 +1,38 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2005/12/28 06:27:48 schnoebe Exp $
+
+You will need to customize the following file to get pyicqt to work
+with jabber:
+
+	${PKG_SYSCONFDIR}/pyaimt.xml
+
+For details see:
+
+	${HOMEPAGE}install.php
+
+Quick start for jabberd2:
+
+	Verify and update the following fields in
+	${PKG_SYSCONFDIR}/pyaimt.xml:
+
+	<jid>...</jid>		--  Set to the public name of the service
+				    ex: aim.jabber.example
+	<mainServer>...</mainServer>
+				--  Set to the hostname or IP address
+				    of the main jabber server
+	<mainServerJID>...</mainServerJID>
+				--  Set to the JID (jabber ID)
+				    of the main jabber server
+	<secret>...</secret>	--  should be set to the legacy components
+				    shared secret in jabber2's router.xml
+				    (look for <secret>...</secret> in
+				    router.xml)
+
+Additionally, you can use the SASL authentication mechanisms and jabberd2's 
+component protocol extensions by updating the following two fields:
+
+	Uncomment <useJ2Compoent/>
+	set <saslUsername>...</saslUsername> to a user defined in
+	jabber2's router-users.xml
+
+===========================================================================

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/28 01:21:50 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/28 06:27:48 schnoebe Exp $
 
 DISTNAME=		pyaim-t-0.7b
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted>=2.1.0:../../wip/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-twisted-words>=0.1.0:../../wip/py-twisted-words
 DEPENDS+=	${PYPKGPREFIX}-twisted-web>=0.1.0:../../wip/py-twisted-web
 DEPENDS+=	${PYPKGPREFIX}-twisted-xish>=0.1.0:../../wip/py-twisted-xish
-# DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.5:../../graphics/py-imaging
+DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.5:../../graphics/py-imaging
 
 # Fifth paragraph - all build definitions that describe things used by
 # the package.  These include: WRKSRC, GNU_CONFIGURE,
@@ -29,7 +29,6 @@ DEPENDS+=	${PYPKGPREFIX}-twisted-xish>=0.1.0:../../wip/py-twisted-xish
 NO_BUILD=		yes
 USE_PKGINSTALL=		yes
 PYTHON_PATCH_SCRIPTS+=	src/main.py
-# PYTHON_VERSION_REQD=	23
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"
@@ -41,13 +40,12 @@ TRANSPORTDIR=		${JABBERD_TRANSDIR}/pyaimt
 FILES_SUBST+=		TRANSPORTDIR=${TRANSPORTDIR:Q}
 FILES_SUBST+=		PYTHONBIN=${PYTHONBIN:Q}
 PLIST_SUBST+=		TRANSPORTDIR=${TRANSPORTDIR:Q}
+MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE:Q}
 
 .include "../../wip/jabberd/transports.mk"
 
 CONF_FILES=	${EGDIR}/pyaimt.xml ${PKG_SYSCONFDIR}/pyaimt.xml
-
-# post-extract:
-#	${CP} ${FILESDIR}/PyAIMt.tac ${WRKSRC}
 
 do-install:
 	@ ${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
@@ -59,8 +57,6 @@ do-install:
 	    ${INSTALL_SCRIPT_DIR} `${DIRNAME} ${PREFIX}/${TRANSPORTDIR}/$$i` ;\
 	    ${INSTALL_SCRIPT} $$i ${PREFIX}/${TRANSPORTDIR}/$$i ;\
 	done
-	cd ${WRKSRC}; \
-	# ${INSTALL_SCRIPT} PyAIMt.tac ${PREFIX}/${TRANSPORTDIR}
 	${LN} ${PREFIX}/${TRANSPORTDIR}/main.py \
 				${PREFIX}/${TRANSPORTDIR}/PyAIMt.py
 	${INSTALL_DATA_DIR} ${EGDIR}
