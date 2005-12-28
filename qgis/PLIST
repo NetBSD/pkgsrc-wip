@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/17 21:04:04 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/28 17:33:08 mchittur Exp $
 bin/gridmaker
 bin/qgis
 bin/qgis-config
+bin/qgis_help
 bin/spit
 include/qgis/qgis.h
 include/qgis/qgisapp.h
@@ -15,6 +16,8 @@ include/qgis/qgsabout.uic.h
 include/qgis/qgsacetatelines.h
 include/qgis/qgsacetateobject.h
 include/qgis/qgsacetaterectangle.h
+include/qgis/qgsaddattrdialog.h
+include/qgis/qgsaddattrdialogbase.uic.h
 include/qgis/qgsattributeaction.h
 include/qgis/qgsattributeactiondialog.h
 include/qgis/qgsattributeactiondialogbase.uic.h
@@ -24,23 +27,51 @@ include/qgis/qgsattributetable.h
 include/qgis/qgsattributetablebase.ui.h
 include/qgis/qgsattributetablebase.uic.h
 include/qgis/qgsattributetabledisplay.h
+include/qgis/qgsbookmarkitem.h
+include/qgis/qgsbookmarks.h
+include/qgis/qgsbookmarksbase.uic.h
+include/qgis/qgsclipper.h
 include/qgis/qgscolortable.h
+include/qgis/qgscomposer.h
+include/qgis/qgscomposerbase.uic.h
+include/qgis/qgscomposeritem.h
+include/qgis/qgscomposerlabel.h
+include/qgis/qgscomposerlabelbase.uic.h
+include/qgis/qgscomposermap.h
+include/qgis/qgscomposermapbase.uic.h
+include/qgis/qgscomposerscalebar.h
+include/qgis/qgscomposerscalebarbase.uic.h
+include/qgis/qgscomposervectorlegend.h
+include/qgis/qgscomposervectorlegendbase.uic.h
+include/qgis/qgscomposerview.h
+include/qgis/qgscomposition.h
+include/qgis/qgscompositionbase.uic.h
 include/qgis/qgsconfig.h
 include/qgis/qgscontcoldialog.h
 include/qgis/qgscontcoldialogbase.uic.h
+include/qgis/qgscontexthelp.h
 include/qgis/qgscontinuouscolrenderer.h
 include/qgis/qgscoordinatetransform.h
+include/qgis/qgscsexception.h
+include/qgis/qgscustomprojectiondialog.h
+include/qgis/qgscustomprojectiondialogbase.ui.h
+include/qgis/qgscustomprojectiondialogbase.uic.h
 include/qgis/qgscustomsymbol.h
 include/qgis/qgsdataprovider.h
 include/qgis/qgsdatasource.h
 include/qgis/qgsdatasourceuri.h
 include/qgis/qgsdbsourceselect.h
+include/qgis/qgsdelattrdialog.h
+include/qgis/qgsdelattrdialogbase.uic.h
 include/qgis/qgsdlgvectorlayerproperties.h
 include/qgis/qgsdlgvectorlayerpropertiesbase.uic.h
+include/qgis/qgsencodingfiledialog.h
 include/qgis/qgsexception.h
 include/qgis/qgsfeature.h
 include/qgis/qgsfeatureattribute.h
 include/qgis/qgsfield.h
+include/qgis/qgsfillstylewidget.h
+include/qgis/qgsfillstylewidgetbase.uic.h
 include/qgis/qgsgeomtypedialog.h
 include/qgis/qgsgeomtypedialogbase.uic.h
 include/qgis/qgsgraduatedmarenderer.h
@@ -60,12 +91,17 @@ include/qgis/qgslabelattributes.h
 include/qgis/qgslabeldialog.h
 include/qgis/qgslabeldialogbase.ui.h
 include/qgis/qgslabeldialogbase.uic.h
+include/qgis/qgslayerprojectionselector.h
+include/qgis/qgslayerprojectionselectorbase.ui.h
+include/qgis/qgslayerprojectionselectorbase.uic.h
 include/qgis/qgslegend.h
 include/qgis/qgslegenditem.h
 include/qgis/qgslegenditembase.uic.h
 include/qgis/qgsline.h
 include/qgis/qgslinestyledialog.h
 include/qgis/qgslinestyledialogbase.uic.h
+include/qgis/qgslinestylewidget.h
+include/qgis/qgslinestylewidgetbase.uic.h
 include/qgis/qgslinesymbol.h
 include/qgis/qgsludialog.h
 include/qgis/qgsludialogbase.uic.h
@@ -76,9 +112,13 @@ include/qgis/qgsmaplayerregistry.h
 include/qgis/qgsmapserverexport.h
 include/qgis/qgsmapserverexportbase.ui.h
 include/qgis/qgsmapserverexportbase.uic.h
+include/qgis/qgsmaptopixel.h
+include/qgis/qgsmarkercatalogue.h
 include/qgis/qgsmarkerdialog.h
 include/qgis/qgsmarkerdialogbase.uic.h
 include/qgis/qgsmarkersymbol.h
+include/qgis/qgsmeasure.h
+include/qgis/qgsmeasurebase.uic.h
 include/qgis/qgsmessageviewer.ui.h
 include/qgis/qgsmessageviewer.uic.h
 include/qgis/qgsnewconnection.h
@@ -88,6 +128,7 @@ include/qgis/qgsoptionsbase.uic.h
 include/qgis/qgspatterndialog.h
 include/qgis/qgspatterndialogbase.uic.h
 include/qgis/qgspgquerybuilder.h
+include/qgis/qgspgquerybuilderbase.ui.h
 include/qgis/qgspgutil.h
 include/qgis/qgspluginitem.h
 include/qgis/qgspluginmanager.h
@@ -95,11 +136,18 @@ include/qgis/qgspluginmanagerbase.uic.h
 include/qgis/qgspluginmetadata.h
 include/qgis/qgspluginregistry.h
 include/qgis/qgspoint.h
+include/qgis/qgspointstylewidget.h
+include/qgis/qgspointstylewidgetbase.uic.h
 include/qgis/qgspolygonsymbol.h
 include/qgis/qgsproject.h
+include/qgis/qgsprojectionselector.h
+include/qgis/qgsprojectionselectorbase.uic.h
 include/qgis/qgsprojectproperties.h
 include/qgis/qgsprojectpropertiesbase.ui.h
 include/qgis/qgsprojectpropertiesbase.uic.h
+include/qgis/qgsprojectproperty.h
+include/qgis/qgsprovidercountcalcevent.h
+include/qgis/qgsproviderextentcalcevent.h
 include/qgis/qgsprovidermetadata.h
 include/qgis/qgsproviderregistry.h
 include/qgis/qgsrangerenderitem.h
@@ -110,6 +158,7 @@ include/qgis/qgsrasterlayerpropertiesbase.uic.h
 include/qgis/qgsrect.h
 include/qgis/qgsrenderer.h
 include/qgis/qgsrenderitem.h
+include/qgis/qgsrunprocess.h
 include/qgis/qgsscalecalculator.h
 include/qgis/qgssimadialog.h
 include/qgis/qgssimadialogbase.uic.h
@@ -117,6 +166,7 @@ include/qgis/qgssimarenderer.h
 include/qgis/qgssinglesymrenderer.h
 include/qgis/qgssisydialog.h
 include/qgis/qgssisydialogbase.uic.h
+include/qgis/qgsspatialrefsys.h
 include/qgis/qgssvgcache.h
 include/qgis/qgssymbol.h
 include/qgis/qgssymbologyutils.h
@@ -134,28 +184,27 @@ lib/libqgis.la
 lib/qgis/copyrightlabelplugin.la
 lib/qgis/delimitedtextplugin.la
 lib/qgis/delimitedtextprovider.la
+lib/qgis/designer/qgisdesignerwidgets.la
+lib/qgis/georefplugin.la
 lib/qgis/gpsimporterplugin.la
 lib/qgis/gpxprovider.la
-lib/qgis/grassplugin.la
 lib/qgis/gridmakerplugin.la
 lib/qgis/libScaleBarplugin.la
-lib/qgis/libgrassprovider.la
+lib/qgis/libqgsprojectionselector.la
 lib/qgis/northarrowplugin.la
 lib/qgis/ogrprovider.la
 lib/qgis/pggeoprocessingplugin.la
 lib/qgis/postgresprovider.la
 lib/qgis/spitplugin.la
-man/man1/qgis.1
+man/man1/qgis.1.gz
 share/aclocal/qgis.m4
+share/pkg-vulnerabilities
 share/qgis/doc/AUTHORS
 share/qgis/doc/README
 share/qgis/doc/favicon.ico
 share/qgis/doc/images/qgis_new_80pct.png
 share/qgis/doc/index.html
 share/qgis/doc/install.pdf
-share/qgis/doc/install_guide/Makefile
-share/qgis/doc/install_guide/Makefile.am
-share/qgis/doc/install_guide/Makefile.in
 share/qgis/doc/install_guide/contents.png
 share/qgis/doc/install_guide/index.html
 share/qgis/doc/install_guide/install.css
@@ -188,13 +237,19 @@ share/qgis/doc/plugins/geoprocessing/buffer/index.html
 share/qgis/doc/plugins/geoprocessing/buffer/pluginmanager.png
 share/qgis/doc/qgisdoc.css
 share/qgis/doc/userguide.pdf
+share/qgis/i18n/qgis_cs_CZ.qm
 share/qgis/i18n/qgis_de.qm
 share/qgis/i18n/qgis_fr.qm
+share/qgis/i18n/qgis_id.qm
 share/qgis/i18n/qgis_it.qm
+share/qgis/i18n/qgis_ja.qm
+share/qgis/i18n/qgis_lv.qm
 share/qgis/i18n/qgis_nl.qm
+share/qgis/i18n/qgis_pl_PL.qm
 share/qgis/i18n/qgis_pt_BR.qm
 share/qgis/i18n/qgis_ru.qm
-share/qgis/i18n/qgis_se.qm
+share/qgis/i18n/qgis_sk.qm
+share/qgis/i18n/qgis_sv.qm
 share/qgis/i18n/qgis_zh_CN.qm
 share/qgis/images/developers/Denis_Antipov.jpg
 share/qgis/images/developers/Gary_E.Sherman.jpg
@@ -208,7 +263,11 @@ share/qgis/images/developers/Peter_Brewer.jpg
 share/qgis/images/developers/Radim_Blazek.jpg
 share/qgis/images/developers/Steve_Halasz.jpg
 share/qgis/images/developers/Tim_Sutton.jpg
+share/qgis/images/developers/Tom_Elwertowski.jpg
 share/qgis/images/icons/editable.png
+share/qgis/images/icons/icon_projection.png
+share/qgis/images/icons/icon_projection_disabled.png
+share/qgis/images/icons/icon_projection_problem.png
 share/qgis/images/icons/inoverview.png
 share/qgis/images/icons/no_pyramid.png
 share/qgis/images/icons/pyramid.png
@@ -220,6 +279,11 @@ share/qgis/images/icons/qgis_icon_new_large.png
 share/qgis/images/icons/qgis_icon_new_verylarge.png
 share/qgis/images/north_arrows/default.png
 share/qgis/images/splash/splash.png
+share/qgis/images/splash/splash_mask.png
+share/qgis/resources/qgis.db
+share/qgis/resources/qgis_help.db
+share/qgis/resources/spatial_ref_sys.txt
+share/qgis/resources/srs.db
 share/qgis/svg/biology/Coniferous.svg
 share/qgis/svg/biology/Deciduous.svg
 share/qgis/svg/biology/Flower.svg
@@ -271,13 +335,16 @@ share/qgis/svg/symbol/Cross6.svg
 share/qgis/svg/symbol/Star1.svg
 share/qgis/svg/symbol/Star2.svg
 share/qgis/svg/symbol/Star3.svg
+share/qgis/themes/default/action.png
 share/qgis/themes/default/add_all_to_overview.png
 share/qgis/themes/default/add_pg_layer.png
 share/qgis/themes/default/add_raster_layer.png
 share/qgis/themes/default/add_vector_layer.png
 share/qgis/themes/default/attribute_table.png
+share/qgis/themes/default/bookmarks.png
 share/qgis/themes/default/check_version.png
 share/qgis/themes/default/contexthelp.png
+share/qgis/themes/default/custom_projection.png
 share/qgis/themes/default/delete_selected.png
 share/qgis/themes/default/digitise_vector_layer.png
 share/qgis/themes/default/digitising_general.png
@@ -299,6 +366,8 @@ share/qgis/themes/default/hide_all_layers.png
 share/qgis/themes/default/home_page.png
 share/qgis/themes/default/identify.png
 share/qgis/themes/default/inline_table.png
+share/qgis/themes/default/measure.png
+share/qgis/themes/default/new_bookmark.png
 share/qgis/themes/default/pan.png
 share/qgis/themes/default/plugin_manager.png
 share/qgis/themes/default/preferences.png
@@ -308,6 +377,7 @@ share/qgis/themes/default/reload.png
 share/qgis/themes/default/remove_all_from_overview.png
 share/qgis/themes/default/remove_layer.png
 share/qgis/themes/default/save_map_image.png
+share/qgis/themes/default/save_map_svg.png
 share/qgis/themes/default/select.png
 share/qgis/themes/default/show_all_layers.png
 share/qgis/themes/default/sourceforge_page.png
@@ -317,20 +387,73 @@ share/qgis/themes/default/zoom_last.png
 share/qgis/themes/default/zoom_layer.png
 share/qgis/themes/default/zoom_out.png
 share/qgis/themes/default/zoom_selected.png
+share/qgis/themes/nkids/action.png
+share/qgis/themes/nkids/add_all_to_overview.png
+share/qgis/themes/nkids/add_pg_layer.png
+share/qgis/themes/nkids/add_raster_layer.png
+share/qgis/themes/nkids/add_vector_layer.png
+share/qgis/themes/nkids/attribute_table.png
+share/qgis/themes/nkids/bookmarks.png
+share/qgis/themes/nkids/contexthelp.png
+share/qgis/themes/nkids/custom_projection.png
+share/qgis/themes/nkids/delete_selected.png
+share/qgis/themes/nkids/digitise_vector_layer.png
+share/qgis/themes/nkids/digitising_general.png
+share/qgis/themes/nkids/digitising_line.png
+share/qgis/themes/nkids/digitising_point.png
+share/qgis/themes/nkids/exit.png
+share/qgis/themes/nkids/export_map_server.png
+share/qgis/themes/nkids/file_new.png
+share/qgis/themes/nkids/file_print.png
+share/qgis/themes/nkids/file_save.png
+share/qgis/themes/nkids/file_save_as.png
+share/qgis/themes/nkids/gis_plain_cursor.png
+share/qgis/themes/nkids/help_about.png
+share/qgis/themes/nkids/help_contents.png
+share/qgis/themes/nkids/hide_all_layers.png
+share/qgis/themes/nkids/home_page.png
+share/qgis/themes/nkids/identify.png
+share/qgis/themes/nkids/inline_table.png
+share/qgis/themes/nkids/layers.png
+share/qgis/themes/nkids/measure.png
+share/qgis/themes/nkids/new_bookmark.png
+share/qgis/themes/nkids/over-.png
+share/qgis/themes/nkids/over.png
+share/qgis/themes/nkids/over1.png
+share/qgis/themes/nkids/pan.png
+share/qgis/themes/nkids/plugin_manager.png
+share/qgis/themes/nkids/preferences.png
+share/qgis/themes/nkids/project_open.png
+share/qgis/themes/nkids/project_properties.png
+share/qgis/themes/nkids/qgis32x32.png
+share/qgis/themes/nkids/reload.png
+share/qgis/themes/nkids/remove_all_from_overview.png
+share/qgis/themes/nkids/remove_all_to_overview.png
+share/qgis/themes/nkids/remove_layer.png
+share/qgis/themes/nkids/save_map_image.png
+share/qgis/themes/nkids/select.png
+share/qgis/themes/nkids/show_all_layers.png
+share/qgis/themes/nkids/show_all_layers1.png
+share/qgis/themes/nkids/show_layerReal.png
+share/qgis/themes/nkids/zoom_full.png
+share/qgis/themes/nkids/zoom_in.png
+share/qgis/themes/nkids/zoom_last.png
+share/qgis/themes/nkids/zoom_layer.png
+share/qgis/themes/nkids/zoom_out.png
+share/qgis/themes/nkids/zoom_selected.png
+@dirrm share/qgis/themes/nkids
 @dirrm share/qgis/themes/default
-@dirrm share/qgis/themes
 @dirrm share/qgis/svg/symbol
 @dirrm share/qgis/svg/north_arrows
 @dirrm share/qgis/svg/icon
 @dirrm share/qgis/svg/gpsicons
 @dirrm share/qgis/svg/geometric
 @dirrm share/qgis/svg/biology
-@dirrm share/qgis/svg
+@dirrm share/qgis/resources
 @dirrm share/qgis/images/splash
 @dirrm share/qgis/images/north_arrows
 @dirrm share/qgis/images/icons
 @dirrm share/qgis/images/developers
-@dirrm share/qgis/images
 @dirrm share/qgis/i18n
 @dirrm share/qgis/doc/plugins/geoprocessing/buffer
 @dirrm share/qgis/doc/plugins/geoprocessing
@@ -340,5 +463,6 @@ share/qgis/themes/default/zoom_selected.png
 @dirrm share/qgis/doc/images
 @dirrm share/qgis/doc
 @dirrm share/qgis
+@dirrm lib/qgis/designer
 @dirrm lib/qgis
 @dirrm include/qgis

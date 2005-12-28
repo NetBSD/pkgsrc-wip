@@ -1,30 +1,31 @@
-# $NetBSD: Makefile,v 1.5 2005/11/02 18:00:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/28 17:33:08 mchittur Exp $
 #
 
-DISTNAME=		qgis-0.6.0
-CATEGORIES=		geography
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=qgis/}
+DISTNAME=		qgis-0.7.4
+CATEGORIES=		wip
+MASTER_SITES=		http://easynews.dl.sourceforge.net/sourceforge/qgis/
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://www.qgis.org/
-COMMENT=		QuantumGIS supports vector, raster and DB format data
+HOMEPAGE=		http://qgis.org
+COMMENT=		Open Source Geographic Information System
 
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=       yes
+GNU_CONFIGURE=          yes
 USE_TOOLS+=		gmake
+USE_LIBTOOL=		YES
 
-CONFIGURE_ARGS+=	--with-grass=${PREFIX}/grass-6.0.0
+CONFIGURE_ARGS+=        --without-grass
 
-pre-build:
-	${SED} -e 's:@QTBINDIR@:${QTDIR}/bin:g' ${WRKSRC}/create_qm_files.sh > ${WRKSRC}/create_qm_files.sh.tmp
-	${MV} ${WRKSRC}/create_qm_files.sh.tmp ${WRKSRC}/create_qm_files.sh
-	${CHMOD} 755 ${WRKSRC}/create_qm_files.sh
+SUBST_CLASSES=		qtbindir
+SUBST_STAGE.qtbindir=	pre-build
+SUBST_FILES.qtbindir=	create_qm_files.sh
+SUBST_SED.qtbindir=	"s:@QTBINDIR:${QTDIR}/bin:g"
+SUBST_MESSAGE.qtbindir=	"Fixing QT bin path"
 
-.include "../../wip/grass/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../wip/gdal-lib/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
-.include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
