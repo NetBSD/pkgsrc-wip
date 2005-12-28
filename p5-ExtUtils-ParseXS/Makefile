@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/28 22:03:18 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/28 22:13:18 kuli0020 Exp $
 
 DISTNAME=	ExtUtils-ParseXS-2.15
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,7 @@ PERL5_REQD+=    5.6.0
 
 DEPENDS+=	p5-ExtUtils-CBuilder>=0.00:../../wip/p5-ExtUtils-CBuilder
 
+PERL5_MODULE_TYPE=      Module::Build
 PERL5_PACKLIST= auto/ExtUtils/ParseXS/.packlist
 
 .include "../../lang/perl5/module.mk"
