@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/28 22:13:18 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/28 22:15:51 kuli0020 Exp $
 
 DISTNAME=	ExtUtils-ParseXS-2.15
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	kuli0020@umn.edu
 COMMENT=	Converts Perl XS code into C code
 PERL5_REQD+=    5.6.0
 
-DEPENDS+=	p5-ExtUtils-CBuilder>=0.00:../../wip/p5-ExtUtils-CBuilder
+DEPENDS+=	p5-ExtUtils-CBuilder>=0:../../wip/p5-ExtUtils-CBuilder
 
 PERL5_MODULE_TYPE=      Module::Build
 PERL5_PACKLIST= auto/ExtUtils/ParseXS/.packlist
