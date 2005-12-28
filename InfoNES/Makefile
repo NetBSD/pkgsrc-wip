@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2005/12/27 22:04:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/28 17:34:06 thomasklausner Exp $
 #
 
-DISTNAME=		InfoNES093J_Src
-PKGNAME=		InfoNES-0.93
+DISTNAME=		InfoNES096J_Src
+PKGNAME=		InfoNES-0.96
 CATEGORIES=		emulators
-MASTER_SITES=		http://www.geocities.co.jp/SiliconValley/5604/bin/
+MASTER_SITES=		http://osdn.dl.sourceforge.jp/infones/15525/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		wiz@NetBSD.org

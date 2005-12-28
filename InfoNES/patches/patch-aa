@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/07/19 19:42:21 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2005/12/28 17:34:06 thomasklausner Exp $
 
---- linux/Makefile.orig	2003-06-18 19:07:38.000000000 +0200
+--- linux/Makefile.orig	2005-07-09 23:31:34.000000000 +0200
 +++ linux/Makefile
-@@ -16,7 +16,7 @@ LDFILGS = `gtk-config --libs gthread` -l
+@@ -17,7 +17,7 @@ LDFILGS = `gtk-config --libs gthread` -l
  all: InfoNES
  
  InfoNES: $(.OFILES)
 -	$(CC) $(INCLUDES) -o $@ $(.OFILES) $(LDFILGS) -lm -lz
 +	$(CC) $(INCLUDES) -o $@ $(.OFILES) $(LDFILGS) -lm -lz ${LIBOSSAUDIO}
  
- .cpp.o:
- 	$(CC) $(INCLUDES) -c $(CCFLAGS) $*.cpp  -o $@
+ # To avoid the gcc optimization bug
+ ./../InfoNES_pAPU.o: ./../InfoNES_pAPU.cpp
