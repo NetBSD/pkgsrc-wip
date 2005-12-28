@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/08 10:19:49 ghen Exp $
-bin/cripple
-man/man1/cripple.1
