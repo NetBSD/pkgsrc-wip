@@ -1,0 +1,66 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/28 01:21:50 schnoebe Exp $
+${TRANSPORTDIR}/avatar.py
+${TRANSPORTDIR}/bool.py
+${TRANSPORTDIR}/config.py
+${TRANSPORTDIR}/contact.py
+${TRANSPORTDIR}/daemonize.py
+${TRANSPORTDIR}/debug.py
+${TRANSPORTDIR}/disco.py
+${TRANSPORTDIR}/exception.py
+${TRANSPORTDIR}/globals.py
+${TRANSPORTDIR}/groupchat.py
+${TRANSPORTDIR}/jabw.py
+${TRANSPORTDIR}/lang.py
+${TRANSPORTDIR}/langs/__init__.py
+${TRANSPORTDIR}/langs/cs.py
+${TRANSPORTDIR}/langs/de.py
+${TRANSPORTDIR}/langs/en.py
+${TRANSPORTDIR}/langs/fr.py
+${TRANSPORTDIR}/langs/nl.py
+${TRANSPORTDIR}/langs/pl.py
+${TRANSPORTDIR}/langs/ru.py
+${TRANSPORTDIR}/legacy/__init__.py
+${TRANSPORTDIR}/legacy/aimt.py
+${TRANSPORTDIR}/legacy/defaultAvatar.png
+${TRANSPORTDIR}/legacy/defaultJabberAvatar.png
+${TRANSPORTDIR}/legacy/glue.py
+${TRANSPORTDIR}/legacy/legacyiq.py
+${TRANSPORTDIR}/legacy/legacylist.py
+${TRANSPORTDIR}/PyAIMt.py
+${TRANSPORTDIR}/main.py
+${TRANSPORTDIR}/misciq.py
+${TRANSPORTDIR}/register.py
+${TRANSPORTDIR}/sasl.py
+${TRANSPORTDIR}/session.py
+${TRANSPORTDIR}/tlib/__init__.py
+${TRANSPORTDIR}/tlib/countrycodes.py
+${TRANSPORTDIR}/tlib/domish.py
+${TRANSPORTDIR}/tlib/jabber/__init__.py
+${TRANSPORTDIR}/tlib/jabber/client.py
+${TRANSPORTDIR}/tlib/jabber/component.py
+${TRANSPORTDIR}/tlib/jabber/jid.py
+${TRANSPORTDIR}/tlib/jabber/jstrports.py
+${TRANSPORTDIR}/tlib/jabber/xmpp_stringprep.py
+${TRANSPORTDIR}/tlib/oscar.py
+${TRANSPORTDIR}/tlib/scheduler.py
+${TRANSPORTDIR}/tlib/socks5.py
+${TRANSPORTDIR}/tlib/sockserror.py
+${TRANSPORTDIR}/tlib/xmlstream.py
+${TRANSPORTDIR}/utils.py
+${TRANSPORTDIR}/webadmin/__init__.py
+${TRANSPORTDIR}/webadmin/handler.py
+${TRANSPORTDIR}/xdb/__init__.py
+${TRANSPORTDIR}/xdb/legacyaimtransport.py
+${TRANSPORTDIR}/xdb/mysql.py
+${TRANSPORTDIR}/xdb/template.py
+${TRANSPORTDIR}/xdb/xmlfiles.py
+${TRANSPORTDIR}/xmlconfig.py
+share/examples/jabberd/pyaimt.xml
+share/examples/rc.d/pyaimt
+@dirrm ${TRANSPORTDIR}/webadmin
+@dirrm ${TRANSPORTDIR}/legacy
+@dirrm ${TRANSPORTDIR}/tlib/jabber
+@dirrm ${TRANSPORTDIR}/tlib
+@dirrm ${TRANSPORTDIR}/langs
+@dirrm ${TRANSPORTDIR}/xdb
+@dirrm ${TRANSPORTDIR}

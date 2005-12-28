@@ -1,0 +1,18 @@
+     AIM Transport for Jabber, implemented with Python and Twisted
+
+
+AIM portions written by Daniel Henninger
+Jabber portions (bulk of) written by James Bunton
+(ie: this is based on PyMSNt's code)
+
+Current I have:
+- ability to register with the transport
+- ability to log in and out of aim via the transport
+- ability to send and receive messages
+  - no 'composing' events functionality yet
+  - no 'xhtml' components yet (ie, non-straight text messages)
+  (both of these need to be added to James's base code)
+- ability to set away status
+- ability to add to and remove from your server side buddy list
+- it actually can use the spool that the c based aim transport uses
+- support for roster import (adding AIM buddies to your jabber roster)
