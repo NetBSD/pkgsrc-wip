@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2098 2005/12/25 12:49:50 yeled Exp $
+# $Id: Makefile,v 1.2099 2005/12/28 01:26:08 schnoebe Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -937,6 +937,7 @@ SUBDIR+=	py-generateDS
 SUBDIR+=	py-gettext-tools
 SUBDIR+=	py-gtk2-docs
 SUBDIR+=	py-ipython
+SUBDIR+=	py-jabber-aimt
 SUBDIR+=	py-jabber-msnt
 SUBDIR+=	py-kyra
 SUBDIR+=	py-libpcap
