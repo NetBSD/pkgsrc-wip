@@ -1,6 +1,0 @@
-"par2cmdline" provides a tool to apply the data-recovery capability concepts
-of RAID-like systems to the posting and recovery of files - usually multi-part
-binary files posted to Usenet. It is an extension of the original PAR format,
-in that it lifts several restrictions regarding filesizes. Additionally,
-partially downloaded files are no longer entirely discarded, giving it more
-effective protection with less recovery data.
