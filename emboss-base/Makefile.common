@@ -4,7 +4,6 @@ MASTER_SITES=		ftp://emboss.open-bio.org/pub/EMBOSS/old/2.9.0/
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.emboss.org/
 
-USE_X11=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -25,3 +24,4 @@ PKG_DISTFILES_DIR=	emboss
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
