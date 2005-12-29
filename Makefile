@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2104 2005/12/28 21:05:22 kristerw Exp $
+# $Id: Makefile,v 1.2105 2005/12/29 10:30:52 martijnb Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -700,6 +700,7 @@ SUBDIR+=	or1ksim
 SUBDIR+=	orion
 SUBDIR+=	orpie
 SUBDIR+=	ortp
+SUBDIR+=	par2cmdline
 SUBDIR+=	p3nfs
 SUBDIR+=	p5-Accessor-Chained
 SUBDIR+=	p5-Aceperl
