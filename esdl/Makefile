@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/13 12:16:12 ghen Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/30 14:00:05 ghen Exp $
 
 DISTNAME=	esdl-0.95.0630.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -14,8 +14,6 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	gmake
 BUILD_TARGET=	target
 
-DEPENDS+=	erlang>=9:../../lang/erlang
-BUILDLINK_PASSTHRU_DIRS+=	${LOCALBASE}/lib/erlang
-
+.include "../../lang/erlang/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
