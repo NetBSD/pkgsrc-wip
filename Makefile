@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2109 2005/12/30 14:07:39 ghen Exp $
+# $Id: Makefile,v 1.2110 2005/12/30 23:02:14 cetrox Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1241,6 +1241,7 @@ SUBDIR+=	xchat2-perl
 SUBDIR+=	xchat2-python
 SUBDIR+=	xchat2-tcl
 SUBDIR+=	xcmiscproto
+SUBDIR+=	xdiskusage
 SUBDIR+=	xextproto
 SUBDIR+=	xf86bigfontproto
 SUBDIR+=	xf86driproto
