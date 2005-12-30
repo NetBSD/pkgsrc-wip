@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/09/15 18:12:28 kuli0020 Exp $
+$NetBSD: distinfo,v 1.3 2005/12/30 22:02:03 kuli0020 Exp $
 
-SHA1 (Catalyst-5.33.tar.gz) = 0a800b4446e28fcdb8078e9b151f8ad4e73f0865
-RMD160 (Catalyst-5.33.tar.gz) = 07320351254460de157bcfe36ae95c94e1485807
-Size (Catalyst-5.33.tar.gz) = 73572 bytes
+SHA1 (Catalyst-5.61.tar.gz) = c148f155bc5f941247e5e5915326e319920917d4
+RMD160 (Catalyst-5.61.tar.gz) = cb07d8d0b0ad8f40b2968283e2d6c2cdaed09e60
+MD5 (Catalyst-5.61.tar.gz) = 8b22209f5f55e1c133a1303ddef49bd7
+SHA256 (Catalyst-5.61.tar.gz) = 6e43924d92c8dbb2f82d578d72654a31ead6205a10b1e52a55555ffd07f8645a
+Size (Catalyst-5.61.tar.gz) = 168320 bytes
