@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/12/24 17:07:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/30 19:27:56 martijnb Exp $
 #
 
 DISTNAME=		nzbget-0.2.3
+PKGREVISION=		1
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nzbget/}
 
