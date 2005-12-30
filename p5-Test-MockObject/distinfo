@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/12/30 21:00:07 kuli0020 Exp $
+
+SHA1 (Test-MockObject-1.01.tar.gz) = 15b5fe51c9ba610c4d798acede97d90161871f77
+RMD160 (Test-MockObject-1.01.tar.gz) = 0561566ed8732b96761118b5d328b653320daff6
+MD5 (Test-MockObject-1.01.tar.gz) = b056d6cc9c287285c1e5b04b04384178
+Size (Test-MockObject-1.01.tar.gz) = 18658 bytes
