@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/12/30 14:06:45 ghen Exp $
+
+--- unix/install_wings.src.orig	2003-10-13 20:40:32.000000000 +0200
++++ unix/install_wings.src
+@@ -4,5 +4,5 @@
+ #
+ WINGS_VSN="%WINGS_VSN%"
+-INSTALL_DIR="$HOME/wings-$WINGS_VSN"
++INSTALL_DIR="%%LOCALBASE%%/lib/erlang/lib/wings-$WINGS_VSN"
+ 
+ echo "Installing Wings 3D $WINGS_VSN in $INSTALL_DIR"
