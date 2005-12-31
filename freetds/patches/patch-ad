@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/12/31 05:10:57 jlamwww Exp $
+
+--- src/replacements/Makefile.in.orig	2005-12-30 04:16:18.000000000 -0500
++++ src/replacements/Makefile.in
+@@ -54,3 +54,3 @@ LTLIBRARIES = $(noinst_LTLIBRARIES)
+ libreplacements_la_DEPENDENCIES = @LTLIBOBJS@
+-am_libreplacements_la_OBJECTS = iconv.lo
++am_libreplacements_la_OBJECTS = iconv.lo dummy.lo
+ libreplacements_la_OBJECTS = $(am_libreplacements_la_OBJECTS)
+@@ -215,3 +215,3 @@ tds_sysdep_real64_type = @tds_sysdep_rea
+ noinst_LTLIBRARIES = libreplacements.la
+-libreplacements_la_SOURCES = iconv.c
++libreplacements_la_SOURCES = iconv.c dummy.c
+ libreplacements_la_LDFLAGS = 

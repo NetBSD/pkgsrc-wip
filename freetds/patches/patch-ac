@@ -1,0 +1,6 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/12/31 05:10:57 jlamwww Exp $
+
+--- src/replacements/dummy.c.orig	Sun May 23 14:00:52 2004
++++ src/replacements/dummy.c
+@@ -0,0 +1 @@
++int libreplacements_dummy;
