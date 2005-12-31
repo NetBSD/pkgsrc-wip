@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2005/11/06 10:41:45 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/31 03:00:40 mchittur Exp $
 #
 
-DISTNAME=		gdal-1.2.6
-PKGNAME=		gdal-lib-1.2.6
+DISTNAME=		gdal-1.3.1
+PKGNAME=		gdal-lib-1.3.1
 CATEGORIES=		geography
-MASTER_SITES=		http://gdal.org/dl/
+MASTER_SITES=		http://www.gdal.org/dl/
 
 MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://gdal.org/
