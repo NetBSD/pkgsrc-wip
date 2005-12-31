@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/31 05:10:57 jlamwww Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/31 05:37:26 jlamwww Exp $
 #
-# To update this package to the latest FreeTDS snapshot, change the
-# SNAPSHOT_VERS to match the version number in the directory name when
-# freetds-current.tgz is unpacked.  Remember to run "make distclean" so
-# that older tarballs are removed before "make fetch" is run.
+# To use this package to track FreeTDS snapshots, just do:
 #
-SNAPSHOT_VERS=	0.64.dev.20051230
+#	make distclean && make install
+#
+# This will remove the old distfile to force fetching the latest one
+# for installation.
+#
+
+# This package is perpetually at "alpha release 1" of the next release.
+PKGNAME=	freetds-0.64alpha1
 
 DISTNAME=	freetds-current
-PKGNAME=	freetds-${SNAPSHOT_VERS:S/.dev./alpha/}
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/ALPHA/freetds/current/
 EXTRACT_SUFX=	.tgz
@@ -19,7 +22,8 @@ COMMENT=	LGPL'd implementation of Sybase's db-lib/ct-lib/ODBC libs
 
 # We don't care about the distfile checksum for FreeTDS snapshots.
 NO_CHECKSUM=		yes
-WRKSRC=			${WRKDIR}/freetds-${SNAPSHOT_VERS}
+WRKSRC_cmd=		${LS} -1d ${WRKDIR:Q}/${PKGNAME_NOREV:C/alpha.*//}.dev.* 2>/dev/null || echo ${WRKDIR:Q}/nonexistent
+WRKSRC=			${WRKSRC_cmd:sh}
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
