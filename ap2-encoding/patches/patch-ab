@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/01/01 14:29:28 obache Exp $
+
+--- Makefile.in.orig	2002-06-11 17:46:39.000000000 +0900
++++ Makefile.in
+@@ -250,16 +250,16 @@ mostlyclean-generic distclean-generic cl
+ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 
+-all-local: mod_encoding.so
++all-local: mod_encoding.la
+ 
+-mod_encoding.so: mod_encoding.c
++mod_encoding.la: mod_encoding.c
+ 	$(APXS) -c $(CPPFLAGS) $(APXSFLAGS) $(LIBS) $<
+ 
+ install-exec-local:
+-	$(APXS) -i mod_encoding.so
++	$(APXS) -i mod_encoding.la
+ 
+ clean-local:
+-	rm -f *~ *.o *.so
++	rm -f *~ *.o *.la *.lo *.slo
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/01 14:29:28 obache Exp $
+lib/httpd/mod_encoding.so

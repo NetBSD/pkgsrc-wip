@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/01 14:29:28 obache Exp $
+
+--- mod_encoding.c.orig	2006-01-01 21:39:29.000000000 +0900
++++ mod_encoding.c
+@@ -76,7 +76,8 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
+ #include <http_request.h>
+ /* #include <ap_compat.h> */
+ 
+-#include <iconv_hook/iconv.h>
++#include <apr_strings.h>
++#include <iconv.h>
+ 
+ /**
+  * Core part of the module.

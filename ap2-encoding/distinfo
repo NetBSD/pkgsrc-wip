@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/01 14:29:28 obache Exp $
+
+SHA1 (mod_encoding-20021209.tar.gz) = 019d112d14e9b3d38aca84010726f8af480a43f5
+RMD160 (mod_encoding-20021209.tar.gz) = b0d731f427bb724c402503e4cbc98d78878b94fe
+Size (mod_encoding-20021209.tar.gz) = 260587 bytes
+SHA1 (mod_encoding.c.apache2.20040616) = 234917d1695670463f8ae18e414d6aa4d90a929c
+RMD160 (mod_encoding.c.apache2.20040616) = 439b7a6debaa8df6dfb6a46b6498b800b3f7049c
+Size (mod_encoding.c.apache2.20040616) = 16954 bytes
+SHA1 (patch-aa) = 09bec72a1499ae6fb71310ac0c4a203bff6d700e
+SHA1 (patch-ab) = 0dff8169fee3969801b11dc889fa550a6e321683
