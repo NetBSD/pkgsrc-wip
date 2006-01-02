@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/01/02 16:01:16 adrian_p Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/02 17:14:09 adrian_p Exp $
 
 DISTNAME=	anope-1.7.13
 CATEGORIES=	net
@@ -8,23 +8,30 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.anope.org/
 COMMENT=	Set of Services for IRC networks
 
-GNU_CONFIGURE=		YES
-PTHREAD_OPTS+=		require
-USE_PKGINSTALL=		YES
-USE_TOOLS+=		gmake perl:run
+GNU_CONFIGURE=	YES
+PTHREAD_OPTS+=	require
+USE_PKGINSTALL=	YES
+USE_TOOLS+=	gmake perl:run
+ANOPE_USER=	anope
+ANOPE_GROUP=	anope
+RCD_SCRIPTS=	anope
+FILES_SUBST+=	ANOPE_USER=${ANOPE_USER:Q}
+FILES_SUBST+=	ANOPE_GROUP=${ANOPE_GROUP:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_GROUPS=		anope
-MAKE_ENV+=		RUNGROUP=${PKG_GROUPS:Q}
+PKG_USERS=	${ANOPE_USER}:${ANOPE_GROUP}::anope\ user:${PREFIX}/lib/anope:${NOLOGIN}
+PKG_GROUPS=	${ANOPE_GROUP}
+MAKE_ENV+=	RUNGROUP=${ANOPE_GROUP:Q}
 
-CONF_FILES+=		${PREFIX}/share/examples/anope/example.conf \
-			${PREFIX}/lib/anope/services.conf
+CONF_FILES_PERMS+=	${PREFIX}/share/examples/anope/example.conf \
+			${PREFIX}/lib/anope/services.conf \
+			${ANOPE_USER} ${ANOPE_GROUP} 0640
 
 CONFIGURE_ARGS+=	--with-permissions=077
 CONFIGURE_ARGS+=	--with-bindir=${PREFIX}/lib/anope
 CONFIGURE_ARGS+=	--with-datadir=${PREFIX}/lib/anope
-CONFIGURE_ARGS+=	--with-rungroup=${PKG_GROUPS:Q}
+CONFIGURE_ARGS+=	--with-rungroup=${ANOPE_GROUP:Q}
 
 .include "options.mk"
 
@@ -32,7 +39,8 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	data/example.chk data/example.conf
 SUBST_SED.paths=	-e "s|/home/ircd/services|${PREFIX}/lib/anope|g" \
-			-e "s|/usr/local/lib/services|${PREFIX}/lib/anope|g"
+			-e "s|/usr/local/lib/services|${PREFIX}/lib/anope|g" \
+			-e "s|/home/username/services|${PREFIX}/lib/anope|g"
 SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
 
 SUBST_CLASSES+=		utils
@@ -55,6 +63,9 @@ post-install:
 	@${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/listnicks
 	@${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/services
 	@${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/modules/*.so
+	@${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope
+	@${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope/backups
+	@${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope/logs
 	${INSTALL_DATA} ${WRKSRC}/data/* ${PREFIX}/share/examples/anope
 
 .include "../../mk/bsd.pkg.mk"

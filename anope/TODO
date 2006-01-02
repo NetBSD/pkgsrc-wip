@@ -1,0 +1,2 @@
+Currently failing on startup with:
+	Shared object "nss_dns.so.0" not found
