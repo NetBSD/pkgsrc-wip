@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/12 23:51:22 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/02 08:54:56 rillig Exp $
 #
 
 DISTNAME=		luacheia5-5.0.1a4
@@ -11,10 +11,10 @@ COMMENT=		Extension libraries for LUA
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
-CPPFLAGS+=	"-I${PREFIX}/include"
-CPPFLAGS+=	"-I/usr/X11R6/include"
-LDFLAGS+=	"-L${PREFIX}/lib"
-LDFLAGS+=	"-L/usr/X11R6/lib"
+CPPFLAGS+=	-I${PREFIX:Q}/include
+CPPFLAGS+=	-I/usr/X11R6/include
+LDFLAGS+=	-L${PREFIX:Q}/lib
+LDFLAGS+=	-L/usr/X11R6/lib
 
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
