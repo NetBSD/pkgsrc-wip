@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/02 02:15:31 scode Exp $
+
+--- configure.in.orig	2006-01-02 02:07:05.000000000 +0100
++++ configure.in
+@@ -56,6 +56,8 @@ AC_CHECK_HEADERS([stropts.h])
+ 
+ dnl Check for OSS
+ 
++AC_CHECK_LIB(ossaudio, _oss_ioctl)
++
+ AC_CHECK_HEADER(sys/soundcard.h, have_oss=yes, have_oss=no)
+ AC_CHECK_HEADER(machine/soundcard.h, have_oss=yes, )
+ AM_CONDITIONAL(HAVE_OSS,test "$have_oss" = yes)

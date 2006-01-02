@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/02 02:15:31 scode Exp $
+bin/${PKGBASE}
+man/man1/${PKGBASE}.1
+share/doc/${PKGBASE}/AUTHORS
+share/doc/${PKGBASE}/COPYING
+share/doc/${PKGBASE}/README
+share/doc/${PKGBASE}/basic.html
+share/doc/${PKGBASE}/config.html
+share/doc/${PKGBASE}/faq.html
+share/doc/${PKGBASE}/index.html
+share/doc/${PKGBASE}/inputs.html
+share/doc/${PKGBASE}/intro.html
+share/doc/${PKGBASE}/style.css
+share/examples/${PKGBASE}/ices-alsa.xml
+share/examples/${PKGBASE}/ices-oss.xml
+share/examples/${PKGBASE}/ices-playlist.xml
+@dirrm share/examples/${PKGBASE}
+@dirrm share/doc/${PKGBASE}
