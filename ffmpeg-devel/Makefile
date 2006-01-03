@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 22:27:45 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/03 22:21:41 xtraeme Exp $
 
 DISTNAME=	ffmpeg-0.4.9-pre1
 PKGNAME=	ffmpeg-devel-0.4.9pre1
@@ -39,8 +39,7 @@ post-install:
 		${PREFIX}/share/doc/ffmpeg
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/doc/TODO \
 		${PREFIX}/share/doc/ffmpeg
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${WRKSRC}/doc/*.txt \
-		${PREFIX}/share/doc/ffmpeg
+	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${PREFIX}/share/doc/ffmpeg
 	${INSTALL_DATA} ${WRKSRC}/doc/ffserver.conf \
 		${PREFIX}/share/examples/ffmpeg
 	# ffplay not installed
@@ -51,5 +50,4 @@ post-install:
 		${PREFIX}/include/ffmpeg/libpostproc
 
 .include "../../devel/libgetopt/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
