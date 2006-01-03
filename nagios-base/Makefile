@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 22:27:46 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2006/01/03 10:26:21 absd Exp $
 #
 
-DISTNAME=	nagios-1.2
+DISTNAME=	nagios-1.3
 PKGNAME=	${DISTNAME:S/-/-base-/}
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagios/}
@@ -44,13 +44,11 @@ EGFILES=	cgi.cfg checkcommands.cfg contactgroups.cfg contacts.cfg	\
 .for _f_ in ${EGFILES}
 CONF_FILES+=	${EGDIR}/${_f_}-sample ${PKG_SYSCONFDIR}/${_f_}
 .endfor
-.undef _f_
 
 NAGIOS_DIRS=	log/nagios log/nagios/archives run/nagios run/nagios/rw
 .for _d_ in ${NAGIOS_DIRS}
 OWN_DIRS_PERMS+=	${VARBASE}/${_d_} ${NAGIOS_USER} ${NAGIOS_GROUP} 0775
 .endfor
-.undef _d_
 
 MESSAGE_SUBST+=	PREFIX=${PREFIX}
 
