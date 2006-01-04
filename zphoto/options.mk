@@ -1,7 +1,9 @@
-# $NetBSD: options.mk,v 1.3 2005/06/02 05:13:09 obache Exp $
+# $NetBSD: options.mk,v 1.4 2006/01/04 02:52:04 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zphoto
-PKG_SUPPORTED_OPTIONS=	imlib2 magick zip avifile wx
+PKG_SUPPORTED_OPTIONS=	zip avifile wx
+PKG_OPTIONS_REQUIRED_GROUPS=	graphics
+PKG_OPTIONS_GROUP.graphics=	imlib2 magick
 PKG_SUGGESTED_OPTIONS=	imlib2
 
 .include "../../mk/bsd.options.mk"
