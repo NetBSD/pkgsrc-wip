@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/05 23:29:13 thomasklausner Exp $
 #
 
 DISTNAME=		k3b-0.11.24
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.k3b.org/
 COMMENT=		DVD and CD authoring program
 
 DEPENDS+=  		cdrdao-[0-9]*:../../sysutils/cdrdao
-DEPENDS+=  		{cdrecord,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrecord
+DEPENDS+=  		{cdrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
