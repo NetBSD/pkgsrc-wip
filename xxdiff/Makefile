@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/15 18:57:24 ghen Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/05 10:11:26 ghen Exp $
 
 DISTNAME=		xxdiff-3.1
 CATEGORIES=		devel
@@ -32,6 +32,5 @@ do-install:
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
-BUILDLINK_DEPMETHOD.qt3-tools=	build
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

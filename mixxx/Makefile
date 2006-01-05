@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/13 12:16:13 ghen Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/05 10:11:26 ghen Exp $
 
 DISTNAME=		mixxx-1.4.2
 CATEGORIES=		audio
@@ -28,7 +28,6 @@ SUBST_SED.bash=		-e 's,%%LOCALBASE%%,${LOCALBASE},g'
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
-BUILDLINK_DEPMETHOD.qt3-tools=	build
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

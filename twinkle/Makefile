@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/16 18:48:17 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/05 10:11:26 ghen Exp $
 #
 
 DISTNAME=		twinkle-0.4.2
@@ -16,6 +16,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+="--without-kde"
 
 .include "../../x11/qt3-tools/buildlink3.mk"
+# XXX Please verify whether qt3-tools is really needed at run-time.
+# If it is, then remove this comment.  If it is not, then remove
+# this comment and the line below, and bump PKGREVISION.
+BUILDLINK_DEPMETHOD.qt3-tools=	full
 ## x11/qt3-libs/ is broken
 ## cp work/qt-x11-free-3.3.5/lib/qt-mt.pc /usr/pkg/lib/pkgconfig/
 .include "../../x11/qt3-libs/buildlink3.mk"

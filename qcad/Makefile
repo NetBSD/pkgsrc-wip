@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/12 23:51:26 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/05 10:11:25 ghen Exp $
 #
 
 DISTNAME=		qcad-2.0.4.0-1.src
@@ -71,5 +71,9 @@ do-install:
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
+# XXX Please verify whether qt3-tools is really needed at run-time.
+# If it is, then remove this comment.  If it is not, then remove
+# this comment and the line below, and bump PKGREVISION.
+BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/24 10:30:27 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/05 10:11:25 ghen Exp $
 
 DISTNAME=	kapital-1.1.030606
 CATEGORIES=	devel kde
@@ -44,5 +44,9 @@ SHLIBTOOL_OVERRIDE=	libtool
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
+# XXX Please verify whether qt3-tools is really needed at run-time.
+# If it is, then remove this comment.  If it is not, then remove
+# this comment and the line below, and bump PKGREVISION.
+BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

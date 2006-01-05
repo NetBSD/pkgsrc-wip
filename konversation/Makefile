@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/12 23:51:21 kristerw Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/05 10:11:25 ghen Exp $
 #
 
 DISTNAME=	konversation-0.15
@@ -22,6 +22,10 @@ REPLACE_PERL=		src/konversation/konversation-0.14-mainwindow.pl
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
+# XXX Please verify whether qt3-tools is really needed at run-time.
+# If it is, then remove this comment.  If it is not, then remove
+# this comment and the line below, and bump PKGREVISION.
+BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
