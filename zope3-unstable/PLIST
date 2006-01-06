@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/12/26 10:17:38 ykomatsu Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/01/06 00:47:21 ykomatsu Exp $
 bin/mkzeoinstance
 bin/mkzopeinstance
 bin/zopetest
@@ -6388,6 +6388,7 @@ share/zope3/lib/python/zope/app/event/tests/test_objectevent.pyo
 share/zope3/lib/python/zope/app/exception/__init__.py
 share/zope3/lib/python/zope/app/exception/__init__.pyc
 share/zope3/lib/python/zope/app/exception/__init__.pyo
+share/zope3/lib/python/zope/app/exception/browser/SETUP.cfg
 share/zope3/lib/python/zope/app/exception/browser/__init__.py
 share/zope3/lib/python/zope/app/exception/browser/__init__.pyc
 share/zope3/lib/python/zope/app/exception/browser/__init__.pyo
@@ -11118,6 +11119,7 @@ share/zope3/zopeskel/etc/package-includes/cache-configure.zcml
 share/zope3/zopeskel/etc/package-includes/dav-configure.zcml
 share/zope3/zopeskel/etc/package-includes/dav-meta.zcml
 share/zope3/zopeskel/etc/package-includes/debugskin-configure.zcml
+share/zope3/zopeskel/etc/package-includes/exception-ftesting.zcml
 share/zope3/zopeskel/etc/package-includes/file-configure.zcml
 share/zope3/zopeskel/etc/package-includes/formlib-configure.zcml
 share/zope3/zopeskel/etc/package-includes/ftp-configure.zcml
