@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2118 2006/01/03 14:47:35 roelants Exp $
+# $Id: Makefile,v 1.2119 2006/01/07 01:12:56 cetrox Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -56,6 +56,7 @@ SUBDIR+=	aolserver4
 SUBDIR+=	aop
 SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-choke
+SUBDIR+=	ap-evasive
 SUBDIR+=	ap-frontpage
 SUBDIR+=	ap-macro
 SUBDIR+=	ap-ometer
