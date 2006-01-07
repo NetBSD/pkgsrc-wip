@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/07 01:10:00 cetrox Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/07 01:39:10 cetrox Exp $
 #
 
 .include "Makefile.common"
@@ -15,7 +15,7 @@ USE_TOOLS+=		mail
 SUBST_CLASSES+=		mailer
 SUBST_STAGE.mailer=	post-patch
 SUBST_FILES.mailer=	mod_evasive.c
-SUBST_SED.mailer=	-e s,/usr/bin/mail,${MAIL_CMD},
+SUBST_SED.mailer=	-e s,/bin/mail,${MAIL_CMD},
 SUBST_MESSAGE.mailer=	"Fixing mail command path."
 
 .include "../../www/apache/module.mk"
