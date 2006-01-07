@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2005/11/27 10:08:44 leonardschmidt Exp $
+$NetBSD: patch-ac,v 1.2 2006/01/07 16:02:07 pippijn Exp $
 
---- configure.orig	2005-11-21 04:02:12.000000000 +0000
+--- configure.orig      2006-01-07 16:50:04.000000000 +0100
 +++ configure
-@@ -2728,7 +2728,7 @@ echo "${ECHO_T}libraries $x_libraries, h
- fi
- 
- 
--CFLAGS="-O2 $CFLAGS -ansi -D_XOPEN_SOURCE=600"
-+CFLAGS="$CFLAGS -D_XOPEN_SOURCE=600"
- 
- if test ! "$no_x" = "yes" ; then
- 	if test ! x"$x_libraries" = x ; then
+-2728,7 +2728,7 @@ echo "${ECHO_T}libraries $x_libraries, h
+fi
+
+
+-CFLAGS="-O2 $CFLAGS -ansi"
++CFLAGS="$CFLAGS -D_OPEN_SOURCE=600"
+
+if test ! "$no_x" = "yes" ; then
+if test ! x"$x_libraries" = x ; then
