@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2005/11/16 13:01:40 akihabara Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/07 09:04:03 akihabara Exp $
 man/man8/chpst.8
 man/man8/runit-init.8
 man/man8/runit.8
@@ -54,19 +54,23 @@ share/doc/runit/useinit.html
 share/doc/runit/utmpset.8.html
 share/examples/runit/2
 share/examples/runit/debian/1
+share/examples/runit/debian/2
 share/examples/runit/debian/3
 share/examples/runit/debian/ctrlaltdel
 share/examples/runit/debian/getty-tty5/finish
 share/examples/runit/debian/getty-tty5/run
 share/examples/runit/freebsd/1
+share/examples/runit/freebsd/2
 share/examples/runit/freebsd/3
 share/examples/runit/freebsd/ctrlaltdel
 share/examples/runit/freebsd/getty-ttyv4/finish
 share/examples/runit/freebsd/getty-ttyv4/run
+share/examples/runit/macosx/2
 share/examples/runit/macosx/StartupItems/StartupParameters.plist
 share/examples/runit/macosx/StartupItems/runit
 share/examples/runit/macosx/org.smarden.runit.plist
 share/examples/runit/openbsd/1
+share/examples/runit/openbsd/2
 share/examples/runit/openbsd/3
 share/examples/runit/openbsd/ctrlaltdel
 share/examples/runit/openbsd/getty-ttyC4/finish

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/28 00:27:28 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/07 09:04:03 akihabara Exp $
 
 DISTNAME=	runit-1.3.1
 CATEGORIES=	sysutils
@@ -12,13 +12,11 @@ WRKSRC=		${WRKDIR}/admin/${DISTNAME}
 CMDDIR=		${WRKSRC}/command
 
 SERVICEDIR?=	${VARBASE}/spool/service
+OWN_DIRS_PERMS= ${SERVICEDIR} ${ROOT_USER} ${ROOT_GROUP} 0755
 EXAMPLEDIR=	${PREFIX}/share/examples/${PKGBASE}
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 DOCS=		package/CHANGES package/COPYING package/README \
 		package/THANKS doc/*.html
-
-PLIST_SUBST+=	SERVICEDIR=${SERVICEDIR:Q}
-DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
 
 INSTALLATION_DIRS= man man/man8 sbin share/examples/runit
 
@@ -28,20 +26,12 @@ post-patch:
 
 do-build:
 	cd ${WRKSRC} && package/compile
-	${SED}	"s,@@SERVICEDIR@@,${SERVICEDIR},g"			\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 
 do-install:
 	${INSTALL_PROGRAM} ${CMDDIR}/* ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/man/*.8 ${PREFIX}/man/man8
-	${INSTALL_DATA_DIR} ${SERVICEDIR
-	( cd ${WRKSRC}/etc && ${FIND} . -type d ) | while read DIR; do	\
-	  ${INSTALL_DATA_DIR} ${EXAMPLEDIR}/$$DIR;			\
-        done
+	cd ${WRKSRC}/etc && ${PAX} -rwppm . ${EXAMPLEDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCDIR}
-	( cd ${WRKSRC}/etc && ${FIND} . -type f ) | while read FILE; do	\
- 	  ${INSTALL_DATA} ${WRKSRC}/etc/$$FILE ${EXAMPLEDIR}/$$FILE;	\
-        done
 
 .include "../../mk/bsd.pkg.mk"
