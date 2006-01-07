@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/01/06 00:47:21 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/07 14:50:56 ykomatsu Exp $
 #
 
 DISTNAME=		Zope-3.2.0
@@ -27,7 +27,6 @@ EXTRACT_USING=		gtar
 
 BUILD_TARGET=		build
 
-#USE_PKGINSTALL=		yes
 RCD_SCRIPTS=		zope3 zss3
 PKG_GROUPS=		${ZOPE3_GROUP}
 PKG_USERS=		${ZOPE3_USER}:${ZOPE3_GROUP}::Zope3\ user
