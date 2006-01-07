@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/03 14:32:41 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/07 17:55:42 roelants Exp $
 #
 
 PKGNAME=		ruby-gnome2-pango-${VERSION}
 COMMENT=		Ruby binding of pango-1.x
+CATEGORIES=		devel fonts
 
 RUBY_EXTCONF_SUBDIRS=	pango
 
@@ -13,4 +14,4 @@ USE_TOOLS+=		pkg-config
 INSTALL_TARGET=		install
 
 .include "../../devel/pango/buildlink3.mk"
-.include "../../wip/ruby-gnome2-all/Makefile.common"
+.include "../../wip/ruby-gnome2/Makefile.common"

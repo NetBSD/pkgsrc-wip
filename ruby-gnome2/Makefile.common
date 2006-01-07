@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2006/01/07 17:46:57 roelants Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/01/07 17:55:41 roelants Exp $
 #
 
 DISTNAME=		ruby-gnome2-all-${VERSION}
-CATEGORIES=		x11 ruby
+CATEGORIES+=		ruby
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ruby-gnome2/}
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/ruby-gnome2/distinfo
@@ -11,6 +11,7 @@ MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://ruby-gnome2.sourceforge.jp/
 
 VERSION=		0.14.1
+RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
 
 .include "../../lang/ruby/modules.mk"
