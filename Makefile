@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2123 2006/01/07 17:55:41 roelants Exp $
+# $Id: Makefile,v 1.2124 2006/01/07 23:17:40 h2m Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1114,6 +1114,7 @@ SUBDIR+=	sm-change_ldappass
 SUBDIR+=	sm-change_qldforward
 SUBDIR+=	sm-compatibility
 SUBDIR+=	smbldap-tools
+SUBDIR+=	smc
 SUBDIR+=	smlnj-current
 SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
