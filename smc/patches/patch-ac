@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1 2006/01/07 23:03:06 h2m Exp $
+
+--- makefile.am.orig	2005-05-30 02:34:50.000000000 +0000
++++ makefile.am
+@@ -2,5 +2,5 @@
+ 
+ AUTOMAKE_OPTIONS = foreign 1.7
+ 
+-SUBDIRS = src data docs
++SUBDIRS = src
+ 
