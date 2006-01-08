@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/11 02:56:20 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/08 13:04:51 absd Exp $
 ${PG_SUBPREFIX}bin/clusterdb
 ${PG_SUBPREFIX}bin/createdb
 ${PG_SUBPREFIX}bin/createlang
@@ -944,6 +944,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-1.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-10.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-11.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-12.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-4.html
@@ -954,6 +955,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-8.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-9.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-1.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-10.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-4.html
@@ -967,7 +969,9 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-1.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-4.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-5.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/resources.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/role-attributes.html

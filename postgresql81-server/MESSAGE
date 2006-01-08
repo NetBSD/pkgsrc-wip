@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/12/11 02:56:20 uebayasi Exp $
+$NetBSD: MESSAGE,v 1.2 2006/01/08 13:04:51 absd Exp $
 
 To enable this package, put the following into your /etc/rc.conf:
 
@@ -13,7 +13,7 @@ and ensure that
 
 is run at the appropriate time.
 
-Note: PostgreSQL 8.0 accepts TCP/IP connections on localhost address
+Note: PostgreSQL 8.1 accepts TCP/IP connections on localhost address
 by default.
 
 ===========================================================================
