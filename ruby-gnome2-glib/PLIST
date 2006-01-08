@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/07 17:55:41 roelants Exp $
-${RUBY_SITELIBDIR}/glib2.rb
-${RUBY_SITELIBDIR}/${MACHINE_ARCH}-${LOWER_OPSYS}elf/glib2.so
-${RUBY_SITELIBDIR}/mkmf-gnome2.rb
-${RUBY_SITELIBDIR}/pkg-config.rb
