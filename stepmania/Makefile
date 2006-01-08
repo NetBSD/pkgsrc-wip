@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/11/05 22:07:59 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/08 17:58:52 shattered Exp $
 #
 
-DISTNAME=		StepMania-3.9-rc4a-src
-PKGNAME=		stepmania-3.9rc4
+DISTNAME=		StepMania-3.9-src
+PKGNAME=		stepmania-3.9
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=stepmania/}
 
@@ -10,7 +10,7 @@ MAINTAINER=		shattered@users.sourceforge.net
 HOMEPAGE=		http://www.stepmania.com/stepmania/
 COMMENT=		Music/rhythm game (Dance Dance Revolution) simulator
 
-WRKSRC=			${WRKDIR}/StepMania-3.9-rc4-src
+WRKSRC=			${WRKDIR}/StepMania-3.9-src
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tests
 USE_X11=		YES
