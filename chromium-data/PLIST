@@ -1,14 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/30 15:11:40 poppnk Exp $
-share/chromium/CVS/Entries
-share/chromium/CVS/Repository
-share/chromium/CVS/Root
-share/chromium/doc/CVS/Entries
-share/chromium/doc/CVS/Repository
-share/chromium/doc/CVS/Root
+@comment $NetBSD: PLIST,v 1.2 2006/01/08 09:57:18 rillig Exp $
 share/chromium/doc/faq.htm
-share/chromium/doc/images/CVS/Entries
-share/chromium/doc/images/CVS/Repository
-share/chromium/doc/images/CVS/Root
 share/chromium/doc/images/heroAmmo00.jpg
 share/chromium/doc/images/heroAmmo01.jpg
 share/chromium/doc/images/heroAmmo02.jpg
@@ -17,9 +8,6 @@ share/chromium/doc/images/powerUp01.jpg
 share/chromium/doc/images/powerUp02.jpg
 share/chromium/doc/images/useItem00.jpg
 share/chromium/doc/info.htm
-share/chromium/fonts/CVS/Entries
-share/chromium/fonts/CVS/Repository
-share/chromium/fonts/CVS/Root
 share/chromium/fonts/space.txf
 share/chromium/fonts/space.txf.small
 share/chromium/png/.xvpics/cursor.png
@@ -28,9 +16,6 @@ share/chromium/png/.xvpics/gndMetalBase02.png
 share/chromium/png/.xvpics/menu_updown.png
 share/chromium/png/.xvpics/menu_updown.xcf
 share/chromium/png/.xvpics/reflect.png
-share/chromium/png/CVS/Entries
-share/chromium/png/CVS/Repository
-share/chromium/png/CVS/Root
 share/chromium/png/check.png
 share/chromium/png/chrome.jpg
 share/chromium/png/cursor.png
@@ -96,9 +81,6 @@ share/chromium/png/superBomb.png
 share/chromium/png/useFocus.png
 share/chromium/png/useItem00.png
 share/chromium/png/useItem01.png
-share/chromium/wav/CVS/Entries
-share/chromium/wav/CVS/Repository
-share/chromium/wav/CVS/Root
 share/chromium/wav/boom.wav
 share/chromium/wav/exploBig.wav
 share/chromium/wav/exploPop.wav
@@ -108,16 +90,10 @@ share/chromium/wav/life_lose.wav
 share/chromium/wav/music_game.wav
 share/chromium/wav/music_menu.wav
 share/chromium/wav/power.wav
-@dirrm share/chromium/wav/CVS
 @dirrm share/chromium/wav
-@dirrm share/chromium/png/CVS
 @dirrm share/chromium/png/.xvpics
 @dirrm share/chromium/png
-@dirrm share/chromium/fonts/CVS
 @dirrm share/chromium/fonts
-@dirrm share/chromium/doc/images/CVS
 @dirrm share/chromium/doc/images
-@dirrm share/chromium/doc/CVS
 @dirrm share/chromium/doc
-@dirrm share/chromium/CVS
 @dirrm share/chromium
