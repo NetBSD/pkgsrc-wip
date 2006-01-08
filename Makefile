@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2129 2006/01/08 03:38:49 minskim Exp $
+# $Id: Makefile,v 1.2130 2006/01/08 03:51:07 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1036,7 +1036,6 @@ SUBDIR+=	ruby-dpklib
 SUBDIR+=	ruby-gnome2
 SUBDIR+=	ruby-gnome2-gnome
 SUBDIR+=	ruby-gnome2-gnomecanvas
-SUBDIR+=	ruby-gnome2-gtk
 SUBDIR+=	ruby-gnome2-panelapplet
 SUBDIR+=	ruby-misen
 SUBDIR+=	ruby-ncurses
