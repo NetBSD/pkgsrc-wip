@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/01/08 12:22:45 rxg Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/08 13:00:47 rxg Exp $
 #
 
 DISTNAME=	hanzim-1.3
@@ -11,6 +11,8 @@ HOMEPAGE=	http://zakros.ucsd.edu/~arobert/hanzim.html
 COMMENT=	Chinese character learning-aid program
 
 WRKSRC=		${WRKDIR}/Hanzim
+
+BUILD_TARGET=	hanzim
 
 pre-install:
 	@if [ "$$DISPLAY" = "" ]; then \

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/11/07 04:39:39 rxg Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/08 13:00:49 rxg Exp $
 
 --- Makefile.orig	2002-03-20 13:59:19.000000000 +0800
 +++ Makefile
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/07 04:39:39 rxg Exp $
  
  # you might need to change "libtcl" and "libtk" to "libtcl8.x" and "libtk8.x"
 -LIBS = $(LIBXDIR) $(LIBTCLDIR) -ltk -ltcl -lX11 -lm -ldl
-+LIBS = $(LIBXDIR) $(LIBTCLDIR) -ltk84 -ltcl84 -lX11 -lm -lpthread
++LIBS = $(LIBXDIR) $(LIBTCLDIR) -ltk -ltcl -lX11 -lm -lpthread
  
  INSTALL = install
  RM = rm -f
@@ -57,16 +57,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/07 04:39:39 rxg Exp $
  
  DIST_FILES = Hanzim/hanzim.h Hanzim/hgb_utf.h \
  		Hanzim/hanzim.c Hanzim/hanwin.c Hanzim/hinit.c Hanzim/hutil.c \
-@@ -74,6 +74,8 @@ DIST_FILES = Hanzim/hanzim.h Hanzim/hgb_
- 		Hanzim/makefile.vc Hanzim/hanzim.exe Hanzim/README.windows \
- 		Hanzim/README.macintosh
- 
-+     all : hanzim
-+
-      hanzim : hanzim.o hanwin.o hinit.o hutil.o
- 		$(CC) -o hanzim hanwin.o hanzim.o hinit.o hutil.o $(LFLAGS)
- 
-@@ -87,13 +89,13 @@ DIST_FILES = Hanzim/hanzim.h Hanzim/hgb_
+@@ -87,13 +87,13 @@ DIST_FILES = Hanzim/hanzim.h Hanzim/hgb_
  		$(CC) $(CFLAGS) -c hutil.c
  
       install : hanzim
