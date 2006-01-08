@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/01/08 03:12:50 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/08 03:21:44 minskim Exp $
 #
 
 PKGNAME=		ruby-gnome2-gtk-${VERSION}
@@ -9,7 +9,7 @@ RUBY_EXTCONF_SUBDIRS=	gtk
 
 DEPENDS+=		ruby-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
 DEPENDS+=		ruby-gnome2-atk>=${VERSION}:../../devel/ruby-gnome2-atk
-DEPENDS+=		ruby-gnome2-gdkpixbuf>=${VERSION}:../../wip/ruby-gnome2-gdkpixbuf
+DEPENDS+=		ruby-gnome2-gdkpixbuf>=${VERSION}:../../graphics/ruby-gnome2-gdkpixbuf
 
 USE_TOOLS+=		pkg-config
 
