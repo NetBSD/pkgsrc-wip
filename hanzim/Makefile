@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/06/12 23:51:20 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/08 12:22:45 rxg Exp $
 #
 
 DISTNAME=	hanzim-1.3
 CATEGORIES=	misc
-MASTER_SITES=	ftp://kommos.ucsd.edu/pub/arobert/Chinese/
+MASTER_SITES=	http://kamares.ucsd.edu/~arobert/Files/Chinese/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org
