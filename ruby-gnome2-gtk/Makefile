@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/07 17:55:42 roelants Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/08 03:00:18 minskim Exp $
 #
 
 PKGNAME=		ruby-gnome2-gtk-${VERSION}
@@ -17,4 +17,4 @@ USE_TOOLS+=		pkg-config
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../wip/ruby-gnome2-pango/buildlink3.mk"
-.include "../../wip/ruby-gnome2/Makefile.common"
+.include "../../meta-pkgs/ruby-gnome2/Makefile.common"

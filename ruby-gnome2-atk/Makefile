@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/07 17:55:41 roelants Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/08 03:00:17 minskim Exp $
 #
 
 PKGNAME=		ruby-gnome2-atk-${VERSION}
@@ -11,4 +11,4 @@ DEPENDS+=		ruby-gnome2-glib>=${VERSION}:../../wip/ruby-gnome2-glib
 USE_TOOLS+=		pkg-config
 
 .include "../../devel/atk/buildlink3.mk"
-.include "../../wip/ruby-gnome2/Makefile.common"
+.include "../../meta-pkgs/ruby-gnome2/Makefile.common"
