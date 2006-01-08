@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/11/03 09:53:44 leonardschmidt Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/01/08 17:56:50 shattered Exp $
 bin/xmms2
 bin/xmms2d
 include/xmms2/xmms/xmms_config.h
@@ -10,7 +10,6 @@ include/xmms2/xmms/xmms_effectplugin.h
 include/xmms2/xmms/xmms_error.h
 include/xmms2/xmms/xmms_ipc.h
 include/xmms2/xmms/xmms_log.h
-include/xmms2/xmms/xmms_magic.h
 include/xmms2/xmms/xmms_medialib.h
 include/xmms2/xmms/xmms_object.h
 include/xmms2/xmms/xmms_output.h
