@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/01/08 03:00:18 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/08 03:59:14 minskim Exp $
 #
 
 PKGNAME=		ruby-gnome2-gnome-${VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=		gnome x11
 
 RUBY_EXTCONF_SUBDIRS=	gnome
 
-DEPENDS+=		ruby-gnome2-gnomecanvas>=${VERSION}:../../wip/ruby-gnome2-gnomecanvas
+DEPENDS+=		ruby-gnome2-gnomecanvas>=${VERSION}:../../graphics/ruby-gnome2-gnomecanvas
 
 USE_TOOLS+=		pkg-config
 
