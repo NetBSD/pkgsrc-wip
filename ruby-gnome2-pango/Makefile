@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/01/08 03:00:18 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/08 03:02:37 minskim Exp $
 #
 
 PKGNAME=		ruby-gnome2-pango-${VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=		devel fonts
 
 RUBY_EXTCONF_SUBDIRS=	pango
 
-DEPENDS+=		ruby-gnome2-glib>=${VERSION}:../../wip/ruby-gnome2-glib
+DEPENDS+=		ruby-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
 
 USE_TOOLS+=		pkg-config
 
