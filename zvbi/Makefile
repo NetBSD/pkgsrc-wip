@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/29 10:48:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/09 09:41:42 rillig Exp $
 #
 
 DISTNAME=		zvbi-0.2.16
@@ -18,7 +18,7 @@ TEST_TARGET=		check
 
 SUBST_CLASSES+=		putwchar
 SUBST_STAGE.putwchar=	post-extract
-SUBST_MESSAGE.putwchar=	"Renaming conflicting function putwchar."
+SUBST_MESSAGE.putwchar=	Renaming conflicting function putwchar.
 SUBST_FILES.putwchar=	test/glyph.c test/unicode.c
 SUBST_SED.putwchar=	s/putwchar/my_putwchar/
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/24 23:48:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/09 09:41:42 rillig Exp $
 #
 
 DISTNAME=		zapping-0.9.6
@@ -19,8 +19,8 @@ USE_TOOLS+=		gmake perl
 CONFIGURE_ARGS+=	--disable-rebuild-man
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
-CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
-MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
+CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX:Q}/share/gconf/schemas/
+MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX:Q}/share/gconf/schemas/
 
 GCONF2_SCHEMAS+=	zapping.schemas
 

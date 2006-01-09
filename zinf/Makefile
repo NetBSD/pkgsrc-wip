@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/12 23:51:31 kristerw Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/09 09:41:42 rillig Exp $
 #
 
 DISTNAME=	zinf-2.2.0
@@ -11,7 +11,7 @@ COMMENT=	Simple but powerful audio player
 
 #BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
 
-PTHREAD_OPTS=	require
+PTHREAD_OPTS+=	require
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
