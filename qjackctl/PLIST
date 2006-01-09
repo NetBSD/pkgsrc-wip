@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2006/01/09 08:26:58 chriswareham Exp $
+bin/qjackctl
+share/icons/qjackctl.png
+@comment in xdg-dirs: @dirrm share/icons

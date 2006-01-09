@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2006/01/09 08:26:58 chriswareham Exp $
+
+--- Makefile.in.orig	2005-06-12 10:35:14.000000000 +0100
++++ Makefile.in
+@@ -52,10 +52,10 @@ $(name):	$(name).mak $(sources) $(header
+ 	@make -f $(name).mak
+ 
+ install:	$(name) icons/$(name).png
+-	@install -d -v -m 0755 $(DESTDIR)$(prefix)/bin
+-	@install -d -v -m 0755 $(DESTDIR)$(prefix)/share/icons
+-	@install -v -m 0755 $(name) $(DESTDIR)$(prefix)/bin/$(name)
+-	@install -v -m 0644 icons/$(name).png $(DESTDIR)$(prefix)/share/icons/$(name).png
++	@install -d -m 0755 $(DESTDIR)$(prefix)/bin
++	@install -d -m 0755 $(DESTDIR)$(prefix)/share/icons
++	@install -m 0755 $(name) $(DESTDIR)$(prefix)/bin/$(name)
++	@install -m 0644 icons/$(name).png $(DESTDIR)$(prefix)/share/icons/$(name).png
+ 
+ uninstall:	$(DESTDIR)$(prefix)/bin/$(name)
+ 	@rm -vf $(DESTDIR)$(prefix)/bin/$(name)
