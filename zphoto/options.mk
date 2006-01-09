@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2006/01/09 09:41:42 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2006/01/09 17:35:47 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zphoto
 PKG_SUPPORTED_OPTIONS=	zip avifile wx
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+=	--disable-magick
 .  include "../../graphics/ImageMagick/buildlink3.mk"
 CONFIGURE_ARGS+=	--disable-imlib2
 .else
-PKG_FAIL_REASON+=	"${PKG_OPTIONS_VAR} must contaion one of \"imlib2\" or \"magick\"!"
+PKG_FAIL_REASON+=	"${PKG_OPTIONS_VAR} must contain one of \"imlib2\" or \"magick\"!"
 .endif
 
 .if !empty(PKG_OPTIONS:Mzip)
