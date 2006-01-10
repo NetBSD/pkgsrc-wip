@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/02 18:00:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/10 12:45:12 ghen Exp $
 #
 
 DISTNAME=		luasql-2.0b
@@ -20,5 +20,5 @@ do-install:
 		${PREFIX}/lib/libluasqlpostgres.2.0b.a
 
 .include "../../lang/lua/buildlink3.mk"
-.include "../../databases/postgresql74-lib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
