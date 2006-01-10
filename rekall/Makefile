@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/27 16:29:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/10 12:29:02 ghen Exp $
 #
 
 DISTNAME=		rekall-2.2.0-beta0
@@ -14,7 +14,7 @@ COMMENT=		KDE database frontend
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV=		"PYTHONBIN=${PYTHONBIN}"
+CONFIGURE_ENV+=		"PYTHONBIN=${PYTHONBIN}"
 
 .include "../../wip/xbsql/buildlink3.mk"
 .include "../../databases/mysql4-client/buildlink3.mk"
