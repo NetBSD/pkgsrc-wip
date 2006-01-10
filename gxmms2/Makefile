@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2005/11/23 18:30:53 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/10 21:20:07 christian_gall Exp $
 #
 
-DISTNAME=	gxmms2-0.5.1
+DISTNAME=	gxmms2-0.6.0
 CATEGORIES=	audio
 MASTER_SITES=	http://wejp.homelinux.org/wejp/xmms2/
 
@@ -18,6 +18,7 @@ INSTALLATION_DIRS=	bin
 
 .include "../../wip/xmms2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
 
 CFLAGS+=		-I${BUILDLINK_PREFIX.xmms2}/include/xmms2

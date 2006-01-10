@@ -1,37 +1,31 @@
-$NetBSD: patch-aa,v 1.5 2005/11/12 21:54:28 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.6 2006/01/10 21:20:08 christian_gall Exp $
 
---- Makefile.orig	2005-09-22 11:02:50.000000000 +0000
+--- Makefile.orig	2005-12-18 20:52:52.000000000 +0100
 +++ Makefile
 @@ -1,7 +1,7 @@
- # Makefile for gxmms2
+ # Makefile for gxmms2 and gkrellxmms2
  
  #Installation directory
--INSTALLPATH=/usr/local/bin
-+INSTALLPATH=${PREFIX}/bin
+-INSTALLPATH = /usr/local/bin
++INSTALLPATH = ${PREFIX}/bin
+ KRELLINSTALLPATH = /usr/lib/gkrellm2/plugins
  
- # Path to XMMS2 header files
- XMMS2_INCLUDE_DIR=/usr/local/include/xmms2
-@@ -11,12 +11,12 @@ ALLFILES=*.c *.h *.xpm Makefile README C
- GTK_INCLUDE = `pkg-config gtk+-2.0 --cflags`
- GTK_LIB = `pkg-config gtk+-2.0 --libs`
- 
--FLAGS = -O2 -Wall -fPIC $(GTK_INCLUDE) -I${XMMS2_INCLUDE_DIR}
-+FLAGS = $(GTK_INCLUDE)
- LIBS = $(GTK_LIB) -lxmmsclient -lxmmsclient-glib
- 
+ ALLFILES=gkrellxmms2/*.c gkrellxmms2/*.h gkrellxmms2/*.xpm gmedialib/*.c gmedialib/*.h gmedialib/*.xpm gtrackinfo/*.c gtrackinfo/*.h gxmms2src/*.c gxmms2src/*.h gxmms2src/*.xpm sdecode/*.c sdecode/*.h xmms2ctrl/*.c xmms2ctrl/*.h Makefile README README.gxmms2 README.gkrellxmms2 COPYING CHANGELOG
+@@ -17,7 +17,7 @@ LIBS = $(GTK_LIB) $(XMMS2_LIB)
  LFLAGS =
+ KRELLLFLAGS = -shared
  
 -CC = gcc $(CFLAGS) $(FLAGS)
 +CC = cc $(CFLAGS) $(FLAGS)
  
- OBJS = gxmms2.o xmms2ctrl.o trackinfo.o gtrackinfo.o gmlplaylist.o gmedialib.o gmlbrowser.o gmlsearch.o gmlplaylists.o gmladdfiles.o sdecode.o
+ OBJS = gxmms2.o xmms2ctrl.o trackinfo.o gtrackinfo.o gmlplaylist.o gmedialib.o gmlbrowser.o gmlsearch.o gmlplaylists.o gmladdfiles.o sdecode.o wejpscroller.o statusdisplay.o wejpconfig.o
  
-@@ -48,7 +48,7 @@ gmladdfiles.o: gmladdfiles.c
- sdecode.o: sdecode.c
+@@ -75,7 +75,7 @@ wejpconfig.o:    gxmms2src/wejpconfig.c
+ 	$(CC) -c gxmms2src/wejpconfig.c
  
  install:
 -	install -D gxmms2 $(INSTALLPATH)/gxmms2
 +	${BSD_INSTALL_PROGRAM} gxmms2 $(INSTALLPATH)/gxmms2
  
- uninstall:
- 	-rm $(INSTALLPATH)/gxmms2
+ install_gkrellxmms2:
+ 	install -D gkrellxmms2.so $(KRELLINSTALLPATH)/gkrellxmms2.so

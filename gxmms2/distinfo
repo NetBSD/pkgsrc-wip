@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/11/12 21:54:28 leonardschmidt Exp $
+$NetBSD: distinfo,v 1.6 2006/01/10 21:20:08 christian_gall Exp $
 
-SHA1 (gxmms2-0.5.1.tar.gz) = aa04dd94825bd9e78cca15f9882d686cf2332690
-RMD160 (gxmms2-0.5.1.tar.gz) = 5ef26adc9d6f83fec5f6cbd22ceb653730498b6f
-Size (gxmms2-0.5.1.tar.gz) = 37907 bytes
-SHA1 (patch-aa) = 7fbcf1dbdb787d1feb733975a1500774401560ed
+SHA1 (gxmms2-0.6.0.tar.gz) = 0d5288e559a6ac267ba798741bc26f294bc2812d
+RMD160 (gxmms2-0.6.0.tar.gz) = 7908d3cae38842633ef61ca9ed8f38180473fe4a
+Size (gxmms2-0.6.0.tar.gz) = 51343 bytes
+SHA1 (patch-aa) = 26a9374b32ca7c154a988736a29a6e67a46d3fec
