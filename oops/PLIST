@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:02 jeremy-c-reed Exp $
-etc/oops/tables/koi-alt.tab
-etc/oops/tables/koi-iso.tab
-etc/oops/tables/koi-win.tab
+@comment $NetBSD: PLIST,v 1.4 2006/01/11 21:08:25 shattered Exp $
 libexec/oops/accel.so
 libexec/oops/berkeley_db_api.so
 libexec/oops/custom_log.so
@@ -14,13 +11,14 @@ libexec/oops/netflow.so
 libexec/oops/oopsctl_mod.so
 libexec/oops/pam.so
 libexec/oops/passwd_file.so
-${OOPS_CURRENT}libexec/oops/passwd_ldap.so
+libexec/oops/passwd_ldap.so
 libexec/oops/passwd_mysql.so
 libexec/oops/passwd_pgsql.so
 libexec/oops/redir.so
 libexec/oops/transparent.so
 libexec/oops/vary_header.so
 libexec/oops/wccp2.so
+libexec/oops/win_http.so
 man/man8/oops.8
 man/man8/oopsctl.8
 sbin/oops

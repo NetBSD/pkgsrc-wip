@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 22:27:47 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/11 21:08:25 shattered Exp $
 #
 
-DISTNAME=	oops-1.5.23
-PKGREVISION=	1
+DISTNAME=	oops-1.5.24
 CATEGORIES=	net
 MASTER_SITES=	http://zipper.paco.net/~igor/oops/
 
@@ -14,7 +13,7 @@ COMMENT=	Multithreaded caching HTTP proxy server
 # ~1.6Z (it compiles and runs, but connections hang).  Even on a 1.6Zx
 # system it will promptly abort with an assertion failure unless run
 # with PTHREAD_DIAGASSERT=AEL.
-NOT_FOR_PLATFORM=	NetBSD-1.6[M-Z]-*
+NOT_FOR_PLATFORM=	NetBSD-1.6*-*
 
 USE_PKGINSTALL=		YES
 USE_LANGUAGES=		c c++
@@ -28,15 +27,6 @@ CONFIGURE_ARGS+=	--localstatedir=${OOPSVAR:Q}
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec/oops
 
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(OOPS_CURRENT) && ${OOPS_CURRENT} == YES
-PATCHFILES+=	diff_from_1.5.23.patch.gz
-PATCH_SITES=	${MASTER_SITES}
-PATCH_DIST_STRIP= -p1
-PLIST_SUBST+=	OOPS_CURRENT=""
-.else
-PLIST_SUBST+=	OOPS_CURRENT="@comment "
-.endif
 
 OOPSVAR?=	/var/run/oops
 OOPSUSER?=	oops
@@ -59,10 +49,12 @@ CONF_FILES+=	${EGDIR}/select.sql ${PKG_SYSCONFDIR}/select.sql
 CONF_FILES+=	${EGDIR}/auth_template.html ${PKG_SYSCONFDIR}/auth_template.html
 CONF_FILES+=	${EGDIR}/err_template.html ${PKG_SYSCONFDIR}/err_template.html
 CONF_FILES+=	${EGDIR}/redir_template.html ${PKG_SYSCONFDIR}/redir_template.html
+CONF_FILES+=	${EGDIR}/tables/koi-alt.tab ${PKG_SYSCONFDIR}/tables/koi-alt.tab
+CONF_FILES+=	${EGDIR}/tables/koi-iso.tab ${PKG_SYSCONFDIR}/tables/koi-iso.tab
+CONF_FILES+=	${EGDIR}/tables/koi-win.tab ${PKG_SYSCONFDIR}/tables/koi-win.tab
 
 RCD_SCRIPTS=	oops
 
-BDB_DEFAULT=	db2
 BDB_ACCEPTED=	db2
 
 .if ${OPSYS} == NetBSD
@@ -70,11 +62,13 @@ PTHREAD_OPTS+=	require native
 .endif
 
 post-install:
-	@${MKDIR} ${EGDIR}
+	@${MKDIR} ${EGDIR} ${EGDIR}/tables
 	for m in oops.cfg accel_maps acl_local_networks passwd redir_rules \
 		select.sql auth_template.html err_template.html \
 		redir_template.html; \
 		do ${INSTALL_DATA} ${WRKSRC}/src/$$m ${EGDIR}; done
+	for m in koi-alt.tab koi-iso.tab koi-win.tab;
+		do ${INSTALL_DATA} ${WRKSRC}/src/tables/$$m ${EGDIR}/tables; done
 	${INSTALL_MAN} ${WRKSRC}/doc/oops.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/doc/oopsctl.8 ${PREFIX}/man/man8
 
