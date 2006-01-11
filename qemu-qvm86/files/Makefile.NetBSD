@@ -8,6 +8,7 @@ INCS=	qvm86.h kqemu.h monitor-env.h qvm86-netbsd.h
 qvm86.4:
 	touch qvm86.4
 
+.include "/etc/mk.conf"
 .include <bsd.kmod.mk>
 
 COMPILE.S:=	${COMPILE.S:S/-traditional-cpp//}
