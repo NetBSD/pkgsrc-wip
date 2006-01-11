@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2005/07/27 16:25:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/11 08:19:34 anielski Exp $
 
-DISTNAME=		gtk-engines-dwerg-0.6
-PKGNAME=		${DISTNAME:S/gtk/gtk2/}
+DISTNAME=		dwerg-default-${DWERG_VERSION}
+DWERG_VERSION=		0.8
+PKGNAME=		gtk2-engines-dwerg-${DWERG_VERSION}
 CATEGORIES=		x11
-MASTER_SITES=		http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/themes/gtk2/
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		http://download.freshmeat.net/themes/dwerg/
+EXTRACT_SUFX=		.tar.gz
+WRKSRC= 		${WRKDIR}/gtk-engines-dwerg-${DWERG_VERSION}/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://art.gnome.org/
+HOMEPAGE=		http://themes.freshmeat.net/projects/dwerg/
 COMMENT=		Theme engine for GTK+ 2.x
 
 USE_LIBTOOL=		YES

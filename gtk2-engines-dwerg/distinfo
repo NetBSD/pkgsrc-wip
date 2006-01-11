@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/26 21:04:58 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2006/01/11 08:19:34 anielski Exp $
 
-SHA1 (gtk-engines-dwerg-0.6.tar.bz2) = 8a1dbf2816e2006ecd0c1c694ea21c824c9d1217
-Size (gtk-engines-dwerg-0.6.tar.bz2) = 125471 bytes
+SHA1 (dwerg-default-0.8.tar.gz) = 1448e3b3bad77d02739de1e855f3566b86441932
+Size (dwerg-default-0.8.tar.gz) = 288009 bytes
