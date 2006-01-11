@@ -1,0 +1,14 @@
+$NetBSD: patch-zb,v 1.1.1.1 2006/01/11 09:17:24 tnn2 Exp $
+
+--- kqemu/kqemu.h.orig	2006-01-11 08:13:10.000000000 +0100
++++ kqemu/kqemu.h
+@@ -49,9 +49,7 @@ struct kqemu_cpu_state {
+                                        KQEMU_FLUSH_ALL means full flush */
+ #define KQEMU_MAX_PAGES_TO_FLUSH 512
+ #define KQEMU_FLUSH_ALL (KQEMU_MAX_PAGES_TO_FLUSH + 1)
+-#ifdef _WIN32
+     uint32_t retval;
+-#endif
+ };
+ 
+ struct kqemu_init {

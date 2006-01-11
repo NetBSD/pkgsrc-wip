@@ -1,0 +1,17 @@
+$NetBSD: patch-za,v 1.1.1.1 2006/01/11 09:17:24 tnn2 Exp $
+
+--- kqemu/qvm86.h.orig	2006-01-11 09:01:30.000000000 +0100
++++ kqemu/qvm86.h
+@@ -24,8 +24,12 @@
+ #ifdef _WIN32
+ #include "qvm86-win32.h"
+ #else
++#ifdef __NetBSD__
++#include "qvm86-netbsd.h"
++#else
+ #include "qvm86-linux.h"
+ #endif
++#endif
+ 
+ #include "kqemu.h"
+ 

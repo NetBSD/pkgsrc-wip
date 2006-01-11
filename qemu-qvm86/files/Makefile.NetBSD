@@ -1,0 +1,14 @@
+# cvs id goes here
+
+KMOD=	qvm86
+
+SRCS=	qvm86-netbsd.c qvm86-host.c switch.S
+INCS=	qvm86.h kqemu.h monitor-env.h qvm86-netbsd.h
+
+qvm86.4:
+	touch qvm86.4
+
+.include <bsd.kmod.mk>
+
+COMPILE.S:=	${COMPILE.S:S/-traditional-cpp//}
+CFLAGS+=	-g -fno-omit-frame-pointer	# for future amd64 support

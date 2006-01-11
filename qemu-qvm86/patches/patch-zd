@@ -1,0 +1,13 @@
+$NetBSD: patch-zd,v 1.1.1.1 2006/01/11 09:17:24 tnn2 Exp $
+
+--- kqemu.c.orig	2006-01-11 08:37:53.000000000 +0100
++++ kqemu.c
+@@ -605,7 +605,7 @@ int kqemu_cpu_exec(CPUState *env)
+         ret = -1;
+     }
+ #else
+-#if KQEMU_VERSION >= 0x010100
++#if KQEMU_VERSION >= 0x010100 || defined(__NetBSD__)
+     ioctl(kqemu_fd, KQEMU_EXEC, kenv);
+     ret = kenv->retval;
+ #else

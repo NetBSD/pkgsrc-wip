@@ -1,0 +1,41 @@
+$NetBSD: patch-ag,v 1.1.1.1 2006/01/11 09:17:24 tnn2 Exp $
+
+--- configure.orig	2006-01-11 08:17:46.000000000 +0100
++++ configure
+@@ -110,6 +110,9 @@ fi
+ NetBSD)
+ bsd="yes"
+ oss="yes"
++if [ "$cpu" = "i386" -o "$cpu" = "x86_64" ] ; then
++    kqemu="yes"
++fi 
+ ;;
+ OpenBSD)
+ bsd="yes"
+@@ -400,7 +403,7 @@ else
+ if test -z "$prefix" ; then
+     prefix="/usr/local"
+ fi
+-mandir="$prefix/share/man"
++mandir="$prefix/man"
+ datadir="$prefix/share/qemu"
+ docdir="$prefix/share/doc/qemu"
+ bindir="$prefix/bin"
+@@ -432,7 +435,7 @@ fi
+ if test $kqemu = "yes" ; then
+ 
+ # test that the kernel config is present
+-if test '!' -f "$kernel_path/Makefile" ; then
++if test '!' -f "$kernel_path/Makefile" -a $linux = "yes"; then
+     echo "No Makefile file present in $kernel_path - kqemu cannot be built"
+     kqemu="no"
+ fi
+@@ -583,6 +586,8 @@ if test "$mingw32" = "yes" ; then
+   echo "#define CONFIG_WIN32 1" >> $config_h
+ elif test -f "/usr/include/byteswap.h" ; then
+   echo "#define HAVE_BYTESWAP_H 1" >> $config_h
++elif test -f "/usr/include/machine/bswap.h" ; then
++  echo "#define HAVE_MACHINE_BSWAP_H 1" >> $config_h
+ fi
+ if test "$darwin" = "yes" ; then
+   echo "CONFIG_DARWIN=yes" >> $config_mak

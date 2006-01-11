@@ -1,0 +1,13 @@
+$NetBSD: patch-zc,v 1.1.1.1 2006/01/11 09:17:24 tnn2 Exp $
+
+--- osdep.c.orig	2006-01-11 08:37:00.000000000 +0100
++++ osdep.c
+@@ -321,7 +321,7 @@ void qemu_vfree(void *ptr)
+     VirtualFree(ptr, 0, MEM_RELEASE);
+ }
+ 
+-#elif defined(USE_KQEMU)
++#elif defined(USE_KQEMU) && !defined(__NetBSD__)
+ 
+ #include <sys/vfs.h>
+ #include <sys/mman.h>
