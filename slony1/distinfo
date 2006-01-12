@@ -1,0 +1,5 @@
+# $NetBSD: distinfo,v 1.1.1.1 2006/01/12 20:41:15 bseklecki Exp $
+
+SHA1 (slony1-1.1.2.tar.bz2) = 9e9bf8aaa4123f7956b8836eb59e3bd029223fa9
+RMD160 (slony1-1.1.2.tar.bz2) = 4062fd2a2507440711277990684c94d1c6899b49
+Size (slony1-1.1.2.tar.bz2) = 497795 bytes

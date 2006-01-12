@@ -1,0 +1,11 @@
+bin/slon
+bin/slonik
+share/postgresql/slony1_base.sql
+share/postgresql/slony1_base.v73.sql
+share/postgresql/slony1_base.v74.sql
+share/postgresql/slony1_funcs.sql
+share/postgresql/slony1_funcs.v73.sql
+share/postgresql/slony1_funcs.v74.sql
+share/postgresql/xxid.v73.sql
+share/postgresql/xxid.v74.sql
+etc/slon.conf-sample
