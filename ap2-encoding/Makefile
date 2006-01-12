@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/01 14:29:28 obache Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/12 12:28:23 obache Exp $
 
 DISTNAME=	mod_encoding-20021209
 PKGNAME=        ap2-encoding-20040616
@@ -16,6 +16,7 @@ COMMENT=        Apache module for non-ascii filename interoperability
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
+APACHE_MODULE=	yes
 
 GNU_CONFIGURE=		yes
 
