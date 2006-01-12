@@ -1,27 +1,27 @@
-# $NetBSD: Makefile,v 1.10 2005/06/12 23:51:18 kristerw Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/12 17:33:35 thomasklausner Exp $
 #
 
 DISTNAME=		fluxspace-0.0.3
 CATEGORIES=		x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fluxspace/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fluxspace/}
 
 MAINTAINER=		poff@sixbit.org
+HOMEPAGE=		http://fluxspace.sourceforge.net/
 COMMENT=		Fluxbox workspace manager, environment
 
-GNU_CONFIGURE=	YES
-USE_TOOLS+=		gmake
-
+GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+USE_TOOLS+=		gmake
+PY_PATCHPLIST=		YES
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=       ${EXPORT_SYMBOLS_LDFLAGS}
 
-CONFIGURE_ENV+= PYTHON="${LOCALBASE}/bin/python2.2"
-CONFIGURE_ENV+= PYTHON_LDFLAGS="${BUILDLINK_LDFLAGS.python22}"
+CONFIGURE_ENV+= PYTHON=${PYTHONBIN:Q}
 
 .include "../../textproc/py-xml/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
-.include "../../lang/python22/buildlink3.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
