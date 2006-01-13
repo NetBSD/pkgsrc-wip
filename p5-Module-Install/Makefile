@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/30 18:21:51 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/13 13:22:56 absd Exp $
 
 DISTNAME=	Module-Install-0.50
 PKGNAME=	p5-${DISTNAME}
@@ -20,7 +20,7 @@ BUILD_DEPENDS+=	p5-ExtUtils-ParseXS>=0:../../wip/p5-ExtUtils-ParseXS
 BUILD_DEPENDS+=	p5-CPANPLUS>=0.04:../../wip/p5-CPANPLUS
 DEPENDS+=	p5-YAML>=0.35:../../textproc/p5-YAML
 
-PERL5_PACKLIST= auto/Catalyst/.packlist
+PERL5_PACKLIST= auto/Module/Install/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
