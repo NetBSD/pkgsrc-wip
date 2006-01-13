@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/01/13 15:51:49 mreriksson Exp $
+
+--- nnpfs/bsd/nnpfs/nnpfs_vfsops-bsd.h.orig	2006-01-12 13:03:23.000000000 +0100
++++ nnpfs/bsd/nnpfs/nnpfs_vfsops-bsd.h
+@@ -99,7 +99,10 @@ nnpfs_vget(struct mount * mp, ino_t ino,
+ struct mbuf;
+ struct fid;
+ 
+-#ifdef HAVE_STRUCT_VFSOPS_VFS_CHECKEXP
++#if defined(HAVE_STRUCT_VFSOPS_VFS_CHECKEXP) ||\
++( defined(__NetBSD__) && __NetBSD_Version__ >= 399001400 ) /* 3.99.14 */
++/* XXX HAVE_STRUCT_VFSOPS_VFS_CHECKEXP should be set by autoconf on
++        NetBSD post 3.99.14 instead! */
+ int
+ nnpfs_fhtovp(struct mount * mp,
+ 	     struct fid * fhp,

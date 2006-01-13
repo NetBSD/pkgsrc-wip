@@ -1,0 +1,91 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/01/13 15:51:49 mreriksson Exp $
+
+NetBSD-1.6.x doesn't have kqfilter.
+
+--- nnpfs/bsd/nnpfs_vnodeops-netbsd.c.orig	2005-11-15 01:15:43.000000000 +0100
++++ nnpfs/bsd/nnpfs_vnodeops-netbsd.c
+@@ -127,7 +127,7 @@ nnpfs_netbsd_strategy(struct vop_strateg
+     struct nnpfs_node *xn = VNODE_TO_XNODE(vp);
+     struct iovec iov;
+     struct uio uio;
+-    struct proc *p = nnpfs_curproc();
++    d_thread_t *p = nnpfs_curproc();
+     struct ucred *cred = nnpfs_proc_to_cred(p);
+     int error, s, rw, nnpfsflags;
+     nnpfs_cred *ncred;
+@@ -167,7 +167,11 @@ nnpfs_netbsd_strategy(struct vop_strateg
+     uio.uio_segflg = UIO_SYSSPACE;
+     uio.uio_rw = rw ? UIO_WRITE : UIO_READ;
+     uio.uio_resid = bp->b_resid;
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 399001400 /* 3.99.14 */
++    uio.uio_lwp = p;
++#else
+     uio.uio_procp = p;
++#endif
+     
+     error = VOP_OPEN(DATA_FROM_VNODE(vp), rw ? FWRITE : FREAD, cred, p);
+ 
+@@ -252,8 +256,14 @@ nnpfs_netbsd_read(struct vop_read_args *
+ 	
+ 	NNPFSDEB(XDEBVNOPS, ("nnpfs_netbsd_read: allocating window\n"));
+ 
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 399001400 /* 3.99.14 */
++	/* XXX Is UVM_ADV_NORMAL the best way to go here ? */
++	win = ubc_alloc(&vp->v_uobj, nnpfs_uio_offset(uio),
++			&bytelen, UVM_ADV_NORMAL, UBC_READ);
++#else
+ 	win = ubc_alloc(&vp->v_uobj, nnpfs_uio_offset(uio),
+ 			&bytelen, UBC_READ);
++#endif
+ 	NNPFSDEB(XDEBVNOPS, ("nnpfs_netbsd_read: copy data\n"));
+ 	error = uiomove(win, bytelen, uio);
+ 	NNPFSDEB(XDEBVNOPS, ("nnpfs_netbsd_read: release window\n"));
+@@ -326,8 +336,13 @@ nnpfs_netbsd_write(struct vop_write_args
+ 	 * copy the data.
+ 	 */
+ 
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 399001400 /* 3.99.14 */
++	win = ubc_alloc(&vp->v_uobj, nnpfs_uio_offset(uio), &bytelen,
++	    UVM_ADV_NORMAL, UBC_WRITE);
++#else
+ 	win = ubc_alloc(&vp->v_uobj, nnpfs_uio_offset(uio), &bytelen,
+ 	    UBC_WRITE);
++#endif
+ 	error = uiomove(win, bytelen, uio);
+ 	ubc_release(win, 0);
+ 	if (error) {
+@@ -355,12 +370,24 @@ nnpfs_netbsd_write(struct vop_write_args
+     }
+ 
+     if (error) {
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 399001100 /* 3.99.11 */
++	struct vattr vattr;
++	VATTR_NULL(&vattr);
++	vattr.va_size = osize;
++	VOP_SETATTR(vp , &vattr, ap->a_cred, uio->uio_lwp);
++#else
+ 	(void) VOP_TRUNCATE(vp, osize, ioflag & IO_SYNC, ap->a_cred,
+ 	    uio->uio_procp);
++#endif
+ 	nnpfs_uio_setoffset(uio, nnpfs_uio_offset(uio) - resid - uio->uio_resid);
+ 	uio->uio_resid = resid;
+     } else if (resid > uio->uio_resid && (ioflag & IO_SYNC) == IO_SYNC) {
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 399001100 /* 3.99.11 */
++	/* XXX offlo and offhi set to zero sync's the entire file, right? */
++	VOP_FSYNC(vp, ap->a_cred, FSYNC_WAIT, 0, 0, uio->uio_lwp);
++#else
+ 	error = VOP_UPDATE(vp, NULL, NULL, UPDATE_WAIT);
++#endif
+     }
+     if (!error) {
+ 	struct timespec ts;
+@@ -420,7 +447,9 @@ static struct vnodeopv_entry_desc nnpfs_
+     {&vop_strategy_desc,	(vop_t *) nnpfs_netbsd_strategy },
+     {&vop_print_desc,		(vop_t *) nnpfs_print}, 
+     {&vop_advlock_desc,		(vop_t *) nnpfs_advlock },
++#if __NetBSD_Version__ >= 200000000
+     {&vop_kqfilter_desc,	(vop_t *) genfs_kqfilter },
++#endif
+     {(struct vnodeop_desc *) NULL, (int (*) (void *)) NULL}
+ };
+ 

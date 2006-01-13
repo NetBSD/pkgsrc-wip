@@ -1,0 +1,18 @@
+$NetBSD: patch-al,v 1.1.1.1 2006/01/13 15:51:48 mreriksson Exp $
+
+Add missing lib and reorder.
+
+--- appl/amon/Makefile.in.orig	2005-12-01 13:13:57.000000000 +0100
++++ appl/amon/Makefile.in
+@@ -455,8 +455,10 @@ amon_CPPFLAGS = \
+ amon_LDADD = \
+ 		../lib/libarlalib.la \
+ 		../../rxdef/librxdefclient.la \
++		../../rxdef/libkaclient.la \
+ 		../../rx/librx.la \
+-		-L../../lwp -llwp @PLWP_LIB_FLAGS@ \
++		../../lwp/liblwp.a \
++		@PLWP_LIB_FLAGS@ \
+ 		../../lib/vers/libvers.la \
+ 		../../lib/ko/libko.la \
+ 		../../util/libarlautil.la \

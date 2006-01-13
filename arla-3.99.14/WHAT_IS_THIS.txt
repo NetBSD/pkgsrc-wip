@@ -1,0 +1,8 @@
+Since NetBSD 3.99.14 when the ktrace-lwp branch was merged with HEAD, the
+lkm-part of Arla broke and would not compile.
+
+This is an attempt to adapt the Arla package to work with NetBSD 3.99.14
+and beyond. If everything works out with this package, I will send-pr fixes
+to have these patches included in pkgsrc/net/arla within a near future!
+
+Please report any errors or problems to ola<-at->mreriksson.net!
