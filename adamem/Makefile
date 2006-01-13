@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/06 16:00:14 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/13 01:19:38 rillig Exp $
 #
 
 DISTNAME=		adamem
@@ -11,13 +11,13 @@ HOMEPAGE=		http://www.komkon.org/~dekogel/adamem.html
 COMMENT=		Emulator for the Colecovision game console and Adam computer system
 
 MAKEFILE=		Makefile.X
-WRKSRC=		        ${WRKDIR}
+WRKSRC=			${WRKDIR}
 
-SUBST_CLASSES+=         dsp
-SUBST_STAGE.dsp=        post-patch
-SUBST_MESSAGE.dsp=      Adjusting sound device path.
-SUBST_FILES.dsp=        dev_dsp.h
-SUBST_SED.dsp=          -e "s|/dev/dsp|${DEVOSSAUDIO}|"
+SUBST_CLASSES+=		dsp
+SUBST_STAGE.dsp=	post-patch
+SUBST_MESSAGE.dsp=	Adjusting sound device path.
+SUBST_FILES.dsp=	dev_dsp.h
+SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
 SUBST_CLASSES+=		adam
 SUBST_STAGE.adam=	pre-configure
@@ -33,21 +33,21 @@ CPPFLAGS+=		-DLSB_FIRST
 .endif
 
 post-extract:
-	${CP} ${FILESDIR}/adam ${WRKSRC}/
+	${CP} ${FILESDIR:Q}/adam ${WRKSRC:Q}/
 
 do-install:
-.for EXE in adamem cvem z80dasm snapedit
-	${INSTALL_PROGRAM} ${WRKSRC}/${EXE} ${PREFIX}/bin
+.for f in adamem cvem z80dasm snapedit
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/${f:Q} ${PREFIX:Q}/bin
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/adamem
-	${INSTALL_DATA} ${WRKSRC}/adamem.txt ${PREFIX}/share/adamem
-	${INSTALL_DATA} ${WRKSRC}/adamem.snd ${PREFIX}/share/adamem
-.for ROM in OS7 EOS WP
-	${INSTALL_DATA} ${WRKSRC}/${ROM}.rom ${PREFIX}/share/adamem
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/adamem
+	${INSTALL_DATA} ${WRKSRC:Q}/adamem.txt ${PREFIX:Q}/share/adamem
+	${INSTALL_DATA} ${WRKSRC:Q}/adamem.snd ${PREFIX:Q}/share/adamem
+.for f in OS7 EOS WP
+	${INSTALL_DATA} ${WRKSRC:Q}/${f:Q}.rom ${PREFIX:Q}/share/adamem
 .endfor
-	${INSTALL_SCRIPT} ${WRKSRC}/adam ${PREFIX}/bin/adam
-	${RM} -f ${PREFIX}/bin/coleco
-	${LN} -s adam ${PREFIX}/bin/coleco
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/adam ${PREFIX:Q}/bin/adam
+	${RM} -f ${PREFIX:Q}/bin/coleco
+	${LN} -s adam ${PREFIX:Q}/bin/coleco
 
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
