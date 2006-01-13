@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/31 03:00:40 mchittur Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/13 01:00:56 rillig Exp $
 #
 
 DISTNAME=		gdal-1.3.1
@@ -22,8 +22,8 @@ MAKEFILE=		GNUmakefile
 CONFIGURE_ARGS+=	--with-pg
 CONFIGURE_ARGS+=	--with-mysql=no
 CONFIGURE_ARGS+=	--with-xerces
-CONFIGURE_ARGS+=	--with-xerces-inc=${PREFIX}/include
-CONFIGURE_ARGS+=	--with-xerces-lib="-L${PREFIX}/lib -lxerces-c"
+CONFIGURE_ARGS+=	--with-xerces-inc=${PREFIX:Q}/include
+CONFIGURE_ARGS+=	--with-xerces-lib=-L${PREFIX:Q}/lib\ -lxerces-c
 CONFIGURE_ARGS+=	--with-geos
 CONFIGURE_ARGS+=	--without-python
 

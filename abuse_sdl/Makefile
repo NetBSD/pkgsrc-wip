@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/10/23 21:02:26 blef Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/13 01:16:52 rillig Exp $
 
 DISTNAME=		abuse_sdl-0.7.0
 CATEGORIES=		games
@@ -14,14 +14,14 @@ USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
-SITES_frabs210_unix.src.tar.bz2=       http://www.cs.uidaho.edu/~cass0664/fRaBs/
+SITES_frabs210_unix.src.tar.bz2=	http://www.cs.uidaho.edu/~cass0664/fRaBs/
 
-CPPFLAGS+=-DPREFIX="\"${PREFIX}\""
+CPPFLAGS+=		-DPREFIX=\"${PREFIX:Q}\"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/abuse_sdl
-	cd ${PREFIX}/share/abuse_sdl && \
-		(${CP} -R ${WRKDIR}/frabs210_unix.src/* . && \
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/abuse_sdl
+	cd ${PREFIX:Q}/share/abuse_sdl && \
+		(${CP} -R ${WRKDIR:Q}/frabs210_unix.src/* . && \
 		${CHOWN} -R ${SHAREOWN} . && ${CHGRP} -R ${SHAREGRP} . && \
 		${FIND} . -type f -exec ${CHMOD} ${SHAREMODE} '{}' ';' && \
 		${FIND} . -type d -exec ${CHMOD} ${BINMODE} '{}' ';')
