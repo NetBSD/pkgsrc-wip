@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
+$NetBSD: patch-ae,v 1.2 2006/01/13 14:16:17 lkundrak Exp $
 
---- configure.ac.orig	2005-12-10 06:24:58.000000000 +0100
+--- configure.ac.orig	2006-01-03 18:58:02.000000000 +0100
 +++ configure.ac
-@@ -131,7 +131,6 @@ if test "x$build" != "x$host"; then
+@@ -128,7 +128,6 @@ if test "x$build" != "x$host"; then
  		 [AC_MSG_ERROR([none of gcc, egcs and cc is found. set BUILD_CC manually.])])
  else
    BUILD_CC="$CC"
@@ -10,7 +10,7 @@ $NetBSD: patch-ae,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
  fi
  
  # Test the C compiler for the build environment.
-@@ -139,10 +138,24 @@ tmp_CC="$CC"
+@@ -136,10 +135,24 @@ tmp_CC="$CC"
  tmp_CFLAGS="$CFLAGS"
  tmp_LDFLAGS="$LDFLAGS"
  tmp_CPPFLAGS="$CPPFLAGS"
@@ -36,7 +36,7 @@ $NetBSD: patch-ae,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
  
  # Identify characteristics of the build architecture.
  AC_C_BIGENDIAN
-@@ -171,6 +184,12 @@ AC_CHECK_LIB(ncurses, wgetch, [LIBCURSES
+@@ -168,6 +181,12 @@ AC_CHECK_LIB(ncurses, wgetch, [LIBCURSES
    [AC_CHECK_LIB(curses, wgetch, [LIBCURSES="-lcurses"])])
  AC_SUBST(LIBCURSES)
  

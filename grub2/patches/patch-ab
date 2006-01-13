@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
+$NetBSD: patch-ab,v 1.2 2006/01/13 14:16:17 lkundrak Exp $
 
---- Makefile.in.orig	2005-11-18 15:56:55.000000000 +0100
+--- Makefile.in.orig	2006-01-03 18:58:02.000000000 +0100
 +++ Makefile.in
-@@ -57,17 +57,23 @@ mkinstalldirs = $(srcdir)/mkinstalldirs
+@@ -57,10 +57,13 @@ mkinstalldirs = $(srcdir)/mkinstalldirs
  CC = @CC@
  CFLAGS = @CFLAGS@
  CPPFLAGS = -I. -Iinclude -I$(srcdir)/include -Wall -W
@@ -19,13 +19,13 @@ $NetBSD: patch-ab,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
  OBJCOPY = @OBJCOPY@
  STRIP = @STRIP@
  NM = @NM@
- LD = @LD@
- RUBY = @RUBY@
-+YACC = @YACC@
- LIBCURSES = @LIBCURSES@
+@@ -70,6 +73,9 @@ LIBCURSES = @LIBCURSES@
  LIBLZO = @LIBLZO@
+ YACC = @YACC@
+ 
 +LIBARGP = @LIBARGP@
 +LIBMALLOC = @LIBMALLOC@
- 
++
  ### General variables.
  
+ RMKFILES = $(addprefix conf/,common.rmk i386-pc.rmk powerpc-ieee1275.rmk \

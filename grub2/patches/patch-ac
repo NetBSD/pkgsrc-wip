@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
+$NetBSD: patch-ac,v 1.2 2006/01/13 14:16:17 lkundrak Exp $
 
---- conf/i386-pc.mk.orig	2005-12-03 18:54:55.000000000 +0100
+--- conf/i386-pc.mk.orig	2005-12-25 16:59:50.000000000 +0100
 +++ conf/i386-pc.mk
-@@ -1310,7 +1310,7 @@ grub_emu-grub_emu_init.d: grub_emu_init.
+@@ -1335,7 +1335,7 @@ grub_emu-grub_emu_init.d: grub_emu_init.
  -include grub_emu-grub_emu_init.d
  
  

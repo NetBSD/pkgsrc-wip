@@ -1,21 +1,25 @@
-$NetBSD: patch-ak,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
+$NetBSD: patch-ak,v 1.2 2006/01/13 14:16:17 lkundrak Exp $
 
---- util/i386/pc/grub-install.in.orig	2005-08-07 19:12:52.000000000 +0200
-+++ util/i386/pc/grub-install.in
-@@ -21,6 +21,7 @@
- prefix=@prefix@
- exec_prefix=@exec_prefix@
- sbindir=@sbindir@
-+bindir=@bindir@
- datadir=@datadir@
- PACKAGE_NAME=@PACKAGE_NAME@
- PACKAGE_TARNAME=@PACKAGE_TARNAME@
-@@ -31,7 +32,7 @@ host_vendor=@host_vendor@
- pkgdatadir=${datadir}/${PACKAGE_TARNAME}/${host_cpu}-${host_vendor}
+--- util/misc.c.orig	2005-02-27 22:19:06.000000000 +0100
++++ util/misc.c
+@@ -226,13 +226,15 @@ grub_realloc (void *ptr, grub_size_t siz
  
- grub_setup=${sbindir}/grub-setup
--grub_mkimage=${sbindir}/grub-mkimage
-+grub_mkimage=${bindir}/grub-mkimage
- grub_mkdevicemap=${sbindir}/grub-mkdevicemap
- grub_probefs=${sbindir}/grub-probefs
- rootdir=
+ void *
+ grub_memalign (grub_size_t align, grub_size_t size)
+-{
++{ 
+   void *p;
+-  
+-  p = memalign (align, size);
+-  if (! p)
++
++  p = malloc (size + align - 1);
++  if (p)
++    p = (void *)(((int)p/align + 1) * align);
++  else
+     grub_util_error ("out of memory");
+-  
++
+   return p;
+ }
+ 

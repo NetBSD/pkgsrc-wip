@@ -1,12 +1,18 @@
-$NetBSD: patch-ah,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
+$NetBSD: patch-ah,v 1.2 2006/01/13 14:16:17 lkundrak Exp $
 
---- include/grub/mm.h.orig	2005-08-22 19:28:59.000000000 +0200
-+++ include/grub/mm.h
-@@ -33,6 +33,7 @@ void *EXPORT_FUNC(grub_malloc) (grub_siz
- void EXPORT_FUNC(grub_free) (void *ptr);
- void *EXPORT_FUNC(grub_realloc) (void *ptr, grub_size_t size);
- void *EXPORT_FUNC(grub_memalign) (grub_size_t align, grub_size_t size);
-+void EXPORT_FUNC(__enable_execute_stack) ();
- 
- /* For debugging.  */
- #define MM_DEBUG       1
+--- kern/mm.c.orig	2005-08-21 20:42:54.000000000 +0200
++++ kern/mm.c
+@@ -420,3 +420,13 @@ grub_mm_dump (unsigned lineno)
+   grub_printf ("\n");
+ }
+ #endif /* MM_DEBUG */
++
++/*
++ * XXX: gcc on systems using non-executable mapping of stack generates
++ * reference to __enable_execute_stack() (libgcc)
++ * Probably there's better way to solve this, than such an ugly workaround.
++ */
++
++void __enable_execute_stack (void);
++void __enable_execute_stack (void) {}
++

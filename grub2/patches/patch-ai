@@ -1,18 +1,24 @@
-$NetBSD: patch-ai,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
+$NetBSD: patch-ai,v 1.2 2006/01/13 14:16:17 lkundrak Exp $
 
---- kern/mm.c.orig	2005-08-21 20:42:54.000000000 +0200
-+++ kern/mm.c
-@@ -420,3 +420,13 @@ grub_mm_dump (unsigned lineno)
-   grub_printf ("\n");
- }
- #endif /* MM_DEBUG */
+--- util/grub-emu.c.orig	2005-11-13 16:47:09.000000000 +0100
++++ util/grub-emu.c
+@@ -172,6 +172,9 @@ main (int argc, char *argv[])
+       sleep (1);
+     }
+   
++  /* XXX: This is a bit unportable.  */
++  grub_util_biosdisk_init (args.dev_map);
 +
-+/*
-+ * XXX: gcc on systems using non-executable mapping of stack generates
-+ * reference to __enable_execute_stack() (libgcc)
-+ * Probably there's better way to solve this, than such an ugly workaround.
-+ */
-+
-+void __enable_execute_stack (void);
-+void __enable_execute_stack (void) {}
-+
+   /* Make sure that there is a root device.  */
+   if (! args.root_dev)
+     {
+@@ -189,9 +192,6 @@ main (int argc, char *argv[])
+ 
+   grub_env_set ("prefix", rootprefix);
+   
+-  /* XXX: This is a bit unportable.  */
+-  grub_util_biosdisk_init (args.dev_map);
+-
+   grub_init_all ();
+ 
+   /* Start GRUB!  */

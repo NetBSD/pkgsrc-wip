@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
+$NetBSD: patch-af,v 1.2 2006/01/13 14:16:17 lkundrak Exp $
 
---- configure.orig	2005-12-10 06:24:58.000000000 +0100
+--- configure.orig	2006-01-03 18:58:02.000000000 +0100
 +++ configure
 @@ -311,7 +311,7 @@ ac_includes_default="\
  # include <unistd.h>
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
  ac_subst_files=''
  
  # Initialize some variables set by options.
-@@ -4268,7 +4268,6 @@ echo "$as_me: error: none of gcc, egcs a
+@@ -4209,7 +4209,6 @@ echo "$as_me: error: none of gcc, egcs a
  
  else
    BUILD_CC="$CC"
@@ -19,7 +19,7 @@ $NetBSD: patch-af,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
  fi
  
  # Test the C compiler for the build environment.
-@@ -4276,10 +4275,24 @@ tmp_CC="$CC"
+@@ -4217,10 +4216,24 @@ tmp_CC="$CC"
  tmp_CFLAGS="$CFLAGS"
  tmp_LDFLAGS="$LDFLAGS"
  tmp_CPPFLAGS="$CPPFLAGS"
@@ -45,7 +45,7 @@ $NetBSD: patch-af,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
  
  # Identify characteristics of the build architecture.
  echo "$as_me:$LINENO: checking whether byte ordering is bigendian" >&5
-@@ -6438,6 +6451,176 @@ fi
+@@ -6351,6 +6364,176 @@ fi
  
  
  
@@ -222,7 +222,7 @@ $NetBSD: patch-af,v 1.1 2005/12/12 17:42:17 lkundrak Exp $
  # Check for headers.
  
  
-@@ -7251,10 +7434,14 @@ s,@LD@,$LD,;t t
+@@ -7163,10 +7346,14 @@ s,@LD@,$LD,;t t
  s,@ac_ct_LD@,$ac_ct_LD,;t t
  s,@RUBY@,$RUBY,;t t
  s,@BUILD_CC@,$BUILD_CC,;t t
