@@ -1,4 +1,4 @@
-/* $NetBSD: bluetooth.h,v 1.2 2005/11/14 23:43:28 plunky Exp $ */
+/* $NetBSD: bluetooth.h,v 1.3 2006/01/13 14:32:14 plunky Exp $ */
 /*
  * Copyright (c) 2005 Iain D. Hibbert,
  * All rights reserved.
@@ -29,14 +29,14 @@
 #ifndef _NETBT_BLUETOOTH_H_
 #define _NETBT_BLUETOOTH_H_
 
-#include <sys/socket.h>
+#include <sys/socket.h>			// sa_family_t
 
 /*
- * Bluetooth Protocol Numbers
+ * Bluetooth Address Family Protocol Numbers
  */
-#define BLUETOOTH_PROTO_HCI	134
-#define BLUETOOTH_PROTO_L2CAP	135
-#define BLUETOOTH_PROTO_RFCOMM	136
+#define BLUETOOTH_PROTO_HCI	1
+#define BLUETOOTH_PROTO_L2CAP	2
+#define BLUETOOTH_PROTO_RFCOMM	3
 
 /* All sizes are in bytes */
 #define BLUETOOTH_BDADDR_SIZE	6
@@ -45,35 +45,40 @@
  * Bluetooth device address
  */
 typedef struct {
-	u_int8_t	b[BLUETOOTH_BDADDR_SIZE];
+	uint8_t	b[BLUETOOTH_BDADDR_SIZE];
 } __attribute__ ((packed)) bdaddr_t;
-typedef bdaddr_t *	bdaddr_p;
+
+typedef bdaddr_t *bdaddr_p;
+
+/*
+ * bdaddr utility functions
+ */
+static __inline int bdaddr_same(bdaddr_t *a, bdaddr_t *b)
+{
+	return (memcmp(a, b, sizeof(bdaddr_t)) == 0);
+}
+
+static __inline int bdaddr_any(bdaddr_t *a)
+{
+	return (a->b[0] == 0 && a->b[1] == 0 && a->b[2] == 0
+		&& a->b[3] == 0 && a->b[4] == 0 && a->b[5] == 0);
+}
+
+static __inline void bdaddr_copy(bdaddr_t *d, bdaddr_t *s)
+{
+	memcpy(d, s, sizeof(bdaddr_t));
+}
 
 /*
  * Socket address used by Bluetooth protocols
  */
 struct sockaddr_bt {
-	u_int8_t	len;
+	uint8_t	len;
 	sa_family_t	family;
 	bdaddr_t	bdaddr;
 };
 
-/*
- * bdaddr utility functions
- */
-static inline int bdaddr_same(bdaddr_t *a, bdaddr_t *b)
-{
-	return (memcmp(a, b, sizeof(bdaddr_t)) == 0);
-}
-
-static inline int bdaddr_any(bdaddr_t *a)
-{
-	return (a->b[0] == 0 && a->b[1] == 0 && a->b[2] == 0 && a->b[3] == 0 && a->b[4] == 0 && a->b[5] == 0);
-}
-
-static inline void bdaddr_copy(bdaddr_t *d, bdaddr_t *s)
-{
-	memcpy(d, s, sizeof(bdaddr_t));
-}
+/* Note: this is actually 7 bytes (count \0 terminator) */
+#define BDADDR_ANY	((bdaddr_t *) "\000\000\000\000\000\000")
 
 #endif	/* _NETBT_BLUETOOTH_H_ */

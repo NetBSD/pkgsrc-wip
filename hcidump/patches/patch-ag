@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2005/11/14 23:43:28 plunky Exp $
+$NetBSD: patch-ag,v 1.3 2006/01/13 14:32:14 plunky Exp $
 
 --- parser/hci.c.orig	2003-09-13 00:38:11.000000000 +0100
 +++ parser/hci.c
@@ -105,22 +105,21 @@ $NetBSD: patch-ag,v 1.2 2005/11/14 23:43:28 plunky Exp $
  		printf("HCI Event: Vendor(0x%2.2x) plen %d\n", hdr->event, hdr->length);
  	else
  		printf("HCI Event: code 0x%2.2x plen %d\n", hdr->event, hdr->length);
-@@ -311,22 +315,22 @@ static void event_dump(int level, struct
+@@ -311,7 +315,7 @@ static void event_dump(int level, struct
  
  static void acl_dump(int level, struct frame *frm)
  {
 -	ng_hci_acldata_pkt_t *hdr = (void *) frm->ptr;
--	uint16_t handle = le16toh(hdr->con_handle);
 +	hci_acldata_hdr_t *hdr = (void *) frm->ptr;
-+	uint16_t handle = le16toh(hdr->conn_handle);
+ 	uint16_t handle = le16toh(hdr->con_handle);
  	uint16_t dlen = le16toh(hdr->length);
  	uint8_t flags = (handle >> 12); /* flags */
- 
+@@ -319,14 +323,14 @@ static void acl_dump(int level, struct f
  	if (!p_filter(FILT_HCI)) {
  		p_indent(level, frm);
  		printf("ACL data: handle 0x%4.4x flags 0x%2.2x dlen %d\n",
 -			NG_HCI_CON_HANDLE(handle), flags, dlen);
-+			HCI_CONN_HANDLE(handle), flags, dlen);
++			HCI_CON_HANDLE(handle), flags, dlen);
  		level++;
  	}
  		
@@ -128,7 +127,7 @@ $NetBSD: patch-ag,v 1.2 2005/11/14 23:43:28 plunky Exp $
  	frm->len  -= sizeof(*hdr);
  	frm->flags  = flags;
 -	frm->handle = NG_HCI_CON_HANDLE(handle);
-+	frm->handle = HCI_CONN_HANDLE(handle);
++	frm->handle = HCI_CON_HANDLE(handle);
  
  	if (parser.filter & ~FILT_HCI)
  		l2cap_dump(level, frm);
@@ -137,15 +136,14 @@ $NetBSD: patch-ag,v 1.2 2005/11/14 23:43:28 plunky Exp $
  static void sco_dump(int level, struct frame *frm)
  {
 -	ng_hci_scodata_pkt_t *hdr = (void *) frm->ptr;
--	uint16_t handle = le16toh(hdr->con_handle);
 +	hci_scodata_hdr_t *hdr = (void *) frm->ptr;
-+	uint16_t handle = le16toh(hdr->conn_handle);
+ 	uint16_t handle = le16toh(hdr->con_handle);
  
  	if (!p_filter(FILT_SCO)) {
  		p_indent(level, frm);
  		printf("SCO data: handle 0x%4.4x dlen %d\n",
 -			NG_HCI_CON_HANDLE(handle), hdr->length);
-+			HCI_CONN_HANDLE(handle), hdr->length);
++			HCI_CON_HANDLE(handle), hdr->length);
  		level++;
  
  		frm->ptr += sizeof(*hdr);
