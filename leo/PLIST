@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/25 23:14:23 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/13 01:24:52 rillig Exp $
 bin/leo
 lib/leo/Icons/Box108.bmp
 lib/leo/Icons/LeoApp.ico
@@ -114,9 +114,6 @@ lib/leo/plugins/vim.py
 lib/leo/plugins/word_export.ini
 lib/leo/plugins/word_export.py
 lib/leo/plugins/xemacs.py
-lib/leo/scripts/CVS/Entries
-lib/leo/scripts/CVS/Repository
-lib/leo/scripts/CVS/Root
 lib/leo/scripts/LinixInstall.py
 lib/leo/scripts/c2py.py
 lib/leo/scripts/c2py.pyc
@@ -182,7 +179,6 @@ lib/leo/uninstall
 @dirrm lib/leo/scripts/tangle
 @dirrm lib/leo/scripts/other
 @dirrm lib/leo/scripts/install
-@dirrm lib/leo/scripts/CVS
 @dirrm lib/leo/scripts
 @dirrm lib/leo/plugins
 @dirrm lib/leo/doc
