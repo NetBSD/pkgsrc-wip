@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/25 23:28:35 ishit Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/13 01:45:31 rillig Exp $
 
 DISTNAME=		WEPCrack-0.1.0
 CATEGORIES=		security
@@ -8,16 +8,16 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://wepcrack.sourceforge.net/
 COMMENT=		Open source tool for breaking 802.11 WEP secret keys
 
-WRKSRC=		${WRKDIR}
-NO_BUILD=	yes
-NO_CONFIGURE=	yes
-USE_TOOLS+=	perl
+WRKSRC=			${WRKDIR}
+NO_BUILD=		yes
+USE_TOOLS+=		perl:run
+
+REPLACE_PERL+=		*.pl
 
 do-install:
-	for A in ${WRKSRC}/*.pl; do \
-	${MV} $${A} $${A}.orig; \
-	${SED} 's@#!/usr/bin/perl@#!${PREFIX}/bin/perl@' < $${A}.orig > $${A}; \
-	${INSTALL_SCRIPT} $${A} ${LOCALBASE}/bin; \
+	set -e;								\
+	cd ${WRKSRC:Q} && for f in *.pl; do				\
+		${INSTALL_SCRIPT} "./$$f" ${PREFIX:Q}/bin/;		\
 	done
 
-.include	"../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.pkg.mk"
