@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/03 12:17:36 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/13 01:51:44 rillig Exp $
 #
 
 DISTNAME=		Pythonol-2.0_i586
@@ -18,18 +18,19 @@ PY_PATCHPLIST=		yes
 
 TARGET_DIR=		${PREFIX}/${PYSITELIB}/Pythonol
 SCRIPTNAME=		${PREFIX}/bin/pythonol
+USE_TOOLS+=		printf
 
 do-build:
-	${RM} -r ${WRKSRC}/sqlite
-	${PYTHONBIN} ${WRKSRC}/dictionary/makedb.py
+	${RM} -r ${WRKSRC:Q}/sqlite
+	${PYTHONBIN} ${WRKSRC:Q}/dictionary/makedb.py
 
 do-install:
 	${INSTALL_DATA_DIR} ${TARGET_DIR}
 	cd ${WRKSRC} && ${PAX} -rw -pe * ${TARGET_DIR}
-	printf "#!/bin/sh\nexec ${PYTHONBIN} ${TARGET_DIR}/pythonolui.py" > ${SCRIPTNAME}
+	${PRINTF} "#!/bin/sh\\nexec ${PYTHONBIN} ${TARGET_DIR}/pythonolui.py" > ${SCRIPTNAME}
 	${CHMOD} ${BINMODE} ${SCRIPTNAME}
 	${CHOWN} ${BINOWN}:${BINGRP} ${SCRIPTNAME}
 
 .include "../../lang/python/extension.mk"
-.include "../..//x11/py-gtk2/buildlink3.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
