@@ -1,15 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/19 16:52:50 h2m Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/14 19:38:52 h2m Exp $
 bin/typespeed
 man/cat6/typespeed.0
 man/man6/typespeed.6
-share/typespeed/high.words.dos
-share/typespeed/high.words.dut
-share/typespeed/high.words.eng
-share/typespeed/high.words.fin
-share/typespeed/high.words.portuguese
-share/typespeed/high.words.prog
-share/typespeed/high.words.spanish
-share/typespeed/high.words.unix
+lib/typespeed/typespeed
 share/typespeed/words.dos
 share/typespeed/words.dut
 share/typespeed/words.eng
@@ -19,3 +12,4 @@ share/typespeed/words.prog
 share/typespeed/words.spanish
 share/typespeed/words.unix
 @dirrm share/typespeed
+@dirrm lib/typespeed
