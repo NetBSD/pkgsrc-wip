@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/01/07 23:40:01 h2m Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/14 22:45:16 h2m Exp $
 #
 
 PKGNAME=		smc-0.97
 DISTNAME=		SMC_0.97
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=smclone/}
 DISTFILES=		${DISTNAME}_source.zip ${DISTNAME}_game.zip \
@@ -14,12 +14,14 @@ MAINTAINER=		hernani@vecirex.net
 HOMEPAGE=		http://smclone.sf.net/
 COMMENT=		Super Mario (World) Clone using pretty 2D graphics
 
+DEPENDS+=		autoconf>=2.50:../../devel/autoconf
+DEPENDS+=		automake>=1.7:../../devel/automake
 DEPENDS+=		SDL-nas-[0-9]*:../../audio/SDL-nas
-GCC_REQD+=		3.2
+GCC_REQD=		3.2
 
 WRKSRC=			${WRKDIR}/0.97
 GNU_CONFIGURE=		YES
-USE_TOOLS+=             autoconf automake gmake
+USE_TOOLS+=             gmake
 
 SMCSHARE=${PREFIX}/share/smc
 
@@ -35,22 +37,20 @@ post-patch:
 	${RM} -f docs/makefile.am && \
 	${SH} autogen.sh && \
 	${CHMOD} a+x configure && \
-	${CP} ${FILESDIR}/smc-exec.sh ${WRKDIR}
+	${CP} ${FILESDIR}/smc ${WRKDIR}/.smc
 
 do-install:
 	# Installing game executable, data and default configuration
-	${INSTALL_PROGRAM} ${WRKSRC}/src/smc ${PREFIX}/bin/smc_bin
-	${INSTALL_DATA} -m0555 ${WRKDIR}/smc-exec.sh ${PREFIX}/bin/smc
-	${INSTALL_DATA_DIR} -m0777 ${SMCSHARE}/levels
-	${INSTALL_DATA} -m0666 ${WRKSRC}/data/levels/* ${SMCSHARE}/levels
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/smc
+	${INSTALL_PROGRAM} ${WRKSRC}/src/smc ${PREFIX}/lib/smc
+	${INSTALL_SCRIPT} ${WRKDIR}/.smc ${PREFIX}/bin/smc
+	${INSTALL_DATA_DIR} ${SMCSHARE}/levels
+	${INSTALL_DATA} ${WRKSRC}/data/levels/* ${SMCSHARE}/levels
 	${CP} -rf ${WRKSRC}/data/font ${SMCSHARE}
 	${CP} -rf ${WRKSRC}/data/music ${SMCSHARE}
 	${CP} -rf ${WRKSRC}/data/pixmaps ${SMCSHARE}
 	${CP} -rf ${WRKSRC}/data/sounds ${SMCSHARE}
 	${CP} -rf ${WRKSRC}/data/world ${SMCSHARE}
-	${INSTALL_DATA_DIR} -m0777 ${SMCSHARE}/savegames
-	${INSTALL_DATA_DIR} -m0777 ${SMCSHARE}/screenshots
-	${INSTALL_DATA} -m0666 ${FILESDIR}/preferences.ini ${SMCSHARE}
 	# Installing documentation, license information and install notes
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smc/licenses
 	${INSTALL_DATA} ${WRKSRC}/docs/*.css ${PREFIX}/share/doc/smc
@@ -58,14 +58,15 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${PREFIX}/share/doc/smc
 	${INSTALL_DATA} ${WRKSRC}/docs/licenses/* ${PREFIX}/share/doc/smc/licenses
 
-post-install:
-	${LN} -fs ../../share/smc ${SMCSHARE}/data
-
-SUBST_CLASSES+=		execpath
-SUBST_STAGE.execpath=	pre-install
-SUBST_FILES.execpath=	${WRKDIR}/smc-exec.sh
-SUBST_SED.execpath=	-e 's|EXECPATH|${SMCSHARE}|g'
-SUBST_MESSAGE.execpath=	Execution path of the smc binary adjusted
+SUBST_CLASSES+=		libpath sharepath
+SUBST_STAGE.libpath=	pre-install
+SUBST_FILES.libpath=	${WRKDIR}/.smc
+SUBST_SED.libpath=	-e 's|LIBPATH|${PREFIX}/lib/smc|g'
+SUBST_MESSAGE.libpath=	"Setting smc lib path in execution script"
+SUBST_STAGE.sharepath=	pre-install
+SUBST_FILES.sharepath=	${WRKDIR}/.smc
+SUBST_SED.sharepath=	-e 's|SHAREPATH|${SMCSHARE}|g'
+SUBST_MESSAGE.sharepath="Setting smc share path in execution script"
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL_gfx/buildlink3.mk"

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2006/01/07 23:03:06 h2m Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/14 22:45:17 h2m Exp $
 bin/smc
-bin/smc_bin
+lib/smc/smc
 share/doc/smc/controls.html
 share/doc/smc/credits.html
 share/doc/smc/history.html
@@ -10,9 +10,32 @@ share/doc/smc/licenses/gpl.txt
 share/doc/smc/licenses/lgpl.txt
 share/doc/smc/readme-linux.txt
 share/doc/smc/style.css
-share/smc/data
 share/smc/font/bluebold.ttf
 share/smc/font/bluebold.txt
+share/smc/levels/all.txt
+share/smc/levels/boder_1.txt
+share/smc/levels/david_1.txt
+share/smc/levels/fluxy_1.txt
+share/smc/levels/fluxy_2.txt
+share/smc/levels/frettchen_2.txt
+share/smc/levels/keywest_1.txt
+share/smc/levels/labyrinth_1.txt
+share/smc/levels/lvl_2.txt
+share/smc/levels/lvl_3.txt
+share/smc/levels/lvl_4.txt
+share/smc/levels/lvl_5.txt
+share/smc/levels/lvl_6.txt
+share/smc/levels/markoff_2.txt
+share/smc/levels/pasol_1.txt
+share/smc/levels/pasol_2.txt
+share/smc/levels/pasol_3.txt
+share/smc/levels/speed_test.txt
+share/smc/levels/stephane_1.txt
+share/smc/levels/stephane_2.txt
+share/smc/levels/test_1.txt
+share/smc/levels/tower_1.txt
+share/smc/levels/undergroundsurprise.txt
+share/smc/levels/yuki_1.txt
 share/smc/music/game/mainmenu.ogg
 share/smc/music/land/cave_1.ogg
 share/smc/music/land/cave_2.ogg
@@ -487,9 +510,6 @@ share/smc/world/worlds.txt
 @dirrm share/smc/world/default
 @dirrm share/smc/world
 @dirrm share/smc/sounds
-@exec ${MKDIR} %D/share/smc/screenshots
-@dirrm share/smc/screenshots
-@exec ${MKDIR} %D/share/smc/savegames
 @dirrm share/smc/pixmaps/world/waypoints
 @dirrm share/smc/pixmaps/world/tiles/green_1
 @dirrm share/smc/pixmaps/world/tiles
@@ -577,6 +597,9 @@ share/smc/world/worlds.txt
 @dirrm share/smc/music/land
 @dirrm share/smc/music/game
 @dirrm share/smc/music
+@dirrm share/smc/levels
 @dirrm share/smc/font
+@dirrm share/smc
 @dirrm share/doc/smc/licenses
 @dirrm share/doc/smc
+@dirrm lib/smc
