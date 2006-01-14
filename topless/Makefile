@@ -1,26 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2005/09/20 06:15:34 obache Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/14 04:30:57 obache Exp $
 #
 
-DISTNAME=	${PKGNAME_NOREV}-1.src.rpm
-PKGNAME=	topless-1.49
+DISTNAME=	topless-1.52
 CATEGORIES=	sysutils
 MASTER_SITES=	http://people.freebsd.org/~daichi/src/
-EXTRACT_SUFX=	# empty
 
 MAINTAINER=	obata@lins.jp
-HOMEPAGE=	http://www.ongs.net/~daichi/#topless
-COMMENT=	Display and update information of target command like 'top'
+HOMEPAGE=	http://bloghome.lovepeers.org/daymemo2/files/2005/0613/topless.html
+COMMENT=	Display command output on the whole screen like ``top''
 
-BUILD_DEPENDS+=	rpm2pkg>=2.0:../../pkgtools/rpm2pkg
-
-NO_BUILD=	yes
-
-do-extract:
-	${LOCALBASE}/sbin/rpm2pkg -d ${WRKDIR} ${DISTDIR}/${DISTNAME}
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/topless ${PREFIX}/bin/topless
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/topless
-	${INSTALL_DATA} ${WRKDIR}/topless-license ${PREFIX}/share/doc/topless/LICENSE
+USE_TOOLS+=	perl
 
 .include "../../mk/bsd.pkg.mk"

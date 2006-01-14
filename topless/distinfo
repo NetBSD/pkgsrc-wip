@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/09/20 06:15:34 obache Exp $
+$NetBSD: distinfo,v 1.5 2006/01/14 04:30:57 obache Exp $
 
-SHA1 (topless-1.49-1.src.rpm) = 9de42f961761fce56d1720f3e6b50143687b2190
-RMD160 (topless-1.49-1.src.rpm) = 5357f613d8be4d6048cac6159928a34c0a8896dc
-Size (topless-1.49-1.src.rpm) = 5292 bytes
+SHA1 (topless-1.52.tar.gz) = e0f838cff4b80254eedb5858e57ded599dc224bc
+RMD160 (topless-1.52.tar.gz) = cf4abae31d8d78d51bf307b0974b16b0248dd8da
+Size (topless-1.52.tar.gz) = 4673 bytes
