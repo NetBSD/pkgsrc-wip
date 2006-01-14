@@ -6,7 +6,7 @@ CONFDIR=.smc
 (
 cd ~
 	if [ ! -d ${CONFDIR} ]; then
-	echo No SMC user directory available -- creating one
+	echo No SMC user directory available -- creating that
 		mkdir $CONFDIR
 		cd $CONFDIR
 		cp -rf ${SHAREDIR}/levels .
@@ -20,7 +20,9 @@ cd ~
 		ln -s ${SHAREDIR}/sounds sounds
 		ln -s ${SHAREDIR}/world world
 		ln -s ~/${CONFDIR} data
+		cd ..
 	fi
 	export SDL_AUDIO_PLUGIN="nas"
+	cd ${CONFDIR}
 	${LIBDIR}/smc $*
 )
