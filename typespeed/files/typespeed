@@ -15,5 +15,5 @@ cd ~
 			done
 		${LIBDIR}/typespeed --makescore
 	fi
-	${LIBDIR}/typespeed $*
+	${LIBDIR}/typespeed $@
 )
