@@ -1,3 +1,2 @@
-- Black screen and no sound on NetBSD 2.0.2/sparc64.
 - Loading and saving is broken.
 - Requires png_jmpbuf in -lpng for taking screenshots.
