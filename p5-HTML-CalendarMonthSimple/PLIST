@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/15 16:55:25 ysbeer Exp $
+lib/perl5/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/perllocal.pod
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/HTML/CalendarMonthSimple/.packlist
+lib/perl5/vendor_perl/man/man3/HTML::CalendarMonthSimple.3
+@dirrm lib/perl5/vendor_perl/man/man3
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/HTML/CalendarMonthSimple
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/HTML
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto
+@dirrm lib/perl5/vendor_perl/5.8.0/HTML
+@dirrm lib/perl5/vendor_perl/5.8.0
