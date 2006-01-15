@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 22:27:47 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/15 17:34:33 hfath Exp $
 
 DISTNAME=		ppr-1.53
 CATEGORIES=		print
@@ -82,7 +82,8 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/mounted
 OWN_DIRS+=		${PKG_SYSCONFDIR}/printers
 OWN_DIRS+=		${VARBASE}/spool/ppr
 
-.include "../../graphics/netpbm/buildlink3.mk"
+.include "options.mk"
+
 .include "../../wip/natali/buildlink3.mk"
 .include "../../net/netatalk/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
