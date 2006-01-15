@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2138 2006/01/15 16:52:23 minskim Exp $
+# $Id: Makefile,v 1.2139 2006/01/15 17:08:25 ysbeer Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -764,6 +764,7 @@ SUBDIR+=	p5-File-Modified
 SUBDIR+=	p5-File-Path-Expand
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-Geo-IPfree
+SUBDIR+=	p5-HTML-CalendarMonthSimple
 SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTML-Prototype
 SUBDIR+=	p5-HTML-Prototype-Useful
