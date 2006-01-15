@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2006/01/15 09:03:37 roelants Exp $
-${RUBY_SITELIBDIR}/gnome2.rb
-${RUBY_SITEARCHLIBDIR}/gnome2.${RUBY_DLEXT}
