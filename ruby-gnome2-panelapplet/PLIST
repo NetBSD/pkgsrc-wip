@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2006/01/15 09:03:38 roelants Exp $
-${RUBY_SITEARCHLIBDIR}/panelapplet2.${RUBY_DLEXT}
-${RUBY_SITELIBDIR}/panelapplet2.rb
