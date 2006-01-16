@@ -1,9 +1,32 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/23 18:40:39 leonardschmidt Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/01/16 23:41:50 thomasklausner Exp $
 bin/mednafen
 @comment belongs to libiconv: lib/charset.alias
 share/doc/mednafen/cheat.html
 share/doc/mednafen/mcm.txt
-share/doc/mednafen/mcs.txt
 share/doc/mednafen/mednafen.html
+share/doc/mednafen/tech/README.now
+share/doc/mednafen/tech/README.sound
+share/doc/mednafen/tech/UNIF_current.txt
+share/doc/mednafen/tech/cpu/4017.txt
+share/doc/mednafen/tech/cpu/6502_cpu.txt
+share/doc/mednafen/tech/cpu/NESSOUND-4th.txt
+share/doc/mednafen/tech/cpu/NESSOUND.txt
+share/doc/mednafen/tech/cpu/dmc.txt
+share/doc/mednafen/tech/exp/SMB2j.txt
+share/doc/mednafen/tech/exp/mmc5-e.txt
+share/doc/mednafen/tech/exp/mmc5_bank_switch.txt
+share/doc/mednafen/tech/exp/namco.txt
+share/doc/mednafen/tech/exp/taito.txt
+share/doc/mednafen/tech/exp/tengen.txt
+share/doc/mednafen/tech/exp/vrcvi.txt
+share/doc/mednafen/tech/exp/vrcvii.txt
+share/doc/mednafen/tech/nsfspec.txt
+share/doc/mednafen/tech/ppu/2C02 technical operation.TXT
+share/doc/mednafen/tech/ppu/loopy1.txt
+share/doc/mednafen/tech/ppu/loopy2.txt
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/mednafen.mo
+@dirrm share/doc/mednafen/tech/ppu
+@dirrm share/doc/mednafen/tech/exp
+@dirrm share/doc/mednafen/tech/cpu
+@dirrm share/doc/mednafen/tech
 @dirrm share/doc/mednafen

@@ -1,5 +1,6 @@
-0.4.1 out.
+/dev/dsp needs to be replaced with ${DEVOSSAUDIO} or ${DEVOSSSOUND}.
 
+Is the following still true?
 - Fails to build on NetBSD 2.1.0/i386:
 
 /include -I../../intl -I../fidlib   -I/usr/X11R6/include  -pthread  -DFIDLIB_LINUX -I/usr/pkg/include -DGLX_GLXEXT_LEGACY -I/usr/include -Wall -Winline -ffast-math -I/usr/pkg/include -I/usr/pkg/include/SDL -D_REENTRANT  -O2 -I/usr/pkg/include -DGLX_GLXEXT_LEGACY -I/usr/include -c -o sound/filter.o `test -f 'sound/filter.cpp' || echo './'`sound/filter.cpp

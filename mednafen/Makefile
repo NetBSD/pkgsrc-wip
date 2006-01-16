@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/12/26 17:14:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/16 23:41:50 thomasklausner Exp $
 #
 
-DISTNAME=	mednafen-0.3.7
+DISTNAME=	mednafen-0.4.3
 CATEGORIES=	emulators
 MASTER_SITES=	http://mednafen.com/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,16 +19,32 @@ USE_PKGLOCALEDIR=	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mednafen
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mednafen/tech
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mednafen/tech/cpu
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mednafen/tech/exp
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mednafen/tech/ppu
 	${INSTALL_DATA} ${WRKSRC}/Documentation/*.html \
 		${PREFIX}/share/doc/mednafen
 	${INSTALL_DATA} ${WRKSRC}/Documentation/*.txt \
 		${PREFIX}/share/doc/mednafen
+	${INSTALL_DATA} ${WRKSRC}/Documentation/tech/*.* \
+		${PREFIX}/share/doc/mednafen/tech
+	${INSTALL_DATA} ${WRKSRC}/Documentation/tech/cpu/*.* \
+		${PREFIX}/share/doc/mednafen/tech/cpu
+	${INSTALL_DATA} ${WRKSRC}/Documentation/tech/exp/*.* \
+		${PREFIX}/share/doc/mednafen/tech/exp
+	${INSTALL_DATA} ${WRKSRC}/Documentation/tech/ppu/*.* \
+		${PREFIX}/share/doc/mednafen/tech/ppu
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../misc/libcdio/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"

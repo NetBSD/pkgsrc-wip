@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.1 2005/11/09 23:41:53 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/16 23:41:50 thomasklausner Exp $
 
---- src/unzip.h.orig	2005-08-21 07:06:40.000000000 +0000
+--- src/unzip.h.orig	2005-11-15 23:54:39.000000000 +0100
 +++ src/unzip.h
-@@ -45,6 +45,10 @@
+@@ -53,6 +53,10 @@ extern "C" {
  #include "zlib.h"
  #endif
  
 +#ifndef OF
-+#define OF(a)	a
++#define OF(a) a
 +#endif
 +
- #if defined(STRICTUNZIP) || defined(STRICTZIPUNZIP)
- /* like the STRICT of WIN32, we define a pointer that cannot be converted
-     from (void*) without cast */
+ #ifndef _ZLIBIOAPI_H
+ #include "ioapi.h"
+ #endif

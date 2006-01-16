@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2006/01/16 23:41:50 thomasklausner Exp $
+
+--- src/ioapi.h.orig	2005-11-16 00:00:58.000000000 +0100
++++ src/ioapi.h
+@@ -9,6 +9,11 @@
+ #ifndef _ZLIBIOAPI_H
+ #define _ZLIBIOAPI_H
+ 
++#include <zlib.h>
++#ifndef OF
++#define OF(a) a
++#endif
++
+ 
+ #define ZLIB_FILEFUNC_SEEK_CUR (1)
+ #define ZLIB_FILEFUNC_SEEK_END (2)
