@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/01/12 13:36:45 rxg Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/16 12:38:28 rxg Exp $
 #
 
 DISTNAME=	hanzim-1.3
@@ -19,7 +19,7 @@ pre-install:
 		${ECHO} "${DISTNAME} can only be installed under X11."; \
 		exit 1; \
 	 else \
-		${SETENV} SHELL=${SH}; export LC_CTYPE=en_US.ISO8859-1; \
+		${SETENV} SHELL=${SH:Q}; export LC_CTYPE=en_US.ISO8859-1; \
 	 fi
 
 .include "../../lang/tcl/buildlink3.mk"
