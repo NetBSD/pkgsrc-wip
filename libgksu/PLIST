@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/16 23:15:26 poppnk Exp $
+include/libgksu1.2/gksu-context.h
+include/libgksu1.2/gksu.h
+lib/libgksu1.2.la
+lib/libgksu1.2/gksu-run-helper
+lib/pkgconfig/libgksu1.2.pc
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libgksu1.2.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libgksu1.2.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgksu1.2.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgksu1.2.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgksu1.2.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/libgksu1.2.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libgksu1.2.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libgksu1.2.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libgksu1.2.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/libgksu1.2.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libgksu1.2.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libgksu1.2.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libgksu1.2.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libgksu1.2.mo
+@dirrm lib/libgksu1.2
+@dirrm include/libgksu1.2
