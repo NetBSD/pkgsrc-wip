@@ -1,24 +1,27 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/26 21:09:23 mpasternak Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/16 23:34:14 thomasklausner Exp $
 
---- Makefile~	Tue Dec  9 16:52:11 2003
-+++ Makefile	Fri Dec 26 21:04:10 2003
-@@ -60,7 +60,7 @@
- PCF_28N	= ter-128n.pcf ter-228n.pcf ter-528n.pcf ter-928n.pcf ter-c28n.pcf ter-d28n.pcf ter-f28n.pcf ter-g28n.pcf ter-k28n.pcf ter-p28n.pcf ter-x28n.pcf
- PCF	= $(PCF_14N) $(PCF_14B) $(PCF_16N) $(PCF_16B) $(PCF_20N) $(PCF_20B) $(PCF_24N) $(PCF_24B) $(PCF_28N)
+--- Makefile.orig	2005-05-03 19:04:32.000000000 +0000
++++ Makefile
+@@ -69,7 +69,7 @@ PCF_32N	= ter-132n.pcf ter-232n.pcf ter-
+ PCF_32B	= ter-132b.pcf ter-232b.pcf ter-532b.pcf ter-932b.pcf ter-c32b.pcf ter-d32b.pcf ter-f32b.pcf ter-g32b.pcf ter-k32b.pcf ter-p32b.pcf ter-u32b.pcf ter-x32b.pcf
+ PCF	= $(PCF_12N) $(PCF_14N) $(PCF_14B) $(PCF_16N) $(PCF_16B) $(PCF_20N) $(PCF_20B) $(PCF_24N) $(PCF_24B) $(PCF_28N) $(PCF_28B) $(PCF_32N) $(PCF_32B)
  
 -all: $(PSF) $(PCF)
 +all: $(PCF)
  psf: $(PSF)
- psfx: $(PSFX)
+ txt: $(TXT)
  raw: $(RAW)
-@@ -71,9 +71,7 @@
+@@ -79,11 +79,9 @@ pcf: $(PCF)
+ DESTDIR	= 
+ prefix	= /usr
  psfdir	= $(prefix)/share/consolefonts
- x11dir	= $(prefix)/X11R6/lib/X11/fonts/local
+-x11dir	= $(prefix)/X11R6/lib/X11/fonts/local
++x11dir	= $(PREFIX)/lib/X11/fonts/misc
  
 -install: $(PSF) $(PCF)
--	mkdir -p $(psfdir)
--	for i in $(PSF) ; do gzip -c $$i > $(psfdir)/$$i.gz ; done
+-	mkdir -p $(DESTDIR)$(psfdir)
+-	for i in $(PSF) ; do gzip -c $$i > $(DESTDIR)$(psfdir)/$$i.gz ; done
 +install: $(PCF)
- 	mkdir -p $(x11dir)
- 	for i in $(PCF) ; do gzip -c $$i > $(x11dir)/$$i.gz ; done
+ 	mkdir -p $(DESTDIR)$(x11dir)
+ 	for i in $(PCF) ; do gzip -c $$i > $(DESTDIR)$(x11dir)/$$i.gz ; done
  
