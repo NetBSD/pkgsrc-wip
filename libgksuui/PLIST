@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/16 23:12:19 poppnk Exp $
+include/libgksuui1.0/gksuui-convenience.h
+include/libgksuui1.0/gksuui-dialog.h
+include/libgksuui1.0/gksuui.h
+lib/libgksuui1.0.la
+lib/pkgconfig/libgksuui1.0.pc
+share/libgksuui1.0/gksu-auth.png
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libgksuui1.0.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libgksuui1.0.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgksuui1.0.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgksuui1.0.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgksuui1.0.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libgksuui1.0.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libgksuui1.0.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libgksuui1.0.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libgksuui1.0.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/libgksuui1.0.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libgksuui1.0.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libgksuui1.0.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libgksuui1.0.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libgksuui1.0.mo
+@dirrm share/libgksuui1.0
+@dirrm include/libgksuui1.0
