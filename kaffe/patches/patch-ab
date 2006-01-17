@@ -1,25 +1,24 @@
-$NetBSD: patch-ab,v 1.3 2005/09/18 20:24:30 jtonio Exp $
+$NetBSD: patch-ab,v 1.4 2006/01/17 16:32:02 jtonio Exp $
 
---- Makefile.am.orig	2005-08-25 02:54:34.000000000 +0200
+--- Makefile.am.orig	2006-01-14 14:20:55.000000000 +0100
 +++ Makefile.am
-@@ -25,7 +25,6 @@ SUBDIRS = \
- 	. \
+@@ -20,7 +20,6 @@ SUBDIRS = \
+ 	external \
  	libraries/javalib \
  	config \
 -	libltdl \
- 	$(MAYBE_BINRELOC_DIR) \
  	kaffe/kaffeh \
  	include  \
-@@ -36,7 +35,7 @@ SUBDIRS = \
- 	po \
- 	tools
- 
--DIST_SUBDIRS = config include replace libltdl kaffe libraries tools test po
-+DIST_SUBDIRS = config include replace kaffe libraries tools test po
- 
- EXTRA_DIST = \
- 	ChangeLog.1 \
-@@ -199,7 +198,6 @@ DIRECTORIES_BEFORE_RTJAR = \
+ 	kaffe/kaffevm \
+@@ -34,7 +33,6 @@ DIST_SUBDIRS = \
+ 	external \
+ 	include \
+ 	replace \
+-	libltdl \
+ 	kaffe \
+ 	libraries \
+ 	tools \
+@@ -209,7 +207,6 @@ DIRECTORIES_BEFORE_RTJAR = \
  	config \
  	include \
  	replace \
