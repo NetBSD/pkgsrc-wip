@@ -4,5 +4,5 @@ difficulty and unnecessary complexity of HTML::CalendarMonth. (Laziness
 is a virtue.)
 
 This would have been extremely difficult if not for Date::Calc.
-(See pkgsrc/devel/p5-Date-Calc). 
+(See pkgsrc/devel/p5-Date-Calc).
 

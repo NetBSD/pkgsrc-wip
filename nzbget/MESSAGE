@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/12/30 19:49:51 martijnb Exp $
+$NetBSD: MESSAGE,v 1.3 2006/01/17 09:15:15 rillig Exp $
 
-An example configuration file has been installed in 
+An example configuration file has been installed in
 ${EGDIR}.
 
 Once modified, this file should be saved as ~/.nzbget/nzbget.cfg
