@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2005/12/05 22:27:44 rillig Exp $
+# $NetBSD: Makefile.common,v 1.3 2006/01/17 09:13:37 rillig Exp $
 
 CNEWSBIN?=	${PREFIX}/cnews
 CNEWSDATA?=	/var/news
@@ -17,7 +17,7 @@ PLIST_SUBST+=	CNEWSOV=${CNEWSOV:S=${PREFIX}/==}
 
 # Given foo=${bar}, replace @foo@ with ${bar}.
 #
-FILES_SUBST=		PREFIX=${PREFIX:Q}
+FILES_SUBST+=		PREFIX=${PREFIX:Q}
 FILES_SUBST+=		CNEWSCFLAGS=${CFLAGS:M*:Q}
 FILES_SUBST+=		CNEWSDATA=${CNEWSDATA:Q}
 FILES_SUBST+=		CNEWSBIN=${CNEWSBIN:Q}

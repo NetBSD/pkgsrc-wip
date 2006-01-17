@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/01/02 17:14:09 adrian_p Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/17 09:13:36 rillig Exp $
 
 DISTNAME=	anope-1.7.13
 CATEGORIES=	net
@@ -41,7 +41,7 @@ SUBST_FILES.paths=	data/example.chk data/example.conf
 SUBST_SED.paths=	-e "s|/home/ircd/services|${PREFIX}/lib/anope|g" \
 			-e "s|/usr/local/lib/services|${PREFIX}/lib/anope|g" \
 			-e "s|/home/username/services|${PREFIX}/lib/anope|g"
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 
 SUBST_CLASSES+=		utils
 SUBST_STAGE.utils=	post-patch
@@ -50,7 +50,7 @@ SUBST_SED.utils=	-e "s|find|${FIND}|g" \
 			-e "s|chgrp|${CHGRP}|g" \
 			-e "s|chmod|${CHMOD}|g" \
 			-e "s|ln|${LN}|g"
-SUBST_MESSAGE.utils=	"Fixing hardcoded utilities."
+SUBST_MESSAGE.utils=	Fixing hardcoded utilities.
 
 .include "../../mk/pthread.buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/30 13:44:46 rxg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/01/17 09:13:38 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 DBUS_PYTHON_BUILDLINK3_MK:=	${DBUS_PYTHON_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	dbus-python
 
 .if !empty(DBUS_PYTHON_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.dbus-python+=	dbus-python>=0.23.4
-BUILDLINK_PKGSRCDIR.dbus-python?=	../../sysutils/dbus-python
+BUILDLINK_PKGSRCDIR.dbus-python?=	../../wip/dbus-python
 .endif	# DBUS_PYTHON_BUILDLINK3_MK
 
 .include "../../lang/python/pyversion.mk"
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.dbus-python?=	../../sysutils/dbus-python
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

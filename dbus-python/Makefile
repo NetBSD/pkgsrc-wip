@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/30 13:44:46 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/17 09:13:38 rillig Exp $
 #
 
 DBUS_INTERFACE=	python
@@ -11,7 +11,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
 # We can't install from within the 'dbus' nor 'tools' directory automatically
 # because we'd get a lot of other stuff installed (overriding files in the
 # dbus package).
-INSTALL_DIRS=	${WRKSRC}/python
+INSTALL_DIRS=	python
 
 .include "../../lang/python/pyversion.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"

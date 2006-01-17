@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 10:29:25 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/17 09:13:36 rillig Exp $
 
 DISTNAME=		bin86-0.16.11
 CATEGORIES=		devel
@@ -18,9 +18,9 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86
 USE_TOOLS+=		gmake
 
 do-build:
-	cd ${WRKSRC} && ${GMAKE} PREFIX=${PREFIX}
+	cd ${WRKSRC} && ${GMAKE} PREFIX=${PREFIX:Q}
 
 do-install:
-	cd ${WRKSRC} && ${GMAKE} PREFIX=${PREFIX} install
+	cd ${WRKSRC} && ${GMAKE} PREFIX=${PREFIX:Q} install
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/10/30 12:44:51 ivaniclixx Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/17 09:13:37 rillig Exp $
 #
 
 DISTNAME=		blassic-0.10.0
@@ -10,7 +10,7 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.blassic
 PKG_SUPPORTED_OPTIONS=		dont-use-x
 
 MAINTAINER=		ivaniclixx@gmail.com
-HOMEPAGE=		http://blassic.org
+HOMEPAGE=		http://blassic.org/
 COMMENT=		Blassic is a classic Basic interpreter
 
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/10/09 01:14:51 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/17 09:13:37 rillig Exp $
 
 DISTNAME=	c-news
 PKGNAME=        c-news-CR-7
@@ -100,7 +100,7 @@ regression:
 
 build-doc:
 	cd ${WRKSRC}/doc && \
-		${MAKE} PIC=${PIC} NROFF=${NROFF} ${MAKE_FLAGS}
+		${MAKE} PIC=${PIC:Q} NROFF=${NROFF:Q} ${MAKE_FLAGS}
 	cd ${WRKSRC}/notebook && ${MAKE} ${MAKE_FLAGS}
 
 do-install:
