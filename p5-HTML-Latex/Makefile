@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:14:39 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/17 10:14:33 rillig Exp $
 
 .include "Makefile.common"
 
@@ -11,7 +11,8 @@ COMMENT=		Perl5 module for converting HTML to LaTeX
 DEPENDS+=		p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 DEPENDS+=	 	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTML/Latex/.packlist
+REPLACE_PERL+=		Latex.pm
+PERL5_PACKLIST=		auto/HTML/Latex/.packlist
 
 # LWP::Simple (called libwwwperl too)
 # URI (libwww or Bundle::LWP)
