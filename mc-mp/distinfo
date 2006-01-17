@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/17 07:51:18 rillig Exp $
+
+SHA1 (mc-4.1.40-pre9.tar.gz) = a5d46051e4274f516df7f5251030a94be8d08e6b
+RMD160 (mc-4.1.40-pre9.tar.gz) = 17e2f0c02bd045b9d1f8bc07e9ab9545a20950dc
+Size (mc-4.1.40-pre9.tar.gz) = 1214767 bytes
