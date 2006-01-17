@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2006/01/16 21:00:03 jtonio Exp $
+# $NetBSD: Makefile.common,v 1.18 2006/01/17 17:15:51 jtonio Exp $
 
 DISTNAME=     kaffe-1.1.7-rc1
 CATEGORIES=   lang java
@@ -37,6 +37,8 @@ CONFIGURE_ARGS+=	--without-alsa
 CONFIGURE_ARGS+=	--without-esd
 CONFIGURE_ARGS+=	--disable-esdtest
 CONFIGURE_ARGS+=	--disable-native-awt
+CONFIGURE_ARGS+=	--disable-gtk-peer
+CONFIGURE_ARGS+=	--without-x
 
 .include "../../mk/bsd.prefs.mk"
 
