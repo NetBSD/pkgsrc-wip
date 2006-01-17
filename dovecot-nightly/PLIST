@@ -1,7 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 2005/08/01 15:02:47 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/01/17 16:32:32 tvierling Exp $
+lib/dovecot/imap/lib01_quota_plugin.so
+lib/dovecot/imap/lib01_zlib_plugin.la
+lib/dovecot/imap/lib02_imap_quota_plugin.la
+lib/dovecot/imap/lib02_trash_plugin.so
+lib/dovecot/lda/lib01_quota_plugin.so
+lib/dovecot/lda/lib02_trash_plugin.so
+lib/dovecot/lib01_quota_plugin.la
+lib/dovecot/lib02_trash_plugin.la
 libexec/dovecot/checkpassword-reply
-libexec/dovecot/deliver
+libexec/dovecot/dict
 libexec/dovecot/dovecot-auth
+libexec/dovecot/gdbhelper
 libexec/dovecot/imap
 libexec/dovecot/imap-login
 libexec/dovecot/pop3
@@ -29,3 +38,6 @@ share/examples/rc.d/dovecot
 @dirrm share/examples/dovecot
 @dirrm share/doc/dovecot
 @dirrm libexec/dovecot
+@dirrm lib/dovecot/lda
+@dirrm lib/dovecot/imap
+@dirrm lib/dovecot
