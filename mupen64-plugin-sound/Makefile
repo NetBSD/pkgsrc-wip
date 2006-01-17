@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/17 10:20:46 rillig Exp $
 #
 
 DISTNAME=	mupen64_sound
@@ -17,7 +17,7 @@ SUBST_CLASSES+=	    dsp
 SUBST_STAGE.dsp=    post-patch
 SUBST_FILES.dsp=    main.c
 SUBST_SED.dsp=	    -e "s,/dev/dsp,${DEVOSSAUDIO},g"
-SUBST_MESSAGE.dsp=  "Fixing harcoded audio device."
+SUBST_MESSAGE.dsp=  Fixing harcoded audio device.
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mupen64-base/plugins

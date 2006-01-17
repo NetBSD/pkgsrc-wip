@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/11 23:22:37 bencollver Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/17 10:20:47 rillig Exp $
 #
 
 DISTNAME=		xace-0.4
@@ -13,7 +13,7 @@ EXTR_PREFIX=		.tar.gz
 USE_IMAKE=		YES
 
 SUBST_CLASSES+=		prefix
-SUBST_MESSAGE.prefix=	"Configuring to use PREFIX."
+SUBST_MESSAGE.prefix=	Configuring to use PREFIX.
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	xmain.c
 SUBST_SED.prefix=	-e "s,XXXPREFIXXXX,${PREFIX},g"
@@ -22,7 +22,7 @@ SUBST_SED.prefix=	-e "s,XXXPREFIXXXX,${PREFIX},g"
 
 .if ${MACHINE_ARCH} == "hpcmips"
 SUBST_CLASSES+=		scale
-SUBST_MESSAGE.prefix=	"Fixing scale."
+SUBST_MESSAGE.prefix=	Fixing scale.
 SUBST_STAGE.scale=	post-patch
 SUBST_FILES.scale=	Imakefile
 SUBST_SED.scale=	-e 's,SCALE=2,SCALE=1,'

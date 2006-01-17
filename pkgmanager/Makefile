@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/28 22:40:40 scode Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/17 10:20:46 rillig Exp $
 #
 
 PKGMGR_VERSION= 0.7.0
@@ -27,21 +27,21 @@ SUBST_CLASSES+=		clocc
 SUBST_STAGE.clocc=	post-patch
 SUBST_FILES.clocc=	clocc/clocc.lisp
 SUBST_SED.clocc=	-e "s|/usr/local/src/clocc/|${WRKDIR}/clocc/|g"
-SUBST_MESSAGE.clocc=	"Fixing clocc root directory in clocc.lisp"
+SUBST_MESSAGE.clocc=	Fixing clocc root directory in clocc.lisp
 
 SUBST_CLASSES+=         wrapper
 SUBST_STAGE.wrapper= 	post-patch
 SUBST_FILES.wrapper=	pkgmanager-${PKGMGR_VERSION}/src/pkgmanager-wrapper.sh
 SUBST_SED.wrapper=	-e "s|@PREFIX@|${PREFIX}|g" -e "s|@MAKE@|${MAKE}|g" \
 			-e "s|@DBDIR@|${PKG_DBDIR}|g"
-SUBST_MESSAGE.wrapper=	"Fixing prefix in pkgmanager shell script wrapper"
+SUBST_MESSAGE.wrapper=	Fixing prefix in pkgmanager shell script wrapper
 
 SUBST_CLASSES+=		runner
 SUBST_STAGE.runner=	post-patch
 SUBST_FILES.runner=	pkgmanager-${PKGMGR_VERSION}/src/run.lisp
 SUBST_SED.runner=	-e "s|\*base-dir\* \\\"\.\\\"|\*base-dir\* \
 				\\\"${PREFIX}/lib/pkgmanager\\\"|g"
-SUBST_MESSAGE.runner=	"Fixing load base in runner"
+SUBST_MESSAGE.runner=	Fixing load base in runner
 
 post-extract:
 	${CHMOD} +x ${WRKDIR}/pkgmanager-${PKGMGR_VERSION}/src/prepclocc.sh

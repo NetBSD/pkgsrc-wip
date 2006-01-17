@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/08 21:38:53 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/17 10:20:46 rillig Exp $
 #
 
 DISTNAME=		highlight-2.4.3
@@ -26,7 +26,7 @@ CONF_FILES=		${EGDIR}/extensions.conf		\
 			${PKG_SYSCONFDIR}/scriptre.conf
 
 SUBST_CLASSES+=		etc
-SUBST_MESSAGE.etc=	"Fixing hardcoded paths."
+SUBST_MESSAGE.etc=	Fixing hardcoded paths.
 SUBST_STAGE.etc=	post-patch
 SUBST_FILES.etc=	highlight/datadir.cpp
 SUBST_SED.etc=		-e 's,/etc/highlight,${PKG_SYSCONFDIR},g'

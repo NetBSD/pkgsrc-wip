@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/17 10:20:47 rillig Exp $
 #
 
 DISTNAME=	chg_sasl_passwd-1.4-1.4.x
@@ -37,7 +37,7 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	chg_sasl_passwd/chgsaslpasswd.c
 SUBST_SED.prefix+=	-e "s,/usr/local,${PREFIX},g"
-SUBST_MESSAGE.prefix=	"Fixing harcoded paths."
+SUBST_MESSAGE.prefix=	Fixing harcoded paths.
 
 .include "../../mail/squirrelmail/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

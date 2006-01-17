@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:13:39 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/17 10:20:46 rillig Exp $
 
 DISTNAME=	l2tpd-0.69
 CATEGORIES=	net
@@ -20,7 +20,7 @@ CONF_FILES+=	${EGDIR}/l2tpd-secrets.sample ${PKG_SYSCONFDIR}/l2tpd-secrets
 CFLAGS+=	-DPREFIX='"${PREFIX}"' -DSANITY
 
 SUBST_CLASSES+=		options
-SUBST_MESSAGE.options=	"Fixing build options."
+SUBST_MESSAGE.options=	Fixing build options.
 SUBST_STAGE.options=	post-patch
 SUBST_FILES.options=	Makefile Makefile.Solaris
 SUBST_SED.options=	-e 's,DFLAGS=,\#DFLAGS=,' \

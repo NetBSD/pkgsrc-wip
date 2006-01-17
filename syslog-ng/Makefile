@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:59 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/17 10:20:47 rillig Exp $
 
 DISTNAME=	syslog-ng-1.6.6
 CATEGORIES=	sysutils
@@ -23,7 +23,7 @@ SUBST_STAGE.conf=	post-patch
 SUBST_FILES.conf=	doc/syslog-ng.8 doc/syslog-ng.conf.5 contrib/syslog2ng
 SUBST_SED.conf=		-e "s|/etc/syslog-ng|${PKG_SYSCONFDIR}|g" \
 			-e "s|/usr/bin/awk|${AWK}|g"
-SUBST_MESSAGE.conf=	"Fixing configuration file paths."
+SUBST_MESSAGE.conf=	Fixing configuration file paths.
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../sysutils/libol/buildlink3.mk"

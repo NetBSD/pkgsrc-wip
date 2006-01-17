@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/17 10:20:45 rillig Exp $
 #
 
 DISTNAME=		gdal-1.2.6
@@ -24,7 +24,7 @@ SUBST_CLASSES+=		pyversion
 SUBST_STAGE.pyversion=	do-configure
 SUBST_FILES.pyversion=	GNUmakefile
 SUBST_SED.pyversion=	"s:python:${PYTHONBIN}:g"
-SUBST_MESSAGE.pyversion="Fixing Python Version"
+SUBST_MESSAGE.pyversion=Fixing Python Version
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

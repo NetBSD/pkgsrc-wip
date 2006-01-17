@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:28 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/17 10:20:47 rillig Exp $
 
 DISTNAME=	sid-milter-0.2.5
 CATEGORIES=	mail
@@ -27,7 +27,7 @@ SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	pre-build
 SUBST_FILES.libs=	sid-filter/Makefile.m4
 SUBST_SED.libs=		-e "s|@LMBASE@|${BUILDLINK_PREFIX.libmilter}|g"
-SUBST_MESSAGE.libs=	"Fixing paths."
+SUBST_MESSAGE.libs=	Fixing paths.
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mail/libmilter/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/01 03:12:20 marmfield Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/17 10:20:47 rillig Exp $
 #
 
 DISTNAME=		smbldap-tools-0.9.1
@@ -41,7 +41,7 @@ REPLACE_PERL+=		"doc/smbldap-migrate-unix-accounts"
 REPLACE_PERL+=		"doc/smbldap-migrate-unix-groups"
 
 SUBST_CLASSES+=		scripts
-SUBST_MESSAGE.scripts=	"Fixing directory locations."
+SUBST_MESSAGE.scripts=	Fixing directory locations.
 SUBST_STAGE.scripts=	do-configure
 SUBST_FILES.scripts=	configure.pl smbldap_tools.pm
 SUBST_FILES.scripts+=	smbldap.conf smbldap-populate

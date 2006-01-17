@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/06 12:37:25 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/17 10:20:47 rillig Exp $
 
 .include "../../chat/xchat/Makefile.common"
 
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--disable-python
 #SUBST_STAGE.paths=	post-patch
 #SUBST_FILES.paths=	configure
 #SUBST_SED.paths=	-e "s|$tcl /lib|${PREFIX}/lib|g"
-#SUBST_MESSAGE.paths=	"Fixing paths."
+#SUBST_MESSAGE.paths=	Fixing paths.
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

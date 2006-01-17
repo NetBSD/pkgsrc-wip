@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/20 22:55:24 cetrox Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/17 10:20:46 rillig Exp $
 #
 
 DISTNAME=		PyPanel-2.4
@@ -13,7 +13,7 @@ PYDISTUTILSPKG=		yes
 PY_PATCHPLIST=  	yes
 
 SUBST_CLASSES+=		setup
-SUBST_MESSAGE.setup=	"Fixing LOCALBASE and X11BASE paths."
+SUBST_MESSAGE.setup=	Fixing LOCALBASE and X11BASE paths.
 SUBST_STAGE.setup=	pre-patch
 SUBST_FILES.setup=	setup.py
 SUBST_SED.setup+=	-e 's|/usr/bin|${LOCALBASE}/bin|g'

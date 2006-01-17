@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/17 10:20:46 rillig Exp $
 #
 
 DISTNAME=		msworkbench-0.3
@@ -15,7 +15,7 @@ SUBST_CLASSES+=		wishpath
 SUBST_STAGE.wishpath=	pre-install
 SUBST_FILES.wishpath=	install.sh
 SUBST_SED.qtbindir=	's:$${PREFIX}:${PREFIX}:g'
-SUBST_MESSAGE.wishpath= "Fixing Wish path"
+SUBST_MESSAGE.wishpath= Fixing Wish path
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/bin/${DISTNAME}

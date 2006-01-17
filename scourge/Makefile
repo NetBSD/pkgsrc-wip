@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:33 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/17 10:20:47 rillig Exp $
 #
 
 DISTNAME=		scourge-0.4
@@ -17,7 +17,7 @@ post-extract:
 	${CP} ${FILESDIR}/scourge.sh ${WRKSRC}
 
 SUBST_CLASSES+=	scourge
-SUBST_MESSAGE.scourge=	"Replacing prefix."
+SUBST_MESSAGE.scourge=	Replacing prefix.
 SUBST_STAGE.scourge=	post-patch
 SUBST_FILES.scourge=	scourge.sh
 SUBST_SED.scourge=	-e "s,XXXPREFIXXXX,${PREFIX},g"

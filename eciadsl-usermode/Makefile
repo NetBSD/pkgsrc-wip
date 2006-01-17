@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 10:29:37 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/17 10:20:45 rillig Exp $
 #
 
 DISTNAME=		eciadsl-usermode-0.10
@@ -39,7 +39,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ppp.conf ${EGDIR}
 
 SUBST_CLASSES+=		path
-SUBST_MESSAGE.path=	"Setting up hardcoded path"
+SUBST_MESSAGE.path=	Setting up hardcoded path
 # this archive is really dirty, config.h is not created by configure...
 SUBST_FILES.path=	Makefile.dep config.h				\
 			check-hdlc-bug.c check-hdlc.c eci-load1.c	\

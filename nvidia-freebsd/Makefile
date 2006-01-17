@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/17 10:20:46 rillig Exp $
 #
 
 DISTNAME=	NVIDIA-FreeBSD-x86-${DIST_VERSION}
@@ -37,7 +37,7 @@ SUBST_FILES.fixme=	doc/Makefile driver/Makefile \
 			lib/libGLcore/Makefile lib/libXvMCNVIDIA/Makefile \
 			lib/Makefile
 SUBST_SED.fixme=	-e "s|\$${X11BASE}|${X11BASE}|g"
-SUBST_MESSAGE.fixme=	"Fixing X11BASE for pkgsrc."
+SUBST_MESSAGE.fixme=	Fixing X11BASE for pkgsrc.
 .endif # X11_TYPE=XFree86
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}

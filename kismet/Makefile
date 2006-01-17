@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 22:27:45 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/17 10:20:46 rillig Exp $
 
 DISTNAME=		kismet-2005-08-R1
 PKGNAME=		kismet-2005.08.01
@@ -35,7 +35,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/kismet ${KISMET_USER} ${KISMET_GROUP} 0700
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 SUBST_CLASSES+=		user
-SUBST_MESSAGE.user=	"Fixing user name."
+SUBST_MESSAGE.user=	Fixing user name.
 SUBST_STAGE.user=	pre-configure
 SUBST_FILES.user=	conf/kismet.conf.in
 SUBST_SED.user=		's/your_user_here/${KISMET_USER}/'

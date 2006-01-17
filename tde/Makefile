@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/20 17:25:42 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/17 10:20:47 rillig Exp $
 
 DISTNAME=		tde-5.1s
 CATEGORIES=		editors
@@ -15,7 +15,7 @@ MAKEFILE=		makefile
 BUILD_TARGET=		tde
 
 SUBST_CLASSES+=		base
-SUBST_MESSAGE.base=	"Configuring to use LOCALBASE."
+SUBST_MESSAGE.base=	Configuring to use LOCALBASE.
 SUBST_STAGE.base=	post-patch
 SUBST_FILES.base=	makefile
 SUBST_SED.base=		-e 's,/usr/local,${PREFIX},g'

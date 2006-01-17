@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/17 10:20:47 rillig Exp $
 #
 
 DISTNAME=		vnc-4_1_1-unixsrc
@@ -33,7 +33,7 @@ REPLACE_PERL=		vncserver
 SUBST_CLASSES+=		pl
 SUBST_STAGE.pl=		pre-install
 SUBST_FILES.pl=		vncserver
-SUBST_MESSAGE.pl=	"Fixing paths..."
+SUBST_MESSAGE.pl=	Fixing paths...
 SUBST_SED.pl=		-e "s|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g"
 
 .include "../../mk/bsd.prefs.mk"

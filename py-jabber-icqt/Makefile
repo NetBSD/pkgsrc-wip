@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/28 06:15:01 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/17 10:20:46 rillig Exp $
 
 DISTNAME=		pyicq-t-0.6
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -63,7 +63,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/config_example.xml ${EGDIR}/pyicqt.xml
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Localizing Paths"
+SUBST_MESSAGE.paths=	Localizing Paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	config_example.xml
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g' \

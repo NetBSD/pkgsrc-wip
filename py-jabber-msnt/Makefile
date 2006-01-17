@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/28 06:31:50 schnoebe Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/17 10:20:46 rillig Exp $
 
 DISTNAME=		pymsnt-0.10.3
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -63,7 +63,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/config-example.xml ${EGDIR}/pymsnt.xml
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Localizing Paths"
+SUBST_MESSAGE.paths=	Localizing Paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	config-example.xml PyMSNt.tac
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g' \

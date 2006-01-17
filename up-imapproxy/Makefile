@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/03 15:52:33 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/17 10:20:47 rillig Exp $
 
 DISTNAME=	up-imapproxy-1.2.4
 CATEGORIES=	mail
@@ -16,7 +16,7 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	include/imapproxy.h
 SUBST_SED.paths=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
-SUBST_MESSAGE.paths=	"Fixing hard coded paths."
+SUBST_MESSAGE.paths=	Fixing hard coded paths.
 
 CONF_FILES=	${PREFIX}/share/examples/up-imapproxy/imapproxy.conf \
 			${PKG_SYSCONFDIR}/imapproxy.conf

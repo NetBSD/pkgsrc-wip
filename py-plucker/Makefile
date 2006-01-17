@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/28 00:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/17 10:20:46 rillig Exp $
 
 DISTNAME=	plucker_parser-1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_parser//}
@@ -20,7 +20,7 @@ EGDIR=		${PREFIX}/share/doc/py-plucker
 CONF_FILES=	${EGDIR}/pluckerrc.sample ${PKG_SYSCONFDIR}/pluckerrc
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	plucker-build.1	\
 			PyPlucker/__init__.py PyPlucker/helper/gettext.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/10/13 21:32:56 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/17 10:20:45 rillig Exp $
 
 DISTNAME=	docbook-xsl-ko-0.2
 CATEGORIES=	textproc
@@ -18,7 +18,7 @@ XSLDIR=		${PREFIX}/share/xsl/docbook-ko
 XML_CATALOGS=	${XSLDIR}/catalog
 
 SUBST_CLASSES+=		xsl
-SUBST_MESSAGE.xsl=	"Fixing remote URLs."
+SUBST_MESSAGE.xsl=	Fixing remote URLs.
 SUBST_STAGE.xsl=	post-patch
 SUBST_FILES.xsl=	dbk-fo.xsl dbk-html-chunk.xsl dbk-html.xsl \
 			dbk-htmlhelp.xsl

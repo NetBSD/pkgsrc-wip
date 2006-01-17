@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/01/05 10:11:26 ghen Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/17 10:20:45 rillig Exp $
 #
 
 DISTNAME=		cb2bib-0.5.0
@@ -22,7 +22,7 @@ SUBST_CLASSES+=         path
 SUBST_STAGE.path=       post-patch
 SUBST_FILES.path=       src/src.pro
 SUBST_SED.path=          -e 's,xxPREFIXxx,${PREFIX},g'
-SUBST_MESSAGE.path=      "Fixing hardcoded paths."
+SUBST_MESSAGE.path=      Fixing hardcoded paths.
 
 do-configure:
 	cd ${WRKSRC} && ${SET_ENV} ${CONFIGURE_ENV} ./configure \

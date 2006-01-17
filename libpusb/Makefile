@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:13:50 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/17 10:20:46 rillig Exp $
 #
 
 DISTNAME=		libpusb
@@ -21,7 +21,7 @@ pre-build:
 			@cd ${WRKSRC} && ${MAKE} clean # archive's dirty
 
 SUBST_CLASSES+=		path
-SUBST_MESSAGE.path=	"Setting up hardcoded path."
+SUBST_MESSAGE.path=	Setting up hardcoded path.
 SUBST_FILES.path=	Makefile
 SUBST_STAGE.path=	post-patch
 SUBST_SED.path=		-e 's|/usr/pkg|${LOCALBASE}|'

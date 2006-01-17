@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/11/28 00:27:24 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/17 10:20:45 rillig Exp $
 
 DISTNAME=	gDesklets-0.26
 CATEGORIES=	x11 gnome
@@ -22,7 +22,7 @@ PYTHON_VERSIONS_ACCEPTED=	23 22 21
 PYTHON_PATCH_SCRIPTS=		gdesklets
 
 SUBST_CLASSES+=		python
-SUBST_MESSAGE.python=	"Fixing Python command name."
+SUBST_MESSAGE.python=	Fixing Python command name.
 SUBST_STAGE.python=	post-patch
 SUBST_FILES.python=	locale/Makefile.in
 SUBST_SED.python=	-e 's|python |${PYTHONBIN} |g'

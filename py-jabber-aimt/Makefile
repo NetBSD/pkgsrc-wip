@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/28 06:27:48 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/17 10:20:46 rillig Exp $
 
 DISTNAME=		pyaim-t-0.7b
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -63,7 +63,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/config_example.xml ${EGDIR}/pyaimt.xml
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Localizing Paths"
+SUBST_MESSAGE.paths=	Localizing Paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	config_example.xml src/langs/__init__.py
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g' \
