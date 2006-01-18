@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2142 2006/01/17 13:38:39 rxg Exp $
+# $Id: Makefile,v 1.2143 2006/01/18 22:58:21 adrian_p Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -531,7 +531,6 @@ SUBDIR+=	libvc
 SUBDIR+=	libvg
 SUBDIR+=	libvncserver
 SUBDIR+=	libwbxml2-patched
-SUBDIR+=	libwhisker2
 SUBDIR+=	libxen
 SUBDIR+=	libxkbfile
 SUBDIR+=	libxml++
