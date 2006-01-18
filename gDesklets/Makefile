@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/01/18 03:59:46 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2006/01/18 04:03:32 minskim Exp $
 
 DISTNAME=	gDesklets-0.26
 CATEGORIES=	x11 gnome
@@ -31,6 +31,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gdesklets/Displays
 
 .include "../../devel/GConf2/schemas.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/libgtop2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
