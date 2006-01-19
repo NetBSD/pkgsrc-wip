@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/11 12:26:28 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/19 01:03:38 poppnk Exp $
 bin/git
 bin/git-add
 bin/git-am
@@ -23,6 +23,7 @@ bin/git-count-objects
 bin/git-cvsexportcommit
 bin/git-cvsimport
 bin/git-daemon
+bin/git-describe
 bin/git-diff
 bin/git-diff-files
 bin/git-diff-index
@@ -60,7 +61,6 @@ bin/git-merge-stupid
 bin/git-mktag
 bin/git-mv
 bin/git-name-rev
-bin/git-octopus
 bin/git-pack-objects
 bin/git-pack-redundant
 bin/git-parse-remote
@@ -129,4 +129,3 @@ share/git-core/templates/info/exclude
 @dirrm share/git-core/templates/branches
 @dirrm share/git-core/templates
 @dirrm share/git-core/python
-@dirrm share/git-core
