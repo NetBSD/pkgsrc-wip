@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:40 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/20 20:28:05 thomasklausner Exp $
 #
 
 DISTNAME=	Mail-Webmail-Gmail-1.00
@@ -10,7 +10,7 @@ MAINTAINER=	imil@gcu.info
 COMMENT=	Perl interface to Google webmail service
 
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
-DEPENDS+=	p5-Crypt-SSLeay>=0.51:../../security/p5-SSLeay
+DEPENDS+=	p5-Crypt-SSLeay>=0.51:../../security/p5-Crypt-SSLeay
 
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Mail/Webmail/Gmail/.packlist
 
