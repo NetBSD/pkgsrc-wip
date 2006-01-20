@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/30 18:13:57 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/20 21:51:11 kuli0020 Exp $
 
 DISTNAME=	CPANPLUS-0.0562
 PKGNAME=	p5-${DISTNAME}
@@ -17,11 +17,11 @@ OPTIONS+=	TEST_REPORTER "Send reports to cpan-testers" off
 OPTIONS+=	YAML "Check reports from cpan-testers" off
 
 .if defined(WITH_TEST_REPORTER)
-BUILD_DEPENDS+=	${SITE_PERL}/Test/Reporter.pm:../../devel/p5-Test-Reporter
+DEPENDS+=	p5-Test-Reporter:../../devel/p5-Test-Reporter
 .endif
 
 .if defined(WITH_YAML)
-BUILD_DEPENDS+=	${SITE_PERL}/YAML.pm:../../textproc/p5-YAML
+DEPENDS+=	p5-YAML.pm:../../textproc/p5-YAML
 .endif
 
 PERL5_PACKLIST= auto/CPANPLUS/.packlist
