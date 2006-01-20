@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 22:27:45 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/20 22:54:57 rillig Exp $
 #
 
 DISTNAME=		hpoj-0.91
@@ -11,18 +11,18 @@ HOMEPAGE=		http://hpoj.sourceforge.net/
 COMMENT=		HP OfficeJet Linux driver; printing, scanning, and photo-card access
 
 # Add this DEPENDS for killall command
-DEPENDS+=       psmisc-[0-9]*:../../sysutils/psmisc
+DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 # The ptal-cups script require bash
-DEPENDS+=	bash-[0-9]*:../../shells/bash
+DEPENDS+=		bash-[0-9]*:../../shells/bash
 
 USE_TOOLS+=		gmake
 USE_PERL5=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
-			--with-cups-backend=${PREFIX}/libexec/cups/backend \
-			--with-sane-backend=${PREFIX}/lib/sane \
-			--with-sane-etc=${PREFIX}/etc/sane.d \
+			--with-cups-backend=${PREFIX:Q}/libexec/cups/backend \
+			--with-sane-backend=${PREFIX:Q}/lib/sane \
+			--with-sane-etc=${PREFIX:Q}/etc/sane.d \
  			--with-usb=libusb \
 			--without-snmp \
 			--without-qt
