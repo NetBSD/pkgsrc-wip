@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/05/24 10:31:49 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/20 22:49:09 rillig Exp $
 #
 
 DISTNAME=		xinetd-2.3.13
@@ -19,25 +19,26 @@ CONFIGURE_ARGS+=	--with-loadavg
 .include "../../mk/bsd.prefs.mk"
 
 # OPTIONS
-BUILD_DEFS=	XINETD_USE_TCPWRAPPER
-XINETD_USE_TCPWRAPPER?=NO
+BUILD_DEFS+=		XINETD_USE_TCPWRAPPER
+XINETD_USE_TCPWRAPPER?=	NO
 .if !empty(XINETD_USE_TCPWRAPPER:M[yY][eE][sS])
-CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}/lib
+CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers:Q}/lib
 .endif
 
 RCD_SCRIPTS=		xinetd
-CPPFLAGS+=	-DDEFAULT_CONFIG_FILE=\\\"\"${PKG_SYSCONFDIR}/etc/xinetd.conf\\\"\"
+# Some weird quoting in Makefile.in makes this necessary.
+CPPFLAGS+=		-DDEFAULT_CONFIG_FILE="\"${PKG_SYSCONFDIR:Q}/etc/xinetd.conf\""
 
-USE_PERL5=YES
-REPLACE_PERL+=	${WRKSRC}/xinetd/xconv.pl
+USE_TOOLS+=		perl:run
+REPLACE_PERL+=		xinetd/xconv.pl
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xinetd/
-	${INSTALL_DATA} ${WRKSRC}/contrib/xinetd.conf \
-		${PREFIX}/share/examples/xinetd/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xinetd/xinetd.d/
-	${INSTALL_DATA} ${WRKSRC}/contrib/xinetd.d/* \
-		${PREFIX}/share/examples/xinetd/xinetd.d/
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/xinetd/
+	${INSTALL_DATA} ${WRKSRC:Q}/contrib/xinetd.conf \
+		${PREFIX:Q}/share/examples/xinetd/
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/xinetd/xinetd.d/
+	${INSTALL_DATA} ${WRKSRC:Q}/contrib/xinetd.d/* \
+		${PREFIX:Q}/share/examples/xinetd/xinetd.d/
 
 .if !empty(XINETD_USE_TCPWRAPPER:M[yY][eE][sS])
 .include "../../security/tcp_wrappers/buildlink3.mk"
