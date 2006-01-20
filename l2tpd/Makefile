@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/01/17 10:20:46 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/20 23:15:40 rillig Exp $
 
 DISTNAME=	l2tpd-0.69
 CATEGORIES=	net
@@ -8,21 +8,23 @@ MAINTAINER=	hauke@Espresso.Rhein-Neckar.DE
 HOMEPAGE=	http://www.l2tpd.org/
 COMMENT=	Implementation of the layer two tunneling protocol (l2tp)
 
-USE_PKGINSTALL= YES
+USE_PKGINSTALL=	YES
 NO_CONFIGURE=	YES
 
-PKG_SYSCONFSUBDIR?=     l2tpd
+.include "../../mk/bsd.prefs.mk"
+
+PKG_SYSCONFSUBDIR?=	l2tpd
 DOCDIR=		${PREFIX}/share/doc/l2tpd
 EGDIR=		${PREFIX}/share/examples/l2tpd
-CONF_FILES=	${EGDIR}/l2tpd.conf.sample ${PKG_SYSCONFDIR}/l2tpd.conf
-CONF_FILES+=	${EGDIR}/l2tpd-secrets.sample ${PKG_SYSCONFDIR}/l2tpd-secrets
+CONF_FILES=	${EGDIR:Q}/l2tpd.conf.sample ${PKG_SYSCONFDIR:Q}/l2tpd.conf
+CONF_FILES+=	${EGDIR:Q}/l2tpd-secrets.sample ${PKG_SYSCONFDIR:Q}/l2tpd-secrets
 
-CFLAGS+=	-DPREFIX='"${PREFIX}"' -DSANITY
+CFLAGS+=	-DPREFIX=\"${PREFIX:Q}\" -DSANITY
 
 SUBST_CLASSES+=		options
 SUBST_MESSAGE.options=	Fixing build options.
 SUBST_STAGE.options=	post-patch
-SUBST_FILES.options=	Makefile Makefile.Solaris
+SUBST_FILES.options=	Makefile
 SUBST_SED.options=	-e 's,DFLAGS=,\#DFLAGS=,' \
 			-e 's,OSFLAGS=,\#OSFLAGS=,' \
 			-e 's,CFLAGS=,\#CFLAGS=,' \
@@ -31,30 +33,29 @@ SUBST_SED.options=	-e 's,DFLAGS=,\#DFLAGS=,' \
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "FreeBSD"
-CFLAGS+= -DFREEBSD
+CFLAGS+=		-DFREEBSD
 .elif ${OPSYS} == "SunOS"
-CFLAGS+= -DSOLARIS
-LDFLAGS+= -lnsl -lsocket
+CFLAGS+=		-DSOLARIS
+LDFLAGS+=		-lnsl -lsocket
 .elif ${OPSYS} == "Linux"
-CFLAGS= -DLINUX -I/usr/include
+CFLAGS+=		-DLINUX -I/usr/include
 .endif
 
-post-patch:
-	@cd ${WRKSRC}/doc && 							\
-	for F in l2tpd.8 l2tpd.conf.sample l2tp-secrets.5 l2tpd.conf.5 ; do	\
-		${MV} $${F} $${F}.orig; 					\
-		${SED} -e 's|%%SYSCONFDIR%%|${PKG_SYSCONFDIR}|g' $${F}.orig > $${F}; 	\
-	done
+SUBST_CLASSES+=		l2tpd
+SUBST_STAGE.l2tpd=	post-patch
+SUBST_FILES.l2tpd+=	doc/l2tpd.8 doc/l2tpd.conf.sample
+SUBST_FILES.l2tpd+=	doc/l2tp-secrets.5 doc/l2tpd.conf.5
+SUBST_SED.l2tpd+=	-e 's|%%SYSCONFDIR%%|${PKG_SYSCONFDIR}|g'
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/l2tpd ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_MAN} ${WRKSRC}/doc/l2tpd.8 ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/doc/l2tp-secrets.5 ${PREFIX}/man/man5
-	${INSTALL_MAN} ${WRKSRC}/doc/l2tpd.conf.5 ${PREFIX}/man/man5
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/l2tpd.conf.sample ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/l2tp-secrets.sample ${EGDIR}
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/l2tpd ${PREFIX:Q}/bin
+	${INSTALL_DATA_DIR} ${DOCDIR:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/README ${DOCDIR:Q}
+	${INSTALL_MAN} ${WRKSRC:Q}/doc/l2tpd.8 ${PREFIX:Q}/man/man8
+	${INSTALL_MAN} ${WRKSRC:Q}/doc/l2tp-secrets.5 ${PREFIX:Q}/man/man5
+	${INSTALL_MAN} ${WRKSRC:Q}/doc/l2tpd.conf.5 ${PREFIX:Q}/man/man5
+	${INSTALL_DATA_DIR} ${EGDIR:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/l2tpd.conf.sample ${EGDIR:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/l2tp-secrets.sample ${EGDIR:Q}
 
 .include "../../mk/bsd.pkg.mk"
