@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2005/12/30 22:02:03 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/20 20:27:40 kuli0020 Exp $
 
-DISTNAME=	Catalyst-5.61
+DISTNAME=	Catalyst-5.62
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/SR/SRI/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AG/AGRUNDMA/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst/
 COMMENT=	The Elegant MVC Web Application Framework
 PERL5_REQD+=    5.8.1
 
-DEPENDS+=       p5-UNIVERSAL-exports>=0.03:../../wip/p5-UNIVERSAL-exports
+DEPENDS+=       p5-UNIVERSAL-require>=0.10:../../wip/p5-UNIVERSAL-require
 DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
 DEPENDS+=      	p5-Class-Data-Inheritable>=0:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Class-Inspector>=0:../../devel/p5-Class-Inspector
@@ -26,15 +26,17 @@ DEPENDS+=	p5-NEXT>=0:../../wip/p5-NEXT
 DEPENDS+=	p5-Path-Class>=0.09:../../wip/p5-Path-Class
 DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Template-Toolkit>=0:../../www/p5-Template-Toolkit
-DEPENDS+=	p5-Text-SimpleTable>=0:../../wip/p5-Text-SimpleTable
-DEPENDS+=	p5-Test-MockObject>=0:../../wip/p5-Test-MockObject
+DEPENDS+=	p5-Text-SimpleTable>=0.03:../../wip/p5-Text-SimpleTable
 DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Tree-Simple>=0:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../wip/p5-Tree-Simple-VisitorFactory
 DEPENDS+=	p5-URI>=1.35:../../www/p5-URI
 DEPENDS+=	p5-File-Copy-Recursive>=0:../../wip/p5-File-Copy-Recursive
-DEPENDS+=	p5-Module-Install>=0:../../wip/p5-Module-Install
+DEPENDS+=	p5-Module-Install>=0.45:../../wip/p5-Module-Install
 DEPENDS+=	p5-ExtUtils-AutoInstall>=0:../../devel/p5-ExtUtils-AutoInstall
+DEPENDS+=	p5-YAML>=0:../../textproc/p5-YAML
+BUILD_DEPENDS+=	p5-Test-MockObject>=0:../../wip/p5-Test-MockObject
+BUILD_DEPENDS+=	p5-Test-NoWarnings>=0.082:../../devel/p5-Test-NoWarnings
 
 #PERL5_MODULE_TYPE=      Module::Install
 PERL5_PACKLIST= auto/Catalyst/.packlist
