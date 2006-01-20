@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/01/11 21:08:25 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/20 18:46:47 shattered Exp $
 #
 
 DISTNAME=	oops-1.5.24
@@ -67,7 +67,7 @@ post-install:
 		select.sql auth_template.html err_template.html \
 		redir_template.html; \
 		do ${INSTALL_DATA} ${WRKSRC}/src/$$m ${EGDIR}; done
-	for m in koi-alt.tab koi-iso.tab koi-win.tab;
+	for m in koi-alt.tab koi-iso.tab koi-win.tab; \
 		do ${INSTALL_DATA} ${WRKSRC}/src/tables/$$m ${EGDIR}/tables; done
 	${INSTALL_MAN} ${WRKSRC}/doc/oops.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/doc/oopsctl.8 ${PREFIX}/man/man8
