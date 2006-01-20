@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/30 19:12:29 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/20 20:39:22 kuli0020 Exp $
 
-DISTNAME=	Text-SimpleTable-0.02
+DISTNAME=	Text-SimpleTable-0.03
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/SR/SRI/}
