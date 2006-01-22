@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2006/01/17 10:20:47 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/22 18:25:14 adrian_p Exp $
 
-DISTNAME=	syslog-ng-1.6.6
+DISTNAME=	syslog-ng-1.6.9
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.balabit.com/downloads/syslog-ng/1.6/src/
 
