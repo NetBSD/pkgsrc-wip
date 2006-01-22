@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2005/11/06 22:16:41 gschwarz Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/22 18:13:01 gschwarz Exp $
 
-DISTNAME=	traceroute-nanog-6.3.10
+DISTNAME=	traceroute-nanog-6.4.0
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.login.com/pub/software/traceroute/beta/
-DISTFILES=	traceroute.c
+DISTFILES=	traceroute_640.c
 DIST_SUBDIR=	traceroute-nanog
 
 # for the man page:
@@ -43,9 +43,9 @@ CPPFLAGS+=	-DBIND_8_COMPAT -DRA_SERVICE=\"nicname\"
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
 do-extract:
-		${CP} ${DISTDIR}/${DIST_SUBDIR}/traceroute.c ${WRKSRC}
+		${CP} ${DISTDIR}/${DIST_SUBDIR}/traceroute_640.c ${WRKSRC}
 do-build:
-		cd ${WRKSRC} && ${CC} ${CPPFLAGS} ${CFLAGS} traceroute.c -o traceroute-nanog ${LDFLAGS} -lm ${EXTRALIBS}
+		cd ${WRKSRC} && ${CC} ${CPPFLAGS} ${CFLAGS} traceroute_640.c -o traceroute-nanog ${LDFLAGS} -lm ${EXTRALIBS}
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/traceroute-nanog ${PREFIX}/sbin
