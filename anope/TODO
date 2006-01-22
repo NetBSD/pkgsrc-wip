@@ -11,3 +11,5 @@ And then symlink:
 	ln -s ${PREFIX}/lib/lkpd_dns.so.1 ${PREFIX}/lib/nss_dns.so.1
 
 Which is great, except that lookupd is only for FreeBSD>5.1
+
+Update:  If you remove /etc/nsswitch.conf that works as well.
