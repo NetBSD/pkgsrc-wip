@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:15:16 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/23 22:20:52 adrian_p Exp $
 #
 
 DISTNAME=	pylibpcap-0.4
@@ -19,6 +19,6 @@ do-install:
 	(cd ${WRKSRC} && ${PYTHONBIN} setup.py install)
 
 .include "../../lang/python/extension.mk"
-.include "../../devel/swig-python/buildlink3.mk"
+.include "../../devel/swig/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
