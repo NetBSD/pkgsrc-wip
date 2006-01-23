@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2006/01/08 09:48:58 ghen Exp $
+# $NetBSD: options.mk,v 1.5 2006/01/23 14:40:18 tvierling Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
-PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pam pgsql ssl
+PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pam pgsql sqlite ssl
 PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
@@ -34,6 +34,14 @@ CONFIGURE_ARGS+=	--with-mysql
 CONFIGURE_ARGS+=	--with-pgsql
 CPPFLAGS+=		-I${BUILDLINK_DIR}/include/pgsql
 .  include "../../mk/pgsql.buildlink3.mk"
+.endif
+
+###
+### SQLite 3 support.
+###
+.if !empty(PKG_OPTIONS:Msqlite)
+CONFIGURE_ARGS+=	--with-sqlite
+.  include "../../databases/sqlite3/buildlink3.mk"
 .endif
 
 ###

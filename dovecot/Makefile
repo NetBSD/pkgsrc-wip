@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2006/01/17 16:31:39 tvierling Exp $
+# $NetBSD: Makefile,v 1.21 2006/01/23 14:40:18 tvierling Exp $
 
-DISTNAME=		dovecot-1.0.beta1
+DISTNAME=		dovecot-1.0.beta2
 PKGNAME=		${DISTNAME:S/1.0.beta/0.992./}
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/
@@ -48,4 +48,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-* ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/doc/mkcert.sh ${EGDIR}
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
