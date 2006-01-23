@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/23 18:18:21 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/23 22:42:58 adrian_p Exp $
 #
 
 .include "Makefile.common"
@@ -18,6 +18,6 @@ CONFIGURE_ARGS+=	--disable-xine
 
 BROKEN=		This needs GStreamer >= 0.9.1
 
-.include "../../multimedia/gst-plugins/buildlink3.mk"
-.include "../../multimedia/gstreamer/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.8/buildlink3.mk"
+.include "../../multimedia/gstreamer0.8/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
