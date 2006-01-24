@@ -1,4 +1,4 @@
-$NetBSD: patch-bl,v 1.1.1.1 2006/01/13 15:51:48 mreriksson Exp $
+$NetBSD: patch-bl,v 1.2 2006/01/24 21:41:09 mreriksson Exp $
 
 --- nnpfs/bsd/nnpfs_vfsops-netbsd.c.orig	2005-10-28 16:33:39.000000000 +0200
 +++ nnpfs/bsd/nnpfs_vfsops-netbsd.c
@@ -22,7 +22,7 @@ $NetBSD: patch-bl,v 1.1.1.1 2006/01/13 15:51:48 mreriksson Exp $
      NULL,			/* mountroot */
 -#ifdef HAVE_STRUCT_VFSOPS_VFS_CHECKEXP
 +#if defined(HAVE_STRUCT_VFSOPS_VFS_CHECKEXP) &&\
-+!(defined(__NetBSD__) || __NetBSD_Version__ >= 399001400) /* 3.99.14 */
++!(defined(__NetBSD__) && __NetBSD_Version__ >= 399001400) /* 3.99.14 */
 +/* XXX Autoconf should detect this instead! */
      nnpfs_checkexp,		/* checkexp */
  #endif
