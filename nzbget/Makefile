@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/12/30 19:27:56 martijnb Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/24 12:48:13 martijnb Exp $
 #
 
 DISTNAME=		nzbget-0.2.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nzbget/}
 
@@ -26,6 +26,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/nzbget.cfg.example \
 		${EGDIR}/nzbget.cfg.example
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../converters/uulib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
