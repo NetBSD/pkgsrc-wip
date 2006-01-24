@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/15 11:42:47 mreriksson Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/24 10:02:01 mreriksson Exp $
 
 DISTNAME=		arla-0.41
 PKGREVISION=		2
@@ -12,6 +12,7 @@ COMMENT=		Free AFS implementation from KTH
 CONFLICTS+=		openafs-[0-9]*
 CONFLICTS+=		lwp-[0-9]*
 CONFLICTS+=		rx-[0-9]*
+CONFLICTS+=		heimdal-[0-9]*
 
 OSVERSION_SPECIFIC=	yes
 INFO_FILES=		arla.info send-pr.info
