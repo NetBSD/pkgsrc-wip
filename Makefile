@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2145 2006/01/24 02:30:40 xtraeme Exp $
+# $Id: Makefile,v 1.2146 2006/01/24 10:49:09 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -814,7 +814,6 @@ SUBDIR+=	p5-Petal
 SUBDIR+=	p5-Plucene
 SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
 SUBDIR+=	p5-PluceneSimple
-SUBDIR+=	p5-Pod-Tree
 SUBDIR+=	p5-Quota
 SUBDIR+=	p5-Return-Value
 SUBDIR+=	p5-Template-Timer
