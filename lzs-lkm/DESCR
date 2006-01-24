@@ -1,0 +1,6 @@
+This is a NetBSD compressor kernel module for PPP compatible with the
+Stac LZS scheme as described in rfc1974.
+
+This compressor actually only handles decompression, outgoing packets
+will be sent uncompressed. The native NetBSD cannot negotiate LZS so
+make sure you use PPP daemon from pkgsrc/net/pppd.
