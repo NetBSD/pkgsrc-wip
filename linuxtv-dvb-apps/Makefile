@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/24 11:38:15 poppnk Exp $
 #
 
 DISTNAME=		linuxtv-dvb-apps-1.1.0
 CATEGORIES=		linux
-MASTER_SITES=		http://212.227.36.83/linuxtv/downloads/
+MASTER_SITES=		http://www.linuxtv.org/downloads/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://212.227.36.83/linuxtv/downloads/
+HOMEPAGE=		http://www.linuxtv.org/
 COMMENT=		DVB applications from LinuxTV project
 
 USE_TOOLS+=		gmake
