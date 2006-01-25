@@ -1,7 +1,7 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.20 2005/12/19 08:13:30 rillig Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.21 2006/01/25 19:46:14 thomasklausner Exp $
 ###########################################################################
 #
-# $Id: linuxbin.pkg.mk,v 1.20 2005/12/19 08:13:30 rillig Exp $
+# $Id: linuxbin.pkg.mk,v 1.21 2006/01/25 19:46:14 thomasklausner Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 #
@@ -81,7 +81,7 @@ LINUX_BASE_PREFERRED?=		suse
 LINUX_BASE_REQUIRED?=		${LINUX_BASE_PREFERRED}
 
 LINUX_BASE_PREFIX.suse?=	suse
-LINUX_BASE_VERSION.suse=	7.3
+LINUX_BASE_VERSION.suse=	9.1
 
 LINUX_BASE_PREFIX.slackware?=	slackware
 LINUX_BASE_VERSION.slackware?=	9.1.0
@@ -145,11 +145,13 @@ DEPENDS+=${LINUX_BASE_PREFIX}_compat>=${LINUX_BASE_VERSION.${LINUX_BASE_REQUIRED
 DEPENDS+=${LINUX_BASE_PREFIX}_x11>=${LINUX_BASE_VERSION.${LINUX_BASE_REQUIRED}}:../../${LINUX_PKGSRCDIR.${LINUX_BASE_REQUIRED}}/${LINUX_BASE_PREFIX}_x11
 .endif
 
+# do not check shlibs by default, since the wrong ldd will be run
+CHECK_SHLIBS?=	no
 .endif
 
 ###########################################################################
 #
-# definetly don't build binary packages:
+# definitely don't build binary packages:
 
 NO_BUILD?=		YES
 
