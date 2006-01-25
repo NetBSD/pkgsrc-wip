@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/05 02:55:30 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/25 02:01:30 jgoamakf Exp $
 
-DISTNAME=		Cache-FastMmap-1.08
+DISTNAME=		Cache-FastMmap-1.09
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5cfm
 CATEGORIES=		devel perl5
