@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/07 19:40:10 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/26 07:55:49 jgoamakf Exp $
 #
 
-DISTNAME=	Class-DBI-AsForm-2.41
+DISTNAME=	Class-DBI-AsForm-2.42
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5cda
 CATEGORIES=	www perl5
@@ -13,7 +13,7 @@ COMMENT=	Produce HTML form elements for database columns
 
 DEPENDS+=	p5-DBI>=1.30:../../databases/p5-DBI
 DEPENDS+=	p5-Class-DBI>=0.89:../../databases/p5-Class-DBI
-DEPENDS+=	p5-Class-DBI-Plugin-Type>=1.88:../../wip/p5-Class-DBI-Plugin-Type
+DEPENDS+=	p5-Class-DBI-Plugin-Type>=0.02:../../wip/p5-Class-DBI-Plugin-Type
 DEPENDS+=	p5-HTML-Tree>=1.88:../../www/p5-HTML-Tree
 
 PERL5_PACKLIST=	auto/Class/DBI/AsForm/.packlist
