@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:41 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/26 03:14:33 jgoamakf Exp $
 #
 
 DISTNAME=	Net-PcapUtils-0.01
@@ -14,7 +14,7 @@ DEPENDS+=	p5-Net-Pcap>=0.3:../../net/p5-Net-Pcap
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/PcapUtils/.packlist
+PERL5_PACKLIST=	auto/Net/PcapUtils/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/04 00:34:03 geeohgeegeeoh Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/26 03:14:33 jgoamakf Exp $
 #
 
 DISTNAME=		Crypt-PasswdMD5-1.3
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 DEPENDS+=               p5-Digest-MD5>=2.33:../../security/p5-Digest-MD5
 
 CRYPTO=			YES
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/PasswdMD5/.packlist
+PERL5_PACKLIST=		auto/Crypt/PasswdMD5/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/15 17:46:20 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/26 03:14:33 jgoamakf Exp $
 
 DISTNAME=	Class-Accessor-Chained-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
 
 PERL_MODBUILD=	yes
 
-PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Class/Accessor/Chained/.packlist
+PERL5_PACKLIST= auto/Class/Accessor/Chained/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/07 01:13:13 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/26 03:14:32 jgoamakf Exp $
 #
 
 DISTNAME=	AxKit-1.6.2
@@ -33,7 +33,7 @@ DEPENDS+=	${BUILDLINK_DEPENDS.libxml2}
 .include "../../www/ap-perl/buildlink3.mk"
 DEPENDS+=	${BUILDLINK_DEPENDS.ap-perl}
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/AxKit/.packlist
+PERL5_PACKLIST=		auto/AxKit/.packlist
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
