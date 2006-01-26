@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2147 2006/01/24 21:45:07 plunky Exp $
+# $Id: Makefile,v 1.2148 2006/01/26 11:09:14 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1154,7 +1154,6 @@ SUBDIR+=	sudoscript
 SUBDIR+=	sugarCRM
 SUBDIR+=	sun-j2me
 SUBDIR+=	sunterlib
-SUBDIR+=	superkaramba
 SUBDIR+=	supertux
 SUBDIR+=	svgalib
 SUBDIR+=	swami

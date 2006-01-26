@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/11/10 15:05:22 mpasternak Exp $
-bin/superkaramba
-share/doc/kde/HTML/en/karamba/common
-share/doc/kde/HTML/en/karamba/index.cache.bz2
-share/doc/kde/HTML/en/karamba/index.docbook
-share/kde/applnk/Utilities/karamba.desktop
-share/kde/apps/superkaramba/karambaui.rc
-@dirrm share/kde/apps/superkaramba
-@dirrm share/doc/kde/HTML/en/karamba
