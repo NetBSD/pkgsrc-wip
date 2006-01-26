@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/04 08:18:08 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/26 10:51:25 jgoamakf Exp $
 
-DISTNAME=		Petal-2.17
+DISTNAME=		Petal-2.18
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ptl
 CATEGORIES=		textproc perl5

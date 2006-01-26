@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/04 08:18:07 jgoamakf Exp $
+$NetBSD: distinfo,v 1.2 2006/01/26 10:51:25 jgoamakf Exp $
 
-SHA1 (Petal-2.17.tar.gz) = b6a3d16266a2dc5deb0c4f0c3c3854098a0822fe
-RMD160 (Petal-2.17.tar.gz) = c3038a84afb27bb6519ae57c4304b913bb2e5b71
-Size (Petal-2.17.tar.gz) = 81008 bytes
+SHA1 (Petal-2.18.tar.gz) = 073ce1453bb1a7977aafcb59c29cf584be7fb10c
+RMD160 (Petal-2.18.tar.gz) = 7d0ba4205c799f97222773752ff44025940d1048
+Size (Petal-2.18.tar.gz) = 81671 bytes
