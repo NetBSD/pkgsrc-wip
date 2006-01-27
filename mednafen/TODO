@@ -1,3 +1,5 @@
+0.4.5 out.
+
 /dev/dsp needs to be replaced with ${DEVOSSAUDIO} or ${DEVOSSSOUND}.
 
 Is the following still true?
