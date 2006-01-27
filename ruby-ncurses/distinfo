@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:40 rillig Exp $
-
-SHA1 (ruby/ncurses-ruby-0.8.tar.bz2) = aa73805ea47abd78b39fc4ee3e137e3a272de51f
-RMD160 (ruby/ncurses-ruby-0.8.tar.bz2) = f6aea4dba60252d3dc5d4a424552197807d8a3de
-Size (ruby/ncurses-ruby-0.8.tar.bz2) = 33651 bytes
