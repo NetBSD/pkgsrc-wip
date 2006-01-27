@@ -1,3 +1,0 @@
-p5-CPANPLUS
-
-CPANPLUS installation takes some arguments for its configuration.  The installation will also ask to be configured (without manual configuration it may fail), so passing it correct parameters will determine installation success.
