@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/27 05:24:34 obache Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/28 03:19:25 obache Exp $
 #
 
 DISTNAME=	pop-before-smtp-1.37
@@ -12,7 +12,7 @@ COMMENT=	Simple daemon for pop-before-smtp
 USE_LANGUAGES=  # empty
 USE_PKGINSTALL= yes
 USE_TOOLS+=     perl:run pod2man
-REPLACE_PERL=   pop-before-smtp
+REPLACE_PERL+=  pop-before-smtp
 
 DEPENDS+=	p5-Net-Netmask-[0-9]*:../../devel/p5-Net-Netmask
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
