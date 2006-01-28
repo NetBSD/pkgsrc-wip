@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/01/28 17:41:03 shattered Exp $
+
+--- gst/Makefile.orig	2006-01-28 17:38:51.000000000 +0000
++++ gst/Makefile
+@@ -838,7 +838,7 @@ interfaces.c: $(INTERFACES_DEFS) $(INTER
+ 
+ .defs.c: 
+ 	(cd $(srcdir) \
+-	&& python $(top_srcdir)/codegen/codegen.py \
++	&& python${PYVERSSUFFIX} $(top_srcdir)/codegen/codegen.py \
+ 		--load-types $(srcdir)/arg-types.py \
+ 		--register $(srcdir)/gst-types.defs \
+ 		--override $*.override \

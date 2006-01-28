@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/28 17:42:29 shattered Exp $
+
+SHA1 (gst-python-0.10.2.tar.bz2) = 2077710a77fd31a9184ac8e409daaea3a9d713af
+RMD160 (gst-python-0.10.2.tar.bz2) = cc4b392407e1a85b5057584d4f15f69a3db82c7b
+Size (gst-python-0.10.2.tar.bz2) = 372805 bytes
+SHA1 (patch-aa) = ef08074c7bbc85c18fa6a054e393b4f0150fe7dd
+SHA1 (patch-ab) = fe6f17f6eee858a84cf8ca077a03f3e25d1e1217
