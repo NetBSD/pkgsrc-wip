@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/01/16 23:41:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/28 00:35:47 thomasklausner Exp $
 #
 
-DISTNAME=	mednafen-0.4.3
+DISTNAME=	mednafen-0.4.5
 CATEGORIES=	emulators
 MASTER_SITES=	http://mednafen.com/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +16,13 @@ USE_TOOLS+=		pkg-config
 USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+
+SUBST_CLASSES+=		dsp
+SUBST_STAGE.dsp=	pre-configure
+SUBST_MESSAGE.dsp=	Fixing path to audio device.
+SUBST_FILES.dsp=	src/sexyal/drivers/esd.c src/sexyal/drivers/oss.c \
+			src/sexyal/drivers/oss.c src/sexyal/sexyal.c
+SUBST_SED.dsp=		s,/dev/dsp,${DEVOSSAUDIO},
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mednafen
