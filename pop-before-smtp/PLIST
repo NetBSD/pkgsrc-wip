@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/27 05:24:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/28 03:17:28 obache Exp $
 man/man8/pop-before-smtp.8
 sbin/pop-before-smtp
 share/doc/pop-before-smtp/COPYING
 share/doc/pop-before-smtp/ChangeLog
+share/doc/pop-before-smtp/README
 share/doc/pop-before-smtp/README.QUICKSTART
 share/doc/pop-before-smtp/README.rootless-install
 share/doc/pop-before-smtp/TODO
