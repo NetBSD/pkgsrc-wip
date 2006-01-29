@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/29 15:25:19 obache Exp $
+
+SHA1 (mod_layout-4.0.2a.tar.gz) = 34e2056aa2e441ee5ff370cb249c8c81804e18ad
+RMD160 (mod_layout-4.0.2a.tar.gz) = 19ef0781cea7ba6d1043534fe7491c669a2df2c7
+Size (mod_layout-4.0.2a.tar.gz) = 13663 bytes
+SHA1 (patch-aa) = f35909ab2f7ff311366f5e94b89083972cb9a195

@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/29 15:25:19 obache Exp $
+
+--- Makefile.orig	2003-08-30 04:33:43.000000000 +0900
++++ Makefile
+@@ -1,13 +1,13 @@
+ ##
+ ##  Makefile -- Build procedure for mod_layout Apache module
+ ##
+-builddir=$(shell pwd)
+-top_srcdir=/usr/local/apache2
+-top_builddir=/usr/local/apache2
+-include /usr/local/apache2/build/special.mk
++top_srcdir=${LOCALBASE}/share/httpd
++top_builddir=${LOCALBASE}/share/httpd
++include ${LOCALBASE}/share/httpd/build/special.mk
++LIBTOOL=${APR_LIBTOOL}
+ 
+ #   the used tools
+-APXS=apxs
++APXS=${LOCALBASE}/sbin/apxs
+ APACHECTL=apachectl
+ CC=`$(APXS) -q CC`
+ INC=-I`$(APXS) -q INCLUDEDIR` `$(APXS) -q CFLAGS`  #-DLAYOUT_FILEOWNER_NAME
+@@ -61,7 +61,7 @@ header.o : header.c
+ 	$(APXS) -c header.c
+ #   install the shared object file into Apache 
+ install: 
+-	$(APXS) -iac $(INCLUDES) $(LIBS) $(SRC)
++	$(APXS) -ia $(INCLUDES) $(LIBS) mod_layout.la
+ 	@echo "+--------------------------------------------------------+"; \
+ 	echo "| All done.                                              |"; \
+ 	echo "|                                                        |"; \
