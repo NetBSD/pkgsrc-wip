@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2149 2006/01/27 21:14:45 xtraeme Exp $
+# $Id: Makefile,v 1.2150 2006/01/29 15:27:23 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -65,6 +65,7 @@ SUBDIR+=	ap2-auth-pam
 SUBDIR+=	ap2-encoding
 SUBDIR+=	ap2-evasive
 SUBDIR+=	ap2-jk2
+SUBDIR+=	ap2-layout
 SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-macro
 SUBDIR+=	ap2-python
