@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/01/13 14:19:42 lkundrak Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/30 01:19:42 lsed Exp $
 
 DISTNAME=		grub2
 PKGNAME=		grub2-${GRUB_VERSION}
@@ -9,8 +9,9 @@ MAINTAINER=		lkundrak@skosi.org
 HOMEPAGE=		http://www.gnu.org/software/grub/grub.html
 COMMENT=		Universal multiboot compilant GNU boot manager and loader
 
-CVS_REPOSITORY=		:pserver:anonymous:@cvs.savannah.gnu.org:/sources/grub
-CVS_MODULE=		grub2
+CVS_REPOSITORIES=	grub2
+CVS_ROOT.grub2=		:pserver:anonymous:@cvs.savannah.gnu.org:/sources/grub
+CVS_MODULE.grub2=	grub2
 
 GNU_CONFIGURE=		yes
 USE_TOOLS=		gmake bison
