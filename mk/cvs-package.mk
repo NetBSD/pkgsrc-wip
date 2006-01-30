@@ -1,7 +1,7 @@
-# $Id: cvs-package.mk,v 1.9 2006/01/30 01:18:15 lsed Exp $
+# $Id: cvs-package.mk,v 1.10 2006/01/30 02:34:18 rillig Exp $
 
-# Written by:
-#     Roland Illig <roland.illig@gmx.de>, 2004.
+# This file provides simple access to CVS repositories, so that packages
+# can be created from CVS instead of from released tarballs.
 #
 # A package using this file shall define the following variables:
 #     CVS_REPOSITORIES: 	A list of unique identifiers /id/ for which
@@ -14,7 +14,8 @@
 # It may define the following variable:
 #     CVS_TAG:		the CVS tag to check out (default: HEAD)
 #
-# After inclusion of this file, the following variables are defined:
+# After inclusion of this file, the following variables are defined, which
+# can be used as CVS_ROOT:
 #     CVS_ROOT_GNU
 #     CVS_ROOT_NONGNU
 #     CVS_ROOT_SOURCEFORGE
@@ -39,12 +40,13 @@ CVS_ROOT_NONGNU=	${CVS_ROOT_GNU}
 CVS_ROOT_SOURCEFORGE=	:pserver:anonymous:@cvs.sourceforge.net:/cvsroot
 
 #
-# defaults for internal variables
+# Internal variables
 #
 
 _CVS_RSH=		ssh
 _CVS_CMD=		cvs
-_CVS_ENV=		CVS_PASSFILE=${_CVS_PASSFILE:Q}
+_CVS_ENV=		# empty
+_CVS_ENV+=		CVS_PASSFILE=${_CVS_PASSFILE:Q}
 _CVS_ENV+=		CVS_RSH=${_CVS_RSH:Q}
 _CVS_FLAGS=		-Q
 _CVS_CHECKOUT_FLAGS=	-P -r ${CVS_TAG:Q}
@@ -60,25 +62,26 @@ pre-extract: do-cvs-extract
 do-cvs-extract:
 .for _repo_ in ${CVS_REPOSITORIES}
 .  if !defined(CVS_ROOT.${_repo_})
-PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT.${_repo_} must be set."
+PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT."${_repo_:Q}" must be set."
 .  elif !defined(CVS_MODULE.${_repo_})
-PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_MODULE.${_repo_} must be set."
+PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_MODULE."${_repo_:Q}" must be set."
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKDIR};							\
 	case ${CVS_ROOT.${_repo_}:Q} in					\
 	  :pserver:*)							\
-	    if ${TEST} ! -f "${_CVS_PASSFILE}"; then			\
-	      ${TOUCH} "${_CVS_PASSFILE}";				\
+	    if ${TEST} ! -f ${_CVS_PASSFILE:Q}; then			\
+	      ${TOUCH} ${_CVS_PASSFILE:Q};				\
 	    fi;								\
 	    ${SETENV} ${_CVS_ENV} ${_CVS_CMD} ${_CVS_FLAGS} 		\
 		-d ${CVS_ROOT.${_repo_}:Q} login			\
 	  ;;								\
 	  *) ;;								\
 	esac;								\
-	${SETENV} ${_CVS_ENV} ${_CVS_CMD} ${_CVS_FLAGS}			\
-		-d ${CVS_ROOT.${_repo_}:Q} checkout 			\
-		${_CVS_CHECKOUT_FLAGS} -d ${_repo_} ${CVS_MODULE.${_repo_}}
+	${SETENV} ${_CVS_ENV}						\
+		${_CVS_CMD} ${_CVS_FLAGS} -d ${CVS_ROOT.${_repo_}:Q}	\
+			checkout ${_CVS_CHECKOUT_FLAGS}			\
+			-d ${_repo_:Q} ${CVS_MODULE.${_repo_}:Q}
 .endfor
 
 .endif
