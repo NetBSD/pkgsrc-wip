@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.depends,v 1.1.1.1 2006/01/30 01:25:13 lsed Exp $
+# $NetBSD: Makefile.depends,v 1.2 2006/01/30 17:22:58 thomasklausner Exp $
 #
 
-DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../multimedia/mplayer-share
+DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../wip/mplayer-share
 
 GCC_REQD+=	2.95.3
 
