@@ -1,2 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/30 13:44:46 rxg Exp $
-lib/libdbus_bindings.la
+@comment $NetBSD: PLIST,v 1.2 2006/01/30 05:02:30 rxg Exp $
+${PYSITELIB}/dbus.py
+${PYSITELIB}/dbus.pyc
+${PYSITELIB}/dbus.pyo
+${PYSITELIB}/dbus_bindings.la

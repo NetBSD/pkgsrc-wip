@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2006/01/17 09:13:38 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/30 05:02:30 rxg Exp $
 #
 
 DBUS_INTERFACE=	python
 DBUS_DIRS=	dbus glib python tools
 
 .include "../../sysutils/dbus/Makefile.common"
+PKGREVISION=	1
 
 DEPENDS+=	${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
 
@@ -13,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
 # dbus package).
 INSTALL_DIRS=	python
 
-.include "../../lang/python/pyversion.mk"
+PY_PATCHPLIST=	YES
+
+.include "../../lang/python/extension.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
