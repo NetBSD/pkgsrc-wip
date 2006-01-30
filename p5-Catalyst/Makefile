@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/01/20 20:27:40 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/30 02:27:51 jgoamakf Exp $
 
 DISTNAME=	Catalyst-5.62
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Catalyst/
 COMMENT=	The Elegant MVC Web Application Framework
 PERL5_REQD+=    5.8.1
 
-DEPENDS+=       p5-UNIVERSAL-require>=0.10:../../wip/p5-UNIVERSAL-require
+DEPENDS+=       p5-UNIVERSAL-require>=0.10:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
 DEPENDS+=      	p5-Class-Data-Inheritable>=0:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Class-Inspector>=0:../../devel/p5-Class-Inspector
