@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/01/30 01:25:14 lsed Exp $
+
+--- mp_msg.c.orig	2006-01-20 21:38:46.000000000 +0100
++++ mp_msg.c	2006-01-29 20:04:10.000000000 +0100
+@@ -33,15 +33,19 @@
+ #ifdef MP_DEBUG
+     fprintf(stdout, "Using GNU internationalization\n");
+     fprintf(stdout, "Original domain: %s\n", textdomain(NULL));
++#if 0
+     fprintf(stdout, "Original dirname: %s\n", bindtextdomain(textdomain(NULL),NULL));
+ #endif
+     bindtextdomain("mplayer", PREFIX"/share/locale");
+     textdomain("mplayer");
+ #ifdef MP_DEBUG
+     fprintf(stdout, "Current domain: %s\n", textdomain(NULL));
++#if 0
+     fprintf(stdout, "Current dirname: %s\n\n", bindtextdomain(textdomain(NULL),NULL));
+ #endif
+ #endif
++#endif
++#endif
+     for(i=0;i<MSGT_MAX;i++) mp_msg_levels[i] = -2;
+ }
+ 

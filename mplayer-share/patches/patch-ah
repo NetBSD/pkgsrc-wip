@@ -1,0 +1,35 @@
+$NetBSD: patch-ah,v 1.1.1.1 2006/01/30 01:25:14 lsed Exp $
+
+--- subreader.c.orig	2005-06-01 11:01:41.000000000 +0200
++++ subreader.c	2005-11-23 16:52:19.000000000 +0100
+@@ -73,10 +73,10 @@
+ /* Remove leading and trailing space */
+ static void trail_space(char *s) {
+ 	int i = 0;
+-	while (isspace(s[i])) ++i;
++	while (isspace((unsigned char)s[i])) ++i;
+ 	if (i) strcpy(s, s + i);
+ 	i = strlen(s) - 1;
+-	while (i > 0 && isspace(s[i])) s[i--] = '\0';
++	while (i > 0 && isspace((unsigned char)s[i])) s[i--] = '\0';
+ }
+ 
+ static char *stristr(const char *haystack, const char *needle) {
+@@ -627,7 +627,7 @@
+     if (!fgets (line, LINE_LEN, fd))
+ 	return NULL;
+     /* skip spaces */
+-    for (s=line; *s && isspace(*s); s++);
++    for (s=line; *s && isspace(*(unsigned char*)s); s++);
+     /* allow empty lines at the end of the file */
+     if (*s==0)
+ 	return NULL;
+@@ -680,7 +680,7 @@
+ 			else return current;
+ 		}
+ 		p=line;
+-		while (isspace(*p)) p++;
++		while (isspace(*(unsigned char*)p)) p++;
+ 		if (eol(*p) && num > 0) return current;
+ 		if (eol(*p)) return NULL;
+ 
