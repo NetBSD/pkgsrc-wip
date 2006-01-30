@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2151 2006/01/29 17:17:23 obache Exp $
+# $Id: Makefile,v 1.2152 2006/01/30 01:28:52 lsed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -616,6 +616,8 @@ SUBDIR+=	mopac
 SUBDIR+=	moregroupware
 SUBDIR+=	mozplugger
 SUBDIR+=	mpgedit
+SUBDIR+=	mplayer
+SUBDIR+=	mplayer-share
 SUBDIR+=	mppdec
 SUBDIR+=	mppenc
 SUBDIR+=	mpq-tools
