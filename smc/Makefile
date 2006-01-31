@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/01/17 10:20:47 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/31 19:33:33 thomasklausner Exp $
 #
 
 PKGNAME=		smc-0.97
@@ -25,7 +25,7 @@ SMCSHARE=${PREFIX}/share/smc
 
 post-extract:
 	# Extracting music files
-	${UNZIP} -u -q ${DISTDIR}/music_2.0_RC_1.zip -d ${WRKSRC}
+	${UNZIP_CMD} -u -q ${DISTDIR}/music_2.0_RC_1.zip -d ${WRKSRC}
 
 post-patch:
 	@cd ${WRKSRC} && \
