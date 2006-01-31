@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/10 01:39:50 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/01/31 03:30:32 rillig Exp $
 
 BUILDLINK_DEPMETHOD.damageproto?=	build
 
@@ -18,6 +18,6 @@ BUILDLINK_PKGSRCDIR.damageproto?=	../../wip/damageproto
 .endif	# DAMAGEPROTO_BUILDLINK3_MK
 
 .include "../../wip/xproto/buildlink3.mk"
-.include "../../wip/fixesproto/buildlink3.mk" 
+.include "../../wip/fixesproto/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
