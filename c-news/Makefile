@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/01/17 09:13:37 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/31 02:57:34 rillig Exp $
 
 DISTNAME=	c-news
-PKGNAME=        c-news-CR-7
+PKGNAME=	c-news-CR-7
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.cs.toronto.edu/pub/c-news/ \
 		ftp://ftp.funet.fi/pub/unix/news/cnews/ \
@@ -34,10 +34,10 @@ CONFLICTS+=	nntpclnt-[0-9]* inn*
 
 WRKSRC=		${WRKDIR}
 USE_PKGINSTALL=	YES
-PKG_USERS=	news:news::Internet\ News:${CNEWSDATA}:${SH}
+PKG_USERS=	news:news::Internet\ News:${CNEWSDATA:Q}:${SH:Q}
 PKG_GROUPS=	news
 
-PKG_SYSCONFDIR.c-news=     ${CNEWSDATA}/etc
+PKG_SYSCONFDIR.c-news=	${CNEWSDATA}/etc
 
 EGDIR=		${PREFIX}/share/examples/c-news
 
@@ -79,68 +79,71 @@ FILES_SUBST_SED+=	"-e s!statfs!statvfs!g"
 .endif
 
 pre-patch:
-	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${PGPVERIFY} ${WRKSRC}/${PGPVERIFY}
+	@${CP} ${DISTDIR:Q}/${DIST_SUBDIR:Q}/${PGPVERIFY:Q} ${WRKSRC:Q}/${PGPVERIFY:Q}
 
 pre-configure:
 	${SED} ${FILES_SUBST_SED}					\
-		${FILESDIR}/substitutions > ${WRKDIR}/conf/substitutions
+		${FILESDIR:Q}/substitutions > ${WRKDIR:Q}/conf/substitutions
 	${SED} ${FILES_SUBST_SED}					\
-		${FILESDIR}/quiz.def > ${WRKDIR}/conf/quiz.def
+		${FILESDIR:Q}/quiz.def > ${WRKDIR:Q}/conf/quiz.def
 	${SED} ${FILES_SUBST_SED}					\
-		${FILESDIR}/config.make > ${WRKDIR}/include/config.make
-	${CP}  ${FILESDIR}/makeinc ${WRKDIR}/conf/makeinc
-	${CP}  ${FILESDIR}/makefile.notebook ${WRKDIR}/notebook/makefile
+		${FILESDIR:Q}/config.make > ${WRKDIR:Q}/include/config.make
+	${CP}  ${FILESDIR:Q}/makeinc ${WRKDIR:Q}/conf/makeinc
+	${CP}  ${FILESDIR:Q}/makefile.notebook ${WRKDIR:Q}/notebook/makefile
 
 # One of the tests does not work correctly if we are in a union-mounted
 # directory.
 post-build:     build-doc # regression
 
+.PHONY: regression
 regression:
-	cd ${WRKSRC} && ${MAKE} ${MAKEFLAGS} r
+	cd ${WRKSRC:Q} && ${MAKE} ${MAKEFLAGS} r
 
+.PHONY: build-doc
 build-doc:
-	cd ${WRKSRC}/doc && \
+	cd ${WRKSRC:Q}/doc && \
 		${MAKE} PIC=${PIC:Q} NROFF=${NROFF:Q} ${MAKE_FLAGS}
-	cd ${WRKSRC}/notebook && ${MAKE} ${MAKE_FLAGS}
+	cd ${WRKSRC:Q}/notebook && ${MAKE} ${MAKE_FLAGS}
 
 do-install:
-	${RM} -f ${PREFIX}/bin/inews
-	${INSTALL_DATA} ${WRKSRC}/libdbz/dbz.h ${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/libcnews.a ${PREFIX}/lib
+	${RM} -f ${PREFIX:Q}/bin/inews
+	${INSTALL_DATA} ${WRKSRC:Q}/libdbz/dbz.h ${PREFIX:Q}/include
+	${INSTALL_DATA} ${WRKSRC:Q}/libcnews.a ${PREFIX:Q}/lib
 	${MKDIR} ${CNEWSARTS} ${CNEWSOV} ${CNEWSBIN} ${CNEWSCTL}
 	${CHOWN} ${BINOWN}:${BINGRP} ${CNEWSBIN}
-	${INSTALL_SCRIPT} ${WRKSRC}/${PGPVERIFY} ${CNEWSBIN}/pgpverify
-	cd ${WRKSRC}; ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} install
-	cd ${WRKSRC}; ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} setup
-	cd ${WRKSRC}; ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ui readpostcheck
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/${PGPVERIFY:Q} ${CNEWSBIN:Q}/pgpverify
+	cd ${WRKSRC:Q} && ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} install
+	cd ${WRKSRC:Q} && ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} setup
+	cd ${WRKSRC:Q} && ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ui readpostcheck
 .for f in checknews cnewsdo inews injnews postnews readnews
-	${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/bin/${f}
+	${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX:Q}/bin/${f:Q}
 .endfor
 	${CHOWN} -R news:news ${CNEWSARTS} ${CNEWSOV} ${CNEWSCTL}
-	${CHOWN} news:news ${CNEWSBIN}/input/newsspool
-	${CHMOD} 6555 ${CNEWSBIN}/input/newsspool
+	${CHOWN} news:news ${CNEWSBIN:Q}/input/newsspool
+	${CHMOD} 6555 ${CNEWSBIN:Q}/input/newsspool
 .for i in ${MAN1}
-	${INSTALL_MAN} ${WRKSRC}/man/${i} ${PREFIX}/man/man1/${i:R}.1
+	${INSTALL_MAN} ${WRKSRC:Q}/man/${i:Q} ${PREFIX:Q}/man/man1/${i:R:Q}.1
 .endfor
 .for i in ${MAN5}
-	${INSTALL_MAN} ${WRKSRC}/man/${i} ${PREFIX}/man/man5/${i:R}.5
+	${INSTALL_MAN} ${WRKSRC:Q}/man/${i:Q} ${PREFIX:Q}/man/man5/${i:R:Q}.5
 .endfor
 .for i in ${MAN8}
-	${INSTALL_MAN} ${WRKSRC}/man/${i} ${PREFIX}/man/man8/${i:R}.8
+	${INSTALL_MAN} ${WRKSRC:Q}/man/${i:Q} ${PREFIX:Q}/man/man8/${i:R:Q}.8
 .endfor
 	# install docs:
-	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/cnews
+	${INSTALL_MAN_DIR} ${PREFIX:Q}/share/doc/cnews
 .for i in ${DOCS}
-	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/share/doc/cnews
+	${INSTALL_MAN} ${WRKSRC:Q}/doc/${i:Q} ${PREFIX:Q}/share/doc/cnews
 .endfor
 .for i in ${NOTEBOOK}
-	${INSTALL_MAN} ${WRKSRC}/notebook/${i} ${PREFIX}/share/doc/cnews
+	${INSTALL_MAN} ${WRKSRC:Q}/notebook/${i:Q} ${PREFIX:Q}/share/doc/cnews
 .endfor
 	# install sample config files
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cnews
-	for FILE in `ls -1 ${WRKSRC}/conf/*.eg` \
-		${WRKSRC}/conf/cron.proto ${WRKSRC}/conf/organization; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/examples/cnews; \
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/cnews
+	set -e; \
+	for FILE in `ls -1 ${WRKSRC:Q}/conf/*.eg` \
+		${WRKSRC:Q}/conf/cron.proto ${WRKSRC:Q}/conf/organization; do \
+	  ${INSTALL_DATA} "$$FILE" ${PREFIX:Q}/share/examples/cnews; \
 	done
 
 .include "../../mk/bsd.pkg.mk"

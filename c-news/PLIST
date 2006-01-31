@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2003/09/30 15:39:59 hfath Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/31 02:57:34 rillig Exp $
 bin/checknews
 bin/cnewsdo
 bin/inews
@@ -140,13 +140,13 @@ man/man8/newsoverview.8
 man/man8/relaynews.8
 man/man8/report.8
 man/man8/rnews.8
+share/doc/cnews/guide.more
+share/doc/cnews/guide.ps
+share/doc/cnews/index.ps
 share/doc/cnews/locking.more
 share/doc/cnews/locking.ps
 share/doc/cnews/makefiles.more
 share/doc/cnews/makefiles.ps
-share/doc/cnews/guide.more
-share/doc/cnews/guide.ps
-share/doc/cnews/index.ps
 share/doc/cnews/toc.ps
 share/examples/cnews/active.eg
 share/examples/cnews/cron.proto

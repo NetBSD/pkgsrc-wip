@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:10:26 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/31 03:00:03 rillig Exp $
 #
 
 DISTNAME=		chbg-1.5
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-image-library=imlib2
 
 pre-configure:
-		${CP} ${FILESDIR}/es.* ${WRKSRC}/po
+		${CP} ${FILESDIR:Q}/es.* ${WRKSRC:Q}/po
 
 .include "../../devel/glib/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
