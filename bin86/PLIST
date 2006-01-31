@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/17 00:22:50 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/31 02:43:34 rillig Exp $
 bin/as86
-bin/as86_encap
 bin/ld86
-bin/objdump86
 bin/nm86
+bin/objdump86
 bin/size86
-man/man1/as86_encap.1
 man/man1/as86.1
 man/man1/ld86.1
