@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:10:26 tvierling Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/31 03:28:53 rillig Exp $
 #
 
-DISTNAME=	cherokee-0.4.4-pre3
-PKGNAME=	${DISTNAME:S/-pre/rc/}
-WRKSRC=		${WRKDIR}/cherokee-0.4.4
+DISTNAME=	cherokee-0.4.30
 CATEGORIES=	www
-MASTER_SITES=	ftp://alobbs.com/cherokee/
+MASTER_SITES=	http://www.0x50.org/download/0.4/0.4.30/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.alobbs.com/cherokee/
@@ -15,18 +13,20 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 
-CONFIGURE_ARGS+=	--bindir=${PREFIX}/sbin
+CONFIGURE_ARGS+=	--bindir=${PREFIX:Q}/sbin
 
 RCD_SCRIPTS=	cherokee
 
 EGDIR=		${PREFIX}/share/examples/cherokee
 
-CONF_FILES=	${EGDIR}/cherokee.conf.default ${PKG_SYSCONFDIR}/cherokee.conf
+CONF_FILES=	${EGDIR:Q}/cherokee.conf.default ${PKG_SYSCONFDIR:Q}/cherokee.conf
+
+MAKE_INSTALL_FLAGS+=	sysconfdir=${EGDIR:Q}
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/cherokee.conf \
-		${EGDIR}/cherokee.conf.default
+	${INSTALL_DATA_DIR} ${EGDIR:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/cherokee.conf.sample \
+		${EGDIR:Q}/cherokee.conf.default
 
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
