@@ -9,3 +9,5 @@ TAO, DAO, and human-readable error messages.
 This package also provides tools for retrieving audio tracks,
 reading and writing CDs, creating ISO9660/JOLIET/HFS filesystems,
 and verifying ISO9660 images.
+
+This package contains the development version.
