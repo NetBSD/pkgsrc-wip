@@ -1,0 +1,20 @@
+$NetBSD: patch-bb,v 1.1.1.1 2006/01/31 17:31:43 thomasklausner Exp $
+
+--- mkisofs/mkisofs.c.orig	2006-01-12 00:29:46.000000000 +0000
++++ mkisofs/mkisofs.c
+@@ -2412,12 +2412,12 @@ parse_input_files:
+ 		}
+ 	}
+ 	/* We don't need root privilleges anymore. */
+-#ifdef	HAVE_SETREUID
+-	if (setreuid(-1, getuid()) < 0)
+-#else
+ #ifdef	HAVE_SETEUID
+ 	if (seteuid(getuid()) < 0)
+ #else
++#ifdef	HAVE_SETREUID
++	if (setreuid(-1, getuid()) < 0)
++#else
+ 	if (setuid(getuid()) < 0)
+ #endif
+ #endif
