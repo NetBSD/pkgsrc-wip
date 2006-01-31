@@ -1,32 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2006/01/31 02:01:40 rillig Exp $
+$NetBSD: patch-aa,v 1.5 2006/01/31 02:32:33 rillig Exp $
 
---- src/Makefile.orig	Mon Apr 29 13:26:46 2002
-+++ src/Makefile	Tue Oct 15 21:25:58 2002
-@@ -7,11 +7,11 @@
- 
- CC	=	gcc
- CXX	=	g++
--CFLAGS	=	-pipe -Wall -W -DNO_DEBUG -g
--CXXFLAGS=	-pipe -Wall -W -DNO_DEBUG -g 
-+CFLAGS	=	-pipe -Wall -W -DNO_DEBUG -I/usr/pkg/include -I/usr/X11R6/include -O2
-+CXXFLAGS=	-pipe -Wall -W -DNO_DEBUG -I/usr/pkg/include -I/usr/X11R6/include -O2
+--- src/Makefile.orig	2002-04-29 13:26:46.000000000 +0200
++++ src/Makefile	2006-01-31 03:25:14.000000000 +0100
+@@ -11,7 +11,7 @@ CFLAGS	=	-pipe -Wall -W -DNO_DEBUG -g
+ CXXFLAGS=	-pipe -Wall -W -DNO_DEBUG -g 
  INCPATH	=	-I/usr/X11R6/include 
  LINK	=	g++
 -LFLAGS	=	
-+LFLAGS	=	-R/usr/pkg/lib -L/usr/pkg/lib -R/usr/X11R6/lib
++LFLAGS	=	${LDFLAGS}
  LIBS	=	-L/usr/X11R6/lib -lGL -lGLU -lglut -lXmu -lXext -lX11 -lm -lXi
  
  ## -lqgl -lGLU
-@@ -137,7 +137,7 @@
- all: $(TARGET)
- 
- $(TARGET): $(UICDECLS) $(OBJECTS) $(OBJMOC) 
--	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJMOC) $(LIBS)
-+	$(LINK) $(LFLAGS) -s -o $(TARGET) $(OBJECTS) $(OBJMOC) $(LIBS)
- 
- dist:
- 	$(TAR) BillardGL.tar BillardGL.pro $(SOURCES) $(HEADERS) $(INTERFACES) $(DIST)
-@@ -151,13 +151,15 @@
+@@ -151,13 +151,12 @@ clear:
  	-rm -f *~ core
  
  install: 
@@ -37,15 +22,12 @@ $NetBSD: patch-aa,v 1.4 2006/01/31 02:01:40 rillig Exp $
 -	-cp -R lang /usr/share/BillardGL
 -	-mkdir -p /usr/share/doc/packages/BillardGL
 -	-cp README /usr/share/doc/packages/BillardGL
-+	-cp BillardGL /usr/pkg/bin/BillardGL
-+	-mkdir -p /usr/pkg/share/BillardGL
-+	-cp -R Texturen /usr/pkg/share/BillardGL
-+	-cp -R lang /usr/pkg/share/BillardGL
-+	-cp README /usr/pkg/share/doc/BillardGL.README
-+	-chmod 555 /usr/pkg/bin/BillardGL /usr/pkg/share/BillardGL /usr/pkg/share/BillardGL/lang
-+	-chmod 555 /usr/pkg/share/BillardGL/Texturen /usr/pkg/share/BillardGL/Texturen/*
-+	-chmod 444 /usr/pkg/share/BillardGL/lang/* /usr/pkg/share/BillardGL/Texturen/*/*
-+	-chmod 444 /usr/pkg/share/doc/BillardGL.README
++	${BSD_INSTALL_PROGRAM} BillardGL ${PREFIX}/bin/BillardGL
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/BillardGL
++	${PAX} -rw Texturen ${PREFIX}/share/BillardGL
++	${PAX} -rw lang ${PREFIX}/share/BillardGL
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/doc/BillardGL
++	${BSD_INSTALL_DATA} README ${PREFIX}/share/doc/BillardGL/README
  
  uninstall:
  	-rm /usr/X11R6/bin/BillardGL
