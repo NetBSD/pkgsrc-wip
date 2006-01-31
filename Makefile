@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2153 2006/01/31 03:37:06 minskim Exp $
+# $Id: Makefile,v 1.2154 2006/01/31 17:35:25 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -87,7 +87,6 @@ SUBDIR+=	barnyard
 SUBDIR+=	bastard
 SUBDIR+=	beast
 SUBDIR+=	bigreqsproto
-SUBDIR+=	billardgl
 SUBDIR+=	bin86
 SUBDIR+=	biopython
 SUBDIR+=	bioruby
@@ -126,6 +125,7 @@ SUBDIR+=	ccid
 SUBDIR+=	ccrtp
 SUBDIR+=	ccrypt
 SUBDIR+=	cdpr
+SUBDIR+=	cdrtools-devel
 SUBDIR+=	chbg
 SUBDIR+=	cherokee
 SUBDIR+=	chora
@@ -716,6 +716,7 @@ SUBDIR+=	p5-CPANPLUS
 SUBDIR+=	p5-Cache-FastMmap
 SUBDIR+=	p5-Cache-Mmap
 SUBDIR+=	p5-Catalyst
+SUBDIR+=	p5-Catalyst-Engine-Apache
 SUBDIR+=	p5-Catalyst-Model-CDBI
 SUBDIR+=	p5-Catalyst-Plugin-Authentication-CDBI
 SUBDIR+=	p5-Catalyst-Plugin-Cache-FileCache
@@ -851,6 +852,7 @@ SUBDIR+=	panoramixext
 SUBDIR+=	parted
 SUBDIR+=	pasmo
 SUBDIR+=	passepartout
+SUBDIR+=	pbbuttonsd
 SUBDIR+=	pcsc-lite
 SUBDIR+=	pcsx
 SUBDIR+=	pdb2ldif
