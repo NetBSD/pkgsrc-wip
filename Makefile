@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2152 2006/01/30 01:28:52 lsed Exp $
+# $Id: Makefile,v 1.2153 2006/01/31 03:37:06 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1092,7 +1092,6 @@ SUBDIR+=	sipp
 SUBDIR+=	siproxd
 SUBDIR+=	sipsak
 SUBDIR+=	six
-SUBDIR+=	skf
 SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc
 SUBDIR+=	slackware_aaa_base
