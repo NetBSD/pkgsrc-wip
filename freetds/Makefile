@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/31 05:37:26 jlamwww Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/31 03:45:30 rillig Exp $
 #
 # To use this package to track FreeTDS snapshots, just do:
 #
@@ -32,10 +32,10 @@ USE_TOOLS+=		gmake
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ARGS+=	--datadir=${PREFIX:Q}/share
+CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv:Q}
 CONFIGURE_ARGS+=	--with-tdsver=7.0
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl:Q}
 
 # no thread-safe resolver functions on NetBSD
 CONFIGURE_ARGS+=	--disable-threadsafe
@@ -43,9 +43,9 @@ CONFIGURE_ARGS+=	--disable-threadsafe
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} ETC=${EGDIR:Q} DOCDIR=doc/${PKGBASE:Q}
 
 EGDIR=		${PREFIX}/share/examples/freetds
-CONF_FILES=	${EGDIR}/freetds.conf ${PKG_SYSCONFDIR}/freetds.conf
-CONF_FILES+=	${EGDIR}/locales.conf ${PKG_SYSCONFDIR}/locales.conf
-CONF_FILES+=	${EGDIR}/pool.conf ${PKG_SYSCONFDIR}/pool.conf
+CONF_FILES=	${EGDIR:Q}/freetds.conf ${PKG_SYSCONFDIR:Q}/freetds.conf
+CONF_FILES+=	${EGDIR:Q}/locales.conf ${PKG_SYSCONFDIR:Q}/locales.conf
+CONF_FILES+=	${EGDIR:Q}/pool.conf ${PKG_SYSCONFDIR:Q}/pool.conf
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
@@ -56,22 +56,24 @@ PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/.PLIST.doc
 # easily changing the installation directory for the documentation.
 #
 pre-build:
-	cd ${WRKSRC}/doc/doc && ln -s freetds-[0-9]* ${PKGBASE:Q}
+	cd ${WRKSRC:Q}/doc/doc && ${LN} -s freetds-[0-9]* ${PKGBASE:Q}
 
 # Dynamically generate PLIST entries for the documentation.  This target
 # may need to be modified for future FreeTDS releases.
 #
 ${WRKDIR}/.PLIST.doc:
-	{ cd ${WRKSRC}/doc/doc/freetds;					\
-	  find reference userguide \( -type f -o -type l \) -print;	\
-	  cd ${WRKSRC}/doc;						\
-	  find images -name \*.gif -print;				\
-	} | sed "s,^,share/doc/"${PKGBASE:Q}"/," | sort -u		\
+	set -e;								\
+	{ cd ${WRKSRC:Q}/doc/doc/freetds;				\
+	  ${FIND} reference userguide \( -type f -o -type l \) -print;	\
+	  cd ${WRKSRC:Q}/doc;						\
+	  ${FIND} images -name \*.gif -print;				\
+	} | ${SED} "s,^,share/doc/"${PKGBASE:Q}"/," | ${SORT} -u	\
 	> ${.TARGET}
-	{ cd ${WRKSRC}/doc/doc/freetds;					\
-	  find reference userguide -type d -print;			\
+	set -e;								\
+	{ cd ${WRKSRC:Q}/doc/doc/freetds;				\
+	  ${FIND} reference userguide -type d -print;			\
 	  ${ECHO} "images";						\
-	} | sed "s,^,@dirrm share/doc/"${PKGBASE:Q}"/," | sort -ur	\
+	} | ${SED} "s,^,@dirrm share/doc/"${PKGBASE:Q}"/," | ${SORT} -ur\
 	>> ${.TARGET}
 	${ECHO} "@dirrm share/doc/"${PKGBASE:Q} >> ${.TARGET}
 

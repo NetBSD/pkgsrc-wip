@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/12/31 05:10:57 jlamwww Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/01/31 03:45:30 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FREETDS_BUILDLINK3_MK:=	${FREETDS_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.freetds?=	../../databases/freetds
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

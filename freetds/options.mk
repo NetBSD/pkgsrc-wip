@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/12/31 05:10:57 jlamwww Exp $
+# $NetBSD: options.mk,v 1.2 2006/01/31 03:45:30 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freetds
 PKG_OPTIONS_OPTIONAL_GROUPS+=	odbc
@@ -13,7 +13,7 @@ PKG_OPTIONS_GROUP.odbc=		iodbc #unixodbc
 ODBC_DRIVER=		yes
 .  include "../../databases/iodbc/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-odbc
-CONFIGURE_ARGS+=	--with-iodbc=${BUILDLINK_PREFIX.iodbc}
+CONFIGURE_ARGS+=	--with-iodbc=${BUILDLINK_PREFIX.iodbc:Q}
 PLIST_SUBST+=		ODBC=
 .endif
 
@@ -23,7 +23,7 @@ PLIST_SUBST+=		ODBC=
 .if !empty(PKG_OPTIONS:Munixodbc)
 .  include "../../databases/unixodbc/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-odbc
-CONFIGURE_ARGS+=	--with-unixodbc=${BUILDLINK_PREFIX.unixodbc}
+CONFIGURE_ARGS+=	--with-unixodbc=${BUILDLINK_PREFIX.unixodbc:Q}
 PLIST_SUBST+=		ODBC=
 .endif
 
