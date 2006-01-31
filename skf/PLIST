@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/17 04:53:58 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/31 02:14:37 obache Exp $
 bin/skf
-man/ja/man1/skf.1
+man/ja_JP.EUC/man1/skf.1
 man/man1/skf.1
 share/doc/skf/CHANGES_ja.txt
 share/doc/skf/README.txt
