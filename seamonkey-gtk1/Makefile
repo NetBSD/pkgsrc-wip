@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/01 13:25:39 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/01 14:45:53 ghen Exp $
 
 MOZILLA=		seamonkey-gtk1
 MOZILLA_BIN=		seamonkey-bin
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTINFO_FILE=		${.CURDIR}/../../wip/seamonkey/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/seamonkey/patches
-FILESDIR=		${.CURDIR}/../../wip/seamonkey/files
+FILESDIR=		${.CURDIR}/../../www/mozilla/files
 
 COMMENT=		Full featured gecko-based browser built with GTK1
 
