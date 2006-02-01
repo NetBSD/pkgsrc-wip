@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2006/02/01 14:45:53 ghen Exp $
+# $NetBSD: Makefile.common,v 1.3 2006/02/01 16:57:06 ghen Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
@@ -125,7 +125,7 @@ SUNOSLIB=
 .else
 SUNOSLIB=		"@comment "
 .endif
-PLIST_SUBST+=		SUNOSLIB=${SUNOSLIB:Q}
+PLIST_SUBST+=		SUNOSLIB=${SUNOSLIB}
 
 SCRIPTS_ENV+=		OBJECT_FMT=${OBJECT_FMT:Q}
 SCRIPTS_ENV+=		PLIST_SRC=${PLIST_SRC:Q}
@@ -142,7 +142,7 @@ SCRIPTS_ENV+=		SETENV=${SETENV:Q}
 SCRIPTS_ENV+=		MOZILLA=${MOZILLA:Q}
 SCRIPTS_ENV+=		MOZILLA_BIN=${MOZILLA_BIN:Q}
 SCRIPTS_ENV+=		SO_SUFFIX=${SO_SUFFIX:Q}
-SCRIPTS_ENV+=		SUNOSLIB=${SUNOSLIB:Q}
+SCRIPTS_ENV+=		SUNOSLIB=${SUNOSLIB}
 
 PTHREAD_OPTS+=		native optional
 
@@ -179,8 +179,8 @@ post-build:
 	${ECHO} locale,install,select,en-US >> \
 		${WRKSRC}/dist/bin/chrome/installed-chrome.txt
 
-#do-install:
-#	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR}/moz-install
+do-install:
+	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR}/moz-install
 
 .include "../../mk/pthread.buildlink3.mk"
 
