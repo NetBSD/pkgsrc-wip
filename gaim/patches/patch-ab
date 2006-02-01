@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/02/01 09:10:01 matthewluckie Exp $
+
+--- src/dnssrv.c.orig	Wed Feb  1 21:22:30 2006
++++ src/dnssrv.c	Wed Feb  1 21:24:57 2006
+@@ -39,6 +39,16 @@
+ #endif
+ #endif
+ 
++#ifndef NS_GET16
++#define NS_GET16(s, cp) { \
++	register u_char *t_cp = (u_char *)(cp); \
++	(s) = ((u_int16_t)t_cp[0] << 8) \
++	    | ((u_int16_t)t_cp[1]) \
++	    ; \
++	(cp) += 2; \
++}
++#endif
++
+ #include "dnssrv.h"
+ #include "eventloop.h"
+ #include "debug.h"
