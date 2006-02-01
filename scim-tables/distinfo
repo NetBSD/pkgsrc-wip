@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/02/01 11:28:16 rxg Exp $
+
+SHA1 (scim-tables-0.5.6.tar.gz) = 25c3d800ae465cd9468a93c54398df59e0d3f743
+RMD160 (scim-tables-0.5.6.tar.gz) = 768b298cd9359742eedf1297f73a5be6eee3361e
+Size (scim-tables-0.5.6.tar.gz) = 7058913 bytes
