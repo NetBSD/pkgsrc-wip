@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/02/01 11:26:04 rxg Exp $
+
+--- configs/Makefile.in.orig	2006-01-22 01:09:28.000000000 +0800
++++ configs/Makefile.in
+@@ -316,7 +316,7 @@ prefix = @prefix@
+ program_transform_name = @program_transform_name@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-sysconfdir = @sysconfdir@
++sysconfdir = $(prefix)/share/examples
+ target_alias = @target_alias@
+ MAINTAINERCLEANFILES = Makefile.in
+ CLEANFILES = *.bak
