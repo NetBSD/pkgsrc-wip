@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2156 2006/02/01 11:30:54 rxg Exp $
+# $Id: Makefile,v 1.2157 2006/02/01 13:26:15 ghen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1076,6 +1076,8 @@ SUBDIR+=	scr2png
 SUBDIR+=	scrnsaverproto
 SUBDIR+=	scsh-install-lib
 SUBDIR+=	scx
+SUBDIR+=	seamonkey
+SUBDIR+=	seamonkey-gtk1
 SUBDIR+=	send-pr
 SUBDIR+=	sendmailX
 SUBDIR+=	serlook
