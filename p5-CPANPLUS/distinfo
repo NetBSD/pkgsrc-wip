@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2006/01/27 05:04:40 jgoamakf Exp $
+$NetBSD: distinfo,v 1.3 2006/02/02 17:34:19 absd Exp $
 
 SHA1 (CPANPLUS-0.0562.tar.gz) = d4603cc7bc9f962dcd6704fd632fa41b5da2773f
 RMD160 (CPANPLUS-0.0562.tar.gz) = 56cc690b55d18ea89c7f14c40f9f47be980ae220
 MD5 (CPANPLUS-0.0562.tar.gz) = 79502929f29759fbd4bfea8b07fef2d9
 Size (CPANPLUS-0.0562.tar.gz) = 444385 bytes
-SHA1 (patch-aa) = 8f78c3f25bb221024ce7dcd323b8ef9f788cf167
+SHA1 (patch-aa) = 618e6cc9e8291157ab43fa24e29ea862d7f11ddb

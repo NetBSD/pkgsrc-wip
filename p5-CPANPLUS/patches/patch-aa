@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2006/01/27 05:04:40 jgoamakf Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/02 17:35:10 absd Exp $
 
---- Setup.pm.orig	2006-01-27 13:34:02.000000000 +0900
-+++ Setup.pm	2006-01-27 13:36:28.000000000 +0900
-@@ -212,12 +212,12 @@
+--- lib/CPANPLUS/Configure/Setup.pm.orig	2005-08-19 12:27:21.000000000 +0100
++++ lib/CPANPLUS/Configure/Setup.pm
+@@ -212,12 +212,12 @@ put your Configuration file in the defau
          $choices = [$default, $other];
      }
  
