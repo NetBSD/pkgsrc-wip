@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/30 19:01:02 kuli0020 Exp $
+$NetBSD: distinfo,v 1.2 2006/02/02 21:22:43 absd Exp $
 
-SHA1 (HTTP-Request-AsCGI-0.2.tar.gz) = 514d13b3c31a8767c49e24c57b48b44664f1bae2
-RMD160 (HTTP-Request-AsCGI-0.2.tar.gz) = b766d1e9f25905f685d2bd58f9eeb7e75ca48f0a
-MD5 (HTTP-Request-AsCGI-0.2.tar.gz) = 6180359421936b6a9579a4fb00c82d82
-SHA256 (HTTP-Request-AsCGI-0.2.tar.gz) = a04e961c0ac90651129f6edb995e9a2ef34c0327f97afb411514900d15bae4f3
-Size (HTTP-Request-AsCGI-0.2.tar.gz) = 5710 bytes
+SHA1 (HTTP-Request-AsCGI-0.5.tar.gz) = edc93570bc0571dcd02fd3fd7b42c2b1bdad0ec9
+RMD160 (HTTP-Request-AsCGI-0.5.tar.gz) = 00ff7e71777f6225c7303e07a11642d0171c2c66
+Size (HTTP-Request-AsCGI-0.5.tar.gz) = 6145 bytes
