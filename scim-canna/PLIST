@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/02 14:56:06 rxg Exp $
+lib/scim-1.0/IMEngine/canna.la
+lib/scim-1.0/SetupUI/canna-imengine-setup.la
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/scim-canna.mo
+share/scim/icons/scim-canna.png
+@dirrm lib/scim-1.0/SetupUI
+@dirrm lib/scim-1.0/IMEngine

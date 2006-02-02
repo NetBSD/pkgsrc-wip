@@ -1,0 +1,22 @@
+# $NetBSD: Makefile,v 1.1.1.1 2006/02/02 14:56:06 rxg Exp $
+#
+
+DISTNAME=		scim-canna-0.1.3
+CATEGORIES=		inputmethod
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=scim-imengine/16250/}
+
+MAINTAINER=		rxg@NetBSD.org
+HOMEPAGE=		http://www.scim-im.org/
+COMMENT=		SCIM IMEngine module for Canna
+
+BUILD_USES_MSGFMT=	yes
+
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../inputmethod/canna-lib/buildlink3.mk"
+.include "../../wip/scim/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
