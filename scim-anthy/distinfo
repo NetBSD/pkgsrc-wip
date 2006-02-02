@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/02/02 14:58:11 rxg Exp $
+
+SHA1 (scim-anthy-0.8.0.tar.gz) = 0cbffe15d364753f54ad8625d4d49625fa093c19
+RMD160 (scim-anthy-0.8.0.tar.gz) = c80661312b0b9fbeae6de028b734f8625437d3bb
+Size (scim-anthy-0.8.0.tar.gz) = 621355 bytes
