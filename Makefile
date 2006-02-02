@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2157 2006/02/01 13:26:15 ghen Exp $
+# $Id: Makefile,v 1.2158 2006/02/02 16:01:28 rxg Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1067,6 +1067,10 @@ SUBDIR+=	sawfish-gtk2
 SUBDIR+=	scare
 SUBDIR+=	scite
 SUBDIR+=	scim
+SUBDIR+=	scim-anthy
+SUBDIR+=	scim-canna
+SUBDIR+=	scim-fcitx
+SUBDIR+=	scim-hangul
 SUBDIR+=	scim-tables
 SUBDIR+=	scm
 SUBDIR+=	scmail
