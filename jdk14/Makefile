@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/12/19 13:32:01 ghen Exp $
+# $NetBSD: Makefile,v 1.28 2006/02/02 22:22:17 ghen Exp $
 
 JDK_VERSION=    	1.4.2
 JDK_PATCHSET_VERSION=   8
@@ -138,6 +138,11 @@ SUBST_FILES.paths+=	j2se/src/solaris/native/sun/awt/fontpath.c
 SUBST_SED.paths=	-e 's,%%LOCALBASE%%,${LOCALBASE},g'
 SUBST_SED.paths+=	-e 's,%%X11BASE%%,${X11BASE},g'
 SUBST_SED.paths+=	-e 's,%%JVM_HOME%%,${JVM_HOME},g'
+
+SUBST_CLASSES+=		cr
+SUBST_STAGE.cr=		post-extract
+SUBST_FILES.cr=		jdk14.patches
+SUBST_SED.cr=		-e 's,,,'
 
 BUILDLINK_PASSTHRU_DIRS+=	${JAVA_HOME}
 
