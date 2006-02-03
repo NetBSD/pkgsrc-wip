@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/02 14:56:06 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/03 14:39:12 rxg Exp $
 #
 
 DISTNAME=		scim-canna-0.1.3
@@ -6,7 +6,7 @@ CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=scim-imengine/16250/}
 
 MAINTAINER=		rxg@NetBSD.org
-HOMEPAGE=		http://www.scim-im.org/
+HOMEPAGE=		http://scim-imengine.sourceforge.jp/
 COMMENT=		SCIM IMEngine module for Canna
 
 BUILD_USES_MSGFMT=	yes
