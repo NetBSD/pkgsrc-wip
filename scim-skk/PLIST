@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/03 15:25:16 rxg Exp $
+lib/scim-1.0/IMEngine/skk.la
+lib/scim-1.0/SetupUI/skk-imengine-setup.la
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/scim-skk.mo
+share/scim/icons/scim-skk.png
+@dirrm lib/scim-1.0/SetupUI
+@dirrm lib/scim-1.0/IMEngine
