@@ -1,0 +1,23 @@
+tcpxtract is a tool for extracting files from network traffic based
+on file signatures. Extracting files based on file type headers
+and footers (sometimes called "carving") is an age old data recovery
+technique. Tools like Foremost employ this technique to recover
+files from arbitrary data streams. Tcpxtract uses this technique
+specifically for the application of intercepting files transmitted
+across a network. Other tools that fill a similar need are driftnet
+and EtherPEG. driftnet and EtherPEG are tools for monitoring and
+extracting graphic files on a network and is commonly used by
+network administrators to police the internet activity of their
+users. The major limitations of driftnet and EtherPEG is that they
+only support three filetypes with no easy way of adding more. The
+search technique they use is also not scalable and does not search
+across packet boundries. tcpxtract features the following:
+
+    * Supports 26 popular file formats out-of-the-box. New formats
+      can be added by simply editing its config file.
+    * With a quick conversion, you can use your old Foremost config
+      file with tcpxtract.
+    * Custom written search algorithm is lightning fast and very scalable.
+    * Search algorithm searches across packet boundries for total
+      coverage and forensic quality.
+    * Can be used against a live network or a tcpdump formatted capture file.

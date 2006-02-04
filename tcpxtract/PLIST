@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/04 11:39:27 thomasklausner Exp $
+bin/tcpxtract
+man/man1/tcpxtract.1
+share/examples/tcpxtract/tcpxtract.conf
+@dirrm share/examples/tcpxtract
