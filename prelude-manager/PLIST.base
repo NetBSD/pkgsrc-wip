@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.base,v 1.1.1.1 2003/09/28 13:02:45 adrian_p Exp $
-@dirrm lib/prelude-manager
