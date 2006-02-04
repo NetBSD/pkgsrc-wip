@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/01/16 23:41:50 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/02/04 00:30:52 thomasklausner Exp $
 bin/mednafen
 @comment belongs to libiconv: lib/charset.alias
 share/doc/mednafen/cheat.html
@@ -24,6 +24,7 @@ share/doc/mednafen/tech/nsfspec.txt
 share/doc/mednafen/tech/ppu/2C02 technical operation.TXT
 share/doc/mednafen/tech/ppu/loopy1.txt
 share/doc/mednafen/tech/ppu/loopy2.txt
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/mednafen.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/mednafen.mo
 @dirrm share/doc/mednafen/tech/ppu
 @dirrm share/doc/mednafen/tech/exp

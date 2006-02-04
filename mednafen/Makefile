@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/01/28 00:35:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/04 00:30:52 thomasklausner Exp $
 #
 
-DISTNAME=	mednafen-0.4.5
+DISTNAME=	mednafen-0.4.7
 CATEGORIES=	emulators
 MASTER_SITES=	http://mednafen.com/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -44,8 +44,6 @@ post-install:
 		${PREFIX}/share/doc/mednafen/tech/ppu
 
 .include "../../audio/esound/buildlink3.mk"
-.include "../../audio/libaudiofile/buildlink3.mk"
-.include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
@@ -55,4 +53,5 @@ post-install:
 .include "../../net/SDL_net/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
