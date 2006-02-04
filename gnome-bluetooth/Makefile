@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/04 13:08:40 poppnk Exp $
 #
 
-DISTNAME=		gnome-bluetooth-0.5.1
+DISTNAME=		gnome-bluetooth-0.7.0
 CATEGORIES=		net
-MASTER_SITES=		http://downloads.usefulinc.com/gnome-bluetooth/
+MASTER_SITES=		http://ftp.gnome.org/pub/gnome/sources/gnome-bluetooth/0.7/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://downloads.usefulinc.com/gnome-bluetooth/
+HOMEPAGE=		http://usefulinc.com/software/gnome-bluetooth
 COMMENT=		Gnome Bluetooth Manager
 
 USE_PKGLOCALEDIR=	yes
@@ -16,19 +16,17 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gnome-bluetooth.pc.in
 GNU_CONFIGURE=		yes
 
-SUBST_CLASSES+= py
-SUBST_FILES.py=src/Makefile
-SUBST_STAGE.py=post-configure
-SUBST_SED.py=-e 's,/usr/share/,${PREFIX}/share/,g' \
-		-e 's,python ,python2.3 ,g'
-
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/gob2/buildlink3.mk"
+.include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../wip/libbtctl/buildlink3.mk"
 .include "../../x11/py-gnome2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

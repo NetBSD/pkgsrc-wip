@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:18 rillig Exp $
+$NetBSD: distinfo,v 1.3 2006/02/04 13:08:40 poppnk Exp $
 
-SHA1 (gnome-bluetooth-0.5.1.tar.gz) = e6aa74d1957de3cdcc15a14ceb9b4b776d1544ed
-RMD160 (gnome-bluetooth-0.5.1.tar.gz) = 5ab7ffb139557ea208ce3c820cc05613e972c540
-Size (gnome-bluetooth-0.5.1.tar.gz) = 821273 bytes
+SHA1 (gnome-bluetooth-0.7.0.tar.gz) = 02060bff3c27bd43ca35b56c827d40fc1613a33f
+RMD160 (gnome-bluetooth-0.7.0.tar.gz) = 7e26ba01aa9e097e187bfa9ec909307b91a5c2af
+Size (gnome-bluetooth-0.7.0.tar.gz) = 1076206 bytes

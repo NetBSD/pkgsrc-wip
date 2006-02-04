@@ -1,29 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/11 15:09:19 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/04 13:08:40 poppnk Exp $
 bin/gnome-bluetooth-manager
 bin/gnome-obex-send
 bin/gnome-obex-server
+etc/gconf/schemas/gnome-obex-server.schemas
 include/gnome-bluetooth/gnomebt-chooser.h
 include/gnome-bluetooth/gnomebt-controller.h
 include/gnome-bluetooth/gnomebt-fileactiondialog.h
 include/gnome-bluetooth/gnomebt-icons.h
 include/gnome-bluetooth/gnomebt-permissiondialog.h
 include/gnome-bluetooth/gnomebt-spinner.h
-lib/bonobo/libgnome-bluetooth-component.la
-lib/bonobo/servers/GNOME_Bluetooth_Component.server
 lib/libgnomebt.la
 lib/pkgconfig/gnome-bluetooth.pc
-lib/python/site-packages/gnomebt/__init__.py
-lib/python/site-packages/gnomebt/chooser.la
-lib/python/site-packages/gnomebt/controller.la
-lib/python/site-packages/gnomebt/defs.py
-lib/python/site-packages/gnomebt/hig_alert.py
-lib/python/site-packages/gnomebt/iconlist.la
-lib/python/site-packages/gnomebt/manager.py
 share/applications/gnome-bluetooth-manager.desktop
 share/applications/gnome-obex-server.desktop
 share/gnome-bluetooth/gnome-obex-send.glade
-share/gnome-bluetooth/pixmaps/blueradio-48.png
 share/gnome-bluetooth/pixmaps/blueradio.png
+share/gnome-bluetooth/pixmaps/blueradio.svg
 share/gnome-bluetooth/pixmaps/btdevice-audiovideo.png
 share/gnome-bluetooth/pixmaps/btdevice-computer.png
 share/gnome-bluetooth/pixmaps/btdevice-imaging.png
@@ -37,12 +29,49 @@ share/gnome-bluetooth/pixmaps/frame3.png
 share/gnome-bluetooth/pixmaps/frame4.png
 share/gnome-bluetooth/pixmaps/frame5.png
 share/gnome-bluetooth/pixmaps/frame6.png
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnome-bluetooth.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-bluetooth.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-bluetooth.mo
+share/pixmaps/blueradio-48.png
+usr/pkg/lib/python2.3/site-packages/gnomebt/__init__.py
+usr/pkg/lib/python2.3/site-packages/gnomebt/chooser.la
+usr/pkg/lib/python2.3/site-packages/gnomebt/controller.la
+usr/pkg/lib/python2.3/site-packages/gnomebt/defs.py
+usr/pkg/lib/python2.3/site-packages/gnomebt/hig_alert.py
+usr/pkg/lib/python2.3/site-packages/gnomebt/iconlist.la
+usr/pkg/lib/python2.3/site-packages/gnomebt/manager.py
+@dirrm usr/pkg/lib/python2.3/site-packages/gnomebt
+@dirrm usr/pkg/lib/python2.3/site-packages
+@dirrm usr/pkg/lib/python2.3
+@dirrm usr/pkg/lib
+@dirrm usr/pkg
+@dirrm usr
+@dirrm share/pixmaps
 @dirrm share/gnome-bluetooth/pixmaps
 @dirrm share/gnome-bluetooth
 @dirrm share/applications
-@dirrm lib/python/site-packages/gnomebt
-@dirrm lib/python/site-packages
-@dirrm lib/python
-@comment in libbonobo: @dirrm lib/bonobo/servers
 @dirrm include/gnome-bluetooth
+@dirrm etc/gconf/schemas
+@dirrm etc/gconf
