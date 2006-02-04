@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/11/02 18:00:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/04 12:09:33 poppnk Exp $
 #
 
-DISTNAME=		bluez-libs-2.21
+DISTNAME=		bluez-libs-2.25
 CATEGORIES=		net
 MASTER_SITES=		http://bluez.sf.net/download/
 
