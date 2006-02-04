@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/31 18:03:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/04 12:10:26 thomasklausner Exp $
 
 DISTNAME=	cdrtools-2.01.01a05
 CATEGORIES=	sysutils
@@ -17,6 +17,10 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}/cdrtools-2.01.01
 USE_TOOLS+=	gmake tbl
+
+.if ${LOCALBASE} != "/opt/schily"
+BUILDLINK_TRANSFORM+=	rmdir:/opt/schily
+.endif
 
 # avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=      ARCH=""
@@ -60,29 +64,29 @@ do-configure:
 
 post-build:
 	cd ${WRKSRC};							\
-	for file in cdda2wav/cdda2wav.1 mkisofs/mkisofs.8; do		\
-		${TBL} $${file} > $${file}.tmp;				\
-		${MV} -f $${file}.tmp $${file};				\
+	for manpage in cdda2wav/cdda2wav.1 mkisofs/mkisofs.8; do	\
+		${TBL} $${manpage} > $${manpage}.tmp;			\
+		${MV} -f $${manpage}.tmp $${manpage};			\
 	done
 
 do-install:
 	cd ${WRKSRC}/cdda2wav;						\
 		${INSTALL_PROGRAM} OBJ/*/cdda2wav ${PREFIX}/bin;	\
-		${INSTALL_MAN} cdda2wav.1 ${PREFIX}/man/man1
+		${INSTALL_MAN} cdda2wav.1 ${PREFIX}/${PKGMANDIR}/man1
 	cd ${WRKSRC}/cdrecord;						\
 		${INSTALL_PROGRAM} OBJ/*/cdrecord ${PREFIX}/bin;	\
-		${INSTALL_MAN} cdrecord.1 ${PREFIX}/man/man1
+		${INSTALL_MAN} cdrecord.1 ${PREFIX}/${PKGMANDIR}/man1
 	cd ${WRKSRC}/mkisofs;						\
 		${INSTALL_PROGRAM} OBJ/*/mkisofs ${PREFIX}/bin;		\
-		${INSTALL_MAN} mkisofs.8 ${PREFIX}/man/man8
+		${INSTALL_MAN} mkisofs.8 ${PREFIX}/${PKGMANDIR}/man8
 	cd ${WRKSRC}/mkisofs/diag;					\
 		for f in devdump isodump isoinfo isovfy; do		\
 			${INSTALL_PROGRAM} OBJ/*/$$f ${PREFIX}/bin;	\
-			${INSTALL_MAN} isoinfo.8 ${PREFIX}/man/man8/$$f.8; \
+			${INSTALL_MAN} isoinfo.8 ${PREFIX}/${PKGMANDIR}/man8/$$f.8; \
 		done
 	cd ${WRKSRC}/readcd;						\
 		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
-		${INSTALL_MAN} readcd.1 ${PREFIX}/man/man1
+		${INSTALL_MAN} readcd.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
