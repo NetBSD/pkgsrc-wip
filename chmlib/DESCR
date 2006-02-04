@@ -1,7 +1,10 @@
-CHMLIB is a library for dealing with Microsoft ITSS/CHM format files. Right 
-now, it is a very simple library, but sufficient for dealing with all of the 
-.chm files I've come across. Due to the fairly well-designed indexing built 
-into this particular file format, even a small library is able to gain 
-reasonably good performance indexing into ITSS archives. Since the last 
-version there have been major bugfixes, portability improvements, and minor 
-feature additions. 
+chmlib is a small library designed for accessing MS ITSS files.  The ITSS file
+format is used for Microsoft Html Help files (.chm), which have been the
+predominant medium for software documentation from Microsoft during the past
+several years, having superceded the previously used .hlp file format.
+
+Note that this is NOT the same as the OLE structured storage file format used
+by MS Excel, Word, and so on.  Instead, it is a different file format which
+fulfills a similar purpose.  Both file formats may be accessed via instances
+of the IStorage COM interface, which is essentially an "acts like a
+filesystem" interface.

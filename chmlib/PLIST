@@ -1,7 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/05 02:34:33 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.1.1.2 2006/02/04 12:12:28 lkundrak Exp $
 include/chm_lib.h
-lib/libchm.a
 lib/libchm.la
-lib/libchm.so
-lib/libchm.so.0
-lib/libchm.so.0.0
