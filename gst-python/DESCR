@@ -1,0 +1,3 @@
+This is gst-python, the Python bindings for the GStreamer project.  The
+bindings provide access to almost all of the GStreamer C API through an
+object oriented Python API.
