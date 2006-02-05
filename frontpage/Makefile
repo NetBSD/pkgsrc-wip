@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/11/28 00:27:24 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 22:23:01 schnoebe Exp $
 
 DISTNAME=	frontpage-5.0.2.2623
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.microsoft.com/products/frontpage/ \
-		ftp://www.westbend.net/Mirrors/ftp.microsoft.com/Products/frontpage/
+MASTER_SITES=	http://download.microsoft.com/download/FrontPage2002/Install/2002/UNIX/EN-US/
 DISTFILES=	${FRONTPAGE}
 
 MAINTAINER=	eric@cirr.com
