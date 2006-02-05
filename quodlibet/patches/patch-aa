@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/02/05 09:50:06 shattered Exp $
+
+--- Makefile.orig	2005-10-07 20:48:20.000000000 +0000
++++ Makefile
+@@ -10,22 +10,22 @@ all:
+ 	@./check.py
+ 
+ make-install-dirs:
+-	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man1
++	mkdir -p $(DESTDIR)$(PREFIX)/man/man1
+ 	mkdir -p $(DESTDIR)$(PREFIX)/bin
+ 	mkdir -p $(DESTDIR)$(PREFIX)/$(TO)
+ 
+ install: make-install-dirs install-exfalso install-quodlibet
+ 	./quickzip.py quodlibet.zip $(MODULES)
+-	install -m 644 quodlibet.zip ql-*.png $(DESTDIR)$(PREFIX)/$(TO)
+-	-for E in $(EXTENSIONS); do (test -e $$E && install -m 755 $$E $(DESTDIR)$(PREFIX)/$(TO)); done
++	$(BSD_INSTALL_DATA) quodlibet.zip ql-*.png $(DESTDIR)$(PREFIX)/$(TO)
++	-for E in $(EXTENSIONS); do (test -e $$E && $(BSD_INSTALL_SCRIPT) $$E $(DESTDIR)$(PREFIX)/$(TO)); done
+ 	cd po && make install-po DESTDIR=$(DESTDIR)
+ 
+ install-%: make-install-dirs
+-	install -m 755 $*.py $(DESTDIR)$(PREFIX)/$(TO)
+-	install -m 644 $*.1 $(DESTDIR)$(PREFIX)/share/man/man1/$*.1
+-	install -D -m 644 $*.png $(DESTDIR)$(PREFIX)/share/pixmaps/$*.png
+-	install -m 644 $*.png $(DESTDIR)$(PREFIX)/$(TO)
+-	install -D -m 644 $*.desktop $(DESTDIR)$(PREFIX)/share/applications/$*.desktop
++	$(BSD_INSTALL_SCRIPT) $*.py $(DESTDIR)$(PREFIX)/$(TO)
++	$(BSD_INSTALL_DATA) $*.1 $(DESTDIR)$(PREFIX)/man/man1/$*.1
++	$(BSD_INSTALL_DATA) $*.png $(DESTDIR)$(PREFIX)/share/pixmaps/$*.png
++	$(BSD_INSTALL_DATA) $*.png $(DESTDIR)$(PREFIX)/$(TO)
++	$(BSD_INSTALL_DATA) $*.desktop $(DESTDIR)$(PREFIX)/share/applications/$*.desktop
+ 	ln -sf ../$(TO)/$*.py $(DESTDIR)$(PREFIX)/bin/$*
+ 
+ clean:
