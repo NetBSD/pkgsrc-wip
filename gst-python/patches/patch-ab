@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/01/28 17:41:03 shattered Exp $
+$NetBSD: patch-ab,v 1.2 2006/02/05 09:44:41 shattered Exp $
 
---- gst/Makefile.orig	2006-01-28 17:38:51.000000000 +0000
-+++ gst/Makefile
-@@ -838,7 +838,7 @@ interfaces.c: $(INTERFACES_DEFS) $(INTER
+--- gst/Makefile.in.orig	2006-01-16 18:37:40.000000000 +0000
++++ gst/Makefile.in	2006-02-05 09:33:20.000000000 +0000
+@@ -838,7 +838,7 @@
  
  .defs.c: 
  	(cd $(srcdir) \
