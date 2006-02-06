@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/25 12:21:31 yeled Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/06 18:07:15 thomasklausner Exp $
 
 DISTNAME=	Net-Delicious-0.94
 PKGNAME=	p5-${DISTNAME}
@@ -12,12 +12,12 @@ COMMENT=	OOP for the del.icio.us API
 DEPENDS+=	p5-libwww>=2:../../www/p5-libwww
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 DEPENDS+=	p5-XML-Simple>=2.08:../../textproc/p5-XML-Simple
-DEPENDS+=	p5-Log-Dispatch>=2.11}:../../devel/p5-Log-Dispatch
-DEPENDS+=	p5-TimeDate>=1.16}:../../time/p5-TimeDate
-DEPENDS+=	p5-Time-HiRes>=1.65}:../../time/p5-Time-HiRes
-DEPENDS+=	p5-IO-stringy>=2.10}:../../devel/p5-IO-stringy
-DEPENDS+=	p5-File-Spec>=0.80}:../../devel/p5-File-Spec
-DEPENDS+=	p5-YAML>=0.39}:../../textproc/p5-YAML
+DEPENDS+=	p5-Log-Dispatch>=2.11:../../devel/p5-Log-Dispatch
+DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
+DEPENDS+=	p5-Time-HiRes>=1.65:../../time/p5-Time-HiRes
+DEPENDS+=	p5-IO-stringy>=2.10:../../devel/p5-IO-stringy
+DEPENDS+=	p5-File-Spec>=0.80:../../devel/p5-File-Spec
+DEPENDS+=	p5-YAML>=0.39:../../textproc/p5-YAML
 
 PERL5_PACKLIST= auto/Net/Delicious/.packlist
 
