@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2005/10/02 13:35:54 obache Exp $
+$NetBSD: patch-ad,v 1.2 2006/02/06 13:54:04 obache Exp $
 
---- etc/upnpd.conf.orig	2003-09-25 05:57:32.000000000 +0900
+--- etc/upnpd.conf.orig	2006-02-02 08:53:39.000000000 +0900
 +++ etc/upnpd.conf
-@@ -51,9 +51,9 @@ description_document_name = gatedesc.xml
+@@ -64,9 +64,9 @@ description_document_name = gatedesc.xml
  
  # The path to the xml documents
  # Do not include the trailing "/"

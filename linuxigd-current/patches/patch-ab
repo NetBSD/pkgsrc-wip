@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/10/02 13:35:54 obache Exp $
+$NetBSD: patch-ab,v 1.2 2006/02/06 13:54:04 obache Exp $
 
---- util.c.orig	2003-09-19 14:16:32.000000000 +0900
+--- util.c.orig	2006-02-02 08:53:39.000000000 +0900
 +++ util.c
-@@ -2,7 +2,12 @@
- #include <stdio.h>
+@@ -3,7 +3,12 @@
+ #include <stdarg.h>
  #include <syslog.h>
  #include <arpa/inet.h>
 +#ifdef __linux__

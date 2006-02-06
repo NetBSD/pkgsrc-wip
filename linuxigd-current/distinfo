@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/02 13:35:54 obache Exp $
+$NetBSD: distinfo,v 1.2 2006/02/06 13:54:04 obache Exp $
 
-SHA1 (patch-aa) = 2bd8df9dac05a16eab0595f8bd611a40fcc908b4
-SHA1 (patch-ab) = 700d4b9203a392ae07f27255ebb5980412af7a1e
-SHA1 (patch-ac) = c43f357aef086fbe6bfe8736ce22f14911e57b89
-SHA1 (patch-ad) = c3ea00b5eb24ae2763574d6880692a12cdaec548
-SHA1 (patch-ae) = 3bfd7278aeb4d379b206c681d8e39267872e4f54
+SHA1 (patch-aa) = 4007ab6e780b4f3ad7493aae64729559ef0eb61b
+SHA1 (patch-ab) = 4d7cacb7de0e6071f23323283da5a1278fc8b908
+SHA1 (patch-ad) = e66964432aff7205d41007708fba19eb5cd83f3c
+SHA1 (patch-ae) = b56b189b6730fe5fb26886bd765b7db13d952c64
+SHA1 (patch-af) = 746bb88ce284e2c4ccfa49c39eb449151b1cf995
