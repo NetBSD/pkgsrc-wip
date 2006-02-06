@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/30 01:19:42 lsed Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/06 11:24:21 obache Exp $
 #
 
 DISTNAME=	linuxigd-0.99
@@ -13,7 +13,7 @@ USE_PKGINSTALL=	yes
 USE_TOOLS+= gmake
 
 CVS_REPOSITORIES=	linux-igd
-CVS_ROOT.linux-igd=	${CVS_REPOSITORY_SOURCEFORGE}/linux-igd
+CVS_ROOT.linux-igd=	${CVS_ROOT_SOURCEFORGE}/linux-igd
 CVS_MODULE.linux-igd=	linux-igd
 
 .include "options.mk"
