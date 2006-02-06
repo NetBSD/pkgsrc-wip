@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/03/02 17:26:58 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/06 20:14:12 dillo Exp $
 
---- Makefile.orig	Sat Jun 23 23:06:54 2001
+--- Makefile.orig	2001-06-23 23:06:54.000000000 +0200
 +++ Makefile
 @@ -13,22 +13,22 @@ MICRO=2
  # and glk.h, glkstart.h, and Make.glkloader in the include directory.
@@ -8,8 +8,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/03/02 17:26:58 dillo Exp $
  GLKNAME = glkloader
 -GLKINCLUDEDIR = /usr/local/include/glk/
 -GLKLIBDIR = /usr/local/lib/
-+GLKINCLUDEDIR = /usr/local/include/glkloader
-+GLKLIBDIR = /usr/local/lib
++GLKINCLUDEDIR = ${PREFIX}/include/glkloader
++GLKLIBDIR = ${PREFIX}/lib
  
  # Pick a C compiler.
  #CC = cc
