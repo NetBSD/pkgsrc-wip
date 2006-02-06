@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/02 13:35:54 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/06 11:39:19 obache Exp $
 sbin/upnpd
-share/examples/linuxigd/upnpd.conf
 share/examples/linuxigd/dummy.xml
 share/examples/linuxigd/gateconnSCPD.xml
 share/examples/linuxigd/gatedesc.xml
 share/examples/linuxigd/gateicfgSCPD.xml
 share/examples/linuxigd/ligd.gif
+share/examples/linuxigd/upnpd.conf
 share/examples/rc.d/linuxigd
 @dirrm share/examples/linuxigd
