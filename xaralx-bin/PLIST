@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/22 14:40:01 ghen Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/02/06 19:51:08 ghen Exp $
 bin/XaraLX
 share/XaraLX/Designs/BLUECAR.xar
 share/XaraLX/Designs/CatWoman graphs.xar
@@ -13,34 +13,9 @@ share/XaraLX/Designs/Spitfire.xar
 share/XaraLX/Designs/WATCH.xar
 share/XaraLX/Designs/WATCH2.xar
 share/XaraLX/Designs/amurdove.xar
+share/XaraLX/Designs/feathers.xar
 share/XaraLX/Designs/leafgirl.xar
 share/XaraLX/Designs/scope3 simple.xar
-share/XaraLX/Resources/LPush32.png
-share/XaraLX/Resources/deffill.bmp
-share/XaraLX/Resources/lbeveltool32.png
-share/XaraLX/Resources/lbeztool32.png
-share/XaraLX/Resources/lblendtool32.png
-share/XaraLX/Resources/lbuttonst32.png
-share/XaraLX/Resources/lbutts_liveeffect.png
-share/XaraLX/Resources/lbuttst232.png
-share/XaraLX/Resources/lcontourtool32.png
-share/XaraLX/Resources/leliptool32.png
-share/XaraLX/Resources/lfhandtool32.png
-share/XaraLX/Resources/lgradtool32.png
-share/XaraLX/Resources/lliveeffecttool32.png
-share/XaraLX/Resources/lmouldtool32.png
-share/XaraLX/Resources/lpentool32.png
-share/XaraLX/Resources/lrecttool32.png
-share/XaraLX/Resources/lregshapetool32.png
-share/XaraLX/Resources/lseltool32.png
-share/XaraLX/Resources/lshadowtool32.png
-share/XaraLX/Resources/lslicetool32.png
-share/XaraLX/Resources/ltexttool32.png
-share/XaraLX/Resources/ltransptool32.png
-share/XaraLX/Resources/lzoomtool32.png
-share/XaraLX/Resources/sbuttonst32.png
-share/XaraLX/Resources/sbuttst232.png
 share/XaraLX/XaraLX
-@dirrm share/XaraLX/Resources
 @dirrm share/XaraLX/Designs
 @dirrm share/XaraLX
