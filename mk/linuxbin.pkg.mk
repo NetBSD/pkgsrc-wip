@@ -1,7 +1,7 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.22 2006/02/04 10:56:49 thomasklausner Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.23 2006/02/06 17:58:30 thomasklausner Exp $
 ###########################################################################
 #
-# $Id: linuxbin.pkg.mk,v 1.22 2006/02/04 10:56:49 thomasklausner Exp $
+# $Id: linuxbin.pkg.mk,v 1.23 2006/02/06 17:58:30 thomasklausner Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 #
@@ -80,7 +80,7 @@ LINUX_BASE_PREFERRED?=		suse
 
 LINUX_BASE_REQUIRED?=		${LINUX_BASE_PREFERRED}
 
-LINUX_BASE_PREFIX.suse?=	suse91
+LINUX_BASE_PREFIX.suse?=	suse
 LINUX_BASE_VERSION.suse=	9.1
 
 LINUX_BASE_PREFIX.slackware?=	slackware
