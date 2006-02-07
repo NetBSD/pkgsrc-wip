@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.3 2006/01/13 14:08:34 lkundrak Exp $
+$NetBSD: distinfo,v 1.4 2006/02/07 08:14:10 lkundrak Exp $
 
 SHA1 (patch-aa) = ec4f7ffd18e87c72574f62b0ffc0d31707095dc2
-SHA1 (patch-ab) = e67f1b38663b6c487448358c5e575a2420485bef
+SHA1 (patch-ab) = d0f2c400d8749e8ebd840b5b272a5261bb21e579
 SHA1 (patch-ac) = 2e8cb268a3740c12dd647cc5a4be8573939ca08e
 SHA1 (patch-ad) = 74cee31c73a628604dd1bb95d1beb1286c5e4558
 SHA1 (patch-ae) = 748e75bfef78fad6bffafcf4ce267d980042cf48
-SHA1 (patch-af) = 3fa7c2536aa702a6a6542280128a75dc2a901d03
+SHA1 (patch-af) = 8e1c6780406c1bd624f8c46dc52f00280eec636c
 SHA1 (patch-ag) = 9cb7cf6faded4cb63f92ee1768967df426e7a1a7
 SHA1 (patch-ah) = e6b0a55b9c3e19368b0013646f627c0dfd875117
 SHA1 (patch-ai) = e0d810b7b400cad53d3ccc8b41d21b2056424b7b
-SHA1 (patch-aj) = d09d717bd737ed0707253e4a292e5a4abace2c62
+SHA1 (patch-aj) = 7c0388ed12e8ccb4909b4da9882399ba177c898d
 SHA1 (patch-ak) = b69aede9f29978fb7d2186caf9014e9dc2bf427d

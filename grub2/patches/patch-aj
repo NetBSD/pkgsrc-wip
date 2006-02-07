@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.2 2006/01/13 14:16:17 lkundrak Exp $
+$NetBSD: patch-aj,v 1.3 2006/02/07 08:14:10 lkundrak Exp $
 
---- util/i386/pc/grub-install.in.orig	2005-08-07 19:12:52.000000000 +0200
+--- util/i386/pc/grub-install.in.orig	2006-01-25 01:11:36.000000000 +0100
 +++ util/i386/pc/grub-install.in
 @@ -21,6 +21,7 @@
  prefix=@prefix@

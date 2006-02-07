@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/01/30 01:19:42 lsed Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/07 08:14:10 lkundrak Exp $
 
 DISTNAME=		grub2
 PKGNAME=		grub2-${GRUB_VERSION}
@@ -14,7 +14,7 @@ CVS_ROOT.grub2=		:pserver:anonymous:@cvs.savannah.gnu.org:/sources/grub
 CVS_MODULE.grub2=	grub2
 
 GNU_CONFIGURE=		yes
-USE_TOOLS=		gmake bison
+USE_TOOLS+=		gmake bison
 
 CONFLICTS=		grub-*
 ONLY_FOR_PLATFORM=	*-*-i386
