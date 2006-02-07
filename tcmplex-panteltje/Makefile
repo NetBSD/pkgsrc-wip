@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/14 14:27:28 sohsmith Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/07 11:30:53 sohsmith Exp $
 
 DISTNAME=	tcmplex-panteltje-0.4.7
 CATEGORIES=	multimedia
@@ -11,7 +11,7 @@ COMMENT=	Re-write of the A/V multiplexer from the transcode distribution
 
 BUILD_TARGET=	a.out
 
-DOCSDIR=	${PREFIX}/share/doc/tcmplex-paneltje
+DOCSDIR=	${PREFIX}/share/doc/tcmplex-panteltje
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PKGBASE} ${PREFIX}/bin/${PKGBASE}
