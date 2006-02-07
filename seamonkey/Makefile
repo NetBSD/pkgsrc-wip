@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/01 13:24:45 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/07 15:02:57 ghen Exp $
 
 MOZILLA=		seamonkey
 MOZILLA_BIN=		seamonkey-bin
@@ -13,7 +13,7 @@ BUILD_SVG=		# yes
 BUILD_MATHML=		# yes
 BUILD_CALENDAR=		# yes
 
-_MOZILLA_USE_GTK2=	# yes
+MOZILLA_USE_GTK2=	# yes
 MOZILLA_USE_XFT=	YES
 
 .include "../../wip/seamonkey/Makefile.common"
