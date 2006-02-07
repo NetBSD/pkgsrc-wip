@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2005/12/13 12:16:13 ghen Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/07 12:07:44 ghen Exp $
 
-DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
+DISTNAME=		opera-${OPERA_PKG_VERSION_DIR:S/u/pl/}
 CATEGORIES=		www
 MASTER_SITES=		http://snapshot.opera.com/${OPERA_DIR}/
 DISTFILES=		opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}${EXTRACT_SUFX}
@@ -21,9 +21,9 @@ USE_LANGUAGES=          # empty
 .include "../../mk/bsd.prefs.mk"
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20051020
+OPERA_VER_DATE=		20060206
 OPERA_PKG_VERSION=	9.0
-OPERA_PKG_VERSION_DIR=	9.0-Preview-1
+OPERA_PKG_VERSION_DIR=	9.0-Preview-2
 
 _OPERA_OPSYS?=		${OPSYS}
 _OPERA_MACHINE_ARCH?=	${MACHINE_ARCH}

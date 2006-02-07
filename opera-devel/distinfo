@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.2 2005/10/21 19:15:21 ghen Exp $
+$NetBSD: distinfo,v 1.3 2006/02/07 12:07:44 ghen Exp $
 
-SHA1 (./opera-9.0-20051020.1-static-qt.i386-en.rpm) = 908041345306a55f12c421f7b81b73d6b74733cf
-RMD160 (./opera-9.0-20051020.1-static-qt.i386-en.rpm) = e097ea839248d3fbf342e97b02f2eaf892b86047
-Size (./opera-9.0-20051020.1-static-qt.i386-en.rpm) = 6724180 bytes
-SHA1 (opera-9.0-20051020.1-static-qt.i386.freebsd-en.tar.gz) = 291d8125f33479286d1e9168627c424ec5d274ae
-RMD160 (opera-9.0-20051020.1-static-qt.i386.freebsd-en.tar.gz) = 306176addfa3b4fe176c2898297b434c2d8e1cd8
-Size (opera-9.0-20051020.1-static-qt.i386.freebsd-en.tar.gz) = 6630139 bytes
-SHA1 (opera-9.0-20051020.1-static-qt-sol8-sparc-local-en.tar.bz2) = 05959b0537cd49f740132abfc7387da3de023ecd
-RMD160 (opera-9.0-20051020.1-static-qt-sol8-sparc-local-en.tar.bz2) = 1e4c88ead1a5db7024add46ccbb50c57c09d4d2f
-Size (opera-9.0-20051020.1-static-qt-sol8-sparc-local-en.tar.bz2) = 7660478 bytes
+SHA1 (./opera-9.0-20060206.1-static-qt.i386-en.rpm) = c7b726c6d91ad62d945c5defdec21a00015b266f
+RMD160 (./opera-9.0-20060206.1-static-qt.i386-en.rpm) = 53a5f8af445d965ece418c51a48bee6d4547f5bb
+Size (./opera-9.0-20060206.1-static-qt.i386-en.rpm) = 6876499 bytes
+SHA1 (opera-9.0-20060206.1-static-qt.i386.freebsd-en.tar.gz) = d23a1f55813921a28628cfb98011f43b31076bd4
+RMD160 (opera-9.0-20060206.1-static-qt.i386.freebsd-en.tar.gz) = 8de8b3e87a7d0395eecaca388254ca7e5a45e298
+Size (opera-9.0-20060206.1-static-qt.i386.freebsd-en.tar.gz) = 6790925 bytes
+SHA1 (opera-9.0-20060206.1-static-qt-sol8-sparc-local-en.tar.bz2) = 964997e57970b8bfb2def40a896aa42b532ed3bf
+RMD160 (opera-9.0-20060206.1-static-qt-sol8-sparc-local-en.tar.bz2) = 73a6fe7995dfc5cb372ffb27deaa538d4093c0e0
+Size (opera-9.0-20060206.1-static-qt-sol8-sparc-local-en.tar.bz2) = 7911895 bytes
