@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/30 21:10:59 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/07 11:30:51 absd Exp $
 
-DISTNAME=	File-Copy-Recursive-0.16
+DISTNAME=	File-Copy-Recursive-0.18
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/D/DM/DMUEY/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/File-Copy-Recursive/
