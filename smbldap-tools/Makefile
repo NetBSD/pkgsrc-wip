@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/01/17 10:20:47 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/07 07:15:12 marmfield Exp $
 #
 
 DISTNAME=		smbldap-tools-0.9.1
@@ -10,10 +10,10 @@ MAINTAINER=		murray@river-styx.org
 HOMEPAGE=		http://www.idealx.org/prj/samba/index.en.html
 COMMENT=		Set of ldap administration scripts for samba
 
-DEPENDS+=		samba>=3.0.14anb1:../../net/samba
-DEPENDS+=		p5-perl-ldap>=0.32.02:../../databases/p5-perl-ldap
-DEPENDS+=		p5-Crypt-SmbHash>=0.12:../../wip/p5-Crypt-SmbHash
-DEPENDS+=		p5-Digest-SHA1>=2.10nb1:../../security/p5-Digest-SHA1
+DEPENDS+=		samba>=3.0.21anb1:../../net/samba
+DEPENDS+=		p5-perl-ldap>=0.33:../../databases/p5-perl-ldap
+DEPENDS+=		p5-Crypt-SmbHash>=0.12:../../security/p5-Crypt-SmbHash
+DEPENDS+=		p5-Digest-SHA1>=2.11:../../security/p5-Digest-SHA1
 
 EGDIR=			${PREFIX}/share/examples/smbldap-tools
 CONFS=			smbldap.conf smbldap_bind.conf
