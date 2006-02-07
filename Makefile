@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2166 2006/02/06 17:34:02 tvierling Exp $
+# $Id: Makefile,v 1.2167 2006/02/07 11:33:19 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -440,7 +440,6 @@ SUBDIR+=	joomla
 SUBDIR+=	jpgtn
 SUBDIR+=	jumpnbump
 SUBDIR+=	jwm
-SUBDIR+=	k3b
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
 SUBDIR+=	kahakai
