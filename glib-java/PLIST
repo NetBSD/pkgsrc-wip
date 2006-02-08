@@ -1,0 +1,55 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/08 22:21:41 poppnk Exp $
+etc/cups/certs/0
+include/glib-java/jg_jnu.h
+lib/libglibjni.la
+lib/pkgconfig/glib-java.pc
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/INSTALL
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/api/allclasses-frame.html
+share/doc/${PKGNAME}/api/allclasses-noframe.html
+share/doc/${PKGNAME}/api/constant-values.html
+share/doc/${PKGNAME}/api/deprecated-list.html
+share/doc/${PKGNAME}/api/help-doc.html
+share/doc/${PKGNAME}/api/index-all.html
+share/doc/${PKGNAME}/api/index.html
+share/doc/${PKGNAME}/api/org/gnu/glib/Config.html
+share/doc/${PKGNAME}/api/org/gnu/glib/Enum.html
+share/doc/${PKGNAME}/api/org/gnu/glib/Flags.html
+share/doc/${PKGNAME}/api/org/gnu/glib/Handle.html
+share/doc/${PKGNAME}/api/org/gnu/glib/Handle32Bits.html
+share/doc/${PKGNAME}/api/org/gnu/glib/Handle64Bits.html
+share/doc/${PKGNAME}/api/org/gnu/glib/Struct.html
+share/doc/${PKGNAME}/api/org/gnu/glib/package-frame.html
+share/doc/${PKGNAME}/api/org/gnu/glib/package-summary.html
+share/doc/${PKGNAME}/api/org/gnu/glib/package-tree.html
+share/doc/${PKGNAME}/api/overview-tree.html
+share/doc/${PKGNAME}/api/package-list
+share/doc/${PKGNAME}/api/packages.html
+share/doc/${PKGNAME}/api/resources/inherit.gif
+share/doc/${PKGNAME}/api/serialized-form.html
+share/doc/${PKGNAME}/api/stylesheet.css
+share/glib-java/macros/ac_prog_jar.m4
+share/glib-java/macros/ac_prog_javac.m4
+share/glib-java/macros/ac_prog_javac_works.m4
+share/glib-java/macros/ac_prog_javadoc.m4
+share/glib-java/macros/am_path_docbook.m4
+share/glib-java/macros/am_path_gcj.m4
+share/glib-java/macros/jg_check_nativecompile.m4
+share/glib-java/macros/jg_common.m4
+share/glib-java/macros/jg_lib.m4
+share/java/glib0.2-${PKGVERSION}.jar
+share/java/glib0.2.jar
+@dirrm share/java
+@dirrm share/glib-java/macros
+@dirrm share/glib-java
+@dirrm share/doc/${PKGNAME}/api/resources
+@dirrm share/doc/${PKGNAME}/api/org/gnu/glib
+@dirrm share/doc/${PKGNAME}/api/org/gnu
+@dirrm share/doc/${PKGNAME}/api/org
+@dirrm share/doc/${PKGNAME}/api
+@dirrm share/doc/${PKGNAME}
+@dirrm include/glib-java
+@dirrm etc/cups/certs
