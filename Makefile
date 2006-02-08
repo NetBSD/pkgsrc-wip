@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2167 2006/02/07 11:33:19 mwdavies Exp $
+# $Id: Makefile,v 1.2168 2006/02/08 04:52:10 uebayasi Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -606,6 +606,7 @@ SUBDIR+=	mixxx
 #SUBDIR+=	mk 		# not a package
 SUBDIR+=	mkdep
 SUBDIR+=	mksend
+SUBDIR+=	mlmmj
 SUBDIR+=	mnogosearch
 SUBDIR+=	modular-xorg-libs
 SUBDIR+=	moe
