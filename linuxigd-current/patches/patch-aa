@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2006/02/06 13:54:04 obache Exp $
+$NetBSD: patch-aa,v 1.3 2006/02/08 02:09:10 obache Exp $
 
 --- Makefile.orig	2006-02-02 08:53:39.000000000 +0900
 +++ Makefile
-@@ -1,36 +1,34 @@
+@@ -1,36 +1,35 @@
 -PREFIX=/usr
  LIBIPTC_PREFIX=/usr
  
@@ -50,5 +50,6 @@ $NetBSD: patch-aa,v 1.2 2006/02/06 13:54:04 obache Exp $
 +	${BSD_INSTALL_DATA} etc/gateconnSCPD.xml  ${PREFIX}/share/examples/linuxigd
 +	${BSD_INSTALL_DATA} etc/gateicfgSCPD.xml ${PREFIX}/share/examples/linuxigd
 +	${BSD_INSTALL_DATA} etc/dummy.xml ${PREFIX}/share/examples/linuxigd
++	${BSD_INSTALL_DATA} etc/ligd.gif ${PREFIX}/share/examples/linuxigd
 +	${BSD_INSTALL_PROGRAM} upnpd $(PREFIX)/sbin
 +	${BSD_INSTALL_DATA} etc/upnpd.conf ${PREFIX}/share/examples/linuxigd
