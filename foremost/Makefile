@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/09 15:33:04 lkundrak Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/09 15:36:41 lkundrak Exp $
 
 DISTNAME=	foremost-1.0
 CATEGORIES=	sysutils
-MASTER_SITES=	http://localhost/~lkundrak/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=foremost/}
 
 MAINTAINER=	lkundrak@skosi.org
-HOMEPAGE=	http://localhost/~lkundrak/
+HOMEPAGE=	http://foremost.sourceforge.net/
 COMMENT=	Recover various formats of files using typical data structures
 
 .include "../../mk/bsd.prefs.mk"
