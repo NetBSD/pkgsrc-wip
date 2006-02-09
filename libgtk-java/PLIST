@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/03 16:53:46 poppnk Exp $
-include/libgtk-java/jg_jnu.h
+@comment $NetBSD: PLIST,v 1.2 2006/02/09 11:34:45 poppnk Exp $
+include/libgtk-java/gtk_java.h
 lib/libgtkjni.la
 lib/pkgconfig/gtk2-java.pc
 share/doc/${PKGNAME}/AUTHORS
 share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/INSTALL
 share/doc/${PKGNAME}/NEWS
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/THANKS
@@ -76,6 +77,7 @@ share/doc/${PKGNAME}/api/org/gnu/gdk/Function.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/GC.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/GCValuesMask.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/Gdk.html
+share/doc/${PKGNAME}/api/org/gnu/gdk/GdkCairo.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/Geometry.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/GrabStatus.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/Gravity.html
@@ -87,13 +89,13 @@ share/doc/${PKGNAME}/api/org/gnu/gdk/InputSource.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/InterpType.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/JoinStyle.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/KeySymbol.html
+share/doc/${PKGNAME}/api/org/gnu/gdk/KeyValue.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/Keymap.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/KeymapKey.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/LineStyle.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/ModifierType.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/NotifyType.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/OverlapType.html
-share/doc/${PKGNAME}/api/org/gnu/gdk/Pango.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/PangoAttrEmbossed.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/PangoAttrStipple.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/Pixbuf.html
@@ -139,21 +141,17 @@ share/doc/${PKGNAME}/api/org/gnu/gdk/package-frame.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/package-summary.html
 share/doc/${PKGNAME}/api/org/gnu/gdk/package-tree.html
 share/doc/${PKGNAME}/api/org/gnu/glib/Boxed.html
-share/doc/${PKGNAME}/api/org/gnu/glib/Config.html
 share/doc/${PKGNAME}/api/org/gnu/glib/CustomEvents.html
-share/doc/${PKGNAME}/api/org/gnu/glib/Enum.html
 share/doc/${PKGNAME}/api/org/gnu/glib/Error.html
 share/doc/${PKGNAME}/api/org/gnu/glib/EventMap.html
 share/doc/${PKGNAME}/api/org/gnu/glib/EventType.html
 share/doc/${PKGNAME}/api/org/gnu/glib/Fireable.html
-share/doc/${PKGNAME}/api/org/gnu/glib/Flags.html
 share/doc/${PKGNAME}/api/org/gnu/glib/GListString.html
 share/doc/${PKGNAME}/api/org/gnu/glib/GObject.html
-share/doc/${PKGNAME}/api/org/gnu/glib/Handle.html
-share/doc/${PKGNAME}/api/org/gnu/glib/Handle32Bits.html
-share/doc/${PKGNAME}/api/org/gnu/glib/Handle64Bits.html
 share/doc/${PKGNAME}/api/org/gnu/glib/JGException.html
 share/doc/${PKGNAME}/api/org/gnu/glib/List.html
+share/doc/${PKGNAME}/api/org/gnu/glib/MainLoop.html
+share/doc/${PKGNAME}/api/org/gnu/glib/MemStruct.html
 share/doc/${PKGNAME}/api/org/gnu/glib/ParmFlags.html
 share/doc/${PKGNAME}/api/org/gnu/glib/PropertyNotificationListener.html
 share/doc/${PKGNAME}/api/org/gnu/glib/Quark.html
@@ -172,6 +170,7 @@ share/doc/${PKGNAME}/api/org/gnu/gtk/AccelGroup.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/AccelKey.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/AccelLabel.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/AccelMap.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/Accelerator.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/Accessible.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/Action.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/ActionEntry.html
@@ -218,6 +217,7 @@ share/doc/${PKGNAME}/api/org/gnu/gtk/ColorSelectionDialog.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/Combo.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/ComboBox.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/ComboBoxEntry.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/Config.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/Container.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/CornerType.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/Curve.html
@@ -231,6 +231,7 @@ share/doc/${PKGNAME}/api/org/gnu/gtk/DataColumnObject.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/DataColumnPixbuf.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/DataColumnStockItem.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/DataColumnString.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/DataRow.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/DebugFlag.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/DeleteType.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/DestDefaults.html
@@ -284,13 +285,7 @@ share/doc/${PKGNAME}/api/org/gnu/gtk/IconSource.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/IconTheme.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/IconView.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/Image.html
-share/doc/${PKGNAME}/api/org/gnu/gtk/ImageAnimationData.html
-share/doc/${PKGNAME}/api/org/gnu/gtk/ImageIconSetData.html
-share/doc/${PKGNAME}/api/org/gnu/gtk/ImageImageData.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/ImageMenuItem.html
-share/doc/${PKGNAME}/api/org/gnu/gtk/ImagePixbufData.html
-share/doc/${PKGNAME}/api/org/gnu/gtk/ImagePixmapData.html
-share/doc/${PKGNAME}/api/org/gnu/gtk/ImageStockData.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/ImageType.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/InputDialog.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/Invisible.html
@@ -315,9 +310,11 @@ share/doc/${PKGNAME}/api/org/gnu/gtk/MetricType.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/Misc.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/MovementStep.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/Notebook.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/ObjectDestroyedException.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/ObjectFlags.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/OptionMenu.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/Orientation.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/PackDirection.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/PackType.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/Paned.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/PathPriorityType.html
@@ -325,6 +322,8 @@ share/doc/${PKGNAME}/api/org/gnu/gtk/PathType.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/Plug.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/PolicyType.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/PositionType.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/Preview.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/PreviewType.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/Progress.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/ProgressBar.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/ProgressBarOrientation.html
@@ -386,6 +385,7 @@ share/doc/${PKGNAME}/api/org/gnu/gtk/TextMark.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/TextSearchFlags.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/TextTag.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/TextTagTable.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/TextView.VerticalLineRange.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/TextView.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/TextWindowType.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/ToggleAction.html
@@ -444,6 +444,9 @@ share/doc/${PKGNAME}/api/org/gnu/gtk/WindowPosition.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/WindowType.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/WrapMode.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/ActionEntryListener.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/ActionEvent.Type.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/ActionEvent.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/ActionListener.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/AdjustmentEvent.Type.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/AdjustmentEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/AdjustmentListener.html
@@ -474,14 +477,30 @@ share/doc/${PKGNAME}/api/org/gnu/gtk/event/ColorSelectionListener.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/ComboBoxEvent.Type.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/ComboBoxEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/ComboBoxListener.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/ConfigureEvent.Type.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/ConfigureEvent.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/ConfigureListener.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/ContainerEvent.Type.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/ContainerEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/ContainerListener.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/DeleteDragDataEvent.Type.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/DeleteDragDataEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/DialogEvent.Type.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/DialogEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/DialogListener.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/DragDestinationListener.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/DragEvent.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/DragMotionEvent.Type.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/DragMotionEvent.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/DragOriginAdapter.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/DragOriginListener.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/DragSourceListener.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/DragTargetAdapter.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/DragTargetListener.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/DropDragEvent.Type.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/DropDragEvent.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/EndDragEvent.Type.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/EndDragEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/EntryCompletionEvent.Type.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/EntryCompletionEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/EntryCompletionListener.html
@@ -494,6 +513,9 @@ share/doc/${PKGNAME}/api/org/gnu/gtk/event/ExpanderListener.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/ExposeEvent.Type.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/ExposeEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/ExposeListener.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/FileChooserEvent.Type.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/FileChooserEvent.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/FileChooserListener.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/FocusEvent.Type.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/FocusEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/FocusListener.html
@@ -513,6 +535,8 @@ share/doc/${PKGNAME}/api/org/gnu/gtk/event/ItemListener.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/KeyEvent.Type.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/KeyEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/KeyListener.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/LeaveDragDestinationEvent.Type.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/LeaveDragDestinationEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/LifeCycleEvent.Type.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/LifeCycleEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/LifeCycleListener.html
@@ -535,12 +559,18 @@ share/doc/${PKGNAME}/api/org/gnu/gtk/event/RadioActionEntryListener.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/RangeEvent.Type.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/RangeEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/RangeListener.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/ReceiveDragDataEvent.Type.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/ReceiveDragDataEvent.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/RequestDragDataEvent.Type.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/RequestDragDataEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/ScaleEvent.Type.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/ScaleEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/ScaleListener.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/SpinEvent.Type.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/SpinEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/SpinListener.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/StartDragEvent.Type.html
+share/doc/${PKGNAME}/api/org/gnu/gtk/event/StartDragEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/StatusBarEvent.Type.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/StatusBarEvent.html
 share/doc/${PKGNAME}/api/org/gnu/gtk/event/StatusBarListener.html
@@ -628,15 +658,18 @@ share/doc/${PKGNAME}/api/org/gnu/pango/package-tree.html
 share/doc/${PKGNAME}/api/overview-frame.html
 share/doc/${PKGNAME}/api/overview-summary.html
 share/doc/${PKGNAME}/api/overview-tree.html
+share/doc/${PKGNAME}/api/package-list
 share/doc/${PKGNAME}/api/packages.html
+share/doc/${PKGNAME}/api/resources/inherit.gif
 share/doc/${PKGNAME}/api/serialized-form.html
+share/doc/${PKGNAME}/api/stylesheet.css
 share/doc/${PKGNAME}/examples/TestTree/TestTree.java
 share/doc/${PKGNAME}/examples/aboutdialog/AboutDialogExample.java
 share/doc/${PKGNAME}/examples/aboutdialog/java-gnome.png
 share/doc/${PKGNAME}/examples/alignment/AlignmentExample.java
 share/doc/${PKGNAME}/examples/application/Application.java
-share/doc/${PKGNAME}/examples/aspectframe/aspectframe.java
-share/doc/${PKGNAME}/examples/base/base.java
+share/doc/${PKGNAME}/examples/aspectframe/AspectFrameExample.java
+share/doc/${PKGNAME}/examples/base/Base.java
 share/doc/${PKGNAME}/examples/buttonbox/ButtonBoxes.java
 share/doc/${PKGNAME}/examples/buttons/ButtonEvents.java
 share/doc/${PKGNAME}/examples/buttons/Buttons.java
@@ -646,6 +679,7 @@ share/doc/${PKGNAME}/examples/checkbutton/CheckButtonExample.java
 share/doc/${PKGNAME}/examples/combobox/ComboBoxExample.java
 share/doc/${PKGNAME}/examples/dataTable/TableExample.java
 share/doc/${PKGNAME}/examples/draganddrop/DnDExample1.java
+share/doc/${PKGNAME}/examples/draganddrop/DnDExample2.java
 share/doc/${PKGNAME}/examples/draganddrop/DnDExample3.java
 share/doc/${PKGNAME}/examples/drawingAreaTest/Test.java
 share/doc/${PKGNAME}/examples/editor/Editor.java
@@ -659,6 +693,7 @@ share/doc/${PKGNAME}/examples/frame/Frame.java
 share/doc/${PKGNAME}/examples/image/ImageTest.java
 share/doc/${PKGNAME}/examples/image/test.xpm
 share/doc/${PKGNAME}/examples/invisible/InvisibleExample.java
+share/doc/${PKGNAME}/examples/memorymgt/MemoryMgt.java
 share/doc/${PKGNAME}/examples/notebook/NotebookExample.java
 share/doc/${PKGNAME}/examples/packbox/Packbox.java
 share/doc/${PKGNAME}/examples/paned/PanedExample.java
@@ -672,6 +707,7 @@ share/doc/${PKGNAME}/examples/scrolledwin/ScrolledWin.java
 share/doc/${PKGNAME}/examples/spinbutton/Spinbutton.java
 share/doc/${PKGNAME}/examples/statusbar/StatusBarExample.java
 share/doc/${PKGNAME}/examples/stockicons/GtkStockIcons.java
+share/doc/${PKGNAME}/examples/stockitem/StockItemExample.java
 share/doc/${PKGNAME}/examples/table/TableExample.java
 share/doc/${PKGNAME}/examples/testgtk/TestGTK.java
 share/doc/${PKGNAME}/examples/testgtk/test.xpm
@@ -682,20 +718,11 @@ share/doc/${PKGNAME}/examples/tree/TreeExample.java
 share/doc/${PKGNAME}/examples/tree/test.xpm
 share/doc/${PKGNAME}/examples/treestore/TreeStoreExample.java
 share/doc/${PKGNAME}/examples/uimanager/UIManagerExample.java
-share/java/gtk2.6-${PKGVERSION}.jar
-share/java/gtk2.6.jar
-share/libgtk-java/macros/ac_prog_jar.m4
-share/libgtk-java/macros/ac_prog_javac.m4
-share/libgtk-java/macros/ac_prog_javac_works.m4
-share/libgtk-java/macros/ac_prog_javadoc.m4
-share/libgtk-java/macros/am_path_docbook.m4
-share/libgtk-java/macros/am_path_gcj.m4
-share/libgtk-java/macros/jg_check_nativecompile.m4
-share/libgtk-java/macros/jg_common.m4
+share/java/gtk2.8-${PKGVERSION}.jar
+share/java/gtk2.8.jar
 share/libgtk-java/macros/jg_gnome_java.m4
 share/libgtk-java/macros/jg_gtk_java.m4
 @dirrm share/libgtk-java/macros
-@dirrm share/libgtk-java
 @dirrm share/java
 @dirrm share/doc/${PKGNAME}/examples/uimanager
 @dirrm share/doc/${PKGNAME}/examples/treestore
@@ -704,6 +731,7 @@ share/libgtk-java/macros/jg_gtk_java.m4
 @dirrm share/doc/${PKGNAME}/examples/text
 @dirrm share/doc/${PKGNAME}/examples/testgtk
 @dirrm share/doc/${PKGNAME}/examples/table
+@dirrm share/doc/${PKGNAME}/examples/stockitem
 @dirrm share/doc/${PKGNAME}/examples/stockicons
 @dirrm share/doc/${PKGNAME}/examples/statusbar
 @dirrm share/doc/${PKGNAME}/examples/spinbutton
@@ -715,6 +743,7 @@ share/libgtk-java/macros/jg_gtk_java.m4
 @dirrm share/doc/${PKGNAME}/examples/paned
 @dirrm share/doc/${PKGNAME}/examples/packbox
 @dirrm share/doc/${PKGNAME}/examples/notebook
+@dirrm share/doc/${PKGNAME}/examples/memorymgt
 @dirrm share/doc/${PKGNAME}/examples/invisible
 @dirrm share/doc/${PKGNAME}/examples/image
 @dirrm share/doc/${PKGNAME}/examples/frame
@@ -740,7 +769,6 @@ share/libgtk-java/macros/jg_gtk_java.m4
 @dirrm share/doc/${PKGNAME}/examples/aboutdialog
 @dirrm share/doc/${PKGNAME}/examples/TestTree
 @dirrm share/doc/${PKGNAME}/examples
-@exec ${MKDIR} %D/share/doc/${PKGNAME}/api/resources
 @dirrm share/doc/${PKGNAME}/api/resources
 @dirrm share/doc/${PKGNAME}/api/org/gnu/pango
 @dirrm share/doc/${PKGNAME}/api/org/gnu/gtk/event
