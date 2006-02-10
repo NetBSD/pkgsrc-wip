@@ -1,0 +1,4 @@
+$NetBSD: TODO,v 1.1 2006/02/10 03:13:25 udontknow Exp $
+To-do list for pycrypto:
+- Check for unknown dependencies (how SSL works on this?)
+- Test, Test, Test :)
