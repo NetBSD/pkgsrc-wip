@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2006/02/10 17:12:09 hfath Exp $
+$NetBSD: MESSAGE,v 1.3 2006/02/10 17:15:07 hfath Exp $
 
-Tivoli Storage Manager has been installed in
+Tivoli Storage Manager Client has been installed in
 		${EMULDIR}/opt/tivoli
 with binaries in
 		${EMULDIR}/opt/tivoli/tsm/client/ba/bin
