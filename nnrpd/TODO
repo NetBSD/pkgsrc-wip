@@ -7,3 +7,5 @@
   allow installing INN and C News at the same time?
 
 - Fix rc.d script installation
+
+- Install 'subscriptions' boilerplate for new users
