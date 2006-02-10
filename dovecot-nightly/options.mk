@@ -1,13 +1,15 @@
-# $NetBSD: options.mk,v 1.7 2006/01/23 14:40:52 tvierling Exp $
+# $NetBSD: options.mk,v 1.8 2006/02/10 12:49:05 tvierling Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
-PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pam pgsql sqlite ssl
+PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql pam pgsql sasl sqlite
+PKG_OPTIONS_OPTIONAL_GROUPS= ssl
+PKG_OPTIONS_GROUP.ssl=	gnutls ssl
 PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
 
 ###
-### Build with GNU TLS or OpenSSL as the underlying crypto library.
+### Build with OpenSSL or GNU TLS as the underlying crypto library.
 ###
 .if !empty(PKG_OPTIONS:Mssl)
 CONFIGURE_ARGS+=        --with-ssl=openssl
@@ -37,14 +39,6 @@ CPPFLAGS+=		-I${BUILDLINK_DIR}/include/pgsql
 .endif
 
 ###
-### SQLite 3 support.
-###
-.if !empty(PKG_OPTIONS:Msqlite)
-CONFIGURE_ARGS+=	--with-sqlite
-.  include "../../databases/sqlite3/buildlink3.mk"
-.endif
-
-###
 ### IPv6 support.
 ###
 .if !empty(PKG_OPTIONS:Minet6)
@@ -62,10 +56,19 @@ CONFIGURE_ARGS+=	--with-ldap
 .endif
 
 ###
-### PAM support
+### PAM support.
 ###
 .if !empty(PKG_OPTIONS:Mpam)
-CONFIGURE_ARGS+=       --with-pam
+CONFIGURE_ARGS+=	--with-pam
+.  include "../../mk/pam.buildlink3.mk"
 .else
-CONFIGURE_ARGS+=       --without-pam
+CONFIGURE_ARGS+=	--without-pam
+.endif
+
+###
+### SQLite support.
+###
+.if !empty(PKG_OPTIONS:Msqlite)
+CONFIGURE_ARGS+=	--with-sqlite
+.  include "../../databases/sqlite3/buildlink3.mk"
 .endif

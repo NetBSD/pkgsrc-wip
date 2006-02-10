@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/05 22:27:45 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/10 12:49:05 tvierling Exp $
 
 DISTNAME=		dovecot-${DOVECOT_VER}
 PKGNAME=		${DISTNAME:S/-/-nightly-/}
@@ -16,7 +16,6 @@ WRKSRC_CMD=		${ECHO} ${WRKDIR}/dovecot-1.0*
 WRKSRC=			${WRKSRC_CMD:sh}
 
 USE_LIBTOOL=		yes
-USE_PKGINSTALL= 	yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -25,7 +24,7 @@ CONFIGURE_ARGS+=	--with-ssldir=${SSLCERTS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-DOVECOT_VER_CMD=	${DATE} +%Y%m%d
+DOVECOT_VER_CMD=	${SETENV} TZ=UTC ${DATE} +%Y%m%d
 DOVECOT_VER?=		${DOVECOT_VER_CMD:sh}
 CONFLICTS+=		dovecot-[0-9]*
 NO_CHECKSUM=		yes
@@ -33,24 +32,23 @@ NO_SRC_ON_FTP+=		"fetch from real master site only"
 
 .include "options.mk"
 
-RCD_SCRIPTS=	dovecot
-DOVECOT_USER?=	dovecot
-DOVECOT_GROUP?=	dovecot
-PKG_GROUPS=	${DOVECOT_GROUP}
-PKG_USERS=	${DOVECOT_USER}:${DOVECOT_GROUP}::Dovecot\ IMAP/POP3\ user
+RCD_SCRIPTS=		dovecot
 
-EGDIR=		${PREFIX}/share/examples/dovecot
-CONF_FILES=	${EGDIR}/dovecot.conf.default ${PKG_SYSCONFDIR}/dovecot.conf
+DOVECOT_USER?=		dovecot
+DOVECOT_GROUP?=		dovecot
+PKG_GROUPS=		${DOVECOT_GROUP}
+PKG_USERS=		${DOVECOT_USER}:${DOVECOT_GROUP}::Dovecot\ IMAP/POP3\ user
+
+EGDIR=			${PREFIX}/share/examples/dovecot
+CONF_FILES=		${EGDIR}/dovecot.conf.default ${PKG_SYSCONFDIR}/dovecot.conf
 
 INSTALLATION_DIRS=	libexec/dovecot sbin share/doc/dovecot		\
 			share/examples/dovecot
 
-post-configure:
-	@cd ${WRKSRC};							\
-	for i in dovecot-example.conf; do				\
-		${SED} ${FILES_SUBST_SED} $$i > $$i.new;		\
-		${MV} -f $$i.new $$i;					\
-	done
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	dovecot-example.conf
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_STAGE.paths=	pre-configure
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -59,4 +57,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-* ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/doc/mkcert.sh ${EGDIR}
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
