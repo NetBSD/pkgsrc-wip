@@ -1,8 +1,24 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2003/06/19 20:26:48 sfberry Exp $
+$NetBSD: MESSAGE,v 1.2 2006/02/10 17:12:09 hfath Exp $
 
-TSM has been installed in
-		${PREFIX}/${MSES}/opt/tivoli
-with binaries and configuration in
-		${PREFIX}/${MSES}/opt/tivoli/tsm/client/ba/bin
+Tivoli Storage Manager has been installed in
+		${EMULDIR}/opt/tivoli
+with binaries in
+		${EMULDIR}/opt/tivoli/tsm/client/ba/bin
+and configuration in
+		${PKG_SYSCONFDIR}
+
+NetBSD configuration hints:
+
+- Make sure 'passworddir' is set in tsm.sys so that the passwd file
+  ends up in ${PKG_SYSCONFDIR} instead of the shadow hierarchy.
+- The environment variables DSM_DIR, DSM_CONFIG, DSM_LOG
+  need to be set properly. DSM_LOG may inadvertently end up in the emul
+  shadow hierarchy.
+  There is a sample start script in ${PREFIX}/share/examples/tsm.
+- For backing up the native filesystem hierarchy, use a construct
+  like "ln -s / /.`hostname`" to break out of the emul shadow hierarchy.
+
+TSM documentation (html and pdf) is installed under
+	${EMULDIR}/opt/tivoli/tsm/client/books.
 ===========================================================================

@@ -1,67 +1,75 @@
-# $NetBSD: Makefile,v 1.4 2004/09/13 15:52:24 hfath Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/10 17:12:09 hfath Exp $
 
 DISTNAME=	tsm-5.2.2
 CATEGORIES=     sysutils
 MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v5r2/Linux/Linux86/v522/
 DISTFILES=	${RPMFILES}
+RPMFILES=	TIVsm-BA.i386.rpm TIVsm-API.i386.rpm
 
 MAINTAINER=	strawberry@toth.org.uk
 HOMEPAGE=	http://www-3.ibm.com/software/tivoli/products/storage-mgr/
 COMMENT=        IBM Tivoli Storage Manager Client
 
+PKG_SYSCONFSUBDIR= tsm
+FILESDIR=	${PKGDIR}/files
+EG_DIR=		${PREFIX}/share/examples/tsm
+CONF_FILES=	${EG_DIR}/dsm.sys.smp ${PKG_SYSCONFDIR}/dsm.sys \
+		${EG_DIR}/dsm.opt.smp ${PKG_SYSCONFDIR}/dsm.opt
+
 EXTRACT_ONLY=	# empty
 NO_BUILD=	YES
-PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
-RPMFILES=	TIVsm-BA.i386.rpm TIVsm-API.i386.rpm
+PLIST_DYN=	${WRKDIR}/PLIST_DYNAMIC
+PLIST_SRC=	${PLIST_DYN} ${PKGDIR}/PLIST
+PLIST_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+DIST_SUBDIR=	.
 
-.include "../../emulators/suse_linux/arch.mk"
 .include "../../mk/bsd.prefs.mk"
-
-MANCOMPRESSED?=		yes
 
 EMULSUBDIR=		emul/linux
 EMULDIR=		${PREFIX}/${EMULSUBDIR}
+TSMCLIENTSUBDIR=	opt/tivoli/tsm/client
 
-ONLY_FOR_PLATFORM= 	*-*-i386
-.if (${OPSYS} != "Linux") && (${MACHINE_ARCH} == "i386")
-DEPENDS+=		suse_compat>=6.4:../../emulators/suse_compat
-DEPENDS+=		suse_x11>6.4:../../emulators/suse_x11
-.endif
+MESSAGE_SUBST+=		EMULDIR=${EMULDIR:Q}
+
+ONLY_FOR_PLATFORM= 	NetBSD-[2-9]*-i386
 
 RPM2PKG=		${PREFIX}/sbin/rpm2pkg
 BUILD_DEPENDS+=		rpm2pkg>=1.3:../../pkgtools/rpm2pkg
 
-BUILD_DEFS+=		RPMFILES
-.if defined(RPMIGNOREPATH)
-BUILD_DEFS+=		RPMIGNOREPATH
-.endif
+RPM2PKGSTRIP=		0
+RPM2PKGARGS=		-d ${PREFIX} -f ${PLIST_DYN} -p ${EMULSUBDIR}
+.for temp in ${RPMFILES}
+RPM2PKGARGS+=		${DISTDIR}/${temp}
+.endfor
 
 # The SuSE Linux packages have circular dependencies.
 LDD?=			${TRUE}
 
-RPM2PKGARGS=		-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
-.for TEMP in ${RPMIGNOREPATH}
-RPM2PKGARGS+=		-i ${TEMP}
-.endfor
-.for TEMP in ${RPMFILES}
-RPM2PKGARGS+=		${DISTDIR}/${TEMP}
-.endfor
+DEPENDS+=               suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=               suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 do-install:
 	${RPM2PKG} ${RPM2PKGARGS}
-	@if ${GREP} -q 'lib.*\.so' ${PLIST_SRC}; then \
+	@if ${GREP} -q 'lib.*\.so' ${PLIST_DYN}; then \
 	  ${ECHO_MSG} "===> [Automatic Linux shared object handling]"; \
-	  ${ECHO} "/opt/tivoli/tsm/client/ba/bin" >> ${EMULDIR}/etc/ld.so.conf; \
-	  ${ECHO} "/opt/tivoli/tsm/client/api/bin" >> ${EMULDIR}/etc/ld.so.conf; \
+	  if ! ${GREP} -q "/${TSMCLIENTSUBDIR}/ba/bin" ${EMULDIR}/etc/ld.so.conf; then \
+	  ${ECHO} "/${TSMCLIENTSUBDIR}/ba/bin" >> ${EMULDIR}/etc/ld.so.conf; \
+	  fi; \
+	  if ! ${GREP} -q "/${TSMCLIENTSUBDIR}/api/bin" ${EMULDIR}/etc/ld.so.conf; then \
+	  ${ECHO} "/${TSMCLIENTSUBDIR}/api/bin" >> ${EMULDIR}/etc/ld.so.conf; \
+	  fi; \
 	  ${EMULDIR}/sbin/ldconfig -r ${EMULDIR}; \
-	  ${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" >>${PLIST_SRC}; \
-	  ${ECHO} "@unexec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR} 2>/dev/null" >>${PLIST_SRC}; \
+	  ${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" >>${PLIST_DYN}; \
+	  ${ECHO} "@unexec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR} 2>/dev/null" >>${PLIST_DYN}; \
 	fi
 
-show-shlib-type:
-	@${ECHO} linux-${MACHINE_ARCH}
+.include "../../emulators/suse_linux/Makefile.application"
 
 post-install:
-	${TEST} -f ${EMULDIR}/etc/mtab || ${LN} -s /etc/fstab ${EMULDIR}/etc/mtab
+	@${TEST} -f ${EMULDIR}/etc/mtab || ${LN} -fs /etc/fstab ${EMULDIR}/etc/mtab
+	@${INSTALL_DATA_DIR} ${EG_DIR}
+	@${INSTALL_DATA} ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/dsm.*.smp ${EG_DIR}
+	@${INSTALL_DATA} ${FILESDIR}/tsm_daily.sh ${EG_DIR}
+	@${RM} -f ${PKG_SYSCONFDIR}/en_US && ${LN} -s ${EMULDIR}/${TSMCLIENTSUBDIR}/api/bin/en_US/ ${PKG_SYSCONFDIR}/en_US
 
 .include "../../mk/bsd.pkg.mk"
