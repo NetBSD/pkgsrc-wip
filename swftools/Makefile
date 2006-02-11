@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/11 22:55:17 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/11 16:31:00 obache Exp $
 #
 
 DISTNAME=	swftools-0.7.0
@@ -20,10 +20,10 @@ PKG_SUPPORTED_OPTIONS=	lame
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mlame)
-CONFIGURE_ARGS+= --enable-lame
+CONFIGURE_ARGS+=	--enable-lame
 .include "../../audio/lame/buildlink3.mk"
 .else
-CONFIGURE_ARGS+= --disable-lame
+CONFIGURE_ARGS+=	--disable-lame
 .endif
 
 .include "../../wip/avifile-devel/buildlink3.mk"
