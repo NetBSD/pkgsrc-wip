@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.8 2006/01/31 16:23:38 obache Exp $
-# $Id: Makefile,v 1.8 2006/01/31 16:23:38 obache Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/11 19:32:25 rillig Exp $
+# $Id: Makefile,v 1.9 2006/02/11 19:32:25 rillig Exp $
 
 .include "../../wip/e2fsprogs/Makefile.common"
 
@@ -16,15 +16,15 @@ DISTINFO_FILE=		${.CURDIR}/distinfo
 
 CONFLICTS=		e2fsprogs-1.32 e2fsprogs-1.36
 BUILD_DIRS=		lib/uuid
-PKGCONFIG_OVERRIDE+=    lib/uuid/uuid.pc.in
+PKGCONFIG_OVERRIDE+=	lib/uuid/uuid.pc.in
 
 post-build:
-	cd ${WRKSRC}/misc && ${SETENV} ${MAKE_ENV} ${MAKE} \
+	cd ${WRKSRC:Q}/misc && ${SETENV} ${MAKE_ENV} ${MAKE} \
 		${MAKE_FLAGS} uuidgen uuidgen.1
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/misc/uuidgen ${PREFIX}/bin/uuidgen
-	${INSTALL_MAN} ${WRKSRC}/misc/uuidgen.1 ${PREFIX}/man/man1/uuidgen.1
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/misc/uuidgen ${PREFIX:Q}/bin/uuidgen
+	${INSTALL_MAN} ${WRKSRC:Q}/misc/uuidgen.1 ${PREFIX:Q}/man/man1/uuidgen.1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
