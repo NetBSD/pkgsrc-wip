@@ -1,0 +1,23 @@
+# $NetBSD: Makefile,v 1.1.1.1 2006/02/11 12:27:58 poppnk Exp $
+#
+
+DISTNAME=		btfs-0.0.3
+PKGNAME=		fusefs-btfs-0.0.3
+CATEGORIES=		wip sysutils
+MASTER_SITES=		http://www.mulliner.org/bluetooth/
+
+MAINTAINER=		pancake@phreaker.net
+HOMEPAGE=		http://www.mulliner.org/bluetooth/btfs.php
+COMMENT=		Bluetooth Filesystem for FUSE
+MAKEFILE=		makefile
+WRKSRC=			${WRKDIR}/btfs/src/
+USE_TOOLS=		gmake
+USE_LANGUAGES=		c
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/btfs ${PREFIX}/bin/
+
+.include "../../comms/openobex/buildlink3.mk"
+.include "../../wip/bluez-libs/buildlink3.mk"
+.include "../../wip/fusefs/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

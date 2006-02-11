@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/02/11 12:27:58 poppnk Exp $
+
+SHA1 (btfs-0.0.3.tar.gz) = 00be1cd3af3dc5c985b335fa4e91ae0a33652ac0
+RMD160 (btfs-0.0.3.tar.gz) = 5be7fb4ed19f30b83fd2ad0eb95deda3f29ecc16
+Size (btfs-0.0.3.tar.gz) = 7509 bytes
+SHA1 (patch-aa) = 14ec676b91a94c7fabaaa4663756ecd5f8cde59a
