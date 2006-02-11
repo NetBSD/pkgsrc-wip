@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/20 12:12:41 obache Exp $
-bin/kcc
-man/ja_JP.EUC/man1/kcc.1
