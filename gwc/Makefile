@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/01/23 23:24:22 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/11 19:32:33 thomasklausner Exp $
 
 DISTNAME=	gwc-0.19-10
 PKGNAME=	gwc-0.19.10
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gwc/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	Benjamin.Wong@cc.gatech.edu
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gwc.sourceforge.net/
 COMMENT=	Gnome Wave Cleaner: dehiss and declick .wav files
 
