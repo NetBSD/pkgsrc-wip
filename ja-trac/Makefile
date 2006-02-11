@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/01/23 03:04:23 obache Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/11 15:48:31 obache Exp $
 #
 
 DISTNAME=	trac-0.9.3-ja-1
@@ -11,7 +11,7 @@ MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://www.i-act.co.jp/project/products/products.html
 COMMENT=	Trac issue tracking system with Japanese localization
 
-CONFLICTS+=     trac-[0-9]*
+CONFLICTS+=	trac-[0-9]*
 
 DEPENDS+=	${PYPKGPREFIX}-clearsilver>=0.9.14:../../www/py-clearsilver
 DEPENDS+=	${PYPKGPREFIX}-subversion>=1.1.0:../../devel/py-subversion
@@ -27,7 +27,7 @@ EGDIR=		${PREFIX}/share/examples/trac
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/* ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/contrib/* ${EGDIR}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
