@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/05/24 10:30:51 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/11 16:28:16 obache Exp $
 #
 
 DISTNAME=	linuxigd-0.92
 CATEGORIES=	net
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=linux-igd/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linux-igd/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	obata@lins.jp
@@ -12,20 +12,20 @@ COMMENT=	Linux UPnP Internet Gateway Device
 
 USE_LANGUAGES=	c c++
 USE_PKGINSTALL=	yes
-USE_TOOLS+= gmake
+USE_TOOLS+=	gmake
 
 .include "options.mk"
 
 WRKSRC=		${WRKDIR}/linux-igd
 
-PKG_SYSCONFSUBDIR?=	linuxigd
+PKG_SYSCONFSUBDIR=	linuxigd
 
 EGDIR=		${PREFIX}/share/examples/linuxigd
-CONF_FILES=	${EGDIR}/gateconnSCPD.xml ${PKG_SYSCONFDIR}/gateconnSCPD.xml
-CONF_FILES+=	${EGDIR}/gatedesc.skl ${PKG_SYSCONFDIR}/gatedesc.skl
-CONF_FILES+=	${EGDIR}/gatedesc.xml ${PKG_SYSCONFDIR}/gatedesc.xml
-CONF_FILES+=	${EGDIR}/gateicfgSCPD.xml ${PKG_SYSCONFDIR}/gateicfgSCPD.xml
-CONF_FILES+=	${EGDIR}/gateinfoSCPD.xml ${PKG_SYSCONFDIR}/gateinfoSCPD.xml
+CONF_FILES=	${EGDIR:Q}/gateconnSCPD.xml ${PKG_SYSCONFDIR:Q}/gateconnSCPD.xml
+CONF_FILES+=	${EGDIR:Q}/gatedesc.skl ${PKG_SYSCONFDIR:Q}/gatedesc.skl
+CONF_FILES+=	${EGDIR:Q}/gatedesc.xml ${PKG_SYSCONFDIR:Q}/gatedesc.xml
+CONF_FILES+=	${EGDIR:Q}/gateicfgSCPD.xml ${PKG_SYSCONFDIR:Q}/gateicfgSCPD.xml
+CONF_FILES+=	${EGDIR:Q}/gateinfoSCPD.xml ${PKG_SYSCONFDIR:Q}/gateinfoSCPD.xml
 RCD_SCRIPTS=	linuxigd
 
 SUBST_CLASSES+=		cfgdir
