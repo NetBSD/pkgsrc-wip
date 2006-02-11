@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2005/12/05 22:27:44 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2006/02/11 15:34:17 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avifile-devel
 PKG_SUPPORTED_OPTIONS=	sdl faad qt vorbis xvid mad a52 lame jpeg ac3_passthrough
@@ -14,7 +14,7 @@ PKG_SUPPORTED_OPTIONS+=	mmx
 
 .if !empty(PKG_OPTIONS:Msdl)
 .include "../../devel/SDL/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-sdl-prefix=${BUILDLINK_PREFIX.SDL}
+CONFIGURE_ARGS+=	--with-sdl-prefix=${BUILDLINK_PREFIX.SDL:Q}
 .else
 CONFIGURE_ARGS+=	--without-sdl
 .endif
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--without-sdl
 # .if !empty(PKG_OPTIONS:Mfreetype2)
 # .include "../../graphics/freetype2/buildlink3.mk"
 # CONFIGURE_ARGS+=	--enable-freetype2 \
-# 			--with-ft-prefix=${BUILDLINK_PREFIX.freetype2}
+# 			--with-ft-prefix=${BUILDLINK_PREFIX.freetype2:Q}
 # .else
 # CONFIGURE_ARGS+=	--disable-freetype2 \
 # 			--without-ft-prefix \
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--without-sdl
 
 .if !empty(PKG_OPTIONS:Mfaad)
 .include "../../audio/faad2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-faad-prefix=${BUILDLINK_PREFIX.faad}
+CONFIGURE_ARGS+=	--with-faad-prefix=${BUILDLINK_PREFIX.faad:Q}
 .else
 CONFIGURE_ARGS+=	--without-faad-prefix
 .endif
@@ -61,7 +61,7 @@ SUBST_SED.qtman=	-e 's|aviplay.1||' -e 's|avirecompress.1||'
 .if !empty(PKG_OPTIONS:Mvorbis)
 .include "../../audio/libvorbis/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-vorbis \
-			--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis}
+			--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis:Q}
 PLIST_SUBST+=		VORBIS_COMMENT=
 .else
 CONFIGURE_ARGS+=	--disable-vorbis \
@@ -72,7 +72,7 @@ PLIST_SUBST+=		VORBIS_COMMENT="@comment "
 .if !empty(PKG_OPTIONS:Mxvid)
 .include "../../multimedia/xvidcore/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-xvid4 \
-			--with-xvid4-prefix=${BUILDLINK_PREFIX.xvidcore}
+			--with-xvid4-prefix=${BUILDLINK_PREFIX.xvidcore:Q}
 PLIST_SUBST+=		XVID_COMMENT=
 SUBST_CLASSES+=		xvidlib
 SUBST_STAGE.xvidlib=	pre-configure
@@ -105,7 +105,7 @@ PLIST_SUBST+=		MAD_COMMENT="@comment "
 .if !empty(PKG_OPTIONS:Ma52)
 .include "../../audio/liba52/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-a52 --enable-ffmpeg-a52 \
-			--with-a52-prefix=${BUILDLINK_PREFIX.liba52}
+			--with-a52-prefix=${BUILDLINK_PREFIX.liba52:Q}
 .else
 CONFIGURE_ARGS+=	--disable-a52
 .endif
