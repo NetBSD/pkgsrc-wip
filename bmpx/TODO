@@ -1,3 +1,7 @@
+0.13 out.
+
+Make use of gstreamer0.10 packages.
+
 - there are still some options missing (most need a newer dbus version).
   For example: perl, python, irssi, xchat, et cetera.
 - Make it build without GUI support.
