@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:30:41 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/11 16:09:23 obache Exp $
 #
 
 DISTNAME=	upnpsdk-1.0.4
-PKGNAME=        libupnp-1.0.4
+PKGNAME=	libupnp-1.0.4
 CATEGORIES=	devel net
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=upnp/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=upnp/}
 
 MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://upnp.sourceforge.net/
 COMMENT=	Linux SDK for UPnP Devices
 
 USE_PKGINSTALL=	yes
-USE_TOOLS+= gmake
+USE_TOOLS+=	gmake
 
-MAKEFILE=       makefile
+MAKEFILE=	makefile
 
 PTHREAD_OPTS+=	require
 
