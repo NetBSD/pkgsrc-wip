@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/17 07:51:18 rillig Exp $
+$NetBSD: distinfo,v 1.2 2006/02/12 14:07:28 rillig Exp $
 
 SHA1 (mc-4.1.40-pre9.tar.gz) = a5d46051e4274f516df7f5251030a94be8d08e6b
 RMD160 (mc-4.1.40-pre9.tar.gz) = 17e2f0c02bd045b9d1f8bc07e9ab9545a20950dc
 Size (mc-4.1.40-pre9.tar.gz) = 1214767 bytes
+SHA1 (patch-configure) = 108476eb98de1b99a2ef0dafa7ddd4b4560df652
+SHA1 (patch-fsusage) = e8f6c1c7048a7282607db024c42571c7a4171848
+SHA1 (patch-mountlist) = 8f3f31dd9de4d5bbe0de2c4d204db0154a201bca
+SHA1 (patch-subshell) = 9d1f91b06e04bdd3ec97cdf73a115df66752c572

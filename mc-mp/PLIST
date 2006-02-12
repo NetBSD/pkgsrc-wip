@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/12 07:01:35 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/02/12 14:07:28 rillig Exp $
 bin/mc
 bin/mcedit
 bin/mcmfmt
 bin/mcserv
 lib/mc/FAQ
-lib/mc/bin/cons.saver
-lib/mc/bin/create_vcs
+${IF_LINUX}lib/mc/bin/cons.saver
+${IF_LINUX}lib/mc/bin/create_vcs
 lib/mc/bin/mcfn_install
 lib/mc/codepages/7bit.cp
 lib/mc/codepages/8859_1.cp
