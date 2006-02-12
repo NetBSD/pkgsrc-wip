@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/02/12 00:59:00 emil_s Exp $
+
+--- find_dep.y.orig	2006-01-23 17:44:44.000000000 +0000
++++ find_dep.y
+@@ -23,7 +23,11 @@
+ #include <string.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++
++#ifdef HAVE_ALLOCA_H
+ #include <alloca.h>
++#endif
++
+ #include "finddep.h"
+ #include "utils.h"
+ #include "errormesg.h"
