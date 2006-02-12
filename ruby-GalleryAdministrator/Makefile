@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/03 08:32:44 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/12 01:31:24 obache Exp $
 #
 
 DISTNAME=	gallery-0.0.8
@@ -23,18 +23,18 @@ REPLACE_RUBY=	bin/rubyphoto.rb interface/admin.rb interface/mail_admin.rb \
 DOCS=		COPYING_for_RubyPhoto README.en README.ja README_for_RubyPhoto.html
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/gallery
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR:Q}/gallery
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/gallery
+	${INSTALL_DATA} ${WRKSRC:Q}/${f} ${RUBY_DOCDIR:Q}/gallery
 .endfor
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/gallery
-	cd ${WRKSRC}/sample && ${PAX} -rw -pp * ${RUBY_EXAMPLESDIR}/gallery
-	${RM} -r ${RUBY_EXAMPLESDIR}/gallery/templates/.en/.svn
-	${RM} -r ${RUBY_EXAMPLESDIR}/gallery/templates/.ja/.svn
-	${RM} -r ${RUBY_EXAMPLESDIR}/gallery/templates/.ja.i/.svn
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/gallery/interface
-	${INSTALL_SCRIPT} ${WRKSRC}/interface/admin.rb ${RUBY_EXAMPLESDIR}/gallery/interface
-	${INSTALL_SCRIPT} ${WRKSRC}/interface/mail_admin.rb ${RUBY_EXAMPLESDIR}/gallery/interface
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR:Q}/gallery
+	cd ${WRKSRC:Q}/sample && ${PAX} -rw -pp * ${RUBY_EXAMPLESDIR:Q}/gallery
+	${RM} -r ${RUBY_EXAMPLESDIR:Q}/gallery/templates/.en/.svn
+	${RM} -r ${RUBY_EXAMPLESDIR:Q}/gallery/templates/.ja/.svn
+	${RM} -r ${RUBY_EXAMPLESDIR:Q}/gallery/templates/.ja.i/.svn
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR:Q}/gallery/interface
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/interface/admin.rb ${RUBY_EXAMPLESDIR:Q}/gallery/interface
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/interface/mail_admin.rb ${RUBY_EXAMPLESDIR:Q}/gallery/interface
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/01/12 17:36:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/12 01:28:24 obache Exp $
 #
 
 DISTNAME=	sqlite3-ruby-1.1.0
@@ -7,7 +7,7 @@ CATEGORIES=	databases ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/3090/
 
 MAINTAINER=	obata@lins.jp
-HOMEPAGE=       http://sqlite-ruby.rubyforge.org/
+HOMEPAGE=	http://sqlite-ruby.rubyforge.org/
 COMMENT=	SQLite3/Ruby Interface
 
 RUBY_HAS_ARCHLIB=	yes
@@ -20,11 +20,11 @@ DOCS=	ChangeLog LICENSE README
 .include "../../lang/ruby/modules.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/sqlite3/api
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR:Q}/sqlite3/api
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/sqlite3/
+	${INSTALL_DATA} ${WRKSRC:Q}/${f} ${RUBY_DOCDIR:Q}/sqlite3/
 .endfor
-	cd ${WRKSRC}/doc && ${PAX} -rw -pp * ${RUBY_DOCDIR}/sqlite3
-	cd ${WRKSRC}/api && ${PAX} -rw -pp * ${RUBY_DOCDIR}/sqlite3/api
+	cd ${WRKSRC:Q}/doc && ${PAX} -rw -pp * ${RUBY_DOCDIR:Q}/sqlite3
+	cd ${WRKSRC:Q}/api && ${PAX} -rw -pp * ${RUBY_DOCDIR:Q}/sqlite3/api
 
 .include "../../mk/bsd.pkg.mk"
