@@ -1,43 +1,43 @@
-# $NetBSD: Makefile,v 1.2 2006/01/28 03:19:25 obache Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/12 01:26:01 obache Exp $
 #
 
 DISTNAME=	pop-before-smtp-1.37
 CATEGORIES=	mail perl5
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=popbsmtp/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=popbsmtp/}
 
 MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://popbsmtp.sourceforge.net/
 COMMENT=	Simple daemon for pop-before-smtp
 
-USE_LANGUAGES=  # empty
-USE_PKGINSTALL= yes
-USE_TOOLS+=     perl:run pod2man
-REPLACE_PERL+=  pop-before-smtp
+USE_LANGUAGES=	# empty
+USE_PKGINSTALL=	yes
+USE_TOOLS+=	perl:run pod2man
+REPLACE_PERL+=	pop-before-smtp
 
 DEPENDS+=	p5-Net-Netmask-[0-9]*:../../devel/p5-Net-Netmask
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 
 EGDIR=		${PREFIX}/share/examples/pop-before-smtp
-CONF_FILES=	${EGDIR}/pop-before-smtp-conf.pl ${PKG_SYSCONFDIR}/pop-before-smtp-conf.pl
+CONF_FILES=	${EGDIR:Q}/pop-before-smtp-conf.pl ${PKG_SYSCONFDIR:Q}/pop-before-smtp-conf.pl
 RCD_SCRIPTS=	pop-before-smtp
 DOCS_DIR=	${PREFIX}/share/doc/pop-before-smtp
 
 INSTALLATION_DIRS=${EGDIR:S|^${PREFIX}/||} ${DOCS_DIR:S|^${PREFIX}/||}
 
 do-build:
-	${POD2MAN} ${WRKSRC}/pop-before-smtp > ${WRKSRC}/pop-before-smtp.8
+	${POD2MAN} ${WRKSRC:Q}/pop-before-smtp > ${WRKSRC:Q}/pop-before-smtp.8
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pop-before-smtp ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/pop-before-smtp-conf.pl \
-		${EGDIR}/pop-before-smtp-conf.pl
-	${INSTALL_MAN} ${WRKSRC}/pop-before-smtp.8 \
-		${PREFIX}/man/man8/pop-before-smtp.8
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/pop-before-smtp ${PREFIX:Q}/sbin
+	${INSTALL_DATA} ${WRKSRC:Q}/pop-before-smtp-conf.pl \
+		${EGDIR:Q}/pop-before-smtp-conf.pl
+	${INSTALL_MAN} ${WRKSRC:Q}/pop-before-smtp.8 \
+		${PREFIX:Q}/man/man8/pop-before-smtp.8
 .for f in COPYING ChangeLog README TODO
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCS_DIR}/${f}
+	${INSTALL_DATA} ${WRKSRC:Q}/${f} ${DOCS_DIR:Q}/${f}
 .endfor
 .for f in README.QUICKSTART README.rootless-install popauth.m4
-	${INSTALL_DATA} ${WRKSRC}/contrib/${f} ${DOCS_DIR}
+	${INSTALL_DATA} ${WRKSRC:Q}/contrib/${f} ${DOCS_DIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
