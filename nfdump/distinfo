@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2006/02/12 02:32:46 christian_gall Exp $
+
+SHA1 (nfdump-1.4.1.tar.gz) = 9d1de2712daff5e775d55e3c891ed2632184bc1a
+RMD160 (nfdump-1.4.1.tar.gz) = 9c2e4b8fb0cfc8cb0fa0889ba30fb62764cf2904
+Size (nfdump-1.4.1.tar.gz) = 147191 bytes
