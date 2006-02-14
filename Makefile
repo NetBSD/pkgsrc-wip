@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2171 2006/02/14 10:22:16 leonardschmidt Exp $
+# $Id: Makefile,v 1.2172 2006/02/14 11:37:46 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -833,6 +833,7 @@ SUBDIR+=	p5-Text-ASCIITable
 SUBDIR+=	p5-Text-Context
 SUBDIR+=	p5-Text-Context-EitherSide
 SUBDIR+=	p5-Text-German
+SUBDIR+=	p5-Text-Hatena
 SUBDIR+=	p5-Text-SimpleTable
 SUBDIR+=	p5-Tie-Array-Sorted
 SUBDIR+=	p5-Time-Local
@@ -844,6 +845,7 @@ SUBDIR+=	p5-UNIVERSAL-exports
 SUBDIR+=	p5-UNIVERSAL-isa
 SUBDIR+=	p5-URI-Find
 SUBDIR+=	p5-URI-Find-Rule
+SUBDIR+=	p5-URI-Title
 SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-XML-Clean
 SUBDIR+=	p5-podlators
