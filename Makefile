@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2169 2006/02/10 02:52:00 udontknow Exp $
+# $Id: Makefile,v 1.2170 2006/02/14 08:41:36 christian_gall Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -255,6 +255,7 @@ SUBDIR+=	fontcacheproto
 SUBDIR+=	fontsproto
 SUBDIR+=	foomatic-db
 SUBDIR+=	foomatic-db-engine
+SUBDIR+=	fprobe
 SUBDIR+=	fragrouter
 SUBDIR+=	freetds
 SUBDIR+=	freevo
@@ -679,6 +680,7 @@ SUBDIR+=	netkit-telnet
 SUBDIR+=	netkit-tftp
 SUBDIR+=	netwib
 SUBDIR+=	netwox
+SUBDIR+=	nfdump
 SUBDIR+=	ninvaders
 SUBDIR+=	nnrpd
 SUBDIR+=	noip
