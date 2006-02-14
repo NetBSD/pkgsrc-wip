@@ -1,10 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/09/02 06:06:26 xtraeme Exp $
+$NetBSD: MESSAGE,v 1.2 2006/02/14 17:02:37 rillig Exp $
 
 It is recommended to tune tetrinetx configuration and motd files. They are
 located in ${PREFIX}/share/tetrinetx
 
 A rc.d script is provided: if you want tetrinetx to be launched at system
-startup, just add tetrinetx=YES in /etc/rc.conf.
+startup, copy it from ${PREFIX}/share/examples/rc.d into /etc/rc.d
+and add tetrinetx=YES in /etc/rc.conf.
 
 ===========================================================================

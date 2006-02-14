@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/14 16:54:28 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/14 17:02:37 rillig Exp $
 
 DISTNAME=	tetrinetx-1.13.16+qirc-1.40c
 PKGNAME=	tetrinetx-1.13.16
@@ -12,6 +12,7 @@ COMMENT=	Server for an addictive 6 player tetris game
 WRKSRC=		${WRKDIR}/${DISTNAME}
 SHAREDIR=	${PREFIX}/share/tetrinetx
 BINARY=		tetrix.netbsd
+RCD_SCRIPTS=	tetrinetx
 
 LIBS.SunOS+=	-lsocket -lnsl -lresolv
 
@@ -26,13 +27,14 @@ do-build:
 		main.c
 
 do-install:
-	@${INSTALL_DATA_DIR} ${SHAREDIR}
+	${INSTALL_DATA_DIR} ${SHAREDIR}
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/rc.d
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/bin/${BINARY:Q} ${PREFIX:Q}/bin/tetrix
 	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.conf ${SHAREDIR:Q}
 	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.secure ${SHAREDIR:Q}
 	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.motd ${SHAREDIR:Q}
 	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.pmotd ${SHAREDIR:Q}
-	${INSTALL_SCRIPT} -m 751 ${FILESDIR:Q}/tetrinetx ${PREFIX:Q}/etc/rc.d
+	${INSTALL_SCRIPT} ${FILESDIR:Q}/tetrinetx ${PREFIX:Q}/share/examples/rc.d/
 
 .include "../../net/adns/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
