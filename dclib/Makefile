@@ -1,25 +1,18 @@
-# $NetBSD: Makefile,v 1.9 2005/08/11 10:08:21 absd Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/15 16:08:07 tnn2 Exp $
 #
 
-DISTNAME=	dclib-0.3.7
+DISTNAME=	dclib
 CATEGORIES=	net
-MASTER_SITES=	http://download.berlios.de/dcgui/
-EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tnn@netilium.org
+MAINTAINER=	tnn@nygren.pp.se
 HOMEPAGE=	http://dcgui.berlios.de/
-COMMENT=	Direct Connect P2P library
+COMMENT=	Direct Connect P2P library (cvs version)
 
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	dclib.pc.in
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../wip/valknut/Makefile.common"
 
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../archivers/bzip2/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../wip/libootool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
