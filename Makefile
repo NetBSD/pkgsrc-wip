@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2179 2006/02/15 17:24:25 kristerw Exp $
+# $Id: Makefile,v 1.2180 2006/02/15 17:30:00 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -36,7 +36,6 @@ SUBDIR+=	SDL-intro-ru
 SUBDIR+=	Siesta
 SUBDIR+=	WEPCrack
 SUBDIR+=	abclock
-SUBDIR+=	abook-devel
 SUBDIR+=	abuse_sdl
 SUBDIR+=	acpid
 SUBDIR+=	adamem
@@ -161,7 +160,6 @@ SUBDIR+=	daphne
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	db1
 SUBDIR+=	dbf
-SUBDIR+=	dbus-python
 SUBDIR+=	dclib
 SUBDIR+=	debian_base
 SUBDIR+=	debian_glib
@@ -400,7 +398,6 @@ SUBDIR+=	iptstate
 SUBDIR+=	isc-dhclient
 SUBDIR+=	isc-dhcpd
 SUBDIR+=	ispell-lietuviu
-SUBDIR+=	ja-trac
 #SUBDIR+=	jabberd			# not a real package
 SUBDIR+=	jabberd-aim
 SUBDIR+=	jack
@@ -450,7 +447,6 @@ SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	kawa
 SUBDIR+=	kbproto
-SUBDIR+=	kcc
 SUBDIR+=	kchmviewer
 SUBDIR+=	kid3
 SUBDIR+=	kino
@@ -1194,7 +1190,6 @@ SUBDIR+=	tenmado
 SUBDIR+=	terminus-font
 SUBDIR+=	testdisk
 SUBDIR+=	tetrinet
-SUBDIR+=	tetrinetx
 SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
