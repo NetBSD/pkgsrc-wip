@@ -14,6 +14,8 @@ CVS_REPOSITORIES=	${DISTNAME}
 CVS_ROOT.${DISTNAME}=	:pserver:anonymous:@cvs.dcgui.berlios.de:/cvsroot/dcgui
 CVS_MODULE.${DISTNAME}=	${DISTNAME}
 
+CONFIGURE_ARGS+=	--enable-debug=full	# per recommendation
+
 .include "../../wip/mk/cvs-package.mk"
 
 pre-configure:

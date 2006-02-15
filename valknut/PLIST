@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2004/09/03 17:44:45 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/15 17:47:52 tnn2 Exp $
 bin/valknut
 share/valknut/COPYING
 share/valknut/icons/appl/default/back.xpm
@@ -106,3 +106,13 @@ share/valknut/translation/valknut.ro.qm
 share/valknut/translation/valknut.rus.qm
 share/valknut/translation/valknut.sk.qm
 share/valknut/translation/valknut.sv.qm
+@dirrm share/valknut/icons/appl/default
+@dirrm share/valknut/icons/appl
+@dirrm share/valknut/icons/emot/default
+@dirrm share/valknut/icons/emot
+@dirrm share/valknut/icons/user/default
+@dirrm share/valknut/icons/user
+@dirrm share/valknut/icons
+@dirrm share/valknut/sounds
+@dirrm share/valknut/translation
+@dirrm share/valknut

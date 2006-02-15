@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2004/09/03 17:44:45 tnn2 Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/15 17:47:53 tnn2 Exp $
 
---- configure.orig	2004-08-18 22:17:44.000000000 +0200
-+++ configure
-@@ -27061,7 +27061,7 @@ done
- 
- test "x$jpeg_incdir" = xNO && jpeg_incdir=
- 
+--- admin/acinclude.m4.in.orig	2006-02-15 18:12:11.000000000 +0100
++++ admin/acinclude.m4.in
+@@ -2497,7 +2497,7 @@ dnl if headers _and_ libraries are missi
+ dnl continue with a warning (the user will get no jpeg support in khtml)
+ dnl if only one is missing, it means a configuration error, but we still
+ dnl only warn
 -if test -n "$jpeg_incdir" && test -n "$LIBJPEG" ; then
 +if test 1 = 1 ; then
- 
- cat >>confdefs.h <<_ACEOF
- #define HAVE_LIBJPEG 1
+   AC_DEFINE_UNQUOTED(HAVE_LIBJPEG, 1, [Define if you have libjpeg])
+ else
+   if test -n "$jpeg_incdir" || test -n "$LIBJPEG" ; then
