@@ -1,0 +1,5 @@
+# $NetBSD $
+
+.include "../../mk/bsd.prefs.mk"
+
+VALKNUT_PKG_VERSION!=   ${DATE} +%Y%m%d
