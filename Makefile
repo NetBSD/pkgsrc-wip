@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2177 2006/02/15 09:15:22 obache Exp $
+# $Id: Makefile,v 1.2178 2006/02/15 16:01:20 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -515,6 +515,7 @@ SUBDIR+=	liblingoteach
 SUBDIR+=	libmusclecard
 SUBDIR+=	libneural
 SUBDIR+=	libobby
+SUBDIR+=	libootool
 SUBDIR+=	libopenmodeller
 SUBDIR+=	libp11
 SUBDIR+=	libpano12
