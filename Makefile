@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2174 2006/02/14 17:41:45 mj_turner Exp $
+# $Id: Makefile,v 1.2175 2006/02/15 06:37:20 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -778,8 +778,6 @@ SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-HTML-CalendarMonthSimple
 SUBDIR+=	p5-HTML-Latex
-SUBDIR+=	p5-HTML-Prototype
-SUBDIR+=	p5-HTML-Prototype-Useful
 SUBDIR+=	p5-HTML-Strip
 SUBDIR+=	p5-HTML-TagCloud
 SUBDIR+=	p5-HTTP-Body
