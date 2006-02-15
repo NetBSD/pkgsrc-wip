@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/15 15:58:28 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/15 17:33:51 tnn2 Exp $
 include/libootool/core/cbytearray.h
 include/libootool/core/cbz.h
 include/libootool/core/ccallback.h
@@ -21,3 +21,6 @@ include/libootool/socket/csocket.h
 include/libootool/socket/cssl.h
 include/libootool/socket/ctraffic.h
 lib/libootool.la
+@dirrm include/libootool/core
+@dirrm include/libootool/socket
+@dirrm include/libootool
