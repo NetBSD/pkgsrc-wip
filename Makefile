@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2176 2006/02/15 08:23:36 obache Exp $
+# $Id: Makefile,v 1.2177 2006/02/15 09:15:22 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -787,6 +787,7 @@ SUBDIR+=	p5-HTTP-Request-AsCGI
 SUBDIR+=	p5-HTTP-Server-Simple
 SUBDIR+=	p5-Image-EXIF
 SUBDIR+=	p5-Imager
+SUBDIR+=	p5-JSON
 SUBDIR+=	p5-Jemplate
 SUBDIR+=	p5-Lingua-PT-Stemmer
 SUBDIR+=	p5-Lingua-Stem
