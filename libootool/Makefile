@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/15 15:58:28 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/15 17:18:08 tnn2 Exp $
 #
 
 DISTNAME=	libootool
 CATEGORIES=	devel
 
-MAINTAINER=	tnn@nygren.pp.se
+MAINTAINER=	tnn+nbsd@nygren.pp.se
 HOMEPAGE=	http://dcgui.berlios.de/
 COMMENT=	Free to use c++ utility classes (used by wip/valknut)
 
