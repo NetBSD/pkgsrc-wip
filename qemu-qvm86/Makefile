@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/17 10:20:46 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/15 16:30:51 tnn2 Exp $
 #
 
 DISTNAME=		qemu-0.8.0
@@ -6,7 +6,7 @@ PKGNAME=		qemu-qvm86-0.8.0
 CATEGORIES=		emulators
 MASTER_SITES=		http://fabrice.bellard.free.fr/qemu/
 
-MAINTAINER=		tnn@netilium.org
+MAINTAINER=		tnn+nbsd@nygren.pp.se
 HOMEPAGE=		http://www.qemu.org/
 COMMENT=		CPU emulator using dynamic translation (qvm86 version)
 

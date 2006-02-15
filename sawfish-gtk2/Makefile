@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:28 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/15 16:30:51 tnn2 Exp $
 #
 
 DISTNAME=		sawfish-${SF_VERS}
@@ -7,7 +7,7 @@ SF_VERS=		1.3
 CATEGORIES=		x11 gnome wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sawmill/}
 
-MAINTAINER=		tnn@netilium.org
+MAINTAINER=		tnn+nbsd@nygren.pp.se
 HOMEPAGE=		http://sawmill.sourceforge.net/
 COMMENT=		Extensible window manager that is fully configurable in Lisp
 

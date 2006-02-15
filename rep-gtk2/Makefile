@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:31:23 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/15 16:30:51 tnn2 Exp $
 
 DISTNAME=		rep-gtk-0.18
 PKGNAME=		rep-gtk2-0.18
 CATEGORIES=		x11 lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rep-gtk/}
 
-MAINTAINER=		tnn@netilium.org
+MAINTAINER=		tnn+nbsd@nygren.pp.se
 HOMEPAGE=		http://rep-gtk.sourceforge.net/
 COMMENT=		librep bindings for gtk2 (used by sawfish)
 
