@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/15 15:58:28 tnn2 Exp $
+include/libootool/core/cbytearray.h
+include/libootool/core/cbz.h
+include/libootool/core/ccallback.h
+include/libootool/core/ccallbacklist.h
+include/libootool/core/cfile.h
+include/libootool/core/clist.h
+include/libootool/core/cmanager.h
+include/libootool/core/cmutex.h
+include/libootool/core/cobject.h
+include/libootool/core/csingleton.h
+include/libootool/core/cstring.h
+include/libootool/core/cstringlist.h
+include/libootool/core/cthread.h
+include/libootool/core/czlib.h
+include/libootool/core/os.h
+include/libootool/socket/casyncdns.h
+include/libootool/socket/cconnection.h
+include/libootool/socket/cdns.h
+include/libootool/socket/csocket.h
+include/libootool/socket/cssl.h
+include/libootool/socket/ctraffic.h
+lib/libootool.la
