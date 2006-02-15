@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/04 16:24:46 ghen Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/15 22:20:40 jcflack Exp $
 #
 
 DISTNAME=	rosegarden-4-0.9.1
@@ -10,14 +10,16 @@ HOMEPAGE=	http://www.rosegardenmusic.com/
 COMMENT=	Development release of rosegarden
 
 GNU_CONFIGURE=	YES
+USE_TOOLS+=	gmake
+USE_LANGUAGES+= c c++
+USE_LIBTOOL=	yes
 
-CONFIGURE_ARGS+=--with-qt-dir=/usr/X11R6/qt3
+post-install:
+	${_PKG_SILENT}${_PKG_DEBUG}for fn in \
+	RosegardenMidiRecord.mcopclass MidiArts.mcopclass MidiArts.mcoptype ; \
+	do ${INSTALL_DATA} ${WRKSRC:Q}/sound/"$$fn" ${PREFIX:Q}/lib/mcop ; done
 
-.include "../../x11/qt3-libs/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
-# XXX Please verify whether qt3-tools is really needed at run-time.
-# If it is, then remove this comment.  If it is not, then remove
-# this comment and the line below, and bump PKGREVISION.
-BUILDLINK_DEPMETHOD.qt3-tools=	full
-.include "../../mk/x11.buildlink3.mk"
+.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../multimedia/kdemultimedia3/buildlink3.mk" # needed for artsmidi
 .include "../../mk/bsd.pkg.mk"
