@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2006/02/15 17:48:40 tnn2 Exp $
+
+--- admin/detect-autoconf.sh.orig	2006-02-15 15:34:07.000000000 +0100
++++ admin/detect-autoconf.sh
+@@ -95,9 +95,5 @@ checkWhich ()
+   done
+ }
+ 
+-checkWhich
+-checkAutoconf
+-checkAutoheader
+-checkAutomakeAclocal
+ 
+ export WHICH AUTOHEADER AUTOCONF AUTOM4TE AUTOMAKE ACLOCAL
