@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/10 17:12:09 hfath Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/16 10:30:22 hfath Exp $
 
 DISTNAME=	tsm-5.2.2
 CATEGORIES=     sysutils
@@ -70,6 +70,6 @@ post-install:
 	@${INSTALL_DATA_DIR} ${EG_DIR}
 	@${INSTALL_DATA} ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/dsm.*.smp ${EG_DIR}
 	@${INSTALL_DATA} ${FILESDIR}/tsm_daily.sh ${EG_DIR}
-	@${RM} -f ${PKG_SYSCONFDIR}/en_US && ${LN} -s ${EMULDIR}/${TSMCLIENTSUBDIR}/api/bin/en_US/ ${PKG_SYSCONFDIR}/en_US
+	@${RM} -f ${PKG_SYSCONFDIR}/en_US && ${LN} -s ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/en_US/ ${PKG_SYSCONFDIR}/en_US
 
 .include "../../mk/bsd.pkg.mk"
