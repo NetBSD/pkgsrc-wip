@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2181 2006/02/15 17:35:37 kristerw Exp $
+# $Id: Makefile,v 1.2182 2006/02/16 11:22:01 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -723,6 +723,7 @@ SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-Apache-AuthenNTLM
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-Bit-Vector-Minimal
+SUBDIR+=	p5-CGI-Application-Plugin-DevPopup
 SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-CPANPLUS
 SUBDIR+=	p5-Cache-FastMmap
@@ -787,6 +788,7 @@ SUBDIR+=	p5-HTML-CalendarMonthSimple
 SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTML-Strip
 SUBDIR+=	p5-HTML-TagCloud
+SUBDIR+=	p5-HTML-Widget
 SUBDIR+=	p5-HTTP-Body
 SUBDIR+=	p5-HTTP-BrowserDetect
 SUBDIR+=	p5-HTTP-Lite
