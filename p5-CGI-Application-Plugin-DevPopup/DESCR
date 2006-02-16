@@ -1,0 +1,2 @@
+This module provides a plugin framework for displaying runtime information
+about your CGI::Application app in a popup window.
