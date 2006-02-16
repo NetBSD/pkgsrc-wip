@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2005/07/25 19:55:22 udontknow Exp $
+$NetBSD: patch-af,v 1.2 2006/02/16 20:30:20 ghen Exp $
 
---- src/PCSC/pcsclite.h.in.orig	2004-08-24 18:46:57.000000000 -0300
+--- src/PCSC/pcsclite.h.in.orig	2006-02-15 16:46:50.000000000 +0100
 +++ src/PCSC/pcsclite.h.in
-@@ -13,7 +13,7 @@
+@@ -16,7 +16,7 @@
  #ifndef __pcsclite_h__
  #define __pcsclite_h__
  

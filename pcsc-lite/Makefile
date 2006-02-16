@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 22:27:47 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/16 20:30:18 ghen Exp $
 
-DISTNAME=	pcsc-lite-1.2.9-beta8
-PKGNAME=	pcsc-lite-1.2.9b8
-CATEGORIES=	security
-MASTER_SITES=	http://alioth.debian.org/download.php/975/
+DISTNAME=		pcsc-lite-1.2.9-beta10
+PKGNAME=		${DISTNAME:S/-beta/b/}
+CATEGORIES=		security
+MASTER_SITES=		http://alioth.debian.org/download.php/1426/
 
-MAINTAINER=	evaldo@gardenali.biz
-HOMEPAGE=	http://www.linuxnet.com/
-COMMENT=	PC/SC Architecture support for Smart Cards
+MAINTAINER=		evaldo@gardenali.biz
+HOMEPAGE=		http://www.linuxnet.com/
+COMMENT=		PC/SC Architecture support for Smart Cards
 
-WRKSRC=                 ${WRKDIR}/pcsc-lite-1.2.9-beta7
 GNU_CONFIGURE=          YES
 USE_PKGINSTALL=		YES
 USE_LIBTOOL=            YES
@@ -30,11 +29,11 @@ EGDIR=			${PREFIX}/share/examples/pcsc-lite
 CONF_FILES+=		${EGDIR}/reader.conf ${PKG_SYSCONFDIR}/reader.conf
 
 pre-configure:
-	cd ${WRKSRC} && \
-	aclocal -I ./m4 && \
-	autoheader && \
-	libtoolize --force && \
-	automake --copy --add-missing && \
+	cd ${WRKSRC} &&				\
+	aclocal -I ./m4 &&			\
+	autoheader &&				\
+	libtoolize --force &&			\
+	automake --copy --add-missing &&	\
 	autoconf
 
 post-install:

@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.5 2005/11/24 02:05:52 udontknow Exp $
+$NetBSD: distinfo,v 1.6 2006/02/16 20:30:18 ghen Exp $
 
-SHA1 (pcsc-lite-1.2.9-beta8.tar.gz) = 9569b6072b9199d44e7c41c7df8044209609b1f5
-RMD160 (pcsc-lite-1.2.9-beta8.tar.gz) = 91fcf8642b72a5218a468117b05dae8ec819680c
-Size (pcsc-lite-1.2.9-beta8.tar.gz) = 771887 bytes
+SHA1 (pcsc-lite-1.2.9-beta10.tar.gz) = 182356596013eaee23e3d5ce92844d32aa240a2e
+RMD160 (pcsc-lite-1.2.9-beta10.tar.gz) = 421e85d11a94504b694f0e490a9a52292a1d590a
+Size (pcsc-lite-1.2.9-beta10.tar.gz) = 1059073 bytes
 SHA1 (patch-aa) = 72deef389533a2ee4a3e9d329b78e04373af1f09
-SHA1 (patch-ab) = 6dec620974d937c6f07ba4abcdd549444e9d4844
-SHA1 (patch-ac) = 2c68e89a8c2401e14df6a5bdb7a9714159c2ce99
+SHA1 (patch-ab) = 0612a4a6eb3dea78696b326fe88f4f33aac0b4c5
+SHA1 (patch-ac) = 51824cc7a2e95ee41357f5085c10f6adf3668548
+SHA1 (patch-ad) = a61b94c2d4da157b89978b3ec8696a642a49409c
 SHA1 (patch-ae) = 0d28ca0eda57739428091af6fd13eba931d32e22
-SHA1 (patch-af) = ce6471dfed5f0f378c5dd28fb5da4f326638a0e8
-SHA1 (patch-ag) = b0df4e770b44a0d32f13b73cbf624e19e5898d0b
-SHA1 (patch-ah) = 20bac55f727ba0f3e8ea91e4211efb6faadf9856
+SHA1 (patch-af) = 5e87e7c0c044eabccdd8e4b8132202bb102d4dfc
+SHA1 (patch-ag) = d89e904a749f7aaf86358a1b26e5e5e186eb186f
+SHA1 (patch-ah) = cb2187e90176063366a86bf2576055295924fa59

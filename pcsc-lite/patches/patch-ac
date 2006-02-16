@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/07/20 21:07:06 udontknow Exp $
+$NetBSD: patch-ac,v 1.2 2006/02/16 20:30:20 ghen Exp $
 
---- Makefile.am.orig	2005-01-16 14:55:42.000000000 -0200
+--- Makefile.am.orig	2006-02-15 16:45:40.000000000 +0100
 +++ Makefile.am
 @@ -1,6 +1,6 @@
  # Process this file with automake to create Makefile.in.
  
--SUBDIRS = m4 win32 src etc doc
-+SUBDIRS = m4 win32 src doc
+-SUBDIRS = m4 win32 src etc doc libmusclecard
++SUBDIRS = m4 win32 src doc libmusclecard
  
  ACLOCAL_AMFLAGS = -I m4
  

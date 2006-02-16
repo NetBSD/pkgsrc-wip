@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2005/07/25 19:55:22 udontknow Exp $
+$NetBSD: patch-ag,v 1.2 2006/02/16 20:30:20 ghen Exp $
 
---- src/PCSC/winscard.h.orig	2004-08-06 09:12:19.000000000 -0300
+--- src/PCSC/winscard.h.orig	2006-02-15 16:47:11.000000000 +0100
 +++ src/PCSC/winscard.h
-@@ -13,7 +13,7 @@
+@@ -16,7 +16,7 @@
  #ifndef __winscard_h__
  #define __winscard_h__
  

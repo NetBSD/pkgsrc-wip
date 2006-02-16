@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2005/07/25 19:55:22 udontknow Exp $
+$NetBSD: patch-ah,v 1.2 2006/02/16 20:30:20 ghen Exp $
 
---- src/PCSC/ifdhandler.h.orig	2004-08-06 09:12:19.000000000 -0300
+--- src/PCSC/ifdhandler.h.orig	2006-02-15 16:47:22.000000000 +0100
 +++ src/PCSC/ifdhandler.h
-@@ -13,7 +13,7 @@
+@@ -16,7 +16,7 @@
  #ifndef _ifd_handler_h_
  #define _ifd_handler_h_
  

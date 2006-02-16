@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/07/20 21:07:06 udontknow Exp $
+$NetBSD: patch-ab,v 1.2 2006/02/16 20:30:20 ghen Exp $
 
---- src/Makefile.am.orig	2005-02-24 09:44:10.000000000 -0300
+--- src/Makefile.am.orig	2006-02-15 16:45:57.000000000 +0100
 +++ src/Makefile.am
-@@ -86,3 +86,6 @@ tokenparser.c: tokenparser.l
+@@ -92,3 +92,6 @@ tokenparser.c: tokenparser.l
  
  EXTRA_DIST = README_INTERNALS.txt dyn_win32.c thread_win32.c winscard_scf.c
  
