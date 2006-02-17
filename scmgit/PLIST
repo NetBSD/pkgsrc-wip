@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/19 01:03:38 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/02/17 18:25:28 poppnk Exp $
 bin/git
 bin/git-add
 bin/git-am
@@ -77,6 +77,7 @@ bin/git-relink
 bin/git-repack
 bin/git-repo-config
 bin/git-request-pull
+bin/git-rerere
 bin/git-reset
 bin/git-resolve
 bin/git-rev-list
@@ -86,6 +87,7 @@ bin/git-send-pack
 bin/git-sh-setup
 bin/git-shell
 bin/git-shortlog
+bin/git-show
 bin/git-show-branch
 bin/git-show-index
 bin/git-ssh-fetch

@@ -1,6 +1,0 @@
-Probably affected by http://lwn.net/Articles/169623/
-(remote code execution security problem).
-
-1.1.5 fixes it.
-
-1.2.1 out.
