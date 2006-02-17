@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/09/28 12:09:15 marttikuparinen Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/17 09:29:31 marttikuparinen Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBXEN_BUILDLINK3_MK:=	${LIBXEN_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_DEPENDS.libxen+=	libxen>=2.0.7
 BUILDLINK_PKGSRCDIR.libxen?=	../../wip/libxen
 .endif	# LIBXEN_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

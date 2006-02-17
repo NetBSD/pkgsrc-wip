@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.3 2005/10/01 04:28:23 xtraeme Exp $
+#	$NetBSD: Makefile,v 1.4 2006/02/17 09:29:31 marttikuparinen Exp $
 
 DISTNAME=		xen-${VERSION}-src
 PKGNAME=		libxen-${VERSION}
@@ -19,7 +19,7 @@ VERSION=		2.0.7
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 pre-build:
-	${MKDIR} ${WRKSRC}/libxc/xen/NetBSD
-	${CP} ${FILESDIR}/xenio.h ${WRKSRC}/libxc/xen/NetBSD
+	${MKDIR} ${WRKSRC:Q}/libxc/xen/NetBSD
+	${CP} ${FILESDIR:Q}/xenio.h ${WRKSRC:Q}/libxc/xen/NetBSD
 
 .include "../../mk/bsd.pkg.mk"
