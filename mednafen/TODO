@@ -1,3 +1,5 @@
+0.4.9 out.
+
 Is the following still true?
 - Fails to build on NetBSD 2.1.0/i386:
 
