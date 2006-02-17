@@ -1,36 +1,150 @@
-@comment $NetBSD: PLIST,v 1.6 2005/05/02 20:33:39 jeremy-c-reed Exp $
-include/cherokee/avl.h
+@comment $NetBSD: PLIST,v 1.7 2006/02/17 23:21:22 rillig Exp $
+include/cherokee/admin_client.h
 include/cherokee/buffer.h
+include/cherokee/cherokee-config.h
 include/cherokee/cherokee.h
 include/cherokee/common.h
 include/cherokee/connection.h
+include/cherokee/connection_info.h
+include/cherokee/downloader.h
 include/cherokee/encoder.h
 include/cherokee/fdpoll.h
 include/cherokee/handler.h
+include/cherokee/header.h
 include/cherokee/http.h
 include/cherokee/list.h
-include/cherokee/log.h
-include/cherokee/plugin_table.h
-include/cherokee/plugin_table_entry.h
+include/cherokee/list_merge_sort.h
+include/cherokee/logger.h
+include/cherokee/macros.h
+include/cherokee/mime.h
+include/cherokee/mime_entry.h
+include/cherokee/module.h
+include/cherokee/module_loader.h
+include/cherokee/nonce.h
+include/cherokee/resolv_cache.h
 include/cherokee/server.h
 include/cherokee/table.h
-include/cherokee/virtual_server.h
-lib/cherokee/libcherokee_common.la
-lib/cherokee/libcherokee_gzip.la
-lib/cherokee/libcherokee_dirlist.la
-lib/cherokee/libcherokee_file.la
-lib/cherokee/libcherokee_gnomevfs.la
-lib/cherokee/libcherokee_nn.la
-lib/cherokee/libcherokee_redir.la
-lib/libcherokee.la
+include/cherokee/typed_table.h
+include/cherokee/url.h
+include/cherokee/util.h
+lib/cherokee/libplugin_admin.la
+lib/cherokee/libplugin_cgi.la
+lib/cherokee/libplugin_combined.la
+lib/cherokee/libplugin_common.la
+lib/cherokee/libplugin_dirlist.la
+lib/cherokee/libplugin_error_redir.la
+lib/cherokee/libplugin_fastcgi.la
+lib/cherokee/libplugin_file.la
+lib/cherokee/libplugin_gzip.la
+lib/cherokee/libplugin_htdigest.la
+lib/cherokee/libplugin_ncsa.la
+lib/cherokee/libplugin_nn.la
+lib/cherokee/libplugin_phpcgi.la
+lib/cherokee/libplugin_plain.la
+lib/cherokee/libplugin_read_config.la
+lib/cherokee/libplugin_redir.la
+lib/cherokee/libplugin_server_info.la
+lib/cherokee/libplugin_w3c.la
+lib/libcherokee-base.la
+lib/libcherokee-client.la
+lib/libcherokee-config.la
+lib/libcherokee-server.la
+lib/pkgconfig/cherokee.pc
+man/man1/cget.1
+man/man1/cherokee-config.1
 man/man1/cherokee.1
+man/man1/cherokee_logrotate.1
+sbin/cget
 sbin/cherokee
 sbin/cherokee-config
+sbin/cherokee-panic
+sbin/cherokee_logrotate
 share/aclocal/cherokee.m4
+share/cherokee/deps/combined.deps
+share/cherokee/deps/common.deps
+share/cherokee/deps/error_redir.deps
+share/cherokee/deps/nn.deps
+share/cherokee/deps/phpcgi.deps
+share/cherokee/icons/back.png
+share/cherokee/icons/binary.png
+share/cherokee/icons/blank.png
+share/cherokee/icons/bomb.png
+share/cherokee/icons/compressed.png
+share/cherokee/icons/folder.png
+share/cherokee/icons/image.png
+share/cherokee/icons/iso.png
+share/cherokee/icons/java.png
+share/cherokee/icons/movie.png
+share/cherokee/icons/pdf.png
+share/cherokee/icons/ps.png
+share/cherokee/icons/readme.png
+share/cherokee/icons/script.png
+share/cherokee/icons/sound.png
+share/cherokee/icons/tex.png
+share/cherokee/icons/text.png
+share/cherokee/icons/unknown.png
 share/cherokee/mime_types.txt
+share/doc/cherokee/Behavior_configuration.html
+share/doc/cherokee/CGI_executing.html
+share/doc/cherokee/Cget.html
+share/doc/cherokee/Combined_logger.html
+share/doc/cherokee/Common_behavior.html
+share/doc/cherokee/Compiling_and_Installing.html
+share/doc/cherokee/Configuration.html
+share/doc/cherokee/Current_events.html
+share/doc/cherokee/Directory_configuration.html
+share/doc/cherokee/Directory_listing.html
+share/doc/cherokee/Extension_configuration.html
+share/doc/cherokee/FastCGI.html
+share/doc/cherokee/File_sending.html
+share/doc/cherokee/Frequently_asked_questions.html
+share/doc/cherokee/How_to_generate_SSL_keys.html
+share/doc/cherokee/How_to_manage_Virtual_Host.html
+share/doc/cherokee/Icons_configuration.html
+share/doc/cherokee/Logging_system.html
+share/doc/cherokee/Mime_types_configuration.html
+share/doc/cherokee/NCSA_logger.html
+share/doc/cherokee/PHP_execution.html
+share/doc/cherokee/Redirections.html
+share/doc/cherokee/Request_configuration.html
+share/doc/cherokee/Server-conf-small.png
+share/doc/cherokee/Server_configuration.html
+share/doc/cherokee/U-Cherokee.html
+share/doc/cherokee/Validators.html
+share/doc/cherokee/W3C_logger.html
+share/doc/cherokee/WebApplications.html
+share/doc/cherokee/cherokee.png
+share/doc/cherokee/index.html
 share/examples/cherokee/cherokee.conf.default
+share/examples/cherokee/cherokee/advanced.conf
+share/examples/cherokee/cherokee/cherokee.conf
+share/examples/cherokee/cherokee/icons.conf
+share/examples/cherokee/cherokee/mime.compression.types
+share/examples/cherokee/cherokee/mime.types
+share/examples/cherokee/cherokee/mods-available/admin
+share/examples/cherokee/cherokee/mods-available/ssl
+share/examples/cherokee/cherokee/sites-available/default
+share/examples/cherokee/cherokee/sites-available/example.com
+share/examples/cherokee/cherokee/sites-enabled/default
 share/examples/rc.d/cherokee
+var/www/images/cherokee-logo.png
+var/www/images/default-bg.png
+var/www/images/powered_by_cherokee.png
+var/www/index.html
+@dirrm var/www/images
+@dirrm var/www
+@unexec ${RMDIR} %D/var 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/examples/rc.d 2>/dev/null || ${TRUE}
+@dirrm share/examples/cherokee/cherokee/ssl
+@dirrm share/examples/cherokee/cherokee/sites-enabled
+@dirrm share/examples/cherokee/cherokee/sites-available
+@dirrm share/examples/cherokee/cherokee/mods-enabled
+@dirrm share/examples/cherokee/cherokee/mods-available
+@dirrm share/examples/cherokee/cherokee
 @dirrm share/examples/cherokee
+@dirrm share/doc/cherokee
+@dirrm share/cherokee/icons
+@dirrm share/cherokee/deps
 @dirrm share/cherokee
 @dirrm lib/cherokee
 @dirrm include/cherokee
