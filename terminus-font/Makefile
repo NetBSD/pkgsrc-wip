@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/01/16 23:34:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/17 22:19:33 thomasklausner Exp $
 #
 
 DISTNAME=		terminus-font-4.16
@@ -9,13 +9,12 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.is-vn.bg/hamster/jimmy-en.html
 COMMENT=		Clean fixed width font
 
-
-USE_X11BASE=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--x11dir=${PREFIX}/lib/X11/fonts/misc
 
-FONTS_X11_DIRS=         ${PREFIX}/lib/X11/fonts/misc
+FONTS_DIRS.x11=		${PREFIX}/lib/X11/fonts/misc
+REQD_DIRS+=		${PREFIX}/lib/X11/fonts/misc
 
 .include "../../lang/perl5/buildlink3.mk"
-.include "../../mk/fonts.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
