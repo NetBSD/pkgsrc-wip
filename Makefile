@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2184 2006/02/17 05:59:40 jgoamakf Exp $
+# $Id: Makefile,v 1.2185 2006/02/17 20:34:50 adrian_p Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -858,7 +858,6 @@ SUBDIR+=	p5-UNIVERSAL-isa
 SUBDIR+=	p5-URI-Find
 SUBDIR+=	p5-URI-Find-Rule
 SUBDIR+=	p5-URI-Title
-SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-XML-Clean
 SUBDIR+=	p5-podlators
 SUBDIR+=	palm-db-tools
