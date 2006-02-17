@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2005/12/21 12:02:46 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/17 21:09:19 rillig Exp $
 
-DSS_VERSION=	5.5
 DISTNAME=	DarwinStreamingSrvr${DSS_VERSION}
 PKGNAME=	DarwinStreamingServer-${DSS_VERSION}
 CATEGORIES=	net
+MASTER_SITES=	http://www.opensource.apple.com/projects/streaming/release/
+DISTFILES=	DarwinStreamingSrvr${DSS_VERSION}-Source.tar
 
+MAINTAINER=	eggert@macvaerk.dtu.dk
 HOMEPAGE=	http://developer.apple.com/darwin/projects/streaming/
 COMMENT=	Open source version of Apple's QuickTime Streaming Server technology
 
-MASTER_SITES=	http://www.opensource.apple.com/projects/streaming/release/
-DISTFILES=	DarwinStreamingSrvr${DSS_VERSION}-Source.tar
 WRKSRC=		${WRKDIR}/DarwinStreamingSrvr${DSS_VERSION}-Source
 
-MAINTAINER=	eggert@macvaerk.dtu.dk
+DSS_VERSION=	5.5
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -27,9 +27,9 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 #ONLY_FOR_PLATFORM=      FreeBSD-*-* NetBSD-*-* Linux-*-* SunOS-*-* IRIX-*-* IRIX64-*-*
 
-INTERACTIVE_STAGE=      fetch build
+INTERACTIVE_STAGE=	fetch build
 
-_FETCH_MESSAGE= \
+_FETCH_MESSAGE=	\
 	${ECHO} "======================================================="; \
 	${ECHO} "  Darwin Streaming Server is available as a free";	   \
 	${ECHO} "  download under the APSL. Downloading the source";	   \
@@ -43,7 +43,7 @@ _FETCH_MESSAGE= \
 
 LICENSE=	apple-public-source-license
 
-REPLACE_PERL= \
+REPLACE_PERL+= \
 	WebAdmin/perlpath.pl				\
 	WebAdmin/src/streamingadminserver.pl		\
 	WebAdmin/WebAdminHtml/adminprotocol-lib.pl	\
@@ -84,18 +84,18 @@ SUBST_SED.dss=		\
 	-e "s|/usr/local/movies|${PREFIX}/share/streaming/movies|"	\
 	-e "s|/etc/streaming|${PKG_SYSCONFDIR}/streaming|"		\
 	-e "s|/usr/local|${PREFIX}|"					\
-	-e "s|\$INSTALLROOT/var/streaming/AdminHtml|${PREFIX}/share/streaming/AdminHtml|" \
+	-e "s|\$$INSTALLROOT/var/streaming/AdminHtml|${PREFIX}/share/streaming/AdminHtml|" \
 	-e "s|/var/streaming/playlists|${PREFIX}/share/streaming/playlists|" \
 	-e "s|/var/streaming/logs|${VARBASE}/log/streaming|"
 
-CONF_FILES=	${PKG_SYSCONFDIR}/streaming/qtgroups-dist ${PKG_SYSCONFDIR}/streaming/qtgroups
-CONF_FILES+=	${PKG_SYSCONFDIR}/streaming/qtusers-dist ${PKG_SYSCONFDIR}/streaming/qtusers
-CONF_FILES+=	${PKG_SYSCONFDIR}/streaming/relayconfig.xml-Sample ${PKG_SYSCONFDIR}/streaming/relayconfig.xml
-CONF_FILES+=	${PKG_SYSCONFDIR}/streaming/streamingserver.xml-dist ${PKG_SYSCONFDIR}/streaming/streamingserver.xml
+CONF_FILES=	${PKG_SYSCONFDIR:Q}/streaming/qtgroups-dist ${PKG_SYSCONFDIR:Q}/streaming/qtgroups
+CONF_FILES+=	${PKG_SYSCONFDIR:Q}/streaming/qtusers-dist ${PKG_SYSCONFDIR:Q}/streaming/qtusers
+CONF_FILES+=	${PKG_SYSCONFDIR:Q}/streaming/relayconfig.xml-Sample ${PKG_SYSCONFDIR:Q}/streaming/relayconfig.xml
+CONF_FILES+=	${PKG_SYSCONFDIR:Q}/streaming/streamingserver.xml-dist ${PKG_SYSCONFDIR:Q}/streaming/streamingserver.xml
 
 post-extract:
-	${RM} -rf ${WRKSRC}/dssPackageMetaData ${WRKSRC}/pubPackageMetaData \
-		${WRKSRC}/qtssPackageMetaData
+	${RM} -rf ${WRKSRC:Q}/dssPackageMetaData ${WRKSRC:Q}/pubPackageMetaData \
+		${WRKSRC:Q}/qtssPackageMetaData
 
 do-configure:
 	# nothing
@@ -104,7 +104,7 @@ do-build:
 	# This line does not work:
 	# cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${WRKSRC}/Buildit
 	# so we need to do things manually...
-	[ -f ${WRKSRC}/QTFileTools/QTTrackInfo.tproj/QTTrackInfo.o ] || (  \
+	[ -f ${WRKSRC:Q}/QTFileTools/QTTrackInfo.tproj/QTTrackInfo.o ] || (  \
 	${ECHO} "======================================================="; \
 	${ECHO} " To build, please";					   \
 	${ECHO} "   cd ${WRKSRC}";					   \
@@ -115,7 +115,7 @@ do-build:
 	)
 
 do-install:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${WRKSRC}/Install
+	cd ${WRKSRC:Q}; ${SETENV} ${MAKE_ENV} ${WRKSRC:Q}/Install
 
 # To Do:
 # - copy documentation into ${PREFIX}/share/doc/${PKGBASE}

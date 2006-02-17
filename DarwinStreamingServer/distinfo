@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/20 19:03:10 danieleggert Exp $
+$NetBSD: distinfo,v 1.2 2006/02/17 21:09:19 rillig Exp $
 
 SHA1 (DarwinStreamingSrvr5.5-Source.tar) = f7e4d5e0793dd78fc768d71cd5249867c9123e17
 RMD160 (DarwinStreamingSrvr5.5-Source.tar) = 06283c281321a468ffd8c24e4f88d9dfcaed3653
@@ -14,7 +14,7 @@ SHA1 (patch-ah) = c699baddac5fce4e974a0b2b992545255c6e9d05
 SHA1 (patch-ai) = e2d174cac6568725343443e1fc01545a5c984655
 SHA1 (patch-aj) = 3e5dd1ecf1892677937424966a6825735290f62d
 SHA1 (patch-ak) = 351c35db68160fbdf8492885c4ad05269e3efe13
-SHA1 (patch-al) = fd9b955d4210478e2ffe5cb400a16397984071d1
+SHA1 (patch-al) = 17f0eb0249961a4b352c83ecc6eb2c3d94bb632b
 SHA1 (patch-am) = 9c60374c55c3102744c43225da56ed06d844e3b9
 SHA1 (patch-an) = 91248634b1ab3e1961ce800183d965b45bd686dd
 SHA1 (patch-ao) = 271167cb450f6fe4bc81b4e9705ea4c6069d72c6
