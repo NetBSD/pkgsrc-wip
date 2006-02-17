@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2183 2006/02/17 01:51:55 minskim Exp $
+# $Id: Makefile,v 1.2184 2006/02/17 05:59:40 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -724,6 +724,7 @@ SUBDIR+=	p5-Apache-AuthenNTLM
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-Bit-Vector-Minimal
 SUBDIR+=	p5-CGI-Application-Plugin-DevPopup
+SUBDIR+=	p5-CGI-Application-Plugin-TT
 SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-CPANPLUS
 SUBDIR+=	p5-Cache-FastMmap
@@ -744,6 +745,7 @@ SUBDIR+=	p5-Catalyst-Plugin-SubRequest
 SUBDIR+=	p5-Catalyst-Plugin-Unicode-Encoding
 SUBDIR+=	p5-Catalyst-View-TT
 SUBDIR+=	p5-Class-Accessor-Chained
+SUBDIR+=	p5-Class-C3
 SUBDIR+=	p5-Class-DBI-AsForm
 SUBDIR+=	p5-Class-DBI-FromForm
 SUBDIR+=	p5-Class-DBI-Loader
