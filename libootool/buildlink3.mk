@@ -1,10 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/02/15 15:58:28 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/02/18 23:09:54 tnn2 Exp $
+
 
 .include "../../wip/valknut/Makefile.version"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBOOTOOL_BUILDLINK3_MK:=	${LIBOOTOOL_BUILDLINK3_MK}+
 
+# broken, but we can still pull in the other dependencies for dclib
+.if 0 #XXX
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	libootool
 .endif
@@ -16,6 +19,8 @@ BUILDLINK_PACKAGES+=	libootool
 BUILDLINK_DEPENDS.libootool+=	libootool>=${VALKNUT_PKG_VERSION}
 BUILDLINK_PKGSRCDIR.libootool?=	../../wip/libootool
 .endif	# LIBOOTOOL_BUILDLINK3_MK
+
+.endif  # XXX
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"

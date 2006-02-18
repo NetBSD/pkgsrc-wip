@@ -1,4 +1,27 @@
-@comment $NetBSD: PLIST,v 1.5 2006/02/15 17:33:51 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/02/18 23:09:54 tnn2 Exp $
+@comment xxx the following header files are removed on dclib HEAD
+include/dclib/core/casyncdns.h
+include/dclib/core/cbytearray.h
+include/dclib/core/cbz.h
+include/dclib/core/ccallback.h
+include/dclib/core/cconnection.h
+include/dclib/core/cfile.h
+include/dclib/core/clist.h
+include/dclib/core/cmanager.h
+include/dclib/core/cmd4.h
+include/dclib/core/cmd5.h
+include/dclib/core/cobject.h
+include/dclib/core/csingleton.h
+include/dclib/core/csocket.h
+include/dclib/core/cssl.h
+include/dclib/core/cstring.h
+include/dclib/core/cstringlist.h
+include/dclib/core/cthread.h
+include/dclib/core/czlib.h
+include/dclib/dcos.h
+include/dclib/hash/tigertree.h
+include/dclib/hash/tiger.h
+@comment end xxx
 include/dclib/cclient.h
 include/dclib/cclientssl.h
 include/dclib/cconfig.h
@@ -34,24 +57,24 @@ include/dclib/cuserlist.h
 include/dclib/cutils.h
 include/dclib/dclib.h
 include/dclib/dcobject.h
-include/dclib/hash/Encoder.h
-include/dclib/hash/HashValue.h
-include/dclib/hash/MerkleTree.h
-include/dclib/hash/TigerHash.h
-include/dclib/hash/compat.h
-include/dclib/xfer/cxfercommunication.h
-include/dclib/xfer/cxferfilecheck.h
-include/dclib/xfer/cxferfilecopy.h
-include/dclib/xfer/cxferhandler.h
-include/dclib/xfer/cxfermanager.h
-include/dclib/xfer/cxferqueue.h
-include/dclib/xfer/cxferrequest.h
-include/dclib/xfer/cxfersharelist.h
-include/dclib/xfer/cxferusrban.h
-include/dclib/xfer/cxferusrslot.h
+@comment include/dclib/hash/Encoder.h
+@comment include/dclib/hash/HashValue.h
+@comment include/dclib/hash/MerkleTree.h
+@comment tinclude/dclib/hash/TigerHash.h
+@comment include/dclib/hash/compat.h
+@comment include/dclib/xfer/cxfercommunication.h
+@comment include/dclib/xfer/cxferfilecheck.h
+@comment include/dclib/xfer/cxferfilecopy.h
+@comment include/dclib/xfer/cxferhandler.h
+@comment include/dclib/xfer/cxfermanager.h
+@comment include/dclib/xfer/cxferqueue.h
+@comment include/dclib/xfer/cxferrequest.h
+@comment include/dclib/xfer/cxfersharelist.h
+@comment include/dclib/xfer/cxferusrban.h
+@comment include/dclib/xfer/cxferusrslot.h
 lib/libdc.la
 lib/pkgconfig/dclib.pc
 @dirrm include/dclib/core
 @dirrm include/dclib/hash
-@dirrm include/dclib/xfer
+@comment dirrm include/dclib/xfer
 @dirrm include/dclib
