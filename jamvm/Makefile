@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/11/27 00:27:54 poppnk Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/18 03:51:11 poppnk Exp $
 #
 
-DISTNAME=		jamvm-1.4.0
+DISTNAME=		jamvm-1.4.2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jamvm/}
 
@@ -12,9 +12,19 @@ COMMENT=		Compact Java Virtual Machine
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-classpath-install-dir=${PREFIX}/
+USE_TOOLS+=	gmake
 
 DEPENDS+=	classpath-0.19:../../lang/classpath
 DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+.	if ${MACHINE_ARCH} == "i386"
+MACHINE_GNU_PLATFORM=i686-pc-linux-gnu
+.	endif
+.endif
+
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/jamvm ${PREFIX}/bin/
@@ -22,6 +32,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/jamvm/classes/
 	unzip -o ${WRKSRC}/lib/classes.zip -d ${PREFIX}/share/jamvm/classes/
 
+
+#.include "../../lang/classpath/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
