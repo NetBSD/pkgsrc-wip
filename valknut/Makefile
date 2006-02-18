@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2006/02/15 17:47:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/18 23:15:19 tnn2 Exp $
 #
 
 DISTNAME=	valknut
 CATEGORIES=	net x11
 
-MAINTAINER=	tnn@nygren.pp.se
+MAINTAINER=	tnn+nbsd@nygren.pp.se
 HOMEPAGE=	http://dcgui.berlios.de/
 COMMENT=	Direct Connect client using the QT toolkit (cvs version)
 
