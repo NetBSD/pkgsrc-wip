@@ -1,15 +1,11 @@
-# $Id: TODO,v 1.3 2005/11/05 13:16:32 poppnk Exp $
+# $Id: TODO,v 1.4 2006/02/18 12:43:55 poppnk Exp $
 
 * Rename to "muttng" when moving into the pkgsrc tree
-* more tests
 * patch-ab is to disable AUTH PLAIN and use CRAM-MD5 with
   libesmtp. Works for me, but should be discussed with
   muttng developers.
-* maybe the includes are not correct for all possible
-  options.
 
-
-tested on:
-	* NetBSD 3.0_BETA
-	* Debian GNU/Linux/pkgsrc (x86/ppc)
-	* FreeBSD7 (x86)
+(diff
+- auth_set_mechanism_flags (authctx, AUTH_PLUGIN_PLAIN, 0);
++ auth_set_mechanism_flags (authctx, AUTH_PLUGIN_EXTERNAL, 0);
+)

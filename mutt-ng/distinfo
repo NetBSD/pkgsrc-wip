@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/11/05 13:16:32 poppnk Exp $
+$NetBSD: distinfo,v 1.9 2006/02/18 12:43:55 poppnk Exp $
 
-SHA1 (muttng-20051104.tar.gz) = cee9efc18cd992fb38b8a9580f57b668a6b680b2
-RMD160 (muttng-20051104.tar.gz) = 50e73df2c5ca716cb4c8e80a0572b750036a4256
-Size (muttng-20051104.tar.gz) = 2732322 bytes
-SHA1 (patch-aa) = 0025694ae053f0f74e50ef0c0949ce018b7fda41
-SHA1 (patch-ab) = 98f102e7cad2a63fb8afc642047580d95fb8ce91
-SHA1 (patch-ac) = 0ace7bb123986a8dd4200fa38c43d069bb904ec4
+SHA1 (muttng-20060217.tar.gz) = ddf1d9a9eaeea64342f4c4f378445bbb00d7a944
+RMD160 (muttng-20060217.tar.gz) = 68abbcb451be64f1fafb4a051ca00158399e0f12
+Size (muttng-20060217.tar.gz) = 2733078 bytes

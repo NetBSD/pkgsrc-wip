@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2005/07/09 19:50:16 christian_gall Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/02/18 12:43:55 poppnk Exp $
 bin/fleang
 bin/muttng
+bin/muttng_dotlock
 bin/muttngbug
 bin/pgpewrapng
 bin/pgpringng
 bin/smime_keysng
+etc/Muttngrc
+etc/muttng-mime.types
 man/man1/fleang.1
 man/man1/muttng-flea.1
 man/man1/muttng.1
@@ -25,6 +28,7 @@ share/doc/muttng/TODO.mutt-ng
 share/doc/muttng/UPGRADING
 share/doc/muttng/applying-patches.txt
 share/doc/muttng/devel-notes.txt
+share/doc/muttng/html/muttng.css
 share/doc/muttng/manual.txt
 share/doc/muttng/patch-notes.txt
 share/doc/muttng/samples/Mush.rc
@@ -32,7 +36,7 @@ share/doc/muttng/samples/Pine.rc
 share/doc/muttng/samples/Tin.rc
 share/doc/muttng/samples/ca-bundle.crt
 share/doc/muttng/samples/colors.default
-share/doc/muttng/samples/colors.linux
+share/doc/muttng/samples/colors.${LOWER_OPSYS}
 share/doc/muttng/samples/gpg.rc
 share/doc/muttng/samples/grml-muttng
 share/doc/muttng/samples/iconv/iconv.aix-3.2.5.rc
@@ -92,6 +96,5 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/muttng.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/muttng.mo
 @dirrm share/doc/muttng/samples/iconv
 @dirrm share/doc/muttng/samples
-@exec ${MKDIR} %D/share/doc/muttng/html
 @dirrm share/doc/muttng/html
 @dirrm share/doc/muttng
