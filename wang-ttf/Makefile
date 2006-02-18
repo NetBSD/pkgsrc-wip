@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2005/12/10 17:47:52 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/18 10:02:03 thomasklausner Exp $
 
 DISTNAME=	wang-ttf-1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts chinese
 MASTER_SITES=	${MASTER_SITE_FREEBSD:=zh-wangttf/} \
 		ftp://cle.linux.org.tw/pub/fonts/wangfonts/ \
-		ftp://cle.linux.org.tw/pub/fonts/wangfonts/WCL/
+		http://nirc.encntc.edu.tw/web/fonts/wang/v040326/ \
+		http://apt.nc.hcc.edu.tw/pub/FreeSoftware/free_fonts/wangttf/ \
+		http://apt.nc.hcc.edu.tw/pub/FreeSoftware/free_fonts/wangttf/WCL/
 DISTFILES=	${FONT_FILES} ${MISC_FILES}
 
 MAINTAINER=	rxg@NetBSD.org
@@ -25,22 +27,22 @@ MISC_FILES=	Changes.txt Changes-WCL.txt README.b5
 DIST_SUBDIR=	wang-ttf
 EXTRACT_ONLY=	# empty
 
-USE_X11BASE=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf+=	${PREFIX}/lib/X11/fonts/TTF
+REQD_DIRS+=		${PREFIX}/lib/X11/fonts/TTF
 DOCDIR=		${PREFIX}/share/doc/wang-ttf
 
 do-install:
-	${INSTALL_DATA_DIR} ${FONTS_TTF_DIRS}
+	${INSTALL_DATA_DIR} ${FONTS_DIRS.ttf}
 	for f in ${FONT_FILES}; do \
-		${INSTALL_DATA} ${_DISTDIR}/$$f ${FONTS_TTF_DIRS}; \
+		${INSTALL_DATA} ${_DISTDIR}/$$f ${FONTS_DIRS.ttf}; \
 	done
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	for f in ${MISC_FILES}; do \
 		${INSTALL_DATA} ${_DISTDIR}/$$f ${DOCDIR}; \
 	done
 
-.include "../../mk/fonts.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
