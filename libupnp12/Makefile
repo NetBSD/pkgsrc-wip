@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/11 16:20:06 obache Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/18 11:41:34 obache Exp $
 #
 
 DISTNAME=	libupnp-1.2.1a
@@ -28,6 +28,5 @@ do-install:
 	cd ${WRKDIR:Q}/${DISTNAME:Q}/${d} && ${SETENV} ${MAKE_ENV} ${GMAKE} install
 .endfor
 
-.include "../../wip/libuuid/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
