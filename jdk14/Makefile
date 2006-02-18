@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/02/06 19:09:51 tvierling Exp $
+# $NetBSD: Makefile,v 1.30 2006/02/18 22:39:26 ghen Exp $
 
 JDK_VERSION=    	1.4.2
 JDK_PATCHSET_VERSION=   8
@@ -29,7 +29,7 @@ LICENSE=		scsl-2.3-license
 USE_PKGINSTALL=		yes
 USE_TOOLS+=		gmake m4
 USE_LANGUAGES=		c c++
-EXTRACT_CMD_OPTS.zip=	-q
+EXTRACT_CMD_OPTS.zip=	-a -q
 WRKSRC=			${WRKDIR}
 PLIST_SRC=      	PLIST.common
 
