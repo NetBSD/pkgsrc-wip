@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/19 23:30:59 mreriksson Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/19 23:44:09 mreriksson Exp $
 #
 
 DISTNAME=		ipmitool-1.8.6
-CATEGORIES=		wip
+CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ipmitool/}
 
 MAINTAINER=		ola@mrEriksson.net
