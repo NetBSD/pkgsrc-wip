@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/02/19 23:30:59 mreriksson Exp $
+
+--- src/ipmishell.c.orig	2006-02-20 00:15:26.000000000 +0100
++++ src/ipmishell.c
+@@ -109,7 +109,7 @@ int ipmi_shell_main(struct ipmi_intf * i
+ 	if (intf->keepalive) {
+ 		/* hook to keep lan sessions active */
+ 		shell_intf = intf;
+-		rl_event_hook = rl_event_keepalive;
++		// rl_event_hook = rl_event_keepalive;
+ #if defined(RL_READLINE_VERSION) && RL_READLINE_VERSION >= 0x0402
+ 		/* There is a bug in readline 4.2 and later (at least on FreeBSD):
+ 		 * timeout equal or greater than 1 second causes an infinite loop. */
