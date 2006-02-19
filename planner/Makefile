@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/08/11 10:08:23 absd Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/19 14:03:23 ondratu Exp $
 #
 
 DISTNAME=	planner-0.13
+PKGREVISION=            1
+
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/planner/0.13/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +17,7 @@ BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake pkg-config
+#USE_TOOLS+=		autoconf
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	libplanner-1.pc.in
@@ -24,11 +27,14 @@ CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ARGS+=	--enable-python-plugin
 CONFIGURE_ARGS+=	--enable-timetable
 CONFIGURE_ARGS+=	--disable-dotnet
-CONFIGURE_ARGS+=	--enable-database=yes
+#CONFIGURE_ARGS+=	--enable-database=yes
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
 
-.include "../../databases/libgda/buildlink3.mk"
+#pre-configure:
+#	@cd ${WRKSRC} && autoheader && autoconf
+
+#.include "../../databases/libgda/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -39,6 +45,7 @@ PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
