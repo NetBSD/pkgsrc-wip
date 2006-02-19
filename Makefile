@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2185 2006/02/17 20:34:50 adrian_p Exp $
+# $Id: Makefile,v 1.2186 2006/02/19 23:42:37 mreriksson Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -403,6 +403,7 @@ SUBDIR+=	interchange
 SUBDIR+=	io-server
 SUBDIR+=	io-vm
 SUBDIR+=	ipfm
+SUBDIR+=	ipmitools
 SUBDIR+=	iptables
 SUBDIR+=	iptstate
 SUBDIR+=	isc-dhclient
