@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2006/02/18 11:49:55 poppnk Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/20 11:51:20 poppnk Exp $
 #
 
 DISTNAME=		jamvm-1.4.2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jamvm/}
-PKGREVISION=		1
+PKGREVISION=		2
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://jamvm.sourceforge.net/
@@ -23,6 +23,9 @@ DEPENDS+=	classpath-0.19:../../lang/classpath
 .	if ${MACHINE_ARCH} == "i386"
 MACHINE_GNU_PLATFORM=i686-pc-linux-gnu
 .	endif
+.endif
+.if ${OPSYS} == "NetBSD"
+MACHINE_GNU_PLATFORM=${MACHINE_ARCH}-foo-openbsd
 .endif
 
 .include "../../devel/libffi/buildlink3.mk"
