@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/16 10:30:22 hfath Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/20 10:50:53 hfath Exp $
 
 DISTNAME=	tsm-5.2.2
 CATEGORIES=     sysutils
@@ -6,7 +6,7 @@ MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maint
 DISTFILES=	${RPMFILES}
 RPMFILES=	TIVsm-BA.i386.rpm TIVsm-API.i386.rpm
 
-MAINTAINER=	strawberry@toth.org.uk
+MAINTAINER=	hf@spg.tu-darmstadt.de
 HOMEPAGE=	http://www-3.ibm.com/software/tivoli/products/storage-mgr/
 COMMENT=        IBM Tivoli Storage Manager Client
 
