@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/12 03:04:43 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/20 10:43:15 poppnk Exp $
 #
 
 DISTNAME=		sshfs-fuse-1.4
-CATEGORIES=		wip
+PKGNAME=		fuse-sshfs-1.4
+CATEGORIES=		wip sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fuse/}
 
 MAINTAINER=		pancake@phreaker.net
