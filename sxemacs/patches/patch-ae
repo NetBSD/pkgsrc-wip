@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/02/20 00:10:47 hfath Exp $
+
+--- lwlib/lwlib-config.c.orig	2005-11-13 03:04:51.000000000 +0100
++++ lwlib/lwlib-config.c
+@@ -29,9 +29,9 @@ Boston, MA 02111-1307, USA.  */
+ #include "lwlib.h"
+ 
+ #include <X11/Xlib.h>		/* to get XlibSpecificationRelease */
+-/* #ifdef NEED_MOTIF */
++#ifdef NEED_MOTIF
+ #include <Xm/Xm.h>		/* to get XmVersion */
+-/* #endif */
++#endif
+ 
+ #if (XlibSpecificationRelease == 4)
+ int lwlib_uses_x11r4;
+@@ -49,7 +49,7 @@ int lwlib_uses_motif;
+ int lwlib_does_not_use_motif;
+ #endif
+ 
+-#if (XmVersion >= 1002)
++#if defined(XmVersion) && (XmVersion >= 1002)
+ int lwlib_uses_motif_1_2;
+ #else
+ int lwlib_does_not_use_motif_1_2;

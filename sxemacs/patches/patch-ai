@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2006/02/20 00:10:47 hfath Exp $
+
+--- src/unexfreebsd.c.orig	2005-11-13 03:04:54.000000000 +0100
++++ src/unexfreebsd.c
+@@ -273,7 +273,7 @@ copy_relocation_site(struct relocation_i
+ 	/* We can get relocation sites in the bss region, for objects whose
+ 	   contents are copied from a shared library.  We don't need or want
+ 	   to restore these at present. */
+-#ifndef sparc
++#if !defined(sparc) && !defined(__arm__)
+ 	if (ri->r_copy)
+ 		return;
+ #else

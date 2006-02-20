@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/02/20 00:10:47 hfath Exp $
+
+* See ${PREFIX}/lib/${DISTNAME}/etc/sample.init.el for a sample user
+  configuration.  Copying it to ~/.sxemacs/init.el is an easy start.
+  Alternatively, you can create ~/.sxemacs as a symlink to an existing
+  ~/.xemacs directory.
+
+* See ${PREFIX}/lib/${DISTNAME}/etc/sample.Xdefaults for a sample X
+  resource setting.
+
+* Install `xemacs-packages' for a full set of support packages.
+
+===========================================================================

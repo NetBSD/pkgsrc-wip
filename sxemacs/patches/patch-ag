@@ -1,0 +1,25 @@
+$NetBSD: patch-ag,v 1.1.1.1 2006/02/20 00:10:47 hfath Exp $
+
+--- src/gui-x.c.orig	2005-11-13 03:04:53.000000000 +0100
++++ src/gui-x.c
+@@ -29,9 +29,9 @@ Boston, MA 02111-1307, USA.  */
+ #include "lisp.h"
+ 
+ #include "console-x.h"
+-/* #ifdef LWLIB_USES_MOTIF */
++#ifdef LWLIB_USES_MOTIF
+ #include <Xm/Xm.h>		/* for XmVersion */
+-/* #endif */
++#endif
+ #include "gui-x.h"
+ #include "buffer.h"
+ #include "device.h"
+@@ -662,7 +662,7 @@ static void sanity_check_lwlib(void)
+ #else
+ 	MACROLET(lwlib_does_not_use_motif);
+ #endif
+-#if (XmVersion >= 1002)
++#if defined (XmVersion) && (XmVersion >= 1002)
+ 	MACROLET(lwlib_uses_motif_1_2);
+ #else
+ 	MACROLET(lwlib_does_not_use_motif_1_2);
