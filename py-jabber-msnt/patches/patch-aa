@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.3 2006/02/21 19:03:05 schnoebe Exp $
+
+--- config-example.xml.orig	2006-02-17 08:44:28.000000000 -0600
++++ config-example.xml
+@@ -12,9 +12,9 @@
+ 
+ <!-- The location of the spool directory.. if relative, relative to the PyMSNt dir.
+ Do not include the jid of the transport -->
+-<!-- <spooldir>/path/to/data</spooldir> -->
++<spooldir>@JABBERD_SPOOLDIR@</spooldir>
+ <!-- The location of the PID file, relative to the PyMSNt directory -->
+-<pid>PyMSNt.pid</pid>
++<pid>@JABBERD_PIDDIR@/pymsnt.pid</pid>
+ <!-- If set, the transport will background itself when run -->
+ <background/>
+ <!-- The Twisted reactor to choose. Pick poll or epoll on Linux, kqueue on BSD. Or leave as default (select) -->
+@@ -78,6 +78,6 @@ Do not include the jid of the transport 
+ <!-- <debugLevel>0</debugLevel> -->
+ 
+ <!-- The file to log to. Leave this disabled for stdout -->
+-<!-- <debugFile>debug.log</debugFile> -->
++<!-- <debugFile>@JABBERD_LOGDIR@/pymsnt.debug</debugFile> -->
+ 
+ </pymsnt>
