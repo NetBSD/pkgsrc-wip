@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2006/02/21 19:03:05 schnoebe Exp $
+$NetBSD: patch-aa,v 1.4 2006/02/21 20:30:06 schnoebe Exp $
 
 --- config-example.xml.orig	2006-02-17 08:44:28.000000000 -0600
 +++ config-example.xml
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.3 2006/02/21 19:03:05 schnoebe Exp $
  <!-- The location of the spool directory.. if relative, relative to the PyMSNt dir.
  Do not include the jid of the transport -->
 -<!-- <spooldir>/path/to/data</spooldir> -->
-+<spooldir>@JABBERD_SPOOLDIR@</spooldir>
++<spooldir>@JABBERD_SPOOLDIR@/</spooldir>
  <!-- The location of the PID file, relative to the PyMSNt directory -->
 -<pid>PyMSNt.pid</pid>
 +<pid>@JABBERD_PIDDIR@/pymsnt.pid</pid>

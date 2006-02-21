@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2006/02/21 19:02:20 schnoebe Exp $
+$NetBSD: patch-ae,v 1.2 2006/02/21 20:30:06 schnoebe Exp $
 
 --- src/main.py.orig	2006-02-17 08:44:28.000000000 -0600
 +++ src/main.py
@@ -7,7 +7,7 @@ $NetBSD: patch-ae,v 1.1 2006/02/21 19:02:20 schnoebe Exp $
  import config
  import xmlconfig
 -configFile = "config.xml"
-+configFile = os.path.join(@PKG_SYSCONFDIR@, "pymsnt.xml")
++configFile = os.path.join("@PKG_SYSCONFDIR@", "pymsnt.xml")
  configOptions = {}
  opts, args = getopt.getopt(sys.argv[1:], "bc:o:dDgtlp:h", ["background", "config=", "option=", "debug", "Debug", "garbage", "traceback", "log=", "pid=", "help"])
  for o, v in opts:

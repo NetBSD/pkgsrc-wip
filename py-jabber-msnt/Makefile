@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/21 19:02:18 schnoebe Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/21 20:30:05 schnoebe Exp $
 
 DISTNAME=		pymsnt-0.11
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -66,7 +66,7 @@ do-install:
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing Paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	config-example.xml PyMSNt.py src/main.py
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g' \
 			-e 's,@TRANSPORTDIR@,${TRANSPORTDIR},g' \
