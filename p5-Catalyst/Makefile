@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/02 21:24:10 absd Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/21 10:48:34 jgoamakf Exp $
 
 DISTNAME=	Catalyst-5.63
 PKGNAME=	p5-${DISTNAME}
@@ -15,14 +15,14 @@ DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
 DEPENDS+=      	p5-Class-Data-Inheritable>=0:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Class-Inspector>=0:../../devel/p5-Class-Inspector
 DEPENDS+=       {perl>=5.4.0,p5-CGI>=3.06}:../../www/p5-CGI
-DEPENDS+=	p5-File-Modified>=0:../../wip/p5-File-Modified
+DEPENDS+=	p5-File-Modified>=0:../../devel/p5-File-Modified
 DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTTP-Body>=0.5:../../wip/p5-HTTP-Body
 DEPENDS+=	p5-libwww>=5.801:../../www/p5-libwww
 DEPENDS+=	p5-HTTP-Request-AsCGI>=0.5:../../wip/p5-HTTP-Request-AsCGI
 DEPENDS+=	p5-MIME-Types>=0:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Module-Pluggable-Fast>=0.16:../../wip/p5-Module-Pluggable-Fast
-DEPENDS+=	p5-NEXT>=0:../../wip/p5-NEXT
+DEPENDS+=	p5-NEXT>=0:../../devel/p5-NEXT
 DEPENDS+=	p5-Path-Class>=0.09:../../wip/p5-Path-Class
 DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Template-Toolkit>=0:../../www/p5-Template-Toolkit
