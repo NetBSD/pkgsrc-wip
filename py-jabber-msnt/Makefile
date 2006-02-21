@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2006/01/17 10:20:46 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/21 19:02:18 schnoebe Exp $
 
-DISTNAME=		pymsnt-0.10.3
+DISTNAME=		pymsnt-0.11
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
 MASTER_SITES=		http://msn-transport.jabberstudio.org/tarballs/
@@ -35,6 +35,8 @@ USE_PKGINSTALL=		yes
 
 RCD_SCRIPTS=	pymsnt
 
+PYTHON_PATCH_SCRIPTS+=	PyMSNt.py
+
 TRANSPORTDIR=		${JABBERD_TRANSDIR}/pymsnt
 
 FILES_SUBST+=		TRANSPORTDIR=${TRANSPORTDIR:Q}
@@ -49,8 +51,8 @@ CONF_FILES=	${EGDIR}/pymsnt.xml ${PKG_SYSCONFDIR}/pymsnt.xml
 
 do-install:
 	@ ${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
-	@ cd ${WRKSRC}/src && \
-	for i in `find . \( \( -type f -name '*.orig' -o \
+	@ cd ${WRKSRC} && \
+	for i in `find src data \( \( -type f -name '*.orig' -o \
 			-type d -name .svn \) -prune \) -o -type f -print` ;\
 	do \
 	    ${ECHO} "Installing $$i -> ${PREFIX}/${TRANSPORTDIR}/$$i";\
@@ -58,14 +60,14 @@ do-install:
 	    ${INSTALL_SCRIPT} $$i ${PREFIX}/${TRANSPORTDIR}/$$i ;\
 	done
 	@ cd ${WRKSRC}; \
-	${INSTALL_SCRIPT} PyMSNt.tac ${PREFIX}/${TRANSPORTDIR}
+	${INSTALL_SCRIPT} PyMSNt.py ${PREFIX}/bin/PyMSNt
 	${INSTALL_DATA_DIR} ${EGDIR};\
 	${INSTALL_DATA} ${WRKSRC}/config-example.xml ${EGDIR}/pymsnt.xml
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing Paths
 SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	config-example.xml PyMSNt.tac
+SUBST_FILES.paths=	config-example.xml PyMSNt.py src/main.py
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g' \
 			-e 's,@TRANSPORTDIR@,${TRANSPORTDIR},g' \
 			-e 's,@JABBERD_SPOOLDIR@,${JABBERD_SPOOLDIR},g' \
