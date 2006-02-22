@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/19 14:06:40 plunky Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/22 21:13:15 plunky Exp $
 
 DISTNAME=		lzs-lkm-1.2
 CATEGORIES=		net
@@ -22,7 +22,7 @@ WRKSRC=			${WRKDIR:Q}/ppp-lzs-1.2
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.lkm
+PKG_OPTIONS_VAR=	PKG_OPTIONS.lzs-lkm
 PKG_SUPPORTED_OPTIONS=	lkm-diagnostic lkm-debug lkm-lockdebug lkm-malloclog lkm-multiprocessor
 
 .include "../../mk/bsd.options.mk"
