@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2006/02/22 20:00:17 koifren Exp $
+bin/ldp
