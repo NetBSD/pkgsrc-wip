@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/10 01:36:37 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2006/02/22 01:48:08 jeremy-c-reed Exp $
 
-SHA1 (libdrm-1.0.5.tar.gz) = 0e4ac4f6dd5749f3b57fd9c743745a247943d43c
-RMD160 (libdrm-1.0.5.tar.gz) = d34b2ebd2ded3eb34c947c0d9ecbabf23373cb5a
-Size (libdrm-1.0.5.tar.gz) = 370930 bytes
+SHA1 (libdrm-2.0.tar.gz) = 679d4b74b93a429bfd28ab4a01b0c80ffdc9ab1c
+RMD160 (libdrm-2.0.tar.gz) = c00bb21572c9ec843a1335f7da8a0616b985ba13
+Size (libdrm-2.0.tar.gz) = 370965 bytes
