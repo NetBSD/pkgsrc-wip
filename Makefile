@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2188 2006/02/21 10:50:39 jgoamakf Exp $
+# $Id: Makefile,v 1.2189 2006/02/23 09:49:29 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -836,6 +836,7 @@ SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
 SUBDIR+=	p5-PluceneSimple
 SUBDIR+=	p5-Quota
 SUBDIR+=	p5-Return-Value
+SUBDIR+=	p5-Template-Provider-Encoding
 SUBDIR+=	p5-Template-Timer
 SUBDIR+=	p5-Test-Class
 SUBDIR+=	p5-Test-Differences
@@ -1180,6 +1181,7 @@ SUBDIR+=	sunterlib
 SUBDIR+=	supertux
 SUBDIR+=	svgalib
 SUBDIR+=	swami
+SUBDIR+=	swfmill
 SUBDIR+=	swftools
 SUBDIR+=	sxemacs
 SUBDIR+=	sysklogd
