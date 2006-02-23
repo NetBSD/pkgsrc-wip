@@ -1,0 +1,8 @@
+swfmill is a tool to process Shockwave Flash(TM) (SWF) files.
+It can convert SWF from and to an XML-dialect called "swfml",
+which is closely modeled after the SWF file format.
+
+It also provides a libxslt-based XSL transformator that
+supports an extension ("swft") which helps with generating
+IDs for SWF objects and can import an SWF as XML using an
+XPath command (swft:document()).

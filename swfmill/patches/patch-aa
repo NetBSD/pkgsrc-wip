@@ -1,0 +1,56 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/02/23 09:42:12 jgoamakf Exp $
+
+--- configure.orig	2006-02-22 14:19:40.000000000 +0900
++++ configure	2006-02-22 14:19:44.000000000 +0900
+@@ -20359,12 +20359,12 @@
+   if test "x$ac_cv_env_PNG_CFLAGS_set" = "xset"; then
+ 	pkg_cv_PNG_CFLAGS=$ac_cv_env_PNG_CFLAGS_value
+ elif test -n "$PKG_CONFIG"; then
+-	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"libpng\" >/dev/null 2>&1") >&5
+-  ($PKG_CONFIG --exists "libpng" >/dev/null 2>&1) 2>&5
++	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"libpng12\" >/dev/null 2>&1") >&5
++  ($PKG_CONFIG --exists "libpng12" >/dev/null 2>&1) 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-		pkg_cv_PNG_CFLAGS=`$PKG_CONFIG --cflags "libpng" 2>/dev/null`
++		pkg_cv_PNG_CFLAGS=`$PKG_CONFIG --cflags "libpng12" 2>/dev/null`
+ 	else
+ 		pkg_failed=yes
+ 	fi
+@@ -20382,12 +20382,12 @@
+   if test "x$ac_cv_env_PNG_LIBS_set" = "xset"; then
+ 	pkg_cv_PNG_LIBS=$ac_cv_env_PNG_LIBS_value
+ elif test -n "$PKG_CONFIG"; then
+-	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"libpng\" >/dev/null 2>&1") >&5
+-  ($PKG_CONFIG --exists "libpng" >/dev/null 2>&1) 2>&5
++	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"libpng12\" >/dev/null 2>&1") >&5
++  ($PKG_CONFIG --exists "libpng12" >/dev/null 2>&1) 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-		pkg_cv_PNG_LIBS=`$PKG_CONFIG --libs "libpng" 2>/dev/null`
++		pkg_cv_PNG_LIBS=`$PKG_CONFIG --libs "libpng12" 2>/dev/null`
+ 	else
+ 		pkg_failed=yes
+ 	fi
+@@ -20399,7 +20399,7 @@
+ echo "${ECHO_T}$pkg_cv_PNG_LIBS" >&6
+ 
+ if test $pkg_failed = yes; then
+-	PNG_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libpng"`
++	PNG_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libpng12"`
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$PNG_PKG_ERRORS" 1>&5
+ 
+@@ -20978,6 +20978,10 @@
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++    # Avoid regenerating for rechecks on pkgsrc
++    exit 0
++    # Avoid regenerating for rechecks on pkgsrc
++    exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;

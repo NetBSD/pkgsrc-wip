@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/23 09:42:12 jgoamakf Exp $
+bin/swfmill
+lib/libswfmillxslt.a
+lib/libswfmillxslt.la
+lib/libswfmillxslt.so
+lib/libswfmillxslt.so.0
+lib/libswfmillxslt.so.0.0.0
+lib/libswft.a
+lib/libswft.la
+lib/libswft.so
+lib/libswft.so.0
+lib/libswft.so.0.0.0

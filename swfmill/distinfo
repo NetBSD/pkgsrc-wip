@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/02/23 09:42:12 jgoamakf Exp $
+
+SHA1 (swfmill-0.2.11.tar.gz) = f33901266bd8556e07676b8792d5d59664e106bc
+RMD160 (swfmill-0.2.11.tar.gz) = 4b35ac5d36225dae70462aff70f590ada246d3ea
+Size (swfmill-0.2.11.tar.gz) = 445673 bytes
+SHA1 (patch-aa) = 8a076da0a456bf417d0a5e40e510f39bf08f3492
