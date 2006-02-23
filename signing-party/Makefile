@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/23 15:51:10 jtonio Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/23 16:18:39 jtonio Exp $
 
 DISTNAME=	signing-party_0.4.4.orig
 PKGNAME=	signing-party-0.4.4
@@ -25,7 +25,7 @@ REPLACE_PERL+=	caff/caff caff/pgp-fixkey caff/pgp-clean \
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	caff/caff keylookup/keylookup
+SUBST_FILES.paths=	caff/caff keylookup/keylookup keylookup/keylookup.1
 SUBST_SED.paths=	-e 's,/usr/,${PREFIX}/,g'
 
 do-install:
