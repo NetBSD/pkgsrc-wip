@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2006/02/22 20:00:17 koifren Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/23 13:24:34 koifren Exp $
 bin/ldp
+man/man8/ldp.8
