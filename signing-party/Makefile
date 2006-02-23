@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/02/23 15:17:29 jtonio Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/23 15:51:10 jtonio Exp $
 
 DISTNAME=	signing-party_0.4.4.orig
 PKGNAME=	signing-party-0.4.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
 
@@ -14,6 +14,7 @@ DEPENDS+=	gnupg>=1.4.2:../../security/gnupg
 DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
 DEPENDS+=	p5-GnuPG-Interface>=0.34:../../security/p5-GnuPG-Interface
 DEPENDS+=	p5-MIME-tools>=5.419:../../mail/p5-MIME-tools
+DEPENDS+=	dialog>=1.0:../../misc/dialog
 
 WRKSRC=		${WRKDIR}/signing-party-0.4.4
 USE_TOOLS+=	gmake pod2man
@@ -23,8 +24,8 @@ REPLACE_PERL+=	caff/caff caff/pgp-fixkey caff/pgp-clean \
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	pre-build
-SUBST_FILES.paths=	caff/caff
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	caff/caff keylookup/keylookup
 SUBST_SED.paths=	-e 's,/usr/,${PREFIX}/,g'
 
 do-install:
