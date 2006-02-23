@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/02/23 10:50:58 jtonio Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/23 15:17:29 jtonio Exp $
 
 DISTNAME=	signing-party_0.4.4.orig
 PKGNAME=	signing-party-0.4.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
 
@@ -17,9 +17,15 @@ DEPENDS+=	p5-MIME-tools>=5.419:../../mail/p5-MIME-tools
 
 WRKSRC=		${WRKDIR}/signing-party-0.4.4
 USE_TOOLS+=	gmake pod2man
-REPLACE_PERL=	caff/caff caff/pgp-fixkey caff/pgp-clean \
+REPLACE_PERL+=	caff/caff caff/pgp-fixkey caff/pgp-clean \
 		gpg-key2ps/gpg-key2ps gpgsigs/gpgsigs \
 		gpglist/gpglist keylookup/keylookup
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
+SUBST_STAGE.paths=	pre-build
+SUBST_FILES.paths=	caff/caff
+SUBST_SED.paths=	-e 's,/usr/,${PREFIX}/,g'
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/caff/caff ${PREFIX}/bin
@@ -38,5 +44,11 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/gpglist/gpglist.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/keylookup/keylookup.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/gpg-mailkeys/gpg-mailkeys.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/signing-party
+	${INSTALL_DATA} ${WRKSRC}/caff/README.many-keys ${PREFIX}/share/doc/signing-party
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/signing-party/examples
+	${INSTALL_DATA} ${WRKSRC}/caff/caffrc.sample ${PREFIX}/share/doc/signing-party/examples
+	${INSTALL_DATA} ${WRKSRC}/gpgsigs/gpgsigs-lt2k5.txt ${PREFIX}/share/doc/signing-party/examples
+	${INSTALL_DATA} ${WRKSRC}/gpgsigs/gpgsigs-lt2k5-annotated.txt ${PREFIX}/share/doc/signing-party/examples
 
 .include "../../mk/bsd.pkg.mk"
