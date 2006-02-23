@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2006/01/24 20:28:26 jtonio Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/23 11:19:08 jtonio Exp $
 
-DISTNAME=      tuareg-mode-1.45.2
+DISTNAME=      tuareg-mode-1.45.3
 PKGNAME=       ${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=    devel editors
 MASTER_SITES=  http://www-rocq.inria.fr/~acohen/tuareg/mode/
