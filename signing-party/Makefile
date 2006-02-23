@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/11/20 12:41:43 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.3 2006/02/23 10:50:58 jtonio Exp $
 
 DISTNAME=	signing-party_0.4.4.orig
 PKGNAME=	signing-party-0.4.4
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
 
@@ -12,7 +12,8 @@ COMMENT=	Various OpenPGP related tools
 
 DEPENDS+=	gnupg>=1.4.2:../../security/gnupg
 DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
-DEPENDS+=        p5-GnuPG-Interface>=0.34:../../security/p5-GnuPG-Interface
+DEPENDS+=	p5-GnuPG-Interface>=0.34:../../security/p5-GnuPG-Interface
+DEPENDS+=	p5-MIME-tools>=5.419:../../mail/p5-MIME-tools
 
 WRKSRC=		${WRKDIR}/signing-party-0.4.4
 USE_TOOLS+=	gmake pod2man
