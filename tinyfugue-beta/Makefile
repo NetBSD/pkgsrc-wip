@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:03 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/23 18:59:16 martijnb Exp $
 #
-
 DISTNAME=		tf-50b6
 CATEGORIES=		net
+PKGREVISION=		1
 MASTER_SITES=		http://ftp.tcp.com/pub/mud/Clients/tinyfugue/
 
 MAINTAINER=		martijn.van.buul@gmail.com
