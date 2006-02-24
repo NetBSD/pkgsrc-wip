@@ -1,17 +1,24 @@
-@comment $NetBSD: PLIST,v 1.4 2006/02/06 19:51:08 ghen Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/02/24 17:21:02 ghen Exp $
 bin/XaraLX
+share/XaraLX/Designs/53 Corvette.xar
+share/XaraLX/Designs/55 Mercedes.xar
 share/XaraLX/Designs/BLUECAR.xar
 share/XaraLX/Designs/CatWoman graphs.xar
+share/XaraLX/Designs/Cube4.xar
 share/XaraLX/Designs/EngineTimings.xar
 share/XaraLX/Designs/Fill Types simple.xar
 share/XaraLX/Designs/Girard_simple.xar
+share/XaraLX/Designs/Groucho2.xar
 share/XaraLX/Designs/JagSS100 simple.xar
+share/XaraLX/Designs/Jose Viper.xar
 share/XaraLX/Designs/Phil Hill-fontsremoved.xar
 share/XaraLX/Designs/Probe.xar
 share/XaraLX/Designs/Simple Sphere.xar
+share/XaraLX/Designs/SoftShadow.xar
 share/XaraLX/Designs/Spitfire.xar
 share/XaraLX/Designs/WATCH.xar
 share/XaraLX/Designs/WATCH2.xar
+share/XaraLX/Designs/Watch4.xar
 share/XaraLX/Designs/amurdove.xar
 share/XaraLX/Designs/feathers.xar
 share/XaraLX/Designs/leafgirl.xar
