@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2006/01/08 17:56:50 shattered Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/02/24 22:18:15 thomasklausner Exp $
 bin/xmms2
+bin/xmms2-et
+bin/xmms2-launcher
 bin/xmms2d
 include/xmms2/xmms/xmms_config.h
 include/xmms2/xmms/xmms_decoder.h
@@ -44,6 +46,8 @@ lib/pkgconfig/xmms2-client-ecore.pc
 lib/pkgconfig/xmms2-client-glib.pc
 lib/pkgconfig/xmms2-client.pc
 lib/pkgconfig/xmms2-plugin.pc
+lib/xmms2/libxmms_null.so
+share/xmms2/scripts/startup.d/xmms2-et-launcher.sh
 ${PYREX}${PYSITELIB}/xmmsclient.so
 ${RUBY}lib/ruby/site_ruby/1.8/${MACHINE_ARCH}-${LOWER_OPSYS}elf/xmmsclient.so
 ${RUBY}lib/ruby/site_ruby/1.8/${MACHINE_ARCH}-${LOWER_OPSYS}elf/xmmsclient_glib.so
@@ -65,6 +69,8 @@ lib/xmms2/libxmms_wave.so
 man/man1/xmms2.1
 man/man8/xmms2d.8
 share/xmms2/dismantled-the_swarm_clip.ogg
+@dirrm share/xmms2/scripts/startup.d
+@dirrm share/xmms2/scripts
 @dirrm share/xmms2
 @dirrm lib/xmms2
 ${RUBY}@dirrm lib/ruby/site_ruby/1.8/${MACHINE_ARCH}-${LOWER_OPSYS}elf
