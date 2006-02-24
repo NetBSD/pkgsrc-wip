@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/17 18:25:28 poppnk Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/24 01:39:00 poppnk Exp $
 #
 
 DISTNAME=		git-1.2.1
@@ -10,12 +10,11 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://git.or.cz/
 COMMENT=		Tree History Storage Tool
 
+CONFLICTS+=		git-* # misc/git
+
 MAKE_ENV=	"DESTDIR="
 MAKE_ENV+=	"HOME=${PREFIX}/"
 USE_TOOLS+=	gmake
-
-# TODO: add python as dependency? or just show a message?
-# I prefer no python dependency.
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
