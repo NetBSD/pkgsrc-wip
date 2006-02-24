@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2006/02/17 19:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/24 22:46:21 thomasklausner Exp $
 #
 
-DISTNAME=	mednafen-0.4.9
+DISTNAME=	mednafen-0.5.1
 CATEGORIES=	emulators
 MASTER_SITES=	http://mednafen.com/releases/
 EXTRACT_SUFX=	.tar.bz2
