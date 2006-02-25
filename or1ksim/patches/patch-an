@@ -1,0 +1,31 @@
+$NetBSD: patch-an,v 1.1 2006/02/25 18:06:55 kheinz Exp $
+--- sim.cfg.orig	2005-07-05 08:33:24.000000000 +0200
++++ sim.cfg
+@@ -1,4 +1,4 @@
+-/* sim.cfg -- Simulator configuration script file
++/* or1ksim.cfg -- Simulator configuration script file
+    Copyright (C) 2001-2002, Marko Mlinar, markom@opencores.org
+ 
+ This file is part of OpenRISC 1000 Architectural Simulator.
+@@ -26,9 +26,9 @@ Foundation, Inc., 675 Mass Ave, Cambridg
+    like this one. The user can switch between configurations at startup by
+    specifying the required configuration file with the -f <filename.cfg> option.
+    If no configuration file is specified or1ksim searches for the default
+-   configuration file sim.cfg. First it searches for './sim.cfg'. If this
+-   file is not found, it searches for '~/or1k/sim.cfg'. If this file is
+-   not found too, it reverts to the built-in default configuration.
++   configuration file or1ksim.cfg. First it searches for './or1ksim.cfg'. If
++   this file is not found, it searches for '~/.or1ksim/or1ksim.cfg'. If this
++   file is not found too, it reverts to the built-in default configuration.
+    
+    NOTE: Users should not rely on the built-in configuration, since the
+          default configuration may differ between version.
+@@ -715,7 +715,7 @@ section ethernet
+   baseaddr = 0x92000000
+   dma = 0
+   irq = 4
+-  rtx_type = 1
++  rtx_type = 0
+   tx_channel = 0
+   rx_channel = 1
+   rxfile = "eth0.rx"

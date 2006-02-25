@@ -1,0 +1,45 @@
+$NetBSD: patch-aj,v 1.1 2006/02/25 18:06:55 kheinz Exp $
+--- configure.in.orig	2005-09-29 00:54:55.000000000 +0200
++++ configure.in
+@@ -17,14 +17,7 @@ SIMVERSION=1.2
+ dnl make sure we are using a recent autoconf version
+ AC_PREREQ(2.59)
+ 
+-dnl yuck
+-case "$target_cpu" in
+-or32*)	CPU_ARCH=or32;
+-	ARCH_ISA=OR32;;
+-dlx*)	CPU_ARCH=dlx;
+-	ARCH_ISA=DLX;;
+-*)      AC_MSG_ERROR(Unknown target architechture $target_cpu);;
+-esac
++CPU_ARCH=or32;
+ AC_SUBST(CPU_ARCH)
+ 
+ # We want these before the checks, so the checks can modify their values.
+@@ -60,6 +53,16 @@ AC_CHECK_HEADERS(unistd.h stdlib.h varar
+ 		sys/ptem.h sys/pte.h sys/stream.h sys/stropts.h sys/select.h \
+ 		termcap.h termios.h termio.h sys/file.h locale.h\
+ 		net/ethernet.h sys/ethernet.h malloc.h inttypes.h)
++AC_CHECK_HEADERS([sys/types.h])
++AC_CHECK_HEADERS([net/if.h])
++AC_CHECK_HEADERS([net/if_ether.h], [], [],
++[#if HAVE_SYS_TYPES_H
++# include <sys/types.h>
++#endif
++#if HAVE_NET_IF_H
++# include <net/if.h>
++#endif
++])
+ AC_C_BIGENDIAN
+ 
+ dnl check for "long long" (added by Erez)
+@@ -75,6 +78,8 @@ AC_CHECK_SIZEOF(int, 1)
+ AC_CHECK_SIZEOF(long, 1)
+ 
+ dnl check for GNU readline
++AC_SEARCH_LIBS(tgetent, [termcap termlib curses ncurses tinfo], [],
++            AC_MSG_ERROR([no relevant library found containing tgetent]))
+ AC_CHECK_LIB(readline, add_history)
+ 
+ dnl yuck

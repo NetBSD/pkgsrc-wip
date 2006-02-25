@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2006/02/25 18:06:55 kheinz Exp $
+--- config.h.in.orig	2005-09-29 00:54:55.000000000 +0200
++++ config.h.in
+@@ -62,6 +62,9 @@
+ /* Define to 1 if you have the <ndir.h> header file, and it defines `DIR'. */
+ #undef HAVE_NDIR_H
+ 
++/* Define to 1 if you have the <net/if_ether.h> header file. */
++#undef HAVE_NET_IF_ETHER_H
++
+ /* Define to 1 if you have the <net/ethernet.h> header file. */
+ #undef HAVE_NET_ETHERNET_H
+ 

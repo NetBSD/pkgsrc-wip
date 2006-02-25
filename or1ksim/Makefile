@@ -1,38 +1,36 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/25 18:06:55 kheinz Exp $
 #
 
-DISTNAME=	or1k_or1ksim-stable_0_1_x
-PKGNAME=	or1ksim-0.1.x
+DISTNAME=	or1ksim-0.2.0rc3
 CATEGORIES=	emulators
-DYNAMIC_MASTER_SITES=YES
+MASTER_SITES=	http://www.opencores.org/projects.cgi/web/or1k/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.opencores.org/projects.cgi/web/or1k/architectural_simulator
-COMMENT=	OpenRISC emulator
-
-BUILD_DEPENDS+= wget>=1.9.1nb2:../../net/wget
+COMMENT=	OpenRISC 1000 (OR1K) architecture simulator
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-WRKSRC=       ${WRKDIR}/or1k/or1ksim
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-execution=simple
+INSTALLATION_DIRS=	bin share/examples/or1ksim share/doc/or1ksim
 
-GNU_CONFIGURE=  YES
-
-CONFIGURE_ENV+=	OR1KSIM_CPU="or32"
+USE_GNU_READLINE=	yes # uses rl_event_hook
 
 post-build:
-	${MV} ${WRKSRC}/sim ${WRKSRC}/or1ksim
 	${MV} ${WRKSRC}/sim.cfg ${WRKSRC}/or1ksim.cfg
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/or1ksim ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PKGBASE}
-.for f in AUTHORS BUGS COPYING INSTALL ChangeLog NEWS README README.gdb TODO
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/${PKGBASE}
-.endfor
-.for f in or1ksim.cfg virtex.tim
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/examples/${PKGBASE}
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/or1ksim.cfg ${PREFIX}/share/examples/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/virtex.tim ${PREFIX}/share/examples/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/NEWS ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README.gdb ${PREFIX}/share/doc/${PKGBASE}
 
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

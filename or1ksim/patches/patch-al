@@ -1,0 +1,23 @@
+$NetBSD: patch-al,v 1.1 2006/02/25 18:06:55 kheinz Exp $
+--- Makefile.am.orig	2005-02-09 19:18:47.000000000 +0100
++++ Makefile.am
+@@ -6,15 +6,15 @@
+ 
+ SUBDIRS = cpu bpb support cache mmu peripheral tick pm pic debug vapi cuc port
+ 
+-bin_PROGRAMS = sim
++bin_PROGRAMS = or1ksim
+ 
+-sim_SOURCES	= toplevel.c sim-config.c sim-config.h profiler.c \
++or1ksim_SOURCES	= toplevel.c sim-config.c sim-config.h profiler.c \
+ 	mprofiler.c profiler.h mprofiler.h sim-cmd.c
+-sim_LDADD	= cpu/common/libcommon.a cpu/$(CPU_ARCH)/libarch.a \
++or1ksim_LDADD	= cpu/common/libcommon.a cpu/$(CPU_ARCH)/libarch.a \
+ 	cpu/or1k/libor1k.a support/libsupport.a mmu/libmmu.a \
+ 	bpb/libbpb.a cache/libcache.a peripheral/libperipheral.a \
+ 	peripheral/channels/libchannels.a \
+ 	tick/libtick.a pm/libpm.a pic/libpic.a debug/libdebug.a \
+ 	vapi/libvapi.a cuc/libcuc.a port/libport.a
+ 
+-sim_LDFLAGS	= -lm #-lreadline
++or1ksim_LDFLAGS	= -lm #-lreadline

@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2006/02/25 18:06:55 kheinz Exp $
+
+--- cpu/common/parse.c.orig	2006-01-04 10:44:23.000000000 +0100
++++ cpu/common/parse.c
+@@ -44,7 +44,7 @@ Foundation, Inc., 675 Mass Ave, Cambridg
+ #include "labels.h"
+ #include "debug.h"
+ 
+-#define MEMORY_LEN 0x100000000
++#define MEMORY_LEN 0x100000000LL
+ #define MAXLINE_LEN 18000
+ 
+ /* Whether to do immediate statistics */

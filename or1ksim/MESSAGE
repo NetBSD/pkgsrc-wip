@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2006/02/25 18:06:55 kheinz Exp $
+
+When you run or1ksim, you need to be in a directory containing the
+or1ksim.cfg file or copy or1ksim.cfg file to ~/.or1ksim directory.
+an example or1ksim.cfg can be found at ${PREFIX}/share/examples/or1ksim
+===========================================================================

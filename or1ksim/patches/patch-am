@@ -1,0 +1,80 @@
+$NetBSD: patch-am,v 1.1 2006/02/25 18:06:55 kheinz Exp $
+--- Makefile.in.orig	2005-09-29 00:54:55.000000000 +0200
++++ Makefile.in
+@@ -20,7 +20,7 @@
+ #
+ #
+ 
+-SOURCES = $(sim_SOURCES)
++SOURCES = $(or1ksim_SOURCES)
+ 
+ srcdir = @srcdir@
+ top_srcdir = @top_srcdir@
+@@ -45,7 +45,7 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ target_triplet = @target@
+-bin_PROGRAMS = sim$(EXEEXT)
++bin_PROGRAMS = or1ksim$(EXEEXT)
+ DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
+ 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
+ 	$(top_srcdir)/configure AUTHORS COPYING ChangeLog INSTALL NEWS \
+@@ -64,10 +64,10 @@ CONFIG_CLEAN_FILES =
+ am__installdirs = "$(DESTDIR)$(bindir)"
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
+ PROGRAMS = $(bin_PROGRAMS)
+-am_sim_OBJECTS = toplevel.$(OBJEXT) sim-config.$(OBJEXT) \
++am_or1ksim_OBJECTS = toplevel.$(OBJEXT) sim-config.$(OBJEXT) \
+ 	profiler.$(OBJEXT) mprofiler.$(OBJEXT) sim-cmd.$(OBJEXT)
+-sim_OBJECTS = $(am_sim_OBJECTS)
+-sim_DEPENDENCIES = cpu/common/libcommon.a cpu/$(CPU_ARCH)/libarch.a \
++or1ksim_OBJECTS = $(am_or1ksim_OBJECTS)
++or1ksim_DEPENDENCIES = cpu/common/libcommon.a cpu/$(CPU_ARCH)/libarch.a \
+ 	cpu/or1k/libor1k.a support/libsupport.a mmu/libmmu.a \
+ 	bpb/libbpb.a cache/libcache.a peripheral/libperipheral.a \
+ 	peripheral/channels/libchannels.a tick/libtick.a pm/libpm.a \
+@@ -80,8 +80,8 @@ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUD
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+ LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+-SOURCES = $(sim_SOURCES)
+-DIST_SOURCES = $(sim_SOURCES)
++SOURCES = $(or1ksim_SOURCES)
++DIST_SOURCES = $(or1ksim_SOURCES)
+ RECURSIVE_TARGETS = all-recursive check-recursive dvi-recursive \
+ 	html-recursive info-recursive install-data-recursive \
+ 	install-exec-recursive install-info-recursive \
+@@ -203,17 +203,17 @@ target_cpu = @target_cpu@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
+ SUBDIRS = cpu bpb support cache mmu peripheral tick pm pic debug vapi cuc port
+-sim_SOURCES = toplevel.c sim-config.c sim-config.h profiler.c \
++or1ksim_SOURCES = toplevel.c sim-config.c sim-config.h profiler.c \
+ 	mprofiler.c profiler.h mprofiler.h sim-cmd.c
+ 
+-sim_LDADD = cpu/common/libcommon.a cpu/$(CPU_ARCH)/libarch.a \
++or1ksim_LDADD = cpu/common/libcommon.a cpu/$(CPU_ARCH)/libarch.a \
+ 	cpu/or1k/libor1k.a support/libsupport.a mmu/libmmu.a \
+ 	bpb/libbpb.a cache/libcache.a peripheral/libperipheral.a \
+ 	peripheral/channels/libchannels.a \
+ 	tick/libtick.a pm/libpm.a pic/libpic.a debug/libdebug.a \
+ 	vapi/libvapi.a cuc/libcuc.a port/libport.a
+ 
+-sim_LDFLAGS = -lm #-lreadline
++or1ksim_LDFLAGS = -lm #-lreadline
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
+@@ -292,9 +292,9 @@ uninstall-binPROGRAMS:
+ 
+ clean-binPROGRAMS:
+ 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+-sim$(EXEEXT): $(sim_OBJECTS) $(sim_DEPENDENCIES) 
+-	@rm -f sim$(EXEEXT)
+-	$(LINK) $(sim_LDFLAGS) $(sim_OBJECTS) $(sim_LDADD) $(LIBS)
++or1ksim$(EXEEXT): $(or1ksim_OBJECTS) $(or1ksim_DEPENDENCIES) 
++	@rm -f or1ksim$(EXEEXT)
++	$(LINK) $(or1ksim_LDFLAGS) $(or1ksim_OBJECTS) $(or1ksim_LDADD) $(LIBS)
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)

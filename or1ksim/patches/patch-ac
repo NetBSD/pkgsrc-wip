@@ -1,27 +1,12 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/06/15 10:57:26 jmmv Exp $
-
---- peripheral/ethernet_i.h.orig	2005-02-09 19:41:13.000000000 +0200
-+++ peripheral/ethernet_i.h	2005-03-29 14:34:54.000000000 +0200
-@@ -25,7 +25,11 @@
- #include "config.h"
- 
- #if HAVE_ETH_PHY
-+#if defined (__NetBSD__)
-+/* FixMe need bpf support */
-+#else
- #include <netpacket/packet.h>
-+#endif
- #endif /* HAVE_ETH_PHY */
- #include <sys/ioctl.h>
- #include <sys/socket.h>
-@@ -55,9 +59,9 @@
-  *       so defining MSG_DONTWAIT is just (temporary) workaround !!!
+$NetBSD: patch-ac,v 1.2 2006/02/25 18:06:55 kheinz Exp $
+--- peripheral/ethernet_i.h.orig	2005-03-31 18:13:27.000000000 +0200
++++ peripheral/ethernet_i.h
+@@ -36,6 +36,8 @@
   */
- #define MSG_DONTWAIT  0x40
--#define ETH_HLEN      14
- #endif /* __CYGWIN__ */
- 
-+#define ETH_HLEN      14
- #define ETH_ALEN    6
- 
- struct ether_addr
+ #if HAVE_NET_ETHERNET_H
+ # include <net/ethernet.h>
++#elif HAVE_NET_IF_ETHER_H
++# include <net/if_ether.h>
+ #elif HAVE_SYS_ETHERNET_H
+ # include <sys/ethernet.h>
+ #ifndef ETHER_ADDR_LEN

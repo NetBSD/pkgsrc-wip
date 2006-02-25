@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2006/02/25 18:06:55 kheinz Exp $
+
+--- peripheral/channels/file.c.orig	2004-02-03 15:35:05.000000000 +0100
++++ peripheral/channels/file.c
+@@ -35,6 +35,8 @@ Foundation, Inc., 675 Mass Ave, Cambridg
+ #include <errno.h>	/* errno */
+ #include <unistd.h>	/* close() */
+ 
++#include "port.h"
++
+ #include "channel.h"	/* struct channel_ops */
+ #include "fd.h"		/* struct fd_channel, fd_read(), fd_write() */
+ 
