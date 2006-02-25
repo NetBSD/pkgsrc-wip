@@ -1,17 +1,18 @@
-$NetBSD: distinfo,v 1.2 2006/02/25 18:06:55 kheinz Exp $
+$NetBSD: distinfo,v 1.3 2006/02/25 19:21:56 kheinz Exp $
 
 SHA1 (or1ksim-0.2.0rc3.tar.gz) = c70ce0422ea5af78f25c148c2b9356f1f7ccaedc
 RMD160 (or1ksim-0.2.0rc3.tar.gz) = 8a6b1c776ddc89aa8c52318a153eae50b4f68467
 Size (or1ksim-0.2.0rc3.tar.gz) = 655579 bytes
-SHA1 (patch-aa) = fefd72f264774fb33938180340c643182f08acd2
+SHA1 (patch-aa) = cd64f4970f15c44983682130f90d97e59cf03059
 SHA1 (patch-ac) = db290aebd331d0820f4d8275219e7b8943a4eeca
 SHA1 (patch-ad) = ee8df3a365d1b85f4c1dcefbb1d3e631d7066e07
 SHA1 (patch-ae) = b8c0952e2007a10c9c9a65f9dc732241377172ff
 SHA1 (patch-af) = 39a4fbe706fe9ff440685f25ae5b6bfe1167262c
-SHA1 (patch-aj) = 510b76b6114349a7897531205f449213bd3801e9
+SHA1 (patch-aj) = 2240ff6de5777404d8f070c3263023a3e47df4f0
 SHA1 (patch-ak) = 5ef9dea95a41d47ee9320d20c842c6b482941423
 SHA1 (patch-al) = f05b2840cfbe4e29dd5ba28c25172773d5dc8a4b
 SHA1 (patch-am) = a7e4ad717f156d53c9f2a002f5d7fe456009824b
 SHA1 (patch-an) = be7c2c33c43265e7a7ce72bfbd41ea8f5bf13a5a
 SHA1 (patch-ao) = 5651b7474e99ccddf57b07eba8dadafaf8c3e2e6
 SHA1 (patch-ap) = 1554047e240a34738c91fcaba555f4711cd13c21
+SHA1 (patch-aq) = ca1c94e42186a8b6dabeb3aea120410f738bf526
