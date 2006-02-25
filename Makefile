@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2189 2006/02/23 09:49:29 jgoamakf Exp $
+# $Id: Makefile,v 1.2190 2006/02/25 00:33:04 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -829,7 +829,6 @@ SUBDIR+=	p5-News-Newsrc
 SUBDIR+=	p5-PDL
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Path-Class
-SUBDIR+=	p5-PathTools
 SUBDIR+=	p5-Petal
 SUBDIR+=	p5-Plucene
 SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer

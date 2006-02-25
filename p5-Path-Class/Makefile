@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/09/15 17:22:54 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/25 00:33:04 minskim Exp $
 
 DISTNAME=	Path-Class-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/~kwilliams/Path-Class/
 COMMENT=	Cross-platform path specification manipulation
 
-DEPENDS+=	p5-PathTools>=0.37:../../wip/p5-PathTools
+DEPENDS+=	p5-PathTools>=0.37:../../devel/p5-PathTools
 BUILD_DEPENDS+=	{perl>=5.7.3,p5-Test-Simple>=0}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST= auto/Path/Class/.packlist
