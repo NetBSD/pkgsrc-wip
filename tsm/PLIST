@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2006/02/10 17:12:09 hfath Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/25 10:36:17 thomasklausner Exp $
 share/examples/tsm/dsm.opt.smp
 share/examples/tsm/dsm.sys.smp
 share/examples/tsm/tsm_daily.sh
-@exec ${MKDIR} %D/share/examples/tsm
 @dirrm share/examples/tsm
 @unexec ${RM} -f ${PKG_SYSCONFDIR}/en_US
