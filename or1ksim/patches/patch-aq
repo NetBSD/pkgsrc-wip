@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1 2006/02/25 19:20:14 kheinz Exp $
+
+--- cpu/or32/simpl32_defs.h.orig	2005-03-31 18:03:28.000000000 +0200
++++ cpu/or32/simpl32_defs.h
+@@ -54,7 +54,7 @@ extern void l_sfges PARAMS((struct iqueu
+ extern void l_sflts PARAMS((struct iqueue_entry *));
+ extern void l_sfles PARAMS((struct iqueue_entry *));
+ extern void l_sfgtu PARAMS((struct iqueue_entry *));
+-extern void l_sfgeu PARAMS()(struct iqueue_entry *);
++extern void l_sfgeu PARAMS((struct iqueue_entry *));
+ extern void l_sfltu PARAMS((struct iqueue_entry *));
+ extern void l_sfleu PARAMS((struct iqueue_entry *));
+ extern void l_extbs PARAMS((struct iqueue_entry *));
