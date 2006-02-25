@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/10/24 11:14:25 absd Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/25 00:19:39 minskim Exp $
 
 DISTNAME=	PathTools-3.12
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/PathTools/
 COMMENT=	Perl module for portably manipulating file specifications
 
-DEPENDS=	p5-Scalar-List-Utils>=1.14:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	p5-Scalar-List-Utils>=1.14:../../devel/p5-Scalar-List-Utils
 
 CONFIGURE_ARGS+=	DEFINE="-DHAS_GETCWD"
 
