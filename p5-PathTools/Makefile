@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/25 00:19:39 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/25 00:21:06 minskim Exp $
 
 DISTNAME=	PathTools-3.12
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ DEPENDS+=	p5-Scalar-List-Utils>=1.14:../../devel/p5-Scalar-List-Utils
 
 CONFIGURE_ARGS+=	DEFINE="-DHAS_GETCWD"
 
-PERL5_PACKLIST= auto/Cwd/.packlist
+PERL5_PACKLIST=	auto/Cwd/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
