@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/25 11:33:00 rillig Exp $
 #
 
 DISTNAME=		gtypist-2.7
@@ -11,5 +11,10 @@ COMMENT=		Universal typing tutor
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_NCURSES=		yes	# uses typeahead()
+BUILDLINK_TRANSFORM+=	l:curses:ncurses
+REPLACE_PERL+=		typefortune
+USE_TOOLS+=		perl:run
 
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
