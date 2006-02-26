@@ -1,4 +1,3 @@
-- Does it work on non-NetBSD?
-  DragonFlyBSD ?
+- Does it work on systems other than NetBSD and DragonFlyBSD?
   Darwin ?
   Solaris ?
