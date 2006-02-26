@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/12 01:28:24 obache Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/26 12:45:05 obache Exp $
 #
 
 DISTNAME=	sqlite3-ruby-1.1.0
@@ -22,7 +22,7 @@ DOCS=	ChangeLog LICENSE README
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR:Q}/sqlite3/api
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC:Q}/${f} ${RUBY_DOCDIR:Q}/sqlite3/
+	${INSTALL_DATA} ${WRKSRC:Q}/${f:Q} ${RUBY_DOCDIR:Q}/sqlite3/
 .endfor
 	cd ${WRKSRC:Q}/doc && ${PAX} -rw -pp * ${RUBY_DOCDIR:Q}/sqlite3
 	cd ${WRKSRC:Q}/api && ${PAX} -rw -pp * ${RUBY_DOCDIR:Q}/sqlite3/api

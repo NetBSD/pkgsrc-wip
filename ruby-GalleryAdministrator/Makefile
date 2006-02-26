@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/12 01:31:24 obache Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/26 12:43:56 obache Exp $
 #
 
 DISTNAME=	gallery-0.0.8
@@ -25,7 +25,7 @@ DOCS=		COPYING_for_RubyPhoto README.en README.ja README_for_RubyPhoto.html
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR:Q}/gallery
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC:Q}/${f} ${RUBY_DOCDIR:Q}/gallery
+	${INSTALL_DATA} ${WRKSRC:Q}/${f:Q} ${RUBY_DOCDIR:Q}/gallery
 .endfor
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR:Q}/gallery
 	cd ${WRKSRC:Q}/sample && ${PAX} -rw -pp * ${RUBY_EXAMPLESDIR:Q}/gallery
