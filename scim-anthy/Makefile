@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/02/03 14:37:54 rxg Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/26 13:50:05 rxg Exp $
 #
 
-DISTNAME=		scim-anthy-0.8.0
+DISTNAME=		scim-anthy-0.9.0
 CATEGORIES=		inputmethod
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=scim-imengine/17699/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=scim-imengine/18697/}
 
 MAINTAINER=		rxg@NetBSD.org
 HOMEPAGE=		http://scim-imengine.sourceforge.jp/
