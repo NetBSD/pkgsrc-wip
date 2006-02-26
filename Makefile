@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2190 2006/02/25 00:33:04 minskim Exp $
+# $Id: Makefile,v 1.2191 2006/02/26 15:18:56 rxg Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -242,6 +242,7 @@ SUBDIR+=	fbpanel
 SUBDIR+=	festival-gaim
 SUBDIR+=	ffmpeg-devel
 SUBDIR+=	firebird
+SUBDIR+=	fireflysung-ttf
 SUBDIR+=	firefox-wrapper
 SUBDIR+=	firehose
 SUBDIR+=	fixesproto
@@ -1077,9 +1078,11 @@ SUBDIR+=	scare
 SUBDIR+=	scim
 SUBDIR+=	scim-anthy
 SUBDIR+=	scim-canna
+SUBDIR+=	scim-chewing
 SUBDIR+=	scim-fcitx
 SUBDIR+=	scim-hangul
 SUBDIR+=	scim-pinyin
+SUBDIR+=	scim-sinhala
 SUBDIR+=	scim-skk
 SUBDIR+=	scim-tables
 SUBDIR+=	scite
