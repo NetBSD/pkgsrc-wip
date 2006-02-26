@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2006/02/23 13:24:34 koifren Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/26 09:15:59 koifren Exp $
 
-DISTNAME=	ldp-0.0.1
+DISTNAME=	ldp-0.0.2
 CATEGORIES=	net
 MASTER_SITES=	http://kefren.NetBSD.ro/mpls/
 
