@@ -1,0 +1,6 @@
+GtkLP is a graphical frontend for CUPS, the Common UNIX Printing System.
+It is used to have easy (and graphical) access to all of the many options
+of cups-managed printers. It accepts a superset of the command line
+options of lpr(1) or lp(1) and allows them to be adjusted interactively
+before printing; if no X display is available, it simply behaves as lpr
+or lp with the same superset of options.

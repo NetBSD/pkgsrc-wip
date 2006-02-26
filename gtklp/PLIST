@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1 2006/02/26 02:39:53 jcflack Exp $
+bin/gtklp
+bin/gtklpq
+man/man1/gtklp.1
+man/man1/gtklpq.1
+share/doc/gtklp/README
+share/doc/gtklp/USAGE
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/chs/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/cht/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/cz/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/en/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gtklp.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gtklp.mo
+@dirrm ${PKGLOCALEDIR}/locale/cz/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/cz
+@dirrm ${PKGLOCALEDIR}/locale/cht/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/cht
+@dirrm ${PKGLOCALEDIR}/locale/chs/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/chs
+@dirrm share/doc/gtklp
