@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/11 15:34:17 obache Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/26 12:30:22 obache Exp $
 
 DISTNAME=	avifile-0.7-0.7.43
 PKGNAME=	avifile-devel-0.7.43
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-xvid
 CONFIGURE_ARGS+=	--disable-divx4
 .if ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--enable-win32
-CONFIGURE_ARGS+=	--with-win32-path="${LOCALBASE}/lib/win32"
+CONFIGURE_ARGS+=	--with-win32-path=${LOCALBASE:Q}/lib/win32
 PLIST_SUBST+=	WIN32_COMMENT=
 .else
 CONFIGURE_ARGS+=	--disable-win32
