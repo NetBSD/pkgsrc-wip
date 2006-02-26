@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2005/09/27 14:28:05 obache Exp $
+# $NetBSD: options.mk,v 1.6 2006/02/26 12:40:21 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.linuxigd
 PKG_SUPPORTED_OPTIONS=	iptables pf ipfilter
@@ -19,7 +19,7 @@ PKG_SUGGESTED_OPTIONS=	ipfilter
 CFLAGS+=	-DUSE_IPTABLES
 .elif !empty(PKG_OPTIONS:Mpf)
 CFLAGS+=	-DUSE_PF
-MESSAGE_SRC+=	${.CURDIR}/MESSAGE.pf
+MESSAGE_SRC+=	${.CURDIR:Q}/MESSAGE.pf
 .elif !empty(PKG_OPTIONS:Mipfilter)
 CFLAGS+=	-DUSE_IPFILTER
 .else
