@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.1 2005/11/28 20:36:11 gschwarz Exp $
+$NetBSD: patch-ai,v 1.2 2006/02/26 10:30:08 gschwarz Exp $
 
---- lpc10-1.5/f2c.h.orig	2005-11-28 14:49:58.000000000 +0100
-+++ lpc10-1.5/f2c.h	2005-11-28 14:50:16.000000000 +0100
-@@ -186,7 +186,7 @@
- 	};
- typedef struct Namelist Namelist;
+--- lpc10-1.5/f2c.h.orig	2005-11-30 21:07:31.000000000 +0100
++++ lpc10-1.5/f2c.h	2006-02-25 18:49:41.000000000 +0100
+@@ -194,7 +194,7 @@
+ #undef abs
+ #endif
  
 -#define abs(x) ((x) >= 0 ? (x) : -(x))
 +/*#define abs(x) ((x) >= 0 ? (x) : -(x))*/

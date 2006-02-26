@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/11/22 19:20:22 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/26 10:30:08 gschwarz Exp $
 
-DISTNAME=	linphone-1.0.1
+DISTNAME=	linphone-1.2.0
 CATEGORIES=	net
-MASTER_SITES=	http://simon.morlat.free.fr/download/1.0.x/source/
+MASTER_SITES=	http://simon.morlat.free.fr/download/1.2.x/source/
 
 MAINTAINER=     schwarz@NetBSD.org
 HOMEPAGE=	http://www.linphone.org/
