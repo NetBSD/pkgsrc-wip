@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2006/02/24 22:46:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/27 22:29:27 thomasklausner Exp $
 #
 
-DISTNAME=	mednafen-0.5.1
+DISTNAME=	mednafen-0.5.2
 CATEGORIES=	emulators
-MASTER_SITES=	http://mednafen.com/releases/
+MASTER_SITES=	http://mednafen.com/releases/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -26,22 +26,8 @@ SUBST_SED.dsp=		s,/dev/dsp,${DEVOSSAUDIO},
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mednafen
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mednafen/tech
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mednafen/tech/cpu
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mednafen/tech/exp
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mednafen/tech/ppu
 	${INSTALL_DATA} ${WRKSRC}/Documentation/*.html \
 		${PREFIX}/share/doc/mednafen
-	${INSTALL_DATA} ${WRKSRC}/Documentation/*.txt \
-		${PREFIX}/share/doc/mednafen
-	${INSTALL_DATA} ${WRKSRC}/Documentation/tech/*.* \
-		${PREFIX}/share/doc/mednafen/tech
-	${INSTALL_DATA} ${WRKSRC}/Documentation/tech/cpu/*.* \
-		${PREFIX}/share/doc/mednafen/tech/cpu
-	${INSTALL_DATA} ${WRKSRC}/Documentation/tech/exp/*.* \
-		${PREFIX}/share/doc/mednafen/tech/exp
-	${INSTALL_DATA} ${WRKSRC}/Documentation/tech/ppu/*.* \
-		${PREFIX}/share/doc/mednafen/tech/ppu
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
