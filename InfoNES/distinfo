@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/12/28 17:34:06 thomasklausner Exp $
+$NetBSD: distinfo,v 1.4 2006/02/27 22:59:48 thomasklausner Exp $
 
-SHA1 (InfoNES096J_Src.zip) = dee0a183104cf34a6d194bdb68d655b16e5d0539
-RMD160 (InfoNES096J_Src.zip) = 833517759fa8b1f023df5d2a9488be7012b100f0
-Size (InfoNES096J_Src.zip) = 271406 bytes
-SHA1 (patch-aa) = c65d4bc4ea5793a05c7da8367f85f9d3019991e1
+SHA1 (InfoNES097JRC1_SDL.tar.gz) = 4787c8b1b68f6a641489070fa6b948ef5c7c0570
+RMD160 (InfoNES097JRC1_SDL.tar.gz) = ede835b4ac87fb779470d71c3c36ef8102e65cfe
+Size (InfoNES097JRC1_SDL.tar.gz) = 264075 bytes
+SHA1 (patch-aa) = 3f13b5cafb5c028b0ecbfca9af4a4b1206dcbfbe
