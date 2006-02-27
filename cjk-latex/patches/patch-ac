@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/04/18 09:40:00 cjep Exp $
+$NetBSD: patch-ac,v 1.2 2006/02/27 18:08:47 rxg Exp $
 
 --- utils/Makefile.orig	Wed Dec 12 20:01:21 2001
 +++ utils/Makefile
@@ -18,8 +18,8 @@ $NetBSD: patch-ac,v 1.1.1.1 2003/04/18 09:40:00 cjep Exp $
 +hbf2gf_install:
 +	$(BSD_INSTALL_PROGRAM) hbf2gf/hbf2gf $(PREFIX)/bin
 +	$(BSD_INSTALL_MAN) hbf2gf/hbf2gf.1 $(PREFIX)/man/man1
-+	$(BSD_INSTALL_DATA_DIR) $(TEXMFMAIN)/hbf2gf
-+	$(BSD_INSTALL_DATA) hbf2gf/cfg/* $(TEXMFMAIN)/hbf2gf
++	$(BSD_INSTALL_DATA_DIR) $(TEXMFDIRS)/hbf2gf
++	$(BSD_INSTALL_DATA) hbf2gf/cfg/* $(TEXMFDIRS)/hbf2gf
 +
 +install: hbf2gf_install
 +	@for i in $(SUBDIRS); \

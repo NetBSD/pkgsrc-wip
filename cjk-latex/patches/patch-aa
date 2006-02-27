@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/18 09:40:00 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/27 18:08:47 rxg Exp $
 
 --- Makefile.orig	Wed Dec 12 20:01:20 2001
 +++ Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/18 09:40:00 cjep Exp $
 +# Makefile for CJK to apply on Unix systems more smoothly.
 +#
 +
-+LATEX_DIR = $(TEXMFMAIN)/tex/latex
++LATEX_DIR = $(TEXMFDIRS)/tex/latex
 +CJK_DIR = $(LATEX_DIR)/CJK
 +
 +all:

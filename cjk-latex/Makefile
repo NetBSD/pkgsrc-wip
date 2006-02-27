@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 22:27:44 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/27 18:08:47 rxg Exp $
 
-DISTNAME=	cjk-4.5.2
-PKGNAME=	cjk-latex-4.5.2
+DISTNAME=	cjk-4.6.0
+PKGNAME=	cjk-latex-4.6.0
 CATEGORIES=	print
 MASTER_SITES=	http://cjk.ffii.org/
 
@@ -11,34 +11,23 @@ COMMENT=	The CJK (Chinese, Japanese, Korean) package for LaTeX
 
 DEPENDS+=	ttf2pk>=1.3.1:../../fonts/ttf2pk
 
-TEXMFMAIN=	${PREFIX}/share/texmf
-TTFDIR=		${TEXMFMAIN}/fonts/truetype
+TEX_ACCEPTED=	teTeX3
 
-MAKE_ENV+=	TEXMFMAIN=${TEXMFMAIN:Q}
+MAKE_ENV+=	TEXMFDIRS=${TEXMFDIRS:Q}
 
-DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
-INSTALL_FILE=	${WRKDIR}/INSTALL
-
-FILES_SUBST=		TEXMFMAIN=${TEXMFMAIN:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 post-extract:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.cjk
 	${CHMOD} +x ${WRKSRC}/utils/hbf2gf/configure
 
-post-patch:
+pre-install:
 	${FIND} ${WRKSRC}/texinput -type f -name '*.orig' | ${XARGS} ${RM} -f
 
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-
 post-install:
-	${INSTALL_DATA_DIR} ${TTFDIR}
-
-	# Edit ttfonts.map texmf.cnf
-	# Update ls-R
+	# Edit texmf.cnf
 	@${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
-.include "../../mk/tex.buildlink3.mk"
+.include "../../print/teTeX/module.mk"
 .include "../../mk/bsd.pkg.mk"
