@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2192 2006/02/28 01:57:11 rxg Exp $
+# $Id: Makefile,v 1.2193 2006/02/28 09:33:44 imilh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -149,6 +149,7 @@ SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	cpphs
 SUBDIR+=	cream
+SUBDIR+=	csup
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvsd
 SUBDIR+=	cvsutils
