@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2193 2006/02/28 09:33:44 imilh Exp $
+# $Id: Makefile,v 1.2194 2006/02/28 17:40:04 bartoszkuzma Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -861,6 +861,7 @@ SUBDIR+=	p5-podlators
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-pkcs11
 SUBDIR+=	pam-pop3
+SUBDIR+=	pam-pwdfile
 SUBDIR+=	panda
 SUBDIR+=	panoramixext
 SUBDIR+=	parted
@@ -1178,6 +1179,7 @@ SUBDIR+=	sudoscript
 SUBDIR+=	sugarCRM
 SUBDIR+=	sun-j2me
 SUBDIR+=	sunterlib
+SUBDIR+=	super-smack
 SUBDIR+=	supertux
 SUBDIR+=	svgalib
 SUBDIR+=	swami
