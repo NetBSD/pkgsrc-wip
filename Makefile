@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2191 2006/02/26 15:18:56 rxg Exp $
+# $Id: Makefile,v 1.2192 2006/02/28 01:57:11 rxg Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -136,9 +136,6 @@ SUBDIR+=	chromium-data
 SUBDIR+=	chrsh
 SUBDIR+=	cinelerra
 SUBDIR+=	cjk-latex
-SUBDIR+=	cjk-latex-chinese
-SUBDIR+=	cjk-latex-japanese
-SUBDIR+=	cjk-latex-korean
 SUBDIR+=	cjk-latex-wadalab
 SUBDIR+=	clamassassin
 SUBDIR+=	clustalx
@@ -1206,6 +1203,9 @@ SUBDIR+=	tenmado
 SUBDIR+=	terminus-font
 SUBDIR+=	testdisk
 SUBDIR+=	tetrinet
+SUBDIR+=	tex-arphic-ttf
+SUBDIR+=	tex-baekmuk-ttf
+SUBDIR+=	tex-kochi-ttf
 SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
