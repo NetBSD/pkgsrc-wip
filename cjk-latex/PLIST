@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/02/27 18:08:47 rxg Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/02/28 01:38:06 rxg Exp $
 bin/bg5+latex
 bin/bg5conv
 bin/bg5latex
@@ -289,7 +289,6 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/CJK/thai/c90enc.def
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/CJK/thai/c90gar.fd
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/CJK/thai/c90nrsr.fd
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/CJK/thai/thaicjk.ldf
-@comment In ttf2pk: ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/ttfonts.map
 @comment In teTeX-bin: ${PKG_LOCALTEXMFPREFIX}/web2c/texmf.cnf
 @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/CJK/thai
 @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/CJK/mule
