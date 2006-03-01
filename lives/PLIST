@@ -1,0 +1,203 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/01 21:56:58 poppnk Exp $
+bin/autolives.pl
+bin/avi_encoder.py
+bin/build-lives-rfx-plugin
+bin/build-lives-rfx-plugin-multi
+bin/dirac_encoder.py
+bin/gif_encoder.py
+bin/lives
+bin/lives-exe
+bin/midistart
+bin/midistop
+bin/mkv_encoder.py
+bin/mng_encoder.py
+bin/mpeg_encoder.py
+bin/ogm_encoder.py
+bin/smogrify
+bin/theora_encoder.py
+share/doc/lives-0.9.6-${PKGVERSION}/AUTHORS
+share/doc/lives-0.9.6-${PKGVERSION}/BUGS
+share/doc/lives-0.9.6-${PKGVERSION}/CHANGELOG
+share/doc/lives-0.9.6-${PKGVERSION}/FEATURES
+share/doc/lives-0.9.6-${PKGVERSION}/GETTING.STARTED
+share/doc/lives-0.9.6-${PKGVERSION}/LiVES-Perl.sxw
+share/doc/lives-0.9.6-${PKGVERSION}/README
+share/doc/lives-0.9.6-${PKGVERSION}/README.RFX
+share/doc/lives-0.9.6-${PKGVERSION}/README.multi_encoder
+share/doc/lives-0.9.6-${PKGVERSION}/RFX.spec
+share/doc/lives-0.9.6-${PKGVERSION}/lives-OMC.txt
+share/doc/lives-0.9.6-${PKGVERSION}/rfxbuilder.sxw
+share/lives/default.keymap
+share/lives/icons/loop.png
+share/lives/icons/play.png
+share/lives/icons/playsel.png
+share/lives/icons/rewind.png
+share/lives/icons/sepwin.png
+share/lives/icons/stop.png
+share/lives/icons/volume.png
+share/lives/icons/volume_mute.png
+share/lives/plugins/effects/RFXscripts/blank_frames.script
+share/lives/plugins/effects/RFXscripts/blur.script
+share/lives/plugins/effects/RFXscripts/brightness_change.script
+share/lives/plugins/effects/RFXscripts/charcoal.script
+share/lives/plugins/effects/RFXscripts/colorize.script
+share/lives/plugins/effects/RFXscripts/colour_filter.script
+share/lives/plugins/effects/RFXscripts/contrast.script
+share/lives/plugins/effects/RFXscripts/cycle.script
+share/lives/plugins/effects/RFXscripts/deinterlace.script
+share/lives/plugins/effects/RFXscripts/despekle.script
+share/lives/plugins/effects/RFXscripts/dream.script
+share/lives/plugins/effects/RFXscripts/edge_detect.script
+share/lives/plugins/effects/RFXscripts/emboss.script
+share/lives/plugins/effects/RFXscripts/enhance.script
+share/lives/plugins/effects/RFXscripts/flip.script
+share/lives/plugins/effects/RFXscripts/flop.script
+share/lives/plugins/effects/RFXscripts/frame_calculator.script
+share/lives/plugins/effects/RFXscripts/gamma_change.script
+share/lives/plugins/effects/RFXscripts/hue_change.script
+share/lives/plugins/effects/RFXscripts/jumble.script
+share/lives/plugins/effects/RFXscripts/modulate.script
+share/lives/plugins/effects/RFXscripts/monochrome.script
+share/lives/plugins/effects/RFXscripts/negate.script
+share/lives/plugins/effects/RFXscripts/noisify.script
+share/lives/plugins/effects/RFXscripts/normalize.script
+share/lives/plugins/effects/RFXscripts/photo_still.script
+share/lives/plugins/effects/RFXscripts/pixilate.script
+share/lives/plugins/effects/RFXscripts/posterize.script
+share/lives/plugins/effects/RFXscripts/randomzoom.script
+share/lives/plugins/effects/RFXscripts/resize.script
+share/lives/plugins/effects/RFXscripts/rotate.script
+share/lives/plugins/effects/RFXscripts/saturation_change.script
+share/lives/plugins/effects/RFXscripts/shift_horizontal.script
+share/lives/plugins/effects/RFXscripts/shift_vertical.script
+share/lives/plugins/effects/RFXscripts/shrink_expand.script
+share/lives/plugins/effects/RFXscripts/solarize.script
+share/lives/plugins/effects/RFXscripts/spin.script
+share/lives/plugins/effects/RFXscripts/spread.script
+share/lives/plugins/effects/RFXscripts/swirl.script
+share/lives/plugins/effects/RFXscripts/textover.script
+share/lives/plugins/effects/RFXscripts/transition_bwthresh.script
+share/lives/plugins/effects/RFXscripts/transition_checkerboard.script
+share/lives/plugins/effects/RFXscripts/transition_fade.script
+share/lives/plugins/effects/RFXscripts/transition_splice.script
+share/lives/plugins/effects/RFXscripts/trim_frames.script
+share/lives/plugins/effects/RFXscripts/tunnel.script
+share/lives/plugins/effects/RFXscripts/wave.script
+share/lives/plugins/effects/realtime/weed/alien_overlay.wo
+share/lives/plugins/effects/realtime/weed/blurzoom.wo
+share/lives/plugins/effects/realtime/weed/ccorrect.wo
+share/lives/plugins/effects/realtime/weed/edge.wo
+share/lives/plugins/effects/realtime/weed/fg_bg_removal.wo
+share/lives/plugins/effects/realtime/weed/fireTV.wo
+share/lives/plugins/effects/realtime/weed/layout_blends.wo
+share/lives/plugins/effects/realtime/weed/lifeTV.wo
+share/lives/plugins/effects/realtime/weed/mirrors.wo
+share/lives/plugins/effects/realtime/weed/negate.wo
+share/lives/plugins/effects/realtime/weed/noise.wo
+share/lives/plugins/effects/realtime/weed/onedTV.wo
+share/lives/plugins/effects/realtime/weed/posterise.wo
+share/lives/plugins/effects/realtime/weed/rippleTV.wo
+share/lives/plugins/effects/realtime/weed/rotozoom.wo
+share/lives/plugins/effects/realtime/weed/simple_blend.wo
+share/lives/plugins/effects/realtime/weed/textfun.wo
+share/lives/plugins/effects/realtime/weed/warpTV.wo
+share/lives/plugins/effects/realtime/weed/xeffect.wo
+share/lives/plugins/effects/rendered/blank_frames
+share/lives/plugins/effects/rendered/blur
+share/lives/plugins/effects/rendered/brightness_change
+share/lives/plugins/effects/rendered/charcoal
+share/lives/plugins/effects/rendered/colorize
+share/lives/plugins/effects/rendered/colour_filter
+share/lives/plugins/effects/rendered/contrast
+share/lives/plugins/effects/rendered/cycle
+share/lives/plugins/effects/rendered/deinterlace
+share/lives/plugins/effects/rendered/despeckle
+share/lives/plugins/effects/rendered/dream
+share/lives/plugins/effects/rendered/edge_detect
+share/lives/plugins/effects/rendered/emboss
+share/lives/plugins/effects/rendered/enhance
+share/lives/plugins/effects/rendered/flip
+share/lives/plugins/effects/rendered/flop
+share/lives/plugins/effects/rendered/frame_calculator
+share/lives/plugins/effects/rendered/gamma_change
+share/lives/plugins/effects/rendered/hue_change
+share/lives/plugins/effects/rendered/jumble
+share/lives/plugins/effects/rendered/modulate
+share/lives/plugins/effects/rendered/monochrome
+share/lives/plugins/effects/rendered/negate
+share/lives/plugins/effects/rendered/noisify
+share/lives/plugins/effects/rendered/normalize
+share/lives/plugins/effects/rendered/photo_still
+share/lives/plugins/effects/rendered/pixilate
+share/lives/plugins/effects/rendered/posterize
+share/lives/plugins/effects/rendered/randomzoom
+share/lives/plugins/effects/rendered/resize
+share/lives/plugins/effects/rendered/rotate
+share/lives/plugins/effects/rendered/saturation_change
+share/lives/plugins/effects/rendered/shift_horizontal
+share/lives/plugins/effects/rendered/shift_vertical
+share/lives/plugins/effects/rendered/shrink_expand
+share/lives/plugins/effects/rendered/solarize
+share/lives/plugins/effects/rendered/spin
+share/lives/plugins/effects/rendered/spread
+share/lives/plugins/effects/rendered/swirl
+share/lives/plugins/effects/rendered/textover
+share/lives/plugins/effects/rendered/transition_bwthresh
+share/lives/plugins/effects/rendered/transition_checkerboard
+share/lives/plugins/effects/rendered/transition_fade2
+share/lives/plugins/effects/rendered/transition_splice
+share/lives/plugins/effects/rendered/trim_frames
+share/lives/plugins/effects/rendered/tunnel
+share/lives/plugins/effects/rendered/wave
+share/lives/plugins/encoders/encodedv_encoder
+share/lives/plugins/encoders/ffmpeg_encoder
+share/lives/plugins/encoders/mencoder_encoder
+share/lives/plugins/encoders/mjpegtools_encoder
+share/lives/plugins/encoders/multi_encoder
+share/lives/plugins/encoders/pdf_encoder
+share/lives/plugins/encoders/qtutils_encoder
+share/lives/plugins/encoders/sswf_encoder
+share/lives/plugins/encoders/transcode_encoder
+share/lives/themes/camera/frame.jpg
+share/lives/themes/camera/main.jpg
+share/lives/themes/cutting_room/frame.jpg
+share/lives/themes/cutting_room/main.jpg
+share/lives/themes/default/frame.jpg
+share/lives/themes/default/main.jpg
+share/lives/themes/editor/frame.jpg
+share/lives/themes/editor/main.jpg
+share/lives/themes/greenish/frame.jpg
+share/lives/themes/greenish/main.jpg
+share/lives/themes/pinks/frame.jpg
+share/lives/themes/pinks/main.jpg
+share/lives/themes/sunburst/frame.jpg
+share/lives/themes/sunburst/main.jpg
+${PKGLOCALEDIR}/locale/cz/LC_MESSAGES/lives.mo
+${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/lives.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/lives.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/lives.mo
+${PKGLOCALEDIR}/locale/nl_NL/LC_MESSAGES/lives.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/lives.mo
+@dirrm ${PKGLOCALEDIR}/locale/cz/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/cz
+@dirrm share/lives/themes/sunburst
+@dirrm share/lives/themes/pinks
+@dirrm share/lives/themes/greenish
+@dirrm share/lives/themes/editor
+@dirrm share/lives/themes/default
+@dirrm share/lives/themes/cutting_room
+@dirrm share/lives/themes/camera
+@dirrm share/lives/themes
+@exec ${MKDIR} %D/share/lives/plugins/playback/video
+@dirrm share/lives/plugins/playback/video
+@dirrm share/lives/plugins/playback
+@dirrm share/lives/plugins/encoders
+@dirrm share/lives/plugins/effects/rendered
+@dirrm share/lives/plugins/effects/realtime/weed
+@dirrm share/lives/plugins/effects/realtime
+@dirrm share/lives/plugins/effects/RFXscripts
+@dirrm share/lives/plugins/effects
+@dirrm share/lives/plugins
+@dirrm share/lives/icons
+@dirrm share/lives
+@dirrm share/doc/lives-0.9.6-${PKGVERSION}
