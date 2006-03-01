@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2005/11/12 01:42:32 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/01 23:46:54 jeremy-c-reed Exp $
 #
 
-DISTNAME=		libXt-0.99.2
+DISTNAME=		libXt-1.0.0
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://xorg.freedesktop.org/releases/X11R7.0-RC2/lib/
+MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
