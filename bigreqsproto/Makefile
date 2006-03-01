@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/07 05:36:05 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/01 21:09:55 jeremy-c-reed Exp $
 #
 
-DISTNAME=		bigreqsproto-1.0
+DISTNAME=		bigreqsproto-1.0.2
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/X11R7.0-RC0/proto/
+MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
