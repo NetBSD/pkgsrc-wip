@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/10/17 19:06:21 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/01 19:13:20 jeremy-c-reed Exp $
 #
 
-DISTNAME=		xextproto-7.0
+DISTNAME=		xextproto-7.0.2
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/X11R7.0-RC0/proto/
+MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		lars.nordlund@hem.utfors.se
