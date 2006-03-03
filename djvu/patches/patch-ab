@@ -1,15 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/02/14 06:01:31 oht Exp $
---- configure.orig	2005-02-06 10:47:31.000000000 +0100
-+++ configure	2005-02-06 10:47:54.000000000 +0100
-@@ -158,9 +158,9 @@
+$NetBSD: patch-ab,v 1.1.1.2 2006/03/03 21:19:09 oht Exp $
+--- tools/Makefile.in.orig	2006-02-27 20:49:29.000000000 +0100
++++ tools/Makefile.in	2006-02-27 20:50:01.000000000 +0100
+@@ -81,7 +81,7 @@
+ install-scripts: FORCE
+ 	${INSTALL} -d ${DESTDIR}${bindir}
+ 	for n in ${SCRIPTS} ; do \
+-	  ${INSTALL_PROGRAM} -m 0755 ${srcdir}/$$n ${DESTDIR}${bindir} \
++	  ${INSTALL} -m 0755 ${srcdir}/$$n ${DESTDIR}${bindir} \
+ 	  || exit ; done
  
- 
- 
--tagnames=${tagnames+${tagnames},}CXX
-+#tagnames=${tagnames+${tagnames},}CXX
- 
--tagnames=${tagnames+${tagnames},}F77
-+#tagnames=${tagnames+${tagnames},}F77
- 
- if expr a : '\(a\)' >/dev/null 2>&1; then
-   as_expr=expr
+ install-man: FORCE
