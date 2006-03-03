@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2194 2006/02/28 17:40:04 bartoszkuzma Exp $
+# $Id: Makefile,v 1.2195 2006/03/03 09:58:23 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -759,6 +759,7 @@ SUBDIR+=	p5-Class-Virtual
 SUBDIR+=	p5-Convert-ASN1
 SUBDIR+=	p5-Crypt-PasswdMD5
 SUBDIR+=	p5-DBD-ODBC
+SUBDIR+=	p5-DB_File-Lock
 SUBDIR+=	p5-Data-Page
 SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Date-Range
@@ -846,6 +847,7 @@ SUBDIR+=	p5-Text-German
 SUBDIR+=	p5-Text-Hatena
 SUBDIR+=	p5-Text-SimpleTable
 SUBDIR+=	p5-Tie-Array-Sorted
+SUBDIR+=	p5-Tie-DB_Lock
 SUBDIR+=	p5-Time-Local
 SUBDIR+=	p5-Time-Piece-Range
 SUBDIR+=	p5-Tk-TableMatrix
