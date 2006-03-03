@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/28 09:31:44 imilh Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/03 09:25:05 imilh Exp $
 #
 
-DISTNAME=	csup-snap-20060225
+DISTNAME=	csup-snap-20060302
 CATEGORIES=	net devel
 MASTER_SITES=	http://www.mu.org/~mux/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://www.mu.org/~mux/
-COMMENT=	A rewrite of the CVSup file updating client in C
+COMMENT=	Rewrite of the CVSup file updating client in C
 
 WRKSRC=		${WRKDIR}/csup
 
