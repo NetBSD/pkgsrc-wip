@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/12 17:42:17 lkundrak Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/04 06:43:13 thomasklausner Exp $
 bin/grub-mkimage
 sbin/grub-emu
 sbin/grub-install
@@ -32,6 +32,7 @@ share/grub/i386-pc/halt.mod
 share/grub/i386-pc/hello.mod
 share/grub/i386-pc/help.mod
 share/grub/i386-pc/hfs.mod
+share/grub/i386-pc/hfsplus.mod
 share/grub/i386-pc/iso9660.mod
 share/grub/i386-pc/jfs.mod
 share/grub/i386-pc/kernel.img
