@@ -1,0 +1,4 @@
+Gnomeradio is a FM-radio tuner for the GNOME desktop (version 1 and 2). It
+should work with every FM tuner card that is supported by video4linux. Remote
+controls are supported via (optional) LIRC-support. Gnomeradio can also
+record radio as a Wave, MP3 or Ogg files.

@@ -1,0 +1,175 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/06 01:04:59 poppnk Exp $
+bin/gnomeradio
+etc/gconf/gconf.xml.defaults/apps/gnomeradio/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnomeradio/presets/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnomeradio/recording/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnomeradio/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnomeradio/presets/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnomeradio/recording/%gconf.xml
+libdata/scrollkeeper/log/scrollkeeper.log
+share/applications/gnomeradio.desktop
+share/gconf/schemas/gnomeradio.schemas
+share/gnome/help/gnomeradio/C/figures/freq-controls.png
+share/gnome/help/gnomeradio/C/figures/misc-controls.png
+share/gnome/help/gnomeradio/C/figures/presets-box.png
+share/gnome/help/gnomeradio/C/figures/recording-general.png
+share/gnome/help/gnomeradio/C/figures/recording-mp3.png
+share/gnome/help/gnomeradio/C/figures/recording-wav.png
+share/gnome/help/gnomeradio/C/figures/recording_status.png
+share/gnome/help/gnomeradio/C/figures/settings-misc.png
+share/gnome/help/gnomeradio/C/figures/settings-presets.png
+share/gnome/help/gnomeradio/C/figures/status-window.png
+share/gnome/help/gnomeradio/C/figures/volume-controls.png
+share/gnome/help/gnomeradio/C/gnomeradio.xml
+share/gnome/help/gnomeradio/C/legal.xml
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnomeradio.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnomeradio.mo
+share/omf/gnomeradio/gnomeradio-C.omf
+share/pixmaps/gnomeradio.png
+share/pixmaps/radio.png
+var/scrollkeeper/C/scrollkeeper_cl.xml
+var/scrollkeeper/C/scrollkeeper_extended_cl.xml
+var/scrollkeeper/TOC/0
+var/scrollkeeper/am/scrollkeeper_cl.xml
+var/scrollkeeper/am/scrollkeeper_extended_cl.xml
+var/scrollkeeper/be/scrollkeeper_cl.xml
+var/scrollkeeper/be/scrollkeeper_extended_cl.xml
+var/scrollkeeper/ca/scrollkeeper_cl.xml
+var/scrollkeeper/ca/scrollkeeper_extended_cl.xml
+var/scrollkeeper/cs/scrollkeeper_cl.xml
+var/scrollkeeper/cs/scrollkeeper_extended_cl.xml
+var/scrollkeeper/da/scrollkeeper_cl.xml
+var/scrollkeeper/da/scrollkeeper_extended_cl.xml
+var/scrollkeeper/de/scrollkeeper_cl.xml
+var/scrollkeeper/de/scrollkeeper_extended_cl.xml
+var/scrollkeeper/el/scrollkeeper_cl.xml
+var/scrollkeeper/el/scrollkeeper_extended_cl.xml
+var/scrollkeeper/es/scrollkeeper_cl.xml
+var/scrollkeeper/es/scrollkeeper_extended_cl.xml
+var/scrollkeeper/fr/scrollkeeper_cl.xml
+var/scrollkeeper/fr/scrollkeeper_extended_cl.xml
+var/scrollkeeper/hu/scrollkeeper_cl.xml
+var/scrollkeeper/hu/scrollkeeper_extended_cl.xml
+var/scrollkeeper/index/0
+var/scrollkeeper/it/scrollkeeper_cl.xml
+var/scrollkeeper/it/scrollkeeper_extended_cl.xml
+var/scrollkeeper/ja/scrollkeeper_cl.xml
+var/scrollkeeper/ja/scrollkeeper_extended_cl.xml
+var/scrollkeeper/ko/scrollkeeper_cl.xml
+var/scrollkeeper/ko/scrollkeeper_extended_cl.xml
+var/scrollkeeper/nl/scrollkeeper_cl.xml
+var/scrollkeeper/nl/scrollkeeper_extended_cl.xml
+var/scrollkeeper/no/scrollkeeper_cl.xml
+var/scrollkeeper/no/scrollkeeper_extended_cl.xml
+var/scrollkeeper/pl/scrollkeeper_cl.xml
+var/scrollkeeper/pl/scrollkeeper_extended_cl.xml
+var/scrollkeeper/pt_BR/scrollkeeper_cl.xml
+var/scrollkeeper/pt_BR/scrollkeeper_extended_cl.xml
+var/scrollkeeper/ro/scrollkeeper_cl.xml
+var/scrollkeeper/ro/scrollkeeper_extended_cl.xml
+var/scrollkeeper/ru/scrollkeeper_cl.xml
+var/scrollkeeper/ru/scrollkeeper_extended_cl.xml
+var/scrollkeeper/scrollkeeper_docs
+var/scrollkeeper/sk/scrollkeeper_cl.xml
+var/scrollkeeper/sk/scrollkeeper_extended_cl.xml
+var/scrollkeeper/sl/scrollkeeper_cl.xml
+var/scrollkeeper/sl/scrollkeeper_extended_cl.xml
+var/scrollkeeper/sr/scrollkeeper_cl.xml
+var/scrollkeeper/sr/scrollkeeper_extended_cl.xml
+var/scrollkeeper/sr@Latn/scrollkeeper_cl.xml
+var/scrollkeeper/sr@Latn/scrollkeeper_extended_cl.xml
+var/scrollkeeper/sv/scrollkeeper_cl.xml
+var/scrollkeeper/sv/scrollkeeper_extended_cl.xml
+var/scrollkeeper/tr/scrollkeeper_cl.xml
+var/scrollkeeper/tr/scrollkeeper_extended_cl.xml
+var/scrollkeeper/vi/scrollkeeper_cl.xml
+var/scrollkeeper/vi/scrollkeeper_extended_cl.xml
+var/scrollkeeper/zh_CN/scrollkeeper_cl.xml
+var/scrollkeeper/zh_CN/scrollkeeper_extended_cl.xml
+var/scrollkeeper/zh_TW/scrollkeeper_cl.xml
+var/scrollkeeper/zh_TW/scrollkeeper_extended_cl.xml
+@dirrm var/scrollkeeper/zh_TW
+@dirrm var/scrollkeeper/zh_CN
+@dirrm var/scrollkeeper/vi
+@dirrm var/scrollkeeper/tr
+@dirrm var/scrollkeeper/sv
+@dirrm var/scrollkeeper/sr@Latn
+@dirrm var/scrollkeeper/sr
+@dirrm var/scrollkeeper/sl
+@dirrm var/scrollkeeper/sk
+@dirrm var/scrollkeeper/ru
+@dirrm var/scrollkeeper/ro
+@dirrm var/scrollkeeper/pt_BR
+@dirrm var/scrollkeeper/pl
+@dirrm var/scrollkeeper/no
+@dirrm var/scrollkeeper/nl
+@dirrm var/scrollkeeper/ko
+@dirrm var/scrollkeeper/ja
+@dirrm var/scrollkeeper/it
+@dirrm var/scrollkeeper/index
+@dirrm var/scrollkeeper/hu
+@dirrm var/scrollkeeper/fr
+@dirrm var/scrollkeeper/es
+@dirrm var/scrollkeeper/el
+@dirrm var/scrollkeeper/de
+@dirrm var/scrollkeeper/da
+@dirrm var/scrollkeeper/cs
+@dirrm var/scrollkeeper/ca
+@dirrm var/scrollkeeper/be
+@dirrm var/scrollkeeper/am
+@dirrm var/scrollkeeper/TOC
+@dirrm var/scrollkeeper/C
+@dirrm var/scrollkeeper
+@dirrm var
+@dirrm share/pixmaps
+@dirrm share/omf/gnomeradio
+@dirrm share/omf
+@dirrm share/gnome/help/gnomeradio/C/figures
+@dirrm share/gnome/help/gnomeradio/C
+@dirrm share/gnome/help/gnomeradio
+@dirrm share/gnome/help
+@comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/applications
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnomeradio/recording
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnomeradio/presets
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnomeradio
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnomeradio/recording
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnomeradio/presets
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnomeradio
+@dirrm etc/gconf/gconf.xml.defaults/apps
+@dirrm etc/gconf/gconf.xml.defaults
