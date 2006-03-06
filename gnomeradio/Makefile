@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/06 01:04:59 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/06 01:18:00 poppnk Exp $
 #
 
 DISTNAME=		gnomeradio-1.6
@@ -6,7 +6,7 @@ CATEGORIES=		wip audio
 MASTER_SITES=		http://www.wh-hms.uni-ulm.de/~mfcn/gnomeradio/packages/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://www.wh-hms.uni-ulm.de/~mfcn/gnomeradio/packages/
+HOMEPAGE=		http://www.wh-hms.uni-ulm.de/~mfcn/gnomeradio/
 COMMENT=		FM-radio tuner for the GNOME desktop
 
 USE_PKGLOCALEDIR=	yes
