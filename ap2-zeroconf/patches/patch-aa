@@ -1,0 +1,127 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/03/06 20:28:03 danieleggert Exp $
+--- mod_zeroconf.c.orig	2004-02-21 00:33:07.000000000 +0100
++++ mod_zeroconf.c	2006-03-06 20:09:16.000000000 +0100
+@@ -33,8 +33,6 @@
+ /* Some macros to shorten very, very long function names that 
+  * Howl likes to use.
+  */
+-#define swPublishHost      sw_rendezvous_publish_host
+-#define swPublishSvc       sw_rendezvous_publish
+ #define swAddrInitFromName sw_ipv4_address_init_from_name
+ #define swAddrInitFromThis sw_ipv4_address_init_from_this_host
+ #define swTRecAddKeyStrVal sw_text_record_add_key_and_string_value
+@@ -126,10 +124,9 @@
+     return (void *) merged_cfg;
+ }
+ 
+-static sw_result howl_publish_reply(sw_rendezvous_publish_handler handler,
+-                                    sw_rendezvous rendezvous,
+-                                    sw_rendezvous_publish_status status,
+-                                    sw_rendezvous_publish_id id,
++static sw_result howl_publish_reply(sw_discovery discovery,
++                                    sw_discovery_oid oid,
++                                    sw_discovery_publish_status status,
+                                     sw_opaque opaque)
+ {
+     static sw_string status_text[] = {
+@@ -142,10 +139,9 @@
+     return SW_OKAY;
+ }
+ 
+-static sw_result host_publish_reply(sw_rendezvous_publish_host_handler
+-                                    handler, sw_rendezvous rendezvous,
+-                                    sw_rendezvous_publish_status status,
+-                                    sw_rendezvous_publish_host_id id,
++static sw_result host_publish_reply(sw_discovery discovery,
++                                    sw_discovery_oid host_id,
++                                    sw_discovery_publish_status status,
+                                     sw_opaque extra)
+ {
+     static sw_string status_text[] = {
+@@ -173,7 +169,7 @@
+     char *thehostip;
+     sw_result hr;
+     sw_ipv4_address serveraddr;
+-    sw_rendezvous_publish_host_id host_id;
++    sw_discovery_oid host_id;
+ 
+     ap_log_error(APLOG_MARK, APLOG_NOERRNO | APLOG_DEBUG, 0,
+                  s, "Registering host with name %s",
+@@ -208,15 +204,13 @@
+                 hr = swAddrInitFromThis(&serveraddr);
+             }
+         }
+-        hr = swPublishHost(howl_session,
+-                           s->
+-                           server_hostname,
+-                           NULL,
++        hr = sw_discovery_publish_host(howl_session,
++                                       0, // all interfaces
++                                       s->server_hostname,
++                                       NULL, // default ".local" domain
+                            serveraddr,
+-                           NULL,
+                            host_publish_reply,
+-                           (sw_opaque)
+-                           s,
++                                       (sw_opaque) s,
+                            &host_id);
+         if (hr != SW_OKAY) {
+             ap_log_error(APLOG_MARK, APLOG_ERR, hr,
+@@ -233,11 +227,12 @@
+ static int zc_post_config(apr_pool_t * pconf, apr_pool_t * plog,
+                               apr_pool_t * ptemp, server_rec *s)
+ {
+-    void *data, *pubidPtr;
++    void *data;
++    sw_discovery_oid *pubidPtr;
+     const char *userdata_key = "zeroconf_init_module";
+     zc_cfg *cfg;
+     sw_result howl_result;
+-    sw_rendezvous_publish_id howl_id;
++    sw_discovery_oid howl_id;
+     sw_port serverport;
+     sw_text_record text_record;
+     sw_octets pathinfo;
+@@ -318,25 +313,26 @@
+                      */
+                     zc_register_host(ws);
+                 }
+-                howl_result = swPublishSvc(howl_session,
++                howl_result = sw_discovery_publish(howl_session,
++                                                   0, // all interfaces
+                                                     cfg->serviceName,
+                                                     "_http._tcp",
+-                                                    NULL,
++                                                   NULL, // default ".local"
+                                                     ws->server_hostname,
+                                                     serverport,
+                                                     pathinfo,
+                                                     pilength,
+-                                                    NULL,
+                                                     howl_publish_reply,
+-                                                  (sw_opaque) ws, &howl_id);
++                                                   (sw_opaque) ws,
++                                                   &howl_id);
+                 if (howl_result != SW_OKAY) {
+                     ap_log_error(APLOG_MARK, APLOG_ERR, howl_result,
+                                  ws, "Failed to publish service %s",
+                                  cfg->serviceName);
+                     return HTTP_INTERNAL_SERVER_ERROR;
+                 }
+-                pubidPtr = apr_palloc(s->process->pool,
+-                                      sizeof(sw_rendezvous_publish_id));
++                pubidPtr = (sw_discovery_oid *)apr_palloc(s->process->pool,
++                                                          sizeof(sw_discovery_oid));
+                 if (!pubidPtr) {
+                     return HTTP_INTERNAL_SERVER_ERROR;
+                 }
+@@ -345,7 +341,7 @@
+                  * serviceName as key. The serviceName should be unique, right?
+                  */
+                 *pubidPtr = howl_id;
+-                apr_pool_userdata_set(pubidPtr, cfg->serviceName,
++                apr_pool_userdata_set((void *)pubidPtr, cfg->serviceName,
+                                       apr_pool_cleanup_null,
+                                       ws->process->pool);
+             }                   /* serviceName set for server config */

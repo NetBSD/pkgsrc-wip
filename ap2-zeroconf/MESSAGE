@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/03/06 20:28:03 danieleggert Exp $
+To load the Apache module, you need to put
+	LoadModule zeroconf_module lib/httpd/mod_zeroconf.so
+into your httpd.conf.
+
+To enable registration you need to put
+	Zeroconf on
+into the httpd.conf and add
+	ZeroconfRegister "Service Name" ["/partial_uri"]
+for each service that should be registered.
+
+Prior to starting a mod_zeroconf-enabled Apache, you need to start the
+mDNSResponder deamon that comes with howl.
+===========================================================================

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/06 20:28:03 danieleggert Exp $
+lib/httpd/mod_zeroconf.so
+share/doc/mod_zeroconf/README.txt
+@dirrm share/doc/mod_zeroconf
