@@ -1,0 +1,43 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/06 15:12:54 poppnk Exp $
+bin/gjots2
+share/pixmaps/gjots.png
+share/gjots2/gjots.glade2
+share/gjots2/gjots.png
+share/gjots2/gjots2-new-page.png
+share/gjots2/gjots2-new-child.png
+share/gjots2/gjots2-merge-items.png
+share/gjots2/gjots2-split-item.png
+share/gjots2/gjots2-hide-all.png
+share/gjots2/gjots2-show-all.png
+share/man/man1/gjots2.1
+share/man/man1/gjots2docbook.1
+share/man/man1/gjots2html.1
+share/doc/${PKGNAME}/gjots2.gjots
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/INSTALL
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/ChangeLog
+share/doc/${PKGNAME}/gjots2.en_US.gjots
+share/doc/${PKGNAME}/gjots2.fr.gjots
+share/doc/${PKGNAME}/gjots2.no.gjots
+share/doc/${PKGNAME}/gjots2.nb.gjots
+share/doc/${PKGNAME}/gjots2.ru.gjots
+share/applications/gjots2.deskto
+lib/gjots2/
+lib/gjots2/__init__.py
+lib/gjots2/file.py
+lib/gjots2/general.py
+lib/gjots2/prefs.py
+lib/gjots2/common.py
+lib/gjots2/find.py
+lib/gjots2/gui.py
+lib/gjots2/version.py
+lib/gjots2/printDialog.py
+lib/gjots2/sortDialog.py
+@dirrm share/pixmaps
+@dirrm share/man/man1
+@dirrm share/gjots2
+@dirrm share/doc/${PKGNAME}
+@dirrm share/applications
+@dirrm lib/gjots2
