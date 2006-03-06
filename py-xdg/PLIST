@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/06 01:30:06 poppnk Exp $
+${PYSITELIB}/xdg/BaseDirectory.pyc
+${PYSITELIB}/xdg/BaseDirectory.pyo
+${PYSITELIB}/xdg/Config.pyc
+${PYSITELIB}/xdg/Config.pyo
+${PYSITELIB}/xdg/DesktopEntry.pyc
+${PYSITELIB}/xdg/DesktopEntry.pyo
+${PYSITELIB}/xdg/Exceptions.pyc
+${PYSITELIB}/xdg/Exceptions.pyo
+${PYSITELIB}/xdg/IconTheme.pyc
+${PYSITELIB}/xdg/IconTheme.pyo
+${PYSITELIB}/xdg/IniFile.pyc
+${PYSITELIB}/xdg/IniFile.pyo
+${PYSITELIB}/xdg/Locale.pyc
+${PYSITELIB}/xdg/Locale.pyo
+${PYSITELIB}/xdg/Menu.pyc
+${PYSITELIB}/xdg/Menu.pyo
+${PYSITELIB}/xdg/MenuEditor.pyc
+${PYSITELIB}/xdg/MenuEditor.pyo
+${PYSITELIB}/xdg/Mime.pyc
+${PYSITELIB}/xdg/Mime.pyo
+${PYSITELIB}/xdg/RecentFiles.pyc
+${PYSITELIB}/xdg/RecentFiles.pyo
+${PYSITELIB}/xdg/__init__.pyc
+${PYSITELIB}/xdg/__init__.pyo
+@dirrm ${PYSITELIB}/xdg

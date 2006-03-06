@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/03/06 01:30:06 poppnk Exp $
+
+SHA1 (pyxdg-0.15.tar.gz) = e8562ac1620bb447b40c911a1e1bad8f9b21017b
+RMD160 (pyxdg-0.15.tar.gz) = 0f004c54782c4943e19968e9c7a3b35cf702c110
+Size (pyxdg-0.15.tar.gz) = 36465 bytes
