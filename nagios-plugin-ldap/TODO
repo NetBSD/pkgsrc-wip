@@ -1,8 +1,0 @@
-# $NetBSD: TODO,v 1.2 2005/08/04 19:12:10 scott8586 Exp $
-#
-
-TODO file for nagios-plugin-ldap:
-     check_ldap tested and works+.
-
-(if 'works' has a '+' it was tested in my configuration, else it was tested
-"offline").
