@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/23 16:18:39 jtonio Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/07 14:40:49 jtonio Exp $
 
 DISTNAME=	signing-party_0.4.4.orig
 PKGNAME=	signing-party-0.4.4
@@ -10,6 +10,7 @@ MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://pgp-tools.alioth.debian.org/
 COMMENT=	Various OpenPGP related tools
 
+PKG_FAIL_REASON="This package is deprecated, please use security/caff instead."
 DEPENDS+=	gnupg>=1.4.2:../../security/gnupg
 DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
 DEPENDS+=	p5-GnuPG-Interface>=0.34:../../security/p5-GnuPG-Interface
