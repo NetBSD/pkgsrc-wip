@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 00:36:31 marmfield Exp $
-libexec/nagios/check_mysql
