@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2197 2006/03/07 09:49:01 jgoamakf Exp $
+# $Id: Makefile,v 1.2198 2006/03/07 15:20:24 jtonio Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1100,7 +1100,6 @@ SUBDIR+=	shed
 SUBDIR+=	shoutcast
 SUBDIR+=	showmesh
 SUBDIR+=	sid-milter
-SUBDIR+=	signing-party
 SUBDIR+=	silky
 SUBDIR+=	sim-kde
 SUBDIR+=	sim-qt
