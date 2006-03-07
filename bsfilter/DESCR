@@ -8,6 +8,3 @@ bsfilter is a spam filter using Bayesian(statistical) algorithm.
 -- IMAP. study and judge mails in an IMAP server
 -- POP proxy. run between POP server and MUA
 - distributed under GPL
-
-Author:	nabeken
-WWW:	http://bsfilter.org/index-e.html
