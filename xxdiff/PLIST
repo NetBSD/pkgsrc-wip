@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/13 08:17:36 ghen Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/08 10:56:11 ghen Exp $
 bin/xxdiff
 man/man1/xxdiff.1
+share/doc/xxdiff/doc.html
+@dirrm share/doc/xxdiff

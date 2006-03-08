@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/08 08:49:37 ghen Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/08 10:56:11 ghen Exp $
 
 DISTNAME=		xxdiff-3.1
 CATEGORIES=		devel
@@ -8,10 +8,9 @@ MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://furius.ca/xxdiff/
 COMMENT=		Graphical file comparator and merge tool
 
-USE_TOOLS+=		gmake
-USE_TOOLS+=		bison
-USE_TOOLS+=		flex
 BUILD_DEPENDS+=		tmake>=1.7:../../devel/tmake
+
+USE_TOOLS+=		bison flex gmake
 
 BUILD_DIRS=		src
 
@@ -29,6 +28,8 @@ do-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/xxdiff ${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/src/xxdiff.1 ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xxdiff
+	${INSTALL_DATA} ${WRKSRC}/src/doc.html ${PREFIX}/share/doc/xxdiff/
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
