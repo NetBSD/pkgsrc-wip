@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/09 15:24:09 ghen Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/09 15:29:38 ghen Exp $
 
 DISTNAME=	DarwinStreamingSrvr${DSS_VERSION}
 PKGNAME=	DarwinStreamingServer-${DSS_VERSION}
@@ -17,8 +17,8 @@ DSS_VERSION=	5.5
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 REPLACE_INTERPRETER+=	bash
-_REPLACE.bash.old=	*/bin/bash
-_REPLACE.bash.new=	${SH}
+_REPLACE.bash.old=	/bin/bash
+_REPLACE.bash.new=	${SH:Q}
 _REPLACE_FILES.bash=	Install
 
 RESTRICTED=		Under APSL (see http://www.opensource.apple.com/apsl/).

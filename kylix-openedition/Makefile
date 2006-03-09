@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/27 16:25:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/09 15:29:39 ghen Exp $
 #
 
 DISTNAME=		# defined
@@ -20,10 +20,15 @@ LINUX_USE_X11=		yes
 NO_SRC_ON_CDROM=	"I'm not sure if we can redistribute it"
 NO_BIN_ON_CDROM=	${NO_SRC_ON_CDROM}
 
+REPLACE_INTERPRETER+=	bash
+_REPLACE.bash.old=	/bin/bash
+_REPLACE.bash.new=	${SH:Q}
+_REPLACE_FILES.bash=	k3_open_update_2/install.sh
+
 post-extract:
 	cd ${WRKDIR}/kylix3_open && ${TAR} -xzvf runimage.tar.gz
 
-post-patch:
+do-configure:
 	cd ${WRKDIR}/k3_open_update_2 && ./install.sh ${WRKDIR}/kylix3_open/runimage/kylix
 
 TARGET_DIR=	${EMULOPTDIR}/kylix
