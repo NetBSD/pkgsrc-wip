@@ -16,7 +16,7 @@
 #  - For backing up the native filesystem hierarchy, use a construct 
 #    like "ln -s / /.`hostname`" to break out of the emul shadow hierarchy.
 #
-# $NetBSD: tsm_daily.sh,v 1.1 2006/02/10 17:12:09 hfath Exp $
+# $NetBSD: tsm_daily.sh,v 1.2 2006/03/09 15:12:35 hfath Exp $
 
 umask 027
 
@@ -36,6 +36,7 @@ then
     echo "TSM config directory ${TSMCONFDIR} does not exist, aborting." | logger
     exit 1
 elif [ ! -f ${DSM_CONFIG} ]
+then
     echo "TSM config file ${DSM_CONFIG} not found, aborting." | logger
     exit 1
 fi
