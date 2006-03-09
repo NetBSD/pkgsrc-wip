@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/09 10:13:29 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/09 17:43:59 thomasklausner Exp $
 
 DISTNAME=		audacity-src-1.3.0b
 PKGNAME=		${DISTNAME:S/-src-/-/}
@@ -15,7 +15,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}-beta
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		autoconf gmake
+USE_TOOLS+=		autoconf gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xaudio
 CONFIGURE_ARGS+=	--with-id3=system
