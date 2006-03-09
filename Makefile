@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2199 2006/03/09 06:53:52 jdwhite Exp $
+# $Id: Makefile,v 1.2200 2006/03/09 10:14:21 ghen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -76,6 +76,7 @@ SUBDIR+=	arla-3.99.14
 SUBDIR+=	artemis
 SUBDIR+=	asfrecorder
 SUBDIR+=	atftp
+SUBDIR+=	audacity-devel
 SUBDIR+=	autoproject
 SUBDIR+=	avida2
 SUBDIR+=	avifile-devel
