@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/03/09 15:18:47 ghen Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/09 15:24:09 ghen Exp $
 
 DISTNAME=	DarwinStreamingSrvr${DSS_VERSION}
 PKGNAME=	DarwinStreamingServer-${DSS_VERSION}
 CATEGORIES=	net
 MASTER_SITES=	http://www.opensource.apple.com/projects/streaming/release/
-EXTRACT_SUFX=	.tar
 DISTFILES=	DarwinStreamingSrvr${DSS_VERSION}-Source.tar
 
 MAINTAINER=	eggert@macvaerk.dtu.dk
@@ -36,7 +35,7 @@ _FETCH_MESSAGE=	\
 	${ECHO} "  download under the APSL. Downloading the source";	   \
 	${ECHO} "  code components requires APSL registration.";	   \
 	${ECHO} "  You should manual-fetch the source code to";		   \
-	${ECHO} "  ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}";		   \
+	${ECHO} "  ${DISTDIR}/${DISTFILES}";				   \
 	${ECHO} "  from";						   \
 	${ECHO} "  <${MASTER_SITES}${DISTFILES}>";			   \
 	${ECHO} "======================================================="; \
