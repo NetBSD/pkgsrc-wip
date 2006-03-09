@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2005/08/16 07:20:30 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/09 02:03:55 jgoamakf Exp $
 
-DISTNAME=	Module-Pluggable-Fast-0.16
+DISTNAME=	Module-Pluggable-Fast-0.18
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5mpf
 CATEGORIES=	devel perl5
