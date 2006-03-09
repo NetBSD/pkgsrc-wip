@@ -1,0 +1,17 @@
+$NetBSD: patch-ah,v 1.1.1.1 2006/03/09 10:13:29 ghen Exp $
+
+--- Makefile.in.orig	2006-03-09 10:41:44.000000000 +0100
++++ Makefile.in
+@@ -39,9 +39,9 @@ install: audacity $(EXTRAINSTALLTARGETS)
+ 
+ 	# install manpage
+ 	$(INSTALL) -d $(DESTDIR)$(MANDIR)/man1
+-	-test -f help/audacity.1.gz && \
+-		$(INSTALL) -m 644 help/audacity.1.gz \
+-		$(DESTDIR)$(MANDIR)/man1/$(AUDACITY_NAME).1.gz
++	-test -f help/audacity.1 && \
++		$(INSTALL) -m 644 help/audacity.1 \
++		$(DESTDIR)$(MANDIR)/man1/$(AUDACITY_NAME).1
+ 
+ 	# install nyquist
+ 	$(INSTALL) -d $(DESTDIR)$(DATADIR)/$(AUDACITY_NAME)/nyquist

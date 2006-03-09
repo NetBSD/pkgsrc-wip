@@ -1,0 +1,52 @@
+# $NetBSD: Makefile,v 1.1.1.1 2006/03/09 10:13:29 ghen Exp $
+
+DISTNAME=		audacity-src-1.3.0b
+PKGNAME=		${DISTNAME:S/-src-/-/}
+CATEGORIES=		audio
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=audacity/}
+
+MAINTAINER=		ghen@NetBSD.org
+HOMEPAGE=		http://audacity.sourceforge.net/
+COMMENT=		Audio editor
+
+DEPENDS+=		zip>=0.0:../../archivers/zip
+
+WRKSRC=			${WRKDIR}/${DISTNAME}-beta
+
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		autoconf gmake
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-xaudio
+CONFIGURE_ARGS+=	--with-id3=system
+CONFIGURE_ARGS+=	--with-libflac=system
+CONFIGURE_ARGS+=	--with-libmad=system
+CONFIGURE_ARGS+=	--with-libsndfile=system
+CONFIGURE_ARGS+=	--with-portaudio=system
+CONFIGURE_ARGS+=	--with-vorbis=system
+LTCONFIG_OVERRIDE+=	${WRKSRC:Q}/ltconfig
+
+.include "../../mk/bsd.prefs.mk"
+
+CONFIG_GUESS_OVERRIDE?=		\
+	config.guess */config.guess */*/config.guess */*/*/config.guess
+CONFIG_SUB_OVERRIDE?=		\
+	config.sub */config.sub */*/config.sub */*/*/config.sub
+
+.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/lame/buildlink3.mk"
+.include "../../audio/libid3tag/buildlink3.mk"
+.include "../../audio/libmad/buildlink3.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/portaudio/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../x11/wxGTK/buildlink3.mk"
+
+.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
+
+# XXX Internal compiler error with -O2
+.if ${MACHINE_ARCH} == "alpha"
+CFLAGS+=	-O
+.endif
