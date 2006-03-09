@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/03 13:01:51 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/09 21:02:06 jlamwww Exp $
 #
 
 DISTNAME=		eboard-0.9.5
@@ -14,7 +14,7 @@ DEPENDS+=		sox-[0-9]*:../../audio/sox
 USE_PERL5=		yes
 USE_TOOLS+=		gmake
 
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 SUBST_CLASSES+=		sox_dev
 SUBST_STAGE.sox_dev=	post-patch

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/18 21:56:15 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/09 21:02:12 jlamwww Exp $
 
 DISTNAME=	lletters-0.1.9
 CATEGORIES=	games
@@ -23,6 +23,6 @@ pre-configure:
 
 #.include "../../x11/gtk/buildlink3.mk"
 .include "../../graphics/imlib/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

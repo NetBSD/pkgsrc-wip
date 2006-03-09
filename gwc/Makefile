@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/11 19:32:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/09 21:02:10 jlamwww Exp $
 
 DISTNAME=	gwc-0.19-10
 PKGNAME=	gwc-0.19.10
@@ -20,5 +20,5 @@ post-patch:
 .include "../../math/fftw/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 # .include "../../x11/gnome-core/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

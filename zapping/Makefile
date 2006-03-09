@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/09 09:41:42 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/09 21:02:16 jlamwww Exp $
 #
 
 DISTNAME=		zapping-0.9.6
@@ -37,6 +37,6 @@ GCONF2_SCHEMAS+=	zapping.schemas
 # not used with bktr(4)
 #.include "../../wip/rte/buildlink3.mk"
 .include "../../wip/zvbi/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

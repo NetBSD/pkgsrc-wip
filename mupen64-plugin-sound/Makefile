@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/01/17 10:20:46 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/09 21:02:13 jlamwww Exp $
 #
 
 DISTNAME=	mupen64_sound
@@ -24,7 +24,7 @@ pre-install:
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

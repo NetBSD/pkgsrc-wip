@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/15 16:30:51 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/09 21:02:14 jlamwww Exp $
 #
 
 DISTNAME=		qemu-0.8.0
@@ -67,6 +67,6 @@ post-install:
 		${PREFIX}/lib/qemu
 
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/24 10:29:32 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/09 21:02:05 jlamwww Exp $
 #
 
 DISTNAME=	DFBSee-0.7.4
@@ -19,5 +19,5 @@ USE_LIBTOOL=            yes
 
 .include "../../wip/directfb/buildlink3.mk"
 
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

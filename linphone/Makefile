@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/26 10:30:08 gschwarz Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/09 21:02:10 jlamwww Exp $
 
 DISTNAME=	linphone-1.2.0
 CATEGORIES=	net
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=	--enable-ipv6
 LIBS+=		${LIBOSSAUDIO}
 CPPFLAGS+=	-DDSP_NAME="\"${DEVOSSAUDIO}\""
 
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libosip/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"

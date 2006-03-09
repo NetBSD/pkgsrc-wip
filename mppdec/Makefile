@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/27 16:26:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/09 21:02:13 jlamwww Exp $
 #
 
 DISTNAME=		mppdec-1.1
@@ -35,5 +35,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mppdec
 	${INSTALL_DATA} ${WRKSRC}/MANUAL.TXT ${PREFIX}/share/doc/mppdec
 
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/11/05 10:03:30 leonardschmidt Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/03/09 21:02:16 jlamwww Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XMMS2_BUILDLINK3_MK:=	${XMMS2_BUILDLINK3_MK}+
@@ -47,6 +47,6 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.xmms2
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

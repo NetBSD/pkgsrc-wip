@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/01/09 09:41:42 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/09 21:02:17 jlamwww Exp $
 #
 
 DISTNAME=	zinf-2.2.0
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=--enable-cmdline \
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
 .include "../../net/ORBit/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

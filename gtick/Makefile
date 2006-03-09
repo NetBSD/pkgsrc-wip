@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/27 16:25:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/09 21:02:08 jlamwww Exp $
 #
 
 DISTNAME=		gtick-0.2.13
@@ -15,5 +15,5 @@ GNU_CONFIGURE=		YES
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

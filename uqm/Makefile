@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/10/10 14:00:15 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/09 21:02:15 jlamwww Exp $
 #
 
 DISTNAME=		uqm-0.3-source
@@ -40,7 +40,7 @@ do-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

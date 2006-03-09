@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/12/05 22:27:48 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/09 21:02:15 jlamwww Exp $
 
 DISTNAME=	umix-1.0.2
 CATEGORIES=	audio
@@ -23,5 +23,5 @@ pre-configure:
 	cd ${WRKSRC} && autoconf
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

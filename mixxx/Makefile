@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/09 11:20:18 ghen Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/09 21:02:12 jlamwww Exp $
 
 DISTNAME=		mixxx-1.4.2
 CATEGORIES=		audio
@@ -32,6 +32,6 @@ _REPLACE_FILES.bash=	configure
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

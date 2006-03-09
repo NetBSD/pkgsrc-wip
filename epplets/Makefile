@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/12 23:51:17 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/09 21:02:08 jlamwww Exp $
 #
 
 DISTNAME=		epplets-0.7
@@ -29,6 +29,6 @@ CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/include
 
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

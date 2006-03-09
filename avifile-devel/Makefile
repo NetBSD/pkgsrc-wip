@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/26 12:30:22 obache Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/09 21:02:04 jlamwww Exp $
 
 DISTNAME=	avifile-0.7-0.7.43
 PKGNAME=	avifile-devel-0.7.43
@@ -78,7 +78,7 @@ SUBST_FILES.docpath=	Makefile.in doc/Makefile.in doc/avicap/Makefile.in \
 			plugins/libac3pass/Makefile.in
 SUBST_SED.docpath=	-E -e 's|[(]datadir[)]/[$$][(]PACKAGE[)]/doc|(datadir)/doc/$$(PACKAGE)|'
 
-. include "../../mk/ossaudio.buildlink3.mk"
+. include "../../mk/oss.buildlink3.mk"
 SUBST_CLASSES+=		dsp
 SUBST_STAGE.dsp=	pre-configure
 SUBST_MESSAGE.dsp=	/dev/dsp to ${DEVOSSSOUND}

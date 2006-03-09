@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/01/13 01:19:38 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/09 21:02:03 jlamwww Exp $
 #
 
 DISTNAME=		adamem
@@ -51,6 +51,6 @@ do-install:
 
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

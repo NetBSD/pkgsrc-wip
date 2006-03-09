@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/02 14:07:41 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/09 21:02:15 jlamwww Exp $
 #
 
 DISTNAME=		snes9x-${S9X_VER}-src
@@ -78,7 +78,7 @@ MAKE_ENV+=	USBHID_H=1
 
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../graphics/png/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

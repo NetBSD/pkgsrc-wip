@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/11/28 00:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/09 21:02:14 jlamwww Exp $
 #
 
 DISTNAME=		fastaudio
@@ -27,6 +27,6 @@ post-extract:
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

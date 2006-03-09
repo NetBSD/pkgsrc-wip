@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/08/03 18:38:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/09 21:02:08 jlamwww Exp $
 #
 
 DISTNAME=		grip-3.2.0
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--disable-id3
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2006/02/27 22:59:48 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.2 2006/03/09 21:02:03 jlamwww Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.InfoNES
 PKG_OPTIONS_REQUIRED_GROUPS=	frontend
@@ -17,7 +17,7 @@ SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 SRC_SUBDIR=		linux
 
 .include "../../x11/gtk/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk)

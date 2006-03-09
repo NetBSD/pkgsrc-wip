@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/20 00:10:47 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/09 21:02:15 jlamwww Exp $
 
 DISTNAME=	sxemacs-22.1.3
 CATEGORIES=	editors
@@ -75,7 +75,7 @@ PLIST_SUBST+=	ELSUFX=''
 .endif
 PLIST_SUBST+=	X11ONLY=""
 
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
