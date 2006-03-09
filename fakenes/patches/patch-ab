@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2004/07/19 19:17:08 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.3 2006/03/09 17:23:45 thomasklausner Exp $
 
---- src/support/unzip.h.orig	2002-07-18 20:12:09.000000000 +0200
-+++ src/support/unzip.h
+--- src/include/unzip.h.orig	2002-07-18 20:12:09.000000000 +0200
++++ src/include/unzip.h
 @@ -57,6 +57,10 @@ extern "C" {
  #include "zlib.h"
  #endif
