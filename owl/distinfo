@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/03/09 06:18:29 jdwhite Exp $
+
+SHA1 (owl-2.1.11.tar.gz) = e12e7cbcdf67a0795e19ee251ce43d7654699b0a
+RMD160 (owl-2.1.11.tar.gz) = 90c60dc9ce435ab373b4627189c4d621744e6454
+Size (owl-2.1.11.tar.gz) = 429846 bytes
+SHA1 (patch-aa) = 894dbc42756404d24accfadd08e7cc18b66c9afb
+SHA1 (patch-ab) = 4bffb7b04b0329f861ed79562502ccfade744152

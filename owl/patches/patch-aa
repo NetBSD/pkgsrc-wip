@@ -1,0 +1,74 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/03/09 06:18:29 jdwhite Exp $
+
+--- configure	2005-01-30 11:38:56.000000000 -0600
++++ configure	2006-03-08 19:42:38.000000000 -0600
+@@ -2259,6 +2259,29 @@
+ echo "${ECHO_T}no" >&6
+ fi
+ 
++echo "$as_me:$LINENO: checking for /usr/pkg/include" >&5
++echo $ECHO_N "checking for /usr/pkg/include... $ECHO_C" >&6
++if test -d /usr/pkg/include; then
++	CFLAGS=${CFLAGS}\ -I/usr/pkg/include
++	CPPFLAGS=${CPPFLAGS}\ -I/usr/pkg/include
++	echo "$as_me:$LINENO: result: yes" >&5
++echo "${ECHO_T}yes" >&6
++else
++	echo "$as_me:$LINENO: result: no" >&5
++echo "${ECHO_T}no" >&6
++fi
++echo "$as_me:$LINENO: checking for /usr/pkg/lib" >&5
++echo $ECHO_N "checking for /usr/pkg/lib... $ECHO_C" >&6
++if test -d /usr/pkg/lib; then
++	LDFLAGS=-L/usr/pkg/lib\ ${LDFLAGS}
++	echo "$as_me:$LINENO: result: yes" >&5
++echo "${ECHO_T}yes" >&6
++else
++	echo "$as_me:$LINENO: result: no" >&5
++echo "${ECHO_T}no" >&6
++fi
++
++
+ 
+ echo "$as_me:$LINENO: checking for initscr in -lncurses" >&5
+ echo $ECHO_N "checking for initscr in -lncurses... $ECHO_C" >&6
+@@ -4247,6 +4270,30 @@
+ _ACEOF
+ 
+ else
++  echo "$as_me:$LINENO: checking for /usr/pkg/share/terminfo" >&5
++echo $ECHO_N "checking for /usr/pkg/share/terminfo... $ECHO_C" >&6
++if test "${ac_cv_file__usr_pkg_share_terminfo+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  test "$cross_compiling" = yes &&
++  { { echo "$as_me:$LINENO: error: cannot check for file existence when cross compiling" >&5
++echo "$as_me: error: cannot check for file existence when cross compiling" >&2;}
++   { (exit 1); exit 1; }; }
++if test -r "/usr/pkg/share/terminfo"; then
++  ac_cv_file__usr_pkg_share_terminfo=yes
++else
++  ac_cv_file__usr_pkg_share_terminfo=no
++fi
++fi
++echo "$as_me:$LINENO: result: $ac_cv_file__usr_pkg_share_terminfo" >&5
++echo "${ECHO_T}$ac_cv_file__usr_pkg_share_terminfo" >&6
++if test $ac_cv_file__usr_pkg_share_terminfo = yes; then
++
++cat >>confdefs.h <<\_ACEOF
++#define TERMINFO "/usr/pkg/share/terminfo"
++_ACEOF
++
++else
+   { { echo "$as_me:$LINENO: error: No terminfo found for this system" >&5
+ echo "$as_me: error: No terminfo found for this system" >&2;}
+    { (exit 1); exit 1; }; }
+@@ -4254,6 +4301,8 @@
+ 
+ fi
+ 
++fi
++
+ 
+ 
+ 

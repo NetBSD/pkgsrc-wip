@@ -1,0 +1,10 @@
+Owl is a curses-based instant messaging client. Currently it supports
+AOL Instant Messenger and the MIT Zephyr protocol. Other instant
+messaging protocols are also on the way. The main features of Owl are:
+
+ * As a text client it can be run over telnet, rlogin or text ssh sessions
+ * It is easy to use and can run without a config file
+ * An optional Perl configuration file can set preferences and format messages
+ * It has emacs style editing of message
+ * It has advanced message sorting and filtering capabilities
+ * There will be future suport for IRC and Jabber

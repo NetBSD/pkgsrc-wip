@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/09 06:18:29 jdwhite Exp $
+bin/owl
+man/man1/owl.1
+share/doc/owl/intro.txt
+@dirrm share/doc/owl
