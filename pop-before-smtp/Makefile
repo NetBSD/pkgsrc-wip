@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/02/26 12:41:48 obache Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/09 14:50:27 obache Exp $
 #
 
-DISTNAME=	pop-before-smtp-1.37
+DISTNAME=	pop-before-smtp-1.41
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=popbsmtp/}
 
