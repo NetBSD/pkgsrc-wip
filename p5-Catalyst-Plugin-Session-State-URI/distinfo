@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/03/09 18:02:38 kuli0020 Exp $
+
+SHA1 (Catalyst-Plugin-Session-State-URI-0.02.tar.gz) = 0461cbf73655befb0c3b934ec8a50c481db8baf8
+RMD160 (Catalyst-Plugin-Session-State-URI-0.02.tar.gz) = cdebdbd109d5a6541a75fde8bccb5e4391da225d
+Size (Catalyst-Plugin-Session-State-URI-0.02.tar.gz) = 6509 bytes
