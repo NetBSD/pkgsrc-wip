@@ -4,7 +4,7 @@ license. As a library, it presents a single abstract data
 model to the calling application for all supported formats.
 The related OGR library (which lives within the GDAL source
 tree) provides a similar capability for simple features
-vector data. It includes roughly 40 format drivers. Current
+vector data. It includes roughly 60 format drivers. Current
 translators include:
 	* GeoTIFF 		(read/write)
 	* Erdas Imagine		(read/write)
@@ -17,3 +17,5 @@ translators include:
 	* PNG 			(read/write)
 	* Geosoft GXF		(read)
 	* Arc/Info Binary Grid 	(read)
+A full list is available at
+http://www.remotesensing.org/gdal/formats_list.html
