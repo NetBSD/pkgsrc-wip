@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/03/10 19:48:43 kuli0020 Exp $
+
+SHA1 (DBIx-Class-Loader-0.20.tar.gz) = b2ce186c65d2ca597894cc829940961d49d4d00a
+RMD160 (DBIx-Class-Loader-0.20.tar.gz) = 1cf4f8c81bba5bf7876bb42a190859a49fbdf3e1
+Size (DBIx-Class-Loader-0.20.tar.gz) = 12819 bytes
