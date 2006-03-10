@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2006/02/10 17:15:07 hfath Exp $
+$NetBSD: MESSAGE,v 1.4 2006/03/10 12:03:11 hfath Exp $
 
 Tivoli Storage Manager Client has been installed in
 		${EMULDIR}/opt/tivoli
@@ -10,6 +10,7 @@ and configuration in
 
 NetBSD configuration hints:
 
+- ${EMULDIR}/etc/mtab must exist and must not be empty.
 - Make sure 'passworddir' is set in tsm.sys so that the passwd file
   ends up in ${PKG_SYSCONFDIR} instead of the shadow hierarchy.
 - The environment variables DSM_DIR, DSM_CONFIG, DSM_LOG
