@@ -8,5 +8,3 @@ into separate modules. This separation allows you to modify code that handles
 one concern without affecting code that handles the others. Catalyst promotes
 re-use of existing Perl modules that already handle common web application
 concerns well.
-
-WWW: http://search.cpan.org/dist/Catalyst/
