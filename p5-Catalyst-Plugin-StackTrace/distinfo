@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/03/10 20:30:18 kuli0020 Exp $
+
+SHA1 (Catalyst-Plugin-StackTrace-0.02.tar.gz) = 644dbfd17a48743ff1eaf063cb5b0c249dddfb1b
+RMD160 (Catalyst-Plugin-StackTrace-0.02.tar.gz) = cae3a53f2e352497932ec61b564ef5dc492e05bd
+Size (Catalyst-Plugin-StackTrace-0.02.tar.gz) = 5187 bytes
