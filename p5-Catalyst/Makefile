@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2006/02/21 10:48:34 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/10 20:52:03 kuli0020 Exp $
 
-DISTNAME=	Catalyst-5.63
+DISTNAME=       Catalyst-5.64
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/M/MS/MSTROUT/}
+MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=../by-authors/id/M/MR/MRAMBERG/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst/
@@ -28,22 +28,17 @@ DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Template-Toolkit>=0:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Text-SimpleTable>=0.03:../../wip/p5-Text-SimpleTable
 DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
-DEPENDS+=	p5-Tree-Simple>=0:../../devel/p5-Tree-Simple
+DEPENDS+=	p5-Tree-Simple>=1.15:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../wip/p5-Tree-Simple-VisitorFactory
 DEPENDS+=	p5-URI>=1.35:../../www/p5-URI
 DEPENDS+=	p5-File-Copy-Recursive>=0:../../wip/p5-File-Copy-Recursive
 DEPENDS+=	p5-Module-Install>=0.45:../../wip/p5-Module-Install
 DEPENDS+=	p5-ExtUtils-AutoInstall>=0:../../devel/p5-ExtUtils-AutoInstall
-DEPENDS+=	p5-YAML>=0.52:../../textproc/p5-YAML
+DEPENDS+=	p5-YAML>=0.55:../../textproc/p5-YAML
 BUILD_DEPENDS+=	p5-Test-MockObject>=0:../../wip/p5-Test-MockObject
 BUILD_DEPENDS+=	p5-Test-NoWarnings>=0.082:../../devel/p5-Test-NoWarnings
 
-#PERL5_MODULE_TYPE=      Module::Install
 PERL5_PACKLIST= auto/Catalyst/.packlist
-
-post-extract:
-	${CP} ${WRKSRC}/Makefile.PL ${WRKSRC}/Makefile.PL.orig
-	${SED} -e '/^feature/,/;$$/d' ${WRKSRC}/Makefile.PL.orig > ${WRKSRC}/Makefile.PL
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
