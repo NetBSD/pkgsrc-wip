@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/09 11:19:27 ghen Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/11 10:16:40 ghen Exp $
 #
 
 DISTNAME=		mc-4.1.40-pre9
@@ -21,9 +21,9 @@ INSTALL_MAKE_FLAGS+=	INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
 REPLACE_PERL+=		vfs/extfs/a vfs/extfs/deb vfs/extfs/mailfs
 
 REPLACE_INTERPRETER+=	bash
-_REPLACE.bash.old=	/bin/bash
-_REPLACE.bash.new=	${SH:Q}
-_REPLACE_FILES.bash=	vfs/extfs/iso
+REPLACE.bash.old=	/bin/bash
+REPLACE.bash.new=	${SH}
+REPLACE_FILES.bash=	vfs/extfs/iso
 
 .include "../../mk/bsd.prefs.mk"
 

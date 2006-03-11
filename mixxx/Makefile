@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/09 21:02:12 jlamwww Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/11 10:16:40 ghen Exp $
 
 DISTNAME=		mixxx-1.4.2
 CATEGORIES=		audio
@@ -22,9 +22,9 @@ CONFIGURE_ARGS+=	--disable-jack
 USE_TOOLS+=		bash
 
 REPLACE_INTERPRETER+=	bash
-_REPLACE.bash.old=	/bin/bash
-_REPLACE.bash.new=	${TOOLS_PATH.bash}
-_REPLACE_FILES.bash=	configure
+REPLACE.bash.old=	/bin/bash
+REPLACE.bash.new=	${TOOLS_PATH.bash}
+REPLACE_FILES.bash=	configure
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/28 00:27:26 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/11 10:16:40 ghen Exp $
 
 DISTNAME=		lilo-22.5.9
 CATEGORIES=		sysutils
@@ -34,14 +34,14 @@ USE_PKGINSTALL=		YES
 CONF_FILES=		${PREFIX}/share/lilo/lilo.conf.example	${PKG_SYSCONFDIR}/lilo.conf
 
 REPLACE_INTERPRETER+=	bash
-_REPLACE.bash.old=	.*/bin/bash
-_REPLACE.bash.new=	${SH}
-_REPLACE_FILES.bash=	mkrescue
+REPLACE.bash.old=	.*/bin/bash
+REPLACE.bash.new=	${SH}
+REPLACE_FILES.bash=	mkrescue
 
 REPLACE_INTERPRETER+=	perl
-_REPLACE.perl.old=	.*/bin/perl
-_REPLACE.perl.new=	${PERL5}
-_REPLACE_FILES.perl=	keytab-lilo.pl
+REPLACE.perl.old=	.*/bin/perl
+REPLACE.perl.new=	${PERL5}
+REPLACE_FILES.perl=	keytab-lilo.pl
 
 post-patch:
 	${CP} ${WRKSRC}/config.h ${WRKSRC}/config.h.orig
