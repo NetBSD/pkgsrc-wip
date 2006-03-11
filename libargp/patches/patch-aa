@@ -1,12 +1,14 @@
-$NetBSD: patch-aa,v 1.1 2005/12/17 18:47:41 lkundrak Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/11 15:46:09 lkundrak Exp $
 
---- argp.h.orig	2005-12-17 19:47:47.000000000 +0100
+--- argp.h.orig	2003-12-11 09:37:05.000000000 +0100
 +++ argp.h
-@@ -28,9 +28,11 @@
+@@ -27,10 +27,12 @@
+ #define __need_error_t
  #include <errno.h>
  
- #ifndef __THROW
+-#ifndef __THROW
 -# define __THROW
++#ifdef __THROW
 +#undef __THROW
  #endif
  
