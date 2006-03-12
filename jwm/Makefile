@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2006/02/12 20:33:04 pippijn Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/12 11:49:23 pippijn Exp $
 #
 
-DISTNAME=		jwm-1.4
+DISTNAME=		jwm-1.5
 CATEGORIES=		wm x11
 MASTER_SITES=		http://www.joewing.net/programs/jwm/
 EXTRACT_SUFX=		.tar.bz2
