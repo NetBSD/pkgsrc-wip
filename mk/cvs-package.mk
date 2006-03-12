@@ -1,24 +1,36 @@
-# $Id: cvs-package.mk,v 1.10 2006/01/30 02:34:18 rillig Exp $
+# $Id: cvs-package.mk,v 1.11 2006/03/12 15:37:29 rillig Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs.
 #
 # A package using this file shall define the following variables:
-#     CVS_REPOSITORIES: 	A list of unique identifiers /id/ for which
-#				appropriate CVS_ROOT and CVS_MODULE must be
-#				defined.
-#     CVS_ROOT.${id}:		the CVSROOT for the CVS repository, including
-#				anoncvs password
-#     CVS_MODULE.${id}:		the CVS module to check out
 #
-# It may define the following variable:
-#     CVS_TAG:		the CVS tag to check out (default: HEAD)
+#	CVS_REPOSITORIES
+#		A list of unique identifiers /id/ for which appropriate
+#		CVS_ROOT and CVS_MODULE must be defined.
 #
-# After inclusion of this file, the following variables are defined, which
-# can be used as CVS_ROOT:
-#     CVS_ROOT_GNU
-#     CVS_ROOT_NONGNU
-#     CVS_ROOT_SOURCEFORGE
+#	CVS_ROOT.${id}
+#		The CVSROOT for the CVS repository, including anoncvs
+#		password, if applicable.
+#
+#	CVS_MODULE.${id}
+#		The CVS module to check out.
+#
+# It may define the following variables:
+#
+#	CVS_TAG
+#		The CVS tag to check out (default: HEAD).
+#
+#	CVS_TAG.${id}
+#		Overridable CVS tag for a repository.
+#
+# This file defines the following variables:
+#
+#	CVS_ROOT_GNU
+#	CVS_ROOT_NONGNU
+#	CVS_ROOT_SOURCEFORGE
+#		Common CVS repository locations for use in the CVS_ROOT
+#		variables.
 
 .if !defined(_PKG_MK_CVS_PACKAGE_MK)
 _PKG_MK_CVS_PACKAGE_MK=	# defined
@@ -29,6 +41,21 @@ _PKG_MK_CVS_PACKAGE_MK=	# defined
 
 CVS_TAG?=		HEAD
 DISTFILES?=		# empty
+
+.if !defined(CVS_REPOSITORIES)
+PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_REPOSITORIES must be set."
+CVS_REPOSITORIES?=	# none
+.endif
+
+.for _repo_ in ${CVS_REPOSITORIES}
+.  if !defined(CVS_ROOT.${_repo_})
+PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT."${_repo_:Q}" must be set."
+.  endif
+.  if !defined(CVS_MODULE.${_repo_})
+PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_MODULE."${_repo_:Q}" must be set."
+.  endif
+CVS_TAG.${_repo_}?=	${CVS_TAG}
+.endfor
 
 #
 # definition of user-visible output variables
@@ -52,20 +79,11 @@ _CVS_FLAGS=		-Q
 _CVS_CHECKOUT_FLAGS=	-P -r ${CVS_TAG:Q}
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
 
-.if !defined(CVS_REPOSITORIES)
-PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_REPOSITORIES must be set."
-.endif
-
 pre-extract: do-cvs-extract
 
 .PHONY: do-cvs-extract
 do-cvs-extract:
 .for _repo_ in ${CVS_REPOSITORIES}
-.  if !defined(CVS_ROOT.${_repo_})
-PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT."${_repo_:Q}" must be set."
-.  elif !defined(CVS_MODULE.${_repo_})
-PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_MODULE."${_repo_:Q}" must be set."
-.  endif
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKDIR};							\
 	case ${CVS_ROOT.${_repo_}:Q} in					\
