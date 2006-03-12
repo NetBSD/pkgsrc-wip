@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/10 01:39:50 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/12 03:35:36 jeremy-c-reed Exp $
 #
 
-DISTNAME=		damageproto-1.0.1
+DISTNAME=		damageproto-1.0.3
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/X11R7.0-RC1/proto/
+MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
