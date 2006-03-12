@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/08 22:14:09 jdwhite Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/12 05:46:47 jdwhite Exp $
 #
 
 DISTNAME=		oak-1.5.0
@@ -15,11 +15,11 @@ GNU_CONFIGURE=		yes
 BUILD_TARGET=
 
 RCD_SCRIPTS=		oak
-CONF_FILES=		${PREFIX}/share/examples/oak/oak.conf ${PREFIX}/etc/oak.conf
-
-INSTALLATION_DIRS+=	share/examples/oak
+CONF_FILES=		${PREFIX}/share/examples/oak/oak.conf ${PKG_SYSCONFDIR}/oak.conf
 
 post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/oak
 	${INSTALL_DATA}	${FILESDIR}/oak.conf* ${PREFIX}/share/examples/oak/
+	${INSTALL_DATA} ${FILESDIR}/oak.1 ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"
