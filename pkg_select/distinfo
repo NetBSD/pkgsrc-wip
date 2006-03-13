@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/12/09 16:09:09 imilh Exp $
+$NetBSD: distinfo,v 1.6 2006/03/13 00:39:59 minskim Exp $
 
 SHA1 (pkg_select-20051209.tar.gz) = 5d8ee79e3f606afefdd7e55bf694ba313fd0519f
 RMD160 (pkg_select-20051209.tar.gz) = 5790a2ffa171c2a30e707571b3a02f168414691e
 Size (pkg_select-20051209.tar.gz) = 50045 bytes
+SHA1 (patch-aa) = c59ecd6d4cfdde450aac1f2794ab7d42da8cbc07
+SHA1 (patch-ab) = a8750c8a5603fa63e0fc17c4be3db7cd340e75b7
