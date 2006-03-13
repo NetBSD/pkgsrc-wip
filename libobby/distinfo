@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/09/11 05:26:43 udontknow Exp $
+$NetBSD: distinfo,v 1.2 2006/03/13 15:34:27 absd Exp $
 
-SHA1 (obby-0.2.0.tar.gz) = 0f3da7c0f090195a6fa9c231619776f0bd14159d
-RMD160 (obby-0.2.0.tar.gz) = 5072ac68bd8cf6f6d5251d0ade2e8a2adadb8c79
-Size (obby-0.2.0.tar.gz) = 393167 bytes
+SHA1 (obby-0.3.0.tar.gz) = b4817491d78daa3d964bc7a023bd664601e8dc8e
+RMD160 (obby-0.3.0.tar.gz) = b998b429c4ff030c89e62a0c38540e9a1fe15751
+Size (obby-0.3.0.tar.gz) = 454757 bytes

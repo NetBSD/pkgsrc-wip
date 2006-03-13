@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/09/11 06:32:14 udontknow Exp $
+$NetBSD: distinfo,v 1.2 2006/03/13 15:34:27 absd Exp $
 
-SHA1 (gobby-0.2.2.tar.gz) = 8115a3cc9df45de2b0fc9b58c454230dbadba213
-RMD160 (gobby-0.2.2.tar.gz) = 38606b4e1b72cba11d26d278ca4a1f1aebae8b80
-Size (gobby-0.2.2.tar.gz) = 258917 bytes
+SHA1 (gobby-0.3.0.tar.gz) = 1fe65e646b309c83bbf1cd52fecc9bf75a2b9abd
+RMD160 (gobby-0.3.0.tar.gz) = 3ccffed70d4d2d0bba9e329432a5ef417b28496c
+Size (gobby-0.3.0.tar.gz) = 308213 bytes

@@ -1,33 +1,48 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2005/09/11 05:26:43 udontknow Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2006/03/13 15:34:27 absd Exp $
 include/obby/buffer.hpp
+include/obby/chat.hpp
 include/obby/client_buffer.hpp
-include/obby/client_document.hpp
 include/obby/client_document_info.hpp
+include/obby/colour.hpp
 include/obby/common.hpp
-include/obby/delete_record.hpp
+include/obby/delete_operation.hpp
 include/obby/document.hpp
 include/obby/document_info.hpp
+include/obby/document_packet.hpp
 include/obby/duplex_signal.hpp
 include/obby/error.hpp
 include/obby/format_string.hpp
 include/obby/host_buffer.hpp
-include/obby/host_document.hpp
 include/obby/host_document_info.hpp
-include/obby/insert_record.hpp
+include/obby/insert_operation.hpp
+include/obby/jupiter_algorithm.hpp
+include/obby/jupiter_client.hpp
+include/obby/jupiter_server.hpp
+include/obby/jupiter_undo.hpp
 include/obby/line.hpp
 include/obby/local_buffer.hpp
-include/obby/local_document.hpp
 include/obby/local_document_info.hpp
+include/obby/no_operation.hpp
+include/obby/operation.hpp
 include/obby/position.hpp
 include/obby/ptr_iterator.hpp
 include/obby/record.hpp
+include/obby/reversible_insert_operation.hpp
+include/obby/ring.hpp
 include/obby/rsa.hpp
+include/obby/serialise/attribute.hpp
+include/obby/serialise/error.hpp
+include/obby/serialise/object.hpp
+include/obby/serialise/parser.hpp
+include/obby/serialise/token.hpp
 include/obby/server_buffer.hpp
-include/obby/server_document.hpp
 include/obby/server_document_info.hpp
 include/obby/sha1.hpp
+include/obby/split_operation.hpp
 include/obby/user.hpp
 include/obby/user_table.hpp
+include/obby/vector_time.hpp
 lib/libobby.la
-lib/pkgconfig/obby-0.2.pc
+lib/pkgconfig/obby-0.3.pc
+@dirrm include/obby/serialise
 @dirrm include/obby
