@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/02/12 00:59:00 emil_s Exp $
+$NetBSD: distinfo,v 1.2 2006/03/14 16:04:30 emil_s Exp $
 
-SHA1 (makedepf90-2.8.3.tar.gz) = 9e6d3c3abdca71b7163f068557f025bb46879e15
-RMD160 (makedepf90-2.8.3.tar.gz) = 76c859465298fe57ada4d6d83475119941bac1fe
-Size (makedepf90-2.8.3.tar.gz) = 84920 bytes
+SHA1 (makedepf90-2.8.4.tar.gz) = c4b46e298078a1b0e0d9795d7ce9ecfdbd8b8de4
+RMD160 (makedepf90-2.8.4.tar.gz) = e583211a0acf6d77034b01d75fc99b0ec2e7e7bb
+Size (makedepf90-2.8.4.tar.gz) = 86778 bytes
 SHA1 (patch-aa) = 6fcedf8a694952e51abae49d71a6ce087f188cdf
 SHA1 (patch-ab) = 4b33c4dffc8b55d09169c543328d744336cbbef0
