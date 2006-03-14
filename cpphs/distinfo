@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/07 17:04:20 emil_s Exp $
+$NetBSD: distinfo,v 1.2 2006/03/14 15:51:14 emil_s Exp $
 
-SHA1 (cpphs-1.0.tar.gz) = c3c7b3d0236299ef509920b895b282f6f3ffdf78
-RMD160 (cpphs-1.0.tar.gz) = 55c221070c77147badef0918358467f7b4f87379
-Size (cpphs-1.0.tar.gz) = 43775 bytes
+SHA1 (cpphs-1.1.tar.gz) = dbf2c8c5ce7facb82d47bb70a554b7b0915c731f
+RMD160 (cpphs-1.1.tar.gz) = d1cc3484da2b6224623c7e5923702643cf904693
+Size (cpphs-1.1.tar.gz) = 44099 bytes
