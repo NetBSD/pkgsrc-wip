@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/01/17 10:20:47 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:18 jlamwww Exp $
 
 DISTNAME=	up-imapproxy-1.2.4
 CATEGORIES=	mail
@@ -9,7 +9,6 @@ HOMEPAGE=	http://www.imapproxy.org/
 COMMENT=	Connection caching IMAP proxy server
 
 GNU_CONFIGURE=	YES
-USE_PKGINSTALL=	YES
 RCD_SCRIPTS=	upimapproxy
 
 SUBST_CLASSES+=		paths

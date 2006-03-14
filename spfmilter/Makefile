@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/20 20:04:57 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/14 01:28:15 jlamwww Exp $
 
 DISTNAME=	spfmilter-1.0.8
 CATEGORIES=	mail
@@ -10,7 +10,6 @@ COMMENT=	Implementation of the Sender Policy Framework (SPF) as a milter
 
 GNU_CONFIGURE=	YES
 PTHREAD_OPTS+=	require
-USE_PKGINSTALL=	YES
 RCD_SCRIPTS=	spfmilter
 
 BUILDLINK_DEPENDS.libmilter?=	libmilter>=8.13.0

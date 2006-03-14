@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/11 10:16:40 ghen Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/14 01:28:01 jlamwww Exp $
 
 DISTNAME=		lilo-22.5.9
 CATEGORIES=		sysutils
@@ -28,8 +28,6 @@ PKGMANDIR?=		man
 MAKE_ENV+=		PKGMANDIR+=${PKGMANDIR}
 
 MAKE_COMMAND=		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
-
-USE_PKGINSTALL=		YES
 
 CONF_FILES=		${PREFIX}/share/lilo/lilo.conf.example	${PKG_SYSCONFDIR}/lilo.conf
 

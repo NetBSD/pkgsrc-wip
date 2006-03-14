@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/11/28 00:27:26 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/14 01:28:02 jlamwww Exp $
 #
 # XXX WIP: only installs parts necessary for client operation.
 # Server parts still in work (need to add informational texts into
@@ -13,8 +13,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mixmaster/}
 MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://mixmaster.sourceforge.net/
 COMMENT=		The Mixmaster anonymous remailer client
-
-USE_PKGINSTALL=		yes
 
 BUILD_DIRS=		${WRKSRC}/Src
 MAKE_FLAGS+=		CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} LDFLAGS=${LDFLAGS:M*:Q} LIBS=

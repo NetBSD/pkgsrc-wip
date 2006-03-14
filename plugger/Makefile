@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/28 00:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/14 01:28:08 jlamwww Exp $
 #
 
 DISTNAME=	plugger-5.0
@@ -8,8 +8,6 @@ MASTER_SITES=	http://fredrik.hubbe.net/plugger/
 MAINTAINER=	airhead@users.sourceforge.net
 HOMEPAGE=	http://fredrik.hubbe.net/plugger.html
 COMMENT=	Plugin for multimedia types in Mozilla, Netscape and Opera
-
-USE_PKGINSTALL=		YES
 
 REL_EGDIR=		share/examples/plugger
 EGDIR=			${PREFIX}/${REL_EGDIR}

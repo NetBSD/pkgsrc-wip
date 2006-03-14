@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 10:30:45 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/14 01:28:01 jlamwww Exp $
 
 DISTNAME= 	nfs-utils-1.0.6
 PKGNAME=	linux-${DISTNAME}
@@ -9,7 +9,6 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://sourceforge.net/projects/nfs/
 COMMENT=	Linux NFS client and server utilities
 
-USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 

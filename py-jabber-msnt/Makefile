@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/21 20:30:05 schnoebe Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/14 01:28:11 jlamwww Exp $
 
 DISTNAME=		pymsnt-0.11
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -28,7 +28,6 @@ DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.5:../../graphics/py-imaging
 # USE_PERL5, INFO_FILES, DIST_SUBDIR, etc.
 # EXTRACT_ONLY=		# yes
 NO_BUILD=		yes
-USE_PKGINSTALL=		yes
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"

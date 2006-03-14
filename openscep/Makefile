@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/08 15:47:44 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/14 01:28:05 jlamwww Exp $
 
 DISTNAME=		openscep-0.4.2
 CATEGORIES=		security
@@ -13,7 +13,6 @@ BUILD_DEPENDS+=		w3m>=0.5.1:../../www/w3m
 .include "../../mk/bsd.prefs.mk"
 
 USE_TOOLS+=		automake autoconf grep perl:run
-USE_PKGINSTALL=		YES
 OPENSCEP_USER?=		openscep
 OPENSCEP_GROUP?=	openscep
 PKG_GROUPS=     	${OPENSCEP_USER}

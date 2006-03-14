@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/12 01:18:09 yeled Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:12 jlamwww Exp $
 #
 
 DISTNAME=		ripole-0.1.4
@@ -13,7 +13,6 @@ COMMENT=		a small program/library designed to pull out attachments from OLE2 dat
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 BUILD_TARGET=		default
 
 do-configure: # empty

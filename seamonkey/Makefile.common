@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2006/02/07 15:37:50 ghen Exp $
+# $NetBSD: Makefile.common,v 1.6 2006/03/14 01:28:13 jlamwww Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
@@ -21,7 +21,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf213 gmake perl pkg-config
 GNU_CONFIGURE=		yes
 
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../wip/seamonkey/INSTALL
+INSTALL_TEMPLATE+=	${.CURDIR}/../../wip/seamonkey/INSTALL
 
 CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=	nsprpub/build/autoconf/config.guess

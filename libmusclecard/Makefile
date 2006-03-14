@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 22:27:46 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/14 01:28:00 jlamwww Exp $
 
 DISTNAME=		libmusclecard-1.2.9-beta7
 PKGNAME=		libmusclecard-1.2.9
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.musclecard.com/
 COMMENT=		MUSCLE SmartCard framework support library
 
 GNU_CONFIGURE=          YES
-USE_PKGINSTALL=         YES
 USE_LIBTOOL=            YES
 USE_TOOLS+=             automake gmake pkg-config
 

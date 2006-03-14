@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/08/23 11:49:44 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/14 01:27:59 jlamwww Exp $
 #
 
 DISTNAME=	ezbounce-1.04a
@@ -15,7 +15,6 @@ HOMEPAGE=	http://druglord.freelsd.org/ezbounce/
 COMMENT=	Highly Configurable IRC Proxy
 
 GNU_CONFIGURE=	YES
-USE_PKGINSTALL=	YES
 
 CONFIGURE_ARGS+=	--with-ssl
 

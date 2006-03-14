@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/28 00:27:28 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/14 01:28:11 jlamwww Exp $
 #
 
 DISTNAME=		rc.subr-20030912
@@ -17,7 +17,6 @@ NO_EXTRACT=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 NO_MTREE=		yes
-USE_PKGINSTALL=		YES
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 

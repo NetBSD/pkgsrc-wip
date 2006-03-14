@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/09 03:56:50 marmfield Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/14 01:28:00 jlamwww Exp $
 #
 
 DISTNAME=	${PKGNAME:S/-/_/}-Stable-Full_Package
@@ -29,7 +29,6 @@ JOOMLA_CONFDIR=		${PKG_SYSCONFDIR}/joomla
 JOOMLA_CONFFILE=	${JOOMLA_CONFDIR}/joomla.conf
 JOOMLA_DIR=		${PREFIX}/share/joomla
 
-USE_PKGINSTALL=		yes
 MAKE_DIRS=		${JOOMLA_CONFDIR}
 CONF_FILES=		${EGDIR}/joomla.conf ${JOOMLA_CONFDIR}/joomla.conf
 SPECIAL_PERMS=		${JOOMLA_CONFDIR}/joomla.conf ${APACHE_USER} \

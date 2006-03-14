@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:01 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/14 01:28:02 jlamwww Exp $
 #
 #
 
@@ -18,7 +18,6 @@ WRKSRC=		${WRKDIR}/lsh-0.70
 CFLAGS+=	-DLSH_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 CONFLICTS+=	lsh-[0-9]*:../../security/lsh
 
-USE_PKGINSTALL=	yes
 EGDIR=		${PREFIX}/share/examples/mg-lsh
 CONF_FILES=	${EGDIR}/autoexec ${PKG_SYSCONFDIR}/autoexec
 

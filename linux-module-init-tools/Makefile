@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/26 00:16:32 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/14 01:28:01 jlamwww Exp $
 #
 
 DISTNAME=		module-init-tools-3.1
@@ -14,8 +14,6 @@ COMMENT=		Linux kernel module utilities (kernel 2.5.48 and above)
 CONFLICTS+=		linux-modutils-[0-9]*
 
 ONLY_FOR_PLATFORM=	Linux-*-* # configure: error: Linux only, dude!
-
-USE_PKGINSTALL= 	YES
 
 GNU_CONFIGURE=		YES
 

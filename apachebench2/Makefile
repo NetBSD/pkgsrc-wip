@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:09:48 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/14 01:27:58 jlamwww Exp $
 
 # XXX This uses the version of apache2 distfile instead of
 # XXX the AP_AB_BASEREVISION from the support/ab.c source.
@@ -10,7 +10,6 @@ HOMEPAGE=		http://httpd.apache.org/
 COMMENT=		Apache HTTP (Web) server benchmarking tool
 
 BUILD_DEFS+=		USE_INET6
-USE_PKGINSTALL=		YES
 #USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 BUILD_TARGET=		ab

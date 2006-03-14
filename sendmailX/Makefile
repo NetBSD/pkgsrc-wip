@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/11/28 00:27:28 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/14 01:28:13 jlamwww Exp $
 
 DISTNAME=	smX-${VERSION}
 PKGNAME=	sendmailX-${VERSION}
@@ -11,7 +11,6 @@ COMMENT=	Something to do with mail
 
 CONFLICTS+=	postfix-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 GNU_CONFIGURE=	YES
-USE_PKGINSTALL=	YES
 PTHREAD_OPTS+=	require
 VERSION=	0.0.0.0
 USE_TOOLS+=	sed
@@ -32,8 +31,6 @@ MESSAGE_SUBST+=	SMXCNF=${SMXCNF}
 PKG_SYSCONFSUBDIR=	smx
 SMXCNFDIR=		${PKG_SYSCONFDIR}
 SMXCNF=			${SMXCNFDIR}/smx.conf
-
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 PKG_GROUPS=     smxs smxq smxc smxm smx
 PKG_USERS=      smxs:smxs::Sendmail\ X\ SMTP\ Server

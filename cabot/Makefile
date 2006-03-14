@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 22:27:44 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/14 01:27:58 jlamwww Exp $
 
 DISTNAME=		cabot-0.0.20050504
 CATEGORIES=		misc security
@@ -13,7 +13,6 @@ DEPENDS+=	p5-Class-MethodMaker>=2.07:../../devel/p5-Class-MethodMaker
 DEPENDS+=	gnupg>=1.4.2:../../security/gnupg
 
 USE_TOOLS+=		gmake
-USE_PKGINSTALL=         yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no

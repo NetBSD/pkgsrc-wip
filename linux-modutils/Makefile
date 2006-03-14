@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 22:27:46 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:01 jlamwww Exp $
 
 DISTNAME=		modutils-2.4.24
 PKGNAME=		linux-${DISTNAME}
@@ -14,8 +14,6 @@ HOMEPAGE=		http://www.kernel.org/
 COMMENT=		Linux kernel module utilities
 
 CONFLICTS+=		linux-module-init-tools-[0-9]*
-
-USE_PKGINSTALL=		YES
 
 ONLY_FOR_PLATFORM=      Linux-*-* # This is for the Linux kernel
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/14 01:27:59 jlamwww Exp $
 #
 
 DISTNAME=		gnump3d-2.9.7
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.gnu.org/software/gnump3d/
 COMMENT=		The GNU Streaming MP3 / Media Server
 
 CFGFILE=		${PKG_SYSCONFDIR}/gnump3d/gnump3d.conf
-USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		gnump3d
 CONF_FILES=		none ${CFGFILE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/11 09:26:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:09 jlamwww Exp $
 
 PKGNAME=	postgresql81-server-${BASE_VERS}
 COMMENT=	PostgreSQL database server programs
@@ -12,8 +12,6 @@ NOT_FOR_PLATFORM=	*-*-mips
 USE_LIBTOOL=		yes
 PKG_LIBTOOL=		${PKG_SHLIBTOOL}
 
-USE_PKGINSTALL=		yes
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 MESSAGE_SRC=		${.CURDIR}/MESSAGE
 
 CONFIGURE_ARGS+=	--with-openssl

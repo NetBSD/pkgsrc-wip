@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/01/17 10:20:46 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/14 01:28:00 jlamwww Exp $
 #
 
 DISTNAME=		highlight-2.4.3
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.andre-simon.de/
 COMMENT=		Converts source code to formatted text with syntax highlighting
 
 USE_TOOLS+=		gmake
-USE_PKGINSTALL=		yes
 USE_LANGUAGES=		c++
 MANCOMPRESSED=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/01/17 10:20:46 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/14 01:28:00 jlamwww Exp $
 
 DISTNAME=		kismet-2005-08-R1
 PKGNAME=		kismet-2005.08.01
@@ -12,7 +12,6 @@ COMMENT=		802.11 wireless network detector, sniffer and IDS
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_NCURSES=		# needs libpanel
-USE_PKGINSTALL=		yes
 USE_TOOLS+=		gmake
 
 KISMET_USER?=		kismet

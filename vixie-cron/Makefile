@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/28 00:27:29 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:18 jlamwww Exp $
 
 DISTNAME=		cron_4.0_b1
 PKGNAME=		vixie-cron-4.0.1
@@ -8,8 +8,6 @@ EXTRACT_SUFX=		.shar
 
 MAINTAINER=		reed@reedmedia.net
 COMMENT=		Execute and maintain scheduled commands
-
-USE_PKGINSTALL=		YES
 
 #WRKSRC=			${WRKDIR}
 EXTRACT_CMD=	${MKDIR} ${WRKSRC} && cd ${WRKSRC} && ${CAT} ${DOWNLOADED_DISTFILE} | ${SH}

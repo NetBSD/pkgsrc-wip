@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/28 19:09:50 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/14 01:28:02 jlamwww Exp $
 
 DISTNAME=		muscleframework-1.1.5
 PKGNAME=		muscle-mcardplugin-1.1.5
@@ -11,7 +11,6 @@ COMMENT=		MuscleCard applet plugin for the MUSCLE framework
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/MCardPlugin
 GNU_CONFIGURE=		YES
-USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake
 

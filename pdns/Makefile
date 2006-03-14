@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:31:16 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:08 jlamwww Exp $
 
 DISTNAME=		pdns-2.9.8
 CATEGORIES=		net
@@ -8,7 +8,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.powerdns.com/
 COMMENT=		Modern, advanced and high performance nameserver
 
-USE_PKGINSTALL=	YES
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS=	--with-modules=""

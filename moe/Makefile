@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/28 00:27:26 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:02 jlamwww Exp $
 
 DISTNAME=	moe-0.5
 CATEGORIES=	editors
@@ -20,8 +20,6 @@ USE_LANGUAGES=	c++
 
 CONF_FILES=		${PREFIX}/share/examples/moe/moerc \
 			${PKG_SYSCONFDIR}/moerc
-USE_PKGINSTALL=		YES
-
 INSTALL_TARGET=		install install-man
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 info share/examples/moe
 

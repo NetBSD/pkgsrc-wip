@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:12:18 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/14 01:27:59 jlamwww Exp $
 #
 
 DISTNAME=	ftpd-tls-20031008
@@ -14,7 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 
-USE_PKGINSTALL=	yes
 RCD_SCRIPTS=	ftpdtls
 
 SUBST_CLASSES+=	path

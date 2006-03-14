@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 22:27:46 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/14 01:28:03 jlamwww Exp $
 #
 
 DISTNAME=		mythtv-0.11
@@ -16,7 +16,6 @@ ONLY_FOR_PLATFORM=	Linux-*-*
 HAS_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
-USE_PKGINSTALL=		YES
 
 USE_TOOLS+=		gmake
 

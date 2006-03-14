@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/28 00:27:23 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/14 01:27:58 jlamwww Exp $
 #
 
 DISTNAME=		cabal-1.1.3
@@ -10,10 +10,6 @@ HOMEPAGE=		http://www.haskell.org/cabal/release/${DISTNAME}/
 COMMENT=		Haskell common architecture for building applications and libraries
 
 WRKSRC=			${WRKDIR}/cabal
-
-USE_PKGINSTALL=		yes
-INSTALL_EXTRA_TMPL+=	${PKGDIR}/INSTALL
-DEINSTALL_EXTRA_TMPL+=	${PKGDIR}/DEINSTALL
 
 USE_TOOLS+=		gmake
 MAKEFILE=		GNUmakefile

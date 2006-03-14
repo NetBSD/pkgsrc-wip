@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/02/14 12:39:27 ahallmann Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/14 01:28:00 jlamwww Exp $
 
 VERS=		4.2.5
 PKGNAME=	hylafax-devel-${VERS}
@@ -24,7 +24,6 @@ DIST_SUBDIR=	hylafax
 
 CONFLICTS=	hylafax-[0-9]* mgetty-[0-9]*
 
-USE_PKGINSTALL=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gs:run
 HAS_CONFIGURE=		yes

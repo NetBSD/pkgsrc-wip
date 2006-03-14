@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/11/28 00:27:23 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/14 01:27:57 jlamwww Exp $
 #
 
 DISTNAME=		aolserver-4.01-src
@@ -16,7 +16,6 @@ CONFIGURE_ARGS+=	--with-tcl=${LOCALBASE}/lib
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 OWN_DIRS=		?
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake

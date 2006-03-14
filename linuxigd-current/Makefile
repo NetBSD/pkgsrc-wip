@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/06 13:54:04 obache Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:01 jlamwww Exp $
 #
 
 DISTNAME=	linuxigd-0.99
@@ -9,7 +9,6 @@ MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://linux-igd.sourceforge.net/
 COMMENT=	Linux UPnP Internet Gateway Device
 
-USE_PKGINSTALL=	yes
 USE_TOOLS+=	gmake
 
 CVS_REPOSITORIES=	linux-igd

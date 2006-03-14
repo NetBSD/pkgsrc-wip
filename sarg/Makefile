@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/05 22:27:47 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/14 01:28:13 jlamwww Exp $
 
 DISTNAME=		sarg-2.0.9
 CATEGORIES=		www
@@ -17,8 +17,6 @@ CONFIGURE_ARGS+=	--enable-bindir=${PREFIX}/sbin			\
 			--enable-mandir=${PREFIX}/man/man1		\
 			--enable-sysconfdir=${DATADIR:Q}			\
 			--enable-htmldir=${SARG_REPORTSDIR:Q}
-
-USE_PKGINSTALL=		yes
 
 PKG_SYSCONFSUBDIR=	sarg
 EGDIR=			${PREFIX}/share/examples/sarg

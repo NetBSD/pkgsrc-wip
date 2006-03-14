@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/11 16:09:23 obache Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/14 01:28:01 jlamwww Exp $
 #
 
 DISTNAME=	upnpsdk-1.0.4
@@ -10,7 +10,6 @@ MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://upnp.sourceforge.net/
 COMMENT=	Linux SDK for UPnP Devices
 
-USE_PKGINSTALL=	yes
 USE_TOOLS+=	gmake
 
 MAKEFILE=	makefile

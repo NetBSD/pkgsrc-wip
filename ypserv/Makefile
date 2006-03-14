@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 22:27:48 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/14 01:28:19 jlamwww Exp $
 #
 
 DISTNAME=		ypserv-2.9
@@ -16,7 +16,6 @@ DEPENDS+=		portmap>=4:../../wip/portmap
 #DEPENDS+=		yp-tools-[0-9]*:../../wip/yp-tools
 
 GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		yes
 
 RCD_SCRIPTS=		yppasswdd ypserv
 

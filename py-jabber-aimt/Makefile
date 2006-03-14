@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/01/17 10:20:46 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/14 01:28:10 jlamwww Exp $
 
 DISTNAME=		pyaim-t-0.7b
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -27,7 +27,6 @@ DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.5:../../graphics/py-imaging
 # USE_PERL5, INFO_FILES, DIST_SUBDIR, etc.
 # EXTRACT_ONLY=		# yes
 NO_BUILD=		yes
-USE_PKGINSTALL=		yes
 PYTHON_PATCH_SCRIPTS+=	src/main.py
 
 # always include bsd.prefs.mk before any .if or .ifdef statements

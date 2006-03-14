@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/28 00:27:23 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/14 01:27:58 jlamwww Exp $
 #
 
 DISTNAME=		brltty-3.7
@@ -11,7 +11,6 @@ COMMENT=		Access software for a blind person using a soft braille terminal
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		yes
 
 .include "../../mk/bsd.prefs.mk"
 

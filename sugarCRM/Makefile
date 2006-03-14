@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:15 jlamwww Exp $
 #
 
 DISTNAME=	SugarSuite-Full-${VERSION}
@@ -16,7 +16,6 @@ DEPENDS+=	php-mysql>=4.3.3:../../databases/php-mysql
 VERSION=	3.0.1a
 
 USE_LANGUAGES=	# empty
-USE_PKGINSTALL=	yes
 NO_BUILD=	yes
 
 APACHE_USER?=	www

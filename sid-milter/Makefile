@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/01/17 10:20:47 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/14 01:28:13 jlamwww Exp $
 
 DISTNAME=	sid-milter-0.2.5
 CATEGORIES=	mail
@@ -18,7 +18,6 @@ LICENSE=		no-profit
 USE_TOOLS+=		gm4
 MAKE_ENV+=		M4=${M4:Q}
 PTHREAD_OPTS+=		require
-USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		sidmilter
 
 SIDDOC=		${PREFIX}/share/doc/sid-milter

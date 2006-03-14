@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/12/05 22:27:45 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/14 01:27:59 jlamwww Exp $
 
 DISTNAME=		cvsd-1.0.8
 CATEGORIES=		devel
@@ -11,7 +11,6 @@ COMMENT=		Run CVS pserver in a chroot-ed environment
 .include "../../mk/bsd.prefs.mk"
 
 USE_TOOLS+=		gmake perl
-USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/17 10:20:47 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:12 jlamwww Exp $
 #
 
 DISTNAME=		rsyslog-1.0.3
@@ -18,7 +18,6 @@ SUBST_FILES.paths=	rsyslog.conf.5 rsyslogd.8 sample.conf syslogd.c
 SUBST_SED.paths=	-e "s|/etc/rsyslog.conf|${PKG_SYSCONFDIR}/rsyslog.conf|g" -e "s|/etc/rsyslogd.conf|${PKG_SYSCONFDIR}/rsyslog.conf|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
-USE_PKGINSTALL=		yes
 EGDIR=			${PREFIX}/share/examples/rsyslog
 CONF_FILES=		${EGDIR}/rsyslog.conf ${PKG_SYSCONFDIR}/rsyslog.conf
 RCD_SCRIPTS=		rsyslogd

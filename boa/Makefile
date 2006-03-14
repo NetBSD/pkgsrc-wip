@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 22:27:44 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/14 01:27:58 jlamwww Exp $
 #
 
 DISTNAME=	boa-0.94.14rc21
@@ -31,7 +31,6 @@ CPPFLAGS+=	-DINET6
 .endif
 
 CONF_FILES=		${EGDIR}/boa.conf ${PKG_SYSCONFDIR}/boa.conf
-USE_PKGINSTALL=YES
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
 do-install:

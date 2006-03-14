@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:32 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/14 01:28:03 jlamwww Exp $
 
 DISTNAME=	noip-duc-linux
 PKGNAME=	noip-2.1.1
@@ -9,7 +9,6 @@ MAINTAINER=	dhowland@users.sourceforge.net
 HOMEPAGE=	http://www.no-ip.com/
 COMMENT=	Dynamic DNS update client from no-ip.com
 
-USE_PKGINSTALL=	YES
 RCD_SCRIPTS=	noip
 
 .include "../../mk/bsd.prefs.mk"

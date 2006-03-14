@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/12 23:51:23 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/14 01:28:02 jlamwww Exp $
 #
 
 DISTNAME=		mozplugger-1.5.2
@@ -10,7 +10,6 @@ HOMEPAGE=		http://mozplugger.mozdev.org/
 COMMENT=		Mozilla plugin for launching external viewers
 
 MAKE_ARGS+=		-DPKG_SYSCONFDIR=${PKG_SYSCONFDIR}
-USE_PKGINSTALL=		yes
 CONF_FILES+=		${PREFIX}/share/examples/mozplugger/mozpluggerrc ${PKG_SYSCONFDIR}/mozpluggerrc
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/01/31 02:57:34 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/14 01:27:58 jlamwww Exp $
 
 DISTNAME=	c-news
 PKGNAME=	c-news-CR-7
@@ -33,7 +33,6 @@ COMMENT=	The 3rd generation USENET news server
 CONFLICTS+=	nntpclnt-[0-9]* inn*
 
 WRKSRC=		${WRKDIR}
-USE_PKGINSTALL=	YES
 PKG_USERS=	news:news::Internet\ News:${CNEWSDATA:Q}:${SH:Q}
 PKG_GROUPS=	news
 

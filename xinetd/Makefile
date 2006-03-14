@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/01/20 22:49:09 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/14 01:28:18 jlamwww Exp $
 #
 
 DISTNAME=		xinetd-2.3.13
@@ -11,7 +11,6 @@ COMMENT=		Secure replacement for inetd
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		yes
 USE_TOOLS+=		gmake
 BUILD_TARGET=		build
 CONFIGURE_ARGS+=	--with-loadavg

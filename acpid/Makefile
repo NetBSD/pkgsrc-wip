@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/03 12:18:06 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/14 01:27:57 jlamwww Exp $
 #
 
 DISTNAME=		acpid-1.0.4
@@ -11,7 +11,6 @@ HOMEPAGE=		http://acpid.sourceforge.net/
 COMMENT=		Linux ACPI event handler
 
 EGDIR=			${PKG_SYSCONFDIR}/acpid ${PREFIX}/share/examples/acpid
-USE_PKGINSTALL=		yes
 RCD_SCRIPTS=		acpid
 
 USE_TOOLS+=		gmake

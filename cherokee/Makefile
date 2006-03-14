@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/17 23:21:22 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/14 01:27:58 jlamwww Exp $
 #
 
 DISTNAME=	cherokee-0.4.30
@@ -11,7 +11,6 @@ COMMENT=	Extremely fast and tiny web server
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--bindir=${PREFIX:Q}/sbin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/27 16:27:55 udontknow Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:02 jlamwww Exp $
 
 DISTNAME=		muscleframework-1.1.5
 PKGNAME=		muscle-pkcs11-1.1.5
@@ -11,7 +11,6 @@ COMMENT=		MUSCLE SmartCard framework PKCS \#11 library
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/libmusclepkcs11
 GNU_CONFIGURE=		YES
-USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		automake gmake
 

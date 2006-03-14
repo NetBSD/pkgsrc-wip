@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/03 14:57:35 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:13 jlamwww Exp $
 #
 
 DISTNAME=		shaper_2.2.12-0.7.3.orig
@@ -14,7 +14,6 @@ WRKSRC=			${WRKDIR}/shaper-2.2.12-0.7.3/shaper/
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		shaper
 EGDIR=			${PREFIX}/share/examples/shaper
 CONF_FILES=		${EGDIR}/shaper.conf ${PKG_SYSCONFDIR}/shaper.conf

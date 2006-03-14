@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2006/01/17 21:56:50 jtonio Exp $
+# $NetBSD: Makefile.common,v 1.20 2006/03/14 01:28:00 jlamwww Exp $
 
 DISTNAME=     kaffe-1.1.7-rc1
 PKGNAME=      ${DISTNAME:S/-rc/rc/}
@@ -17,7 +17,6 @@ GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
 JAVA_HOME=		${PREFIX}/java/kaffe
 JAVA_NAME=		kaffe
 NO_MTREE=		yes
-USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 TEST_TARGET=		check

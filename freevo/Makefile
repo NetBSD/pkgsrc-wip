@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/11/28 05:01:34 dhowland Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/14 01:27:59 jlamwww Exp $
 #
 
 DISTNAME=		freevo-1.5.4
@@ -16,7 +16,6 @@ DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
 DEPENDS+=		${PYPKGPREFIX}-twisted-web>=0.5.0:../../wip/py-twisted-web
 
 PYDISTUTILSPKG=		yes
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 
 PYTHON_VERSIONS_ACCEPTED=	23

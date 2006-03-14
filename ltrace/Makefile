@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/17 05:51:55 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/14 01:28:01 jlamwww Exp $
 #
 
 DISTNAME=		ltrace_0.3.36.orig
@@ -13,7 +13,6 @@ COMMENT=		Track runtime library calls in dynamically linked programs
 ONLY_FOR_PLATFORM=	Linux-*-*
 
 WRKSRC=			${WRKDIR}/ltrace-0.3.36
-USE_PKGINSTALL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

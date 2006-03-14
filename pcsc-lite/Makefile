@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/16 20:30:18 ghen Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/14 01:28:08 jlamwww Exp $
 
 DISTNAME=		pcsc-lite-1.2.9-beta10
 PKGNAME=		${DISTNAME:S/-beta/b/}
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.linuxnet.com/
 COMMENT=		PC/SC Architecture support for Smart Cards
 
 GNU_CONFIGURE=          YES
-USE_PKGINSTALL=		YES
 USE_LIBTOOL=            YES
 USE_TOOLS+=             automake gmake
 

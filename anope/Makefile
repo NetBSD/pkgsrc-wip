@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/01/17 09:13:36 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/14 01:27:57 jlamwww Exp $
 
 DISTNAME=	anope-1.7.13
 CATEGORIES=	net
@@ -10,7 +10,6 @@ COMMENT=	Set of Services for IRC networks
 
 GNU_CONFIGURE=	YES
 PTHREAD_OPTS+=	require
-USE_PKGINSTALL=	YES
 USE_TOOLS+=	gmake perl:run
 ANOPE_USER=	anope
 ANOPE_GROUP=	anope

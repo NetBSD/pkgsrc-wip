@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/09 14:50:27 obache Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:09 jlamwww Exp $
 #
 
 DISTNAME=	pop-before-smtp-1.41
@@ -10,7 +10,6 @@ HOMEPAGE=	http://popbsmtp.sourceforge.net/
 COMMENT=	Simple daemon for pop-before-smtp
 
 USE_LANGUAGES=	# empty
-USE_PKGINSTALL=	yes
 USE_TOOLS+=	perl:run pod2man
 REPLACE_PERL+=	pop-before-smtp
 

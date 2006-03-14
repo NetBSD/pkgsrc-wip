@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4 2005/11/23 04:43:57 rillig Exp $
+# $Id: Makefile,v 1.5 2006/03/14 01:27:59 jlamwww Exp $
 # New ports collection makefile for:	freevrrpd
 # Date created:				Tue Jan 29 18:44:25 EST 2002
 # Whom:					Sebastien Petit <spe@phear.org>
@@ -14,8 +14,6 @@ COMMENT=	This a VRRP RFC2338 Compliant implementation under FreeBSD
 
 MAKE_ENV+=	PTHREAD_CFLAGS=${PTHREAD_CFLAGS:Q}
 MAKE_ENV+=	PTHREAD_LIBS=${PTHREAD_LIBS:Q}
-
-USE_PKGINSTALL= yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/freevrrpd ${PREFIX}/sbin

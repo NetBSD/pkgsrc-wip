@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 22:27:46 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/14 01:28:02 jlamwww Exp $
 
 DISTNAME=	mnogosearch-3.1.21
 CATEGORIES=	www databases
@@ -9,7 +9,6 @@ HOMEPAGE= 	http://www.mnogosearch.org/
 COMMENT=	Web search engine software for intranet and internet servers
 
 GNU_CONFIGURE=		YES
-USE_PKGINSTALL=         YES
 
 PKG_SYSCONFSUBDIR=	mnogosearch
 MNOGOSEARCH_DATADIR?=	/var/mnogosearch

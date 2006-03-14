@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/01 13:15:24 rxg Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:17 jlamwww Exp $
 
 DISTNAME=	tex-arphic-ttf-2.11
 CATEGORIES=	fonts
@@ -27,9 +27,6 @@ SFDDIR=		${TEXMFDIRS}/ttf2tfm/base
 
 X11TTFDIR=	${X11PREFIX}/lib/X11/fonts/TTF
 
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-
 do-build:
 .for f in ${FONT_FILES}
 	${MKDIR} ${WRKSRC}/${f}
@@ -49,10 +46,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${TFMDIR}/arphic/${f}
 	${INSTALL_DATA} ${WRKSRC}/${f}/*.tfm ${TFMDIR}/arphic/${f}
 .endfor
-
-post-install:
-	# Edit special.map ttfonts.map
-	@${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../print/teTeX/module.mk"
 .include "../../mk/bsd.pkg.mk"

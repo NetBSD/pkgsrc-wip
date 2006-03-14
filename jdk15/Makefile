@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/13 12:16:12 ghen Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/14 01:28:00 jlamwww Exp $
 
 JDK_VERSION=    	1.5.0
 JDK_PATCHSET_VERSION=   2
@@ -26,7 +26,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 LICENSE=		scsl-2.3-license
 
-USE_PKGINSTALL=		yes
 USE_TOOLS+=		gmake m4
 USE_LANGUAGES=		c c++
 EXTRACT_CMD_OPTS.zip=	-q

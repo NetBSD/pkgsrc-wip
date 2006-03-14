@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/03 11:52:33 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/14 01:27:57 jlamwww Exp $
 #
 
 DISTNAME=	Chinput-3.0.2
@@ -15,7 +15,6 @@ USE_X11BASE=	yes
 
 BUILD_TARGET=	chinput
 
-USE_PKGINSTALL=	yes
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=	${EGDIR}/Chinput.ad ${PKG_SYSCONFDIR}/Chinput.ad
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 22:27:46 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/14 01:28:02 jlamwww Exp $
 #
 
 DISTNAME=		man-1.5p
@@ -18,7 +18,6 @@ CONFLICTS+=		man-db-[0-9]*
 #DEPENDS on groff
 
 PKGMANDIR?=		man
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-confdir ${PKG_SYSCONFDIR} +sgid +fhs +lang all

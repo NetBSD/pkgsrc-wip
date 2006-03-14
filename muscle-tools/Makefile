@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/25 23:12:23 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/14 01:28:02 jlamwww Exp $
 
 DISTNAME=		muscleTools-0.9.2
 PKGNAME=		muscle-tools-0.9.2
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.musclecard.com/
 COMMENT=		Personalization tool for MuscleCard enabled smartcards
 
 USE_TOOLS+=		gmake
-USE_PKGINSTALL=		YES
 
 .include "../../wip/libmusclecard/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/19 19:13:09 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/14 01:28:18 jlamwww Exp $
 
 DISTNAME=	util-linux-2.12r
 CATEGORIES=	sysutils
@@ -16,7 +16,6 @@ COMMENT=	Miscellaneous essential utilities for Linux systems
 
 ONLY_FOR_PLATFORM=	Linux-*-* # Uses Linux kernel headers
 
-USE_PKGINSTALL=		YES
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 MAKE_ENV+=		DESTDIR=${PREFIX:Q}

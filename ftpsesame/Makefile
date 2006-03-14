@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/08/23 11:49:44 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/14 01:27:59 jlamwww Exp $
 
 DISTNAME=		ftpsesame-0.95
 CATEGORIES=		net
@@ -8,7 +8,6 @@ MAINTAINER=		peter@pointless.nl
 HOMEPAGE=		http://www.sentia.org/projects/ftpsesame/
 COMMENT=                Automatic packet filter configurator for FTP
 
-USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 
 PKG_USERS=		proxy:nogroup::proxy\ pseudo-user:${VARBASE}/chroot/proxy:/sbin/nologin

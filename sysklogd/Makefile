@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/28 00:27:28 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/14 01:28:16 jlamwww Exp $
 
 DISTNAME=		sysklogd-1.4.1
 PKGREVISION=		2
@@ -19,7 +19,6 @@ MAKE_ENV+=		DESTDIR=${PREFIX:Q} ROOT_GROUP=${ROOT_GROUP:Q} \
 PKGMANDIR?=		man
 MAKE_ENV+=		PKGMANDIR=${PKGMANDIR:Q}
 
-USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		syslogd klogd
 CONF_FILES+=		${PREFIX}/share/examples/sysklogd/syslog.conf ${PKG_SYSCONFDIR}/syslog.conf
 

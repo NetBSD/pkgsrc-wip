@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/04 01:17:04 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/14 01:28:09 jlamwww Exp $
 
 DISTNAME= 	portmap_4
 PKGNAME=	portmap-4
@@ -17,7 +17,6 @@ INSTALLATION_DIRS+=	sbin share/doc/portmap
 MAKE_FLAGS+=	WRAP_DIR=${BUILDLINK_PREFIX.tcp_wrappers}/lib
 NO_CONFIGURE=	yes
 RCD_SCRIPTS=	portmap
-USE_PKGINSTALL=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/portmap ${PREFIX}/sbin/

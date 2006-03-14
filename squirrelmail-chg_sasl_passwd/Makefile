@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/01/17 10:20:47 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/14 01:28:15 jlamwww Exp $
 #
 
 DISTNAME=	chg_sasl_passwd-1.4-1.4.x
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.squirrelmail.org/
 COMMENT=	SASL password changing plugin for SquirrelMail
 
 NO_CONFIGURE=	YES
-USE_PKGINSTALL=YES
 
 .include "../../mk/bsd.prefs.mk"
 

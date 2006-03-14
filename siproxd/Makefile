@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 22:27:47 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/14 01:28:13 jlamwww Exp $
 
 DISTNAME=	siproxd-0.5.11
 CATEGORIES=	net
@@ -18,8 +18,6 @@ EGDIR=		${PREFIX}/share/examples/siproxd
 CONF_FILES=	${EGDIR}/siproxd.conf.example ${PKG_SYSCONFDIR}/siproxd.conf \
 		${EGDIR}/siproxd_passwd.cfg \
 		${PKG_SYSCONFDIR}/siproxd_passwd.cfg
-
-USE_PKGINSTALL=	YES
 
 INSTALLATION_DIRS=	sbin share/examples/siproxd
 

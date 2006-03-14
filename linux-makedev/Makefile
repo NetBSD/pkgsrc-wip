@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/09 20:22:46 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/14 01:28:01 jlamwww Exp $
 #
 
 DISTNAME=		makedev_2.3.1.orig
@@ -21,7 +21,6 @@ VERSION=		2.3.1-66
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
-USE_PKGINSTALL=		YES
 # XXX maybe should not hard-code group numbers; does it matter?
 #PKG_GROUPS=		daemon:1 sys:3 tty:5 disk:6 uucp:10 kmem:15 floppy:25
 PKG_GROUPS=		root daemon sys tty disk uucp kmem floppy

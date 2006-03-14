@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 22:27:47 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:03 jlamwww Exp $
 
 DISTNAME=      		openct-0.6.6
 CATEGORIES=     	security
@@ -9,7 +9,6 @@ HOMEPAGE= 		http://www.opensc.org/openct/
 COMMENT=		Smart Card Reader drivers and middleware
 
 GNU_CONFIGURE= 		YES
-USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+= 		gmake pkg-config
 

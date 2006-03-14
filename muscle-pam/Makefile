@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/26 20:06:49 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/14 01:28:02 jlamwww Exp $
 
 DISTNAME=		muscleframework-1.1.5
 PKGNAME=		muscle-pam-1.1.5
@@ -10,7 +10,6 @@ HOMEPAGE=       	http://www.linuxnet.com/
 COMMENT=		PAM plugin for MUSCLE SmartCard framework
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/MusclePAM
-USE_PKGINSTALL=		YES
 USE_TOOLS+=		gmake
 
 PKG_SYSCONFSUBDIR=	musclepam

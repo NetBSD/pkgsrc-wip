@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/24 13:42:36 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/14 01:28:06 jlamwww Exp $
 #
 
 DISTNAME=		pam_pkcs11-0.5.3
@@ -13,7 +13,6 @@ COMMENT=		PKCS #11 authentication method for PAM
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		YES
 
 .include "options.mk"
 PLIST_SRC+=		PLIST.common

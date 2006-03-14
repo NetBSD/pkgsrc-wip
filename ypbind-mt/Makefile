@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 22:27:48 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:18 jlamwww Exp $
 #
 
 DISTNAME=		ypbind-mt-1.12
@@ -20,7 +20,6 @@ DEPENDS+=		portmap>=4:../../wip/portmap
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		yes
 RCD_SCRIPTS=		ypbind
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

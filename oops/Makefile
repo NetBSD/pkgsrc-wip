@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/11 11:57:22 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/14 01:28:03 jlamwww Exp $
 #
 
 DISTNAME=	oops-1.5.24
@@ -15,7 +15,6 @@ COMMENT=	Multithreaded caching HTTP proxy server
 # with PTHREAD_DIAGASSERT=AEL.
 NOT_FOR_PLATFORM=	NetBSD-1.6*-*
 
-USE_PKGINSTALL=		YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-oops-user=${OOPSUSER:Q}

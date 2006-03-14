@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/01/17 10:20:45 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/14 01:27:59 jlamwww Exp $
 #
 
 DISTNAME=		flexbackup-1.2.1
@@ -13,7 +13,6 @@ COMMENT=		Flexible backup tool
 USE_TOOLS+=		perl5:run
 REPLACE_PERL=		${WRKSRC}/flexbackup
 NO_BUILD=		YES
-USE_PKGINSTALL=		yes
 
 SUBST_CLASSES+=		cfgpath
 SUBST_MESSAGE.cfgpath = Fixing hardcoded configuration file path.

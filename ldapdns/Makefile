@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/24 10:30:31 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/14 01:28:00 jlamwww Exp $
 
 DISTNAME=	ldapdns-cvs-snapshot
 PKGNAME=	ldapdns-cvs-0.0.1
@@ -10,7 +10,6 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://ldapdns.sourceforge.net
 COMMENT=	Tiny, fast authoritative nameserver that queries LDAP
 
-USE_PKGINSTALL=	YES
 USE_TOOLS+=	gmake
 BUILD_TARGET=	it
 GNU_CONFIGURE=	YES
