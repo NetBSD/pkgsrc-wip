@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/26 12:33:38 obache Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/14 12:55:17 obache Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -17,10 +17,6 @@ CONFIGURE_DIRS=	${MY_SUBDIR:Q}
 
 GNU_CONFIGURE=	yes
 TEST_TARGET=	check
-
-PERL5_PACKLIST=	auto/Curia/.packlist auto/Depot/.packlist auto/Villa/.packlist
-REPLACE_PERL+=	${MY_SUBDIR:Q}/curia/plcrtest ${MY_SUBDIR:Q}/depot/pldptest \
-		${MY_SUBDIR:Q}/villa/plvltest
 
 .include "../../databases/qdbm/buildlink3.mk"
 .include "../../mk/java-vm.mk"
