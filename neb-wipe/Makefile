@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2005/11/28 21:39:08 florian_stoehr Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/14 00:04:45 florian_stoehr Exp $
 #
 
-DISTNAME=		neb-wipe-src-0.9.1
-PKGNAME=		neb-wipe-0.9.1
+DISTNAME=		neb-wipe-src-1.0
+PKGNAME=		neb-wipe-1.0
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=neb-stoehr/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=	 	netbsd@wolfnode.de
 HOMEPAGE=		http://neb-stoehr.sourceforge.net/
-COMMENT=	 	Secure disk partition eraser
+COMMENT=	 	Secure disk partition eraser (NetBSD only)
 
 NO_CONFIGURE=		yes
 
