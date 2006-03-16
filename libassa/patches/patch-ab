@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/03/16 09:01:33 bartoszkuzma Exp $
+
+--- assa/Handlers.h.orig	2005-12-06 13:32:56.000000000 +0100
++++ assa/Handlers.h
+@@ -27,7 +27,8 @@ namespace ASSA {
+  */
+ 
+ 
+-#if defined (__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined (__FreeBSD__) || defined(__FreeBSD_kernel__) \
++	|| defined (__NetBSD__)
+ #   define ASSAIOSIG SIGIO
+ #else
+ #   define ASSAIOSIG SIGPOLL
