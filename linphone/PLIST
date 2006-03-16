@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/11/22 19:20:22 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/03/16 23:14:21 jlamwww Exp $
 ${GUI}bin/linphone
 bin/linphonec
 include/linphone/config.h
@@ -22,8 +22,8 @@ include/ortp/telephonyevents.h
 ${GUI}libexec/linphone_applet
 lib/liblinphone.la
 lib/libortp.la
-${PKGMANDIR}/man1/linphone.1
-${PKGMANDIR}/man1/linphonec.1
+man/man1/linphone.1
+man/man1/linphonec.1
 share/applications/linphone.desktop
 share/doc/linphone/mediastreamer/book1.html
 share/doc/linphone/mediastreamer/coreapi.html

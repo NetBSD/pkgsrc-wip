@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/05 17:56:08 gschwarz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/16 23:14:21 jlamwww Exp $
 bin/moe
+man/man1/moe.1
 share/examples/moe/moerc
-${PKGMANDIR}/man1/moe.1
 @dirrm share/examples/moe
