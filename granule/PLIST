@@ -1,0 +1,46 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/16 09:05:16 bartoszkuzma Exp $
+bin/granule
+share/applications/granule.desktop
+share/granule/granule
+share/granule/pixmaps/cardview_32x32.png
+share/granule/pixmaps/copy_deck.xpm
+share/granule/pixmaps/deckplayer_32x32.png
+share/granule/pixmaps/deckview_32x32.png
+share/granule/pixmaps/drawer_empty.xpm
+share/granule/pixmaps/drawer_many.xpm
+share/granule/pixmaps/drawer_one.xpm
+share/granule/pixmaps/sched_green.xpm
+share/granule/pixmaps/sched_grey.xpm
+share/granule/pixmaps/sched_red.xpm
+share/granule/pixmaps/sched_yellow.xpm
+share/granule/pixmaps/speaker_24.xpm
+share/granule/pixmaps/text_big.png
+share/granule/pixmaps/text_block.png
+share/granule/pixmaps/text_bold.png
+share/granule/pixmaps/text_center.png
+share/granule/pixmaps/text_color_background.png
+share/granule/pixmaps/text_color_foreground.png
+share/granule/pixmaps/text_color_hilight.png
+share/granule/pixmaps/text_italic.png
+share/granule/pixmaps/text_left.png
+share/granule/pixmaps/text_monospaced.png
+share/granule/pixmaps/text_remove_tags.png
+share/granule/pixmaps/text_right.png
+share/granule/pixmaps/text_small.png
+share/granule/pixmaps/text_subscript.png
+share/granule/pixmaps/text_superscript.png
+share/granule/pixmaps/text_underlined.png
+share/granule/pixmaps/thumbdown.xpm
+share/granule/pixmaps/thumbup.xpm
+share/granule/xml/cardfile.dtd
+share/granule/xml/granule.dtd
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/granule.mo
+${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/granule.mo
+${PKGLOCALEDIR}/locale/ja_JP/LC_MESSAGES/granule.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/granule.mo
+share/pixmaps/granule.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/granule/xml
+@dirrm share/granule/pixmaps
+@dirrm share/granule
+@comment in xdg-dirs: @dirrm share/applications
