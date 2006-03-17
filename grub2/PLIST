@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/04 06:43:13 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/03/17 07:12:38 thomasklausner Exp $
 bin/grub-mkimage
 sbin/grub-emu
 sbin/grub-install
@@ -58,8 +58,6 @@ share/grub/i386-pc/ufs.mod
 share/grub/i386-pc/vbe.mod
 share/grub/i386-pc/vbeinfo.mod
 share/grub/i386-pc/vbetest.mod
-share/grub/i386-pc/vesafb.mod
-share/grub/i386-pc/vga.mod
 share/grub/i386-pc/xfs.mod
 @dirrm share/grub/i386-pc
 @dirrm share/grub
