@@ -1,0 +1,18 @@
+The cvsproxy is a relay server for the cvs pserver protocol.
+It works on UNIX derived systems, running as a child process of inetd.
+
+To use cvsproxy, you don't have to update or change your cvs client.
+Suppose that the remote repository name is:
+
+    :pserver:me@cvs.example.org:/cvsroot
+
+and that cvsproxy is running on the host `relay'.
+To use cvsproxy, tell your cvs client the repository name is:
+
+    :pserver:me%cvs.example.org@relay:/cvsroot
+
+When your client accesses the repository,
+it establishes a connection with `relay',
+instead of `cvs.example.org'. cvsproxy
+running on `relay' forwards the connection to `cvs.example.org',
+so that it behaves as the cvs server on `cvs.example.org' toward your client.
