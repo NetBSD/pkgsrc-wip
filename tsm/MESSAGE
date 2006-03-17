@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2006/03/10 12:03:11 hfath Exp $
+$NetBSD: MESSAGE,v 1.5 2006/03/17 15:51:58 hfath Exp $
 
 Tivoli Storage Manager Client has been installed in
 		${EMULDIR}/opt/tivoli
@@ -10,13 +10,21 @@ and configuration in
 
 NetBSD configuration hints:
 
-- ${EMULDIR}/etc/mtab must exist and must not be empty.
+- TSM expects ${EMULDIR}/etc/mtab to exist and be meaningful. The current 
+  suse91_base package sets up a symlink to ${EMULDIR}/proc/mounts which 
+  works on NetBSD 3 if you mount procfs like
+    procfs  /emul/linux/proc  procfs  ro,linux  0 0
+  in /etc/fstab. 
+  Alternatively, make ${EMULDIR}/etc/mtab a symlink to /etc/fstab.
+
 - Make sure 'passworddir' is set in tsm.sys so that the passwd file
   ends up in ${PKG_SYSCONFDIR} instead of the shadow hierarchy.
+
 - The environment variables DSM_DIR, DSM_CONFIG, DSM_LOG
   need to be set properly. DSM_LOG may inadvertently end up in the emul
   shadow hierarchy.
   There is a sample start script in ${PREFIX}/share/examples/tsm.
+
 - For backing up the native filesystem hierarchy, use a construct
   like "ln -s / /.`hostname`" to break out of the emul shadow hierarchy.
 
