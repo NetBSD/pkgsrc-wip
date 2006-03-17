@@ -8,15 +8,23 @@
 #
 # NetBSD configuration hints:
 #
+#  - TSM expects ${EMULDIR}/etc/mtab to exist and be meaningful. The current 
+#    suse91_base package sets up a symlink to ${EMULDIR}/proc/mounts which 
+#    works on NetBSD 3 if you mount procfs in /etc/fstab like
+#
+#      procfs  /emul/linux/proc  procfs  ro,linux  0 0
+#
+#    Alternatively, make ${EMULDIR}/etc/mtab a symlink to /etc/fstab.
 #  - Make sure 'passworddir' is set in tsm.sys so that the passwd file
 #    ends up in ${PKG_SYSCONFDIR} instead of the shadow hierarchy.
 #  - The environment variables DSM_DIR, DSM_CONFIG, DSM_LOG 
 #    need to be set properly. DSM_LOG may inadvertently end up in 
 #    the emul shadow hierarchy.
-#  - For backing up the native filesystem hierarchy, use a construct 
-#    like "ln -s / /.`hostname`" to break out of the emul shadow hierarchy.
+#  - For backing up the native filesystem hierarchy, prefix paths with 
+#    '/../', or use a construct like "ln -s / /.`hostname`" to break 
+#    out of the emul shadow hierarchy.
 #
-# $NetBSD: tsm_daily.sh,v 1.2 2006/03/09 15:12:35 hfath Exp $
+# $NetBSD: tsm_daily.sh,v 1.3 2006/03/17 16:06:52 hfath Exp $
 
 umask 027
 
