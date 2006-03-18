@@ -5,6 +5,7 @@
 PKGNAME=	${DISTNAME}-${VALKNUT_PKG_VERSION}
 MASTER_SITES=	http://download.berlios.de/dcgui/
 
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		autoconf automake gmake
