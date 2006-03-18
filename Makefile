@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2206 2006/03/18 11:43:48 bartoszkuzma Exp $
+# $Id: Makefile,v 1.2207 2006/03/18 23:18:19 oht Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -958,6 +958,7 @@ SUBDIR+=	png2ico
 SUBDIR+=	pngnq
 SUBDIR+=	pointless
 SUBDIR+=	pop-before-smtp
+SUBDIR+=	pop3.proxy
 SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postgis74
