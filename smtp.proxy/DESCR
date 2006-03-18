@@ -1,0 +1,10 @@
+smtp.proxy is an application level gateway for SMTP.
+It connects a client to a server running on another machine watching
+that the protocol is accomplished.
+If commands outside the specification are sent,
+they are not forwarded to the server.
+Additionaly smtp.proxy offers a small email address control
+(only email with a certain sender or recipient address can pass through)
+and can optionally remove the `Received:' lines from the mail header.
+Instead of forwarding the connection to a remote server,
+smtp.proxy can feed it into a local mail server, e.g. sendmail.
