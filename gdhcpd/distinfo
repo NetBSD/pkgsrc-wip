@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/03/18 11:41:48 bartoszkuzma Exp $
+
+SHA1 (gdhcpd-0.2.9.tar.gz) = 4e4bc0eabe55375383274cad007fbd3263cbc8a4
+RMD160 (gdhcpd-0.2.9.tar.gz) = d65861def8177d40ad68c664f3c60d397df2000b
+Size (gdhcpd-0.2.9.tar.gz) = 219971 bytes
+SHA1 (patch-aa) = 7cd5a9279ab5d13067017196168530a062e583af
