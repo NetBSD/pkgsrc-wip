@@ -1,0 +1,7 @@
+pop3.proxy is a proxy server for the POP3 protocol.
+Usually it's used on a firewall between a client and a POP3 server taking care
+that both sides talk POP3 protocol as described in RFC 1939.
+The simplest way to use pop3.proxy is via inetd. A line like:
+"
+pop-3 stream tcp nowait root /usr/pkg/sbin/pop3.proxy pop3.proxy -ez -u clamd"
+in your /etc/inetd.conf will do this.

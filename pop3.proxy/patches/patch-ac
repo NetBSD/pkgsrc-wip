@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/03/18 23:02:13 oht Exp $
+--- clamav.c.orig	2005-02-26 20:59:34.000000000 +0100
++++ clamav.c	2005-02-26 20:53:00.000000000 +0100
+@@ -27,7 +27,7 @@
+ 
+ #include <errno.h>
+ #include <syslog.h>
+-#include <wait.h>
++#include <sys/wait.h>
+ 
+ #include <sys/stat.h>
+ #include <sys/types.h>

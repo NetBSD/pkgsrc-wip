@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/03/18 23:02:13 oht Exp $
+--- main.c.orig	2005-02-26 21:17:04.000000000 +0100
++++ main.c	2005-02-26 21:15:50.000000000 +0100
+@@ -207,7 +207,7 @@
+ 					if (time(NULL) - x->lasttimer + 2 >= POP3_CLIENTTIMER) {
+ 						char	header[200];
+ 
+-						snprintf (header, sizeof(header) - 2, "X-Timeout-Header: %lu", time(NULL));
++					    snprintf (header, sizeof(header) - 2, "X-Timeout-Header: %lu", (long unsigned) time(NULL));
+ 						cfputs(x, header, 1);
+ 						x->lasttimer = time(NULL);
+ 						continue;
