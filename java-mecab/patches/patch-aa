@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/03/19 13:59:50 obache Exp $
+
+--- Makefile.orig	2006-03-10 02:11:09.000000000 +0900
++++ Makefile
+@@ -1,16 +1,15 @@
+ TARGET=MeCab
+-JAVAC=/usr/java/jdk1.5.0_03/bin/javac
+-JAVA=/usr/java/jdk1.5.0_03/bin/java
+-JAR=/usr/java/jdk1.5.0_03/bin/jar
+-CXX=c++
++JAVAC=javac
++JAVA=java
++JAR=jar
+ PACKAGE=org/chasen/mecab
+ 
+ LIBS=`mecab-config --libs`
+-INC=`mecab-config --cflags` -I/usr/java/jdk1.5.0_03/include -I/usr/java/jdk1.5.0_03/include/linux
++INC=`mecab-config --cflags`
+ 
+ all:
+-	$(CXX) -O3 -c -fpic $(TARGET)_wrap.cxx  $(INC)
+-	$(CXX) -shared  $(TARGET)_wrap.o -o lib$(TARGET).so $(LIBS)
++	$(CXX) $(CXXFLAGS) -c -fpic $(TARGET)_wrap.cxx  $(INC)
++	$(CXX) $(LDFLAGS) -shared  $(TARGET)_wrap.o -o lib$(TARGET).so $(LIBS)
+ 	$(JAVAC) $(PACKAGE)/*.java
+ 	$(JAVAC) test.java
+ 	$(JAR) cfv $(TARGET).jar $(PACKAGE)/*.class
