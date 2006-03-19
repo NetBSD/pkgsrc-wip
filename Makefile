@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2208 2006/03/18 23:29:37 oht Exp $
+# $Id: Makefile,v 1.2209 2006/03/19 14:08:10 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -441,6 +441,7 @@ SUBDIR+=	java-gnujaxp
 SUBDIR+=	java-jbluez
 SUBDIR+=	java-jep
 SUBDIR+=	java-jflex
+SUBDIR+=	java-mecab
 SUBDIR+=	java-muse
 SUBDIR+=	java-qdbm
 SUBDIR+=	java-swingwt
@@ -603,6 +604,10 @@ SUBDIR+=	mapserver
 SUBDIR+=	matanza
 SUBDIR+=	mathopd
 SUBDIR+=	mc-mp
+SUBDIR+=	mecab
+SUBDIR+=	mecab-base
+SUBDIR+=	mecab-ipadic
+SUBDIR+=	mecab-jumandic
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	mdadm
@@ -899,6 +904,7 @@ SUBDIR+=	p5-URI-Find-Rule
 SUBDIR+=	p5-URI-Title
 SUBDIR+=	p5-XML-Clean
 SUBDIR+=	p5-XML-DOM-XPath
+SUBDIR+=	p5-mecab
 SUBDIR+=	p5-podlators
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-pkcs11
@@ -1025,6 +1031,7 @@ SUBDIR+=	py-jabber-msnt
 SUBDIR+=	py-kyra
 SUBDIR+=	py-libpcap
 SUBDIR+=	py-mmpython
+SUBDIR+=	py-mecab
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-oak
 SUBDIR+=	py-orm
@@ -1111,6 +1118,7 @@ SUBDIR+=	rsyslog
 SUBDIR+=	rte
 SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-dpklib
+SUBDIR+=	ruby-mecab
 SUBDIR+=	ruby-misen
 SUBDIR+=	ruby-sqlite3
 SUBDIR+=	runit
