@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/19 13:57:41 obache Exp $
+${RUBY_SITEARCHLIBDIR}/MeCab.${RUBY_DLEXT}
