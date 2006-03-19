@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/19 18:46:27 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/19 18:54:37 airhead Exp $
 #
 
 DISTNAME=		siege-2.64
@@ -14,8 +14,7 @@ GNU_CONFIGURE=		yes
 .include "options.mk"
 
 EGDIR=			${PREFIX}/share/examples/siege
-CONF_FILES=		${EGDIR}/urls.txt \
-			${EGDIR}/siegerc
+CONF_FILES=		${EGDIR}/urls.txt ${PKG_SYSCONFDIR}/urls.txt
 
 SUBST_CLASSES+=		siege
 SUBST_STAGE.siege=	post-patch
