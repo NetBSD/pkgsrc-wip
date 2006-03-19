@@ -1,0 +1,51 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/03/19 18:46:28 airhead Exp $
+
+--- doc/Makefile.in.orig	2005-10-11 19:31:27.000000000 +0200
++++ doc/Makefile.in
+@@ -185,8 +185,8 @@ urls.txt               \
+ siegerc.in
+ 
+ DISTCLEANFILES = siegerc $(man_MANS)
+-SIEGERC = $(HOME)/.siegerc
+-URLSTXT = $(sysconfdir)/urls.txt
++SIEGERC = @EGDIR@/siegerc
++URLSTXT = @EGDIR@/urls.txt
+ all: all-am
+ 
+ .SUFFIXES:
+@@ -402,32 +402,9 @@ uninstall-man: uninstall-man1
+ 
+ 
+ install-exec-hook: 
+-	@if test -f $(SIEGERC); then \
+-	  if cmp -s $(srcdir)/siegerc $(SIEGERC); then echo ""; \
+-	    else \
+-	    echo ' $(INSTALL_DATA) $(srcdir)/siegerc $(SIEGERC).new'; \
+-	    $(INSTALL_DATA) $(srcdir)/siegerc $(SIEGERC).new; \
+-	    echo "#####################################################"; \
+-	    echo "WARNING: File $(SIEGERC) already exists."; \
+-	    echo "         A new resource file has been installed as"; \
+-	    echo "         $(SIEGERC).new. You may want to"; \
+-	    echo "         consider using the newer version in order to"; \
+-	    echo "         take advantage of any new features."; \
+-	    echo "#####################################################"; \
+-	  fi; \
+-	else \
+-	  $(INSTALL_DATA) $(srcdir)/siegerc $(SIEGERC); \
+-	fi 
+-	@if test -f $(URLSTXT); then \
+-	  if cmp -s $(srcdir)/siegerc $(URLSTXT); then echo ""; \
+-	    else \
+-	    echo "WARNING: File $(URLSTXT) already exists."; \
+-	    echo "         It was NOT replaced with this installation."; \
+-	  fi; \
+-	else \
+-	  $(mkinstalldirs) $(sysconfdir); \
+-	  $(INSTALL_DATA) $(srcdir)/urls.txt $(URLSTXT); \
+-	fi 
++	$(mkinstalldirs) @EGDIR@
++	$(INSTALL_DATA) $(srcdir)/siegerc $(SIEGERC)
++	$(INSTALL_DATA) $(srcdir)/urls.txt $(URLSTXT)
+ 
+ uninstall:
+ 	rm -f $(SIEGERC)

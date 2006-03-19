@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/19 18:46:27 airhead Exp $
+bin/bombardment
+bin/siege
+bin/siege.config
+bin/siege2csv.pl
+man/man1/bombardment.1
+man/man1/layingsiege.1
+man/man1/siege.1
+man/man1/siege.config.1
+man/man1/siege2csv.1
+man/man1/urls_txt.1

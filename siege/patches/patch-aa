@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/03/19 18:46:28 airhead Exp $
+
+--- utils/Makefile.am.orig	2002-11-15 21:59:07.000000000 +0100
++++ utils/Makefile.am
+@@ -48,8 +48,8 @@ install-exec-hook:
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	@list='$(SIEGE_UTILITIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+-	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'| sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
++	    echo " $(LIBTOOL)  --mode=install $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
++	    $(LIBTOOL)  --mode=install $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'| sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+ 	else :; fi; \
+ 	done 
+ 
