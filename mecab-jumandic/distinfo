@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/03/19 13:50:25 obache Exp $
+
+SHA1 (mecab-jumandic-5.1-20051121.tar.gz) = 054ea89be2d12f8b1775c7ed3249602b887a3e1a
+RMD160 (mecab-jumandic-5.1-20051121.tar.gz) = 81b23ff35a81fd2368cdc9d6ef14247300582163
+Size (mecab-jumandic-5.1-20051121.tar.gz) = 14241934 bytes
