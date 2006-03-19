@@ -1,0 +1,4 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2006/03/19 13:34:37 obache Exp $
+#
+
+MECAB_VERSION=		0.90rc11
