@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/03/19 14:03:07 obache Exp $
+
+SHA1 (mecab-ipadic-2.7.0-20051110.tar.gz) = ebf20c88603eeda38ff79cad3331789da8f179b4
+RMD160 (mecab-ipadic-2.7.0-20051110.tar.gz) = 340e539105754e477c951f36efe707dad7653e85
+Size (mecab-ipadic-2.7.0-20051110.tar.gz) = 11158131 bytes
