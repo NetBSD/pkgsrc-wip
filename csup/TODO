@@ -5,3 +5,5 @@
   PTHREAD_* variables defined in mk/pthread.buildlink3.mk instead.
 
 - The homepage URL shouldn't be in DESCR.
+
+- Needs yacc.
