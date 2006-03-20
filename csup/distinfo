@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/03/03 09:25:05 imilh Exp $
+$NetBSD: distinfo,v 1.3 2006/03/20 15:44:47 imilh Exp $
 
-SHA1 (csup-snap-20060302.tgz) = 2affd75d1d8a04b652a8f55a48358614e61af1ba
-RMD160 (csup-snap-20060302.tgz) = d7dbd15dca8eace730c7f740f8d97ba532289261
-Size (csup-snap-20060302.tgz) = 76415 bytes
+SHA1 (csup-snap-20060318.tgz) = 209c53137245e3e5e2cea98151115043d993ce35
+RMD160 (csup-snap-20060318.tgz) = 57009b0bdb4c8af9bd534429486982cceadbb066
+Size (csup-snap-20060318.tgz) = 78968 bytes

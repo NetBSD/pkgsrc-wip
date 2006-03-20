@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/03/07 04:56:23 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/20 15:44:47 imilh Exp $
 #
 
-DISTNAME=	csup-snap-20060302
+DISTNAME=	csup-snap-20060318
 CATEGORIES=	net devel
 MASTER_SITES=	http://www.mu.org/~mux/
 EXTRACT_SUFX=	.tgz
