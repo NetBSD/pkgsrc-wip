@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/14 01:28:18 jlamwww Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/20 18:34:33 jlamwww Exp $
 
 DISTNAME=	util-linux-2.12r
 CATEGORIES=	sysutils
@@ -21,10 +21,10 @@ GNU_CONFIGURE=		YES
 MAKE_ENV+=		DESTDIR=${PREFIX:Q}
 MAKE_ENV+=		ETCDIR=${PREFIX:Q}/share/examples/util-linux
 MAKE_ENV+=		FDPRMFILE=${PKG_SYSCONFDIR:Q}/fdprm
-MAKE_ENV+=		INFO_DIR=/${INFO_DIR:Q}
+MAKE_ENV+=		INFO_DIR=/${PKGINFODIR:Q}
 MAKE_ENV+=		MAN_DIR=/${PKGMANDIR:Q}
 
-INFO_FILES=		ipc.info
+INFO_FILES=		# PLIST
 
 CONF_FILES=	${PREFIX}/share/examples/util-linux/fdprm ${PKG_SYSCONFDIR}/fdprm
 

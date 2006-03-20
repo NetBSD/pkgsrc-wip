@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/12/19 19:13:10 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/20 18:34:33 jlamwww Exp $
 bin/arch
 bin/cal
 bin/chkdupexe
@@ -38,6 +38,7 @@ bin/ul
 bin/umount
 bin/whereis
 bin/write
+info/ipc.info
 man/man1/arch.1
 man/man1/cal.1
 man/man1/chkdupexe.1
