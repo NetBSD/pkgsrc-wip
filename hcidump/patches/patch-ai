@@ -1,4 +1,6 @@
-$NetBSD: patch-ai,v 1.2 2005/11/14 23:43:28 plunky Exp $
+$NetBSD: patch-ai,v 1.3 2006/03/21 19:26:23 plunky Exp $
+
+lots of compatibility changes for NetBSD
 
 --- parser/l2cap.c.orig	2003-09-13 00:38:11.000000000 +0100
 +++ parser/l2cap.c
@@ -14,9 +16,9 @@ $NetBSD: patch-ai,v 1.2 2005/11/14 23:43:28 plunky Exp $
  #include <string.h>
  #include <stdlib.h>
  
-+#include <bluetooth/bluetooth.h>
-+#include <bluetooth/hci.h>
-+#include <bluetooth/l2cap.h>
++#include <netbt/bluetooth.h>
++#include <netbt/hci.h>
++#include <netbt/l2cap.h>
 +
  #include "parser.h"
  
@@ -178,39 +180,39 @@ $NetBSD: patch-ai,v 1.2 2005/11/14 23:43:28 plunky Exp $
 -			switch (hdr->code) {
 -			case NG_L2CAP_CMD_REJ:
 +			switch (hdr0->code) {
-+			case L2CAP_CMD_REJ:
++			case L2CAP_COMMAND_REJ:
  				command_rej(level, frm);
  				break;
  			
 -			case NG_L2CAP_CON_REQ:
-+			case L2CAP_CON_REQ:
++			case L2CAP_CONNECT_REQ:
  				conn_req(level, frm);
  				break;
  	
 -			case NG_L2CAP_CON_RSP:
-+			case L2CAP_CON_RSP:
++			case L2CAP_CONNECT_RSP:
  				conn_rsp(level, frm);
  				break;
  
 -			case NG_L2CAP_CFG_REQ:
 -				conf_req(level, hdr, frm);		
-+			case L2CAP_CFG_REQ:
++			case L2CAP_CONFIG_REQ:
 +				conf_req(level, hdr0, frm);		
  				break;
  
 -			case NG_L2CAP_CFG_RSP:
 -				conf_rsp(level, hdr, frm);
-+			case L2CAP_CFG_RSP:
++			case L2CAP_CONFIG_RSP:
 +				conf_rsp(level, hdr0, frm);
  				break;
  
 -			case NG_L2CAP_DISCON_REQ:
-+			case L2CAP_DISCON_REQ:
++			case L2CAP_DISCONNECT_REQ:
  				disconn_req(level, frm);
  				break;
  
 -			case NG_L2CAP_DISCON_RSP:
-+			case L2CAP_DISCON_RSP:
++			case L2CAP_DISCONNECT_RSP:
  				disconn_rsp(level, frm);
  				break;
  	

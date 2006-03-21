@@ -1,4 +1,6 @@
-$NetBSD: patch-al,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
+$NetBSD: patch-al,v 1.2 2006/03/21 19:26:23 plunky Exp $
+
+prototyping to get past compiler warnings
 
 --- parser/rfcomm.c.orig	2003-09-13 00:38:11.000000000 +0100
 +++ parser/rfcomm.c

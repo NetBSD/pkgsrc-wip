@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.4 2006/01/13 14:32:14 plunky Exp $
+$NetBSD: distinfo,v 1.5 2006/03/21 19:26:23 plunky Exp $
 
 SHA1 (hcidump-1.5.1.tar.gz) = add1995a26860b76bda570c4cc3582d98eafb604
 RMD160 (hcidump-1.5.1.tar.gz) = 7f95aa8b78732a6fb963f6993827eaea631f0c19
 Size (hcidump-1.5.1.tar.gz) = 32480 bytes
-SHA1 (patch-aa) = dd789d924479568cff82f623a6d8ce70db8b028c
-SHA1 (patch-ab) = b55863d7e981fd56af0522557124fd0024d1411c
-SHA1 (patch-ac) = 06fe2a2519e2d06db74fdfa93a453f347f7fd4a8
-SHA1 (patch-ad) = d2e2082ae555fda5002ab072bc47ae245d4d0190
-SHA1 (patch-ae) = 2b7733c1438adb2559cb117b26fcdcaa983049a9
-SHA1 (patch-af) = 26fdc38bcc2e0b3fdd871ef0daa919ad6f2ef421
-SHA1 (patch-ag) = 9be7e9584fa5f8241fcf6e341b057fd0acde2f68
-SHA1 (patch-ah) = 7f612d6d4eea7af8a4dc818b179f6ed49a152678
-SHA1 (patch-ai) = 39338c4df31a3b9d83fdf9f1894476266b581aee
-SHA1 (patch-aj) = 1c2c0a263646756b026faa817f845f3c4a895921
-SHA1 (patch-ak) = 11e7465ddb6d13cf0107c0d650435ae0db2d2bff
-SHA1 (patch-al) = 72f48ac5ed00b034905b6edb44ebdfec95931796
-SHA1 (patch-am) = f8ce999489ed692178b72262af6acec7c027b4d1
+SHA1 (patch-aa) = 1047b68affd7c8aae24795430aa576c751ddec01
+SHA1 (patch-ab) = 6eb67b8e20518f6d766c24228302428aa94b287b
+SHA1 (patch-ac) = 08f981f5c93fbe5f7ab1371279cb5ebf5fd87afb
+SHA1 (patch-ad) = 52c9523944eb6bfcc3022bd558545623baef4b51
+SHA1 (patch-ae) = d2b1aa6766d6ef03d015e7512bf9863451a81e3a
+SHA1 (patch-af) = 9019b5eda8cabe6616c2649f6413b19f6dc7119b
+SHA1 (patch-ag) = c4350bf9ea0101e66487d050b29fb61dd49b2bf6
+SHA1 (patch-ah) = e375a5bab3421453773fc82253fa744f21ff5341
+SHA1 (patch-ai) = 2c1cdf771b31dfcf8dc13b150ac49ed233a10601
+SHA1 (patch-aj) = 08b1882377eff4d8c008e781d1c6d59a62da8167
+SHA1 (patch-ak) = dd45db8c92e6546ceffa4129721ab85655110734
+SHA1 (patch-al) = cab2a2652543391289de747b0a6f7a0fef561405
+SHA1 (patch-am) = f946c943004c8c71354b858041fe5f3ec2564f98

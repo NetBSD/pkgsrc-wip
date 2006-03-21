@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
+$NetBSD: patch-af,v 1.2 2006/03/21 19:26:23 plunky Exp $
+
+add necessary header file, and function prototype to kill compiler warnings
 
 --- parser/cmtp.c.orig	2003-09-13 00:38:11.000000000 +0100
 +++ parser/cmtp.c

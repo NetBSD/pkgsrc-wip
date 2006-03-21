@@ -1,4 +1,6 @@
-$NetBSD: patch-am,v 1.1.1.1 2005/11/08 21:01:21 plunky Exp $
+$NetBSD: patch-am,v 1.2 2006/03/21 19:26:23 plunky Exp $
+
+add needed header file for NetBSD, plus fix compiler warning
 
 --- parser/sdp.c.orig	2004-12-14 18:45:45.000000000 +0000
 +++ parser/sdp.c

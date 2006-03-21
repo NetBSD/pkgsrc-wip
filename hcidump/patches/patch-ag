@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.3 2006/01/13 14:32:14 plunky Exp $
+$NetBSD: patch-ag,v 1.4 2006/03/21 19:26:23 plunky Exp $
+
+NetBSD compatibility changes
 
 --- parser/hci.c.orig	2003-09-13 00:38:11.000000000 +0100
 +++ parser/hci.c
@@ -12,8 +14,8 @@ $NetBSD: patch-ag,v 1.3 2006/01/13 14:32:14 plunky Exp $
  #include <stdio.h>
 +#include <string.h>
 +
-+#include <bluetooth/bluetooth.h>
-+#include <bluetooth/hci.h>
++#include <netbt/bluetooth.h>
++#include <netbt/hci.h>
  
  #include "parser.h"
  

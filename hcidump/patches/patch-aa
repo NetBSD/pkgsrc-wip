@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2005/11/09 19:00:27 plunky Exp $
+$NetBSD: patch-aa,v 1.3 2006/03/21 19:26:23 plunky Exp $
+
+fix up Makefile for NetBSD
 
 --- hcidump/Makefile.orig	2004-03-12 22:16:58.000000000 +0000
 +++ hcidump/Makefile
-@@ -2,13 +2,13 @@
+@@ -2,10 +2,10 @@
  # $FreeBSD$
  
  PROG=		hcidump
@@ -14,8 +16,4 @@ $NetBSD: patch-aa,v 1.2 2005/11/09 19:00:27 plunky Exp $
 +MANDIR=		${PREFIX}/man
  WARNS?=		2
  DEBUG_FLAGS=	-g
--CFLAGS=		-O2 -I../parser
-+CFLAGS=		-O2 -I../parser -I..
- 
- DPADD+=		../parser/libparser.a
- LDADD+=		-L../parser -lparser
+ CFLAGS=		-O2 -I../parser

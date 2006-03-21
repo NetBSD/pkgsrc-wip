@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/11/08 21:01:19 plunky Exp $
+$NetBSD: patch-ac,v 1.2 2006/03/21 19:26:23 plunky Exp $
+
+NetBSD compatibility
 
 --- hcidump/hcidump.h.orig	2003-09-13 00:38:06.000000000 +0100
 +++ hcidump/hcidump.h
