@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/03/17 08:29:07 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/21 18:34:59 bartoszkuzma Exp $
 #
 
-DISTNAME=		libassa-3.4.0
+DISTNAME=		libassa-3.4.1
 CATEGORIES=		devel net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libassa/}
 
