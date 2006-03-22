@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2006/02/10 12:49:05 tvierling Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/22 22:51:07 tvierling Exp $
 
 DISTNAME=		dovecot-${DOVECOT_VER}
 PKGNAME=		${DISTNAME:S/-/-nightly-/}
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/nightly/
 
-MAINTAINER=		tv@duh.org
+MAINTAINER=		tv@NetBSD.org
 HOMEPAGE=		http://www.dovecot.org/
 COMMENT=		Secure IMAP and POP3 server
 

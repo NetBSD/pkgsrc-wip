@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/14 01:28:02 jlamwww Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/22 22:51:07 tvierling Exp $
 #
 # XXX WIP: only installs parts necessary for client operation.
 # Server parts still in work (need to add informational texts into
@@ -10,7 +10,7 @@ PKGREVISION=		1
 CATEGORIES=		security mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mixmaster/}
 
-MAINTAINER=		tv@duh.org
+MAINTAINER=		tv@NetBSD.org
 HOMEPAGE=		http://mixmaster.sourceforge.net/
 COMMENT=		The Mixmaster anonymous remailer client
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/10/10 13:41:09 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/22 22:51:07 tvierling Exp $
 #
 
 DISTNAME=		pgpsrc658unix
@@ -8,7 +8,7 @@ CATEGORIES=		security
 MASTER_SITES+=		ftp://ftp.${C}.pgpi.org/pub/pgp/6.5/6.5.8/
 .endfor
 
-MAINTAINER=		tv@duh.org
+MAINTAINER=		tv@NetBSD.org
 HOMEPAGE=		http://www.pgpi.org/products/pgp/versions/freeware/unix/6.5.8/
 COMMENT=		Public-key encryption and digital signature utilities (v6)
 
