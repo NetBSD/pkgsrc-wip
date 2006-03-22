@@ -1,13 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/03/16 09:01:33 bartoszkuzma Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/22 07:21:34 bartoszkuzma Exp $
 
---- assa/Logger_Impl.h.orig	2005-08-19 05:18:24.000000000 +0200
-+++ assa/Logger_Impl.h
-@@ -21,7 +21,7 @@
- #include <sys/varargs.h>		// va_list
- #endif
- 
--#if defined (__CYGWIN32__)
-+#if defined (__CYGWIN32__) || defined (__NetBSD__)
- # include <stdarg.h>
- #endif
- 
+--- Makefile.in.orig	2005-12-06 15:11:21.000000000 +0100
++++ Makefile.in
+@@ -193,8 +193,8 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = . assa utils doc tests examples
+-DIST_SUBDIRS = assa utils doc tests examples 
++SUBDIRS = . assa utils tests examples
++DIST_SUBDIRS = assa utils tests examples 
+ EXTRA_DIST = \
+ 	assa.spec.in \
+ 	Makefile.am \
