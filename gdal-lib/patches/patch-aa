@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.6 2006/03/22 21:11:52 mchittur Exp $
+
+--- configure.orig	2005-10-02 00:59:22.000000000 +0000
++++ configure
+@@ -21950,7 +21950,7 @@ if test "$PG_CONFIG" = "no" ; then
+   PG_INC=
+ 
+   echo "$as_me:$LINENO: result: no" >&5
+-echo "${ECHO_T}no" >&6LIBZ
++echo "${ECHO_T}no" >&6
+ 
+ else
+   if test -d $PG_CONFIG ; then

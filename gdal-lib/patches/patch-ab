@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2006/03/22 21:11:52 mchittur Exp $
+
+--- ogr/GNUmakefile.orig	2005-03-11 14:28:05.000000000 +0000
++++ ogr/GNUmakefile
+@@ -16,7 +16,7 @@ CPPFLAGS	:=	-Iogrsf_frmts -I. $(GDAL_INC
+ 
+ default:	lib apps
+ 
+-all:	sublibs apps test_ogrsf$(EXE) docs
++all:	sublibs apps test_ogrsf$(EXE)
+ 
+ ifeq ($(OGR_ENABLED),yes)
+ 
