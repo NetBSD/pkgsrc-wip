@@ -1,15 +1,19 @@
-$NetBSD: distinfo,v 1.2 2005/08/22 18:13:45 mchittur Exp $
+$NetBSD: distinfo,v 1.3 2006/03/23 04:12:22 mchittur Exp $
 
-SHA1 (postgis-1.0.0-rc2.tar.gz) = 20803fa5f21f88942054ccc42ca359652f3a004d
-RMD160 (postgis-1.0.0-rc2.tar.gz) = 70c50888acf60e1a308b98a3bddd414db09e1505
-Size (postgis-1.0.0-rc2.tar.gz) = 1270939 bytes
-SHA1 (postgresql-7.4.8.tar.bz2) = a565ff14e1a3b58a151b219bcffcf53dfc62ec41
-RMD160 (postgresql-7.4.8.tar.bz2) = 3ee8c70e0506e2a49bae20bc2282391513ee9d65
-Size (postgresql-7.4.8.tar.bz2) = 10235413 bytes
-SHA1 (patch-aa) = 626b4b4bf0d47913072399535c55d413b90675a4
+SHA1 (postgis-1.1.1.tar.gz) = e0f5ac05166035ad9685e4e6e06406699bcb38dc
+RMD160 (postgis-1.1.1.tar.gz) = 4881f6b1047f7dab91782832d60e2252ab4536b1
+Size (postgis-1.1.1.tar.gz) = 1546065 bytes
+SHA1 (postgresql-7.4.12.tar.bz2) = fd4e1db4fa3bf1a22d0596337cb1456389ca03e0
+RMD160 (postgresql-7.4.12.tar.bz2) = 9a156c571383d666551439b49fd09ca3a96bed6e
+Size (postgresql-7.4.12.tar.bz2) = 10246537 bytes
+SHA1 (patch-aa) = 830a0789195aacd10094e35e7d0d79c5e201491f
 SHA1 (patch-ab) = f44a544c56452bad197a88cb827e88624c54656c
-SHA1 (patch-ac) = 81ef677cc5d196762b6cc3c3e38dee4a37e75ac2
+SHA1 (patch-ac) = 8104ac7631dd8566eb455e479dd59da058b68c8f
 SHA1 (patch-ad) = fae5e82e0943ea982c9d3aace290b56c6a7629f9
 SHA1 (patch-ae) = f0e0ad98ebdc972e7c40afd805fbb0d909d5ef3b
 SHA1 (patch-af) = 7373db75fda125b980f2ead990719798c0d22a48
 SHA1 (patch-ag) = a983f23b5e47a4c2f31ba284ff3db51b53cf8414
+SHA1 (patch-ah) = 1a9b565bf3a004da5fa33081bc3675cb938e7e5f
+SHA1 (patch-ai) = 158382638ee3380930d6c9fd9b6381e973ccedc2
+SHA1 (patch-aj) = 629e38a0ca475834fb0bf1e03cc4efdfca4fb6ce
+SHA1 (patch-ak) = 12b4227149ebe4a3516b342c0931de78e3498b2e

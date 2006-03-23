@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/23 04:12:22 mchittur Exp $
 #
-
-VERSION=		1.0.0-rc2
+VERSION=		1.1.1
 PKGNAME=		postgresql74-postgis-${VERSION}
 CATEGORIES=		databases geography
 
-MAINTAINER=		mchittur@nmsu.edu
+MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://postgis.refractions.net/
 COMMENT=		Spatial database capabilities for PostgreSQL
+
+CONFLICTS=		postgis-[0-9]*
 
 # XXX - Override these so they work correctly with Makefile.common.
 #       The last two don't really need changing, except that Makefile.common
@@ -22,37 +23,36 @@ PATCHDIR=		${.CURDIR}/../../databases/postgresql74/patches
 MASTER_SITES+=  	${PGSQL_SITES:=source/v${DIST_VERS}/}
 MASTER_SITES+=  	http://postgis.refractions.net/download/
 
-USE_PERL5=		YES
-
-PGSQL_VERSION_REQD+=	74
+PGSQL_VERSION_REQD=	74
 
 # Add postgis to the postgresql distfile
 DISTFILES+=      	postgis-${VERSION}.tar.gz ${DISTNAME}${EXTRACT_SUFX}
 
+USE_TOOLS+=		perl
+USE_TOOLS+=		gmake
+
 # Only build the postgis contribted source
 BUILD_DIRS=		${WRKSRC}/contrib/postgis-${VERSION}
 
-BINDIR=			${PREFIX}/bin
-LIBDIR=			${PREFIX}/lib/postgresql
-DOCDIR=			${PREFIX}/share/doc/postgis
 EXAMPLEDIR=		${PREFIX}/share/examples/postgis
-HTMLDIR=		${PREFIX}/share/doc/html/postgis
-SQLDIR=			${PREFIX}/share/postgresql
+SCRIPTDIR=		${PREFIX}/share/postgis
 
 MAKE_ENV+=		PROJ_DIR=${PREFIX:Q}
 MAKE_ENV+=		GEOS_DIR=${PREFIX:Q}
 
-# install postgis source within contrib directory
-pre-build:
-	${MV} ${WRKDIR}/postgis-${VERSION} ${WRKSRC}/contrib
+MAKEFILE=		GNUmakefile
 
-do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR} ${EXAMPLEDIR} ${HTMLDIR} ${SQLDIR}
-	cd ${BUILD_DIRS} && ${GMAKE} install
-	${CP} -r ${BUILD_DIRS}/examples/* ${EXAMPLEDIR}
-	${INSTALL_DATA} ${BUILD_DIRS}/README.postgis ${DOCDIR}
-	${INSTALL_DATA} ${BUILD_DIRS}/doc/postgis.xml ${DOCDIR}
-	${CP} -r ${BUILD_DIRS}/doc/html/* ${HTMLDIR}
+# configures postgis source within contrib directory
+post-configure:
+	${MV} ${WRKDIR}/postgis-${VERSION} ${WRKSRC}/contrib
+	cd ${WRKSRC}/contrib/postgis-${VERSION}/ && ${CONFIGURE_SCRIPT} --enable-autoconf --with-geos=${PREFIX:Q}/bin/geos-config
+
+pre-install:
+	${INSTALL_DATA_DIR} ${EXAMPLEDIR} ${SCRIPTDIR}
+
+post-install:
+	${CP} -r ${BUILD_DIRS}/regress/* ${EXAMPLEDIR}
+	${CP} -r ${BUILD_DIRS}/utils/*   ${SCRIPTDIR}
 
 .include "../../geography/geos/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
