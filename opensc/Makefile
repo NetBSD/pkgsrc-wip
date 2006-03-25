@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:03 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/25 01:32:46 udontknow Exp $
 
-DISTNAME=      		opensc-0.10.0
+DISTNAME=      		opensc-0.10.1
 CATEGORIES=     	security
-MASTER_SITES= 		http://www.opensc.org/files/
+MASTER_SITES= 		http://www.opensc-project.org/files/opensc/
 
 MAINTAINER=		evaldo@gardenali.biz
-HOMEPAGE= 		http://www.opensc.org/openct/
+HOMEPAGE= 		http://www.opensc-project.org/openct/
 COMMENT=		Smart Card Reader drivers and middleware
 
 GNU_CONFIGURE= 		YES

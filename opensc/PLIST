@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/24 03:17:14 udontknow Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/25 01:32:47 udontknow Exp $
 bin/cardos-info
 bin/cryptoflex-tool
 bin/eidenv
@@ -109,6 +109,7 @@ share/opensc/cyberflex.profile
 share/opensc/etoken.profile
 share/opensc/flex.profile
 share/opensc/gpk.profile
+share/opensc/incrypto34.profile
 share/opensc/jcop.profile
 share/opensc/miocos.profile
 share/opensc/oberthur.profile
