@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/25 13:59:43 tnn2 Exp $
+bin/transmissioncli
+bin/transmission-gtk
