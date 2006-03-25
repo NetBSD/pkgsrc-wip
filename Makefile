@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2210 2006/03/19 18:48:16 airhead Exp $
+# $Id: Makefile,v 1.2211 2006/03/25 02:55:40 udontknow Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -226,6 +226,7 @@ SUBDIR+=	emboss-topo
 SUBDIR+=	embryo
 SUBDIR+=	emelfm2
 SUBDIR+=	emirror
+SUBDIR+=	engine-pkcs11
 SUBDIR+=	ent
 SUBDIR+=	epplets
 SUBDIR+=	erc
