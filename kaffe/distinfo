@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.11 2006/03/25 14:39:15 jtonio Exp $
+$NetBSD: distinfo,v 1.12 2006/03/25 19:52:48 jtonio Exp $
 
 SHA1 (kaffe-1.1.7-rc2.tar.gz) = 8d0e37df36e1f15e9eb5fc2936d391d05f81a3ea
 RMD160 (kaffe-1.1.7-rc2.tar.gz) = e2c8b597cfbf2f5788cd25f904229a1b5a9fddb7
 Size (kaffe-1.1.7-rc2.tar.gz) = 14493323 bytes
-SHA1 (patch-aa) = 2af0835f44e8c75952fc68c11d1ef79c1274f257
-SHA1 (patch-ab) = dcf086e65b8e10a59319bbb994cf1232ed1bacf6
-SHA1 (patch-ac) = 97970ef41fe62b506378e8538bfc01fc6d08c854

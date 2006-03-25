@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2006/03/25 14:39:15 jtonio Exp $
+# $NetBSD: Makefile.common,v 1.22 2006/03/25 19:52:48 jtonio Exp $
 
 DISTNAME=     kaffe-1.1.7-rc2
 PKGNAME=      ${DISTNAME:S/-rc/rc/}
@@ -55,6 +55,7 @@ CONFIGURE_ENV+=		VM_LIBS="-lc"
 CONFIGURE_ARGS+=	--with-engine=intrp
 .endif
 
+.include "../../devel/libltdl/convenience.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
