@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2006/01/17 16:32:02 jtonio Exp $
+$NetBSD: patch-ab,v 1.5 2006/03/25 14:39:15 jtonio Exp $
 
---- Makefile.am.orig	2006-01-14 14:20:55.000000000 +0100
+--- Makefile.am.orig	2006-03-25 00:18:52.000000000 +0100
 +++ Makefile.am
 @@ -20,7 +20,6 @@ SUBDIRS = \
  	external \
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.4 2006/01/17 16:32:02 jtonio Exp $
  	kaffe \
  	libraries \
  	tools \
-@@ -209,7 +207,6 @@ DIRECTORIES_BEFORE_RTJAR = \
+@@ -210,7 +208,6 @@ DIRECTORIES_BEFORE_RTJAR = \
  	config \
  	include \
  	replace \

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/03/23 17:37:27 jtonio Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/03/25 14:39:15 jtonio Exp $
 bin/kaffe-appletviewer
 bin/kaffe-jar
 bin/kaffe-java
@@ -42,6 +42,7 @@ java/kaffe/include/kaffe/java_lang_VMThrowable.h
 java/kaffe/include/kaffe/jmalloc.h
 java/kaffe/include/kaffe/trampoline.h
 java/kaffe/include/kaffe_jni.h
+java/kaffe/info/dir
 java/kaffe/info/fastjar.info
 java/kaffe/info/hacking.info
 java/kaffe/info/vmintegration.info
@@ -61,7 +62,6 @@ java/kaffe/jre/lib/${MACHINE_ARCH}/libmath.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libsecurity.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libzip.la
 java/kaffe/jre/lib/logging.properties
-java/kaffe/jre/lib/rt.jar
 java/kaffe/jre/lib/security/Kaffe.security
 java/kaffe/lib/logging.properties
 java/kaffe/lib/security/classpath.security
@@ -69,6 +69,12 @@ java/kaffe/lib/tools.jar
 java/kaffe/license.terms
 java/kaffe/man/man1/fastjar.1
 java/kaffe/man/man1/kaffe.1
+java/kaffe/share/classpath/README
+java/kaffe/share/classpath/tools.zip
+@dirrm java/kaffe/share/classpath
+@dirrm java/kaffe/share
+@dirrm java/kaffe/man/man1
+@dirrm java/kaffe/man
 @dirrm java/kaffe/lib/security
 @dirrm java/kaffe/lib
 @dirrm java/kaffe/jre/lib/security
