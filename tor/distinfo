@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2006/03/26 16:16:20 tvierling Exp $
+
+SHA1 (tor-0.1.1.16-rc.tar.gz) = 288040829a6fc7cabaeb9a11434b667c89c53aef
+RMD160 (tor-0.1.1.16-rc.tar.gz) = 0a75ef605d6dc0e739a99cdc492a1d51cddea186
+Size (tor-0.1.1.16-rc.tar.gz) = 788930 bytes
+SHA1 (patch-ac) = 697454b90bce1ac938672403f7a0878dee69b9a0
+SHA1 (patch-ad) = f0ead230249a0341b5d15c47d9361bd6e16ec23a

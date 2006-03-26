@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/03/26 16:16:20 tvierling Exp $
+
+--- contrib/Makefile.in.orig	2006-03-18 23:02:56.000000000 -0500
++++ contrib/Makefile.in
+@@ -81,7 +81,7 @@ confdir = $(sysconfdir)/tor
+ 
+ EXTRA_DIST = exitlist tor-tsocks.conf torify.1 TorControl.py tor.nsi tor.sh torctl rc.subr ExerciseServer.py PathDemo.py
+ 
+-conf_DATA = tor-tsocks.conf
++#conf_DATA = tor-tsocks.conf
+ 
+ bin_SCRIPTS = torify
+ 
