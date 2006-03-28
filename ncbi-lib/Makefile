@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2005/11/28 00:27:26 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/28 05:15:17 mchittur Exp $
 #
 
 DISTNAME=		ncbi
 PKGNAME=		ncbi-lib-${PKG_VER}
-PKG_VER=		20050605
+PKG_VER=		20060301
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools/old/${PKG_VER}/
-EXTRACT_SUFX=		.tar.gz
 
 MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://www.ncbi.nlm.nih.gov/IEB/ToolBox
@@ -32,23 +31,12 @@ do-install:
 	@${ECHO} "Installing NCBI toolkit"
 	@${ECHO} "Installing Lib"
 	@${INSTALL_DATA_DIR} ${PREFIX}/lib/ncbi
-.for LIB in libblast.a libblastapi.a libncbi.a libncbiCacc.a \
-	    libncbiNacc.a libncbiacc.a libncbicdr.a libncbiid1.a \
-	    libncbimmdb.a libncbiobj.a libncbitool.a libnetblast.a \
-	    libddvlib.a libncbicn3d.a libncbidesk.a libncbimla.a \
-	    libvibgif.a libvibnet.a libvibrant.a libncbitxc2.a \
-	    libnetcli.a libnetentr.a libregexp.a ncbithr.o
-	@${INSTALL_DATA} ${WRKSRC}/lib/${LIB}  ${PREFIX}/lib/ncbi
-.endfor
+	@${CP} -fr ${WRKSRC}/lib/*  ${PREFIX}/lib/ncbi
 	@${ECHO} "Installing include files"
 	@${INSTALL_DATA_DIR} ${PREFIX}/include/ncbi
 	@${INSTALL_DATA_DIR} ${PREFIX}/include/ncbi/connect
-.for INCLUDE in *
-	@${INSTALL_DATA} ${WRKSRC}/include/${INCLUDE}.h ${PREFIX}/include/ncbi
-.endfor
-.for INCLUDE in *
-	@${INSTALL_DATA} ${WRKSRC}/connect/${INCLUDE}.* ${PREFIX}/include/ncbi/connect/
-.endfor
+	@${CP} -fr ${WRKSRC}/include/*.h ${PREFIX}/include/ncbi
+	@${CP} -fr ${WRKSRC}/connect/*.* ${PREFIX}/include/ncbi/connect/
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

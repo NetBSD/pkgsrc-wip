@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/18 20:25:14 daprice Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/28 05:15:17 mchittur Exp $
 include/ncbi/FSpCompat.h
 include/ncbi/FullPath.h
 include/ncbi/MoreCarbonAccessors.h
@@ -41,6 +41,7 @@ include/ncbi/asnbibli.h
 include/ncbi/asnblock.h
 include/ncbi/asncode.h
 include/ncbi/asnent2.h
+include/ncbi/asnentgene.h
 include/ncbi/asnfdef.h
 include/ncbi/asnfeat.h
 include/ncbi/asngbseq.h
@@ -63,6 +64,7 @@ include/ncbi/asnseq.h
 include/ncbi/asnsset.h
 include/ncbi/asnsubmt.h
 include/ncbi/asntax1.h
+include/ncbi/asntax3.h
 include/ncbi/asntaxon.h
 include/ncbi/asntseq.h
 include/ncbi/bandalgn.h
@@ -75,6 +77,7 @@ include/ncbi/blastdef.h
 include/ncbi/blastkar.h
 include/ncbi/blastpat.h
 include/ncbi/blastpri.h
+include/ncbi/blfmtutl.h
 include/ncbi/blocks.h
 include/ncbi/blstspc.h
 include/ncbi/blstxml.h
@@ -85,7 +88,6 @@ include/ncbi/cdconfig.h
 include/ncbi/cdd.h
 include/ncbi/cddapi.h
 include/ncbi/cddposutil.h
-include/ncbi/cddsrv.h
 include/ncbi/cddutil.h
 include/ncbi/cdentrez.h
 include/ncbi/cdnewlib.h
@@ -105,9 +107,14 @@ include/ncbi/cn3dshim.h
 include/ncbi/cn3dstyl.h
 include/ncbi/cn3dxprt.h
 include/ncbi/codon.h
+include/ncbi/compo_heap.h
+include/ncbi/compo_mode_condition.h
+include/ncbi/composition_adjustment.h
+include/ncbi/composition_constants.h
 include/ncbi/connect/connect_export.h
 include/ncbi/connect/ncbi_ansi_ext.c
 include/ncbi/connect/ncbi_ansi_ext.h
+include/ncbi/connect/ncbi_assert.h
 include/ncbi/connect/ncbi_buffer.c
 include/ncbi/connect/ncbi_buffer.h
 include/ncbi/connect/ncbi_comm.h
@@ -126,6 +133,8 @@ include/ncbi/connect/ncbi_dispd.c
 include/ncbi/connect/ncbi_dispd.h
 include/ncbi/connect/ncbi_file_connector.c
 include/ncbi/connect/ncbi_file_connector.h
+include/ncbi/connect/ncbi_ftp_connector.c
+include/ncbi/connect/ncbi_ftp_connector.h
 include/ncbi/connect/ncbi_heapmgr.c
 include/ncbi/connect/ncbi_heapmgr.h
 include/ncbi/connect/ncbi_host_info.c
@@ -133,6 +142,8 @@ include/ncbi/connect/ncbi_host_info.h
 include/ncbi/connect/ncbi_host_infop.h
 include/ncbi/connect/ncbi_http_connector.c
 include/ncbi/connect/ncbi_http_connector.h
+include/ncbi/connect/ncbi_lb.c
+include/ncbi/connect/ncbi_lb.h
 include/ncbi/connect/ncbi_lbsmd.h
 include/ncbi/connect/ncbi_lbsmd_stub.c
 include/ncbi/connect/ncbi_memory_connector.c
@@ -148,18 +159,16 @@ include/ncbi/connect/ncbi_service.c
 include/ncbi/connect/ncbi_service.h
 include/ncbi/connect/ncbi_service_connector.c
 include/ncbi/connect/ncbi_service_connector.h
+include/ncbi/connect/ncbi_service_misc.h
 include/ncbi/connect/ncbi_servicep.h
 include/ncbi/connect/ncbi_socket.c
 include/ncbi/connect/ncbi_socket.h
 include/ncbi/connect/ncbi_socket_connector.c
 include/ncbi/connect/ncbi_socket_connector.h
+include/ncbi/connect/ncbi_socket_unix.h
 include/ncbi/connect/ncbi_types.h
 include/ncbi/connect/ncbi_util.c
 include/ncbi/connect/ncbi_util.h
-include/ncbi/connect/ncbibuf.c
-include/ncbi/connect/ncbibuf.h
-include/ncbi/connect/ncbisock.c
-include/ncbi/connect/ncbisock.h
 include/ncbi/connect/urlquery.c
 include/ncbi/connect/urlquery.h
 include/ncbi/corematx.h
@@ -181,8 +190,8 @@ include/ncbi/drawingp.h
 include/ncbi/drawseq.h
 include/ncbi/dust.h
 include/ncbi/dvncode.h
-include/ncbi/echo_asn.h
 include/ncbi/edutil.h
+include/ncbi/egkludge.h
 include/ncbi/ent2api.h
 include/ncbi/entrez.h
 include/ncbi/entrez2.h
@@ -225,7 +234,6 @@ include/ncbi/jsavlt.h
 include/ncbi/jzcoll.h
 include/ncbi/jzmisc.h
 include/ncbi/layout.h
-include/ncbi/lbapi.h
 include/ncbi/legend.h
 include/ncbi/list.h
 include/ncbi/lnfac.h
@@ -240,6 +248,7 @@ include/ncbi/mapproj.h
 include/ncbi/mappubme.h
 include/ncbi/maputil.h
 include/ncbi/matrix.h
+include/ncbi/matrix_frequency_data.h
 include/ncbi/mbalign.h
 include/ncbi/mblast.h
 include/ncbi/mconsist.h
@@ -262,8 +271,6 @@ include/ncbi/mmdblocl.h
 include/ncbi/motif.h
 include/ncbi/ncbi.h
 include/ncbi/ncbibs.h
-include/ncbi/ncbibuf.h
-include/ncbi/ncbicli.h
 include/ncbi/ncbidraw.h
 include/ncbi/ncbienv.h
 include/ncbi/ncbierr.h
@@ -283,14 +290,12 @@ include/ncbi/ncbiprop.h
 include/ncbi/ncbisam.h
 include/ncbi/ncbisami.h
 include/ncbi/ncbisgml.h
-include/ncbi/ncbisock.h
 include/ncbi/ncbisort.h
 include/ncbi/ncbisrti.h
 include/ncbi/ncbistd.h
 include/ncbi/ncbistr.h
 include/ncbi/ncbithr.h
 include/ncbi/ncbitime.h
-include/ncbi/ncbiurl.h
 include/ncbi/ncbiwin.h
 include/ncbi/ncbiwww.h
 include/ncbi/needleman.h
@@ -300,16 +305,13 @@ include/ncbi/netentr.h
 include/ncbi/netlib.h
 include/ncbi/netpriv.h
 include/ncbi/netscape.h
-include/ncbi/ni_asn.h
 include/ncbi/ni_defin.h
-include/ncbi/ni_encr.h
 include/ncbi/ni_error.h
 include/ncbi/ni_lib.h
 include/ncbi/ni_lib_.h
-include/ncbi/ni_list.h
-include/ncbi/ni_msg.h
 include/ncbi/ni_net.h
 include/ncbi/ni_types.h
+include/ncbi/nlm_linear_algebra.h
 include/ncbi/objacces.h
 include/ncbi/objalign.h
 include/ncbi/objalignloc.h
@@ -320,7 +322,9 @@ include/ncbi/objblst3.h
 include/ncbi/objcdd.h
 include/ncbi/objcn3d.h
 include/ncbi/objcode.h
+include/ncbi/objegkludge.h
 include/ncbi/objent2.h
+include/ncbi/objentgene.h
 include/ncbi/objentr.h
 include/ncbi/objfdef.h
 include/ncbi/objfeat.h
@@ -350,8 +354,10 @@ include/ncbi/objspell.h
 include/ncbi/objsset.h
 include/ncbi/objsub.h
 include/ncbi/objtax1.h
+include/ncbi/objtax3.h
 include/ncbi/objtseq.h
 include/ncbi/odlbox.h
+include/ncbi/optimize_target_freq.h
 include/ncbi/panels.h
 include/ncbi/parsegb.h
 include/ncbi/pcre.h
@@ -375,6 +381,7 @@ include/ncbi/pubdesc.h
 include/ncbi/puberr.h
 include/ncbi/qblastapi.h
 include/ncbi/readdb.h
+include/ncbi/redo_alignment.h
 include/ncbi/regex.h
 include/ncbi/rpsutil.h
 include/ncbi/saldist.h
@@ -417,8 +424,10 @@ include/ncbi/seqsplit.h
 include/ncbi/seqsub.h
 include/ncbi/sequtil.h
 include/ncbi/shim3d.h
+include/ncbi/showalignwrap.h
 include/ncbi/simple.h
 include/ncbi/simutil.h
+include/ncbi/smith_waterman.h
 include/ncbi/spell.h
 include/ncbi/spellapi.h
 include/ncbi/spidey.h
@@ -435,6 +444,7 @@ include/ncbi/suggslp.h
 include/ncbi/sugmap.h
 include/ncbi/sugprefx.h
 include/ncbi/tax1map.h
+include/ncbi/tax3api.h
 include/ncbi/taxblast.h
 include/ncbi/taxext.h
 include/ncbi/taxinc.h
@@ -506,34 +516,33 @@ include/ncbi/vsm.h
 include/ncbi/vsmfile.h
 include/ncbi/vsmpriv.h
 include/ncbi/vsmutil.h
-include/ncbi/wrpsb.h
-include/ncbi/wrpsbtool.h
 include/ncbi/wwwblast.h
 include/ncbi/xmlblast.h
-lib/ncbi/ncbithr.o
-lib/ncbi/libncbi.a
-lib/ncbi/libncbiobj.a
-lib/ncbi/libncbicdr.a
-lib/ncbi/libvibrant.a
-lib/ncbi/libncbiacc.a
-lib/ncbi/libncbidesk.a
-lib/ncbi/libddvlib.a
-lib/ncbi/libncbimmdb.a
-lib/ncbi/libncbitool.a
-lib/ncbi/libvibgif.a
-lib/ncbi/libncbicn3d.a
-lib/ncbi/libregexp.a
 lib/ncbi/libblast.a
 lib/ncbi/libblastapi.a
+lib/ncbi/libblastcompadj.a
+lib/ncbi/libddvlib.a
+lib/ncbi/libncbi.a
+lib/ncbi/libncbiCacc.a
+lib/ncbi/libncbiNacc.a
+lib/ncbi/libncbiacc.a
+lib/ncbi/libncbicdr.a
+lib/ncbi/libncbicn3d.a
+lib/ncbi/libncbidesk.a
+lib/ncbi/libncbiid1.a
+lib/ncbi/libncbimla.a
+lib/ncbi/libncbimmdb.a
+lib/ncbi/libncbiobj.a
+lib/ncbi/libncbitool.a
+lib/ncbi/libncbitxc2.a
+lib/ncbi/libnetblast.a
 lib/ncbi/libnetcli.a
 lib/ncbi/libnetentr.a
-lib/ncbi/libncbiNacc.a
-lib/ncbi/libncbiCacc.a
+lib/ncbi/libregexp.a
+lib/ncbi/libvibgif.a
 lib/ncbi/libvibnet.a
-lib/ncbi/libncbitxc2.a
-lib/ncbi/libncbiid1.a
-lib/ncbi/libnetblast.a
-lib/ncbi/libncbimla.a
+lib/ncbi/libvibrant.a
+lib/ncbi/ncbithr.o
 @dirrm lib/ncbi
 @dirrm include/ncbi/connect
 @dirrm include/ncbi

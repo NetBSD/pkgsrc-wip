@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/08/22 20:22:59 mchittur Exp $
+$NetBSD: distinfo,v 1.4 2006/03/28 05:15:17 mchittur Exp $
 
-SHA1 (ncbi-lib-20050605/ncbi.tar.gz) = 7e1ddd3f049df7c906f2681453c5e5a7b12622d8
-RMD160 (ncbi-lib-20050605/ncbi.tar.gz) = 82d3c008e9b1741e8ac286d66c1ad68693663590
-Size (ncbi-lib-20050605/ncbi.tar.gz) = 14458684 bytes
-SHA1 (patch-aa) = e951f4c7d0d58b50d71f3e8a995680df9491a3ad
-SHA1 (patch-ab) = 7ed37faab54cd8d3c48c95fe3ac27624cff8ee33
+SHA1 (ncbi-lib-20060301/ncbi.tar.gz) = 91a3f4a619c5994a2c1691c708d388796d2c779e
+RMD160 (ncbi-lib-20060301/ncbi.tar.gz) = 487e74653228155dd93a35f242f46420982ff26a
+Size (ncbi-lib-20060301/ncbi.tar.gz) = 15333818 bytes
+SHA1 (patch-aa) = 41cdb5a59b5f19476a84579bd9c33c0b3334af33
+SHA1 (patch-ab) = 0748819f460eff3b686f64e137ec5a90ef290ed4

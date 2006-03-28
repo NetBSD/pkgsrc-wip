@@ -1,15 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2005/08/22 20:22:59 mchittur Exp $
+$NetBSD: patch-ab,v 1.2 2006/03/28 05:15:17 mchittur Exp $
 
---- make/makedis.csh.in.orig	2005-05-12 21:42:12.000000000 -0600
-+++ make/makedis.csh.in
-@@ -227,8 +227,8 @@ case Darwin:
- case NetBSD:
- 	set platform=netbsd
- 	set HAVE_MOTIF=0
--	foreach i (/usr/X11R6/include /usr/X11R6/include/X11 /usr/include \
--		/usr/include/X11 )
-+	foreach i (@X11BASE@/include @PREFIX@/include /usr/X11R6/include /usr/X11R6/include/X11 /usr/include \
-+		/usr/include/X11 @PREFIX@/include)
- 		if (-d $i/Xm) then
- 			set HAVE_MOTIF=1
- 			echo Motif found at $i/Xm
+--- platform/netbsd.ncbi.mk.orig	2006-03-28 00:04:04.000000000 +0000
++++ platform/netbsd.ncbi.mk
+@@ -19,7 +19,7 @@ NCBI_ALTLIB = /home/coremake/ncbi/altlib
+ #will work only when you have Motif installed!
+ NCBI_VIBFLAG = -I/usr/X11R6/include -L/usr/X11R6/lib -DWIN_MOTIF
+ NCBI_VIBLIBS = -lXm -lXmu -lXp -lXpm -lXt -lX11 -lXext 
+-NCBI_DISTVIBLIBS = -L/usr/X11R6/lib /usr/X11R6/lib/libXm.a /usr/X11R6/lib/libXp.a /usr/X11R6/lib/libXpm.a -lXmu -lXt -lX11 -lXext
++NCBI_DISTVIBLIBS = -L/usr/X11R6/lib -L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lXp -lXpm -lXm -lXmu -lXt -lX11 -lXext
+ NCBI_OTHERLIBS = -lm
+ NCBI_RANLIB = ranlib
+ # Used by makedis.csh
