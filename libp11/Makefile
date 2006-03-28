@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/24 21:51:19 udontknow Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/28 01:01:16 udontknow Exp $
 #
 
 DISTNAME=		libp11-0.2.1
@@ -14,6 +14,7 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libp11.pc.in
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
+USE_BUILTIN.openssl=	NO
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"

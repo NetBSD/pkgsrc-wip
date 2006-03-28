@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/25 01:32:46 udontknow Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/28 01:02:16 udontknow Exp $
 
 DISTNAME=      		opensc-0.10.1
 CATEGORIES=     	security
@@ -12,6 +12,7 @@ GNU_CONFIGURE= 		YES
 USE_LIBTOOL=            YES
 USE_OLD_DES_API=	YES
 USE_TOOLS+= 		gmake pkg-config
+USE_BUILTIN.openssl=	NO
 
 .include "options.mk"
 
