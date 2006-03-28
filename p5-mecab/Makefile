@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/19 13:53:43 obache Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/28 06:58:05 obache Exp $
 #
 
 .include "../../wip/mecab/Makefile.common"
@@ -6,7 +6,7 @@
 DISTNAME=		mecab-perl-${MECAB_VERSION}
 PKGNAME=		p5-mecab-${MECAB_VERSION}
 CATEGORIES=		japanese textproc perl5
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=mecab/19394/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=mecab/19467/}
 
 MAINTAINER=		obata@lins.jp
 HOMEPAGE=		http://mecab.sourceforge.jp/
