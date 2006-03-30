@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/30 00:03:46 jeremy-c-reed Exp $
+bin/cxpm
+include/X11/xpm.h
+lib/libXpm.la
+lib/pkgconfig/xpm.pc
+man/man1/cxpm.1
+@comment @dirrm include/X11
