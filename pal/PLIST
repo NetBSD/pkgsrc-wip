@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/05 08:10:26 emil_s Exp $
+bin/pal
+man/man1/pal.1
+share/doc/${PKGNAME}/COPYING.gz
+share/doc/${PKGNAME}/ChangeLog.gz
+share/doc/${PKGNAME}/INSTALL.gz
+share/doc/${PKGNAME}/example.css
+share/examples/pal/pal.conf
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/pal.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/pal.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/pal.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/pal.mo
+share/pal/australia.pal
+share/pal/birth-death.pal
+share/pal/christian.pal
+share/pal/computer.pal
+share/pal/history.pal
+share/pal/lotr.pal
+share/pal/music.pal
+share/pal/pagan.pal
+share/pal/us.pal
+share/pal/world.pal
+@dirrm share/pal
+@dirrm share/examples/pal
+@dirrm share/doc/${PKGNAME}

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/04/05 08:10:26 emil_s Exp $
+
+--- Makefile.defs.orig	2004-05-03 00:10:54.000000000 +0100
++++ Makefile.defs
+@@ -3,7 +3,7 @@
+ 
+ # directory to install to. Depending on your distribution, you might
+ # want to change this to /usr/local
+-prefix = /usr
++prefix = @PREFIX@
+ CC      = gcc
+ 
+ 

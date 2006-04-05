@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/04/05 08:10:26 emil_s Exp $
+
+SHA1 (pal-0.3.4.tgz) = 258d5512e3f92ede38b10ea620a3931a430831c6
+RMD160 (pal-0.3.4.tgz) = f0f2461b392bb43e49d8620ce1da2e0e1b23b62b
+Size (pal-0.3.4.tgz) = 109125 bytes
+SHA1 (patch-aa) = 655e97a247711a1759d5a321ebe0c01b2cc2e5e4
+SHA1 (patch-ab) = 8e7df5fa163c3506c7ad32a0030711297f8c4cdf
+SHA1 (patch-ac) = 8d17cbbe30654373806886b55cc91ec8b3072f50
+SHA1 (patch-ad) = 0e5cd12fd27021eabf52a46fb2c82d2fe7989e29
