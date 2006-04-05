@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2006/03/13 18:27:33 thomasklausner Exp $
+$NetBSD: distinfo,v 1.6 2006/04/05 17:17:39 thomasklausner Exp $
 
-SHA1 (fakenes-0.5.3.tar.bz2) = 0522d3d61d8767feec1b48d1445ef57fb2d1b4fc
-RMD160 (fakenes-0.5.3.tar.bz2) = ebab111134b318d33262bd1d7f5a29b5865d0cbb
-Size (fakenes-0.5.3.tar.bz2) = 292359 bytes
+SHA1 (fakenes-0.5.4.tar.bz2) = 2c930e787fd9960f632a09c12573b5aac660e74c
+RMD160 (fakenes-0.5.4.tar.bz2) = 88e98d48af0c936ae8eba7c2c23fc350f94c4bd4
+Size (fakenes-0.5.4.tar.bz2) = 301317 bytes
 SHA1 (patch-ab) = 8c57f5ed9386d97d97ed92e0644e2949c69f9cfc
