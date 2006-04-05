@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/08/23 11:49:44 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/05 17:18:10 thomasklausner Exp $
 
 DISTNAME=		nrpe-2.0
 CATEGORIES=		net sysutils
@@ -8,7 +8,7 @@ MAINTAINER=		ura@jp.NetBSD.org
 HOMEPAGE=		http://www.nagios.org/
 COMMENT=		Nagios Remote Plugin Executor
 
-DEPENDS+=		nagios-plugins>=1.3.1:../../wip/nagios-plugins
+DEPENDS+=		nagios-plugins>=1.3.1:../../net/nagios-plugins
 
 GNU_CONFIGURE=		yes
 USE_PERL5_BUILD=	yes
