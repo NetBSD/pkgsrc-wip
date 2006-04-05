@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.3 2006/02/07 08:14:10 lkundrak Exp $
+$NetBSD: patch-af,v 1.4 2006/04/05 17:19:28 thomasklausner Exp $
 
---- configure.orig	2006-01-03 18:58:02.000000000 +0100
+--- configure.orig	2006-04-02 08:53:31.000000000 +0000
 +++ configure
 @@ -311,7 +311,7 @@ ac_includes_default="\
  # include <unistd.h>
@@ -11,25 +11,10 @@ $NetBSD: patch-af,v 1.3 2006/02/07 08:14:10 lkundrak Exp $
  ac_subst_files=''
  
  # Initialize some variables set by options.
-@@ -4209,7 +4209,6 @@ echo "$as_me: error: none of gcc, egcs a
- 
- else
-   BUILD_CC="$CC"
--
- fi
- 
- # Test the C compiler for the build environment.
-@@ -4217,10 +4216,24 @@ tmp_CC="$CC"
- tmp_CFLAGS="$CFLAGS"
- tmp_LDFLAGS="$LDFLAGS"
- tmp_CPPFLAGS="$CPPFLAGS"
-+
- CC="$BUILD_CC"
- CFLAGS="$BUILD_CFLAGS"
+@@ -4244,6 +4243,14 @@ CFLAGS="$BUILD_CFLAGS"
  CPPFLAGS="$BUILD_CPPFLAGS"
--LDFLAGS="$BUILD_LDDFLAGS"
-+LDFLAGS="$BUILD_LDFLAGS"
-+
+ LDFLAGS="$BUILD_LDFLAGS"
+ 
 +if test "x$BUILD_CFLAGS" = x; then
 +  BUILD_CFLAGS="-g -O2"
 +fi
@@ -38,14 +23,10 @@ $NetBSD: patch-af,v 1.3 2006/02/07 08:14:10 lkundrak Exp $
 +  BUILD_CPPFLAGS="-Wall -W"
 +fi
 +
-+
-+
-+
-+
- 
  # Identify characteristics of the build architecture.
  echo "$as_me:$LINENO: checking whether byte ordering is bigendian" >&5
-@@ -6351,6 +6364,176 @@ fi
+ echo $ECHO_N "checking whether byte ordering is bigendian... $ECHO_C" >&6
+@@ -6401,6 +6408,176 @@ fi
  
  
  
@@ -222,16 +203,7 @@ $NetBSD: patch-af,v 1.3 2006/02/07 08:14:10 lkundrak Exp $
  # Check for headers.
  
  
-@@ -6979,6 +7162,8 @@ do
- _ACEOF
- cat >>$CONFIG_STATUS <<\_ACEOF
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+    # Avoid regenerating for rechecks on pkgsrc
-+    exit 0
-     ac_cs_recheck=: ;;
-   --version | --vers* | -V )
-     echo "$ac_cs_version"; exit 0 ;;
-@@ -7163,10 +7348,14 @@ s,@LD@,$LD,;t t
+@@ -7216,10 +7395,14 @@ s,@LD@,$LD,;t t
  s,@ac_ct_LD@,$ac_ct_LD,;t t
  s,@RUBY@,$RUBY,;t t
  s,@BUILD_CC@,$BUILD_CC,;t t
