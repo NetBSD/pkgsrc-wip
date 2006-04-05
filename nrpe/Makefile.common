@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.2 2005/12/05 22:27:46 rillig Exp $
+# $NetBSD: Makefile.common,v 1.3 2006/04/05 18:46:25 ghen Exp $
 
-.include "../../wip/nagios-base/Makefile.common"
+.include "../../net/nagios-base/Makefile.common"
 
 NRPE_USER?=		${NAGIOS_USER}
 NRPE_GROUP?=		${NAGIOS_GROUP}
