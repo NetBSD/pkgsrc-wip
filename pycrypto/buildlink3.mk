@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2006/02/10 03:08:49 udontknow Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:17 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PYCRYPTO_BUILDLINK3_MK:=	${PYCRYPTO_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npycrypto}
 BUILDLINK_PACKAGES+=	pycrypto
 
 .if !empty(PYCRYPTO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.pycrypto+=	pycrypto>=2.0.1
+BUILDLINK_API_DEPENDS.pycrypto+=	pycrypto>=2.0.1
 BUILDLINK_PKGSRCDIR.pycrypto?=	../../wip/pycrypto
 .endif	# PYCRYPTO_BUILDLINK3_MK
 

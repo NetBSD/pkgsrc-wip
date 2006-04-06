@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/06/13 19:07:49 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 07:17:31 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXau.
 #
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibXau}
 BUILDLINK_PACKAGES+=	libXau
 
 .if !empty(LIBXAU_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libXau?=		libXau>=0.1
+BUILDLINK_API_DEPENDS.libXau?=		libXau>=0.1
 BUILDLINK_PKGSRCDIR.libXau?=		../../wip/libXau
 .endif # LIBXAU_BUILDLINK3_MK
 

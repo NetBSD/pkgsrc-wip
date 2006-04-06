@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/03/02 17:10:00 dillo Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:22 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLKTERM_BUILDLINK3_MK:=	${GLKTERM_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nglkterm}
 BUILDLINK_PACKAGES+=	glkterm
 
 .if !empty(GLKTERM_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.glkterm+=	glkterm>=0.7.8
+BUILDLINK_API_DEPENDS.glkterm+=	glkterm>=0.7.8
 BUILDLINK_PKGSRCDIR.glkterm?=	../../wip/glkterm
 #BUILDLINK_DEPMETHOD.glkterm?=	build
 

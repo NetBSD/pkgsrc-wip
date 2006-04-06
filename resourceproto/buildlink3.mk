@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/11/10 03:00:33 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:18:24 jeremy-c-reed Exp $
 
 BUILDLINK_DEPMETHOD.resourceproto?=	build
 
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nresourceproto}
 BUILDLINK_PACKAGES+=	resourceproto
 
 .if !empty(RESOURCEPROTO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.resourceproto+=	resourceproto>=1.0.1
+BUILDLINK_API_DEPENDS.resourceproto+=	resourceproto>=1.0.1
 BUILDLINK_PKGSRCDIR.resourceproto?=	../../wip/resourceproto
 .endif	# RESOURCEPROTO_BUILDLINK3_MK
 

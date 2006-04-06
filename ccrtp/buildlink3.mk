@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2005/12/16 18:49:36 poppnk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:02 jeremy-c-reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nccrtp}
 BUILDLINK_PACKAGES+=	ccrtp
 
 .if !empty(CCRTP_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.ccrtp+=	ccrtp>=1.3.5
+BUILDLINK_API_DEPENDS.ccrtp+=	ccrtp>=1.3.5
 BUILDLINK_PKGSRCDIR.ccrtp?=	../../wip/ccrtp
 .endif	# CCRTP_BUILDLINK3_MK
 

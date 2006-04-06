@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/05/03 16:52:50 poppnk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:43 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOME_JAVA_BUILDLINK3_MK:=	${LIBGNOME_JAVA_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgnome-java}
 BUILDLINK_PACKAGES+=	libgnome-java
 
 .if !empty(LIBGNOME_JAVA_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libgnome-java+=	libgnome-java>=2.10.1
+BUILDLINK_API_DEPENDS.libgnome-java+=	libgnome-java>=2.10.1
 BUILDLINK_PKGSRCDIR.libgnome-java?=	../../wip/libgnome-java
 .endif	# LIBGNOME_JAVA_BUILDLINK3_MK
 

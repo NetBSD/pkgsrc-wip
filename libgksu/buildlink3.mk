@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/01/16 23:15:26 poppnk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:22 jeremy-c-reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgksu1.2}
 BUILDLINK_PACKAGES+=	libgksu1.2
 
 .if !empty(LIBGKSU1.2_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libgksu1.2+=	libgksu1.2>=1.3.7
+BUILDLINK_API_DEPENDS.libgksu1.2+=	libgksu1.2>=1.3.7
 BUILDLINK_PKGSRCDIR.libgksu1.2?=	../../wip/libgksu
 .endif	# LIBGKSU1.2_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/02/09 11:16:49 poppnk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:21 jeremy-c-reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncairo-java}
 BUILDLINK_PACKAGES+=	cairo-java
 
 .if !empty(CAIRO_JAVA_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.cairo-java+=	cairo-java>=1.0.1
+BUILDLINK_API_DEPENDS.cairo-java+=	cairo-java>=1.0.1
 BUILDLINK_PKGSRCDIR.cairo-java?=	../../wip/cairo-java
 .endif	# CAIRO_JAVA_BUILDLINK3_MK
 

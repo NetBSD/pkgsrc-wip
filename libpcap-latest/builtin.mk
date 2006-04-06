@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2005/01/11 20:49:40 ppostma Exp $
+# $NetBSD: builtin.mk,v 1.5 2006/04/06 07:17:53 jeremy-c-reed Exp $
 
 _LIBPCAP_PKGSRC_PKGNAME=	libpcap-0.8.3
 _LIBPCAP_PCAP_H=		/usr/include/pcap.h
@@ -44,7 +44,7 @@ USE_BUILTIN.libpcap?=	${IS_BUILTIN.libpcap}
 
 .  if defined(BUILTIN_PKG.libpcap)
 USE_BUILTIN.libpcap=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.libpcap}
+.    for _depend_ in ${BUILDLINK_API_DEPENDS.libpcap}
 .      if !empty(USE_BUILTIN.libpcap:M[yY][eE][sS])
 USE_BUILTIN.libpcap!=	\
 	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.libpcap}; then \

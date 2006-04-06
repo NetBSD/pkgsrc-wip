@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/03/30 00:03:46 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:34 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBXPM_BUILDLINK3_MK:=	${LIBXPM_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibXpm}
 BUILDLINK_PACKAGES+=	libXpm
 
 .if !empty(LIBXPM_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libXpm+=	libXpm>=3.5.4.2
+BUILDLINK_API_DEPENDS.libXpm+=	libXpm>=3.5.4.2
 BUILDLINK_PKGSRCDIR.libXpm?=	../../wip/libXpm
 .endif	# LIBXPM_BUILDLINK3_MK
 

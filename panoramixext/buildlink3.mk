@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/06/07 16:58:48 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:17 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PANORAMIXEXT_BUILDLINK3_MK:=	${PANORAMIXEXT_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npanoramixext}
 BUILDLINK_PACKAGES+=	panoramixext
 
 .if !empty(PANORAMIXEXT_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.panoramixext+=	panoramixext>=1.1
+BUILDLINK_API_DEPENDS.panoramixext+=	panoramixext>=1.1
 BUILDLINK_PKGSRCDIR.panoramixext?=	../../wip/panoramixext
 BUILDLINK_DEPMETHOD.panoramixext?=	build
 .endif	# PANORAMIXEXT_BUILDLINK3_MK

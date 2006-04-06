@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/11/19 21:50:59 daprice Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:43 jeremy-c-reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgrass5}
 BUILDLINK_PACKAGES+=	libgrass5
 
 .if !empty(LIBGRASS5_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libgrass5+=	libgrass5>=1.0.0
+BUILDLINK_API_DEPENDS.libgrass5+=	libgrass5>=1.0.0
 BUILDLINK_PKGSRCDIR.libgrass5?=	../../wip/libgrass5
 .endif	# LIBGRASS5_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/17 06:51:54 marttikuparinen Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:18:40 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_TASKMANAGER_BUILDLINK3_MK:=	${XFCE4_TASKMANAGER_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-taskmanager}
 BUILDLINK_PACKAGES+=	xfce4-taskmanager
 
 .if !empty(XFCE4_TASKMANAGER_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xfce4-taskmanager+=	xfce4-appfinder>=0.3.1
+BUILDLINK_API_DEPENDS.xfce4-taskmanager+=	xfce4-appfinder>=0.3.1
 BUILDLINK_PKGSRCDIR.xfce4-taskmanager?=	../../wip/xfce4-taskmanager
 .endif	# XFCE4_TASKMANAGER_BUILDLINK3_MK
 

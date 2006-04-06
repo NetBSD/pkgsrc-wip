@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/08/08 19:00:22 larnor Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:37 jeremy-c-reed Exp $
 
 BUILDLINK_DEPMETHOD.xextproto?=	build
 
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxextproto}
 BUILDLINK_PACKAGES+=	xextproto
 
 .if !empty(XEXTPROTO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xextproto+=	xextproto>=7.0
+BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.0
 BUILDLINK_PKGSRCDIR.xextproto?=	../../wip/xextproto
 .endif	# XEXTPROTO_BUILDLINK3_MK
 

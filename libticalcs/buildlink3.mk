@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/03/28 07:55:51 bjan2 Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:55 jeremy-c-reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibticalcs}
 BUILDLINK_PACKAGES+=	libticalcs
 
 .if !empty(LIBTICALCS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libticalcs+=	libticalcs>=4.4.9
+BUILDLINK_API_DEPENDS.libticalcs+=	libticalcs>=4.4.9
 BUILDLINK_PKGSRCDIR.libticalcs?=	../../wip/libticalcs
 .endif	# LIBTICALCS_BUILDLINK3_MK
 

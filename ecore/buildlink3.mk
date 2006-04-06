@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/06/12 23:51:17 kristerw Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 07:17:12 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ECORE_BUILDLINK3_MK:=	${ECORE_BUILDLINK3_MK}+
@@ -10,7 +10,7 @@ BUILDLINK_DEPENDS+=	ecore
 BUILDLINK_PACKAGES+=	ecore
 
 .if !empty(ECORE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.ecore+=	ecore>=1.0.0nb1
+BUILDLINK_API_DEPENDS.ecore+=	ecore>=1.0.0nb1
 BUILDLINK_PKGSRCDIR.ecore?=	../../wip/ecore
 .endif	# ECORE_BUILDLINK3_MK
 

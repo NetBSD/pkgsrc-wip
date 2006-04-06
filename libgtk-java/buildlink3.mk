@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/05/03 16:53:43 poppnk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:44 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGTK_JAVA_BUILDLINK3_MK:=	${LIBGTK_JAVA_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgtk-java}
 BUILDLINK_PACKAGES+=	libgtk-java
 
 .if !empty(LIBGTK_JAVA_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libgtk-java+=	libgtk-java>=2.6.2
+BUILDLINK_API_DEPENDS.libgtk-java+=	libgtk-java>=2.6.2
 BUILDLINK_PKGSRCDIR.libgtk-java?=	../../wip/libgtk-java
 .endif	# LIBGTK_JAVA_BUILDLINK3_MK
 

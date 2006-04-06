@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/10/07 13:32:50 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/06 07:17:25 jeremy-c-reed Exp $
 #
 
 DISTNAME=		heroes-0.21
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://heroes.sourceforge.net/
 COMMENT=		Feature-packed game, like Nibbles or Tron clone
 
-BUILDLINK_DEPENDS.gettext+=	gettext-lib>=0.10.36
+BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.10.36
 
 WRKSRC=			${WRKDIR}
 USE_PKGLOCALEDIR=	yes

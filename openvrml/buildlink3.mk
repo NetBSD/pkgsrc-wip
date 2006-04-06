@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/06/12 23:51:25 kristerw Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:18:14 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENVRML_BUILDLINK3_MK:=	${OPENVRML_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nopenvrml}
 BUILDLINK_PACKAGES+=	openvrml
 
 .if !empty(OPENVRML_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.openvrml+=	openvrml>=0.14.3
+BUILDLINK_API_DEPENDS.openvrml+=	openvrml>=0.14.3
 BUILDLINK_PKGSRCDIR.openvrml?=	../../wip/openvrml
 .endif	# OPENVRML_BUILDLINK3_MK
 

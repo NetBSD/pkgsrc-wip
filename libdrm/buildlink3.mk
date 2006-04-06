@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/10 01:36:37 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:38 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBDRM_BUILDLINK3_MK:=	${LIBDRM_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibdrm}
 BUILDLINK_PACKAGES+=	libdrm
 
 .if !empty(LIBDRM_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libdrm+=	libdrm>=1.0.5
+BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=1.0.5
 BUILDLINK_PKGSRCDIR.libdrm?=	../../wip/libdrm
 .endif	# LIBDRM_BUILDLINK3_MK
 

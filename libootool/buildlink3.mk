@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/18 23:09:54 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:16:57 jeremy-c-reed Exp $
 
 
 .include "../../wip/valknut/Makefile.version"
@@ -16,7 +16,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibootool}
 BUILDLINK_PACKAGES+=	libootool
 
 .if !empty(LIBOOTOOL_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libootool+=	libootool>=${VALKNUT_PKG_VERSION}
+BUILDLINK_API_DEPENDS.libootool+=	libootool>=${VALKNUT_PKG_VERSION}
 BUILDLINK_PKGSRCDIR.libootool?=	../../wip/libootool
 .endif	# LIBOOTOOL_BUILDLINK3_MK
 

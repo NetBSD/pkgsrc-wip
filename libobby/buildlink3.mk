@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/09/11 05:44:44 udontknow Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:50 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBOBBY_BUILDLINK3_MK:=	${LIBOBBY_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibobby}
 BUILDLINK_PACKAGES+=	libobby
 
 .if !empty(LIBOBBY_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libobby+=	libobby>=0.2.0
+BUILDLINK_API_DEPENDS.libobby+=	libobby>=0.2.0
 BUILDLINK_PKGSRCDIR.libobby?=	../../wip/libobby
 .endif	# LIBOBBY_BUILDLINK3_MK
 

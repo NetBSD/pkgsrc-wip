@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/06/30 01:26:13 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:13 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EDITLINE_BUILDLINK3_MK:=	${EDITLINE_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Neditline}
 BUILDLINK_PACKAGES+=	editline
 
 .if !empty(EDITLINE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.editline+=	editline>=20041207.2.9
+BUILDLINK_API_DEPENDS.editline+=	editline>=20041207.2.9
 BUILDLINK_PKGSRCDIR.editline?=	../../wip/editline
 .endif	# EDITLINE_BUILDLINK3_MK
 

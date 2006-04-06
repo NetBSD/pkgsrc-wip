@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/14 01:28:13 jlamwww Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/06 07:18:30 jeremy-c-reed Exp $
 
 DISTNAME=	sid-milter-0.2.5
 CATEGORIES=	mail
@@ -10,7 +10,7 @@ COMMENT=	Open source implementation of the Sender ID specification
 
 DEPENDS+=	sendmail>=8.13.0:../../mail/sendmail
 
-BUILDLINK_DEPENDS.libmilter+=	libmilter>=8.13.0
+BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 
 
 USE_BUILTIN.libmilter=	NO

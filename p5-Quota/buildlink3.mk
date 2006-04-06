@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/09/14 07:32:24 udontknow Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:15 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 P5_QUOTA_BUILDLINK3_MK:=	${P5_QUOTA_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Np5-Quota}
 BUILDLINK_PACKAGES+=	p5-Quota
 
 .if !empty(P5_QUOTA_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.p5-Quota+=	p5-Quota>=1.5.1
+BUILDLINK_API_DEPENDS.p5-Quota+=	p5-Quota>=1.5.1
 BUILDLINK_PKGSRCDIR.p5-Quota?=	../../wip/p5-Quota
 .endif	# P5_QUOTA_BUILDLINK3_MK
 

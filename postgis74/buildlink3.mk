@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/11/06 10:41:45 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:18:18 jeremy-c-reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npostgis}
 BUILDLINK_PACKAGES+=	postgis
 
 .if !empty(POSTGIS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.postgis+=	postgis>=0.8.2
+BUILDLINK_API_DEPENDS.postgis+=	postgis>=0.8.2
 BUILDLINK_PKGSRCDIR.postgis?=	../../wip/postgis74
 .endif	# POSTGIS_BUILDLINK3_MK
 

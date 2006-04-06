@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/08/08 19:01:52 larnor Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:37 jeremy-c-reed Exp $
 
 BUILDLINK_DEPMETHOD.xf86bigfontproto?=	build
 
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxf86bigfontproto}
 BUILDLINK_PACKAGES+=	xf86bigfontproto
 
 .if !empty(XF86BIGFONTPROTO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xf86bigfontproto+=	xf86bigfontproto>=1.1
+BUILDLINK_API_DEPENDS.xf86bigfontproto+=	xf86bigfontproto>=1.1
 BUILDLINK_PKGSRCDIR.xf86bigfontproto?=	../../wip/xf86bigfontproto
 .endif	# XF86BIGFONTPROTO_BUILDLINK3_MK
 

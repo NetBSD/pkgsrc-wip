@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/03/28 05:15:17 mchittur Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 07:18:12 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NCBI_LIB_BUILDLINK3_MK:=	${NCBI_LIB_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nncbi-lib}
 BUILDLINK_PACKAGES+=	ncbi-lib
 
 .if !empty(NCBI_LIB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.ncbi-lib+=	ncbi-lib>=20060301
+BUILDLINK_API_DEPENDS.ncbi-lib+=	ncbi-lib>=20060301
 BUILDLINK_PKGSRCDIR.ncbi-lib?=	../../wip/ncbi-lib
 .endif	# NCBI_LIB_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/04/12 18:02:32 airhead Exp $
+$NetBSD: patch-aa,v 1.5 2006/04/06 07:18:26 jeremy-c-reed Exp $
 
 --- Makefile.in.orig	1999-04-30 16:32:04.000000000 +0200
 +++ Makefile.in
@@ -71,7 +71,7 @@ $NetBSD: patch-aa,v 1.4 2005/04/12 18:02:32 airhead Exp $
  		rm -f ./misc/rlab.tmp.0 ./misc/rlab.tmp.1 ./misc/rlab.tmp.2
 -		$(INSTALL_PROGRAM) ./misc/rlab2 $(bindir)/rlab2
 -		if test "$(LN)" = "ln" ; then\
--		  @echo "RECOMMENDED YOU MV $(TOPDIR) to $(libdir)/rlab2";\
+-		  @echo "ABI_DEPENDS YOU MV $(TOPDIR) to $(libdir)/rlab2";\
 -		fi
 -		if test "$(LN)" = "ln -s" ; then\
 -		  if test -r "$(libdir)/rlab2" ; then\

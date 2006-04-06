@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/10 03:38:53 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:40 jeremy-c-reed Exp $
 
 BUILDLINK_DEPMETHOD.xineramaproto?=	build
 
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxineramaproto}
 BUILDLINK_PACKAGES+=	xineramaproto
 
 .if !empty(XINERAMAPROTO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xineramaproto+=	xineramaproto>=1.1.1
+BUILDLINK_API_DEPENDS.xineramaproto+=	xineramaproto>=1.1.1
 BUILDLINK_PKGSRCDIR.xineramaproto?=	../../wip/xineramaproto
 .endif	# XINERAMAPROTO_BUILDLINK3_MK
 

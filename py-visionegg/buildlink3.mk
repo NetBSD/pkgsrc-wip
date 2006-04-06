@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/11/11 23:04:02 kristerw Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:18:23 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 PY_VISIONEGG_BUILDLINK3_MK:=	${PY_VISIONEGG_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npyvisionegg}
 BUILDLINK_PACKAGES+=	pyvisionegg
 
 .if !empty(PY_VISIONEGG_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.pyvisionegg+=	${PYPKGPREFIX}-visionegg>=0.9.9
+BUILDLINK_API_DEPENDS.pyvisionegg+=	${PYPKGPREFIX}-visionegg>=0.9.9
 BUILDLINK_PKGSRCDIR.pyvisionegg?=	../../wip/py-visionegg
 .endif	# PY_VISIONEGG_BUILDLINK3_MK
 

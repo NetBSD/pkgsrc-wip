@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/02/22 15:56:09 poppnk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:25 jeremy-c-reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlirc}
 BUILDLINK_PACKAGES+=	lirc
 
 .if !empty(LIRC_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.lirc+=	lirc>=0.8.0
+BUILDLINK_API_DEPENDS.lirc+=	lirc>=0.8.0
 BUILDLINK_PKGSRCDIR.lirc?=	../../wip/lirc
 .endif	# LIRC_BUILDLINK3_MK
 

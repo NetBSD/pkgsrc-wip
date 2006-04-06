@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/10 18:43:22 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:24 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use resourceext.
 #
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS+=	resourceext
 
 .if !empty(RESOURCEEXT_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			resourceext
-BUILDLINK_DEPENDS.resourceext+=		resourceext>=1.0
+BUILDLINK_API_DEPENDS.resourceext+=		resourceext>=1.0
 BUILDLINK_PKGSRCDIR.resourceext?=		../../wip/resourceext
 
 .endif # RESOURCEEXT_BUILDLINK3_MK

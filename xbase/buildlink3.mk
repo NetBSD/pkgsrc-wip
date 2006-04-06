@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/06 15:39:40 mpasternak Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:36 jeremy-c-reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.2.
 # XXX After this file as been verified as correct, the comment lines
@@ -16,7 +16,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxbase}
 BUILDLINK_PACKAGES+=	xbase
 
 .if !empty(XBASE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xbase+=	xbase>=2.0.0
+BUILDLINK_API_DEPENDS.xbase+=	xbase>=2.0.0
 BUILDLINK_PKGSRCDIR.xbase?=	../../wip/xbase
 
 .endif	# XBASE_BUILDLINK3_MK

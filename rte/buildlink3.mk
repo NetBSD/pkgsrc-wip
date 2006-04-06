@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/07/24 23:47:11 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:26 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RTE_BUILDLINK3_MK:=	${RTE_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nrte}
 BUILDLINK_PACKAGES+=	rte
 
 .if !empty(RTE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.rte+=		rte>=0.5.6
+BUILDLINK_API_DEPENDS.rte+=		rte>=0.5.6
 BUILDLINK_PKGSRCDIR.rte?=	../../wip/rte
 .endif	# RTE_BUILDLINK3_MK
 

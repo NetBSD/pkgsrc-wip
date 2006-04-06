@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/02/15 16:08:07 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 07:17:06 jeremy-c-reed Exp $
 
 .include "../../wip/valknut/Makefile.version"
 
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndclib}
 BUILDLINK_PACKAGES+=	dclib
 
 .if !empty(DCLIB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.dclib+=	dclib>=${VALKNUT_PKG_VERSION}
+BUILDLINK_API_DEPENDS.dclib+=	dclib>=${VALKNUT_PKG_VERSION}
 BUILDLINK_PKGSRCDIR.dclib?=	../../wip/dclib
 .endif	# DCLIB_BUILDLINK3_MK
 

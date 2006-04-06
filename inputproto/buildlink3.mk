@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/08/08 18:54:48 larnor Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:25 jeremy-c-reed Exp $
 
 BUILDLINK_DEPMETHOD.inputproto?=	build
 
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ninputproto}
 BUILDLINK_PACKAGES+=	inputproto
 
 .if !empty(INPUTPROTO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.inputproto+=	inputproto>=1.3
+BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=1.3
 BUILDLINK_PKGSRCDIR.inputproto?=	../../wip/inputproto
 .endif	# INPUTPROTO_BUILDLINK3_MK
 

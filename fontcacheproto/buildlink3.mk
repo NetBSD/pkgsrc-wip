@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/11/11 23:18:52 kristerw Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:19 jeremy-c-reed Exp $
 
 BUILDLINK_DEPMETHOD.fontcacheproto?=	build
 
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfontcacheproto}
 BUILDLINK_PACKAGES+=	fontcacheproto
 
 .if !empty(FONTCACHEPROTO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.fontcacheproto+=	fontcacheproto>=0.1
+BUILDLINK_API_DEPENDS.fontcacheproto+=	fontcacheproto>=0.1
 BUILDLINK_PKGSRCDIR.fontcacheproto?=	../../wip/fontcacheproto
 .endif	# FONTCACHEPROTO_BUILDLINK3_MK
 

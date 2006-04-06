@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/03/12 22:09:56 poppnk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:14 jeremy-c-reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nconfuse}
 BUILDLINK_PACKAGES+=	confuse
 
 .if !empty(CONFUSE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.confuse+=	confuse>=2.5
+BUILDLINK_API_DEPENDS.confuse+=	confuse>=2.5
 BUILDLINK_PKGSRCDIR.confuse?=	../../wip/confuse
 .endif	# CONFUSE_BUILDLINK3_MK
 

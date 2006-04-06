@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/05/09 04:16:09 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 07:17:35 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXres.
 #
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS+=	libXres
 
 .if !empty(LIBXRES_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			libXres
-BUILDLINK_DEPENDS.libXres+=		libXres>=1.0.1nb1
+BUILDLINK_API_DEPENDS.libXres+=		libXres>=1.0.1nb1
 BUILDLINK_PKGSRCDIR.libXres?=		../../wip/libXres
 
 .include "../../wip/libX11/buildlink3.mk"

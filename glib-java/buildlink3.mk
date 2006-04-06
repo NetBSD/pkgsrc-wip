@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/02/08 22:21:41 poppnk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:23 jeremy-c-reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nglib-java}
 BUILDLINK_PACKAGES+=	glib-java
 
 .if !empty(GLIB_JAVA_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.glib-java+=	glib-java>=0.2.1
+BUILDLINK_API_DEPENDS.glib-java+=	glib-java>=0.2.1
 BUILDLINK_PKGSRCDIR.glib-java?=	../../wip/glib-java
 .endif	# GLIB_JAVA_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/07 16:51:51 emil_s Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:02 jeremy-c-reed Exp $
 
 BUILDLINK_DEPMETHOD.cabal?=	build
 
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncabal}
 BUILDLINK_PACKAGES+=	cabal
 
 .if !empty(CABAL_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.cabal+=	cabal>=1.1.3
+BUILDLINK_API_DEPENDS.cabal+=	cabal>=1.1.3
 BUILDLINK_PKGSRCDIR.cabal?=	../../wip/cabal
 .endif	# CABAL_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/12/13 15:44:16 leonardschmidt Exp $
+# $NetBSD: options.mk,v 1.5 2006/04/06 07:17:02 jeremy-c-reed Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bmpx
 PKG_SUPPORTED_OPTIONS=	debug gui
@@ -11,7 +11,7 @@ CONFIGURE_ARGS+=	--enable-debug
 .endif
 
 .if !empty(PKG_OPTIONS:Mgui)
-BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.5.1
+BUILDLINK_API_DEPENDS.libglade2+=	libglade2>=2.5.1
 
 .  include "../../devel/libglade2/buildlink3.mk"
 .  include "../../devel/pango/buildlink3.mk"

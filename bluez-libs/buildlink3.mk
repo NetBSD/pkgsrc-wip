@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2005/08/25 14:02:48 poppnk Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 07:17:01 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BLUEZ_LIBS_BUILDLINK3_MK:=	${BLUEZ_LIBS_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nbluez-libs}
 BUILDLINK_PACKAGES+=	bluez-libs
 
 .if !empty(BLUEZ_LIBS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.bluez-libs+=	bluez-libs>=2.19
+BUILDLINK_API_DEPENDS.bluez-libs+=	bluez-libs>=2.19
 BUILDLINK_PKGSRCDIR.bluez-libs?=	../../wip/bluez-libs
 .endif	# BLUEZ_LIBS_BUILDLINK3_MK
 

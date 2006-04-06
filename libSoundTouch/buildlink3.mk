@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/04/27 15:51:36 cetrox Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:31 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSOUNDTOUCH_BUILDLINK3_MK:=	${LIBSOUNDTOUCH_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibSoundTouch}
 BUILDLINK_PACKAGES+=	libSoundTouch
 
 .if !empty(LIBSOUNDTOUCH_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libSoundTouch+=	libSoundTouch>=1.3.0
+BUILDLINK_API_DEPENDS.libSoundTouch+=	libSoundTouch>=1.3.0
 BUILDLINK_PKGSRCDIR.libSoundTouch?=	../../wip/libSoundTouch
 .endif	# LIBSOUNDTOUCH_BUILDLINK3_MK
 

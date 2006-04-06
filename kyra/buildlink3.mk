@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/07 02:38:00 mpasternak Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:30 jeremy-c-reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.2.
 # XXX After this file as been verified as correct, the comment lines
@@ -16,7 +16,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nkyra}
 BUILDLINK_PACKAGES+=	kyra
 
 .if !empty(KYRA_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.kyra+=	kyra>=1.6.5
+BUILDLINK_API_DEPENDS.kyra+=	kyra>=1.6.5
 BUILDLINK_PKGSRCDIR.kyra?=	../../wip/kyra
 
 .include "../../devel/SDL/buildlink3.mk"

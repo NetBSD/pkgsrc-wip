@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/10 01:33:41 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:38 jeremy-c-reed Exp $
 
 BUILDLINK_DEPMETHOD.xf86driproto?=	build
 
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxf86driproto}
 BUILDLINK_PACKAGES+=	xf86driproto
 
 .if !empty(XF86DRIPROTO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xf86driproto+=	xf86driproto>=2.0.1
+BUILDLINK_API_DEPENDS.xf86driproto+=	xf86driproto>=2.0.1
 BUILDLINK_PKGSRCDIR.xf86driproto?=	../../wip/xf86driproto
 .endif	# XF86DRIPROTO_BUILDLINK3_MK
 

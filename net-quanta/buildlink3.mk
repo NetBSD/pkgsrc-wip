@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/02/11 17:37:42 bjan2 Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:12 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use QUANTA.
 #
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS+=	QUANTA
 
 .if !empty(QUANTA_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			QUANTA
-BUILDLINK_DEPENDS.QUANTA+=		QUANTA>=0.3
+BUILDLINK_API_DEPENDS.QUANTA+=		QUANTA>=0.3
 BUILDLINK_PKGSRCDIR.QUANTA?=		../../wip/QUANTA
 
 .endif # QUANTA_BUILDLINK3_MK

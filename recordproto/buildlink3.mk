@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/10 03:33:38 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:24 jeremy-c-reed Exp $
 
 BUILDLINK_DEPMETHOD.recordproto?=	build
 
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nrecordproto}
 BUILDLINK_PACKAGES+=	recordproto
 
 .if !empty(RECORDPROTO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.recordproto+=	recordproto>=1.13.1
+BUILDLINK_API_DEPENDS.recordproto+=	recordproto>=1.13.1
 BUILDLINK_PKGSRCDIR.recordproto?=	../../wip/recordproto
 .endif	# RECORDPROTO_BUILDLINK3_MK
 

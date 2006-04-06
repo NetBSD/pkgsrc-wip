@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/09/01 16:01:22 adrian_p Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:54 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBSPF2_BUILDLINK3_MK:=	${LIBSPF2_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibspf2}
 BUILDLINK_PACKAGES+=	libspf2
 
 .if !empty(LIBSPF2_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libspf2+=	libspf2>=1.0.4
+BUILDLINK_API_DEPENDS.libspf2+=	libspf2>=1.0.4
 BUILDLINK_PKGSRCDIR.libspf2?=	../../wip/libspf2
 BUILDLINK_FILES.libspf2+=	include/spf2/*
 BUILDLINK_FILES.libspf2+=	lib/libspf2.*

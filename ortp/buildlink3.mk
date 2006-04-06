@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/12/16 23:03:38 zul_ Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:14 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ORTP_BUILDLINK3_MK:=	${ORTP_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nortp}
 BUILDLINK_PACKAGES+=	ortp
 
 .if !empty(ORTP_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.ortp+=	ortp>=0.7.1
+BUILDLINK_API_DEPENDS.ortp+=	ortp>=0.7.1
 BUILDLINK_PKGSRCDIR.ortp?=	../../wip/ortp
 .endif	# ORTP_BUILDLINK3_MK
 

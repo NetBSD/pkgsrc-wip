@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/03/28 06:58:04 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:18:03 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MECAB_BUILDLINK3_MK:=	${MECAB_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nmecab}
 BUILDLINK_PACKAGES+=	mecab
 
 .if !empty(MECAB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.mecab+=	mecab>=0.90
+BUILDLINK_API_DEPENDS.mecab+=	mecab>=0.90
 BUILDLINK_PKGSRCDIR.mecab?=	../../wip/mecab
 .endif	# MECAB_BUILDLINK3_MK
 

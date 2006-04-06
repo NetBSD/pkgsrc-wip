@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/05/23 23:20:55 dillo Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 07:17:24 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTKGLK_BUILDLINK3_MK:=	${GTKGLK_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngtkglk}
 BUILDLINK_PACKAGES+=	gtkglk
 
 .if !empty(GTKGLK_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gtkglk+=	gtkglk>=0.2
+BUILDLINK_API_DEPENDS.gtkglk+=	gtkglk>=0.2
 BUILDLINK_PKGSRCDIR.gtkglk?=	../../wip/gtkglk
 
 BUILDLINK_TRANSFORM+=   l:glk:gtkglk

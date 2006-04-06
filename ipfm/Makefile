@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/14 01:28:00 jlamwww Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/06 07:17:25 jeremy-c-reed Exp $
 
 DISTNAME=		ipfm-0.11.5
 CATEGORIES=		net
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 EGDIR=			${PREFIX}/share/examples/ipfm
 CONF_FILES=		${EGDIR}/ipfm.conf ${PKG_SYSCONFDIR}/ipfm.conf
 
-BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.8.3
+BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.8.3
 
 post-install:
 	@${INSTALL_DATA_DIR} ${EGDIR}

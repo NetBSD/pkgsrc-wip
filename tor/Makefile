@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/03/26 16:16:20 tvierling Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/06 07:18:41 jeremy-c-reed Exp $
 #
 
 DISTNAME=		tor-0.1.1.16-rc
@@ -61,7 +61,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/tor.pkgsrc.rc ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/tor
 
-BUILDLINK_DEPENDS.libevent+= libevent>=1.1a
+BUILDLINK_API_DEPENDS.libevent+= libevent>=1.1a
 # XXX the pkgsrc libevent builtin.mk does not detect the version of a builtin
 # libevent, so we need to force use of the pkgsrc one
 USE_BUILTIN.libevent=	no

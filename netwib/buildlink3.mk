@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/05/26 20:28:01 adrian_p Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:18:13 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NETWIB_BUILDLINK3_MK:=	${NETWIB_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nnetwib}
 BUILDLINK_PACKAGES+=	netwib
 
 .if !empty(NETWIB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.netwib+=	netwib>=5.16.0
+BUILDLINK_API_DEPENDS.netwib+=	netwib>=5.16.0
 BUILDLINK_PKGSRCDIR.netwib?=	../../wip/netwib
 .endif	# NETWIB_BUILDLINK3_MK
 

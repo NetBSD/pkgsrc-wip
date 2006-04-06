@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/10 22:04:38 blef Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:02 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MINGW_BINUTILS_BUILDLINK3_MK:=	${MINGW_BINUTILS_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nmingw-binutils}
 BUILDLINK_PACKAGES+=	mingw-binutils
 
 .if !empty(MINGW_BINUTILS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.mingw-binutils+=	mingw-binutils>=2.14.90
+BUILDLINK_API_DEPENDS.mingw-binutils+=	mingw-binutils>=2.14.90
 BUILDLINK_PKGSRCDIR.mingw-binutils?=	../../wip/mingw-binutils
 .endif	# MINGW_BINUTILS_BUILDLINK3_MK
 

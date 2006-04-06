@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/03/03 14:02:28 dillo Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:22 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLKLOADER_BUILDLINK3_MK:=	${GLKLOADER_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nglkloader}
 BUILDLINK_PACKAGES+=	glkloader
 
 .if !empty(GLKLOADER_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.glkloader+=	glkloader>=0.3.2
+BUILDLINK_API_DEPENDS.glkloader+=	glkloader>=0.3.2
 BUILDLINK_PKGSRCDIR.glkloader?=	../../wip/glkloader
 
 BUILDLINK_TRANSFORM+=	l:glk:glkloader

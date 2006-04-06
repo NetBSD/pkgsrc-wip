@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/06/09 02:58:38 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:05 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 DAMAGEEXT_BUILDLINK3_MK:=	${DAMAGEEXT_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndamageext}
 BUILDLINK_PACKAGES+=	damageext
 
 .if !empty(DAMAGEEXT_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.damageext+=	damageext>=1.0
+BUILDLINK_API_DEPENDS.damageext+=	damageext>=1.0
 BUILDLINK_PKGSRCDIR.damageext?=	../../wip/damageext
 BUILDLINK_DEPMETHOD.damageext?=	build
 .endif	# DAMAGEEXT_BUILDLINK3_MK

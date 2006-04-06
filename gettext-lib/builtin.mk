@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2005/10/09 23:30:07 rillig Exp $
+# $NetBSD: builtin.mk,v 1.3 2006/04/06 07:17:20 jeremy-c-reed Exp $
 
 .if !defined(_BLNK_LIBINTL_FOUND)
 _BLNK_LIBINTL_FOUND!=	\
@@ -53,7 +53,7 @@ PREFER.gettext?=		pkgsrc
 
 .  if defined(BUILTIN_PKG.gettext)
 USE_BUILTIN.gettext=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.gettext}
+.    for _depend_ in ${BUILDLINK_API_DEPENDS.gettext}
 .      if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
 USE_BUILTIN.gettext!=	\
 	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.gettext}; then \
@@ -111,7 +111,7 @@ _BLNK_LIBINTL=		-lintl
 _GETTEXT_ICONV_DEPENDS=	gettext-lib>=0.11.5nb1
 .  if !defined(_GETTEXT_NEEDS_ICONV)
 _GETTEXT_NEEDS_ICONV?=	no
-.    for _depend_ in ${BUILDLINK_DEPENDS.gettext}
+.    for _depend_ in ${BUILDLINK_API_DEPENDS.gettext}
 .      if !empty(_GETTEXT_NEEDS_ICONV:M[nN][oO])
 _GETTEXT_NEEDS_ICONV!=	\
 	if ${PKG_INFO} -qe '${_depend_}'; then				\
@@ -135,7 +135,7 @@ BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 .      endif
 .    endfor
-BUILDLINK_DEPENDS.gettext+=	${_GETTEXT_ICONV_DEPENDS}
+BUILDLINK_API_DEPENDS.gettext+=	${_GETTEXT_ICONV_DEPENDS}
 _BLNK_LIBINTL+=			${BUILDLINK_LDADD.iconv}
 .  endif
 .endif

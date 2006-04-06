@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/11 16:09:23 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:57 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBUPNP_BUILDLINK3_MK:=	${LIBUPNP_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibupnp}
 BUILDLINK_PACKAGES+=	libupnp
 
 .if !empty(LIBUPNP_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libupnp+=		libupnp>=1.0.4
+BUILDLINK_API_DEPENDS.libupnp+=		libupnp>=1.0.4
 BUILDLINK_PKGSRCDIR.libupnp?=		../../wip/libupnp
 BUILDLINK_FILES.libupnp+=	include/upnp/*.h
 BUILDLINK_FILES.libupnp+=	include/upnp/tools/*.h

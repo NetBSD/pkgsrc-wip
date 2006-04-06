@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/10 03:50:42 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:59 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXKBFILE_BUILDLINK3_MK:=	${LIBXKBFILE_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibxkbfile}
 BUILDLINK_PACKAGES+=	libxkbfile
 
 .if !empty(LIBXKBFILE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libxkbfile+=	libxkbfile>=0.99.1
+BUILDLINK_API_DEPENDS.libxkbfile+=	libxkbfile>=0.99.1
 BUILDLINK_PKGSRCDIR.libxkbfile?=	../../wip/libxkbfile
 .endif	# LIBXKBFILE_BUILDLINK3_MK
 

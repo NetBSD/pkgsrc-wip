@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/06/12 23:51:16 kristerw Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:09 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DUMB_BUILDLINK3_MK:=	${DUMB_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndumb}
 BUILDLINK_PACKAGES+=	dumb
 
 .if !empty(DUMB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.dumb+=	dumb>=0.9.2
+BUILDLINK_API_DEPENDS.dumb+=	dumb>=0.9.2
 BUILDLINK_PKGSRCDIR.dumb?=	../../wip/dumb
 .endif	# DUMB_BUILDLINK3_MK
 

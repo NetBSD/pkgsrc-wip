@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/11/12 01:31:33 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:30 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libICE.
 #
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS+=	libICE
 
 .if !empty(LIBICE_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			libICE
-BUILDLINK_DEPENDS.libICE+=		libICE>=0.99.1
+BUILDLINK_API_DEPENDS.libICE+=		libICE>=0.99.1
 BUILDLINK_PKGSRCDIR.libICE?=		../../wip/libICE
 
 .endif # LIBICE_BUILDLINK3_MK

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/02/11 00:13:54 poppnk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:29 jeremy-c-reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.9.
 # XXX After this file has been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfusefs}
 BUILDLINK_PACKAGES+=	fusefs
 
 .if !empty(FUSEFS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.fusefs+=	fusefs>=2.5.2
+BUILDLINK_API_DEPENDS.fusefs+=	fusefs>=2.5.2
 BUILDLINK_PKGSRCDIR.fusefs?=	../../wip/fusefs
 .endif	# FUSEFS_BUILDLINK3_MK
 

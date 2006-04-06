@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2006/01/09 17:35:47 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.7 2006/04/06 07:18:41 jeremy-c-reed Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zphoto
 PKG_SUPPORTED_OPTIONS=	zip avifile wx
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-zip
 
 .if !empty(PKG_OPTIONS:Mavifile)
 .include "../../wip/avifile-devel/buildlink3.mk"
-BUILDLINK_DEPENDS.avifile-devel+=	avifile-devel>=0.7.34
+BUILDLINK_API_DEPENDS.avifile-devel+=	avifile-devel>=0.7.34
 .else
 CONFIGURE_ARGS+=	--disable-avifile
 .endif

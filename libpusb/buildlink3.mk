@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/11/24 16:06:01 imilh Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:54 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBPUSB_BUILDLINK3_MK:=	${LIBPUSB_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibpusb}
 BUILDLINK_PACKAGES+=	libpusb
 
 .if !empty(LIBPUSB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libpusb+=	libpusb>=0.1
+BUILDLINK_API_DEPENDS.libpusb+=	libpusb>=0.1
 BUILDLINK_PKGSRCDIR.libpusb?=	../../wip/libpusb
 .endif	# LIBPUSB_BUILDLINK3_MK
 

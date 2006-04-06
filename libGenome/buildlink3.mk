@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/11/19 21:49:17 daprice Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:30 jeremy-c-reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibGenome}
 BUILDLINK_PACKAGES+=	libGenome
 
 .if !empty(LIBGENOME_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libGenome+=	libGenome>=0.5.2
+BUILDLINK_API_DEPENDS.libGenome+=	libGenome>=0.5.2
 BUILDLINK_PKGSRCDIR.libGenome?=	../../wip/libGenome
 .endif	# LIBGENOME_BUILDLINK3_MK
 

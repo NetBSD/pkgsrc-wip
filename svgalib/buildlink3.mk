@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/12 02:43:56 blef Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:34 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SVGALIB_BUILDLINK3_MK:=	${SVGALIB_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsvgalib}
 BUILDLINK_PACKAGES+=	svgalib
 
 .if !empty(SVGALIB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.svgalib+=	svgalib>=1.4.2
+BUILDLINK_API_DEPENDS.svgalib+=	svgalib>=1.4.2
 BUILDLINK_PKGSRCDIR.svgalib?=	../../wip/svgalib
 .endif	# SVGALIB_BUILDLINK3_MK
 

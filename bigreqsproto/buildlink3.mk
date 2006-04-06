@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/08/07 05:36:05 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:16:58 jeremy-c-reed Exp $
 
 BUILDLINK_DEPMETHOD.bigreqsproto?=	build
 
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nbigreqsproto}
 BUILDLINK_PACKAGES+=	bigreqsproto
 
 .if !empty(BIGREQSPROTO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.bigreqsproto+=	bigreqsproto>=1.0
+BUILDLINK_API_DEPENDS.bigreqsproto+=	bigreqsproto>=1.0
 BUILDLINK_PKGSRCDIR.bigreqsproto?=	../../wip/bigreqsproto
 .endif	# BIGREQSPROTO_BUILDLINK3_MK
 

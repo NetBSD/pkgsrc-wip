@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/02 21:08:22 blef Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:18 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PHLIB_BUILDLINK3_MK:=	${PHLIB_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nphlib}
 BUILDLINK_PACKAGES+=	phlib
 
 .if !empty(PHLIB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.phlib+=	phlib>=1.20
+BUILDLINK_API_DEPENDS.phlib+=	phlib>=1.20
 BUILDLINK_PKGSRCDIR.phlib?=	../../wip/phlib
 .endif	# PHLIB_BUILDLINK3_MK
 

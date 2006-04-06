@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/11/12 01:35:13 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:31 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libSM.
 #
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS+=	libSM
 
 .if !empty(LIBSM_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			libSM
-BUILDLINK_DEPENDS.libSM+=		libSM>=0.99.2
+BUILDLINK_API_DEPENDS.libSM+=		libSM>=0.99.2
 BUILDLINK_PKGSRCDIR.libSM?=		../../wip/libSM
 
 .endif # LIBSM_BUILDLINK3_MK

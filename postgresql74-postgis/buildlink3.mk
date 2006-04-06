@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/03/23 04:12:22 mchittur Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 07:18:19 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 POSTGRESQL74_POSTGIS_BUILDLINK3_MK:=	${POSTGRESQL74_POSTGIS_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npostgresql74-postgis}
 BUILDLINK_PACKAGES+=	postgresql74-postgis
 
 .if !empty(POSTGRESQL74_POSTGIS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.postgresql74-postgis+=	postgresql74-postgis>=1.1.1
+BUILDLINK_API_DEPENDS.postgresql74-postgis+=	postgresql74-postgis>=1.1.1
 BUILDLINK_PKGSRCDIR.postgresql74-postgis?=	../../wip/postgresql74-postgis
 .endif	# POSTGRESQL74_POSTGIS_BUILDLINK3_MK
 

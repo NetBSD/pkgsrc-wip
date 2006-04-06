@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/11 19:32:25 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 07:17:57 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBUUID_BUILDLINK3_MK:=	${LIBUUID_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibuuid}
 BUILDLINK_PACKAGES+=	libuuid
 
 .if !empty(LIBUUID_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libuuid+=	libuuid>=1.36
+BUILDLINK_API_DEPENDS.libuuid+=	libuuid>=1.36
 BUILDLINK_PKGSRCDIR.libuuid?=	../../wip/libuuid
 .endif	# LIBUUID_BUILDLINK3_MK
 

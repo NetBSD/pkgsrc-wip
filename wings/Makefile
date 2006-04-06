@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/11 10:16:40 ghen Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/06 07:18:36 jeremy-c-reed Exp $
 
 DISTNAME=		wings-0.98.29b
 CATEGORIES=		graphics
@@ -32,7 +32,7 @@ do-install:
 	${INSTALL} -lsr ${LOCALBASE}/lib/erlang/lib/${PKGNAME}/wings ${LOCALBASE}/bin
 
 .include "../../lang/erlang/buildlink3.mk"
-BUILDLINK_DEPENDS.erlang+=	erlang>=10
+BUILDLINK_API_DEPENDS.erlang+=	erlang>=10
 .include "../../wip/esdl/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

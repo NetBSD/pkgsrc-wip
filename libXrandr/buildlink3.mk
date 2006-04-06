@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/03/25 01:35:04 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:18 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXrandr.
 #
@@ -12,7 +12,7 @@ BUILDLINK_DEPENDS+=	libXrandr
 
 .if !empty(LIBXRANDR_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			libXrandr
-BUILDLINK_DEPENDS.libXrandr+=		libXrandr>=0.9.0
+BUILDLINK_API_DEPENDS.libXrandr+=		libXrandr>=0.9.0
 BUILDLINK_PKGSRCDIR.libXrandr?=		../../wip/libXrandr
 
 .include "../../wip/libX11/buildlink3.mk"
