@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2218 2006/04/05 18:51:27 ghen Exp $
+# $Id: Makefile,v 1.2219 2006/04/06 13:50:18 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -589,6 +589,7 @@ SUBDIR+=	lirc
 SUBDIR+=	lives
 SUBDIR+=	lletters
 SUBDIR+=	lmarbles
+SUBDIR+=	lmtp2nntp
 SUBDIR+=	logrotate
 SUBDIR+=	lorder
 SUBDIR+=	ltrace
