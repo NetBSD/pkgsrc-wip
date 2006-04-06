@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 07:17:57 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 16:56:37 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBUPNP_BUILDLINK3_MK:=	${LIBUPNP_BUILDLINK3_MK}+
@@ -11,7 +11,6 @@ BUILDLINK_DEPENDS+=	libupnp
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibupnp}
 BUILDLINK_PACKAGES+=	libupnp
 BUILDLINK_API_DEPENDS.libupnp+=		libupnp>=1.2.1
-BUILDLINK_ABI_DEPENDS.libupnp?=		libupnp>=1.2.1
 BUILDLINK_PKGSRCDIR.libupnp?=		../../wip/libupnp12
 BUILDLINK_FILES.libupnp+=	include/libupnp/*.h
 BUILDLINK_FILES.libupnp+=	lib/libupnp.* lib/libthreadutil.* lib/libixml.*

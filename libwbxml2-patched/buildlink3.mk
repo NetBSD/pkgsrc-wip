@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:59 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 16:56:37 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBWBXML2_BUILDLINK3_MK:=	${LIBWBXML2_BUILDLINK3_MK}+
@@ -12,7 +12,6 @@ BUILDLINK_PACKAGES+=	libwbxml2
 
 .if !empty(LIBWBXML2_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libwbxml2+=	libwbxml2>=0.9.0
-BUILDLINK_ABI_DEPENDS.libwbxml2+=	libwbxml2>=0.9.0
 BUILDLINK_PKGSRCDIR.libwbxml2?=		../../wip/libwbxml2-patched
 .endif	# LIBWBXML2_BUILDLINK_MK
 

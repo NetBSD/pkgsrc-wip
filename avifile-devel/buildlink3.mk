@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:16:57 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 16:56:36 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 AVIFILE_DEVEL_BUILDLINK3_MK:=	${AVIFILE_DEVEL_BUILDLINK3_MK}+
@@ -12,7 +12,6 @@ BUILDLINK_PACKAGES+=	avifile-devel
 
 .if !empty(AVIFILE_DEVEL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.avifile-devel+=	avifile-devel>=0.7.41
-BUILDLINK_ABI_DEPENDS.avifile-devel+=	avifile-devel>=0.7.41
 BUILDLINK_PKGSRCDIR.avifile-devel?=	../../wip/avifile-devel
 .endif	# AVIFILE_DEVEL_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:19 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 16:56:37 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SCIM_BUILDLINK3_MK:=	${SCIM_BUILDLINK3_MK}+
@@ -12,7 +12,6 @@ BUILDLINK_PACKAGES+=	scim
 
 .if !empty(SCIM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.scim+=	scim>=1.4.4
-BUILDLINK_ABI_DEPENDS.scim+=	scim>=1.4.4
 BUILDLINK_PKGSRCDIR.scim?=	../../wip/scim
 .endif	# SCIM_BUILDLINK3_MK
 
