@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/10 19:33:43 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/07 20:24:35 kuli0020 Exp $
 
-DISTNAME=	DBIx-Class-0.05006
+DISTNAME=	DBIx-Class-0.06000
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
@@ -13,7 +13,7 @@ DEPENDS+=	p5-Data-Page>=2.00:../../wip/p5-Data-Page
 DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-SQL-Abstract>=1.20:../../databases/p5-SQL-Abstract
 DEPENDS+=	p5-SQL-Abstract-Limit>=0.11:../../wip/p5-SQL-Abstract-Limit
-DEPENDS+=	p5-Class-C3>=0.07:../../wip/p5-Class-C3
+DEPENDS+=	p5-Class-C3>=0.11:../../wip/p5-Class-C3
 DEPENDS+=	p5-Storable>=0:../../devel/p5-Storable
 DEPENDS+=	p5-Class-Data-Accessor>=0.01:../../wip/p5-Class-Data-Accessor
 DEPENDS+=	p5-Carp-Clan>=0:../../devel/p5-Carp-Clan
