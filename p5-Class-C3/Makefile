@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/17 05:45:49 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/07 20:14:29 kuli0020 Exp $
 
-DISTNAME=		Class-C3-0.10
+DISTNAME=		Class-C3-0.11
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Class/}
@@ -8,8 +8,12 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Class/}
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
 HOMEPAGE=		http://search.cpan.org/dist/Class-C3/
 COMMENT=		Pragma to use the C3 method resolution order algortihm
+PERL5_REQD+=    	5.8.0
 
-DEPENDS+=		p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
+BUILD_DEPENDS+= 	{perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
+DEPENDS+=		p5-Test-Exception>=0.15:../../devel/p5-Test-Exception
+DEPENDS+=		p5-Scalar-List-Utils>=1.10:../../devel/p5-Scalar-List-Utils
+DEPENDS+=		p5-Algorithm-C3>=0.01:../../wip/p5-Algorithm-C3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
