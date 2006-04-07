@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/10 21:17:53 kuli0020 Exp $
+$NetBSD: distinfo,v 1.2 2006/04/07 21:09:28 kuli0020 Exp $
 
-SHA1 (Task-Catalyst-1.60.tar.gz) = a4c9f5f2ad8efda67f3cf36761c97e9e874be108
-RMD160 (Task-Catalyst-1.60.tar.gz) = 991d36648f7cd798d7fd7e21e72abbe8559442c1
-Size (Task-Catalyst-1.60.tar.gz) = 17236 bytes
+SHA1 (Task-Catalyst-1.70.tar.gz) = 388c29091dd7bd9c37e5ab61fbe094131f14cedd
+RMD160 (Task-Catalyst-1.70.tar.gz) = af0ad6901383a2ba847be59b5a0ebcb54fe02b9f
+Size (Task-Catalyst-1.70.tar.gz) = 17295 bytes
