@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/10/09 01:20:00 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/08 22:23:27 jlamwww Exp $
 #
 
 DISTNAME=	octave-${OCTAVE_VER}
@@ -24,17 +24,12 @@ CONFLICTS+=	octave-2.0.*
 BROKEN=		Internal compiler error occurs on arm32 (even with gcc-2.95.3)
 .endif
 
-#USE_FORTRAN=		yes
-USE_TOOLS+=		gmake
 USE_GNU_READLINE=	yes
-USE_MAKEINFO=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+USE_TOOLS+=		gmake makeinfo
 GNU_CONFIGURE=		yes
 
-INFO_FILES=	octave.info liboctave.info
-LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 \
-		liboctave.info-2 liboctave.info-3
+INFO_FILES=	# PLIST
 OCTAVE_DOC=	faq/Octave-FAQ.ps interpreter/octave.ps \
 		liboctave/liboctave.ps refcard/refcard-a4.ps \
 		refcard/refcard-legal.ps  refcard/refcard-letter.ps
@@ -45,9 +40,11 @@ post-extract:
 	${FIND} ${WRKSRC}/doc -type f -name '*.info*' -exec ${RM} -f {} \;
 
 post-install:
-.for f in ${LIBOCTAVE_INFO}
-	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/${f} ${PREFIX}/info
-.endfor
+	cd ${WRKSRC}/doc/liboctave;					\
+	for f in liboctave.info liboctave.info-[0-9]*; do		\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/octave/${OCTAVE_VER}/doc
 .for f in ${OCTAVE_DOC}
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/share/octave/${OCTAVE_VER}/doc
