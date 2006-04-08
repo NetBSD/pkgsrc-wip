@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.23 2006/03/26 10:36:34 jtonio Exp $
+# $NetBSD: Makefile.common,v 1.24 2006/04/08 22:24:25 jtonio Exp $
 
-DISTNAME=     kaffe-1.1.7-rc2
+DISTNAME=     kaffe-1.1.7
 PKGNAME=      ${DISTNAME:S/-rc/rc/}
 CATEGORIES=   lang java
-MASTER_SITES= http://www.kaffe.org/~robilad/
+#MASTER_SITES= http://www.kaffe.org/~robilad/
+MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.1.x-development/
 
 MAINTAINER= tonio@NetBSD.org
 HOMEPAGE=   http://www.kaffe.org/
