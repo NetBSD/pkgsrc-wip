@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/14 01:27:58 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/08 21:44:13 jlamwww Exp $
 
 DISTNAME=		arla-0.41
 PKGREVISION=		3
@@ -9,13 +9,14 @@ MAINTAINER=		ola@mreriksson.net
 HOMEPAGE=		http://www.stacken.kth.se/project/arla/
 COMMENT=		Free AFS implementation from KTH
 
-CONFLICTS+=		openafs-[0-9]*
-CONFLICTS+=		lwp-[0-9]*
-CONFLICTS+=		rx-[0-9]*
 CONFLICTS+=		heimdal-[0-9]*
+CONFLICTS+=		lwp-[0-9]*
+CONFLICTS+=		openafs-[0-9]*
+CONFLICTS+=		rx-[0-9]*
+CONFLICTS+=		kth-krb4-[0-9]*
 
 OSVERSION_SPECIFIC=	yes
-INFO_FILES=		arla.info send-pr.info
+INFO_FILES=		# PLIST
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -26,7 +27,7 @@ GNU_CONFIGURE=		yes
 .  if exists(${BSDSRCDIR}/sys/lib/libkern/libkern.h)
 CONFIGURE_ARGS+=	--with-sys=${BSDSRCDIR}/sys
 .  else
-PKG_FAIL_REASON+=	"${PKGNAME} requires kernel sources available under \$$BSDSRCDIR/sys (or //usr/src/sys)"
+PKG_FAIL_REASON+=	"${PKGNAME} requires kernel sources available under \$$BSDSRCDIR/sys (or /usr/src/sys)"
 .  endif
 .endif
 
@@ -38,7 +39,7 @@ CONFIGURE_ARGS+=	--enable-shared=no
 # (these options must match the compile options of the kernel)
 #CONFIGURE_ENV+=	KERNEL_CPPFLAGS="-DMULTIPROCESSOR -DDEBUG -DDIAGNOSTIC"
 
-MESSAGE_SUBST+=		ARLA_CACHE=${ARLA_CACHE}
+MESSAGE_SUBST+=		ARLA_CACHE=${ARLA_CACHE:Q}
 PLIST_SUBST+=		ARLA_CACHE=${ARLA_CACHE:Q}
 FILES_SUBST+=		ARLA_CACHE=${ARLA_CACHE:Q}
 
@@ -47,8 +48,11 @@ SUBST_FILES.paths=	${WRKDIR}/lkm.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
 
-EGDIR=		${PREFIX}/share/examples/arla
+INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
+INSTALL_MAKE_FLAGS+=	lkmdir=${PREFIX:Q}/lkm
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR:Q}
 
+EGDIR=		${PREFIX}/share/examples/arla
 EGFILES=	CellServDB DynRootDB SuidCells ThisCell arla.conf
 
 .for f in ${EGFILES}
