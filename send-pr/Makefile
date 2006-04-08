@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/13 23:23:33 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/08 22:14:05 jlamwww Exp $
 
 # this should use a Makefile.common to share the DISTNAME
 GNATS_VERSION=	3.113.1
@@ -16,8 +16,8 @@ CONFLICTS+=	gnats-[0-9]*
 
 GNU_CONFIGURE=	YES
 
-USE_MAKEINFO=	YES
-INFO_FILES=	send-pr.info
+USE_TOOLS+=	makeinfo
+INFO_FILES=	# PLIST
 
 CONFIGURE_ARGS=	--with-lispdir=${PREFIX}/share/emacs/site-lisp
 

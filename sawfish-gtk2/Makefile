@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/15 16:30:51 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/08 22:14:04 jlamwww Exp $
 #
 
 DISTNAME=		sawfish-${SF_VERS}
@@ -22,11 +22,10 @@ BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-audiofile --without-esd
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake makeinfo
 USE_PKGLOCALEDIR=	yes
-USE_MAKEINFO=		YES
 
-INFO_FILES=		sawfish.info
+INFO_FILES=		# PLIST
 PLIST_SUBST+=		SF_VERS=${SF_VERS:Q}
 
 .include "../../x11/gtk2/buildlink3.mk"

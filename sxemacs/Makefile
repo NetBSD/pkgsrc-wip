@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/09 21:02:15 jlamwww Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/08 22:14:05 jlamwww Exp $
 
 DISTNAME=	sxemacs-22.1.3
 CATEGORIES=	editors
@@ -15,7 +15,7 @@ PLIST_SUBST+=	DISTNAME=${DISTNAME:Q}
 MESSAGE_SUBST+=	DISTNAME=${DISTNAME:Q}
 
 GNU_CONFIGURE=		yes
-USE_MAKEINFO=		yes
+USE_TOOLS+=		makeinfo
 INSTALL_UNSTRIPPED=	yes
 
 .include "options.mk"

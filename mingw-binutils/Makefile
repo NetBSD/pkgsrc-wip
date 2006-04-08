@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.13 2005/09/28 14:24:41 rillig Exp $
-# $Id: Makefile,v 1.13 2005/09/28 14:24:41 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/08 22:14:03 jlamwww Exp $
+# $Id: Makefile,v 1.14 2006/04/08 22:14:03 jlamwww Exp $
 
 DISTNAME=	binutils-2.15.91-20040904-1-src
 PKGNAME=	mingw-${DISTNAME:C/-200.*-src//}
@@ -15,9 +15,7 @@ USE_PKGLOCALEDIR=      	yes
 GNU_CONFIGURE=		yes
 USE_CROSSBASE=		yes
 USE_TOOLS+=		gmake
-
-INFO_FILES=		as.info bfd.info binutils.info configure.info
-INFO_FILES+=		standards.info ld.info
+INFO_FILES=		# PLIST
 
 post-install:
 .for f in windres dllwrap

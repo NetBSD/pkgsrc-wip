@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/02 01:16:04 aolcarton Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/08 22:14:07 jlamwww Exp $
 @comment ${EMACS_LISPPREFIX}/${PKGBASE}_hidden-native-gnus.tar.gz
+${EMACS_INFOPREFIX}/t-emacs-mime
+${EMACS_INFOPREFIX}/t-gnus
+${EMACS_INFOPREFIX}/t-gnus-ja
+${EMACS_INFOPREFIX}/t-message
+${EMACS_INFOPREFIX}/t-message-ja
+${EMACS_INFOPREFIX}/t-sieve
 ${EMACS_LISPPREFIX}/gnus/binhex.el
 ${EMACS_LISPPREFIX}/gnus/binhex.elc
 ${EMACS_LISPPREFIX}/gnus/canlock.el

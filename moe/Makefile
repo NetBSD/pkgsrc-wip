@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:02 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/08 22:14:03 jlamwww Exp $
 
 DISTNAME=	moe-0.5
 CATEGORIES=	editors
@@ -11,7 +11,7 @@ COMMENT=	Moe Editor - A powerful and user-friendly text editor
 
 GNU_CONFIGURE=	YES
 USE_GNU_CONFIGURE_HOST=	NO
-INFO_FILES=		moe.info
+INFO_FILES=		# PLIST
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/moe
 MAKE_ENV+=		INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
 MAKE_ENV+=		INSTALL_DATA=${INSTALL_DATA:Q}

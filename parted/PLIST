@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/12 04:38:25 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/08 22:14:04 jlamwww Exp $
 include/parted/constraint.h
 include/parted/debug.h
 include/parted/device.h
@@ -12,6 +12,7 @@ include/parted/natmath.h
 include/parted/parted.h
 include/parted/timer.h
 include/parted/unit.h
+info/parted.info
 lib/libparted.la
 man/man8/parted.8
 man/man8/partprobe.8

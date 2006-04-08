@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/27 23:53:45 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/08 22:14:00 jlamwww Exp $
 bin/bison-${PKGVERSION}
+info/bison.info

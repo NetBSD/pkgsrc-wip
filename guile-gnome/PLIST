@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/12/04 18:27:51 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/08 22:14:03 jlamwww Exp $
 bin/guile-gnome-0
 include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-generic.h
 include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-primitives.h
@@ -11,6 +11,7 @@ include/guile-gnome-0/guile-gnome-gobject/gparameter.h
 include/guile-gnome-0/guile-gnome-gobject/gsignal.h
 include/guile-gnome-0/guile-gnome-gobject/gtype.h
 include/guile-gnome-0/guile-gnome-gobject/gvalue.h
+info/guile-gnome-tutorial.info
 lib/guile-gnome-0/libgw-guile-gnome-atk.la
 lib/guile-gnome-0/libgw-guile-gnome-canvas.la
 lib/guile-gnome-0/libgw-guile-gnome-corba.la

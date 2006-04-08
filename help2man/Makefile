@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/10 14:00:13 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/08 22:14:03 jlamwww Exp $
 #
 
 DISTNAME=		help2man_1.33.1
@@ -16,6 +16,6 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 
-INFO_FILES=		help2man.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.pkg.mk"

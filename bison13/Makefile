@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2005/07/27 16:25:04 thomasklausner Exp $
-# $Id: Makefile,v 1.3 2005/07/27 16:25:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/08 22:14:00 jlamwww Exp $
+# $Id: Makefile,v 1.4 2006/04/08 22:14:00 jlamwww Exp $
 #
 
 DISTNAME=		bison-1.35
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	 --program-suffix=-1.35
 
 M4=			${LOCALBASE}/bin/gm4
 
-INFO_FILES=		bison.info
+INFO_FILES=		# PLIST
 
 TEST_TARGET=		check
 

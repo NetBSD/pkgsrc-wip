@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST.common,v 1.4 2004/09/23 05:59:38 jlamwww Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2006/04/08 22:14:02 jlamwww Exp $
 bin/envsubst
 bin/gettext
 bin/gettext.sh
 bin/ngettext
 include/autosprintf.h
+info/autosprintf.info
 lib/libasprintf.la
 man/man1/envsubst.1
 man/man1/gettext.1

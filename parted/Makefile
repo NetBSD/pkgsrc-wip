@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/12 04:38:24 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/08 22:14:04 jlamwww Exp $
 #
 
 DISTNAME=		parted-1.6.23
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.gnu.org/software/parted/parted.html
 COMMENT=		Create, destroy, resize, check, and copy partitions and file systems
 
 GNU_CONFIGURE=		yes
-INFO_FILES=		parted.info
+INFO_FILES=		# PLIST
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 

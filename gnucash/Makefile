@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/11 19:53:23 fgudin Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/08 22:14:03 jlamwww Exp $
 #
 
 DISTNAME=		gnucash-1.8.12
@@ -33,7 +33,7 @@ BUILDLINK_TRANSFORM+=  rm:-Werror
 AM_MAKEFLAGS=		LIBTOOL='${LIBTOOL} ${LIBTOOL_FLAGS}'
 MAKE_ENV+=		AM_MAKEFLAGS=${AM_MAKEFLAGS:Q}
 
-INFO_FILES=		gnucash-design.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"

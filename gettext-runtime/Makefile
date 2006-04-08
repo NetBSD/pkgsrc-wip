@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/16 23:49:59 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/08 22:14:02 jlamwww Exp $
 
 .include "Makefile.common"
 
@@ -21,7 +21,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
-INFO_FILES=		autosprintf.info
+INFO_FILES=		# PLIST.common
 
 # not tested yet
 TEST_TARGET=		check
