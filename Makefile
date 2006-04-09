@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2220 2006/04/08 23:31:05 minskim Exp $
+# $Id: Makefile,v 1.2221 2006/04/09 17:15:24 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -863,7 +863,6 @@ SUBDIR+=	p5-Module-Pluggable-Ordered
 SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-Amazon
 SUBDIR+=	p5-Net-Delicious
-SUBDIR+=	p5-Net-FTPSSL
 SUBDIR+=	p5-Net-PcapUtils
 SUBDIR+=	p5-Net-Whois-RIPE
 SUBDIR+=	p5-News-Newsrc
