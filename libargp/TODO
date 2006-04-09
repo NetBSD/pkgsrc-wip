@@ -1,1 +1,5 @@
-decide if this name of package is right
+- decide if this name of package is right
+- Add directories (include and lib) to INSTALLATION_DIRS so that they are
+ created automatically.  This is required in the pkgviews.
+- buildlink3.mk:19: Alignment of variable values should be done with tabs,
+ not spaces.
