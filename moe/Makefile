@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/08 22:14:03 jlamwww Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/09 01:00:36 jlamwww Exp $
 
 DISTNAME=	moe-0.5
 CATEGORIES=	editors
@@ -21,7 +21,7 @@ USE_LANGUAGES=	c++
 CONF_FILES=		${PREFIX}/share/examples/moe/moerc \
 			${PKG_SYSCONFDIR}/moerc
 INSTALL_TARGET=		install install-man
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 info share/examples/moe
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGINFODIR} share/examples/moe
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
