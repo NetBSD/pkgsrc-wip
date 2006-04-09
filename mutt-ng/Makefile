@@ -1,7 +1,7 @@
-# $Id: Makefile,v 1.13 2006/02/18 12:43:55 poppnk Exp $
-# $NetBSD: Makefile,v 1.13 2006/02/18 12:43:55 poppnk Exp $
+# $Id: Makefile,v 1.14 2006/04/09 18:26:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/09 18:26:15 thomasklausner Exp $
 
-DISTNAME=	muttng-20060217
+DISTNAME=	muttng-20060408
 CATEGORIES=	mail
 MASTER_SITES=	http://nion.modprobe.de/mutt-ng/snapshots/
 
@@ -12,69 +12,14 @@ COMMENT=	Fork of the well-known email client mutt
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 INSTALL_UNSTRIPPED=	yes
-USE_PERL5=		yes
 REPLACE_PERL+=		smime_keys.pl
 REPLACE_PERL+=		contrib/update-config.pl
-CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/muttng/ \
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX:Q}/share/doc/muttng/ \
 			--enable-pop --enable-imap
-AUTOCONF_REQD=		2.50
-USE_TOOLS+=		gmake autoconf automake
+AUTOCONF_REQD+=		2.50
+USE_TOOLS+=		gmake autoconf automake perl
 
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.muttng
-PKG_SUPPORTED_OPTIONS=	ssl gpgme sasl2 idn esmtp hcache gssapi debug curses
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mcurses)
-CONFIGURE_ARGS+=--with-curses
-.include "../../devel/ncurses/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=--with-slang
-.include "../../devel/libslang/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-debug
-.endif
-
-.if !empty(PKG_OPTIONS:Mgssapi)
-CONFIGURE_ARGS+=	--with-gss=${KRB5BASE:Q}
-.include "../../mk/krb5.buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-gss
-.endif
-
-.if !empty(PKG_OPTIONS:Mssl)
-CONFIGURE_ARGS+=	--with-ssl
-.include "../../security/openssl/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-ssl
-.endif
-
-.if !empty(PKG_OPTIONS:Mgpgme)
-CONFIGURE_ARGS+=	--enable-gpgme
-.include "../../security/gpgme/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Msasl2)
-CONFIGURE_ARGS+=	--with-sasl2
-.include "../../security/cyrus-sasl2/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Midn)
-CONFIGURE_ARGS+=	--with-idn
-.include "../../devel/libidn/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mesmtp)
-CONFIGURE_ARGS+=	--with-libesmtp
-.include "../../mail/libesmtp/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mhcache)
-CONFIGURE_ARGS+=	--enable-hcache --with-bdb --without-qdbm --without-gdbm
-.include "../../databases/db4/buildlink3.mk"
-.endif
+.include "options.mk"
 
 pre-configure:
 	cd ${WRKSRC}; ./autogen.sh

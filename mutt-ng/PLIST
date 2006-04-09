@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2006/02/18 12:43:55 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/09 18:26:47 thomasklausner Exp $
 bin/fleang
 bin/muttng
-bin/muttng_dotlock
 bin/muttngbug
 bin/pgpewrapng
 bin/pgpringng
@@ -36,7 +35,7 @@ share/doc/muttng/samples/Pine.rc
 share/doc/muttng/samples/Tin.rc
 share/doc/muttng/samples/ca-bundle.crt
 share/doc/muttng/samples/colors.default
-share/doc/muttng/samples/colors.${LOWER_OPSYS}
+share/doc/muttng/samples/colors.linux
 share/doc/muttng/samples/gpg.rc
 share/doc/muttng/samples/grml-muttng
 share/doc/muttng/samples/iconv/iconv.aix-3.2.5.rc
