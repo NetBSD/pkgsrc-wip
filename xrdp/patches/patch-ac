@@ -1,0 +1,34 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
+
+--- libxrdp/Makefile.orig	2005-12-10 02:35:35.000000000 +0100
++++ libxrdp/Makefile
+@@ -4,19 +4,13 @@ LIBXRDPOBJ = libxrdp.o xrdp_tcp.o xrdp_i
+              xrdp_bitmap_compress.o \
+              os_calls.o ssl_calls.o file.o
+ 
+-DESTDIR = /usr/local/xrdp
+-CFGDIR = /etc/xrdp
+-PIDDIR = /var/run
+-MANDIR = /usr/local/man
+-DOCDIR = /usr/doc/xrdp
+-
+ DEFINES = -DXRDP_CFG_FILE=\"$(CFGDIR)/xrdp.ini\" \
+           -DXRDP_KEY_FILE=\"$(CFGDIR)/rsakeys.ini\"
+ 
+ CFLAGS = -Wall -O2 -I../common -fPIC $(DEFINES)
+ C_OS_FLAGS = $(CFLAGS) -c
+ LDFLAGS = -shared
+-LIBS = -ldl
++#LIBS = -ldl
+ LIBS += -lcrypto
+ CC = gcc
+ 
+@@ -34,7 +28,7 @@ clean:
+ 	rm -f $(LIBXRDPOBJ) libxrdp.a libxrdp.so
+ 
+ install:
+-	install libxrdp.so $(DESTDIR)/libxrdp.so
++	$(BSD_INSTALL_LIB) libxrdp.so $(PREFIX)/lib
+ 
+ file.o: ../common/file.c
+ 	$(CC) $(C_OS_FLAGS) ../common/file.c

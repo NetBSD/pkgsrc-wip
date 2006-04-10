@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
+
+--- Makefile.orig	2006-02-09 19:01:40.000000000 +0100
++++ Makefile
+@@ -1,10 +1,4 @@
+ 
+-DESTDIR = /usr/local/xrdp
+-CFGDIR = /etc/xrdp
+-PIDDIR = /var/run
+-MANDIR = /usr/local/man
+-DOCDIR = /usr/doc/xrdp
+-
+ all: world
+ 
+ world: base
+@@ -46,6 +40,9 @@ install:
+ 	make -C sesman install
+ 	make -C xup install
+ 	make -C docs install
+-	if [ -d /etc/pam.d ]; then install instfiles/pam.d/sesman /etc/pam.d/sesman; fi
+-	install instfiles/xrdpstart.sh $(DESTDIR)/xrdpstart.sh
+-	install instfiles/xrdp_control.sh $(DESTDIR)/xrdp_control.sh
++	$(BSD_INSTALL_DATA) instfiles/pam.d/sesman $(PREFIX)/share/examples/pam.d
++# Those scripts are so badly written that I will be easier for user to make his own than to repair these
++# For this reason we copy them to examples directory rather than bin
++# Dear user, see /etc/rc.d for real examples =)
++#	$(BSD_INSTALL_DATA) instfiles/xrdpstart.sh $(PREFIX)/share/examples/xrdp
++#	$(BSD_INSTALL_DATA) instfiles/xrdp_control.sh $(PREFIX)/share/examples/xrdp

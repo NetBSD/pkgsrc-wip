@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
+
+--- sesman/env.c.orig	2005-11-13 23:06:49.000000000 +0100
++++ sesman/env.c
+@@ -82,7 +82,7 @@ env_set_user(char* username, char* passw
+     {
+       g_clearenv();
+       g_setenv("SHELL", pw_shell, 1);
+-      g_setenv("PATH", "/bin:/usr/bin:/usr/X11R6/bin:/usr/local/bin", 1);
++      g_setenv("PATH", "/bin:/usr/bin:/usr/X11R6/bin:/usr/pkg/bin:/usr/local/bin", 1);
+       g_setenv("USER", username, 1);
+       g_sprintf(text, "%d", uid);
+       g_setenv("UID", text, 1);

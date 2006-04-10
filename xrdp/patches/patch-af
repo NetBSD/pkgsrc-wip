@@ -1,0 +1,31 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
+
+--- vnc/Makefile.orig	2005-12-10 02:40:09.000000000 +0100
++++ vnc/Makefile
+@@ -1,18 +1,12 @@
+ # libvnc makefile
+ VNCOBJ = vnc.o os_calls.o d3des.o
+ 
+-DESTDIR = /usr/local/xrdp
+-CFGDIR = /etc/xrdp
+-PIDDIR = /var/run
+-MANDIR = /usr/local/man
+-DOCDIR = /usr/doc/xrdp
+-
+ DEFINES =
+ 
+ CFLAGS = -Wall -O2 -I../common -fPIC $(DEFINES)
+ C_OS_FLAGS = $(CFLAGS) -c
+ LDFLAGS = -shared
+-LIBS = -ldl
++#LIBS = -ldl
+ CC = gcc
+ 
+ all: vnc
+@@ -30,5 +24,5 @@ d3des.o: ../common/d3des.c
+ 	$(CC) $(C_OS_FLAGS) ../common/d3des.c
+ 
+ install:
+-	install libvnc.so $(DESTDIR)/libvnc.so
++	$(BSD_INSTALL_LIB) libvnc.so $(PREFIX)/lib
+ 

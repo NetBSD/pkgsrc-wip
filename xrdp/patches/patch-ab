@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
+
+--- docs/Makefile.orig	2006-02-04 19:51:05.000000000 +0100
++++ docs/Makefile
+@@ -1,10 +1,4 @@
+ 
+-DESTDIR = /usr/local/xrdp
+-CFGDIR = /etc/xrdp
+-PIDDIR = /var/run
+-MANDIR = /usr/local/man
+-DOCDIR = /usr/doc/xrdp
+-
+ all: world
+ 
+ world:

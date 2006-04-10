@@ -1,0 +1,55 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
+
+--- sesman/Makefile.orig	2006-02-09 19:01:41.000000000 +0100
++++ sesman/Makefile
+@@ -5,12 +5,6 @@ SESMANOBJ = sesman.o config.o tcp.o sig.
+ SESRUNOBJ = sesrun.o config.o tcp.o \
+             os_calls.o d3des.o list.o file.o log.o
+ 
+-DESTDIR = /usr/local/xrdp
+-CFGDIR = /etc/xrdp
+-PIDDIR = /var/run
+-MANDIR = /usr/local/man
+-DOCDIR = /usr/doc/xrdp
+-
+ DEFINES = -DSESMAN_CFG_FILE=\"$(CFGDIR)/sesman.ini\" \
+           -DSESMAN_PID_FILE=\"$(PIDDIR)/sesman.pid\"
+ 
+@@ -27,28 +21,28 @@ nopam: no-pam tools
+ kerberos: kerberos-base tools
+ 
+ no-pam: $(SESMANOBJ) verify_user.o
+-	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user.o -ldl -lcrypt
++	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user.o -lcrypt
+ 
+ pam: $(SESMANOBJ) verify_user_pam.o
+-	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user_pam.o -ldl -lpam
++	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user_pam.o -lpam
+ 
+ pam_userpass: $(SESMANOBJ) verify_user_pam_userpass.o
+-	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user_pam_userpass.o -ldl -lpam -lpam_userpass
++	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user_pam_userpass.o -lpam -lpam_userpass
+ 
+ kerberos-base: $(SESMANOBJ) verify_user_kerberos.o
+-	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user_kerberos.o -ldl -lkrb5
++	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user_kerberos.o -lkrb5
+ 
+ tools: $(SESRUNOBJ)
+-	$(CC) $(LDFLAGS) -o sesrun $(SESRUNOBJ) -ldl
++	$(CC) $(LDFLAGS) -o sesrun $(SESRUNOBJ)
+ 
+ clean:
+ 	rm -f $(SESMANOBJ) verify_user.o verify_user_pam.o verify_user_pam_userpass.o sesman sesrun.o sesrun
+ 
+ install:
+-	install sesman $(DESTDIR)/sesman
+-	install sesrun $(DESTDIR)/sesrun
+-	install startwm.sh $(DESTDIR)/startwm.sh
+-	install sesman.ini $(CFGDIR)/sesman.ini
++	$(BSD_INSTALL_PROGRAM) sesman $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) sesrun $(PREFIX)/bin
++	$(BSD_INSTALL_SCRIPT) startwm.sh $(PREFIX)/bin
++	$(BSD_INSTALL_DATA) sesman.ini $(PREFIX)/share/examples/xrdp
+ 
+ os_calls.o: ../common/os_calls.c
+ 	$(CC) $(C_OS_FLAGS) ../common/os_calls.c

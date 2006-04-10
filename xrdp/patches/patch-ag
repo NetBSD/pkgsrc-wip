@@ -1,0 +1,55 @@
+$NetBSD: patch-ag,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
+
+--- xrdp/Makefile.orig	2005-12-10 02:42:19.000000000 +0100
++++ xrdp/Makefile
+@@ -5,11 +5,11 @@ XRDPOBJ = xrdp.o xrdp_process.o xrdp_lis
+           xrdp_login_wnd.o xrdp_interface.o \
+           list.o file.o os_calls.o thread_calls.o
+ 
+-DESTDIR = /usr/local/xrdp
+-CFGDIR = /etc/xrdp
++DESTDIR = $(PREFIX)
++CFGDIR = $(PREFIX)/etc/xrdp
+ PIDDIR = /var/run
+-MANDIR = /usr/local/man
+-DOCDIR = /usr/doc/xrdp
++MANDIR = $(PREFIX)/man
++DOCDIR = $(PREFIX)/share/doc/xrdp
+ 
+ DEFINES = -DXRDP_CFG_FILE=\"$(CFGDIR)/xrdp.ini\" \
+           -DXRDP_PID_FILE=\"$(PIDDIR)/xrdp.pid\"
+@@ -17,8 +17,9 @@ DEFINES = -DXRDP_CFG_FILE=\"$(CFGDIR)/xr
+ CFLAGS = -Wall -O2 -I../common -I../libxrdp $(DEFINES)
+ #CFLAGS += -DXRDP_DEBUG
+ C_OS_FLAGS = $(CFLAGS) -c
+-LDFLAGS = -L/usr/gnu/lib -L../libxrdp -Wl,-rpath,.
+-LIBS = -ldl -lpthread -lxrdp
++LDFLAGS = -L../libxrdp -Wl,-rpath,. -Wl,-R$(PREFIX)/lib
++#LIBS = -ldl -lpthread -lxrdp
++LIBS = -lpthread -lxrdp
+ CC = gcc
+ 
+ all: xrdp
+@@ -31,14 +32,14 @@ clean:
+ 	rm -f $(XRDPOBJ) xrdp
+ 
+ install:
+-	install ad256.bmp $(DESTDIR)/ad256.bmp
+-	install xrdp256.bmp $(DESTDIR)/xrdp256.bmp
+-	install cursor0.cur $(DESTDIR)/cursor0.cur
+-	install cursor1.cur $(DESTDIR)/cursor1.cur
+-	install Tahoma-10.fv1 $(DESTDIR)/Tahoma-10.fv1
+-	install xrdp.ini $(CFGDIR)/xrdp.ini
+-	install rsakeys.ini $(CFGDIR)/rsakeys.ini
+-	install xrdp $(DESTDIR)/xrdp
++	$(BSD_INSTALL_DATA) ad256.bmp $(PREFIX)/share/xrdp
++	$(BSD_INSTALL_DATA) xrdp256.bmp $(PREFIX)/share/xrdp
++	$(BSD_INSTALL_DATA) cursor0.cur $(PREFIX)/share/xrdp
++	$(BSD_INSTALL_DATA) cursor1.cur $(PREFIX)/share/xrdp
++	$(BSD_INSTALL_DATA) Tahoma-10.fv1 $(PREFIX)/share/xrdp
++	$(BSD_INSTALL_DATA) xrdp.ini $(PREFIX)/share/examples/xrdp
++	$(BSD_INSTALL_DATA) rsakeys.ini $(PREFIX)/share/examples/xrdp
++	$(BSD_INSTALL_PROGRAM) xrdp $(PREFIX)/bin
+ 
+ list.o: ../common/list.c
+ 	$(CC) $(C_OS_FLAGS) ../common/list.c

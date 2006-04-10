@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
+bin/sesman
+bin/sesrun
+bin/startwm.sh
+bin/xrdp
+lib/librdp.so
+lib/libvnc.so
+lib/libxrdp.so
+lib/libxup.so
+share/examples/pam.d/sesman
+share/examples/xrdp/rsakeys.ini
+share/examples/xrdp/sesman.ini
+share/examples/xrdp/xrdp.ini
+share/xrdp/Tahoma-10.fv1
+share/xrdp/ad256.bmp
+share/xrdp/cursor0.cur
+share/xrdp/cursor1.cur
+share/xrdp/xrdp256.bmp
+@dirrm share/xrdp
+@dirrm share/examples/xrdp
+@dirrm share/examples/pam.d
+@exec ${MKDIR} %D/share/doc/xrdp
+@dirrm share/doc/xrdp
+@dirrm etc/xrdp
