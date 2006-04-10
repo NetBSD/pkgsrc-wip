@@ -3,7 +3,7 @@
 # APST-GET : Yet Another PkgSrc Tool to manage packages.
 #
 # AUTHOR: pancake < pancake@phreaker.net >
-# DATE: 2005/03/01
+# DATE: 2006/04/10
 #
 # depends: pkg_find, pkg_tarup, awk, pkglint, pkg_chk
 #
@@ -28,13 +28,14 @@ fi
 # PREFERED=""         # space-separated list of prefered packages (for dup)
 
 #----->8--------------#
-VERSION=20050301
+VERSION=20060410
 MAKEFLAG="PKG_RESUME_TRANSFERS=YES" # make this as default
 PREFIX=_pfx_
 MAKE=_makebin_
 PKGFIND=${PREFIX}/bin/pkgfind
 PKGCHK=${PREFIX}/sbin/pkg_chk
 PKGSRC_DIR=_psd_
+PKG_DBDIR=_dbd_
 DEFAULT_TARGETS="${DEFAULT_TARGETS}"
 CVS_RSH=ssh
 
@@ -101,6 +102,7 @@ do_usage() {
 	echo "  install      - install/update selected packages."
 	echo "  upgrade      - update the selected packages and solves dependencies."
 	echo "  dist-upgrade - update the entire system."
+	echo "  whereis      - returns the package containing a file."
 	echo "  remove       - remove the selected packages."
 	echo "  update       - update the pkgsrc/-wip tree."
 	echo "  relink       - try to solve all broken libs."
@@ -594,6 +596,21 @@ do_clean() {
 
 }
 
+do_whereis() {
+	keyword=$1
+
+	cd ${PKG_DBDIR}
+	for A in * ; do 
+		for B in `pkg_info -L $A 2>/dev/null`; do
+			case $B in
+			*${keyword}*)
+				echo $A : $B
+				;;
+			esac
+		done
+	done
+}
+
 # Main procedure
 
 case "$1" in
@@ -611,11 +628,18 @@ case "$1" in
 	fi
 	while : ; do
 		do_install $2 ${FLAG}
-		shift;
+		shift
 		if [ "$2" = "" ]; then
 		break;
 		fi
 	done
+	;;
+"whereis")
+	if [ -z "${2}" ]; then
+		echo "You must give me something to find"
+		exit 1
+	fi
+	do_whereis ${2}
 	;;
 "remove")
 	if [ "${2}" = "" ]; then

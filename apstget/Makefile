@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2005/04/11 21:09:48 tvierling Exp $
+# $NetBSD: Makefile,v 1.30 2006/04/10 14:08:25 poppnk Exp $
 
-DISTNAME=	apstget-20050302
+DISTNAME=	apstget-20060410
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -39,6 +39,7 @@ SUBST_FILES.etc=	apst-get apstget-wrapper
 SUBST_SED.etc+=		-e "s,_etc_,${PKG_SYSCONFDIR},g" \
 			-e "s,_pfx_,${PREFIX},g" \
 			-e "s,_psd_,${PKGSRCDIR},g" \
+			-e "s,_dbd_,${PKG_DBDIR},g" \
 			-e "s,_makebin_,${MAKE},g"
 
 .include "../../mk/bsd.pkg.mk"
