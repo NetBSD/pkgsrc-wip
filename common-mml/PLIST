@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 20:22:07 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/11 17:53:43 minskim Exp $
 include/common-mml/acconfig.h
 include/common-mml/addrinfo.h
 include/common-mml/addrsize.h
@@ -36,11 +36,11 @@ include/common-mml/util.h
 include/common-mml/version.h
 include/common-mml/vsnprintf.h
 lib/libuclmmbase.a
-share/doc/html/common-mml/book1.html
-share/doc/html/common-mml/uclmmbase-hmac.html
-share/doc/html/common-mml/uclmmbase-md5.html
-share/doc/html/common-mml/uclmmbase-net-udp.html
-share/doc/html/common-mml/uclmmbase-rtp.html
-share/doc/html/common-mml/uclmmbase.html
-@dirrm share/doc/html/common-mml
+share/doc/common-mml/book1.html
+share/doc/common-mml/uclmmbase-hmac.html
+share/doc/common-mml/uclmmbase-md5.html
+share/doc/common-mml/uclmmbase-net-udp.html
+share/doc/common-mml/uclmmbase-rtp.html
+share/doc/common-mml/uclmmbase.html
+@dirrm share/doc/common-mml
 @dirrm include/common-mml

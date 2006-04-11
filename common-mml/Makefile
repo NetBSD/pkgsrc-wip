@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:10:46 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/11 17:53:43 minskim Exp $
 
 DISTNAME=		common-${VERSION}
 PKGNAME=		common-mml-${VERSION}
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
 INCDIR=			${PREFIX}/include/common-mml
-DOCDIR=			${PREFIX}/share/doc/html/common-mml
+DOCDIR=			${PREFIX}/share/doc/common-mml
 
 do-install:
 	${INSTALL_DATA_DIR} ${INCDIR} ${DOCDIR}
