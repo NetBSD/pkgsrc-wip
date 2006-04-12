@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:31 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 20:37:25 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXcursor.
 #
@@ -20,7 +20,7 @@ BUILDLINK_PKGSRCDIR.libXcursor?=		../../wip/libXcursor
 .include "../../wip/xproto/buildlink3.mk"
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXrender/buildlink3.mk"
-.include "../../x11/Xfixes/buildlink3.mk"
+.include "../../wip/libXfixes/buildlink3.mk"
 
 .endif # LIBXCURSOR_BUILDLINK3_MK
 
