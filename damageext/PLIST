@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 01:30:55 xtraeme Exp $
-include/X11/extensions/damageproto.h
-include/X11/extensions/damagewire.h
-lib/pkgconfig/damageext.pc
-share/doc/damageext/protocol
-@dirrm share/doc/damageext

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2224 2006/04/12 22:18:15 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.2225 2006/04/12 22:23:23 jeremy-c-reed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -156,7 +156,6 @@ SUBDIR+=	cvsd
 SUBDIR+=	cvsproxy
 SUBDIR+=	cvsutils
 SUBDIR+=	d4x
-SUBDIR+=	damageext
 SUBDIR+=	damageproto
 SUBDIR+=	dansguardian
 SUBDIR+=	daphne
