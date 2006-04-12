@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/08 16:49:23 jsonn Exp $
-include/aura/buffer.h
-include/aura/dict.h
-include/aura/fspred.h
-include/aura/mem.h
-include/aura/popen.h
-lib/libaura.la

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2222 2006/04/11 18:41:57 minskim Exp $
+# $Id: Makefile,v 1.2223 2006/04/12 17:57:33 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -171,9 +171,6 @@ SUBDIR+=	debian_gtk
 SUBDIR+=	debian_x11
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
-SUBDIR+=	dfuibe_installer
-SUBDIR+=	dfuife_cgi
-SUBDIR+=	dfuife_curses
 SUBDIR+=	di
 SUBDIR+=	dia2code
 SUBDIR+=	dicom3tools
@@ -514,10 +511,8 @@ SUBDIR+=	libXt
 SUBDIR+=	libXv
 SUBDIR+=	libargp
 SUBDIR+=	libassa
-SUBDIR+=	libaura
 SUBDIR+=	libavc1394
 SUBDIR+=	libbtctl
-SUBDIR+=	libdfui
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdrm
@@ -531,7 +526,6 @@ SUBDIR+=	libgrass5
 SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libhttpd
-SUBDIR+=	libinstaller
 SUBDIR+=	liblingoteach
 SUBDIR+=	libmusclecard
 SUBDIR+=	libneural
