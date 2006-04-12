@@ -1,2 +1,2 @@
-The Xv library extension is part of the freedesktop.org X Libraries
-and Protocol Headers Project.
+This package provides the X Window System video extension from
+the modular X.org project.
