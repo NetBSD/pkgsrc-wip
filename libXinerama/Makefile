@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2005/09/07 16:24:56 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/12 21:03:57 jeremy-c-reed Exp $
 
-DISTNAME=	libXinerama-1.0.2
+DISTNAME=	libXinerama-1.0.1
 CATEGORIES=	x11
-MASTER_SITES=	http://xlibs.freedesktop.org/release/
+MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://xlibs.freedesktop.org/
+HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	X PanoramiX extension library
 
 CONFLICTS+=	XFree86-libs-[0-9]*
@@ -21,7 +21,7 @@ PKGCONFIG_OVERRIDE+=	xinerama.pc.in
 
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXext/buildlink3.mk"
-.include "../../wip/panoramixext/buildlink3.mk"
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../wip/xextproto/buildlink3.mk"
+.include "../../wip/xineramaproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
