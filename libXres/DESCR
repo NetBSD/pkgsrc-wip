@@ -1,5 +1,5 @@
-This package contains the Xresources extension (X Resource usage)
-library.
+This package contains the X Resource Information Extension Library
+from the modular X.org project.
 
-This is part of the X Libraries and Protocol Headers Project at
-freedesktop.org.
+X-Resource is an extension that allows a client to query the X
+server about its usage of various resources.
