@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/09/28 06:41:25 rillig Exp $
+$NetBSD: distinfo,v 1.5 2006/04/12 23:35:32 jeremy-c-reed Exp $
 
-SHA1 (libXv-2.2.1.tar.bz2) = 9051dd98b0fdd68b24b0481ad91b7c9a7202d868
-RMD160 (libXv-2.2.1.tar.bz2) = 178426f89bbd83b9c085aae819752dd0f09e84b4
-Size (libXv-2.2.1.tar.bz2) = 196925 bytes
+SHA1 (libXv-1.0.1.tar.bz2) = a6d8a383e623f0885513f65cb480d709b1a704e1
+RMD160 (libXv-1.0.1.tar.bz2) = 3be4fb5fd2df9d043f782c349c5ab9f437657def
+Size (libXv-1.0.1.tar.bz2) = 224505 bytes
