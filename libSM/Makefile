@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/11/12 01:35:13 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/12 20:51:16 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libSM-0.99.2
@@ -7,7 +7,7 @@ MASTER_SITES=		http://xorg.freedesktop.org/releases/X11R7.0-RC2/lib/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://xlibs.freedesktop.org/
+HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Session Management Library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
