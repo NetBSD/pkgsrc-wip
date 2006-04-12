@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 07:17:31 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 20:44:19 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libX11.
 
@@ -20,9 +20,13 @@ BUILDLINK_PKGSRCDIR.libX11?=		../../wip/libX11
 .include "../../mk/pthread.buildlink3.mk"
 LIBS+=		${BUILDLINK_LDADD.pthread}
 
+# as listed in x11.pc pkgconfig file
 .include "../../wip/xproto/buildlink3.mk"
+.include "../../wip/kbproto/buildlink3.mk"
+.include "../../wip/inputproto/buildlink3.mk"
+.include "../../wip/libXau/buildlink3.mk"
+.include "../../wip/libXdmcp/buildlink3.mk"
+
 #.include "../../wip/xtrans/buildlink3.mk"
-#.include "../../wip/libXau/buildlink3.mk"
-#.include "../../wip/libXdmcp/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
