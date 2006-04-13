@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/13 18:18:13 jlamwww Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/13 19:26:30 jlamwww Exp $
 #
 
 DISTNAME=	easytag-1.99.12
@@ -12,8 +12,7 @@ COMMENT=	GTK2 Tag editor for MP3, Ogg Vorbis files, and others
 
 GNU_CONFIGURE=          yes
 USE_DIRS+=              xdg-1.1
-USE_TOOLS+=		pkg-config
-USE_TOOLS+=		msgfmt	# xgettext, really
+USE_TOOLS+=		pkg-config xgettext
 USE_PKGLOCALEDIR=       yes
 USE_LIBTOOL=            yes
 
