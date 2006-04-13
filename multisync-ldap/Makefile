@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/23 22:58:27 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/13 21:33:47 thomasklausner Exp $
 #
 
 PKGNAME=		multisync-ldap-0.82
@@ -32,5 +32,5 @@ do-install:
 
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../databases/openldap/buildlink3.mk"
-.include "../../security/cyrus-sasl2/buildlink3.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../wip/multisync/Makefile.common"

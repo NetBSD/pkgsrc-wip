@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2006/04/09 18:26:47 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.2 2006/04/13 21:33:47 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.muttng
 PKG_SUPPORTED_OPTIONS=	ssl gpgme sasl2 idn esmtp hcache gssapi debug curses
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--enable-gpgme
 
 .if !empty(PKG_OPTIONS:Msasl2)
 CONFIGURE_ARGS+=	--with-sasl2
-.include "../../security/cyrus-sasl2/buildlink3.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Midn)

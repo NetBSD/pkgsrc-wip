@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2005/11/16 23:07:30 adrian_p Exp $
+# $NetBSD: options.mk,v 1.7 2006/04/13 21:33:47 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmailX
 PKG_SUPPORTED_OPTIONS=	tls sasl pmilter
@@ -21,7 +21,7 @@ CONFIGURE_ENV+=		ac_cv_header_openssl_ssl_h=no
 ### Use SASLv2 for SMTP AUTH
 ###
 .if !empty(PKG_OPTIONS:Msasl)
-.	include "../../security/cyrus-sasl2/buildlink3.mk"
+.	include "../../security/cyrus-sasl/buildlink3.mk"
 CONFIGURE_ARGS+=	-enable-SASL
 CFLAGS+=		-DSM_USE_SASL
 .else
