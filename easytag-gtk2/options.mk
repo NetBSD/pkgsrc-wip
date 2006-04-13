@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2005/09/06 12:56:13 leonardschmidt Exp $
+# $NetBSD: options.mk,v 1.2 2006/04/13 17:27:34 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.easytag-gtk2
-PKG_SUPPORTED_OPTIONS=	flac ogg
-PKG_SUGGESTED_OPTIONS=	flac ogg
+PKG_SUPPORTED_OPTIONS=	flac mpeg4ip ogg
+PKG_SUGGESTED_OPTIONS=	flac mpeg4ip ogg
 
 .include "../../mk/bsd.options.mk"
 
@@ -12,6 +12,12 @@ PKG_SUGGESTED_OPTIONS=	flac ogg
 CONFIGURE_ARGS+=	--enable-flac
 .else
 CONFIGURE_ARGS+=	--disable-flac
+.endif
+
+.if !empty(PKG_OPTIONS:Mmpeg4ip)
+.include "../../multimedia/mpeg4ip/buildlink3.mk"
+# for mpeg4ip.h
+CPPFLAGS+=		-DHAVE_GTK
 .endif
 
 .if !empty(PKG_OPTIONS:Mogg)
