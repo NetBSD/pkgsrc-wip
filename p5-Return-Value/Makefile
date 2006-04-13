@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/29 19:53:02 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/13 16:58:20 kuli0020 Exp $
 
-DISTNAME=		Return-Value-1.28
+DISTNAME=		Return-Value-1.30
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../by-authors/id/R/RJ/RJBS/}
@@ -9,7 +9,7 @@ MAINTAINER=		kuli0020@umn.edu
 HOMEPAGE=		http://search.cpan.org/dist/Return-Value/
 COMMENT=		Polymorphic Return Values
 
-DEPENDS+=	       {perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
+DEPENDS+=		{perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Return/Value/.packlist

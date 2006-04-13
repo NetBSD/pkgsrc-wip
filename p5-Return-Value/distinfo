@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/29 19:53:02 kuli0020 Exp $
+$NetBSD: distinfo,v 1.2 2006/04/13 16:58:20 kuli0020 Exp $
 
-SHA1 (Return-Value-1.28.tar.gz) = 9210166cae0821bad1a56f163a5324dfaea3bfcf
-RMD160 (Return-Value-1.28.tar.gz) = 1bc2fd1e2fb071ae814b0ef2e02c66c159056eee
-Size (Return-Value-1.28.tar.gz) = 6476 bytes
+SHA1 (Return-Value-1.30.tar.gz) = ddbcd7b14f291133d51829d74e9eb80d7797e730
+RMD160 (Return-Value-1.30.tar.gz) = ca08978f24e82010c77cacb644a0e8695a62fb13
+Size (Return-Value-1.30.tar.gz) = 6576 bytes
