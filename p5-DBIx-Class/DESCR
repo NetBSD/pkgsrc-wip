@@ -9,5 +9,3 @@ supported; however, if we can without compromising the improvements
 we're trying to make, we will, and any non-compatible changes will merit
 a full justification on the mailing list and a CPAN developer release
 for people to test against.
-
-WWW: http://search.cpan.org/dist/DBIx-Class/
