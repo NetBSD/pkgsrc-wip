@@ -11,5 +11,3 @@ between complex, informational errors and successful return values.
 
 This module provides these features with a simple API that should get you what
 you're looking for in each contex a return value is used in.
-
-WWW: http://search.cpan.org/dist/Return-Value/
