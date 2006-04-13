@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/08/11 10:08:23 absd Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/13 18:18:15 jlamwww Exp $
 #
 
 DISTNAME=		metatheme-0.9.7
@@ -10,10 +10,9 @@ MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Themes for GNOME 2
 
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
-BUILD_USES_MSGFMT=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 

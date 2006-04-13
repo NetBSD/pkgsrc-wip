@@ -10,11 +10,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://kxmleditor.sourceforge.net/
 COMMENT=	KDE xml editor
 
-BUILD_USES_MSGFMT=	yes
-
 WRKSRC=			${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool
 

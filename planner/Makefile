@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/19 14:03:23 ondratu Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/13 18:18:15 jlamwww Exp $
 #
 
 DISTNAME=	planner-0.13
@@ -13,10 +13,9 @@ HOMEPAGE=	http://www.imendio.com/projects/planner/
 COMMENT=	GTK2 project management tool
 
 BUILD_DEPENDS=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
-BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 #USE_TOOLS+=		autoconf
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

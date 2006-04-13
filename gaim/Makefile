@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/01 09:24:21 matthewluckie Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/13 18:18:14 jlamwww Exp $
 
 DISTNAME=	gaim-2.0.0beta2
 CATEGORIES=	chat x11
@@ -9,12 +9,10 @@ MAINTAINER=	mjl@luckie.org.nz
 HOMEPAGE=	http://gaim.sourceforge.net/
 COMMENT=	GTK+ 2.x based multi-protocol instant messaging client
 
-BUILD_USES_MSGFMT=	yes
-
 CONFLICTS+=		gaim-gnome-[0-9]*
 
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

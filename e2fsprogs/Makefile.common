@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.12 2006/04/08 22:14:02 jlamwww Exp $
-# $Id: Makefile.common,v 1.12 2006/04/08 22:14:02 jlamwww Exp $
+# $NetBSD: Makefile.common,v 1.13 2006/04/13 18:18:13 jlamwww Exp $
+# $Id: Makefile.common,v 1.13 2006/04/13 18:18:13 jlamwww Exp $
 #
 
 # XXX When changing, be sure to run "make makesum" in libuuid directory too.
@@ -8,9 +8,8 @@ E2FSPROGS_DISTNAME=	e2fsprogs-${E2FSPROGS_VERSION}
 E2FSPROGS_MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/} \
 			ftp://ftp.gwdg.de/pub/linux/mirrors/tsx-11/packages/ext2fs/
 
-BUILD_USES_MSGFMT=      YES
 GNU_CONFIGURE=          YES
-USE_TOOLS+=		gmake makeinfo
+USE_TOOLS+=		gmake makeinfo msgfmt
 USE_PKGLOCALEDIR=       YES
 
 CONFIGURE_ENV+=         ac_cv_path_MSGFMT=${LOCALBASE}/bin/msgfmt

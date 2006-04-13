@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/03 14:39:12 rxg Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/13 18:18:15 jlamwww Exp $
 #
 
 DISTNAME=		scim-canna-0.1.3
@@ -9,11 +9,9 @@ MAINTAINER=		rxg@NetBSD.org
 HOMEPAGE=		http://scim-imengine.sourceforge.jp/
 COMMENT=		SCIM IMEngine module for Canna
 
-BUILD_USES_MSGFMT=	yes
-
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		msgfmt pkg-config
 GNU_CONFIGURE=		yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/08 15:47:00 dillo Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/13 18:18:14 jlamwww Exp $
 #
 
 DISTNAME=		kvirc-3.0.0-beta2
@@ -11,9 +11,7 @@ MAINTAINER=		siflfran@hawo.stw.uni-erlangen.de
 HOMEPAGE=		http://www.kvirc.net/
 COMMENT=		QT based irc client
 
-BUILD_USES_MSGFMT=	yes
-
-USE_TOOLS+=		gmake automake
+USE_TOOLS+=		automake gmake msgfmt
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

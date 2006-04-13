@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 22:27:45 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/13 18:18:14 jlamwww Exp $
 #
 
 DISTNAME=	GNUnet-0.6.4a
@@ -11,9 +11,7 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.ovmj.org/GNUnet/
 COMMENT=	Framework for secure p2p networking
 
-BUILD_USES_MSGFMT=	yes
-
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 PLIST_SRC=		${WRKDIR}/PLIST.src
 USE_LIBTOOL=		yes

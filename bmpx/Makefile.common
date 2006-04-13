@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2006/04/06 07:17:02 jeremy-c-reed Exp $
+# $NetBSD: Makefile.common,v 1.23 2006/04/13 18:18:13 jlamwww Exp $
 #
 
 DISTNAME=	bmpx-0.12.9
@@ -14,11 +14,9 @@ DISTINFO_FILE=	${.CURDIR}/../../wip/bmpx/distinfo
 PATCHDIR=	${.CURDIR}/../../wip/bmpx/patches
 PLIST_SRC=	${.CURDIR}/../../wip/bmpx/PLIST
 
-BUILD_USES_MSGFMT=	yes
-
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.2
-USE_TOOLS+=		bison gmake pkg-config
+USE_TOOLS+=		bison gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
