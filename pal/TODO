@@ -1,0 +1,13 @@
+Build error on Darwin 8.6.0:
+
+gcc -O2 -Wall -I/Users/minskim/pkg/include `pkg-config --cflags glib-2.0` -DVERSION=\"0.3.4\" -DPREFIX=\"/Users/minskim/pkg\" main.o colorize.o output.o input.o event.o rl.o html.o latex.o add.o edit.o del.o remind.o search.o  `pkg-config --libs glib-2.0` -lreadline -lncurses -o pal
+/usr/bin/ld: Undefined symbols:
+_libintl_bind_textdomain_codeset
+_libintl_gettext
+_libintl_textdomain
+collect2: ld returned 1 exit status
+make: *** [pal] Error 1
+*** Error code 2
+
+Stop.
+bmake: stopped in /Users/minskim/pkgsrc/wip/pal
