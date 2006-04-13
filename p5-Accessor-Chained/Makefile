@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/26 03:14:33 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/13 15:01:43 kuli0020 Exp $
 
 DISTNAME=	Class-Accessor-Chained-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -9,9 +9,10 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Class-Accessor-Chained
 COMMENT=	Make chained accessors
 
-BUILD_DEPENDS=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
+DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
+BUILD_DEPENDS+=	{perl>=5.7.3,p5-Test-Simple>=0}:../../devel/p5-Test-Simple
 
-PERL_MODBUILD=	yes
+PERL5_MODULE_TYPE=      Module::Build
 
 PERL5_PACKLIST= auto/Class/Accessor/Chained/.packlist
 
