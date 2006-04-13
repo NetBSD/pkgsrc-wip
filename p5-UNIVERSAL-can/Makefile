@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/13 20:52:51 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/13 21:36:04 kuli0020 Exp $
 
 DISTNAME=	UNIVERSAL-can-1.12
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Hack around people calling UNIVERSAL::can() as a function
 PERL5_REQD+=	5.6.0
 
 DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
-BUILD_DEPENDS+=	{perl>=5.7.3,p5-Test-Simple>=0.60}:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	p5-Test-Simple>=0.60:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST= auto/UNIVERSAL/can/.packlist
 
