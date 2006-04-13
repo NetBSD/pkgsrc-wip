@@ -3,6 +3,3 @@
 or `'C:\Windows\Foo.txt'') in a cross-platform manner. It supports pretty much
 every platform Perl runs on, including Unix, Windows, Mac, VMS, Epoc, Cygwin,
 OS/2, and NetWare.
-
-Author:	Ken Williams <KWILLIAMS@cpan.org>
-WWW:	http://search.cpan.org/~kwilliams/Path-Class/
