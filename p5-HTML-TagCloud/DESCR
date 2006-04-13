@@ -10,5 +10,3 @@ This module provides a simple interface to generating a CSS-based HTML tag
 cloud.  You simply pass in a set of tags, their URL and their count. This
 module outputs stylesheet-based HTML. You may use the included CSS or
 use your own.
-
-WWW: http://search.cpan.org/dist/HTML-TagCloud/
