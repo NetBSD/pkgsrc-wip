@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/03 00:40:53 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/14 16:22:06 lsed Exp $
 man/man1/mplayer.1
 share/mplayer/DOCS/README
 share/mplayer/DOCS/de/bugreports.html
@@ -177,7 +177,6 @@ share/mplayer/DOCS/xml/hu/codecs.xml
 share/mplayer/DOCS/xml/hu/documentation.xml
 share/mplayer/DOCS/xml/hu/encoding-guide.xml
 share/mplayer/DOCS/xml/hu/faq.xml
-share/mplayer/DOCS/xml/hu/features.xml
 share/mplayer/DOCS/xml/hu/formats.xml
 share/mplayer/DOCS/xml/hu/history.xml
 share/mplayer/DOCS/xml/hu/install.xml

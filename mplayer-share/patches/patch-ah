@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1.1.1 2006/01/30 01:25:14 lsed Exp $
+$NetBSD: patch-ah,v 1.2 2006/04/14 16:22:06 lsed Exp $
 
---- subreader.c.orig	2005-06-01 11:01:41.000000000 +0200
-+++ subreader.c	2005-11-23 16:52:19.000000000 +0100
-@@ -73,10 +73,10 @@
+--- subreader.c.orig	2006-04-06 05:27:20.000000000 +0200
++++ subreader.c	2006-04-06 23:01:14.000000000 +0200
+@@ -74,10 +74,10 @@
  /* Remove leading and trailing space */
  static void trail_space(char *s) {
  	int i = 0;
@@ -15,8 +15,8 @@ $NetBSD: patch-ah,v 1.1.1.1 2006/01/30 01:25:14 lsed Exp $
  }
  
  static char *stristr(const char *haystack, const char *needle) {
-@@ -627,7 +627,7 @@
-     if (!fgets (line, LINE_LEN, fd))
+@@ -628,7 +628,7 @@
+     if (!stream_read_line (st, line, LINE_LEN))
  	return NULL;
      /* skip spaces */
 -    for (s=line; *s && isspace(*s); s++);
@@ -24,7 +24,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2006/01/30 01:25:14 lsed Exp $
      /* allow empty lines at the end of the file */
      if (*s==0)
  	return NULL;
-@@ -680,7 +680,7 @@
+@@ -681,7 +681,7 @@
  			else return current;
  		}
  		p=line;
