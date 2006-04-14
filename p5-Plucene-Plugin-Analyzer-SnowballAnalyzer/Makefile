@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/08/09 07:24:12 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/14 14:52:00 minskim Exp $
 
 DISTNAME=	Plucene-Plugin-Analyzer-SnowballAnalyzer-1.1
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Plucene-Plugin-Analyzer-SnowballAnalyzer
 COMMENT=	Stemmed analyzer plugin for p5-Plucene search engine
 
 DEPENDS+=	p5-Lingua-StopWords>=0:../../wip/p5-Lingua-StopWords
-DEPENDS+=	p5-Lingua-Stem-Snowball>=0:../../wip/p5-Lingua-Stem-Snowball
+DEPENDS+=	p5-Lingua-Stem-Snowball>=0:../../textproc/p5-Lingua-Stem-Snowball
 DEPENDS+=	p5-Plucene>=0:../../wip/p5-Plucene
 
 PERL5_PACKLIST= auto/Plucene/Plugin/Analyzer/SnowballAnalyzer/.packlist
