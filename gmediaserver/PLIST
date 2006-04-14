@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/14 11:46:34 obache Exp $
+bin/gmediaserver
+man/man1/gmediaserver.1
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gmediaserver.mo
