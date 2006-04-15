@@ -1,7 +1,0 @@
-Works fine, as far as I can see.
-
-Note that it would be nice if x11/py-gtk2 had at least an option to depend
-on this package. If py-gtk2 is built with this package as a dependency, the
-Cairo support in py-gtk2 will be available.
-
-I opened a PR (pkg/33256) before I gained access to pkgsrc-wip.
