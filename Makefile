@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2234 2006/04/15 20:42:30 minskim Exp $
+# $Id: Makefile,v 1.2235 2006/04/15 22:56:17 schnoebe Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1059,6 +1059,7 @@ SUBDIR+=	py-vtkmodule
 SUBDIR+=	py-weave
 SUBDIR+=	py-willow
 SUBDIR+=	py-xdg
+SUBDIR+=	py-xmpppy
 SUBDIR+=	py-xsdb
 SUBDIR+=	pycrypto
 SUBDIR+=	pydance
