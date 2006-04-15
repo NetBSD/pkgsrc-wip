@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/30 00:03:46 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/15 02:13:36 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXpm-3.5.4.2
@@ -18,6 +18,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xpm.pc.in
 GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 .include "../../wip/xproto/buildlink3.mk"
 .include "../../wip/libX11/buildlink3.mk"
