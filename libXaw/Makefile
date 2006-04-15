@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/08 07:14:17 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/15 02:33:59 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXaw-1.0.1
@@ -16,6 +16,7 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/xaw6.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xaw7.pc.in
 #TODO# PKGCONFIG_OVERRIDE+=	${WRKSRC}/xaw8.pc.in
 GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 
 # TODO: should this install all three versions? document in DESCR
 # TODO:            Xprint is required to build libXaw.so.8.
