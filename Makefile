@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2233 2006/04/15 18:26:17 minskim Exp $
+# $Id: Makefile,v 1.2234 2006/04/15 20:42:30 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -894,7 +894,6 @@ SUBDIR+=	p5-UNIVERSAL-isa
 SUBDIR+=	p5-URI-Find
 SUBDIR+=	p5-URI-Find-Rule
 SUBDIR+=	p5-URI-Title
-SUBDIR+=	p5-XML-Clean
 SUBDIR+=	p5-XML-DOM-XPath
 SUBDIR+=	p5-mecab
 SUBDIR+=	p5-podlators
