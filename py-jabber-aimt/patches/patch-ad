@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2006/04/15 04:10:03 schnoebe Exp $
+
+--- PyAIMt.py.orig	2006-03-06 19:00:24.000000000 -0600
++++ PyAIMt.py
+@@ -1,8 +1,8 @@
+ #!/usr/bin/env python
+ 
+-# Make 'cwd'/src in the PYTHONPATH
++# Make {transport directory}/src in the PYTHONPATH
+ import sys, os, os.path
+-PATH = os.path.abspath(os.path.dirname(sys.argv[0]))
++PATH = os.path.join("@PREFIX@", "@TRANSPORTDIR@")
+ os.chdir(PATH)
+ PATH = os.path.join(PATH, "src")
+ sys.path[0] = PATH

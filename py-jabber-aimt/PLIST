@@ -1,66 +1,81 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/28 01:21:50 schnoebe Exp $
-${TRANSPORTDIR}/avatar.py
-${TRANSPORTDIR}/bool.py
-${TRANSPORTDIR}/config.py
-${TRANSPORTDIR}/contact.py
-${TRANSPORTDIR}/daemonize.py
-${TRANSPORTDIR}/debug.py
-${TRANSPORTDIR}/disco.py
-${TRANSPORTDIR}/exception.py
-${TRANSPORTDIR}/globals.py
-${TRANSPORTDIR}/groupchat.py
-${TRANSPORTDIR}/jabw.py
-${TRANSPORTDIR}/lang.py
-${TRANSPORTDIR}/langs/__init__.py
-${TRANSPORTDIR}/langs/cs.py
-${TRANSPORTDIR}/langs/de.py
-${TRANSPORTDIR}/langs/en.py
-${TRANSPORTDIR}/langs/fr.py
-${TRANSPORTDIR}/langs/nl.py
-${TRANSPORTDIR}/langs/pl.py
-${TRANSPORTDIR}/langs/ru.py
-${TRANSPORTDIR}/legacy/__init__.py
-${TRANSPORTDIR}/legacy/aimt.py
-${TRANSPORTDIR}/legacy/defaultAvatar.png
-${TRANSPORTDIR}/legacy/defaultJabberAvatar.png
-${TRANSPORTDIR}/legacy/glue.py
-${TRANSPORTDIR}/legacy/legacyiq.py
-${TRANSPORTDIR}/legacy/legacylist.py
-${TRANSPORTDIR}/PyAIMt.py
-${TRANSPORTDIR}/main.py
-${TRANSPORTDIR}/misciq.py
-${TRANSPORTDIR}/register.py
-${TRANSPORTDIR}/sasl.py
-${TRANSPORTDIR}/session.py
-${TRANSPORTDIR}/tlib/__init__.py
-${TRANSPORTDIR}/tlib/countrycodes.py
-${TRANSPORTDIR}/tlib/domish.py
-${TRANSPORTDIR}/tlib/jabber/__init__.py
-${TRANSPORTDIR}/tlib/jabber/client.py
-${TRANSPORTDIR}/tlib/jabber/component.py
-${TRANSPORTDIR}/tlib/jabber/jid.py
-${TRANSPORTDIR}/tlib/jabber/jstrports.py
-${TRANSPORTDIR}/tlib/jabber/xmpp_stringprep.py
-${TRANSPORTDIR}/tlib/oscar.py
-${TRANSPORTDIR}/tlib/scheduler.py
-${TRANSPORTDIR}/tlib/socks5.py
-${TRANSPORTDIR}/tlib/sockserror.py
-${TRANSPORTDIR}/tlib/xmlstream.py
-${TRANSPORTDIR}/utils.py
-${TRANSPORTDIR}/webadmin/__init__.py
-${TRANSPORTDIR}/webadmin/handler.py
-${TRANSPORTDIR}/xdb/__init__.py
-${TRANSPORTDIR}/xdb/legacyaimtransport.py
-${TRANSPORTDIR}/xdb/mysql.py
-${TRANSPORTDIR}/xdb/template.py
-${TRANSPORTDIR}/xdb/xmlfiles.py
-${TRANSPORTDIR}/xmlconfig.py
+@comment $NetBSD: PLIST,v 1.2 2006/04/15 04:10:02 schnoebe Exp $
+bin/PyAIMt
+${TRANSPORTDIR}/data/defaultAIMAvatar.png
+${TRANSPORTDIR}/data/defaultICQAvatar.png
+${TRANSPORTDIR}/data/www/css/style.css
+${TRANSPORTDIR}/data/www/images/pyaim.png
+${TRANSPORTDIR}/data/www/template.html
+${TRANSPORTDIR}/src/avatar.py
+${TRANSPORTDIR}/src/bool.py
+${TRANSPORTDIR}/src/config.py
+${TRANSPORTDIR}/src/contact.py
+${TRANSPORTDIR}/src/daemonize.py
+${TRANSPORTDIR}/src/debug.py
+${TRANSPORTDIR}/src/disco.py
+${TRANSPORTDIR}/src/globals.py
+${TRANSPORTDIR}/src/groupchat.py
+${TRANSPORTDIR}/src/imgmanip.py
+${TRANSPORTDIR}/src/jabw.py
+${TRANSPORTDIR}/src/lang.py
+${TRANSPORTDIR}/src/langs/__init__.py
+${TRANSPORTDIR}/src/langs/cs.py
+${TRANSPORTDIR}/src/langs/de.py
+${TRANSPORTDIR}/src/langs/en.py
+${TRANSPORTDIR}/src/langs/fr.py
+${TRANSPORTDIR}/src/langs/nl.py
+${TRANSPORTDIR}/src/langs/pl.py
+${TRANSPORTDIR}/src/langs/ru.py
+${TRANSPORTDIR}/src/legacy/__init__.py
+${TRANSPORTDIR}/src/legacy/aimt.py
+${TRANSPORTDIR}/src/legacy/glue.py
+${TRANSPORTDIR}/src/legacy/legacyiq.py
+${TRANSPORTDIR}/src/legacy/legacylist.py
+${TRANSPORTDIR}/src/main.py
+${TRANSPORTDIR}/src/misciq.py
+${TRANSPORTDIR}/src/register.py
+${TRANSPORTDIR}/src/sasl.py
+${TRANSPORTDIR}/src/session.py
+${TRANSPORTDIR}/src/tlib/__init__.py
+${TRANSPORTDIR}/src/tlib/countrycodes.py
+${TRANSPORTDIR}/src/tlib/domish.py
+${TRANSPORTDIR}/src/tlib/jabber/__init__.py
+${TRANSPORTDIR}/src/tlib/jabber/client.py
+${TRANSPORTDIR}/src/tlib/jabber/component.py
+${TRANSPORTDIR}/src/tlib/jabber/jid.py
+${TRANSPORTDIR}/src/tlib/jabber/jstrports.py
+${TRANSPORTDIR}/src/tlib/jabber/xmpp_stringprep.py
+${TRANSPORTDIR}/src/tlib/oscar.py
+${TRANSPORTDIR}/src/tlib/scheduler.py
+${TRANSPORTDIR}/src/tlib/socks5.py
+${TRANSPORTDIR}/src/tlib/sockserror.py
+${TRANSPORTDIR}/src/tlib/twistwrap.py
+${TRANSPORTDIR}/src/tlib/xmlstream.py
+${TRANSPORTDIR}/src/utils.py
+${TRANSPORTDIR}/src/web/__init__.py
+${TRANSPORTDIR}/src/web/handler.py
+${TRANSPORTDIR}/src/web/xmppcred.py
+${TRANSPORTDIR}/src/xdb/__init__.py
+${TRANSPORTDIR}/src/xdb/legacyaimtransport.py
+${TRANSPORTDIR}/src/xdb/mysql.py
+${TRANSPORTDIR}/src/xdb/template.py
+${TRANSPORTDIR}/src/xdb/xmlfiles.py
+${TRANSPORTDIR}/src/xmlconfig.py
+${TRANSPORTDIR}/tools/Makefile
+${TRANSPORTDIR}/tools/db-setup.mysql
+${TRANSPORTDIR}/tools/managessi.py
+${TRANSPORTDIR}/tools/migrate.py
 share/examples/jabberd/pyaimt.xml
 share/examples/rc.d/pyaimt
-@dirrm ${TRANSPORTDIR}/webadmin
-@dirrm ${TRANSPORTDIR}/legacy
-@dirrm ${TRANSPORTDIR}/tlib/jabber
-@dirrm ${TRANSPORTDIR}/tlib
-@dirrm ${TRANSPORTDIR}/langs
-@dirrm ${TRANSPORTDIR}/xdb
+@dirrm ${TRANSPORTDIR}/tools
+@dirrm ${TRANSPORTDIR}/src/xdb
+@dirrm ${TRANSPORTDIR}/src/web
+@dirrm ${TRANSPORTDIR}/src/tlib/jabber
+@dirrm ${TRANSPORTDIR}/src/tlib
+@dirrm ${TRANSPORTDIR}/src/legacy
+@dirrm ${TRANSPORTDIR}/src/langs
+@dirrm ${TRANSPORTDIR}/src
+@dirrm ${TRANSPORTDIR}/data/www/images
+@dirrm ${TRANSPORTDIR}/data/www/css
+@dirrm ${TRANSPORTDIR}/data/www
+@dirrm ${TRANSPORTDIR}/data
 @dirrm ${TRANSPORTDIR}
