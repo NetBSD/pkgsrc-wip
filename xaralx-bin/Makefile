@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/03/20 11:37:34 ghen Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/15 15:33:56 ghen Exp $
 
-DISTNAME=		RecXaraLX0.3_rev676
-PKGNAME=		XaraLX-0.3.676
+DISTNAME=		XaraLX0.4_rev798
+PKGNAME=		XaraLX-0.4.798
 CATEGORIES=		graphics
 MASTER_SITES=		http://downloads.xara.com/opensource/
 EXTRACT_SUFX=		.tar.bz2
