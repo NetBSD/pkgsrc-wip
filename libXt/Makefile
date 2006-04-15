@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/01 23:46:54 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/15 01:58:35 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXt-1.0.0
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 
+CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xt.pc.in
 
 .include "../../wip/libSM/buildlink3.mk"
