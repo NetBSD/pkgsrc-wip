@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/04/12 20:44:19 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.25 2006/04/15 00:32:42 jeremy-c-reed Exp $
 #
 
 # todo: do PLIST again
@@ -17,6 +17,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 
+CONFIGURE_ARGS+=	--enable-man-pages=3
 PKGCONFIG_OVERRIDE+=	x11.pc.in
 
 .include "../../mk/pthread.buildlink3.mk"
