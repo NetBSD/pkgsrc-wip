@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/14 01:28:11 jlamwww Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/15 00:41:04 schnoebe Exp $
 
 DISTNAME=		pymsnt-0.11
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -51,8 +51,8 @@ CONF_FILES=	${EGDIR}/pymsnt.xml ${PKG_SYSCONFDIR}/pymsnt.xml
 do-install:
 	@ ${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
 	@ cd ${WRKSRC} && \
-	for i in `find src data \( \( -type f -name '*.orig' -o \
-			-type d -name .svn \) -prune \) -o -type f -print` ;\
+	for i in `find src data \\( \\( -type f -name '*.orig' -o \
+		    -type d -name .svn \\) -prune \\) -o -type f -print` ;\
 	do \
 	    ${ECHO} "Installing $$i -> ${PREFIX}/${TRANSPORTDIR}/$$i";\
 	    ${INSTALL_SCRIPT_DIR} `${DIRNAME} ${PREFIX}/${TRANSPORTDIR}/$$i` ;\
@@ -67,15 +67,15 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing Paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	config-example.xml PyMSNt.py src/main.py
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g' \
-			-e 's,@TRANSPORTDIR@,${TRANSPORTDIR},g' \
-			-e 's,@JABBERD_SPOOLDIR@,${JABBERD_SPOOLDIR},g' \
-			-e 's,@JABBERD_TRANSDIR@,${JABBERD_TRANSDIR},g' \
-			-e 's,@JABBERD_GROUP@,${JABBERD_GROUP},g' \
-			-e 's,@JABBERD_USER@,${JABBERD_USER},g' \
-			-e 's,@JABBERD_LOGDIR@,${JABBERD_LOGDIR},g' \
-			-e 's,@PREFIX@,${PREFIX},g' \
-			-e 's,@JABBERD_PIDDIR@,${JABBERD_PIDDIR},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@TRANSPORTDIR@,${TRANSPORTDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBERD_SPOOLDIR@,${JABBERD_SPOOLDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBERD_TRANSDIR@,${JABBERD_TRANSDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBERD_GROUP@,${JABBERD_GROUP},g'
+SUBST_SED.paths+=	-e 's,@JABBERD_USER@,${JABBERD_USER},g'
+SUBST_SED.paths+=	-e 's,@JABBERD_LOGDIR@,${JABBERD_LOGDIR},g'
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@JABBERD_PIDDIR@,${JABBERD_PIDDIR},g'
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
