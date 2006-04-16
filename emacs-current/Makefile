@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/16 12:48:15 obache Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/16 13:16:51 obache Exp $
 #
 
 DISTNAME=	emacs-22.0.50
@@ -6,8 +6,8 @@ CATEGORIES=	editors
 MASTER_SITES=	#
 
 MAINTAINER=	obata@lins.jp
-HOMEPAGE=	http://linux-igd.sourceforge.net/
-COMMENT=	Linux UPnP Internet Gateway Device
+HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+COMMENT=	GNU editing macros (editor)
 
 USE_TOOLS+=	gmake makeinfo
 
