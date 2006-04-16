@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2235 2006/04/15 22:56:17 schnoebe Exp $
+# $Id: Makefile,v 1.2236 2006/04/16 22:22:50 jtonio Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -425,7 +425,6 @@ SUBDIR+=	jakarta-log4j
 SUBDIR+=	jakarta-struts
 SUBDIR+=	jalview
 SUBDIR+=	jamaica
-SUBDIR+=	jamvm
 SUBDIR+=	java-BigDecimal
 SUBDIR+=	java-asm
 SUBDIR+=	java-bcel
