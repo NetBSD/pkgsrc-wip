@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/25 19:53:33 jtonio Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/16 22:36:13 jtonio Exp $
 #
 
 .include "../../wip/kaffe/Makefile.common"
@@ -8,6 +8,8 @@ PKGNAME=    ${DISTNAME:S/kaffe/kaffe-x11/}
 COMMENT+=   (AWT support through X11)
 
 CONFIGURE_ARGS:=  ${CONFIGURE_ARGS:S/--disable-native-awt/--with-kaffe-x-awt/}
+CONFIGURE_ARGS:=  ${CONFIGURE_ARGS:S/--disable-gtk-peer/--enable-gtk-peer/}
+CONFIGURE_ARGS+=  --with-x
 
 BUILD_DIRS=     ${WRKSRC}/config
 BUILD_DIRS+=    ${WRKSRC}/libraries/javalib
@@ -18,6 +20,8 @@ BUILD_DIRS+=    ${WRKSRC}/kaffe/kaffevm
 BUILD_DIRS+=    ${WRKSRC}/libraries/clib/classpath
 BUILD_DIRS+=    ${WRKSRC}/libraries/clib/awt
 INSTALL_DIRS=   ${WRKSRC}/libraries/clib/awt
+INSTALL_DIRS+=  ${WRKSRC}/libraries/javalib/awt-implementations
+INSTALL_DIRS+=  ${WRKSRC}/libraries/javalib/external/classpath/gnu/java/awt
 
 pre-build:
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} BUILD_ENVIRONMENT
