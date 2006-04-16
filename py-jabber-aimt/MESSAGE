@@ -1,14 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/12/28 06:28:37 schnoebe Exp $
+$NetBSD: MESSAGE,v 1.3 2006/04/16 03:27:05 schnoebe Exp $
 
-You will need to customize the following file to get pyicqt to work
+You will need to customize the following file to get pyaimt to work
 with jabber:
 
 	${PKG_SYSCONFDIR}/pyaimt.xml
-
-For details see:
-
-	${HOMEPAGE}install.php
 
 Quick start for jabberd2:
 
