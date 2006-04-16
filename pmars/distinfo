@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/04/16 02:55:14 poppnk Exp $
+
+SHA1 (pmars-0_8_6_tar.gz) = 633a55a30e7c0595a8a8d3184b9ee3db767ffdbd
+RMD160 (pmars-0_8_6_tar.gz) = 68e5baca81736621384214694a0d8c1059e0ff1f
+Size (pmars-0_8_6_tar.gz) = 153322 bytes
+SHA1 (patch-aa) = a25773bdb25cb50fdfe6af3e713a50f728366ee5

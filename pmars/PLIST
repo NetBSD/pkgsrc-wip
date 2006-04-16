@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/16 02:55:14 poppnk Exp $
+bin/pmars
+man/man6
+share/pmars/CONTRIB
+share/pmars/README
+share/pmars/warriors/aeka.red
+share/pmars/warriors/flashpaper.red
+share/pmars/warriors/pspace.red
+share/pmars/warriors/rave.red
+share/pmars/warriors/validate.red
+@dirrm share/pmars/warriors
+@dirrm share/pmars
+@dirrm man/man6
