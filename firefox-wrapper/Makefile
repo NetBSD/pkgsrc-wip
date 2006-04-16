@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2005/11/02 18:00:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/16 23:52:29 poppnk Exp $
 
-DISTNAME=	firefox-wrapper-0.2
+DISTNAME=	firefox-wrapper-0.3
 CATEGORIES=	www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
