@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2237 2006/04/16 22:24:28 minskim Exp $
+# $Id: Makefile,v 1.2238 2006/04/17 02:31:56 schnoebe Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1017,6 +1017,7 @@ SUBDIR+=	py-ipython
 SUBDIR+=	py-jabber-aimt
 SUBDIR+=	py-jabber-icqt
 SUBDIR+=	py-jabber-msnt
+SUBDIR+=	py-jabber-yahoo-transport
 SUBDIR+=	py-kyra
 SUBDIR+=	py-libpcap
 SUBDIR+=	py-mmpython
