@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/17 02:30:38 schnoebe Exp $
+${TRANSPORTDIR}/avatar.py
+${TRANSPORTDIR}/curphoo/YahooMD5.py
+${TRANSPORTDIR}/curphoo/__init__.py
+${TRANSPORTDIR}/curphoo/cpformat.py
+${TRANSPORTDIR}/curphoo/md5crypt.py
+${TRANSPORTDIR}/curphoo/pysha.py
+${TRANSPORTDIR}/curphoo/yahoo_fn.py
+${TRANSPORTDIR}/htmlutils.py
+${TRANSPORTDIR}/migratespool.py
+${TRANSPORTDIR}/roomlist.py
+${TRANSPORTDIR}/toolbox.py
+${TRANSPORTDIR}/transport.ini
+${TRANSPORTDIR}/yahoo.py
+${TRANSPORTDIR}/yahoo_helpers.py
+${TRANSPORTDIR}/ylib.py
+share/examples/jabberd/yahoo-transport.ini
+share/examples/rc.d/yahoo-transport
+@dirrm ${TRANSPORTDIR}/curphoo
+@dirrm ${TRANSPORTDIR}

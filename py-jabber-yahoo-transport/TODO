@@ -1,0 +1,5 @@
+Sun Apr 16 21:29:08 CDT 2006
+*   Handle the runtime compilation of the program (right now, upon
+    removal, it leaves behind *.pyc files..)
+*   Modify startup to place in the background (or figure out how to have
+    the program do that itself.)

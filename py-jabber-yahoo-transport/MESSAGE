@@ -1,0 +1,24 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/04/17 02:30:38 schnoebe Exp $
+
+You will need to customize the following file to get yahoo-transport
+to work with jabber:
+
+	${PKG_SYSCONFDIR}/yahoo-transport.ini
+
+Quick start for jabberd2:
+
+	Verify and update the following fields in
+	${PKG_SYSCONFDIR}/yahoo-transport.ini:
+
+	Hostname		--  Set to the public name of the service
+				    ex: aim.jabber.example
+	Server
+				--  Set to the hostname or IP address
+				    of the main jabber server
+	Secret			--  should be set to the legacy components
+				    shared secret in jabber2's router.xml
+				    (look for <secret>...</secret> in
+				    router.xml)
+
+===========================================================================

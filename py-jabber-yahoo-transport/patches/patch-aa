@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/04/17 02:30:38 schnoebe Exp $
+
+--- yahoo.py.orig	2006-03-07 03:09:17.000000000 -0600
++++ yahoo.py
+@@ -1117,7 +1117,7 @@ if __name__ == '__main__':
+     configfile = ConfigParser.ConfigParser()
+     configfile.add_section('yahoo')
+     try:
+-        configfilename = 'transport.ini'
++        configfilename = os.path.join("@PKG_SYSCONFDIR@", "yahoo-transport.ini")
+         cffile = open(configfilename,'r')
+     except IOError:
+         try:
