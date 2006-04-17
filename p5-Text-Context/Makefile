@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/09/15 17:31:22 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/17 15:36:17 minskim Exp $
 
 DISTNAME=       Text-Context-3.6
 PKGNAME=        p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	kuli0020@NetBSD.org
 HOMEPAGE=	http://cpan.uwinnipeg.ca/module/Text::Context
 COMMENT=	Perl module for highlighting search result context snippets
 
-DEPENDS+=	p5-Text-Context-EitherSide>=1.1:../../wip/p5-Text-Context-EitherSide
+DEPENDS+=	p5-Text-Context-EitherSide>=1.1:../../textproc/p5-Text-Context-EitherSide
 DEPENDS+=	p5-UNIVERSAL-exports>=0.03:../../wip/p5-UNIVERSAL-exports
 
 PERL5_PACKLIST=		auto/Text/Context/.packlist
