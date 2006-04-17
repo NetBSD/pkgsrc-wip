@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/21 09:25:27 bartoszkuzma Exp $
-lib/pam_pwdfile.so
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 11:19:36 bartoszkuzma Exp $
+lib/security/pam_pwdfile.so
 share/doc/pam-pwdfile/README
 share/doc/pam-pwdfile/changelog
 @dirrm share/doc/pam-pwdfile

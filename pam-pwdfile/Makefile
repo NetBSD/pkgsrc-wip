@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/21 09:25:27 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/17 11:19:36 bartoszkuzma Exp $
 #
 
 DISTNAME=		pam_pwdfile-0.99
 PKGNAME=		${DISTNAME:S/_/-/}
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://cpbotha.net/files/pam_pwdfile/
 
@@ -30,7 +31,7 @@ do-build:
 		md5_crypt_broken.o bigcrypt.o -lpam -lcrypt
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/pam_pwdfile.so ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/pam_pwdfile.so ${PREFIX}/lib/security
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pam-pwdfile
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/pam-pwdfile
 	${INSTALL_DATA} ${WRKSRC}/changelog ${PREFIX}/share/doc/pam-pwdfile
