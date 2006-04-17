@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2238 2006/04/17 02:31:56 schnoebe Exp $
+# $Id: Makefile,v 1.2239 2006/04/17 09:13:00 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -279,6 +279,7 @@ SUBDIR+=	gaim
 SUBDIR+=	gaim-icb
 SUBDIR+=	gajim
 SUBDIR+=	galib
+SUBDIR+=	gauche-dbd-pg
 SUBDIR+=	gauche-fastcgi
 SUBDIR+=	gcl
 SUBDIR+=	gcl-nox11
@@ -816,6 +817,7 @@ SUBDIR+=	p5-File-Path-Expand
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-HTML-CalendarMonthSimple
+SUBDIR+=	p5-HTML-GenerateUtil
 SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTML-Strip
 SUBDIR+=	p5-HTML-TagCloud
