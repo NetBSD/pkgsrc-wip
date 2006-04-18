@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2240 2006/04/17 15:16:55 minskim Exp $
+# $Id: Makefile,v 1.2241 2006/04/18 18:13:27 jeremy-c-reed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -145,7 +145,6 @@ SUBDIR+=	com_err
 SUBDIR+=	comix
 SUBDIR+=	commoncpp2
 SUBDIR+=	compare
-SUBDIR+=	compositeproto
 SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	cpphs
@@ -245,7 +244,6 @@ SUBDIR+=	firefox2
 SUBDIR+=	firefox2-bin
 SUBDIR+=	firefox2-gtk1
 SUBDIR+=	firehose
-SUBDIR+=	fixesproto
 SUBDIR+=	flc
 SUBDIR+=	flexdump
 SUBDIR+=	flightgear
@@ -1084,7 +1082,6 @@ SUBDIR+=	qjackctl
 SUBDIR+=	qn-x11
 SUBDIR+=	quodlibet
 SUBDIR+=	r8s
-SUBDIR+=	randrproto
 SUBDIR+=	rar3
 SUBDIR+=	rawphoto
 SUBDIR+=	rc.subr
@@ -1095,7 +1092,6 @@ SUBDIR+=	recordproto
 SUBDIR+=	regexxer
 SUBDIR+=	rekall
 SUBDIR+=	relaydb
-SUBDIR+=	renderproto
 SUBDIR+=	rep-gtk2
 SUBDIR+=	resourceproto
 SUBDIR+=	rhapsody
@@ -1337,7 +1333,6 @@ SUBDIR+=	xchat2-python
 SUBDIR+=	xchat2-tcl
 SUBDIR+=	xcmiscproto
 SUBDIR+=	xdiskusage
-SUBDIR+=	xextproto
 SUBDIR+=	xf86bigfontproto
 SUBDIR+=	xf86driproto
 SUBDIR+=	xf86miscproto
@@ -1364,7 +1359,6 @@ SUBDIR+=	xpde
 SUBDIR+=	xpdq
 SUBDIR+=	xpilot-ng
 SUBDIR+=	xplore
-SUBDIR+=	xproto
 SUBDIR+=	xscribble-fs
 SUBDIR+=	xspread
 SUBDIR+=	xtrans
