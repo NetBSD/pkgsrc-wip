@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/04/15 01:58:35 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.20 2006/04/18 18:27:51 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXt-1.0.0
@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE+=	xt.pc.in
 .include "../../wip/libSM/buildlink3.mk"
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/kbproto/buildlink3.mk"
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 #.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

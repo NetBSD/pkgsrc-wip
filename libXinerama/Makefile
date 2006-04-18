@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/12 21:03:57 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/18 18:27:51 jeremy-c-reed Exp $
 
 DISTNAME=	libXinerama-1.0.1
 CATEGORIES=	x11
@@ -21,7 +21,7 @@ PKGCONFIG_OVERRIDE+=	xinerama.pc.in
 
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXext/buildlink3.mk"
-.include "../../wip/xextproto/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../wip/xineramaproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/12 20:58:16 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/18 18:27:50 jeremy-c-reed Exp $
 #
  ## this needs to be updated to modular Xorg
 
@@ -19,6 +19,6 @@ USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	xfixes.pc.in
 
 .include "../../wip/libX11/buildlink3.mk"
-.include "../../wip/fixesproto/buildlink3.mk"
+.include "../../x11/fixesproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

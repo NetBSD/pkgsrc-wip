@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/12 03:39:42 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/18 18:27:50 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXdamage-1.0.2.2
@@ -18,7 +18,7 @@ PKGCONFIG_OVERRIDE+=	xdamage.pc.in
 
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/damageproto/buildlink3.mk"
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../wip/libXfixes/buildlink3.mk"
-.include "../../wip/fixesproto/buildlink3.mk"
+.include "../../x11/fixesproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/01/17 10:20:46 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/18 18:27:51 jeremy-c-reed Exp $
 #
 
 DISTNAME=		PyPanel-2.4
@@ -26,6 +26,6 @@ PYTHON_VERSIONS_ACCEPTED=	24 23 22
 .include "../../lang/python/extension.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../x11/py-Xlib/buildlink3.mk"
-.include "../../x11/renderext/buildlink3.mk"
+.include "../../x11/renderproto/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

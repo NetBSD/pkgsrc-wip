@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/12 20:51:16 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/18 18:27:50 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libSM-0.99.2
@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE+=	sm.pc.in
 #.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../wip/libICE/buildlink3.mk"
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../wip/xtrans/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

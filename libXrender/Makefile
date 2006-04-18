@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/12 03:27:20 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/18 18:27:51 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXrender-0.9.0.2
@@ -17,6 +17,6 @@ USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	xrender.pc.in
 
 .include "../../wip/libX11/buildlink3.mk"
-.include "../../wip/renderproto/buildlink3.mk"
+.include "../../x11/renderproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

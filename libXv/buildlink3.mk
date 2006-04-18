@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 23:35:32 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/18 18:27:51 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXv.
 #
@@ -21,6 +21,6 @@ BUILDLINK_PKGSRCDIR.libXv?=		../../wip/libXv
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXext/buildlink3.mk"
 .include "../../wip/videoproto/buildlink3.mk"
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/12 23:17:18 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/18 18:27:51 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXres-1.0.0
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	xres.pc.in
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXext/buildlink3.mk"
 .include "../../wip/resourceproto/buildlink3.mk"
-.include "../../wip/xextproto/buildlink3.mk"
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

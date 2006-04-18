@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/10 02:44:06 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/18 18:27:51 jeremy-c-reed Exp $
 #
 
 DISTNAME=		scrnsaverproto-1.0.1
@@ -14,6 +14,6 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/scrnsaverproto.pc.in
 USE_LANGUAGES=		# empty
 
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

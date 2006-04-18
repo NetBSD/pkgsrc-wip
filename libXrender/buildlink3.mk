@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:35 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/18 18:27:51 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXrender.
 #
@@ -18,7 +18,7 @@ BUILDLINK_API_DEPENDS.libXrender+=		libXrender>=0.9.0
 BUILDLINK_PKGSRCDIR.libXrender?=		../../wip/libXrender
 
 .include "../../wip/libX11/buildlink3.mk"
-.include "../../wip/renderproto/buildlink3.mk"
+.include "../../x11/renderproto/buildlink3.mk"
 
 .endif # LIBXRENDER_BUILDLINK3_MK
 

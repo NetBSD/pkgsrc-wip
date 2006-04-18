@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/04/08 07:14:17 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/18 18:27:50 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBXAW_BUILDLINK3_MK:=	${LIBXAW_BUILDLINK3_MK}+
@@ -15,7 +15,7 @@ BUILDLINK_API_DEPENDS.libXaw+=	libXaw>=1.0.1
 BUILDLINK_PKGSRCDIR.libXaw?=	../../wip/libXaw
 .endif	# LIBXAW_BUILDLINK3_MK
 
-.include "../../wip/xextproto/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../wip/libICE/buildlink3.mk"
 .include "../../wip/libSM/buildlink3.mk"
 .include "../../wip/libX11/buildlink3.mk"

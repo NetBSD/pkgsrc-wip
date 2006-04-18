@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/11/12 01:31:33 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/18 18:27:50 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libICE-0.99.1
@@ -18,7 +18,7 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	ice.pc.in
 
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../wip/xtrans/buildlink3.mk"
 #.include "../../mk/pthread.buildlink3.mk"
 

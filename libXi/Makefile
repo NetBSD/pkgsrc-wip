@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/02 01:41:44 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/18 18:27:51 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXi-1.0.0
@@ -21,7 +21,7 @@ PKGCONFIG_OVERRIDE+=	xi.pc.in
 .include "../../wip/inputproto/buildlink3.mk"
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXext/buildlink3.mk"
-.include "../../wip/xextproto/buildlink3.mk"
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

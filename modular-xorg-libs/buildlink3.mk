@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/16 04:10:03 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/18 18:27:51 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MODULAR_XORG_LIBS_BUILDLINK3_MK:=	${MODULAR_XORG_LIBS_BUILDLINK3_MK}+
@@ -32,7 +32,7 @@ BUILDLINK_PKGSRCDIR.modular-xorg-libs?=		../../wip/modular-xorg-libs
 .include "../../wip/libXinerama/buildlink3.mk"
 .include "../../wip/libXmu/buildlink3.mk"
 .include "../../wip/libXt/buildlink3.mk"
-.include "../../wip/xextproto/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 
 #.include "../../devel/zlib/buildlink3.mk"
 #.include "../../fonts/fontconfig/buildlink3.mk"

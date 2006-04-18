@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/10/17 19:25:33 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/18 18:27:50 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXfont-0.99.0
@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE+=	xfont.pc.in
 .include "../../wip/fontcacheproto/buildlink3.mk"
 .include "../../wip/libfontenc/buildlink3.mk"
 .include "../../wip/fontsproto/buildlink3.mk"
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../wip/xtrans/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

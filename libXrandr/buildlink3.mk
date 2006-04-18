@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:18 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/18 18:27:51 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXrandr.
 #
@@ -17,7 +17,7 @@ BUILDLINK_PKGSRCDIR.libXrandr?=		../../wip/libXrandr
 
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXext/buildlink3.mk"
-.include "../../wip/randrproto/buildlink3.mk"
+.include "../../x11/randrproto/buildlink3.mk"
 
 .endif # LIBXRANDR_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/10 01:40:40 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/18 18:27:51 jeremy-c-reed Exp $
 #
 
 DISTNAME=		xf86miscproto-0.9.1
@@ -16,6 +16,6 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xf86miscproto.pc.in
 USE_LANGUAGES=		# empty
 
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

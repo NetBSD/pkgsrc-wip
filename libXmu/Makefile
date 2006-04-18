@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/01 23:56:04 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.18 2006/04/18 18:27:51 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXmu-1.0.0
@@ -23,7 +23,7 @@ USE_TOOLS+=		pkg-config
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXext/buildlink3.mk"
 .include "../../wip/libXt/buildlink3.mk"
-.include "../../wip/xextproto/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 

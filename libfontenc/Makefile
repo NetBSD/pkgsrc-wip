@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/14 18:30:53 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/18 18:27:51 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libfontenc-0.99.0
@@ -15,6 +15,6 @@ USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/fontenc.pc.in
 GNU_CONFIGURE=		yes
 
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

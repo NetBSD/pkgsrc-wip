@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/10/17 19:10:49 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/18 18:27:50 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXau-0.99.0
@@ -20,5 +20,5 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xau.pc.in
 
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

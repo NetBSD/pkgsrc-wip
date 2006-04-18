@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:39 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/18 18:27:51 jeremy-c-reed Exp $
 
 BUILDLINK_DEPMETHOD.xf86miscproto?=	build
 
@@ -17,6 +17,6 @@ BUILDLINK_API_DEPENDS.xf86miscproto+=	xf86miscproto>=0.9.1
 BUILDLINK_PKGSRCDIR.xf86miscproto?=	../../wip/xf86miscproto
 .endif	# XF86MISCPROTO_BUILDLINK3_MK
 
-.include "../../wip/xproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
