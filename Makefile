@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2241 2006/04/18 18:13:27 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.2242 2006/04/18 21:53:05 matthewluckie Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -514,6 +514,7 @@ SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdrm
 SUBDIR+=	libfontenc
+SUBDIR+=	libgadu
 SUBDIR+=	libgeotiff
 SUBDIR+=	libgksu
 SUBDIR+=	libgksuui
