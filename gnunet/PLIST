@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/11/06 03:35:18 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/18 00:46:33 jlamwww Exp $
 bin/gnunet-chat
 bin/gnunet-check
 bin/gnunet-convert
@@ -67,4 +67,4 @@ man/man1/gnunet-transport-check.1
 man/man1/gnunet-update.1
 man/man1/gnunetd.1
 man/man5/gnunet.conf.5
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/GNUnet.mo
+share/locale/de/LC_MESSAGES/GNUnet.mo

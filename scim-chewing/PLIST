@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/26 14:53:23 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:37 jlamwww Exp $
 lib/scim-1.0/IMEngine/chewing.la
 lib/scim-1.0/SetupUI/chewing-imengine-setup.la
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/scim-chewing.mo
+share/locale/zh_TW/LC_MESSAGES/scim-chewing.mo
 share/scim/icons/scim-chewing.png
 @dirrm lib/scim-1.0/SetupUI
 @dirrm lib/scim-1.0/IMEngine

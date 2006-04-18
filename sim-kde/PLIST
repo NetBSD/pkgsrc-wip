@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/10 14:28:05 ianzag Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:38 jlamwww Exp $
 bin/sim
 bin/simctrl
 lib/libsimapi.la
@@ -82,25 +82,25 @@ share/icons/hicolor/64x64/apps/sim.png
 share/icons/locolor/16x16/apps/sim.png
 share/icons/locolor/22x22/apps/sim.png
 share/icons/locolor/32x32/apps/sim.png
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/he/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/sw/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/sim.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/sim.mo
+share/locale/bg/LC_MESSAGES/sim.mo
+share/locale/ca/LC_MESSAGES/sim.mo
+share/locale/cs/LC_MESSAGES/sim.mo
+share/locale/de/LC_MESSAGES/sim.mo
+share/locale/el/LC_MESSAGES/sim.mo
+share/locale/es/LC_MESSAGES/sim.mo
+share/locale/fr/LC_MESSAGES/sim.mo
+share/locale/he/LC_MESSAGES/sim.mo
+share/locale/hu/LC_MESSAGES/sim.mo
+share/locale/it/LC_MESSAGES/sim.mo
+share/locale/nl/LC_MESSAGES/sim.mo
+share/locale/pl/LC_MESSAGES/sim.mo
+share/locale/pt_BR/LC_MESSAGES/sim.mo
+share/locale/ru/LC_MESSAGES/sim.mo
+share/locale/sk/LC_MESSAGES/sim.mo
+share/locale/sw/LC_MESSAGES/sim.mo
+share/locale/tr/LC_MESSAGES/sim.mo
+share/locale/uk/LC_MESSAGES/sim.mo
+share/locale/zh_TW/LC_MESSAGES/sim.mo
 share/mimelnk/application/x-icq.desktop
 share/services/simctrl.desktop
 @dirrm share/apps/sim/styles

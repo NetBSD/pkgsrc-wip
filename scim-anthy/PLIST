@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/02 14:58:11 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:37 jlamwww Exp $
 lib/scim-1.0/1.4.0/Helper/anthy-imengine-helper.la
 lib/scim-1.0/IMEngine/anthy.la
 lib/scim-1.0/SetupUI/anthy-imengine-setup.la
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/scim-anthy.mo
+share/locale/ja/LC_MESSAGES/scim-anthy.mo
 share/scim/Anthy/style/101kana.sty
 share/scim/Anthy/style/atok.sty
 share/scim/Anthy/style/azik.sty

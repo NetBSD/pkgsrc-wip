@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/03/16 23:14:21 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/18 00:46:35 jlamwww Exp $
 ${GUI}bin/linphone
 bin/linphonec
 include/linphone/config.h
@@ -42,14 +42,14 @@ share/doc/linphone/ortp/ortp-rtpsession-api.html
 share/doc/linphone/ortp/ortp-telephone-events---rfc2833-.html
 share/doc/linphone/ortp/ortpapi.html
 share/gnome/apps/Internet/linphone.desktop
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/linphone.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/linphone.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/linphone.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/linphone.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/linphone.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/linphone.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/linphone.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/linphone.mo
+share/locale/cs/LC_MESSAGES/linphone.mo
+share/locale/de/LC_MESSAGES/linphone.mo
+share/locale/es/LC_MESSAGES/linphone.mo
+share/locale/fr/LC_MESSAGES/linphone.mo
+share/locale/it/LC_MESSAGES/linphone.mo
+share/locale/ja/LC_MESSAGES/linphone.mo
+share/locale/nl/LC_MESSAGES/linphone.mo
+share/locale/pl/LC_MESSAGES/linphone.mo
 share/pixmaps/linphone/linphone.png
 share/pixmaps/linphone/linphone2.png
 share/pixmaps/linphone/linphone2.xpm

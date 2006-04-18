@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/04 13:48:32 shattered Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:32 jlamwww Exp $
 bin/gnokii
 bin/ppm2nokia
 bin/sendsms
@@ -25,16 +25,16 @@ lib/pkgconfig/gnokii.pc
 sbin/gnokiid
 sbin/mgnokiidev
 share/doc/gnokii/gnapplet.sis
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnokii.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnokii.mo
-${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnokii.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnokii.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnokii.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnokii.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnokii.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnokii.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnokii.mo
-${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnokii.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnokii.mo
+share/locale/cs/LC_MESSAGES/gnokii.mo
+share/locale/de/LC_MESSAGES/gnokii.mo
+share/locale/et/LC_MESSAGES/gnokii.mo
+share/locale/fi/LC_MESSAGES/gnokii.mo
+share/locale/fr/LC_MESSAGES/gnokii.mo
+share/locale/it/LC_MESSAGES/gnokii.mo
+share/locale/nl/LC_MESSAGES/gnokii.mo
+share/locale/pl/LC_MESSAGES/gnokii.mo
+share/locale/sk/LC_MESSAGES/gnokii.mo
+share/locale/sl/LC_MESSAGES/gnokii.mo
+share/locale/zh_CN/LC_MESSAGES/gnokii.mo
 @dirrm share/doc/gnokii
 @dirrm include/gnokii

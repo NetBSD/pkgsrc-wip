@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2006/02/27 22:29:27 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/18 00:46:35 jlamwww Exp $
 bin/mednafen
 @comment belongs to libiconv: lib/charset.alias
 share/doc/mednafen/mednafen.html
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/mednafen.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/mednafen.mo
+share/locale/es/LC_MESSAGES/mednafen.mo
+share/locale/ru/LC_MESSAGES/mednafen.mo
 @dirrm share/doc/mednafen

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/04 12:54:56 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/18 00:46:34 jlamwww Exp $
 include/libbtctl/btctl-discovery-source.h
 include/libbtctl/btctl.h
 include/libbtctl/bthelper.h
@@ -18,8 +18,8 @@ share/gtk-doc/html/libbtctl/index.sgml
 share/gtk-doc/html/libbtctl/libbtctl-btctl-discovery-source.html
 share/gtk-doc/html/libbtctl/libbtctl-obex-server-source.html
 share/gtk-doc/html/libbtctl/style.css
-${PKGLOCALEDIR}/locale/be/LC_MESSAGES/libbtctl.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libbtctl.mo
+share/locale/be/LC_MESSAGES/libbtctl.mo
+share/locale/en_GB/LC_MESSAGES/libbtctl.mo
 @dirrm share/gtk-doc/html/libbtctl
 @dirrm share/gtk-doc/html
 @dirrm share/gtk-doc

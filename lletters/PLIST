@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/05 22:18:54 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:35 jlamwww Exp $
 bin/lletters
 bin/wavr
 share/lletters/images/1One_Apple.png
@@ -65,6 +65,6 @@ share/lletters/sounds/Horse.wav
 share/lletters/sounds/Kangaroo.wav
 share/lletters/sounds/Tiger.1.wav
 share/lletters/sounds/Tiger.2.wav
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/lletters.mo
+share/locale/nl/LC_MESSAGES/lletters.mo
 @dirrm share/lletters/sounds
 @dirrm share/lletters/images

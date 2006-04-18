@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/26 18:03:24 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:35 jlamwww Exp $
 bin/lingoteach-gtk
 share/doc/lingoteach/img/first-start.png
 share/doc/lingoteach/img/pref-general.png
@@ -23,15 +23,15 @@ share/lingoteach/data/language.dtd
 share/lingoteach/data/language.xml
 share/lingoteach/data/lingoteach.dtd
 share/lingoteach/data/rules.en.txt
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/lingoteach.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lingoteach.mo
-${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/lingoteach.mo
-${PKGLOCALEDIR}/locale/es_ES/LC_MESSAGES/lingoteach.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/lingoteach.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/lingoteach.mo
-${PKGLOCALEDIR}/locale/id/LC_MESSAGES/lingoteach.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/lingoteach.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/lingoteach.mo
+share/locale/da/LC_MESSAGES/lingoteach.mo
+share/locale/de/LC_MESSAGES/lingoteach.mo
+share/locale/eo/LC_MESSAGES/lingoteach.mo
+share/locale/es_ES/LC_MESSAGES/lingoteach.mo
+share/locale/fr/LC_MESSAGES/lingoteach.mo
+share/locale/hu/LC_MESSAGES/lingoteach.mo
+share/locale/id/LC_MESSAGES/lingoteach.mo
+share/locale/pt_BR/LC_MESSAGES/lingoteach.mo
+share/locale/sv/LC_MESSAGES/lingoteach.mo
 @dirrm share/lingoteach/data
 @dirrm share/lingoteach
 @dirrm share/doc/lingoteach/img

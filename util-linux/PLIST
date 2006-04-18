@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/20 18:34:33 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/18 00:46:39 jlamwww Exp $
 bin/arch
 bin/cal
 bin/chkdupexe
@@ -122,22 +122,22 @@ sbin/swapoff
 sbin/swapon
 sbin/tunelp
 share/examples/util-linux/fdprm
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/et/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/util-linux.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/util-linux.mo
+share/locale/ca/LC_MESSAGES/util-linux.mo
+share/locale/cs/LC_MESSAGES/util-linux.mo
+share/locale/da/LC_MESSAGES/util-linux.mo
+share/locale/de/LC_MESSAGES/util-linux.mo
+share/locale/es/LC_MESSAGES/util-linux.mo
+share/locale/et/LC_MESSAGES/util-linux.mo
+share/locale/fi/LC_MESSAGES/util-linux.mo
+share/locale/fr/LC_MESSAGES/util-linux.mo
+share/locale/it/LC_MESSAGES/util-linux.mo
+share/locale/ja/LC_MESSAGES/util-linux.mo
+share/locale/nl/LC_MESSAGES/util-linux.mo
+share/locale/pt_BR/LC_MESSAGES/util-linux.mo
+share/locale/sl/LC_MESSAGES/util-linux.mo
+share/locale/sv/LC_MESSAGES/util-linux.mo
+share/locale/tr/LC_MESSAGES/util-linux.mo
+share/locale/uk/LC_MESSAGES/util-linux.mo
 share/misc/getopt/getopt-parse.bash
 share/misc/getopt/getopt-parse.tcsh
 share/misc/getopt/getopt-test.bash

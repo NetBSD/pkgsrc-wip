@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/02 14:53:39 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:37 jlamwww Exp $
 lib/scim-1.0/IMEngine/hangul.la
 lib/scim-1.0/SetupUI/hangul-imengine-setup.la
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/scim-hangul.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/scim-hangul.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/scim-hangul.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/scim-hangul.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/scim-hangul.mo
+share/locale/de/LC_MESSAGES/scim-hangul.mo
+share/locale/fr/LC_MESSAGES/scim-hangul.mo
+share/locale/ja/LC_MESSAGES/scim-hangul.mo
+share/locale/ko/LC_MESSAGES/scim-hangul.mo
+share/locale/zh_CN/LC_MESSAGES/scim-hangul.mo
 share/scim/icons/scim-hangul.png
 @dirrm lib/scim-1.0/SetupUI
 @dirrm lib/scim-1.0/IMEngine

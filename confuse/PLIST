@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/12 22:09:56 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:28 jlamwww Exp $
 etc/cups/certs/0
 include/confuse.h
 lib/libconfuse.la
 lib/pkgconfig/libconfuse.pc
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/confuse.mo
+share/locale/sv/LC_MESSAGES/confuse.mo
 @dirrm etc/cups/certs

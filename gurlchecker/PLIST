@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/24 05:05:21 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:34 jlamwww Exp $
 bin/gurlchecker
 share/gurlchecker/pixmaps/uc_treeview_href.png
 share/gurlchecker/pixmaps/uc_treeview_img.png
 share/gurlchecker/pixmaps/uc_treeview_unknown.png
 share/gurlchecker/ui/gurlchecker.glade
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gurlchecker.mo
-${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gurlchecker.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gurlchecker.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gurlchecker.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gurlchecker.mo
+share/locale/de/LC_MESSAGES/gurlchecker.mo
+share/locale/eo/LC_MESSAGES/gurlchecker.mo
+share/locale/es/LC_MESSAGES/gurlchecker.mo
+share/locale/fr/LC_MESSAGES/gurlchecker.mo
+share/locale/ja/LC_MESSAGES/gurlchecker.mo
 @dirrm share/gurlchecker/ui
 @dirrm share/gurlchecker/pixmaps
 @dirrm share/gurlchecker

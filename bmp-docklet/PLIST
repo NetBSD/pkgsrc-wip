@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2005/11/19 11:37:20 ianzag Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:28 jlamwww Exp $
 lib/bmp/General/libdocklet.la
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bmp-docklet.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bmp-docklet.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bmp-docklet.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bmp-docklet.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bmp-docklet.mo
+share/locale/de/LC_MESSAGES/bmp-docklet.mo
+share/locale/fr/LC_MESSAGES/bmp-docklet.mo
+share/locale/it/LC_MESSAGES/bmp-docklet.mo
+share/locale/ja/LC_MESSAGES/bmp-docklet.mo
+share/locale/pl/LC_MESSAGES/bmp-docklet.mo
 @dirrm lib/bmp/General

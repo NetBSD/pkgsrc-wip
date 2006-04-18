@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/01 11:26:04 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:38 jlamwww Exp $
 bin/scim
 bin/scim-config-agent
 bin/scim-setup
@@ -72,15 +72,15 @@ share/applications/scim-setup.desktop
 share/control-center-2.0/capplets/scim-setup.desktop
 share/examples/scim/config
 share/examples/scim/global
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/scim.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/scim.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/scim.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/scim.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/scim.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/scim.mo
-${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/scim.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/scim.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/scim.mo
+share/locale/cs/LC_MESSAGES/scim.mo
+share/locale/de/LC_MESSAGES/scim.mo
+share/locale/fr/LC_MESSAGES/scim.mo
+share/locale/it/LC_MESSAGES/scim.mo
+share/locale/ja/LC_MESSAGES/scim.mo
+share/locale/ko/LC_MESSAGES/scim.mo
+share/locale/pa/LC_MESSAGES/scim.mo
+share/locale/zh_CN/LC_MESSAGES/scim.mo
+share/locale/zh_TW/LC_MESSAGES/scim.mo
 share/pixmaps/scim-setup.png
 share/scim/icons/down.png
 share/scim/icons/full-letter.png

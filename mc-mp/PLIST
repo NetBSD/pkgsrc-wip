@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/12 14:07:28 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/04/18 00:46:35 jlamwww Exp $
 bin/mc
 bin/mcedit
 bin/mcmfmt
@@ -131,7 +131,7 @@ lib/mc/term/xterm.ti
 man/man1/mc.1
 man/man1/mcedit.1
 man/man8/mcserv.8
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/mc.mo
+share/locale/ru/LC_MESSAGES/mc.mo
 @dirrm lib/mc/term
 @dirrm lib/mc/syntax
 @dirrm lib/mc/extfs

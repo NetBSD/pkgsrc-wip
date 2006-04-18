@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/01 11:28:16 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:38 jlamwww Exp $
 bin/scim-make-table
 lib/scim-1.0/IMEngine/table.la
 lib/scim-1.0/SetupUI/table-imengine-setup.la
 man/man1/scim-make-table.1
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/scim-tables.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/scim-tables.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/scim-tables.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/scim-tables.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/scim-tables.mo
-${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/scim-tables.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/scim-tables.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/scim-tables.mo
+share/locale/de/LC_MESSAGES/scim-tables.mo
+share/locale/fr/LC_MESSAGES/scim-tables.mo
+share/locale/it/LC_MESSAGES/scim-tables.mo
+share/locale/ja/LC_MESSAGES/scim-tables.mo
+share/locale/ko/LC_MESSAGES/scim-tables.mo
+share/locale/pa/LC_MESSAGES/scim-tables.mo
+share/locale/zh_CN/LC_MESSAGES/scim-tables.mo
+share/locale/zh_TW/LC_MESSAGES/scim-tables.mo
 share/scim/icons/Amharic.png
 share/scim/icons/Arabic.png
 share/scim/icons/Array30.png

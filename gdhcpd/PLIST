@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/18 11:41:48 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:31 jlamwww Exp $
 sbin/gdhcpd
 share/applications/net-gdhcpd.desktop
 share/doc/gdhcpd/AUTHORS
 share/doc/gdhcpd/COPYING
 share/doc/gdhcpd/ChangeLog
 share/doc/gdhcpd/README
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gdhcpd.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gdhcpd.mo
+share/locale/de/LC_MESSAGES/gdhcpd.mo
+share/locale/sv/LC_MESSAGES/gdhcpd.mo
 share/pixmaps/gdhcpd.png
 share/pixmaps/gdhcpd/gdhcpd.png
 @dirrm share/pixmaps/gdhcpd

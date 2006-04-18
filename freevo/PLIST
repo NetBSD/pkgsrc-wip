@@ -1,28 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/11/28 05:01:34 dhowland Exp $
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/freevo.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/freevo.po
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/freevo.po
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/freevo.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/freevo.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/freevo.po
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/freevo.po
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/freevo.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/freevo.po
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/freevo.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/freevo.po
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/freevo.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/freevo.po
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/freevo.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/freevo.po
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/freevo.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/freevo.po
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/freevo.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/freevo.po
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/freevo.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/freevo.po
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/freevo.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/freevo.po
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/freevo.mo
+@comment $NetBSD: PLIST,v 1.5 2006/04/18 00:46:31 jlamwww Exp $
 ${PYSITELIB}/freevo/__init__.py
 ${PYSITELIB}/freevo/__init__.pyc
 ${PYSITELIB}/freevo/__init__.pyo
@@ -964,6 +940,30 @@ share/freevo/skins/main/noia.fxd
 share/freevo/skins/main/noia.jpg
 share/freevo/skins/plugins/video_details.fxd
 share/fxd/webradio.fxd
+share/locale/cs/LC_MESSAGES/freevo.mo
+share/locale/cs/LC_MESSAGES/freevo.po
+share/locale/da/LC_MESSAGES/freevo.po
+share/locale/da/LC_MESSAGES/freevo.mo
+share/locale/de/LC_MESSAGES/freevo.mo
+share/locale/de/LC_MESSAGES/freevo.po
+share/locale/es/LC_MESSAGES/freevo.po
+share/locale/es/LC_MESSAGES/freevo.mo
+share/locale/fi/LC_MESSAGES/freevo.po
+share/locale/fi/LC_MESSAGES/freevo.mo
+share/locale/fr/LC_MESSAGES/freevo.po
+share/locale/fr/LC_MESSAGES/freevo.mo
+share/locale/it/LC_MESSAGES/freevo.po
+share/locale/it/LC_MESSAGES/freevo.mo
+share/locale/nl/LC_MESSAGES/freevo.po
+share/locale/nl/LC_MESSAGES/freevo.mo
+share/locale/no/LC_MESSAGES/freevo.po
+share/locale/no/LC_MESSAGES/freevo.mo
+share/locale/pt/LC_MESSAGES/freevo.po
+share/locale/pt/LC_MESSAGES/freevo.mo
+share/locale/pt_BR/LC_MESSAGES/freevo.po
+share/locale/pt_BR/LC_MESSAGES/freevo.mo
+share/locale/sv/LC_MESSAGES/freevo.po
+share/locale/sv/LC_MESSAGES/freevo.mo
 @dirrm ${PYSITELIB}/freevo/www
 @dirrm ${PYSITELIB}/freevo/video/plugins
 @dirrm ${PYSITELIB}/freevo/video

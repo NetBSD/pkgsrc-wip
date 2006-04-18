@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/13 17:04:31 cetrox Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:32 jlamwww Exp $
 bin/gfontview
 share/gfontviewrc
 share/gnome/apps/Utilities/gfontview.desktop
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gfontview.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gfontview.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gfontview.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gfontview.mo
+share/locale/de/LC_MESSAGES/gfontview.mo
+share/locale/es/LC_MESSAGES/gfontview.mo
+share/locale/fr/LC_MESSAGES/gfontview.mo
+share/locale/ru/LC_MESSAGES/gfontview.mo
 share/pixmaps/gfontview.png
 @dirrm share/gnome/apps/Utilities

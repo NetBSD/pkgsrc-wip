@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2005/09/11 06:32:14 udontknow Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2006/04/18 00:46:33 jlamwww Exp $
 bin/gobby
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gobby.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gobby.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gobby.mo
+share/locale/de/LC_MESSAGES/gobby.mo
+share/locale/es/LC_MESSAGES/gobby.mo
+share/locale/fr/LC_MESSAGES/gobby.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/25 23:43:00 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:35 jlamwww Exp $
 bin/chvt
 bin/deallocvt
 bin/dumpkeys
@@ -23,6 +23,31 @@ bin/showconsolefont
 bin/showkey
 bin/unicode_start
 bin/unicode_stop
+man/man1/chvt.1
+man/man1/deallocvt.1
+man/man1/dumpkeys.1
+man/man1/fgconsole.1
+man/man1/kbd_mode.1
+man/man1/loadkeys.1
+man/man1/openvt.1
+man/man1/psfaddtable.1
+man/man1/psfgettable.1
+man/man1/psfstriptable.1
+man/man1/psfxtable.1
+man/man1/setleds.1
+man/man1/setmetamode.1
+man/man1/showkey.1
+man/man1/unicode_start.1
+man/man1/unicode_stop.1
+man/man5/keymaps.5
+man/man8/getkeycodes.8
+man/man8/kbdrate.8
+man/man8/loadunimap.8
+man/man8/mapscrn.8
+man/man8/resizecons.8
+man/man8/setfont.8
+man/man8/setkeycodes.8
+man/man8/showconsolefont.8
 share/kbd/consolefonts/161.cp.gz
 share/kbd/consolefonts/162.cp.gz
 share/kbd/consolefonts/163.cp.gz
@@ -545,34 +570,9 @@ share/kbd/unimaps/lat9w.uni
 share/kbd/unimaps/ruscii.uni
 share/kbd/unimaps/tcvn.uni
 share/kbd/unimaps/viscii.uni
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kbd.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kbd.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kbd.mo
-man/man1/chvt.1
-man/man1/deallocvt.1
-man/man1/dumpkeys.1
-man/man1/fgconsole.1
-man/man1/kbd_mode.1
-man/man1/loadkeys.1
-man/man1/openvt.1
-man/man1/psfaddtable.1
-man/man1/psfgettable.1
-man/man1/psfstriptable.1
-man/man1/psfxtable.1
-man/man1/setleds.1
-man/man1/setmetamode.1
-man/man1/showkey.1
-man/man1/unicode_start.1
-man/man1/unicode_stop.1
-man/man5/keymaps.5
-man/man8/getkeycodes.8
-man/man8/kbdrate.8
-man/man8/loadunimap.8
-man/man8/mapscrn.8
-man/man8/resizecons.8
-man/man8/setfont.8
-man/man8/setkeycodes.8
-man/man8/showconsolefont.8
+share/locale/es/LC_MESSAGES/kbd.mo
+share/locale/nl/LC_MESSAGES/kbd.mo
+share/locale/ru/LC_MESSAGES/kbd.mo
 @dirrm share/kbd/unimaps
 @dirrm share/kbd/keymaps/sun
 @dirrm share/kbd/keymaps/mac/include

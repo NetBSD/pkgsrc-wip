@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/02 07:09:26 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:35 jlamwww Exp $
 bin/apropos
 bin/man
 bin/man2dvi
@@ -83,25 +83,25 @@ man/sl/man1/whatis.1
 man/sl/man5/man.conf.5
 sbin/makewhatis
 share/examples/man/man.conf
-${PKGLOCALEDIR}/locale/mess.bg.cat
-${PKGLOCALEDIR}/locale/mess.cs.cat
-${PKGLOCALEDIR}/locale/mess.da.cat
-${PKGLOCALEDIR}/locale/mess.de.cat
-${PKGLOCALEDIR}/locale/mess.el.cat
-${PKGLOCALEDIR}/locale/mess.en.cat
-${PKGLOCALEDIR}/locale/mess.es.cat
-${PKGLOCALEDIR}/locale/mess.fi.cat
-${PKGLOCALEDIR}/locale/mess.fr.cat
-${PKGLOCALEDIR}/locale/mess.hr.cat
-${PKGLOCALEDIR}/locale/mess.it.cat
-${PKGLOCALEDIR}/locale/mess.ja.cat
-${PKGLOCALEDIR}/locale/mess.ko.cat
-${PKGLOCALEDIR}/locale/mess.nl.cat
-${PKGLOCALEDIR}/locale/mess.pl.cat
-${PKGLOCALEDIR}/locale/mess.pt.cat
-${PKGLOCALEDIR}/locale/mess.ro.cat
-${PKGLOCALEDIR}/locale/mess.ru.cat
-${PKGLOCALEDIR}/locale/mess.sl.cat
+share/locale/mess.bg.cat
+share/locale/mess.cs.cat
+share/locale/mess.da.cat
+share/locale/mess.de.cat
+share/locale/mess.el.cat
+share/locale/mess.en.cat
+share/locale/mess.es.cat
+share/locale/mess.fi.cat
+share/locale/mess.fr.cat
+share/locale/mess.hr.cat
+share/locale/mess.it.cat
+share/locale/mess.ja.cat
+share/locale/mess.ko.cat
+share/locale/mess.nl.cat
+share/locale/mess.pl.cat
+share/locale/mess.pt.cat
+share/locale/mess.ro.cat
+share/locale/mess.ru.cat
+share/locale/mess.sl.cat
 @dirrm share/examples/man
 @exec ${MKDIR} %D/man/sl/man8
 @dirrm man/sl/man8

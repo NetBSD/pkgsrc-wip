@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2003/07/02 08:32:29 anielski Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:38 jlamwww Exp $
 bin/cleanscore
 bin/fch.pl
 bin/slrn-pl
@@ -92,15 +92,15 @@ share/doc/slrn-pl/slrnpull/setgid.txt
 share/doc/slrn-pl/slrnpull/slrn.rc
 share/doc/slrn-pl/slrnpull/slrnpull.conf
 share/doc/slrn-pl/slrnpull/slrnpull.sh
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/slrn-pl.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/slrn-pl.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/slrn-pl.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/slrn-pl.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/slrn-pl.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/slrn-pl.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/slrn-pl.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/slrn-pl.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/slrn-pl.mo
+share/locale/da/LC_MESSAGES/slrn-pl.mo
+share/locale/de/LC_MESSAGES/slrn-pl.mo
+share/locale/es/LC_MESSAGES/slrn-pl.mo
+share/locale/fr/LC_MESSAGES/slrn-pl.mo
+share/locale/it/LC_MESSAGES/slrn-pl.mo
+share/locale/ko/LC_MESSAGES/slrn-pl.mo
+share/locale/nl/LC_MESSAGES/slrn-pl.mo
+share/locale/pl/LC_MESSAGES/slrn-pl.mo
+share/locale/ru/LC_MESSAGES/slrn-pl.mo
 share/slrn-pl/macros/add2mutt_ab.sl
 share/slrn-pl/macros/autoupdate.sl
 share/slrn-pl/macros/binpost.sl

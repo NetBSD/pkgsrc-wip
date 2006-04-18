@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/23 11:17:21 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:40 jlamwww Exp $
 bin/zphoto
 ${WX_COMMENT}bin/wxzphoto
+share/locale/ja/LC_MESSAGES/zphoto.mo
+share/locale/ja_JP.SJIS/LC_MESSAGES/zphoto.mo
 share/zphoto/doc/images/wxzphoto-linux-mini.png
 share/zphoto/doc/images/wxzphoto-linux.png
 share/zphoto/doc/images/wxzphoto-mini.png
@@ -41,5 +43,3 @@ share/zphoto/templates/default/ja/zphoto.css
 @dirrm share/zphoto/templates/default
 @dirrm share/zphoto/templates
 @dirrm share/zphoto
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/zphoto.mo
-${PKGLOCALEDIR}/locale/ja_JP.SJIS/LC_MESSAGES/zphoto.mo

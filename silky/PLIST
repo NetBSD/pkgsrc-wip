@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/10/16 21:52:13 koifren Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/18 00:46:38 jlamwww Exp $
 bin/silky
 share/doc/silky/AUTHORS
 share/doc/silky/COPYING
@@ -10,13 +10,13 @@ share/doc/silky/README.win32
 share/doc/silky/ReleaseNotes
 share/doc/silky/TODO
 share/gnome/apps/Applications/silky.desktop
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/silky.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/silky.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/silky.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/silky.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/silky.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/silky.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/silky.mo
+share/locale/de/LC_MESSAGES/silky.mo
+share/locale/fi/LC_MESSAGES/silky.mo
+share/locale/fr/LC_MESSAGES/silky.mo
+share/locale/hu/LC_MESSAGES/silky.mo
+share/locale/it/LC_MESSAGES/silky.mo
+share/locale/ru/LC_MESSAGES/silky.mo
+share/locale/sk/LC_MESSAGES/silky.mo
 share/silky/silky-channel.glade
 share/silky/silky-query.glade
 share/silky/silky.glade

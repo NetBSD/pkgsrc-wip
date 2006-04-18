@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/02 19:40:34 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:28 jlamwww Exp $
 bin/briquolo
 share/briquolo/${PKGVERSION}
 share/briquolo/briquolo.svg
@@ -103,10 +103,10 @@ share/briquolo/data/tableau.tri
 share/briquolo/data/vie.ftx
 share/briquolo/data/vuesubjective.png
 share/briquolo/data/vuesubjective.xcf
-${PKGLOCALEDIR}/locale/be/LC_MESSAGES/briquolo.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/briquolo.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/briquolo.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/briquolo.mo
+share/locale/be/LC_MESSAGES/briquolo.mo
+share/locale/fr/LC_MESSAGES/briquolo.mo
+share/locale/nl/LC_MESSAGES/briquolo.mo
+share/locale/ru/LC_MESSAGES/briquolo.mo
 @exec ${MKDIR} %D/share/briquolo/tableau/old
 @dirrm share/briquolo/tableau/old
 @exec ${MKDIR} %D/share/briquolo/tableau/new

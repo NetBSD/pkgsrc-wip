@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/16 23:28:55 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:32 jlamwww Exp $
 bin/gksu
 bin/gksudo
 bin/gksuexec
@@ -9,22 +9,22 @@ share/applications/gksu.desktop
 share/applications/gksuexec.desktop
 share/gconf/schemas/gksu.schemas
 share/gksu/gksu-migrate-conf.sh
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gksu.mo
-${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gksu.mo
+share/locale/ca/LC_MESSAGES/gksu.mo
+share/locale/cs/LC_MESSAGES/gksu.mo
+share/locale/da/LC_MESSAGES/gksu.mo
+share/locale/de/LC_MESSAGES/gksu.mo
+share/locale/es/LC_MESSAGES/gksu.mo
+share/locale/fr/LC_MESSAGES/gksu.mo
+share/locale/hu/LC_MESSAGES/gksu.mo
+share/locale/nb/LC_MESSAGES/gksu.mo
+share/locale/nl/LC_MESSAGES/gksu.mo
+share/locale/pl/LC_MESSAGES/gksu.mo
+share/locale/pt/LC_MESSAGES/gksu.mo
+share/locale/pt_BR/LC_MESSAGES/gksu.mo
+share/locale/ro/LC_MESSAGES/gksu.mo
+share/locale/ru/LC_MESSAGES/gksu.mo
+share/locale/sk/LC_MESSAGES/gksu.mo
+share/locale/xh/LC_MESSAGES/gksu.mo
 share/pixmaps/gksu-icon.png
 share/pixmaps/gksu-root-terminal.png
 @dirrm share/pixmaps

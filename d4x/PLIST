@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/13 06:12:58 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:30 jlamwww Exp $
 bin/d4x
 share/d4x/LICENSE
 share/d4x/TROUBLES
 share/d4x/ftpsearch.xml
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/d4x.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/d4x.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/d4x.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/d4x.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/d4x.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/d4x.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/d4x.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/d4x.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/d4x.mo
+share/locale/bg/LC_MESSAGES/d4x.mo
+share/locale/de/LC_MESSAGES/d4x.mo
+share/locale/es/LC_MESSAGES/d4x.mo
+share/locale/fr/LC_MESSAGES/d4x.mo
+share/locale/hu/LC_MESSAGES/d4x.mo
+share/locale/it/LC_MESSAGES/d4x.mo
+share/locale/pt_BR/LC_MESSAGES/d4x.mo
+share/locale/ru/LC_MESSAGES/d4x.mo
+share/locale/uk/LC_MESSAGES/d4x.mo
 @dirrm share/d4x

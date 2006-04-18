@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/01 21:56:58 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:35 jlamwww Exp $
 bin/autolives.pl
 bin/avi_encoder.py
 bin/build-lives-rfx-plugin
@@ -172,14 +172,14 @@ share/lives/themes/pinks/frame.jpg
 share/lives/themes/pinks/main.jpg
 share/lives/themes/sunburst/frame.jpg
 share/lives/themes/sunburst/main.jpg
-${PKGLOCALEDIR}/locale/cz/LC_MESSAGES/lives.mo
-${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/lives.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/lives.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/lives.mo
-${PKGLOCALEDIR}/locale/nl_NL/LC_MESSAGES/lives.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/lives.mo
-@dirrm ${PKGLOCALEDIR}/locale/cz/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/cz
+share/locale/cz/LC_MESSAGES/lives.mo
+share/locale/de_DE/LC_MESSAGES/lives.mo
+share/locale/fr/LC_MESSAGES/lives.mo
+share/locale/ja/LC_MESSAGES/lives.mo
+share/locale/nl_NL/LC_MESSAGES/lives.mo
+share/locale/pt_BR/LC_MESSAGES/lives.mo
+@dirrm share/locale/cz/LC_MESSAGES
+@dirrm share/locale/cz
 @dirrm share/lives/themes/sunburst
 @dirrm share/lives/themes/pinks
 @dirrm share/lives/themes/greenish

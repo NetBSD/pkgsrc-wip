@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2003/10/01 23:37:01 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:35 jlamwww Exp $
 bin/apropos
 bin/catman
 bin/lexgrog
@@ -55,16 +55,16 @@ man/man8/catman.8
 man/man8/mandb.8
 sbin/accessdb
 share/examples/man-db/man_db.conf
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/man-db.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/man-db.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/man-db.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/man-db.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/man-db.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/man-db.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/man-db.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/man-db.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/man-db.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/man-db.mo
+share/locale/ca/LC_MESSAGES/man-db.mo
+share/locale/cs/LC_MESSAGES/man-db.mo
+share/locale/da/LC_MESSAGES/man-db.mo
+share/locale/de/LC_MESSAGES/man-db.mo
+share/locale/es/LC_MESSAGES/man-db.mo
+share/locale/fr/LC_MESSAGES/man-db.mo
+share/locale/it/LC_MESSAGES/man-db.mo
+share/locale/ja/LC_MESSAGES/man-db.mo
+share/locale/pt_BR/LC_MESSAGES/man-db.mo
+share/locale/sv/LC_MESSAGES/man-db.mo
 @dirrm share/examples/man-db
 @dirrm man/ja_JP.eucJP/man8
 @dirrm man/ja_JP.eucJP/man5

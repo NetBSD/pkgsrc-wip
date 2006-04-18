@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/23 05:59:54 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/18 00:46:36 jlamwww Exp $
 bin/gsttest
 bin/monkey-bubble
 bin/monkey-srv
@@ -9,8 +9,8 @@ lib/libmonkey.la
 lib/libmonkeyutil.la
 lib/libnetcltmonkey.la
 share/applications/monkey-bubble.desktop
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/monkey-bubble.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/monkey-bubble.mo
+share/locale/de/LC_MESSAGES/monkey-bubble.mo
+share/locale/fr/LC_MESSAGES/monkey-bubble.mo
 share/monkey-bubble/gfx/banana.svg
 share/monkey-bubble/gfx/bubbles/bubble_01.svg
 share/monkey-bubble/gfx/bubbles/bubble_02.svg

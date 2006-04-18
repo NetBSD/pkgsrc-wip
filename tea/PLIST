@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/13 16:06:51 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:39 jlamwww Exp $
 bin/tea
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/tea.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/tea.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/tea.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/tea.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/tea.mo
-${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/tea.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/tea.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/tea.mo
-${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/tea.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/tea.mo
+share/locale/cs/LC_MESSAGES/tea.mo
+share/locale/de/LC_MESSAGES/tea.mo
+share/locale/es/LC_MESSAGES/tea.mo
+share/locale/fr/LC_MESSAGES/tea.mo
+share/locale/ja/LC_MESSAGES/tea.mo
+share/locale/lv/LC_MESSAGES/tea.mo
+share/locale/pl/LC_MESSAGES/tea.mo
+share/locale/ru/LC_MESSAGES/tea.mo
+share/locale/sr/LC_MESSAGES/tea.mo
+share/locale/uk/LC_MESSAGES/tea.mo
 share/tea/doc/AUTHORS
 share/tea/doc/COPYING
 share/tea/doc/ChangeLog

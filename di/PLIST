@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/29 04:18:26 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:30 jlamwww Exp $
 bin/di
 man/man1/di.1
-${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/di.po
-${PKGLOCALEDIR}/locale/en_US/LC_MESSAGES/di.po
+share/locale/de_DE/LC_MESSAGES/di.po
+share/locale/en_US/LC_MESSAGES/di.po

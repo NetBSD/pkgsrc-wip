@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/08 22:14:03 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/18 00:46:34 jlamwww Exp $
 bin/help2man
 info/help2man.info
 lib/hacklocaledir.so
 man/man1/help2man.1
 man/fr/man1/help2man.1
 man/pl/man1/help2man.1
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/help2man.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/help2man.mo
+share/locale/fr/LC_MESSAGES/help2man.mo
+share/locale/pl/LC_MESSAGES/help2man.mo

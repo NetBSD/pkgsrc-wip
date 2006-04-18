@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/11/30 09:40:08 leonardschmidt Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/04/18 00:46:28 jlamwww Exp $
 bin/bmpx
 bin/hash_index
 bin/hash_table
@@ -155,16 +155,16 @@ share/bmpx/ui/main.ui
 share/bmpx/ui/playlist.ui
 share/bmpx/ui/trayicon.ui
 share/icons/hicolor/48x48/apps/bmpx.png
-${PKGLOCALEDIR}/locale/af/LC_MESSAGES/bmpx.mo
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/bmpx.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bmpx.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/bmpx.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bmpx.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/bmpx.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bmpx.mo
-${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/bmpx.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bmpx.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/bmpx.mo
+share/locale/af/LC_MESSAGES/bmpx.mo
+share/locale/bg/LC_MESSAGES/bmpx.mo
+share/locale/de/LC_MESSAGES/bmpx.mo
+share/locale/el/LC_MESSAGES/bmpx.mo
+share/locale/fr/LC_MESSAGES/bmpx.mo
+share/locale/hu/LC_MESSAGES/bmpx.mo
+share/locale/ja/LC_MESSAGES/bmpx.mo
+share/locale/lt/LC_MESSAGES/bmpx.mo
+share/locale/pl/LC_MESSAGES/bmpx.mo
+share/locale/ru/LC_MESSAGES/bmpx.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @dirrm share/bmpx/ui
 @dirrm share/bmpx/skins/default

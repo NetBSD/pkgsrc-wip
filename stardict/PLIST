@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/04 00:42:50 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:39 jlamwww Exp $
 bin/stardict
 lib/bonobo/servers/GNOME_Stardict.server
 man/man1/stardict.1
@@ -35,16 +35,16 @@ share/gnome/help/stardict/zh_TW/figures/stardict_notification_area.png
 share/gnome/help/stardict/zh_TW/legal.xml
 share/gnome/help/stardict/zh_TW/stardict.xml
 share/idl/GNOME_Stardict.idl
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/stardict.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/stardict.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/stardict.mo
-${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/stardict.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/stardict.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/stardict.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/stardict.mo
-${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/stardict.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/stardict.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/stardict.mo
+share/locale/cs/LC_MESSAGES/stardict.mo
+share/locale/de/LC_MESSAGES/stardict.mo
+share/locale/hu/LC_MESSAGES/stardict.mo
+share/locale/mk/LC_MESSAGES/stardict.mo
+share/locale/ru/LC_MESSAGES/stardict.mo
+share/locale/sk/LC_MESSAGES/stardict.mo
+share/locale/uk/LC_MESSAGES/stardict.mo
+share/locale/vi/LC_MESSAGES/stardict.mo
+share/locale/zh_CN/LC_MESSAGES/stardict.mo
+share/locale/zh_TW/LC_MESSAGES/stardict.mo
 share/omf/stardict/stardict-C.omf
 share/omf/stardict/stardict-mk.omf
 share/omf/stardict/stardict-ru.omf

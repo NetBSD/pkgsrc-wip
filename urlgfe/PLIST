@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/07/24 20:46:23 cetrox Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/18 00:46:39 jlamwww Exp $
 bin/urlgfe
 share/applications/urlgfe.desktop
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/urlgfe.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/urlgfe.mo
+share/locale/zh_CN/LC_MESSAGES/urlgfe.mo
+share/locale/zh_TW/LC_MESSAGES/urlgfe.mo
 share/pixmaps/urlgfe-icon.png

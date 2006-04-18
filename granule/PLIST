@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/16 09:05:16 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:33 jlamwww Exp $
 bin/granule
 share/applications/granule.desktop
 share/granule/granule
@@ -34,10 +34,10 @@ share/granule/pixmaps/thumbdown.xpm
 share/granule/pixmaps/thumbup.xpm
 share/granule/xml/cardfile.dtd
 share/granule/xml/granule.dtd
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/granule.mo
-${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/granule.mo
-${PKGLOCALEDIR}/locale/ja_JP/LC_MESSAGES/granule.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/granule.mo
+share/locale/bg/LC_MESSAGES/granule.mo
+share/locale/de_DE/LC_MESSAGES/granule.mo
+share/locale/ja_JP/LC_MESSAGES/granule.mo
+share/locale/ru/LC_MESSAGES/granule.mo
 share/pixmaps/granule.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/granule/xml

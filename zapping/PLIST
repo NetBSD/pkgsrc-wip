@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/24 23:48:57 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:40 jlamwww Exp $
 bin/zapping
 bin/zapping_remote
 lib/zapping/plugins/libalirc.zapping.la
@@ -24,11 +24,11 @@ share/gnome/help/zapping/C/figures/zapzilla.png
 share/gnome/help/zapping/C/settings.xml
 share/gnome/help/zapping/C/zapping.xml
 share/gnome/help/zapping/C/zapzilla.xml
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/zapping.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/zapping.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/zapping.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/zapping.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/zapping.mo
+share/locale/de/LC_MESSAGES/zapping.mo
+share/locale/es/LC_MESSAGES/zapping.mo
+share/locale/fr/LC_MESSAGES/zapping.mo
+share/locale/it/LC_MESSAGES/zapping.mo
+share/locale/nl/LC_MESSAGES/zapping.mo
 share/omf/zapping/zapping-C.omf
 share/pixmaps/zapping/gnome-digital-camera.png
 share/pixmaps/zapping/gnome-grecord.png

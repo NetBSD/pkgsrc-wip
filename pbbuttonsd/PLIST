@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/25 11:13:30 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:36 jlamwww Exp $
 bin/pbbcmd
 bin/pbbuttonsd
 etc/pbbuttonsd.conf
@@ -30,9 +30,9 @@ lib/libpbb.a
 man/man1/pbbcmd.1
 man/man1/pbbuttonsd.1
 man/man5/pbbuttonsd.conf.5
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/pbbuttonsd.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/pbbuttonsd.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/pbbuttonsd.mo
+share/locale/ca/LC_MESSAGES/pbbuttonsd.mo
+share/locale/de/LC_MESSAGES/pbbuttonsd.mo
+share/locale/es/LC_MESSAGES/pbbuttonsd.mo
 @dirrm etc/power/scripts.d
 @dirrm etc/power/event.d
 @dirrm etc/power
