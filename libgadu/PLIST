@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/18 21:51:43 matthewluckie Exp $
+include/libgadu-config.h
+include/libgadu.h
+lib/libgadu.a
+lib/libgadu.so
+lib/libgadu.so.3
+lib/libgadu.so.3.3
+lib/pkgconfig/libgadu.pc
