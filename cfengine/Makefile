@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2006/04/19 11:14:38 ahallmann Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/19 15:14:56 ahallmann Exp $
 #
 
 .include "Makefile.common"
 
-PKG_OPTIONS_VAR+=       PKG_OPTIONS.cfengine2
+PKG_OPTIONS_VAR=       	PKG_OPTIONS.cfengine2
 PKG_SUPPORTED_OPTIONS=  nopthread static
 .include "../../mk/bsd.options.mk"
 
-COMMENT=	Automate configuration and administration of large systems
+COMMENT=	Automate configuration and administration of large systems, networks
 
 GNU_CONFIGURE=		YES
 PTHREAD_OPTS+=		require
@@ -18,6 +18,13 @@ CONFIGURE_ARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 
 RCD_SCRIPTS=		cfexecd cfservd cfenvd
+
+# PR#33028
+# Cfengine needs flex not lex.
+# On netbsd flex=lex, so USE_TOOLS doesn't do anything.
+# But other platforms i.e. Solaris need this.
+
+USE_TOOLS+=		flex
 
 .if (!empty(PKG_OPTIONS:Mnopthread))
 CONFIGURE_ARGS+= --without-pthreads
