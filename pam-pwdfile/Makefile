@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/04/17 11:19:36 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/19 10:13:05 bartoszkuzma Exp $
 #
 
 DISTNAME=		pam_pwdfile-0.99
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://cpbotha.net/files/pam_pwdfile/
 
@@ -11,27 +11,32 @@ MAINTAINER=		bartosz@atom.eu.org
 HOMEPAGE=		http://cpbotha.net/pam_pwdfile.html
 COMMENT=		PAM module for authenticating with text password files
 
+USE_LIBTOOL=		yes
+
 pre-build:
 	${CP} files/_pam_macros.h ${WRKSRC}
 
 do-build:
 	cd ${WRKSRC} && \
-	${CC} -fPIC -Wall -c pam_pwdfile.c && \
-	${CC} -fPIC -Wall -c bigcrypt.c && \
-	${CC} -fPIC -Wall -DHIGHFIRST -D'MD5Name(x)=Good##x' \
+	${SHLIBTOOL} --mode=compile ${CC} -c pam_pwdfile.c -o pam_pwdfile.o && \
+	${SHLIBTOOL} --mode=compile ${CC} -c bigcrypt.c -o bigcrypt.o && \
+	${SHLIBTOOL} --mode=compile ${CC} -DHIGHFIRST -D'MD5Name(x)=Good##x' \
 		-c md5.c -o md5_good.o && \
-	${CC} -fPIC -Wall -D'MD5Name(x)=Broken##x' \
+	${SHLIBTOOL} --mode=compile ${CC} -D'MD5Name(x)=Broken##x' \
 		-c md5.c -o md5_broken.o && \
-	${CC} -fPIC -Wall -D'MD5Name(x)=Good##x' \
+	${SHLIBTOOL} --mode=compile ${CC} -D'MD5Name(x)=Good##x' \
 		-c md5_crypt.c -o md5_crypt_good.o && \
-	${CC} -fPIC -Wall -D'MD5Name(x)=Broken##x' \
+	${SHLIBTOOL} --mode=compile ${CC} -D'MD5Name(x)=Broken##x' \
 		-c md5_crypt.c -o md5_crypt_broken.o && \
-	${LD} -x --shared -o pam_pwdfile.so \
-		pam_pwdfile.o md5_good.o md5_crypt_good.o md5_broken.o \
-		md5_crypt_broken.o bigcrypt.o -lpam -lcrypt
+	${SHLIBTOOL} --mode=link ${CC} -avoid-version -module \
+		-o pam_pwdfile.la -lpam -lcrypt -rpath ${PREFIX}/lib/security \
+		pam_pwdfile.lo md5_good.lo md5_crypt_good.lo md5_broken.lo \
+		md5_crypt_broken.lo bigcrypt.lo
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/pam_pwdfile.so ${PREFIX}/lib/security
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/security
+	${SHLIBTOOL} --mode=install ${INSTALL_PROGRAM} \
+		-c ${WRKSRC}/pam_pwdfile.la ${PREFIX}/lib/security
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pam-pwdfile
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/pam-pwdfile
 	${INSTALL_DATA} ${WRKSRC}/changelog ${PREFIX}/share/doc/pam-pwdfile
