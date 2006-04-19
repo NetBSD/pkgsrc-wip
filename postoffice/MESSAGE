@@ -1,0 +1,34 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2006/04/19 14:58:04 elge Exp $
+
+- Edit ${PKG_SYSCONFDIR}/postoffice.cf to your taste
+  this example can also be found at
+  ${PREFIX}/share/examples/postoffice/postoffice.cf
+
+- Back-up /etc/mailer.conf to /etc/mailer.conf.sendmail
+- Copy ${EXAMPLESDIR}/mailer.conf to /etc/mailer.conf
+
+- Edit /etc/mail/aliases to your taste
+- run "newaliases"
+
+- If using POSTOFFICE_VIRTUAL=YES, edit
+	/etc/virtual/domainname/passwd
+  (next, I will also make the vpasswd/valiases pkg)
+	/etc/virtual/domain.tld/aliases
+  and run newaliases domain.tld
+
+- If sendmail (or postfix) is running, stop the daemons:
+  run '/etc/rc.d/sendmail stop' and '/etc/rc.d/smmsp stop'.
+- Copy ${LOCALBASE}/${RCD_SCRIPTS_EXAMPLEDIR}/postoffice to /etc/rc.d
+- In /etc/rc.conf set 'sendmail=NO', 'smmsp=NO', 'postoffice=YES' and
+  postoffice_flags to some sane value.  for example "-bd -q6"
+- Run '/etc/rc.d/postoffice start' to start the daemon
+
+- Configuring log rotation, not mentioning postoffice "audit" and "tcpwrappers"
+  features, is dependent on personal taste and the version
+  of NetBSD in use.  See weekly.conf(5) and newsyslog(8)
+
+Also note:
+
+- Try `pkg_info postoffice` to see which features are enabled in this build
+===========================================================================
