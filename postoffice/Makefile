@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2006/04/19 14:58:04 elge Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/19 16:56:08 elge Exp $
 #
 
 DISTNAME=		postoffice-1.3.pre3
-PKGNAME=		postoffice-1.3.3
+PKGNAME=		postoffice-1.3
 CATEGORIES=		mail
 MASTER_SITES=		http://www.tsfr.org/~orc/Code/postoffice/
 
