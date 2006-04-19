@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/04/18 21:51:43 matthewluckie Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/19 21:05:13 matthewluckie Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBGADU_BUILDLINK3_MK:=	${LIBGADU_BUILDLINK3_MKi}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgadu}
 BUILDLINK_PACKAGES+=	libgadu
 
 .if !empty(LIBGADU_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libgadu+=	libgadu>=20051229
-BUILDLINK_RECOMMENDED.libgadu+=	libgadu>=20051229
+BUILDLINK_API_DEPENDS.libgadu+=	libgadu>=20051229
+BUILDLINK_ABI_DEPENDS.libgadu+=	libgadu>=20051229
 BUILDLINK_PKGSRCDIR.libgadu?=	../../wip/libgadu
 .endif	# LIBGADU_BUILDLINK3_MK
 
