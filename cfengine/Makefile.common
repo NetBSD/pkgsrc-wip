@@ -1,0 +1,14 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2006/04/19 10:30:20 ahallmann Exp $
+#
+
+CFENGINE_VERSION= 2.1.16
+DISTNAME=	cfengine-${CFENGINE_VERSION}
+CATEGORIES=	sysutils net
+MASTER_SITES=	ftp://ftp.iu.hio.no/pub/cfengine/ \
+		http://sunsite.utk.edu/ftp/pub/cfengine/cfengine-ftp/
+
+MAINTAINER=	hallmann@ahatec.de
+HOMEPAGE=	http://www.cfengine.org/
+
+DISTINFO_FILE=	${.CURDIR}/distinfo
+PATCHDIR=	${.CURDIR}/patches
