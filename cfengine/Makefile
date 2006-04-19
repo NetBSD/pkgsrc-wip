@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/19 10:30:20 ahallmann Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/19 11:14:38 ahallmann Exp $
 #
 
 .include "Makefile.common"
@@ -17,7 +17,6 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 
-USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		cfexecd cfservd cfenvd
 
 .if (!empty(PKG_OPTIONS:Mnopthread))
