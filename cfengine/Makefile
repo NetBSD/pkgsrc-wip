@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2006/04/19 15:14:56 ahallmann Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/19 20:38:31 ahallmann Exp $
 #
 
 .include "Makefile.common"
 
 PKG_OPTIONS_VAR=       	PKG_OPTIONS.cfengine2
-PKG_SUPPORTED_OPTIONS=  nopthread static
+PKG_SUPPORTED_OPTIONS=	static nopthread
+PKG_SUGGESTED_OPTIONS=  static
+
 .include "../../mk/bsd.options.mk"
 
 COMMENT=	Automate configuration and administration of large systems, networks
@@ -50,7 +52,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cfengine
 	${INSTALL_DATA} ${WRKSRC}/inputs/*.example \
 		${PREFIX}/share/examples/cfengine/
-	${INSTALL_DATA_DIR} /var/cfengine/inputs
+	${INSTALL_DATA_DIR} ${VARBASE}/cfengine/inputs
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
