@@ -1,5 +1,6 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2006/04/19 20:38:31 ahallmann Exp $
+$NetBSD: MESSAGE,v 1.3 2006/04/20 07:08:27 ahallmann Exp $
+$Id: MESSAGE,v 1.3 2006/04/20 07:08:27 ahallmann Exp $
 
 To set up cfengine, install sysutils/cfengine2-doc and see:
 ${PREFIX}/share/doc/html/cfengine/cfengine-Tutorial.html
