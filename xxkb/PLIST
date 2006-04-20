@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2006/04/20 10:47:01 cheusov Exp $
+bin/xxkb
+lib/X11/app-defaults/XXkb
+@exec ${MKDIR} share/xxkb
+share/xxkb/en15.xpm
+share/xxkb/en48.xpm
+share/xxkb/ru48.xpm
+share/xxkb/ru15.xpm
+share/xxkb/su48.xpm
+share/xxkb/su15.xpm
+share/xxkb/ua48.xpm
+share/xxkb/ua15.xpm
+share/xxkb/by15.xpm
+share/xxkb/by48.xpm
+@dirrm share/xxkb
+@exec ${MKDIR} share/doc/xxkb
+share/doc/xxkb/LICENSE
+share/doc/xxkb/README.koi8
+${PKGMANDIR}/man1/xxkb.1
+@dirrm share/doc/xxkb
