@@ -1,0 +1,25 @@
+On Darwin:
+
+gcc -pipe -O2 -Wall -Wpointer-arith -no-cpp-precomp     -I/Users/minskim/pkg/include -I/usr/X11R6/include   -D__DARWIN__                                 -DNO_ALLOCA -DCSRG_BASED      -DAPPDEFDIR=\"/Users/minskim/pkg/lib/X11/app-defaults\" 
+-DPIXMAPDIR=\"/Users/minskim/pkg/share/xxkb\"  -no-cpp-precomp -I/Users/minskim/pkg/include -c resource.c
+resource.c: In function 'ParseConfig':
+resource.c:100: warning: implicit declaration of function 'sprintf'
+resource.c:100: warning: incompatible implicit declaration of built-in function 'sprintf'
+resource.c: In function 'GetRes':
+resource.c:177: warning: incompatible implicit declaration of built-in function 'sprintf'
+resource.c: In function 'GetRes3':
+resource.c:190: warning: incompatible implicit declaration of built-in function 'sprintf'
+resource.c: In function 'GetPixmapRes':
+resource.c:219: warning: incompatible implicit declaration of built-in function 'sprintf'
+resource.c:223: warning: implicit declaration of function 'load_image'
+resource.c: In function 'GetConfig':
+resource.c:293: warning: implicit declaration of function 'printf'
+resource.c:293: warning: incompatible implicit declaration of built-in function 'printf'
+resource.c: In function 'err_malloc':
+resource.c:363: warning: incompatible implicit declaration of built-in function 'printf'
+resource.c: In function 'load_image':
+resource.c:378: warning: incompatible implicit declaration of built-in function 'printf'
+resource.c:387: error: label at end of compound statement
+resource.c: In function 'SaveAppInConfig':
+resource.c:449: warning: incompatible implicit declaration of built-in function 'sprintf'
+*** Error code 1
