@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/16 11:20:13 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/20 13:36:43 cheusov Exp $
 #
 
 DISTNAME=		rsyslog-1.0.4
@@ -26,8 +26,8 @@ RCD_SCRIPTS=		rsyslogd
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/syslogd ${PREFIX}/sbin/rsyslogd
-	${INSTALL_MAN} ${WRKSRC}/rsyslogd.8 ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/rsyslog.conf.5 ${PREFIX}/man/man5
+	${INSTALL_MAN} ${WRKSRC}/rsyslogd.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/rsyslog.conf.5 ${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA_DIR} ${EGDIR} ${PREFIX}/share/doc/rsyslog
 	${INSTALL_DATA} ${WRKSRC}/createDB.sql ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/sample.conf ${EGDIR}/rsyslog.conf

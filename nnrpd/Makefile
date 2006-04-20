@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:03 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/20 13:36:39 cheusov Exp $
 
 DISTNAME=		inn-1.7.2.insync-1.1d
 PKGNAME=		nnrpd-1.7.2
@@ -82,10 +82,10 @@ do-install:
 		${PREFIX}/share/examples/nnrpd/
 	${INSTALL_DATA} ${WRKSRC}/samples/moderators \
 		${PREFIX}/share/examples/nnrpd/
-	${INSTALL_MAN} ${WRKSRC}/doc/dbz.3  ${PREFIX}/man/man3/
-	${INSTALL_MAN} ${WRKSRC}/doc/nnrp.access.5 ${PREFIX}/man/man5/
-	${INSTALL_MAN} ${WRKSRC}/doc/moderators.5 ${PREFIX}/man/man5/
-	${INSTALL_MAN} ${WRKSRC}/doc/nnrpd.8  ${PREFIX}/man/man8/
+	${INSTALL_MAN} ${WRKSRC}/doc/dbz.3  ${PREFIX}/${PKGMANDIR}/man3/
+	${INSTALL_MAN} ${WRKSRC}/doc/nnrp.access.5 ${PREFIX}/${PKGMANDIR}/man5/
+	${INSTALL_MAN} ${WRKSRC}/doc/moderators.5 ${PREFIX}/${PKGMANDIR}/man5/
+	${INSTALL_MAN} ${WRKSRC}/doc/nnrpd.8  ${PREFIX}/${PKGMANDIR}/man8/
 
 .include "../../wip/c-news/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"

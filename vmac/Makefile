@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:16:11 tvierling Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/20 13:36:44 cheusov Exp $
 
 DISTNAME=	vMac-${VMAC_VERSION}-src
 PKGNAME=	vmac-${VMAC_VERSION}
@@ -32,7 +32,7 @@ post-extract:
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/vMac ${PREFIX}/bin
-		${INSTALL_MAN} ${WRKSRC}/vmac.0 ${PREFIX}/man/man1
+		${INSTALL_MAN} ${WRKSRC}/vmac.0 ${PREFIX}/${PKGMANDIR}/man1
 		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vMac
 		${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/vMac
 		${INSTALL_DATA} ${WRKSRC}/README.rom ${PREFIX}/share/doc/vMac

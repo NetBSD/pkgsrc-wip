@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/10/31 08:09:30 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.11 2006/04/20 13:36:43 cheusov Exp $
 #
 
 DISTNAME=		scite166
@@ -22,7 +22,7 @@ do-build:
 
 do-install:
 	cd ${WRKSRC}/scite/gtk && ${GMAKE} GTK2=1 install
-	${INSTALL_MAN} ${WRKSRC}/scite/doc/scite.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/scite/doc/scite.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"

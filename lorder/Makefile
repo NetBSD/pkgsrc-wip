@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/11 17:23:54 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/20 13:36:38 cheusov Exp $
 #
 
 # XXX This version is the CVS revision number from NetBSD's
@@ -37,6 +37,6 @@ post-patch:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/lorder ${PREFIX}/bin
-	${INSTALL_MAN} ${FILESDIR}/lorder.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${FILESDIR}/lorder.1 ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"

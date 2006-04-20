@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/14 01:28:08 jlamwww Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/20 13:36:43 cheusov Exp $
 #
 
 DISTNAME=	plugger-5.0
@@ -20,7 +20,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/plugger-${PKGVERSION} ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/plugger-controller ${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/plugger.so ${PREFIX}/lib/
-	${INSTALL_MAN} ${WRKSRC}/plugger.7 ${PREFIX}/man/man7/
+	${INSTALL_MAN} ${WRKSRC}/plugger.7 ${PREFIX}/${PKGMANDIR}/man7/
 	${INSTALL_DATA} ${WRKSRC}/pluggerrc ${EGDIR}/
 
 .include "../../mk/x11.buildlink3.mk"

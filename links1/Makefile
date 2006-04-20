@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/04/09 14:02:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/20 13:36:38 cheusov Exp $
 #
 
 DISTNAME=		links-1.00pre16
@@ -15,7 +15,7 @@ CONFIGURE_ENV+=		ac_cv_path_PKG_CONFIG=""
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/links ${PREFIX}/bin/links1
-	${INSTALL_MAN} ${WRKSRC}/links.1 ${PREFIX}/man/man1/links1.1
+	${INSTALL_MAN} ${WRKSRC}/links.1 ${PREFIX}/${PKGMANDIR}/man1/links1.1
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

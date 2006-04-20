@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/03 14:13:13 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/20 13:36:35 cheusov Exp $
 
 DISTNAME=		copytape
 PKGNAME=		${DISTNAME}-1.0
@@ -23,7 +23,7 @@ EXTRACT_CMD=            ${GZCAT} ${DOWNLOADED_DISTFILE} | ${PREFIX}/bin/${GNU_PR
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/copytape ${PREFIX}/bin/copytape
-	${INSTALL_MAN} ${WRKSRC}/copytape.1 ${PREFIX}/man/man1/copytape.1
-	${INSTALL_MAN} ${WRKSRC}/copytape.5 ${PREFIX}/man/man5/copytape.5
+	${INSTALL_MAN} ${WRKSRC}/copytape.1 ${PREFIX}/${PKGMANDIR}/man1/copytape.1
+	${INSTALL_MAN} ${WRKSRC}/copytape.5 ${PREFIX}/${PKGMANDIR}/man5/copytape.5
 
 .include "../../mk/bsd.pkg.mk"

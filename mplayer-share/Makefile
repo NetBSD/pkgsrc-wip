@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/03 00:40:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/20 13:36:38 cheusov Exp $
 
 .include "Makefile.common"
 
@@ -22,7 +22,7 @@ post-extract:
 	${FIND} ${WRKDIR} -type d -name CVS | ${XARGS} ${RM} -rf
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/DOCS/man/en/mplayer.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/DOCS/man/en/mplayer.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer/DOCS
 	${INSTALL_DATA} ${WRKSRC}/etc/codecs.conf ${PREFIX}/share/mplayer

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/14 01:28:03 jlamwww Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/20 13:36:41 cheusov Exp $
 #
 
 DISTNAME=	oops-1.5.24
@@ -72,8 +72,8 @@ post-install:
 	for m in koi-alt.tab koi-iso.tab koi-win.tab;			\
 	do ${INSTALL_DATA} ${WRKSRC:Q}/src/tables/"$$m" ${EGDIR:Q}/tables; \
 	done
-	${INSTALL_MAN} ${WRKSRC:Q}/doc/oops.8 ${PREFIX:Q}/man/man8
-	${INSTALL_MAN} ${WRKSRC:Q}/doc/oopsctl.8 ${PREFIX:Q}/man/man8
+	${INSTALL_MAN} ${WRKSRC:Q}/doc/oops.8 ${PREFIX:Q}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC:Q}/doc/oopsctl.8 ${PREFIX:Q}/${PKGMANDIR}/man8
 
 .include "../../mk/compiler.mk"
 .include "../../mk/pthread.buildlink3.mk"

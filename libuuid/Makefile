@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.9 2006/02/11 19:32:25 rillig Exp $
-# $Id: Makefile,v 1.9 2006/02/11 19:32:25 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/20 13:36:38 cheusov Exp $
+# $Id: Makefile,v 1.10 2006/04/20 13:36:38 cheusov Exp $
 
 .include "../../wip/e2fsprogs/Makefile.common"
 
@@ -24,7 +24,7 @@ post-build:
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/misc/uuidgen ${PREFIX:Q}/bin/uuidgen
-	${INSTALL_MAN} ${WRKSRC:Q}/misc/uuidgen.1 ${PREFIX:Q}/man/man1/uuidgen.1
+	${INSTALL_MAN} ${WRKSRC:Q}/misc/uuidgen.1 ${PREFIX:Q}/${PKGMANDIR}/man1/uuidgen.1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

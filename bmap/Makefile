@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/20 13:36:35 cheusov Exp $
 #
 
 DISTNAME=		bmap-1.0.17
@@ -14,7 +14,7 @@ USE_TOOLS+= gmake
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bmap ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/slacker ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/man/man2/libbmap.2 ${PREFIX}/man/man2/
+	${INSTALL_MAN} ${WRKSRC}/man/man2/libbmap.2 ${PREFIX}/${PKGMANDIR}/man2/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bmap
 	${INSTALL_DATA} ${WRKSRC}/bmap.sgml ${PREFIX}/share/doc/bmap/
 	${INSTALL_DATA} ${WRKSRC}/bmap-invoke.sgml ${PREFIX}/share/doc/bmap/

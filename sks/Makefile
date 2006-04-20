@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/06 07:18:31 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/20 13:36:44 cheusov Exp $
 #
 
 DISTNAME=	sks-1.0.9
@@ -33,6 +33,6 @@ post-install:
 	@cd ${WRKSRC} && ${MAKE_PROGRAM} sks.8
 	${INSTALL_PROGRAM} ${WRKSRC}/sks ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/sks_add_mail ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/sks.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/sks.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"

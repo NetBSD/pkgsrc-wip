@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/14 01:28:11 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/20 13:36:43 cheusov Exp $
 
 DISTNAME=	plucker_parser-1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_parser//}
@@ -52,7 +52,7 @@ do-install:
 		${PREFIX}/${PYSITELIB}/PyPlucker/helper
 	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/${PYSITELIB}/PyPlucker
 	${PYTHONBIN} -O ${PYCOMPILEALL} ${PREFIX}/${PYSITELIB}/PyPlucker
-	${INSTALL_MAN} ${WRKSRC}/*.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/*.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${EGDIR}
 .for f in exclusionlist.txt home.html pluckerrc.sample
 	${INSTALL_DATA} ${WRKSRC}/${f} ${EGDIR}

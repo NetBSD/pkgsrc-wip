@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/03 13:01:53 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/20 13:36:44 cheusov Exp $
 #
 
 # TODO : wrong name ?
@@ -20,7 +20,7 @@ SUBST_SED.etc+=-e 's,/etc,${PKG_SYSCONFDIR},'
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ttysnoop ${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/ttysnoops ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/ttysnoop.8 ${PREFIX}/man/man8/
+	${INSTALL_MAN} ${WRKSRC}/ttysnoop.8 ${PREFIX}/${PKGMANDIR}/man8/
 	${INSTALL_DATA_DIR} ${VARBASE}/spool/ttysnoop
 
 ONLY_FOR_PLATFORM=	Linux-*-*

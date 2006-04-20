@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/01/02 09:06:21 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/20 13:36:42 cheusov Exp $
 
 DISTNAME=	pkg_fake-0.3
 CATEGORIES=	pkgtools
@@ -26,6 +26,6 @@ do-extract:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC:Q}/pkg_fake ${PREFIX:Q}/sbin/
-	${INSTALL_MAN} ${WRKSRC:Q}/pkg_fake.1 ${PREFIX:Q}/man/man1/
+	${INSTALL_MAN} ${WRKSRC:Q}/pkg_fake.1 ${PREFIX:Q}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"

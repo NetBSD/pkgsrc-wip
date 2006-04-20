@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:38 cheusov Exp $
 #
 
 DISTNAME=		memdump-1.01
@@ -14,6 +14,6 @@ BUILD_TARGET=		what
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/memdump ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/memdump.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/memdump.1 ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"

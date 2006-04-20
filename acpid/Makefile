@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/14 01:27:57 jlamwww Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/20 13:36:34 cheusov Exp $
 #
 
 DISTNAME=		acpid-1.0.4
@@ -18,7 +18,7 @@ USE_TOOLS+=		gmake
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/acpid ${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/acpi_listen ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/acpid.8 ${PREFIX}/man/man8/
+	${INSTALL_MAN} ${WRKSRC}/acpid.8 ${PREFIX}/${PKGMANDIR}/man8/
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/acpid
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/acpid/
 	${CP} -rf ${WRKSRC}/samples/* ${PREFIX}/share/examples/acpid/

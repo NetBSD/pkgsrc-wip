@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:43 cheusov Exp $
 #
 
 DISTNAME=		sara-5.0.5b
@@ -47,7 +47,7 @@ SUBST_SED.defpath+= -e 's,config,${PREFIX}/etc/sara/,g'
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/sara ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/sara.8  ${PREFIX}/man/man8/
+	${INSTALL_MAN} ${WRKSRC}/sara.8  ${PREFIX}/${PKGMANDIR}/man8/
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/sara/
 	${INSTALL_DATA} ${WRKSRC}/config/* ${PREFIX}/etc/sara/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sara/

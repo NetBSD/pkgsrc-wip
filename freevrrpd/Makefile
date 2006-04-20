@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5 2006/03/14 01:27:59 jlamwww Exp $
+# $Id: Makefile,v 1.6 2006/04/20 13:36:36 cheusov Exp $
 # New ports collection makefile for:	freevrrpd
 # Date created:				Tue Jan 29 18:44:25 EST 2002
 # Whom:					Sebastien Petit <spe@phear.org>
@@ -19,7 +19,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/freevrrpd ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/freevrrpd.conf.sample ${PREFIX}/etc
 	${INSTALL_SCRIPT} ${FILESDIR}/freevrrpd.sh ${PREFIX}/etc/rc.d
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.8 ${PREFIX}/${PKGMANDIR}/man8
 
 
 .include "../../mk/bsd.pkg.mk"

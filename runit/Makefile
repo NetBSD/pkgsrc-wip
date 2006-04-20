@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/01/07 09:04:03 akihabara Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:43 cheusov Exp $
 
 DISTNAME=	runit-1.3.1
 CATEGORIES=	sysutils
@@ -29,7 +29,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${CMDDIR}/* ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/man/*.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/man/*.8 ${PREFIX}/${PKGMANDIR}/man8
 	cd ${WRKSRC}/etc && ${PAX} -rwppm . ${EXAMPLEDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCDIR}

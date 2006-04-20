@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:11:04 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:36 cheusov Exp $
 #
 
 DISTNAME=		dia2code-0.8.1
@@ -30,7 +30,7 @@ pre-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dia2code/dia2code ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/dia2code.1 ${PREFIX}/man/man1/dia2code.1
+	${INSTALL_MAN} ${WRKSRC}/dia2code.1 ${PREFIX}/${PKGMANDIR}/man1/dia2code.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dia2code
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dia2code/README
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/06 07:18:30 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/20 13:36:44 cheusov Exp $
 
 DISTNAME=	sid-milter-0.2.5
 CATEGORIES=	mail
@@ -42,7 +42,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sid-milter
 
 	${INSTALL_LIB} ${WRKSRC}/${SIDWORK}/libar/libar.a ${PREFIX}/lib
-	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/libar/ar.0 ${PREFIX}/man/cat3/
+	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/libar/ar.0 ${PREFIX}/${PKGMANDIR}/cat3/
 	${INSTALL_PROGRAM} ${WRKSRC}/${SIDWORK}/sid-filter/sid-filter \
 		${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/sid-filter/sid-filter.0 \

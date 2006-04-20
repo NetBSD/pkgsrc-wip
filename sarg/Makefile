@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/14 01:28:13 jlamwww Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/20 13:36:43 cheusov Exp $
 
 DISTNAME=		sarg-2.0.9
 CATEGORIES=		www
@@ -64,7 +64,7 @@ pre-configure:
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/sarg ${PREFIX}/sbin
-		${INSTALL_MAN} ${WRKSRC}/sarg.1 ${PREFIX}/man/man1
+		${INSTALL_MAN} ${WRKSRC}/sarg.1 ${PREFIX}/${PKGMANDIR}/man1
 		${INSTALL_DATA_DIR} ${EGDIR}
 		${INSTALL_DATA_DIR} ${DATADIR}/fonts
 		${INSTALL_DATA_DIR} ${DATADIR}/images

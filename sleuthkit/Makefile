@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:15:36 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/20 13:36:44 cheusov Exp $
 #
 
 DISTNAME=		sleuthkit-1.66
@@ -17,7 +17,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/mactime ${PREFIX}/bin/
 	${RM} ${WRKSRC}/bin/mactime
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/* ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sorter/
 	${INSTALL_DATA} ${WRKSRC}/share/sorter/* ${PREFIX}/share/sorter
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sleuthkit/

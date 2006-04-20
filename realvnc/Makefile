@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/01/17 10:20:47 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/20 13:36:43 cheusov Exp $
 #
 
 DISTNAME=		vnc-4_1_1-unixsrc
@@ -66,11 +66,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/Xvnc ${PREFIX}/bin/Xvnc
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/modules/extensions
 	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/vnc/module/vnc.so ${PREFIX}/lib/modules/extensions/vnc.so
-	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.man ${PREFIX}/man/man1/vncviewer.1
-	${INSTALL_MAN} ${WRKSRC}/x0vncserver/x0vncserver.man ${PREFIX}/man/man1/x0vncserver.1
-	${INSTALL_MAN} ${WRKSRC}/vncpasswd/vncpasswd.man ${PREFIX}/man/man1/vncpasswd.1
-	${INSTALL_MAN} ${WRKSRC}/vncconfig/vncconfig.man ${PREFIX}/man/man1/vncconfig.1
-	${INSTALL_MAN} ${WRKSRC}/vncserver.man ${PREFIX}/man/man1/vncserver.1
+	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.man ${PREFIX}/${PKGMANDIR}/man1/vncviewer.1
+	${INSTALL_MAN} ${WRKSRC}/x0vncserver/x0vncserver.man ${PREFIX}/${PKGMANDIR}/man1/x0vncserver.1
+	${INSTALL_MAN} ${WRKSRC}/vncpasswd/vncpasswd.man ${PREFIX}/${PKGMANDIR}/man1/vncpasswd.1
+	${INSTALL_MAN} ${WRKSRC}/vncconfig/vncconfig.man ${PREFIX}/${PKGMANDIR}/man1/vncconfig.1
+	${INSTALL_MAN} ${WRKSRC}/vncserver.man ${PREFIX}/${PKGMANDIR}/man1/vncserver.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/vnc/classes
 	${INSTALL_DATA} ${WRKSRC}/../common/javabin/* ${PREFIX}/share/vnc/classes
 

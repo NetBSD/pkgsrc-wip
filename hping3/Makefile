@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:36 cheusov Exp $
 #
 
 DISTNAME=		hping3-alpha-2
@@ -14,7 +14,7 @@ HAS_CONFIGURE=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hping3 ${PREFIX}/sbin/
-	${INSTALL_MAN} ${WRKSRC}/docs/hping3.8 ${PREFIX}/man/man8/
+	${INSTALL_MAN} ${WRKSRC}/docs/hping3.8 ${PREFIX}/${PKGMANDIR}/man8/
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

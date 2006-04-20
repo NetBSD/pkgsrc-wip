@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 22:27:46 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/20 13:36:39 cheusov Exp $
 #
 
 DISTNAME=		omniORB-4.0.4
@@ -36,7 +36,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.pdf ${PREFIX}/share/doc/omniORB/
 	${INSTALL_DATA} ${WRKSRC}/doc/*.ps ${PREFIX}/share/doc/omniORB/
 	${INSTALL_DATA} ${WRKSRC}/doc/omniORB/* ${PREFIX}/share/doc/omniORB/omniORB/
-	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/python/extension.mk"

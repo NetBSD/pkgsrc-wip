@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:16:12 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/20 13:36:44 cheusov Exp $
 #
 
 DISTNAME=	wimon-0.3
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	bin man/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wimon ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/wimon.8 ${PREFIX}/man/man8/wimon.8
+	${INSTALL_MAN} ${WRKSRC}/wimon.8 ${PREFIX}/${PKGMANDIR}/man8/wimon.8
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

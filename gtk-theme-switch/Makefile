@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/27 16:25:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/20 13:36:36 cheusov Exp $
 #
 
 DISTNAME=		gtk-theme-switch-1.0.1
@@ -13,7 +13,7 @@ USE_TOOLS+=		gmake
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/switch ${PREFIX}/bin/gtk-theme-switch
-	${INSTALL_MAN} ${WRKSRC}/switch.1 ${PREFIX}/man/man1/gtk-theme-switch.1
+	${INSTALL_MAN} ${WRKSRC}/switch.1 ${PREFIX}/${PKGMANDIR}/man1/gtk-theme-switch.1
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

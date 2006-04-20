@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/28 20:50:10 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/20 13:36:38 cheusov Exp $
 
 # Version based on CVS revision number.
 DISTNAME=		mkdep-1.16
@@ -17,7 +17,7 @@ do-extract:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mkdep ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/mkdep.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/mkdep.1 ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../pkgtools/libnbcompat/buildlink3.mk"
 

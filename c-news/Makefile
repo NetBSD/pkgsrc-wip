@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/14 01:27:58 jlamwww Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/20 13:36:35 cheusov Exp $
 
 DISTNAME=	c-news
 PKGNAME=	c-news-CR-7
@@ -121,13 +121,13 @@ do-install:
 	${CHOWN} news:news ${CNEWSBIN:Q}/input/newsspool
 	${CHMOD} 6555 ${CNEWSBIN:Q}/input/newsspool
 .for i in ${MAN1}
-	${INSTALL_MAN} ${WRKSRC:Q}/man/${i:Q} ${PREFIX:Q}/man/man1/${i:R:Q}.1
+	${INSTALL_MAN} ${WRKSRC:Q}/man/${i:Q} ${PREFIX:Q}/${PKGMANDIR}/man1/${i:R:Q}.1
 .endfor
 .for i in ${MAN5}
-	${INSTALL_MAN} ${WRKSRC:Q}/man/${i:Q} ${PREFIX:Q}/man/man5/${i:R:Q}.5
+	${INSTALL_MAN} ${WRKSRC:Q}/man/${i:Q} ${PREFIX:Q}/${PKGMANDIR}/man5/${i:R:Q}.5
 .endfor
 .for i in ${MAN8}
-	${INSTALL_MAN} ${WRKSRC:Q}/man/${i:Q} ${PREFIX:Q}/man/man8/${i:R:Q}.8
+	${INSTALL_MAN} ${WRKSRC:Q}/man/${i:Q} ${PREFIX:Q}/${PKGMANDIR}/man8/${i:R:Q}.8
 .endfor
 	# install docs:
 	${INSTALL_MAN_DIR} ${PREFIX:Q}/share/doc/cnews

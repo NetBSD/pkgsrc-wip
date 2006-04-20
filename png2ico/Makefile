@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/20 13:36:43 cheusov Exp $
 #
 
 DISTNAME=		png2ico-src-2002-12-08
@@ -14,7 +14,7 @@ WRKSRC=			${WRKDIR}/png2ico
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/png2ico ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/png2ico.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/png2ico.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

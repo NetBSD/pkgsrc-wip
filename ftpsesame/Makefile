@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/14 01:27:59 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/20 13:36:36 cheusov Exp $
 
 DISTNAME=		ftpsesame-0.95
 CATEGORIES=		net
@@ -16,8 +16,8 @@ OWN_DIRS=		${VARBASE}/chroot/proxy
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ftpsesame ${PREFIX}/sbin/ftpsesame
-	${INSTALL_MAN} ${WRKSRC}/ftpsesame.8 ${PREFIX}/man/man8/ftpsesame.8
-	${INSTALL_MAN} ${WRKSRC}/ftpsesame.cat8 ${PREFIX}/man/cat8/ftpsesame.0
+	${INSTALL_MAN} ${WRKSRC}/ftpsesame.8 ${PREFIX}/${PKGMANDIR}/man8/ftpsesame.8
+	${INSTALL_MAN} ${WRKSRC}/ftpsesame.cat8 ${PREFIX}/${PKGMANDIR}/cat8/ftpsesame.0
 
 .include "../../security/pflkm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

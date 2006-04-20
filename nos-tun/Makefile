@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:32 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:39 cheusov Exp $
 #
 
 DISTNAME=	nos-tun
@@ -20,6 +20,6 @@ INSTALLATION_DIRS=	sbin man/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nos-tun ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/nos-tun.8 ${PREFIX}/man/man8/nos-tun.8
+	${INSTALL_MAN} ${WRKSRC}/nos-tun.8 ${PREFIX}/${PKGMANDIR}/man8/nos-tun.8
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/02 16:39:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/20 13:36:44 cheusov Exp $
 
 .include "Makefile.common"
 
@@ -29,7 +29,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/rcheck.conf ${PREFIX}/share/examples/smtprc
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/smtprc
 	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/smtprc
-	${INSTALL_MAN} ${WRKSRC}/smtprc.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/smtprc.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

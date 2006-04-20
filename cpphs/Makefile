@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/14 15:51:13 emil_s Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/20 13:36:35 cheusov Exp $
 #
 
 DISTNAME=		cpphs-1.1
@@ -15,7 +15,7 @@ do-build:
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/cpphs ${PREFIX}/bin/cpphs
-	@${INSTALL_MAN} ${WRKSRC}/docs/cpphs.1 ${PREFIX}/man/man1
+	@${INSTALL_MAN} ${WRKSRC}/docs/cpphs.1 ${PREFIX}/${PKGMANDIR}/man1
 
 
 .include "../../lang/ghc/buildlink3.mk"

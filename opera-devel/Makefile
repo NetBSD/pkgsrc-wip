@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/14 01:28:06 jlamwww Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/20 13:36:42 cheusov Exp $
 
 DISTNAME=		opera-9.0alpha2
 CATEGORIES=		www
@@ -122,7 +122,7 @@ do-install:
 	@${ECHO}
 
 post-install:
-	@${INSTALL_MAN} ${WRKSRC}/man/opera.1 ${PREFIX}/man/man1
+	@${INSTALL_MAN} ${WRKSRC}/man/opera.1 ${PREFIX}/${PKGMANDIR}/man1
 .endif
 
 # regenerate distinfo for all ports supported by this package

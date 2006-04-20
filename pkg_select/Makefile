@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/01/20 23:20:52 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/20 13:36:43 cheusov Exp $
 #
 
 DISTNAME=	pkg_select-20051209
@@ -34,7 +34,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC:Q}/${PKGBASE:Q}.conf.example ${EXAMPLEDIR:Q}
 	${INSTALL_DATA} ${WRKSRC:Q}/mirrors.cvs ${PREFIX:Q}/share/pkg_select
 	${INSTALL_DATA} ${WRKSRC:Q}/mirrors.ftp ${PREFIX:Q}/share/pkg_select
-	${INSTALL_MAN} ${WRKSRC:Q}/pkg_select.1 ${PREFIX:Q}/man/man1
+	${INSTALL_MAN} ${WRKSRC:Q}/pkg_select.1 ${PREFIX:Q}/${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch

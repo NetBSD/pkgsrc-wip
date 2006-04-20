@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/09 21:44:19 blef Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:44 cheusov Exp $
 
 .include "../../wip/smtprc/Makefile.common"
 
@@ -25,6 +25,6 @@ pre-install:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/gsmtprc.new ${PREFIX}/bin/gsmtprc
-	${INSTALL_MAN} ${WRKSRC}/gsmtprc.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/gsmtprc.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

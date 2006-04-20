@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/28 21:08:32 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/20 13:36:37 cheusov Exp $
 #
 
 DISTNAME=	igal-1.4
@@ -25,7 +25,7 @@ post-patch:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/igal ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/igal.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/igal.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/igal
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/igal
 	cd ${WRKSRC} && \

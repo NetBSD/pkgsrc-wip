@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/28 17:07:23 ppostma Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/20 13:36:43 cheusov Exp $
 #
 
 DISTNAME=		relaydb-1.7
@@ -14,7 +14,7 @@ INSTALLATION_DIRS=	bin man/man8 man/cat8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/relaydb ${PREFIX}/bin/relaydb
-	${INSTALL_MAN} ${WRKSRC}/relaydb.8 ${PREFIX}/man/man8/relaydb.8
-	${INSTALL_MAN} ${WRKSRC}/relaydb.cat8 ${PREFIX}/man/cat8/relaydb.cat8
+	${INSTALL_MAN} ${WRKSRC}/relaydb.8 ${PREFIX}/${PKGMANDIR}/man8/relaydb.8
+	${INSTALL_MAN} ${WRKSRC}/relaydb.cat8 ${PREFIX}/${PKGMANDIR}/cat8/relaydb.cat8
 
 .include "../../mk/bsd.pkg.mk"

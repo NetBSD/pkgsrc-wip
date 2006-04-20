@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/20 13:36:39 cheusov Exp $
 #
 
 DISTNAME=		netkit-tftp-0.17
@@ -14,8 +14,8 @@ HAS_CONFIGURE=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tftp/tftp ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/tftp/tftp.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/tftp/tftp.1 ${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_PROGRAM} ${WRKSRC}/tftpd/tftpd ${PREFIX}/sbin/in.tftpd
-	${INSTALL_MAN} ${WRKSRC}/tftpd/tftpd.8 ${PREFIX}/man/man8/
+	${INSTALL_MAN} ${WRKSRC}/tftpd/tftpd.8 ${PREFIX}/${PKGMANDIR}/man8/
 
 .include "../../mk/bsd.pkg.mk"

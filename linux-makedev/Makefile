@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/14 01:28:01 jlamwww Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/20 13:36:38 cheusov Exp $
 #
 
 DISTNAME=		makedev_2.3.1.orig
@@ -32,7 +32,7 @@ post-patch:
 		&& ${MV} ${WRKSRC}/MAKEDEV.tmp ${WRKSRC}/MAKEDEV
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/MAKEDEV.man ${PREFIX}/man/man8/MAKEDEV.8
+	${INSTALL_MAN} ${WRKSRC}/MAKEDEV.man ${PREFIX}/${PKGMANDIR}/man8/MAKEDEV.8
 	${INSTALL_SCRIPT} ${WRKSRC}/MAKEDEV ${PREFIX}/sbin/
 
 .include "../../mk/bsd.pkg.mk"

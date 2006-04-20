@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/09/28 20:50:11 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/20 13:36:43 cheusov Exp $
 #
 
 DISTNAME=		rarbsd-3.3.0
@@ -25,7 +25,7 @@ DATA_FILES=		file_id.diz license.txt order.htm rar.txt \
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rar ${PREFIX}/bin/rar3
 	${INSTALL_PROGRAM} ${WRKSRC}/unrar ${PREFIX}/bin/unrar3
-	${INSTALL_MAN} ${WRKSRC}/rar.txt ${PREFIX}/man/cat1/rar3.1
+	${INSTALL_MAN} ${WRKSRC}/rar.txt ${PREFIX}/${PKGMANDIR}/cat1/rar3.1
 	${INSTALL_DATA} ${WRKSRC}/rarfiles.lst ${PREFIX}/etc/rarfiles.lst
 	${INSTALL_DATA} ${WRKSRC}/default.sfx ${PREFIX}/lib/default.sfx
 	${INSTALL_DATA_DIR} ${PREFIX}/share/rar3

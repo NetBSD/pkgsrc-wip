@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:26 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/20 13:36:35 cheusov Exp $
 #
 
 DISTNAME=		compare-1.11
@@ -13,8 +13,8 @@ USE_TOOLS+=	gmake
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/compare/OBJ/*/compare ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/compare/compare.1 ${PREFIX}/man/man1/
-	${INSTALL_MAN} ${WRKSRC}/man/man4/makefiles.4 ${PREFIX}/man/man4/
-	${INSTALL_MAN} ${WRKSRC}/man/man4/makerules.4 ${PREFIX}/man/man4/
+	${INSTALL_MAN} ${WRKSRC}/compare/compare.1 ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/man/man4/makefiles.4 ${PREFIX}/${PKGMANDIR}/man4/
+	${INSTALL_MAN} ${WRKSRC}/man/man4/makerules.4 ${PREFIX}/${PKGMANDIR}/man4/
 
 .include "../../mk/bsd.pkg.mk"

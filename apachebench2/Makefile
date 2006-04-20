@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/14 01:27:58 jlamwww Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/20 13:36:35 cheusov Exp $
 
 # XXX This uses the version of apache2 distfile instead of
 # XXX the AP_AB_BASEREVISION from the support/ab.c source.
@@ -25,7 +25,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/support/ab ${PREFIX}/sbin/apachebench2
-	${INSTALL_MAN} ${WRKSRC}/docs/man/ab.8 ${PREFIX}/man/man8/apachebench2.8
+	${INSTALL_MAN} ${WRKSRC}/docs/man/ab.8 ${PREFIX}/${PKGMANDIR}/man8/apachebench2.8
 
 .include "../../www/apache2/Makefile.common"
 .include "../../security/openssl/buildlink3.mk"
