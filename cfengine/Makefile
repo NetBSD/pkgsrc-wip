@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2006/04/20 06:54:31 ahallmann Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/20 07:02:41 ahallmann Exp $
 #
 
 .include "Makefile.common"
 
-PKG_OPTIONS_VAR=       	PKG_OPTIONS.cfengine2
+PKG_OPTIONS_VAR=	PKG_OPTIONS.cfengine2
 PKG_SUPPORTED_OPTIONS=	static cfengine-nothread
-PKG_SUGGESTED_OPTIONS=  static
+PKG_SUGGESTED_OPTIONS=	static
 
 .include "../../mk/bsd.options.mk"
 
@@ -16,8 +16,8 @@ PTHREAD_OPTS+=		require
 
 BUILD_DEFS+=		USE_INET6
 
-CONFIGURE_ARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4}
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4:Q}
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl:Q}
 
 RCD_SCRIPTS=		cfexecd cfservd cfenvd
 
@@ -47,12 +47,12 @@ BUILDLINK_DEPMETHOD.openssl=build
 .endif
 
 post-install:
-	${INSTALL_MAN_DIR} ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/doc/*.8 ${PREFIX}/man/man8
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cfengine
-	${INSTALL_DATA} ${WRKSRC}/inputs/*.example \
-		${PREFIX}/share/examples/cfengine/
-	${INSTALL_DATA_DIR} ${VARBASE}/cfengine/inputs
+	${INSTALL_MAN_DIR} ${PREFIX:Q}/man/man8
+	${INSTALL_MAN} ${WRKSRC:Q}/doc/*.8 ${PREFIX:Q}/man/man8
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/cfengine
+	${INSTALL_DATA} ${WRKSRC:Q}/inputs/*.example \
+		${PREFIX:Q}/share/examples/cfengine/
+	${INSTALL_DATA_DIR:Q} ${VARBASE:Q}/cfengine/inputs
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
