@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/04/20 11:38:12 poppnk Exp $
+
+SHA1 (rootcheck-0.7.tar.gz) = 8f0fb792185892867182ef3fc5b600ce58517388
+RMD160 (rootcheck-0.7.tar.gz) = 365e34545da053003cd380e74f983dba573280cd
+Size (rootcheck-0.7.tar.gz) = 42488 bytes

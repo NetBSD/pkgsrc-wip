@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/20 11:38:12 poppnk Exp $
+bin/ossec-rootcheck
+share/doc/rootcheck/README
+share/rootcheck/db/rootkit_files.txt
+share/rootcheck/db/rootkit_trojans.txt
+share/rootcheck/rootcheck.conf
+@dirrm share/rootcheck/db
+@dirrm share/rootcheck
+@dirrm share/doc/rootcheck
