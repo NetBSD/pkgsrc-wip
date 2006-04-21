@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/16 13:16:51 obache Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/21 02:55:00 obache Exp $
 #
 
 DISTNAME=	emacs-22.0.50
@@ -46,6 +46,10 @@ CONFIGURE_ARGS+=	--with-x-toolkit=athena
 .else
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
 .endif
+
+# build PATH in the dumped emacs is not a problem
+CHECK_WRKREF_SKIP+=	${PREFIX}/bin/emacs
+CHECK_WRKREF_SKIP+=	${PREFIX}/bin/emacs-${PKGVERSION}
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
