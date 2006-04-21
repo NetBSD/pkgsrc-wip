@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2006/04/19 23:05:42 cheusov Exp $
-share/doc/dictem/README
-share/doc/dictem/NEWS
+@comment $NetBSD: PLIST,v 1.2 2006/04/21 06:08:23 cheusov Exp $
 share/doc/dictem/COPYING
 share/doc/dictem/ChangeLog
+share/doc/dictem/NEWS
+share/doc/dictem/README
 ${EMACS_LISPPREFIX}/dictem.el
 ${EMACS_LISPPREFIX}/dictem.elc
 @dirrm share/doc/dictem
