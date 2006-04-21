@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/21 04:26:40 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/21 16:33:38 jeremy-c-reed Exp $
 #
 
 DISTNAME=		liblbxutil-1.0.0
@@ -19,5 +19,5 @@ GNU_CONFIGURE=		yes
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 
-.include "../../devel/zlib/buildlink3.mk
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
