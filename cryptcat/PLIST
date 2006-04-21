@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/21 10:08:29 poppnk Exp $
+bin/cryptcat
+share/doc/cryptcat/Credits
+share/doc/cryptcat/README
+share/doc/cryptcat/README.cryptcat
+@dirrm share/doc/cryptcat
