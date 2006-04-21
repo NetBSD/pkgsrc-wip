@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/04/18 18:27:50 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.27 2006/04/21 16:31:58 jeremy-c-reed Exp $
 #
 
 # todo: do PLIST again
@@ -37,7 +37,7 @@ CONFIGURE_ENV+=		XTHREADS_LIBS=${BUILDLINK_LDADD.pthread}
 .include "../../wip/libXau/buildlink3.mk"
 .include "../../wip/libXdmcp/buildlink3.mk"
 .include "../../wip/xcmiscproto/buildlink3.mk"
-.include "../../wip/xextproto/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../wip/xf86bigfontproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../wip/xtrans/buildlink3.mk"
