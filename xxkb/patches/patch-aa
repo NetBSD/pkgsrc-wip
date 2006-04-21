@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2006/04/21 06:18:15 cheusov Exp $
+
+--- resource.c.orig	2006-04-21 09:16:41.000000000 +0300
++++ resource.c
+@@ -4,6 +4,7 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <ctype.h>
++#include <stdio.h>
+ 
+ #include "wlist.h"
+ #include "xxkb.h"
