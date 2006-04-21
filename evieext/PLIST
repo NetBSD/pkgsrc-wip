@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/21 04:20:15 jeremy-c-reed Exp $
+include/X11/extensions/Xeviestr.h
+lib/pkgconfig/evieproto.pc
+@dirrm include/X11/extensions
