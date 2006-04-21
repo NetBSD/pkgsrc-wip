@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/04/21 07:43:24 jeremy-c-reed Exp $
+
+--- hw/xfree86/os-support/bsd/Makefile.in.orig	2006-04-21 00:22:42.000000000 -0700
++++ hw/xfree86/os-support/bsd/Makefile.in	2006-04-21 00:23:01.000000000 -0700
+@@ -519,7 +519,7 @@
+ 
+ 
+ # FIXME: NetBSD Aperture defines (configure.ac)
+-AM_CFLAGS = -DUSESTDRES -DUSE_DEV_IO $(XORG_CFLAGS) @SERVER_DEFINES@ @LOADER_DEFINES@
++AM_CFLAGS = -DUSESTDRES $(XORG_CFLAGS) @SERVER_DEFINES@ @LOADER_DEFINES@
+ INCLUDES = $(XORG_INCS)
+ libbsd_la_SOURCES = \
+ 	$(srcdir)/../shared/at_scancode.c \
