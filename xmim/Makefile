@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:16:18 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/21 07:31:48 cheusov Exp $
 #
 
 DISTNAME=		mim-1.2
@@ -19,7 +19,7 @@ post-extract:
 	${RM} -f ${WRKSRC}/config.cache
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/docs/xmim.1 ${PREFIX}/man/man1/xmim.1
+	${INSTALL_DATA} ${WRKSRC}/docs/xmim.1 ${PREFIX}/${PKGMANDIR}/man1/xmim.1
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

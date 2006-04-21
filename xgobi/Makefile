@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 14:04:02 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/21 07:31:48 cheusov Exp $
 #
 
 DISTNAME=		xgobi
@@ -26,7 +26,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/${PROGRAM} ${PREFIX}/bin
 .endfor
 .for MAN in xgobi.1 xgvis.1
-	${INSTALL_DATA} ${WRKSRC}/manpages/${MAN} ${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/manpages/${MAN} ${PREFIX}/${PKGMANDIR}/man1
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGNAME}
 .for DOC in Changes Readme.install Readme.S Copyright

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/04/20 13:36:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/21 07:31:47 cheusov Exp $
 
 .include "Makefile.common"
 
@@ -16,7 +16,7 @@ CVS_MODULE.mplayer=	main
 
 .include "../../wip/mk/cvs-package.mk"
 
-INSTALLATION_DIRS=	man/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-extract:
 	${FIND} ${WRKDIR} -type d -name CVS | ${XARGS} ${RM} -rf

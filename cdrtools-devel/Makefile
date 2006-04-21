@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/09 21:02:05 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/21 07:31:46 cheusov Exp $
 
 DISTNAME=	cdrtools-2.01.01a07
 CATEGORIES=	sysutils
@@ -45,7 +45,7 @@ MESSAGE_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV:Q}
 MESSAGE_SUBST+=	CDRECORD_CONF=${CDRECORD_CONF:Q}
 .endif
 
-INSTALLATION_DIRS=	bin man/man1 man/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
 SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	post-patch

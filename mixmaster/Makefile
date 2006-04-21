@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/22 22:51:07 tvierling Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/21 07:31:47 cheusov Exp $
 #
 # XXX WIP: only installs parts necessary for client operation.
 # Server parts still in work (need to add informational texts into
@@ -61,7 +61,7 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Src/mix ${PREFIX}/bin/mix
-	${INSTALL_DATA} ${WRKSRC}/mix.1 ${PREFIX}/man/man1/mix.1
+	${INSTALL_DATA} ${WRKSRC}/mix.1 ${PREFIX}/${PKGMANDIR}/man1/mix.1
 	${INSTALL_DATA_DIR} ${egdir}
 	${INSTALL_DATA} ${WRKSRC}/conf.eg/* ${egdir}/
 

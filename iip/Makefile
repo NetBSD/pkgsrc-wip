@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/22 22:51:07 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/21 07:31:47 cheusov Exp $
 #
 
 DISTNAME=		iip-1.1.0
@@ -19,6 +19,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/isproxy ${PREFIX}/bin/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/iip
 	${INSTALL_DATA} ${WRKSRC}/src/node.ref ${PREFIX}/share/examples/iip/
-	${INSTALL_DATA} ${WRKSRC}/doc/isproxy.1 ${PREFIX}/man/man1/
+	${INSTALL_DATA} ${WRKSRC}/doc/isproxy.1 ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"

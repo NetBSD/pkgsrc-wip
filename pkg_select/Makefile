@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/04/20 13:36:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.24 2006/04/21 07:31:48 cheusov Exp $
 #
 
 DISTNAME=	pkg_select-20051209
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* Darwin-*-* DragonFly-*-*
 WRKSRC=			${WRKDIR}/pkg_select
 NO_CONFIGURE=		yes
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 

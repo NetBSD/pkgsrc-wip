@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:39 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/21 07:31:47 cheusov Exp $
 #
 
 DISTNAME=	nos-tun
@@ -16,7 +16,7 @@ ONLY_FOR_PLATFORM=      FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
 
 WRKSRC=		${WRKDIR}/nos-tun
 
-INSTALLATION_DIRS=	sbin man/man8
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nos-tun ${PREFIX}/sbin

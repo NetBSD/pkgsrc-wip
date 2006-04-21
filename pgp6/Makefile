@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/22 22:51:07 tvierling Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/21 07:31:47 cheusov Exp $
 #
 
 DISTNAME=		pgpsrc658unix
@@ -31,7 +31,7 @@ post-extract:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/clients/pgp/cmdline/pgp ${PREFIX}/bin/pgp6
-	${INSTALL_DATA} ${WRKSRC}/clients/pgp/cmdline/packaging/pgp-6.0/man/man1/pgp.1 ${PREFIX}/man/man1/pgp6.1
+	${INSTALL_DATA} ${WRKSRC}/clients/pgp/cmdline/packaging/pgp-6.0/man/man1/pgp.1 ${PREFIX}/${PKGMANDIR}/man1/pgp6.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pgp6
 	${INSTALL_DATA} ${WRKSRC}/clients/pgp/cmdline/packaging/pgp-6.0/docs/* ${PREFIX}/share/doc/pgp6/
 

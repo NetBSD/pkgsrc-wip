@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:02 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/21 07:31:47 cheusov Exp $
 #
 
 DISTNAME=		mim-1.2
@@ -15,7 +15,7 @@ DEPENDS+=		mtv>=1.2.5:../../graphics/mtv
 GNU_CONFIGURE=		yes
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/docs/mim.1 ${PREFIX}/man/man1/mim.1
+	${INSTALL_DATA} ${WRKSRC}/docs/mim.1 ${PREFIX}/${PKGMANDIR}/man1/mim.1
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

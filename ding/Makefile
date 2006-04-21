@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/12 23:51:16 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/21 07:31:47 cheusov Exp $
 
 DISTNAME=	ding-1.2
 CATEGORIES=	x11
@@ -26,6 +26,6 @@ NO_BUILD=	yes
 do-install:
 	 ${CP} ${WRKSRC}/ding ${PREFIX}/bin/;
 	 ${CP} ${WRKSRC}/ger-eng.txt ${PREFIX}/share/dict/;
-	 ${CP} ${WRKSRC}/ding.1 ${PREFIX}/man/man1/;
+	 ${CP} ${WRKSRC}/ding.1 ${PREFIX}/${PKGMANDIR}/man1/;
 
 .include "../../mk/bsd.pkg.mk"

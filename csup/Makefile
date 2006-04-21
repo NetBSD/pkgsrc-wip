@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/20 13:36:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/21 07:31:47 cheusov Exp $
 #
 
 DISTNAME=	csup-snap-20060318
@@ -12,7 +12,7 @@ COMMENT=	Rewrite of the CVSup file updating client in C
 
 WRKSRC=		${WRKDIR}/csup
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/csup ${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/20 13:36:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/21 07:31:48 cheusov Exp $
 #
 
 DISTNAME=		relaydb-1.7
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.benzedrine.cx/relaydb.html
 COMMENT=		Spam relay database
 
 NO_CONFIGURE=		yes
-INSTALLATION_DIRS=	bin man/man8 man/cat8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 ${PKGMANDIR}/cat8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/relaydb ${PREFIX}/bin/relaydb

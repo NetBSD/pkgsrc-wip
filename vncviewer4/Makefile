@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/28 20:58:28 riz Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/21 07:31:48 cheusov Exp $
 
 DISTNAME=       	vnc-4_1_1-unixsrc
 PKGNAME=		vncviewer-4.1.1
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-installed-zlib
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${PREFIX}/bin/vncviewer
 	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.man \
-		${PREFIX}/man/man1/vncviewer.1
+		${PREFIX}/${PKGMANDIR}/man1/vncviewer.1
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

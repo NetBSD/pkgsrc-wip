@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/14 01:27:59 jlamwww Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/21 07:31:47 cheusov Exp $
 #
 
 DISTNAME=	ftpd-tls-20031008
@@ -32,7 +32,7 @@ do-install:
 		${INSTALL_DATA_DIR} ${DOCDIR}
 		${INSTALL_PROGRAM} ${WRKSRC}/ftpd ${PREFIX}/libexec/ftpd-tls
 		${INSTALL_MAN} ${WRKSRC}/ftpd.8.TLS \
-					${PREFIX}/man/man8/ftpd-tls.8
+					${PREFIX}/${PKGMANDIR}/man8/ftpd-tls.8
 		${INSTALL_DATA} ${WRKSRC}/README.TLS ${DOCDIR}/README.TLS
 
 .include "../../security/openssl/buildlink3.mk"

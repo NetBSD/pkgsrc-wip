@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/20 13:36:39 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/21 07:31:47 cheusov Exp $
 #
 
 DISTNAME=		neb-wipe-src-1.0
@@ -16,7 +16,7 @@ NO_CONFIGURE=		yes
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 WRKSRC=			${WRKDIR}
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/neb-wipe ${PREFIX}/bin

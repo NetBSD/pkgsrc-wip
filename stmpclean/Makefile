@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/21 07:31:48 cheusov Exp $
 #
 
 DISTNAME=		stmpclean-0.3
@@ -12,6 +12,6 @@ COMMENT=		Secure /tmp cleaner
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/stmpclean ${PREFIX}/sbin/stmpclean
-	${INSTALL_DATA} ${WRKSRC}/stmpclean.8 ${PREFIX}/man/man8/
+	${INSTALL_DATA} ${WRKSRC}/stmpclean.8 ${PREFIX}/${PKGMANDIR}/man8/
 
 .include "../../mk/bsd.pkg.mk"

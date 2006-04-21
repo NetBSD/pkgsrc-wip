@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/21 07:31:48 cheusov Exp $
 
 DISTNAME=	runit-1.3.1
 CATEGORIES=	sysutils
@@ -18,7 +18,7 @@ DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 DOCS=		package/CHANGES package/COPYING package/README \
 		package/THANKS doc/*.html
 
-INSTALLATION_DIRS= man man/man8 sbin share/examples/runit
+INSTALLATION_DIRS= ${PKGMANDIR} ${PKGMANDIR}/man8 sbin share/examples/runit
 
 post-patch:
 	@${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/src/conf-cc

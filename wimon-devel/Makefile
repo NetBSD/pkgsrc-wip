@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/20 13:36:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/21 07:31:48 cheusov Exp $
 #
 
 DISTNAME=	wimon-0.3
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=      FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
 
 WRKSRC=		${WRKDIR}/wimon
 
-INSTALLATION_DIRS=	bin man/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wimon ${PREFIX}/bin

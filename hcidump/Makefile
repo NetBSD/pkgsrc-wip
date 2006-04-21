@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/21 19:26:23 plunky Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/21 07:31:47 cheusov Exp $
 
 DISTNAME=		hcidump-1.5.1
 CATEGORIES=		sysutils
@@ -11,6 +11,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 WRKSRC=			${WRKDIR}/hcidump
 
-INSTALLATION_DIRS=	man/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

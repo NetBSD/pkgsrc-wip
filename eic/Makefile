@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:29:38 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/21 07:31:47 cheusov Exp $
 #
 
 DISTNAME=		EiCsrc_4.3.0
@@ -23,6 +23,6 @@ do-install:
 		cd ${WRKSRC} && ${GMAKE} INSTALL_DIR=${PREFIX}/bin;	\
 		${INSTALL_DATA_DIR} ${PREFIX}/EiC; cd ${WRKSRC}; ${CP} -r doc include lib main \
 		module test BugList.html Change.html Distribution.html LICENCE Maintenance \
-		${PREFIX}/EiC; ${CP} ${WRKSRC}/eic.man ${PREFIX}/man/man1/eic.man.1
+		${PREFIX}/EiC; ${CP} ${WRKSRC}/eic.man ${PREFIX}/${PKGMANDIR}/man1/eic.man.1
 
 .include "../../mk/bsd.pkg.mk"

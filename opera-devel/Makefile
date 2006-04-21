@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/20 13:36:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/21 07:31:47 cheusov Exp $
 
 DISTNAME=		opera-9.0alpha2
 CATEGORIES=		www
@@ -87,7 +87,7 @@ SUBST_SED.opera=	-e 's,/usr/,${PREFIX}/,g'
 
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
 .if (${_OPERA_OPSYS} == NetBSD)
@@ -108,10 +108,10 @@ post-install-manpage:
 .  if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
 	${GZIP_CMD} ${EMULDIR}/usr/share/man/man1/opera.1
 	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera.1.gz \
-		${PREFIX}/man/man1
+		${PREFIX}/${PKGMANDIR}/man1
 .  else
 	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera \
-		${PREFIX}/man/man1
+		${PREFIX}/${PKGMANDIR}/man1
 .  endif
 .endif
 
