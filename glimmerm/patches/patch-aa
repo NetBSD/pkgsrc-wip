@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/25 21:41:33 daprice Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/21 13:19:05 rillig Exp $
 
---- ../train/build-icm.c.orig	2004-05-25 00:48:58.000000000 -0600
-+++ ../train/build-icm.c
+--- train/build-icm.c.orig	2004-05-25 00:48:58.000000000 -0600
++++ train/build-icm.c
 @@ -699,15 +699,15 @@ process_options (int argc, char **argv)
               PRINT_BINARY = TRUE;
               break;
