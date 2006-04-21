@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/04/21 06:18:15 cheusov Exp $
+$NetBSD: distinfo,v 1.3 2006/04/21 16:59:18 cheusov Exp $
 
 SHA1 (xxkb-1.10.tar.gz) = bf214f6fb5d1c599b504dc0df053db9df0ed2490
 RMD160 (xxkb-1.10.tar.gz) = bcc0d1affccac0921abf2aa6ac833927a8b48c8f
 Size (xxkb-1.10.tar.gz) = 29178 bytes
-SHA1 (patch-aa) = 536d70151a1870c4fff6bb2525c16b4c58183133
+SHA1 (patch-aa) = 8515a008aea6983fe89bf49ee5f6101dbf04b51b
