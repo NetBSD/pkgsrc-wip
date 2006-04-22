@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2006/04/20 10:47:01 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/22 12:01:30 cheusov Exp $
 DISTNAME=	xxkb-1.10
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://pascal.tsu.ru/other/xxkb/
 
