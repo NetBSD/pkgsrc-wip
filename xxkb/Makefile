@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2006/04/22 12:47:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/22 12:54:06 cheusov Exp $
+
 DISTNAME=	xxkb-1.10
 #PKGREVISION=	1
 CATEGORIES=	x11
@@ -6,11 +7,11 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xxkb/} \
 		http://pascal.tsu.ru/other/xxkb/
 
 MAINTAINER=	cheusov@tut.by
-
 # Unfortunately home page is currently written in Russian language
 # only.  See http://pascal.tsu.ru/en/ for English translation updates.
 HOMEPAGE=	http://pascal.tsu.ru/other/xxkb/
 COMMENT=	XXKB - switches and indicates a current keyboard layout
+
 
 USE_IMAKE=	yes
 DOC_FILES=	LICENSE README.koi8
