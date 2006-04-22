@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2006/04/22 15:26:38 rillig Exp $
+
+SHA1 (Pike-v7.6.66.tar.gz) = ae3f140a068c9489b206b40a500f6865e8c7d9e7
+RMD160 (Pike-v7.6.66.tar.gz) = 3425252f23c516f182b9fca0ef76508887f30e4e
+Size (Pike-v7.6.66.tar.gz) = 15253647 bytes
