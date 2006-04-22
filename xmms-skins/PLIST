@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2006/04/22 07:38:44 cheusov Exp $
+share/doc/xmms-skins/AUTHORS
+share/doc/xmms-skins/COPYING
+share/doc/xmms-skins/ChangeLog
+share/doc/xmms-skins/README
+share/xmms/Skins/Absolute-Blue.tar.gz
+share/xmms/Skins/Cherry-Best.tar.gz
+share/xmms/Skins/Cobalt.tar.gz
+share/xmms/Skins/Colder.tar.gz
+share/xmms/Skins/Eclipse.tar.gz
+share/xmms/Skins/FB2.tar.gz
+share/xmms/Skins/Helix-Sawfish.tar.gz
+share/xmms/Skins/Plume.tar.gz
+share/xmms/Skins/SpiffMedia.tar.gz
+share/xmms/Skins/Titanium.tar.gz
+share/xmms/Skins/minEguE.tar.gz
+@dirrm share/doc/xmms-skins
+@dirrm share/xmms/Skins
