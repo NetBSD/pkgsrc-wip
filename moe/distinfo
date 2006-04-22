@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/05 17:56:08 gschwarz Exp $
+$NetBSD: distinfo,v 1.2 2006/04/22 19:22:25 gschwarz Exp $
 
-SHA1 (moe-0.5.tar.bz2) = c0d99bb9ae699df3ece64d5b8b5a327fe6b5fa90
-RMD160 (moe-0.5.tar.bz2) = 756a40ed5bc3384bc10a5275b7cbfa3a6b93867c
-Size (moe-0.5.tar.bz2) = 53669 bytes
-SHA1 (patch-aa) = 0b9ed3f286ab88b1fd9dbba0cd90253ca5b95ddf
+SHA1 (moe-0.7.tar.bz2) = 56b5ffdbb7646617f61f1f3bdf989b80eb0308d9
+RMD160 (moe-0.7.tar.bz2) = 1d5d8969b59e84d3efd3709917b07219ae7043e2
+Size (moe-0.7.tar.bz2) = 57824 bytes
+SHA1 (patch-aa) = 2860373575822f30bcba4b1d678aa9f71804d9cf
