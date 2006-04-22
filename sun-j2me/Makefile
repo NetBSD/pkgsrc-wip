@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:16 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/22 10:48:37 rillig Exp $
 #
 
 DISTNAME=j2me_wireless_toolkit-2_1_01-linux-i386
@@ -22,7 +22,7 @@ NO_FETCH=#
 NO_CONFIGURE=#
 NO_MTREE=yes
 
-RESTRICTED="Redistribution of repackaged binaries not permitted"
+RESTRICTED=Redistribution of repackaged binaries not permitted
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP= ${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}

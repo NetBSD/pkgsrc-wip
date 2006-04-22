@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/09 21:02:06 jlamwww Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/22 10:48:36 rillig Exp $
 #
 
 DISTNAME=		eboard-0.9.5
@@ -20,7 +20,7 @@ SUBST_CLASSES+=		sox_dev
 SUBST_STAGE.sox_dev=	post-patch
 SUBST_FILES.sox_dev=	sound.cc
 SUBST_SED.sox_dev=	-e 's,/dev/dsp,${DEVOSSAUDIO},g'
-SUBST_MESSAGE.sox_dev=  "Fixing hard-coded device used by sox with ${DEVOSSAUDIO}"
+SUBST_MESSAGE.sox_dev=  Fixing hard-coded device used by sox with ${DEVOSSAUDIO}
 
 do-configure:
 	 cd ${WRKSRC} && ${PERL5} ${WRKSRC}/configure \

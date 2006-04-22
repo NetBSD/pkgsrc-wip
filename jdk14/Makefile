@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/03/14 01:28:00 jlamwww Exp $
+# $NetBSD: Makefile,v 1.32 2006/04/22 10:48:36 rillig Exp $
 
 JDK_VERSION=    	1.4.2
 JDK_PATCHSET_VERSION=   8
@@ -19,7 +19,7 @@ COMMENT=		Java Development Kit 1.4.2
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 
-RESTRICTED=		"Redistribution of source or binaries permitted only by license terms"
+RESTRICTED=		Redistribution of source or binaries permitted only by license terms
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}

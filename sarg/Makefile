@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/20 13:36:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/22 10:48:37 rillig Exp $
 
 DISTNAME=		sarg-2.0.9
 CATEGORIES=		www
@@ -40,8 +40,8 @@ FILES_SUBST+=		SARG_REPORTSDIR=${SARG_REPORTSDIR:Q}		\
 			SG_LOG=${SG_LOG:Q}				\
 			SQUID_ACCESSLOG=${SQUID_ACCESSLOG:Q}
 SUBST_CLASSES+=		sargconf sargsrc
-SUBST_MESSAGE.sargconf=	"[Adjust values in SARG configuration files]"
-SUBST_MESSAGE.sargsrc=	"[Adjust values in SARG sources]"
+SUBST_MESSAGE.sargconf=	[Adjust values in SARG configuration files]
+SUBST_MESSAGE.sargsrc=	[Adjust values in SARG sources]
 SUBST_STAGE.sargconf=	pre-configure
 SUBST_STAGE.sargsrc=	pre-configure
 SUBST_FILES.sargconf=	htaccess sarg.1 sarg.conf

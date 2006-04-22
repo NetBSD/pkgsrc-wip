@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/22 22:51:07 tvierling Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/22 10:48:36 rillig Exp $
 
 DISTNAME=		dovecot-${DOVECOT_VER}
 PKGNAME=		${DISTNAME:S/-/-nightly-/}
@@ -28,7 +28,7 @@ DOVECOT_VER_CMD=	${SETENV} TZ=UTC ${DATE} +%Y%m%d
 DOVECOT_VER?=		${DOVECOT_VER_CMD:sh}
 CONFLICTS+=		dovecot-[0-9]*
 NO_CHECKSUM=		yes
-NO_SRC_ON_FTP+=		"fetch from real master site only"
+NO_SRC_ON_FTP=		fetch from real master site only
 
 .include "options.mk"
 

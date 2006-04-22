@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/09/28 20:50:10 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/22 10:48:36 rillig Exp $
 #
 
 DISTNAME=		60All
@@ -12,8 +12,9 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.firebirdsql.org/index.php?op=doc&id=userdoc
 COMMENT=		Documentation for InterBase 6.0 in PDF format
 
-NO_BIN_ON_CDROM=	"I am not sure if we can redistribute it"
-NO_SRC_ON_CDROM=	${NO_BIN_ON_CDROM}
+RESTRICTED=		I am not sure if we can redistribute it
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BUILD=		yes
 
 ID6_DIR=       		${PREFIX}/share/doc/${PKGNAME}

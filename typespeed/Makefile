@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/20 13:36:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/22 10:48:37 rillig Exp $
 #
 
 DISTNAME=		typespeed-0.4.4
@@ -39,7 +39,7 @@ SUBST_MESSAGE.sharepath=Adjusting data path
 SUBST_STAGE.man=    	post-patch
 SUBST_FILES.man=    	typespeed.6
 SUBST_SED.man=      	-e 's|TYPESPEED 1|TYPESPEED 6|g'
-SUBST_MESSAGE.man=  	"Adjusting man page section, from section 1 to 6"
+SUBST_MESSAGE.man=  	Adjusting man page section, from section 1 to 6
 SUBST_STAGE.execscript1=pre-install
 SUBST_FILES.execscript1=${WRKDIR}/.typespeed
 SUBST_SED.execscript1=	-e 's|LIBPATH|${PREFIX}/lib/typespeed|g'

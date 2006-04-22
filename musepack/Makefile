@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/09 21:02:14 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/22 10:48:37 rillig Exp $
 #
 
 DISTNAME=		mpcsv7-src-1.15t
@@ -18,7 +18,7 @@ MAKE_ENV+=		PREFIX=${PREFIX:Q}
 
 
 SUBST_CLASSES+=		osconf
-SUBST_MESSAGE.osconf=	"Configuring os-specific build-time definitions."
+SUBST_MESSAGE.osconf=	Configuring os-specific build-time definitions.
 SUBST_STAGE.osconf=	post-patch
 SUBST_FILES.osconf=	mpp.h
 SUBST_SED.osconf=	-e 's,\#define USE_ESD_AUDIO,// &,g' \

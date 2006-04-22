@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/09/28 14:24:42 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/22 10:48:37 rillig Exp $
 #
 
 DISTNAME=	nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}-0
@@ -23,7 +23,7 @@ COMMENT=		OpenGL tutorials from NeHe.gamedev.net - ${NEHE_OPENGL_TUT_FLAVOUR} ve
 
 DIST_SUBDIR=   		nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}
 USE_TOOLS+=		gmake
-RESTRICTED=		"I am not sure if we can redistribute it"
+RESTRICTED=		I am not sure if we can redistribute it
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

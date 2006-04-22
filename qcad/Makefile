@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/01/05 10:11:25 ghen Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/22 10:48:37 rillig Exp $
 #
 
 DISTNAME=		qcad-2.0.4.0-1.src
@@ -45,7 +45,7 @@ PREPEND_PATH+=		${QTDIR}/bin
 
 SUBST_CLASSES+= 	paths
 SUBST_STAGE.paths=	post-wrapper
-SUBST_MESSAGE.paths=	"Attending to hard-coded paths."
+SUBST_MESSAGE.paths=	Attending to hard-coded paths.
 SUBST_FILES.paths+=	qcadlib/src/engine/rs_system.cpp
 SUBST_FILES.paths+=	qcad/src/qc_applicationwindow.cpp
 SUBST_SED.paths=	s=@PREFIX@=${PREFIX:S/=/\=/g:Q}=g"\

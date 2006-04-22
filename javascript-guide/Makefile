@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/28 20:50:10 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/22 10:48:36 rillig Exp $
 #
 
 DISTNAME=		CoreGuideJS15
@@ -12,8 +12,9 @@ HOMEPAGE=		http://devedge.netscape.com/
 COMMENT=		JavaScript Guide from Netscape Devedge
 
 HTMLDIR=		share/doc/${PKGNAME}
-NO_BIN_ON_CDROM=	"I am not sure if we can redistribute it"
-NO_SRC_ON_CDROM=	"I am not sure if we can redistribute it"
+RESTRICTED=		I am not sure if we can redistribute it
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BUILD=		yes
 
 do-install:

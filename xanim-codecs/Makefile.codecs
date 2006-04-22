@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.codecs,v 1.1.1.1 2005/12/10 18:21:40 shattered Exp $
+# $NetBSD: Makefile.codecs,v 1.2 2006/04/22 10:48:37 rillig Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -107,7 +107,7 @@ CODEC_DLL_FILES+=	${_XANIM_DLL_CODEC.${_codec_}.${MACHINE_ARCH}}
 .endfor
 
 .if defined(_RESTRICTED_CODECS)
-RESTRICTED=	"Can't mirror/distribute object modules: ${_RESTRICTED_CODECS}"
+RESTRICTED=		Can't mirror/distribute object modules: ${_RESTRICTED_CODECS}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/01/05 10:11:25 ghen Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/22 10:48:36 rillig Exp $
 
 DISTNAME=	kapital-1.1.030606
 CATEGORIES=	devel kde
@@ -11,7 +11,7 @@ COMMENT=	Personal finance manager
 DOWNLOAD_PAGE=	http://www.thekompany.com/products/
 
 LICENSE=		no-redistribution
-RESTRICTED=		"Redistribution not permitted"
+RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/14 01:27:59 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/22 10:48:36 rillig Exp $
 
 DISTNAME=	DansGuardian-2.6.1-11.source
 PKGNAME=	dansguardian-2.6.1-11
@@ -24,7 +24,7 @@ CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 
 DEPENDS+=	squid>=2.5:../../www/squid
 
-RESTRICTED=	"Redistribution is restricted."
+RESTRICTED=	Redistribution is restricted.
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}

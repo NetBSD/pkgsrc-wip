@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/01/17 10:20:46 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/22 10:48:37 rillig Exp $
 #
 
 DISTNAME=	NVIDIA-FreeBSD-x86-${DIST_VERSION}
@@ -14,7 +14,7 @@ ONLY_FOR_PLATFORM=	FreeBSD-5*-i386 # Yeah I don't use 4.x, sorry.
 DIST_VERSION=		1.0-4365
 LINUX_DISTVER=		1.0.4365
 
-RESTRICTED=             "Redistribution of unmodified source only; resale prohibited."
+RESTRICTED=             Redistribution of unmodified source only; resale prohibited.
 NO_SRC_ON_CDROM=        ${RESTRICTED}
 NO_BIN_ON_FTP=          ${RESTRICTED}
 NO_BIN_ON_CDROM=        ${RESTRICTED}

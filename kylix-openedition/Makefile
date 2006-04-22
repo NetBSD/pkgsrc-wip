@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/11 10:16:40 ghen Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/22 10:48:37 rillig Exp $
 #
 
 DISTNAME=		# defined
@@ -17,8 +17,9 @@ DEPENDS+=		${LINUX_BASE_PREFIX}_gtk-[0-9]*:../../emulators/${LINUX_BASE_PREFIX}_
 LINUX_BINPKG_FMT=	plain
 LINUX_USE_X11=		yes
 
-NO_SRC_ON_CDROM=	"I'm not sure if we can redistribute it"
-NO_BIN_ON_CDROM=	${NO_SRC_ON_CDROM}
+RESTRICTED=		I am not sure if we can redistribute it
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/bin/bash

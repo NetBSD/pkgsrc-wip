@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/02 17:59:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/22 10:48:36 rillig Exp $
 #
 
 DISTNAME=		Radiator-3.6
@@ -12,7 +12,7 @@ COMMENT=		RADIUS server implemented in Perl
 
 DEPENDS+=		p5-Digest-MD5>=2.12:../../security/p5-Digest-MD5
 
-RESTRICTED=		"Commercial software"
+RESTRICTED=		Commercial software
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
