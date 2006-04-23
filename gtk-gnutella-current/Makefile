@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2006/01/30 01:19:42 lsed Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/23 00:52:55 larnor Exp $
 
-DISTNAME=		gtk-gnutella-current-${GTK_GNUTELLA_VER}
-PKGREVISION=		3
+DISTNAME=		gtk-gnutella-${GTK_GNUTELLA_VER}
+PKGREVISION=		4
 CATEGORIES=		net
 MASTER_SITES=		# not defined
 
 MAINTAINER=		lars.nordlund@hem.utfors.se
 HOMEPAGE=		http://gtk-gnutella.sourceforge.net/
-COMMENT=		GTK-based gnutella client, CVS snapshot
+COMMENT=		GTK-based gnutella client, SVN snapshot
 
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
@@ -15,23 +15,20 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-d -e -r -s -D prefix=${PREFIX:Q} -D cc=${CC:Q} \
 			-D privlib="${PREFIX}/share/gtk-gnutella" \
-			-D sysman="${PREFIX}/man" -D cflags=${CFLAGS:M*:Q} \
+			-D sysman="${PREFIX}/${PKGMANDIR}" \
+			-D cflags=${CFLAGS:M*:Q} \
 			-D locale="${PREFIX}/${PKGLOCALEDIR}/locale" \
 			-D optimize=${COPTS:Q} -D gtkversion=2 -D yacc="yacc"
 
 CONFLICTS=		gtk-gnutella-*
 
-CVS_REPOSITORIES=		gtk-gnutella
-CVS_ROOT.gtk-gnutella=		${CVS_ROOT_SOURCEFORGE}/gtk-gnutella
-CVS_MODULE.gtk-gnutella=	gtk-gnutella-current
+SVN_REPOSITORIES=	gtk-gnutella
+SVN_ROOT.gtk-gnutella=	${SVN_ROOT_SOURCEFORGE}/gtk-gnutella/trunk/gtk-gnutella
+SVN_MODULE.gtk-gnutella=gtk-gnutella
 
-# Dynamic plist is a pkgviews feature.
-#PLIST_TYPE=		dynamic
+WRKSRC=			${WRKDIR}/gtk-gnutella
+
 NO_CHECKSUM=		yes
-
-# Not pkgviews-enabled yet because of problems generating the date-like version
-# number.
-#PKG_INSTALLATION_TYPE=	pkgviews
 
 .include "../../wip/gtk-gnutella-current/Makefile.version"
 
@@ -40,6 +37,6 @@ NO_CHECKSUM=		yes
 .include "../../wip/gettext-tools/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
-.include "../../wip/mk/cvs-package.mk"
+.include "../../wip/mk/svn-package.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
