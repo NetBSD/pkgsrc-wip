@@ -1,0 +1,4 @@
+ADMsmb is a security scanner for Samba based on the source of smbclient. It
+will get the netbios name, share list, workgroup, domain, and OS. It will then
+try to access any exported shares, perform a session brute force, and perform
+brute force on a directory specified.
