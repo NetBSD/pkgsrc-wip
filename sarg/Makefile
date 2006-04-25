@@ -1,30 +1,29 @@
-# $NetBSD: Makefile,v 1.16 2006/04/22 10:48:37 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/25 08:29:52 bubuchka Exp $
 
 DISTNAME=		sarg-2.0.9
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sarg/}
 
 MAINTAINER=		mishka@apk.od.ua
-HOMEPAGE=		http://www.sarg-squid.org/
+HOMEPAGE=		http://sarg.sourceforge.net/sarg.php
 COMMENT=		Squid-Cache proxy server Analysis Report Generator
 
-DIST_SUBDIR=		${DISTNAME}
-
-AUTOCONF_REQD=		2.56
+AUTOCONF_REQD+=		2.56
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		autoconf
 CONFIGURE_ARGS+=	--enable-bindir=${PREFIX}/sbin			\
-			--enable-mandir=${PREFIX}/man/man1		\
-			--enable-sysconfdir=${DATADIR:Q}			\
+			--enable-mandir=${PREFIX}/${PKGMANDIR}/man1	\
+			--enable-sysconfdir=${DATADIR:Q}		\
 			--enable-htmldir=${SARG_REPORTSDIR:Q}
 
+DIST_SUBDIR=		${DISTNAME}
 PKG_SYSCONFSUBDIR=	sarg
 EGDIR=			${PREFIX}/share/examples/sarg
 DATADIR=		${PREFIX}/share/sarg
 
-SARG_REPORTSDIR?=	/var/sarg
-SG_LOG?=		/var/squidguard/log/squidGuard.log
-SQUID_ACCESSLOG?=	/var/squid/logs/access.log
+SARG_REPORTSDIR?=	${VARBASE}/sarg
+SG_LOG?=		${VARBASE}/squidguard/log/squidGuard.log
+SQUID_ACCESSLOG?=	${VARBASE}/squid/logs/access.log
 
 BUILD_DEFS+=		SARG_REPORTSDIR SG_LOG SQUID_ACCESSLOG
 
