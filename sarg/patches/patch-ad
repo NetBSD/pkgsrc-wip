@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.9 2005/10/31 15:37:37 bubuchka Exp $
+$NetBSD: patch-ad,v 1.10 2006/04/25 10:08:28 bubuchka Exp $
 
 --- log.c.orig	2005-08-05 01:33:46.000000000 +0300
 +++ log.c
@@ -8,8 +8,8 @@ $NetBSD: patch-ad,v 1.9 2005/10/31 15:37:37 bubuchka Exp $
  
 -   strcpy(AccessLog,"/usr/local/squid/var/logs/access.log");
 -   sprintf(ExcludeCodes,"%s/exclude_codes",SYSCONFDIR);
-+   strcpy(AccessLog,"/var/squid/logs/access.log");
-+   strcpy(ExcludeCodes,"/usr/pkg/etc/sarg/exclude_codes");
++   strcpy(AccessLog,"@SQUID_ACCESSLOG@");
++   strcpy(ExcludeCodes,"@PKG_SYSCONFDIR@/exclude_codes");
     strcpy(GraphDaysBytesBarColor,"orange");
     strcpy(BgColor,"#FFFFFF");
     strcpy(TxColor,"#000000");
@@ -18,7 +18,7 @@ $NetBSD: patch-ad,v 1.9 2005/10/31 15:37:37 bubuchka Exp $
     strcpy(FontSize,"9px");
     strcpy(TempDir,"/tmp");
 -   strcpy(OutputDir,"/usr/local/etc/httpd/htdocs/squid-reports");
-+   strcpy(OutputDir,"/var/sarg");
++   strcpy(OutputDir,"@SARG_REPORTSDIR@");
     strcpy(Ip2Name,"no");
     strcpy(DateFormat,"u");
     strcpy(OverwriteReport,"no");
@@ -32,7 +32,7 @@ $NetBSD: patch-ad,v 1.9 2005/10/31 15:37:37 bubuchka Exp $
     strcpy(HeaderFontSize,"9px");
     strcpy(TitleFontSize,"11px");
 -   strcpy(AuthUserFile,"/usr/local/sarg/passwd");
-+   strcpy(AuthUserFile,"/usr/pkg/etc/sarg/passwd");
++   strcpy(AuthUserFile,"@PKG_SYSCONFDIR@/passwd");
     strcpy(AuthName,"SARG, Restricted Access");
     strcpy(AuthType,"basic");
     strcpy(Require,"require user admin %u");
@@ -41,7 +41,7 @@ $NetBSD: patch-ad,v 1.9 2005/10/31 15:37:37 bubuchka Exp $
  
     if(ConfigFile[0] == '\0')
 -      sprintf(ConfigFile,"%s/sarg.conf",SYSCONFDIR);
-+      strcpy(ConfigFile,"/usr/pkg/etc/sarg/sarg.conf");
++      strcpy(ConfigFile,"@PKG_SYSCONFDIR@/sarg.conf");
      else {
        if(access(ConfigFile, R_OK) != 0) {
           sprintf(msg,"Cannot open config file: %s - %s",ConfigFile,strerror(errno));

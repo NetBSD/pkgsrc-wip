@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2005/10/31 15:37:37 bubuchka Exp $
+$NetBSD: patch-ab,v 1.7 2006/04/25 10:08:28 bubuchka Exp $
 
 --- convlog.c.orig	2005-08-05 01:29:51.000000000 +0300
 +++ convlog.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.6 2005/10/31 15:37:37 bubuchka Exp $
  
     if(arq[0] == '\0')
 -      strcpy(arq,"/usr/local/squid/logs/access.log");
-+      strcpy(arq,"/var/squid/logs/access.log");
++      strcpy(arq,"@SQUID_ACCESSLOG@");
  
     if((fp_in=fopen(arq,"r"))==NULL) {
        fprintf(stderr, "SARG: (convlog) %s: %s\n",text[8],arq);

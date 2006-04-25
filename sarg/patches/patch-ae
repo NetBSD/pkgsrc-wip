@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.6 2005/10/31 15:37:37 bubuchka Exp $
+$NetBSD: patch-ae,v 1.7 2006/04/25 10:08:28 bubuchka Exp $
 
 --- sarg.1.orig	2005-08-05 01:24:37.000000000 +0300
 +++ sarg.1
@@ -7,13 +7,13 @@ $NetBSD: patch-ae,v 1.6 2005/10/31 15:37:37 bubuchka Exp $
  Split the log file by date in \fB-d\fP parameter.
  .SH FILES
 -.BR /usr/local/sarg/sarg.conf
-+.BR /usr/pkg/etc/sarg/sarg.conf
++.BR @PKG_SYSCONFDIR@/sarg.conf
  .br
 -.B /usr/local/squid/logs/access.log
-+.B /var/squid/logs/access.log
++.B @SQUID_ACCESSLOG@
  .br
 -.B /usr/local/squidGuard/logs/squidGuard.log
-+.B /var/squidguard/log/squidGuard.log
++.B @SG_LOG@
  .SH SEE ALSO
  squid(8)
  .SH AUTHOR
