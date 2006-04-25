@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2006/04/20 07:08:27 ahallmann Exp $
-# $Id: Makefile,v 1.7 2006/04/20 07:08:27 ahallmann Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/25 20:04:35 ahallmann Exp $
+# $Id: Makefile,v 1.8 2006/04/25 20:04:35 ahallmann Exp $
 
 .include "Makefile.common"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cfengine2
-PKG_SUPPORTED_OPTIONS=	static cfengine-nothread
-PKG_SUGGESTED_OPTIONS=	static
+PKG_SUPPORTED_OPTIONS=	static cfengine-thread
+PKG_SUGGESTED_OPTIONS=	static cfengine-thread
 
 .include "../../mk/bsd.options.mk"
 
@@ -28,7 +28,7 @@ RCD_SCRIPTS=		cfexecd cfservd cfenvd
 
 USE_TOOLS+=		flex
 
-.if (!empty(PKG_OPTIONS:Mcfengine-nopthread))
+.if (empty(PKG_OPTIONS:Mcfengine-pthread))
 CONFIGURE_ARGS+= --without-pthreads
 .else
 PTHREAD_OPTS+=		require
