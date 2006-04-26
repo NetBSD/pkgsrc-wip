@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/07 09:04:03 akihabara Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/26 23:31:03 akihabara Exp $
 man/man8/chpst.8
 man/man8/runit-init.8
 man/man8/runit.8
@@ -17,21 +17,19 @@ sbin/runit
 sbin/runit-init
 sbin/runsv
 sbin/runsvchdir
-sbin/runsvctrl
 sbin/runsvdir
-sbin/runsvstat
 sbin/sv
 sbin/svlogd
-sbin/svwaitdown
-sbin/svwaitup
 sbin/utmpset
 share/doc/runit/CHANGES
 share/doc/runit/COPYING
 share/doc/runit/README
 share/doc/runit/THANKS
+share/doc/runit/TODO
 share/doc/runit/benefits.html
 share/doc/runit/chpst.8.html
 share/doc/runit/dependencies.html
+share/doc/runit/faq.html
 share/doc/runit/index.html
 share/doc/runit/install.html
 share/doc/runit/replaceinit.html

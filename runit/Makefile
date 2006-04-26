@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2006/04/21 07:31:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/26 23:31:03 akihabara Exp $
 
-DISTNAME=	runit-1.3.1
+DISTNAME=	runit-1.5.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://smarden.org/runit/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	neil@daikokuya.co.uk
 HOMEPAGE=	http://smarden.org/runit/index.html
 COMMENT=	Service monitoring utilities and an init scheme
 
@@ -16,7 +16,7 @@ OWN_DIRS_PERMS= ${SERVICEDIR} ${ROOT_USER} ${ROOT_GROUP} 0755
 EXAMPLEDIR=	${PREFIX}/share/examples/${PKGBASE}
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 DOCS=		package/CHANGES package/COPYING package/README \
-		package/THANKS doc/*.html
+		package/THANKS package/TODO doc/*.html
 
 INSTALLATION_DIRS= ${PKGMANDIR} ${PKGMANDIR}/man8 sbin share/examples/runit
 
