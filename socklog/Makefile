@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2006/04/25 13:34:36 akihabara Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/26 23:22:50 akihabara Exp $
 
 DISTNAME=	socklog-2.0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://smarden.org/socklog/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://smarden.org/socklog/index.html
 COMMENT=	Small and secure replacement for syslogd
 

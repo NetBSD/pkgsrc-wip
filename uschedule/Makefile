@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2006/04/25 13:31:09 akihabara Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/26 23:23:48 akihabara Exp $
 
 DISTNAME=	uschedule-0.7.1
 CATEGORIES=	time
 MASTER_SITES=	http://www.ohse.de/uwe/uschedule/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ohse.de/uwe/uschedule.html
-COMMENT=	Secure management of job scheduling.
+COMMENT=	Secure management of job scheduling
 
 WRKSRC=		${WRKDIR}/admin/${DISTNAME}
 CMDDIR=		${WRKSRC}/command
