@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:06 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/04/27 19:47:27 adrian_p Exp $
 bin/syslog2ng
 man/man5/syslog-ng.conf.5
 man/man8/syslog-ng.8
@@ -10,12 +10,13 @@ share/doc/html/syslog-ng/logpath.html
 share/doc/html/syslog-ng/msgroute.html
 share/doc/html/syslog-ng/reference.html
 share/doc/html/syslog-ng/tuning.html
+share/doc/html/syslog-ng/index.html
+share/doc/html/syslog-ng/x731.html
+share/doc/html/syslog-ng/x771.html
+share/doc/html/syslog-ng/x903.html
+share/doc/html/syslog-ng/x909.html
 share/doc/html/syslog-ng/x172.html
 share/doc/html/syslog-ng/x361.html
-share/doc/html/syslog-ng/x728.html
-share/doc/html/syslog-ng/x768.html
-share/doc/html/syslog-ng/x900.html
-share/doc/html/syslog-ng/x906.html
 share/doc/html/syslog-ng/x97.html
 share/doc/syslog-ng/INSTALL
 share/doc/syslog-ng/README
