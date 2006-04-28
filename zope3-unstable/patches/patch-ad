@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.6 2006/01/06 00:47:22 ykomatsu Exp $
+$NetBSD: patch-ad,v 1.7 2006/04/28 11:30:20 ykomatsu Exp $
 
---- Dependencies/zdaemon-Zope-3.2.0/zdaemon/zdrun.py.orig	2006-01-06 05:04:52.000000000 +0900
-+++ Dependencies/zdaemon-Zope-3.2.0/zdaemon/zdrun.py
+--- Dependencies/zdaemon-Zope-3.2.1/zdaemon/zdrun.py.orig	2006-04-28 09:02:23.000000000 +0900
++++ Dependencies/zdaemon-Zope-3.2.1/zdaemon/zdrun.py
 @@ -85,2 +85,10 @@
          sys.path.append(dirname(scriptdir))
 +    here = os.path.dirname(os.path.realpath(__file__))

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2006/01/07 14:58:28 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/28 11:30:14 ykomatsu Exp $
 #
 
-DISTNAME=		Zope-3.2.0
-PKGNAME=		zope3-3.2.0
+DISTNAME=		Zope-3.2.1
+PKGNAME=		zope3-3.2.1
 CATEGORIES=		www
-MASTER_SITES=		http://www.zope.org/Products/Zope3/3.2.0final/
+MASTER_SITES=		http://www.zope.org/Products/Zope3/3.2.1/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		ykomatsu@akaumigame.org
@@ -29,7 +29,8 @@ BUILD_TARGET=		build
 
 RCD_SCRIPTS=		zope3 zss3
 PKG_GROUPS=		${ZOPE3_GROUP}
-PKG_USERS=		${ZOPE3_USER}:${ZOPE3_GROUP}::Zope3\ user
+PKG_USERS=		${ZOPE3_USER}:${ZOPE3_GROUP}
+PKG_GECOS.${ZOPE3_USER}=Zope3 user
 
 MESSAGE_SUBST+=		ZOPE3_USER=${ZOPE3_USER:Q} \
 			ZOPE3_GROUP=${ZOPE3_GROUP:Q} \

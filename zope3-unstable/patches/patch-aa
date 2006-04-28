@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2006/01/06 00:47:22 ykomatsu Exp $
+$NetBSD: patch-aa,v 1.7 2006/04/28 11:30:20 ykomatsu Exp $
 
---- Dependencies/ZConfig-Zope-3.2.0/ZConfig/scripts/zconfig.orig	2006-01-06 05:04:42.000000000 +0900
-+++ Dependencies/ZConfig-Zope-3.2.0/ZConfig/scripts/zconfig
+--- Dependencies/ZConfig-Zope-3.2.1/ZConfig/scripts/zconfig.orig	2006-04-28 09:02:23.000000000 +0900
++++ Dependencies/ZConfig-Zope-3.2.1/ZConfig/scripts/zconfig
 @@ -40,2 +40,13 @@
  import sys
 +import os
