@@ -1,2 +1,4 @@
-Runit provides service supervision with reliable logging.  It can be
-used as a replacement for daemontools, sysvinit and other init schemes.
+runit is a cross-platform Unix init scheme with service supervision,
+a replacement for sysvinit, and other init schemes. It runs on
+GNU/Linux, *BSD, MacOSX, Solaris, and can easily be adapted to
+other Unix operating systems.

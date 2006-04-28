@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2006/04/26 23:31:03 akihabara Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/28 22:46:23 schmonz Exp $
 
 DISTNAME=	runit-1.5.0
 CATEGORIES=	sysutils
-MASTER_SITES=	http://smarden.org/runit/
+MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	neil@daikokuya.co.uk
-HOMEPAGE=	http://smarden.org/runit/index.html
-COMMENT=	Service monitoring utilities and an init scheme
+HOMEPAGE=	http://smarden.org/runit/
+COMMENT=	UNIX init scheme with service supervision
 
 WRKSRC=		${WRKDIR}/admin/${DISTNAME}
 CMDDIR=		${WRKSRC}/command
+
+DJB_RESTRICTED=		NO
+DJB_SLASHPACKAGE=	YES
 
 SERVICEDIR?=	${VARBASE}/spool/service
 OWN_DIRS_PERMS= ${SERVICEDIR} ${ROOT_USER} ${ROOT_GROUP} 0755
@@ -18,14 +21,7 @@ DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 DOCS=		package/CHANGES package/COPYING package/README \
 		package/THANKS package/TODO doc/*.html
 
-INSTALLATION_DIRS= ${PKGMANDIR} ${PKGMANDIR}/man8 sbin share/examples/runit
-
-post-patch:
-	@${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/src/conf-cc
-	@${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/src/conf-ld
-
-do-build:
-	cd ${WRKSRC} && package/compile
+INSTALLATION_DIRS=	${PKGMANDIR} ${PKGMANDIR}/man8 sbin share/examples/runit
 
 do-install:
 	${INSTALL_PROGRAM} ${CMDDIR}/* ${PREFIX}/sbin
@@ -34,4 +30,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCDIR}
 
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
