@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/10 03:50:42 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/28 06:29:35 jeremy-c-reed Exp $
 #
 
-DISTNAME=		libxkbfile-0.99.1
+DISTNAME=		libxkbfile-1.0.3
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/
+MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/
+HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		The xkbfile Library from modular X.org
 
 USE_LIBTOOL=		yes

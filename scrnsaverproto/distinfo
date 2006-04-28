@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/10 02:44:05 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2006/04/28 06:29:36 jeremy-c-reed Exp $
 
-SHA1 (scrnsaverproto-1.0.1.tar.bz2) = cce4c76ab8467d84183b4397160b74fe490cc94a
-RMD160 (scrnsaverproto-1.0.1.tar.bz2) = bca1c979a3998e8a0ae22e7c26b7355e994014e0
-Size (scrnsaverproto-1.0.1.tar.bz2) = 38134 bytes
+SHA1 (scrnsaverproto-1.1.0.tar.bz2) = 4c5859948034f2e5f625d930c73e4b96a6a0c29c
+RMD160 (scrnsaverproto-1.1.0.tar.bz2) = 966944d272b035eb0d1f8826c411ca1ee56ab5b3
+Size (scrnsaverproto-1.1.0.tar.bz2) = 38066 bytes

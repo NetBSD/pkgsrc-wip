@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/10 01:49:53 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2006/04/28 06:29:36 jeremy-c-reed Exp $
 
-SHA1 (xf86vidmodeproto-2.2.1.tar.bz2) = f23b377ed683310b3175f34f6b1690c4f5250c36
-RMD160 (xf86vidmodeproto-2.2.1.tar.bz2) = 8c283dcadb22bf35b8261d0318d1e324e6b2984e
-Size (xf86vidmodeproto-2.2.1.tar.bz2) = 39223 bytes
+SHA1 (xf86vidmodeproto-2.2.2.tar.bz2) = 4a228958879eb06206d13f4f09ec902f837fb8dd
+RMD160 (xf86vidmodeproto-2.2.2.tar.bz2) = b940e671398e1e91cedd1a3ad66c3dcd6bdfeb8a
+Size (xf86vidmodeproto-2.2.2.tar.bz2) = 39615 bytes

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/04/18 18:27:51 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/28 06:29:36 jeremy-c-reed Exp $
 #
 
-DISTNAME=		xf86miscproto-0.9.1
+DISTNAME=		xf86miscproto-0.9.2
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/X11R7.0-RC1/proto/
+MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net

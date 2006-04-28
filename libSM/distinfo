@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/11/12 01:35:13 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.5 2006/04/28 06:29:35 jeremy-c-reed Exp $
 
-SHA1 (libSM-0.99.2.tar.bz2) = ddb373cf7935314975db68d1b94afcb5381f0b22
-RMD160 (libSM-0.99.2.tar.bz2) = 60c2680846573b6b360605d65c9620864d1ce166
-Size (libSM-0.99.2.tar.bz2) = 168361 bytes
+SHA1 (libSM-1.0.1.tar.bz2) = 1f03c03bb5fbe731ad3427e1eaa3115a7c3f2a82
+RMD160 (libSM-1.0.1.tar.bz2) = a19521e6c7d1fc02ab72eaea46e122d61afa47ed
+Size (libSM-1.0.1.tar.bz2) = 240562 bytes

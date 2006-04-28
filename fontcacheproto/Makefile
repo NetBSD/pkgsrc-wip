@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/17 18:37:53 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/28 06:29:35 jeremy-c-reed Exp $
 #
 
-DISTNAME=		fontcacheproto-0.1
+DISTNAME=		fontcacheproto-0.1.2
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/X11R7.0-RC0/proto/
+MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
