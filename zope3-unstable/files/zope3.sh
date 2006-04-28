@@ -1,12 +1,12 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: zope3.sh,v 1.5 2005/12/08 07:42:47 ykomatsu Exp $
+# $NetBSD: zope3.sh,v 1.6 2006/04/28 12:27:12 ykomatsu Exp $
 #
 # PROVIDE: zope3
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 
-$_rc_subr_loaded .  /etc/rc.subr
+$_rc_subr_loaded . /etc/rc.subr
 
 name="zope3"
 rcvar=$name
@@ -30,9 +30,10 @@ zope3_precmd() {
         err 1 "${_dir} is not a directory."
     fi
     done
-    if test "${zope3_user}"; then
-        command_args="${command_args} --user ${zope3_user}"
+    if test -z "${zope3_user}"; then
+        zope3_user="@ZOPE3_USER@"
     fi
+    command_args="${command_args} --user ${zope3_user}"
 }
 
 zope3_start() {

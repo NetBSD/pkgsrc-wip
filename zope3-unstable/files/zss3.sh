@@ -1,13 +1,13 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: zss3.sh,v 1.5 2005/12/08 07:42:47 ykomatsu Exp $
+# $NetBSD: zss3.sh,v 1.6 2006/04/28 12:27:12 ykomatsu Exp $
 #
 # PROVIDE: zss3
 # REQUIRE: DAEMON
 # BEFORE: zope3
 # KEYWORD: shutdown
 
-$_rc_subr_loaded .  /etc/rc.subr
+$_rc_subr_loaded . /etc/rc.subr
 
 name="zss3"
 rcvar=$name
@@ -31,9 +31,10 @@ zss3_precmd() {
         err 1 "${_dir} is not a directory."
     fi
     done
-    if test "${zss3_user}"; then
-        command_args="${command_args} --user ${zss3_user}"
+    if test -z "${zss3_user}"; then
+        zss3_user="@ZOPE3_USER@"
     fi
+    command_args="${command_args} --user ${zss3_user}"
 }
 
 zss3_start() {
