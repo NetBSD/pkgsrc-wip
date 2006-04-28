@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/26 23:23:48 akihabara Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/28 23:18:27 schmonz Exp $
 
 DISTNAME=	uschedule-0.7.1
 CATEGORIES=	time
@@ -12,8 +12,12 @@ WRKSRC=		${WRKDIR}/admin/${DISTNAME}
 CMDDIR=		${WRKSRC}/command
 DOCDIR=		${WRKSRC}/doc
 
+DJB_RESTRICTED=		NO
+DJB_SLASHPACKAGE=	YES
+NO_CONFIGURE=		YES
+
 SERVICEDIR?=	${VARBASE}/spool/service
-OWN_DIRS_PERMS= ${SERVICEDIR} ${ROOT_USER} ${ROOT_GROUP} 0755
+OWN_DIRS_PERMS=	${SERVICEDIR} ${ROOT_USER} ${ROOT_GROUP} 0755
 PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
 DOCS=		${DOCDIR}/ChangeLog ${DOCDIR}/NEWS ${DOCDIR}/SECURITY-BUG
 USER_CMDS=	${CMDDIR}/uschedule ${CMDDIR}/uschedulecmd \
@@ -22,15 +26,8 @@ USER_CMDS=	${CMDDIR}/uschedule ${CMDDIR}/uschedulecmd \
 		${CMDDIR}/uschedulerm ${CMDDIR}/uscheduleruntimelimit
 SYS_CMDS=	${CMDDIR}/uscheduled
 
-INSTALLATION_DIRS= ${PKGMANDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man7 \
-		${PKGMANDIR}/man8 sbin
-
-post-patch:
-	@${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/src/conf-cc
-	@${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/src/conf-ld
-
-do-build:
-	cd ${WRKSRC} && package/compile
+INSTALLATION_DIRS=	${PKGMANDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man7 \
+			${PKGMANDIR}/man8 sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${USER_CMDS} ${PREFIX}/bin
@@ -41,4 +38,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PKGDOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${PKGDOCDIR}
 
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
