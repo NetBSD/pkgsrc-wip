@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/18 18:27:51 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/28 01:02:39 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MODULAR_XORG_LIBS_BUILDLINK3_MK:=	${MODULAR_XORG_LIBS_BUILDLINK3_MK}+
@@ -18,7 +18,7 @@ BUILDLINK_PACKAGES:=	modular-xorg-libs ${BUILDLINK_PACKAGES}
 
 .if !empty(MODULAR_XORG_LIBS_BUILDLINK3_MK:M+)
 
-BUILDLINK_API_DEPENDS.modular-xorg-libs+=	modular-xorg-libs>=7.0nb3
+BUILDLINK_API_DEPENDS.modular-xorg-libs+=	modular-xorg-libs>=7.0nb4
 BUILDLINK_PKGSRCDIR.modular-xorg-libs?=		../../wip/modular-xorg-libs
 #BUILDLINK_TRANSFORM.modular-xorg-libs+=	-e "s|/${X11ROOT_PREFIX}/|/|"
 
@@ -28,6 +28,7 @@ BUILDLINK_PKGSRCDIR.modular-xorg-libs?=		../../wip/modular-xorg-libs
 .include "../../wip/libXau/buildlink3.mk"
 .include "../../wip/libXaw/buildlink3.mk"
 .include "../../wip/libXext/buildlink3.mk"
+.include "../../wip/libXfont/buildlink3.mk"
 .include "../../wip/libXi/buildlink3.mk"
 .include "../../wip/libXinerama/buildlink3.mk"
 .include "../../wip/libXmu/buildlink3.mk"
