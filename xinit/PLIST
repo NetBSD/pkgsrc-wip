@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/28 02:46:19 jeremy-c-reed Exp $
+bin/startx
+bin/xinit
+lib/X11/xinit/xinitrc
+man/man1/startx.1
+man/man1/xinit.1
+@dirrm lib/X11/xinit
+@comment @dirrm lib/X11
