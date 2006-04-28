@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/18 18:27:50 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/28 05:59:11 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXfont.
 #
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS+=	libXfont
 
 .if !empty(LIBXFONT_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			libXfont
-BUILDLINK_API_DEPENDS.libXfont+=		libXfont>=0.99.0
+BUILDLINK_API_DEPENDS.libXfont+=		libXfont>=1.1.0
 BUILDLINK_PKGSRCDIR.libXfont?=		../../wip/libXfont
 
 .include "../../wip/libX11/buildlink3.mk"
