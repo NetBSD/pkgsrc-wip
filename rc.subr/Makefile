@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/14 01:28:11 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/29 17:43:17 shattered Exp $
 #
 
 DISTNAME=		rc.subr-20030912
@@ -7,7 +7,7 @@ MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		reed@NetBSD.org
-HOMEPAGE=		http://www.NetBSD.org/Documentation/rc/
+HOMEPAGE=		http://www.netbsd.org/guide/en/chap-rc.html
 COMMENT=		Portable NetBSD rc.subr implementation for pkgsrc
 
 NOT_FOR_PLATFORM=	NetBSD-1.[5-9]*-* NetBSD-[2-9]*-* FreeBSD-[5-9]*-*

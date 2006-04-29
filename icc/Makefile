@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/27 16:25:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/29 17:43:16 shattered Exp $
 
 DISTNAME=	l_cc_p_7.1.006
 PKGNAME=	icc-7.1
@@ -12,7 +12,7 @@ MASTER_SITES=	http://www.intel.com/software/products/compilers/downloads/ \
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://developer.intel.com/software/products/compilers/
+HOMEPAGE=	http://www.intel.com/cd/software/products/asmo-na/eng/compilers/
 COMMENT=	Intel C++ Compiler for Linux
 
 .include "../../mk/bsd.prefs.mk"

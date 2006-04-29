@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2006/04/20 13:36:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/29 17:43:16 shattered Exp $
 
 DISTNAME=	prtunnel-0.2.0
 CATEGORIES=	net
 MASTER_SITES=	http://joshbeam.com/files/
 
 MAINTAINER=	adrianp@stindustries.net
-HOMEPAGE= 	http://joshbeam.com/software/prtunnel.html
+HOMEPAGE= 	http://joshbeam.com/software/prtunnel.php
 COMMENT=	Tunnels TCP connections through an HTTP or SOCKS5 proxy
 
 BUILD_TARGET=	# defined

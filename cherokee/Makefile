@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/14 01:27:58 jlamwww Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/29 17:43:15 shattered Exp $
 #
 
 DISTNAME=	cherokee-0.4.30
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.0x50.org/download/0.4/0.4.30/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.alobbs.com/cherokee/
+HOMEPAGE=	http://www.0x50.org/
 COMMENT=	Extremely fast and tiny web server
 
 USE_LIBTOOL=		yes

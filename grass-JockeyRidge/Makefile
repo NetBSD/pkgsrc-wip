@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/08 17:11:12 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/29 17:43:15 shattered Exp $
 #
 
 DISTNAME=		nclidar-utm
@@ -7,7 +7,7 @@ CATEGORIES=		geography
 MASTER_SITES=		http://mpa.itc.it/grasstutor/grasslocations/
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://mpa.itc.it/grasstutor/grasslocations/
+HOMEPAGE=		http://mpa.itc.it/grasstutor/
 COMMENT=		Example grass dataset for North Carolina
 
 WRKSRC=			${WRKDIR}/nclidar-utm/

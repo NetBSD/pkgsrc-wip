@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:16 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/29 17:43:15 shattered Exp $
 #
 
 DISTNAME=		clustalx1.83.sun
@@ -7,7 +7,7 @@ CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp-igbmc.u-strasbg.fr/pub/ClustalX/
 
 MAINTAINER=		hdp@cs.nmsu.edu
-HOMEPAGE=		http://www-igbmc.u-strasbg.fr/BioInfo/ClustalX/Top.html
+HOMEPAGE=		http://bips.u-strasbg.fr/fr/Documentation/ClustalX/Top.html
 COMMENT=		X-Windows interface for ClustalW
 
 WRKSRC=                 ${WRKDIR}/clustalx1.83.sun

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:28 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/29 17:43:17 shattered Exp $
 #
 
 DISTNAME=		Songwrite-0.12
 PKGNAME=		${DISTNAME:S/S/s/}
 CATEGORIES=		misc
-MASTER_SITES=		http://oomadness.tuxfamily.org/downloads/
+MASTER_SITES=		http://download.gna.org/songwrite/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://oomadness.tuxfamily.org/en/songwrite/index.html
+HOMEPAGE=		http://home.gna.org/oomadness/en/songwrite/index.html
 COMMENT=		Tablature (guitar partition) editor
 
 DEPENDS+=		${PYPKGPREFIX}-EditObj-[0-9]*:../../wip/py-EditObj

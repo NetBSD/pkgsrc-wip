@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2005/07/27 16:27:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/29 17:43:16 shattered Exp $
 #
 
 DISTNAME=		PyOpenAL-0.1.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/Py//}
 CATEGORIES=		audio
-MASTER_SITES=		http://oomadness.tuxfamily.org/downloads/
+MASTER_SITES=		http://download.gna.org/pyopenal/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://oomadness.tuxfamily.org/en/pyopenal/index.html
+HOMEPAGE=		http://home.gna.org/oomadness/en/pyopenal/index.html
 COMMENT=		Python bindings for audio/openal; see openal package for details
 
 PY_PATCHPLIST=		yes

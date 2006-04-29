@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/09/28 14:24:41 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/29 17:43:16 shattered Exp $
 #
 
 # XXX You must update MASTER_SITES download number when updating
@@ -8,7 +8,7 @@ CATEGORIES=		multimedia
 MASTER_SITES=		http://kino.schirmacher.de/filemanager/download/42/
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://kino.schirmacher.de/
+HOMEPAGE=		http://www.kinodv.org/
 COMMENT=		Non-linear editor for Digital Video data
 
 USE_DIRS+=		xdg-1.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/17 15:51:58 hfath Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/29 17:43:17 shattered Exp $
 
 DISTNAME=	tsm-5.2.2
 CATEGORIES=     sysutils
@@ -7,7 +7,7 @@ DISTFILES=	${RPMFILES}
 RPMFILES=	TIVsm-BA.i386.rpm TIVsm-API.i386.rpm
 
 MAINTAINER=	hf@spg.tu-darmstadt.de
-HOMEPAGE=	http://www-3.ibm.com/software/tivoli/products/storage-mgr/
+HOMEPAGE=	http://www-306.ibm.com/software/tivoli/products/storage-mgr/
 COMMENT=        IBM Tivoli Storage Manager Client
 
 PKG_SYSCONFSUBDIR= tsm

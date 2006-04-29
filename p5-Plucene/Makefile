@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/25 00:33:04 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/29 17:43:16 shattered Exp $
 
 DISTNAME=	Plucene-1.24
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plucene/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Plucene/
-HOMEPAGE=	http://jakarta.apache.org/lucene
 COMMENT=	Perl port of the Java Lucene search engine
 PERL5_REQD+=    5.6.0
 

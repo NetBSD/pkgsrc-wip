@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/28 20:50:09 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/29 17:43:15 shattered Exp $
 #
 
 DISTNAME=		diveintopython-html-4.4-2
@@ -9,7 +9,7 @@ MASTER_SITES=		http://diveintopython.org/download/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://diveintopython.org/download/
+HOMEPAGE=		http://diveintopython.org/
 COMMENT=		Free book for experienced Python programmers
 
 HTMLDIR=		share/doc/diveintopython

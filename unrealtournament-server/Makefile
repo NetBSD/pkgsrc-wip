@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/28 20:50:11 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/29 17:43:17 shattered Exp $
 #
 
 DISTNAME=	ut-server-436
@@ -8,7 +8,6 @@ CATEGORIES=	games
 MASTER_SITES=	http://public.planetmirror.com/pub/lokigames/installers/ut/
 
 MAINTAINER=	grant@NetBSD.org
-HOMEPAGE=	http://files.sobservers.com/UnrealTournament/UTServerOnly/
 COMMENT=	Server for Unreal Tournament first person shooter
 
 NO_BUILD=		yes

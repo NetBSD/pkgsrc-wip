@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/14 01:27:59 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/29 17:43:15 shattered Exp $
 #
 
 DISTNAME=		glkloader-0.3.2
@@ -6,7 +6,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_IFARCHIVE:=programming/glk/implementations/}
 
 MAINTAINER=		dillo@NetBSD.org
-HOMEPAGE=		http://mirror.ifarchive.org/if-archiveXprogrammingXglkXimplementations.html
+HOMEPAGE=		http://www.ifarchive.org/indexes/if-archiveXprogrammingXglkXimplementations.html
 COMMENT=		Glk library that loads real glk implementation at runtime
 
 DEPENDS+=		glkterm-[0-9]*:../../wip/glkterm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/27 16:27:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/29 17:43:17 shattered Exp $
 #
 
 DISTNAME=		Quotient-0.9.0
@@ -7,7 +7,7 @@ CATEGORIES=		mail
 MASTER_SITES=		http://www.divmod.org/users/release/divmod/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.divmod.org/Home/Projects/Quotient/index.html
+HOMEPAGE=		http://divmod.org/svn/Divmod/trunk/Quotient/
 COMMENT=		E-mail server, messaging server (IM/IRC) and IP telephony
 
 DEPENDS+=		${PYPKGPREFIX}-Lupy>=0.2.1:../../textproc/py-Lupy

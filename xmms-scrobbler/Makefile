@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/15 16:30:51 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/29 17:43:17 shattered Exp $
 #
 
 DISTNAME=	xmms-scrobbler-0.3.8
@@ -8,7 +8,7 @@ MASTER_SITES=	http://static.audioscrobbler.com/plugins/ \
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tnn+nbsd@nygren.pp.se
-HOMEPAGE=	http://www.audioscrobbler.com/
+HOMEPAGE=	http://www.last.fm/
 COMMENT=	XMMS plugin for the Audioscrobbler music community
 
 GNU_CONFIGURE=		YES

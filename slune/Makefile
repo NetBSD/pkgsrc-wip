@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2005/07/27 16:31:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/29 17:43:17 shattered Exp $
 #
 
 DISTNAME=		Slune-0.6.1
 PKGNAME=		${PYPKGPREFIX}-Slune-0.6.1
 CATEGORIES=		games
-MASTER_SITES=		http://oomadness.tuxfamily.org/downloads/
+MASTER_SITES=		http://download.gna.org/slune/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://oomadness.tuxfamily.org/en/slune/index.html
+HOMEPAGE=		http://home.gna.org/oomadness/en/slune/index.html
 COMMENT=		Action game, featuring cars, races and Tux the Penguin
 
 PY_PATCHPLIST=		yes

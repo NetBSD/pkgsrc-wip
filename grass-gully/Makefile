@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/08 17:26:16 daprice Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/29 17:43:15 shattered Exp $
 #
 
 DISTNAME=		gully.dat
@@ -8,7 +8,7 @@ MASTER_SITES=		http://mpa.itc.it/grasstutor/data7/
 EXTRACT_SUFX=		.gz
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://mpa.itc.it/grasstutor/data7/
+HOMEPAGE=		http://mpa.itc.it/grasstutor/
 COMMENT=		Example dataset for grass 5.0
 
 WRKSRC=			${WRKDIR}
