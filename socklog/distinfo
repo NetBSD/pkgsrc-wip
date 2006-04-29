@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2006/04/25 13:34:36 akihabara Exp $
+$NetBSD: distinfo,v 1.2 2006/04/29 03:04:19 akihabara Exp $
 
-SHA1 (socklog-2.0.2.tar.gz) = 851c1fbcf96140424f0351ecac95327bfa40db57
-RMD160 (socklog-2.0.2.tar.gz) = 6b87bab61c892ebb36e42cb5491f0aa17e5c91b7
-Size (socklog-2.0.2.tar.gz) = 56362 bytes
+SHA1 (socklog-2.1.0.tar.gz) = 27a117eae00105f491e6ef301206f7b92d7438ce
+RMD160 (socklog-2.1.0.tar.gz) = 375c2992dcbc0d3639e3f8c215ef7f13959bdd5b
+Size (socklog-2.1.0.tar.gz) = 56942 bytes

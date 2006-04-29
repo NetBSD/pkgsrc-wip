@@ -1,16 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2006/04/25 13:34:36 akihabara Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/29 03:04:19 akihabara Exp $
+bin/tryto
+bin/uncat
+man/man1/tryto.1
+man/man1/uncat.1
 man/man8/socklog-check.8
 man/man8/socklog-conf.8
 man/man8/socklog.8
 sbin/socklog
 sbin/socklog-check
 sbin/socklog-conf
-sbin/tryto
-sbin/uncat
 share/doc/socklog/CHANGES
 share/doc/socklog/COPYING
 share/doc/socklog/README
-share/doc/socklog/benefits.html
 share/doc/socklog/configuration.html
 share/doc/socklog/examples.html
 share/doc/socklog/index.html
