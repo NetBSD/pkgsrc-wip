@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2006/04/29 03:04:19 akihabara Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/29 03:06:20 akihabara Exp $
 
 DISTNAME=	socklog-2.1.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	neil@daikokuay.co.uk
 HOMEPAGE=	http://smarden.org/socklog/
 COMMENT=	System and kernel logging services
 
