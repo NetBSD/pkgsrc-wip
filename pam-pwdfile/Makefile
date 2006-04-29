@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/04/19 10:13:05 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/29 07:25:27 bartoszkuzma Exp $
 #
 
 DISTNAME=		pam_pwdfile-0.99
@@ -12,6 +12,13 @@ HOMEPAGE=		http://cpbotha.net/pam_pwdfile.html
 COMMENT=		PAM module for authenticating with text password files
 
 USE_LIBTOOL=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+LDLIBS=			-lpam
+.if ${OPSYS} != "Darwin"
+LDLIBS+=		-lcrypt
+.endif
 
 pre-build:
 	${CP} files/_pam_macros.h ${WRKSRC}
@@ -28,8 +35,8 @@ do-build:
 		-c md5_crypt.c -o md5_crypt_good.o && \
 	${SHLIBTOOL} --mode=compile ${CC} -D'MD5Name(x)=Broken##x' \
 		-c md5_crypt.c -o md5_crypt_broken.o && \
-	${SHLIBTOOL} --mode=link ${CC} -avoid-version -module \
-		-o pam_pwdfile.la -lpam -lcrypt -rpath ${PREFIX}/lib/security \
+	${SHLIBTOOL} --mode=link ${CC} -avoid-version -module ${LDLIBS} \
+		-o pam_pwdfile.la -rpath ${PREFIX}/lib/security \
 		pam_pwdfile.lo md5_good.lo md5_crypt_good.lo md5_broken.lo \
 		md5_crypt_broken.lo bigcrypt.lo
 

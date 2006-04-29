@@ -1,4 +1,4 @@
-Doesn't build on Darwin.
+* Doesn't build on Darwin. - Fixed. It build on Mac OS X 10.4.
 
 gcc -pipe ${wl}-flat_namespace ${wl}-undefined ${wl}suppress -o .libs/pam_pwdfile.so -bundle  .libs/pam_pwdfile.o .libs/md5_good.o .libs/md5_crypt_good.o .libs/md5_broken.o .libs/md5_crypt_broken.o .libs/bigcrypt.o  -lpam -lcrypt -L/Users/minskim/pkgsrc/wip/pam-pwdfile/work/.buildlink/lib
 /usr/bin/ld: can't locate file for: -lcrypt
