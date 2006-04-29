@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/28 11:30:14 ykomatsu Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/04/29 00:32:16 ykomatsu Exp $
 bin/mkzeoinstance
 bin/mkzopeinstance
 bin/zopetest
@@ -8767,6 +8767,7 @@ share/zope3/lib/python/zope/app/utility/utility.pyo
 share/zope3/lib/python/zope/app/utility/vocabulary.py
 share/zope3/lib/python/zope/app/utility/vocabulary.pyc
 share/zope3/lib/python/zope/app/utility/vocabulary.pyo
+share/zope3/lib/python/zope/app/version.txt
 share/zope3/lib/python/zope/app/wsgi/README.txt
 share/zope3/lib/python/zope/app/wsgi/__init__.py
 share/zope3/lib/python/zope/app/wsgi/__init__.pyc
