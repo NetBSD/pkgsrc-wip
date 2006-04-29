@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/22 21:09:20 mchittur Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/29 18:05:37 brook1 Exp $
 #
 
 DISTNAME=		gdal-1.3.1
@@ -28,7 +28,7 @@ PKG_SUGGESTED_OPTIONS=	pgsql mysql
 . include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pg
 .else
-CONFIGURE_ARGS+=        --without-pg
+CONFIGURE_ARGS+=	--without-pg
 .endif
 
 CONFIGURE_ARGS+=	--with-xerces

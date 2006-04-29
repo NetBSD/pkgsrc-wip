@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2006/03/22 21:11:52 mchittur Exp $
+$NetBSD: patch-ab,v 1.6 2006/04/29 18:05:37 brook1 Exp $
 
---- ogr/GNUmakefile.orig	2005-03-11 14:28:05.000000000 +0000
+--- ogr/GNUmakefile.orig	2005-12-30 22:09:11.000000000 +0000
 +++ ogr/GNUmakefile
 @@ -16,7 +16,7 @@ CPPFLAGS	:=	-Iogrsf_frmts -I. $(GDAL_INC
  
