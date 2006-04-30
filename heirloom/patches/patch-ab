@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2006/04/29 16:37:43 cheusov Exp $
+$NetBSD: patch-ab,v 1.2 2006/04/30 11:08:20 cheusov Exp $
 
 --- find/find.c.orig	2006-01-22 20:44:03.000000000 +0200
 +++ find/find.c
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.1 2006/04/29 16:37:43 cheusov Exp $
  #ifndef	major
  #include <sys/mkdev.h>
  #endif
-+#if defined(__NetBSD__) && defined(__NetBSD_Version__) && (__NetBSD_Version__) >= 300000000
++#if __NetBSD_Version__>= 300000000
 +#include <sys/statvfs.h>
 +#define statfs statvfs
 +#endif

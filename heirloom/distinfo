@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2006/04/30 00:46:18 cheusov Exp $
+$NetBSD: distinfo,v 1.3 2006/04/30 11:08:20 cheusov Exp $
 
 SHA1 (heirloom-060122.tar.bz2) = 824c8687150485c7822cadaf0d6af84f931369cb
 RMD160 (heirloom-060122.tar.bz2) = 0a555c2605a7df4f1ae9f702a5641e3f4e7d60bb
 Size (heirloom-060122.tar.bz2) = 991655 bytes
-SHA1 (patch-aa) = f890d51559987bf6008e3c3cf1227b34e09e0052
-SHA1 (patch-ab) = 3851a8cea07ef0223c5b3e93b99e5d9ae89f7012
-SHA1 (patch-ac) = ac7f1572d4d71aeb0f315a22c0ab79b34fc55c0d
-SHA1 (patch-ad) = 07e4625c5c8ef791b5d11d745ec8294f772af73c
-SHA1 (patch-ae) = cd04cdcd4d1688b0c4b6d61f9ca41d67d54bb2b2
+SHA1 (patch-aa) = ad43f1b88ddc3a8f321b015c8e417262bf4022bd
+SHA1 (patch-ab) = 82a3331fd2acf26f92a3c5fcb44fa839a72702d0
+SHA1 (patch-ac) = 75b535947db96a63df0dc6d254418c6ecd8f8a43
+SHA1 (patch-ad) = 49495bf53a981d2e1c139161b1853feb093faed7
+SHA1 (patch-ae) = 4036b9d336b31a0f9853dacbe29cb5912f4fc38a

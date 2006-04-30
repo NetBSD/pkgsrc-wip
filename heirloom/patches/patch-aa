@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2006/04/29 16:37:43 cheusov Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/30 11:08:20 cheusov Exp $
 
 --- df/df.c.orig	2006-01-22 20:42:39.000000000 +0200
 +++ df/df.c
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.1 2006/04/29 16:37:43 cheusov Exp $
  #include	"statvfs.c"
 +#elif defined (__NetBSD__)
 +#include <sys/param.h>
-+#if !defined(__NetBSD_Version__) || (__NetBSD_Version__) < 300000000
++#if __NetBSD_Version__ < 300000000
 +#include        "statvfs.c"
 +#else
 +#include        <sys/statvfs.h>
