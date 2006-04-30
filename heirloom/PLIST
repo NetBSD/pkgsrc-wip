@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2006/04/29 16:37:43 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/30 00:41:44 cheusov Exp $
+heirloom/bin/STTY
+heirloom/bin/apropos
+heirloom/bin/awk
 heirloom/bin/banner
 heirloom/bin/basename
 heirloom/bin/bc
@@ -7,6 +10,7 @@ heirloom/bin/bfs
 heirloom/bin/cal
 heirloom/bin/calendar
 heirloom/bin/cat
+heirloom/bin/chgrp
 heirloom/bin/chmod
 heirloom/bin/chown
 heirloom/bin/cksum
@@ -23,6 +27,7 @@ heirloom/bin/dc
 heirloom/bin/dd
 heirloom/bin/deroff
 heirloom/bin/df
+heirloom/bin/dfspace
 heirloom/bin/diff
 heirloom/bin/diff3
 heirloom/bin/dircmp
@@ -42,6 +47,7 @@ heirloom/bin/find
 heirloom/bin/fmt
 heirloom/bin/fmtmsg
 heirloom/bin/fold
+heirloom/bin/getconf
 heirloom/bin/getopt
 heirloom/bin/grep
 heirloom/bin/groups
@@ -49,10 +55,13 @@ heirloom/bin/hd
 heirloom/bin/head
 heirloom/bin/hostname
 heirloom/bin/id
+heirloom/bin/install
 heirloom/bin/join
 heirloom/bin/kill
+heirloom/bin/lc
 heirloom/bin/line
 heirloom/bin/listusers
+heirloom/bin/ln
 heirloom/bin/logins
 heirloom/bin/logname
 heirloom/bin/ls
@@ -63,6 +72,8 @@ heirloom/bin/mkdir
 heirloom/bin/mkfifo
 heirloom/bin/mknod
 heirloom/bin/more
+heirloom/bin/mt
+heirloom/bin/mv
 heirloom/bin/mvdir
 heirloom/bin/nawk
 heirloom/bin/newform
@@ -72,11 +83,14 @@ heirloom/bin/nl
 heirloom/bin/nohup
 heirloom/bin/oawk
 heirloom/bin/od
+heirloom/bin/page
 heirloom/bin/paste
 heirloom/bin/pathchk
 heirloom/bin/pax
 heirloom/bin/pg
 heirloom/bin/pgrep
+heirloom/bin/pkill
+heirloom/bin/posix/awk
 heirloom/bin/posix/basename
 heirloom/bin/posix/chmod
 heirloom/bin/posix/cp
@@ -85,18 +99,23 @@ heirloom/bin/posix/date
 heirloom/bin/posix/du
 heirloom/bin/posix/echo
 heirloom/bin/posix/ed
+heirloom/bin/posix/egrep
 heirloom/bin/posix/expr
+heirloom/bin/posix/fgrep
 heirloom/bin/posix/file
 heirloom/bin/posix/find
 heirloom/bin/posix/getconf
 heirloom/bin/posix/grep
 heirloom/bin/posix/id
+heirloom/bin/posix/ln
 heirloom/bin/posix/ls
 heirloom/bin/posix/mkdir
+heirloom/bin/posix/mv
 heirloom/bin/posix/nawk
 heirloom/bin/posix/nl
 heirloom/bin/posix/nohup
 heirloom/bin/posix/od
+heirloom/bin/posix/pax
 heirloom/bin/posix/pg
 heirloom/bin/posix/pr
 heirloom/bin/posix/ps
@@ -109,18 +128,44 @@ heirloom/bin/posix/touch
 heirloom/bin/posix/tr
 heirloom/bin/posix/wc
 heirloom/bin/posix/who
+heirloom/bin/posix2001/awk
+heirloom/bin/posix2001/basename
+heirloom/bin/posix2001/chmod
+heirloom/bin/posix2001/cp
 heirloom/bin/posix2001/csplit
+heirloom/bin/posix2001/date
+heirloom/bin/posix2001/du
+heirloom/bin/posix2001/echo
 heirloom/bin/posix2001/ed
+heirloom/bin/posix2001/egrep
 heirloom/bin/posix2001/expr
+heirloom/bin/posix2001/fgrep
+heirloom/bin/posix2001/file
 heirloom/bin/posix2001/find
 heirloom/bin/posix2001/getconf
 heirloom/bin/posix2001/grep
+heirloom/bin/posix2001/id
+heirloom/bin/posix2001/ln
 heirloom/bin/posix2001/ls
+heirloom/bin/posix2001/mkdir
+heirloom/bin/posix2001/mv
 heirloom/bin/posix2001/nawk
 heirloom/bin/posix2001/nl
+heirloom/bin/posix2001/nohup
+heirloom/bin/posix2001/od
 heirloom/bin/posix2001/pax
 heirloom/bin/posix2001/pg
+heirloom/bin/posix2001/pr
+heirloom/bin/posix2001/ps
+heirloom/bin/posix2001/rm
+heirloom/bin/posix2001/rmdir
 heirloom/bin/posix2001/sed
+heirloom/bin/posix2001/sort
+heirloom/bin/posix2001/test
+heirloom/bin/posix2001/touch
+heirloom/bin/posix2001/tr
+heirloom/bin/posix2001/wc
+heirloom/bin/posix2001/who
 heirloom/bin/pr
 heirloom/bin/printenv
 heirloom/bin/printf
@@ -130,16 +175,51 @@ heirloom/bin/random
 heirloom/bin/renice
 heirloom/bin/rm
 heirloom/bin/rmdir
+heirloom/bin/s42/awk
+heirloom/bin/s42/basename
+heirloom/bin/s42/chmod
 heirloom/bin/s42/cp
+heirloom/bin/s42/csplit
+heirloom/bin/s42/date
+heirloom/bin/s42/du
+heirloom/bin/s42/echo
 heirloom/bin/s42/ed
+heirloom/bin/s42/egrep
 heirloom/bin/s42/expr
+heirloom/bin/s42/fgrep
+heirloom/bin/s42/file
+heirloom/bin/s42/find
+heirloom/bin/s42/getconf
+heirloom/bin/s42/grep
+heirloom/bin/s42/id
+heirloom/bin/s42/lc
+heirloom/bin/s42/ln
+heirloom/bin/s42/ls
+heirloom/bin/s42/mkdir
+heirloom/bin/s42/more
+heirloom/bin/s42/mv
+heirloom/bin/s42/nawk
 heirloom/bin/s42/nl
+heirloom/bin/s42/nohup
+heirloom/bin/s42/od
+heirloom/bin/s42/page
+heirloom/bin/s42/pax
+heirloom/bin/s42/pg
+heirloom/bin/s42/pr
 heirloom/bin/s42/ps
+heirloom/bin/s42/rm
+heirloom/bin/s42/rmdir
 heirloom/bin/s42/sed
+heirloom/bin/s42/sort
+heirloom/bin/s42/test
+heirloom/bin/s42/touch
+heirloom/bin/s42/tr
 heirloom/bin/s42/wc
+heirloom/bin/s42/who
 heirloom/bin/sdiff
 heirloom/bin/sed
 heirloom/bin/setpgrp
+heirloom/bin/settime
 heirloom/bin/sleep
 heirloom/bin/sort
 heirloom/bin/spell
@@ -150,6 +230,7 @@ heirloom/bin/sum
 heirloom/bin/sync
 heirloom/bin/tabs
 heirloom/bin/tail
+heirloom/bin/tape
 heirloom/bin/tapecntl
 heirloom/bin/tar
 heirloom/bin/tcopy
@@ -166,9 +247,12 @@ heirloom/bin/uname
 heirloom/bin/unexpand
 heirloom/bin/uniq
 heirloom/bin/units
+heirloom/bin/uptime
 heirloom/bin/users
+heirloom/bin/w
 heirloom/bin/wc
 heirloom/bin/what
+heirloom/bin/whatis
 heirloom/bin/who
 heirloom/bin/whoami
 heirloom/bin/whodo
@@ -191,9 +275,11 @@ heirloom/lib/spell/hlistb
 heirloom/lib/spell/hstop
 heirloom/lib/spell/spellin
 heirloom/lib/spell/spellprog
+heirloom/lib/tmac/an-old.tmac
 heirloom/lib/tmac/tmac.an
 heirloom/lib/unittab
 heirloom/man/man1/apropos.1
+heirloom/man/man1/awk.1
 heirloom/man/man1/banner.1
 heirloom/man/man1/basename.1
 heirloom/man/man1/bc.1
@@ -202,6 +288,7 @@ heirloom/man/man1/bfs.1
 heirloom/man/man1/cal.1
 heirloom/man/man1/calendar.1
 heirloom/man/man1/cat.1
+heirloom/man/man1/chgrp.1
 heirloom/man/man1/chmod.1
 heirloom/man/man1/chown.1
 heirloom/man/man1/cksum.1
@@ -218,6 +305,7 @@ heirloom/man/man1/dc.1
 heirloom/man/man1/dd.1
 heirloom/man/man1/deroff.1
 heirloom/man/man1/df.1
+heirloom/man/man1/dfspace.1
 heirloom/man/man1/diff.1
 heirloom/man/man1/diff3.1
 heirloom/man/man1/dircmp.1
@@ -230,6 +318,7 @@ heirloom/man/man1/env.1
 heirloom/man/man1/expand.1
 heirloom/man/man1/expr.1
 heirloom/man/man1/factor.1
+heirloom/man/man1/false.1
 heirloom/man/man1/fgrep.1
 heirloom/man/man1/file.1
 heirloom/man/man1/find.1
@@ -247,6 +336,7 @@ heirloom/man/man1/id.1
 heirloom/man/man1/intro.1
 heirloom/man/man1/join.1
 heirloom/man/man1/kill.1
+heirloom/man/man1/lc.1
 heirloom/man/man1/line.1
 heirloom/man/man1/listusers.1
 heirloom/man/man1/ln.1
@@ -270,11 +360,13 @@ heirloom/man/man1/nl.1
 heirloom/man/man1/nohup.1
 heirloom/man/man1/oawk.1
 heirloom/man/man1/od.1
+heirloom/man/man1/page.1
 heirloom/man/man1/paste.1
 heirloom/man/man1/pathchk.1
 heirloom/man/man1/pax.1
 heirloom/man/man1/pg.1
 heirloom/man/man1/pgrep.1
+heirloom/man/man1/pkill.1
 heirloom/man/man1/pr.1
 heirloom/man/man1/printenv.1
 heirloom/man/man1/printf.1
@@ -346,21 +438,37 @@ heirloom/man/man5/fspec.5
 heirloom/man/man7/man.7
 heirloom/man/man8/catman.8
 heirloom/sbin/catman
+heirloom/ucb/apropos
 heirloom/ucb/basename
+heirloom/ucb/catman
 heirloom/ucb/chown
 heirloom/ucb/deroff
 heirloom/ucb/df
 heirloom/ucb/du
 heirloom/ucb/echo
+heirloom/ucb/expand
 heirloom/ucb/groups
+heirloom/ucb/hostname
 heirloom/ucb/install
 heirloom/ucb/ln
 heirloom/ucb/ls
+heirloom/ucb/man
+heirloom/ucb/more
+heirloom/ucb/printenv
 heirloom/ucb/ps
+heirloom/ucb/renice
 heirloom/ucb/stty
 heirloom/ucb/sum
+heirloom/ucb/tcopy
 heirloom/ucb/test
 heirloom/ucb/tr
+heirloom/ucb/ul
+heirloom/ucb/unexpand
+heirloom/ucb/uptime
+heirloom/ucb/users
+heirloom/ucb/w
+heirloom/ucb/whatis
+heirloom/ucb/whoami
 heirloom/var/adm/spellhist
 heirloom/var/log/sulog
 share/doc/heirloom/LICENSE/COPYING
@@ -370,6 +478,31 @@ share/doc/heirloom/LICENSE/LUCENT
 share/doc/heirloom/LICENSE/OPENSOLARIS.LICENSE
 share/doc/heirloom/LICENSE/README
 share/doc/heirloom/README
+@dirrm heirloom/bin/posix
+@dirrm heirloom/bin/posix2001
+@dirrm heirloom/bin/s42
+@dirrm heirloom/bin
+@dirrm heirloom/etc/default
+@dirrm heirloom/etc
+@dirrm heirloom/lib/spell
+@dirrm heirloom/lib/tmac
+@dirrm heirloom/lib
+@dirrm heirloom/man/man1
+@dirrm heirloom/man/man1b
+@dirrm heirloom/man/man1m
+@dirrm heirloom/man/man2
+@dirrm heirloom/man/man3
+@dirrm heirloom/man/man4
+@dirrm heirloom/man/man5
+@dirrm heirloom/man/man6
+@dirrm heirloom/man/man7
+@dirrm heirloom/man/man8
+@dirrm heirloom/man
+@dirrm heirloom/sbin
+@dirrm heirloom/ucb
+@dirrm heirloom/var/adm
+@dirrm heirloom/var/log
+@dirrm heirloom/var
 @dirrm heirloom
 @dirrm share/doc/heirloom/LICENSE
 @dirrm share/doc/heirloom
