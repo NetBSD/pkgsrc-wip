@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.1 2006/04/30 08:19:03 gschwarz Exp $
+
+--- src/resolve.c.orig	2006-04-23 21:42:56.000000000 +0200
++++ src/resolve.c	2006-04-29 19:17:46.000000000 +0200
+@@ -21,6 +21,9 @@
+ #include <arpa/inet.h>
+ #include <netinet/in.h>
+ #include <arpa/nameser.h>
++#ifdef __APPLE__
++#include <arpa/nameser_compat.h>
++#endif
+ #include <resolv.h>
+ #include <string.h>
+ 
+@@ -62,7 +65,7 @@
+    int class=C_ANY;
+ 
+    // message buffer
+-   char msg[PACKETSZ];
++   unsigned char msg[PACKETSZ];
+    int msglen=PACKETSZ;
+ 
+    // response header
+@@ -73,7 +76,7 @@
+    int exp_dnlen=MAXDNAME;
+ 
+    int i, j, co;
+-   char *mptr, *xptr;
++   unsigned char *mptr, *xptr;
+    unsigned short *usp,ty;
+    unsigned int *uip;
+ 
