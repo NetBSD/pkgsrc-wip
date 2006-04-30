@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: zss3.sh,v 1.7 2006/04/30 07:16:53 ykomatsu Exp $
+# $NetBSD: zss3.sh,v 1.8 2006/04/30 07:22:43 ykomatsu Exp $
 #
 # PROVIDE: zss3
 # REQUIRE: DAEMON
@@ -38,17 +38,17 @@ zss3_precmd() {
 }
 
 zss3_start() {
-    echo -n "Starting Zope Storage Server:"
+    echo -n "Starting Zope Storage Server: "
     ${command} ${rc_flags} ${command_args} start
 }
 
 zss3_stop() {
-    echo -n "Stopping Zope Storage Server:"
+    echo -n "Stopping Zope Storage Server: "
     ${command} ${rc_flags} ${command_args} stop
 }
 
 zss3_restart() {
-    echo -n "Restarting Zope Storage Server:"
+    echo -n "Restarting Zope Storage Server: "
     ${command} ${rc_flags} ${command_args} restart
 }
 
