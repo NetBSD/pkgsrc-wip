@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: zope3.sh,v 1.6 2006/04/28 12:27:12 ykomatsu Exp $
+# $NetBSD: zope3.sh,v 1.7 2006/04/30 07:16:53 ykomatsu Exp $
 #
 # PROVIDE: zope3
 # REQUIRE: DAEMON
@@ -37,14 +37,17 @@ zope3_precmd() {
 }
 
 zope3_start() {
+    echo -n "Starting Zope 3:"
     ${command} ${rc_flags} ${command_args} start
 }
 
 zope3_stop() {
+    echo -n "Stopping Zope 3:"
     ${command} ${rc_flags} ${command_args} stop
 }
 
 zope3_restart() {
+    echo -n "Restarting Zope 3:"
     ${command} ${rc_flags} ${command_args} restart
 }
 
