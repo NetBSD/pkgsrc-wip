@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/30 12:32:58 poppnk Exp $
+bin/aircrack-ng
+bin/airdecap-ng
+bin/arpforge-ng
+bin/ivstools
+sbin/aireplay-ng
+sbin/airmon-ng
+sbin/airodump-ng
+share/man/man1/aircrack-ng.1
+share/man/man1/airdecap-ng.1
+share/man/man1/aireplay-ng.1
+share/man/man1/airmon-ng.1
+share/man/man1/airodump-ng.1
+share/man/man1/arpforge-ng.1
+share/man/man1/ivstools.1
+@dirrm share/man/man1

@@ -1,0 +1,12 @@
+--- Makefile.orig	2006-04-30 14:30:53.625536056 +0200
++++ Makefile	2006-04-30 14:31:16.554050392 +0200
+@@ -1,8 +1,6 @@
+-CC		= gcc
+-CFLAGS          = -g -W -Wall -O3
+ OPTFLAGS        = -D_FILE_OFFSET_BITS=64
+ 
+-prefix          = /usr/local
++prefix          = ${PREFIX}
+ bindir          = $(prefix)/bin
+ sbindir		= $(prefix)/sbin
+ datadir         = $(prefix)/share

@@ -1,0 +1,5 @@
+aircrack-ng is a set of tools for auditing wireless networks. It's an
+enhanced/reborn version of aircrack. It consists of airodump (an 802.11
+packet capture program), aireplay (an 802.11 packet injection program),
+aircrack (static WEP and WPA-PSK cracking), airdecap (decrypts WEP/WPA
+capture files), and some tools to handle capture files (merge, convert, ..)
