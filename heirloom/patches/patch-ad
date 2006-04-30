@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2006/04/29 16:37:43 cheusov Exp $
+$NetBSD: patch-ad,v 1.2 2006/04/30 00:44:49 cheusov Exp $
 
 --- build/mk.config.orig	2006-01-22 23:48:04.000000000 +0200
 +++ build/mk.config
@@ -148,3 +148,12 @@ $NetBSD: patch-ad,v 1.1 2006/04/29 16:37:43 cheusov Exp $
  
  #
  # Binaries are stripped with this command after installation.
+@@ -218,7 +218,7 @@ STRIP = strip -s -R .comment -R .note
+ #
+ # On FreeBSD, NetBSD, and OpenBSD, no such define is necessary.
+ #
+-LARGEF = -D_FILE_OFFSET_BITS=64L
++#LARGEF = -D_FILE_OFFSET_BITS=64L
+ 
+ #
+ # Use this if you prefer symbolic links between installed files.
