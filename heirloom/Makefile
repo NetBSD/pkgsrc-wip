@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/04/29 16:37:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/30 00:42:43 cheusov Exp $
 
 DISTNAME=	heirloom-060122
 CATEGORIES=	sysutils
@@ -11,11 +11,6 @@ COMMENT=	Collection of standard Unix utilities
 
 # should be partially ported to Interix
 NOT_FOR_PLATFORM=	Interix-*-*
-
-# should be move in pkgsrc/mk/default/mk.conf
-#HEIRLOOM_PROGRAM_PREFIX?=	hl
-
-#TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,21 +32,12 @@ USE_BZLIB=	1
 LDFLAGS+=	-lbz2 # libbz2 is in base system
 .endif
 
+.if ${OPSYS} == "Linux"
+CPPFLAGS+=	-D_GNU_SOURCE
+CPPFLAGS+=	-D_FILE_OFFSET_BITS=64L
+.endif
+
 LDFLAGS+=	-lz
-
-# Exclude programs from PLIST which aren't built on a platform.
-#.if ${OPSYS} == "Interix"
-#PLIST_SUBST+=		HEIRLOOM_HAVE_HOSTID="@comment "
-#.else
-#PLIST_SUBST+=		HEIRLOOM_HAVE_HOSTID=""
-#.endif
-
-#.if "${GNU_PROGRAM_PREFIX}" == "${HEIRLOOM_PROGRAM_PREFIX}"
-#CONFLICTS+=		core-utils-[0-9]*
-#.endif
-
-PLIST_SUBST+=		HEIRLOOM_PROGRAM_PREFIX=${HEIRLOOM_PROGRAM_PREFIX:Q}
-BUILD_DEFS+=		HEIRLOOM_PROGRAM_PREFIX
 
 do-build:
 	cd ${WRKSRC} && \
