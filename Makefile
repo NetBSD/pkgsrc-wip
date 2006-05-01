@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2245 2006/05/01 09:58:39 ondratu Exp $
+# $Id: Makefile,v 1.2246 2006/05/01 11:17:49 ondratu Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -317,6 +317,7 @@ SUBDIR+=	gnokii
 SUBDIR+=	gnome-alsamixer
 SUBDIR+=	gnome-bluetooth
 SUBDIR+=	gnome-clipboard-daemon
+SUBDIR+=	gnome-commander
 SUBDIR+=	gnome-jabber
 SUBDIR+=	gnomeradio
 SUBDIR+=	gnormalize
