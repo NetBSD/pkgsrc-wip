@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2006/02/12 15:02:09 scode Exp $
+# $NetBSD: Makefile,v 1.15 2006/05/01 08:15:24 scode Exp $
 #
 
-PKGMGR_VERSION= 0.7.2
+PKGMGR_VERSION= 0.8.0
 DISTNAME=	pkgmanager-${PKGMGR_VERSION}
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://starfury.scode.org/pkgmanager/
@@ -70,5 +70,6 @@ do-install:
 	${INSTALL_DATA} ${PKGMGR_SRC}/pkgmanager.fas ${PKGMGR_LIBDIR}/pkgmanager.fas
 	${INSTALL_SCRIPT} ${PKGMGR_SRC}/pkgmanager-wrapper.sh \
 		${PKGMGR_BINDIR}/pkgmanager
+	${INSTALL_MAN} ${PKGMGR_SRC}/pkgmanager.1 ${PREFIX}/man/man8
 
 .include "../../mk/bsd.pkg.mk"

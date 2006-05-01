@@ -1,8 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2006/02/12 10:57:17 scode Exp $
+$NetBSD: MESSAGE,v 1.3 2006/05/01 08:15:24 scode Exp $
 
 pkgmanager behaves differently than what you may be used to. Make sure you
-read the documentation at http://www.scode.org/pkgmanager/ before
-proceeding.
+read the man page before proceeding.
 
 ===========================================================================
