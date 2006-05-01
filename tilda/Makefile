@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/12 22:16:08 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/01 14:20:08 shattered Exp $
 #
 
 DISTNAME=		tilda-0.09.2
@@ -6,7 +6,7 @@ CATEGORIES=		wip sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tilda/}
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://kent.dl.sourceforge.net/sourceforge/tilda/
+HOMEPAGE=		http://tilda.sourceforge.net/
 COMMENT=		Terminal like the classic first-person-shooter games.
 
 USE_PKGLOCALEDIR=	yes

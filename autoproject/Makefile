@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2005/01/15 12:50:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/01 14:20:07 shattered Exp $
 
 DISTNAME=		autoproject-0.17
 CATEGORIES=		devel
-MASTER_SITES=		http://www.mv.com/ipusers/vanzandt/ \
-			http://www.ibiblio.org/pub/Linux/devel/
+MASTER_SITES=		http://jrv.oddones.org
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.mv.com/ipusers/vanzandt/
+HOMEPAGE=		http://jrv.oddones.org
 COMMENT=		Creates a skeleton source package for a new program
 
 DEPENDS+=		autoconf>=2.57:../../devel/autoconf

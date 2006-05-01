@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/11 00:13:54 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/01 14:20:07 shattered Exp $
 #
 
 DISTNAME=		fuse-2.5.2
@@ -7,7 +7,7 @@ CATEGORIES=		wip sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fuse/}
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://internap.dl.sourceforge.net/sourceforge/fuse/
+HOMEPAGE=		http://fuse.sourceforge.net/
 COMMENT=		Filesystem in Userspace
 
 GNU_CONFIGURE=		YES

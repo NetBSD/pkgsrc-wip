@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/24 10:44:36 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/01 14:20:08 shattered Exp $
 #
 
 DISTNAME=		tinycobol-0.61
@@ -7,7 +7,7 @@ MASTER_SITES=           ${MASTER_SITE_SOURCEFORGE:=tiny-cobol/}
 #MASTER_SITES=		http://umn.dl.sourceforge.net/sourceforge/tiny-cobol/
 
 MAINTAINER=	        lrfurtado@yahoo.com.br
-HOMEPAGE=		http://umn.dl.sourceforge.net/sourceforge/tiny-cobol/
+HOMEPAGE=		http://tiny-cobol.sourceforge.net/
 COMMENT=                Tiny COBOL compiler for IA32 platforms
 
 CONFIGURE_ARGS+=	--with-libdb=2

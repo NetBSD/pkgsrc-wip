@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2005/07/27 16:27:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/01 14:20:08 shattered Exp $
 #
 
 DISTNAME=		pxview_0.1.4.orig
 PKGNAME=		pxview-0.1.4
 CATEGORIES=		databases
-MASTER_SITES=		http://cesnet.dl.sourceforge.net/sourceforge/pxlib/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pxlib/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://cesnet.dl.sourceforge.net/sourceforge/pxlib/
+HOMEPAGE=		http://pxlib.sourceforge.net/
 COMMENT=		Simple utility to view Paradox database files
 
 WRKSRC=			${WRKDIR}/pxview-0.1.4
