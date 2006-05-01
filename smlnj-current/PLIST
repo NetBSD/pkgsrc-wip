@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2005/12/26 18:00:42 pulahti Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/05/01 11:55:13 pulahti Exp $
 bin/heap2exec
+bin/lexgen
 bin/ml-build
 bin/ml-burg
 bin/ml-lex
@@ -9,6 +10,7 @@ bin/ml-yacc
 bin/nowhere
 bin/sml
 lib/smlnj/bin/.arch-n-opsys
+lib/smlnj/bin/.heap/lexgen.${BOX}-${OS}
 lib/smlnj/bin/.heap/ml-burg.${BOX}-${OS}
 lib/smlnj/bin/.heap/ml-lex.${BOX}-${OS}
 ${NLFFI}lib/smlnj/bin/.heap/ml-nlffigen.${BOX}-${OS}
@@ -19,6 +21,7 @@ lib/smlnj/bin/.link-sml
 lib/smlnj/bin/.run-sml
 lib/smlnj/bin/.run/run.${BOX}-${LOWER_OPSYS}
 lib/smlnj/bin/heap2exec
+lib/smlnj/bin/lexgen
 lib/smlnj/bin/ml-build
 lib/smlnj/bin/ml-burg
 lib/smlnj/bin/ml-lex
@@ -131,6 +134,7 @@ lib/smlnj/lib/smlnj/internal/.cm/${BOX}-unix/smlnj-version.cm
 lib/smlnj/lib/smlnj/internal/.cm/${BOX}-unix/srcpath-lib.cm
 lib/smlnj/lib/smlnj/ml-yacc/.cm/${BOX}-unix/ml-yacc-lib.cm
 lib/smlnj/lib/smlnj/smlnj-lib/.cm/${BOX}-unix/controls-lib.cm
+lib/smlnj/lib/smlnj/smlnj-lib/.cm/${BOX}-unix/html-lib.cm
 lib/smlnj/lib/smlnj/smlnj-lib/.cm/${BOX}-unix/pp-lib.cm
 lib/smlnj/lib/smlnj/smlnj-lib/.cm/${BOX}-unix/smlnj-lib.cm
 lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/alpha32.cm
