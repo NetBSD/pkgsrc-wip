@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/01/22 18:13:01 gschwarz Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/01 21:32:48 gschwarz Exp $
 
 DISTNAME=	traceroute-nanog-6.4.0
 CATEGORIES=	net
@@ -7,7 +7,7 @@ DISTFILES=	traceroute_640.c
 DIST_SUBDIR=	traceroute-nanog
 
 # for the man page:
-PATCH_SITES=	http://ftp.debian.org/debian/pool/main/t/traceroute-nanog/
+PATCH_SITES=	${MASTER_SITE_DEBIAN:=pool/main/t/traceroute-nanog/}
 PATCHFILES=	traceroute-nanog_6.3.10-2.diff.gz
 
 COMMENT=	Traceroute implementation
@@ -22,6 +22,7 @@ EXTRALIBS=
 .if empty(PKGSRC_COMPILER:Mgcc*)
 CPPFLAGS+=	-D__attribute__=
 .endif
+
 .if ${OPSYS} == "SunOS"
 .if ${OS_VERSION} >= 5.0
 .if ${OS_VERSION} != 5.4
@@ -36,8 +37,13 @@ CPPFLAGS+=	-DBYTESWAP_IP_LEN
 .if ${OPSYS} == "Linux"
 EXTRALIBS+=	-lresolv
 .endif
+
 .if ${OPSYS} == "Darwin"
 CPPFLAGS+=	-DBIND_8_COMPAT -DRA_SERVICE=\"nicname\"
+.endif
+
+.if !empty(LOWER_OPSYS:Mirix5*)
+CPPFLAGS+=	-Dsocklen_t=int
 .endif
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
@@ -49,6 +55,6 @@ do-build:
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/traceroute-nanog ${PREFIX}/sbin
-		${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/debian/traceroute-nanog.8 ${PREFIX}/${PKGMANDIR}/man8
+		${INSTALL_MAN} ${WRKDIR}/traceroute-nanog-6.3.10/debian/traceroute-nanog.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
