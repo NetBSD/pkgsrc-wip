@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.17 2006/04/21 07:31:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.18 2006/05/01 18:54:13 ghen Exp $
 
-DISTNAME=		opera-9.0alpha2
+DISTNAME=		opera-9.0beta1
 CATEGORIES=		www
-MASTER_SITES=		http://snapshot.opera.com/${OPERA_DIR}/
+MASTER_SITES=		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/
+MASTER_SITES+=		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/
+MASTER_SITES+=		ftp://ftp.task.gda.pl/pub/opera/${OPERA_DIR}/
+MASTER_SITES+=		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/${OPERA_DIR}/
+MASTER_SITES+=		ftp://opera.nsc.no/pub/nsc.no/mirrors/operasoftware/${OPERA_DIR}/
+MASTER_SITES+=		ftp://ftp.opera.com/pub/opera/${OPERA_DIR}/
 DISTFILES=		opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}${EXTRACT_SUFX}
 
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://snapshot.opera.com/
 COMMENT=		Small, fast and customizable WWW client
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc FreeBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc FreeBSD-*-i386 DragonFly-*-i386
 
 LICENSE=		opera-850-license
-
-#PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=           YES
 USE_LANGUAGES=          # empty
@@ -21,14 +24,14 @@ USE_LANGUAGES=          # empty
 .include "../../mk/bsd.prefs.mk"
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20060206
+OPERA_VER_DATE=		20060411
 OPERA_PKG_VERSION=	9.0
-OPERA_PKG_VERSION_DIR=	9.0-Preview-2
+OPERA_PKG_VERSION_DIR=	900/beta1
 
 _OPERA_OPSYS?=		${OPSYS}
 _OPERA_MACHINE_ARCH?=	${MACHINE_ARCH}
 
-.if (${_OPERA_OPSYS} == NetBSD)
+.if (${_OPERA_OPSYS} == NetBSD) || (${_OPERA_OPSYS} == DragonFly)
 DEPENDS+=		suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 # we need the DIST_SUBDIR=. because of the inclusion of suse's Makefile.common
@@ -38,7 +41,7 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 EXTRACT_SUFX=		.rpm
 OPERA_ARCH=		.i386
-OPERA_DIR=		unix/${OPERA_PKG_VERSION_DIR}/intel-linux
+OPERA_DIR=		linux/${OPERA_PKG_VERSION_DIR}/${OPERA_LANG}/${OPERA_ARCH:S/.//}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
 RPMFILES=		${DISTFILES}
@@ -46,8 +49,9 @@ RPM2PKGSTRIP=		0
 
 .elif (${_OPERA_OPSYS} == FreeBSD)
 OPERA_ARCH=		.i386.freebsd
-OPERA_DIR=		unix/${OPERA_PKG_VERSION_DIR}/intel-freebsd
+OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION_DIR}/${OPERA_LANG}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
+DISTFILES=		opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}-236${EXTRACT_SUFX}
 
 WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
 
@@ -56,8 +60,9 @@ OWN_DIRS=		${PREFIX}/share/opera/plugins
 .elif (${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)
 EXTRACT_SUFX=		.tar.bz2
 OPERA_ARCH=		-sol8-sparc-local
-OPERA_DIR=		unix/${OPERA_PKG_VERSION_DIR}/sparc-solaris
+OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION_DIR}/${OPERA_LANG}/${_OPERA_MACHINE_ARCH}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
+DISTFILES=		opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}-236${EXTRACT_SUFX}
 
 WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
 
@@ -90,7 +95,7 @@ SUBST_SED.opera=	-e 's,/usr/,${PREFIX}/,g'
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
-.if (${_OPERA_OPSYS} == NetBSD)
+.if (${_OPERA_OPSYS} == NetBSD) || (${_OPERA_OPSYS} == DragonFly)
 	@ ${SED} -e 's#@EMULDIR@#${EMULDIR}#g' ${FILESDIR}/opera.sh > \
 		${WRKDIR}/opera
 
@@ -104,7 +109,7 @@ USE_TOOLS+=		gzip
 .endif
 
 post-install-manpage:
-  # The SuSE common makefile defines "MANCOMPRESSED=yes".
+# The SuSE common makefile defines "MANCOMPRESSED=yes".
 .  if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
 	${GZIP_CMD} ${EMULDIR}/usr/share/man/man1/opera.1
 	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera.1.gz \
