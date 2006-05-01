@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2006/03/28 06:58:05 obache Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/01 12:06:29 obache Exp $
 
 .include "../../wip/mecab/Makefile.common"
 
 DISTNAME=	mecab-ruby-${MECAB_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-mecab-${MECAB_VERSION}
 CATEGORIES=	japanese textproc ruby
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=mecab/19468/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=mecab/20030/}
 
 MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://mecab.sourceforge.jp/

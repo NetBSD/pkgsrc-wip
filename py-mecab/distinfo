@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/03/28 06:58:05 obache Exp $
+$NetBSD: distinfo,v 1.3 2006/05/01 12:06:29 obache Exp $
 
-SHA1 (mecab-python-0.90.tar.gz) = e5cdc3d74ab0b00401b24981fc40812a4c951c81
-RMD160 (mecab-python-0.90.tar.gz) = 9e5da45f97d536cbae3a2f68ece17b051a1edfc8
-Size (mecab-python-0.90.tar.gz) = 34655 bytes
+SHA1 (mecab-python-0.91.tar.gz) = 352479aa7d12852cdc942166572d7a31aafc3b7a
+RMD160 (mecab-python-0.91.tar.gz) = 0fbfdc813e3e1de4bd7c08d11f9bc07c7475fcff
+Size (mecab-python-0.91.tar.gz) = 34658 bytes

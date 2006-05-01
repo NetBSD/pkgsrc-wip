@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2006/03/28 06:58:04 obache Exp $
+# $NetBSD: Makefile.common,v 1.3 2006/05/01 12:06:29 obache Exp $
 #
 
-MECAB_VERSION=		0.90
+MECAB_VERSION=		0.91
