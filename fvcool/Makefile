@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2005/07/27 16:25:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/01 01:32:00 shattered Exp $
 #
 
 DISTNAME=		FVCool103
 PKGNAME=		fvcool-1.0.3
 CATEGORIES=		misc
-MASTER_SITES=		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/
+MASTER_SITES=		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/fvcool/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/README-FVCool100.html
+HOMEPAGE=		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/fvcool/README-FVCool103.html
 COMMENT=		Utility to make your AMD CPU cooler
 
 HAS_CONFIGURE=		yes

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 10:31:42 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/01 01:32:12 shattered Exp $
 #
 
 DISTNAME=		slocate-2.7
 CATEGORIES=		sysutils
-MASTER_SITES=		ftp://ftp.geekreview.org/slocate/src/
+MASTER_SITES=		http://slocate.trakker.ca/files/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://www.geekreview.org/slocate/
+HOMEPAGE=		http://slocate.trakker.ca/
 COMMENT=		Secure Locate
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

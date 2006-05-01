@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/20 13:36:39 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/01 01:32:10 shattered Exp $
 
 DISTNAME=		inn-1.7.2.insync-1.1d
 PKGNAME=		nnrpd-1.7.2
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.isc.org/isc/inn/OLD/1.7/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/OLD/1.7/
 
 MAINTAINER=		hauke@Espresso.Rhein-Neckar.DE
-HOMEPAGE=		http://www.isc.org/inn.html
+HOMEPAGE=		http://www.isc.org/sw/inn/
 COMMENT=		NNTP reader daemon from release 1.7 of InterNet News (INN)
 
 USE_PERL5=      	YES

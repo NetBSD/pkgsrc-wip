@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/02 18:00:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2006/05/01 01:32:07 shattered Exp $
 #
 
 DISTNAME=		Browser282b2
@@ -8,7 +8,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://www-unix.mcs.anl.gov/~gawor/ldapcommon/bin/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.iit.edu/~gawojar/ldap/
+HOMEPAGE=		http://www.mcs.anl.gov/~gawor/ldap/
 COMMENT=		Java based LDAP browser and editor
 
 USE_JAVA=		run

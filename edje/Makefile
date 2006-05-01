@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/01 01:32:00 shattered Exp $
 #
 
 DISTNAME=		edje-0.5.0
@@ -6,7 +6,7 @@ CATEGORIES=		graphics x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
 MAINTAINER=		Peter.Bex@student.kun.nl
-HOMEPAGE=		http://www.enlightenment.org/pages/edje.html
+HOMEPAGE=		http://www.enlightenment.org/Libraries/Edje/
 COMMENT=		Complex Graphical Design/Layout Engine
 
 GNU_CONFIGURE=		YES

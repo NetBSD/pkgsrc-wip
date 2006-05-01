@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/11 10:16:40 ghen Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/01 01:31:58 shattered Exp $
 
 DISTNAME=	DarwinStreamingSrvr${DSS_VERSION}
 PKGNAME=	DarwinStreamingServer-${DSS_VERSION}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.opensource.apple.com/projects/streaming/release/
 DISTFILES=	DarwinStreamingSrvr${DSS_VERSION}-Source.tar
 
 MAINTAINER=	eggert@macvaerk.dtu.dk
-HOMEPAGE=	http://developer.apple.com/darwin/projects/streaming/
+HOMEPAGE=	http://developer.apple.com/opensource/server/streaming/
 COMMENT=	Open source version of Apple's QuickTime Streaming Server technology
 
 WRKSRC=		${WRKDIR}/DarwinStreamingSrvr${DSS_VERSION}-Source

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2005/06/12 23:51:19 kristerw Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/01 01:32:00 shattered Exp $
 #
 
 DISTNAME=		Glide_V3-2.60-18
 CATEGORIES=		graphics
-MASTER_SITES=		http://www.sunpoint.net/~freeworld/
+MASTER_SITES=		http://www.alasir.com/glide/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		cesar_catrian@yahoo.com
-HOMEPAGE=		http://www.sunpoint.net/~freeworld/
+HOMEPAGE=		http://www.alasir.com/glide/
 COMMENT=		Software needed for 3dfx voodoo3 cards
 
 NO_CONFIGURE=		yes

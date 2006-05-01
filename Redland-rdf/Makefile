@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2006/02/17 21:16:12 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/01 01:31:59 shattered Exp $
 #
 
 DISTNAME=		redland-0.9.14
 CATEGORIES=		textproc
-MASTER_SITES=		http://www.redland.opensource.ac.uk/dist/source/old/
+MASTER_SITES=		http://download.librdf.org/source/old/
 
 MAINTAINER=		adam@monkeybyte.org
-HOMEPAGE=		http://www.redland.opensource.ac.uk/dist/source/
+HOMEPAGE=		http://download.librdf.org/source/
 COMMENT=		Library for RDF in C, Java, Perl, PHP, Python, Ruby and Tcl
 
 GNU_CONFIGURE=		YES

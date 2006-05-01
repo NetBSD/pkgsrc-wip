@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/24 10:31:00 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/01 01:32:08 shattered Exp $
 #
 
 DISTNAME=		luasocket-2.0-beta2
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://www.tecgraf.puc-rio.br/luasocket/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://www.tecgraf.puc-rio.br/luasocket/
+HOMEPAGE=		http://www.cs.princeton.edu/~diego/professional/luasocket/
 COMMENT=		Gives socket capabilities to lua50
 
 MAKEFILE=		${WRKSRC}/makefile.Linux

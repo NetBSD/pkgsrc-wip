@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/01 01:32:00 shattered Exp $
 #
 
 DISTNAME=		evas-1.0.0_pre13
@@ -8,7 +8,7 @@ CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
 MAINTAINER=		Peter.Bex@student.kun.nl
-HOMEPAGE=		http://www.enlightenment.org/pages/evas.html
+HOMEPAGE=		http://www.enlightenment.org/Libraries/Evas/
 COMMENT=		High level display-independent canvas API
 
 GNU_CONFIGURE=		YES

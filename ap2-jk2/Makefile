@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/03 13:51:42 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/01 01:31:59 shattered Exp $
 #
 
 DISTNAME=	jakarta-tomcat-connectors-jk2-${AP_JK_VER}-src
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=jakarta/tomcat-connectors/jk2/source/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://jakarta.apache.org/tomcat/
+HOMEPAGE=	http://tomcat.apache.org/
 COMMENT=	Apache2 JK2 module for connecting to Tomcat using AJP1X
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/jk/native2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2006/03/14 01:28:00 jlamwww Exp $
+# $NetBSD: Makefile.common,v 1.6 2006/05/01 01:32:07 shattered Exp $
 #
 
 DISTNAME=		dhcp-3.0pl2
@@ -12,7 +12,7 @@ MASTER_SITES=		ftp://ftp.isc.org/isc/dhcp/ \
 			http://public.planetmirror.com/pub/isc/dhcp/
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://www.isc.org/products/DHCP/
+HOMEPAGE=		http://www.isc.org/sw/dhcp/
 
 # XXX don't need nroff once patched
 # XXX BUILD_DEPENDS+=	groff-[0-9]*:../../textproc/groff

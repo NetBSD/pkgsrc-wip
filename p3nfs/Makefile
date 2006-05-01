@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/01 01:32:10 shattered Exp $
 #
 
 DISTNAME=		p3nfs-5.16
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://www.koeniglich.de/packages/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://www.koeniglich.de/packages/
+HOMEPAGE=		http://www.koeniglich.de/p3nfs.html
 COMMENT=		Symbian to UNIX NFS daemon
 
 USE_PKGLOCALEDIR=	yes

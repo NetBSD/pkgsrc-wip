@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2006/02/11 14:28:47 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/01 01:32:12 shattered Exp $
 #
 
 DISTNAME=	zphoto-1.2
 CATEGORIES=	graphics
-MASTER_SITES=	http://namazu.org/~satoru/zphoto/
+MASTER_SITES=	http://0xcc.net/zphoto/
 
 MAINTAINER=	obata@lins.jp
-HOMEPAGE=	http://namazu.org/~satoru/zphoto/
+HOMEPAGE=	http://0xcc.net/zphoto/
 COMMENT=	Flash-based photo album generator
 
 .include "options.mk"
