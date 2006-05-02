@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 22:27:46 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/05/02 21:03:05 thomasklausner Exp $
 #
 
 DISTNAME=		mapserver-4.4.2
@@ -49,21 +49,21 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PROGRAM} ${PREFIX}/bin
 .endfor
 
-.include "../../www/curl/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
-.include "../../print/pdflib/buildlink3.mk"
-.include "../../www/php4/buildlink3.mk"
-.include "../../misc/proj/buildlink3.mk"
-.include "../../wip/gdal-lib/buildlink3.mk"
-.include "../../mk/pgsql.buildlink3.mk" # this must come before the next line
-.include "../../wip/postgresql${PGSQL_VERSION}-postgis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../geography/gdal-lib/buildlink3.mk"
+.include "../../geography/geos/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../geography/geos/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../misc/proj/buildlink3.mk"
+.include "../../print/pdflib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk" # this must come before the next line
+.include "../../wip/postgresql${PGSQL_VERSION}-postgis/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../www/php4/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
