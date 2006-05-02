@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2247 2006/05/01 12:54:24 rillig Exp $
+# $Id: Makefile,v 1.2248 2006/05/02 21:04:18 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -291,7 +291,6 @@ SUBDIR+=	gcl-nox11
 SUBDIR+=	gcompris
 SUBDIR+=	gdal
 SUBDIR+=	gdal-docs
-SUBDIR+=	gdal-lib
 SUBDIR+=	gdam
 SUBDIR+=	gde
 SUBDIR+=	gdhcpd
