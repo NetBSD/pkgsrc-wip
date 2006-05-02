@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/01 11:10:09 ondratu Exp $
+$NetBSD: distinfo,v 1.2 2006/05/02 14:18:22 ondratu Exp $
 
 SHA1 (gnome-commander-1.1.7.tar.bz2) = c31b31abfc2dd25ab27c0a2b91b39099284e1987
 RMD160 (gnome-commander-1.1.7.tar.bz2) = cbd2cc95f1cad7c826ebc8760ae82a3169887291
 Size (gnome-commander-1.1.7.tar.bz2) = 917641 bytes
+SHA1 (patch-aa) = 942ee579719c8579b383728f36aba712915832c5

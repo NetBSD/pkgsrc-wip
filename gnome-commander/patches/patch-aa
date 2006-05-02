@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/05/02 14:18:22 ondratu Exp $
+
+--- configure.orig	2006-05-02 15:46:24.000000000 +0200
++++ configure
+@@ -22010,7 +22010,7 @@ _ACEOF
+ 
+ 
+ 
+-PLUGIN_DIR="${libdir}/${PACKAGE}/plugins"
++PLUGIN_DIR="${prefix}/lib/${PACKAGE}/plugins"
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define PLUGIN_DIR "$PLUGIN_DIR"
