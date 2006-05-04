@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2006/04/07 18:59:16 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.14 2006/05/04 18:43:02 kuli0020 Exp $
 
-DISTNAME=       Catalyst-5.66
+DISTNAME=       Catalyst-5.6901
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=../by-authors/id/M/MR/MRAMBERG/}
@@ -19,7 +19,7 @@ DEPENDS+=       {perl>=5.4.0,p5-CGI>=3.06}:../../www/p5-CGI
 DEPENDS+=	p5-File-Modified>=0:../../devel/p5-File-Modified
 DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTTP-Body>=0.5:../../wip/p5-HTTP-Body
-DEPENDS+=	p5-libwww>=5.801:../../www/p5-libwww
+DEPENDS+=	p5-libwww>=5.805:../../www/p5-libwww
 DEPENDS+=	p5-HTTP-Request-AsCGI>=0.5:../../wip/p5-HTTP-Request-AsCGI
 DEPENDS+=	p5-MIME-Types>=0:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Module-Pluggable-Fast>=0.16:../../wip/p5-Module-Pluggable-Fast
