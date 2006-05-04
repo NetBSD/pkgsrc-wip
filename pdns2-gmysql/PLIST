@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2006/05/04 20:31:53 anielski Exp $
+lib/pdns/libgmysqlbackend.a
+lib/pdns/libgmysqlbackend.la*
+lib/pdns/libgmysqlbackend.so@
+lib/pdns/libgmysqlbackend.so.0@
+lib/pdns/libgmysqlbackend.so.0.0.0*
+@dirrm lib/pdns
