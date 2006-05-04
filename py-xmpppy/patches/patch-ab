@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1 2006/05/04 00:44:27 schnoebe Exp $
+
+--- xmpp/debug.py.orig	2006-03-25 00:11:17.000000000 -0600
++++ xmpp/debug.py
+@@ -420,4 +420,4 @@ class Debug:      
+ DBG_ALWAYS='always'
+ 
+ ##Uncomment this to effectively disable all debugging and all debugging overhead.
+-#Debug=NoDebug
++Debug=NoDebug
