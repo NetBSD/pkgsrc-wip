@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/11 09:17:24 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/05/04 15:53:50 hubertf Exp $
 bin/qemu
 bin/qemu-img
 bin/qemu-system-arm
@@ -53,6 +53,7 @@ share/qemu/proll.elf
 share/qemu/vgabios-cirrus.bin
 share/qemu/vgabios.bin
 share/qemu/video.x
+share/qemu/qvm86.sh
 lib/qemu/qvm86.o
 @dirrm lib/qemu
 @dirrm share/qemu/keymaps

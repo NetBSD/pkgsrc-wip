@@ -1,8 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2006/01/11 09:17:24 tnn2 Exp $
-In order to use the x86 acceleration features, you must manually create
-the device node by running:
-/sbin/mknod -u 0 -g 0 -m 660 /dev/kqemu c 153 0
+$NetBSD: MESSAGE,v 1.2 2006/05/04 15:53:50 hubertf Exp $
+In order to use the x86 acceleration features, you must get the LKM
+loaded at system boot time. To do so, put this line into /etc/lkm.conf:
+	/usr/pkg/lib/qemu/qvm86.o - - /usr/pkg/share/qemu/qvm86.sh - -
+
+Also, put this line into /etc/rc.conf:
+	lkm=yes
 
 WARNING! Before you load the kernel module you should be aware
 that some code runs at kernel privilege. This code has not
@@ -12,9 +15,6 @@ of the wheel group to use acceleration.
 Bugs in the kernel module can potentially allow the guest environment
 to break out of it's virtual sandbox. Don't run binaries you
 don't trust.
-
-The kernel module can be loaded by running:
-/sbin/modload ${PREFIX}/lib/qemu/qvm86.o
 
 Currently, the only OS that boots to multiuser is Linux.
 ===========================================================================

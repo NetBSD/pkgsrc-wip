@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/09 21:02:14 jlamwww Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/04 15:53:50 hubertf Exp $
 #
 
 DISTNAME=		qemu-0.8.0
@@ -62,6 +62,8 @@ post-extract:
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/Makefile.multinode-NetBSD \
 		${PREFIX}/share/doc/qemu
+	${INSTALL_DATA} ${FILESDIR}/qvm86.sh \
+		${PREFIX}/share/qemu
 	${INSTALL_LIB_DIR} ${PREFIX}/lib/qemu
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/kqemu/qvm86.o \
 		${PREFIX}/lib/qemu
