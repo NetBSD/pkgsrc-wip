@@ -1,1 +1,3 @@
 html2latex converts a valid HTML file to a valid LaTeX file.
+This converter parses HTML files (even from URLs) and converts
+each element and creates a Latex file.
