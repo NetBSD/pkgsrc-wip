@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2006/05/01 01:32:07 shattered Exp $
+# $NetBSD: Makefile.common,v 1.7 2006/05/05 22:24:36 jeremy-c-reed Exp $
 #
 
 DISTNAME=		dhcp-3.0pl2
@@ -20,7 +20,6 @@ HOMEPAGE=		http://www.isc.org/sw/dhcp/
 HAS_CONFIGURE=		yes
 
 FILESDIR=		${.CURDIR}/../isc-dhcpd/files
-PKGMANDIR?=		man
 
 RCD_SCRIPTS=			isc_${ISC_DHCP_TYPE}
 
