@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2006/05/04 18:43:02 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.15 2006/05/05 16:59:46 absd Exp $
 
-DISTNAME=       Catalyst-5.6901
+DISTNAME=       Catalyst-5.6902
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=../by-authors/id/M/MR/MRAMBERG/}
+MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AG/AGRUNDMA/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst/
@@ -34,13 +34,26 @@ DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../wip/p5-Tree-Simple-VisitorFacto
 DEPENDS+=	p5-URI>=1.35:../../www/p5-URI
 DEPENDS+=	p5-File-Copy-Recursive>=0:../../wip/p5-File-Copy-Recursive
 DEPENDS+=	p5-Module-Install>=0.54:../../wip/p5-Module-Install
-DEPENDS+=	p5-ExtUtils-AutoInstall>=0:../../devel/p5-ExtUtils-AutoInstall
 DEPENDS+=	p5-YAML>=0.55:../../textproc/p5-YAML
 BUILD_DEPENDS+=	p5-Test-MockObject>=0:../../wip/p5-Test-MockObject
 BUILD_DEPENDS+=	p5-Test-NoWarnings>=0.082:../../devel/p5-Test-NoWarnings
 
 PERL5_PACKLIST= auto/Catalyst/.packlist
 MAKE_ENV+=      PERL_EXTUTILS_AUTOINSTALL=--skipdeps
+
+# optional
+# DEPENDS+=	p5-ExtUtils-AutoInstall>=0:../../devel/p5-ExtUtils-AutoInstall
+
+# optional - Apache/mod_perl
+# DEPENDS+=	p5-Catalyst-Engine-Apache>=0:../../wip/p5-Catalyst-Engine-Apache
+
+# optional - FGCI
+# DEPENDS+=	p5-FCGI>=0:../../www/p5-FCGI
+# DEPENDS+=	p5-FCGI-ProcManager>=0:../../www/p5-FCGI-ProcManager
+
+# optional - Test::WWW::Mechanize::Catalyst
+# DEPENDS+=	p5-Test-WWW-Mechanize-Catalyst>=0:../../wip/p5-Test-WWW-Mechanize-Catalyst
+
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
