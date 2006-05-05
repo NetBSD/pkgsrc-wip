@@ -1,2 +1,4 @@
 This is meta-package that pulls in various X11 related libraries
 from the modular X.org X11 project.
+
+This provides standard X11 libraries.
