@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2005/04/11 21:14:44 tvierling Exp $
+# $NetBSD: Makefile.common,v 1.4 2006/05/05 22:30:14 jeremy-c-reed Exp $
 #
 
 DISTNAME=		pdq-2.2.1
@@ -19,3 +19,4 @@ PKG_SYSCONFSUBDIR=	pdq
 
 CONFIGURE_ARGS+=	--enable-printrc=${PKG_SYSCONFDIR}/printrc
 CONFIGURE_ARGS+=	--enable-pdqlibdir=${PREFIX}/share/pdq
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

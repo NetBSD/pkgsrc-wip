@@ -1,0 +1,25 @@
+--- etc/printrc.example.in.orig	2005-09-20 13:36:44.000000000 -0700
++++ etc/printrc.example.in	2005-09-20 13:38:07.000000000 -0700
+@@ -26,10 +26,10 @@
+ #default_printer pokey
+ 
+ # Path that gets passed to driver scripts
+-driver_command_path "/bin:/usr/bin:/usr/local/bin"
++driver_command_path "/bin:/usr/bin:@prefix@/bin:/usr/local/bin"
+ 
+ # Path that gets passed to interface scripts
+-interface_command_path "/bin:/usr/bin:/usr/local/bin"
++interface_command_path "/bin:/usr/bin:@prefix@/bin:/usr/local/bin"
+ 
+ 
+ 
+@@ -42,6 +42,9 @@
+ try_include "@pdqlibdir@/interfaces/*"
+ try_include "@pdqlibdir@/drivers/*/*"
+ 
++# Consider enabling the following for your additional drivers and interfaces:
++#try_include "@sysconfdir@/interfaces/*"
++#try_include "@sysconfdir@/drivers/*"
+ 
+ 
+ ########################################################################

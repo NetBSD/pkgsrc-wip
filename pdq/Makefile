@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:08 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/05 22:30:14 jeremy-c-reed Exp $
 #
 
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		Flexible printing subsystem
 
 CONFIGURE_ENV+=		GLIB_CONFIG=NO # make sure xpdq is not built
