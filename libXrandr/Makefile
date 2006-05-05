@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/18 18:27:51 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/05 22:26:16 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXrandr-1.1.0.2
@@ -14,6 +14,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
+CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xrandr.pc.in
 
 .include "../../wip/libX11/buildlink3.mk"

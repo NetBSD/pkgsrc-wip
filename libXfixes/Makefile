@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/18 18:27:50 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.18 2006/05/05 22:26:16 jeremy-c-reed Exp $
 #
  ## this needs to be updated to modular Xorg
 
@@ -16,6 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xfixes.pc.in
 
 .include "../../wip/libX11/buildlink3.mk"

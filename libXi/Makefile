@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/18 18:27:51 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.18 2006/05/05 22:26:16 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXi-1.0.0
@@ -16,6 +16,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
+CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xi.pc.in
 
 .include "../../wip/inputproto/buildlink3.mk"
