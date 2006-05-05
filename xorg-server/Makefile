@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/21 04:39:58 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/05 22:32:38 jeremy-c-reed Exp $
 
 DISTNAME=	xorg-server-1.0.2
 CATEGORIES=	x11
@@ -7,6 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 COMMENT=	Xorg X11 Server from modular X.org X11
 
+USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xorg-server.pc.in
 USE_TOOLS+=	pkg-config
