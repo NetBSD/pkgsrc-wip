@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/04/13 17:34:19 kuli0020 Exp $
+$NetBSD: distinfo,v 1.4 2006/05/05 16:55:55 absd Exp $
 
-SHA1 (File-Copy-Recursive-0.19.tar.gz) = a81ff0817cfe6ac4d3a86143c54a0574ced43fa6
-RMD160 (File-Copy-Recursive-0.19.tar.gz) = 2434480717cdbc653b09c76d9b995b9f9d201867
-Size (File-Copy-Recursive-0.19.tar.gz) = 8242 bytes
+SHA1 (File-Copy-Recursive-0.21.tar.gz) = 5786b7ec31d07f426f62c04b1b1a571938b83085
+RMD160 (File-Copy-Recursive-0.21.tar.gz) = 7c83521b6ef12ca12d78005aefca2c97f566b1a6
+Size (File-Copy-Recursive-0.21.tar.gz) = 8589 bytes
