@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/02/22 01:48:08 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/05 22:26:58 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libdrm-2.0
-CATEGORIES=		x11 ## fix this
+CATEGORIES=		devel
 MASTER_SITES=		http://dri.freedesktop.org/libdrm/
 
 MAINTAINER=		reed@reedmedia.net
