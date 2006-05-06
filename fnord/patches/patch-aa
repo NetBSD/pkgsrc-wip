@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/11/05 17:30:54 gschwarz Exp $
+$NetBSD: patch-aa,v 1.3 2006/05/06 11:44:22 jsonn Exp $
 
---- Makefile.orig	2005-09-28 17:06:16.000000000 +0200
-+++ Makefile	2005-10-15 15:14:50.000000000 +0200
-@@ -1,10 +1,11 @@
+--- Makefile.orig	2005-09-28 15:06:16.000000000 +0000
++++ Makefile
+@@ -1,28 +1,26 @@
 -CC=gcc
 -CXX=g++
 +#CC=gcc
@@ -18,7 +18,25 @@ $NetBSD: patch-aa,v 1.2 2005/11/05 17:30:54 gschwarz Exp $
  #CFLAGS=-g
  
  all: fnord fnord-cgi fnord-idx
-@@ -32,13 +33,13 @@
+ 
+ fnord: httpd
+ 	cp -p $^ $@
+-	-strip -R .note -R .comment $@
+ 
+ httpd: httpd.o libowfat.a
+ 	$(DIET) $(CC) -o $@ $^ $(CFLAGS)
+ 
+ fnord-cgi: httpd-cgi.o libowfat.a
+ 	$(DIET) $(CC) -o $@ $^ $(CFLAGS)
+-	-strip -R .note -R .comment $@
+ 
+ fnord-idx: httpd-idx.o libowfat.a
+ 	$(DIET) $(CC) -o $@ $^ $(CFLAGS)
+-	-strip -R .note -R .comment $@
+ 
+ libowfat.a: httpd.o buffer_1.o buffer_puts.o buffer_flush.o buffer_put.o \
+ buffer_putulong.o buffer_2.o buffer_putspace.o buffer_stubborn.o \
+@@ -32,13 +30,13 @@ str_len.o str_diff.o str_chr.o str_diffn
  	-ranlib $@
  
  httpd.o: httpd.c
@@ -35,7 +53,7 @@ $NetBSD: patch-aa,v 1.2 2005/11/05 17:30:54 gschwarz Exp $
  
  %.o: %.c
  	$(DIET) $(CC) -pipe $(CFLAGS) -c $^
-@@ -57,7 +58,7 @@
+@@ -57,7 +55,7 @@ install:
  	test -d /command || mkdir /command
  
  CURNAME=$(notdir $(shell pwd))
