@@ -1,0 +1,47 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2006/05/06 15:41:28 marttikuparinen Exp $
+
+.include "../../wip/vim-share/version.mk"
+
+DISTNAME=		vim-7.0f
+CATEGORIES=		editors
+MASTER_SITES=		ftp://ftp.vim.org/pub/vim/unstable/unix/
+DIST_SUBDIR=		vim
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		martti@NetBSD.org
+HOMEPAGE=		http://www.vim.org/
+
+CONFLICTS+=		vim-kde-[0-9]*
+
+WRKSRC=			${WRKDIR}/${VIM_SUBDIR}/src
+GNU_CONFIGURE=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+# See "configure --help" extra options. These might affect the installed
+# files (and PLIST might not include all files) so use at your own risk!
+CONFIGURE_ARGS+=	${VIM_EXTRA_OPTS}
+CONFIGURE_ARGS+=	--enable-multibyte
+
+PATCH_ARGS=		-d ${WRKDIR:Q}/${VIM_SUBDIR:Q} --forward --quiet \
+				-E ${PATCH_STRIP}
+PATCH_DIST_ARGS=	-d ${WRKDIR:Q}/${VIM_SUBDIR:Q} --forward --quiet \
+				-E ${PATCH_DIST_STRIP}
+PATCHDIR?=		${.CURDIR}/../../wip/vim-share/patches
+DISTINFO_FILE?=		${.CURDIR}/../../wip/vim-share/distinfo
+
+.if empty(PKGNAME:Mvim-share*)
+ALTERNATIVES_SRC=	${.CURDIR:Q}/../../wip/vim-share/ALTERNATIVES
+.else
+ALTERNATIVES_SRC=
+.endif
+
+PKG_SUPPORTED_OPTIONS+=	cscope
+PKG_OPTIONS_VAR=	PKG_OPTIONS.vim
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mcscope)
+DEPENDS+=		cscope-[0-9]*:../../devel/cscope
+CONFIGURE_ARGS+=	--enable-cscope
+.endif
