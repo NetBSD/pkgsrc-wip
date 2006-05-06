@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/15 22:54:03 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/06 03:39:07 schnoebe Exp $
 
 DISTNAME=		xmpppy-0.3.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		chat python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmpppy/}
-EXTRACT_SUFX=		.tar.gz
 
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://xmpppy.sf.net/
