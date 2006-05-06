@@ -1,13 +1,320 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/04/17 02:30:38 schnoebe Exp $
+$NetBSD: patch-aa,v 1.2 2006/05/06 01:54:01 schnoebe Exp $
 
 --- yahoo.py.orig	2006-03-07 03:09:17.000000000 -0600
 +++ yahoo.py
-@@ -1117,7 +1117,7 @@ if __name__ == '__main__':
+@@ -73,7 +73,7 @@ class Transport:
+     def findbadconn(self):
+         #print rdsocketlist
+         for each in userlist:
+-            print each, userlist[each].sock.fileno()
++            # print each, userlist[each].sock.fileno()
+             if userlist[each].sock.fileno() == -1:
+                 #print each, userlist[each].sock.fileno()
+                 self.y_closed(userlist[each])
+@@ -194,14 +194,14 @@ class Transport:
+                         self.jabberqueue(Error(event,ERR_NOT_IMPLEMENTED))
+                         return
+                     if event.getTo().getResource() == None or event.getTo().getResource() == '':
+-                        print userlist[fromstripped].roomlist, userlist[fromstripped].roomnames
++                        # print userlist[fromstripped].roomlist, userlist[fromstripped].roomnames
+                         if userlist[fromstripped].roomlist.has_key(event.getTo().getNode().encode('utf-8').decode('hex')):
+                             room = event.getTo().getNode().encode('utf-8').decode('hex')
+                         elif userlist[fromstripped].roomnames.has_key(event.getTo().getNode()):
+                             room = userlist[fromstripped].roomnames[event.getTo().getNode()].encode('utf-8')
+                         else:
+                             room = None
+-                        print "groupchat room: ",room
++                        # print "groupchat room: ",room
+                         if room != None:
+                             if event.getBody()[0:3] == '/me':
+                                 type = 2
+@@ -215,7 +215,7 @@ class Transport:
+                         else:
+                             self.jabberqueue(Error(event,ERR_BAD_REQUEST))
+             else:
+-                print 'no item error'
++                # print 'no item error'
+                 self.jabberqueue(Error(event,ERR_REGISTRATION_REQUIRED))
+         else:
+             self.jabberqueue(Error(event,ERR_BAD_REQUEST))
+@@ -247,12 +247,12 @@ class Transport:
+                                 p=None
+                                 p= m.setTag('x',namespace = NS_ROSTERX)
+                                 yrost = userlist[fromstripped].buddylist
+-                                print yrost
++                                # print yrost
+                                 for each in yrost.keys():
+                                     for i in yrost[each]:
+                                         p.addChild(name='item', attrs={'jid':'%s@%s'%(i,hostname),'name':i, 'action':'add'},payload=[Node('group',payload=each)])
+                                 self.jabberqueue(m)
+-                                print m
++                                # print m
+                             else:
+                                 for each in userlist[fromstripped].buddylist.keys():
+                                     for i in userlist[fromstripped].buddylist[each]:
+@@ -278,7 +278,7 @@ class Transport:
+                         else:
+                             #add new user case.
+                             if event.getStatus() != None:
+-                                print event.getStatus().encode('utf-8')
++                                # print event.getStatus().encode('utf-8')
+                                 status = event.getStatus().encode('utf-8')
+                             else:
+                                 status = ''
+@@ -310,11 +310,11 @@ class Transport:
+                         if userlist[fromstripped].xresources.has_key(event.getFrom().getResource()):
+                             #update resource record
+                             userlist[fromstripped].xresources[event.getFrom().getResource()]=(event.getShow(),event.getPriority(),event.getStatus(),userlist[fromstripped].xresources[event.getFrom().getResource()][3])
+-                            print "Update resource login: %s" % userlist[fromstripped].xresources
++                            # print "Update resource login: %s" % userlist[fromstripped].xresources
+                         else:
+                             #new resource login
+                             userlist[fromstripped].xresources[event.getFrom().getResource()]=(event.getShow(),event.getPriority(),event.getStatus(),time.time())
+-                            print "New resource login: %s" % userlist[fromstripped].xresources
++                            # print "New resource login: %s" % userlist[fromstripped].xresources
+                             #send roster as is
+                             self.y_send_online(fromstripped,event.getFrom().getResource())
+                         #print fromstripped, event.getShow().encode('utf-8'), event.getStatus().encode('utf-8')
+@@ -363,7 +363,7 @@ class Transport:
+                             #Single resource case
+                             #print userlist[fromstripped].xresources
+                             if userlist[fromstripped].xresources == {}:
+-                                print 'No more resource logins'
++                                # print 'No more resource logins'
+                                 yobj=userlist[fromstripped]
+                                 if yobj.pripingobj in timerlist:
+                                     timerlist.remove(yobj.pripingobj)
+@@ -379,7 +379,7 @@ class Transport:
+                 #Need to move Chatpings into this section for Yahoo rooms.
+                 if userlist.has_key(fromstripped):
+                     if userlist[fromstripped].connok:
+-                        print "chat presence"
++                        # print "chat presence"
+                         try:
+                             #print event.getTo().getNode().encode('utf-8').decode('base64')
+                             room = unicode(event.getTo().getNode().encode('utf-8').decode('hex'),'utf-8','strict')
+@@ -388,7 +388,7 @@ class Transport:
+                                 room = userlist[fromstripped].roomnames[event.getTo().getNode()]
+                             else:
+                                 self.jabberqueue(Error(event,ERR_NOT_ACCEPTABLE))
+-                                print "decode error"
++                                # print "decode error"
+                                 return
+                         userlist[fromstripped].roomnames[event.getTo().getNode().lower()] = room
+                         if event.getType() == 'available' or event.getType() == None or event.getType() == '':
+@@ -508,16 +508,16 @@ class Transport:
+             else:
+                 self.jabberqueue(Error(event,ERR_NOT_ACCEPTABLE))
+         elif to.getDomain() == chathostname:
+-            print (to.getNode()), type(event.getQuerynode())
++            # print (to.getNode()), type(event.getQuerynode())
+             if to.getNode() == None or to.getNode() == '':
+                 if event.getQuerynode() == None:
+-                    print 'catagory case'
++                    # print 'catagory case'
+                     m = Iq(to=fromjid,frm=to,typ='result',queryNS=NS_DISCO_INFO, payload=[Node('identity',attrs={'category':'conference','type':'yahoo','name':'Yahoo public chat rooms'}),Node('feature',attrs={'var':NS_MUC})])
+                     m.setID(id)
+                     self.jabberqueue(m)
+                     #raise dispatcher.NodeProcessed
+                 else:
+-                    print 'catagory item case ',self.chatcat[0][1]
++                    # print 'catagory item case ',self.chatcat[0][1]
+                     if self.chatcat[0][1].has_key(event.getQuerynode()):
+                         m = Iq(to=fromjid,frm=to,typ='result',queryNS=NS_DISCO_INFO, payload=[Node('identity',attrs={'name':self.chatcat[0][1][event.getQuerynode()]})])
+                         m.setQuerynode(event.getQuerynode())
+@@ -528,21 +528,21 @@ class Transport:
+                 #print 'item case', event.getQuerynode().encode('utf-8')
+                 try:
+                     str = unicode(to.getNode().encode('utf-8').decode('hex'),'utf-8','strict')
+-                    print str.encode('utf-8')
++                    # print str.encode('utf-8')
+                     info = None
+                     if self.catlist.has_key(event.getQuerynode()):
+                         lobby,room = str.split(':')
+-                        print event.getQuerynode().encode('utf-8'), lobby, room
++                        # print event.getQuerynode().encode('utf-8'), lobby, room
+                         if self.catlist[event.getQuerynode()][1].has_key(lobby):
+                             t = self.catlist[event.getQuerynode()][1][lobby]
+-                            print t
++                            # print t
+                             data = {'muc#roominfo_description':t['name'],'muc#roominfo_subject':t['topic'],'muc#roominfo_occupants':t['rooms']['%s'%room]['users']}
+-                            print data
++                            # print data
+                             info = DataForm(typ = 'result', data= data)
+                             field = info.setField('FORM_TYPE')
+                             field.setType('hidden')
+                             field.setValue('http://jabber.org/protocol/muc#roominfo')
+-                            print info
++                            # print info
+                     payload = [Node('identity',attrs={'category':'conference','type':'yahoo','name':str}),Node('feature',attrs={'var':NS_MUC})]
+                     if info != None:
+                         payload.append(info)
+@@ -611,7 +611,7 @@ class Transport:
+                         if t != None:
+                             self.catlist[event.getQuerynode()] = (time.time(),t)
+                 # Do get more categories
+-                print event.getQuerynode().encode('utf-8')
++                # print event.getQuerynode().encode('utf-8')
+                 if not self.chatcat.has_key(event.getQuerynode()):
+                     t = roomlist.getcata(event.getQuerynode())
+                     #print t
+@@ -718,10 +718,10 @@ class Transport:
+                 if not userlist.has_key(fromjid):
+                     yobj = ylib.YahooCon(username.encode('utf-8'),password.encode('utf-8'), fromjid,localaddress)
+                     userlist[fromjid]=yobj
+-                    print "try connect"
++                    # print "try connect"
+                     s = yobj.connect()
+                     if s != None:
+-                        print "conect made"
++                        # print "conect made"
+                         rdsocketlist[s]=yobj
+                         userlist[fromjid]=yobj
+                         self.yahooqueue(fromjid,yobj.ymsg_send_challenge())
+@@ -836,7 +836,7 @@ class Transport:
+             del yobj
+ 
+     def y_ping(self, yobj):
+-        print "got ping!"
++        # print "got ping!"
+         #freq = yobj.pripingtime*60
+         freq = 5 * 60 #overide to ping time to try and reduce disconnects
+         offset = int(time.time())%freq
+@@ -863,11 +863,13 @@ class Transport:
+             self.jabberqueue(Message(to=yobj.fromjid,frm=hostname,subject='Yahoo! login name',body='Your Yahoo! username was specified incorrectly in the configuration. This may be because of an upgrade from a previous version, the configuration has been updated'))
+ 
+     def y_login(self,yobj):
+-        print "got login"
++        # print "got login"
++	# noop, sincw we need something!
++	yobj = yobj
+ 
+     def y_loginfail(self,yobj, reason = None):
+-        print "got login fail: ",reason
+-        print yobj.conncount, yobj.moreservers()
++        # print "got login fail: ",reason
++        # print yobj.conncount, yobj.moreservers()
+         if yobj.moreservers() and reason == None:
+             del rdsocketlist[yobj.sock]
+             yobj.sock.close()
+@@ -922,10 +924,10 @@ class Transport:
+                 status = stripformatting(yobj.roster[name][2])
+             else:
+                 status = None
+-            print status
++            # print status
+             b = Presence(to = mjid, frm = '%s@%s/messenger'%(name, hostname),priority = 10, show=yobj.roster[name][1], status=status)
+             if userfile[yobj.fromjid].has_key('avatar'):
+-                print userfile[yobj.fromjid]['avatar'].keys(), name
++                # print userfile[yobj.fromjid]['avatar'].keys(), name
+                 if userfile[yobj.fromjid]['avatar'].has_key(name):
+                     b.addChild(node=Node('x',attrs={'xmlns':'jabber:x:avatar'},payload=[Node('hash',payload=userfile[yobj.fromjid]['avatar'][name][0])]))
+             self.jabberqueue(b)
+@@ -991,14 +993,14 @@ class Transport:
+ 
+     def y_reg_login(self,yobj):
+         # registration login handler
+-        print "got reg login"
++        # print "got reg login"
+         #m = yobj.event.buildReply('result')
+         #self.jabberqueue(m)
+         self.jabberqueue(Presence(to=yobj.event.getFrom(),frm=yobj.event.getTo(),typ=yobj.event.getType()))
+         self.jabberqueue(Presence(typ='subscribe',to=yobj.fromjid, frm=hostname))
+ 
+     def y_reg_loginfail(self,yobj,reason = None):
+-        print "got reg login fail"
++        # print "got reg login fail"
+         if yobj.moreservers() and reason != None:
+             del rdsocketlist[yobj.sock]
+             yobj.sock.close()
+@@ -1016,7 +1018,7 @@ class Transport:
+         del yobj
+ 
+     def y_send_online(self,fromjid,resource=None):
+-        print fromjid,userlist[fromjid].roster
++        # print fromjid,userlist[fromjid].roster
+         fromstripped = fromjid
+         if resource != None:
+             fromjid = JID(fromjid)
+@@ -1027,7 +1029,7 @@ class Transport:
+                 self.jabberqueue(Presence(frm = '%s@%s/messenger' % (each,hostname), to = fromjid))
+ 
+     def y_send_offline(self,fromjid,resource=None):
+-        print fromjid,userlist[fromjid].roster
++        # print fromjid,userlist[fromjid].roster
+         fromstripped = fromjid
+         if resource != None:
+             fromjid = JID(fromjid)
+@@ -1061,7 +1063,7 @@ class Transport:
+                 #print info['yip'],userlist[fromjid].username
+                 if info['yip'] == userlist[fromjid].username:
+                     jid = tojid
+-                    print info['nick'], userlist[fromjid].nick
++                    # print info['nick'], userlist[fromjid].nick
+                     if info['nick'] != userlist[fromjid].nick:
+                         # join room with wrong nick
+                         p = Presence(to = tojid, frm = '%s@%s/%s' % (room.encode('hex'),chathostname,userlist[fromjid].nick))
+@@ -1112,12 +1114,10 @@ class Transport:
+         raise dispatcher.NodeProcessed
+ 
+ if __name__ == '__main__':
+-    if 'PID' in os.environ:
+-        open(os.environ['PID'],'w').write(`os.getpid()`)
      configfile = ConfigParser.ConfigParser()
      configfile.add_section('yahoo')
      try:
 -        configfilename = 'transport.ini'
-+        configfilename = os.path.join("@PKG_SYSCONFDIR@", "yahoo-transport.ini")
++        configfilename = os.path.join("/usr/pkg/etc/jabberd", "yahoo-transport.ini")
          cffile = open(configfilename,'r')
      except IOError:
          try:
+@@ -1162,6 +1162,36 @@ if __name__ == '__main__':
+              sys.exit(1)
+         fatalerrors = configfile.get('yahoo','FatalErrors').lower() in ['true', '1', 'yes']
+ 
++    if configfile.has_option('yahoo', 'Daemonize'):
++	if not configfile.get('yahoo', 'Daemonize').lower() in ['true', '1',
++				'yes', 'false', '0', 'no']:
++	    print "Invalid value for Daemonize: " + configfile.get('yahoo', 'Daemonize')
++	    sys.exit(1)
++	else:
++	    if configfile.get('yahoo', 'Daemonize').lower() in ['true',
++								    '1', 'yes']:
++		try:
++		    pid = os.fork()
++		    if pid > 0:
++			sys.exit(0)	# exit from the parent
++		except OSError, e:
++		    print "Fork failed: (" + e.errno + ") " + e.strerror
++		    ssy.exit(1)
++		# now in the child, redirect stdin/out/err
++		for f in sys.stdout, sys.stderr: f.flush()
++		si = file('/dev/null', 'r')
++		so = file('/dev/null', 'a+')
++		os.dup2(si.fileno(), sys.stdin.fileno())
++		os.dup2(so.fileno(), sys.stdout.fileno())
++		os.dup2(so.fileno(), sys.stderr.fileno())
++		# all done being daemonized.
++
++    # write our pid file after we've (possibly) daemonize'd
++    if 'PID' in os.environ:
++        open(os.environ['PID'],'w').write(`os.getpid()`)
++    if configfile.has_option('yahoo','PidFile'):
++        open( configfile.get('yahoo','PidFile'), 'w').write(`os.getpid()`)
++
+     global connection
+     connection = client.Component(hostname,port,component=component,domains=[hostname,chathostname])
+     trans = Transport(connection)
+@@ -1174,10 +1204,10 @@ if __name__ == '__main__':
+         try:
+             (i , o, e) = select.select(rdsocketlist.keys(),wrsocketlist.keys(),[],1)
+         except ValueError:
+-            print "Value Error", rdsocketlist, wrsocketlist
++            # print "Value Error", rdsocketlist, wrsocketlist
+             trans.findbadconn()
+         except socket.error:
+-            print "Bad Socket", rdsocketlist, wrsocketlist
++            # print "Bad Socket", rdsocketlist, wrsocketlist
+             trans.findbadconn()
+ ##            for each in rdsocketlist.keys():
+ ##                try:

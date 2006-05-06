@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/04/17 02:30:38 schnoebe Exp $
+$NetBSD: patch-ab,v 1.2 2006/05/06 01:54:01 schnoebe Exp $
 
 --- transport.ini.orig	2006-01-02 13:40:55.000000000 -0600
 +++ transport.ini
-@@ -1,10 +1,10 @@
+@@ -1,10 +1,12 @@
  [yahoo]
  Server = 127.0.0.1
  Hostname = yahoo.localhost
@@ -11,8 +11,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/04/17 02:30:38 schnoebe Exp $
  Secret = secret
  ;ServerUser=username-for-jabberd2-connection
 -;UserFile = user.dbm
-+UserFile = @JABBERD_SPOOLDIR@/yahoo.db
++UserFile = @JABBERD_SPOOLDIR@/yahoo
  ;LocalAddress = vanity.host.example.net
 -;LogFile = ircerror.log
 +LogFile = @JABBERD_LOGDIR@/yahoo-transport.log
  ;FatalErrors = true
++PidFile = @JABBERD_PIDDIR@/yahoo-transport.pid
++Daemonize = yes

@@ -1,0 +1,32 @@
+$NetBSD: patch-ad,v 1.1 2006/05/06 01:54:01 schnoebe Exp $
+
+--- htmlutils.py.orig	2005-07-29 01:35:11.000000000 -0500
++++ htmlutils.py
+@@ -91,7 +91,7 @@ class NodeBuilder(HTMLParser):
+ 
+     def handle_data(self, data):
+         """XML Parser callback. Used internally"""
+-        print data.strip(),
++        # print data.strip(),
+         data = re.sub('&#x([0-9a-f]*;)',self.decode_hextoutf8,data)
+         self.DEBUG(DBG_NODEBUILDER, data, 'data')
+         if not self._ptr: return
+@@ -102,7 +102,8 @@ class NodeBuilder(HTMLParser):
+             self.last_is_data = 1
+ 
+     def handle_charref(self,name):
+-    	print "Got chardata: ", name
++    	# print "Got chardata: ", name
++	name = name
+ 
+     def handle_namespace_start(self, prefix, uri):
+         """XML Parser callback. Used internally"""
+@@ -123,7 +124,7 @@ class NodeBuilder(HTMLParser):
+ 
+     def decode_hextoutf8(self,match):
+     	""" This function decodes the hex string into a utf8 return value, or returns '' """
+-    	print 'Hex decoder'
++    	# print 'Hex decoder'
+     	a = match.group(0)[3:len(match.group(0))-1]
+     	if len(a) %2:
+     		a = '0'+a

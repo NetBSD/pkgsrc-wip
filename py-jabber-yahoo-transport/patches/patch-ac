@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/05/06 01:54:01 schnoebe Exp $
+
+--- avatar.py.orig	2005-06-01 00:58:22.000000000 -0500
++++ avatar.py
+@@ -3,7 +3,7 @@ import httplib
+ def getavatar(aid):
+     #the aid value is the Avatar ID. This is given in tag 197
+     conn = httplib.HTTPConnection("img1.avatar.vip.dcn.yahoo.com")
+-    conn.debuglevel=3
++    conn.debuglevel=0
+     conn.request("GET","/users/%s.medium.png"%aid)
+     try:
+         r1 = conn.getresponse()

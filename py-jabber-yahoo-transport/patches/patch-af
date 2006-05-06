@@ -1,0 +1,114 @@
+$NetBSD: patch-af,v 1.1 2006/05/06 01:54:01 schnoebe Exp $
+
+--- ylib.py.orig	2005-11-16 17:57:18.000000000 -0600
++++ ylib.py
+@@ -59,7 +59,7 @@ class YahooCon:
+     def connect(self):
+         self.connok=False
+         while self.conncount != len(self.hostlist):
+-            print self.conncount
++            # print self.conncount
+             self.sock = None
+             self.sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+             self.sock.bind((self.fromhost,0))
+@@ -74,7 +74,7 @@ class YahooCon:
+ 
+     def moreservers(self):
+         if self.conncount < len(self.hostlist):
+-            print "more servers %s %s" % (len(self.hostlist),self.conncount)
++            # print "more servers %s %s" % (len(self.hostlist),self.conncount)
+             return True
+         else:
+             return False
+@@ -148,8 +148,8 @@ class YahooCon:
+                         i = int(pay[each][13])
+                         j = i%4
+                         k= j%2
+-                        if i/4:
+-                            print "contact is on games"
++                        # if i/4:
++                            # print "contact is on games"
+                         if j/2:
+                             if not self.resources.has_key(pay[each][7]):
+                                 self.resources[pay[each][7]]=[]
+@@ -187,8 +187,8 @@ class YahooCon:
+                         i = int(pay[each][13])
+                         j = i%4
+                         k= j%2
+-                        if i/4:
+-                            print "contact is off games"
++                        # if i/4:
++                            # print "contact is off games"
+                         if not j/2:
+                             if self.resources.has_key(pay[each][7]):
+                                 if 'chat' in self.resources[pay[each][7]]:
+@@ -331,7 +331,7 @@ class YahooCon:
+             self.handlers['ping'](self)
+ 
+     def ymsg_reqroom(self, hdr,pay):
+-        print "got reqroom"
++        # print "got reqroom"
+         if self.handlers.has_key('reqroom'):
+             self.handlers['reqroom'](self.fromjid)
+ 
+@@ -427,7 +427,7 @@ class YahooCon:
+         return hdr+pay
+ 
+     def ymsg_send_conflogon(self):
+-        print self.cookies
++        # print self.cookies
+         pay = ymsg_mkargu({0:self.username,1:self.username,6: '%s; %s' % (self.cookies[0].replace('\t','=').split(';')[0],self.cookies[1].replace('\t','=').split(';')[0])})
+         hdr = ymsg_mkhdr(self.version,len(pay),Y_confon,0x5a55aa55,self.session)
+         return hdr+pay
+@@ -552,7 +552,7 @@ class YahooCon:
+             d[47] = '1'
+         elif show == 'invisible':
+             d[10]= '12'
+-        print d
++        # print d
+         pay = ymsg_mkargu(d)
+         hdr = ymsg_mkhdr(self.version,len(pay),Y_available,0,self.session)
+         return hdr+pay
+@@ -563,7 +563,7 @@ class YahooCon:
+             argu[19] = msg.encode('utf-8')
+             argu[10] = '99'
+         argu[47] = '0'
+-        print argu
++        # print argu
+         pay = ymsg_mkargu(argu)
+         hdr = ymsg_mkhdr(self.version,len(pay),Y_available,0,self.session)
+         return hdr+pay
+@@ -581,7 +581,7 @@ class YahooCon:
+             a[47] = '1'
+         elif show == 'invisible':
+             a[10]= '12'
+-        print a
++        # print a
+         pay = ymsg_mkargu(a)
+         hdr = ymsg_mkhdr(self.version, len(pay), Y_away,0,self.session)
+         return hdr+pay
+@@ -629,9 +629,9 @@ class YahooCon:
+             	try:
+                 	t = ymsg_deargu(u[:s[2]])
+                 except:
+-                	print "Broken connection Terminating"
++                	# print "Broken connection Terminating"
+                 	self.handlers['closed'](self)
+-                print s, t, len(self.rbuf)
++                # print s, t, len(self.rbuf)
+                 if s[3] == Y_chalreq:           #87
+                     # give salt
+                     self.sock.send(self.ymsg_challenge(s,t))
+@@ -698,10 +698,10 @@ class YahooCon:
+ if __name__ == '__main__':
+     y = YahooCon('YID','password','jid')
+     while not y.connect():
+-        print 'sleep'
++        # print 'sleep'
+         time.sleep(5)
+ 
+-    print "connected ", y.sock
++    # print "connected ", y.sock
+     y.sock.send(y.ymsg_send_challenge())
+ 
+     while 1:
