@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/21 20:30:05 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/05/06 03:36:11 schnoebe Exp $
 ${TRANSPORTDIR}/data/defaultJabberAvatar.png
 ${TRANSPORTDIR}/data/defaultMSNAvatar.png
 ${TRANSPORTDIR}/src/avatar.py
@@ -14,10 +14,7 @@ ${TRANSPORTDIR}/src/housekeep.py
 ${TRANSPORTDIR}/src/jabw.py
 ${TRANSPORTDIR}/src/lang.py
 ${TRANSPORTDIR}/src/legacy/__init__.py
-${TRANSPORTDIR}/src/legacy/defaultAvatar.png
-${TRANSPORTDIR}/src/legacy/defaultJabberAvatar.png
 ${TRANSPORTDIR}/src/legacy/glue.py
-${TRANSPORTDIR}/src/legacy/legacylist.py
 ${TRANSPORTDIR}/src/main.py
 ${TRANSPORTDIR}/src/misciq.py
 ${TRANSPORTDIR}/src/register.py

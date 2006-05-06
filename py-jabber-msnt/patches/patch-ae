@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2006/02/21 20:30:06 schnoebe Exp $
+$NetBSD: patch-ae,v 1.3 2006/05/06 03:36:11 schnoebe Exp $
 
---- src/main.py.orig	2006-02-17 08:44:28.000000000 -0600
+--- src/main.py.orig	2006-02-17 16:07:30.000000000 -0600
 +++ src/main.py
 @@ -34,7 +34,7 @@ bestreactor.install()
  # Must load config before everything else
