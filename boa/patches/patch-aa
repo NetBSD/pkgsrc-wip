@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/05/06 11:06:50 jsonn Exp $
+
+--- src/index_dir.c.orig	2006-05-06 10:53:39.000000000 +0000
++++ src/index_dir.c
+@@ -29,7 +29,7 @@
+ #include <fcntl.h>
+ #include "compat.h"
+ 
+-#define MAX_FILE_LENGTH                         MAXNAMLEN
++#define MAX_FILE_LENGTH                         NAME_MAX
+ #define MAX_PATH_LENGTH                         PATH_MAX
+ 
+ #define INT_TO_HEX(x) \

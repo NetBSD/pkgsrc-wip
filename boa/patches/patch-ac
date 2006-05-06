@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1 2006/05/06 11:06:50 jsonn Exp $
+
+--- src/signals.c.orig	2006-05-06 11:01:38.000000000 +0000
++++ src/signals.c
+@@ -29,7 +29,7 @@
+ #endif
+ #include <signal.h>             /* signal */
+ 
+-sigjmp_buf env;
++jmp_buf env;
+ int handle_sigbus;
+ 
+ void sigsegv(int);
+@@ -134,9 +134,6 @@ void sigsegv(int dummy)
+     abort();
+ }
+ 
+-extern sigjmp_buf env;
+-extern int handle_sigbus;
+-
+ void sigbus(int dummy)
+ {
+     if (handle_sigbus) {
