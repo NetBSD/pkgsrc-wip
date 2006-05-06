@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: upimapproxy.sh,v 1.1.1.1 2004/06/24 23:42:55 adrian_p Exp $
+# $NetBSD: upimapproxy.sh,v 1.2 2006/05/06 07:57:31 adrian_p Exp $
 #
 
 # PROVIDE: upimapproxy
@@ -20,7 +20,8 @@ sig_stop="-INT"
 
 upimapproxy_stop()
 {
-	pids="`check_process in.imapproxyd`"
+	echo "Stopping upimapproxy."
+	pids="$(check_process in.imapproxyd)"
 	if [ -n "$pids" ]; then
 		for pid in $pids; do
 			kill $sig_stop $pid
