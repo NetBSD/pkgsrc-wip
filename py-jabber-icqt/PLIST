@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/06 02:37:13 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/05/06 16:24:55 schnoebe Exp $
 bin/PyICQt
 ${TRANSPORTDIR}/data/defaultAIMAvatar.png
 ${TRANSPORTDIR}/data/defaultICQAvatar.png
@@ -69,7 +69,6 @@ ${TRANSPORTDIR}/tools/managessi.py
 ${TRANSPORTDIR}/tools/migrate.py
 share/examples/jabberd/pyicqt.xml
 share/examples/rc.d/pyicqt
-@dirrm share/examples/jabberd
 @dirrm ${TRANSPORTDIR}/tools
 @dirrm ${TRANSPORTDIR}/src/xdb
 @dirrm ${TRANSPORTDIR}/src/web
