@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:11 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/06 02:37:13 schnoebe Exp $
 
-DISTNAME=		pyicq-t-0.6
+DISTNAME=		pyicq-t-0.7a
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
 MASTER_SITES=		http://www.blathersource.org/download.php/pyicq-t/
@@ -27,12 +27,13 @@ DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.5:../../graphics/py-imaging
 # USE_PERL5, INFO_FILES, DIST_SUBDIR, etc.
 # EXTRACT_ONLY=		# yes
 NO_BUILD=		yes
-PYTHON_PATCH_SCRIPTS+=	src/main.py
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"
 
 RCD_SCRIPTS=	pyicqt
+
+PYTHON_PATCH_SCRIPTS+=	PyICQt.py
 
 TRANSPORTDIR=		${JABBERD_TRANSDIR}/pyicqt
 
@@ -48,32 +49,31 @@ CONF_FILES=	${EGDIR}/pyicqt.xml ${PKG_SYSCONFDIR}/pyicqt.xml
 
 do-install:
 	@ ${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
-	@ cd ${WRKSRC}/src && \
-	for i in `find . \( \( -type f -name '*.orig' -o \
-			-type d -name .svn \) -prune \) -o -type f -print` ;\
+	@ cd ${WRKSRC} && \
+	for i in `find src data tools \\( \\( -type f -name '*.orig' -o \
+			-type d -name .svn \\) -prune \\) -o -type f -print` ;\
 	do \
 	    ${ECHO} "Installing $$i -> ${PREFIX}/${TRANSPORTDIR}/$$i";\
 	    ${INSTALL_SCRIPT_DIR} `${DIRNAME} ${PREFIX}/${TRANSPORTDIR}/$$i` ;\
 	    ${INSTALL_SCRIPT} $$i ${PREFIX}/${TRANSPORTDIR}/$$i ;\
 	done
-	${LN} ${PREFIX}/${TRANSPORTDIR}/main.py \
-				${PREFIX}/${TRANSPORTDIR}/PyICQt.py
+	${INSTALL_SCRIPT} ${WRKSRC}/PyICQt.py ${PREFIX}/bin/PyICQt
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/config_example.xml ${EGDIR}/pyicqt.xml
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing Paths
-SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	config_example.xml
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g' \
-			-e 's,@TRANSPORTDIR@,${TRANSPORTDIR},g' \
-			-e 's,@JABBERD_SPOOLDIR@,${JABBERD_SPOOLDIR},g' \
-			-e 's,@JABBERD_TRANSDIR@,${JABBERD_TRANSDIR},g' \
-			-e 's,@JABBERD_GROUP@,${JABBERD_GROUP},g' \
-			-e 's,@JABBERD_USER@,${JABBERD_USER},g' \
-			-e 's,@JABBERD_LOGDIR@,${JABBERD_LOGDIR},g' \
-			-e 's,@PREFIX@,${PREFIX},g' \
-			-e 's,@JABBERD_PIDDIR@,${JABBERD_PIDDIR},g'
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	config_example.xml PyICQt.py src/main.py
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@TRANSPORTDIR@,${TRANSPORTDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBERD_SPOOLDIR@,${JABBERD_SPOOLDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBERD_TRANSDIR@,${JABBERD_TRANSDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBERD_GROUP@,${JABBERD_GROUP},g'
+SUBST_SED.paths+=	-e 's,@JABBERD_USER@,${JABBERD_USER},g'
+SUBST_SED.paths+=	-e 's,@JABBERD_LOGDIR@,${JABBERD_LOGDIR},g'
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@JABBERD_PIDDIR@,${JABBERD_PIDDIR},g'
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

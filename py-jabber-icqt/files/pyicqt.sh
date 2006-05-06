@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pyicqt.sh,v 1.1.1.1 2005/12/28 06:15:01 schnoebe Exp $
+# $NetBSD: pyicqt.sh,v 1.2 2006/05/06 02:37:14 schnoebe Exp $
 #
 #   startup script for the PyICQt IM transport for Jabber
 #   uses the twistd application engine
@@ -13,11 +13,11 @@ name="pyicqt"
 rcvar=$name
 command_interpreter="@PYTHONBIN@"
 required_files="@PKG_SYSCONFDIR@/pyicqt.xml"
-command="@PREFIX@/@TRANSPORTDIR@/PyICQt.py"
+command="@PREFIX@/bin/PyICQt"
 pyicqt_user="@JABBERD_USER@"
 pidfile="@JABBERD_PIDDIR@/${name}.pid"
 logfile="@JABBERD_LOGDIR@/${name}.log"
-command_args="-l ${logfile} -c ${required_files}"
+command_args="-b -l ${logfile}"
 stop_postcmd="remove_pidfile"
 start_precmd="ensure_piddir"
 

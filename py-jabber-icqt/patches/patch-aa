@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/12/28 06:15:01 schnoebe Exp $
+$NetBSD: patch-aa,v 1.2 2006/05/06 02:37:14 schnoebe Exp $
 
---- config_example.xml.orig	2005-03-05 12:45:24.000000000 -0600
+--- config_example.xml.orig	2006-03-05 19:38:25.000000000 -0600
 +++ config_example.xml
-@@ -4,10 +4,10 @@
+@@ -7,11 +7,11 @@
  
  	<!-- The location of the spool directory.. if relative, relative to -->
  	<!-- this directory.  Do not include the jid of the transport. -->
@@ -10,6 +10,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/12/28 06:15:01 schnoebe Exp $
 +	<spooldir>@JABBERD_SPOOLDIR@</spooldir>
  
  	<!-- The location of the PID file.. if relative, relative to this dir. -->
+ 	<!-- Comment out if you do not want a pid file -->
 -	<pid>PyICQt.pid</pid>
 +	<pid>@JABBERD_PIDDIR@/pyicqt.pid</pid>
  

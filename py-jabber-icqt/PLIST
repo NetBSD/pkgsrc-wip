@@ -1,40 +1,85 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/28 06:15:01 schnoebe Exp $
-${TRANSPORTDIR}/webadmin/handler.py
-${TRANSPORTDIR}/webadmin/__init__.py
-${TRANSPORTDIR}/tlib/jabber/jstrports.py
-${TRANSPORTDIR}/tlib/jabber/client.py
-${TRANSPORTDIR}/tlib/jabber/__init__.py
-${TRANSPORTDIR}/tlib/jabber/component.py
-${TRANSPORTDIR}/tlib/jabber/jid.py
-${TRANSPORTDIR}/tlib/countrycodes.py
-${TRANSPORTDIR}/tlib/xmlstream.py
-${TRANSPORTDIR}/tlib/langcodes.py
-${TRANSPORTDIR}/tlib/__init__.py
-${TRANSPORTDIR}/tlib/domish.py
-${TRANSPORTDIR}/tlib/oscar.py
-${TRANSPORTDIR}/tlib/socks5.py
-${TRANSPORTDIR}/tlib/sockserror.py
-${TRANSPORTDIR}/legacy/__init__.py
-${TRANSPORTDIR}/legacy/glue.py
-${TRANSPORTDIR}/legacy/icqt.py
-${TRANSPORTDIR}/config.py
-${TRANSPORTDIR}/stats.py
-${TRANSPORTDIR}/utils.py
-${TRANSPORTDIR}/disco.py
-${TRANSPORTDIR}/session.py
-${TRANSPORTDIR}/xdb.py
-${TRANSPORTDIR}/lang.py
-${TRANSPORTDIR}/register.py
-${TRANSPORTDIR}/jabw.py
-${TRANSPORTDIR}/PyICQt.py
-${TRANSPORTDIR}/main.py
-${TRANSPORTDIR}/misciq.py
-${TRANSPORTDIR}/debug.py
-${TRANSPORTDIR}/xmlconfig.py
+@comment $NetBSD: PLIST,v 1.2 2006/05/06 02:37:13 schnoebe Exp $
+bin/PyICQt
+${TRANSPORTDIR}/data/defaultAIMAvatar.png
+${TRANSPORTDIR}/data/defaultICQAvatar.png
+${TRANSPORTDIR}/data/www/css/style.css
+${TRANSPORTDIR}/data/www/images/pyicq.png
+${TRANSPORTDIR}/data/www/template.html
+${TRANSPORTDIR}/src/avatar.py
+${TRANSPORTDIR}/src/bool.py
+${TRANSPORTDIR}/src/config.py
+${TRANSPORTDIR}/src/contact.py
+${TRANSPORTDIR}/src/daemonize.py
+${TRANSPORTDIR}/src/debug.py
+${TRANSPORTDIR}/src/disco.py
+${TRANSPORTDIR}/src/globals.py
+${TRANSPORTDIR}/src/imgmanip.py
+${TRANSPORTDIR}/src/jabw.py
+${TRANSPORTDIR}/src/lang.py
+${TRANSPORTDIR}/src/langs/__init__.py
+${TRANSPORTDIR}/src/langs/cs.py
+${TRANSPORTDIR}/src/langs/de.py
+${TRANSPORTDIR}/src/langs/en.py
+${TRANSPORTDIR}/src/langs/es.py
+${TRANSPORTDIR}/src/langs/fr.py
+${TRANSPORTDIR}/src/langs/nl.py
+${TRANSPORTDIR}/src/langs/pl.py
+${TRANSPORTDIR}/src/langs/ru.py
+${TRANSPORTDIR}/src/langs/sv.py
+${TRANSPORTDIR}/src/legacy/__init__.py
+${TRANSPORTDIR}/src/legacy/glue.py
+${TRANSPORTDIR}/src/legacy/icqt.py
+${TRANSPORTDIR}/src/legacy/legacyiq.py
+${TRANSPORTDIR}/src/legacy/legacylist.py
+${TRANSPORTDIR}/src/main.py
+${TRANSPORTDIR}/src/misciq.py
+${TRANSPORTDIR}/src/register.py
+${TRANSPORTDIR}/src/sasl.py
+${TRANSPORTDIR}/src/session.py
+${TRANSPORTDIR}/src/tlib/__init__.py
+${TRANSPORTDIR}/src/tlib/countrycodes.py
+${TRANSPORTDIR}/src/tlib/domish.py
+${TRANSPORTDIR}/src/tlib/jabber/__init__.py
+${TRANSPORTDIR}/src/tlib/jabber/client.py
+${TRANSPORTDIR}/src/tlib/jabber/component.py
+${TRANSPORTDIR}/src/tlib/jabber/jid.py
+${TRANSPORTDIR}/src/tlib/jabber/jstrports.py
+${TRANSPORTDIR}/src/tlib/jabber/xmpp_stringprep.py
+${TRANSPORTDIR}/src/tlib/langcodes.py
+${TRANSPORTDIR}/src/tlib/oscar.py
+${TRANSPORTDIR}/src/tlib/scheduler.py
+${TRANSPORTDIR}/src/tlib/socks5.py
+${TRANSPORTDIR}/src/tlib/sockserror.py
+${TRANSPORTDIR}/src/tlib/twistwrap.py
+${TRANSPORTDIR}/src/tlib/xmlstream.py
+${TRANSPORTDIR}/src/utils.py
+${TRANSPORTDIR}/src/web/__init__.py
+${TRANSPORTDIR}/src/web/handler.py
+${TRANSPORTDIR}/src/web/xmppcred.py
+${TRANSPORTDIR}/src/xdb/__init__.py
+${TRANSPORTDIR}/src/xdb/legacyaimtransport.py
+${TRANSPORTDIR}/src/xdb/legacyjittransport.py
+${TRANSPORTDIR}/src/xdb/mysql.py
+${TRANSPORTDIR}/src/xdb/template.py
+${TRANSPORTDIR}/src/xdb/xmlfiles.py
+${TRANSPORTDIR}/src/xmlconfig.py
+${TRANSPORTDIR}/tools/Makefile
+${TRANSPORTDIR}/tools/db-setup.mysql
+${TRANSPORTDIR}/tools/managessi.py
+${TRANSPORTDIR}/tools/migrate.py
 share/examples/jabberd/pyicqt.xml
 share/examples/rc.d/pyicqt
-@dirrm ${TRANSPORTDIR}/webadmin
-@dirrm ${TRANSPORTDIR}/legacy
-@dirrm ${TRANSPORTDIR}/tlib/jabber
-@dirrm ${TRANSPORTDIR}/tlib
+@dirrm share/examples/jabberd
+@dirrm ${TRANSPORTDIR}/tools
+@dirrm ${TRANSPORTDIR}/src/xdb
+@dirrm ${TRANSPORTDIR}/src/web
+@dirrm ${TRANSPORTDIR}/src/tlib/jabber
+@dirrm ${TRANSPORTDIR}/src/tlib
+@dirrm ${TRANSPORTDIR}/src/legacy
+@dirrm ${TRANSPORTDIR}/src/langs
+@dirrm ${TRANSPORTDIR}/src
+@dirrm ${TRANSPORTDIR}/data/www/images
+@dirrm ${TRANSPORTDIR}/data/www/css
+@dirrm ${TRANSPORTDIR}/data/www
+@dirrm ${TRANSPORTDIR}/data
 @dirrm ${TRANSPORTDIR}
