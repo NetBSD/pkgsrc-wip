@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2006/05/07 21:58:04 cheusov Exp $
+$NetBSD: patch-ad,v 1.6 2006/05/07 22:57:23 cheusov Exp $
 
---- build/mk.config.orig	Sun Jan 22 23:48:04 2006
+--- build/mk.config.orig	2006-01-22 23:48:04.000000000 +0200
 +++ build/mk.config
 @@ -19,72 +19,72 @@ POSIX_SHELL = /bin/sh
  # Root directory. Mainly useful for package building; leave empty for
@@ -97,25 +97,27 @@ $NetBSD: patch-ad,v 1.5 2006/05/07 21:58:04 cheusov Exp $
  
  #
  # Socket library, necessary on Solaris and Open UNIX. If your system has
-@@ -135,7 +135,7 @@ LCURS = -lcurses
+@@ -135,7 +135,8 @@ LCURS = -lcurses
  # zlib or don't want to use it; you need it only if you want to use inflate
  # compression when creating zip files with cpio.
  #
 -LIBZ = -Wl,-Bstatic -lz -Wl,-Bdynamic
 +#LIBZ = -Wl,-Bstatic -lz -Wl,-Bdynamic
++LIBZ     = -lz
  USE_ZLIB = 1
  
  #
-@@ -143,7 +143,7 @@ USE_ZLIB = 1
+@@ -143,7 +144,8 @@ USE_ZLIB = 1
  # needed to read and write bzip2 compressed parts of zip files with cpio.
  #
  #LIBBZ2 = -Wl,-Bstatic -lbz2 -Wl,-Bdynamic
 -USE_BZLIB = 0
-+#USE_BZLIB = 0
++LIBBZ2     = -lbz2
++USE_BZLIB = 1
  
  #
  # Compiler and linker flags. HOSTCC is for cross compiling.
-@@ -164,7 +164,7 @@ WARN = -Wchar-subscripts -Wformat -Wno-f
+@@ -164,7 +166,7 @@ WARN = -Wchar-subscripts -Wformat -Wno-f
  WARN=
  
  LD = $(CC)
@@ -124,7 +126,7 @@ $NetBSD: patch-ad,v 1.5 2006/05/07 21:58:04 cheusov Exp $
  
  #
  # Flags for the C preprocessor.
-@@ -175,7 +175,7 @@ LDFLAGS =
+@@ -175,7 +177,7 @@ LDFLAGS =
  # On AIX, -D_MTEXTEND_H should be added if mtextend.h is not found.
  # On NetBSD, add -DUSE_TERMCAP.
  #
@@ -133,7 +135,7 @@ $NetBSD: patch-ad,v 1.5 2006/05/07 21:58:04 cheusov Exp $
  
  #
  # CFLAGS, CFLAGS2, CFLAGSS, and CFLAGSU make it possible to give special
-@@ -196,10 +196,10 @@ CPPFLAGS = -D_GNU_SOURCE
+@@ -196,10 +198,10 @@ CPPFLAGS = -D_GNU_SOURCE
  # compiler mode (which is the default) until this issue is properly
  # handled by the system vendor.
  #
@@ -148,7 +150,7 @@ $NetBSD: patch-ad,v 1.5 2006/05/07 21:58:04 cheusov Exp $
  
  #
  # Binaries are stripped with this command after installation.
-@@ -218,7 +218,7 @@ STRIP = strip -s -R .comment -R .note
+@@ -218,7 +220,7 @@ STRIP = strip -s -R .comment -R .note
  #
  # On FreeBSD, NetBSD, and OpenBSD, no such define is necessary.
  #
@@ -157,7 +159,7 @@ $NetBSD: patch-ad,v 1.5 2006/05/07 21:58:04 cheusov Exp $
  
  #
  # Use this if you prefer symbolic links between installed files.
-@@ -257,7 +257,7 @@ LEX = lex
+@@ -257,7 +259,7 @@ LEX = lex
  # Crypt library. -lcrypt is okay for everything except HP-UX, AIX, NetBSD,
  # and old versions of diet libc.
  #

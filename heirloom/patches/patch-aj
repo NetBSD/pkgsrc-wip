@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.1 2006/05/07 21:58:04 cheusov Exp $
+$NetBSD: patch-aj,v 1.2 2006/05/07 22:57:23 cheusov Exp $
 
---- nawk/awk.g.y.orig	Sun Feb  6 14:19:22 2005
+--- nawk/awk.g.y.orig	2005-02-06 14:19:22.000000000 +0200
 +++ nawk/awk.g.y
 @@ -29,6 +29,11 @@
  %{

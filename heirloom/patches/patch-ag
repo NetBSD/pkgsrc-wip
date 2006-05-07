@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2006/05/07 21:58:04 cheusov Exp $
+$NetBSD: patch-ag,v 1.2 2006/05/07 22:57:23 cheusov Exp $
 
---- mail/doopen.c.orig	Sat Jun 18 17:09:15 2005
+--- mail/doopen.c.orig	2005-06-18 17:09:15.000000000 +0300
 +++ mail/doopen.c
 @@ -46,7 +46,11 @@ doopen(char *file, char *type, int errnu
  	FILE *fptr = NULL;

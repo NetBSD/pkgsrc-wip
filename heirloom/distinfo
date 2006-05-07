@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.6 2006/05/07 22:00:33 cheusov Exp $
+$NetBSD: distinfo,v 1.7 2006/05/07 22:57:23 cheusov Exp $
 
 SHA1 (heirloom-060122.tar.bz2) = 824c8687150485c7822cadaf0d6af84f931369cb
 RMD160 (heirloom-060122.tar.bz2) = 0a555c2605a7df4f1ae9f702a5641e3f4e7d60bb
 Size (heirloom-060122.tar.bz2) = 991655 bytes
 SHA1 (patch-aa) = c6d1c44fc08efe154711d04b12cfa3325662156b
 SHA1 (patch-ab) = 4bb5bbd3127f152649bf6fdfa8081827f8b46f6b
-SHA1 (patch-ac) = 75b535947db96a63df0dc6d254418c6ecd8f8a43
-SHA1 (patch-ad) = 2bdc3f13c827793115cb864a9687b9d7c68cf0c3
+SHA1 (patch-ac) = ac7f1572d4d71aeb0f315a22c0ab79b34fc55c0d
+SHA1 (patch-ad) = 51c81eb45cb3eb9cb06354cbb9a3ba8e7d9ad293
 SHA1 (patch-ae) = 5233a38b0bb62dcd2faf0b616c913d91b7cd68f2
-SHA1 (patch-af) = 6b345f41d4aff4524459579a07307a4f1c830c5f
-SHA1 (patch-ag) = 7970d1ea486b5fabe9636dc90b3daeaa990cc81c
-SHA1 (patch-ah) = 67dffd832e316523c25e1602f192dcbe00adbe73
-SHA1 (patch-ai) = 72125829b5e138f1414292b15aeb19fbb57675e6
-SHA1 (patch-aj) = 9daff987e509609ed47003453155d46cd399191e
-SHA1 (patch-ak) = 77c222e786f7913802ccbc5a009fe202ae154f03
-SHA1 (patch-al) = df3f798d5522adedc1ef7a7085feb1a40d6b4a8b
+SHA1 (patch-af) = 69db46b67f76bd7aca8b834c4a5c84c1fcdfb2e7
+SHA1 (patch-ag) = 84a67d889c8d7fc39722b67af3293fa2b3e7a146
+SHA1 (patch-ah) = c4f0dd6dbd591b008e113e0f126250e587a5279d
+SHA1 (patch-ai) = fad102e45c43eb04f7db5b4dc0841f50fd376a57
+SHA1 (patch-aj) = deb8a42640363db00b9002bf627b04e53fae362b
+SHA1 (patch-ak) = 9424f6b7f73dec686752164df6a0396b6c1593d0
+SHA1 (patch-al) = 0ba2b8fcb876ca60f219ffb75dd255a5cea8f8cd

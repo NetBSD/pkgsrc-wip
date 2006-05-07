@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.1 2006/05/07 21:58:04 cheusov Exp $
+$NetBSD: patch-ai,v 1.2 2006/05/07 22:57:23 cheusov Exp $
 
---- mail/sendmail.c.orig	Sun Jul  3 02:11:41 2005
+--- mail/sendmail.c.orig	2005-07-03 02:11:41.000000000 +0300
 +++ mail/sendmail.c
 @@ -150,10 +150,12 @@ sendmail(int argc, char **argv)
  	cpy(&fromS, &fromSsize, "");

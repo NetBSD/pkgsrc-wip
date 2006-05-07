@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2006/05/07 21:58:04 cheusov Exp $
+$NetBSD: patch-af,v 1.2 2006/05/07 22:57:23 cheusov Exp $
 
---- libcommon/getdir.c.orig	Sun Jan 22 21:06:14 2006
+--- libcommon/getdir.c.orig	2006-01-22 21:06:14.000000000 +0200
 +++ libcommon/getdir.c
 @@ -143,8 +143,11 @@ getdir(struct getdb *db, int *err)
  		&& !defined (__DragonFly__) && !defined (__APPLE__)

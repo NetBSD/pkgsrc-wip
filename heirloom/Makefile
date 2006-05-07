@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/07 21:58:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/07 22:57:23 cheusov Exp $
 
 DISTNAME=	heirloom-060122
 CATEGORIES=	sysutils
@@ -23,18 +23,11 @@ LCRYPT=		-lcrypt
 LCRYPT=
 .endif
 
-#.if ${OPSYS} != "NetBSD"
-#BUILD_DEPENDS+=	bzip2-[0-9]*:../../archivers/bzip2
-#.endif
-
 LCURS=-lcurses
-USE_BZLIB=	0
 
 .if ${OPSYS} == "NetBSD"
 CFLAGS+=	-DUSE_TERMCAP
 LCURS=		-ltermcap
-USE_BZLIB=	1
-LDFLAGS+=	-lbz2 # libbz2 is in base system
 .endif
 
 .if ${OPSYS} == "Linux"
@@ -42,18 +35,13 @@ CPPFLAGS+=	-D_GNU_SOURCE
 CPPFLAGS+=	-D_FILE_OFFSET_BITS=64L
 .endif
 
-LDFLAGS+=	-lz
-
-#CFLAGS+=	-O0 -g
-#LDFLAGS+=	-g
-
 do-build:
 	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} USE_BZLIB=${USE_BZLIB:Q} LCRYPT=${LCRYPT:Q} LCURS=${LCURS:Q} DESTDIR=${PREFIX:Q} -f makefile
+	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} LCRYPT=${LCRYPT:Q} LCURS=${LCURS:Q} DESTDIR=${PREFIX:Q} -f makefile
 
 do-install:
 	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} USE_BZLIB=${USE_BZLIB:Q} LCRYPT=${LCRYPT:Q} LCURS=${LCURS:Q} DESTDIR=${PREFIX:Q} install
+	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} LCRYPT=${LCRYPT:Q} LCURS=${LCURS:Q} DESTDIR=${PREFIX:Q} install
 
 DOC_FILES=	COPYING COPYING.LGPL \
 		LICENSE LUCENT \
@@ -72,4 +60,5 @@ post-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
