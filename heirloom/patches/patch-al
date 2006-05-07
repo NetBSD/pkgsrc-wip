@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2006/05/07 21:58:04 cheusov Exp $
+
+--- whodo/whodo.c.orig	Mon May  8 00:36:08 2006
++++ whodo/whodo.c
+@@ -60,7 +60,7 @@ static const char sccsid[] USED = "@(#)w
+ #include	<sys/sysctl.h>
+ #endif
+ 
+-#if defined (__NetBSD__) || defined (__NetBSD__) || defined (__APPLE__)
++#if defined (__NetBSD__) || defined (__OpenBSD__) || defined (__APPLE__)
+ #if defined (__APPLE__)
+ #include	<mach/mach_types.h>
+ #include	<mach/task_info.h>

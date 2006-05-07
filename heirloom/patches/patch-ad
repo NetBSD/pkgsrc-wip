@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2006/04/30 18:58:37 cheusov Exp $
+$NetBSD: patch-ad,v 1.5 2006/05/07 21:58:04 cheusov Exp $
 
---- build/mk.config.orig	2006-01-22 23:48:04.000000000 +0200
+--- build/mk.config.orig	Sun Jan 22 23:48:04 2006
 +++ build/mk.config
 @@ -19,72 +19,72 @@ POSIX_SHELL = /bin/sh
  # Root directory. Mainly useful for package building; leave empty for
@@ -157,3 +157,12 @@ $NetBSD: patch-ad,v 1.4 2006/04/30 18:58:37 cheusov Exp $
  
  #
  # Use this if you prefer symbolic links between installed files.
+@@ -257,7 +257,7 @@ LEX = lex
+ # Crypt library. -lcrypt is okay for everything except HP-UX, AIX, NetBSD,
+ # and old versions of diet libc.
+ #
+-LCRYPT=-lcrypt
++#LCRYPT=-lcrypt
+ 
+ #
+ # Run ranlib if it is in the current path. This should take care

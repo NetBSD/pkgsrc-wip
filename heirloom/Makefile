@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/04/30 11:08:20 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/07 21:58:03 cheusov Exp $
 
 DISTNAME=	heirloom-060122
 CATEGORIES=	sysutils
@@ -16,6 +16,11 @@ NOT_FOR_PLATFORM=	Interix-*-*
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "FreeBSD" #|| ${OPSYS} == "DragonFly"
 LDFLAGS+=	-lkvm
+.endif
+
+LCRYPT=		-lcrypt
+.if ${OPSYS} == "OpenBSD"
+LCRYPT=
 .endif
 
 #.if ${OPSYS} != "NetBSD"
@@ -39,13 +44,16 @@ CPPFLAGS+=	-D_FILE_OFFSET_BITS=64L
 
 LDFLAGS+=	-lz
 
+#CFLAGS+=	-O0 -g
+#LDFLAGS+=	-g
+
 do-build:
 	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} USE_BZLIB=${USE_BZLIB:Q} LCURS=${LCURS:Q} DESTDIR=${PREFIX:Q} -f makefile
+	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} USE_BZLIB=${USE_BZLIB:Q} LCRYPT=${LCRYPT:Q} LCURS=${LCURS:Q} DESTDIR=${PREFIX:Q} -f makefile
 
 do-install:
 	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} USE_BZLIB=${USE_BZLIB:Q} LCURS=${LCURS:Q} DESTDIR=${PREFIX:Q} install
+	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} USE_BZLIB=${USE_BZLIB:Q} LCRYPT=${LCRYPT:Q} LCURS=${LCURS:Q} DESTDIR=${PREFIX:Q} install
 
 DOC_FILES=	COPYING COPYING.LGPL \
 		LICENSE LUCENT \

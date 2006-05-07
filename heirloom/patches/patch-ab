@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2006/04/30 11:08:20 cheusov Exp $
+$NetBSD: patch-ab,v 1.3 2006/05/07 21:58:04 cheusov Exp $
 
---- find/find.c.orig	2006-01-22 20:44:03.000000000 +0200
+--- find/find.c.orig	Sun Jan 22 20:44:03 2006
 +++ find/find.c
 @@ -86,6 +86,10 @@ static const char sccsid[] USED = "@(#)f
  #ifndef	major
