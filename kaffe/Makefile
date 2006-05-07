@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2006/03/25 19:52:48 jtonio Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/07 14:00:36 jtonio Exp $
 #
 
 .include "Makefile.common"
 
 CONFLICTS+=		kaffe-nox11-[0-9]*
+
+CONFIGURE_ARGS+=	--disable-native-awt
+CONFIGURE_ARGS+=	--disable-gtk-peer
+CONFIGURE_ARGS+=	--without-x
 
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javakey \
 			javap jdb rmic rmiregistry serialver

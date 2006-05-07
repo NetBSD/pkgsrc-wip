@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2006/04/08 22:24:25 jtonio Exp $
+# $NetBSD: Makefile.common,v 1.25 2006/05/07 14:00:36 jtonio Exp $
 
 DISTNAME=     kaffe-1.1.7
 PKGNAME=      ${DISTNAME:S/-rc/rc/}
@@ -35,9 +35,6 @@ CONFIGURE_ARGS+=	--disable-boehm-gc-configuration
 CONFIGURE_ARGS+=	--without-alsa
 CONFIGURE_ARGS+=	--without-esd
 CONFIGURE_ARGS+=	--disable-esdtest
-CONFIGURE_ARGS+=	--disable-native-awt
-CONFIGURE_ARGS+=	--disable-gtk-peer
-CONFIGURE_ARGS+=	--without-x
 
 .include "../../mk/bsd.prefs.mk"
 

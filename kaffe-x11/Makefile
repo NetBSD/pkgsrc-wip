@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/07 13:04:21 jtonio Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/07 14:00:36 jtonio Exp $
 #
 
 .include "../../wip/kaffe/Makefile.common"
@@ -7,8 +7,8 @@ PKGNAME=    ${DISTNAME:S/kaffe/kaffe-x11/}
 
 COMMENT+=   (AWT support through X11)
 
-CONFIGURE_ARGS:=  ${CONFIGURE_ARGS:S/--disable-native-awt/--with-kaffe-x-awt/}
-CONFIGURE_ARGS:=  ${CONFIGURE_ARGS:S/--disable-gtk-peer/--enable-gtk-peer/}
+CONFIGURE_ARGS+=  --with-kaffe-x-awt
+CONFIGURE_ARGS+=  --enable-gtk-peer
 CONFIGURE_ARGS+=  --with-x
 
 BUILD_DIRS=     ${WRKSRC}/config
