@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/16 22:36:13 jtonio Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/05/07 13:04:21 jtonio Exp $
+java/kaffe/jre/lib/${MACHINE_ARCH}/libgtkpeer.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libjawtgnu.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libxawt.la
-java/kaffe/jre/lib/kaffeawt.jar
 @comment in kaffe: @dirrm java/kaffe/jre/lib/${MACHINE_ARCH}
 @comment in kaffe: @dirrm java/kaffe/jre/lib

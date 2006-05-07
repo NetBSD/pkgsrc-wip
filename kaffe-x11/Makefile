@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/16 22:36:13 jtonio Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/07 13:04:21 jtonio Exp $
 #
 
 .include "../../wip/kaffe/Makefile.common"
@@ -19,9 +19,11 @@ BUILD_DIRS+=    ${WRKSRC}/libltdl
 BUILD_DIRS+=    ${WRKSRC}/kaffe/kaffevm
 BUILD_DIRS+=    ${WRKSRC}/libraries/clib/classpath
 BUILD_DIRS+=    ${WRKSRC}/libraries/clib/awt
+BUILD_DIRS+=	${WRKSRC}/libraries/javalib/external/classpath/native/jni/gtk-peer
+BUILD_DIRS+=	${WRKSRC}/libraries/javalib/external/classpath/native/jawt
 INSTALL_DIRS=   ${WRKSRC}/libraries/clib/awt
-INSTALL_DIRS+=  ${WRKSRC}/libraries/javalib/awt-implementations
-INSTALL_DIRS+=  ${WRKSRC}/libraries/javalib/external/classpath/gnu/java/awt
+INSTALL_DIRS+=	${WRKSRC}/libraries/javalib/external/classpath/native/jni/gtk-peer
+INSTALL_DIRS+=	${WRKSRC}/libraries/javalib/external/classpath/native/jawt
 
 pre-build:
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} BUILD_ENVIRONMENT
