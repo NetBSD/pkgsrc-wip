@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/14 01:28:00 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/13 12:59:39 thomasklausner Exp $
 
 DISTNAME=		kismet-2005-08-R1
 PKGNAME=		kismet-2005.08.01
@@ -13,6 +13,9 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_NCURSES=		# needs libpanel
 USE_TOOLS+=		gmake
+
+# might be appended to in options.mk
+PLIST_SRC=		PLIST
 
 KISMET_USER?=		kismet
 KISMET_GROUP?=		kismet

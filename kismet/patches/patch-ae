@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2005/10/07 12:35:00 lsed Exp $
+$NetBSD: patch-ae,v 1.2 2006/05/13 12:59:39 thomasklausner Exp $
 
---- Makefile.in.orig	2005-08-16 03:22:51.000000000 +0200
-+++ Makefile.in	2005-10-07 13:25:15.000000000 +0200
-@@ -130,58 +130,40 @@
+--- Makefile.in.orig	2005-08-16 01:22:51.000000000 +0000
++++ Makefile.in
+@@ -130,58 +130,40 @@ checkuiconfig:
  	fi
  
  binuserinstall:
@@ -47,9 +47,9 @@ $NetBSD: patch-ae,v 1.1 2005/10/07 12:35:00 lsed Exp $
 +	$(BSD_INSTALL_MAN) man/kismet.1 $(MAN)/man1/kismet.1
 +	$(BSD_INSTALL_MAN) man/kismet_drone.1 $(MAN)/man1/kismet_drone.1
 +	$(BSD_INSTALL_MAN_DIR) $(MAN)/man5
-+	$(BSD_INSTALL_MAN_DIR) man/kismet.conf.5 $(MAN)/man5/kismet.conf.5
-+	$(BSD_INSTALL_MAN_DIR) man/kismet_ui.conf.5 $(MAN)/man5/kismet_ui.conf.5
-+	$(BSD_INSTALL_MAN_DIR) man/kismet_drone.conf.5 $(MAN)/man5/kismet_drone.conf.5
++	$(BSD_INSTALL_MAN) man/kismet.conf.5 $(MAN)/man5/kismet.conf.5
++	$(BSD_INSTALL_MAN) man/kismet_ui.conf.5 $(MAN)/man5/kismet_ui.conf.5
++	$(BSD_INSTALL_MAN) man/kismet_drone.conf.5 $(MAN)/man5/kismet_drone.conf.5
  
  	@if test "$(GPSLBUILD)" = "$(GPSL)"; then \
 -		install -o $(INSTUSR) -g $(INSTGRP) -s -m 755 $(GPSL) $(BIN)/$(GPSL); \
@@ -85,7 +85,7 @@ $NetBSD: patch-ae,v 1.1 2005/10/07 12:35:00 lsed Exp $
  suidinstall: $(PS) $(DRONE) $(NC) $(GPSLBUILD) $(ZAURUSBUILD)
  	$(MAKE) -e commoninstall
  	$(MAKE) -e binsuidinstall
-@@ -215,30 +197,7 @@
+@@ -215,30 +197,7 @@ suidinstall: $(PS) $(DRONE) $(NC) $(GPSL
  	@echo "YOUR WIRELESS NETWORK CONNECTION.  IF YOU HAVE ANY UNTRUSTED USERS ON YOUR "
  	@echo "SYSTEM DO NOT INSTALL KISMET AS SUID ROOT."
  
