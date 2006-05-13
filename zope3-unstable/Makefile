@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2006/04/29 00:32:16 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.20 2006/05/13 12:09:31 ykomatsu Exp $
 #
 
-DISTNAME=		Zope-3.2.1
-PKGNAME=		zope3-3.2.1
+DISTNAME=		Zope-3.3.0b1
+PKGNAME=		zope3-3.3.0b1
 CATEGORIES=		www
-MASTER_SITES=		http://www.zope.org/Products/Zope3/3.2.1/
+MASTER_SITES=		http://www.zope.org/Products/Zope3/3.3.0b1/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		ykomatsu@akaumigame.org
@@ -47,7 +47,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/Zope/LICENSES.txt ${ZOPE3_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/Zope/ZopePublicLicense.txt ${ZOPE3_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/Zope/doc/*.txt ${ZOPE3_DOCDIR}
-	${ECHO} "3.2.1" > ${ZOPE3_DIR}/lib/python/zope/app/version.txt
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.9 2006/04/28 11:30:15 ykomatsu Exp $
+$NetBSD: distinfo,v 1.10 2006/05/13 12:09:32 ykomatsu Exp $
 
-SHA1 (Zope-3.2.1.tgz) = cb45ab704e3a60376e3025e169b782f2c3968074
-RMD160 (Zope-3.2.1.tgz) = f7aeb56ab5f09e6780d0df787939af4c7815ceba
-Size (Zope-3.2.1.tgz) = 6532373 bytes
-SHA1 (patch-aa) = cbcbcd103741c82f315d5f2b851181d28b27c520
-SHA1 (patch-ab) = d3852c2278cbe02c8b86d399c0dcbcbd4eab6f4e
-SHA1 (patch-ac) = 48bb22e2a58192ba15d320231ccfa600f726d974
-SHA1 (patch-ad) = 58d2d40fd61a5114e77697e5199228f0f7e7e77a
+SHA1 (Zope-3.3.0b1.tgz) = dbf5b0c0e92f3987d04e06d335a9d8d48532fb4c
+RMD160 (Zope-3.3.0b1.tgz) = 574b180c7cfd92cb05c4ad30dbcb1921ff4eaea3
+Size (Zope-3.3.0b1.tgz) = 6598871 bytes
+SHA1 (patch-aa) = 221941f3ac5fc4030a8b1f67713e475902540b4b
+SHA1 (patch-ab) = e1418dd5d425629190fc5276a313f9840e69007f
