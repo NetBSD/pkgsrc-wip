@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2006/05/13 15:12:26 cheusov Exp $
+share/dictd/mueller7.dict.dz
+share/dictd/mueller7.index
+@dirrm share/dictd
