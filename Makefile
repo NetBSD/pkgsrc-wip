@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2250 2006/05/06 15:44:22 marttikuparinen Exp $
+# $Id: Makefile,v 1.2251 2006/05/14 17:18:23 adrian_p Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1323,7 +1323,6 @@ SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
 SUBDIR+=	unrealtournament-server
 SUBDIR+=	unshield
-SUBDIR+=	up-imapproxy
 SUBDIR+=	uqm
 SUBDIR+=	uqwk
 SUBDIR+=	urlgfe
