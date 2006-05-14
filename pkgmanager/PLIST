@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/01 08:15:24 scode Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/05/14 09:41:37 scode Exp $
+bin/pkgmanager
 lib/pkgmanager/init.mem
-lib/pkgmanager/run.lisp
 lib/pkgmanager/packages.fas
+lib/pkgmanager/pkgmanager.fas
 lib/pkgmanager/pkgmgr-except.fas
+lib/pkgmanager/pkgmgr-pkgdb.fas
 lib/pkgmanager/pkgmgr-print.fas
 lib/pkgmanager/pkgmgr-util.fas
-lib/pkgmanager/pkgmgr-pkgdb.fas
-lib/pkgmanager/pkgmanager.fas
-bin/pkgmanager
+lib/pkgmanager/run.lisp
 man/man8/pkgmanager.1
 @dirrm lib/pkgmanager
