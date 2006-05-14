@@ -1,0 +1,114 @@
+# $NetBSD: Makefile.common,v 1.1 2006/05/14 21:21:40 cheusov Exp $
+
+PIKE_VERSION=	7.6.75
+DISTNAME=	Pike-v${PIKE_VERSION}
+CATEGORIES=	lang
+MASTER_SITES=	ftp://pike.ida.liu.se/pub/pike/all/${PIKE_VERSION:Q}/
+
+MAINTAINER=	cheusov@tut.by
+HOMEPAGE=	http://pike.ida.liu.se/
+
+PATCHDIR=	${PKGDIR}/../../wip/pike-core/patches
+DISTINFO_FILE=	${PKGDIR}/../../wip/pike-core/distinfo
+PIKEDIR=	${WRKDIR}/${DISTNAME}
+WRKSRC=		${PIKEDIR}/src
+
+USE_TOOLS+=		bison autoconf
+GNU_CONFIGURE=		yes
+#CONFIGURE_DIRS=		src
+BUILD_DIRS=		${CONFIGURE_DIRS}
+PTHREAD_OPTS+=		require
+
+PLIST_SUBST+=		PIKE_VERSION=${PIKE_VERSION:Q}
+
+#.if defined(PIKE_MODULE)
+#ALL_TARGET=		module_objects
+#.endif
+
+PIKE_MODULE_DIR=	${PREFIX}/pike/${PIKE_VERSION}/lib/modules
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Interix"
+CONFIGURE_ARGS+=	--with-poll
+.endif
+
+.if ${OPSYS} == "PlatformWithNoPThreads"
+CONFIGURE_ARGS+=	--without-threads
+.else
+CONFIGURE_ARGS+=	--with-threads
+.endif
+
+CONFIGURE_ARGS+=	--with-gmp --without-nls
+
+PIKE_MODULES=
+
+PIKE_MODULES+=	COM
+PIKE_MODULES+=	CommonLog
+PIKE_MODULES+=	DVB
+PIKE_MODULES+=	GL
+PIKE_MODULES+=	GLUT
+PIKE_MODULES+=	GTK
+PIKE_MODULES+=	Gdbm
+PIKE_MODULES+=	Gettext
+PIKE_MODULES+=	Gz
+PIKE_MODULES+=	HTTPLoop
+PIKE_MODULES+=	Image
+PIKE_MODULES+=	Java
+PIKE_MODULES+=	MIME
+PIKE_MODULES+=	Math
+PIKE_MODULES+=	Mird
+PIKE_MODULES+=	Msql
+PIKE_MODULES+=	Mysql
+PIKE_MODULES+=	Odbc
+PIKE_MODULES+=	Oracle
+PIKE_MODULES+=	PDF
+PIKE_MODULES+=	Perl
+PIKE_MODULES+=	Pipe
+PIKE_MODULES+=	Postgres
+PIKE_MODULES+=	SANE
+PIKE_MODULES+=	SDL
+PIKE_MODULES+=	Ssleay
+PIKE_MODULES+=	Shuffler
+PIKE_MODULES+=	Unicode
+PIKE_MODULES+=	Yp
+PIKE_MODULES+=	_Ffmpeg
+PIKE_MODULES+=	_Image_FreeType
+PIKE_MODULES+=	_Image_GIF
+PIKE_MODULES+=	_Image_JPEG
+PIKE_MODULES+=	_Image_SVG
+PIKE_MODULES+=	_Image_TIFF
+PIKE_MODULES+=	_Image_TTF
+PIKE_MODULES+=	_Image_XFace
+PIKE_MODULES+=	_Regexp_PCRE
+PIKE_MODULES+=	_Roxen
+PIKE_MODULES+=	sybase
+PIKE_MODULES+=	Bz2
+PIKE_MODULES+=	Kerberos
+PIKE_MODULES+=	_ADT
+PIKE_MODULES+=	_Charset
+PIKE_MODULES+=	_math
+PIKE_MODULES+=	Parser
+PIKE_MODULES+=	spider
+PIKE_MODULES+=	sprintf
+PIKE_MODULES+=	files
+PIKE_MODULES+=	system
+PIKE_MODULES+=	Gmp
+PIKE_MODULES+=	Nettle
+PIKE_MODULES+=	Regexp
+
+.for l in ${PIKE_MODULES}
+CONFIGURE_ARGS+=	--without-${l:Q}
+.endfor
+
+.for m in ${MODULE_NAMES}
+CONFIGURE_ARGS+=	--with-${m:Q}
+.endfor
+
+pre-configure:
+	${MKDIR} -p ${WRKSRC} &&           \
+	cd ${PIKEDIR}/src;                 \
+	if ! test -f autoconfig.done; then \
+		./run_autoconfig . ./src ${MODULE_DIRS} && \
+		${TOUCH} autoconfig.done;  \
+	fi

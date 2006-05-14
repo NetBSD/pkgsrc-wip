@@ -1,0 +1,8 @@
+do-build:
+	cd ${WRKSRC} && make module_objects #post_module_objects
+
+do-install:
+	for so in ${MODULE_SO}; do \
+		${INSTALL_DATA} ${WRKSRC}/lib/modules/$${so} \
+			${PIKE_MODULE_DIR}; \
+	done
