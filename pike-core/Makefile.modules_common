@@ -1,4 +1,4 @@
-DEPENDS+=	pike-core=${PIKE_VERSION}:../../wip/pike-core
+DEPENDS+=	pike-core-${PIKE_VERSION}:../../wip/pike-core
 
 do-build:
 	cd ${WRKSRC} && make module_objects #post_module_objects
