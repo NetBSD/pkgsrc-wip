@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/14 01:27:58 jlamwww Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/14 06:34:02 gschwarz Exp $
 #
 
 DISTNAME=	boa-0.94.14rc21
@@ -11,6 +11,7 @@ COMMENT=	Small HTTP server
 
 PKG_SYSCONFSUBDIR=	boa
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--disable-debug
 EGDIR=		${PREFIX}/share/examples/boa
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake lex

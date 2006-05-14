@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/16 23:14:21 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/05/14 06:34:02 gschwarz Exp $
 man/man8/boa.8
 sbin/boa
 sbin/boa_indexer
+share/doc/boa/CREDITS
+share/doc/boa/README
 share/examples/boa/boa.conf
 share/examples/boa/cgi-test.cgi
 share/examples/boa/nph-test.cgi
 share/examples/boa/resolver.pl
-share/doc/boa/CREDITS
-share/doc/boa/README
 @dirrm share/examples/boa
 @dirrm share/doc/boa
