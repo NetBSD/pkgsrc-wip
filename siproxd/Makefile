@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2006/04/30 08:19:01 gschwarz Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/14 08:09:40 gschwarz Exp $
 
 DISTNAME=	siproxd-0.5.12
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siproxd/}
 
-MAINTAINER=     schwarz@NetBSD.org
+MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://siproxd.sourceforge.net/
 COMMENT=	Session Initiation Protocol Application-Level Gateway (SIP ALG)
 
