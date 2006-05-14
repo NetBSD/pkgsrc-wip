@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2006/05/14 21:21:40 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/05/14 21:27:00 cheusov Exp $
 
 PIKE_VERSION=	7.6.75
 DISTNAME=	Pike-v${PIKE_VERSION}
@@ -16,7 +16,7 @@ WRKSRC=		${PIKEDIR}/src
 USE_TOOLS+=		bison autoconf
 GNU_CONFIGURE=		yes
 #CONFIGURE_DIRS=		src
-BUILD_DIRS=		${CONFIGURE_DIRS}
+#BUILD_DIRS=		${CONFIGURE_DIRS}
 PTHREAD_OPTS+=		require
 
 PLIST_SUBST+=		PIKE_VERSION=${PIKE_VERSION:Q}
@@ -25,7 +25,7 @@ PLIST_SUBST+=		PIKE_VERSION=${PIKE_VERSION:Q}
 #ALL_TARGET=		module_objects
 #.endif
 
-PIKE_MODULE_DIR=	${PREFIX}/pike/${PIKE_VERSION}/lib/modules
+#PIKE_MODULE_DIR=	${PREFIX}/pike/${PIKE_VERSION}/lib/modules
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -107,7 +107,7 @@ CONFIGURE_ARGS+=	--with-${m:Q}
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC} &&           \
-	cd ${PIKEDIR}/src;                 \
+	cd ${PIKEDIR}/src; &&              \
 	if ! test -f autoconfig.done; then \
 		./run_autoconfig . ./src ${MODULE_DIRS} && \
 		${TOUCH} autoconfig.done;  \

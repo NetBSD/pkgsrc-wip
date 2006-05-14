@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2006/05/14 21:21:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/14 21:27:00 cheusov Exp $
 
 PKGNAME=	pike-mime-${PIKE_VERSION}
-CATEGORIES=	wip
-COMMENT=	dynamic programming language with a syntax similar to C++
+CATEGORIES=	lang
+COMMENT=	MIME module for Pike programming language
 
 MODULE_NAMES=	MIME
 MODULE_DIRS=	modules/MIME
