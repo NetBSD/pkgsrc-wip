@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/11/03 12:09:50 adrian_p Exp $
+$NetBSD: patch-ac,v 1.2 2006/05/14 17:24:37 adrian_p Exp $
+
+# add NetBSD support and fix some paths
 
 --- contrib/syslog2ng.orig	Thu Jun 19 14:24:03 2003
 +++ contrib/syslog2ng	Thu Jun 19 14:24:13 2003

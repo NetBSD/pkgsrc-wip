@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2006/04/27 19:47:27 adrian_p Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/14 17:24:37 adrian_p Exp $
 
-DISTNAME=	syslog-ng-1.6.10
+DISTNAME=	syslog-ng-1.6.11
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.balabit.com/downloads/syslog-ng/1.6/src/
 
 MAINTAINER=	adrianp@NetBSD.org
-HOMEPAGE= 	http://www.balabit.com/products/syslog_ng/
+HOMEPAGE=	http://www.balabit.com/products/syslog_ng/
 COMMENT=	Syslog-ng tries to fill the gaps original syslogd's were lacking
 
 GNU_CONFIGURE=		YES
@@ -24,8 +24,26 @@ SUBST_SED.conf=		-e "s|/etc/syslog-ng|${PKG_SYSCONFDIR}|g"
 SUBST_SED.conf+=	-e "s|/usr/bin/awk|${AWK}|g"
 SUBST_MESSAGE.conf=	Fixing configuration file paths.
 
+.include "../../mk/bsd.prefs.mk"
+
+BUILDLINK_API_DEPENDS.libol?=	libol>=0.3.0
+
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../sysutils/libol/buildlink3.mk"
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.syslog-ng
+PKG_SUPPORTED_OPTIONS=	spoof
+
+.include "../../mk/bsd.options.mk"
+
+#
+# spoof the original source address of forwarded syslog packets
+#
+.if !empty(PKG_OPTIONS:Mspoof)
+CONFIGURE_ARGS+=	--enable-spoof-source
+BUILDLINK_API_DEPENDS.libnet?=libnet>=1.1.2.1
+.include "../../devel/libnet11/buildlink3.mk"
+.endif
 
 pre-build:
 	cd ${WRKSRC}/doc/sgml && \
@@ -39,13 +57,13 @@ post-install:
 
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.spoof ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/contrib/syslog-ng.conf.doc ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/syslog-ng.conf.demo ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/syslog-ng.conf.sample ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/syslog-ng.conf.solaris ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/syslog2ng ${PREFIX}/bin
 
-	${INSTALL_DATA} ${WRKSRC}/doc/sgml/syslog-ng.html/*.html \
-		${PREFIX}/share/doc/html/syslog-ng
+	${INSTALL_DATA} ${WRKSRC}/doc/sgml/syslog-ng.html/*.html ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
