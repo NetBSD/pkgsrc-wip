@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2005/11/05 18:33:13 gschwarz Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/14 08:28:30 gschwarz Exp $
 
 DISTNAME=	uqwk-2.21
 CATEGORIES=	news
 MASTER_SITES=	http://www.xs4all.nl/~js/warez/
 
+MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.xs4all.nl/~js/warez/
 COMMENT=	Tool to collect news and mail packets for offline reading
-MAINTAINER=	schwarz@netbsd.org
 
 GNU_CONFIGURE=	YES
 

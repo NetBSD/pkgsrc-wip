@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/04/09 15:33:32 gschwarz Exp $
+$NetBSD: patch-aa,v 1.2 2006/05/14 08:28:30 gschwarz Exp $
 
 # from Debian project (Debian bug #179892)
 
@@ -13,14 +13,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/09 15:33:32 gschwarz Exp $
  }
  
  #define strend(x) ((x) + strlen(x))
---- misc.c.orig	2005-04-06 17:06:15.000000000 +0200
-+++ misc.c	2005-04-06 17:06:52.000000000 +0200
-@@ -110,7 +110,7 @@
-  */
- void Spaces (char *c, int n)
- {
--	sprintf(c,"%*s", n, "");
-+	memset(c, ' ', n);
- }
- 
- /*
