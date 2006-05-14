@@ -1,1 +1,1 @@
-pike/7.6.75/lib/modules/Gdbm.so
+pike/${PIKE_VERSION}/lib/modules/Gdbm.so
