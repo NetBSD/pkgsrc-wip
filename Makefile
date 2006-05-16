@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2251 2006/05/14 17:18:23 adrian_p Exp $
+# $Id: Makefile,v 1.2252 2006/05/16 09:04:22 airhead Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -652,6 +652,7 @@ SUBDIR+=	mixxx
 SUBDIR+=	mkdep
 SUBDIR+=	mksend
 SUBDIR+=	mlmmj
+SUBDIR+=	mmm-mode
 SUBDIR+=	mnogosearch
 SUBDIR+=	modular-xorg-libs
 SUBDIR+=	moe
