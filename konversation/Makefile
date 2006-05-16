@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/05/15 14:29:19 adrian_p Exp $
+# $NetBSD: Makefile,v 1.14 2006/05/16 12:08:37 adrian_p Exp $
 #
 
 DISTNAME=	konversation-0.19
@@ -17,7 +17,7 @@ USE_LANGUAGES+=	c++
 
 USE_PKGLOCALEDIR=	YES
 CONFIGURE_ENV+=		kde_htmldir=${PREFIX}/share/doc/kde/HTML
-REPLACE_PERL=		konversation/src/konversation-0.14-mainwindow.pl \
+REPLACE_PERL+=		konversation/src/konversation-0.14-mainwindow.pl \
 			konversation/src/konversation-0.19-colorcodes.pl \
 			konversation/src/konversation-0.19-colors.pl \
 			konversation/src/konversation-0.19-tabplacement.pl \

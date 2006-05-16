@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/05/15 14:29:19 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/05/16 12:08:37 adrian_p Exp $
 bin/konversation
 bin/konversationircprotocolhandler
 share/doc/kde/HTML/da/konversation/common
@@ -284,19 +284,18 @@ share/locale/sr@Latn/LC_MESSAGES/konversation.mo
 share/locale/sv/LC_MESSAGES/konversation.mo
 share/locale/ta/LC_MESSAGES/konversation.mo
 share/locale/tr/LC_MESSAGES/konversation.mo
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
-@comment in kde: @dirrm share/kde/config.kcfg
+@unexec ${RMDIR} %D/share/kde/icons/hicolor/scalable/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/icons/hicolor/64x64/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/icons/hicolor/48x48/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/icons/hicolor/32x32/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/icons/hicolor/22x22/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/icons/hicolor/16x16/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/icons/hicolor/128x128/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/icons/crystalsvg/scalable/actions 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/icons/crystalsvg/32x32/actions 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/icons/crystalsvg/22x22/actions 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/icons/crystalsvg/16x16/actions 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/config.kcfg 2>/dev/null || ${TRUE}
 @dirrm share/kde/apps/konversation/themes/square
 @dirrm share/kde/apps/konversation/themes/smiling
 @dirrm share/kde/apps/konversation/themes/default
@@ -306,24 +305,24 @@ share/locale/tr/LC_MESSAGES/konversation.mo
 @dirrm share/kde/apps/konversation/themes
 @dirrm share/kde/apps/konversation/scripts
 @dirrm share/kde/apps/konversation
-@comment in kde: @dirrm share/kde/apps/kconf_update
-@comment in kde: @dirrm share/kde/apps
+@unexec ${RMDIR} %D/share/kde/apps/kconf_update 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/apps 2>/dev/null || ${TRUE}
 @dirrm share/kde/applications/kde
 @dirrm share/kde/applications
-@comment in kde: @dirrm share/kde
+@unexec ${RMDIR} %D/share/kde 2>/dev/null || ${TRUE}
 @dirrm share/doc/kde/HTML/sv/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/sv
+@unexec ${RMDIR} %D/share/doc/kde/HTML/sv 2>/dev/null || ${TRUE}
 @dirrm share/doc/kde/HTML/pt/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/pt
+@unexec ${RMDIR} %D/share/doc/kde/HTML/pt 2>/dev/null || ${TRUE}
 @dirrm share/doc/kde/HTML/nl/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/nl
+@unexec ${RMDIR} %D/share/doc/kde/HTML/nl 2>/dev/null || ${TRUE}
 @dirrm share/doc/kde/HTML/it/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/it
+@unexec ${RMDIR} %D/share/doc/kde/HTML/it 2>/dev/null || ${TRUE}
 @dirrm share/doc/kde/HTML/et/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/et
+@unexec ${RMDIR} %D/share/doc/kde/HTML/et 2>/dev/null || ${TRUE}
 @dirrm share/doc/kde/HTML/es/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/es
+@unexec ${RMDIR} %D/share/doc/kde/HTML/es 2>/dev/null || ${TRUE}
 @dirrm share/doc/kde/HTML/en/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/en
+@unexec ${RMDIR} %D/share/doc/kde/HTML/en 2>/dev/null || ${TRUE}
 @dirrm share/doc/kde/HTML/da/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/da
+@unexec ${RMDIR} %D/share/doc/kde/HTML/da 2>/dev/null || ${TRUE}
