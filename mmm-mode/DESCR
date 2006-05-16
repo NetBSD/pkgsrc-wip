@@ -1,0 +1,5 @@
+MMM Mode is an emacs add-on package providing a minor mode that allows
+Multiple Major Modes to coexist in one buffer. It is particularly
+well-suited to editing embedded code or code that generates other code,
+such as Mason or Embperl  server-side Perl code, or HTML output by CGI
+scripts. It is written and maintained by  Michael Abraham Shulman .

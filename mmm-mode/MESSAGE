@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/05/16 09:03:12 airhead Exp $
+
+You will need to add something like the following to your .emacs file to
+autoload the MMM mode for Emacs.
+
+  (load "mmm-auto.el")
+
+For examples of using it, search http://www.emacswiki.org
+
+===========================================================================
