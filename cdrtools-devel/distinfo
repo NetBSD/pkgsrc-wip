@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.4 2006/05/13 13:00:02 thomasklausner Exp $
+$NetBSD: distinfo,v 1.5 2006/05/16 17:08:36 thomasklausner Exp $
 
-SHA1 (cdrtools-2.01.01a08.tar.bz2) = 04195d8821be97850fdab21f05258f41add6eec5
-RMD160 (cdrtools-2.01.01a08.tar.bz2) = 23defddf01f8fa26dff800cd2b21a1f535d348dc
-Size (cdrtools-2.01.01a08.tar.bz2) = 1442015 bytes
-SHA1 (patch-ac) = 6def0342f51fcb30f81b89a125afdb76e4f913a3
-SHA1 (patch-ah) = 8dc829b923493f1d0f47926fc11af30ceeb4b0db
-SHA1 (patch-ai) = f55c8efa1fd096a373983a2af611170c4e603d5d
-SHA1 (patch-aj) = 6bae62f59745e5dd070ff4a6c93496d88f2ed99a
-SHA1 (patch-ba) = 72d25c371894c0e4ededc5593a78f6b02f35b6de
+SHA1 (cdrtools-2.01.01a09.tar.bz2) = 45ea74ae2a2e60b48c5039adff8543b591cdd400
+RMD160 (cdrtools-2.01.01a09.tar.bz2) = 43deb80ae72d5e1ef035cec4c1df95dc510c507b
+Size (cdrtools-2.01.01a09.tar.bz2) = 1499326 bytes
+SHA1 (patch-ac) = 91ff4512fa599cf8ff9e4f36ae0e3410f6b1dfaf
+SHA1 (patch-ah) = 1b873744755d375c7fbc22d5628a65110439db5c
+SHA1 (patch-ai) = 17c9a5fad16d601ab5b430cdd108633e916b4373
+SHA1 (patch-aj) = 53c48db3bd3af362a33df67ea5ec03cc79a845d1
+SHA1 (patch-ba) = 752c028c2c8a0fdab5d7bc5617bce24f5a60abd2
 SHA1 (patch-bb) = 528abe11c5a01615b4dbcd7304b39374f8d3c255
-SHA1 (patch-ca) = 1b4d17e0d5d738d76f15e9cca0827b93d24dd095
-SHA1 (patch-cb) = 575b11d6e2a7f1b2792c983c570e524c1972406f
-SHA1 (patch-cc) = f018155aee1d966343758909f47632d39e96b5dd
-SHA1 (patch-cd) = 6f7d7ac5bc5116e933bc19066ec0a38b5e04fc59
-SHA1 (patch-ce) = 04d842a7f78f4d6ab89da652023f4f8d7d6403fa
+SHA1 (patch-ca) = c21c63b54398cd341e2784050f8ab96c795904a1
+SHA1 (patch-cb) = c4cbb47f1a0cdc4bb87a4659337afd7306bbb869
+SHA1 (patch-cc) = f1d45bf3a6bb71785cc46b325fe51d05179db6c7
+SHA1 (patch-cd) = 6a15855bca936b75e5e6fceca4c54c1ef71ebaf7
+SHA1 (patch-ce) = d1fd02987b095383266a29f16a24818e67a37820
 SHA1 (patch-cf) = 50855c214fb718594837001e57fa0cdebb9b5cf0
 SHA1 (patch-cg) = 686ac754c463ce37d15be19dcb8048741d8546f2

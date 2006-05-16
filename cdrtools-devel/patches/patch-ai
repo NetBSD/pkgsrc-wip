@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1.1.1 2006/01/31 17:31:43 thomasklausner Exp $
+$NetBSD: patch-ai,v 1.2 2006/05/16 17:08:36 thomasklausner Exp $
 
 --- libscg/scsi-bsd.c.orig	2004-01-14 23:13:05.000000000 +0000
 +++ libscg/scsi-bsd.c
-@@ -47,7 +47,7 @@ static	char __sccsid[] =
+@@ -52,7 +52,7 @@ static	char __sccsid[] =
   *	Choose your name instead of "schily" and make clear that the version
   *	string is related to a modified source.
   */
@@ -11,7 +11,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2006/01/31 17:31:43 thomasklausner Exp $
  
  #define	MAX_SCG		16	/* Max # of SCSI controllers */
  #define	MAX_TGT		16
-@@ -107,7 +107,7 @@ scgo_version(scgp, what)
+@@ -112,7 +112,7 @@ scgo_version(scgp, what)
  		 * return "schily" for the SCG_AUTHOR request.
  		 */
  		case SCG_AUTHOR:
@@ -20,7 +20,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2006/01/31 17:31:43 thomasklausner Exp $
  		case SCG_SCCS_ID:
  			return (__sccsid);
  		}
-@@ -139,6 +139,15 @@ scgo_open(scgp, device)
+@@ -144,6 +144,15 @@ scgo_open(scgp, device)
  	register int	l;
  	register int	nopen = 0;
  	char		devname[64];
@@ -36,7 +36,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2006/01/31 17:31:43 thomasklausner Exp $
  
  	if (busno >= MAX_SCG || tgt >= MAX_TGT || tlun >= MAX_LUN) {
  		errno = EINVAL;
-@@ -165,6 +174,60 @@ scgo_open(scgp, device)
+@@ -170,6 +179,60 @@ scgo_open(scgp, device)
  	if ((device != NULL && *device != '\0') || (busno == -2 && tgt == -2))
  		goto openbydev;
  
@@ -97,7 +97,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2006/01/31 17:31:43 thomasklausner Exp $
  	if (busno >= 0 && tgt >= 0 && tlun >= 0) {
  
  		js_snprintf(devname, sizeof (devname),
-@@ -201,6 +264,7 @@ scgo_open(scgp, device)
+@@ -206,6 +269,7 @@ scgo_open(scgp, device)
  			}
  		}
  	}
