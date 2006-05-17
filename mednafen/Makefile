@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2006/03/09 21:02:12 jlamwww Exp $
+# $NetBSD: Makefile,v 1.14 2006/05/17 21:53:23 thomasklausner Exp $
 #
 
-DISTNAME=	mednafen-0.5.2
+DISTNAME=	mednafen-0.6.0
 CATEGORIES=	emulators
-MASTER_SITES=	http://mednafen.com/releases/files/
+MASTER_SITES=	http://mednafen.com/releases/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mednafen.com/
 COMMENT=	Portable multi-system emulator
 
@@ -31,11 +31,9 @@ post-install:
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
-.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
