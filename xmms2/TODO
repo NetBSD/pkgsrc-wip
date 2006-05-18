@@ -1,5 +1,3 @@
-0.2 out.
-
 - support every possible plugin (src/plugins).
 - the pyrex option breaks the buildlink3 file (prints "No valid Python
   version" and skips the xmms2 package).

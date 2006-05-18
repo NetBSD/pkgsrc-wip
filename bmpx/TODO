@@ -1,5 +1,3 @@
-0.14.4 out.
-
 Make use of gstreamer0.10 packages.
 
 - there are still some options missing (most need a newer dbus version).

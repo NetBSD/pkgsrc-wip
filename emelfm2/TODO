@@ -1,4 +1,3 @@
-- Version 0.1.4 is out.
 - sometimes just freezes when executing a command (e.g., ls) using
   emelfm2's built-in command line.
 - also freezes when one selects a filetype for which no internal
