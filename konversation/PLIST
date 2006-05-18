@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/05/16 12:08:37 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/05/18 13:31:57 adrian_p Exp $
 bin/konversation
 bin/konversationircprotocolhandler
 share/doc/kde/HTML/da/konversation/common
@@ -163,7 +163,7 @@ share/doc/kde/HTML/pt/konversation/index.docbook
 share/doc/kde/HTML/sv/konversation/common
 share/doc/kde/HTML/sv/konversation/index.cache.bz2
 share/doc/kde/HTML/sv/konversation/index.docbook
-share/kde/applications/kde/konversation.desktop
+share/kde/applnk/Internet/konversation.desktop
 share/kde/apps/kconf_update/konversation-0.14-mainwindow.pl
 share/kde/apps/kconf_update/${PKGNAME}-appearance.pl
 share/kde/apps/kconf_update/${PKGNAME}-colorcodes.pl
