@@ -1,13 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/08/06 04:45:56 schnoebe Exp $
+$NetBSD: MESSAGE,v 1.5 2006/05/18 20:56:40 thomasklausner Exp $
 
     You should set up user and group ids for cvsd, create a
     chrooted filesystem and create repositories.
 
     Read the README file in ${PREFIX}/share/doc/cvsd for more
     details on setting up the environment.
-
-    Further details on setting up a CVS repository under cvsd can be
-    found at http://virtus.ath.cx/cvsd.html
 
 ===========================================================================
