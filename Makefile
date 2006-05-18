@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2252 2006/05/16 09:04:22 airhead Exp $
+# $Id: Makefile,v 1.2253 2006/05/18 21:58:25 adrian_p Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1261,7 +1261,6 @@ SUBDIR+=	swfmill
 SUBDIR+=	swftools
 SUBDIR+=	sxemacs
 SUBDIR+=	sysklogd
-SUBDIR+=	syslog-ng
 SUBDIR+=	sysstat
 SUBDIR+=	sysvinit
 SUBDIR+=	t-coffee
