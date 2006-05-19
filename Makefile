@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2254 2006/05/18 22:00:20 adrian_p Exp $
+# $Id: Makefile,v 1.2255 2006/05/19 01:02:50 yomram Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -481,6 +481,7 @@ SUBDIR+=	kid3
 SUBDIR+=	kino
 SUBDIR+=	kismet
 SUBDIR+=	kissme
+SUBDIR+=	klamav
 SUBDIR+=	korelib
 SUBDIR+=	kpanta
 SUBDIR+=	ksambaplugin
