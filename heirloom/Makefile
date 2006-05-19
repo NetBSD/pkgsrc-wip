@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/07 22:57:23 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 14:51:23 cheusov Exp $
 
 DISTNAME=	heirloom-060122
 CATEGORIES=	sysutils
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://heirloom.sf.net/
 COMMENT=	Collection of standard Unix utilities
+
+USE_TOOLS+=	yacc lex
 
 # should be partially ported to Interix
 NOT_FOR_PLATFORM=	Interix-*-*
@@ -24,6 +26,7 @@ LCRYPT=
 .endif
 
 LCURS=-lcurses
+USE_BZLIB=	1
 
 .if ${OPSYS} == "NetBSD"
 CFLAGS+=	-DUSE_TERMCAP
@@ -34,6 +37,8 @@ LCURS=		-ltermcap
 CPPFLAGS+=	-D_GNU_SOURCE
 CPPFLAGS+=	-D_FILE_OFFSET_BITS=64L
 .endif
+
+LDFLAGS+=	-lz -lbz2
 
 do-build:
 	cd ${WRKSRC} && \
@@ -59,6 +64,7 @@ post-install:
 	done
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
