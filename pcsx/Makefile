@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/12 23:51:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:29 ykomatsu Exp $
 #
 
 DISTNAME=	PcsxSrc-1.5
@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://www.pcsx.net/downloads/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pcsx.net/
 COMMENT=	Free Playstation(TM) emulator
 

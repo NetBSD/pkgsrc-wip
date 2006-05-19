@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.10 2006/04/20 13:36:38 cheusov Exp $
-# $Id: Makefile,v 1.10 2006/04/20 13:36:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/19 16:51:25 ykomatsu Exp $
+# $Id: Makefile,v 1.11 2006/05/19 16:51:25 ykomatsu Exp $
 
 .include "../../wip/e2fsprogs/Makefile.common"
 
@@ -8,7 +8,7 @@ PKGNAME=		libuuid-${E2FSPROGS_VERSION}
 CATEGORIES=		devel
 MASTER_SITES=		${E2FSPROGS_MASTER_SITES}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://e2fsprogs.sourceforge.net/
 COMMENT=		Standalone libuuid from e2fsprogs package
 

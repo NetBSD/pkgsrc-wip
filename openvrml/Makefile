@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2005/06/12 23:51:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:28 ykomatsu Exp $
 
 DISTNAME=	openvrml-0.14.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openvrml/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openvrml.org/
 COMMENT=	Portable C++ library for displaying VRML97 files
 

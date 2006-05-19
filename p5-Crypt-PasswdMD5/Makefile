@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/26 03:14:33 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:28 ykomatsu Exp $
 #
 
 DISTNAME=		Crypt-PasswdMD5-1.3
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-PasswdMD5/
 COMMENT=		Perl5 MD5 Password implementation
 

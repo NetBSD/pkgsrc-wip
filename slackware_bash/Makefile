@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2005/07/27 16:29:57 thomasklausner Exp $
-# $Id: Makefile,v 1.3 2005/07/27 16:29:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/19 16:51:37 ykomatsu Exp $
+# $Id: Makefile,v 1.4 2006/05/19 16:51:37 ykomatsu Exp $
 #
 
 DISTNAME=		bash-2.05b-i486-3
@@ -7,7 +7,7 @@ PKGNAME=		slackware_bash-2.05b
 CATEGORIES=		emulators
 MASTER_SITES=		${SLACKWARE_MASTER_SITES}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://slackware.com
 COMMENT=		Glibc and other important shared libraries for slackware emulation
 

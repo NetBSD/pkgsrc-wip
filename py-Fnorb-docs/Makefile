@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/27 16:27:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:31 ykomatsu Exp $
 #
 
 DISTNAME=		Fnorb-Guide.html
@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fnorb/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fnorb.sourceforge.net/
 COMMENT=		Documentation for py-Fnorb in HTML format
 

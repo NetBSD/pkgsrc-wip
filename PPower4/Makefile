@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/14 15:22:52 jtonio Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:13 ykomatsu Exp $
 
 DISTNAME=	# empty
 PKGNAME=	PPower4-0.9.4
@@ -6,7 +6,7 @@ CATEGORIES=	print
 MASTER_SITES=	http://www-sp.iti.informatik.tu-darmstadt.de/software/ppower4/
 DISTFILES=	pp4sty.zip pp4p.jar
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-sp.iti.informatik.tu-darmstadt.de/software/ppower4/
 COMMENT=	PDF presentation post processor
 

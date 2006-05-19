@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2006/04/13 18:18:11 jlamwww Exp $
-# $Id: Makefile,v 1.5 2006/04/13 18:18:11 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:14 ykomatsu Exp $
+# $Id: Makefile,v 1.6 2006/05/19 16:51:14 ykomatsu Exp $
 #
 
 DISTNAME=		bison-1.35
@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=bison/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/bison/bison.html
 COMMENT=		Package for old version of GNU yacc(1) replacement
 

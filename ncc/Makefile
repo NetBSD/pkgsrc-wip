@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:27 ykomatsu Exp $
 #
 
 DISTNAME=		ncc-2.1
 CATEGORIES=		devel
 MASTER_SITES=		http://students.ceid.upatras.gr/~sxanth/ncc/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://students.ceid.upatras.gr/~sxanth/ncc/index.html
 COMMENT=		Compiler that produces program analysis information
 

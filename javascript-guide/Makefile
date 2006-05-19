@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/01 14:20:08 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:19 ykomatsu Exp $
 #
 
 DISTNAME=		CoreGuideJS15
@@ -7,7 +7,7 @@ CATEGORIES=		misc
 MASTER_SITES=		http://devedge-temp.mozilla.org/library/manuals/2000/javascript/1.5/reference/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://devedge-temp.mozilla.org/
 COMMENT=		JavaScript Guide from Netscape Devedge
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/07 20:03:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:15 ykomatsu Exp $
 #
 
 DISTNAME=	chmlib-0.31
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://66.93.236.84/%7Ejedwin/projects/chmlib/
 EXTRACT_SUFX=	.tbz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://66.93.236.84/%7Ejedwin/projects/chmlib/
 COMMENT=	Library for dealing with Microsoft ITSS/CHM format files
 

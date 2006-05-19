@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2005/07/27 16:30:44 thomasklausner Exp $
-# $Id: Makefile,v 1.3 2005/07/27 16:30:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/19 16:51:38 ykomatsu Exp $
+# $Id: Makefile,v 1.4 2006/05/19 16:51:38 ykomatsu Exp $
 #
 
 DISTNAME=		sed-4.0.9-i486-1
@@ -7,7 +7,7 @@ PKGNAME=		slackware_sed-4.0.9
 CATEGORIES=		emulators
 MASTER_SITES=		${SLACKWARE_MASTER_SITES}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://slackware.com/
 COMMENT=		GNU make for Slackware emulation
 

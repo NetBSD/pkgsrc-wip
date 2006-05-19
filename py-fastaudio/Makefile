@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/09 21:02:14 jlamwww Exp $
+# $NetBSD: Makefile,v 1.14 2006/05/19 16:51:32 ykomatsu Exp $
 #
 
 DISTNAME=		fastaudio
@@ -10,7 +10,7 @@ MASTER_SITES=		http://www.freenet.org.nz/python/pyPortAudio/ \
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			portaudio_v18_1.zip
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.freenet.org.nz/python/pyPortAudio/
 COMMENT=		Python bindings for portaudio library
 

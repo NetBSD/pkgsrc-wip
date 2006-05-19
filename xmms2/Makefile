@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/09 21:02:16 jlamwww Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/19 16:51:41 ykomatsu Exp $
 #
 
 DISTNAME=	xmms2-0.2DrAlban
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmms2/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xmms2.xmms.org/
 COMMENT=	Audio player featuring a client-server model
 

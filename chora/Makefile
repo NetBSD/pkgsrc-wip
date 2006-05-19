@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2005/08/16 02:52:15 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/19 16:51:15 ykomatsu Exp $
 #
 
 DISTNAME=	chora-1.2.3
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.horde.org/pub/chora/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/chora/
 COMMENT=	Another CVS-via-web system
 

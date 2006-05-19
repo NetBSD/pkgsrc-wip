@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/09/28 14:24:42 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:33 ykomatsu Exp $
 #
 
 DISTNAME=		pcapy-0.10.2
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		net
 MASTER_SITES=		http://oss.corest.com/repo/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://oss.corest.com/projects/pcapy.html
 COMMENT=		Python interface to pcap library
 

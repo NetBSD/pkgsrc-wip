@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:52 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:25 ykomatsu Exp $
 #
 
 DISTNAME=		lingoteach-lesson-0.4.1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=lingoteach/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://lingoteach.sourceforge.net/
 COMMENT=		Lesson files for lingoteach
 

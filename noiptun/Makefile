@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/27 16:26:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:27 ykomatsu Exp $
 #
 
 DISTNAME=		noiptun-1.0
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}/noiptun
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=noiptun/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://noiptun.sourceforge.net/
 COMMENT=		Allows communication with computers that do not have an IP address
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2005/07/27 16:26:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:30 ykomatsu Exp $
 #
 
 DISTNAME=		prothon-115
 CATEGORIES=		lang
 MASTER_SITES=		http://prothon.org/pub/prothon/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.prothon.org/
 COMMENT=		Classless prototype-based programming language
 

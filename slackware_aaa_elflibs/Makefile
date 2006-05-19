@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2005/07/27 16:29:55 thomasklausner Exp $
-# $Id: Makefile,v 1.3 2005/07/27 16:29:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/19 16:51:36 ykomatsu Exp $
+# $Id: Makefile,v 1.4 2006/05/19 16:51:36 ykomatsu Exp $
 #
 
 DISTNAME=		aaa_elflibs-9.1.2-i486-1
@@ -7,7 +7,7 @@ PKGNAME=		slackware_aaa_elflibs-9.1.2
 CATEGORIES=		emulators
 MASTER_SITES=		${SLACKWARE_MASTER_SITES}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://slackware.com
 COMMENT=		Basic libraries for slackware emulation
 

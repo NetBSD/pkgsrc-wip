@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/27 16:31:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:41 ykomatsu Exp $
 #
 
 DISTNAME=		xpde-0.4.0-20030730
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/xpde-0.4.0
 CATEGORIES=		misc
 MASTER_SITES=		http://www.xpde.com/releases/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xpde.com/
 COMMENT=		"Desktop environment for X11 (Windows XP interface clone)"
 

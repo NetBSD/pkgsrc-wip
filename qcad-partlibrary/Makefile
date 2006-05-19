@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/03/12 23:18:44 jcflack Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/19 16:51:35 ykomatsu Exp $
 #
 
 DISTNAME=		partlibrary-2.0.1.2-1
@@ -8,7 +8,7 @@ CATEGORIES=		cad
 MASTER_SITES=		http://www.ribbonsoft.com/archives/partlibrary/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ribbonsoft.com/qcad/
 COMMENT=	About 4500 mech, elec, etc. parts for the QCad 2D CAD system
 

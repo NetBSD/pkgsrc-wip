@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/07/27 16:25:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:16 ykomatsu Exp $
 #
 
 DISTNAME=		dxmake-2.11
 CATEGORIES=		devel
 MASTER_SITES=		http://apollo.backplane.com/FreeBSDPorts/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://apollo.backplane.com/FreeBSDPorts/
 COMMENT=		Yet another make tool
 

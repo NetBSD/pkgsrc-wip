@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:35 ykomatsu Exp $
 #
 
 DISTNAME=	qico-0.48.5
 CATEGORIES=	comms
 MASTER_SITES=	http://lev.serebryakov.spb.ru/download/0.48/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	FidoNet mailer
 
 USE_TOOLS+=	gmake

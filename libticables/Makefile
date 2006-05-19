@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/10/10 14:00:13 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:24 ykomatsu Exp $
 #
 
 DISTNAME=		libticables
@@ -6,7 +6,7 @@ PKGNAME=		libticables-3.7.6
 CATEGORIES=		comms
 MASTER_SITES=		http://www.ticalc.org/pub/unix/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://tilp.info/
 COMMENT=		Library for communicating with TI calculators
 

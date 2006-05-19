@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/22 10:48:36 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:19 ykomatsu Exp $
 #
 
 DISTNAME=		60All
@@ -8,7 +8,7 @@ CATEGORIES=		databases
 MASTER_SITES=		http://www.ibphoenix.com/downloads/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.firebirdsql.org/index.php?op=doc&id=userdoc
 COMMENT=		Documentation for InterBase 6.0 in PDF format
 

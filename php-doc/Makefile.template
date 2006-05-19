@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.template,v 1.4 2005/07/27 16:26:44 thomasklausner Exp $
-# $Id: Makefile.template,v 1.4 2005/07/27 16:26:44 thomasklausner Exp $
+# $NetBSD: Makefile.template,v 1.5 2006/05/19 16:51:29 ykomatsu Exp $
+# $Id: Makefile.template,v 1.5 2006/05/19 16:51:29 ykomatsu Exp $
 
 DISTNAME=	php_manual_${PHP_DOC_LANG}
 PKGNAME=       	php-doc-${PHP_DOC_LANG}-20031217
@@ -7,7 +7,7 @@ WRKSRC=	       	${WRKDIR}
 CATEGORIES=    	misc
 MASTER_SITES=  	${PHP_DOC_MASTER_SITES}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=      	http://www.php.net/
 COMMENT=       	${PHP_DOC_LANG_DESC} documentation for PHP
 

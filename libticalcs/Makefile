@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/10/10 14:00:13 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:24 ykomatsu Exp $
 #
 
 DISTNAME=		libticalcs
@@ -6,7 +6,7 @@ PKGNAME=		libticalcs-4.4.9
 CATEGORIES=		math
 MASTER_SITES=		http://www.ticalc.org/pub/unix/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://tilp.info/
 COMMENT=		Database of TI calculator model information
 

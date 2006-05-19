@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/14 01:28:18 jlamwww Exp $
+# $NetBSD: Makefile,v 1.13 2006/05/19 16:51:40 ykomatsu Exp $
 #
 
 DISTNAME=	TUTOS-php-1.2.20040906
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/tutos
 CATEGORIES=	devel
 MASTER_SITES=	http://www.tutos.org/download/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tutos.org/homepage/about.html
 COMMENT=	Time and team management software
 

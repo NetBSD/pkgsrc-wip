@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/05/13 12:09:31 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.21 2006/05/19 16:51:41 ykomatsu Exp $
 #
 
 DISTNAME=		Zope-3.3.0b1
@@ -37,16 +37,16 @@ MESSAGE_SUBST+=		ZOPE3_USER=${ZOPE3_USER:Q} \
 			VARBASE=${VARBASE:Q}
 
 pre-install:
-	${FIND} ${WRKSRC} -name "*.orig" -type f -print | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC} -name "*.orig" -print -type f | ${XARGS} ${RM} -f
 
 post-install:
 	${LN} -s ${ZOPE3_DIR}/bin/mkzeoinstance ${PREFIX}/bin
 	${LN} -s ${ZOPE3_DIR}/bin/mkzopeinstance ${PREFIX}/bin
 	${LN} -s ${ZOPE3_DIR}/bin/zopetest ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${ZOPE3_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/Zope/LICENSES.txt ${ZOPE3_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/Zope/ZopePublicLicense.txt ${ZOPE3_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/Zope/doc/*.txt ${ZOPE3_DOCDIR}
+	cd ${WRKSRC}/Zope && ${PAX} -r -w LICENSES.txt ZopePublicLicense.txt \
+		${ZOPE3_DOCDIR}
+	cd ${WRKSRC}/Zope/doc && ${PAX} -r -w *.txt ${ZOPE3_DOCDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

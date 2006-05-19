@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2005/07/27 16:30:19 thomasklausner Exp $
-# $Id: Makefile,v 1.5 2005/07/27 16:30:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:37 ykomatsu Exp $
+# $Id: Makefile,v 1.6 2006/05/19 16:51:37 ykomatsu Exp $
 #
 
 DISTNAME=		glibc-solibs-2.3.2-i486-5
@@ -7,7 +7,7 @@ PKGNAME=		slackware_glibc_solibs-2.3.2
 CATEGORIES=		emulators
 MASTER_SITES=		${SLACKWARE_MASTER_SITES}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://slackware.com
 COMMENT=		Glibc and other important shared libraries for slackware emulation
 

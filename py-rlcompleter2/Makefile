@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/27 16:29:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:33 ykomatsu Exp $
 #
 
 DISTNAME=		rlcompleter2-0.95
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel
 MASTER_SITES=		http://codespeak.net/rlcompleter2/download/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://codespeak.net/rlcompleter2/index.cgi?home
 COMMENT=		Python command line completion
 

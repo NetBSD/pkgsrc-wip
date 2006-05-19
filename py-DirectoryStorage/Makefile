@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/28 20:50:10 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:30 ykomatsu Exp $
 #
 
 DISTNAME=		DirectoryStorage_1_1_7
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dirstorage/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dirstorage.sourceforge.net/
 COMMENT=		Storage for ZODB, that uses files and directories
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/01 10:40:03 cubidou Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/19 16:51:41 ykomatsu Exp $
 
 DISTNAME=	xscribblefs
 PKGNAME=	xscribble-fs-20001213
 CATEGORIES=	x11
 MASTER_SITES=	http://linuxslate.com/files/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://linuxslate.com/software.html
 COMMENT=	Handwriting recognition (like graffiti)
 

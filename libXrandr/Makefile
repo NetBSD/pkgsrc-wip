@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/05 22:26:16 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:24 ykomatsu Exp $
 #
 
 DISTNAME=		libXrandr-1.1.0.2
@@ -6,7 +6,7 @@ CATEGORIES=		x11 devel
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X RandR Library from X.org
 

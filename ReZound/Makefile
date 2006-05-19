@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2006/03/09 21:02:03 jlamwww Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/19 16:51:13 ykomatsu Exp $
 #
 
 DISTNAME=		rezound-0.12.0beta
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rezound/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://rezound.sourceforge.net/
 COMMENT=		Audio editor with graphical interface
 

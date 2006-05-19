@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/08 06:54:51 obache Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:16 ykomatsu Exp $
 #
 
 DISTNAME=	fgfs-base-0.9.3
@@ -12,7 +12,7 @@ MASTER_SITES=	ftp://ftp.flightgear.org/pub/fgfs/Shared/ \
 		ftp://obgyn.edu.pl/fgfs/Shared/
 EXTRACT_SUFX=   .tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.flightgear.org/pub/fgfs/Shared/
 COMMENT=	FlightGear Simulator (data files)
 

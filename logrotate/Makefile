@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/10/10 13:58:46 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:25 ykomatsu Exp $
 
 DISTNAME=		logrotate-3.7.2-4.src.rpm
 PKGNAME=		logrotate-3.7.2
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/
 EXTRACT_SUFX=		# empty
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		# empty
 COMMENT=		Daemon to rotate, compress, remove and mail system log files
 

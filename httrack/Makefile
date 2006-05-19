@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2006/05/19 16:51:19 ykomatsu Exp $
 #
 
 DISTNAME=	httrack-3.33
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.httrack.com/ \
 		http://httrack.free.fr/mirror/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.httrack.com/
 COMMENT=	Easy-to-use offline browser utility
 

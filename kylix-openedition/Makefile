@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/29 17:43:16 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2006/05/19 16:51:20 ykomatsu Exp $
 #
 
 DISTNAME=		# defined
@@ -8,7 +8,7 @@ MASTER_SITES=		http://altd.borland.com/download/kylix/k3/ \
 			ftp://ftpd.borland.com/download/kylix/k3/
 DISTFILES=		k3_open_update_2.tar.gz kylix3_open.tar.gz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.borland.com/us/products/classic_products/index.html
 COMMENT=		ANSI/ISO C++, Delphi and IDE in one
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/24 10:29:32 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/19 16:51:15 ykomatsu Exp $
 #
 
 DISTNAME=	DFBPoint-0.7.2
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/DFBP/dfbp/}
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.directfb.org/download/DFBPoint/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.directfb.org/
 COMMENT=	Simple presentation viewer that uses the DirectFB
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/06 07:17:25 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/19 16:51:19 ykomatsu Exp $
 #
 
 DISTNAME=		heroes-0.21
@@ -6,7 +6,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=heroes/}
 DISTFILES=		${HEROES_DIRS:=.tar.bz2}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://heroes.sourceforge.net/
 COMMENT=		Feature-packed game, like Nibbles or Tron clone
 

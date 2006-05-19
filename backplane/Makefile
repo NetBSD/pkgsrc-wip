@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/07/27 16:25:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:14 ykomatsu Exp $
 #
 
 DISTNAME=		backplane-1.05
 CATEGORIES=		databases
 MASTER_SITES=		http://apollo.backplane.com/FreeBSDPorts/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.backplane.com/
 COMMENT=		Innovative RDBMS database by Matthew Dillon
 

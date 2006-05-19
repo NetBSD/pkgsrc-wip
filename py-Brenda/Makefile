@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/01 01:32:11 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:30 ykomatsu Exp $
 #
 
 DISTNAME=		PyBrenda-0.4.1
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/Py//}
 CATEGORIES=		devel
 MASTER_SITES=		http://www.snurgle.org/~pybrenda/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://wiki.python.org/moin/PyBrenda
 COMMENT=		Parallel computation system
 

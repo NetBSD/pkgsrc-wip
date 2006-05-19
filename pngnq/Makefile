@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/10 13:42:30 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/19 16:51:29 ykomatsu Exp $
 #
 
 DISTNAME=		pngnq-0.3-src
@@ -6,7 +6,7 @@ PKGNAME=		pngnq-0.3
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.cybertherial.com/pngnq/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cybertherial.com/pngnq/pngnq.html
 COMMENT=		Tool for quantizing PNG images in RGBA format
 

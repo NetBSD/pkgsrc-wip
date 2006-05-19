@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/01 14:20:08 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:35 ykomatsu Exp $
 #
 
 DISTNAME=		rarbsd-3.3.0
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/rar
 CATEGORIES=		archivers
 MASTER_SITES=		http://files.rarlab.com/rar/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.rarlab.com/shoprarlab.php
 COMMENT=		File archiver (binary only)
 

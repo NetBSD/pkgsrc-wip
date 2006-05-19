@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/05/05 22:26:16 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.19 2006/05/19 16:51:21 ykomatsu Exp $
 #
  ## this needs to be updated to modular Xorg
 
@@ -7,7 +7,7 @@ CATEGORIES=		x11 devel
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Xfixes library and extension of X RandR from modular X.org
 

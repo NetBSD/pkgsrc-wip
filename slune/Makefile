@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/29 17:43:17 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/19 16:51:39 ykomatsu Exp $
 #
 
 DISTNAME=		Slune-0.6.1
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://download.gna.org/slune/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://home.gna.org/oomadness/en/slune/index.html
 COMMENT=		Action game, featuring cars, races and Tux the Penguin
 

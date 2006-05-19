@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME}
 CATEGORIES=	textproc kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kxmleditor/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kxmleditor.sourceforge.net/
 COMMENT=	KDE xml editor
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 22:27:47 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:29 ykomatsu Exp $
 
 # Notes to package maintainers:
 #
@@ -14,7 +14,7 @@ CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pkgsrc.org/
 COMMENT=		Package management and administration tools for pkgsrc
 

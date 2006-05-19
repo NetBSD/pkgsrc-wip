@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2005/09/28 14:24:42 rillig Exp $
-# $Id: Makefile,v 1.4 2005/09/28 14:24:42 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:37 ykomatsu Exp $
+# $Id: Makefile,v 1.5 2006/05/19 16:51:37 ykomatsu Exp $
 #
 
 DISTNAME=		glibc-2.3.2-i486-5
@@ -7,7 +7,7 @@ PKGNAME=		slackware_glibc-2.3.2
 CATEGORIES=		emulators
 MASTER_SITES=		${SLACKWARE_MASTER_SITES}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://slackware.com/
 COMMENT=		glibc with development files for Slackware
 

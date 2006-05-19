@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:34 ykomatsu Exp $
 #
 
 DISTNAME=		visionegg-contrib-0.9.3
@@ -7,7 +7,7 @@ CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=visionegg/}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://visionegg.sourceforge.net/
 COMMENT=		Additional modules for py-visionegg package
 

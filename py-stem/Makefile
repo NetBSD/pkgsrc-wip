@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/27 16:29:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:34 ykomatsu Exp $
 #
 
 DISTNAME=		PyStem-1.0.4
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-stem-1.0.4
 CATEGORIES=		devel
 MASTER_SITES=		http://www.alobbs.com//pystem/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.alobbs.com//pystem/
 COMMENT=		Binding of the Porter stemming algorithm to Python
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/29 17:43:17 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2006/05/19 16:51:32 ykomatsu Exp $
 #
 
 DISTNAME=		Soya-0.6.1
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://download.gna.org/soya/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://home.gna.org/oomadness/en/soya/index.html
 COMMENT=		High level 3D engine for Python
 

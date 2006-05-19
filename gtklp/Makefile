@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2006/02/26 02:39:53 jcflack Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/19 16:51:18 ykomatsu Exp $
 
 DISTNAME=	gtklp-1.2.1
 CATEGORIES=	print x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtklp/}
 EXTRACT_SUFX=	.src.tar.gz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtklp.sourceforge.net/
 COMMENT=	GUI for CUPS print submission and queue management
 

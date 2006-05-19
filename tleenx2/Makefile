@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/27 16:31:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:40 ykomatsu Exp $
 #
 
 DISTNAME=	TleenX2-20040214
@@ -6,7 +6,7 @@ PKGNAME=	tleenx2-20040214
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tleenx/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tleenx.sourceforge.net/
 COMMENT=	Client to tlen.pl - polish IM / chat system
 

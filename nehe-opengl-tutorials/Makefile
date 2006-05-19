@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/22 10:48:37 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/19 16:51:27 ykomatsu Exp $
 #
 
 DISTNAME=	nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}-0
@@ -17,7 +17,7 @@ DISTFILES=	lesson01.tar.gz lesson02.tar.gz lesson03.tar.gz \
 		lesson36.tar.gz lesson37.tar.gz lesson40.tar.gz \
 		lesson41.tar.gz lesson42.tar.gz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://nehe.gamedev.net/
 COMMENT=		OpenGL tutorials from NeHe.gamedev.net - ${NEHE_OPENGL_TUT_FLAVOUR} versions
 

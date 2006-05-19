@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/09 21:02:05 jlamwww Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:15 ykomatsu Exp $
 #
 
 DISTNAME=		d4x-2.5.0final
@@ -6,7 +6,7 @@ PKGNAME=		d4x-2.5.0
 CATEGORIES=		net
 MASTER_SITES=		http://www.krasu.ru/soft/chuchelo/files/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.krasu.ru/soft/chuchelo/files/
 COMMENT=		Download files using a nice GUI
 

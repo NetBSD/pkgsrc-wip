@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/11/20 01:38:02 obache Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:16 ykomatsu Exp $
 #
 
 DISTNAME=		fbida-2.03
 CATEGORIES=		graphics
 MASTER_SITES=		http://dl.bytesex.org/releases/fbida/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://linux.bytesex.org/fbida/
 COMMENT=		Image viewer and editor
 

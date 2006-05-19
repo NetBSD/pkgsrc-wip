@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/14 01:28:00 jlamwww Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:20 ykomatsu Exp $
 #
 
 DISTNAME=	${PKGNAME:S/-/_/}-Stable-Full_Package
@@ -6,7 +6,7 @@ PKGNAME=	joomla-1.0.4
 CATEGORIES=	wip www
 MASTER_SITES=	http://developer.joomla.org/sf/frs/do/downloadFile/projects.joomla/frs.joomla_1_0.1_0_4/frs2532?dl=1/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.joomla.org/
 COMMENT=	Dynamic web content management system (CMS)
 

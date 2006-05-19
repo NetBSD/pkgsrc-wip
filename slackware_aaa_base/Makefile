@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2005/09/28 14:24:42 rillig Exp $
-# $Id: Makefile,v 1.5 2005/09/28 14:24:42 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:36 ykomatsu Exp $
+# $Id: Makefile,v 1.6 2006/05/19 16:51:36 ykomatsu Exp $
 #
 
 DISTNAME=		aaa_base-9.1.0-noarch-1
@@ -7,7 +7,7 @@ PKGNAME=		slackware_aaa_base-9.1.0
 CATEGORIES=		emulators
 MASTER_SITES=		${SLACKWARE_MASTER_SITES}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://slackware.com
 COMMENT=		Basic directory structure for Slackware emulation
 

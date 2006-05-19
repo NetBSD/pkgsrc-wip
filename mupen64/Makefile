@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/11 23:06:02 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:26 ykomatsu Exp $
 #
 
 DISTNAME=	# empty
@@ -7,7 +7,7 @@ CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 meta-package
 

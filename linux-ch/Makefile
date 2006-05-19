@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2005/07/27 16:26:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:25 ykomatsu Exp $
 
 DISTNAME=	chstandard-4.0.0.linux2.2.5.intel
 PKGNAME=	linux-ch-4.0.0
 CATEGORIES=	devel
 MASTER_SITES=	http://www.softintegration.com/download/software/release/Linux/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.softintegration.com/products/
 COMMENT=	Ch is an interactive C development environment
 

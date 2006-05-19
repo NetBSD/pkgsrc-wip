@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/29 04:39:33 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:26 ykomatsu Exp $
 
 # probably a meta package is not needed
 # could just install the libX11 and others
@@ -13,7 +13,7 @@ CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Meta package for modular X.org X libraries
 
 # todo: depend on specific versions or "nb" revisions

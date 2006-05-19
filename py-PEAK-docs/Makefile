@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/28 20:50:10 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/19 16:51:31 ykomatsu Exp $
 #
 
 DISTNAME=		PEAK-0.5a3
@@ -6,7 +6,7 @@ PKGNAME=		py-PEAK-docs-0.5a3
 CATEGORIES=		devel
 MASTER_SITES=		http://peak.telecommunity.com/dist/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://peak.telecommunity.com/
 COMMENT=		Python Enterprise Application Kit
 

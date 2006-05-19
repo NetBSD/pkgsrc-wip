@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/27 16:25:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:20 ykomatsu Exp $
 #
 
 DISTNAME=		kyra_src_1_6_5
@@ -6,7 +6,7 @@ PKGNAME=		kyra-1.6.5
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kyra/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://kyra.sourceforge.net/
 COMMENT=		Sprite engine in C++ that uses SDL library
 

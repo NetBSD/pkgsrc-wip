@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:35 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:28 ykomatsu Exp $
 #
 
 DISTNAME=		oqtplayer-0.5-src
@@ -7,7 +7,7 @@ CATEGORIES=		security net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openquicktime/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openquicktime.org/
 COMMENT=		Small OpenQuickTime (TM) player, using SDL
 

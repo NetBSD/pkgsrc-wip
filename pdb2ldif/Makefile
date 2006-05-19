@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:14:43 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:29 ykomatsu Exp $
 #
 
 DISTNAME=	pdb2ldif-1.1
 CATEGORIES=	converters
 MASTER_SITES=	http://www.uslinux.net/software/packages/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.uslinux.net/software/pkginfo.php?pkg=pdb2ldif
 COMMENT=	Converts Palm Address Book PDB files into an LDAP-usable LDIF file
 

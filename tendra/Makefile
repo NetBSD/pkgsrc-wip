@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2003/08/29 10:31:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:39 ykomatsu Exp $
 
 DISTNAME=	TenDRA-4.1.2
 PKGNAME=	tendra-4.1.2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.info.uni-karlsruhe.de/~andf/download/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.info.uni-karlsruhe.de/~andf/tendra.htm
 COMMENT=	Multi-targetted C and C++ compiler
 

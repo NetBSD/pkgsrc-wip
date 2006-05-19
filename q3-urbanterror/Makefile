@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:26 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:35 ykomatsu Exp $
 #
 
 DISTNAME=	urbanterror3
@@ -13,7 +13,7 @@ MASTER_SITES=	ftp://mirror.candidhosting.com/pub/ut/ \
 		http://atrivo.wofut.com/~zac/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.urbanterror.net/
 COMMENT=	Quake III Arena Mod: Urban Terror for Linux
 

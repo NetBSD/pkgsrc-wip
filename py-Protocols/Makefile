@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/27 16:27:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:31 ykomatsu Exp $
 #
 
 DISTNAME=		PyProtocols-0.9.2
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/Py//}
 CATEGORIES=		devel
 MASTER_SITES=		http://peak.telecommunity.com/dist/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://peak.telecommunity.com/PyProtocols.html
 COMMENT=		Lets you easily define your own protocols and adapters
 

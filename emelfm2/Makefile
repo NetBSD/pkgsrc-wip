@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2006/01/13 07:56:57 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:16 ykomatsu Exp $
 #
 
 DISTNAME=	emelfm2-0.1.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://emelfm2.net/rel/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://emelfm2.net/
 COMMENT=	Fast two-pane file manager using GTK2
 

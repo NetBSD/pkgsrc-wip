@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/01/12 16:59:13 poppnk Exp $
+# $NetBSD: Makefile,v 1.12 2006/05/19 16:51:19 ykomatsu Exp $
 #
 
 DISTNAME=	IlohaMail-0.8.14-rc2
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/IlohaM/iloham/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ilohamail/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ilohamail.org/
 COMMENT=	Light weight yet full featured multilingual webmail
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/11/06 20:49:16 dolecek Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/19 16:51:17 ykomatsu Exp $
 #
 
 DISTNAME=	geeklog-1.3.7sr1
@@ -6,7 +6,7 @@ PKGNAME=	geeklog-1.3.7
 CATEGORIES=	www
 MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.geeklog.net/
 COMMENT=	Web content management
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:33 ykomatsu Exp $
 #
 
 DISTNAME=		PyKyra-0.4.0
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/PyK/k/}
 CATEGORIES=		devel
 MASTER_SITES=		http://www.alobbs.com/pykyra/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.alobbs.com/modules.php?op=modload&name=pykyra&file=index
 COMMENT=		Game development framework for Python
 

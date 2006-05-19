@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2005/07/27 16:26:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:24 ykomatsu Exp $
 #
 
 DISTNAME=		libtlen2-20040301
 CATEGORIES=		chat
 MASTER_SITES=		http://www.libtlen.eu.org/libtlen2_files/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.libtlen.eu.org/index.php?theme=teary&page=libtlen2
 COMMENT=		Library to access tlen.pl IM system
 

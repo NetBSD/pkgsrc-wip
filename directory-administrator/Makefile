@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/24 10:29:35 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:15 ykomatsu Exp $
 #
 
 DISTNAME=	directory_administrator-1.5
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:C/_/-/}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://diradmin.open-it.org/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://diradmin.open-it.org/
 COMMENT=	Smart LDAP directory management tool
 

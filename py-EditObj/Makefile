@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/29 17:43:16 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:30 ykomatsu Exp $
 #
 
 DISTNAME=		EditObj-0.5.3
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel
 MASTER_SITES=		http://download.gna.org/songwrite/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://home.gna.org/oomadness/en/editobj/index.html
 COMMENT=		useful tool for writing (text or non-text) editors of all kinds in Python
 

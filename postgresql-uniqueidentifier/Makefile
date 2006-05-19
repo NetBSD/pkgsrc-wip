@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/27 16:26:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/19 16:51:30 ykomatsu Exp $
 #
 
 DISTNAME=		uniqueidentifier-0.2
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://gborg.postgresql.org/pub/uniqueidentifier/stable/ \
 			${PGSQL_MASTER_SITES}
 DISTFILES=		uniqueidentifier-0.2.tar.gz ${PGSQL_DISTFILES}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gborg.postgresql.org/project/uniqueidentifier/projdisplay.php
 COMMENT=		Allows PostgreSQL databases to use Global Unique Identifier (GUID)
 

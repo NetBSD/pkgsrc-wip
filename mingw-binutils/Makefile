@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.14 2006/04/08 22:14:03 jlamwww Exp $
-# $Id: Makefile,v 1.14 2006/04/08 22:14:03 jlamwww Exp $
+# $NetBSD: Makefile,v 1.15 2006/05/19 16:51:26 ykomatsu Exp $
+# $Id: Makefile,v 1.15 2006/05/19 16:51:26 ykomatsu Exp $
 
 DISTNAME=	binutils-2.15.91-20040904-1-src
 PKGNAME=	mingw-${DISTNAME:C/-200.*-src//}
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_MINGW}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mingw.sf.net/
 COMMENT=	GNU C Compiler ported to win32 platforms
 

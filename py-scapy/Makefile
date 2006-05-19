@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/01 14:20:08 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:33 ykomatsu Exp $
 #
 
 DISTNAME=		scapy-0.9.15
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://www.secdev.org/projects/scapy/files/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.secdev.org/projects/scapy/
 COMMENT=		Interactive packet manipulation tool
 

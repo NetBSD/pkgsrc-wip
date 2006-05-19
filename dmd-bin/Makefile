@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/28 14:24:39 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/19 16:51:16 ykomatsu Exp $
 #
 
 DISTNAME=		dmd
@@ -7,7 +7,7 @@ CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.digitalmars.com/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.digitalmars.com/d/dcompiler.html
 COMMENT=		The D Programming Language from Digital Mars
 

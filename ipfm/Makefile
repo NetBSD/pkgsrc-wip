@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2006/04/06 07:17:25 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:19 ykomatsu Exp $
 
 DISTNAME=		ipfm-0.11.5
 CATEGORIES=		net
 MASTER_SITES=		http://robert.cheramy.net/ipfm/archive/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://robert.cheramy.net/ipfm/
 COMMENT=		Bandwidth analysis tool
 

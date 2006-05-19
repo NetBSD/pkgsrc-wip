@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/27 16:24:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:13 ykomatsu Exp $
 #
 
 DISTNAME=		PyBabelPhish-2.0_All_Platforms
@@ -8,7 +8,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pythonol/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pythonol.sourceforge.net/
 COMMENT=		Gtk-based frontend for several translation services on web
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/27 16:26:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:25 ykomatsu Exp $
 #
 
 DISTNAME=		mingw-3.3.1
@@ -6,7 +6,7 @@ CATEGORIES=		cross
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mingw.sf.net/
 COMMENT=		GNU C Compiler for win32 cross development
 

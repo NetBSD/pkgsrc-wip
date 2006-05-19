@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/27 16:25:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:16 ykomatsu Exp $
 #
 
 DISTNAME=		drpython-2.1.9
@@ -6,7 +6,7 @@ CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=drpython/}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://drpython.sourceforge.net/
 COMMENT=		Source code editor, written in Python, for Python
 

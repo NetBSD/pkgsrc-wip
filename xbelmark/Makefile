@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/12 15:20:18 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:40 ykomatsu Exp $
 #
 
 DISTNAME=		xbelmark.py
@@ -7,7 +7,7 @@ CATEGORIES=		textproc www
 MASTER_SITES=		http://www.stud.uni-hamburg.de/users/lennart/projects/xbelmark/
 EXTRACT_SUFX=		# nothing to extract
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.stud.uni-hamburg.de/users/lennart/projects/xbelmark/
 COMMENT=		XBEL XML bookmarks to readable HTML converter
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2005/11/28 00:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:32 ykomatsu Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-gettext-tools-0
 CATEGORIES=	databases
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/topics/database/
 COMMENT=	Python tools for development of I18N Python apps
 

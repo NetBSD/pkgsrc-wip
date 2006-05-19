@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/07/27 16:31:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:40 ykomatsu Exp $
 #
 
 DISTNAME=		viewcvs-0.9.2
 CATEGORIES=		devel www
 MASTER_SITES=		http://viewcvs.sourceforge.net/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://viewcvs.sourceforge.net/
 COMMENT=		View CVS repositories via WWW. No HTTP server needed
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/11/28 00:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/19 16:51:32 ykomatsu Exp $
 #
 
 DISTNAME=		PyPE1.8.2
@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pype/}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pype.sourceforge.net/
 COMMENT=		Lightweight, but powerful editor for Python
 

@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.10 2006/04/13 18:18:14 jlamwww Exp $
-# $Id: Makefile,v 1.10 2006/04/13 18:18:14 jlamwww Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/19 16:51:17 ykomatsu Exp $
+# $Id: Makefile,v 1.11 2006/05/19 16:51:17 ykomatsu Exp $
 #
 
 DISTNAME=		glade-2.0.1
@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glade/2.0/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://glade.gnome.org/
 COMMENT=		User interface builder for the GTK2+ toolkit and GNOME2
 

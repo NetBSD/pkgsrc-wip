@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/01 14:20:08 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:32 ykomatsu Exp $
 #
 
 DISTNAME=		pydirector-0.0.7
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pythondirector/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pythondirector.sourceforge.net/
 COMMENT=		Pure-python TCP load balancer
 

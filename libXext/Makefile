@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/28 06:54:19 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.18 2006/05/19 16:51:21 ykomatsu Exp $
 #
 
 DISTNAME=		libXext-1.0.1
@@ -6,7 +6,7 @@ CATEGORIES=		x11 devel
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Extension library
 

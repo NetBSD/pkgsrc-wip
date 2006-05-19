@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:15:26 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:35 ykomatsu Exp $
 
 DISTNAME=	rawphoto.c
 PKGNAME=	rawphoto-1.1.5
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://www.cybercom.net/~dcoffin/dcraw/
 EXTRACT_SUFX=
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cybercom.net/~dcoffin/dcraw/
 COMMENT=	GIMP plugin for dcraw (digital camera raw file decoder)
 
