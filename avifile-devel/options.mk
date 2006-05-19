@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2006/03/14 01:27:42 obache Exp $
+# $NetBSD: options.mk,v 1.8 2006/05/19 09:02:45 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avifile-devel
 PKG_SUPPORTED_OPTIONS=	sdl faad qt vorbis xvid mad a52 lame jpeg ac3_passthrough
@@ -55,7 +55,8 @@ SUBST_CLASSES+=		qtman
 SUBST_STAGE.qtman=	pre-configure
 SUBST_MESSAGE.qtman=	do not install man page for qt
 SUBST_FILES.qtman=	doc/Makefile.in
-SUBST_SED.qtman=	-e 's|aviplay.1||' -e 's|avirecompress.1||'
+SUBST_SED.qtman=	-e 's|aviplay.1||'
+SUBST_SED.qtman+=	-e 's|avirecompress.1||'
 .endif
 
 .if !empty(PKG_OPTIONS:Mvorbis)

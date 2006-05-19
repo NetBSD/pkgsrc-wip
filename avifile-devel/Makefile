@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/09 21:02:04 jlamwww Exp $
+# $NetBSD: Makefile,v 1.14 2006/05/19 09:02:45 rillig Exp $
 
 DISTNAME=	avifile-0.7-0.7.43
 PKGNAME=	avifile-devel-0.7.43
@@ -55,7 +55,8 @@ SUBST_CLASSES+=		v4lman
 SUBST_STAGE.v4lman=	pre-configure
 SUBST_MESSAGE.v4lman=	do not install man page for v4l
 SUBST_FILES.v4lman=	doc/Makefile.in
-SUBST_SED.v4lman=	-e 's|kv4lsetup.1||' -e 's|avirec.1||'
+SUBST_SED.v4lman=	-e 's|kv4lsetup.1||'
+SUBST_SED.v4lman+=	-e 's|avirec.1||'
 .endif
 
 .if ${MACHINE_ARCH} == "i386" && (${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD")
