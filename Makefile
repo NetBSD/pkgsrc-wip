@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2256 2006/05/19 01:55:45 yomram Exp $
+# $Id: Makefile,v 1.2257 2006/05/19 05:44:50 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1338,8 +1338,6 @@ SUBDIR+=	videoproto
 SUBDIR+=	viewcvs
 SUBDIR+=	viewer
 SUBDIR+=	viewglob
-SUBDIR+=	vim
-SUBDIR+=	vim-share
 SUBDIR+=	virus
 SUBDIR+=	vixie-cron
 SUBDIR+=	vkeybd
