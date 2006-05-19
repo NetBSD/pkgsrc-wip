@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/19 00:48:45 yomram Exp $
-#
-# STATUS: ok
+# $NetBSD: Makefile,v 1.2 2006/05/19 00:55:30 yomram Exp $
 
 DISTNAME=	klamav-0.37-source
 PKGNAME=	${DISTNAME:S/-source//}
