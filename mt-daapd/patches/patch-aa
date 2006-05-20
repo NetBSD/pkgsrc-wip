@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/05/20 18:42:28 airhead Exp $
+
+--- contrib/mt-daapd.conf.orig	2006-05-20 19:49:14.000000000 +0200
++++ contrib/mt-daapd.conf
+@@ -23,7 +23,7 @@
+ # path is probably /usr/local/share/mt-daapd/admin-root.
+ #
+ 
+-web_root	/usr/share/mt-daapd/admin-root
++web_root	@PREFIX@/share/mt-daapd/admin-root
+ 
+ #
+ # port (required)
+@@ -51,7 +51,7 @@ admin_pw	mt-daapd
+ # exists.  If not, then YOU MUST CREATE THIS DIRECTORY!
+ #
+ 
+-db_dir		/var/cache/mt-daapd
++db_dir		@PREFIX@/var/cache/mt-daapd
+ 
+ #
+ # mp3_dir (required)
+@@ -98,7 +98,7 @@ runas	nobody
+ # below.
+ #
+ 
+-playlist	/etc/mt-daapd.playlist
++playlist	@PKG_SYSCONFDIR@/etc/mt-daapd.playlist
+ 
+ #
+ # password (optional)
