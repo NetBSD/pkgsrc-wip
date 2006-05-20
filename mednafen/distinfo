@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2006/05/17 21:53:23 thomasklausner Exp $
+$NetBSD: distinfo,v 1.11 2006/05/20 00:23:09 thomasklausner Exp $
 
-SHA1 (mednafen-0.6.0.tar.bz2) = 71b443fe0853b38c8219d510143fb4b5bc1c13a0
-RMD160 (mednafen-0.6.0.tar.bz2) = d4cd36e8717c2ac2c9f0a07e5b37404388e8920c
-Size (mednafen-0.6.0.tar.bz2) = 1410716 bytes
+SHA1 (mednafen-0.6.1.tar.bz2) = 014c1420ad04ea3993fa5e6e96b03b4256f14fdd
+RMD160 (mednafen-0.6.1.tar.bz2) = 5994a55e213503a7144bc97b17eae3f4c9e922aa
+Size (mednafen-0.6.1.tar.bz2) = 1435414 bytes
 SHA1 (patch-aa) = cfd187daec76d6623050c0ce53cc8ee31ca35a57
 SHA1 (patch-ab) = bce3aad3c4970abfc24b94997482cb9546e98393
