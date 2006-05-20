@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/28 05:52:11 geeohgeegeeoh Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/05/20 18:35:22 jsonn Exp $
 include/syntax_api.h
 lib/librpsl.a
-lib/perl5/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/perllocal.pod
 lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Net/Whois/RIPE/RPSL/.packlist
 lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Net/Whois/RIPE/RPSL/RPSL.so
 lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Net/Whois/RIPE/RPSL/RPSL.bs
