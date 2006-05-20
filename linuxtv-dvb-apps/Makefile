@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/01/24 11:38:15 poppnk Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/20 10:14:36 poppnk Exp $
 #
 
-DISTNAME=		linuxtv-dvb-apps-1.1.0
+DISTNAME=		linuxtv-dvb-apps-1.1.1
 CATEGORIES=		linux
 MASTER_SITES=		http://www.linuxtv.org/downloads/
 EXTRACT_SUFX=		.tar.bz2
