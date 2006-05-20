@@ -1,9 +1,0 @@
-$NetBSD: patch-aa,v 1.4 2004/09/13 11:36:25 marttikuparinen Exp $
-
---- configure.ac.orig	2004-08-07 23:11:01.000000000 +0300
-+++ configure.ac	2004-09-13 14:25:08.000000000 +0300
-@@ -274,3 +274,3 @@
- # TODO: this should probably be fixed to be nicer
--CONFIGFILE=`eval echo $sysconfdir/cvsd/cvsd.conf | \
-+CONFIGFILE=`eval echo $sysconfdir/cvsd.conf | \
-             sed "s%^NONE/%${prefix}/%" | \
