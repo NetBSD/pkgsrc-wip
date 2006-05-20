@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/05/18 21:01:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2006/05/20 23:33:29 thomasklausner Exp $
 
 DISTNAME=		cvsd-1.0.10
 CATEGORIES=		devel
@@ -7,8 +7,6 @@ MASTER_SITES=		http://ch.tudelft.nl/~arthur/cvsd/
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://ch.tudelft.nl/~arthur/cvsd/
 COMMENT=		Run CVS pserver in a chroot-ed environment
-
-.include "../../mk/bsd.prefs.mk"
 
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		YES
@@ -23,7 +21,8 @@ CONF_FILES=		${EGDIR}/cvsd.conf.example ${PKG_SYSCONFDIR}/cvsd.conf
 
 CVSD_USER?=		cvsd
 CVSD_GROUP?=		cvsd
-PKG_USERS=		${CVSD_USER}:${CVSD_GROUP}::CVS\ wrapper:
+PKG_USERS=		${CVSD_USER}:${CVSD_GROUP}
+PKG_GECOS.${CVSD_USER}=	CVS wrapper
 PKG_GROUPS=		${CVSD_GROUP}
 
 pre-install:
