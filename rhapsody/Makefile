@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/21 22:53:02 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/20 11:19:30 poppnk Exp $
 #
 
-PKGNAME=		rhapsody-0.26b
-DISTNAME=		rhapsody_0.26b
+PKGNAME=		rhapsody-0.28b
+DISTNAME=		rhapsody_0.28b
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rhapsody/}
 EXTRACT_SUFX=		.tgz
