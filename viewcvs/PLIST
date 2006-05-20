@@ -1,67 +1,67 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/22 14:10:55 mpasternak Exp $
-${PKGNAME}/cgi/viewcvs.cgi
-${PKGNAME}/cgi/query.cgi
-${PKGNAME}/standalone.py
-${PKGNAME}/viewcvs.conf
-${PKGNAME}/cvsgraph.conf
-${PKGNAME}/lib/PyFontify.py
-${PKGNAME}/lib/PyFontify.pyc
-${PKGNAME}/lib/blame.py
-${PKGNAME}/lib/blame.pyc
-${PKGNAME}/lib/compat.py
-${PKGNAME}/lib/compat.pyc
-${PKGNAME}/lib/config.py
-${PKGNAME}/lib/config.pyc
-${PKGNAME}/lib/cvsdb.py
-${PKGNAME}/lib/cvsdb.pyc
-${PKGNAME}/lib/dbi.py
-${PKGNAME}/lib/dbi.pyc
-${PKGNAME}/lib/debug.py
-${PKGNAME}/lib/debug.pyc
-${PKGNAME}/lib/popen.py
-${PKGNAME}/lib/popen.pyc
-${PKGNAME}/lib/py2html.py
-${PKGNAME}/lib/py2html.pyc
-${PKGNAME}/lib/query.py
-${PKGNAME}/lib/query.pyc
-${PKGNAME}/lib/rcsparse.py
-${PKGNAME}/lib/rcsparse.pyc
-${PKGNAME}/lib/rlog.py
-${PKGNAME}/lib/rlog.pyc
-${PKGNAME}/lib/viewcvs.py
-${PKGNAME}/lib/viewcvs.pyc
-${PKGNAME}/lib/ezt.py
-${PKGNAME}/lib/ezt.pyc
-${PKGNAME}/lib/apache_icons.py
-${PKGNAME}/lib/apache_icons.pyc
-${PKGNAME}/lib/accept.py
-${PKGNAME}/lib/accept.pyc
-${PKGNAME}/templates/annotate.ezt
-${PKGNAME}/templates/diff.ezt
-${PKGNAME}/templates/directory.ezt
-${PKGNAME}/templates/dir_alternate.ezt
-${PKGNAME}/templates/footer.ezt
-${PKGNAME}/templates/graph.ezt
-${PKGNAME}/templates/header.ezt
-${PKGNAME}/templates/log.ezt
-${PKGNAME}/templates/log_table.ezt
-${PKGNAME}/templates/markup.ezt
-${PKGNAME}/templates/query.ezt
-${PKGNAME}/loginfo-handler
-${PKGNAME}/cvsdbadmin
-${PKGNAME}/make-database
-${PKGNAME}/doc/help_rootview.html
-${PKGNAME}/doc/help_dirview.html
-${PKGNAME}/doc/help_query.html
-${PKGNAME}/doc/help_log.html
-${PKGNAME}/doc/help_logtable.html
-${PKGNAME}/doc/images/logo.png
-${PKGNAME}/doc/images/chalk.jpg
-${PKGNAME}/doc/images/cvsgraph_16x16.png
-${PKGNAME}/doc/images/cvsgraph_32x32.png
-@dirrm ${PKGNAME}/cgi
-@dirrm ${PKGNAME}/lib
-@dirrm ${PKGNAME}/templates
-@dirrm ${PKGNAME}/doc/images
-@dirrm ${PKGNAME}/doc
-@dirrm ${PKGNAME}
+@comment $NetBSD: PLIST,v 1.2 2006/05/20 04:38:02 yomram Exp $
+${VIEWCVSDIR}/cgi/query.cgi
+${VIEWCVSDIR}/cgi/viewcvs.cgi
+${VIEWCVSDIR}/cvsdbadmin
+${VIEWCVSDIR}/cvsgraph.conf
+${VIEWCVSDIR}/doc/help_dirview.html
+${VIEWCVSDIR}/doc/help_log.html
+${VIEWCVSDIR}/doc/help_logtable.html
+${VIEWCVSDIR}/doc/help_query.html
+${VIEWCVSDIR}/doc/help_rootview.html
+${VIEWCVSDIR}/doc/images/chalk.jpg
+${VIEWCVSDIR}/doc/images/cvsgraph_16x16.png
+${VIEWCVSDIR}/doc/images/cvsgraph_32x32.png
+${VIEWCVSDIR}/doc/images/logo.png
+${VIEWCVSDIR}/lib/PyFontify.py
+${VIEWCVSDIR}/lib/PyFontify.pyc
+${VIEWCVSDIR}/lib/accept.py
+${VIEWCVSDIR}/lib/accept.pyc
+${VIEWCVSDIR}/lib/apache_icons.py
+${VIEWCVSDIR}/lib/apache_icons.pyc
+${VIEWCVSDIR}/lib/blame.py
+${VIEWCVSDIR}/lib/blame.pyc
+${VIEWCVSDIR}/lib/compat.py
+${VIEWCVSDIR}/lib/compat.pyc
+${VIEWCVSDIR}/lib/config.py
+${VIEWCVSDIR}/lib/config.pyc
+${VIEWCVSDIR}/lib/cvsdb.py
+${VIEWCVSDIR}/lib/cvsdb.pyc
+${VIEWCVSDIR}/lib/dbi.py
+${VIEWCVSDIR}/lib/dbi.pyc
+${VIEWCVSDIR}/lib/debug.py
+${VIEWCVSDIR}/lib/debug.pyc
+${VIEWCVSDIR}/lib/ezt.py
+${VIEWCVSDIR}/lib/ezt.pyc
+${VIEWCVSDIR}/lib/popen.py
+${VIEWCVSDIR}/lib/popen.pyc
+${VIEWCVSDIR}/lib/py2html.py
+${VIEWCVSDIR}/lib/py2html.pyc
+${VIEWCVSDIR}/lib/query.py
+${VIEWCVSDIR}/lib/query.pyc
+${VIEWCVSDIR}/lib/rcsparse.py
+${VIEWCVSDIR}/lib/rcsparse.pyc
+${VIEWCVSDIR}/lib/rlog.py
+${VIEWCVSDIR}/lib/rlog.pyc
+${VIEWCVSDIR}/lib/viewcvs.py
+${VIEWCVSDIR}/lib/viewcvs.pyc
+${VIEWCVSDIR}/loginfo-handler
+${VIEWCVSDIR}/make-database
+${VIEWCVSDIR}/standalone.py
+${VIEWCVSDIR}/templates/annotate.ezt
+${VIEWCVSDIR}/templates/diff.ezt
+${VIEWCVSDIR}/templates/dir_alternate.ezt
+${VIEWCVSDIR}/templates/directory.ezt
+${VIEWCVSDIR}/templates/footer.ezt
+${VIEWCVSDIR}/templates/graph.ezt
+${VIEWCVSDIR}/templates/header.ezt
+${VIEWCVSDIR}/templates/log.ezt
+${VIEWCVSDIR}/templates/log_table.ezt
+${VIEWCVSDIR}/templates/markup.ezt
+${VIEWCVSDIR}/templates/query.ezt
+${VIEWCVSDIR}/viewcvs.conf
+@dirrm ${VIEWCVSDIR}/templates
+@dirrm ${VIEWCVSDIR}/lib
+@dirrm ${VIEWCVSDIR}/doc/images
+@dirrm ${VIEWCVSDIR}/doc
+@dirrm ${VIEWCVSDIR}/cgi
+@dirrm ${VIEWCVSDIR}
