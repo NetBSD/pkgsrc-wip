@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/20 07:02:51 yomram Exp $
+${PYSITELIB}/aspell.so
+share/doc/html/aspell-python/index.html
+@dirrm share/doc/html/aspell-python
