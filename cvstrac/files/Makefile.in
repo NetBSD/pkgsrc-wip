@@ -1,0 +1,10 @@
+# $NetBSD: Makefile.in,v 1.1.1.1 2006/05/20 05:12:43 yomram Exp $
+#
+
+SRCDIR=	.
+TCC=	${CC} ${CFLAGS} ${LDFLAGS}
+BCC=	${CC} ${CFLAGS} ${LDFLAGS}
+E=
+LIBSQLITE = -L${PREFIX}/lib -lsqlite -lcrypt -lm
+
+.include "main.mk"
