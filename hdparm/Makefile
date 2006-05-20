@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/20 10:47:41 poppnk Exp $
 #
 
-DISTNAME=		hdparm-5.4
+DISTNAME=		hdparm-6.6
 CATEGORIES=		linux sysutils
 MASTER_SITES=		http://www.ibiblio.org/pub/Linux/system/hardware/
 
@@ -11,7 +11,7 @@ COMMENT=		Linux tool for view and manipulate IDE drive parameters
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-
+USE_TOOLS+=		gmake
 SUBST_CLASSES+= prefix
 
 SUBST_STAGE.prefix=pre-build
