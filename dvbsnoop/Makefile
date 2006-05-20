@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/20 10:47:25 poppnk Exp $
 #
 
-DISTNAME=		dvbsnoop-1.3.77
+DISTNAME=		dvbsnoop-1.4.00
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dvbsnoop/}
 
