@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2262 2006/05/20 23:54:12 thomasklausner Exp $
+# $Id: Makefile,v 1.2263 2006/05/21 12:29:04 roelants Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -735,6 +735,7 @@ SUBDIR+=	oak
 SUBDIR+=	octave-nox11
 SUBDIR+=	omniORB
 SUBDIR+=	oops
+SUBDIR+=	opal
 SUBDIR+=	opax
 SUBDIR+=	opd
 SUBDIR+=	open21xx
