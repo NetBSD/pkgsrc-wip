@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.13 2006/04/25 00:21:12 rillig Exp $
+# $Id: cvs-package.mk,v 1.14 2006/05/22 11:01:51 rillig Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs.
@@ -19,7 +19,7 @@
 # It may define the following variables:
 #
 #	CVS_TAG
-#		The CVS tag to check out (default: HEAD).
+#		The CVS tag to check out (default: today at midnight).
 #
 #	CVS_TAG.${id}
 #		Overridable CVS tag for a repository.
