@@ -1,16 +1,17 @@
-# $NetBSD: Makefile-firefox.common,v 1.2 2006/05/22 16:08:47 ghen Exp $
+# $NetBSD: Makefile-firefox.common,v 1.3 2006/05/22 16:10:00 ghen Exp $
 
 MOZILLA_BIN=		firefox-bin
-MOZ_VER=		2.0alpha1
+MOZ_VER=		2.0${SUB_VER}
+SUB_VER=		alpha2
 EXTRACT_SUFX=		.tar.bz2
 
-DISTNAME=		bonecho-alpha1-source
+DISTNAME=		bonecho-${SUB_VER}-source
 DIST_SUBDIR=		firefox-${MOZ_VER}
 
-MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/bonecho/alpha1/source/
-MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/bonecho/alpha1/source/
-MASTER_SITES+=		http://public.planetmirror.com.au/pub/firefox/releases/bonecho/alpha1/source/
-MASTER_SITES+=		ftp://public.planetmirror.com.au/pub/firefox/releases/bonecho/alpha1/source/
+MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/bonecho/${SUB_VER}/source/
+MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/bonecho/${SUB_VER}/source/
+MASTER_SITES+=		http://public.planetmirror.com.au/pub/firefox/releases/bonecho/${SUB_VER}/source/
+MASTER_SITES+=		ftp://public.planetmirror.com.au/pub/firefox/releases/bonecho/${SUB_VER}/source/
 
 HOMEPAGE=		http://www.mozilla.org/projects/bonecho/
 

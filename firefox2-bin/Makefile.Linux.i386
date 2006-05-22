@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.Linux.i386,v 1.1.1.1 2006/03/30 06:42:55 ghen Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.2 2006/05/22 16:10:00 ghen Exp $
 
-DISTNAME=		bonecho-alpha1
-MOZ_DISTDIR=		releases/bonecho/alpha1/linux-i686/en-US
+DISTNAME=		bonecho-alpha2
+MOZ_DISTDIR=		releases/bonecho/alpha2/linux-i686/en-US
 MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/firefox/${MOZ_DISTDIR}/
 
 MOZ_PLATFORM=		linux

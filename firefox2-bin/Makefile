@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/30 06:42:55 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/22 16:10:00 ghen Exp $
 
-MOZILLA=		firefox2
-MOZ_VER=		2.0alpha1
+MOZILLA=		firefox
+MOZ_EXTRA=		2
+MOZ_VER=		2.0alpha2
 MOZ_DISTVER=		${MOZ_VER}
 
 HOMEPAGE=		http://www.mozilla.org/projects/bonecho/
