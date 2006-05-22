@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/22 17:17:21 poppnk Exp $
+bin/wmii
+bin/wmiimenu
+bin/wmiipsel
+bin/wmiir
+bin/wmiisetsid
+bin/wmiiwarp
+bin/wmiiwm
+etc/${PKGNAME}/quit
+etc/${PKGNAME}/status
+etc/${PKGNAME}/welcome
+etc/${PKGNAME}/wmiirc
+man/man1/wmii.1
+man/man1/wmiimenu.1
+man/man1/wmiir.1
+man/man1/wmiiwm.1
+@dirrm etc/${PKGNAME}
