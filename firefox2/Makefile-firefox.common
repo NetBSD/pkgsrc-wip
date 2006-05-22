@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-firefox.common,v 1.1.1.1 2006/03/30 06:40:25 ghen Exp $
+# $NetBSD: Makefile-firefox.common,v 1.2 2006/05/22 16:08:47 ghen Exp $
 
 MOZILLA_BIN=		firefox-bin
 MOZ_VER=		2.0alpha1
@@ -30,7 +30,6 @@ CONFIGURE_ENV+=	ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
 USE_LANGUAGES+=		c++
 BUILD_SVG=		# yes
 BUILD_MATHML=		# yes
-MESSAGE=		${.CURDIR}/../../www/firefox/MESSAGE
 
 .include "../../www/firefox/Makefile.common"
 
