@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/05/23 18:06:34 bartoszkuzma Exp $
+
+bincimap needs to be started from inetd(8). Add the following line
+to its configuration file (/etc/inetd.conf):
+
+ imap stream tcp nowait root ${PREFIX}/bin/bincimap-up bincimap-up -c ${PREFIX}/etc/bincimap.conf -- ${PREFIX}/bin/checkpassword ${PREFIX}/bin/bincimapd Maildir
+
+For sample configuration for other tcpwrappers look in
+${PREFIX}/share/examples/bincimap.
+===========================================================================

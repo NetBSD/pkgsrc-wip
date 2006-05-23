@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/05/23 18:06:34 bartoszkuzma Exp $
+
+SHA1 (bincimap-1.2.13final.tar.bz2) = cdbc1bf95decbe76e0a218025c351b8174b4b485
+RMD160 (bincimap-1.2.13final.tar.bz2) = db5821290cdc193f594181105a41e64b8c975b4e
+Size (bincimap-1.2.13final.tar.bz2) = 416152 bytes
+SHA1 (patch-aa) = e4b98bcf7b38dbb483a79cf98b6a08b3b7a23347

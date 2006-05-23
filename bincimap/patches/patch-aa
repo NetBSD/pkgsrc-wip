@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/05/23 18:06:34 bartoszkuzma Exp $
+
+--- Makefile.in.orig	2005-07-21 12:02:30.000000000 +0200
++++ Makefile.in
+@@ -87,7 +87,11 @@ datadir = @datadir@
+ prefix = @prefix@
+ sysconfdir = @sysconfdir@
+ 
++.ifndef PKGSRC_INSTALL
+ SUBDIRS = conf contrib doc man service src
++.else
++SUBDIRS = doc man src
++.endif
+ 
+ #--------------------------------------------------------------------------
+ EXTRA_DIST = bincimap.spec config.h COPYING.OpenSSL config.h.in README.SSL
