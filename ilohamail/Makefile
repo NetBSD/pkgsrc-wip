@@ -1,31 +1,43 @@
-# $NetBSD: Makefile,v 1.12 2006/05/19 16:51:19 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.13 2006/05/23 23:37:38 ykomatsu Exp $
 #
 
 DISTNAME=	IlohaMail-0.8.14-rc2
-PKGNAME=	${DISTNAME:S/IlohaM/iloham/}
-CATEGORIES=	www
+PKGNAME=	ilohamail-0.8.14rc2
+CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ilohamail/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ilohamail.org/
+HOMEPAGE=	http://ilohamail.org/
 COMMENT=	Light weight yet full featured multilingual webmail
 
-DEPENDS+=	ap{,2}-php>=4.3.0:../../www/ap-php
+DEPENDS+=	ap-php>=4.3.0:../../www/ap-php
 
 NO_BUILD=	yes
 
-APACHE_DOCROOT=	${PREFIX}/share/httpd/htdocs
-ILOHADIR=	${APACHE_DOCROOT}/IlohaMail
-PKG_SYSCONFDIR=${ILOHADIR}/conf/
+APACHE_USER?=	www
+APACHE_GROUP?=	www
+
+ILOHAMAIL_DIR=		${PREFIX}/share/ilohamail
+ILOHAMAIL_CONF_DIR=	${ILOHAMAIL_DIR}/conf
+ILOHAMAIL_CONF_FILES=	conf.inc conf.php custom_auth.inc db_conf.php \
+			defaults.generic.inc defaults.inc login.inc \
+			login_blurb.inc login_title.inc mysqlrc.inc \
+			new_user.inc
+ILOHAMAIL_CONF_PERMS=	${APACHE_USER} ${APACHE_GROUP} 0644
+EGDIR=			${PREFIX}/share/examples/ilohamail
+OWN_DIRS_PERMS+=	${ILOHAMAIL_CONF_DIR} ${APACHE_USER} ${APACHE_GROUP} \
+			0755
+.for file in ${ILOHAMAIL_CONF_FILES}
+CONF_FILES_PERMS+=	${EGDIR}/conf/${file} \
+			${ILOHAMAIL_CONF_DIR}/${file} \
+			${ILOHAMAIL_CONF_PERMS}
+.endfor
 
 do-install:
-	${INSTALL_DATA_DIR} ${ILOHADIR}/conf
-	${INSTALL_DATA_DIR} ${ILOHADIR}/conf-orig
-	@${CP} -rf ${ILOHADIR}/conf/ ${ILOHADIR}/conf-orig/
-	@${CP} -r  ${WRKSRC}/IlohaMail/ ${ILOHADIR}
-	@${CP} -rf ${ILOHADIR}/conf-orig/ ${ILOHADIR}/conf/
-	@${CP} -rf ${WRKSRC}/IlohaMail/conf/ ${ILOHADIR}/conf-orig/
-	${CHMOD} -R 700 ${ILOHADIR}
-	${CHOWN} -R www:www ${ILOHADIR}
+	${INSTALL_DATA_DIR} ${ILOHAMAIL_DIR}
+	cd ${WRKSRC}/IlohaMail && ${PAX} -r -w data include index.html lang \
+		source ${ILOHAMAIL_DIR}
+	cd ${WRKSRC}/IlohaMail && ${PAX} -r -w conf ${EGDIR}
+	${CHOWN} -R ${APACHE_USER}:${APACHE_GROUP} ${ILOHAMAIL_DIR}
 
 .include "../../mk/bsd.pkg.mk"
