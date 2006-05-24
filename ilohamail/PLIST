@@ -1,15 +1,34 @@
-@comment $NetBSD: PLIST,v 1.7 2006/05/23 23:37:38 ykomatsu Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/05/24 00:24:48 ykomatsu Exp $
+share/doc/ilohamail/COPYING
+share/doc/ilohamail/INSTALL
+share/doc/ilohamail/Manual/configure.MySQL.html
+share/doc/ilohamail/Manual/configure.html
+share/doc/ilohamail/Manual/configure.php.html
+share/doc/ilohamail/Manual/custom.smtp.html
+share/doc/ilohamail/Manual/install.html
+share/doc/ilohamail/MySQL/0.7.3.sql
+share/doc/ilohamail/MySQL/0.7.5.sql
+share/doc/ilohamail/MySQL/0.7.6.sql
+share/doc/ilohamail/MySQL/0.7.9.sql
+share/doc/ilohamail/MySQL/0.8.0.sql
+share/doc/ilohamail/MySQL/0.8.10.sql
+share/doc/ilohamail/MySQL/0.8.5.sql
+share/doc/ilohamail/MySQL/sql
+share/doc/ilohamail/README
+share/doc/ilohamail/RELEASE_NOTES
+share/doc/ilohamail/THEMES
+share/doc/ilohamail/TODO
+share/doc/ilohamail/UPGRADING
 share/examples/ilohamail/conf/conf.inc
 share/examples/ilohamail/conf/conf.php
-share/examples/ilohamail/conf/custom_auth.inc
+share/examples/ilohamail/conf/custom_auth.php
 share/examples/ilohamail/conf/db_conf.php
 share/examples/ilohamail/conf/defaults.generic.inc
 share/examples/ilohamail/conf/defaults.inc
-share/examples/ilohamail/conf/login.inc
+share/examples/ilohamail/conf/login.php
 share/examples/ilohamail/conf/login_blurb.inc
 share/examples/ilohamail/conf/login_title.inc
-share/examples/ilohamail/conf/mysqlrc.inc
-share/examples/ilohamail/conf/new_user.inc
+share/examples/ilohamail/conf/new_user.php
 share/ilohamail/data/cache/index.html
 share/ilohamail/data/gpg/index.html
 share/ilohamail/data/index.html
@@ -92,11 +111,14 @@ share/ilohamail/lang/EUC-JP.inc
 share/ilohamail/lang/EUC-KR.inc
 share/ilohamail/lang/GB2312.inc
 share/ilohamail/lang/ISO-8859-1.inc
+share/ilohamail/lang/ISO-8859-15.inc
 share/ilohamail/lang/ISO-8859-2.inc
+share/ilohamail/lang/ISO-8859-7.inc
 share/ilohamail/lang/ISO-8859-9.inc
 share/ilohamail/lang/US-ASCII.inc
 share/ilohamail/lang/UTF-8.inc
 share/ilohamail/lang/Windows-1251.inc
+share/ilohamail/lang/Windows-1253.inc
 share/ilohamail/lang/Windows-1255.inc
 share/ilohamail/lang/Windows-1256.inc
 share/ilohamail/lang/X-EUC-JP.inc
@@ -269,6 +291,27 @@ share/ilohamail/lang/dk/read_message.inc
 share/ilohamail/lang/dk/search.inc
 share/ilohamail/lang/dk/search_errors.inc
 share/ilohamail/lang/dk/tool.inc
+share/ilohamail/lang/el/bookmarks.inc
+share/ilohamail/lang/el/calendar.inc
+share/ilohamail/lang/el/compose.inc
+share/ilohamail/lang/el/contacts.inc
+share/ilohamail/lang/el/cp.inc
+share/ilohamail/lang/el/dates.inc
+share/ilohamail/lang/el/defaultFolders.inc
+share/ilohamail/lang/el/edit_contact.inc
+share/ilohamail/lang/el/edit_folders.inc
+share/ilohamail/lang/el/folders.inc
+share/ilohamail/lang/el/init.inc
+share/ilohamail/lang/el/login.inc
+share/ilohamail/lang/el/main.inc
+share/ilohamail/lang/el/pref_colors.inc
+share/ilohamail/lang/el/pref_identities.inc
+share/ilohamail/lang/el/prefs.inc
+share/ilohamail/lang/el/quota.inc
+share/ilohamail/lang/el/read_message.inc
+share/ilohamail/lang/el/search.inc
+share/ilohamail/lang/el/search_errors.inc
+share/ilohamail/lang/el/tool.inc
 share/ilohamail/lang/eng/bookmarks.inc
 share/ilohamail/lang/eng/calendar.inc
 share/ilohamail/lang/eng/compose.inc
@@ -793,6 +836,7 @@ share/ilohamail/source/view.php
 @dirrm share/ilohamail/lang/es
 @dirrm share/ilohamail/lang/eng_GB
 @dirrm share/ilohamail/lang/eng
+@dirrm share/ilohamail/lang/el
 @dirrm share/ilohamail/lang/dk
 @dirrm share/ilohamail/lang/de
 @dirrm share/ilohamail/lang/cz
@@ -813,3 +857,6 @@ share/ilohamail/source/view.php
 @dirrm share/ilohamail
 @dirrm share/examples/ilohamail/conf
 @dirrm share/examples/ilohamail
+@dirrm share/doc/ilohamail/MySQL
+@dirrm share/doc/ilohamail/Manual
+@dirrm share/doc/ilohamail
