@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/22 10:48:36 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2006/05/24 16:33:15 ghen Exp $
 
 JDK_VERSION=    	1.4.2
 JDK_PATCHSET_VERSION=   8
@@ -24,7 +24,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
-LICENSE=		scsl-2.3-license
+LICENSE=		scsl23-license
 
 USE_TOOLS+=		gmake m4
 USE_LANGUAGES=		c c++
