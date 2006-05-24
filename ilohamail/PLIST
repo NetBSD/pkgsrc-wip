@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/05/24 00:24:48 ykomatsu Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/05/24 01:19:40 ykomatsu Exp $
 share/doc/ilohamail/COPYING
 share/doc/ilohamail/INSTALL
 share/doc/ilohamail/Manual/configure.MySQL.html
@@ -853,7 +853,6 @@ share/ilohamail/source/view.php
 @dirrm share/ilohamail/data/gpg
 @dirrm share/ilohamail/data/cache
 @dirrm share/ilohamail/data
-@dirrm share/ilohamail/conf
 @dirrm share/ilohamail
 @dirrm share/examples/ilohamail/conf
 @dirrm share/examples/ilohamail

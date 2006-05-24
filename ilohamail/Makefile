@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/05/24 00:24:47 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.15 2006/05/24 01:19:40 ykomatsu Exp $
 #
 
 DISTNAME=	IlohaMail-0.8.14-rc3
@@ -20,18 +20,28 @@ APACHE_GROUP?=	www
 ILOHAMAIL_DIR=		${PREFIX}/share/ilohamail
 ILOHAMAIL_CONF_DIR=	${ILOHAMAIL_DIR}/conf
 ILOHAMAIL_DOC_DIR=	${PREFIX}/share/doc/ilohamail
+ILOHAMAIL_DATA_DIR=	${VARBASE}/ilohamail/data
+ILOHAMAIL_DATA_DIRS=	cache gpg sessions uploads users
+ILOHAMAIL_DIR_PERMS=	${APACHE_USER} ${APACHE_GROUP} 0755
+ILOHAMAIL_FILE_PERMS=	${APACHE_USER} ${APACHE_GROUP} 0644
 ILOHAMAIL_CONF_FILES=	conf.inc conf.php custom_auth.php db_conf.php \
 			defaults.generic.inc defaults.inc login.php \
 			login_blurb.inc login_title.inc new_user.php
-ILOHAMAIL_CONF_PERMS=	${APACHE_USER} ${APACHE_GROUP} 0644
 EGDIR=			${PREFIX}/share/examples/ilohamail
-OWN_DIRS_PERMS+=	${ILOHAMAIL_CONF_DIR} ${APACHE_USER} ${APACHE_GROUP} \
-			0755
-.for file in ${ILOHAMAIL_CONF_FILES}
-CONF_FILES_PERMS+=	${EGDIR}/conf/${file} \
-			${ILOHAMAIL_CONF_DIR}/${file} \
-			${ILOHAMAIL_CONF_PERMS}
+OWN_DIRS_PERMS=		${ILOHAMAIL_CONF_DIR} ${ILOHAMAIL_DIR_PERMS}
+OWN_DIRS_PERMS+=	${ILOHAMAIL_DATA_DIR} ${ILOHAMAIL_DIR_PERMS}
+.for dir in ${ILOHAMAIL_DATA_DIRS}
+OWN_DIRS_PERMS+=	${ILOHAMAIL_DATA_DIR}/${dir} ${ILOHAMAIL_DIR_PERMS}
 .endfor
+.for file in ${ILOHAMAIL_CONF_FILES}
+CONF_FILES_PERMS+=	${EGDIR}/conf/${file} ${ILOHAMAIL_CONF_DIR}/${file} \
+			${ILOHAMAIL_FILE_PERMS}
+.endfor
+
+SUBST_CLASSES+=		ilohamail
+SUBST_STAGE.ilohamail=	post-patch
+SUBST_FILES.ilohamail=	IlohaMail/conf/conf.php
+SUBST_SED.ilohamail=	-e "s|@ILOHAMAIL_DATA_DIR@|${ILOHAMAIL_DATA_DIR}|g"
 
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -print -type f | ${XARGS} ${RM} -f
