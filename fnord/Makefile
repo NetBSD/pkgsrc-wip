@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/05 17:30:54 gschwarz Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/25 19:46:53 gschwarz Exp $
 
 DISTNAME=	fnord-1.10
 CATEGORIES=	www
@@ -11,6 +11,8 @@ COMMENT=	Small HTTP server
 
 USE_TOOLS+=	gmake
 DEPENDS+=	ucspi-tcp-*:../../net/ucspi-tcp
+
+MAKE_ENV+=	RANLIB=${RANLIB:Q}
 
 .if exists(/usr/include/alloca.h)
 CFLAGS+=	-DNEED_ALLOCA_H
