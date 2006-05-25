@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/18 00:46:31 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/05/25 12:43:20 larnor Exp $
 bin/gaim
 include/gaim/account.h
 include/gaim/accountopt.h
@@ -104,6 +104,7 @@ lib/gaim/libjabber.la
 lib/gaim/libmsn.la
 lib/gaim/libnovell.la
 lib/gaim/liboscar.la
+${SAMETIME}lib/gaim/libsametime.la
 ${SILC}lib/gaim/libsilcgaim.la
 lib/gaim/libsimple.la
 lib/gaim/libyahoo.la
