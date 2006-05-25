@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/25 10:51:56 larnor Exp $
+include/meanwhile/mw_channel.h
+include/meanwhile/mw_cipher.h
+include/meanwhile/mw_common.h
+include/meanwhile/mw_error.h
+include/meanwhile/mw_message.h
+include/meanwhile/mw_service.h
+include/meanwhile/mw_session.h
+include/meanwhile/mw_srvc_aware.h
+include/meanwhile/mw_srvc_conf.h
+include/meanwhile/mw_srvc_dir.h
+include/meanwhile/mw_srvc_ft.h
+include/meanwhile/mw_srvc_im.h
+include/meanwhile/mw_srvc_place.h
+include/meanwhile/mw_srvc_resolve.h
+include/meanwhile/mw_srvc_store.h
+include/meanwhile/mw_st_list.h
+lib/libmeanwhile.la
+lib/pkgconfig/meanwhile.pc
+share/doc/meanwhile-doc-${PKGVERSION}/samples/README
+share/doc/meanwhile-doc-${PKGVERSION}/samples/build
+share/doc/meanwhile-doc-${PKGVERSION}/samples/logging_proxy.c
+share/doc/meanwhile-doc-${PKGVERSION}/samples/login_server.c
+share/doc/meanwhile-doc-${PKGVERSION}/samples/nocipher_proxy.c
+share/doc/meanwhile-doc-${PKGVERSION}/samples/redirect_server.c
+share/doc/meanwhile-doc-${PKGVERSION}/samples/sendmessage.c
+share/doc/meanwhile-doc-${PKGVERSION}/samples/socket.c
+@dirrm share/doc/meanwhile-doc-${PKGVERSION}/samples
+@dirrm share/doc/meanwhile-doc-${PKGVERSION}
+@dirrm include/meanwhile
