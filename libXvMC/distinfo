@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/05/25 01:40:42 jeremy-c-reed Exp $
+
+SHA1 (libXvMC-1.0.2.tar.bz2) = 58c3105befffdcd6ee1f5339cf53a629e3447e4c
+RMD160 (libXvMC-1.0.2.tar.bz2) = 9bd2de7ae87fffd11d418158937579f633b649c2
+Size (libXvMC-1.0.2.tar.bz2) = 230252 bytes
