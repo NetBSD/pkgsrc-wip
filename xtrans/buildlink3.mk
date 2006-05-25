@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 07:18:41 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/05/25 21:18:06 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use xtrans.
 #
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxtrans}
 BUILDLINK_PACKAGES+=	xtrans
 
 .if !empty(XTRANS_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.xtrans?=		xtrans>=0.99.0
+BUILDLINK_API_DEPENDS.xtrans?=		xtrans>=0.99.1
 BUILDLINK_PKGSRCDIR.xtrans?=		../../wip/xtrans
 BUILDLINK_DEPMETHOD.xtrans?=		build
 .endif # XTRANS_BUILDLINK3_MK
