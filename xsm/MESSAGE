@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/05/26 16:09:31 jeremy-c-reed Exp $
+
+For further or complete functionality, install the session manager
+proxy, smproxy, for applications that don't support R6 style session
+management; iceauth for storing and retrieving ICE authentication
+information; rstart for allowing xsm to start applications on remote
+machines; and a window manager supporting R6 style session management,
+like twm, or window configurations will not be saved for the
+sessions.
+
+===========================================================================

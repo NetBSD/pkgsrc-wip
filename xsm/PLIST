@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/26 16:09:31 jeremy-c-reed Exp $
+bin/xsm
+lib/X11/xsm/system.xsm
+man/man1/xsm.1
+@dirrm lib/X11/xsm

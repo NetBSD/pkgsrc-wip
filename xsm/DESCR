@@ -1,0 +1,7 @@
+xsm is a session manager for the X Session Management Protocol.
+A session is a group of applications, each of which has a particular
+state.  Applications can automatically become part of the session.
+Within a session, you can perform a "checkpoint" to save application
+state, or a "shutdown" to save state and exit the session.  When
+you log back in to the system, you can load a specific session,
+and you can delete sessions you no longer want to keep.
