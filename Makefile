@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2264 2006/05/25 11:05:45 larnor Exp $
+# $Id: Makefile,v 1.2265 2006/05/27 14:18:31 roelants Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1015,6 +1015,7 @@ SUBDIR+=	prozilla
 SUBDIR+=	prtunnel
 SUBDIR+=	pts
 SUBDIR+=	ptunnel
+SUBDIR+=	pwlib
 SUBDIR+=	pxlib
 SUBDIR+=	pxview
 SUBDIR+=	py-Brenda
