@@ -1,0 +1,12 @@
+$NetBSD: patch-ao,v 1.1.1.1 2006/05/27 14:10:51 roelants Exp $
+
+--- include/ptbuildopts.h.in.orig	2006-02-23 01:31:03.000000000 +0100
++++ include/ptbuildopts.h.in
+@@ -209,6 +209,7 @@
+ 
+ #undef	P_LINUX
+ #undef	P_FREEBSD
++#undef	P_DRAGONFLY
+ #undef	P_OPENBSD
+ #undef	P_NETBSD
+ #undef	P_SOLARIS

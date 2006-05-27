@@ -1,0 +1,18 @@
+$NetBSD: patch-an,v 1.1.1.1 2006/05/27 14:10:51 roelants Exp $
+
+--- make/gui.mak.orig	2001-06-15 02:58:00.000000000 +0200
++++ make/gui.mak
+@@ -64,11 +64,11 @@
+ #
+ 
+ 
+-include $(PWLIBDIR)/make/defaultgui.mak
++include $(PWLIBDIR)/share/pwlib/make/defaultgui.mak
+ 
+ ifneq (,$(GUI_TYPE))
+ 
+-include $(PWLIBDIR)/make/$(GUI_TYPE).mak
++include $(PWLIBDIR)/share/pwlib/make/$(GUI_TYPE).mak
+ 
+ ifndef	GUI_SRC_NAME
+ GUI_SRC_NAME	= $(GUI_TYPE)

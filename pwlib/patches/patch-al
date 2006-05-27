@@ -1,0 +1,45 @@
+$NetBSD: patch-al,v 1.1.1.1 2006/05/27 14:10:51 roelants Exp $
+
+--- src/ptlib/unix/tlibthrd.cxx.orig	2006-03-01 09:34:33.000000000 +0100
++++ src/ptlib/unix/tlibthrd.cxx
+@@ -1193,7 +1193,9 @@ void PThread::Sleep(const PTimeInterval 
+     if (select(0, NULL, NULL, NULL, tval) < 0 && errno != EINTR)
+       break;
+ 
++#ifndef P_NETBSD
+     pthread_testcancel();
++#endif
+ 
+     lastTime = PTime();
+   }
+@@ -1726,20 +1728,13 @@ BOOL PSemaphore::WillBlock() const
+ #endif
+ }
+ 
+-#if defined(P_QNX) && (P_HAS_RECURSIVE_MUTEX == 1)
+-#define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
+-#endif
+-#if defined(P_MACOSX) && (P_HAS_RECURSIVE_MUTEX == 1)
+-#define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
+-#endif
+-
+ PTimedMutex::PTimedMutex()
+ //  : PSemaphore(PXMutex)
+ {
+ #if P_HAS_RECURSIVE_MUTEX
+   pthread_mutexattr_t attr;
+   PAssertPTHREAD(pthread_mutexattr_init, (&attr));
+-  PAssertPTHREAD(pthread_mutexattr_settype, (&attr, PTHREAD_MUTEX_RECURSIVE_NP));
++  PAssertPTHREAD(pthread_mutexattr_settype, (&attr, PTHREAD_MUTEX_RECURSIVE));
+   PAssertPTHREAD(pthread_mutex_init, (&mutex, &attr));
+   PAssertPTHREAD(pthread_mutexattr_destroy, (&attr));
+ #else
+@@ -1754,7 +1749,7 @@ PTimedMutex::PTimedMutex(const PTimedMut
+ #if P_HAS_RECURSIVE_MUTEX
+   pthread_mutexattr_t attr;
+   PAssertPTHREAD(pthread_mutexattr_init, (&attr));
+-  PAssertPTHREAD(pthread_mutexattr_settype, (&attr, PTHREAD_MUTEX_RECURSIVE_NP));
++  PAssertPTHREAD(pthread_mutexattr_settype, (&attr, PTHREAD_MUTEX_RECURSIVE));
+   PAssertPTHREAD(pthread_mutex_init, (&mutex, &attr));
+   PAssertPTHREAD(pthread_mutexattr_destroy, (&attr));
+ #else

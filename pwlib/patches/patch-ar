@@ -1,0 +1,15 @@
+$NetBSD: patch-ar,v 1.1.1.1 2006/05/27 14:10:51 roelants Exp $
+
+--- src/ptlib/unix/ossaix.cxx.orig	2002-02-09 01:52:01.000000000 +0100
++++ src/ptlib/unix/ossaix.cxx
+@@ -103,8 +103,8 @@
+ #include <sys/time.h>
+ #endif
+ 
+-#ifdef P_FREEBSD
+-#include <machine/soundcard.h>
++#if defined(P_FREEBSD) || defined(P_DRAGONFLY)
++#include <sys/soundcard.h>
+ #endif
+ 
+ #if defined(P_OPENBSD) || defined(P_NETBSD)

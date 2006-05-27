@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/05/27 14:10:51 roelants Exp $
+
+--- src/ptlib/common/getdate.y.orig	2005-10-14 20:10:43.000000000 +0200
++++ src/ptlib/common/getdate.y
+@@ -16,6 +16,7 @@
+ /* SUPPRESS 288 on yyerrlab *//* Label unused */
+ 
+ 
++#include <stdio.h>
+ #include <time.h>
+ #include <string.h>
+ #include <ctype.h>
+@@ -105,7 +106,7 @@ struct Variables {
+ #define VARIABLE ((struct Variables*)parseParam)
+ 
+ 
+-#define YYPURE		1
++#define YYPURE		0
+ #define YYLEX_PARAM	VARIABLE->yyInput
+ #define YYPARSE_PARAM	parseParam
+ 

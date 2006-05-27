@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1.1.1 2006/05/27 14:10:51 roelants Exp $
+
+--- src/ptlib/common/pvidchan.cxx.orig	2005-11-30 13:47:42.000000000 +0100
++++ src/ptlib/common/pvidchan.cxx
+@@ -126,7 +126,7 @@ PStringList PVideoChannel::GetDeviceName
+ 
+ PString PVideoChannel::GetDefaultDevice(Directions /*dir*/)
+ {
+-#if defined(P_FREEBSD) || defined(P_OPENBSD)  || defined(P_NETBSD)
++#if defined(P_FREEBSD) || defined(P_OPENBSD)  || defined(P_NETBSD) || defined(P_DRAGONFLY)
+   return "/dev/bktr0";
+ #endif
+ 

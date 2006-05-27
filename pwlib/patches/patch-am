@@ -1,0 +1,16 @@
+$NetBSD: patch-am,v 1.1.1.1 2006/05/27 14:10:51 roelants Exp $
+
+--- make/pwlib.mak.orig	2005-02-23 22:29:52.000000000 +0100
++++ make/pwlib.mak
+@@ -54,8 +54,8 @@ ifndef PWLIBDIR
+ 	exit 1
+ endif
+ 
+-include $(PWLIBDIR)/make/unix.mak
+-include $(PWLIBDIR)/make/gui.mak
+-include $(PWLIBDIR)/make/common.mak
++include $(PWLIBDIR)/share/pwlib/make/unix.mak
++include $(PWLIBDIR)/share/pwlib/make/gui.mak
++include $(PWLIBDIR)/share/pwlib/make/common.mak
+ 
+ # End of pwlib.mak

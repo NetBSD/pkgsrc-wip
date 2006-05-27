@@ -1,0 +1,106 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/05/27 14:10:51 roelants Exp $
+
+--- configure.orig	2006-02-22 12:53:28.000000000 +0100
++++ configure
+@@ -2090,6 +2090,14 @@ case "$target_os" in
+                    need_pragma=yes ;
+ 		   ;;
+ 
++  dragonfly* )     OSTYPE=DragonFly ;
++		   OS_TAG="P_DRAGONFLY" ;
++                   if test "x$OSRELEASE" = "x"; then
++                     OSRELEASE="`sysctl -n kern.osreldate`" ;
++                   fi
++                   need_pragma=yes ;
++		   ;;
++
+   openbsd* )       OSTYPE=OpenBSD ;
+ 		   OS_TAG="P_OPENBSD" ;
+                    OSRELEASE="`sysctl -n kern.osrevision`" ;
+@@ -4497,13 +4505,13 @@ fi
+ 
+ 
+ 
+-echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6
+ if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
++LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -4567,7 +4575,7 @@ else
+ fi
+ 
+ if test ${HAS_PTHREADS} = yes ; then
+-  ENDLDLIBS="$ENDLDLIBS -lpthread"
++  ENDLDLIBS="$ENDLDLIBS ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+   STDCCFLAGS="$STDCCFLAGS -D_REENTRANT"
+ else
+   if test ${OSTYPE} = FreeBSD ; then
+@@ -4588,6 +4596,8 @@ fi
+ if test ${HAS_PTHREADS} = yes ; then
+   echo "$as_me:$LINENO: checking if pthread_mutex_timedlock is available" >&5
+ echo $ECHO_N "checking if pthread_mutex_timedlock is available... $ECHO_C" >&6
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
+   cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -4605,7 +4615,7 @@ pthread_mutex_timedlock(NULL, NULL);
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
++  (eval $ac_link) 2>conftest.er1
+   ac_status=$?
+   grep -v '^ *+' conftest.er1 >conftest.err
+   rm -f conftest.er1
+@@ -4631,6 +4641,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ HAS_PTHREADS_XPG6=no
+ fi
++LIBS=$ac_check_lib_save_LIBS
+ rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+   if test ${HAS_PTHREADS_XPG6} = yes ; then
+     echo "$as_me:$LINENO: result: yes" >&5
+@@ -4645,13 +4656,13 @@ _ACEOF
+ echo "${ECHO_T}no" >&6
+   fi
+ 
+-  echo "$as_me:$LINENO: checking for sem_timedwait in -lpthread" >&5
+-echo $ECHO_N "checking for sem_timedwait in -lpthread... $ECHO_C" >&6
++  echo "$as_me:$LINENO: checking for sem_timedwait in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for sem_timedwait in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6
+ if test "${ac_cv_lib_pthread_sem_timedwait+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
++LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -4789,7 +4800,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ int
+ main ()
+ {
+-pthread_mutexattr_t attr; pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE_NP);
++pthread_mutexattr_t attr; pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
+   ;
+   return 0;
+ }
+@@ -7889,7 +7900,7 @@ if test "${ac_cv_lib_SDL_SDL_CreateYUVOv
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lSDL -L${X11LIBDIR} -lpthread -lX11 -lXext $LIBS"
++LIBS="-lSDL -L${X11LIBDIR} ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} -lX11 -lXext $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF

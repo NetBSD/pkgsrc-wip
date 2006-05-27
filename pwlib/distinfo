@@ -1,0 +1,30 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/05/27 14:10:50 roelants Exp $
+
+SHA1 (pwlib-v1_10_0-src-tar.gz) = 9553c7cb7a2127c8f5749b7165dcf6d7bb8c5c86
+RMD160 (pwlib-v1_10_0-src-tar.gz) = c89c8f582550eb7258e80b61a06310ebdaa2a4f0
+Size (pwlib-v1_10_0-src-tar.gz) = 2074224 bytes
+SHA1 (patch-aa) = 1c9fa7ea716bc634e840ce6b95e71e39b10fb9de
+SHA1 (patch-ab) = b21b16755bc01135b23c5738af994d9d5cb499c4
+SHA1 (patch-ac) = 6be57c9f1f370ed0682366004078cd5846d79a8a
+SHA1 (patch-ad) = 811b16c9ac248cd30dffce9e03e1dc6f006e00fd
+SHA1 (patch-ae) = c6231d5da04390ed3fa943ad46ea1716e646e6de
+SHA1 (patch-af) = 973d85a5caf50c0f3b3161714f4c59207e402b73
+SHA1 (patch-ag) = 6fdfc631d5d28f645fc03e2d651db27291471abc
+SHA1 (patch-ah) = e21d556bd817208c2f1c75d90396d17f0980f0ad
+SHA1 (patch-ai) = ef6e757538499857d95f171b94901a060b947cdb
+SHA1 (patch-ak) = 33f3307835894bc15d00509ea84311760a86b4de
+SHA1 (patch-al) = c4df2bd0fd3c9d2d211f44979630c5a06bf7b61a
+SHA1 (patch-am) = 5faf325fbbc3286c277e3043ae41132a3e7eddcf
+SHA1 (patch-an) = 502b4547fe88ee718e6f1f5585c85124c93fc26b
+SHA1 (patch-ao) = 7c94dc9f2497d54d7e3fa2b2da22705ff1a27bc3
+SHA1 (patch-ap) = 8ce126b1e3db6d1b489cc099ddd3d521feedc72f
+SHA1 (patch-aq) = f5c968485f2fdf09f40c5de69c6bbed7b5e67835
+SHA1 (patch-ar) = fbbe48c224221846527333db672076139130cfef
+SHA1 (patch-as) = bac53bc79d5456598cf6cec08d84f4c68bb5b23d
+SHA1 (patch-at) = 770d1748cc4707269e09fdb06ddd07b8eb7588e6
+SHA1 (patch-au) = 2e41e0eb107aa61286af71c6b69d280883d9367f
+SHA1 (patch-av) = 46a0b7528ed882e970dfba396bca4cce17ec986f
+SHA1 (patch-aw) = 02bb7e775c2dc531acc522efe409b32a6a309521
+SHA1 (patch-ba) = fa72e4c99855e44a812c3bcdb667654f0d33741a
+SHA1 (patch-bb) = cbf8aedb5298bb1a0b00958495fa877b90724862
+SHA1 (patch-bd) = 6c91ddea3f496016217434ee7978334d844a9145

@@ -1,0 +1,16 @@
+$NetBSD: patch-bd,v 1.1.1.1 2006/05/27 14:10:50 roelants Exp $
+
+--- include/ptlib/ipsock.h.orig	2006-03-12 22:20:07.000000000 +0100
++++ include/ptlib/ipsock.h
+@@ -908,7 +908,11 @@ class PIPSocket : public PSocket
+       * @return TRUE if host is able to capture incoming address, else FALSE
+       */
+     BOOL SetCaptureReceiveToAddress()
++#if P_HAS_PKTINFO
+     { if (!SetOption(IP_PKTINFO, 1, SOL_IP)) return FALSE; catchReceiveToAddr = TRUE; return TRUE; }
++#else
++    { return FALSE; }
++#endif
+ 
+     /**
+       * return the interface address of the last incoming packet

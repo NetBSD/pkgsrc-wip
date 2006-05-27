@@ -1,0 +1,50 @@
+$NetBSD: patch-bb,v 1.1.1.1 2006/05/27 14:10:51 roelants Exp $
+
+--- src/ptlib/unix/socket.cxx.orig	2006-02-22 01:04:39.000000000 +0100
++++ src/ptlib/unix/socket.cxx
+@@ -360,7 +360,7 @@
+ #define  ifr_macaddr         ifr_hwaddr.sa_data
+ #endif
+ 
+-#if defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_SOLARIS) || defined(P_MACOSX) || defined(P_MACOS) || defined(P_IRIX) || defined(P_VXWORKS) || defined(P_RTEMS) || defined(P_QNX)
++#if defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_SOLARIS) || defined(P_MACOSX) || defined(P_MACOS) || defined(P_IRIX) || defined(P_VXWORKS) || defined(P_RTEMS) || defined(P_QNX) || defined(P_DRAGONFLY)
+ #define ifr_netmask ifr_addr
+ 
+ #include <net/if_dl.h>
+@@ -377,7 +377,8 @@
+ 
+ #endif
+ 
+-#if defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_MACOS) || defined(P_QNX)
++#if defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_MACOS) || defined(P_QNX) || defined(P_DRAGONFLY)
++#include <sys/param.h>
+ #include <sys/sysctl.h>
+ #endif
+ 
+@@ -822,7 +823,7 @@ BOOL PTCPSocket::Read(void * buf, PINDEX
+ }
+ 
+ 
+-#if P_HAS_RECVMSG
++#if P_HAS_RECVMSG && P_HAS_PKTINFO
+ 
+ int PSocket::os_recvfrom(
+       void * buf,     // Data to be written as URGENT TCP data.
+@@ -1327,7 +1328,7 @@ BOOL PIPSocket::GetRouteTable(RouteTable
+   }
+ }
+ 
+-#elif defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_QNX) 
++#elif defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_QNX) || defined(P_DRAGONFLY)
+ 
+ BOOL process_rtentry(struct rt_msghdr *rtm, char *ptr, unsigned long *p_net_addr,
+                      unsigned long *p_net_mask, unsigned long *p_dest_addr, int *p_metric);
+@@ -1917,7 +1918,7 @@ BOOL PIPSocket::GetInterfaceTable(Interf
+         }
+       }
+ 
+-#if defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_VXWORKS) || defined(P_RTEMS) || defined(P_QNX)
++#if defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_VXWORKS) || defined(P_RTEMS) || defined(P_QNX) || defined(P_DRAGONFLY)
+ // Define _SIZEOF_IFREQ for platforms (eg OpenBSD) which do not have it.
+ #ifndef _SIZEOF_ADDR_IFREQ
+ #define _SIZEOF_ADDR_IFREQ(ifr) \
