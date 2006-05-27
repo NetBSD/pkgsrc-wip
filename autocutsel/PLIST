@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/27 14:35:10 jeremy-c-reed Exp $
+bin/autocutsel
+bin/cutsel
+share/doc/autocutsel/README
+@dirrm share/doc/autocutsel

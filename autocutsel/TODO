@@ -1,0 +1,8 @@
+why configure check for fortran and c++?
+
+ -I/usr/include  -O2 -I/usr/pkg/include -I/usr/pkg/include/freetype2 -I/usr/include -Wall -c autocutsel.c
+ autocutsel.c: In function `main':
+ autocutsel.c:504: error: too few arguments to function `setpgrp'
+ *** Error code 1
+
+I provided patches for this upstream to autocutsel developer
