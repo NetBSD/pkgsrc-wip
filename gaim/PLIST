@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/05/25 12:43:20 larnor Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/05/27 21:57:06 larnor Exp $
 bin/gaim
 include/gaim/account.h
 include/gaim/accountopt.h
@@ -17,6 +17,7 @@ include/gaim/dnssrv.h
 include/gaim/eventloop.h
 include/gaim/ft.h
 include/gaim/gaim.h
+include/gaim/gaim_buffer.h
 include/gaim/gtkaccount.h
 include/gaim/gtkblist.h
 include/gaim/gtkcelllayout.h
@@ -38,7 +39,6 @@ include/gaim/gtkidle.h
 include/gaim/gtkimhtml.h
 include/gaim/gtkimhtmltoolbar.h
 include/gaim/gtklog.h
-include/gaim/gtkmedia.h
 include/gaim/gtkmenutray.h
 include/gaim/gtknickcolors.h
 include/gaim/gtknotify.h
@@ -60,9 +60,7 @@ include/gaim/gtkutils.h
 include/gaim/gtkwhiteboard.h
 include/gaim/idle.h
 include/gaim/imgstore.h
-include/gaim/internal.h
 include/gaim/log.h
-include/gaim/media.h
 include/gaim/mime.h
 include/gaim/network.h
 include/gaim/notify.h
@@ -70,7 +68,6 @@ include/gaim/ntlm.h
 include/gaim/plugin.h
 include/gaim/pluginpref.h
 include/gaim/pounce.h
-include/gaim/prefix.h
 include/gaim/prefs.h
 include/gaim/privacy.h
 include/gaim/proxy.h
@@ -98,7 +95,6 @@ lib/gaim/gestures.la
 lib/gaim/history.la
 lib/gaim/iconaway.la
 lib/gaim/idle.la
-lib/gaim/libgg.la
 lib/gaim/libirc.la
 lib/gaim/libjabber.la
 lib/gaim/libmsn.la
@@ -130,6 +126,7 @@ share/locale/bg/LC_MESSAGES/gaim.mo
 share/locale/bn/LC_MESSAGES/gaim.mo
 share/locale/bs/LC_MESSAGES/gaim.mo
 share/locale/ca/LC_MESSAGES/gaim.mo
+share/locale/ca_ES@valencian/LC_MESSAGES/gaim.mo
 share/locale/cs/LC_MESSAGES/gaim.mo
 share/locale/da/LC_MESSAGES/gaim.mo
 share/locale/de/LC_MESSAGES/gaim.mo
@@ -139,6 +136,7 @@ share/locale/en_CA/LC_MESSAGES/gaim.mo
 share/locale/en_GB/LC_MESSAGES/gaim.mo
 share/locale/es/LC_MESSAGES/gaim.mo
 share/locale/et/LC_MESSAGES/gaim.mo
+share/locale/fa/LC_MESSAGES/gaim.mo
 share/locale/fi/LC_MESSAGES/gaim.mo
 share/locale/fr/LC_MESSAGES/gaim.mo
 share/locale/gl/LC_MESSAGES/gaim.mo

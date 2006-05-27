@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2006/04/13 18:18:14 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/27 21:57:06 larnor Exp $
 
-DISTNAME=	gaim-2.0.0beta2
+DISTNAME=	gaim-2.0.0beta3
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +22,13 @@ SHLIBTOOL_OVERRIDE+=	libtool
 CONFIGURE_ARGS+=	--disable-binreloc
 CONFIGURE_ARGS+=	--disable-gevolution
 CONFIGURE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl}
+
+# path hackery
+SUBST_CLASSES+=			pkg-config
+SUBST_STAGE.pkg-config=		post-configure
+SUBST_FILES.pkg-config=		config.h
+SUBST_SED.pkg-config=		-e "s|PKG_CONFIG=${TOOLS_CMD.pkg-config}|PKG_CONFIG=${TOOLS_PATH.pkg-config}|g"
+SUBST_MESSAGE.pkg-config=	Fixing hardcoded PKG_CONFIG path.
 
 .include "options.mk"
 
