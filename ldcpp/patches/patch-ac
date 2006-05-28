@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/05/28 23:38:59 tnn2 Exp $
+
+--- client/Util.cpp.orig	2005-06-25 21:24:03.000000000 +0200
++++ client/Util.cpp
+@@ -383,7 +383,7 @@ string Util::formatExactSize(int64_t aBy
+ 		return Text::fromT(buf);
+ #else
+ 		char buf[64];
+-		sprintf(buf, "%'lld", aBytes);
++		sprintf(buf, "%lld", aBytes);
+ 		sprintf(buf, "%s %s", buf, CSTRING(B));
+ 		return buf;
+ #endif
+@@ -812,7 +812,7 @@ string Util::getOsVersion() {
+ 	return os;
+ 
+ #else // _WIN32
+-	utsname n;
++	struct utsname n;
+ 
+ 	if(uname(&n) != 0) {
+ 		return "unix (unknown version)";

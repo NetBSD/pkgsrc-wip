@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/05/28 23:38:59 tnn2 Exp $
+
+--- client/CriticalSection.h.orig	2005-06-25 21:24:01.000000000 +0200
++++ client/CriticalSection.h
+@@ -55,15 +55,25 @@ public:
+ 		static pthread_mutex_t recmtx = PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
+ 		mtx = recmtx;
+ #else
+-#error Can not find mutex type attribute.
++		pthread_mutexattr_init(&ma);
++		pthread_mutexattr_settype(&ma, PTHREAD_MUTEX_RECURSIVE);
++		pthread_mutex_init(&mtx, &ma);
++#endif
++	};
++	~CriticalSection() throw() {
++		pthread_mutex_destroy(&mtx);
++#ifndef HAVE_DECL_PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP
++		pthread_mutexattr_destroy(&ma);
+ #endif
+ 	};
+-	~CriticalSection() throw() { pthread_mutex_destroy(&mtx); };
+ 	void enter() throw() { pthread_mutex_lock(&mtx); };
+ 	void leave() throw() { pthread_mutex_unlock(&mtx); };
+ 	pthread_mutex_t& getMutex() { return mtx; };
+ private:
+ 	pthread_mutex_t mtx;
++#ifndef HAVE_DECL_PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP
++	pthread_mutexattr_t ma;
++#endif
+ #endif
+ 	CriticalSection(const CriticalSection&);
+ 	CriticalSection& operator=(const CriticalSection&);

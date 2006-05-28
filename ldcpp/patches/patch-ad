@@ -1,0 +1,156 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/05/28 23:38:59 tnn2 Exp $
+
+--- client/TigerHash.cpp.orig	2006-05-28 01:28:04.000000000 +0200
++++ client/TigerHash.cpp
+@@ -21,6 +21,13 @@
+ 
+ #include "TigerHash.h"
+ 
++#if defined(__x86_64__) || defined(__alpha)
++#define TIGER_ARCH64
++#endif
++#if !(defined(__i386__)||defined(__x86_64__)|| defined(__alpha))
++#define TIGER_BIG_ENDIAN
++#endif
++
+ #define PASSES 3
+ 
+ #define t1 (table)
+@@ -33,6 +40,15 @@
+ 	bb = b; \
+ 	cc = c;
+ 
++#ifdef TIGER_ARCH64
++#define round(a,b,c,x,mul) \
++	c ^= x; \
++	a -= t1[((c)>>(0*8))&0xFF] ^ t2[((c)>>(2*8))&0xFF] ^ \
++	     t3[((c)>>(4*8))&0xFF] ^ t4[((c)>>(6*8))&0xFF] ; \
++	b += t4[((c)>>(1*8))&0xFF] ^ t3[((c)>>(3*8))&0xFF] ^ \
++	     t2[((c)>>(5*8))&0xFF] ^ t1[((c)>>(7*8))&0xFF] ; \
++	b *= mul;
++#else
+ #define round(a,b,c,x,mul) \
+ 	c ^= x; \
+ 	a -= t1[(u_int8_t)(c)] ^ \
+@@ -44,6 +60,7 @@
+ 	t2[(u_int8_t)(((u_int32_t)((c)>>(4*8)))>>(1*8))] ^ \
+ 	t1[(u_int8_t)(((u_int32_t)((c)>>(4*8)))>>(3*8))]; \
+ 	b *= mul;
++#endif
+ 
+ #define pass(a,b,c,mul) \
+ 	round(a,b,c,x0,mul) \
+@@ -78,6 +95,20 @@
+ 	b -= bb; \
+ 	c += cc;
+ 
++#ifdef TIGER_ARCH64
++#define compress \
++	save_abc \
++	pass(a,b,c,5) \
++	key_schedule \
++	pass(c,a,b,7) \
++	key_schedule \
++	pass(b,c,a,9) \
++	for(pass_no=3; pass_no<PASSES; pass_no++) { \
++	 key_schedule \
++	 pass(a,b,c,9) \
++	 tmpa=a; a=c; c=b; b=tmpa;} \
++	feedforward
++#else
+ #define compress \
+ 	save_abc \
+ 	for(pass_no=0; pass_no<PASSES; pass_no++) { \
+@@ -85,6 +116,7 @@
+ 	pass(a,b,c,(pass_no==0?5:pass_no==1?7:9)); \
+ 	tmpa=a; a=c; c=b; b=tmpa;} \
+ 	feedforward
++#endif
+ 
+ #define tiger_compress_macro(str, state) \
+ { \
+@@ -114,6 +146,10 @@ void TigerHash::tigerCompress(const u_in
+ 
+ void TigerHash::update(const void* data, size_t length) {
+ 	size_t tmppos = (u_int32_t)(pos & BLOCK_SIZE-1);
++#ifdef TIGER_BIG_ENDIAN
++	u_int8_t buf[BLOCK_SIZE];
++	int j;
++#endif
+ 	const u_int8_t* str = (const u_int8_t*)data;
+ 	// First empty tmp buffer if possible
+ 	if(tmppos > 0) {
+@@ -124,7 +160,13 @@ void TigerHash::update(const void* data,
+ 		length -= n;
+ 
+ 		if((tmppos + n) == BLOCK_SIZE) {
+-			tigerCompress((u_int64_t*)tmp, res);
++#ifdef TIGER_BIG_ENDIAN
++			for(j=0; j<BLOCK_SIZE; j++)
++			        buf[j^7]=((u_int8_t*)tmp)[j];
++			tiger_compress_macro(((u_int64_t*)buf), res);
++#else
++			tiger_compress_macro(((u_int64_t*)tmp), res);
++#endif
+ 			tmppos = 0;
+ 		}
+ 	}
+@@ -134,7 +176,13 @@ void TigerHash::update(const void* data,
+ 
+ 	// Process the bulk of data
+ 	while(length>=BLOCK_SIZE) {
+-		tigerCompress((u_int64_t*)str, res);
++#ifdef TIGER_BIG_ENDIAN
++		for(j=0; j<BLOCK_SIZE; j++)
++		        buf[j^7]=((u_int8_t*)str)[j];
++		tiger_compress_macro(((u_int64_t*)buf), res);
++#else
++		tiger_compress_macro(((u_int64_t*)str), res);
++#endif
+ 		str += BLOCK_SIZE;
+ 		pos += BLOCK_SIZE;
+ 		length -= BLOCK_SIZE;
+@@ -147,6 +195,10 @@ void TigerHash::update(const void* data,
+ 
+ u_int8_t* TigerHash::finalize() {
+ 	size_t tmppos = (size_t)(pos & BLOCK_SIZE-1);
++#ifdef TIGER_BIG_ENDIAN
++	u_int8_t buf[BLOCK_SIZE];
++	int j;
++#endif
+ 	// Tmp buffer always has at least one pos, otherwise it would have
+ 	// been processed in update()
+ 
+@@ -154,14 +206,30 @@ u_int8_t* TigerHash::finalize() {
+ 
+ 	if(tmppos > (BLOCK_SIZE - sizeof(u_int64_t))) {
+ 		memset(tmp + tmppos, 0, BLOCK_SIZE - tmppos);
+-		tigerCompress(((u_int64_t*)tmp), res);
++#ifdef TIGER_BIG_ENDIAN
++		for(j=0; j<BLOCK_SIZE; j++)
++		        buf[j^7]=((u_int8_t*)tmp)[j];
++		tiger_compress_macro(((u_int64_t*)buf), res);
++#else
++		tiger_compress_macro(((u_int64_t*)tmp), res);
++#endif
+ 		memset(tmp, 0, BLOCK_SIZE);
+ 	} else {
+ 		memset(tmp + tmppos, 0, BLOCK_SIZE - tmppos - sizeof(u_int64_t));
++#ifdef TIGER_BIG_ENDIAN
++		for(j=0; j<BLOCK_SIZE; j++)
++		        buf[j^7]=((u_int8_t*)tmp)[j];
++		memcpy(tmp, buf, BLOCK_SIZE);
++#endif
+ 	}
+ 
+ 	((u_int64_t*)(&(tmp[56])))[0] = pos<<3;
+-	tigerCompress((u_int64_t*)tmp, res);
++	tiger_compress_macro(((u_int64_t*)tmp), res);
++#ifdef TIGER_BIG_ENDIAN
++	for(j=0; j<HASH_SIZE; j++)
++	        buf[j^7]=((u_int8_t*)res)[j];
++	memcpy(res, buf, HASH_SIZE);
++#endif
+ 	return getResult();
+ }
+ 

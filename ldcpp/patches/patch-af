@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/05/28 23:38:59 tnn2 Exp $
+
+--- client/stdinc.h.orig	2006-05-26 22:15:10.000000000 +0200
++++ client/stdinc.h
+@@ -40,6 +40,7 @@
+ 
+ #else
+ #include <unistd.h>
++#include <stdint.h>
+ #endif
+ 
+ #include <stdio.h>

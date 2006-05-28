@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/28 23:38:59 tnn2 Exp $
+bin/ldcpp
+share/ldcpp/glade/downloadqueue.glade
+share/ldcpp/glade/favoritehubs.glade
+share/ldcpp/glade/finishedtransfers.glade
+share/ldcpp/glade/hash.glade
+share/ldcpp/glade/hub.glade
+share/ldcpp/glade/mainwindow.glade
+share/ldcpp/glade/privatemessage.glade
+share/ldcpp/glade/publichubs.glade
+share/ldcpp/glade/search.glade
+share/ldcpp/glade/settingsdialog.glade
+share/ldcpp/glade/sharebrowser.glade
+share/ldcpp/pixmaps/FinishedDL.png
+share/ldcpp/pixmaps/FinishedUL.png
+share/ldcpp/pixmaps/dc++-fw-op.png
+share/ldcpp/pixmaps/dc++-fw.png
+share/ldcpp/pixmaps/dc++-op.png
+share/ldcpp/pixmaps/dc++.png
+share/ldcpp/pixmaps/dcplusplus.png
+share/ldcpp/pixmaps/download.png
+share/ldcpp/pixmaps/favhubs.png
+share/ldcpp/pixmaps/normal-fw-op.png
+share/ldcpp/pixmaps/normal-fw.png
+share/ldcpp/pixmaps/normal-op.png
+share/ldcpp/pixmaps/normal.png
+share/ldcpp/pixmaps/publichubs.png
+share/ldcpp/pixmaps/queue.png
+share/ldcpp/pixmaps/search.png
+share/ldcpp/pixmaps/settings.png
+share/ldcpp/pixmaps/upload.png
+@dirrm share/ldcpp/glade
+@dirrm share/ldcpp/pixmaps
+@dirrm share/ldcpp
