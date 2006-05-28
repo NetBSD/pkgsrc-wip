@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/05/28 17:28:23 gizm00 Exp $
+--- Spread.xs	2005-08-11 16:09:52.000000000 +0200
++++ Spread.xs.orig	2006-05-28 19:07:20.000000000 +0200
+@@ -12,7 +12,7 @@
+ #include "perl.h"
+ #include "XSUB.h"
+ 
+-#include "sp.h"
++#include <spread/sp.h>
+ 
+ #ifndef MIN
+ #define MIN(a,b) (((a)<(b))?(a):(b))

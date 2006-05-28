@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/28 17:28:23 gizm00 Exp $
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Spread/.packlist
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Spread/Spread.bs
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Spread/Spread.so
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Spread/autosplit.ix
+lib/perl5/vendor_perl/man/man3/Spread.3
+@dirrm lib/perl5/vendor_perl/man/man3
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Spread
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
+@dirrm lib/perl5/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
