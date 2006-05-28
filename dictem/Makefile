@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2006/04/26 18:04:01 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/28 10:38:06 cheusov Exp $
 
-DISTNAME=		dictem-0.7
+DISTNAME=		dictem-0.8
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
 #PKGREVISION=		1
 CATEGORIES=		textproc editors
-MASTER_SITES=		http://www.mova.org/~cheusov/pub/dictem/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dictem/} \
+                        http://www.mova.org/~cheusov/pub/dictem/
 
 MAINTAINER=		cheusov@tut.by
 HOMEPAGE=		http://www.freshmeat.net/projects/dictem/
