@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2267 2006/05/30 20:21:15 jsonn Exp $
+# $Id: Makefile,v 1.2268 2006/05/30 21:13:23 gunten Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1238,7 +1238,6 @@ SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
 SUBDIR+=	snark
 SUBDIR+=	snes9express
-SUBDIR+=	snes9x
 SUBDIR+=	socklog
 SUBDIR+=	sockstat
 SUBDIR+=	songwrite
