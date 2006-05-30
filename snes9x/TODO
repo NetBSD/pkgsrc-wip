@@ -1,2 +1,0 @@
-- Loading and saving is broken.
-- Requires png_jmpbuf in -lpng for taking screenshots.
