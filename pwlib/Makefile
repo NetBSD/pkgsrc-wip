@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/27 14:10:50 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/31 19:15:51 ghen Exp $
 
 DISTNAME=	pwlib-v1_10_0-src
 PKGNAME=	pwlib-1.10.0
@@ -49,7 +49,7 @@ do-install:
 		${INSTALL_DATA} $$f ${PREFIX}/$$f;	\
 	done
 
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

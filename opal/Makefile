@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/27 14:21:40 roelants Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/31 19:15:51 ghen Exp $
 #
 
 DISTNAME=		opal-v2_2_1-src
@@ -28,5 +28,5 @@ USE_TOOLS+=		gmake
 
 
 .include "../../wip/pwlib/buildlink3.mk"
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
