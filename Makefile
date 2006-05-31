@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2269 2006/05/31 10:24:52 dauphing Exp $
+# $Id: Makefile,v 1.2270 2006/05/31 10:30:43 roelants Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -933,6 +933,7 @@ SUBDIR+=	p5-URI-Find
 SUBDIR+=	p5-URI-Find-Rule
 SUBDIR+=	p5-URI-Title
 SUBDIR+=	p5-XML-DOM-XPath
+SUBDIR+=	p5-YAML-Syck
 SUBDIR+=	p5-mecab
 SUBDIR+=	p5-podlators
 SUBDIR+=	pal
