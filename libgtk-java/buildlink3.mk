@@ -1,20 +1,39 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:44 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/05/31 21:36:14 poppnk Exp $
+# XXX
+# XXX This file was created automatically using createbuildlink-3.12.
+# XXX After this file has been verified as correct, the comment lines
+# XXX beginning with "XXX" should be removed.  Please do not commit
+# XXX unverified buildlink3.mk files.
+# XXX
+# XXX Packages that only install static libraries or headers should
+# XXX include the following line:
+# XXX
+# XXX	BUILDLINK_DEPMETHOD.libgtk-java?=	build
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBGTK_JAVA_BUILDLINK3_MK:=	${LIBGTK_JAVA_BUILDLINK3_MK}+
+uibgtk_java_BUILDLINK3_MK:=	${uibgtk_java_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
+.if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	libgtk-java
 .endif
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgtk-java}
 BUILDLINK_PACKAGES+=	libgtk-java
 
-.if !empty(LIBGTK_JAVA_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.libgtk-java+=	libgtk-java>=2.6.2
+.if ${uibgtk_java_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.libgtk-java+=	libgtk-java>=2.8.5
 BUILDLINK_PKGSRCDIR.libgtk-java?=	../../wip/libgtk-java
-.endif	# LIBGTK_JAVA_BUILDLINK3_MK
+.endif	# uibgtk_java_BUILDLINK3_MK
 
-#CLASSPATH=${PREFIX}/share/java/gtk2.6.jar
+# XXX
+# XXX Uncomment and keep only the buildlink3 lines below which are directly
+# XXX needed for dependencies to compile, link, and run.  If this package
+# XXX provides a wrappered API or otherwise does not expose the APIs of the
+# XXX buildlink3 lines below to dependencies, remove them.
+# XXX
+.include "../../wip/glib-java/buildlink3.mk"
+.include "../../wip/cairo-java/buildlink3.mk"
+#.include "../../graphics/cairo/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
