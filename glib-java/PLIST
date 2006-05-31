@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/06 15:31:47 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/05/31 21:37:32 poppnk Exp $
 include/glib-java/jg_jnu.h
 lib/libglibjni.la
 lib/pkgconfig/glib-java.pc
@@ -41,7 +41,6 @@ share/glib-java/macros/jg_common.m4
 share/glib-java/macros/jg_lib.m4
 share/java/glib0.2-${PKGVERSION}.jar
 share/java/glib0.2.jar
-@dirrm share/java
 @dirrm share/glib-java/macros
 @dirrm share/doc/${PKGNAME}/api/resources
 @dirrm share/doc/${PKGNAME}/api/org/gnu/glib

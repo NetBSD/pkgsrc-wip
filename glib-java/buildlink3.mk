@@ -1,6 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/05/06 15:31:47 poppnk Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/05/31 21:37:32 poppnk Exp $
 # XXX
-# XXX This file was created automatically using createbuildlink-3.8.
+# XXX This file was created automatically using createbuildlink-3.12.
 # XXX After this file has been verified as correct, the comment lines
 # XXX beginning with "XXX" should be removed.  Please do not commit
 # XXX unverified buildlink3.mk files.
@@ -13,15 +13,15 @@
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 guib_java_BUILDLINK3_MK:=	${guib_java_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
+.if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	glib-java
 .endif
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nglib-java}
 BUILDLINK_PACKAGES+=	glib-java
 
-.if !empty(guib_java_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.glib-java+=	glib-java>=0.2.4
+.if ${guib_java_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.glib-java+=	glib-java>=0.2.5
 BUILDLINK_PKGSRCDIR.glib-java?=	../../wip/glib-java
 .endif	# guib_java_BUILDLINK3_MK
 
@@ -33,4 +33,4 @@ BUILDLINK_PKGSRCDIR.glib-java?=	../../wip/glib-java
 # XXX
 #.include "../../devel/glib2/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

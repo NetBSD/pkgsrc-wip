@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/05/06 15:31:47 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/31 21:37:32 poppnk Exp $
 #
 
-DISTNAME=		glib-java-0.2.4
+DISTNAME=		glib-java-0.2.5
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glib-java/0.2/}
 
