@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/14 01:28:05 jlamwww Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/31 18:27:01 ghen Exp $
 
 DISTNAME=		openscep-0.4.2
 CATEGORIES=		security
@@ -120,7 +120,7 @@ post-install:
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../mk/apache.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

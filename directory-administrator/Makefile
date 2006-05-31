@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:15 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/31 18:27:01 ghen Exp $
 #
 
 DISTNAME=	directory_administrator-1.5
@@ -19,7 +19,7 @@ USE_GNU_GETTEXT=	yes
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../x11/gnome-libs/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

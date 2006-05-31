@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2006/02/20 00:10:47 hfath Exp $
+# $NetBSD: options.mk,v 1.2 2006/05/31 18:27:01 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sxemacs
 PKG_SUPPORTED_OPTIONS=	ldap xface canna pgsql ffi
@@ -7,7 +7,7 @@ PKG_SUPPORTED_OPTIONS=	ldap xface canna pgsql ffi
 
 .if !empty(PKG_OPTIONS:Mldap)
 CONFIGURE_ARGS+=	--with-ldap
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-ldap
 .endif

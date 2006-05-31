@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2006/02/10 12:49:05 tvierling Exp $
+# $NetBSD: options.mk,v 1.9 2006/05/31 18:27:01 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql pam pgsql sasl sqlite
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 ###
 .if !empty(PKG_OPTIONS:Mldap)
 CONFIGURE_ARGS+=	--with-ldap
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 .endif
 
 ###
