@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/06/01 09:55:51 absd Exp $
+
+--- lib/JSON/Converter.pm.orig	2006-05-31 18:46:41.000000000 +0100
++++ lib/JSON/Converter.pm
+@@ -177,7 +177,7 @@ sub _valueToJson {
+ 
+     if(!ref($value)){
+         if($JSON::Converter::autoconv){
+-            return $value  if($value =~ /^-?(?:\d+)(?:\.\d*)?(?:[eE][-+]?\d+)?$/);
++            return $value  if($value =~ /^-?(?:[1-9]\d*)(?:\.\d*)?(?:[eE][-+]?\d+)?$/);
+             return $value  if($value =~ /^0[xX](?:[0-9a-zA-Z])+$/);
+             return 'true'  if($value =~ /^[Tt][Rr][Uu][Ee]$/);
+             return 'false' if($value =~ /^[Ff][Aa][Ll][Ss][Ee]$/);
