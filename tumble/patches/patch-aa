@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/06/01 08:27:35 lkundrak Exp $
+
+--- Makefile.orig	2003-12-09 18:54:48.000000000 +0100
++++ Makefile
+@@ -29,9 +29,9 @@
+ CTL_LANG=1
+ 
+ 
+-CFLAGS = -Wall
+-LDFLAGS =
+-LDLIBS = -ltiff -ljpeg -lpbm -lz -lm
++#CFLAGS = -Wall
++#LDFLAGS =
++LDLIBS = -ltiff -ljpeg -lnetpbm -lz -lm
+ 
+ ifdef DEBUG
+ CFLAGS := $(CFLAGS) -g

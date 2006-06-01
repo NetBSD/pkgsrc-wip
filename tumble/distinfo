@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/06/01 08:27:35 lkundrak Exp $
+
+SHA1 (tumble-0.33.tar.gz) = b26909886869cf178bafac13dae71ee03e68aba8
+RMD160 (tumble-0.33.tar.gz) = 090eb98b2f872d087bc4b911022552cd88aaada4
+Size (tumble-0.33.tar.gz) = 42983 bytes
+SHA1 (patch-aa) = 320532311a1805a93336efd3659ccfd64ece13cb
