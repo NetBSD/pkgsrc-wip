@@ -1,0 +1,4 @@
+
+ddate converts either current system date or any other Gregorian dates to
+Discordian dates.  It works similarly to date(1), only almost completely
+differently.
