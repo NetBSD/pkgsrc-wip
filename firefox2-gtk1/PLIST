@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/22 16:10:00 ghen Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/06/01 16:01:39 ghen Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -156,6 +156,7 @@ lib/${MOZILLA}/components/dom_html.xpt
 lib/${MOZILLA}/components/dom_loadsave.xpt
 lib/${MOZILLA}/components/dom_range.xpt
 lib/${MOZILLA}/components/dom_sidebar.xpt
+lib/${MOZILLA}/components/dom_storage.xpt
 lib/${MOZILLA}/components/dom_stylesheets.xpt
 lib/${MOZILLA}/components/dom_svg.xpt
 lib/${MOZILLA}/components/dom_traversal.xpt
@@ -222,12 +223,16 @@ lib/${MOZILLA}/components/nsMicrosummaryService.js
 lib/${MOZILLA}/components/nsProgressDialog.js
 lib/${MOZILLA}/components/nsProxyAutoConfig.js
 lib/${MOZILLA}/components/nsResetPref.js
+lib/${MOZILLA}/components/nsSafebrowsingApplication.js
 lib/${MOZILLA}/components/nsSearchService.js
 lib/${MOZILLA}/components/nsSearchSuggestions.js
 lib/${MOZILLA}/components/nsSessionStore.js
 lib/${MOZILLA}/components/nsSetDefaultBrowser.js
 lib/${MOZILLA}/components/nsSidebar.js
 lib/${MOZILLA}/components/nsUpdateService.js
+lib/${MOZILLA}/components/nsUrlClassifierLib.js
+lib/${MOZILLA}/components/nsUrlClassifierListManager.js
+lib/${MOZILLA}/components/nsUrlClassifierTable.js
 lib/${MOZILLA}/components/nsXmlRpcClient.js
 lib/${MOZILLA}/components/oji.xpt
 lib/${MOZILLA}/components/passwordmgr.xpt
@@ -241,6 +246,7 @@ lib/${MOZILLA}/components/profile.xpt
 lib/${MOZILLA}/components/progressDlg.xpt
 lib/${MOZILLA}/components/proxyObjInst.xpt
 lib/${MOZILLA}/components/rdf.xpt
+lib/${MOZILLA}/components/safebrowsing.xpt
 lib/${MOZILLA}/components/satchel.xpt
 lib/${MOZILLA}/components/saxparser.xpt
 lib/${MOZILLA}/components/search.xpt
@@ -257,6 +263,7 @@ lib/${MOZILLA}/components/uconv.xpt
 lib/${MOZILLA}/components/unicharutil.xpt
 lib/${MOZILLA}/components/update.xpt
 lib/${MOZILLA}/components/uriloader.xpt
+lib/${MOZILLA}/components/url-classifier.xpt
 lib/${MOZILLA}/components/webBrowser_core.xpt
 lib/${MOZILLA}/components/webbrowserpersist.xpt
 lib/${MOZILLA}/components/webshell_idls.xpt
@@ -994,10 +1001,16 @@ include/${MOZILLA}/dom/nsIDOMScreen.h
 include/${MOZILLA}/dom/nsIDOMScriptObjectFactory.h
 include/${MOZILLA}/dom/nsIDOMScrollListener.h
 include/${MOZILLA}/dom/nsIDOMSmartCardEvent.h
+include/${MOZILLA}/dom/nsIDOMStorage.h
+include/${MOZILLA}/dom/nsIDOMStorageEvent.h
+include/${MOZILLA}/dom/nsIDOMStorageItem.h
+include/${MOZILLA}/dom/nsIDOMStorageList.h
+include/${MOZILLA}/dom/nsIDOMStorageWindow.h
 include/${MOZILLA}/dom/nsIDOMStyleSheet.h
 include/${MOZILLA}/dom/nsIDOMStyleSheetList.h
 include/${MOZILLA}/dom/nsIDOMText.h
 include/${MOZILLA}/dom/nsIDOMTextListener.h
+include/${MOZILLA}/dom/nsIDOMToString.h
 include/${MOZILLA}/dom/nsIDOMTreeWalker.h
 include/${MOZILLA}/dom/nsIDOMUIEvent.h
 include/${MOZILLA}/dom/nsIDOMUIListener.h
@@ -1018,6 +1031,7 @@ include/${MOZILLA}/dom/nsIDOMXPathResult.h
 include/${MOZILLA}/dom/nsIDOMXULButtonElement.h
 include/${MOZILLA}/dom/nsIDOMXULCheckboxElement.h
 include/${MOZILLA}/dom/nsIDOMXULCommandDispatcher.h
+include/${MOZILLA}/dom/nsIDOMXULCommandEvent.h
 include/${MOZILLA}/dom/nsIDOMXULControlElement.h
 include/${MOZILLA}/dom/nsIDOMXULDescriptionElement.h
 include/${MOZILLA}/dom/nsIDOMXULDocument.h
@@ -1046,6 +1060,7 @@ include/${MOZILLA}/dom/nsIScriptNameSpaceManager.h
 include/${MOZILLA}/dom/nsIScriptObjectOwner.h
 include/${MOZILLA}/dom/nsIScriptObjectPrincipal.h
 include/${MOZILLA}/dom/nsISidebar.h
+include/${MOZILLA}/dom/nsPIDOMStorage.h
 include/${MOZILLA}/dom/nsPIDOMWindow.h
 include/${MOZILLA}/dom/nsPIWindowRoot.h
 include/${MOZILLA}/downloads/nsIDownloadManager.h
@@ -1879,6 +1894,7 @@ include/${MOZILLA}/rdf/rdfIDataSource.h
 include/${MOZILLA}/rdf/rdfISerializer.h
 include/${MOZILLA}/rdf/rdfITripleVisitor.h
 include/${MOZILLA}/rdfutil/nsRDFResource.h
+include/${MOZILLA}/safebrowsing/nsIDocNavStartProgressListener.h
 include/${MOZILLA}/satchel/nsIFormFillController.h
 include/${MOZILLA}/satchel/nsIFormHistory.h
 include/${MOZILLA}/sessionstore/nsISessionStore.h
@@ -2004,6 +2020,9 @@ include/${MOZILLA}/uriloader/nsIWebProgress.h
 include/${MOZILLA}/uriloader/nsIWebProgressListener.h
 include/${MOZILLA}/uriloader/nsIWebProgressListener2.h
 include/${MOZILLA}/uriloader/nsURILoader.h
+include/${MOZILLA}/url-classifier/nsIUrlClassifierDBService.h
+include/${MOZILLA}/url-classifier/nsIUrlClassifierTable.h
+include/${MOZILLA}/url-classifier/nsIUrlListManager.h
 include/${MOZILLA}/util/nsTimer.h
 include/${MOZILLA}/util/stopwatch.h
 include/${MOZILLA}/view/nsICompositeListener.h
@@ -2503,11 +2522,9 @@ include/${MOZILLA}/nss/sslt.h
 include/${MOZILLA}/nss/watcomfx.h
 @comment end INCLUDE-PUBLIC
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
-@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regchrome
 @unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
 @unexec ${RM} %D/lib/${MOZILLA}/components/xpti.dat
 @comment begin DIRS
-@dirrm public
 @dirrm lib/${MOZILLA}/searchplugins
 @dirrm lib/${MOZILLA}/res/throbber
 @dirrm lib/${MOZILLA}/res/samples
@@ -2558,6 +2575,7 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm include/${MOZILLA}/webbrowserpersist
 @dirrm include/${MOZILLA}/view
 @dirrm include/${MOZILLA}/util
+@dirrm include/${MOZILLA}/url-classifier
 @dirrm include/${MOZILLA}/uriloader
 @dirrm include/${MOZILLA}/update
 @dirrm include/${MOZILLA}/unicharutil
@@ -2582,6 +2600,7 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm include/${MOZILLA}/shellservice
 @dirrm include/${MOZILLA}/sessionstore
 @dirrm include/${MOZILLA}/satchel
+@dirrm include/${MOZILLA}/safebrowsing
 @dirrm include/${MOZILLA}/rdfutil
 @dirrm include/${MOZILLA}/rdf
 @dirrm include/${MOZILLA}/progressDlg

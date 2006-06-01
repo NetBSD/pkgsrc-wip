@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2006/05/22 16:10:00 ghen Exp $
+$NetBSD: distinfo,v 1.3 2006/06/01 16:01:39 ghen Exp $
 
-SHA1 (firefox-2.0alpha2/bonecho-alpha2-source.tar.bz2) = f60c1ce8596bc45c8b0ae8b75d6529c3518f9d04
-RMD160 (firefox-2.0alpha2/bonecho-alpha2-source.tar.bz2) = 36f832e5d8e1f7f275b8fa63f9b20ec4bb58107c
-Size (firefox-2.0alpha2/bonecho-alpha2-source.tar.bz2) = 35993347 bytes
+SHA1 (firefox-2.0alpha3/bonecho-alpha3-source.tar.bz2) = 83fada586f6e2a194ad96e0eea7c95fb8dd8bf50
+RMD160 (firefox-2.0alpha3/bonecho-alpha3-source.tar.bz2) = 9c8b5dd0dffcfe5d51f00f32c52166dafef38b5c
+Size (firefox-2.0alpha3/bonecho-alpha3-source.tar.bz2) = 36073138 bytes
 SHA1 (patch-aa) = 5095449d4e979085fc5791b9d0251076b9c969c3
 SHA1 (patch-ab) = d3b6d3994a030c89b0bd580c01e1f15e08dab4c8
 SHA1 (patch-ac) = d35b8da8ee1a6b42068ece31a1f4659e153b29cd
