@@ -1,0 +1,2 @@
+* Actualy port to NetBSD (currently all OpenBSD-dependent parts are just #ifdef'd out)
+* NetBSD replacements of mksysjail-*.sh 

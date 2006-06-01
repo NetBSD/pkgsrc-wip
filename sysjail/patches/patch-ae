@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/06/01 12:03:23 lkundrak Exp $
+
+--- src/intercept-chflags.c.orig	2006-05-05 22:34:54.000000000 +0200
++++ src/intercept-chflags.c
+@@ -30,7 +30,11 @@
+ #include <sys/param.h>
+ #include <sys/syscall.h>
+ #include <sys/sysctl.h>
++#ifdef __NetBSD__
++#include <systrace.h>
++#else
+ #include <dev/systrace.h>
++#endif
+ 
+ #include <assert.h>
+ #include <stdio.h>

@@ -1,0 +1,16 @@
+$NetBSD: patch-ai,v 1.1.1.1 2006/06/01 12:03:23 lkundrak Exp $
+
+--- src/intercept-pidjail.c.orig	2006-05-22 21:22:21.000000000 +0200
++++ src/intercept-pidjail.c
+@@ -30,7 +30,11 @@
+ #include <sys/param.h>
+ #include <sys/resource.h>
+ #include <sys/syscall.h>
++#ifdef __NetBSD__
++#include <systrace.h>
++#else
+ #include <dev/systrace.h>
++#endif
+ 
+ #include <assert.h>
+ #include <errno.h>

@@ -1,0 +1,16 @@
+$NetBSD: patch-ap,v 1.1.1.1 2006/06/01 12:03:23 lkundrak Exp $
+
+--- src/util.c.orig	2006-05-05 22:34:54.000000000 +0200
++++ src/util.c
+@@ -29,7 +29,11 @@
+  */
+ #include <sys/ioctl.h>
+ #include <sys/param.h>
++#ifdef __NetBSD__
++#include <systrace.h>
++#else
+ #include <dev/systrace.h>
++#endif
+ 
+ #include <assert.h>
+ #include <err.h>

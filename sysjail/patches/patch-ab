@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/06/01 12:03:23 lkundrak Exp $
+
+--- configure.ac.orig	2006-05-22 14:55:32.000000000 +0200
++++ configure.ac
+@@ -26,6 +26,10 @@ DX_PS_FEATURE(OFF)
+ DX_INIT_DOXYGEN(sysjail, doxygen.cfg)
+ 
+ # Checks for libraries.
++AC_CHECK_FUNC(login_getclass,,
++  AC_CHECK_LIB(util, login_getclass,,
++    AC_MSG_ERROR([Unable to find library that provides utility functions.])))
++
+ 
+ # Checks for header files.
+ AC_HEADER_STDC

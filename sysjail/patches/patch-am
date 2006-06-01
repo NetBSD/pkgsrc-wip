@@ -1,0 +1,38 @@
+$NetBSD: patch-am,v 1.1.1.1 2006/06/01 12:03:23 lkundrak Exp $
+
+--- src/intercept.c.orig	2006-05-22 21:22:21.000000000 +0200
++++ src/intercept.c
+@@ -32,7 +32,11 @@
+ #include <sys/resource.h>
+ #include <sys/stat.h>
+ #include <sys/syscall.h>
++#ifdef __NetBSD__
++#include <systrace.h>
++#else
+ #include <dev/systrace.h>
++#endif
+ 
+ #include <assert.h>
+ #include <err.h>
+@@ -136,16 +140,18 @@ intercept_init(int fd, pid_t master)
+ 	IFP_MAP_ADD(&strpol, fd, SYS_msgsnd, &inter_ipc);
+ 	IFP_MAP_ADD(&strpol, fd, SYS_msgrcv, &inter_ipc);
+ 	IFP_MAP_ADD(&strpol, fd, SYS_msgget, &inter_ipc);
+-	IFP_MAP_ADD(&strpol, fd, SYS_msgctl, &inter_ipc);
+ 	IFP_MAP_ADD(&strpol, fd, SYS_semget, &inter_ipc);
+ 	IFP_MAP_ADD(&strpol, fd, SYS_semop, &inter_ipc);
+-	IFP_MAP_ADD(&strpol, fd, SYS___semctl, &inter_ipc);
+ 	IFP_MAP_ADD(&strpol, fd, SYS_shmat, &inter_ipc);
+ 	IFP_MAP_ADD(&strpol, fd, SYS_shmdt, &inter_ipc);
+ 	IFP_MAP_ADD(&strpol, fd, SYS_shmget, &inter_ipc);
+-	IFP_MAP_ADD(&strpol, fd, SYS_shmctl, &inter_ipc);
+ 	IFP_MAP_ADD(&strpol, fd, SYS_chflags, &inter_chflags);
+ 	IFP_MAP_ADD(&strpol, fd, SYS_fchflags, &inter_chflags);
++#ifndef __NetBSD__
++	IFP_MAP_ADD(&strpol, fd, SYS_msgctl, &inter_ipc);
++	IFP_MAP_ADD(&strpol, fd, SYS___semctl, &inter_ipc);
++	IFP_MAP_ADD(&strpol, fd, SYS_shmctl, &inter_ipc);
++#endif
+ 	return(0);
+ }
+ 

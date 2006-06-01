@@ -1,0 +1,16 @@
+$NetBSD: patch-aj,v 1.1.1.1 2006/06/01 12:03:23 lkundrak Exp $
+
+--- src/intercept-socket.c.orig	2006-05-05 22:34:54.000000000 +0200
++++ src/intercept-socket.c
+@@ -34,7 +34,11 @@
+ #include <sys/socket.h>
+ #include <sys/stat.h>
+ #include <sys/syscall.h>
++#ifdef __NetBSD__
++#include <systrace.h>
++#else
+ #include <dev/systrace.h>
++#endif
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ 

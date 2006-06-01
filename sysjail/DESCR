@@ -1,0 +1,3 @@
+Sysjail is a user-space virtualiser for systems with systrace capabilities.
+It seeks to provide a superset of FreeBSD jail functionality with full
+compatibility.
