@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/06/01 12:48:22 lkundrak Exp $
+
+SHA1 (dbvi-0.9.4.1.1.tar.gz) = 1f1e4274ce97b3cd0f49c670081ac8827a138573
+RMD160 (dbvi-0.9.4.1.1.tar.gz) = bc1aa97638467702daf233523c759d832b25ea50
+Size (dbvi-0.9.4.1.1.tar.gz) = 44572 bytes
+SHA1 (patch-aa) = 2b1e1f37c043fec9806ce9983c411f1b35338d93
+SHA1 (patch-ab) = 96451d3a357233eebed9813ae0f0190de4b7c1ab

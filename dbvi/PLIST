@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/01 12:48:22 lkundrak Exp $
+bin/dbvi
+man/man1/dbvi.1
