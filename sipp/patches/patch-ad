@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2006/06/03 18:25:47 gschwarz Exp $
+
+--- comp.h.orig	2006-05-06 11:22:49.000000000 +0000
++++ comp.h
+@@ -19,6 +19,7 @@
+  *           From Hewlett Packard Company.
+  */
+ 
++#include <sys/types.h>
+ #include <sys/socket.h>
+ 
+ #ifdef __cplusplus

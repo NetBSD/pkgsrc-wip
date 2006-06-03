@@ -1,95 +1,139 @@
-$NetBSD: patch-aa,v 1.3 2005/11/19 21:26:23 gschwarz Exp $
+$NetBSD: patch-aa,v 1.4 2006/06/03 18:25:47 gschwarz Exp $
 
---- Makefile.orig	2004-09-20 17:30:03.000000000 +0200
-+++ Makefile	2005-11-19 01:03:25.000000000 +0100
-@@ -58,6 +58,8 @@
- SYSTEM_OSF1=tru64
- SYSTEM_SunOS=SunOS
- SYSTEM_CYGWIN=Cygwin
-+SYSTEM_Darwin=Darwin
-+SYSTEM_NetBSD=freebsd
- SYSTEM=$(SYSTEM_$(OSNAME))
+--- Makefile.orig	2004-09-20 15:30:03.000000000 +0000
++++ Makefile
+@@ -28,14 +28,6 @@ OBJ= xp_parser.o scenario.o screen.o cal
+ # Include directories
+ INCDIR= -I.
  
- # C compiler
-@@ -67,7 +69,7 @@
- CC_tru64=cc  
- CC_SunOS=gcc
- CC_Cygwin=cc  
+-# Libraries directories
+-LIBDIR_linux=
+-LIBDIR_FreeBSD=
+-LIBDIR_hpux=
+-LIBDIR_tru64=
+-LIBDIR_SunOS=
+-LIBDIR_Cygwin=
+-
+ # Archive file created in your home directory when building the archive target
+ # ARCHIVE= $(HOME)/$(OUTPUT).tgz
+ ARCHIVE= $(OUTPUT).tgz
+@@ -47,99 +39,16 @@ TOCLEAN= sipp_errors.log sipp_messages.l
+ 
+ ###################################################################
+ # Generic Rules
+-
+-#OSNAME=`uname`
+-#MODELNAME=`uname -m`
+-
+-# SYSTEM nickname
+-SYSTEM_HP-UX=hpux
+-SYSTEM_Linux=linux
+-SYSTEM_FreeBSD=freebsd
+-SYSTEM_OSF1=tru64
+-SYSTEM_SunOS=SunOS
+-SYSTEM_CYGWIN=Cygwin
+-SYSTEM=$(SYSTEM_$(OSNAME))
+-
+-# C compiler
+-CC_hpux=aCC 
+-CC_linux=cc  
+-CC_freebsd=cc  
+-CC_tru64=cc  
+-CC_SunOS=gcc
+-CC_Cygwin=cc  
 -CC=$(CC_$(SYSTEM))
-+#CC=$(CC_$(SYSTEM))
- 
- # C++ compiler mapping
- CPP_hpux=aCC  
-@@ -76,7 +78,8 @@
- CPP_tru64=cxx  
- CPP_SunOS=gcc
- CPP_Cygwin=g++  
+-
+-# C++ compiler mapping
+-CPP_hpux=aCC  
+-CPP_linux=gcc  
+-CPP_freebsd=g++  
+-CPP_tru64=cxx  
+-CPP_SunOS=gcc
+-CPP_Cygwin=g++  
 -CPP=$(CPP_$(SYSTEM))
-+#CPP=$(CPP_$(SYSTEM))
-+CPP=$(CXX)
- 
- #Model specific flags
- MFLAGS_ia64=+DD64
-@@ -86,6 +89,8 @@
- MFLAGS_i586=
- MFLAGS_i486=
- MFLAGS_i386=
-+MFLAGS_powerpc=
-+MFLAGS_alpha=
- MFLAGS=$(MFLAGS_$(MODELNAME))
- 
- #C Compiler Flags
-@@ -95,7 +100,8 @@
- CFLAGS_tru64=-D__OSF1 -pthread
- CFLAGS_SunOS=-g
- CFLAGS_Cygwin=-D__CYGWIN
+-
+-#Model specific flags
+-MFLAGS_ia64=+DD64
+-MFLAGS_9000/800=+DAportable
+-MFLAGS_9000/785=+DAportable
+-MFLAGS_i686=
+-MFLAGS_i586=
+-MFLAGS_i486=
+-MFLAGS_i386=
+-MFLAGS=$(MFLAGS_$(MODELNAME))
+-
+-#C Compiler Flags
+-CFLAGS_hpux=-D__HPUX
+-CFLAGS_linux=-D__LINUX -pthread
+-CFLAGS_freebsd=-D__LINUX -pthread
+-CFLAGS_tru64=-D__OSF1 -pthread
+-CFLAGS_SunOS=-g
+-CFLAGS_Cygwin=-D__CYGWIN
 -CFLAGS=$(CFLAGS_$(SYSTEM)) -D__3PCC__
-+CFLAGS_Darwin=
-+CFLAGS=$(CFLAGS_$(SYSTEM)) -D__3PCC__ $(PKGSRC_CFLAGS)
- 
- #C++ Compiler Flags
- CPPFLAGS_hpux=-AA -mt -D__HPUX 
-@@ -104,7 +110,8 @@
- CPPFLAGS_tru64=-D__OSF1 -pthread
- CPPFLAGS_SunOS=-g
- CPPFLAGS_Cygwin=-D__CYGWIN
+-
+-#C++ Compiler Flags
+-CPPFLAGS_hpux=-AA -mt -D__HPUX 
+-CPPFLAGS_linux=-D__LINUX -pthread
+-CPPFLAGS_freebsd=-D__LINUX -pthread
+-CPPFLAGS_tru64=-D__OSF1 -pthread
+-CPPFLAGS_SunOS=-g
+-CPPFLAGS_Cygwin=-D__CYGWIN
 -CPPFLAGS=$(CPPFLAGS_$(SYSTEM)) -D__3PCC__
-+CPPFLAGS_Darwin=
-+CPPFLAGS=$(CPPFLAGS_$(SYSTEM)) -D__3PCC__ $(CXXFLAGS)
- 
- #Linker mapping
- CCLINK_hpux=aCC
-@@ -113,7 +120,8 @@
- CCLINK_tru64=cxx
- CCLINK_SunOS=gcc
- CCLINK_Cygwin=g++
+-
+-#Linker mapping
+-CCLINK_hpux=aCC
+-CCLINK_linux=gcc
+-CCLINK_freebsd=g++
+-CCLINK_tru64=cxx
+-CCLINK_SunOS=gcc
+-CCLINK_Cygwin=g++
 -CCLINK=$(CCLINK_$(SYSTEM))
-+#CCLINK=$(CCLINK_$(SYSTEM))
-+CCLINK=$(CXX)
- 
+-
  #Linker Flags
- LFLAGS_hpux=-AA -mt
-@@ -122,7 +130,8 @@
- LFLAGS_tru64=
- LFLAGS_SunOS=
- LFLAGS_Cygwin=
+-LFLAGS_hpux=-AA -mt
+-LFLAGS_linux=
+-LFLAGS_freebsd=
+-LFLAGS_tru64=
+-LFLAGS_SunOS=
+-LFLAGS_Cygwin=
 -LFLAGS=$(LFLAGS_$(SYSTEM))
-+LFLAGS_Darwin=
-+LFLAGS=$(LFLAGS_$(SYSTEM) $(LDFLAGS)
- 
- #Link Libraries
- LIBS_linux= -ldl -lpthread -lcurses -lstdc++
-@@ -131,11 +140,12 @@
- LIBS_freebsd= -lcurses -pthread
- LIBS_SunOS= -lcurses -lpthread -lnsl -lsocket -lstdc++ -ldl
- LIBS_Cygwin= -lcurses -lpthread -lstdc++ 
-+LIBS_Darwin= -lcurses
- LIBS=$(LIBS_$(SYSTEM))
+-
+-#Link Libraries
+-LIBS_linux= -ldl -lpthread -lcurses -lstdc++
+-LIBS_hpux= -lcurses
+-LIBS_tru64= -lcurses -lpthread
+-LIBS_freebsd= -lcurses -pthread
+-LIBS_SunOS= -lcurses -lpthread -lnsl -lsocket -lstdc++ -ldl
+-LIBS_Cygwin= -lcurses -lpthread -lstdc++ 
+-LIBS=$(LIBS_$(SYSTEM))
++LDFLAGS+=	${PTHREAD_LDFLAGS} ${DL_FLAGS}
++LIBS.SunOS=	-lnsl -lsocket
++LIBS+=		-lncurses ${PTHREAD_LIBS} ${LIBS.${OPSYS}} ${DL_LIBS}
  
  # Operating system detection rule
- all:
+-all:
 -	make OSNAME=`uname|sed -e "s/CYGWIN.*/CYGWIN/"` MODELNAME=`uname -m` $(OUTPUT)
-+	make OSNAME=`uname|sed -e "s/CYGWIN.*/CYGWIN/"` MODELNAME=`uname -m|sed -e "s/Power Macintosh/powerpc/"` $(OUTPUT)
++all: ${OUTPUT}
  
  $(OUTPUT): $(OBJ)
- 	$(CCLINK) $(LFLAGS) $(MFLAGS) $(LIBDIR_$(SYSTEM)) \
+-	$(CCLINK) $(LFLAGS) $(MFLAGS) $(LIBDIR_$(SYSTEM)) \
+-	$(DEBUG_FLAGS) -o $@ $(OBJ) $(LIBS)
++	$(CXX) $(LDFLAGS) $(DEBUG_FLAGS) -o $@ $(OBJ) $(LIBS)
+ 
+ debug:
+ 	DEBUG_FLAGS="-g -pg" ; export DEBUG_FLAGS ; make all
+@@ -163,11 +72,11 @@ archive:
+ *.o: *.h *.hpp
+ 
+ .C.o:
+-	$(CPP) $(CPPFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(INCDIR) -c -o $*.o $<
++	$(CXX) $(CXXFLAGS) $(DEBUG_FLAGS) $(INCDIR) -c -o $@ $<
+ 
+ .cpp.o:
+-	$(CPP) $(CPPFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(INCDIR) -c -o $*.o $<
++	$(CXX) $(CXXFLAGS) $(DEBUG_FLAGS) $(INCDIR) -c -o $@ $<
+ 
+ .c.o:
+-	$(CC) $(CFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(INCDIR) -c -o $*.o $<
++	$(CC) $(CFLAGS) $(DEBUG_FLAGS) $(INCDIR) -c -o $@ $<
+ 
