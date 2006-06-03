@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2006/06/03 18:25:44 gschwarz Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/03 19:48:26 gschwarz Exp $
 
 DISTNAME=	sipp.1.0
 PKGNAME=	sipp-1.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sipp/}
 
-MAINTAINER=     schwarz@NetBSD.org
+MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://sipp.sourceforge.net/
 COMMENT=	SIPp is a free Open Source SIP test tool/traffic generator
 
