@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/06/07 14:00:22 obache Exp $
+
+--- threadutil/src/ThreadPool.c.orig	2006-05-22 16:22:46.000000000 +0900
++++ threadutil/src/ThreadPool.c
+@@ -92,11 +92,15 @@ FreeThreadPoolJob( ThreadPool * tp,
+ static int
+ SetPolicyType( PolicyType in )
+ {
++#ifdef _POSIX_PRIORITY_SCHEDULING
+     struct sched_param current;
+ 
+     sched_getparam( 0, &current );
+     current.sched_priority = DEFAULT_SCHED_PARAM;
+     return sched_setscheduler( 0, in, &current );
++#else
++    return 0;
++#endif
+ }
+ 
+ /****************************************************************************
+@@ -117,6 +121,7 @@ static int
+ SetPriority( ThreadPriority priority )
+ {
+ 
++#ifdef _POSIX_PRIORITY_SCHEDULING
+     int currentPolicy;
+     int minPriority = 0;
+     int maxPriority = 0;
+@@ -148,6 +153,9 @@ SetPriority( ThreadPriority priority )
+ 
+     return pthread_setschedparam( ithread_self(  ), currentPolicy,
+                                   &newPriority );
++#else
++    return 0;
++#endif
+ 
+ }
+ 
+@@ -341,7 +349,7 @@ tp->stats.totalJobsLQ++; tp->stats.total
+     struct timeb t;
+ 
+     ftime( &t );
+-    srand( ( unsigned int )t.millitm + ithread_get_current_thread_id(  ) );
++    srand( ( unsigned int )t.millitm + ( unsigned int )ithread_get_current_thread_id(  ) );
+     }
+ 
+ /****************************************************************************
