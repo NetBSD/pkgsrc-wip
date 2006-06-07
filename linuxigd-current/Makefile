@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:01 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/07 08:42:26 obache Exp $
 #
 
 DISTNAME=	linuxigd-0.99
@@ -12,7 +12,8 @@ COMMENT=	Linux UPnP Internet Gateway Device
 USE_TOOLS+=	gmake
 
 CVS_REPOSITORIES=	linux-igd
-CVS_ROOT.linux-igd=	${CVS_ROOT_SOURCEFORGE}/linux-igd
+#CVS_ROOT.linux-igd=	${CVS_ROOT_SOURCEFORGE}/linux-igd
+CVS_ROOT.linux-igd=	:pserver:anonymous:@linux-igd.cvs.sourceforge.net:/cvsroot/linux-igd
 CVS_MODULE.linux-igd=	linux-igd
 
 WRKSRC=		${WRKDIR}/linux-igd

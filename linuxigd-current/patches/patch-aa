@@ -1,33 +1,40 @@
-$NetBSD: patch-aa,v 1.3 2006/02/08 02:09:10 obache Exp $
+$NetBSD: patch-aa,v 1.4 2006/06/07 08:42:27 obache Exp $
 
---- Makefile.orig	2006-02-02 08:53:39.000000000 +0900
+--- Makefile.orig	2006-05-24 07:16:36.000000000 +0900
 +++ Makefile
-@@ -1,36 +1,35 @@
+@@ -1,43 +1,38 @@
 -PREFIX=/usr
- LIBIPTC_PREFIX=/usr
- 
+-LIBUPNP_PREFIX=/usr
+-#LIBIPTC_PREFIX=/usr
+-
 -CC=gcc
--INCLUDES= -I/usr/local/include/upnp  -I../include
--LIBS= -lpthread -lupnp -lixml -lthreadutil -L/usr/local/lib -L../libs
-+LIBS= $(PTHREAD_LIBS) -lupnp -lixml -lthreadutil -L/usr/local/lib -L../libs
+-INCLUDES= -I$(LIBUPNP_PREFIX)/include -I../include
+-LIBS= -lpthread -lupnp -lixml -lthreadutil -L$(LIBUPNP_PREFIX)/lib -L../libs
++LIBS= $(PTHREAD_LIBS) -lupnp -lixml -lthreadutil -L../libs
  FILES= main.o gatedevice.o pmlist.o util.o config.o
  
--CFLAGS += -Wall -g
-+CFLAGS += -Wall -g $(PTHREAD_CFLAGS)
+-CFLAGS += -Wall -g -O2
++CFLAGS += -Wall -g -O2 $(PTHREAD_CFLAGS)
 +LDFLAGS += $(PTHREAD_LDFLAGS)
  
  ifdef HAVE_LIBIPTC
- LIBS += -L$(LIBIPTC_PREFIX)/lib -liptc
--INCLUDES += -DHAVE_LIBIPTC -I$(LIBIPTC_PREFIX)/include
-+CFLAGS += -DHAVE_LIBIPTC -I$(LIBIPTC_PREFIX)/include
+ ifdef LIBIPTC_PREFIX
+ LIBS += -L$(LIBIPTC_PREFIX)/lib
+-INCLUDES += -I$(LIBIPTC_PREFIX)/include
++CFLAGS += -I$(LIBIPTC_PREFIX)/include
+ endif
+ 
+ LIBS += -liptc
+-INCLUDES += -DHAVE_LIBIPTC
++CFLAGS += -DHAVE_LIBIPTC
  FILES += iptc.o
  endif
  
  all: upnpd
  
  upnpd: $(FILES)
--	$(CC) $(CFLAGS) $(FILES) $(LIBS) -o  $@ 
-+	$(CC) $(LDFLAGS) $(FILES) $(LIBS) -o  $@ 
+-	$(CC) $(CFLAGS) $(FILES) $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $(FILES) $(LIBS) -o $@
  	@echo "make $@ finished on `date`"
  
  %.o:	%.c
@@ -44,12 +51,13 @@ $NetBSD: patch-aa,v 1.3 2006/02/08 02:09:10 obache Exp $
 -	install etc/gateicfgSCPD.xml /etc/linuxigd
 -	install etc/dummy.xml /etc/linuxigd
 -	install upnpd $(PREFIX)/sbin
+-	install upnpd.8 $(PREFIX)/share/man/man8
 -	if [ ! -f /etc/upnpd.conf ]; then install etc/upnpd.conf /etc; fi
-+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/examples/linuxigd
++	${BSD_INSTALL_DATA_DIR} -d ${PREFIX}/share/examples/linuxigd
 +	${BSD_INSTALL_DATA} etc/gatedesc.xml ${PREFIX}/share/examples/linuxigd
 +	${BSD_INSTALL_DATA} etc/gateconnSCPD.xml  ${PREFIX}/share/examples/linuxigd
 +	${BSD_INSTALL_DATA} etc/gateicfgSCPD.xml ${PREFIX}/share/examples/linuxigd
 +	${BSD_INSTALL_DATA} etc/dummy.xml ${PREFIX}/share/examples/linuxigd
-+	${BSD_INSTALL_DATA} etc/ligd.gif ${PREFIX}/share/examples/linuxigd
 +	${BSD_INSTALL_PROGRAM} upnpd $(PREFIX)/sbin
++	${BSD_INSTALL_MAN} upnpd.8 $(PREFIX)/$(PKGMANDIR)/man8
 +	${BSD_INSTALL_DATA} etc/upnpd.conf ${PREFIX}/share/examples/linuxigd
