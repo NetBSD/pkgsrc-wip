@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
+$NetBSD: patch-ao,v 1.2 2006/06/07 14:05:28 obache Exp $
 
 --- upnp/src/genlib/net/uri/uri.c.orig	2003-02-14 01:19:15.000000000 +0900
 +++ upnp/src/genlib/net/uri/uri.c
@@ -12,14 +12,14 @@ $NetBSD: patch-ao,v 1.1.1.1 2005/09/24 14:46:02 obache Exp $
 + #elif defined(__hpux) || defined(_AIX)
 +	errCode = gethostbyname_r( temp_host_name,
 +				   &h_buf,
-+				   (struct hostent_data*)temp_hostbyname_buff)
++				   (struct hostent_data*)temp_hostbyname_buff);
 +	h = &h_buf;
 + #elif defined(__GLIBC__)
          errCode = gethostbyname_r( temp_host_name,
                                     &h_buf,
                                     temp_hostbyname_buff,
                                     BUFFER_SIZE, &h, &errcode );
-+ #elif defined(SOLARIS)
++ #elif defined(sun)
 +	errCode = gethostbyname_r( temp_host_name,
 +				   &h_buf,
 +				   temp_hostbyname_buff,
