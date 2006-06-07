@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2006/03/14 01:27:57 jlamwww Exp $
+# $NetBSD: Makefile,v 1.15 2006/06/07 20:41:55 adrian_p Exp $
 
-DISTNAME=	anope-1.7.13
+DISTNAME=	anope-1.7.14
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anope/}
 
@@ -37,18 +37,18 @@ CONFIGURE_ARGS+=	--with-rungroup=${ANOPE_GROUP:Q}
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	data/example.chk data/example.conf
-SUBST_SED.paths=	-e "s|/home/ircd/services|${PREFIX}/lib/anope|g" \
-			-e "s|/usr/local/lib/services|${PREFIX}/lib/anope|g" \
-			-e "s|/home/username/services|${PREFIX}/lib/anope|g"
+SUBST_SED.paths=	-e "s|/home/ircd/services|${PREFIX}/lib/anope|g"
+SUBST_SED.paths+=	-e "s|/usr/local/lib/services|${PREFIX}/lib/anope|g"
+SUBST_SED.paths+=	-e "s|/home/username/services|${PREFIX}/lib/anope|g"
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 
 SUBST_CLASSES+=		utils
 SUBST_STAGE.utils=	post-patch
 SUBST_FILES.utils=	src/Makefile
-SUBST_SED.utils=	-e "s|find|${FIND}|g" \
-			-e "s|chgrp|${CHGRP}|g" \
-			-e "s|chmod|${CHMOD}|g" \
-			-e "s|ln|${LN}|g"
+SUBST_SED.utils=	-e "s|find|${FIND}|g"
+SUBST_SED.utils+=	-e "s|chgrp|${CHGRP}|g"
+SUBST_SED.utils+=	-e "s|chmod|${CHMOD}|g"
+SUBST_SED.utils+=	-e "s|ln|${LN}|g"
 SUBST_MESSAGE.utils=	Fixing hardcoded utilities.
 
 .include "../../mk/pthread.buildlink3.mk"
@@ -57,14 +57,14 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/anope
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/anope
 	${INSTALL_DATA} ${WRKSRC}/docs/* ${PREFIX}/share/doc/anope
-	@${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/anoperc
-	@${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/listchans
-	@${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/listnicks
-	@${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/services
-	@${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/modules/*.so
-	@${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope
-	@${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope/backups
-	@${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope/logs
+	${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/anoperc
+	${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/listchans
+	${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/listnicks
+	${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/services
+	${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/modules/*.so
+	${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope
+	${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope/backups
+	${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope/logs
 	${INSTALL_DATA} ${WRKSRC}/data/* ${PREFIX}/share/examples/anope
 
 .include "../../mk/bsd.pkg.mk"

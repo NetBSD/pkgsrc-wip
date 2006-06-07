@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/01/02 16:01:16 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/06/07 20:41:55 adrian_p Exp $
 lib/anope/anoperc
 lib/anope/languages/cat
 lib/anope/languages/de
@@ -33,6 +33,7 @@ lib/anope/modules/bs_kick.so
 lib/anope/modules/bs_say.so
 lib/anope/modules/bs_set.so
 lib/anope/modules/bs_unassign.so
+lib/anope/modules/charybdis.so
 lib/anope/modules/cs_access.so
 lib/anope/modules/cs_akick.so
 lib/anope/modules/cs_appendtopic.so
@@ -182,6 +183,7 @@ share/doc/anope/WIN32.txt
 share/examples/anope/example.chk
 share/examples/anope/example.conf
 share/examples/anope/tables.sql
+share/examples/rc.d/anope
 @dirrm share/examples/anope
 @dirrm share/doc/anope
 @dirrm lib/anope/tools
