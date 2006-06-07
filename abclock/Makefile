@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2005/12/13 12:16:11 ghen Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/07 19:49:02 ghen Exp $
 
-DISTNAME=	abclock-1.0c
+DISTNAME=	abclock-1.0d
 CATEGORIES=	time
 MASTER_SITES=	${HOMEPAGE}
 
