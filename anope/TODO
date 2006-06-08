@@ -1,15 +1,6 @@
 Currently failing on startup with:
 	Shared object "nss_dns.so.0" not found
 
-I've chased this down to this email thread:
-	http://searchirc.com/boards/viewtopic.php?p=29382&sid=fa5342126d1e97ce2e94b088d3f2afcd
+If you remove /etc/nsswitch.conf then it works.
 
-Which basically means you have to install this:
-	http://www.rsu.ru/~bushman/lookupd/
-
-And then symlink:
-	ln -s ${PREFIX}/lib/lkpd_dns.so.1 ${PREFIX}/lib/nss_dns.so.1
-
-Which is great, except that lookupd is only for FreeBSD>5.1
-
-Update:  If you remove /etc/nsswitch.conf that works as well.
+patches/patch-ab is an attempt at fixing this.

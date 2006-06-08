@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2006/06/08 13:03:22 adrian_p Exp $
+
+--- src/modules.c.orig	2006-06-08 13:55:14.000000000 +0100
++++ src/modules.c
+@@ -563,6 +563,11 @@ int loadModule(Module * m, User * u)
+ 	return ret;
+ 	}
+ 
++    /*
++     * Reset dlerror() since it can contain error from previous
++     * call to dlopen()/dlsym().
++     */
++    err = ano_moderr(); 
+     m->filename = sstrdup(buf);
+     ano_modclearerr();
+     m->handle = ano_modopen(m->filename);
