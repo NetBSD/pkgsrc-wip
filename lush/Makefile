@@ -5,7 +5,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lush/}
 #EXTRACT_SUFX=	.tar.gz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	dauphin@enst.fr
 HOMEPAGE=	http://lush.sourceforge.net/
 COMMENT=	Lisp interpreter/compiler with a seamless interface to C
 
