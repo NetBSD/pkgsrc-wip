@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:18:12 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/06/08 11:14:27 absd Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NET6_BUILDLINK3_MK:=	${NET6_BUILDLINK3_MK}+
@@ -17,4 +17,4 @@ BUILDLINK_PKGSRCDIR.net6?=	../../wip/net6
 
 .include "../../devel/libsigc++2/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
