@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/06/09 13:55:17 dauphing Exp $
+
+--- src/ubit/unatjpeg.cpp.orig	Fri May 26 13:00:10 2006
++++ src/ubit/unatjpeg.cpp	Fri Jun  9 14:15:40 2006
+@@ -23,6 +23,7 @@
+ //pragma ident	"@(#)unatjpeg.cpp ubit:04.04.00"
+ #include <ubit/ubit_config.h>
+ #ifdef HAVE_LIBJPEG
++#include <X11/Xmd.h>  // for WORD64 and CARD32
+ 
+ // NB: stdio.h and not cstdio because these defs are needed by jpeglib.h
+ #include <stdio.h>
+@@ -38,7 +39,6 @@
+ #include <jpeglib.h>
+ }
+ #include <setjmp.h>
+-#include <X11/Xmd.h>  // for WORD64 and CARD32
+ #include <iostream>
+ #include <ubit/ubit.hpp>
+ #include <ubit/unatima.hpp>
