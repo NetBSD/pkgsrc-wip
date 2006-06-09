@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2271 2006/06/07 15:49:33 obache Exp $
+# $Id: Makefile,v 1.2272 2006/06/09 13:57:54 dauphing Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1326,6 +1326,7 @@ SUBDIR+=	twinkle
 SUBDIR+=	typespeed
 SUBDIR+=	typhoon
 SUBDIR+=	uade
+SUBDIR+=	ubit
 SUBDIR+=	uclibc
 SUBDIR+=	udhcp
 SUBDIR+=	uebimiau
