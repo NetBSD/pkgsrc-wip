@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/11 15:55:18 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/06/09 13:32:50 obache Exp $
 lib/libjqdbm.so
 lib/libjqdbm.so.1
 lib/libjqdbm.so.1.0.0
@@ -29,7 +29,7 @@ share/doc/qdbm/java/japidoc/serialized-form.html
 share/doc/qdbm/java/japidoc/stylesheet.css
 share/doc/qdbm/java/jspex-ja.html
 share/doc/qdbm/java/jspex.html
-@dirrm share/doc/qdbm/java/javadoc/qdbm
-@dirrm share/doc/qdbm/java/javadoc/resources
+@dirrm share/doc/qdbm/java/japidoc/qdbm
+@dirrm share/doc/qdbm/java/japidoc/resources
 @dirrm share/doc/qdbm/java/japidoc
 @dirrm share/doc/qdbm/java
