@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.14 2006/05/22 11:01:51 rillig Exp $
+# $Id: cvs-package.mk,v 1.15 2006/06/10 09:41:30 rillig Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs.
@@ -76,6 +76,8 @@ PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_MODULE."${_repo_:Q}" must be set."
 # Internal variables
 #
 
+USE_TOOLS+=		date
+
 _CVS_RSH=		ssh
 _CVS_CMD=		cvs
 _CVS_ENV=		# empty
@@ -84,7 +86,7 @@ _CVS_ENV+=		CVS_RSH=${_CVS_RSH:Q}
 _CVS_FLAGS=		-Q
 _CVS_CHECKOUT_FLAGS=	-P
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
-_CVS_TODAY_CMD=		date -u +'%Y-%m-%d'
+_CVS_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
 _CVS_TODAY=		${_CVS_TODAY_CMD:sh}
 
 #
