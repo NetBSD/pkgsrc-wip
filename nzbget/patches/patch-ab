@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2005/12/30 19:27:56 martijnb Exp $
+$NetBSD: patch-ab,v 1.3 2006/06/10 17:18:26 martijnb Exp $
 
 --- NZBQueue.cpp.orig	2005-09-02 09:00:41.000000000 +0200
 +++ NZBQueue.cpp
@@ -225,5 +225,14 @@ $NetBSD: patch-ab,v 1.2 2005/12/30 19:27:56 martijnb Exp $
 +	}
 +    }
    debug("%s",(char*)node);
+ }
+ 
+@@ -235,7 +231,7 @@ void NZBQueue::PrintProgressInfo()
+ 	char szBuffer[1024];
+ 	strcpy( szBuffer, basename( m_szFileName ) );
+ 	int iLength = strlen( szBuffer );
+-	sprintf( szBuffer+iLength, " (%i/%i files)", m_Jobs.size(), m_iOriginalNumberOfJobs );
++	sprintf( szBuffer+iLength, " (%i/%i files)", (int)m_Jobs.size(), m_iOriginalNumberOfJobs );
+ 	g_pFrontend->FrontendInfo( szBuffer );
  }
  

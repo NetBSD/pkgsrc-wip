@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.1 2005/12/21 11:33:31 martijnb Exp $
+$NetBSD: patch-am,v 1.2 2006/06/10 17:18:26 martijnb Exp $
 
 --- FileDownloader.cpp.orig	2005-09-02 09:00:41.000000000 +0200
 +++ FileDownloader.cpp
@@ -11,3 +11,12 @@ $NetBSD: patch-am,v 1.1 2005/12/21 11:33:31 martijnb Exp $
  		}
  		else
  		{
+@@ -607,7 +607,7 @@ void FileDownloader::LogBrokenFile( cons
+ {
+ 	FILE* file = fopen( szBrokenLogName, "a+" );
+ 	float fBrokenPrc = 1.0f - (float)(iBroken) / (float)iParts;
+-	fprintf( file, "%s (%.0f\%)\n", szFileName, 100.0f * fBrokenPrc );
++	fprintf( file, "%s (%.0f%%)\n", szFileName, 100.0f * fBrokenPrc );
+ 	fclose( file );
+ }                                            
+ 
