@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.15 2006/06/10 09:41:30 rillig Exp $
+# $Id: cvs-package.mk,v 1.16 2006/06/10 12:30:07 rillig Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs.
@@ -88,6 +88,7 @@ _CVS_CHECKOUT_FLAGS=	-P
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
 _CVS_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
 _CVS_TODAY=		${_CVS_TODAY_CMD:sh}
+_CVS_DISTDIR=		${DISTDIR}/cvs-packages
 
 #
 # Generation of repository-specific variables
@@ -104,7 +105,7 @@ _CVS_TAG.${_repo_}=		${CVS_TAG}
 _CVS_TAG_FLAG.${_repo_}=	-D${_CVS_TODAY}T00:00+0
 _CVS_TAG.${_repo_}=		${_CVS_TODAY:Q}
 .  endif
-_CVS_DISTFILE.${_repo_}=	${PKGBASE}-cvs-${_CVS_TAG.${_repo_}}.tar.gz
+_CVS_DISTFILE.${_repo_}=	${PKGBASE}-${CVS_MODULE.${_repo_}}-${_CVS_TAG.${_repo_}}.tar.gz
 .endfor
 
 pre-extract: do-cvs-extract
@@ -114,8 +115,9 @@ do-cvs-extract:
 .for _repo_ in ${CVS_REPOSITORIES}
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKDIR};							\
-	if ${TEST} -f ${DISTDIR}/${_CVS_DISTFILE.${_repo_}:Q}; then	\
-	  ${STEP_MSG} "Extracting cached CVS archive "${_CVS_DISTFILE.${_repo_}:Q}".";\
+	if ${TEST} -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${_repo_}:Q}; then \
+	  ${STEP_MSG} "Extracting cached CVS archive "${_CVS_DISTFILE.${_repo_}:Q}"."; \
+	  ${PAX} -r -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${_repo_}:Q}; \
 	else								\
 	case ${CVS_ROOT.${_repo_}:Q} in					\
 	  :pserver:*)							\
@@ -134,7 +136,8 @@ do-cvs-extract:
 	    checkout ${_CVS_CHECKOUT_FLAGS} ${_CVS_TAG_FLAG.${_repo_}:Q} \
 	      -d ${_repo_:Q} ${CVS_MODULE.${_repo_}:Q};			\
 	${STEP_MSG} "Creating cached CVS archive "${_CVS_DISTFILE.${_repo_}:Q}"."; \
-	${PAX} -w -z -f ${DISTDIR}/${_CVS_DISTFILE.${_repo_}:Q} ${_repo_:Q}; \
+	${MKDIR} ${_CVS_DISTDIR:Q};					\
+	${PAX} -w -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${_repo_}:Q} ${_repo_:Q}; \
 	fi
 .endfor
 
