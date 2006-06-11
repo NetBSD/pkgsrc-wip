@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.9 2006/04/22 10:48:37 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/11 22:24:02 jcflack Exp $
 #
 
-DISTNAME=		qcad-2.0.4.0-1.src
+DISTNAME=		qcad-2.0.5.0-1-community.src
 # what to do about this numbering? RibbonSoft really seems to use four digits
 # (there's a 2.0.4.7 for some platforms), though I don't know about the
 # thing after the hyphen, which always seems to be 1. Can I use four digits?
-PKGNAME=		qcad-2.0.4.0
+PKGNAME=		qcad-2.0.5.0
 
 .include "./Makefile.common"
 
 COMMENT=		2D CAD system
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+= 	gmake
+USE_TOOLS+= 		gmake
 
 CONFIGURE_DIRS= 	${WRKSRC}/fparser ${WRKSRC}/dxflib
 
@@ -67,13 +67,12 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/qcad/qcad ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/qcad
 	cd ${WRKSRC}/qcad && umask 022 && \
-	${PAX} -rwpm examples fonts patterns qm ${PREFIX}/share/qcad
+	${PAX} -rwpm data fonts patterns qm ${PREFIX}/share/qcad
 
 .include "../../x11/qt3-libs/buildlink3.mk"
+BUILDLINK_DEPENDS.qt3-libs+=	qt3-libs>=3.3.4
 .include "../../x11/qt3-tools/buildlink3.mk"
-# XXX Please verify whether qt3-tools is really needed at run-time.
-# If it is, then remove this comment.  If it is not, then remove
-# this comment and the line below, and bump PKGREVISION.
-BUILDLINK_DEPMETHOD.qt3-tools=	full
+BUILDLINK_DEPENDS.qt3-tools+=	qt3-tools>=3.3.4
+BUILDLINK_DEPMETHOD.qt3-tools=	full # uses assistant for help
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
