@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1 2006/06/11 03:18:26 ykomatsu Exp $
+
+--- IlohaMail/include/version.inc.orig	2006-05-24 09:55:14.000000000 +0900
++++ IlohaMail/include/version.inc
+@@ -1,4 +1,4 @@
+ <?php
+ $version = "0.8.14";
+-$v_stat = "RC2";
++$v_stat = "RC3";
+ ?>
