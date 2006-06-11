@@ -1,6 +1,0 @@
-Currently failing on startup with:
-	Shared object "nss_dns.so.0" not found
-
-If you remove /etc/nsswitch.conf then it works.
-
-patches/patch-ab is an attempt at fixing this.
