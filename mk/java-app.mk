@@ -71,8 +71,8 @@ install-java-app-${s}:
 pre-install:	install-required-dirs
 
 install-required-dirs:
-.if !exists(${JAVA_APP_CLASSPATH})
-	${INSTALL_DATA_DIR} ${JAVA_APP_CLASSPATH}
+.if !exists(${JAVA_APP_PATH})
+	${INSTALL_DATA_DIR} ${JAVA_APP_PATH}
 .endif
 .if !exists(${JAR_PREFIX})
 	${INSTALL_DATA_DIR} ${JAR_PREFIX}
