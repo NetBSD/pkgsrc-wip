@@ -1,16 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2006/06/08 13:03:22 adrian_p Exp $
+$NetBSD: patch-ab,v 1.2 2006/06/11 18:03:14 adrian_p Exp $
 
---- src/modules.c.orig	2006-06-08 13:55:14.000000000 +0100
-+++ src/modules.c
-@@ -563,6 +563,11 @@ int loadModule(Module * m, User * u)
- 	return ret;
- 	}
+--- include/modules.h.orig	2006-03-27 09:35:55.000000000 +0100
++++ include/modules.h
+@@ -40,7 +40,7 @@ typedef void *	ano_module_t;
+ #define ano_moderr()			dlerror()
+ #define ano_modsym(file, symbol)	dlsym(file, DL_PREFIX symbol)
+ #define ano_modclose(file)		dlclose(file)
+-#define ano_modclearerr()		errno = 0
++#define ano_modclearerr()		dlerror()
+ #define MODULE_EXT			".so"
  
-+    /*
-+     * Reset dlerror() since it can contain error from previous
-+     * call to dlopen()/dlsym().
-+     */
-+    err = ano_moderr(); 
-     m->filename = sstrdup(buf);
-     ano_modclearerr();
-     m->handle = ano_modopen(m->filename);
+ #endif
