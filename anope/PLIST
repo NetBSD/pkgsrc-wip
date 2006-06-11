@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/06/07 20:41:55 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/06/11 18:19:40 adrian_p Exp $
 lib/anope/anoperc
 lib/anope/languages/cat
 lib/anope/languages/de
@@ -187,12 +187,9 @@ share/examples/rc.d/anope
 @dirrm share/examples/anope
 @dirrm share/doc/anope
 @dirrm lib/anope/tools
-@exec ${MKDIR} %D/lib/anope/modules/runtime
-@dirrm lib/anope/modules/runtime
-@dirrm lib/anope/modules
-@exec ${MKDIR} %D/lib/anope/logs
-@dirrm lib/anope/logs
+@unexec ${RMDIR} %D/lib/anope/modules/runtime 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/anope/modules 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/anope/logs 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/anope/backups 2>/dev/null || ${TRUE}
 @dirrm lib/anope/languages
-@exec ${MKDIR} %D/lib/anope/backups
-@dirrm lib/anope/backups
 @unexec ${RMDIR} %D/lib/anope 2>/dev/null || ${TRUE}
