@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/01/09 08:26:58 chriswareham Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/12 16:44:02 thomasklausner Exp $
 #
 
 DISTNAME=		qjackctl-0.2.19a
@@ -13,7 +13,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		autoconf pkg-config
 GNU_CONFIGURE=		yes
 
-.include "../../wip/jack/buildlink3.mk"
+.include "../../audio/jack/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 # XXX Please verify whether qt3-tools is really needed at run-time.
