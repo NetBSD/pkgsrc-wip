@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/30 17:12:42 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2006/06/12 21:02:18 thomasklausner Exp $
 
-SHA1 (testdisk-5.8.tar.gz) = ffe1d310491f0d09587a39cdea6541b26e271189
-RMD160 (testdisk-5.8.tar.gz) = d974e42b482ee43a3229343e70d2459a3667eac2
-Size (testdisk-5.8.tar.gz) = 534419 bytes
+SHA1 (testdisk-6.3.tar.bz2) = c76420450ac11660ee2f60d84055c01023d0660c
+RMD160 (testdisk-6.3.tar.bz2) = 8a3054acab3cb17d24fac1c2326ef791e1fe2e81
+Size (testdisk-6.3.tar.bz2) = 539376 bytes
