@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 22:27:44 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/12 16:28:55 thomasklausner Exp $
 #
 
 DISTNAME=		chromium-src-0.9.12
 PKGNAME=		chromium-0.9.12
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://www.reptilelabour.com/software/files/chromium/
 

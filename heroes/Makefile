@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/05/19 16:51:19 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.11 2006/06/12 16:28:56 thomasklausner Exp $
 #
 
 DISTNAME=		heroes-0.21
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=heroes/}
 DISTFILES=		${HEROES_DIRS:=.tar.bz2}

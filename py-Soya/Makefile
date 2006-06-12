@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2006/05/19 16:51:32 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/12 16:28:59 thomasklausner Exp $
 #
 
 DISTNAME=		Soya-0.6.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://download.gna.org/soya/
 EXTRACT_SUFX=		.tar.bz2

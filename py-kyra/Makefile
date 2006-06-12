@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:33 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/12 16:28:59 thomasklausner Exp $
 #
 
 DISTNAME=		PyKyra-0.4.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/PyK/k/}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.alobbs.com/pykyra/
 

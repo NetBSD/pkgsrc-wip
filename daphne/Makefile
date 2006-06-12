@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/02/17 21:59:40 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/12 16:28:55 thomasklausner Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}-src
 PKGNAME=		daphne-0.99.6c
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		http://daphne.rulecity.com/download/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2006/05/19 16:51:15 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/12 16:28:55 thomasklausner Exp $
 #
 
 DISTNAME=	DFBSee-0.7.4
 PKGNAME=	${DISTNAME:S/DFBS/dfbs/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.directfb.org/download/DFBSee/
 

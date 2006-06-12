@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/03/18 17:30:08 pulahti Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/12 16:29:04 thomasklausner Exp $
 
 DISTNAME=	xpilot-ng-4.7.2
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xpilot/}
 

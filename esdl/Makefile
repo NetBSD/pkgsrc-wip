@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/12/30 14:00:05 ghen Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/12 16:28:55 thomasklausner Exp $
 
 DISTNAME=	esdl-0.95.0630.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=esdl/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/05/01 01:32:05 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/12 16:28:56 thomasklausner Exp $
 #
 
 DISTNAME=	gtkglk-0.2
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_IFARCHIVE:=programming/glk/implementations/}
 

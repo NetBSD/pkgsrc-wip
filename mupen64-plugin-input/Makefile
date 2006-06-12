@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:27 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.8 2006/06/12 16:28:58 thomasklausner Exp $
 #
 
 DISTNAME=	mupen64_input
 PKGNAME=	${DISTNAME:S/_input/-plugin-input-1.1/}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://mupen64.emulation64.com/files/src/
 EXTRACT_SUFX=	.tar.bz2

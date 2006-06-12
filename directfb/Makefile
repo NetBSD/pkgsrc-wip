@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2006/05/19 16:51:15 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.20 2006/06/12 16:28:55 thomasklausner Exp $
 
 DISTNAME=	DirectFB-0.9.22
 PKGNAME=	directfb-0.9.22
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.directfb.org/download/DirectFB/
 

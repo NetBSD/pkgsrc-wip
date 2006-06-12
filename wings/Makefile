@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/04/06 07:18:36 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/12 16:29:04 thomasklausner Exp $
 
 DISTNAME=		wings-0.98.29b
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wings/}
 EXTRACT_SUFX=		.tar.bz2

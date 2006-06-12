@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2006/01/02 21:27:14 h2m Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/12 16:28:56 thomasklausner Exp $
 #
 
 PKGNAME=		globulation2-0.8.17
 DISTNAME=		glob2-0.8.17
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		http://lissrv3.epfl.ch/~glob2/data/
 

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/04 12:31:11 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/12 16:28:54 thomasklausner Exp $
 #
 
 .include "../../wip/bmpx/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-xine-/}
+PKGREVISION=	1
 
 COMMENT+=	(using xine)
 

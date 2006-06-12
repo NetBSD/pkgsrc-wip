@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2006/01/13 01:16:52 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/06/12 16:28:54 thomasklausner Exp $
 
 DISTNAME=		abuse_sdl-0.7.0
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://www.labyrinth.net.au/~trandor/abuse/files/
 EXTRACT_SUFX=		.tar.bz2

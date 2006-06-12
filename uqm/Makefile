@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2006/03/09 21:02:15 jlamwww Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/12 16:29:04 thomasklausner Exp $
 #
 
 DISTNAME=		uqm-0.3-source
 PKGNAME=		uqm-0.3
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sc2/}
 EXTRACT_SUFX=		.tgz

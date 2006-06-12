@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/01/17 10:20:47 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/06/12 16:29:00 thomasklausner Exp $
 #
 
 DISTNAME=		scourge-0.4
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scourge/}
 

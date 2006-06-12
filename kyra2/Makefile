@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:20 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/12 16:28:57 thomasklausner Exp $
 #
 
 DISTNAME=		kyra_src_2_0_7
 PKGNAME=		kyra2-2.0.7
 WRKSRC=			${WRKDIR}/kyra
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kyra/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/28 23:47:36 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/12 16:28:56 thomasklausner Exp $
 #
 
 DISTNAME=		freej-0.8.1
+PKGREVISION=		1
 CATEGORIES=		wip multimedia
 MASTER_SITES=		http://www.ljudmila.org/~jaromil/freej/releases/
 

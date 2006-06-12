@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:27 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/12 16:28:58 thomasklausner Exp $
 #
 
 DISTNAME=	mupen64_sound
 PKGNAME=	${DISTNAME:S/_sound/-plugin-sound-1.1/}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://mupen64.emulation64.com/files/src/
 EXTRACT_SUFX=	.tar.bz2

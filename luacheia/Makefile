@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/01/02 08:54:56 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/12 16:28:58 thomasklausner Exp $
 #
 
 DISTNAME=		luacheia5-5.0.1a4
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=/luacheia/}
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:20 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/12 16:28:57 thomasklausner Exp $
 #
 
 DISTNAME=		kyra_src_1_6_5
 PKGNAME=		kyra-1.6.5
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kyra/}
 
