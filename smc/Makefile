@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/12 16:29:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/12 16:47:48 thomasklausner Exp $
 #
 
 PKGNAME=		smc-0.97
@@ -14,7 +14,6 @@ MAINTAINER=		hernani@vecirex.net
 HOMEPAGE=		http://smclone.sf.net/
 COMMENT=		Super Mario (World) Clone using pretty 2D graphics
 
-DEPENDS+=		SDL-nas-[0-9]*:../../audio/SDL-nas
 GCC_REQD=		3.2
 
 WRKSRC=			${WRKDIR}/0.97
