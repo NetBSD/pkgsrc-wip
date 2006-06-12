@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 07:17:23 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/06/12 16:37:06 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GTK_SHARP_BUILDLINK3_MK:=	${GTK_SHARP_BUILDLINK3_MK}+
@@ -25,7 +25,7 @@ BUILDLINK_PKGSRCDIR.gtk-sharp?=	../../wip/gtk-sharp
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../www/gtkhtml36/buildlink3.mk"
+.include "../../www/gtkhtml38/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 

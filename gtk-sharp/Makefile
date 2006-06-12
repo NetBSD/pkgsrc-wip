@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/08/31 12:59:03 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.26 2006/06/12 16:37:06 thomasklausner Exp $
 #
 
 DISTNAME=	gtk-sharp-1.0.10
@@ -47,7 +47,7 @@ MAKE_FLAGS+=	RUNTIME=${MONO:Q}
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../www/gtkhtml36/buildlink3.mk"
+.include "../../www/gtkhtml38/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
