@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2272 2006/06/09 13:57:54 dauphing Exp $
+# $Id: Makefile,v 1.2273 2006/06/12 16:14:54 dauphing Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1357,6 +1357,7 @@ SUBDIR+=	vm-tools
 SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
 SUBDIR+=	vncviewer4
+SUBDIR+=	vreng
 SUBDIR+=	wang-ttf
 SUBDIR+=	wavpack
 SUBDIR+=	webcleaner
