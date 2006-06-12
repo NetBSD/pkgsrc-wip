@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2005/09/28 14:24:41 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/06/12 16:39:18 thomasklausner Exp $
 #
 
 DISTNAME=       interchange-5.2.1
-PKGNAME=        ${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	http://ftp.icdevgroup.org/interchange/5.2/tar/
 
 MAINTAINER=	eric@cirr.com
-HOMEPAGE=	http://www.icdevgroup.org
+HOMEPAGE=	http://www.icdevgroup.org/
 COMMENT=	Catalog application for web use (more than a web shopping cart.)
 
 DEPENDS+=	p5-DBI>=1.30:../../databases/p5-DBI
@@ -39,7 +38,6 @@ MESSAGE_SUBST+= 	ICUSER=${INTERCHANGE_USER}	\
 			ICDIR=${INTERCHANGE_DIR}
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/install/bsd.pkginstall.mk"
 
 USE_PERL5=	# defined
 
@@ -64,7 +62,7 @@ EGDIR=          ${INTERCHANGE_DIR}
 CONF_FILES=     ${EGDIR}/interchange.cfg.dist ${PKG_SYSCONFDIR}/interchange.cfg
 
 do-configure:
-	@cd ${WRKSRC}; \
+	cd ${WRKSRC}; \
 	${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL \
 		rpmbuilddir=${WRKSRC} \
 		INTERCHANGE_USER=${INTERCHANGE_USER} \
