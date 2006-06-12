@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2273 2006/06/12 16:14:54 dauphing Exp $
+# $Id: Makefile,v 1.2274 2006/06/12 16:42:02 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1003,7 +1003,6 @@ SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postgis74
 SUBDIR+=	postgresql-uniqueidentifier
-SUBDIR+=	postgresql73-postgis
 SUBDIR+=	postgresql74-postgis
 SUBDIR+=	postgresql80-postgis
 SUBDIR+=	postoffice
