@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/06/12 16:12:31 dauphing Exp $
+
+--- configure.ac.orig	Thu Jun  8 18:25:35 2006
++++ configure.ac	Mon Jun 12 15:53:12 2006
+@@ -726,7 +726,9 @@
+ if test "${with_mysql:=yes}" = "yes"; then
+   # lib path
+   MYSQL_L="-L${prefix}/lib"
+-  if test -f ${prefix}/lib/mysql/libmysqlclient.a ; then
++  if test -f ${prefix}/lib/mysql/libmysqlclient.so ; then
++    MYSQL_L="-L${prefix}/lib/mysql -R${prefix}/lib/mysql"
++  elif test -f ${prefix}/lib/mysql/libmysqlclient.a ; then
+     MYSQL_L="-L${prefix}/lib/mysql"
+   elif test -f ${prefix}/lib/libmysqlclient.a ; then
+     MYSQL_L="-L${prefix}/lib"
