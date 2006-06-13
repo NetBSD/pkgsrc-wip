@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2006/06/13 09:31:23 dauphing Exp $
+$NetBSD: patch-aa,v 1.3 2006/06/13 09:42:59 dauphing Exp $
 
 --- configure.orig	Thu Jun  8 18:28:57 2006
 +++ configure	Tue Jun 13 11:14:11 2006
@@ -6,18 +6,18 @@ $NetBSD: patch-aa,v 1.2 2006/06/13 09:31:23 dauphing Exp $
  if test "${with_mpeg:=yes}" = "yes"; then
    #
    # check mpeg
-+  # special patch for pkgsrc -lmpeg become -lmpeg-lib, because of kde conflict
++  # special patch for pkgsrc -lmpeg become -lmpeg_lib, because of kde conflict
    #
 -  echo "$as_me:$LINENO: checking for OpenMPEG in -lmpeg" >&5
 -echo $ECHO_N "checking for OpenMPEG in -lmpeg... $ECHO_C" >&6
-+  echo "$as_me:$LINENO: checking for OpenMPEG in -lmpeg-lib" >&5
-+echo $ECHO_N "checking for OpenMPEG in -lmpeg-lib... $ECHO_C" >&6
++  echo "$as_me:$LINENO: checking for OpenMPEG in -lmpeg_lib" >&5
++echo $ECHO_N "checking for OpenMPEG in -lmpeg_lib... $ECHO_C" >&6
  if test "${ac_cv_lib_mpeg_OpenMPEG+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lmpeg ${OSDEP_L} $LIBS"
-+LIBS="-lmpeg-lib ${OSDEP_L} $LIBS"
++LIBS="-lmpeg_lib ${OSDEP_L} $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.2 2006/06/13 09:31:23 dauphing Exp $
  echo "${ECHO_T}$ac_cv_lib_mpeg_OpenMPEG" >&6
  if test $ac_cv_lib_mpeg_OpenMPEG = yes; then
 -  VRELIBS="${OSDEP_L} -lmpeg ${VRELIBS}"
-+  VRELIBS="${OSDEP_L} -lmpeg-lib ${VRELIBS}"
++  VRELIBS="${OSDEP_L} -lmpeg_lib ${VRELIBS}"
  else
    echo "$as_me:$LINENO: result: 	--> libmpeg: http://starship.python.net/~gward/mpeglib:" >&5
  echo "${ECHO_T}	--> libmpeg: http://starship.python.net/~gward/mpeglib:" >&6

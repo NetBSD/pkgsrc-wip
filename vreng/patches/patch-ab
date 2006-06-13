@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2006/06/13 09:31:23 dauphing Exp $
+$NetBSD: patch-ab,v 1.3 2006/06/13 09:42:59 dauphing Exp $
 
 --- configure.ac.orig	Thu Jun  8 18:25:35 2006
 +++ configure.ac	Tue Jun 13 11:16:45 2006
@@ -14,10 +14,10 @@ $NetBSD: patch-ab,v 1.2 2006/06/13 09:31:23 dauphing Exp $
    #
    # check mpeg
    #
-+  # special patch for pkgsrc -lmpeg become -lmpeg-lib, because of kde conflict
++  # special patch for pkgsrc -lmpeg become -lmpeg_lib, because of kde conflict
    AC_CHECK_LIB(mpeg, OpenMPEG,
 -               [VRELIBS="${OSDEP_L} -lmpeg ${VRELIBS}"],
-+               [VRELIBS="${OSDEP_L} -lmpeg-lib ${VRELIBS}"],
++               [VRELIBS="${OSDEP_L} -lmpeg_lib ${VRELIBS}"],
      	       [AC_MSG_RESULT([	--> libmpeg: http://starship.python.net/~gward/mpeglib:])],
                 [${OSDEP_L}])
    if test $ac_cv_lib_mpeg_OpenMPEG = yes ; then
