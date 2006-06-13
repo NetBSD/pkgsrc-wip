@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2006/06/13 09:31:23 dauphing Exp $
+$NetBSD: distinfo,v 1.3 2006/06/13 09:44:26 dauphing Exp $
 
 SHA1 (vreng-6.6.2.tar.gz) = bc1a82d445eca42582a79d3c48f8b4c2921a9d0f
 RMD160 (vreng-6.6.2.tar.gz) = 8ce9a8b8adb7ea86bbf22dbf029970fc84b15794
 Size (vreng-6.6.2.tar.gz) = 970896 bytes
-SHA1 (patch-aa) = 919a7fa2c9b35279d33779d26e3ce80fdade07a8
-SHA1 (patch-ab) = 27bfd6c9869d9747eb6550bfb700284ad2a33301
+SHA1 (patch-aa) = 006ef54e1691c81a87088a4bab57276f22c15530
+SHA1 (patch-ab) = bf7ca4b4f57b890eaf0b4dac51cd00329491e7ea
