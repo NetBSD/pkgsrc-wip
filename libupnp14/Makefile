@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/07 14:00:22 obache Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/14 09:55:34 obache Exp $
 #
 
 DISTNAME=		libupnp-1.4.0
@@ -15,14 +15,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	libupnp.pc.in
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin" || ${OPSYS} == "BSDOS"
-LIBS+=		-lcompat     # XXX need this for ftime(3)
-CONFIGURE_ENV+=	LIBS=${LIBS:M*:Q}
-.endif
-
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
