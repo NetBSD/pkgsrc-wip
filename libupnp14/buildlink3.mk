@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2006/06/14 09:55:34 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/06/14 16:28:21 obache Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBUPNP_BUILDLINK3_MK:=	${LIBUPNP_BUILDLINK3_MK}+
@@ -19,7 +19,6 @@ BUILDLINK_PKGSRCDIR.libupnp?=	../../wip/libupnp14
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin" || ${OPSYS} == "BSDOS"
 BUILDLINK_LIBS.libupnp+=	-lcompat     # XXX need this for ftime(3)
-CONFIGURE_ENV+= LIBS=${LIBS:M*:Q}
 .endif
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
