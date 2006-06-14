@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/19 01:50:26 yomram Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/14 09:14:48 absd Exp $
 #
 
 PKGNAME=	sqlitebrowser-1.3
@@ -12,10 +12,11 @@ HOMEPAGE=	http://sqlitebrowser.sourceforge.net/
 
 USE_LANGUAGES=	c c++
 
-WRKSRC=	${WRKDIR}/sqlitebrowser
+WRKSRC=		${WRKDIR}/sqlitebrowser
 
-QMAKE=	${QTDIR}/bin/qmake
+QMAKE=			${QTDIR}/bin/qmake
 CONFIGURE_ARGS+=	QMAKE=${QMAKE:Q}
+USE_LANGUAGES=		c++
 
 BUILDLINK_DEPMETHOD.qt3-tools=  build
 
