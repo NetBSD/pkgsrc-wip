@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.2 2006/01/13 14:16:17 lkundrak Exp $
+$NetBSD: patch-ad,v 1.3 2006/06/15 13:19:22 thomasklausner Exp $
 
---- conf/i386-pc.rmk.orig	2005-12-25 16:59:50.000000000 +0100
+--- conf/i386-pc.rmk.orig	2006-05-28 23:01:43.000000000 +0000
 +++ conf/i386-pc.rmk
-@@ -101,7 +101,7 @@ grub_emu_SOURCES = commands/boot.c comma
+@@ -100,7 +100,7 @@ grub_emu_SOURCES = commands/boot.c comma
  	util/i386/pc/biosdisk.c util/i386/pc/getroot.c			\
  	util/i386/pc/misc.c grub_emu_init.c
  
 -grub_emu_LDFLAGS = $(LIBCURSES)
 +grub_emu_LDFLAGS = $(LIBCURSES) $(LIBARGP)
  
- # For genmoddep.
- genmoddep_SOURCES = util/genmoddep.c
+ # Scripts.
+ sbin_SCRIPTS = grub-install

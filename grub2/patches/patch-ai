@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.2 2006/01/13 14:16:17 lkundrak Exp $
+$NetBSD: patch-ai,v 1.3 2006/06/15 13:19:23 thomasklausner Exp $
 
---- util/grub-emu.c.orig	2005-11-13 16:47:09.000000000 +0100
+--- util/grub-emu.c.orig	2006-06-13 22:50:01.000000000 +0000
 +++ util/grub-emu.c
-@@ -172,6 +172,9 @@ main (int argc, char *argv[])
+@@ -182,6 +182,9 @@ main (int argc, char *argv[])
        sleep (1);
      }
    
@@ -12,9 +12,9 @@ $NetBSD: patch-ai,v 1.2 2006/01/13 14:16:17 lkundrak Exp $
    /* Make sure that there is a root device.  */
    if (! args.root_dev)
      {
-@@ -189,9 +192,6 @@ main (int argc, char *argv[])
- 
-   grub_env_set ("prefix", rootprefix);
+@@ -199,9 +202,6 @@ main (int argc, char *argv[])
+   sprintf (prefix, "%s%s", args.root_dev, dir);
+   free (dir);
    
 -  /* XXX: This is a bit unportable.  */
 -  grub_util_biosdisk_init (args.dev_map);

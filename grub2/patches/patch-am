@@ -1,12 +1,11 @@
-$NetBSD: patch-ah,v 1.3 2006/06/15 13:19:23 thomasklausner Exp $
+$NetBSD: patch-am,v 1.1 2006/06/15 13:19:24 thomasklausner Exp $
 
---- kern/mm.c.orig	2006-04-25 20:08:31.000000000 +0000
-+++ kern/mm.c
-@@ -429,6 +429,16 @@ grub_mm_dump (unsigned lineno)
-   grub_printf ("\n");
- }
+--- kern/rescue.c.orig	2006-04-23 13:37:36.000000000 +0000
++++ kern/rescue.c
+@@ -32,6 +32,15 @@
+ #include <grub/env.h>
+ #include <grub/parser.h>
  
-+
 +/*
 + * XXX: gcc on systems using non-executable mapping of stack generates
 + * reference to __enable_execute_stack() (libgcc)
@@ -16,6 +15,6 @@ $NetBSD: patch-ah,v 1.3 2006/06/15 13:19:23 thomasklausner Exp $
 +void __enable_execute_stack (void);
 +void __enable_execute_stack (void) {}
 +
- void *
- grub_debug_malloc (const char *file, int line, grub_size_t size)
- {
+ #define GRUB_RESCUE_BUF_SIZE	256
+ #define GRUB_RESCUE_MAX_ARGS	20
+ 

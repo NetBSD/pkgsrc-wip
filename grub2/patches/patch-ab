@@ -1,25 +1,17 @@
-$NetBSD: patch-ab,v 1.3 2006/02/07 08:14:10 lkundrak Exp $
+$NetBSD: patch-ab,v 1.4 2006/06/15 13:19:22 thomasklausner Exp $
 
---- Makefile.in.orig	2006-01-03 18:58:02.000000000 +0100
+--- Makefile.in.orig	2006-05-28 23:01:43.000000000 +0000
 +++ Makefile.in
-@@ -57,10 +57,13 @@ mkinstalldirs = $(srcdir)/mkinstalldirs
+@@ -56,7 +56,7 @@ mkinstalldirs = $(srcdir)/mkinstalldirs
+ 
  CC = @CC@
  CFLAGS = @CFLAGS@
- CPPFLAGS = -I. -Iinclude -I$(srcdir)/include -Wall -W
-+
- BUILD_CC = @BUILD_CC@
--BUILD_CFLAGS = -g -O2
--BUILD_CPPFLAGS = -I. -Iinclude -I$(srcdir)/include -Wall -W \
--	-DGRUB_DATADIR=\"$(pkgdatadir)\"
-+BUILD_CFLAGS = @BUILD_CFLAGS@
-+BUILD_CPPFLAGS = @BUILD_CPPFLAGS@
-+BUILD_CPPFLAGS += -I. -Iinclude -I$(srcdir)/include -DGRUB_DATADIR=\"$(pkgdatadir)\"
-+BUILD_LDFLAGS = -Wl,-R$(PREFIX)/lib @BUILD_LDFLAGS@
-+
- OBJCOPY = @OBJCOPY@
- STRIP = @STRIP@
- NM = @NM@
-@@ -70,6 +73,9 @@ LIBCURSES = @LIBCURSES@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -Wl,-R$(PREFIX)/lib @LDFLAGS@
+ CPPFLAGS = @CPPFLAGS@ -I. -Iinclude -I$(srcdir)/include -Wall -W \
+ 	 -DGRUB_LIBDIR=\"$(pkglibdir)\"
+ TARGET_CC = @TARGET_CC@
+@@ -73,6 +73,9 @@ LIBCURSES = @LIBCURSES@
  LIBLZO = @LIBLZO@
  YACC = @YACC@
  
