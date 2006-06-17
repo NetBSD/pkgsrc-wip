@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2005/10/24 17:27:04 rillig Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/06/17 15:12:48 poppnk Exp $
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-DEPENDS+=		bluez-libs>=2.15:../../wip/bluez-libs
+DEPENDS+=		bluez-libs>=3.0:../../wip/bluez-libs
+USE_TOOLS+=	pkg-config
 
 .include "../../wip/bluez-libs/buildlink3.mk"

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2006/02/04 12:09:34 poppnk Exp $
+$NetBSD: distinfo,v 1.8 2006/06/17 15:12:48 poppnk Exp $
 
-SHA1 (bluez-libs-2.25.tar.gz) = b7bce6eb431635db61fca969442ab5c355890352
-RMD160 (bluez-libs-2.25.tar.gz) = 34bd71a974cd8e2c1df1c5f71d271f8ee939c1e4
-Size (bluez-libs-2.25.tar.gz) = 291439 bytes
+SHA1 (bluez-libs-3.0.tar.gz) = 9af6f0c73c8a721307e1c510f41e5d7703463a30
+RMD160 (bluez-libs-3.0.tar.gz) = 1554b6eb92968092849c9cd95be824bfdbc2c676
+Size (bluez-libs-3.0.tar.gz) = 292181 bytes
