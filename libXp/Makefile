@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/29 04:27:29 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/17 19:04:47 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXp-1.0.0
@@ -14,6 +14,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 
+CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xp.pc.in
 
 .include "../../mk/bsd.prefs.mk"
