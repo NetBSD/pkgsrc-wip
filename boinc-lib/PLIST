@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/18 16:43:40 rumko Exp $
+bin/boinc_cmd
+bin/crypt_prog
+include/BOINC/app_i${LOWER_VENDOR}.h
+include/BOINC/boinc_api.h
+include/BOINC/boinc_win.h
+include/BOINC/boinc_zip.h
+include/BOINC/crypt.h
+include/BOINC/diagnostics.h
+include/BOINC/exception.h
+include/BOINC/filesys.h
+include/BOINC/graphics_api.h
+include/BOINC/graphics_impl.h
+include/BOINC/graphics_${PKGVERSION}.h
+include/BOINC/gutil.h
+include/BOINC/hostinfo.h
+include/BOINC/mfile.h
+include/BOINC/miofile.h
+include/BOINC/msg_log.h
+include/BOINC/parse.h
+include/BOINC/prefs.h
+include/BOINC/proxy_info.h
+include/BOINC/util.h
+${PKGVERSION}/${PKGVERSION}boinc.a
+${PKGVERSION}/${PKGVERSION}boinc_api.a
+${PKGVERSION}/${PKGVERSION}boinc_graphics_api.a
+${PKGVERSION}/${PKGVERSION}boinc_graphics_impl.a
+${PKGVERSION}/${PKGVERSION}boinc_graphics_${PKGVERSION}.a
+${PKGVERSION}/${PKGVERSION}boinc_zip.a
+@dirrm include/BOINC
