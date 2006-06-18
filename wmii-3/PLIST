@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/22 17:17:21 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/06/18 22:14:47 poppnk Exp $
 bin/wmii
 bin/wmiimenu
 bin/wmiipsel
@@ -6,12 +6,12 @@ bin/wmiir
 bin/wmiisetsid
 bin/wmiiwarp
 bin/wmiiwm
-etc/${PKGNAME}/quit
-etc/${PKGNAME}/status
-etc/${PKGNAME}/welcome
-etc/${PKGNAME}/wmiirc
+etc/wmii-3/quit
+etc/wmii-3/status
+etc/wmii-3/welcome
+etc/wmii-3/wmiirc
 man/man1/wmii.1
 man/man1/wmiimenu.1
 man/man1/wmiir.1
 man/man1/wmiiwm.1
-@dirrm etc/${PKGNAME}
+@dirrm etc/wmii-3

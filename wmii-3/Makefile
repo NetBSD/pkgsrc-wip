@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/22 17:17:21 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/18 22:14:47 poppnk Exp $
 #
 
-DISTNAME=		wmii-3
+DISTNAME=		wmii-3.1
 CATEGORIES=		wip wm
 MASTER_SITES=		http://wmii.de/download/
 
