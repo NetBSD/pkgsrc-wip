@@ -1,0 +1,3 @@
+	- fix the buildlink3.mk file
+	- make the package actually install the rc.d script, have no idea why it doesn't
+	- clean it up
