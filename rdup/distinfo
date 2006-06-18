@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/06/18 16:30:50 thomasklausner Exp $
+
+SHA1 (rdup-0.2.13.tar.bz2) = 44f96e0965c68932cd34cf7d5e51895175e7d268
+RMD160 (rdup-0.2.13.tar.bz2) = ec9e13ee186e090a7e1b30c2d99a2e0d06aa2bbf
+Size (rdup-0.2.13.tar.bz2) = 266010 bytes

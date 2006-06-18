@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/18 16:30:50 thomasklausner Exp $
+man/man1/crypt.sh.1
+man/man1/gzip.sh.1
+man/man1/hist.sh.1
+man/man1/yesterday.sh.1
+man/man8/dump-here.sh.8
+man/man8/dump.sh.8
+man/man8/mirror.sh.8
+man/man8/monthday.sh.8
+man/man8/rdup.8
+man/man8/restore.sh.8
+man/man8/rorrim.sh.8
+sbin/crypt.sh
+sbin/dump-here.sh
+sbin/dump.sh
+sbin/gzip.sh
+sbin/hist.sh
+sbin/mirror.sh
+sbin/monthday.sh
+sbin/rdup
+sbin/restore.sh
+sbin/rorrim.sh
+sbin/yesterday.sh
