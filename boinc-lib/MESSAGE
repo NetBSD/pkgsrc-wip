@@ -1,5 +1,0 @@
-===========================================================================
-To set the password of the client so you can access it with BOINC manager,
-run:
-	echo "new_password" > /path/to/boinc/data/dir/gui_rpc_auth.cfg
-===========================================================================
