@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/06 02:14:29 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/06/19 08:46:09 poppnk Exp $
 bin/git
 bin/git-add
 bin/git-am
@@ -77,6 +77,7 @@ bin/git-prune
 bin/git-prune-packed
 bin/git-pull
 bin/git-push
+bin/git-quiltimport
 bin/git-read-tree
 bin/git-rebase
 bin/git-receive-pack
@@ -91,6 +92,7 @@ bin/git-rev-list
 bin/git-rev-parse
 bin/git-revert
 bin/git-rm
+bin/git-send-email
 bin/git-send-pack
 bin/git-sh-setup
 bin/git-shell
@@ -114,6 +116,7 @@ bin/git-update-index
 bin/git-update-ref
 bin/git-update-server-info
 bin/git-upload-pack
+bin/git-upload-tar
 bin/git-var
 bin/git-verify-pack
 bin/git-verify-tag

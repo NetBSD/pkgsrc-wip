@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/05/14 16:19:40 poppnk Exp $
+# $NetBSD: Makefile,v 1.8 2006/06/19 08:46:09 poppnk Exp $
 #
 
-DISTNAME=		git-1.3.2
+DISTNAME=		git-1.4.0
 PKGNAME=		scm${DISTNAME}
 CATEGORIES=		devel
 MASTER_SITES=		http://www.kernel.org/pub/software/scm/git/
@@ -16,6 +16,7 @@ MAKE_ENV=	"DESTDIR="
 MAKE_ENV+=	HOME=${PREFIX:Q}
 USE_TOOLS+=	gmake
 USE_TOOLS+=	perl:run
+EXTRACT_USING=  gtar
 
 MAKE_ENV+=	PERL_PATH=${PERL5:Q}
 MAKE_ENV+=	PYTHON_PATH=${PYTHONBIN:Q}
