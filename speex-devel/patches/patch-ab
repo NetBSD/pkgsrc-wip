@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/06/20 18:20:21 gschwarz Exp $
+
+--- src/Makefile.in.orig	2006-02-10 11:13:16.000000000 +0100
++++ src/Makefile.in	2006-06-18 15:30:51.000000000 +0200
+@@ -186,7 +186,7 @@
+ libdir = @libdir@
+ libexecdir = @libexecdir@
+ localstatedir = @localstatedir@
+-mandir = $(prefix)/share/man
++mandir = @mandir@
+ mkdir_p = @mkdir_p@
+ oldincludedir = @oldincludedir@
+ prefix = @prefix@
+@@ -203,11 +203,11 @@
+ noinst_HEADERS = wav_io.h
+ speexenc_SOURCES = speexenc.c wav_io.c
+ speexenc_LDADD = $(top_builddir)/libspeex/libspeex.la \
+-	$(OGG_LIBS)
++	$(OGG_LIBS) $(LIBOSSAUDIO)
+ 
+ speexdec_SOURCES = speexdec.c wav_io.c
+ speexdec_LDADD = $(top_builddir)/libspeex/libspeex.la \
+-	$(OGG_LIBS)
++	$(OGG_LIBS) $(LIBOSSAUDIO)
+ 
+ all: all-am
+ 

@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/20 18:20:21 gschwarz Exp $
+bin/speexdec
+bin/speexenc
+include/speex/pcm_wrapper.h
+include/speex/speex.h
+include/speex/speex_bits.h
+include/speex/speex_callbacks.h
+include/speex/speex_config_types.h
+include/speex/speex_echo.h
+include/speex/speex_header.h
+include/speex/speex_jitter.h
+include/speex/speex_preprocess.h
+include/speex/speex_stereo.h
+include/speex/speex_types.h
+lib/libspeex.la
+lib/pkgconfig/speex.pc
+man/man1/speexdec.1
+man/man1/speexenc.1
+share/aclocal/speex.m4
+share/doc/speex-${PKGVERSION}/manual.pdf
+@dirrm share/doc/speex-${PKGVERSION}
+@dirrm include/speex
