@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:01 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/22 08:18:38 obache Exp $
 #
 
 DISTNAME=	linuxigd-0.92
@@ -32,5 +32,5 @@ SUBST_STAGE.cfgdir=	pre-configure
 SUBST_FILES.cfgdir=	gateway.h
 SUBST_SED.cfgdir=	-e 's|@CONFDIR@|${PKG_SYSCONFDIR}|'
 
-.include "../../wip/libupnp/buildlink3.mk"
+.include "../../wip/libupnp10/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
