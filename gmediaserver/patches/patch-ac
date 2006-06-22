@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/06/22 08:32:18 obache Exp $
+
+--- src/webserver.c.orig	2006-03-04 18:58:47.000000000 +0000
++++ src/webserver.c
+@@ -282,7 +282,7 @@ webserver_read(UpnpWebFileHandle fh, cha
+ 	len = read(file->detail.local.fd, buf, buflen);
+ 	break;
+     case FILE_MEMORY:
+-	len = min(buflen, file->detail.memory.len - file->pos);
++	len = MIN(buflen, file->detail.memory.len - file->pos);
+ 	memcpy(buf, file->detail.memory.contents + file->pos, len);
+ 	break;
+     case FILE_URL:

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2006/06/07 08:42:27 obache Exp $
+$NetBSD: patch-aa,v 1.5 2006/06/22 08:34:02 obache Exp $
 
 --- Makefile.orig	2006-05-24 07:16:36.000000000 +0900
 +++ Makefile
-@@ -1,43 +1,38 @@
+@@ -1,43 +1,39 @@
 -PREFIX=/usr
 -LIBUPNP_PREFIX=/usr
 -#LIBIPTC_PREFIX=/usr
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.4 2006/06/07 08:42:27 obache Exp $
 -CC=gcc
 -INCLUDES= -I$(LIBUPNP_PREFIX)/include -I../include
 -LIBS= -lpthread -lupnp -lixml -lthreadutil -L$(LIBUPNP_PREFIX)/lib -L../libs
-+LIBS= $(PTHREAD_LIBS) -lupnp -lixml -lthreadutil -L../libs
++LIBS= $(PTHREAD_LIBS) `pkg-config libupnp --libs` -L../libs
  FILES= main.o gatedevice.o pmlist.o util.o config.o
  
 -CFLAGS += -Wall -g -O2
@@ -53,11 +53,12 @@ $NetBSD: patch-aa,v 1.4 2006/06/07 08:42:27 obache Exp $
 -	install upnpd $(PREFIX)/sbin
 -	install upnpd.8 $(PREFIX)/share/man/man8
 -	if [ ! -f /etc/upnpd.conf ]; then install etc/upnpd.conf /etc; fi
-+	${BSD_INSTALL_DATA_DIR} -d ${PREFIX}/share/examples/linuxigd
-+	${BSD_INSTALL_DATA} etc/gatedesc.xml ${PREFIX}/share/examples/linuxigd
-+	${BSD_INSTALL_DATA} etc/gateconnSCPD.xml  ${PREFIX}/share/examples/linuxigd
-+	${BSD_INSTALL_DATA} etc/gateicfgSCPD.xml ${PREFIX}/share/examples/linuxigd
-+	${BSD_INSTALL_DATA} etc/dummy.xml ${PREFIX}/share/examples/linuxigd
++	${BSD_INSTALL_DATA_DIR} -d ${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/gatedesc.xml ${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/gateconnSCPD.xml  ${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/gateicfgSCPD.xml ${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/dummy.xml ${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/ligd.gif ${PREFIX}/etc/linuxigd
 +	${BSD_INSTALL_PROGRAM} upnpd $(PREFIX)/sbin
 +	${BSD_INSTALL_MAN} upnpd.8 $(PREFIX)/$(PKGMANDIR)/man8
-+	${BSD_INSTALL_DATA} etc/upnpd.conf ${PREFIX}/share/examples/linuxigd
++	${BSD_INSTALL_DATA} etc/upnpd.conf ${PREFIX}/share/examples

@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2006/06/22 08:32:18 obache Exp $
+
+--- src/webclient.c.orig	2005-09-16 14:31:12.000000000 +0000
++++ src/webclient.c
+@@ -19,6 +19,7 @@
+  */
+ 
+ #include <config.h>
++#include <unistd.h>		/* POSIX */
+ #include <sys/socket.h>		/* POSIX */
+ #include <netinet/in.h>		/* POSIX */
+ #include <netdb.h>		/* POSIX */

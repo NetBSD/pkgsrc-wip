@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2006/06/22 08:32:18 obache Exp $
+
+--- src/metadata.c.orig	2006-03-13 13:16:10.000000000 +0000
++++ src/metadata.c
+@@ -55,6 +55,7 @@
+ #include "strutil.h"
+ #include "intutil.h"
+ #include "gmediaserver.h"
++#include <ithread.h>
+ 
+ #define DEFAULT_ENTRIES_SIZE 		512
+ #define DEFAULT_FILE_TYPES 		"mp3,wma,m3u,pls"
