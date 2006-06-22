@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2276 2006/06/18 16:36:12 thomasklausner Exp $
+# $Id: Makefile,v 1.2277 2006/06/22 08:46:10 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -575,8 +575,7 @@ SUBDIR+=	libticalcs
 SUBDIR+=	libtifiles
 SUBDIR+=	libtlen2
 SUBDIR+=	libupnp
-SUBDIR+=	libupnp12
-SUBDIR+=	libupnp14
+SUBDIR+=	libupnp10
 SUBDIR+=	libuuid
 SUBDIR+=	libvc
 SUBDIR+=	libvg
