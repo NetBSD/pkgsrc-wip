@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/17 21:46:42 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/06/22 20:51:58 poppnk Exp $
 bin/bss
+bin/replay_l2cap_packet
 share/doc/bss/ArticleFR_bluetooth_pbetouin.pdf
 share/doc/bss/README
 share/doc/bss/bluetooth.jpg
 share/doc/bss/hcidump-crash.c
 share/doc/bss/index.html
-share/doc/bss/replay_l2cap_packet.c
 share/doc/bss/reset_display_KV600i.c
 @dirrm share/doc/bss
