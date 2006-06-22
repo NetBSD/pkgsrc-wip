@@ -1,16 +1,14 @@
-$NetBSD: patch-ae,v 1.2 2005/03/16 12:15:28 obache Exp $
+$NetBSD: patch-ae,v 1.3 2006/06/22 08:28:34 obache Exp $
 
---- src/genlib/client_table/Makefile.orig	2001-06-15 09:21:34.000000000 +0900
-+++ src/genlib/client_table/Makefile
-@@ -70,9 +70,9 @@ CFLAGS += -DINCLUDE_DEVICE_APIS
- endif
+--- libupnp.pc.in.orig	2006-05-18 16:01:10.000000000 +0900
++++ libupnp.pc.in
+@@ -6,7 +6,7 @@ includedir=@includedir@
+ Name: libupnp
+ Description: Linux SDK for UPnP Devices
+ Version: @VERSION@
+-Libs: @PTHREAD_LIBS@ -L${libdir} -lupnp -lthreadutil -lixml 
+-Cflags: @PTHREAD_CFLAGS@ -I${includedir}
++Libs: @PTHREAD_LIBS@ -L${libdir} -lupnp -lthreadutil -lixml @LIBS@
++Cflags: @PTHREAD_CFLAGS@ -I${includedir}/upnp
  
- ifeq ($(DEBUG),1)
--CFLAGS += -g -O -D_REENTRANT -DDEBUG
-+CFLAGS += -g -O  $(PTHREAD_CFLAGS) -DDEBUG
- else
--CFLAGS += -O2 -D_REENTRANT -DNO_DEBUG
-+CFLAGS += -O2  $(PTHREAD_CFLAGS) -DNO_DEBUG
- endif
  
- all: $(TARGET)

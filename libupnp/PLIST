@@ -1,21 +1,32 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
-include/upnp/tools/config.h
-include/upnp/tools/upnptools.h
+@comment $NetBSD: PLIST,v 1.2 2006/06/22 08:28:34 obache Exp $
+include/upnp/FreeList.h
+include/upnp/LinkedList.h
+include/upnp/ThreadPool.h
+include/upnp/TimerThread.h
+include/upnp/iasnprintf.h
+include/upnp/ithread.h
+include/upnp/ixml.h
 include/upnp/upnp.h
-include/upnp/upnpdom/Attr.h
-include/upnp/upnpdom/DOMException.h
-include/upnp/upnpdom/Document.h
-include/upnp/upnpdom/Element.h
-include/upnp/upnpdom/NamedNodeMap.h
-include/upnp/upnpdom/Node.h
-include/upnp/upnpdom/NodeAct.h
-include/upnp/upnpdom/NodeList.h
-include/upnp/upnpdom/Parser.h
-include/upnp/upnpdom/all.h
-include/upnp/upnpdom/domCif.h
-lib/libupnp.so
-lib/libupnp.so.1
-lib/libupnp.so.1.0.4
-@dirrm include/upnp/upnpdom
-@dirrm include/upnp/tools
+include/upnp/upnpconfig.h
+include/upnp/upnptools.h
+lib/libixml.la
+lib/libthreadutil.la
+lib/libupnp.la
+lib/pkgconfig/libupnp.pc
+share/doc/libupnp-1.4.0/LICENSE
+share/doc/libupnp-1.4.0/NEWS
+share/doc/libupnp-1.4.0/README
+share/doc/libupnp-1.4.0/THANKS
+share/doc/libupnp-1.4.0/TODO
+share/doc/libupnp-1.4.0/UPnP_Programming_Guide.pdf
+share/doc/libupnp-1.4.0/examples/sample_util.c
+share/doc/libupnp-1.4.0/examples/sample_util.h
+share/doc/libupnp-1.4.0/examples/upnp_tv_ctrlpt.c
+share/doc/libupnp-1.4.0/examples/upnp_tv_ctrlpt.h
+share/doc/libupnp-1.4.0/examples/upnp_tv_ctrlpt_main.c
+share/doc/libupnp-1.4.0/examples/upnp_tv_device.c
+share/doc/libupnp-1.4.0/examples/upnp_tv_device.h
+share/doc/libupnp-1.4.0/examples/upnp_tv_device_main.c
 @dirrm include/upnp
+@dirrm share/doc/libupnp-1.4.0/examples
+@dirrm share/doc/libupnp-1.4.0

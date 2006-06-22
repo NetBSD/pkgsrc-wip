@@ -1,43 +1,47 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/03/13 12:41:20 obache Exp $
+$NetBSD: patch-aa,v 1.2 2006/06/22 08:28:34 obache Exp $
 
---- makefile.orig	2001-08-16 03:20:11.000000000 +0900
-+++ makefile
-@@ -34,6 +34,7 @@ UPNP = bin/libupnp.so
- SUBDIRS = src
+--- threadutil/src/ThreadPool.c.orig	2006-05-22 16:22:46.000000000 +0900
++++ threadutil/src/ThreadPool.c
+@@ -92,11 +92,15 @@ FreeThreadPoolJob( ThreadPool * tp,
+ static int
+ SetPolicyType( PolicyType in )
+ {
++#ifdef _POSIX_PRIORITY_SCHEDULING
+     struct sched_param current;
  
- VERSION=1.0.4
-+SO_VERSION=1
+     sched_getparam( 0, &current );
+     current.sched_priority = DEFAULT_SCHED_PARAM;
+     return sched_setscheduler( 0, in, &current );
++#else
++    return 0;
++#endif
+ }
  
- ifeq ($(DEBUG),1)
- STRIPU =
-@@ -102,17 +103,19 @@ clean:
- 	@if [ -f "doc/upnpsdk.aux" ]; then rm doc/upnpsdk.aux; fi
+ /****************************************************************************
+@@ -117,6 +121,7 @@ static int
+ SetPriority( ThreadPriority priority )
+ {
  
- install: upnp
--	@install -d /usr/include/upnp
--	@install -d /usr/include/upnp/upnpdom
--	@install -d /usr/include/upnp/tools
--	@install bin/libupnp.so /usr/lib/libupnp.so.$(VERSION)
--	ln -s /usr/lib/libupnp.so.$(VERSION) /usr/lib/libupnp.so
--	@install inc/*.h /usr/include/upnp
--	@install inc/upnpdom/*.h /usr/include/upnp/upnpdom
--	@install inc/tools/*.h /usr/include/upnp/tools
-+	@install -d ${PREFIX}/include/upnp
-+	@install -d ${PREFIX}/include/upnp/upnpdom
-+	@install -d ${PREFIX}/include/upnp/tools
-+	@install bin/libupnp.so ${PREFIX}/lib/libupnp.so.$(VERSION)
-+	ln -s ${PREFIX}/lib/libupnp.so.$(VERSION) ${PREFIX}/lib/libupnp.so
-+	ln -s ${PREFIX}/lib/libupnp.so.$(VERSION) ${PREFIX}/lib/libupnp.so.$(SO_VERSION)
-+	@install inc/*.h ${PREFIX}/include/upnp
-+	@install inc/upnpdom/*.h ${PREFIX}/include/upnp/upnpdom
-+	@install inc/tools/*.h ${PREFIX}/include/upnp/tools
++#ifdef _POSIX_PRIORITY_SCHEDULING
+     int currentPolicy;
+     int minPriority = 0;
+     int maxPriority = 0;
+@@ -148,6 +153,9 @@ SetPriority( ThreadPriority priority )
  
- uninstall:
--	@if [ -d /usr/include/upnp ]; then rm -rf /usr/include/upnp; fi
--	@if [ -f /usr/lib/libupnp.so ]; then rm /usr/lib/libupnp.so; fi
--	@if [ -f /usr/lib/libupnp.so.$(VERSION) ]; then rm /usr/lib/libupnp.so.$(VERSION); fi
-+	@if [ -d ${PREFIX}/include/upnp ]; then rm -rf ${PREFIX}/include/upnp; fi
-+	@if [ -f ${PREFIX}/lib/libupnp.so ]; then rm ${PREFIX}/lib/libupnp.so; fi
-+	@if [ -f ${PREFIX}/lib/libupnp.so.$(VERSION) ]; then rm ${PREFIX}/lib/libupnp.so.$(VERSION); fi
-+	@if [ -f ${PREFIX}/lib/libupnp.so.$(SO_VERSION) ]; then rm ${PREFIX}/lib/libupnp.so.$(SO_VERSION); fi
- 	
+     return pthread_setschedparam( ithread_self(  ), currentPolicy,
+                                   &newPriority );
++#else
++    return 0;
++#endif
+ 
+ }
+ 
+@@ -341,7 +349,7 @@ tp->stats.totalJobsLQ++; tp->stats.total
+     struct timeb t;
+ 
+     ftime( &t );
+-    srand( ( unsigned int )t.millitm + ithread_get_current_thread_id(  ) );
++    srand( ( unsigned int )t.millitm + ( unsigned int )ithread_get_current_thread_id(  ) );
+     }
+ 
+ /****************************************************************************

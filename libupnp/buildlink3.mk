@@ -1,28 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:57 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/06/22 08:28:34 obache Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBUPNP_BUILDLINK3_MK:=	${LIBUPNP_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
+.if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	libupnp
 .endif
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibupnp}
 BUILDLINK_PACKAGES+=	libupnp
 
-.if !empty(LIBUPNP_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.libupnp+=		libupnp>=1.0.4
-BUILDLINK_PKGSRCDIR.libupnp?=		../../wip/libupnp
-BUILDLINK_FILES.libupnp+=	include/upnp/*.h
-BUILDLINK_FILES.libupnp+=	include/upnp/tools/*.h
-BUILDLINK_FILES.libupnp+=	include/upnp/upnpdom/*.h
-BUILDLINK_FILES.libupnp+=	lib/libupnp.*
+.if ${LIBUPNP_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.libupnp+=	libupnp>=1.4.0
+BUILDLINK_PKGSRCDIR.libupnp?=	../../wip/libupnp
 .endif	# LIBUPNP_BUILDLINK3_MK
-
-PTHREAD_OPTS+=	require
-LDFLAGS+=	${PTHREAD_LDFLAGS}
-
-.include "../../wip/libuuid/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

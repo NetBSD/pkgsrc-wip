@@ -1,24 +1,27 @@
-# $NetBSD: Makefile,v 1.5 2006/03/14 01:28:01 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/22 08:28:34 obache Exp $
 #
 
-DISTNAME=	upnpsdk-1.0.4
-PKGNAME=	libupnp-1.0.4
-CATEGORIES=	devel net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=upnp/}
+DISTNAME=		libupnp-1.4.0
+CATEGORIES=		net
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pupnp/}
 
-MAINTAINER=	obata@lins.jp
-HOMEPAGE=	http://upnp.sourceforge.net/
-COMMENT=	Linux SDK for UPnP Devices
+MAINTAINER=		obata@lins.jp
+HOMEPAGE=		http://www.virtualworlds.de/upnp/
+COMMENT=		Portable SDK for Universal Plug and Play (UPnP) Devices
 
-USE_TOOLS+=	gmake
+USE_LANGUAGES=		c
+USE_TOOLS+=		pkg-config
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 
-MAKEFILE=	makefile
+PKGCONFIG_OVERRIDE+=	libupnp.pc.in
 
-PTHREAD_OPTS+=	require
+.include "../../mk/bsd.prefs.mk"
 
-.include "../../wip/libuuid/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-.if ${PTHREAD_TYPE} != "native"
-PTHREAD_CFLAGS+=-D_POSIX_THREAD_SYSCALL_SOFT=1
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin" || ${OPSYS} == "BSDOS"
+LIBS+=		-lcompat	# XXX need this for ftime(3)
+CONFIGURE_ENV+=	LIBS=${LIBS:M*:Q}
 .endif
+
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
