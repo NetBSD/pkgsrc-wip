@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/06/22 08:15:35 obache Exp $
+
+--- src/genlib/client_table/Makefile.orig	2001-06-15 09:21:34.000000000 +0900
++++ src/genlib/client_table/Makefile
+@@ -70,9 +70,9 @@ CFLAGS += -DINCLUDE_DEVICE_APIS
+ endif
+ 
+ ifeq ($(DEBUG),1)
+-CFLAGS += -g -O -D_REENTRANT -DDEBUG
++CFLAGS += -g -O  $(PTHREAD_CFLAGS) -DDEBUG
+ else
+-CFLAGS += -O2 -D_REENTRANT -DNO_DEBUG
++CFLAGS += -O2  $(PTHREAD_CFLAGS) -DNO_DEBUG
+ endif
+ 
+ all: $(TARGET)
