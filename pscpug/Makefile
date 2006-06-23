@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/23 15:25:38 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/23 15:44:33 bartoszkuzma Exp $
 #
 
 DISTNAME=		pscpug031
@@ -13,4 +13,5 @@ COMMENT=		Graph a given process's CPU usage
 
 GNU_CONFIGURE=		yes
 
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
