@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2277 2006/06/22 08:46:10 obache Exp $
+# $Id: Makefile,v 1.2278 2006/06/24 02:11:21 achemze Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -393,6 +393,7 @@ SUBDIR+=	hasciicam
 SUBDIR+=	hcidump
 SUBDIR+=	hdparm
 SUBDIR+=	heirloom
+SUBDIR+=	hellanzb
 SUBDIR+=	help2man
 SUBDIR+=	heroes
 SUBDIR+=	highlight
