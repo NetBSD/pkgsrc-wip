@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/06/12 16:29:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/06/25 12:26:59 thomasklausner Exp $
 #
 
 DISTNAME=		yabause-0.0.6
@@ -10,6 +10,7 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://yabause.sourceforge.net/
 COMMENT=		Sega Saturn emulator
 
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
 post-install:
