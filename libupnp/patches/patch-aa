@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2006/06/22 08:28:34 obache Exp $
+$NetBSD: patch-aa,v 1.3 2006/06/26 08:49:48 obache Exp $
 
 --- threadutil/src/ThreadPool.c.orig	2006-05-22 16:22:46.000000000 +0900
 +++ threadutil/src/ThreadPool.c
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.2 2006/06/22 08:28:34 obache Exp $
  static int
  SetPolicyType( PolicyType in )
  {
-+#ifdef _POSIX_PRIORITY_SCHEDULING
++#if defined(_POSIX_PRIORITY_SCHEDULING) && (_POSIX_PRIORITY_SCHEDULING >= 200112L)
      struct sched_param current;
  
      sched_getparam( 0, &current );
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.2 2006/06/22 08:28:34 obache Exp $
  SetPriority( ThreadPriority priority )
  {
  
-+#ifdef _POSIX_PRIORITY_SCHEDULING
++#if defined(_POSIX_PRIORITY_SCHEDULING) && (_POSIX_PRIORITY_SCHEDULING >= 200112L)
      int currentPolicy;
      int minPriority = 0;
      int maxPriority = 0;
