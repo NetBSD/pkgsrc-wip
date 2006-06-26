@@ -8,7 +8,11 @@ do
 OBJ="${FILE}.o"
 OBJS="${OBJS} $OBJ"
 cmd="${CXX} ${CXXFLAGS} -o ${FILE}.o ${FILE}"
-echo $cmd; test -e $OBJ || $cmd || exit 1
+echo $cmd
+if test ! -e $OBJ
+then
+$cmd || exit 1
+fi
 done
 FILES="`echo */*.c`"
 for FILE in ${FILES}
@@ -16,7 +20,11 @@ do
 OBJ="${FILE}.o"
 OBJS="${OBJS} $OBJ"
 cmd="${CC} ${CXXFLAGS} -o ${FILE}.o ${FILE}"
-echo $cmd; test -e $OBJ || $cmd || exit 1
+echo $cmd
+if test ! -e $OBJ
+then
+$cmd || exit 1
+fi
 done
 cmd="${CXX} -o ldcpp ${OBJS} ${LDFLAGS}"
 echo $cmd; $cmd || exit 1

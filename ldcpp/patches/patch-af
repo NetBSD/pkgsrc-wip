@@ -1,12 +1,19 @@
-$NetBSD: patch-af,v 1.1.1.1 2006/05/28 23:38:59 tnn2 Exp $
+$NetBSD: patch-af,v 1.2 2006/06/26 00:08:59 tnn2 Exp $
 
---- client/stdinc.h.orig	2006-05-26 22:15:10.000000000 +0200
+--- client/stdinc.h.orig	2006-06-26 01:16:47.000000000 +0200
 +++ client/stdinc.h
-@@ -40,6 +40,7 @@
+@@ -47,6 +47,14 @@
  
  #else
  #include <unistd.h>
 +#include <stdint.h>
++#include <string>
++/* gcc4 workaround */
++namespace std {
++#ifndef wstring
++typedef basic_string<wchar_t> wstring;
++#endif
++}
  #endif
  
  #include <stdio.h>
