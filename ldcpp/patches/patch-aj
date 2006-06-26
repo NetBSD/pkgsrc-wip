@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2006/06/26 00:25:25 tnn2 Exp $
+
+--- client/SSLSocket.h.orig	2006-06-26 02:14:20.000000000 +0200
++++ client/SSLSocket.h
+@@ -25,9 +25,6 @@
+ class SSLSocket;
+ 
+ namespace yaSSL {
+-	class SSL;
+-	class SSL_CTX;
+-	struct DH;
+ }
+ 
+ using namespace yaSSL;

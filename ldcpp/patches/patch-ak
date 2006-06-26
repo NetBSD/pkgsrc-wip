@@ -1,0 +1,30 @@
+$NetBSD: patch-ak,v 1.1 2006/06/26 00:25:25 tnn2 Exp $
+
+--- client/SSLSocket.cpp.orig	2006-06-26 02:16:42.000000000 +0200
++++ client/SSLSocket.cpp
+@@ -19,11 +19,15 @@
+ #include "stdinc.h"
+ #include "DCPlusPlus.h"
+ 
++#include <openssl/ssl.h>
++#include <openssl/err.h>
++#ifndef SSL_SUCCESS
++#define SSL_SUCCESS 1
++#endif
+ #include "SSLSocket.h"
+ #include "LogManager.h"
+ #include "SettingsManager.h"
+ 
+-#include <openssl/ssl.h>
+ 
+ SSLSocketFactory::SSLSocketFactory() 
+ :	clientContext(SSL_CTX_new(TLSv1_client_method())), 
+@@ -100,7 +104,7 @@ void SSLSocketFactory::loadCertificates(
+ 		FindClose(hFind);
+ 	}
+ #else
+-#error todo
++#warning todo
+ #endif
+ 	certsLoaded = true;
+ }
