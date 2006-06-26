@@ -1,8 +1,13 @@
-$NetBSD: patch-aj,v 1.1 2006/06/26 00:25:25 tnn2 Exp $
+$NetBSD: patch-aj,v 1.2 2006/06/26 03:16:44 tnn2 Exp $
 
---- client/SSLSocket.h.orig	2006-06-26 02:14:20.000000000 +0200
+--- client/SSLSocket.h.orig	2006-06-15 20:30:50.000000000 +0200
 +++ client/SSLSocket.h
-@@ -25,9 +25,6 @@
+@@ -21,13 +21,11 @@
+ 
+ #include "Socket.h"
+ #include "Singleton.h"
++#include <openssl/ssl.h>
+ 
  class SSLSocket;
  
  namespace yaSSL {
