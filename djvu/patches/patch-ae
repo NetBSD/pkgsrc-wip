@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2006/06/26 19:19:11 thomasklausner Exp $
+
+--- libdjvu/ByteStream.h.orig	2003-11-07 22:08:20.000000000 +0000
++++ libdjvu/ByteStream.h
+@@ -242,7 +242,7 @@ public:
+       and writes it to the specified stream. */
+   void formatmessage( const char *fmt, ... );
+   /** Looks up the message and writes it to the specified stream. */
+-  void ByteStream::writemessage( const char *message );
++  void writemessage( const char *message );
+   /** Writes a one-byte integer to a ByteStream. */
+   void write8 (unsigned int card8);
+   /** Writes a two-bytes integer to a ByteStream.

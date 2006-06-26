@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1 2006/06/26 19:19:11 thomasklausner Exp $
+
+--- libdjvu/GURL.h.orig	2003-11-07 22:08:21.000000000 +0000
++++ libdjvu/GURL.h
+@@ -278,10 +278,10 @@ public:
+       //@}
+ 
+       /// Returns TRUE if #gurl1# and #gurl2# are the same
+-   bool	GURL::operator==(const GURL & gurl2) const;
++   bool	operator==(const GURL & gurl2) const;
+ 
+       /// Returns TRUE if #gurl1# and #gurl2# are different
+-   bool	GURL::operator!=(const GURL & gurl2) const;
++   bool	operator!=(const GURL & gurl2) const;
+ 
+       /// Assignment operator
+    GURL &	operator=(const GURL & url);
