@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2006/04/08 22:14:03 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/28 21:24:51 thomasklausner Exp $
 #
 
 DISTNAME=		gnucash-1.8.12
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		fgudin@users.sourceforge.net
 HOMEPAGE=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/
 COMMENT=		Personal double-entry accounting program
 
@@ -54,6 +54,7 @@ post-install:
 .include "../../lang/guile/buildlink3.mk"
 .include "../../math/guppi/buildlink3.mk"
 .include "../../net/ORBit/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml/buildlink3.mk"
 .include "../../www/gtkhtml/buildlink3.mk"
 .include "../../x11/gnome-libs/buildlink3.mk"
