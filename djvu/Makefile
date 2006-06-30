@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2006/06/10 22:52:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/30 22:00:39 thomasklausner Exp $
 
-DISTNAME=       djvulibre-3.5.16
+DISTNAME=       djvulibre-3.5.17
 CATEGORIES=     graphics
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=djvu/}
 
