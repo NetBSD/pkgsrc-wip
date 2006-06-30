@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:30:37 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/30 16:33:45 thomasklausner Exp $
 #
 
 DISTNAME=		libraw1394-0.10.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.linux1394.org/
 COMMENT=		Functions for converting raw1394 protocol packets
+
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
