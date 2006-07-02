@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/14 01:27:59 jlamwww Exp $
+# $NetBSD: Makefile,v 1.16 2006/07/02 19:04:34 shattered Exp $
 
 DISTNAME=	frontpage-5.0.2.2623
 CATEGORIES=	www
@@ -6,7 +6,7 @@ MASTER_SITES=	http://download.microsoft.com/download/FrontPage2002/Install/2002/
 DISTFILES=	${FRONTPAGE}
 
 MAINTAINER=	eric@cirr.com
-HOMEPAGE=	http://www.microsoft.com/frontpage
+HOMEPAGE=	http://www.microsoft.com/frontpage/
 COMMENT=	Microsoft Frontpage 2002 Server Extensions
 
 .include "../../mk/bsd.prefs.mk"

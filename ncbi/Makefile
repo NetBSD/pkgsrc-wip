@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/29 20:43:39 mchittur Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/02 19:04:35 shattered Exp $
 
 DISTNAME=		ncbi
 PKGNAME=		ncbi-20060301
@@ -7,7 +7,7 @@ MASTER_SITES=		#empty
 DISTFILES=		#empty
 
 MAINTAINER=		mchittur@nmsu.edu
-HOMEPAGE=		http://www.ncbi.nlm.nih.gov/IEB/ToolBox
+HOMEPAGE=		http://www.ncbi.nlm.nih.gov/IEB/ToolBox/
 COMMENT=		Portable, modular software for molecular biology
 
 DEPENDS+=       	ncbi-bin-20060301:../../wip/ncbi-bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/28 05:15:17 mchittur Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/02 19:04:35 shattered Exp $
 #
 
 DISTNAME=		ncbi
@@ -8,7 +8,7 @@ CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools/old/${PKG_VER}/
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://www.ncbi.nlm.nih.gov/IEB/ToolBox
+HOMEPAGE=		http://www.ncbi.nlm.nih.gov/IEB/ToolBox/
 COMMENT=		Portable, modular software for molecular biology
 
 WRKSRC=			${WRKDIR}/ncbi

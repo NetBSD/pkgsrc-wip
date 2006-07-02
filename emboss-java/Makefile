@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/12 23:51:17 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/02 19:04:34 shattered Exp $
 #
 
 DISTNAME=	 	EMBOSS-2.9.0
@@ -7,7 +7,7 @@ CATEGORIES=		biology
 MASTER_SITES		ftp://ftp.uk.embnet.org/pub/EMBOSS/
 
 MAINTAINER=		dprice@cs.nmsu.edu
-HOMEPAGE=		http://www.emboss.org
+HOMEPAGE=		http://emboss.sourceforge.net/
 COMMENT=		interface between emboss and jemboss
 
 DEPENDS+=		emboss-base-2.9.0:../../wip/emboss-base

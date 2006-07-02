@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:25 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.9 2006/07/02 19:04:34 shattered Exp $
 #
 
 DISTNAME=		mingw-3.3.1
@@ -7,7 +7,7 @@ MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://mingw.sf.net/
+HOMEPAGE=		http://mingw.sourceforge.net/
 COMMENT=		GNU C Compiler for win32 cross development
 
 .include "../../wip/mingw-binutils/buildlink3.mk"

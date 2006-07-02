@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/05/27 00:58:37 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.14 2006/07/02 19:04:34 shattered Exp $
 #
 
 DISTNAME=		jwm-1.7
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.joewing.net/programs/jwm/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pip88nl@gmail.com
-HOMEPAGE=		http://joewing.net/programs/jwm
+HOMEPAGE=		http://www.joewing.net/programs/jwm/
 COMMENT=		Lightweight window manager with virtual desktops
 
 GNU_CONFIGURE=		yes

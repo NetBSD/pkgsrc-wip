@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2005/08/11 10:08:22 absd Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/02 19:04:34 shattered Exp $
 #
 
 DISTNAME=	evolution-sharp-0.2
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.tuwien.ac.at/z4/hci/gnome.org/sources/evolution-sharp/0.2/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-sharp/0.2/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
-HOMEPAGE=	ftp://ftp.tuwien.ac.at/z4/hci/gnome.org/sources/evolution-sharp/0.2/
+HOMEPAGE=	${MASTER_SITE_GNOME:=sources/evolution-sharp/0.2/}
 COMMENT=	.NET language binding for various Evolution libraries
 
 USE_PKGLOCALEDIR=	yes

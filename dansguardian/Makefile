@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/22 10:48:36 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/02 19:04:33 shattered Exp $
 
 DISTNAME=	DansGuardian-2.6.1-11.source
 PKGNAME=	dansguardian-2.6.1-11
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	#
 
 MAINTAINER=	david@netbsd-fr.org
-HOMEPAGE=	http://www.dansguardian.org/
+HOMEPAGE=	http://dansguardian.org/
 COMMENT=	Fast, featureful web content filter for Squid proxy servers
 
 WRKSRC=		${WRKDIR}/DansGuardian-2.6.1

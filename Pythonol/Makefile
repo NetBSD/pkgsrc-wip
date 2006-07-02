@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:13 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/02 19:04:33 shattered Exp $
 #
 
 DISTNAME=		Pythonol-2.0_i586
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pythonol/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pythonol.sourceforge.net/
+HOMEPAGE=		http://www.phrozensmoke.com/projects/pythonol/
 COMMENT=		Learn Spanish (with a little help of Python)
 
 DEPENDS+=		${PYPKGPREFIX}-sqlite>=0.4.3:../../databases/py-sqlite

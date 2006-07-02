@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/19 23:42:13 daprice Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/02 19:04:35 shattered Exp $
 #
 
 DISTNAME=		wise2.2.0
@@ -7,7 +7,7 @@ CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.ebi.ac.uk/pub/software/unix/wise2/
 
 MAINTAINER=		dprice@cs.nmsu.edu
-HOMEPAGE=		http://www.ebi.ac.uk/Wise2
+HOMEPAGE=		http://www.ebi.ac.uk/Wise2/
 COMMENT=		Tool for Comparing bio polymers like DNA and Protein sequences
 
 WRKSRC=			${WRKDIR}/wise2.2.0/src

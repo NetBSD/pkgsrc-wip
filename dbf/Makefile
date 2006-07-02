@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:15 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/02 19:04:33 shattered Exp $
 #
 
 DISTNAME=	dbf-0.8.1.src
@@ -7,7 +7,7 @@ CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dbf/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dbf.sourceforge.net/
+HOMEPAGE=	http://www.anubisnet.de/
 COMMENT=	Converts dBASE files to comma separated values text files
 
 USE_TOOLS+=	gmake

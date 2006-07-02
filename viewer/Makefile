@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:40 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/02 19:04:35 shattered Exp $
 
 DISTNAME=		viewer-0.7.3
 CATEGORIES=		graphics
 MASTER_SITES=		http://www-users.cs.umn.edu/~wburdick/ftp/geowall/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www-users.cs.umn.edu/~wburdick
+HOMEPAGE=		http://www-users.cs.umn.edu/~wburdick/
 COMMENT=		OpenGL based multipurpose image viewer
 
 GNU_CONFIGURE=		yes

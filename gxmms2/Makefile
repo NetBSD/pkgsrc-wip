@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:18 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/02 19:04:34 shattered Exp $
 #
 
 DISTNAME=	gxmms2-0.6.0
 CATEGORIES=	audio
-MASTER_SITES=	http://wejp.homelinux.org/wejp/xmms2/
+MASTER_SITES=	http://wejp.k.vu/projects/xmms2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wejp.homelinux.org/wejp/xmms2/
+HOMEPAGE=	http://wejp.k.vu/projects/xmms2/
 COMMENT=	Graphical GTK+2-based XMMS2 client
 
 NO_CONFIGURE=		yes

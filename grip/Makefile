@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/05/19 16:51:17 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.18 2006/07/02 19:04:34 shattered Exp $
 #
 
 DISTNAME=		grip-3.2.0
@@ -6,7 +6,7 @@ CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=grip/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://grip.sourceforge.net/
+HOMEPAGE=		http://nostatic.org/grip/
 COMMENT=		CD-player and CD-ripper for the Gnome desktop
 
 USE_DIRS+=		gnome2-1.5

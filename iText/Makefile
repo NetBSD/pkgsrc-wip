@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/10/12 22:31:11 poppnk Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/02 19:04:34 shattered Exp $
 #
 
 DISTNAME=		itext-1.3
@@ -8,7 +8,7 @@ MASTER_SITES=		http://${MASTER_SITE_SOURCEFORGE:=itext/}
 EXTRACT_SUFX=		.jar
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://itext.sourceforge.net/
+HOMEPAGE=		http://www.lowagie.com/iText/
 COMMENT=		Java classes to generate PDF files on the fly
 
 WRKSRC=			${WRKDIR}

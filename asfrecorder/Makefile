@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/22 22:51:06 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/02 19:04:33 shattered Exp $
 #
 
 DISTNAME=		ASFRecorder
@@ -9,9 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=asfrecorder/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		tv@NetBSD.org
-HOMEPAGE=		http://asfrecorder.sourceforge.net/
+HOMEPAGE=		http://sourceforge.net/projects/asfrecorder/
 COMMENT=		Static-file downloader for ASF streaming media
-
 
 do-build:
 	cd ${WRKSRC} && ${LINK.c} -o asfrecorder asfrecorder.c

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/18 21:23:03 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/02 19:04:33 shattered Exp $
 #
 
 DISTNAME=		EMBOSS-2.9.0
@@ -8,7 +8,7 @@ MASTER_SITES=		#empty
 DISTFILES=		#empty
 
 MAINTAINER=		dprice@cs.nmsu.edu
-HOMEPAGE=		http://www.emboss.org/
+HOMEPAGE=		http://emboss.sourceforge.net/
 COMMENT=	 	European Molecular Biology Open Software Suite
 
 DEPENDS+=		emboss-base-2.9.0:../../wip/emboss-base
