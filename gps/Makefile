@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:17 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/02 19:38:50 shattered Exp $
 #
 
 DISTNAME=		gps-0.9.2
 CATEGORIES=		security net
-MASTER_SITES=		http://gps.sourceforge.net/release/
+MASTER_SITES=		http://www.mirrors.wiretapped.net/security/network-mapping/gps/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://gps.sourceforge.net/
 COMMENT=		Ghost Port Scan
 
 USE_TOOLS+=		gmake

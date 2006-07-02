@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2006/04/21 07:31:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/02 19:38:50 shattered Exp $
 #
 
 DISTNAME=		EiCsrc_4.3.0
 PKGNAME=		EiC-4.3.0
 WRKSRC=			${WRKDIR}/EiC/
 CATEGORIES=		lang
-MASTER_SITES=		http://eic.sourceforge.net/download/eicdist/4_3_0/
+MASTER_SITES=		http://rpm.rutgers.edu/repository/solaris/SOURCES/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		adam@monkeybyte.org
-HOMEPAGE=		http://eic.sourceforge.net/download/eicdist/4_3_0/
 COMMENT=		C style scripting lang
 
 USE_TOOLS+=		gmake
