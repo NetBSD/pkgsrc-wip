@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/18 17:30:08 pulahti Exp $
-bin/xpilot-ng-x11
-bin/xpilot-ng-server
+@comment $NetBSD: PLIST,v 1.5 2006/07/02 19:50:08 pulahti Exp $
 bin/xpilot-ng-replay
+bin/xpilot-ng-sdl
+bin/xpilot-ng-server
+bin/xpilot-ng-x11
+bin/xpilot-ng-xp-mapedit
 share/xpilot-ng/defaults.txt
 share/xpilot-ng/fonts/ConsoleFont.bmp
 share/xpilot-ng/fonts/FreeSansBoldOblique.ttf
