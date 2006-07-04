@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/18 16:30:50 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/04 20:02:12 thomasklausner Exp $
 man/man1/crypt.sh.1
 man/man1/gzip.sh.1
 man/man1/hist.sh.1
@@ -13,8 +13,10 @@ man/man8/rorrim.sh.8
 sbin/crypt.sh
 sbin/dump-here.sh
 sbin/dump.sh
+sbin/gzip.pl
 sbin/gzip.sh
 sbin/hist.sh
+sbin/mirror.pl
 sbin/mirror.sh
 sbin/monthday.sh
 sbin/rdup
