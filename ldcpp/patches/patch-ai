@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.2 2006/06/26 00:08:59 tnn2 Exp $
+$NetBSD: patch-ai,v 1.3 2006/07/04 04:25:00 tnn2 Exp $
 
---- client/File.h.orig	2006-06-26 01:17:10.000000000 +0200
+--- client/File.h.orig	2006-06-28 05:34:55.000000000 +0200
 +++ client/File.h
 @@ -339,7 +339,7 @@ public:
  	}
@@ -8,6 +8,6 @@ $NetBSD: patch-ai,v 1.2 2006/06/26 00:08:59 tnn2 Exp $
  	virtual size_t flush() throw(Exception) {
 -		if(fsync(h) == -1)
 +		if (h != -1) if(fsync(h) == -1)
- 			throw FileException(Util::translateError(errno) + " " + filename);
+ 			throw FileException(Util::translateError(errno), filename);
  		return 0;
  	}
