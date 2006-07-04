@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/27 12:07:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/07/04 06:35:47 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -48,7 +48,6 @@ info/emacs-5
 info/emacs-6
 info/emacs-7
 info/emacs-mime
-info/emacs-xtra
 info/erc
 info/eshell
 info/eudc
@@ -93,7 +92,6 @@ libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rcs2log
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sorted-doc
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/update-game-score
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/vcdiff
-libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/yow
 man/man1/ctags.1
 man/man1/emacs.1
 man/man1/emacsclient.1
@@ -113,20 +111,18 @@ share/emacs/${PKGVERSION}/etc/GNUS-NEWS
 share/emacs/${PKGVERSION}/etc/HELLO
 share/emacs/${PKGVERSION}/etc/INTERVIEW
 share/emacs/${PKGVERSION}/etc/JOKES
-share/emacs/${PKGVERSION}/etc/LEDIT
 share/emacs/${PKGVERSION}/etc/LINUX-GNU
-share/emacs/${PKGVERSION}/etc/LPF
 share/emacs/${PKGVERSION}/etc/MACHINES
 share/emacs/${PKGVERSION}/etc/MAILINGLISTS
 share/emacs/${PKGVERSION}/etc/MH-E-NEWS
 share/emacs/${PKGVERSION}/etc/MORE.STUFF
 share/emacs/${PKGVERSION}/etc/MOTIVATION
 share/emacs/${PKGVERSION}/etc/NEWS
-share/emacs/${PKGVERSION}/etc/ONEWS
-share/emacs/${PKGVERSION}/etc/ONEWS.1
-share/emacs/${PKGVERSION}/etc/ONEWS.2
-share/emacs/${PKGVERSION}/etc/ONEWS.3
-share/emacs/${PKGVERSION}/etc/ONEWS.4
+share/emacs/${PKGVERSION}/etc/NEWS.1-17
+share/emacs/${PKGVERSION}/etc/NEWS.18
+share/emacs/${PKGVERSION}/etc/NEWS.19
+share/emacs/${PKGVERSION}/etc/NEWS.20
+share/emacs/${PKGVERSION}/etc/NEWS.21
 share/emacs/${PKGVERSION}/etc/ORDERS
 share/emacs/${PKGVERSION}/etc/OTHER.EMACSES
 share/emacs/${PKGVERSION}/etc/PROBLEMS
@@ -489,7 +485,6 @@ share/emacs/${PKGVERSION}/etc/images/up-node.xpm
 share/emacs/${PKGVERSION}/etc/images/zoom-in.xpm
 share/emacs/${PKGVERSION}/etc/images/zoom-out.pbm
 share/emacs/${PKGVERSION}/etc/images/zoom-out.xpm
-share/emacs/${PKGVERSION}/etc/ledit.l
 share/emacs/${PKGVERSION}/etc/letter.pbm
 share/emacs/${PKGVERSION}/etc/letter.xpm
 share/emacs/${PKGVERSION}/etc/ms-7bkermit
@@ -500,6 +495,8 @@ share/emacs/${PKGVERSION}/etc/pl-refcard.ps
 share/emacs/${PKGVERSION}/etc/pl-refcard.tex
 share/emacs/${PKGVERSION}/etc/ps-prin0.ps
 share/emacs/${PKGVERSION}/etc/ps-prin1.ps
+share/emacs/${PKGVERSION}/etc/pt-br-refcard.ps
+share/emacs/${PKGVERSION}/etc/pt-br-refcard.tex
 share/emacs/${PKGVERSION}/etc/refcard.ps
 share/emacs/${PKGVERSION}/etc/refcard.tex
 share/emacs/${PKGVERSION}/etc/rgb.txt
@@ -1331,6 +1328,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/flow-fill.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/flow-fill.elc
 share/emacs/${PKGVERSION}/lisp/gnus/format-spec.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/format-spec.elc
+share/emacs/${PKGVERSION}/lisp/gnus/gmm-utils.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/gmm-utils.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-agent.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-agent.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-art.el.gz
