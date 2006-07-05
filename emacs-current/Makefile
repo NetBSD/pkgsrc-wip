@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/04/21 02:55:00 obache Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/05 16:40:57 thomasklausner Exp $
 #
 
 DISTNAME=	emacs-22.0.50
@@ -32,6 +32,8 @@ CONFIGURE_ARGS+=	--with-png
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
 PKG_OPTIONS_OPTIONAL_GROUPS= toolkit
 PKG_OPTIONS_GROUP.toolkit= emacs-xaw3d motif gtk
+PKG_SUGGESTED_OPTIONS=	gtk
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mmotif)

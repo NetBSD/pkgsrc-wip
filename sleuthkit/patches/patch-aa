@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/29 16:41:17 poppnk Exp $
---- src/mmtools/mm_tools.h.orig	2003-09-03 00:44:33.000000000 +0000
-+++ src/mmtools/mm_tools.h	2003-12-29 16:28:34.000000000 +0000
-@@ -65,7 +65,7 @@
-  /*
-   * FreeBSD can handle filesystems > 2GB.
-   */
--#if defined(FREEBSD2) || defined(FREEBSD3) || defined(FREEBSD4) || defined(FREEBSD5)
-+#if defined(FREEBSD2) || defined(FREEBSD3) || defined(FREEBSD4) || defined(FREEBSD5)||defined __NetBSD__
- #include <sys/uio.h>
- #define SUPPORTED
- #define STRTOUL		strtoul
+$NetBSD: patch-aa,v 1.2 2006/07/05 16:40:57 thomasklausner Exp $
+
+--- src/fstools/Makefile.orig	2006-05-11 21:06:15.000000000 +0200
++++ src/fstools/Makefile
+@@ -16,7 +16,7 @@ LIBOBJ	= fs_inode.o fs_io.o fs_open.o \
+ 	fls_lib.o icat_lib.o ifind_lib.o ils_lib.o \
+ iso9660.o iso9660_dent.o 
+ # hfs.o hfs_dent.o hfs_journal.o
+-LIBS	= -L../../lib -lfstools -lauxtools -limgtools ../afflib/lib/libafflib.a ../libewf/libewf.a -lz -lcrypto
++LIBS	= -L../../lib -lfstools -lauxtools -limgtools -L ../afflib/lib -lafflib -L ../libewf -lewf -lz -lcrypto
+ 
+ LIB	= ../../lib/libfstools.a
+ BIN_DIR	= ../../bin

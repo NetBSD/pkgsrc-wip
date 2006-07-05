@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2006/04/22 13:13:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/05 16:40:57 thomasklausner Exp $
 
 DISTNAME=	nettle-1.14
 PKGNAME=	lib${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel security
 MASTER_SITES=	http://www.lysator.liu.se/~nisse/archive/ \
-		ftp://ftp.lysator.liu.se/pub/security/lsh
+		ftp://ftp.lysator.liu.se/pub/security/lsh/
 
 # created by cheusov@tut.by
 MAINTAINER=	pkgsrc-users@NetBSD.org

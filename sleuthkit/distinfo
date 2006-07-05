@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 06:41:41 rillig Exp $
+$NetBSD: distinfo,v 1.4 2006/07/05 16:40:57 thomasklausner Exp $
 
-SHA1 (sleuthkit-1.66.tar.gz) = 9ab27e46dce2e98e39e273638a05dc68b194de21
-RMD160 (sleuthkit-1.66.tar.gz) = 507910ebe9a17dc814a268a5ce6b40e965af1631
-Size (sleuthkit-1.66.tar.gz) = 521488 bytes
-SHA1 (patch-aa) = 3c9ef54032b12baad014b69c46f4fb6e975f4541
-SHA1 (patch-ab) = 9b6c759ccaf57508c29457408061d67a60fd91a1
+SHA1 (sleuthkit-2.04.tar.gz) = 852c8d9ac1755f22d121e1e830f2bff3520a64da
+RMD160 (sleuthkit-2.04.tar.gz) = 19ebd0eec3d87a16326d1f9e2d0bfd7f263c6540
+Size (sleuthkit-2.04.tar.gz) = 1224077 bytes
+SHA1 (patch-aa) = 5f05302215202ac66f586d0628ced37b8a9e67ba
+SHA1 (patch-ab) = 6bb625857da2600e8e5c25a2fce6893dea67634f
+SHA1 (patch-ac) = 6f037f52879037e5b71627ff4a7aebbb1d875990
+SHA1 (patch-ad) = 86ea5e0aaf6cb17ad13c02455c78d09ec3679c71
+SHA1 (patch-ae) = c27198b23db41941acc46256ac87711c9ea0041a
