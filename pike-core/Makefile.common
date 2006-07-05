@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2006/05/14 22:29:08 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.4 2006/07/05 22:02:59 cheusov Exp $
 
 PIKE_VERSION=	7.6.75
 DISTNAME=	Pike-v${PIKE_VERSION}
@@ -107,7 +107,7 @@ CONFIGURE_ARGS+=	--with-${m:Q}
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC} &&           \
-	cd ${PIKEDIR}/src; &&              \
+	cd ${PIKEDIR}/src &&              \
 	if ! test -f autoconfig.done; then \
 		./run_autoconfig . ./src ${MODULE_DIRS} && \
 		${TOUCH} autoconfig.done;  \
