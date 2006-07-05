@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2006/07/05 23:21:50 cheusov Exp $
+
+1) To enable "dictd" to start on boot on NetBSD-1.5 or newer,
+   please copy "${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/dictd" to
+   "/etc/rc.d/" and add "dictd=YES" to /etc/rc.conf. To do the
+   same on older systems, add the following to /etc/rc.local:
+
+   if [ -x ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/dictd ]; then
+      ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/dictd
+   fi
+
+2) By default dictd will log to syslog and use /usr/bin/m4 for
+   preprocessing configuration file. If you want to replace this default
+   add dictd_flags='<your options>' to /etc/rc.conf.
+
+3) ${VARBASE}/log/dictd is a preferred directory for logging.
+
+===========================================================================

@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1 2006/07/05 23:21:50 cheusov Exp $
+
+--- examples/dictd1.conf.orig	Thu Dec  8 20:50:40 2005
++++ examples/dictd1.conf
+@@ -14,3 +14,5 @@ database easton    { data "/usr/lib/dict
+                      index "/usr/lib/dict/easton.index" }
+ database hitchcock { data "/usr/lib/dict/hitchcock.dict.dz"
+                      index "/usr/lib/dict/hitchcock.index" }
++database world95   { data "/usr/lib/dict/world95.dict.dz"
++                     index "/usr/lib/dict/world95.index" }

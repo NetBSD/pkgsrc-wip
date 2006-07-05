@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/07/05 23:21:51 cheusov Exp $
+
+--- libmaa/getopt.c.orig	Fri Sep 29 02:54:55 1995
++++ libmaa/getopt.c
+@@ -44,7 +44,7 @@ Cambridge, MA 02139, USA.  */
+ 
+ #include <stdio.h>
+ 
+-#ifdef __sparc__
++#if defined(__sparc__) && !defined(__NetBSD__)
+ extern int fprintf( FILE *, const char *, ... );
+ extern int strncmp( const char *, const char *, int n );
+ #endif
