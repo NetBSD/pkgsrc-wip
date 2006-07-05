@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 14:51:23 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/05 22:04:44 cheusov Exp $
 
 DISTNAME=	heirloom-060122
 CATEGORIES=	sysutils
@@ -16,9 +16,12 @@ NOT_FOR_PLATFORM=	Interix-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "FreeBSD" #|| ${OPSYS} == "DragonFly"
-LDFLAGS+=	-lkvm
-.endif
+CFLAGS.Linux+=		-D_GNU_SOURCE -D_FILE_OFFSET_BITS=64L
+
+LDFLAGS.NetBSD+=	-lkvm
+LDFLAGS.FreeBSD+=	-lkvm
+LDFLAGS.OpenBSD+=	-lkvm
+LDFLAGS.DragonFly+=	-lkvm
 
 LCRYPT=		-lcrypt
 .if ${OPSYS} == "OpenBSD"
@@ -26,16 +29,10 @@ LCRYPT=
 .endif
 
 LCURS=-lcurses
-USE_BZLIB=	1
 
 .if ${OPSYS} == "NetBSD"
 CFLAGS+=	-DUSE_TERMCAP
 LCURS=		-ltermcap
-.endif
-
-.if ${OPSYS} == "Linux"
-CPPFLAGS+=	-D_GNU_SOURCE
-CPPFLAGS+=	-D_FILE_OFFSET_BITS=64L
 .endif
 
 LDFLAGS+=	-lz -lbz2
