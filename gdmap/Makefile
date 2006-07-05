@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/13 18:18:14 jlamwww Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/05 12:20:26 absd Exp $
 #
 
 DISTNAME=		gdmap-0.7.0
@@ -12,9 +12,8 @@ COMMENT=		Tool to visualize disk space
 GNU_CONFIGURE=		yes
 USE_DIRS+=              xdg-1.2
 USE_PKGLOCALEDIR=       yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

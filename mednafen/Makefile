@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/06/12 16:28:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2006/07/05 12:20:27 absd Exp $
 #
 
 DISTNAME=	mednafen-0.6.1
@@ -13,7 +13,7 @@ COMMENT=	Portable multi-system emulator
 
 WRKSRC=			${WRKDIR}/mednafen
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		intltool pkg-config
 USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -36,7 +36,6 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

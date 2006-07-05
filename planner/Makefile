@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/01 01:32:10 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/05 12:20:31 absd Exp $
 #
 
 DISTNAME=	planner-0.13
@@ -15,7 +15,7 @@ COMMENT=	GTK2 project management tool
 BUILD_DEPENDS=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 #USE_TOOLS+=		autoconf
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -46,7 +46,6 @@ PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"

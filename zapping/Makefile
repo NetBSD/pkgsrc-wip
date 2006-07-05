@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/19 16:51:41 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/05 12:20:31 absd Exp $
 #
 
 DISTNAME=		zapping-0.9.6
@@ -14,7 +14,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-dirs-1.2 gnome-dirs-1.5
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake intltool perl
 
 CONFIGURE_ARGS+=	--disable-rebuild-man
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
@@ -31,7 +31,6 @@ GCONF2_SCHEMAS+=	zapping.schemas
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 # not used with bktr(4)

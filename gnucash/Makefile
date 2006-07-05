@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/28 21:24:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2006/07/05 12:20:27 absd Exp $
 #
 
 DISTNAME=		gnucash-1.8.12
@@ -16,7 +16,7 @@ DEPENDS+= 		p5-Finance-Quote>=1.06:../../finance/p5-Finance-Quote
 BUILD_DEPENDS+=		bison>=1.28:../../devel/bison
 
 USE_DIRS+=		gnome1-1.5
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake intltool pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -54,7 +54,6 @@ post-install:
 .include "../../lang/guile/buildlink3.mk"
 .include "../../math/guppi/buildlink3.mk"
 .include "../../net/ORBit/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml/buildlink3.mk"
 .include "../../www/gtkhtml/buildlink3.mk"
 .include "../../x11/gnome-libs/buildlink3.mk"

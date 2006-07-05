@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/12 16:28:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/05 12:20:27 absd Exp $
 #
 
 DISTNAME=	muine-0.5.2
@@ -13,6 +13,7 @@ COMMENT=	Simple and intuitive music player for GNOME
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+USE_TOOLS+=		intltool
 
 GCONF2_SCHEMAS=		muine.schemas
 
@@ -25,7 +26,6 @@ GCONF2_SCHEMAS=		muine.schemas
 .include "../../lang/mono/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../wip/gtk-sharp/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
