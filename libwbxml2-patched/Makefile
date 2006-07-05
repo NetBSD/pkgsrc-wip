@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/05 21:51:43 thomasklausner Exp $
 #
 
 DISTNAME=		wbxml2-0.9.0-patched
@@ -12,8 +12,8 @@ COMMENT=		Library to handle WBXML (Patched for MultiSync)
 
 WRKSRC=		${WRKDIR}/wbxml2-0.9.0
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		automake
 
