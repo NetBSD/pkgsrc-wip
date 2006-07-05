@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2006/07/05 16:44:34 thomasklausner Exp $
+
+--- src/mmtools/Makefile.orig	2006-05-11 21:06:16.000000000 +0200
++++ src/mmtools/Makefile
+@@ -8,7 +8,7 @@ DEBUG	= -g
+ INCL	= -I../auxtools -I../imgtools
+ CFLAGS	= $(DEFS) $(INCL) $(OPT) $(DEBUG)
+ LIBOBJ	= mm_part.o mm_open.o mm_io.o mm_types.o dos.o mac.o bsd.o sun.o gpt.o
+-LIBS	= -L../../lib -lmmtools -lauxtools -limgtools ../afflib/lib/libafflib.a ../libewf/libewf.a -lz -lcrypto
++LIBS	= -L../../lib -lmmtools -lauxtools -limgtools -L ../afflib/lib -lafflib -L ../libewf -lewf -lz -lcrypto
+ LIB	= ../../lib/libmmtools.a
+ BIN_DIR	= ../../bin
+ PROGS	= $(BIN_DIR)/mmls $(BIN_DIR)/mmstat

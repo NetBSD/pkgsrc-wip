@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.1 2006/07/05 16:44:34 thomasklausner Exp $
+
+--- Makefile.orig	2006-05-11 19:06:16.000000000 +0000
++++ Makefile
+@@ -10,9 +10,9 @@ static:	$(DIRS) compile-static
+ $(DIRS):
+ 	mkdir -p $@
+ 
+-compile: no-perl mactime sorter file test 
++compile: no-perl mactime sorter test 
+ 
+-compile-static: no-perl-static mactime sorter file test
++compile-static: no-perl-static mactime sorter test
+ 
+ no-perl:
+ 	cd src/auxtools; $(MAKE) "CC=$(CC)" MAKELEVEL=
+@@ -35,7 +35,6 @@ no-perl-static:
+ 	cd src/mmtools; $(MAKE) "CC=$(CC)" OPT=-static MAKELEVEL= 
+ 	cd src/srchtools; $(MAKE) "CC=$(CC)" OPT=-static MAKELEVEL= 
+ 	cd src/disktools; $(MAKE) "CC=$(CC)" OPT=-static MAKELEVEL= 
+-	cd src/file; CC="$(CC)" sh ./TSK.install
+ 
+ 
+ sorter:

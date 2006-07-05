@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2006/07/05 16:44:34 thomasklausner Exp $
+
+--- src/imgtools/Makefile.orig	2006-05-11 21:06:16.000000000 +0200
++++ src/imgtools/Makefile
+@@ -9,6 +9,7 @@ INCL	= -I../auxtools -I../afflib/lib -I.
+ CFLAGS	= $(DEFS) $(INCL) $(OPT) $(DEBUG)
+ LIBOBJ	= img_open.o img_types.o raw.o split.o aff.o ewf.o
+ LIBS    = -L../../lib -limgtools -lauxtools ../afflib/lib/libafflib.a ../libewf/libewf.a -lz -lcrypto
++LIBS    = -L../../lib -limgtools -lauxtools -L ../afflib/lib -lafflib -L ../libewf -lewf -lz -lcrypto
+ LIB	= ../../lib/libimgtools.a
+ BIN_DIR	= ../../bin
+ PROGS	= $(BIN_DIR)/img_stat $(BIN_DIR)/img_cat
