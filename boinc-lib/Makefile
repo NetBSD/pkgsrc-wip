@@ -1,6 +1,8 @@
+# $NetBSD: Makefile,v 1.2 2006/07/06 20:05:49 thomasklausner Exp $
+
 DISTNAME=		boinc
 PKGNAME=		boinc-lib-1
-CATEGORIES=		net wip
+CATEGORIES=		net
 
 COMMENT=		Libraries for the BOINC distributed computing application
 
