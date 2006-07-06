@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2006/05/19 09:02:45 rillig Exp $
+# $NetBSD: options.mk,v 1.9 2006/07/06 08:29:53 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avifile-devel
 PKG_SUPPORTED_OPTIONS=	sdl faad qt vorbis xvid mad a52 lame jpeg ac3_passthrough
@@ -122,12 +122,12 @@ PLIST_SUBST+=		LAME_COMMENT="@comment "
 
 .if !empty(PKG_OPTIONS:Mac3_passthrough)
 .include "../../mk/oss.buildlink3.mk"
-.if ${OSS_TYPE} == "none"
+.  if ${OSS_TYPE} == "none"
 PKG_FAIL_REASON+=	"Need oss to use ac3passthrough"
-.else
+.  else
 CONFIGURE_ARGS+=	--enable-ac3passthrough
 PLIST_SUBST+=		AC3PASS_COMMENT=
-.endif
+.  endif
 .else
 CONFIGURE_ARGS+=	--disable-ac3passthrough
 PLIST_SUBST+=		AC3PASS_COMMENT="@comment "
@@ -142,6 +142,6 @@ PLIST_SUBST+=		JPEG_COMMENT="@comment "
 
 .if !empty(PKG_OPTIONS:Mmmx)
 CONFIGURE_ARGS+=	--enable-x86opt
-. else
+.else
 CONFIGURE_ARGS+=	--disable-x86opt
-. endif
+.endif
