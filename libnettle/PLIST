@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/04/22 13:13:42 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/06 20:22:33 thomasklausner Exp $
 bin/nettle-lfib-stream
 bin/sexp-conv
 include/nettle/aes.h
@@ -39,4 +39,7 @@ include/nettle/twofish.h
 include/nettle/yarrow.h
 info/nettle.info
 lib/libnettle.a
+lib/libnettle.so
+lib/libnettle.so.2
 lib/libnettle.so.2.5
+@dirrm include/nettle
