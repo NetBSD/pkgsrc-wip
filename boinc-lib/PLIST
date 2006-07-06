@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.3 2006/06/18 19:23:08 rumko Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/06 20:05:30 thomasklausner Exp $
 bin/boinc_cmd
 bin/crypt_prog
-include/BOINC/app_i${LOWER_VENDOR}.h
+include/BOINC/app_ipc.h
 include/BOINC/boinc_api.h
 include/BOINC/boinc_win.h
 include/BOINC/boinc_zip.h
@@ -11,7 +11,7 @@ include/BOINC/exception.h
 include/BOINC/filesys.h
 include/BOINC/graphics_api.h
 include/BOINC/graphics_impl.h
-include/BOINC/graphics_${PKGVERSION}.h
+include/BOINC/graphics_lib.h
 include/BOINC/gutil.h
 include/BOINC/hostinfo.h
 include/BOINC/mfile.h
@@ -21,10 +21,10 @@ include/BOINC/parse.h
 include/BOINC/prefs.h
 include/BOINC/proxy_info.h
 include/BOINC/util.h
-${PKGVERSION}/${PKGVERSION}boinc.a
-${PKGVERSION}/${PKGVERSION}boinc_api.a
-${PKGVERSION}/${PKGVERSION}boinc_graphics_api.a
-${PKGVERSION}/${PKGVERSION}boinc_graphics_impl.a
-${PKGVERSION}/${PKGVERSION}boinc_graphics_${PKGVERSION}.a
-${PKGVERSION}/${PKGVERSION}boinc_zip.a
+lib/libboinc.a
+lib/libboinc_api.a
+lib/libboinc_graphics_api.a
+lib/libboinc_graphics_impl.a
+lib/libboinc_graphics_lib.a
+lib/libboinc_zip.a
 @dirrm include/BOINC
