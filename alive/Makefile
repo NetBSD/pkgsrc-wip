@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/10/24 17:25:16 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/06 19:12:55 thomasklausner Exp $
 #
 
 DISTNAME=	alive-1.4.0
@@ -9,9 +9,10 @@ MAINTAINER=	oht@users.sourceforge.net
 HOMEPAGE=	http://www.gnu.org/software/alive/
 COMMENT=	Login software for Swedish Telia ADSL/Comhem cable Internet users
 
-AUTOMAKE_REQD=  1.7.1
+AUTOMAKE_REQD=	1.7.1
 MANCOMPRESSED=	yes
-GNU_CONFIGURE=  yes
+GNU_CONFIGURE=	yes
+INFO_FILES=	yes
 USE_TOOLS+=	automake
 
 LIBS.SunOS+=	-lnsl -lsocket
