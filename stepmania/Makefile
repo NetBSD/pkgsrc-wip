@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/06/12 16:29:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/06 20:03:40 thomasklausner Exp $
 #
 
 DISTNAME=		StepMania-3.9-src
@@ -14,7 +14,7 @@ COMMENT=		Music/rhythm game (Dance Dance Revolution) simulator
 WRKSRC=			${WRKDIR}/StepMania-3.9-src
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tests
-USE_X11=		YES
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake autoconf
 
 post-extract:
@@ -29,4 +29,5 @@ post-extract:
 .include "../../lang/lua/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
