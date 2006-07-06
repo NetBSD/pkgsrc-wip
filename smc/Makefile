@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/12 16:47:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/06 20:05:05 thomasklausner Exp $
 #
 
 PKGNAME=		smc-0.97
@@ -18,7 +18,8 @@ GCC_REQD=		3.2
 
 WRKSRC=			${WRKDIR}/0.97
 GNU_CONFIGURE=		YES
-USE_TOOLS+=             gmake automake autoconf
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake automake autoconf
 
 SMCSHARE=${PREFIX}/share/smc
 
