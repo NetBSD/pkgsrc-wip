@@ -1,0 +1,12 @@
+txt2tags is a text formatting and conversion tool and converts a plain text
+file with little marks to any of the supported targets:
+
+- HTML document
+- XHTML document
+- SGML document
+- LaTeX document
+- UNIX man page
+- Magic Point presentation
+- MoinMoin page
+- PageMaker 6.0 document
+- Plain Text

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/07/06 21:36:55 dbolgheroni Exp $
+
+SHA1 (txt2tags-2.3.tgz) = ee64c96a3a4b7c35f0e7546dfeb471b9592f16ef
+RMD160 (txt2tags-2.3.tgz) = 320abbee12eb8be5e35d02068c0ff8db17734d6c
+Size (txt2tags-2.3.tgz) = 880164 bytes
+SHA1 (patch-aa) = 261518e26eb5668a793721ae983162ff342fa2d8
