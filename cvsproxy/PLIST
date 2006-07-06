@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/17 22:45:49 oht Exp $
-@comment This PLIST is intentionally left empty.
+@comment $NetBSD: PLIST,v 1.2 2006/07/06 19:12:12 thomasklausner Exp $
+libexec/cvsproxy
+man/man8/cvsproxy.8
