@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/06/12 16:28:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2006/07/06 19:13:33 thomasklausner Exp $
 #
 
 DISTNAME=	links-hacked-${VER}
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=        --without-x
 .endif
 
 post-extract:
-	@${MV} ${WRKDIR}/font ${WRKSRC}
+	${MV} ${WRKDIR}/font ${WRKSRC}
 
 pre-configure:
 	cd ${WRKSRC} && aclocal
