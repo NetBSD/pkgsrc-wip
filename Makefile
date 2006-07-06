@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2282 2006/07/06 17:28:13 bartoszkuzma Exp $
+# $Id: Makefile,v 1.2283 2006/07/06 18:30:34 rillig Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -106,6 +106,8 @@ SUBDIR+=	bmpx
 SUBDIR+=	bmpx-xine
 SUBDIR+=	bnr2
 SUBDIR+=	boa
+SUBDIR+=	boinc-client
+SUBDIR+=	boinc-lib
 SUBDIR+=	bridge-utils
 SUBDIR+=	briquolo
 SUBDIR+=	brltty
@@ -182,6 +184,7 @@ SUBDIR+=	di
 SUBDIR+=	dia2code
 SUBDIR+=	dicom3tools
 SUBDIR+=	dict-mueller7
+SUBDIR+=	dict-server
 SUBDIR+=	dictem
 SUBDIR+=	ding
 SUBDIR+=	directfb
@@ -340,6 +343,7 @@ SUBDIR+=	gnump3d
 SUBDIR+=	gnunet
 SUBDIR+=	gnupoc-makesis
 SUBDIR+=	gobby
+SUBDIR+=	godura
 SUBDIR+=	goldwater
 SUBDIR+=	gov2
 SUBDIR+=	gplbasic
@@ -1152,6 +1156,7 @@ SUBDIR+=	readseq
 SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
 SUBDIR+=	recordproto
+SUBDIR+=	redfang
 SUBDIR+=	regexxer
 SUBDIR+=	rekall
 SUBDIR+=	relaydb
@@ -1267,6 +1272,7 @@ SUBDIR+=	soundtracker
 SUBDIR+=	spamassassin-cvs
 SUBDIR+=	spe
 SUBDIR+=	speedx
+SUBDIR+=	speex-devel
 SUBDIR+=	spfmilter
 SUBDIR+=	sqlitebrowser
 SUBDIR+=	squirrelmail-avelsieve
@@ -1443,6 +1449,7 @@ SUBDIR+=	xrdp
 SUBDIR+=	xscribble-fs
 SUBDIR+=	xsm
 SUBDIR+=	xspread
+SUBDIR+=	xtrace
 SUBDIR+=	xtrans
 SUBDIR+=	xxdiff
 SUBDIR+=	xxkb
