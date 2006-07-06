@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/06/12 16:28:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2006/07/06 08:26:06 obache Exp $
 
 DISTNAME=	avifile-0.7-0.7.43
 PKGNAME=	avifile-devel-0.7.43
-PGKREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=avifile/}
 EXTRACT_SUFX=	.tar.bz2
