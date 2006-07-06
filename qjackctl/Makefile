@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/06/12 16:44:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/06 20:17:10 thomasklausner Exp $
 #
 
 DISTNAME=		qjackctl-0.2.19a
@@ -11,6 +11,7 @@ COMMENT=		Qt GUI interface to control the JACK sound server daemon
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		autoconf pkg-config
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
 .include "../../audio/jack/buildlink3.mk"
