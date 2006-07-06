@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2281 2006/07/03 09:44:54 jmmv Exp $
+# $Id: Makefile,v 1.2282 2006/07/06 17:28:13 bartoszkuzma Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -165,6 +165,7 @@ SUBDIR+=	damageproto
 SUBDIR+=	dansguardian
 SUBDIR+=	daphne
 SUBDIR+=	darcnes-svgalib
+SUBDIR+=	darkstat
 SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dbvi
