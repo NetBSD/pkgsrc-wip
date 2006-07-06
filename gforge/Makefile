@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2006/06/12 16:45:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2006/07/06 21:48:35 thomasklausner Exp $
 
 DISTNAME=	gforge-3.1
 PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://gforge.org/download.php/44/
+MASTER_SITES=	http://gforge.org/frs/download.php/44/
 
 MAINTAINER=	david@netbsd-fr.org
 HOMEPAGE=	http://www.gforge.org/
