@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/19 08:46:09 poppnk Exp $
+# $NetBSD: Makefile,v 1.9 2006/07/06 18:32:40 rillig Exp $
 #
 
 DISTNAME=		git-1.4.0
@@ -21,10 +21,12 @@ EXTRACT_USING=  gtar
 MAKE_ENV+=	PERL_PATH=${PERL5:Q}
 MAKE_ENV+=	PYTHON_PATH=${PYTHONBIN:Q}
 #MAKE_ENV+=	SHELL_PATH=${SH:Q}
+LDFLAGS+=	${BUILDLINK_LDADD.iconv}
 
-.include "../../textproc/expat/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
