@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/09 21:02:04 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/06 20:17:59 thomasklausner Exp $
 
 DISTNAME=		audacity-src-1.3.0b
 PKGNAME=		${DISTNAME:S/-src-/-/}
@@ -13,9 +13,11 @@ DEPENDS+=		zip>=0.0:../../archivers/zip
 
 WRKSRC=			${WRKDIR}/${DISTNAME}-beta
 
+USE_DIRS=		xdg-1.3
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		autoconf gmake pkg-config
+USE_TOOLS+=		autoconf gmake msgfmt pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xaudio
 CONFIGURE_ARGS+=	--with-id3=system
@@ -24,13 +26,10 @@ CONFIGURE_ARGS+=	--with-libmad=system
 CONFIGURE_ARGS+=	--with-libsndfile=system
 CONFIGURE_ARGS+=	--with-portaudio=system
 CONFIGURE_ARGS+=	--with-vorbis=system
-LTCONFIG_OVERRIDE+=	${WRKSRC:Q}/ltconfig
 
-.include "../../mk/bsd.prefs.mk"
-
-CONFIG_GUESS_OVERRIDE?=		\
+CONFIG_GUESS_OVERRIDE=		\
 	config.guess */config.guess */*/config.guess */*/*/config.guess
-CONFIG_SUB_OVERRIDE?=		\
+CONFIG_SUB_OVERRIDE=		\
 	config.sub */config.sub */*/config.sub */*/*/config.sub
 
 .include "../../audio/flac/buildlink3.mk"
