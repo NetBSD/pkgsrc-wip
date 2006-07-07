@@ -1,0 +1,25 @@
+$NetBSD: patch-ac,v 1.1 2006/07/07 18:13:16 shattered Exp $
+
+--- gst/__init__.py.orig	2006-04-13 08:55:19.000000000 +0000
++++ gst/__init__.py
+@@ -83,9 +83,9 @@ class Fraction(Value):
+    def __repr__(self):
+       return '<gst.Fraction %d/%d>' % (self.num, self.denom)
+ 
+-import DLFCN, sys
++import dl, sys
+ dlsave = sys.getdlopenflags()
+-sys.setdlopenflags(DLFCN.RTLD_LAZY | DLFCN.RTLD_GLOBAL)
++sys.setdlopenflags(dl.RTLD_LAZY | dl.RTLD_GLOBAL)
+ 
+ from _gst import *
+ import interfaces
+@@ -93,7 +93,7 @@ import interfaces
+ version = get_gst_version
+ 
+ sys.setdlopenflags(dlsave)
+-del DLFCN, sys
++del dl, sys
+ 
+ # this restores previously installed importhooks, so we don't interfere
+ # with other people's module importers

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/28 17:37:38 shattered Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/07 18:13:16 shattered Exp $
 lib/pkgconfig/gst-python-0.10.pc
 ${PYSITELIB}/gst-0.10/gst/__init__.py
 ${PYSITELIB}/gst-0.10/gst/__init__.pyc
@@ -35,6 +35,7 @@ share/gst-python/0.10/examples/gst123
 share/gst-python/0.10/examples/gstfile.py
 share/gst-python/0.10/examples/pipeline-tester
 share/gst-python/0.10/examples/play.py
+share/gst-python/0.10/examples/remuxer.py
 share/gst-python/0.10/examples/sinkelement.py
 share/gst-python/0.10/examples/vorbisplay.py
 share/gst-python/0.10/examples/vumeter.py
