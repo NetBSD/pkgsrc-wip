@@ -32,6 +32,10 @@ pre-configure:
 	aclocal -I m4 && autoheader &&	\
 	automake && autoconf
 
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/rc.d
+	${INSTALL_DATA} ${FILESDIR}/boinc.sh ${PREFIX}/share/examples/rc.d/boinc
+
 .include "../../www/curl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 

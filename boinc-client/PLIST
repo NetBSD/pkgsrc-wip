@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/18 16:51:41 rumko Exp $
-bin/boinc_${PKGVERSION}
+@comment $NetBSD: PLIST,v 1.2 2006/07/07 19:03:14 thomasklausner Exp $
+bin/boinc_client
 bin/boinc_gui
 lib/libbenchmark.a
 share/examples/rc.d/boinc
