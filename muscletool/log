@@ -1,0 +1,28 @@
+2.1.0 - 02 Jan 2006, Karsten Ohme
+	- Compilation error fixed
+	- New GetStatus() for MuscleCard library 2.0.0 included
+	- setstatus command
+	- changeacl command
+	- changekeyacl command
+
+2.0.0 - 19 Oct 2005, Karsten Ohme
+	- genkeys can generate RSA, DSA, EC, RSA-CRT, AES and DES keys
+	- crypt supports any combination of possible key - cipher - signature
+	  algorithms Java Card 2.1.1 and Java Card 2.2 offers and the card is capable
+	- crypt can read from file and write output to file
+	- Included man page in Makefile.am
+	- improved autoconf checks
+	- support for version 2.0.0 of MuscleCard library, MuscleCard Plug-In, Card Edge 1.0.1
+	  - enter PIN with keypad
+	  - deletekey command
+	  - deleteid command
+	  - resume supports returns new capabilities
+	  - extended format command
+	  - movekey command
+	  - move command	  
+
+1.0.0 - Sa Aug 14 02:51:01 CEST 2004, Toni Andjelkovic
+	- autoconf/automake configuration
+	- lex/yacc parser
+	- separate help functions
+	- optional GNU readline support
