@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/07/07 21:02:54 shattered Exp $
+
+--- setup.py.orig	2006-06-25 20:00:49.000000000 +0000
++++ setup.py
+@@ -111,7 +111,7 @@ class coverage_cmd(Command):
+             100.0 * (total_lines - bad_lines) / float(total_lines))
+ 
+ if os.name == "posix":
+-    data_files = [('share/man/man1', glob.glob("man/*.1"))]
++    data_files = [('man/man1', glob.glob("man/*.1"))]
+ else:
+     data_files = []
+ 

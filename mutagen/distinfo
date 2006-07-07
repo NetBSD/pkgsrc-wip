@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/07/07 21:02:59 shattered Exp $
+
+SHA1 (mutagen-1.5.1.tar.gz) = bec18e4cc4724efd63366a5e849e3811e81fac44
+RMD160 (mutagen-1.5.1.tar.gz) = 054bfbe666d81e08a50781793cc09a3bdde5d0d5
+Size (mutagen-1.5.1.tar.gz) = 296326 bytes
+SHA1 (patch-ac) = 24f127e8b1b3c5cf5607d931ac3e9ecf472f048a
+SHA1 (patch-ad) = 41cc37836ae27ab7e1bdafea3e5d986f470053c2

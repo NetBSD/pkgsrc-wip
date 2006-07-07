@@ -1,0 +1,39 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/07/07 20:53:19 shattered Exp $
+
+--- mutagen/id3.py.orig	2006-06-03 20:16:43.000000000 +0000
++++ mutagen/id3.py
+@@ -1666,22 +1666,28 @@ def ParseID3v1(string):
+     from struct import error as StructError
+     frames = {}
+     try:
+-        tag, title, artist, album, year, comment, track, genre = unpack(
+-            "3s30s30s30s4s29sBB", string)
++        tag, title, artist, album, year, comment, tflag, track, genre = unpack(
++            "3s30s30s30s4s28sBBB", string)
+     except StructError: return None
+ 
+     if tag != "TAG": return None
+     def fix(string):
+         return string.split("\x00")[0].strip().decode('latin1')
+-    title, artist, album, year, comment = map(
+-        fix, [title, artist, album, year, comment])
++    title, artist, album, year = map(
++        fix, [title, artist, album, year])
+ 
+     if title: frames["TIT2"] = TIT2(encoding=0, text=title)
+     if artist: frames["TPE1"] = TPE1(encoding=0, text=[artist])
+     if album: frames["TALB"] = TALB(encoding=0, text=album)
+     if year: frames["TDRC"] = TDRC(encoding=0, text=year)
+-    if comment: frames["COMM"] = COMM(
+-        encoding=0, lang="eng", desc="ID3v1 Comment", text=comment)
++
++    if tflag == 0:
++	if track: frames["TRCK"] = TRCK(encoding=0, text=str(track))
++    else:
++	comment = comment + chr(tflag) + chr(track)
++    comment = comment.strip("\x00").strip().decode('latin1')
++    if comment: frames["COMM"] = COMM(encoding=0, lang="eng", desc="", text=comment)
++
+     if track: frames["TRCK"] = TRCK(encoding=0, text=str(track))
+     if genre != 255: frames["TCON"] = TCON(encoding=0, text=str(genre))
+     return frames
