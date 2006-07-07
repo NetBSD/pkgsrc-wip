@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2006/07/07 19:14:41 thomasklausner Exp $
+
+--- doc/Makefile.in.orig	2006-04-22 14:04:00.000000000 +0000
++++ doc/Makefile.in
+@@ -177,7 +174,7 @@ build_os = @build_os@
+ build_vendor = @build_vendor@
+ confdir = @confdir@
+ confdir_exp = @confdir_exp@
+-datadir = $(prefix)/doc
++datadir = $(prefix)/share/doc/pcsc-lite
+ exec_prefix = @exec_prefix@
+ extended_apdu = @extended_apdu@
+ host = @host@

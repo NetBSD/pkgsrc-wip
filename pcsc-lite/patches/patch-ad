@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.3 2006/07/07 19:14:41 thomasklausner Exp $
+
+--- Makefile.in.orig	2006-04-22 14:04:02.000000000 +0000
++++ Makefile.in
+@@ -206,7 +210,7 @@ sysconfdir = @sysconfdir@
+ sysconfdir_exp = @sysconfdir_exp@
+ target_alias = @target_alias@
+ usbdropdir = @usbdropdir@
+-SUBDIRS = m4 win32 src etc doc
++SUBDIRS = m4 win32 src doc
+ ACLOCAL_AMFLAGS = -I m4
+ EXTRA_DIST = DRIVERS SECURITY bootstrap HELP ChangeLog.svn
+ DISTCLEANFILES = ChangeLog.svn

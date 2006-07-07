@@ -1,0 +1,55 @@
+$NetBSD: patch-aj,v 1.1 2006/07/07 19:14:41 thomasklausner Exp $
+
+--- src/Makefile.in.orig	2006-04-22 14:04:01.000000000 +0000
++++ src/Makefile.in
+@@ -1279,7 +1283,7 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-nobase_includeHEADERS \
++install-data-am: install-data-local install-nobase_includeHEADERS \
+ 	install-nodistheaderDATA install-pcDATA
+ 
+ install-exec-am: install-libLTLIBRARIES install-sbinPROGRAMS
+@@ -1320,18 +1324,19 @@ uninstall-info: uninstall-info-recursive
+ 	ctags-recursive distclean distclean-compile distclean-generic \
+ 	distclean-libtool distclean-recursive distclean-tags distdir \
+ 	dvi dvi-am html html-am info info-am install install-am \
+-	install-data install-data-am install-exec install-exec-am \
+-	install-info install-info-am install-libLTLIBRARIES \
+-	install-man install-nobase_includeHEADERS \
+-	install-nodistheaderDATA install-pcDATA install-sbinPROGRAMS \
+-	install-strip installcheck installcheck-am installdirs \
+-	installdirs-am maintainer-clean maintainer-clean-generic \
+-	maintainer-clean-recursive mostlyclean mostlyclean-compile \
+-	mostlyclean-generic mostlyclean-libtool mostlyclean-recursive \
+-	pdf pdf-am ps ps-am tags tags-recursive uninstall uninstall-am \
+-	uninstall-info-am uninstall-libLTLIBRARIES \
+-	uninstall-nobase_includeHEADERS uninstall-nodistheaderDATA \
+-	uninstall-pcDATA uninstall-sbinPROGRAMS
++	install-data install-data-am install-data-local install-exec \
++	install-exec-am install-info install-info-am \
++	install-libLTLIBRARIES install-man \
++	install-nobase_includeHEADERS install-nodistheaderDATA \
++	install-pcDATA install-sbinPROGRAMS install-strip installcheck \
++	installcheck-am installdirs installdirs-am maintainer-clean \
++	maintainer-clean-generic maintainer-clean-recursive \
++	mostlyclean mostlyclean-compile mostlyclean-generic \
++	mostlyclean-libtool mostlyclean-recursive pdf pdf-am ps ps-am \
++	tags tags-recursive uninstall uninstall-am uninstall-info-am \
++	uninstall-libLTLIBRARIES uninstall-nobase_includeHEADERS \
++	uninstall-nodistheaderDATA uninstall-pcDATA \
++	uninstall-sbinPROGRAMS
+ 
+ 
+ # Hack to be able to use flex -P to enable linking of multiple lexer
+@@ -1339,6 +1344,9 @@ uninstall-info: uninstall-info-recursive
+ # this automagically.  This breaks if lex is not flex!!
+ tokenparser.c: tokenparser.l
+ 	$(SHELL) $(YLWRAP) $< lex.tp.c $@ -- "$(LEX)" -Ptp $(AM_LFLAGS) $(LFLAGS)
++
++install-data-local:
++	${INSTALL} -d ${DESTDIR}${includedir}/PCSC
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
