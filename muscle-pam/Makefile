@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/03/14 01:28:02 jlamwww Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/07 19:24:13 thomasklausner Exp $
 
 DISTNAME=		muscleframework-1.1.5
 PKGNAME=		muscle-pam-1.1.5
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://alioth.debian.org/download.php/463/
 
@@ -11,6 +12,8 @@ COMMENT=		PAM plugin for MUSCLE SmartCard framework
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/MusclePAM
 USE_TOOLS+=		gmake
+
+CPPFLAGS+=		-I${LOCALBASE}/include/PCSC
 
 PKG_SYSCONFSUBDIR=	musclepam
 EGDIR=			${PREFIX}/share/examples/muscle-pam
