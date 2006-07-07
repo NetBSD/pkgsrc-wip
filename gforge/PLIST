@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/27 22:53:30 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/07 19:10:34 thomasklausner Exp $
 etc/gforge/local.inc-dist
 share/doc/gforge/Soap.README
 share/doc/gforge/architecture/stats/stats-process.sda
@@ -174,7 +174,6 @@ share/gforge/common/tracker/ArtifactsForUser.class
 share/gforge/contrib/autoconf/README.configure
 share/gforge/contrib/autoconf/configure
 share/gforge/contrib/autoconf/configure.ac
-share/gforge/contrib/autoconf/configure.ac.orig
 share/gforge/contrib/autoconf/local.inc.in
 share/gforge/contrib/autoconf/sample-apache.vhost.in
 share/gforge/contrib/beta1_install_from_scratch.txt
@@ -813,5 +812,6 @@ share/gforge/www/users
 @dirrm share/doc/gforge/xdocs
 @dirrm share/doc/gforge/images
 @dirrm share/doc/gforge/architecture/stats
+@dirrm share/doc/gforge/architecture
 @dirrm share/doc/gforge
 @dirrm etc/gforge
