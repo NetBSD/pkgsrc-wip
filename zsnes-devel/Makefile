@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.18 2006/06/12 16:29:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2006/07/07 11:04:05 dillo Exp $
 #
 
-DISTNAME=		ZSNESS_0909
-PKGNAME=		zsnes-2005909
-PKGREVISION=		1
+DISTNAME=		ZSNESS_0319
+PKGNAME=		zsnes-20060319
 CATEGORIES=		emulators
-MASTER_SITES=		http://www.ipherswipsite.com/files/zsnes/
+MASTER_SITES=		http://files.ipherswipsite.com/zsnes/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		dillo@NetBSD.org
-HOMEPAGE=		http://ipherswipsite.com/zsnes/
+HOMEPAGE=		http://zsnes.ipherswipsite.com/
 COMMENT=		Super NES emulator, development version
 
 BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 
-WRKSRC=			${WRKDIR}/zsnes/src
+WRKSRC=			${WRKDIR}/src
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake automake
+USE_LANGUAGES+=		c++
 ONLY_FOR_PLATFORM=	*-*-i386
 BUILD_TARGET=		zsnes
 
