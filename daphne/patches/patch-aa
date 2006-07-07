@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2006/07/07 20:02:09 dillo Exp $
 
---- Makefile.orig	2002-12-17 07:28:37.000000000 +0100
-+++ Makefile
+--- src/Makefile.orig	2002-12-17 07:28:37.000000000 +0100
++++ src/Makefile
 @@ -8,10 +8,10 @@ include Makefile.vars
  
  # send these to all the sub-Makefiles

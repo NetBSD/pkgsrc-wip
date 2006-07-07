@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+$NetBSD: patch-af,v 1.2 2006/07/07 20:02:09 dillo Exp $
 
---- video/video.cpp.orig	2003-05-11 22:08:23.000000000 +0200
-+++ video/video.cpp
+--- src/video/video.cpp.orig	2003-05-11 22:08:23.000000000 +0200
++++ src/video/video.cpp
 @@ -136,7 +139,7 @@ bool init_display()
  			SDL_WM_SetCaption("DAPHNE: First Ever Multiple Arcade Laserdisc Emulator =]", "daphne");
  			

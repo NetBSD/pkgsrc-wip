@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+$NetBSD: patch-ah,v 1.2 2006/07/07 20:02:09 dillo Exp $
 
---- io/network.cpp.orig	2003-04-08 01:50:23.000000000 +0200
-+++ io/network.cpp
+--- src/io/network.cpp.orig	2003-04-08 01:50:23.000000000 +0200
++++ src/io/network.cpp
 @@ -539,10 +539,12 @@ void net_send_data_to_server()
  #endif
  

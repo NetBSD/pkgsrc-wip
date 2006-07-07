@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+$NetBSD: patch-ab,v 1.2 2006/07/07 20:02:09 dillo Exp $
 
---- Makefile.vars.orig	2004-06-19 04:53:38.000000000 +0200
-+++ Makefile.vars
+--- src/Makefile.vars.orig	2004-06-19 04:53:38.000000000 +0200
++++ src/Makefile.vars
 @@ -5,15 +5,14 @@
  #DFLAGS = -g -DCPU_DEBUG
  

@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1.1.1 2004/06/24 15:15:32 dillo Exp $
+$NetBSD: patch-aj,v 1.2 2006/07/07 20:02:09 dillo Exp $
 
---- daphne.h.orig	2003-05-11 22:08:22.000000000 +0200
-+++ daphne.h
+--- src/daphne.h.orig	2003-05-11 22:08:22.000000000 +0200
++++ src/daphne.h
 @@ -105,5 +105,8 @@ void set_startsilent(unsigned char value
  unsigned char get_startsilent();
  // end edit
