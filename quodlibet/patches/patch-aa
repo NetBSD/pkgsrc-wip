@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/02/05 09:50:06 shattered Exp $
+$NetBSD: patch-aa,v 1.2 2006/07/08 11:40:08 shattered Exp $
 
---- Makefile.orig	2005-10-07 20:48:20.000000000 +0000
+--- Makefile.orig	2006-05-30 20:09:04.000000000 +0000
 +++ Makefile
-@@ -10,22 +10,22 @@ all:
- 	@./check.py
+@@ -13,7 +13,7 @@ all:
+ 	@./check.py $(DESTDIR)$(PREFIX)/$(TO)
  
  make-install-dirs:
 -	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man1
@@ -11,25 +11,35 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/02/05 09:50:06 shattered Exp $
  	mkdir -p $(DESTDIR)$(PREFIX)/bin
  	mkdir -p $(DESTDIR)$(PREFIX)/$(TO)
  
- install: make-install-dirs install-exfalso install-quodlibet
- 	./quickzip.py quodlibet.zip $(MODULES)
--	install -m 644 quodlibet.zip ql-*.png $(DESTDIR)$(PREFIX)/$(TO)
--	-for E in $(EXTENSIONS); do (test -e $$E && install -m 755 $$E $(DESTDIR)$(PREFIX)/$(TO)); done
-+	$(BSD_INSTALL_DATA) quodlibet.zip ql-*.png $(DESTDIR)$(PREFIX)/$(TO)
-+	-for E in $(EXTENSIONS); do (test -e $$E && $(BSD_INSTALL_SCRIPT) $$E $(DESTDIR)$(PREFIX)/$(TO)); done
- 	cd po && make install-po DESTDIR=$(DESTDIR)
+@@ -23,8 +23,8 @@ make-install-dirs:
+ # have (potentially) outdated translations. Ideally any developers
+ # installing the SVN version will have intltool and so it will build fine.
+ install: make-install-dirs install-dirs install-programs
+-	install -m 644 $(MODULES) rhythmbox-*.png $(DESTDIR)$(PREFIX)/$(TO)
+-	-for E in $(EXTENSIONS); do (test -e $$E && install -m 755 -D $$E $(DESTDIR)$(PREFIX)/$(TODEP)/$$E); done
++	$(BSD_INSTALL_DATA) $(MODULES) rhythmbox-*.png $(DESTDIR)$(PREFIX)/$(TO)
++	-for E in $(EXTENSIONS); do (test -e $$E && $(BSD_INSTALL_SCRIPT) -D $$E $(DESTDIR)$(PREFIX)/$(TODEP)/$$E); done
+ 	-cd po && make install-po DESTDIR=$(DESTDIR)
  
- install-%: make-install-dirs
+ install-dirs: $(addprefix dir-install-, $(MODULE_DIRS))
+@@ -33,14 +33,14 @@ install-programs: $(addprefix app-instal
+ 
+ dir-install-%: make-install-dirs
+ 	mkdir -p $(DESTDIR)$(PREFIX)/$(TO)/$*
+-	install -m 644 $*/*.py $(DESTDIR)$(PREFIX)/$(TO)/$*
++	$(BSD_INSTALL_DATA) $*/*.py $(DESTDIR)$(PREFIX)/$(TO)/$*
+ 
+ app-install-%: make-install-dirs %.desktop
 -	install -m 755 $*.py $(DESTDIR)$(PREFIX)/$(TO)
 -	install -m 644 $*.1 $(DESTDIR)$(PREFIX)/share/man/man1/$*.1
 -	install -D -m 644 $*.png $(DESTDIR)$(PREFIX)/share/pixmaps/$*.png
--	install -m 644 $*.png $(DESTDIR)$(PREFIX)/$(TO)
--	install -D -m 644 $*.desktop $(DESTDIR)$(PREFIX)/share/applications/$*.desktop
+-	install -m 644 $*.svg $*.png $(DESTDIR)$(PREFIX)/$(TO)
+-	-install -D -m 644 $*.desktop $(DESTDIR)$(PREFIX)/share/applications/$*.desktop
 +	$(BSD_INSTALL_SCRIPT) $*.py $(DESTDIR)$(PREFIX)/$(TO)
 +	$(BSD_INSTALL_DATA) $*.1 $(DESTDIR)$(PREFIX)/man/man1/$*.1
 +	$(BSD_INSTALL_DATA) $*.png $(DESTDIR)$(PREFIX)/share/pixmaps/$*.png
-+	$(BSD_INSTALL_DATA) $*.png $(DESTDIR)$(PREFIX)/$(TO)
-+	$(BSD_INSTALL_DATA) $*.desktop $(DESTDIR)$(PREFIX)/share/applications/$*.desktop
++	$(BSD_INSTALL_DATA) $*.svg $*.png $(DESTDIR)$(PREFIX)/$(TO)
++	-$(BSD_INSTALL_DATA) $*.desktop $(DESTDIR)$(PREFIX)/share/applications/$*.desktop
  	ln -sf ../$(TO)/$*.py $(DESTDIR)$(PREFIX)/bin/$*
  
  clean:

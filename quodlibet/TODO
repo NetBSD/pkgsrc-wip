@@ -1,6 +1,0 @@
-For unknown reason, quodlibet does not start:
-
-File "/usr/pkg/lib/python2.3/site-packages/gst-0.10/gst/__init__.py", line 93, in ?
-    from _gst import *
-ImportError: /usr/pkg/lib/python2.3/site-packages/gst-0.10/gst/_gst.so:
-Undefined PLT symbol "gst_dp_header_payload_type" (symnum = 93)
