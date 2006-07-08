@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/08 20:50:15 gschwarz Exp $
+man/man3/regexp.3
+man/man5/tac_plus.conf.5
+man/man8/tac_plus.8
+man/man8/tac_pwd.8
+sbin/tac_plus
+sbin/tac_pwd
+share/doc/tacacs/users_guide
+@dirrm share/doc/tacacs

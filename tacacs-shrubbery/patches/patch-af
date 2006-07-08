@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/07/08 20:50:15 gschwarz Exp $
+
+--- pwlib.c.orig	2006-07-08 18:52:01.000000000 +0200
++++ pwlib.c	2006-07-08 18:54:03.000000000 +0200
+@@ -31,7 +31,11 @@
+ #endif
+ 
+ #if HAVE_PAM
+-# include <security/pam_appl.h>
++# ifdef __APPLE__ /* MacOS X */
++#  include <pam/pam_appl.h>
++# else
++#  include <security/pam_appl.h>
++# endif
+ static int pam_tacacs(int, const struct pam_message **, struct pam_response **,
+ 		      void *);
+ #endif

@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/07/08 20:50:15 gschwarz Exp $
+
+--- report.c.orig	2006-07-08 18:38:14.000000000 +0200
++++ report.c	2006-07-08 18:39:24.000000000 +0200
+@@ -146,8 +146,6 @@
+ 
+ 
+     if (console) {
+-	extern int errno;
+-
+ 	if (!ostream)
+ 	    ostream = fopen("/dev/console", "w");
+ 
