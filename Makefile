@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2286 2006/07/08 09:14:32 obache Exp $
+# $Id: Makefile,v 1.2287 2006/07/08 11:46:24 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -708,6 +708,7 @@ SUBDIR+=	muscle-pam
 SUBDIR+=	muscle-pkcs11
 SUBDIR+=	muscletool
 SUBDIR+=	musepack
+SUBDIR+=	mutagen
 SUBDIR+=	mutella
 SUBDIR+=	mutt-ng
 SUBDIR+=	muttvcquery
