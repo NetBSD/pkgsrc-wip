@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2285 2006/07/07 19:27:50 thomasklausner Exp $
+# $Id: Makefile,v 1.2286 2006/07/08 09:14:32 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -305,7 +305,6 @@ SUBDIR+=	gde
 SUBDIR+=	gdhcpd
 SUBDIR+=	gdmap
 SUBDIR+=	gdvb
-SUBDIR+=	geeklog
 SUBDIR+=	gettext-lib
 SUBDIR+=	gettext-runtime
 SUBDIR+=	gettext-tools
