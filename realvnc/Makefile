@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/20 13:36:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2006/07/09 22:23:57 dhowland Exp $
 #
 
 DISTNAME=		vnc-4_1_1-unixsrc
@@ -27,6 +27,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=        --with-installed-zlib
 NO_INSTALL_MANPAGES=    yes
 
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl:run
 REPLACE_PERL=		vncserver
 
