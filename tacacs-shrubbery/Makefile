@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/08 20:50:15 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/09 15:17:56 gschwarz Exp $
 #
 
 DISTNAME=	tacacs+-F4.0.4.10
@@ -17,6 +17,13 @@ USE_TOOLS+=	perl
 
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(LOWER_OPSYS:Mirix5*)
+CFLAGS+=		-Duint16_t=u_int16_t -Duint32_t=u_int32_t \
+			-Dsocklen_t=int
+.endif
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 \
 			${PKGMANDIR}/man8 share/doc/tacacs
