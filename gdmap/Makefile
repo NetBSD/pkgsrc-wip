@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/05 12:20:26 absd Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/09 16:52:03 dhowland Exp $
 #
 
 DISTNAME=		gdmap-0.7.0
@@ -11,6 +11,7 @@ COMMENT=		Tool to visualize disk space
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=              xdg-1.2
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=       yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
