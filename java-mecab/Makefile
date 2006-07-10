@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/07/10 05:30:48 obache Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/10 16:23:17 obache Exp $
 #
 
 .include "../../wip/mecab/Makefile.common"
@@ -6,7 +6,7 @@
 DISTNAME=	mecab-java-${MECAB_VERSION}
 PKGNAME=	java-mecab-${MECAB_VERSION}
 CATEGORIES=	japanese textproc java
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=mecab/20901/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=mecab/20922/}
 
 MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://mecab.sourceforge.jp/
