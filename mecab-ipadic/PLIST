@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/19 14:03:07 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/10 05:30:49 obache Exp $
 lib/mecab/dic/ipadic/char.bin
 lib/mecab/dic/ipadic/dicrc
 lib/mecab/dic/ipadic/left-id.def
 lib/mecab/dic/ipadic/matrix.bin
+lib/mecab/dic/ipadic/pos-id.def
 lib/mecab/dic/ipadic/rewrite.def
 lib/mecab/dic/ipadic/right-id.def
 lib/mecab/dic/ipadic/sys.dic

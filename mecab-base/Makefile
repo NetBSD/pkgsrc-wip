@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/01 12:06:29 obache Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/10 05:30:49 obache Exp $
 #
 
 .include "../../wip/mecab/Makefile.common"
@@ -6,7 +6,7 @@
 DISTNAME=		mecab-${MECAB_VERSION}
 PKGNAME=		mecab-base-${MECAB_VERSION}
 CATEGORIES=		japanese textproc
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=mecab/20027/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=mecab/20896/}
 
 MAINTAINER=		obata@lins.jp
 HOMEPAGE=		http://mecab.sourceforge.jp/
@@ -15,15 +15,9 @@ COMMENT=		Yet Another Part-of-Speech and Morphological Analyzer
 GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		perl:run
 OWN_DIRS=		${PREFIX:Q}/lib/mecab/dic
 
-CONFIGURE_ARGS+=	--with-perl5=${PERL5:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-
-REPLACE_PERL+=		libexec/mecab-cost-train libexec/mecab-dict-info \
-			libexec/mecab-dict-gen libexec/mecab-system-eval \
-			libexec/mecab-dict-index libexec/mecab-test-gen
 
 EGDIR=			${PREFIX}/share/examples/mecab
 CONF_FILES=		${EGDIR:Q}/mecabrc ${PKG_SYSCONFDIR:Q}/mecabrc
