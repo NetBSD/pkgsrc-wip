@@ -1,43 +1,21 @@
-$NetBSD: patch-af,v 1.2 2006/07/07 20:02:09 dillo Exp $
+$NetBSD: patch-af,v 1.3 2006/07/10 20:00:48 dillo Exp $
 
---- src/video/video.cpp.orig	2003-05-11 22:08:23.000000000 +0200
+--- src/video/video.cpp.orig	2006-03-15 01:01:36.000000000 +0100
 +++ src/video/video.cpp
-@@ -136,7 +139,7 @@ bool init_display()
- 			SDL_WM_SetCaption("DAPHNE: First Ever Multiple Arcade Laserdisc Emulator =]", "daphne");
- 			
- 			// initialize SDL console in the background
--			if (ConsoleInit("pics/ConsoleFont.bmp", g_screen, 100)==0)
-+			if (ConsoleInit(find_data_file("pics/ConsoleFont.bmp"), g_screen, 100)==0)
- 			{
- 				AddCommand(g_cpu_break, "break");
- 				g_console_initialized = true;
-@@ -198,7 +201,7 @@ int load_bmps()
+@@ -36,6 +36,7 @@
+ #include "SDL_Console.h"
+ #include "../game/game.h"
+ #include "../ldp-out/ldp.h"
++#include "../daphne.h"	// for find_data_file
  
- 	for (; index < LED_RANGE; index++)
- 	{
- 		sprintf(filename, "pics/led%d.bmp", index);
+ using namespace std;
  
--		g_led_bmps[index] = load_one_bmp(filename);
-+		g_led_bmps[index] = load_one_bmp(find_data_file(filename));
+@@ -243,7 +244,7 @@ bool load_bmps()
  
-@@ -211,13 +214,13 @@ int load_bmps()
- 			result = 0;
- 		}
- 	}
--	g_other_bmps[B_DL_PLAYER1] = load_one_bmp("pics/player1.bmp");
--	g_other_bmps[B_DL_PLAYER2] = load_one_bmp("pics/player2.bmp");
--	g_other_bmps[B_DL_LIVES] = load_one_bmp("pics/lives.bmp");
--	g_other_bmps[B_DL_CREDITS] = load_one_bmp("pics/credits.bmp");
--	g_other_bmps[B_DAPHNE_SAVEME] = load_one_bmp("pics/saveme.bmp");
--	g_other_bmps[B_GAMENOWOOK] = load_one_bmp("pics/gamenowook.bmp");
--    g_other_bmps[B_OVERLAY_LEDS] = load_one_bmp("pics/overlayleds.bmp");
-+	g_other_bmps[B_DL_PLAYER1] = load_one_bmp(find_data_file("pics/player1.bmp"));
-+	g_other_bmps[B_DL_PLAYER2] = load_one_bmp(find_data_file("pics/player2.bmp"));
-+	g_other_bmps[B_DL_LIVES] = load_one_bmp(find_data_file("pics/lives.bmp"));
-+	g_other_bmps[B_DL_CREDITS] = load_one_bmp(find_data_file("pics/credits.bmp"));
-+	g_other_bmps[B_DAPHNE_SAVEME] = load_one_bmp(find_data_file("pics/saveme.bmp"));
-+	g_other_bmps[B_GAMENOWOOK] = load_one_bmp(find_data_file("pics/gamenowook.bmp"));
-+    g_other_bmps[B_OVERLAY_LEDS] = load_one_bmp(find_data_file("pics/overlayleds.bmp"));
+ SDL_Surface *load_one_bmp(char *filename)
+ {
+-	SDL_Surface *result = SDL_LoadBMP(filename);
++	SDL_Surface *result = SDL_LoadBMP(find_data_file(filename));
  
- 	for (index = 0; index < B_EMPTY; index++)
+ 	if (!result)
  	{
