@@ -1,10 +1,39 @@
-$NetBSD: patch-aa,v 1.1 2006/07/05 23:21:50 cheusov Exp $
+$NetBSD: patch-aa,v 1.2 2006/07/12 13:15:18 cheusov Exp $
 
---- examples/dictd1.conf.orig	Thu Dec  8 20:50:40 2005
+--- examples/dictd1.conf.orig	2005-12-08 20:50:40.000000000 +0200
 +++ examples/dictd1.conf
-@@ -14,3 +14,5 @@ database easton    { data "/usr/lib/dict
-                      index "/usr/lib/dict/easton.index" }
- database hitchcock { data "/usr/lib/dict/hitchcock.dict.dz"
-                      index "/usr/lib/dict/hitchcock.index" }
-+database world95   { data "/usr/lib/dict/world95.dict.dz"
-+                     index "/usr/lib/dict/world95.index" }
+@@ -1,16 +1,18 @@
+-database web1913   { data "/usr/lib/dict/web1913.dict.dz"
+-                     index "/usr/lib/dict/web1913.index" }
+-database wn        { data "/usr/lib/dict/wn.dict.dz"
+-                     index "/usr/lib/dict/wn.index" }
+-database gazetteer { data "/usr/lib/dict/gazetteer.dict.dz"
+-                     index "/usr/lib/dict/gazetteer.index" }
+-database jargon    { data "/usr/lib/dict/jargon.dict.dz"
+-                     index "/usr/lib/dict/jargon.index" }
+-database foldoc    { data "/usr/lib/dict/foldoc.dict.dz"
+-                     index "/usr/lib/dict/foldoc.index" }
+-database elements  { data "/usr/lib/dict/elements.dict.dz"
+-                     index "/usr/lib/dict/elements.index" }
+-database easton    { data "/usr/lib/dict/easton.dict.dz"
+-                     index "/usr/lib/dict/easton.index" }
+-database hitchcock { data "/usr/lib/dict/hitchcock.dict.dz"
+-                     index "/usr/lib/dict/hitchcock.index" }
++database web1913   { data "/usr/pkg/share/dictd/web1913.dict.dz"
++                     index "/usr/pkg/share/dictd/web1913.index" }
++database wn        { data "/usr/pkg/share/dictd/wn.dict.dz"
++                     index "/usr/pkg/share/dictd/wn.index" }
++database gazetteer { data "/usr/pkg/share/dictd/gazetteer.dict.dz"
++                     index "/usr/pkg/share/dictd/gazetteer.index" }
++database jargon    { data "/usr/pkg/share/dictd/jargon.dict.dz"
++                     index "/usr/pkg/share/dictd/jargon.index" }
++database foldoc    { data "/usr/pkg/share/dictd/foldoc.dict.dz"
++                     index "/usr/pkg/share/dictd/foldoc.index" }
++database elements  { data "/usr/pkg/share/dictd/elements.dict.dz"
++                     index "/usr/pkg/share/dictd/elements.index" }
++database easton    { data "/usr/pkg/share/dictd/easton.dict.dz"
++                     index "/usr/pkg/share/dictd/easton.index" }
++database hitchcock { data "/usr/pkg/share/dictd/hitchcock.dict.dz"
++                     index "/usr/pkg/share/dictd/hitchcock.index" }
++database world95   { data "/usr/pkg/share/dictd/world95.dict.dz"
++                     index "/usr/pkg/share/dictd/world95.index" }

@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2006/07/05 23:21:50 cheusov Exp $
+$NetBSD: patch-ab,v 1.2 2006/07/12 13:15:18 cheusov Exp $
 
---- libmaa/configure.orig	Tue Jul  4 01:37:28 2006
+--- libmaa/configure.orig	2006-07-04 01:37:28.000000000 +0300
 +++ libmaa/configure
 @@ -1320,6 +1320,8 @@ echo Configuring for libmaa $MAA_MAJOR.$
  echo .
