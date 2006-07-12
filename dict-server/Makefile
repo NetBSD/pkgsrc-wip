@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/07/12 15:26:32 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/12 15:34:32 cheusov Exp $
 
 DISTNAME=	dictd-1.10.6
 PKGNAME=	dict-server-1.10.6
@@ -13,6 +13,7 @@ COMMENT=	Dictionary Service Protocol server
 USE_TOOLS+=		gmake yacc
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-cflags=${CFLAGS:M*:Q}
+CONFIGURE_ARGS+=	--disable-plugin
 
 MESSAGE_SUBST+=		VARBASE="${VARBASE}"
 
