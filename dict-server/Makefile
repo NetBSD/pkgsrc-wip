@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/07/12 14:17:24 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/12 15:26:32 cheusov Exp $
 
 DISTNAME=	dictd-1.10.6
 PKGNAME=	dict-server-1.10.6
@@ -36,7 +36,7 @@ CONF_FILES=	${EGDIR}/dictd.conf \
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/dictd1.conf ${EGDIR}/dictd.conf
+	${INSTALL_DATA} ${.CURDIR}/files/dictd.conf ${EGDIR}/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/dictd
 
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,39 +1,32 @@
-$NetBSD: patch-aa,v 1.2 2006/07/12 13:15:18 cheusov Exp $
+$NetBSD: patch-aa,v 1.3 2006/07/12 15:26:32 cheusov Exp $
 
---- examples/dictd1.conf.orig	2005-12-08 20:50:40.000000000 +0200
-+++ examples/dictd1.conf
-@@ -1,16 +1,18 @@
--database web1913   { data "/usr/lib/dict/web1913.dict.dz"
--                     index "/usr/lib/dict/web1913.index" }
--database wn        { data "/usr/lib/dict/wn.dict.dz"
--                     index "/usr/lib/dict/wn.index" }
--database gazetteer { data "/usr/lib/dict/gazetteer.dict.dz"
--                     index "/usr/lib/dict/gazetteer.index" }
--database jargon    { data "/usr/lib/dict/jargon.dict.dz"
--                     index "/usr/lib/dict/jargon.index" }
--database foldoc    { data "/usr/lib/dict/foldoc.dict.dz"
--                     index "/usr/lib/dict/foldoc.index" }
--database elements  { data "/usr/lib/dict/elements.dict.dz"
--                     index "/usr/lib/dict/elements.index" }
--database easton    { data "/usr/lib/dict/easton.dict.dz"
--                     index "/usr/lib/dict/easton.index" }
--database hitchcock { data "/usr/lib/dict/hitchcock.dict.dz"
--                     index "/usr/lib/dict/hitchcock.index" }
-+database web1913   { data "/usr/pkg/share/dictd/web1913.dict.dz"
-+                     index "/usr/pkg/share/dictd/web1913.index" }
-+database wn        { data "/usr/pkg/share/dictd/wn.dict.dz"
-+                     index "/usr/pkg/share/dictd/wn.index" }
-+database gazetteer { data "/usr/pkg/share/dictd/gazetteer.dict.dz"
-+                     index "/usr/pkg/share/dictd/gazetteer.index" }
-+database jargon    { data "/usr/pkg/share/dictd/jargon.dict.dz"
-+                     index "/usr/pkg/share/dictd/jargon.index" }
-+database foldoc    { data "/usr/pkg/share/dictd/foldoc.dict.dz"
-+                     index "/usr/pkg/share/dictd/foldoc.index" }
-+database elements  { data "/usr/pkg/share/dictd/elements.dict.dz"
-+                     index "/usr/pkg/share/dictd/elements.index" }
-+database easton    { data "/usr/pkg/share/dictd/easton.dict.dz"
-+                     index "/usr/pkg/share/dictd/easton.index" }
-+database hitchcock { data "/usr/pkg/share/dictd/hitchcock.dict.dz"
-+                     index "/usr/pkg/share/dictd/hitchcock.index" }
-+database world95   { data "/usr/pkg/share/dictd/world95.dict.dz"
-+                     index "/usr/pkg/share/dictd/world95.index" }
+--- libmaa/configure.orig	2006-07-04 01:37:28.000000000 +0300
++++ libmaa/configure
+@@ -1320,6 +1320,8 @@ echo Configuring for libmaa $MAA_MAJOR.$
+ echo .
+ 
+ 
++LIBS=`echo $LIBS | sed -e 's|-lmaa||' -e 's|-lz||' -e 's|-lregex||'`
++
+ # Check whether --with-cc or --without-cc was given.
+ if test "${with_cc+set}" = set; then
+   withval="$with_cc"
+@@ -2531,9 +2533,7 @@ esac
+ if test "${with_cflags+set}" = set; then
+   withval="$with_cflags"
+ 
+-if test "x${withval}" = xyes; then
+     CFLAGS="$withval"
+-fi
+ 
+ fi;
+ 
+@@ -8115,6 +8115,8 @@ do
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++    # Avoid regenerating for rechecks on pkgsrc
++    exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;
