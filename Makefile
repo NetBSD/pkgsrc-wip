@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2287 2006/07/08 11:46:24 shattered Exp $
+# $Id: Makefile,v 1.2288 2006/07/12 20:03:40 unex_linija Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -156,6 +156,7 @@ SUBDIR+=	copytape
 SUBDIR+=	cpphs
 SUBDIR+=	cream
 SUBDIR+=	cryptcat
+SUBDIR+=	csoap
 SUBDIR+=	csup
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvsproxy
