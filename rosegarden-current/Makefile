@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/06/12 16:29:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/12 13:11:05 thomasklausner Exp $
 #
 
 DISTNAME=	rosegarden-4-0.9.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rosegarden/}
 
