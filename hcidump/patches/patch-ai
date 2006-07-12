@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.3 2006/03/21 19:26:23 plunky Exp $
+$NetBSD: patch-ai,v 1.4 2006/07/12 18:11:33 plunky Exp $
 
 lots of compatibility changes for NetBSD
 
---- parser/l2cap.c.orig	2003-09-13 00:38:11.000000000 +0100
+--- parser/l2cap.c.orig	2003-09-13 01:38:11.000000000 +0200
 +++ parser/l2cap.c
 @@ -25,13 +25,16 @@
   */
@@ -55,10 +55,11 @@ lots of compatibility changes for NetBSD
  	p_indent(level, 0);
  	while (len > 0) {
 -		ng_l2cap_cfg_opt_t *h = ptr;
-+		l2cap_cfg_opt_t *h = ptr;
- 	
+-	
 -		ptr += sizeof(*h) + h->length;
-+		(u_int8_t *)ptr += sizeof(*h) + h->length;
++		l2cap_cfg_opt_t *h = ptr;
++
++		ptr = (void *)( (u_int8_t *)ptr + sizeof(l2cap_cfg_opt_t) + h->length);
  		len -= sizeof(*h) + h->length;
  		
  		switch (h->type) {

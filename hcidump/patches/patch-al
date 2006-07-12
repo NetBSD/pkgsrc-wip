@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.2 2006/03/21 19:26:23 plunky Exp $
+$NetBSD: patch-al,v 1.3 2006/07/12 18:11:33 plunky Exp $
 
 prototyping to get past compiler warnings
 
---- parser/rfcomm.c.orig	2003-09-13 00:38:11.000000000 +0100
+--- parser/rfcomm.c.orig	2003-09-13 01:38:11.000000000 +0200
 +++ parser/rfcomm.c
 @@ -30,6 +30,7 @@
   */
@@ -30,6 +30,15 @@ prototyping to get past compiler warnings
  void print_mcc(mcc_long_frame_head* mcc_head)
  {
  	printf("mcc_len %d\n", mcc_head->length.bits.len);
+@@ -145,7 +150,7 @@ static void mcc_rpn(int level, uint8_t *
+ 		rpn->rpn_val.rtr_input, rpn->rpn_val.rtr_output,
+ 		rpn->rpn_val.rtc_input, rpn->rpn_val.rtc_output,
+ 		rpn->rpn_val.xon, rpn->rpn_val.xoff,
+-		le16toh(*(uint16_t *)&(rpn->rpn_val.pm)));
++		le16toh(*((uint16_t *)(void *)&rpn->rpn_val.pm)));
+ }
+ 
+ static void mcc_rls(int level, uint8_t *ptr, int len,
 @@ -196,7 +201,7 @@ static void mcc_nsc(int level, uint8_t *
  
  static void mcc_frame(int level, struct frame *frm, long_frame_head *head)

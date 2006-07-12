@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.4 2006/03/21 19:26:23 plunky Exp $
+$NetBSD: patch-ab,v 1.5 2006/07/12 18:11:33 plunky Exp $
 
 fix NetBSD compiler warnings, and convert to NetBSD
 bluetooth compatibility
 
---- hcidump/hcidump.c.orig	2004-03-03 18:52:10.000000000 +0000
+--- hcidump/hcidump.c.orig	2004-03-03 19:52:10.000000000 +0100
 +++ hcidump/hcidump.c
 @@ -34,12 +34,13 @@
  #include <getopt.h>
@@ -22,6 +22,15 @@ bluetooth compatibility
  
  #include "parser.h"
  #include "hcidump.h"
+@@ -104,7 +105,7 @@ static void process_frames(char *dev, in
+ 		exit(1);
+ 	}
+ 	dh = (void *) buf;
+-	frm.data = buf + DUMP_HDR_SIZE;
++	frm.data = (uint8_t *)(buf + DUMP_HDR_SIZE);
+ 	
+ 	if (!(ctrl = malloc(100))) {
+ 		perror("Can't allocate control buffer");
 @@ -139,8 +140,8 @@ static void process_frames(char *dev, in
  		frm.in = 0;
  		cmsg = CMSG_FIRSTHDR(&msg);
@@ -33,6 +42,15 @@ bluetooth compatibility
  				memcpy(&frm.in,CMSG_DATA(cmsg),sizeof(frm.in));
  
  			if (cmsg->cmsg_level == SOL_SOCKET &&
+@@ -192,7 +193,7 @@ static void read_dump(int file)
+ 		
+ 		frm.data_len = le16toh(dh.len);
+ 
+-		if ((err = read_n(file, frm.data, frm.data_len)) < 0)
++		if ((err = read_n(file, (char *)frm.data, frm.data_len)) < 0)
+ 			goto failed;
+ 		if (!err) return;
+ 
 @@ -210,16 +211,16 @@ failed:
  	exit(1);
  }
