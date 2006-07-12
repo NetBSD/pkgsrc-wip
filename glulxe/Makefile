@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/28 00:27:25 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/07/12 23:18:22 dillo Exp $
 #
 
 DISTNAME=	glulxe-035
@@ -14,7 +14,10 @@ COMMENT=	Interpreter for Glulx text adventures
 WRKSRC=		${WRKDIR}/glulxe
 MAKE_ENV+=	BUILDLINK_DIR=${BUILDLINK_DIR:Q}
 
-.include "../../wip/glkloader/buildlink3.mk"
+PKG_OPTIONS_VAR=PKG_OPTIONS.glulxe
+.include "../../wip/glkloader/glk-options.mk"
+.include "../../mk/bsd.options.mk"
+.include "../../wip/glkloader/glk-depends.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/glulxe ${LOCALBASE}/bin

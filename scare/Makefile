@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/28 00:27:28 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/12 23:18:22 dillo Exp $
 #
 
 DISTNAME=		scare-1.3.3
@@ -15,7 +15,11 @@ MAKE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
 
 DOCDIR=			${LOCALBASE}/share/doc/scare
 
-.include "../../wip/glkloader/buildlink3.mk"
+PKG_OPTIONS_VAR=PKG_OPTIONS.scare
+.include "../../wip/glkloader/glk-options.mk"
+.include "../../mk/bsd.options.mk"
+.include "../../wip/glkloader/glk-depends.mk"
+
 .include "../../devel/zlib/buildlink3.mk"
 
 do-install:
