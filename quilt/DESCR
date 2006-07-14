@@ -1,0 +1,12 @@
+Quilt is a tool to manage large sets of patches by keeping track
+of the changes each patch makes. Patches can be applied, un-applied,
+refreshed, etc. The key philosophical concept is that your primary
+output is patches.
+
+Quilt manages a stack of patches. Patches are applied incrementally
+on top of the base tree plus all preceding patches. They can be
+pushed on top of the stack and popped off the stack Commands are
+available for querying the contents of the series file, the contents
+of the stack and the patches that are not applied at a particular
+moment.  By default, most commands apply to the topmost patch on
+the stack.
