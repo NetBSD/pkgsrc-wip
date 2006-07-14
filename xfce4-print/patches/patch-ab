@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/07/14 10:43:15 thomasklausner Exp $
+
+--- xfprint-manager/Makefile.in.orig	2006-07-10 12:16:07.000000000 +0000
++++ xfprint-manager/Makefile.in	2006-07-14 11:17:25.000000000 +0000
+@@ -295,7 +295,8 @@
+ xfprint4_manager_LDADD = \
+ 	$(top_builddir)/libxfprint/libxfprint.la			\
+ 	@LIBXFCE4MCS_CLIENT_LIBS@					\
+-	@LIBXFCEGUI4_LIBS@						
++	@LIBXFCEGUI4_LIBS@ \
++	@GMODULE_LIBS@						
+ 
+ appsdir = $(datadir)/applications
+ apps_in_files = xfprint-manager.desktop.in

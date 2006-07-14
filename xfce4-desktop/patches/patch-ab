@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/07/14 10:43:16 thomasklausner Exp $
+
+--- modules/menu/Makefile.in.orig	2006-07-10 12:14:50.000000000 +0000
++++ modules/menu/Makefile.in	2006-07-14 08:25:16.000000000 +0000
+@@ -338,7 +338,7 @@
+ 	$(LIBX11_LIBS) \
+ 	$(LIBXFCEGUI4_LIBS)
+ 
+-xfceconfdir = $(sysconfdir)/xdg/xfce4/desktop
++xfceconfdir = $(datadir)/examples/xfce4/desktop
+ xfceconf_DATA = \
+ 	xfce-registered-categories.xml \
+ 	xfce-registered-categories.xml.cs \

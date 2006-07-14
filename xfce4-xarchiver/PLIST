@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/14 10:43:15 thomasklausner Exp $
+bin/xarchiver
+libexec/thunar-archive-plugin/xarchiver.tap
+share/applications/xarchiver.desktop
+share/locale/de/LC_MESSAGES/xarchiver.mo
+share/locale/el/LC_MESSAGES/xarchiver.mo
+share/locale/eu/LC_MESSAGES/xarchiver.mo
+share/locale/fi/LC_MESSAGES/xarchiver.mo
+share/locale/fr/LC_MESSAGES/xarchiver.mo
+share/locale/he/LC_MESSAGES/xarchiver.mo
+share/locale/hu/LC_MESSAGES/xarchiver.mo
+share/locale/ja/LC_MESSAGES/xarchiver.mo
+share/locale/nl/LC_MESSAGES/xarchiver.mo
+share/locale/pl/LC_MESSAGES/xarchiver.mo
+share/locale/ru/LC_MESSAGES/xarchiver.mo
+share/locale/sv/LC_MESSAGES/xarchiver.mo
+share/locale/zh_TW/LC_MESSAGES/xarchiver.mo
+share/pixmaps/xarchiver.png
+share/xarchiver/pixmaps/add.png
+share/xarchiver/pixmaps/add_button.png
+share/xarchiver/pixmaps/extract.png
+share/xarchiver/pixmaps/extract_button.png
+@dirrm share/xarchiver/pixmaps
+@dirrm share/xarchiver
+@dirrm libexec/thunar-archive-plugin

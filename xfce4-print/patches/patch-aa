@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/07/14 10:43:15 thomasklausner Exp $
+
+--- xfprint/Makefile.in.orig	2006-07-10 12:16:08.000000000 +0000
++++ xfprint/Makefile.in	2006-07-14 11:16:56.000000000 +0000
+@@ -315,7 +315,8 @@
+ xfprint4_LDADD = \
+ 	$(top_builddir)/libxfprint/libxfprint.la			\
+ 	@LIBXFCE4MCS_CLIENT_LIBS@                                       \
+-	@LIBXFCEGUI4_LIBS@
++	@LIBXFCEGUI4_LIBS@ \
++	@GMODULE_LIBS@
+ 
+ xfprint4_DEPENDENCIES = \
+ 	$(top_builddir)/libxfprint/libxfprint.la
