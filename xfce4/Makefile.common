@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.common,v 1.14 2006/07/14 10:52:26 thomasklausner Exp $
+
+MASTER_SITES=		http://www.xfce.org/archive/xfce-4.3.90.2/src/
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		martti@NetBSD.org
+HOMEPAGE=		http://www.xfce.org/
+
+XFCE4_VERSION=		4.3.90.2
+
+# Do NOT put a PKGREVISION statement in this file!
+
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config msgfmt perl
+
+.if ${MACHINE_ARCH} == "alpha"
+GCC_REQD+=		3.0
+.endif
+
+XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
+
+.include "../../wip/xfce4-dev-tools/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
+
+## # Use the latest GNU tar when the native tar is buggy
+## .if !empty(MACHINE_PLATFORM:MNetBSD-1.6*)
+## BUILD_DEPENDS+=		gtar-base-[0-9]*:../../archivers/gtar-base
+## GTAR=			${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
+## .endif
