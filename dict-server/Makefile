@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/07/12 19:43:10 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2006/07/14 08:12:57 cheusov Exp $
 
 DISTNAME=	dictd-1.10.6
 PKGNAME=	dict-server-1.10.6
@@ -18,9 +18,9 @@ CONFIGURE_ARGS+=	--disable-plugin
 MESSAGE_SUBST+=		VARBASE="${VARBASE}"
 INSTALLATION_DIRS+=	share/dictd
 
-PKG_GROUPS=			${DICTD_GROUP}
-PKG_USERS=			${DICTD_USER}:${DICTD_GROUP}
-PKG_GECOS.${DICTD_USER}=	Dictionary\ protocol\ server\ user
+PKG_GROUPS=		dictd
+PKG_USERS=		dictd:dictd
+PKG_GECOS.dictd=	Dictionary\ protocol\ server\ user
 
 RCD_SCRIPTS=	dictd
 
