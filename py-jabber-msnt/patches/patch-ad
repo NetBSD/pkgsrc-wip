@@ -1,12 +1,12 @@
-$NetBSD: patch-ad,v 1.3 2006/05/06 03:36:11 schnoebe Exp $
+$NetBSD: patch-ad,v 1.4 2006/07/15 00:19:47 schnoebe Exp $
 
---- PyMSNt.py.orig	2006-02-17 16:07:30.000000000 -0600
+--- PyMSNt.py.orig	2006-07-08 19:57:42.000000000 -0500
 +++ PyMSNt.py
 @@ -1,8 +1,8 @@
- #!/usr/bin/python
+ #!/usr/bin/env python
  
 -# Make 'cwd'/src in the PYTHONPATH
-+# Make {transport directory}/src in the PYTHONPATH
++# Make {transport dir}/src in the PYTHONPATH
  import sys, os, os.path
 -PATH = os.path.abspath(os.path.dirname(sys.argv[0]))
 +PATH = os.path.join("@PREFIX@", "@TRANSPORTDIR@")

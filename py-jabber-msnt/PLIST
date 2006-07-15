@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/06 03:36:11 schnoebe Exp $
-${TRANSPORTDIR}/data/defaultJabberAvatar.png
-${TRANSPORTDIR}/data/defaultMSNAvatar.png
+@comment $NetBSD: PLIST,v 1.5 2006/07/15 00:19:46 schnoebe Exp $
+${TRANSPORTDIR}/.svn/entries
 ${TRANSPORTDIR}/src/avatar.py
 ${TRANSPORTDIR}/src/baseproto/__init__.py
 ${TRANSPORTDIR}/src/baseproto/glue.py
@@ -41,6 +40,8 @@ ${TRANSPORTDIR}/src/tlib/xmlw.py
 ${TRANSPORTDIR}/src/utils.py
 ${TRANSPORTDIR}/src/xdb.py
 ${TRANSPORTDIR}/src/xmlconfig.py
+${TRANSPORTDIR}/data/defaultJabberAvatar.png
+${TRANSPORTDIR}/data/defaultMSNAvatar.png
 bin/PyMSNt
 share/examples/jabberd/pymsnt.xml
 share/examples/rc.d/pymsnt
