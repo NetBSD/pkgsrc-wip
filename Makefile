@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2289 2006/07/14 09:35:45 thomasklausner Exp $
+# $Id: Makefile,v 1.2290 2006/07/15 12:46:32 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1376,6 +1376,7 @@ SUBDIR+=	valknut
 SUBDIR+=	vcdgear
 SUBDIR+=	vche
 SUBDIR+=	videoproto
+SUBDIR+=	viewvc
 SUBDIR+=	viewcvs
 SUBDIR+=	viewer
 SUBDIR+=	viewglob
