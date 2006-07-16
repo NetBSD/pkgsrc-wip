@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/04 20:33:36 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/16 12:31:12 shattered Exp $
 #
 
-DISTNAME=		gnokii-0.6.10
+DISTNAME=		gnokii-0.6.13
 CATEGORIES=		comms
 MASTER_SITES=		http://www.gnokii.org/download/gnokii/ \
 			http://www.gnokii.org/download/gnokii/0.6.x/ \
@@ -10,7 +10,7 @@ MASTER_SITES=		http://www.gnokii.org/download/gnokii/ \
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		shattered@users.sourceforge.net
-HOMEPAGE=		http://www.gnokii.org/download/
+HOMEPAGE=		http://www.gnokii.org/
 COMMENT=		Open source tools for your mobile phone
 
 USE_PKGLOCALEDIR=	yes
