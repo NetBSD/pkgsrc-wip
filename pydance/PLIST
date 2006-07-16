@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2004/11/27 22:44:47 shattered Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/16 12:42:57 shattered Exp $
 bin/findbpm
 bin/pydance
 man/man1/findbpm.1
@@ -13,6 +13,7 @@ share/games/pydance/sound/clicked.ogg
 share/games/pydance/sound/assist-l.ogg
 share/games/pydance/sound/back.ogg
 share/games/pydance/sound/assist-r.ogg
+share/games/pydance/images/songinfoscreen-bg.png
 share/games/pydance/images/bg.png
 share/games/pydance/images/select-para.png
 share/games/pydance/images/select-4p.png
