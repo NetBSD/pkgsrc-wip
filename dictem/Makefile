@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/28 10:38:06 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/16 16:08:38 shattered Exp $
 
 DISTNAME=		dictem-0.8
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dictem/} \
                         http://www.mova.org/~cheusov/pub/dictem/
 
 MAINTAINER=		cheusov@tut.by
-HOMEPAGE=		http://www.freshmeat.net/projects/dictem/
+HOMEPAGE=		http://freshmeat.net/projects/dictem/
 COMMENT=		Dictionary client (RFC-2229) for [X]Emacs
 
 DEPENDS+=		dict-client>=1.9.14:../../textproc/dict-client

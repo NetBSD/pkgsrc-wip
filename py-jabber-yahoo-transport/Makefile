@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/17 02:30:38 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/16 16:08:39 shattered Exp $
 
 DISTNAME=		yahoo-transport-0.3
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=		chat python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmpppy/}
 
 MAINTAINER=		eric@cirr.com
-HOMEPAGE=		http://xmpppy.sf.net/
+HOMEPAGE=		http://xmpppy.sourceforge.net/
 COMMENT=		Transport connecting Jabber to the AOL IM network
 
 #

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/07/05 22:04:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2006/07/16 16:08:38 shattered Exp $
 
 DISTNAME=	heirloom-060122
 CATEGORIES=	sysutils
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=heirloom/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://heirloom.sf.net/
+HOMEPAGE=	http://heirloom.sourceforge.net/
 COMMENT=	Collection of standard Unix utilities
 
 USE_TOOLS+=	yacc lex

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/06/12 16:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/16 16:08:39 shattered Exp $
 #
 
 DISTNAME=		LiVES-0.9.6-pre2
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.xs4all.nl/%7Esalsaman/lives/current/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://lives.sf.net/
+HOMEPAGE=		http://lives.sourceforge.net/
 COMMENT=		Linux Video Editing System
 
 DEPENDS+=	mplayer>=1.0rc1:../../multimedia/mplayer

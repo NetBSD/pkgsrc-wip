@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:26 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/16 16:08:39 shattered Exp $
 
 DISTNAME=		w32api-3.1
 PKGNAME=		mingw-w32api-bin-3.1
@@ -6,7 +6,7 @@ CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_MINGW}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://mingw.sf.net/
+HOMEPAGE=		http://mingw.sourceforge.net/
 COMMENT=		GNU C Compiler for win32 cross development
 
 NO_BUILD=		yes

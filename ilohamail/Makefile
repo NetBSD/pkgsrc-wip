@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/06/11 14:19:58 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.17 2006/07/16 16:08:38 shattered Exp $
 #
 
 DISTNAME=	IlohaMail-0.8.14-rc3
@@ -7,7 +7,7 @@ CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ilohamail/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ilohamail.org/
+HOMEPAGE=	http://blog.ilohamail.org/
 COMMENT=	Light weight yet full featured multilingual webmail
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.0:../../www/ap-php

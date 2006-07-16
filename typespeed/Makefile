@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2006/04/22 10:48:37 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/16 16:08:39 shattered Exp $
 #
 
 DISTNAME=		typespeed-0.4.4
 PKGREVISION=		2
 CATEGORIES=		games
-MASTER_SITES=		http://ls.purkki.org/typespeed/
+MASTER_SITES=		http://tobias.eyedacor.org/typespeed/
 
 MAINTAINER=		hernani@vecirex.net
-HOMEPAGE=		http://ls.purkki.org/typespeed/
+HOMEPAGE=		http://tobias.eyedacor.org/typespeed/
 COMMENT=		Game to measure your typing speed, with network mode
 
 MAKEFILE=		${FILESDIR}/Makefile

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:17 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/16 16:08:39 shattered Exp $
 #
 
 DISTNAME=		sysstat-6.0.1
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/status/}
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://perso.wanadoo.fr/sebastien.godard/
+HOMEPAGE=		http://perso.orange.fr/sebastien.godard/
 COMMENT=		System performance tools for Linux
 
 USE_TOOLS+=		gmake

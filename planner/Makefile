@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/05 12:20:31 absd Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/16 16:08:39 shattered Exp $
 #
 
 DISTNAME=	planner-0.13
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/planner/0.13/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc@blackmouse.biz
-HOMEPAGE=	http://developer.imendio.com/wiki/planner
+HOMEPAGE=	http://developer.imendio.com/wiki/Planner
 COMMENT=	GTK2 project management tool
 
 BUILD_DEPENDS=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser

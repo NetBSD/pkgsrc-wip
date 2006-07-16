@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2005/11/15 01:56:22 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/16 16:08:38 shattered Exp $
 #
 
 DISTNAME=		lhs2tex-1.10pre
 CATEGORIES=		print devel
-MASTER_SITES=		http://www.cs.uu.nl/~andres/lhs2tex/
+MASTER_SITES=		http://www.iai.uni-bonn.de/~loeh/lhs2tex/
 EXTRACT_SUFX=		.tar.bz2
 
-HOMEPAGE=		http://www.cs.uu.nl/~andres/lhs2tex/
+HOMEPAGE=		http://www.iai.uni-bonn.de/~loeh/lhs2tex/
 MAINTAINER=		emil@math.su.se
 COMMENT=		Preprocessor for typesetting Haskell sources with LaTeX
 USE_PKGLOCALEDIR=	yes

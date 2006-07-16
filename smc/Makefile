@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/07/06 20:05:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/16 16:08:39 shattered Exp $
 #
 
 PKGNAME=		smc-0.97
@@ -11,7 +11,7 @@ DISTFILES=		${DISTNAME}_source.zip ${DISTNAME}_game.zip \
 EXTRACT_ONLY=		${DISTNAME}_source.zip ${DISTNAME}_game.zip
 
 MAINTAINER=		hernani@vecirex.net
-HOMEPAGE=		http://smclone.sf.net/
+HOMEPAGE=		http://smclone.sourceforge.net/
 COMMENT=		Super Mario (World) Clone using pretty 2D graphics
 
 GCC_REQD=		3.2

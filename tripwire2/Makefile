@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/20 13:36:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2006/07/16 16:08:39 shattered Exp $
 #
 
 DISTNAME=	tripwire-2.3.1-2
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tripwire/}
 
 MAINTAINER=	pancake@phreaker.net
-HOMEPAGE=	http://tripwire.sourceforge.net/
+HOMEPAGE=	http://sourceforge.net/projects/tripwire/
 COMMENT=	File and directory integrity checker
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src/

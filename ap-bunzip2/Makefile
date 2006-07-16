@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:14 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/16 16:08:38 shattered Exp $
 #
 
 DISTNAME=	mod_bunzip2
 PKGNAME=	${DISTNAME:S/mod_/ap-/}-0.1
 WRKSRC=         ${WRKDIR}/mod_bunzip2-2
 CATEGORIES=	www
-MASTER_SITES=	http://www.oldach.net/
+MASTER_SITES=	http://oldach.net/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.oldach.net/
+HOMEPAGE=	http://oldach.net/
 COMMENT=	Apache module for server-side decompression of bzip2 files
 
 

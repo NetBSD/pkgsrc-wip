@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2006/05/19 16:51:27 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/16 16:08:39 shattered Exp $
 #
 
 DISTNAME=	navigatrix-0.5
 CATEGORIES=	misc
-MASTER_SITES=	http://www.maraudingpirates.org/navigatrix/src/
+MASTER_SITES=	http://www1.maraudingpirates.org:8080/navigatrix/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.maraudingpirates.org/navigatrix/
+HOMEPAGE=	http://www1.maraudingpirates.org:8080/navigatrix/
 COMMENT=	GPS navigational system for KDE
 
 GNU_CONFIGURE=		yes

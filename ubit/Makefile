@@ -12,7 +12,7 @@ DISTFILES=	${DISTNAME}.5.tar.gz
 #EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	dauphin@enst.fr
-HOMEPAGE=	http://www.enst.fr/~elc/ubit/
+HOMEPAGE=	http://perso.enst.fr/~elc/ubit/
 COMMENT=	Ubiquitous Brick Interactive Toolkit
 
 #PKG_INSTALLATION_TYPES= overwrite pkgviews
