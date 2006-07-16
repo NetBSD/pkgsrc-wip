@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/07/14 08:12:57 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2006/07/16 19:55:35 cheusov Exp $
 
-DISTNAME=	dictd-1.10.6
-PKGNAME=	dict-server-1.10.6
+DISTNAME=	dictd-1.10.7
+PKGNAME=	dict-server-1.10.7
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
 		ftp://ftp.dict.org/pub/dict/
