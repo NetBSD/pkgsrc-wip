@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2004/02/02 22:12:24 mpasternak Exp $
+$NetBSD: patch-ad,v 1.2 2006/07/16 16:23:44 shattered Exp $
 
---- main/locstr.h~	Wed Nov  6 07:53:28 2002
-+++ main/locstr.h	Mon Feb  2 23:12:06 2004
-@@ -48,7 +48,7 @@
+--- main/locstr.h.orig	2005-10-30 13:02:28.000000000 +0000
++++ main/locstr.h
+@@ -62,7 +62,7 @@ void str_non_print_replace(char *what, c
  void make_number_nice(char *where,fsize_t num,int NICE_DEC_DIGITALS);
  void make_number_nicel(char *where,unsigned long num,int NICE_DEC_DIGITALS);
  int convert_month(char *src);
 -int ctime_to_time(char *src);
 +time_t ctime_to_time(char *src);
- int check_mask(char *src,char *mask);
- int check_mask2(char *src,char *mask);
- int check_mask2_uncase(char *src,char *mask);
+ int check_mask(const char *src,const char *mask);
+ int check_mask2(const char *src,const char *mask);
+ int check_mask2_uncase(const char *src,const char *mask);

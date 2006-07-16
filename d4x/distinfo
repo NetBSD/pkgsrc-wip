@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.3 2005/07/31 19:36:16 shattered Exp $
+$NetBSD: distinfo,v 1.4 2006/07/16 16:23:44 shattered Exp $
 
-SHA1 (d4x-2.5.0final.tar.gz) = e6a3763fdc8c6f24035528997c579a4391bdea83
-RMD160 (d4x-2.5.0final.tar.gz) = cc5a8e92668f8648d377b57133eccfeee94afab1
-Size (d4x-2.5.0final.tar.gz) = 1766770 bytes
-SHA1 (patch-aa) = f414b5ea6fac6d507386c481100f89705c290ac9
+SHA1 (d4x-2.5.6.tar.gz) = 3d1ff26bb7818211bd0be7917459498e6572eeec
+RMD160 (d4x-2.5.6.tar.gz) = 735ab67d0969c5b5eef174f64d7b12750b48d6c6
+Size (d4x-2.5.6.tar.gz) = 1945089 bytes
+SHA1 (patch-aa) = 54de611938d48c1f533f27cf97d7386ffc603ea0
 SHA1 (patch-ab) = 62adf0ecd554eaf3acc7ed6fa8e905e9c714e6d4
 SHA1 (patch-ac) = 78aea646de81dca5616f8bbf51e3ade5abf00776
-SHA1 (patch-ad) = 667700d011861899dd893f4ea4d143b1dd04a25b
+SHA1 (patch-ad) = c5887b21e93489e364ad9e90b354ff908526d786
+SHA1 (patch-ae) = 40fbccbe25e0338d53feb126fbf8a2f2634109b2
