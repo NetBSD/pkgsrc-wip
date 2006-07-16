@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/31 08:09:30 leonardschmidt Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/07/16 12:50:58 shattered Exp $
 bin/SciTE
 man/man1/scite.1
 share/applications/SciTE.desktop
@@ -42,6 +42,7 @@ share/scite/forth.properties
 share/scite/fortran.properties
 share/scite/freebasic.properties
 share/scite/html.properties
+share/scite/inno.properties
 share/scite/kix.properties
 share/scite/latex.properties
 share/scite/lisp.properties
@@ -53,6 +54,7 @@ share/scite/metapost.properties
 share/scite/mmixal.properties
 share/scite/nncrontab.properties
 share/scite/nsis.properties
+share/scite/opal.properties
 share/scite/others.properties
 share/scite/pascal.properties
 share/scite/perl.properties
@@ -65,6 +67,7 @@ share/scite/ruby.properties
 share/scite/scriptol.properties
 share/scite/smalltalk.properties
 share/scite/specman.properties
+share/scite/spice.properties
 share/scite/sql.properties
 share/scite/tcl.properties
 share/scite/tex.properties
