@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/07/16 12:34:49 shattered Exp $
+
+--- kplayer/Makefile.in.orig	2005-01-09 22:43:46.000000000 +0000
++++ kplayer/Makefile.in	2006-01-21 15:46:16.000000000 +0000
+@@ -390,7 +390,7 @@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ ${LIBOSSAUDIO}
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+ am__depfiles_maybe = depfiles
+ #>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/kplayer.Po \
