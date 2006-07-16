@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/10 22:10:31 shattered Exp $
+$NetBSD: distinfo,v 1.2 2006/07/16 12:25:18 shattered Exp $
 
-SHA1 (ruby/jbmgen-1.1.0.tar.gz) = 8fdb8b32b2a39b5b21718b41b251712edbca749a
-RMD160 (ruby/jbmgen-1.1.0.tar.gz) = 720b5451da19b5e93fd11b37a74b1f97c5028ada
-Size (ruby/jbmgen-1.1.0.tar.gz) = 22464 bytes
+SHA1 (jbmgen-1.1.0.tar.gz) = 8fdb8b32b2a39b5b21718b41b251712edbca749a
+RMD160 (jbmgen-1.1.0.tar.gz) = 720b5451da19b5e93fd11b37a74b1f97c5028ada
+Size (jbmgen-1.1.0.tar.gz) = 22464 bytes
 SHA1 (patch-aa) = a3e6c30d8c3138ae6a9858b82f973343ec892546
 SHA1 (patch-ab) = 2f76a1598a10637482355b87b63876337e45ef1a
