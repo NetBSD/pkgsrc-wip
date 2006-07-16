@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/20 13:36:41 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2006/07/16 12:26:36 shattered Exp $
 #
 
 DISTNAME=	oops-1.5.24
@@ -13,7 +13,7 @@ COMMENT=	Multithreaded caching HTTP proxy server
 # ~1.6Z (it compiles and runs, but connections hang).  Even on a 1.6Zx
 # system it will promptly abort with an assertion failure unless run
 # with PTHREAD_DIAGASSERT=AEL.
-NOT_FOR_PLATFORM=	NetBSD-1.6*-*
+NOT_FOR_PLATFORM=	NetBSD-1.*-*
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
@@ -61,7 +61,7 @@ PTHREAD_OPTS+=	require native
 .endif
 
 post-install:
-	@${MKDIR} ${EGDIR:Q} ${EGDIR:Q}/tables
+	${MKDIR} ${EGDIR:Q} ${EGDIR:Q}/tables
 	set -eu;							\
 	for m in oops.cfg accel_maps acl_local_networks passwd		\
 		redir_rules select.sql auth_template.html		\
