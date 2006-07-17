@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/17 20:47:29 unex_linija Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/17 21:06:20 unex_linija Exp $
 
 DISTNAME=		jetty-5.1.10
-CATEGORIES=		www
+CATEGORIES=		www java
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jetty/}
 EXTRACT_SUFX=		.zip
 
