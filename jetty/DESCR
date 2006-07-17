@@ -1,0 +1,4 @@
+Jetty is an Open Source HTTP Server and Servlet container written in
+100% Java. It is designed to be light weight, high performance,
+embeddable, extensible and flexible. The project includes java
+utilities for HTML, FTP, Debugging, Networking, etc.
