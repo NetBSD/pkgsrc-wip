@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/17 18:10:24 kheinz Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/17 18:15:28 kheinz Exp $
 #
 
 DISTNAME=		majordomo-20060717
@@ -24,7 +24,7 @@ DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 # optional
 DEPENDS+=	p5-Term-ReadLine-[0-9]*:../../devel/p5-Term-ReadLine
 DEPENDS+=	p5-Text-Reflow>=1.04:../../textproc/p5-Text-Reflow
-# exp
+# Support for MySQL/PostgreSQL is experimental in MJ2
 #DEPENDS+=	p5-DBI>=1.28:../../databases/p5-DBI
 #DEPENDS+=	p5-DBD-postgresql>=1.13:../../databases/p5-DBD-postgresql
 #DEPENDS+=	p5-DBD-mysql>=2.1010:../../databases/p5-DBD-mysql
