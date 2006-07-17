@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/07/17 18:11:36 kheinz Exp $
+
+--- installbin.orig	2002-01-22 08:09:18.000000000 +0100
++++ installbin
+@@ -5,8 +5,10 @@ use File::Copy;
+ $config = eval {require ".mj_config"};
+ die "Invalid .mj_config" unless $config;
+ 
+-my $uid = getpwnam($config->{'uid'});
+-my $gid = getgrnam($config->{'gid'});
++#my $uid = getpwnam($config->{'uid'});
++#my $gid = getgrnam($config->{'gid'});
++my $uid = $config->{'uid'};
++my $gid = $config->{'gid'};
+ my $domains = join(" ",@{$config->{'domains'}});
+ 
+ $start = "#!$config->{'startperl'}";

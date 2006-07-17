@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/07/17 18:10:24 kheinz Exp $
+
+BEWARE:
+	THIS PACKAGE IS ONLY FOR TESTING
+
+  The directory layout will most certainly change in the future.
+===========================================================================

@@ -1,0 +1,6 @@
+          'mta' => 'exim',
+          'maintain_mtaconfig' => 0,
+          'mta_separator' => '+',
+          'exim_version' => '4',
+          'mta_umask' => '066',
+        };

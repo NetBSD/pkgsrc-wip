@@ -1,0 +1,28 @@
+- Feel free to work on this. I (Klaus Heinz) only started this packages
+  because others need it and I cannot devote too much time to it.
+  
+- Installation is rather oldfashioned (see README.DIRECTORIES): everything
+  wants to live under some central directory. IMO, it would be better
+  to separate the Perl module(s) and handle them like every other CPAN
+  module. The rest would be packaged separately and should depend on the
+  Perl module(s). Maybe a better directory layout is possible even now.
+
+- Tests t/core.t and t/shell.t complain when MJ2_MTA=qmail because the
+  "mta_separator" is required in the configuration file .mj_config.
+  This should be fixed upstream (see setup/mta_qmail.pl. Doesn't qmail
+  usually use '-' instead of '+'?).
+
+- How do we handle the 4 MTAs? 4 separate packages? 4 options, the default
+  "postfix" for NetBSD?
+  For now MJ2_MTA has to be set in the Makefile.
+
+- How can we add domains with binary packages? The documentation suggests
+
+    Run "make domain" in the top-level source directory
+
+  which is not really a satisfying solution :-/
+
+- How do we handle interactive setting of the master password?
+
+- pkglint comlains about perllocal.pod in PLIST.*. Would be no problem if
+  majordomo would install as real Perl package.

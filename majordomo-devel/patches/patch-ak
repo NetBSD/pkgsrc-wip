@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2006/07/17 18:11:36 kheinz Exp $
+
+--- bin/mj_setup.orig	2004-09-30 07:04:19.000000000 +0200
++++ bin/mj_setup
+@@ -3,6 +3,8 @@ BEGIN {
+   $::CONFFILE = "blah";
+   $::UID      = "baduid";
+   $::GID      = "badgid";
++$::UID    =getpwnam($::UID);
++$::GID    =getgrnam($::GID);
+ }
+ 
+ use strict;
