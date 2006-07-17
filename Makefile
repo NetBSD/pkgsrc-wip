@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2291 2006/07/16 12:51:55 shattered Exp $
+# $Id: Makefile,v 1.2292 2006/07/17 20:54:10 unex_linija Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -475,6 +475,7 @@ SUBDIR+=	jcr-yahoo
 SUBDIR+=	jdk14
 SUBDIR+=	jdk15
 SUBDIR+=	jemboss-standalone
+SUBDIR+=	jetty
 SUBDIR+=	jgloss
 SUBDIR+=	joomla
 SUBDIR+=	jpgtn
