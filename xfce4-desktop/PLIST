@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/07/14 10:52:26 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/07/17 13:21:17 marttikuparinen Exp $
 bin/xfdesktop
 bin/xfce4-popup-menu
 bin/xfce4-menueditor
@@ -103,7 +103,6 @@ share/icons/hicolor/48x48/apps/xfce4-backdrop.png
 share/icons/hicolor/48x48/apps/xfce4-menueditor.png
 share/icons/hicolor/scalable/apps/xfce4-backdrop.svg
 share/icons/hicolor/scalable/apps/xfce4-menueditor.svg
-share/icons/hicolor/icon-theme.cache
 share/pixmaps/xfce4/xfdesktop/text-selection-frame.png
 share/pixmaps/xfce4_xicon.png
 share/pixmaps/xfce4_xicon1.png
@@ -144,5 +143,10 @@ share/xfce4/backdrops/xfce-smoke.png
 share/xfce4/backdrops/xfce-turbulence.png
 share/xfce4/backdrops/xfce-stellar-tile.png
 share/xfce4-menueditor/xfce4-menueditor.ui
+@dirrm share/xfce4-menueditor
+@dirrm share/pixmaps/xfdesktop
+@dirrm share/pixmaps/xfce4/xfdesktop
 @dirrm share/examples/xfce4/desktop
 @unexec ${RMDIR} %D/share/xfce4/backdrops 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/libexec/xfce4/panel-plugins 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/xfce4/modules 2>/dev/null || ${TRUE}

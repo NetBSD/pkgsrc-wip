@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/07/14 10:52:26 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/07/17 13:21:17 marttikuparinen Exp $
 bin/xfwm4
 lib/xfce4/mcs-plugins/wmtweaks_plugin.la
 lib/xfce4/mcs-plugins/workspaces_plugin.la
@@ -56,7 +56,6 @@ share/icons/hicolor/48x48/apps/xfwm4.png
 share/icons/hicolor/scalable/apps/wmtweaks.svg
 share/icons/hicolor/scalable/apps/xfce4-workspaces.svg
 share/icons/hicolor/scalable/apps/xfwm4.svg
-share/icons/hicolor/icon-theme.cache
 share/themes/Default/xfwm4/README
 share/themes/Default/xfwm4/themerc
 share/themes/Default/xfwm4/bottom-active.png
@@ -1059,6 +1058,7 @@ share/xfce4/doc/it/images/workspace_margins.png
 share/xfce4/doc/it/images/xfwm_workspaces.png
 share/xfce4/doc/it/xfwm4.html
 share/xfwm4/defaults
+@dirrm share/xfwm4
 @dirrm share/themes/Default/xfwm4
 @dirrm share/themes/Daloa/xfwm4
 @dirrm share/themes/Daloa

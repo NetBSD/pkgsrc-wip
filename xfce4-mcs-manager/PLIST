@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2006/07/14 10:52:26 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/07/17 13:21:17 marttikuparinen Exp $
 bin/xfce-mcs-manager
 bin/xfce-setting-show
 include/xfce4/xfce-mcs-manager/manager-plugin.h
 lib/pkgconfig/xfce-mcs-manager.pc
 share/applications/xfce-settings-manager.desktop
 share/icons/hicolor/48x48/apps/xfce4-settings.png
-share/icons/hicolor/icon-theme.cache
 share/locale/ar/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/az/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/be/LC_MESSAGES/xfce-mcs-manager.mo

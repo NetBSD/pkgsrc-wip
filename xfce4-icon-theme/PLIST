@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/14 10:43:16 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/17 13:21:17 marttikuparinen Exp $
 lib/pkgconfig/xfce4-icon-theme-1.0.pc
 share/icons/Rodent/48x48/apps/applets-screenshooter.png
 share/icons/Rodent/48x48/apps/bluefish-icon.png
@@ -803,7 +803,6 @@ share/icons/Rodent/48x48/stock/volume-medium.png
 share/icons/Rodent/48x48/stock/volume-min.png
 share/icons/Rodent/48x48/stock/volume-mute.png
 share/icons/Rodent/48x48/stock/volume-zero.png
-share/icons/Rodent/icon-theme.cache
 share/icons/Rodent/iconrc
 share/icons/Rodent/iconrc-png
 share/icons/Rodent/index.theme
@@ -1625,6 +1624,5 @@ share/xfce4/mime/Rodent.mime.xml
 @dirrm share/icons/Rodent/48x48/devices
 @dirrm share/icons/Rodent/48x48/apps
 @dirrm share/icons/Rodent/48x48
-@dirrm share/icons/Rodent
 @unexec ${RMDIR} %D/share/xfce4/mime 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4 2>/dev/null || ${TRUE}

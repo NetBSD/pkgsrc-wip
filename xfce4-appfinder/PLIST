@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/14 10:43:16 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/17 13:21:17 marttikuparinen Exp $
 bin/xfce4-appfinder
 share/applications/xfce4-appfinder.desktop
 share/icons/hicolor/48x48/apps/xfce4-appfinder.png
-share/icons/hicolor/icon-theme.cache
 share/locale/be/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/bn_IN/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/ca/LC_MESSAGES/xfce4-appfinder.mo

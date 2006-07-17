@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/07/14 10:52:26 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/07/17 13:21:17 marttikuparinen Exp $
 bin/xfce4-panel
 etc/xdg/xfce4/panel/panels.xml
 etc/xdg/xfce4/panel/launcher-10.rc
@@ -97,7 +97,6 @@ share/icons/hicolor/48x48/apps/xfce-sound.png
 share/icons/hicolor/48x48/apps/xfce-terminal.png
 share/icons/hicolor/48x48/apps/xfce-unknown.png
 share/icons/hicolor/48x48/apps/xfce-utils.png
-share/icons/hicolor/icon-theme.cache
 share/xfce4/doc/C/xfce4-panel.html
 share/xfce4/panel-plugins/actions.desktop
 share/xfce4/panel-plugins/clock.desktop
