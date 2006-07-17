@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2292 2006/07/17 20:54:10 unex_linija Exp $
+# $Id: Makefile,v 1.2293 2006/07/17 21:39:33 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1141,6 +1141,7 @@ SUBDIR+=	qcad-manual-de
 SUBDIR+=	qcad-manual-en
 SUBDIR+=	qcad-manual-hu
 SUBDIR+=	qcad-partlibrary
+SUBDIR+=	qcomicbook
 SUBDIR+=	qemu-qvm86
 SUBDIR+=	qgis
 SUBDIR+=	qhacc
