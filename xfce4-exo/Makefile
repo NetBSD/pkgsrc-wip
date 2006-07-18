@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/14 10:43:16 thomasklausner Exp $
-
-BROKEN=		Must fix the p5 dependencies
+# $NetBSD: Makefile,v 1.2 2006/07/18 11:30:48 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -11,7 +9,10 @@ PKGNAME=	xfce4-exo-${XFCE4_VERSION}
 CATEGORIES=	x11
 COMMENT=	Xfce extension library
 
-.include "../../wip/libxfce4gui/buildlink3.mk"
-.include "../../wip/libxfce4mcs/buildlink3.mk"
+DEPENDS+=	p5-URI>=0:../../www/p5-URI
+
+.include "../../wip/xfce4-mcs-plugins/buildlink3.mk"
+.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/14 10:43:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/18 11:30:48 marttikuparinen Exp $
 
-BROKEN=		Hangs during installation
+#BROKEN=		Hangs during installation
 
 .include "../../wip/xfce4/Makefile.common"
 

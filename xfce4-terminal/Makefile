@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/14 10:43:15 thomasklausner Exp $
-
-BROKEN=		Must fix xfce4-exo first
+# $NetBSD: Makefile,v 1.2 2006/07/18 11:30:48 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -12,5 +10,6 @@ CATEGORIES=	x11
 COMMENT=	Xfce terminal emulator
 
 .include "../../wip/xfce4-exo/buildlink3.mk"
+.include "../../x11/vte/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
