@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/07/16 19:55:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/18 20:43:11 cheusov Exp $
 
 DISTNAME=	dictd-1.10.7
 PKGNAME=	dict-server-1.10.7
@@ -10,19 +10,22 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.dict.org/
 COMMENT=	Dictionary Service Protocol server
 
-USE_TOOLS+=		gmake yacc
+USE_TOOLS+=		gmake yacc m4:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-cflags=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--disable-plugin
 
 MESSAGE_SUBST+=		VARBASE="${VARBASE}"
+MESSAGE_SUBST+=		PATH_TO_M4="${TOOLS_PATH.m4}"
+FILES_SUBST+=		PATH_TO_M4="${TOOLS_PATH.m4}"
+
 INSTALLATION_DIRS+=	share/dictd
 
 PKG_GROUPS=		dictd
 PKG_USERS=		dictd:dictd
 PKG_GECOS.dictd=	Dictionary\ protocol\ server\ user
 
-RCD_SCRIPTS=	dictd
+RCD_SCRIPTS=		dictd
 
 # for -L /var/log/dictd/<filename_or_pattern>
 OWN_DIRS_PERMS=	${VARBASE}/log/dictd ${DICTD_USER} ${DICTD_GROUP} 0750
