@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/07/18 20:43:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/18 22:14:19 cheusov Exp $
 
 DISTNAME=	dictd-1.10.7
 PKGNAME=	dict-server-1.10.7
@@ -19,8 +19,6 @@ MESSAGE_SUBST+=		VARBASE="${VARBASE}"
 MESSAGE_SUBST+=		PATH_TO_M4="${TOOLS_PATH.m4}"
 FILES_SUBST+=		PATH_TO_M4="${TOOLS_PATH.m4}"
 
-INSTALLATION_DIRS+=	share/dictd
-
 PKG_GROUPS=		dictd
 PKG_USERS=		dictd:dictd
 PKG_GECOS.dictd=	Dictionary\ protocol\ server\ user
@@ -31,17 +29,32 @@ RCD_SCRIPTS=		dictd
 OWN_DIRS_PERMS=	${VARBASE}/log/dictd ${DICTD_USER} ${DICTD_GROUP} 0750
 
 
-BUILD_TARGET=	dictd dictzip
+BUILD_TARGET=	dictd dictzip dictfmt
 
 INSTALL_TARGET=	install.dictd install.dictzip install.dictfmt
 
-EGDIR=		${PREFIX}/share/examples/dict-server
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
+INSTALLATION_DIRS+=	share/dictd ${EGDIR} ${PKGDOCDIR}
+
 CONF_FILES=	${EGDIR}/dictd.conf \
 		${PKG_SYSCONFDIR}/dictd.conf
+
+EXTRA_DOC_FILES=	COPYING NEWS README INSTALL
+EXTRA_EXAMPLES_FILES=	dictd1.conf dictd2.conf \
+			dictd3.conf dictd4.conf dictd_complex.conf \
+			dictd_mime.conf dictd_plugin_dbi.conf \
+			dictd_site.txt dictd_virtual.conf
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${.CURDIR}/files/dictd.conf ${EGDIR}/
+.for i in ${EXTRA_DOC_FILES}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${PKGDOCDIR}
+.endfor
+.for i in ${EXTRA_EXAMPLES_FILES}
+	${INSTALL_DATA} ${WRKSRC}/examples/${i} ${EGDIR}
+.endfor
 
 .include "../../devel/zlib/buildlink3.mk"
 
