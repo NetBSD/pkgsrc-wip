@@ -1,14 +1,29 @@
-@comment $NetBSD: PLIST,v 1.9 2006/07/17 13:21:17 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/07/18 12:30:37 marttikuparinen Exp $
+lib/xfce4/mcs-plugins/display_plugin.la
 lib/xfce4/mcs-plugins/fm_plugin.la
-lib/xfce4/mcs-plugins/ui_plugin.la
 lib/xfce4/mcs-plugins/keyboard_plugin.la
 lib/xfce4/mcs-plugins/mouse_plugin.la
 lib/xfce4/mcs-plugins/screensaver_plugin.la
-lib/xfce4/mcs-plugins/display_plugin.la
+lib/xfce4/mcs-plugins/ui_plugin.la
+share/applications/xfce-display-settings.desktop
+share/applications/xfce-keyboard-settings.desktop
+share/applications/xfce-mouse-settings.desktop
+share/applications/xfce-ui-settings.desktop
+share/icons/hicolor/48x48/apps/xfce-filemanager.png
+share/icons/hicolor/48x48/apps/xfce4-display.png
+share/icons/hicolor/48x48/apps/xfce4-keyboard.png
+share/icons/hicolor/48x48/apps/xfce4-mouse.png
+share/icons/hicolor/48x48/apps/xfce4-ui.png
+share/icons/hicolor/scalable/apps/xfce-filemanager.svg
+share/icons/hicolor/scalable/apps/xfce4-display.svg
+share/icons/hicolor/scalable/apps/xfce4-keyboard.svg
+share/icons/hicolor/scalable/apps/xfce4-mouse.svg
+share/icons/hicolor/scalable/apps/xfce4-ui.svg
 share/locale/ar/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/az/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/be/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/bg/LC_MESSAGES/xfce-mcs-plugins.mo
+share/locale/bn_IN/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/ca/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/cs/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/de/LC_MESSAGES/xfce-mcs-plugins.mo
@@ -47,21 +62,7 @@ share/locale/uk/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/vi/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/zh_CN/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/zh_TW/LC_MESSAGES/xfce-mcs-plugins.mo
-share/locale/bn_IN/LC_MESSAGES/xfce-mcs-plugins.mo
-share/applications/xfce-ui-settings.desktop
-share/applications/xfce-keyboard-settings.desktop
-share/applications/xfce-mouse-settings.desktop
-share/applications/xfce-display-settings.desktop
-share/icons/hicolor/48x48/apps/xfce-filemanager.png
-share/icons/hicolor/48x48/apps/xfce4-display.png
-share/icons/hicolor/48x48/apps/xfce4-keyboard.png
-share/icons/hicolor/48x48/apps/xfce4-mouse.png
-share/icons/hicolor/48x48/apps/xfce4-ui.png
-share/icons/hicolor/scalable/apps/xfce-filemanager.svg
-share/icons/hicolor/scalable/apps/xfce4-display.svg
-share/icons/hicolor/scalable/apps/xfce4-keyboard.svg
-share/icons/hicolor/scalable/apps/xfce4-mouse.svg
-share/icons/hicolor/scalable/apps/xfce4-ui.svg
+share/xfce-mcs-plugins/shortcuts/default.xml
 share/xfce4/doc/C/images/display_preferences.png
 share/xfce4/doc/C/images/font_selection.png
 share/xfce4/doc/C/images/keyboard_settings.png
@@ -80,7 +81,6 @@ share/xfce4/doc/it/images/keyboard_settings.png
 share/xfce4/doc/it/images/mouse_settings.png
 share/xfce4/doc/it/images/user_interface_settings.png
 share/xfce4/doc/it/xfce-mcs-plugins.html
-share/xfce-mcs-plugins/shortcuts/default.xml
 @dirrm lib/xfce4/mcs-plugins
 @dirrm share/xfce-mcs-plugins/shortcuts
 @dirrm share/xfce-mcs-plugins
