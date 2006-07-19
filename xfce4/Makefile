@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/07/18 12:24:23 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.17 2006/07/19 08:14:15 marttikuparinen Exp $
 
 .include "Makefile.common"
 
@@ -20,7 +20,7 @@ do-install:
 .include "../../wip/xfce4-icon-theme/buildlink3.mk"
 .include "../../wip/xfce4-print/buildlink3.mk"
 .include "../../wip/xfce4-appfinder/buildlink3.mk"
-## .include "../../wip/xfce4-thunar/buildlink3.mk"
+.include "../../wip/xfce4-thunar/buildlink3.mk"
 .include "../../wip/xfce4-xarchiver/buildlink3.mk"
 .include "../../wip/xfce4-orage/buildlink3.mk"
 .include "../../wip/xfce4-wm/buildlink3.mk"
