@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/18 12:00:24 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/19 07:29:00 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -11,6 +11,7 @@ COMMENT=	Xfce extension library
 
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/xfce4-mcs-plugins/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/pthread.buildlink3.mk"

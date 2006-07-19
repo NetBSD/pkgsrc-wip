@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/18 11:30:48 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/19 07:29:00 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -9,6 +9,7 @@ PKGNAME=	xfce4-terminal-${XFCE4_VERSION}
 CATEGORIES=	x11
 COMMENT=	Xfce terminal emulator
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/xfce4-exo/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
