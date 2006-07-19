@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/06 17:14:13 bartoszkuzma Exp $
-man/man1/darkstat.1
-sbin/darkstat
