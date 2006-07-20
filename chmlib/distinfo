@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/07/20 13:25:31 obache Exp $
-
-SHA1 (chmlib-0.38.tar.bz2) = 52165495bd28a6dfb98ca61c25fa57758b62b41c
-RMD160 (chmlib-0.38.tar.bz2) = 4893e8cf48815f8d64aad1afc4063c0b0e369236
-Size (chmlib-0.38.tar.bz2) = 262494 bytes

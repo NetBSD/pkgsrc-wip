@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/04/05 05:21:59 jeremy-c-reed Exp $
-
-SHA1 (gettext-0.14.3.tar.gz) = f9fd59fc5612d6fedf4eac3921ae73c49ba99cfc
-RMD160 (gettext-0.14.3.tar.gz) = 100019a481deb70511ea21f3ba5a62b4f7ad0799
-Size (gettext-0.14.3.tar.gz) = 6990867 bytes

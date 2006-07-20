@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/20 13:25:31 obache Exp $
-include/chm_lib.h
-include/lzx.h
-lib/libchm.la

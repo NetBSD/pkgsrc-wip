@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2297 2006/07/20 17:24:28 minskim Exp $
+# $Id: Makefile,v 1.2298 2006/07/20 19:54:15 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -134,7 +134,6 @@ SUBDIR+=	cdpr
 SUBDIR+=	cdrtools-devel
 SUBDIR+=	cfengine
 SUBDIR+=	chbg
-SUBDIR+=	chmlib
 SUBDIR+=	chora
 SUBDIR+=	chromium
 SUBDIR+=	chromium-data
@@ -303,9 +302,6 @@ SUBDIR+=	gde
 SUBDIR+=	gdhcpd
 SUBDIR+=	gdmap
 SUBDIR+=	gdvb
-SUBDIR+=	gettext-lib
-SUBDIR+=	gettext-runtime
-SUBDIR+=	gettext-tools
 SUBDIR+=	gfontview
 SUBDIR+=	gforge
 SUBDIR+=	ghostpcl
