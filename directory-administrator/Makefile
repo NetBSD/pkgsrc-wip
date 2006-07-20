@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/31 18:27:01 ghen Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/20 20:06:17 thomasklausner Exp $
 #
 
 DISTNAME=	directory_administrator-1.5
@@ -14,7 +14,6 @@ USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-USE_GNU_GETTEXT=	yes
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../x11/gnome-libs/buildlink3.mk"
