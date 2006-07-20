@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 06:41:10 rillig Exp $
+$NetBSD: distinfo,v 1.4 2006/07/20 14:20:47 obache Exp $
 
-SHA1 (dbf-0.8.1.src.tar.gz) = 89dc6813e6b238280ec7011c508dbdb1d44a51be
-RMD160 (dbf-0.8.1.src.tar.gz) = c9d5f7365f9fc175ba0d8c76b3b9f1206b4205e2
-Size (dbf-0.8.1.src.tar.gz) = 26217 bytes
-SHA1 (patch-aa) = 3351a802ad75132b9c20ce28e21fe7a7e73424db
-SHA1 (patch-ab) = f7a1538815890a1459da707f6e98fd5239a0a3ac
-SHA1 (patch-ac) = 88c598a88b5ea9a3ae4e23eaec56e36a93914ed2
+SHA1 (dbf-0.8.3.1.src.tar.gz) = ad99b0df5f9bda9fd4accc5c881f905294c9d3fb
+RMD160 (dbf-0.8.3.1.src.tar.gz) = 8b3beb3fa94185ae35889c41f92516a955383a37
+Size (dbf-0.8.3.1.src.tar.gz) = 26054 bytes
+SHA1 (patch-aa) = eace9a3e96046427bfbdede473a1a0c9d43cbb4c
+SHA1 (patch-ab) = 4fde3ecc9c092fa0ee5d4a268022d75a4a16db14
