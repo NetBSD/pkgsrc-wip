@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/18 22:14:19 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/20 13:01:26 cheusov Exp $
 
 DISTNAME=	dictd-1.10.7
 PKGNAME=	dict-server-1.10.7
@@ -26,7 +26,7 @@ PKG_GECOS.dictd=	Dictionary\ protocol\ server\ user
 RCD_SCRIPTS=		dictd
 
 # for -L /var/log/dictd/<filename_or_pattern>
-OWN_DIRS_PERMS=	${VARBASE}/log/dictd ${DICTD_USER} ${DICTD_GROUP} 0750
+OWN_DIRS_PERMS=	${VARBASE}/log/dictd dictd dictd 0750
 
 
 BUILD_TARGET=	dictd dictzip dictfmt
