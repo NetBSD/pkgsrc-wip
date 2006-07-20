@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2006/07/16 16:08:38 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2006/07/20 15:00:24 cheusov Exp $
 
-DISTNAME=	heirloom-060122
+.include "Makefile.common"
+
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=heirloom/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://heirloom.sourceforge.net/
 COMMENT=	Collection of standard Unix utilities
 
 USE_TOOLS+=	yacc lex
@@ -56,12 +54,11 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOC_DIR}/LICENSE && \
 	${INSTALL_DATA} ${WRKSRC}/README ${DOC_DIR} && \
 	for i in ${DOC_FILES}; do \
-		${INSTALL_DATA} ${WRKSRC}/LICENSE/$${i} \
+		${INSTALL_DATA} ${WRKSRC}/LICENSE/"$${i}" \
 		                ${DOC_DIR}/LICENSE || exit 1; \
 	done
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
-.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
