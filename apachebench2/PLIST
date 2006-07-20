@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/04 04:34:51 jeremy-c-reed Exp $
-sbin/apachebench2
+@comment $NetBSD: PLIST,v 1.3 2006/07/20 12:39:32 obache Exp $
 man/man8/apachebench2.8
+sbin/apachebench2
