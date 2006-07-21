@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/11 15:46:50 obache Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/21 12:12:37 obache Exp $
 
 DISTNAME=	mod_encoding-20021209
 PKGNAME=	ap2-encoding-20040616
@@ -13,7 +13,7 @@ DISTFILE.main=	mod_encoding-20021209.tar.gz
 DISTFILE.ap2=	mod_encoding.c.apache2.20040616
 DISTFILES=	${DISTFILE.main} ${DISTFILE.ap2}
 EXTRACT_ONLY=	${DISTFILE.main}
-SITES_${DISTFILE.ap2}=	http://webdav.todo.gr.jp/download/experimental/
+SITES.${DISTFILE.ap2}=	http://webdav.todo.gr.jp/download/experimental/
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
