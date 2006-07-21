@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/05/19 16:51:21 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.18 2006/07/21 01:58:53 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXcursor-1.1.5.2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Client-side cursor loading library for X
+
+CONFLICTS+=		xcursor-[0-9]*
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
