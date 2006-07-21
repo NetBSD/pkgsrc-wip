@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/05/19 16:51:21 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/21 01:59:41 jeremy-c-reed Exp $
 #
  ## this needs to be updated to modular Xorg
 
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Xfixes library and extension of X RandR from modular X.org
+
+CONFLICTS+=		Xfixes-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
