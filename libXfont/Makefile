@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/05/19 16:51:21 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.17 2006/07/21 02:01:37 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXfont-1.1.0
@@ -16,7 +16,6 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xfont.pc.in
 
-.include "../../wip/libX11/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk" ## configure doesn't check for this
 .include "../../wip/fontcacheproto/buildlink3.mk"
