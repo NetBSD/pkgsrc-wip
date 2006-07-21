@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/07/05 16:42:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/21 12:40:02 obache Exp $
 #
 
 DISTNAME=	emacs-22.0.50
@@ -18,6 +18,7 @@ CVS_ROOT.emacs=		${CVS_ROOT_GNU}/emacs
 CVS_MODULE.emacs=	emacs
 
 GNU_CONFIGURE=		yes
+INFO_FILES=		yes
 
 WRKSRC=		${WRKDIR}/emacs
 
@@ -30,7 +31,7 @@ CONFIGURE_ARGS+=	--with-gif
 CONFIGURE_ARGS+=	--with-png
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
-PKG_OPTIONS_OPTIONAL_GROUPS= toolkit
+PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
 PKG_OPTIONS_GROUP.toolkit= emacs-xaw3d motif gtk
 .include "../../mk/bsd.options.mk"
 

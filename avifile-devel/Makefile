@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/07/06 08:26:06 obache Exp $
+# $NetBSD: Makefile,v 1.17 2006/07/21 12:32:09 obache Exp $
 
 DISTNAME=	avifile-0.7-0.7.43
 PKGNAME=	avifile-devel-0.7.43
@@ -52,6 +52,7 @@ SUBST_STAGE.v4l=	pre-configure
 SUBST_MESSAGE.v4l=	do not support v4l, so do not build qtvidcap
 SUBST_FILES.v4l=	samples/Makefile.in
 SUBST_SED.v4l=		-E -e 's|^(SUBDIRS.+)qtvidcap|\1|'
+
 SUBST_CLASSES+=		v4lman
 SUBST_STAGE.v4lman=	pre-configure
 SUBST_MESSAGE.v4lman=	do not install man page for v4l
@@ -73,6 +74,7 @@ SUBST_STAGE.pkgname=	pre-configure
 SUBST_MESSAGE.pkgname=	use pkgname without version to build dir name
 SUBST_FILES.pkgname=	configure
 SUBST_SED.pkgname=	-E -e 's|(PACKAGE[:space:]*=[:space:]*avifile).*|\1|'
+
 SUBST_CLASSES+=		docpath
 SUBST_STAGE.docpath=	pre-configure
 SUBST_MESSAGE.docpath=	fix document path
@@ -81,6 +83,7 @@ SUBST_FILES.docpath=	Makefile.in doc/Makefile.in doc/avicap/Makefile.in \
 SUBST_SED.docpath=	-E -e 's|[(]datadir[)]/[$$][(]PACKAGE[)]/doc|(datadir)/doc/$$(PACKAGE)|'
 
 . include "../../mk/oss.buildlink3.mk"
+
 SUBST_CLASSES+=		dsp
 SUBST_STAGE.dsp=	pre-configure
 SUBST_MESSAGE.dsp=	/dev/dsp to ${DEVOSSSOUND}
@@ -93,6 +96,7 @@ SUBST_FILES.dsp=	ffmpeg/libavformat/audio.c \
 			samples/qtvidcap/vidconf.cpp \
 			samples/qtvidcap/vidconf_p.cpp
 SUBST_SED.dsp=		-e 's|/dev/dsp|${DEVOSSSOUND}|'
+
 .include "../../converters/libiconv/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv:Q}
 .include "../../devel/zlib/buildlink3.mk"
