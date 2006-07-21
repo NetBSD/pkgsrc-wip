@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/05/19 16:51:24 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.16 2006/07/21 02:04:30 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXrender-0.9.0.2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Render Library
+
+CONFLICTS+=		Xrender-[0-9]*
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
