@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/05/20 04:38:02 yomram Exp $
-
-SHA1 (viewcvs-0.9.4.tar.gz) = d58216da1370dc60afe9756c0c17dacdf85f2c24
-RMD160 (viewcvs-0.9.4.tar.gz) = 6cc033fe47984b0bde639c3cbf2476ab283d4b64
-Size (viewcvs-0.9.4.tar.gz) = 140290 bytes
-SHA1 (patch-aa) = d820b61a53815e37965534eff7bba88659471928
