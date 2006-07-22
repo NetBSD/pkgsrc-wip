@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/16 10:39:48 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/22 04:42:34 rillig Exp $
 #
 
 DISTNAME=		happy-1.15
@@ -7,8 +7,8 @@ MASTER_SITES=		http://www.haskell.org/happy/dist/
 DISTFILES=		${DISTNAME}-src.tar.gz
 DISTFILES+=		${DISTNAME}-html.tar.gz
 DISTFILES+=		happy.ps.gz
-SITES_${DISTNAME}-html.tar.gz=	http://www.haskell.org/happy/doc/
-SITES_happy.ps.gz=		http://www.haskell.org/happy/doc/ps/
+SITES.${DISTNAME}-html.tar.gz=	http://www.haskell.org/happy/doc/
+SITES.happy.ps.gz=		http://www.haskell.org/happy/doc/ps/
 
 MAINTAINER=		emil@math.su.se
 HOMEPAGE=		http://www.haskell.org/happy/dist/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/14 01:27:59 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/22 04:42:34 rillig Exp $
 
 DISTNAME=	cjk-latex-wadalab-4.5.2
 CATEGORIES=	print
@@ -14,13 +14,13 @@ ALLARCHS=	CJK-4_5.2.tar.gz \
 EXTRACT_ONLY=	${ALLARCHS}
 DISTFILES=	${ALLARCHS} \
 		wftodm.c
-SITES_JK-4_5.2.tar.gz= \
+SITES.JK-4_5.2.tar.gz= \
 		http://www.feyrer.de/Misc/ \
 		${MASTER_SITE_LOCAL}	# relocate to MSL when moving to pkgsrc
-SITES_wftodm.c= \
+SITES.wftodm.c= \
 		ftp://ftp.dante.de/pub/tex/support/ghostscript/3rdparty/fonts/kanji/Font/tools/
 .for f in ${FONTARCHS}
-SITES_${f}+= \
+SITES.${f}+= \
 		ftp://ftp.dante.de/pub/tex/support/ghostscript/3rdparty/fonts/kanji/Font/
 .endfor
 

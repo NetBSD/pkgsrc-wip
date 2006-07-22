@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/12 23:51:28 kristerw Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/22 04:42:34 rillig Exp $
 
 DISTNAME=	SpeedX-0.1.4d
 PKGNAME=	speedx-0.1.4d
@@ -10,7 +10,7 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://medernac.home.cern.ch/medernac/SpeedX/index_en.html
 COMMENT=	Car racing game for X
 
-SITES_mercrain.s3m.zip=	http://www.modarchive.com/cgi-bin/download.cgi/M/
+SITES.mercrain.s3m.zip=	http://www.modarchive.com/cgi-bin/download.cgi/M/
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
