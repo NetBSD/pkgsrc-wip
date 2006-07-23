@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/23 14:45:16 roelants Exp $
+${RUBY_SITELIBDIR}/cairo.rb
+${RUBY_SITEARCHLIBDIR}/cairo.${RUBY_DLEXT}
+${RUBY_SITEARCHLIBDIR}/rb_cairo.h
