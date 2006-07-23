@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2302 2006/07/23 15:02:07 roelants Exp $
+# $Id: Makefile,v 1.2303 2006/07/23 16:58:23 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1177,7 +1177,6 @@ SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-dpklib
 SUBDIR+=	ruby-mecab
 SUBDIR+=	ruby-misen
-SUBDIR+=	ruby-rcairo
 SUBDIR+=	runit
 SUBDIR+=	sara
 SUBDIR+=	sarg
