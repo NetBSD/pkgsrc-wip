@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/10 17:19:50 martijnb Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/23 12:37:36 martijnb Exp $
 #
 
 DISTNAME=		nzbget-0.2.3
@@ -12,7 +12,7 @@ COMMENT=		Binary newsreader with NZB support
 
 USE_TOOLS+=	        gmake
 USE_TOOLS+=		autoconf
-USE_LANGUAGES+=		c++
+USE_LANGUAGES+=		c++ c
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
@@ -31,4 +31,5 @@ post-install:
 .include "../../mk/curses.buildlink3.mk"
 .include "../../converters/uulib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
