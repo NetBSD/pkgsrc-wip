@@ -1,4 +1,4 @@
-# $gd
+# $NetBSD: Makefile,v 1.3 2006/07/25 12:43:23 dauphing Exp $
 DISTNAME=	lush-1.1
 PKGREVISION=	2
 CATEGORIES=	lang
