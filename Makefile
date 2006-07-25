@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2304 2006/07/24 16:50:51 thomasklausner Exp $
+# $Id: Makefile,v 1.2305 2006/07/25 16:38:36 lsed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -382,7 +382,6 @@ SUBDIR+=	gxmms2
 SUBDIR+=	haddock
 SUBDIR+=	happy
 SUBDIR+=	hasciicam
-SUBDIR+=	hcidump
 SUBDIR+=	hdparm
 SUBDIR+=	heirloom
 SUBDIR+=	hellanzb

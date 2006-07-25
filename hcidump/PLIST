@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/03/21 19:26:23 plunky Exp $
-bin/hcidump
-lib/libparser.a
-lib/libparser_pic.a
-man/cat1/hcidump.0
-man/man1/hcidump.1
