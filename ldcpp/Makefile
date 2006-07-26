@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/06/26 00:08:58 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/26 17:23:07 tnn2 Exp $
 
 DISTNAME=		ldcpp
 PKGNAME=		ldcpp-${LDCPP_VERSION}
@@ -37,7 +37,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/ldcpp/glade
 	${INSTALL_DATA_DIR} ${PREFIX}/share/ldcpp/pixmaps
 	cd ${WRKSRC}/glade && ${PAX} -rw *.glade ${PREFIX}/share/ldcpp/glade
-	cd ${WRKSRC}/pixmaps && ${PAX} -rw *.png *.svg ${PREFIX}/share/ldcpp/pixmaps
+	cd ${WRKSRC}/pixmaps && ${PAX} -rw *.png ${PREFIX}/share/ldcpp/pixmaps
 
 .include "../../wip/mk/cvs-package.mk"
 .include "../../mk/compiler.mk"
