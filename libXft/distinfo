@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/13 02:18:59 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2006/07/27 22:07:16 jeremy-c-reed Exp $
 
-SHA1 (libXft-2.1.8.2.tar.bz2) = 2f0141e25ac82ce672f2b10e4f60e5d1f9bb8622
-RMD160 (libXft-2.1.8.2.tar.bz2) = 337aa89e466d973eb993f74e33a66f529539503e
-Size (libXft-2.1.8.2.tar.bz2) = 254184 bytes
+SHA1 (libXft-2.1.10.tar.bz2) = a5d661544c5605c44d22ccd76383344dee03254b
+RMD160 (libXft-2.1.10.tar.bz2) = 41fa35fff3ff5c8e9d9402c73b2b9971283acbc3
+Size (libXft-2.1.10.tar.bz2) = 252786 bytes
