@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.1 2006/07/27 08:53:49 koifren Exp $
+
+--- label.c.old	2006-07-27 11:45:13.000000000 +0300
++++ label.c	2006-07-27 11:45:38.000000000 +0300
+@@ -72,7 +72,9 @@
+ 
+ void del_label(struct label *l, int readd)
+ {
++#ifdef AYAME_STACK
+ union sockunion *u;
++#endif
+ if (curlabel == l) {
+ 	if (l->next)
+ 		curlabel = l->next;
+@@ -85,8 +87,10 @@
+ 	l->next->prev = l->prev;
+ 
+ delete_route_soft(&l->so_dest, &l->so_pref);
++#ifdef AYAME_STACK
+ u=ayame_make_mpls_union(0, l->binding);
+ delete_mpls_route(u);
++#endif
+ if (readd)
+ 	add_route(&l->so_dest, &l->so_pref, &l->so_gate, 0);
+ 

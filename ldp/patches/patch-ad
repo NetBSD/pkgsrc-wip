@@ -1,0 +1,69 @@
+$NetBSD: patch-ad,v 1.1 2006/07/27 08:53:49 koifren Exp $
+
+--- routes_ayame.c.old	2006-07-27 11:40:56.000000000 +0300
++++ routes_ayame.c	2006-07-27 11:42:25.000000000 +0300
+@@ -262,8 +262,10 @@
+ rtm.rtm_seq = ++rt_seq;
+ rtm.rtm_addrs = RTA_DST | RTA_GATEWAY;
+ 
++#ifdef AYAME_STACK
+ if (pop)
+ 	rtm.rtm_flags |= MPLS_RTF_POP;
++#endif
+ 
+ /* destination, gateway, netmask, genmask, ifp, ifa */
+ 
+@@ -667,11 +669,13 @@
+ 		continue;
+ 		}
+ 	so_dst = (union sockunion*)&rtm[1];
++#ifdef AYAME_STACK
+ 	if (so_dst->sa.sa_family == AF_MPLS) {
+ 		delete_mpls_route_soft(so_dst);
+ 		debugp("MPLS route deleted.\n");
+ 		continue;
+ 		}
++#endif
+ 	if (so_dst->sa.sa_family != AF_INET) {
+ 		debugp("sa_dst is not AF_INET\n");
+ 		continue;
+@@ -687,11 +691,13 @@
+         	so_pref = (union sockunion*)((char*)so_gate + ROUNDUP(so_gate->sa.sa_len));
+ 		} else
+ 		so_pref = (union sockunion*)((char*)so_dst + ROUNDUP(so_dst->sa.sa_len));
++#ifdef AYAME_STACK
+ 	if (so_gate->sa.sa_family == AF_MPLS) {
+ 		debugp("MPLS route to %s deleted.\n", inet_ntoa(so_dst->sin.sin_addr));
+ 		delete_route_soft(so_dst, so_pref);
+ 		continue;
+ 		}
++#endif
+ 	if (so_gate->sa.sa_family != AF_INET)
+ 		so_gate = NULL;
+ 	if (rtm->rtm_flags & RTF_HOST)
+@@ -755,21 +761,25 @@
+ 		continue;
+ 		}
+ 	so_dst = (union sockunion*)&rtm[1];
++#ifdef AYAME_STACK
+ 	if (so_dst->sa.sa_family == AF_MPLS) {
+ 		delete_mpls_route_soft(so_dst);
+ 		debugp("MPLS route deleted.\n");
+ 		continue;
+ 		}
++#endif
+ 	if (rtm->rtm_addrs & RTA_GATEWAY) {
+ 		so_gate=(union sockunion*)((char*)so_dst + ROUNDUP(so_dst->sa.sa_len));
+ 		so_pref = (union sockunion*)((char*)so_gate + ROUNDUP(so_gate->sa.sa_len));
+ 		} else
+ 		so_pref = (union sockunion*)((char*)so_dst + ROUNDUP(so_dst->sa.sa_len));
++#ifdef AYAME_STACK
+ 	if (so_gate->sa.sa_family == AF_MPLS) {
+ 		debugp("MPLS route to %s deleted.\n", inet_ntoa(so_dst->sin.sin_addr));
+ 		delete_route_soft(so_dst, so_pref);
+ 		continue;
+ 		}
++#endif
+ 	}
+ free(buf);
+ return LDP_E_OK;

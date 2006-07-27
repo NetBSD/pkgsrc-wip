@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 2006/07/27 08:53:49 koifren Exp $
+
+--- mpls_interface.c.old	2006-07-27 11:39:22.000000000 +0300
++++ mpls_interface.c	2006-07-27 11:39:51.000000000 +0300
+@@ -63,10 +63,10 @@
+ int mpls_add_label(struct ldp_peer *p, int type, struct in_addr *addr, int len, int label, int rlookup)
+ {
+ char padd[MAXHOSTNAMELEN];
+-int kount=0, rv;
+-u_int32_t l;
+ 
+ #ifdef AYAME_STACK
++int kount=0, rv;
++u_int32_t l;
+ union sockunion *so_dest, *so_pref, *so_gate;
+ char prefix[64];
+ struct rt_msg rg;
