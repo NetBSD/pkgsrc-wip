@@ -1,6 +1,12 @@
 [Misc]
 RedefUser0=+INO, +SIZ, +RDEV, +CHK, -MOD, -MTM, -ATM, -CTM, -GRP, -USR
 
+# The new Samhain behavior is to check the checksum up the last-known size of
+# the file, but *yes*, the inode will change when it becomes rotated and the size
+# will get reset to a lesser value (in which case the check should know to passively 
+# fail)
+RedefGrowingLogFiles=-INO, -SIZ, +CHK, -MTM, -ATM, -CTM
+
 #
 # --------- / --------------
 #
@@ -27,7 +33,6 @@ dir=-1/kern
 file=/tmp
 [IgnoreAll]
 dir=-1/tmp
-
 
 
 
@@ -59,7 +64,6 @@ dir = 99/dev
 file=/dev/tty*
 file=/dev/pty*
 
-
 #
 # --------- /etc -----------
 #
@@ -83,7 +87,6 @@ file=/etc/dhclient.conf
 # "Browsing On" and "Printcap /etc/printcap" in cupsd.conf(5) 
 [Attributes]
 file=/etc/printcap
-
 
 
 #
@@ -117,7 +120,6 @@ dir=-1/usr/pkgsrc
 
 [IgnoreAll]
 dir=-1/usr/src
-
 
 
 #
@@ -334,7 +336,7 @@ File = /var/log/sendmail.st
 # NetBSD gzip(1)'s by default but newsyslog.conf(5) has bzip2 support
 [Attributes]
 File = /var/log/*.[0-9].gz
-File = /var/log/*.[0-9].bz2
+#File = /var/log/*.[0-9].bz2
 
 #
 # --------- makewhatis(8) -----------
@@ -349,87 +351,8 @@ file=/usr/pkg/man
 file=/usr/share/man/whatis.db
 file=/usr/share/man
 
-
-############ CF LOCAL STUFF ################
-
-#
-# --------- /var/spool/courier  -----------
-#
-
-[Attributes]
-file = /var/spool/courier
-file = /var/spool/courier/msgs
-file = /var/spool/courier/msgq
-file = /var/spool/courier/tmp
-file = /var/spool/courier/track
-[IgnoreAll]
-dir = -1/var/spool/courier
-dir = -1/var/spool/courier/msgs
-dir = -1/var/spool/courier/msgq
-dir = -1/var/spool/courier/tmp
-dir = -1/var/spool/courier/track
-
-
-#
-# --------- /var/db/bacula -----------
-#
-
-# ...
-
-
-#
-# --------- /var/db/pgsql -----------
-#
-
-# Database security is handled internally to the database.
-# Keep an eye on the sensitive files, though
-
-[Attributes]
-file=/var/db/pgsql
-file=/var/db/pgsql/data/pg_hba.conf
-file=/var/db/pgsql/data/postgresql.conf
-file=/var/db/pgsql/data/base
-file=/var/db/pgsql/data/global
-file=/var/db/pgsql/data/pg_tblspc
-file=/var/db/pgsql/data/pg_xlog
-file=/var/db/pgsql/data/pg_clog
-file=/var/db/pgsql/data/pg_subtrans
-[IgnoreAll]
-dir=-1/var/db/pgsql
-
-
-#
-# --------- /var/named/dev ---------
-# --------- /var/named/etc/namedb/slave ---------
-#
-[IgnoreAll]
-dir=-1/var/chroot/named
-
-#[Attributes]
-#dir = -1/var/named/etc/namedb/slave
-#file = /var/named/dev/null
-#dir = -1/var/named/var/run
-
-#
-#  --------- /var/net-snmp ---------
-#
-[Attributes]
-dir = -1/var/spool/nagios
-
-#
-#  --------- /var/net-snmp ---------
-#
-[Attributes]
-dir = -1/var/net-snmp
-
-
-##############################################
-##############################################
 ##############################################
 ######## END FILE SECTION ####################
-##############################################
-##############################################
-##############################################
 ##############################################
 
 [EventSeverity]
@@ -802,11 +725,11 @@ SetReverseLookup = True
 
 ## Recipient (max. 8)
 #
-SetMailAddress=bofh@mail.pub.collaborativefusion.com
+#SetMailAddress=infosec@noc.myorg.tld
 
 ## Mail relay (IP address)
 #
-SetMailRelay = 206.210.89.201
+SetMailRelay = 127.0.0.1
 
 ## Custom subject format
 #
