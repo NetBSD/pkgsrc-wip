@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/07/27 20:40:32 bseklecki Exp $
+
+SHA1 (samhain_signed-2.2.1c.tar.gz) = 4a7f141b4284439dccae01df20ed27c6a7c39a7b
+RMD160 (samhain_signed-2.2.1c.tar.gz) = 7c431ecd8ceb3808c0fdfe3b7bdffa94e5c041e8
+Size (samhain_signed-2.2.1c.tar.gz) = 1508116
+SHA1 (samhain_signed-2.2.1b.tar.gz) = 990275655b7a84b222f55a1299d5c25c3ee52c4f
+RMD160 (samhain_signed-2.2.1b.tar.gz) = 57b9a01598d8d9e4916d14d4ee8f96434f909157
+Size (samhain_signed-2.2.1b.tar.gz) = 1509024
+SHA1 (patch-aa) = a4fafee72df62ca8f340b1f23de3a68f3fe8131a

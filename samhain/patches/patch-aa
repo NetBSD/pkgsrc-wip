@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/07/27 20:40:32 bseklecki Exp $
+
+--- configure	2006-07-21 01:48:01.000000000 -0400
++++ /home/seklecki/configure.patched	2006-07-21 01:42:33.000000000 -0400
+@@ -3524,6 +3524,8 @@
+ 
+ 	*netbsd*)
+ 	mynetbsd=yes
++	selectconfig=netbsd
++
+ 	echo "$as_me:$LINENO: result: NETBSD bug with libresolve" >&5
+ echo "${ECHO_T}NETBSD bug with libresolve" >&6
+ 	;;
