@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/25 13:59:43 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/27 16:55:56 tnn2 Exp $
 #
 
-TRANSMISSION_VERSION=	0.5
+TRANSMISSION_VERSION=	0.6.1
 DISTNAME=		Transmission-${TRANSMISSION_VERSION}
 PKGNAME=		transmission-${TRANSMISSION_VERSION}
 CATEGORIES=		net x11
@@ -12,19 +12,9 @@ HOMEPAGE=		http://transmission.m0k.org/
 COMMENT=		BitTorrent client using GTK2+
 
 HAS_CONFIGURE=		YES
-USE_TOOLS+=		pkg-config
-BUILD_DEPENDS+=		jam>=2.5:../../devel/jam
+USE_TOOLS+=		gmake pkg-config
 
-.include "../../mk/bsd.prefs.mk"
-
-CONFIGURE_ARGS+=	--openssl-prefix=${LOCALBASE:Q}
-
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${LOCALBASE:Q}/bin/jam
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/transmissioncli ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/gtk/transmission-gtk ${PREFIX}/bin
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
