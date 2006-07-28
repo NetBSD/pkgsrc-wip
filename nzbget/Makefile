@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/07/23 12:37:36 martijnb Exp $
+# $NetBSD: Makefile,v 1.8 2006/07/28 16:36:48 martijnb Exp $
 #
 
 DISTNAME=		nzbget-0.2.3
@@ -12,7 +12,7 @@ COMMENT=		Binary newsreader with NZB support
 
 USE_TOOLS+=	        gmake
 USE_TOOLS+=		autoconf
-USE_LANGUAGES+=		c++ c
+USE_LANGUAGES+=		c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
