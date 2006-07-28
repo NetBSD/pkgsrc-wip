@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/07/10 16:23:17 obache Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/28 01:50:07 obache Exp $
 
 .include "../../wip/mecab/Makefile.common"
 
@@ -11,7 +11,7 @@ MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://mecab.sourceforge.jp/
 COMMENT=	MeCab ruby module
 
-USE_LANGUAGES+=	c++
+USE_LANGUAGES+=	c c++
 REPLACE_RUBY+=		test.rb
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
