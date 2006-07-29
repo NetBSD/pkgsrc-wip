@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/06/18 22:14:47 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/29 12:27:19 kh-p Exp $
 #
 
 DISTNAME=		wmii-3.1
@@ -12,6 +12,8 @@ COMMENT=		Third version of the window manager improved 2
 CONFLICTS+=		wmii-2.*
 
 NO_CONFIGURE=		yes
+
+LDFLAGS+=-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
 
 SUBST_CLASSES     += vars pfx
 
@@ -33,7 +35,6 @@ SUBST_SED.pfx     += -e 's|/9||g'
 SUBST_SED.pfx     += -e 's|cc|${CC}|g'
 
 # TODO:
-#
 # This must probably be fixed. so no files were created in share/examples.
 # They-r strictly necessary? or is just ok to get them from the $SYSCONFDIR?
 #
