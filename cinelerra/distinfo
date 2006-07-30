@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/10 07:40:37 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2006/07/30 19:04:26 shattered Exp $
 
-SHA1 (hvirtual_1.2.0-2cvs20040608.tar.gz) = b58fad69b7db117e09149bc04acfe3312052d64f
-Size (hvirtual_1.2.0-2cvs20040608.tar.gz) = 17390068 bytes
+SHA1 (hvirtual_1.2.0-2cvs20040814.tar.gz) = 9341da21978ed2985b1e591aec8011f6ae2ca0b9
+RMD160 (hvirtual_1.2.0-2cvs20040814.tar.gz) = 86126f41e0942a6383db5e2c6dbaa66635fd2a14
+Size (hvirtual_1.2.0-2cvs20040814.tar.gz) = 18415885 bytes
