@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/07/16 16:23:44 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/30 15:13:04 shattered Exp $
 #
 
 DISTNAME=		d4x-2.5.6
@@ -9,13 +9,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.krasu.ru/soft/chuchelo/
 COMMENT=		Download files using a nice GUI
 
-BUILD_DEPENDS+=		bash-[0-9]*:../../shells/bash
-
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-openssl
-CONFIG_SHELL=		${PREFIX}/bin/bash
 USE_LANGUAGES+=		c++
+USE_TOOLS+=		bash
+CONFIG_SHELL=		${BASH}
 
 .include "../../mk/bsd.prefs.mk"
 
