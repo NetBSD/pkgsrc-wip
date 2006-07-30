@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/11/11 06:53:38 dhowland Exp $
+$NetBSD: patch-aa,v 1.5 2006/07/30 01:18:18 dhowland Exp $
 
 --- freevo.orig	2005-01-23 10:03:59.000000000 -0500
 +++ freevo
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 2005/11/11 06:53:38 dhowland Exp $
      if float(sys.version[0:3]) >= 2.3:
          # python seems to be ok
 -        search = ('python', 'python2')
-+        search = ('python', 'python2', 'python2.3')
++        search = ('python', 'python2', 'python2.3','python2.4')
      elif float(sys.version[0:3]) >= 2.2:
          # try python2.3, else take python
          search = ('python2.3', 'python')
