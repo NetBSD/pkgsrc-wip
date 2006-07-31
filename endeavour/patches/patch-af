@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/07/31 22:15:44 dhowland Exp $
+
+--- endeavour2/edvutils.c.orig	2006-01-31 02:40:51.000000000 -0500
++++ endeavour2/edvutils.c
+@@ -674,6 +674,15 @@ gboolean EDVProcessIsRunning(gint pid)
+ 	gchar path[PATH_MAX + NAME_MAX];
+ 	g_snprintf(path, sizeof(path), "/proc/%i", pid);
+ 	return(access(path, F_OK) ? FALSE : TRUE);
++#elif defined(__NetBSD__)
++        if(pid <= 0)
++	    return(FALSE);
++
++	if(kill(pid,0) == 0) {
++	    return(TRUE);
++	} else {    
++	    return(FALSE);
++	}    
+ #else
+ 	struct sched_param sp;
+ 

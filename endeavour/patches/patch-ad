@@ -1,0 +1,186 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/07/31 22:15:44 dhowland Exp $
+
+--- endeavour2/edvdevicesfio.c.orig	2006-01-31 02:40:48.000000000 -0500
++++ endeavour2/edvdevicesfio.c
+@@ -9,6 +9,9 @@
+ #elif defined(__SOLARIS__)
+ # include <sys/mnttab.h>
+ # include <sys/vfstab.h>
++#elif defined(__NetBSD__)
++# include <fstab.h>
++# include <sys/statvfs.h>
+ #else
+ # include <mntent.h>
+ #endif
+@@ -80,7 +83,7 @@ void EDVDevicesListLoadFromSystem(
+ 	gulong file_size;
+ 	gint dev_num;
+ 	edv_device_struct *dev;
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 	struct fstab *fs_ptr;
+ #elif defined(__SOLARIS__)
+ 	struct vfstab *vfs_ptr;
+@@ -94,7 +97,7 @@ void EDVDevicesListLoadFromSystem(
+ 	    return;
+ 
+ 	/* Open the system's devices list file */
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 	setfsent();
+ 	fp = FOpen("/etc/fstab", "rb");
+ #elif defined(__SOLARIS__)
+@@ -116,7 +119,7 @@ void EDVDevicesListLoadFromSystem(
+ 	    progress_cb(client_data, 0l, file_size);
+ 
+ 	/* Begin reading the system's devices list file */
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 	fs_ptr = getfsent();
+ 	while(fs_ptr != NULL)
+ #elif defined(__SOLARIS__)
+@@ -143,7 +146,7 @@ void EDVDevicesListLoadFromSystem(
+ 	    dev = EDVDeviceListMatchDevicePath(
+ 		*list, *total,
+ 		&dev_num,
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 		fs_ptr->fs_spec
+ #elif defined(__SOLARIS__)
+ 		vfs_ptr->vfs_special
+@@ -171,7 +174,7 @@ void EDVDevicesListLoadFromSystem(
+ 		else
+ 		{
+ 		    (*list)[dev_num] = dev = EDVDeviceNew(
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 			EDVDeviceGetFSTypeFromName(fs_ptr->fs_vfstype),
+ 			NULL,
+ 			fs_ptr->fs_spec,
+@@ -227,7 +230,7 @@ void EDVDevicesListLoadFromSystem(
+ 		    dev->command_check = g_strdup_printf(
+ 			"%s %s",
+ 			EDV_DEF_FSCK_FRONT_PROG,
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 			fs_ptr->fs_spec
+ #elif defined(__SOLARIS__)
+ 			vfs_ptr->vfs_special
+@@ -241,7 +244,7 @@ void EDVDevicesListLoadFromSystem(
+ 		    dev->command_format = g_strdup_printf(
+ 			"%s %s",
+ 			EDV_DEF_FORMAT_FRONT_PROG,
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 			fs_ptr->fs_spec
+ #elif defined(__SOLARIS__)
+ 			vfs_ptr->vfs_special
+@@ -260,7 +263,7 @@ void EDVDevicesListLoadFromSystem(
+ 
+ 		/* File system type */
+ 		dev->fs_type = EDVDeviceGetFSTypeFromName(
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 		    fs_ptr->fs_vfstype
+ #elif defined(__SOLARIS__)
+ 		    vfs_ptr->vfs_fstype
+@@ -270,7 +273,7 @@ void EDVDevicesListLoadFromSystem(
+ 		);
+ 
+ 		/* Mount path */
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 		if(fs_ptr->fs_file != NULL)
+ #elif defined(__SOLARIS__)
+ 		if(vfs_ptr->vfs_mountp != NULL)
+@@ -279,7 +282,7 @@ void EDVDevicesListLoadFromSystem(
+ #endif
+ 		{
+ 		    g_free(dev->mount_path);
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 		    dev->mount_path = STRDUP(fs_ptr->fs_file);
+ #elif defined(__SOLARIS__)
+ 		    dev->mount_path = STRDUP(vfs_ptr->vfs_mountp);
+@@ -291,7 +294,7 @@ void EDVDevicesListLoadFromSystem(
+ 	    }
+ 
+ 	    /* Get the next mount entry */
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 	    fs_ptr = getfsent();
+ #elif defined(__SOLARIS__)
+ 	    mtback = getmntent(fp, vfs_ptr);
+@@ -302,7 +305,7 @@ void EDVDevicesListLoadFromSystem(
+ 
+ 
+ 	/* Close the system's devices list file */
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 	endfsent();
+ 	FClose(fp);
+ #elif defined(__SOLARIS__)
+@@ -331,6 +334,9 @@ void EDVDeviceUpdateMountStateFromSystem
+ #if defined(__FreeBSD__)
+ 	gint i, mntsize;
+ 	struct statfs *mt_buf;
++#elif defined(__NetBSD__)
++	gint i, mntsize;
++	struct statvfs *mt_buf;
+ #elif defined(__SOLARIS__)
+ 	gint mtback;
+ 	struct mnttab *mt_ptr;
+@@ -348,7 +354,7 @@ void EDVDeviceUpdateMountStateFromSystem
+ 	    return;
+ 
+ 	/* Open the system's mounted devices list file */
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 	fp = (FILE *)1;		/* Mark the mount info file as opened */
+ #elif defined(__SOLARIS__)
+ 	fp = FOpen("/etc/mnttab", "rb");
+@@ -359,7 +365,7 @@ void EDVDeviceUpdateMountStateFromSystem
+ 	    return;
+ 
+ 	/* Begin reading the system's mounted devices list file */
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+         if((mntsize = getmntinfo(&mt_buf, MNT_NOWAIT)) == 0)
+             return;
+         i = mntsize - 1;
+@@ -377,7 +383,7 @@ void EDVDeviceUpdateMountStateFromSystem
+ 	     * Device's device path
+ 	     */
+ 	    device_path = (const gchar *)(
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+                 mt_buf[i].f_mntfromname
+ #elif defined(__SOLARIS__)
+ 		mt_ptr->mnt_special
+@@ -399,7 +405,7 @@ void EDVDeviceUpdateMountStateFromSystem
+ 	     * this Device's mounted path
+ 	     */
+ 	    mount_path = (const gchar *)(
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+                 mt_buf[i].f_mntonname
+ #elif defined(__SOLARIS__)
+ 		mt_ptr->mnt_mountp
+@@ -418,7 +424,7 @@ void EDVDeviceUpdateMountStateFromSystem
+ 	    }
+ 
+ 	    /* Get the next mount entry */
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 	    i--;
+ #elif defined(__SOLARIS__)
+ 	    mtback = getmntent(fp, mt_ptr);
+@@ -428,7 +434,7 @@ void EDVDeviceUpdateMountStateFromSystem
+ 	}
+ 
+ 	/* Close the system's mounted devices list file */
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__)||defined(__NetBSD__)
+ 	fp = NULL;	/* Mark the mount info file as closed */
+ #elif defined(__SOLARIS__)
+ 	FClose(fp);

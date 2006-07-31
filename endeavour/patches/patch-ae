@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/07/31 22:15:44 dhowland Exp $
+
+--- endeavour2/fb.c.orig	2006-01-31 02:40:46.000000000 -0500
++++ endeavour2/fb.c
+@@ -14,7 +14,7 @@
+ # if defined(__SOLARIS__)
+ #  include <sys/mnttab.h>
+ #  include <sys/vfstab.h>
+-# elif defined(__FreeBSD__)
++# elif defined(__FreeBSD__)||defined(__NetBSD__)
+ /* #  include <mntent.h> */
+ # else
+ #  include <mntent.h>
+@@ -831,7 +831,7 @@ static gchar **FileBrowserGetDrivePaths(
+ 	    *n = strc;
+ 
+ 	return(strv);
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__)||defined(__NetBSD__)
+ 	/* FreeBSD */
+ 	if(n != NULL )
+ 	    *n = 0;
