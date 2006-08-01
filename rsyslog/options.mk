@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/11/21 20:50:32 bartoszkuzma Exp $
+# $NetBSD: options.mk,v 1.2 2006/08/01 09:42:40 bartoszkuzma Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rsyslog
 PKG_SUPPORTED_OPTIONS=	largefile mysql
@@ -12,8 +12,8 @@ FEATURE_LARGEFILE=		# empty
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
-CFLAGS+=			-DWITH_DB
-LDFLAGS+=			-lmysqlclient -L/usr/pkg/lib/mysql
-FEATURE_DB=			# empty
 .include "../../mk/mysql.buildlink3.mk"
+CFLAGS+=			-DWITH_DB
+LDFLAGS+=			-lmysqlclient
+FEATURE_DB=			# empty
 .endif
