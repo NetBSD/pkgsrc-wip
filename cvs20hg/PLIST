@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/01 21:24:29 scode Exp $
+${PYSITELIB}/cvstohg/CVStools.py
+${PYSITELIB}/cvstohg/CVStools.pyc
+${PYSITELIB}/cvstohg/CVStools.pyo
+${PYSITELIB}/cvstohg/__init__.py
+${PYSITELIB}/cvstohg/__init__.pyc
+${PYSITELIB}/cvstohg/__init__.pyo
+${PYSITELIB}/cvstohg/chast.py
+${PYSITELIB}/cvstohg/chast.pyc
+${PYSITELIB}/cvstohg/chast.pyo
+${PYSITELIB}/cvstohg/cvs20hg.py
+${PYSITELIB}/cvstohg/cvs20hg.pyc
+${PYSITELIB}/cvstohg/cvs20hg.pyo
+@dirrm ${PYSITELIB}/cvstohg

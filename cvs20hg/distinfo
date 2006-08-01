@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/08/01 21:24:29 scode Exp $
+
+SHA1 (cvs20hg-0.0.0_20060723.tar.gz) = 81d80540dea05775e78fe13cbe2145bc6fc21321
+RMD160 (cvs20hg-0.0.0_20060723.tar.gz) = b37a68d323b8eea91551321a6749f8b43774a916
+Size (cvs20hg-0.0.0_20060723.tar.gz) = 33091 bytes
