@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:33 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/08/01 19:19:09 bartoszkuzma Exp $
 bin/granule
 share/applications/granule.desktop
 share/granule/granule
@@ -21,9 +21,12 @@ share/granule/pixmaps/text_center.png
 share/granule/pixmaps/text_color_background.png
 share/granule/pixmaps/text_color_foreground.png
 share/granule/pixmaps/text_color_hilight.png
+share/granule/pixmaps/text_copy.png
+share/granule/pixmaps/text_cut.png
 share/granule/pixmaps/text_italic.png
 share/granule/pixmaps/text_left.png
 share/granule/pixmaps/text_monospaced.png
+share/granule/pixmaps/text_paste.png
 share/granule/pixmaps/text_remove_tags.png
 share/granule/pixmaps/text_right.png
 share/granule/pixmaps/text_small.png
@@ -34,10 +37,11 @@ share/granule/pixmaps/thumbdown.xpm
 share/granule/pixmaps/thumbup.xpm
 share/granule/xml/cardfile.dtd
 share/granule/xml/granule.dtd
-share/locale/bg/LC_MESSAGES/granule.mo
-share/locale/de_DE/LC_MESSAGES/granule.mo
-share/locale/ja_JP/LC_MESSAGES/granule.mo
-share/locale/ru/LC_MESSAGES/granule.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/granule.mo
+${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/granule.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/granule.mo
+${PKGLOCALEDIR}/locale/ja_JP/LC_MESSAGES/granule.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/granule.mo
 share/pixmaps/granule.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/granule/xml
