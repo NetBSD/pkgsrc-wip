@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/21 18:34:59 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/01 19:16:20 bartoszkuzma Exp $
 #
 
 DISTNAME=		libassa-3.4.1
@@ -9,6 +9,8 @@ MAINTAINER=		bartosz@atom.eu.org
 HOMEPAGE=		http://libassa.sourceforge.net/
 COMMENT=		Networking library based on ACP
 
+USE_LANGUAGES+=		c++
+USE_LANGUAGES+=		fortran
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/assa-3.4.pc.in
