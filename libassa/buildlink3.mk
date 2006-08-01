@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/05/23 17:48:26 bartoszkuzma Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/08/01 19:15:40 bartoszkuzma Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBASSA_BUILDLINK3_MK:=	${LIBASSA_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibassa}
 BUILDLINK_PACKAGES+=	libassa
 
 .if !empty(LIBASSA_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libassa+=	libassa>=3.4.1
+BUILDLINK_API_DEPENDS.libassa+=	libassa>=3.4.1
 BUILDLINK_PKGSRCDIR.libassa?=	../../wip/libassa
 .endif	# LIBASSA_BUILDLINK3_MK
 
