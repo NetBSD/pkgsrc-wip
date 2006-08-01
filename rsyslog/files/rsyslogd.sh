@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: rsyslogd.sh,v 1.1.1.1 2005/11/21 20:50:32 bartoszkuzma Exp $
+# $NetBSD: rsyslogd.sh,v 1.2 2006/08/01 09:41:31 bartoszkuzma Exp $
 # NetBSD: syslogd,v 1.15 2004/10/11 13:29:52 lukem Exp
 #
 
