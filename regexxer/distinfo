@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:40 rillig Exp $
+$NetBSD: distinfo,v 1.3 2006/08/01 20:52:01 dhowland Exp $
 
-SHA1 (regexxer-0.4.tar.gz) = 1cbe062c1c5d7bec6b863d9c522e0968108dfac6
-RMD160 (regexxer-0.4.tar.gz) = df2aa3333427865c277ffaf5f10d00f616eb6e2b
-Size (regexxer-0.4.tar.gz) = 154047 bytes
-SHA1 (patch-aa) = d5973d5d4bb2db4c9aa2aafa219882a9de549ddd
+SHA1 (regexxer-0.8.tar.gz) = 4c6b4b2962287c4a43261fe13a4b7b8b31eea211
+RMD160 (regexxer-0.8.tar.gz) = ebe0fb12ad5943ddef2376af099ea0d052b077d3
+Size (regexxer-0.8.tar.gz) = 270342 bytes
