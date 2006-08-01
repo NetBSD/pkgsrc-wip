@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/08/01 20:52:01 dhowland Exp $
+# $NetBSD: Makefile,v 1.12 2006/08/01 22:02:12 dhowland Exp $
 #
 
 DISTNAME=	regexxer-0.8
@@ -13,6 +13,9 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
+
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
 
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
