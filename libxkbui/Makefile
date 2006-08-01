@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/21 04:18:46 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/01 23:37:16 jeremy-c-reed Exp $
 #
 
-DISTNAME=		libxkbui-1.0.1
+DISTNAME=		libxkbui-1.0.2
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
