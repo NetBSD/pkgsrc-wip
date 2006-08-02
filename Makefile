@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2309 2006/08/01 21:26:07 scode Exp $
+# $Id: Makefile,v 1.2310 2006/08/02 23:56:48 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -154,8 +154,8 @@ SUBDIR+=	cream
 SUBDIR+=	cryptcat
 SUBDIR+=	csoap
 SUBDIR+=	csup
-SUBDIR+=	cvs20hg
 SUBDIR+=	cvs-syncmail
+SUBDIR+=	cvs20hg
 SUBDIR+=	cvsproxy
 SUBDIR+=	cvstrac
 SUBDIR+=	cvsutils
@@ -1089,8 +1089,8 @@ SUBDIR+=	py-orm
 SUBDIR+=	py-osd
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-plucker
-SUBDIR+=	py-rlcompleter2
 SUBDIR+=	py-rcsparse
+SUBDIR+=	py-rlcompleter2
 SUBDIR+=	py-scapy
 SUBDIR+=	py-scipy_distutils
 SUBDIR+=	py-shtoom
