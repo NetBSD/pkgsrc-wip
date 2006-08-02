@@ -1,4 +1,0 @@
-Xarchiver is a GTK+ 2 frontend for manipulating ZIP, RAR, tar, bzip2,
-gzip, and RPM files. It allows you to create archives and add, extract,
-and delete files from them. Password protected archives in the RAR and
-ZIP formats are supported.
