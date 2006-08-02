@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/14 01:27:58 jlamwww Exp $
+# $NetBSD: Makefile,v 1.19 2006/08/02 18:40:00 dhowland Exp $
 #
 
 DISTNAME=		BNR2beta-0.14.7
@@ -13,13 +13,17 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://www.bnr2.org/
 COMMENT=		USENET bulk binary downloader (X11)
 
-CONFLICTS+=		BNR2beta-0.*
-
 NO_BUILD=		yes
 
 ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-*-i386
 
 WRKSRC=			${WRKDIR}/BNR2
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-install
+SUBST_MESSAGE.prefix=	Fixing prefixes.
+SUBST_FILES.prefix=	bnr2
+SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
 
 .include "../../emulators/suse_linux/Makefile.application"
 
@@ -27,6 +31,9 @@ WRKSRC=			${WRKDIR}/BNR2
 DEPENDS+=		suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=		suse_libjpeg-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_libjpeg
 .endif
+
+post-extract:
+	${CP} ${FILESDIR}/bnr2 ${WRKSRC}/bnr2
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/bnr2
@@ -44,8 +51,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/BNR-readme.txt ${PREFIX}/share/doc/bnr2/
 	${INSTALL_DATA} ${WRKSRC}/bin/Themes/Luna/* ${PREFIX}/share/themes/bnr2/Luna/
 	${INSTALL_DATA} ${WRKSRC}/bin/Themes/Silver/* ${PREFIX}/share/themes/bnr2/Silver/
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/bnr2 >${WRKDIR}/bnr2
-	${INSTALL_SCRIPT} ${WRKDIR}/bnr2 ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/bnr2 ${PREFIX}/bin/
 	${LN} -s -f ${PREFIX}/share/themes/bnr2/ ${PREFIX}/lib/bnr2/Themes
 
 .include "../../mk/bsd.pkg.mk"
