@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/06/01 16:01:39 ghen Exp $
+$NetBSD: distinfo,v 1.4 2006/08/03 16:35:53 ghen Exp $
 
-SHA1 (firefox/releases/bonecho/alpha3/linux-i686/en-US/bonecho-alpha3.tar.gz) = c1b80511b98172fdd0760e43589df6cadc321389
-RMD160 (firefox/releases/bonecho/alpha3/linux-i686/en-US/bonecho-alpha3.tar.gz) = 9f5bf24c5c8863086315a45599f7102f56050447
-Size (firefox/releases/bonecho/alpha3/linux-i686/en-US/bonecho-alpha3.tar.gz) = 9272248 bytes
+SHA1 (firefox/releases/2.0b1/linux-i686/en-US/firefox-2.0b1.tar.gz) = ae3b4ff36e7ade39c9eb2ce78d7064e8ae19ab94
+RMD160 (firefox/releases/2.0b1/linux-i686/en-US/firefox-2.0b1.tar.gz) = 805551b7e90562237f55c73c16fbe9a90f100052
+Size (firefox/releases/2.0b1/linux-i686/en-US/firefox-2.0b1.tar.gz) = 9380258 bytes

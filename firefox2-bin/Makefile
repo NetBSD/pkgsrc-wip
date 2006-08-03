@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2006/06/01 16:01:39 ghen Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/03 16:35:53 ghen Exp $
 
 MOZILLA=		firefox
 MOZ_EXTRA=		2
-ALPHA=			alpha3
-MOZ_VER=		2.0${ALPHA}
-MOZ_DISTVER=		${MOZ_VER}
+MOZ_VER=		2.0${SUB_VER}
+SUB_VER=		beta1
+MOZ_DISTVER=		${MOZ_VER:S/beta/b/}
 
 HOMEPAGE=		http://www.mozilla.org/projects/bonecho/
 COMMENT=		Lightweight gecko-based web browser (binary package)
