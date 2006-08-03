@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2315 2006/08/03 17:13:23 tvierling Exp $
+# $Id: Makefile,v 1.2316 2006/08/03 21:18:31 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -480,7 +480,6 @@ SUBDIR+=	kapital
 SUBDIR+=	kawa
 SUBDIR+=	kbproto
 SUBDIR+=	kchmviewer
-SUBDIR+=	kid3
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	klamav
