@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2005/10/07 12:35:00 lsed Exp $
+$NetBSD: patch-aa,v 1.2 2006/08/03 14:47:27 lsed Exp $
 
---- configure.orig	2005-08-16 01:22:51.000000000 +0000
-+++ configure
-@@ -6942,6 +6942,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+--- configure.orig	2006-01-04 16:53:37.000000000 +0100
++++ configure	2006-08-03 16:18:04.000000000 +0200
+@@ -7084,6 +7084,7 @@
  /* end confdefs.h.  */
  
  	    #include <stdio.h>
@@ -10,13 +10,3 @@ $NetBSD: patch-aa,v 1.1 2005/10/07 12:35:00 lsed Exp $
  	    #include <sys/socket.h>
  	    #include <net/if.h>
  	    #include <net/if_media.h>
-@@ -8515,9 +8516,6 @@ if test "$wantopto" != "yes"; then
- 	CXXFLAGS=`echo $CXXFLAGS | sed -e 's/-O.//g'`
- fi
- 
--LIBS="$LIBS -lstdc++"
--
--
- 
- sharedatadir=$datadir
- sharedatadir=`(
