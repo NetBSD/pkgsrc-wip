@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2313 2006/08/03 13:47:22 ghen Exp $
+# $Id: Makefile,v 1.2314 2006/08/03 15:18:50 lsed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -483,7 +483,6 @@ SUBDIR+=	kbproto
 SUBDIR+=	kchmviewer
 SUBDIR+=	kid3
 SUBDIR+=	kino
-SUBDIR+=	kismet
 SUBDIR+=	kissme
 SUBDIR+=	klamav
 SUBDIR+=	korelib
