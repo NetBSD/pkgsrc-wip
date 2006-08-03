@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2310 2006/08/02 23:56:48 kristerw Exp $
+# $Id: Makefile,v 1.2311 2006/08/03 00:09:19 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -230,6 +230,7 @@ SUBDIR+=	emboss-topo
 SUBDIR+=	embryo
 SUBDIR+=	emelfm2
 SUBDIR+=	emirror
+SUBDIR+=	endeavour
 SUBDIR+=	engine-pkcs11
 SUBDIR+=	ent
 SUBDIR+=	epplets
@@ -549,6 +550,7 @@ SUBDIR+=	libgrass5
 SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libhttpd
+SUBDIR+=	libjudy
 SUBDIR+=	liblbxutil
 SUBDIR+=	liblingoteach
 SUBDIR+=	libmusclecard
@@ -1178,6 +1180,7 @@ SUBDIR+=	ruby-dpklib
 SUBDIR+=	ruby-mecab
 SUBDIR+=	ruby-misen
 SUBDIR+=	runit
+SUBDIR+=	samhain
 SUBDIR+=	sara
 SUBDIR+=	sarg
 SUBDIR+=	sawfish-gtk2
@@ -1384,6 +1387,7 @@ SUBDIR+=	vm-pop3d
 SUBDIR+=	vm-tools
 SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
+SUBDIR+=	vncselector
 SUBDIR+=	vreng
 SUBDIR+=	wang-ttf
 SUBDIR+=	wavpack
@@ -1468,6 +1472,7 @@ SUBDIR+=	xplore
 SUBDIR+=	xrdb
 SUBDIR+=	xrdp
 SUBDIR+=	xscribble-fs
+SUBDIR+=	xset
 SUBDIR+=	xsm
 SUBDIR+=	xspread
 SUBDIR+=	xtrace
