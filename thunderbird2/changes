@@ -1,0 +1,16 @@
+Changes in this Development Milestone
+
+There is a lot in Thunderbird 2 Alpha 1 that we invite you to play around with
+and give us feedback on:
+
+* Message Tags
+* Folder Views including favorite folders
+* Improved New Mail Notification Alerts
+* New Windows installer based on Nullsoft Scriptable Install System
+* Find As You Type in the message pane
+* New combined and improved Add-ons manager for extensions and themes
+* Updates to the extension system to provide enhanced security and to allow for
+  easier localization of extensions
+
+Rumbling Edge has a more detailed list of notable bug fixes:
+http://weblogs.mozillazine.org/rumblingedge/archives/2006/05/2-0alpha1.html
