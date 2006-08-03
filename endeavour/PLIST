@@ -1,38 +1,50 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/31 22:15:44 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/03 22:06:30 dhowland Exp $
 bin/endeavour2
 bin/endeavour2-config
 lib/endeavour2/LICENSE
 lib/endeavour2/README
-lib/endeavour2/bin/confirmation_dialog
+lib/endeavour2/bin/confirmation-dialog
 lib/endeavour2/bin/download.front
+lib/endeavour2/bin/file-selector
 lib/endeavour2/bin/format.front
 lib/endeavour2/bin/fsck.front
 lib/endeavour2/bin/hedit
-lib/endeavour2/bin/style_editor
+lib/endeavour2/bin/notify
+lib/endeavour2/bin/notify-added
+lib/endeavour2/bin/notify-modified
+lib/endeavour2/bin/notify-removed
+lib/endeavour2/bin/notify-renamed
+lib/endeavour2/bin/open
+lib/endeavour2/bin/properties
+lib/endeavour2/bin/purge
+lib/endeavour2/bin/recover
+lib/endeavour2/bin/recycle
+lib/endeavour2/bin/rls
+lib/endeavour2/bin/style-editor
 lib/endeavour2/bin/sysinfo
 lib/endeavour2/bin/ziptool.front
 lib/endeavour2/include/cfg.h
-lib/endeavour2/include/edvcfglist.h
-lib/endeavour2/include/edvcontext.h
-lib/endeavour2/include/edvdate.h
-lib/endeavour2/include/edvdevices.h
-lib/endeavour2/include/edvdevicesfio.h
-lib/endeavour2/include/edvdevicesget.h
-lib/endeavour2/include/edvget.h
-lib/endeavour2/include/edvhelp.h
-lib/endeavour2/include/edvhistory.h
-lib/endeavour2/include/edvmessage.h
-lib/endeavour2/include/edvmimetypes.h
-lib/endeavour2/include/edvmimetypesfio.h
-lib/endeavour2/include/edvmimetypesget.h
-lib/endeavour2/include/edvmimetypesinstall.h
-lib/endeavour2/include/edvmount.h
-lib/endeavour2/include/edvnotify.h
-lib/endeavour2/include/edvopen.h
-lib/endeavour2/include/edvrecycle.h
-lib/endeavour2/include/edvtypes.h
-lib/endeavour2/include/edvutils.h
-lib/endeavour2/include/edvwindow.h
+lib/endeavour2/include/edv_cfg_list.h
+lib/endeavour2/include/edv_context.h
+lib/endeavour2/include/edv_date.h
+lib/endeavour2/include/edv_device.h
+lib/endeavour2/include/edv_device_get.h
+lib/endeavour2/include/edv_device_mount.h
+lib/endeavour2/include/edv_devices_list.h
+lib/endeavour2/include/edv_get.h
+lib/endeavour2/include/edv_help.h
+lib/endeavour2/include/edv_history.h
+lib/endeavour2/include/edv_message.h
+lib/endeavour2/include/edv_mime_type.h
+lib/endeavour2/include/edv_mime_type_get.h
+lib/endeavour2/include/edv_mime_type_install.h
+lib/endeavour2/include/edv_mime_types_list.h
+lib/endeavour2/include/edv_notify.h
+lib/endeavour2/include/edv_open.h
+lib/endeavour2/include/edv_recycle.h
+lib/endeavour2/include/edv_types.h
+lib/endeavour2/include/edv_utils.h
+lib/endeavour2/include/edv_window.h
 lib/endeavour2/include/endeavour2.h
 lib/endeavour2/lib/libendeavour2.so
 lib/libendeavour2.so
@@ -73,6 +85,7 @@ share/endeavour2/help/icon_bulb.gif
 share/endeavour2/help/icon_device_block_32x32.gif
 share/endeavour2/help/icon_device_character_32x32.gif
 share/endeavour2/help/icon_edit_16x16.gif
+share/endeavour2/help/icon_executable_32x32.gif
 share/endeavour2/help/icon_file.gif
 share/endeavour2/help/icon_file_32x32.gif
 share/endeavour2/help/icon_folder_closed.gif
@@ -83,6 +96,8 @@ share/endeavour2/help/icon_insecure_16x16.gif
 share/endeavour2/help/icon_link.gif
 share/endeavour2/help/icon_link_32x32.gif
 share/endeavour2/help/icon_link_broken.gif
+share/endeavour2/help/icon_object_error_32x32.gif
+share/endeavour2/help/icon_object_unknown_32x32.gif
 share/endeavour2/help/icon_package.gif
 share/endeavour2/help/icon_pipe_32x32.gif
 share/endeavour2/help/icon_purge_16x16.gif
@@ -104,6 +119,7 @@ share/endeavour2/help/mime_types.html
 share/endeavour2/help/mount_bar.gif
 share/endeavour2/help/objects.html
 share/endeavour2/help/presentation_mode_diagram.gif
+share/endeavour2/help/properties_dialog.gif
 share/endeavour2/help/recycle_bin.html
 share/endeavour2/help/recycle_bin_diagram.gif
 share/endeavour2/help/recycle_bin_icon.gif
@@ -122,8 +138,10 @@ share/endeavour2/icons/icon_about_20x20.xpm
 share/endeavour2/icons/icon_acrobat_20x20.xpm
 share/endeavour2/icons/icon_acrobat_32x32.xpm
 share/endeavour2/icons/icon_acrobat_48x48.xpm
+share/endeavour2/icons/icon_aid_20x20.xpm
 share/endeavour2/icons/icon_archive_add_20x20.xpm
 share/endeavour2/icons/icon_archive_add_32x32.xpm
+share/endeavour2/icons/icon_archive_check_20x20.xpm
 share/endeavour2/icons/icon_archive_extract_20x20.xpm
 share/endeavour2/icons/icon_archive_extract_32x32.xpm
 share/endeavour2/icons/icon_battery_20x20.xpm
@@ -221,6 +239,9 @@ share/endeavour2/icons/icon_file_3d_20x20.xpm
 share/endeavour2/icons/icon_file_3d_32x32.xpm
 share/endeavour2/icons/icon_file_3d_48x48.xpm
 share/endeavour2/icons/icon_file_48x48.xpm
+share/endeavour2/icons/icon_file_backup_20x20.xpm
+share/endeavour2/icons/icon_file_backup_32x32.xpm
+share/endeavour2/icons/icon_file_backup_48x48.xpm
 share/endeavour2/icons/icon_file_badimage_20x20.xpm
 share/endeavour2/icons/icon_file_badimage_32x32.xpm
 share/endeavour2/icons/icon_file_badimage_48x48.xpm
@@ -270,6 +291,9 @@ share/endeavour2/icons/icon_file_music_48x48.xpm
 share/endeavour2/icons/icon_file_pdf_20x20.xpm
 share/endeavour2/icons/icon_file_pdf_32x32.xpm
 share/endeavour2/icons/icon_file_pdf_48x48.xpm
+share/endeavour2/icons/icon_file_script_20x20.xpm
+share/endeavour2/icons/icon_file_script_32x32.xpm
+share/endeavour2/icons/icon_file_script_48x48.xpm
 share/endeavour2/icons/icon_file_sound_20x20.xpm
 share/endeavour2/icons/icon_file_sound_32x32.xpm
 share/endeavour2/icons/icon_file_sound_48x48.xpm
@@ -412,6 +436,9 @@ share/endeavour2/icons/icon_not_mounted_20x20.xpm
 share/endeavour2/icons/icon_object_20x20.xpm
 share/endeavour2/icons/icon_object_32x32.xpm
 share/endeavour2/icons/icon_object_48x48.xpm
+share/endeavour2/icons/icon_object_error_20x20.xpm
+share/endeavour2/icons/icon_object_error_32x32.xpm
+share/endeavour2/icons/icon_object_error_48x48.xpm
 share/endeavour2/icons/icon_object_misc_20x20.xpm
 share/endeavour2/icons/icon_object_misc_32x32.xpm
 share/endeavour2/icons/icon_object_misc_48x48.xpm
@@ -526,6 +553,10 @@ share/endeavour2/icons/icon_user_48x48.xpm
 share/endeavour2/icons/icon_vertex_20x20.xpm
 share/endeavour2/icons/icon_vertex_32x32.xpm
 share/endeavour2/icons/icon_vertex_48x48.xpm
+share/endeavour2/icons/icon_video_16x16.xpm
+share/endeavour2/icons/icon_video_20x20.xpm
+share/endeavour2/icons/icon_video_32x32.xpm
+share/endeavour2/icons/icon_video_48x48.xpm
 share/endeavour2/icons/icon_view_20x20.xpm
 share/endeavour2/icons/icon_view_32x32.xpm
 share/endeavour2/icons/icon_view_48x48.xpm
@@ -548,6 +579,7 @@ share/icons/endeavour2_archiver.xpm
 share/icons/endeavour2_image_browser.xpm
 share/icons/endeavour2_trash.xpm
 share/icons/endeavour2_trash_empty.xpm
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/endeavour2/images
 @dirrm share/endeavour2/icons
 @dirrm share/endeavour2/help

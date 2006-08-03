@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/07/31 22:15:44 dhowland Exp $
+$NetBSD: patch-ab,v 1.2 2006/08/03 22:06:30 dhowland Exp $
 
---- endeavour2/makefile_append.ini.orig	2006-01-31 02:40:51.000000000 -0500
+--- endeavour2/makefile_append.ini.orig	2006-07-01 20:44:23.000000000 -0400
 +++ endeavour2/makefile_append.ini
 @@ -1,7 +1,7 @@
  # Appended stuff starts here
@@ -11,14 +11,3 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/07/31 22:15:44 dhowland Exp $
  
  # C++ flags:
  CPPFLAGS = -D__cplusplus -Dc_plusplus
-@@ -50,8 +50,8 @@ config:
- modules: $(OBJ_C) $(OBJ_CPP)
- 	@echo -n "Linking modules..."
- 	@$(CPP) $(OBJ_C) $(OBJ_CPP) -o $(BIN) $(LIBS) $(LIB_DIRS)
--	@echo -n "   "
--	@-$(LS) $(LSFLAGS) $(BIN)
-+	#@echo -n "   "
-+	#@-$(LS) $(LSFLAGS) $(BIN)
- 
- prebuild:
- 	@echo "Building program \"$(BIN)\"..."
