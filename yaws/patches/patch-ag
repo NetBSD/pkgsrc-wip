@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2006/08/03 11:13:41 bartoszkuzma Exp $
+
+--- Makefile.orig	2006-06-07 23:09:36.000000000 +0200
++++ Makefile
+@@ -21,7 +21,7 @@ install:	all 
+ 	@echo "** executables went into      ${prefix}/bin"		
+ 	@echo "** library files went into    ${prefix}/lib/yaws"
+ 	@echo "** var files went into        ${VARDIR}"
+-	@echo "** default docroot went into  ${VARDIR}/yaws/www"
++	@echo "** default docroot went into  ${SHAREDIR}/www"
+ 	@echo
+ 	@echo "--------------------------------"
+ 

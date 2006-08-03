@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/08/03 11:13:41 bartoszkuzma Exp $
+
+--- www/shopingcart/Makefile.orig	2006-04-27 21:25:10.000000000 +0200
++++ www/shopingcart/Makefile
+@@ -5,7 +5,7 @@ all:	shopcart.beam
+ debug:
+ 
+ install:	all
+-	cp shopcart.beam $(DESTDIR)/$(VARDIR)/yaws/ebin
++	cp shopcart.beam $(DESTDIR)/$(SHAREDIR)/ebin
+ 
+ clean:
+ 	$(RM) shopcart.beam

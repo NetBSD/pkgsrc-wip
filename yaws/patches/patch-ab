@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/08/03 11:13:41 bartoszkuzma Exp $
+
+--- scripts/Makefile.orig	2006-06-11 16:47:38.000000000 +0200
++++ scripts/Makefile
+@@ -41,7 +41,7 @@ yaws.conf:
+ 		./Subst %logdir% $(VARDIR)/log/yaws | \
+ 		./Subst %host% `hostname` | \
+ 		./Subst %port% 80 | \
+-		./Subst %docroot% $(VARDIR)/yaws/www | \
++		./Subst %docroot% $(SHAREDIR)/www | \
+ 		./Subst %certdir% $(ETCDIR) | \
+ 		./Subst %sslport% 443 > yaws.conf
+ 
+@@ -54,12 +54,12 @@ install:	.install
+ 	-rm -rf /tmp/yaws 2> /dev/null
+ 	sh ./Install $(PREFIX) $(DESTDIR) "$(ERL)" \
+ 		"$(WERL)" $(ETCDIR)/ $(VARDIR)/ $(ERLBINDIR)/
+-	@cp ../ssl/yaws-cert.pem $(DESTDIR)/$(ETCDIR)
+-	@cp ../ssl/yaws-key.pem $(DESTDIR)/$(ETCDIR)
+-	@if [ -f $(DESTDIR)/$(ETCDIR)/yaws.conf ]; \
+-		then echo "Keeping old config file "; \
+-		cp yaws.conf $(DESTDIR)/$(ETCDIR)/yaws.conf.template; \
+-	else \
+-		echo "Installing $(DESTDIR)/$(ETCDIR)/yaws.conf"; \
+-		cp yaws.conf $(DESTDIR)/$(ETCDIR)/yaws.conf; \
+-	fi
++	#@cp ../ssl/yaws-cert.pem $(DESTDIR)/$(ETCDIR)
++	#@cp ../ssl/yaws-key.pem $(DESTDIR)/$(ETCDIR)
++	#@if [ -f $(DESTDIR)/$(ETCDIR)/yaws.conf ]; \
++	#	then echo "Keeping old config file "; \
++	#	cp yaws.conf $(DESTDIR)/$(ETCDIR)/yaws.conf.template; \
++	#else \
++	#	echo "Installing $(DESTDIR)/$(ETCDIR)/yaws.conf"; \
++	#	cp yaws.conf $(DESTDIR)/$(ETCDIR)/yaws.conf; \
++	#fi

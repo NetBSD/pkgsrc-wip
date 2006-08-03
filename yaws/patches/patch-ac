@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/08/03 11:13:41 bartoszkuzma Exp $
+
+--- include.mk.in.orig	2006-05-31 00:11:09.000000000 +0200
++++ include.mk.in
+@@ -5,6 +5,7 @@ PREFIX             = @prefix@
+ prefix             = ${PREFIX}
+ ETCDIR             = @sysconfdir@
+ VARDIR             = @localstatedir@
++SHAREDIR           = ${PREFIX}/share/yaws
+ 
+ ifeq ($(DESTDIR),)
+  DESTDIR=/

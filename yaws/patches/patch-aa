@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/08/03 11:13:41 bartoszkuzma Exp $
+
+--- scripts/Install.orig	2006-06-11 16:47:38.000000000 +0200
++++ scripts/Install
+@@ -33,6 +33,8 @@ chmod +x ${destdir}/${prefix}/bin/yaws
+ install -d ${destdir}/${prefix}/lib/yaws/examples/ebin
+ install -d ${destdir}/${prefix}/lib/yaws/examples/include
+ 
++exit
++
+ if [ -f /etc/gentoo-release ]; then
+     install -d ${destdir}/${etcdir}/init.d/
+     install -d ${destdir}/${etcdir}/conf.d/
+@@ -53,7 +55,7 @@ elif [ -f /etc/suseservers ]; then
+     chmod +x ${destdir}/${etcdir}/init.d/yaws
+     install -d ${destdir}/${vardir}/run/yaws
+     chmod a+rwx ${destdir}/${vardir}/run/yaws
+-elif [ "`uname -s`" = "Darwin" && `id -u` = 0 ]; then
++elif [ "`uname -s`" = "Darwin" -a `id -u` = 0 ]; then
+      startupdir="/Library/StartupItems/Yaws"
+      if [ ! -d ${startupdir} && ]; then
+        mkdir ${startupdir};

@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/08/03 11:13:41 bartoszkuzma Exp $
+
+--- src/Makefile.orig	2006-06-07 22:07:32.000000000 +0200
++++ src/Makefile
+@@ -79,14 +79,14 @@ install: all docsinstall
+ 	install -d $(DESTDIR)/$(PREFIX)/lib/yaws/examples/include
+ 	install -d $(DESTDIR)/$(PREFIX)/lib/yaws/ebin
+ 	install -d $(DESTDIR)/$(VARDIR)/log/yaws
+-	install -d $(DESTDIR)/$(VARDIR)/yaws/ebin
++	install -d $(DESTDIR)/$(SHAREDIR)/ebin
+ 	cp -r ../include/* $(DESTDIR)/$(PREFIX)/lib/yaws/
+ 	(cd ..; tar cf - ebin ) | (cd $(DESTDIR)/$(PREFIX)/lib/yaws; tar xf - )
+ 	(cd ..; tar cf - include ) | (cd $(DESTDIR)/$(PREFIX)/lib/yaws; tar xf - )
+ 
+ docsinstall:
+-	install -d $(DESTDIR)/$(VARDIR)/yaws/www
+-	(cd ..; tar cf - www ) | (cd $(DESTDIR)/$(VARDIR)/yaws; tar xf - )
++	install -d $(DESTDIR)/$(SHAREDIR)/www
++	(cd ..; tar cf - www ) | (cd $(DESTDIR)/$(SHAREDIR); tar xf - )
+ 
+ 
+ 

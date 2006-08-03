@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/08/03 11:13:41 bartoszkuzma Exp $
+
+--- www/code/Makefile.orig	2006-04-27 21:25:10.000000000 +0200
++++ www/code/Makefile
+@@ -5,7 +5,7 @@ all:	myappmod.beam
+ debug:
+ 
+ install:	all
+-	cp myappmod.beam $(DESTDIR)/$(VARDIR)/yaws/ebin
++	cp myappmod.beam $(DESTDIR)/$(SHAREDIR)/ebin
+ 
+ clean:
+ 	$(RM) myappmod.beam
