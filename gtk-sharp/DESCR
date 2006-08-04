@@ -1,3 +1,0 @@
-Gtk# is a .NET language binding for the GTK+ toolkit and assorted GNOME
-libraries.  Gtk# is free software, licensed under the GNU LGPL.  The target
-is the 2.0 platform, and no plans are currently in place to backport to 1.2.

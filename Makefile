@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2317 2006/08/04 00:48:34 kristerw Exp $
+# $Id: Makefile,v 1.2318 2006/08/04 19:54:17 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -360,7 +360,6 @@ SUBDIR+=	gtick
 SUBDIR+=	gtk-engines-thinice
 SUBDIR+=	gtk-gnutella-current
 SUBDIR+=	gtk-server
-SUBDIR+=	gtk-sharp
 SUBDIR+=	gtk-theme-switch
 SUBDIR+=	gtk2-engines-dwerg
 SUBDIR+=	gtk2-engines-flat
