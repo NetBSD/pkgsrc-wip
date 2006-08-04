@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2316 2006/08/03 21:18:31 thomasklausner Exp $
+# $Id: Makefile,v 1.2317 2006/08/04 00:48:34 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1408,7 +1408,6 @@ SUBDIR+=	worker
 SUBDIR+=	xace
 SUBDIR+=	xanim-codecs
 SUBDIR+=	xaralx-bin
-SUBDIR+=	xarchiver
 SUBDIR+=	xauth
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
