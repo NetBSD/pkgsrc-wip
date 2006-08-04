@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2006/07/14 10:52:26 thomasklausner Exp $
+$NetBSD: distinfo,v 1.9 2006/08/04 07:28:40 marttikuparinen Exp $
 
-SHA1 (xfce4-panel-4.3.90.2.tar.bz2) = c4f9d63e153852c4b938437c968b3e2ce3865b50
-RMD160 (xfce4-panel-4.3.90.2.tar.bz2) = 4995c4a13da13299c18dc77eb5cb2e46e3165917
-Size (xfce4-panel-4.3.90.2.tar.bz2) = 698010 bytes
+SHA1 (xfce4-panel-4.3.90.2svn-22628.tar.bz2) = c326be2f56054664330e3600cf3c863e67faaef9
+RMD160 (xfce4-panel-4.3.90.2svn-22628.tar.bz2) = ea9c42ccb9e2ee34bb6bbb2003a93b1a43184f42
+Size (xfce4-panel-4.3.90.2svn-22628.tar.bz2) = 634406 bytes

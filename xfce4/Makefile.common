@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.14 2006/07/14 10:52:26 thomasklausner Exp $
+# $NetBSD: Makefile.common,v 1.15 2006/08/04 07:28:40 marttikuparinen Exp $
 
-MASTER_SITES=		http://www.xfce.org/archive/xfce-4.3.90.2/src/
+MASTER_SITES=		http://www.xfce.org/archive/xfce-4.3.90.2/src/ \
+			http://www.xfce.org/archive/test/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		martti@NetBSD.org

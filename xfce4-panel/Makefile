@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2006/07/14 10:52:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2006/08/04 07:28:40 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
+XFCE4_VERSION=		4.3.90.2svn-22628
+
 DISTNAME=		xfce4-panel-${XFCE4_VERSION}
+PKGNAME=		xfce4-panel-${XFCE4_VERSION:S/svn-/./}
 CATEGORIES=		x11
 COMMENT=		Xfce panel
 
