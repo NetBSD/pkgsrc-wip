@@ -1,0 +1,66 @@
+$NetBSD: patch-ak,v 1.1 2006/08/05 18:43:02 gschwarz Exp $
+
+--- tac_plus.conf.5.in.orig	2006-07-05 21:00:13.000000000 +0200
++++ tac_plus.conf.5.in	2006-08-05 20:33:02.000000000 +0200
+@@ -55,7 +55,7 @@
+ .B acl
+ If compiled with acl support (--enable-acls), Access Control Lists can be
+ defined to limit user's (or group's) login and/or enable access by daemon
+-client IP address or hostname.  An acl is referenced by it's name, but must
++client IP address or hostname.  An acl is referenced by its name, but must
+ be defined before it can be referenced.
+ .sp
+ The acl is a series of permit or deny statements applied to the source IP
+@@ -69,8 +69,8 @@
+         <permission> = <regex>
+ 
+         # deny 66.1.255/24, allow all else in 66.1/16
+-        deny = ^66\.1\.255\.
+-        permit = ^66\.1\.
++        deny = ^66\\.1\\.255\\.
++        permit = ^66\\.1\\.
+         # implicit deny (ie: anything else)
+     }
+ .fi
+@@ -456,7 +456,7 @@
+ applies to normal logins (exec).  arap, chap, pap, and opap (outbound
+ PAP) service passwords may be defined separately.
+ .sp
+-NOTE: a global user password can not be used for outbound PAP. This is
++NOTE: a global user password cannot be used for outbound PAP. This is
+ because outbound PAP is implemented by sending the password from the
+ daemon to the client. This is a security issue if the <key> is ever
+ compromised.
+@@ -514,7 +514,7 @@
+ since username will not be known yet).
+ .sp
+ This request is really done to find the address for dumb PPP (or SLIP)
+-clients who can not do address negotiation. Instead, they expect you to
++clients who cannot do address negotiation. Instead, they expect you to
+ tell them what address to use before PPP starts up, via a text message.
+ .TP
+ 2)
+@@ -576,8 +576,8 @@
+     user=fred {
+         cmd = telnet {
+             # permit specified telnets
+-            permit 131\.108\.13\.[0-9]+
+-            permit 128\.[0-9]+\.12\.3
++            permit ^131\\.108\\.13\\.[0-9]+$
++            permit ^128\\.[0-9]+\\.12\\.3$
+         }
+         cmd = show {
+             # permit show commands
+@@ -1527,9 +1527,9 @@
+     # All access routers are in 192.168/16, but except for
+     # 192.168.0.1 all backbone router are in 198.168.0/24.
+     # deny access to the backbone routers.
+-    permit = ^192\.168\.0\.1$
+-    deny   = ^192\.168\.0\.
+-    permit = ^192\.168\.
++    permit = ^192\\.168\\.0\\.1$
++    deny   = ^192\\.168\\.0\\.
++    permit = ^192\\.168\\.
+ }
+ 
+ group = no_backbone {

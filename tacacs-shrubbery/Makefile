@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/23 18:48:42 gschwarz Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/05 18:43:02 gschwarz Exp $
 #
 
 DISTNAME=	tacacs+-F4.0.4.11
@@ -15,8 +15,9 @@ COMMENT=	Cisco AAA protocol (tacacs+) daemon (Shrubbery Networks version)
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl
 
-CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
-CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
+CONFIGURE_ARGS+=	--with-acctfile=${VARBASE:Q}/log/tac_plus.acct
+CONFIGURE_ARGS+=	--with-logfile=${VARBASE:Q}/log/tac_plus.log
+CONFIGURE_ARGS+=	--with-pidfile=${VARBASE:Q}/run/tac_plus.pid
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,6 +38,4 @@ do-install:
 	${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/users_guide ${PREFIX}/share/doc/tacacs
 
-.include "../../security/skey/buildlink3.mk"
-.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

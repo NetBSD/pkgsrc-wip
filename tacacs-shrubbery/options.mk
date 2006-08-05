@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2006/07/08 20:50:15 gschwarz Exp $
+# $NetBSD: options.mk,v 1.2 2006/08/05 18:43:02 gschwarz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tacacs-shrubbery
-PKG_SUPPORTED_OPTIONS=	acls-support drop-root-privileges
-PKG_SUGGESTED_OPTIONS=	acls-support drop-root-privileges
+PKG_SUPPORTED_OPTIONS=	acls-support drop-root-privileges tcpwrappers skey
+PKG_SUGGESTED_OPTIONS=	acls-support drop-root-privileges tcpwrappers skey
 
 .include "../../mk/bsd.options.mk"
 
@@ -25,4 +25,18 @@ PKG_GROUPS=	${TACACS_GROUP}
 PKG_USERS=	${TACACS_USER}:${TACACS_GROUP}
 CONFIGURE_ARGS+=	--with-userid=${TACACS_USER:Q}
 CONFIGURE_ARGS+=	--with-groupid=${TACACS_GROUP:Q}
+.endif
+
+.if !empty(PKG_OPTIONS:Mtcpwrappers)
+CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
+. include "../../security/tcp_wrappers/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-libwrap
+.endif
+
+.if !empty(PKG_OPTIONS:Mskey)
+CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
+. include "../../security/skey/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-skey
 .endif
