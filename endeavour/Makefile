@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/08/03 22:06:30 dhowland Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/05 16:38:24 dhowland Exp $
 #
 
 DISTNAME=	endeavour-2.6.1
@@ -10,9 +10,15 @@ MAINTAINER=	dhowland@users.sourceforge.net
 HOMEPAGE=	http://wolfpack.twu.net/Endeavour2/
 COMMENT=	File manager and image browser
 
+DEPENDS+=	e2fsprogs>=1.32:../../sysutils/e2fsprogs
+DEPENDS+=	unarj>=2.43:../../archivers/unarj
+DEPENDS+=	lha>=114:../../archivers/lha
+DEPENDS+=	unrar>=3.0:../../archivers/unrar
+DEPENDS+=	wget>=1.10:../../net/wget
+
 USE_DIRS+=	xdg-1.1
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake bash
+USE_TOOLS+=	gmake bash gzip:run tar:run
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
@@ -42,6 +48,8 @@ SUBST_SED.inst=		-e "s|/usr|${PREFIX}|g"
 do-configure:
 	cd ${WRKSRC} && ./configure UNIX --prefix=${PREFIX}
 
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/libzip/buildlink3.mk"
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
