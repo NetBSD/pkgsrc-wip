@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2322 2006/08/07 09:04:21 kristerw Exp $
+# $Id: Makefile,v 1.2323 2006/08/07 09:06:13 koifren Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -486,6 +486,7 @@ SUBDIR+=	korelib
 SUBDIR+=	kpanta
 SUBDIR+=	kplayer
 SUBDIR+=	ksambaplugin
+SUBDIR+=	ktorrent
 SUBDIR+=	kvirc
 SUBDIR+=	kxmleditor
 SUBDIR+=	kylix-openedition
