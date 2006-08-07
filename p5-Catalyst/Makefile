@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/05/05 16:59:46 absd Exp $
+# $NetBSD: Makefile,v 1.16 2006/08/07 09:21:53 kristerw Exp $
 
 DISTNAME=       Catalyst-5.6902
 PKGNAME=	p5-${DISTNAME}
@@ -33,7 +33,7 @@ DEPENDS+=	p5-Tree-Simple>=1.15:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../wip/p5-Tree-Simple-VisitorFactory
 DEPENDS+=	p5-URI>=1.35:../../www/p5-URI
 DEPENDS+=	p5-File-Copy-Recursive>=0:../../wip/p5-File-Copy-Recursive
-DEPENDS+=	p5-Module-Install>=0.54:../../wip/p5-Module-Install
+DEPENDS+=	p5-Module-Install>=0.54:../../devel/p5-Module-Install
 DEPENDS+=	p5-YAML>=0.55:../../textproc/p5-YAML
 BUILD_DEPENDS+=	p5-Test-MockObject>=0:../../wip/p5-Test-MockObject
 BUILD_DEPENDS+=	p5-Test-NoWarnings>=0.082:../../devel/p5-Test-NoWarnings
