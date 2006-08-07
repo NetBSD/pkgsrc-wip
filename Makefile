@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2319 2006/08/07 08:52:23 kristerw Exp $
+# $Id: Makefile,v 1.2320 2006/08/07 08:56:04 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -837,7 +837,6 @@ SUBDIR+=	p5-DBD-ODBC
 SUBDIR+=	p5-DBIx-Class
 SUBDIR+=	p5-DBIx-Class-Loader
 SUBDIR+=	p5-DBIx-Class-Schema-Loader
-SUBDIR+=	p5-DB_File-Lock
 SUBDIR+=	p5-Data-Page
 SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Data-Visitor
