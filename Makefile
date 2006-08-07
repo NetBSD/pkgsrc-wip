@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2323 2006/08/07 09:06:13 koifren Exp $
+# $Id: Makefile,v 1.2324 2006/08/07 09:13:19 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -892,7 +892,6 @@ SUBDIR+=	p5-MasonX-Apache2Handler
 SUBDIR+=	p5-Math-FixedPrecision
 SUBDIR+=	p5-Math-IntervalSearch
 SUBDIR+=	p5-Module-Find
-SUBDIR+=	p5-Module-Install
 SUBDIR+=	p5-Module-Pluggable-Fast
 SUBDIR+=	p5-Module-Pluggable-Ordered
 SUBDIR+=	p5-NNTPClient
