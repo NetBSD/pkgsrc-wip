@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/08/08 23:20:27 splitscreen Exp $
+
+SHA1 (pydb-1.17.tar.gz) = 0605391ff98771d22d9560eb0c804833512161a9
+RMD160 (pydb-1.17.tar.gz) = f026126ee3ebd35ec352f00372e92108742b104b
+Size (pydb-1.17.tar.gz) = 461450 bytes

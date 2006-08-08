@@ -1,0 +1,5 @@
+This is an expanded version of the Python debugger, pdb.py
+
+Largely we're trying to follow gdb's command set unless there's good
+reason. So new or modified command names generally refer to the
+function they have in gdb.
