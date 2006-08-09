@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2006/05/02 14:18:22 ondratu Exp $
+$NetBSD: patch-aa,v 1.2 2006/08/09 22:56:17 ondratu Exp $
 
---- configure.orig	2006-05-02 15:46:24.000000000 +0200
+--- configure.orig	2006-05-07 16:21:30.000000000 +0200
 +++ configure
-@@ -22010,7 +22010,7 @@ _ACEOF
+@@ -21722,7 +21722,7 @@ _ACEOF
  
  
  

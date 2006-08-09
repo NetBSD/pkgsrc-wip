@@ -1,5 +1,0 @@
-Problem with heimdal, on witch this package is depend by another packages.
-Simple solution is delete link to fnmatch.h from work directory of package
-after make configure like this:
-
-rm work/.buildlink/include/krb5/fnmatch.h
