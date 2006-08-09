@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/08/09 20:57:09 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/08/09 20:58:18 schnoebe Exp $
 ${TRANSPORTDIR}/.svn/entries
 ${TRANSPORTDIR}/src/avatar.py
 ${TRANSPORTDIR}/src/baseproto/__init__.py
@@ -53,4 +53,5 @@ share/examples/rc.d/pymsnt
 @dirrm ${TRANSPORTDIR}/src/tlib
 @dirrm ${TRANSPORTDIR}/src
 @dirrm ${TRANSPORTDIR}/data
+@dirrm ${TRANSPORTDIR}/.svn
 @dirrm ${TRANSPORTDIR}
