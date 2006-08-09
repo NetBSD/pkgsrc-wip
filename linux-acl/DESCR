@@ -1,0 +1,7 @@
+Access Control Lists (acl package)
+
+The acl package contains the libacl, acl, and acl-devel sub-packages. The
+libacl package contains the libacl loadable library, and is required by all
+other packages. The acl package contails the getfacl and setfacl utilities.
+The acl-devel package contains additional files required for developing
+access control list programs.
