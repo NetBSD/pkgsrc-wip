@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/14 10:43:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/09 17:13:59 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q} \
 REQD_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
 
 USE_TOOLS+=		iceauth:run
+USE_TOOLS+=		intltool
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/xfce4-mcs-plugins/buildlink3.mk"
