@@ -1,14 +1,12 @@
-# $gd
+# $NetBSD: Makefile,v 1.3 2006/08/09 10:23:14 dauphing Exp $
 
 #will became 5.0.0 when ready
-DISTNAME=	ubit-5.0.0
+DISTNAME=	ubit-5.0.4
 PKGREVISION=	1
 CATEGORIES=	x11
 
-#MASTER_SITES will became ftp.enst.fr when ready.
-#MASTER_SITES=	ftp://ftp.enst.fr/ubit/
-MASTER_SITES=	http://perso.enst.fr/~dauphin/
-DISTFILES=	${DISTNAME}.5.tar.gz
+MASTER_SITES=	ftp://ftp.enst.fr/pub/ubit/
+DISTFILES=	${DISTNAME}.tar.gz
 #EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	dauphin@enst.fr
