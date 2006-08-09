@@ -1,11 +1,10 @@
-# $gd
+# $NetBSD: Makefile,v 1.2 2006/08/09 13:46:54 dauphing Exp $
 
-#will became 5.0.0 when ready
-DISTNAME=	vreng-6.6.2
+DISTNAME=	vreng-6.7.4
 PKGREVISION=	1
 CATEGORIES=	x11
 
-MASTER_SITES=	ftp://ftp.enst.fr/vreng/
+MASTER_SITES=	ftp://ftp.enst.fr/pub/vreng/
 DISTFILES=	${DISTNAME}.tar.gz
 #EXTRACT_SUFX=	.tar.gz
 
