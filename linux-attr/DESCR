@@ -1,0 +1,7 @@
+Extended attributes (attr package)
+
+The extended attribute package contains the libattr, attr, and attr-devel
+sub-packages. The libattr package contains the libattr loadable library,
+and is required by all other packages. The attr package contails the getfattr
+and setfattr utilities. The attr-devel package contains additional files
+required for developing extended attribute programs.
