@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2325 2006/08/08 23:23:27 splitscreen Exp $
+# $Id: Makefile,v 1.2326 2006/08/09 23:12:10 ondratu Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -590,6 +590,8 @@ SUBDIR+=	lingoteach-ui
 SUBDIR+=	links-hacked
 SUBDIR+=	links1
 SUBDIR+=	linphone
+SUBDIR+=	linux-acl
+SUBDIR+=	linux-attr
 SUBDIR+=	linux-ch
 SUBDIR+=	linux-chprofessional
 SUBDIR+=	linux-hotplug
