@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/26 09:30:19 larnor Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/10 12:38:49 absd Exp $
 #
 
 DISTNAME=		meanwhile-1.0.2
@@ -18,6 +18,7 @@ CONFIGURE_ARGS+=	--enable-doxygen=no
 
 PKGCONFIG_OVERRIDE+=	meanwhile.pc.in
 
+USE_LANGUAGES+=		c
 USE_LANGUAGES+=		c++
 USE_LANGUAGES+=		fortran
 

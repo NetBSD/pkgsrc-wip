@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/18 19:44:08 absd Exp $
+# $NetBSD: Makefile,v 1.5 2006/08/10 12:38:49 absd Exp $
 #
 
 DISTNAME=		gobby-0.3.0
@@ -12,7 +12,7 @@ COMMENT=		Collaborative text editor
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 
 .include "options.mk"
 
