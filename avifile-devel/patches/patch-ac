@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/03/23 11:11:21 obache Exp $
---- lib/common/String.cpp.orig	2003-05-24 21:53:24.000000000 +0900
-+++ lib/common/String.cpp	2005-02-16 22:21:31.000000000 +0900
+$NetBSD: patch-ac,v 1.2 2006/08/10 05:05:31 obache Exp $
+--- lib/common/String.cpp.orig	2003-05-24 12:53:24.000000000 +0000
++++ lib/common/String.cpp
 @@ -3,6 +3,7 @@
  #include <ctype.h>
  #include <stdio.h>
@@ -9,7 +9,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2005/03/23 11:11:21 obache Exp $
  
  AVM_BEGIN_NAMESPACE;
  
-@@ -170,7 +171,7 @@
+@@ -170,7 +171,7 @@ int string::sprintf(const char* fmt, ...
  #else
      // a bit poor hack but should be sufficient
      // eventually write full implementation

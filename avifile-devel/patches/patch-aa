@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/03/23 11:11:21 obache Exp $
---- lib/aviplay/SunAudioRenderer.cpp.orig	2003-04-22 20:30:31.000000000 +0900
-+++ lib/aviplay/SunAudioRenderer.cpp	2005-02-16 22:06:58.000000000 +0900
-@@ -14,10 +14,15 @@
+$NetBSD: patch-aa,v 1.2 2006/08/10 05:05:31 obache Exp $
+--- lib/aviplay/SunAudioRenderer.cpp.orig	2003-04-22 11:30:31.000000000 +0000
++++ lib/aviplay/SunAudioRenderer.cpp
+@@ -14,10 +14,15 @@ SunAudioRenderer implementation
  #include "utils.h"
  #include "avm_output.h"
  
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/03/23 11:11:21 obache Exp $
  #include <errno.h>
  #include <fcntl.h>
  #include <stdio.h>
-@@ -210,7 +215,11 @@
+@@ -210,7 +215,11 @@ int SunAudioRenderer::reset()
  	 * 'paused' state, else the AUDIO_DRAIN ioctl hangs
  	 * forever.
  	 */

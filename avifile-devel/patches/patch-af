@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2006/08/10 05:05:31 obache Exp $
+
+--- configure.orig	2006-03-06 09:11:32.000000000 +0000
++++ configure
+@@ -4198,7 +4198,7 @@ case "$target" in
+   i?86*)
+     if test x$ac_cv_c_compiler_gnu = xyes ; then
+ 	case $GCC_VERSION in
+-	    2*) GCCOPT=cpu ;;
++	    2.* | 3.[0-3].*) GCCOPT=cpu ;;
+ 	    *) GCCOPT=tune ;;
+ 	esac
+         DEFAULT_FLAGS="-m$GCCOPT=$DEFAULT_FLAGS -march=$DEFAULT_FLAGS -ffast-math -fomit-frame-pointer"

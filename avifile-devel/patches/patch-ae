@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2005/03/23 11:11:21 obache Exp $
---- plugins/libac3pass/ac3-iec958.c.orig	2004-02-20 18:21:13.000000000 +0900
-+++ plugins/libac3pass/ac3-iec958.c	2005-02-16 22:38:29.000000000 +0900
+$NetBSD: patch-ae,v 1.2 2006/08/10 05:05:31 obache Exp $
+--- plugins/libac3pass/ac3-iec958.c.orig	2004-02-20 09:21:13.000000000 +0000
++++ plugins/libac3pass/ac3-iec958.c
 @@ -21,7 +21,10 @@
  #include <stdlib.h>
  #include <unistd.h>

@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.2 2005/04/26 10:54:13 obache Exp $
---- lib/video/renderer.cpp.orig	2005-02-15 21:33:39.000000000 +0900
-+++ lib/video/renderer.cpp	2005-04-26 18:12:07.000000000 +0900
-@@ -1430,6 +1430,7 @@
+$NetBSD: patch-ad,v 1.3 2006/08/10 05:05:31 obache Exp $
+--- lib/video/renderer.cpp.orig	2006-03-06 09:15:00.000000000 +0000
++++ lib/video/renderer.cpp
+@@ -1430,6 +1430,7 @@ public:
  	m_iFontHeight = 0;
  
  	//font = XLoadQueryFont(dpy, lf);
@@ -9,7 +9,7 @@ $NetBSD: patch-ad,v 1.2 2005/04/26 10:54:13 obache Exp $
  #ifdef HAVE_LIBXFT
  	xftfont = 0; // only truetype fonts
  	if (XftDefaultHasRender(dpy) == 1 && lf)
-@@ -1510,7 +1511,6 @@
+@@ -1510,7 +1511,6 @@ public:
  #endif /* HAVE_ICONV */
  	}
  

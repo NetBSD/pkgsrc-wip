@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/03/23 11:11:21 obache Exp $
---- lib/aviread/AsfFileInputStream.cpp.orig	2003-05-28 00:23:20.000000000 +0900
-+++ lib/aviread/AsfFileInputStream.cpp	2005-02-16 22:14:32.000000000 +0900
+$NetBSD: patch-ab,v 1.2 2006/08/10 05:05:31 obache Exp $
+--- lib/aviread/AsfFileInputStream.cpp.orig	2005-06-23 07:31:54.000000000 +0000
++++ lib/aviread/AsfFileInputStream.cpp
 @@ -18,6 +18,10 @@
  #define O_LARGEFILE 0
  #endif

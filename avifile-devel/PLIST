@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/23 11:11:21 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/10 05:05:31 obache Exp $
 bin/avibench
 bin/avicat
 bin/avifile-config
@@ -61,7 +61,8 @@ ${XVID_COMMENT}lib/avifile/xvid4.la
 lib/libaviplay.la
 lib/libaviplayavcodec.la
 lib/libaviplayavformat.la
-${VIDIX_COMMENT}lib/libaviplaydha.la
+lib/libaviplayavutil.la
+lib/libaviplaydha.la
 ${VIDIX_COMMENT}lib/libaviplayvidix.la
 ${QT_COMMENT}lib/libqavm.la
 lib/pkgconfig/avifile.pc
