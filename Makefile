@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2327 2006/08/10 05:31:25 marttikuparinen Exp $
+# $Id: Makefile,v 1.2328 2006/08/10 05:33:21 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1368,7 +1368,6 @@ SUBDIR+=	urlgfe
 SUBDIR+=	uschedule
 SUBDIR+=	ussp-push
 SUBDIR+=	util-linux
-SUBDIR+=	valgrind
 SUBDIR+=	valknut
 SUBDIR+=	vcdgear
 SUBDIR+=	vche
