@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2326 2006/08/09 23:12:10 ondratu Exp $
+# $Id: Makefile,v 1.2327 2006/08/10 05:31:25 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -576,7 +576,6 @@ SUBDIR+=	libvc
 SUBDIR+=	libvg
 SUBDIR+=	libvncserver
 SUBDIR+=	libwbxml2-patched
-SUBDIR+=	libxen
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
 SUBDIR+=	libxfce4util
@@ -1381,7 +1380,6 @@ SUBDIR+=	virus
 SUBDIR+=	vixie-cron
 SUBDIR+=	vkeybd
 SUBDIR+=	vm-pop3d
-SUBDIR+=	vm-tools
 SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
 SUBDIR+=	vncselector
