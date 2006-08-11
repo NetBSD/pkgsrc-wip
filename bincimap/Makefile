@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/23 18:06:34 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/11 18:15:52 bartoszkuzma Exp $
 #
 
 DISTNAME=		bincimap-1.2.13final
@@ -13,6 +13,7 @@ COMMENT=		Modular IMAP server for Maildir
 
 DEPENDS+=		checkpassword-[0-9]*:../../sysutils/checkpassword
 
+USE_LANGUAGES+=		c++
 GNU_CONFIGURE=		yes
 
 EGDIR=			${PREFIX}/share/examples/bincimap
