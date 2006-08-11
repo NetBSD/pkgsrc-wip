@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.12 2006/07/16 16:08:39 shattered Exp $
+# $NetBSD: Makefile,v 1.13 2006/08/11 21:17:58 ondratu Exp $
 #
 
-DISTNAME=	planner-0.13
-PKGREVISION=            1
+DISTNAME=		planner-0.14
 
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/planner/0.13/}
-EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc@blackmouse.biz
-HOMEPAGE=	http://developer.imendio.com/wiki/Planner
-COMMENT=	GTK2 project management tool
+CATEGORIES=		devel
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/planner/0.14/}
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		pkgsrc@blackmouse.biz
+HOMEPAGE=		http://live.gnome.org/Planner
+COMMENT=		GTK2 project management tool
 
 BUILD_DEPENDS=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
-#USE_TOOLS+=		autoconf
+USE_LANGUAGES+=		c c++
+
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	libplanner-1.pc.in
@@ -24,14 +25,15 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ARGS+=	--enable-python-plugin
-CONFIGURE_ARGS+=	--enable-timetable
-CONFIGURE_ARGS+=	--disable-dotnet
-#CONFIGURE_ARGS+=	--enable-database=yes
+CONFIGURE_ARGS+=	--enable-gtk-doc
+CONFIGURE_ARGS+=	--enable-database=no	# this was still not correct (in code, not only in configure)
+
+CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
+MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
+
+GCONF2_SCHEMAS+=	planner.schemas
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
-
-#pre-configure:
-#	@cd ${WRKSRC} && autoheader && autoconf
 
 #.include "../../databases/libgda/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
@@ -48,6 +50,7 @@ PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
