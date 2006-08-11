@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/06/11 18:19:40 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/08/11 17:09:40 adrian_p Exp $
 lib/anope/anoperc
 lib/anope/languages/cat
 lib/anope/languages/de
@@ -100,7 +100,6 @@ lib/anope/modules/ns_info.so
 lib/anope/modules/ns_list.so
 lib/anope/modules/ns_logout.so
 lib/anope/modules/ns_maxemail.so
-lib/anope/modules/ns_noop.so
 lib/anope/modules/ns_recover.so
 lib/anope/modules/ns_register.so
 lib/anope/modules/ns_release.so
@@ -122,7 +121,6 @@ lib/anope/modules/os_ignore.so
 lib/anope/modules/os_info.so
 lib/anope/modules/os_jupe.so
 lib/anope/modules/os_kick.so
-lib/anope/modules/os_killclones.so
 lib/anope/modules/os_logonnews.so
 lib/anope/modules/os_mode.so
 lib/anope/modules/os_modinfo.so
@@ -130,6 +128,7 @@ lib/anope/modules/os_modlist.so
 lib/anope/modules/os_modload.so
 lib/anope/modules/os_modunload.so
 lib/anope/modules/os_noop.so
+lib/anope/modules/ns_noop_convert.so
 lib/anope/modules/os_oline.so
 lib/anope/modules/os_oper.so
 lib/anope/modules/os_opernews.so
@@ -150,7 +149,8 @@ lib/anope/modules/os_szline.so
 lib/anope/modules/os_umode.so
 lib/anope/modules/os_update.so
 lib/anope/modules/os_userlist.so
-lib/anope/modules/plexus.so
+lib/anope/modules/plexus2.so
+lib/anope/modules/plexus3.so
 lib/anope/modules/ptlink.so
 lib/anope/modules/rageircd.so
 lib/anope/modules/ratbox.so

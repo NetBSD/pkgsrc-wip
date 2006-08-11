@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.8 2006/06/11 18:03:15 adrian_p Exp $
+$NetBSD: distinfo,v 1.9 2006/08/11 17:09:40 adrian_p Exp $
 
-SHA1 (anope-1.7.14.tar.gz) = 5544ed93550f53a65b0b3f38a51ce63af5345ea2
-RMD160 (anope-1.7.14.tar.gz) = 20b7d732b753fed6af6171fc3c68071ec7b69ad2
-Size (anope-1.7.14.tar.gz) = 1452474 bytes
+SHA1 (anope-1.7.15.tar.gz) = 2878e31a27e7d88b13c1d0644a3bba641d7a59ee
+RMD160 (anope-1.7.15.tar.gz) = 1a1e87abc272b0b891ab2bfc84d78e39d22b3c78
+Size (anope-1.7.15.tar.gz) = 1463100 bytes
 SHA1 (patch-aa) = 3a5dcfd4029a4a6f55a3b39d34e706502ecfe05c
-SHA1 (patch-ab) = 164dedbcb6173f0286a0db6c4e0b96b6e1b7d1a5
