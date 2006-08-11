@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/08/11 08:22:43 ghen Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/11 08:49:11 ghen Exp $
 
 .include "../../wip/pdns2/Makefile.common"
 
@@ -12,7 +12,7 @@ CONFIGURE_ARGS+=	--with-modules=""
 CONFIGURE_ARGS+=	--disable-pdns_server
 CONFIGURE_ARGS+=	--disable-recursor
 CONFIGURE_ARGS+=	--with-mysql-lib=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
-CONFIGURE_ARGS+=	--with-mysql-include=${BUILDLINK_PREFIX.mysql-client}/include/mysql
+CONFIGURE_ARGS+=	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql
 
 # dirty hack to avoid build man pages
 post-patch:
