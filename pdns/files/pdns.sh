@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pdns.sh,v 1.2 2003/07/14 17:55:31 xtraeme Exp $
+# $NetBSD: pdns.sh,v 1.3 2006/08/11 14:25:40 ghen Exp $
 #
 
 # PROVIDE: pdns
@@ -11,6 +11,7 @@
 name="pdns"
 rcvar=$name
 command="@PREFIX@/sbin/pdns_server"
+command_args="--daemon=yes"
 pidfile=/var/run/${name}.pid
 required_files="@PKG_SYSCONFDIR@/pdns.conf"
 
