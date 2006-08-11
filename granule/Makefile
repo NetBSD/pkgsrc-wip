@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/01 19:19:09 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/11 22:06:08 bartoszkuzma Exp $
 #
 
 DISTNAME=		granule-1.2.1
@@ -16,6 +16,7 @@ USE_LANGUAGES+=		c++
 USE_LANGUAGES+=		fortran
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		perl
 
 GNU_CONFIGURE=		yes
 
