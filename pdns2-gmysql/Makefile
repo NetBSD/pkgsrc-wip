@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/11 08:49:11 ghen Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/11 09:50:46 ghen Exp $
 
 .include "../../wip/pdns2/Makefile.common"
 
@@ -14,11 +14,7 @@ CONFIGURE_ARGS+=	--disable-recursor
 CONFIGURE_ARGS+=	--with-mysql-lib=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
 CONFIGURE_ARGS+=	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql
 
-# dirty hack to avoid build man pages
-post-patch:
-	${SED} -e "s|^install-man: install-man8|install-man:|" \
-	< ${WRKSRC}/Makefile.in > ${WRKSRC}/Makefile.in.tmp
-	${MV} ${WRKSRC}/Makefile.in.tmp ${WRKSRC}/Makefile.in
+INSTALL_DIRS=		modules
 
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
