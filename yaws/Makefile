@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/03 11:13:40 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/12 08:41:52 bartoszkuzma Exp $
 #
 
 PKGVERSION=		1.63
@@ -16,7 +16,7 @@ SUBST_STAGE.man_path=	post-patch
 SUBST_FILES.man_path=	man/Makefile
 SUBST_SED.man_path=	-e 's,share/,,'
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/yaws
