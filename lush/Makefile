@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/25 12:43:23 dauphing Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/12 22:13:08 thomasklausner Exp $
 DISTNAME=	lush-1.1
 PKGREVISION=	2
 CATEGORIES=	lang
@@ -19,6 +19,9 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--without-bfd
 
 #./configure --without-bfd
+
+post-install:
+	${RM} ${PREFIX}/share/lush/src/*c.orig
 
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
