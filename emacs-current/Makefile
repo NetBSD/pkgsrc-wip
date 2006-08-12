@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/07/21 12:40:02 obache Exp $
+# $NetBSD: Makefile,v 1.7 2006/08/12 04:48:36 obache Exp $
 #
 
 DISTNAME=	emacs-22.0.50
@@ -9,7 +9,7 @@ MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
 
-USE_TOOLS+=	gmake makeinfo
+USE_TOOLS+=	gmake makeinfo pkg-config gzip
 
 BUILD_TARGET=	bootstrap
 
@@ -29,6 +29,12 @@ CONFIGURE_ARGS+=	--with-jpeg
 CONFIGURE_ARGS+=	--with-tiff
 CONFIGURE_ARGS+=	--with-gif
 CONFIGURE_ARGS+=	--with-png
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN:Q}
+
+MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMEOWN:Q} ${GAMEGRP} ${GAMEDIRMODE:Q}
+CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
+CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
