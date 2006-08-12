@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/03 14:12:44 dauphing Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/08/12 22:13:49 thomasklausner Exp $
 bin/lush
 man/man1/lush.1
 share/lush/demos/calculator
@@ -779,7 +779,6 @@ share/lush/sys/psdriver.pro
 share/lush/sys/stdenv.dump
 share/lush/sys/stdenv.lsh
 share/lush/sys/sysenv.lsh
-
 @dirrm share/lush/sys
 @dirrm share/lush/src
 @dirrm share/lush/packages/video4linux/demos
