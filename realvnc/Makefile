@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2006/08/02 15:44:17 dhowland Exp $
+# $NetBSD: Makefile,v 1.11 2006/08/13 04:51:38 dhowland Exp $
 #
 
-DISTNAME=		vnc-4_1_1-unixsrc
-PKGNAME=		realvnc-4.1.1
+DISTNAME=		vnc-4_1_2-unixsrc
+PKGNAME=		realvnc-4.1.2
 CATEGORIES=		net x11
 MASTER_SITES=		http://www.realvnc.com/dist/
-DISTFILES=		vnc-4_1_1-unixsrc.tar.gz \
+DISTFILES=		vnc-4_1_2-unixsrc.tar.gz \
 			X430src-1.tgz \
 			X430src-2.tgz \
 			X430src-3.tgz
@@ -41,9 +41,10 @@ SUBST_SED.pl=		-e "s|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g"
 
 # The distfile listed above is bogus, there is no direct link to download the
 # file, so a special command must be used.  I lifted this from FreeBSD Ports.
+DISTURL=http://www.realvnc.com/cgi-bin/download.cgi?product=free4/src/unix&acceptLicense=1&filever=4.1.2&filetype=tar_gz&haveDetails=1
 pre-fetch:
 .if !exists(${DISTDIR}/${DISTNAME}.tar.gz)
-	cd ${DISTDIR} && ${FETCH_CMD} -o ${DISTNAME}.tar.gz 'http://www.realvnc.com/cgi-bin/download.cgi?product=free4/src/unix&acceptLicense=1&filever=4.1.1&filetype=tar_gz&haveDetails=1'
+	cd ${DISTDIR} && ${FETCH_CMD} -o ${DISTNAME}.tar.gz ${DISTURL:Q}
 .endif
 
 # This is also lifted from FreeBSD Ports.
