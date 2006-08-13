@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/07/02 19:38:50 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/13 23:33:25 thomasklausner Exp $
 #
 
 DISTNAME=		EiCsrc_4.3.0
@@ -8,7 +8,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://rpm.rutgers.edu/repository/solaris/SOURCES/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		adam@monkeybyte.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		C style scripting lang
 
 USE_TOOLS+=		gmake

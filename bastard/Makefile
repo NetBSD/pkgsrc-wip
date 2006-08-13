@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/20 18:51:50 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/08/13 23:33:25 thomasklausner Exp $
 #
 
 DISTNAME=		bastard-0.17-pre
@@ -7,7 +7,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bastard/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		adam@monkeybyte.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bastard.sourceforge.net/
 COMMENT=		Disassembler for ELF x86 binarys
 

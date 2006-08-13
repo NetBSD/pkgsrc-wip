@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:10:25 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/13 23:33:25 thomasklausner Exp $
 #
 
 DISTNAME=	cdpr-1.0.8
@@ -6,7 +6,7 @@ CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cdpr/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	adam@monkeybyte.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.monkeymental.com/
 COMMENT=	Cisco Discovery Protocol Reporter
 

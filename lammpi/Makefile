@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2005/05/24 10:30:30 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/13 23:33:25 thomasklausner Exp $
 #
 
 DISTNAME=	lam-7.0.2
 CATEGORIES=	net
 MASTER_SITES=	http://www.lam-mpi.org/download/files/
 
-MAINTAINER=	adam@monkeybyte.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lam-mpi.org/download/files/
 COMMENT=	Implementation of the Message Passing Interface (MPI) Standard
 

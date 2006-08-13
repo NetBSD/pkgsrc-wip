@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2005/05/24 10:30:27 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/13 23:33:25 thomasklausner Exp $
 #
 
 DISTNAME=		gateway-1.2.1
 CATEGORIES=		net
 MASTER_SITES=		http://www.kannel.org/download/1.2.1/
 
-MAINTAINER=		adam@monkeybyte.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.kannel.org/download/1.2.1/
 COMMENT=		Kannel WAP gateway
 

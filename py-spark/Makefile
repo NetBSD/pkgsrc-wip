@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:15:20 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2006/08/13 23:33:25 thomasklausner Exp $
 #
 
 DISTNAME=		spark-0.6.1
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc
 MASTER_SITES=	http://pages.cpsc.ucalgary.ca/~aycock/spark/
 
-MAINTAINER=		adam@monkeybyte.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pages.cpsc.ucalgary.ca/~aycock/spark/
 COMMENT=		Scanning, Parsing, and Rewriting Kit for Python
 

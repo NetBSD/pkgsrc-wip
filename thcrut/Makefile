@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2003/09/24 12:08:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/13 23:33:25 thomasklausner Exp $
 #
 
 DISTNAME=	thcrut-1.2.4g
 CATEGORIES=	net security
 MASTER_SITES=	http://www.thc.org/releases/
 
-MAINTAINER=	adam@monkeybyte.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.thc.org/
 COMMENT=	Gathers information from local and remote networks
 

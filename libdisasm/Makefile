@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/18 15:25:59 ppostma Exp $
+# $NetBSD: Makefile,v 1.5 2006/08/13 23:33:25 thomasklausner Exp $
 #
 
 DISTNAME=	libdisasm-0.17pre2
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bastard/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	adam@monkeybyte.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bastard.sourceforge.net/
 COMMENT=	Dissassembly library for ELF x86 binarys
 
