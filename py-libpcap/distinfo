@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 06:41:36 rillig Exp $
-
-SHA1 (pylibpcap-0.4.tar.gz) = 9ee5dcc8e5fd5b4f6a903aedec756ae4b4d67b9a
-RMD160 (pylibpcap-0.4.tar.gz) = 6f6b77e630326303636dc2afe80aa0e0aff81873
-Size (pylibpcap-0.4.tar.gz) = 19370 bytes
-SHA1 (patch-aa) = 239986b0457d2ede2cc9d1e428034706244c4331

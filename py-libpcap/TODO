@@ -1,4 +1,0 @@
-These comments are from drochner@ in PR pkg/21730:  this pkg doesn't work
-with libpcap-0.7.2, which is the version currently in the NetBSD tree and in
-pkgsrc/net/libpcap.  It doesn't make sense to add this pkg until pylibpcap
-has caught up.
