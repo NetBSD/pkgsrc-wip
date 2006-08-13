@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/03/12 00:18:30 jtonio Exp $
+$NetBSD: distinfo,v 1.6 2006/08/13 21:33:24 jtonio Exp $
 
-SHA1 (tuareg-mode-1.45.4.tar.bz2) = 4eb3bc31d570c823f7d8e8cb5ee36562f4709b5b
-RMD160 (tuareg-mode-1.45.4.tar.bz2) = e0c691d836312f8e276670f63e82c74369e0bcec
-Size (tuareg-mode-1.45.4.tar.bz2) = 46727 bytes
+SHA1 (tuareg-mode-1.46.1.tar.gz) = 21e9deadc17e7fb386d56876e49ac2dee2925825
+RMD160 (tuareg-mode-1.46.1.tar.gz) = fab188065fd1d378c5839600793a38f0e3ddbdd0
+Size (tuareg-mode-1.46.1.tar.gz) = 55297 bytes
