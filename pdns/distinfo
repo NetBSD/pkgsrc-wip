@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:33 rillig Exp $
-
-SHA1 (pdns-2.9.8.tar.gz) = d71455fbf73a05448725ec73f2f3d4c9c9511cd3
-RMD160 (pdns-2.9.8.tar.gz) = 6db1ad3ed7036d3c2d18fb940cdaea940a923ea6
-Size (pdns-2.9.8.tar.gz) = 607934 bytes
