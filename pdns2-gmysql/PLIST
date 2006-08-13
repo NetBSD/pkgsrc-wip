@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/11 08:52:51 ghen Exp $
-lib/pdns/libgmysqlbackend.a
-lib/pdns/libgmysqlbackend.la
-lib/pdns/libgmysqlbackend.so
-lib/pdns/libgmysqlbackend.so.0
-lib/pdns/libgmysqlbackend.so.0.0
-@dirrm lib/pdns
