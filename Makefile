@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2330 2006/08/12 21:01:47 xtraeme Exp $
+# $Id: Makefile,v 1.2331 2006/08/13 09:47:21 ghen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -959,9 +959,6 @@ SUBDIR+=	pbbuttonsd
 SUBDIR+=	pcsc-lite
 SUBDIR+=	pcsx
 SUBDIR+=	pdb2ldif
-SUBDIR+=	pdns
-SUBDIR+=	pdns2
-SUBDIR+=	pdns2-gmysql
 SUBDIR+=	pdnsd
 SUBDIR+=	pdq
 SUBDIR+=	pekwm-nightly
