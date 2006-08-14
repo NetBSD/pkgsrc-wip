@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2006/07/20 12:39:32 obache Exp $
+$NetBSD: distinfo,v 1.8 2006/08/14 12:01:15 obache Exp $
 
-SHA1 (httpd-2.0.58.tar.bz2) = 697e1674f8efbbe05b9f6c1ba00cd28a37293229
-RMD160 (httpd-2.0.58.tar.bz2) = 2ff44b2254552db908f1defd09e3142527f9bf83
-Size (httpd-2.0.58.tar.bz2) = 4704318 bytes
+SHA1 (httpd-2.0.59.tar.bz2) = 908209cd6e52f700d2a841a25de36e44d469c376
+RMD160 (httpd-2.0.59.tar.bz2) = 78b802354e338798a6978ece8b3568be97542174
+Size (httpd-2.0.59.tar.bz2) = 4743549 bytes
