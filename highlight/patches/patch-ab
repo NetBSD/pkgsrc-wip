@@ -1,19 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2005/11/08 21:17:32 leonardschmidt Exp $
+$NetBSD: patch-ab,v 1.2 2006/08/14 14:33:18 dhowland Exp $
 
---- highlight/makefile.orig	2005-08-04 17:49:31.000000000 +0000
+--- highlight/makefile.orig	2006-06-10 14:28:00.000000000 -0400
 +++ highlight/makefile
-@@ -13,11 +13,11 @@
+@@ -13,7 +13,7 @@
  # Add -DUSE_FN_MATCH to enable better wildcard support with the --batch-recursive option.
  # See "man 3 fnmatch" for details.
  
 -CXX=c++
 +#CXX=c++
  
--CFLAGS := -O2 -Wall -pedantic -DHL_DATA_DIR=\"${HL_DATA_DIR}\"
-+CFLAGS := -DHL_DATA_DIR=\"${HL_DATA_DIR}\"
- 
--LDFLAGS = -L/usr/lib -s
-+LDFLAGS += -L/usr/lib -s
- 
- CXX_COMPILE = ${CXX} ${CFLAGS} -c
- CXX_LINK = ${CXX} ${LDFLAGS} -o highlight ${OBJECTFILES}
+ CFLAGS := -O2 -DHL_DATA_DIR=\"${HL_DATA_DIR}\" 
+ #CFLAGS := -Wall -DHL_DATA_DIR=\"${HL_DATA_DIR}\" -ggdb

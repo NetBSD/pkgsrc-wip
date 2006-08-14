@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/08/02 16:21:30 dhowland Exp $
+# $NetBSD: Makefile,v 1.7 2006/08/14 14:33:18 dhowland Exp $
 #
 
-DISTNAME=		highlight-2.4.3
+DISTNAME=		highlight-2.4.7
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.andre-simon.de/zip/
 
