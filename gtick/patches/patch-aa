@@ -1,16 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2004/01/18 15:11:09 mpasternak Exp $
+$NetBSD: patch-aa,v 1.3 2006/08/14 14:18:55 obache Exp $
 
---- src/dsp.c~	Mon Dec  8 11:45:37 2003
-+++ src/dsp.c	Sun Jan 18 14:42:27 2004
-@@ -44,7 +44,11 @@
- #ifdef __FreeBSD__
- #include <machine/soundcard.h>
- #else
-+#ifdef __NetBSD__
+--- src/dsp.c.orig	2005-11-22 20:09:24.000000000 +0000
++++ src/dsp.c
+@@ -43,6 +43,8 @@
+ /* OSS headers */
+ #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+ #include <sys/soundcard.h>
++#elif defined(__NetBSD__)
 +#include <soundcard.h>
-+#else
+ #else
  #include <linux/soundcard.h>
-+#endif
  #endif
- 
- /* GTK+ headers */

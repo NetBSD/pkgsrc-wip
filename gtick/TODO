@@ -1,3 +1,0 @@
-$Id: TODO,v 1.2 2004/03/04 22:53:10 minskim Exp $
-
-- Use variables defined in mk/ossaudio.buildlink3.mk for /dev/*.

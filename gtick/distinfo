@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/09/28 06:41:20 rillig Exp $
+$NetBSD: distinfo,v 1.5 2006/08/14 14:18:55 obache Exp $
 
-SHA1 (gtick-0.2.13.tar.bz2) = 27ef53f01a14582ef97d592c583ab05fa14ef36c
-RMD160 (gtick-0.2.13.tar.bz2) = b19a7965a01ba297b5c9dd5e3dd25a2fb9742071
-Size (gtick-0.2.13.tar.bz2) = 320233 bytes
-SHA1 (patch-aa) = e8d544600d4b4de31c5895000be9d80d31c2fe3b
-SHA1 (patch-ab) = 89cc39de17119e357e1be9527e05026edeac6239
-SHA1 (patch-ac) = 5b1a64f049a62036d3c701d36b9a800cdb065d37
+SHA1 (gtick-0.3.10.tar.gz) = 4271a5d8266cb03155e6084d58156ccd495826e7
+RMD160 (gtick-0.3.10.tar.gz) = 3b319f016cc25bc663178d7fcd06a9ecab857fb1
+Size (gtick-0.3.10.tar.gz) = 406145 bytes
+SHA1 (patch-aa) = 873f06648fbf07ff11a7e27e30c16df96dd8d219
+SHA1 (patch-ac) = 456800a102c83b009cc737f1b5fac027911008b5
