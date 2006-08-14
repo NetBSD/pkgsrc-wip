@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:34 rillig Exp $
+$NetBSD: distinfo,v 1.3 2006/08/14 22:32:21 thomasklausner Exp $
 
-SHA1 (premake-src-1.2.zip) = 62e1d5a0c3a032ccd0248b0efb17c989b7a78f74
-RMD160 (premake-src-1.2.zip) = 1c4517c455312075c7652ad903f21a1a8cd8ac41
-Size (premake-src-1.2.zip) = 134951 bytes
-SHA1 (patch-aa) = 4b7e5e36fd5a50cb68ac6ff4db6f0a3ee6989621
-SHA1 (patch-ab) = d29981b0e18c13a44e902271c3dda4e8e7f97d0e
+SHA1 (premake-src-3.1.zip) = 831526e5eb54355537687e41c0f694c653f483d6
+RMD160 (premake-src-3.1.zip) = 6520da40154d4eed19dba34461f0cacd086d984c
+Size (premake-src-3.1.zip) = 346110 bytes
