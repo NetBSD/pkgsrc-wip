@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/07/06 20:03:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2006/08/14 22:46:23 thomasklausner Exp $
 #
 
 DISTNAME=		StepMania-3.9-src
@@ -15,7 +15,7 @@ WRKSRC=			${WRKDIR}/StepMania-3.9-src
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tests
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake autoconf
+USE_TOOLS+=		gmake autoconf pkg-config
 
 post-extract:
 	${CP} ${FILESDIR}/arch_bsd.h ${WRKSRC}/src/arch
