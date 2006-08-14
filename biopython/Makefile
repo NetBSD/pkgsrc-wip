@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2006/01/17 09:07:19 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/08/14 00:59:34 splitscreen Exp $
 #
 
 DISTNAME=		biopython-1.40b
 CATEGORIES=		biology
-MASTER_SITES=		http://biopython.org/files/
+MASTER_SITES=		http://biopython.org/DIST/
 
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://biopython.org/
