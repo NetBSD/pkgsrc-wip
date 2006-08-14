@@ -1,3 +1,5 @@
+# $NetBSD: Makefile.common,v 1.7 2006/08/14 14:02:50 dhowland Exp $
+
 CATEGORIES=		biology
 MASTER_SITES=		ftp://emboss.open-bio.org/pub/EMBOSS/old/2.9.0/
 
