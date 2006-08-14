@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/06 05:56:28 dhowland Exp $
+$NetBSD: distinfo,v 1.2 2006/08/14 03:50:12 dhowland Exp $
 
-SHA1 (cb2bib-0.5.0.tar.gz) = 07d07e26b9d9047e7bc4a018ad4225db9410569c
-RMD160 (cb2bib-0.5.0.tar.gz) = 50193f6bffafb2b63ceca61ef6dd333148b59ab1
-Size (cb2bib-0.5.0.tar.gz) = 261066 bytes
-SHA1 (patch-aa) = 3d3b3ffa3ba44f8c6e0dc711bdee3b3acd4929bb
-SHA1 (patch-ab) = 428e29a75d3a784b8fa5024bfd9cae5d210f6d23
+SHA1 (cb2bib-0.6.1.tar.gz) = 75c7637025c1bd90c64cdbb63f196f0e3653b869
+RMD160 (cb2bib-0.6.1.tar.gz) = 0fd904b44d7c3ff5e45a848f92d6e5041cd0ef63
+Size (cb2bib-0.6.1.tar.gz) = 279713 bytes
+SHA1 (patch-aa) = dc25d7e3a419b7309f4324650b3fe9df9bcd1067

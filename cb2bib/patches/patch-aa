@@ -1,16 +1,25 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/11/06 05:56:28 dhowland Exp $
+$NetBSD: patch-aa,v 1.2 2006/08/14 03:50:12 dhowland Exp $
 
---- src/src.pro.orig	2005-10-25 17:50:37.000000000 -0400
+--- src/src.pro.orig	2006-04-23 19:45:53.000000000 -0400
 +++ src/src.pro
-@@ -111,9 +111,9 @@ INSTALLS += cb2bibdata \
+@@ -123,9 +123,9 @@ INSTALLS += cb2bibdata \
              target 
  target.path = /usr/local/bin 
  desktop.files += ../cb2bib.desktop 
 -desktop.path = /usr/share/applications 
-+desktop.path = xxPREFIXxx/share/applications 
++desktop.path = /usr/pkg/share/applications 
  icons.files += ../images/cb2bib.png 
 -icons.path = /usr/share/pixmaps 
-+icons.path = xxPREFIXxx/share/pixmaps 
++icons.path = /usr/pkg/share/pixmaps 
  cb2bibdata.files += ../AUTHORS \
                      ../COPYRIGHT \
                      ../LICENSE \
+@@ -134,7 +134,7 @@ cb2bibdata.files += ../AUTHORS \
+                     ../testPDFImport 
+ cb2bibdata.path = /usr/local/cb2bib 
+ QMAKE_CXXFLAGS_DEBUG += -DCB2BIB_DEBUG
+-TARGET = ../bin/cb2bib
++TARGET = cb2bib
+ disable_cbpoll{
+   HEADERS -= clipboardpoll.h
+   SOURCES -= clipboardpoll.cpp

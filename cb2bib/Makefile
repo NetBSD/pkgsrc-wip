@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/01/17 10:20:45 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/08/14 03:50:12 dhowland Exp $
 #
 
-DISTNAME=		cb2bib-0.5.0
+DISTNAME=		cb2bib-0.6.1
 CATEGORIES=		misc
 MASTER_SITES=		http://www.molspaces.com/dl/progs/
 
@@ -13,6 +13,8 @@ QTPREFIX=		${PREFIX}/qt3
 CONFIGURE_ENV+=		QTDIR=${QTPREFIX:Q}
 
 USE_DIRS+=              xdg-1.2
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
 # needed to find qmake
