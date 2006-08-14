@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/07/02 19:04:34 shattered Exp $
+# $NetBSD: Makefile,v 1.19 2006/08/14 13:06:27 obache Exp $
 #
 
 DISTNAME=		grip-3.2.0
@@ -14,6 +14,7 @@ USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 
 BUILDLINK_TRANSFORM.cdparanoia+=    -e s,/cdparanoia/,/,g
 
