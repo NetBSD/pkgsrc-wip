@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2006/08/14 00:02:30 splitscreen Exp $
+
+--- Makefile.am.orig	2006-07-26 01:51:59.000000000 +0000
++++ Makefile.am
+@@ -16,7 +16,7 @@
+ #    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ #    02110-1301 USA.
+ 
+-SUBDIRS := test emacs
++SUBDIRS := test
+ 
+ # Basename of debugger, used to form help doc, python script and script
+ # installed in an executable directory.

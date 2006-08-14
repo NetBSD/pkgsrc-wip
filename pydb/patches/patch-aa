@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2006/08/14 00:02:30 splitscreen Exp $
+
+--- configure.ac.orig	2006-07-29 10:43:20.000000000 +0000
++++ configure.ac
+@@ -116,7 +116,6 @@ AC_PROG_LN_S
+ ## Produced derived files.
+ ##
+ AC_CONFIG_FILES([Makefile])
+-AC_CONFIG_FILES([emacs/Makefile])
+ AC_CONFIG_FILES([test/Makefile])
+ AC_CONFIG_FILES([Doc/Makefile])
+ AC_CONFIG_FILES([Doc/pydb.1])

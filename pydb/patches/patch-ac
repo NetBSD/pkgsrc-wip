@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2006/08/14 00:02:30 splitscreen Exp $
+
+--- Makefile.in.orig	2006-07-29 10:44:09.000000000 +0000
++++ Makefile.in
+@@ -122,7 +122,7 @@ pkgdataDATA_INSTALL = $(INSTALL_DATA)
+ DATA = $(pkgdata_DATA)
+ ETAGS = etags
+ CTAGS = ctags
+-DIST_SUBDIRS = test emacs Doc
++DIST_SUBDIRS = test Doc
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ distdir = $(PACKAGE)-$(VERSION)
+ top_distdir = $(distdir)
+@@ -209,7 +209,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS := test emacs $(am__append_1)
++SUBDIRS := test $(am__append_1)
+ 
+ # Basename of debugger, used to form help doc, python script and script
+ # installed in an executable directory.

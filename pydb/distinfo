@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/08 23:20:27 splitscreen Exp $
+$NetBSD: distinfo,v 1.2 2006/08/14 00:02:30 splitscreen Exp $
 
 SHA1 (pydb-1.17.tar.gz) = 0605391ff98771d22d9560eb0c804833512161a9
 RMD160 (pydb-1.17.tar.gz) = f026126ee3ebd35ec352f00372e92108742b104b
 Size (pydb-1.17.tar.gz) = 461450 bytes
+SHA1 (patch-aa) = c452a1546ffa3f74ddef1ce816711caa7f3c283c
+SHA1 (patch-ab) = 4907cb0a743de13060c9fc60b0eaf8ffcdebcbc5
+SHA1 (patch-ac) = 9ed494899d4735e1dcd68b4083f34101ce80a97b
