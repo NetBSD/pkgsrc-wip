@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.10 2006/05/01 01:32:08 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2006/08/14 22:44:25 thomasklausner Exp $
 #
 
-DISTNAME=		luasocket-2.0-beta2
-PKGNAME=		lua-socket-2.0b
+DISTNAME=		luasocket-2.0.1
+PKGNAME=		lua-socket-2.0.1
 CATEGORIES=		net
-MASTER_SITES=		http://www.tecgraf.puc-rio.br/luasocket/
+MASTER_SITES=		http://luaforge.net/frs/download.php/1589/
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.cs.princeton.edu/~diego/professional/luasocket/
-COMMENT=		Gives socket capabilities to lua50
+COMMENT=		Gives socket capabilities to lua
 
-MAKEFILE=		${WRKSRC}/makefile.Linux
+MAKEFILE=		${WRKSRC}/makefile
 BUILD_TARGET=		all
 USE_TOOLS+=		gmake
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/luasocket.so.2.0 ${PREFIX}/lib/libluasocket.so.2.0
-	${LN} -sf ${PREFIX}/lib/libluasocket.so.2.0 ${PREFIX}/lib/libluasocket.so
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/lua/
-	${INSTALL_DATA} ${WRKSRC}/lua/*.lua ${PREFIX}/lib/lua/
+	${INSTALL_LIB} ${WRKSRC}/src/socket.so.2.0.1 ${PREFIX}/lib/libluasocket.so.2.0.1
+	${LN} -sf ${PREFIX}/lib/libluasocket.so.2.0.1 ${PREFIX}/lib/libluasocket.so
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/lua
+	${INSTALL_DATA} ${WRKSRC}/src/*.lua ${PREFIX}/lib/lua
 
 .include "../../lang/lua/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
