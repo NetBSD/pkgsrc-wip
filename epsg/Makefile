@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/08/15 15:24:04 brook1 Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/15 17:31:40 brook1 Exp $
 #
 
 DISTNAME=		epsg-v6_11sql-PostgreSQL
@@ -8,7 +8,7 @@ MASTER_SITES+=		http://www.epsg.org/databases/ \
 			http://www.epsg.org/guides/docs/
 DISTFILES+=		epsg-v6_11sql-PostgreSQL.zip \
 			epsg-v6_11sql-mySQL.zip \
-			G7-1.pdf
+			G7-1.pdf G7-2.pdf
 EXTRACT_ONLY=		epsg-v6_11sql-PostgreSQL.zip \
 			epsg-v6_11sql-mySQL.zip
 DIST_SUBDIR=		epsg-6.11
@@ -36,10 +36,12 @@ DATAFILES.mysql+=	EPSG_v6_11.mdb_Tables_MySQL.sql
 
 post-extract:
 	${CP} ${_DISTDIR}/G7-1.pdf ${WRKSRC}
+	${CP} ${_DISTDIR}/G7-2.pdf ${WRKSRC}
 
 do-install:
 	${INSTALL_DATA_DIR} ${EPSGDIR}
 	${INSTALL_DATA} ${WRKSRC}/G7-1.pdf ${EPSGDIR:Q}
+	${INSTALL_DATA} ${WRKSRC}/G7-2.pdf ${EPSGDIR:Q}
 	${INSTALL_DATA} ${WRKSRC}/epsg-v6_11-readme.pdf ${EPSGDIR:Q}
 .for d in pgsql mysql
 .for f in ${DATAFILES.${d}}
