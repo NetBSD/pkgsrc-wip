@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/08/15 18:06:26 brook1 Exp $
+# $NetBSD: Makefile,v 1.6 2006/08/15 18:12:57 brook1 Exp $
 #
 
 DISTNAME=		epsg-v6_11sql-PostgreSQL
@@ -18,7 +18,7 @@ HOMEPAGE=		http://www.epsg.org/
 COMMENT=		EPSG Geodetic Parameters database
 
 LICENSE=		epsg-license
-RESTRICTED=		"No commercial redistribution"
+RESTRICTED=		No commercial redistribution
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
