@@ -1,0 +1,50 @@
+# $NetBSD: Makefile,v 1.1 2006/08/15 15:24:04 brook1 Exp $
+#
+
+DISTNAME=		epsg-v6_11sql-PostgreSQL
+PKGNAME=		epsg-6.11
+CATEGORIES=		databases geography
+MASTER_SITES+=		http://www.epsg.org/databases/ \
+			http://www.epsg.org/guides/docs/
+DISTFILES+=		epsg-v6_11sql-PostgreSQL.zip \
+			epsg-v6_11sql-mySQL.zip \
+			G7-1.pdf
+EXTRACT_ONLY=		epsg-v6_11sql-PostgreSQL.zip \
+			epsg-v6_11sql-mySQL.zip
+DIST_SUBDIR=		epsg-6.11
+
+MAINTAINER=		brook@nmsu.edu
+HOMEPAGE=		http://www.epsg.org/
+COMMENT=		EPSG Geodetic Parameters database
+
+WRKSRC=			${WRKDIR}/epsg-v6_11sql-postgresql
+WRKSRC.pgsql=		${WRKDIR}/epsg-v6_11sql-PostgreSQL
+WRKSRC.mysql=		${WRKDIR}/epsg-v6_11sql-mySQL
+
+NO_BUILD=		yes
+
+EPSGDIR=		${LOCALBASE}/share/epsg
+MESSAGE_SUBST+=		EPSGDIR=${EPSGDIR:Q}
+
+DATAFILES.pgsql+=	EPSG_v6_11.mdb_Data_PostgreSQL.sql
+DATAFILES.pgsql+=	EPSG_v6_11.mdb_FKeys_PostgreSQL.sql
+DATAFILES.pgsql+=	EPSG_v6_11.mdb_Tables_PostgreSQL.sql
+
+DATAFILES.mysql+=	EPSG_v6_11.mdb_Data_MySQL.sql
+DATAFILES.mysql+=	EPSG_v6_11.mdb_FKeys_MySQL.sql
+DATAFILES.mysql+=	EPSG_v6_11.mdb_Tables_MySQL.sql
+
+post-extract:
+	${CP} ${_DISTDIR}/G7-1.pdf ${WRKSRC}
+
+do-install:
+	${INSTALL_DATA_DIR} ${EPSGDIR}
+	${INSTALL_DATA} ${WRKSRC}/G7-1.pdf ${EPSGDIR:Q}
+	${INSTALL_DATA} ${WRKSRC}/epsg-v6_11-readme.pdf ${EPSGDIR:Q}
+.for d in pgsql mysql
+.for f in ${DATAFILES.${d}}
+	${INSTALL_DATA} ${WRKSRC.${d}}/${f} ${EPSGDIR:Q}/${f}
+.endfor
+.endfor
+
+.include "../../mk/bsd.pkg.mk"
