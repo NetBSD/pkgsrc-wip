@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2333 2006/08/13 21:25:59 jtonio Exp $
+# $Id: Makefile,v 1.2334 2006/08/15 17:07:07 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1168,6 +1168,7 @@ SUBDIR+=	rsyslog
 SUBDIR+=	rte
 SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-dpklib
+SUBDIR+=	ruby-ldap
 SUBDIR+=	ruby-mecab
 SUBDIR+=	ruby-misen
 SUBDIR+=	runit
