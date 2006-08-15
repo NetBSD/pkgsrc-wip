@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/08/15 17:31:40 brook1 Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/15 17:57:03 brook1 Exp $
 #
 
 DISTNAME=		epsg-v6_11sql-PostgreSQL
@@ -23,7 +23,10 @@ WRKSRC.mysql=		${WRKDIR}/epsg-v6_11sql-mySQL
 
 NO_BUILD=		yes
 
-EPSGDIR=		${LOCALBASE}/share/epsg
+DOCDIR=			${PREFIX}/share/doc/epsg
+EPSGDIR=		${PREFIX}/share/epsg
+
+MESSAGE_SUBST+=		DOCDIR=${DOCDIR:Q}
 MESSAGE_SUBST+=		EPSGDIR=${EPSGDIR:Q}
 
 DATAFILES.pgsql+=	EPSG_v6_11.mdb_Data_PostgreSQL.sql
@@ -40,9 +43,10 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA_DIR} ${EPSGDIR}
-	${INSTALL_DATA} ${WRKSRC}/G7-1.pdf ${EPSGDIR:Q}
-	${INSTALL_DATA} ${WRKSRC}/G7-2.pdf ${EPSGDIR:Q}
-	${INSTALL_DATA} ${WRKSRC}/epsg-v6_11-readme.pdf ${EPSGDIR:Q}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/G7-1.pdf ${DOCDIR:Q}
+	${INSTALL_DATA} ${WRKSRC}/G7-2.pdf ${DOCDIR:Q}
+	${INSTALL_DATA} ${WRKSRC}/epsg-v6_11-readme.pdf ${DOCDIR:Q}
 .for d in pgsql mysql
 .for f in ${DATAFILES.${d}}
 	${INSTALL_DATA} ${WRKSRC.${d}}/${f} ${EPSGDIR:Q}/${f}
