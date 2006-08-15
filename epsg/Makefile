@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/08/15 18:04:57 brook1 Exp $
+# $NetBSD: Makefile,v 1.5 2006/08/15 18:06:26 brook1 Exp $
 #
 
 DISTNAME=		epsg-v6_11sql-PostgreSQL
 PKGNAME=		epsg-6.11
-CATEGORIES=		databases geography
+CATEGORIES=		geography databases
 MASTER_SITES+=		http://www.epsg.org/databases/ \
 			http://www.epsg.org/guides/docs/
 DISTFILES+=		epsg-v6_11sql-PostgreSQL.zip \
