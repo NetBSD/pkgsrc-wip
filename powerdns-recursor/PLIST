@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/15 13:15:00 ondratu Exp $
+bin/rec_control
+man/man1/pdns_recursor.1
+man/man1/rec_control.1
+sbin/pdns_recursor
+share/examples/pdns-recursor/recursor.conf-dist
+share/examples/rc.d/pdns_recursor
+@dirrm share/examples/pdns-recursor

@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/08/15 13:15:00 ondratu Exp $
+
+--- Makefile.orig	2006-06-25 14:09:32.000000000 +0200
++++ Makefile
+@@ -1,7 +1,7 @@
+ # user editable stuff:
+-SBINDIR=/usr/sbin/
+-BINDIR=/usr/bin/
+-CONFIGDIR="/etc/powerdns/"
++SBINDIR=$(PREFIX)/sbin
++BINDIR=$(PREFIX)/bin
++CONFIGDIR="$(PREFIX)/etc/"
+ OPTFLAGS?=-O3
+ CXXFLAGS:= $(CXXFLAGS) -Wall $(OPTFLAGS) $(PROFILEFLAGS)
+ CFLAGS:=$(CFLAGS) -Wall $(OPTFLAGS) $(PROFILEFLAGS)
+@@ -59,10 +59,11 @@ install: all
+ 	mv rec_control $(DESTDIR)/$(BINDIR)
+ 	strip $(DESTDIR)/$(BINDIR)/rec_control
+ 	-mkdir -p $(DESTDIR)/$(CONFIGDIR)
+-	$(DESTDIR)/$(SBINDIR)/pdns_recursor --config > $(DESTDIR)/$(CONFIGDIR)/recursor.conf-dist
+-	-mkdir -p $(DESTDIR)/usr/share/man/man1
+-	cp pdns_recursor.1 rec_control.1 $(DESTDIR)/usr/share/man/man1
+-	$(OS_SPECIFIC_INSTALL)	
++	-mkdir -p $(DESTDIR)/$(EGDIR)
++	$(DESTDIR)/$(SBINDIR)/pdns_recursor --config > $(EGDIR)/recursor.conf-dist
++	-mkdir -p $(PREFIX)/$(PKGMANDIR)/man1
++	cp pdns_recursor.1 rec_control.1 $(PREFIX)/$(PKGMANDIR)/man1
++	#$(OS_SPECIFIC_INSTALL)	
+ 
+ clean:
+ 	-rm -f dep *.o *~ pdns_recursor rec_control optional/*.o

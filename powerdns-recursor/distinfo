@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/08/15 13:15:00 ondratu Exp $
+
+SHA1 (pdns-recursor-3.1.2.tar.bz2) = 382e9a56206e349dad3aeed0bf7e19d12fc611a8
+RMD160 (pdns-recursor-3.1.2.tar.bz2) = 52464a1fb630654019a010551a41b69dace6d1f0
+Size (pdns-recursor-3.1.2.tar.bz2) = 138043 bytes
+SHA1 (patch-aa) = 9ad43d040912970a6c7dbcbb56cb1f6d30e31182
