@@ -1,0 +1,5 @@
+$Id: TODO,v 1.1.1.1 2006/08/15 17:05:25 obache Exp $
+
+* Install examples and documents.
+
+* Add option.mk for select databases/openldap-client or devel/ldapsdk

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/15 17:05:25 obache Exp $
+${RUBY_SITEARCHLIBDIR}/ldap.${RUBY_DLEXT}
+${RUBY_SITELIBDIR}/ldap/control.rb
+${RUBY_SITELIBDIR}/ldap/ldif.rb
+${RUBY_SITELIBDIR}/ldap/schema.rb
+@dirrm ${RUBY_SITELIBDIR}/ldap
