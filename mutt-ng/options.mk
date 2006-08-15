@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2006/04/13 21:33:47 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.3 2006/08/15 09:00:39 christian_gall Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.muttng
-PKG_SUPPORTED_OPTIONS=	ssl gpgme sasl2 idn esmtp hcache gssapi debug curses
+PKG_SUPPORTED_OPTIONS=	ssl gpgme sasl2 idn esmtp hcache gssapi debug curses nntp
 
 .include "../../mk/bsd.options.mk"
 
@@ -55,3 +55,9 @@ CONFIGURE_ARGS+=	--with-libesmtp
 CONFIGURE_ARGS+=	--enable-hcache --with-bdb --without-qdbm --without-gdbm
 .include "../../databases/db4/buildlink3.mk"
 .endif
+
+.if !empty(PKG_OPTIONS:Mhnntp)
+CONFIGURE_ARGS+=	--enable-nntp
+.include "../../databases/db4/buildlink3.mk"
+.endif
+
