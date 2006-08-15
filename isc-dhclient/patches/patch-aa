@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/06 08:38:43 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.2 2006/08/15 18:23:10 ondratu Exp $
 
---- Makefile.dist.orig	2001-02-21 23:27:04.000000000 -0800
+--- Makefile.dist.orig	2004-06-10 19:59:10.000000000 +0200
 +++ Makefile.dist
-@@ -17,7 +17,7 @@
- # http://www.isc.org for more information.
- #
+@@ -22,7 +22,7 @@
+ #   http://www.isc.org/
+ 
  
 -SUBDIRS=	common $(MINIRES) dst omapip server client relay dhcpctl
 +SUBDIRS=	common $(MINIRES) dst omapip client
  
  all:
  	@for dir in ${SUBDIRS}; do \
-@@ -26,7 +26,7 @@ all:
+@@ -31,7 +31,7 @@ all:
  	 done
  
  install:

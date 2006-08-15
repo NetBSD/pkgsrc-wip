@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.7 2006/05/05 22:24:36 jeremy-c-reed Exp $
+# $NetBSD: Makefile.common,v 1.8 2006/08/15 18:22:18 ondratu Exp $
 #
 
-DISTNAME=		dhcp-3.0pl2
-DHCP_VERSION=		3.0.2
+DISTNAME=		dhcp-3.0.4
+DHCP_VERSION=		3.0.4
 PKGNAME=		isc-${ISC_DHCP_TYPE}-${DHCP_VERSION}
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.isc.org/isc/dhcp/ \

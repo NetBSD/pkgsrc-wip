@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2005/03/03 11:03:51 hfath Exp $
+$NetBSD: patch-ab,v 1.2 2006/08/15 18:22:18 ondratu Exp $
 
---- configure.orig	2001-06-26 20:32:41.000000000 +0200
+--- configure.orig	2004-09-10 23:02:30.000000000 +0200
 +++ configure
-@@ -244,7 +244,7 @@ for foo in $dirs; do
+@@ -259,7 +259,7 @@ for foo in $dirs; do
  				<Makefile.conf; \
  		cat site.conf; \
  		echo "TOP = `pwd`"; \
