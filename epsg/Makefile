@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/15 17:57:03 brook1 Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/15 18:04:57 brook1 Exp $
 #
 
 DISTNAME=		epsg-v6_11sql-PostgreSQL
@@ -16,6 +16,11 @@ DIST_SUBDIR=		epsg-6.11
 MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://www.epsg.org/
 COMMENT=		EPSG Geodetic Parameters database
+
+LICENSE=		epsg-license
+RESTRICTED=		"No commercial redistribution"
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/epsg-v6_11sql-postgresql
 WRKSRC.pgsql=		${WRKDIR}/epsg-v6_11sql-PostgreSQL
