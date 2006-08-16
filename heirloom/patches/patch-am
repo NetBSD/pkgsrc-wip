@@ -1,0 +1,22 @@
+$NetBSD: patch-am,v 1.1 2006/08/16 21:48:56 cheusov Exp $
+
+--- ul/ul.c.orig	2005-05-29 15:55:46.000000000 +0300
++++ ul/ul.c
+@@ -130,13 +130,16 @@ static void	putchr(wchar_t);
+ static void	setmod(int);
+ static void	obaccs(long);
+ 
++#ifdef	USE_TERMCAP
++static void	initcap(void);
++#endif
++
+ int
+ main(int argc, char **argv)
+ {
+ 	int c;
+ 	char *termtype;
+ #ifdef	USE_TERMCAP
+-	static void	initcap(void);
+ 	char termcap[2048];
+ #endif
+ 	struct iblok *f;
