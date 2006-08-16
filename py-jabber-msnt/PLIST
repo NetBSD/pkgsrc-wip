@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2006/08/09 20:58:18 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/08/16 15:35:26 schnoebe Exp $
 ${TRANSPORTDIR}/.svn/entries
+${TRANSPORTDIR}/data/defaultJabberAvatar.png
+${TRANSPORTDIR}/data/defaultMSNAvatar.png
 ${TRANSPORTDIR}/src/avatar.py
 ${TRANSPORTDIR}/src/baseproto/__init__.py
 ${TRANSPORTDIR}/src/baseproto/glue.py
@@ -14,43 +16,51 @@ ${TRANSPORTDIR}/src/jabw.py
 ${TRANSPORTDIR}/src/lang.py
 ${TRANSPORTDIR}/src/legacy/__init__.py
 ${TRANSPORTDIR}/src/legacy/glue.py
+${TRANSPORTDIR}/src/legacy/msn/__init__.py
+${TRANSPORTDIR}/src/legacy/msn/msn.py
+${TRANSPORTDIR}/src/legacy/msn/msnft.py
+${TRANSPORTDIR}/src/legacy/msn/msnp11chl.py
+${TRANSPORTDIR}/src/legacy/msn/msnw.py
+${TRANSPORTDIR}/src/legacy/msn/test_msn.py
+${TRANSPORTDIR}/src/legacy/msn/test_msnw.py
 ${TRANSPORTDIR}/src/main.py
 ${TRANSPORTDIR}/src/misciq.py
 ${TRANSPORTDIR}/src/register.py
 ${TRANSPORTDIR}/src/session.py
+${TRANSPORTDIR}/src/socks5.py
 ${TRANSPORTDIR}/src/svninfo.py
-${TRANSPORTDIR}/src/tlib/__init__.py
-${TRANSPORTDIR}/src/tlib/domish.py
-${TRANSPORTDIR}/src/tlib/jabber/__init__.py
-${TRANSPORTDIR}/src/tlib/jabber/client.py
-${TRANSPORTDIR}/src/tlib/jabber/component.py
-${TRANSPORTDIR}/src/tlib/jabber/jid.py
-${TRANSPORTDIR}/src/tlib/jabber/jstrports.py
-${TRANSPORTDIR}/src/tlib/jabber/xmpp_stringprep.py
-${TRANSPORTDIR}/src/tlib/msn/__init__.py
-${TRANSPORTDIR}/src/tlib/msn/msn.py
-${TRANSPORTDIR}/src/tlib/msn/msnft.py
-${TRANSPORTDIR}/src/tlib/msn/msnp11chl.py
-${TRANSPORTDIR}/src/tlib/msn/msnw.py
-${TRANSPORTDIR}/src/tlib/msn/test_msn.py
-${TRANSPORTDIR}/src/tlib/msn/test_msnw.py
-${TRANSPORTDIR}/src/tlib/socks5.py
-${TRANSPORTDIR}/src/tlib/throttle.py
-${TRANSPORTDIR}/src/tlib/xmlstream.py
-${TRANSPORTDIR}/src/tlib/xmlw.py
+${TRANSPORTDIR}/src/throttle.py
+${TRANSPORTDIR}/src/twistfix/README
+${TRANSPORTDIR}/src/twistfix/__init__.py
+${TRANSPORTDIR}/src/twistfix/version.py
+${TRANSPORTDIR}/src/twistfix/words/__init__.py
+${TRANSPORTDIR}/src/twistfix/words/protocols/__init__.py
+${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/__init__.py
+${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/client.py
+${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/component.py
+${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/jid.py
+${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/jstrports.py
+${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/xmpp_stringprep.py
+${TRANSPORTDIR}/src/twistfix/words/xish/__init__.py
+${TRANSPORTDIR}/src/twistfix/words/xish/domish.py
+${TRANSPORTDIR}/src/twistfix/words/xish/utility.py
+${TRANSPORTDIR}/src/twistfix/words/xish/xmlstream.py
+${TRANSPORTDIR}/src/twistfix/words/xish/xpath.py
+${TRANSPORTDIR}/src/twistfix/words/xish/xpathparser.py
 ${TRANSPORTDIR}/src/utils.py
 ${TRANSPORTDIR}/src/xdb.py
 ${TRANSPORTDIR}/src/xmlconfig.py
-${TRANSPORTDIR}/data/defaultJabberAvatar.png
-${TRANSPORTDIR}/data/defaultMSNAvatar.png
 bin/PyMSNt
 share/examples/jabberd/pymsnt.xml
 share/examples/rc.d/pymsnt
 @dirrm ${TRANSPORTDIR}/src/baseproto
+@dirrm ${TRANSPORTDIR}/src/legacy/msn
 @dirrm ${TRANSPORTDIR}/src/legacy
-@dirrm ${TRANSPORTDIR}/src/tlib/jabber
-@dirrm ${TRANSPORTDIR}/src/tlib/msn
-@dirrm ${TRANSPORTDIR}/src/tlib
+@dirrm ${TRANSPORTDIR}/src/twistfix/words/protocols/jabber
+@dirrm ${TRANSPORTDIR}/src/twistfix/words/protocols
+@dirrm ${TRANSPORTDIR}/src/twistfix/words/xish
+@dirrm ${TRANSPORTDIR}/src/twistfix/words
+@dirrm ${TRANSPORTDIR}/src/twistfix
 @dirrm ${TRANSPORTDIR}/src
 @dirrm ${TRANSPORTDIR}/data
 @dirrm ${TRANSPORTDIR}/.svn

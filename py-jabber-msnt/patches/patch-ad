@@ -1,9 +1,10 @@
-$NetBSD: patch-ad,v 1.4 2006/07/15 00:19:47 schnoebe Exp $
+$NetBSD: patch-ad,v 1.5 2006/08/16 15:35:26 schnoebe Exp $
 
---- PyMSNt.py.orig	2006-07-08 19:57:42.000000000 -0500
+--- PyMSNt.py.orig	2006-08-08 23:35:00.000000000 -0500
 +++ PyMSNt.py
-@@ -1,8 +1,8 @@
- #!/usr/bin/env python
+@@ -2,9 +2,9 @@
+ # Copyright 2006 James Bunton <james@delx.cjb.net> 
+ # Licensed for distribution under the GPL version 2, check COPYING for details
  
 -# Make 'cwd'/src in the PYTHONPATH
 +# Make {transport dir}/src in the PYTHONPATH
