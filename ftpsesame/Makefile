@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/20 13:36:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2006/08/16 12:50:23 jsonn Exp $
 
 DISTNAME=		ftpsesame-0.95
 CATEGORIES=		net
@@ -13,6 +13,7 @@ NO_CONFIGURE=		yes
 PKG_USERS=		proxy:nogroup::proxy\ pseudo-user:${VARBASE}/chroot/proxy:/sbin/nologin
 
 OWN_DIRS=		${VARBASE}/chroot/proxy
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/cat8 ${PKGMANDIR}/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ftpsesame ${PREFIX}/sbin/ftpsesame

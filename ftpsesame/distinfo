@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2005/03/28 14:15:39 ppostma Exp $
+$NetBSD: distinfo,v 1.3 2006/08/16 12:50:23 jsonn Exp $
 
 SHA1 (ftpsesame-0.95.tar.gz) = c8fbf8309c6a567a5d4837902e4219e1b266bc04
 RMD160 (ftpsesame-0.95.tar.gz) = d350f94da0080731523b72d346603240a6dfb73a
 Size (ftpsesame-0.95.tar.gz) = 10974 bytes
-SHA1 (patch-aa) = 347dbdd1fafd8e7f22fbe4398742b417fb724e09
-SHA1 (patch-ab) = ecc6ca536a7172ad08f8d6fc16fa274e353fb352
-SHA1 (patch-ac) = 25ff4830198d87646302f1aa04057039e469a3c8
+SHA1 (patch-aa) = 06a3b851f8c29a3db17774a319c62312f322099c
+SHA1 (patch-ab) = 0b2a9a15ac814eabd091f15fc39851c48a43b142
+SHA1 (patch-ac) = 003ac8c5c54a05eef4142a0fa18dfa8ee369a35b

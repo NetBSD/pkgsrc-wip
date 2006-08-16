@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/11/10 18:33:30 ppostma Exp $
+$NetBSD: patch-aa,v 1.2 2006/08/16 12:50:23 jsonn Exp $
 
---- filter.c.orig	2004-10-05 14:12:22.000000000 +0200
-+++ filter.c	2004-11-07 23:26:09.000000000 +0100
-@@ -18,10 +18,12 @@
+--- filter.c.orig	2004-10-05 12:12:22.000000000 +0000
++++ filter.c
+@@ -18,10 +18,16 @@
  #include <sys/types.h>
  #include <sys/socket.h>
  
@@ -12,7 +12,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/10 18:33:30 ppostma Exp $
  #include <netinet/tcp.h>
 +
 +#include <net/if.h>
++#if defined(__DragonFly__)
++#include <net/pf/pfvar.h>
++#else
 +#include <net/pfvar.h>
++#endif
 +
  #include <arpa/inet.h>
  

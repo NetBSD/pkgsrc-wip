@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/11/10 18:33:30 ppostma Exp $
+$NetBSD: patch-ac,v 1.2 2006/08/16 12:50:23 jsonn Exp $
 
---- state.c.orig	2004-10-05 14:07:04.000000000 +0200
-+++ state.c	2004-11-07 23:28:47.000000000 +0100
-@@ -18,14 +18,15 @@
+--- state.c.orig	2004-10-05 12:07:04.000000000 +0000
++++ state.c
+@@ -18,14 +18,19 @@
  #include <sys/socket.h>
  #include <sys/tree.h>
  
@@ -15,7 +15,11 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/11/10 18:33:30 ppostma Exp $
  #include <netinet/tcp_fsm.h>
  
 +#include <net/if.h>
++#if defined(__DragonFly__)
++#include <net/pf/pfvar.h>
++#else
 +#include <net/pfvar.h>
++#endif
 +
  #include <stdlib.h>
  #include <string.h>
