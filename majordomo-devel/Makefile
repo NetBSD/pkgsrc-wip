@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2006/07/17 18:15:28 kheinz Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/17 19:43:21 kheinz Exp $
 #
 
-DISTNAME=		majordomo-20060717
-PKGNAME=		majordomo-devel-20060717
+DISTNAME=		majordomo-20060817
+PKGNAME=		majordomo-devel-20060817
 CATEGORIES=		mail
-MASTER_SITES=		http://ftp.mj2.org/pub/mj2/snapshots/2006-07/
+MASTER_SITES=		http://ftp.mj2.org/pub/mj2/snapshots/2006-08/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mj2.org/
@@ -40,6 +40,8 @@ DEPENDS+=	p5-Text-Reflow>=1.04:../../textproc/p5-Text-Reflow
 ##DEPENDS+=	p5-DB_File>=1.63:../../databases/p5-DB_File
 
 WRKSRC=			${WRKDIR}/majordomo
+
+INTERACTIVE_STAGE=	install
 
 USE_TOOLS+=		perl:run
 
