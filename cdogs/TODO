@@ -1,0 +1,2 @@
+- I forsee the author's naming of the distfiles as a likely problem in the future
+  (see the hardcoded date in Makefile)

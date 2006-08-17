@@ -1,0 +1,55 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/17 13:49:26 dhowland Exp $
+bin/cdogs
+share/cdogs/data/aargh1.wav
+share/cdogs/data/aargh2.wav
+share/cdogs/data/aargh3.wav
+share/cdogs/data/bang.wav
+share/cdogs/data/booom.wav
+share/cdogs/data/cdogs.px
+share/cdogs/data/cdogs2.px
+share/cdogs/data/cdogs_icon.bmp
+share/cdogs/data/cdogs_icon.png
+share/cdogs/data/click.wav
+share/cdogs/data/distress.cpn
+share/cdogs/data/flamer.wav
+share/cdogs/data/font.px
+share/cdogs/data/fusion.wav
+share/cdogs/data/hahaha.wav
+share/cdogs/data/launch.wav
+share/cdogs/data/mg.wav
+share/cdogs/data/pickup.wav
+share/cdogs/data/powergun.wav
+share/cdogs/data/scream.wav
+share/cdogs/data/shotgun.wav
+share/cdogs/data/switch.wav
+share/cdogs/data/terror.cpn
+share/cdogs/data/whistle.wav
+share/cdogs/data/zombie.cpn
+share/cdogs/graphics/cdogs.px
+share/cdogs/graphics/cdogs2.px
+share/cdogs/graphics/font.px
+share/cdogs/missions/distress.cpn
+share/cdogs/missions/terror.cpn
+share/cdogs/missions/zombie.cpn
+share/cdogs/sounds/aargh1.wav
+share/cdogs/sounds/aargh2.wav
+share/cdogs/sounds/aargh3.wav
+share/cdogs/sounds/bang.wav
+share/cdogs/sounds/booom.wav
+share/cdogs/sounds/click.wav
+share/cdogs/sounds/flamer.wav
+share/cdogs/sounds/fusion.wav
+share/cdogs/sounds/hahaha.wav
+share/cdogs/sounds/launch.wav
+share/cdogs/sounds/mg.wav
+share/cdogs/sounds/pickup.wav
+share/cdogs/sounds/powergun.wav
+share/cdogs/sounds/scream.wav
+share/cdogs/sounds/shotgun.wav
+share/cdogs/sounds/switch.wav
+share/cdogs/sounds/whistle.wav
+@dirrm share/cdogs/sounds
+@dirrm share/cdogs/missions
+@dirrm share/cdogs/graphics
+@dirrm share/cdogs/data
+@dirrm share/cdogs

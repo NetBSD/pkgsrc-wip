@@ -1,0 +1,6 @@
+C-Dogs SDL is a port of the classic DOS arcade game C-Dogs to modern operating
+systems utilising the SDL Media Libraries.
+C-Dogs is an arcade shoot-em-up which lets players work alone and co-operativly
+during missions, and against each other in the "dogfight" deathmatch mode.
+Several built-in missions and dogfight maps are included.
+The author of the DOS version of C-Dogs was Ronny Wester.
