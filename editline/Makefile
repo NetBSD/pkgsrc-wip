@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/08/18 19:04:34 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/08/18 19:23:51 cheusov Exp $
 #
 
 DISTNAME=		libedit-20060816-2.9
@@ -12,8 +12,7 @@ COMMENT=		NetBSD Editline library (libedit) for generic line editing
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_LANGUAGES+=		c++
-USE_LANGUAGES+=		fortran
+USE_LANGUAGES+=		c c++ fortran
 
 INSTALLATION_DIRS+=	include/editline
 
