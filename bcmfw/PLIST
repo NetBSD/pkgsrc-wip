@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/18 19:15:48 plunky Exp $
+bin/bcmfw
+libdata/bcmfw/BCM-LEGAL.txt
+libdata/bcmfw/BCM2033-FW.bin
+libdata/bcmfw/BCM2033-MD.hex
+man/cat8/bcmfw.0
+man/man8/bcmfw.8
+share/examples/rc.d/bcmfw
