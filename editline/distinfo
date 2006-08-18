@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/06/30 02:36:26 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.3 2006/08/18 19:04:34 cheusov Exp $
 
-SHA1 (libedit-20050628-2.9.tar.gz) = 7f994c7a100a155f5a4d39a0bbb56e804fd5a06a
-RMD160 (libedit-20050628-2.9.tar.gz) = 3ce456a82e48fd5d9511416ec73609ac65d7bfd1
-Size (libedit-20050628-2.9.tar.gz) = 438143 bytes
+SHA1 (libedit-20060816-2.9.tar.gz) = 53ce71901054903d5b5878ae241293d5e474ec26
+RMD160 (libedit-20060816-2.9.tar.gz) = f1d7a12df3485167799009595276b171abfa6cee
+Size (libedit-20060816-2.9.tar.gz) = 452709 bytes
