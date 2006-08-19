@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2336 2006/08/18 19:18:59 plunky Exp $
+# $Id: Makefile,v 1.2337 2006/08/19 15:39:05 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -85,6 +85,7 @@ SUBDIR+=	backplane
 SUBDIR+=	barnyard
 SUBDIR+=	bastard
 SUBDIR+=	bcmfw
+SUBDIR+=	bdftopcf
 SUBDIR+=	beast
 SUBDIR+=	bigreqsproto
 SUBDIR+=	bin86
@@ -236,6 +237,7 @@ SUBDIR+=	engine-pkcs11
 SUBDIR+=	ent
 SUBDIR+=	eot
 SUBDIR+=	epplets
+SUBDIR+=	epsg
 SUBDIR+=	erc
 SUBDIR+=	esdl
 SUBDIR+=	ethtool
@@ -265,6 +267,10 @@ SUBDIR+=	flightgear
 SUBDIR+=	flightgear-base
 SUBDIR+=	fluxspace
 SUBDIR+=	fnord
+SUBDIR+=	font-bitstream-type1
+SUBDIR+=	font-cursor-misc
+SUBDIR+=	font-misc-misc
+SUBDIR+=	font-util
 SUBDIR+=	fontcacheproto
 SUBDIR+=	fontsproto
 SUBDIR+=	foomatic-db
@@ -667,6 +673,7 @@ SUBDIR+=	mixmaster
 SUBDIR+=	mixxx
 #SUBDIR+=	mk 		# not a package
 SUBDIR+=	mkdep
+SUBDIR+=	mkfontdir
 SUBDIR+=	mkfontscale
 SUBDIR+=	mksend
 SUBDIR+=	mlmmj
@@ -1019,6 +1026,7 @@ SUBDIR+=	postgresql-uniqueidentifier
 SUBDIR+=	postgresql74-postgis
 SUBDIR+=	postgresql80-postgis
 SUBDIR+=	postoffice
+SUBDIR+=	powerdns-recursor
 SUBDIR+=	ppp
 SUBDIR+=	ppr
 SUBDIR+=	premake
