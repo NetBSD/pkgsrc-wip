@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/01/11 08:19:34 anielski Exp $
+$NetBSD: distinfo,v 1.3 2006/08/19 16:31:41 kristerw Exp $
 
 SHA1 (dwerg-default-0.8.tar.gz) = 1448e3b3bad77d02739de1e855f3566b86441932
+RMD160 (dwerg-default-0.8.tar.gz) = c94db35ae4a513abe1c1d2a9c8da6e2ca77ee316
 Size (dwerg-default-0.8.tar.gz) = 288009 bytes

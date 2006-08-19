@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/16 07:54:11 cubidou Exp $
+$NetBSD: distinfo,v 1.2 2006/08/19 16:36:23 kristerw Exp $
 
 SHA1 (gwc-0.19-10.tgz) = 050f0337a50cd7d70e89e2e26367e0263634aa31
+RMD160 (gwc-0.19-10.tgz) = 6b036bfd0fa9bfdfb0db0c5b4ab222a0b3b8e678
 Size (gwc-0.19-10.tgz) = 473125 bytes
 SHA1 (patch-aa) = d0f864e4d9a1ecf199bb59d20c131a3762d3e071
 SHA1 (patch-ab) = 573b4514147e5ceec6a9c0deb49806630789522a
