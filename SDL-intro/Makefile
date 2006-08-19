@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/16 11:01:33 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/19 20:22:29 kristerw Exp $
 #
 
 DISTNAME=		SDL-intro-1.0
@@ -18,7 +18,7 @@ DEPENDS+=		SDL-intro-es-1.0:../../wip/SDL-intro-es
 DEPENDS+=		SDL-intro-fr-1.0:../../wip/SDL-intro-fr
 DEPENDS+=		SDL-intro-it-1.0:../../wip/SDL-intro-it
 DEPENDS+=		SDL-intro-jp-1.0:../../wip/SDL-intro-jp
-DEPENDS+=		SDL-intro-ko-1.0:../../wip/SDL-intro-ko
+DEPENDS+=		SDL-intro-ko-1.0:../../devel/SDL-intro-ko
 DEPENDS+=		SDL-intro-pt-1.0:../../wip/SDL-intro-pt
 DEPENDS+=		SDL-intro-ru-1.0:../../wip/SDL-intro-ru
 
