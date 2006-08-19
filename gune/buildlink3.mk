@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:24 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/08/19 20:02:12 dhowland Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GUNE_BUILDLINK3_MK:=	${GUNE_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_API_DEPENDS.gune+=	gune>=1.0
 BUILDLINK_PKGSRCDIR.gune?=	../../wip/gune
 .endif	# GUNE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
