@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/07/05 12:20:27 absd Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/19 20:19:59 kristerw Exp $
 #
 
 DISTNAME=	muine-0.5.2
@@ -26,6 +26,6 @@ GCONF2_SCHEMAS=		muine.schemas
 .include "../../lang/mono/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
-.include "../../wip/gtk-sharp/buildlink3.mk"
+.include "../../x11/gtk2-sharp/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
