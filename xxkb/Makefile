@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/08/10 20:23:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2006/08/19 20:09:04 cheusov Exp $
 
 DISTNAME=	xxkb-1.10
 #PKGREVISION=	1
@@ -18,7 +18,6 @@ DOC_DIR=		${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS=	${DOC_DIR}
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/xxkb.man ${PREFIX}/${PKGMANDIR}/man1/xxkb.1
 .for i in ${DOC_FILES}
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DOC_DIR}
 .endfor

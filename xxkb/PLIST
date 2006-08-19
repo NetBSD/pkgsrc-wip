@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/22 12:54:06 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/08/19 20:09:04 cheusov Exp $
 bin/xxkb
 lib/X11/app-defaults/XXkb
-@exec ${MKDIR} share/xxkb
+share/doc/xxkb/LICENSE
+share/doc/xxkb/README.koi8
 share/xxkb/by15.xpm
 share/xxkb/by48.xpm
 share/xxkb/en15.xpm
@@ -12,9 +13,4 @@ share/xxkb/su15.xpm
 share/xxkb/su48.xpm
 share/xxkb/ua15.xpm
 share/xxkb/ua48.xpm
-@dirrm share/xxkb
-@exec ${MKDIR} share/doc/xxkb
-share/doc/xxkb/LICENSE
-share/doc/xxkb/README.koi8
-${PKGMANDIR}/man1/xxkb.1
-@dirrm share/doc/xxkb
+${IMAKE_MAN_DIR}/xxkb.${IMAKE_MANNEWSUFFIX}
