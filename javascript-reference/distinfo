@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/14 22:38:44 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2006/08/19 17:19:48 kristerw Exp $
 
 SHA1 (CoreReferenceJS15.zip) = 5108149a4ddf635b9daae3cac9223668c8daf778
+RMD160 (CoreReferenceJS15.zip) = 60c1b2d24988c23d931fbde7f2be8be2d687e2f3
 Size (CoreReferenceJS15.zip) = 241174 bytes
