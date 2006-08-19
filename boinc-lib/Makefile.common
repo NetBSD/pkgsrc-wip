@@ -5,6 +5,8 @@ BOINC_USER?=		boinc
 BOINC_GROUP?=		boinc
 BOINC_DIR?=		/var/db/boinc
 
+NO_CHECKSUM=		yes
+
 CVS_ROOT.boinc=		:pserver:anonymous:@alien.ssl.berkeley.edu:/home/cvs/cvsroot
 CVS_MODULE.boinc=	boinc
 CVS_TAG.boinc=		stable
