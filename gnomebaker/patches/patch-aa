@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/08/20 20:13:38 leuzi Exp $
+
+--- src/devices.c.orig	2006-02-03 23:27:52.000000000 +0100
++++ src/devices.c	2006-03-26 18:12:05.000000000 +0200
+@@ -32,7 +32,7 @@
+ #include <fcntl.h>
+ #include <stdlib.h>
+ 
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__) 
+ #include <sys/cdio.h>
+ #define CDROM_DRIVE_STATUS     0x5326
+ #define CDS_NO_DISC        1
+@@ -289,13 +289,13 @@
+ 		'OLYMPUS ' 'D-230           ' '1.00' Removable Disk */
+ 		if(strstr(*line, "Removable Disk") == NULL)
+ 		{
+-			gchar vendor[9], model[17], deviceid[6];
++			gchar vendor[9], model[17], deviceid[7];
+ 			
+-			if(sscanf(*line, "\t%5c\t  %*d) '%8c' '%16c'", deviceid, vendor, model) == 3) 
++			if(sscanf(*line, "\t%6c\t  %*d) '%8c' '%16c'", deviceid, vendor, model) == 3) 
+ 			{
+ 				vendor[8] = '\0'; 
+ 				model[16] = '\0';
+-				deviceid[5] = '\0';								
++				deviceid[6] = '\0';								
+ 				
+ 				gchar* device = NULL;
+ 		
+@@ -691,7 +691,7 @@
+     else
+     {			
+         /* Use ioctl to send the CDROMEJECT (CDIOCEJECT on FreeBSD) command to the device */
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__)
+         if(ioctl(cdrom, CDIOCEJECT, 0) < 0)
+             ret = TRUE;
+         else 

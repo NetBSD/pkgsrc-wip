@@ -1,0 +1,75 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/08/20 20:13:38 leuzi Exp $
+
+--- src/exec.c.orig	2006-02-03 23:28:20.000000000 +0100
++++ src/exec.c	2006-03-22 21:01:50.000000000 +0100
+@@ -21,6 +21,7 @@
+ 
+ #include "exec.h"
+ #include <sys/wait.h>
++#include <sys/signal.h>
+ #include "gbcommon.h"
+ 
+ 
+@@ -131,10 +132,10 @@
+     /* Make sure that the args are null terminated */
+     g_ptr_array_add(e->args, NULL);
+ 	exec_print_cmd(e);
+-	gint stdout = 0, stderr = 0;		
++	gint mystdout = 0, mystderr = 0;		
+     GError* err = NULL;
+ 	if(g_spawn_async_with_pipes(NULL, (gchar**)e->args->pdata, NULL, G_SPAWN_SEARCH_PATH | G_SPAWN_LEAVE_DESCRIPTORS_OPEN | G_SPAWN_DO_NOT_REAP_CHILD , 
+-        child_setup, e, &e->pid, NULL, &stdout, &stderr, &err))
++        child_setup, e, &e->pid, NULL, &mystdout, &mystderr, &err))
+ 	{
+ 		GB_TRACE("exec_spawn_process - spawed process with pid [%d]\n", e->pid);
+ 		GIOChannel *chanout = NULL, *chanerr = NULL;
+@@ -142,14 +143,14 @@
+ 		
+ 		if(!e->piped)
+ 		{
+-			chanout = g_io_channel_unix_new(stdout);			
++			chanout = g_io_channel_unix_new(mystdout);			
+ 			g_io_channel_set_encoding(chanout, NULL, NULL);
+ 			g_io_channel_set_buffered(chanout, FALSE);
+ 			g_io_channel_set_flags(chanout, G_IO_FLAG_NONBLOCK, NULL );
+ 			chanoutid = g_io_add_watch(chanout, G_IO_IN | G_IO_HUP | G_IO_ERR | G_IO_PRI | G_IO_NVAL,
+ 				exec_channel_callback, (gpointer)e);
+ 		  
+-			chanerr = g_io_channel_unix_new(stderr);
++			chanerr = g_io_channel_unix_new(mystderr);
+ 			g_io_channel_set_encoding(chanerr, NULL, NULL);			
+ 			g_io_channel_set_buffered(chanerr, FALSE);			
+ 			g_io_channel_set_flags( chanerr, G_IO_FLAG_NONBLOCK, NULL );
+@@ -179,8 +180,8 @@
+         /* Reap the child so we don't get a zombie */
+         waitpid(e->pid, &e->exitCode, 0);
+ 		g_spawn_close_pid(e->pid);
+-		close(stdout);
+-		close(stderr);	
++		close(mystdout);
++		close(mystderr);	
+ 		
+         exec_cmd_set_state(e, (e->exitCode == 0) ? COMPLETED : FAILED);
+ 		GB_TRACE("exec_spawn_process - child [%d] exitcode [%d]\n", e->pid, e->exitCode);
+@@ -462,15 +463,15 @@
+     GB_LOG_FUNC    
+     g_return_val_if_fail(cmd != NULL, -1);
+         
+-    gchar* stdout = NULL;
+-    gchar* stderr = NULL;
++    gchar* mystdout = NULL;
++    gchar* mystderr = NULL;
+     gint exitcode = -1;
+     GError* error = NULL;    
+-    if(g_spawn_command_line_sync(cmd, &stdout, &stderr, &exitcode, &error))
++    if(g_spawn_command_line_sync(cmd, &mystdout, &mystderr, &exitcode, &error))
+     {
+-        *output = g_strconcat(stdout, stderr, NULL);
+-        g_free(stdout);
+-        g_free(stderr);     
++        *output = g_strconcat(mystdout, mystderr, NULL);
++        g_free(mystdout);
++        g_free(mystderr);     
+     }
+     else if(error != NULL)
+     {       
